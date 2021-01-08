@@ -1,19 +1,17 @@
 ---
 title: ビデオ
 seo-title: ビデオ
-description: アセットでは、ビデオアセットを統合管理できます。ビデオを直接アセットにアップロードして、Scene7 に対する自動エンコーディングをおこなったり、アセットから直接 Scene7 ビデオにアクセスしてページオーサリングをおこなったりできます。
-seo-description: アセットでは、ビデオアセットを統合管理できます。ビデオを直接アセットにアップロードして、Scene7 に対する自動エンコーディングをおこなったり、アセットから直接 Scene7 ビデオにアクセスしてページオーサリングをおこなったりできます。
-uuid: 46da7a0d-d17b-4716-a304-ce5496421b5a
+description: アセットは、ビデオアセット管理を一元化するためのツールです。この機能を使用して、ビデオをAssetsに直接アップロードし、Assetsから直接Dyビデオにアクセスして、ページをオーサリングできます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '1735'
-ht-degree: 37%
+source-wordcount: '1698'
+ht-degree: 34%
 
 ---
 
@@ -24,8 +22,8 @@ ht-degree: 37%
 
 Dynamic Mediaクラシックビデオ統合により、最適化されたビデオの提供先がすべての画面（自動デバイスおよび帯域幅検出）に拡張されます。
 
-* Dynamic Mediaクラシック(Scene7)ビデオコンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
-* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。詳しくは、[Scene7のアダプティブビデオセットに関するドキュメントを参照してください。](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html)
+* Dynamic Mediaクラシックビデオコンポーネントは、デバイスと帯域幅の検出を自動的に実行し、デスクトップ、タブレット、モバイルで適切な形式と品質のビデオを再生します。
+* アセット — 単一のビデオアセットだけでなく、アダプティブビデオセットも含めることができます。アダプティブビデオセットは、複数の画面にわたってビデオをシームレスに再生するために必要なすべてのビデオレンディションを対象としたコンテナです。アダプティブビデオセットは、同じビデオを異なるビットレート（400 kbps、800 kbps、1000 kbpsなど）やフォーマットでエンコードしたバージョンをグループ化します。デスクトップ、iOS、Android、Blackberry、Windows携帯端末を含む複数の画面でアダプティブビデオストリーミングを行う場合は、S7ビデオコンポーネントと共にアダプティブビデオセットを使用します。 詳しくは、[Dynamic Mediaクラシックのアダプティブビデオセットに関するドキュメントを参照してください。](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html#video)
 
 ## FFMPEGとDynamic Mediaクラシックについて{#about-ffmpeg-and-scene}
 
@@ -66,7 +64,7 @@ Dynamic Mediaクラシックビデオコンポーネントでは、次の形式�
 
 アセットのワークフローやバージョン管理が必要ない場合は、アセットをDynamic Mediaクラシックにアップロードする必要があります。 推奨されるワークフローは次のとおりです。
 
-1. Dynamic Mediaクラシックでは、[Dynamic Mediaクラシック（システム自動化）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)にFTPのスケジュールアップロードとエンコードを設定します。
+1. Dynamic Mediaクラシックデスクトップアプリで、[Dynamic Mediaクラシック（システム自動化）](https://help.adobe.com/en_US/scene7/using/WS70B173EC-4CAD-4b4c-BF9C-43A11F3A5950.html)にスケジュールされたFTPのアップロードとエンコードを設定します。
 1. AEMでは、コンテンツファインダーの&#x200B;**[!UICONTROL Dynamic Mediaクラシック]**&#x200B;タブのWCMのビデオアセットにアクセスします。
 1. Dynamic Mediaクラシックビデオコンポーネントを使用する作成者。
 
@@ -85,7 +83,7 @@ Dynamic Mediaクラシックビデオコンポーネントでは、次の形式�
 
    >[!NOTE]
    >
-   >ビデオプリセットの意味について詳しくは、[Dynamic Mediaクラシックドキュメント](https://help.adobe.com/en_US/scene7/using/WSE86ACF2B-BD50-4c48-A1D7-9CD4405B62D0.html)を参照してください。
+   >ビデオプリセットの意味について詳しくは、[ビデオファイルのエンコーディング用のビデオプリセット](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files)を参照してください。
    >
    >ユニバーサルプリセットを設定する際に両方のアダプティブビデオセットを選択するか、「**[!UICONTROL アダプティブビデオエンコーディング]**」オプションを選択することをお勧めします。
 
@@ -112,7 +110,7 @@ AdobeDAMからプライマリソースビデオをDynamic Mediaクラシック�
 
 ### FoundationビデオコンポーネントとDynamic Mediaクラシックビデオコンポーネント{#foundation-video-component-versus-scene-video-component}
 
-AEMを使用する場合、サイトで使用できるビデオコンポーネントと、Dynamic Mediaクラシック(Scene7)ビデオコンポーネントの両方にアクセスできます。 これらのコンポーネントに互換性はありません。
+AEMを使用する場合、サイトで使用できるビデオコンポーネントと、Dynamic Mediaクラシックビデオコンポーネントの両方にアクセスできます。 これらのコンポーネントに互換性はありません。
 
 Dynamic Mediaクラシックビデオコンポーネントは、Dynamic Mediaクラシックビデオでのみ機能します。 Foundationコンポーネントは、AEM（ffmpegを使用）およびDynamic Mediaクラシックビデオから保存されたビデオで機能します。
 
@@ -131,7 +129,7 @@ Dynamic Mediaクラシックビデオの視聴には、Dynamic Mediaクラシッ
 
 ### AEMビデオとDynamic Mediaクラシックビデオの比較{#aem-video-and-scene-video-comparison}
 
-次の表は、AEM 基盤ビデオコンポーネントと Scene7 ビデオコンポーネントでサポートされている機能の簡単な比較です。
+次の表は、AEM Foundation VideoコンポーネントとDynamic Mediaクラシックビデオコンポーネントの間でサポートされる機能の高レベルな比較を示しています。
 
 |  | AEM 基盤ビデオ | Dynamic Mediaクラシックビデオ |
 |---|---|---|
@@ -162,8 +160,8 @@ Dynamic Mediaクラシックビデオの視聴には、Dynamic Mediaクラシッ
 
    | プロパティ | 説明 |
    |---|---|
-   | Dynamic Mediaクラシック(Scene7)クラウド設定 | エンコーディングプリセットで使用するクラウド設定です。 |
-   | Dynamic Mediaクラシック(Scene7)エンコーディングプリセット | このビデオプロファイルをマップするために使用するエンコーディングプリセットです。 |
+   | Dynamic Mediaクラシッククラウド設定 | エンコーディングプリセットで使用するクラウド設定です。 |
+   | Dynamic Mediaクラシックエンコーディングプリセット | このビデオプロファイルをマップするために使用するエンコーディングプリセットです。 |
    | HTML5 ビデオタイプ | このプロパティを使用すると、HTML5 ビデオのソース要素の type プロパティの値を設定できます。この情報は、Dynamic Mediaクラシックエンコーディングプリセットでは提供されませんが、HTML5ビデオ要素を使用してビデオを正しくレンダリングするために必要です。 共通の形式用のリストが提供されますが、他の形式用に上書きできます。 |
 
    ビデオコンポーネントで使用する、クラウド設定で選択したすべてのエンコーディングプリセットについて、この手順を繰り返します。
@@ -185,7 +183,7 @@ Dynamic Mediaクラシックビデオの視聴には、Dynamic Mediaクラシッ
 
 #### チェックリスト {#checklist}
 
-1. Dynamic Mediaクラシック(Scene7)クラウド設定を作成します。 ビデオエンコーディングプリセットが設定され、インポーターが実行されていることを確認します。
+1. Dynamic Mediaクラシッククラウド設定を作成します。 ビデオエンコーディングプリセットが設定され、インポーターが実行されていることを確認します。
 1. クラウド設定で選択した各ビデオエンコーディングプリセットに対して、Dynamic Mediaクラシックビデオプロファイルを作成します。
 1. ビデオプロファイルをアクティベートする必要があります。
 1. 目的のページで基盤ビデオコンポーネントの設計を設定します。
