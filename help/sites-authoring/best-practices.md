@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 translation-type: tm+mt
-source-git-commit: 22cdd6a7b343749b8ce85d8c1b230d094732f44a
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 84%
+source-wordcount: '302'
+ht-degree: 73%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 84%
 
 ## Assets {#assets}
 
-Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明されています。
+Dynamic Media機能やDynamic Mediaクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明されています。
 
 <table>
  <tbody>
@@ -55,7 +55,7 @@ Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセット
   <tr>
    <td>ダイナミックイメージング</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td>
-   <td><p>ダイナミックメディア機能を使用している場合、または Scene7 と統合している場合に、最良の結果を得るために画像をシャープにする方法と画質を最適化する最善の方法について説明しています。 </p> </td>
+   <td><p>Dynamic Mediaの機能を使用している場合、またはDynamic Mediaクラシックと統合している場合に、最良の結果を得るために画像にシャープを適用する方法と、画質を最適化する最適な方法について説明します。 </p> </td>
   </tr>
   <tr>
    <td>多言語のアセット</td>
