@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '580'
 ht-degree: 73%
 
 ---
@@ -222,7 +222,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 * [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)
 * [Test&amp;Target](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-target)
 * [Search&amp;Promote](/help/sites-administering/marketing-cloud.md#integrating-with-search-promote)
-* [Scene7](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
+* [Dynamic Media](/help/sites-administering/marketing-cloud.md#integrating-with-scene)
 
 >[!NOTE]
 >
