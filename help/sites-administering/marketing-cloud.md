@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 86%
+source-wordcount: '1005'
+ht-degree: 75%
 
 ---
 
@@ -72,22 +72,15 @@ Analytics や Target との統合をオプトインすれば、そのページ�
 
 詳しくは、[Adobe Analytics および Adobe Target との統合のオプトイン](/help/sites-administering/opt-in.md)を参照してください。
 
-## Scene7 との統合  {#integrating-with-scene}
+## AdobeDynamic Mediaクラシックとの統合{#integrating-with-scene}
 
-[Adobe Scene7](https://www.adobe.com/products/scene7.html) は、ダイナミックマーケティングアセットやリッチビジュアルマーチャンダイジングを公開、管理、拡張したり、Web、モバイル、電子メール、ソーシャルメディア、インターネットに接続されたディスプレイやプリンターへ配信したりするためのホスト型ソリューションです。
+AdobeDynamic Mediaクラシックは、Web、モバイル、電子メール、ソーシャルメディア、インターネットに接続されたディスプレイ、印刷機器に、動的なマーケティングアセットや豊富な視覚的マーチャンダイジングを公開、管理、強化、配信するためのホストソリューションです。
 
-AEM から Scene7 に直接デジタルアセットを公開できます。また、Scene7 から AEM にもデジタルアセットを公開できます。
+AEMでは、デジタルアセットをAEMからDynamic Mediaクラシックに直接公開したり、デジタルアセットをDynamic MediaクラシックからAEMに公開したりできます。
 
-さらに、Scene7 で公開された AEM アセットを次の様々なビューアで表示できます。
+また、Dynamic Mediaクラシックで公開したAEMアセットは、基本ズームやビデオなどの様々なビューアに表示できます。
 
-* ベーシックズーム
-* DHTML フライアウトズーム
-* Flash フライアウトズーム
-* ビデオ
-* Flash テンプレート
-* 画像テンプレート
-
-AEMとScene7の統合方法について詳しくは、[Scene7との統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
+AEMとDynamic Mediaクラシックを統合する方法について詳しくは、「[Dynamic Mediaクラシックとの統合](/help/sites-administering/scene7.md)」のドキュメントを参照してください。
 
 ## Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
 
@@ -101,7 +94,7 @@ Audience Manager 統合は AEM 6.3 では削除されています。
 
 ## Search&amp;Promote との統合 {#integrating-with-search-promote}
 
-[Adobe Search&amp;Promote](https://www.omniture.com/en/products/conversion/search-and-promote) を使用すると、マーケティング担当者は、Web サイトおよびモバイルサイト上で、訪問者が関連商品やコンテンツを参照、検索、比較および選択する方法を最適化することができます。企業では、ビジネス目標と訪問者の意図に基づいて、優先度の高い項目のプロモーションを簡単に実施できます。また、KPI に基づくトリガーまたは指標を利用して、マーチャンダイジングとプロモーションのアクティビティを自動化できます。
+[Adobe検索と](https://www.omniture.com/en/products/conversion/search-and-promote) プロモーターを使用すると、マーケターは、Webサイトやモバイルサイト上で訪問者が関連商品や関連コンテンツをどのように参照、検索、比較、選択するかを最適化できます。企業では、ビジネス目標と訪問者の意図に基づいて、優先度の高い項目のプロモーションを簡単に実施できます。また、KPI に基づくトリガーまたは指標を利用して、マーチャンダイジングとプロモーションのアクティビティを自動化できます。
 
 Adobe Search&amp;Promote は、信頼性とスケーラビリティに優れたホスト型サイト検索アプリケーションです。数百万のページや商品の規模にまで拡張でき、小売サイトからニュースサイトまで、訪問者数の多いオンラインビジネスに対応できます。Adobe Search&amp;Promote は、マーケティング担当者による、かつてないレベルの管理性と指標ベースの関連性を実現します。
 
