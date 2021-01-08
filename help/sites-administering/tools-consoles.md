@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d366e9f9a1c44ff4866907e83432ab2b1438bbb3
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '619'
 ht-degree: 99%
 
 ---
@@ -292,7 +292,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td> </td>
-   <td>Scene7 設定<br /> </td>
+   <td>Dynamic Media 設定<br /> </td>
   </tr>
   <tr>
    <td> </td>
