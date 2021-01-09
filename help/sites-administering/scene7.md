@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media Classic（Scene7）との統合
-seo-title: Dynamic Media Classic（Scene7）との統合
+title: Dynamic MediaClassicとの統合
+seo-title: Dynamic MediaClassicとの統合
 description: AEMとDynamic Mediaクラシックの統合方法を説明します。
 seo-description: AEMとDynamic Mediaクラシックの統合方法を説明します。
 uuid: b014d643-1cc1-47f3-a79c-7f6f9e45637a
@@ -10,17 +10,17 @@ topic-tags: integration
 content-type: reference
 discoiquuid: f55e68c3-3309-4400-bef9-fd3afa6e2b5f
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
 workflow-type: tm+mt
-source-wordcount: '5485'
-ht-degree: 24%
+source-wordcount: '5464'
+ht-degree: 23%
 
 ---
 
 
-# Dynamic Media Classic（Scene7）との統合{#integrating-with-dynamic-media-classic-scene}
+# Dynamic MediaClassicとの統合{#integrating-with-dynamic-media-classic-scene}
 
-[AdobeDynamic Media](https://help.adobe.com/en_US/scene7/using/WS26AB0D9A-F51C-464e-88C8-580A5A82F810.html) クラシックは、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
+AdobeDynamic Mediaクラシックは、リッチメディアアセットを管理、強化、公開、およびWeb、モバイル、電子メール、インターネットに接続されたディスプレイや印刷に配信するためのホストソリューションです。
 
 Dynamic Mediaクラシックを使用するには、Dynamic MediaクラシックとAEM Assetsが相互にやり取りできるようにクラウド設定を設定する必要があります。 このドキュメントでは、AEMとDynamic Mediaクラシックの設定方法を説明します。
 
@@ -363,7 +363,7 @@ Adobe CQDynamic MediaクラシックDamリスナーを有効にする必要が�
 
 ### 設定可能なタイムアウトをDynamic Mediaクラシックアップロードワークフローに追加{#adding-configurable-timeout-to-scene-upload-workflow}
 
-Dynamic Media Classic（Scene7）を使用してビデオエンコーディングを処理するように AEM インスタンスが設定されている場合、アップロードジョブのタイムアウトはデフォルトで 35 分になります。ビデオエンコーディングジョブの実行時間がこれよりも長くなる可能性を考慮して、この設定を変更できます。
+AEMインスタンスがDynamic Mediaクラシックを使用してビデオエンコーディングを処理するように設定されている場合、デフォルトでは、アップロードジョブで35分のタイムアウトが発生します。 ビデオエンコーディングジョブの実行時間がこれよりも長くなる可能性を考慮して、この設定を変更できます。
 
 1. **http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl**&#x200B;に移動します。
 
