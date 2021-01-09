@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 26a65772c43a5176d178bb6625604d18ac91e894
+source-git-commit: 01c30e78d1f89e8c07abeb0ac19af38722010dd0
 workflow-type: tm+mt
-source-wordcount: '2302'
-ht-degree: 79%
+source-wordcount: '2428'
+ht-degree: 75%
 
 ---
 
@@ -107,6 +107,14 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
    同様に、下向き矢印の付いた列見出しは、列内の値が降順で表示されていることを表します。
 
    また、**プレビュー**&#x200B;モードでテーブルを変更し、列見出しをもう一度クリックして、列の値を並べ替えることもできます。
+
+## テーブルの列幅を設定{#set-column-width}
+
+次の手順を実行して、テーブルの列幅を設定します。
+
+1. 「**[!UICONTROL コンテンツ]**」タブで、**[!UICONTROL テーブル]**&#x200B;コンポーネントをタップし、設定（![設定](assets/configure-icon.svg)）アイコンをタップします。
+
+1. 「**[!UICONTROL 列の幅]**」フィールドに値のコンマ区切りリストを入力し、テーブルの各列の幅を指定します。 例えば、3つの列を含むテーブルの場合、**[!UICONTROL 列の幅]**&#x200B;フィールドの値として2,4,6を指定すると、列の幅を1列目に2/12、2列目に4/12、3列目に6/12と設定します。 2/12は、最初の列の幅が、テーブルの幅の1/6を表します。 同様に、4/12では2番目の列幅を表の幅の1/3に設定し、6/12では3番目の列幅を表の幅の半分に設定します。
 
 ## 表のスタイルの設定 {#configure}
 
