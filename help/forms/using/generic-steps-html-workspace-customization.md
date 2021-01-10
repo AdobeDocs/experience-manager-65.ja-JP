@@ -11,29 +11,29 @@ topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: e863089a4328b7222b60429c82ca3df2b8e1dd05
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 52%
+source-wordcount: '317'
+ht-degree: 40%
 
 ---
 
 
-# AEM Forms Workspace のカスタマイズの一般的な手順に従います。{#generic-steps-for-aem-forms-workspace-customization}
+# AEM Forms Workspace のカスタマイズの一般的な手順に従います。  {#generic-steps-for-aem-forms-workspace-customization}
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
 1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にアクセスしてCRXDE Liteにログインします。
-1. `ws`という名前のフォルダーが存在しない場合は、`/apps`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. `sling:Folder`フォルダー`ws`が存在しない場合は、`/apps`に作成します。 `sling:Folder`フォルダーを作成するには、`apps`フォルダーを右クリックし、**[!UICONTROL 作成]**/**[!UICONTROL ノードを作成]**&#x200B;を選択します。 名前を`ws`に指定し、タイプを`sling:Folder`に選択して「**[!UICONTROL OK]**」をクリックします。 「**[!UICONTROL すべて保存]**」をクリックします。
 1. `/apps/ws`を参照し、**[!UICONTROL アクセス制御]**&#x200B;タブに移動します。
-1. **[!UICONTROL アクセス制御]**&#x200B;リストーで、**[!UICONTROL +]**&#x200B;をクリックして新しいエントリを追加します。 もう一度「**[!UICONTROL +]**」をクリックします。
+1. 「**[!UICONTROL リポジトリ]**」オプションを選択します。 **[!UICONTROL アクセス制御]**&#x200B;リストーで、**[!UICONTROL +]**&#x200B;をクリックして新しいエントリを追加します。 もう一度「**[!UICONTROL +]**」をクリックします。
 1. **PERM_WORKSPACE_USER**&#x200B;プリンシパルを検索して選択します。
 
    ![HTML Workspace をカスタマイズするための汎用手順の一部として PERM_WORKSPACE_USER プリンシパルを選択します](assets/perm_workspace_user.png)
 
 1. プリンシパルに`jcr:read`権限を与えます。
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
-1. `GET.jsp`と`html.jsp`ファイルを`/libs/ws`フォルダーから`/apps/ws`フォルダーにコピーします。
+1. `GET.jsp`、`index`および`html.jsp`ファイルを`/libs/ws`フォルダーから`/apps/ws`フォルダーにコピーします。
 1. `/apps/ws`フォルダーの`/libs/ws/locales`フォルダーをコピーします。 「**[!UICONTROL すべて保存]**」をクリックします。
 1. `GET.jsp`ファイル内の参照と相対パスを次に示すように更新し、「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -45,7 +45,7 @@ ht-degree: 52%
 
    1. `/apps/ws`フォルダーに移動し、`css`という名前の新しいフォルダーを作成します。
 
-   1. `css` フォルダに `newStyle.css` という名前の新しいファイルを作成します。
+   1. `css`フォルダーに、`newStyle.css`という名前の新しいファイルを作成します。
 
    1. `/apps/ws/html`.jspを開き、
 
@@ -64,7 +64,7 @@ ht-degree: 52%
 
    >[!NOTE]
    >
-   >上記のように、newStyle.css のエントリの後ろにユーザー定義された CSS ファイルのエントリを配置します。
+   >上に示すように、style.cssのエントリの後に、ユーザー定義CSSファイルのエントリを配置します。
 
 1. /apps/ws/html.jsp ファイルで、
 
@@ -84,9 +84,7 @@ ht-degree: 52%
 
    1. `libs`という名前のフォルダーを`/apps/ws/js`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-   1. `jqueryui`という名前のフォルダーを`/apps/ws/js/libs`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
-
-   1. `/libs/ws/js/libs/jqueryui/jquery.ui.datepicker-ja.js` を `/apps/ws/js/libs/jqueryui` にコピーします。「**[!UICONTROL すべて保存]**」をクリックします。
+   1. `/libs/ws/js/libs/jqueryui`フォルダーを`/apps/ws/js/libs`にコピーします。 「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. HTML のカスタマイズは以下のようにして実行します。
 
