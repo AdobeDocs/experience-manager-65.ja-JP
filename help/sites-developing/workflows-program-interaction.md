@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: 7d2ba937710e5931356512b812a8b8fbe3a52072
+source-git-commit: edf7ef93372e44cb71d8eac8712db53f4e45b6cf
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 56%
@@ -632,7 +632,7 @@ wfSession.terminateWorkflow(workflow);
    curl -d "model={id}&payloadType={type}&payload={payload}" http://localhost:4502/etc/workflow/instances
    
    # for example:
-   curl -u admin:admin -d "model=/var/workflow/models/request_for_activation/jcr:content/model&payloadType=JCR_PATH&payload=/content/we-retail/us/en/products" http://localhost:4502/etc/workflow/instances
+   curl -u admin:admin -d "model=/var/workflow/models/request_for_activation&payloadType=JCR_PATH&payload=/content/we-retail/us/en/products" http://localhost:4502/etc/workflow/instances
    ```
 
 * **インスタンスの一覧表示**
