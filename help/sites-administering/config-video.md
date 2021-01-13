@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: a1efef3c-0e4b-4a17-bcad-e3cc17adbbf7
 translation-type: tm+mt
-source-git-commit: 535a175486a2d0f31762d71954c4fead2ef246e1
+source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 16%
+source-wordcount: '500'
+ht-degree: 17%
 
 ---
 
@@ -23,6 +23,14 @@ ht-degree: 16%
 [ビデオコンポーネント](/help/sites-authoring/default-components-foundation.md#video)を使用すると、あらかじめ定義されたOOTB(Out-Of-The Box)ビデオアセットをページに配置できます。
 
 トランスコードを適切に行うために、管理者はFFmpegを個別にインストールします。 [FmpegのインストールとAEMの設定](#install-ffmpeg)を参照してください。 管理者はまた、[HTML5要素で使用するビデオプロファイル](#configure-video-profiles)を設定します。
+
+>[!CAUTION]
+>
+>この基盤コンポーネントは廃止されました。Adobeでは、代わりに[コアコンポーネント埋め込みコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html)を活用することをお勧めします。
+
+>[!CAUTION]
+>
+>このコンポーネントは、プロジェクトレベルのカスタマイズが必要な場合に、すぐに使用できる機能とは限りません。
 
 ## ビデオプロファイルの設定 {#configure-video-profiles}
 
