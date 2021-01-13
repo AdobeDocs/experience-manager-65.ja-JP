@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 612d102b5925704ce459ad818554e487ec0d5355
+source-git-commit: c0530f7d280406e31d4813a179bc10756773d389
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 36%
@@ -19,7 +19,7 @@ ht-degree: 36%
 ---
 
 
-# Communities のデプロイ{#deploying-communities}
+# Communities のデプロイ {#deploying-communities}
 
 ## 前提条件 {#prerequisites}
 
