@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
+source-git-commit: c451948c43004d084bc3fce7a2c6ad99381f1ea8
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 31%
+source-wordcount: '970'
+ht-degree: 30%
 
 ---
 
@@ -85,6 +85,9 @@ AEM [!DNL Forms]で[!DNL Adobe Sign]を使用するには、AEMクラウドサ�
    **na1** は、デフォルトのデータベースシャードを参照します。
 
    データベースシャードの値を更新することができます。サーバーを再起動すると、データベースシャードの新しい値を使用することができます。
+
+   >[!NOTE]
+   作成者インスタンス設定と発行インスタンス設定が同じ共有を指していることを確認します。 1つの組織に複数のAdobe Sign構成を作成する場合は、すべての構成で同じ共有が使用されていることを確認します。
 
 1. 手順8でコピーした&#x200B;**クライアントID**(アプリケーション IDとも呼ばれます)と&#x200B;**クライアントシークレット**&#x200B;を指定します。 「**[!UICONTROL 添付ファイルにも を有効にする]**」オプションを選択すると、アダプティブフォームに添付されているファイルが、署名用に送信された対応する Adobe Sign ドキュメントに添付されます。[!DNL Adobe Sign]
 
