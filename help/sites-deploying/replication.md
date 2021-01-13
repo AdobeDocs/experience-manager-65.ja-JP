@@ -11,10 +11,10 @@ topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 8adbf52b29cf6e548bf14df57bc12b44821c9def
+source-git-commit: 17d70e532ab5d825dd4dc0ea4c891c5b7cb8d345
 workflow-type: tm+mt
-source-wordcount: '3593'
-ht-degree: 72%
+source-wordcount: '3443'
+ht-degree: 75%
 
 ---
 
@@ -446,7 +446,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 更新された内容は、前述の手順で設定したすべてのパブリッシュインスタンスに表示されます。
 
-問題が発生した場合は、作成者インスタンスのログを確認できます。 必要な詳細レベルに応じて、**Agent Settings**&#x200B;ダイアログを使用して、&lt;a0/>Log Level **を`Debug`に設定することもできます。**
+問題が発生した場合は、作成者インスタンスのログを確認できます。 必要な詳細レベルに応じて、**Agent Settings**&#x200B;ダイアログを使用して、**Log Level**&#x200B;を`Debug`に設定することもできます。
 
 >[!NOTE]
 >
@@ -474,7 +474,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
       * 「**有効**」をアクティブにします。
       * 「**説明**」を入力します。
-      * **シリアル化タイプ**&#x200B;は`Dispatcher Flush`のままにしておくか、新しいエージェントを作成する場合は&lt;a0/>シリアル化タイプ&lt;a1/>を&lt;a2/>のままにするか、新しいエージェントとして設定します。
+      * **シリアル化タイプ**&#x200B;は`Dispatcher Flush`のままにしておくか、新しいエージェントを作成する場合はシリアル化タイプをのままにするか、新しいエージェントとして設定します。
 
       * （オプション）「**エイリアスの更新**」を選択して、エイリアスまたはバニティパスの無効化要求をディスパッチャーに対して有効にします。
    * 「**トランスポート**」タブで、次のように設定します。
@@ -589,19 +589,3 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
 ## その他のリソース {#additional-resources}
 
 トラブルシューティングの詳細については、[レプリケーションのトラブルシューティング](/help/sites-deploying/troubleshoot-rep.md)ページを参照してください。
-
-Adobe では、追加情報として、レプリケーションに関連する一連のナレッジベースの記事を提供しています。
-
-[https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.](https://helpx.adobe.com/experience-manager/kb/ReplicationSiblingReordering.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.](https://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationFailureAfterNewIP.](https://helpx.adobe.com/experience-manager/kb/LimitAccessToReplicationAgents.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.](https://helpx.adobe.com/experience-manager/kb/PagePermissionsNotReplicatedWithUser.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.](https://helpx.adobe.com/experience-manager/kb/HowToUseReverseReplication.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.](https://helpx.adobe.com/experience-manager/kb/CQ5ReplicateToSpecificAgents.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationListener.](https://helpx.adobe.com/experience-manager/kb/ReplicationListener.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/replication-stuck.](https://helpx.adobe.com/experience-manager/kb/replication-stuck.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.](https://helpx.adobe.com/experience-manager/kb/replication-privileges-missing-after-upgrade-to-cq-5-5.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.](https://helpx.adobe.com/experience-manager/kb/CQ53UnableToCreateJobQueueDueToMaxQueues.html)
-[htmlhttps://helpx.adobe.com/experience-manager/kb/ACLReplication.htmlhttps://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.htmlhttps://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html.........](https://helpx.adobe.com/experience-manager/kb/ACLReplication.html)
-[](https://helpx.adobe.com/experience-manager/kb/content-grow-due-reverse-replication.html)
-[](https://helpx.adobe.com/experience-manager/kb/ReplicationAgentUsingAnonUser.html)
