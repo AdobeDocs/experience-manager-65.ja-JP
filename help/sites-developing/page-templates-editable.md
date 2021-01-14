@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
-source-wordcount: '3218'
-ht-degree: 90%
+source-wordcount: '3285'
+ht-degree: 88%
 
 ---
 
@@ -130,6 +130,16 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    編集可能テンプレートを使用したページ作成の技術的な詳細については、このドキュメントの[作成されるコンテンツページ](/help/sites-developing/page-templates-editable.md#resultant-content-pages)を参照してください。
 
+>[!TIP]
+>
+>国際化する必要がある情報は、テンプレートに含めないでください。内部化の目的では、コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)の[ローカライゼーション機能を推奨します。
+
+>[!NOTE]
+>
+>テンプレートは、ページ作成ワークフローを合理化する強力なツールです。 ただし、テンプレートが多すぎると作成者を圧倒し、ページ作成を混乱させる可能性があります。 テンプレートの数を100未満に抑えるのが一般的です。
+>
+>Adobeでは、パフォーマンスに影響が及ぶ可能性があるので、1000を超えるテンプレートを使用することはお勧めしません。
+
 >[!NOTE]
 >
 >エディタークライアントライブラリは、コンテンツページに `cq.shared` 名前空間が存在することを前提としています。名前空間が存在しない場合は、JavaScript エラー「`Uncaught TypeError: Cannot read property 'shared' of undefined`」が発生します。
@@ -137,10 +147,6 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 >すべてのサンプルコンテンツページには `cq.shared` が含まれているので、それらをベースとするコンテンツには自動的に `cq.shared` が含められます。ただし、サンプルコンテンツをベースとせず、ゼロから独自のコンテンツページを作成する場合は、`cq.shared` 名前空間を含める必要があります。
 >
 >詳しくは、[クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
-
->[!CAUTION]
->
->テンプレートには[国際化](/help/sites-developing/i18n.md)が必要な情報は絶対に入れないようにしてください。
 
 ## テンプレートフォルダー {#template-folders}
 
@@ -213,7 +219,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 1. **グローバルナビゲーション**／**ツール**／**設定ブラウザー**&#x200B;に移動します。
 
-   **グローバル**&#x200B;フォルダーなどの既存のフォルダーは左側に一覧表示されます。
+   既存のフォルダーが左側に表示され、**グローバル**&#x200B;フォルダーも含まれます。
 
 1. 「**作成**」をクリックします。
 1. **設定を作成**&#x200B;ダイアログで、以下のフィールドを設定する必要があります。
