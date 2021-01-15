@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: fa8d8c9a001b56006f1c0a30eb5a342754e63573
+source-git-commit: ad8ca7aaacd80bf5ca8daec78f7836e883e2343b
 workflow-type: tm+mt
-source-wordcount: '4227'
+source-wordcount: '4277'
 ht-degree: 5%
 
 ---
@@ -423,6 +423,10 @@ B. Package Manager](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/packag
 1. Adobe Experience ManagerService Packがインストールされていることを確認します。
 1. [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)に記載されている、お使いのオペレーティングシステム用の対応するFormsアドオンパッケージをダウンロードしてください。
 1. [AEM Formsアドオンパッケージのインストール](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の説明に従って、Formsアドオンパッケージをインストールします。
+
+>[!NOTE]
+>
+>AEM 6.5.7.0には、[AEM Forms互換パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、AEM 6.5.7.0にアップデートする場合は、Formsオンパッケージのインストール後に最新バージョンのパッケージをインストールし追加ます。
 
 ### JEEにAdobe Experience Manager Formsをインストール{#install-aem-forms-jee-installer}
 
