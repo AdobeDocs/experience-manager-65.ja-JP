@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: ad8ca7aaacd80bf5ca8daec78f7836e883e2343b
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4274'
 ht-degree: 5%
 
 ---
@@ -463,7 +463,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJarの使用方法
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨です。 AEM 6.5で更新されたAEMとターゲットの統合により、AdobeIMSとI/Oを介した認証を使用するTarget Standard APIがサポートされ、AEMページの解析とパーソナライゼーションの実装でAdobe開始の役割が増加しているため、オプトインウィザードは機能的に無関係になりました。 | 各AEMクラウドサービスを使用して、システム接続、AdobeIMS認証、Adobe I/O統合を設定します。 |
+| 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨です。 AEM 6.5で更新されたAEMとターゲットの統合により、AdobeIMSとI/Oを介した認証を使用するTarget Standard APIがサポートされ、AEMページの解析とパーソナライゼーションの実装でAdobe開始の役割が増加しているため、オプトインウィザードは機能的に無関係になりました。 | 各AEMクラウドサービスを使用して、システム接続、AdobeIMS認証、[!DNL Adobe I/O]統合を設定します。 |
 | コネクタ | AEM 6.5では、JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013のAdobeが非推奨です。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
