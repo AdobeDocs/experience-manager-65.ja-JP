@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '4742'
+source-wordcount: '4743'
 ht-degree: 4%
 
 ---
@@ -465,7 +465,7 @@ Adobe Analyticsアカウントのユーザー資格情報を見つけるには�
 
 AdobeFormsとの間でAEM Formsのインストールと設定を行うには、コンバージョンツールのユーザは次の作業を行う必要があります。
 
-1. AdobeIOへのアクセス。
+1. Adobe I/Oへのアクセス。
 
 1. AdobeFormsコンバージョンサービスとの統合を作成する権限です。
 
@@ -739,7 +739,7 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 ### デモに関する考慮事項{#demo-considerations}
 
 * AGRS-159に従って、登録アダプティブフォームで使用される連絡先の名前（最初、中間、最後）が一意であることを確認します。
-* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスは、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
+* 登録アダプティブフォームは、フォームの電子メールフィールドに指定された電子メールにAdobe Sign電子メールを送信します。 その電子メールアドレスを、Adobe Signクラウド設定の設定に使用した電子メールと同じ電子メールアドレスにすることはできません。
 
 ### 既知の問題 {#known-issues}
 
