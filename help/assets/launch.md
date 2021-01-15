@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f4051767-182e-4cfd-9dfc-8f516378e0b6
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 71e827dc17fd1c36230cb8d26b68d7f41c584e60
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '6605'
+source-wordcount: '6596'
 ht-degree: 93%
 
 ---
@@ -418,7 +418,7 @@ Dynamic Media ビューア拡張機能を使用すると、Dynamic Media ビュ�
 
 さらに、この統合ソリューションを AEM Sites で使用する場合は、次の設定もおこなう必要があります。
 
-* Adobe I/O コンソール - Adobe Launch 用に統合が作成されます。
+* [!DNL Adobe I/O] コンソール —Adobe起動用に統合が作成されます。
 * AEM オーサーノード - IMS 設定および Adobe Launch クラウド設定
 
 設定の一環として、Adobe Analytics と Adobe Launch が既に有効になっている Adobe Experience Cloud の会社にアクセスできることを確認してください。
@@ -693,7 +693,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. 新しいブラウザータブで、[Adobe I/O コンソール](https://console.adobe.io/integrations)に移動します。
+1. 新しいブラウザータブで、[[!DNL Adobe I/O] コンソール](https://console.adobe.io/integrations)に移動します。
 
 1. **[!UICONTROL Adobe I/O コンソール統合]**&#x200B;ページの右上隅近くにある「**[!UICONTROL 新規の統合]**」をクリックします。
 1. **[!UICONTROL 統合の新規作成]**&#x200B;ダイアログボックスで、「**[!UICONTROL API へのアクセス]**」ラジオボタンが選択されていることを確認し、「**[!UICONTROL 続行]**」をクリックします。
@@ -849,4 +849,4 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
 上記の AEM パブリッシュ用の Adobe Launch クラウド設定で、Adobe Launch ライブラリの開発 URL またはステージング URL を指定することで、この制限を回避できます。これにより、AEM パブリッシュノードは Adobe Launch ライブラリの開発版またはステージング版を使用するようになります。
 
-Adobe Launch クラウドの設定について詳しくは、[Adobe I/O を使用した AEM と Adobe Launch の統合](https://helpx.adobe.com/jp/experience-manager/using/aem_launch_adobeio_integration.html)を参照してください。
+Adobe Launch クラウドの設定について詳しくは、[ を使用した AEM と Adobe Launch の統合 [!DNL Adobe I/O]を参照してください。](https://helpx.adobe.com/jp/experience-manager/using/aem_launch_adobeio_integration.html)
