@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 30701cfdb36e5caf606e31564179a632b0de9fb5
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2815'
 ht-degree: 5%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 5%
 
 * [!DNL Adobe Experience Manager Experience Fragments] ワーク [!DNL Adobe Target] スペースに書き出されたデータは、で一意のオファータイプおよびオファーソースとして表示されるようにな [!DNL Target]りました。
 
-* マルチサイトマネージャ — コンポーネントがソースページから削除されている場合、発行トリガーによって、発行済みページからコンポーネントが削除されるようになりました。
+* マルチサイトマネージャ — 発行トリガーは、コンポーネントがソースページから削除された場合に、発行済みページからコンポーネントを削除するようになりました。
 
 * マルチサイトマネージャ — [!UICONTROL ライブコピー]内のローカルコンポーネントの名前がブループリント内のコンポーネントの名前と同じで、コンポーネントがブループリントからロールアウトされた場合、ローカルコンポーネントの名前に`_msm_moved`が追加されます。
 
@@ -168,7 +168,7 @@ ht-degree: 5%
 
 #### [!DNL Experience Manager Assets]を[!DNL Brand Portal] (6.5.4.0) {#configure-assets-bp}に設定
 
-[!DNL Experience Manager Assets]と[!DNL Brand Portal]の間の認証チャネルが変更されます。 以前は、[!DNL Brand Portal]は従来のOAuth Gateway経由でClassic UIに設定されていました。従来のOAuth Gatewayは、JWTトークン交換を使用して認証用のIMSアクセストークンを取得します。 [!DNL Experience Manager Assets] が、 [!DNL Brand Portal] 経由でAdobe I/Oに設定されました。これにより、 [!DNL Brand Portal] テナントの認証用にIMSトークンが調達されます。
+[!DNL Experience Manager Assets]と[!DNL Brand Portal]の間の認証チャネルが変更されます。 以前は、[!DNL Brand Portal]は従来のOAuth Gateway経由でClassic UIに設定されていました。従来のOAuth Gatewayは、JWTトークン交換を使用して認証用のIMSアクセストークンを取得します。 [!DNL Experience Manager Assets] が [!DNL Brand Portal] スルーで設定され [!DNL Adobe I/O]ました。これにより、 [!DNL Brand Portal] テナントの認証用にIMSトークンが調達されます。
 
 [!DNL Experience Manager Assets]を[!DNL Brand Portal]に設定する手順は、[!DNL Experience Manager]のバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 詳しくは、[Brand PortalでのExperience Managerアセットの設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)を参照してください。
 
@@ -252,7 +252,7 @@ AcroFormに[!DNL Adobe Sign]テキストタグが含まれる場合、これら�
 
 #### 添付ファイルコンポーネント(6.5.6.0)に複数のファイルを添付{#attach-multiple-files}
 
-複数のファイル[をアダプティブフォームの[!UICONTROL 添付ファイル]コンポーネントに&lt;a0/>添付できるようになりました。](../../help/forms/using/introduction-forms-authoring.md)
+複数のファイル[をアダプティブフォームの[!UICONTROL 添付ファイル]コンポーネントに](../../help/forms/using/introduction-forms-authoring.md)添付できるようになりました。
 
 #### [Adobe Experience Manager受信トレイ]列(6.5.5.0)をカスタマイズする{#customize-aem-inbox-columns}
 
