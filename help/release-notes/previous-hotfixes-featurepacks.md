@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Packのリリースノートです。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 544d99921a3b487bf8ae64111a8568f8f02fcd03
+source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
 workflow-type: tm+mt
-source-wordcount: '14953'
+source-wordcount: '14944'
 ht-degree: 19%
 
 ---
@@ -570,7 +570,7 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 
 * 10,000を超えるアセットを含むスマートコレクションを開くと、ログ内でトラバーサルの警告が観察されます(NPR-32980)。
 
-* Dynamic MediaScene7ランモード(NPR-32995)で動作する[!DNL Adobe Experience Manager]で、アセットを別のフォルダに移動すると、アセット名が小文字に変更されます。
+* Dynamic MediaScene7ランモード(NPR-32995)で動作する[!DNL Adobe Experience Manager]で、アセットを別のフォルダーに移動すると、アセット名が小文字に変更されます。
 
 * 検索されたアセットは、検索結果からそのプロパティに移動した後で検索結果に戻って削除した後は削除できません(NPR-32998)。
 
@@ -633,7 +633,7 @@ Adobe Experience Manager6.5.5.0は、新機能、お客様から要請された�
 * Adobe Targetコンポーネントを含むページが公開されると、内部キャッシュはクリアされます(NPR-33162)。
 * Adobe Targetとの統合は[!DNL Windows Internet Explorer] 11(NPR-33111)では機能しません。
 * Adobe Targetの設定時に、レポートソース(NPR-32502)を選択したときに、[!UICONTROL 会社]と[!UICONTROL レポートスイート]の各フィールドが表示されません。
-* Adobe I/Oを使用して[!DNL Experience Fragments]を書き出す場合、「Source Product」などのメタデータはAdobe Targetに書き出されません(NPR-32159)。
+* [!DNL Adobe I/O]を使用して[!DNL Experience Fragments]を書き出す場合、「Source Product」などのメタデータはAdobe Targetに書き出されません(NPR-32159)。
 * ローカルExperience Managerの管理者グループに属する権限のあるIMSユーザーは、IMS設定を作成または変更できません(NPR-33045)。
 * Adobeの起動の設定ページに、すべてのレコードが表示されるわけではありません(NPR-33011)。
 * content-authorsグループのユーザーは、JavaScriptエラー(NPR-32996)が原因で、Adobe Targetコンポーネントのプロパティを編集できません。
@@ -704,7 +704,7 @@ Adobe Experience Manager6.5.4.0は重要なアップデートで、新機能、�
 
 Adobe Experience Manager6.5.4.0で導入された主な機能および機能強化には、次のものがあります。
 
-* Adobe Experience Managerアセットは、Adobe I/Oコンソールを通じてBrand Portalで設定されるようになりました。
+* [!DNL Adobe I/O]コンソールを通じて、Adobe Experience ManagerアセットがBrand Portalで設定されるようになりました。
 
 * 新しい[印刷可能な出力を生成](../forms/using/aem-forms-workflow-step-reference.md)ステップがAdobe Experience Manager Formsワークフローで使用できるようになりました。
 
@@ -770,7 +770,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 ### Assets {#assets-6540-enhancements}
 
-* アセット収集ページでワークフローをトリガーするボタンが無効になっています(NPR-32471)。
+* アセット収集ページのトリガーワークフローへのボタンが無効になっています(NPR-32471)。
 
 * Dynamic MediaScene7設定(NPR-32440)とExperience Managerして、アセットを別のフォルダに移動すると、名前のないフォルダがSPS(Scene7Publishing System)に作成されます。
 
@@ -868,7 +868,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 ### Brand Portal {#assets-brand-portal-6540}
 
-* Brand Portalユーザは、Experience Manager6.5.4(CQDOC-15655)でAdobe I/Oにアップグレードした場合に、貢献度フォルダーのアセットを[!DNL Assets]に発行できません。 Experience Manager6.5.4に対する即時の修正のために、ホットフィックス[をダウンロードして、作成者インスタンスにインストールすることをお勧めします。](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)
+* Brand Portalユーザーは、Experience Manager6.5.4 (CQDOC-15655)の[!DNL Adobe I/O]にアップグレードした場合に、貢献度フォルダーのアセットを[!DNL Assets]に発行できません。 Experience Manager6.5.4に対する即時の修正のために、ホットフィックス[をダウンロードして、作成者インスタンスにインストールすることをお勧めします。](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-33041)
 
 * メタデータスキーマポップアップ値は、アセットのプロパティに表示されません(CQ-4283287)。
 
@@ -946,9 +946,9 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * [!DNL Dynamic Media] は、スマートイメージングをサポートしています。
 
-* [[!DNL Experience Manager]ワークフローで不在](../forms/using/configure-out-of-office-settings.md)の環境設定を&lt;a0/>設定できる。
+* [[!DNL Experience Manager]ワークフローで不在](../forms/using/configure-out-of-office-settings.md)の環境設定を設定できる。
 
-* [受信トレイまたは受信トレイ項目](../forms/using/configure-shared-queues-osgi.md)を[!DNL Experience Manager]ワークフローの他のユーザーと&lt;a0/>共有できます。
+* [受信トレイまたは受信トレイ項目](../forms/using/configure-shared-queues-osgi.md)を[!DNL Experience Manager]ワークフローの他のユーザーと共有できます。
 
 * バッチモード](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)で[対話型通信を生成する機能。
 
@@ -1257,7 +1257,7 @@ Remove one mention of this fix.
 * フォルダーメタデータスキーマフォームでデータ型が自動的に検出されないので、フォーム送信で関連するタイプヒントが作成されません。NPR-30599：CQ-4275227 のホットフィックス
 * DMS7 のオーサリング UI で切り抜きと回転のアセット編集オプションが無効になっています。NPR-30118：CQ-4273221 のホットフィックス
 * 共有リンク機能が、DMS7設定の[!DNL Experience Manager]インスタンスで動作しません。 NPR-30080、NPR-30492：CQ-4273651 のホットフィックス
-* [!DNL Dynamic Media]-Scene7コンポーネントをページに追加してからページを公開しても、dmscene7の設定は毎回トリガされません。 NPR-30641：CQ-4275962 のホットフィックス
+* [!DNL Dynamic Media]-Scene7コンポーネントをページに追加してからページを公開しても、dmscene7の設定は毎回トリガーされません。 NPR-30641：CQ-4275962 のホットフィックス
 * [!DNL Experience Manager]にIPSJobJournalを追加し、1つの処理プロファイルにつき1つのIntrusion Prevention Systems(IPS)ジョブのみを作成できるようにしました。 NPR-30490：CQ-4273614 のホットフィックス
 * [!DNL Dynamic Media]:アセットが [!DNL Experience Manager] 発行ノードに複製されるのを除外するデフォルトのフィルターを追加しました。NPR-30538：CQ-4274678 のホットフィックス
 * 外部の再処理ワークフローが導入されて、複数のリソースがサポートされ、フォルダーをペイロードとして使用できるようになりました。ワークフローには 2 つのステップがあります。次のステップへのメタデータマップを通じてハンドルなしでアセットを再処理するステップと、単一の IPS ジョブですべてのアセットをアセットハンドルなしで S7 に再アップロードするステップです。詳しくは、「[!DNL Dynamic Media]Cloud Servicesの設定」を参照してください。 NPR-30489：CQ-4272903 のホットフィックス
