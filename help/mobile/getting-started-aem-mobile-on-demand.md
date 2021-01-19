@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 54%
@@ -84,7 +84,7 @@ AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作�
 * [アプリのテンプレートとコンポーネント](/help/mobile/app-templates-and-components1.md)
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
 * [コンテンツプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
-* [AEM Mobile コンテンツサービスの開発](//help/mobile/developing-content-services.md)
+* [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md)
 
 開発者の役割と責任について詳しくは、[AEM Mobile On-demand Services向けAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md)を参照してください。
 
