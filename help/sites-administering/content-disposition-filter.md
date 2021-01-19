@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 translation-type: tm+mt
-source-git-commit: 741ba6f6ef3270414c0ddabb1a1d02d5c436b7d9
+source-git-commit: bb50e530f0d015c0e7d06650157e3e3994082483
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 45%
@@ -34,5 +34,4 @@ GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/sr
 
 * 除外されたリソースパス：除外されたリソースのリストです。各リソースパスは絶対パスおよび完全修飾パスとして指定する必要があります。プレフィックスマッチング／ワイルドカードはサポートされていません。
 
-* すべてのリソースパスを有効化：このフラグは、除外されたリソースパスで定義されたパス以外のすべてのパスに対して、このフィルターを有効にするかどうかを制御します。これを「true」に設定すると、Content Disposition パスが無視されます。設定とは無関係に、「jcr:data」または「jcr:content jcr:data」という名前のプロパティを含むリソースパスのみが対象となります。
-
+* すべてのリソースパスを有効化：このフラグは、除外されたリソースパスで定義されたパス以外のすべてのパスに対して、このフィルターを有効にするかどうかを制御します。これを「true」に設定すると、Content Disposition パスが無視されます。設定とは無関係に、「jcr:data」または「jcr:content/jcr:data」という名前のプロパティを含むリソースパスのみが対象となります。
