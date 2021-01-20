@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
 workflow-type: tm+mt
-source-wordcount: '4274'
+source-wordcount: '4255'
 ht-degree: 5%
 
 ---
@@ -30,8 +30,6 @@ ht-degree: 5%
 [!DNL Adobe Experience Manager] 6.5.7.0は、2019年4月の6.5リリースのリリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上を含む重要なアップデートです。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
 
 [!DNL Adobe Experience Manager] 6.5.7.0で導入された主な機能と強化された機能は次のとおりです。
-
-* [!UICONTROL 名前]、[!UICONTROL 最終変更日、]、[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えます。
 
 * ページの移動やMSMロールアウトを非同期操作として実行し、実行時のパフォーマンスへの影響を軽減します。
 
