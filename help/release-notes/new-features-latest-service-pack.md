@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2770'
 ht-degree: 5%
 
 ---
@@ -21,10 +21,6 @@ ht-degree: 5%
 この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Pack](#key-features-previous-service-packs)に含まれる[主な機能、および最後のservice pack](#key-releases-since-last-sp)リリース以降の[キーAEMの機能について説明します。
 
 ## アドビ [!DNL Experience Manager Sites] {#aem-sites}
-
-### 展開に使用できるライブコピーページを並べ替え{#sort-livecopy-pages}
-
-[!UICONTROL 名前]、[!UICONTROL 最終変更日]、[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えることができるようになりました。 ページの[!UICONTROL 最終ロールアウト日]は、このリリースで導入された新しいプロパティです。
 
 ### ページの移動とMSMロールアウトを非同期操作として使用できる{#page-moves-msm-asynchronous}
 
