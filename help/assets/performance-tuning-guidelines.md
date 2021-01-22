@@ -156,7 +156,7 @@ accessKey=<snip>
 
 1. [!DNL Experience Manager]作成者で`https://[aem_server]:[port]/system/console/slingevent`にアクセスします。
 
-1. **[!UICONTROL Granite Transient Workflow Queue]**&#x200B;のように、実装に関連する各ワークフローキューで「&lt;a0/>編集&#x200B;]**」をクリックします。**[!UICONTROL 
+1. **[!UICONTROL Granite Transient Workflow Queue]**&#x200B;のように、実装に関連する各ワークフローキューで「**[!UICONTROL 編集]**」をクリックします。
 
 1. **[!UICONTROL Maximum Parallel Jobs]**&#x200B;の値を更新し、**[!UICONTROL Save]**&#x200B;をクリックします。
 
