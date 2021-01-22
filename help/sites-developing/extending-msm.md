@@ -552,7 +552,7 @@ GitHub のコード
 
    * **タイトル**：ロールアウト設定例
    * **名前**： examplerolloutconfig
-   * **cq:trigger**:  `publish`
+   * **cq:トリガー**:  `publish`
 
 ### ロールアウト設定例へのライブアクションの追加 {#add-the-live-action-to-the-example-rollout-configuration}
 
@@ -694,7 +694,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
    * **相対** (例： `myProperty` または `./myProperty`)
 
-      * `cq:propertyInheritanceCancelled`にプロパティを追加したり、&lt;a0/>からプロパティを削除したりします。
+      * `cq:propertyInheritanceCancelled`にプロパティを追加したり、からプロパティを削除したりします。
    * **絶対** (例： `/image`)
 
       * チェーンを切断すると、`cq:LiveSyncCancelled`ミックスインを`./image`に追加し、`cq:isCancelledForChildren`を`true`に設定することで継承がキャンセルされます。
