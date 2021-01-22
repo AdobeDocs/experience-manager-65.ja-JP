@@ -207,7 +207,7 @@ ClientContext を編集して、特定のプロパティの値を設定（また
 
 ### プロパティコンポーネントの追加 {#adding-a-property-component}
 
-**ClientContextデザインページ**&#x200B;を開いた後、使用可能なコンポーネントを使用して追加、****&#x200B;完全に新しいプロパティを&lt;a2/>&lt;a3/>できます（コンポーネントは、サイドキックと&#x200B;**Insert New Component**&#x200B;ダイアログの両方に表示されます）。ボックス):****
+**ClientContextデザインページ**&#x200B;を開いた後、使用可能なコンポーネントを使用して追加、****&#x200B;完全に新しいプロパティを&#x200B;****&#x200B;できます（コンポーネントは、サイドキックと&#x200B;**Insert New Component**&#x200B;ダイアログの両方に表示されます）。ボックス):
 
 ![](assets/clientcontext_alisonparker_new.png)
 
