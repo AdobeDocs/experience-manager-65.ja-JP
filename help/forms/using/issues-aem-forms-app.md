@@ -44,7 +44,7 @@ OSGi 上の AEM Forms と同期するように設定された iOS 用の AEM For
 
 ## Workspace ユーザーによって送信された HTML5 フォームドラフトがポータルに表示されない  {#html-form-drafts-submitted-by-workspace-users-are-not-visible-on-the-portal}
 
-「**ドラフトとして保存**」HTMLレンダリングプロファイルが&lt;a0/>設定されているAEM Formsアプリで有効になっているHTML5フォームの場合、保存されたドラフトはWorkspaceユーザーに表示されません。 Workspaceユーザーが送信したHTML5フォームのドラフトをポータル上に表示保存するには、次の手順を実行します。
+「**ドラフトとして保存**」HTMLレンダリングプロファイルが設定されているAEM Formsアプリで有効になっているHTML5フォームの場合、保存されたドラフトはWorkspaceユーザーに表示されません。 Workspaceユーザーが送信したHTML5フォームのドラフトをポータル上に表示保存するには、次の手順を実行します。
 
 1. CRXDE を開いて管理者の資格情報でログインします。
 
