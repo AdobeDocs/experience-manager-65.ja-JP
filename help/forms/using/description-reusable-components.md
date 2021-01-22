@@ -56,7 +56,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>filterSelected - tasklist モデル</p></li>
@@ -100,7 +100,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>submitComplete - タスクモデル</p></li>
@@ -139,7 +139,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>取得済み - tasklist モデル </p></li>
@@ -211,7 +211,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>取得済み - tasklist モデル </p></li>
@@ -299,7 +299,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td>
     <ul>
      <li><p>転送済み - タスクモデル</p> </li>
@@ -353,7 +353,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>allStartpointsFetched - categorylist モデル </p></li>
@@ -396,7 +396,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>変更済み - カテゴリモデル </p></li>
@@ -444,7 +444,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>category:selected - categorylist モデル </p></li>
@@ -483,7 +483,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>タスクモデル</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td><p>変更 - startpoint モデル </p></td>
   </tr>
  </tbody>
@@ -527,7 +527,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td>
     <ul>
      <li><p>category:selected - categorylist モデル</p> </li>
@@ -577,7 +577,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>processname モデル</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>追加 - processnamelist モデル </p></li>
@@ -617,7 +617,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>processinstancelist モデル</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td><p>変更 - processname モデル </p></td>
   </tr>
  </tbody>
@@ -648,7 +648,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>processname モデル</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>processname:selected - processnamelist モデル </p></li>
@@ -687,7 +687,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>tasklist モデル</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td><p>変更 - processinstance モデル </p></td>
   </tr>
  </tbody>
@@ -722,7 +722,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
     </ul></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>processname:selected - processnamelist モデル </p></li>
@@ -762,7 +762,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>usersearch ビュー</p> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td>
     <ul>
      <li><p>outOfOfficeSettingsFetched - outofoffice モデル</p> </li>
@@ -803,7 +803,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>usersearch ビュー</p> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td>
     <ul>
      <li><p>queueAccessGranted - sharequeue モデル</p> </li>
@@ -847,7 +847,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td>
     <ul>
      <li><p>preferencesFetched - uisettings モデル </p></li>
@@ -921,7 +921,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td>
     <ul>
      <li>userImageUrlFetched - userinfo モデル</li>
@@ -961,7 +961,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p></td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p></td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p></td>
    <td><p>newWsError - wserror モデル </p></td>
   </tr>
  </tbody>
@@ -992,7 +992,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td>
     <ul>
      <li>principalSearched - principalsearch モデル</li>
@@ -1027,7 +1027,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>該当なし</p> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td><p>templateFetched- searchtemplate モデル</p> </td>
   </tr>
  </tbody>
@@ -1058,7 +1058,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td><p>searchtemplate モデル</p> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td><p>change - searchtemplatelist モデル</p> </td>
   </tr>
  </tbody>
@@ -1089,7 +1089,7 @@ AEM Formsワークスペースは、CRX™の特定の[フォルダー構造](/h
    <td>該当なし<br /> </td>
   </tr>
   <tr>
-   <td><p>リスンされたイベント(イベント名 — トリガー)</p> </td>
+   <td><p>イベントがリッスンしました(イベント名 —トリガー)</p> </td>
    <td><p>searchTemplate:selected - searchtemplateモデル</p> </td>
   </tr>
  </tbody>
