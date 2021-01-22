@@ -233,7 +233,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 
 ## ヒントと制限事項 {#best-practices-limitations}
 
-* ユーザーインターフェイスを介してメタデータが更新され、`dc`名前空間ーのメタデータプロパティが変更されます。 HTTP APIを使用して更新を行うと、`jcr`名前空間ーのメタデータプロパティが変更されます。 HTTP API[を使用してメタデータを更新する方法を参照してください。](/help/assets/mac-api-assets.md#update-asset-metadata)
+* ユーザーインターフェイスを介してメタデータが更新され、`dc`名前空間ーのメタデータプロパティが変更されます。 HTTP APIを使用して更新を行うと、`jcr`名前空間ーのメタデータプロパティが変更されます。 HTTP API](/help/assets/mac-api-assets.md#update-asset-metadata)を使用してメタデータを更新する方法を参照してください。[
 
 * アセットのメタデータを読み込むためのCSVファイルは、非常に特殊な形式です。 手間と時間を節約し、意図しないエラーを回避するために、書き出したCSVファイルの形式を使用してCSVを作成する開始を作成できます。
 
