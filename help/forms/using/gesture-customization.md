@@ -48,7 +48,7 @@ AEM Forms アプリケーションで、左スワイプは新しいタスクま�
 
    `"EventName Selector": "Function"`
 
-   `Selector`で指定されたHTMLイベントで`EventName`という名前のJavaScript要素をトリガーすると、`Function`が呼び出されます。
+   `Selector`で指定されたHTMLイベントに`EventName`という名前のJavaScript要素をトリガーすると、`Function`が呼び出されます。
 
 1. 検索
 
