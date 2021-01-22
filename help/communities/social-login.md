@@ -20,7 +20,7 @@ ht-degree: 36%
 
 # Facebook と Twitter を使用したソーシャルログイン {#social-login-with-facebook-and-twitter}
 
-ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMのメンバープロファイルに含まれます。
+ソーシャルログインは、サイト訪問者にFacebookやTwitterアカウントでサインインするオプションを提供する機能です。 したがって、許可されたFacebookデータやTwitterデータがAEMの会員プロファイルに含まれます。
 
 ![socialloginretail](assets/socialloginweretail.png)
 
@@ -491,7 +491,7 @@ OAuth認証ハンドラーの設定ごとに、このインスタンスに2つ�
    * 「**[!UICONTROL すべて保存]**」を選択します。
 
 
-* **name** `oauthid-123`の場合、*123*&#x200B;をFacebook ***App ID***&#x200B;またはTwitter ***Consumer (API) Key***&#x200B;に置き換えます。これは&#x200B;**ClientID&lt;a10>は、[AdobeGranite OAuth Application and Provider](social-login.md#adobe-granite-oauth-application-and-provider)構成内にあります。**
+* **name** `oauthid-123`の場合、*123*&#x200B;をFacebook ***App ID***&#x200B;またはTwitter ***Consumer (API) Key***&#x200B;に置き換えます。これは&#x200B;**ClientID**&#x200B;は、[AdobeGranite OAuth Application and Provider](social-login.md#adobe-granite-oauth-application-and-provider)構成内にあります。
 
    ![graniteauth-crxde](assets/graniteoauth-crxde.png)
 
