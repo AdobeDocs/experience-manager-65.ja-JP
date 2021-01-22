@@ -8,10 +8,10 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 86%
+source-wordcount: '1870'
+ht-degree: 82%
 
 ---
 
@@ -123,7 +123,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 * ライセンスの一部としてアドビによってバンドルされている CDN（コンテンツ配信ネットワーク）を使用している。
 * 汎用ドメイン（例えば、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` など）ではなく、専用ドメイン（例えば、`images.company.com` または `mycompany.scene7.com`）を使用してください。
 
- 自社のドメインを調べるには、会社のアカウントにログインします。
+ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。
 
 **[!UICONTROL 設定／アプリケーション設定／一般設定をタップします。]**「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
 
@@ -139,7 +139,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
    1. 主要連絡先の氏名、電子メールアドレス、電話番号。
    1. スマートイメージングを有効にする全ドメイン（`images.company.com` や `mycompany.scene7.com`）。
 
-       自社のドメインを調べるには、会社のアカウントにログインします。
+      ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。
 
       **[!UICONTROL 設定/アプリケーション設定/全般設定をクリックします。]**
 
@@ -147,7 +147,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
    1. 直接的な関係で管理されているのではなく、アドビを通じて CDN を使用していることを確認します。
    1. `s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用ドメインではなく、`images.company.com` や `mycompany.scene7.com` などの専用ドメインを使用していることを確認します。
 
-       自社のドメインを調べるには、会社のアカウントにログインします。
+      ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。
 
       **[!UICONTROL 設定/アプリケーション設定/全般設定をクリックします。]**
 
