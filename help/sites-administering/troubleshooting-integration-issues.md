@@ -127,7 +127,7 @@ ACL 管理の詳細については、[ユーザー管理とセキュリティ](/
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-* カスタム`head.html` （任意の`/apps/<CUSTOM-COMPONENTS-PATH>/head.html`の場合） ****&#x200B;が、次の例のように特定の統合ヘッドライブを選択的に&lt;a0/>含めないようにします。
+* カスタム`head.html` （任意の`/apps/<CUSTOM-COMPONENTS-PATH>/head.html`の場合） ****&#x200B;が、次の例のように特定の統合ヘッドライブを選択的に含めないようにします。
 
 ```
 <!-- DO NOT MANUALLY INCLUDE SPECIFIC CLOUD SERVICE HEADLIBS LIKE THIS -->
