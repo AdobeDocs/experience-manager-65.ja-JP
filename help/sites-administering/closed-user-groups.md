@@ -113,7 +113,7 @@ CUG を介した、制限付き読み取りアクセスを定義する際は、�
 
 ### 認証：認証要件の定義  {#authentication-defining-the-auth-requirement}
 
-CUG 機能の認証関連のパーツにより、認証を必要とするツリーをマークできます。オプションで、専用のログインページも指定できます。以前のバージョンに従って、新しい実装では、コンテンツリポジトリでの認証を必要とするツリーにマークを付け、最終的に要件を適用し、ログインリソースにリダイレクトする`Sling org.apache.sling.api.auth.Authenticator`との条件付き同期を有効にできます。
+CUG 機能の認証関連のパーツにより、認証を必要とするツリーをマークできます。オプションで、専用のログインページも指定できます。以前のバージョンに従って、新しい実装では、コンテンツリポジトリでの認証を必要とするツリーにマークを付け、最終的に要件を適用し、ログインリソースにリダイレクトする`Sling org.apache.sling.api.auth.Authenticator`との同期を条件付きで有効にできます。
 
 これらの要件は、`sling.auth.requirements` 登録プロパティを提供する OSGi サービスによって Authenticator に登録されます。その後、これらのプロパティは、認証要件の動的な拡張に使用されます。詳しくは、[Sling に関するドキュメント](https://sling.apache.org/apidocs/sling7/org/apache/sling/auth/core/AuthConstants.html#AUTH_REQUIREMENTS)を参照してください。
 
