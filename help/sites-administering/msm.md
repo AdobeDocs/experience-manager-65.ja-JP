@@ -141,7 +141,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
 
 * **プロパティを表示**（**サイト**）
 
-   * 必要に応じて、[ライブコピー](/help/sites-administering/msm-livecopy.md#monitoring-your-live-copy)を&#x200B;**Live Cop** yまたは&#x200B;**Blueprint**&#x200B;に関する情報を提供し、&lt;a0/>ライブコピー&lt;a1/>を監視します。
+   * 必要に応じて、[ライブコピー](/help/sites-administering/msm-livecopy.md#monitoring-your-live-copy)を&#x200B;**Live Cop** yまたは&#x200B;**Blueprint**&#x200B;に関する情報を提供し、ライブコピーを監視します。
 
 * **参照**（**サイト**）
 
