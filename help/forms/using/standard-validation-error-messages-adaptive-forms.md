@@ -71,7 +71,7 @@ ht-degree: 9%
 1. 「**[!UICONTROL サーバー]**&#x200B;で再検証」を選択して、送信前にサーバー上の入力フィールドの値を検証します。
 1. 送信アクションを選択します。
 
-   * データソースとして&#x200B;**[!UICONTROL フォームデータモデル](work-with-form-data-model.md)に基づくRESTful Webサービスを使用する場合は、「&lt;a0/>Submit using Form Data Model]**」を選択し、適切なデータモデルを選択します。[
+   * データソースとして&#x200B;**[!UICONTROL フォームデータモデル](work-with-form-data-model.md)に基づくRESTful Webサービスを使用する場合は、「[Submit using Form Data Model]**」を選択し、適切なデータモデルを選択します。
    * RESTful Webサービスをデータソースとして使用している場合は、「**[!UICONTROL RESTエンドポイントに送信]**」を選択し、**[!UICONTROL リダイレクトURL/パス]**&#x200B;を指定します。
 
    ![アダプティブフォーム送信プロパティ](assets/af_submission_properties.png)
