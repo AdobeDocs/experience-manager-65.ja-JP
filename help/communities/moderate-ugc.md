@@ -221,7 +221,7 @@ in the forum  **[!UICONTROL nodated]**  ****&amp; Moderated
 
 スパム検出エンジンを有効にするには、次の手順に従います。
 
-1. [`/system/console/configMgr`に移動して、&lt;a0/>Webコンソール](https://localhost:4502/system/console/configMgr)を開きます。
+1. [`/system/console/configMgr`に移動して、Webコンソール](https://localhost:4502/system/console/configMgr)を開きます。
 
 1. **AEM Communities Auto Moderation** 設定を見つけて編集します。
 1. 追加&#x200B;**[!UICONTROL SpamProcess]**&#x200B;エントリ。
