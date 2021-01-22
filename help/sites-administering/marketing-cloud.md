@@ -1,19 +1,15 @@
 ---
 title: Adobe Marketing Cloud との統合
-seo-title: Adobe Marketing Cloud との統合
-description: AEM と Adobe Marketing Cloud を統合する方法について説明します。
-seo-description: AEM と Adobe Marketing Cloud を統合する方法について説明します。
-uuid: 36d71dd3-7fb0-4237-99d3-4fbb2e162e7b
+description: Adobe Experience ManagerとAdobe Marketing Cloudを統合する方法を学びます。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: ba496f6a-c9aa-49b5-8207-8633748d2c17
 translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 75%
+source-wordcount: '998'
+ht-degree: 72%
 
 ---
 
@@ -26,7 +22,7 @@ Adobe Experience Manager(AEM)では、Adobe Marketing Cloudの次の製品とシ
 
 * Adobe Analytics：マーケティング担当者は、オンライン戦略やマーケティング戦略に関して、すぐに利用可能なリアルタイムの情報を入手できます。
 * Adobe Target：オンラインコンテンツと顧客との関連性を継続的に高め、より多くのコンバージョンを生み出すための機能をマーケティング担当者に提供します。
-* Adobe Scene7：メディア管理の自動化、Web 公開の効率化および Web エクスペリエンスの強化をホストされた環境内で自動化します。
+* AdobeDynamic Mediaクラシックは、メディア管理を自動化し、Webパブリッシングを合理化し、Webエクスペリエンスを強化して、すべてホスト環境で実現します。
 * Adobe Dynamic Tag Management：無制限の数のアドビやサードパーティのタグをすばやく簡単に管理できる直感的なツールをマーケティング担当者に提供します。
 * Adobe Search&amp;Promote：サイトの検索結果を管理および最適化できる機能をマーケティング担当者に提供します。
 * Adobe Campaign では、電子メール配信コンテンツを Adobe Experience Manager で直接管理できます。
@@ -76,11 +72,11 @@ Analytics や Target との統合をオプトインすれば、そのページ�
 
 AdobeDynamic Mediaクラシックは、Web、モバイル、電子メール、ソーシャルメディア、インターネットに接続されたディスプレイ、印刷機器に、動的なマーケティングアセットや豊富な視覚的マーチャンダイジングを公開、管理、強化、配信するためのホストソリューションです。
 
-AEMでは、デジタルアセットをAEMからDynamic Mediaクラシックに直接公開したり、デジタルアセットをDynamic MediaクラシックからAEMに公開したりできます。
+Adobe Experience Managerでは、Adobe Experience ManagerからDynamic Mediaクラシックにデジタルアセットを直接公開したり、Dynamic MediaクラシックからAdobe Experience Managerにデジタルアセットを公開したりできます。
 
-また、Dynamic Mediaクラシックで公開したAEMアセットは、基本ズームやビデオなどの様々なビューアに表示できます。
+また、Dynamic Mediaクラシックで公開したAdobe Experience Managerアセットを、基本ズームやビデオなどの様々なビューアに表示できます。
 
-AEMとDynamic Mediaクラシックを統合する方法について詳しくは、「[Dynamic Mediaクラシックとの統合](/help/sites-administering/scene7.md)」のドキュメントを参照してください。
+Adobe Experience ManagerがDynamic Mediaクラシックと統合する方法について詳しくは、「[Dynamic Mediaクラシックとの統合](/help/sites-administering/scene7.md)」のドキュメントを参照してください。
 
 ## Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
 
@@ -94,7 +90,7 @@ Audience Manager 統合は AEM 6.3 では削除されています。
 
 ## Search&amp;Promote との統合 {#integrating-with-search-promote}
 
-[Adobe検索と](https://www.omniture.com/en/products/conversion/search-and-promote) プロモーターを使用すると、マーケターは、Webサイトやモバイルサイト上で訪問者が関連商品や関連コンテンツをどのように参照、検索、比較、選択するかを最適化できます。企業では、ビジネス目標と訪問者の意図に基づいて、優先度の高い項目のプロモーションを簡単に実施できます。また、KPI に基づくトリガーまたは指標を利用して、マーチャンダイジングとプロモーションのアクティビティを自動化できます。
+AdobeSearch&amp;Promoteを使用すると、マーケターは、訪問者がWebサイトやモバイルサイト上でどのように関連商品や関連コンテンツを閲覧、検索、比較、選択するかを最適化できます。 企業では、ビジネス目標と訪問者の意図に基づいて、優先度の高い項目のプロモーションを簡単に実施できます。また、KPI に基づくトリガーまたは指標を利用して、マーチャンダイジングとプロモーションのアクティビティを自動化できます。
 
 Adobe Search&amp;Promote は、信頼性とスケーラビリティに優れたホスト型サイト検索アプリケーションです。数百万のページや商品の規模にまで拡張でき、小売サイトからニュースサイトまで、訪問者数の多いオンラインビジネスに対応できます。Adobe Search&amp;Promote は、マーケティング担当者による、かつてないレベルの管理性と指標ベースの関連性を実現します。
 
