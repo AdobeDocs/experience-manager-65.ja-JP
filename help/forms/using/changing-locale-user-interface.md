@@ -120,7 +120,7 @@ AEM Formsワークスペースは、画像を使用してカテゴリ、キュ�
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
    ```
 
-1. 日付選択を使用するすべてのファイルに`jqueryuidatepickernw`ファイルを含めるには、エイリアス&lt;a0/>を使用します。 `jquery.ui.datepicker-nw.js`日付選択は次のファイルで使用されます。
+1. 日付選択を使用するすべてのファイルに`jqueryuidatepickernw`ファイルを含めるには、エイリアス`jquery.ui.datepicker-nw.js`を使用します。 日付選択は次のファイルで使用されます。
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`
