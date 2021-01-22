@@ -91,7 +91,7 @@ SPAの主な概念は、SPAがネイティブアプリケーションの応答�
 
 >[!NOTE]
 >
->AEMでのSPAの動作方法に関する技術的な詳細については、AEM[の「SPA使用の手引き」を参照してください。](/help/sites-developing/spa-getting-started-react.md)
+>AEMでのSPAの動作方法に関する技術的な詳細については、AEM](/help/sites-developing/spa-getting-started-react.md)の「SPA使用の手引き」を参照してください。[
 >
 >SPAエディタのデザイン、アーキテクチャ、および技術的なワークフローについて詳しくは、「[SPAエディタの概要](/help/sites-developing/spa-overview.md)」を参照してください。
 
