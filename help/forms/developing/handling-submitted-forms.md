@@ -88,7 +88,7 @@ Formsサービスを呼び出すWebアプリケーションを考えてみまし
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>Webページには、Formsサービスを呼び出すJavaサーブレットにアクセスするリンクが含まれています。</p></td>
   </tr>
   <tr>
