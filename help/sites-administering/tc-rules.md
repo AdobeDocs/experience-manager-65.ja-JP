@@ -163,7 +163,7 @@ translation_rules.xmlファイルは、`nodelist`要素といくつかの子`nod
 
    ![chlimage_1-56](assets/chlimage_1-56.jpeg)
 
-ここから、**追加コンテキスト**&#x200B;を&lt;a0/>できます。 これにより、パスを追加できます。
+ここから、**追加コンテキスト**&#x200B;をできます。 これにより、パスを追加できます。
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
