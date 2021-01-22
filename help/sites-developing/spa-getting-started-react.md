@@ -280,10 +280,10 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 ## 次の手順 {#next-steps}
 
-独自のSPAを作成する手順を説明したガイドについては、『AEM SPA Editor - WKNDイベントの使い始めに — チュートリアル[』を参照してください。](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)
+独自のSPAを作成する手順を説明したガイドについては、『AEM SPA Editor - WKNDイベントの使い始めに — チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)』を参照してください。[
 
 AEM向けSPAを開発するための組織編成の詳細については、「 AEM用SPAの開発[](/help/sites-developing/spa-architecture.md)」を参照してください。
 
-動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作について詳しくは、「SPA[の動的モデルとコンポーネントのマッピング」を参照してください。](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)
+動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作について詳しくは、「SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の動的モデルとコンポーネントのマッピング」を参照してください。[
 
 ReactやAngular以外のフレームワーク用にSPAをAEMに実装する場合、またはAEM用のSPA SDKの仕組みを簡単に詳しく調べたい場合は、[SPA Blueprint](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
