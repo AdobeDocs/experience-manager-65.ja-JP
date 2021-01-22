@@ -49,7 +49,7 @@ Webインターフェイスから[!DNL Adobe InDesign]テンプレートを編�
 
    ![chlimage_1-102](assets/chlimage_1-307.png)
 
-1. 1つ以上のINDDテンプレートを[!DNL Experience Manager]に事前にアップロードしておき、&lt;a0/>で利用できるようにします。 パンフレットのテンプレートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
+1. 1つ以上のINDDテンプレートを[!DNL Experience Manager]に事前にアップロードしておき、で利用できるようにします。 パンフレットのテンプレートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 1. パンフレットの名前と、オプションで説明を指定します。
 
    ![chlimage_1-104](assets/chlimage_1-309.png)
