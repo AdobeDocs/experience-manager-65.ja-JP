@@ -121,7 +121,7 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 * **サービスセレクター**
 
-   （*必須*）サービスが呼び出される絶対パス（エンドポイント）です（仮想リソース）。 選択するパスのルートは、*OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)の&lt;a0/>Execution Paths*&#x200B;構成設定（`/bin/`、`/apps/`、`/services/`など）に含まれている必要があります。 サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[メッセージ機能](/help/communities/configure-messaging.md)を参照）。
+   （*必須*）サービスが呼び出される絶対パス（エンドポイント）です（仮想リソース）。 選択するパスのルートは、*OSGi config [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)のExecution Paths*&#x200B;構成設定（`/bin/`、`/apps/`、`/services/`など）に含まれている必要があります。 サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として指定します（[メッセージ機能](/help/communities/configure-messaging.md)を参照）。
 
    初期設定は */bin/messaging* です。
 
