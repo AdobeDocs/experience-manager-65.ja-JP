@@ -71,7 +71,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 >必ず以下を設定してください。
 >
 >**ユーザー** 名と **パスワード**。Apache Felix Web Management Consoleにアクセスするための秘密鍵証明書です。
->インスタンスの[セキュリティ](/help/sites-administering/security-checklist.md)を確実にするために、最初のインストール後にパスワードを変更する必要があります。
+>インスタンスの[セキュリティ](/help/sites-administering/security-checklist.md)を確保するために、最初のインストール後にパスワードを変更する必要があります。
 
 >[!NOTE]
 >
