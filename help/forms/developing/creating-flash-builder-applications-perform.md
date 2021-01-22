@@ -102,7 +102,7 @@ SSO認証を実行するクライアントアプリケーションの作成方�
 
 上の図は、クライアントアプリケーションの開始時に発生するアプリケーションフローを示しています。
 
-1. クライアントアプリケーションが`applicationComplete`イベントをトリガーします。
+1. クライアントアプリケーションは`applicationComplete`イベントをトリガーします。
 1. `ISSOManager.singleSignOn`への呼び出しが行われます。 クライアントアプリケーションは、User Managerセキュリティサーブレットに要求を送信します。
 1. セキュリティサーブレットがユーザーを認証すると、`ISSOManager`は`SSOEvent.AUTHENTICATION_SUCCESS`をディスパッチします。 応答として、クライアントアプリケーションはメインページを表示します。 この例では、メインページがMyApplication/EncryptDocumentという名前のAEM Formsの短時間のみ有効なプロセスを呼び出します。
 1. セキュリティサーブレットがユーザーが有効かどうかを判断できない場合、アプリケーションはユーザー資格情報を再要求します。 `ISSOManager`クラスは、`SSOEvent.AUTHENTICATION_REQUIRED`イベントをディスパッチします。 クライアントアプリケーションにログインページが表示されます。
