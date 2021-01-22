@@ -36,7 +36,7 @@ AEM Forms は強力なエンタープライズクラスのプラットフォー�
 
 ## デプロイメントトポロジ {#deployment-topology}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。OSGi機能上でForms中心のワークフローを実行するのに必要なのは、最低1つのAEM作成者または処理インスタンス（実稼働作成者）のみです。 処理インスタンスは、[強化されたAEM作成者](/help/forms/using/hardening-securing-aem-forms-environment.md)のインスタンスです。 実稼動版の作成者は、ワークフローやアダプティブフォームの作成など、実際のオーサリングを実行しないでください。
+AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。OSGi機能上でForms中心のワークフローを実行するのに必要なのは、最低1つのAEM作成者または処理インスタンス（実稼働作成者）のみです。 処理インスタンスは、[強化されたAEM作成者](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。 実稼動版の作成者は、ワークフローやアダプティブフォームの作成など、実際のオーサリングを実行しないでください。
 
 次のトポロジは、AEM Forms のインタラクティブ通信、Correspondence Management、AEM Forms のデータ取得および OSGi 機能にあるフォーム中心のワークフローを実行するための指標トポロジです。トポロジーについて詳しくは、「[AEM Forms のアーキテクチャとデプロイメントトポロジー](/help/forms/using/aem-forms-architecture-deployment.md)」を参照してください。
 
@@ -48,7 +48,7 @@ OSGiでのAEM FormsForms中心のワークフローは、AEM Formsの作成者�
 
 >[!NOTE]
 >
->「](../../forms/using/installing-configuring-forms-centric-workflow-on-osgi.md#next-steps)データ取得機能のインストールと設定[」の説明に従って、OSGiにAEM Formsを既にインストールしている場合は、ドキュメントの「次の手順[」のセクションに進みます。](../../forms/using/installing-configuring-aem-forms-osgi.md)
+>「[データ取得機能のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」の説明に従って、OSGiにAEM Formsを既にインストールしている場合は、ドキュメントの「次の手順](../../forms/using/installing-configuring-forms-centric-workflow-on-osgi.md#next-steps)」のセクションに進みます。[
 
 OSGiでのForms中心のワークフローのインストールと設定を開始する前に、以下のことを確認します。
 
