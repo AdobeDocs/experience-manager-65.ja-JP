@@ -637,7 +637,7 @@ N:definitions
 
    * `pathextension`
 
-      パスを先頭に付加し、解決されたパスのノードのプロパティから実値を取得することで、値を解決します。例えば、国コード`language`を言語の説明`de`に解決するために、`de`のようなパスの前に`/libs/wcm/core/resources/languages`の値を付加し、プロパティ&lt;a2/>から値を取り出すことができます。`German`
+      パスを先頭に付加し、解決されたパスのノードのプロパティから実値を取得することで、値を解決します。例えば、国コード`de`を言語の説明`German`に解決するために、`/libs/wcm/core/resources/languages`のようなパスの前に`language`の値を付加し、プロパティ`de`から値を取り出すことができます。
 
 * `resolverConfig`
 
@@ -741,7 +741,7 @@ N:data
 
 **パスの拡張子**
 
-次の例では、パス拡張子`/libs/wcm/core/resources/languages`の付いた値`de`の前に値&lt;a1/>を付け、プロパティ`language`から値を取り、国コード`de`を言語の説明`German`に解決します。
+次の例では、パス拡張子`/libs/wcm/core/resources/languages`の付いた値`de`の前に値を付け、プロパティ`language`から値を取り、国コード`de`を言語の説明`German`に解決します。
 
 参照先 `/libs/cq/reporting/components/userreport/languagecol/definitions/data`.
 
