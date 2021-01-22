@@ -41,7 +41,7 @@ ht-degree: 17%
 * **[!DNL Experience Manager Assets]** エンタープライズネットワーク（マネージドサービスまたはオンプレミス）に導入：ここでフォルダの共有を開始します。
 * **[!DNL Adobe Marketing Cloud Assets]コアサービス**: [!DNL Experience Manager] と [!DNL Creative Cloud] ストレージサービスの間に介在する役割を果たします。統合を使用する組織の管理者は、Marketing Cloud組織と[!DNL Assets]展開との間に信頼関係を確立する必要があります。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
 
-* **[!DNL Creative Cloud]アセットWebサービス** (ストレージと [!DNL Creative Cloud] ファイルWeb UI):ここでは、Creative Cloudーが共有された特定のCreative Cloudアプリユーザーが、招待を受諾して、ーアカウントストレージのフォルダーを表示できます。 [!DNL Assets] 
+* **[!DNL Creative Cloud]アセットWebサービス** (ストレージと [!DNL Creative Cloud] ファイルWeb UI):ここでは、Creative Cloudーが共有された特定のCreative Cloudアプリユーザーが、招待を受諾して、ーアカウントストレージーのフォルダーを表示できます。 [!DNL Assets] 
 * **Creative Cloudデスクトップアプリ**:（オプション）クリエイティブユーザーのデスクトップから、 [!DNL Creative Cloud] アセットストレージーと同期して、共有フォルダーや共有ファイルに直接アクセスできます。
 
 ## 特徴と制限事項 {#characteristics-and-limitations}
