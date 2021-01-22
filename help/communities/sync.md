@@ -212,11 +212,11 @@ Apache Sling Sync Agentsを設定するには：
 
 1. AEMオーサーインスタンスでの管理者権限でサインインします。
 1. [Webコンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします(例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))
-1. **Apache Sling Distribution Trigger - Scheduled Triggers Factory**&#x200B;を探します。
+1. **Apache Sling配布トリガー — 予定トリガーファクトリ**&#x200B;を探します。
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-      **socialpubsync -scheduled-trigger**&#x200B;を確認
+      **socialpubsync -scheduled-トリガー**&#x200B;を確認
 
    * 間隔（秒）を目的の間隔に設定し、保存します。
 
@@ -240,7 +240,7 @@ Sling配布で、購読に不一致があり、それに続く問題について
 1. **AEM Communitiesユーザー同期リスナー**&#x200B;を探します。
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）
 
-   検証名：**socialpubsync -scheduled-trigger**
+   検証名：**socialpubsync -scheduled-トリガー**
 
 1. 次の&#x200B;**NodeTypes**&#x200B;を設定します。
 
