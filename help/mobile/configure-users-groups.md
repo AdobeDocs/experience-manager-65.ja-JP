@@ -122,7 +122,7 @@ app-adminsグループのメンバーは、アプリの作成者&#x200B;**AND**&
 現在、このタイルには、権限を必要とするアクションはありませんが、アプリケーションの詳細ページには以下のアクションが表示されます。
 
 * 編集&#x200B;**：app-author および app-admin 向け（UI トリガー - jcr:write - /content/phonegap/{suffix} に対して）
-* *app-authorとapp-adminの* ダウンロード（UIトリガー — /content/phonegap/{suffix}）
+* *app-authorとapp-adminの* ダウンロード(UIトリガー- /content/phonegap/{suffix})
 
 以下の図は、アプリのダウンロードおよび編集オプションを示しています。
 
