@@ -143,7 +143,7 @@ Assembler Service API(Java)を使用して、PDFドキュメントがPDF/Aに準
    * コンストラクターを使用し、PDF/Aの準拠性を判断するために使用するPDFドキュメントの場所を渡して、`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクターを使用し、PDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡して、`com.adobe.idp.Document`オブジェクトを作成します。
    * `HashMap`コンストラクターを使用して、入力PDFドキュメントの保存に使用する`java.util.Map`オブジェクトを作成します。
-   * &lt;a0追加/>オブジェクトへのエントリ。その`java.util.Map`メソッドを呼び出し、次の引数を渡すことによって作成します。`put`
+   * &lt;a0追加/>オブジェクトへのエントリ。その`put`メソッドを呼び出し、次の引数を渡すことによって作成します。`java.util.Map`
 
       * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたソース要素の値と一致する必要があります。 例えば、この節で紹介するDDXドキュメントにあるsource要素の値はLoan.pdfです。
       * 入力PDFドキュメントを含む`com.adobe.idp.Document`オブジェクトです。
