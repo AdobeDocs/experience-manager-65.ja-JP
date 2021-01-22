@@ -29,7 +29,7 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 このページには、次の技術詳細が別途まとめられています。
 
-* [バッジ](#displaying-badges)を画像またはテキストとして&lt;a0/>表示する方法
+* [バッジ](#displaying-badges)を画像またはテキストとして表示する方法
 * 詳細な[デバッグログ](#debug-log-for-scoring-and-badging)を有効にする方法
 * スコアリングとバッジングに関連した[UGC](#ugc-for-scoring-and-badging)にアクセスする方法
 
