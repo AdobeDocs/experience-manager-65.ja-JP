@@ -229,8 +229,8 @@ AEM 用の SPA を開発する際に、フロントエンド開発者が実行�
 
 AEMの単純なSPAの構造とその仕組みの概要については、[React](/help/sites-developing/spa-getting-started-react.md)と[Angular](/help/sites-developing/spa-getting-started-angular.md)の両方の入門ガイドを参照してください。
 
-独自のSPAを作成する手順を説明したガイドについては、『AEM SPA Editor - WKNDイベントの使い始めに — チュートリアル[』を参照してください。](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)
+独自のSPAを作成する手順を説明したガイドについては、『AEM SPA Editor - WKNDイベントの使い始めに — チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html)』を参照してください。[
 
-動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作について詳しくは、「SPA[の動的モデルとコンポーネントのマッピング」を参照してください。](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)
+動的モデルとコンポーネントのマッピングおよびAEMのSPA内での動作について詳しくは、「SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の動的モデルとコンポーネントのマッピング」を参照してください。[
 
 ReactやAngular以外のフレームワーク用にSPAをAEMに実装する場合、またはAEM用のSPA SDKの仕組みを簡単に詳しく調べたい場合は、[SPA Blueprint](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
