@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '763'
 ht-degree: 90%
 
 ---
@@ -58,7 +58,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にサインインします。
 
-   資格情報とサインイン情報は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. 次の手順を実行して、ルールセットファイルをアップロードします。
 
