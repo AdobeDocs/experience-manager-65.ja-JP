@@ -268,7 +268,7 @@ XMPでは、テキストの言語を指定するために、テキストプロ�
 
 ## IPTCメタデータを使用する{#support-for-iptc-metadata}
 
-[!DNL Adobe Experience Manager Assets]がIPTCメタデータ、クリエイティブレーティング、および[!DNL Adobe Bridge]や他の[!DNL Adobe Creative Cloud]アプリを通じてアセットに追加されたキーワードを&lt;a0/>がどのようにサポートするかを説明します。
+[!DNL Adobe Experience Manager Assets]がIPTCメタデータ、クリエイティブレーティング、および[!DNL Adobe Bridge]や他の[!DNL Adobe Creative Cloud]アプリを通じてアセットに追加されたキーワードをがどのようにサポートするかを説明します。
 
 [!DNL Adobe Experience Manager Assets] は、アセットの記述に広く使用されるIPTCメタデータ標準をサポートしています。こうして[!DNL Assets]は、写真家、クリエイティブエージェンシー、図書館、博物館など、さまざまなパーティーでのイメージ受け入れを強化します。
 
