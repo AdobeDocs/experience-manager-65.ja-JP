@@ -283,7 +283,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 * **セキュア(`secure`):SSL暗号化を** 有効にします。この設定を利用するには、すべてのインスタンスで有効にする必要があります。
 * **スタンバイ読み取りタイムアウト(`standby.readtimeout`)：スタンバイインスタンスから発行された要求の** タイムアウト（ミリ秒）。推奨されるタイムアウト設定は 43200000 です。通常、タイムアウトは 12 時間以上の値に設定することをお勧めします。
 
-* **スタンバイ自動クリーンアップ(`standby.autoclean`)：同期サイクルでストアのサイズが増加した場合に、クリーンアップメソッドを** 呼び出します。
+* **スタンバイ自動クリーンアップ(`standby.autoclean`)：ストアのサイズが同期サイクルで増加した場合に、クリーンアップメソッドを** 呼び出します。
 
 >[!NOTE]
 >
@@ -400,7 +400,7 @@ Adobeでは、時間の経過とともに過剰なリポジトリの増大を防
 
 ファイルデータストアインスタンスに対してガベージコレクションをときどき実行することが重要です。そうしないと、削除されたバイナリがファイルシステムに残り、最終的にドライブがいっぱいになります。ガベージコレクションを実行するには、次の手順に従います。
 
-1. [](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)の&lt;a0/>セクションの説明に従って、コールドスタンバイリポジトリメンテナンスを実行します。
+1. [](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)のセクションの説明に従って、コールドスタンバイリポジトリメンテナンスを実行します。
 1. メンテナンスプロセスが完了し、インスタンスが再起動したら、次の手順を実行します。
 
    * 主に、[この記事](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)で説明されているように、関連するJMX Beanを介してデータストアのガベージコレクションを実行します。
