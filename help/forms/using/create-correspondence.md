@@ -59,7 +59,7 @@ Correspondence Management](../../forms/using/create-letter.md)で[レターテ�
 
    >[!NOTE]
    >
-   >レタープレビューのHTMLまたはPDFレンディションモードの切り替えについて詳しくは、[「レター](#changerenditionmode)のレンディションモードの切り替え」を参照してください。 Correspondence ManagementおよびAEMでのPDFのサポートについて詳しくは、「[NPAPIブラウザープラグインのサポート終了と、その影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)および[HTML5Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html)へのPDF forms&lt;a0/>」を参照してください。
+   >レタープレビューのHTMLまたはPDFレンディションモードの切り替えについて詳しくは、[「レター](#changerenditionmode)のレンディションモードの切り替え」を参照してください。 Correspondence ManagementおよびAEMでのPDFのサポートについて詳しくは、「[NPAPIブラウザープラグインのサポート終了と、その影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)および[HTML5Forms](https://helpx.adobe.com/jp/aem-forms/kb/pdf-forms-to-html5-forms.html)へのPDF forms」を参照してください。
 
 ### データを入力 {#enterdata}
 
