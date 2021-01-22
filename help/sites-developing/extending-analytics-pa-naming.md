@@ -26,7 +26,7 @@ Adobe Analytics は、`s.pageName` プロパティを使用してページを一
 
 * ページコンポーネントを、`s.pageName` プロパティにマップする CQ 変数を含むようにデザインする(「[カスタムコンポーネント用のAdobe Analyticsトラッキングの導入](/help/sites-developing/extending-analytics-components.md)」を参照)。
 
-Analytics レポートデータをサイトコンソールとコンテンツインサイトに公開するには、各ページの `s.pageName` プロパティの値が必要です。AEM Analytics Java APIは、`AnalyticsPageNameProvider`プロパティの値をSitesコンソールとContent Insightsに提供するために導入する&lt;a0/>インターフェイスを定義します。 `s.pageName``AnaltyicsPageNameProvider` サービスは、レポート生成のためにサーバー上の pageName プロパティを解決します。このプロパティは、追跡のためにクライアント上で Javascript を使用して動的に設定できるからです。
+Analytics レポートデータをサイトコンソールとコンテンツインサイトに公開するには、各ページの `s.pageName` プロパティの値が必要です。AEM Analytics Java APIは、`AnalyticsPageNameProvider`プロパティの値をSitesコンソールとContent Insightsに提供するために導入する`s.pageName`インターフェイスを定義します。 `AnaltyicsPageNameProvider` サービスは、レポート生成のためにサーバー上の pageName プロパティを解決します。このプロパティは、追跡のためにクライアント上で Javascript を使用して動的に設定できるからです。
 
 ## デフォルトの Analytics ページ名プロバイダーサービス {#the-default-analytics-page-name-provider-service}
 
