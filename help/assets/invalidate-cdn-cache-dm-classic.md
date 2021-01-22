@@ -1,17 +1,15 @@
 ---
 title: Dynamic Media Classic を使用した CDN キャッシュの無効化
 description: CDN(コンテンツ配信ネットワーク)のキャッシュコンテンツを無効にすると、キャッシュの期限が切れるのを待つ代わりに、Dynamic Media Classicによって配信されるアセットをすばやく更新できます。
-uuid: 0fd88e31-9745-4c98-a245-9f5d0766cad4
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: e6c9b50b-c27c-48bf-b3c0-9994e7bf6d7e
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 83%
+source-wordcount: '700'
+ht-degree: 79%
 
 ---
 
@@ -28,15 +26,9 @@ CDN を使用して Dynamic Media アセットをキャッシュすることで�
 
 **Dynamic Mediaクラシックを使用してCDNキャッシュを無効にするには：**
 
-1. 次のいずれかの操作をおこないます。
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)を開き、アカウントにサインインします。
 
-   * Web ブラウザーで、Dynamic Media Classic アカウントにログオンします。
-
-      [https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html)
-
-      資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
-
-   * Dynamic Media Classic アプリケーションを開き、アカウントにサインインします。
+   資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページの右上隅近くにある&#x200B;**[!UICONTROL セットアップ/アプリケーション設定/全般設定をタップします。]**
 1. アプリケーションの一般設定ページで、「サーバー」グループ見出しの下にある「**[!UICONTROL CDN 無効化テンプレート]**」テキストボックスを見つけます。
