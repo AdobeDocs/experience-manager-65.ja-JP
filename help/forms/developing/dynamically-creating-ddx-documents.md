@@ -156,7 +156,7 @@ DDXドキュメントを動的に作成し、Assembler Service API(Java)を使�
    * `HashMap`コンストラクターを使用して、入力PDFドキュメントの格納に使用する`java.util.Map`オブジェクトを作成します。
    * コンストラクターを使用し、ディスアセンブリするPDFドキュメントの場所を渡して、`java.io.FileInputStream`オブジェクトを作成します。
    * `com.adobe.idp.Document`オブジェクトを作成します。 ディスアセンブリするPDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。
-   * &lt;a0追加/>オブジェクトへのエントリ。その`java.util.Map`メソッドを呼び出し、次の引数を渡すことによって作成します。`put`
+   * &lt;a0追加/>オブジェクトへのエントリ。その`put`メソッドを呼び出し、次の引数を渡すことによって作成します。`java.util.Map`
 
       * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。 (動的に作成されるDDXドキュメントでは、値は`AssemblerResultPDF.pdf`です)。
       * ディスアセンブリするPDFドキュメントが含まれる`com.adobe.idp.Document`オブジェクトです。
