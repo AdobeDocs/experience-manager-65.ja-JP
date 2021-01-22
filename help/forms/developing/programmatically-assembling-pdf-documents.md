@@ -103,7 +103,7 @@ map.pdfファイルとdirections.pdfファイルは、両方ともコレクシ�
 
 >[!NOTE]
 >
->`AssemblerResult`操作を呼び出すと、コレクションオブジェクトを含む&lt;a0/>オブジェクトが返されます。 `invokeDDX`この操作は、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合に使用します。 ただし、Assemblerサービスに1つの入力PDFのみを渡し、1つの戻りドキュメントのみが必要な場合は、`invokeOneDocument`操作を呼び出します。 この操作を呼び出すと、1つのドキュメントが返されます。 この操作の使用について詳しくは、[暗号化されたPDFドキュメントのアセンブリ](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)を参照してください。
+>`AssemblerResult`操作を呼び出すと、コレクションオブジェクトを含む`invokeDDX`オブジェクトが返されます。 この操作は、2つ以上の入力PDFドキュメントをAssemblerサービスに渡す場合に使用します。 ただし、Assemblerサービスに1つの入力PDFのみを渡し、1つの戻りドキュメントのみが必要な場合は、`invokeOneDocument`操作を呼び出します。 この操作を呼び出すと、1つのドキュメントが返されます。 この操作の使用について詳しくは、[暗号化されたPDFドキュメントのアセンブリ](/help/forms/developing/assembling-encrypted-pdf-documents.md#assembling-encrypted-pdf-documents)を参照してください。
 
 **実行時オプションの設定**
 
