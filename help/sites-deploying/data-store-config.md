@@ -341,7 +341,7 @@ S3 によるバイナリなしのレプリケーションを設定するには�
 
    * `FileDataStore`を使用している場合は、`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`という名前のファイルを作成し、`<aem-install>/crx-quickstart/install`フォルダーに配置します。
 
-   * S3をデータストアとして使用する場合は、上記のように`rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config`フォルダーにo &lt;a0/>という名前のファイルを作成します。`<aem-install>/crx-quickstart/install`
+   * S3をデータストアとして使用する場合は、上記のように`rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config`フォルダーにo `<aem-install>/crx-quickstart/install`という名前のファイルを作成します。
 
 1. 同じデータストアを指すようにデータストア設定ファイルを各インスタンスで変更します。詳しくは、[こちらの記事](/help/sites-deploying/data-store-config.md#data-store-configurations)を参照してください。
 1. インスタンスのクローンが既存のサーバーから作成された場合、リポジトリがオフラインになっている間に、最新の oak-run ツールを使用して新しいインスタンスの `clusterId` を削除する必要があります。実行する必要があるコマンドは次のとおりです。
