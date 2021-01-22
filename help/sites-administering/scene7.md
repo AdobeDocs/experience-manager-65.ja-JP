@@ -174,7 +174,7 @@ Dynamic MediaとDynamic Mediaクラシックを同時に使用するには：
 Dynamic MediaクラシックとDynamic Mediaの両方を有効にしている場合、次の制限があります。
 
 * アセットを選択し、AEMページのDynamic Mediaクラシックコンポーネントにドラッグして手動でDynamic Mediaクラシックにアップロードすると、機能しません。
-* AEM-Dynamic Media Classicの同期アセットは、アセットでアセットを編集すると自動的にDynamic Mediaクラシックに更新されますが、ロールバック操作では新しいアップロードがトリガーされないので、Dynamic Mediaクラシックはロールバックの直後に最新バージョンを取得しません。 ロールバック完了後に再度編集する必要があります。
+* AEM-Dynamic Media Classicの同期アセットは、アセットでアセットを編集すると自動的にDynamic Mediaクラシックに更新されますが、ロールバック操作では新しいアップロードがトリガーされないので、Dynamic Mediaクラシックはロールバック後すぐに最新バージョンを取得しません。 ロールバック完了後に再度編集する必要があります。
 * ある使用例にDynamic Mediaを、別の使用例にDynamic Mediaクラシックを統合して、Dynamic MediaアセットがDynamic Mediaクラシックとのやり取りをしないようにする必要がある場合は、Dynamic Mediaクラシック設定をDynamic Mediaフォルダに、Dynamic Media設定(処理プロファイル)をDynamic MediaClassicフォルダに適用しないでください。
 
 ## Dynamic MediaクラシックとAEM {#best-practices-for-integrating-scene-with-aem}の統合のベストプラクティス
@@ -426,7 +426,7 @@ Dynamic Mediaクラシックのアセットは、セキュアプレビューを�
 アセットを公開せずにDynamic Mediaクラシックにプッシュするには、次の設定を行う必要があります。
 
 1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Mediaクラシックアカウントでセキュアプレビューを有効にするように要求します。
-1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、&lt;a0/>に従ってください。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、に従ってください。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
 
 以下は、Dynamic Mediaクラシックで安全なテスト設定を作成する場合と同じ手順です。
 
