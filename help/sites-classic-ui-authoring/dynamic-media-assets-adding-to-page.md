@@ -41,7 +41,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
    >
    >詳しくは、[デザインモードでのコンポーネントの設定](/help/sites-authoring/default-components-designmode.md)を参照してください。
 
-1. **[!UICONTROL サイドキック]の鉛筆アイコンをクリックして、&lt;a0/>編集]**&#x200B;モードに戻ります。[!UICONTROL 
+1. **[!UICONTROL サイドキック]の鉛筆アイコンをクリックして、[!UICONTROL 編集]**&#x200B;モードに戻ります。
 1. サイドキックの&#x200B;**[!UICONTROL その他]**&#x200B;グループから目的の場所のページに、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントをドラッグします。
 1. 「**[!UICONTROL 編集]**」をクリックしてコンポーネントを開きます。
 1. [](#dynamic-media-component)コンポーネントの編集を必要に応じておこない、「**[!UICONTROL OK]**」をクリックして変更内容を保存します。
