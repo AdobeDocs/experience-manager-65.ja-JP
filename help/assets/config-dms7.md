@@ -1,18 +1,16 @@
 ---
 title: Dynamic Media - Scene7 モードの設定
 description: Dynamic Media - Scene7 モードの設定方法について説明します。
-uuid: ce43c589-d415-4611-9266-b4e8887e4cdc
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-discoiquuid: 492730a1-b29c-42db-ba6b-8a48cf8ce0f2
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 24ad36d3ff329885efff319404e0d5321e8ce46d
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '5990'
-ht-degree: 78%
+source-wordcount: '6029'
+ht-degree: 74%
 
 ---
 
@@ -73,7 +71,7 @@ AEMDynamic Mediaを6.3から6.4または6.5にアップグレードする場合�
 
 ## Cloud ServicesでのDynamic Media構成の作成{#configuring-dynamic-media-cloud-services}
 
-**Dynamic Mediaの設定を行う前に** -Dynamic Mediaの資格情報を含むプロビジョニング電子メールを受け取ったら、Dynamic Mediaクラシックに [ログ](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) インしてパスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+**Dynamic Mediaの設定を行う前に** -Dynamic Mediaの資格情報が記載されたプロビジョニング電子メールを受け取ったら、 [Dynamic Mediaクラシックデスクトップアプリケーションを開き](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)、アカウントにサインインしてパスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
@@ -87,7 +85,7 @@ AEMDynamic Mediaを6.3から6.4または6.5にアップグレードする場合�
 
    >[!NOTE]
    >
-   >Dynamic Media の資格情報を含むプロビジョニング電子メールを受信したら、Dynamic Media Classic に[ログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)して、パスワードを変更してください。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+   >プロビジョニング用の電子メールを受け取ったら、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインしてパスワードを変更します。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 1. 接続が成功したら、次の設定を行います。 アスタリスク(*)の付いた見出しは必須です。
 
@@ -121,7 +119,8 @@ AEMDynamic Mediaを6.3から6.4または6.5にアップグレードする場合�
 1. 「**[!UICONTROL 保存]**」をタップします。
 1. Dynamic Media コンテンツを公開する前に安全にプレビューするには、AEM オーサーインスタンスを「許可リストに登録」して、Dynamic Media に接続する必要があります。
 
-   * Dynamic Media Classic アカウントにログインします（[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)）。資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   * [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインします。 資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+
    * ページ右上近くのナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
 
    * Image Server公開ページの公開コンテキストドロップダウンリストで、「**[!UICONTROL 画像サービングをテスト」を選択します。]**
@@ -147,7 +146,7 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 
 実行モード `dynamicmedia_scene7` の場合、Dynamic Media Classic（Scene7）ユーザーインターフェイスを使用して Dynamic Media 設定を変更します。
 
-上記のタスクの一部を実行するには、[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html) で Dynamic Media Classic（Scene7）にログインする必要があります。
+上記のタスクの一部では、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開いて、アカウントにサインインする必要があります。
 
 セットアップおよび設定タスクには、次のものが含まれます。
 
@@ -204,7 +203,8 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 
 画像を要求する際にカラー補正を有効にするためのデフォルトのカラープロパティを設定するには：
 
-1. プロビジョニング中に提供された資格情報を使用して、[Dynamic Media Classic にログイン](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)します。**[!UICONTROL Setup/Application Setupに移動します。]**
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、プロビジョニング時に提供された資格情報を使用してアカウントにサインインします。
+1. **[!UICONTROL Setup/Application Setupに移動します。]**
 1. 「**[!UICONTROL 公開設定]**」領域を展開して、「**[!UICONTROL Image Server」を選択します。]**&#x200B;パブリッシュインスタンスのデフォルトを設定する際に、「**[!UICONTROL 公開コンテキスト]**」を「**[!UICONTROL 画像サービング]**」に設定します。
 1. 例えば「**[!UICONTROL カラーマネジメント属性]**」領域のプロパティなど、変更が必要なプロパティにスクロールします。
 
@@ -333,9 +333,9 @@ AEM Assets でサポートされていない形式のカスタム MIME タイプ
 
 **デフォルトの命名規則を設定するには：**
 
-1. Dynamic Media Classic（Scene7）アカウントにログインします（[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)）。
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインします。
 
-   資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページ上部近くのナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/バッチセットプリセット/初期設定の名前をタップします。]**
 1. 「**[!UICONTROL フォームを表示]**」または「**[!UICONTROL コードを表示]**」を選択し、各要素に関する情報の表示と入力の方法を指定します。
@@ -367,9 +367,9 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 **バッチセットプリセットを作成するには：**
 
-1. Dynamic Media Classic（Scene7）アカウントにログインします（[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)）。
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインします。
 
-   資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページ上部近くのナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/バッチセットプリセット/バッチセットプリセットをタップします。]**
 
@@ -423,9 +423,9 @@ spin-01-01
 
 **2D スピンセットを自動生成するためのバッチセットプリセットを作成するには：**
 
-1. Dynamic Media Classic（Scene7）アカウントにログインします（[http://www.adobe.com/jp/marketing-cloud/experience-manager/scene7-login.html](https://www.adobe.com/marketing-cloud/experience-manager/scene7-login.html)）。
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインします。
 
-   資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページ上部近くのナビゲーションバーで、**[!UICONTROL 設定]/[!UICONTROL アプリケーション設定]/[!UICONTROL バッチセットプリセット]/[!UICONTROL バッチセットプリセット]**&#x200B;をクリックします。
 
