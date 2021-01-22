@@ -149,7 +149,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 * ビデオ
 * その他
 
-ページを作成して開くと、[サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)から入手できるコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)を使用して、&lt;a0/>コンテンツを追加できます。[
+ページを作成して開くと、[サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)から入手できるコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)を使用して、[コンテンツを追加できます。
 
 ## ページの管理 {#managing-pages}
 
