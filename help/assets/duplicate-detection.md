@@ -15,7 +15,7 @@ ht-degree: 22%
 
 [!DNL Adobe Experience Manager Assets]に存在するアセットをアップロードしようとすると、重複検出機能によって重複と認識されます。 重複項目の検出はデフォルトで無効になっています。この機能を有効にするには、次の手順を実行します。
 
-1. [!DNL Experience Manager]にアクセスして&lt;a0/> Webコンソール設定ページを開きます。`https://[aem_server]:[port]/system/console/configMgr`
+1. [!DNL Experience Manager]にアクセスして`https://[aem_server]:[port]/system/console/configMgr` Webコンソール設定ページを開きます。
 1. サーブレット&#x200B;**[!UICONTROL Day CQ DAM Create Asset]**&#x200B;の設定を編集します。
 1. 「**[!UICONTROL 重複を検出]**」オプションを選択し、「**[!UICONTROL 保存]**」をクリックします。
 
