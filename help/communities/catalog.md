@@ -30,4 +30,4 @@ ht-degree: 25%
 
 詳しくは、[開発者向けの「Catalog Essentials](catalog-developer-essentials.md)」ページを参照してください。
 
-[コミュニティサイト](sites-console.md)の作成時に、&lt;a0/>カタログ関数](functions.md#catalog-function)を使用できます。[
+[コミュニティサイト](sites-console.md)の作成時に、[カタログ関数](functions.md#catalog-function)を使用できます。
