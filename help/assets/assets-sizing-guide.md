@@ -102,7 +102,7 @@ S3 の実装では、バックグラウンドの書き込みスレッドによ�
 
 ## ネットワーク {#network}
 
-[!DNL Assets] には、他の多くの プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。[!DNL Experience Manager]お客様は高速なサーバーを使用できますが、ネットワーク接続の大きさが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分でない場合、動作は遅くなります。 [&lt;a1/>Assets considerations for user experience, instance sizing, workflow evaluation, and network topology](/help/assets/assets-network-considerations.md)にある[!DNL Experience Manager]へのユーザーのネットワーク接続のチョークポイントを決定するには、適切な方法があります。
+[!DNL Assets] には、他の多くの プロジェクトよりネットワークのパフォーマンスが重要になる使用例がいくつかあります。[!DNL Experience Manager]お客様は高速なサーバーを使用できますが、ネットワーク接続の大きさが、システムからアセットをアップロードおよびダウンロードするユーザの負荷をサポートするのに十分でない場合、動作は遅くなります。 [Assets considerations for user experience, instance sizing, workflow evaluation, and network topology](/help/assets/assets-network-considerations.md)にある[!DNL Experience Manager]へのユーザーのネットワーク接続のチョークポイントを決定するには、適切な方法があります。
 
 ## 制限事項 {#limitations}
 
