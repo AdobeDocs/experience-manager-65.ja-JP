@@ -234,7 +234,7 @@ Backup and Restoreサービスを使用して、既存のアプリケーショ�
    `ServiceClientFactory`オブジェクトとBackupServiceクライアントAPIオブジェクトを一緒に使用します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-   * コンストラクターを使用し、`BackupService`オブジェクトをパラメーターとして渡して、&lt;a0/>オブジェクトを作成します。`ServiceClientFactory`
+   * コンストラクターを使用し、`BackupService`オブジェクトをパラメーターとして渡して、`ServiceClientFactory`オブジェクトを作成します。
 
 1. バックアップモードの開始
 
