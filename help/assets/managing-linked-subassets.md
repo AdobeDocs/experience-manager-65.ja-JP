@@ -119,7 +119,7 @@ ht-degree: 17%
 
 次のオプションは、ツールバー、左側のナビゲーションバーおよびページビューアコントロールで使用できます。
 
-* **[!UICONTROL デスクトップ]** アクションを使用して、デスクトッ [!DNL Experience Manager] プアプリを使用して特定のサブアセットを開いたり、表示したりします。[デスクトップアプリを使用する場合は、&lt;a0/>デスクトップアクション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)を設定する方法を参照してください。[!DNL Experience Manager]
+* **[!UICONTROL デスクトップ]** アクションを使用して、デスクトッ [!DNL Experience Manager] プアプリを使用して特定のサブアセットを開いたり、表示したりします。[デスクトップアプリを使用する場合は、[!DNL Experience Manager]デスクトップアクション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)を設定する方法を参照してください。
 
 * **[!UICONTROL 「]** プロパティ」オプションは、特定のサブアセットの  プロパティページを開きます。
 
