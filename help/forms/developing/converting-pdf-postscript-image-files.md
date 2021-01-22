@@ -114,7 +114,7 @@ Convert PDF Service API(Java)を使用してPDFドキュメントをPostScript�
 1. PDFドキュメントを参照して、PostScriptファイルに変換します。
 
    * コンストラクターを使用して`java.io.FileInputStream`オブジェクトを作成し、変換するPDFドキュメントの場所を指定する文字列値を渡します。
-   * `com.adobe.idp.Document`コンストラクターを使用して、PDFドキュメントを格納する&lt;a0/>オブジェクトを作成します。 `com.adobe.idp.Document`PDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。
+   * `com.adobe.idp.Document`コンストラクターを使用して、PDFドキュメントを格納する`com.adobe.idp.Document`オブジェクトを作成します。 PDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。
 
 1. 変換の実行時オプションを設定します。
 
