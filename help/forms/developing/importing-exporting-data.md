@@ -161,7 +161,7 @@ Form Data Integration API(Java)を使用してフォームデータを読み込�
 1. PDFフォームの参照
 
    * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを作成します。PDFフォームの場所を指定するstring値を渡します。
-   * `com.adobe.idp.Document`コンストラクターを使用して、PDFフォームを保存する&lt;a0/>オブジェクトを作成します。 `com.adobe.idp.Document`PDFフォームを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
+   * `com.adobe.idp.Document`コンストラクターを使用して、PDFフォームを保存する`com.adobe.idp.Document`オブジェクトを作成します。 PDFフォームを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
 
 1. XMLデータソースを参照します。
 
@@ -331,7 +331,7 @@ Form Data Integration API(Java)を使用してフォームデータを書き出�
 1. PDFフォームの参照
 
    * コンストラクターを使用して`java.io.FileInputStream`オブジェクトを作成し、書き出すデータを含むPDFフォームの場所を指定する文字列値を渡します。
-   * `com.adobe.idp.Document`コンストラクターを使用して、PDFフォームを保存する&lt;a0/>オブジェクトを作成します。 `com.adobe.idp.Document`PDFフォームを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
+   * `com.adobe.idp.Document`コンストラクターを使用して、PDFフォームを保存する`com.adobe.idp.Document`オブジェクトを作成します。 PDFフォームを含む`java.io.FileInputStream`オブジェクトをコンストラクターに渡します。
 
 1. PDFフォームからデータを書き出します。
 
