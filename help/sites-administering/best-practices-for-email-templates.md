@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 translation-type: tm+mt
-source-git-commit: a929252a13f66da8ac3e52aea0655b12bdd1425f
+source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 64%
+source-wordcount: '1130'
+ht-degree: 63%
 
 ---
 
@@ -157,7 +157,7 @@ AEM には、キャンペーンニュースレターを作成するためのい�
 | テキストおよびパーソナライゼーション | /libs/mcm/campaign/components/personalization |
 | Textimage | /libs/mcm/campaign/components/textimage |
 | リンク | /libs/mcm/campaign/components/reference |
-| Scene7 画像テンプレート | /libs/mcm/campaign/s7image |
+| Dynamic Mediaクラシック(旧Scene7)画像テンプレート | /libs/mcm/campaign/s7image |
 | ターゲット参照 | /libs/mcm/キャンペーン/components/reference |
 
 >[!NOTE]
