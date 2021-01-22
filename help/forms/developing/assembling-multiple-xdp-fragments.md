@@ -176,7 +176,7 @@ Assembler Service API(Java)を使用して、複数のXDPフラグメントを�
 
    * `HashMap`コンストラクターを使用して、入力XDPドキュメントの格納に使用する`java.util.Map`オブジェクトを作成します。
    * `com.adobe.idp.Document`オブジェクトを作成し、入力XDPファイルを含む`java.io.FileInputStream`オブジェクトを渡します(このタスクを各XDPファイルに対して繰り返します)。
-   * &lt;a0追加/>オブジェクトへのエントリ。その`java.util.Map`メソッドを呼び出し、次の引数を渡すことによって作成します。`put`
+   * &lt;a0追加/>オブジェクトへのエントリ。その`put`メソッドを呼び出し、次の引数を渡すことによって作成します。`java.util.Map`
 
       * キー名を表すstring値です。 この値は、DDXドキュメントで指定された`source`要素の値と一致する必要があります(XDPファイルごとにこのタスクを繰り返します)。
       * `source`要素に対応するXDPドキュメントを含む`com.adobe.idp.Document`オブジェクト(XDPファイルごとにこのタスクを繰り返します)。
