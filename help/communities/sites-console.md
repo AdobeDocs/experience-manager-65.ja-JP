@@ -384,7 +384,7 @@ Communitiesのサイトコンソールから次のアクセス権を利用でき
 
 ![サイトプロジェクト](assets/site-project.png)
 
-マウスでサイトの上にカーソルを置くか、サイトカードに触れると、[作成者モード](#authoring-site-content)でサイトを編集、[変更用にサイトのプロパティを開く、[サイトを公開、[サイトを書き出す、[サイトを削除するアイコンが表示されます。](#modifying-site-properties)](#exporting-the-site)](#publishing-the-site)](#deleting-the-site)
+マウスでサイトの上にカーソルを置くか、サイトカードに触れると、[作成者モード](#authoring-site-content)でサイトを編集、[変更用にサイトのプロパティを開く、[サイトを公開、[サイトを書き出す、[サイトを削除するアイコンが表示されます。](#modifying-site-properties)](#publishing-the-site)](#exporting-the-site)](#deleting-the-site)
 
 ## サイトコンテンツのオーサリング {#authoring-site-content}
 
