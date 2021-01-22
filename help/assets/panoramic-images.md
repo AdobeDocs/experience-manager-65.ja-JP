@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 59%
+source-wordcount: '580'
+ht-degree: 58%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 59%
 
 パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアプリセットをDynamic MediaクラシックおよびDynamic Mediaクラシック固有のメタデータと同期して、JCRでビューアプリセットを更新する必要があります。 これを行うには、次の方法でDynamic Mediaクラシックを設定します。
 
-1. [各会社アカウントのDynamic Media](https://www.adobe.com/jp/marketing/experience-manager/scene7-login.html) クラスのインスタンスにログインします。
+1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインします。
 
 1. ページの右上隅近くにある、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
 1. Image Server公開ページの上部近くにある&#x200B;**[!UICONTROL 公開コンテキスト]**&#x200B;ドロップダウンメニューで、「**[!UICONTROL 画像サービング]**」を選択します。
