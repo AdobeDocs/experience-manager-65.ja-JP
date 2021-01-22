@@ -474,7 +474,7 @@ Directory Manager Service API(Java)を使用してグループを作成します
    * コンストラクタを使用して `PrincipalSearchFilter` オブジェクトを作成します。
    * `PrincipalSearchFilter`オブジェクトの`setUserId`メソッドを呼び出して、ユーザー識別子の値を設定します。 ユーザー識別子の値を表すstring値を渡します。
    * `DirectoryManagerServiceClient`オブジェクトの`findPrincipals`メソッドを呼び出し、`PrincipalSearchFilter`オブジェクトを渡します。 このメソッドは、`java.util.List`インスタンスを返します。各要素は`User`オブジェクトです。 `java.util.List`インスタンスを繰り返し実行し、ユーザーを探します。
-   * &lt;a0追加/>オブジェクトの`DirectoryManagerServiceClient`メソッドを呼び出して、グループにユーザーを追加します。 `addPrincipalToLocalGroup``User`オブジェクトの`getOid`メソッドの戻り値を渡します。 `Group`オブジェクトの`getOid`メソッドの戻り値を渡します（新しいグループを表す`Group`インスタンスを使用します）。
+   * &lt;a0追加/>オブジェクトの`addPrincipalToLocalGroup`メソッドを呼び出して、グループにユーザーを追加します。 `DirectoryManagerServiceClient``User`オブジェクトの`getOid`メソッドの戻り値を渡します。 `Group`オブジェクトの`getOid`メソッドの戻り値を渡します（新しいグループを表す`Group`インスタンスを使用します）。
 
 **関連トピック**
 
@@ -744,7 +744,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
  </thead>
  <tbody>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>ユーザはウェブサイトにアクセスし、ユーザ名とパスワードを指定する。 この情報は、AEM FormsをホストするJ2EEアプリケーションサーバーに送信されます。</p></td>
   </tr>
   <tr>
@@ -752,7 +752,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
    <td><p>ユーザー資格情報はAuthentication Managerサービスで認証されます。 ユーザーの資格情報が有効な場合、ワークフローは手順3に進みます。 それ以外の場合は、許可されたユーザーではないことを示すメッセージがユーザーに送信されます。</p></td>
   </tr>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>ユーザ情報とフォームデザインは、保護された企業データベースから検索される。 </p></td>
   </tr>
   <tr>
@@ -878,7 +878,7 @@ User Management APIを使用して、プログラムによってユーザーを�
    <td><p>AEM Formsが同期操作を実行します。</p></td>
   </tr>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>ユーザー情報が更新されます。</p></td>
   </tr>
   <tr>
