@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 85%
@@ -413,7 +413,7 @@ Sites 専用の述語の、公開およびライブコピーのチェックボ�
 
 ### カスタマイズされた設定を作成／開く {#creating-opening-a-customized-configuration}
 
-1. **ツール**／**操作**／**検索フォーム**&#x200B;に移動します。
+1. **ツール**／**一般**／**検索フォーム**&#x200B;に移動します。
 
 1. カスタマイズする設定を選択します。
 1. 「**編集**」アイコンを使用して、更新用に設定を開きます。
