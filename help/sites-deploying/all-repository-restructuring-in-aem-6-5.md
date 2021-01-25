@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 translation-type: tm+mt
-source-git-commit: 6396660b642fd78ac7f311fa416efe0e0d52a9e3
+source-git-commit: 838e194f699b0832839c80f4ba9503c9d5a15945
 workflow-type: tm+mt
 source-wordcount: '2721'
 ht-degree: 75%
@@ -85,7 +85,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
    <td><strong>再構築の手引き</strong></td>
    <td><p>新規または変更されたワークフローモデルは、/conf/global/workflow/models に移行する必要があります。</p>
     <ol>
-     <li>変更したワークフローモデルをローカルの AEM 6.4 開発インスタンスにデプロイし、以前の場所に存在するようにします。</li>
+     <li>変更したワークフローモデルをローカルの AEM 6.5 開発インスタンスにデプロイし、以前の場所に存在するようにします。</li>
      <li>AEM のツール／ワークフロー／モデルで、AEM のワークフローモデルエディターを使用してワークフローモデルを編集します。</li>
      <li>変更された AEM 提供のワークフローモデルを移行する場合
       <ol>
