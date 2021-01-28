@@ -1,13 +1,13 @@
 ---
-title: ' [!DNL Adobe Experience Manager]内のデジタルアセットと画像を検索します。'
+title: ' でのデジタルアセットと画像の検索 [!DNL Adobe Experience Manager]'
 description: フィルターパネルを使用して [!DNL Adobe Experience Manager] 内で必要なアセットを見つける方法と、検索に表示されるアセットを使用する方法について説明します。
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
+source-git-commit: 38ef8d8bd574933fdc57d7475831518f9d7f293e
 workflow-type: tm+mt
-source-wordcount: '5767'
-ht-degree: 54%
+source-wordcount: '5716'
+ht-degree: 52%
 
 ---
 
@@ -155,28 +155,28 @@ ht-degree: 54%
 タイトル、説明、作成者など、特定のメタデータフィールドの正確な値に基づいてアセットを検索できます。 GQL 全文検索機能では、メタデータ値が検索クエリと完全に一致するアセットのみを取得できます。プロパティの名前（author や title など）と値は、大文字と小文字が区別されます。
 
 | メタデータフィールド | ファセット値と使用法 |
-| ----------------------------------------- | ------------------------------------- |
-| タイトル | title:John |
-| 作成者 | creator:John |
-| 場所 | location:NA |
-| 説明 | description:&quot;Sample Image&quot; |
-| 作成ツール | creatortool:&quot;Adobe Photoshop CC 2020&quot; |
-| 著作権の所有者 | copyrightowner:&quot;Adobe Systems&quot; |
-| 投稿者 | contributor:John |
-| 使用条件 | usageterms:&quot;CopyRights Reserved&quot; |
-| 作成日 | created:YYYY-MM-DDTHH |
-| 有効期限 | expires:YYYY-MM-DDTHH |
-| オンタイム | ontime:YYYY-MM-DDTHH |
-| オフタイム | offtime:YYYY-MM-DDTHH |
-| 時間の範囲（有効期限、オンタイム、オフタイム） | facet field : lowerbound..upperbound |
+| ----------------------------------------- | --------------------------------------- |
+| タイトル | `title:John` |
+| 作成者 | `creator:John` |
+| 場所 | `location:NA` |
+| 説明 | `description:"Sample Image"` |
+| 作成ツール | `creatortool:"Adobe Photoshop CC 2020"` |
+| 著作権の所有者 | `copyrightowner:"Adobe Systems"` |
+| 投稿者 | `contributor:John` |
+| 使用条件 | `usageterms:"CopyRights Reserved"` |
+| 作成日 | `created`:YYYY-MM-DDTHH |
+| 有効期限 | `expires`:YYYY-MM-DDTHH |
+| オンタイム | `ontime`:YYYY-MM-DDTHH |
+| オフタイム | `offtime`:YYYY-MM-DDTHH |
+| 時間の範囲（有効期限、オンタイム、オフタイム） | `facet field`: lowerbound..upperbound |
 | パス | /content/dam/&lt;folder name> |
-| PDF タイトル | pdftitle:&quot;Adobe Document&quot; |
-| 件名 | subject:&quot;Training&quot; |
-| タグ | tags:&quot;Location And Travel&quot; |
-| タイプ | type:&quot;image\png&quot; |
-| 画像の幅 | width:lowerbound..上の |
-| 画像の高さ | height:lowerbound..上の |
-| 人 | person:John |
+| PDF タイトル | `pdftitle`:&quot;Adobeドキュメント&quot; |
+| 件名 | `subject:"Training"` |
+| タグ | `tags:"Location And Travel"` |
+| 型 | `type:"image\png"` |
+| 画像の幅 | `width`:lowerbound..上の |
+| 画像の高さ | `height`:lowerbound..上の |
+| 人 | `person:John` |
 
 `path`、`limit`、`size`、および`orderby`の各プロパティは、`OR`演算子を使用して他のプロパティと組み合わせることはできません。
 
@@ -239,12 +239,12 @@ ht-degree: 54%
 | 名前 | 値 | 例 | 目的 |
 |---|---|---|---|
 | resource suffix (B) | URL のリソースサフィックスとしてのフォルダーパス：[https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 特定のフォルダーを選択してアセットセレクターを起動するには、例えばフォルダー`/content/dam/we-retail/en/activities`を選択して、URLを次の形式にする必要があります。[https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images](https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images) | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
-| mode | single、multiple | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
-| dialog | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
-| root | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/アクティビティ) | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。この場合、アセットセレクターを使用すると、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |
-| viewmode | 検索を |  | assettypeパラメータとmimetypeパラメータを使用して、検索モードでアセットセレクターを起動するには |
-| assettype | images、documents、multimedia、archives | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 渡された値に基づいてアセットタイプをフィルタリングするには、このオプションを使用します。 |
-| mimetype | アセットの MIME タイプ（`/jcr:content/metadata/dc:format`）（ワイルドカードもサポートされています） | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | MIME タイプに基づいてアセットをフィルタリングするために使用します |
+| `mode` | single、multiple | <ul><li>[https://localhost:4502/aem/assetpicker.html?mode=single](https://localhost:4502/aem/assetpicker.html?mode=single)</li><li>[https://localhost:4502/aem/assetpicker.html?mode=multiple](https://localhost:4502/aem/assetpicker.html?mode=multiple)</li></ul> | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
+| `dialog` | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
+| `root` | &lt;folder_path> | [https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/activities](https://localhost:4502/aem/assetpicker.html?assettype=images&amp;root=/content/dam/we-retail/en/アクティビティ) | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。この場合、アセットセレクターを使用すると、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |
+| `viewmode` | 検索を |  | assettypeパラメータとmimetypeパラメータを使用して、検索モードでアセットセレクターを起動するには |
+| `assettype` | images、documents、multimedia、archives. | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=images)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=documents](https://localhost:4502/aem/assetpicker.html?assettype=documents)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=multimedia)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;assettype=archives)</li></ul> | 指定した値に基づいてアセットタイプをフィルタリングするには、このオプションを使用します。 |
+| `mimetype` | アセットのMIMEタイプ(`/jcr:content/metadata/dc:format`)（ワイルドカードもサポートされます）。 | <ul><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=image/png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*png)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation)</li><li>[https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png](https://localhost:4502/aem/assetpicker.html?viewmode=search&amp;mimetype=*presentation&amp;mimetype=*png)</li></ul> | MIMEタイプに基づいてアセットをフィルタリングする場合に使用します。 |
 
 アセットセレクターインターフェイスにアクセスするには、`https://[aem_server]:[port]/aem/assetpicker` に移動します。目的のフォルダーに移動して、1 つまたは複数のアセットを選択します。または、オムニサーチボックスから目的のアセットを検索し、必要に応じてフィルターを適用して選択します。
 
@@ -263,7 +263,7 @@ ht-degree: 54%
 
 ビジュアル検索または類似検索には、次の制限事項があります。
 
-* ビジュアル検索は、より大きなリポジトリで最も有効に機能します。良好な結果を得るために最低限必要な画像数はありませんが、画像の数が少ないと、一致の精度が大きなリポジトリの場合ほど良くない可能性があります。
+* 視覚的な検索は、大きなリポジトリで最も効果的です。 良好な結果を得るために必要な画像の数は最小限ですが、少数の画像で一致する画質は、大きなリポジトリで一致する画像ほど良くありません。
 * モデルを変更したり、[!DNL Experience Manager]をトレーニングして類似の画像を見つけることはできません。 例えば、一部のアセットにスマートタグを追加または削除しても、モデルは変更されません。それらのアセットは、視覚的に類似した検索結果から除外されます。
 
 次のシナリオでは、検索機能のパフォーマンスに制限がある場合があります。
@@ -297,11 +297,11 @@ ht-degree: 54%
 **アスタリスクワイルドカードを使用した検索**：検索の範囲を広げるには、検索語の前後にアスタリスクを使用して任意の数の文字に一致するようにします。例えば、アスタリスクを付けずに「run」を検索しても、（メタデータ内も含め）検索語のバリエーションを含んだアセットは返されません。アスタリスクは任意の数の文字に置き換わります。例：
 
 * `run`：キーワード「run」を含んだアセットを返します。
-* `run*`：「running」、「run」、「runaway」などを含んだアセットを返します。
-* `*run`：「outrun」、「rerun」などを含んだアセットを返します。
+* `run*` は、 `running`、 `run`、な `runaway`どのアセットを返します。
+* `*run` は、 `outrun`、な `rerun`どと共にアセットを返します。
 * `*run*`：可能なあらゆる組み合わせを含んだアセットを返します。
 
-![アセット検索でのアスタリスクワイルドカードの使用例](assets/search_with_asterisk_run.gif)
+![例を使用して、アセット検索でアスタリスクワイルドカードを使用する例を示します。](assets/search_with_asterisk_run.gif)
 
 *図：アセット検索でのアスタリスクワイルドカードの使用例*
 
@@ -455,7 +455,7 @@ ht-degree: 54%
 | メタデータが見つからないアセットを検索する場合に、誤った結果が返される。 | 必須のメタデータがないアセットを検索すると、[!DNL Experience Manager]によって有効なメタデータを持つアセットが表示される場合があります。 結果は、インデックス付きメタデータプロパティに基づきます。 | メタデータが更新された後、アセットメタデータの正しい状態を反映するために、再インデックス化が必要です。 詳しくは、[必須メタデータ](metadata-schemas.md#define-mandatory-metadata)を参照してください。 |
 | 検索結果が多すぎます。 | 部分一致検索パラメータ。 | [検索範囲](#scope)を制限することを検討。 スマートタグを使用すると、予想以上に多くの検索結果が得られる場合があります。 [スマートタグ](#withsmarttags)による検索動作を参照してください。 |
 | 検索結果が無関係か、一部関連している。 | スマートタグによって検索動作が変わります。 | [スマートタグ](#withsmarttags)後の検索の変化を理解します。 |
-| アセットに対するオートコンプリートの提案はありません。 | 新しくアップロードしたアセットのインデックスはまだ作成されていません。 開始がOmnisearchバーで検索キーワードを入力した場合、そのメタデータは提案としてすぐには使用できません。 | [!DNL Assets] では、タイムアウト期間（デフォルトは 1 時間）が経過してから、新しくアップロードまたは更新されたすべてのアセットのメタデータにインデックスを付けるバックグラウンドジョブを実行し、その後でメタデータを候補のリストに追加します。 |
+| アセットに対するオートコンプリートの提案はありません。 | 新しくアップロードしたアセットのインデックスはまだ作成されていません。 開始がOmnisearchバーで検索キーワードを入力した場合、そのメタデータは提案としてすぐには使用できません。 | [!DNL Experience Manager] では、タイムアウト期間（デフォルトは 1 時間）が経過してから、新しくアップロードまたは更新されたすべてのアセットのメタデータにインデックスを付けるバックグラウンドジョブを実行し、その後でメタデータを候補のリストに追加します。 |
 | 検索結果はありません. | <ul><li>クエリに一致するアセットが存在しません。 </li><li> 検索クエリの前に空白が追加されました。 </li><li> サポートされていないメタデータフィールドに、検索したキーワードが含まれています。</li><li> アセットのオフタイム中に行われた検索。 </li></ul> | <ul><li>別のキーワードを使用した検索。 または、スマートタグ付け検索または類似性検索を使用して、検索結果を改善します。 </li><li>[既知の制限](#limitations)。</li><li>すべてのメタデータフィールドが検索対象と見なされません。 詳しくは、[検索範囲](#scope)を参照してください。</li><li>後で検索するか、必要なアセットのオンタイムとオフタイムを変更します。</li></ul> |
 | 検索フィルターまたは述語が使用できません。 | <ul><li>検索フィルターが設定されていない。</li><li>ログインに使用できません。</li><li>（おそらく）検索オプションは、使用しているデプロイメントに合わせてカスタマイズされません。</li></ul> | <ul><li>検索のカスタマイズが使用可能かどうかを管理者に問い合わせて確認してください。</li><li>管理者に問い合わせて、お使いのアカウントに、カスタマイズを使用する権限または権限があるかどうかを確認してください。</li><li>管理者に問い合わせて、使用している[!DNL Assets]展開で使用可能なカスタマイズを確認してください。</li></ul> |
 | 視覚的に類似した画像を検索する場合、期待された画像が見つかりません。 | <ul><li>[!DNL Experience Manager]では画像を使用できません。</li><li>画像のインデックスが作成されていません。 通常、最近アップロードされた日時。</li><li>画像にスマートタグは付きません。</li></ul> | <ul><li>追加[!DNL Assets]に画像を送信します。</li><li>リポジトリのインデックスを再作成するには、管理者に問い合わせてください。 また、適切なインデックスを使用していることを確認してください。</li><li>管理者に問い合わせて、関連アセットのスマートタグを付けます。</li></ul> |
