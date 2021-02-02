@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 デプロイガイド
 breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.5 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 95%
+source-wordcount: '352'
+ht-degree: 93%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 95%
    + [ジョブのオフロード](offloading.md)
    + [シングルサインオン](single-sign-on.md)
    + [リソースマッピング](resource-mapping.md)
-   + [HTTP over SSL の有効化](/help/sites-administering/ssl-by-default.md)
+   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html)
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)
