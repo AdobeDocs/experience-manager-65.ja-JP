@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: 98180b630c991bc65ddfa275e0f8a97be3be6f7e
+source-git-commit: fd7a32c1070a0560ca744db041cf809f28672b33
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 96%
+source-wordcount: '671'
+ht-degree: 90%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 96%
    + [AEM でのシリアル化の問題の軽減](mitigating-serialization-issues.md)
    + [ユーザーの同期](sync.md)
    + [カプセル化されたトークンのサポート](encapsulated-token.md)
-   + [シングルサインオン](/help/sites-deploying/single-sign-on.md)
+   + [シングルサインオン](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html)
    + [AEM でのユーザー管理操作を監査する方法](audit-user-management-operations.md)
    + [デフォルトの SSL](ssl-by-default.md)
    + [SAML 2.0 認証ハンドラー](saml-2-0-authenticationhandler.md)
@@ -99,7 +99,7 @@ ht-degree: 96%
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
 + パーソナライゼーション {#personalization}
    + [パーソナライゼーション](personalization.md)
-   + [ContextHub の設定](/help/sites-developing/ch-configuring.md)
+   + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
    + [ContextHub でのセグメント化の設定](segmentation.md)
@@ -158,11 +158,11 @@ ht-degree: 96%
    + [Livefyre との統合](livefyre.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)
-   + [翻訳のベストプラクティス](tc-bp.md)
-   + [MSM のベストプラクティス](msm-best-practices.md)
+   + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
+   + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
-   + [AEM の基盤での GDPR 要求の処理](handling-gdpr-requests-for-aem-platform.md)
-   + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
+   + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM Commerce - GDPR 対応](https://experienceleague.adobe.com/docs/experience-manager-65/administering/ecommerce/gdpr-compliance-commerce.html)
 + コンテンツ管理 {#contentmanagement}
    + [パッケージの使用方法](package-manager.md)
    + [タグの管理](tags.md)
