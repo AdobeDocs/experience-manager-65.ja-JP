@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 オーサリングユーザーガイド
 breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '284'
-ht-degree: 92%
+source-wordcount: '291'
+ht-degree: 90%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 92%
    + [ワークフローの操作](workflows.md)
    + [ページへのワークフローの適用](workflows-applying.md)
    + [ワークフローへの参加](workflows-participating.md)
-   + [プロジェクトワークフローの操作](projects-with-workflows.md)
+   + [プロジェクトワークフローの操作](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html)
 + ページパフォーマンス{#page-performance}
    + [コンテンツインサイト](content-insights.md)
    + [ページパフォーマンスの分析](ci-analyze.md)
