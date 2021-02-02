@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '835'
-ht-degree: 87%
+source-wordcount: '905'
+ht-degree: 80%
 
 ---
 
@@ -74,7 +74,7 @@ ht-degree: 87%
       + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
    + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-   + [スタイルシステム](/help/sites-authoring/style-system.md)
+   + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
    + [AEM コンポーネントの開発](developing-components.md)
@@ -101,7 +101,7 @@ ht-degree: 87%
       + [フォームの開発（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスおよび AEM とのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-   + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
+   + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 単一ページアプリケーション{#spas}
       + [SPA の概要およびガイド](spa-walkthrough.md)
       + [SPA WKND チュートリアル](spa-wknd.md)
@@ -118,9 +118,9 @@ ht-degree: 87%
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
       + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
       + [SPA 参照資料](spa-reference-materials.md)
-   + [HTTP API](/help/assets/mac-api-assets.md)
-   + [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)
-   + [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)
+   + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
+   + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+   + [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
    + [AEMのコンテンツフラグメントとコンテンツサービスについて](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
 + 開発ツール{#devtools}
    + [開発ツール](dev-tools.md)
@@ -181,12 +181,12 @@ ht-degree: 87%
       + [カスタムフォームマッピングの作成](extending-campaign-form-mapping.md)
       + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](extending-campaign-custom-template.md)
       + [リクエスト分析スクリプト](analyze-request.md)
-   + [JMX コンソールを使用したサービスの統合](jmx-integration.md)
-   + [Bulk Editor の開発](dev-bulk-editor.md)
+   + [JMX コンソールを使用したサービスの統合](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html)
+   + [Bulk Editor の開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html)
    + クラシックUIの拡張{#extending-classic-ui}
       + [Web サイトコンソールのカスタマイズ（クラシック UI）](customizing-siteadmin.md)
       + [ようこそコンソールのカスタマイズ（クラシック UI）](customizing-the-welcome-console.md)
-      + [レポートの開発](dev-reports.md)
+      + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html)
 + テスト{#testing}
    + [計画](planning.md)
    + [必要になるテスト環境の種類](test-environments.md)
@@ -199,10 +199,10 @@ ht-degree: 87%
    + [次期リリース](the-next-release.md)
    + [チェックリスト](checklists.md)
    + [Tough Day](tough-day.md)
-   + [UI のテスト](hobbes.md)
+   + [UI のテスト](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
 + ベストプラクティス{#bestpractices}
    + [ベストプラクティスの概要](best-practices.md)
-   + [AEM開発ガイドラインとベストプラクティス](dev-guidelines-bestpractices.md)
+   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html)
    + [開発のベストプラクティス](development-practices.md)
    + [コンテンツのアーキテクチャ](content-architecture.md)
    + [ソフトウェアのアーキテクチャ](software-architecture.md)
