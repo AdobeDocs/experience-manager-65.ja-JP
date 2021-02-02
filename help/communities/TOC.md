@@ -6,10 +6,10 @@ user-guide-title: AEM 6.5 Communities ユーザーガイド
 breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 translation-type: tm+mt
-source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
+source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 97%
+source-wordcount: '501'
+ht-degree: 94%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 97%
 + AEM Communities の概要 {#introduction}
    + [コミュニティサイト](administer-landing.md)
    + [AEM Communities の概要](overview.md)
-   + [AEM Communities リリースノート](/help/release-notes/communities-release-notes.md)
+   + [AEM Communities リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
    + [AEM Communities 使用の手引き](getting-started.md)
    + [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
    + [初期設定](setup.md)
@@ -38,7 +38,7 @@ ht-degree: 97%
    + [Communities 用の Dispatcher の設定](dispatcher.md)
 + 管理 {#administer}
    + [AEM Communities のユーザーおよび UGC 管理サービス](user-ugc-management-service.md)
-   + [コミュニティサイト](administer-landing.md)
+   + [コミュニティサイト](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
    + [コミュニティコンソール](consoles.md)
    + [コミュニティ機能のための Analytics の設定](analytics.md)
    + [イネーブルメント機能の設定](enablement.md)
@@ -165,4 +165,4 @@ ht-degree: 97%
    + [アクティビティのトレンド](trends.md)
    + [Social タグクラウドの使用](tagcloud.md)
    + [投票の使用](voting.md)
-   + [サンプルページの作成](create-sample-page.md)
+   + [サンプルページの作成](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html)
