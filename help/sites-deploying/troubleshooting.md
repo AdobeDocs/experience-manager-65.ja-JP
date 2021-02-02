@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 5542de4e-6262-4300-9cf8-0eac79ba4f9a
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 9b65f7194dc648ba9a6dbc127bc8d5951f126269
 workflow-type: tm+mt
-source-wordcount: '1126'
-ht-degree: 86%
+source-wordcount: '1181'
+ht-degree: 83%
 
 ---
 
@@ -130,3 +130,20 @@ AEM は単一のディレクトリにインストールされるので、アン�
 
 JBossにJSPファイルをExperience Managerにインストールまたは更新し、対応するサーブレットがコンパイルされていない場合は、JBoss JSPコンパイラーが正しく設定されていることを確認します。詳しくは、
 [JBoss](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html)記事でのJSPコンパイルの問題を修正しました。
+
+### Java 11 {#the-website-does-not-load-or-fails-intermittently-with-java11}では、Webサイトの読み込みが行われないか、Webサイトの表示に断続的に失敗します。
+
+Java 11上でAEM 6.5を実行している場合、Webサイトが断続的に読み込まれないか、失敗する可能性がある既知の問題があります。
+
+この問題が発生した場合は、次の対処方法に従ってください。
+
+1. `crx-quickstart/conf/`フォルダーの下の`sling.properties`ファイルを開きます
+1. 次の行を探します。
+
+   `org.osgi.framework.bootdelegation=sun.,com.sun.`
+
+1. 次の文字列に置き換えます。
+
+   `org.osgi.framework.bootdelegation=sun.,com.sun.,jdk.internal.reflect,jdk.internal.reflect.*`
+
+1. インスタンスを再起動します。
