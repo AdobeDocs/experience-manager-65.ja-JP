@@ -10,9 +10,9 @@ topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 77c3624a780bd0d2e3bb3e82004cce73e5b66b32
+source-git-commit: fd9ee8e4eb35bd5d303d7bbdd9660a94c54925ff
 workflow-type: tm+mt
-source-wordcount: '3827'
+source-wordcount: '3859'
 ht-degree: 37%
 
 ---
@@ -37,6 +37,8 @@ ht-degree: 37%
 * 匿名ユーザーまたはログインユーザーとしてフォームを署名する機能
 * 動的署名プロセス(AEM [!DNL Forms]ワークフローとの統合)
 * ナレッジベース、電話、ソーシャルプロファイルによる認証機能
+
+アダプティブフォーム](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)でAdobe Signを使用し、より適切な署名エクスペリエンスを作成するための[ベストプラクティスを学びます。
 
 ## 前提条件 {#prerequisites}
 
@@ -355,5 +357,5 @@ AEM [!DNL Forms]のインスタンスに対して複数の[!DNL Adobe Sign]サ�
 ## 関連記事 {#related-articles}
 
 * [Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)
-* [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
+* [アダプティブフォームでのAdobe Signの使用に関するベストプラクティス](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)
 * [Adobe SignとAEM Formsの併用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
