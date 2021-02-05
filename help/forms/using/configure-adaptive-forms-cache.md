@@ -10,10 +10,10 @@ topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ade3747ba608164a792a62097b82c55626245891
+source-git-commit: 2d54d115529126162c92e9943a188d05159535f9
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 19%
+source-wordcount: '934'
+ht-degree: 21%
 
 ---
 
@@ -46,7 +46,6 @@ ht-degree: 19%
 ### 前提条件 {#pre-requisites}
 
 * [クライアント](prepopulate-adaptive-form-fields.md#prefill-at-client)でのデータの結合または事前入力を有効にします。 これは、事前入力されたフォームの各インスタンスの一意のデータをマージするのに役立ちます。
-* [すべての発行インスタンスに対してフラッシュエージェントを有効にします](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。これにより、アダプティブフォームのキャッシュパフォーマンスを向上できます。 フラッシュエージェントのデフォルトURLは`http://[server]:[port]]/etc/replication/agents.publish/flush.html`です。
 
 ### ディスパッチャー{#considerations}上のアダプティブフォームをキャッシュする際の考慮点
 
@@ -63,7 +62,7 @@ ht-degree: 19%
 
 ディスパッチャー上のアダプティブフォームのキャッシュを有効にし、設定するには、次の手順を実行します。
 
-1. 環境の各発行インスタンスに対して次のURLを開き、複製エージェントを設定します。
+1. 自分の環境の各パブリッシュインスタンスに対して次のURLを開き、[環境のパブリッシュインスタンスに対してフラッシュエージェントを有効にします](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
 1. [dispatcher.anyフ追加ァイルに対して次の操作を行います](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)。
@@ -143,17 +142,7 @@ AEM環境は、アダプティブフォームをキャッシュするように�
 
 画像とビデオを公開した後、これらのアセットを参照するアダプティブフォームの公開を明示的に取り消し、公開を取り消します。
 
-### コンテンツフラグメントまたはエクスペリエンスフラグメントを含むアダプティブフォームの一部は、ディスパッチャーキャッシュ{#content-or-experience-fragment-not-auto-invalidated}から自動的に無効にされません
-
-#### 問題 {#issue2}
-
-コンテンツフラグメントまたはエクスペリエンスフラグメントをアダプティブフォームに追加し、これらのアセットを個別に編集して発行すると、このようなアセットが含まれるアダプティブフォームは自動的にディスパッチャーキャッシュから無効になりません。
-
-#### 解決策 {#Solution2}
-
-更新されたコンテンツフラグメントまたはエクスペリエンスフラグメントの発行後、これらのアセットを使用するアダプティブフォームの公開を明示的に取り消し、発行します。
-
-### アダプティブフォームの最初のインスタンスのみがキャッシュ{#only-first-insatnce-of-adptive-forms-is-cached}されます。
+### アダプティブフォームの最初のインスタンスのみがキャッシュ{#only-first-instance-of-adaptive-forms-is-cached}
 
 #### 問題 {#issue3}
 
