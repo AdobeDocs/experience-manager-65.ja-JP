@@ -10,10 +10,10 @@ topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c451948c43004d084bc3fce7a2c6ad99381f1ea8
+source-git-commit: fd9ee8e4eb35bd5d303d7bbdd9660a94c54925ff
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 30%
+source-wordcount: '964'
+ht-degree: 29%
 
 ---
 
@@ -122,5 +122,5 @@ AEM [!DNL Forms]で[!DNL Adobe Sign]を使用するには、AEMクラウドサ�
 
 * [アダプティブフォームで Adobe Sign を使用する](../../forms/using/working-with-adobe-sign.md)
 * [Adobe SignとAEM Formsの併用（ビデオ）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)
-* [Adobe Sign を AEM Forms に統合する](../../forms/using/adobe-sign-integration-adaptive-forms.md)
+
 
