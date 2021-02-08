@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3b64b1fe5d47f115681608f38e7e53d078c4698e
+source-git-commit: 31f546400f4c3335953d05b1df9394445b5feb56
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 83%
+source-wordcount: '2707'
+ht-degree: 82%
 
 ---
 
@@ -26,11 +26,15 @@ ht-degree: 83%
 * 既存のロールアウト設定が要件を満たしているかどうか、または 1 つ以上のロールアウト設定を作成する必要があるかどうかを判断します。
 * ライブコピーに使用するロールアウト設定を指定します。
 
-## インストールされるロールアウト設定とカスタムロールアウト設定  {#installed-and-custom-rollout-configurations}
+## インストールされるロールアウト設定とカスタムロールアウト設定 {#installed-and-custom-rollout-configurations}
 
 ここでは、インストールされるロールアウト設定、それらの設定で使用する同期アクションおよびカスタム設定の作成方法（必要な場合）に関する情報を示します。
 
-### ロールアウトトリガー  {#rollout-triggers}
+>[!CAUTION]
+>
+>初期設定の（インストール済みの）ロールアウト設定を更新または変更することは、**推奨されません**。 カスタムのライブアクションが必要な場合は、カスタムのロールアウト設定に追加する必要があります。
+
+### ロールアウトトリガー {#rollout-triggers}
 
 各ロールアウト設定では、ロールアウトトリガーを使用してロールアウトを発生させます。ロールアウト設定では、以下のいずれかのトリガーを使用できます。
 
