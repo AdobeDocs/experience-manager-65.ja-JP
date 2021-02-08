@@ -1,12 +1,12 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets]の紹介。'
+title: ' [!DNL Adobe Experience Manager Assets]の紹介'
 description: デジタルアセット管理、その使用例、 [!DNL Adobe Experience Manager Asset] オファーについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 130a03c821fd2a1e9ecda70039241720052a8920
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 35%
+source-wordcount: '868'
+ht-degree: 33%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 35%
 
 画像をDAMリポジトリに配置するか、画像コンポーネントを使用するかを決定する際は、画像のライフサイクルを考慮します。
 
-* 画像のライフサイクルがページと同じ場合は、画像コンポーネントを使用します。
+* 画像とページのライフサイクルが同じ場合は、画像コンポーネントを使用します。
 * イメージに別々のライフサイクルがある場合（例えば、WCMの外部で2回イメージを使用する場合）、[!DNL Assets]を使用します。
 
 ## デジタルアセットとは{#what-are-digital-assets}
@@ -67,11 +67,11 @@ ht-degree: 35%
 
 * **レンディション**:レンディションとは、アセットのバイナリ表現です。[!DNL Assets] 常に主要な表現（アップロードされたファイルの表現）を持ちます。アセットは、例えば、カスタマイズされたワークフロー手順によって作成された、またはアセットがアップロードされた際に作成された、任意の数の追加の表現を持つことができます。レンディションには、様々なサイズや解像度のものがあります。また、透かしが追加されていたり、その他の変更された特徴を持つものもあります。
 
-* **バージョン**:バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。これにより、以前のバージョンにアセットを復元できます。「アセット](manage-assets.md#asset-versioning)の[バージョン管理」を参照してください。
+* **バージョン**:バージョン管理では、特定の時点でのデジタルアセットのスナップショットが作成されます。これにより、以前のバージョンにアセットを復元できます。 [!DNL Assets]](manage-assets.md#asset-versioning)の[バージョン管理を参照してください。
 
 * **サブアセット**:サブアセットとは、例えば、 [!DNL Adobe Photoshop] ファイル内のレイヤーやPDFファイル内のページなど、アセットを構成するアセットです。[!DNL Assets]では、サブアセットをアセットと同じように管理できます。
 
-### アセットの操作方法{#how-to-work-with-assets}
+### デジタルアセットの操作方法{#how-to-work-with-assets}
 
 アセットまたはコレクションに対してアクションを実行します。アクションでは、アセット、コレクションおよびレンディションを作成したり変更したりできます。アセットに対して実行する基本的な操作の多く(アップロード、削除、更新、保存、サブアセット —トリガーの事前設定済みワークフロー)。 これらは[!DNL Assets]で自動的にオンになり、[!DNL Assets]メディアハンドラーで詳しく説明されます。
 
@@ -82,8 +82,13 @@ ht-degree: 35%
 * アセットのレンディションとサムネールを生成する、必要に応じて、自動サイズ変更や切り抜きを含めます。
 * 必要に応じてアセットをトランスコードします。例えば、モバイルおよびWebでの使用に使用するビデオは、24フレーム/秒でトランスコードされ、30フレーム/秒のビデオをダウンロードします。モバイルおよびWebでの使用に使用するオーディオは128 Kbpsでトランスコードされ、192 Kbpsでのダウンロード用のオーディオです。
 
-また、ワークフローを手動で適用することもできます。デフォルトワークフローのリストについては、[ Assets メディアハンドラー](/help/assets/media-handlers.md)を参照してください。
+また、ワークフローを手動で適用することもできます。デフォルトワークフローのリストについては、[ Assets メディアハンドラー](media-handlers.md)を参照してください。
 
-## [!DNL Experience Manager Assets] および [!DNL MediaLibrary] {#cq-dam-vs-cq-medialibrary}
+## [!DNL Experience Manager Assets] および [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-相違点については、[アセットとMediaLibrary](/help/assets/medialibrary.md)を参照してください。
+相違点については、[アセットとメディアライブラリ](medialibrary.md)を参照してください。
+
+>[!MORELIKETHIS]
+>
+>* [最新のDAMとしてのExperience Manager資産](https://www.youtube.com/embed/PBwQqZgC-yo)
+
