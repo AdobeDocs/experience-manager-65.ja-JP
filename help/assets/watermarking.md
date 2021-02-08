@@ -3,10 +3,10 @@ title: デジタルアセットへの透かしの追加
 description: 透かし処理機能を使用して、アセットにデジタル透かしを追加する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: ec97cc41989cacdcae64a955a32a34d12212ca85
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 35%
+source-wordcount: '305'
+ht-degree: 31%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 35%
 
 1. サイドパネルから、追加&#x200B;**[!UICONTROL 透かし]**&#x200B;ステップを[!UICONTROL DAM Update Asset]ワークフローにドラッグします。
 
-   ![ [!UICONTROL Watermarkstepをドラッグし、「] DAM Update  [!UICONTROL Assetworkflow] ](assets/add_watermark_step_aem_assets.png)
-2」に追加します。
+   ![Watermarkstepをドラッグし、 [!UICONTROL 追加] DAM Update   Assetworkflowに追加します。](assets/add_watermark_step_aem_assets.png)
+
    *図： [!UICONTROL Watermarkstepをドラッグし、「] DAM Update  [!UICONTROL Assetworkflow」に追加し] ます。*
 
    >[!NOTE]
@@ -33,7 +33,7 @@ ht-degree: 35%
 1. 「**[!UICONTROL 透かしを追加]**」ステップを開いて、プロパティを表示します。
 1. 「**[!UICONTROL 引数]**」タブで、各種フィールド（テキスト、フォントタイプ、サイズ、カラー、位置、向きなど）に有効な値を指定します。変更を確認するには、「**[!UICONTROL 完了]**」をクリックします。
 
-   ![Assets における「透かしを追加」ステップの引数の指定](assets/arguments_add_watermark_aem_assets.png)
+   ![ における「透かしを追加」ステップの引数の指定[!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 
    *図：の透かしの追加手順で引数を指定し [!DNL Assets]ます。*
 
@@ -41,3 +41,8 @@ ht-degree: 35%
 1. [!DNL Assets]ユーザーインターフェイスから、サンプルアセットをアップロードします。 透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
 
 プログラム的に、または動的な情報を使用してPDFドキュメントに透かしを付けるには、[Experience Managerドキュメントサービス](/help/forms/using/overview-aem-document-services.md)オファーを使用することを検討してください。
+
+## ヒントと制限事項 {#tips-limitations}
+
+* テキストベースの透かしのみがサポートされます。 [!UICONTROL 透かしプロセス]の作成時に画像をアップロードできる場合でも、画像は透かしとして追加使用されません。
+* 透かしの設定は、PNGファイルとJPEGファイルのみサポートされています。 その他のアセット形式は、透かしが埋め込まれていません。
