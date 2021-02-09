@@ -4,9 +4,9 @@ description: Adobe Experience Manager6.5 Service Pack 7の新機能
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 65a92d86a34ea7796f515178622332d6fbe31a39
+source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2780'
 ht-degree: 5%
 
 ---
@@ -53,6 +53,10 @@ ht-degree: 5%
 ### レイアウトモード{#reset-option-layout-mode}で各コンポーネントのリセットオプションを使用できる
 
 アダプティブフォームのレイアウトモードで各コンポーネントに対してリセットオプションを使用できるようになりました。 パネルに複数列レイアウトを定義する場合、この機能を使用してパネル内の個々のコンポーネントをリセットできます。 詳しくは、[レイアウトモードを使用したコンポーネントのサイズ変更](../../help/forms/using/resize-using-layout-mode.md#resize-components)を参照してください。
+
+### Microsoft SQL Server 2019のサポート
+
+[!DNL Experience Manager Forms] は、Microsoft SQL Server 2019をサポートするようになりました。
 
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
@@ -345,7 +349,7 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 * [Experience Manager Screens:機能パック202011](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202011.html)
 
-* [Adobeアセットリンクv2.2](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)
+* [Adobeアセットリンクv2.2](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)
 
 >[!MORELIKETHIS]
 >
