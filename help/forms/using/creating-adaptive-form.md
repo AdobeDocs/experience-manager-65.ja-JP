@@ -1,18 +1,14 @@
 ---
-title: アダプティブフォームの作成
-seo-title: アダプティブフォームの作成
-description: AEM Forms を使用したアダプティブフォームの作成方法アダプティブフォームとは、情報の処理・収集を効率化するレスポンシブな HTML5 フォームのことです。
-seo-description: AEM Forms を使用したアダプティブフォームの作成方法アダプティブフォームとは、情報の処理・収集を効率化するレスポンシブな HTML5 フォームのことです。
-uuid: 444f461a-9e88-4385-b5ee-e985067ab7bc
-content-type: reference
-topic-tags: author
-products: SG_EXPERIENCEMANAGER/6.4/FORMS
-discoiquuid: f06b8cb2-6f98-465f-beec-1e91e3f45707
+title: アダプティブフォームの作成方法
+description: ' [!DNL Experience Manager Forms]を使用したアダプティブフォームの作成方法を学びます。 アダプティブフォームとは、情報の処理・収集を効率化するレスポンシブな HTML5 フォームのことです。フォームデータモデル、XFAフォームテンプレート、XMLまたはJSONスキーマに基づくアダプティブフォームの作成方法を深く掘り下げます。 '
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner
 translation-type: tm+mt
-source-git-commit: 3cbcd23254e16231a199276aa2f9e70d6ff39b34
+source-git-commit: 52fedc234b3edf581393bb42325902d2da3ab46e
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 83%
+source-wordcount: '1856'
+ht-degree: 79%
 
 ---
 
@@ -23,9 +19,9 @@ ht-degree: 83%
 
 次の手順を実行して、アダプティブフォームを作成します。
 
-1. `https://'[server]:[port]'/<custom-context-if-any>.`のAEM Forms作成者インスタンスにアクセス
+1. `https://'[server]:[port]'/<custom-context-if-any>.`で[!DNL Experience Manager Forms]作成者インスタンスにアクセス
 
-1. AEM ログインページに資格情報を入力します。
+1. Experience Managerのログインページに資格情報を入力します。
 
    ログインした後、左上隅の&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms&amp;ドキュメント]**&#x200B;をタップします。
 
@@ -34,24 +30,24 @@ ht-degree: 83%
    >デフォルトのインストールでは、ログインは `admin`、パスワードは `admin` に設定されています。
 
 1. 「**[!UICONTROL 作成]**」をタップして、「**[!UICONTROL アダプティブフォーム]**」を選択します。
-1. テンプレートを選択するためのオプションが表示されます。テンプレートについて詳しくは、「[アダプティブフォームテンプレート](/help/forms/using/creating-adaptive-form.md#p-adaptive-form-templates-p)」を参照してください。 テンプレートをタップして選択し、「次へ」をタップします。
+1. テンプレートを選択するためのオプションが表示されます。テンプレートについて詳しくは、「[アダプティブフォームテンプレート](creating-adaptive-form.md#p-adaptive-form-templates-p)」を参照してください。 テンプレートをタップして選択し、「次へ」をタップします。
 1. 「プロパティの追加」オプションが表示されます。次のプロパティフィールドの値を指定します。 「表題」と「ドキュメント名」の各フィールドは入力が必須です。
 
-   * **[!UICONTROL タイトル：]** フォームの表示名を指定します。タイトルを指定すると、AEM Forms ユーザーインターフェイス内のフォームを特定しやすくなります。
+   * **[!UICONTROL タイトル：]** フォームの表示名を指定します。タイトルを指定すると、[!DNL Experience Manager Forms]ユーザーインターフェイス内のフォームを特定しやすくなります。
    * **[!UICONTROL 名前：フォームの名前を]** 指定します。指定された名前のノードがリポジトリに作成されます。タイトルを入力し始めると、名前フィールドの値が自動的に生成されます。候補として入力された値は変更可能です。「ドキュメント名」フィールドには、英数字、ハイフン、アンダースコアのみを使用することができます。無効な入力はすべてハイフンに置き換えられます。
    * **[!UICONTROL 説明：フォームに関する詳細情報を]** 指定します。
-   * **[!UICONTROL タグ：]**&#x200B;アダプティブフォームを識別するための固有タグを指定します。タグを指定するとフォームを検索しやすくなります。タグを作成するには、「**タグ**」ボックスに新しいタグ名を入力します。 
+   * **[!UICONTROL タグ：]**&#x200B;アダプティブフォームを識別するための固有タグを指定します。タグを指定するとフォームを検索しやすくなります。タグを作成するには、「**[!UICONTROL タグ]**」ボックスに新しいタグ名を入力します。 
 
 1. 次のフォームモデルの 1 つを基にアダプティブフォームを作成することができます。
 
    * [フォームデータモデル](#fdm)
-   * [XFA フォームテンプレート](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)
-   * [XML または JSON スキーマ](/help/forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-xml-or-json-schema-p)
+   * [XFA フォームテンプレート](#create-an-adaptive-form-based-on-an-xfa-form-template)
+   * [XML または JSON スキーマ](#create-an-adaptive-form-based-on-xml-or-json-schema)
    * なし、またはフォームモデルを使用しない
 
    これらは、「**[!UICONTROL プロパティの追加]**」ページにある「**[!UICONTROL フォームモデル]**」タブから設定することができます。デフォルトで選択されているフォームモデルは「**[!UICONTROL なし]**」になっています。
 
-1. 「**作成**」をタップします。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。
+1. 「**[!UICONTROL 作成]**」をタップします。アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。
 
    すべてのプロパティの指定が完了したら、「**[!UICONTROL 作成]**」をクリックします。 アダプティブフォームが作成され、フォームを編集用に開くためのダイアログが表示されます。
 
@@ -61,15 +57,15 @@ ht-degree: 83%
 
    アダプティブフォームのタイプにより、関連付けられた XFA フォームテンプレート、XML スキーマまたは JSON スキーマに存在するフォーム要素が、サイドバーにある&#x200B;**[!UICONTROL コンテンツブラウザー]**&#x200B;の「**[!UICONTROL データモデルオブジェクト]**」タブに表示されます。これらの要素もアダプティブフォームにドラッグアンドドロップすることができます。
 
-   アダプティブフォームのオーサリングインターフェースと使用可能なコンポーネントについて詳しくは、「[アダプティブフォームの作成について](/help/forms/using/introduction-forms-authoring.md)」を参照してください。
+   アダプティブフォームのオーサリングインターフェースと使用可能なコンポーネントについて詳しくは、「[アダプティブフォームの作成について](introduction-forms-authoring.md)」を参照してください。
 
    >[!NOTE]
    >
    >新しく作成されたフォームを新しいタブで開くには、ブラウザでポップアップを許可してください。
 
-## フォームデータモデルに基づくアダプティブフォームの作成  {#fdm}
+## フォームデータモデルに基づくアダプティブフォームの作成 {#fdm}
 
-[AEM Forms のデータ統合機能](/help/forms/using/data-integration.md)では、複数のデータソースを統合し、エンティティとサービスをまとめてフォームデータモデルを作成します。これは、JSON スキーマの拡張機能です。フォームデータモデルを使用してアダプティブフォームを作成することができます。フォームデータモデル内で設定されたエンティティまたはデータモデルオブジェクトは、フォームのオーサリングのデータモデルオブジェクトとして使用できます。これらは各データソースに結合され、フォームの事前入力や送信済みデータの各データソースへの書き戻しに使用されます。また、アダプティブフォームルールを使用して、フォームデータモデル内で定義されているサービスを呼び出すこともできます。
+[[!DNL Experience Manager Forms]  のデータ統合機能](data-integration.md)では、複数のデータソースを統合し、エンティティとサービスをまとめてフォームデータモデルを作成します。これは、JSON スキーマの拡張機能です。フォームデータモデルを使用してアダプティブフォームを作成することができます。フォームデータモデル内で設定されたエンティティまたはデータモデルオブジェクトは、フォームのオーサリングのデータモデルオブジェクトとして使用できます。これらは各データソースに結合され、フォームの事前入力や送信済みデータの各データソースへの書き戻しに使用されます。アダプティブフォームルールを使用して、フォームデータモデルに設定されたサービスを呼び出すこともできます。
 
 フォームデータモデルを使用してアダプティブフォームを作成するには：
 
@@ -91,21 +87,21 @@ ht-degree: 83%
 
 アダプティブフォームを作成する際に、XFA フォームテンプレートを再利用することができます。再利用するには、XFA フォームテンプレートをアップロードし、アダプティブフォームに関連付けます。フォームテンプレート（XFA フォーム）の要素が、アダプティブフォームの作成時にコンテンツファインダーで利用できるようになります。フォームテンプレート要素は、コンテンツファインダーからフォームへとドラッグ＆ドロップすることができます。
 
->[!NOTE]
+<!-- >>[!NOTE]
 >
->フォームテンプレートに基づいてアダプティブフォームの作成を開始する前に、AEM Forms に [XFA フォーム テンプレートをアップロード](/help/forms/using/get-xdp-pdf-documents-aem.md)します。
+>[Upload the XFA Form Template](get-xdp-pdf-documents-aem.md) to AEM Forms before you start creating an adaptive form based on the form template.
 
-XFA フォームテンプレートをアダプティブフォームのフォームモデルとして使用するには：
+Do the following to use an XFA form template as form model for your adaptive form:
 
-1. 「**[!UICONTROL プロパティの追加]**」ページで、「**[!UICONTROL フォームモデル]**」タブを開きます。
-1. 「フォームモデル」タブのドロップダウンリストで、「**[!UICONTROL フォームテンプレート]**」を選択します。 AEM Forms UI を通じてリポジトリにアップロードされたすべてのフォームテンプレートがリストされ、選択できるようになります。リストからテンプレートを選択します。
+1. On the **[!UICONTROL Add Properties]** page, open the **[!UICONTROL Form Model]** tab.
+1. In the Form Model tab, from the drop-down list, select **[!UICONTROL Form Templates]**. All the form templates that are uploaded to the repository via AEM Forms UI are listed for selection. Select a template from the list.
 
-   ![XFA フォームテンプレートとアダプティブフォームの関連付け](assets/form_model_xfa_associate.png)
-   **図：フォームテンプレートの** *選択*
+   ![Associate XFA Form Template with an Adaptive Form](assets/form_model_xfa_associate.png)
+**Figure:** *Selecting a form template*
 
    >[!NOTE]
    >
-   >アダプティブフォームのフォームテンプレートを変更することもできます。詳細な手順については、「[アダプティブフォームのフォームモデルのプロパティの編集](#edit-form-model)」を参照してください。
+   >You can also change the form template for an adaptive form. For detailed steps, see [Edit Form Model properties of an adaptive form](#edit-form-model). -->
 
 ## XML スキーマまたは JSON スキーマに基づくアダプティブフォームの作成 {#create-an-adaptive-form-based-on-xml-or-json-schema}
 
@@ -113,8 +109,8 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
 
 アダプティブフォームのオーサリングのための XML または JSON スキーマの設計方法について理解するには、次のドキュメントを参照してください。
 
-* [XMLスキーマを使ったアダプティブフォームの作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)
-* [JSON スキーマを使用したアダプティブフォームの作成](/help/forms/using/adaptive-form-json-schema-form-model.md)
+* [XMLスキーマを使ったアダプティブフォームの作成](adaptive-form-xml-schema-form-model.md)
+* [JSON スキーマを使用したアダプティブフォームの作成](adaptive-form-json-schema-form-model.md)
 
 アダプティブフォームのフォームモデルとして XML または JSON スキーマを使用するには、次のことを行ってください。
 
@@ -124,7 +120,7 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
 1. 「**[!UICONTROL スキーマ]**&#x200B;を選択」をタップし、次のいずれかの操作を行います。
 
    * **[!UICONTROL ディスクからアップロード]** - このオプションを選択して「スキーマの定義をアップロード」をタップし、ファイルシステムから XML スキーマまたは JSON スキーマをアップロードします。アップロードされたスキーマファイルはフォームとともに保存されますが、他のアダプティブフォームからアクセスすることはできません。
-   * **[!UICONTROL リポジトリ内を検索]** - このオプションを選択して、リポジトリで使用できるスキーマ定義ファイルのリストからスキーマを選択します。XML または JSON スキーマファイルをフォームモデルとして選択します。選択したスキーマが参照されてフォームに関連付けられ、他のアダプティブフォームからアクセスして使用できるようになります。
+   * **[!UICONTROL リポジトリ内を検索]** - このオプションを選択して、リポジトリで使用できるスキーマ定義ファイルのリストからスキーマを選択します。XML または JSON スキーマファイルをフォームモデルとして選択します。選択したスキーマは、参照によってフォームに関連付けられ、他のアダプティブフォームで使用できるようになります。
 
    >[!CAUTION]
    >
@@ -144,13 +140,13 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
 
 ## アダプティブフォームテンプレート {#adaptive-form-templates}
 
-テンプレートでは基本的がい造を提供しており、アダプティブフォームの外観（レイアウトやスタイル）を定義します。これには、特定のプロパティやコンテンツ構造を有するフォーマット済みのコンポーネントが含まれます。AEM Forms には、デフォルトでいくつかのアダプティブフォームテンプレートが用意されています。高度なテンプレートを含む完全なテンプレートパッケージを取得するには、AEM Formsアドオンパッケージをインストールする必要があります。 詳しくは、[AEM Formsアドオンパッケージのインストール](/help/forms/using/installing-configuring-aem-forms-osgi.md)を参照してください。
+テンプレートでは基本的がい造を提供しており、アダプティブフォームの外観（レイアウトやスタイル）を定義します。これには、特定のプロパティやコンテンツ構造を有するフォーマット済みのコンポーネントが含まれます。<!-- Out of the box, AEM Forms provides some adaptive form templates. To get the complete template package including advanced templates, you need to install the AEM Forms add-on package. For more information, see [Installing AEM Forms add-on package](installing-configuring-aem-forms-osgi.md).-->
 
-さらに、テンプレートエディターを使用して独自のテンプレートを作成できます。テンプレートの操作について詳しくは、「[アダプティブフォームテンプレート](/help/forms/using/template-editor.md)」を参照してください。
+さらに、テンプレートエディターを使用して独自のテンプレートを作成できます。テンプレートの操作について詳しくは、「[アダプティブフォームテンプレート](template-editor.md)」を参照してください。
 
 >[!NOTE]
 >
->拡張テンプレートを使用してアダプティブフォームを作成し、そのフォームを編集用として開くと、エラーメッセージが表示されます。拡張テンプレートには署名ステップコンポーネントがあり、デフォルトで Adobe Sign が有効になっています。このエラーを修正するには、[Adobe Sign のクラウド設定](/help/forms/using/adobe-sign-integration-adaptive-forms.md)を作成して選択し、[署名者を設定](working-with-adobe-sign.md#addsignerstoanadaptiveform)してください。
+>拡張テンプレートを使用してアダプティブフォームを作成し、そのフォームを編集用として開くと、エラーメッセージが表示されます。拡張テンプレートには署名ステップコンポーネントがあり、デフォルトで Adobe Sign が有効になっています。このエラーを修正するには、[Adobe Sign のクラウド設定](adobe-sign-integration-adaptive-forms.md)を作成して選択し、[署名者を設定](working-with-adobe-sign.md#addsignerstoanadaptiveform)してください。
 
 ## アダプティブフォームのフォームモデルプロパティの編集  {#edit-form-model}
 
@@ -190,7 +186,7 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
    * **[!UICONTROL 時刻に基づいた自動保存]**&#x200B;トリガーを選択した場合は、時間間隔を指定します。
    * **[!UICONTROL イベントベース]**&#x200B;のトリガーを選択した場合は、イベント名を指定します。
 
-   独自の方法を作成してリストに追加することもできます。詳細については、[フォームを自動保存するためのカスタム方法の実装](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)を参照してください。
+   <!-- You can also create and add your own custom strategy to the list. For details, see [Implement a custom strategy to autosave the forms](auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p). -->
 
 1. （時間ベースの自動保存のみ）次の手順を実行して、時間ベースの自動保存のオプションを設定します。
 
@@ -198,12 +194,12 @@ XML スキーマと JSON スキーマは、組織内のバックエンドシス�
 
 1. （イベントベースの自動保存のみ）次の手順を実行して、イベントベースの自動保存のためのオプションを設定します。
 
-   1. 「**このイベントで自動保存**」ボックスで、[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html) イベントを指定します。式が TRUE に評価されるたびに、フォームが保存されます。
+   1. 「**[!UICONTROL このイベントで自動保存]**」ボックスで、[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html) イベントを指定します。式が TRUE に評価されるたびに、フォームが保存されます。
 
-1. （オプション）匿名ユーザーに対するコンテンツを自動保存するには、「**匿名のユーザーの自動保存を有効にする**」オプションを選択し、「**[!UICONTROL OK]**」をクリックします。
+1. （オプション）匿名ユーザーに対するコンテンツを自動保存するには、「**[!UICONTROL 匿名のユーザーの自動保存を有効にする]**」オプションを選択し、「**[!UICONTROL OK]**」をクリックします。
 
    >[!NOTE]
    >
    >自動保存オプションが匿名ユーザーに対して機能するには、すべてのユーザーにフォームのプレビュー、確認および署名を許可するように Forms Common Configuration Service が設定されていることを確認します。
    >
-   >サービスを設定するには、`https://'[server]:[port]'system/console/configMgr`にあるAEM Webコンソール設定に移動し、**[!UICONTROL Forms共通設定サービス]**&#x200B;を編集して、**[!UICONTROL 許可]**&#x200B;フィールドの&#x200B;**[!UICONTROL すべてのユーザー]**&#x200B;オプションを選択し、設定を保存します。
+   >サービスを設定するには、`https://'[server]:[port]'system/console/configMgr`にあるAdobe Experience ManagerWebコンソール設定に移動し、**[!UICONTROL Forms Common Configuration Service]**&#x200B;を編集して&#x200B;**[!UICONTROL 許可]**&#x200B;フィールドの&#x200B;**[!UICONTROL すべてのユーザー]**&#x200B;オプションを選択し、設定を保存します。
