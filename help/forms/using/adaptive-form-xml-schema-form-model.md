@@ -1,34 +1,30 @@
 ---
-title: XML スキーマを使ったアダプティブフォームの作成
-seo-title: XML スキーマを使用したアダプティブフォームの作成
-description: アダプティブフォームではフォームモデルとして XML スキーマを使用できるため、アダプティブフォームの作成に既存の XSD テンプレートを活用できます。スキーマ要素を XSD からアダプティブフォームにドラッグアンドドロップできます。
-seo-description: アダプティブフォームではフォームモデルとして XML スキーマを使用できるため、アダプティブフォームの作成に既存の XSD テンプレートを活用できます。スキーマ要素を XSD からアダプティブフォームにドラッグアンドドロップできます。
-uuid: 84c35728-1b6c-4286-854b-51c03bfd0eac
-topic-tags: develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-discoiquuid: 0d6c12b3-3a70-48e9-a83b-974360a8b0b6
-docset: aem65
+title: XMLスキーマを使用したアダプティブFormsの作成方法
+description: XMLスキーマをアダプティブフォームのフォームモデルとして使用する方法を学びます。 既存のXSDテンプレートを適用してアダプティブフォームを作成し、XSDからアダプティブフォームにスキーマ要素をドラッグ&ドロップすることができます。 XMLスキーマのサンプルを参照し、XMLスキーマを使用してフィールドに特別なプロパティを追加し、アダプティブフォームコンポーネントに許容される値を制限してください。
+feature: Adaptive Forms
+role: Business Practitioner, Developers
+level: Beginner, Imtermediate
 translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+source-git-commit: ec8a4c3941b5434f10ad0727be02fcf296cd4da7
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 89%
+source-wordcount: '1073'
+ht-degree: 82%
 
 ---
 
 
-# XML スキーマを使ったアダプティブフォームの作成{#creating-adaptive-forms-using-xml-schema}
+# XML スキーマを使ったアダプティブフォームの作成 {#creating-adaptive-forms-using-xml-schema}
 
 ## 前提条件 {#prerequisites}
 
 フォームモデルとして XML スキーマを使用してアダプティブフォームをオーサリングする場合、XML スキーマの基本を理解している必要があります。また、この記事を読む前に次のコンテンツを読んでおくことをお勧めします。
 
-* [アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)
+* [アダプティブフォームの作成](creating-adaptive-form.md)
 * [XML スキーマ](https://www.w3.org/TR/xmlschema-2/)
 
 ## フォームモデルとして XML スキーマを使用 {#using-an-xml-schema-as-form-model}
 
-AEM Forms では、既存の XML スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。XML スキーマは、組織のバックエンドシステムによりデータの生成や消費が行われる構造を表しています。
+[!DNL Experience Manager Forms] では、既存の XML スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。XML スキーマは、組織のバックエンドシステムによりデータの生成や消費が行われる構造を表しています。
 
 XML スキーマの使用の主な特長は、次のとおりです。
 
@@ -221,7 +217,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
-   <td><p>Boolean</p> </td>
+   <td><p>ブール値</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付よりも小さい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付以下の値である必要があります。</p> </td>
    <td>
     <ul>
@@ -293,7 +289,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
 
 **ツリーのどの要素がどの XML 要素に関連付けられているかをどうやって判断しますか？**
 
-コンテンツファインダーで要素を重複クリックすると、`bindRef`という名前のフィールド名とプロパティがポップアップ表示されます。 このプロパティはツリー要素をスキーマ内の要素または属性にマッピングします。
+コンテンツファインダーで要素を重複クリックすると、ポップアップウィンドウにフィールド名と`bindRef`というプロパティが表示されます。 このプロパティはツリー要素をスキーマ内の要素または属性にマッピングします。
 
 ![XML スキーマ要素の bindref フィールド](assets/dblclick.png)
 
@@ -301,11 +297,11 @@ bindRef</code>フィールドは、ツリー要素とスキーマ内の要素ま
 
 >[!NOTE]
 >
->属性の`bindRef`値には`@`記号が含まれており、属性と要素を区別します。 例： `/config/projectDetails/@duration`
+>属性の`bindRef`値には`@`記号が含まれており、属性と要素を区別します。 例：`/config/projectDetails/@duration`
 
 **繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
-繰り返し可能なサブフォームでは、完全なサブフォームを使用する必要があります。選択した一部のフィールドのみを使用する場合は、構造全体を使用し、不要部分を削除します。
+繰り返し可能なサブフォームでは、Completeサブフォームを使用する必要があります。 選択した一部のフィールドのみを使用する場合は、構造全体を使用し、不要部分を削除します。
 
 **コンテンツファインダーに長く複雑な構造があります。特定の要素を見つけるにはどうすればよいですか？**
 
