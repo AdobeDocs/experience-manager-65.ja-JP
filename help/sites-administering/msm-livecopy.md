@@ -2,10 +2,10 @@
 title: ライブコピーの作成と同期
 description: ライブコピーを作成および同期する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 7d40fbfb55755d815a11b1872c41dd8e1a0e1ffd
+source-git-commit: 1725f19d0676680ae89ad7ea39fa3ae1deaeb8a3
 workflow-type: tm+mt
-source-wordcount: '4114'
-ht-degree: 82%
+source-wordcount: '4170'
+ht-degree: 81%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 82%
 
 ページまたはブループリント設定からライブコピーを作成し、継承と同期を管理できます。
 
-## ブループリント設定の管理  {#managing-blueprint-configurations}
+## ブループリント設定の管理 {#managing-blueprint-configurations}
 
 ブループリント設定では、1 つ以上のライブコピーページのソースとして使用する既存の Web サイトを指定します。
 
@@ -356,7 +356,11 @@ ht-degree: 82%
 >
 >ブループリントから[ライブコピーを分離](#detaching-a-live-copy)してすべての関係を削除することもできます。分離アクションは永続的で元に戻すことはできません。
 
-#### ページプロパティからの継承の休止  {#suspending-inheritance-from-page-properties}
+>[!NOTE]
+>
+>コンポーネントがコンテナとしてマークされている場合、取り消しおよび休止操作は、その子コンポーネントには適用されません。 詳しくは、[MSMのベストプラクティス](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)も参照してください。
+
+#### ページプロパティからの継承の休止 {#suspending-inheritance-from-page-properties}
 
 ページの継承を休止するには：
 
@@ -459,6 +463,10 @@ ht-degree: 82%
 ### コンポーネントの継承のキャンセル  {#cancelling-inheritance-for-a-component}
 
 コンポーネントについてライブコピーの継承をキャンセルして、コンポーネントがソースコンポーネントと同期されないようにします。必要な場合は後で継承を有効にすることができます。
+
+>[!NOTE]
+>
+>コンポーネントがコンテナとしてマークされている場合、取り消しおよび休止操作は、その子コンポーネントには適用されません。 詳しくは、[MSMのベストプラクティス](/help/sites-administering/msm-best-practices.md#components-and-container-synchronization)も参照してください。
 
 >[!NOTE]
 >
