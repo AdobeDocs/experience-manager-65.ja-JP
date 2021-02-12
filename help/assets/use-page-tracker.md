@@ -3,7 +3,7 @@ title: ページトラッカーとWebページの埋め込みコードの使用
 description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
+source-git-commit: fc433851c24f9049e7ba6dfada24d6e552eb6d05
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 70%
@@ -23,13 +23,13 @@ ht-degree: 70%
 <!DOCTYPE html>
 <html>
     <head>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/sitecatalyst/appmeasurement.js"></script>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/foundation/assetinsights/pagetracker.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/sitecatalyst/appmeasurement.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/assetinsights/pagetracker.js"></script>
             <script type="text/javascript">
                                 assetAnalytics.attrTrackable = 'trackable';
                 assetAnalytics.defaultTrackable = false;
                 assetAnalytics.attrAssetID = 'aem-asset-id';
-                assetAnalytics.assetImpressionPollInterval = 200; // interval in millis
+                assetAnalytics.assetImpressionPollInterval = 200; // interval in milliseconds
                 assetAnalytics.charsLimitForGET = 2000; // bytes
                 assetAnalytics.dispatcher.init("assetstesting","xxxx","xxx","list1","eVar3","event8","event7");
             </script>
@@ -65,8 +65,8 @@ ht-degree: 70%
 
 ```xml
  <head>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/sitecatalyst/appmeasurement.js"></script>
-            <script type="text/javascript" src="http://localhost:4502/xxxx/etc/clientlibs/foundation/assetinsights/pagetracker.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/sitecatalyst/appmeasurement.js"></script>
+            <script type="text/javascript" src="http://localhost:4502/xxxx/etc.clientlibs/dam/clientlibs/foundation/assetinsights/pagetracker.js"></script>
             <script type="text/javascript">
                                 assetAnalytics.attrTrackable = 'trackable';
                 assetAnalytics.defaultTrackable = false;
