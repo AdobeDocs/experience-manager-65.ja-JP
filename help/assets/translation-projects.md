@@ -3,10 +3,10 @@ title: 翻訳プロジェクトの作成
 description: ' [!DNL Adobe Experience Manager]で翻訳プロジェクトを作成する方法を学びます。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: 534a3d75ebb6a6d297354cce4840bdc1dfa25707
 workflow-type: tm+mt
-source-wordcount: '1885'
-ht-degree: 68%
+source-wordcount: '1878'
+ht-degree: 65%
 
 ---
 
@@ -19,13 +19,11 @@ ht-degree: 68%
 
 * **言語コピーの更新**:このワークフローを実行して、アセットの追加のグループを翻訳し、特定のロケールの言語コピーに含めます。この場合、翻訳されたアセットが追加されるターゲットフォルダーには翻訳済みのアセットが既に含まれています。
 
->[!NOTE]
+>[!PREREQUISITES]
 >
->アセットバイナリは、翻訳サービスプロバイダーがバイナリの翻訳をサポートしている場合にのみ翻訳されます。
+>* 翻訳プロジェクトを作成するユーザーは、グループ`projects-administrators`のメンバーです。
+>* 翻訳サービスプロバイダーはバイナリの翻訳をサポートしています。
 
->[!NOTE]
->
->PDFファイルや[!DNL Adobe InDesign]ファイルなどの複雑なアセットに対して翻訳ワークフローを起動した場合、そのサブアセットやレンディション（存在する場合）は翻訳用に送信されません。
 
 ## 作成と翻訳ワークフロー {#create-and-translate-workflow}
 
@@ -40,17 +38,14 @@ ht-degree: 68%
 「**[!UICONTROL 構造のみを作成]**」オプションを使用して、ソース言語ルート内のソースフォルダーの階層と一致するように、ターゲット言語ルート内にターゲットフォルダー階層を作成します。この場合、ソースアセットが宛先フォルダーにコピーされます。ただし、翻訳プロジェクトは生成されません。
 
 1. [!DNL Assets]インターフェイスで、ターゲット言語ルートで構造を作成するソースフォルダーを選択します。
+
 1. **[!UICONTROL 参照]**&#x200B;ウィンドウを開き、**[!UICONTROL コピー]**&#x200B;の下の&#x200B;**[!UICONTROL 言語コピー]**&#x200B;をクリックします。
 
-   ![chlimage_1-57](assets/chlimage_1-57.png)
+   ![言語コピー](assets/translation-language-copies.png)
 
-1. 下部にある&#x200B;**[!UICONTROL 作成と翻訳]**&#x200B;をクリックします。
-
-1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
+1. 「**[!UICONTROL 作成と翻訳]**」をクリックします。 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 構造のみを作成]**」を選択します。
-
-   ![chlimage_1-60](assets/chlimage_1-60.png)
 
 1. 「**[!UICONTROL 作成]**」をクリックします。ターゲット言語の新しい構造が、「**[!UICONTROL 言語コピー]**」の下に表示されます。
 
@@ -109,7 +104,7 @@ ht-degree: 68%
 
    ジョブステータスの詳細については、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
 
-1. [!DNL Assets] UIに移動し、変換済みの各アセットのプロパティページを開いて、変換済みのメタデータを表示します。
+1. [!DNL Assets]ユーザーインターフェイスに移動し、変換済みの各アセットの[!UICONTROL プロパティ]ページを開いて、変換済みのメタデータを表示します。
 
    ![アセットのプロパティページで変換済みメタデータの表示](assets/translated-metadata-asset-properties.png)
 
@@ -131,8 +126,6 @@ ht-degree: 68%
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択して、翻訳ワークフローをフォルダーに対して実行します。
-
-   ![chlimage_1-77](assets/chlimage_1-77.png)
 
    >[!NOTE]
    >
@@ -157,10 +150,6 @@ ht-degree: 68%
 
    >[!NOTE]
    >
-   >機械翻訳を使用する場合は、アセットのバイナリは翻訳されません。
-
-   >[!NOTE]
-   >
    >翻訳ジョブに追加したアセットがサブアセットを含んでいる場合は、問題を避けるために、サブアセットを選択して翻訳から除外してください。
 
 1. アセットの翻訳を開始するには、「**[!UICONTROL 翻訳ジョブ]**」タイルの矢印をクリックし、リストから「**[!UICONTROL 開始]**」を選択します。
@@ -175,7 +164,7 @@ ht-degree: 68%
 
    詳しくは、[翻訳ジョブのステータスの監視](/help/sites-administering/tc-manage.md#monitoring-the-status-of-a-translation-job)を参照してください。
 
-1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。[!DNL Assets] UIに移動し、変換済みの各アセットのプロパティページを開いて、変換済みのメタデータを表示します。
+1. 翻訳が完了すると、ステータスが「レビューへの準備完了」に変更されます。[!DNL Assets]ユーザーインターフェイスに移動し、変換済みの各アセットのプロパティページを開いて、変換済みのメタデータを表示します。
 
 ## 言語コピーを更新 {#update-language-copies}
 
@@ -197,8 +186,6 @@ ht-degree: 68%
 1. 下部にある[**[!UICONTROL 言語コピーを更新]**]をクリックします。
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 新しい翻訳プロジェクトを作成]**」を選択します。
-
-   ![chlimage_1-86](assets/chlimage_1-86.png)
 
 1. 「**[!UICONTROL プロジェクトタイトル]**」フィールドに、プロジェクトのタイトルを入力します。
 
@@ -273,13 +260,13 @@ ht-degree: 68%
 
    >[!NOTE]
    >
-   >翻訳ワークフローが対象のアセットを更新できるようにするには、アセットとメタデータの両方を承認します。
+   >変換ワークフローで変換先のアセットを更新できるようにするには、アセットとメタデータの両方を受け入れます。
 
    「**[!UICONTROL 翻訳を拒否]** ![翻訳を拒否](assets/do-not-localize/thumb-down.png)」をクリックすると、元の翻訳バージョンのアセットがターゲットロケールルートに保持され、編集されたバージョンが拒否されます。
 
 1. 翻訳済みメタデータを表示するには、[!DNL Assets]コンソールに移動し、翻訳済みアセットごとに[!UICONTROL プロパティ]ページを開きます。
 
->[!MORELIKETHIS]
->
->* [メタデータを効率的に変換するためのヒント](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/)。
+## ヒントと制限事項 {#tips-limitations}
 
+* PDFファイルや[!DNL Adobe InDesign]ファイルなどの複雑なアセットに対して翻訳ワークフローを起動した場合、そのサブアセットやレンディション（存在する場合）は翻訳用に送信されません。
+* 機械翻訳を使用する場合、アセットのバイナリは翻訳されません。
