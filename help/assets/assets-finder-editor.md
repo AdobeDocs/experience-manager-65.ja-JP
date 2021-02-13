@@ -3,10 +3,10 @@ title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
+source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
 workflow-type: tm+mt
-source-wordcount: '2120'
-ht-degree: 72%
+source-wordcount: '2125'
+ht-degree: 69%
 
 ---
 
@@ -268,7 +268,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![screen_shot_2012-04-23at22911pm](assets/screen_shot_2012-04-23at22911pm.png)
 
-1. フォームの「End」領域で「**Edit**」をクリックして、Endアクションを作成します。 例えば、ユーザーがメタデータの変更内容を送信できる「**送信**」ボタンを作成できます。また、オプションとして、メタデータを元の状態にリセットする「**リセット**」ボタンを追加できます。
+1. フォームの「End」領域で「**Edit**」をクリックして、Endアクションを作成します。 例えば、ユーザーがメタデータの変更を送信できるように、**[!UICONTROL 「送信]**」オプションを作成できます。 必要に応じて、メタデータを元の状態にリセットする&#x200B;**リセット**&#x200B;オプションを追加できます。
 
 ![screen_shot_2012-04-23at23138pm](assets/screen_shot_2012-04-23at23138pm.png)
 
@@ -328,7 +328,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![screen_shot_2012-04-23at25244pm](assets/screen_shot_2012-04-23at25244pm.png)
 
-#### サムネール  {#thumbnail}
+#### サムネール {#thumbnail}
 
 サムネールコンポーネントでは、選択したサムネールがアセットで表示されます（多くの形式でサムネールは自動的に抽出されます）。さらに、コンポーネントではファイル名と、[変更可能なアクション](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)が表示されます。
 
@@ -381,7 +381,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 | [!UICONTROL 参照] | クリックすると、アセットで現在使用されているページが表示されます。 |
 | [!UICONTROL バージョン管理] | アセットのバージョンの作成と復元が可能です。 |
 
-1. 適切なアクションをページの&#x200B;**アクション**&#x200B;領域にドラッグします。 これによって、そのアクションを実行するボタンが作成されます。
+1. 適切なアクションをページの&#x200B;**アクション**&#x200B;領域にドラッグします。 ページ上にドラッグされたアクションを実行するためのオプションを作成します。
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
