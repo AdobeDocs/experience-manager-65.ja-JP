@@ -3,7 +3,7 @@ title: ' [!DNL Assets] とメディアライブラリの比較'
 description: ' [!DNL Experience Manager Assets] とメディアライブラリの機能を比較し、違いを理解している。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: ca54c880cbda2a573d6c1229900fd80082c5f5aa
+source-git-commit: 82c2df0e53e8ef595ad158ef46089d6e4964ca26
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 19%
@@ -106,5 +106,6 @@ ht-degree: 19%
 
 >[!MORELIKETHIS]
 >
->*[[!DNL Experience Manager] 6.5Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
->*[[!DNL Experience Manager] 6.5オンプレミスの製品説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+>* [[!DNL Experience Manager] 6.5Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+>* [[!DNL Experience Manager] 6.5オンプレミスの製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+
