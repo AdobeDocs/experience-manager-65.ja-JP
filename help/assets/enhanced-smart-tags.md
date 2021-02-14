@@ -3,10 +3,10 @@ title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 09bb767ae8565624e7a6b9786a5cd4c581fe0b9a
 workflow-type: tm+mt
-source-wordcount: '1514'
-ht-degree: 57%
+source-wordcount: '1610'
+ht-degree: 56%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 57%
 
 背景には、スマートコンテンツサービスは、Adobe SenseiAIフレームワークを使用して、タグ構造とビジネス分類に対する画像認識アルゴリズムのトレーニングを行っています。 その後、このコンテンツインテリジェンスを使用して、アセットの個々のセットに関連性の高いタグが適用されます。
 
-スマートコンテンツサービスは、[!DNL Adobe I/O]上でホストされるクラウドサービスです。 [!DNL Adobe Experience Manager]で使用するには、システム管理者が[!DNL Experience Manager]デプロイメントを[!DNL Adobe I/O]と統合する必要があります。
+スマートコンテンツサービスは、[!DNL Adobe Developer Console]上でホストされるクラウドサービスです。 [!DNL Adobe Experience Manager]で使用するには、システム管理者が[!DNL Experience Manager]デプロイメントを[!DNL Adobe Developer Console]と統合する必要があります。
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
@@ -36,13 +36,40 @@ ht-degree: 57%
 
 ![フローチャート](assets/flowchart.gif)
 
-## 前提条件 {#prerequisites}
+## 前提条件とサポートされる形式{#prerequisites}
 
-Smart Content Serviceを使用する前に、次の手順を実行して[!DNL Adobe I/O]上に統合を作成します。
+Smart Content Serviceを使用する前に、次の手順を実行して[!DNL Adobe Developer Console]上に統合を作成します。
 
 * 組織の管理者権限を持つ Adobe ID アカウントがあること。
 * 組織でスマートコンテンツサービスが有効化されていること。
 * Smart Content Services Baseパッケージは、[!DNL Adobe Experience Manager Sites] Baseパッケージと[!DNL Assets]アドオンがライセンスされている展開にのみ追加できます。
+
+スマートタグは、次のMIMEタイプを持つアセットにのみ適用されます。
+
+* image/jpeg
+* image/tiff
+* image/png
+* image/bmp
+* image/gif
+* image/pjpeg
+* image/x-portable-anymap
+* image/x-portable-bitmap
+* image/x-portable-graymap
+* image/x-portable-pixmap
+* image/x-rgb
+* image/x-xbitmap
+* image/x-xpixmap
+* image/x-icon
+* image/photoshop
+* image/x-photoshop
+* image/psd
+* image/vnd.adobe.photoshop
+
+アセットレンディションのスマートタグ付けは、次のMIMEタイプに対してのみサポートされます。
+
+* image/jpeg
+* image/pjpeg
+* image/png
 
 ## オンボーディング {#onboarding}
 
@@ -99,7 +126,7 @@ Smart Content Serviceは、[!DNL Experience Manager]のアドオンとして購�
 >
 >タグ付けワークフローは、アセットとフォルダーの両方に対して実行されます。
 
-### 定期的なタグ付け  {#periodic-tagging}
+### 定期的なタグ付け {#periodic-tagging}
 
 スマートコンテンツサービスを有効にして、フォルダー内のアセットを定期的にタグ付けすることができます。アセットフォルダーのプロパティページを開き、「**[!UICONTROL 詳細]**」タブの「スマートタグを有効にする&#x200B;**[!UICONTROL 」を選択し、変更を保存します。]**
 
@@ -162,3 +189,4 @@ Smart Content Serviceは、[!DNL Experience Manager]のアドオンとして購�
 
 * Smart Content Servicesの使用は、タグ付き画像の年間使用量が最大200万個に制限されています。 処理およびタグ付けされた重複画像は、それぞれタグ付けされた画像としてカウントされます。
 * タイムラインからタグ付けワークフローを実行する場合、一度に最大 15 個のアセットにタグを適用できます。
+* スマートタグは、PNGおよびJPG画像形式でのみ機能します。 この2つの形式で作成されたレンディションを含むサポートされているアセットは、スマートタグでタグ付けされます。
