@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ea39bb870fd20f7e30afc2c4f5bceb2fe6427848
+source-git-commit: 7fed51b68c626b54565b9120f69229872946016f
 workflow-type: tm+mt
-source-wordcount: '1781'
-ht-degree: 89%
+source-wordcount: '1883'
+ht-degree: 85%
 
 ---
 
@@ -53,6 +53,14 @@ ht-degree: 89%
 
    使用されるサイトでページがページのナビゲーションに表示されるかどうかを示します。
 
+* **ブランディング**
+
+   各ページタイトルにブランドスラッグを追加して、ページ間で一貫したブランドアイデンティティを適用します。 この機能には、[コアコンポーネントのリリース2.14.0以降のページコンポーネントを使用する必要があります。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+
+   * **上書き**  — このページでブランドスラッグを定義する場合に選択します。
+      * **上書き**&#x200B;値も設定されていない限り、値はすべての子ページに継承されます。
+   * **上書き値**  — ページタイトルに追加するブランドスラッグのテキスト。
+      * この値は、「サイクリング・トスカーナ」などのパイプ文字の後のページ・タイトルに追加されます | WKNDの準備が常に整っています&quot;
 * **ページタイトル**
 
    ページで使用されるタイトルです。通常はタイトルコンポーネントで使用されます。空にすると、「**タイトル**」が使用されます。
@@ -167,7 +175,7 @@ ht-degree: 89%
 
    書き出し設定を指定します。
 
-### サムネール  {#thumbnail}
+### サムネール {#thumbnail}
 
 ページサムネール画像が表示されます。以下の操作を実行できます。
 
