@@ -1,6 +1,6 @@
 ---
 title: 3D アセットのプレビュー
-description: 3D アセットのプレビュー方法について説明します。
+description: Dynamic Media の 3D アセットのプレビュー方法について
 contentOwner: Rick Brough
 docset: aem65
 translation-type: tm+mt
@@ -42,7 +42,7 @@ AEM のアセットの詳細ページから、インタラクティブ 3D ビュ
     material_0_baseColor.jpeg
     material_0_normal.jpeg
 
-## AEM で 3D アセットをプレビューする際のパフォーマンスに関する考慮事項{#performance-3d-previewing-assets}
+## AEM で 3D アセットをプレビューする際のパフォーマンスに関する考慮事項 {#performance-3d-previewing-assets}
 
 アセットの詳細表示ページで 3D アセットを開くときにかかる時間は、帯域幅、画像の複雑さ、サーバーの待ち時間など、いくつかの要因によって異なります。
 
