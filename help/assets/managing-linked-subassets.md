@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '1348'
-ht-degree: 17%
+ht-degree: 19%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 17%
 
 [!DNL Adobe Illustrator]ファイル内から既存のデジタルアセットを参照できます。
 
-1. [[!DNL Experience Manager] デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)を使用して、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
+1. [[!DNL Experience Manager] デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)を使用して、デジタルアセットをローカルファイルシステムに取得します。 参照するアセットのファイルシステムの場所に移動します。
 1. アセットをローカルフォルダーから[!DNL Illustrator]ファイルにドラッグします。
 
 1. [!DNL Illustrator]ファイルをマウントされたドライブに保存するか、[upload](/help/assets/manage-assets.md#uploading-assets)を[!DNL Experience Manager]リポジトリに保存します。
@@ -119,7 +119,7 @@ ht-degree: 17%
 
 次のオプションは、ツールバー、左側のナビゲーションバーおよびページビューアコントロールで使用できます。
 
-* **[!UICONTROL デスクトップ]** アクションを使用して、デスクトッ [!DNL Experience Manager] プアプリを使用して特定のサブアセットを開いたり、表示したりします。[デスクトップアプリを使用する場合は、[!DNL Experience Manager]デスクトップアクション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)を設定する方法を参照してください。
+* **[!UICONTROL デスクトップ]** アクションを使用して、デスクトッ [!DNL Experience Manager] プアプリを使用して特定のサブアセットを開いたり、表示したりします。[デスクトップアプリを使用する場合は、[!DNL Experience Manager]デスクトップアクション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#desktopactions-v2)を設定する方法を参照してください。
 
 * **[!UICONTROL 「]** プロパティ」オプションは、特定のサブアセットの  プロパティページを開きます。
 
