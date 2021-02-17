@@ -151,9 +151,9 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ### バージョンストアオプション {#version-store-options}
 
-* `--copy-orphaned-versions`:孤立したバージョンをコピーするのをスキップします。サポートされるパラメーターは次のとおりです。`true`、`false`、`yyyy-mm-dd`。 デフォルトは`true`です。
+* `--copy-orphaned-versions`:孤立したバージョンをコピーするのをスキップします。サポートされるパラメーターは次のとおりです。`true`、`false`、`yyyy-mm-dd`。 デフォルトは `true`.
 
-* `--copy-versions:` バージョンストレージをコピーします。パラメーター: `true`, `false`, `yyyy-mm-dd`. デフォルトは`true`です。
+* `--copy-versions:` バージョンストレージをコピーします。パラメーター: `true`, `false`, `yyyy-mm-dd`. デフォルトは `true`.
 
 #### パスオプション {#path-options}
 
