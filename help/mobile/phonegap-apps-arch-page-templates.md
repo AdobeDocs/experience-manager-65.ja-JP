@@ -364,7 +364,7 @@ before_platform_addディレクトリには`install_plugins.js`ファイルが�
 
 ### plugins/  {#plugins}
 
-pluginsディレクトリは、`phonegap run *<platform>*`コマンドを実行した後、`.cordova/hooks/before_platform_add/install_plugins.js`ファイルにリストされている各プラグインによって入力されます。 初期状態では空になっています。
+pluginsディレクトリは、`phonegap run *<platform>*`コマンドを実行した後、`.cordova/hooks/before_platform_add/install_plugins.js`ファイルにリストされている各プラグインによって設定されます。 初期状態では空になっています。
 
 ### www/  {#www}
 
