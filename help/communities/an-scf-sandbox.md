@@ -53,7 +53,7 @@ Webサイトの作成の演習は、Communitiesの機能を含むAEM Webサイ�
 
 次に、AEM プラットフォームを初めて使用する開発者にとって役立つリンクをいくつか紹介します。
 
-* [はじめに](../../help/sites-deploying/deploy.md#getting-started):aemインスタンスをデプロイする場合。
+* [はじめに](../../help/sites-deploying/deploy.md#getting-started):AEMインスタンスをデプロイする場合。
 
    * [基本事項](../../help/sites-developing/the-basics.md):を参照してください。
    * [作成者の最初の手順](../../help/sites-authoring/first-steps.md):」をクリックします。
