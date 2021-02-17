@@ -80,8 +80,8 @@ ht-degree: 84%
    + [AEM での Adobe Campaign フォームの作成](classic-personalization-ac-forms.md)
 + クラシックUIでのアセットのオーサリング{#assets}
    + [アセットの操作](classicui-assets.md)
-   + [Dynamic Media アセットの配信](dynamic-media-assets-delivering.md)
-   + [ページへのダイナミックメディアアセットの追加](dynamic-media-assets-adding-to-page.md)
+   + [Dynamic Media アセットの配信 ](dynamic-media-assets-delivering.md)
+   + [ページへの Dynamic Media アセットの追加](dynamic-media-assets-adding-to-page.md)
    + [ページへの Scene7 機能の追加](manage-assets-classic-s7.md)
    + [ビデオ](manage-assets-classic-s7-video.md)
    + [Dynamic Media の操作](dynamic-media-assets.md)
