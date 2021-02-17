@@ -72,7 +72,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
  <tbody>
   <tr>
    <td><strong>名前</strong></td>
-   <td><strong>種類</strong></td>
+   <td><strong>型</strong></td>
    <td><strong>デフォルト（設定されていない場合）</strong></td>
    <td><strong>値</strong></td>
    <td><strong>説明</strong></td>
@@ -150,7 +150,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
  <tbody>
   <tr>
    <td><strong>名前</strong></td>
-   <td><strong>種類</strong></td>
+   <td><strong>型</strong></td>
    <td><strong>デフォルト（設定されていない場合）</strong></td>
    <td><strong>値</strong></td>
    <td><strong>説明</strong></td>
