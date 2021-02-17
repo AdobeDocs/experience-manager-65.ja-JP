@@ -37,7 +37,7 @@ ht-degree: 87%
 
 次に、6.5 で導入された `CodeUpgradeTasks` の完全なリストを示します。
 
-| **名前** | **関連する** **AEM バージョン** | **移行の****タイプ** | **詳細** |
+| **Name** | **関連する** **AEM バージョン** | **移行の****タイプ** | **詳細** |
 |---|---|---|---|
 | `Cq561ProjectContentUpgrade` | &lt; 5.6.1 | 即時 |  |
 | `Cq60MSMContentUpgrade` | &lt; 6.0 | 即時 | 削除された `LiveRelationShips` からすべての `VersionStorage` を検出し、親に実行プロパティを追加します。 |
