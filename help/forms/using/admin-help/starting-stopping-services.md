@@ -36,8 +36,8 @@ AEM Forms モジュール（例えば、Forms、Rights Management、Output）が
 
 AEM Forms の完全な実装には、以下のアプリケーションサーバーおよびデータベースのサービスが含まれています。
 
-* *`[application server]`* aemフォーム
-* *`[database]`* aemフォーム
+* *`[application server]`* AEMフォーム
+* *`[database]`* AEMフォーム
 
 Windowsでは、これらのサービスには&#x200B;**管理ツール**/**サービスパネル**&#x200B;からアクセスできます。 例えば、自動オプションを使用して JBoss に AEM Forms をインストールした場合、システムでは以下のサービスを使用できます。
 
