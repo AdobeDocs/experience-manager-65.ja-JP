@@ -179,7 +179,7 @@ image タイプは、zip ファイルに We.Retail ロゴを追加するため�
 
 * `REWRITE_RELATIVE`：ファイルシステム上のページの .html ファイルを基準とした相対位置を使用してパスを書き換えます。
 
-* `REWRITE_EXTERNAL`:aem  [Externalizerサービスを使用して、サーバー上のリソースを指してパスを書き換えます](/help/sites-developing/externalizer.md)。
+* `REWRITE_EXTERNAL`:AEM  [Externalizerサービスを使用して、サーバー上のリソースを指してパスを書き換えます](/help/sites-developing/externalizer.md)。
 
 **PathRewriterTransformerFactory** という名前の AEM サービスを使用すると、書き換える特定の html 属性を設定できます。このサービスはWebコンソールで設定でき、`rewrite`ノードの各プロパティの設定を持ちます。`clientlibs`、`images`および`links`。
 
