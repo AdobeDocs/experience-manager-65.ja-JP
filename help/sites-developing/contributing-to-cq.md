@@ -46,7 +46,7 @@ HyperText Transfer Protocol（HTTP）は、すべての作業の中心となり�
 * ブラウザーの cookie
 * その他の最新の Web 開発概念
 
-Adobe Experience Managerの技術スタックは、[Apache Sling](https://sling.apache.org/site/index.html)Webフレームワークとの[Apache Felix](https://felix.apache.org/) OSGIコンテナに基づき、[Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html)に基づいてJava Content Repository([JCR](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/index.html))を埋め込む。これらの個々のプロジェクト、および貢献する予定の領域で使用されるその他のオープンソースコンポーネント（Apache Luceneなど）について、十分に理解しておく必要があります。
+Adobe Experience Managerの技術スタックは、[Apache Sling](https://sling.apache.org/site/index.html)Webフレームワークとの[Apache Felix](https://felix.apache.org/) OSGIコンテナに基づき、[Apache Jackrabbit](https://jackrabbit.apache.org/jcr-api.html)に基づいてJava Content Repository([JCR](https://docs.adobe.com/content/docs/jp/spec/jcr/2.0/index.html))を埋め込む。これらの個々のプロジェクト、および貢献する予定の領域で使用されるその他のオープンソースコンポーネント（Apache Luceneなど）について、十分に理解しておく必要があります。
 
 ## 業界知識 {#tribal-knowledge}
 
@@ -112,7 +112,7 @@ Apache Sling の要求解決に関しては、コンテンツリポジトリの�
 
 お客様の古いコードを破る必要はありません。 アップグレード中に更新可能な製品コードを`/libs`のみに含めることを検討します。 リポジトリの`/apps`セクションはプロジェクトコードで、`/etc`セクションには保持する必要があるカスタム設定が含まれています。 通常は、`/apps`、`/content`、`/home`内の何も上書きしないでください。 アップグレード後も、古いプロジェクトコード、設定、およびコンテンツは、アップグレード前と同様に機能し続ける必要があります。
 
-後方互換性を確保するための設計により、初回インストール時のシンプルさに合わせてアップグレードを行うこともできます。AEMを停止し、Quickstart JARファイルを置き換えて、AEMを再起動するだけで十分です。急速に成長するインストール・ベースにより、アップグレードの効率性はますます大きなメリットとなります。
+後方互換性を確保するための設計により、初回インストール時のシンプルさに合わせてアップグレード体験を行うこともできます。AEMを停止し、Quickstart JARファイルを置き換えて、AEMを再起動するだけで十分です。急速に成長するインストール・ベースにより、アップグレードの効率性はますます大きなメリットとなります。
 
 より新しく、より高度な機能に置き換えられると、既存の API は廃止とマークを付けることができ、またそうする必要がありますが、以前の 5.x リリースで公開された API はすべて、カスタムアプリケーションコードで使用される可能性があるので、引き続き機能する必要があります。そのような API は削除しないでください。
 
