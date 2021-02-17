@@ -19,7 +19,7 @@ ht-degree: 84%
 ---
 
 
-# SPA およびサーバーサイドレンダリング{#spa-and-server-side-rendering}
+# SPA およびサーバーサイドレンダリング {#spa-and-server-side-rendering}
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ SSR を使用する場合、AEM にある SPA の[コンポーネントインタ
 
 ![server-side-rendering-cms-drivenaemnode-adobeio](assets/server-side-rendering-cms-drivenaemnode-adobeio.png)
 
-## Adobe I/O Runtime 主導の通信フロー{#adobe-i-o-runtime-driven-communication-flow}
+## Adobe I/O Runtime 主導の通信フロー {#adobe-i-o-runtime-driven-communication-flow}
 
 前の節では、AEM がブートストラップとコンテンツの提供おこなう場合に、AEM の SPA に関するサーバーサイドレンダリングの標準および推奨の実装について説明しました。
 
