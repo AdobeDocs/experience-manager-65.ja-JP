@@ -6,20 +6,20 @@ translation-type: tm+mt
 source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 35%
+ht-degree: 53%
 
 ---
 
 
 # アセットインサイトの設定 {#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] サードパーティWebサイトで使用されるデジタルアセットの使用状況データを、から取得 [!DNL Adobe Analytics]します。アセットインサイトでこのようなデータを取得して洞察を得るためには、最初に Adobe Analytics と統合するようにこの機能を設定します。
+[!DNL Adobe Experience Manager Assets] では、サードパーティ Web サイトで使用されているデジタルアセットの使用状況データを [!DNL Adobe Analytics] から取得します。アセットインサイトでこのようなデータを取得して洞察を得るためには、最初に Adobe Analytics と統合するようにこの機能を設定します。
 
 >[!NOTE]
 >
 >インサイトのサポートおよび提供がおこなわれるのは、画像に対してのみです。
 
-1. [!DNL Experience Manager]で、**[!UICONTROL ツール]**/**[!UICONTROL アセット]**&#x200B;をクリックします。
+1. [!DNL Experience Manager] で&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL アセット]**&#x200B;をクリックします。
 
    ![chlimage_1-72](assets/chlimage_1-210.png)
 
@@ -31,14 +31,14 @@ ht-degree: 35%
    *図：でアセットインサイト [!DNL Adobe Analytics] を設定し [!DNL Experience Manager]ます。*
 
 1. 「**[!UICONTROL 認証]**」をクリックします。
-1. [!DNL Experience Manager]が資格情報を認証した後、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトからデータを取得する[!DNL Adobe Analytics]レポートスイートを選択します。 「**[!UICONTROL 追加]**」をクリックします。
+1. [!DNL Experience Manager] によって資格情報が認証されたら、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトでデータをフェッチする レポートスイートを選択します。[!DNL Adobe Analytics]「**[!UICONTROL 追加]**」をクリックします。
 1. [!DNL Experience Manager]がレポートスイートを設定したら、**[!UICONTROL 完了]**&#x200B;をクリックします。
 
 ## ページトラッカー{#page-tracker}
 
 [!DNL Adobe Analytics]アカウントを設定すると、ページトラッカーコードが生成されます。 サードパーティWebサイトで使用される[!DNL Experience Manager]アセットを追跡するためのアセットインサイトを有効にするには、Webサイトコードにページトラッカーコードを含めます。 [!DNL Experience Manager Assets]の[!UICONTROL ページトラッカー]ユーティリティを使用して、ページトラッカーコードを生成します。 ページトラッカーコードをサードパーティWebページに含める方法について詳しくは、[Use page tracker and embed code in web pages](/help/assets/use-page-tracker.md)を参照してください。
 
-1. [!DNL Experience Manager]で、**[!UICONTROL ツール]**/**[!UICONTROL アセット]**&#x200B;をクリックします。
+1. [!DNL Experience Manager] で&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL アセット]**&#x200B;をクリックします。
 
    ![chlimage_1-73](assets/chlimage_1-214.png)
 
