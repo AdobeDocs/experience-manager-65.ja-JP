@@ -85,7 +85,7 @@ Adobe Mobile Services クラウドサービスを作成するには、サービ�
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-Mobile Services アカウント設定が完了したら、アプリを選択するように求められます。これにより、AdobeMobile Serviceの解析レポートがそのアプリケーションに接続されます。
+Mobile Services アカウント設定が完了したら、アプリを選択するように求められます。これにより、AdobeMobile Serviceの分析レポートがそのアプリケーションに接続されます。
 
 目的のモバイルサービスを選択し、「更新」をクリックしてモバイルサービス設定を割り当ててから、ダイアログを閉じます。
 
