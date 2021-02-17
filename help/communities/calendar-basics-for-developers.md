@@ -32,7 +32,7 @@ ht-degree: 65%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
@@ -64,7 +64,7 @@ ht-degree: 65%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### カレンダー機能  {#calendar-function}
+### カレンダー機能 {#calendar-function}
 
 [カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar`コンポーネントが構成されます。 カレンダー関数は、[特権メンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
 
@@ -74,7 +74,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
 * [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
