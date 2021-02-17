@@ -463,7 +463,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processSpecificDesignates<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定オブジェクトで、processNameはプロセスの名前を含み、対応するプロセスにユーザーが割り当てられていない場合はisNotDesignatedはtrue、対応するプロセスにユーザーが割り当てられていない場合はuserDesignatedはnullです。<br type="_moz" /> </td>
+   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定オブジェクトで、processNameはプロセスの名前を含み、対応するプロセスにユーザーが割り当てられていない場合はisNotDesignatedはtrue、対応するプロセスにユーザーの詳細が割り当てられていない場合はuserDesignatedはnullです。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processes<br type="_moz" /> </td>
