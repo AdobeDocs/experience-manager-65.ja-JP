@@ -183,7 +183,7 @@ Dynamic Media には、Dynamic Media 3D メディアコンポーネントが含�
 * [3D メディアコンポーネントへの 3D アセットの割り当て](#assigning-a-three-d-asset-to-the-component)
 
 
-## ページテンプレートへの 3D メディアコンポーネントの追加{#adding-three-d-media-component-to-page-template}
+## ページテンプレートへの 3D メディアコンポーネントの追加 {#adding-three-d-media-component-to-page-template}
 
 1. **[!UICONTROL ツール/一般/テンプレートに移動します。]**
 1. 3D コンポーネントを有効にするページテンプレートに移動し、テンプレートを選択します。
