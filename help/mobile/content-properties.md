@@ -34,16 +34,16 @@ ht-degree: 51%
 
 | **プロパティ名** | **型** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | String |  | aem mobileによって割り当てられ、1度AEM MobileにアップロードされるかAEM Mobileから輸入され、AEMによって保管される |
+| dps-id | String |  | AEM Mobileによって割り当てられ、1度AEM MobileにアップロードされるかAEM Mobileから輸入され、AEMによって保管される |
 | dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | entity typeプロパティ |
-| dps-version | 文字列 |  | aem mobileエンティティのバージョン（完全なaemm-idに含まれる） |
-| dps-lastSynced | 日付 |  | aem mobileからAEMへの最後の同期/インポートの日付 |
-| dps-lastUploaded | 日付 |  | aemからAEM Mobileへの最後のアップロード日 |
-| dps-lastUploadedBy | String:userid |  | aemからAEM Mobileへの最後のアップロード要求を実行したidユーザー |
+| dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（完全なaemm-idに含まれる） |
+| dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/インポートの日付 |
+| dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最後のアップロード日 |
+| dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロード要求を実行したidユーザー |
 
 ## コアメタデータプロパティ {#core-metadata-properties}
 
-| プロパティ名 | 型 | デフォルト値または期待値 |
+| プロパティ名 | タイプ | デフォルト値または期待値 |
 |--- |--- |--- |
 | dps-title | 文字列 |  |
 | dps-shortTitle | 文字列 |  |
@@ -61,7 +61,7 @@ ht-degree: 51%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | Boolean |  |
+| dps-hideFromBrowsePage | ブール値 |  |
 | dps-access | 文字列 | ProtectedAccess from {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
 | **Social** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -77,7 +77,7 @@ ht-degree: 51%
 
 ### コレクション {#collections}
 
-| プロパティ名 | 型 | デフォルト値または期待値 |
+| プロパティ名 | タイプ | デフォルト値または期待値 |
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;}から |
@@ -90,7 +90,7 @@ ht-degree: 51%
 
 ### 共通ノード {#common-nodes}
 
-| ノード名 | 型 | デフォルト値または期待値 | 説明 |
+| ノード名 | タイプ | デフォルト値または期待値 | 説明 |
 |--- |--- |--- |--- |
 | 画像 | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
@@ -98,18 +98,18 @@ ht-degree: 51%
 
 #### 記事 {#articles-1}
 
-| ノード名 | 型 | 期待値のデフォルト | 説明 |
+| ノード名 | タイプ | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
 | ソーシャルシェアの画像 |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### バナー {#banners-1}
 
-| ノード名 | 型 | 期待値のデフォルト | 説明 |
+| ノード名 | タイプ | 期待値のデフォルト | 説明 |
 |---|---|---|---|
 | 該当なし |  |  |  |
 
 #### コレクション {#collections-1}
 
-| ノード名 | 型 | 期待値のデフォルト | 説明 |
+| ノード名 | タイプ | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
 | background-image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
