@@ -93,11 +93,11 @@ JSファイルとCSSファイルは、adobe-forms-&lt;appserver>.earファイル
 
 >[!NOTE]
 >
->太字のテキストは、参照する必要があるCSSファイルとJSファイルのURIを表しています。
+>太字のテキストは、参照する必要があるCSSおよびJSファイルへのURIを表します。
 
 次の項目では、ツールバーのカスタマイズ方法を説明します。
 
-* `fscJS`、`fscCSS`、`fscVCSS`、`fscIECSS`の各属性（fscmenu.xmlファイル内）の値を変更し、参照ファイルのカスタムの場所を反映します。これには、この節で説明する方法（例：`fscJS="FSToolBarURI/scripts/fscmenu.js"`）を使用します。
+* `fscJS`、`fscCSS`、`fscVCSS`、`fscIECSS`の各属性（fscmenu.xmlファイル内）の値を変更し、参照ファイルのカスタムの場所を反映します。これには、この節で説明する方法の1つ（例：`fscJS="FSToolBarURI/scripts/fscmenu.js"`）を使用します。
 * すべてのCSSファイルとJSファイルを指定する必要があります。 どのファイルも変更されない場合は、カスタムの場所にデフォルトのファイルを指定します。 この節で説明する様々なファイルを開いて、デフォルトのファイルを取得できます。
 * 任意のファイルに絶対参照(例えば、https://www.example.com/scripts/custom-vertical-fscmenu.css)を指定できます。
 * `div#fscmenu`ノードが必要とするJSファイルとCSSファイルは、ツールバー機能に不可欠です。 個々の`ul#fscmenuItem`ノードには、サポートするJSファイルまたはCSSファイルがある場合とない場合があります。
