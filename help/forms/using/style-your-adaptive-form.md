@@ -449,7 +449,7 @@ ht-degree: 64%
 >![typekit-to-adobe-](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] fontsは、現在はAdobe Fontsと呼ばれ、Creative Cloudや他の購読に含まれています。[詳細情報](https://fonts.adobe.com/)を参照してください。
 
 1. [Adobe Fonts](https://typekit.com/)アカウントの作成、キットの作成、キットへのフォントMyriadProの追加、キットの公開、キットIDの取得を行います。 アダプティブフォームで[!DNL Adobe Fonts]（Webフォント）を使用する必要があります。
-1. AEM [!DNL Forms]サーバーで、![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL ツール]** ![ハンマー](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**&#x200B;に移動します。 次に、設定フォルダーを開きます。 設定が既に使用可能な場合は、「**[!UICONTROL 作成]**」ボタンをクリックして新しいインスタンスを作成します。
+1. AEM [!DNL Forms]サーバーで、![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL ツール]** ![ハンマー](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**&#x200B;に移動します。 次に、設定フォルダーを開きます。 設定が既に使用可能な場合は、「**[!UICONTROL 作成]**」ボタンをクリックして、新しいインスタンスを作成します。
 
    設定を作成ダイアログで、設定の&#x200B;**タイトル**&#x200B;を指定し、「**[!UICONTROL 作成]**」をクリックします。 設定ページにリダイレクトされます、表示される[!UICONTROL コンポーネントを編集]ダイアログで、**キットID**&#x200B;を入力し、**[!UICONTROL OK]**&#x200B;をクリックします。
 
