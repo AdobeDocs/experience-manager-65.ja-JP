@@ -157,7 +157,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 1. 省略可能：
 
    * 追加のデータをプラグインする場合は、[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)を
-      `pageInfoProviderType` プロパティの以前の場所への参照を更新します。
+      `pageInfoProviderType` property.
 
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
 
