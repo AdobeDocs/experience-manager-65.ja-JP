@@ -23,7 +23,7 @@ RTE 機能をオーサリングに使用する方法については、[リッチ
 
 ## タッチ操作 UI とクラシック UI について {#understand-touch-enabled-ui-and-classic-ui}
 
-タッチ対応UIは、Experience Manager用の標準的なユーザーインターフェイスです。 Adobeで、環境を作成するために[レスポンシブデザイン](/help/sites-authoring/responsive-layout.md)でタッチ対応UIが導入されました。 タッチ対応UIは、タッチ対応とデスクトップデバイス向けに設計されています。 このインターフェイスは、元のクラシックUIとは大きく異なります。
+タッチ対応UIは、Experience Manager用の標準的なユーザーインターフェイスです。 Adobeで、環境を作成するために[レスポンシブデザイン](/help/sites-authoring/responsive-layout.md)でタッチ対応UIが導入されました。 タッチ対応UIは、タッチ対応デバイスとデスクトップデバイス向けに設計されています。 このインターフェイスは、元のクラシックUIとは大きく異なります。
 
 ![タッチ対応ユーザーインターフェイスのリッチテキストエディターツールバー](assets/chlimage_1-35.png)
 
