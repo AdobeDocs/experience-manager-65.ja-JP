@@ -61,7 +61,7 @@ AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達
    * `*INFO* org.apache.jackrabbit.oak.query.QueryImpl Traversal query (query without index) ... ; consider creating and index`
    * このメッセージがログに記録されるのは、使用できるインデックスがない場合とクエリが多数のノードをトラバースする可能性がある場合のみです。インデックスが使用可能な場合、メッセージはログに記録されませんが、トラバースの量が少ないので処理にかかる時間は短くなります。
 
-* AEM [クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)オペレーションコンソールにアクセスし、[スロークエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)でトラバーサルを探すか、インデックスクエリの説明を見つけないかを調べます。
+* AEM [クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)オペレーションコンソールにアクセスし、[スロークエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)でトラバーサルを探すか、インデックスクエリの説明を見つけないかを確認します。
 
 ### 制限が不十分なクエリの検出 {#detecting-poorly-restricted-queries}
 
@@ -202,7 +202,7 @@ AEM では、以下のクエリ言語がサポートされています。
 
    ノードタイプの制限がないクエリにより、AEM では `nt:base` ノードタイプが想定されます。これは、AEM のすべてのノードのサブタイプなので、実質上ノードタイプの制限は存在しません。
 
-   `type=cq:Page`を設定すると、このクエリは`cq:Page`ノードのみに制限され、クエリはAEM cqPageLuceneに解決され、結果はAEMのノードのサブセット（`cq:Page`ノードのみ）に制限されます。
+   `type=cq:Page`を設定すると、このクエリは`cq:Page`ノードのみに制限され、クエリはAEM cqPageLuceneに解決され、結果はAEMではノードのサブセット（`cq:Page`ノードのみ）に制限されます。
 
 1. クエリが既存の Lucene プロパティインデックスに解決されるようにクエリのノードタイプの制限を調整します。
 
