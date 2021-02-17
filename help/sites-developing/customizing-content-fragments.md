@@ -19,7 +19,7 @@ ht-degree: 84%
 ---
 
 
-# コンテンツフラグメントのカスタマイズと拡張{#customizing-and-extending-content-fragments}
+# コンテンツフラグメントのカスタマイズと拡張 {#customizing-and-extending-content-fragments}
 
 コンテンツフラグメントは、標準アセットを拡張します。
 
@@ -80,7 +80,7 @@ ht-degree: 84%
 
 * すべてのコンテンツはアセットの `jcr:content/data` ノードに格納されます。
 
-   * 要素データは次のマスターサブノードに格納されます。
+   * 要素データは次のプライマリサブノードに格納されます。
       `jcr:content/data/master`
 
    * バリエーションは、そのバリエーション名のサブノードに格納されます。
@@ -358,7 +358,7 @@ ht-degree: 84%
 
 
 
-### 適応 - adaptTo() の使用{#adapting-using-adaptto}
+### 適応 - adaptTo() の使用 {#adapting-using-adaptto}
 
 次のものを適応させることができます。
 
