@@ -51,14 +51,14 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 1. `i18n`フォルダーをコピーします。
 
-   * `/libs/livecycle/core/components/login` から
-   * を `/apps/livecycle/core/components/login`
+   * コピー元：`/libs/livecycle/core/components/login`
+   * コピー先：`/apps/livecycle/core/components/login`
 
 1. `i18n`内のフォルダーを1つを除き（例：`en`）削除します。
 
 1. フォルダー `en` で、以下のアクションを実行します。
 
-   1. フォルダーの名前をサポートするロケール名に変更します。例： `ar`
+   1. フォルダーの名前をサポートするロケール名に変更します。例：`ar`
 
    1. プロパティ`jcr:language`の値を`ar`（`ar`フォルダー用）に変更します。
    >[!NOTE]
@@ -67,8 +67,8 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 1. コピー `login.jsp`:
 
-   * `/libs/livecycle/core/components/login` から
-   * を `/apps/livecycle/core/components/login`
+   * コピー元：`/libs/livecycle/core/components/login`
+   * コピー先：`/apps/livecycle/core/components/login`
 
 1. `/apps/livecycle/core/components/login/login.jsp`のコードの次のスニペットを変更します。
 
@@ -200,8 +200,8 @@ String browserLocale = "en";
 
 1. `i18n`フォルダーをコピー：
 
-   * `/libs/livecycle/core/components/login` から
-   * を `/apps/livecycle/core/components/login`
+   * コピー元：`/libs/livecycle/core/components/login`
+   * コピー先：`/apps/livecycle/core/components/login`
 
 1. ここで、テキストを変更するノード（該当するロケールコードフォルダの下）のプロパティ `sling:message` の値を変更します。翻訳は、ノードのプロパティ `sling:key` の値に示されているキーを介して行われます。
 
@@ -210,9 +210,9 @@ String browserLocale = "en";
    1. `sling:MessageEntry` タイプのノードを作成するか、またはすべてのロケールフォルダーの下で既存のノードをコピーして名前を変更します。
    1. コピー `login.jsp` :
 
-      * `/libs/livecycle/core/components/login` から
+      * コピー元：`/libs/livecycle/core/components/login`
 
-      * を `/apps/livecycle/core/components/login`
+      * コピー先：`/apps/livecycle/core/components/login`
    1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したテキストを取り込みます。
 
    ![追加新しいキーと値のペア](assets/capture_new.png)
@@ -242,8 +242,8 @@ String browserLocale = "en";
 
 1. `login`ノードをコピー：
 
-   * `/libs/livecycle/core/content` から
-   * を `/apps/livecycle/core/content`
+   * コピー元：`/libs/livecycle/core/content`
+   * コピー先：`/apps/livecycle/core/content`
 
 1. ノード`/apps/livecycle/core/content/login.`からファイル`login.js`と`jquery-1.8.0.min.js`を削除します
 1. CSS ファイルのスタイルを変更します。
@@ -252,9 +252,9 @@ String browserLocale = "en";
    1. &lt;a0/追加>に対する新しいスタイル`/apps/livecycle/core/content/login/login.css`
    1. コピー `login.jsp`
 
-      * `/libs/livecycle/core/components/login` から
+      * コピー元：`/libs/livecycle/core/components/login`
 
-      * を `/apps/livecycle/core/components/login`
+      * コピー先：`/apps/livecycle/core/components/login`
    1. `/apps/livecycle/core/components/login/login.jsp`を変更して、新しく追加したスタイルを取り込みます。
 
 
