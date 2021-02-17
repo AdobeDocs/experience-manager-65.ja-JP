@@ -54,7 +54,7 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [ストレージリソースプロバイダの概要](srp.md)  — 概要とリポジトリ使用の概要
 * [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
