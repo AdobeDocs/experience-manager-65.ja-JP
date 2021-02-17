@@ -84,7 +84,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
 1. WebSphere 管理コンソールで「**Security／Global Security**」を選択します。
 1. 「**Security Configuration Wizard**」をクリックします。
-1. 「**Enable Application Security**」チェックボックスが有効になっていることを確認します。「**次へ**」をクリックします。
+1. 「**Enable Application Security**」チェックボックスが有効になっていることを確認します。「**Next**」をクリックします。
 1. **Federated Repositories** を選択し、「**Next**」をクリックします。
 1. 設定する資格情報を指定し、「**Next**」をクリックします。
 1. 「**Finish**」をクリックします。
