@@ -164,7 +164,7 @@ Adobe Mobile ダッシュボードでコンテンツがステージングされ�
 
 作成者がターゲットコンテンツをプレビューする機能を使用するには、エディターで Adobe Target クラウドサービスの設定を検索できるようにする必要があります。下のコードブロックは、2つの重要なスクリプトを追加します。 最初に、ページに関連付けられたターゲットクラウドサービスの検索機能を追加し、Adobe Targetへの呼び出しを行います。 2つ目は、cq.apps.targetingカテゴリの追加です。
 
-**cq.apps.targeting**&#x200B;カテゴリは、デフォルトのcq/personalization/component/apperationコンポーネントを上書きし、mobileapps/components/ターゲットコンポーネントを使用して、モバイルアプリケーションの使用に特化したオファーをレンダリングします。 詳しくは、「ターゲットコンポーネント」の節で説明します。
+**cq.apps.targeting**&#x200B;カテゴリは、デフォルトのcq/personalization/component/apperiationコンポーネントを上書きし、mobileapps/components/ターゲットコンポーネントを使用して、モバイルアプリケーションの使用に特化したオファーをレンダリングします。 詳しくは、「ターゲットコンポーネント」の節で説明します。
 
 コードは、head.htmlに追加し、&lt;/head>要素の直前に配置する必要があります。
 
