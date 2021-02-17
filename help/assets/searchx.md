@@ -254,32 +254,32 @@ ht-degree: 77%
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルト に設定`fulltext` |
-| searchCallback | Function | イベント`keyup`上の検索をトリガーするコールバック。 デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
+| predicateName | String | 述語の名前。デフォルトは `fulltext` |
+| searchCallback | Function | イベント`keyup`上の検索をトリガーするコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`property` |
-| propertyName | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:title` |
+| predicateName | 文字列 | 述語の名前。デフォルトは `property` |
+| propertyName | 文字列 | JCR プロパティの名前。デフォルトは `jcr:title` |
 | defaultValue | 文字列 | 事前入力されたデフォルト値。 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`path` |
-| rootPath | 文字列 | 述語のルートパス。デフォルト に設定`/content/dam` |
-| pathFieldPredicateName | 文字列 | デフォルト に設定`folder` |
+| predicateName | 文字列 | 述語の名前。デフォルトは `path` |
+| rootPath | 文字列 | 述語のルートパス。デフォルトは `/content/dam` |
+| pathFieldPredicateName | 文字列 | デフォルトは `folder` |
 | showFlatOption | Boolean | チェックボックス`search in subfolders`を表示するフラグ。 デフォルトは true です |
 
 ### DatePredicate  {#datepredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:content/jcr:lastModified` |
+| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
+| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
 | defaultValue | 文字列 | 事前入力されたデフォルト値 |
 
 ### OptionsPredicate {#optionspredicate}
@@ -287,11 +287,11 @@ ht-degree: 77%
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | title | 文字列 | 最上部のタイトルを追加します |
-| predicateName | 文字列 | 述語の名前。デフォルト に設定`daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルト に設定`jcr:content/metadata/cq:tags` |
-| collapse | 文字列 | 折りたたみのレベル。デフォルト に設定`level1` |
+| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
+| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
+| collapse | 文字列 | 折りたたみのレベル。デフォルトは `level1` |
 | triggerSearch | ブール値 | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
-| searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルト に設定`CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
 ## 検索結果のカスタマイズ{#customizing-search-results}
