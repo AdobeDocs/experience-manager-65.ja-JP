@@ -64,7 +64,7 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * **[!UICONTROL 必須の評価]**
 
-   許可されている評価のサブセット。必要な評価を示します。
+   許可されている評価のサブセットで、必要な評価を示します。
 
    表示される選択肢を変更するには、上向き矢印、下向き矢印および削除ボタンを使用します。
 
@@ -202,13 +202,13 @@ Web サイト上では、必須の評価はアスタリスク付きで表示さ�
 
 * **[!UICONTROL コメントリソースタイプ]**
 
-   /apps内の拡張`comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例： `/apps/social/commons/components/hbs/comments/comment`
+   /apps内の拡張`comment`コンポーネント（1つのコメント）のresourceTypeに移動します。 例：`/apps/social/commons/components/hbs/comments/comment`
 
    このリソースは、訪問者がコメントを投稿したときに作成されたUGCのresourceTypeを識別します。
 
 * **[!UICONTROL 投票リソースタイプ]**
 
-   /apps内の拡張`voting`コンポーネントのresourceTypeに移動します。 例： `/apps/social/components/hbs/voting`
+   /apps内の拡張`voting`コンポーネントのresourceTypeに移動します。 例：`/apps/social/components/hbs/voting`
 
    このリソースは、訪問者が投票を行ったときに作成されたUGCのリソースタイプを識別します。
 
