@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 17%
+ht-degree: 25%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 17%
 
 * [ Experience Manager の概要](https://helpx.adobe.com/jp/experience-manager/get-started.html)
 * [Experience Manager6.5リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
+* [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
 * [セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## [!DNL Experience Manager] 6.5ガイド
@@ -49,6 +49,6 @@ ht-degree: 17%
 * [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager資産コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
-* [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
-* [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
+* [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
