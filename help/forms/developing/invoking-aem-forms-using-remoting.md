@@ -128,7 +128,7 @@ docRef.referenceType = DocumentReference.REF_TYPE_INLINE; 
 docRef.text = "Text for my document";  // Optionally, you can override the server’s default character set  // if necessary:  // docRef.charsetName=CharacterSetName  ...
 ```
 
-* ドキュメントがサーバ上にない場合は、Remotingアップロードサーブレットを使用して、ドキュメントをAEM Formsにアップロードします。 AEM Formsでは、安全なドキュメントをアップロードする機能が新たに導入されました。 セキュアドキュメントをアップロードする場合、*ドキュメントアップロードアプリユーザー*&#x200B;のロールを持つユーザーを使用する必要があります。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 セキュリティで保護されたドキュメントをアップロードするには、シングルサインオンを使用することをお勧めします。 ([Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を使用して、保護されたドキュメントを呼び出してプロセスを呼び出すを参照)。
+* ドキュメントがサーバ上にない場合は、Remotingアップロードサーブレットを使用して、ドキュメントをAEM Formsにアップロードします。 AEM Formsでは、安全なドキュメントをアップロードする能力が新たに導入されました。 セキュアドキュメントをアップロードする場合、*ドキュメントアップロードアプリユーザー*&#x200B;のロールを持つユーザーを使用する必要があります。 このロールがないと、セキュリティで保護されたドキュメントをアップロードできません。 セキュリティで保護されたドキュメントをアップロードするには、シングルサインオンを使用することをお勧めします。 ([Remoting](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を使用して、保護されたドキュメントを呼び出してプロセスを呼び出すを参照)。
 
 >[!NOTE]
 セキュリティで保護されていないドキュメントのアップロードをAEM Formsで許可するように設定されている場合は、ドキュメントのアップロードドキュメントロールを持たないユーザーを使用して、アプリをアップロードできます。 ユーザは、ドキュメントのアップロード権限を持つこともできます。 ただし、AEM Formsがセキュリティで保護されたドキュメントのみを許可するように設定されている場合は、ドキュメントアップロードアプリケーションユーザーロールまたはドキュメントアップロード権限を持っていることを確認してください。 (「[セキュリティで保護されたドキュメントとセキュリティで保護されていないを受け入れるようにAEM Formsを設定する](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)」を参照)。
@@ -217,7 +217,7 @@ Flexで構築されたアプリケーションからAEM Formsプロセスを呼�
 
 **AEM Formsへのチャネルを作成する**
 
-次のActionScriptの例に示すように、クライアントアプリケーションは、MXMLまたはActionScriptでチャネルを指定することでAEM Formsを呼び出すことができます。 チャネルは、`AMFChannel`、`SecureAMFChannel`、`HTTPChannel`、または`SecureHTTPChannel`でなければなりません。
+次のActionScriptの例に示すように、クライアントアプリケーションは、MXMLまたはActionScriptでチャネルを指定することで、AEM Formsを呼び出すことができます。 チャネルは、`AMFChannel`、`SecureAMFChannel`、`HTTPChannel`、または`SecureHTTPChannel`でなければなりません。
 
 ```java
      ...
@@ -519,7 +519,7 @@ Flexで作成されたアプリケーションには、AEM Formsサービスへ�
 
 **ログアウト**
 
-AEM Formsからログアウトしてセッションを無効にするには、認証cookieをクライアントのコンピューターから削除する必要があります。 シングルサインオンの目的はユーザーに一度ログインを許可することなので、クライアントアプリケーションに対してcookieの削除を許可しないようにすることです。 この操作により、ユーザーが効果的にログアウトされます。
+AEM Formsからログアウトしてセッションを無効にするには、認証cookieをクライアントのコンピューターから削除する必要があります。 シングルサインオンの目的はユーザーに一度ログインを許可することなので、クライアントアプリケーションがcookieを削除しないようにすることです。 この操作により、ユーザーが効果的にログアウトされます。
 
 したがって、クライアントアプリケーションで`RemoteObject.logout`メソッドを呼び出すと、クライアント上で、セッションがログアウトされていないことを示すエラーメッセージが生成されます。 代わりに、ユーザは一元化されたログインサービスを使用して、認証cookieをログアウトおよび削除できます。
 
