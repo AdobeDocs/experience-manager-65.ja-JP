@@ -336,11 +336,11 @@ Adobe Marketing Cloudデバッガに表示される呼び出しの詳細は、�
 
 1. （オプション）リンククリックを使用してイベントを追跡するには、「**Adobe Analytics変数を含める**」フィールドにAdobe Analyticsイベント名を追加します。 複数のイベント名はコンマで区切ります（例：）。
 
-   `event1, event22`.
+   `event1, event22`
 
-1. （オプション）リンククリックで変数データを追跡するには、「**Adobe Analytics変数を含める**」フィールドにAdobe Analytics変数を追加します。 次のいずれかの形式を使用します。
+1. （オプション）リンククリックで変数データを追跡するには、**「Adobe Analytics変数を含める**」フィールドにAdobe Analytics変数を追加します。 次のいずれかの形式を使用します。
 
-   * *`<Variable-name>`*: *`<Dynamic Value>`*
+   * *`<Variable-name>`*:  *`<Dynamic Value>`*
    * *`<Variable-name>`*:  *`‘CONSTANT'`*
 
    次に、各形式の例を示します。
