@@ -69,17 +69,17 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
       * 例えば、テキストコンポーネントをカスタマイズするには、次のようにコピーします。
 
-         * `/libs/foundation/components/text` から
-         * を `/apps/myProject/components/text`
+         * コピー元：`/libs/foundation/components/text`
+         * コピー先：`/apps/myProject/components/text`
 
 * [エラーハンドラーで表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
    この場合、サーブレットをオーバーレイします。
 
-   * リポジトリ内で、デフォルトスクリプトをコピーします。
+   * リポジトリー内で、デフォルトスクリプトを次のようにコピーします。
 
-      * `/libs/sling/servlet/errorhandler/` から
-      * を `/apps/sling/servlet/errorhandler/`
+      * コピー元：`/libs/sling/servlet/errorhandler/`
+      * コピー先：`/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
