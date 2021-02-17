@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
 workflow-type: tm+mt
 source-wordcount: '5374'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -185,7 +185,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 エクスペリエンスを追加するには：
 
-1. エクスペリエンスを追加するには、**オーディエンス**&#x200B;ウィンドウの既存のエクスペリエンスの下に表示される&#x200B;**+** **追加エクスペリエンスのターゲット設定**&#x200B;をクリックまたはタップします。
+1. エクスペリエンスを追加するには、**オーディエンス**&#x200B;ウィンドウで既存のエクスペリエンスの下に表示される「**+** エクスペリエンスターゲット設定を追加」をクリックまたはタップします&#x200B;**。**
 1. オーディエンスを選択します。デフォルトでは、オーディエンス名はエクスペリエンス名になります。必要に応じて、別の名前を入力できます。「**OK**」をクリックまたはタップします。
 
 #### ターゲットモードを使用したエクスペリエンスの削除  {#removing-experiences-using-targeting-mode}
@@ -413,7 +413,7 @@ AEM または Adobe Target をターゲティングエンジンとして使用�
 
 ![](do-not-localize/chlimage_1-6.png)
 
-### エクスペリエンスとオーディエンスの関連付け（AEM または Adobe Target）{#associating-experiences-with-audiences-aem-or-adobe-target}
+### エクスペリエンスとオーディエンスの関連付け（AEM または Adobe Target） {#associating-experiences-with-audiences-aem-or-adobe-target}
 
 AEM ターゲティング（または Adobe Target エクスペリエンスターゲット設定）を使用する場合は、以下の手順を使用してエクスペリエンスとオーディエンスを関連付けます。
 
