@@ -990,7 +990,7 @@ Java クライアントライブラリを使用して次の手順を実行する
 1. `RepositoryInfomodelFactoryBean`オブジェクトの`newImage`メソッドを呼び出し、次の値を渡して、`Resource`オブジェクトを作成します。
 
    * `new Id()`を指定して一意のID値を指定します。
-   * `new Lid()`を指定して一意のUUID値を返します。
+   * `new Lid()`を指定して一意のUUID値を指定します。
    * リソースの名前。XDP ファイルのファイル名を指定できます。
 
    戻り値を `Resource` にキャストします。
