@@ -39,7 +39,7 @@ ht-degree: 4%
 
 ドキュメントセキュリティサービスを使用して、次のタスクを実行できます。
 
-* ポリシーの作成. 詳しくは、「[ポリシーの作成](protecting-documents-policies.md#creating-policies)」を参照してください。
+* ポリシーの作成. 詳しくは、[ポリシーの作成](protecting-documents-policies.md#creating-policies)を参照してください。
 * ポリシーを変更します。 詳しくは、[ポリシーの変更](protecting-documents-policies.md#modifying-policies)を参照してください。
 * ポリシーの削除 詳しくは、[ポリシーの削除](protecting-documents-policies.md#deleting-policies)を参照してください。
 * PDFドキュメントにポリシーを適用します。 詳しくは、[PDFドキュメントへのポリシーの適用](protecting-documents-policies.md#applying-policies-to-pdf-documents)を参照してください。
