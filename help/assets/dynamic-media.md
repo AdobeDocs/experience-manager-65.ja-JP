@@ -41,7 +41,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 * [スピンセット](spin-sets.md)
 * [ビデオ](video.md)
-* [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
+* [Dynamic Media アセットの配信 ](delivering-dynamic-media-assets.md)
 * [アセットの管理](managing-assets.md)
 * [クイックビューを使用したカスタムポップアップの作成](custom-pop-ups.md)
 
