@@ -77,7 +77,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>Boolean</td> 
+   <td>ブール値</td> 
    <td>データディクショナリに添付されたテストデータを再利用します。</td> 
   </tr>
  </tbody>
