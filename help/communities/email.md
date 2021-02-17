@@ -123,7 +123,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
    ![configure-email-購読](assets/configure-email-subscriptions.png)
 
-* **[!UICONTROL 名前]**
+* **[!UICONTROL Name]**
 
    *（必須）* `subscriptions-email`。編集しない。
 
@@ -184,7 +184,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 * **[!UICONTROL URL]**
 
-   *（必須）* 送信メールサーバーです。例： `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`
+   *（必須）* 送信メールサーバーです。例：`pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`
 
 * **[!UICONTROL パスに読み込み]**(&amp;A);
 
