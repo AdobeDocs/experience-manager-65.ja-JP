@@ -143,7 +143,7 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 #### 例 {#example-4}
 
-使用方法
+以下のように
 
 ```xml
 /content/myblog/posts/what_i_learned_today
@@ -221,7 +221,7 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 #### 例 {#example-7}
 
-使用方法:
+以下のように:
 
 ```xml
 /content/myblog/posts/iphone_shipping/attachments/front.jpg
