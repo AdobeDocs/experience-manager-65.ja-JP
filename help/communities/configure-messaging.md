@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '932'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -112,7 +112,7 @@ AEM Communitiesのメッセージ機能は、フォーラムやコメントで�
 
    オンにすると、`Mark Unread`ボタンが表示され、メッセージを既読としてマークできます。
 
-* **削除ボタン**
+* **「削除」ボタン**
 
    オンにすると、`Delete`ボタンが表示され、メッセージを既読としてマークできます。 **`Message Options`**&#x200B;もチェックされている場合は、削除機能を重複します。
 
@@ -152,11 +152,11 @@ AEM Communitiesのメッセージ機能は、フォーラムやコメントで�
 
 * **リダイレクトURL**
 
-   メッセージの送信後に表示されるページのURLを入力します。 例： `../messaging.html`
+   メッセージの送信後に表示されるページのURLを入力します。 例：`../messaging.html`
 
 * **キャンセル URL**
 
-   送信者がメッセージをキャンセルした場合に表示されるページのURLを入力します。 例： `../messaging.html`
+   送信者がメッセージをキャンセルした場合に表示されるページのURLを入力します。 例：`../messaging.html`
 
 * **メッセージの件名の最大長**
 
