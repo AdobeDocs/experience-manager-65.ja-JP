@@ -97,7 +97,7 @@ AEM Forms ワークフローを使用しない AEM Forms Server がある場合�
 
 モバイルデバイスのフォームは、アダプティブフォームまたはモバイルフォームになります。Foms アプリケーションで同期可能なフォームは、Forms フォルダーにあります。AEM Forms ワークフローを使用しない AEM Forms Server（OSGi での AEM Forms）で有効にされているフォームを同期することができます。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [タスクを開く](/help/forms/using/open-task.md)
 * [フォームの操作](/help/forms/using/working-with-form.md)
