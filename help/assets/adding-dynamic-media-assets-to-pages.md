@@ -12,12 +12,12 @@ translation-type: tm+mt
 source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
 source-wordcount: '3096'
-ht-degree: 87%
+ht-degree: 89%
 
 ---
 
 
-# ページへの Dynamic Media アセットの追加{#adding-dynamic-media-assets-to-pages}
+# ページへの Dynamic Media アセットの追加 {#adding-dynamic-media-assets-to-pages}
 
 Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。これをおこなうには、レイアウトモードに入り、Dynamic Media コンポーネントを有効にします。次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらなのかが検出され、それに応じて利用可能なオプションが変わります。
 
@@ -25,13 +25,13 @@ WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaア�
 
 >[!NOTE]
 >
->アセットは、Experience Manager内のページに追加する前に公開する必要があります。 [Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+>Experience Manager でページに追加する前にアセットを公開する必要があります。[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
 3D メディア、Dynamic Media、インタラクティブメディア、パノラマメディア、スマート切り抜きビデオ、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
 
-1. 「Experience Manager」で、Dynamic Mediaコンポーネントを追加するページを開きます。
+1. Dynamic Media コンポーネントを追加するページを Experience Manager で開きます。
 1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
 1. 「**[!UICONTROL コンポーネント]**」見出しの下のドロップダウンリストで、「**[!UICONTROL Dynamic Media」を選択します。]**
 
@@ -59,7 +59,7 @@ WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaア�
 
 ページに追加できる Dynamic Media コンポーネントがない場合は、使用するコンポーネントをまず有効にしなければならない可能性があります。
 
-1. 「Experience Manager」で、Dynamic Mediaコンポーネントを追加するページを開きます。
+1. Dynamic Media コンポーネントを追加するページを Experience Manager で開きます。
 1. ページ上部付近のツールバーの左側にあるページ情報アイコンをタップした後、ドロップダウンリストから「**[!UICONTROL テンプレートを編集]**」をタップします。
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
@@ -74,7 +74,7 @@ WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaア�
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
 1. **[!UICONTROL Dynamic Media]**&#x200B;が表示されるまでスクロールします。
-1. **[!UICONTROL Dynamic Media]** の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
+1. **[!UICONTROL ダイナミックメディア]**&#x200B;の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
 
@@ -102,7 +102,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 利用可能な Dynamic Media コンポーネントは次のとおりです。
 
-* **[!UICONTROL Dynamic Media]** - 画像、ビデオ、eCatalog、スピンセットなどのアセットに使用します。
+* **[!UICONTROL ダイナミックメディア]** - 画像、ビデオ、eCatalog、スピンセットなどのアセットに使用します。
 * **[!UICONTROL インタラクティブメディア]** - すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。
 * **[!UICONTROL パノラマメディア -]** パノラマ画像またはパノラマ VR 画像アセットに使用します。
 * **[!UICONTROL ビデオ 360 メディア]** - 360 ビデオおよび 360 VR ビデオアセットに使用します。
@@ -130,7 +130,7 @@ Dynamic Media コンポーネントはスマートであり、追加している
 >
 >一方、ページ内で、同じタイプのアセットを使用するすべての Dynamic Media コンポーネントで同じビューアプリセットを使用することは可能です。
 
-Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL Dynamic Media 設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
+Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 
 * [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 * 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
