@@ -116,7 +116,7 @@ AEMで配信される標準レポートの場合：
 
 * は、レポートに追加されるすべての列(`columnbase`)を含む、適応した段落システムです。
 * 使用可能なチャートタイプおよび現在アクティブなチャートタイプを定義します。
-* ユーザーがレポートの特定の側面を設定できる[編集]ダイアログを定義します。
+* ユーザーがレポートの特定の側面を設定できる編集ダイアログを定義します。
 
 ### 列ベース {#column-base}
 
@@ -655,16 +655,16 @@ N:definitions
 
    * `page`
 
-      * `propertyName` (オプション)
+      *  (オプション)`propertyName`
 
          値の解決に使用するプロパティの名前を指定します。指定しなかった場合、デフォルト値&#x200B;*jcr:title*（ページタイトル）が使用されます。`page`リゾルバーの場合、これは、最初にパスがページパスに解決され、次にページタイトルに解決されることを意味します。
    * `path`
 
-      * `propertyName` (オプション)
+      *  (オプション)`propertyName`
 
          値の解決に使用するプロパティの名前を指定します。指定しなかった場合は、デフォルト値の`jcr:title`が使用されます。
 
-      * `subPath` (オプション)
+      *  (オプション)`subPath`
 
          このプロパティは、値を解決する前にパスに付加する接尾辞を指定するときに使用します。
    * `pathextension`
@@ -804,7 +804,7 @@ N:definitions
 
 * 次の2つのプロパティを持つノード`definitions/data/preprocessing/apply`の場合：
 
-   * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
+   * `pattern`:  `(.*)(/jcr:content)(/|$)(.*)`
    * `replace`:  `$1`
 
 * 次のような文字列が検索されます。
@@ -907,7 +907,7 @@ N:definitions
 
    * `timeslot`  — 値は、の対応する定数と比較でき `java.utils.Calendar`ます。
 
-      * `timeslot:year` - `Calendar.YEAR`
+      * `timeslot:year` -  `Calendar.YEAR`
       * `timeslot:month-of-year` -  `Calendar.MONTH`
       * `timeslot:week-of-year` -  `Calendar.WEEK_OF_YEAR`
       * `timeslot:day-of-month` -  `Calendar.DAY_OF_MONTH`
@@ -1430,7 +1430,7 @@ N:apps
 
    ただし、ユーザーを指定するとセキュリティリスクが高まる可能性もあります。
 
-* 「**Enforce snapshot user**」を有効にすると、すべてのスナップショットが、「Snapshot user **」で指定したユーザーを使用して取得されます。正しく処理しないと、セキュリティに重大な影響が出る可能性があります。
+* 「**Enforce snapshot user**」を有効にすると、すべてのスナップショットが、「Snapshot user **」で指定したユーザーを使用して取得されます。正しく処理しないと、セキュリティ上の重大な影響が生じる可能性があります。
 
 ### キャッシュ設定(Day CQレポートキャッシュ) {#cache-settings-day-cq-reporting-cache}
 
