@@ -94,7 +94,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
         <tbody>
         <tr>
         <td><strong>名前</strong></td>
-        <td><strong>種類</strong></td>
+        <td><strong>型</strong></td>
         <td><strong>値と説明</strong></td>
         </tr>
         <tr>
