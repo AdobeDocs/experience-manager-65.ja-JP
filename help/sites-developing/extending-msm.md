@@ -278,7 +278,7 @@ GitHub のコード
 
 1. インタラクティブなプロンプトで、次の値を指定します。
 
-   * `groupId`: `com.adobe.example.msm`
+   * `groupId`:  `com.adobe.example.msm`
    * `artifactId`:  `MyLiveActionFactory`
    * `version`:  `1.0-SNAPSHOT`
    * `package`:  `MyPackage`
