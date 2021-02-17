@@ -505,7 +505,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 承認済みユーザーは、すべてのパブリッシュインスタンスに対する次の権限および制限を明示的に保持している必要があります。
 
-| **パス** | **jcr:all** | **rep:glob** |
+| **path** | **jcr:all** | **rep:glob** |
 |---|---|---|
 | /home | X | */activities/* |
 | /home/users | X | */アクティビティ/* |
@@ -513,7 +513,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 `administrators`グループのメンバーとして、許可されたユーザーは、すべての発行インスタンスに対して次の権限を持つ必要があります。
 
-| **パス** | **jcr:all** | **jcr:read** | **rep:write** |
+| **path** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |
