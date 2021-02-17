@@ -105,7 +105,7 @@ ht-degree: 42%
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
-* 型 `tut`
+* タイプ `tut`
 *  `Tutorial`
 
 ![tagging](assets/tagging.png)
@@ -118,7 +118,7 @@ ht-degree: 42%
 
 例：
 
-* 型 `q`
+* タイプ `q`
 * [クインハーパー](/help/communities/enablement-setup.md#publishcreateenablementmembers)を選択
 
 >[!NOTE]
