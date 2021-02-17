@@ -180,7 +180,7 @@ blobCacheSize=1024
 * `mongodburi` これは、AEM が接続する必要がある MongoDB サーバーです。接続は、デフォルトレプリカセットの既知のメンバーすべてに対して確立されます。MongoDB Cloud Manager を使用する場合は、サーバーセキュリティが有効になります。そのため、適切なユーザー名とパスワードが接続文字列に含まれている必要があります。エンタープライズ以外のバージョンの MongoDB では、ユーザー名およびパスワード認証のみがサポートされます。接続文字列の構文について詳しくは、こちらの[ドキュメント](https://docs.mongodb.org/manual/reference/connection-string/)を参照してください。
 
 * `db`データベースの名前。AEMのデフォルトは 
-`aem-author`.
+`aem-author`
 
 * `customBlobStore` デプロイメントでバイナリがデータベースに格納される場合、バイナリは作業セットの一部になります。そのため、バイナリをMongoDBに格納しないよう推奨され、 
 `FileSystem` データストアをNASに置く。
