@@ -497,7 +497,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
       Acrobat が PDF Generator サービスを実行するように設定されます。
 
-1. System Readiness Tool（SRT）を実行して、Acrobat インストールを検証します。PDF Generatorの変換を実行するコンピューターが適切に設定されているかどうかを確認し、指定されたパスでレポートを生成します。
+1. System Readiness Tool（SRT）を実行して、Acrobat インストールを検証します。このツールは、PDF Generatorの変換を実行するコンピューターが適切に設定されているかどうかを確認し、指定されたパスでレポートを生成します。
 
    1. コマンドプロンプトを開きます。`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` フォルダーに移動し、コマンドプロンプトから次のコマンドを実行します。
 
