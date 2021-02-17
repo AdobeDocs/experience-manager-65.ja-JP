@@ -50,7 +50,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 | アクティビティストリーム | [アクティビティストリーム](/help/communities/activities.md) |
 | ブログ | [ブログ](/help/communities/blog-feature.md) |
 | ブログのサイドバー | [ブログ](/help/communities/blog-feature.md) |
-| カレンダー | [カレンダー](/help/communities/calendar.md) |
+| Calendar | [Calendar](/help/communities/calendar.md) |
 | コメント | [コメント](/help/communities/comments.md) |
 | コミュニティのアクティビティリスト | [アクティビティのトレンド](/help/communities/trends.md) |
 | コミュニティグループメンバーのリスト | [コミュニティグループ](/help/communities/creating-groups.md) |
