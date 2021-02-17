@@ -332,7 +332,7 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
 次の手順を実行して[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成し、次のスクリプトを使用します。
 
 1. CRXDE にログインし、/etc/clientlibs/ に移動します。
-1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。例： `validation`
+1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。例：`validation`
 
    「**[!UICONTROL すべて保存]**」をクリックします。
 
