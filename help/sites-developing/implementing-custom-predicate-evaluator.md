@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 73%
+ht-degree: 93%
 
 ---
 
@@ -46,7 +46,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-search-custom-predicate-evaluatorプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
+* [GitHub の aem-search-custom-predicate-evaluator プロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)を開きます
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)としてダウンロードします
 
 ### 述語エバリュエーターの詳細 {#predicate-evaluator-in-detail}
@@ -57,11 +57,11 @@ GitHub のコード
 
 >[!NOTE]
 >
->`PredicateEvaluator` および `com.day.cq.search` パッケージについて詳しくは、[Java のドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html)を参照してください。
+>`PredicateEvaluator` および `com.day.cq.search` パッケージについて詳しくは、[Java のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/search/package-summary.html)を参照してください。
 
 ### レプリケーションメタデータ用のカスタム述語エバリュエーターの実装 {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
-例として、レプリケーション・メタデータに基づくデータを支援するカスタム述語評価基準を作成する方法を説明します。
+一例として、この節では、次のレプリケーションメタデータに基づくデータに役立つカスタム述語エバリュエーターを作成する方法について説明します。
 
 * `cq:lastReplicated`：最終レプリケーションアクションの日付を格納
 
@@ -71,7 +71,7 @@ GitHub のコード
 
 #### デフォルトの述語エバリュエーターを使用したレプリケーションメタデータのクエリ {#querying-replication-metadata-with-default-predicate-evaluators}
 
-次のクエリは、`admin`が年の初めからアクティブ化した`/content`ブランチのノードのリストを取得します。
+次のクエリでは、年初から `admin` によってアクティベートされた `/content` ブランチ内のノードのリストを取得します。
 
 ```xml
 path=/content
@@ -101,7 +101,7 @@ replic.since=2013-01-01T00:00:00.000+01:00
 replic.action=Activate
 ```
 
-レプリケーションメタデータ述語をカスタム述語評価子でグループ化すると、意味のあるクエリを作成するのに役立ちます。
+カスタム述語エバリュエーターを使用して、レプリケーションメタデータの述語をグループ化すると、意味のあるクエリを作成できます。
 
 #### Maven 依存関係の更新 {#updating-maven-dependencies}
 
@@ -113,7 +113,7 @@ replic.action=Activate
 
 >[!NOTE]
 >
->`cq-search`依存関係の範囲は`provided`に設定されます。これは、`cq-search`が`OSGi`コンテナによって提供されるからです。
+>`cq-search` は `OSGi` コンテナで提供されるので、`cq-search` の依存関係の範囲は `provided` に設定されます。
 
 pom.xml
 
@@ -138,11 +138,11 @@ pom.xml
 
 #### ReplicationPredicateEvaluator の作成 {#writing-the-replicationpredicateevaluator}
 
-`cq-search`プロジェクトには`AbstractPredicateEvaluator`抽象クラスが含まれています。 これは、独自のカスタム述語評価演算子`(PredicateEvaluator`を実装するためのいくつかの手順で拡張できます)。
+`cq-search` プロジェクトには、`AbstractPredicateEvaluator` 抽象クラスが含まれます。このクラスを数ステップで拡張して、独自のカスタム述語エバリュエーター `(PredicateEvaluator`）を実装できます。
 
 >[!NOTE]
 >
->次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。もう1つの方法は、行単位でデータを選択する`includes`メソッドを実装することです。 詳しくは、[Java のドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
+>次の手順では、データをフィルタリングする `Xpath` 式を作成する方法について説明します。この他に、データを行単位で選択する `includes` メソッドを実装する方法もあります。詳しくは、[Java のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)を参照してください。
 
 1. `com.day.cq.search.eval.AbstractPredicateEvaluator` を拡張する新しい Java クラスを作成します。
 1. 次のように`@Component`をクラスに注釈を付けます。
@@ -170,7 +170,7 @@ pom.xml
 
 >[!NOTE]
 >
->`factory`は、`com.day.cq.search.eval.PredicateEvaluator/`で始まり、カスタム`PredicateEvaluator`の名前で終わる一意の文字列である必要があります。
+>`factory` は、`com.day.cq.search.eval.PredicateEvaluator/` で始まりカスタム `PredicateEvaluator` の名前で終わる一意の文字列にする必要があります。
 
 >[!NOTE]
 >
@@ -182,7 +182,7 @@ pom.xml
    public String getXPathExpression(Predicate predicate, EvaluationContext context)
    ```
 
-   オーバーライドメソッドでは、引数に指定された `Xpath` に基づいて `Predicate` 式を組み立てます。
+   オーバーライドメソッドでは、引数に指定された `Predicate` に基づいて `Xpath` 式を組み立てます。
 
 ### レプリケーションメタデータ用のカスタム述語エバリュエーターの例 {#example-of-a-custom-predicate-evalutor-for-replication-metadata}
 
