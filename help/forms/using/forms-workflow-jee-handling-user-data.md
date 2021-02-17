@@ -132,7 +132,7 @@ AEM FormsJEEワークフロープロセスの作成について詳しくは、[W
 
 1. ワークフローインスタンスのステータスを確認します。ステータスが2(COMPLETE)または4(TERMINATED)以外の場合は、次のメソッドを呼び出して、最初にインスタンスを終了します。
 
-   `ProcessManager.terminateProcess(<long_lived_invocation_id>)`.
+   `ProcessManager.terminateProcess(<long_lived_invocation_id>)`
 
 1. 次のメソッドを呼び出して、ワークフローインスタンスを削除します。
 
