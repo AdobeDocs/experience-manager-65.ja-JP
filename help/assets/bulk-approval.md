@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 9fc1201db83ae0d3bb902d4dc3ab6d78cc1dc251
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 57%
+ht-degree: 60%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 57%
    ![review_name](assets/review_name.png)
 
 1. 「**[!UICONTROL 送信]**」をクリックし、「**[!UICONTROL 完了]**」をクリックして確認メッセージを閉じます。 新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として[!DNL Assets]にログインし、[!DNL Assets] UIに移動します。 アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
+1. [!DNL Assets] に承認者としてログインし、 UI に移動します。[!DNL Assets]アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
 
    ![アセットの通知](assets/aemAssetsNotification.png)
 
@@ -91,7 +91,7 @@ ht-degree: 57%
    ![task_details-collection](assets/task_details-collection.png)
 
 1. 「**[!UICONTROL 送信]**」をクリックし、「**[!UICONTROL 完了]**」をクリックして確認メッセージを閉じます。 新しいタスクに関する通知が承認者に送信されます。
-1. 承認者として[!DNL Assets]にログインし、[!DNL Assets]コンソールに移動します。 アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
+1. [!DNL Assets] に承認者としてログインし、 コンソールに移動します。[!DNL Assets]アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
 1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を調べ、**[!UICONTROL レビュー]**&#x200B;をクリックします。
 1. コレクションのすべてのアセットがレビューページに表示されます。アセットを選択し、必要に応じて、「**[!UICONTROL 承認/拒否]**」をクリックして、アセットを承認または拒否します。
 
