@@ -183,7 +183,7 @@ Apache Sling Sync Agentsを設定するには：
 ### Adobe Granite Distribution - Diff Observer Factory {#adobe-granite-distribution-diff-observer-factory}
 
 この設定は、パブリッシャー間でグループメンバーシップを同期します。
-あるパブリッシャーでグループのメンバーシップを変更しても、他のパブリッシャーでのメンバーシップが更新されない場合は、**ref :members**&#x200B;が&#x200B;**looked properties names**&#x200B;に追加されていることを確認します。
+あるパブリッシャーでグループのメンバーシップを変更しても、他のパブリッシャーのメンバーシップが更新されない場合は、**ref :members**&#x200B;が&#x200B;**looked properties names**&#x200B;に追加されていることを確認します。
 
 メンバーの同期を確実に行うには：
 
