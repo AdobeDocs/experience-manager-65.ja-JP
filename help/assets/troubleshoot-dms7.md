@@ -36,7 +36,7 @@ ht-degree: 94%
 
    このレプリケーションエージェントは、「作成者のエージェント」にあります。
 
-## 一般（すべてのアセット）{#general-all-assets}
+## 一般（すべてのアセット） {#general-all-assets}
 
 次に全般的なヒントやテクニックを示します。
 
@@ -89,7 +89,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
      <li><p>CRX/DE に移動します。</p>
       <ul>
        <li>JCR 内のプリセット <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> が定義されているかどうかを確認します。この場所は、AEM 6.x から 6.4 にアップグレードし、移行をオプトアウトした場合に適用されます。それ以外の場合、場所は <code>/conf/global/settings/dam/dm/presets/viewer</code> になります。</li>
-       <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong></strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li>
+       <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong> </strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li>
       </ul> </li>
     </ol> </td>
    <td><p>ページを更新するか、別のページに移動してから戻ります（サイドレール JSP を再コンパイルする必要があります）。</p> <p>それでも解決しない場合：</p>
