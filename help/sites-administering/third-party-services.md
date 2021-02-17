@@ -34,7 +34,7 @@ ht-degree: 93%
 * Twitter - ソーシャルネットワーキング
 * YouTube - ビデオ共有
 
-また、AEMは、[marketing cloud](/help/sites-administering/marketing-cloud.md)および[Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md)と統合できます。
+さらに、AEMを[marketing cloud](/help/sites-administering/marketing-cloud.md)および[Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md)と統合できます。
 
 ## Salesforce との統合 {#integrating-with-salesforce}
 
