@@ -281,7 +281,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
    * 画像内の細かい違いを認識することはできません。例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
    * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
-   * タグ付けは、[!DNL Experience Manager]がサポートされているロケールでサポートされています。 言語の一覧については、](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html)スマートコンテンツサービスのリリースノート[を参照してください。
+   * タグ付けは、[!DNL Experience Manager]がサポートされているロケールでサポートされています。 言語の一覧については、](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html?lang=ja)スマートコンテンツサービスのリリースノート[を参照してください。
 
 * スマートタグ（標準または拡張タグ）を使用してアセットを検索するには、[!DNL Assets] Omnisearch（フルテキスト検索）を使用します。 スマートタグには個別の検索用述語はありません。
 
