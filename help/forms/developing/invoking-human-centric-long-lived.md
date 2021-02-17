@@ -439,7 +439,7 @@ WARファイルを、AEM FormsがデプロイされているJ2EEアプリケー�
 
 >[!NOTE]
 >
->aem formsがJBossにデプロイされていない場合は、AEM FormsをホストするJ2EEアプリケーションサーバーに準拠してWARファイルをデプロイする必要があります。
+>AEM FormsがJBossにデプロイされていない場合は、AEM FormsをホストするJ2EEアプリケーションサーバーに準拠してWARファイルをデプロイする必要があります。
 
 ### Webアプリケーション{#test-your-web-application}をテストします。
 
