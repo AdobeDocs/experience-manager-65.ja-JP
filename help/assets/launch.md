@@ -201,7 +201,7 @@ Dynamic Media ビューア拡張機能で提供されるデータ要素タイプ
 
 ![image2019-7-22_12-5-46](assets/image2019-7-22_12-5-46.png)
 
-各ビューアタイプでサポートされるイベントのリストについては、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc)を参照し、特定のビューアセクションに移動して、サブセクションの Adobe Analytics トラッキングのサポートをクリックします。現在、Dynamic Media ビューアリファレンスガイドでは、イベントの引数について説明していません。
+各ビューアタイプでサポートされるイベントのリストについては、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=ja#viewers-aem-assets-dmc)を参照し、特定のビューアセクションに移動して、サブセクションの Adobe Analytics トラッキングのサポートをクリックします。現在、Dynamic Media ビューアリファレンスガイドでは、イベントの引数について説明していません。
 
 次に、Dynamic Media ビューアの&#x200B;*データ要素*&#x200B;のライフサイクルを考えてみましょう。このようなデータ要素の値は、対応する Dynamic Media ビューアイベントがページで発生した後に設定されます。例えば、データ要素が **[!UICONTROL LOAD]** イベントとその「asset」引数を指す場合、このようなデータ要素の値は、ビューアが初めて LOAD イベントを実行した後で有効なデータを受け取ります。データ要素が **[!UICONTROL ZOOM]** イベントとその「scale」引数を指す場合、このようなデータ要素の値は、ビューアが初めて **[!UICONTROL ZOOM]** イベントを送信するまで空のままです。
 
