@@ -132,7 +132,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### Adobe Creative Cloud との連携  {#integration-with-adobe-creative-cloud}
 
-[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)（Photoshop、Illustrator、InDesign などの Adobe Creative Cloud アプリケーションを使用するクリエイティブユーザー向けのアプリ内エクスペリエンス）の導入により、コンテンツ作成プロセスにおけるクリエイティブ担当者とマーケティング担当者のコラボレーションが効率化されます。AEMデスクトップアプリケーションは、任意のファイル形式やデスクトップアプリケーションを使用して、デスクトップ上のAEMのアセットを操作するユーザーのニーズを引き続きサポートします。
+[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)（Photoshop、Illustrator、InDesign などの Adobe Creative Cloud アプリケーションを使用するクリエイティブユーザー向けのアプリ内エクスペリエンス）の導入により、コンテンツ作成プロセスにおけるクリエイティブ担当者とマーケティング担当者のコラボレーションが効率化されます。AEMデスクトップアプリケーションは、任意のファイルタイプと任意のデスクトップアプリケーションを使用して、デスクトップ上のAEMのアセットを操作するユーザーのニーズを引き続きサポートします。
 
 さらに、AEM は Adobe Stock と連携しているので、ユーザーは AEM Web UI から直接 Adobe Stock アセットの検索、プレビュー、ライセンス取得、保存をおこなえます。
 
@@ -276,7 +276,7 @@ AEM 6.5 では、Communities に新機能や機能強化が加えられていま
 
 アドビでは、製品の機能を常時評価して、さらに強力なバージョンへの置き換えの計画や、将来の展望や拡張に備えた部分的な再実装の決定を継続的におこなっています。
 
-[!DNL Adobe Experience Manager] 6.5の場合、[廃止され、削除された機能のリスト](/help/release-notes/deprecated-removed-features.md)を読みます。 このページには、近い将来におこなわれる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
+[!DNL Adobe Experience Manager] 6.5の場合、[廃止された機能と削除された機能のリスト](/help/release-notes/deprecated-removed-features.md)を読んでください。 このページには、近い将来におこなわれる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
 
 ## 既知の問題 {#known-issues}
 
