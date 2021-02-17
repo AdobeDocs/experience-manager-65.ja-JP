@@ -139,7 +139,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
    例えば、登録 ID が `87654321|MyCompany` の場合、顧客名は `MyCompany` です。
 
 1. ページの左上隅近くにある「**[!UICONTROL Cloud Services]**」をタップし、Experience Managerのロゴをタップして、**[!UICONTROL 一般/CRXDE Liteに移動します。]**
-1. JCR（Java コンテンツリポジトリ）のビデオレンディションパス全体をコピーします。
+1. JCR（Java コンテンツリポジトリー）のビデオレンディションパス全体をコピーします。
 
    例えば、ビデオのレンディションパスは、次のように表示されることがあります。
 
