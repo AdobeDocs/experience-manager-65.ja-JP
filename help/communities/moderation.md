@@ -244,7 +244,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 1. Githubコードからパッケージ`com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip`を構築し、同じパッケージをインストールして有効にします。
 1. AEM作成者(`https://[aem-author]:4502/system/console/bundles`)インスタンスとAEM発行(`https://[aem-publish]:4503/system/console/bundles`)インスタンスのバンドルコンソールを開きます。
 1. Githubからパッケージ` [com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`を構築し、同じパッケージをインストールして有効にします。
-1. AEM Authorの&#x200B;**/apps/social/moderation/facets**&#x200B;ノード([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))とAEM Publish ([https://[aem-publish]:4502/crx/de/index.jsp/>[aem-publi/]/>/apps/s/s/s/s/s/s/s/s/s/s/s/s/s/socococococococ/s/s/.](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)
+1. AEM Authorの&#x200B;**/apps/social/moderation/facets**&#x200B;ノード([https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets))とAEM Publish ([https://[aem-publish]:4502/crx/de/index.jsp/>[aem-publish]/>/>.](https://aem65-communities-demo.corp.adobe.com:4502/crx/de/index.jsp#/apps/social/moderation/facets)
 1. &lt;a2/追加>権限を持つ技術ユーザー&#x200B;**communities-utility-reader**。`jcr:read`
 
 既存のコミュニティサイトにカスタムフィルターを公開するには：
