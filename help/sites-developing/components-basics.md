@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
 workflow-type: tm+mt
 source-wordcount: '4974'
-ht-degree: 70%
+ht-degree: 75%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 70%
 
 ### 計画 {#planning}
 
-実際にコンポーネントを設定またはコーディングする前に、次のように尋ねる必要があります。
+実際にコンポーネントの設定やコーディングを開始する前に、次の点について理解する必要があります。
 
 * そもそも新しいコンポーネントで何をするか
    * 明確な仕様は、開発、テスト、引継ぎのあらゆる段階で役立ちます。詳細は時間と共に変化する可能性がありますが、仕様は更新可能です（ただし、変更箇所を記録しておく必要があります）。
 * コンポーネントを一から作成する必要があるか、基本部分を既存のコンポーネントから継承できるか
    * 一から作成する必要があるとは限りません。
-   * AEMには、上書き、オーバーレイ、[Sling Resource Marge](/help/sites-developing/sling-resource-merger.md)など、別のコンポーネント定義の詳細を継承および拡張するメカニズムがいくつか用意されています。
+   * AEMには、override、overlay、[Sling Resource Manger](/help/sites-developing/sling-resource-merger.md)など、別のコンポーネント定義の詳細を継承および拡張するメカニズムがいくつか用意されています。
 * コンポーネントのコンテンツを選択または操作するためのロジックが必要か
    * ロジックは、ユーザーインターフェイス層から分離しておく必要があります。HTL はこれに対応した設計になっています。
 * コンポーネントを CSS で書式設定する必要があるか
@@ -174,7 +174,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 * **ルートノード**：
 
-   * `<mycomponent> (cq:Component)`  — コンポーネントの階層ノード。
+   * `<mycomponent> (cq:Component)` - コンポーネントの階層ノード
 
 * **重要なプロパティ**：
 
@@ -195,42 +195,42 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
       注意：コンポーネントにダイアログがある場合は、cq:editConfig が存在しなくても、コンポーネントは自動的にコンポーネントブラウザーまたはサイドキックに表示されます。
 
-   * `cq:childEditConfig (cq:EditConfig)`  — 独自のコンポーネントを定義しない子コンポーネントの作成者UI要素を制御し `cq:editConfig`ます。
+   * `cq:childEditConfig (cq:EditConfig)` - 独自の `cq:editConfig` を定義しない子コンポーネントの作成者 UI 要素を制御します。
    * タッチ操作対応 UI：
 
       * `cq:dialog` (  `nt:unstructured`) — このコンポーネントのダイアログ。ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
-      * `cq:design_dialog` (  `nt:unstructured`) — このコンポーネントのデザイン編集
+      * `cq:design_dialog` ( `nt:unstructured`) - このコンポーネントのデザイン編集
    * クラシック UI：
 
       * `dialog` (  `cq:Dialog`) — このコンポーネントのダイアログ。ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
-      * `design_dialog` (  `cq:Dialog`) — このコンポーネントのデザイン編集。
+      * `design_dialog` ( `cq:Dialog`) - このコンポーネントのデザイン編集.
 
 
 #### タッチ UI のコンポーネントアイコン {#component-icon-in-touch-ui}
 
-コンポーネントのアイコンまたは省略形は、開発者がコンポーネントを作成する際に、コンポーネントのJCRプロパティを介して定義されます。 これらのプロパティは、次の順番で評価され、最初に見つかった有効なプロパティが使用されます。
+コンポーネントのアイコンまたは省略形は、デベロッパーがコンポーネントを作成する際にコンポーネントの JCR プロパティで定義します。これらのプロパティは、次の順番で評価され、最初に見つかった有効なプロパティが使用されます。
 
-1. `cq:icon`  — コンポーネントブラウザに表示する [Coral UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) ライブラリ内の標準アイコンを示す文字列プロパティ。
+1. `cq:icon` - コンポーネントブラウザーで表示するための [Coral UI ライブラリ](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)の標準的なアイコンを指定する String プロパティ
    * Coral アイコンの HTML 属性の値を使用します。
-1. `abbreviation`  — コンポーネントブラウザのコンポーネント名の省略形をカスタマイズする文字列プロパティ
-   * 省略形は 最大2 文字までにする必要があります。
-   * 空の文字列を指定すると、`jcr:title`プロパティの最初の2文字から省略形が作成されます。
+1. `abbreviation` - コンポーネントブラウザーでのコンポーネント名の省略形をカスタマイズするための String プロパティ
+   * 省略形は最大 2 文字までにする必要があります。
+   * 空の文字列が指定されると、`jcr:title` プロパティの最初の 2 文字を使用して省略形が作成されます。
       * 例えば、「Image」の場合は「Im」になります。
       * ローカライズされたタイトルが省略形の作成に使用されます。
    * 省略形は、コンポーネントに `abbreviation_commentI18n` プロパティがある場合にのみ翻訳されます。これは、翻訳ヒントとして使用されます。
 1. `cq:icon.png` または `cq:icon.svg`  — コンポーネントのアイコン（コンポーネントブラウザに表示）
    * 20 x 20 pixel は、標準的なコンポーネントのアイコンのサイズです。
       * 大きいアイコンはクライアント側で縮小されます。
-   * レコメンデーションカラーはrgb(112, 112, 112) > #707070です。
+   * お勧めの色は、RGB（112、112、112）、つまり #707070 です。
    * 標準的なコンポーネントアイコンの背景は、透明です。
-   * `.png`ファイルと`.svg`ファイルのみがサポートされています。
-   * Eclipseプラグインを介してファイルシステムからインポートする場合、ファイル名は`_cq_icon.png`や`_cq_icon.svg`のようにエスケープする必要があります。
+   * `.png` および `.svg` ファイルのみがサポートされます。
+   * Eclipse プラグインを使用してファイルシステムから読み込む場合、例えば `_cq_icon.png` や `_cq_icon.svg` のように、ファイル名をエスケープする必要があります。
    * `.png` 両者が存在す `.svg` る場合に先例となる
 
-上記のプロパティ(`cq:icon`、`abbreviation`、`cq:icon.png`、`cq:icon.svg`)がコンポーネントに見つからない場合：
+コンポーネントで上述のプロパティ（`cq:icon`、`abbreviation`、`cq:icon.png` または `cq:icon.svg`）が見つからない場合：
 
 * システムは、`sling:resourceSuperType` プロパティに続くスーパーコンポーネント上の同じプロパティを検索します。
-* スーパーコンポーネントレベルで省略形が見つからない場合や空の省略形が見つかった場合は、現在のコンポーネントの`jcr:title`プロパティの最初の文字から省略形が作成されます。
+* スーパーコンポーネントレベルで見つからないか空の省略形が見つかった場合、システムは現在のコンポーネントの `jcr:title` プロパティの最初の文字から省略形を作成します。
 
 スーパーコンポーネントからアイコンの継承をキャンセルするために、コンポーネントで空の `abbreviation` プロパティを設定すると、デフォルトの動作に戻ります。
 
@@ -266,7 +266,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
   <tr>
    <td>.<br /> </td>
    <td><code>cq:Component</code></td>
-   <td>現在のコンポーネント。コンポーネントはノードタイプ<code>cq:Component</code>.<br />です </td>
+   <td>現在のコンポーネント。ノードタイプ <code>cq:Component</code> のコンポーネント。<br /> </td>
   </tr>
   <tr>
    <td><code>componentGroup</code></td>
@@ -500,7 +500,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 ### コンポーネントおよびコンポーネントによって作成されるコンテンツ {#components-and-the-content-they-create}
 
-ページ上の&#x200B;**タイトル**&#x200B;コンポーネントのインスタンスを作成し、設定する場合：`<content-path>/Prototype.html`
+次のページに&#x200B;**タイトル**&#x200B;コンポーネントのインスタンスを作成して設定する場合：`<content-path>/Prototype.html`
 
 * タッチ操作対応 UI
 
@@ -510,7 +510,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
    ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
 
-ここで、リポジトリ内に作成されたコンテンツの構造を確認できます。
+ここで、リポジトリー内に作成されたコンテンツの構造を確認できます。
 
 ![screen_shot_2012-02-13at61405pm](assets/screen_shot_2012-02-13at61405pm.png)
 
@@ -531,7 +531,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 * **リソースタイプの階層**
 
-   これは、`sling:resourceSuperType`プロパティを使用してコンポーネントを拡張するために使用されます。 これにより、コンポーネントの継承ができるようになります。例えば、テキストコンポーネントは標準コンポーネントから様々な属性を継承します。
+   プロパティでコンポーネントを拡張する場合に使用されます。`sling:resourceSuperType`これにより、コンポーネントの継承ができるようになります。例えば、テキストコンポーネントは標準コンポーネントから様々な属性を継承します。
 
    * スクリプト（Sling によって解決）
    * ダイアログ
@@ -571,7 +571,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
    * `dialogLayout`（String）：ダイアログの開き方を定義します。
 
 
-* [ `cq:editConfig` 子ノード](#configuring-with-cq-editconfig-child-nodes):
+* [`cq:editConfig` 子ノード](#configuring-with-cq-editconfig-child-nodes)：
 
    * `cq:dropTargets` (ノードタイプ `nt:unstructured`):コンテンツファインダーのアセットからのドロップを受け入れることができるドロップターゲットのリストを定義します。
 
@@ -820,7 +820,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 `<drag and drop prefix>`はJavaプロパティで定義されます。
 
-`com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`.
+`com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`
 
 例えば、ダウンロードコンポーネントのJSPでは、クラス名は次のように定義されます
 ( `/libs/foundation/components/download/download.jsp`)。ここで`file`は、ダウンロードコンポーネントの編集設定でのドロップターゲットのノード名です。
@@ -948,7 +948,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 ### cq:listeners {#cq-listeners}
 
-`cq:listeners`ノード（ノードタイプ`cq:EditListenersConfig`）は、コンポーネントに対するアクションの前後に何が起こるかを定義します。 次の表では、使用する可能性のあるプロパティ値の定義を示します。
+`cq:listeners` ノード（ノードタイプ `cq:EditListenersConfig`）では、コンポーネントでアクションを実行する前後の処理を定義します。次の表では、使用する可能性のあるプロパティ値の定義を示します。
 
 <table>
  <tbody>
@@ -959,7 +959,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
   </tr>
   <tr>
    <td><code>beforedelete</code></td>
-   <td>コンポーネントを削除する前にハンドラーが呼び出されます。<br /> </td>
+   <td>コンポーネントを削除する前にハンドラーがトリガーされます。<br /> </td>
    <td> </td>
   </tr>
   <tr>
@@ -994,17 +994,17 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
   </tr>
   <tr>
    <td><code>afteredit</code></td>
-   <td>ハンドラーは、コンポーネントの編集後にトリガーされます。</td>
+   <td>コンポーネントを編集した後にハンドラーが呼び出されます。</td>
    <td><code>REFRESH_SELF</code></td>
   </tr>
   <tr>
    <td><code>aftercopy</code></td>
-   <td>ハンドラーは、コンポーネントのコピー後にトリガーされます。</td>
+   <td>コンポーネントをコピーした後にハンドラーが呼び出されます。</td>
    <td><code>REFRESH_SELF</code></td>
   </tr>
   <tr>
    <td><code>afterinsert</code></td>
-   <td>ハンドラーは、コンポーネントの挿入後にトリガーされます。</td>
+   <td>コンポーネントを挿入した後にハンドラーが呼び出されます。</td>
    <td><code>REFRESH_INSERTED</code></td>
   </tr>
   <tr>
@@ -1014,7 +1014,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
   </tr>
   <tr>
    <td><code>afterchildinsert</code></td>
-   <td>ハンドラーは、コンポーネントが別のコンポーネント内に挿入された後にトリガーされます(コンテナのみ)。</td>
+   <td>コンポーネントを別のコンポーネント（コンテナのみ）の内部に挿入した後にハンドラーが呼び出されます。</td>
    <td> </td>
   </tr>
  </tbody>
@@ -1041,7 +1041,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
 `afteredit = "project.customerAction"`
 
-次の例は`REFRESH_INSERTED`設定と同じです。
+次の例は、`REFRESH_INSERTED` 設定と同等です。
 
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
