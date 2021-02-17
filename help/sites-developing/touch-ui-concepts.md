@@ -14,14 +14,14 @@ translation-type: tm+mt
 source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
 workflow-type: tm+mt
 source-wordcount: '2197'
-ht-degree: 91%
+ht-degree: 92%
 
 ---
 
 
 # AEM タッチ操作対応 UI の概念{#concepts-of-the-aem-touch-enabled-ui}
 
-AEMは、タッチ対応UIと[レスポンシブデザイン](/help/sites-authoring/responsive-layout.md)を備え、タッチとデスクトップの両方の環境で動作するように設計されています。
+AEMは、タッチ対応UIと[レスポンシブデザイン](/help/sites-authoring/responsive-layout.md)を備え、タッチとデスクトップの両方の環境で動作する作成者デバイスに最適です。
 
 >[!NOTE]
 >
@@ -201,7 +201,7 @@ sling コンポーネントのコレクションによって形成され、作�
 
 ### Granite UI 基盤コンポーネント  {#granite-ui-foundation-components}
 
-[Granite UI 基盤コンポーネント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI を構築するために必要な基本の構築ブロックを提供します。次に例を示します。
+[Granite UI 基盤コンポーネント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)は、UI を構築するために必要な基本の構築ブロックを提供します。次に例を示します。
 
 * ボタン
 * ハイパーリンク
