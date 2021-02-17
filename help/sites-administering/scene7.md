@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
 workflow-type: tm+mt
 source-wordcount: '5452'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -200,7 +200,7 @@ Adobeでは、ルート会社ーがフォルダー全体ではなく、サブフ
    * アセットが現在ある場所、および
    * 共有リポジトリでのそれらの管理の重要度
 
-アセットが既にDynamic Mediaクラシックに存在し、共通のリポジトリで管理することがそれほど重要でない場合は、配信のためにDynamic Mediaクラシックに同期するためだけにAEM Assetsに書き出すのは不要なラウンドトリップです。 アセットを1つのリポジトリに保持し、配信のためにのみDynamic Mediaクラシックと同期する方が望ましい場合があります。
+アセットが既にDynamic Mediaクラシックに存在し、共通のリポジトリで管理することがそれほど重要でない場合は、配信のためにDynamic Mediaクラシックに同期するためだけにAEM Assetsに書き出すのは不要なラウンドトリップです。 アセットを単一のリポジトリに保持し、配信のためにのみDynamic Mediaクラシックと同期する方が望ましい場合があります。
 
 ## Dynamic Mediaクラシック統合の設定{#configuring-scene-integration}
 
@@ -421,7 +421,7 @@ Dynamic Mediaクラシックのアセットは、セキュアプレビューを�
 
 アセットを公開せずにDynamic Mediaクラシックにプッシュするには、次の設定を行う必要があります。
 
-1. [Admin Consoleを使用して、サポートケースを作成します。](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Mediaクラシックアカウントでセキュアプレビューを有効にするように要求します。
+1. [Admin Console を使用して、サポートケースを作成します。](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Mediaクラシックアカウントでセキュアプレビューを有効にするように要求します。
 1. [Dynamic Mediaクラシックアカウントのセキュアプレビューを設定するには、に従ってください。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
 
 以下は、Dynamic Mediaクラシックで安全なテスト設定を作成する場合と同じ手順です。
@@ -510,7 +510,7 @@ WCMに対してDynamic Mediaクラシックを有効にする場合、他の設�
 1. AEMアイコンをタップし、**[!UICONTROL 導入/Cloud Services]**&#x200B;に移動し、**[!UICONTROL Dynamic Mediaクラシック]**&#x200B;をタップして、Dynamic Mediaクラシックで設定を選択します。
 1. 「**[!UICONTROL 編集]**」をタップして設定を開きます。
 
-1. 「**[!UICONTROL 一般]**」タブで、「**[!UICONTROL デフォルトの設定]**」チェックボックスをオンにして、これを、Dynamic Mediaクラシックコンテンツブラウザーに表示されるデフォルトの会社とルートパスにします。
+1. 「**[!UICONTROL 一般]**」タブで、「**[!UICONTROL デフォルトの設定]**」チェックボックスをオンにして、これをDynamic Mediaクラシックコンテンツブラウザーに表示されるデフォルトの会社とルートパスにします。
 
    ![chlimage_1-304](assets/chlimage_1-304.png)
 
@@ -565,7 +565,7 @@ Digital Asset Manager/Dynamic Mediaクラシックアセットの同期によっ
 1. CRXDE Lite ページの右側で、「**[!UICONTROL プロパティ]**」タブをタップします。
 1. **[!UICONTROL jobParam]**&#x200B;の値フィールドに、Dynamic Mediaクラシックアップロードジョブパラメータを指定します。
 
-   例えば、`psprocess="rasterize"&psresolution=120` のようになります。
+   例：`psprocess="rasterize"&psresolution=120`
 
    使用できる追加のアップロードジョブパラメーターについては、Adobe「Dynamic MediaクラシックImage Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html)」を参照してください。[
 
