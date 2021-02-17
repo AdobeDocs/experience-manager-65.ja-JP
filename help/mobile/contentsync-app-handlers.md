@@ -144,7 +144,7 @@ ht-degree: 32%
 
 **** 通知sconfigデバイスで必要な通知設定を抽出します。プロパティは、アプリに関連付けられた各プッシュサービスクラウドサービス設定から抽出されます。
 
-クラウドサービスのjcr:contentノード内のAEM以外のプロパティが抽出され、**page-notifications-config.json** JSONファイルに追加されて、アプリコンテンツのwwwルートに含められます。
+クラウドサービスのjcr:contentノード内のAEM以外のプロパティが抽出され、**pge-notifications-config.json** JSONファイルに追加されて、アプリコンテンツのwwwルートに含められます。
 
 AEM プロパティは、「cq」、「sling」または「jcr」のネームスペースが付いたプロパティです。他のプロパティは、コンテンツ同期設定ノードの「excludeProperties」プロパティを使用して除外できます。
 
