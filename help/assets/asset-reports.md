@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 6016cefa9456d8f142347ff197b61b1614d55ab9
 workflow-type: tm+mt
 source-wordcount: '1131'
-ht-degree: 87%
+ht-degree: 90%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 87%
 * 有効期限
 * 変更
 * 公開
-* [!DNL Brand Portal] publish
+* [!DNL Brand Portal] 公開
 * ディスク使用量
 * ファイル
 * リンク共有
@@ -52,7 +52,7 @@ ht-degree: 87%
 
    ![アセットレポートに移動するツールページ](assets/AssetsReportNavigation.png)
 
-1. アセットレポートページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
+1. [!UICONTROL アセットレポート]ページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 1. **[!UICONTROL レポートを作成]**&#x200B;ページで、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 
    ![レポートタイプの選択](assets/choose_report.png)
@@ -121,13 +121,13 @@ ht-degree: 87%
 * 有効期限
 * 変更
 * 公開
-* [!DNL Brand Portal] publish
+* [!DNL Brand Portal] 公開
 * ファイル
 
 これらのレポートにカスタム列を追加するには、次の手順に従います。
 
 1. [!DNL Manager interface] で、 **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL レポート]**&#x200B;をクリックします 。
-1. アセットレポートページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
+1. [!UICONTROL アセットレポート]ページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 
 1. **[!UICONTROL レポートを作成]**&#x200B;ページで、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
 1. タイトル、説明、サムネール、フォルダーパス、期間など、該当するレポートの詳細を設定します。
@@ -153,10 +153,10 @@ ht-degree: 87%
 1. `scheduler.expression.name` フィールドでパージサービスの頻度（時間間隔）を指定します。レポートの経過日数および数量のしきい値を設定することもできます。
 1. 変更内容を保存します。
 
-## トラブルシューティング情報、ヒント、制限事項{#best-practices-and-limitations}
+## トラブルシューティング情報、ヒント、制限事項 {#best-practices-and-limitations}
 
 * レポート内の一部のレポートまたは数値が利用できない場合や期待どおりに表示されない場合は、[!UICONTROL Day CQ DAMイベントレコーダー]サービスが有効になっていることを確認してください。
 
 * 不要になったレポートを削除します。 DAM Report Purgeサービスの設定オプションを使用して、レポートを削除する条件を設定します。
 
-* ディスク使用量レポートが生成されず、[!DNL Dynamic Media]を使用している場合は、すべてのアセットが正しく処理されることを確認します。 解決するには、アセットを再処理し、レポートを再生成します。
+* [!DNL Dynamic Media] を使用していて、ディスク使用量レポートが生成されない場合は、すべてのアセットが正しく処理されていることを確認します。問題を解決するには、アセットを再処理してから、レポートを再度生成します。
