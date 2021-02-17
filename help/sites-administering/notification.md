@@ -66,7 +66,7 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 1. CRXDE Lite で、`config` という名前のノードを、アプリケーションフォルダーの下に追加します。
 1. configフォルダーに、次の名前のノードを追加します。
 
-   `com.day.cq.wcm.notification.email.impl.EmailChannel` タイプ  `sling:OsgiConfig`
+   `com.day.cq.wcm.notification.email.impl.EmailChannel`リソースのタイプは次のとおりとします。`sling:OsgiConfig`
 
 1. 追加`email.from`という名前のノードの`String`プロパティ。 値には、使用する電子メールアドレスを指定します。
 
