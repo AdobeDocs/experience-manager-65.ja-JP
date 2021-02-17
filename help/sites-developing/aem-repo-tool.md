@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 70%
+ht-degree: 80%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Repo ツールは、FTP に相当するコマンドラインを使用して�
 
 ファイルシステム上の`jcr_root`ファイルの結果構造内の特定のパスに対して、AEM Repo Toolはサブツリー全体に対して単一のフィルタを持つパッケージを作成し（FTP `put`と同様）、サーバから取り込むか（ `status`と`diff`）、差を比較します。`get`
 
-このツールは、複数のフィルタパスまたはFileVaultの`filter.xml`をサポートしていません。
+このツールは、複数のフィルターパスや FileVault の `filter.xml` をサポートしません。
 
 >[!CAUTION]
 >
@@ -36,7 +36,7 @@ AEM Repo ツールは、FTP に相当するコマンドラインを使用して�
 
 ## ダウンロードとドキュメント  {#download-and-documentation}
 
-[AEM Repo Toolは、GitHub上で、このリンク](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo)と共に、詳細なインストールおよび使用方法に関する説明と共に利用できます。
+[AEM Repo ツールは、このリンクの GitHub で利用できます](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo)。詳細なインストールおよび使用手順も用意されています。
 
 AEM Repo ツールのソースをダウンロードする場合は、GitHub プロジェクト（次のリンク）を参照してください。
 
@@ -44,6 +44,6 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでツールプロジェクトを開く](https://github.com/Adobe-Marketing-Cloud/tools)
+* [GitHub でツールのプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/tools)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/tools/archive/master.zip)としてダウンロードします
 
