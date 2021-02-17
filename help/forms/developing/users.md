@@ -744,7 +744,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
  </thead>
  <tbody>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>ユーザはウェブサイトにアクセスし、ユーザ名とパスワードを指定する。 この情報は、AEM FormsをホストするJ2EEアプリケーションサーバーに送信されます。</p></td>
   </tr>
   <tr>
@@ -878,7 +878,7 @@ User Management APIを使用して、プログラムによってユーザーを�
    <td><p>AEM Formsが同期操作を実行します。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>ユーザー情報が更新されます。</p></td>
   </tr>
   <tr>
