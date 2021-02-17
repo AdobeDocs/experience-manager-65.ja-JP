@@ -38,7 +38,7 @@ ht-degree: 23%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -76,7 +76,7 @@ ht-degree: 23%
 
 | **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
-| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | 不可 |
+| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | いいえ |
 | **テンプレート** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
 | **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
