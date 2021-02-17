@@ -62,7 +62,7 @@ Oracle Java 11（または一般にバージョン 8 より新しい Java）を�
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* また、パフォーマンスの潜在的な問題を軽減するために、`-XX:+UseParallelGC`スイッチを使用する必要があります。
+* さらに、パフォーマンスの潜在的な問題を軽減するために、`-XX:+UseParallelGC`スイッチを使用する必要があります。
 
 以下は、Java 11 で AEM を起動するときに指定する追加の JVM パラメータのサンプルです。
 
@@ -165,7 +165,7 @@ Javaマシンの一時フォルダーのデフォルトの場所は`/tmp`です�
 
 ## クイックスタートファイルから使用可能なその他のオプション  {#further-options-available-from-the-quickstart-file}
 
-その他のオプションや名前の変更規則については、クイックスタートヘルプファイルを参照してください。このファイルは —helpオプションから利用できます。ヘルプにアクセスするには、次のように入力します。
+その他のオプションや名前の変更規則については、クイックスタートヘルプファイルを参照してください。このファイルは、-helpオプションから利用できます。ヘルプにアクセスするには、次のように入力します。
 
 * `java -jar cq5-<*version*>.jar -help`
 
@@ -332,8 +332,7 @@ CRXDE Liteを開くには、ようこそ画面から&#x200B;**CRXDE Lite**&#x200
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
 ```
 
-例：:
-`https://localhost:4502/crx/de/index.jsp`
+次に例を示します。`https://localhost:4502/crx/de/index.jsp`
 
 ![installcq_crxdelite](assets/installcq_crxdelite.png)
 
