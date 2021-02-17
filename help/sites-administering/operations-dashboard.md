@@ -632,7 +632,7 @@ Lucene Binarys Cleanupタスクには、次の場所からアクセスできま�
    <td><strong>サービスプロパティ名</strong><br /> </td>
    <td><strong>説明</strong></td>
    <td><strong>例</strong><br /> </td>
-   <td><strong>型</strong></td>
+   <td><strong>タイプ</strong></td>
   </tr>
   <tr>
    <td>granite.maintenance.isStoppable</td>
@@ -669,7 +669,7 @@ Apache Sling のジョブ処理では、このトピックからジョブを開�
  </tbody>
 </table>
 
-上記のサービスプロパティ以外に、`JobConsumer`インターフェイスの`process()`メソッドは、メンテナンスタスクに対して実行する必要のあるコードを追加して実装する必要があります。 指定された`JobExecutionContext`は、ステータス情報を出力するために使用できます。ジョブがユーザーによって停止されているかどうかを確認し、結果（成功または失敗）を作成します。
+上記のサービスプロパティ以外に、`JobConsumer`インターフェイスの`process()`メソッドは、メンテナンスタスクに対して実行する必要のあるコードを追加して実装する必要があります。 指定された`JobExecutionContext`は、ステータス情報を出力するために使用できます。ジョブがユーザーによって停止されたかどうかを確認し、結果（成功または失敗）を作成します。
 
 すべてのインストールでメンテナンスタスクを実行する必要がない状況（例えば、発行インスタンスでのみ実行する）では、`@Component(policy=ConfigurationPolicy.REQUIRE)`を追加してサービスをアクティブにするために設定が必要になるように設定できます。その後、リポジトリに依存する実行モードとして、その設定に従ってマークを付けることができます。 詳しくは、[OSGiの設定](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)を参照してください。
 
@@ -699,7 +699,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 >[!NOTE]
 >
->システム概要ダッシュボードの概要については、[このビデオを参照](https://video.tv.adobe.com/v/21340?captions=jpn)してください。
+>システム概要ダッシュボードの概要については、[このビデオを参照](https://video.tv.adobe.com/v/21340)してください。
 
 ### アクセス方法 {#how-to-access}
 
