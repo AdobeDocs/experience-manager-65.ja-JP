@@ -52,7 +52,7 @@ $routeProvider
 })
 ```
 
-特に上記のサンプルは、パスの一部としてパラメーターを渡す例を示しています。この例では、指定したパターンを満たすパス(/content/phonegap/geometrixx-outdoors/en/home/products/:id)が要求された場合、そのパスはhome/products.template.htmlテンプレートで処理され、「contentphonegapgeometrixxoutdoorsenhomeproducts」コントローラーを使用する必要があることを示しています。
+特に上記のサンプルは、パスの一部としてパラメーターを渡す例を示しています。この例では、指定したパターンを満たすパス(/content/phonegap/geometrixx-outdoors/en/home/products/:id)が要求された場合、home/products.template.htmlテンプレートでそのパスを処理し、「contentphonegapgeometrixxoutdoorsenhomeproducts」コントローラーを使用する必要があることを示しています。
 
 このルートが要求されたときに読み込むテンプレートは、templateUrl プロパティで指定されています。このテンプレートは、ページにインクルードされた AEM コンポーネントの HTML と、アプリケーションのクライアント側を接続するために必要な AngularJS ディレクティブが含まれたものになります。Geometrixxコンポーネント内のAngularJSディレクティブの例を見るには、swipe-carouselのtemplate.jsp(/apps/geometrixx-outdoors-app/components/swipe-carousel/template.jsp)の45行目を参照してください。
 
