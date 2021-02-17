@@ -49,7 +49,7 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 * [Q&amp;A](/help/communities/working-with-qna.md)
 * [ブログ](/help/communities/blog-feature.md)
 * [ファイルライブラリ](/help/communities/file-library.md)
-* [カレンダー](/help/communities/calendar.md)
+* [Calendar](/help/communities/calendar.md)
 
 ドキュメントのこのセクションでは、Analytics のレポートスイートとコミュニティ機能を接続する方法について説明します。基本的な手順は以下のとおりです。
 
@@ -67,7 +67,7 @@ Adobe Analytics を AEM Communities と連携させ、サポートされるコ�
 
 Analytics をコミュニティ機能と連携するよう設定するには、アカウント担当者と協力して Adobe Analytics アカウントと[レポートスイート](#adobe-analytics-report-suite-for-video-reporting)をセットアップする必要があります。設定が完了したら、次の情報を使用できます。
 
-* **会社名**
+* **name**
 
    Adobe Analyticsアカウントに関連付けられている会社です。
 
@@ -185,7 +185,7 @@ Communities専用の変数に関する懸念は、アカウント担当者にお
    （必須）設定の表示タイトル。
 例えば、*有効化コミュニティ分析*&#x200B;と入力します。
 
-* **名前**
+* **Name**
 
    （オプション）指定しなかった場合、名前はデフォルトでタイトルから派生した有効なノード名になります。
 例えば、「communities」と入力します。**
@@ -204,7 +204,7 @@ Communities専用の変数に関する懸念は、アカウント担当者にお
 
 ![analytics-settings](assets/analytics-settings.png)
 
-* **会社情報**
+* **Company**
 
    Adobe Analyticsアカウントに関連付けられている会社です。
 
