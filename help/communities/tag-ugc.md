@@ -33,7 +33,7 @@ ht-degree: 76%
 タグ付けを許可するように設定できるAEM Communitiesの機能は次のとおりです。
 
 * [ブログ](blog-feature.md)
-* [カレンダー](calendar.md)
+* [Calendar](calendar.md)
 * [ファイルライブラリ](file-library.md)
 * [フォーラム](forum.md#configuretheaddedforum)
 * [Q＆A](working-with-qna.md)
