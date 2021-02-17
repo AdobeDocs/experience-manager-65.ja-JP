@@ -29,7 +29,7 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 >
 >SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 React や Angular などの一般的な SPA フレームワークを使用して構築したサイトは、Dynamic JSON を使用してコンテンツを読み込みます。サイトには、AEM ページエディターが編集コントロールを配置するために必要な HTML 構造がありません。
 
