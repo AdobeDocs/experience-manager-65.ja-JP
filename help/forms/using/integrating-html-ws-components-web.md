@@ -26,8 +26,8 @@ AEM Forms Workspace [コンポーネント](/help/forms/using/description-reusab
 1. パス`/apps/sampleApplication/wscomponents`を作成します。
 1. css、images、js/libs、js/runtime、および js/registry.js を
 
-   * `/libs/ws` から
-   * を `/apps/sampleApplication/wscomponents`.
+   * コピー元：`/libs/ws`
+   * コピー先：`/apps/sampleApplication/wscomponents`。
 
 1. /apps/sampleApplication/wscomponents/js フォルダー内部に demomain.js ファイルを作成します。コードを /libs/ws/js/main.js から demomain.js にコピーします。
 1. demomain.js で、コードを削除してルーターを初期化し、以下のコードを追加します。
