@@ -123,7 +123,7 @@ ht-degree: 79%
 
 「BaseDN」は管理コンソールの必須の設定ですが、IBM Domino Enterprise Server などのディレクトリサーバーでは、空の BaseDN が必要になる場合があります。空の BaseDN を指定するには、config.xml ファイルを書き出し、config.xml ファイルの設定を編集して、再度読み込みます（[設定ファイルの読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)を参照）。
 
-**検索フィルター：** （必須）ユーザーに関連付けられているレコードを検索する際に使用する検索フィルター。1 レベル検索またはサブレベル検索を実行できます（Search Filter Syntax または RFC 2254 を参照）。Microsoft AD スキーマについて詳しくは、Active Directory Schema を参照してください。
+**検索フィルター：** （必須）ユーザーに関連付けられているレコードを検索する際に使用する検索フィルターです。1 レベル検索またはサブレベル検索を実行できます（Search Filter Syntax または RFC 2254 を参照）。Microsoft AD スキーマについて詳しくは、Active Directory Schema を参照してください。
 
 **説明：ユーザーの説明の** スキーマ属性。
 
