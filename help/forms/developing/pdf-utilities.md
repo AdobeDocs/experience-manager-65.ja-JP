@@ -483,7 +483,7 @@ PDFドキュメントを不要にするには、次の手順を実行します�
 
 ### Java API {#sanitize-pdf-documents-using-the-java-api}を使用してPDFドキュメントを不要なものにします。
 
-PDF Utilities API(Java)を使用して、ドキュメントを削除します。
+PDF Utilities API(Java)を使用してドキュメントを削除します。
 
 1. プロジェクトファイルを含める
 
