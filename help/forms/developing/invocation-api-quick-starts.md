@@ -1024,7 +1024,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始:Javaプロジェクト{#quick-start-invoking-a-service-using-swaref-in-a-java-project}でSwaRefを使用してサービスを呼び出す
 
-次のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成したプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
+以下のJavaコードの例は、Javaプロジェクトから`MyApplication/EncryptDocument`という名前のプロセスを呼び出します。 このJavaプロジェクトでは、JAX-WSとSwaRefをエンコーディングタイプとして使用して作成したプロキシクラスを使用します。 ([SwaRef](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
 
 *Loan.pdf*&#x200B;というPDFファイルに基づく、保護されていないPDFドキュメントが、SwaRefを使用してAEM Formsプロセスに渡されます。 暗号化されたPDFドキュメントは、*EncryptedDocument.pdf*&#x200B;というPDFファイルとして保存されます。
 
