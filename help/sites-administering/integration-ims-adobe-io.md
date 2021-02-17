@@ -230,7 +230,7 @@ Target Standard APIを使用するCloud Serviceに対して、設定を参照で
 1. 「**Adobe Target設定**」タブに詳細を入力します。
 
    * **認証**:IMS
-   * **テナントID**:adobeIMSテナントID
+   * **テナントID**:AdobeIMSテナントID
 
       >[!NOTE]
       >
