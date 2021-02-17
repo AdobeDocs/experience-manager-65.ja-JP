@@ -19,13 +19,13 @@ ht-degree: 100%
 ---
 
 
-# メタデータ - フラグメントのプロパティ{#metadata-fragment-properties}
+# メタデータ - フラグメントのプロパティ {#metadata-fragment-properties}
 
 ## プロパティ／メタデータの編集 {#editing-properties-meta-data}
 
 コンテンツフラグメントのメタデータ（プロパティ）を表示して編集できます。
 
-1. **アセット**&#x200B;コンソールで、コンテンツフラグメントの場所に移動します。
+1. **Assets** コンソールで、コンテンツフラグメントの場所に移動します。
 1. 以下のどちらかの操作をおこないます。
 
    * [**「プロパティを表示**」を選択してダイアログを開きます](/help/assets/manage-assets.md#editing-properties)。開いて表示されたら、編集することもできます。
