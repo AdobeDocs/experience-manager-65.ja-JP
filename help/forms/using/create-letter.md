@@ -427,7 +427,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
   </tr> 
   <tr> 
    <td><strong>richtext</strong></td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>テキストのみ</td> 
    <td>可</td> 
    <td>可</td> 
@@ -437,7 +437,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
   </tr> 
   <tr> 
    <td><strong>平</strong> <strong>文</strong></td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>テキストのみ</td> 
    <td>可</td> 
    <td>可</td> 
@@ -447,7 +447,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
   </tr> 
   <tr> 
    <td><strong>画像</strong></td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
    <td>画像のみ</td> 
    <td>不可</td> 
    <td>可</td> 
@@ -459,7 +459,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td><strong>signature</strong></td> 
    <td>不可</td> 
    <td>不可</td> 
-   <td>不可<br /> </td> 
+   <td>いいえ<br /> </td> 
    <td>可</td> 
    <td>不可</td> 
    <td>該当なし</td> 
