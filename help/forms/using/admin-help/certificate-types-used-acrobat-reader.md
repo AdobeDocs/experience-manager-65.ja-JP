@@ -53,7 +53,7 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
  <thead>
   <tr>
    <th><p>プロファイルコード</p></th>
-   <th><p>型</p></th>
+   <th><p>タイプ</p></th>
    <th><p>有効期限</p></th>
    <th><p>デプロイメントの種類</p></th>
   </tr>
@@ -62,7 +62,7 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
   <tr>
    <td><p>P1</p></td>
    <td><p>SAP 実稼働環境</p></td>
-   <td><p>最大</p></td>
+   <td><p>Max</p></td>
    <td><p>実稼動</p></td>
   </tr>
   <tr>
