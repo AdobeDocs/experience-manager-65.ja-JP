@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
 source-wordcount: '897'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -80,7 +80,7 @@ DAM に保存されているビデオそのものまたは他のコンテンツ�
 
 ### アクセシビリティの強化 {#accessibility-enhancements}
 
-[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどの強化されたアクセシビリティ機能がサポートされるようになりました。詳細については、[Dynamic Media ビューアのリリースノート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)を参照してください。
+[!DNL Dynamic Media] ビューアで、アリアサポート、スクリーンリーダー、代替テキストなどの強化されたアクセシビリティ機能がサポートされるようになりました。詳細については、[Dynamic Media ビューアのリリースノート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)を参照してください。
 
 ## 検索エクスペリエンスの強化  {#experience-enhancement-for-searching}
 
