@@ -97,7 +97,7 @@ AEM [!DNL Forms]で[!DNL Adobe Sign]を使用するには、AEMクラウドサ�
 
 1. AEM Web コンソールを開きます。URLは`https://'[server]:[port]'/system/console/configMgr`です
 1. **[!UICONTROL Forms共通構成サービス]を開きます。**
-1. 「**[!UICONTROL 許可]**」フィールドで、「**すべてのユーザーを選択 — 匿名ユーザーまたはログインユーザーは、添付ファイルをプレビューでき、フォームを検証して署名できます。**[!UICONTROL &#x200B;保存]」をクリックします。**** 作成者インスタンスは、を使用するように設定されてい [!DNL Adobe Sign]ます。
+1. 「**[!UICONTROL 許可]**」フィールドで、「**すべてのユーザーを選択 — 匿名ユーザーまたはログインユーザーは、添付ファイルをプレビューでき、フォームを検証および署名でき、「**[!UICONTROL &#x200B;保存]」をクリックします。**** 作成者インスタンスは、を使用するように設定されてい [!DNL Adobe Sign]ます。
 1. 設定を公開します。
 1. [複製](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/replication.html)を使用して、対応する発行インスタンスに同じ設定を作成します。
 
