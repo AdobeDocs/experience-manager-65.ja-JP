@@ -67,7 +67,7 @@ Assembler Service API（Webサービス）を使用してPDFドキュメント�
 1. 実行時オプションを設定します。
 
    * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
-   * `AssemblerOptionSpec`オブジェクトに属するデータメンバに値を割り当てて、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようにAssemblerサービスに指示するには、`false`を`AssemblerOptionSpec`オブジェクトの`failOnError`フィールドに割り当てます。
+   * `AssemblerOptionSpec`オブジェクトに属するデータメンバに値を割り当てて、ビジネス要件に合うように実行時オプションを設定します。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するには、`false`を`AssemblerOptionSpec`オブジェクトの`failOnError`フィールドに割り当てます。
 
 1. PDFドキュメントのディスアセンブリ
 
