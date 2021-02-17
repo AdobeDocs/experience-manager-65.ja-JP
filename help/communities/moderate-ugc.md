@@ -202,14 +202,14 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 * [](comments.md) コメントと [](reviews.md)
 レビュー( **[!UICONTROL ユーザーモデレート]** / **[!UICONTROL 事前モデレート]**)。
 
-* [Forum](/help/communities/forum.md),  [Ideation](/help/communities/ideation-feature.md),  [QnA](/help/communities/working-with-qna.md), and calendarding Settings  [](/help/communities/calendar.md)
-in the forum  **[!UICONTROL nodated]**  ****&amp; Moderated
+* [Forum](/help/communities/forum.md),  [Ideation](/help/communities/ideation-feature.md),  [QnA](/help/communities/working-with-qna.md), and calendars Settings in the forum  [](/help/communities/calendar.md)
+, QnA ****  ****, and calendarned not hen proderated nothed not.
 
 ### スパム検出 {#spam-detection}
 
 スパム検出は自動モデレート機能です。この機能を使用すると、送信済みユーザーが生成した、望ましくないコンテンツの一部をスパムとしてマークしてフィルターから除外できます。 有効にすると、事前設定済みのスパムワードの集まりに基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
 
-`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`.
+`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`
 
 ただし、デフォルトのスパムワードをカスタマイズまたは拡張するには、[overlay](/help/communities/overlay-comments.md) を使用して、デフォルトのスパムワードの構造に従って /apps ディレクトリ内にスパムワードを作成します。
 
