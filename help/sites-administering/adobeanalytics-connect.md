@@ -57,7 +57,7 @@ Adobe Analytics[データセンター](https://developer.omniture.com/en_US/cont
 
 | データセンター | URL |
 |---|---|
-| サンノゼ | https://api.omniture.com/admin/1.4/rest/ |
+| San Jose | https://api.omniture.com/admin/1.4/rest/ |
 | ダラス | https://api2.omniture.com/admin/1.4/rest/ |
 | ロンドン | https://api3.omniture.com/admin/1.4/rest/ |
 | シンガポール | https://api4.omniture.com/admin/1.4/rest/ |
