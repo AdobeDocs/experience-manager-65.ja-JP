@@ -68,7 +68,7 @@ AEM には、提供されているワークフローステップを使用して�
 
 [ファイルを入手](assets/example-mortgage-loan-application.zip)
 
-1. ワークフローモデルコンソールを開きます。デフォルトの URL は次のとおりです。`https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
+1. ワークフローモデルコンソールを開きます。デフォルトの URL は、`https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. 「**作成**」を選択してから、「**モデルを作成**」を選択します。ワークフローモデルを追加ダイアログが表示されます。
 1. 「**タイトル**」と「**名前**」（オプション）を入力します。例えば、住宅ローン申し込みと入力します。「**完了**」をタップします。
 1. 新しく作成したワークフローモデルを選択し、「**編集**」をタップします。 」をクリックします。これで、ワークフローステップを追加してビジネスロジックを構築できます。新しいワークフローモデルを初めて作成する場合、次のものが含まれます。
