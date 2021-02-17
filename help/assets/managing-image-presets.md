@@ -303,7 +303,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
 
 * **[!UICONTROL シャープ：再サンプリングモード]** - **[!UICONTROL バイキュービック法を選択します。]**
 
-#### 「基本」タブオプション{#basic-tab-options}
+#### 「基本」タブオプション {#basic-tab-options}
 
 <table>
  <tbody>
@@ -349,7 +349,7 @@ INDD 形式の取り込みをサポートし、これらのファイル形式の
  </tbody>
 </table>
 
-#### 「詳細」タブオプション{#advanced-tab-options}
+#### 「詳細」タブオプション {#advanced-tab-options}
 
 <table>
  <tbody>
