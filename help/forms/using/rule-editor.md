@@ -174,7 +174,7 @@ When ルールを記述するときに、「Clear Value Of」アクションを�
 
 **Remove** Instance指定した繰り返し可能なパネルまたはテーブル行のインスタンスを削除します。
 
-**他** のインタラクティブコミュニケーション、アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動します。詳しくは、「対話型通信](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel)追加の[ボタン」を参照してください。
+**他** のインタラクティブコミュニケーション、アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、または外部URLに移動します。詳しくは、[対話型通信の追加ボタン](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel)を参照してください。
 
 ### Set Value of {#set-value-of}
 
