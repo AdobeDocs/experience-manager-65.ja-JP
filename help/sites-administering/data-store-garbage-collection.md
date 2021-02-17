@@ -138,7 +138,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 ガベージコレクションを実行するには：
 
 1. Apache Felix OSGi Management Console で、「**メイン**」タブをアクティブにし、次のメニューから「**JMX**」を選択して、
-1. 次に、**リポジトリマネージャー** MBeanを探してクリックします（または`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`に移動します）。
+1. 次に、**リポジトリマネージャー** MBeanを検索してクリックします（または`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`に移動します）。
 1. 「**startDataStoreGC(boolean markOnly)**」をクリックします。
 1. 必要に応じて、`markOnly`パラメーターに&quot;`true`&quot;と入力します。
 
