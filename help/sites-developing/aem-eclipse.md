@@ -1,6 +1,6 @@
 ---
-title: AEM Developer Tools for Eclipse
-seo-title: AEM Eclipse開発者ツール
+title: 'AEM Developer Tools for Eclipse '
+seo-title: 'AEM Developer Tools for Eclipse '
 description: 'null'
 seo-description: 'null'
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
 workflow-type: tm+mt
 source-wordcount: '810'
-ht-degree: 82%
+ht-degree: 93%
 
 ---
 
 
-# AEM Developer Tools for Eclipse{#aem-developer-tools-for-eclipse}
+# AEM Developer Tools for Eclipse {#aem-developer-tools-for-eclipse}
 
 ![](do-not-localize/chlimage_1-9.png)
 
@@ -30,26 +30,26 @@ AEM Developer Tools for Eclipse は、Apache License 2 に従ってリリース�
 
 * Eclipse Server Connector による AEM インスタンスとのシームレスな統合。
 * コンテンツと OSGI バンドルの同期。
-* コードのホットスワップ機能によるデバッグのサポート。
-* 固有の Project Creation Wizard からの AEM プロジェクトのシンプルなブートストラップ。
-* JCRプロパティの簡単な編集。
+* コードのホットスワップ機能を備えたデバッグサポート.
+* 固有のプロジェクト作成ウィザードからの AEM プロジェクトの簡単なブートストラップ.
+* JCR プロパティの容易な編集.
 
 ## 要件 {#requirements}
 
-AEM Developer Toolsを使用する前に、次の操作を行う必要があります。
+AEM Developer Tools を使用する前に、次の作業が必要です。
 
 * [Eclipse IDE for Java EE Developers](https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar) をダウンロードしてインストールします。AEM Developer Toolsは、現在EclipseKepler以降をサポートしています
 
 * AEMバージョン5.6.1以降で使用可能
-* [Eclipse FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)の説明に従って`eclipse.ini`設定ファイルを編集し、少なくとも1 GBのヒープメモリがあることを確認するようにEclipseを設定します。
+* [Eclipse に関する FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F) の説明に従って、`eclipse.ini` 設定ファイルを編集し、ヒープメモリが 1 GB 以上になるように Eclipse を設定します。
 
 >[!NOTE]
 >
->macOSでは、**Eclipse.app**&#x200B;を右クリックし、「**パッケージの内容を表示**」を選択して&#x200B;`eclipse.ini`**を探す必要があります。**
+>macOS では、**Eclipse.app** を右クリックし、「**パッケージの内容を表示**」を選択して、`eclipse.ini`**を探します。**
 
 ## AEM Developer Tools for Eclipse のインストール方法 {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-上記の[要件](#requirements)を満たしたら、次のようにプラグインをインストールできます。
+上記の[要件](#requirements)を満たしたら、次の手順でプラグインをインストールできます。
 
 1. [**AEM** Developer Tools Web サイト](https://eclipse.adobe.com/aem/dev-tools/)にアクセスします。
 
@@ -64,7 +64,7 @@ AEM Developer Toolsを使用する前に、次の操作を行う必要があり�
 1. 「**Location**」にインストール用 URL をコピーします。
 1. 「**OK**」をクリックします。
 1. 「**AEM**」プラグインと「**Sling**」プラグインの両方をオンにします。
-1. 「**次へ**」をクリックします。
+1. 「**Next**」をクリックします。
 1. 「**次へ**」をクリックします。
 1. 使用許諾契約書に同意し、「**Finish**」をクリックします。
 1. 「**Yes**」をクリックして、Eclipse を再起動します。
@@ -83,7 +83,7 @@ AEM Development Tools for Eclipse には、AEM プロジェクトおよびイン
 
 ## サンプルのマルチモジュールプロジェクト {#sample-multi-module-project}
 
-AEM Developer Tools for Eclipse には、サンプルのマルチモジュールプロジェクトが同梱されています。このプロジェクトは、Eclipse でのプロジェクト設定を手早くおこなうために役立つだけでなく、いくつかの AEM 機能に対するベストプラクティスガイドの役割も果たします。[プロジェクトのアーキタイプについて詳しくは、こちらを参照してください。](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype) 
+AEM Developer Tools for Eclipse には、サンプルのマルチモジュールプロジェクトが同梱されています。このプロジェクトは、Eclipse でのプロジェクト設定を手早くおこなうために役立つだけでなく、いくつかの AEM 機能に対するベストプラクティスガイドの役割も果たします。プロジェクトのアーキタイプについて詳しくは、[こちら](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)を参照してください。
 
 次の手順を実行して、サンプルプロジェクトを作成します。
 
@@ -91,7 +91,7 @@ AEM Developer Tools for Eclipse には、サンプルのマルチモジュール
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
-1. 「**次へ**」をクリックします。
+1. 「**Next**」をクリックします。
 
    >[!NOTE]
    >
@@ -121,7 +121,7 @@ AEM Developer Tools for Eclipse には、サンプルのマルチモジュール
 
    >[!NOTE]
    >
-   >新規インストールでは（より具体的には、Maven の依存関係をダウンロードしたことがない場合は）、プロジェクトを作成するとエラーが表示されることがあります。この場合は、[無効なプロジェクト定義の解決](#resolving-invalid-project-definition)で説明されている手順に従ってください。
+   >新規インストールでは（より具体的には、Maven の依存関係をダウンロードしたことがない場合は）、プロジェクトを作成するとエラーが表示されることがあります。その場合は、[無効なプロジェクト定義の解決](#resolving-invalid-project-definition)で説明されている手順に従ってください。
 
 ## トラブルシューティング {#troubleshooting}
 
