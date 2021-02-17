@@ -16,7 +16,7 @@ ht-degree: 88%
 ---
 
 
-# Dynamic Media アセットの公開  {#publishing-dynamic-media-assets}
+# Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
 
 Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開」をタップします。]** Dynamic Mediaアセットが公開されたら、URL経由でWebページに含めたり、ページにコードを埋め込んだりすることができます。
 
