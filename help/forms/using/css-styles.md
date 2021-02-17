@@ -77,7 +77,7 @@ type と name クラスの他に、フィールドコンポーネントにも **
  <tbody>
   <tr>
    <td><strong>コンポーネント</strong></td>
-   <td><strong>型</strong></td>
+   <td><strong>タイプ</strong></td>
    <td><strong>名前</strong></td>
   </tr>
   <tr>
