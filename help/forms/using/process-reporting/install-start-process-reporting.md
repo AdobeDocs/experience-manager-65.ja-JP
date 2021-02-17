@@ -120,7 +120,7 @@ ProcessDataStorageProviderサービスは、ProcessDataPublisherサービスか�
 
    レポートのためにプロセスデータが格納されるCRXの場所です。
 
-   `Default`: `/content/reporting/pm`
+   `Default`:  `/content/reporting/pm`
 
    **フォルダ階層**
 
