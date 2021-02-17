@@ -22,7 +22,7 @@ ht-degree: 72%
 
 Adobe Analytics は、`s.pageName` プロパティを使用してページを一意に識別し、そのページのために収集されたデータを関連付けます。AEM から Analytics に送信されるこのプロパティに値を割り当てるには、通常は AEM 内で次のタスクを実行します。
 
-* Analytics クラウドサービスフレームワークを使用して、CQ 変数を Analytics の `s.pageName` プロパティにマップする(「[コンポーネントデータとAdobe Analyticsプロパティとのマッピング](/help/sites-administering/adobeanalytics-mapping.md)」を参照)。
+* Analytics クラウドサービスフレームワークを使用して、CQ 変数を Analytics の `s.pageName` プロパティにマップする(「[コンポーネントデータとAdobe Analyticsのプロパティとのマッピング](/help/sites-administering/adobeanalytics-mapping.md)」を参照)。
 
 * ページコンポーネントを、`s.pageName` プロパティにマップする CQ 変数を含むようにデザインする(「[カスタムコンポーネント用のAdobe Analyticsトラッキングの導入](/help/sites-developing/extending-analytics-components.md)」を参照)。
 
