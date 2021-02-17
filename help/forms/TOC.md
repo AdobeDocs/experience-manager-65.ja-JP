@@ -85,7 +85,7 @@ ht-degree: 70%
       + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
-      + [AEM FORMS用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
+      + [AEM Forms用AEMデスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
 + AEM Formsをアップグレード{#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
    + OSGiのAEM Formsをアップグレード{#aem-forms-osgi-upgrade}
