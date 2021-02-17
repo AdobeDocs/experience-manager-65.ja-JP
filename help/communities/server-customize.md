@@ -42,7 +42,7 @@ SocialComponent は、AEM Communities 機能のリソースを表す POJO です
 
 SocialCollectionComponent インターフェイスは、他のリソースのコレクションであるリソースをより適切に表すように SocialComponent インターフェイスを拡張します。
 
-すべてのSocialCollectionComponentクラスで、インターフェイスcom.adobe.cq.soscial.scf.SocialCollectionComponentを実装する必要があります
+すべてのSocialCollectionComponentクラスで、インターフェイスcom.adobe.cq.soscf.SocialCollectionComponentを実装する必要があります
 
 ### SocialComponentFactory インターフェイス {#socialcomponentfactory-interface}
 
