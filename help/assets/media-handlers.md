@@ -25,7 +25,7 @@ ht-degree: 49%
 
 ## デフォルトのメディアハンドラー{#default-media-handlers}
 
-[!DNL Assets]内では次のメディアハンドラを使用でき、最も一般的なMIME型を処理します。
+[!DNL Assets]内では次のメディアハンドラーを使用でき、最も一般的なMIME型を処理します。
 
 <!-- TBD: Java versions shouldn't be set to 1.5. Must be updated.
 -->
@@ -143,7 +143,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
    1. 「単純なプロジェクトを作成」ボックスと「デフォルトのワークスペースの場所を使用」ボックスをオンにし、「**[!UICONTROL 次へ]**」をクリックします。
    1. [!DNL Maven]プロジェクトの定義：
 
-      * グループID:`com.day.cq5.myhandler`.
+      * Group Id: `com.day.cq5.myhandler`.
       * Artifact Id：myBundle.
       * 名前：[!DNL Experience Manager]バンドル。
       * 説明：これは私の[!DNL Experience Manager]バンドルです。
@@ -431,7 +431,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
 1. [!DNL Java]クラスをコンパイルし、バンドルを作成します。
 
-   1. `myBundle`プロジェクトを右クリックし、「**[!UICONTROL 実行]**」を選択してから、「**[!UICONTROL Mavenインストール]**」を選択します。
+   1. `myBundle`プロジェクトを右クリックし、「**[!UICONTROL 実行]**」を選択して、「**[!UICONTROL Mavenインストール]**」を選択します。
    1. バンドル`myBundle-0.0.1-SNAPSHOT.jar` （コンパイルされたクラスを含む）が`myBundle/target`の下に作成されます。
 
 1. CRXエクスプローラーで、`/apps/myApp`の下に新しいノードを作成します。 名前= `install`、種類= `nt:folder`。
@@ -479,7 +479,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
    >[!NOTE]
    >
-   >Windowsの一部のバージョンでは、[!DNL Windows]のインストールに含まれるネイティブの変換ユーティリティと競合するので、convertコマンドの実行に失敗する場合があります。 この場合、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全なパスに言及します。 例： `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
+   >Windowsの一部のバージョンでは、[!DNL Windows]のインストールに含まれるネイティブの変換ユーティリティと競合するので、convertコマンドの実行に失敗する場合があります。 この場合、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全なパスに言及します。 例：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
 1. ツールが正しく実行されるかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンドラインでconvert `<image-name>.jpg -flip <image-name>-flipped.jpg`コマンドを実行します。 反転画像がディレクトリに追加されます。次に、コマンドライン処理手順を&#x200B;**[!UICONTROL DAM Update Asset]**&#x200B;ワークフローに追加します。
 1. **[!UICONTROL ワークフロー]**&#x200B;コンソールを開きます。
