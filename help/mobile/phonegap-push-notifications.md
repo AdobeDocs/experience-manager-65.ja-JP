@@ -260,7 +260,7 @@ XCode 8.1 では、プッシュ通知を使用する前に、プロジェクト�
 
 #### Android {#android}
 
-CLIを使用してAndroidスマートフォンにアプリケーションをインストールするには（以下を参照）**手順6 — アプリ**&#x200B;を作成してデプロイする)、まず電話を「developer mode」にする必要があります。 この処理について詳しくは、[デバイス上での開発者オプションの有効化](https://developer.android.com/tools/device.html#developer-device-options)を参照してください。
+CLIを使用してAndroidスマートフォンにアプリケーションをインストールするには（以下を参照）**手順6 — アプリ**&#x200B;を作成してデプロイする)、最初に電話を「developer mode」にする必要があります。 この処理について詳しくは、[デバイス上での開発者オプションの有効化](https://developer.android.com/tools/device.html#developer-device-options)を参照してください。
 
 ### 手順 5：AEM アプリでのプッシュの設定 {#step-configure-push-on-aem-apps}
 
@@ -335,7 +335,7 @@ AMS プッシュ通知では、AMS サーバーから通知を作成し、送信
 
    ![chlimage_1-108](assets/chlimage_1-108.png)
 
-1. 「**Pushwoosh 接続**」を選択します。「**次へ**」をクリックします。
+1. 「**Pushwoosh 接続**」を選択します。「**Next**」をクリックします。
 
    ![chlimage_1-109](assets/chlimage_1-109.png)
 
