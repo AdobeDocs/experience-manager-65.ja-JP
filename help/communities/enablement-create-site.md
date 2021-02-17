@@ -104,7 +104,7 @@ ht-degree: 48%
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
-* 型 `tut`
+* タイプ `tut`
 *  `Tutorial`
 
 ![有効化タグ付け](assets/enablement-tagging.png)
@@ -117,7 +117,7 @@ ht-degree: 48%
 
 例：
 
-* 型 `q`
+* タイプ `q`
 * [クインハーパー](/help/communities/enablement-setup.md#publishcreateenablementmembers)を選択
 
 >[!NOTE]
@@ -157,7 +157,7 @@ ht-degree: 48%
 （必須） 
 `Community Enablement Managers` グループを選択して、このコミュニティサイトを管理できます。
 
-   * 型 `s`
+   * タイプ `s`
    *  `Sirius Nilson`
 
 * **Marketing Cloud組織ID**
@@ -229,7 +229,7 @@ ht-degree: 48%
 
 新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。詳しくは、[コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites)を参照してください。
 
-この新しいコミュニティサイトでは、手順1でサイト名を「enable」と指定すると、発行環境に存在する新しいユーザーグループが[Communities Members &amp; Groups console](/help/communities/members.md#groups-console)から表示される場合があります。
+この新しいコミュニティサイトでは、手順1でサイト名を「enable」にした場合、発行環境に存在する新しいユーザーグループは、[Communities Members &amp; Groups console](/help/communities/members.md#groups-console)から確認できます。
 
 ![community_usergroup](assets/community_usergroup.png)
 
@@ -260,7 +260,7 @@ ht-degree: 48%
 
 ### 認証エラーの設定 {#configure-for-authentication-error}
 
-サイトが設定され、発行にプッシュされたら、発行インスタンスで[ログインマッピング](/help/communities/sites-console.md#configure-for-authentication-error)(`Adobe Granite Login Selector Authentication Handler`)を設定します。 ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
+サイトが設定され、発行にプッシュされたら、発行インスタンスで[ログインマッピング](/help/communities/sites-console.md#configure-for-authentication-error)(`Adobe Granite Login Selector Authentication Handler`)を設定します。 ログイン資格情報が正しく入力されていない場合、認証エラーによりコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
 
 &lt;a0/追加>は次のようになります。`Login Page Mapping`
 
