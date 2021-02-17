@@ -170,7 +170,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 invite external users handlerコンポーネントをデプロイするには、コンポーネントXMLファイルを定義する必要があります。 コンポーネントXMLファイルは各コンポーネントに対して存在し、コンポーネントに関するメタデータを提供します。
 
-次の`component.xml`ファイルは、外部ユーザーの招待ハンドラーに使用されます。 サービス名が`InviteExternalUsersSample`で、このサービスが公開する操作の名前は`invitedUser`です。 入力パラメーターは`java.util.List`インスタンスで、出力値は`com.adobe.edc.server.spi.esrp.InvitedUserProviderResult`インスタンスの配列です。
+次の`component.xml`ファイルは、外部ユーザーの招待ハンドラーに使用されます。 サービス名は`InviteExternalUsersSample`で、このサービスが公開する操作は`invitedUser`という名前です。 入力パラメーターは`java.util.List`インスタンスで、出力値は`com.adobe.edc.server.spi.esrp.InvitedUserProviderResult`インスタンスの配列です。
 
 ### Invite External UsersハンドラーのコンポーネントXMLファイルの定義{#component-xml-invite-external-users-handler}
 
