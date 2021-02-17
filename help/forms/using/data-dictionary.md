@@ -280,7 +280,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   <tr>
    <td>参照<br />名</td>
    <td>文字列</td>
-   <td>必須。データディクショナリの階層や構造の変更に左右されない、DDE への参照を可能にする DDE の一意の参照名です。テキストモジュールは、この名前を使用してマップされます。</td>
+   <td>必須. データディクショナリの階層や構造の変更に左右されない、DDE への参照を可能にする DDE の一意の参照名です。テキストモジュールは、この名前を使用してマップされます。</td>
   </tr>
   <tr>
    <td>displayname</td>
@@ -295,7 +295,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   <tr>
    <td>elementType</td>
    <td>文字列</td>
-   <td>必須。DDEのタイプ：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION のいずれかです。</td>
+   <td>必須. DDEのタイプ：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION のいずれかです。</td>
   </tr>
   <tr>
    <td>elementSubType</td>
@@ -304,7 +304,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr>
   <tr>
    <td>キー</td>
-   <td>Boolean</td>
+   <td>ブール値</td>
    <td>DDE がキー要素であるかどうかを示す Boolean フィールド。</td>
   </tr>
   <tr>
@@ -562,11 +562,11 @@ Data Dictionary の実装の詳細を示すサンプルモデルおよびコー�
    <td>空（ヌル）<br /> </td>
   </tr>
   <tr>
-   <td>を</td>
+   <td>コピー先：</td>
    <td>/note/to</td>
   </tr>
   <tr>
-   <td> から</td>
+   <td>コピー元：</td>
    <td>/note/from</td>
   </tr>
   <tr>
