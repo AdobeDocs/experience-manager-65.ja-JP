@@ -33,7 +33,7 @@ ht-degree: 80%
 
    `/home/groups/P/PERM_WORKSPACE_USER`
 
-1. Package Manager に移動します。デフォルトの URL は次のとおりです。`https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
+1. Package Manager に移動します。デフォルトの URL は、`https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
 1. `adobe-lc-workspace-pkg-[version].zip`パッケージを検索してインストールします。
 1. アプリケーションサーバーを再起動します。
 
