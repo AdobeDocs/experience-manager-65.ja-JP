@@ -10,7 +10,7 @@ translation-type: tm+mt
 source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
 workflow-type: tm+mt
 source-wordcount: '6029'
-ht-degree: 74%
+ht-degree: 77%
 
 ---
 
@@ -96,7 +96,7 @@ AEMDynamic Mediaを6.3から6.4または6.5にアップグレードする場合�
    * **[!UICONTROL アセットの公開]** - 次の 3 つのオプションから選択できます。
       * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。アセットを公開するためにユーザーが操作する必要はありません。
       * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。
-      * **[!UICONTROL 一部の]** 公開このオプションを使用すると、Dynamic Mediaで公開するフォルダを制御でき、スマート切り抜きやダイナミックレンディションなどの機能や、プレビュー用にAEMでのみ公開するフォルダを指定できます。この同じ資産は、公共ドメインでの配信のためにDynamic Mediaでは公開され ** ていない。<br>このオプションは、 **[!UICONTROL Dynamic Mediaクラウドの]** 設定で設定できます。また、必要に応じて、フォルダーの **[!UICONTROL プロパティ]**&#x200B;内のフォルダーレベルで設定することもできます。<br>詳しくは、[Dynamic Media での選択的公開の操作を参照してください。](/help/assets/selective-publishing.md)<br>この設定を後で変更した場合、または後でフォルダーレベルで変更した場合、変更した内容は、その時点以降にアップロードする新しいアセットにのみ影響します。フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
+      * **[!UICONTROL 一部の]** 公開このオプションを使用すると、Dynamic Mediaで公開するフォルダを制御でき、スマート切り抜きや動的レンディションなどの機能や、プレビュー用にAEMでのみ公開するフォルダを指定できます。この同じ資産は、公共ドメインでの配信のためにDynamic Mediaでは公開され ** ていない。<br>このオプションは、 **[!UICONTROL Dynamic Mediaクラウドの]** 設定で設定できます。また、必要に応じて、フォルダーの **[!UICONTROL プロパティ]**&#x200B;内のフォルダーレベルで設定することもできます。<br>詳しくは、[Dynamic Media での選択的公開の操作を参照してください。](/help/assets/selective-publishing.md)<br>この設定を後で変更した場合、または後でフォルダーレベルで変更した場合、変更した内容は、その時点以降にアップロードする新しいアセットにのみ影響します。フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、AEM は、リモートの Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリは AEM インスタンスに送り返されません）。自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない限り、この設定を指定されたとおりにしておくことをお勧めします。
 
    * **[!UICONTROL すべてのコンテンツを同期]**  — デフォルトで <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->選択されています。Dynamic Media との同期で、アセットを選択して含めるまたは除外する場合は、このオプションの選択を解除します。このオプションの選択を解除すると、次の 2 つの Dynamic Media 同期モードから選択できるようになります。
@@ -146,22 +146,22 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 
 実行モード `dynamicmedia_scene7` の場合、Dynamic Media Classic（Scene7）ユーザーインターフェイスを使用して Dynamic Media 設定を変更します。
 
-上記のタスクの一部では、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開いて、アカウントにサインインする必要があります。
+上記のタスクの一部では、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインする必要があります。
 
 セットアップおよび設定タスクには、次のものが含まれます。
 
 * [Image Server の公開設定 ](#publishing-setup-for-image-server)
 * [アプリケーションの一般設定の指定](#configuring-application-general-settings)
 * [カラーマネジメントの設定](#configuring-color-management)
-* [サポートされる形式でのMIMEタイプの編集](#editing-mime-types-for-supported-formats)
-* [サポートされていない形式に対するMIME型の追加](#adding-mime-types-for-unsupported-formats)
+* [サポートされる形式の MIME タイプの編集](#editing-mime-types-for-supported-formats)
+* [サポートされていない形式のカスタム MIME タイプの追加](#adding-mime-types-for-unsupported-formats)
 * [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
 #### Image Server の公開設定     {#publishing-setup-for-image-server}
 
 公開設定は、アセットがデフォルトで Dynamic Media からどのように配信されるかを決定します。設定が指定されていない場合、Dynamic Media は、公開設定で定義されたデフォルト設定に従ってアセットを配信します。例えば、解像度属性が含まれていない画像を配信するように要求した場合、画像は初期設定のオブジェクト解像度設定で配信されます。
 
-公開設定を設定するには：dynamic mediaクラシックで、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
+公開設定を設定するには：Dynamic Mediaクラシックで、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
 
 Image Server 画面では、画像を配信するためのデフォルト設定を指定します。各設定の説明については、UI 画面を参照してください。
 
@@ -227,21 +227,21 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 * RGB 出力を返す動的レンディションは、RGB 出力を sRGB カラースペースで返します。
 * CMYK 出力を返す動的レンディションは、CMYK 出力を *WebCoated* カラースペースで返します。
 
-#### サポートされる形式のMIMEタイプの編集{#editing-mime-types-for-supported-formats}
+#### サポートされる形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
 
 Dynamic Media によって処理されるアセットタイプを定義して、高度なアセット処理パラメーターをカスタマイズできます。例えば、アセット処理パラメーターを指定して次のことができます。
 
 * Adobe PDF を eCatalog アセットに変換する。
 * Adobe Photoshop ドキュメント（.PSD）をパーソナライズ用のバナーテンプレートアセットに変換する。
 * Adobe Illustrator ファイル（.AI）または Adobe Photoshop Encapsulated Postscript ファイル（.EPS）をラスタライズする。
-* [ビデオ](/help/assets/video-profiles.md) プロファイルと [](/help/assets/image-profiles.md) イメージングプロファイルは、それぞれビデオおよび画像の処理を定義するために使用できます。
+* [ビデオプロファイル](/help/assets/video-profiles.md)および[イメージングプロファイル](/help/assets/image-profiles.md)は、それぞれ、ビデオおよび画像の処理を定義するのに使用できます。
 
 [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
 **サポートされる形式のMIMEタイプを編集するには**
 
 1. AEMで、AEMロゴをクリックしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/一般/CRXDE Liteをクリックします。]**
-1. 左側のレールで、次の場所に移動します。
+1. 左側のパネルで、次の場所に移動します。
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
 
@@ -261,11 +261,11 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 1. ページの左上隅で、「**[!UICONTROL CRXDE Lite]**」をタップして AEM に戻ります。
 
-#### サポートされていない形式に対するMIMEタイプの追加{#adding-mime-types-for-unsupported-formats}
+#### サポートされていない形式のカスタム MIME タイプの追加 {#adding-mime-types-for-unsupported-formats}
 
 AEM Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Liteに追加した新しいノードがAEMによって削除されないようにするには、`image_`の前にMIMEタイプを移動し、有効な値を&#x200B;**[!UICONTROL falseに設定する必要があります。]**
 
-**サポートされていない形式にMIMEタイプを追加するには**
+**サポートされていない形式のカスタム MIME タイプを追加するには**
 
 1. AEM で、**[!UICONTROL ツール／運営／Web コンソール]**&#x200B;をタップします。
 
@@ -298,7 +298,7 @@ AEM Assets でサポートされていない形式のカスタム MIME タイプ
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
-1. 左側のレールで、次の場所に移動します。
+1. 左側のパネルで、次の場所に移動します。
 
    `conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
 
@@ -518,9 +518,9 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
    >
    >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
-1. 「**[!UICONTROL Maximum Parallel Jobs]**」フィールドで、目的の値に数値を変更します。
+1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
-   **[!UICONTROL 並列ジョブの最大数]**&#x200B;を増やすと、Dynamic Mediaへのファイルの大量アップロードを適切にサポートできます。 正確な値は、ハードウェア容量に依存します。 初期移行または1回限りのバルクアップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の2倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。 そのため、特定の使用事例に基づいて値をテストし、調整する必要があります。
+   **[!UICONTROL 並列ジョブの最大数]**&#x200B;を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。正確な値は、ハードウェア容量に依存します。初期移行または 1 回限りの一括アップロードなど、特定のシナリオでは、大きな値を使用できます。ただし、大きな値（コア数の 2 倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。そのため、特定の使用事例に基づいて値をテストし、調整する必要があります。
 
 <!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
@@ -542,9 +542,9 @@ Granite のワークフローキューは、一時的でないワークフロー
    >
    >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
-1. 「**[!UICONTROL Maximum Parallel Jobs]**」フィールドで、目的の値に数値を変更します。
+1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
-   「並列ジョブの最大数」を増やすと、ファイルのDynamic Mediaへの大量アップロードを適切にサポートできます。 正確な値は、ハードウェア容量に依存します。 初期移行または1回限りのバルクアップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の2倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。 そのため、特定の使用事例に基づいて値をテストし、調整する必要があります。
+   並列ジョブの最大数を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。正確な値は、ハードウェア容量に依存します。初期移行または 1 回限りの一括アップロードなど、特定のシナリオでは、大きな値を使用できます。ただし、大きな値（コア数の 2 倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。そのため、特定の使用事例に基づいて値をテストし、調整する必要があります。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
