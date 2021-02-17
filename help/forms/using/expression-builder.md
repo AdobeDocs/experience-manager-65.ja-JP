@@ -49,7 +49,7 @@ ht-degree: 78%
    * java.lang.Character
    * Char
    * java.lang.Boolean
-   * Boolean
+   * ブール値
    * java.lang.Integer
    * Int
    * java.util.list
