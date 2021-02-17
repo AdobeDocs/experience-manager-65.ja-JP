@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -49,7 +49,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >
 >* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
->* [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 
 >
