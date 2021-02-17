@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
 workflow-type: tm+mt
 source-wordcount: '1918'
-ht-degree: 45%
+ht-degree: 46%
 
 ---
 
@@ -25,7 +25,7 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 * [JCR ノードタイプ](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling ノードタイプ](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-これらに加えて、AEMには、様々なカスタムノードタイプが用意されています。
+これらに加えて、AEM では様々なカスタムノードタイプも提供しています。
 
 ## 監査 {#audit}
 
