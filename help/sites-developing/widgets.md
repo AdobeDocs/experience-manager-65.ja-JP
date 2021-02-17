@@ -345,7 +345,7 @@ Single Panel ダイアログを使用するには：
 
 * ノードで定義されます（ノードタイプ= `cq:Dialog`、xtype = ` [dialog](/help/sites-developing/xtypes.md#dialog)`）。
 * 1つのタブパネルウィジェット（ノードタイプ= `cq:Widget`、xtype = ` [tabpanel](/help/sites-developing/xtypes.md#textpanel)`）を1つのパネル（ノードタイプ= `cq:Panel`）と共に表示します。
-* パネルには、選択/チェックボックスウィジェット(node type = `cq:Widget`、xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`、type = ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`)と、折りたたみ可能なダイアログフィールドセットウィジェット(node type = `cq:Widget`、xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`)があり、デフォルトでは2つのtextfieldウィジェット(node type = `cq:Widget`、xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)があります。
+* このパネルには、選択/チェックボックスウィジェット(node type = `cq:Widget`、xtype = ` [selection](/help/sites-developing/xtypes.md#selection)`、type = ` [checkbox](/help/sites-developing/xtypes.md#checkbox)`)と、折りたたみ可能なダイアログフィールドセットウィジェット(node type = `cq:Widget`、xtype = ` [dialogfieldset](/help/sites-developing/xtypes.md#dialogfieldset)`)があり、デフォルトでは2つのtextfieldウィジェット(node type = `cq:Widget`、xtype = ` [textfield](/help/sites-developing/xtypes.md#textfield)`)があります。
 * `togglefields`ノードは次の場所で定義します。
    `/apps/extjstraining/components/dynamicdialogs/togglefields`
 * 次を要求することにより、JSON 形式でレンダリングされます。
@@ -418,7 +418,7 @@ Custom Multifield ウィジェット（xtype = `ejstcustom`）：
    * `allowField` は、 [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Selection) Selectionオブジェクトのタイプが「select」です。optionsProviderは、ダイアログで定義されたCustomWidgetのoptionsProvider設定でインスタンス化されたSelectionオブジェクトの設定です
    * `otherField` は、[CQ.Ext.form.TextField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.TextField) オブジェクトです。
 * [CQ.form.CompositeField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.CompositeField)のメソッド`setValue`、`getValue`、`getRawValue`を上書きして、次の形式でCustomWidgetの値を設定および取得します。
-   `<allowField value>/<otherField value>, e.g.: 'Bla1/hello'`.
+   `<allowField value>/<otherField value>, e.g.: 'Bla1/hello'`
 * &#39; `ejstcustom`&#39; xtype:
    `CQ.Ext.reg('ejstcustom', Ejst.CustomWidget);`
 
