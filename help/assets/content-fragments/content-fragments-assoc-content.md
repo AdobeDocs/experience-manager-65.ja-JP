@@ -19,7 +19,7 @@ ht-degree: 100%
 ---
 
 
-# 関連コンテンツ{#associated-content}
+# 関連コンテンツ {#associated-content}
 
 関連コンテンツによって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。これにより、[ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になることで](/help/sites-authoring/content-fragments.md#using-associated-content)柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。
 
