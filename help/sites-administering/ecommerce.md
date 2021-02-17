@@ -87,7 +87,7 @@ ht-degree: 90%
   </tr>
   <tr>
    <td>標準化されたデータモデル</td>
-   <td>不可</td>
+   <td>いいえ</td>
    <td>あり。Magento GraphQL スキーマ</td>
   </tr>
   <tr>
