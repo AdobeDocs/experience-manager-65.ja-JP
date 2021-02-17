@@ -46,7 +46,7 @@ Formsサービスを使用して、次のタスクを実現できます。
 
 * インタラクティブPDF formsをレンダリング ([インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照)。
 * クライアントでフォームをレンダリングします。 ([クライアントでのFormsのレンダリング](/help/forms/developing/rendering-forms-client.md)を参照)。
-* フラグメントに基づいてフォームをレンダリングする。(「[フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms-based-fragments.md)」を参照)。
+* フラグメントに基づいてフォームをレンダリングする。([フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms-based-fragments.md)を参照)。
 * 権限を付与されたフォームをレンダリングします。 (「[レンダリング権限を有効にしたForms](/help/forms/developing/rendering-rights-enabled-forms.md)」を参照)。
 * フォームをHTMLとしてレンダリング ([HTMLとしてのFormsのレンダリング](/help/forms/developing/rendering-forms-html.md)を参照)。
 * カスタムCSSファイルを使用したHTMLFormsのレンダリング([カスタムCSSファイルを使用したHTMLFormsのレンダリング](/help/forms/developing/rendering-html-forms-using-custom.md))
