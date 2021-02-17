@@ -113,7 +113,7 @@ ht-degree: 83%
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p>Safari</p> </td>
-   <td><p>Audience</p> </td>
+   <td><p>対象者</p> </td>
   </tr>
   <tr>
    <td><p>Multi-site</p> </td>
@@ -242,7 +242,7 @@ ht-degree: 83%
    <td><p> </p> </td>
   </tr>
   <tr>
-   <td><p>デスクトップアプリ</p> </td>
+   <td><p>デスクトップアプリケーション</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
@@ -334,7 +334,7 @@ AEM では、バイナリデータをコンテンツノードとは別に格納�
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
-### デプロイメントのガイドライン {#development-guidelines}
+### 開発のガイドライン {#development-guidelines}
 
 AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を目標として開発してください。指針にすることができるいくつかのベストプラクティスを次に示します。
 
