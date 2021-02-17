@@ -50,7 +50,7 @@ ht-degree: 76%
 
 >[!CAUTION]
 >
->[](../../forms/using/prepopulate-adaptive-form-fields.md)データに&lt;afData>、&lt;afBoundData>、&lt;/afBoundData>タグを含まないスキーマ(XMLスキーマ、JSONスキーマ、フォームテンプレート、またはフォームデータモデル)に、XMLまたはJSONデータが準拠するフォームテンプレート、フォームデータモデル、またはスキーマベースのアダプティブフォームを事前入力する場合その場合、アダプティブフォームの境界なしフィールド（境界なしフィールドはアダプティブフォームフィールドで、[bindref](../../forms/using/prepopulate-adaptive-form-fields.md)プロパティがないアダプティブフォームフィールドです）のデータは失われます。
+>[](../../forms/using/prepopulate-adaptive-form-fields.md)データに&lt;afData>、&lt;afBoundData>、&lt;/afBoundData>タグを含まないスキーマ(XMLスキーマ、JSONスキーマ、フォームテンプレート、またはフォームデータモデル)に、XMLまたはJSONデータを使用して、フォームテンプレート、フォームデータモデル、またはスキーマベースのアダプティブフォームを事前入力するその場合、アダプティブフォームの境界なしフィールド（境界なしフィールドはアダプティブフォームフィールドで、[bindref](../../forms/using/prepopulate-adaptive-form-fields.md)プロパティがないアダプティブフォームフィールドです）のデータは失われます。
 
 アダプティブフォームがユースケースを実現するように、カスタム送信アクションを作成できます。詳しくは、「[アダプティブフォームのカスタム送信アクションの作成](../../forms/using/custom-submit-action-form.md)」を参照してください。
 
