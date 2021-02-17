@@ -157,7 +157,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
      <li><p><code>https://server/product/6422350843</code></p> </li>
      <li><p><code>https://server/product/1607745002</code></p> </li>
      <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>変化する部分はパスの最後の部分にあり、ホットスポット／画像マップの SKU 値（<strong><code>6422350843</code>、<code>1607745002,</code>、</strong><code>0086724882.</code>）になります</p> </td>
+    </ul> <p>変化する部分はパスの最後の部分にあり、ホットスポット／画像マップの SKU 値（<strong><code>6422350843</code>,<code>1607745002,</code></strong><code>0086724882.</code>）になります</p> </td>
   </tr>
   <tr>
    <td>SKU とカテゴリ ID（クエリ文字列内）</td>
@@ -361,7 +361,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
    >[!NOTE]
    ホットスポットを含むインタラクティブ画像を編集しているときに、画像を切り取ると、ホットスポットは削除されます。
 
-## （オプション）カルーセルバナーのプレビュー{#optional-previewing-carousel-banners}
+## （オプション）カルーセルバナーのプレビュー {#optional-previewing-carousel-banners}
 
 プレビューを使用して、カルーセルバナーが顧客に対してどのように表示されるかを確認し、カルーセルバナーのホットスポットと画像マップをテストして動作が期待どおりであるかを確認することができます。
 
@@ -395,7 +395,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 ホットスポットを含む既存のインタラクティブ画像をカルーセルバナー用として使用する場合は、カルーセルバナーを公開した後で、そのインタラクティブ画像を別に公開する必要があります。
 また、カルーセルバナーで使用している公開済みインタラクティブ画像を変更する場合は、そのインタラクティブ画像を公開する必要があります。その後、変更がカルーセルバナーに反映されます。
 
-カルーセルバナーの公開方法に関する情報については、「[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)」を参照してください。
+カルーセルバナーの公開方法に関する情報については、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 ## Web サイトページへのカルーセルバナーの追加  {#adding-a-carousel-banner-to-your-website-page}
 
