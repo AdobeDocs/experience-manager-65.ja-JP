@@ -36,7 +36,7 @@ ht-degree: 85%
 
 npmパッケージも参照してください。[https://www.npmjs.com/package/@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 
-## モデル駆動型単一ページアプリケーション{#model-driven-single-page-application}
+## モデル駆動型単一ページアプリケーション {#model-driven-single-page-application}
 
 AEM 用 JavaScript SPA SDK を利用する単一ページアプリケーションは、モデル主導です。
 
