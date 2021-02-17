@@ -134,7 +134,7 @@ Github から communities-srp-tools プロジェクトを取得します。
 * 先頭に`community`が付く
 * その後に[一意のサイトID](#community-unique-site-id)が続きます
 
-例： `community-engage-x0e11-members`
+例：`community-engage-x0e11-members`
 
 ### イネーブルメントアセット {#enablement-assets}
 
