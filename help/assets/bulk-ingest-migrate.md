@@ -27,7 +27,7 @@ ht-degree: 22%
 >
 >機能パックを使用して、AEMのDynamic MediaクラシックからDynamic Media- Scene7モードにアセットを一括移行したり、Dynamic MediaクラシックのFTP機能を使用してアセットを一括移行することは可能ですが、Adobeは複雑さのため、この方法を推奨しません。**
 >
->したがって、このような移行機能パックは、[Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)経由で行われた場合、移行プロジェクトの一部として&#x200B;**&#x200B;のみサポートされます。
+>したがって、[Adobe Professional Services](https://www.adobe.com/experience-cloud/consulting-services.html)を介して行われた場合、移行プロジェクトの一部として&#x200B;**&#x200B;のみがサポートされます。
 
 機能パックをインストールする前に、サービスユーザーを作成し、その情報をAdobeサポートに提供する必要があります。
 
