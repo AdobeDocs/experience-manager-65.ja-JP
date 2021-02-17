@@ -18,10 +18,10 @@ ht-degree: 72%
 
 [AEM Modernization Tools を使用すると、以下の変換を容易におこなえるようになります。](http://opensource.adobe.com/aem-modernize-tools/)
 
-* [](page-templates-static.md)静的テンプレートから編集可能テンプレートへ[](page-templates-editable.md)
-* [](page-templates-static.md)デザイン設定からポリシーへ[](page-templates-editable.md)
-* [](/help/sites-authoring/default-components-foundation.md)基盤コンポーネントからコアコンポーネントへ[](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [](website.md)クラシック UI からタッチ操作対応 UI へ[](touch-ui-concepts.md)
+* [](page-templates-static.md)[静的テンプレートから編集可能テンプレートへ](page-templates-editable.md)
+* [](page-templates-static.md)[デザイン設定からポリシーへ](page-templates-editable.md)
+* [](/help/sites-authoring/default-components-foundation.md)[基盤コンポーネントからコアコンポーネントへ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [](website.md)[クラシック UI からタッチ操作対応 UI へ](touch-ui-concepts.md)
 
 これらのツールの使用方法について詳しくは、[ぞれぞれのドキュメント](http://opensource.adobe.com/aem-modernize-tools/)を参照してください。
 
