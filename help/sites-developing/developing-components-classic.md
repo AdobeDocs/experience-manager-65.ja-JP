@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 workflow-type: tm+mt
 source-wordcount: '2423'
-ht-degree: 72%
+ht-degree: 73%
 
 ---
 
@@ -156,8 +156,8 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
    libs 内にあるものと同じノード構造を再作成してから、テキストコンポーネントなどの既存のコンポーネントの定義をコピーします。例えば、テキストコンポーネントをカスタマイズするには、次のようにコピーします。
 
-   * `/libs/foundation/components/text` から
-   * を `/apps/myProject/components/text`
+   * コピー元：`/libs/foundation/components/text`
+   * コピー先：`/apps/myProject/components/text`
 
 1. `jcr:title`を変更して新しい名前を反映します。
 1. 新しいコンポーネントフォルダーを開き、必要な変更をおこないます。また、フォルダー内にある不要な情報を削除します。
@@ -177,7 +177,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
    >
    >使用するコンポーネント：
    >
-   >* タッチ操作対応 UI では [Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) コンポーネントを使用します。
+   >* タッチ操作対応 UI では [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) コンポーネントを使用します。
    >* クラシック UI では [ExtJS ウィジェット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)を使用します。
 
 
@@ -198,7 +198,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
 
 1. 次のどちらかの方法で、段落システムで新しいコンポーネントを利用できるようにします。
 
-   * crxde liteを使用して`<path-to-component>`の値（例：`/apps/geometrixx/components/myComponent`）をノード`/etc/designs/geometrixx/jcr:content/contentpage/par`のプロパティコンポーネントに追加する
+   * CRXDE Liteを使用して`<path-to-component>`の値（例：`/apps/geometrixx/components/myComponent`）をノード`/etc/designs/geometrixx/jcr:content/contentpage/par`のプロパティコンポーネントに追加する
    * 「[段落システムへの新しいコンポーネントの追加](#adding-a-new-component-to-the-paragraph-system-design-mode)」の手順を実行します。
 
 1. AEM WCM で、Web サイトのページを開き、作成した新しいタイプの段落を挿入してコンポーネントが正常に動作することを確認します。
@@ -315,7 +315,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
       * 追加`tab3/items`に対する新しいフィールド定義、タイプ`cq:Widget`のノード位置
       * 新しい`tab3/items/position`ノードに次のプロパティ（文字列型）を設定します。
 
-         * `name`: `./imagePosition`
+         * `name`:  `./imagePosition`
          * `xtype`:  `selection`
          * `fieldLabel`:  `Image Position`
          * `type`:  `select`
