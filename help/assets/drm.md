@@ -1,12 +1,12 @@
 ---
 title: 資産のDigital Rights Management
-description: ' [!DNL Experience Manager]内のライセンス済みアセットのアセットの有効期限の状態と情報を管理する方法を説明します。'
+description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
 translation-type: tm+mt
 source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
 source-wordcount: '1398'
-ht-degree: 77%
+ht-degree: 80%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 77%
 
 1. [!DNL Assets] コンソールで、ツールバーの「**[!UICONTROL 検索]**」をクリックしてオムニサーチボックスを表示します。
 
-1. 「Omnisearch」ボックスにカーソルを置き、`Enter`キーを選択して検索結果ページを表示します。
+1. オムニサーチボックスにカーソルを置いて、`Enter` キーを押すと検索結果ページが表示されます。
 1. 左側のレールで検索パネルを開きます。 **[!UICONTROL 有効期限ステータス]**&#x200B;オプションをクリックして展開します。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
@@ -73,7 +73,7 @@ ht-degree: 77%
 
    >[!NOTE]
    >
-   >アセットの作成者（特定のアセットを[!DNL Assets]にアップロードする人）のみが、アセットの有効期限が切れたときに電子メールを受信します。 [!DNL Experience Manager]全体的な電子メール通知の設定に関する詳細は、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
+   >アセットの作成者（特定のアセットを[!DNL Assets]にアップロードした人）のみが、アセットの有効期限が切れたときに電子メールを受信します。 [!DNL Experience Manager]全体的な電子メール通知の設定に関する詳細は、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
 
 1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。アセットの作成者は、アセットの有効期限が切れる前に、指定した時間が経過するとアセットの有効期限が切れることを知らせるメッセージを受け取ります。 アセットの有効期限が切れると、有効期限が切れたことを知らせる別の通知を受け取ります。さらに、有効期限切れのアセットはアクティベートが解除されます。
 
@@ -110,7 +110,7 @@ ht-degree: 77%
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
 1. ステータスに基づいてアセットを検索するには、「**[!UICONTROL 検索]** ![検索オプション](assets/do-not-localize/search_icon.png)」をクリックしてOmnisearchバーを表示します。
-1. 「`Return`」を選択し、「[!DNL Experience Manager]」をクリックして検索パネルを表示します。
+1. `Return` キーを押し、「[!DNL Experience Manager]」をクリックして検索パネルを表示します。
 1. 検索パネルで、「**[!UICONTROL 公開ステータス]**」をクリックして「**[!UICONTROL 公開済み]**」を選択し、[!DNL Assets] で公開済みのアセットを検索します。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
