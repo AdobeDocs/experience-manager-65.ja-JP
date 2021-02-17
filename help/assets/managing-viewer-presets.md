@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: fff2c39561f54436f8e5613ac648cb91af888c66
 workflow-type: tm+mt
 source-wordcount: '4335'
-ht-degree: 90%
+ht-degree: 91%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 90%
 パス: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
 例：3.10 SDK:[https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-『[AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)』も参照してください。
+『[AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)』も参照してください。
 
 ここでは、ビューアプリセットを作成、編集および管理する方法について説明します。アセットをプレビューする際は、いつでもビューアプリセットを適用できます。詳しくは、[ビューアプリセットの適用](#applying-a-viewer-preset-to-an-asset)を参照してください。
 
@@ -43,7 +43,7 @@ ht-degree: 90%
 
 ## ビューアプリセットの管理 {#managing-viewer-presets-1}
 
-AEMで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット/ビューアプリセットをタップして、プレビュービューアプリセットを追加、編集、削除、公開、非公開およびにできます。]**
+AEMで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット/ビューアプリセットをタップして、ビューアプリセットを追加、編集、削除、公開、非公開およびプレビュービューアプリセットを追加できます。]**
 
 ![6_5_tools-assets-viewerpresets](assets/6_5_tools-assets-viewerpresets.png)
 
@@ -488,7 +488,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
   </tr>
   <tr>
    <td>セグメント</td>
-   <td><p><code>Segment </code>は、既製のインタラクティブビデオビューアプリセット <code>Shoppable_Video_light</code> と <code>Shoppable_Video_dark</code> および自身で作成するすべてのインタラクティブビデオビューアプリセットのデフォルトのディスプレイモードです。</p> <p>このモードでは、ビデオセグメントに割り当てられているサムネールの数がディスプレイパネル内に表示されるスポットの数よりも少ない場合、次または前のサブセグメントがパネル内の空のスポットを満たすように引っ張り込まれることはありません。<i></i>つまり、特定のビデオセグメントに割り当てられたスウォッチの表示を保持します。</p> </td>
+   <td><p><code>Segment </code>は、既製のインタラクティブビデオビューアプリセット <code>Shoppable_Video_light</code> と <code>Shoppable_Video_dark</code> および自身で作成するすべてのインタラクティブビデオビューアプリセットのデフォルトのディスプレイモードです。</p> <p>このモードでは、ビデオセグメントに割り当てられているサムネールの数がディスプレイパネル内に表示されるスポットの数よりも少ない場合、次または前のサブセグメントがパネル内の空のスポットを満たすように引っ張り込まれることはありません<i>。</i>つまり、特定のビデオセグメントに割り当てられたスウォッチの表示を保持します。</p> </td>
   </tr>
   <tr>
    <td>連続</td>
