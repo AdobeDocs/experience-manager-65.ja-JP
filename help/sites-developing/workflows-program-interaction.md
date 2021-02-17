@@ -493,7 +493,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 * ワークフローモデルエディターでは、モデルが`/var/workflow/models`の下の特定のノード構造を使用する必要があります。 モデルの親ノードは、次のプロパティ値を持つ`cq:Page`型の`jcr:content`ノードでなければなりません。
 
-   * `sling:resourceType`: `cq/workflow/components/pages/model`
+   * `sling:resourceType`:  `cq/workflow/components/pages/model`
    * `cq:template`:  `/libs/cq/workflow/templates/model`
 
    モデルを作成する際は、まずこの `cq:Page` ノードを作成し、その `jcr:content` ノードを model ノードの親として使用する必要があります。
