@@ -43,7 +43,7 @@ ht-degree: 71%
 * [割り当て](essentials-assignments.md)
 * [ブログ](blog-developer-basics.md) ( `Journal`)
 
-* [カレンダー](calendar-basics-for-developers.md)
+* [Calendar](calendar-basics-for-developers.md)
 * [カタログ](catalog-developer-essentials.md)
 * [おすすめコンテンツ](essentials-featured.md)
 * [ファイルライブラリ](essentials-file-library.md)
