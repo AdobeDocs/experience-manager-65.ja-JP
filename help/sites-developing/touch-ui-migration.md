@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
 workflow-type: tm+mt
 source-wordcount: '685'
-ht-degree: 12%
+ht-degree: 14%
 
 ---
 
@@ -150,7 +150,7 @@ ht-degree: 12%
 AEMの開発に関する詳細は、次のリソースのコレクションを参照してください。
 
 * [開発ユーザーガイド](/help/sites-developing/home.md)
-* [Granite UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5サイトのTutorialsとビデオ](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
 * [AEM Sites の開発の手引き - WKND チュートリアル](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
