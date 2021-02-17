@@ -41,7 +41,7 @@ Eclipse で AEM の開発を開始するには、次の手順を実行する必�
 >
 >このガイドは Eclipse 4.3（Kepler）と AEM 5.6.1 を基に作成されています。
 
-## Eclipse のインストール  {#install-eclipse}
+## Eclipse のインストール {#install-eclipse}
 
 [Eclipse のダウンロードページ](https://www.eclipse.org/downloads/)から「Eclipse IDE for Java EE Developers」をダウンロードします。
 
