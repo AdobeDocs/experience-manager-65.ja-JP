@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 61%
+ht-degree: 62%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 61%
 
 Adobe Experience Managerアセットブランドポータルを使用すると、承認されたブランドアセットをAdobe Experience ManagerアセットからBrand Portalに公開し、Brand Portalユーザに配信できます。
 
-AEM Assets は、Adobe 開発者コンソールを介して Brand Portal と連携して設定されます。このコンソールは、Adobe Identity Management サービス（IMS）アカウントトークンを調達し、Brand Portal テナントの認証を受けます。
+AEM Assets  と Brand Portal の連携は、Adobe 開発者コンソールを通じて設定されます。このコンソールでは、Brand Portal テナントの認証に使用する Adobe Identity Management サービス（IMS）アカウントトークンを調達します。
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ AEM Assets は、Adobe 開発者コンソールを介して Brand Portal と連�
 このヘルプでは、次の2つの使用例について説明します。
 
 * [新しい設定](#configure-new-integration-65):新しいBrand Portalユーザーで、Brand PortalでAEM Assetsの作成者インスタンスを設定する場合は、Adobe開発者コンソールで設定を作成できます。
-* [アップグレード設定](#upgrade-integration-65):既存のBrand Portalユーザーが従来のOAuth Gatewayに対して設定を行っている場合は、既存の設定を削除し、Adobe開発者コンソールを使用して新しい設定を作成します。
+* [アップグレード設定](#upgrade-integration-65):既存のBrand Portalユーザーが従来のOAuth Gatewayに対する設定を持っている場合は、既存の設定を削除し、Adobe開発者コンソールを使用して新しい設定を作成します。
 
 具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
 
@@ -121,7 +121,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
 1. Adobe IMS 設定ページで、「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL Adobe IMS 技術アカウント設定]**&#x200B;ページにリダイレクトされます。デフォルトでは、「**証明書**」タブが開きます。
 
-1. 「**[!UICONTROL クラウドソルーション]**」ドロップダウンリストで「**[!UICONTROL Adobe Brand Portal]**」を選択します。
+1. 「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで「**[!UICONTROL Adobe Brand Portal]**」を選択します。
 
 1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスをオンにして、公開鍵の&#x200B;**エイリアス**&#x200B;を指定します。ここで入力したエイリアスが、公開鍵になります。
 
@@ -147,7 +147,7 @@ Adobe 開発者コンソールで、プロジェクトと API を Brand Portal �
 
 サービスアカウント資格情報と JWT ペイロードを生成するには、次の手順を実行します。
 
-1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトの URL は次のとおりです。[https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui).
+1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトの URL は、[https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui) です。
 
 
    >[!NOTE]
@@ -164,7 +164,7 @@ Adobe 開発者コンソールで、プロジェクトと API を Brand Portal �
 
    AEM Brand Portal サービスにアクセスできることを確認します。
 
-1. **[!UICONTROL API を設定]**&#x200B;ウィンドウで、「**[!UICONTROL 公開鍵をアップロード]**」をクリックします。次に、「**[!UICONTROL ファイルを選択]**」をクリックし、[公開証明書の取得](#public-certificate)節でダウンロードした公開鍵（.crt ファイル）をアップロードします。
+1. **[!UICONTROL API を設定]**&#x200B;ウィンドウで、「**[!UICONTROL 公開鍵をアップロード]**」をクリックします。次に、「**[!UICONTROL ファイルを選択]**」をクリックし、[公開証明書の取得](#public-certificate)のセクションでダウンロードした公開鍵（.crt ファイル）をアップロードします。
 
    「**[!UICONTROL 次へ]**」をクリックします。
 
@@ -275,7 +275,7 @@ IMS アカウントを設定するには、次の手順を実行します。
 >
 >IMS 設定がヘルスチェックに合格していることを確認します。設定がヘルスチェックに合格しない場合は無効です。削除して、新しい有効な設定を作成する必要があります。
 
-### Cloud Service の設定{#configure-the-cloud-service}
+### Cloud Service の設定 {#configure-the-cloud-service}
 
 Brand Portal Cloud Service を設定するには、次の手順を実行します。
 
@@ -297,7 +297,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
    これで、AEM Assets作成者インスタンスがBrand Portalテナントと共に設定されました。
 
-### 設定のテスト{#test-integration}
+### 設定のテスト {#test-integration}
 
 設定を検証するには、次の手順を実行します。
 
@@ -321,7 +321,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
    >
    >レプリケーションエージェントは並行して動作し、ジョブの分散を均等に共有するので、パブリッシング速度を元の速度の4倍に増やします。 クラウドサービスの設定後、複数のアセットの並列発行を有効にするために、デフォルトでアクティブ化される複製エージェントを有効にするために、追加の設定は必要ありません。
 
-1. AEM AssetsとBrand Portalの接続を確認するには、**[!UICONTROL 接続をテスト]**&#x200B;アイコンをクリックします。
+1. AEM Assets  と Brand Portal の間の接続を確認するには、「**[!UICONTROL 接続をテスト]**」アイコンをクリックします。
 
    ![](assets/test-integration4.png)
 
