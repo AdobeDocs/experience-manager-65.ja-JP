@@ -22,7 +22,7 @@ ht-degree: 61%
 * [アダプティブフォームの作成](creating-adaptive-form.md)
 * [JSON スキーマ](https://json-schema.org/)
 
-## フォームモデルとしての JSON スキーマの使用  {#using-a-json-schema-as-form-model}
+## フォームモデルとしての JSON スキーマの使用   {#using-a-json-schema-as-form-model}
 
 [!DNL Adobe Experience Manager Forms] では、既存の JSON スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。JSON スキーマは、組織のバックエンドシステムによりデータの生成や消費が行われる構造を表しています。使用するJSONスキーマは、[v4仕様](https://json-schema.org/draft-04/schema)に準拠している必要があります。
 
@@ -333,7 +333,7 @@ JSONスキーマの例を示します。
 
 上記の例では、それぞれの顧客が出荷先と請求先のどちらの住所もある場合の顧客レコードを定義します。どちらの住所も構造（都道府県、市区町村、番地など）が同じ場合は、住所が重複しないようにすることをお勧めします。また、今後変更が行われたときに、簡単にフィールドを追加したり削除したりできます。
 
-## JSON スキーマ定義におけるフィールドの事前構成 {#pre-configuring-fields-in-json-schema-definition}
+## JSON スキーマ定義におけるフィールドの事前構成  {#pre-configuring-fields-in-json-schema-definition}
 
 **aem:afProperties**&#x200B;プロパティを使用して、JSONスキーマフィールドを事前設定し、カスタムアダプティブフォームコンポーネントにマップすることができます。 以下に例を示します。
 
