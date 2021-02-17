@@ -182,7 +182,7 @@ Analytics および Target との統合を設定すると、必要なクラウ�
 
 * 必要な資格情報がすべて入力された **marketingcloud.properties** ファイルを使用する場合は、次のパラメーターを送信する必要があります。
 
-   * `automaticProvisioning`= `true`
+   * `automaticProvisioning`=  `true`
    * `servicename`=  `analytics|target`
    * `path`=作成したクラウドサービス設定を接続する AEM ページへのパス
 
