@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
 workflow-type: tm+mt
 source-wordcount: '3533'
-ht-degree: 84%
+ht-degree: 88%
 
 ---
 
@@ -60,7 +60,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 >[!NOTE]
 >
->コンポーネントは、検索パスロジックに基づいたオーバーレイを使用して再定義することもできます。ただし、この場合、[Sling Resource Marge](/help/sites-developing/sling-resource-merger.md)はトリガされず、`/apps`はオーバーレイ全体を定義する必要があります。
+>コンポーネントは、検索パスロジックに基づいたオーバーレイを使用して再定義することもできます。ただし、その場合 [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) が呼び出されないので、`/apps` でオーバーレイ全体を定義する必要があります。
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ### Java の使用 {#using-java}
 
-[HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります](https://helpx.adobe.com/experience-manager/htl/using/use-api-java.html)。そのため、Java コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
+[HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります](https://helpx.adobe.com/jp/experience-manager/htl/using/use-api-java.html)。そのため、Java コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
 
 ### JavaScript の使用  {#using-javascript}
 
@@ -116,7 +116,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ## プレビュー動作の設定 {#configuring-the-preview-behavior}
 
-**プレビュー**&#x200B;モードに切り替えると、ページが更新されなくても [WCM モード](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie が設定されます。
+プレビューモードに切り替えると、ページが更新されなくても [WCM モード](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie が設定されます。****
 
 レンダリングが WCM モードの影響を受けるコンポーネントの場合は、明確にそのコンポーネントを更新し、この Cookie の値を使用するように定義する必要があります。
 
@@ -184,7 +184,7 @@ newComponent (cq:Component)
 
 ダイアログ自体が一種のコンポーネント（コンポーネントスクリプトによって動作と一緒にレンダリングされるマークアップや、クライアントライブラリが提供するスタイルなど）なので、ダイアログのカスタマイズはコンポーネントのカスタマイズに似ています。
 
-例えば、次を参照してください。
+詳しくは、例えば、以下を参照してください。
 
 * `/libs/foundation/components/text/cq:dialog`
 * `/libs/foundation/components/download/cq:dialog`
@@ -197,7 +197,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->次のページを参照してください。
+>以下を参照してください。
 >
 >* [ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッション。
 >* 「[コードサンプル - ダイアログフィールドのカスタマイズ方法](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)」で説明されている関連サンプルコード。
@@ -249,7 +249,7 @@ newComponent (cq:Component)
 * コンポーネントの継承（`sling:resourceSuperType`）によって、指定された Granite UI フィールドを拡張する
 * ウィジェットライブラリ API（JS/CSS 継承）に従って、指定されたウィジェットを基となるウィジェットライブラリ（Granite UI の場合は Coral UI）から拡張する
 
-#### ダイアログフィールドへのアクセス  {#access-to-dialog-fields}
+#### ダイアログフィールドへのアクセス {#access-to-dialog-fields}
 
 レンダリング条件（`rendercondition`）を使用して、ダイアログ内の特定のタブやフィールドへのアクセス権を持つユーザーを制御することもできます。以下に例を示します。
 
@@ -311,9 +311,9 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 
 #### フィールドの検証（Granite UI）  {#field-validation-granite-ui}
 
-Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。[詳しくは、`foundation-valdiation` に関する Granite のドキュメントを参照してください。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。[詳しくは、`foundation-valdiation`Granite のドキュメントを参照してください。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
-例えば、次を参照してください。
+詳しくは、例えば、以下を参照してください。
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield/js/validations.js`
 
