@@ -74,12 +74,12 @@ jcrコンテンツとjsonを介した匿名ユーザーによるアクセスか�
 
    ![サイト認証](assets/site-authentication.png)
 
-1. ログ追加インページのパス。 例： `/content/......./GetStarted`
+1. ログ追加インページのパス。 例：`/content/......./GetStarted`
 1. ページを公開します。
 
 ## 登録済みメンバー {#enrolled-member}
 
-このエクスペリエンスは、`Riley Taylor`と`Sidney Croft`が[作成](enablement-setup.md#publishcreateenablementmembers)で[割り当て](resource.md#settings)を&#x200B;*Ski Lessons*&#x200B;の学習パスに、*Community Ski Class*&#x200B;グループのメンバーシップに依存しています。
+このエクスペリエンスは、`Riley Taylor`と`Sidney Croft`が[作成](enablement-setup.md#publishcreateenablementmembers)で[割り当て](resource.md#settings)を&#x200B;*Ski Lessons*&#x200B;の学習パス&#x200B;*コミュニティスキークラス*&#x200B;グループに依存しています。
 
 ログイン
 
@@ -196,7 +196,7 @@ Sidney Croft（sidney／password）としてログインおよびログインし
    * Q&amp;A 質問
    * ブログ
    * ブログ記事
-   * カレンダー
+   * Calendar
    * カレンダーイベント
 
 ### リソースコンソール {#resources-console}
