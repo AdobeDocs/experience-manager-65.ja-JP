@@ -155,7 +155,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サポート対象</td>
   </tr> 
    <tr>
-   <td>Oracle・データベース19c(Standard、Real Application Clusters(RAC)およびEnterpriseエディション) </td>
+   <td>Oracleデータベース19c(Standard、Real Application Clusters(RAC)およびEnterpriseエディション) </td>
    <td>Repository Microkernal </td>
    <td>サポート対象</td>
   </tr>
