@@ -59,7 +59,7 @@ ht-degree: 73%
 
 独自のカスタマイズされた実行モードも作成できます。これらを組み合わせて次のようなシナリオに対応できます。
 
-* `author` + `development`
+* `author` +  `development`
 
 * `publish` +  `test`
 
