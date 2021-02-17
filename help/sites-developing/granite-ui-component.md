@@ -54,7 +54,7 @@ Granite コンポーネントを開発または拡張するには、Granite UI �
 
 詳しくは、[Granite UI に関するドキュメント - フィールド](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)を参照してください。
 
-例えば、次を参照してください。
+詳しくは、例えば、以下を参照してください。
 
 * `cqgems/customizingfield/components/colorpicker`
 
