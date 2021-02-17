@@ -58,7 +58,7 @@ ht-degree: 92%
  <tbody>
   <tr>
    <td><strong>ステップ</strong></td>
-   <td><strong>タイトル</strong></td>
+   <td><strong>title（タイトル）</strong></td>
    <td><strong>リソース</strong></td>
   </tr>
   <tr>
