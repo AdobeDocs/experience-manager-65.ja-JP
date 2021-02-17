@@ -328,7 +328,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![screen_shot_2012-04-23at25244pm](assets/screen_shot_2012-04-23at25244pm.png)
 
-#### サムネール {#thumbnail}
+#### サムネール  {#thumbnail}
 
 サムネールコンポーネントでは、選択したサムネールがアセットで表示されます（多くの形式でサムネールは自動的に抽出されます）。さらに、コンポーネントではファイル名と、[変更可能なアクション](/help/assets/assets-finder-editor.md#adding-asset-editor-actions)が表示されます。
 
