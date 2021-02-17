@@ -643,7 +643,7 @@ SSO認証を実行するクライアントアプリケーションの作成方�
  
 ```
 
-### logout.mxmlファイル{#creating-the-logout-mxml-file}を作成しています
+### logout.mxmlファイル{#creating-the-logout-mxml-file}の作成
 
 次のコードは、logout.mxmlファイルを表しています。
 
