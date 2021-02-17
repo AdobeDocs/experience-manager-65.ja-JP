@@ -10,7 +10,7 @@ translation-type: tm+mt
 source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
 workflow-type: tm+mt
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 2014年1月31日をもって、DHTMLビューアプラットフォームは正式に提供終了となります。
 
-サポートされている最新のビューアについては、『Dynamic Mediaビューアリファレンスガイド[』を参照してください。](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html)
+サポートされている最新のビューアについては、『[Dynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)』を参照してください。
 
 <!-- OBSOLETE CONTENT **What is the change?**
 
