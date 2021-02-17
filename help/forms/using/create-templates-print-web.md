@@ -240,11 +240,11 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
    | 名前 | タイトル | 列数 |
    |---|---|---|
    | customerdetails | 顧客情報 | 1 |
-   | billsummary | 請求内容 | 3 |
+   | billsummary | 請求内容 | 1 |
    | summarycharges | 請求概要 | 2 |
    | itemisedcalls | 通話明細 | 1 |
    | paynow | Pay Now | 2 |
-   | vas | 付加価値サービス | 3 |
+   | vas | 付加価値サービス | 1 |
 
    次の画像は、すべてのパネルがテンプレートに追加された後のコンテンツツリーを示しています。
 
