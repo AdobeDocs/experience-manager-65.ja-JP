@@ -85,7 +85,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-### $host {#host}
+### $ホスト {#host}
 
 <table>
  <tbody>
