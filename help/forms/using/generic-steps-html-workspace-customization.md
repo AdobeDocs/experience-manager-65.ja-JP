@@ -54,7 +54,7 @@ ht-degree: 40%
    <link lang="en" rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
    ```
 
-   を
+   コピー先：
 
    ```javascript
    <link lang="en" rel="stylesheet" type="text/css" href="../../libs/ws/css/style.css" />
@@ -72,7 +72,7 @@ ht-degree: 40%
    <script data-main="js/main" src="js/libs/require/require.js"></script>
    ```
 
-   を
+   コピー先：
 
    ```jsp
    <script data-main="js/main" src="../../libs/ws/js/libs/require/require.js"></script>
