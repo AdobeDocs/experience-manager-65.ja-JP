@@ -30,7 +30,7 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
 * [アダプティブフォームのテストの作成](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-case-to-prefill-values-in-an-adaptive-form)
 * [アダプティブフォーム用に作成されたテストスイートとテストの実行](#step-run-all-the-tests-in-a-suite-or-individual-tests-cases)
 
-## 手順1:テストスイートの作成{#step-create-a-test-suite}
+## 手順1:テストスイート{#step-create-a-test-suite}の作成
 
 テストスイートには、テストケースが集まっています。 複数のテストスイートを設定できます。 フォームごとに個別のテストスイートを作成することをお勧めします。 テストスイートを作成するには：
 
