@@ -13,14 +13,14 @@ translation-type: tm+mt
 source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 72%
+ht-degree: 83%
 
 ---
 
 
 # エラーハンドラーによって表示されるページのカスタマイズ{#customizing-pages-shown-by-the-error-handler}
 
-AEMには、HTTPエラーを処理するための標準的なエラーハンドラが付属しています。例えば、次のように表示します。
+AEM には、HTTP エラーを処理するための標準的なエラーハンドラーが付属しています。例えば、次のようなメッセージが表示されます。
 
 ![chlimage_1-67](assets/chlimage_1-67a.png)
 
@@ -41,22 +41,22 @@ AEMには、HTTPエラーを処理するための標準的なエラーハンド�
 
 ## エラーハンドラーによって表示されるページのカスタマイズ方法  {#how-to-customize-pages-shown-by-the-error-handler}
 
-エラーが発生した場合にエラーハンドラーによって表示されるページをカスタマイズする独自のスクリプトを作成できます。 カスタマイズしたページが`/apps`の下に作成され、（`/libs`の下の）デフォルトのページにオーバーレイされます。
+独自のスクリプトを作成して、エラーの発生時にエラーハンドラーで表示されるページをカスタマイズできます。カスタマイズしたページが`/apps`の下に作成され、（`/libs`の下の）デフォルトのページにオーバーレイされます。
 
 >[!NOTE]
 >
 >詳しくは、[オーバーレイの使用方法](/help/sites-developing/overlays.md)を参照してください。
 
-1. リポジトリ内で、デフォルトスクリプトをコピーします。
+1. リポジトリー内で、デフォルトスクリプトを次のようにコピーします。
 
-   * `/libs/sling/servlet/errorhandler/` から
-   * を `/apps/sling/servlet/errorhandler/`
+   * コピー元：`/libs/sling/servlet/errorhandler/`
+   * コピー先：`/apps/sling/servlet/errorhandler/`
 
    コピー先のパスはデフォルトでは存在しないので、最初は作成する必要があります。
 
 1. `/apps/sling/servlet/errorhandler` に移動します。次のどちらかを実行します。
 
-   * 既存のスクリプトを編集し、必要な情報を追加します。
+   * 該当する既存のスクリプトを編集し、必要な情報を追加します。
    * 必要とするコード用に新しいスクリプトを作成し、編集します。
 
 1. 変更を保存し、テストします。
@@ -67,7 +67,7 @@ AEMには、HTTPエラーを処理するための標準的なエラーハンド�
 >
 >そのため、これらの 2 つのハンドラーを置き換える際には十分に気をつけて作業してください。
 
-### HTTP 500 エラーへの応答のカスタマイズ  {#customizing-the-response-to-http-errors}
+### HTTP 500 エラーへの応答のカスタマイズ {#customizing-the-response-to-http-errors}
 
 HTTP 500 エラーはサーバー側の例外によって発生します。
 
@@ -84,11 +84,11 @@ HTTP 500 エラーはサーバー側の例外によって発生します。
 
    これらは応答の本文内で返されます。
 
-[エラーハンドラーによって表示されるページをカスタマイズする](#how-to-customize-pages-shown-by-the-error-handler)ことで、`500.jsp` スクリプトを作成できます。ただし、`HttpServletResponse.sendError(500)`が明示的に実行された場合にのみ使用されます。例えば、例外キャッチャーから。
+[エラーハンドラーで表示されるページをカスタマイズする](#how-to-customize-pages-shown-by-the-error-handler)ことで、`500.jsp` スクリプトを作成できます。ただし、このスクリプトが使用されるのは、`HttpServletResponse.sendError(500)` が明示的に（例外キャッチャーから）実行される場合に限ります。
 
-それ以外の場合は、応答コードは に設定されますが、`500.jsp`500.  スクリプトは実行されません。
+それ以外の場合は、応答コードは 500 に設定されますが、`500.jsp` スクリプトは実行されません。
 
-500 エラーを処理するには、エラーハンドラースクリプトの名前を例外クラス（またはスーパークラス）と同じにする必要があります。このような例外をすべて処理するには、スクリプト`/apps/sling/servlet/errorhandler/Throwable.js`pまたは`/apps/sling/servlet/errorhandler/Exception.jsp`を作成します。
+500 エラーを処理するには、エラーハンドラースクリプトのファイル名を例外クラス（またはスーパークラス）と同じにする必要があります。このような例外をすべて処理するには、スクリプト`/apps/sling/servlet/errorhandler/Throwable.js`pまたは`/apps/sling/servlet/errorhandler/Exception.jsp`を作成します。
 
 >[!CAUTION]
 >
@@ -96,5 +96,5 @@ HTTP 500 エラーはサーバー側の例外によって発生します。
 >
 >カスタムエラーハンドラーの場合、コード 500 を含む応答が必要です。そのため、[CQ WCM Debug Filter を無効にする必要があります](/help/sites-deploying/osgi-configuration-settings.md)。そうすることで、応答コード 500 が返され、それによって正しい Sling エラーハンドラーがトリガーされます。
 >
->パブリッシュインスタンスでは、CQ WCM Debug Filter は、有効として設定されている場合も含めて常に無効になります。**
+>パブリッシュインスタンスでは、CQ WCM Debug Filter は、有効として設定されている場合も含めて&#x200B;*常に*&#x200B;無効になります。
 
