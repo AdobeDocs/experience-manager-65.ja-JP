@@ -473,7 +473,7 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
 
 ## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}を使用したフラグメントに基づくフォームのレンダリング
 
-次のコードの例は、フラグメントに基づくフォームをレンダリングします。 フォームデザインの名前は&#x200B;*PurchaseOrderDynamic.xdp*&#x200B;で、AEM Formsリポジトリ内にあります（XDPファイルはリポジトリ内のFormsFolderという名前のフォルダーに保存されます）。 また、POFragmentフォームが参照するフラグメントもリポジトリ内に配置する必要があります。 (「[フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)」を参照)。
+次のコードの例は、フラグメントに基づくフォームをレンダリングします。 フォームデザインの名前は&#x200B;*PurchaseOrderDynamic.xdp*&#x200B;で、AEM Formsリポジトリ内にあります（XDPファイルはリポジトリ内のFormsFolderという名前のフォルダーに保存されます）。 また、POFragmentフォームが参照するフラグメントもリポジトリ内に配置する必要があります。 ([フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)を参照)。
 
 ```java
  /*
