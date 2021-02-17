@@ -160,7 +160,7 @@ HTML5 **[!UICONTROL フライアウト]**&#x200B;コンポーネントでは、�
 
 ### 画像 {#image}
 
-Dynamic Mediaクラシック&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネントを使用すると、Dynamic Mediaクラシック修飾子、画像またはビューアプリセット、シャープなどのDynamic Mediaクラシック機能を画像に追加できます。 Dynamic Mediaクラシック&#x200B;**[!UICONTROL イメージ]**&#x200B;コンポーネントは、特別なDynamic Mediaクラシック機能を持つAEMの他のイメージコンポーネントと似ています。 この例では、画像にDynamic MediaクラシックURL修飾子`&op_invert=1`が適用されています。
+Dynamic Mediaクラシック&#x200B;**[!UICONTROL イメージ]**&#x200B;コンポーネントを使用すると、Dynamic Mediaクラシック修飾子、画像またはビューアプリセット、シャープなどのDynamic Mediaクラシック機能を画像に追加できます。 Dynamic Mediaクラシック&#x200B;**[!UICONTROL イメージ]**&#x200B;コンポーネントは、特別なDynamic Mediaクラシック機能を持つAEMの他のイメージコンポーネントと似ています。 この例では、画像にDynamic MediaクラシックURL修飾子`&op_invert=1`が適用されています。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
