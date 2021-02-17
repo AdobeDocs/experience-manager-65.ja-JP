@@ -1,7 +1,7 @@
 ---
-title: AEM FORMS用AEMデスクトップアプリケーション
-seo-title: AEM FORMS用AEMデスクトップアプリケーション
-description: AEM FORMS用AEMデスクトップアプリケーション
+title: AEM Forms用AEMデスクトップアプリケーション
+seo-title: AEM Forms用AEMデスクトップアプリケーション
+description: AEM Forms用AEMデスクトップアプリケーション
 uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -17,7 +17,7 @@ ht-degree: 57%
 ---
 
 
-# AEM FORMS用AEMデスクトップアプリケーション{#aem-desktop-app-for-aem-forms}
+# AEM Forms用AEMデスクトップアプリケーション{#aem-desktop-app-for-aem-forms}
 
 AEMデスクトップアプリでは、Adobe Experience Manager(AEM)アセットリポジトリとAEM Formsバイナリファイルを、システム上のネットワークディレクトリにマップできます。 同期されたアセットとバイナリファイルをファイルエクスプローラーで表示し、各種のアプリケーションを使用してファイルを編集することができます。ファイルを表示するだけでなく、バイナリファイルの作成、アップロード、削除を行うこともできます。また、ソフトウェアから、ファイルのオープン、編集、保存を直接実行することもできます。例えば、Designer で直接 XDP ファイルを開いて編集することができます。アセットに対してローカルで行った変更内容は、AEM アセットリポジトリと AEM Forms の UI に反映されます。
 
