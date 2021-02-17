@@ -82,7 +82,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
 1. [監視フォルダー](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成し、Batch APIを使用するように設定します。
    1. AEM Forms作成者インスタンスにログインします。
    1. **[!UICONTROL ツール]** > **[!UICONTROL Forms]** > **[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。 「**[!UICONTROL 新規]**」をタップします。
-   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的な&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。 例： `c:\batchprocessing`
+   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的な&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。 例：`c:\batchprocessing`
    1. **[!UICONTROL 「]**&#x200B;を使用してファイルを処理」フィールドで、**[!UICONTROL サービス]**&#x200B;オプションを選択します。
    1. **[!UICONTROL サービス名]**&#x200B;フィールドで、**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;サービスを選択します。
    1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。 例えば、%F/ [pattern](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns)は、監視フォルダーがWatched Folder\inputフォルダーのサブフォルダー内の入力ファイルを検索できるように指定します。
@@ -93,7 +93,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
       |--- |--- |--- |
       | templatePath | String | 使用する対話型通信テンプレートのパスを指定します。 例：/content/dam/formsanddocuments/testsample/mediumic これは必須プロパティです。 |
       | recordPath | 文字列 | recordPathフィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPathフィールドの値として設定できます。 例えば、/employee/Idを指定した場合、idフィールドの値は、対応する対話型通信の名前になります。 デフォルト値はランダム[ランダムUUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())です。 |
-      | usePrefillService | Boolean | 値をFalseに設定します。 usePrefillServiceパラメーターを使用すると、対応する対話型通信用に設定された事前入力サービスから取得したデータを使用して、対話型通信を事前入力できます。 usePrefillServiceがtrueに設定されている場合、（レコードごとの）入力JSONデータはFDM引数として扱われます。 デフォルト値は false です。 |
+      | usePrefillService | ブール値 | 値をFalseに設定します。 usePrefillServiceパラメーターを使用すると、対応する対話型通信用に設定された事前入力サービスから取得したデータを使用して、対話型通信を事前入力できます。 usePrefillServiceがtrueに設定されている場合、（各レコードの）入力JSONデータはFDM引数として扱われます。 デフォルト値は false です。 |
       | batchType | 文字列 | 値をPRINT、WEBまたはWEB_AND_PRINTに設定します。 デフォルト値はWEB_AND_PRINTです。 |
       | locale | 文字列 | Outputのインタラクティブ通信のロケールを指定します。 標準搭載のサービスではロケールオプションを使用しませんが、カスタムサービスを作成してローカライズされたインタラクティブ通信を生成することができます。 デフォルト値はen_USです。 |
 
@@ -144,7 +144,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
 1. [監視フォルダー](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成し、Batch APIサービスを使用するように設定します。
    1. AEM Forms作成者インスタンスにログインします。
    1. **[!UICONTROL ツール]** > **[!UICONTROL Forms]** > **[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。 「**[!UICONTROL 新規]**」をタップします。
-   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的な&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。 例： `c:\batchprocessing`
+   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的な&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。 例：`c:\batchprocessing`
    1. **[!UICONTROL 「]**&#x200B;を使用してファイルを処理」フィールドで、**[!UICONTROL サービス]**&#x200B;オプションを選択します。
    1. **[!UICONTROL サービス名]**&#x200B;フィールドで、**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;サービスを選択します。
    1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。 例えば、%F/ [pattern](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns)は、監視フォルダーがWatched Folder\inputフォルダーのサブフォルダー内の入力ファイルを検索できるように指定します。
@@ -155,7 +155,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
       |--- |--- |--- |
       | templatePath | 文字列 | 使用する対話型通信テンプレートのパスを指定します。 例：/content/dam/formsanddocuments/testsample/mediumic これは必須プロパティです。 |
       | recordPath | 文字列 | recordPathフィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPathフィールドの値として設定できます。 例えば、/employee/Idを指定した場合、idフィールドの値は、対応する対話型通信の名前になります。 デフォルト値はランダム[ランダムUUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())です。 |  |
-      | usePrefillService | ブール値 | 値をTrueに設定します。 デフォルト値は false です。この値をtrueに設定すると、Batch APIは設定されたForm Data Modelからデータを読み取り、インタラクティブ通信に入力します。 usePrefillServiceがtrueに設定されている場合、（レコードごとの）入力JSONデータはFDM引数として扱われます。 |
+      | usePrefillService | ブール値 | 値をTrueに設定します。 デフォルト値は false です。この値をtrueに設定すると、Batch APIは設定されたForm Data Modelからデータを読み取り、インタラクティブ通信に入力します。 usePrefillServiceがtrueに設定されている場合、（各レコードの）入力JSONデータはFDM引数として扱われます。 |
       | batchType | 文字列 | 値をPRINT、WEBまたはWEB_AND_PRINTに設定します。 デフォルト値はWEB_AND_PRINTです。 |
       | locale | 文字列 | Outputのインタラクティブ通信のロケールを指定します。 標準搭載のサービスではロケールオプションを使用しませんが、カスタムサービスを作成してローカライズされたインタラクティブ通信を生成することができます。 デフォルト値はen_USです。 |
 
@@ -173,7 +173,7 @@ JSONファイルに保存されたレコードからインタラクティブな�
 
 Representational State Transfer(REST)要求を通じて[Batch API](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)を呼び出すことができます。 これにより、他のユーザーがAPIにアクセスできるようにRESTエンドポイントを提供し、インタラクティブ通信を処理、保存、カスタマイズするための独自のメソッドを設定できます。 独自のカスタムJavaサーブレットを開発し、AEMインスタンスにAPIをデプロイできます。
 
-Javaサーブレットをデプロイする前に、インタラクティブな通信を行い、対応するデータファイルが準備できていることを確認します。 次の手順を実行して、Javaサーブレットを作成しデプロイします。
+Javaサーブレットをデプロイする前に、インタラクティブな通信を行い、対応するデータファイルの準備が整っていることを確認します。 次の手順を実行して、Javaサーブレットを作成しデプロイします。
 
 1. AEMインスタンスにログインし、インタラクティブ通信を作成します。 以下のサンプルコードに記載されている対話型の通信を使用するには、[ここ](assets/SimpleMediumIC.zip)をクリックしてください。
 1. [AEMインスタンスでApache ](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) Mavenonを使用してAEMプロジェクトを構築し、デプロイします。
