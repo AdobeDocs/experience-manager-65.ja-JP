@@ -35,7 +35,7 @@ AEM Communities コンポーネントの設定でタグ付けを有効化する�
 UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)または次のいずれかの機能を設定する際に有効化することができます。
 
 * [ブログ](blog-feature.md)
-* [カレンダー](calendar.md)
+* [Calendar](calendar.md)
 * [ファイルライブラリ](file-library.md)
 * [フォーラム](forum.md)
 * [Q&amp;A](working-with-qna.md)
@@ -52,7 +52,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
