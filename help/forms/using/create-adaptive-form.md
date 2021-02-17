@@ -116,7 +116,7 @@ AEM [!DNL Forms]は、アダプティブフォーム上に情報を表示する�
 
    | プロパティ | 値 |
    |---|---|
-   | タイトル | 郵便番号 |
+   | title（タイトル） | 郵便番号 |
    | 要素名 | customer_ZIPCode |
    | 最大桁数 | 6 |
    | 必須フィールド | 有効 |
@@ -126,7 +126,7 @@ AEM [!DNL Forms]は、アダプティブフォーム上に情報を表示する�
 
    | プロパティ | 値 |
    |---|---|
-   | タイトル | 電子メール |
+   | title（タイトル） | 電子メール |
    | 要素名 | customer_Email |
    | 必須フィールド | 有効 |
 
@@ -139,7 +139,7 @@ AEM [!DNL Forms]は、アダプティブフォーム上に情報を表示する�
       <td><b>値</b></td> 
      </tr> 
      <tr> 
-      <td>タイトル</td> 
+      <td>title（タイトル）</td> 
       <td>Government approved address proof<br /> </td> 
      </tr> 
      <tr> 
