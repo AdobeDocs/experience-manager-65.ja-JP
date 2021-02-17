@@ -169,7 +169,7 @@ JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
    * フォーラムコンポーネントノードを見つけます
 
       `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
-( `sling:resourceType = social/forum/components/hbs/forum`)
+(  `sling:resourceType = social/forum/components/hbs/forum`)
 
    * バ追加ッジを表示するプロパティ
 
