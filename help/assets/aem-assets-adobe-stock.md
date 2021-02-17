@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '1080'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->[!DNL Adobe Stock] から検索されたアセットは [!DNL Experience Manager] に表示されるだけです。[アセットを保存](/help/assets/aem-assets-adobe-stock.md#saveassets)するか、[アセットにライセンスを付与して保存](/help/assets/aem-assets-adobe-stock.md#licenseassets)した後でないと、[!DNL Adobe Stock] アセットを取得して [!DNL Experience Manager] リポジトリに保存することはできません。既に [!DNL Experience Manager] に保存されているアセットが表示され、参照やアクセスが簡単にできるようにハイライトされます。また、[!DNL Stock] アセットは、ソースが [!DNL Stock] であることを示すいくつかの追加メタデータとともに保存されます。
+>[!DNL Adobe Stock] から検索されたアセットは [!DNL Experience Manager] に表示されるだけです。[アセットを保存](/help/assets/aem-assets-adobe-stock.md#saveassets)するか、[アセットにライセンスを付与して保存](/help/assets/aem-assets-adobe-stock.md#licenseassets)した後でないと、[!DNL Adobe Stock] アセットを取得して [!DNL Experience Manager] リポジトリーに保存することはできません。既に [!DNL Experience Manager] に保存されているアセットが表示され、参照やアクセスが簡単にできるようにハイライトされます。また、[!DNL Stock] アセットは、ソースが [!DNL Stock] であることを示すいくつかの追加メタデータとともに保存されます。
 
 ![検索結果での検索フィルター [!DNL Experience Manager] および強調表示 [!DNL Adobe Stock] されたアセット](assets/aem-search-filters2.jpg)
 
@@ -122,7 +122,7 @@ ht-degree: 92%
 
 >[!MORELIKETHIS]
 >
->* [アセットの [!DNL Adobe Stock] 使用に関するビデオチュートリアル [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
+>* [アセットの [!DNL Adobe Stock] 使用に関するビデオチュートリアル [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
 >* [[!DNL Adobe Stock] エンタープライズプランヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
 >* [[!DNL Adobe Stock] FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 
