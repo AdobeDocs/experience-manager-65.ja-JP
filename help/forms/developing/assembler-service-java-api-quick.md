@@ -457,7 +457,7 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
 
 ## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}を使用したベイツナンバリングを使用したPDFドキュメントのアセンブリ
 
-以下のJavaコードの例は、一意のページ識別子（ベート番号）を使用してPDFドキュメントをアセンブリしています。 DDXドキュメントの名前は&#x200B;*shell_Bates.xml*&#x200B;です。 Assemblerサービスから返されるPDFドキュメントは、*AssemblerResultBatesPDF.pdf*&#x200B;というPDFファイルとして保存されます。 (「[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)」を参照)。
+次のJavaコードの例は、一意のページ識別子（ベート番号）を使用してPDFドキュメントをアセンブリしています。 DDXドキュメントの名前は&#x200B;*shell_Bates.xml*&#x200B;です。 Assemblerサービスから返されるPDFドキュメントは、*AssemblerResultBatesPDF.pdf*&#x200B;というPDFファイルとして保存されます。 (「[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)」を参照)。
 
 ```java
  /*
@@ -1691,7 +1691,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 >[!NOTE]
 >
->`PDFUtility` acrobatを使用して修正対象としてマークされたPDFのみを修正できます。
+>`PDFUtility` Acrobatを使用して修正対象としてマークされたPDFのみを修正できます。
 
 ```java
 /*
