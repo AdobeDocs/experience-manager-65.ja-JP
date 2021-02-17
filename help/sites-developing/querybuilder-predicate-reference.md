@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
 workflow-type: tm+mt
 source-wordcount: '2323'
-ht-degree: 56%
+ht-degree: 62%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 56%
 ## 一般 {#general}
 
 * [root](#root)
-* [グループ](#group)
+* [group](#group)
 * [orderby](#orderby)
 
 ## 述語 {#predicates}
@@ -51,7 +51,7 @@ ht-degree: 56%
 * [tagsearch](/help/sites-developing/querybuilder-predicate-reference.md#tagsearch)
 * [type](/help/sites-developing/querybuilder-predicate-reference.md#type)
 
-### boolproperty  {#boolproperty}
+### boolproperty {#boolproperty}
 
 JCR BOOLEAN プロパティに一致します。「 `true` 」と「 `false` 」の値のみを受け入れます。 「`false`」では、プロパティの値が「`false`」の場合または存在しない場合に一致します。有効になっている場合のみ設定されるブール型のフラグをチェックする際に便利です。
 
@@ -91,11 +91,11 @@ booleanpropertyプロパティの相対パス
 
 * **property1**
 
-   最初の日付プロパティへのパス
+   1 つ目の日付プロパティのパス
 
 * **property2**
 
-   2番目の日付プロパティへのパス
+   2 つ目の日付プロパティのパス
 
 * **operation**
 
@@ -103,8 +103,7 @@ booleanpropertyプロパティの相対パス
 
 ### daterange {#daterange}
 
-JCR DATE プロパティと日時の間隔を照合します。これはISO8601
-日付と時間の形式(`YYYY-MM-DDTHH:mm:ss.SSSZ`)を指定し、`YYYY-MM-DD`のように部分的な表現も許可します。 また、ミリ秒数のタイムスタンプ（UTC タイムゾーン、UNIX 時刻形式、1970 年以降）を指定することもできます。
+JCR DATE プロパティと日時の間隔を照合します。ISO8601 形式の日時（`YYYY-MM-DDTHH:mm:ss.SSSZ`）を使用します。`YYYY-MM-DD` などの部分表記も可能です。また、ミリ秒数のタイムスタンプ（UTC タイムゾーン、UNIX 時刻形式、1970 年以降）を指定することもできます。
 
 2 つのタイムスタンプの間や、特定の日付より前または後のものを検索できるほか、両値を含めるか含めないかを選択することもできます。
 
@@ -170,7 +169,7 @@ JCR DATE プロパティと日時の間隔を照合します。これはISO8601
 
     プロパティまたはサブノードの検索の相対パス。このプロパティはオプションです。
 
-### グループ {#group}
+### group {#group}
 
 ネストされた条件を作成できます。グループにはネストされたグループを含めることができます。querybuilder クエリのすべての要素は、暗黙的にルートグループに含まれます。ルートグループでは、`p.or` および `p.not` パラメーターを指定できます。
 
@@ -184,7 +183,7 @@ group.2_property=navTitle
 group.2_property.value=My Page
 ```
 
-これは概念的には`(1_property` OR `2_property)`です。
+これは概念上は `(1_property` OR `2_property)` になります。
 
 ネストされたグループの例は次のとおりです。
 
@@ -199,7 +198,7 @@ group.2_group.type=dam:Asset
 
 これは、`/content/geometrixx/en`のページ内または`/content/dam/geometrixx`のアセット内で、「**管理**」という語を検索します。
 
-これは概念的に`fulltext AND ( (path AND type) OR (path AND type) )`です。 このような OR 結合では、パフォーマンスの観点から適切なインデックスが必要です。
+これは概念上は `fulltext AND ( (path AND type) OR (path AND type) )` になります。このような OR 結合では、パフォーマンスの観点から適切なインデックスが必要です。
 
 #### プロパティ {#properties-6}
 
@@ -213,7 +212,7 @@ group.2_group.type=dam:Asset
 
 * **&lt;predicate>**
 
-   入れ子の述語を追加します。
+   ネストされた述語を追加します
 
 * **N_&lt;predicate>**
 
@@ -261,7 +260,7 @@ group.2_group.type=dam:Asset
 
 ### memberOf {#memberof}
 
-特定の [sling リソースコレクション](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)のメンバーである項目を検索します。
+特定の [sling リソースコレクション](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)のメンバーである項目を検索します。
 
 これはフィルターのみの述語で、検索インデックスは利用できません。ファセットの抽出には対応していません。
 
@@ -269,7 +268,7 @@ group.2_group.type=dam:Asset
 
 * **memberOf**
 
-   Slingリソースコレクションのパス
+   Sling リソースコレクションのパス
 
 ### nodename {#nodename}
 
@@ -281,7 +280,7 @@ JCR ノード名と一致します。
 
 * **ノデナム**
 
-   ワイルドカードを使用できるノード名パターン：`*` =任意または文字なし、`?` =任意の文字、`[abc]` =角括弧内の文字のみ
+   ワイルドカードを使用できるノード名パターン：`*` は 0 個以上の任意の文字、`?` は任意の文字、`[abc]` は角括弧内の文字のみ
 
 ### notexpired {#notexpired}
 
@@ -303,13 +302,13 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 ### orderby {#orderby}
 
-結果の並べ替えを有効にします。複数のプロパティで順序付けが必要な場合は、`1_orderby=first`、`2_oderby=second`のように、数値のプレフィックスを使用して、この述語を複数回追加する必要があります。
+結果の並べ替えを有効にします。複数のプロパティ別に並べ替える必要がある場合は、`1_orderby=first`、`2_oderby=second` などの数字のプレフィックスを使用して、この述語を複数回追加する必要があります。
 
 #### プロパティ {#properties-13}
 
 * **orderby**
 
-   `@jcr:lastModified`や`@jcr:content/jcr:title`などの先頭に@が付いたJCRプロパティ名か、クエリ内の別の述語（例：`2_property`）で並べ替えの対象となる
+   並べ替えの基準となる、先頭が @ の JCR プロパティ名（例：`@jcr:lastModified`、`@jcr:content/jcr:title`）またはクエリ内の別の述語（例：`2_property`）
 
 * **並べ替え**
 
@@ -319,7 +318,7 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
     「`ignore`」に設定すると、並べ替えで大文字と小文字が区別されなくなります（「a」が「B」の前になります）。空白または未指定の場合は、並べ替えで大文字と小文字が区別されます（「B」が「a」の前になります）。
 
-### パス {#path}
+### path {#path}
 
 特定のパス内を検索します。
 
@@ -357,7 +356,7 @@ JCR プロパティとその値に一致します。
 
 * **value**
 
-    プロパティでチェックする値。JCR プロパティのタイプから文字列への変換に従います。
+   プロパティでチェックする値。JCR プロパティタイプから文字列への変換に従います
 
 * **N_value**
 
@@ -377,7 +376,7 @@ JCR プロパティとその値に一致します。
 
 ### rangeproperty {#rangeproperty}
 
-JCR プロパティと間隔を照合します。これは、`LONG`、`DOUBLE`、`DECIMAL`などの線形型を持つプロパティに適用されます。 `DATE` に関しては、最適化された日付形式の入力情報を含む daterange 述語を参照してください。
+JCR プロパティと間隔を照合します。`LONG`、`DOUBLE`、`DECIMAL` などの線形タイプのプロパティに適用されます。`DATE` に関しては、最適化された日付形式の入力情報を含む daterange 述語を参照してください。
 
 下限と上限、またはそのいずれかを定義できます。演算（「より少ない」や「以下」など）も、下限と上限に別々に指定することができます。
 
@@ -451,11 +450,11 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 * **p.limit**
 
-   ページサイズを示す数値
+   ページのサイズを表す数値
 
 * **p.guessTotal**
 
-   推奨：コストのかかる結果の総計を計算しないようにする。最大カウント総数を示す数値（1000など、粗いサイズで十分なフィードバックを与え、小さい結果を求める正確な数値）または「`true`」（最小限必要な値までカウント） + `p.limit``p.offset`
+   推奨：コストのかかる結果の総計を計算しないようにする。最大カウント総数を示す数値（1000など、粗いサイズで十分なフィードバックを与え、小さい結果を求める正確な数値）または「`true`」（最小限必要な値までカウント）+ `p.limit``p.offset`
 
 * **p.excerpt**
 
@@ -481,9 +480,9 @@ daterange 述語と同じように、ファセットの抽出に対応してい�
 
 永続的な querybuilder クエリのすべての述語を、サブグループの述語として現在のクエリに含めます。
 
-これによって追加のクエリが実行されることはありませんが、現在のクエリが拡張されます。
+これによって追加のクエリが実行されるわけではなく、現在のクエリが拡張されます。
 
-クエリは、`QueryBuilder#storeQuery()`を使用してプログラムで保持できます。 形式は、複数行の String プロパティか、Java プロパティ形式のテキストファイルとしてクエリを含む `nt:file` ノードにできます。
+クエリは `QueryBuilder#storeQuery()` を使用してプログラムで永続化できます。形式は、複数行の String プロパティか、Java プロパティ形式のテキストファイルとしてクエリを含む `nt:file` ノードにできます。
 
 保存済みクエリの述語のファセット抽出には対応していません。
 
@@ -556,7 +555,7 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 
 * **tagsearch**
 
-    タグタイトル内で検索するキーワード。
+   タグタイトル内で検索するキーワード
 
 * **プロパティ**
 
@@ -572,7 +571,7 @@ JCR XPathの`rep:similar()`を使用した類似性検索。
 
 ### type {#type}
 
-特定の JCR ノードのタイプ（プライマリノードタイプまたは Mixin タイプ）に結果を制限します。そのノードタイプのサブタイプも検索します。リポジトリの検索インデックスでは、効率的に実行できるノードタイプに対応する必要があります。
+特定の JCR ノードのタイプ（プライマリノードタイプまたは Mixin タイプ）に結果を制限します。そのノードタイプのサブタイプも検索します。リポジトリーの検索インデックスでは、効率的に実行できるノードタイプに対応する必要があります。
 
 ファセットの抽出に対応しています。結果の固有のタイプごとにバケットを提供します。
 
