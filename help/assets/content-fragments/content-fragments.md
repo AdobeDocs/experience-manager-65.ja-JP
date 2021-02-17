@@ -19,7 +19,7 @@ ht-degree: 99%
 ---
 
 
-# コンテンツフラグメントの操作{#working-with-content-fragments}
+# コンテンツフラグメントの操作 {#working-with-content-fragments}
 
 Adobe Experience Manager（AEM）コンテンツフラグメントを使用すると、ページに依存しないコンテンツの設計、作成、キュレーション、[公開](/help/sites-authoring/content-fragments.md)が可能になります。複数の場所、複数のチャネル上で使用可能なコンテンツを用意できるようになります。
 
@@ -58,7 +58,7 @@ Adobe Experience Manager（AEM）コンテンツフラグメントを使用す�
 
 さらにこうしたコンテンツフラグメントを集めて組み立てることで、多様なチャネルにエクスペリエンスを提供できます。
 
-## コンテンツフラグメントとコンテンツサービス  {#content-fragments-and-content-services}
+## コンテンツフラグメントとコンテンツサービス {#content-fragments-and-content-services}
 
 AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。
 
