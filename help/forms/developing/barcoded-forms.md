@@ -121,7 +121,7 @@ Barcoded Forms API(Java)を使用してフォームデータをデコードし�
 
 1. バーコードデータを含むPDFフォームの取得
 
-   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、バーコードデータを含むPDFフォームを表す`java.io.FileInputStream`オブジェクトを作成します。
+   * コンストラクターを使用し、PDFドキュメントの場所を指定する文字列値を渡して、バーコードデータが含まれるPDFフォームを表す`java.io.FileInputStream`オブジェクトを作成します。
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
 1. PDFフォームからデータをデコードする
