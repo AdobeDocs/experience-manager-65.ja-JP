@@ -158,7 +158,7 @@ ht-degree: 95%
 >
 >リポジトリーに設定を追加する場合のサービス PID は次のとおりです。
 >
->`com.adobe.granite.workflow.core.WorkflowSessionFactory`.
+>`com.adobe.granite.workflow.core.WorkflowSessionFactory`
 
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 |
 |---|---|
