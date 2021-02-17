@@ -342,7 +342,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`.
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
    >
    >また、ログファイルが
    >
@@ -406,7 +406,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
    >
    >* サイズ制限は、数値で指定できます。 サイズインジケーターを指定しない場合は、バイト数として解釈されます。または、サイズインジケーターの1つ(`KB`、`MB`、`GB`)を追加できます（大文字と小文字は無視されます）。
-   >* 日時スケジュールは`java.util.SimpleDateFormat`パターンとして指定できます。 これは、ファイルを回転した後の期間を定義します。また、回転したファイルの末尾に付く接尾辞（識別用）。
+   >* 日時スケジュールは`java.util.SimpleDateFormat`パターンとして指定できます。 これは、ファイルの回転後の期間を定義します。また、回転したファイルの末尾に付く接尾辞（識別用）。
 
    >
    >デフォルトは「。」です。yyyy-MM-dd（日別ログローテーションの場合）
