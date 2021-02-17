@@ -69,7 +69,7 @@ AEM Uber jar によって、すべての AEM API が単一の依存関係とし�
 
 ### 管理リソースリゾルバの使用の段階的廃止  {#phase-out-use-of-administrative-resource-resolver}
 
-AEM 6.0より前のコードベースでは、`SlingRepository.loginAdministrative()`と`ResourceResolverFactory.getAdministrativeResourceResolver()`を通じた管理セッションの使用が非常に多く見られていました。これらのメソッドは、アクセスレベルが広すぎるので、セキュリティ上の理由から廃止されました。 [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザー、および[管理セッションを段階的に廃止する方法について詳しくは、こちらを参照してください](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
+AEM 6.0より前のコードベースでは、`SlingRepository.loginAdministrative()`と`ResourceResolverFactory.getAdministrativeResourceResolver()`を通じた管理セッションの使用が広く行われていました。これらのメソッドは、アクセスレベルが広すぎるので、セキュリティ上の理由から廃止されました。 [Sling の今後のバージョンで、これらのメソッドは削除されます](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。代わりにサービスユーザーを使用するようにコードをリファクタリングすることを強くお勧めします。サービスユーザー、および[管理セッションを段階的に廃止する方法について詳しくは、こちらを参照してください](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
 
 ### クエリと Oak インデックス  {#queries-and-oak-indexes}
 
@@ -89,7 +89,7 @@ AEM 6.5 でも引き続きクラシック UI オーサリングを利用でき�
 
 ## 6.5 のリポジトリ構造への準拠 {#align-repository-structure}
 
-アップグレードを容易にし、アップグレード中に設定が上書きされないようにするため、6.4でリポジトリが再構成され、コンテンツが設定と切り離されます。
+アップグレードを容易にし、アップグレード中に設定が上書きされないようにするため、リポジトリは6.4で再構成され、コンテンツと設定が分離されます。
 
 従って、以前と同じように、`/etc`の下に存在しなくなるように、多数の設定を移動する必要があります。 AEM 6.4へのアップデートで確認および対応が必要なリポジトリ再構築の全懸念事項を確認するには、「[AEM 6.4](/help/sites-deploying/repository-restructuring.md)でのリポジトリ再構築」を参照してください。
 
