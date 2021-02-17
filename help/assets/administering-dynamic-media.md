@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media のセットアップ
-description: Dynamic Mediaを設定するには、Dynamic Mediaを設定し、画像とビューアプリセットを管理する必要があります。
+description: Dynamic Media をセットアップするには、Dynamic Media を設定して、画像やビューアのプリセットを管理する必要があります.
 uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 65%
+ht-degree: 72%
 
 ---
 
@@ -28,7 +28,7 @@ Dynamic Media の管理者には、次のトピックが参考になります。
 
 * [Dynamic Media-Scene7モードの設定](config-dms7.md) -Dynamic Mediaの新規顧客の場合は、この設定を使用します。
 * [Dynamic Mediaハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様向けアップグレードAEMの場合は、この設定を使用します。
-* [画像プリセットの管理](managing-image-presets.md)
+* [画像プリセットの管理 ](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
 * [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
 
