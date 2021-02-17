@@ -126,7 +126,7 @@ accessKey=<snip>
 
 ### 一時的なワークフロー {#transient-workflows}
 
-可能であれば、[!UICONTROL DAM Update Asset]ワークフローを「一時的」に設定します。 この設定にすると、ワークフローが通常のトラッキングやアーカイブ処理をパススルーする必要がなくなるので、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
+可能な場合は、[!UICONTROL DAM Update Asset]ワークフローを「一時的」に設定します。 この設定にすると、ワークフローが通常のトラッキングやアーカイブ処理をパススルーする必要がなくなるので、ワークフローの処理に必要なオーバーヘッドが大幅に削減されます。
 
 1. `https://[aem_server]:[port]/miscadmin`の[!DNL Experience Manager]デプロイメントの`/miscadmin`に移動します。
 
