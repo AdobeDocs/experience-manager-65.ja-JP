@@ -26,10 +26,10 @@ ht-degree: 99%
 
 ページ（またはページのセット）にローンチが作成されている場合、ページのローンチコピーのコンテンツを編集できます。
 
-1. [「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)にアクセスして使用可能なアクションを表示します。
+1. [「参照」のローンチ（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)にアクセスして使用可能なアクションを表示します。
 1. 「**このページに移動**」を選択して編集するページを開きます。
 
-### ライブコピーへのローンチページサブジェクトを編集  {#editing-launch-pages-subject-to-a-live-copy}
+### ライブコピーへのローンチページサブジェクトの編集 {#editing-launch-pages-subject-to-a-live-copy}
 
 ローンチが[ライブコピー](/help/sites-administering/msm.md)に基づく場合は、次のようになります。
 
