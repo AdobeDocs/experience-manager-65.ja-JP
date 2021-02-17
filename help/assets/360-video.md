@@ -33,7 +33,8 @@ Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネ�
 
 「[Space Station 360](http://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」をタップして、ブラウザーウィンドウを開き、360 度ビデオを視聴します。ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
-![360 ビデオのサンプル](assets/6_5_360videoiss_simplified.png)*Space Station 360（国際宇宙ステーションの 360 度ビデオ）のビデオフレーム*
+![360 ビデオのサンプル](assets/6_5_360videoiss_simplified.png)
+*Space Station 360（国際宇宙ステーションの 360 度ビデオ）のビデオフレーム*
 
 ## 360/VR ビデオと Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
@@ -124,7 +125,7 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
-1. プレビューページの右上近くにある&#x200B;**[!UICONTROL 閉じるをタップします。]**
+1. プレビューページの右上近くにある「**[!UICONTROL 閉じる」をタップします。]**
 
 ## 360 ビデオの公開 {#publishing-video}
 
