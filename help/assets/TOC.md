@@ -10,7 +10,7 @@ translation-type: tm+mt
 source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 58%
+ht-degree: 59%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 58%
    + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
-   + [Dynamic Mediaでのアクセシビリティ](accessibility-dm.md)
+   + [Dynamic Media でのアクセシビリティ](accessibility-dm.md)
    + [Dynamic Media — ハイブリッドモードからDynamic Media- S7モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
