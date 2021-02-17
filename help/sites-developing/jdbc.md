@@ -93,7 +93,7 @@ ht-degree: 58%
 
 ### JDBC Connection Pool サービスの設定  {#configuring-the-jdbc-connection-pool-service}
 
-JDBCドライバーを追加使用してデータソースオブジェクトを作成する、JDBC接続プールサービスの設定。アプリケーションコードは、このサービスを使用してオブジェクトを取得し、データベースに接続します。
+JDBCドライバーを使用してデータソースオブジェクトを追加作成する、JDBC接続プールサービスの設定。アプリケーションコードは、このサービスを使用してオブジェクトを取得し、データベースに接続します。
 
 JDBC Connections Pool（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。異なるプロパティ（読み取り専用アクセスと読み取り／書き込みアクセスなど）を使用する接続が必要な場合は、複数の設定を作成します。
 
