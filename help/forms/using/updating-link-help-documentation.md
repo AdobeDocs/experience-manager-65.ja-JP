@@ -39,7 +39,7 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
      </li>
    ```
 
-   を
+   コピー先：
 
    ```html
    <ul class="helpmenu">
