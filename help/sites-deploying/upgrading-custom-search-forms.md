@@ -162,12 +162,12 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 * ノードをコピー
 
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
-   * を `/conf/global/settings/cq/search/facets/sites/jcr:content/items`
+   * コピー先：`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
 * ノードをコピー
 
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
-   * を `/conf/global/settings/cq/search/facets/sites/jcr:content/items`
+   * コピー先：`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
 * `analyticspredicate`ノードの`listOrder`プロパティを&quot;**8**&quot;に設定していることを確認してください。 この設定は、競合を避けるために必要です。
 
@@ -364,7 +364,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 **アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
 
-## アセット管理者の検索レール {#assets-admin-search-rail}
+## アセット管理者の検索パネル {#assets-admin-search-rail}
 
 以下のノードは`/conf/global/settings/dam/search/facets/assets/items`の名前を参照しています
 
