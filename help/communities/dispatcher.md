@@ -65,7 +65,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 * **フィルターパターン**
 
-   *（必須）* コミュニティページへの1つ以上のパス。例： `/content/sites/engage/(.*)`
+   *（必須）* コミュニティページへの1つ以上のパス。例：`/content/sites/engage/(.*)`
 
 * **Cache-Controlの最大経過時間**
 
