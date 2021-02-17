@@ -93,7 +93,7 @@ AEM Formsワークフローで使用できる追加の複雑なデータ型に�
 次の手順を実行して、変数間のマッピングを追加します。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにあるステップアイコンをタップします。
-1. 「**変数を設定**」手順をワークフローエディターにドラッグ&amp;ドロップし、手順をタップして「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png)」（設定）を選択します。
+1. 「**変数を設定**」の手順をワークフローエディターにドラッグ&amp;ドロップし、手順をタップして「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png)」（設定）を選択します。
 1. Set Variable（変数を設定）ダイアログで、**[!UICONTROL マッピング]**/**[!UICONTROL 追加マッピング]**&#x200B;を選択します。
 1. 「**Map Variable**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。 マッピングモードは、変数のタイプに応じて異なります。
 1. 意味のある式を行うために、より多くの変数をマッピングします。 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png)をタップして変更を保存します。
