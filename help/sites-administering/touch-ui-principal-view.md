@@ -91,7 +91,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 >
 >それぞれの制限の意味についての詳細は、[このページ](/help/sites-administering/user-group-ac-admin.md#restrictions)を参照してください。
 
-以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。 ![](assets/sapte-1.png) ![](assets/opt-1.png)
+以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。  ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
 新しい ACE がアクセス制御リストに反映されます。`jcr:write`は、上に追加された`jcr:removeNode`を含む集計権限ですが、`jcr:write`の下では説明しません。
 
