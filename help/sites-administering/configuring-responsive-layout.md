@@ -145,7 +145,7 @@ CRXDE Lite または XML を使用して定義できます。
 
    * 名前：`<descriptive name>`
    * 型：`nt:unstructured`
-   * タイトル: `String` * `<descriptive title seen in Emulator>`*
+   * title: `String` * `<descriptive title seen in Emulator>`*
    * 幅: `Decimal` * `<value of breakpoint>`*
 
 #### XML を使用したブレークポイントの設定 {#configuring-breakpoints-using-xml}
