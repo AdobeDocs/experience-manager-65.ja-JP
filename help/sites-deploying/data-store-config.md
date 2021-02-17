@@ -89,13 +89,13 @@ customBlobStore=B"true"
 
 ドキュメントノードストアは、AEM MongoMK実装の基盤です。 `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PIDを使用します。 以下の設定オプションを使用できます。
 
-* `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは です。`mongodb://localhost:27017`
+* `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは `mongodb://localhost:27017` です
 
 * `db`：Mongo データベースの名前です。デフォルトは、デフォルトのデータベース名として&#x200B;**Oak** ``. However, new AEM 6 installations use **aem-author** ``です。
 
-* `cache`：キャッシュサイズ（MB 単位）です。これは DocumentNodeStore で使用される様々なキャッシュに分散されます。デフォルトは です。`256`
+* `cache`：キャッシュサイズ（MB 単位）です。これは DocumentNodeStore で使用される様々なキャッシュに分散されます。デフォルトは `256` です
 
-* `changesSize`：Mongo で差分出力のキャッシュに使用される capped コレクションのサイズ（MB 単位）です。デフォルトは です。`256`
+* `changesSize`：Mongo で差分出力のキャッシュに使用される capped コレクションのサイズ（MB 単位）です。デフォルトは `256` です
 
 * `customBlobStore`：カスタムデータストアが使用されることを示すブール値です。デフォルトは、`false` です。
 
@@ -177,7 +177,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    * `jcr_root/libs/system/config`
 
-   を
+   コピー先：
 
    * `<aem-install>/crx-quickstart/install`
 
