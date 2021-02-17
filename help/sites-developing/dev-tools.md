@@ -24,7 +24,7 @@ JCR、Apache Sling または AEM のアプリケーションを開発するた�
 
 * [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)とWebDAVで構成される1セット。 CRXDE Lite は CRX／AEM に搭載されており、これを使用してブラウザー内で標準的な開発作業を実行できます。CRXDE Lite を使用すると、ファイル（.jsp、.java など）、フォルダー、テンプレート、コンポーネント、ダイアログ、ノード、プロパティおよびバンドルを作成、編集することができ、さらに SVN によるロギングや統合が可能です。
 
-   CRX/AEMサーバーに直接アクセスできない場合、標準搭載のコンポーネントとJavaバンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード完了、構文のハイライトが不要な場合に、CRXDE Liteをお勧めします。
+   CRX/AEMサーバーに直接アクセスできない場合、標準搭載のコンポーネントとJavaバンドルを拡張または変更してアプリケーションを開発する場合、または専用のデバッガー、コード完了、構文のハイライトが不要な場合は、CRXDE Liteをお勧めします。
 
 * 統合開発環境から成る1セット(例：[Eclipse](/help/sites-developing/howto-projects-eclipse.md)または[IntelliJ](/help/sites-developing/ht-intellij.md))、ビルドツール(例：[Apache Maven](/help/sites-developing/ht-projects-maven.md))、Adobeがリポジトリをファイルシステム、バージョン管理システム(例：Subversion)、バグトラッカーシステム(例：(Jira)は、中央依存関係管理システム(例：Apache Archiva)とビルド自動化システム(例：Apache Continuum)。
 
