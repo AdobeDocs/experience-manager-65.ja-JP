@@ -54,7 +54,7 @@ ht-degree: 53%
 
 1. コピー／貼り付けを使用する場合は、「リソースタイプ」の値の先頭や末尾にスペースがないことを確認します。
 
-   「**[!UICONTROL 次へ]**」をクリックします。
+   「**[!UICONTROL Next]**」をクリックします。
 
 1. 「許可されているパス」は、**[!UICONTROL 新しいページ]**&#x200B;ダイアログにテンプレートが表示されるように、このテンプレートを使用するページのパスを参照します。
 
@@ -70,7 +70,7 @@ ht-degree: 53%
 
    ![configure-template-path](assets/configure-template-path.png)
 
-1. 「**[!UICONTROL 次へ]**」をクリックします。
+1. 「**[!UICONTROL Next]**」をクリックします。
 
    **[!UICONTROL 許可されている親]**&#x200B;パネルで「**[!UICONTROL 次へ]**」をクリックします。
 
