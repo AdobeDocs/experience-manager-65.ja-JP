@@ -132,7 +132,7 @@ AEM Experience Fragmentsは、Adobe Targetのデフォルトのワークスペ�
 
    * 適切な設定
    * 必要な形式オプション
-   * adobe targetの作業場
+   * Adobe Targetの作業場
    * 必要な場合 — externalizerドメイン
 
    >[!CAUTION]
