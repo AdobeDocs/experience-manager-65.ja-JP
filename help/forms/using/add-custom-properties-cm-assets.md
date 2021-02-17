@@ -90,7 +90,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | String | フィールド／プロパティに与える任意の名前。（ここでは「Location of recipients」） |
       | name | 文字列 | `./extendedproperties/GeoLocation` （値は、itemsノードの下で作成したフィールド名と同じにします）。 |
-      | renderReadOnly | Boolean | true |
+      | renderReadOnly | ブール値 | true |
       | sling:resourceType | 文字列 | `granite/ui/components/coral/foundation/form/textfield` |
 
    1. 「**すべて保存**」をクリックします。
@@ -357,7 +357,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
            <td><strong>値</strong></td>
          </tr>
          <tr>
-           <td>パス<br /> </td>
+           <td>path<br /> </td>
            <td>文字列</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
