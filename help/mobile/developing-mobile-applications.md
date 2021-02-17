@@ -53,7 +53,7 @@ Starter Kit Git リポジトリの readme には、スターターキットを�
 
 >[!NOTE]
 >
->ラボを含む追加のリファレンス実装ソースは、GitHub [ここ](https://github.com/adobe-marketing-cloud-apps)と、「キッチンシンク」のソース[ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)にあります。
+>ラボを含む追加のリファレンス実装ソースは、GitHub [ここ](https://github.com/adobe-marketing-cloud-apps)と、「キッチンシンク」ソース[ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)にあります。
 
 ## iOS 9 ホストおよび HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
 
