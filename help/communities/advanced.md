@@ -130,7 +130,7 @@ ht-degree: 41%
   <tr>
    <th>プロパティ</th>
    <th>型</th>
-   <th>値 説明</th>
+   <th>値の説明</th>
   </tr>
   <tr>
    <td>badgingPath</td>
