@@ -39,7 +39,7 @@ ht-degree: 11%
 
 **新しいタイプのグラフの使用**
 
-複数のシリーズ](../../forms/using/chart-component-interactive-communications.md)を含む[クアドラントグラフとグラフをInteractive Communicationsに追加できるようになりました。
+複数のシリーズ](../../forms/using/chart-component-interactive-communications.md)を持つ[クアドラントグラフとグラフをInteractive Communicationsに追加できるようになりました。
 
 **テーブルの列の並べ替え**
 
