@@ -218,7 +218,7 @@ Ayaは、サービスリクエスト申込を完了する前に、自宅のド�
 
    1. 基本情報
 
-      1. 名
+      1. firstName
       1. 姓
       1. DOB
       1. 電子メール
@@ -231,232 +231,232 @@ Ayaは、サービスリクエスト申込を完了する前に、自宅のド�
    1. **妻**:キンパネルの横に表示
    1. **子供はいる？**:（はい/いいえ）子依存パネルを表示するラジオボタン。
 
-      1. （追加/削除）ボタンをクリックして、複数の子依存パネルを追加/削除します。
+      1. (追加/削除)ボタンをクリックして、複数の子依存パネルを追加/削除します。
 
-1. グレーのメニューバーの右向き矢印をクリックします。
-1. 下部の「保存」ボタンをクリックします。
+1. グレーのメニューバーの右矢印をクリックします。
+1. 下部にある「保存」ボタンをクリックします。
 
    ![アダプティブフォームの詳細](/help/forms/using/assets/adaptive_form.png)
 
 ## デスクトップデモ{#desktop-demo}
 
-**この節：** Ayaは自宅に戻り、必要な情報を見つけ、デスクトップからアプリケーションを再開します。Ayaはオンラインフォームポータルに移動し、申し込みを再開します。 簡単なカスタマイズ機能を使用すれば、機関は自動的にリンクを生成して電子メールで送信し、アプリケーションを再開することもできます。
+**この節：自宅** で、Ayaは自分が必要とする情報を見つけ、デスクトップから申込書を再開しています。Ayaはオンラインフォームポータルにアクセスし、申込を再開します。 簡単なカスタマイズでは、代理店は自動的にリンクを生成して電子メールで申込を再開することもできます。
 
-### 続きアダプティブフォーム(Aya) {#aya-user-story-continued-adaptive-form}
+### アダプティブフォーム(Aya) {#aya-user-story-continued-adaptive-form}の続き
 
-**ユーザー指示：**
+**ユーザー手順：**
 
 1. *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html*&#x200B;に移動します。
-1. ナビゲーションバーで、「**Online Services**」をクリックします。
-1. 「ドラフト・Forms」パネルで、既存の「保健給付登録申請」を選択します。
+1. ナビゲーションバーで「**Online Services**」をクリックします。
+1. 「ドラフト・Forms」パネルから、既存の「医療保険加入申込書」を選択します。
 
-   ![健康給付登録申請](/help/forms/using/assets/enrollment_application.png)
+   ![健康保険給付の登録申請](/help/forms/using/assets/enrollment_application.png)
 
    外観と操作性は同じで、データを再入力する必要はありません。
 
-   **ユーザー指示：**
+   **ユーザー手順：**
 
 1. 右の円CTAをクリックして、次のセクションに移動します。
 
    ![右円CTA](/help/forms/using/assets/right_circle_cta_new.png)
 
-   フォームは、Ayaの最後の入力時点まで入力されます。 亜也は彼女の情報をすべて入力し、提出する準備ができている。
+   フォームは、Ayaの最後のエントリ時点まで入力されます。 Ayaは彼女の情報をすべて入力し、今すぐ送信する準備ができています。
 
    ![アダプティブフォームの送信](/help/forms/using/assets/submit_adaptive_form.png)
 
    >[!NOTE]
    >
-   >Ayaが電話番号フィールドに入力する際は、ダッシュ、スペース、ハイフンを含まない、連続した11桁の番号を入力する必要があります。
+   >Ayaが電話番号フィールドに入力する際、ダッシュ、スペース、ハイフンを含まない11桁の連続した数字で入力する必要があります。
 
-   あやの提出後、ありがとうございますページが届きます。 必要に応じて、Adobe Signと電子的に記録文書に署名するために開く電子メールも受け取ります。
+   Ayaの提出後、「ありがとうございます」ページが表示されます。 必要に応じて、Adobe Signと電子記録のドキュメントに署名するために開くメールも受け取ります。
 
-### オプション：Adobe Sign(Aya) {#adobe-sign}
+### オプション：Adobe Sign（アヤ） {#adobe-sign}
 
-**ユーザー指示：**
+**ユーザー手順：**
 
-1. 電子メールクライアントに移動し、Adobe Signの電子メールを見つけます。
+1. 電子メールクライアントに移動し、Adobe Signの電子メールを探します。
 1. Adobe Signへのリンクをクリックします。
 
    ![Adobeサインリンク](/help/forms/using/assets/adobe_sign_link.png)
 
-**ユーザー指示：**
+**ユーザー手順：**
 
-1. 「**I agree**」チェックボックスをオンにします。
-1. 「**承認**」をクリックします。
-1. レビューしたドキュメントの下部にスクロールします。
-1. ハイライト表示された黄色のタブをクリックして、文書に署名します。
+1. 「**同意します**」ボックスをチェックします。
+1. 「**承諾**」をクリックします。
+1. レビュー済みドキュメントの一番下までスクロールします。
+1. 強調表示された黄色のタブをクリックして、ドキュメントに署名します。
 
-   ![文書への署名テスト文書への](/help/forms/using/assets/sign_document_new.png) ![署名](/help/forms/using/assets/sign_test_document.png)
+   ![ドキュメントへの署名テスト](/help/forms/using/assets/sign_document_new.png) ![ドキュメントへの署名](/help/forms/using/assets/sign_test_document.png)
 
-## 官公庁(George) {#government-agent-george}
+## 政府代理人(George) {#government-agent-george}
 
 ![ジョージ政府代理](/help/forms/using/assets/george_lang-1.png)
 
-**本節：** ジョージは、行政官庁、綾（あや）のビジネスアナリストで、サービスを依頼している。Georgeには1つのダッシュボードがあり、レビュー用に割り当てられたすべてのサービスリクエストアプリケーションを確認できます。
+**本節：** ジョージは、行政庁Ayaのビジネスアナリストで、サービスを依頼している。Georgeは1つのダッシュボードを持ち、レビュー用に割り当てられているすべてのサービスリクエストの申し込みを見ることができます。
 
 ### AEM受信トレイ(George) {#george-user-story-aem-inbox}
 
-**ユーザー指示：**
+**ユーザー手順：**
 
 1. *https://&lt;aemserver>:&lt;port>/aem/start.html*&#x200B;に移動します。
-1. ユーザーアイコン（右上隅）をクリックし、「**ログアウト**」または「****&#x200B;として偽装」メニューオプションを使用します（管理ユーザーとログインしている場合）。
+1. ユーザーアイコン（右上隅）をクリックし、「**サインアウト**」または「****&#x200B;として動作」メニューオプション（現在管理ユーザーとログインしている場合）を使用します。
 
    1. ログイン先：
 
       1. **User:** george.lang
       1. **パスワード：** password
-   1. または偽装：
+   1. または次のようになります。
 
-      1. 「****&#x200B;として偽装」フィールドに「**George**」と入力します。
+      1. 「**次の形式で動作する**」フィールドに「**George**」と入力します。
 
-      1. 「OK」をクリックして、偽装します。
+      1. 「OK」をクリックして偽装します。
 
 
-1. 右上隅で、通知（ベル）アイコンをクリックします。
-1. [**すべて表示**]をクリックして、受信トレイに移動します。
-1. 受信トレイで、最新の「**Health Benefits Application Review**」タスクを開きます。
+1. 右上隅の通知（ベル）アイコンをクリックします。
+1. 「**すべての表示**」をクリックして、インボックスに移動します。
+1. インボックスから、最新の「**Health Benefits Application Review**」タスクを開きます。
 
-   ![健康上の利益の適用の確認](/help/forms/using/assets/health_benefits.png)
+   ![正常性福祉の申し込みの確認](/help/forms/using/assets/health_benefits.png)
 
-### オプション：AEM Inbox &amp; MS Dynamics(George) {#george-user-story-aem-inbox-and-ms-dynamics}
+### オプション：AEM Inbox &amp; MS Dynamics (George) {#george-user-story-aem-inbox-and-ms-dynamics}
 
-データ統合と自動化されたワークフローにより、Ayaのアプリケーションが表示され、データの送信時に自動的に生成されたCRMレコードが表示されます。
+データの統合と自動ワークフローのおかげで、Ayaのアプリが、データの送信時に自動的に生成されたCRMレコードと共に表示されます。
 
-**ユーザー指示：**
+**ユーザー手順：**
 
-1. 読み取り専用アダプティブフォームを開いて調べます。
-1. 「**MS Dynamicsを開く**」ボタンをクリックして、MS Dynamicsレコードを新しいウィンドウで開きます。
+1. 読み取り専用のアダプティブフォームを開き、調査します。
+1. [**MS Dynamics**&#x200B;を開く]ボタンをクリックして、MS Dynamicsレコードを新しいウィンドウで開きます。
 1. CRMでは、すべての情報を更新できます
 
-   1. 必要に応じて、Dynamicsに直接レビューメモを追加します。
+   1. 必要に応じて、Dynamicsに直接レビューノートを追加します。
 
-1. を終了し、AEM Inboxに戻ります。
+1. AEM受信トレイを閉じてから戻ります。
 
    ![MS Dynamicsレコード](/help/forms/using/assets/ms_dynamics.png)
 
-### AEM受信トレイに戻る(George) {#george-user-story-back-to-aem-inbox}
+### AEM受信トレイ(George)に戻る{#george-user-story-back-to-aem-inbox}
 
-GeorgeはAyaの申し込みを承認し、既存の自動化されたワークフローのおかげで、Ayaに確認メールが送信されます。
+GeorgeはAyaの申込を承認し、既存の自動ワークフローのおかげでAyaに確認の電子メールも送信されます。
 
-**ユーザー指示：**
+**ユーザー手順：**
 
-1. 左上隅に移動し、「**承認**」をクリックして、アプリケーションを承認します。
-1. モーダルモードでは、CXリードに対するメッセージを残すことができます。
+1. 左上隅に移動し、「**承認**」をクリックして、アプリを承認します。
+1. モーダルでは、CXリードにメッセージを残すことができます。
 1. 「完了」をクリックします。
-1. （市民の役割）電子メールクライアントを開いて、Ayaに送信された電子メールを表示します。
+1. （市民の役割） Eメールクライアントを開き、Ayaに送信するEメールを表示します。
 
-   ![Ayaに送信された電子メールを表示](/help/forms/using/assets/email_client.png)
+   ![Ayaに送信する電子メールの表示](/help/forms/using/assets/email_client.png)
 
-## CXリード（カミラ） {#cx-lead-camila}
+## CXリード(Camila) {#cx-lead-camila}
 
 ![カミラ（CXリード）](/help/forms/using/assets/camila_santos-1.png)
 
-**このセクション：** Camila the CX Leadは、Ayaとの歓迎電話を設定し、彼女が承認した政府サービスの利用方法を説明します。
+**このセクション：** Camila the CX Leadは、Ayaとの歓迎電話を設定し、Ayaが承認した政府サービスの利用方法を説明します。
 
-### （オプション）AEM InboxおよびMS Dynamics {#camila-user-story-aem-inbox-ms-dynamics}
+### （オプション） AEM受信トレイとMS Dynamics {#camila-user-story-aem-inbox-ms-dynamics}
 
-**ユーザー指示：**
+**ユーザー手順：**
 
 1. *https://&lt;aemserver>:&lt;port>/aem/start.html*&#x200B;に移動します。
-1. ユーザーアイコン（右上隅）をクリックし、「**ログアウト**」または「****&#x200B;として偽装」メニューオプションを使用します（管理ユーザーとログインしている場合）。
+1. ユーザーアイコン（右上隅）をクリックし、「**サインアウト**」または「****&#x200B;として動作」メニューオプション（現在管理ユーザーとログインしている場合）を使用します。
 
    1. ログイン先：
 
       1. **ユーザー**:camila.santos
       1. **パスワード**：password
-   1. または偽装：
+   1. または次のようになります。
 
-      1. 「**Impersonate as**」フィールドに「**Camila**」と入力します。
+      1. 「**次の形で動作**」フィールドに「**Camila**」と入力します。
 
-      1. 「OK」をクリックして、偽装します。
+      1. 「OK」をクリックして偽装します。
 
 
-1. 右上隅で、通知（ベル）アイコンをクリックします。
-1. [**すべて表示**]をクリックして、受信トレイに移動します。
-1. 受信トレイで、最新の[**新しい連絡先の承認**]タスクを開きます。
+1. 右上隅の通知（ベル）アイコンをクリックします。
+1. 「**すべての表示**」をクリックして、インボックスに移動します。
+1. 受信トレイから、「**新しい連絡先の承認**」タスクを開きます。
 
 ![新しい連絡先の承認](/help/forms/using/assets/new_contact_approval.png)
 
-**（オプション）ユーザーの指示：**
+**（オプション）ユーザー手順：**
 
-1. 読み取り専用アダプティブフォームを開いて調べます。
-1. 「**MS Dynamicsを開く**」ボタンをクリックして、MS Dynamicsレコードを新しいウィンドウで開きます。
+1. 読み取り専用のアダプティブフォームを開き、調査します。
+1. [**MS Dynamics**&#x200B;を開く]ボタンをクリックして、MS Dynamicsレコードを新しいウィンドウで開きます。
 1. CRMでは、すべての情報を更新できます
 
    1. 必要に応じて、Dynamicsに新しい呼び出しアクティビティを直接追加します。
    1. 「**アクティビティ**」セクションを開きます。
    1. 「**新しい電話**」オプションをクリックします。
-   1. 電話の詳細を追加します。
+   1. 電追加話の詳細。
    1. ウィンドウを保存して閉じます。
 
-1. AEMに戻り、左上隅に移動し、「**送信**」をクリックしてアプリケーションを送信します。
-1. モーダルモードでは、メッセージを残すことができます。
+1. AEMに戻り、左上隅に移動し、「**送信**」をクリックして申込を送信します。
+1. モーダルでは、メッセージを残すことができます。
 1. 「完了」をクリックします。
 
-   ![「活動」](/help/forms/using/assets/activities_tab.png) ![タブ新規連絡先の確認](/help/forms/using/assets/confirm_new_contact.png)
+   ![「アクティビティ」](/help/forms/using/assets/activities_tab.png) ![タブ新しい連絡先の確認](/help/forms/using/assets/confirm_new_contact.png)
 
-## （オプション）ようこそキット市民(Aya) {#welcome-kit-citizen-aya}
+## （オプション）ウェルカムキット市民(Aya) {#welcome-kit-citizen-aya}
 
-**この節：** Ayaは、メリットを要約し、入力するフォームフィールドも含むインタラクティブコミュニケーションへのリンクを含む電子メールを受信します。PDF特典明細書を添付し、メール内のインタラクティブな通信レターにリンクします（インタラクティブ通信と同じテーマ/ブランディングを使用）。
+**この節：** Ayaは、インタラクティブコミュニケーションへのリンクを含む電子メールを受信します。このリンクは、Ayaの利点をまとめたもので、入力するフォームフィールドも含みます。PDFの特典明細を添付し、メール内のインタラクティブな通信レターにリンクします（インタラクティブ通信と同じテーマ/ブランドを使用）。
 
 ### 電子メールクライアント通知(Aya) {#aya-user-story-email-client}
 
-**ユーザー指示：**
+**ユーザー手順：**
 
-1. スタートアップキットの電子メールを探して開きます。
-1. ページの下部にあるPDF添付ファイルまでスクロールします。
-1. をクリックして、添付されたPDFを開きます。
-1. 電子メールクライアントで上にスクロールして、「**View welcome kit online**」をクリックします。
+1. ウェルカムキットの電子メールを探して開きます。
+1. ページ下部のPDF添付ファイルまでスクロールします。
+1. PDF添付ファイルをクリックして開きます。
+1. 電子メールクライアントを上にスクロールして、「**表示ウェルカムキットオンライン**」をクリックします。
 
-   1. 同じドキュメントのWebチャネルバージョンが開きます。
+   1. これにより、同じドキュメントのWebチャネルーのバージョンが開きます。
 
 1. PDFを直接参照するには：
 
    *https://&lt;aemserver>:&lt;port>/aem/formdetails.html/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/web-gov-welcome-handbook*
 
-1. ICへの直接参照：
+1. ICを直接参照するには：
 
-   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?channel=web&amp;mode=preview&amp;wcmmode=disabled*
+   *https://&lt;aemserver>:&lt;port>/content/dam/formsanddocuments/adobe-gov-forms/welcome-handbook/we-gov-welcome-handbook/jcr:content?チャネル=web&amp;mode=プレビュー&amp;wcmmode=disabled*
 
-   ![Welcome Benefits ](/help/forms/using/assets/welcome_benefits_handbook.png) ![HandbookInteractive Communication Link](/help/forms/using/assets/interactive_communication.png)
+   ![お知らせメリット](/help/forms/using/assets/welcome_benefits_handbook.png) ![ハンドブック対話型コミュニケーションリンク](/help/forms/using/assets/interactive_communication.png)
 
-## 更新のリマインダー市民(Aya) {#renewal-reminder-citizen-aya}
+## 更新リマインダ市民(Aya) {#renewal-reminder-citizen-aya}
 
-**この節：** Camilaは、1年後に連絡のリマインダーをスケジュールすることもできます。（ワークフローを自動化/実行し、電子メールで送信するステップ）。
+**この節：** Camilaは、1年後に通信リマインダーをスケジュールする場合もあります。（電子メールの自動化/実行を行うワークフローステップ）。
 
 ### 電子メールクライアント通知(Aya) {#aya-user-story-email-client-updated}
 
-**ユーザー指示：**
+**ユーザー手順：**
 
 1. 電子メールクライアントに移動します。
-1. 更新のリマインダーの電子メールを探して開きます。
+1. 更新リマインダの電子メールを探して開きます。
 1. 「**新しいアプリケーションを送信**」ボタンをクリックして、アダプティブフォームを開きます。
 
-   1. このセクションは、フェーズ2でのデータの事前入力をサポートするために、意図的に空のままになっています。
+   1. このセクションは、フェーズ2で事前入力されたデータをサポートするために、意図的に空のままにしておきます。
 
-   ![更新のリマインダーメール](/help/forms/using/assets/renewal_reminder_email.png)
+   ![更新リマインダーの電子メール](/help/forms/using/assets/renewal_reminder_email.png)
 
-## （オプション）フォームデータモデル（カミラ） {#form-data-model}
+## （オプション）Form Data Model（カミラ） {#form-data-model}
 
-**このセクション**:「AEM Formsデータ統合」に移動し、フォームデータモデル統合を通じて外部データソースに送信された情報が実際に存在することを簡単にテストできます。
+**この節**:Camilaは「AEM Formsデータ統合」に移動し、そこでクイックテストを実行して、フォームデータモデルの統合を介して外部データソースに送信された情報が実際に存在することを確認できます。
 
-### フォームデータモデル（カミラ） {#form-data-model-camila}
+### Form Data Model(Camila) {#form-data-model-camila}
 
-**このセクション**:「データ・ソース」ページに移動し、サーバーがDerbyデータベース内で複製したデータを検証します。
+**この節**:Camilaはデータソースページに移動し、Derbyデータベース内でサーバーがレプリケートしたデータを検証します。
 
-1. ユーザーエクスペリエンスが完了し、ユーザーの送信が完了すると、CamilaはAEM Forms(**Forms** > **データ統合**)内の「データソース」タブに移動します。
+1. ユーザーエクスペリエンスが完了し、ユーザーの送信が完了すると、CamilaはAEM Forms内の「データソース」タブ(**Forms** > **データ統合**)に移動します。
 
-1. 次に、「AEM Forms **We.gov FDM**」を選択し、「**We.gov Enrollment FDM**」を編集します。
+1. 次に、CamilaはAEM Forms **We.gov FDM**&#x200B;を選択し、**We.gov Enrollment FDM**&#x200B;を編集します。
 
-1. 次に、Camilaはテストする&#x200B;**連絡先** > **読み取りサービス**&#x200B;を選択します。
+1. 次に、Camilaは、テストする&#x200B;**連絡先** > **読み取りサービス**&#x200B;を選択します。
 
-   ![連絡先読み取りサービス](assets/aftia-contact-read-service.jpg)
+   ![読み取りサービスに連絡](assets/aftia-contact-read-service.jpg)
 
-1. 次に、Camilaは連絡先IDを使用してテストサービスを提供し、「テスト」ボタンをクリックします。 例えば、フォームを送信した場合は1または2を指定します。 フォームをまだ送信していない場合、データは返されません。
+1. 次に、Camilaは、テストサービスに連絡先IDを提供し、「Test」ボタンをクリックします。 例えば、フォームを送信した場合は1または2。 フォームを送信していない場合、データは返されません。
 
-   ![連絡先読み取りサービス](assets/aftia-test-service.jpg)
+   ![読み取りサービスに連絡](assets/aftia-test-service.jpg)
 
-1. 次に、データがデータソースに正常に挿入されたことを検証できます。
+1. その後、データがデータソースに正常に挿入されたことを確認できます。
 
    * Derby DS内のデータは、次の形式に似ています。
 
@@ -480,36 +480,36 @@ GeorgeはAyaの申し込みを承認し、既存の自動化されたワーク�
    ]
    ```
 
-## （オプション）分析（カミラ） {#analytics-cx-lead-camila}
+## （オプション）Analytics（カミラ） {#analytics-cx-lead-camila}
 
-**このセクション：** Camilaは、機関KPIを通じて確認できるダッシュボードに移動します。例えば、サービスリクエストフォームに記入して放棄する国民の割合、承認/拒否応答へのリクエスト提出からの平均時間、市民に送信した福利厚生ハンドブックに関するエンゲージメント統計などです。
+**この節：** Camilaは、エージェンシーKPIで確認できるダッシュボードに移動します。例えば、サービスリクエストフォームへの記入と放棄を開始した国民の割合、リクエスト提出から承認/拒否への対応までの平均時間、市民に送信した手当のハンドブックに関するアクション統計。
 
 ### Adobe Analyticsサイトレポート（カミラ） {#camila-reviews-sites-reporting-we-gov-adobe-analytics}
 
 1. *https://&lt;aemserver>:&lt;port>/sites.html/content*&#x200B;に移動します。
-1. 「**AEM Forms We.Govサイト**」を選択して、サイトページを表示します。
-1. サイトページの1つ（例：ホーム）を選択し、「**Analytics &amp;Recommendations**」を選択します。
+1. 「**AEM FormsWe.Govサイト**」を選択して、サイトページを表示します。
+1. サイトページ（例：ホーム）の1つを選択し、「**Analytics &amp;Recommendations**」を選択します。
 
-   ![分析と推奨](/help/forms/using/assets/analytics_recommendation.jpg)
+   ![解析と推奨](/help/forms/using/assets/analytics_recommendation.jpg)
 
-1. このページでは、AEM Sites・ページに関連するAdobe Analyticsから取得した情報が表示されます(注意：デザイン上、この情報はAdobe Analyticsから定期的に更新され、リアルタイムでは表示されません)。
+1. このページには、AEM Sitesページに関連するAdobe Analyticsから取得した情報が表示されます(注：設計上、この情報はAdobe Analyticsから定期的に更新され、リアルタイムでは表示されません)。
 
-   ![Adobe Analyticsの主な指標](/help/forms/using/assets/analytics_key_metrics.jpg)
+   ![Adobe Analyticsの主要指標](/help/forms/using/assets/analytics_key_metrics.jpg)
 
-1. （手順3でアクセスした）ページ表示ページに戻り、「**リスト表示**」の項目を表示するように表示設定を変更して、ページ表示情報を表示することもできます。
-1. 「**表示**」ドロップダウンメニューを見つけ、「**リスト表示**」を選択します。
+1. ページ表示ページ（手順3.でアクセス）に戻ると、「**リスト表示**」内の表示項目の表示設定を変更して、ページ表示情報を表示することもできます。
+1. 「**表示**」ドロップダウンメニューを探し、「**リスト表示**」を選択します。
 
-   ![「表示」ドロップダウンメニューのリスト表示](/help/forms/using/assets/list_view_view_dropdown.jpg)
+   ![表示ドロップダウンメニューのリスト表示](/help/forms/using/assets/list_view_view_dropdown.jpg)
 
-1. 同じメニューから「**設定を表示**」を選択し、「**分析**」セクションから表示する列を選択します。
+1. 同じメニューから「**表示設定**」を選択し、「**Analytics**」セクションから表示する列を選択します。
 
    ![列の表示の設定](/help/forms/using/assets/view_setting_analytics.jpg)
 
-1. 「**更新**」をクリックして、新しい列を使用可能にします。
+1. 「**更新**」をクリックして、新しい列を利用可能にします。
 
-   ![新しい列を使用可能にする](/help/forms/using/assets/new_columns_available.jpg)
+   ![新しい列を利用可能にする](/help/forms/using/assets/new_columns_available.jpg)
 
-### Adobe AnalyticsForms報告（カミラ） {#camila-reviews-forms-reporting-we-gov-adobe-analytics}
+### Adobe AnalyticsFormsレポート（カミラ） {#camila-reviews-forms-reporting-we-gov-adobe-analytics}
 
 1.  に移動します。
 
@@ -517,9 +517,9 @@ GeorgeはAyaの申し込みを承認し、既存の自動化されたワーク�
 
 1. 「**Enrollment Application For Health Benefits**」アダプティブフォームを選択し、「**Analytics Report**」オプションを選択します。
 
-   ![健康給付登録申請](/help/forms/using/assets/analytics_report_benefits.jpg)
+   ![健康保険給付の登録申請](/help/forms/using/assets/analytics_report_benefits.jpg)
 
-1. ページが読み込まれるのを待ち、Analyticsレポートのデータを表示します。
+1. ページが読み込まれるのを待ち、Analyticsレポートデータを表示します。
 
-   ![分析レポートデータ](/help/forms/using/assets/analytics_report_data_updated.jpg)
+   ![Analyticsレポートデータ](/help/forms/using/assets/analytics_report_data_updated.jpg)
 
