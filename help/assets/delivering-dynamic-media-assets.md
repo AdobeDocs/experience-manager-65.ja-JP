@@ -17,7 +17,7 @@ ht-degree: 96%
 ---
 
 
-# Dynamic Media アセットの配信{#delivering-dynamic-media-assets}
+# Dynamic Media アセットの配信 {#delivering-dynamic-media-assets}
 
 ビデオでも画像でも、Dynamic Media アセットの配信方法は、Web サイトの実装方法によって異なります。
 
