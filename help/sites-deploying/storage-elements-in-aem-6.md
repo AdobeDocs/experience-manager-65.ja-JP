@@ -38,7 +38,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 >[!CAUTION]
 >
->セグメントノードストアのPIDがorg.apache.jackrabbit.oakから変更されました。**aem 6の旧バージョンからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreService(AEM 6.3)へのplugins**.segment.SegmentNodeStoreService。この変更を反映するために必要な設定調整を行ってください。
+>セグメントノードストアのPIDがorg.apache.jackrabbit.oakから変更されました。**AEM 6の旧バージョンからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreService(AEM 6.3)へのplugins**.segment.SegmentNodeStoreService。この変更を反映するために必要な設定調整を行ってください。
 
 デフォルトでは、AEM 6 は Tar ストレージを使用して、デフォルトの設定オプションによって、ノードおよびバイナリを保存します。ストレージ設定を手動でおこなうには、次の手順に従ってください。
 
@@ -77,7 +77,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 1. ファイルを編集し、設定オプションを設定します。以下のオプションが利用できます。
 
-   * `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは です。`mongodb://localhost:27017`
+   * `mongouri`：Mongo データベースに接続するために必要な [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) です。デフォルトは `mongodb://localhost:27017` です
    * `db`：Mongo データベースの名前です。新しい AEM 6 のインストールでは、デフォルトのデータベース名として **aem-author** を使用します。
    * `cache`：キャッシュサイズ（MB 単位）です。これは DocumentNodeStore で使用される様々なキャッシュに分散されます。デフォルトは 256 です。
    * `changesSize`：Mongo で差分出力のキャッシュに使用される capped コレクションのサイズ（MB 単位）です。デフォルトは 256 です。
