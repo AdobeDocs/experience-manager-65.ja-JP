@@ -186,7 +186,7 @@ User Management データベースには、次のデフォルトのロールが�
 
 **証明書の変更：Trust Store内の証明書の信頼設定を** 変更します
 
-**証明書の読み取り：Trust Storeの証明書を** 読み取ります
+**読み取った証明書：Trust Storeの証明書を** 読み取ります
 
 **証明書の書き込み：Trust Store** へ追加の証明書
 
@@ -236,7 +236,7 @@ User Management データベースには、次のデフォルトのロールが�
 
 **MODIFY_CONFIG_PERM：サービスの設定** を変更します
 
-**TERMサービスのバ** ージョンの変更
+**TERMサービスのバ** ージョンを変更します
 
 **PDFGAdminPermission:** PDFG管理者
 
