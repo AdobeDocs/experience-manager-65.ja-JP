@@ -860,7 +860,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
    * Sun Solaris
    * HP-UX
 
-   `SDKVersions` は、クライアントアプリケーションで使用される Document Security C++ Client API のバージョンを指定します。例： `"8.2"`
+   `SDKVersions` は、クライアントアプリケーションで使用される Document Security C++ Client API のバージョンを指定します。例：`"8.2"`
 
    `APPFamilies` は、クライアント API によって定義されます。
 
@@ -968,7 +968,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc`.
+* `https://[host]:'port'/edc`
 
 次の config.xml への変更は、すべての外部リンクを Right Management ユーザーインターフェイスから無効化します。
 
