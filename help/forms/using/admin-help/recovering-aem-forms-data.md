@@ -72,7 +72,7 @@ AEM Forms は、以下の障害から安全な方法で回復します。
 
    * (JBoss)`[appserver root]/server/'server'/svcnative/DocumentStorage/backup`の名前を次に変更します。
 
-      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
+      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`
 
    * (WebLogic)`[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup`を
 
