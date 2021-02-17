@@ -53,7 +53,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 >
 >リンクは、常に、パブリッシュインスタンスを参照します。リンクは、サードパーティによって使用されることを意図しているので、オーサーインスタンスではなく、常にパブリッシュインスタンスから呼び出されます。
 
-![xf-12](assets/xf-14.png)
+![xf-14](assets/xf-14.png)
 
 プレーンレンディションセレクターでは、追加スクリプトとは異なり、トランスフォーマーを使用します。[Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) がトランスフォーマーとして使用されます。これは次の場所で設定されています。
 
