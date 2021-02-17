@@ -181,7 +181,7 @@ Dynamic Media を有効にするには、コマンドラインまたはクイッ
    Image Serverログファイル名の例：`ImageServer-57346-2020-07-25.log`
    * s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7accessログは、`/is/image`と`/is/content`を介してDynamic Mediaに対して行われた各リクエストを記録します。
 
-   これらのログは、Dynamic Media が有効の場合のみ使用されます。これらは、`system/console/status-Bundlelist`ページから生成された&#x200B;**完全なダウンロード**&#x200B;パッケージには含まれません。dynamic mediaの問題が発生した場合は、カスタマーサポートに問い合わせる際に、これらのログを両方問題に追加してください。
+   これらのログは、Dynamic Media が有効の場合のみ使用されます。これらは、`system/console/status-Bundlelist`ページから生成された&#x200B;**完全なダウンロード**&#x200B;パッケージには含まれません。Dynamic Mediaの問題が発生した場合は、カスタマーサポートに問い合わせる際に、これらのログを両方問題に追加してください。
 
 ### AEMを別のポートまたはコンテキストパスにインストールした場合… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
@@ -807,7 +807,7 @@ Dynamic Media 画像サーバーの設定では、Adobe CQ Scene7 ImageServer �
 >[!NOTE]
 Dynamic Mediaは、](#enabling-dynamic-media)を有効にした後、すぐに使える[で動く。 ただし、オプションで、Dynamic Media 画像サーバーを特定の仕様や要件に合うように設定することで、インストールを細かく調整することもできます。
 
-**前提条件**: *dynamic mediaImage Serverを設定する* 前に、WindowsのVMにMicrosoft Visual C++ Librariesがインストールされていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=14632)できます。
+**前提条件**: *Dynamic MediaImage Serverを設定する* 前に、WindowsのVMにMicrosoft Visual C++ Librariesがインストールされていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[ここから Microsoft Visual C++ 2010 再頒布可能パッケージ（x64）をダウンロード](https://www.microsoft.com/ja-jp/download/details.aspx?id=14632)できます。
 
 Dynamic Media 画像サーバーを設定するには：
 
@@ -1051,7 +1051,7 @@ Dynamic Media のカラーマネジメント機能を使用するには、機能
   </tr>
   <tr>
    <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html">iccblackpointcompension</a></td>
-   <td>Boolean</td>
+   <td>ブール値</td>
    <td>True</td>
    <td>カラー補正中に黒点の補正を行うかどうかを指定します。 アドビでは、これをオンにすることをお勧めします。</td>
   </tr>
