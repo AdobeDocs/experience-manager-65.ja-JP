@@ -71,7 +71,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 >必ず以下を設定してください。
 >
 >**ユーザー** 名と **パスワード**。Apache Felix Web Management Consoleにアクセスするための秘密鍵証明書です。
->インスタンスの[セキュリティ](/help/sites-administering/security-checklist.md)を確保するために、最初のインストール後にパスワードを変更する必要があります。
+>インスタンスの[セキュリティ](/help/sites-administering/security-checklist.md)を確実にするために、最初のインストール後にパスワードを変更する必要があります。
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Slingカスタマイズ可能な要求データ** ロガー設定：
 
-* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に不可欠です。これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
+* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に重要です。これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
 
 詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
 
