@@ -41,7 +41,7 @@ ht-degree: 65%
 
    デフォルトコンテンツポリシーのパス：`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
-   `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。例： `myPolicy`
+   `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。例：`myPolicy`
 
    ![デフォルトのポリシーをコピー](assets/crx-default1.png)
 
