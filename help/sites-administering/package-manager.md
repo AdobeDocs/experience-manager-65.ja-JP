@@ -94,7 +94,7 @@ ht-degree: 75%
   <tr>
    <th><strong>フィールド</strong></th>
    <th><strong>説明</strong></th>
-   <th><strong>形式／例</strong></th>
+   <th><strong>形式/例</strong></th>
   </tr>
   <tr>
    <td>名前</td>
@@ -227,7 +227,7 @@ ht-degree: 75%
 
 ![](do-not-localize/chlimage_1-29.png)
 
-## パッケージマネージャー  {#package-manager}
+## パッケージマネージャー {#package-manager}
 
 パッケージマネージャーでは、ローカルの AEM インストール環境でパッケージが管理されます。[必要な権限の割り当て](#permissions-needed-for-using-the-package-manager)をおこなってから、Package Manager を使用してパッケージの設定、構築、ダウンロード、インストールなど様々なアクションを実行できます。設定する主な要素は次のとおりです。
 
@@ -569,7 +569,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
 パッケージをアップロードしたら、コンテンツをインストールする必要があります。パッケージコンテンツがインストールされ、機能する状態になるには、以下の両方の条件が満たされている必要があります。
 
-* aemに読み込まれる（ファイルシステム](#uploading-packages-from-your-file-system)からアップロードされるか、[ソフトウェア配布](#software-distribution)からダウンロードされる）[
+* AEMに読み込まれる（ファイルシステム](#uploading-packages-from-your-file-system)からアップロードされるか、[ソフトウェア配布](#software-distribution)からダウンロードされる）[
 
 * インストールされていること
 
