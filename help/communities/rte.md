@@ -37,7 +37,7 @@ ht-degree: 74%
 RTE は、次のコミュニティコンポーネントに使用できます。
 
 * [ブログ](blog-feature.md)
-* [カレンダー](calendar.md)
+* [Calendar](calendar.md)
 * [コメント](comments.md)
 * [Filelibrary](file-library.md)
 * [フォーラム](forum.md)
