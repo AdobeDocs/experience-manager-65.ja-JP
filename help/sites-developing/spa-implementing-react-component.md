@@ -33,7 +33,7 @@ SPA オーサリング機能には、AEM 内で SPA をサポートするため�
 
 AEMが必要とし、SPAとSPAエディタの間で確立するシンプルで軽量な契約のおかげで、AEMのSPAでの使用に合わせて既存のJavaScriptアプリケーションを使用し、適応させるのは簡単です。
 
-この記事では、Web.RetailジャーナルのサンプルSPAの天気コンポーネントの例を説明します。
+この記事では、Web.RetailジャーナルサンプルSPAの天気コンポーネントの例を説明します。
 
 この記事を読む前に、AEM](/help/sites-developing/spa-getting-started-react.md)のSPAアプリケーションの[構造を理解しておく必要があります。
 
