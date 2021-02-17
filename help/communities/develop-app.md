@@ -30,7 +30,7 @@ ht-degree: 50%
 
 最初の手順は、`/apps/an-scf-sandbox/components/playpage`ノードにリソースのスーパータイププロパティを追加して、スーパータイプのスクリプトとプロパティを継承するようにすることです。
 
-CRXDE Lite を使用して、次の手順を実行します。
+CRXDE Lite の使用:
 
 1. ノード`/apps/an-scf-sandbox/components/playpage`を選択します。
 1. 「プロパティ」タブで、次の値を持つ新しいプロパティを入力します。
