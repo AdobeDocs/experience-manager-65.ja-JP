@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -75,6 +75,6 @@ ht-degree: 76%
 >
 >* [Brand Portalを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
 >* [DRM で保護されたアセットのダウンロード](drm.md).
->* [Windows／Mac OS デスクトップで Adobe Experience Manager デスクトップアプリケーションを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets).
+>* [Windows／Mac OS デスクトップで Adobe Experience Manager デスクトップアプリケーションを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#download-assets).
 >* [サポートされている Adobe Creative Cloud アプリ内から Adobe Asset Link を使用したアセットのダウンロード](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html).
 
