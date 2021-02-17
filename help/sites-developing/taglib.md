@@ -485,7 +485,7 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 ### <cq:removeParam> {#cq-removeparam}
 
-`<cq:removeParam>`タグは、囲まれた[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグから、指定された名前と値を持つリクエストパラメーターを削除します。 値が指定されていない場合は、特定の名前を持つすべてのパラメーターが削除されます。
+`<cq:removeParam>`タグは、指定された名前と値を持つリクエストパラメーターを含む[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグから削除します。 値が指定されていない場合は、特定の名前を持つすべてのパラメーターが削除されます。
 
 このタグの属性を以下に示します。
 
