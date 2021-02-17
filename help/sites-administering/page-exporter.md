@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
 workflow-type: tm+mt
 source-wordcount: '1065'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -90,7 +90,7 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
 
    * `Name`:サイトに適した名前例えば、 `<mysite>`。ページエクスポーターテンプレートを選択すると、ページプロパティダイアログに名前が表示されます。
 
-   * `Type`: `nt:unstructured`
+   * `Type`:  `nt:unstructured`
 
 2. テンプレートノード（ここでは `mysite`）の下に、以下で説明する設定ノードを使用してノード構造を作成します。
 
@@ -139,7 +139,7 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
    * オプションである。
    * `/etc/contentsync/templates/<mysite>`の下に配置されています。
    * `Name`プロパティを`design`に設定して定義します。
-   * ノードタイプは`nt:unstructured`です。
+   * ノードタイプは `nt:unstructured` です。
 
    `design` ノードには以下のプロパティがあります。
 
@@ -155,7 +155,7 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
    * オプションである。
    * `/etc/contentsync/templates/<mysite>`の下に配置されています。
    * 特定の名前を持たない。
-   * ノードタイプは`nt:unstructured`です。
+   * ノードタイプは `nt:unstructured` です。
    * `type`プロパティと`type`関連するプロパティがあります。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
    例えば、次の設定ノードは`mysite.clientlibs.js`ファイルをzipファイルにコピーします。
