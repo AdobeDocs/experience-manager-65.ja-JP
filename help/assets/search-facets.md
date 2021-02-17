@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: adeb20c1e7222e7c5702061cba73350002f5154c
 workflow-type: tm+mt
 source-wordcount: '2424'
-ht-degree: 76%
+ht-degree: 77%
 
 ---
 
@@ -44,9 +44,9 @@ ht-degree: 76%
 
 1. [!UICONTROL 検索フォームを編集]ページで、「**[!UICONTROL 述語を選択]**」タブからメインウィンドウに述語をドラッグします。例えば、「**[!UICONTROL プロパティの述語]**」をドラッグします。
 
-   ![検索フィルターをカスタマイズする述語を選択し、移動します](assets/drag_predicate.png)
+   ![述語を選択して移動し、検索フィルターをカスタマイズする](assets/drag_predicate.png)
 
-   *図：述語を選択して移動し、検索フィルターをカスタマイズします。*
+   *図：述語を選択して移動し、検索フィルターをカスタマイズする。*
 
 1. 「[!UICONTROL 設定]」タブで、その述語のラベル、プレースホルダーテキストおよび説明を入力します。述語に関連付けるメタデータプロパティの有効な名前を指定します。「[!UICONTROL 設定]」タブのヘッダーラベルは、選択した述語のタイプを示します。
 
