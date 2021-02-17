@@ -61,7 +61,7 @@ Web サイトコンテンツパッケージ
 
 ## Adobe Experience Manager のインストール {#installing-adobe-experience-manager}
 
-Webサイト開発用のAEMインスタンスをインストールするには、[デプロイメント環境と作成者および発行インスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)を設定する手順に従うか、[一般的なインストール](/help/sites-deploying/deploy.md#default-local-install)を実行します。汎用インストールでは、AEM Quickstart JARファイルのダウンロード、JARファイルと同じディレクトリにlicense.propertiesファイルを配置、JARファイルを重複クリックします。
+Webサイト開発用のAEMインスタンスをインストールするには、[デプロイメント環境と作成者および発行インスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)を設定する手順に従うか、[汎用インストール](/help/sites-deploying/deploy.md#default-local-install)を実行します。汎用インストールでは、AEM Quickstart JARファイルのダウンロード、JARファイルと同じディレクトリにlicense.propertiesファイルを配置、JARファイルを重複クリックします。
 
 AEM をインストールしたら、ようこそページで CRXDE Lite のリンクをクリックして CRXDE Lite 開発環境にアクセスします。
 
@@ -1152,7 +1152,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
 ここでは、画像スクリプトを作成する方法について説明します。
 
-1. `/apps/mywebsite/components/image/` を開きます。`image.jsp`
+1.  を開きます。`/apps/mywebsite/components/image/``image.jsp`
 1. 既存のコードを以下のコードに置き換えて、変更内容を保存します。
 
    ```xml
@@ -1256,7 +1256,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 
    * Contacts
    * Feedback
-   * Login
+   * ログイン
    * 検索
 
 1. ブラウザーで、Products ページを再読み込みします。次のように表示されます。
