@@ -10,7 +10,7 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d2267663-6c1d-413c-9862-e82e21ae6906
 translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+source-git-commit: ea4de28525ec4c2094e84d98aad6a518b03f011e
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 66%
@@ -24,7 +24,7 @@ ht-degree: 66%
 
 ## リクエストセッションの使用  {#use-request-session}
 
-leas権限の原則に従い、Adobeでは、すべてのリポジトリアクセスは、ユーザー要求と適切なアクセス制御にバインドされたセッションを使用して行うことを推奨します。
+最小権限の原則に従い、Adobeでは、すべてのリポジトリアクセスは、ユーザー要求と適切なアクセス制御にバインドされたセッションを使用して行うことを推奨します。
 
 ## クロスサイトスクリプティング（XSS）に対する保護{#protect-against-cross-site-scripting-xss}
 
