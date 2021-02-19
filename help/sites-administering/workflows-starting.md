@@ -10,7 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 967018907e32e5916df72ff16dfc7bc06f8dbed8
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 59%
@@ -129,7 +129,7 @@ ht-degree: 59%
       * 作成済み
       * 変更済み
       * 削除
-   * **Notetype**
+   * **ノードタイプ**
 
       ワークフローランチャーを適用するノードの種類です。
 
