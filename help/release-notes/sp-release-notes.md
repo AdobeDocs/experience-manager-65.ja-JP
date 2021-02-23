@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 Service Pack 7に関するリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
+source-git-commit: 349568af561ca170ee000fbb0d1b40d3470ebe98
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4261'
 ht-degree: 7%
 
 ---
@@ -467,8 +467,6 @@ MavenプロジェクトでUberJarを使用するには、[UberJarの使用方法
 | コネクタ | AEM 6.5では、JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013のAdobeが非推奨です。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
-
-* ロックされたコンポーネントレジストリタイマーが原因で[!DNL Experience Manager]応答に問題が発生した場合は、[このパッケージ](https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr/2.1.20)をインストールしてください。 これらの問題の解決は、次の[Experience Managerサービスパックリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=en#aem-on-prem-managed-services)に含まれる予定です。
 
 * Experience Manager6.5.7.0のインストール時に、`error.log`ファイル内の次のエラーを無視します。
 
