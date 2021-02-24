@@ -3,20 +3,20 @@ cloud: experience-cloud
 solution-title: ラーニングとサポート
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-65.html
 solution-icon: assets/experience-cloud-logo-24.png
-getting-started-title: はじめに
+getting-started-title: 開始
 getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-tutorials.html
 tutorials-title: チュートリアル
-tutorials-url: https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html
+tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-tutorials.html
 mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.ja-JP
 solution: Experience Manager
-type: Documentation
+type: ドキュメント
 index: y
 translation-type: tm+mt
-source-git-commit: fff2c39561f54436f8e5613ac648cb91af888c66
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 72%
+source-wordcount: '153'
+ht-degree: 69%
 
 ---
 
