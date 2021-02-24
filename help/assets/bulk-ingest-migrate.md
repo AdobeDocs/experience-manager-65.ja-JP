@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 5d5eebe4-46c9-4028-9354-c5f27944fcdc
 docset: aem65
 translation-type: tm+mt
-source-git-commit: d6ae8bffa2d9d59f5656b9344d8826128f12885c
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 22%
+source-wordcount: '392'
+ht-degree: 21%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 22%
 
 1. AEM インスタンスで、**[!UICONTROL ツール／セキュリティ／ユーザー]**&#x200B;に移動して、「**[!UICONTROL ユーザーを作成]**」を選択します。このサービスユーザーは、`/content/dam.`に対する&#x200B;*読み取り/書き込み*&#x200B;権限が必要です
 1. 「**[!UICONTROL ID]**」および「**[!UICONTROL パスワード]**」フィールドで、ユーザー名およびパスワードを入力します（例：**FTP User**）。この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。アセットが FTP からアップロードされる場合、アセットは、FTP サーバーにアップロードされて AEM にプッシュされる際に作成されたと見なされます。
-1. 機能パック18912のダウンロードをリクエストするには、[AdobeエンタープライズカスタマーケアにExperience Manager](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)にお問い合わせください。 サポートに問い合わせる際には、次の情報が必要になる場合があります。
+1. 機能パック18912のダウンロードをリクエストするには、[AdobeエンタープライズカスタマーケアにExperience Manager](https://experienceleague.adobe.com/?support-solution=General#support)にお問い合わせください。 サポートに問い合わせる際には、次の情報が必要になる場合があります。
 
    * 作成者インスタンスのサーバーIPアドレス。ポート番号（デフォルトでは、ポート番号は4502）を含みます。
    * 前の手順のAEMサービスユーザー名とパスワード。
