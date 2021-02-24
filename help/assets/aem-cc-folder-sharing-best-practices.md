@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Creative Cloud] ベストプラクティスへのフォル�
 description: ' [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] を設定して、Adobe Creative Cloud(CC)ユーザーとフォルダーを交換します。'
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '955'
 ht-degree: 18%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 18%
 
 >[!CAUTION]
 >
->[!DNL Experience Manager] ～ [!DNL Creative Cloud]フォルダー共有機能は廃止されました。 Adobeでは、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)や[Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)など、新しい機能を使用することを強くお勧めします。 詳細については、[Experience ManagerとCreative Cloudの統合に関するベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>[!DNL Experience Manager] ～ [!DNL Creative Cloud]フォルダー共有機能は廃止されました。 Adobeでは、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)や[Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)など、新しい機能を使用することを強くお勧めします。 詳細については、[Experience ManagerとCreative Cloudの統合に関するベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
 
 [!DNL Adobe Experience Manager] を設定して、ユーザーがアプリのユーザー [!DNL Assets] とフォルダーを共有できるようにし [!DNL Adobe Creative Cloud] ます。これにより、ユーザーは、 [!DNL Adobe Creative Cloud] assetsサービスの共有フォルダーとして使用できます。この機能は、クリエイティブチームと[!DNL Assets]ユーザー間でファイルを交換する場合に使用できます。特に、クリエイティブユーザーが[!DNL Assets]デプロイメントにアクセスできない場合（エンタープライズネットワーク上に存在しない場合）に使用できます。
 
