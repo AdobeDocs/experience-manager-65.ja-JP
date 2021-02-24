@@ -3,10 +3,10 @@ title: Assets ガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 user-guide-title: Assets ガイド
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 25%
+source-wordcount: '321'
+ht-degree: 23%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 25%
 <!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
 -->
 
-* [ Experience Manager の概要](https://helpx.adobe.com/jp/experience-manager/get-started.html)
 * [Experience Manager6.5リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
 * [セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
@@ -29,7 +28,7 @@ ht-degree: 25%
 
 | ユーザーガイド | 説明 |
 |--- |---|
-| [リリースノート](/help/release-notes/home.md) | 最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止/削除された機能、既知の問題など）を提供します |
+| [リリースノート](/help/release-notes/home.md) | 最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、非推奨機能および削除された機能、既知の問題など）を提供します |
 | [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
 | [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | Experience Managerの管理方法を理解します。 |
@@ -44,9 +43,9 @@ ht-degree: 25%
 
 ## キー[!DNL Experience Manager]リソース
 
-* [Experience ManagerビデオTutorials](https://helpx.adobe.com/experience-manager/kt/index/aem-6-5-videos.html#Assets)
+* [Experience ManagerビデオTutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?mv=other#recommended/solutions/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager資産コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
 * [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 * [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
