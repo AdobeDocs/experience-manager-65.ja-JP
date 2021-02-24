@@ -3,9 +3,9 @@ title: ワークフローを使用したアセットの処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '961'
 ht-degree: 27%
 
 ---
@@ -106,5 +106,4 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 >* [ワークフローモデルの作成とワークフロー機能の拡張](/help/sites-developing/workflows.md)
 >* [ワークフローを実行するメソッド](/help/sites-administering/workflows-starting.md)
 >* [ワークフローのベストプラクティス](/help/sites-developing/workflows-best-practices.md)
->* [ワークフローを使用したアセットの変更に関するコミュニティ記事](https://helpx.adobe.com/experience-manager/using/modify_asset_workflow.html)
 
