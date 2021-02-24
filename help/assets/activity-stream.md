@@ -3,9 +3,9 @@ title: タイムライン表示内のデジタルアセットのアクティビ�
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '215'
 ht-degree: 69%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 69%
 * 拒否
 * 移動
 
-タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。さらに、新しいアセットがアップロードされたときや、既存のアセットが変更され、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)または[Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)を介して[!DNL Experience Manager]にチェックインされたときに、タイムラインアクティビティが記録されます。
+タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。さらに、新しいアセットがアップロードされたときや、既存のアセットが変更され、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)または[Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)を介して[!DNL Experience Manager]にチェックインされたときに、タイムラインアクティビティが記録されます。
 
 >[!NOTE]
 >
