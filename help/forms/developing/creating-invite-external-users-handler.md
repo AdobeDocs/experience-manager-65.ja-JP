@@ -2,15 +2,17 @@
 title: Invite External Usersハンドラーの作成
 description: Invite External Usersハンドラーの作成
 translation-type: tm+mt
-source-git-commit: 92e5cc0b1934dad641357a22894e70a3660b774a
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1116'
 ht-degree: 1%
 
 ---
 
 
 # Invite External Usersハンドラーの作成{#create-invite-external-users-handler}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 Rights Managementサービス用のInvite External Usersハンドラーを作成できます。 「Invite External Users」ハンドラーを使用すると、Rights Managementサービスは外部ユーザーをRights Managementユーザーに招待できます。 ユーザーがRights Managementユーザーになった後は、ポリシーで保護されたPDFドキュメントを開くなどのタスクを実行できます。 外部ユーザーの招待ハンドラーをAEM Formsにデプロイすると、管理コンソールを使用して外部ユーザーハンドラーを操作できます。
 
@@ -235,7 +237,7 @@ invite外部ユーザーハンドラーは、JARファイルにパッケージ�
 1. **[!UICONTROL サービス]**/**[!UICONTROL Rights Management]**/**[!UICONTROL 設定]**/招待&#x200B;**[!UICONTROL ユーザー登録]**&#x200B;をクリックします。
 1. 「**[!UICONTROL 招待ユーザーの登録を有効にする]**」ボックスをオンにして、招待ユーザーの登録を有効にします。 「**[!UICONTROL 組み込みの登録システム]**&#x200B;を使用」で、「**[!UICONTROL いいえ]**」をクリックします。 設定を保存します。
 1. 管理コンソールホームページで、**[!UICONTROL 設定]**/**[!UICONTROL User Management]**/**[!UICONTROL ドメインの管理]**&#x200B;をクリックします。
-1. 「**[!UICONTROL 新しいローカルドメイン]**」をクリックします。 次のページで、名前と識別子の値`EDC_EXTERNAL_REGISTERED`を持つドメインを作成します。 変更を保存します。
+1. 「**[!UICONTROL 新しいローカルドメイン]**」をクリックします。 次のページで、名前と識別子の値が`EDC_EXTERNAL_REGISTERED`のドメインを作成します。 変更を保存します。
 1. 管理コンソールホームページで、**[!UICONTROL サービス]**/**[!UICONTROL Rights Management]**/**[!UICONTROL 招待ユーザーおよびローカルユーザー]**&#x200B;をクリックします。 **[!UICONTROL 追加ユーザーの招待]**&#x200B;ページが表示されます。
 1. 電子メールアドレスを入力します（現在の招待外部ユーザーハンドラーは、実際に電子メールメッセージを送信しないので、電子メールアドレスを有効にする必要はありません）。 「**[!UICONTROL OK]**」をクリックします。ユーザーがシステムに招待されます。
 1. 管理コンソールホームページで、**[!UICONTROL 設定]**/**[!UICONTROL ユーザー管理]**/**[!UICONTROL ユーザーとグループ]**&#x200B;をクリックします。
