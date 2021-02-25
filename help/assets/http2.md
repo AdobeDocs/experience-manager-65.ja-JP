@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '724'
 ht-degree: 52%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->HTTP/2配信のコンテンツを活用するには、Adobe Experience ManagerDynamic Mediaに付属のCDN（コンテンツ配信ネットワーク）を使用する必要があります。
+>この機能を使用するには、Adobe Experience ManagerDynamic Mediaにバンドルされている標準搭載のCDNを使用する必要があります。 この機能では、その他のカスタムCDNはサポートされません。
 
 ## HTTP/2 とは {#what-is-http}
 
