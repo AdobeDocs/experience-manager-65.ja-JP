@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 47%
+source-wordcount: '720'
+ht-degree: 46%
 
 ---
 
@@ -20,7 +20,7 @@ Dynamic Mediaアセットは、高速配信を実現するために、CDN(コン
 
 >[!NOTE]
 >
->CDNキャッシュの無効化のメリットを受けるには、Adobe Experience ManagerDynamic MediaにバンドルされているCDNを使用する必要があります。
+>この機能を使用するには、Adobe Experience ManagerDynamic Mediaにバンドルされている標準搭載のCDNを使用する必要があります。 この機能では、その他のカスタムCDNはサポートされません。
 
 >[!IMPORTANT]
 >
