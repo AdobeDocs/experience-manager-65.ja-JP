@@ -8,10 +8,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 44%
+source-wordcount: '174'
+ht-degree: 33%
 
 ---
 
@@ -22,4 +22,6 @@ ht-degree: 44%
 
 [Adobe](https://helpx.adobe.com/jp/support.html) サポートでは、転送者のフィルタをCDN(コンテンツ配信ネットワーク)レベルで設定し、Dynamic Mediaのコンテンツがドメインで許可されたWebサイトのリスト上のWebサイトにのみ提供されるようにします。
 
-ホットリンク保護を機能させるには、アドビ製品にバンドルされた CDN を使用する必要があります。ホットリンク保護を有効化するには、Dynamic Media アカウントの設定変更を要求するサポートチケットを管理者が作成する必要があります。ホットリンク保護を有効化するための追加費用は発生しません。
+>[!NOTE]
+>
+>ホットリンク保護を行うには、AdobeにバンドルされたCDNを使用する必要があります。 ホットリンク保護を有効化するには、Dynamic Media アカウントの設定変更を要求するサポートチケットを管理者が作成する必要があります。ホットリンク保護を有効にするための追加費用は発生しません。
