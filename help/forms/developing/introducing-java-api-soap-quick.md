@@ -9,15 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, development-tools
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
 
 # Java APIクイック開始の概要{#introducing-java-api-quickstart}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 AdobeAEM FormsAPIクイック開始は、AEM Formsサービスとやり取りするプログラムの開発に向けた取り組みを迅速化するのに役立ちます。 *クイック*&#x200B;開始は完全なプログラムで、独自のプロジェクトにコピーして貼り付け、開始点として使用できます。クイック開始を実行して、動作を確認し、必要に応じて変更することができます。
 
