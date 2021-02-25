@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 5e4bda3a-5648-4c0f-b2f8-bdbebb88f537
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '8244'
+source-wordcount: '8258'
 ht-degree: 8%
 
 ---
 
 
 # PDFドキュメントの暗号化と復号化{#encrypting-and-decrypting-pdf-documents}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 **Encryptionサービスについて**
 
@@ -183,7 +185,7 @@ Encryption API（Webサービス）を使用して、PDFドキュメントをパ
 
 1. 暗号化クライアントAPIオブジェクトを作成します。
 
-   * `EncryptionServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
    * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -579,7 +581,7 @@ Encryption API（Webサービス）を使用して、証明書ベースの暗号
 
 1. Encryptionサービスクライアントを作成します。
 
-   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
    * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -893,7 +895,7 @@ Encryption API（Webサービス）を使用して暗号化されたPDFドキュ
 
 1. Encryptionサービスクライアントを作成します。
 
-   * `EncryptionServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
    * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
@@ -1049,7 +1051,7 @@ Encryption API（Webサービス）を使用して、PDFドキュメントを保
 
 1. サービスクライアントを作成します。
 
-   * `EncryptionServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `EncryptionServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`EncryptionServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/EncryptionService?WSDL`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する場合に使用されます)。
    * `EncryptionServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
