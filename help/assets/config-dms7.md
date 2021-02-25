@@ -7,9 +7,9 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 729fbf3a97d3ae3bc91204f8831fd115d9d77f20
+source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
 workflow-type: tm+mt
-source-wordcount: '6123'
+source-wordcount: '6083'
 ht-degree: 52%
 
 ---
@@ -31,14 +31,15 @@ ht-degree: 52%
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!IMPORTANT]
+>[!NOTE]
 >
->Experience ManagerDynamic MediaにバンドルされたCDNを使用しないお客様は、次の機能を利用できません。
->* [スマートイメージング](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/imaging-faq.html?lang=en#dynamicmedia)
->* [キャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en#dynamicmedia)
->* [ホットリンクの保護](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/hotlink-protection.html?lang=en#dynamicmedia)
->* [HTTP/2コンテンツの配信](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/http2faq.html?lang=en#dynamicmedia)
->* [Dynamic MediaビューアとAdobe AnalyticsおよびExperience Platform Launchの統合](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/launch.html?lang=en#dynamicmedia)
+>次の機能のリストでは、Adobe Experience Manager-Dynamic Mediaにバンドルされている標準搭載のCDNを使用する必要があります。 これらの機能では、その他のカスタムCDNはサポートされません。
+>
+>* [スマートイメージング](/help/assets/imaging-faq.md)
+>* [キャッシュの無効化](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>* [ホットリンクの保護](/help/assets/hotlink-protection.md)
+>* [HTTP/2コンテンツの配信](/help/assets/http2.md)
+>* [Dynamic MediaビューアとAdobe AnalyticsおよびExperience Platform Launchの統合](/help/assets/launch.md)
 >* CDNレベルでのURLリダイレクト
 >* Akamai ChinaCDN(中国での最適な配信のため)
 
