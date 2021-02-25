@@ -9,21 +9,25 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: b4795930c87fa30d7c7ab60a50bc6f40da4f97d2
 workflow-type: tm+mt
-source-wordcount: '6355'
-ht-degree: 85%
+source-wordcount: '6418'
+ht-degree: 84%
 
 ---
 
 
-# AEM Document Services をプログラムとして使用する  {#using-aem-document-services-programmatically}
+# AEM Document Services をプログラムとして使用する   {#using-aem-document-services-programmatically}
 
-AEM Document Services を使用して Maven プロジェクトを構築するために必要なクライアントクラスは、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar ファイルから取得することができます。Maven プロジェクトについては、「[Maven を使用して AEM プロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)」を参照してください。
+このドキュメントのサンプルと例は、OSGi環境上のAEM FormsのAEMドキュメントサービスを理解し、使用する際に役立ちます。 JEE上のAEM Forms環境のサンプルと例については、[JEE上のAEM Formsによるプログラミング](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=en#programming-aem-forms-jee)を参照してください。
 
->[!NOTE]
->
->DocAssuranceサービスAPIを使用する前に、[DocAssuranceサービス](/help/forms/using/install-configure-document-services.md)を設定します。
+## 前提条件 {#prerequisite}
+
+* DocAssuranceサービスAPIを使用する前に、[DocAssuranceサービス](/help/forms/using/install-configure-document-services.md)を設定します。
+
+* AEM mavenプロジェクトで[AEM FormsクライアントSDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をダウンロードし、設定します。 AEMドキュメントサービスを使用してMavenプロジェクトを構築するために必要なクライアントクラスは、[AEM FormsクライアントSDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)で利用できます
+
+* Maven](/help/sites-developing/ht-projects-maven.md)を使用したAEMプロジェクトの構築方法を学ぶ[
 
 ## DocAssurance サービス {#docassurance-service}
 
