@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2574'
+source-wordcount: '2588'
 ht-degree: 2%
 
 ---
 
 
 # ブックマークによるPDFドキュメントのアセンブリ{#assembling-pdf-documents-with-bookmarks}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 ブックマークを含むPDFドキュメントをアセンブリできます。 例えば、しおりが含まれていないPDFドキュメントがあり、しおりを指定して変更するとします。 Assemblerサービスを使用すると、ブックマークを含まないPDFドキュメントを渡して、ブックマークを含むPDFドキュメントに戻すことができます。
 
