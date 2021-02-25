@@ -9,15 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding, development-tools
 discoiquuid: 1825e12c-0306-4e0a-9643-47ce1ce82132
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
 
 # APIを使用してAEM Formsを呼び出す{#invoking-aem-forms-using-apis}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 Adobe Experience Manager Formsは、共有インフラストラクチャ内で動作するサービスで構成されるJ2EEベースのエンタープライズソフトウェアです。 サービス操作は、通常、ドキュメントを消費または生産します。 AEM Formsを使用すると、フォームワークフローと電子フォーム、ドキュメントセキュリティ、ドキュメント生成を組み合わせて、統合されたまとまったサービスのセットを作成できます。 これらのサービスは、ファイアウォールの内外からアクセスできます。
 
