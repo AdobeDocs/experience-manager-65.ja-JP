@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '3937'
+source-wordcount: '3951'
 ht-degree: 7%
 
 ---
 
 
 # 使用権限の割り当て{#assigning-usage-rights}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 ## Acrobat Reader DC拡張サービスについて{#about-the-acrobat-reader-dc-extensions-service}
 
@@ -454,7 +456,7 @@ Acrobat Reader DC拡張機能API（Webサービス）を使用して秘密鍵証
 
 1. Acrobat Reader DC拡張クライアントオブジェクトを作成します。
 
-   * `ReaderExtensionsServiceClient`オブジェクトを作成するには、そのオブジェクトのデフォルトのコンストラクタを使用します。
+   * `ReaderExtensionsServiceClient`オブジェクトを作成するには、そのデフォルトのコンストラクタを使用します。
    * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`ReaderExtensionsServiceClient.Endpoint.Address`オブジェクトを作成します。 WSDLをAEM Formsサービスに指定するstring値を渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`）。 必ず`?blob=mtom`を指定してください)。
    * `ReaderExtensionsServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値により、MTOMが使用されます。
