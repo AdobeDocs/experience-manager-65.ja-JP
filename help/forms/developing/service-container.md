@@ -9,15 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding, development-tools
 discoiquuid: dd9c0ec4-a195-4b78-8992-81d0efcc0a7e
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '929'
 ht-degree: 2%
 
 ---
 
 
 # サービスコンテナ{#service-container}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 サービスコンテナに配置されたAEM Formsサービス（Encryptionサービス、長期間有効なプロセス、短時間のみ有効なプロセスなどの標準サービスを含む）は、EJBプロバイダーなど、様々なプロバイダーを使用して呼び出すことができます。 EJBプロバイダーを使用すると、AEM FormsサービスをRMI/IIOP経由で呼び出すことができます。 Webサービスプロバイダーは、SOAP/HTTPやSOAP/JMSなどの標準を使用して、サービスをWebサービス（WSDL生成）として公開します。
 
