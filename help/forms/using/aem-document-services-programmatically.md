@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 translation-type: tm+mt
-source-git-commit: b4795930c87fa30d7c7ab60a50bc6f40da4f97d2
+source-git-commit: c3fddf28c0f2f5377fff7561d29f073cc847c3ca
 workflow-type: tm+mt
-source-wordcount: '6418'
+source-wordcount: '6450'
 ht-degree: 84%
 
 ---
@@ -19,7 +19,13 @@ ht-degree: 84%
 
 # AEM Document Services をプログラムとして使用する   {#using-aem-document-services-programmatically}
 
-このドキュメントのサンプルと例は、OSGi環境上のAEM FormsのAEMドキュメントサービスを理解し、使用する際に役立ちます。 JEE上のAEM Forms環境のサンプルと例については、[JEE上のAEM Formsによるプログラミング](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=en#programming-aem-forms-jee)を参照してください。
+このドキュメントのサンプルと例は、OSGi環境上のAEM FormsのAEMドキュメントサービスを理解し、使用する際に役立ちます。 JEE上のAEM Forms環境のサンプルと例については、
+
+* [SignatureサービスJava APIのクイック開始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
+
+* [EncryptionサービスJava APIのクイック開始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
+
+* [Acrobat Reader拡張サービスJava APIクイック開始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
 
 ## 前提条件 {#prerequisite}
 
