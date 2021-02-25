@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3dd2b0d3-6023-490a-9b17-e29cc21c1b9d
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '173'
 ht-degree: 5%
 
 ---
 
 
 # PDF ドキュメントのアセンブリ {#assembling-pdf-documents}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 **Assemblerサービスについて**
 
