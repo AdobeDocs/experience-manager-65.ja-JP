@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 2ad227de-68a8-446f-8c4f-a33a6f95bec8
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2199'
 ht-degree: 4%
 
 ---
 
 
 # DDXドキュメントの動的な作成{#dynamically-creating-ddx-documents}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 Assembler操作の実行に使用できるDDXドキュメントを動的に作成できます。 DDXドキュメントを動的に作成すると、実行時に取得したDDXドキュメントの値を使用できます。 DDXドキュメントを動的に作成するには、使用しているプログラミング言語に属するクラスを使用します。 例えば、Javaを使用してクライアントアプリケーションを開発する場合は、`org.w3c.dom.*`パッケージに属するクラスを使用します。 同様に、Microsoft .NETを使用している場合は、`System.Xml`名前空間に属するクラスを使用します。
 
