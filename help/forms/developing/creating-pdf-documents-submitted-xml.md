@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1361'
 ht-degree: 4%
 
 ---
 
 
 # 送信されたXMLデータを使用したPDFドキュメントの作成{#creating-pdf-documents-with-submittedxml-data}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 ## 送信されたXMLデータを使用したPDFドキュメントの作成{#creating-pdf-documents-with-submitted-xml-data}
 
