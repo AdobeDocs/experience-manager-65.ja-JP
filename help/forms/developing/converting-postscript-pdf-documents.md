@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 7%
+source-wordcount: '1379'
+ht-degree: 6%
 
 ---
 
 
 # PostscriptからPDFドキュメントへの変換{#converting-postscript-to-pdf-documents}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 ## Distillerサービスについて{#about-the-distiller-service}
 
@@ -185,7 +187,7 @@ DistillerサービスAPI（Webサービス）を使用してPostScriptファイ�
 1. PDFドキュメントを保存します。
 
    * コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。 署名済みPDFドキュメントーのファイルの場所とファイルを開くモードを表すstring値を渡します。
-   * `CreatePDF2`メソッド（出力パラメーター）によって返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
+   * `CreatePDF2`メソッド（出力パラメーター）から返された`BLOB`オブジェクトの内容を格納するバイト配列を作成します。 `BLOB`オブジェクトの`MTOM`データメンバの値を取得して、バイト配列を入力します。
    * コンストラクターを呼び出して`System.IO.FileStream`オブジェクトを渡し、`System.IO.BinaryWriter`オブジェクトを作成します。
    * `System.IO.BinaryWriter`オブジェクトの`Write`メソッドを呼び出し、バイト配列を渡すことで、バイト配列の内容をPDFファイルに書き込みます。
 
