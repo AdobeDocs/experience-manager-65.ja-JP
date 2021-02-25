@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 9d4dba7f-49d8-4112-bc8a-04dafc99a936
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
 
 # 環境設定ノードのプログラム管理{#programmatically-managing-the-preferencesnodes}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 このトピックでは、Preferences Manager Service API(Java)を使用して、環境設定ノードをプログラムで管理する方法について説明します。
 
