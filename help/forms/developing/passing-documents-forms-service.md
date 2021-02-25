@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: e23de3c3-f8a0-459f-801e-a0942fb1c6aa
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 3%
+source-wordcount: '1714'
+ht-degree: 2%
 
 ---
 
 
 # Formsサービスにドキュメントを渡す{#passing-documents-to-the-formsservice}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 AEM Formsサービスは、ユーザーから情報を収集するために、クライアントデバイス（通常はWebブラウザー）に対してインタラクティブなPDF formsをレンダリングします。 インタラクティブPDFフォームは、通常、XDPファイルとして保存され、Designerで作成されるフォームデザインに基づいています。 AEM Forms時点では、フォームデザインを含む`com.adobe.idp.Document`オブジェクトをFormsサービスに渡すことができます。 次に、Formsサービスは、`com.adobe.idp.Document`オブジェクト内のフォームデザインをレンダリングします。
 
