@@ -11,15 +11,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '2921'
+source-wordcount: '2935'
 ht-degree: 2%
 
 ---
 
 
 # 送信されたFormsの処理{#handling-submitted-forms}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 ユーザーがインタラクティブフォームに入力できるWebベースのアプリケーションでは、データをサーバーに送信し直す必要があります。 Formsサービスを使用すると、ユーザーがインタラクティブフォームに入力したデータを取得できます。 データを取得したら、ビジネス要件に合わせてデータを処理できます。 例えば、データをデータベースに格納し、データを別のアプリケーションに送信し、データを別のサービスに送信し、データをフォームデザインに結合し、Webブラウザーに表示するなどの操作を実行できます。
 
@@ -96,7 +98,7 @@ Formsサービスを呼び出すWebアプリケーションを考えてみまし
    <td><p>Formsサービスは、インタラクティブPDFフォームをクライアントのWebブラウザーにレンダリングします。</p></td>
   </tr>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>ユーザーがインタラクティブフォームに入力し、送信ボタンをクリックします。 フォームがPDFデータとしてFormsサービスに送信されます。 このオプションはDesignerで設定されます。</p></td>
   </tr>
   <tr>
