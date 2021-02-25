@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '6243'
+source-wordcount: '6257'
 ht-degree: 4%
 
 ---
 
 
 # ユーザーの管理{#managing-users}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 **User Managementについて**
 
@@ -744,7 +746,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
  </thead>
  <tbody>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>ユーザはウェブサイトにアクセスし、ユーザ名とパスワードを指定する。 この情報は、AEM FormsをホストするJ2EEアプリケーションサーバーに送信されます。</p></td>
   </tr>
   <tr>
@@ -752,7 +754,7 @@ Authorization Manager Service API （Webサービス）を使用して、ロー�
    <td><p>ユーザー資格情報はAuthentication Managerサービスで認証されます。 ユーザーの資格情報が有効な場合、ワークフローは手順3に進みます。 それ以外の場合は、許可されたユーザーではないことを示すメッセージがユーザーに送信されます。</p></td>
   </tr>
   <tr>
-   <td><p>3</p></td>
+   <td><p>1</p></td>
    <td><p>ユーザ情報とフォームデザインは、保護された企業データベースから検索される。 </p></td>
   </tr>
   <tr>
@@ -878,7 +880,7 @@ User Management APIを使用して、プログラムによってユーザーを�
    <td><p>AEM Formsが同期操作を実行します。</p></td>
   </tr>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>ユーザー情報が更新されます。</p></td>
   </tr>
   <tr>
