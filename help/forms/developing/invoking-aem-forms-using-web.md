@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '9990'
+source-wordcount: '10004'
 ht-degree: 6%
 
 ---
 
 
 # Web サービスを使用した AEM Forms の呼び出し {#invoking-aem-forms-using-web-services}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 サービスコンテナ内のほとんどのAEM Formsサービスは、Webサービスを公開するように設定されており、Web Service Definition Language(WSDL)の生成を完全にサポートしています。 つまり、AEM FormsサービスのネイティブSOAPスタックを使用するプロキシオブジェクトを作成できます。 その結果、AEM Formsサービスは次のSOAPメッセージを交換して処理できます。
 
@@ -458,7 +460,7 @@ JAX-WSを使用して、FormsサービスのWSDLをJavaプロキシクラスに�
 
    >[!NOTE]
    >
-   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスのクイック開始には、SwaRefを使用します。 ([SwaRef](#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
+   >「AEM formsによるプログラミング」にあるすべてのJava Webサービスクイック開始(Formsサービスを除く)は、JAX-WSを使用してJavaプロキシファイルを作成します。 また、すべてのJava Webサービスクイック開始では、SwaRefを使用します。 ([SwaRef](#invoking-aem-forms-using-swaref)を使用したAEM Formsの呼び出しを参照)。
 
 **関連トピック**
 
