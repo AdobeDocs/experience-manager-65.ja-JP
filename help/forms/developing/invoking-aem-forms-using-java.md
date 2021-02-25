@@ -10,15 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 translation-type: tm+mt
-source-git-commit: 07889ead2ae402b5fb738ca08c7efe076ef33e44
+source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
 workflow-type: tm+mt
-source-wordcount: '5480'
+source-wordcount: '5494'
 ht-degree: 87%
 
 ---
 
 
 # Java API を使用した AEM Forms の呼び出し {#invoking-aem-forms-using-the-javaapi}
+
+**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
 
 AEM Forms Java API を使用して AEM Forms を呼び出すことができます。AEM Forms Java API を使用している場合、呼び出し API または Java クライアントライブラリを使用できます。Java クライアントライブラリは、Rights Management サービスなどのサービスで使用できます。これらの強く型付けされた API を使用することによって、AEM Forms を呼び出す Java アプリケーションを開発できます。
 
