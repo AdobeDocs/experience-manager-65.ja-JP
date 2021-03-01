@@ -106,7 +106,7 @@ ht-degree: 80%
       + [SPA の概要およびガイド](spa-walkthrough.md)
       + [SPA WKND チュートリアル](spa-wknd.md)
       + [AEMのSPAを使い始める — React](spa-getting-started-react.md)
-      + [AEMのSPA使用の手引き — Angular](spa-getting-started-angular.md)
+      + [AEMのSPA使用の手引き —Angular](spa-getting-started-angular.md)
       + [SPA用のReactコンポーネントの実装](spa-implementing-react-component.md)
       + [SPA の詳細](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
