@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1f40c099518bc9d296026d8cfac5b6291e41a846
+source-git-commit: 02937bb85792e2ae9dcdeee3b860f800812a4461
 workflow-type: tm+mt
-source-wordcount: '6634'
+source-wordcount: '6627'
 ht-degree: 49%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 49%
 
 拡張機能について詳しくは、『Experience Platform Launchユーザーガイド』の「[Adobe拡張機能](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/overview.html#adobe-extension)」を参照してください。
 
-**このドキュメントの対象読者：** サイト管理者、Experience Managerプラットフォームの開発者、オペレーションの担当者。
+**このトピックは、** サイト管理者、Experience Managerプラットフォームの開発者およびオペレーションの担当者を対象としています。
 
 ### 統合の制限 {#limitations-of-the-integration}
 
@@ -405,7 +405,7 @@ Dynamic Media ビューア拡張機能を使用すると、Dynamic Media ビュ�
 
 **始める前に**
 
-まだ統合を行っていない場合は、この節の前にすべてのドキュメントを十分に確認し、統合を完全に理解することをお勧めします。
+Adobeでは、この節の前にドキュメントを十分に見直し、統合を完全に理解することをお勧めします。
 
 ここでは、Dynamic Media ビューアを Adobe Analytics および Adobe Analytics for Audio and video と統合するために必要な設定手順について説明します。Experience Platform Launchの他の目的でDynamic Mediaビューア拡張機能を使用することは可能ですが、このドキュメントではそのようなシナリオについては説明しません。
 
@@ -468,7 +468,7 @@ Adobe Analytics を設定した後、統合のために次の設定がおこな�
    新しいカスタムトラフィック変数を有効にするには、Adobe Analyticsのツールバーで、**[!UICONTROL 管理者/レポートスイート]**&#x200B;をクリックします。
 
 1. **[!UICONTROL Report Suite Manager]**&#x200B;ページで正しいレポートを選択し、ツールバーで&#x200B;**[!UICONTROL 設定を編集/トラフィック/トラフィック変数]**&#x200B;をクリックします。
-1. そこで、未使用の変数を取得し、わかりやすい名前(**[!UICONTROL ビューアアセット(prop 30)]**)を付け、「有効」列のコンボボックスを「有効」に変更します。
+1. そこで、未使用の変数を選択し、わかりやすい名前(**[!UICONTROL ビューアアセット(prop 30)]**)を付け、有効列のコンボボックスを「有効」に変更します。
 
    次のスクリーンショットは、ビューアが使用するアセット名を追跡するためのカスタムトラフィック変数(**[!UICONTROL prop30]**)の例です。
 
@@ -597,7 +597,7 @@ Experience Platform Launch環境の詳細については、[環境](https://expe
 ライブラリの公開には、次の 2 つの手順を実行します。
 
 * 必要な変更（新しい変更や更新）をすべてライブラリに含めて、新しいライブラリを追加して構築。
-* 様々な環境レベル（開発からステージングおよび実稼動へ）でのライブラリの移行
+* 様々な環境レベル（開発からステージングおよび実稼動へ）でライブラリを上に移動します。
 
 #### 新しいライブラリの追加と構築 {#adding-and-building-a-new-library}
 
@@ -677,7 +677,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
    次の情報メッセージが表示されます。
 
-   *有効なアクセストークンを取得するには、Adobe I/O時に新しい証明書の公開鍵がテクニカルアカウントに追加されます。!*
+   *有効なアクセストークンを取得するために、Adobe I/O時に新しい証明書の公開鍵がテクニカルアカウントに追加されます。*
 
    情報ダイアログボックスを閉じるには、「**[!UICONTROL OK]**」をクリックします。
 
@@ -733,7 +733,7 @@ AEM 設定は、次の 2 つの主な手順で構成されます。
 
 1. 前に開いておいた **[!UICONTROL Adobe IMS テクニカルアカウント設定]**&#x200B;ページに戻ります。ページの右上隅にある「**[!UICONTROL 次へ]**」をクリックして、**[!UICONTROL Adobe IMS テクニカルアカウント設定]**&#x200B;ウィンドウで&#x200B;**[!UICONTROL アカウント]**&#x200B;ページを開きます。
 
-   (誤って前のページを閉じた場合は、Experience Manager作成者に戻り、**[!UICONTROL ツール/セキュリティ/AdobeIMS設定]**&#x200B;をクリックします。 「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL Cloud Solution]**&#x200B;ドロップダウンリストで、**[!UICONTROL Experience Platform Launch]**&#x200B;を選択します。 「**[!UICONTROL 証明書]**」ドロップダウンリストで、以前に作成した証明書の名前を選択します。)
+   (前にページを閉じた場合は、Experience Manager作成者に戻り、**[!UICONTROL ツール/セキュリティ/AdobeIMS設定]**&#x200B;をクリックします。 「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL Cloud Solution]**&#x200B;ドロップダウンリストで、**[!UICONTROL Experience Platform Launch]**&#x200B;を選択します。 「**[!UICONTROL 証明書]**」ドロップダウンリストで、以前に作成した証明書の名前を選択します。)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
