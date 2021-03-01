@@ -10,9 +10,9 @@ topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 translation-type: tm+mt
-source-git-commit: f3b5b22c1d5573492867aef60457413ad5cf419f
+source-git-commit: 103468b8e6e5bdf870156f85b7f547f190044561
 workflow-type: tm+mt
-source-wordcount: '3145'
+source-wordcount: '3169'
 ht-degree: 73%
 
 ---
@@ -145,7 +145,7 @@ ht-degree: 73%
   </tr>
   <tr>
    <td>添付ファイル</td>
-   <td><p>サポート対象のドキュメントを参照してフォームに添付するためのボタンを追加します。複数のファイルを添付ファイルコンポーネントに添付できます。</p> <p><strong> 注意： </strong><ul> <li> このコンポーネントでは、ファイル名が文字(.)で始まり、文字\ / ：を含むファイルの添付はサポートされていません。* ? " &lt; &gt; | ;% $、またはnul、prn、con、lpt、comなど、Windowsオペレーティングシステム用に予約されている特殊なファイル名を含みます。 </li> <li> Apple Safariブラウザーで開いた添付ファイルコンポーネントに複数のファイルを添付するには、ファイルを1つずつ選択して添付します。 一度に複数のファイルを選択して添付することはできません。</li> <li>添付ファイルコンポーネントは、Adobe Sign向けに有効なアダプティブフォームで、事前定義されたファイル形式のセットをサポートします。 詳しくは、「<a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">サポートされているファイル形式</a>」を参照してください。 </li> </ul></p> </td>
+   <td><p>サポート対象のドキュメントを参照してフォームに添付するためのボタンを追加します。複数のファイルを添付ファイルコンポーネントに添付できます。 コンポーネントのプロパティブラウザーで、添付ファイルの**[!UICONTROL Maximum File Size]**および**[!UICONTROL Supported File Types]**を指定することもできます。 </p> <p><strong> 注意： </strong><ul> <li> このコンポーネントでは、ファイル名が文字(.)で始まり、文字\ / ：を含むファイルの添付はサポートされていません。* ? " &lt; &gt; | ;% $、またはnul、prn、con、lpt、comなど、Windowsオペレーティングシステム用に予約されている特殊なファイル名を含みます。 </li> <li> Apple Safariブラウザーで開いた添付ファイルコンポーネントに複数のファイルを添付するには、ファイルを1つずつ選択して添付します。 一度に複数のファイルを選択して添付することはできません。</li> <li>添付ファイルコンポーネントは、Adobe Sign向けに有効なアダプティブフォームで、事前定義されたファイル形式のセットをサポートします。 詳しくは、「<a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">サポートされているファイル形式</a>」を参照してください。 </li></ul></p> </td>
   </tr>
   <tr>
    <td>ファイル添付リスト</td>
