@@ -3,17 +3,17 @@ title: Smart Content Serviceを使用したアセットのタグ付けの設定
 description: Smart Content Serviceを使用して、 [!DNL Adobe Experience Manager]でスマートタグを設定し、高度なスマートタグを設定する方法を説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 788a66d5732f0a120de6b80da69e9cf81f998667
 workflow-type: tm+mt
-source-wordcount: '2179'
-ht-degree: 60%
+source-wordcount: '2172'
+ht-degree: 55%
 
 ---
 
 
 # [!DNL Assets]のスマートタグの準備{#configure-asset-tagging-using-the-smart-content-service}
 
-Smart Content Servicesを使用してアセットのタグ付けを開始できるようにする前に、[!DNL Experience ManageR Assets]をAdobeデベロッパーコンソールに統合し、[!DNL Adobe Sensei]のスマートサービスを活用します。 設定が完了すると、いくつかの画像とタグを使用してサービスのトレーニングを行います。
+Smart Content Servicesを使用してアセットのタグ付けを開始できるようにする前に、[!DNL Experience Manager Assets]をAdobeデベロッパーコンソールに統合し、[!DNL Adobe Sensei]のスマートサービスを活用します。 設定が完了すると、いくつかの画像とタグを使用してサービスのトレーニングを行います。
 
 Smart Content Serviceを使用する前に、次の事項を確認します。
 
@@ -31,7 +31,7 @@ Adobe開発者コンソールと統合する場合、[!DNL Experience Manager]�
 
 Smart Content Serviceを設定するには、次のトップレベルの手順に従います。
 
-1. [ でスマートコンテンツサービス設定を作成して、公開鍵を生成します。](#obtain-public-certificate)[!DNL Experience Manager]OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
+1. 公開鍵を生成するには、[[!DNL Experience Manager]にスマートコンテンツサービス](#obtain-public-certificate)の設定を作成します。 OAuth 統合用の[公開証明書を取得します](#obtain-public-certificate)。
 
 1. [Adobe 開発者コンソールで統合を作成](#create-adobe-i-o-integration)し、生成した公開鍵をアップロードします。
 
@@ -41,7 +41,7 @@ Smart Content Serviceを設定するには、次のトップレベルの手順�
 
 1. 必要に応じて、[アセットのアップロード時に自動タグ付けを有効にする](#enable-smart-tagging-in-the-update-asset-workflow-optional)。
 
-### 公開証明書を取得するためのSmart Content Service設定の作成{#obtain-public-certificate}
+### Smart Content Service設定{#obtain-public-certificate}を作成して、公開証明書を取得します
 
 公開証明書により、Adobe 開発者コンソールでプロファイルを認証できます。
 
@@ -73,11 +73,11 @@ Smart Content Serviceを設定するには、次のトップレベルの手順�
    ![スマートタグ付けサービス用に作成された設定の表現](assets/smart-tags-download-public-cert.png)
 
 
-   *図：スマートタグサービスの設定*
+   *図：スマートタグサービスの設定です。*
 
 #### 証明書の有効期限が切れた場合に再設定{#certrenew}
 
-証明書の有効期限が切れると、信頼されなくなります。 期限切れの証明書は更新できません。新しい証明書を追加するには、以下の手順に従います。
+証明書の有効期限が切れると、信頼されなくなります。 期限切れの証明書は更新できません。証明書を追加するには、次の手順に従います。
 
 1. [!DNL Experience Manager] デプロイメントに管理者としてログインします。**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;をクリックします。
 
@@ -85,10 +85,10 @@ Smart Content Serviceを設定するには、次のトップレベルの手順�
 
 1. 証明書の有効期限が切れた既存の **[!UICONTROL similaritysearch]** キーストアを削除します。「**[!UICONTROL 保存して閉じる]**」をクリックします。
 
-   ![キーストア内の既存の類似性検索エントリを削除し、新しいセキュリティ証明書を追加します](assets/smarttags_delete_similaritysearch_keystore.png)
+   ![キーストアの既存の類似性検索エントリを削除し、セキュリティ証明書を追加します](assets/smarttags_delete_similaritysearch_keystore.png)
 
 
-   *図：キーストアの既存の `similaritysearch` エントリを削除して新しいセキュリティ証明書を追加.*
+   *図：キーストアの既存の `similaritysearch` エントリを削除し、セキュリティ証明書を追加します。*
 
 1. **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 従来のクラウドサービス]**&#x200B;に移動します。**[!UICONTROL アセットのスマートタグ]**／**[!UICONTROL 設定を表示]**／**[!UICONTROL 利用可能な設定]**&#x200B;をクリックします。必要な設定をクリックします。
 
@@ -108,7 +108,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 1. 「**[!UICONTROL 公開鍵をアップロード]**」を選択します。[!DNL Experience Manager]からダウンロードした証明書ファイルを指定します。[!UICONTROL 公開鍵が正常にアップロード]されたというメッセージが表示されます。「**[!UICONTROL 次へ]**」をクリックします。
 
-   [!UICONTROL 新しいサービスアカウント（JWT）秘密鍵証明書を作成]ページには、設定したサービスアカウントの公開鍵が表示されます。
+   [!UICONTROL 新しいサービスアカウント(JWT)] 秘密鍵証明書を作成します。ページには、サービスアカウントの公開鍵が表示されます。
 
 1. 「**[!UICONTROL 次へ]**」をクリックします。
 
@@ -187,7 +187,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
    ![DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します](assets/smart-tag-step-properties-workflow3.png)
 
 
-   *図：DAM Update Assetワークフローを設定し、スマートタグ手順を追加して、「スマートタグフラグを無視」を選択します*
+   *図：DAMアセットの更新ワークフローを設定して、スマートタグ手順を追加し、「スマートタグフラグを無視」を選択します。*
 
 1. 「**[!UICONTROL OK]**」をクリックして、プロセスステップを閉じ、ワークフローを保存します。
 
@@ -205,17 +205,17 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
 ### トレーニングのガイドライン {#guidelines-for-training}
 
-最適な結果を得るには、トレーニングセット内の画像は次のガイドラインに従う必要があります。
+最良の結果を得るために、トレーニングセットの画像は次のガイドラインに従います。
 
 **数とサイズ**：タグ 1 つにつき 30 以上の画像が必要です。長辺が 500 ピクセル以上である必要があります。
 
-**一貫性**：タグの各画像は、似たような外観にする必要があります。
+**コヒーレンス**:特定のタグに使用する画像は、視覚的に似ています。
 
 例えば、以下の画像は似ていないので、これらの画像すべてを `my-party`（トレーニング用）としてタグ付けするのは適切ではありません。
 
 ![トレーニングガイドラインの例を示すイラスト](/help/assets/assets/do-not-localize/coherence.png)
 
-**対象範囲**：トレーニングの画像には十分な多様性が必要です。Experience Managerが適切なものに焦点を合わせるように、いくつかの合理的に多様な例を提供することがアイデアです。 見た目が大きく異なる画像に同じタグを適用する場合は、それぞれの種類に 5 つ以上の例を含めてください。
+**対象範囲**:トレーニングの画像には十分な種類を使用してください。Experience Managerが適切なものに焦点を合わせるように、いくつかの合理的に多様な例を提供することがアイデアです。 見た目が大きく異なる画像に同じタグを適用する場合は、それぞれの種類に 5 つ以上の例を含めてください。
 
 例えば、*model-down-pose* というタグの場合、タグ付け時、類似する画像をより正確に識別できるよう、以下のハイライト表示された画像に似たトレーニング画像を増やします。
 
@@ -250,7 +250,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動します。
 1. **[!UICONTROL ワークフローモデル]**&#x200B;ページから、**[!UICONTROL スマートタグトレーニング]**&#x200B;ワークフローを選択し、ツールバーの&#x200B;**[!UICONTROL 開始ワークフロー]**&#x200B;をクリックします。
 1. **[!UICONTROL ワークフローを実行]**&#x200B;ダイアログで、サービスのトレーニングに使用するタグ付けされたアセットが格納されているペイロードフォルダーを参照します。
-1. ワークフローのタイトルを指定し、コメントを追加します。次に、「**[!UICONTROL 実行]**」をクリックします。 アセットとタグがトレーニングのために送信されます。
+1. ワークフローのタイトルを指定し、コメントを追加します。 次に、「**[!UICONTROL 実行]**」をクリックします。 アセットとタグがトレーニングのために送信されます。
 
    ![workflow_dialog](assets/workflow_dialog.png)
 
@@ -273,7 +273,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
 
    このレポートにタグが表示されない場合は、それらのタグに関するトレーニングワークフローを再度実行してください。
 
-1. レポートをダウンロードするには、リストから対象のレポートを選択し、ツールバーの「**[!UICONTROL ダウンロード]**」をクリックします。レポートが Microsoft Excel スプレッドシートとしてダウンロードされます。
+1. レポートをダウンロードするには、リストから対象のレポートを選択し、ツールバーの「**[!UICONTROL ダウンロード]**」をクリックします。レポートはMicrosoft Excelスプレッドシートとしてダウンロードされます。
 
 ## 制限事項 {#limitations}
 
