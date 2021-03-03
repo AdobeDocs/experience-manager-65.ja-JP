@@ -9,7 +9,7 @@ topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
 translation-type: tm+mt
-source-git-commit: ade3747ba608164a792a62097b82c55626245891
+source-git-commit: 3ca71b73444589096dee46c38daded043c9232b1
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 64%
@@ -19,7 +19,7 @@ ht-degree: 64%
 
 # 外部 Web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
 
-AEM の外側にホストされた Web ページか [AEM サイトページに、アダプティブフォームをシームレスに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができます。埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページのその他のエレメントから離れることなく、同時にフォームの操作を行うことができます。。
+AEM の外側にホストされた Web ページか [AEM サイトページに、アダプティブフォームをシームレスに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができます。埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページのその他のエレメントから離れることなく、同時にフォームの操作を行うことができます。.
 
 ## 前提条件 {#prerequisites}
 
@@ -165,7 +165,6 @@ Web ページにアダプティブフォームを埋め込む場合、次のベ�
 
 ## AEM Forms がクロスドメインサイトに対してアダプティブフォームをサーブできるようにする {#cross-site}
 
-1. AEM作成者インスタンスで、AEM Web Console Configuration Manager(`https://'[server]:[port]'/system/console/configMgr`)に移動します。
+1. AEM発行インスタンスで、AEM Web Console Configuration Manager(`https://'[server]:[port]'/system/console/configMgr`)に移動します。
 1. **Apache Sling Referrer Filter** 構成を探して開きます。
 1. 「許可済みホスト」フィールドで、Web ページが存在するドメインを指定します。これにより、ホストは AEM サーバーに POST リクエストをできるようになります。正規式を使用して、一連の外部アプリケーションドメインを指定することもできます。
-
