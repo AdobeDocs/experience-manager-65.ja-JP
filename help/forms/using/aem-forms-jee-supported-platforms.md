@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 translation-type: tm+mt
-source-git-commit: c9c407ea7c0bff3d15934552cd709bec7f24e857
+source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
 workflow-type: tm+mt
-source-wordcount: '3318'
+source-wordcount: '3311'
 ht-degree: 82%
 
 ---
@@ -552,23 +552,17 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 ### デザイナー {#designer}
 
->[!NOTE]
->
->WindowsにDesignerをインストールするには、インストーラーを管理者権限で実行します。
-
-* Microsoft® Windows® 2016 Server、Microsoft Windows 10
-
-   * 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
-   * 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
-   * 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
-
+* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、またはMicrosoft Windows 10
+* 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
+* 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
+* 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
 * グラフィックメモリ — 128 MBのGPU （256 MBを推奨）
 * 2.35 GB のハードディスク空き容量
 * DVD-ROM ドライブ
-* Internet Explorer 10 または 11; Firefox 45.x
 * 1024 X 768 ピクセル以上のモニター解像度
 * ビデオハードウェアアクセラレーション（オプション）
 * Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC。
+* Designerをインストールするための管理者権限。
 
 ### Adobe Acrobat と Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
@@ -719,7 +713,7 @@ AEM Forms アプリケーションは次のプラットフォームで利用可�
 
 ### Adobe Document Security Extension for Microsoft Office {#adobe-rights-management-extension-for-microsoft-office}
 
-Adobe Document Security Extension for Microsoft® Office の必要システム構成を見るには、[ここ](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html)をクリックしてください。
+Adobe Document Security Extension for Microsoft® Office の必要システム構成を見るには、[ここ](https://www.adobe.com/jp/products/livecycle/rightsmanagement/extension/downloads.html)をクリックしてください。
 
 ### クライアントサポートの例外事項 {#exceptions-to-client-support}
 
