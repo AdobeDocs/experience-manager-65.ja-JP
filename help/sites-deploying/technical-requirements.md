@@ -11,9 +11,9 @@ topic-tags: platform
 discoiquuid: 16c7a97d-884a-447e-9aad-18a2db1bda1d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7065a6b984afb18c188acd848b9b77da7da67749
+source-git-commit: d62249ee2e2d40f2a437c1cb7f2a80f3f8e67efe
 workflow-type: tm+mt
-source-wordcount: '3118'
+source-wordcount: '3207'
 ht-degree: 84%
 
 ---
@@ -134,10 +134,10 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  </tbody>
 </table>
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12は、OracleがLTSに対応していないリリースです([OracleJava SEのサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12は、Oracle別のLTS以外のリリースです([OracleJava SEサポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
-1. パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[Adobe Experience ManagerQ&amp;AのOracleJavaサポート](assets/adobe-oracle-java-license-agreement.pdf)を参照してください。
+1. パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[OracleのJavaサポート(Adobe Experience ManagerQ&amp;A](assets/adobe-oracle-java-license-agreement.pdf))を参照してください。
 
 ### ストレージと永続性 {#storage-persistence}
 
@@ -509,6 +509,20 @@ Windows x86 の場合：
 >
 
 
+
+### AEM Formsデザイナーの要件{#requirements-for-aem-forms-designer}
+
+* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、またはMicrosoft Windows 10
+* 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
+* 1 GB の RAM（32-bit OS の場合）または 2 GB の RAM（64-bit OS の場合）
+* 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
+* グラフィックメモリ — 128 MBのGPU （256 MBを推奨）
+* 2.35 GB のハードディスク空き容量
+* DVD-ROM ドライブ
+* 1024 X 768 ピクセル以上のモニター解像度
+* ビデオハードウェアアクセラレーション（オプション）
+* Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC。
+* Designerをインストールするための管理者権限。
 
 ### AEM Assets の XMP メタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
