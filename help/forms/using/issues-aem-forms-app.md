@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 2f45a965-590b-43b1-95c6-df4b74ad15b9
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 3690d2d76ce13064bd3946f4f6fea1a2759cdf37
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 59%
+source-wordcount: '697'
+ht-degree: 56%
 
 ---
 
@@ -35,8 +35,8 @@ ht-degree: 59%
 OSGi 上の AEM Forms と同期するように設定された iOS 用の AEM Forms アプリケーションは、フィールドレベルの添付ファイルのみをサポートします。すべての添付ファイルには一意の名前が付いている必要があります。複数の添付ファイルに同じ名前が付いている場合、1 つの添付ファイルのみが保持され、同じ名前が付いている他のすべての添付ファイルは失われます。iOS デバイスのユーザーがデータを損失するのを回避するには、次の手順を実行します。
 
 1. 接続されているサーバーで、**Adobe Experience Manager/ツール/操作/Webコンソール**&#x200B;に移動します。
-1. 「**Adaptive Form 設定サービス**」を検索してクリックします。
-1. Adaptive Form 設定サービスダイアログで、「**ファイル名を一意にする**」を有効にします。
+1. 「**[!UICONTROL アダプティブフォームとインタラクティブコミュニケーションWebチャネルの設定]**」を探してクリックします。
+1. [!UICONTROL アダプティブフォームとインタラクティブ通信Webチャネルの設定]ダイアログで、**ファイル名を一意にする**&#x200B;を有効にします。
 
    **「ファイル名を一意にする」**&#x200B;設定が無効になっている場合、複数の添付ファイルを含むアダプティブフォームを送信しようとすると、データが失われます。
 
