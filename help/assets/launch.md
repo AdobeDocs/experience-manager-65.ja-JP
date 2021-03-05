@@ -7,7 +7,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 02937bb85792e2ae9dcdeee3b860f800812a4461
+source-git-commit: 0a4708800e00eb34042e6979eb0703ca7816c7e1
 workflow-type: tm+mt
 source-wordcount: '6627'
 ht-degree: 49%
@@ -18,6 +18,8 @@ ht-degree: 49%
 # Dynamic MediaビューアとAdobe AnalyticsおよびExperience Platform Launchの統合{#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
 ## Dynamic MediaビューアとAdobe AnalyticsおよびExperience Platform Launchの統合について教えてください。{#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
+
+<!-- Leave this hidden path here; it points to the topic source from Sasha https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=~oufimtse&title=Dynamic+Media+Viewers+integration+with+Adobe+Launch -->
 
 新しい&#x200B;*Dynamic Mediaビューア* Platform launchビューアおよびDynamic Mediaビューア5.13の拡張機能により、Adobe AnalyticsおよびPlatform launchのお客様は、ビューアに固有のイベントとデータをPlatform launch設定で使用できます。
 
