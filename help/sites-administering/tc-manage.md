@@ -10,10 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
 translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
 workflow-type: tm+mt
-source-wordcount: '3427'
-ht-degree: 88%
+source-wordcount: '3453'
+ht-degree: 87%
 
 ---
 
@@ -68,6 +68,10 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 選択したページの子ページも選択されるように指定できます。この場合、子ページのコピーも各プロジェクトに追加され、翻訳されます。子ページが異なる翻訳統合フレームワークの設定に関連付けられている場合、AEMは追加のプロジェクトを作成します。
 
 また、[手動で翻訳プロジェクト](#creating-a-translation-project-using-the-projects-console)を作成することもできます。
+
+>[!NOTE]
+>
+>プロジェクトを作成するには、アカウントが`project-administrators`グループのメンバである必要があります。
 
 **初期翻訳と翻訳の更新**
 
@@ -418,6 +422,10 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
 ## プロジェクトコンソールを使用した翻訳プロジェクトの作成  {#creating-a-translation-project-using-the-projects-console}
 
 プロジェクトコンソールを使用する場合は、翻訳プロジェクトを手動で作成できます。
+
+>[!NOTE]
+>
+>プロジェクトを作成するには、アカウントが`project-administrators`グループのメンバである必要があります。
 
 翻訳プロジェクトを手動で作成する場合は、[基本のプロパティ](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)に加えて、翻訳に関連する以下のプロパティに値を指定する必要があります。
 
