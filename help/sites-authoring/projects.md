@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dee7ac7c-ca86-48e9-8d95-7826fa926c68
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0d5a48be283484005013ef3ed7ad015b43f6398b
+source-git-commit: b9c77b9b50ae7f18198baddf82dffcd8de4f30be
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1399'
 ht-degree: 89%
 
 ---
@@ -234,7 +234,7 @@ AEM には、次の 3 種類の既製のテンプレートが付属していま�
    <td>
     <ul>
      <li>DAMユーザーグループ（プロジェクトを作成できる）</li>
-     <li>プロジェクト管理者グループ（アセットを移動できる）</li>
+     <li>プロジェクト管理者グループ（プロジェクトの作成とアセットの移動が可能）</li>
     </ul> </td>
   </tr>
  </tbody>
