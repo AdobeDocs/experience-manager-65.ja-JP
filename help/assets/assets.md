@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager Assets]の紹介'
 description: デジタルアセット管理、その使用例、 [!DNL Adobe Experience Manager Asset] オファーについて説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 130a03c821fd2a1e9ecda70039241720052a8920
+source-git-commit: b851bfb2758db60e960afd4720d04202934c18bc
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '874'
 ht-degree: 33%
 
 ---
@@ -90,5 +90,6 @@ ht-degree: 33%
 
 >[!MORELIKETHIS]
 >
->* [最新のDAMとしてのExperience Manager資産](https://www.youtube.com/embed/PBwQqZgC-yo)
+>* [ビデオの紹介 — 最新のDAMとしてのExperience Managerアセット](https://www.youtube.com/watch?v=PBwQqZgC-yo)
+>* [メタデータの概念について](/help/assets/metadata-concepts.md)
 
