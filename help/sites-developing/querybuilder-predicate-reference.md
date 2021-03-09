@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 translation-type: tm+mt
-source-git-commit: 7a96ff5cdd187291efe108d1171782bcbecfaeb0
+source-git-commit: 054b49fb8aacb9e267ed23552d788f72123ed3b3
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 62%
@@ -99,7 +99,7 @@ booleanpropertyプロパティの相対パス
 
 * **operation**
 
-   &quot;`equals`&quot;は完全一致、&quot;`!=`&quot;は非等価比較、&quot;`greater`&quot;はプロパティ2より大きいプロパティ1、&quot;`>=`&quot;はプロパティ2より大きいか等しいプロパティ1です。 デフォルト値は「`equals`」です。
+   &quot;完全一致の場合は&quot; `equals`&quot;、不等価比較の場合は&quot; `!=`&quot;、property2より大きいプロパティ1の場合は&quot; `greater`&quot;、property2より大きいか等しいプロパティ1の場合は&quot; `>=`&quot;です。 デフォルト値は「`equals`」です。
 
 ### daterange {#daterange}
 
@@ -368,7 +368,7 @@ JCR プロパティとその値に一致します。
 
 * **operation**
 
-   完全一致（デフォルト）の場合は&quot;`equals`&quot;、不等価比較の場合は&quot;`unequals`&quot;、`jcr:like` xpath関数（オプション）の場合は&quot;`like`&quot;、一致しない場合は&quot; `not`&quot; xpathの&quot;`not(@prop)`&quot;、value paramは無視されます)、または&quot;`exists`&quot;（値はtrueの場合があります。プロパティは存在する必要があり、デフォルト値はfalseの場合は&quot;`not`&quot;と同じ）
+   完全一致（デフォルト）の場合は&quot;`equals`&quot;、不等価比較の場合は&quot; `unequals`&quot;、`jcr:like` xpath関数（オプション）の場合は&quot; `like`&quot;、一致しない場合は&quot; `not`&quot; xpathの&quot;`not(@prop)`&quot;、value paramは無視されます)、または&quot; `exists`&quot; （値はtrueの場合があります。プロパティは存在する必要があり、デフォルト値はfalseの場合は&quot; `not`&quot;と同じ）
 
 * **深さ**
 
