@@ -3,7 +3,7 @@ title: ' [!DNL Experience Manager Assets] でのアクセシビリティ'
 description: 障害を持つユーザーにとって  [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]  のアクセシビリティ機能がどのように役立つかを説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 863d1bd3f0f188153fcbbb7256d3ac2e3b247f59
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 90%
@@ -95,7 +95,7 @@ Possible topics to cover in this article are below.
 | アセットまたはフォルダーが選択されている | `e` | 選択したアセットを編集します。 |
 | アセットまたはフォルダーが選択されている | `m` | 選択したアセットを移動します。 |
 | アセットまたはフォルダーが選択されている | `Ctrl + c` | 選択したアセットをコピーします。 |
-| アセットまたはフォルダーが選択されている | `Esc` | 選択を解除します。 |
+| アセットまたはフォルダーが選択されている | `Esc` | 選択をキャンセルします。 |
 | ダイアログボックスが開き、フォーカスがある | `Esc` | ダイアログボックスを閉じます。 |
 | DAM 内のフォルダー内 | `Ctrl + v` | コピーしたアセットを貼り付けます。 |
 | [!DNL Assets] コンソール | `Ctrl + A` | すべてのアセットを選択します。 |
