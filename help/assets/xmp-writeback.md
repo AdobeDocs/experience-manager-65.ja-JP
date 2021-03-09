@@ -3,9 +3,9 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '792'
 ht-degree: 58%
 
 ---
@@ -88,6 +88,6 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 
    >[!NOTE]
    >
-   >「**[!UICONTROL Apply Blocklist to XMP Properties]**」チェックボックスは、デフォルトでオンになっています。つまり、ブロックリストを使用したフィルタリングは、デフォルトで有効になっています。このようなフィルタリングを無効にするには、「**[!UICONTROL XMPブロックリストプロパティにを適用]**」オプションの選択を解除します。
+   >「**[!UICONTROL Apply Blocklist to XMP Properties]**」チェックボックスは、デフォルトでオンになっています。つまり、ブロックリストを使用したフィルタリングは、デフォルトで有効になっています。このようなフィルタリングを無効にするには、「**[!UICONTROL XMPをブロックリストプロパティに適用]**」オプションの選択を解除します。
 
 1. 変更内容を保存します。
