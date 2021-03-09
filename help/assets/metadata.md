@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager] でのデジタルアセットのメタ
 description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d070f5dca569dfb90d3034b74c2940fd68d8ceab
+source-git-commit: 4ca77c7de6113127b123645a1955aaa70a91c1f3
 workflow-type: tm+mt
-source-wordcount: '2421'
-ht-degree: 55%
+source-wordcount: '2384'
+ht-degree: 56%
 
 ---
 
@@ -77,11 +77,6 @@ ht-degree: 55%
 1. [!DNL Assets]ユーザーインターフェイスで、編集するアセットの場所に移動します。
 1. 共通のプロパティを編集するアセットを選択します。
 1. ツールバーで、**[!UICONTROL プロパティ]**&#x200B;をクリックして、選択したアセットのプロパティページを開きます。
-
-   >[!NOTE]
-   >
-   >複数のアセットを選択すると、それらのアセットに対して最も下位の共通親フォームが選択されます。つまり、プロパティページには、すべての個々のアセットのプロパティページに共通のメタデータフィールドのみが表示されます。
-
 1. 様々なタブで選択したアセットのメタデータプロパティを変更します。
 1. 特定のアセットのメタデータエディターを表示するには、リストの残りのアセットの選択を解除します。メタデータエディターのフィールドには、その特定のアセットのメタデータが入力されています。
 
