@@ -1,28 +1,24 @@
 ---
 title: ページへの Dynamic Media アセットの追加
-seo-title: ページへの Dynamic Media アセットの追加
-description: Web サイトで使用するアセットにダイナミックメディア機能を追加する場合は、ページに直接ダイナミックメディアまたはインタラクティブメディアコンポーネントを追加できます。
-seo-description: Web サイトで使用するアセットにダイナミックメディア機能を追加する場合は、ページに直接ダイナミックメディアまたはインタラクティブメディアコンポーネントを追加できます。
-uuid: 650d0867-a079-4936-a466-55b7a30803a2
+description: Webサイトで使用するアセットにDynamic Media機能を追加するには、Dynamic Mediaまたはインタラクティブメディアコンポーネントを直接ページに追加します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
-discoiquuid: 331f4980-5193-4546-a22e-f27e38bb8250
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
-source-wordcount: '1718'
-ht-degree: 54%
+source-wordcount: '1685'
+ht-degree: 49%
 
 ---
 
 
 # ページへの Dynamic Media アセットの追加{#adding-dynamic-media-assets-to-pages}
 
-Webサイトで使用するアセットにDynamic Media機能を追加するには、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを直接ページに追加します。 これを行うには、[!UICONTROL デザイン]モードに入り、ダイナミックメディアコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。ダイナミックメディアコンポーネントおよびインタラクティブメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかを自動的に把握します。それに従って、使用可能なオプションが変わります。
+Webサイトで使用するアセットにDynamic Media機能を追加するには、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを直接ページに追加します。 これを行うには、[!UICONTROL デザイン]モードに入り、Dynamic Mediaコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Mediaとインタラクティブメディアコンポーネントはスマートで、画像とビデオのどちらを追加するかを知っており、使用可能なオプションがそれに応じて変化します。
 
-AEMをWCMとして使用している場合は、ダイナミックメディアアセットを直接ページに追加します。
+AEM を WCM として使用している場合は、Dynamic Media アセットを直接ページに追加します。
 
 >[!NOTE]
 >
@@ -48,7 +44,7 @@ AEMをWCMとして使用している場合は、ダイナミックメディア�
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-[!UICONTROL Dynamic ] Mediaおよび [!UICONTROL Interactive ] Mediaは、  Dynamic Mediaの **[!UICONTROL Sidekickで入手できます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのダイナミックメディアコンポーネントでは、**[!UICONTROL ダイナミックメディア]**&#x200B;コンポーネントを使用します。
+[!UICONTROL Dynamic ] Mediaおよび [!UICONTROL Interactive ] Mediaは、  Dynamic Mediaの **[!UICONTROL Sidekickで入手できます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他すべてのDynamic Mediaコンポーネントには、**[!UICONTROL Dynamic Media]**&#x200B;コンポーネントを使用します。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
@@ -65,13 +61,13 @@ Dynamic Mediaコンポーネントはスマートです。画像を追加する�
 >[!UICONTROL Dynamic Media]コンポーネントを追加し、**[!UICONTROL Dynamic Media設定]**&#x200B;が空白の場合、またはアセットを正しく追加できない場合は、次を確認してください。
 >
 >* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
->* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
+>* 画像にピラミッドのTIFFファイルが含まれています。Dynamic Mediaが有効になる前に読み込まれた画像には、ピラミッドTIFFファイルがありません。
 
 >
 
 
 
-#### 画像を操作する場合  {#when-working-with-images}
+#### 画像を操作する場合 {#when-working-with-images}
 
 [!UICONTROL Dynamic Media]コンポーネントを使用すると、画像セット、スピンセット、混在メディアセットなどの動的な画像を追加できます。ズームイン、ズームアウトが可能です。必要に応じて、スピンセット内の画像を回転させたり、別の種類の画像セットから画像を選択したりできます。
 
