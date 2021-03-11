@@ -3,7 +3,7 @@ title: ' [!DNL Assets]のベストプラクティス'
 description: 導入と設定に依存するベストプラクティスを特定し、遵守することで、負荷中のシステムの安定性とパフォーマンスを向上させます。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 25%
@@ -13,7 +13,7 @@ ht-degree: 25%
 
 # [!DNL Assets] {#best-practices-for-assets}のベストプラクティス
 
-[!DNL Adobe Experience Manager Assets] は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを実現するうえできわめて重要な役割を果たします。[!DNL Experience Manager Assets]内で大量のアセットを扱う場合、またはビデオやダイナミックメディアなど多数のアセットを定期的/定期的にアップロードする場合は、デジタルアセット管理体験の最適化がシステムの効率性に不可欠です。
+[!DNL Adobe Experience Manager Assets] は、コンテンツベロシティを通じてビジネス目標の達成に貢献する、高品質のデジタルマーケティングエクスペリエンスを実現するうえできわめて重要な役割を果たします。[!DNL Experience Manager Assets]内で大量のアセットを扱う場合、またはビデオやDynamic Mediaなど多数のアセットを定期的/定期的にアップロードする場合は、デジタルアセット管理体験の最適化がシステムの効率性に不可欠です。
 
 組織に対する[!DNL Assets]の配置方法とアセット取り込み、レンディションの生成、メタデータの抽出に使用する機能に応じて、異なる領域のベストプラクティスを特定して固定することで、読み込み中のシステムの安定性とパフォーマンスが大幅に向上します。
 
