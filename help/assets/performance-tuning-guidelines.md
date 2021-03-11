@@ -4,10 +4,10 @@ description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフト
 contentOwner: AG
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
 workflow-type: tm+mt
-source-wordcount: '2744'
-ht-degree: 52%
+source-wordcount: '2741'
+ht-degree: 51%
 
 ---
 
@@ -241,7 +241,7 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 ## 検索インデックス {#search-indexes}
 
-システムインデックスの更新が含まれている場合が多いので、最新のサービスパックやパフォーマンス関連のホットフィックスを実装してください。インデックスの最適化については、[パフォーマンス調整のヒント](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)を参照してください。
+[最新のサービスパック](/help/release-notes/sp-release-notes.md)とパフォーマンス関連のホットフィックスは、システムインデックスの更新を含むことが多いので、インストールしてください。 インデックスの最適化については、[パフォーマンス調整のヒント](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)を参照してください。
 
 頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法（英語）](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。クエリとインデックスのベストプラクティスに関するその他の洞察については、[クエリとインデックスのベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 
@@ -297,7 +297,7 @@ CPUの効率的な使用率と負荷分散により、待ち時間を最小限�
 * HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する.
 * サイズの大きなアセットのアップロードには有線接続を使用する.
 * Java 8 にデプロイする
-* 最適な JVM パラメーターを設定する。
+* 最適な JVM パラメーターを設定する.
 * ファイルシステムのDataStoreまたはS3データストアを構成します。
 * サブアセットの生成を無効にします。 この機能が有効な場合、AEMワークフローは、複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費し、バージョン管理や追加のワークフロー処理が必要な個々のアセットです。 別々のページが必要ない場合は、サブアセットの生成とページ抽出のアクティビティを無効にします。
 * 一時的なワークフローを有効化する.
@@ -305,6 +305,6 @@ CPUの効率的な使用率と負荷分散により、待ち時間を最小限�
 * [!DNL ImageMagick]を設定して、リソースの消費を制限します。
 * [!UICONTROL DAM Update Asset]ワークフローから不要な手順を削除します。
 * ワークフローとバージョンのパージを設定する.
-* 最新のサービスパックとホットフィックスでインデックスを最適化する。利用可能なインデックスのその他の最適化については、Adobeカスタマーケアにお問い合わせください。
+* 最新のサービスパックおよびホットフィックスを使用してインデックスを最適化します。 利用可能なインデックスのその他の最適化については、Adobeカスタマーケアにお問い合わせください。
 * guessTotal を使用してクエリのパフォーマンスを最適化する。
 * ファイルの内容からファイルの種類を検出するように[!DNL Experience Manager]を設定した場合(**[!UICONTROL AEM Webコンソール]**&#x200B;で&#x200B;**[!UICONTROL Day CQ DAM MIME Type Service]**&#x200B;を有効にして)、リソースを大量に消費するため、多くのファイルを一括アップロードします。
