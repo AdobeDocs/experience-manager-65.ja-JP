@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media アセットの公開
-description: Dynamic Media アセットの公開方法
+description: Dynamic Media資産の公開方法
 uuid: b1bee905-86cf-4284-8d4e-067e11557899
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +8,10 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 88%
+ht-degree: 87%
 
 ---
 
