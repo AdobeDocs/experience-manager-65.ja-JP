@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '11740'
 ht-degree: 88%
@@ -275,7 +275,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
 
 ## ビデオエンコーディングのベストプラクティス {#best-practices-for-encoding-videos}
 
-Dynamic Media を有効にし、ビデオクラウドサービスを設定済みの場合、**Dynamic Media エンコードビデオ**&#x200B;ワークフローがビデオをエンコードします。このワークフローは、ワークフローの処理履歴とエラー情報を取り込みます。詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。Dynamic Media を有効にし、ビデオクラウドサービスを設定済みの場合、ビデオをアップロードすると、**[!UICONTROL Dynamic Media エンコードビデオ]**&#x200B;ワークフローが自動的に有効になります（Dynamic Media を使用していない場合は、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローが有効になります）。
+Dynamic Mediaを有効にしてビデオクラウドサービスを設定している場合、**Dynamic Mediaエンコードビデオ**&#x200B;ワークフローはビデオをエンコードします。 このワークフローは、ワークフローの処理履歴とエラー情報を取り込みます。詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。Dynamic Mediaを有効にしてビデオクラウドサービスを設定した場合、ビデオのアップロード時に、**[!UICONTROL Dynamic Mediaエンコードビデオ]**&#x200B;ワークフローが自動的に有効になります。 (Dynamic Mediaを使用していない場合は、**[!UICONTROL DAM Update Asset]**&#x200B;ワークフローが有効になります)。
 
 ここでは、ソースビデオファイルのエンコードにおけるベストプラクティスのヒントを説明します。
 
@@ -399,7 +399,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 | ビデオタイプ | 幅 x 高さ | 幅の比率 | 高さの比率 |
 |--- |--- |--- |--- |
-| ソース | 1,920 x 1,080 | 1 | 3 |
+| ソース | 1,920 x 1,080 | 1 | 1 |
 | エンコード | 960 x 540 | 2 | 2 |
 | エンコード | 640 x 360 | 3 | 3 |
 | エンコード | 480 x 270 | 4 | 4 |
