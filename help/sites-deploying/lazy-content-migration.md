@@ -11,7 +11,7 @@ topic-tags: upgrading
 discoiquuid: d72b8844-d782-4b5b-8999-338217dbefb9
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 7d93df515bf98f0a947428b8093e059d63b21a34
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 87%
@@ -61,5 +61,5 @@ ht-degree: 87%
 | `CQ64LegacyCloudSettingsCleanupTask` | &lt; 6.4 | 遅延 | **/etc/cloudsettings** をクリーンアップします（ContextHub 設定を含む）。最初のアクセス時に設定が自動的に移行されます。アップグレードに伴って遅延コンテンツ移行が開始される場合、**/etc/cloudsettings** にあるこのコンテンツは、アップグレード前にパッケージを介して保持し、暗黙的な変換を開始するために再インストールする必要があります。パッケージは移行の完了後にアンインストールされます。 |
 | `CQ64UsersTitleFixTask` | &lt; 6=&quot;&quot;> | 遅延 | 従来のタイトル構造をユーザープロファイルノードのタイトルに適合させます。 |
 | `CQ64CommerceMigrationTask` | &lt; 6=&quot;&quot;> | 遅延 | コマースコンテンツを&#x200B;**/etc/commerce**&#x200B;から&#x200B;**/var/commerce**&#x200B;に移行します。 移行中に、コンテンツが移動され、移動されたコンテンツへの参照が更新されて、新しい場所が反映されます。 |
-| `CQ65DMMigrationTask` | &lt; 6.5 | 遅延 | 従来のカタログ設定と動的メディアクラウドサービス設定を&#x200B;**/etc**&#x200B;から&#x200B;**/conf**&#x200B;に移行 |
+| `CQ65DMMigrationTask` | &lt; 6.5 | 遅延 | 従来のカタログ設定とDynamic MediaCloud Services設定を&#x200B;**/etc**&#x200B;から&#x200B;**/conf**&#x200B;に移行 |
 | `CQ65LegacyClientlibsCleanupTask` | &lt; 6=&quot;&quot;> | 遅延 | **/etc/clientlibs**&#x200B;の下に存在する既存の既存のクライアントライブラリをクリーンアップします。 |
