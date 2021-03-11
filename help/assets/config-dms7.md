@@ -1,16 +1,16 @@
 ---
 title: Dynamic Media - Scene7 モードの設定
-description: Dynamic Media - Scene7 モードの設定方法について説明します。
+description: Dynamic Media-Scene7モードの設定方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
+source-git-commit: 99293a13fcdf06f37d9747683f7c32ebd9246d18
 workflow-type: tm+mt
-source-wordcount: '6072'
-ht-degree: 52%
+source-wordcount: '6138'
+ht-degree: 51%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 52%
 >* [スマートイメージング](/help/assets/imaging-faq.md)
 >* [キャッシュの無効化](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 >* [ホットリンクの保護](/help/assets/hotlink-protection.md)
->* [HTTP/2コンテンツの配信](/help/assets/http2.md)
+>* [コンテンツの HTTP/2 配信](/help/assets/http2.md)
 >* CDNレベルでのURLリダイレクト
 >* Akamai ChinaCDN(中国での最適な配信のため)
 
@@ -65,11 +65,11 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 >
 >Experience Managerインスタンスを互換モードで実行する場合（つまり、互換性パッケージがインストールされている場合）は、これらのコマンドを実行する必要はありません。
 
-互換パッケージの有無を問わず、すべてのアップグレードについて、次の Linux curl コマンドを実行することにより、Dynamic Media に付属しているデフォルトの標準提供ビューアプリセットをコピーできます。
+互換性パッケージの有無にかかわらず、すべてのアップグレードでは、次のLinux® curlコマンドを実行して、Dynamic Mediaに付属の初期設定の標準搭載ビューアプリセットをコピーできます。
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets/viewer.pushviewerpresets.json`
 
-`/etc`から`/conf`に作成したカスタムビューアプリセットと設定を移行するには、次のLinuxのcurlコマンドを実行します。
+`/etc`から`/conf`に作成したカスタムビューアプリセットと設定を移行するには、次のLinux® curlコマンドを実行します。
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets.migratedmcontent.json`
 
@@ -106,7 +106,10 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 
    * **[!UICONTROL アセットの公開]** - 次の 3 つのオプションから選択できます。
       * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。アセットを公開するためにユーザーが操作する必要はありません。
-      * **[!UICONTROL 「アク]** ティブ化時」は、URL/埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。
+      * **[!UICONTROL 「アク]** ティブ化時」は、URL/埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。<br><!-- CQDOC-17478, Added March 9, 2021-->Experience Manager6.5.8以降では、Experience Managerの発行インスタンスは、例えば、Activationpublishモードの `dam:scene7Domain` ときのみ、など、正確なDynamic Mediaメタデータ値 `dam:scene7FileStatus` を **[!UICONTROL 反映し]** ます。この機能を有効にするには、Service Pack 8をインストールしてから、Experience Managerを再起動してください。 Sling Config Managerに移動します。 `Scene7ActivationJobConsumer Component`の設定を探すか、新しい設定を作成します)。 「**[!UICONTROL Dynamic Media発行後にメタデータを複製]**」チェックボックスを選択し、「**[!UICONTROL 保存]**」をタップします。
+
+         ![[Dynamic Media発行後にメタデータを複製]チェックボックス](assets-dm/replicate-metadata-setting.png)
+
       * **[!UICONTROL 一部の]** 発行このオプションを使用すると、Dynamic Mediaで公開するフォルダを制御できます。スマート切り抜きやダイナミックレンディションなどの機能を使用したり、プレビュー用にExperience Managerーのみに公開するフォルダーを指定したりできます。 これらの同じ資産は、パブリック・ドメインでの配信のためにDynamic Mediaで公開され&#x200B;*まだ*&#x200B;されていません。<br>このオプションは、 **[!UICONTROL Dynamic Mediaクラウドの]** 設定で設定できます。また、必要に応じて、フォルダーの **[!UICONTROL プロパティ]**&#x200B;内のフォルダーレベルで設定することもできます。<br>詳しくは、[Dynamic Media での選択的公開の操作を参照してください。](/help/assets/selective-publishing.md)<br>この設定を後で変更した場合、または後でフォルダーレベルで変更した場合、変更した内容は、その時点以降にアップロードする新しいアセットにのみ影響します。フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成された後、Experience ManagerはリモートDynamic Mediaレンディションに安全にアクセスし、プレビューできます(バイナリがExperience Managerインスタンスに送り返されることはありません)。
 独自の会社のサーバーまたは特別なサーバーを使用する特別な設定がない限り、Adobeはこの設定を指定のままにすることをお勧めします。
@@ -117,7 +120,7 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
       * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
 選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」をタップします。「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。完了したら、「**[!UICONTROL 保存」をタップします。]***注意：以前に「**すべてのコンテンツを同期**」を選択した場合、これら 3 つのオプションは使用できません。*&#x200B;関連項目：[Dynamic Media のフォルダーレベルでの選択的公開の設定。](/help/assets/selective-publishing.md)
-         * **[!UICONTROL 継承]**  — フォルダーに明示的な同期値はありません。代わりに、フォルダーは、その上位フォルダーの1つ、またはクラウド設定のデフォルトモードから同期値を継承します。継承された詳細なステータスは、ツールチップの要領で表示されます。
+         * **[!UICONTROL 継承]**  — フォルダーに明示的な同期値はありません。代わりに、フォルダーは、その上位フォルダーの1つ、またはクラウド設定のデフォルトモードから同期値を継承します。ツールチップを介した継承されたショーの詳細なステータス。
          * **[!UICONTROL サブフォルダーに対して有効にする]**  — このサブツリー内のすべてを含めて、Dynamic Mediaと同期します。フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
          * **[!UICONTROL サブフォルダーに対して無効]**  — このサブツリー内のすべての項目をDynamic Mediaに同期から除外します。
 
@@ -574,7 +577,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 ### （オプション）レプリケーション用のアセットのフィルタリング{#optional-filtering-assets-for-replication}
 
-Dynamic Media以外のデプロイメントでは、Experience Manager作成者環境からExperience Manager発行ノードに、*すべての*&#x200B;アセット（画像とビデオの両方）を複製します。 このワークフローは、Experience Managerのパブリッシュサーバーがアセットも配信するので必要です。
+Dynamic Media以外のデプロイメントでは、Experience Manager作成者環境からExperience Manager発行ノードに、*すべての*&#x200B;アセット（画像とビデオの両方）を複製します。 このワークフローは、Experience Managerの発行サーバーがアセットも配信するので必要です。
 
 ただし、Dynamic Mediaのデプロイメントでは、アセットはCloud Service経由で配信されるので、同じアセットをExperience Managerの発行ノードに複製する必要はありません。 このような「ハイブリッドパブリッシング」ワークフローは、アセットの複製に伴うストレージの余分なコストと処理時間を回避します。 サイトページなどの他のコンテンツは、引き続きExperience Managerの公開ノードから提供されます。
 
@@ -589,7 +592,7 @@ Dynamic Media以外のデプロイメントでは、Experience Manager作成者�
   <tr>
    <td> </td>
    <td><strong>フィルター</strong></td>
-   <td><strong>MIME タイプ</strong></td>
+   <td><strong>MIMEタイプ</strong></td>
    <td><strong>レンディション</strong></td>
   </tr>
   <tr>
