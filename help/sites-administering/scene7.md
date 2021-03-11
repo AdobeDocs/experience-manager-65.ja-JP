@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 4333cfde433d00ddc4cb013b31fe52956791da46
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '5452'
 ht-degree: 24%
@@ -34,7 +34,7 @@ Dynamic Mediaクラシックを使用するには、Dynamic Mediaクラシック
 
 ## AEM/Dynamic Mediaクラシック統合とDynamic Media{#aem-scene-integration-versus-dynamic-media}
 
-AEMユーザーは、ダイナミックメディアを操作する2つのソリューションから選択できます。AEMのインスタンスとDynamic Mediaクラシックの統合、またはAEMに統合されたDynamic Mediaソリューションの使用のいずれかです。
+AEMユーザーは、Dynamic Mediaと連携する2つのソリューションから選択できます。AEMのインスタンスとDynamic Mediaクラシックの統合、またはAEMに統合されたDynamic Mediaソリューションの使用のいずれかです。
 
 次の条件を使用して、どちらのソリューションを選択するかを決定します。
 
