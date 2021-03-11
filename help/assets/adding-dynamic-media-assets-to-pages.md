@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '3096'
-ht-degree: 89%
+ht-degree: 88%
 
 ---
 
@@ -133,9 +133,9 @@ Dynamic Media コンポーネントはスマートであり、追加している
 Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 
 * [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
-* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Media を有効にする前に読み込まれた画像には、pyramid tiff ファイルはありません。
+* 画像にピラミッドのTIFFファイルが含まれています。Dynamic Mediaが有効になる前に読み込まれた画像には、ピラミッドTIFFファイルがありません。
 
-#### 画像を操作する場合  {#when-working-with-images}
+#### 画像を操作する場合 {#when-working-with-images}
 
 Dynamic Media コンポーネントでは、画像セット、スピンセット、混在メディアセットなどの動的イメージを追加できます。ズームイン、ズームアウト、スピンセット内での画像の回転（該当する場合）または別のタイプのセットからの画像の選択をおこなうことができます。
 
