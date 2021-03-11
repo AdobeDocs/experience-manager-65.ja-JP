@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media アセットの配信
-description: Dynamic Media アセットの配信方法を学習します
+description: Dynamic Media資産の配信方法を学ぶ
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 3eacfe8a79d155dddde8908d05b05790d048b0c5
+source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 96%
+ht-degree: 87%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 96%
 
 Dynamic Media を使用する場合、次の複数のオプションがあります。
 
-* Web サイトが AEM 上にホストされている場合は、Dynamic Media アセットを直接ページに追加します。
+* WebサイトがAEMでホストされている場合は、Dynamic Mediaのアセットを直接ページに追加する必要があります。
 * Web サイトが AEM 上にない場合は、次のいずれかの方法を選択します。
 
    * ビデオまたは画像を Web サイトに埋め込みます。
