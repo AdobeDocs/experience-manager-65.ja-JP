@@ -1,66 +1,50 @@
 ---
-title: Adobe Experience Manager6.5 Service Pack 7の新機能
-description: Adobe Experience Manager6.5 Service Pack 7の新機能
+title: ' [!DNL Experience Manager] 6.5 Service Pack 8の新機能'
+description: ' [!DNL Experience Manager] 6.5 Service Pack 8の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: a24b66506440eb2153d5589e8c79dbfafb24df66
+source-git-commit: 2c6d11f63420040a500bbb75f1146c29f64bdcc5
 workflow-type: tm+mt
-source-wordcount: '2780'
+source-wordcount: '2883'
 ht-degree: 5%
 
 ---
 
 
-# Adobe Experience Manager6.5 Service Pack 7の新機能{#aem-whats-new-service-pack}
+# [!DNL Adobe Experience Manager] 6.5 Service Pack 8 {#aem-whats-new-service-pack}の新機能
 
 ![新機能](assets/whatsnew.jpeg)
 
-[!DNL Adobe Experience Manager] 6.5サービスパックは、新機能、お客様から要望を受けた機能強化、パフォーマンス、安定性、セキュリティの向上を四半期ごとに提供します。四半期ごとの可用性により、新機能や革新性に容易にアクセスし、導入できます。
+[!DNL Adobe Experience Manager] 6.5 Service Packは、新機能、お客様から要望を受けた機能強化、パフォーマンス、安定性、セキュリティの向上を四半期ごとに提供します。四半期ごとの可用性により、新機能や革新性に容易にアクセスし、導入できます。
 
-この記事では、最新の6.5 Service Packに含まれる機能、以前の6.5 Service Pack](#key-features-previous-service-packs)に含まれる[主な機能、および最後のservice pack](#key-releases-since-last-sp)リリース以降の[キーAEMの機能について説明します。
+この記事では、最新のService Packに含まれる機能、以前の6.5 Service Pack](#key-features-previous-service-packs)に含まれる[主な機能、および前回のService Pack](#key-releases-since-last-sp)リリース以降の[キーのリリースについて説明します。
 
-## アドビ [!DNL Experience Manager Sites] {#aem-sites}
+## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
-### ページの移動とMSMロールアウトを非同期操作として使用できる{#page-moves-msm-asynchronous}
+### 展開に使用できるライブコピーページを並べ替え{#sort-livecopy-pages}
 
-これで、ページの移動およびMSMロールアウトを非同期操作として実行でき、実行時のパフォーマンスへの影響を軽減できます。 操作を即時に実行するか、後で実行するかをスケジュールできます。 関連するジョブとプロセスステップのステータスがコンソールに表示され、大規模なMSMロールアウトを監視する場合に便利です。
+[!UICONTROL 名前]、[!UICONTROL 最終変更日]、[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えることができるようになりました。 ページの[!UICONTROL 最終ロールアウト日]は、このリリースで導入された新しいプロパティです。
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* [!DNL Assets] アクセシビリティを [!DNL Dynamic Media] 強化しました。強化された機能は、キーボードナビゲーション、スクリーンリーダーの使用、支援テクノロジー(AT)の使用を可能にする機能強化と似ています。 [[!DNL Assets] enhancements](/help/release-notes/sp-release-notes.md#assets-6570)および[[!DNL Dynamic Media] enhancements](/help/release-notes/sp-release-notes.md#dynamic-media-6570)を参照してください。
+* [接続されたアセット機能](/help/assets/use-assets-across-connected-assets-instances.md)を使用する場合、アセットを使用するすべての[!DNL Sites]ページのリストを表示できるようになりました。 アセットへのこれらの参照は、アセットの[!UICONTROL プロパティ]ページで利用できます。 これにより、管理者、マーケターおよびライブラリは、アセットの使用に関する完全な表示を得ることができ、トラッキング、管理、ブランドの一貫性を向上できます。
 
-* カードと列の表示ーでデジタルアセットを並べ替えることができます。
+* Webページで参照されているアセットを削除すると、[!DNL Experience Manager]に警告が表示されます。 参照されているアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示されている参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites]が開きます。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
 >[!NOTE]
 >
->[!DNL Experience Manager Forms] アドオンパッケージは、予定されている [!DNL Experience Manager] Service Packのリリースの1週間後に公開されます。
-
-### パフォーマンスの向上{#performance-improvements-forms}
-
-[!DNL Experience Manager] 6.5 Service Pack 7Formsは、次の点でパフォーマンスが向上しました。
-
-* アダプティブフォームを送信する際に、サーバー上のフィールド値を検証する。
-
-* [!DNL Automated Forms Conversion service]を使用してPDFフォームをアダプティブフォームに変換する。
-
-### フォームデータモデルHTTPクライアント構成によるパフォーマンスの最適化{#fdm-http-client-config}
-
-[!DNL Experience Manager Forms] フォームデータモデルを使用して、データソースとしてRESTful Webサービスとの統合時に、パフォーマンスを最適化するためのHTTPクライアント設定が含まれるようになりました。[データソースの設定](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration)を参照してください。
-
-### レイアウトモード{#reset-option-layout-mode}で各コンポーネントのリセットオプションを使用できる
-
-アダプティブフォームのレイアウトモードで各コンポーネントに対してリセットオプションを使用できるようになりました。 パネルに複数列レイアウトを定義する場合、この機能を使用してパネル内の個々のコンポーネントをリセットできます。 詳しくは、[レイアウトモードを使用したコンポーネントのサイズ変更](../../help/forms/using/resize-using-layout-mode.md#resize-components)を参照してください。
-
-### Microsoft SQL Server 2019のサポート
-
-[!DNL Experience Manager Forms] は、Microsoft SQL Server 2019をサポートするようになりました。
+>[!DNL Experience Manager Forms]のアドオンパッケージは、[!DNL Experience Manager] Service Packの予定リリースの1週間後に公開されます。
 
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
 ### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
+
+#### ページの移動とMSMロールアウトを非同期操作(6.5.7.0)として使用できる{#page-moves-msm-asynchronous}
+
+これで、ページの移動およびMSMロールアウトを非同期操作として実行でき、実行時のパフォーマンスへの影響を軽減できます。 操作を即時に実行するか、後で実行するかをスケジュールできます。 関連するジョブとプロセスステップのステータスがコンソールに表示され、大規模なMSMロールアウトを監視する場合に便利です。
 
 #### 非同期モード(6.5.6.0)でのページ移動操作の可用性{#page-move-asynchronous}
 
@@ -109,6 +93,10 @@ ht-degree: 5%
 * 不完全または無効なURLの処理を改善。 このようなURLを使用すると、テンプレートエディターの動作が遅くなる場合があります。
 
 ### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
+
+* [!DNL Assets] アクセシビリティを [!DNL Dynamic Media] 強化しました。強化された機能は、キーボードナビゲーション、スクリーンリーダーの使用、支援テクノロジー(AT)の使用を可能にする機能強化と似ています。 [[!DNL Assets] enhancements](/help/release-notes/sp-release-notes.md#assets-6570)および[[!DNL Dynamic Media] enhancements](/help/release-notes/sp-release-notes.md#dynamic-media-6570)(6.5.7.0)を参照
+
+* カードと列の表示(6.5.7.0)でデジタルアセットを並べ替えることができます。
 
 #### アクセシビリティの強化(6.5.6.0) {#accessibility-assets-6560}
 
@@ -170,7 +158,7 @@ ht-degree: 5%
 
 [!DNL Experience Manager Assets]と[!DNL Brand Portal]の間の認証チャネルが変更されます。 以前は、[!DNL Brand Portal]は従来のOAuth Gateway経由でClassic UIに設定されていました。従来のOAuth Gatewayは、JWTトークン交換を使用して認証用のIMSアクセストークンを取得します。 [!DNL Experience Manager Assets] が [!DNL Brand Portal] スルーで設定され [!DNL Adobe I/O]ました。これにより、 [!DNL Brand Portal] テナントの認証用にIMSトークンが調達されます。
 
-[!DNL Experience Manager Assets]を[!DNL Brand Portal]に設定する手順は、[!DNL Experience Manager]のバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 詳しくは、[Brand PortalでのExperience Managerアセットの設定](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)を参照してください。
+[!DNL Experience Manager Assets]を[!DNL Brand Portal]に設定する手順は、[!DNL Experience Manager]のバージョン、および初めて設定するか、既存の設定をアップグレードするかによって異なります。 詳しくは、[Brand PortalでのExperience Managerアセットの設定](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)を参照してください。
 
 #### アクセシビリティの強化(6.5.4.0) {#accessibility-enhancements}
 
@@ -213,13 +201,29 @@ ht-degree: 5%
 
 #### Dynamic Media向けスマートイメージング{#smart-imaging}
 
-スマートイメージングでは、各ユーザー固有の視聴特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。[スマートイメージング](../assets/imaging-faq.md)を参照してください。
+スマートイメージングでは、各ユーザー固有の視聴特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](../assets/imaging-faq.md)を参照してください。
 
 #### Dynamic Media向けビデオプロファイル(6.5.3.0) {#smart-crop-video}のスマート切り抜き
 
 ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。詳しくは、[ビデオプロファイルでのスマート切り抜きの使用について](../assets/video-profiles.md)を参照してください。
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
+
+#### パフォーマンスの向上(6.5.7.0) {#performance-improvements-forms}
+
+[!DNL Experience Manager] 6.5 Service Pack 7Formsは、次の点でパフォーマンスが向上しました。
+
+* アダプティブフォームを送信する際に、サーバー上のフィールド値を検証する。
+
+* [!DNL Automated Forms Conversion service]を使用してPDFフォームをアダプティブフォームに変換する。
+
+#### パフォーマンスを最適化するためのフォームデータモデルHTTPクライアント設定(6.5.7.0) {#fdm-http-client-config}
+
+[!DNL Experience Manager Forms] フォームデータモデルを使用して、データソースとしてRESTful Webサービスとの統合時に、パフォーマンスを最適化するためのHTTPクライアント設定が含まれるようになりました。[データソースの設定](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration)を参照してください。
+
+#### レイアウトモード(6.5.7.0)で各コンポーネントのリセットオプションを使用できる{#reset-option-layout-mode}
+
+アダプティブフォームのレイアウトモードで各コンポーネントに対してリセットオプションを使用できるようになりました。 パネルに複数列レイアウトを定義する場合、この機能を使用してパネル内の個々のコンポーネントをリセットできます。 詳しくは、[レイアウトモードを使用したコンポーネントのサイズ変更](../../help/forms/using/resize-using-layout-mode.md#resize-components)を参照してください。
 
 #### クライアント(6.5.6.0)でアダプティブフォームに事前入力する{#prefill-merge-data-at-client}
 
@@ -337,19 +341,18 @@ Experience ManagerFormsには、次のアクセシビリティの強化が含ま
 
 Batch APIを使用すると、テンプレートから複数のインタラクティブな通信を作成できます。 テンプレートは、データを一切使用しないインタラクティブな通信です。 Batch APIは、データとテンプレートを組み合わせてインタラクティブな通信を行います。 このAPIは、インタラクティブ通信の大量生産に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 [Batch APIを使用した複数の対話型通信の生成](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)を参照してください。
 
-## Adobe Experience Manager6.5 SP6 {#key-releases-since-last-sp}以降の主なリリース
+<!-- TBD: Check if the wider team released anything in FY21.
+-->
 
-2020年9月3日～ 2020年11月26日の間に、Adobeは、サービスパックおよび累積修正パックに加え、次の機能をリリースしました。
+## [!DNL Adobe Experience Manager] 6.5 SP7 {#key-releases-since-last-sp}以降のキーリリース
 
-* [!DNL Adobe Experience Manager] をCloud Service2020.9.0 [および](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-9-0.html?lang=en#release-notes) 2020.10.0 [と](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-2020-10-0.html?lang=en#release-notes)して使用する場合。
+2020年11月26日～ 2021年2月25日の間に、Adobeは、サービスパックおよび累積修正パックに加えて、次の機能をリリースしました。
 
-* [[!DNL Experience Manager] デスクトップアプリ2.0 (2.0.3.2)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
+* [!DNL Adobe Experience Manager] をCloud Service [2020.11.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-11-0.html)、2020.12.0 [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2020/release-notes-2020-12-0.html)、2021.1.0 [として使用できます](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date)。
 
-* [WKNDリファレンスサイト — 0.0.6](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-0.0.6)
+* [[!DNL Experience Manager] デスクトップアプリ2.1 (2.1.0.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)。
 
 * [Experience Manager Screens:機能パック202011](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202011.html)
-
-* [Adobeアセットリンクv2.2](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html)
 
 >[!MORELIKETHIS]
 >
