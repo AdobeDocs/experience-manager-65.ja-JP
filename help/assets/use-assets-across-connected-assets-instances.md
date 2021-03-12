@@ -3,7 +3,7 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d17749cb8e923848f8f81360c03b9afba7989ae2
+source-git-commit: 8714a76843231650555e84d3670ecad0bfec2566
 workflow-type: tm+mt
 source-wordcount: '2754'
 ht-degree: 73%
@@ -225,4 +225,4 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 * リモート参照が取得されず、エラーメッセージが表示される場合は、サイト展開が使用可能かどうかを確認し、ネットワーク接続の問題がないかどうかを確認します。 後で確認し直してください。 [!DNL Assets] デプロイメントは、 [!DNL Sites] デプロイメントとの接続を確立しようとして2回試み、失敗が報告されます。
 
-![アセットのリモート参照の再試行に失敗しました](assets/reference-report-failure.png)
+   ![アセットのリモート参照の再試行に失敗しました](assets/reference-report-failure.png)
