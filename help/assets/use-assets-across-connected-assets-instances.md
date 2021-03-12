@@ -3,10 +3,10 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: d05dc3af0a885e51758194783e773695086d7956
+source-git-commit: d17749cb8e923848f8f81360c03b9afba7989ae2
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 98%
+source-wordcount: '2754'
+ht-degree: 73%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 98%
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は、Cloud Service [!DNL Experience Manager] として機能します。[!DNL Experience Manager as a Cloud Service]でのこの機能の動作について詳しくは、[Cloud ServiceとしてのExperience Manager内の接続されたアセット](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)を参照してください。
+* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は、Cloud Service [!DNL Experience Manager] として機能します。この機能が[!DNL Experience Manager]で[!DNL Cloud Service]として動作する方法について詳しくは、[ [!DNL Experience Manager] の「接続されたアセット」を参照してください。 [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/use-assets-across-connected-assets-instances.html)
 
-   |  | [!DNL Sites] as a Cloud Service | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
+   |  | [!DNL Sites] as a [!DNL Cloud Service] | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
    |---|---|---|---|
-   | **[!DNL Experience Manager Assets]as a[!DNL Cloud Service]** | サポート対象 | サポート対象 | サポート対象 |
+   | **[!DNL Experience Manager Assets]として[!DNL Cloud Service]** | サポート対象 | サポート対象 | サポート対象 |
    | AMS 上の **[!DNL Experience Manager]6.5 [!DNL Assets]** | サポート対象 | サポート対象 | サポート対象 |
    | **[!DNL Experience Manager]6.5 [!DNL Assets] On-Premise** | サポートなし | サポートなし | サポートなし |
 
@@ -69,21 +69,24 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
 
    1. 数分後に [!DNL Experience Manager] サーバーが正常に起動します。この [!DNL Sites] デプロイメントを、Web ページオーサリング用のローカルマシン（`https://[local_sites]:4502`）と見なします。
 
-1. ローカルスコープのユーザーと役割が、[!DNL Sites] デプロイメント上と AMS の [!DNL Assets] デプロイメント上に存在していることを確認します。[!DNL Assets] デプロイメント上でテクニカルユーザーを作成し、[関連するユーザーとグループ](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved)で説明したユーザーグループに追加します。
+1. 適切なスコープを持つユーザーとロールが、[!DNL Sites]配置とAMS上の[!DNL Assets]配置に存在することを確認します。 [!DNL Assets] デプロイメント上でテクニカルユーザーを作成し、[関連するユーザーとグループ](/help/assets/use-assets-across-connected-assets-instances.md#users-and-groups-involved)で説明したユーザーグループに追加します。
 
 1. `https://[local_sites]:4502` にあるローカルの [!DNL Sites] デプロイメントにアクセスします。**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL Connected Assets 設定]**&#x200B;をクリックし、次の値を入力します。
 
-   1. [!DNL Assets] の場所は `https://[assets_servername_ams]:[port]` です。
+   1. 構成の&#x200B;**[!UICONTROL タイトル]**。
+   1. **[!UICONTROL Remote DAM]** URLは、形式で指定した [!DNL Assets] 場所のURL `https://[assets_servername]:[port]`です。
    1. DAM ディストリビューター（テクニカルユーザー）の資格情報。
-   1. 「**[!UICONTROL マウントポイント]**」フィールドに、[!DNL Experience Manager] が取得したアセットの格納先となるローカルの [!DNL Experience Manager] パスを入力します。例：`remoteassets` フォルダー。
-   1. 「**[!UICONTROL 元のバイナリ転送最適化しきい値]**」の値をネットワークに応じて調整します。このしきい値より大きいサイズのアセットレンディションは、非同期で転送されます。
-   1. データストアを使用してアセットを保存し、データストアが両方のデプロイメント間に共通のストレージである場合は、「**[!UICONTROL Connected Assets とデータストアを共有]**」を選択します。この場合、実際のアセットバイナリはデータストアに存在し、転送されないため、しきい値の制限は重要ではありません。
+   1. 「**[!UICONTROL マウントポイント]**」フィールドに、[!DNL Experience Manager] が取得したアセットの格納先となるローカルの [!DNL Experience Manager] パスを入力します。例：`remoteassets` フォルダー。DAMから取得したアセットは、[!DNL Sites]展開のこのフォルダーに保存されます。
+   1. **[!UICONTROL ローカルサイト]** URLは、 [!DNL Sites] 展開先です。[!DNL Assets] deploymentは、この値を使用して、このデプ [!DNL Sites] ロイメントによって取得されたデジタルアセットへの参照を維持します。
+   1. [!DNL Sites]技術ユーザーの資格情報。
+   1. **[!UICONTROL Original Binary transfer optimization Threshold]**&#x200B;フィールドの値は、元のアセット（レンディションを含む）を同期的に転送するかどうかを指定します。 ファイルサイズが比較的小さいアセットは簡単に取得でき、ファイルサイズが比較的大きいアセットは非同期で最適に同期されます。 値は、ネットワークの機能に応じて異なります。
+   1. データストアを使用してアセットを保存し、データストアが両方のデプロイメント間に共通のストレージである場合は、「**[!UICONTROL Connected Assets とデータストアを共有]**」を選択します。この場合、実際のアセットバイナリがデータストアで使用可能になり、転送されないため、しきい値の制限は関係ありません。
 
-   ![Connected Assets の典型的な設定](assets/connected-assets-typical-config.png)
+   ![接続されたアセット機能の一般的な設定](assets/connected-assets-typical-config.png)
 
-   *図：Connected Assets の典型的な設定*
+   *図：接続されたアセット機能の一般的な設定です。*
 
-1. アセットは既に処理され、レンディションが取得されたので、ワークフローランチャーを無効にします。ローカル（[!DNL Sites]）デプロイメントのランチャー設定を調整し、リモートアセットが取得される `connectedassets` フォルダーを除外するようにします。
+1. [!DNL Assets]デプロイメント上の既存のデジタルアセットは既に処理され、レンディションが生成されます。 これらのレンディションはこの機能を使用してフェッチされるので、レンディションを再生成する必要はありません。 レンディションの再生成を禁止するには、ワークフローランチャーを無効にします。 ([!DNL Sites])デプロイメントのランチャーの設定を調整して、`connectedassets`フォルダーを除外します（アセットはこのフォルダーに取り込まれます）。
 
    1. [!DNL Sites] デプロイメントで、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL ランチャー]**&#x200B;をクリックします。
 
@@ -103,7 +106,7 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
    >
    >作成者がアセットを取得する際、リモート デプロイメントで使用可能なすべてのレンディションが取得されます。取得したアセットのレンディションをさらに作成したい場合は、この設定手順をスキップしてください。[!UICONTROL DAM アセットの更新]ワークフローが開始され、追加のレンディションが作成されます。これらのレンディションは、ローカルの [!DNL Sites] デプロイメントでのみ使用でき、リモート DAM デプロイメントでは使用できません。
 
-1. [!DNL Sites] インスタンスを、リモート [!DNL Assets'] の CORS 設定の「**[!UICONTROL 許可されたオリジン]**」の 1 つとして追加します。
+1. 追加[!DNL Sites]デプロイメントは、[!DNL Assets]デプロイメントのCORS設定で許可されている接触チャネルとして使用できます。
 
    1. 管理者の資格情報を使用してログインします。`Cross-Origin` を検索。**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。
 
@@ -111,7 +114,11 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
 
    1. フィールド「**[!UICONTROL 許可されたオリジン]**」にローカル [!DNL Sites] の URL、つまり `https://[local_sites]:[port]` を入力します。設定を保存します。
 
-## リモートアセットの使用  {#use-remote-assets}
+設定済みの[!DNL Sites]展開と[!DNL Assets]展開の間の接続を確認できます。
+
+![接続されたアセットが設定済みの接続テスト  [!DNL Sites]](assets/connected-assets-multiple-config.png)
+
+## リモートアセットの使用 {#use-remote-assets}
 
 Web サイト作成者は、コンテンツファインダーを使用して DAM デプロイメントに接続します。Web サイト作成者は、コンポーネント内のリモートアセットを参照、検索、ドラッグできます。リモート DAM への認証をおこなえるよう、管理者から提供された DAM ユーザーの資格情報を手元に用意してください。
 
@@ -139,17 +146,17 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
    *図：リモート DAM でアセットを検索するときにドキュメントタイプと画像をフィルタリングするオプション*
 
-1. アセットが非同期で取得され、取得タスクが失敗した場合、サイト作成者に通知されます。オーサリング中またはオーサリング後でも、作成者は[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)ユーザーインターフェイスで取得タスクやエラーについての詳細情報を確認できます。
+1. アセットが非同期で取得され、取得タスクが失敗した場合、サイト作成者に通知されます。オーサリング中、またはオーサリング後でも、作成者は、フェッチタスクとエラーに関する詳細な情報を[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)ユーザーインターフェイスで確認できます。
 
    ![バックグラウンドで発生するアセットの非同期取得に関する通知。](assets/assets_async_transfer_fails.png)
 
    *図：バックグラウンドで発生するアセットの非同期取得に関する通知。*
 
-1. ページを公開すると、ページで使用されているアセットの完全なリストが [!DNL Experience Manager] に表示されます。公開時にリモートアセットが正常に取得されることを確認します。取得した各アセットのステータスを確認するには、[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)ユーザーインターフェイスをご覧ください。
+1. ページを公開すると、ページで使用されているアセットの完全なリストが [!DNL Experience Manager] に表示されます。公開時にリモートアセットが正常に取得されることを確認します。取得した各アセットのステータスを確認するには、[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)ユーザーインターフェイスを参照してください。
 
    >[!NOTE]
    >
-   >1 つ以上のリモートアセットが取得されない場合でも、ページは公開されます。リモートアセットを使用するコンポーネントは空で公開されます。[!DNL Experience Manager] 通知領域では、非同期ジョブページに表示されるエラーの通知を確認できます。
+   >1 つ以上のリモートアセットが取得されない場合でも、ページは公開されます。リモートアセットを使用するコンポーネントは空で公開されます。[!DNL Experience Manager]通知領域には、非同期ジョブページに表示されるエラーの通知が表示されます。
 
 >[!CAUTION]
 >
@@ -157,7 +164,24 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 取得されたアセットは他のローカルアセットと同じように使用できます。ただし、関連するメタデータは編集できません。
 
-## 制限事項とベストプラクティス {#tips-and-limitations}
+### Webページ間でのアセットの使用の確認{#asset-usage-references}
+
+[!DNL Experience Manager] DAMユーザーは、アセットへのすべての参照を確認できます。リモートの[!DNL Sites]および複合アセット内のアセットの使用状況を理解し、管理するのに役立ちます。 [!DNL Experience Manager Sites]導入時のWebページの作成者の多くは、異なるWebページのリモート[!DNL Assets]にあるアセットを使用できます。 アセット管理を単純化し、参照の破損を招かないようにするには、DAMユーザーがローカルおよびリモートのWebページ間でのアセットの使用を確認することが重要です。 アセットの[!UICONTROL プロパティ]ページの[!UICONTROL 参照]タブは、アセットのローカル参照とリモート参照をリストします。
+
+[!DNL Assets]デプロイメントで参照を表示および管理するには、次の手順に従います。
+
+1. [!DNL Assets]コンソールでアセットを選択し、ツールバーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;をクリックします。
+1. 「**[!UICONTROL 参照]**」タブをクリックします。 [!DNL Assets]デプロイメントでのアセットの使用については、**[!UICONTROL ローカル参照]**&#x200B;を参照してください。 接続されたアセット機能を使用してアセットがフェッチされた[!DNL Sites]デプロイメント上のアセットの使用については、**[!UICONTROL リモート参照]を参照してください。
+
+   ![アセットプロパティのリモート参照](assets/connected-assets-remote-reference.png)
+
+1. [!DNL Sites]ページの参照は、各ローカル[!DNL Sites]の参照の合計数を表示します。 すべての参照を見つけて、参照の総数を表示するのに、時間がかかる場合があります。
+1. 参照のリストはインタラクティブで、DAMユーザーは参照をクリックして参照ページを開くことができます。 何らかの理由でリモート参照を取得できない場合は、失敗を通知する通知が表示されます。
+1. ユーザーはアセットを移動または削除できます。 アセットを移動または削除すると、選択したすべてのアセット/フォルダの参照の合計数が警告ダイアログに表示されます。 参照がまだ表示されていないアセットを削除すると、警告ダイアログが表示されます。
+
+   ![強制削除警告](assets/delete-referenced-asset.png)
+
+## 制限事項とベストプラクティス {#tip-and-limitations}
 
 * アセットの使用状況に関するインサイトを取得するには、[!DNL Sites] インスタンスで[アセットインサイト](/help/assets/asset-insights.md)機能を設定します。
 
@@ -187,13 +211,18 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 * 取得されたアセットに対しては、単純な非破壊編集と、 `Image` コンポーネント経由でサポートされている編集をおこなえます。アセットは読み取り専用です。
 * アセットを再取得する唯一の方法は、アセットをページにドラッグすることです。アセットを再取得して更新するための API サポートなどの手段はありません。
 * アセットが DAM から廃止されても、それらは引き続き [!DNL Sites] ページで使用されます。
+* アセットのリモート参照エントリは、非同期で取得されます。 参照と合計数はリアルタイムではなく、DAMユーザーが参照を表示しているときにサイトの作成者がアセットを使用した場合は、多少異なる場合があります。 DAMユーザーは、ページを更新して数分後に再試行し、合計数を取得できます。
 
 ## 問題のトラブルシューティング {#troubleshoot}
 
-一般的なエラーシナリオのトラブルシューティングをおこなうには、次の手順に従います。
+一般的なエラーのトラブルシューティングを行うには、次の手順に従います。
 
 * [!UICONTROL コンテンツファインダー]からリモートアセットを検索できない場合は、必要な役割と権限が設定されていることを確認してください。
 * リモート DAM から取得したアセットは、1 つ以上の理由で Web ページに発行できない場合があります。リモートサーバーに存在しない、取得する適切なアクセス許可がない、ネットワーク障害、などが原因の可能性があります。アセットがリモート DAM から削除されていないことを確認してください。適切な権限が設定され、前提条件が満たされていることを確認します。アセットをページに追加し直して、再公開してください。アセット取得時のエラーについては、[非同期ジョブのリスト](/help/sites-administering/asynchronous-jobs.md)を確認してください。
 * ローカル [!DNL Sites] デプロイメントからリモート DAM デプロイメントにアクセスできない場合は、クロスサイト cookie が許可されていることを確認してください。クロスサイト cookie がブロックされると、[!DNL Experience Manager] の 2 つのデプロイメントが認証されない場合があります。例えば、匿名モードの [!DNL Google Chrome] は、サードパーティ cookie をブロックする可能性があります。[!DNL Chrome] ブラウザーで cookie を許可するには、アドレスバーの「目」アイコンをクリックし、「サイトが動作していません」／「ブロック」に移動し、リモート DAM URL を選択して、ログイントークン cookie を許可します。または、[サードパーティ cookie を有効にする方法](https://support.google.com/chrome/answer/95647)に関するヘルプを参照してください。
 
    ![匿名モードでの Chrome での cookie エラー](assets/chrome-cookies-incognito-dialog.png)
+
+* リモート参照が取得されず、エラーメッセージが表示される場合は、サイト展開が使用可能かどうかを確認し、ネットワーク接続の問題がないかどうかを確認します。 後で確認し直してください。 [!DNL Assets] デプロイメントは、 [!DNL Sites] デプロイメントとの接続を確立しようとして2回試み、失敗が報告されます。
+
+![アセットのリモート参照の再試行に失敗しました](assets/reference-report-failure.png)
