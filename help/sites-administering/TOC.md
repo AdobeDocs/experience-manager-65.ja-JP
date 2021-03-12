@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: fd7a32c1070a0560ca744db041cf809f28672b33
+source-git-commit: ac2f3d69fd20d7779120a194c698d6f0dd6e6a84
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 92%
+source-wordcount: '675'
+ht-degree: 91%
 
 ---
 
@@ -97,6 +97,7 @@ ht-degree: 92%
    + [権限管理のプリンシパルビュー](touch-ui-principal-view.md)
    + [Content Disposition フィルター](content-disposition-filter.md)
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
+   + [同じサイトのcookieのサポート](same-site-cookie-support.md)
 + パーソナライゼーション {#personalization}
    + [パーソナライゼーション](personalization.md)
    + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
