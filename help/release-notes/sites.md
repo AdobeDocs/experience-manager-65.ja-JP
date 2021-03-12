@@ -2,10 +2,10 @@
 title: AEM Sites リリースノート
 description: Adobe Experience Manager 6.5 Sites 固有のリリースノート
 translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+source-git-commit: 23656e023a9a0bfc335655f9cfb0530aa917b3ef
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 64%
+source-wordcount: '872'
+ht-degree: 60%
 
 ---
 
@@ -69,7 +69,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 * JS SDK を利用する React および Angular クライアント側コンポーネントで構築された単一ページアプリエクスペリエンスのコンテキスト内編集および作成が可能になりました（SPA エディターとも呼ばれます）。
 * 基礎モードは、ページに基礎モードが設定されている場合にのみ表示されます。
 
-## コンテンツフラグメントとエディター  {#content-fragments-amp-editor}
+## コンテンツフラグメントとエディター {#content-fragments-amp-editor}
 
 * 全般的なコメントを書き込んだり、テキスト内のコメントを表示（タイムラインレールにも表示）するための新しい[注釈](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations)レールがコンテンツフラグメントエディターに追加されました。
 * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)内の複数行テキスト要素のデフォルトコンテンツタイプを、単純なテキスト、リッチテキストまたはマークダウンに設定できます。
@@ -83,7 +83,7 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 * [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)のインデックス作成を改善して、フラグメントの使用ページの検索でコンテンツが見つかるようになりました。
 * 「[Adobe Target に書き出し](/help/sites-administering/experience-fragments-target.md)」オプションで、エクスペリエンスフラグメントを JSON（デフォルトは HTML）またはその両方として送信できるようになりました。
 
-## 翻訳  {#translation}
+## 翻訳 {#translation}
 
 * プロジェクトマスターを使用して、翻訳プロジェクトを手軽に作成できます。
 * 翻訳ジョブをデフォルトで承認済みのステータスに設定することで、翻訳プロジェクトの実行を簡略化できます。
@@ -110,7 +110,13 @@ AEM Sites 6.5 の機能強化について詳しくは、以下を参照してく
 
 >[!CAUTION]
 >
->AEM 6.5 のリリース時点では、at.js 2.x は AEM でサポートされていません。at.js 1.x の最新バージョンを使用してください。
+>現在：
+>
+>* AEMアクティビティコンソール内でターゲットエンジンとしてAdobe Targetを使用している場合は、`at.js 1.x`のみがサポートされます。
+   >
+   >
+* ターゲットのコンソールで、ターゲットおよび実行中のアクティビティにエクスペリエンスフラグメントの書き出しを使用している場合、`at.js. 1.x`と`at.js 2.x`の両方がサポートされます。
+
 
 * Adobe Target との連携で Target Standard API を使用できるようになりました。AEMの以前のバージョンでは、非推奨のターゲットクラシックHTTP APIを使用しています。
 * Adobe Target`mbox.js`バージョン63が含まれています。 Adobeでは、実装を`at.js` v1.xに切り替えることを強くお勧めします。
@@ -135,4 +141,4 @@ Commerce Integration Frameworkの機能強化は、AEM 6.4以降のリリース�
 * シーケンスチャンネルでのメーター制再生が可能になりました。
 * ソースファイル（Excel シートなど）を使用してプロジェクト構造を自動作成できるようになりました。
 
-AEM Screensへの変更の詳細については、『[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)』の「リリースノート」を参照してください。
+AEM Screensへの変更の詳細については、『[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)』の「リリースノート」を参照してください。
