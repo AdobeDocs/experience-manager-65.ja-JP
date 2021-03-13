@@ -3,10 +3,10 @@ title: Connected Assets を使用した  [!DNL Sites] での DAM アセットの
 description: リモート  [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites]  デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: 8714a76843231650555e84d3670ecad0bfec2566
+source-git-commit: 8df7e4403c6664b52573cd4479b3a6a08d2cb6fa
 workflow-type: tm+mt
-source-wordcount: '2754'
-ht-degree: 73%
+source-wordcount: '2717'
+ht-degree: 72%
 
 ---
 
@@ -106,13 +106,15 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
    >
    >作成者がアセットを取得する際、リモート デプロイメントで使用可能なすべてのレンディションが取得されます。取得したアセットのレンディションをさらに作成したい場合は、この設定手順をスキップしてください。[!UICONTROL DAM アセットの更新]ワークフローが開始され、追加のレンディションが作成されます。これらのレンディションは、ローカルの [!DNL Sites] デプロイメントでのみ使用でき、リモート DAM デプロイメントでは使用できません。
 
-1. 追加[!DNL Sites]デプロイメントは、[!DNL Assets]デプロイメントのCORS設定で許可されている接触チャネルとして使用できます。
+1. 追加[!DNL Sites]デプロイメントは、[!DNL Assets]デプロイメントのCORS設定で許可されている接触チャネルとして使用できます。 詳しくは、[CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)についてを参照してください。
 
-   1. 管理者の資格情報を使用してログインします。`Cross-Origin` を検索。**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。
+<!-- TBD: See if these steps are not required.
+    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
 
-   1. [!DNL Sites] デプロイメントの CORS 設定を作成するには、「![Adobe Granite クロスオリジンリソース共有ポリシー](assets/do-not-localize/assets_add_icon.png)」の横にある&#x200B;**[!UICONTROL アセット追加]**&#x200B;アイコンをクリックします。
+    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
 
-   1. フィールド「**[!UICONTROL 許可されたオリジン]**」にローカル [!DNL Sites] の URL、つまり `https://[local_sites]:[port]` を入力します。設定を保存します。
+    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
+-->
 
 設定済みの[!DNL Sites]展開と[!DNL Assets]展開の間の接続を確認できます。
 
@@ -173,7 +175,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 1. [!DNL Assets]コンソールでアセットを選択し、ツールバーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;をクリックします。
 1. 「**[!UICONTROL 参照]**」タブをクリックします。 [!DNL Assets]デプロイメントでのアセットの使用については、**[!UICONTROL ローカル参照]**&#x200B;を参照してください。 接続されたアセット機能を使用してアセットがフェッチされた[!DNL Sites]デプロイメント上のアセットの使用については、**[!UICONTROL リモート参照]を参照してください。
 
-   ![アセットプロパティのリモート参照](assets/connected-assets-remote-reference.png)
+   ![アセットのプロパティページのリモート参照](assets/connected-assets-remote-reference.png)
 
 1. [!DNL Sites]ページの参照は、各ローカル[!DNL Sites]の参照の合計数を表示します。 すべての参照を見つけて、参照の総数を表示するのに、時間がかかる場合があります。
 1. 参照のリストはインタラクティブで、DAMユーザーは参照をクリックして参照ページを開くことができます。 何らかの理由でリモート参照を取得できない場合は、失敗を通知する通知が表示されます。
@@ -223,6 +225,6 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
    ![匿名モードでの Chrome での cookie エラー](assets/chrome-cookies-incognito-dialog.png)
 
-* リモート参照が取得されず、エラーメッセージが表示される場合は、サイト展開が使用可能かどうかを確認し、ネットワーク接続の問題がないかどうかを確認します。 後で確認し直してください。 [!DNL Assets] デプロイメントは、 [!DNL Sites] デプロイメントとの接続を確立しようとして2回試み、失敗が報告されます。
+* リモート参照が取得されず、エラーメッセージが表示される場合は、[!DNL Sites]デプロイが使用可能かどうかを確認し、ネットワーク接続の問題を確認します。 後で確認し直してください。 [!DNL Assets] デプロイメントは、 [!DNL Sites] デプロイメントとの接続を確立しようとして2回試み、失敗が報告されます。
 
    ![アセットのリモート参照の再試行に失敗しました](assets/reference-report-failure.png)
