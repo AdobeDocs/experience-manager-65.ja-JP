@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8に固有のリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: d96730eed6447815c40307a8d60b6ffc9ff45c2e
+source-git-commit: 89b037fbde6003ccf86336c4467df415e233986b
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 | -------- | ---------------------------- |
 | バージョン | 6.5.8.0 |
 | タイプ | Service Pack のリリース |
-| 日付 | 2021年3月11日 |
+| 日付 | 2021 年 3 月 11 日 |
 | ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.8.zip) |
 
 <!-- TBD: Update the SD link when SP8 is available. Same link is duplicated below in install -->
@@ -36,7 +36,7 @@ ht-degree: 5%
 
 * [接続されたアセット機能](/help/assets/use-assets-across-connected-assets-instances.md)を使用する場合、アセットを使用するすべての[!DNL Sites]ページのリストを表示できるようになりました。 アセットへのこれらの参照は、アセットの[!UICONTROL プロパティ]ページで利用できます。 これにより、管理者、マーケターおよびライブラリは、アセットの使用に関する完全な表示を得ることができ、トラッキング、管理、ブランドの一貫性を向上できます。
 
-* Webページで参照されているアセットを削除すると、[!DNL Experience Manager]に警告が表示されます。 参照されているアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示されている参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites]が開きます。
+* Webページで参照されているアセットを削除すると、[!DNL Experience Manager] [警告](/help/assets/use-assets-across-connected-assets-instances.md#asset-usage-references)が表示されます。 参照されているアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示されている参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites]が開きます。
 
 * [!UICONTROL 名前]、[!UICONTROL 最終変更日、]、[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えます。
 
