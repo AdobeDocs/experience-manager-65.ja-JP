@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8に固有のリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 89b037fbde6003ccf86336c4467df415e233986b
+source-git-commit: 60764db23115e7f548a82a67955331da2b858973
 workflow-type: tm+mt
-source-wordcount: '2822'
+source-wordcount: '2812'
 ht-degree: 5%
 
 ---
@@ -208,7 +208,7 @@ ht-degree: 5%
 
 A.サーバーがオンラインで使用できる状態で、パッケージを`../crx-quickstart/install`フォルダーに配置します。 パッケージが自動的にインストールされます。
 
-B. Package Manager](https://docs.adobe.com/content/docs/en/crx/2-3/how_to/package_manager.html)の[HTTP APIを使用します。 `cmd=install&recursive=true`を使用して、ネストされたパッケージをインストールします。
+B. Package Manager](/help/sites-administering/package-manager.md#package-share)の[HTTP APIを使用します。 `cmd=install&recursive=true`を使用して、ネストされたパッケージをインストールします。
 
 >[!NOTE]
 >
