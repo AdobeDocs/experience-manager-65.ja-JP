@@ -7,10 +7,10 @@ user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 translation-type: tm+mt
-source-git-commit: ac2f3d69fd20d7779120a194c698d6f0dd6e6a84
+source-git-commit: c56e93b99553993e1c144c2ad2cb1299c9894812
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 91%
+source-wordcount: '662'
+ht-degree: 92%
 
 ---
 
@@ -114,7 +114,6 @@ ht-degree: 91%
    + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
    + [SAP Commerce Cloud](sap-commerce-cloud.md)
    + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-   + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
 + 統合 {#integration}
    + [サードパーティのサービスとの統合](third-party-services.md)
    + [Salesforce との統合](salesforce.md)
@@ -163,8 +162,7 @@ ht-degree: 91%
    + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
    + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
-   + [AEM Commerce - GDPR 対応](https://experienceleague.adobe.com/docs/experience-manager-65/administering/ecommerce/gdpr-compliance-commerce.html)
-+ コンテンツ管理 {#contentmanagement}
+   + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
    + [パッケージの使用方法](package-manager.md)
    + [タグの管理](tags.md)
    + [ページエクスポーター](page-exporter.md)
