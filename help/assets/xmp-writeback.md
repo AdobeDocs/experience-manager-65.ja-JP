@@ -3,17 +3,19 @@ title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
 translation-type: tm+mt
-source-git-commit: cf86d0c38e326766b35318e78a94a3f32e166e01
+source-git-commit: 7faa6638eff422599450946a257e53970d25189c
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 58%
+source-wordcount: '784'
+ht-degree: 57%
 
 ---
 
 
 # レンディションへの XMP の書き戻し {#xmp-writeback-to-renditions}
 
-[!DNL Adobe Experience Manager Assets]のXMP書き戻し機能は、アセットのメタデータの変更をアセットのレンディションに複製します。 アセットのメタデータを[!DNL Experience Manager Assets]内から変更する場合、またはアセットのアップロード中に変更内容がCRXDeのアセットノード内に最初に保存されます。 XMPの書き戻し機能は、アセットのすべてのレンディションまたは特定のレンディションにメタデータの変更を反映します。
+[!DNL Adobe Experience Manager Assets]のこのXMP書き戻し機能は、メタデータの変更を元のアセットのレンディションに複製します。 アセット内から、またはアセットのアップロード中に、アセットのメタデータを変更すると、変更は最初にアセット階層のメタデータノードに保存されます。
+
+XMP の書き戻し機能によって、メタデータの変更が、アセットのすべてのレンディションまたは特定のレンディションに反映されます。この機能は、`jcr`名前空間を使用するメタデータプロパティ、つまり`dc:title`という名前のプロパティのみを書き戻しますが、`mytitle`という名前のプロパティは書き戻しません。
 
 「`Classic Leather`」というタイトルのアセットの「[!UICONTROL タイトル]」プロパティを「`Nylon`」に変更するシナリオについて考えます。
 
@@ -23,11 +25,9 @@ ht-degree: 58%
 
 ![metadata_stored](assets/metadata_stored.png)
 
-ただし、[!DNL Experience Manager Assets]は、メタデータの変更をアセットのレンディションに自動的に反映しません。
+ただし、[!DNL Experience Manager Assets]は、メタデータの変更をアセットのレンディションに自動的に反映しません。 [XMPの書き戻しを有効にする方法](#enable-xmp-writeback)を参照してください。
 
-XMPの書き戻し機能を使用すると、メタデータの変更をアセットのすべてのレンディションまたは特定のレンディションに反映できます。 ただし、変更はアセット階層の metadata ノード以下には保存されません。代わりに、この機能によって、レンディションのバイナリファイル内に変更内容が埋め込まれます。
-
-## XMP の書き戻しの有効化  {#enabling-xmp-writeback}
+## XMPの書き戻しを有効にする{#enable-xmp-writeback}
 
 アセットのアップロード時にメタデータの変更をアセットのレンディションに反映させるには、設定マネージャーで「**[!UICONTROL Adobe CQ DAM Rendition Maker]**」の設定を変更します。
 
@@ -47,7 +47,7 @@ XMP の書き戻し機能でメタデータをレンディションサムネー�
 1. モデルページで、「**[!UICONTROL DAM メタデータの書き戻し]**」ワークフローモデルを開きます。
 1. **[!UICONTROL DAM メタデータの書き戻し]**&#x200B;ページで、「**[!UICONTROL XMP の書き戻しプロセス]**」ステップを開きます。
 1. [!UICONTROL ステップのプロパティ]ダイアログボックスで、「**[!UICONTROL プロセス]**」タブをクリックします。
-1. 「**Arguments**」ボックスに`rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`を追加し、「**OK**」をクリックします。
+1. 「**Arguments**」ボックスに`rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`を追加し、「**[!UICONTROL OK]**」をクリックします。
 
    ![step_properties](assets/step_properties.png)
 
