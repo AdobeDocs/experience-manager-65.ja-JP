@@ -1,8 +1,8 @@
 ---
 title: Adobe I/O を使用した Adobe Target との統合
 seo-title: Adobe I/O を使用した Adobe Target との統合
-description: Adobe I/Oを使用してAEMとAdobe Targetを統合する方法を説明します
-seo-description: Adobe I/Oを使用してAEMとAdobe Targetを統合する方法を説明します
+description: Adobe I/Oを使用してAEMとAdobe Targetを統合する方法を説明します。
+seo-description: Adobe I/Oを使用してAEMとAdobe Targetを統合する方法を説明します。
 uuid: dd4ed638-e182-4d7e-9c98-282431812467
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 26efba567985dcb89b2610935cab18943b7034b3
+source-git-commit: 07f354ccfb8741f0de4fc85ba1575ead3b8ea6e4
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 12%
+source-wordcount: '1559'
+ht-degree: 10%
 
 ---
 
@@ -30,6 +30,7 @@ Target Standard APIを介してAEMをAdobe Targetと統合するには、AdobeIM
 >AEMでのAdobe TargetクラシックAPIの使用は、後方互換性を維持するために引き続きサポートされています。 [ターゲットクラシックAPIは、ユーザー資格情報認証](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target)を使用します。
 >
 >APIの選択は、AEM/ターゲット統合に使用される認証方式によって決定されます。
+>「[テナントID」と「クライアントコード](#tenant-client)」も参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -61,7 +62,7 @@ Target Standard APIを介してAEMをAdobe Targetと統合するには、AdobeIM
 
    ![](assets/integrate-target-io-01.png)
 
-1. 「**Download**（または&#x200B;**Download Public Key**）」を選択してファイルをローカルドライブにダウンロードし、[AEM](#configuring-adobe-i-o-for-adobe-target-integration-with-aem)とのAdobe Target統合用にAdobe I/Oを設定する際に使用できるようにします。
+1. 「**Download**（または&#x200B;**Download Public Key**）」を選択してファイルをローカルドライブにダウンロードし、AEM](#configuring-adobe-i-o-for-adobe-target-integration-with-aem)とのAdobe Target統合用のAdobe I/Oを[設定する際に使用できるようにします。
 
    >[!CAUTION]
    >
@@ -69,7 +70,7 @@ Target Standard APIを介してAEMをAdobe Targetと統合するには、AdobeIM
 
    ![](assets/integrate-target-io-02.png)
 
-## AEM {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}とのAdobe Target統合のためのAdobe I/Oの設定
+## AEM {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}とのAdobe Target統合用のAdobe I/Oの設定
 
 AEMで使用するAdobe TargetとのAdobe I/Oプロジェクト（統合）を作成し、必要な権限を割り当てる必要があります。
 
@@ -79,9 +80,9 @@ Adobe I/Oコンソールを開き、AEMで使用するAdobe TargetのI/Oプロ�
 
 >[!NOTE]
 >
->[Adobe I/Oのチュートリアル](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html)も参照してください。
+>[Adobe I/Oチュートリアル](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html)も参照してください。
 
-1. プロジェクト用のAdobe I/Oコンソールを開く：
+1. プロジェクトのAdobe I/Oコンソールを開く：
 
    [https://console.adobe.io/projects](https://console.adobe.io/projects)
 
@@ -172,13 +173,13 @@ AEMに戻ると、ターゲットに必要な値をAdobe I/O統合から追加�
 1. AEM](#configuring-an-ims-configuration-generating-a-public-key)で開いている[IMS設定に戻ります。
 1. 「**次へ**」を選択します。
 
-1. ここでは、Adobe I/O](#details-stored-for-the-adobe-io-integration-project)の[詳細を使用できます。
+1. Adobe I/O](#details-stored-for-the-adobe-io-integration-project)の[詳細を使用するには、次の手順に従います。
 
    * **タイトル**:テキスト。
    * **認証サーバー**:下の `"aud"` 例のように、下の **** Payloadセクションの `"https://ims-na1.adobelogin.com"` 行からこれをコピー&amp;ペーストします。
-   * **APIキー**:ターゲットのために、Adobe I/O統合の [](#details-stored-for-the-adobe-io-integration-project) 概要セクションからこれをコピーします。
-   * **クライアントシークレット**:ターゲット用にAdobe I/O統合の [](#details-stored-for-the-adobe-io-integration-project) 概要セクションでこれを生成し、
-   * **ペイロード**:ターゲット用に、Adobe I/O統合の [Generate ](#details-stored-for-the-adobe-io-integration-project) JWTセクションからこれをコピーします。
+   * **APIキー**:ターゲットのために、Adobe I/O統合の「 [](#details-stored-for-the-adobe-io-integration-project) 概要」セクションからこれをコピーします。
+   * **クライアントシークレット**:ターゲット用のAdobe I/O統合の [](#details-stored-for-the-adobe-io-integration-project) 概要セクションでこれを生成し、
+   * **ペイロード**:ターゲット用のAdobe I/O統合の [Generate ](#details-stored-for-the-adobe-io-integration-project) JWTセクションからこれをコピーします
 
    ![](assets/integrate-target-io-10.png)
 
@@ -230,7 +231,7 @@ Target Standard APIを使用するCloud Serviceに対して、設定を参照で
 1. 「**Adobe Target設定**」タブに詳細を入力します。
 
    * **認証**:IMS
-   * **テナントID**:AdobeIMSテナントID
+   * **テナントID**:AdobeIMSテナントID。下の[テナントIDとクライアントコード](#tenant-client)の節も参照してください。
 
       >[!NOTE]
       >
@@ -241,7 +242,7 @@ Target Standard APIを使用するCloud Serviceに対して、設定を参照で
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >その場合は`yourtenantid`を使用します。
-
+   * **クライアントコード**:以下の「 [テナントIDとクライアント](#tenant-client) コード」の節を参照してください。
    * **IMS設定**:IMS設定の名前を選択します
    * **APIタイプ**:REST
    * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、「[A4TAnalytics Cloud設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)の設定」の注意を参照してください。
@@ -254,15 +255,35 @@ Target Standard APIを使用するCloud Serviceに対して、設定を参照で
    >[!NOTE]
    >
    >[ターゲットクラシックAPIを使用するCloud Serviceの設定は廃止されました(「Adobe Recommendations設定」タブを使用)。](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target) 
-
-   次に例を示します。
-
-   ![](assets/integrate-target-io-14.png)
-
 1. 「**ターゲットに接続**」をクリックして、Adobe Targetとの接続を初期化します。
 
    接続に成功すると、「**接続に成功しました**」というメッセージが表示されます。
 
 1. メッセージで「**OK**」を選択し、次に設定を確認するダイアログで「**OK**」を選択します。
 1. これで、[ターゲットフレームワーク](/help/sites-administering/target-configuring.md#adding-a-target-framework)の追加に進み、ターゲットに送信するContextHubまたはClientContextのパラメーターを設定できます。 これは、AEMエクスペリエンスフラグメントをターゲットに書き出す場合には必要でない場合があります。
+
+### テナントIDとクライアントコード{#tenant-client}
+
+[Adobe Experience Manager6.5.8.0](/help/release-notes/sp-release-notes.md)では、「クライアントコード」フィールドがターゲット設定ウィンドウに追加されていました。
+
+テナントIDとクライアントコードのフィールドを設定する場合は、次の点に注意してください。
+
+1. ほとんどのお客様の場合、テナントIDとクライアントコードは同じです。 つまり、両方のフィールドに同じ情報が含まれ、同じ情報が含まれます。 両方のフィールドにテナントIDを必ず入力してください。
+2. 従来の目的では、テナントIDとクライアントコードのフィールドに異なる値を入力することもできます。
+
+どちらの場合も、次の点に注意してください。
+
+* デフォルトでは、（最初に追加された場合は）クライアントコードもテナントIDフィールドに自動的にコピーされます。
+* デフォルトのテナントIDセットを変更するオプションがあります。
+* したがって、ターゲットへのバックエンド呼び出しはテナントIDに基づき、ターゲットへのクライアント側呼び出しはクライアントコードに基づきます。
+
+前述したように、最初の例はAEM 6.5で最も一般的です。どちらの場合も、**両方の**&#x200B;フィールドに、要件に応じた正しい情報が含まれていることを確認してください。
+
+>[!NOTE]
+>
+> 既存のターゲット設定を変更する場合：
+>
+> 1. テナントIDを再入力します。
+> 2. ターゲットに再接続します。
+> 3. 設定を保存します。
 
