@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8に固有のリ
 docset: aem65
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 60764db23115e7f548a82a67955331da2b858973
+source-git-commit: dfaa25ea72e50b60b8a40883ffb0241c131cc846
 workflow-type: tm+mt
-source-wordcount: '2812'
+source-wordcount: '3352'
 ht-degree: 5%
 
 ---
@@ -168,6 +168,56 @@ ht-degree: 5%
 >
 >[!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
 
+**アダプティブフォーム**
+
+* アダプティブフォーム内に複数のインスタンスを持つ繰り返し可能なパネルに、繰り返し可能な行を持つ表を挿入すると、常にその表がパネルの最初のインスタンス(NPR-35635)に追加されます。
+
+* アダプティブフォームでタブのフォーカスがCAPTCHAコンポーネントに再び到達した後、アダプティブフォームでの検証が正常に完了すると、[!DNL Experience Manager Forms]は`Provide Captcha phrase to proceed`エラーメッセージを表示します(NPR-35539)。
+
+**インタラクティブコミュニケーション**
+
+* 翻訳済みのフォームを送信すると、送信メッセージは英語で表示され、適切な言語(NPR-35808)に翻訳されません。
+
+* 添付されたXDPまたはドキュメントフラグメントに非表示条件を含めると、Interactive Communicationは読み込まれません(NPR-35745)。
+
+**Correspondence Management**
+
+* レターを編集する場合、条件が指定されたモジュールの読み込みには時間がかかります(NPR-35325)。
+
+* レターに含まれていないアセットを左側のナビゲーションペインから選択し、次のアセットを選択した場合、青いハイライトは、以前に選択されたアセット(NPR-35851)から削除されません。
+
+* レター内のテキストフィールドを編集すると、[!DNL Experience Manager Forms]に`Text Edit Failed`エラーメッセージが表示されます(CQ-4313770)。
+
+**ワークフロー**
+
+* iOS版の[!DNL Experience Manager Forms]モバイルアプリケーションでアダプティブフォームを開こうとすると、アプリケーションは応答を停止します(CQ-4314825)。
+
+* HTMLワークスペースの「[!UICONTROL TODO]」タブにHTML文字が表示されます(NPR-35298)。
+
+**XMLFM**
+
+* Outputサービスを使用してXMLドキュメントを生成する場合、一部のXMLファイル(CQ-4311341、CQ-4313893)で`OutputServiceException`エラーが発生します。
+
+* 箇条書きの最初の文字に上付きのプロパティを適用すると、箇条書きのサイズが小さくなります(CQ-4306476)。
+
+* Outputサービスを使用して生成されるPDF formsには、境界線が含まれません(CQ-4312564)。
+
+**デザイナー**
+
+* [!DNL Experience Manager Forms] DesignerでXDPファイルを開くと、designer.logファイルがXDPファイルと同じフォルダーに生成されます(CQ-4309427、CQ-4310865)。
+
+**HTML5 のフォーム**
+
+* [!DNL iOS 14.1 or 14.2]の[!DNL Safari] Webブラウザーでアダプティブフォームのチェックボックスを選択すると、追加のフィールドは表示されません(NPR-35652)。
+
+**Forms経営**
+
+* XDPファイルのCRXリポジトリ(NPR-35546)へのバルクアップロードが正常に完了したことを示す確認メッセージはありません。
+
+**Document Security**
+
+* AdminUIの[!UICONTROL ポリシー]を編集オプションで複数の問題が報告されました(NPR-35747)。
+
 セキュリティ更新について詳しくは、[Experience Managerのセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
 
 ## 6.5.8.0 {#install}のインストール
@@ -223,6 +273,32 @@ B. Package Manager](/help/sites-administering/package-manager.md#package-share)�
 1. OSGiバンドル`org.apache.jackrabbit.oak-core`はバージョン1.22.3以降です(Webコンソールを使用：`/system/console/bundles`)。
 
 このリリースで動作が確認されたプラットフォームについて詳しくは、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
+
+### Adobe Experience Manager Formsアドオンパッケージ{#install-aem-forms-add-on-package}をインストール
+
+>[!NOTE]
+>
+>Experience ManagerFormsを使用していない場合はスキップします。 Experience ManagerFormsの修正は、[!DNL Experience Manager] Service Packのリリースが予定されてから1週間後に、個別のアドオンパッケージを使用して提供されます。
+
+1. Adobe Experience ManagerService Packがインストールされていることを確認します。
+1. [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
+1. [AEM Formsアドオンパッケージのインストール](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の説明に従って、Formsアドオンパッケージをインストールします。
+
+>[!NOTE]
+>
+>AEM 6.5.8.0には、[AEM Forms互換パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、AEM 6.5.8.0にアップデートする場合は、Formsオンパッケージのインストール後に最新バージョンのパッケージをインストールし追加ます。
+
+### JEEにAdobe Experience Manager Formsをインストール{#install-aem-forms-jee-installer}
+
+>[!NOTE]
+>
+>JEE で AEM Forms を使用していない場合はスキップします。JEE上のAdobe Experience Manager Formsの修正は、別のインストーラーを使用して提供されています。
+
+JEE上のExperience ManagerFormsの累積インストーラーのインストールとデプロイメント完了後の設定について詳しくは、[リリースノート](jee-patch-installer-65.md)を参照してください。
+
+>[!NOTE]
+>
+>JEE上のExperience ManagerFormsの累積インストーラーをインストールした後、最新のFormsアドオンパッケージをインストールし、`crx-repository\install`フォルダーからFormsアドオンパッケージを削除して、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
 
