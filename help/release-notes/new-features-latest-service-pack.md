@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 8の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: 2c6d11f63420040a500bbb75f1146c29f64bdcc5
+source-git-commit: f52fc643c30babab68bcf122eb3d91da5ce37a24
 workflow-type: tm+mt
-source-wordcount: '2883'
+source-wordcount: '3015'
 ht-degree: 5%
 
 ---
@@ -37,6 +37,22 @@ ht-degree: 5%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms]のアドオンパッケージは、[!DNL Experience Manager] Service Packの予定リリースの1週間後に公開されます。
+
+### ルール{#show-hide-captcha}に基づくアダプティブフォーム内のCAPTCHAコンポーネントの表示/非表示
+
+アダプティブフォームの送信時またはユーザーアクション時に、CAPTCHAを検証できるようになりました。 また、ユーザーアクションに対するCAPTCHAの検証条件を追加したり、ルールに基づいてアダプティブフォーム内のCAPTCHAコンポーネントの表示/非表示を切り替えたりすることもできます。
+
+### 追加カスタムCAPTCHAサービス{#add-custom-captcha-services}
+
+[!DNL Experience Manager Forms] は、Google reCAPTCHA（Google reCAPTCHA APIの個別のライセンスが必要）をCAPTCHA検証サービスとして使用するためのサポートを追加設定しました。また、カスタムCAPTCHAサービスを使用してCAPTCHAを検証することもできます。
+
+### その他の機能強化 {#other-enhancements-forms-6580}
+
+* [!DNL Experience Manager Forms]日付選択コンポーネントのアクセシビリティを改善しました。
+
+* PrintChannel APIを使用してPCL形式でのインタラクティブ通信を生成できるようになりました。
+
+* PDFG変換を実行する際に、カスタムブックマーク生成の[!DNL Experience Manager Forms]レジストリ変更を有効または無効にできるようになりました。
 
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
