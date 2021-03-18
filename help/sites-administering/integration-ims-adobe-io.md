@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 07f354ccfb8741f0de4fc85ba1575ead3b8ea6e4
+source-git-commit: 498896dccf80065195cc945b01cb8d037b8f6dab
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 10%
 
 ---
@@ -231,7 +231,7 @@ Target Standard APIを使用するCloud Serviceに対して、設定を参照で
 1. 「**Adobe Target設定**」タブに詳細を入力します。
 
    * **認証**:IMS
-   * **テナントID**:AdobeIMSテナントID。下の[テナントIDとクライアントコード](#tenant-client)の節も参照してください。
+   * **テナントID**:AdobeIMSテナントID。「[テナントID」と「クライアントコード](#tenant-client)」も参照してください。
 
       >[!NOTE]
       >
@@ -242,7 +242,7 @@ Target Standard APIを使用するCloud Serviceに対して、設定を参照で
       >`https://experience.adobe.com/#/@yourtenantid/target/activities`
       >
       >その場合は`yourtenantid`を使用します。
-   * **クライアントコード**:以下の「 [テナントIDとクライアント](#tenant-client) コード」の節を参照してください。
+   * **クライアントコード**:「 [テナントIDとクライアント](#tenant-client) コード」の節を参照してください。
    * **IMS設定**:IMS設定の名前を選択します
    * **APIタイプ**:REST
    * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、「[A4TAnalytics Cloud設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)の設定」の注意を参照してください。
