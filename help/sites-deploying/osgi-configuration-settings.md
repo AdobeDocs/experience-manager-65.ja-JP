@@ -10,10 +10,11 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 474fc122f557f32d34fddd9d35a113431f6ce491
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3806'
 ht-degree: 57%
 
 ---
@@ -79,7 +80,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Slingカスタマイズ可能な要求データ** ロガー設定：
 
-* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に重要です。これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
+* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に不可欠です。これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
 
 詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
 
