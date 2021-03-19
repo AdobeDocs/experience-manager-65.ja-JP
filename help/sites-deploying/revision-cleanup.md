@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '5916'
+source-wordcount: '5917'
 ht-degree: 64%
 
 ---
@@ -36,7 +37,7 @@ AEM 6.3 では、この機能のオンラインバージョンである「オン
 * [オンラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#online-revision-cleanup-frequently-asked-questions)
 * [オフラインでのリビジョンクリーンアップの実行方法](/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup)
 
-また、[Oakの公式ドキュメントも読むことができます。](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html)
+Additionally, you can also read the [official Oak documentation.](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html)
 
 ### オフラインリビジョンのクリーンアップとは異なり、オンラインリビジョンのクリーンアップを使用する場合{#when-to-use-online-revision-cleanup-as-opposed-to-offline-revision-cleanup}
 
@@ -69,7 +70,7 @@ AEM 6.3 では、この機能のオンラインバージョンである「オン
 
 ### オフラインでのリビジョンクリーンアップの実行後にオンラインでのリビジョンクリーンアップを実行した場合 {#running-online-revision-cleanup-after-offline-revision-cleanup}
 
-リビジョンクリーンアップのプロセスでは、古いリビジョンを世代ごとに再利用します。つまり、リビジョンクリーンアップを実行するたびに新しい世代を作成し、ディスク上に保持します。ただし、2種類のリビジョンのクリーンアップには違いがあります。オフラインリビジョンのクリーンアップでは1世代が保持され、オンラインリビジョンのクリーンアップでは2世代が保持されます。 したがって、**オフラインリビジョンのクリーンアップの後に**&#x200B;オンラインリビジョンのクリーンアップを実行すると、次の処理が行われます。
+リビジョンクリーンアップのプロセスでは、古いリビジョンを世代ごとに再利用します。つまり、リビジョンクリーンアップを実行するたびに新しい世代を作成し、ディスク上に保持します。There is a difference however between the two types of revision cleanup: offline revision cleanup keeps one generation while online revision cleanup keeps two generations. したがって、**オフラインリビジョンのクリーンアップの後に**&#x200B;オンラインリビジョンのクリーンアップを実行すると、次の処理が行われます。
 
 1. 最初のオンラインリビジョンのクリーンアップを実行した後、リポジトリのサイズは重複します。 これは、ディスク上に 2 つの世代が保持されるからです。
 1. 後続の実行中は、新しい生成が作成される間にリポジトリが一時的に増大し、最初の実行後に元のサイズに再び安定します。オンラインリビジョンのクリーンアッププロセスでは前の生成が再要求されます。
@@ -118,7 +119,7 @@ TarMK GC: running tail compaction
 TarMK GC: no base state available, running full compaction instead
 ```
 
-### 既知の制限事項  {#known-limitations}
+### 既知の制限事項 {#known-limitations}
 
 場合によっては、テールとフルのコンパクションモードの変更によりクリーンアッププロセスが遅延します。正確には、フルコンパクションの後にリポジトリが大きくなります（倍のサイズになります）。リポジトリがフルコンパクション前のサイズ以下になると、余分のスペースが後続のテールコンパクションで再利用されます。メンテナンスタスクの並列実行も回避する必要があります。
 
@@ -219,7 +220,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップのメンテナンスタスクを開始する時間を設定する方法を教えてください。</strong></td>
-   <td>「<a href="/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup">オンラインリビジョンのクリーンアップを実行する方法</a>」の節を参照してください。 </td>
+   <td>See the <a href="/help/sites-deploying/revision-cleanup.md#how-to-run-online-revision-cleanup">How to run Online Revision Cleanup</a> section. </td>
    <td> </td>
   </tr>
   <tr>
@@ -244,7 +245,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップは、通常、オーサーとパブリッシュでは異なる時間帯に実行しますか。</strong></td>
-   <td>いつ実行すべきかは、営業時間と顧客のオンラインプレゼンスのトラフィックパターンによって異なります。最適なクリーンアップ効果を実現するために、メインの実稼働時間外にメンテナンスウィンドウを設定する必要があります。 複数のAEM発行インスタンス（TarMKファーム）の場合は、オンラインリビジョンクリーンアップのメンテナンスウィンドウを調整する必要があります。</td>
+   <td>いつ実行すべきかは、営業時間と顧客のオンラインプレゼンスのトラフィックパターンによって異なります。The maintenance windows should be configured outside of the main production times to allow for the best cleanup efficacy. For multiple AEM Publish instances (TarMK Farm), maintenance windows for Online Revision Cleanup should be staggered.</td>
    <td> </td>
   </tr>
   <tr>
@@ -355,7 +356,7 @@ TarMK GC: no base state available, running full compaction instead
    <td>メモリマップファイル操作に関する考慮事項はありますか。</td>
    <td>
     <ul>
-     <li><strong>Windows環境では</strong>、通常のファイルアクセスが常に適用されるので、メモリマップアクセスは使用されません。一般的なアドバイスとして、使用可能なすべてのRAMをヒープに割り当て、segmentCacheサイズを増やす必要があります。 segmentCacheを増やすには、org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.configにsegmentCache.sizeオプションを追加します（例：segmentCache.size=20480）。 オペレーティングシステムや他のプロセス用のRAMを忘れないようにしてください。</li>
+     <li><strong>Windows環境では</strong>、通常のファイルアクセスが常に適用されるので、メモリマップアクセスは使用されません。As a general advice, all the available RAM should be allocated to the heap and the segmentCache size should be increased. You increase the segmentCache by adding the segmentCache.size option to the org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config (for example, segmentCache.size=20480). オペレーティングシステムや他のプロセス用のRAMを忘れないようにしてください。</li>
      <li><strong>Windows 以外の環境</strong>では、物理メモリのサイズを大きくすることで、リポジトリのメモリマップの効率性を向上できます。</li>
     </ul> </td>
    <td>
@@ -376,7 +377,7 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>オンラインリビジョンのクリーンアップが有効な場合は、ディスク領域を監視する必要があります。 ディスク領域が不十分な場合、クリーンアップは実行されないか、早期に終了します。</li>
      <li>ログで、オンラインリビジョンのクリーンアップの完了時間を確認します。 これは 2 時間以下である必要があります。</li>
-     <li>チェックポイントの数。 コンパクションの実行時にチェックポイントが 4 つ以上ある場合は、チェックポイントをクリーンアップすることをお勧めします。</li>
+     <li>Number of checkpoints. コンパクションの実行時にチェックポイントが 4 つ以上ある場合は、チェックポイントをクリーンアップすることをお勧めします。</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -444,7 +445,7 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>自動クリーンアップを実行する場合は、ディスク領域を監視する必要があります。</li>
      <li>完了時間（ログ経由）。2時間を超えないことを確認します。</li>
-     <li>自動クリーンアップの実行後のセグメントストアのサイズ。 スタンバイインスタンスでのセグメントストアのサイズは、プライマリインスタンスでのサイズとほぼ同じである必要があります。</li>
+     <li>Segmentstore size after the Automatic Cleanup has run. スタンバイインスタンスでのセグメントストアのサイズは、プライマリインスタンスでのサイズとほぼ同じである必要があります。</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -472,7 +473,7 @@ TarMK GC: no base state available, running full compaction instead
      <li>まず、ログエントリを確認します。<br /> </li>
      <li>ログの情報に基づいて、適切な操作を実行します。
       <ul>
-       <li>ログに5回のミスされたコンパクト・サイクルと<code>forceCompact</code>サイクルのタイムアウトが表示される場合は、リポジトリの書き込みの量が少ないときにメンテナンス・ウィンドウのスケジュールを設定します。 <em>https://serveraddress:serverport/libs/granite/operations/content/monitoring/page.html</em>にあるリポジトリ指標監視ツールで、リポジトリへの書き込みを確認できます。</li>
+       <li>If the logs show five missed compact cycles and a timeout on the <code>forceCompact</code> cycle, schedule the maintenance window to a quiet time when the amount of repository writes is low. You can check repository writes in the repositoy metrics monitoring tool located at <em>https://serveraddress:serverport/libs/granite/operations/content/monitoring/page.html</em></li>
        <li>メンテナンスウィンドウの終わりにクリーンアップが停止した場合は、メンテナンスタスクのユーザーインターフェイスで、メンテナンスウィンドウの長さの設定が十分であることを確認してください。</li>
        <li>使用可能なヒープメモリが不足している場合は、インスタンスに十分なメモリがあることを確認してください。</li>
        <li>応答が遅い場合は、セグメントストアが大きくなりすぎて、メンテナンスウィンドウを長くしてもオンラインでのリビジョンクリーンアップを完了できない可能性があります。例えば、先週、オンラインでのリビジョンクリーンアップが一度も正常に完了してない場合は、セグメントストアを対処可能なサイズに戻すために、オフラインでのメンテナンスを計画し、オフラインでのリビジョンクリーンアップを実行することをお勧めします。</li>
@@ -491,12 +492,12 @@ TarMK GC: no base state available, running full compaction instead
    <td> </td>
   </tr>
   <tr>
-   <td><strong><code>SegmentNotFoundException</code>インスタンスが<code>error.log</code>にログインする原因は何ですか。また、回復するにはどうすればよいですか。</strong></td>
+   <td><strong>What is causing <code>SegmentNotFoundException</code> instances to be logged in the <code>error.log</code> and how can I recover?</strong></td>
    <td><p><code>SegmentNotFoundException</code>は、見つからないストレージユニット（セグメント）にアクセスしようとすると、TarMKによってログに記録されます。 次の 3 つのシナリオで、この問題が発生する可能性があります。</p>
     <ol>
-     <li>アプリケーションが、推奨されるアクセス方法（Sling や JCR API など）を使用せずに、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。つまり、アプリケーションがオンラインでのリビジョンクリーンアップで許可される保持時間（デフォルトは 24 時間）よりも長くエンティティへの参照を保持している場合です。この状況は一時的で、データの破損にはつながりません。回復するには、oak-runツールを使用して、例外の一時的な性質を確認する必要があります（oak-runチェックでエラーは報告されません）。 これを行うには、インスタンスをオフラインにして、後で再起動する必要があります。</li>
+     <li>アプリケーションが、推奨されるアクセス方法（Sling や JCR API など）を使用せずに、下位レベルの API／SPI を使用してリポジトリにアクセスし、セグメントの保持時間を超えている場合。つまり、アプリケーションがオンラインでのリビジョンクリーンアップで許可される保持時間（デフォルトは 24 時間）よりも長くエンティティへの参照を保持している場合です。この状況は一時的で、データの破損にはつながりません。回復するには、oak-runツールを使用して、例外の一時的な性質を確認する必要があります（oak-runチェックでエラーは報告されません）。 In order to do this the instance needs to be taken offline and restarted afterwards.</li>
      <li>外部イベントによってディスクのデータが破損している場合。これは、ディスクの障害、ディスク領域の不足または必要なデータファイルが誤って変更されたことが原因である可能性があります。この場合は、インスタンスをオフラインにして、oak-run チェックを使用して修復する必要があります。oak-runの確認の実行方法の詳細については、次の<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apacheドキュメント</a>を参照してください。</li>
-     <li>その他すべての問題は、<a href="https://helpx.adobe.com/jp/marketing-cloud/contact-support.html" target="_blank">Adobeカスタマーケア</a>で解決する必要があります。</li>
+     <li>All other occurrences should addressed through the <a href="https://helpx.adobe.com/jp/marketing-cloud/contact-support.html" target="_blank">Adobe Customer Care</a>.</li>
     </ol> </td>
    <td> </td>
   </tr>
@@ -523,7 +524,7 @@ TarMK GC: no base state available, running full compaction instead
 >
 >AEM のインストールで使用する Oak バージョンに応じて、異なるバージョンの Oak-run ツールを使用する必要があります。ツールを使用する前に、以下のバージョン要件を確認してください。
 >
->* Oakバージョン&#x200B;**1.0.0 ～ 1.0.11**&#x200B;または&#x200B;**1.1.0 ～ 1.1.6**&#x200B;の場合は、Oak-runバージョン** 1.0.11***を使用します。
+>* For Oak versions **1.0.0 through 1.0.11** or **1.1.0 through 1.1.6**, use Oak-run version** 1.0.11**
    >
    >
 * **上述のものよりも新しい** Oak バージョンについては、AEM インストールの Oak コアと一致するバージョンの oak-run を使用します。
@@ -538,7 +539,7 @@ Adobeには、リビジョンのクリーンアップを実行するための&#x
 
 このツールは、リポジトリのコンパクションを実行するために手動で実行できる実行可能 jar です。このプロセスはオフラインでのリビジョンクリーンアップと呼ばれます。これは、ツールを適切に実行するためにリポジトリをシャットダウンする必要があるためです。メンテナンスウィンドウに合わせてクリーンアップを計画してください。
 
-クリーンアッププロセスのパフォーマンスを向上させる方法のヒントについては、[オフラインリビジョンのクリーンアップのパフォーマンスを向上させる](/help/sites-deploying/revision-cleanup.md#increasing-the-performance-of-offline-revision-cleanup)を参照してください。
+For tips on how to increase the performance of the cleanup process, see [Increasing the Performance of Offline Revision Cleanup](/help/sites-deploying/revision-cleanup.md#increasing-the-performance-of-offline-revision-cleanup).
 
 >[!NOTE]
 >
@@ -566,7 +567,7 @@ Adobeには、リビジョンのクリーンアップを実行するための&#x
    java -jar -Dsun.arch.data.model=32 oak-run.jar compact install-folder/crx-quickstart/repository/segmentstore
    ```
 
-### オフラインでのリビジョンクリーンアップのパフォーマンスの向上  {#increasing-the-performance-of-offline-revision-cleanup}
+### オフラインでのリビジョンクリーンアップのパフォーマンスの向上 {#increasing-the-performance-of-offline-revision-cleanup}
 
 oak-run ツールには、リビジョンクリーンアッププロセスのパフォーマンスを向上させ、メンテナンスウィンドウをできる限り最短化するための複数の機能が導入されています。
 
@@ -582,11 +583,11 @@ oak-run ツールには、リビジョンクリーンアッププロセスのパ
 
 * **-Dtar.PersistCompactionMap。** このパラメーターをtrueに設定すると、圧縮マップの永続性にヒープメモリではなくディスク領域が使用されます。oak-run tool **バージョン1.4**&#x200B;以降が必要です。 詳しくは、[オフラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)の節の質問 3 を参照してください。**このパラメーターは Oak バージョン 1.6 で削除され、効果はありません。**
 
-* **--force.** 圧縮を強制し、一致しないセグメントストアのバージョンを無視します。
+* **--force.** Force compaction and ignore a non matching segment store version.
 
 >[!CAUTION]
 >
->`--force`パラメーターを使用すると、セグメントストアが最新バージョンにアップグレードされます。これは、古いOakバージョンとの互換性がありません。 また、ダウングレードができなくなる点に注意してください。原則として、これらのパラメーターは、使用方法について確実に把握している場合にのみ慎重に使用してください。
+>Using the `--force` parameter will upgrade the segment store to the latest version, which is incompatible with older Oak versions. また、ダウングレードができなくなる点に注意してください。原則として、これらのパラメーターは、使用方法について確実に把握している場合にのみ慎重に使用してください。
 
 パラメーターの使用例を示します。
 
