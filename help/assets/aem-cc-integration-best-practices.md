@@ -2,10 +2,11 @@
 title: Adobe Creative Cloudのベストプラクティスとの統合
 description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティス。
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3248'
+source-wordcount: '3251'
 ht-degree: 54%
 
 ---
@@ -53,7 +54,7 @@ ht-degree: 54%
 | Discover - DAMフォルダーを参照 | はい | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
 | Discover - DAMコレクションにアクセス | はい | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
 | Discover - DAMからのアセットの検索 | はい | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
-| 使用 - アセットを開く | 可 | 可 | 「[Web インターフェイスから開く](manage-assets.md#previewing-assets)」またはファインダーから開く |
+| 使用 - アセットを開く | はい | はい | 「[Web インターフェイスから開く](manage-assets.md#previewing-assets)」またはファインダーから開く |
 | 使用 — DAMからドキュメントにアセットを配置 | 対応 - 埋め込み | 対応 - リンクまたは埋め込み | [!DNL Experience Manager] デスクトップアプリケーションでは、ローカルファイルシステム上のファイルとしてアセットにアクセスできます。ネイティブアプリでは、これらのリンクはローカルパスで表されます。 |
 | 編集 - 編集用に開く | 対応 - チェックアウトアクション | 対応 - 「開く」アクション（ネットワーク共有内） | 「[AAL でチェックアウト](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)」の場合は、デフォルトでは、アセットをユーザーの Creative Cloud ストレージアカウント（Creative Cloud アプリで同期）に保存します。 |
 | 編集 — DAM外で作業を進めています | 対応 - デスクトップに同期しているユーザーの Creative Cloud ストレージアカウントでアセットが入手可能です。 | 対応 |  |
