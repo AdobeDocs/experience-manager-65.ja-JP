@@ -4,10 +4,11 @@ seo-title: Workbenchのインストール
 description: Workbenchをインストールします。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2247'
 ht-degree: 57%
 
 ---
