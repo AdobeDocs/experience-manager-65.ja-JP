@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: c74d9e86727f2deda62b8d1eb105b28ef4b6d184
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 59%
+source-wordcount: '690'
+ht-degree: 60%
 
 ---
 
 
-# HTML5 フォームのカスタムプロファイルの作成  {#creating-a-custom-profile-for-html-forms}
+# HTML5 フォームのカスタムプロファイルの作成 {#creating-a-custom-profile-for-html-forms}
 
 プロファイルは、[Apache Sling](https://sling.apache.org/)のリソースノードです。 HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、およびやりとりをカスタマイズできます。 プロファイルノードは、JCRリポジトリの`/content`フォルダーに存在します。 ノードは`/content`フォルダーの直下か、`/content`フォルダーのサブフォルダーに配置できます。
 
