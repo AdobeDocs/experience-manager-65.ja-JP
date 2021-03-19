@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5413fb3-9d50-4f4f-9db8-7e53cd5145d5
 docset: aem65
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: e4d84b5c6f7d2bfcac942b0b685a8f1fd11274f0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '2749'
 ht-degree: 60%
 
 ---
@@ -52,7 +53,7 @@ AEM Formsデータ統合モジュールを使用すると、AEMユーザープ�
 
 ## 手順 1：データベースの設定 {#step-set-up-the-database}
 
-インタラクティブ通信の作成にはデータベースが不可欠です。このチュートリアルではデータベースを使用して、インタラクティブ通信のフォームデータモデルと永続性機能を表示します。顧客、請求書、および呼び出し表を含むデータベースを設定します。
+インタラクティブ通信の作成にはデータベースが不可欠です。このチュートリアルではデータベースを使用して、インタラクティブ通信のフォームデータモデルと永続性機能を表示します。Set up a database containing customer, bills, and calls tables.
 以下の画像は、顧客テーブルのサンプルデータを示しています。
 
 ![sample_data_cust](assets/sample_data_cust.png)
@@ -258,7 +259,7 @@ AEM Formsは、設定済みのデータソースからフォームデータモ�
 
 データモデルオブジェクト間で関連性を作成するには、以下の手順を実行します。
 
-1. **customer**&#x200B;データモデルオブジェクトの上部にあるチェックボックスを選択して選択し、「**追加関連付け**」をタップします。 **追加関連付け**&#x200B;プロパティウィンドウが開きます。
+1. Select the check box at the top of the **customer** data model object to select it and tap **Add Association**. **追加関連付け**&#x200B;プロパティウィンドウが開きます。
 1. **関連付けを追加**&#x200B;ペインで、以下の操作を実行します。
 
    * 関連付けのタイトルを入力します。これはオプションのフィールドです。
@@ -289,7 +290,7 @@ AEM Formsは、設定済みのデータソースからフォームデータモ�
 
    ![追加議論結合](assets/add_argument_association_new.png)
 
-1. 「**完了**」をタップして、顧客と呼び出しデータモデルオブジェクトの間に1:nの関連付けを作成します。
+1. Tap **Done** to create a 1:n association between customer and calls data model objects.
 
    顧客および通話データモデルオブジェクト間で関連付けを作成したら、顧客と通話データモデルオブジェクト間で 1:1 の関連付けを作成します。
 
