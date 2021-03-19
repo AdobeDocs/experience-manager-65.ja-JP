@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 2fcd87cd1def7fc265ba40c83b50db86618f3b70
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '249'
 ht-degree: 76%
 
 ---
@@ -30,7 +31,7 @@ ht-degree: 76%
 
 ## Communities の機能  {#communities-features}
 
-タグ付けを許可するように設定できるAEM Communitiesの機能は次のとおりです。
+The AEM Communities features which can be configured to allow tagging are:
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -40,7 +41,7 @@ ht-degree: 76%
 
 ## タグの管理  {#administering-tags}
 
-タグ名前空間とタクソノミの作成と管理については、[タグ](../../help/sites-administering/tags.md#tagging-console)の管理を参照してください。
+See [Administering Tags](../../help/sites-administering/tags.md#tagging-console) for creating and managing tag namespaces and taxonomies.
 
 開発者向けの情報については、[タグの重要事項](tag.md)を参照してください。
 
