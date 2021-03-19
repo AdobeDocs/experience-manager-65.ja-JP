@@ -2,22 +2,23 @@
 title: アダプティブフォームのスタイル構成
 seo-title: アダプティブフォームのスタイル構成
 description: LESS フレームワークを使用して、アダプティブフォームの外観をカスタマイズすることができます。
-seo-description: LESS フレームワークを使用したアダプティブフォームの外観のカスタマイズ
+seo-description: LESS フレームワークを使用して、アダプティブフォームの外観をカスタマイズすることができます。
 uuid: d2e45ad9-7322-43ce-a1dd-ad97e2eea742
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 5a76200a573d95026e2347d2049a089d975b5619
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2324'
 ht-degree: 87%
 
 ---
 
 
-# アダプティブフォームのスタイル設定構成{#styling-constructs-for-adaptive-forms}
+# アダプティブフォームのスタイル構成{#styling-constructs-for-adaptive-forms}
 
 ## 前提条件 {#prerequisites}
 
