@@ -6,8 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
+feature-set: Experience Manager Assets
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 59%
@@ -15,13 +16,13 @@ ht-degree: 59%
 ---
 
 
-# Assets ガイド {#assets}
+# Assets ガイド  {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
 + [[!DNL Experience Manager] 6.5アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ [ [!DNL Assets]](accessibility.md) のアクセシビリティ
++ [ [!DNL Assets]](accessibility.md) でのアクセシビリティ
 + Experience Managerアセットを使用{#using}
    + [[!DNL Assets] ホームページ体験](assets-home-page.md)
    + [デジタルアセットの検索](search-assets.md)
@@ -127,7 +128,7 @@ ht-degree: 59%
    + [アセットテンプレート](asset-templates.md)
    + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
-   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での  [!DNL Assets]  の設定
+   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での [!DNL Assets] の設定
    + [ [!DNL Brand Portal]](brand-portal-publish-assets.md) へのアセットの公開
    + [フォルダの発行先 [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
