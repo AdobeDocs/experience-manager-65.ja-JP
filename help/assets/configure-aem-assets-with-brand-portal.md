@@ -9,10 +9,12 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
+feature: Brand Portal
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2087'
 ht-degree: 62%
 
 ---
@@ -75,7 +77,7 @@ AEM をダウンロードしたら、「[デプロイメントと保守](https:/
 
 詳細な手順については、
 
-* [AEM 6.5 Service Pack リリースノート](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
+* [AEM 6.5 Service Pack リリースノート](https://docs.adobe.com/content/help/ja/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
 
 **最新のAEMパッケージまたはService Packが見つからない場合は、** サポートにお問い合わせください。
 
@@ -341,7 +343,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 次の操作が可能になっています。
 
 * [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
-* [Brand PortalからAEM Assets](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Brand Portalでアセットを発行
+* [Brand PortalからAEM Assets](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Brand Portalでアセットを発行
 * [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
 * [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
 * [Brand Portal へのプリセット、スキーマ、ファセットの公開](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
