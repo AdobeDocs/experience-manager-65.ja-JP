@@ -8,16 +8,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 71d1aa10-d191-49bc-a50f-1098324f1cfe
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '522'
 ht-degree: 69%
 
 ---
 
 
-# フォームへの送信レビュー担当者の関連付け  {#associating-submission-reviewers-with-a-form}
+# フォームへの送信レビュー担当者の関連付け {#associating-submission-reviewers-with-a-form}
 
 フォーム作成時に、フォームポータル経由で送信されたフォームのレビューおよびフィードバックを行うユーザーを指定することができます。組織はフィードバックを収集し、送信済みフォームに対して再作業を行うことができます。
 
