@@ -2,10 +2,11 @@
 title: 参照と複数のページを持つ複合アセットの管理
 description: ' [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]内からデジタルアセットへの参照を作成する方法を説明します。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。'
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1351'
 ht-degree: 19%
 
 ---
