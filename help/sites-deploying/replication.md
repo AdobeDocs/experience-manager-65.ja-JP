@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 17d70e532ab5d825dd4dc0ea4c891c5b7cb8d345
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3444'
 ht-degree: 75%
 
 ---
