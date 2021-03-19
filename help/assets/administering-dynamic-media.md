@@ -5,11 +5,12 @@ uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 72%
+source-wordcount: '257'
+ht-degree: 71%
 
 ---
 
@@ -28,7 +29,7 @@ Dynamic Media の管理者には、次のトピックが参考になります。
 
 * [Dynamic Media-Scene7モードの設定](config-dms7.md) -Dynamic Mediaの新規顧客の場合は、この設定を使用します。
 * [Dynamic Mediaハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic Mediaのお客様向けアップグレードAEMの場合は、この設定を使用します。
-* [画像プリセットの管理 ](managing-image-presets.md)
+* [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
 * [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
 
