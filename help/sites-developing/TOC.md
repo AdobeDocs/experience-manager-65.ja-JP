@@ -6,16 +6,19 @@ audience: end-user
 user-guide-title: AEM 6.5 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
+feature-set: Experience Manager Sites
+feature: 開発
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 80%
+source-wordcount: '907'
+ht-degree: 81%
 
 ---
 
 
-# AEM 6.5 開発ユーザーガイド  {#developing}
+# AEM 6.5 開発ユーザーガイド {#developing}
 
 + [開発ユーザガイドの概要](home.md)
 + 開発者向けの紹介{#introduction}
@@ -35,7 +38,7 @@ ht-degree: 80%
    + [フル機能を備えたWebサイトの作成（クラシックUI）](website.md)
    + [デザインとDesigner（クラシックUI）](designer.md)
    + [タッチ操作対応UIへの移行](/help/sites-developing/touch-ui-migration.md)
-+ プラットフォーム{#platform}
++ Platform{#platform}
    + [Sling チートシート](sling-cheatsheet.md)
    + [Sling アダプターの使用](sling-adapters.md)
    + [タグライブラリ](taglib.md)
@@ -73,7 +76,7 @@ ht-degree: 80%
       + [開発（汎用）](generic.md)
       + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+   + [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
    + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
@@ -82,7 +85,7 @@ ht-degree: 80%
    + [コンテンツサービス用の JSON エクスポーター](json-exporter.md)
    + [コンポーネントの JSON 書き出しの有効化](json-exporter-components.md)
    + [画像エディター](image-editor.md)
-   + [装飾タグ   ](decoration-tag.md)
+   + [装飾タグ](decoration-tag.md)
    + [非表示条件の使用](hide-conditions.md)
    + [複数のインプレースエディターの設定](multiple-inplace-editors.md)
    + [開発者モード](developer-mode.md)
@@ -107,7 +110,7 @@ ht-degree: 80%
       + [SPA WKND チュートリアル](spa-wknd.md)
       + [AEMのSPAを使い始める — React](spa-getting-started-react.md)
       + [AEMのSPA使用の手引き —Angular](spa-getting-started-angular.md)
-      + [SPA用のReactコンポーネントの実装](spa-implementing-react-component.md)
+      + [SPA への React コンポーネントの実装](spa-implementing-react-component.md)
       + [SPA の詳細](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
       + [AEM 向け SPA の開発](spa-architecture.md)
@@ -159,7 +162,7 @@ ht-degree: 80%
    + [レンダリングコンポーネントのコンテンツフラグメントの設定](content-fragments-config-components-rendering.md)
    + [エクスペリエンスフラグメント](experience-fragments.md)
    + ワークフローの拡張{#extending-workflows}
-      + [ワークフローの開発と拡張](workflows.md)
+      + [ワークフローの作成と拡張](workflows.md)
       + [ワークフローモデルの作成](workflows-models.md)
       + [ワークフロー機能の拡張](workflows-customizing-extending.md)
       + [プログラムによるワークフローとのやり取り](workflows-program-interaction.md)
@@ -177,7 +180,7 @@ ht-degree: 80%
       + [クラウドサービス設定](extending-cloud-config.md)
       + [カスタムクラウドサービスの作成](extending-cloud-config-custom-cloud.md)
    + [カスタム拡張の作成](extending-campaign-extensions.md)
-   + フォーム{#extending-forms}
+   + Forms{#extending-forms}
       + [カスタムフォームマッピングの作成](extending-campaign-form-mapping.md)
       + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](extending-campaign-custom-template.md)
       + [リクエスト分析スクリプト](analyze-request.md)
