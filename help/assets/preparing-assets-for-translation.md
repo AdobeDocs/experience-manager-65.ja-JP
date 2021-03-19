@@ -2,11 +2,12 @@
 title: 翻訳するアセットの準備
 description: 言語ルートフォルダーを作成して、多言語アセットをサポートする翻訳用のアセットを準備します。
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 1d3e908eafa1cdcbc6ef557da509f12cdd9418cc
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 57%
+source-wordcount: '443'
+ht-degree: 62%
 
 ---
 
@@ -44,7 +45,7 @@ ht-degree: 57%
 
 言語ルートを作成するには、フォルダーを作成し、「名前」プロパティの値として ISO 言語コードを使用します。言語ルートを作成したら、言語ルート内の任意のレベルに言語コピーを作成できます。
 
-例えば、サンプル階層のイタリア語言語コピーのルートページの「名前」プロパティは `it` になります。Nameプロパティは、リポジトリ内のアセットノードの名前として使用されるので、アセットのパスを決定します。(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
+例えば、サンプル階層のイタリア語言語コピーのルートページの「名前」プロパティは `it` になります。「名前」プロパティは、リポジトリー内の asset ノードの名前として使用されます。そのため、このプロパティによってアセットのパスが指定されます(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
 
 1. [!DNL Assets]コンソールで、「**[!UICONTROL 作成]**」をクリックし、メニューから「**[!UICONTROL フォルダー]**」を選択します。
 
