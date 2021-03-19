@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 71%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# HTML5 フォーム向けのスクリーンリーダー  {#screen-readers-for-html-forms}
+# HTML5 フォーム向けのスクリーンリーダー {#screen-readers-for-html-forms}
 
 HTML5 フォームコンポーネントは XFA フォームテンプレートを HTML5 形式にレンダリングします。すべての標準の HTML5 をサポートするブラウザーはこれらのフォームをレンダリングできます。PDF と HTML5 フォーム同士で似たようなデータ取得の経験をサポートするために、PDF フォームのレイアウトは HTML5 フォームで保持されます。
 
