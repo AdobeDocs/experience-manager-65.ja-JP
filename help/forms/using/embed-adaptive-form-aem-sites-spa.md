@@ -8,10 +8,11 @@ topic-tags: author, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a74ed6c1-3006-4baf-bd77-ad4045e23c22
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1123'
 ht-degree: 11%
 
 ---
