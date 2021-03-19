@@ -2,10 +2,11 @@
 title: サポートされているファイル形式と MIME タイプ
 description: ' [!DNL Assets] and [!DNL Dynamic Media] でサポートされるファイル形式とMIMEタイプ、および各形式でサポートされる機能。'
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 376bb4496c1e875f8d129dd79d67e3347be726ac
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1582'
 ht-degree: 60%
 
 ---
