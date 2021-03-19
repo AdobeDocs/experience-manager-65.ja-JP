@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3722'
 ht-degree: 63%
 
 ---
