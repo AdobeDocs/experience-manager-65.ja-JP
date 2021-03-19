@@ -1,6 +1,6 @@
 ---
 title: インタラクティブビデオ
-description: Dynamic Media でインタラクティブビデオとショッパブルビデオを使用する方法を説明します。
+description: Dynamic Media でインタラクティブビデオとショッパブルビデオを使用する方法を説明します
 uuid: c3ff6839-fff5-4709-8163-5c4245b80e6d
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,16 +8,18 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
+feature: インタラクティブビデオ
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: ce43c49f8f7d4509e414554b8f4eba368ff66e95
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '6056'
+source-wordcount: '6061'
 ht-degree: 97%
 
 ---
 
 
-# インタラクティブビデオ{#interactive-videos}
+# インタラクティブビデオ {#interactive-videos}
 
 インタラクティブなビデオは、ショッパブルビデオとも呼ばれ、ビデオから直接コンバージョンを推進するものを簡単に作成できます。ビデオに対する顧客エンゲージメントは、ビデオプレーヤーの隣のパネルでおこなわれ、関連するサービス、情報または製品のサムネールが、ビデオの特集に基づいてスクロール表示されます。顧客はサムネールをタップして、サービスを直接参照したり、買い物かごに商品を追加して即時に購入したり、Web ページを参照して詳細を確認したりできます。
 
@@ -27,7 +29,7 @@ ht-degree: 97%
 
 ## インタラクティブビデオの使用例  {#interactive-video-in-action}
 
-インタラクティブで買い物かごが可能なビデオを実際に閲覧するには、[ライブデモ](https://landing.adobe.com/jp/na/dynamic-media/ctir-2755/live-demos.html)をクリックし、ページ上の&#x200B;**[!UICONTROL 買い物かごが可能なメディア]**&#x200B;の見出しまでスクロールして、買い物かごのビデオをクリックします。
+インタラクティブで買い物かごが可能なビデオを実際に閲覧するには、[ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)をクリックし、ページ上の&#x200B;**[!UICONTROL 買い物かごが可能なメディア]**&#x200B;の見出しまでスクロールして、買い物かごのビデオをクリックします。
 
 * 再生中にビデオ内で製品が使用されると、同じ製品のサムネール画像が右側に表示されます。
 
@@ -118,7 +120,7 @@ AEM の実装で AEM eCommerce を使用している場合は、このタスク�
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された·URL·を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
+次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
 このプロセスの実行中は、様々な製品カテゴリや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
