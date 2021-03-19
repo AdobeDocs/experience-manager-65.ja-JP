@@ -2,11 +2,12 @@
 title: Smart Content Serviceを使用したアセットのタグ付けの設定
 description: Smart Content Serviceを使用して、 [!DNL Adobe Experience Manager]でスマートタグを設定し、高度なスマートタグを設定する方法を説明します。
 contentOwner: AG
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 178b1433de1d6b1e20527755414a494d4291935e
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2170'
-ht-degree: 55%
+source-wordcount: '2171'
+ht-degree: 56%
 
 ---
 
@@ -17,7 +18,7 @@ Smart Content Servicesを使用してアセットのタグ付けを開始でき�
 
 Smart Content Serviceを使用する前に、次の事項を確認します。
 
-* [Adobe 開発者コンソールとの統合](#integrate-adobe-io).
+* [Adobe 開発者コンソールとの統合](#integrate-adobe-io)。
 * [Smart Content Serviceのトレーニング](#training-the-smart-content-service)。
 
 * 最新の[[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)をインストールします。
@@ -280,7 +281,7 @@ Smart Content Service APIを使用するには、Adobe開発者コンソール�
    * 画像の細かい模様や部分に基づいてタグを識別することはできません。例えば、T シャツのロゴなどです。
    * タグ付けは、[!DNL Experience Manager]がサポートされているロケールでサポートされています。 言語の一覧については、](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html?lang=ja)スマートコンテンツサービスのリリースノート[を参照してください。
 
-* スマートタグ（標準または拡張タグ）を使用してアセットを検索するには、[!DNL Assets] Omnisearch（フルテキスト検索）を使用します。 スマートタグには個別の検索用述語はありません。
+* スマートタグ（通常または拡張）付きのアセットを検索するには、[!DNL Assets] のオムニサーチ（全文検索）を使用します。スマートタグには個別の検索用述語はありません。
 
 >[!MORELIKETHIS]
 >
