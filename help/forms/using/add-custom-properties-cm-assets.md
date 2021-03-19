@@ -9,10 +9,11 @@ topic-tags: correspondence-management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79437b96-7b57-4581-b7e7-fcaedc3d05de
 docset: aem65
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4460'
+source-wordcount: '4462'
 ht-degree: 68%
 
 ---
@@ -90,7 +91,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | String | フィールド／プロパティに与える任意の名前。（ここでは「Location of recipients」） |
       | name | 文字列 | `./extendedproperties/GeoLocation` （値は、itemsノードの下で作成したフィールド名と同じにします）。 |
-      | renderReadOnly | ブール値 | true |
+      | renderReadOnly | ブール型 | true |
       | sling:resourceType | 文字列 | `granite/ui/components/coral/foundation/form/textfield` |
 
    1. 「**すべて保存**」をクリックします。
@@ -138,7 +139,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
    </tr>
    <tr>
       <td>renderReadOnly</td>
-      <td>ブール値</td>
+      <td>ブール型</td>
       <td>true</td>
    </tr>
    <tr>
@@ -312,7 +313,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | 文字列 | Location of recipients（または、フィールドに与える任意の名前。） |
       | name | 文字列 | 。/extendedproperties/GeographicalLocation |
-      | renderReadOnly | ブール値 | true |
+      | renderReadOnly | ブール型 | true |
       | sling:resourceType | 文字列 | `/libs/granite/ui/components/coral/foundation/form/textfield` |
 
 1. レターにこのタブを追加するには、次のパスにある以下の items フォルダーに類似したパス／構造でオーバーレイフォルダーを作成します。
@@ -507,7 +508,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       |---|---|---|
       | fieldLabel | 文字列 | Location of recipients（または、フィールドに与える任意の名前。） |
       | name | 文字列 | `./extendedproperties/GeoLocation` |
-      | renderReadOnly | ブール値 | true |
+      | renderReadOnly | ブール型 | true |
       | sling:resourceType | 文字列 | granite/ui/components/coral/foundation/form/textfield |
 
 1. カスタマイズ内容を表示するには、関連するアセット（ここではテキスト）の上にカーソルを置き、「プロパティを表示」をクリックし、「**編集**」をクリックします。新しいタブとフィールド（Location of Recipients）がユーザーインターフェイスに表示されます。
@@ -641,7 +642,7 @@ Correspondence Management アセットにカスタムプロパティを追加し
          </tr>
          <tr>
            <td>sortable</td>
-           <td>ブール値</td>
+           <td>ブール型</td>
            <td><p>true</p> <p>値を「true」に設定した場合、ユーザーはこの列内の値を並べ替えることができます。 </p> </td>
          </tr>
          </tbody>
@@ -831,8 +832,8 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
       |---|---|---|
       | analyzed | 文字列 | true |
       | name | 文字列 | extendedProperties/location（または、検索に追加するプロパティの名前） |
-      | propertyIndex | ブール値 | true |
-      | useInSuggest | ブール値 | true |
+      | propertyIndex | ブール型 | true |
+      | useInSuggest | ブール型 | true |
 
    1. 「**すべて保存**」をクリックします。
 
@@ -963,7 +964,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
    </tr>
    <tr>
       <td>hideOnCreate<br /> </td>
-      <td>ブール値</td>
+      <td>ブール型</td>
       <td>true<br /> </td>
    </tr>
    </tbody>
@@ -980,7 +981,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
    </tr>
    <tr>
       <td>hideOnEdit<br /> </td>
-      <td>ブール値</td>
+      <td>ブール型</td>
       <td>true<br /> </td>
    </tr>
    </tbody>
