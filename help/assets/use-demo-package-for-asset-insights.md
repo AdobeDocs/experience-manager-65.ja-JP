@@ -2,11 +2,12 @@
 title: アセットインサイトにデモパッケージを使用する
 description: デモパッケージを使用して、アセットインサイトで Web ページからデータを取得し、Web ページのインサイトを生成できるようにします。
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: c1362c2c1f32d02d36d2067e0e74d927ddbc1554
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 78%
+source-wordcount: '163'
+ht-degree: 76%
 
 ---
 
