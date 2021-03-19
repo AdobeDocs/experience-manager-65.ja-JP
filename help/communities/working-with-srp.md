@@ -10,16 +10,17 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6f13b21a-f4ef-4889-9b8e-4da3f846fa35
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 31%
 
 ---
 
 
-# SRP - コミュニティコンテンツストレージ  {#srp-community-content-storage}
+# SRP - コミュニティコンテンツストレージ {#srp-community-content-storage}
 
 ## 概要 {#introduction}
 
