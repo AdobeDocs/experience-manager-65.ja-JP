@@ -2,10 +2,11 @@
 title: 翻訳プロジェクトの作成
 description: ' [!DNL Adobe Experience Manager]で翻訳プロジェクトを作成する方法を学びます。'
 contentOwner: AG
+role: アーキテクト、管理者
 translation-type: tm+mt
-source-git-commit: 534a3d75ebb6a6d297354cce4840bdc1dfa25707
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1880'
 ht-degree: 65%
 
 ---
