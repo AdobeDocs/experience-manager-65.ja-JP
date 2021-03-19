@@ -10,10 +10,11 @@ topic-tags: designer
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 080885a4fddbbce52968d3c324d6499ff1036de2
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '214'
 ht-degree: 83%
 
 ---
