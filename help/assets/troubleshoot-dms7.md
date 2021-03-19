@@ -8,10 +8,11 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1288'
 ht-degree: 94%
 
 ---
