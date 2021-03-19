@@ -5,16 +5,19 @@ audience: end-user
 user-guide-title: AEM 6.5 Mobile ユーザーガイド
 breadcrumb-title: モバイルガイド
 user-guide-description: モバイルアプリ用のコンテンツを作成および管理します。
+feature-set: Experience Manager Sites
+feature: モバイル
+role: 開業医
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '334'
 ht-degree: 95%
 
 ---
 
 
-# AEM 6.5 Mobile ユーザーガイド  {#mobile}
+# AEM 6.5 Mobile ユーザーガイド {#mobile}
 
 + [モバイルユーザーガイドの概要](home.md)
 + AEM Mobile の概要 {#introduction}
