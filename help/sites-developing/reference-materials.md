@@ -12,9 +12,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+source-git-commit: 5b33f615f1c82ec7cf80ae00c440cb5e3f0741fa
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '308'
 ht-degree: 87%
 
 ---
@@ -25,7 +25,6 @@ ht-degree: 87%
 Adobe Experience Manager（AEM）では、アプリケーション開発および AEM 拡張用の API をいくつか提供しています。以下は、AEM でサポートされている API のドキュメントの一覧です。
 
 * [Adobe AEM 6.5.0 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)
-* API の違い（現在準備中）
 * [Granite UI（タッチ操作対応）API ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 * [Coral UI ガイド](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 * [ウィジェット API（クラシック UI）ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
