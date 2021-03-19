@@ -2,10 +2,11 @@
 title: ' [!DNL Assets] 導入を監視するためのベストプラクティス'
 description: 展開後の [!DNL Adobe Experience Manager] 展開の環境とパフォーマンスを監視するためのベストプラクティスです。
 contentOwner: AG
+role: 管理者、アーキテクト
 translation-type: tm+mt
-source-git-commit: b14b377e52ab10c41355f069d97508b588d82216
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1670'
 ht-degree: 67%
 
 ---
