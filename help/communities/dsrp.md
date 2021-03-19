@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d23acb18-6761-4290-9e7a-a434582791bd
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '649'
 ht-degree: 48%
 
 ---
 
 
-# DSRP - リレーショナルデータベースストレージリソースプロバイダー  {#dsrp-relational-database-storage-resource-provider}
+# DSRP - リレーショナルデータベースストレージリソースプロバイダー {#dsrp-relational-database-storage-resource-provider}
 
 ## DSRP について {#about-dsrp}
 
