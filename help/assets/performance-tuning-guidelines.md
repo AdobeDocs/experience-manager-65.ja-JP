@@ -3,10 +3,11 @@ title: パフォーマンス調整 [!DNL Assets]。
 description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフトウェア、ネットワーク・コンポーネントの変更に関する提案とガイダンス。ボトルネックを解消し、 [!DNL Experience Manager Assets]のパフォーマンスを最適化します。'
 contentOwner: AG
 mini-toc-levels: 1
+role: アーキテクト、管理者
 translation-type: tm+mt
-source-git-commit: 0cecf1940136175887802b5ba205c67e61475a59
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2741'
+source-wordcount: '2743'
 ht-degree: 51%
 
 ---
@@ -297,7 +298,7 @@ CPUの効率的な使用率と負荷分散により、待ち時間を最小限�
 * HTTPS を有効化して企業の HTTP トラフィックスニッファーに対応する.
 * サイズの大きなアセットのアップロードには有線接続を使用する.
 * Java 8 にデプロイする
-* 最適な JVM パラメーターを設定する.
+* 最適な JVM パラメーターを設定する。
 * ファイルシステムのDataStoreまたはS3データストアを構成します。
 * サブアセットの生成を無効にします。 この機能が有効な場合、AEMワークフローは、複数ページのアセット内の各ページに対して個別のアセットを作成します。 これらの各ページは、追加のディスク領域を消費し、バージョン管理や追加のワークフロー処理が必要な個々のアセットです。 別々のページが必要ない場合は、サブアセットの生成とページ抽出のアクティビティを無効にします。
 * 一時的なワークフローを有効化する.
