@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8ae97a21-83af-4615-9be3-61e2f8065081
 docset: aem65
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: e545fc5e2ea139bd8ebb7f84138ba68e03d71d19
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1684'
 ht-degree: 57%
 
 ---
