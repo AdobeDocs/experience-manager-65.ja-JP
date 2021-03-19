@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
 content-type: reference
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '756'
 ht-degree: 74%
 
 ---
