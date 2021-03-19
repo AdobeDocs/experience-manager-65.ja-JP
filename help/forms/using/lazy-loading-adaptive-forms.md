@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a20736b7-f7b4-4da1-aa32-2408049b1209
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 4d95d0e38acc54e1ebbb9f9e31761205533e99f9
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1045'
 ht-degree: 81%
 
 ---
@@ -54,7 +55,7 @@ ht-degree: 81%
 
    フラグメントは遅延読み込みが有効になりました。
 
-遅延読み込みフラグメント内のオブジェクトの値をグローバルとしてマーク付けすることで、これらの値は、そのフラグメントが読み込まれていなくてもスクリプトで使用できるようになります。以下の操作を実行してください。
+遅延読み込みフラグメント内のオブジェクトの値をグローバルとしてマーク付けすることで、これらの値は、そのフラグメントが読み込まれていなくてもスクリプトで使用できるようになります。次の操作を実行します。
 
 1. アダプティブフォームフラグメントをオーサリングモードで開きます。
 1. 値をグローバルにするフィールドをタップし、![cmppr](assets/cmppr.png)をタップします。
