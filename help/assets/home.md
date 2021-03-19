@@ -2,11 +2,13 @@
 title: Assets ガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 user-guide-title: Assets ガイド
+feature: アセット管理
+role: 実業家、建築家、管理者
 translation-type: tm+mt
-source-git-commit: 18e62f8fb46de20e1668b2dcdcedf68fe4622b50
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 23%
+source-wordcount: '327'
+ht-degree: 24%
 
 ---
 
@@ -28,7 +30,7 @@ ht-degree: 23%
 
 | ユーザーガイド | 説明 |
 |--- |---|
-| [リリースノート](/help/release-notes/home.md) | 最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、非推奨機能および削除された機能、既知の問題など）を提供します |
+| [リリースノート](/help/release-notes/home.md) | 最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止/削除された機能、既知の問題など）を提供します |
 | [Formsユーザガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、発行、更新の方法について説明します。 |
 | [Communitiesユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |
 | [管理ガイド](/help/sites-administering/home.md) | Experience Managerの管理方法を理解します。 |
@@ -47,7 +49,7 @@ ht-degree: 23%
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?mv=other#recommended/solutions/experience-manager)
 * [Experience Manager資産コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/Adobe-Experience-Manager-Assets/ct-p/experience-manager-assets-community)
-* [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+* [ディスパッチャーユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
 * [HTLユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
 * [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
