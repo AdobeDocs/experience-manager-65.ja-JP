@@ -7,10 +7,11 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 787f3b4cf5835b7e9b03e3f4e6f6597084adec8c
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '727'
 ht-degree: 52%
 
 ---
