@@ -1,7 +1,7 @@
 ---
 title: We.Retail の編集可能テンプレートの使用
 seo-title: We.Retail の編集可能テンプレートの使用
-description: 'null'
+description: We.Retail の編集可能テンプレートの使用
 seo-description: 'null'
 uuid: 0d4b97cb-efcc-4312-a783-eae3ecd6f889
 contentOwner: User
@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '490'
 ht-degree: 86%
 
 ---
@@ -76,5 +76,5 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
 編集可能なテンプレートの技術的な詳細については、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者向けドキュメントページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
 
-また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。技術的な概要については、オーサリングドキュメント[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)および開発者向けドキュメント[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
+また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。技術的な概要については、オーサリングドキュメント[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および開発者向けドキュメント[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
 
