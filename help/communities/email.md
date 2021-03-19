@@ -10,16 +10,17 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '823'
 ht-degree: 33%
 
 ---
 
 
-# 電子メールの設定  {#configuring-email}
+# 電子メールの設定 {#configuring-email}
 
 AEM Communitiesは次の電子メールを使用します。
 
