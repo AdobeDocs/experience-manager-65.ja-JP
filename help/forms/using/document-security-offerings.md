@@ -10,10 +10,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 91e85e86-2361-4d1d-aa73-c3cce46ab1f1
 docset: aem65
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: e45e335d433f17a48ba1bf27a93c5b1003369512
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1219'
 ht-degree: 90%
 
 ---
