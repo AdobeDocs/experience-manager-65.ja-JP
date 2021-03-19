@@ -10,10 +10,11 @@ geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2936'
 ht-degree: 2%
 
 ---
@@ -90,7 +91,7 @@ Formsサービスを呼び出すWebアプリケーションを考えてみまし
  </thead>
  <tbody>
   <tr>
-   <td><p>1</p></td>
+   <td><p>3</p></td>
    <td><p>Webページには、Formsサービスを呼び出すJavaサーブレットにアクセスするリンクが含まれています。</p></td>
   </tr>
   <tr>
