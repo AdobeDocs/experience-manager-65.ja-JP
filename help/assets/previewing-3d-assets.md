@@ -3,16 +3,17 @@ title: 3D アセットのプレビュー
 description: Dynamic Media の 3D アセットのプレビュー方法について
 contentOwner: Rick Brough
 docset: aem65
+feature: 3D アセット
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '566'
 ht-degree: 96%
 
 ---
 
 
-# AEM での 3D アセットのプレビュー{#previewing-3d-assets-aem}
+# AEM での 3D アセットのプレビュー {#previewing-3d-assets-aem}
 
 Adobe Experience Manager では、オーサリングプロセスの一環として、3D アセットのアップロード、配信、インタラクティブプレビューをサポートしています。
 
