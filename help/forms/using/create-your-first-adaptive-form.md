@@ -7,10 +7,11 @@ uuid: ee351a3f-ea6a-4b4c-8045-4948ad51b7c1
 topic-tags: introduction
 discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 43c04a8b2f1e2e7f2067cec055d8737dfc7b3e84
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1073'
 ht-degree: 71%
 
 ---
