@@ -10,16 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a644978e-5736-4771-918a-dfefe350a4a1
 docset: aem65
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 84dd0d551431169239f63cff62a015e15f998e7d
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2045'
 ht-degree: 78%
 
 ---
 
 
-# アーキテクチャ （HTML5フォームの{#architecture-of-html-forms}）
+# HTML5 フォームのアーキテクチャ{#architecture-of-html-forms}
 
 ## アーキテクチャ {#architecture}
 
