@@ -10,16 +10,17 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 548e19b0fc76ede8685ea938ed871fbdc8c3858f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '320'
 ht-degree: 62%
 
 ---
 
 
-# バッジコンソール  {#badges-console}
+# バッジコンソール {#badges-console}
 
 ## バッジについて {#about-badges}
 
