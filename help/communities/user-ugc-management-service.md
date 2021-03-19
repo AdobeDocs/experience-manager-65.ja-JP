@@ -10,16 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '617'
 ht-degree: 37%
 
 ---
 
 
-# AEM Communities のユーザーおよび UGC 管理サービス  {#user-and-ugc-management-service-in-aem-communities}
+# AEM Communities のユーザーおよび UGC 管理サービス {#user-and-ugc-management-service-in-aem-communities}
 
 >[!IMPORTANT]
 >
