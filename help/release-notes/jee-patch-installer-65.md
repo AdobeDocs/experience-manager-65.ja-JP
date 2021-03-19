@@ -1,14 +1,14 @@
 ---
 title: AEM FormsJEEパッチインストーラー
-description: 'null'
+description: AEM Forms JEE Patch Installer
 uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 translation-type: tm+mt
-source-git-commit: c1af919d4c0fd984249e1a7009274c63b8ce9adb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 45%
+source-wordcount: '484'
+ht-degree: 49%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->[詳細やパッチの入手方法については、](https://www.adobe.com/jp/account/sign-in.supportportal.html) サポートにお問い合わせください。
+>[詳細やパッチの入手方法については、](https://www.adobe.com/account/sign-in.supportportal.html) サポートにお問い合わせください。
 
 ## パッチインストーラについて{#about-the-patch-installer}
 
@@ -31,16 +31,16 @@ AEM 6.5FormsJEEパッチインストーラーには、このパッチのリリ�
 
 1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
 1. アプリケーションサーバーを停止します。
-1. パッチインストーラーのアーカイブファイルをハードドライブに展開します。
+1. パッチインストーラーアーカイブファイルをハードディスクに展開します。
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
-   * ****
-Windowsインストールメディアまたはハードディスク上のインストーラーのコピー先フォルダーにある適切なディレクトリに移動し、aemforms65_cfp_install.exeファイルを重複クリックします。
+   * **Windows**
+インストールメディアまたはハードディスク上のインストーラーのコピー先フォルダーにある適切なディレクトリに移動し、aemforms65_cfp_install.exeファイルを重複クリックします。
 
       * （Windows 32ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
-   * ****
-Linux適切なディレクトリに移動し、コマンドプロンプトで次のように入力します。 
+   * **Linux**
+Navigate to the appropriate directory, and from a command prompt, type 
 `./aem65_cfp_install.bin`
 
       * (Linux) `Linux/Disk1/InstData/NoVM`
@@ -60,7 +60,7 @@ Linux適切なディレクトリに移動し、コマンドプロンプトで次
 
 1. 「開始設定マネージャー」(Configuration Manager)チェックボックスはデフォルトで選択されています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager を実行します。
 
-1. Configuration Manager を後で実行するには、「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。後で`[AEM_forms_root]/configurationManager/bin`ディレクトリの適切なスクリプトを使用して、Configuration Managerを開始できます。
+1. Configuration Manager を後で実行するには、「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。You can start Configuration Manager later using the appropriate script in the `[AEM_forms_root]/configurationManager/bin` directory.
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、「*AEM Forms の設定とデプロイ*」節の指示に従ってください。
 
@@ -83,7 +83,7 @@ SAML認証を設定済みで、大きいIDPメタデータに関する問題が�
 ## 影響を受けたモジュール{#impacted-modules}
 
 * ドキュメントサービス
-* ドキュメントのセキュリティ
+* Document Security
 * Foundation JEE
 
 [サポートへのお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)
