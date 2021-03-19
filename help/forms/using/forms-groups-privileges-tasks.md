@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a4314a30e2329aebe02f4983fd543240be920ee8
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '280'
 ht-degree: 78%
 
 ---
