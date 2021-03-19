@@ -11,10 +11,11 @@ content-type: reference
 discoiquuid: 1e0a68c5-1583-4103-9dbb-7a53faa03c06
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
+feature: 言語コピー
 translation-type: tm+mt
-source-git-commit: 8b53e79e3a88f58423e99477db930a4912a1ba09
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '269'
 ht-degree: 87%
 
 ---
