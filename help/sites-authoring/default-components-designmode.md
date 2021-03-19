@@ -1,7 +1,7 @@
 ---
 title: デザインモードでのコンポーネントの設定
 seo-title: デザインモードでのコンポーネントの設定
-description: 'null'
+description: デザインモードでのコンポーネントの設定
 seo-description: 'null'
 uuid: b9c9792d-4398-446d-8767-44d4e7ce9a2e
 contentOwner: Chris Bohnert
@@ -10,9 +10,9 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '911'
 ht-degree: 81%
 
 ---
