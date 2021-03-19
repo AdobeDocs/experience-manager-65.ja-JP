@@ -7,10 +7,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
+feature: イメージプロファイル
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '2759'
+source-wordcount: '2764'
 ht-degree: 92%
 
 ---
@@ -123,7 +125,7 @@ ht-degree: 92%
 
    [スマート切り抜きとスマートスウォッチオプション](#crop-options)および[アンシャープマスク](#unsharp-mask)も参照してください。
 
-   ![crop](assets/crop.png)
+   ![切り抜き](assets/crop.png)
 
 1. 「**[!UICONTROL 保存」をタップします。]**&#x200B;新しく作成されたプロファイルが、使用可能なプロファイルのリストに表示されます。
 
