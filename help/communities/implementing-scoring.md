@@ -11,10 +11,11 @@ content-type: reference
 discoiquuid: ea033bb9-cb92-4c93-855f-8c902999378c
 docset: aem65
 tagskeywords: scoring, badging, badges, gamification
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 2daf00f17058de8b901848fcf1128a5ee9770368
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2884'
+source-wordcount: '2885'
 ht-degree: 53%
 
 ---
@@ -247,7 +248,7 @@ UGC 内では、割り当てられたバッジと、ルールに従って獲得�
   </tr>
   <tr>
    <td><code>forOwner</code></td>
-   <td>ブール値</td>
+   <td>ブール型</td>
    <td>
     <ul>
      <li>オプションです。メンバーが自分の所有するコンテンツを操作している場合は関係ありません。</li>
