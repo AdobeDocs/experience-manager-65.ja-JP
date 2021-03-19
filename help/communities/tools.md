@@ -10,11 +10,12 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
+role: Administrator
 translation-type: tm+mt
-source-git-commit: c190d5f223c85f6c49fea1391d8a3d2baff20192
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 16%
+source-wordcount: '113'
+ht-degree: 17%
 
 ---
 
