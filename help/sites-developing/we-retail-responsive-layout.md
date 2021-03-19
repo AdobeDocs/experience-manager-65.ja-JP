@@ -1,7 +1,7 @@
 ---
 title: We.Retail のレスポンシブレイアウトの使用
 seo-title: We.Retail のレスポンシブレイアウトの使用
-description: 'null'
+description: We.Retail のレスポンシブレイアウトの使用
 seo-description: 'null'
 uuid: d9613655-f54e-458f-9175-d07bb868f58b
 contentOwner: User
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 74%
+source-wordcount: '254'
+ht-degree: 75%
 
 ---
 
