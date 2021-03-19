@@ -5,11 +5,14 @@ audience: end-user
 user-guide-title: Adobe Experience Manager6.5リリースノート
 breadcrumb-title: リリースノート
 user-guide-description: AEM 6.5の最新の新機能について、リリースノートで説明します。
+feature-set: Experience Manager
+feature: リリース情報
+role: リーダー、アーキテクト、開発者、データ・アーキテクト、データ・エンジニア、管理者、実業家
 translation-type: tm+mt
-source-git-commit: 4f3be1e50b5520e55ffebfe13ea19aca77d5350d
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 45%
+source-wordcount: '87'
+ht-degree: 41%
 
 ---
 
