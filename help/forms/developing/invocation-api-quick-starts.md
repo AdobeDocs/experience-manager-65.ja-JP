@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: dcf83c9f-b818-44a2-9079-80a4fc357c4f
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1264'
 ht-degree: 6%
 
 ---
@@ -37,7 +38,7 @@ ht-degree: 6%
   <tr>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking_human_centric_long_lived_processes">人間中心の長期間有効なプロセスの呼び出し</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#invoking-a-long-lived-process-using-remoting">(AEM formsでは非推奨)AEM Formsリモートを使用した長期間有効なプロセスの呼び出し</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">クイック開始:呼び出しAPIを使用した長期間有効なプロセスの呼び出し</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_invocation_api">Quick Start: Invoking a long-lived process using the Invocation API</a></p></td>
    <td><p><a href="/help/forms/developing/invoking-human-centric-long-lived.md#quick_start_invoking_a_long_lived_process_using_the_web_service_api">クイック開始:WebサービスAPIを使用した長期間有効なプロセスの呼び出し</a></p></td>
   </tr>
   <tr>
