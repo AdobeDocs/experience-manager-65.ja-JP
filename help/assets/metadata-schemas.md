@@ -2,10 +2,11 @@
 title: 'メタデータプロパティページのレイアウトを定義するメタデータスキーマ（ [!DNL Adobe Experience Manager Assets]内）。 '
 description: メタデータスキーマを使用することで、プロパティページのレイアウトと、アセットに関して表示されるメタデータプロパティを定義します。カスタムメタデータスキーマを作成する方法、メタデータスキーマを編集する方法およびメタデータスキーマをアセットに適用する方法を学習します。
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 2cccbdea594bb9ba61e8c0f7884b724aab10b5da
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3601'
+source-wordcount: '3604'
 ht-degree: 60%
 
 ---
