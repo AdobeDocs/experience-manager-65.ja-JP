@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
+feature: アセット管理
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: a1e4d64a9ac7dc02c5cf2ac6b01994736c45b449
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1349'
 ht-degree: 82%
 
 ---
@@ -70,8 +72,8 @@ ht-degree: 82%
       </tr>
       <tr>
       <td><p>画像</p> </td>
-      <td>可</td>
-      <td>可</td>
+      <td>はい</td>
+      <td>はい</td>
       <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li>
@@ -82,8 +84,8 @@ ht-degree: 82%
       </tr>
       <tr>
       <td>マルチメディア</td>
-      <td>可</td>
-      <td>可</td>
+      <td>はい</td>
+      <td>はい</td>
       <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。リストから「<strong>レンディション</strong>」をクリックし、プレビューする特定のレンディションを選択します。</li>
@@ -130,8 +132,8 @@ ht-degree: 82%
       </tr>
       <tr>
       <td>360 ビデオ<br /> </td>
-      <td>可</td>
-      <td>可</td>
+      <td>はい</td>
+      <td>はい</td>
       <td><p><strong>特定のレンディションでアセットをプレビューするには：</strong></p>
       <ul>
       <li>ページの左上隅近くにあるアイコンをタップして、ドロップダウンリストを表示します。「<strong>レンディション</strong>」を選択した後、プレビューするレンディションを選択します。</li>
