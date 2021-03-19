@@ -5,11 +5,14 @@ audience: end-user
 user-guide-title: AEM 6.5 Communities ユーザーガイド
 breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
+feature-set: Experience Manager
+feature: Communities
+role: 開業医
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 94%
+source-wordcount: '504'
+ht-degree: 93%
 
 ---
 
