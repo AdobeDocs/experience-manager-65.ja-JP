@@ -10,10 +10,12 @@ topic-tags: brand-portal
 content-type: reference
 discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
+feature: Brand Portal
+role: 開業医
 translation-type: tm+mt
-source-git-commit: 4c00385984a0ac315a60c768cb517832ab4289b4
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '375'
 ht-degree: 61%
 
 ---
