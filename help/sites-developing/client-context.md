@@ -10,10 +10,11 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: c881ad66-bcc3-4f99-b77f-0944c23e2d29
 docset: aem65
+feature: Context Hub
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3023'
+source-wordcount: '3025'
 ht-degree: 83%
 
 ---
