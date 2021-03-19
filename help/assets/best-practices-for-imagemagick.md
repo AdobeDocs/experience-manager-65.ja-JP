@@ -2,10 +2,11 @@
 title: ImageMagickのインストールと設定
 description: ImageMagick ソフトウェアの概要と、インストール方法、コマンドラインプロセスのステップの設定方法、ImageMagick を使用して画像の編集、組み立て、サムネール生成をおこなう方法を学習します。
 contentOwner: AG
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 5069c2cd26e84866d72a61d36de085dadd556cdd
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '694'
 ht-degree: 49%
 
 ---
