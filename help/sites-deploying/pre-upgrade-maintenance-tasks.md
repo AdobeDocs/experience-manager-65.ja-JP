@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: 291c91e5-65ff-473d-ac11-3da480239e76
 docset: aem65
+feature: アップグレード
 translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2159'
 ht-degree: 78%
 
 ---
