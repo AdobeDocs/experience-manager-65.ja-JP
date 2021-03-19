@@ -1,7 +1,7 @@
 ---
 title: モバイルアプリのテスト
 seo-title: モバイルアプリのテスト
-description: 'null'
+description: モバイルアプリのテスト
 seo-description: 'null'
 uuid: 3b402d34-5cab-4280-b8b9-88ad9f8fc5e4
 contentOwner: Guillaume Carlino
@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1029'
 ht-degree: 82%
 
 ---
