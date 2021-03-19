@@ -1,7 +1,7 @@
 ---
 title: 基盤コンポーネント
 seo-title: 基盤コンポーネント
-description: 'null'
+description: 基盤コンポーネント
 seo-description: 'null'
 uuid: 3caf9123-ae58-4590-af2f-57ef076daf7f
 contentOwner: User
@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 translation-type: tm+mt
-source-git-commit: 0362be4d78fa39ac73c9be5dd5d08ccfebd21edc
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '7364'
+source-wordcount: '7365'
 ht-degree: 87%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 87%
 >
 >ほとんどのFoundation Componentsは、AEM 6.5で廃止されました。詳しくは、[リリースノート](/help/release-notes/deprecated-removed-features.md)を参照してください。
 >
->より新しく拡張性が高い[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を AEM プロジェクトで利用することをお勧めします。これらは[Web.Retailサンプルコンテンツ](/help/sites-developing/we-retail.md)の一部であり、[個別にインストールし、管理者が開発版](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/get-started/using.html)に使用することもできます。
+>より新しく拡張性が高い[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を AEM プロジェクトで利用することをお勧めします。これらは[Web.Retailサンプルコンテンツ](/help/sites-developing/we-retail.md)の一部であり、[個別にインストールし、管理者が開発版](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/get-started/using.html)に使用することもできます。
 >
 >[AEM Modenize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/)を使用して、Foundation Componentsベースのサイトをリファクタリングし、コアコンポーネントを使用できます。
 
@@ -463,7 +463,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!NOTE]
 >
->このコンポーネントは [HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)を使用して実装されています。
+>このコンポーネントは [HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)を使用して実装されています。
 
 ### リスト {#list}
 
