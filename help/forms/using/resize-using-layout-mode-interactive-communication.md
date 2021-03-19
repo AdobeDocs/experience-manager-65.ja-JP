@@ -1,11 +1,12 @@
 ---
 title: レイアウトモードを使用して、対話型通信用のコンポーネントのサイズを変更する
 description: 'レイアウトモードで使用できるレスポンシブグリッドを使用してコンポーネントの位置を定義 '
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: c62ad355469a95db89db44c34bb6df72d8f4bf77
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 2%
+source-wordcount: '869'
+ht-degree: 3%
 
 ---
 
