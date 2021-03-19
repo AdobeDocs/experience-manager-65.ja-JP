@@ -9,10 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
+feature: アダプティブフォーム
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 1a4bfc91cf91b4b56cc4efa99f60575ac1a9a549
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '827'
 ht-degree: 51%
 
 ---
