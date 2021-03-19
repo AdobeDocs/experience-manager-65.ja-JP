@@ -2,18 +2,19 @@
 title: リンクを使用したアセットの共有
 description: アセット、フォルダーおよびコレクションをURLとして共有します。
 contentOwner: AG
+role: 開業医
 translation-type: tm+mt
-source-git-commit: e36d08c9ea89e840aecde79ffdd911372c0c54ee
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 34%
+source-wordcount: '1058'
+ht-degree: 38%
 
 ---
 
 
 # リンク{#asset-link-sharing}を介してアセットを共有
 
-[!DNL Adobe Experience Manager Assets] アセット、フォルダー、コレクションをURLとして組織のメンバーと、パートナーやベンダーを含む外部エンティティと共有できます。リンクを通じてアセットを共有すると、[!DNL Assets]に最初にログインしなくても、外部のユーザーがリソースを利用できる便利な方法です。
+[!DNL Adobe Experience Manager Assets] アセット、フォルダー、コレクションをURLとして組織のメンバーと、パートナーやベンダーを含む外部エンティティと共有できます。リンクによるアセットの共有は、外部の関係者が [!DNL Assets] にログインすることなくリソースを利用するための便利な方法です。
 
 >[!PREREQUISITES]
 >
@@ -25,7 +26,7 @@ ht-degree: 34%
 
 ユーザーと共有するアセットのURLを生成するには、リンクの共有ダイアログを使用します。 `/var/dam/share` の場所への管理者特権または読み取り権限を持つユーザーが、共有されたリンクを表示することができます。
 
-1. [!DNL Assets]ユーザーインターフェイスで、リンクとして共有するアセットを選択します。
+1. [!DNL Assets] のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
 1. ツールバーで、**[!UICONTROL リンクを共有]** ![アセットを共有アイコン](assets/do-not-localize/assets_share.png)をクリックします。
 
    「[!UICONTROL 共有]」をクリックした後に作成されるリンクは、あらかじめ「[!UICONTROL 共有リンク]」フィールドに表示されます。 リンクのデフォルトの有効期間は 1 日です。
