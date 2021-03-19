@@ -1,17 +1,19 @@
 ---
 title: Dynamic Media ビューアプリセットの適用
-description: Dynamic Media でのビューアプリセットの適用方法について説明します。
+description: Dynamic Media でのビューアプリセットの適用方法について説明します
 uuid: cebad000-2bda-4e62-a0d1-7155151daf6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
+feature: ビューアプリセット
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: e916f70549197ac9f95443e972401a78735b0560
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 94%
+source-wordcount: '222'
+ht-degree: 93%
 
 ---
 
