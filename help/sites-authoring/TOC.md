@@ -6,16 +6,19 @@ audience: end-user
 user-guide-title: AEM 6.5 オーサリングユーザーガイド
 breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
+feature-set: Experience Manager Sites
+feature: オーサリング
+role: 開業医
 translation-type: tm+mt
-source-git-commit: a74be2627dd63c246eaf4576827f1b2ea16d3146
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 88%
+source-wordcount: '301'
+ht-degree: 87%
 
 ---
 
 
-# AEM 6.5 オーサリングユーザーガイド  {#authoring}
+# AEM 6.5 オーサリングユーザーガイド {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
 + AEMオーサリングに不可欠なタスク、ツール、概念{#essentials}
