@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 8f35717324cd2c1524fb2cf931b3ce21be05729a
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2132'
+source-wordcount: '2133'
 ht-degree: 81%
 
 ---
@@ -68,7 +69,7 @@ AEM では様々な設定をおこなえます。
 
 このリストでは、各設定項目の簡単な概要と、詳細を説明するページへのリンクを提供します。
 
-### セキュリティチェックリスト {#security-checklist}
+### セキュリティチェックリスト  {#security-checklist}
 
 [セキュリティチェックリスト](/help/sites-administering/security-checklist.md)には、重要な設定問題がいくつかリストされています。これを読んで、実際のインストールに必要な対処をおこなってください。
 
@@ -143,7 +144,7 @@ AEM では、次の設定が可能です。
 
 詳しくは、[シングルサインオン](/help/sites-deploying/single-sign-on.md)を参照してください。
 
-### リソースマッピング  {#resource-mapping}
+### リソースマッピング {#resource-mapping}
 
 リソースマッピングは、リダイレクト、バニティー URL および AEM 用の仮想ホストを定義するために使用します。
 
