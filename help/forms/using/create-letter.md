@@ -7,10 +7,11 @@ uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4008'
 ht-degree: 75%
 
 ---
@@ -377,51 +378,51 @@ Correspondence Management でレターテンプレートを作成したら、エ
   </tr> 
   <tr> 
    <td><strong>date</strong></td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>時刻</strong></td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>datetime</strong></td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>integer</strong></td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
-   <td>可<br /> </td> 
+   <td>はい<br /> </td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>float</strong></td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
-   <td>可<br /> </td> 
+   <td>はい<br /> </td> 
    <td>該当なし</td> 
    <td>該当なし<br /> </td> 
   </tr> 
@@ -429,9 +430,9 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td><strong>richtext</strong></td> 
    <td>はい</td> 
    <td>テキストのみ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
@@ -439,9 +440,9 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td><strong>平</strong> <strong>文</strong></td> 
    <td>はい</td> 
    <td>テキストのみ</td> 
+   <td>はい</td> 
    <td>可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
@@ -450,8 +451,8 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td>いいえ</td> 
    <td>画像のみ</td> 
    <td>不可</td> 
-   <td>可</td> 
-   <td>不可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
@@ -460,8 +461,8 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td>不可</td> 
    <td>不可</td> 
    <td>いいえ<br /> </td> 
-   <td>可</td> 
-   <td>不可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
    <td>該当なし</td> 
    <td>該当なし<br /> </td> 
   </tr> 
