@@ -2,10 +2,11 @@
 title: デジタルアセットを整理します
 description: Experience Managerを使用して、デジタルアセット、画像、ファイル、フォルダーなどを整理します。
 contentOwner: AG
+role: 開業医
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '782'
 ht-degree: 8%
 
 ---
