@@ -8,10 +8,11 @@ topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c47ef627-261e-4b4b-8846-873d3d84234b
 docset: aem65
+feature: フォームデータモデル
 translation-type: tm+mt
-source-git-commit: ba42f1e85216f6be4ae0dd90891e1b2d1d559bd8
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4148'
+source-wordcount: '4151'
 ht-degree: 60%
 
 ---
