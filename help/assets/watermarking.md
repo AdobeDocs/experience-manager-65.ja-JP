@@ -2,10 +2,11 @@
 title: デジタルアセットへの透かしの追加
 description: 透かし処理機能を使用して、アセットにデジタル透かしを追加する方法について説明します。
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: ec97cc41989cacdcae64a955a32a34d12212ca85
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '308'
 ht-degree: 31%
 
 ---
