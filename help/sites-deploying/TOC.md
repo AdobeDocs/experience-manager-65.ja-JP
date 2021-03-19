@@ -6,10 +6,13 @@ audience: end-user
 user-guide-title: AEM 6.5 デプロイガイド
 breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.5 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
+feature-set: Experience Manager Sites
+feature: デプロイ
+role: アーキテクト
 translation-type: tm+mt
-source-git-commit: fa2002950bbfb902db8c98a418b3a3d9185efea0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '354'
 ht-degree: 93%
 
 ---
