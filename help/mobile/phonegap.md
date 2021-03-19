@@ -1,7 +1,7 @@
 ---
 title: PhoneGap
 seo-title: PhoneGap
-description: null
+description: PhoneGap
 seo-description: このページでは、AEM での Adobe PhoneGap Enterprise 用のオーサリングの概要について説明します。
 uuid: 256a9f66-4c66-434c-be79-01be3c02d688
 contentOwner: msm-service
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: d9ab4d38-1c17-477d-9341-02bda80f3c23
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '216'
 ht-degree: 81%
 
 ---
