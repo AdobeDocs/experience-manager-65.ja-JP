@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '341'
 ht-degree: 85%
 
 ---
 
 
-# XFA または PDF フォームテンプレートのダウンロード  {#download-an-xfa-or-a-pdf-form-template}
+# XFA または PDF フォームテンプレートのダウンロード {#download-an-xfa-or-a-pdf-form-template}
 
 ダウンロード操作では、その名のとおり、リポジトリからローカルシステムへとフォームをエクスポートすることができます。アップロード操作と組み合わせることにより、リポジトリから別のリポジトリへとフォームを移行することができます。
 
