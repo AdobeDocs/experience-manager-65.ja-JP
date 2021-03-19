@@ -1,7 +1,7 @@
 ---
 title: コンテンツ配信
 seo-title: コンテンツ配信
-description: 'null'
+description: コンテンツ配信
 seo-description: 'null'
 uuid: 1e7bea34-ca50-41ed-8295-fa182c27fa69
 contentOwner: User
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 3d65cc6b-5721-472f-a805-588d50f3571b
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '971'
 ht-degree: 61%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 61%
 
 ![chlimage_1-154](assets/chlimage_1-154.png)
 
-## Assets {#assets}
+## アセット {#assets}
 
 アセットコレクションは、他のコレクションの参照を含む AEM 構成要素です。
 
