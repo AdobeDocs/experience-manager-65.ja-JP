@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: b8465471-0458-42d6-8209-8ba90f41154a
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '111'
 ht-degree: 100%
 
 ---
 
 
-# HTML5 フォームでの右から左に書く言語  {#right-to-left-languages-in-html-forms}
+# HTML5 フォームでの右から左に書く言語 {#right-to-left-languages-in-html-forms}
 
 HTML5 フォームは、ヘブライ語のような右から左に書く言語をサポートしています。HTML5 フォームを、右から左に書く言語で表示および入力することができます。同一のフォームに右から左に書く言語と左から右に書く言語の両方を使用することができます。例えば、一般的なフィールドで英語とヘブライ語の両方を使用できます。Mobile Forms はロケールを使用して、ローカライズされた曜日と日付情報をフォームに表示します。
 
