@@ -1,7 +1,7 @@
 ---
 title: ワークフロー機能の拡張
 seo-title: ワークフロー機能の拡張
-description: 'null'
+description: ワークフロー機能の拡張
 seo-description: 'null'
 uuid: 9f4ea2a8-8b21-4e7c-ac73-dd37d9ada111
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48d18de8c982ab3b92cad4df030cb1e4a1a8dfc4
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3587'
+source-wordcount: '3589'
 ht-degree: 67%
 
 ---
