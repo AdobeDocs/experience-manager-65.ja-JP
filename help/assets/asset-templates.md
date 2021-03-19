@@ -2,10 +2,11 @@
 title: アセットテンプレート
 description: ' [!DNL Adobe Experience Manager Assets] のアセットテンプレートと、アセットテンプレートを使用してマーケティングコラテラルを作成する方法について説明します。'
 contentOwner: AG
+role: 開業医
 translation-type: tm+mt
-source-git-commit: f9f745369ba0fe242dea1e5a5e5af0b8263b1ec0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1546'
 ht-degree: 32%
 
 ---
