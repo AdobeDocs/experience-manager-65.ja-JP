@@ -1,7 +1,7 @@
 ---
 title: ワークフローのベストプラクティス
 seo-title: ワークフローのベストプラクティス
-description: 'null'
+description: ワークフローのベストプラクティス
 seo-description: 'null'
 uuid: 79be4055-c2ef-428e-9054-103c6cfde1d2
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 0be8b88c-6f57-4dcc-ae11-77b378a2decd
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1924'
 ht-degree: 88%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 88%
 
 （カスタマイズされたものか標準提供されたものかに関わらず）ワークフロープロセスを設定する際は、いくつかの点に注意してください。
 
-### 一時的ワークフロー  {#transient-workflows}
+### 一時的ワークフロー {#transient-workflows}
 
 高い取り込み負荷を最適化するには、[ワークフローを一時的](/help/sites-developing/workflows.md#transient-workflows)として定義することができます。
 
