@@ -11,16 +11,17 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 807a81045fca19ab83b9d7872684a5f8a9ed70f1
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1679'
 ht-degree: 42%
 
 ---
 
 
-# コミュニティグループコンソール  {#community-groups-console}
+# コミュニティグループコンソール {#community-groups-console}
 
 コミュニティサイトの[テンプレート構造](/help/communities/sites-console.md#step1)に[グループ関数](/help/communities/functions.md#groups-function)が含まれている場合、グループコンソールからコミュニティグループを作成するためのアクセスを提供します。
 
