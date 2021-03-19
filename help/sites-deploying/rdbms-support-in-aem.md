@@ -10,10 +10,11 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 6a754d42-da30-4c2f-8b9c-369e1f1f92b5
 docset: aem65
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 38ef8fc8d80009c8ca79aca9e45cf10bd70e1f1e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '640'
 ht-degree: 78%
 
 ---
@@ -87,7 +88,7 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
    * `org.postgresql.Driver` PostgreSQLの場合；
    * `com.ibm.db2.jcc.DB2Driver` for DB2;
-   * `oracle.jdbc.OracleDriver` oracleの
+   * `oracle.jdbc.OracleDriver` oracleのため
    * `com.mysql.jdbc.Driver`（MySQL および MariaDB、試行用）
    * c `om.microsoft.sqlserver.jdbc.SQLServerDriver` for Microsoft SQL Server （試験的）。
 
@@ -101,7 +102,7 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 
 * `jdbc:postgresql:databasename` PostgreSQLの場合；
 * `jdbc:db2://localhost:port/databasename` for DB2;
-* `jdbc:oracle:thin:localhost:port:SID` oracleの
+* `jdbc:oracle:thin:localhost:port:SID` oracleのため
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 * `jdbc:sqlserver://localhost:1453;databaseName=name` (Microsoft SQL Server （試験的）用)
 
