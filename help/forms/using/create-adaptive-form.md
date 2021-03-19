@@ -6,10 +6,11 @@ seo-description: このチュートリアルでは、アダプティブフォー
 page-status-flag: de-activated
 uuid: 0010d274-a683-499e-9fa6-ce355d7898a0
 discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 78768e6eab65f452421d8809384500c6eab6b97f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1397'
 ht-degree: 67%
 
 ---
