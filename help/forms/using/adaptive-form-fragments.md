@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 3690d2d76ce13064bd3946f4f6fea1a2759cdf37
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2093'
+source-wordcount: '2095'
 ht-degree: 95%
 
 ---
@@ -181,7 +182,7 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
    <td><p><strong>説明</strong></p> </td>
   </tr>
   <tr>
-   <td><p> を開きます。</p> </td>
+   <td><p> 次を開きます：</p> </td>
    <td><p>選択されているアダプティブフォームフラグメントを編集モードで開きます。<br /><br /> </p> </td>
   </tr>
   <tr>
