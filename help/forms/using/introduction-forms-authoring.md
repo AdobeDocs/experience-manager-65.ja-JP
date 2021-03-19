@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction, author
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 103468b8e6e5bdf870156f85b7f547f190044561
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3169'
+source-wordcount: '3171'
 ht-degree: 73%
 
 ---
 
 
-# アダプティブフォームのオーサリングの概要  {#introduction-to-authoring-adaptive-forms}
+# アダプティブフォームのオーサリングの概要 {#introduction-to-authoring-adaptive-forms}
 
 ## 概要 {#overview}
 
