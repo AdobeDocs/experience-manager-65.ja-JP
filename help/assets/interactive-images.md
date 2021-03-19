@@ -8,16 +8,18 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
+feature: インタラクティブ画像
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '4330'
-ht-degree: 96%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# インタラクティブ画像{#interactive-images}
+# インタラクティブ画像 {#interactive-images}
 
 画像に「ショッパブル」（購入可能）ホットスポットをドラッグ＆ドロップすることで、静的画像を顧客にとってリッチで魅力的なエクスペリエンスへと簡単に変えることができます。ショッパブルホットスポットは、製品またはサービスに関する追加情報と、「買い物かごに追加」、「購入」などのダイレクトな販売機能を結び付けます。ホットスポットをタップまたはクリックすると、製品またはサービスに直接リンクされ、その製品またはサービスが買い物かごに追加されるか、Web ページにリンクされます。これらのダイレクトなエクスペリエンスによって顧客のエンゲージメントが向上し、Web サイトでのコンバージョン率が上昇します。
 
@@ -100,7 +102,7 @@ AEM Assets 内でバナー画像にホットスポットを追加する場合は
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された·URL·を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
+次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。クイックビューをトリガーするとほとんどの場合、大量のリクエストがサーバーに送信されます。クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
 このプロセスの実行中は、様々な製品カテゴリや製品タイプが含まれる Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、ある特定の Web サイトカテゴリに共通するが、Web サイトの異なる領域にアクセスした場合にのみ変化する部分が存在する場合があるからです。
 
@@ -363,9 +365,9 @@ AEM Sites のユーザーである場合は、インタラクティブメディ�
 
 レスポンシブ環境向けにショッパブルインタラクティブ画像に「切り抜き」を適用するために、`ZoomView.iscommand` というインタラクティブ画像設定属性をパスに追加できます。ここでの `ZoomView` は呼び出すコンポーネントで、`iscommand` は適用する「crop」画像サービングコマンドです。
 
-[ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) 設定属性を参照してください。
+[ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html?lang=ja) 設定属性を参照してください。
 
-[crop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) 画像サービングコマンドを参照してください。
+[crop](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html?lang=ja) 画像サービングコマンドを参照してください。
 
 これで、インタラクティブ画像を Web サイト上の既存のクイックビューに統合できるようになりました。
 
