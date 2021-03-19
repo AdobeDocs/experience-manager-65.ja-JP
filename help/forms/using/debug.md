@@ -9,16 +9,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5260d981-da40-40ab-834e-88e091840813
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 67%
+source-wordcount: '832'
+ht-degree: 68%
 
 ---
 
 
-# HTML5 フォーム のデバッグ  {#debugging-html-forms}
+# HTML5 フォーム のデバッグ {#debugging-html-forms}
 
 このドキュメントにはさまざまなトラブルシューティングのシナリオが含まれています。各シナリオにつき、問題をトラブルシューティングするためにいくつかの手順が提供されています。次の手順を実行し、引き続き問題が発生する場合は、ロガーを設定してエラーや警告のログを取得し、確認します。HTML5フォームのログ記録について詳しくは、「[HTML5フォームのログの生成](/help/forms/using/enable-logs.md)」を参照してください。
 
