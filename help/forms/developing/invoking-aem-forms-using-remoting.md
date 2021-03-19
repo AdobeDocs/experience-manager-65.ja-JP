@@ -9,10 +9,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '4661'
+source-wordcount: '4662'
 ht-degree: 1%
 
 ---
@@ -521,7 +522,7 @@ Flexで作成されたアプリケーションには、AEM Formsサービスへ�
 
 **ログアウト**
 
-AEM Formsからログアウトしてセッションを無効にするには、認証cookieをクライアントのコンピューターから削除する必要があります。 シングルサインオンの目的はユーザーに一度ログインを許可することなので、クライアントアプリケーションがcookieを削除しないようにすることです。 この操作により、ユーザーが効果的にログアウトされます。
+AEM Formsからログアウトしてセッションを無効にするには、認証cookieをクライアントのコンピューターから削除する必要があります。 シングルサインオンの目的はユーザーに一度ログインを許可することなので、クライアントアプリケーションに対してcookieの削除を許可しないようにすることです。 この操作により、ユーザーが効果的にログアウトされます。
 
 したがって、クライアントアプリケーションで`RemoteObject.logout`メソッドを呼び出すと、クライアント上で、セッションがログアウトされていないことを示すエラーメッセージが生成されます。 代わりに、ユーザは一元化されたログインサービスを使用して、認証cookieをログアウトおよび削除できます。
 
