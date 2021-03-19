@@ -2,10 +2,11 @@
 title: メディアハンドラーとワークフローを使用したアセットの処理
 description: メディアハンドラーについて、およびワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 contentOwner: AG
+role: 開業医
 translation-type: tm+mt
-source-git-commit: a6758adf5ac8992e27c13b87ae65c83b5b8695c7
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '2161'
+source-wordcount: '2163'
 ht-degree: 48%
 
 ---
