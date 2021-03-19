@@ -2,10 +2,11 @@
 title: アセットの一括移行
 description: アセットを [!DNL Adobe Experience Manager]に取り込み、メタデータを適用し、レンディションを生成し、それらをアクティブ化してインスタンスを公開する方法について説明します。
 contentOwner: AG
+role: アーキテクト、管理者
 translation-type: tm+mt
-source-git-commit: 10dae6e9f49e93d2f4923cee754c1d23d9d4b25e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1799'
+source-wordcount: '1801'
 ht-degree: 67%
 
 ---
