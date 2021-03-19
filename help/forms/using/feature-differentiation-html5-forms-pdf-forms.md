@@ -10,16 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdd97c20-d1f2-4898-9862-1a6a8071be88
 docset: aem65
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '462'
 ht-degree: 84%
 
 ---
 
 
-# HTML5 フォームと PDF フォーム の機能の違い  {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5 フォームと PDF フォームの機能の違い {#feature-differentiation-between-html-forms-and-pdf-forms}
 
 次の表では、HTML5 フォームと PDF フォームでサポートされている機能について説明します。
 
@@ -57,8 +58,8 @@ ht-degree: 84%
   </tr>
   <tr>
    <td>ヘッダー/フッター </td>
-   <td>サポート対象. <br /> <br /> HTML5モバイルフォームは改ページをサポートしていないので、ヘッダーとフッターは1回だけ表示されます。ただし、レイアウトを設定することにより、モバイルフォームプレビュー内の複数の場所に表示させることができます。<br /> </td>
-   <td>サポート対象.</td>
+   <td>サポート対象。<br /> <br /> HTML5モバイルフォームは改ページをサポートしていないので、ヘッダーとフッターは1回だけ表示されます。ただし、レイアウトを設定することにより、モバイルフォームプレビュー内の複数の場所に表示させることができます。<br /> </td>
+   <td>サポート対象。</td>
   </tr>
   <tr>
    <td>カスタムウィジェット</td>
