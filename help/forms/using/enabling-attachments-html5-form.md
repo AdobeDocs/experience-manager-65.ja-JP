@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
+feature: 'モバイルフォーム '
 translation-type: tm+mt
-source-git-commit: 00e14be8a0775149b3ee7ce8cd781dd7f1e49e4f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 62%
+source-wordcount: '337'
+ht-degree: 63%
 
 ---
 
 
-# HTML5フォームの添付ファイルの有効化  {#enabling-attachments-for-an-html-form}
+# HTML5フォームの添付ファイルの有効化 {#enabling-attachments-for-an-html-form}
 
 HTML5フォームでは、添付ファイルをアップロード、プレビューおよび送信することができます。デフォルトでは、添付ファイルサポートは無効になっています。添付ファイルサポートを有効にするには：
 
