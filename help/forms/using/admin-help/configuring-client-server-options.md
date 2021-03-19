@@ -9,16 +9,17 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
+feature: Document Security
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '10273'
+source-wordcount: '10275'
 ht-degree: 85%
 
 ---
 
 
-# Document Security サーバーの設定  {#configure-the-document-security-server}
+# Document Security サーバーの設定 {#configure-the-document-security-server}
 
 1. 管理コンソールで、サービス／Document Security／設定／サーバー設定をクリックします。
 1. 設定を指定し、「OK」をクリックします。
