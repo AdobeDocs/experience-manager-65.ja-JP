@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
+feature: Commerce統合フレームワーク
 translation-type: tm+mt
-source-git-commit: 5d46836a8b7b66daa8f27bc6fad14319ab1f58a7
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '303'
 ht-degree: 57%
 
 ---
