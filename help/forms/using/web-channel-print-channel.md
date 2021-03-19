@@ -8,10 +8,11 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 96d2b1cc-3252-4cc7-8b06-a897cbef8599
 docset: aem65
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '714'
 ht-degree: 53%
 
 ---
