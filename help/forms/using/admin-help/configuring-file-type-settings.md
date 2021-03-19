@@ -8,10 +8,11 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
+feature: PDF Generator
 translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '6146'
+source-wordcount: '6148'
 ht-degree: 81%
 
 ---
@@ -622,6 +623,6 @@ Microsoft Word のスタイル名にコンマ（,）または等号（=）が含
 * Adobe FrameMaker: `fm`
 * Adobe Photoshop: `psd`
 
-これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、「[AEM formsでのプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62)」の「追加のネイティブファイル形式に対するサポートの追加」を参照してください。
+これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、「[AEM formsによるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62)」の「追加のネイティブファイル形式に対するサポートの追加」を参照してください。
 
 PDFG ネットワークプリンターの設定のヘルプについては、[PDFG ネットワークプリンターの設定（Windows のみ）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)を参照してください。
