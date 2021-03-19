@@ -8,10 +8,11 @@ contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 879ff6ca-e5f3-451d-acc2-f75142101ddd
 docset: aem65
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1814'
 ht-degree: 66%
 
 ---
@@ -240,9 +241,9 @@ Web チャネルテンプレートを作成するには、作成したテンプ�
    | 名前 | タイトル | 列数 |
    |---|---|---|
    | customerdetails | 顧客情報 | 1 |
-   | billsummary | 請求内容 | 1 |
+   | billsummary | 請求内容 | 3 |
    | summarycharges | 請求概要 | 2 |
-   | itemisedcalls | 通話明細 | 1 |
+   | itemisedcalls | 通話明細 | 3 |
    | paynow | Pay Now | 2 |
    | vas | 付加価値サービス | 1 |
 
