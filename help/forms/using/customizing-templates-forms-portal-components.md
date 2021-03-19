@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
+feature: フォームポータル
 translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1241'
 ht-degree: 68%
 
 ---
