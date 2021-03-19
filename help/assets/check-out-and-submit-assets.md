@@ -2,10 +2,11 @@
 title: アセットをチェックインして編集用にチェックアウトする
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
+role: 開業医
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '435'
 ht-degree: 49%
 
 ---
