@@ -7,11 +7,13 @@ topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
+feature: アセット管理
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 996780c3fac85f0ce0deeddd5ff4e74e01df436e
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1876'
-ht-degree: 54%
+source-wordcount: '1881'
+ht-degree: 55%
 
 ---
 
@@ -127,7 +129,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 * ライセンスの一部としてアドビによってバンドルされている CDN（コンテンツ配信ネットワーク）を使用している。
 * 汎用ドメイン（例えば、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` など）ではなく、専用ドメイン（例えば、`images.company.com` または `mycompany.scene7.com`）を使用してください。
 
-ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。
+ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社アカウントにサインインします。
 
 **[!UICONTROL 設定／アプリケーション設定／一般設定をタップします。]**「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
 
