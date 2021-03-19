@@ -2,10 +2,11 @@
 title: ' [!DNL Assets] とメディアライブラリの比較'
 description: ' [!DNL Experience Manager Assets] とメディアライブラリの機能を比較し、違いを理解している。'
 contentOwner: AG
+role: 建築家、リーダー
 translation-type: tm+mt
-source-git-commit: 82c2df0e53e8ef595ad158ef46089d6e4964ca26
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '610'
 ht-degree: 19%
 
 ---
