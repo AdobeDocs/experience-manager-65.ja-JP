@@ -11,10 +11,11 @@ topic-tags: deploying
 discoiquuid: b97482f2-2791-4d14-ae82-388302d9eab3
 docset: aem65
 legacypath: /deploy/platform/data-store-config
+feature: 設定
 translation-type: tm+mt
-source-git-commit: 93cb84763cfd77b67a5dd1481caab79337f6e7c4
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3423'
+source-wordcount: '3424'
 ht-degree: 68%
 
 ---
