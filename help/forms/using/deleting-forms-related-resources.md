@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '399'
 ht-degree: 94%
 
 ---
 
 
-# フォームと関連リソースの削除  {#deleting-forms-and-related-resources}
+# フォームと関連リソースの削除 {#deleting-forms-and-related-resources}
 
 フォームとアセットを削除して、これらのアセットをリポジトリから削除できます。削除操作は、すべてのアセットタイプとフォルダーに対して動作します。
 
