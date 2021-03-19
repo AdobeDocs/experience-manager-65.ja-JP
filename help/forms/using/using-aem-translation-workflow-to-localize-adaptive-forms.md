@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '781'
 ht-degree: 83%
 
 ---
