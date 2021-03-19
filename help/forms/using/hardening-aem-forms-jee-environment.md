@@ -8,10 +8,11 @@ content-type: reference
 topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '7698'
+source-wordcount: '7699'
 ht-degree: 71%
 
 ---
@@ -52,7 +53,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -88,7 +89,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p></th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p></th> 
    <th><p>説明</p></th> 
   </tr> 
  </thead> 
@@ -117,7 +118,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -327,7 +328,7 @@ Web Service Definition Language（WSDL）の生成は、開発者が WSDL の生
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -442,7 +443,7 @@ LDAP を使用した最もよく行われる攻撃は、攻撃者が大量の認
 <table> 
  <thead> 
   <tr> 
-   <th><p>問題</p> </th> 
+   <th><p>OS クリップボードと内部 AEM クリップボードを使用した    </p> </th> 
    <th><p>説明</p> </th> 
   </tr> 
  </thead> 
@@ -495,14 +496,14 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/ReaderExtensions/*</p> </td> 
    <td><p>PDF ドキュメントに使用権限を適用する Acrobat Reader DC Extensions エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edc/*</p> </td> 
    <td><p>Rights Management エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edcws/*</p> </td> 
@@ -513,20 +514,20 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/pdfgui/*</p> </td> 
    <td><p>PDF Generator 管理 Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CM タスク/*</p> </td> 
    <td><p>Workspace エンドユーザー Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/workspace-server/*</p> </td> 
    <td><p>Workspace クライアントアプリケーションが必要とする Workspace サーブレットおよび Data Services</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adobe-bootstrapper/*</p> </td> 
@@ -549,32 +550,32 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/edc/admin/*</p> </td> 
    <td><p>Rights Management 管理 Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adminui/*</p> </td> 
    <td><p>管理コンソールホームページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/TruststoreComponent/</p> <p>secured/*</p> </td> 
    <td><p>Trust Store Management 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormsIVS/*</p> </td> 
    <td><p>フォームのレンダリングのテストとデバッグを行う Forms IVS アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/OutputIVS/*</p> </td> 
    <td><p>Output サービスのテストとデバッグを行う Output IVS アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rmws/*</p> </td> 
@@ -585,14 +586,14 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/OutputAdmin/*</p> </td> 
    <td><p>Output 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/*</p> </td> 
    <td><p>Forms Web アプリケーションファイル</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/GetImage</p> <p>Servlet</p> </td> 
@@ -603,38 +604,38 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/FormServerAdmin/*</p> </td> 
    <td><p>Forms 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/repository/*</p> </td> 
    <td><p>WebDAV（デバッグ）アクセス用の URL</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/AACComponent/*</p> </td> 
    <td><p>アプリケーションおよびサービスユーザーインターフェイス</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/WorkspaceAdmin/*</p> </td> 
    <td><p>Workspace 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rest/*</p> </td> 
    <td><p>残りのサポートページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CoreSystemConfig/*</p> </td> 
    <td><p>JEE 上の AEM Forms Core 設定ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/</p> </td> 
@@ -645,13 +646,13 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/um/*</p> </td> 
    <td><p>User Management 管理インターフェイス</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/DoumentManager/*</p> </td> 
    <td><p>HTTP ドキュメント対応の SOAP トランスポートまたは EJB トランスポート経由でリモートエンドポイント、SOAP WSDL エンドポイントおよび Java SDK にアクセスするときに、処理するドキュメントをアップロードおよびダウンロードする。</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>はい</p> </td> 
    <td><p>はい</p> </td> 
   </tr> 
  </tbody> 
