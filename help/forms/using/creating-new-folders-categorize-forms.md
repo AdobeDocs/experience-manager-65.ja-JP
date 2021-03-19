@@ -8,16 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 81%
+source-wordcount: '412'
+ht-degree: 82%
 
 ---
 
 
-# フォームを分類するための新しいフォルダーの作成  {#create-new-folders-to-categorize-forms}
+# フォームを分類するための新しいフォルダーの作成 {#create-new-folders-to-categorize-forms}
 
 フォルダーを使用することでアセットをより良く整理できます。AEM Forms はさまざまなタイプのアセット（フォームテンプレート、PDF、ドキュメント、リソース、およびアダプティブフォームと、さまざまなメタデータ）をサポートしているので、フォルダーを使用して必要な条件に基づきフォームを分類できます。
 
