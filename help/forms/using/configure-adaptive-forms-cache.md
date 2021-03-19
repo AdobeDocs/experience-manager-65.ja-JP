@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 2d54d115529126162c92e9943a188d05159535f9
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '935'
 ht-degree: 21%
 
 ---
@@ -134,7 +135,7 @@ AEM環境は、アダプティブフォームをキャッシュするように�
 
 ### 画像やビデオを含む一部のアダプティブフォームは、ディスパッチャーキャッシュ{#videos-or-images-not-auto-invalidated}から自動的に無効にされません
 
-#### 問題 {#issue1}
+#### OS クリップボードと内部 AEM クリップボードを使用した    {#issue1}
 
 アセットブラウザを介して画像またはビデオを選択してアダプティブフォームに追加し、これらの画像およびビデオをアセットエディターで編集した場合、このような画像を含むアダプティブフォームは、自動的にディスパッチャーキャッシュから無効にされません。
 
@@ -144,7 +145,7 @@ AEM環境は、アダプティブフォームをキャッシュするように�
 
 ### アダプティブフォームの最初のインスタンスのみがキャッシュ{#only-first-instance-of-adaptive-forms-is-cached}
 
-#### 問題 {#issue3}
+#### OS クリップボードと内部 AEM クリップボードを使用した    {#issue3}
 
 アダプティブフォームURLにローカライゼーション情報がなく、Configuration Managerの&#x200B;**[!UICONTROL ブラウザーロケールを使用]**&#x200B;が有効な場合、アダプティブフォームのローカライズ版が提供され、アダプティブフォームの最初のインスタンスのみがキャッシュされ、後続のすべてのユーザーに配信されます。
 
