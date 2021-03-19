@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 739ec991-552b-42cd-85cd-984d1c9fe8fd
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 871c42ee000eb250c1c6159d9a0c752e8ed4d7b8
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 43%
 
 ---
 
 
-# コミュニティのための FFmpeg  {#ffmpeg-for-communities}
+# コミュニティのための FFmpeg {#ffmpeg-for-communities}
 
 ## 概要 {#overview}
 
