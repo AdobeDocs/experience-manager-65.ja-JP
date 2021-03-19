@@ -8,10 +8,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '3861'
 ht-degree: 85%
 
 ---
@@ -304,12 +305,12 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr>
   <tr>
    <td>キー</td>
-   <td>ブール値</td>
+   <td>ブール型</td>
    <td>DDE がキー要素であるかどうかを示す Boolean フィールド。</td>
   </tr>
   <tr>
    <td>計算済み</td>
-   <td>ブール値</td>
+   <td>ブール型</td>
    <td>DDE が計算済みかどうかを示す Boolean フィールド。計算済み DDE の値は、他の DDE 値の関数です。デフォルトでは、JSP 式がサポートされます。</td>
   </tr>
   <tr>
@@ -329,7 +330,7 @@ DDE に関連付けられる共通属性について、以下の表に示しま�
   </tr>
   <tr>
    <td>必須</td>
-   <td>ブール値</td>
+   <td>ブール型</td>
    <td>このフラグは、データディクショナリに対応するインスタンスデータのソースに、この特定の DDE の値が含まれていなくてはならないことを示します。</td>
   </tr>
   <tr>
