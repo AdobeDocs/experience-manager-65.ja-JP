@@ -8,11 +8,12 @@ contentOwner: khsingh
 topic-tags: introduction
 discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 1a816672b3e97346f5a7a984fcb4dc0df1a5b0da
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 9%
+source-wordcount: '968'
+ht-degree: 10%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 9%
 
 ![](do-not-localize/13-publish-your-adaptive-form-small.png)
 
-これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
 アダプティブフォームの準備が整ったら、フォームを発行してエンドユーザーが利用できるようにすることができます。 エンドユーザーは、発行されたフォームを任意のデバイスやインターネットブラウザーで開くことができます。 アダプティブフォームが発行されると、フォームと関連するコンテンツがAEM作成者インスタンスからAEM発行インスタンスにコピーされます。 フォームは、発行インスタンスを通じてエンドユーザーが使用できるようになります。
 
@@ -33,7 +34,7 @@ ht-degree: 9%
 
 ## 事前準備 {#before-you-start}
 
-* **[AEM Forms発行インスタンスを設定します](https://helpx.adobe.com/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**。発行インスタンスは、発行モードで [!DNL Forms] 実行されるAEMの公開インスタンスです。実稼働環境では、発行インスタンスは組織のファイアウォールの外にあります。
+* **[AEM Forms発行インスタンスを設定します](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**。発行インスタンスは、発行モードで [!DNL Forms] 実行されるAEMの公開インスタンスです。実稼働環境では、発行インスタンスは組織のファイアウォールの外にあります。
 * **[レプリケーションと逆複製の設定](https://helpx.adobe.com/experience-manager/6-3/help/sites-deploying/replication.html)**:複製は、作成者インスタンスのコンテンツを発行インスタンスにコピーし、発行インスタンスのユーザー入力（フォーム入力など）を作成者インスタンスに返します。
 
 ## アダプティブフォームをAEMページとして発行{#publish-the-adaptive-form-as-an-aem-page}
