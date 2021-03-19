@@ -10,10 +10,11 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
+feature: マルチサイトマネージャー
 translation-type: tm+mt
-source-git-commit: 31f546400f4c3335953d05b1df9394445b5feb56
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2707'
+source-wordcount: '2710'
 ht-degree: 82%
 
 ---
