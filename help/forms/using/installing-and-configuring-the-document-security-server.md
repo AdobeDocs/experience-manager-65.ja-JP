@@ -6,10 +6,11 @@ seo-description: 'ドキュメントセキュリティを使用して、サポ�
 uuid: 04c67a84-01ad-45b7-a590-822b1c067d52
 contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '637'
 ht-degree: 42%
 
 ---
