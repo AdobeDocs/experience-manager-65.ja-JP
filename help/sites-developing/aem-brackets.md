@@ -1,7 +1,7 @@
 ---
 title: AEM Brackets Extension
 seo-title: AEM Brackets Extension
-description: 'null'
+description: AEM Brackets Extension
 seo-description: 'null'
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 translation-type: tm+mt
-source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '931'
 ht-degree: 55%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 55%
 
 ## 概要 {#overview}
 
-AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを活用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要です）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。この拡張機能は、[HTML Template Language (HTL)](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)もサポートします。これにより、コンポーネントの開発を容易にし、より安全にするためにJSPの複雑さが解消されます。
+AEM Brackets Extension は、AEM コンポーネントとクライアントライブラリを編集するためのスムーズなワークフローを提供し、[Brackets](https://brackets.io/) コードエディターのパワーを活用して、コードエディター内から Photoshop ファイルおよびレイヤーにアクセスできるようにします。この拡張機能によって（Maven や File Vault は不要です）同期が容易になるので、開発者の効率性が向上すると共に、AEM に関する知識が限られているフロントエンド開発者もプロジェクトに参加できます。この拡張機能は、[HTML Template Language (HTL)](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)もサポートします。これにより、コンポーネントの開発を容易にし、より安全にするためにJSPの複雑さが解消されます。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
