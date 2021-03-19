@@ -2,11 +2,12 @@
 title: アセットのアップロード制限の設定
 description: 'ユーザーがアップロードできるアセット（ファイル）の種類を制限する '
 contentOwner: AG
+role: 開発者、管理者、アーキテクト
 translation-type: tm+mt
-source-git-commit: 23d19d9656d61874cd00a9a2473092be0c53b8f8
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 55%
+source-wordcount: '193'
+ht-degree: 54%
 
 ---
 
