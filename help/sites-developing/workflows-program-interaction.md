@@ -1,7 +1,7 @@
 ---
 title: プログラムによるワークフローとのやり取り
 seo-title: プログラムによるワークフローとのやり取り
-description: 'null'
+description: プログラムによるワークフローとのやり取り
 seo-description: 'null'
 uuid: a0f19fc6-b9bd-4b98-9c0e-fbf4f7383026
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 translation-type: tm+mt
-source-git-commit: edf7ef93372e44cb71d8eac8712db53f4e45b6cf
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2006'
-ht-degree: 56%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
