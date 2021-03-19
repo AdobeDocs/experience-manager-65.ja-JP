@@ -7,16 +7,17 @@ topic-tags: correspondence-management
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 78%
 
 ---
 
 
-# Correspondence Management Solution の設定  {#configuring-a-correspondence-management-solution}
+# Correspondence Management Solution の設定 {#configuring-a-correspondence-management-solution}
 
 ## VersionRestoreManagerImpl の作成者インスタンス URL の定義 {#defining-author-instance-url-for-versionrestoremanagerimpl}
 
