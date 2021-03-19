@@ -8,10 +8,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '207'
 ht-degree: 90%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 90%
 
 ## レターの保存時にエラーが発生する {#errors-when-saving-a-letter}
 
-### 問題 {#issue}
+### OS クリップボードと内部 AEM クリップボードを使用した    {#issue}
 
 レターの保存時に、次のいずれかのエラーが表示される：
 
@@ -41,7 +42,7 @@ ht-degree: 90%
 
 ## レターのプレビュー時にエラーが発生する {#error-when-previewing-a-letter}
 
-### 問題 {#issue-1}
+### OS クリップボードと内部 AEM クリップボードを使用した    {#issue-1}
 
 レターをプレビューしている間、レターに含まれる未公開のテキストアセットが公開されていても、「レターの読み込み中のエラー: XML 入力からアセットを読み込めませんでした」というエラーが表示される。
 
