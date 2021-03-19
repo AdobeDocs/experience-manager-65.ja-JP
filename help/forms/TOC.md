@@ -7,15 +7,17 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
+feature-set: Experience Manager Forms
+role: 開業医
 translation-type: tm+mt
-source-git-commit: 4e4625fe20045a337c7bce780c57819c334fa4d6
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3718'
-ht-degree: 70%
+source-wordcount: '3720'
+ht-degree: 71%
 
 ---
 
-# Adobe Experience Manager 6.5 Forms ガイド  {#forms}
+# Adobe Experience Manager 6.5 Forms ガイド {#forms}
 
 + [AEM 6.5Formsガイド](home.md)
 + リリースノート {#release-notes-new-features}
@@ -78,7 +80,7 @@ ht-degree: 70%
       + [WebSphere ClusterでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
       + [WebLogicクラスターでのJEE上のAdobe Experience Manager Formsの設定](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
    + AEM Forms の設定 {#configure-aem-forms}
-      + [AEM Forms サーバーのパフォーマンス調整](using/performance-tuning-aem-forms.md)
+      + [AEM Forms サーバーのパフォーマンスチューニング](using/performance-tuning-aem-forms.md)
       + [アダプティブフォームのキャッシュの設定](using/configure-adaptive-forms-cache.md)
       + [AEM DS の設定](using/configuring-the-processing-server-url-.md)
       + [同期スケジューラの設定](using/configure-synchronization-scheduler.md)
@@ -372,7 +374,7 @@ ht-degree: 70%
    + [ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [別のユーザーの代わりにドキュメントを保護する](using/protect-document-on-behalf-of-another-user.md)
-+ Forms - Designer {#use-forms-designer}
++ Forms Designer {#use-forms-designer}
    + [Designer の使用](http://www.adobe.com/go/learn_aemforms_designer_65)
    + [Designer クイックスタートチュートリアル](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)
    + [Designer サンプル](http://www.adobe.com/go/learn_aemforms_designer_samples_65_jp)
@@ -577,7 +579,7 @@ ht-degree: 70%
    + [プロセスレポートのトラブルシューティング](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
    + [開発者の基本事項](https://docs.adobe.com/content/help/en/experience-manager-65/developing/home.html)
-   + [HTML テンプレート言語](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
+   + [HTML テンプレート言語](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
