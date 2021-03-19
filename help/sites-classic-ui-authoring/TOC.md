@@ -5,10 +5,13 @@ solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 Classic UIオーサリングユーザーガイド
 user-guide-description: このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念について説明します。
+feature-set: Experience Manager Sites
+feature: オーサリング
+role: 開業医
 translation-type: tm+mt
-source-git-commit: 984e50ec1a523ff8a4f618016797c326fd679511
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '274'
 ht-degree: 84%
 
 ---
