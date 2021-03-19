@@ -1,7 +1,7 @@
 ---
 title: コンポーネントへのAdobe Analyticsトラッキングの追加
 seo-title: コンポーネントへのAdobe Analyticsトラッキングの追加
-description: 'null'
+description: コンポーネントへのAdobe Analyticsトラッキングの追加
 seo-description: 'null'
 uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1268'
 ht-degree: 45%
 
 ---
