@@ -1,7 +1,7 @@
 ---
 title: モデルの概要
 seo-title: モデルの概要
-description: 'null'
+description: モデルの概要
 seo-description: 'null'
 uuid: e09dac52-9515-43f7-9d3b-6637e2283d59
 contentOwner: Jyotika Syal
@@ -9,9 +9,9 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: c8281f98-9811-42f7-9a31-f82dd0f09319
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 67%
 
 ---
