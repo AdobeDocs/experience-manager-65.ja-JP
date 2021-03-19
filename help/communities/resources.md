@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 1ef15e76-fe7c-4ced-a20d-c0a9385e3ee4
+role: Administrator
 translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '2979'
-ht-degree: 46%
+source-wordcount: '2980'
+ht-degree: 47%
 
 ---
 
 
-# イネーブルメントリソースのコンソール  {#enablement-resources-console}
+# イネーブルメントリソースのコンソール {#enablement-resources-console}
 
 AEM Communities のリソースコンソールは、[イネーブルメントマネージャー](users.md)が、イネーブルメントコミュニティサイトのリソースの作成、管理、メンバーへの割り当てをおこなう場所です。
 
