@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
+feature: Correspondence Management
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '434'
 ht-degree: 76%
 
 ---
@@ -77,7 +78,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>ブール値</td> 
+   <td>ブール型</td> 
    <td>データディクショナリに添付されたテストデータを再利用します。</td> 
   </tr>
  </tbody>
@@ -96,7 +97,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>cmPreview<br /> </td> 
-   <td>ブール値</td> 
+   <td>ブール型</td> 
    <td>「True」に設定されている場合、レターをプレビューモードで開きます<br /> </td> 
   </tr>
   <tr>
