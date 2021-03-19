@@ -9,11 +9,13 @@ content-type: reference
 discoiquuid: cc1111c4-6e24-4570-9ac7-97c25cf24ede
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-presets
+feature: 画像プリセット
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: e95f26cc1a084358b6bcb78605e3acb98f257b66
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '3828'
-ht-degree: 86%
+source-wordcount: '3833'
+ht-degree: 85%
 
 ---
 
