@@ -8,16 +8,18 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 8e9b3815-2893-4e6b-ac41-77720b42d56b
 docset: aem65
+feature: スピンセット、アセット管理
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: c3ae4447581d946554d792c68d31b47a6b67d5df
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1832'
 ht-degree: 88%
 
 ---
 
 
-# スピンセット{#spin-sets}
+# スピンセット {#spin-sets}
 
 スピンセットは、物体を回転させて調べるという現実世界の操作をシミュレートしたものです。スピンセットによって、あらゆる角度からアイテムを表示して、あらゆる角度から重要な細部を目で確認できます。
 
