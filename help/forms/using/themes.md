@@ -9,10 +9,11 @@ topic-tags: develop, interactive-communications
 content-strategy: max-2018
 discoiquuid: 770e9174-b648-462a-abe9-05fefa967d86
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: d324586eb1d4fb809bf87641001b92a1941e6548
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '6062'
+source-wordcount: '6064'
 ht-degree: 74%
 
 ---
