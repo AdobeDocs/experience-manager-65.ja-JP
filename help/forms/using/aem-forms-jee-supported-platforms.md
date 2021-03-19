@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 06cb3a7cdd9b6de00aff67c66327abadce3e0920
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '3309'
+source-wordcount: '3310'
 ht-degree: 82%
 
 ---
