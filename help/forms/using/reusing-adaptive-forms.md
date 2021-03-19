@@ -7,16 +7,17 @@ uuid: f1d0fb70-e255-4dd9-8e6d-fd65eaf2e81a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: ef564750-f107-41cb-887e-fc6d22b7d32e
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '555'
 ht-degree: 73%
 
 ---
 
 
-# アダプティブフォームの再利用  {#reusing-adaptive-forms}
+# アダプティブフォームの再利用 {#reusing-adaptive-forms}
 
 ## 概要 {#introduction}
 
