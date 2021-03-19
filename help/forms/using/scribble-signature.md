@@ -10,11 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
 discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
+feature: デザイナー
 translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 89%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
