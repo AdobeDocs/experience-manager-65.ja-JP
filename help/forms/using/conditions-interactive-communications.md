@@ -8,10 +8,11 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fe59d260-d392-4d6f-bb7e-2f2a1d701f51
 docset: aem65
+feature: インタラクティブコミュニケーション
 translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1513'
 ht-degree: 67%
 
 ---
@@ -152,7 +153,7 @@ ht-degree: 67%
 
    ポリシータイプが「標準」の場合にアセットを表示するためのルール
 
-   * ルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成/ルールを編集ダイアログを展開することもできます。 ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常のルール作成ダイアログに戻ります。
+   * ルールを作成または編集中に、![icon_resize](assets/icon_resize.png) （サイズ変更）をタップして、ルールを作成/ルールを編集ダイアログを展開することもできます。 ダイアログを拡張して全画面表示にすると、ルールを構成する[変数](#variables)を作成できるようになります。「サイズ変更」を再度タップして、通常の「ルールを作成」ダイアログに戻ります。
 
    * 1 つのルールで複数の条件を作成することもできます。
 
