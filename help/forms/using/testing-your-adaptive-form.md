@@ -7,11 +7,12 @@ uuid: 6d182bbc-b47a-4c97-af70-c960b52fdfac
 contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 1a816672b3e97346f5a7a984fcb4dc0df1a5b0da
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 10%
+source-wordcount: '968'
+ht-degree: 11%
 
 ---
 
@@ -20,7 +21,7 @@ ht-degree: 10%
 
 ![](do-not-localize/10-test-your-adaptive-form.png)
 
-これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
 アダプティブフォームの準備が整ったら、エンドユーザーにアダプティブフォームを展開する前に、そのアダプティブフォームをテストすることが重要です。 すべてのフィールドを手動でテスト（機能テスト）したり、アダプティブフォームのテストを自動化したりできます。 複数のアダプティブフォームがある場合、すべてのアダプティブフォームのすべてのフィールドを手動でテストすると、負担の大きいタスクになります。
 
@@ -111,7 +112,7 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
 
 アクションとは、ボタンのクリックなど、アダプティブフォーム上の特定のアクティビティを指します。 各アダプティブフォームフィールドのユーザー入力を検証するテストケースとアクションを作成するには：
 
-1. [!UICONTROL CRXDE lite]で、`/content/forms/af/create-first-adaptive-form`フォルダーに移動します。 **[!UICONTROL create-first-adaptive-form]**&#x200B;フォルダーノードを右クリックし、**[!UICONTROL 作成]****[!UICONTROL ファイルを作成]**&#x200B;をクリックします。 「**[!UICONTROL 名前]**」フィールドに`prefill.xml`と入力し、「**[!UICONTROL OK]**」をクリックします。 次のコードを ファイルに追加します。
+1. [!UICONTROL CRXDE lite]で、`/content/forms/af/create-first-adaptive-form`フォルダーに移動します。 **[!UICONTROL create-first-adaptive-form]**&#x200B;フォルダーノードを右クリックし、**[!UICONTROL 作成]****[!UICONTROL ファイルを作成]**&#x200B;をクリックします。 「**[!UICONTROL 名前]**」フィールドに`prefill.xml`と入力し、「**[!UICONTROL OK]**」をクリックします。 次のコードをファイルに追加しました。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?><afData>
