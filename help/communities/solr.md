@@ -9,16 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
+role: Administrator
 translation-type: tm+mt
-source-git-commit: 94bc3550a7e18b9203e7a0d495d195d7b798e012
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1484'
 ht-degree: 49%
 
 ---
 
 
-# SRP 用の Solr 設定  {#solr-configuration-for-srp}
+# SRP 用の Solr 設定 {#solr-configuration-for-srp}
 
 ## AEM プラットフォーム用の Solr {#solr-for-aem-platform}
 
