@@ -3,10 +3,11 @@ title: MSMを使用したアセットの再利用
 description: 親アセットから派生し、親アセットにリンクされているアセットを複数のページ／フォルダーにわたって使用します。アセットはプライマリコピーと同期され、数回クリックするだけで親アセットから更新を受け取ります。
 contentOwner: AG
 mini-toc-levels: 1
+role: 実業者、管理者、アーキテクト
 translation-type: tm+mt
-source-git-commit: 5c9907bf475796c5bbb61d6fcaf43730f9e79777
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '3366'
+source-wordcount: '3370'
 ht-degree: 69%
 
 ---
