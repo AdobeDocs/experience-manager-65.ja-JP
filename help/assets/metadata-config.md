@@ -2,10 +2,11 @@
 title: メタデータ機能の設定と管理。
 description: メタデータの追加と管理に関連する [!DNL Experience Manager Assets] 機能の設定と管理。
 contentOwner: AG
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 12c56c27c7f97f1029c757ec6d28f482516149d0
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1954'
 ht-degree: 55%
 
 ---
@@ -82,7 +83,7 @@ ht-degree: 55%
 | [!UICONTROL セクションヘッダー] | フィールドラベル、<br>説明 |
 | [!UICONTROL 1 行のテキスト] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
 | [!UICONTROL 複数値テキスト] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
-| [!UICONTROL 番号] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
+| [!UICONTROL 数値] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
 | [!UICONTROL 日付] | フィールドラベル， <br>プロパティにマップ， <br>デフォルト値 |
 | [!UICONTROL 標準タグ] | フィールドラベル， <br>プロパティにマップ， <br>既定値， <br>説明 |
 
