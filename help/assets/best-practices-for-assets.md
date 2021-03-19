@@ -2,10 +2,12 @@
 title: ' [!DNL Assets]のベストプラクティス'
 description: 導入と設定に依存するベストプラクティスを特定し、遵守することで、負荷中のシステムの安定性とパフォーマンスを向上させます。
 contentOwner: AG
+feature: アセット管理
+role: アーキテクト、管理者
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '511'
 ht-degree: 25%
 
 ---
