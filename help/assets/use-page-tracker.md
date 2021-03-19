@@ -2,11 +2,12 @@
 title: ページトラッカーとWebページの埋め込みコードの使用
 description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
+role: アーキテクト、管理者
 translation-type: tm+mt
-source-git-commit: fc433851c24f9049e7ba6dfada24d6e552eb6d05
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 70%
+source-wordcount: '178'
+ht-degree: 69%
 
 ---
 
