@@ -8,10 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
+feature: アセット管理
+role: 営業者、管理者
 translation-type: tm+mt
-source-git-commit: 4090b1641467c6fb02b2fcce4df97b9fd5da4e2f
+source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt
-source-wordcount: '11740'
+source-wordcount: '11745'
 ht-degree: 88%
 
 ---
@@ -146,7 +148,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
 * Web やデスクトップおよびモバイルデバイス（iPhone、iPad、Android、Blackberry および Windows Phone を含む）へのアダプティブビデオセットの配信。
 
-アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html#video)を参照してください。
+アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html?lang=ja#ビデオ)を参照してください。
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする Blackberry デバイスについては、[Blackberry でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
@@ -337,7 +339,7 @@ Dynamic Mediaを有効にしてビデオクラウドサービスを設定して�
 
 * **[!UICONTROL 可変ビットレートエンコーディング]**（VBR） - VBR エンコーディングでは、圧縮形式で必要となるデータに基づいて、データのレートが設定した下限から上限の範囲内で調整されます。つまり、VBR エンコーディングプロセスでは、メディアファイルのビットレートが、そのニーズに応じて動的に増減します。VBR は、CBR よりエンコードに時間がかかりますが、生成されるメディアファイルは最高品質となります。VBR は、ビデオコンテンツの HTTP プログレッシブ配信に最も一般的に使用されます。
 
-VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選択するべきかという話になると、ほとんどの場合、メディアファイルには VBR を使用することをお勧めします。VBR は、優位性のあるビットレートで CBR より高品質のファイルを生成します。VBR を使用するときは、2 パスエンコーディングを使用し、最大ビットレートをターゲットビデオのビットレートの 1.5 倍に設定してください。
+VBR と CBR のどちらを使用するべきかVBR と CBR のどちらを選択するべきかという話になると、ほとんどの場合、メディアファイルには VBR を使用することをお勧めします。VBR は、優位性のあるビットレートで CBR より高品質のファイルを生成します。VBR を使用するときは、2 パスエンコーディングを使用し、最大ビットレートをターゲットビデオのビットレートの 1.5 倍に設定してください。
 
 ビデオエンコーディングプリセットを選択するときには、ターゲットのエンドユーザーの接続速度を考慮してください。その速度の 80％のデータレートを持つプリセットを選択してください。例えば、ターゲットのエンドユーザーの接続速度が 1,000 Kbps の場合の最適なプリセットは、ビデオデータレートが 800 Kbps のプリセットです。
 
@@ -401,7 +403,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 |--- |--- |--- |--- |
 | ソース | 1,920 x 1,080 | 1 | 1 |
 | エンコード | 960 x 540 | 2 | 2 |
-| エンコード | 640 x 360 | 3 | 3 |
+| エンコード | 640 x 360 | 3 | 1 |
 | エンコード | 480 x 270 | 4 | 4 |
 
 ### エンコードされたビデオのファイル形式 {#encoded-video-file-format}
@@ -1068,7 +1070,7 @@ HTML5ビューアSDK APIを使用して作成したビデオビューアに基�
 
 Dynamic Media には、キャプションファイルを JSON（JavaScript Object Notation）形式に変換する機能があります。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サービングとレンダリングAPIのヘルプ*&#x200B;の[静的な（画像以外の）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api)を参照してください。
+URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サービングとレンダリングAPIのヘルプ*&#x200B;の[静的な（画像以外の）コンテンツの提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api)を参照してください。
 
 **ビデオにキャプションまたはサブタイトルを追加するには**:
 
