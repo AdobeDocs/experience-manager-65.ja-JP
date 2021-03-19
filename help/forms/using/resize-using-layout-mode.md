@@ -1,10 +1,11 @@
 ---
 title: レイアウトモードを使用してアダプティブフォームのコンポーネントのサイズを変更する
 description: 'レイアウトモードで使用できるレスポンシブグリッドを使用してコンポーネントの位置を定義 '
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: 923c31bf67c7ad480ef3c3a1e312b4bd841bac6d
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1047'
 ht-degree: 2%
 
 ---
