@@ -1,10 +1,11 @@
 ---
 title: Invite External Usersハンドラーの作成
 description: Invite External Usersハンドラーの作成
+role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 9cf46a26d2aa2e41b924a4de89cf8ab5fdeeefc6
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1117'
 ht-degree: 1%
 
 ---
@@ -237,7 +238,7 @@ invite外部ユーザーハンドラーは、JARファイルにパッケージ�
 1. **[!UICONTROL サービス]**/**[!UICONTROL Rights Management]**/**[!UICONTROL 設定]**/招待&#x200B;**[!UICONTROL ユーザー登録]**&#x200B;をクリックします。
 1. 「**[!UICONTROL 招待ユーザーの登録を有効にする]**」ボックスをオンにして、招待ユーザーの登録を有効にします。 「**[!UICONTROL 組み込みの登録システム]**&#x200B;を使用」で、「**[!UICONTROL いいえ]**」をクリックします。 設定を保存します。
 1. 管理コンソールホームページで、**[!UICONTROL 設定]**/**[!UICONTROL User Management]**/**[!UICONTROL ドメインの管理]**&#x200B;をクリックします。
-1. 「**[!UICONTROL 新しいローカルドメイン]**」をクリックします。 次のページで、名前と識別子の値が`EDC_EXTERNAL_REGISTERED`のドメインを作成します。 変更を保存します。
+1. Click **[!UICONTROL New Local Domain]**. 次のページで、名前と識別子の値が`EDC_EXTERNAL_REGISTERED`のドメインを作成します。 変更を保存します。
 1. 管理コンソールホームページで、**[!UICONTROL サービス]**/**[!UICONTROL Rights Management]**/**[!UICONTROL 招待ユーザーおよびローカルユーザー]**&#x200B;をクリックします。 **[!UICONTROL 追加ユーザーの招待]**&#x200B;ページが表示されます。
 1. 電子メールアドレスを入力します（現在の招待外部ユーザーハンドラーは、実際に電子メールメッセージを送信しないので、電子メールアドレスを有効にする必要はありません）。 「**[!UICONTROL OK]**」をクリックします。ユーザーがシステムに招待されます。
 1. 管理コンソールホームページで、**[!UICONTROL 設定]**/**[!UICONTROL ユーザー管理]**/**[!UICONTROL ユーザーとグループ]**&#x200B;をクリックします。
