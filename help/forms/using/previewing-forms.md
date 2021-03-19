@@ -7,10 +7,11 @@ uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
+feature: アダプティブフォーム
 translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '394'
 ht-degree: 89%
 
 ---
