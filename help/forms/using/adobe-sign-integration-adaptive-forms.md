@@ -9,10 +9,11 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
+feature: Adobe Sign，アダプティブForms
 translation-type: tm+mt
-source-git-commit: fd9ee8e4eb35bd5d303d7bbdd9660a94c54925ff
+source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '968'
 ht-degree: 29%
 
 ---
