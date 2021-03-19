@@ -6,10 +6,11 @@ uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
+role: Administrator
 translation-type: tm+mt
-source-git-commit: a873cf3e7efd3bc9cd4744bf09078d9040efcdda
+source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '546'
 ht-degree: 81%
 
 ---
