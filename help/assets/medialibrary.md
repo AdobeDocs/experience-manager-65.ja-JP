@@ -1,12 +1,12 @@
 ---
-title: デジタルアセット管理を実現するメディアライブラリ。
+title: 基本的なデジタルアセット管理にメディアライブラリを使用する
 description: '[!DNL Experience Manager Assets] およびアセット管理用のメディアライブラリ。'
 contentOwner: AG
 role: 建築家、リーダー
 translation-type: tm+mt
-source-git-commit: 10e5ca2fb6e108a7201e6114b61b3d0266ff80d2
+source-git-commit: 31dc984d9cd93f7024229fd6773878eebfdadc57
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '457'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,6 @@ Media Libraryは、次の使用例を大まかにカバーしています。
 * [!DNL Adobe Experience Manager Screens]を使用して作成されたデジタル画面の操作。
 * [!DNL Assets] HTTP REST API（ヘッドレス操作用）
 
-
 <!-- TBD: Remove this after confirmation. May need to merge this list with the list provided by PMs.
 
 * Basic metadata properties
@@ -65,7 +64,7 @@ Media Libraryは、次の使用例を大まかにカバーしています。
 * Comments and annotation
 -->
 
-メディアライブラリを使用して、次の特定のタスクを実行できます。
+メディアライブラリ機能を使用するには、デフォルトの[!DNL Experience Manager]ユーザーインターフェイスを使用できます。 Media Libraryは[!DNL Experience Manager Sites]インストールの一部であり、別のインターフェイスやアドオンを必要としません。 既存のインターフェイスを使用すると、Media Libraryユーザーは次のタスクを実行する権利を付与されます。
 
 * フォルダーを作成してアセットを整理します。
 * アセットのアップロード.
