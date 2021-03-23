@@ -2,7 +2,7 @@
 title: Adobe Experience Manager6.5リリースでの機能の廃止と削除
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 translation-type: tm+mt
-source-git-commit: 0560eb8e3c127964920827609a9982acf07b515f
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '1719'
 ht-degree: 42%
@@ -39,7 +39,7 @@ AEM機能の差し迫った削除または交換を伝えるには、次の規�
 | Commerce | [CIF ](https://github.com/adobe/commerce-cif-api) RESTは、AEMエンジンとコマースエンジンの統合を可能にする一連のマイクロサービスとして2018年に提供されました。Adobeが2018年半ばにMagentoを獲得した後、Adobeは2つの理由からアプローチを変更することを決定しました。 Magentoには独自のコマースAPI （RESTおよびGraphQL）のセットがあり、2セットのAPIを維持するのはお勧めできません。 市場の動向から、お客様はGraphQLに向かって進んでいることがわかりました。これは、データをより効率的にクエリする方法であるためです。 2019年に、Adobeは、MagentoのGraphQL APIを真実の源泉として使用する新しいCommerce Integration Frameworkをリリースしました。 Adobeは、CIF RESTにこれ以上投資する予定はありません。 お客様には、交換ソリューションの使用を強くお勧めします。 | AEMMagento統合の場合は、[AEM CIFアーキタイプ](https://github.com/adobe/aem-cif-project-archetype)と[AEM CIFコアコンポーネント](https://github.com/adobe/aem-core-cif-components)に切り替えます。 AEMとMagentoの統合[Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)の使用を参照してください。 新しいアプローチを使用したサードパーティ(Magento以外)の統合のサポートは、アドビのロードマップに記載されています。 |
 | コンポーネント（AEM Sites） | Adobeは、`/libs/foundation/components`に保存されているFoundation Componentsの大部分をさらに拡張する予定はありません。 コンポーネントフォルダー内で`cq:deprecated`と`cq:deprecatedReason`のプロパティを探します。 AEM 6.5にはFoundation Componentsが含まれており、以前のリリースからアップグレードしたお客様は、これらをそのまま使用できます。 また、Foundation Componentsは、非推奨になっても完全にサポートされます。 | Adobeでは、今後のプロジェクトでコアコンポーネントの使用をお勧めします。 既存のサイトはそのまま残るか、[AEMツールスイートの最新化](https://github.com/adobe/aem-modernize-tools)を使用して、コアコンポーネントを使用するサイトのリファクタリングを行うことができます。 |
 | コンポーネント（AEM Sites） | デザインインポーターコンポーネント`/libs/wcm/designimporter/components`は、6.5以降、非推奨としてマークされています。Adobeは、デザインインポーターのその実装をさらに強化する予定はありません。 | Adobeでは、今後のリリースで使用事例の代替実装を提供する予定です。 |
-| Foundation | Granite オフロードフレームワーク. Adobeでは、アセット処理を外部化するためにCQ 5.6.1で導入されたオフロードフレームワークをさらに拡張する予定はありません。 | アドビでは、クラウドネイティブな次世代オフロードフレームワークの構築に取り組んでいます。 |
+| 基盤 | Granite オフロードフレームワーク. Adobeでは、アセット処理を外部化するためにCQ 5.6.1で導入されたオフロードフレームワークをさらに拡張する予定はありません。 | アドビでは、クラウドネイティブな次世代オフロードフレームワークの構築に取り組んでいます。 |
 | 開発者向け | `Hobbes.js`」を選択します。Adobeは、`hobbes.js`ユーザーインターフェイスのテストフレームワークをさらに拡張する予定はありません。 | Adobeでは、Seleniumの自動化を使用することをお勧めします。 |
 | 開発者向け | jQuery UI クライアントライブラリ. 配布版（クイックスタート）の一部として含まれている jQuery UI クライアントライブラリがさらに保守および更新される予定はありません。 | Adobeでは、コードをプロジェクトコードベースに追加する際に、引き続きjQuery UIが必要な場合をお勧めします。 |
 | 開発者向け | jQuery Animationクライアントライブラリ(`granite.jquery.animation`)。 配布版（クイックスタート）の一部として含まれている jQuery アニメーションクライアントライブラリがさらに保守および更新される予定はありません。 | Adobeでは、コードをプロジェクトコードベースに追加する際に、jQuery Animationsを必要とするお客様に推奨します。 |
@@ -57,7 +57,7 @@ AEM機能の差し迫った削除または交換を伝えるには、次の規�
 
 | 領域 | 機能 | 代替手段 |
 |--- |--- |--- |
-| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用します。 |
+| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。Adobe Analytics](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用します。 |
 | 統合 | ExactTarget統合は、デフォルトの配布(Quickstart)から削除され、使用できなくなりました。 | 代替機能はありません. |
 | 統合 | Salesforce Force API統合は、デフォルトの配布(Quickstart)から削除され、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からインストールする追加パッケージになりました。 | この機能は引き続き使用できます。 |
 | フォーム | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートが削除されました。 | 代替機能はありません. |
@@ -76,4 +76,4 @@ AEM機能の差し迫った削除または交換を伝えるには、次の規�
 
 | 領域 | 機能 | お知らせ |
 |--- |--- |--- |
-| 財団 | UI フレームワーク | Coral UI 2 コンポーネントは 2019 年に廃止される予定です。Coral UI 3 は AEM 6.2 で導入され、AEM 6.5 は完全に Coral 3 に基づいています。Coral 2 を使用してカスタム UI を構築しているお客様およびパートナー様については、Coral 3 へのリファクタリングをおこなうことをお勧めします。アドビでは、Coral 2 のダイアログを Coral 3 に変換するツールを提供しています（](/help/sites-developing/dialog-conversion.md)詳細情報[）。 |
+| 基盤 | UI フレームワーク | Coral UI 2 コンポーネントは 2019 年に廃止される予定です。Coral UI 3 は AEM 6.2 で導入され、AEM 6.5 は完全に Coral 3 に基づいています。Coral 2 を使用してカスタム UI を構築しているお客様およびパートナー様については、Coral 3 へのリファクタリングをおこなうことをお勧めします。アドビでは、Coral 2 のダイアログを Coral 3 に変換するツールを提供しています（](/help/sites-developing/modernization-tools.md)詳細情報[）。 |
