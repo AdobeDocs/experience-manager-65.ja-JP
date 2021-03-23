@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '1904'
-ht-degree: 82%
+ht-degree: 80%
 
 ---
 
@@ -154,7 +154,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->データストアのガベージコレクションタスクは、外部ファイルデータストアが設定されている場合にのみ開始されます。外部ファイルのデータストアが構成されていない場合、タスクは呼び出し後に`Cannot perform operation: no service of type BlobGCMBean found`メッセージを返します。 ファイルのデータストアを設定する方法については、[AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
+>データストアのガベージコレクションタスクは、外部ファイルのデータストアを設定した場合にのみ開始します。 外部ファイルのデータストアが構成されていない場合、タスクは呼び出し後に`Cannot perform operation: no service of type BlobGCMBean found`メッセージを返します。 ファイルのデータストアを設定する方法については、[AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
 
 ## データストアのガベージコレクションの自動化 {#automating-data-store-garbage-collection}
 
@@ -172,7 +172,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 >
 >以下の `curl` コマンドでは、インスタンスに対して様々なパラメーターを設定する必要がある場合があります。例えば、ホスト名（`localhost`）、ポート（`4502`）、管理パスワード（`xyz`）および実際のデータストアのガベージコレクションのための各種パラメーターです。
 
-次に、データストアのガベージコレクションをコマンドラインから起動する curl コマンドの例を示します。
+次に、コマンドラインからデータストアのガベージコレクションを呼び出すcurlコマンドの例を示します。
 
 ```shell
 curl -u admin:admin -X POST --data markOnly=true  https://localhost:4503/system/console/jmx/org.apache.jackrabbit.oak"%"3Aname"%"3Drepository+manager"%"2Ctype"%"3DRepositoryManagement/op/startDataStoreGC/boolean
