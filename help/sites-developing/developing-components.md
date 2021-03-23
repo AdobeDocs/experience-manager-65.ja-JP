@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 translation-type: tm+mt
-source-git-commit: d0842a5994068b1e9a92cd14c1a59f1ea1a6c8b8
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '3533'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -80,7 +80,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ### HTML テンプレート言語の使用 {#using-the-html-template-language}
 
-[HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)は、AEM 6.0 で JSP（JavaServer Pages）に代わって導入されたスクリプティング言語であり、HTML の扱いに適した、推奨されるサーバー側テンプレートシステムです。堅牢なエンタープライズ Web サイトを構築する必要のある Web 開発者にとって、HTL は安全性と開発効率の向上に役立ちます。
+[HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)は、AEM 6.0 で JSP（JavaServer Pages）に代わって導入されたスクリプティング言語であり、HTML の扱いに適した、推奨されるサーバー側テンプレートシステムです。堅牢なエンタープライズ Web サイトを構築する必要のある Web 開発者にとって、HTL は安全性と開発効率の向上に役立ちます。
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ## プレビュー動作の設定 {#configuring-the-preview-behavior}
 
-プレビューモードに切り替えると、ページが更新されなくても [WCM モード](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie が設定されます。****
+プレビューモードに切り替えると、ページが更新されなくても [WCM モード](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie が設定されます。****
 
 レンダリングが WCM モードの影響を受けるコンポーネントの場合は、明確にそのコンポーネントを更新し、この Cookie の値を使用するように定義する必要があります。
 
@@ -197,7 +197,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->以下を参照してください。
+>次のページを参照してください。
 >
 >* [ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッション。
 >* 「[コードサンプル - ダイアログフィールドのカスタマイズ方法](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)」で説明されている関連サンプルコード。
@@ -286,13 +286,13 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 
 コンテンツ構造は意味構造を記述するものであり、基となるウィジェットの性質を示すものであってはなりません。コンテンツ構造に JS コードを含めないことで、コンテンツ構造を変更せずに実装の詳細を変更することが可能になります。言い換えると、コンテンツ構造に触れることなく、ウィジェットライブラリを変更できます。
 
-#### ダイアログの可用性の検出{#dialog-ready}
+#### ダイアログの可用性の検出 {#dialog-ready}
 
-ダイアログが使用可能で準備が整ったときにのみ実行する必要があるカスタムJavaScriptがある場合は、`dialog-ready`イベントをリッスンする必要があります。
+ダイアログが使用可能で準備が整ったときにのみ実行する必要があるカスタム JavaScript がある場合は、`dialog-ready` イベントをリッスンする必要があります。
 
-このイベントは、ダイアログが読み込まれ（または再読み込み）、使用の準備ができたときにトリガーされます。つまり、ダイアログのDOMに変更（作成/更新）がある場合に必ずトリガーされます。
+このイベントは、ダイアログが読み込まれて（または再度読み込まれて）、使用の準備ができたときにトリガーされます。つまり、ダイアログの DOM に変更（作成／更新）がある場合に必ずトリガーされます。
 
-`dialog-ready` は、ダイアログ内のフィールドや類似のタスクをカスタマイズするJavaScriptカスタムコードをフックするために使用できます。
+`dialog-ready` は、ダイアログ内のフィールドや類似のタスクをカスタマイズする JavaScript カスタムコードをフックするために使用できます。
 
 ### フィールドの検証 {#field-validation}
 
@@ -311,7 +311,7 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 
 #### フィールドの検証（Granite UI）  {#field-validation-granite-ui}
 
-Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。[詳しくは、`foundation-valdiation`Granite のドキュメントを参照してください。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。[詳しくは、`foundation-valdiation`Granite のドキュメントを参照してください。](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
 詳しくは、例えば、以下を参照してください。
 
@@ -436,7 +436,7 @@ GitHub のコード
 
 >[!NOTE]
 >
->[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)と編集可能なテンプレートを使用する場合、UI内でコンポーネントインスタンスの自動作成を簡単に設定できるようになりました。 特定のメディアの種類に自動的に関連付けられるコンポーネントの定義について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
+>[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)と編集可能なテンプレートを使用する場合、UI内でコンポーネントインスタンスの自動作成を簡単に設定できるようになりました。 特定のメディアの種類に自動的に関連付けられるコンポーネントの定義について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
 
 ## AEM Brackets 拡張の使用 {#using-the-aem-brackets-extension}
 
@@ -468,10 +468,10 @@ GitHub のコード
 * ダイアログ
 
    * タッチ操作対応 UI で使用される新しいダイアログを作成する必要があります。ただし、タッチ操作対応 UI 用のダイアログが定義されていないときは、互換性のために、タッチ操作対応 UI でクラシック UI ダイアログの定義を使用できます。
-   * 既存コンポーネントを拡張できるよう、[ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)が提供されています。
+   * [AEM最新化ツール](/help/sites-developing/modernization-tools.md)は、既存のコンポーネントを拡張する際に役立ちます。
    * [ExtJS の Granite UI コンポーネントへのマッピング](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)では、ExtJS の xtype およびノードタイプと同等な Granite UI リソースタイプに関する簡単な概要について説明しています。
    * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
-   * vtypes から [Granite UI 検証](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
+   * vtypes から [Granite UI 検証](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
    * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
 
 ### cq:listener コードの移行  {#migrating-cq-listener-code}
