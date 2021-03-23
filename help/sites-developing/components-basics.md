@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 translation-type: tm+mt
-source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '4974'
-ht-degree: 75%
+ht-degree: 80%
 
 ---
 
@@ -68,7 +68,7 @@ UIUserインターフェイス。
 
 マークアップおよびレンダリングをおこなうコードと、コンポーネントのコンテンツ選択に関するロジックを制御するコードは、分離しておくことをお勧めします。
 
-この方法をサポートするテンプレート言語が [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html) です。HTL では、基盤となるビジネスロジックを定義するときにのみプログラミング言語を使用します。この（オプションの）ロジックは、特定のコマンドで HTL から呼び出されます。この仕組みでは、特定のビュー用に呼び出されるコードに焦点を当てることができるので、必要に応じて、同じコンポーネントの様々なビュー用のロジックを定義できます。
+この方法をサポートするテンプレート言語が [HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html) です。HTL では、基盤となるビジネスロジックを定義するときにのみプログラミング言語を使用します。この（オプションの）ロジックは、特定のコマンドで HTL から呼び出されます。この仕組みでは、特定のビュー用に呼び出されるコードに焦点を当てることができるので、必要に応じて、同じコンポーネントの様々なビュー用のロジックを定義できます。
 
 ### HTL と JSP {#htl-vs-jsp}
 
@@ -431,7 +431,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 >[!NOTE]
 >
 >* 互換性を保つために、タッチ操作対応 UI 用のダイアログが定義されていない場合、タッチ操作対応 UI でクラシック UI ダイアログの定義を使用できます。
->* クラシック UI 用のダイアログのみが定義されているコンポーネントを拡張または変換するときのために、[ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)も用意されています。
+>* また、[AEM Modernization Tools](/help/sites-developing/modernization-tools.md)も提供され、クラシックUI用に定義されたダイアログのみを含むコンポーネントを拡張/変換できます。
 
 >
 
@@ -609,38 +609,38 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
 
    `//element(cq:dropTargets, cq:DropTargetConfig)`
 
-### コンポーネントプレースホルダ{#component-placeholders}
+### コンポーネントプレースホルダー {#component-placeholders}
 
-コンポーネントにコンテンツがない場合でも、コンポーネントは常に、作成者に表示される一部のHTMLをレンダリングする必要があります。 そうしないと、視覚的にエディターのインターフェイスから見えなくなり、技術的には表示されますが、ページやエディターには表示されなくなります。 この場合、作成者は空のコンポーネントを選択して操作することができません。
+コンポーネントは、コンテンツがない場合でも必ず、作成者に表示される一部の HTML をレンダリングする必要があります。そうしないと、エディターのインターフェイスから視覚的に消えてしまい、技術的には存在しても、ページやエディターには表示されなくなります。この場合、作成者は空のコンポーネントを選択して操作することができません。
 
-このため、ページがページエディターでレンダリングされる（WCMモードが`edit`または`preview`の場合）際に、コンポーネントは表示された出力をレンダリングしない限り、プレースホルダーをレンダリングする必要があります。
-プレースホルダーの一般的なHTMLマークアップは次のとおりです。
+このため、ページがページエディターでレンダリングされる（WCM モードが `edit` または `preview` の場合）際に、コンポーネントは、表示された出力をレンダリングしない限り、プレースホルダーをレンダリングする必要があります。
+プレースホルダーの一般的な HTML マークアップは次のとおりです。
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="Component Name"></div>
 ```
 
-上記のプレースホルダーHTMLをレンダリングする一般的なHTLスクリプトは次のとおりです。
+上記のプレースホルダー HTML をレンダリングする一般的な HTL スクリプトは次のとおりです。
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
      data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
 ```
 
-前の例では、`isEmpty`は変数で、コンポーネントにコンテンツがなく、作成者には見えない場合にのみtrueになります。
+前の例では、`isEmpty` は、コンポーネントにコンテンツがなくて作成者には見えない場合にのみ true になる変数です。
 
-繰り返しを避けるために、Adobeでは、コンポーネントの実装者に対して、コアコンポーネントが提供するプレースホルダーのように[HTLテンプレートをこれらのプレースホルダーに使用するように推奨します。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+繰り返しを避けるために、アドビは、これらのプレースホルダーに、[コアコンポーネントが提供するような](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html) HTL テンプレートを使用することをコンポーネントの実装者に推奨します。
 
-その後、前のリンクでのテンプレートの使用は、次のHTL行で行います。
+その後、前のリンクでのテンプレートの使用は、次の HTL 行でおこないます。
 
 ```HTML
 <sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
      data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
 ```
 
-前の例では、`model.text`は変数で、コンテンツが含まれ、表示されている場合にのみtrueになります。
+前の例では、`model.text` はコンテンツが含まれていて表示されている場合にのみ true になる変数です。
 
-このテンプレートの使用例は、コアコンポーネント[（タイトルコンポーネントなど）で確認できます。](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
+このテンプレートの使用例は、コアコンポーネント[（タイトルコンポーネントなど）](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)で確認できます。
 
 ### cq:EditConfig プロパティを使用した設定 {#configuring-with-cq-editconfig-properties}
 
