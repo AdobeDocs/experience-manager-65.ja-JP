@@ -11,7 +11,7 @@ topic-tags: introduction
 discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 14%
@@ -119,7 +119,7 @@ ht-degree: 14%
 
 * [AEMコンポーネントの開発](/help/sites-developing/developing-components.md) （タッチ操作対応UI）
 * [クラシックコンポーネントからの移行](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)  — クラシックUIコンポーネントのダイアログをタッチUIに変換するのに役立ちます。
+* [AEM最新化ツール](/help/sites-developing/modernization-tools.md)  — クラシックUIコンポーネントのダイアログをタッチ操作対応UIに変換するのに役立ちます。
 
    * タッチUIには、「タッチUIラッパー」内でクラシックUIダイアログを開く互換性レイヤーがありますが、機能には制限があり、長期的にはお勧めしません。
 
@@ -138,8 +138,8 @@ ht-degree: 14%
 タッチ操作対応UIへの移行とは直接の関係はありませんが、同時に検討する価値のある関連する問題があります。これらの問題も推奨される方法です。
 
 * [テンプレート](/help/sites-developing/templates.md) - [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
+* [HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
 
 >[!NOTE]
 >
