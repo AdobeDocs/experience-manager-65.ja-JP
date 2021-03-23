@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
-source-wordcount: '3589'
+source-wordcount: '3587'
 ht-degree: 67%
 
 ---
@@ -1039,7 +1039,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 >
 >クラシック UI のモデルエディターのダイアログは、標準のタッチ操作対応 UI のエディターでも利用できます。
 >
->ただし、クラシック UI のステップダイアログを標準の UI のダイアログにアップグレードする場合は、AEM の[ダイアログ変換](/help/sites-developing/dialog-conversion.md)ツールを利用できます。変換後も、特定の用途に合わせてダイアログに手動で変更を加えることができます。
+>AEMには[近代化ツール](/help/sites-developing/modernization-tools.md)がありますが、従来のUIステップのダイアログを標準のUIダイアログにアップグレードしたい場合。 変換後も、特定の用途に合わせてダイアログに手動で変更を加えることができます。
 >
 >* アップグレードされたダイアログが空の場合は、`/libs`内の類似した機能を持つダイアログを見て、ソリューションの提供方法の例を見ることができます。 次に例を示します。
    >
