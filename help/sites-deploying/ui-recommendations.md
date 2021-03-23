@@ -11,10 +11,10 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
 workflow-type: tm+mt
 source-wordcount: '815'
-ht-degree: 99%
+ht-degree: 93%
 
 ---
 
@@ -76,7 +76,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
     </ol> <p>次に第 2 段階として、</p>
     <ol>
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。コンポーネントの更新には、<a href="/help/sites-developing/dialog-conversion.md">ダイアログ変換ツール</a>を使用することをお勧めします。</li>
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeでは、<a href="/help/sites-developing/modernization-tools.md">AEM最新化ツール</a>を使用してコンポーネントを更新することをお勧めします。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
     </ol> <p>次に第 2 段階として、</p>
     <ol>
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。コンポーネントの更新には、<a href="/help/sites-developing/dialog-conversion.md">ダイアログ変換ツール</a>を使用することをお勧めします。</li>
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeでは、<a href="/help/sites-developing/modernization-tools.md">AEM最新化ツール</a>を使用してコンポーネントを更新することをお勧めします。</li>
      <li>ContextHub（ClientContext の後継）を設定し、ContextHub を使用するようページテンプレートを更新します。ContextHub には、カスタムの ClientContext のストアを読み込むことができる互換モードがあります。</li>
     </ol> </td>
   </tr>
@@ -122,7 +122,7 @@ AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは�
 開発情報について詳しくは、以下を参照してください。
 
 * [タッチ操作対応 UI のアーキテクチャ](/help/sites-developing/touch-ui-concepts.md)。
-* [ダイアログ変換ツール](/help/sites-developing/dialog-conversion.md)を使用して、コンポーネントの編集ダイアログを、クラシック UI からタッチ操作対応 UI に変換。
+* [AEM Modernization Tools](/help/sites-developing/modernization-tools.md)を使用して、コンポーネントの編集ダイアログをクラシックUIからタッチ対応UIに変換します。
 
 * [タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)
 
