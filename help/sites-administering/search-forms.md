@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 19faa273908e67a744e52d173a5352f0a52f7345
+source-git-commit: b7be1ff0e842794511ffeb4fed60eed60796b4ff
 workflow-type: tm+mt
-source-wordcount: '2060'
-ht-degree: 85%
+source-wordcount: '2042'
+ht-degree: 82%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 85%
 
 **検索フォーム**&#x200B;を使用して、オーサー環境の様々な AEM コンソール／パネルの検索パネルで使用する検索の述語の選択をカスタマイズできます。これらのパネルをカスタマイズすると、特定のニーズに合わせて検索機能の用途を拡大できます。
 
-標準で、[様々な述語](#predicates-and-their-settings)が用意されています。フルテキスト検索用のフルテキストの述語、指定した単一のプロパティに一致するアセットを検索するプロパティの述語、特定のプロパティ用に指定した 1 つまたは複数の値に一致するアセットを検索するオプションの述語など、複数の述語を追加できます。
+述語](#predicates-and-their-settings)の[範囲は、そのまま使用できます。 特定のプロパティに対して指定した1つのプロパティに一致するアセットを検索する場合は、Property述語を含む複数の述語を追加できます。特定のプロパティに指定した1つ以上の値に一致するアセットを検索する場合は、Options述語を追加できます。
 
 様々なコンソール内およびアセットブラウザー（ページ編集時）で使用する[検索フォームを設定](#configuring-your-search-forms)できます。[これらのフォームを設定するためのダイアログ](#configuring-your-search-forms)には、次の手順でアクセスできます。
 
@@ -176,17 +176,6 @@ ht-degree: 85%
      <li>フィールドラベル</li>
      <li>プロパティ名*</li>
      <li>オプションパス</li>
-     <li>説明</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>フルテキスト </td>
-   <td>フルテキスト検索用の検索述語。</td>
-   <td>
-    <ul>
-     <li>フィールドラベル</li>
-     <li>プレースホルダー</li>
-     <li>プロパティ名</li>
      <li>説明</li>
     </ul> </td>
   </tr>
