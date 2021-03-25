@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 translation-type: tm+mt
-source-git-commit: ef975961ddcd6910b5fba2dea7e9302921f45055
+source-git-commit: d700510efb340598a7931647164e22d574884569
 workflow-type: tm+mt
-source-wordcount: '5511'
+source-wordcount: '5517'
 ht-degree: 12%
 
 ---
@@ -351,7 +351,7 @@ Experience ManagerがアセットをDynamic Mediaクラシックに公開でき�
 
 Adobe CQDynamic MediaクラシックDamリスナーを有効にします。このリスナーは、デフォルトで無効になっています。
 
-有効にするには：
+Adobe CQDynamic MediaクラシックDamリスナーを有効にするには：
 
 1. [!UICONTROL ツール]アイコンをタップし、**[!UICONTROL 操作/Webコンソール]**&#x200B;に移動します。 Web コンソールが開きます。
 1. **[!UICONTROL Adobe CQDynamic MediaクラシックDamリスナー]**&#x200B;に移動し、「**[!UICONTROL 有効]**」チェックボックスをオンにします。
