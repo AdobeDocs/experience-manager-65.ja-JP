@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 543f59a82e869e7d004d994014e0bd586b013b02
+source-git-commit: 6f4cbacb89a891ea8193ca2f495aba353bea6b1a
 workflow-type: tm+mt
-source-wordcount: '6133'
+source-wordcount: '6154'
 ht-degree: 56%
 
 ---
@@ -519,7 +519,7 @@ Adobeでは、PDF、PostScript®およびPSDファイルに対して、次の「
 
 <!-- CQDOC-17657 for PSD entry in table above -->
 
-<!-- To update any of these parameters, follow the steps in [Enabling MIME type-based Assets/Dynamic Media Classic upload job parameter support](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support). -->
+これらのパラメーターのいずれかを更新するには、[MIME タイプベースの Assets／Dynamic Media Classic アップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)の手順に従います。
 
 #### Granite一時ワークフローキューの更新{#updating-the-granite-transient-workflow-queue}
 
