@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: ef975961ddcd6910b5fba2dea7e9302921f45055
+source-git-commit: 543f59a82e869e7d004d994014e0bd586b013b02
 workflow-type: tm+mt
-source-wordcount: '6154'
-ht-degree: 52%
+source-wordcount: '6133'
+ht-degree: 56%
 
 ---
 
@@ -90,11 +90,11 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 
 **Cloud ServicesでDynamic Media設定を作成するには**
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップします。次に&#x200B;**[!UICONTROL Cloud Services/Dynamic Media設定をタップします。]**
-1. Dynamic Media構成ブラウザーページの左ペインで、**[!UICONTROL グローバル]**&#x200B;をタップし（**[!UICONTROL グローバル]**&#x200B;の左にあるフォルダーアイコンをタップまたは選択しない）、**[!UICONTROL 作成をタップします。]**
+1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップします。次に&#x200B;**[!UICONTROL Cloud Services/Dynamic Media設定]**&#x200B;をタップします。
+1. Dynamic Media 設定ブラウザーページの左側のパネルで、「**[!UICONTROL グローバル]**」をタップし（「**[!UICONTROL グローバル]**」の左側にあるフォルダーアイコンをタップまたは選択しないでください）、次に、「**[!UICONTROL 作成]**」をタップします。
 1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ページで、タイトル、Dynamic Media アカウントの電子メールアドレス、パスワードを入力し、地域を選択します。この情報は、プロビジョニング用の電子メールにAdobeが提供します。 電子メールを受信しなかった場合は、Adobeカスタマーケアにお問い合わせください。
 
-   **[!UICONTROL 「Dynamic Mediaに接続」をタップします。]**
+   「**[!UICONTROL Dynamic Mediaに接続]**」をタップします。
 
    >[!NOTE]
    プロビジョニング用の電子メールを受け取ったら、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインしてパスワードを変更します。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。パスワードを更新して、Dynamic MediaCloud Serviceが正しい資格情報で設定されるようにすることが重要です。
@@ -120,7 +120,7 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
    * **[!UICONTROL Dynamic Media 同期モード]**
       * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
-選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」をタップします。「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。完了したら、「**[!UICONTROL 保存」をタップします。]***注意：以前に「**すべてのコンテンツを同期**」を選択した場合、これら 3 つのオプションは使用できません。*&#x200B;関連項目：[Dynamic Media のフォルダーレベルでの選択的公開の設定。](/help/assets/selective-publishing.md)
+選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」をタップします。「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。完了したら、「**[!UICONTROL 保存]**」をタップします。*注意：以前に「**すべてのコンテンツを同期**」を選択した場合、これら 3 つのオプションは使用できません。*&#x200B;関連項目：[Dynamic Media のフォルダーレベルでの選択的公開の設定。](/help/assets/selective-publishing.md)
          * **[!UICONTROL 継承]**  — フォルダーに明示的な同期値はありません。代わりに、フォルダーは、その上位フォルダーの1つ、またはクラウド設定のデフォルトモードから同期値を継承します。ツールチップを介した継承されたショーの詳細なステータス。
          * **[!UICONTROL サブフォルダーに対して有効にする]**  — このサブツリー内のすべてを含めて、Dynamic Mediaと同期します。フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
          * **[!UICONTROL サブフォルダーに対して無効]**  — このサブツリー内のすべての項目をDynamic Mediaに同期から除外します。
@@ -136,8 +136,8 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 
    * ページ右上付近のナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Server]**&#x200B;をタップします。
 
-   * Image Server公開ページの公開コンテキストドロップダウンリストで、「**[!UICONTROL 画像サービングをテスト」を選択します。]**
-   * クライアントアドレスフィルターの場合は、**[!UICONTROL 追加.]**&#x200B;をタップします。
+   * Image Server 公開ページの「公開コンテキスト」ドロップダウンリストで、「**[!UICONTROL 画像サービングをテスト]**」を選択します。
+   * 「クライアントアドレスフィルター」で、**[!UICONTROL 「追加」]**&#x200B;をタップします。
    * アドレスを有効（有効）にするには、チェックボックスをオンにします。 Experience Manager作成者インスタンスのIPアドレスを入力します（ディスパッチャーIPではありません）。
    * 「**[!UICONTROL 保存]**」をタップします。
 
@@ -188,9 +188,9 @@ Image Server 画面では、画像を配信するためのデフォルト設定�
 
 #### アプリケーションの一般設定の指定 {#configuring-application-general-settings}
 
-アプリケーションの全般設定ページを開くには、Dynamic Mediaクラシックグローバルナビゲーションバーで&#x200B;**[!UICONTROL 設定/アプリケーション設定/全般設定をタップします。]**
+アプリケーションの全般設定ページを開くには、Dynamic Mediaクラシックグローバルナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/全般設定]**&#x200B;をタップします。
 
-**サーバ — **アカウントプロビジョニングを行うと、Dynamic Mediaは会社に割り当てられたサーバを自動的に提供します。 これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。Adobeカスタマーケアから明示的に指示されない限り、サーバー名は変更しないでください。
+**[!UICONTROL サーバー -]**&#x200B;アカウントのプロビジョニング時に、会社に割り当てられているサーバーが Dynamic Media によって自動的に提供されます。これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。Adobeカスタマーケアから明示的に指示されない限り、サーバー名は変更しないでください。
 
 **[!UICONTROL 画像を上書き]** - Dynamic Media は、2 つのファイルが同じ名前を持つことを許可しません。各項目の URL ID（ファイル名から拡張子を取り除いた部分）は一意である必要があります。これらのオプションは、置き換えるアセットのアップロード方法、つまり元のアセットを置き換えるか、重複させるかを指定します。重複するアセット名には「-1」が付けられます（例えば、chair.tif は chair-1.tif に変更されます）。これらのオプションは、元のアセットとは別のフォルダーにアップロードされるアセットや、元のアセットと異なるファイル名拡張子（JPG、TIF、PNG など）を持つアセットに影響を与えます。
 
@@ -215,8 +215,8 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 画像が要求されたときに色補正が有効になるように初期設定のカラープロパティを設定するには：
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、プロビジョニング時に提供された資格情報を使用してアカウントにログインします。
-1. **[!UICONTROL Setup/Application Setupに移動します。]**
-1. 「**[!UICONTROL 公開設定]**」領域を展開して、「**[!UICONTROL Image Server」を選択します。]**&#x200B;パブリッシュインスタンスのデフォルトを設定する際に、「**[!UICONTROL 公開コンテキスト]**」を「**[!UICONTROL 画像サービング]**」に設定します。
+1. **[!UICONTROL 設定／アプリケーション設定]**&#x200B;に移動します。
+1. 「**[!UICONTROL 公開設定]**」領域を展開して、「**[!UICONTROL Image Server]**」を選択します。パブリッシュインスタンスのデフォルトを設定する際に、「**[!UICONTROL 公開コンテキスト]**」を「**[!UICONTROL 画像サービング]**」に設定します。
 1. 変更するプロパティまでスクロールします。 例えば、**[!UICONTROL カラーマネジメント属性]**&#x200B;領域のプロパティ。
 
    次のカラー補正プロパティを設定できます。
@@ -224,7 +224,7 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
    * **[!UICONTROL CMYK のデフォルトカラースペース]** - デフォルトの CMYK カラープロファイルの名前
    * **[!UICONTROL グレースケールのデフォルトカラースペース]** - デフォルトのグレーカラープロファイルの名前
    * **[!UICONTROL RGB のデフォルトカラースペース]** - デフォルトの RGB カラープロファイルの名前
-   * **[!UICONTROL カラー変換レンダリングの方法]** - レンダリング方法を指定します。指定できる値は、**[!UICONTROL 知覚的]**、**[!UICONTROL 相対的な色域を維持]**、**[!UICONTROL 彩度]**、**[!UICONTROL 絶対的な色域を維持です。]**&#x200B;アドビでは、デフォルトとして&#x200B;**[!UICONTROL 相対]**&#x200B;をお勧めします。
+   * **[!UICONTROL カラー変換レンダリングの方法]** - レンダリング方法を指定します。指定できる値は、**[!UICONTROL 知覚的]**、**[!UICONTROL 相対的な色域を維持]**、**[!UICONTROL 彩度]**、**[!UICONTROL 絶対的な色域を維持]**&#x200B;です。アドビでは、デフォルトとして&#x200B;**[!UICONTROL 相対]**&#x200B;をお勧めします。
 
 1. 「**[!UICONTROL 保存]**」をタップします。
 
@@ -249,9 +249,9 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
-**サポートされる形式のMIMEタイプを編集するには**
+**サポートされる形式のMIMEタイプを編集するには：**
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/一般/CRXDE Liteをタップします。]**
+1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;をタップします。
 1. 左側のパネルで、次の場所に移動します。
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -261,24 +261,24 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 1. mimeTypes フォルダーで、MIME タイプを選択します。
 1. CRXDE Lite ページの右側の下部で、次の操作をおこないます。
 
-   * 「**[!UICONTROL 有効]**」フィールドをダブルクリックします。デフォルトでは、すべてのアセットのMIMEタイプが有効（**[!UICONTROL true]**&#x200B;に設定）になります。これは、アセットがDynamic Mediaと同期されて処理されることを意味します。 このアセットのMIMEタイプを処理から除外する場合は、この設定を&#x200B;**[!UICONTROL falseに変更します。]**
+   * 「**[!UICONTROL 有効]**」フィールドをダブルクリックします。デフォルトでは、すべてのアセットのMIMEタイプが有効（**[!UICONTROL true]**&#x200B;に設定）になります。これは、アセットがDynamic Mediaと同期されて処理されることを意味します。 このアセットの MIME タイプを処理から除外する場合、この設定を **[!UICONTROL false]** に変更します。
 
    * **[!UICONTROL jobParam]**&#x200B;を重複タップして、関連するテキストフィールドを開きます。 特定の MIME タイプに使用可能な、許可されている処理パラメーター値のリストについては、[サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types)を参照してください。
 
 1. 次のいずれかの操作をおこないます。
 
    * 手順3 ～ 4を繰り返して、さらにMIMEタイプを編集します。
-   * CRXDE Liteページのメニューバーで、「すべて保存」をタップします。****
+   * CRXDE Liteページのメニューバーで、「**[!UICONTROL すべて保存]**」をタップします。
 
 1. ページの左上隅にある&#x200B;**[!UICONTROL CRXDE Lite]**&#x200B;をタップしてExperience Managerに戻ります。
 
 #### サポートされていない形式のカスタム MIME タイプの追加 {#adding-mime-types-for-unsupported-formats}
 
-Experience Managerアセットで、サポートされていない形式のカスタムMIMEタイプを追加できます。 CRXDE Liteに追加する新しいノードが、Experience Managerによって削除されないように、MIMEタイプを`image_`の前に移動してください。 また、有効な値が&#x200B;**[!UICONTROL falseに設定されていることを確認してください。]**
+Experience Managerアセットで、サポートされていない形式のカスタムMIMEタイプを追加できます。 CRXDE Liteに追加する新しいノードが、Experience Managerによって削除されないように、MIMEタイプを`image_`の前に移動してください。 また、有効な値が&#x200B;**[!UICONTROL false]**&#x200B;に設定されていることを確認してください。
 
-**サポートされていない形式のカスタム MIME タイプを追加するには**
+**サポートされていない形式のカスタム MIME タイプを追加するには:**
 
-1. Experience Managerから、**[!UICONTROL ツール/操作/Webコンソールをタップします。]**
+1. Experience Managerから、**[!UICONTROL ツール/操作/Webコンソール]**&#x200B;をタップします。
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
 
@@ -300,12 +300,12 @@ Experience Managerアセットで、サポートされていない形式のカ�
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
-1. ページ右下隅の「**[!UICONTROL 保存」をタップします。]**
+1. ページの右下隅にある「**[!UICONTROL 保存]**」をタップします。
 
    この時点で、Adobe Experience Manager Web コンソール設定ページが開いているブラウザータブを閉じることができます。
 
 1. Experience Managerコンソールを開いているブラウザータブに戻ります。
-1. Experience Managerから、**[!UICONTROL ツール/一般/CRXDE Liteをタップします。]**
+1. Experience Managerから、**[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;をタップします。
 
    ![2019-08-02_16-55-41](assets/2019-08-02_16-55-41.png)
 
@@ -322,7 +322,7 @@ Experience Managerアセットで、サポートされていない形式のカ�
 
    ![2019-08-02_16-60-30](assets/2019-08-02_16-60-30.png)
 
-1. CRXDE Liteページの左上隅近くにある「**[!UICONTROL すべて保存」をタップします。]**
+1. CRXDE Liteページの左上隅近くにある「**[!UICONTROL すべて保存]**」をタップします。
 
 #### 画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成 {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
@@ -342,13 +342,13 @@ Experience Managerアセットで、サポートされていない形式のカ�
 
 定義には、一致とベース名という 2 つの要素を使用できます。これらのフィールドでは、命名規則のすべての要素を定義して、要素が含まれるセットを命名するために使用される規則の一部を指定できます。会社の個々の命名規則では、多くの場合、これらの要素ごとに1行以上の定義が使用されます。 独自の定義行を必要なだけ使用して、メイン画像、カラー要素、代替表示要素およびスウォッチ要素などの個別の要素にグループ化できます。
 
-**デフォルトの命名規則を設定するには：**
+**デフォルトの命名規則を設定するには：:**
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
    資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
-1. ページ上部近くのナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/バッチセットプリセット/初期設定の名前をタップします。]**
+1. ページの上付近にあるナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／バッチセットプリセット／デフォルトの名前]**&#x200B;をタップします。
 1. 「**[!UICONTROL フォームを表示]**」または「**[!UICONTROL コードを表示]**」を選択し、各要素に関する情報の表示と入力の方法を指定します。
 
    「**[!UICONTROL コードを表示]**」チェックボックスを選択して、選択した形式と同時に作成される正規表現値を表示できます。フォーム表示により制限を受ける場合、命名規則の要素を定義するために正規表現値を入力または変更できます。値をフォーム表示で解析できない場合は、フォームフィールドは非アクティブになります。
@@ -375,13 +375,13 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 バッチセットプリセットを定義するフォームフィールドメソッドとコードメソッドのどちらかを使用できます（正規表現を使用できます）。デフォルトの名前では、「フォームを表示」での定義と同時に「コードを表示」を選択して、正規表現を使用して定義を作成できます。また、どちらかの表示をオフにして、一方の表示のみを使用することもできます。
 
-**バッチセットプリセットを作成するには：**
+**バッチセットプリセットを作成するには：:**
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
    資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
-1. ページ上部近くのナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/バッチセットプリセット/バッチセットプリセットをタップします。]**
+1. ページの上付近にあるナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／バッチセットプリセット／バッチセットプリセット]**&#x200B;をタップします。
 
    **[!UICONTROL 詳細ページの右上隅に設定される表示フォーム]**()がデフォルトの表示です。
 
@@ -390,9 +390,9 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 1. 「バッチセットの種類」ドロップダウンメニューで、プリセットの種類を選択します。
 1. 次のいずれかの操作をおこないます。
 
-   * 以前に&#x200B;**[!UICONTROL アプリケーション設定/バッチセットプリセット/初期設定の名前]**&#x200B;で設定した初期設定の命名規則を使用する場合は、**[!UICONTROL アセットの命名規則]**&#x200B;を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL 初期設定]**」をタップします。
+   * 以前、**[!UICONTROL アプリケーション設定／バッチセットプリセット／デフォルトの名前]**&#x200B;で設定したデフォルトの命名規則を使用する場合は、「**[!UICONTROL アセットの命名規則]**」を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL デフォルト]**」をタップします。
 
-   * プリセットの設定時に新しい命名規則を定義するには、「**[!UICONTROL アセットの命名規則]**」を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL カスタム」をタップします。]**
+   * プリセットの設定時に新しい命名規則を定義するには、「**[!UICONTROL アセットの命名規則]**」を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL カスタム]**」をタップします。
 
 1. 「シーケンスの順序」で、セットをDynamic Mediaでグループ化した後に画像が表示される順序を定義します。
 
@@ -431,7 +431,7 @@ spin-01-01
 
 このスピンセットをアップロードして公開する際に、**アップロードオプションを設定**&#x200B;ダイアログボックスの&#x200B;**バッチセットプリセット**&#x200B;の下に表示される 2D スピンセット手法の名前をアクティブ化します。
 
-**2D スピンセットを自動生成するためのバッチセットプリセットを作成するには：**
+**2D スピンセットを自動生成するためのバッチセットプリセットを作成するには：:**
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
@@ -443,9 +443,9 @@ spin-01-01
 
 1. プリセットリストパネルで、追加&#x200B;****&#x200B;をタップして、画面の右側にある詳細パネルの定義フィールドをアクティブにします。
 1. 詳細パネルの「プリセット名」フィールドに、プリセットの名前を入力します。
-1. 「バッチセットの種類」ドロップダウンメニューで、「**[!UICONTROL アセットセット」を選択します。]**
-1. 「サブタイプ」ドロップダウンリストで、「**[!UICONTROL 多軸スピンセット」を選択します。]**
-1. 「**[!UICONTROL アセットの命名規則]**」を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL カスタム」をタップします。]**
+1. 「バッチセットの種類」ドロップダウンメニューで、「**[!UICONTROL アセットセット]**」を選択します。
+1. 「サブタイプ」ドロップダウンリストで、「**[!UICONTROL 多軸スピンセット]**」を選択します。
+1. 「**[!UICONTROL アセットの命名規則]**」を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL カスタム]**」をタップします。
 1. 「**[!UICONTROL 一致]**」およびオプションとして「**[!UICONTROL ベース名]**」の属性を使用して、グループを構成する画像アセットの命名に使用する正規表現を定義します。
 
    リテラル一致正規式の例を次に示します。
@@ -503,7 +503,7 @@ Dynamic Media-Scene7モードをスムーズに動作させるため、Adobeで�
 
 テンプレートの作成を有効にする場合は、次のパラメーターを使用します。`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`.
 
-<!-- REMOVED BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
+<!-- THIS PARAGRAPH WAS REPLACED WITH THE TWO PARAGRAPHS DIRECTLY ABOVE BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
 
 Adobeでは、PDF、PostScript®およびPSDファイルに対して、次の「調整済み」ジョブパラメーターを使用することをお勧めします。
 
@@ -519,13 +519,13 @@ Adobeでは、PDF、PostScript®およびPSDファイルに対して、次の「
 
 <!-- CQDOC-17657 for PSD entry in table above -->
 
-これらのパラメーターのいずれかを更新するには、[MIME タイプベースの Assets／Dynamic Media Classic アップロードジョブパラメーターサポートの有効化](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)の手順に従います。
+<!-- To update any of these parameters, follow the steps in [Enabling MIME type-based Assets/Dynamic Media Classic upload job parameter support](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support). -->
 
 #### Granite一時ワークフローキューの更新{#updating-the-granite-transient-workflow-queue}
 
 Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローに使用されます。Dynamic Media では、画像の取り込みおよび処理に使用されます。
 
-**Granite一時ワークフローキューを更新するには**
+**Granite一時ワークフローキューを更新するには：**
 
 1. [https://&lt;server>/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動して、**Queue: Granite Transient Workflow Queue** を検索します。
 
@@ -548,7 +548,7 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 Granite のワークフローキューは、一時的でないワークフローに使用されます。Dynamic Mediaでは、**[!UICONTROL Dynamic Mediaエンコードビデオ]**&#x200B;のワークフローでビデオを処理するのに使用しました。
 
-**Graniteワークフローキューを更新するには**
+**Graniteワークフローキューを更新するには：**
 
 1. `https://<server>/system/console/configMgr` に移動して、**Queue: Granite Workflow Queue** を検索します。
 
@@ -567,7 +567,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 「Scene7アップロード接続」設定により、Experience ManagerアセットがDynamic Mediaクラシックサーバーに同期されます。
 
-**Dynamic Mediaクラシックアップロード接続を更新するには**
+**Dynamic Mediaクラシックアップロード接続を更新するには：**
 
 1. `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl` に移動します。
 1. 「**[!UICONTROL Number of connections]**」フィールドおよび「**[!UICONTROL Active job timeout]**」フィールドで、必要に応じて数値を変更します。
@@ -628,7 +628,7 @@ Dynamic Media以外のデプロイメントでは、Experience Manager作成者�
 
 #### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/一般/CRXDE Liteをタップします。]**
+1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;をタップします。
 1. 左のフォルダーツリーで、`/etc/replication/agents.author/publish/jcr:content/damRenditionFilters`に移動してフィルターを確認します。
 
    ![chlimage_1-17](assets/chlimage_1-2.png)
@@ -659,7 +659,7 @@ Dynamic Media以外のデプロイメントでは、Experience Manager作成者�
   </tr>
   <tr>
    <td>*</td>
-   <td>ワイルドカード文字<br /> </td>
+   <td>ワイルドカード文字</td>
   </tr>
   <tr>
    <td>+</td>
@@ -679,4 +679,3 @@ Dynamic Media以外のデプロイメントでは、Experience Manager作成者�
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
 オリジナルを複製したい場合は、`+original`と入力します。
-
