@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 8の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 translation-type: tm+mt
-source-git-commit: f52fc643c30babab68bcf122eb3d91da5ce37a24
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '3041'
 ht-degree: 5%
 
 ---
@@ -232,6 +232,10 @@ ht-degree: 5%
 * アダプティブフォームを送信する際に、サーバー上のフィールド値を検証する。
 
 * [!DNL Automated Forms Conversion service]を使用してPDFフォームをアダプティブフォームに変換する。
+
+#### Microsoft SQL Server 2016 Always On可用性グループのサポート（高可用性用） (6.5.7.0) {#always-on-availability-groups}
+
+[!DNL Experience Manager Forms] OSGi展開の高可用性のために、 [!DNL Microsoft] SQL Server 2016 Always On可用性グループをサポートするようになりました。
 
 #### パフォーマンスを最適化するためのフォームデータモデルHTTPクライアント設定(6.5.7.0) {#fdm-http-client-config}
 
