@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: ' [!DNL Adobe Experience Manager] 6.5 Service Packのリリースノートです。'
 contentOwner: AK
 translation-type: tm+mt
-source-git-commit: 131e564e4ed50c4f08412ba39c62f15b9c362b8c
+source-git-commit: ecb32596edecaf47ef54a74c2be8ecf252de466c
 workflow-type: tm+mt
-source-wordcount: '17898'
+source-wordcount: '17912'
 ht-degree: 17%
 
 ---
@@ -36,6 +36,8 @@ ht-degree: 17%
    * [!DNL Automated Forms Conversion service]を使用してPDFフォームをアダプティブフォームに変換する。
 
 * [!DNL Experience Manager Forms]で[!DNL Microsoft SQL Server] 2019をサポート。
+
+* [!DNL Microsoft] SQL Server 2016 Always On可用性グループのサポート（OSGi展開の高可用性）。
 
 * 組み込み型のリポジトリ（Apache Jackrabbit Oak）をバージョン 1.22.5 に更新しました。
 
@@ -1099,7 +1101,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * インボックス(CQ-4282168)を使用してワークフロー情報を表示しているときに、エラーメッセージが表示されます。
 
-### Assets {#assets-6540-enhancements}
+### アセット {#assets-6540-enhancements}
 
 * アセット収集ページのトリガーワークフローへのボタンが無効になっています(NPR-32471)。
 
@@ -1285,7 +1287,7 @@ Adobe Experience Manager6.5.4.0で導入された主な機能および機能強�
 
 * ContextHubにバンドルされているjQueryのバージョンを3.4.1に更新しました。
 
-### アセット{#assets-6530-enhancements}
+### アセット {#assets-6530-enhancements}
 
 **製品の機能強化**
 
