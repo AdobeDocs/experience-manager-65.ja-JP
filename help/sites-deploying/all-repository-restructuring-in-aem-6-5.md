@@ -9,11 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
-feature: アップグレード
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 8d6818d0f2d90482f930f8e98682670ed6d0dd28
 workflow-type: tm+mt
-source-wordcount: '2722'
+source-wordcount: '2724'
 ht-degree: 75%
 
 ---
@@ -72,7 +71,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ワークフローモデル {#workflow-models}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -121,7 +120,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ワークフローインスタンス {#workflow-instances}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -147,7 +146,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ワークフローランチャー {#workflow-launchers}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -178,7 +177,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ワークフロースクリプト {#workflow-scripts}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -213,7 +212,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ContextHub 設定 {#contexthub-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -244,7 +243,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### クラシッククラウドサービスデザイン  {#classic-cloud-services-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -283,7 +282,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### クラシックダッシュボードデザイン  {#classic-dashboards-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -322,7 +321,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### クラシックレポートデザイン  {#classic-reports-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -361,7 +360,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### デフォルトデザイン {#default-designs}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -400,7 +399,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### Adobe DTM JavaScript エンドポイント  {#adobe-dtm-javascript-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -423,7 +422,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### Adobe DTM Web-Hook エンドポイント  {#adobe-dtm-web-hook-endpoint}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -446,7 +445,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### インボックスタスク  {#inbox-tasks}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -473,7 +472,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### Multi-site Manager のブループリント設定  {#multi-site-manager-blueprint-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong><em></em>以前の場所</strong></td>
@@ -500,7 +499,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### AEM プロジェクトダッシュボードガジェット設定  {#aem-projects-dashboard-gadget-configurations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -530,7 +529,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### レプリケーション通知電子メールテンプレート  {#replication-notification-e-mail-template}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -563,7 +562,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### タグ {#tags}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -597,7 +596,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### 翻訳 Cloud Services {#translation-cloud-services}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -642,7 +641,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### 翻訳言語  {#translation-languages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -673,7 +672,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### 翻訳ルール  {#translation-rules}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -704,7 +703,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### 翻訳 Widget クライアントライブラリ {#translation-widget-client-library}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -749,9 +748,11 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 | **再構築の手引き** | アクションは必要ありません。 |
 | **備考** | ツリー Activation Web コンソールは、**ツール／導入／レプリケーション／ツリーをアクティベート**&#x200B;から利用できます。 |
 
-### ベンダー翻訳コネクタクラウドサービス  {#vendor-translation-connector-cloud-services}
+{style=&quot;table-layout:auto&quot;}
 
-<table>
+### ベンダー翻訳コネクタクラウドサービス {#vendor-translation-connector-cloud-services}
+
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -798,7 +799,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ワークフロー通知電子メールテンプレート {#workflow-notification-email-templates}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
@@ -830,7 +831,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
 
 ### ワークフローパッケージ {#workflow-packages}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>以前の場所</strong></td>
