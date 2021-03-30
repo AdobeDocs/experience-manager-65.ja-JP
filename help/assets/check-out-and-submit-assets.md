@@ -1,13 +1,13 @@
 ---
-title: アセットをチェックインして編集用にチェックアウトする
+title: ' [!DNL Assets]内のファイルのチェックインとチェックアウト'
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
-role: 開業医
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: eb87d77e1366786e8574f84590dfe9a3303efda0
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 49%
+source-wordcount: '429'
+ht-degree: 50%
 
 ---
 
@@ -23,8 +23,7 @@ ht-degree: 49%
 ## アセットをチェックアウト{#checking-out-assets}
 
 1. [!DNL Assets]ユーザーインターフェイスから、チェックアウトするアセットを選択します。 チェックアウトしたいアセットは複数選択することもできます。
-1. ツールバーで、**[!UICONTROL チェックアウト]**をクリックします。
-**[!UICONTROL Checkout]**&#x200B;オプションは、**[!UICONTROL Checkin]**に切り替わります。
+1. ツールバーで、**[!UICONTROL チェックアウト]**&#x200B;をクリックします。 **[!UICONTROL Checkout]**&#x200B;オプションは、**[!UICONTROL Checkin]**に切り替わります。
 チェックアウトしたアセットを他のユーザーが編集できるかを確認するには、別のユーザーとしてログインします。チェックアウトしたアセットのサムネールにロック記号が表示されます。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
@@ -33,7 +32,7 @@ ht-degree: 49%
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
-   「**[!UICONTROL 表示のプロパティ]**」をクリックして、ロックされたアセットのメタデータを編集できます。
+   ロックされたアセットのメタデータを編集するには、**[!UICONTROL 表示のプロパティ]**&#x200B;をクリックします。
 
 1. 「**[!UICONTROL 編集]**」をクリックして、アセットを編集モードで開きます。
 
@@ -64,6 +63,6 @@ ht-degree: 49%
 
 >[!MORELIKETHIS]
 >
->* [Experience Managerのデスクトップアプリケーションでのチェックインとチェックアウトについて理解する](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
->* [アセットのチェックインとチェックアウトについて理解するためのビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [チェックインとチェックアウトの理解を深め [!DNL Experience Manager] る](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#how-app-works2)
+>* [チェックインとチェックアウトについて理解するためのビデオチュートリアル [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
 
