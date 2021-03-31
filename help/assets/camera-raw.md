@@ -3,10 +3,11 @@ title: '[!DNL Adobe Camera Raw] サポート'
 description: ' [!DNL Adobe Experience Manager Assets]で [!DNL Adobe Camera Raw] サポートを有効にする方法を学びます。'
 contentOwner: AG
 role: Administrator
+feature: 開発者ツール
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '378'
 ht-degree: 35%
 
 ---
