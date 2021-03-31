@@ -3,11 +3,12 @@ title: PDFラスタライザーを使用したレンディションの生成
 description: Adobe PDFラスタライザライブラリを使用して、高品質のサムネールとレンディションを生成します。
 contentOwner: AG
 role: 開発者、管理者
+feature: 開発者ツール，レンディション
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '725'
+ht-degree: 43%
 
 ---
 
