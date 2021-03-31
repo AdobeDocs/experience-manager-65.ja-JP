@@ -2,12 +2,13 @@
 title: DTM でのアセットインサイトの有効化
 description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
 contentOwner: AG
-role: 営業者、管理者
+role: 業務担当者、管理者
+feature: アセットインサイト，アセットレポート
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 33%
+source-wordcount: '678'
+ht-degree: 34%
 
 ---
 
