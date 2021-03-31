@@ -2,11 +2,12 @@
 title: メタデータ機能の設定と管理。
 description: メタデータの追加と管理に関連する [!DNL Experience Manager Assets] 機能の設定と管理。
 contentOwner: AG
-role: 営業者、管理者
+role: 業務担当者、管理者
+feature: メタデータ
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1955'
 ht-degree: 55%
 
 ---
