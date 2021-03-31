@@ -5,9 +5,9 @@ contentOwner: AG
 feature: アセット管理
 role: 実業家、建築家、管理者
 translation-type: tm+mt
-source-git-commit: 4cc8e60694e2aea74dfedd0bbcb8d47a208d45d1
+source-git-commit: a9c9194ac1d163be3ab642ab5a6323de02d67363
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1002'
 ht-degree: 45%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Cloudのお客様は、Adobe Experience Managerアセット内�
 
 バックエンドでは、 サーバーがゲートウェイを使用してプロファイルを認証し、AEM Assets と Experience Cloud 間でデータを同期します。
 
->[!CAUTION]
+>[!NOTE]
 >
 >この機能はAEM Assetsでは非推奨です。 [AEMとCreative Cloud統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)で置き換えを探してください。 クエリがある場合は、[Adobeカスタマーケア](https://www.adobe.com/account/sign-in.supportportal.html)にお問い合わせください。
 
@@ -76,7 +76,7 @@ Adobe Experience Cloudのお客様は、Adobe Experience Managerアセット内�
 
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、新しい設定のタイトルと名前を指定し、「**[!UICONTROL 作成]**」をクリックします。
 
-   ![AEM Assets と CC を統合する新しい設定の命名](assets/chlimage_1-51.png)
+   ![AEM Assets と CC を統合する新しい設定の命名](assets/aem-ec-integration-config1.png)
 
 1. 「**[!UICONTROL テナント URL]**」フィールドに、AEM Assets の URL を指定します。以前は、URLが`https://<tenant_id>.marketing.adobe.com`と定義されていた場合、`https://<tenant_id>.experiencecloud.adobe.com`に変更しました。
 
@@ -95,8 +95,6 @@ Adobe Experience Cloudのお客様は、Adobe Experience Managerアセット内�
 ## 同期の有効化  {#enable-synchronization}
 
 1. 手順[Experience Cloud](#add-a-new-configuration)の最後の手順で説明した方法のいずれかを使用して、公開鍵を表示します。 「**[!UICONTROL 公開鍵を表示]**」をクリックします。
-
-   ![chlimage_1-52](assets/chlimage_1-52.png)
 
 1. 公開鍵をコピーして、[アプリケーション](#create-an-application)の作成で作成したアプリケーションの設定インターフェイスの&#x200B;**[!UICONTROL 公開鍵]**&#x200B;フィールドに貼り付けます。
 
@@ -118,7 +116,7 @@ Adobe Experience Cloudのお客様は、Adobe Experience Managerアセット内�
 ## Experience Cloud追加のユーザー{#add-users-to-experience-cloud}
 
 1. 管理者の資格情報を使用してExperience Cloudにログインします。
-1. レールから、**[!UICONTROL 管理]**&#x200B;に移動し、**[!UICONTROL エンタープライズダッシュボードを起動]**&#x200B;をクリックまたはタップします。
+1. レールから、**[!UICONTROL 管理]**&#x200B;に移動し、**[!UICONTROL エンタープライズダッシュボード]**&#x200B;を起動をクリックします。
 1. レールの「**[!UICONTROL ユーザー]**」をクリックして、**[!UICONTROL ユーザー管理]**&#x200B;ページを開きます。
 1. ツールバーで、**追加** ![aem_assets_add_icon](assets/aem_assets_add_icon.png)をクリックします。
 1. Creative Cloud とアセットを共有できるようにするユーザーを 1 人以上追加します。
