@@ -2,12 +2,12 @@
 title: 参照と複数のページを持つ複合アセットの管理
 description: ' [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]内からデジタルアセットへの参照を作成する方法を説明します。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなどの複数ページファイルの個々のサブアセットページを表示します。'
 contentOwner: AG
-role: 営業者、管理者
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: e6a0cab17d203183cc4169563179060338596cc3
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 19%
+source-wordcount: '1381'
+ht-degree: 18%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 19%
 
 参照は、参照元のアセットのパス、ドキュメント ID およびインスタンス ID に基づいて解決されます。
 
-## [!DNL Adobe Illustrator] {#refai}追加の参照としてのデジタルアセット
+## [!DNL Adobe Illustrator]:参追加照としてのデジタルアセット  {#refai}
 
 [!DNL Adobe Illustrator]ファイル内から既存のデジタルアセットを参照できます。
 
@@ -45,7 +45,7 @@ ht-degree: 19%
 
    *図：アセットの詳細内のアセット参照。*
 
-## [!DNL Adobe InDesign] {#add-aem-assets-as-references-in-adobe-indesign}追加の参照としてのデジタルアセット
+## [!DNL Adobe InDesign]:参追加照としてのデジタルアセット  {#add-aem-assets-as-references-in-adobe-indesign}
 
 [!DNL InDesign]ファイル内からデジタルアセットを参照するには、アセットを[!DNL InDesign]ファイルにドラッグするか、[!DNL InDesign]ファイルをZIPアーカイブとして書き出します。
 
@@ -55,6 +55,8 @@ ht-degree: 19%
 >
 >[!DNL InDesign Server]がプロキシになると、[!DNL InDesign]ファイルのプレビューがXMPメタデータに埋め込まれます。 この場合、サムネールの抽出は明示的には必要ありません。ただし、[!DNL InDesign Server]がプロキシ化されていない場合は、[!DNL InDesign]ファイルのサムネールを明示的に抽出する必要があります。
 
+INDDファイルをアップロードすると、リポジトリに`xmpMM:InstanceID`と`xmpMM:DocumentID`のプロパティを持つアセットを照会することで参照が取得されます。
+
 ###  アセットをドラッグして参照を作成 {#create-references-by-dragging-aem-assets}
 
 この手順は、[Adobe Illustrator](#refai)でデジタルアセットを参照として追加する手順と似ています。
@@ -62,12 +64,12 @@ ht-degree: 19%
 ### ZIP ファイルに書き出してアセットの参照を作成 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)の手順を実行して、新しいワークフローを作成します。
-1. [!DNL Adobe InDesign]のパッケージ機能を使用して、ドキュメントを書き出します。 [!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。この場合、書き出されたフォルダーには、[!DNL InDesign]ファイル内のサブアセットを含むLinksフォルダーが含まれます。
+1. [!DNL Adobe InDesign]の[パッケージ機能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)を使用して、ドキュメントを書き出します。 [!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。この場合、書き出されたフォルダーには`Links`フォルダーが含まれ、その中には[!DNL InDesign]ファイル内のサブアセットが含まれています。 `Links`フォルダーは、INDDファイルと同じフォルダーに存在します。
 1. ZIPファイルを作成し、[!DNL Experience Manager]リポジトリにアップロードします。
 1. `Unarchiver`ワークフローの開始。
 1. ワークフローが完了すると、Linksフォルダー内の参照は自動的にサブアセットとして参照されます。 参照されるアセットのリストを表示するには、[!DNL InDesign]アセットのアセットの詳細ページに移動し、[パネル](/help/sites-authoring/basic-handling.md#rail-selector)を閉じます。
 
-## [!DNL Adobe Photoshop] {#refps}追加の参照としてのデジタルアセット
+## [!DNL Adobe Photoshop]:参追加照としてのデジタルアセット  {#refps}
 
 1. [!DNL Experience Manager]デスクトップアプリを使用して[!DNL Experience Manager Assets]にアクセスします。 ローカルファイルシステム上のアセットをダウンロードして表示します。 [!UICONTROL リンクを配置]機能を[!DNL Adobe Photoshop]で使用します。 詳しくは、[デスクトップアプリにアセットを配置](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)を参照してください。
 
