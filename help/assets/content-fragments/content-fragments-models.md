@@ -9,11 +9,13 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
+feature: コンテンツフラグメント
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 932601c849b3a1ddd196e6570a9cf05710cd3e6a
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 95%
+source-wordcount: '758'
+ht-degree: 97%
 
 ---
 
