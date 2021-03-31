@@ -10,10 +10,12 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
+feature: コンテンツフラグメント
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1749'
 ht-degree: 92%
 
 ---
@@ -292,7 +294,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    >* **Markdown**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとアセットがまた表示されます。
 
 
-## バリエーションの管理  {#managing-variations}
+## バリエーションの管理 {#managing-variations}
 
 ### バリエーションの作成 {#creating-a-variation}
 
