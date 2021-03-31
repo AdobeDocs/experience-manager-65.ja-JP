@@ -2,11 +2,12 @@
 title: ' [!DNL Adobe Creative Cloud] ベストプラクティスへのフォルダ共有'
 description: ' [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] を設定して、Adobe Creative Cloud(CC)ユーザーとフォルダーを交換します。'
 contentOwner: AG
-role: 営業者、管理者
+role: 業務担当者、管理者
+feature: コラボレーション
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '959'
 ht-degree: 18%
 
 ---
