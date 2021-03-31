@@ -3,10 +3,11 @@ title: ネットワークに関する考慮事項と要件
 description: ' [!DNL Adobe Experience Manager Assets] デプロイメントを設計する際のネットワークに関する考慮事項を説明します。'
 contentOwner: AG
 role: アーキテクト、管理者
+feature: 開発者ツール
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '996'
 ht-degree: 70%
 
 ---
