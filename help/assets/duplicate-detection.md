@@ -2,12 +2,13 @@
 title: 重複アセットの検出の有効化
 description: Experience Manager内の重複アセットを検出できるようにする方法を説明します。
 contentOwner: AG
-role: 営業者、管理者
+role: 業務担当者、管理者
+feature: アセット管理，アセットレポート
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 21%
+source-wordcount: '164'
+ht-degree: 23%
 
 ---
 
