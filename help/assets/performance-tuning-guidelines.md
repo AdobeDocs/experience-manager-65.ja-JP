@@ -4,10 +4,11 @@ description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフト
 contentOwner: AG
 mini-toc-levels: 1
 role: アーキテクト、管理者
+feature: アセット管理
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt
-source-wordcount: '2743'
+source-wordcount: '2745'
 ht-degree: 51%
 
 ---
