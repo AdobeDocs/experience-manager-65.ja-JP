@@ -3,10 +3,11 @@ title: Apache Tikaを使用してアセットのMIMEタイプを検出する
 description: Apache Tikaを有効にすると、アップロード操作中にファイル拡張子ではなく、コンテンツストリームからアセットのMIMEタイプを [!DNL Experience Manager Assets] 検出できます。
 contentOwner: AG
 role: 管理者、アーキテクト
+feature: メタデータ，開発者ツール，アセット管理
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '172'
 ht-degree: 11%
 
 ---
