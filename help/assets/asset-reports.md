@@ -2,11 +2,12 @@
 title: アセットの使用と共有に関するレポート
 description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
 contentOwner: AG
-role: 営業者、管理者
+role: 業務担当者、管理者
+feature: アセットレポート，アセット管理
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1146'
 ht-degree: 88%
 
 ---
