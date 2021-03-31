@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 translation-type: tm+mt
-source-git-commit: a71c1e87dd5f01ba2584282e0960ca27d419adb0
+source-git-commit: 655d32a4ebb72ca447fc2157b029f0d08cf42b27
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 60%
+source-wordcount: '1691'
+ht-degree: 61%
 
 ---
 
@@ -206,7 +206,9 @@ AEMリポジトリ内の既存のユーザー（ローカルソース、LDAPま�
 
 ここでは、[!DNL Admin Console]内のいくつかのグループにも1人のユーザーが割り当てられています。 （ユーザーとグループは、ユーザー同期ツールを使用してLDAPから同期できるか、ローカルに作成できます。上記の&#x200B;**Onboarding Users to the[!DNL Admin Console]**&#x200B;を参照してください）。
 
-&amp;ast；ユーザーグループは、ユーザーがインスタンスにログインした場合にのみ同期されます。大量のユーザーとグループを持つお客様の場合は、グループ同期ユーティリティをAMSで実行して、上述のアクセス制御および権限管理用のグループを事前取得できます。
+>[!NOTE]
+>
+>ユーザーグループは、ユーザーがインスタンスにログインした場合にのみ同期されます。
 
 ![screen_shot_2018-09-17at94207pm](assets/screen_shot_2018-09-17at94207pm.png)
 
