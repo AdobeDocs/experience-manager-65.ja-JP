@@ -1,6 +1,6 @@
 ---
-title: AEM Assets HTTP API でのコンテンツフラグメントのサポート
-seo-title: AEM Assets HTTP API でのコンテンツフラグメントのサポート
+title: 'AEM Assets HTTP API でのコンテンツフラグメントのサポート '
+seo-title: 'AEM Assets HTTP API でのコンテンツフラグメントのサポート '
 description: AEM Assets HTTP API でのコンテンツフラグメントのサポートについて説明します。
 seo-description: AEM Assets HTTP API でのコンテンツフラグメントのサポートについて説明します。
 uuid: c500d71e-ceee-493a-9e4d-7016745c544c
@@ -10,16 +10,18 @@ content-type: reference
 topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
+feature: コンテンツフラグメント
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: 74f259d579bcf8d7a9198f93ef667288787a4493
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1864'
 ht-degree: 94%
 
 ---
 
 
-# AEM Assets HTTP API でのコンテンツフラグメントのサポート{#content-fragments-support-in-aem-assets-http-api}
+# AEM Assets HTTP API でのコンテンツフラグメントのサポート {#content-fragments-support-in-aem-assets-http-api}
 
 ## 概要 {#overview}
 
@@ -54,7 +56,7 @@ Assets REST API は、
 
 Assets REST API は、最近の AEM バージョンの標準インストールで使用できます。
 
-## 主要な概念{#key-concepts}
+## 主要な概念 {#key-concepts}
 
 Assets REST API を使用すると、AEM インスタンス内に格納されたアセットに [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) 形式でアクセスすることができます。`/api/assets` エンドポイントを使用しており、アクセスするにはアセットのパス（先頭の `/content/dam` を除く）が必要です。
 
@@ -189,7 +191,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 >
 >アセットタイプによっては、それぞれの子エンティティを定義するすべてのプロパティが、子エンティティのリストに既に含まれている場合があります。または、この子エンティティリストのエンティティに対して、一部のプロパティのみ公開される場合もあります。
 
-### Assets {#assets}
+### アセット {#assets}
 
 アセットが要求されると、アセットのメタデータ（タイトルや名前など、それぞれのアセットスキーマで定義される情報）が応答で返されます。
 
@@ -214,7 +216,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 #### コンテンツモデルとコンテンツフラグメント  {#content-models-and-content-fragments}
 
-現在、コンテンツフラグメントの構造を定義するモデルは、HTTP API では公開されません。そのため、コンシューマーは（最低でも）フラグメントのモデルについて理解する必要があります。ただし、ほとんどの情報はペイロードから推測することができます。データタイプなど&#x200B;**&#x200B;は定義の一部だからです。
+現在、コンテンツフラグメントの構造を定義するモデルは、HTTP API では公開されません。そのため、*コンシューマー*&#x200B;は（最低でも）フラグメントのモデルについて理解する必要があります。ただし、ほとんどの情報はペイロードから推測することができます。データタイプなどは定義の一部だからです。
 
 新しいコンテンツフラグメントを作成するには、（内部リポジトリ）パスを指定する必要があります。
 
