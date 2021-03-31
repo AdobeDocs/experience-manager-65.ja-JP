@@ -10,16 +10,18 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
+feature: コンテンツフラグメント
+role: 業務担当者、管理者
 translation-type: tm+mt
-source-git-commit: cec6c4f9a1a75eb049dd4b8461c36c8d58d46f79
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1491'
 ht-degree: 99%
 
 ---
 
 
-# コンテンツフラグメントの管理{#managing-content-fragments}
+# コンテンツフラグメントの管理 {#managing-content-fragments}
 
 コンテンツフラグメントは **Assets** として保存されるので、主に **Assets** コンソールから管理します。
 
@@ -160,9 +162,9 @@ ht-degree: 99%
 
    >[!NOTE]
    >
-   >「**保存**」または「**キャンセル**」のどちらをクリックした場合も、エディターが終了します。これらの両方のオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、キャンセルおよびバージョン](#save-cancel-and-versions)を参照してください。
+   >「**保存して閉じる**」または「**キャンセル**」のどちらをクリックした場合も、エディターが終了します。これらの両方のオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、キャンセルおよびバージョン](#save-cancel-and-versions)を参照してください。
 
-## 保存、キャンセルおよびバージョン  {#save-cancel-and-versions}
+## 保存、キャンセルおよびバージョン {#save-cancel-and-versions}
 
 >[!NOTE]
 >
@@ -301,7 +303,7 @@ ht-degree: 99%
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## 特定のバージョンに戻す  {#reverting-to-a-version}
+## 特定のバージョンへの復帰 {#reverting-to-a-version}
 
 次の方法で特定のバージョンのフラグメントに戻すことができます。
 
