@@ -2,11 +2,12 @@
 title: リンクを使用したアセットの共有
 description: アセット、フォルダーおよびコレクションをURLとして共有します。
 contentOwner: AG
-role: 開業医
+role: 業務担当者
+feature: リンクの共有，アセットの管理
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1062'
 ht-degree: 38%
 
 ---
