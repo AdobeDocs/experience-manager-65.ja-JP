@@ -3,11 +3,12 @@ title: デジタルアセットの管理
 description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈の付加、バージョンなど、アセット管理タスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
-role: 開業医
+role: 業務担当者
+feature: アセット管理，検索
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt
-source-wordcount: '9592'
+source-wordcount: '9595'
 ht-degree: 61%
 
 ---
