@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
@@ -10,7 +10,7 @@ feature-set: Experience Manager Sites
 feature: 開発
 role: デベロッパー
 translation-type: tm+mt
-source-git-commit: 242858109bc381d005c239786a8837b3e64fbb27
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 81%
