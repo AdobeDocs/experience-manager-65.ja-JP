@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 audience: end-user
 user-guide-title: AEM 6.5 Communities ユーザーガイド
@@ -7,12 +7,12 @@ breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature-set: Experience Manager
 feature: Communities
-role: 開業医
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 93%
+ht-degree: 94%
 
 ---
 
