@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience manager
 solution: Experience Manager, Experience Manager Sites
 audience: end-user
@@ -7,12 +7,12 @@ user-guide-title: AEM 6.5 Classic UIオーサリングユーザーガイド
 user-guide-description: このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念について説明します。
 feature-set: Experience Manager Sites
 feature: オーサリング
-role: 開業医
+role: 業務担当者
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
