@@ -4,14 +4,14 @@ description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用し�
 contentOwner: AG
 role: デベロッパー
 feature: API，アセットHTTP API，開発者ツール
+exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1730'
 ht-degree: 79%
 
 ---
-
 
 # [!DNL Assets] HTTP API {#assets-http-api}
 
@@ -314,4 +314,4 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 * [HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
 
-* アセットAPIは、完全なメタデータを返しません。 APIでは、名前空間はハードコードされ、それらのみが返されます。 メタデータ全体が必要な場合は、アセットのパス`/jcr_content/metadata.json`を確認します。
+* アセットHTTP APIは、完全なメタデータを返しません。 名前空間はハードコードされ、これらの名前空間のみが返されます。 完全なメタデータについては、アセットのパス`/jcr_content/metadata.json`を参照してください。
