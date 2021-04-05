@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
 feature: インタラクティブコミュニケーション
+exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 92092e1c050c9264c19e3cd9da9b240607af7bab
 workflow-type: tm+mt
-source-wordcount: '6122'
+source-wordcount: '6212'
 ht-degree: 22%
 
 ---
-
 
 # インタラクティブ通信の作成{#create-an-interactive-communication}
 
@@ -473,7 +473,7 @@ Interactive Communicationでは、型のコレクションのdata modelプロパ
 
    同様に、「**チャネル**」タブの「**Web**」チェックボックスをタップすると、対話型チャネルからWebを削除できます。
 
-## Webチャネル追加{#add-button-component-to-the-web-channel}のボタンコンポーネント
+## Webチャネル追加のボタンコンポーネント{#add-button-component-to-the-web-channel}
 
 インタラクティブコミュニケーションのWebチャネルに、ボタンをコンポーネントとして追加できます。 [ルールエディター](../../forms/using/rule-editor.md)を使用してルールを定義し、他のインタラクティブコミュニケーション、アダプティブフォーム、画像やドキュメントフラグメントなどの他のアセット、ボタンのタップ時に外部URLに移動できるようにします。
 
@@ -611,3 +611,23 @@ Webチャネル用のマスターとして印刷を使用し、印刷チャネ�
 
    ![content_tree_grouping](assets/content_tree_grouping.png)
 
+## 印刷チャネルの出力形式{#output-format-print-channel}
+
+PrintChannel APIを使用して、インタラクティブ通信の印刷チャネルの出力形式を定義します。 出力形式を定義しない場合、AEM FormsはPDF形式で出力を生成します。
+
+```javascript
+//options for rendering print channel of a multi-channel document
+PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
+PrintDocument printDocument = printChannel.render(renderOptions);
+```
+
+その他の形式で出力を生成するには、出力形式のタイプを指定します。 サポートされる出力形式のリストについては、[PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html)を参照してください。
+
+例えば、次のサンプルを使用して、インタラクティブ通信の出力形式としてPCLを定義できます。
+
+```javascript
+//options for rendering print channel of a multi-channel document
+PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
+renderOptions.setRenderFormat(PrintConfig.HP_PCL_5e);
+PrintDocument printDocument = printChannel.render(renderOptions);
+```
