@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF Generator
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 3bb12f6323398971ec315f49611a39977bd548a2
 workflow-type: tm+mt
-source-wordcount: '6148'
+source-wordcount: '6171'
 ht-degree: 81%
 
 ---
@@ -515,6 +515,8 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL すべてのスタイルをしおりに変換]**：Word ドキュメントのすべてのスタイルを PDF ドキュメントのブックマークに変換します。
 
+**[!UICONTROL 指定したスタイルをしおりに変換]**:「 **[!UICONTROL スタイルとレベルのある」フィールドで定義したスタイルを、PDFドキュメントのしおりに]** 変換します。
+
 **[!UICONTROL レベルごとのスタイル]**：PDF ドキュメントのしおりに変換する Word ドキュメントのスタイルを指定します。また、しおりのレベルを指定します。この機能を使用するには、「**[!UICONTROL すべてのスタイルをしおりに変換]**」の選択を解除して、次の形式でスタイル名を指定します。
 
 **styleName1=level1[,styleName2=level2...]**
@@ -623,6 +625,6 @@ Microsoft Word のスタイル名にコンマ（,）または等号（=）が含
 * Adobe FrameMaker: `fm`
 * Adobe Photoshop: `psd`
 
-これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、「[AEM formsによるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62)」の「追加のネイティブファイル形式に対するサポートの追加」を参照してください。
+これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、「[AEM formsでのプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62)」の「追加のネイティブファイル形式に対するサポートの追加」を参照してください。
 
 PDFG ネットワークプリンターの設定のヘルプについては、[PDFG ネットワークプリンターの設定（Windows のみ）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)を参照してください。
