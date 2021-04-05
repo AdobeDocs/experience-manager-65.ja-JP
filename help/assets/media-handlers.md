@@ -4,14 +4,14 @@ description: メディアハンドラーについて、およびワークフロ�
 contentOwner: AG
 role: 業務担当者
 feature: ワークフロー，レンディション
+exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 48%
 
 ---
-
 
 # メディアハンドラーとワークフローを使用してアセットを処理{#processing-assets-using-media-handlers-and-workflows}
 
@@ -46,6 +46,8 @@ ht-degree: 48%
 | [!UICONTROL OpenOfficeHandler] | com.day.cq.dam.handler.standard.ooxml.OpenOfficeHandler | <ul><li>application/vnd.openxmlformats-officedocument.wordprocessingml.document</li><li> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</li><li> application/vnd.openxmlformats-officedocument.presentationml.presentation</li></ul> |
 | [!UICONTROL EPubHandler] | com.day.cq.dam.handler.standard.epub.EPubHandler | application/epub+zip |
 | [!UICONTROL GenericAssetHandler] | com.day.cq.dam.core.impl.handler.GenericAssetHandler | アセットからデータを抽出するためのハンドラーが他に見つからなかった場合のフォールバック |
+
+{style=&quot;table-layout:auto&quot;}
 
 すべてのハンドラーは以下のタスクを実行できます。
 
