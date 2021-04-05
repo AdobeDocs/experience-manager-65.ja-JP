@@ -3,14 +3,14 @@ title: '[!DNL Assets] 代理開発'
 description: プロキシは、 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネント、およびカスタムプロキシワーカーの開発方法です。
 contentOwner: AG
 role: 管理者、アーキテクト
+exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '857'
 ht-degree: 59%
 
 ---
-
 
 # [!DNL Assets] 代理開発  {#assets-proxy-development}
 
@@ -18,7 +18,7 @@ ht-degree: 59%
 
 プロキシは、ジョブの処理と結果の作成を担当するプロセッサーとしてプロキシワーカーを使用する、特定の（場合によっては別々の）Experience Managerインスタンスです。 プロキシワーカーは、幅広いタスクに使用できます。[!DNL Assets]プロキシの場合は、アセット内のレンダリング用にアセットを読み込むのに使用できます。 例えば、[IDS プロキシワーカー](indesign.md)は、 Server を使用して、 Assets 内で使用できるようにファイルを処理します。[!DNL Adobe InDesign]
 
-プロキシが別の[!DNL Experience Manager]インスタンスの場合は、Experience Managerオーサリングインスタンスの負荷を軽減するのに役立ちます。 デフォルトでは、[!DNL Assets]は、同じJVM（Proxyを介して外部化）でアセット処理タスクを実行し、Experience Managerオーサリングインスタンスの負荷を軽減します。
+プロキシが別の[!DNL Experience Manager]インスタンスの場合は、[!DNL Experience Manager]オーサリングインスタンスの負荷を軽減するのに役立ちます。 デフォルトでは、[!DNL Assets]は、（プロキシを介して外部化された）同じJVMでアセット処理タスクを実行し、[!DNL Experience Manager]オーサリングインスタンスの負荷を軽減します。
 
 ## プロキシ（HTTPアクセス） {#proxy-http-access}
 
@@ -104,7 +104,7 @@ API の使用例を以下に示します。
  proxyJobService.removeJob(jobId);
 ```
 
-### クラウドサービス設定 {#cloud-service-configurations}
+### Cloud Service構成{#cloud-service-configurations}
 
 >[!NOTE]
 >
