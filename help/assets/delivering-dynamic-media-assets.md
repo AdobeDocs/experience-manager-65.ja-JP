@@ -8,15 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: 274af114-845a-46bd-b091-802cf589687a
+feature: アセット管理，レンディション
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 87%
 
 ---
-
 
 # Dynamic Media アセットの配信 {#delivering-dynamic-media-assets}
 
