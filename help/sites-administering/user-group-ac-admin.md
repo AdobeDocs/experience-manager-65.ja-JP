@@ -9,14 +9,15 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 66674e47-d19f-418f-857f-d91cf8660b6d
 docset: aem65
+exl-id: 5808b8f9-9b37-4970-b5c1-4d33404d3a8b
+feature: セキュリティ
 translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3138'
 ht-degree: 87%
 
 ---
-
 
 # ユーザー、グループおよびアクセス権限の管理{#user-group-and-access-rights-administration}
 
