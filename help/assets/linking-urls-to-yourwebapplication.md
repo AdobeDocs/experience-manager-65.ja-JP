@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
+feature: 設定
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1275'
 ht-degree: 83%
 
 ---
-
 
 # Web アプリケーションへの URL のリンク {#linking-urls-to-your-web-application}
 
