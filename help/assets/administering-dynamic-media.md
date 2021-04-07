@@ -5,15 +5,16 @@ uuid: bcd1f9ab-4201-4222-9e4a-ba82b3c7cd6c
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 36a4a4e7-8bb2-4853-b335-cf9148be410c
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
+feature: 設定
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 71%
+source-wordcount: '255'
+ht-degree: 72%
 
 ---
-
 
 # Dynamic Media のセットアップ  {#setting-up-dynamic-media}
 
@@ -43,3 +44,4 @@ Dynamic Media の管理者には、次のトピックが参考になります。
 >**アップグレードする場合：**
 >
 >* AEM を実行状態にした後にアップロードしたすべてのアセットで、Dynamic Media が自動的に有効になります（システム管理者によって明示的に無効にされた場合を除く）。アップグレードされた AEM インスタンスで Dynamic Media を新たに使用する場合、Dynamic Media を使用できるようアセットを再処理する必要が生じる場合があります。
+
