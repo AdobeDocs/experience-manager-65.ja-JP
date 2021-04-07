@@ -9,14 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
+exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
+feature: 運用
 translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '616'
 ht-degree: 81%
 
 ---
-
 
 # AEM 6 での監査ログのメンテナンス{#audit-log-maintenance-in-aem}
 
@@ -101,4 +102,3 @@ AEM 6.3では、監査ログの削除タスクが完了する前にスケジュ�
    * **Audit log Replication event types：**&#x200B;パージする必要があるレプリケーション監査イベントのタイプ。
 
 1. 「**保存**」をクリックして設定を保存します。
-
