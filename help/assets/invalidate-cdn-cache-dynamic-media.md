@@ -5,15 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
+feature: CDNキャッシュ
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1366'
 ht-degree: 55%
 
 ---
-
 
 # Dynamic Media を使用した CDN キャッシュの無効化 {#invalidating-cdn-cache-for-dm-assets}
 
