@@ -6,15 +6,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
+feature: 公開
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '2937'
+source-wordcount: '2935'
 ht-degree: 98%
 
 ---
-
 
 # Dynamic Media のフォルダーレベルでの選択的公開の設定 {#selective-publish-configure-folder}
 
@@ -264,4 +265,3 @@ AEM で、**[!UICONTROL カード表示]**、**[!UICONTROL 列表示]**、また
 Dynamic Media に同期されず、Dynamic Media の公開アクションがトリガーされたアセットは、次のエラーメッセージとソリューションが発生します。
 
 ![選択的公開エラー](/help/assets/assets-dm/selective-publish-error.png)
-
