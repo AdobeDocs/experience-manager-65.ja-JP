@@ -9,14 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
+exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
+feature: セキュリティ
 translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '937'
 ht-degree: 90%
 
 ---
-
 
 # Granite の操作 - ユーザー管理とグループ管理{#granite-operations-user-and-group-administration}
 
@@ -234,4 +235,3 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    ![](do-not-localize/chlimage_1-6.png)
 
 1. 削除を確定するかどうかを確認するメッセージが表示され、確定すると、削除が実際に実行されたことを示すメッセージが表示されます。
-
