@@ -5,15 +5,16 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: 営業者、管理者
+role: Business Practitioner, Administrator,Developer
+exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
+feature: 設定，ルールセット
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '765'
 ht-degree: 98%
 
 ---
-
 
 # ルールセットを使用した URL の変換 {#using-rulesets-to-transform-urls}
 
@@ -81,4 +82,3 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
    ルールセットの条件が現在の Dynamic Media の Image Server へのリクエストに適用されます。
 
    ルールセットファイルを変更した場合、変更したルールセットファイルを再アップロードして再公開すると、変更内容が直ちに適用されます。
-
