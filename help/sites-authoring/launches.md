@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e145afd8-7391-47aa-b389-16fb303749d0
 docset: aem65
+exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+source-git-commit: 47870c05d231bacc424cfbf308f78bc1eaeb907b
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 98%
+source-wordcount: '854'
+ht-degree: 94%
 
 ---
-
 
 # ローンチ{#launches}
 
@@ -102,6 +102,13 @@ ht-degree: 98%
 >ローンチを作成および編集するには、デフォルトグループ `content-authors` と同様に、`/content/launches` へのアクセス権限が必要です。
 >
 >問題が発生している場合は、システム管理者にお問い合わせください。
+
+>[!CAUTION]
+>
+>起動ページのコンポーネントの順序変更はサポートされていません。
+>
+>ページをプロモートした場合、コンテンツの変更は反映されますが、コンポーネントの位置は変更されません。
+
 
 ### ローンチコンソール {#the-launches-console}
 
