@@ -9,14 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
+exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
+feature: セキュリティ
 translation-type: tm+mt
-source-git-commit: 655d32a4ebb72ca447fc2157b029f0d08cf42b27
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1692'
 ht-degree: 61%
 
 ---
-
 
 # AdobeIMS認証と[!DNL Admin Console] AEMManaged Servicesのサポート{#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
