@@ -4,15 +4,16 @@ description: 'Experience League 提供の Dynamic Media ニュースレターは
 keywords: Dynamic Media；ニュースレター；製品の更新；ヒントとテクニック；イベント；顧客の成功；ブログ；画像；ビデオ；機能
 contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
+feature: コラボレーション，Dynamic Mediaクラシック
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1172'
 ht-degree: 98%
 
 ---
-
 
 # ![Dynamic Media ニュースレターのロゴ](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
