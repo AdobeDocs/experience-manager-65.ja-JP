@@ -10,14 +10,15 @@ topic-tags: Security
 content-type: reference
 discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
+exl-id: 89f55598-e749-42b8-8f2a-496f45face66
+feature: セキュリティ
 translation-type: tm+mt
-source-git-commit: 8ed7409740cdd3e45fad006dc6e470a06acc60fe
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2437'
 ht-degree: 65%
 
 ---
-
 
 # ユーザーの同期{#user-synchronization}
 
@@ -77,7 +78,7 @@ AEM 6.1以降、ユーザー同期が有効になっている場合、ユーザ�
 
 1. 最新のコードがインストールされていることを確認します。
 
-* [AEM プラットフォームの更新](https://helpx.adobe.com/jp/experience-manager/kb/aem62-available-hotfixes.html)
+* [AEM プラットフォームの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)
 * [AEM Communities の更新](/help/communities/deploy-communities.md#latestfeaturepack)
 
 ### 1. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
