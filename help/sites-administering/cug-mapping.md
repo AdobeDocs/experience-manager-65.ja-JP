@@ -10,16 +10,17 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
+exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
+feature: セキュリティ
 translation-type: tm+mt
-source-git-commit: c2937a1989c6cfe33cc3f56f89c307cb5fb8d272
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '505'
 ht-degree: 74%
 
 ---
 
-
-# AEM 6.5 のカスタムユーザグループマッピング  {#custom-user-group-mapping-in-aem}
+# AEM 6.5 のカスタムユーザグループマッピング {#custom-user-group-mapping-in-aem}
 
 ## CUG に関連する JCR コンテンツの比較 {#comparison-of-jcr-content-related-to-cug}
 
@@ -32,7 +33,7 @@ ht-degree: 74%
   </tr>
   <tr>
    <td><p>プロパティ：cq:cugEnabled</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
-   <td><p>認証：</p> <p>ノード：rep:cugPolicyのノードタイプ rep:CugPolicy</p> <p>ノードタイプの宣言：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 認証：</p> <p>Mixin タイプ：granite:AuthenticationRequired</p> </td>
+   <td><p>認証：</p> <p>ノード：rep:cugPolicyのノードタイプ rep:CugPolicy</p> <p>ノードタイプの宣言：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 認証:</p> <p>Mixin タイプ：granite:AuthenticationRequired</p> </td>
    <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>メモ：ポリシーは、設定されているサポート対象パスにのみ適用できます。</p> <p>rep:cugPolicy および rep:CugPolicy という名前のノードは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードで認証要件を適用するには、mixin type granite:AuthenticationRequiredを追加すれば十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
@@ -155,4 +156,3 @@ ht-degree: 74%
  </tbody>
 </table>
 -->
-
