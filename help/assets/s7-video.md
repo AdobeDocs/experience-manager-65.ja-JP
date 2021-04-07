@@ -7,15 +7,16 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
+feature: ビデオ
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1583'
 ht-degree: 51%
 
 ---
-
 
 # ビデオ {#video}
 
@@ -190,4 +191,3 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 1. ビデオプロファイルをアクティベートする必要があります。
 1. ページ上の&#x200B;**[!UICONTROL Oundation Video]**&#x200B;コンポーネントのデザインを設定します。
 1. デザインの変更が完了したら、デザインをアクティベートします。
-
