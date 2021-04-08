@@ -5,18 +5,18 @@ solution: Experience Manager, Experience Manager Assets
 audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
-user-guide-description: デジタルアセットを作成、管理、配信および最適化します。
+user-guide-description: デジタルアセットを作成、管理、処理および配布します。
 feature-set: Experience Manager Assets, Experience Manager, Experience Manager Sites
 translation-type: tm+mt
-source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
+source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 59%
+ht-degree: 58%
 
 ---
 
 
-# Assets ガイド  {#assets}
+# Assets ガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
 + [[!DNL Experience Manager] 6.5アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
