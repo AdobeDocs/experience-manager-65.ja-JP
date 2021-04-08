@@ -8,12 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: アセット管理
-role: 営業者、管理者
+role: Business Practitioner, Administrator
+exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 8d27457ad88cb84e670e78bab4c40da36fcfc629
 workflow-type: tm+mt
-source-wordcount: '1881'
-ht-degree: 55%
+source-wordcount: '1912'
+ht-degree: 50%
 
 ---
 
@@ -26,7 +27,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->この機能を使用するには、Adobe Experience ManagerDynamic Mediaにバンドルされている標準搭載のCDNを使用する必要があります。 この機能では、その他のカスタムCDNはサポートされません。
+>この機能を使用するには、Adobe Experience ManagerDynamic Mediaに付属の標準搭載のCDN(コンテンツ配信ネットワーク)を使用する必要があります。 この機能では、その他のカスタムCDNはサポートされません。
 
 スマートイメージングをアドビのクラス最高のプレミアム CDN サービスと完全に統合することで、パフォーマンスを大幅にアップさせることもできます。このサービスは、サーバー、ネットワーク、およびピアリングポイント間の最適なインターネットルートを見つけ出します。 インターネット上のデフォルトのルートを使用する代わりに、待ち時間が最も短く、パケット損失率が最も低いルートを見つけます。
 
@@ -40,7 +41,7 @@ ht-degree: 55%
 | [画像 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![picture4](/help/assets/assets-dm/picture4.png) | 315.80 KB | 178.19 KB | 44% |
 |  |  |  |  | 平均 = 51% |
 
-上記と同様に、Adobeでも7,009個のURLを含むテストを実施しました。 スマートイメージングの機能により、JPEG用のファイルサイズの最適化を平均で38%、WebP形式のPNG用のファイルサイズの最適化を平均で31%達成できました。
+上記と同様に、Adobeでも7,009個のURLを含むテストを実施しました。 JPEG用のファイルサイズの最適化は、平均で38%も向上しました。 WebP形式のPNGの場合、ファイルサイズの最適化を平均で31%向上させることができました。 このような最適化は、スマートイメージングの機能があるので可能です。
 
 ## 最新のスマートイメージングの主要なメリットとは {#what-are-the-key-benefits-of-smart-imaging}
 
@@ -48,40 +49,42 @@ ht-degree: 55%
 
 最新バージョンのスマートイメージングの機能強化：
 
+* 最新のスマートイメージングを使用するWebページのGoogle SEOランキングを改善しました。
 * 最適化されたコンテンツをすぐに提供（実行時）
 * Adobe Sensei テクノロジーを使用して、イメージリクエストで指定された品質（qlt）に従って変換します。
 * スマートイメージングは、「bfc」 URL パラメータを使用してオフにできます。
 * TTL（Time To Live）独立。以前は、スマートイメージングを機能させるには、最小 TTL 値 12 時間が必要でした。
 * 以前は、元の画像と派生画像の両方がキャッシュされており、キャッシュを無効にする2つの手順が必要でした。 最新のスマートイメージングでは、派生物のみがキャッシュされ、1ステップのキャッシュ無効化プロセスが可能です。
-* ルールセットでカスタムヘッダーを使用するお客様。 例えば、[画像応答へのカスタム接触チャネル値の追加|Dynamic Mediaクラシック](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)で推奨されている「Timing Allow Header」、「X-Robot」などです。 以前のバージョンのSmart Imagingとは異なり、これらのヘッダーはブロックされないので、最新のSmart Imagingを利用できます。
+* ルールセットでカスタムヘッダーを使用するお客様は、以前のバージョンのSmart Imagingとは異なり、最新のスマートイメージングを利用できます。これらのヘッダーはブロックされないためです。 例えば、[画像応答へのカスタム接触チャネル値の追加|Dynamic Mediaクラシック](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)で推奨される「Timing Allow Header」、「X-Robot」などです。
 
 ## スマートイメージングにはライセンス費用がかかりますか？ {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
-いいえ。スマートイメージングは、Dynamic MediaクラシックまたはAdobe Experience Manager-Dynamic Media(オンプレム、AMS、およびAEM)の既存のライセンスに含まれています。
+いいえ。スマートイメージングは、Dynamic MediaクラシックまたはAdobe Experience Manager-Dynamic Media(Cloud Serviceとしてのオンプレム、AMS、Adobe Experience Manager)の既存のライセンスに含まれています。
 
 >[!NOTE]
 >
->スマートイメージングは、Dynamic Media – ハイブリッドの顧客はご利用いただけません。
-
+>スマートイメージングは、Dynamic Media — ハイブリッドのお客様はご利用いただけません。
 
 ## スマートイメージングはどのように機能しますか？ {#how-does-smart-imaging-work}
 
 消費者から画像が要求されると、スマートイメージングはユーザの特性をチェックし、使用中のブラウザに基づいて適切な画像形式に変換する。 これらの形式変換は、視覚的忠実性を低下させない方法でおこなわれます。スマートイメージングは、次のような方法で、ブラウザーの機能に基づいて、自動的に画像を別の形式に変換します。
 
+<!--   * Safari 14.0 +
+    * Safari 14 only with iOS 14.0 and above and macOS BigSur and above -->
+
 * 次のブラウザー用に WebP に自動的に変換：
    * Chrome
    * Firefox
-   * Microsoft Edge
-   * Safari 14.0 +
-      * Safari 14（iOS 14.0 以降および macOS BigSur 以降のみ）
-   * Android
+   * Microsoft® Edge
+   * Safari(iOS、macOS、iPadOS)で、WebPのブラウザーとOSバージョンのサポートが提供されている
+   * Android™
    * Opera
 * 以下のレガシーブラウザーでのサポート：
 
    | ブラウザー | ブラウザー／OS のバージョン | 形式 |
    | --- | --- | --- |
-   | Safari | iOS 14.0 以前 | JPEG2000 |
-   | Edge | 18 以前 | JPEGXR |
+   | Safari | iOS/iPad 14.0以前またはmacOS BigSur | JPEG2000 |
+   | Edge | 18より前 | JPEGXR |
    | Internet Explorer | 9+ | JPEGXR |
 * 上記形式をサポートしていないブラウザーの場合は、元々要求された画像形式が提供されます。
 
@@ -90,10 +93,11 @@ ht-degree: 55%
 ## どんな画像形式がサポートされていますか？ {#what-image-formats-are-supported}
 
 スマートイメージングでは次の画像形式がサポートされています。
+
 * JPEG
 * PNG
 
-<!-- For any other format mentioned in a URL, you should explicity turn off Smart Imaging.  Append modifier `bfc=off` to the URL for file formats other than JPEG and PNG. You can accomplish this by using either one of the following methods:
+<!-- CQDOC-15846 For any other format mentioned in a URL, you should explicity turn off Smart Imaging.  Append modifier `bfc=off` to the URL for file formats other than JPEG and PNG. You can accomplish this by using either one of the following methods:
 
 * Use a ruleset if the `fmt` modifier is mentioned in the URL. 
 * Append in URL modifiers field of the presets concerned.
@@ -102,9 +106,9 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## 既に使用中の既存の画像プリセットとのスマートイメージングの動作{#how-does-smart-imaging-work-with-our-existing-image-presets-that-are-already-in-use}
 
-スマートイメージングは既存の「画像プリセット」と連携し、要求されたファイル形式がJPEGまたはPNGの場合、画質(qlt)と形式(fmt)を除くすべての画像設定を監視します。 形式変換の場合、スマートイメージングは、画像プリセットの設定によって定義されたとおりに完全な視覚的な再現性を維持しますが、ファイルサイズは小さくなります。 元の画像サイズがスマートイメージングの生成するサイズより小さい場合は、元の画像が提供されます。
+スマートイメージングは既存の「画像プリセット」と連携し、要求されたファイル形式がJPEGまたはPNGの場合、画質(`qlt`)および形式(`fmt`)を除くすべての画像設定を監視します。 形式変換の場合、スマートイメージングは、画像プリセットの設定によって定義されたとおりに完全な視覚的な再現性を維持しますが、ファイルサイズは小さくなります。 元の画像サイズがスマートイメージングの生成するサイズより小さい場合は、元の画像が提供されます。
 
-<!-- In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
+<!-- CQDOC-15846 In addition, if your image presets are used to return `fmt !=JPEG` or `fmt !=PNG`, be sure append `bfc=off` in the preset modifier field to return the requested file format. -->
 
 ## スマートイメージングのために、URLや画像プリセットを変更するか、サイトに新しいコードを導入する必要がありますか。{#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
@@ -112,7 +116,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 スマートイメージングを使用するように新しいカスタムドメインを設定する場合は、このカスタムドメインを反映するようにURLを更新する必要があります。
 
-スマートイメージングの前提条件については、[スマートイメージングを使用する資格があるか](#am-i-eligible-to-use-smart-imaging)を参照してください。
+スマートイメージングの前提条件を理解するには、[スマートイメージングを使用する資格があるか](#am-i-eligible-to-use-smart-imaging)を参照してください。
 
 <!-- No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add any code on your website to detect a user's browser. All of this is handled automatically. -->
 
@@ -124,14 +128,14 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ## スマートイメージングを使用するための資格を私は満たしていますか？ {#am-i-eligible-to-use-smart-imaging}
 
-スマートイメージングを使用するには、貴社の Dynamic Media Classic アカウントまたは Dynamic Media on AEM アカウントが次の要件を満たしている必要があります。
+スマートイメージングを使用するには、会社のDynamic MediaクラシックまたはExperience ManagerアカウントのDynamic Mediaが次の要件を満たしている必要があります。
 
 * ライセンスの一部としてアドビによってバンドルされている CDN（コンテンツ配信ネットワーク）を使用している。
 * 汎用ドメイン（例えば、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` など）ではなく、専用ドメイン（例えば、`images.company.com` または `mycompany.scene7.com`）を使用してください。
 
 ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社アカウントにサインインします。
 
-**[!UICONTROL 設定／アプリケーション設定／一般設定をタップします。]**「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
+**[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をタップします。「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
 
 最初のカスタムドメインは、Dynamic Media ライセンスを使用する場合、追加費用はかかりません。
 
@@ -147,7 +151,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。
 
-      **[!UICONTROL 設定/アプリケーション設定/全般設定をクリックします。]**
+      **[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をクリックします。
 
       「**[!UICONTROL Published Server Name.]**」というラベルの付いたフィールドを探します。
    1. 直接的な関係で管理されているのではなく、アドビを通じて CDN を使用していることを確認します。
@@ -155,18 +159,18 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
       ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。
 
-      **[!UICONTROL 設定/アプリケーション設定/全般設定をクリックします。]**
+      **[!UICONTROL 設定／アプリケーション設定／一般設定]**&#x200B;をクリックします。
 
-      「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
-   1. HTTP/2経由で動作する必要があるかどうかを示します。
+      「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+   1. スマートイメージングもHTTP/2上で動作する必要があるかどうかを示します。
 
 1. Adobeカスタマーケアにより、要求が送信された順序に基づいて、スマートイメージングのカスタマー待機リストに追加されます。
 1. Adobeがリクエストを処理する準備が整ったら、ターゲット日を設定して調整する連絡先をサポートします。
 1. **オプション**:オプションで、Adobeが新機能を実稼動環境にプッシュする前に、ステージングでスマートイメージングをテストできます。
-1. 完了後、サポートから通知があります。
+1. カスタマーケアの完了後、お知らせします。
 1. スマートイメージングのパフォーマンス向上を最大限にするため、アドビでは、有効期間（TTL）を 24 時間以上に設定することを推奨しています。TTL によって定義されるのは、アセットが CDN によってキャッシュされる期間です。この設定を変更するには、次の手順を実行します。
 
-   1. Dynamic Media Classic を使用している場合は、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server をクリックします。]**「**[!UICONTROL 初期設定のクライアントキャッシュの有効期限]**」の値を 24 以上に設定します。
+   1. Dynamic Media Classic を使用している場合は、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。「**[!UICONTROL 初期設定のクライアントキャッシュの有効期限]**」の値を 24 以上に設定します。
    1. Dynamic Media を使用する場合は、[次の手順](config-dynamic.md)に従います。「**[!UICONTROL 有効期限]**」の値を 24 時間以上に設定します。
 
 ## 自分のアカウントでスマートイメージングが有効になるのはいつ頃ですか？ {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -174,7 +178,8 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 リクエストは、待機リストに従って、カスタマーケアが受け取った順に処理されます。
 
 >[!NOTE]
-スマートイメージングを有効にすると、Adobeがキャッシュをクリアするので、リードタイムが長くなる場合があります。 そのため、処理できる移行の数は、常にほんの数件です。
+>
+>スマートイメージングを有効にすると、Adobeがキャッシュをクリアするので、リードタイムが長くなる場合があります。 そのため、処理できる移行の数は、常にほんの数件です。
 
 ## スマートイメージングを使用するための切り替えに際しては、どんなリスクがありますか？ {#what-are-the-risks-with-switching-over-to-use-smart-imaging}
 
@@ -189,14 +194,15 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 1. 開発者ツールを開いている場合は、キャッシュが無効になっていることを確認します。
 
-   * Windows - デベロッパーツールパネルの「Settings」に移動してから、「**[!UICONTROL Disable cache (while devtools is open)]**」チェックボックスを選択します。
-   * Mac - デベロッパーパネルの「**[!UICONTROL Network]**」タブで、「**[!UICONTROL disable cache]**」を選択します。
+   * Windows®では、Developer Toolペインの設定に移動し、**[!UICONTROL 「（devtoolsが開いている間は）キャッシュを無効にする」]**&#x200B;チェックボックスを選択します。
+   * macOSの場合は、開発者ペインの「**[!UICONTROL ネットワーク]**」タブで、**[!UICONTROL キャッシュを無効にする]**&#x200B;を選択します。
 
 1. コンテンツタイプが適切な形式に変換されるのを監視します。次のスクリーンショットは、Chrome 上で PNG 画像が動的に WebP に変換されているのを示しています。
 1. このテストを、様々なブラウザーやユーザー条件で繰り返します。
 
 >[!NOTE]
-すべての画像が変換されるわけではありません。スマートイメージングは、変換によってパフォーマンスが向上するかどうかを決定します。 予期されるパフォーマンスゲインがない場合や、形式がJPEGやPNGでない場合、画像が変換されないことがあります。
+>
+>すべての画像が変換されるわけではありません。スマートイメージングは、変換によってパフォーマンスが向上するかどうかを決定します。 予期されるパフォーマンスゲインがない場合や、形式がJPEGやPNGでない場合、画像が変換されないことがあります。
 
 ![image2017-11-14_15398](assets/image2017-11-14_15398.png)
 
@@ -208,7 +214,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 現在、オプションでスマートイメージングを有効または無効にできます。他のチューニングは使用できません。
 
-## スマートイメージングが画質設定を管理する場合、設定できる最小値と最大値はありますか。 例えば、「60 以上」や「80 以下」というクォリティを設定できますか。(#minimum-maximum)
+## スマートイメージングが画質設定を管理する場合、設定する最小値と最大値はありますか？ 例えば、「60 以上」や「80 以下」というクォリティを設定できますか。(#minimum-maximum)
 
 現在のスマートイメージングには、このようなプロビジョニング機能はありません。
 
