@@ -2,16 +2,16 @@
 title: Connected Assets を使用した [!DNL Sites] での DAM アセットの共有
 description: リモート [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
-role: 業務担当者、管理者、リーダー
+role: Business Practitioner, Administrator, Leader
 feature: 接続されているアセット、ユーザー、グループ
+exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: 48e5b55a1d79fef6172f684cb65a4137113fb7fb
 workflow-type: tm+mt
-source-wordcount: '2726'
-ht-degree: 96%
+source-wordcount: '2739'
+ht-degree: 92%
 
 ---
-
 
 # Connected Assets を使用した [!DNL Experience Manager Sites] での DAM アセットの共有 {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
@@ -42,7 +42,7 @@ ht-degree: 96%
 
 作成者は、コンテンツファインダーで画像や次のタイプのドキュメントを検索し、検索したアセットをページエディターで使用します。ドキュメントが `Download` コンポーネントに追加され、画像が `Image` コンポーネントに追加されます。作成者は、デフォルトの `Download` または `Image` コンポーネントを拡張するカスタム [!DNL Experience Manager] コンポーネントにもリモートアセットを追加します。サポートされる形式は以下の通りです。
 
-* **画像形式**：[画像コンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)がサポートする形式。[!DNL Dynamic Media] 画像はサポートされていません。
+* **画像形式**：[画像コンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html)がサポートする形式。[!DNL Dynamic Media] 画像はサポートされていません。
 * **ドキュメント形式**：詳しくは、[サポートされるドキュメント形式](assets-formats.md#supported-document-formats)を参照してください。
 
 ### 関連するユーザーとグループ {#users-and-groups-involved}
@@ -110,17 +110,12 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
 
 1. [!DNL Assets] デプロイメントの CORS 構成で、許可されたオリジンとして [!DNL Sites] デプロイメントを追加します。詳しくは、「[オリジン間リソース共有について（CORS）](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)」を参照してください。
 
-<!-- TBD: See if these steps are not required.
-    1. Log in using the administrator credentials. Search for `Cross-Origin`. Access **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
-
-    1. To create a CORS configuration for [!DNL Sites] deployment, click add option ![Assets add icon](assets/do-not-localize/assets_add_icon.png) next to **[!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]**.
-
-    1. In the field **[!UICONTROL Allowed Origins]**, input the URL of the local [!DNL Sites], that is, `https://[local_sites]:[port]`. Save the configuration.
--->
+1. [同じサイトcookieサポート](/help/sites-administering/same-site-cookie-support.md)を設定します。
 
 設定済みの [!DNL Sites] デプロイメントと [!DNL Assets] デプロイメントの間の接続を確認できます。
 
-![設定済み Connected Assets の接続テスト [!DNL Sites]](assets/connected-assets-multiple-config.png)
+![設定済み Connected Assets の接続テスト [!DNL Sites]](assets/connected-assets-multiple-config.png) 
+*図：接続されているアセットが設定されている場合の接続テスト [!DNL Sites]。*
 
 ## リモートアセットの使用 {#use-remote-assets}
 
@@ -222,11 +217,13 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 一般的なエラーのトラブルシューティングをおこなうには、次の手順に従います。
 
 * [!UICONTROL コンテンツファインダー]からリモートアセットを検索できない場合は、必要な役割と権限が設定されていることを確認してください。
-* リモート DAM から取得したアセットは、1 つ以上の理由で Web ページに発行できない場合があります。リモートサーバーに存在しない、取得する適切なアクセス許可がない、ネットワーク障害、などが原因の可能性があります。アセットがリモート DAM から削除されていないことを確認してください。適切な権限が設定され、前提条件が満たされていることを確認します。アセットをページに追加し直して、再公開してください。アセット取得時のエラーについては、[非同期ジョブのリスト](/help/sites-administering/asynchronous-jobs.md)を確認してください。
-* ローカル [!DNL Sites] デプロイメントからリモート DAM デプロイメントにアクセスできない場合は、クロスサイト cookie が許可されていることを確認してください。クロスサイト cookie がブロックされると、[!DNL Experience Manager] の 2 つのデプロイメントが認証されない場合があります。例えば、匿名モードの [!DNL Google Chrome] は、サードパーティ cookie をブロックする可能性があります。[!DNL Chrome] ブラウザーで cookie を許可するには、アドレスバーの「目」アイコンをクリックし、「サイトが動作していません」／「ブロック」に移動し、リモート DAM URL を選択して、ログイントークン cookie を許可します。または、[サードパーティ cookie を有効にする方法](https://support.google.com/chrome/answer/95647)に関するヘルプを参照してください。
 
-   ![匿名モードでの Chrome での cookie エラー](assets/chrome-cookies-incognito-dialog.png)
+* リモートDAMから取得したアセットは、1つ以上の理由でWebページに発行できない可能性があります。 リモートサーバーに存在しない、取得する適切なアクセス許可がない、ネットワーク障害、などが原因の可能性があります。アセットがリモート DAM から削除されていないことを確認してください。適切な権限が設定され、前提条件が満たされていることを確認します。アセットをページに追加し直して、再公開してください。アセット取得時のエラーについては、[非同期ジョブのリスト](/help/sites-administering/asynchronous-jobs.md)を確認してください。
+
+* ローカルの[!DNL Sites]デプロイメントからリモートDAMデプロイメントにアクセスできない場合は、クロスサイトcookieが許可されていること、および[同じサイトcookieサポート](/help/sites-administering/same-site-cookie-support.md)が設定されていることを確認してください。 クロスサイトcookieがブロックされている場合、[!DNL Experience Manager]のデプロイメントは認証されない可能性があります。 例えば、匿名モードの [!DNL Google Chrome] は、サードパーティ cookie をブロックする可能性があります。[!DNL Chrome]ブラウザーでcookieを許可するには、アドレスバーの「目」アイコンをクリックし、**サイトが動作していません**/**ブロック**&#x200B;に移動して、リモートDAM URLを選択し、ログイントークンcookieを許可します。 または、[サードパーティcookieを有効にする方法](https://support.google.com/chrome/answer/95647)を参照してください。
+
+   ![匿名モードでのChromeブラウザーでのCookieエラー](assets/chrome-cookies-incognito-dialog.png)
 
 * リモート参照が取得されず、エラーメッセージが表示される場合は、[!DNL Sites]デプロイが使用可能かどうかを確認し、ネットワーク接続の問題を確認します。 確認のために後で再試行します。[!DNL Assets] デプロイメントは、 [!DNL Sites] デプロイメントとの接続の確立を 2 回試み、失敗を報告します。
 
-   ![アセットのリモート参照の再試行に失敗](assets/reference-report-failure.png)
+   ![アセットのリモート参照の取得に失敗しました](assets/reference-report-failure.png)
