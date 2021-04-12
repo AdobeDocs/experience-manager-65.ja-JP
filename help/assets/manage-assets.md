@@ -7,9 +7,9 @@ role: Business Practitioner
 feature: アセット管理，検索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 translation-type: tm+mt
-source-git-commit: d88962cb4018b0b60f61006510f416478d119cb5
+source-git-commit: 46b11d0b59d748f2035e7ed46dc8caeef79d48c0
 workflow-type: tm+mt
-source-wordcount: '9652'
+source-wordcount: '9798'
 ht-degree: 59%
 
 ---
@@ -925,4 +925,24 @@ CJK（中国語、日本語、韓国語）で注釈を印刷するように[!DNL
 * 1 つのコレクションにはアセットへの参照のみが含まれるので、様々な場所のアセットを含めることができます。各コレクションは、アセットの参照整合性を維持します。
 * コレクションは、特権レベル（編集、表示など）の異なる複数のユーザー間で共有できます。
 
-コレクション管理について詳しくは、[コレクションの管理](/help/assets/manage-collections.md)を参照してください。
+コレクション管理の詳細については、[コレクションの管理](/help/assets/manage-collections.md)を参照してください。
+
+## デスクトップアプリまたはAdobeのアセットリンク{#hide-expired-assets-via-acp-api}でアセットを表示する際に、期限切れのアセットを非表示にする
+
+[!DNL Experience Manager] デスクトップアプリでは、WindowsまたはMacデスクトップからDAMリポジトリにアクセスできます。Adobeアセットリンクを使用すると、サポートされている[!DNL Creative Cloud]デスクトップアプリケーション内からアセットにアクセスできます。
+
+[!DNL Experience Manager]ユーザーインターフェイス内からアセットを参照する場合、期限切れのアセットは表示されません。 デスクトップアプリとアセットリンクからアセットを参照する際に、期限切れのアセットの表示、検索および取得を防ぐために、管理者は次の設定を行うことができます。 この設定は、管理者権限に関係なく、すべてのユーザーで機能します。
+
+次のCURLコマンドを実行します。 アセットにアクセスするユーザーの`/conf/global/settings/dam/acpapi/`で読み取りアクセス権を確認します。 `dam-user`グループに属するユーザーは、デフォルトで権限を持っています。
+
+```curl
+curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/global/settings/dam/acpapi/configuration/_jcr_content' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'jcr:title=acpapiconfig' \
+--data-urlencode 'hideExpiredAssets=true' \
+--data-urlencode 'hideExpiredAssets@TypeHint=Boolean' \
+--data-urlencode 'jcr:primaryType=nt:unstructured' \
+--data-urlencode '../../jcr:primaryType=sling:Folder'
+```
+
+詳しくは、デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#browse-search-preview-assets)を使用して[DAMアセットを参照する方法および[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)の使用方法を参照してください。
