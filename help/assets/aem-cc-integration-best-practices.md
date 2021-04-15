@@ -2,16 +2,16 @@
 title: Adobe Creative Cloudのベストプラクティスとの統合
 description: アセット転送ワークフローを合理化し、高いコンテンツ速度を達成するための [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] 統合のベストプラクティス。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: コラボレーション，Adobeアセットリンク，Experience Managerデスクトップアプリ
+role: Business Practitioner, Administrator
+feature: コラボレーション，Adobeアセットリンク，デスクトップアプリ
+exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+source-git-commit: c4cfb709162ca8f8f6e8508516c39542347c6bc4
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3254'
 ht-degree: 54%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] および [!DNL Creative Cloud] 統合のベストプラクティス  {#aem-and-creative-cloud-integration-best-practices}
 
