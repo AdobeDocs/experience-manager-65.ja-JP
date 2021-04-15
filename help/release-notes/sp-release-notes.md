@@ -3,14 +3,14 @@ title: '[!DNL Experience Manager] 6.5サービスパックリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8に固有のリリースノート'
 docset: aem65
 mini-toc-levels: 1
+exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: fb1423b7ae110b8a3cf8e0e389394e9266157a9f
+source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
 workflow-type: tm+mt
-source-wordcount: '3360'
+source-wordcount: '3418'
 ht-degree: 5%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] 6.5サービスパックリリースノート  {#aem-service-pack-release-notes}
 
@@ -154,9 +154,11 @@ ht-degree: 5%
 
 * コミュニティグループにページ構造を追加すると、パンくずリスト内の[!UICONTROL Group]タイトルが、最初の[!UICONTROL Page](NPR-35803)のタイトルに変更されます。
 * モデレーターとは異なり、標準コミュニティのメンバーはドラフト投稿にアクセスして編集することができません(NPR-35339)。
-* DSRPReindexServletを使用したアクセス制御とサービス拒否(DoS)。インデックス作成が完了するまでコミュニティのサイトを停止します(NPR-35591)。
+* `DSRPReindexServlet`とのアクセス制御とサービス拒否(DoS)の機能が壊れ、インデックス付けが完了するまでコミュニティのサイトが停止します(NPR-35591)。
 * [!UICONTROL 管理者]フィールドから[!UICONTROL すべてのユーザー]を削除しても、実際にはバックエンド(NPR-35592、NPR-35611)からは削除されません。
 * [!UICONTROL 構成メッセージ]コンポーネントは、入力されたテキストが部分一致の場合、結果を返しません(NPR-35666)。
+
+* **タグ**&#x200B;を選択して新しいブログにタグを追加しようとすると、パフォーマンスに何らかの影響が出ることに追加気が付きます。 パフォーマンスを向上させるには、タグ提案の問題を解決する[cqTagLucene-0.0.1.zip hotfix](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)をインストールします。 修正プログラムは[!DNL Software Distribution]からダウンロードできます。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
