@@ -5,9 +5,9 @@ docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
 translation-type: tm+mt
-source-git-commit: e2eb007eb7660004f98b4c26aba00a6a6e2a2f1a
+source-git-commit: 9b23e9d5bbdbdde864ce71f434d6536439067f82
 workflow-type: tm+mt
-source-wordcount: '3418'
+source-wordcount: '3413'
 ht-degree: 5%
 
 ---
@@ -158,7 +158,7 @@ ht-degree: 5%
 * [!UICONTROL 管理者]フィールドから[!UICONTROL すべてのユーザー]を削除しても、実際にはバックエンド(NPR-35592、NPR-35611)からは削除されません。
 * [!UICONTROL 構成メッセージ]コンポーネントは、入力されたテキストが部分一致の場合、結果を返しません(NPR-35666)。
 
-* **タグ**&#x200B;を選択して新しいブログにタグを追加しようとすると、パフォーマンスに何らかの影響が出ることに追加気が付きます。 パフォーマンスを向上させるには、タグ提案の問題を解決する[cqTagLucene-0.0.1.zip hotfix](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)をインストールします。 修正プログラムは[!DNL Software Distribution]からダウンロードできます。
+* **[!UICONTROL タグ]**&#x200B;を選択して新しいブログにタグを追加しようとすると、パフォーマンスの低下と遅さに気づくかもしれません。 パフォーマンスを向上させるには、[!DNL Software Distribution]から入手できる[cqTagLucene-0.0.1.zip hotfix](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)をインストールします。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
