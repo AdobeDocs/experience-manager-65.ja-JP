@@ -2,14 +2,14 @@
 title: ライブコピーの作成と同期
 description: ライブコピーを作成および同期する方法について説明します。
 feature: マルチサイトマネージャー
+exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: 05dc73448d6902ccdbc92782fff39ef1a6339056
 workflow-type: tm+mt
-source-wordcount: '4173'
+source-wordcount: '4174'
 ht-degree: 81%
 
 ---
-
 
 # ライブコピーの作成と同期{#creating-and-synchronizing-live-copies}
 
@@ -240,7 +240,7 @@ ht-degree: 81%
 
 #### 参照レールからのブループリントのロールアウト {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. **サイト**&#x200B;コンソールで、Blueprintのページを選択し、**[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開きます（ツールバーから）。
+1. **サイト**&#x200B;コンソールで、ライブコピーのページを選択し、**[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開きます（ツールバーから）。
 1. リストから「**ブループリント**」オプションを選択し、このページに関連付けられているブループリントを表示します。
 1. リストから必要なブループリントを選択します。
 1. 「**ロールアウト**」をクリックまたはタップします。
