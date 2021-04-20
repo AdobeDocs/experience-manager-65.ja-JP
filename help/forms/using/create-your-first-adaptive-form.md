@@ -7,7 +7,7 @@ uuid: ee351a3f-ea6a-4b4c-8045-4948ad51b7c1
 topic-tags: introduction
 discoiquuid: 1142bcd4-e3a7-41ce-a710-132ae6c21dbe
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

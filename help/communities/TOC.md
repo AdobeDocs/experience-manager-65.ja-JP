@@ -7,7 +7,7 @@ breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature-set: Experience Manager
 feature: Communities
-role: 業務担当者
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt

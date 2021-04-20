@@ -2,8 +2,8 @@
 title: タイムライン表示内のデジタルアセットのアクティビティストリーム
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
-feature: アセット管理
-role: 営業者、管理者
+feature: Asset Management
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

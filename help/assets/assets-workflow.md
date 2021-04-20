@@ -2,8 +2,8 @@
 title: ワークフローを使用したアセットの処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証およびワークフローの実行を行うためのアセット処理。
 contentOwner: AG
-feature: ワークフロー、レンディション
-role: 営業者、管理者
+feature: Workflow, Renditions
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

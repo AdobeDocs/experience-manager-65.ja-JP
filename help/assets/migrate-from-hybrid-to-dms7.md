@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 07f0803c-4ec4-4745-8214-63370e9d0282
-feature: Scene7モード，ハイブリッドモード
+feature: Scene7 mode,Hybrid mode
 translation-type: tm+mt
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt

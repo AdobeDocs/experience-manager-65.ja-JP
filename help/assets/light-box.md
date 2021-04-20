@@ -2,8 +2,8 @@
 title: 個人の画像ギャラリーとしてのライトボックス
 description: ライトボックスを、Adobe Experience Managerアセットの個人画像ギャラリーとして使用する方法を説明します。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: 開発者ツール，レンディション
+role: Business Practitioner, Administrator
+feature: Developer Tools,Renditions
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

@@ -3,8 +3,8 @@ title: デジタルアセットコレクションの管理
 description: 作成、表示、削除、編集、コレクションのダウンロードなど、アセットのコレクションを管理するタスクについて説明します。
 contentOwner: AG
 mini-toc-levels: 1
-role: 業務担当者
-feature: コレクション，アセット管理
+role: Business Practitioner
+feature: Collections,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

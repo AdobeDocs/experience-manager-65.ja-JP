@@ -9,8 +9,8 @@ topic-tags: content-fragments
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
-feature: コンテンツフラグメント
-role: 業務担当者、管理者
+feature: Content Fragments
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

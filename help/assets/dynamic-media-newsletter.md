@@ -6,7 +6,7 @@ contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
 role: Business Practitioner, Administrator
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
-feature: コラボレーション，Dynamic Mediaクラシック
+feature: Collaboration,Dynamic Media Classic
 translation-type: tm+mt
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt

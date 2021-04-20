@@ -3,7 +3,7 @@ title: サポートされるファイル形式を処理するためのベスト�
 description: ' [!DNL Experience Manager Assets]を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティスです。'
 contentOwner: AG
 role: Administrator
-feature: アセット管理，開発者ツール
+feature: Asset Management,Developer Tools
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

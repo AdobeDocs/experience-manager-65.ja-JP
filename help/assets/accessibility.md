@@ -2,7 +2,7 @@
 title: ' [!DNL Experience Manager Assets]のアクセス可能な機能とインターフェイス'
 description: 障害を持つユーザーにとって  [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]  のアクセシビリティ機能がどのように役立つかを説明します。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: Business Practitioner, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 translation-type: tm+mt

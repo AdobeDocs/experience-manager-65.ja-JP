@@ -2,8 +2,8 @@
 title: 重複アセットの検出の有効化
 description: Experience Manager内の重複アセットを検出できるようにする方法を説明します。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: アセット管理，アセットレポート
+role: Business Practitioner, Administrator
+feature: Asset Management,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

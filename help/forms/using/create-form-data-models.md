@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
 discoiquuid: 7c392909-ff84-4411-b44f-16f99dffac54
 docset: aem65
-feature: フォームデータモデル
+feature: Form Data Model
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

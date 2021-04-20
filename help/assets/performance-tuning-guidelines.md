@@ -3,8 +3,8 @@ title: パフォーマンス調整 [!DNL Assets]。
 description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフトウェア、ネットワーク・コンポーネントの変更に関する提案とガイダンス。ボトルネックを解消し、 [!DNL Experience Manager Assets]のパフォーマンスを最適化します。'
 contentOwner: AG
 mini-toc-levels: 1
-role: アーキテクト、管理者
-feature: アセット管理
+role: Architect, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

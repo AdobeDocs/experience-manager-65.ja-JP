@@ -2,8 +2,8 @@
 title: '[!DNL Assets] ホームページ体験'
 description: アセットに関する最近のアクティビティのスナップショットなど、豊富なスタートアップスクリーンエクスペリエンスに適した [!DNL Experience Manager Assets] ホームページをパーソナライズします。
 contentOwner: AG
-feature: 開発者ツール、アセット管理
-role: 管理者、実業家
+feature: Developer Tools, Asset Management
+role: Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

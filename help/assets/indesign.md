@@ -3,7 +3,7 @@ title: ' [!DNL Assets] と [!DNL InDesign Server]を統合'
 description: ' [!DNL Adobe Experience Manager Assets] を [!DNL Adobe InDesign Server]と統合する方法を学びます。'
 contentOwner: AG
 role: Administrator
-feature: 公開
+feature: Publishing
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

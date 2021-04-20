@@ -2,8 +2,8 @@
 title: カスタマイズと拡張 [!DNL Assets]
 description: アセット共有とアセットエディターをカスタマイズおよび拡張する方法について説明します。これにより、ユーザーに合わせたインターフェイスと一連の機能が提供されます。
 contentOwner: AG
-role: デベロッパー
-feature: 開発者ツール
+role: Developer
+feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: ライブコピーの作成と同期
 description: ライブコピーを作成および同期する方法について説明します。
-feature: マルチサイトマネージャー
+feature: Multi Site Manager
 exl-id: 896b35dd-4510-4c94-8615-03d9649c2f64
 translation-type: tm+mt
 source-git-commit: 05dc73448d6902ccdbc92782fff39ef1a6339056

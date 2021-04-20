@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: upgrading
 discoiquuid: e35c9352-f0d5-4db5-b88f-0720af8f6883
 docset: aem65
-feature: アップグレード
+feature: Upgrading
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

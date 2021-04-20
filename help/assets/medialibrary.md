@@ -2,8 +2,8 @@
 title: 基本的なデジタルアセット管理にメディアライブラリを使用する
 description: '[!DNL Experience Manager Assets] およびアセット管理用のメディアライブラリ。'
 contentOwner: AG
-role: 建築家、リーダー
-feature: アセット管理
+role: Architect, Leader
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: ad0672c345262712e51e821fa4e050b505063ac4
 workflow-type: tm+mt

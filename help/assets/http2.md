@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: Business Practitioner, Administrator
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
-feature: 発行，設定
+feature: Publishing,Configuration
 translation-type: tm+mt
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt

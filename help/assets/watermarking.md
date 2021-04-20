@@ -2,8 +2,8 @@
 title: デジタルアセットへの透かしの追加
 description: 透かし処理機能を使用して、アセットにデジタル透かしを追加する方法について説明します。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: アセット管理
+role: Business Practitioner, Administrator
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

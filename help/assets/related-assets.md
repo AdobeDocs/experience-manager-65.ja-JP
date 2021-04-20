@@ -2,8 +2,8 @@
 title: 関連アセット
 description: 共通の属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
-role: 業務担当者
-feature: コラボレーション，アセット管理
+role: Business Practitioner
+feature: Collaboration,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: 検索結果をフィルターする検索ファセット
 description: ' [!DNL Adobe Experience Manager]で検索ファセットを作成、変更、および使用する方法。'
 contentOwner: AG
-role: 管理者、デベロッパー
-feature: 検索
+role: Administrator, Developer
+feature: Search
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

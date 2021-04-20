@@ -2,8 +2,8 @@
 title: アセットを共有するプライベートフォルダー
 description: ' [!DNL Adobe Experience Manager Assets] 内にプライベートフォルダーを作成し、他のユーザーと共有する方法、および他のユーザーに様々な権限を割り当てる方法を説明します。'
 contentOwner: AG
-role: 業務担当者
-feature: コラボレーション
+role: Business Practitioner
+feature: Collaboration
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

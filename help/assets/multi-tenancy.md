@@ -2,8 +2,8 @@
 title: コレクション、スニペット、スニペット、スニペットテンプレートのマルチテナンシー
 description: マルチテナンシー機能を使用して、お客様の組織に基づいてCRXリポジトリ内のコンテンツを分類し、不正アクセスを防ぐ方法を説明します。
 contentOwner: AG
-role: アーキテクト、管理者、リーダー
-feature: コレクション
+role: Architect, Administrator, Leader
+feature: Collections
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

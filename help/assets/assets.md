@@ -2,8 +2,8 @@
 title: ' [!DNL Adobe Experience Manager Assets]の紹介'
 description: デジタルアセット管理、その使用例、 [!DNL Adobe Experience Manager Asset] オファーについて説明します。
 contentOwner: AG
-feature: アセット管理
-role: リーダー、アーキテクト、実業家
+feature: Asset Management
+role: Leader, Architect, Business Practitioner
 translation-type: tm+mt
 source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
 workflow-type: tm+mt

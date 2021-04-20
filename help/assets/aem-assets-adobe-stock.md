@@ -2,7 +2,7 @@
 title: ' [!DNL Adobe Stock] アセットを管理'
 description: ' [!DNL Adobe Experience Manager] 内から [!DNL Adobe Stock] アセットを、検索、取得、ライセンス、管理します。ライセンスされたアセットをその他のデジタルアセットとして使用します。'
 contentOwner: AG
-feature: Adobe Stock検索
+feature: Search, Adobe Stock
 role: Business Practitioner, Administrator
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 translation-type: tm+mt

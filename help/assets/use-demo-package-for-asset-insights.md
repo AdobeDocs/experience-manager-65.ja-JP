@@ -2,8 +2,8 @@
 title: アセットインサイトにデモパッケージを使用する
 description: デモパッケージを使用して、アセットインサイトで Web ページからデータを取得し、Web ページのインサイトを生成できるようにします。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: アセットインサイト，アセットレポート
+role: Business Practitioner, Administrator
+feature: Asset Insights,Asset Reports
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

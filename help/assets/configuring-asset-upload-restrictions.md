@@ -2,8 +2,8 @@
 title: アセットのアップロード制限の設定
 description: 'ユーザーがアップロードできるアセット（ファイル）の種類を制限する '
 contentOwner: AG
-role: 開発者、管理者、アーキテクト
-feature: アセット管理，アップロード
+role: Developer, Administrator, Architect
+feature: Asset Management,Upload
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

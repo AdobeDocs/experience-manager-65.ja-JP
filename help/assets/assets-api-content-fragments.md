@@ -10,8 +10,8 @@ content-type: reference
 topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
-feature: コンテンツフラグメント
-role: 業務担当者、管理者
+feature: Content Fragments
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

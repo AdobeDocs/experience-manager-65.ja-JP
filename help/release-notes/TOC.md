@@ -6,8 +6,8 @@ user-guide-title: Adobe Experience Manager6.5リリースノート
 breadcrumb-title: リリースノート
 user-guide-description: AEM 6.5の最新の新機能について、リリースノートで説明します。
 feature-set: Experience Manager
-feature: リリース情報
-role: リーダー、アーキテクト、開発者、データ・アーキテクト、データ・エンジニア、管理者、実業家
+feature: Release Information
+role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
 workflow-type: tm+mt

@@ -8,7 +8,7 @@ topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f4d98cb9-84d8-4735-91d2-b9ceec861e5e
 docset: aem65
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 exl-id: 1f89c3bf-e67e-4d13-9285-3367be1ac8f8
 translation-type: tm+mt
 source-git-commit: 92092e1c050c9264c19e3cd9da9b240607af7bab

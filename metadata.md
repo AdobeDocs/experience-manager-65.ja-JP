@@ -4,7 +4,7 @@ mini-toc-levels: 2
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-65.ja-JP
 solution: Experience Manager
 version: 6.5
-type: ドキュメント
+type: Documentation
 index: y
 translation-type: tm+mt
 source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7

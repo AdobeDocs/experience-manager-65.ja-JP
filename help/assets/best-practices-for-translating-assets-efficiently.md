@@ -3,7 +3,7 @@ title: アセットの翻訳のベストプラクティス
 description: 翻訳された各バージョンを同期し、翻訳ワークフローを合理化するための、アセットの効率的な管理に関するベストプラクティス。
 contentOwner: AG
 role: Administrator
-feature: アセット管理
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

@@ -2,8 +2,8 @@
 title: リンクを使用したアセットの共有
 description: アセット、フォルダーおよびコレクションをURLとして共有します。
 contentOwner: AG
-role: 業務担当者
-feature: リンクの共有，アセットの管理
+role: Business Practitioner
+feature: Link Sharing,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

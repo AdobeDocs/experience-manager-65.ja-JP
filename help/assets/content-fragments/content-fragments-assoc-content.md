@@ -10,8 +10,8 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
-feature: コンテンツフラグメント
-role: 業務担当者、管理者
+feature: Content Fragments
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

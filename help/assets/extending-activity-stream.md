@@ -2,8 +2,8 @@
 title: ' [!DNL Assets] をアクティビティストリームと統合'
 description: ' [!DNL Experience Manager] の記録機能と、特定のイベントを記録するように設定する方法について説明します。'
 contentOwner: AG
-role: デベロッパー
-feature: アセット管理
+role: Developer
+feature: Asset Management
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

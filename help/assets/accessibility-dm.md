@@ -4,8 +4,8 @@ description: Dynamic MediaおよびDynamic MediaのViewerでのアクセシビ�
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: アクセシビリティ
-role: 営業者、管理者
+feature: Accessibility
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

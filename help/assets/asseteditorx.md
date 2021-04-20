@@ -2,8 +2,8 @@
 title: アセットエディタの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: 開発者ツール
+role: Business Practitioner, Administrator
+feature: Developer Tools
 translation-type: tm+mt
 source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
 workflow-type: tm+mt

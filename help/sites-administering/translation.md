@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 1e0a68c5-1583-4103-9dbb-7a53faa03c06
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
-feature: 言語コピー
+feature: Language Copy
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

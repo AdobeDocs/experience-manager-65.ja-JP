@@ -2,7 +2,7 @@
 title: '[!DNL Assets] 代理開発'
 description: プロキシは、 [!DNL Experience Manager] instance that uses proxy workers to process jobs. Learn how to configure an [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネント、およびカスタムプロキシワーカーの開発方法です。
 contentOwner: AG
-role: 管理者、アーキテクト
+role: Administrator, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 translation-type: tm+mt
 source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537

@@ -7,7 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
-feature: CDNキャッシュ
+feature: CDN Cache
 translation-type: tm+mt
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt

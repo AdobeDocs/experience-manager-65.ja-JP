@@ -2,8 +2,8 @@
 title: デジタルアセットを整理します
 description: Experience Managerを使用して、デジタルアセット、画像、ファイル、フォルダーなどを整理します。
 contentOwner: AG
-role: 業務担当者
-feature: アセット管理，検索
+role: Business Practitioner
+feature: Asset Management,Search
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

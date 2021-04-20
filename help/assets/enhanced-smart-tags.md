@@ -2,8 +2,8 @@
 title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
-feature: スマートタグ、検索
-role: 開業医
+feature: Smart Tags, Search
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
 workflow-type: tm+mt

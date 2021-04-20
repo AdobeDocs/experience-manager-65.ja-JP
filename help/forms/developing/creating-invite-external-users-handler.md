@@ -1,7 +1,7 @@
 ---
 title: Invite External Usersハンドラーの作成
 description: Invite External Usersハンドラーの作成
-role: デベロッパー
+role: Developer
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

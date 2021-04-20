@@ -2,8 +2,8 @@
 title: アセットエディタページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
-role: 業務担当者、管理者
-feature: 開発者ツール，アセット管理
+role: Business Practitioner, Administrator
+feature: Developer Tools,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

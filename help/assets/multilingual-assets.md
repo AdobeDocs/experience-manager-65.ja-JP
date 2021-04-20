@@ -2,7 +2,7 @@
 title: 多言語アセットとアセット翻訳
 description: バイナリ、メタデータ、タグなどのアセットを複数の言語に変換するワークフローの自動化方法を説明します。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: Administrator
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e

@@ -2,7 +2,7 @@
 title: AEM Fluid Experiences機能のリスト
 description: 流体エクスペリエンス機能のリスト
 index: n
-feature: オーサリング
+feature: Authoring
 translation-type: tm+mt
 source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
 workflow-type: tm+mt

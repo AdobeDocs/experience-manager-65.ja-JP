@@ -2,8 +2,8 @@
 title: 資産のDigital Rights Management
 description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
-role: 業務担当者、管理者
-feature: DRM，アセット管理
+role: Business Practitioner, Administrator
+feature: DRM,Asset Management
 translation-type: tm+mt
 source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
 workflow-type: tm+mt

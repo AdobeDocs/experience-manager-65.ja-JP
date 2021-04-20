@@ -3,8 +3,8 @@ title: ' でのデジタルアセットと画像の検索 [!DNL Adobe Experience
 description: フィルターパネルを使用した [!DNL Adobe Experience Manager] での必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 検索、メタデータ
-role: 業務担当者
+feature: Search, Metadata
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: fd283b840830bef613689f81cf753e226fb834d7
 workflow-type: tm+mt
