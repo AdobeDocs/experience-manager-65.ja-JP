@@ -1,17 +1,17 @@
 ---
 title: JSONスキーマを使用したアダプティブFormsの作成方法
 description: フォームモデルとしてJSONスキーマを使用してアダプティブフォームを作成する方法を学びます。 アダプティブフォームの作成には、既存のJSONスキーマを使用できます。 JSONスキーマのサンプルを参照し、JSONスキーマ定義のフィールドを事前設定し、アダプティブフォームコンポーネントの許容値を制限し、サポートされていない構成を学びます。
-feature: Adaptive Forms
-role: Business Practitioner, Developers
-level: Beginner, Imtermediate
+feature: アダプティブフォーム
+role: Business Practitioner, Developer
+level: Beginner, Intermediate
+exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 translation-type: tm+mt
-source-git-commit: 37ab98c9c78af452887c32101287b6d7f18d9d91
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1450'
 ht-degree: 61%
 
 ---
-
 
 # JSON スキーマを使用したアダプティブフォームの作成 {#creating-adaptive-forms-using-json-schema}
 
@@ -659,7 +659,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
-   <td><p>ブール値</p> </td>
+   <td><p>ブール型</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付よりも小さい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付以下の値である必要があります。</p> </td>
    <td>
     <ul>
@@ -670,7 +670,7 @@ JSONスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
-   <td><p>ブール値</p> </td>
+   <td><p>ブール型</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付よりも大きい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付以上の値である必要があります。</p> </td>
    <td>
     <ul>
