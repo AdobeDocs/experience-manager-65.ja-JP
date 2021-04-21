@@ -1,17 +1,17 @@
 ---
 title: XMLスキーマを使用したアダプティブFormsの作成方法
 description: XMLスキーマをアダプティブフォームのフォームモデルとして使用する方法を学びます。 既存のXSDテンプレートを適用してアダプティブフォームを作成し、XSDからアダプティブフォームにスキーマ要素をドラッグ&ドロップすることができます。 XMLスキーマのサンプルを参照し、XMLスキーマを使用してフィールドに特別なプロパティを追加し、アダプティブフォームコンポーネントに許容される値を制限してください。
-feature: Adaptive Forms
-role: Business Practitioner, Developers
-level: Beginner, Imtermediate
+feature: アダプティブフォーム
+role: Business Practitioner, Developer
+level: Beginner, Intermediate
+exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
 translation-type: tm+mt
-source-git-commit: ec8a4c3941b5434f10ad0727be02fcf296cd4da7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1075'
 ht-degree: 82%
 
 ---
-
 
 # XML スキーマを使ったアダプティブフォームの作成 {#creating-adaptive-forms-using-xml-schema}
 
@@ -217,7 +217,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
-   <td><p>ブール値</p> </td>
+   <td><p>ブール型</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付よりも小さい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、maximum プロパティに指定された数値または日付以下の値である必要があります。</p> </td>
    <td>
     <ul>
@@ -228,7 +228,7 @@ XMLスキーマ要素に次の制限を追加して、アダプティブフォ�
   </tr>
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
-   <td><p>ブール値</p> </td>
+   <td><p>ブール型</p> </td>
    <td><p>true の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付よりも大きい値である必要があります。</p> <p>false の場合、フォームのコンポーネントで指定された数値または日付は、minimum プロパティに指定された数値または日付以上の値である必要があります。</p> </td>
    <td>
     <ul>
