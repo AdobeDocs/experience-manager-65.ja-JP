@@ -6,14 +6,13 @@ audience: end-user
 user-guide-title: AEM 6.5 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
-feature-set: Experience Manager Sites
-feature: Developing
+feature: 開発
 role: Developer
 translation-type: tm+mt
-source-git-commit: d7b0803385aaa451a1ec7ec280ff51c3e96e36e7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 81%
+source-wordcount: '919'
+ht-degree: 82%
 
 ---
 
@@ -208,7 +207,7 @@ ht-degree: 81%
    + [UI のテスト](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
 + ベストプラクティス{#bestpractices}
    + [ベストプラクティスの概要](best-practices.md)
-   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html)
+   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html?lang=ja)
    + [開発のベストプラクティス](development-practices.md)
    + [コンテンツのアーキテクチャ](content-architecture.md)
    + [ソフトウェアのアーキテクチャ](software-architecture.md)
