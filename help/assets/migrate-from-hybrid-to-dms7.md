@@ -7,10 +7,10 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: Business Practitioner, Administrator
-exl-id: 07f0803c-4ec4-4745-8214-63370e9d0282
 feature: Scene7モード，ハイブリッドモード
+exl-id: 07f0803c-4ec4-4745-8214-63370e9d0282
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 61e703e73b831a9b4e7045e5d5fffeef5be7ed6d
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
