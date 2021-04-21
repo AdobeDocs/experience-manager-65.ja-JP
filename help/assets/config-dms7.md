@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
-feature: Configuration,Scene7 mode
+feature: 設定，Scene7モード
 translation-type: tm+mt
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '6154'
 ht-degree: 56%
