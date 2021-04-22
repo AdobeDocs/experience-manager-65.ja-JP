@@ -9,9 +9,9 @@ user-guide-description: AEM の管理について説明します。
 feature: 管理
 role: Administrator
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 06cbf5ccc957b0cb5bd24c820f5209821ae92cd9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 92%
 
 ---
@@ -165,6 +165,7 @@ ht-degree: 92%
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
    + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
++ コンテンツ管理 {#contentmanagement}
    + [パッケージの使用方法](package-manager.md)
    + [タグの管理](tags.md)
    + [ページエクスポーター](page-exporter.md)
