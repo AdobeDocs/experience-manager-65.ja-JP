@@ -3,14 +3,14 @@ title: AEM 6.5機能ユーザーガイド
 seo-title: AEM 6.5機能ユーザーガイド
 description: AEM 6.5の基本的な機能の概要
 seo-description: AEM 6.5の基本的な機能の概要
+exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 38%
+source-wordcount: '157'
+ht-degree: 33%
 
 ---
-
 
 # AEM 6.5機能ユーザーガイド{#aem-65-capabilities-user-guides}
 
@@ -36,7 +36,11 @@ ht-degree: 38%
 
 ## AEM Screens {#aem-screens}
 
-[ダイナミックでインタラクティブなエクスペリエンスを公開するデジタル署名ソリューションについて説明します。](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
+[ダイナミックでインタラクティブなエクスペリエンスを公開するデジタル署名ソリューションについて説明します。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+
+## AEM Commerce {#aem-commerce}
+
+[AEMコマースについて説明します。](/help/commerce/home.md)
 
 ## AEM Communities {#aem-communities}
 
