@@ -2,15 +2,15 @@
 title: AEM 6.5 管理ユーザーガイド
 seo-title: AEM 6.5 管理ユーザーガイド
 description: 'このガイドでは、AEMプロジェクトを正常に管理する方法を説明します '
-seo-description: 'AEMプロジェクトを正常に管理する方法をカバー '
+seo-description: AEMプロジェクトを正常に管理する方法をカバー
+exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 40%
+source-wordcount: '357'
+ht-degree: 39%
 
 ---
-
 
 # AEM 6.5 管理ユーザーガイド
 
@@ -18,7 +18,7 @@ ht-degree: 40%
 
 ## 主要なAEM記事
 
-* [AEM 使用の手引き](https://helpx.adobe.com/jp/experience-manager/get-started.html)
+* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
@@ -34,10 +34,11 @@ ht-degree: 40%
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
 | [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
-| [画面ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html) | ダイナミックでインタラクティブなデジタルエクスペリエンスを公開するデジタル署名ソリューションについて説明します。 |
+| [画面ユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html) | ダイナミックでインタラクティブなデジタルエクスペリエンスを公開するデジタル署名ソリューションについて説明します。 |
 | [デプロイユーザーガイド](/help/sites-deploying/home.md) | このガイドでは、AEMの基本を示します。 |
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEMインスタンスを構築する方法を学びます。 |
 | [ユーザガイドの管理](/help/managing/home.md) | このガイドでは、AEMプロジェクトを正常に管理する方法について説明します。 |
+| [Commerce ユーザーガイド](/help/commerce/home.md) | AEMでのCommerce Integration Frameworkについて説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | このガイドでは、ユーザー生成コンテンツをLivefyreと共有する方法を説明します。 |
 
