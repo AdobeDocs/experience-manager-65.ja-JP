@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a6f58f6a-015a-4ced-941c-ef1b6d3e1d6f
 docset: aem65
-feature: Interactive Images
+feature: インタラクティブ画像
 role: Business Practitioner, Administrator
+exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '4332'
+ht-degree: 97%
 
 ---
-
 
 # インタラクティブ画像 {#interactive-images}
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 インタラクティブ画像の手順：
 
-1. **（オプション）ホットスポットの変数の識別** - AEM Assets と Dynamic Media をスタンドアロンで使用している場合は、まず、既存のクイックビュー実装で使用される動的変数を特定し、インタラクティブ画像を作成するときにホットスポットデータを入力できるようにします。[（オプション）ホットスポットの変数の識別](#optional-identifying-hotspot-variables)を参照してください。ただし、AEM Sites または AEM eCommerce（あるいは両方）を使用している場合、この手順は必要ありません。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+1. **（オプション）ホットスポットの変数の識別** - AEM Assets と Dynamic Media をスタンドアロンで使用している場合は、まず、既存のクイックビュー実装で使用される動的変数を特定し、インタラクティブ画像を作成するときにホットスポットデータを入力できるようにします。[（オプション）ホットスポットの変数の識別](#optional-identifying-hotspot-variables)を参照してください。ただし、AEM Sites または AEM eCommerce（あるいは両方）を使用している場合、この手順は必要ありません。[AEM Assets での eCommerce の概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
 
 1. **（オプション）インタラクティブ画像ビューアプリセットの作成** - ホットスポットを表すために使用するグラフィック画像をカスタマイズします。独自のインタラクティブ画像ビューアプリセットの作成は、標準提供のインタラクティブ画像ビューアプリセット `Shoppable_Banner` を使用する場合には必要ありません。[（オプション）インタラクティブ画像ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)を参照してください。
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 >このタスクが必要になるのは次に該当する場合のみです。
 >
 >* クイックビューをトリガーして、画像にインタラクティブ機能を追加する。
->* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+>* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
 
 >
 >
