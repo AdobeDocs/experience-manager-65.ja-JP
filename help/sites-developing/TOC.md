@@ -9,10 +9,10 @@ user-guide-description: このガイドでは、AEM インスタンスの構築�
 feature: 開発
 role: Developer
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 82%
+source-wordcount: '910'
+ht-degree: 81%
 
 ---
 
@@ -70,10 +70,6 @@ ht-degree: 82%
    + [JMX コンソールを使用したサービスの統合](jmx-integration.md)
    + [Bulk Editor の開発](dev-bulk-editor.md)
    + [レポートの開発](dev-reports.md)
-   + e コマース{#ecommerce}
-      + [e コマース](ecommerce.md)
-      + [開発（汎用）](generic.md)
-      + [SAP Commerce Cloud を使用した開発](sap-commerce-cloud.md)
 + コンポーネント{#components}
    + [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
    + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
