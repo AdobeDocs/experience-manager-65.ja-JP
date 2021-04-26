@@ -10,14 +10,14 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
+exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 translation-type: tm+mt
-source-git-commit: b68dd6c48d03e233265a2c93e61c0aeb768fa408
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2979'
 ht-degree: 95%
 
 ---
-
 
 # 基本操作{#basic-handling}
 
@@ -99,16 +99,16 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    <td><strong>目的</strong></td>
   </tr>
   <tr>
-   <td>Assets<br /> </td>
+   <td>アセット<br /> </td>
    <td>これらのコンソールでは、画像、ビデオ、ドキュメント、オーディオファイルなどのデジタルアセットを読み込んで、それらの<a href="/help/assets/home.md">デジタルアセットを管理</a>できます。これにより、これらのアセットは、同じ AEM インスタンス上で実行されているすべての Web サイトで使用できます。 </td>
   </tr>
   <tr>
-   <td>コミュニティ</td>
+   <td>Communities</td>
    <td>このコンソールを使用すると、<a href="/help/communities/overview.md#engagement-community">エンゲージメント</a>と<a href="/help/communities/overview.md#enablement-community">イネーブルメント</a>のために<a href="/help/communities/sites-console.md">コミュニティサイト</a>を作成および管理できます。</td>
   </tr>
   <tr>
    <td>Commerce</td>
-   <td><a href="/help/sites-administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td>
+   <td><a href="/help/commerce/cif-classic/administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td>
   </tr>
   <tr>
    <td>エクスペリエンスフラグメント</td>
@@ -591,4 +591,3 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 これを使用すると、適切な場所フィルターが既に設定された状態で[検索](/help/sites-authoring/search.md)と同じようにパネルが開き、表示したいコンテンツをさらにフィルタリングできます。
 
 ![bh-29](assets/bh-29.png)
-
