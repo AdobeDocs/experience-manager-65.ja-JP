@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Administrator
+exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '11745'
+source-wordcount: '11752'
 ht-degree: 88%
 
 ---
-
 
 # Dynamic Mediaのビデオ{#video}
 
@@ -401,9 +401,9 @@ VBR と CBR のどちらを使用するべきかVBR と CBR のどちらを選�
 
 | ビデオタイプ | 幅 x 高さ | 幅の比率 | 高さの比率 |
 |--- |--- |--- |--- |
-| ソース | 1,920 x 1,080 | 1 | 1 |
+| ソース | 1,920 x 1,080 | 1 | 3 |
 | エンコード | 960 x 540 | 2 | 2 |
-| エンコード | 640 x 360 | 3 | 1 |
+| エンコード | 640 x 360 | 3 | 3 |
 | エンコード | 480 x 270 | 4 | 4 |
 
 ### エンコードされたビデオのファイル形式 {#encoded-video-file-format}
@@ -477,8 +477,8 @@ Google Cloud を設定するには：
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. APIとサービスページの上部近くにある&#x200B;**[!UICONTROL APIとサービスを有効にするをタップします。]**
-1. API ライブラリページの左側の「**[!UICONTROL カテゴリ]**」で、「**[!UICONTROL YouTube」をタップします。]** ページの右側で、「YouTube Data API」 **[!UICONTROL をタップします。]**
-1. YouTube Data API v3ページで、「**[!UICONTROL 有効にする]**」をタップします。
+1. API ライブラリページの左側の「**[!UICONTROL カテゴリ]**」で、「**[!UICONTROL YouTube」をタップします。]** ページの右側で、「 **[!UICONTROL YouTubeデータAPI」をタップします。]**
+1. YouTubeデータAPI v3ページで、**[!UICONTROL 有効にするをタップします。]**
 
    ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
 
@@ -488,7 +488,7 @@ Google Cloud を設定するには：
 
 1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 1 で以下をおこないます。
 
-   * 「**[!UICONTROL 使用する API]** ドロップダウンリストで、「YouTube Data API v3」 **[!UICONTROL を選択します。]**
+   * 「**[!UICONTROL 使用する API]** ドロップダウンリストで、「 **[!UICONTROL YouTubeデータAPI v3」を選択します。]**
 
    * 「**[!UICONTROL API を呼び出す場所]**」ドロップダウンリストから、「**[!UICONTROL ウェブサーバー（node.js、Tomcat など）]**」を選択します。
 
@@ -572,7 +572,7 @@ AEM で、YouTube にビデオを公開するには、1 つ以上の YouTube チ
 YouTube への公開のレプリケーションエージェントを有効化した後、Google Cloud アカウントへの接続をテストする場合は、「**[!UICONTROL 接続をテスト」をタップします。]**&#x200B;ブラウザーのタブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらのリストがテストの一部として表示されます。
 
 1. AEMの左上隅にあるAEMロゴをクリックし、左側のレールで&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL デプロイメント]**/**[!UICONTROL レプリケーション]**/**[!UICONTROL 作成者のエージェントをクリックします。]**
-1. 作成者のエージェントページで、「**[!UICONTROL YouTube投稿(youtube)」をクリックします。]**
+1. 作成者のエージェントページで、**[!UICONTROL YouTube投稿(youtube)をクリックします。]**
 1. ツールバーの[設定]の右にある[**[!UICONTROL 編集]をクリックします。]**
 1. 「**[!UICONTROL 有効]**」チェックボックスをオンにして、レプリケーションエージェントをオンにします。
 1. 「**[!UICONTROL OK]**」をクリックします。
@@ -589,7 +589,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 #### AEM 6.4 以降での YouTube の設定  {#setting-up-youtube-in-aem-and-later}
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
-1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーアイコン）/**[!UICONTROL Cloud Services]**/**[!UICONTROL YouTube Publishing Configurationをタップします。]**
+1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーアイコン）/**[!UICONTROL Cloud Services]**/**[!UICONTROL YouTubeパブリッシング設定をタップします。]**
 1. 「**[!UICONTROL グローバル]**」をタップします（選択しないでください）。
 
 1. グローバルページの右上隅近くにある「**[!UICONTROL 作成」をタップします。]**
@@ -637,7 +637,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
 
 1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL デプロイメント]**/**[!UICONTROL Cloud Servicesをタップします。]**
-1. 「Third Party Services」という見出しの「YouTube」の下にある「**[!UICONTROL 今すぐ設定」をタップします。]**
+1. 「Third Party Services」の見出しの「YouTube」で、「**[!UICONTROL 今すぐ設定]**」をタップします。
 1. 設定を作成ダイアログボックスで、タイトル（必須）と名前（オプション）をそれぞれのフィールドに入力します。
 1. 「**[!UICONTROL 作成」をタップします。]**
 1. YouTube アカウント設定ダイアログボックスで、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
@@ -689,14 +689,14 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 1. 「**[!UICONTROL デフォルト値」をクリックします]** （「デフォルト」の左にある選択ボックスにチェックマークを追加しないでください）。
 1. **[!UICONTROL デフォルト]**&#x200B;ページで、**[!UICONTROL ビデオ]**&#x200B;の左側のボックスを選択し、「**[!UICONTROL 編集]**」をクリックします。
 1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブをクリックします。
-1. 「YouTubeパブリッシング」の見出しで、「**[!UICONTROL YouTubeカテゴリ」をクリックします。]**
+1. 「YouTube・パブリッシング」の見出しで、**[!UICONTROL YouTubeカテゴリをクリックします。]**
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
    * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値（「人とブログ」または「科学と技術」など）を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
-1. 「YouTube Publishing」という見出しの下にある「**[!UICONTROL YouTubeのプライバシー」をクリックします。]**
+1. 「YouTube出版」の見出しで、「**[!UICONTROL YouTubeプライバシー]**」をクリックします。
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
@@ -845,7 +845,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
-1. アセット詳細の進行状況を表示します。アセットをタップまたはクリックしたら、ドロップダウンメニューを開き、「**[!UICONTROL タイムライン」を選択します。]** エンコーディングやYouTube投稿などのワークフローアクティビティに絞り込むには、「 **[!UICONTROL ワークフロー」を選択します。]**
+1. アセット詳細の進行状況を表示します。アセットをタップまたはクリックしたら、ドロップダウンメニューを開き、「**[!UICONTROL タイムライン」を選択します。]** エンコーディングやYouTubeの投稿などのワークフローアクティビティに絞り込むには、「 **[!UICONTROL ワークフロー」を選択します。]**
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
@@ -922,7 +922,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 1. AEMで、**[!UICONTROL ツール]**/**[!UICONTROL ワークフロー]**/**[!UICONTROL モデルをタップします。]**
 1. ワークフローモデルページで、「]**YouTube に公開**[!UICONTROL 」を選択して、ツールバーの「]**編集**[!UICONTROL 」をタップします。
-1. YouTubeに投稿ワークフローページの右上隅近くにある「**[!UICONTROL 編集」をタップします。]**
+1. 「YouTubeに投稿」ワークフローページの右上隅近くにある「**[!UICONTROL 編集」をタップします。]**
 1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回タップしてインラインツールバーを表示します。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
@@ -1125,7 +1125,7 @@ URLでのJSON関数の使用について詳しくは、*Dynamic Media画像サ�
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーを必ずしもサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーションを使用して独自のHTML5ビューアを作成する手順については、AdobeHTML5ビューアSDK APIのクラス`s7sdk.video.VideoPlayer`と`s7sdk.video.VideoScrubber`の下の見出し「修飾子を使用した動作のカスタマイズ」を参照してください。 [HTML5ビューアSDK API]((https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html))のドキュメントを参照してください。
+必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーションを使用して独自のHTML5ビューアを作成する手順については、AdobeHTML5ビューアSDK APIのクラス`s7sdk.video.VideoPlayer`と`s7sdk.video.VideoScrubber`の下の見出し「修飾子を使用した動作のカスタマイズ」を参照してください。 [HTML5ビューアSDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)のドキュメントを参照してください。
 
 <!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
@@ -1321,4 +1321,3 @@ Dynamic Media によって自動的に生成される 10 個のサムネール�
 1. 画像のアップロードと公開が完了したら、サムネールを変更ページで、「変更を保存」をタップします。****
 
    カスタムサムネールがビデオに追加されます。
-
