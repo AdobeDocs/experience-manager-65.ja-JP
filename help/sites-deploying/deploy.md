@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
+exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 translation-type: tm+mt
-source-git-commit: cb07e24b01084f57ad46615cb463ad5a0329c181
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 75%
 
 ---
-
 
 # デプロイとメンテナンス{#deploying-and-maintaining}
 
@@ -50,7 +50,7 @@ ht-degree: 75%
 * [コマンドラインによる起動と停止](/help/sites-deploying/command-line-start-and-stop.md)
 * [設定](/help/sites-deploying/configuring.md)
 * [AEM 6.5 へのアップグレード](/help/sites-deploying/upgrade.md)
-* [e コマース](/help/sites-deploying/ecommerce.md)
+* [e コマース](/help/commerce/cif-classic/deploying/ecommerce.md)
 * [設定方法に関する記事](/help/sites-deploying/ht-deploy.md)
 * [Web コンソール](/help/sites-deploying/web-console.md)
 * [レプリケーションのトラブルシューティング](/help/sites-deploying/troubleshoot-rep.md)
@@ -59,7 +59,7 @@ ht-degree: 75%
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは ](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## 基本概念 {#basic-concepts}
 
@@ -78,7 +78,7 @@ Adobe Experience Manager は、商業 Web サイトおよび関連サービス�
 * **Web サイト**
 * **モバイルアプリケーション**
 * **デジタルパブリケーション**
-* **フォーム**
+* **Forms**
 * **デジタルアセット**
 * **Communities**
 * **オンライン商取引**
@@ -128,7 +128,7 @@ AEM Managed Services を使用すれば、次のようなメリットを享受�
 
 **クラウドマネージャー**：Adobe Experience Manager Services 製品の一部である Cloud Manager は、組織がクラウド内で Adobe Experience Manager を自己管理することをさらに可能にするセルフサービスポータルです。これには、IT チームと実装パートナーがパフォーマンスやセキュリティを犠牲にすることなくカスタマイズやアップデートの提供を迅速化できるようにする、最先端の継続的インテグレーションと継続的配信（CI／CD）パイプラインが含まれます。Cloud Manager は、Adobe Managed Service のお客様のみご利用いただけます。
 
-Cloud Mangerとそのリソースについて詳しくは、[**Cloud Managerユーザーガイド**](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)を参照してください。
+Cloud Mangerとそのリソースについて詳しくは、[**Cloud Managerユーザーガイド**](https://docs.adobe.com/content/help/ja/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)を参照してください。
 
 ## はじめに {#getting-started}
 
@@ -311,7 +311,7 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [コマンドラインによる起動と停止](/help/sites-deploying/command-line-start-and-stop.md)
 * [設定](/help/sites-deploying/configuring.md)
 * [AEM 6.5 へのアップグレード](/help/sites-deploying/upgrade.md)
-* [e コマース](/help/sites-deploying/ecommerce.md)
+* [e コマース](/help/commerce/cif-classic/deploying/ecommerce.md)
 * [設定方法に関する記事](/help/sites-deploying/ht-deploy.md)
 * [Web コンソール](/help/sites-deploying/web-console.md)
 * [レプリケーションのトラブルシューティング](/help/sites-deploying/troubleshoot-rep.md)
@@ -320,4 +320,4 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは ](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
