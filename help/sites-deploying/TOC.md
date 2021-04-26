@@ -9,10 +9,10 @@ user-guide-description: Adobe Managed Services クラウドデプロイメント
 feature: デプロイ
 role: Architect
 translation-type: tm+mt
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 93%
+source-wordcount: '328'
+ht-degree: 92%
 
 ---
 
@@ -90,11 +90,6 @@ ht-degree: 93%
    + [AEM 6.5 における Forms リポジトリの再構築](forms-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5 における e コマースリポジトリの再構築](ecommerce-repository-restructuring-in-aem-6-5.md)
    + [6.5 における AEM Communities のリポジトリ再構築](communities-repository-restructuring-in-aem-6-5.md)
-+ e コマース {#ecommerce}
-   + [e コマースの概要](ecommerce.md)
-   + [SAP Commerce Cloud](sap-commerce-cloud.md)
-   + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-   + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 + ベストプラクティス {#practices}
    + [デプロイのベストプラクティス](best-practices.md)
    + [パフォーマンスツリー](performance-tree.md)
