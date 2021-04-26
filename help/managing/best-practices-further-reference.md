@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
+exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 translation-type: tm+mt
-source-git-commit: 37ec3d8ce779ba392e6a92c828efb5fad749abec
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3783'
 ht-degree: 65%
 
 ---
-
 
 # チェックリスト - 詳細情報{#the-checklist-further-reference}
 
@@ -34,18 +34,18 @@ AEMを（特に初めて）実装する場合は、AEM](https://www.adobe.com/ma
 
 次のような使用する AEM の機能と、デザインへの影響を検討します。
 
-* [Commerce](/help/sites-administering/ecommerce.md)
-* [スクリーン](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Commerce](/help/commerce/cif-classic/administering/ecommerce.md)
+* [スクリーン](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [タグ](/help/sites-administering/tags.md)
 * [マルチサイト管理と翻訳](/help/sites-administering/msm-and-translation.md)
-* [フォーム](/help/forms/home.md)
-* [コミュニティ](/help/communities/deploy-communities.md)
+* [Forms](/help/forms/home.md)
+* [Communities](/help/communities/deploy-communities.md)
 * [Livefyre](https://answers.livefyre.com/product/livefyre-for-adobe-experience-manager-aem/livefyre-for-adobe-experience-manager/)
 
 また、[リリースノート](/help/release-notes/release-notes.md)で AEM の様々なバージョンをチェックして、新機能が追加された時期を確認してください。
 
-### 統合  {#integrations}
+### 統合 {#integrations}
 
 AEM は、他のアドビ製品やサードパーティのサービスと統合できます。統合により、さらなるパワーと機能を自由に利用できます。
 
