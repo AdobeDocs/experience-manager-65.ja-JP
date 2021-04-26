@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
+exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
 translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 90%
 
 ---
-
 
 # AEM コンポーネントの開発{#developing-aem-components}
 
@@ -26,7 +26,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 * [ページをオーサリング](/help/sites-authoring/default-components.md)するとき、作成者はコンポーネントを使用してコンテンツを編集および設定できます。
 
-   * [コマース](/help/sites-administering/ecommerce.md)サイトを構築するときは、コンポーネントを使用して、例えばカタログの情報を収集してレンダリングできます。詳しくは、[e コマースの開発](/help/sites-developing/ecommerce.md)を参照してください。
+   * [コマース](/help/commerce/cif-classic/administering/ecommerce.md)サイトを構築するときは、コンポーネントを使用して、例えばカタログの情報を収集してレンダリングできます。詳しくは、[e コマースの開発](/help/commerce/cif-classic/developing/ecommerce.md)を参照してください。
 
    * [コミュニティ](/help/communities/author-communities.md)サイトを構築するときは、コンポーネントを使用して、訪問者に情報を提供したり、訪問者から情報を収集したりできます。詳しくは、[コミュニティの開発](/help/communities/communities.md)を参照してください。
 
