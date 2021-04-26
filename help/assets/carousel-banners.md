@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: e26c7f7f-bdd7-421a-8614-ba48abf381d2
 docset: aem65
-feature: Carousel Banners
+feature: カルーセルバナー
 role: Business Practitioner, Administrator
+exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '4807'
+source-wordcount: '4804'
 ht-degree: 96%
 
 ---
-
 
 # カルーセルバナー {#carousel-banners}
 
@@ -57,7 +57,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
    >[!NOTE]
    >
-   >AEM Sites または Ecommerce のユーザーである場合、組み込み機能を使用して製品ページに移動し、製品カタログで既存の SKU を調べることができます。ホットスポットまたは画像マップの変数を手動で入力する必要はありません。[eCommerce の設定](/help/sites-administering/generic.md)に関する情報を参照してください。
+   >AEM Sites または Ecommerce のユーザーである場合、組み込み機能を使用して製品ページに移動し、製品カタログで既存の SKU を調べることができます。ホットスポットまたは画像マップの変数を手動で入力する必要はありません。[eCommerce の設定](/help/commerce/cif-classic/administering/generic.md)に関する情報を参照してください。
    >
    >
    >AEM Assets と Dynamic Media のユーザーである場合は、ホットスポットと画像マップのデータを手動で入力してから、公開済みの URL または埋め込みコードをサードパーティのコンテンツ管理システムに統合します。
@@ -104,7 +104,7 @@ AEM Assets 内のバナー画像にホットスポットまたは画像マップ
 
 >[!NOTE]
 >
->AEM Sites または AEM Ecommerce（あるいは両方）のユーザーである場合、この手順はスキップできます。ホットスポットや画像マップの変数を手動で識別する必要はありません。eコマースとの統合を使用して製品統合を行うことができます。 [eCommerce の設定](/help/sites-administering/generic.md)に関する情報を参照してください。また、インタラクティブコンポーネントを使用し、Web ページにインタラクティブコンポーネントを追加できます。
+>AEM Sites または AEM Ecommerce（あるいは両方）のユーザーである場合、この手順はスキップできます。ホットスポットや画像マップの変数を手動で識別する必要はありません。eコマースとの統合を使用して製品統合を行うことができます。 [eCommerce の設定](/help/commerce/cif-classic/administering/generic.md)に関する情報を参照してください。また、インタラクティブコンポーネントを使用し、Web ページにインタラクティブコンポーネントを追加できます。
 >
 >AEM Assets または Dynamic Media のユーザーである場合は、URL または埋め込みコードを公開してから、サードパーティのコンテンツ管理システムに統合し、ホットスポットと画像マップを手動で識別します。
 
