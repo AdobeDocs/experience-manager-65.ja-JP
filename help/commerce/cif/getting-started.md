@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce統合フレームワーク
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '681'
 ht-degree: 6%
 
 ---
@@ -28,17 +28,17 @@ AEMコンテンツとコマースのオンボーディングは、次の2つの�
 
 2. AEMとコマースソリューションの接続
 
-### AEM 6.5用AEM Content and Commenceアドオンのインストール
+### AEM 6.5 {#install-add-on}用AEM Content and Commerceアドオンのインストール
 
 AEM 6.5用のAEM Commerce 追加-Onを[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)ポータルからダウンロードしてインストールします。
 
 必要なAEM 6.5 Service Packを開始してインストールします。 最後に使用可能なService Packをインストールすることをお勧めします。
 
-    >[!NOTE]
-    >
-    >これは、AEM Managed Serviceのお客様向けにCSEが行います。
+>[!NOTE]
+>
+>これは、AEM Managed Serviceのお客様向けにCSEが行います。
 
-### AEMをコマースシステムに接続する
+### AEMをコマースシステムに接続{#connect}
 
 AEMは、AEM用のアクセス可能なGraphQLエンドポイントを持つ任意のコマースシステムに接続できます。 これらのエンドポイントは通常、公開されている状態で使用できます。また、個々のプロジェクトの設定に応じて、プライベートVPNまたはローカル接続を介して接続することもできます。
 
