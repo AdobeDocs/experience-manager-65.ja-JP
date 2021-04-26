@@ -2,16 +2,16 @@
 title: Assets ガイド
 description: このガイドでは、デジタルアセットの作成、管理、配信、最適化など、すべてのExperience Managerアセットタスクについて説明します。
 user-guide-title: Assets ガイド
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Architect, Administrator
+exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '333'
 ht-degree: 24%
 
 ---
-
 
 # Assets ガイド
 
@@ -40,6 +40,7 @@ ht-degree: 24%
 | [デプロイユーザーガイド](/help/sites-deploying/home.md) | このガイドでは、Experience Managerの基本について説明します。 |
 | [開発ユーザーガイド](/help/sites-developing/home.md) | Experience Managerの展開方法を説明します。 |
 | [ユーザガイドの管理](/help/managing/home.md) | このガイドでは、Experience Managerプロジェクトを正常に管理する方法について説明します。 |
+| [Commerce ユーザーガイド](/help/commerce/home.md) | AEMでのCommerce Integration Frameworkについて説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 | [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html) | このガイドは、ユーザー生成コンテンツを[!DNL Livefyre]と共有する方法を示します。 |
 
