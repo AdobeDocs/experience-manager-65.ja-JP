@@ -10,14 +10,14 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
+exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
 translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '1287'
 ht-degree: 74%
 
 ---
-
 
 # ターゲットコンテンツの作成{#developing-for-targeted-content}
 
@@ -253,7 +253,7 @@ Web サイトのパフォーマンスを追跡するには、注文確認ペー�
 </script>
 ```
 
-各パラメーターの値は注文ごとに異なります。そのため、購入のプロパティに基づいてコードを生成するコンポーネントが必要です。CQ [eCommerce Integration Framework](/help/sites-administering/ecommerce.md)を使用すると、製品カタログとの統合と、買い物かごとチェックアウトページの実装が可能になります。
+各パラメーターの値は注文ごとに異なります。そのため、購入のプロパティに基づいてコードを生成するコンポーネントが必要です。CQ [eCommerce Integration Framework](/help/commerce/cif-classic/administering/ecommerce.md)を使用すると、製品カタログとの統合と、買い物かごとチェックアウトページの実装が可能になります。
 
 Geometrixx Outdoors のサンプルでは、訪問者が商品を購入すると、以下の確認ページが表示されます。
 
