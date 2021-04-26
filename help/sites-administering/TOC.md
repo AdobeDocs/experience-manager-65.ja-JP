@@ -9,9 +9,9 @@ user-guide-description: AEM の管理について説明します。
 feature: 管理
 role: Administrator
 translation-type: tm+mt
-source-git-commit: 06cbf5ccc957b0cb5bd24c820f5209821ae92cd9
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '637'
 ht-degree: 92%
 
 ---
@@ -109,13 +109,6 @@ ht-degree: 92%
    + [セグメント化の設定](campaign-segmentation.md)
    + [ランディングページ用のデザインインポーターの拡張と設定](extending-the-design-importer-for-landingpages.md)
    + [ランディングページと Adobe Analytics の統合](integrating-landing-pages-with-adobe-analytics.md)
-+ e コマース {#ecommerce}
-   + [e コマース](ecommerce.md)
-   + [概念 ](concepts.md)
-   + [汎用eコマースの管理](generic.md)
-   + [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
-   + [SAP Commerce Cloud](sap-commerce-cloud.md)
-   + [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
 + 統合 {#integration}
    + [サードパーティのサービスとの統合](third-party-services.md)
    + [Salesforce との統合](salesforce.md)
