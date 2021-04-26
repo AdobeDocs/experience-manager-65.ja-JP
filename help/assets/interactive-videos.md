@@ -8,16 +8,16 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
-feature: Interactive Videos
+feature: インタラクティブビデオ
 role: Business Practitioner, Administrator
+exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '6061'
+source-wordcount: '6058'
 ht-degree: 97%
 
 ---
-
 
 # インタラクティブビデオ {#interactive-videos}
 
@@ -71,7 +71,7 @@ ht-degree: 97%
 インタラクティブビデオの手順：
 
 1. **（オプション）クイックビュー変数の特定** - まず、既存のクイックビュー実装で使用される動的変数を特定します。これらの変数を使用して、インタラクティブビデオを作成するときに、製品のサムネールを対応する製品のクイックビューにマッピングします。[（オプション）クイックビュー変数の特定](#optional-identifying-quickview-variables)を参照してください。
-   **&#x200B;この手順は以下のすべてに該当する場合にのみ必要です。 -クイックビューをトリガーして、ビデオにインタラクティビティを追加する。・eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用して&#x200B;*いない*。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+   **&#x200B;この手順は以下のすべてに該当する場合にのみ必要です。 -クイックビューをトリガーして、ビデオにインタラクティビティを追加する。・eコマースソリューション（IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用して&#x200B;*いない*。[AEM Assets での eCommerce の概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
 
 1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。独自のインタラクティブビデオビューアプリセットの作成は、標準提供のインタラクティブビデオビューアプリセット（`Shoppable_Video_Light` または `Shoppable_Video_Dark`）を使用する場合には必要ありません。[新しいビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（これはオプション）と[インタラクティブビューアプリセットの作成に関する注意事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。
 
@@ -89,7 +89,7 @@ ht-degree: 97%
 >[!NOTE]
 このタスクが必要になるのは次に該当する場合のみです。
 * クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
-* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/sites-administering/concepts.md)を参照してください。
+* eコマースソリューション&#x200B;*（* IBM Websphere Commerce、Elastic Path、hybris、Intershop など）から AEM に製品データを取り出すために、AEM の実装が eコマース統合フレームワークを使用していない。[AEM Assets での eCommerce の概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
 
 AEM の実装で AEM eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
