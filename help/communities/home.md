@@ -3,14 +3,14 @@ title: Adobe Experience Manager6.5コミュニティガイド
 seo-title: Adobe Experience Manager6.5コミュニティガイド
 description: このガイドは、フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
 seo-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能など、すべてのAEM Communitiesタスクを対象としています。
+exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
 translation-type: tm+mt
-source-git-commit: d340f34704149c9e096aa6988bb3e3fda1caf3d7
+source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '399'
 ht-degree: 32%
 
 ---
-
 
 # Adobe Experience Manager6.5コミュニティガイド
 
@@ -18,7 +18,7 @@ ht-degree: 32%
 
 ## 主要なAEM記事
 
-* [AEM 使用の手引き](https://helpx.adobe.com/jp/experience-manager/get-started.html)
+* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://helpx.adobe.com/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
@@ -34,10 +34,11 @@ ht-degree: 32%
 | [管理ガイド](/help/sites-administering/home.md) | AEM の管理方法を理解します |
 | [オーサリングガイド](/help/sites-authoring/home.md) | このガイドでは、AEMでのオーサリングの概念について説明します。 |
 | [クラシックUIオーサリングガイド](/help/sites-classic-ui-authoring/home.md) | このガイドでは、従来のユーザーインターフェイスでAEMでのオーサリングの概念を説明します。 |
-| [画面ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html) | ダイナミックでインタラクティブなデジタルエクスペリエンスを公開するデジタル署名ソリューションについて説明します。 |
+| [画面ユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html) | ダイナミックでインタラクティブなデジタルエクスペリエンスを公開するデジタル署名ソリューションについて説明します。 |
 | [デプロイユーザーガイド](/help/sites-deploying/home.md) | このガイドでは、AEMの基本を示します。 |
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEMインスタンスを構築する方法を学びます。 |
 | [ユーザガイドの管理](/help/managing/home.md) | このガイドでは、AEMプロジェクトを正常に管理する方法について説明します。 |
+| [Commerce ユーザーガイド](/help/commerce/home.md) | AEMでのCommerce Integration Frameworkについて説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
 | [AEM Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/home.html) | このガイドでは、ユーザー生成コンテンツをLivefyreと共有する方法を説明します。 |
 
