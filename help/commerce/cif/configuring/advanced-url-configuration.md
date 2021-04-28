@@ -9,10 +9,10 @@ feature: Commerce統合フレームワーク
 kt: 4933
 thumbnail: 34350.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 98%
+source-wordcount: '791'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 98%
 
 ## 設定 {#configuration}
 
-SEO 要件と必要性に従って `UrlProvider` サービスを設定するには、プロジェクトで「CIF URL Provider configuration」設定用の OSGI 設定を提供し、以下の説明に従ってサービスを設定する必要があります。
+SEO要件に従って`UrlProvider`サービスを設定し、プロジェクトに必要な場合は、「CIF URL Provider configuration」設定のOSGI設定を提供し、以下の説明に従ってサービスを設定する必要があります。
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ URL の書き換えは、AEM Dispatcher HTTP サーバーで `mod_rewrite` モ�
 
 ## 例
 
-[Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)プロジェクトには、製品ページとカテゴリページでのカスタム URL を使用方法を示す設定例が含まれています。これにより、各プロジェクトで、SEO のニーズに応じて、製品ページとカテゴリページの個々の URL パターンを設定できます。上記の CIF `UrlProvider` と Sling マッピングの組み合わせが使用されます。
+[Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)プロジェクトには、製品ページとカテゴリページでのカスタム URL を使用方法を示す設定例が含まれています。これにより、各プロジェクトで、SEOのニーズに応じて商品ページとカテゴリページの個々のURLパターンを設定できます。 上記の CIF `UrlProvider` と Sling マッピングの組み合わせが使用されます。
 
 >[!NOTE]
 >
@@ -74,5 +74,5 @@ URL の書き換えは、AEM Dispatcher HTTP サーバーで `mod_rewrite` モ�
 ## その他のリソース
 
 * [Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM リソースマッピング](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/deploying/configuring/resource-mapping.translate.html)
+* [AEM リソースマッピング](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
