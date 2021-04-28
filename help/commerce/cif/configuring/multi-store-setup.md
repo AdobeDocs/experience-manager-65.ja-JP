@@ -9,10 +9,10 @@ feature: Commerce統合フレームワーク
 kt: 3046
 thumbnail: 28952.jpg
 translation-type: tm+mt
-source-git-commit: d92a635d41cf1b14e109c316bd7264cf7d45a9fe
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 89%
+source-wordcount: '381'
+ht-degree: 75%
 
 ---
 
@@ -28,7 +28,7 @@ AEM CIF コアコンポーネントは複数の AEM サイト構造で使用で�
 
 推奨される設定は、AEM サイトと Magento ストア表示の間に 1 対 1 の関係を使用することです。
 
-AEM サイトと AEM CIF コアコンポーネントを専用のストア表示に接続するには、次の手順に従います。
+AEMサイトとAEM CIFコアコンポーネントを専用のストア表示に接続するには、次の手順に従います。
 
 ## 設定 {#configuration}
 
@@ -51,7 +51,7 @@ AEM サイトと AEM CIF コアコンポーネントを専用のストア表示�
 4. AEM Sites に子設定を割り当てます。
 
    * AEM Sites コンソールに移動します。
-   * サイト構造の地域または言語ルート（Venia サンプルページの場合は /content/venia/us _または_ /content/venia/us/en）に移動します。
+   * サイト構造の地域または言語ルート（例：ベニアサンプルページの場合は/content/venia/us _または_ /content/venia/us/en）に移動します。
    * ページを選択し、ページのプロパティを開きます。
    * 「詳細」タブを選択します。
    * `Configuration` セクションで、手順で作成した設定を選択します。
@@ -60,5 +60,5 @@ AEM サイトと AEM CIF コアコンポーネントを専用のストア表示�
 
 * [Magento Web サイト、ストア、表示](https://docs.magento.com/m2/ce/user_guide/stores/websites-stores-views.html)
 * [AEM CIF コアコンポーネント - マルチストア／サイト設定](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-store--site-configuration)
-* [マルチサイトマネージャの使用](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
+* [マルチサイトマネージャの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [コンテンツの再利用：マルチサイトマネージャーとライブコピー](/help/sites-administering/msm.md)
