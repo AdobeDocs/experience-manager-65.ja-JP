@@ -2,10 +2,10 @@
 title: 買い物かごおよび Dispatcher の設定
 description: 買い物かごおよび Dispatcher の設定
 translation-type: tm+mt
-source-git-commit: 1848a9789b4008f1be43b36ee3edfac35d8fdc7c
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 100%
+source-wordcount: '140'
+ht-degree: 91%
 
 ---
 
