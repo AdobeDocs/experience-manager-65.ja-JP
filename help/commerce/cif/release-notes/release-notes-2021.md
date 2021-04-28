@@ -2,16 +2,16 @@
 title: AEMコンテンツおよびコマースリリースノート2021
 description: AEMコンテンツおよびコマースリリースノート2021
 translation-type: tm+mt
-source-git-commit: 1a6d713e74056333b18ed68f58876c2a75d535b8
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 15%
+ht-degree: 14%
 
 ---
 
 # Commerce Integration Framework GitHubリリースの概要
 
-## システム要件の概要
+## 必要システム構成の概要
 
 現在使用しているCIFバージョンや将来使用する予定のCIFバージョンについて、次の表の最小システム要件を確認してください。
 
@@ -27,7 +27,7 @@ ht-degree: 15%
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
-| CIFアドオン | v021.04.22 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
+| CIFアドオン | 2021.04.22 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
 | CIFコアコンポーネント | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
 | CIFベニアリファレンスサイト | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
@@ -57,9 +57,9 @@ ht-degree: 15%
 
 * Magento2.4.2のサポート
 
-### 改善された点
+### 機能強化
 
-* コンテンツ主導型ページの商品詳細コンポーネントの再利用性を向上
+* コンテンツ主導型ページの商品詳細コンポーネントの再利用性の向上
 
 * PDPのキャッシュの向上とバックエンド・コールの削減
 
@@ -77,11 +77,11 @@ ht-degree: 15%
 
 * 製品エクスペリエンス管理：エクスペリエンスフラグメントを使用して、商品カタログページを個別に拡張する。
 
-* 関連するコンテンツにすばやく移動するアクションなど、アセットとエクスペリエンスフラグメントのリンクを表示するための製品コンソールプロパティが拡張されました。
+* 関連するコンテンツにすばやく移動するアクションなど、アセットとエクスペリエンスフラグメントのリンクを表示するための製品コンソールプロパティを拡張しました。
 
-### 改善された点  {#what-is-improved-february}
+### 改善点{#what-is-improved-february}
 
-* 製品画像のURLとカテゴリ情報によるクライアント側のデータレイヤーの強化
+* 製品の画像URLとカテゴリ情報により、クライアント側のデータレイヤーが強化されました。
 
 * 複数のバグ修正。
 
@@ -97,7 +97,7 @@ ht-degree: 15%
 
 * 製品エクスペリエンス管理：アセットおよびエクスペリエンスフラグメント用の新しい「コマース」プロパティタブ。 このタブを使用して、アセットとエクスペリエンスフラグメントを製品とカテゴリにリンクできます。 また、このタブには、リンクされたコマースオブジェクトのリアルタイムデータと、製品コンソールに詳細を表示するリンクも表示されます。
 
-### 改善された点  {#what-is-improved-january}
+### 改善点{#what-is-improved-january}
 
 * 認証後のユーザーデータをAdobeクライアントデータレイヤーに送信します。
 
