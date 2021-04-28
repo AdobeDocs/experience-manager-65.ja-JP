@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce統合フレームワーク
 thumbnail: 37843.jpg
 translation-type: tm+mt
-source-git-commit: 3df590b5b5dd4a72af1808fe55c8e61338334d0d
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '682'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ AEMコンテンツとコマースのオンボーディングは、次の2つの�
 
 2. AEMとコマースソリューションの接続
 
-### AEM 6.5 {#install-add-on}用AEM Content and Commerceアドオンのインストール
+### AEM 6.5用AEMコンテンツ追加とコマースオンのインストール{#install-add-on}
 
 AEM 6.5用のAEM Commerce 追加-Onを[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)ポータルからダウンロードしてインストールします。
 
@@ -50,11 +50,11 @@ AEMは、AEM用のアクセス可能なGraphQLエンドポイントを持つ任�
 
 AEM Content and Commerce 追加-OnおよびCIF Core Componentsは、AEMサーバー側接続とクライアント側接続の両方を使用します。 クライアント側のCIFコアコンポーネントとCIF追加-Onオーサリングツールは、デフォルトで`/api/graphql`に接続します。 これは、必要に応じてCIFCloud Service設定で調整できます（以下を参照）。
 
-CIFアドオンは`/api/graphql`にGraphQLプロキシサーブレットを提供します。このサーブレットは、[ローカル開発](develop.md)で使用することもできます。 実稼働環境でのデプロイメントでは、AEM Dispatcher経由または他のネットワーク層（CDNなど）で、コマースGraphQLエンドポイントへのリバースプロキシを設定することを強くお勧めします。
+CIF 追加-Onは`/api/graphql`にGraphQLプロキシサーブレットを提供します。このサーブレットは、[ローカル開発](develop.md)に対してオプションで使用できます。 実稼働環境でのデプロイメントでは、AEM Dispatcher経由または他のネットワーク層（CDNなど）で、コマースGraphQLエンドポイントへのリバースプロキシを設定することを強くお勧めします。
 
 ## ストアとカタログの設定{#catalog}
 
-アドオンと[CIFコアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、異なるコマースストア(またはストア表示など)に接続された複数のAEMサイト構造で使用できます。 デフォルトでは、CIFアドオンは、Adobeコマースのデフォルトのストアとカタログ(Magento)に接続するデフォルトの設定を使用してデプロイされます。
+-追加Onと[CIFコアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、異なるコマースストア(またはストア表示など)に接続された複数のAEMサイト構造で使用できます。 デフォルトでは、CIF追加-Onは、Adobeコマースのデフォルトのストアとカタログ(Magento)に接続するデフォルトの設定でデプロイされます。
 
 この設定は、次の手順に従って、CIFCloud Service設定を使用してプロジェクトに合わせて調整できます。
 
