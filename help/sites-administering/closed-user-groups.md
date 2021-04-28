@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: a2bd7045-970f-4245-ad5d-a272a654df0a
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
-feature: Security
+feature: セキュリティ
 translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
-source-wordcount: '6891'
+source-wordcount: '6886'
 ht-degree: 61%
 
 ---
@@ -773,7 +773,7 @@ LiveCopyと組み合わせてCUGを設定すると、次のように、1つの�
 
 これらの要素はどちらも`cq:Page`の下に作成されます。 現在の設計では、MSMは`cq:PageContent` (`jcr:content`)ノードの下にあるノードとプロパティのみを処理します。
 
-したがって、CUG グループをブループリントからライブコピーにロールバックすることはできません。ライブコピーを設定するときはご注意ください。
+したがって、CUGグループはBlueprintsからライブコピーにロールアウトできません。 ライブコピーを設定する際には、この点を考慮してください。
 
 ## 新しい CUG 実装による変更 {#changes-with-the-new-cug-implementation}
 
