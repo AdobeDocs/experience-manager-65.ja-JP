@@ -1,13 +1,13 @@
 ---
-sub-product: AEM Commerce
-user-guide-title: AEMコマース
+sub-product: AEMコンテンツとコマース
+user-guide-title: AEMコンテンツとコマース
 breadcrumb-title: コマースガイド
-user-guide-description: Experience Managerコマースの使用方法と管理方法を理解します。
+user-guide-description: AEMコンテンツとコマースの使用方法と管理方法を理解します。
 translation-type: tm+mt
-source-git-commit: 96bb4904818e7f3f64613c810eeb48f223e287c7
+source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 58%
+source-wordcount: '104'
+ht-degree: 51%
 
 ---
 
