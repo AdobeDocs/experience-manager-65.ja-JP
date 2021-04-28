@@ -10,14 +10,14 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
+exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 translation-type: tm+mt
-source-git-commit: 29328ff7fde4ed0e7f9728af1be911133259dc6c
+source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
 workflow-type: tm+mt
 source-wordcount: '808'
-ht-degree: 82%
+ht-degree: 80%
 
 ---
-
 
 # 閉じられたユーザーグループの作成{#creating-a-closed-user-group}
 
@@ -85,7 +85,7 @@ CUG をページに適用するには：
 
    >[注意!]
    >
-   > 「権限」タブの CUG をブループリントからライブコピーにロールバックすることはできません。ライブコピーを設定する際には、この点を考慮してください。
+   > 「権限」タブのCUGは、Blueprintsからライブコピーにロールアウトできません。 ライブコピーを設定する際には、この点を考慮してください。
    >
    > 詳しくは、[このページ](closed-user-groups.md#aem-livecopy)を参照してください。
 
@@ -144,4 +144,3 @@ CUG用にdispatcher.anyファイル](https://helpx.adobe.com/experience-manager/
    ```
 
 1. [/allowAuthorized](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#caching-when-authentication-is-used) を `0` に設定します。
-
