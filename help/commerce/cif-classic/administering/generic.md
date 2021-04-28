@@ -9,10 +9,10 @@ content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '3009'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -642,7 +642,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 >[!NOTE]
 >
->デフォルトの AEM には、マーチャンダイズの返送、注文ステータスの更新、受け渡しの実行、納品書の生成など、注文に関連する標準機能に必要なアクションがないことを思い出してください。主な目的は技術のプレビューです。
+>標準搭載のAEMには、返品、注文ステータスの更新、購読提供数の実行、梱包明細の生成など、注文に関連した標準機能に必要なアクションがないことを忘れないでください。 主な目的は技術のプレビューです。
 >
 >AEMの一般的な注文管理は、基本的なものとして保たれています。ウィザードで使用できるフィールドは、スキャフォールドに応じて異なります。
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
@@ -664,7 +664,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. ウィザードが表示されます。「**基本**」、「**コンテンツ**」、「**支払い**」および「**受渡**」タブを使用して、[新しい注文に関する情報](/help/commerce/cif-classic/administering/concepts.md#order-information)を入力します。
+1. ウィザードが表示されます。「**基本**」、「**コンテンツ**」、「**支払い**」、「**受渡**」の各タブを使用して、新しい注文](/help/commerce/cif-classic/administering/concepts.md#order-information)に関する[情報を入力します。
 
 1. 「**作成**」を選択して情報を保存します。
 
