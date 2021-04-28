@@ -2,10 +2,10 @@
 title: AEMコンテンツおよびコマースリリースノート2021
 description: AEMコンテンツおよびコマースリリースノート2021
 translation-type: tm+mt
-source-git-commit: c2fb9af056fa4be13cfd7e60e8a44485e8712c0b
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '973'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 9%
 
 * AEM Venia店頭にBraintree支払いサポートが追加されました。
 
-### 改善された点  {#what-is-improved-november}
+### 改善点{#what-is-improved-november}
 
 * マルチストア設定で指定したMagentoストアの表示を考慮するようにカテゴリ/製品の選択機能が強化されました。
 
@@ -53,7 +53,7 @@ ht-degree: 9%
 
 * アカウント管理に対して、クライアント側のコンポーネントをリアクトベースにします。 このリリースでは、次の機能がサポートされています。サインイン、パスワードを忘れた場合、およびアカウントを作成する。
 
-### 改善された点  {#what-is-improved-october}
+### 改善点{#what-is-improved-october}
 
 * 製品の詳細と製品のリストコンポーネントが強化され、ダミーデータが表示され、これらのコンポーネントがテンプレート/ページに配置されたときにレイアウトのプレビューを作成者に示すようになりました。
 
@@ -77,7 +77,7 @@ ht-degree: 9%
 
 * チェックアウトコンポーネントには、住所フォーム、支払いの選択、配送方法の選択が含まれます。
 
-### 改善された点  {#what-is-improved-september}
+### 改善点{#what-is-improved-september}
 
 * Product TeaserおよびProduct Carouselコンポーネントは、製品のバリエーションをサポートしています。
 
@@ -105,7 +105,7 @@ ht-degree: 9%
 
 * 作成者がAEMページに配置して、AEMページ、製品の詳細ページ、製品のリストページまたは外部リンクにリンクできるボタンです。
 
-### 改善された点  {#what-is-improved-august}
+### 改善点{#what-is-improved-august}
 
 * Magentoストア設定をOSGiからAEM製品コンソールに移動し、統合の設定をより作成者にわかりやすくしました。
 
@@ -131,7 +131,7 @@ ht-degree: 9%
 
 * AEMページにカテゴリのリストを表示するためのサーバ側の特集カテゴリリスト。
 
-### 改善された点  {#what-is-improved-july}
+### 改善点{#what-is-improved-july}
 
 * Magento2.3.2のサポートおよび製品のプロパティに関するバグ修正は、製品コンソールに表示されます。
 
