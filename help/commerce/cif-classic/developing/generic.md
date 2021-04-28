@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '1886'
 ht-degree: 82%
@@ -99,7 +99,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
       `commerceSession.getProductPriceInfo(Product product, Predicate filter)`
 
-* **注文**&#x200B;データの永続性を所有：
+* **注文**&#x200B;データの持続性を所有します。
 
    `CommerceSession.getUserContext()`
 
