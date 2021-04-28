@@ -5,10 +5,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 90%
+source-wordcount: '733'
+ht-degree: 88%
 
 ---
 
@@ -69,7 +69,7 @@ ht-degree: 90%
    <td><p>スケーラビリティ</p> </td>
    <td>
     <ul>
-     <li>最大で数百万の製品をサポート可能（使用例に依存）</li>
+     <li>最大数00万個の製品をサポート可能（使用事例による）</li>
      <li>Dispatcher でのキャッシュ</li>
     </ul> </td>
    <td>
