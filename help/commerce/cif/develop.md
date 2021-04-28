@@ -7,9 +7,9 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 translation-type: tm+mt
-source-git-commit: 8ead3d1b24177effa4d40141408c5676eaabcc30
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '874'
 ht-degree: 37%
 
 ---
@@ -30,7 +30,7 @@ CIF プロジェクトを使用する場合は、ローカル開発環境を使�
 
 >[!NOTE]
 >
->次の手順は、AEM 6.5用にフォーカスを置いたCIFを使用して、AEMコマース用のローカルAEM開発環境を設定する場合に役立ちます。 AEMをCloud Serviceとして使用している場合は、[AEMコマースをCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/home.html)のドキュメントとして参照してください。
+>次の手順は、AEM 6.5用にフォーカスを置いたCIFを使用して、AEMコマース用のローカルAEM開発環境を設定する場合に役立ちます。 AEMをCloud Serviceとして使用している場合は、[AEMコマースをCloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)のドキュメントとして参照してください。
 
 AEM 追加 6.5用のAEMコマースオン CIF追加-Onは、AEMパッケージとしてもローカル開発でき、提供されます。 [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から機能パックとしてダウンロードできます。
 
@@ -46,7 +46,7 @@ AEM 追加 6.5用のAEMコマースオン CIF追加-Onは、AEMパッケージ�
 - [npm 6 以降](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 
-### CIF アドオンへのアクセス
+### CIF追加オンへのアクセス
 
 CIFアドオンは、[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードして、AEMコマースアドオンを検索できます。
 
@@ -58,7 +58,7 @@ CIFアドオンは、[ソフトウェア配布ポータル](https://experience.a
 
 AEMとCIFアドオンを使用したローカルCIFプロジェクト開発の場合は、次の手順に従います。
 
-1. AEM 6.5リリースを入手し、AEM 6.5 Service Packをインストールします。 AEM 6.5 Service Pack 7が必要ですが、最後に使用可能になったService Packをインストールすることをお勧めします。
+1. AEM 6.5リリースを入手し、AEM 6.5 Service Packをインストールします。 AEM 6.5 Service Pack 7が必要ですが、最後に使用可能なService Packをインストールすることをお勧めします。
 
 1. AEM.jar を解凍し、`crx-quickstart` フォルダーを作成します。次を実行します。
 
@@ -149,7 +149,7 @@ CIF プロジェクトを開始する 2 つ目の方法は、[AEM Venia 参照�
 >
 >Venia 参照用ストアプロジェクトには、AEM as a Cloud Service 用および AEM 6.5 用の 2 つのビルドプロファイルが含まれています。[project readme.md](https://github.com/adobe/aem-cif-guides-venia/blob/main/README.md) を参照して、使用方法を確認してください。AEM 6.5では、`classic`プロファイルを使用します。
 
-### AEMをコマースシステムに接続する
+### AEMをCommerce Systemに接続する
 
 プロジェクトをコマースシステムに接続するには、コマースシステムのGraphQLエンドポイントを使用してAEMを設定する必要があります。
 
