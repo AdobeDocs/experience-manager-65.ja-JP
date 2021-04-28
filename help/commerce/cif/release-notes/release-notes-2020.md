@@ -2,10 +2,10 @@
 title: AEMコンテンツおよびコマースリリースノート2021
 description: AEMコンテンツおよびコマースリリースノート2021
 translation-type: tm+mt
-source-git-commit: c859aa89e481e852302e9cda0adf2acc04d68a55
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 11%
+source-wordcount: '1324'
+ht-degree: 10%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 11%
 
 * フッターにエクスペリエンスフラグメントを使用するように、ベニアリファレンスストアフロントが更新されました。 ビジネスユーザーは、AEMオーサリングツールを使用してページフッターを編集できます。
 
-### 改善された点  {#what-is-improved-november}
+### 改善点{#what-is-improved-november}
 
 * チェックアウトコンポーネントが改善され、買い物客が行き先の国に入る機能が改善され、米国外の請求先/配送先住所を許可できるようになりました。
 
@@ -48,7 +48,7 @@ ht-degree: 11%
 
 * コマースデータを送信して、AdobeクライアントデータレイヤーをハイドレートするようにCIFコアコンポーネントを拡張しました。 Adobeクライアントデータレイヤーは、データを収集し、デジタル解析およびレポートサーバーにデータを通信するための標準化された方法です。 詳しくは、[Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を参照してください。
 
-* Magento管理UIから設定されたSEOメタデータ(タイトル、メタ説明、メタリストなど)を自動的に埋め込むために拡張された製品の詳細ページと製品のキーワードページ
+* Magento管理UIから設定されたSEOメタデータ(タイトル、メタリスト、メタキーワードなど)を自動的に埋め込むために拡張された製品の詳細ページおよび製品のキーワードページ
 
 * コマースティーザーコンポーネントのバグが修正されました。
 
@@ -98,7 +98,7 @@ ht-degree: 11%
 
 * 製品ティーザーコンポーネントのデフォルトのCTAボタンラベルを上書きおよび設定する柔軟性を追加。
 
-* アドレス帳コンポーネントが改善され、登録済み買い物客がチェックアウト時にアドレス帳に保存された配送先と請求先の住所を選択できるようになりました。
+* アドレス帳コンポーネントが改善され、登録済みの買い物客が、チェックアウト時にアドレス帳に保存された配送先アドレスと請求先アドレスを選択できるようになりました。
 
 * 複数のバグ修正。
 
@@ -120,7 +120,7 @@ ht-degree: 11%
 
 * CIF Cloud Configuration UIでは、公開/非公開アクションがサポートされています。
 
-### 改善された点  {#what-is-improved-july}
+### 改善点{#what-is-improved-july}
 
 * ログインコンポーネントは、ユーザーのドロップダウンに移動され、容易にアクセスできるようになりました。
 
@@ -146,7 +146,7 @@ ht-degree: 11%
 
 * ACLを直接操作するのではなく、サービスユーザーを介した/confへのアクセスを確保するセキュリティ要件の一部として、サービスユーザーマッピングを追加しました。 CIFコアコンポーネントは、設定にアクセスする際にサービスユーザーを使用する必要があるようになりました。
 
-### 改善された点  {#what-is-improved-june}
+### 改善点{#what-is-improved-june}
 
 * 製品のリストページと検索結果ページには、項目の合計数が表示されます。 買い物客が適用したフィルターの場合に更新される項目数。
 
@@ -174,9 +174,9 @@ ht-degree: 11%
 
 * 製品バインディングは、クラウド設定の作成時に自動的に作成されます。
 
-### 改善された点
+### 機能強化
 
-* 「フォルダーの作成」アクションを表示するように、クラウド設定が拡張されました。
+* 「フォルダーを作成」アクションを表示するように、クラウド設定が拡張されました。
 
 * 複数のバグ修正が適用されました。
 
@@ -192,7 +192,7 @@ ht-degree: 11%
 
 * CIF Connectorの統合およびシンプル化された設定です。 詳細は、チェックアウト[はじめに](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)または[新しいAEM CIFプロジェクトのセットアップ](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)を参照してください。
 
-### 改善された点  {#what-is-improved-april}
+### 改善点{#what-is-improved-april}
 
 * 登録買い物かごやチェックアウトのフローが拡張され、登録買い物客をサポートします。
 
@@ -218,9 +218,9 @@ ht-degree: 11%
 
 * カテゴリ選択での検索のサポートを追加しました。
 
-* 大きなカタログセットをサポートする、カテゴリリストコンポーネントでのページネーション。
+* 大きなカタログセットをサポートするカテゴリリストコンポーネントのページネーション。
 
-### 改善された点  {#what-is-improved-february}
+### 改善点{#what-is-improved-february}
 
 * 買い物かごが強化され、割引が表示されるようになりました。
 
@@ -248,7 +248,7 @@ ht-degree: 11%
 
 * 汎用関連製品コンポーネントが使用可能です。
 
-### 改善された点  {#what-is-improved-january}
+### 改善点{#what-is-improved-january}
 
 * 製品テーザーでCTAボタンを表示できるようになりました。
 
