@@ -7,10 +7,10 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 87%
+ht-degree: 86%
 
 ---
 
@@ -203,7 +203,7 @@ e コマース機能をインストールするには、以下が必要です。
    * ユーザー名：admin
    * password:ニムダ
 
-1. サイドバーナビゲーションから、「**システム**」と「**ツール**」を展開します。次に、「**読み込み**」を選択して、**ウィザード : CSV の読み込み**&#x200B;ウィンドウを開きます。
+1. サイドバーのナビゲーションから、**システム**&#x200B;と&#x200B;**ツール**&#x200B;を展開します。 次に、「**読み込み**」を選択して、**ウィザード : CSV の読み込み**&#x200B;ウィンドウを開きます。
 1. 「**設定**」タブで、次の読み込みファイルをアップロードします。********
 
    [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
