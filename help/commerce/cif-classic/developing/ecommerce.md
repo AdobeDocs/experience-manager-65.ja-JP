@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: platform
 docset: aem65
 translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 68%
+source-wordcount: '151'
+ht-degree: 76%
 
 ---
 
@@ -47,6 +47,3 @@ e コマース API は、次のパッケージで提供されます。
 
 詳しくは、[API に関するドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)を参照してください。
 
->[!NOTE]
->
->eコマースプロバイダを構築するすべての手順について詳しくは、[カスタムAdobe Experience Manager6.2 eコマースプロバイダの作成](https://helpx.adobe.com/experience-manager/using/ecommerce62.html)を参照してください。
