@@ -2,10 +2,10 @@
 title: AEMコンテンツとコマース
 description: AEMコンテンツとコマースのセルフヘルプリソースとドキュメントのリンク
 translation-type: tm+mt
-source-git-commit: 7b03772e3c7f185cb107c6576e2423275c1a6ccc
+source-git-commit: 809789d268deb4d77bbb5101265a1a0d7268b748
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 35%
+source-wordcount: '337'
+ht-degree: 33%
 
 ---
 
@@ -13,6 +13,11 @@ ht-degree: 35%
 # AEMコンテンツとコマース{#commerce-guide}
 
 このページでは、AEMコマースに関するセルフヘルプリソースをリストします。
+
+>[!NOTE]
+>
+>AEMをCloud Serviceとして使用したAEMコンテンツとコマースについては、[AEMコンテンツとコマース](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)を参照してください。
+
 
 ## Commerce の主要記事 {#key-articles}
 
