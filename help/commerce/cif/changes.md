@@ -3,10 +3,10 @@ title: Commerce Integration Framework (CIF)アドオンの注目すべき変更�
 description: 古いCIFバージョンと比較したCommerce Integration Framework(CIF)アドオンの顕著な変更。
 exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32,c136763f-56aa-450e-8796-bc84bf6c205d
 translation-type: tm+mt
-source-git-commit: a8dba82029168660b84b085ab46d0406b19961ef
+source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 9%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 ## インストールとアップデート
 
-AEM CIFアドオンパッケージがAEM package managerでインストールされ、更新されます。
+AEM CIFアドオンパッケージがAEM Package Managerによってインストールされ、更新されます。
 
 **以前のCIFバージョン**
 
@@ -34,7 +34,7 @@ AEM CIFアドオンパッケージがAEM package managerでインストールさ
 
 ## CIFベニアプロジェクトの導入
 
-プロジェクトは[GitHub AEMガイド — CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia)で利用可能。展開はパッケージAEM managerを介して行われます。
+プロジェクトは、[GitHub AEMガイド — CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia)で入手でき、AEM Package Managerを介して展開できます。
 
 **以前のCIFバージョン**
 
@@ -58,4 +58,4 @@ AEMは、製品やカテゴリに割り当てられたAEMカタログテンプ�
 
 >[!NOTE]
 >
->AEM Managed Service またはオンプレミスの AEM での CIF の使用方法に関する追加ドキュメントについては、[Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) を参照してください。
+>AEM Managed ServiceまたはAEM On-PremiseでのCIFの使用方法に関する追加ドキュメントについては、[Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)を参照してください。
