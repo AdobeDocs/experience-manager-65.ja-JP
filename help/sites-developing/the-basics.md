@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
+exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
 translation-type: tm+mt
-source-git-commit: 28fdb57f51a5bd97ce78b626db86f4a59de6f0be
+source-git-commit: 78e28636eec331314c2f29c93d516215b1572f20
 workflow-type: tm+mt
-source-wordcount: '3386'
+source-wordcount: '3367'
 ht-degree: 78%
 
 ---
-
 
 # AEM の中心概念 {#aem-core-concepts}
 
@@ -438,13 +438,13 @@ pageManagerをページマネージャーオブジェクトに、myResourceを�
 
 * `/var`
 
-   システムによって変更および更新されるファイル監査ログ、統計、イベント処理など。 サブフォルダー`/var/classes`には、コンポーネントスクリプトから生成されたソースフォームおよびコンパイル済みのフォームのJavaサーブレットが含まれます。
+   システムによって変更および更新されるファイル監査ログ、統計、イベント処理など。
 
 ## 環境 {#environments}
 
 AEM では、本番環境は多くの場合、[オーサーインスタンスとパブリッシュインスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)の 2 種類のインスタンスで構成されます。
 
-## Dispatcher  {#the-dispatcher}
+## Dispatcher {#the-dispatcher}
 
 Dispatcher は、キャッシュとロードバランシングのいずれかまたは両方に対応するアドビのツールです。詳しくは、[Dispatcher ](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html)を参照してください。
 
