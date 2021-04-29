@@ -10,14 +10,14 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
+exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
 translation-type: tm+mt
-source-git-commit: ebe7042b931869c3b4b7204e3ce7afa52d56f0ef
+source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
 workflow-type: tm+mt
-source-wordcount: '1694'
-ht-degree: 83%
+source-wordcount: '1761'
+ht-degree: 79%
 
 ---
-
 
 # SPA およびサーバーサイドレンダリング {#spa-and-server-side-rendering}
 
@@ -64,7 +64,9 @@ Adobe I/O Runtime について詳しくは、以下を参照してください�
 
 >[!NOTE]
 >
->AEM 環境（オーサー、パブリッシュ、ステージなど）ごとに個別の Adobe I/O Runtime インスタンスを作成することをお勧めします。
+>Adobeでは、環境（ステージ、実行、テストなど）ごとに別々のAdobe I/O Runtimeワークスペースを使用することを推奨します。 これにより、異なる環境にデプロイされた単一アプリケーションの異なるバージョンを持つ、一般的なSDLC(System Development Life Cycle)パターンが可能になります。 詳細は、ドキュメント[CI/CD for Project Firefly Applications](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md)を参照してください。
+>
+>インスタンスタイプごとのランタイム実装に違いがない限り、インスタンス（作成者、発行）ごとに個別のワークスペースは必要ありません。
 
 ## リモートレンダラーの設定 {#remote-renderer-configuration}
 
