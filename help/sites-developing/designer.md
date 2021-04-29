@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: f9bcb6eb-1df4-4709-bcec-bef0931f797a
+exl-id: c81c5910-b6c9-41bd-8840-a6782792701f
 translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+source-git-commit: adbdff9ff5b5bd8f5f6b22fb724a0e5273072de2
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 51%
+source-wordcount: '386'
+ht-degree: 46%
 
 ---
-
 
 # デザインとデザイナー{#designs-and-the-designer}
 
@@ -24,7 +24,7 @@ ht-degree: 51%
 >
 >この記事では、クラシックUIを基にしてWebサイトを作成する方法を説明します。 アドビでは、[AEM Sites の開発の手引き](/help/sites-developing/getting-started.md)で詳しく説明しているように、Web サイトに最新の AEM テクノロジーを利用することをお勧めします。
 
-Web サイト用に、また AEM で、デザインの作成が必要になります。その場合はデザイナーを使用します。
+Designerは、AEMの[クラシックUI](/help/release-notes/touch-ui-features-status.md)を使用して、Webサイト用のデザインを作成するために使用します。
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Web サイト用に、また AEM で、デザインの作成が必要になり�
 
 ここで、デザインの格納に必要な構造を作成し、必要なカスケーディングスタイルシート（CSS）および画像をアップロードできます。
 
-デザインは`/etc/designs`の下に保存されます。 Webサイトに使用するデザインのパスは、`jcr:content`ノードの`cq:designPath`プロパティを使用して指定します。
+デザインは`/apps/<your-project>`の下に保存されます。 Webサイトに使用するデザインのパスは、`jcr:content`ノードの`cq:designPath`プロパティを使用して指定します。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
@@ -54,7 +54,7 @@ Web サイト用に、また AEM で、デザインの作成が必要になり�
 
 ### Web サイトをデザインする際の考慮事項 {#considerations-when-designing-your-website}
 
-Webサイトを開発する際は、`/etc/design/<project>`の下に画像とCSSファイルを保存して、次のスニペットに示すように、現在のデザインに基づいてリソースを参照できるようにすることをお勧めします。
+Webサイトを開発する際は、`/apps/<your-project>`の下に画像とCSSファイルを保存して、次のスニペットに示すように、現在のデザインに基づいてリソースを参照できるようにすることをお勧めします。
 
 ```xml
 <%= currentDesign.getPath() + "/static/img/icon.gif %>
@@ -66,4 +66,3 @@ Webサイトを開発する際は、`/etc/design/<project>`の下に画像とCSS
 * Webサイトの再設計は、サイトのルートにある別のノードのデザインパスを`design/v1`から`design/v2.`に指定するだけで行えます
 
 * `/etc/designs` とは、ツリ `/content` ーの下に何があるかを知りたがる外部ユーザを、ブラウザが保護しているのを目にする唯一の外部URL `/apps` です。上記のURLの利点は、アセットの公開をいくつかの異なる場所に制限するので、システム管理者がより高いセキュリティを設定するのに役立ちます。
-
