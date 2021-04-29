@@ -10,14 +10,14 @@ topic-tags: testing
 content-type: reference
 discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
 docset: aem65
+exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+source-git-commit: 3727b561a2ee9778d75f18530caf16c6c3ef846a
 workflow-type: tm+mt
 source-wordcount: '1909'
-ht-degree: 53%
+ht-degree: 51%
 
 ---
-
 
 # Tough Day{#tough-day}
 
@@ -222,7 +222,7 @@ tests:
 
 ### 事前定義済みのテストスイートの使用  {#working-with-predefined-test-suites}
 
-事前定義済みのスイートにテストを追加する方法、事前定義済みのスイートの既存のテストを再設定および除外する方法を以下の例に示します。
+次の例は、定義済みのスイートにテストを追加する方法、および定義済みのスイートから既存のテストを再設定および除外する方法を示しています。
 
 事前定義済みのスイートに新しいテストを追加するには、`add` パラメーターを使用して、ターゲットとなる事前定義済みのスイートを指定します。
 
