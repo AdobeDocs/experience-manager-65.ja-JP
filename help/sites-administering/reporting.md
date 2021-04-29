@@ -10,14 +10,14 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 7e2b30a3-75ff-4735-8038-5c5391ac36f3
 docset: aem65
+exl-id: 2a0bf59d-8829-4142-9cb4-dcef90f53ae9
 translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+source-git-commit: 429f3ee859477fb38938fd6b9706c8006623eb03
 workflow-type: tm+mt
-source-wordcount: '2793'
-ht-degree: 74%
+source-wordcount: '2815'
+ht-degree: 73%
 
 ---
-
 
 # レポート  {#reporting}
 
@@ -31,6 +31,10 @@ ht-degree: 74%
 * [ユーザーレポート](#user-report)
 * [ワークフローインスタンスレポート](#workflow-instance-report)
 * [ワークフローレポート](#workflow-report)
+
+>[!NOTE]
+>
+>これらのレポートは、クラシックUIでのみ使用できます。 最新のUIでのシステムの監視とレポートについては、[操作のダッシュボードを参照してください。](/help/sites-administering/operations-dashboard.md)
 
 レポートはすべて&#x200B;**ツール**&#x200B;コンソールからアクセスできます。左側のウィンドウで「**レポート**」を選択し、右側のウィンドウで必要なレポートをダブルクリックして、表示用や設定用に開きます。
 
