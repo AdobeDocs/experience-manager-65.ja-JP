@@ -10,15 +10,15 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
 docset: aem65
-feature: Upgrading
+feature: アップグレード
+exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
 translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+source-git-commit: d99f4ce072688f8e7d453199742618f0b2357d07
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 67%
 
 ---
-
 
 # アプリケーションサーバーのインストール環境のアップグレード手順{#upgrade-steps-for-application-server-installations}
 
