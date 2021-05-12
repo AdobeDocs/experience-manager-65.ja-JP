@@ -3,15 +3,14 @@ title: アセットのダウンロード
 description: ' [!DNL Adobe Experience Manager] からアセットをダウンロードし、ダウンロード機能を有効または無効にする方法を説明します。'
 contentOwner: AG
 role: Business Practitioner
-feature: Asset Management,Asset Distribution
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: アセット管理，アセットの配布
+exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
+source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 77%
+source-wordcount: '891'
+ht-degree: 74%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] からのアセットのダウンロード {#download-assets-from-aem}
 
@@ -64,6 +63,8 @@ ht-degree: 77%
    enabled=B"true"
    asset.download.prezip.maxcontentsize=I"102400"
    ```
+
+デフォルトでは、`GET`リクエストがファイルをダウンロードする場合、[!DNL Experience Manager]はZIPアーカイブのダウンロードサイズに50 MBの制限を適用します。 `POST`リクエストを介して開始されたダウンロード、またはユーザーインターフェイスは、この制限の影響を受けません。
 
 ## アセットダウンロードサーブレットの無効化 {#disable-asset-download-servlet}
 
