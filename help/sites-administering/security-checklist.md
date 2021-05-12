@@ -11,12 +11,11 @@ content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
-feature: Security
-translation-type: tm+mt
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: セキュリティ
+source-git-commit: 1c6ee9b547fd0870feb510e35ffdcb8e3f857f18
 workflow-type: tm+mt
-source-wordcount: '2842'
-ht-degree: 87%
+source-wordcount: '2873'
+ht-degree: 81%
 
 ---
 
@@ -26,7 +25,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->[Open Web Application Security Project（OWASP）で公開されている、最も危険性の高いセキュリティ上の脅威](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)についても確認できます。
+>[オープンWeb アプリケーションセキュリティプロジェクト(OWASP)](https://owasp.org/www-project-top-ten/)が公開した、最も危険なセキュリティの脅威に関する詳細情報も得られます。
 
 >[!NOTE]
 >
@@ -157,7 +156,7 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 
 ### Sling 開発バンドルが存在するかどうかの確認  {#check-if-the-sling-development-bundle-is-present}
 
-[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md) は Apache Sling Tooling Support Install（org.apache.sling.tooling.support.install）をデプロイします。
+[AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md)は、Apache Sling Tooling Support Install(org.apache.sling.tooling.support.install)をデプロイします。
 
 実稼動のオーサーシステムとパブリッシュシステムへのアクセスを可能にする前に、それらの両方のシステムで、この OSGi バンドルをアンインストールしておく必要があります。
 
@@ -165,7 +164,7 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 
 #### CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
-AEM 6.1 には、クロスサイトリクエストフォージェリから保護する **CSRF 対策フレームワーク**&#x200B;と呼ばれるメカニズムが搭載されています。使用方法について詳しくは、[ドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。
+AEM 6.1には、**CSRF保護フレームワーク**&#x200B;と呼ばれるクロスサイト要求偽造攻撃からの保護に役立つメカニズムが付属しています。 使用方法について詳しくは、[ドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。
 
 #### Sling Referrer Filter {#the-sling-referrer-filter}
 
@@ -194,7 +193,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    &lt;protocol>://&lt;server>:&lt;port>
 
-   次に例を示します。
+   以下に例を示します。
 
    * `https://allowed.server:80`の場合、特定のポートを使用して、このサーバーからの要求がすべて許可されます。
    * https 要求も許可する場合は、2 行目を入力する必要があります。
@@ -337,11 +336,9 @@ AEM は `FormChooserServlet` 用の標準インデックスを提供していな
 
 **アセットダウンロードサーブレット使用することで生じる DoS を軽減**
 
-AEM のデフォルトアセットダウンロードサーブレットを使用すると、認証されたユーザーは、表示可能なアセットの ZIP ファイルを作成するために任意のサイズの同時ダウンロード要求を発行することができますが、その結果、サーバーやネットワークに過剰な負荷をかけるおそれがあります。
+デフォルトのアセットダウンロードサーブレットを使用すると、認証済みユーザは任意の大きさの同時ダウンロード要求を発行して、アセットのZIPファイルを作成できます。 大きなZIPアーカイブを作成すると、サーバーとネットワークに大きな負荷がかかる場合があります。 この動作が原因で発生する可能性のあるサービス拒否(DoS)のリスクを軽減するために、`AssetDownloadServlet` OSGiコンポーネントは、デフォルトで[!DNL Experience Manager]発行インスタンスで無効になっています。 デフォルトでは、[!DNL Experience Manager]作成者インスタンスで有効になっています。
 
-この機能で生じる可能性がある DoS リスクを軽減するために、最新の AEM バージョンでは、パブリッシュインスタンスに対して、`AssetDownloadServlet` OSGi コンポーネントがデフォルトで無効になっています。
-
-セットアップでアセットダウンロードサーブレットを有効にする必要がある場合、詳細については[この記事](/help/assets/download-assets-from-aem.md)をご覧ください。
+ダウンロード機能が不要な場合は、作成者デプロイメントとパブリッシュデプロイメントでサーブレットを無効にします。 設定でアセットのダウンロード機能を有効にする必要がある場合は、[この記事](/help/assets/download-assets-from-aem.md)を参照してください。 また、展開でサポートできるダウンロードの最大数を定義できます。
 
 ### WebDAV の無効化 {#disable-webdav}
 
@@ -420,12 +417,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
-1. データフォルダーに移動します。次に例を示します。
+1. データフォルダーに移動します。以下に例を示します。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC とマスターファイルをコピーします。
-1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。次に例を示します。
+1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。以下に例を示します。
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
@@ -456,4 +453,4 @@ AEM 6.2以前のバージョンでは、キーは`/etc/key`ノードの下のリ
 
 ### 開発のベストプラクティス {#development-best-practices}
 
-AEM 環境の安全を確保するには、新規開発において[セキュリティのベストプラクティス](/help/sites-developing/security.md)に従うことが重要です。
+新しい開発が[セキュリティのベストプラクティス](/help/sites-developing/security.md)に従っていることは、AEM環境を安全に保つために重要です。
