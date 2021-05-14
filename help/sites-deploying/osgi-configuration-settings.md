@@ -10,15 +10,14 @@ topic-tags: configuring
 content-type: reference
 discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
+source-git-commit: ca66c0655bcd878644e275fc8f7a41b38110beae
 workflow-type: tm+mt
-source-wordcount: '3806'
-ht-degree: 57%
+source-wordcount: '3561'
+ht-degree: 60%
 
 ---
-
 
 # OSGi 設定{#osgi-configuration-settings}
 
@@ -80,7 +79,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Slingカスタマイズ可能な要求データ** ロガー設定：
 
-* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に不可欠です。これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
+* **Logger** Nameおよび **Log** Formatを使用して、要求およびアクセスログの場所と形式を設定します(デフォルト： `request.log`)をクリックします。 このログファイルは、Webチェーンに関連するパフォーマンスやデバッグ機能を分析する際に重要です。これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
 
 詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
 
@@ -429,29 +428,6 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 詳しくは、[バージョンのパージ](/help/sites-deploying/version-purging.md)を参照してください。
 
 **Day CQワークフロー電子メール通知** サービスワークフローから送信される通知の電子メール設定を指定します。
-
-**Day CQSE HTTP** ServiceCQサーブレットエンジンの制御：
-
-* **HTTPの場合はNIO、**HTTPにNIOを使用するかどうか。デフォルトはtrueです。HTTPが有効な場合にのみ使用されます。
-* **接続タイムアウト。**接続タイムアウト（ミリ秒）。このプロパティは、HTTP接続とHTTPS接続の両方に適用されます。初期設定は60秒です。
-
-* **HTTPSを有効にする、HTTPSが有効** かどうかを指定します。デフォルトはfalseです。
-* **Session Timeout**（セッションタイムアウト）。HTTPセッションのデフォルトの有効期間（分単位）です。タイムアウトが0以下の場合、セッションはタイムアウトしません。デフォルトは10分です。
-* **デバッグログ**（DEBUGレベルのメッセージを書き込むかどうか）。デフォルトはfalseです。
-* **Request Buffer Size**、要求のバッファーのサイズ（バイト単位）。初期設定は8KBです。
-* **スレッドの最大数**、要求の処理に使用するスレッドの最大数。初期設定は200です。
-
-以下のプロパティは、HTTPS が有効な場合にのみ適用されます。
-
-* **HTTPSポート**。HTTPS要求をリッスンするポートです。初期設定は433です。
-* **HTTPS用のNIO**。HTTPにNIOを使用するかどうか。HTTPプロパティのデフォルト値はNIOです。
-* **キーストア**、HTTPSに使用するキーストアの絶対パス。HTTPSが有効な場合は必須です。
-* **キーストアパスワード**、キーストアにアクセスするためのパスワード。
-* **Key Alias**（キーストア内の秘密鍵のエイリアス）。
-* **Key Password**, Password（キーストア内の秘密鍵のロックを解除するためのパスワード）。
-* **クライアント証明書**、有効な証明書を提供するためのクライアントの要件。初期設定はnoneです。
-
-SSL関連のオプションの詳細およびCQSEでHTTPSを有効にする方法の詳細については、「[HTTP Over SSLの有効化](/help/sites-administering/ssl-by-default.md)」も参照してください。
 
 **CQ Rewriter HTML Parser Factory**
 
