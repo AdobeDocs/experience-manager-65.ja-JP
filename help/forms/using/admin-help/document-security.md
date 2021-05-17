@@ -11,14 +11,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
+source-git-commit: 76201cc58f2d3f7d65f867801fcb95f5390baada
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 99%
+source-wordcount: '2560'
+ht-degree: 98%
 
 ---
-
 
 # Document Security について {#about-document-security}
 
@@ -223,6 +222,10 @@ Document Security 管理者は、User Management の次の権限を使用して�
 * ポリシーセットに含まれるポリシーまたはドキュメントのポリシーイベントとドキュメントイベントの表示
 * ドキュメントへのアクセス権限の取り消し
 * ドキュメントのポリシーの切り替え
+
+>[!NOTE]
+>
+>データベースから最大1000個のポリシーセット名を取得できます。
 
 管理者および権限を持つポリシーセットコーディネーターは、Document Security の管理 Web ページを使用して、ポリシーセットを作成および削除します。
 
