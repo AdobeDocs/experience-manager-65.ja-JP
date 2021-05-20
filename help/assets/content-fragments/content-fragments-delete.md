@@ -10,16 +10,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
 docset: aem65
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '457'
 ht-degree: 99%
 
 ---
-
 
 # コンテンツフラグメント - 削除に関する考慮事項{#content-fragments-delete-considerations}
 
@@ -96,4 +95,3 @@ ht-degree: 99%
 例えば、`remove` グループの `content-authors-no-delete` 権限の定義は次のようになります。
 
 ![cf-delete-03](assets/cf-delete-03.png)
-
