@@ -8,21 +8,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 672ee050-63d1-46ed-bef2-f55800208d78
 docset: aem65
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 92%
 
 ---
 
-
 # HTML5 フォームの概要{#introduction-to-html-forms}
 
 HTML5 フォームは、HTML5 形式で XFA フォームテンプレートをレンダリングする Adobe Experience Manager 6.0（AEM 6.0）ソフトウェアの新しい機能です。この機能により、XFA ベースの PDF がサポートされていないモバイルデバイスおよびデスクトップブラウザー上のフォームのレンダリングが可能です。 HTML5 フォームは XFA フォームテンプレートの既存の機能をサポートしているだけでなく、モバイルデバイスのための新しい機能（例えば手書き署名）も追加します。
 
-HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを生成します。HTML5 フォームは、HTML5 をサポートしている現時点のすべてのブラウザーで見ることができます。ブラウザーのための追加のブラウザープラグインをインストールする必要がありません。 サポートされるブラウザーについて詳しくは、[サポートされるクライアントプラットフォーム](https://adobe.com/go/learn_aemforms_supportedplatforms_63)を参照してください。
+HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを生成します。HTML5 フォームは、HTML5 をサポートしている現時点のすべてのブラウザーで見ることができます。ブラウザーのための追加のブラウザープラグインをインストールする必要がありません。 サポートされるブラウザーについて詳しくは、「[サポートされるクライアントプラットフォーム](https://adobe.com/go/learn_aemforms_supportedplatforms_63)」を参照してください。
 
 ![](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
@@ -48,4 +47,4 @@ HTML5 フォームは標準の HTML5 構造に基づいてドキュメントを�
 
 ### フォームのカスタマイズ {#forms-customization}
 
-HTML5 フォームは、標準 HTML5 構成を使用してフォームテンプレートをレンダリングします。これにより、Web テクノロジ、主にCSS および JavaScript を使用した、HTML5 形式のフォームの拡張およびカスタマイズが容易になります。 既存のウィジェットの外観を簡単にカスタマイズし、独自のウィジェットを作成するか、フォームのカスタムスタイルを使用できます。 カスタムウィジェットの作成と既存のウィジェットのカスタマイズについて詳しくは、[「HTML5フォームのプラグインカスタムウィジェット](../../forms/using/custom-widgets.md)」を参照してください。
+HTML5 フォームは、標準 HTML5 構成を使用してフォームテンプレートをレンダリングします。これにより、Web テクノロジ、主にCSS および JavaScript を使用した、HTML5 形式のフォームの拡張およびカスタマイズが容易になります。 既存のウィジェットの外観を簡単にカスタマイズし、独自のウィジェットを作成するか、フォームのカスタムスタイルを使用できます。 カスタムウィジェットの作成と既存のウィジェットのカスタマイズについて詳しくは、「 [HTML5フォームのプラグインカスタムウィジェット](../../forms/using/custom-widgets.md) 」を参照してください。
