@@ -8,21 +8,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 0ffbb4d3-9371-4705-8496-f98e22d9c4a6
 docset: aem65
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: be1a774f-5681-443f-b195-28e89a020547
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 74%
+ht-degree: 81%
 
 ---
-
 
 # リダイレクトページの設定{#configuring-redirect-page}
 
 フォーム作成者は、フォーム送信後にユーザーがリダイレクトされるページを各フォームに設定することができます。
 
-1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**アダプティブフォームコンテナ**&#x200B;をクリックし、![cmpr](assets/cmppr.png)をクリックします。
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)／**アダプティブフォームコンテナ**&#x200B;をクリックしてから、 ![cmppr](assets/cmppr.png) をクリックします。
 
 1. サイドバーで、「**送信**」をクリックします。
 
@@ -35,11 +34,10 @@ ht-degree: 74%
 
 フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、`status`パラメーターと`owner`パラメーターが渡されます。 これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
-* **コンテンツ保存アクション** （非推奨）: `contentPath` — 送信されたデータが保存されるリポジトリ内のノードのパス — が渡されます。
+* **コンテンツ保存アクション** （非推奨） : `contentPath` — 送信されたデータが保存されるリポジトリ内のノードのパス。
 
-* **PDFの保存アクション** （非推奨）: `contentPath` — 送信されたデータと、リポジトリにPDFファイルが格納されているノードのパス — が渡されます。
+* **PDFの保存アクション** （非推奨） : `contentPath` — 送信されたデータのパスと、リポジトリ内にPDFファイルを保存しているノードのパスが渡されます。
 
 * **フォームワークフローへの送信**：フォームワークフローから返される出力パラメーターが渡されます。
 
 * **REST エンドポイントへの送信**：フィールド内にパラメーターマッピングのため追加されたパラメータが渡されます。`status` および `owner` パラメーターは、この送信アクションでは渡されません。詳しくは、[送信アクション「REST エンドポイントへの送信」の設定](../../forms/using/configuring-submit-actions.md)を参照してください。 
-
