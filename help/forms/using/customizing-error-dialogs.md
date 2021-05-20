@@ -8,22 +8,21 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f547c0c1-3917-4092-9d63-c1b3aaefcef0
-translation-type: tm+mt
-source-git-commit: 07abce0e6e4d1a299ce32ab130366b4e676b6388
+exl-id: 8d2b07f5-5c4e-4111-8f78-eb1b156221bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 53%
 
 ---
 
-
 # エラーダイアログのカスタマイズ  {#customizing-error-dialogs}
 
-AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[「AEM Formsワークスペースのカスタマイズ](/help/forms/using/generic-steps-html-workspace-customization.md)の一般的な手順」を実行し、次の手順に従ってエラーダイアログをカスタマイズします。
+AEM Forms Workspace では、エラーダイアログをカスタマイズすることができます。[AEM Forms Workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を実行し、次の手順に従ってエラーダイアログをカスタマイズします。
 
 ## テキストのカスタマイズ {#customizing-text}
 
-1. `/apps/ws/locales/en-US/translation.json`ファイルで、`wserror`の値をカスタマイズした値に変更します。 次に例を示します。
+1. `/apps/ws/locales/en-US/translation.json`ファイルで、`wserror`の値をカスタマイズした値に変更します。 以下に例を示します。
 
    ```json
    "wserror" : {
@@ -188,7 +187,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-1. フットバーボタンの範囲については、`.error-dialog`ボタン範囲と`.foot-bar`ボタン範囲を複合リストから分離します。 この変更を行うには、次を newStyle.css ファイルに追加します。
+1. フットバーボタンのスパンについては、 `.error-dialog`ボタンと`.foot-bar`ボタンのスパンをコンポジットリストから分離します。 この変更を行うには、次を newStyle.css ファイルに追加します。
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -201,7 +200,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-   宛先
+   設定値
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -246,7 +245,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 }
 ```
 
-宛先
+設定値
 
 ```css
 .error-dialog{
@@ -279,7 +278,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 }
 ```
 
-宛先
+設定値
 
 ```css
 .error-dialog .head-bar{
