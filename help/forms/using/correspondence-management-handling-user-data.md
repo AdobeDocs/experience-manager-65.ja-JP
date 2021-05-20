@@ -7,14 +7,13 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 81%
 
 ---
-
 
 # Correspondence Management | ユーザーデータの処理 {#correspondence-management-handling-user-data}
 
@@ -26,7 +25,7 @@ AEM Forms Correspondence Management を使用すると、顧客向けに安全�
 >
 >AEM 6.5 Forms では、通信の管理は初期状態では使用できません。以前のバージョンの AEM Forms からアップグレードする場合は、互換パッケージをインストールして Correspondence Management のアセットを移行し、AEM 6.5 Forms で引き続き使用できるようにします。詳しくは、「[互換パッケージ](/help/forms/using/compatibility-package.md)」を参照してください。
 
-## ユーザーデータとデータストア  {#data}
+## ユーザーデータとデータストア {#data}
 
 Correspondence Management では、発行インスタンスがレターインスタンスを管理するように設定されている場合にのみ、ドラフトのデータおよび送信済みレターのデータが AEM リポジトリに格納されます。この設定について詳しくは、「[Correspondence Management 設定プロパティ](/help/forms/using/cm-configuration-properties.md)」を参照してください。
 
@@ -58,9 +57,9 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 * `[node-id]` は、レターが含まれるフォルダーに割り当てられるIDです
 * `[letter-instance-name]` は、レターを保存または送信する際に指定された名前です
 
-[letter-instance-name]ノードの下に、次のノード構造が作成され、各レターインスタンスのデータがAEMリポジトリに保存されます。
+[letter-instance-name]ノードの下に、次のノード構造が作成され、各レターインスタンスのデータがAEMリポジトリに格納されます。
 
-| Node | 説明 |
+| ノード | 説明 |
 |---|---|
 | `extendedProperties` | レターインスタンスのメタデータのプロパティを格納します。 |
 | `dataXML` | 通信データを含むダウンロード可能な dataXML ファイルをバイナリ形式で格納します。 |
@@ -77,11 +76,11 @@ Correspondence Management には、ドラフトおよび送信済みレターイ
 
 または、CRX DELite を使用して AEM リポジトリのレターインスタンスに移動することもできます。格納されたデータおよびリポジトリの場所について詳しくは、「[ユーザーデータとデータストア](/help/forms/using/correspondence-management-handling-user-data.md#data)」を参照してください。
 
-### ユーザーデータの削除  {#delete-user-data}
+### ユーザーデータの削除 {#delete-user-data}
 
 特定ユーザーのデータを含むレターインスタンスを検索するには、次の操作を実行します。
 
 * レターインスタンス名、ドラフトを保存したユーザー、または通信を送信したユーザーが分かっている場合は、Correspondence Management の API を使用します
-* 電子メールIDや名前など個人が特定できる情報を使用してAEMのリポジトリ検索を使用し、情報が保存されているノードを探す
+* 電子メールIDや名前などの個人を特定できる情報を使用してAEMリポジトリの検索を使用し、情報が保存されるノードを見つけます
 
 AEM システムでドラフトおよび送信済み通信に含まれるユーザーデータを完全に削除するには、適用可能なすべての AEM インスタンスからレターインスタンスノードを手動で削除する必要があります。
