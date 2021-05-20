@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 10e6177a-8228-4515-aba9-bbe59bede449
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 1da1f6de-ac0d-4e0d-b8bb-956420e42699
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 100%
 
 ---
-
 
 # ユーザー管理 {#user-management}
 
@@ -57,4 +56,3 @@ AEM Forms 環境と Document Security をインストールおよび設定した
 >[!NOTE]
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
-
