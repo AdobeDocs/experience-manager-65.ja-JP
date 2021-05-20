@@ -10,14 +10,13 @@ topic-tags: administering
 content-type: reference
 discoiquuid: c012d639-c6e6-4f73-bbd8-78a4baa38c17
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: ce58c8e9-8b4a-43fb-a108-ed2ac40268c7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '637'
 ht-degree: 61%
 
 ---
-
 
 # イネーブルメントリソースのタグ付け {#tagging-enablement-resources}
 
@@ -25,31 +24,31 @@ ht-degree: 61%
 
 イネーブルメントリソースのタグ付けにより、メンバーが[カタログ](functions.md#catalog-function)を参照したときにリソースや学習パスのフィルタリングが可能になります。
 
-基本的には：
+基本的には、
 
-* [各カタログのタグ](../../help/sites-administering/tags.md#creating-a-namespace) 名空間を作成する
+* [各カタログのタグ名](../../help/sites-administering/tags.md#creating-a-namespace) 前空間を作成する
 
    * [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)
-   * コミュニティメンバーのみ（非公開コミュニティ）
+   * コミュニティメンバーのみ（閉じられたコミュニティ）
 
-      * [コミュニティサイトのメンバーグループ](users.md#publish-group-roles)の読み取りアクセスを許可する
-   * サイト訪問者に対して、ログイン済みか匿名か（オープンコミュニティ）を問わず、
+      * [コミュニティサイトのメンバーグループ](users.md#publish-group-roles)に対する読み取りアクセスを許可する
+   * サインイン済みか匿名か（オープンコミュニティ）にかかわらず、サイト訪問者に対して
 
-      * `Everyone`グループの読み取りアクセスを許可
+      * `Everyone`グループの読み取りアクセスを許可する
    * [タグを公開する](../../help/sites-administering/tags.md#publishing-tags)
 
 
 
 * [コミュニティサイトのタグの範囲の定義](sites-console.md#tagging)
 
-   * [サイトの構造に存在するカタログを設定する](functions.md#catalog-function)
+   * [サイトの構造に存在するカタログの設定](functions.md#catalog-function)
 
       * カタログインスタンスにタグを追加して、UIフィルターに表示されるタグのリストを制御できます。
-      * [プリフィルター](catalog-developer-essentials.md#pre-filters)を追加して、カタログに含まれるリソースを制限できます。
+      * [事前フィルター](catalog-developer-essentials.md#pre-filters)を追加して、カタログに含まれるリソースを制限できます。
 
 * [コミュニティサイトの公開](sites-console.md#publishing-the-site)
-* [タグを有効化](resources.md#create-a-resource) リソースに適用して、カテゴリに基づいてフィルタリングされる可能性がある
-* [有効化リソースを発行する](resources.md#publish)
+* [イネーブルメントリソースにタグを](resources.md#create-a-resource) 適用して、タグを分類的にフィルタリングできるようにする
+* [イネーブルメントリソースの公開](resources.md#publish)
 
 ## コミュニティサイトタグ {#community-site-tags}
 
@@ -61,29 +60,29 @@ ht-degree: 61%
 
 コミュニティサイトでは、サイトを公開してタグを公開した後、コミュニティのメンバーに対する読み取りアクセスを有効にする必要があります。[タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)を参照してください。
 
-管理者がグループ`Community Enable Members`の`/etc/tags/ski-catalog`に読み取り権限を適用した場合、CRXDEでは次のように表示されます。
+管理者が`/etc/tags/ski-catalog`グループ`Community Enable Members`に対して読み取り権限を適用すると、CRXDEでは次のように表示されます。
 
 ![site-tags](assets/site-tags.png)
 
 ## カタログのタグ名前空間 {#catalog-tag-namespaces}
 
-カタログ機能は、自身を定義するためにタグを使用します。コミュニティサイトでカタログ機能を設定する際、選択するタグ名前空間のセットは、コミュニティサイトに設定されたタグメッセージの範囲によって定義されます。
+カタログ機能は、自身を定義するためにタグを使用します。コミュニティサイトでカタログ機能を設定する際、選択するタグ名前空間のセットは、コミュニティサイトで設定されたタグ名前空間の範囲によって定義されます。
 
-カタログ機能には、カタログのフィルター UI に表示されるタグを定義するタグ設定が含まれています。「すべての名前空間」の設定は、コミュニティサイトに対して選択されたタグ名前空間の範囲を指します。
+カタログ機能には、カタログのフィルター UI に表示されるタグを定義するタグ設定が含まれています。「すべての名前空間」の設定は、コミュニティサイト用に選択したタグ名前空間の範囲を指します。
 
-![カタログ名前空間](assets/catalog-namespace.png)
+![catalog-namespace](assets/catalog-namespace.png)
 
 ## イネーブルメントリソースへのタグの適用 {#applying-tags-to-enablement-resources}
 
-`Show in Catalog`をチェックすると、有効化リソースと学習パスがすべてのカタログに表示されます。 リソースおよび学習パスにタグを追加すると、特定のカタログに事前フィルタリングしたり、カタログUIでフィルタリングしたりできます。
+`Show in Catalog`をオンにすると、イネーブルメントリソースと学習パスがすべてのカタログに表示されます。 リソースと学習パスにタグを追加すると、特定のカタログに事前にフィルタリングしたり、カタログUIでフィルタリングしたりできます。
 
-イネーブルメントリソースとラーニングパスを特定のカタログに制限するには、[プリフィルター](catalog-developer-essentials.md#pre-filters)を作成します。
+イネーブルメントリソースと学習パスを特定のカタログに制限するには、[事前フィルター](catalog-developer-essentials.md#pre-filters)を作成します。
 
 カタログ UI を使用すると、訪問者は、そのカタログに表示されているリソースや学習パスのリストにタグフィルターを適用できるようになります。
 
 イネーブルメントリソースにタグを適用する管理者は、より高度な分類を可能にするサブタグを選択するために、カタログに関連付けられているタグ名前空間に加えて、分類についても理解している必要があります。
 
-例えば、`ski-catalog`名前空間が作成され、`Ski Catalog`という名前のカタログに設定された場合、2つの子タグを持つことがあります。`lesson-1`と`lesson-2`。
+例えば、`ski-catalog`名前空間が作成され、`Ski Catalog`という名前のカタログに設定された場合、2つの子タグが存在する可能性があります。`lesson-1`と`lesson-2`が含まれます。
 
 この場合は、以下のいずれかのタグが付けられたイネーブルメントリソースが、
 
@@ -104,5 +103,4 @@ ht-degree: 61%
 
 カタログ表示時にタグを選択してもイネーブルメントリソースが表示されない場合は、カタログの名前空間のタグがイネーブルメントリソースに適用されているかを確認してください。
 
-![表示カタログ](assets/viewcatalog.png)
-
+![view-catalog](assets/viewcatalog.png)
