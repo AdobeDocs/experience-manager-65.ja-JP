@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d72a3977-1423-49e0-899b-234bb76be378
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 82%
 
 ---
-
 
 # 認証プロバイダーの設定 {#configuring-authentication-providers}
 
@@ -67,17 +66,17 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 **Binding** （必須）ディレクトリへのアクセス方法を指定します。
 
-**匿名：ユーザー名** やパスワードは不要です。
+**匿名：** ユーザー名やパスワードは不要です。
 
 **ユーザー：** 認証が必要です。「名前」ボックスに、ディレクトリにアクセスできるユーザーレコードの名前を指定します。ユーザーアカウントの完全な識別名（DN）を入力することをお勧めします。例えば、cn=Jane Doe, ou=user, dc=can, dc=com などです。「パスワード」ボックスに、関連付けられているパスワードを指定します。これらの設定は、「バインド」オプションとして「ユーザー」を選択する場合は必須です。
 
-**BaseDNを取得：** （非必須）BaseDNを取得し、ドロップダウンリストに表示します。この設定は、複数の BaseDN がある場合に 1 つの値を選択する必要があるときに便利です。
+**BaseDNを取得：** （必須ではありません）BaseDNを取得し、ドロップダウンリストに表示します。この設定は、複数の BaseDN がある場合に 1 つの値を選択する必要があるときに便利です。
 
-**Base DN:** （必須）LDAP階層からユーザーおよびグループを同期するための開始点として使用されます。サービスのために同期する必要があるすべてのユーザーおよびグループを含む階層の最下位レベルの BaseDN を指定することをお勧めします。この設定にユーザーの DN は含めないでください。特定のユーザーを同期するには、検索フィルター設定を使用します。
+**Base DN:** （必須）LDAP階層からユーザーとグループを同期するための開始点として使用されます。サービスのために同期する必要があるすべてのユーザーおよびグループを含む階層の最下位レベルの BaseDN を指定することをお勧めします。この設定にユーザーの DN は含めないでください。特定のユーザーを同期するには、検索フィルター設定を使用します。
 
-**ページに次を入力：** （非必須）選択すると、ユーザー設定ページとグループ設定ページの属性に、対応するデフォルトのLDAP値が設定されます。
+**ページに次の情報を入力：** （非必須）選択すると、ユーザーおよびグループ設定ページの属性に、対応するデフォルトのLDAP値が設定されます。
 
-**検索フィルター：** （必須）ユーザーに関連付けられているレコードを検索する際に使用する検索フィルターです。「検索フィルターの構文」を参照してください。
+**検索フィルター：** （必須）ユーザーに関連付けられているレコードの検索に使用する検索フィルター。「検索フィルターの構文」を参照してください。
 
 ### Kerberos 設定 {#kerberos-settings}
 
@@ -85,11 +84,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 **DNS IP：** AEM Forms を実行しているサーバーの DNS IP アドレス。Windows の場合、この IP アドレスは、コマンドラインで ipconfig /all を実行して確認できます。
 
-**KDCホスト：認証に使用するActive Directoryサーバーの** 完全修飾ホスト名またはIPアドレス。
+**KDCホスト：** 認証に使用されるActive Directoryサーバーの完全修飾ホスト名またはIPアドレス。
 
-**サービスユーザー：Active Directory 2003を使用し** ている場合、この値はフォーム内のサービスプリンシパル用に作成されたマッピングになり `HTTP/<server name>`ます。Active Directory 2008 を使用している場合、サービスプリンシパルのログイン ID になります。例えば、サービスプリンシパル名が um spnego、ユーザー ID が spnegodemo、マッピングが HTTP/example.corp.yourcompany.com であるとします。この場合、Active Directory 2003 では、「サービスユーザー」を HTTP/example.corp.yourcompany.com に設定します。Active Directory 2008 では、「サービスユーザー」を spnegodemo に設定します（SPNEGO を使用した SSO の有効化を参照）。
+**Service User:** Active Directory 2003を使用している場合、この値はフォーム内のサービスプリンシパル用に作成されるマッピングになりま `HTTP/<server name>`す。Active Directory 2008 を使用している場合、サービスプリンシパルのログイン ID になります。例えば、サービスプリンシパル名が um spnego、ユーザー ID が spnegodemo、マッピングが HTTP/example.corp.yourcompany.com であるとします。この場合、Active Directory 2003 では、「サービスユーザー」を HTTP/example.corp.yourcompany.com に設定します。Active Directory 2008 では、「サービスユーザー」を spnegodemo に設定します（SPNEGO を使用した SSO の有効化を参照）。
 
-**サービス領域：Active Directoryの** ドメイン名
+**サービス領域：** Active Directoryのドメイン名
 
 **サービスパスワード：** サービスユーザーのパスワード
 
@@ -99,11 +98,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 エンタープライズドメインまたはハイブリッドドメインの認証を設定している場合、SAML 認証を選択するには、次の設定を使用できます。SAML 設定について詳しくは、[SAML サービスプロバイダーの設定](/help/forms/using/admin-help/configure-saml-service-provider-settings.md#configure-saml-service-provider-settings)を参照してください。
 
-**読み込むSAML IDプロバイダーのメタデータファイルを選択してください：「参照」を** クリックし、IDPから生成されたSAML IDプロバイダーのメタデータファイルを選択して、「読み込み」をクリックします。IDP の詳細が表示されます。
+**読み込むSAML IDプロバイダーメタデータファイルを選択してください：** 「参照」をクリックし、IDPから生成されたSAML IDプロバイダーメタデータファイルを選択して、「読み込み」をクリックします。IDP の詳細が表示されます。
 
-**タイトル：EntityIDで示されるURLの** エイリアス。タイトルは、エンタープライズユーザーおよびローカルユーザーのログインページにも表示されます。
+**タイトル：** EntityIDで示すURLのエイリアス。タイトルは、エンタープライズユーザーおよびローカルユーザーのログインページにも表示されます。
 
-**IDプロバイダーがクライアント基本認証をサポート：** クライアント基本認証は、IDPがSAML Artifact Resolutionプロファイルを使用する場合に使用されます。このプロファイルでは、User Management は、実際の SAML アサーションを取得するために、IDP で実行されている Web サービスに接続します。IDP では認証が必要である場合があります。IDP で認証が必要であれば、このオプションを選択して、表示されたボックスにユーザー名とパスワードを指定します。
+**IDプロバイダーがクライアント基本認証をサポート：** クライアント基本認証は、IDPがSAMLアーティファクト解決プロファイルを使用する場合に使用されます。このプロファイルでは、User Management は、実際の SAML アサーションを取得するために、IDP で実行されている Web サービスに接続します。IDP では認証が必要である場合があります。IDP で認証が必要であれば、このオプションを選択して、表示されたボックスにユーザー名とパスワードを指定します。
 
 **カスタムプロパティ：** 追加のプロパティを指定できます。追加のプロパティは name=value のペアで指定し、各ペアは新しい行によって区切られます。
 
@@ -132,11 +131,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 1. 認証プロバイダーは、秘密鍵証明書を検証します。
 1. 認証プロバイダーは、次に、ユーザーが User Management データベースに存在するかどうかを確認します。可能性のあるステータスは、次のとおりです。
 
-   **** Existsユーザーが現在のユーザーでロック解除されている場合、User Managementは認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
+   **** Existsユーザーが現在のロックが解除されている場合、User Managementは認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
-   **Does** not existUser Managementは認証失敗を返します。
+   **存在しな** いUser Managementは認証エラーを返します。
 
-   **** InvalidUser Managementは認証失敗を返します。
+   **** InvalidUser Managementは認証エラーを返します。
 
 1. 認証プロバイダーが返した結果が評価されます。認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。そうでない場合は、User Management は次の認証プロバイダーに対して確認（手順 2～3）を行います。
 1. ユーザーの秘密鍵証明書を検証する利用可能な認証プロバイダーがなくなると、認証の失敗が返されます。
@@ -160,4 +159,3 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 1. 認証プロバイダーを追加します。認証プロバイダーを追加する際に、新規認証画面で、登録された「ID 作成者」および「割り当てプロバイダー」を選択します。（[認証プロバイダーの設定](configuring-authentication-providers.md#configuring-authentication-providers)を参照）。
 1. ドメインを保存します。
-
