@@ -1,29 +1,28 @@
 ---
-title: カスタム実装用のトランザクションの記録
-seo-title: カスタム実装用のトランザクションの記録
-description: TransactionRecorder APIを使用して、トランザクションとしてカウントされないアクションを自動的に記録します
-seo-description: TransactionRecorder APIを使用して、トランザクションとしてカウントされないアクションを自動的に記録します
+title: カスタム実装のトランザクションの記録
+seo-title: カスタム実装のトランザクションの記録
+description: トランザクションとして計上されないアクションを自動的に記録するには、TransactionRecorder APIを使用します
+seo-description: トランザクションとして計上されないアクションを自動的に記録するには、TransactionRecorder APIを使用します
 uuid: a22b1a0b-7553-4a17-8fb4-a3bee97b4a98
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 0d961630-573b-4c8e-902f-996f1d1265b6
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: a1d97b15-14a6-4c3d-bdd3-6366f7acdfc8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
+# カスタム実装のトランザクションの記録{#record-a-transaction-for-custom-implementations}
 
-# カスタム実装のトランザクションを記録{#record-a-transaction-for-custom-implementations}
+トランザクションとして計上されないアクションを自動的に記録するには、TransactionRecorder APIを使用します
 
-TransactionRecorder APIを使用して、トランザクションとしてカウントされないアクションを自動的に記録します
+カスタムコードを使用してPDFフォームを送信したり、エージェントUIのプレビューURLをエンドユーザーに送信してインタラクティブ通信をプレビューしたり、AEM Formsに用意されている送信方法の代わりにカスタムメソッドを使用してフォームを送信したりできます。 AEM Forms APIの前述のすべてのアクションとカスタム実装は、トランザクションとしては考慮されません。 AEM Formsには、トランザクションなどのアクションを記録するAPI[TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)が用意されています。
 
-カスタムコードを使用して、PDFフォームの送信、エージェントUIプレビューURLのエンドユーザーへの送信、インタラクティブプレビューのためのエージェントURLの送信、またはAEM Formsが提供する送信メソッドの代わりにカスタムメソッドを使用したフォームの送信が可能です。 AEM FormsAPIの前述のすべてのアクションおよびカスタム実装は、トランザクションとして考慮されません。 AEM Formsは、トランザクションなどのアクションを記録するAPI [TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)を提供しています。
-
-トランザクションを記録するには、[標準slingサーブレット](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html)を記述し、クライアントからサーブレットを呼び出してトランザクションを記録します。 AJAXまたはその他の標準的な方法を使用してサーブレットを呼び出すことができます。
+トランザクションを記録するには、[標準のslingサーブレット](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html)を記述し、クライアントからサーブレットを呼び出してトランザクションを記録します。 AJAXまたはその他の標準的な方法を使用して、サーブレットを呼び出すことができます。
 
 ## サーバー側コードの例{#sample-server-sided-code}
 
@@ -94,6 +93,5 @@ $.ajax({
 ## 関連記事 {#related-articles}
 
 * [トランザクションレポートの概要](/help/forms/using/transaction-reports-overview.md)
-* [取引レポートの表示と理解](/help/forms/using/viewing-and-understanding-transaction-reports.md)
-* [トランザクションレポート請求可能API](/help/forms/using/transaction-reports-billable-apis.md)
-
+* [トランザクション・レポートの表示と理解](/help/forms/using/viewing-and-understanding-transaction-reports.md)
+* [トランザクションレポート請求可能なAPI](/help/forms/using/transaction-reports-billable-apis.md)
