@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d0d4f96-fc72-4e2b-a2cc-5741b0a30f74
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: b7461d5c-95d1-4da2-9d2a-f54c410a87f9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 100%
 
 ---
-
 
 # エンドポイントの追加、有効化、変更または削除 {#adding-enabling-modifying-or-removing-endpoints}
 
@@ -33,13 +32,13 @@ ht-degree: 100%
 1. 「エンドポイント」タブにあるリストで、追加するエンドポイントの種類を選択し、「追加」をクリックします。
 1. エンドポイントの種類に応じて、その他のエンドポイント設定を指定します。
 
-   [監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
+[監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
 
-   [電子メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
+[電子メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
 
-   [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
+[タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
 
-   [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
+[リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
 
 1. 「追加」をクリックします。
 
@@ -74,4 +73,3 @@ ht-degree: 100%
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／エンドポイントの管理をクリックします。
 1. エンドポイントの管理ページで、削除するエンドポイントのチェックボックスを選択して、「削除」をクリックします。エンドポイントが表示されなくなります。
-
