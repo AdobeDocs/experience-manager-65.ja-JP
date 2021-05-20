@@ -1,7 +1,7 @@
 ---
-title: Credential Service Java API QuickStart(SOAP)
-seo-title: Credential Service Java API QuickStart(SOAP)
-description: Credential Service Java API QuickStart(SOAP)
+title: 資格情報サービスJava API QuickStart(SOAP)
+seo-title: 資格情報サービスJava API QuickStart(SOAP)
+description: 資格情報サービスJava API QuickStart(SOAP)
 uuid: a00eabfa-3a52-41dd-bcba-c60d00394384
 contentOwner: admin
 content-type: reference
@@ -9,36 +9,35 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: b624e255-ae71-4d9c-8554-d48f3e77b799
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0ea00ef5-9923-4c03-a724-32f9ebdc650f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
+# 資格情報サービスJava APIクイックスタート(SOAP) {#credential-service-java-api-quickstart-soap}
 
-# Credential Service Java API Quick開始(SOAP) {#credential-service-java-api-quickstart-soap}
+資格情報サービスでJava APIクイックスタート(SOAP)を使用できます。
 
-Credentialサービスでは、Java API Quick開始(SOAP)を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用した資格情報の読み込み](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書の読み込み](credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した資格情報の削除](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した秘密鍵証明書の削除](credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
-
->[!NOTE]
->
->「AEMフォームのプログラミング」にあるクイック開始は、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsServerに基づいています。 ただし、Unixなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->Webサービスを使用して資格情報サービスの操作を実行することはできません。
+>「 AEM formsによるプログラミング」にあるクイックスタートは、JBossおよびWindowsオペレーティングシステムにデプロイされるFormsServerに基づいています。 ただし、Unixなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-importing-credentials-using-the-java-api}を使用した秘密鍵証明書のインポート
+>[!NOTE]
+>
+>Webサービスを使用してCredentialサービスの操作を実行することはできません。
 
-次のコードの例では、*cred.p12*&#x200B;という名前のファイルに基づいて秘密鍵証明書を読み込みます。 秘密鍵証明書の読み込みに使用されるエイリアスの値は`Secure`です。 （「[Trust Manager APIを使用した秘密鍵証明書の読み込み](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)」を参照）。
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-importing-credentials-using-the-java-api}を使用した資格情報の読み込み
+
+次のコードの例では、*cred.p12*&#x200B;という名前のファイルに基づいて秘密鍵証明書を読み込みます。 秘密鍵証明書の読み込みに使用するエイリアスの値は`Secure`です。 （[Trust Manager API](/help/forms/developing/credentials.md#importing-credentials-by-using-the-trust-manager-api)を使用した秘密鍵証明書の読み込みを参照）。
 
 ```java
  /*
@@ -137,9 +136,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-deleting-credentials-using-the-java-api}を使用した秘密鍵証明書の削除
+## クイックスタート（SOAPモード）:Java APIを使用した認証情報の削除{#quick-start-soap-mode-deleting-credentials-using-the-java-api}
 
-次のコードの例は、エイリアス値&#x200B;*secure*&#x200B;に基づいて秘密鍵証明書を削除します。 （「[Trust Manager APIを使用した秘密鍵証明書の削除](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api)」を参照）。
+次のコードの例では、エイリアス値&#x200B;*secure*&#x200B;に基づいて秘密鍵証明書を削除します。 （[Trust Manager API](/help/forms/developing/credentials.md#deleting-credentials-by-using-the-trust-manager-api)を使用した秘密鍵証明書の削除を参照）。
 
 ```java
  /*
@@ -229,4 +228,3 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
  
 ```
-
