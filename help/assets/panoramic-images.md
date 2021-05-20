@@ -8,16 +8,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
-feature: Panoramic Images,Asset Management
+feature: パノラマ画像，アセット管理
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '584'
 ht-degree: 61%
 
 ---
-
 
 # パノラマ画像 {#panoramic-images}
 
@@ -31,7 +30,7 @@ ht-degree: 61%
 
 アップロードするアセットが、パノラマ画像ビューアで使用する球パノラマ画像として適格となるには、アセットが以下の一方または両方の条件を満たしている必要があります。
 
-* 縦横比が 2 である必要があります。次の場所で、CRXDE Liteのデフォルトの縦横比設定である2を上書きできます。
+* 縦横比が 2 である必要があります。次の場所で、デフォルトの縦横比設定である2をCRXDE Liteで上書きできます。
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
 * キーワード `equirectangular`、または `spherical` と `panorama`、または `spherical` と `panoramic` でタグ付けされている必要があります。[タグの使用](/help/sites-authoring/tags.md)を参照してください。
@@ -40,19 +39,19 @@ ht-degree: 61%
 
 パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
-## Dynamic Mediaクラシックの設定{#configuring-dynamic-media-classic-scene}
+## Dynamic Media Classic {#configuring-dynamic-media-classic-scene}の設定
 
-パノラマ画像ビューアをAEM内で正しく動作させるには、パノラマ画像ビューアプリセットをDynamic MediaクラシックおよびDynamic Mediaクラシック固有のメタデータと同期して、JCRでビューアプリセットを更新する必要があります。 これを行うには、次の方法でDynamic Mediaクラシックを設定します。
+パノラマ画像ビューアがAEM内で正しく動作するようにするには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、ビューアプリセットがJCRで更新されるようにする必要があります。 これをおこなうには、次の方法でDynamic Media Classicを設定します。
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、アカウントにログインします。
 
-1. ページの右上隅近くにある、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
-1. Image Server公開ページの上部近くにある&#x200B;**[!UICONTROL 公開コンテキスト]**&#x200B;ドロップダウンメニューで、「**[!UICONTROL 画像サービング]**」を選択します。
+1. ページの右上隅付近で、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
+1. Image Server公開ページで、上部付近の「**[!UICONTROL 公開コンテキスト]**」ドロップダウンメニューから「**[!UICONTROL 画像サービング]**」を選択します。
 
-1. 同じImage Server公開ページで、「**[!UICONTROL Request Attributes.]**」という見出しを探します。
-1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限」を探します。]** 次に、関連する「幅」と「高さ」フィールドで、パノラマ画像に使用できる最大画像サイズを大きくします。
+1. 同じImage Server公開ページで、「**[!UICONTROL 要求属性]**」という見出しを探します。
+1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限」を探します。]** 次に、関連する「幅」フィールドと「高さ」フィールドで、パノラマ画像に許容される最大画像サイズを大きくします。
 
-   Dynamic Mediaクラシックの制限は25,000,000ピクセルです。 縦横比が2:1の画像で許可される最大サイズは7000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
+   Dynamic Media Classicの制限は25,000,000ピクセルです。 縦横比が2:1の画像で許容される最大サイズは7,000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
    >[!NOTE]
    >
@@ -60,12 +59,12 @@ ht-degree: 61%
 
 1. 「要求属性」の見出しの下で、次の操作をおこないます。
 
-   * リクエストの不明化モードを&#x200B;**[!UICONTROL 無効に設定します。]**
+   * 「リクエストの難読化モード」を「**[!UICONTROL Disabled.]**」に設定します。
    * Request Locking Modeを&#x200B;**[!UICONTROL Disabledに設定します。]**
 
    これらの設定は、AEMで`Panoramic Media` WCMコンポーネントを使用する場合に必要です。
 
-1. Image Server公開ページの下部の左側で、「**[!UICONTROL 保存]**」をクリックします。
+1. Image Server公開ページの下部にある左側の「**[!UICONTROL 保存]**」をクリックします。
 
 1. 右下隅の「**[!UICONTROL 閉じる」をクリックします。]**
 
@@ -73,11 +72,11 @@ ht-degree: 61%
 
 WCM でパノラマメディアコンポーネントに画像をドロップしたときに、コンポーネントプレースホルダーが壊れた場合、以下のトラブルシューティングをおこなってください。
 
-* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。[Dynamic Mediaクラシックの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)の「**[!UICONTROL 返信画像のサイズ制限]**」の設定を確認します。
+* 403 Forbidden エラーが発生する場合は、要求された画像のサイズが大きすぎることが原因となっている可能性があります。[Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)の設定で、「**[!UICONTROL 返信画像のサイズ制限]**」設定を確認します。
 
 * アセットの「無効なロック」やページに表示される「解析エラー」については、「要求難読化モード」と「要求ロックモード」が無効になっていることを確認します。
 * キャンバスが汚染されているというエラーについては、ルールセット定義ファイルのパスを設定し、画像アセットについて以前の要求の CDN を無効にします。
-* サポートされている制限を超えるサイズの画像を要求した後に画質が大幅に低下した場合は、**[!UICONTROL JPEG エンコード属性／画質]**&#x200B;の設定が空でないことを確認します。**[!UICONTROL クォリティ]**&#x200B;フィールドの一般的な設定は`95`です。 この設定は、Image Server 公開ページにあります。このページにアクセスするには、[Dynamic Mediaクラシックの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)を参照してください。
+* サポートされている制限を超えるサイズの画像を要求した後に画質が大幅に低下した場合は、**[!UICONTROL JPEG エンコード属性／画質]**&#x200B;の設定が空でないことを確認します。**[!UICONTROL 品質]**&#x200B;フィールドの一般的な設定は`95`です。 この設定は、Image Server 公開ページにあります。このページにアクセスするには、「[Dynamic Media Classicの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)」を参照してください。
 
 ## パノラマ画像のプレビュー {#previewing-panoramic-images}
 
