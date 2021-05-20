@@ -10,49 +10,48 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 9045ce2e-a06d-4da5-9b83-56dd823007bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a8b1ad0fcd2ca9c7fe3117dd8bd161da82d13e8a
+exl-id: 8b4d56d9-ba73-4eda-9773-3daaa9237abe
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 48%
 
 ---
 
-
 # リーダーボード機能  {#leaderboard-feature}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
-`Leaderboard`コンポーネントは、獲得点（基本スコア）またはその専門知識（高度スコア）に従ってメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
+`Leaderboard`コンポーネントは、獲得したポイント（基本スコア）や専門知識（高度なスコア）に基づいてメンバーをランク付けすることで、コミュニティ内でのメンバーの関わり方を把握できます。
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md)を設定する必要があります。
 
 ドキュメントのこのセクションでは、以下の内容について説明します。：
 
 * `Leaderboard`コンポーネントを[コミュニティサイト](/help/communities/overview.md#community-sites)に追加します。
-* `Leaderboard`コンポーネントの構成設定です。
+* `Leaderboard`コンポーネントの設定。
 
 ### リーダーボードをページに追加 {#adding-a-leaderboard-to-a-page}
 
-作成者モードで`Leaderboard`コンポーネントをページに追加するには、コンポーネントを見つけます
+`Leaderboard`コンポーネントをオーサリングモードでページに追加するには、
 
 * `Communities / Leaderboard`
 
 コンポーネントを探し、ページ上の位置にドラッグします。
 
-必要な情報については、[Communities Components Basics](/help/communities/basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](/help/communities/basics.md)を参照してください。
 
 コミュニティサイトのページに初めて配置されたとき、コンポーネントは次のように表示されます。
 
-![先頭板](assets/leaderboard.png)
+![リーダーボード](assets/leaderboard.png)
 
 ### リーダーボードの設定 {#configuring-leaderboard}
 
-アクセスする配置済みの`Leaderboard`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`Leaderboard`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![configure-new](assets/configure-new.png)
 
-![configure-leaderboard](assets/configure-leaderboard.png)
+![設定リーダーボード](assets/configure-leaderboard.png)
 
 #### 「設定」タブ{#settings-tab}
 
@@ -60,22 +59,22 @@ ht-degree: 48%
 
 * **表示名**
 
-   ボードに表示するわかりやすい名前。バッジとスコアの表示に選択したルールを反映します。
-何も入力しなかった場合の初期設定は`Leaderboard`です。
+   ボードに表示するわかりやすい名前。バッジとスコアの表示用に選択したルールを反映します。
+何も入力しない場合の初期設定は`Leaderboard`です。
 
 * **バッジ**
 
-   選択すると、バッジアイコンの列がリーダーボードに含まれます。
+   オンにすると、リーダーボードにバッジアイコンの列が表示されます。
 初期設定はオフです。
 
 * **バッジ名**
 
-   オンの場合、バッジ名の列がリーダーボードに含まれます。
+   オンにすると、リーダーボードにバッジ名の列が表示されます。
 初期設定はオフです。
 
 * **ユーザーアバター**
 
-   オンの場合、メンバーのアバター画像はリーダーボードに含まれ、メンバープロファイルへの名前リンクの隣に表示されます。
+   オンにすると、リーダーボードのメンバープロファイルへの名前リンクの横に、メンバーのアバター画像が表示されます。
 初期設定はオフです。
 
 #### 「ルール」タブ{#rules-tab}
@@ -84,7 +83,7 @@ ht-degree: 48%
 
 * **ルールの場所**
 
-   （必須）スコアリング/バッジングルールが設定されている場所。
+   （必須）スコア/バッジルールを設定する場所。
 
 * **スコアルール**
 
@@ -143,10 +142,10 @@ ht-degree: 48%
    * バッジルール = `/libs/settings/community/badging/rules/adv-forums-badging`
    * 最大表示数 = `10`
 
-![専門家委員会](assets/experts-leaderboard.png)
+![専門家のリーダーボード](assets/experts-leaderboard.png)
 
 ### 追加情報 {#additional-information}
 
-詳しい情報は[Leaderboard Essentials](/help/communities/leaderboard.md)ページの開発者向けページにあります。
+詳しくは、開発者向けの[リーダーボードの基本事項](/help/communities/leaderboard.md)ページを参照してください。
 
-ルールの作成手順は、管理者向けの[コミュニティスコアリングとバッジ](/help/communities/implementing-scoring.md)ページに記載されています。
+ルールの作成手順は、管理者向けの[コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md)ページで説明しています。
