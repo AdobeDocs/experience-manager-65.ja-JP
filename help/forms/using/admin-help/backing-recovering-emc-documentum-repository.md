@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f146202f-25f1-46a0-9943-c483f5f09f9f
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: bc21659f-88d6-4dff-8baf-12746e1b3ed9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 89%
 
 ---
-
 
 # EMC Documentum リポジトリのバックアップと回復 {#backing-up-and-recovering-the-emc-documentum-repository}
 
@@ -188,18 +187,18 @@ ht-degree: 89%
     NMDDE_DM_PASSWD=XAtup9pl
    ```
 
-   構成ファイルのパスワードフィールド`NMDDE_DM_PASSWD`は空白にしておきます。 パスワードは次の手順で設定します。
+   設定ファイルのパスワードフィールド`NMDDE_DM_PASSWD`は空白のままにします。 パスワードは次の手順で設定します。
 
 1. 設定ファイルのパスワードを、次のように設定します。
 
-   * コマンドプロンプトを開き、`[NetWorker_root]\Legato\nsr\bin`に変更します。
+   * コマンドプロンプトを開き、 `[NetWorker_root]\Legato\nsr\bin`に変更します。
    * 次のコマンドを実行します。`-nsrnmdsv.exe -f`*&lt;path_to_cfg_file> -P &lt;password>*
 
 1. データベースのバックアップに使用する実行可能なバッチファイル（.bat）を作成します（NetWorker のマニュアルを参照）。インストールされている状態に応じて、バッチファイルの詳細を設定します。
 
    * 完全なデータベースバックアップ（nsrnmddbf.bat）：
 
-      `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[password ]*`-l full`*&lt;database_name>*
+      `NetWorker_database_module_root` `-s`*&lt;networker_server_name>* `-U``[username]` `-P`*[パスワード&#x200B;]*`-l full`*&lt;database_name>*
 
    * 増分データベースバックアップ（nsrnmddbi.bat）：
 
@@ -211,7 +210,7 @@ ht-degree: 89%
 
       ここで、
 
-      `[NetWorker_database_module_root]` は、NetWorkerモジュールのインストールディレクトリです。例えば、NetWorker Module for SQL Server のデフォルトのインストールディレクトリは、C:¥Program Files¥Legato¥nsr¥bin¥nsrsqlsv です。
+      `[NetWorker_database_module_root]` は、NetWorkerモジュールのインストール・ディレクトリです。例えば、NetWorker Module for SQL Server のデフォルトのインストールディレクトリは、C:¥Program Files¥Legato¥nsr¥bin¥nsrsqlsv です。
 
       `NetWorker_Server_Name` は、NetWorkerがインストールされているサーバです。
 
@@ -228,7 +227,7 @@ ht-degree: 89%
 
    **Name：**&#x200B;共有ディレクトリのフルパス
 
-   **メディアの種類：** `File`
+   **メディアタイプ：** `File`
 
 1. 新しいデバイスを右クリックして、「Operations」をクリックします。
 1. 「Label」をクリックし、名前を入力して「OK」をクリックしてから、「Mount」をクリックします。
@@ -243,7 +242,7 @@ AEM forms データの完全バックアップを完了してから、以下の�
 >
 >コマンドスクリプトには、[EMC Document Content Server のバックアップおよび復元の準備](backing-recovering-emc-documentum-repository.md#preparing-the-emc-document-content-server-for-backup-and-recovery)で作成した nsrnmd_win.cfg ファイルへのフルパスが必要です。
 
-1. コマンドプロンプトを開き、`[NetWorker_root]\Legato\nsr\bin`に変更します。
+1. コマンドプロンプトを開き、 `[NetWorker_root]\Legato\nsr\bin`に変更します。
 1. 次のコマンドを実行します。
 
    ```shell
@@ -263,8 +262,8 @@ AEM forms データの完全バックアップを完了してから、以下の�
 1. Restore ツールをクリックし、「Normal」をクリックします。
 1. 画面の左側で、Docbase のデータベースを選択し、ツールバーの「Start」ボタンをクリックします。
 1. データベースが復元されたら、Docbase サービスを再起動します。
-1. コマンドプロンプトを開き、*[NetWorker_root]*\Legato\nsr\binに移動します。
-1. 次の コマンドを実行します。
+1. コマンドプロンプトを開き、 *[NetWorker_root]*\Legato\nsr\binに移動します。
+1. 次のコマンドを実行します。
 
    ```shell
     - nsrnmdrs.exe -B <docbase_name> -f <path_to_cfg_file> -C SA
