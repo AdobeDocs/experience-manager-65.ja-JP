@@ -1,8 +1,8 @@
 ---
 title: Java API を使用した AEM Forms の呼び出し
 seo-title: Java API を使用した AEM Forms の呼び出し
-description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM FormsJava APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAPを使用します。ユーザー名やパスワードなどの異なる認証、同期および非同期呼び出し要求を使用します。
-seo-description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM FormsJava APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAPを使用します。ユーザー名やパスワードなどの異なる認証、同期および非同期呼び出し要求を使用します。
+description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM Forms Java APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAP、ユーザー名とパスワード、同期および非同期の呼び出し要求などの異なる認証を使用します。
+seo-description: リモート呼び出し用のRMIトランスポートプロトコルにはAEM Forms Java APIを使用し、ローカル呼び出し用のVMトランスポート、リモート呼び出し用のSOAP、ユーザー名とパスワード、同期および非同期の呼び出し要求などの異なる認証を使用します。
 uuid: 5e2fef2a-05f3-4283-8fd3-2d7dca411000
 contentOwner: admin
 content-type: reference
@@ -10,18 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: coding
 discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '5495'
+source-wordcount: '5494'
 ht-degree: 87%
 
 ---
 
-
 # Java API を使用した AEM Forms の呼び出し {#invoking-aem-forms-using-the-javaapi}
 
-**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
+**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
 
 AEM Forms Java API を使用して AEM Forms を呼び出すことができます。AEM Forms Java API を使用している場合、呼び出し API または Java クライアントライブラリを使用できます。Java クライアントライブラリは、Rights Management サービスなどのサービスで使用できます。これらの強く型付けされた API を使用することによって、AEM Forms を呼び出す Java アプリケーションを開発できます。
 
@@ -63,7 +62,7 @@ Adobe Developer の Web サイトには、Java API を使用して AEM Forms サ
 
 [人間中心の長期間有効なプロセスを呼び出す Java Web アプリケーションの作成](/help/forms/developing/invoking-human-centric-long-lived.md)
 
-## AEM Forms Java ライブラリファイルを含める  {#including-aem-forms-java-library-files}
+## AEM Forms Java ライブラリファイルを含める {#including-aem-forms-java-library-files}
 
 Java API を使用してプログラムで AEM Forms サービスを呼び出すには、Java プロジェクトのクラスパスに必要なライブラリファイル（JAR ファイル）を含めます。クライアントアプリケーションのクラスパスに含める JAR ファイルは、いくつかの要因によって異なります。
 
@@ -72,7 +71,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
 
 >[!NOTE]
 >
->（自動オプションのみ）AEM Formsサーバーに開始し、コマンド`standalone.bat -b <Server IP> -c lc_turnkey.xml`を指定してEJB用のサーバーIPを指定します
+>（自動のみ）EJB用のサーバーIPを指定するコマンド`standalone.bat -b <Server IP> -c lc_turnkey.xml`でAEM Formsサーバーを起動します
 
 * AEM Forms のデプロイ先 J2EE アプリケーションサーバー。
 
@@ -268,7 +267,7 @@ Java API を使用してプログラムで AEM Forms サービスを呼び出す
   </tr>
   <tr>
    <td><p> jboss-client.jar</p> </td>
-   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照jarが共存していない場合、必要なクラスはクラスローダーで見つかりません。</p> </td>
+   <td><p>AEM Forms が JBoss Application Server 上にデプロイされている場合は、この JAR ファイルを含めます。</p> <p>jboss-client.jarと参照jarが同じ場所にない場合、必要なクラスはclassloaderで見つかりません。</p> </td>
    <td><p>JBoss クライアントの lib ディレクトリ</p> <p>クライアントアプリケーションを同じ J2EE アプリケーションサーバー上にデプロイする場合は、このファイルを含める必要はありません。</p> </td>
   </tr>
   <tr>
@@ -425,7 +424,7 @@ AEM Forms にアップグレードするとします。Rights Management サー�
 
 [Java クライアントライブラリを使用したサービスの呼び出し](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
-## 接続プロパティの設定  {#setting-connection-properties}
+## 接続プロパティの設定 {#setting-connection-properties}
 
 Java API を使用している場合、AEM Forms を呼び出すためには接続プロパティを設定します。接続プロパティを設定する場合は、サービスをリモートとローカルのどちらで呼び出すかどうかを指定し、接続モードと認証値も指定します。サービスセキュリティが有効な場合は、認証値が必要です。ただし、サービスセキュリティが無効の場合は、認証値を指定する必要はありません。
 
@@ -443,17 +442,17 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 
    * ポート値 `8080` は、J2EE アプリケーションが JBoss の場合に適用されます。J2EE アプリケーションサーバーが IBM® WebSphere® の場合は、ポート `9080` を使用します。同様に、J2EE アプリケーションサーバーが WebLogic の場合は、ポート `7001` を使用します。（これらの値はデフォルトのポート値です。ポートの値を変更する場合は、適用可能なポート番号を使用してください。）
 
-* **DSC_TRANSPORT_PROTOCOL**：EJB 接続モードを使用している場合は、この値に `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` を指定します。SOAP接続モードを使用している場合は、`ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`を指定します。
+* **DSC_TRANSPORT_PROTOCOL**：EJB 接続モードを使用している場合は、この値に `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` を指定します。SOAP接続モードを使用する場合は、`ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`を指定します。
 * **DSC_SERVER_TYPE**：AEM Forms のデプロイ先 J2EE アプリケーションサーバーを指定します。有効な値は`JBoss`、`WebSphere`、`WebLogic`です。
 
-   * この接続プロパティを`WebSphere`に設定した場合、`java.naming.factory.initial`値は`com.ibm.ws.naming.util.WsnInitCtxFactory`に設定されます。
-   * この接続プロパティを`WebLogic`に設定した場合、`java.naming.factory.initial`値は`weblogic.jndi.WLInitialContextFactory`に設定されます。
+   * この接続プロパティを`WebSphere`に設定した場合、`java.naming.factory.initial`の値は`com.ibm.ws.naming.util.WsnInitCtxFactory`に設定されます。
+   * この接続プロパティを`WebLogic`に設定した場合、`java.naming.factory.initial`の値は`weblogic.jndi.WLInitialContextFactory`に設定されます。
    * 同様に、この接続プロパティを`JBoss`に設定した場合、`java.naming.factory.initial`の値は`org.jnp.interfaces.NamingContextFactory`に設定されます。
    * デフォルトの値を使用しない場合、`java.naming.factory.initial` プロパティを要件を満たす値に設定することができます。
 
    >[!NOTE]
    >
-   >`DSC_SERVER_TYPE`接続プロパティを設定する文字列を使用する代わりに、`ServiceClientFactoryProperties`クラスの静的メンバを使用できます。 次の値を使用できます。`ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、`ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`、または`ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
+   >`DSC_SERVER_TYPE`接続プロパティを設定するために文字列を使用する代わりに、`ServiceClientFactoryProperties`クラスの静的メンバを使用できます。 次の値を使用できます。`ServiceClientFactoryProperties.DSC_WEBSPHERE_SERVER_TYPE`、`ServiceClientFactoryProperties.DSC_WEBLOGIC_SERVER_TYPE`、または`ServiceClientFactoryProperties.DSC_JBOSS_SERVER_TYPE`。
 
 * **DSC_CREDENTIAL_USERNAME**：AEM Forms ユーザー名を指定します。ユーザーが AEM Forms サービスを正常に呼び出すには、サービスユーザーのロールが必要です。ユーザーは、サービス呼び出し権限を含む別のロールを持つこともできます。権限を持たないユーザーの場合、サービスの呼び出しを試行するときに例外が発生します。サービスセキュリティが無効の場合、この接続プロパティを指定する必要はありません。
 * **DSC_CREDENTIAL_PASSWORD**：対応するパスワード値を指定します。サービスセキュリティが無効の場合、この接続プロパティを指定する必要はありません。
@@ -464,35 +463,35 @@ AEM Forms サービスを正常に呼び出すには、次の接続プロパテ�
 接続プロパティを設定するには、次のタスクを実行します。
 
 1. コンストラクタを使用して `java.util.Properties` オブジェクトを作成します。
-1. `DSC_DEFAULT_EJB_ENDPOINT`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出し、次の値を渡します。
+1. `DSC_DEFAULT_EJB_ENDPOINT`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出して、次の値を渡します。
 
-   * `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT`定義済みリスト値
+   * `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT`列挙値
    * AEM Forms をホストする J2EE アプリケーションサーバーの URL を指定する文字列値
 
    >[!NOTE]
    >
-   >SOAP接続モードを使用する場合は、`ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT`定義済みリスト値の代わりに`ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT`定義済みリスト値を指定します。
+   >SOAP接続モードを使用している場合は、`ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT`列挙値の代わりに`ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT`列挙値を指定します。
 
-1. `DSC_TRANSPORT_PROTOCOL`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出し、次の値を渡します。
+1. `DSC_TRANSPORT_PROTOCOL`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出して、次の値を渡します。
 
-   * `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL`定義済みリスト値
-   * `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL`定義済みリスト値
+   * `ServiceClientFactoryProperties.DSC_TRANSPORT_PROTOCOL`列挙値
+   * `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL`列挙値
 
    >[!NOTE]
    >
-   >SOAP接続モードを使用している場合は、`ServiceClientFactoryProperties.DSC_EJB_PROTOCOL`定義済みリスト値の代わりに`ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`定義済みリスト値を指定します。
+   >SOAP接続モードを使用している場合は、`ServiceClientFactoryProperties.DSC_EJB_PROTOCOL`列挙値の代わりに`ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`列挙値を指定します。
 
-1. `DSC_SERVER_TYPE`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出し、次の値を渡します。
+1. `DSC_SERVER_TYPE`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出して、次の値を渡します。
 
-   * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`定義済みリスト値
+   * `ServiceClientFactoryProperties.DSC_SERVER_TYPE`列挙値
    * AEM Forms をホストする J2EE アプリケーションサーバーを指定する文字列値（例えば、AEM Forms が にデプロイされている場合は `JBoss`JBoss を指定します）。
 
-      1. `DSC_CREDENTIAL_USERNAME`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出し、次の値を渡します。
-   * `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME`定義済みリスト値
+      1. `DSC_CREDENTIAL_USERNAME`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出して、次の値を渡します。
+   * `ServiceClientFactoryProperties.DSC_CREDENTIAL_USERNAME`列挙値
    * AEM Forms を呼び出すのに必要なユーザー名を指定する文字列値
 
-      1. `DSC_CREDENTIAL_PASSWORD`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出し、次の値を渡します。
-   * `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD`定義済みリスト値
+      1. `DSC_CREDENTIAL_PASSWORD`接続プロパティを設定するには、`java.util.Properties`オブジェクトの`setProperty`メソッドを呼び出して、次の値を渡します。
+   * `ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD`列挙値
    * 対応するパスワード値を指定する文字列値
 
 
@@ -583,7 +582,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
 
 **Context オブジェクトを使用した AEM Forms の呼び出し**
 
-`com.adobe.idp.Context` オブジェクトを使用して、認証されたユーザーで AEM Forms サービスを呼び出すことができます（`com.adobe.idp.Context` オブジェクトが認証されたユーザーを表します）。`com.adobe.idp.Context`オブジェクトを使用する場合、`DSC_CREDENTIAL_USERNAME`プロパティや`DSC_CREDENTIAL_PASSWORD`プロパティを設定する必要はありません。 `AuthenticationManagerServiceClient`オブジェクトの`authenticate`メソッドを使用して、ユーザーの認証時に`com.adobe.idp.Context`オブジェクトを取得できます。
+`com.adobe.idp.Context` オブジェクトを使用して、認証されたユーザーで AEM Forms サービスを呼び出すことができます（`com.adobe.idp.Context` オブジェクトが認証されたユーザーを表します）。`com.adobe.idp.Context`オブジェクトを使用する場合、`DSC_CREDENTIAL_USERNAME`または`DSC_CREDENTIAL_PASSWORD`プロパティを設定する必要はありません。 `AuthenticationManagerServiceClient`オブジェクトの`authenticate`メソッドを使用して、ユーザーを認証する際に`com.adobe.idp.Context`オブジェクトを取得できます。
 
 `authenticate` メソッドは、認証の結果を含む `AuthResult` オブジェクトを返します。コンストラクタを呼び出すことによって、`com.adobe.idp.Context` オブジェクトを作成できます。次に、次のコードに示すように、`com.adobe.idp.Context` オブジェクトの `initPrincipal` メソッドを呼び出し、`AuthResult` オブジェクトを渡します。
 
@@ -592,7 +591,7 @@ ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT, 
  myCtx.initPrincipal(authResult);
 ```
 
-`DSC_CREDENTIAL_USERNAME`または`DSC_CREDENTIAL_PASSWORD`プロパティを設定する代わりに、`ServiceClientFactory`オブジェクトの`setContext`メソッドを呼び出して、`com.adobe.idp.Context`オブジェクトを渡すことができます。 AEM formsユーザーを使用してサービスを呼び出す場合は、AEM Formsサービスの呼び出しに必要な`Services User`というロールがあることを確認してください。
+`DSC_CREDENTIAL_USERNAME`または`DSC_CREDENTIAL_PASSWORD`プロパティを設定する代わりに、`ServiceClientFactory`オブジェクトの`setContext`メソッドを呼び出して、`com.adobe.idp.Context`オブジェクトを渡すことができます。 AEM formsユーザーを使用してサービスを呼び出す場合は、AEM Formsサービスを呼び出すために必要な`Services User`という役割がユーザーに割り当てられていることを確認してください。
 
 次のコードの例では、`com.adobe.idp.Context` オブジェクトを作成するために使用される接続設定内で `EncryptionServiceClient` オブジェクトを使用する方法を示します。
 
@@ -696,7 +695,7 @@ SOAP 接続モードを使用するクライアントアプリケーションは
 
 [Java クライアントライブラリを使用したサービスの呼び出し](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
-## Java API を使用した AEM Forms サービスへのデータの引き渡し  {#passing-data-to-aem-forms-services-using-the-java-api}
+## Java API を使用した AEM Forms サービスへのデータの引き渡し {#passing-data-to-aem-forms-services-using-the-java-api}
 
 AEM Forms サービス操作では、通常、PDF ドキュメントを使用または生成します。サービスを呼び出すときに、PDF ドキュメント（または XML データなどの他のドキュメントタイプ）をサービスに渡す必要がある場合があります。同様に、サービスから返される PDF ドキュメントを処理する必要があることもあります。AEM Forms サービスとの間でデータをやりとりできるようにする Java クラスは、`com.adobe.idp.Document` です。
 
@@ -712,7 +711,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
 
 コラテラルファイルが同じファイルシステム上にある場合は、`com.adobe.idp.Document` オブジェクトを作成する方が効率的です。コラテラルファイルがリモートファイルシステム上に存在する場合は、コピー操作を実行する必要があるためパフォーマンスに影響します。
 
-1つのアプリケーションには、`com.adobe.idp.Document`データ型と`org.w3c.dom.Document`データ型の両方を含めることができます。 ただし、`org.w3c.dom.Document`データ型が完全に適合していることを確認してください。 `org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換する方法については、[クイックスタート（EJB モード）：Java API を使用した流動レイアウトによるフォームの事前入力](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)を参照してください。
+アプリケーションには、`com.adobe.idp.Document`と`org.w3c.dom.Document`の両方のデータ型を含めることができます。 ただし、`org.w3c.dom.Document`データ型を完全に修飾していることを確認してください。 `org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換する方法については、[クイックスタート（EJB モード）：Java API を使用した流動レイアウトによるフォームの事前入力](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)を参照してください。
 
 >[!NOTE]
 >
@@ -761,7 +760,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
 
 [接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### ドキュメントの作成  {#creating-documents}
+### ドキュメントの作成 {#creating-documents}
 
 入力値として PDF ドキュメント（または他のドキュメントタイプ）を必要とするサービス操作を呼び出す前に、`com.adobe.idp.Document` オブジェクトを作成します。`com.adobe.idp.Document` クラスは、次のコンテンツタイプからドキュメントを作成できるコンストラクタを提供します。
 
@@ -804,7 +803,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
 
 #### ファイルに基づいたドキュメントの作成  {#creating-a-document-based-on-a-file}
 
-次のコードの例では、*map.pdf*&#x200B;というPDFファイルに基づいて`com.adobe.idp.Document`オブジェクトを作成します。 このファイルは C ハードドライブのルートにあります。このコンストラクタは、ファイル拡張子を使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
+次のコードの例では、*map.pdf*&#x200B;という名前のPDFファイルに基づいて`com.adobe.idp.Document`オブジェクトを作成します。 このファイルは C ハードドライブのルートにあります。このコンストラクタは、ファイル拡張子を使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
 
 `com.adobe.idp.Document` オブジェクトを受け入れる `java.io.File` コンストラクタは、ブール型パラメーターも受け入れます。このパラメーターを `true` に設定すると、`com.adobe.idp.Document` オブジェクトによってファイルが削除されます。このアクションは、ファイルを `com.adobe.idp.Document` コンストラクタに渡した後にファイルを削除する必要がないことを意味します。
 
@@ -832,7 +831,7 @@ AEM Forms サービスは、PDF ドキュメントを `java.io.InputStream` オ�
 
 #### URL からアクセス可能なコンテンツに基づいたドキュメントの作成  {#creating-a-document-based-on-content-accessible-from-an-url}
 
-次のJavaコードの例では、*map.pdf*&#x200B;というPDFファイルに基づいて`com.adobe.idp.Document`オブジェクトを作成します。 このファイルは、`WebApp` で実行されている `localhost` という名前の Web アプリケーション内にあります。このコンストラクタは、URL プロトコルで返されるコンテンツタイプを使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
+次のJavaコードの例では、*map.pdf*&#x200B;という名前のPDFファイルに基づいて`com.adobe.idp.Document`オブジェクトを作成します。 このファイルは、`WebApp` で実行されている `localhost` という名前の Web アプリケーション内にあります。このコンストラクタは、URL プロトコルで返されるコンテンツタイプを使用して `com.adobe.idp.Document` オブジェクトの MIME コンテンツタイプの設定を試行します。
 
 次の例に示すように、`com.adobe.idp.Document` オブジェクトに提供される URL は、元の `com.adobe.idp.Document` オブジェクトが作成されるのに伴って必ず読み取られます。
 
@@ -858,7 +857,7 @@ C:/temp/input.pdf ファイルは、（サーバーコンピューターでは�
 
 [接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### 返されたドキュメントの処理  {#handling-returned-documents}
+### 返されたドキュメントの処理 {#handling-returned-documents}
 
 PDF ドキュメント（または XML データなどの他のデータ型）を出力値として返すサービス操作では、`com.adobe.idp.Document` オブジェクトが返されます。受け取った `com.adobe.idp.Document` オブジェクトは、次の形式に変換できます。
 
@@ -866,7 +865,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 * `java.io.InputStream`オブジェクト
 * バイト配列
 
-次のコード行では、`com.adobe.idp.Document` オブジェクトを `java.io.InputStream` オブジェクトに変換します。`myPDFDocument`が`com.adobe.idp.Document`オブジェクトを表すとします。
+次のコード行では、`com.adobe.idp.Document` オブジェクトを `java.io.InputStream` オブジェクトに変換します。`myPDFDocument`が`com.adobe.idp.Document`オブジェクトを表しているとします。
 
 ```java
      java.io.InputStream resultStream = myDocument.getInputStream();
@@ -875,7 +874,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 同様に、次のタスクを実行することによって、`com.adobe.idp.Document` の内容をローカルファイルにコピーできます。
 
 1. `java.io.File`オブジェクトを作成します。
-1. `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出し、`java.io.File`オブジェクトを渡します。
+1. `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、`java.io.File`オブジェクトを渡します。
 
 次のコードの例では、`com.adobe.idp.Document` オブジェクトの内容を *AnotherMap.pdf* という名前のファイルにコピーします。
 
@@ -892,7 +891,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 
 [接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### ドキュメントのコンテンツタイプの確認  {#determining-the-content-type-of-a-document}
+### ドキュメントのコンテンツタイプの確認 {#determining-the-content-type-of-a-document}
 
 `com.adobe.idp.Document`オブジェクトの`getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのMIMEタイプを判断します。 このメソッドは、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを指定する文字列値を返します。次の表で、AEM Forms が返す様々なコンテンツタイプについて説明します。
 
@@ -955,7 +954,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 
 [接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Document オブジェクトの廃棄  {#disposing-document-objects}
+### Document オブジェクトの廃棄 {#disposing-document-objects}
 
 `Document` オブジェクトが不要になったら、その `dispose` メソッドを呼び出すことで破棄することをお勧めします。各 `Document` オブジェクトは、アプリケーションのホストプラットフォーム上でファイル記述子と最大 75 MB の RAM 領域を消費します。`Document` オブジェクトが破棄されていない場合、Java のガベージコレクションプロセスによって破棄されます。ただし、`dispose` メソッドを使用してより早く廃棄することによって、`Document` オブジェクトが占有するメモリを解放することができます。
 
@@ -967,7 +966,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 
 [Java クライアントライブラリを使用したサービスの呼び出し](invoking-aem-forms-using-java.md#invoking-a-service-using-a-java-client-library)
 
-## Java クライアントライブラリを使用したサービスの呼び出し  {#invoking-a-service-using-a-java-client-library}
+## Java クライアントライブラリを使用したサービスの呼び出し {#invoking-a-service-using-a-java-client-library}
 
 AEM Forms サービス操作は、サービスの強く型付けされた API である Java クライアントライブラリを使用して呼び出すことができます。*Java クライアントライブラリ*&#x200B;は、サービスコンテナにデプロイされたサービスへのアクセスを提供する具象クラスのセットです。呼び出し API を使用して `InvocationRequest` オブジェクトを作成する代わりに、呼び出すサービスを表す Java オブジェクトをインスタンス化します。呼び出し API は、Workbench で作成された長期間有効なプロセスなどのプロセスを呼び出すために使用されます。（[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)を参照。）
 
@@ -987,22 +986,22 @@ Java クライアントライブラリを使用して次の手順を実行する
 
 1. adobe-repository-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 1. サービスを呼び出すために必要な接続プロパティを設定します。
-1. `ServiceClientFactory`オブジェクトの静的な`createInstance`メソッドを呼び出し、接続プロパティを含む`java.util.Properties`オブジェクトを渡して、`ServiceClientFactory`オブジェクトを作成します。
+1. `ServiceClientFactory`オブジェクトの静的な`createInstance`メソッドを呼び出し、接続プロパティを含む`java.util.Properties`オブジェクトを渡すことで、`ServiceClientFactory`オブジェクトを作成します。
 1. コンストラクタを使用して `ResourceRepositoryClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。`ResourceRepositoryClient` オブジェクトを使用して、Repository サービス操作を呼び出します。
 1. そのコンストラクタを使用して `RepositoryInfomodelFactoryBean` を渡すことによって、`null` オブジェクトを作成します。このオブジェクトを使用すると、リポジトリに追加されるコンテンツを表す `Resource` オブジェクトを作成できます。
 1. `RepositoryInfomodelFactoryBean`オブジェクトの`newImage`メソッドを呼び出し、次の値を渡して、`Resource`オブジェクトを作成します。
 
-   * `new Id()`を指定して一意のID値を指定します。
-   * `new Lid()`を指定して一意のUUID値を指定します。
+   * `new Id()`を指定して一意のID値を返します。
+   * `new Lid()`を指定する一意のUUID値。
    * リソースの名前。XDP ファイルのファイル名を指定できます。
 
    戻り値を `Resource` にキャストします。
 
 1. `RepositoryInfomodelFactoryBean`オブジェクトの`newImage`メソッドを呼び出し、戻り値を`ResourceContent`にキャストして、`ResourceContent`オブジェクトを作成します。 このオブジェクトはリポジトリに追加されるコンテンツを表します。
 1. リポジトリに追加する XDP ファイルを格納する `com.adobe.idp.Document` オブジェクトを渡して、`java.io.FileInputStream` オブジェクトを作成します。（[InputStream オブジェクトに基づいたドキュメントの作成](invoking-aem-forms-using-java.md#creating-a-document-based-on-an-inputstream-object)を参照。）
-1. 追加`ResourceContent`オブジェクトの`setDataDocument`メソッドを呼び出すことで、`com.adobe.idp.Document`オブジェクトの`ResourceContent`オブジェクトの内容を指定します。 `com.adobe.idp.Document`オブジェクトを渡します。
-1. `ResourceContent`オブジェクトの`setMimeType`メソッドを呼び出し、`application/vnd.adobe.xdp+xml`を渡すことで、リポジトリに追加するXDPファイルのMIMEタイプを設定します。
-1. 追加`ResourceContent`オブジェクトの内容を`Resource`オブジェクトに追加するには、`Resource`オブジェクト&#39;s `setContent`メソッドを呼び出し、`ResourceContent`オブジェクトを渡します。
+1. `ResourceContent`オブジェクトの`setDataDocument`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトの内容を`ResourceContent`オブジェクトに追加します。 `com.adobe.idp.Document`オブジェクトを渡します。
+1. `ResourceContent`オブジェクトの`setMimeType`メソッドを呼び出して`application/vnd.adobe.xdp+xml`を渡すことで、リポジトリに追加するXDPファイルのMIMEタイプを設定します。
+1. `Resource`オブジェクトの`setContent`メソッドを呼び出して`ResourceContent`オブジェクトを渡すことで、`ResourceContent`オブジェクトの内容を`Resource`オブジェクトに追加します。
 1. `Resource` オブジェクトの `setDescription` メソッドを呼び出して、リソースの説明を表す文字列値を渡すことによって、リソースの説明を追加します。
 1. `ResourceRepositoryClient` オブジェクトの `writeResource` メソッドを呼び出し、次の値を渡すことによってフォームデザインをリポジトリに追加します。
 
@@ -1017,7 +1016,7 @@ Java クライアントライブラリを使用して次の手順を実行する
 
 [AEM Forms Java ライブラリファイルを含める](invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-## 呼び出し API を使用した短時間のみ有効なプロセスの呼び出し  {#invoking-a-short-lived-process-using-the-invocation-api}
+## 呼び出し API を使用した短時間のみ有効なプロセスの呼び出し {#invoking-a-short-lived-process-using-the-invocation-api}
 
 Java 呼び出し API を使用して、短時間のみ有効なプロセスを呼び出すことができます。呼び出し API を使用して短時間のみ有効なプロセスを呼び出す場合は、`java.util.HashMap` オブジェクトを使用して必須のパラメーター値を渡します。各パラメーターをサービスに渡すには、`java.util.HashMap` オブジェクトの `put` メソッドを呼び出し、指定された操作を実行するためにサービスが必要とする名前と値のペアを指定します。短時間のみ有効なプロセスに属するパラメーターの正確な名前を指定します。
 
@@ -1061,13 +1060,13 @@ Java 呼び出し API を使用して短時間のみ有効なプロセスの `My
    * サービス操作に必要なパラメーター値を含む `java.util.HashMap` オブジェクト。
    * `true` を指定するブール値。これを渡すと同期要求が作成されます（この値は、短時間のみ有効なプロセスを呼び出すために適用されます）。
 
-1. `ServiceClient` オブジェクトの `invoke` メソッドを呼び出し、`InvocationRequest` オブジェクトを渡すことによって、呼び出し要求をサービスに送信します。`invoke`メソッドは`InvocationReponse`オブジェクトを返します。
+1. `ServiceClient` オブジェクトの `invoke` メソッドを呼び出し、`InvocationRequest` オブジェクトを渡すことによって、呼び出し要求をサービスに送信します。`invoke`メソッドは、`InvocationReponse`オブジェクトを返します。
 
    >[!NOTE]
    >
    >`false` メソッドの 4 番目のパラメーターとして `createInvocationRequest` を渡すことによって、長期間有効なプロセスを呼び出すことができます。値 `false`*を渡すと、非同期要求が作成されます。*
 
-1. `InvocationReponse` オブジェクトの `getOutputParameter` メソッドを呼び出して、出力パラメーターの名前を指定する文字列値を渡すことによって、プロセスの戻り値を取得します。この場合、`outDoc`を指定します（`outDoc`は`MyApplication/EncryptDocument`プロセスの出力パラメーターの名前）。 以下の例のように、戻り値を `Document` にキャストします。
+1. `InvocationReponse` オブジェクトの `getOutputParameter` メソッドを呼び出して、出力パラメーターの名前を指定する文字列値を渡すことによって、プロセスの戻り値を取得します。この場合は、`outDoc`を指定します（`outDoc`は`MyApplication/EncryptDocument`プロセスの出力パラメーターの名前です）。 以下の例のように、戻り値を `Document` にキャストします。
 
    ```java
     InvocationResponse response = myServiceClient.invoke(request);
