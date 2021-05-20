@@ -1,6 +1,6 @@
 ---
 title: AEM Mobile On-Demand
-seo-title: AEM Mobileオンデマンド
+seo-title: AEM Mobile On-Demand
 description: 新しい AEM Mobile アプリエクスペリエンスを開始し、コンテンツを編集できるようになるまでには、複数の役割を持つメンバーが一体となって作業することが必要です。このページでは、AEM Mobile On-demand Services の概要について説明します。
 seo-description: 新しい AEM Mobile アプリエクスペリエンスを開始し、コンテンツを編集できるようになるまでには、複数の役割を持つメンバーが一体となって作業することが必要です。このページでは、AEM Mobile On-demand Services の概要について説明します。
 uuid: 175c609d-3cb8-4a1b-bfea-278df272e500
@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
 discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
-translation-type: tm+mt
-source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
+exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 54%
 
 ---
 
-
-# AEM Mobileオンデマンド{#aem-mobile-on-demand}
+# AEM Mobile On-Demand{#aem-mobile-on-demand}
 
 >[!NOTE]
 >
@@ -36,7 +35,7 @@ AEM Preflight アプリは、アプリおよびコンテンツを公開前にプ
 
 >[!NOTE]
 >
->Preflightアプリについて詳しくは、AEM Mobile On-demand Servicesのヘルプの「[AEM Preflightアプリの使用](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html)」を参照してください。
+>プリフライトアプリについて詳しくは、AEM Mobile On-demand Servicesヘルプの[AEM Preflightアプリ](https://helpx.adobe.com/jp/digital-publishing-solution/help/preflight-app.html)の使用を参照してください。
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -60,11 +59,11 @@ AEM Mobile は、完全な AEM プラットフォームを構成する 1 つの�
 
 ### AEM Mobile アプリケーションダッシュボードについて  {#understanding-the-aem-mobile-application-dashboard}
 
-役割と責任を理解する前に、**AEM Mobileコントロールセンター**&#x200B;または&#x200B;**申し込みダッシュボード**&#x200B;に関する知識を身に付けておく必要があります。 詳しくは、[こちら](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+役割と責任を理解する前に、**AEM Mobileコントロールセンター**&#x200B;または&#x200B;**アプリケーションダッシュボード**&#x200B;に関する十分な知識を持っている必要があります。 詳しくは、[こちら](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
-### AEM 管理者 {#aem-administrator}
+### AEM 管理者  {#aem-administrator}
 
-***AEM管理者***&#x200B;は、新しいアプリを作成ウィザードを使用して作成するか、既存のアプリを読み込むことで、新しいアプリをAEM Mobileカタログに追加します。 AEM Mobileの&#x200B;*作成ウィザード*&#x200B;を使用して新しいアプリを作成するAEM管理者は、通常、標準搭載の参照サンプルから、または（ほとんどの場合は）*AEM開発者が作成したカスタムアプリテンプレートのいずれかを選択します。*
+***AEM管理者***&#x200B;は、作成ウィザードを使用して新しいアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。 AEM Mobileの&#x200B;*作成ウィザード*&#x200B;を使用して新しいアプリを作成するAEM管理者は、通常、標準の参照サンプルから、または（ほとんどの場合は）*AEM開発者が作成したカスタムアプリテンプレートを選択します。*
 
 AEM 管理者は、AEM Mobile On-Demand Services を使用してアプリを作成する際に以下のタスクを担当します。
 
@@ -73,11 +72,11 @@ AEM 管理者は、AEM Mobile On-Demand Services を使用してアプリを作�
 * [プリフライトによるプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)
 * [コンテンツサービスの管理](/help/mobile/developing-content-services.md)
 
-管理者の役割と責任について詳しくは、[『AEM Mobile On-demand Servicesを使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)』を参照してください。
+管理者の役割と責任の概要については、[AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)を使用するためのコンテンツの管理を参照してください。
 
 ## AEM 開発者 {#aem-developer}
 
-**AEM開発者**&#x200B;は、カスタムWebテンプレートとコンポーネントを拡張して作成し、*AEM Author *で美しく魅力的なモバイルエクスペリエンスを作成できるようにします。 これらのテンプレートとコンポーネントは、モバイルアプリの世界向けに最適化されているだけではありません。ただし、デバイスとAEMサーバ（任意のリモートサーバ）の両方に対して、オムニチャネルサービスエンドポイントと通信します。 AEMの組み込みコンテンツエディターは、*AEM作成者*&#x200B;が、Adobe Marketing Cloudの他の地域との統合など、豊富で関連性のあるエクスペリエンスをアプリ内で作成するために使用します。
+**AEM開発者**&#x200B;は、カスタムのWebテンプレートとコンポーネントを拡張および作成して、AEMオーサーが美しく魅力的なモバイルエクスペリエンスを作成できるようにします。 これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（リモートサーバー）の両方をオムニチャネルサービスエンドポイントに通信します。 AEMの組み込みコンテンツエディターは、*AEM作成者*&#x200B;が、Adobe Marketing Cloudの他の部分との統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成するために使用します。
 
 AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作成するときに以下のタスクを担当します。
 
@@ -86,15 +85,15 @@ AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作�
 * [コンテンツプロパティとコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
 * [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md)
 
-開発者の役割と責任について詳しくは、[AEM Mobile On-demand Services向けAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md)を参照してください。
+開発者の役割と責務の概要については、「 [AEM Mobile On-demand ServicesのAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md) 」を参照してください。
 
 >[!NOTE]
 >
->*AEM開発者の*&#x200B;ロールは開始せず、テンプレートとコンポーネントの開発で終了します。 *AEM開発者*&#x200B;は、標準搭載のリファレンス実装サンプルを拡張するだけでなく、完全に新しいアプリを作成できます。
+>*AEM開発者の*&#x200B;役割は、テンプレートとコンポーネントの開発で始まったり終わったりするわけではありません。 *AEM開発者*&#x200B;は、標準の参照実装サンプルを単に拡張するのではなく、まったく新しいアプリを作成できます。
 
 ## AEM オーサー {#aem-author}
 
-***AEM Author*(または&#x200B;*すぐに使用できるテンプレートやコンポーネントをカスタムで追加および編集し、コンポーネントをドラッグ&amp;ドロップし、DAMから画像、ビデオ、テキストフラグメント（コンテンツフラグメント）を含むすべてのタイプのメディアを追加します。***次に、AEM組み込みコンテンツエディターが&#x200B;*AEM作成者*によって使用され、Adobe Marketing Cloudの他の地域との統合など、豊富で関連性のあるエクスペリエンスをアプリ内で作成します。
+***AEMオーサー*（または&#x200B;*マーケター*）**は、カスタム開発または標準提供のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加をおこないます。 その後、*AEM作成者*はAEMの組み込みコンテンツエディターを使用して、Adobe Marketing Cloudの他の部分との統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成します。
 
 AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作成する場合、以下のトピックについて理解しておく必要があります。
 
@@ -104,9 +103,8 @@ AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作�
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
 * [コンテンツサービス概要](/help/mobile/develop-content-as-a-service.md)
 
-作成者の役割と責任について詳しくは、「[AEM Mobile On-demand Servicesアプリ用AEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)」を参照してください。
+作成者の役割と責任の概要については、「 [AEM Mobile On-demand ServicesアプリのAEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md) 」を参照してください。
 
 >[!NOTE]
 >
 >また、AEM 作成者は、権利付与の設定、カードおよびレイアウトの作成、プッシュ通知の送信も担当します。AEM Mobile でのコンテンツのオーサリング、記事およびコレクションの管理、バナー、カード、レイアウトの作成方法について詳しくは、[AEM Mobile On-Demand ポータル](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html#dynamicpod_reference_2)を参照してください。
-
