@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3d2b7cfb-228c-4cc2-8fcd-d500f0010010
-translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '815'
 ht-degree: 77%
 
 ---
-
 
 # Forms の場所の設定 {#configuring-locations-for-forms}
 
@@ -28,7 +27,7 @@ Web ルート、検索対象フォームの場所、PDFForm 変換で使用す�
 
 ## 場所の設定 {#locations-settings}
 
-**ベースURL：画像やスクリプ** トなどのフォームリソースが配置されるベースURL。HTML 変換に画像やスクリプトなどの外部依存の HREF 参照が含まれている場合は、この値が必須となります。このようなスクリプトの 1 つに xfasubset.js があります。xfasubset.js は HTML フォームで XFA インテリジェンスを実行するのに必要です。この値は HTTP 形式のコンテンツルート URI である必要があります。
+**Base URL:** 画像やスクリプトなどのフォームリソースが配置されるベースURL。HTML 変換に画像やスクリプトなどの外部依存の HREF 参照が含まれている場合は、この値が必須となります。このようなスクリプトの 1 つに xfasubset.js があります。xfasubset.js は HTML フォームで XFA インテリジェンスを実行するのに必要です。この値は HTTP 形式のコンテンツルート URI である必要があります。
 
 >[!NOTE]
 >
@@ -54,19 +53,19 @@ Forms Web アプリケーションとクライアントアプリケーション�
 
 デフォルト値は空の文字列です。
 
-**WebルートURI：アプリケ** ーションのWebルート。この値と、AEM Forms SDK を介して指定された sTargetURL パラメーターを連結して（sTargetURL が相対 URL の場合）、アプリケーション固有の Web コンテンツにアクセスするための絶対 URL が作成されます。
+**WebルートURI:** アプリケーションのWebルート。この値と、AEM Forms SDK を介して指定された sTargetURL パラメーターを連結して（sTargetURL が相対 URL の場合）、アプリケーション固有の Web コンテンツにアクセスするための絶対 URL が作成されます。
 
 デフォルト値は空の文字列です。
 
-**Content Root URI：フォ** ームの取得元であるURIまたは絶対位置。この値と、API 経由で指定された sFormQuery パラメーターを連結して、フォームの取得先である絶対パスが作られます。この値で参照できるのは、特定のディレクトリか、HTTP でアクセス可能な Web 上の場所です。
+**Content Root URI:** フォームの取得元となるURIまたは絶対位置。この値と、API 経由で指定された sFormQuery パラメーターを連結して、フォームの取得先である絶対パスが作られます。この値で参照できるのは、特定のディレクトリか、HTTP でアクセス可能な Web 上の場所です。
 
 デフォルト値は空の文字列です。
 
-**XCI設定URI：レンダリ** ングに使用するXCIファイルが存在する相対パスまたは絶対パスです。相対パスの場合は、デプロイ可能な AEM Forms EAR ファイル内に XCI ファイルが保存されていることが前提となります。
+**XCI Configuration URI:** レンダリングに使用されるXCIファイルが存在する相対パスまたは絶対パス。相対パスの場合は、デプロイ可能な AEM Forms EAR ファイル内に XCI ファイルが保存されていることが前提となります。
 
 デフォルト値は `com/adobe/formServer/PA/pa.xci` です。
 
-**フォントマップURI：フォ** ントマッピングファイルの相対パスまたは絶対パスです。相対パスの場合は、デプロイ可能な AEM Forms EAR ファイル内にこのファイルが保存されていることが前提となります。
+**Font Map URI:** フォントマッピングファイルの相対パスまたは絶対パス。相対パスの場合は、デプロイ可能な AEM Forms EAR ファイル内にこのファイルが保存されていることが前提となります。
 
 フォントマップファイルによってフォーム内に HTML 変換のためのカスタムフォントマップが作成されます。こうすると、クライアントコンピューターに存在しないフォントを別のフォントに置き換えるように指定することができます。
 
@@ -76,21 +75,20 @@ Forms Web アプリケーションとクライアントアプリケーション�
 
 `Arial=Arial,Helvetica,sans-serif`
 
-**シードPDFファイル：配信** を最適化するためにPDFForm変換で使用される初期PDFファイルです。シード PDF ファイルで指定する特別な PDF ファイル（XFA ストリーム、画像およびフォントリソースのみを含む）にフォームのデザインとデータが付加されます。このフォームは Acrobat バージョン 7 以降でレンダリングされ、PDFForm 変換に適用されます。
+**シードPDFファイル：** 配信を最適化するためにPDFForm変換で使用される初期PDFファイル。シード PDF ファイルで指定する特別な PDF ファイル（XFA ストリーム、画像およびフォントリソースのみを含む）にフォームのデザインとデータが付加されます。このフォームは Acrobat バージョン 7 以降でレンダリングされ、PDFForm 変換に適用されます。
 
 デフォルト値は空の文字列です。
 
-**キャッシュの場所：Formsディスクキャッシュの場所を** 指定します。この設定を変更すると、現在の場所の既存のキャッシュ情報すべてがリセットされ、新しいキャッシュが新しい場所に作成されます。次のいずれかのオプションを選択します。
+**キャッシュの場所：** Formsディスクキャッシュの場所を指定します。この設定を変更すると、現在の場所の既存のキャッシュ情報すべてがリセットされ、新しいキャッシュが新しい場所に作成されます。次のいずれかのオプションを選択します。
 
 **デフォルトの場所：** これはデフォルトの選択です。このオプションを選択すると、次のように使用しているアプリケーションサーバーによって決まる場所にキャッシュが作成されます。
 
 * **JBoss:** [JBoss Home]\server\[install type]\svcdata\FormServer\Cache
-* **WebLogic:** [WebLogic Home]\user_projects\domains\[aem-forms Domain Name]\adobe\[forms server name]\FormServer\Cache
+* **WebLogic:** [WebLogicホーム]\user_projects\domains\[aem-forms Domain Name]\adobe\[forms server name]\FormServer\Cache
 * **WebSphere:** [IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 
-**LC Temp Directory：キャッシュ** は、AEM forms一時ディレクトリのサブディレクトリに作成されます。このサブディレクトリは、管理コンソールのSettings/Core System Settings/Configurations/Location of Temp Directoryで指定します。サブディレクトリの名前は、adobeform_[servername]です。
+**LC Temp Directory:** キャッシュは、AEM forms一時ディレクトリのサブディレクトリに作成されます。このサブディレクトリは、管理コンソールのSettings/Core System Settings/Configurations/Location of Temp Directoryで指定されます。サブディレクトリの名前は、adobeform_[servername]です。
 
 >[!NOTE]
 >
 >一時クリーニングユーティリティを使用している場合、これらのディレクトリを削除しても機能に影響を与えませんが、新しいキャッシュが作成されるまで、短期間パフォーマンスが大きく低下する可能性があります。このような問題を回避するには、AEM Forms 一時ディレクトリの消去中、これらのディレクトリを削除しないでください。
-
