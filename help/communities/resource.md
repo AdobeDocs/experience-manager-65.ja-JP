@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 8fe97181-600e-42ac-af25-d5d4db248740
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 78908a9c-a260-44ff-ad1e-baa6d78ae399
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 46%
 
 ---
-
 
 # イネーブルメントリソースの作成と割り当て {#create-and-assign-enablement-resources}
 
@@ -24,15 +23,15 @@ ht-degree: 46%
 
 新しいコミュニティサイトにイネーブルメントリソースを追加するには：
 
-* 作成者インスタンスでシステム管理者としてログインします。
-   * 例：[http://localhost:4502/](http://localhost:4503/)
+* オーサーインスタンスでシステム管理者としてログインします。
+   * 例： [http://localhost:4502/](http://localhost:4503/)
 * グローバルナビゲーションから、**[!UICONTROL コミュニティ]**/**[!UICONTROL リソース]**&#x200B;を選択します。
 
    ![resources](assets/resources.png)
 
    ![enablement-resource](assets/enablement-resource.png)
 * イネーブルメントリソースを追加するコミュニティサイトを選択します。
-   * 「**[!UICONTROL 有効化チュートリアル]**」を選択します。
+   * **[!UICONTROL イネーブルメントチュートリアル]**&#x200B;を選択します。
 * メニューから「**[!UICONTROL 作成]**」を選択します。
 * 「**[!UICONTROL リソース]**」を選択します。
 
@@ -44,11 +43,11 @@ ht-degree: 46%
 
 * **[!UICONTROL サイト名]**
 
-   選択したコミュニティサイトの名前に設定：有効化のチュートリアル
+   選択したコミュニティサイトの名前に設定します。イネーブルメントチュートリアル
 
 * **[!UICONTROL リソース名(&amp;A);]**
 
-   スキーレッスン1
+   Ski Lesson 1
 
 * **[!UICONTROL タグ]**
 
@@ -60,11 +59,11 @@ ht-degree: 46%
 
 * **[!UICONTROL 説明]**
 
-   初心者向けの雪滑り。
+   雪上滑り初心者。
 
 * **[!UICONTROL 画像を追加]**
 
-   割り当て表示内のメンバに対してリソースを表す追加画像。
+   メンバーの割り当てビューで、メンバーにリソースを表す画像を追加します。
 
    ![basic-info](assets/basic-info.png)
 
@@ -74,13 +73,13 @@ ht-degree: 46%
 
 複数のリソースを選択できるように見えますが、選択できるのは 1 つだけです。
 
-右上隅の`'+' icon`を選択して、ソースを識別してリソースを選択するプロセスを開始します。
+右上隅の`'+' icon`を選択し、ソースを識別してリソースを選択するプロセスを開始します。
 
 ![add-content](assets/add-content.png)
 
-![アップロード・リソース](assets/upload-resource.png)
+![upload-resource](assets/upload-resource.png)
 
-リソースをアップロードします。ビデオリソースの場合は、カスタム開始をアップロードして再生するビデオ画像の前に表示するか、ビデオからサムネールを生成できるようにします（数分かかる場合があります。待つ必要はありません）。
+リソースをアップロードします。ビデオリソースの場合は、ビデオの再生を開始する前に表示するカスタム画像をアップロードするか、ビデオからサムネールを生成できるようにします（数分かかる場合があります。待つ必要はありません）。
 
 ![upload-video](assets/upload-video.png)
 
@@ -90,7 +89,7 @@ ht-degree: 46%
 
 * **[!UICONTROL ソーシャルの設定]**
 
-   デフォルトの設定は、学習者が使用可能なリソースのコメントや評価を体験する場合にのみ使用します。
+   学習者がイネーブルメントリソースにコメントや評価を付ける際は、デフォルトの設定のままにします。
 
 * **[!UICONTROL 期限]**
 
@@ -102,13 +101,13 @@ ht-degree: 46%
 
 * **[!UICONTROL リソース連絡先(&amp;A);]**
 
-   *（必須）プルダウンメニューを* 使用して、メンバを選択 `Quinn Harper`します。
+   *（必須）* プルダウンメニューを使用してメンバーを選択しま `Quinn Harper`す。
 
 * **[!UICONTROL リソースエキスパート]**
 
    *（オプション）* 空白のままにします。
 
-   **注意**:ユーザーまたはグループが表示されない場合は、ユーザーまたはグループがグループに追加され、 `Community Enable Members` 発行インスタンスで「 ** 保存」されたことを確認します。
+   **注意**:ユーザーまたはグループが表示されない場合は、そのユーザーまたはグループがグループに追加され、パブリッシュインス `Community Enable Members` タンスに保 ** 存されていることを確認します。
 
    ![enablement-settings](assets/enablement-settings.png)
 
@@ -118,7 +117,7 @@ ht-degree: 46%
 
 * **[!UICONTROL 割り当て先を追加]**
 
-   この有効化リソースは学習パスに追加されるので、設定を解除しておきます。 学習者が、有効化リソースを含む学習パスと共に個々の有効化リソースに割り当てられた場合、学習者は有効化リソースに2回割り当てられます。
+   このイネーブルメントリソースは学習パスに追加されるので、設定を解除します。 学習者が個々のイネーブルメントリソースと、イネーブルメントリソースを含む学習pPathに割り当てられると、学習者はイネーブルメントリソースに2回割り当てられます。
 
    ![add-assignments](assets/add-assignments.png)
 
@@ -126,7 +125,7 @@ ht-degree: 46%
 
    ![create-resource](assets/create-resource.png)
 
-リソースが正常に作成されると、リソースコンソールに戻ります。新しく作成されたリソースが選択状態になっています。このコンソールから、学習者の投稿、追加、その他の設定の変更が可能です。
+リソースが正常に作成されると、リソースコンソールに戻ります。新しく作成されたリソースが選択状態になっています。このコンソールから、学習者の公開、追加、その他の設定の変更を行うことができます。
 
 新しいバージョンのイネーブルメントリソースをアップロードする際は、新しいリソースを作成したうえで、古いバージョンのリソースからメンバーを登録解除して新しいバージョンのリソースに登録することを推奨します。
 
@@ -134,7 +133,7 @@ ht-degree: 46%
 
 登録者が割り当てられたリソースを確認できるようにするには、その前に次の手順でリソースを公開する必要があります。
 
-* ワールド`Publish`アイコンを選択
+* ワールドの`Publish`アイコンを選択します。
 
 アクティベーションが成功したことを示す以下のメッセージが表示されます。
 
@@ -144,22 +143,22 @@ ht-degree: 46%
 
 上記の手順を繰り返し、学習パス作成用の関連するイネーブルメントリソースを作成して公開します。
 
-![追加リソース](assets/add-resource.png)
+![add-resource](assets/add-resource.png)
 
-**2番目のリソースを** 発行します。
+**** 2つ目のリソースを公開します。
 
 Enablement Tutorial のリソースのリストに戻ります。
 
 *ヒント：両方のリソースが表示されない場合は、ページを更新します。*
 
-![リフレッシュ・リソース](assets/refresh-resource.png)
+![refresh-resource](assets/refresh-resource.png)
 
 ## 学習パスの追加 {#add-a-learning-path}
 
 学習パスは、複数のイネーブルメントリソースを論理的にグループ化して 1 つのコースとしたものです。
 
-* リソースコンソールから`+ Create`を選択します
-* **[!UICONTROL 学習パス]**&#x200B;を選択
+* リソースコンソールで、「`+ Create`」を選択します。
+* **[!UICONTROL 学習パス]**&#x200B;を選択します。
 
 ![add-learning-path](assets/add-learning-path.png)
 
@@ -167,7 +166,7 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 * **[!UICONTROL 学習パス名]**
 
-   スキーレッスン
+   Ski Lessons
 
 * **[!UICONTROL タグ]**
 
@@ -175,7 +174,7 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 * **[!UICONTROL カタログに表示]**
 
-   チェックを外したままにする
+   オフのままにします。
 
 * **[!UICONTROL 画像のアップロード]**
 
@@ -189,11 +188,11 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
-リソース追加パネルで、次の操作を行います。
+リソースを追加パネルで、次の操作を行います。
 
-* `+ Add Resources`を選択して、学習パスに追加する2つのスキーリソースを選択します。
+* `+ Add Resources`を選択して、学習パスに追加する2つのスキーレッスンリソースを選択します。
 
-   注意：**発行済み**&#x200B;のリソースのみが選択可能です。
+   注意：選択できるリソースは&#x200B;**公開済み**&#x200B;のみです。
 
 >[!NOTE]
 >
@@ -201,9 +200,9 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
-   ![学習経路](assets/learningpath-add.png)
+   ![学習パス](assets/learningpath-add.png)
 
-   ![創造的学習の道](assets/create-learningpath.png)
+   ![create-learningpath](assets/create-learningpath.png)
 
 * 「**[!UICONTROL 次へ]**」を選択します。
 
@@ -211,17 +210,16 @@ Enablement Tutorial のリソースのリストに戻ります。
 
 * **[!UICONTROL 割り当て先を追加]**
 
-   プルダウンメニューを使用して`Community Ski Class`グループを選択します。グループには`Riley Taylor`と`Sidney Croft.`が含まれます。
+   プルダウンメニューを使用して、`Community Ski Class`グループを選択します。このグループには、`Riley Taylor`と`Sidney Croft.`のメンバーが含まれます。
 
-* **[!UICONTROL 学習パス（連絡先）;]**
+* **[!UICONTROL 学習パスの連絡先(&amp;A);]**
 
-   *（必須）プルダウンメニューを* 使用して、メンバを選択 `Quinn Harper`します。
+   *（必須）* プルダウンメニューを使用してメンバーを選択しま `Quinn Harper`す。
 
 * 「**[!UICONTROL 作成]**」を選択します。
 
    ![learningpath-info](assets/learningpath-info.png)
 
-学習パスが正常に作成されると、リソースコンソールに戻ります。新しく作成された学習パスが選択状態になっています。このコンソールから、学習者の投稿、追加、その他の設定の変更が可能です。
+学習パスが正常に作成されると、リソースコンソールに戻ります。新しく作成された学習パスが選択状態になっています。このコンソールから、学習者の公開、追加、その他の設定の変更を行うことができます。
 
 学習パスを&#x200B;**公開**&#x200B;します。
-
