@@ -11,16 +11,15 @@ content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 50ed9ec4-ff04-4f9d-aefb-0837542a9455
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '319'
 ht-degree: 62%
 
 ---
 
-
-# バッジコンソール {#badges-console}
+# バッジコンソール  {#badges-console}
 
 ## バッジについて {#about-badges}
 
@@ -36,33 +35,33 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 * [リーダーボード](/help/communities/enabling-leaderboard.md)
 * [アイディエーション](/help/communities/ideation-feature.md)
 
-作成者環境で、バッジコンソールに移動します。
+オーサー環境で、バッジコンソールに移動します。
 
 * グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL バッジ]**
 
 このコンソールでは、現在利用可能なバッジが表示され、新しいバッジを追加できます。
 
-![バッジ — ホームページ](assets/badges-homepage.png)
+![badges-homepage](assets/badges-homepage.png)
 
 ## バッジを作成 {#create-badge}
 
-バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジ画像は`/libs/settings/community/badging/images`のリポジトリに保存され、自動的に公開環境に複製されます。
+バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジ画像はリポジトリの`/libs/settings/community/badging/images`に保存され、パブリッシュ環境に自動的にレプリケートされます。
 
 パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](/help/communities/sync.md)を設定する必要があります。
 
-![クリエイトバッジ](assets/create-badge.png)
+![create-badge](assets/create-badge.png)
 
 * **画像をアップロード**
 
-   （*必須*）JPEGまたはPNG形式で、推奨サイズが32 x 32ピクセル、72 dpiのバッジ画像。
+   （*必須*）JPEG形式またはPNG形式で、32 x 32ピクセル、72dpiの推奨サイズを持つバッジ画像。
 
 * **Name**
 
-   （*必須*）バッジ名。 これはデフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
+   （*必須*）バッジ名。 デフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
 
 * **表示名**
 
-   （*オプション*） UIにバッジとして表示する名前。 デフォルトは、`Name`に対して入力された変更なしのテキストです。
+   （*オプション*）UIでバッジに表示する名前。 初期設定は、`Name`に入力された、変更されていないテキストです。
 
 * **説明**
 
@@ -70,6 +69,6 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ## 追加情報 {#additional-information}
 
-スコアリングルールとバッジルールの設定について詳しくは、[スコアリングとバッジ](/help/communities/implementing-scoring.md)を参照してください。
+スコアルールとバッジルールの設定について詳しくは、[スコアとバッジ](/help/communities/implementing-scoring.md)を参照してください。
 
 メンバーのバッジの管理については、[メンバーコンソール](/help/communities/members.md)を参照してください。
