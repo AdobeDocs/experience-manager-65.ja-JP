@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 1edf6c76-ccb1-40b6-bdf6-924f1461cd28
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 576b4567-c7b6-4196-84e7-47e980637540
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 69%
 
 ---
-
 
 # 共有リソースの書き出し設定の作成{#creating-shared-resources-export-configuration}
 
@@ -26,19 +25,19 @@ ht-degree: 69%
 
 >[!CAUTION]
 >
->**前提条件**：
+>**前提条件**:
 >
->共有リソースの作成と変更について詳しくは、[コンテンツの同期](/help/mobile/mobile-ondemand-contentsync.md)を参照して、基本的な概念を理解してください。
+>共有リソースの作成と変更について学習する前に、[コンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)を参照して、基本的な概念を理解してください。
 
 AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブコンテンツをモバイルアプリ用の静的コンテンツとして書き出します。AEM Mobile からコンテンツを Mobile On-demand Services にアップロードしたときに書き出しがおこなわれます。
 
-上の表で示した&#x200B;***dps-exportTemplate***&#x200B;プロパティは、アプリのエクスポート設定のパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
+上記の表に示したプロパティ&#x200B;***dps-exportTemplate***&#x200B;は、アプリの書き出し設定へのパスを定義します。 共有リソースを作成および変更するには、このプロパティを設定します。
 
 以下のリソースでは、Adobe Experience Manager（AEM）から共有リソースを書き出して AEM Mobile にアップロードする手順について説明しています。
 
-共有HTMLリソースを使用すると、記事でHTMLリソースを共有できます。このHTMLリソースは、すべての記事で複製が必要になり、アイコン、フォント、javascript、cssを含むことができます。
+共有HTMLリソースを使用すると、HTMLリソースを共有できます。HTMLリソースを共有する場合は、すべての記事に複製する必要があります。また、アイコン、フォント、JavaScript、CSSを含めることもできます。
 
-**&lt;dps-exportTemplate>/dps-HTMLResources>**&#x200B;にあるコンテンツ同期の設定は、デバイスでのプロパティの静的レンダリングに必要な記事とすべてのコンテンツを書き出すように設定する必要があります。
+**&lt;dps-exportTemplate>/dps-HTMLResources>**&#x200B;にあるコンテンツ同期設定は、デバイス上でのプロパティ静的レンダリングに必要なすべてのコンテンツと記事を書き出すように設定する必要があります。
 
 >[!CAUTION]
 >
@@ -64,4 +63,3 @@ AEM Mobile のユーザーは、コンテンツ同期を使用して、ライブ
 >[!NOTE]
 >
 >いずれかの共有リソースが変更された場合は、共有リソースを AEM Mobile On-demand Services にアップロードするか、書き出す必要があります。
-
