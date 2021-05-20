@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 7e404b45-1302-4dd1-b3c9-3f47fedb5f94
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 562f8a22-cbab-4915-bc0d-da9bea7d18fa
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1029'
 ht-degree: 93%
 
 ---
 
-
-# AEM Forms と Adobe LiveCycle の接続 {#connecting-aem-forms-with-adobe-livecycle}
+# AEM Forms と Adobe LiveCycle の接続  {#connecting-aem-forms-with-adobe-livecycle}
 
 Adobe Experience Manager (AEM) LiveCycle Connector を使用し、AEM Web アプリとワークフローから Adobe LiveCycle ES4 Document Services を呼び出すことができます。LiveCycle はリッチクライアント SDK を提供します。これにより、クライアントアプリケーションは Java API を使用して LiveCycle サービスを開始します。AEM LiveCycle Connector は OSGi 環境でこれらの API の使用を簡素化します。
 
@@ -32,7 +31,7 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 
 プロパティは説明がなくても分かりますが、重要なプロパティは次のとおりです。
 
-* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMがhttps経由で通信する場合は、次のJVMを持つ開始AEMを使用します。
+* **サーバー URL** - LiveCycle Server への URL を指定します。LiveCycleとAEMがhttps経由で通信する場合は、次のJVMを使用してAEMを起動します
 
    ```java
    argument
@@ -53,9 +52,9 @@ AEM LiveCycle Connector は「[AEM Forms アドオンパッケージ](/help/form
 1. 各サービスがクライアントクラスを提供します。サービスを開始するには、サービスのクライアントインスタンスを作成します。
 1. サービスを開始し、結果を処理します。
 
-AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycleコネクタには次の機能があります。
+AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセスできる OSGi サービスとしてこれらのクライアントインスタンスを公開して、フローを簡素化します。LiveCycleコネクタは、次の機能を提供します。
 
-* OSGiサービスとしてのクライアントインスタンス：OSGIバンドルとしてパッケージ化されたクライアントは、[ドキュメントサービスリスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)のセクションに一覧表示されます。 各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
+* OSGiサービスとしてのクライアントインスタンス：OSGIバンドルとしてパッケージ化されたクライアントは、[Document Services list](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)の節に記載されています。 各クライアント jar は、OSGi Service Registry を使用する OSGi サービスとしてクライアントインスタンスを登録します。
 * ユーザー資格情報の伝播：LiveCycle サーバーに接続するために必要な接続の詳細情報は、一元的に管理されます。
 * ServiceClientFactory サービス：プロセスを開始するために、クライアントアプリケーションは ServiceClientFactory インスタンスにアクセスできます。
 
@@ -83,7 +82,7 @@ AEM LiveCycle Connector は、標準的な OSGi の方法を使ってアクセ�
    </dependency>
    ```
 
-   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、「[Document Service リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」を参照してください。例えば、Generate PDFサービスの場合、次の依存関係を追加します。
+   サービスを開始するには、サービスに対応する Maven 依存性を追加します。依存性のリストについて詳しくは、「[Document Service リスト](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)」を参照してください。例えば、Generate PDFサービスの場合は、次の依存関係を追加します。
 
    ```xml
    <dependency>
@@ -161,7 +160,7 @@ LiveCycle のほとんどの Document Service には認証が必要です。次�
 
 LiveCycle Client SDK 設定には、サービス名についての設定が含まれています。この設定は、呼び出しロジックが追加設定なしに管理者資格情報を使用するサービスのリストです。例えば、DirectoryManager サービス（User Management API の一部）をこのリストに追加する場合、すべてのクライアントコードはこのサービスを直接使用することが可能で、呼び出しレイヤーは LiveCycle サーバーに送信された要求の一部として、設定された資格情報を自動的に渡します。
 
-### RunAsManager  {#runasmanager}
+### RunAsManager {#runasmanager}
 
 統合の一部として、新しいサービス RunAsManager を提供しています。このサービスにより、LiveCycle サーバーへの呼び出しをする際に、資格情報をプログラムで制御できます。
 
