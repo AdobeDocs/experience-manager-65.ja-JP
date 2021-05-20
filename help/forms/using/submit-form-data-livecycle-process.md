@@ -10,24 +10,23 @@ topic-tags: Configuration
 discoiquuid: ff97424d-b384-4149-9a3c-b4f00aaa1def
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 025a3314-8b9d-48e1-a74f-ea0c933e21e3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 81%
 
 ---
 
-
 # AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
 
-アダプティブフォームは、JEE 上の AEM Forms プロセスへのデータの送信をサポートしているため、データの追加処理を行えます。送信済みフォームの使用可能なデータを使用して JEE 上の AEM Forms プロセスをトリガーできます。次の手順を実行して、AEM FormsインスタンスがアダプティブフォームをJEE上のAEM Formsに送信するプロセスを有効にします。
+アダプティブフォームは、JEE 上の AEM Forms プロセスへのデータの送信をサポートしているため、データの追加処理を行えます。送信済みフォームの使用可能なデータを使用して JEE 上の AEM Forms プロセスをトリガーできます。AEM FormsインスタンスがJEE上のAEM Formsにアダプティブフォームを送信できるようにするには、次の手順を実行します。
 
 ## AEM Forms サーバーの設定 {#configure-your-aem-forms-server}
 
 次の手順を実行して、JEE 上の AEM Forms にデータを送信する AEM Forms サーバーを有効にします。
 
-1. AEM Web Configuration Console(https://[*host*]:[*port*]/system/console/configMgr)に移動します。
+1. https://[*host*]:[*port*]/system/console/configMgrでAEM Web設定コンソールに移動します。
 
 1. **Adobe LiveCycle Client SDK Configuration** コンポーネントを見つけてクリックします。
 1. クリックして、JEE 上の AEM Forms サーバーの URL、ユーザー名、およびパスワードを編集します。
@@ -42,7 +41,7 @@ AEM Forms の設定が完了したら、データ XML と添付ファイルを�
 1. AEM Web Console Configuration で、**Guide LiveCycle Process Locator and Invoker** 設定をクリックして編集します。
 1. 以下のパラメーターを指定します。
 
-   * **Name of the data xml parameter** （必須）:送信されたデータの処理に必要なJEE上のAEM FormsプロセスのXMLプロパティファイルを指定します。デフォルト値は **dataxml** です。
+   * **データxmlパラメーターの名前** （必須）:送信されたデータの処理に必要なJEE上のAEM FormsプロセスのXMLプロパティファイルを指定します。デフォルト値は **dataxml** です。
 
    * **Name of the file attachments parameter**（オプション）：JEE 上の AEM Forms プロセスで処理する必要のあるドキュメントオブジェクトのリストを指定します。デフォルト値は&#x200B;**fileAttachmentsList**&#x200B;です。
 
