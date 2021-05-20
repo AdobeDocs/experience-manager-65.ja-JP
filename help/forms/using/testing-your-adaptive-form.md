@@ -1,21 +1,20 @@
 ---
-title: チュートリアル：アダプティブフォームのテスト」
-seo-title: チュートリアル：アダプティブフォームのテスト」
+title: '"チュートリアル：アダプティブフォームのテスト」'
+seo-title: '"チュートリアル：アダプティブフォームのテスト」'
 description: 自動テストを使用して、複数のアダプティブフォームを一度にテストします。
 seo-description: 自動テストを使用して、複数のアダプティブフォームを一度にテストします。
 uuid: 6d182bbc-b47a-4c97-af70-c960b52fdfac
 contentOwner: khsingh
 discoiquuid: ecddb22e-c148-441f-9088-2e5b35c7021b
 docset: aem65
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: 343e2e0b-d5ef-4f01-b3d6-45f90e2430fd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 11%
 
 ---
-
 
 # チュートリアル：アダプティブフォームのテスト{#tutorial-testing-your-adaptive-form}
 
@@ -23,34 +22,34 @@ ht-degree: 11%
 
 これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
-アダプティブフォームの準備が整ったら、エンドユーザーにアダプティブフォームを展開する前に、そのアダプティブフォームをテストすることが重要です。 すべてのフィールドを手動でテスト（機能テスト）したり、アダプティブフォームのテストを自動化したりできます。 複数のアダプティブフォームがある場合、すべてのアダプティブフォームのすべてのフィールドを手動でテストすると、負担の大きいタスクになります。
+アダプティブフォームの準備が整ったら、アダプティブフォームをエンドユーザーにロールアウトする前にテストすることが重要です。 すべてのフィールドを手動でテスト（機能テスト）したり、アダプティブフォームのテストを自動化したりできます。 複数のアダプティブフォームがある場合、すべてのアダプティブフォームのすべてのフィールドを手動でテストするのは、大変な作業です。
 
-AEM [!DNL Forms]は、アダプティブフォームのテストを自動化するテストフレームワークCalvinを提供します。 このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。フレームワークは、テストを作成するためのJavaScript APIを提供します。 自動テストでは、アダプティブフォームの事前入力エクスペリエンス、アダプティブフォームの送信エクスペリエンス、式ルール、検証からの検証、遅延読み込み、UIインタラクションをテストできます。 このチュートリアルでは、アダプティブフォームで自動テストを作成し、実行する手順について説明します。 このチュートリアルを完了すると、次の操作を実行できるようになります。
+AEM [!DNL Forms]は、アダプティブフォームのテストを自動化するテストフレームワークCalvinを提供します。 このフレームワークを使用して、Web ブラウザーで直接 UI テストを記述して実行します。このフレームワークは、テストを作成するためのJavaScript APIを提供します。 自動テストを使用すると、アダプティブフォームの事前入力エクスペリエンス、アダプティブフォームの送信エクスペリエンス、式ルール、検証、遅延読み込み、UIの操作をテストできます。 このチュートリアルでは、アダプティブフォームで自動化されたテストを作成し、実行する手順について説明します。 このチュートリアルを完了すると、次の操作を実行できるようになります。
 
-* [アダプティブフォームのテストスイートの作成](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-suite)
-* [アダプティブフォームのテストの作成](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-case-to-prefill-values-in-an-adaptive-form)
-* [アダプティブフォーム用に作成されたテストスイートとテストの実行](#step-run-all-the-tests-in-a-suite-or-individual-tests-cases)
+* [アダプティブフォームのテストスイートを作成する](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-suite)
+* [アダプティブフォームのテストを作成する](../../forms/using/testing-your-adaptive-form.md#step-create-a-test-case-to-prefill-values-in-an-adaptive-form)
+* [アダプティブフォーム用に作成されたテストスイートとテストを実行する](#step-run-all-the-tests-in-a-suite-or-individual-tests-cases)
 
 ## 手順1:テストスイート{#step-create-a-test-suite}の作成
 
-テストスイートには、テストケースが集まっています。 複数のテストスイートを設定できます。 フォームごとに個別のテストスイートを作成することをお勧めします。 テストスイートを作成するには：
+テストスイートには、テストケースの集まりがあります。 複数のテストスイートを持つことができます。 各フォームに個別のテストスイートを用意することをお勧めします。 テストスイートを作成するには：
 
-1. 管理者としてAEM [!DNL Forms]作成者インスタンスにログインします。 [!UICONTROL CRXDE Lite]を開きます。 ブラウザーでAEMロゴ/**[!UICONTROL ツール]**/**[!UICONTROL 一般]**/**[!UICONTROL CRXDE Lite]**&#x200B;をタップするか、[https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp)URLを開いてCRXDE Liteを開くことができます。
+1. のAEM [!DNL Forms]オーサーインスタンスに管理者としてログインします。 [!UICONTROL CRXDE Lite]を開きます。 AEMロゴ/**[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL CRXDE Lite]**&#x200B;をタップするか、ブラウザーで[https://localhost:4502/crx/de/index.jsp](https://localhost:4502/crx/de/index.jsp) URLを開いてCRXDE Liteを開きます。
 
-1. [!UICONTROL CRXDE Lite]の/etc/clientlibsに移動します。 /etc/clientlibs サブフォルダーを右クリックして、**[!UICONTROL 作成]**／**[!UICONTROL ノードを作成]**&#x200B;をクリックします。**[!UICONTROL 名前]**&#x200B;フィールドに&#x200B;**WeRetailFormTestCases**&#x200B;と入力します。 タイプを&#x200B;**cq:ClientLibraryFolder**&#x200B;として選択し、「**[!UICONTROL OK]**」をクリックします。 ノードを作成します。 `WeRetailFormTestCases`の代わりに任意の名前を使用できます。
-1. &lt;a0追加/>ノードに次のプロパティを追加し、「**[!UICONTROL すべて保存]**」をタップします。`WeRetailFormTestCases`
+1. [!UICONTROL CRXDE Lite]の/etc/clientlibsに移動します。 /etc/clientlibs サブフォルダーを右クリックして、**[!UICONTROL 作成]**／**[!UICONTROL ノードを作成]**&#x200B;をクリックします。「**[!UICONTROL 名前]**」フィールドに、**WeRetailFormTestCases**&#x200B;と入力します。 タイプとして&#x200B;**cq:ClientLibraryFolder**&#x200B;を選択し、「**[!UICONTROL OK]**」をクリックします。 ノードが作成されます。 `WeRetailFormTestCases`の代わりに任意の名前を使用できます。
+1. `WeRetailFormTestCases`ノードに次のプロパティを追加し、「**[!UICONTROL すべて保存]**」をタップします。
 
    <table>
     <tbody>
      <tr>
       <td><strong>プロパティ</strong></td>
-      <td><strong>型</strong></td>
+      <td><strong>タイプ</strong></td>
       <td><strong>複数</strong></td>
       <td><strong>値</strong></td>
      </tr>
      <tr>
       <td>categories</td>
-      <td>String</td>
+      <td>文字列</td>
       <td>Enabled</td>
       <td>
        <ul>
@@ -72,19 +71,19 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
     </tbody>
    </table>
 
-   次に示すように、各プロパティが個別のボックスに追加されていることを確認します。
+   次に示すように、各プロパティが別々のボックスに追加されていることを確認します。
 
    ![dependencies](assets/dependencies.png)
 
-1. **[!UICONTROL WeRetailFormTestCases]**&#x200B;ノードを右クリックし、**[!UICONTROL 作成]**/**[!UICONTROL ファイルを作成]**&#x200B;をクリックします。 「**[!UICONTROL 名前]**」フィールドに`js.txt`と入力し、「**[!UICONTROL OK]**」をクリックします。
-1. js.txtファイルを開いて編集し、次のコードを追加し、ファイルを保存します。
+1. **[!UICONTROL WeRetailFormTestCases]**&#x200B;ノードを右クリックし、**[!UICONTROL 作成]** / **[!UICONTROL ファイルを作成]**&#x200B;をクリックします。 「**[!UICONTROL 名前]**」フィールドに「`js.txt`」と入力し、「**[!UICONTROL OK]**」をクリックします。
+1. js.txtファイルを編集用に開き、次のコードを追加して、ファイルを保存します。
 
    ```text
    #base=.
     init.js
    ```
 
-1. `WeRetailFormTestCases`ノードにファイルinit.jsを作成します。 ファイル追加の下のコードをタップし、「**[!UICONTROL すべて保存]**」をタップします。
+1. `WeRetailFormTestCases`ノードにファイルinit.jsを作成します。 ファイルに以下のコードを追加し、「**[!UICONTROL すべて保存]**」をタップします。
 
    ```javascript
    (function(window, hobs) {
@@ -100,19 +99,19 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
    }(window, window.hobs));
    ```
 
-   上記のコードは、**We retail - Tests**&#x200B;という名前のテストスイートを作成します。
+   上記のコードは、「 **We retail - Tests** 」という名前のテストスイートを作成します。
 
-1. AEMテストUI(AEM > **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL テスト]**)を開きます。 UIにテストスイート&#x200B;**We retail - Tests**&#x200B;が表示されます。
+1. AEMテストUIを開きます(AEM > **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL テスト]**)。 テストスイート&#x200B;**We retail(Tests**)がUIに表示されます。
 
    ![we-retail-test-suite](assets/we-retail-test-suite.png)
 
-## 手順2:アダプティブフォーム{#step-create-a-test-case-to-prefill-values-in-an-adaptive-form}に値を事前入力するテストケースの作成
+## 手順2:アダプティブフォーム{#step-create-a-test-case-to-prefill-values-in-an-adaptive-form}に事前に値を入力するテストケースを作成する
 
-テストケースとは、特定の機能をテストする一連のアクションです。 例えば、フォームのすべてのフィールドに事前入力し、いくつかのフィールドを検証して、正しい値が入力されていることを確認します。
+テストケースは、特定の機能をテストするための一連のアクションです。 例えば、フォームのすべてのフィールドの事前入力や、正しい値が入力されていることを確認するためのいくつかのフィールドの検証を行います。
 
-アクションとは、ボタンのクリックなど、アダプティブフォーム上の特定のアクティビティを指します。 各アダプティブフォームフィールドのユーザー入力を検証するテストケースとアクションを作成するには：
+アクションとは、アダプティブフォーム上の特定のアクティビティのことで、ボタンのクリックなどを指します。 各アダプティブフォームフィールドのユーザー入力を検証するテストケースとアクションを作成するには：
 
-1. [!UICONTROL CRXDE lite]で、`/content/forms/af/create-first-adaptive-form`フォルダーに移動します。 **[!UICONTROL create-first-adaptive-form]**&#x200B;フォルダーノードを右クリックし、**[!UICONTROL 作成]****[!UICONTROL ファイルを作成]**&#x200B;をクリックします。 「**[!UICONTROL 名前]**」フィールドに`prefill.xml`と入力し、「**[!UICONTROL OK]**」をクリックします。 次のコードをファイルに追加しました。
+1. [!UICONTROL CRXDE lite]で、`/content/forms/af/create-first-adaptive-form`フォルダーに移動します。 **[!UICONTROL create-first-adaptive-form]**&#x200B;フォルダーノードを右クリックし、**[!UICONTROL 作成]** **[!UICONTROL ファイルを作成]**&#x200B;をクリックします。 「**[!UICONTROL 名前]**」フィールドに「`prefill.xml`」と入力し、「**[!UICONTROL OK]**」をクリックします。 次のコードをファイルに追加しました。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?><afData>
@@ -131,17 +130,17 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
    </afData>
    ```
 
-1. `/etc/clientlibs` に移動します。`/etc/clientlibs`サブフォルダーを右クリックし、**[!UICONTROL 作成]****[!UICONTROL ノードを作成]**&#x200B;をクリックします。
+1. `/etc/clientlibs` に移動します。`/etc/clientlibs`サブフォルダーを右クリックし、「**[!UICONTROL 作成]****[!UICONTROL ノードを作成]**」をクリックします。
 
-   **[!UICONTROL 名前]**&#x200B;フィールドに`WeRetailFormTests`と入力します。 タイプを`cq:ClientLibraryFolder`として選択し、「**[!UICONTROL OK]**」をクリックします。
+   「**[!UICONTROL 名前]**」フィールドに`WeRetailFormTests`と入力します。 タイプを「`cq:ClientLibraryFolder`」と選択し、「**[!UICONTROL OK]**」をクリックします。
 
-1. 追加&#x200B;**[!UICONTROL WeRetailFormTests]**&#x200B;ノードに対する次のプロパティです。
+1. **[!UICONTROL WeRetailFormTests]**&#x200B;ノードに次のプロパティを追加します。
 
    <table>
     <tbody>
      <tr>
       <td><strong>プロパティ</strong></td>
-      <td><strong>型</strong></td>
+      <td><strong>タイプ</strong></td>
       <td><strong>複数</strong></td>
       <td><strong>値</strong></td>
      </tr>
@@ -156,7 +155,7 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
        </ul> </td>
      </tr>
      <tr>
-      <td>依存関係</td>
+      <td>dependencies</td>
       <td>文字列</td>
       <td>有効</td>
       <td>
@@ -167,7 +166,7 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
      </tbody>
    </table>
 
-1. **[!UICONTROL WeRetailFormTests]**&#x200B;ノードにファイルjs.txtを作成します。 ファイル追加に次の情報が追加されます。
+1. **[!UICONTROL WeRetailFormTests]**&#x200B;ノードにjs.txtというファイルを作成します。 ファイルに以下を追加します。
 
    ```shell
    #base=.
@@ -176,7 +175,7 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
 
    「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. **[!UICONTROL WeRetailFormTests]**&#x200B;ノードにファイル`prefillTest.js`を作成します。 追加次のコードをファイルに追加します。 コードはテストケースを作成します。 テストケースでは、フォームのすべてのフィールドに事前入力し、一部のフィールドを検証して、正しい値が入力されていることを確認します。
+1. **[!UICONTROL WeRetailFormTests]**&#x200B;ノードに`prefillTest.js`ファイルを作成します。 以下のコードをファイルに追加します。 コードはテストケースを作成します。 テストケースでは、フォームのすべてのフィールドが事前に入力され、正しい値が入力されていることを確認するために一部のフィールドが検証されます。
 
    ```javascript
    (function (window, hobs) {
@@ -208,30 +207,30 @@ AEM [!DNL Forms]は、アダプティブフォームのテストを自動化す�
    }(window, window.hobs));
    ```
 
-   テストケースが作成され、実行できる状態になります。 テストケースを作成して、計算スクリプトの実行の確認、パターンの検証、アダプティブフォームの送信エクスペリエンスの検証など、アダプティブフォームの様々な要素を検証できます。 アダプティブフォームの様々な側面のテストについて詳しくは、「アダプティブフォームのテストの自動化」を参照してください。
+   テストケースが作成され、実行する準備が整いました。 テストケースを作成して、計算スクリプトの実行確認、パターンの検証、アダプティブフォームの送信操作の検証など、アダプティブフォームの様々な側面を検証することができます。 アダプティブフォームのテストの様々な側面について詳しくは、「アダプティブフォームの自動テスト」を参照してください。
 
-## 手順3:スイートまたは個々のテストケースですべてのテストを実行{#step-run-all-the-tests-in-a-suite-or-individual-tests-cases}
+## 手順3:スイート内のすべてのテストまたは個々のテストケースを実行します。 {#step-run-all-the-tests-in-a-suite-or-individual-tests-cases}
 
-テストスイートには複数のテストケースを含めることができます。 テストスイート内のすべてのテストケースは、一度に実行することも、個別に実行することもできます。 テストを実行すると、アイコンに結果が示されます。
+テストスイートには複数のテストケースを含めることができます。 テストスイート内のすべてのテストケースは、一度に、または個別に実行できます。 テストを実行すると、結果が次のアイコンで示されます。
 
-* チェックマークのアイコンは、テストに合格したことを示します。![save_icon](assets/save_icon.svg)
-* 「X」アイコンは、失敗したテストを示します。![閉じる —icon](assets/close-icon.svg)
+* チェックマークアイコンは、合格したテストを示します。![save_icon](assets/save_icon.svg)
+* 「X」アイコンは、失敗したテストを示します。![close-icon](assets/close-icon.svg)
 
-1. AEMアイコン/**[!UICONTROL ツール]****[!UICONTROL 操作]** **[!UICONTROL テスト]**&#x200B;に移動します。
+1. AEMアイコン/ **[!UICONTROL ツール]**> **[!UICONTROL 操作]** **[!UICONTROL テスト]**&#x200B;に移動します。
 1. テストスイートのすべてのテストを実行するには：
 
-   1. [!UICONTROL テスト]パネルで、**[!UICONTROL We retail - Tests (1)]**&#x200B;をタップします。 スイートが展開され、テストのリストが表示されます。
-   1. 「**[!UICONTROL テストを実行]**」ボタンをタップします。 画面の右側の空白の領域は、テストの実行時にアダプティブフォームに置き換えられます。
+   1. [!UICONTROL Tests]パネルで、**[!UICONTROL We retail - Tests (1)]**&#x200B;をタップします。 テストスイートが展開され、テストのリストが表示されます。
+   1. 「**[!UICONTROL テストを実行]**」ボタンをタップします。 テストを実行すると、画面の右側の空白の領域がアダプティブフォームに置き換えられます。
 
-      ![全試験の](assets/run-all-test.png)
+      ![ランオールテスト](assets/run-all-test.png)
 
 1. テストスイートから1つのテストを実行するには：
 
-   1. テストパネルで、**[!UICONTROL We retail - Tests (1)]**&#x200B;をタップします。 スイートが展開され、テストのリストが表示されます。
-   1. 「**[!UICONTROL 事前入力テスト]**」をタップし、「**[!UICONTROL テストを実行]**」ボタンをタップします。 画面の右側の空白の領域は、テストの実行時にアダプティブフォームに置き換えられます。
+   1. テストパネルで、「 **[!UICONTROL We retail - Tests (1)]** 」をタップします。 テストスイートが展開され、テストのリストが表示されます。
+   1. 「**[!UICONTROL 事前入力テスト]**」をタップし、「**[!UICONTROL テストを実行]**」ボタンをタップします。 テストを実行すると、画面の右側の空白の領域がアダプティブフォームに置き換えられます。
 
-1. テスト名「Prefill test」をタップして、テストケースの結果を確認します。 [!UICONTROL 結果]パネルが開きます。 [!UICONTROL 結果]パネルでテストケースの名前をタップし、テストのすべての詳細を表示します。
+1. テスト名「事前入力テスト」をタップして、テストケースの結果を確認します。 [!UICONTROL 結果]パネルが開きます。 [!UICONTROL 結果]パネルでテストケースの名前をタップし、テストの詳細をすべて表示します。
 
-   ![レビュー結果](assets/review-results.png)
+   ![review-results](assets/review-results.png)
 
-これでアダプティブフォームの発行準備が整いました。
+これで、アダプティブフォームの発行準備が整いました。
