@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 6699e0e7-fd42-41ae-86a2-3b940d905111
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 5b7b9816-38c1-4780-b1fc-8184971f3772
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 85%
+source-wordcount: '340'
+ht-degree: 88%
 
 ---
 
-
-# XFA または PDF フォームテンプレートのダウンロード {#download-an-xfa-or-a-pdf-form-template}
+# XFA または PDF フォームテンプレートのダウンロード  {#download-an-xfa-or-a-pdf-form-template}
 
 ダウンロード操作では、その名のとおり、リポジトリからローカルシステムへとフォームをエクスポートすることができます。アップロード操作と組み合わせることにより、リポジトリから別のリポジトリへとフォームを移行することができます。
 
@@ -34,11 +33,11 @@ AEM Forms では、これらのフォームタイプを個別にダウンロー�
 
 ## 1 つまたは複数のフォームのダウンロード {#download-one-or-more-forms}
 
-1. `https://<server>:<port>/aem/forms.html`のAEM Formsユーザーインターフェイスにログインします。
+1. `https://<server>:<port>/aem/forms.html` で、AEM Forms ユーザーインターフェイスにログインします。
 
 1. ダウンロードしたいアセットの場所に移動します。
 
-1. アセットを選択します。ツールバーの&#x200B;**[!UICONTROL ダウンロード]** ![aem6forms_download](assets/aem6forms_download.png)アイコンをクリックします。
+1. アセットを選択します。ツールバーの&#x200B;**** ![aem6forms_download](assets/aem6forms_download.png)アイコンをクリックします。
 
    >[!NOTE]
    >
@@ -57,4 +56,3 @@ AEM Forms では、これらのフォームタイプを個別にダウンロー�
 * ZIP ファイルは、同じリポジトリ内の別のロケーション、もしくは別のリポジトリにアップロードすることができます。
 * フォルダー内のアセットの階層は、アップロード操作の間も保持されます。
 * ダウンロードされたアセットに対してダウンロード前に行われたメタデータの変更は、アップロード時に反映されます。
-
