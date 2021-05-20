@@ -9,27 +9,26 @@ content-type: reference
 discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
-feature: Viewer Presets
+feature: ビューアプリセット
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '4340'
+source-wordcount: '4337'
 ht-degree: 92%
 
 ---
-
 
 # ビューアプリセットの管理 {#managing-viewer-presets}
 
 ビューアプリセットは、ユーザーのコンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する様々な設定のコレクションです。管理者は、ビューアプリセットを作成できます。設定は、幅広いビューア設定オプションで使用できます。例えば、ビューアの表示サイズやズームの動作を変更できます。
 
-独自のHTML5ビューアプリセットを作成してカスタマイズする手順については、AdobeDynamic Media *HTML5ビューアSDK APIドキュメント*&#x200B;を参照してください。 この SDK は、SDK 自体に組み込まれている IS パブリッシュサーバーで使用できます。ライブラリバージョンごとに、専用の SDK ドキュメントが付属しています。
+独自のHTML5ビューアプリセットの作成とカスタマイズについて詳しくは、Dynamic Media *HTML5ビューアSDK APIドキュメント*&#x200B;のAdobeを参照してください。 この SDK は、SDK 自体に組み込まれている IS パブリッシュサーバーで使用できます。ライブラリバージョンごとに、専用の SDK ドキュメントが付属しています。
 
 パス: `<scene7_domain>/s7sdk/<library_version>/docs/jsdocs/index.html`.\
 例：3.10 SDK:[https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)
 
-『[AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)』も参照してください。
+[AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)も参照してください。
 
 ここでは、ビューアプリセットを作成、編集および管理する方法について説明します。アセットをプレビューする際は、いつでもビューアプリセットを適用できます。詳しくは、[ビューアプリセットの適用](#applying-a-viewer-preset-to-an-asset)を参照してください。
 
@@ -45,7 +44,7 @@ ht-degree: 92%
 
 ## ビューアプリセットの管理 {#managing-viewer-presets-1}
 
-AEMで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット/ビューアプリセットをタップして、ビューアプリセットを追加、編集、削除、公開、非公開およびプレビュービューアプリセットを追加できます。]**
+AEMでビューアプリセットの追加、編集、削除、公開、非公開およびプレビューを実行できます。そのためには、**[!UICONTROL ツール]**（ハンマーアイコン）/**[!UICONTROL アセット/ビューアプリセット]**&#x200B;を選択します。
 
 ![6_5_tools-assets-viewerpresets](assets/6_5_tools-assets-viewerpresets.png)
 
@@ -57,7 +56,7 @@ AEMで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UI
 
 Web ページごとに異なるニーズがあります。例えば、個別のブラウザーウィンドウで HTML5 ビューアを開くリンクを示す Web ページが必要な場合や、ホスティングページに直接 HTML5 ビューアを埋め込む必要が生じる場合があります。後者の場合、Web ページのレイアウトは静的なものになる場合と、「レスポンシブ」にして、デバイスやブラウザーウィンドウのサイズが異なれば、異なる表示をする場合もあります。これらのニーズに対応するために、Dynamic Media に付属する事前定義済みの標準提供 HTML5 ビューアはすべて、静的な Web ページとレスポンシブデザイン Web ページの両方をサポートしています。
 
-Webページにレスポンシブビューアを埋め込む方法について詳しくは、の[レスポンシブ画像ライブラリ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html?lang=ja)を参照してください。
+レスポンシブビューアをWebページに埋め込む方法について詳しくは、の[レスポンシブ画像ライブラリ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/responsive-static-image-library/c-about-responsive-static-image-library.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
@@ -404,7 +403,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    ![chlimage_1-222](assets/chlimage_1-222.png)
 
 1. 「limit」プロパティの数を、目的の数（例：`{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`）に変更します。
-1. 「**[!UICONTROL すべて保存」をタップします。]**
+1. **[!UICONTROL 「すべて保存」をタップします。]**
 
 ## ビューアプリセットの作成 {#creating-a-new-viewer-preset}
 
@@ -424,12 +423,12 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    ![6_5_viewerpresets](assets/6_5_viewerpresets.png)
 
-1. ビューアプリセットページのツールバーで、「**[!UICONTROL 作成」をタップします。]**
-1. **[!UICONTROL 新しいビューアプリセット]**&#x200B;ダイアログボックスの「**[!UICONTROL プリセット名]**」フィールドに、新しいプリセットの名前を入力します。名前は慎重に選択してください。「**[!UICONTROL 作成」をタップすると編集できなくなります。]**
+1. ビューアプリセットページのツールバーで、「**[!UICONTROL 作成]**」をタップします。
+1. **[!UICONTROL 新しいビューアプリセット]**&#x200B;ダイアログボックスで、「**[!UICONTROL プリセット名]**」フィールドに新しいプリセットの名前を入力します。名前は慎重に選択してください。「**[!UICONTROL 作成]**」をタップした後は編集できません。
 
    後述の手順でプリセットを保存すると、この名前がビューアプリセットページの「プリセットのタイトル」列ヘッダーの下に表示されます。
 
-1. 「リッチメディアの種類」ドロップダウンメニューで、作成するビューアプリセットの種類を選択し、ページの右上隅にある「**[!UICONTROL 作成」をタップします。]**
+1. 「リッチメディアタイプ」ドロップダウンメニューで、作成するビューアプリセットのタイプを選択し、ページの右上隅にある「**[!UICONTROL 作成]**」をタップします。
 
    [ビューアプリセットのリッチメディアタイプ](#rich-media-types-for-viewer-presets)を参照してください。
 
@@ -471,7 +470,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    >
    >テキストフィールドに値を入力後、ユーザーインターフェイス内をタップすると、変更内容が送信され、仮想キーボードが閉じられます。Enter キーをタップした場合は、何も実行されません。
 
-1. ページの右上隅近くにある「**[!UICONTROL 保存」をタップします。]**
+1. ページの右上隅にある「**[!UICONTROL 保存]**」をタップします。
 1. 新しいビューアプリセットを公開します。プリセットを Web サイトで使用するには、まずそのプリセットを公開する必要があります。
 
    [ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
@@ -480,7 +479,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **パネル内の画像サムネールのディスプレイモードについて**
 
-「`InteractiveSwatches`ビヘイビアー&#x200B;**[!UICONTROL 」タブの下の選択したコンポーネントプルダウンメニューから]****** を選択するとき、インタラクティブビデオのビューアプリセットを作成または編集するときに使用するディスプレイモードの設定を選択できます。選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。`segment`表示モード（デフォルト）または`continuous`表示モードを選択できます。
+「`InteractiveSwatches`ビヘイビアー&#x200B;**[!UICONTROL 」タブの下の選択したコンポーネントプルダウンメニューから]****** を選択するとき、インタラクティブビデオのビューアプリセットを作成または編集するときに使用するディスプレイモードの設定を選択できます。選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。`segment`ディスプレイモード（デフォルト）または`continuous`ディスプレイモードを選択できます。
 
 <table>
  <tbody>
@@ -541,7 +540,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **ビューアプリセットをアクティベートまたはアクティベート解除するには：**
 
-1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセット]**&#x200B;をタップします。
+1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセットをタップします。]**
 1. ビューアプリセットページの「**[!UICONTROL 状態]**」列ヘッダーの下で、ビューアプリセットのアクティベートとアクティベート解除の切り替えアイコンをタップします。
 
    アクティベートされたビューアプリセットには、（青いボックスで）右側にトグルしたアイコンが示されます。アクティベート解除されたビューアプリセットには、（薄いグレーのボックスで）左側にトグルしたアイコンが示されます。
@@ -558,13 +557,13 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **ビューアプリセットを公開するには：**
 
-1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセット]**&#x200B;をタップします。
+1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセットをタップします。]**
 1. 公開するビューアプリセットを 1 つ以上選択します。
 1. ツールバーの&#x200B;**[!UICONTROL 公開]**&#x200B;アイコンをタップします。
 
 ## ビューアプリセットの並べ替え  {#sorting-viewer-presets}
 
-1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセット]**&#x200B;をタップします。
+1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセットをタップします。]**
 1. 「**[!UICONTROL プリセットのタイトル]**」、「**[!UICONTROL タイプ]**」、「**[!UICONTROL 公開]**」または「**[!UICONTROL 状態]**」をクリックして、その見出しの列でソートします。例えば、「**[!UICONTROL タイプ]**」をクリックすると、ビューアプリセットのタイプが、アルファベット順で、またはアルファベットの逆の順序でソートされます。
 
 ## ビューアプリセットの編集 {#editing-viewer-presets}
@@ -573,9 +572,9 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **ビューアプリセットを編集するには：**
 
-1. AEMの左上隅のAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセット]**&#x200B;をタップします。
+1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）/**[!UICONTROL アセット]/[!UICONTROL ビューアプリセットをタップします。]**
 1. ビューアプリセットのタイトルの左側にあるチェックボックスをオンにして、プリセットを選択します。
-1. ツールバーで、**[!UICONTROL 編集をタップします。]**
+1. ツールバーの「**[!UICONTROL 編集]**」をタップします。
 1. **[!UICONTROL ビューアプリセットエディター]**&#x200B;ページで、「**[!UICONTROL 外観]**」タブと「**[!UICONTROL ビヘイビアー]**」タブのオプションを使用して、必要な変更をビューアプリセットに加えます。
 
    「**[!UICONTROL 外観]**」タブで、ビューアプリセットエディターページの左上隅近くにある「**[!UICONTROL デスクトップ]**」、「**[!UICONTROL タブレット]**」、「**[!UICONTROL 電話]**」のいずれかをタップして、アセットの表示モードを変更します。
@@ -591,9 +590,9 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **カスタムビューアプリセットを削除するには：**
 
-1. AEMの左上隅にあるAEMロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン） **[!UICONTROL アセット/ビューアプリセットをタップします。]**
+1. AEMの左上隅にあるAEMロゴをタップし、左側のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン） **[!UICONTROL アセット/ビューアプリセットをタップします。]**
 1. ビューアプリセットページで、「プリセットのタイトル」のチェックボックスをオンにして、**[!UICONTROL ごみ箱]**&#x200B;アイコンをタップします。
-1. 「**[!UICONTROL 削除」をタップします。]**
+1. **[!UICONTROL 削除]**&#x200B;をタップします。
 
 ## アセットへのビューアプリセットの適用 {#applying-a-viewer-preset-to-an-asset}
 
@@ -601,7 +600,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
 **アセットにビューアプリセットを適用するには：**
 
-1. アセットを開き、ページの左上隅近くにあるドロップダウンメニューをタップし、「**[!UICONTROL ビューア」を選択します。]**
+1. アセットを開き、ページの左上隅付近にあるドロップダウンメニューをタップし、「**[!UICONTROL ビューア]**」を選択します。
 
    >[!NOTE]
    >
