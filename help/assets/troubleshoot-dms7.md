@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media のトラブルシューティング -Scene7モード
-description: Scene7モードで実行中のDynamic Mediaのトラブルシューティング。
+title: Dynamic Media のトラブルシューティング - Scene7モード
+description: Dynamic MediaをScene7モードで実行している場合のトラブルシューティング。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,8 +10,7 @@ discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
-feature: Troubleshooting
-translation-type: tm+mt
+feature: トラブルシューティング
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '1286'
@@ -27,13 +26,13 @@ ht-degree: 94%
 
 以下の手順で、Dynamic Media が適切に設定されていることを確認します。
 
-* 開始アップコマンドには`-r dynamicmedia_scene7` runmode引数が含まれます。
+* 起動コマンドには、`-r dynamicmedia_scene7`実行モード引数が含まれます。
 * 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTPサポート用、またはDynamic MediaクラシックからDynamic Mediaにアセットを移行する場合に使用します。
+   このオプションの機能パックは、FTPサポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
 
-* Cloud Servicesのユーザーインターフェイスに移動し、プロビジョニングされたアカウントが「**[!UICONTROL 利用可能な設定」に表示されることを確認します。]**
+* Cloud Servicesユーザーインターフェイスに移動し、「**[!UICONTROL 利用可能な設定]**」の下にプロビジョニング済みのアカウントが表示されることを確認します。
 * `Dynamic Media Asset Activation (scene7)`レプリケーションエージェントが有効になっていることを確認します。
 
    このレプリケーションエージェントは、「作成者のエージェント」にあります。
