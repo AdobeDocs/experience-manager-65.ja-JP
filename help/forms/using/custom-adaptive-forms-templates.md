@@ -9,24 +9,23 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: affba49e-9712-4d29-858b-2f8ec4f2b1f1
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4ecf5efc568cd21f11801a71d491c3d75ca367fe
+exl-id: 35b50573-0be8-469d-a1ac-f51b9aaa5fef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 74%
 
 ---
 
-
 # カスタムアダプティブフォームのテンプレートの作成{#creating-a-custom-adaptive-form-template}
 
 >[!NOTE]
 >
->AEM Forms に、動的なテンプレートが導入されました。AEM サイトのテンプレートエディターを使用して、[動的なテンプレートの作成や編集](../../forms/using/template-editor.md)を行うことができます。この記事で説明するテンプレートは、静的なテンプレートです。デフォルトのインストール環境で静的なテンプレートを使用することはできません。[互換性](../../forms/using/compatibility-package.md) パッケージをインストールして、お使いの環境にこれらのテンプレートを取得します。
+>AEM Forms に、動的なテンプレートが導入されました。AEM サイトのテンプレートエディターを使用して、[動的なテンプレートの作成や編集](../../forms/using/template-editor.md)を行うことができます。この記事で説明するテンプレートは、静的なテンプレートです。デフォルトのインストール環境で静的なテンプレートを使用することはできません。[互換性パッケージ](../../forms/using/compatibility-package.md) をインストールして、お使いの環境でこれらのテンプレートを取得します。
 
 ## 前提条件 {#prerequisites}
 
-* AEM [ページテンプレート](/help/sites-authoring/templates.md)および[アダプティブフォームのオーサリング](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)に関する知識
+* AEM [ページテンプレート](/help/sites-authoring/templates.md)および[アダプティブフォームのオーサリング](https://helpx.adobe.com/aem-forms/6-1/introduction-forms-authoring.html)に関する理解
 
 * AEM [クライアント側ライブラリ](/help/sites-developing/clientlibs.md)に関する知識
 
@@ -34,15 +33,15 @@ ht-degree: 74%
 
 アダプティブフォームテンプレートは、アダプティブフォームの作成に使用される特定のプロパティとコンテンツ構造を持つ特殊な AEM ページテンプレートです。このテンプレートのレイアウト、スタイル、基本的な初期コンテンツ構造は事前に設定されています。
 
-フォームを作成すると、元のテンプレートのコンテンツ構造に対する変更はフォームに反映されません。
+フォームを作成すると、元のテンプレートのコンテンツ構造に対する変更は、フォームに反映されません。
 
 ## デフォルトのアダプティブフォームテンプレート {#default-adaptive-form-templates}
 
 AEM QuickStart では、次のアダプティブフォームテンプレートを提供します。
 
-* 調査テンプレート:複数の列が設定されたレスポンシブレイアウトを使用して、単一ページのアダプティブフォームを作成できます。 フォームを表示させる画面サイズに基づいてレイアウトは自動で調整されます。
-* シンプルな登録テンプレート：ウィザードのレイアウトを使用して複数手順のアダプティブフォームを作成できます。 このレイアウトでは、各手順の完了に必要な式を指定できます。指定した式は、次の手順にウィザードを進める前に検証されます。
-* タブ付き登録テンプレート：タブが左側にあるレイアウトを使用して複数タブのアダプティブフォームを作成し、任意の順序でタブにアクセスできるようにします。
+* 調査テンプレート：複数の列が設定されたレスポンシブレイアウトを使用して、単一ページのアダプティブフォームを作成できます。 フォームを表示させる画面サイズに基づいてレイアウトは自動で調整されます。
+* シンプルな登録テンプレート：ウィザードレイアウトを使用して複数手順のアダプティブフォームを作成できます。 このレイアウトでは、各手順の完了に必要な式を指定できます。指定した式は、次の手順にウィザードを進める前に検証されます。
+* タブ付き登録テンプレート：タブが左側にあるレイアウトを使用して、複数タブのアダプティブフォームを作成します。タブは任意の順序でタブにアクセスできます。
 * 高度な登録テンプレート：複数のタブとウィザードを使用してフォームを作成します。タブが左側にあるレイアウトを使用し、任意の順序でタブにアクセスできるようにします。署名と検証には Adobe Document Cloud eSign サービスを使用します。
 * 空白のテンプレート：ヘッダー、フッター、初期コンテンツのないフォームを作成します。テキストボックス、ボタン、画像などのコンポーネントを追加できます。空白テンプレートでは、[AEM サイトページに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができるフォームを作成します。
 
@@ -90,11 +89,11 @@ AEM QuickStart では、次のアダプティブフォームテンプレート�
 
 あらかじめ用意されたテンプレートを使う代わりに、自分でテンプレートを作成してアダプティブフォームの作成に使用することもできます。カスタムテンプレートは、アダプティブフォームのコンテナのほか、ヘッダー、フッターなど、ページ要素を参照するさまざまなページコンポーネントに基づいています。
 
-これらのコンポーネントは Web サイト向けの基本ページコンポーネントを使用して作成することができます。または、あらかじめ用意されたテンプレートで使用されるアダプティブフォームのページコンポーネントを拡張することもできます。
+これらのコンポーネントは Web サイト向けの基本ページコンポーネントを使用して作成することができます。または、標準のテンプレートで使用されるアダプティブフォームのページコンポーネントを拡張することもできます。
 
 simpleEnrollmentTemplate などのカスタムテンプレートを作成するには、次の手順を実行します。
 
-1. 自分のオーサーインスタンスで CRXDE Lite に移動します。
+1. オーサーインスタンスで CRXDE Lite に移動します。
 
 1. /apps ディレクトリの下に、自分のアプリケーションのフォルダー構造を作成します。例えば、アプリケーションの名前が mycompany の場合、その名前のフォルダーを作成します。通常、アプリケーションフォルダーには components、configuration、templates、src、installation のディレクトリが含まれます。この例では、components、configuration、templates の各フォルダーを作成します。
 
@@ -105,9 +104,9 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 
 1. /apps/mycompany/templates/enrollment-template に移動します。
 
-1. `jcr:content`ノードの`jcr:title`プロパティと`jcr:description`プロパティを変更して、コピーしたテンプレートと区別できるようにします。
+1. `jcr:content`ノードの`jcr:title`および`jcr:description`プロパティを変更して、コピーしたテンプレートとテンプレートを区別します。
 
-1. 変更したテンプレートの`jcr:content`ノードには、`guideContainer`と`guideformtitle`のコンポーネントが含まれています。 `guideContainer` はアダプティブフォームを格納するコンテナです。`guideformtitle` コンポーネントは、アプリケーション名や説明などを表示します。
+1. 変更したテンプレートの`jcr:content`ノードには、`guideContainer`コンポーネントと`guideformtitle`コンポーネントが含まれています。 `guideContainer` はアダプティブフォームを格納するコンテナです。`guideformtitle` コンポーネントは、アプリケーション名や説明などを表示します。
 
    `guideformtitle` の代わりに、カスタムコンポーネントまたは `parsys` コンポーネントを含めることができます。例えば、`guideformtitle` を削除して、カスタムコンポーネントまたは `parsys` コンポーネントのノードを含めることができます。コンポーネントの `sling:resourceType` プロパティの参照先が、そのコンポーネントになっていることを確認してください。ページ `component.jsp` ファイルでも同様に定義されます。
 
@@ -119,16 +118,16 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 
 ## アダプティブフォームのページコンポーネントの作成 {#create-an-adaptive-form-page-component}
 
-テンプレートの参照先は /libs/fd/af/components/page/base のページコンポーネントに設定されているため、カスタムテンプレートはデフォルトのテンプレートと同じスタイルを持ちます。コンポーネントの参照は、/apps/mycompany/templates/enrollment-template/jcr:content ノードで定義された `sling:resourceType` プロパティで検索できます。baseはコア製品コンポーネントなので、このコンポーネントを変更しないでください。
+テンプレートの参照先は /libs/fd/af/components/page/base のページコンポーネントに設定されているため、カスタムテンプレートはデフォルトのテンプレートと同じスタイルを持ちます。コンポーネントの参照は、/apps/mycompany/templates/enrollment-template/jcr:content ノードで定義された `sling:resourceType` プロパティで検索できます。baseはコア製品コンポーネントなので、このコンポーネントは変更しないでください。
 
 1. /apps/mycompany/templates/enrollment-template/jcr:contentノードに移動し、プロパティ`sling:resourceType`の値を/apps/mycompany/components/page/enrollmentpageに変更します。
 1. /libs/fd/af/components/page/base のノードを /apps/mycompany/components/page フォルダーにコピーします。
 
 1. コピーしたコンポーネントの名前を `enrollmentpage` に変更します。
 
-1. **（コンテンツページを既に持っている場合のみ）Webサイトの既存の** コンポーネントがある場合は、次の手順(a ～ d)を `contentpage`実行します。自分の Web サイトに `contentpage` コンポーネントが存在しない場合は、`resourceSuperType` プロパティを OOTB の基本ページにポイントしたままにすることができます。
+1. **（コンテンツページが既にある場合のみ）** Webサイト用の既存のコンポーネントがある場合は、次の手順(a ～ d) `contentpage`を実行します。自分の Web サイトに `contentpage` コンポーネントが存在しない場合は、`resourceSuperType` プロパティを OOTB の基本ページにポイントしたままにすることができます。
 
-   1. `enrollmentpage`ノードの場合、プロパティ`sling:resourceSuperType`の値をmycompany/components/page/contentpageに設定します。 `contentpage` コンポーネントは、自分のサイトの基本ページコンポーネントです。他のページコンポーネントで拡張することができます。`enrollmentpage`の下にある`head.jsp`、`content.jsp`、`library.jsp`を除くスクリプトファイルを削除します。 `sling:resourceSuperType`コンポーネント（この場合は`contentpage`）には、このようなスクリプトがすべて含まれます。 ナビゲーションバーやフッターなどを含むヘッダー類は、`contentpage` コンポーネントから継承されます。
+   1. `enrollmentpage`ノードの場合、プロパティ`sling:resourceSuperType`の値をmycompany/components/page/contentpageに設定します。 `contentpage` コンポーネントは、自分のサイトの基本ページコンポーネントです。他のページコンポーネントで拡張することができます。`enrollmentpage`の下のスクリプトファイル（`head.jsp`、`content.jsp`、`library.jsp`を除く）を削除します。 `sling:resourceSuperType`コンポーネント（この場合は`contentpage`）には、このようなスクリプトがすべて含まれます。 ナビゲーションバーやフッターなどを含むヘッダー類は、`contentpage` コンポーネントから継承されます。
 
    1. `head.jsp` ファイルを開きます。
 
@@ -136,9 +135,9 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 
       `library.jsp` ファイルには、`guide.theme.simpleEnrollment` のクライアントライブラリが含まれ、その中にアダプティブフォームのスタイル設定が含まれています。
 
-      ページコンポーネント`enrollmentpage`には排他的な`head.jsp`ファイルがあり、このファイルは`contentpage`コンポーネントの`head.jsp`ファイルを上書きします。
+      ページコンポーネント`enrollmentpage`には、`contentpage`コンポーネントの`head.jsp`ファイルを上書きする排他的な`head.jsp`ファイルがあります。
 
-   1. `contentpage`コンポーネントの`head.jsp`ファイル内のすべてのスクリプトを`enrollmentpage`コンポーネントの`head.jsp`ファイルに含めます。
+   1. `contentpage`コンポーネントの`head.jsp`ファイル内のすべてのスクリプトを、`enrollmentpage`コンポーネントの`head.jsp`ファイルに含めます。
    1. `content.jsp` スクリプトの中に、追加のページコンテンツまたはページがレンダリングされる際に含まれる他のコンポーネントへの参照を追加することができます。例えば、`applicationformheader` カスタムコンポーネントを追加する場合、JSP ファイルのコンポーネントに次の参照を追加します。
 
       `<cq:include path="applicationformheader" resourceType="mycompany/components/applicationformheader"/>`
@@ -155,4 +154,3 @@ simpleEnrollmentTemplate などのカスタムテンプレートを作成する�
 >[!NOTE]
 >
 >アダプティブフォームのレンダリングに使用されるページコンポーネントに含まれるクライアントライブラリが、テーマによって参照されます。クライアントライブラリは、主にアダプティブフォームの外観を管理します。
-
