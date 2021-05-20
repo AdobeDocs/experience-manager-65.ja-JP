@@ -8,35 +8,34 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 9cd22244-9aa6-4b5f-96cf-c9cb3d6f9c8a
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: cf86c810-c466-4894-acc2-d4faf49754cc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 60%
 
 ---
 
-
 # HTML5 フォームのカスタムプロファイルの作成 {#creating-a-custom-profile-for-html-forms}
 
-プロファイルは、[Apache Sling](https://sling.apache.org/)のリソースノードです。 HTML5フォームレンダリングサービスのカスタムバージョンを表します。 HTML5フォームレンダリングサービスを使用して、HTML5フォームの外観、動作、およびやりとりをカスタマイズできます。 プロファイルノードは、JCRリポジトリの`/content`フォルダーに存在します。 ノードは`/content`フォルダーの直下か、`/content`フォルダーのサブフォルダーに配置できます。
+プロファイルは、[Apache Sling](https://sling.apache.org/)内のリソースノードです。 HTML5フォームレンディションサービスのカスタムバージョンを表します。 HTML5フォームレンディションサービスを使用して、HTML5フォームの外観、動作、操作をカスタマイズできます。 プロファイルノードは、JCRリポジトリの`/content`フォルダーに存在します。 ノードは、`/content`フォルダーの直下か、`/content`フォルダーのサブフォルダーに配置できます。
 
-Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。ノードのレンダリングスクリプトは/libs/xfaforms/プロファイルにあります。
+Profile ノードには **xfaforms/profile** のデフォルト値を持つ **sling:resourceSuperType**&#x200B;プロパティがあります。このノードのレンダリングスクリプトは、/libs/xfaforms/profileにあります。
 
-Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらのSlingスクリプトは、**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。 プロファイルレンダラーは、要求されたフォームをレンダリングするためにFormsOSGiサービスを呼び出します。
+Sling スクリプトは JSP スクリプトです。JSP スクリプトは要求されたフォームと必要な JS / CSS アーティファクトの HTML を組み立てるためのコンテナとして機能します。これらのSlingスクリプトは、**プロファイルレンダラースクリプト**&#x200B;とも呼ばれます。 プロファイルレンダラーはForms OSGiサービスを呼び出して、要求されたフォームをレンダリングします。
 
-プロファイルスクリプトは、GETおよびPOSTリクエストの場合、html.jspとhtml.POST.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を行わないでください。パッチの更新によって、このような変更が上書きされます。
+GETとPOSTの要求では、プロファイルスクリプトはhtml.jspとhtml.profile.jspにあります。 これらのファイルをコピーして変更することで、上書きして独自のカスタマイズを追加できます。インプレースで変更を加えないでください。パッチの更新によってそのような変更が上書きされます。
 
 プロファイルにはさまざまなモジュールが含まれています。これらのモジュールは、formRuntime.jsp、config.jsp、toolbar.jsp、formBody.jsp、nav_footer.jsp、および footer.jsp です。
 
 ## formRuntime.jsp {#formruntime-jsp-br}
 
-formRuntime.jspモジュールには、クライアントライブラリの参照が含まれています。 これは、リクエストからロケール情報を抽出したし、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。formRuntime.jspには、独自のcustomJavaScriptライブラリまたはスタイルを含めることができます。
+formRuntime.jspモジュールには、クライアントライブラリの参照が含まれます。 これは、リクエストからロケール情報を抽出したし、ローカライズしたメッセージをリクエストに含めるなどのための方法も示します。独自のcustomJavaScriptライブラリまたはスタイルをformRuntime.jspに含めることができます。
 
 ## config.jsp {#config-jsp}
 
-config.jsp モジュールには、ロギング、プロキシサービス、動作バージョンなど、さまあまな設定が含まれています。独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加することができます。config.jspモジュールにカスタムウィジェット登録などの設定を追加することもできます。
+config.jsp モジュールには、ロギング、プロキシサービス、動作バージョンなど、さまあまな設定が含まれています。独自の設定およびウィジェットカスタマイズを config.jsp モジュールに追加することができます。また、カスタムウィジェット登録などの設定をconfig.jspモジュールに追加することもできます。
 
 ## toolbar.jsp {#toolbar-jsp}
 
@@ -60,7 +59,7 @@ footer.jsp モジュールは空です。ユーザーの操作にのみ使用す
 
 ### プロファイルノードの作成 {#create-profile-node}
 
-1. URLのCRX DEインターフェイスに移動します。`https://'[server]:[port]'/crx/de`にログインし、管理者の資格情報を使用してインターフェイスにログインします。
+1. URLでCRXDEインターフェイスに移動します。`https://'[server]:[port]'/crx/de`にログインし、管理者の資格情報を使用してインターフェイスにログインします。
 
 1. 左のペインで */content/xfaforms/profiles* の場所に移動します。
 
@@ -75,11 +74,11 @@ footer.jsp モジュールは空です。ユーザーの操作にのみ使用す
 カスタムプロファイルの作成後、このプロファイルにレンダラーの情報を追加します。新しいプロファイルの要求を受け取る際に、CRX はレンダリングする JSP ページの /apps フォルダーの存在を確認します。JSP ページを /apps フォルダーで作成します。
 
 1. 左側のウィンドウで、`/apps`フォルダーに移動します。
-1. `/apps`フォルダーを右クリックし、**hrform**&#x200B;という名前のフォルダーを作成するよう選択します。
+1. `/apps`フォルダーを右クリックし、**hrform**&#x200B;という名前のフォルダーを作成します。
 1. **hrform**&#x200B;フォルダー内で、**demo**&#x200B;という名前のフォルダーを作成します。
 1. 「**すべて保存**」ボタンをクリックします。
 1. `/libs/xfaforms/profile/html.jsp`に移動し、ノード&#x200B;**html.jsp**&#x200B;をコピーします。
-1. **html.jsp**&#x200B;ノードを&#x200B;**html.jsp**&#x200B;と同じ名前で作成した`/apps/hrform/demo`フォルダーに貼り付け、**保存**&#x200B;をクリックします。
+1. **html.jsp**&#x200B;ノードを&#x200B;**html.jsp**&#x200B;という同じ名前で作成した`/apps/hrform/demo`フォルダーに貼り付け、「**保存**」をクリックします。
 1. プロファイルスクリプトのその他のコンポーネントを持っている場合は、手順 1 から 6 に従って、/apps/hrform/demo フォルダーにそのコンポーネントをコピーします。
 
 1. プロファイルが作成されたことを確認するには、URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`を開きます。
