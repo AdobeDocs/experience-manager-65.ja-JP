@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: d2decc31-a04b-4a8e-bb19-65f21cf7107e
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: 19bb58da-8220-404e-bddb-34be94a3a7d7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '989'
 ht-degree: 85%
 
 ---
 
-
 # コンテンツフラグメントの翻訳プロジェクトの作成 {#creating-translation-projects-for-content-fragments}
 
-Adobe Experience Manager(AEM)アセットは、アセットに加えて、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)の言語コピーワークフロー（バリエーションを含む）をサポートしています。 コンテンツフラグメントで言語コピーワークフローを実行するために追加の最適化は必要ありません。各ワークフローで、コンテンツフラグメント全体が翻訳のために送信されます。
+Adobe Experience Manager(AEM)Assetsは、アセットに加えて、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)の言語コピーワークフロー（バリエーションを含む）をサポートします。 コンテンツフラグメントで言語コピーワークフローを実行するために追加の最適化は必要ありません。各ワークフローで、コンテンツフラグメント全体が翻訳のために送信されます。
 
 コンテンツフラグメントで実行できるワークフロータイプは、アセットで実行できるワークフロータイプと同じです。また、ワークフロータイプごとに使用できるオプションも、アセット用の対応するワークフロータイプで使用できるものと同じです。
 
@@ -40,16 +39,16 @@ Adobe Experience Manager(AEM)アセットは、アセットに加えて、[コ�
 
 「作成と翻訳」ワークフローには、次のオプションがあります。各オプションに関連する手順は、アセットの対応するオプションに関連する手順と似ています。
 
-* 構造のみを作成する：手順については、[アセット](translation-projects.md#create-structure-only)のみに構造を作成するを参照してください。
-* 新しい翻訳プロジェクトを作成します。手順については、[アセット用の新しい翻訳プロジェクトを作成する](translation-projects.md#create-a-new-translation-project)を参照してください。
-* 既存追加の翻訳プロジェクト：手順については、[アセット](translation-projects.md#add-to-existing-translation-project)追加の既存の翻訳プロジェクトへのアクセスを参照してください。
+* 構造のみを作成：手順については、[アセットのみの構造を作成する](translation-projects.md#create-structure-only)を参照してください。
+* 新しい翻訳プロジェクトを作成します。手順については、[アセットの新しい翻訳プロジェクトの作成](translation-projects.md#create-a-new-translation-project)を参照してください。
+* 既存の翻訳プロジェクトに追加：手順については、[アセットの既存の翻訳プロジェクトへの追加](translation-projects.md#add-to-existing-translation-project)を参照してください。
 
 ## 言語コピーを更新ワークフロー {#update-language-copies-workflow}
 
 「言語コピーを更新」ワークフローには、次のオプションがあります。各オプションに関連する手順は、アセットの対応するオプションに関連する手順と似ています。
 
-* 新しい翻訳プロジェクトを作成します。手順については、[アセット用の新しい翻訳プロジェクトを作成する](translation-projects.md#create-a-new-translation-project)（更新ワークフロー）を参照してください。
-* 既存追加の翻訳プロジェクト：手順については、[アセット](translation-projects.md#add-to-existing-translation-project)の既存の翻訳プロジェクト追加へのアップデート（更新ワークフロー）を参照してください。
+* 新しい翻訳プロジェクトを作成します。手順については、[アセットの新しい翻訳プロジェクトを作成する](translation-projects.md#create-a-new-translation-project)（更新ワークフロー）を参照してください。
+* 既存の翻訳プロジェクトに追加：手順については、[アセットの既存の翻訳プロジェクトに追加](translation-projects.md#add-to-existing-translation-project)（更新ワークフロー）を参照してください。
 
 フラグメントの一時的な言語コピーを作成することもできます。方法は、アセットの一時的なコピーを作成する場合と同様です。詳しくは、[一時的な言語コピーの作成（アセット）](translation-projects.md#creating-temporary-language-copies)を参照してください。
 
@@ -62,7 +61,7 @@ AEM では、様々な種類のメディアアセットとコレクションが�
 混在メディアが含まれているコンテンツフラグメントを翻訳できるようにするには、最初に、コンテンツフラグメントに関連付けられたインラインアセットとコレクションの翻訳が可能になるように、デフォルトの翻訳フレームワークを編集します。
 
 1. AEM のロゴをクリックまたはタップし、**[!UICONTROL ツール／デプロイメント／クラウドサービス]**&#x200B;に移動します。
-1. **[!UICONTROL Adobe Marketing Cloud]**&#x200B;の下の&#x200B;**[!UICONTROL 翻訳の統合]**&#x200B;を探し、**[!UICONTROL 設定を表示]**&#x200B;をクリックまたはタップします。
+1. **[!UICONTROL Adobe Marketing Cloud]**&#x200B;の下の&#x200B;**[!UICONTROL 翻訳統合]**&#x200B;を探し、「**[!UICONTROL 設定を表示]**」をクリックまたはタップします。
 
    ![chlimage_1-444](assets/chlimage_1-444.png)
 
@@ -88,7 +87,7 @@ AEM では、様々な種類のメディアアセットとコレクションが�
 
 1. コンテンツフラグメントにアセットを挿入します。
 
-   ![コンテンツフラグメントにアセットを挿入](assets/column-view.png)
+   ![アセットをコンテンツフラグメントに挿入](assets/column-view.png)
 
 1. 「**[!UICONTROL コンテンツを関連付け]**」アイコンをクリックまたはタップします。
 
@@ -111,7 +110,7 @@ AEM では、様々な種類のメディアアセットとコレクションが�
 
    ![chlimage_1-455](assets/chlimage_1-455.png)
 
-1. パネルの下部にある「**[!UICONTROL 作成と翻訳]**」をクリック/タップして、**[!UICONTROL 作成と翻訳]**&#x200B;ダイアログを表示します。
+1. パネルの下部にある「**[!UICONTROL 作成と翻訳]**」をクリックまたはタップして、**[!UICONTROL 作成と翻訳]**&#x200B;ダイアログを表示します。
 
    ![chlimage_1-456](assets/chlimage_1-456.png)
 
@@ -154,7 +153,7 @@ AEM では、様々な種類のメディアアセットとコレクションが�
 
    コレクションのコンテンツのみが翻訳されていることがわかります。コレクション自体は翻訳されていません。
 
-1. 翻訳後の関連アセットのパスに移動します。翻訳済みのアセットがターゲット言語ルートの下に保存されていることを確認します。
+1. 翻訳後の関連アセットのパスに移動します。翻訳済みアセットがターゲット言語ルートの下に保存されていることを確認します。
 
    ![chlimage_1-466](assets/chlimage_1-466.png)
 
@@ -165,4 +164,3 @@ AEM では、様々な種類のメディアアセットとコレクションが�
    >[!NOTE]
    >
    >コンテンツフラグメントを既存のプロジェクトに追加する手順や更新ワークフローの実行手順は、アセット向けの対応する手順と同様です。これらの手順については、アセット向けに説明されている手順を参照してください。
-
