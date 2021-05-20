@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9fda71e4-78a1-4581-9d02-bf06a75c3bcb
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: f0ab712f-ecd9-4be8-a7a5-fd1a7a8c9a0b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 100%
 
 ---
-
 
 # セーフバックアップモードの有効化と無効化 {#enabling-and-disabling-safe-backup-mode}
 
@@ -41,4 +40,3 @@ ht-degree: 100%
 
 1. 管理コンソールで、設定／コアシステム設定／バックアップ設定をクリックします。
 1. バックアップ設定ページで、「セーフバックアップモードで稼動する」の選択を解除して「OK」をクリックします。
-
