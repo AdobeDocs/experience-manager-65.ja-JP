@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: d0d29b99-53d4-4b0d-947b-39d91b381de7
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 37428543-c310-4712-a4ec-1f482579fb4b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 86%
 
 ---
-
 
 # クラウド設定{#cloud-configuration}
 
@@ -32,9 +31,9 @@ On-Demand アプリをクラウド設定に関連付けることで、Adobe Expe
 
 >[!CAUTION]
 >
->On-Demandアプリのクラウド設定を開始する前に、「AEM MobileプロビジョニングとAEM Mobile On-demand Servicesクライアントの設定」を理解しておく必要があります。
+>On-Demandアプリ用のクラウド設定を開始する前に、AEM MobileのプロビジョニングとAEM Mobile On-demand Services Clientの設定に関する知識が必要です。
 >
->詳しくは、「管理」の「[AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)の設定」を参照してください。
+>詳しくは、管理の節の「[AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)の設定」を参照してください。
 
 Mobile On-Demand クラウドサービスを設定するには、アプリダッシュボードの&#x200B;**接続を管理**&#x200B;タイルの右上隅にある歯車をクリックします。
 
@@ -46,12 +45,12 @@ Mobile On-Demand クラウドサービスを設定するには、アプリダッ
 >
 >On-Demand クライアントおよびクラウドを設定済みであることを確認します。
 >
->詳しくは、「管理」の「[AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)の設定」を参照してください。
+>詳しくは、管理の節の「[AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md)の設定」を参照してください。
 
 以下に、クラウド設定へのリンクの設定手順について説明します。
 
 1. 「**モバイル**」で「**アプリ**」を選択し、カタログから Mobile On-Demand アプリを選択します。
-1. **「接続を管理」**&#x200B;タイルの歯車アイコンをクリックします。
+1. **接続を管理**&#x200B;タイルの歯車アイコンをクリックします。
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
