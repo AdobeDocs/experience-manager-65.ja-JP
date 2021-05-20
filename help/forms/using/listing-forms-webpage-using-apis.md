@@ -8,7 +8,6 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
-translation-type: tm+mt
 source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
 workflow-type: tm+mt
 source-wordcount: '719'
@@ -21,7 +20,7 @@ ht-degree: 84%
 
 AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリーを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
-REST APIを使用してフォームを検索するには、GETリクエストを`https://'[server]:[port]'/libs/fd/fm/content/manage.json`のサーバーに送信し、以下に説明するクエリパラメーターを指定します。
+REST APIを使用してフォームを検索するには、サーバーの`https://'[server]:[port]'/libs/fd/fm/content/manage.json`にGETリクエストと以下に説明するクエリパラメーターを送信します。
 
 ## クエリーパラメーター {#query-parameters}
 
@@ -107,7 +106,7 @@ REST APIを使用してフォームを検索するには、GETリクエストを
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
      <li><strong>name</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
-     <li><strong>criteria</strong>：結果の順序を指定します。順序属性には次の値を指定できます。
+     <li><strong>criteria</strong>：結果の順序を指定します。order属性には次の値を指定できます。
       <ul>
        <li>ASC - ASC を使用すると、結果を昇順に並べ替えます。<br /> </li>
        <li>DES - DESを使用して、結果を降順に並べ替えます。</li>
@@ -116,7 +115,7 @@ REST APIを使用してフォームを検索するには、GETリクエストを
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code>属性は、<code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code>のアセットに適用されます。</td>
+   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code>属性は、タイプ<code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code>のアセットに適用できます。</td>
   </tr>
   <tr>
    <td>assetType</td>
@@ -175,7 +174,7 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
-* [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
+* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)
