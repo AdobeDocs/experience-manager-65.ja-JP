@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: a0647696-72c3-409b-85ba-9275d8f99cff
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 63ceaba6-b796-4c13-a86d-f0609ec679c9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 67%
 
 ---
-
 
 # ベストプラクティス {#best-practices}
 
@@ -24,7 +23,7 @@ ht-degree: 67%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap）シェルで直接実行するアプリの作成とは異なります。 開発者は、以下の事項に精通している必要があります。
+AEM Mobile On-demand Servicesアプリの構築は、Cordova（またはPhoneGap）シェルで直接実行するアプリの構築とは異なります。 開発者は、以下の事項に精通している必要があります。
 
 * 標準でサポートされているプラグイン、および AEM Mobile 固有のプラグイン。
 
@@ -41,27 +40,27 @@ AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap
 
 * プラグイン機能を使用するテンプレートは、プラグインのブリッジなしでもブラウザーでオーサリング可能なように記述する必要があります。
 
-   * 例えば、プラグインのAPIにアクセスする前に、*deviceready*&#x200B;関数を待つようにします。
+   * 例えば、プラグインのAPIにアクセスする前に、必ず&#x200B;*deviceready*&#x200B;関数を待ってください。
 
 ## AEM 開発者向けガイドライン {#guidelines-for-aem-developers}
 
-次のガイドラインは、モバイルアプリのテンプレートとコンポーネントを作成するサイト開発経験があるAEM開発者の役に立ちます。
+次のガイドラインは、モバイルアプリのテンプレートとコンポーネントを作成する経験豊富なAEM開発者を支援します。
 
 **再利用性と拡張性を向上させるために AEM Sites テンプレートを構造化する**
 
-* 1つのモノリシックファイルよりも複数のコンポーネントスクリプトファイルを優先
+* 単一のモノリシックスクリプトよりも複数のコンポーネントスクリプトファイルを優先
 
-   * *customheaderlibs.html*&#x200B;や&#x200B;*customfooterlibs.html*&#x200B;など、多数の空の拡張ポイントが用意されています。これにより、開発者はできるだけ小さなコアコードを複製しながらページテンプレートを変更できます
-   * 次に、Slingの&#x200B;*sling:resourceSuperType*&#x200B;メカニズムを使用して、テンプレートを拡張し、カスタマイズできます。
+   * *customheaderlibs.html*&#x200B;や&#x200B;*customfooterlibs.html*&#x200B;など、空の拡張ポイントが多数用意されているので、開発者はコアコードをできるだけ複製せずにページテンプレートを変更できます
+   * その後、Slingの&#x200B;*sling:resourceSuperType*&#x200B;メカニズムを使用して、テンプレートを拡張およびカスタマイズできます。
 
 * 使用するテンプレート言語は、JSP よりも Sightly/HTL の方が望ましい
 
-   * この方法を使用すると、XSS保護で構築されたオファーやマークアップからコードを分離することが推奨され、構文がより使い慣れています
+   * この方法を使用すると、マークアップからコードを分離し、XSS保護に組み込まれたオファーを使用し、より使い慣れた構文を使用できます。
 
 **デバイス上でのパフォーマンスを最適化する**
 
-* 記事固有のスクリプトやスタイルシートは、dps-article contentsyncテンプレートを使用して、記事のペイロードに含める必要があります
-* 複数の記事で共有されるスクリプトやスタイルシートは、dps-HTMLResources contentsyncテンプレートを使用して、共有リソースに含める必要があります
+* dps-article contentsyncテンプレートを使用して、記事固有のスクリプトおよびスタイルシートを記事ペイロードに含める必要があります
+* 複数の記事が共有するスクリプトとスタイルシートは、 dps-HTMLResources contentsyncテンプレートを使用して、共有リソースに含める必要があります
 * レンダリングを妨げる外部スクリプトを参照してはなりません。
 
 >[!NOTE]
@@ -71,7 +70,7 @@ AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap
 **Web 向けの汎用的な JS および CSS ライブラリよりも、アプリ固有のクライアント側 JS および CSS ライブラリの方が望ましい**
 
 * jQuery Mobile などのライブラリで多数のデバイスやブラウザーを処理する際のオーバーヘッドを回避するためです。
-* テンプレートがアプリの Web ビュー内で実行されるときに、そのアプリがサポートするプラットフォームとバージョンを自身で管理でき、JavaScript がサポートされることをあらかじめ把握できます。例えば、jQuery MobileやOnsen UIよりもイオン性（おそらくCSSのみ）を、Bootstrapよりも優先します。
+* テンプレートがアプリの Web ビュー内で実行されるときに、そのアプリがサポートするプラットフォームとバージョンを自身で管理でき、JavaScript がサポートされることをあらかじめ把握できます。例えば、jQuery MobileよりもIonic（おそらくCSSのみ）、BootstrapよりもOnsen UIの方が好ましい。
 
 >[!NOTE]
 >
@@ -85,7 +84,7 @@ AEM Mobile On-demand Servicesアプリの作成は、Cordova（またはPhoneGap
 
 **記事のペイロードのサイズを最小限に抑える**
 
-* サポートする最大のビューポートを効果的にカバーできる最小のアセットを適切な解像度で使用します。
+* サポートする最大のビューポートを効果的にカバーできる最小のアセットを適切な解像度で使用する
 * *ImageOptim* などのツールを画像に使用して、余分なメタデータを削除します。
 
 ## さらに先のステップ {#getting-ahead}
