@@ -10,20 +10,19 @@ topic-tags: developing
 content-type: reference
 discoiquuid: eece7b8f-6ccd-4037-8713-0cd36cfd9e73
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 60%
 
 ---
 
-
 # ブログの基本事項 {#blog-essentials}
 
-AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビティです。 ブログ記事は公開環境から投稿されるようになりました。以前は、ブログ記事は作成者環境でのみ作成され、公開できました。
+AEM 6.1 Communities以降、ブログはコミュニティアクティビティとなっています。 ブログ記事は、パブリッシュ環境から投稿されるようになりました。以前は、オーサー環境でのみブログ記事を作成し、公開できました。
 
-特権を持つメンバーに制限されない限り、どのコミュニティのメンバーでもブログ記事が作成できるようになりました。
+権限を持つメンバーに制限されない限り、すべてのコミュニティメンバーがブログ記事を作成できるようになりました。
 
 このページでは、ブログ機能の操作に関する基本情報をまとめています。
 
@@ -35,7 +34,7 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
 
 ブログ機能は 2 つの主要コンポーネントで構成されます。これらのコンポーネントは、[ブログ機能](/help/communities/functions.md#blog-function)を追加するか、オーサーインスタンスの編集モードでページに追加することによって使用可能になります。
 
-### ブログ  {#blog}
+### ブログ {#blog}
 
 <table>
  <tbody>
@@ -45,7 +44,7 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
   </tr>
   <tr>
    <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -70,15 +69,15 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**インクルード可能**](/help/communities/scf.md#add-or-include-a-communities-component) | いいえ |
-| [**clientlibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
+| [**インクルード可能**](/help/communities/scf.md#add-or-include-a-communities-component) | 不可 |
+| [**clientllibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
 | **プロパティ** | [ブログ機能](/help/communities/blog-feature.md)を参照 |
 
 * [クライアント側のカスタマイズ](/help/communities/client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [ブログ API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/journal/client/api/package-summary.html)
 
@@ -86,11 +85,11 @@ AEM 6.1 Communitiesの時点で、ブログはコミュニティアクティビ�
 
 * [サーバー側のカスタマイズ](/help/communities/server-customize.md)
 
-### ブログ機能  {#blog-function}
+### ブログ機能 {#blog-function}
 
-[ブログ関数](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造は、`Blog`および`Blog Sidebar`コンポーネントを構成します。 Blog関数は、[特権を持つメンバーのユーザーグループ](/help/communities/users.md#privileged-members-group)の識別をサポートします。
+[ブログ機能](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造では、`Blog`および`Blog Sidebar`コンポーネントを設定します。 ブログ機能は、[権限を持つメンバーユーザーグループ](/help/communities/users.md#privileged-members-group)の識別をサポートします。
 
-### ブログエントリ(UGC)へのアクセス{#accessing-blog-entries-ugc}
+### ブログエントリ(UGC) {#accessing-blog-entries-ugc}へのアクセス
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
@@ -101,8 +100,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](/help/communities/wo
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](/help/communities/srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](/help/communities/srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
-* [SRP](/help/communities/accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](/help/communities/srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPによるUGCへのアクセス](/help/communities/accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](/help/communities/socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
 ## プライマリパブリッシャー {#primary-publisher}
@@ -117,9 +116,8 @@ AEM プラットフォームでは、次に説明するように、XSS 攻撃を
 
 * [クロスサイトスクリプティング（XSS）に対する保護](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
-AEM 6.2以降、手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれます。
+AEM 6.2以降では、手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれています。
 
 `Embed Media from External Sites`アイコンを選択すると、ブログ記事にリッチメディアが埋め込まれます。
 
 ![media](assets/media-icon.png)
-
