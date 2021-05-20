@@ -7,15 +7,14 @@ uuid: 0fe9a389-269b-438a-9489-d9d1d09558a1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: d519ac4e-6d29-4a69-874e-792acabe87ff
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: 948b2c12-895d-49e3-a943-d8fe87174fc4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 85%
+ht-degree: 87%
 
 ---
-
 
 # アダプティブフォームの自動保存 {#auto-save-an-adaptive-form}
 
@@ -30,10 +29,10 @@ ht-degree: 85%
 
 アダプティブフォームの場合、自動保存オプションは最初は有効にはなっていません。自動保存オプションを有効にするには、アダプティブフォームのプロパティの「**自動保存**」セクションで行うことができます。「**自動保存**」セクションには、その他の設定オプションがいくつか用意されています。次の手順を実行して、アダプティブフォームの自動実行オプションを有効にし設定します。
 
-1. プロパティの「自動保存」セクションにアクセスするには、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**[!UICONTROL アダプティブフォームコンテナ]**&#x200B;をタップし、![cmppr](assets/cmppr.png)をタップします。
+1. プロパティの「自動保存」セクションにアクセスするには、コンポーネントを選択し、![フィールドレベル](assets/field-level.png) / **[!UICONTROL アダプティブフォームコンテナ]**&#x200B;をタップしてから、![cmppr](assets/cmppr.png)をタップします。
 1. 「**[!UICONTROL 自動保存]**」セクションで、自動保存オプションを&#x200B;**[!UICONTROL 有効]**&#x200B;にします。
 1. 「**[!UICONTROL アダプティブフォームイベント]**」ボックスで、1 または TRUE を指定して、フォームがブラウザーに読み込まれたときに自動保存を開始します。トリガーされると true を返してフォームのコンテンツの保存を開始する条件式をイベントに指定することもできます。
-1. トリガーを指定します。設定に従い、自動保存がトリガーされます。次のオプションがあります。
+1. トリガーを指定します。設定に従い、自動保存がトリガーされます。以下のオプションがあります。
 
    * **[!UICONTROL 時刻に基づいた自動保存]**：特定の時間間隔に基づいてコンテンツの保存を開始するには、このオプションを選択します。
    * **[!UICONTROL イベントに基づいた自動保存]**：イベントがトリガーされたときにコンテンツの保存を開始するには、このオプションを選択します。
@@ -41,7 +40,7 @@ ht-degree: 85%
    トリガーを選択すると、方法の設定ボックスが有効になります。方法の設定ボックスでは、次のことができます。
 
    * **[!UICONTROL 時刻に基づいた自動保存]**&#x200B;トリガーを選択した場合は、時間間隔を指定します。
-   * **[!UICONTROL イベントベース]**&#x200B;のトリガーを選択した場合は、イベント名を指定します。
+   * 「**[!UICONTROL イベントに基づく]**」トリガーを選択した場合は、イベント名を指定します。
 
    独自の方法を作成してリストに追加することもできます。詳細については、[フォームを自動保存するためのカスタム方法の実装](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)を参照してください。
 
@@ -51,7 +50,7 @@ ht-degree: 85%
 
 1. （イベントベースの自動保存のみ）次の手順を実行して、イベントベースの自動保存のためのオプションを設定します。
 
-   1. 「**このイベント**&#x200B;の後に自動保存」ボックスに、[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html)イベントを指定します。 式が TRUE に評価されるたびに、フォームが保存されます。
+   1. 「**このイベントの後に自動保存**」ボックスで、[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html)イベントを指定します。 式が TRUE に評価されるたびに、フォームが保存されます。
 
 1. （オプション）匿名ユーザーに対するコンテンツを自動保存するには、「**匿名のユーザーの自動保存を有効にする**」オプションを選択し、「**[!UICONTROL OK]**」をクリックします。
 
@@ -59,7 +58,7 @@ ht-degree: 85%
    >
    >自動保存オプションが匿名ユーザーに対して機能するには、すべてのユーザーにフォームのプレビュー、確認および署名を許可するように Forms Common Configuration Service が設定されていることを確認します。
    >
-   >サービスを設定するには、`https://server:port/system/console/configMgr`にあるAEM Webコンソール設定に移動し、**[!UICONTROL Forms共通設定サービス]**&#x200B;を編集して、**[!UICONTROL 許可]**&#x200B;フィールドの&#x200B;**[!UICONTROL すべてのユーザー]**&#x200B;オプションを選択し、設定を保存します。
+   >サービスを設定するには、`https://server:port/system/console/configMgr`にあるAEM Webコンソール設定に移動し、**[!UICONTROL Forms Common Configuration Service]**&#x200B;を編集して、**[!UICONTROL Allow]**&#x200B;フィールドの「**[!UICONTROL All Users]**」オプションを選択し、設定を保存します。
 
 ## アダプティブフォームの自動保存を有効にするカスタム方法の実装 {#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms}
 
@@ -67,7 +66,7 @@ ht-degree: 85%
 
 1. クライアントライブラリとクライアントライブラリフォルダーを作成します。詳細手順については、[クライアント側ライブラリの使用ドキュメント](/help/sites-developing/clientlibs.md)を参照してください。
 
-   例えば、次のスクリプトでは、カスタム`emailFocusChange`イベントを使用して自動保存機能をトリガーします。
+   例えば、次のスクリプトでは、カスタムの`emailFocusChange`イベントを使用して自動保存機能をトリガー化します。
 
    ```javascript
    window.addEventListener("bridgeInitializeStart", function (){
@@ -86,7 +85,6 @@ ht-degree: 85%
 
 1. アダプティブフォームを作成者モードで開きます。
 
-1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)/**[!UICONTROL アダプティブフォームコンテナ]**&#x200B;をタップし、![cmppr](assets/cmppr.png)をタップします。
+1. 編集モードで、コンポーネントを選択し、![フィールドレベル](assets/field-level.png)／**[!UICONTROL アダプティブフォームコンテナ]**&#x200B;をタップしてから、 ![cmppr](assets/cmppr.png) をタップします。
 1. プロパティで「**[!UICONTROL 基本]**」セクションを開きます。「**[!UICONTROL クライアントライブラリのカテゴリ]**」ボックスに、クライアントライブラリフォルダーの作成時に定義したカテゴリプロパティの値を入力します。
 1. 「自動保存」セクションを開きます。「**[!UICONTROL このイベント後に自動保存]**」ボックスで、クライアントライブラリですでに定義されているカスタムイベントを指定します。「**[!UICONTROL OK]**」をクリックします。
-
