@@ -8,15 +8,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: 6a158e18-b7d0-45fb-b4fc-4770e66982b4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 91%
 
 ---
-
 
 # アダプティブフォームでの SOM 式の使用{#using-som-expressions-in-adaptive-forms}
 
@@ -24,7 +23,7 @@ ht-degree: 91%
 
 Scripting Object Model（SOM）を使用し、特定の Document Object Model（DOM）内の値、プロパティ、メソッドを参照できます。DOM はメモリのオブジェクトとプロパティをツリー階層で編成します。SOM 式はフィールド／描画の要素とパネルを参照します。
 
-次の画像は、コンポーネントをフォームに追加する際にアダプティブフォームが変換するノード構造を示しています。 例えば、パネルをルートパネルに追加し、実行時に DOM に変換されるパネルにラジオボタンを追加できます。アダプティブフォームのラジオボタンフィールドのSOM式は`guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`として指定されています。
+次の画像は、コンポーネントをフォームに追加する際にアダプティブフォームが変換するノード構造を示しています。 例えば、パネルをルートパネルに追加し、実行時に DOM に変換されるパネルにラジオボタンを追加できます。アダプティブフォームのラジオボタンフィールドのSOM式は`guide[0].guide1[0].guideRootPanel[0].panel1[0].radiobutton[0]`に指定されています。
 
 ![DOM ツリー](assets/hierarchy.png)
 
@@ -48,4 +47,4 @@ DOM ツリー
 
 パネルツールバーを使用した SOM 式の抽出
 
-[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html) に一覧表示されている API の一部は要素の SOM 式を使用します。例えば、アダプティブフォーム内の特定のフィールドにフォーカスを移動するには、対応する SOM 式を `getFocus` の `guideBridge` API に渡します。 
+[GuideBridge](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html) に一覧表示されている API の一部は、要素の SOM 式を使用します。例えば、アダプティブフォーム内の特定のフィールドにフォーカスを移動するには、対応する SOM 式を `getFocus` の `guideBridge` API に渡します。 
