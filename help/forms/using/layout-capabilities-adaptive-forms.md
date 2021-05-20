@@ -8,15 +8,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 9459c414-eac9-4bd9-a773-cceaeb736c56
 docset: aem65
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: 3db623a4-f1ad-4b7f-97e8-0be138aa8b26
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1160'
-ht-degree: 78%
+ht-degree: 88%
 
 ---
-
 
 # アダプティブフォームのレイアウトの機能{#layout-capabilities-of-adaptive-forms}
 
@@ -30,15 +29,15 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 [フォーム作成の概要](../../forms/using/introduction-forms-authoring.md)
 
-## レイアウトのタイプ {#types-of-layouts}
+## レイアウトのタイプ{#types-of-layouts}
 
 アダプティブフォームは次のタイプのレイアウトを提供します。
 
-**パネル** レイアウトパネル内の項目やコンポーネントをデバイスに表示する方法をコントロールします。
+**パネルレイアウト**&#x200B;は、パネル内の項目やコンポーネントをデバイス上で表示する方法をコントロールします。
 
-**モバイル** レイアウトモバイルデバイス上のフォームのナビゲーションを制御します。デバイスの幅が 768 ピクセル以上の場合、レイアウトはモバイルと判断され、モバイルデバイス向けに最適化されます。
+**モバイルレイアウト**&#x200B;は、モバイルデバイスでのフォームのナビゲーションをコントロールします。デバイスの幅が 768 ピクセル以上の場合、レイアウトはモバイルと判断され、モバイルデバイス向けに最適化されます。
 
-**ツールバー** レイアウトフォーム内のツールバーまたはパネルツールバーのアクションボタンの配置をコントロールします。
+**ツールバーレイアウト**&#x200B;は、フォーム内のツールバーまたはパネルツールバーのアクションボタンの配置をコントロールします。
 
 これらのすべてのパネルレイアウトは次の場所で定義されます。
 
@@ -60,11 +59,11 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 アダプティブフォームのパネルレイアウトのリスト
 
-### レスポンシブ - ナビゲーションなしですべて 1 ページに {#responsive-everything-on-one-page-without-navigation-br}
+### レスポンシブ - ナビゲーションなしですべて 1 ページに配置 {#responsive-everything-on-one-page-without-navigation-br}
 
 このパネルレイアウトを使用すると、特別なナビゲーションなしでレイアウトをデバイスの画面サイズに合うように調整するレスポンシブレイアウトを作成できます。
 
-このレイアウトを使用すると、複数の&#x200B;**[!UICONTROL パネルアダプティブフォーム]**&#x200B;コンポーネントをパネル内に次々に配置できます。
+このレイアウトを使用すると、複数の&#x200B;**[!UICONTROL パネルアダプティブフォーム]**&#x200B;コンポーネントをパネル内に順に配置できます。
 
 ![レスポンシブレイアウトを使用したフォームの小画面での表示例](assets/responsive_layout_seen_on_small_screen.png)
 
@@ -76,9 +75,9 @@ Adobe Experience Manager（AEM）では、簡単に使用できるアダプテ�
 
 ### ウィザード - 複数の手順を 1 つずつ表示するフォーム {#wizard-a-multi-step-form-showing-one-step-at-a-time}
 
-フォーム上にガイド付きのナビゲーションを用意したい場合、このパネルレイアウトを使用してください。例えば、ユーザーを1ステップずつガイドしながらフォーム内の必須の情報を取得したい場合に、このレイアウトを使用します。
+このパネルレイアウトを使用すると、フォーム上にガイド付きのナビゲーションが提供できます。例えば、ユーザーを 1 手順ずつガイドしながらフォーム内の必須情報を取得したい場合、このレイアウトを使用します。
 
-`Panel adaptive form`コンポーネントを使用して、パネル内での操作手順を示します。 このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
+`Panel adaptive form`コンポーネントを使用して、パネル内でステップバイステップのナビゲーションを行います。 このレイアウトを使用すると、現在の手順を完了しない限りユーザーは次の手順に進めません。
 
 ```javascript
 window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)
@@ -94,7 +93,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ### アコーディオンデザインのレイアウト  {#layout-for-accordion-design}
 
-このレイアウトを使用すると、アコーディオンスタイルのナビゲーションを含むパネルに`Panel adaptive form`コンポーネントを配置できます。 また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小回数と最大回数を定義できます。 また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
+このレイアウトを使用すると、アコーディオンスタイルのナビゲーションを備えたパネルに`Panel adaptive form`コンポーネントを配置できます。 また、このレイアウトを使用すると、繰り返し可能なパネルを作成できます。繰り返し可能なパネルを使用すれば、必要に応じて動的にパネルを追加したり削除することができます。パネルの繰り返しの最小数、最大数を定義することができます。また、パネル内の項目に入力される情報に応じて動的にパネルのタイトルを決定することができます。
 
 最小化したパネルのタイトルにエンドユーザーが提供した値を表示するために、サマリ式を使用することができます。
 
@@ -102,7 +101,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 アコーディオンレイアウトを使用して作成された繰り返し可能なパネル
 
-### タブ付きレイアウト - タブを左側に表示  {#tabbed-layout-tabs-appear-on-the-left}
+### タブ付きレイアウト - タブを左側に表示 {#tabbed-layout-tabs-appear-on-the-left}
 
 このレイアウトを使用すると、タブ付きナビゲーションのパネルに`Panel adaptive form`コンポーネントを配置できます。 タブはパネルコンテンツの左側に配置されます。
 
@@ -110,7 +109,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 パネルの左側にタブ表示
 
-### タブ付きレイアウト - タブを上に表示  {#tabbed-layout-tabs-appear-on-the-top}
+### タブ付きレイアウト - タブを上に表示 {#tabbed-layout-tabs-appear-on-the-top}
 
 このレイアウトを使用すると、タブ付きナビゲーションのパネルに`Panel adaptive form`コンポーネントを配置できます。 タブはパネルコンテンツの上に配置されます。
 
@@ -122,15 +121,15 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 モバイルレイアウトはモバイルデバイスの比較的小さい画面で、わかりやすいナビゲーションをできるようにします。モバイルレイアウトでは、フォームのナビゲーションにタブ付きスタイルまたはウィザードスタイルを使用します。モバイルレイアウトを適用するとフォーム全体を単一のレイアウトで表示します。
 
-このレイアウトでは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションをコントロールします。ナビゲーションバーには、フォーム内の&#x200B;**&lt;**&#x200B;と&#x200B;**>**&#x200B;のアイコンが表示され、**次**&#x200B;と&#x200B;**前の**&#x200B;のナビゲーション手順が示されます。
+このレイアウトでは、ナビゲーションバーとナビゲーションメニューを使用してナビゲーションをコントロールします。ナビゲーションバーで、**進む**&#x200B;と&#x200B;**戻る**&#x200B;のナビゲーションステップはそれぞれ **&lt;** と **>** のアイコンで示されます。
 
-モバイルレイアウトは`/libs/fd/af/layouts/mobile/`から入手できます。 アダプティブフォームでは、デフォルトで次のモバイルレイアウトを使用できます。
+モバイルレイアウトは`/libs/fd/af/layouts/mobile/`から使用できます。アダプティブフォームでは、デフォルトで次のモバイルレイアウトを使用できます。
 
 ![アダプティブフォームのモバイルレイアウトのリスト](assets/mobile-navigation.png)
 
 アダプティブフォームのモバイルレイアウトのリスト
 
-モバイルレイアウトを使用する場合、様々なフォームパネルにアクセスするためのフォームメニューは、![aem6forms_form_menu](assets/aem6forms_form_menu.png)アイコンをタップすると使用できます。
+モバイルレイアウトを使用する場合、![aem6forms_form_menu](assets/aem6forms_form_menu.png)アイコンをタップすると、様々なフォームパネルにアクセスするためのフォームメニューを使用できます。
 
 ### フォームのヘッダー部分にパネルタイトルを表示するレイアウト {#layout-with-panel-titles-in-the-form-header}
 
@@ -156,7 +155,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 アダプティブフォームのツールバーレイアウトのリスト
 
-ツールバーレイアウトは`/libs/fd/af/layouts/toolbar`から入手できます。 アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
+ツールバーのレイアウトは`/libs/fd/af/layouts/toolbar`の場所で使用できます。 アダプティブフォームには、デフォルトで次のツールバーレイアウトが用意されています。
 
 ### ツールバーのデフォルトレイアウト {#default-layout-for-toolbar}
 
@@ -179,4 +178,3 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 ![ツールバーをモバイルに最適化したレイアウト](assets/toolbar_layout_mobile_fixed.png)
 
 ツールバーをモバイルに最適化したレイアウト
-
