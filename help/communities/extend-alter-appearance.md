@@ -10,14 +10,13 @@ topic-tags: developing
 content-type: reference
 discoiquuid: e0da09b3-725d-4ed1-9273-2532132f6918
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 27e1bff3-385e-4ced-87af-54044b7e8812
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 58%
 
 ---
-
 
 # 外観の変更 (HBS) {#alter-the-appearance-hbs}
 
@@ -35,7 +34,7 @@ ht-degree: 58%
 
 * [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
 
-   * コメント投稿のアバターを含むタグをコメントアウトします（～行21）。
+   * コメント投稿のアバターを含むタグをコメントアウトします（21行目前後）。
 
       ```
         <!--
@@ -45,7 +44,7 @@ ht-degree: 58%
 
 * [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
 
-   * 次のコメントエントリ用のアバターを含むタグをコメントアウトします（～行44）。
+   * 次のコメントエントリのアバターを含むタグをコメントアウトします（44行目前後）。
 
       ```
         <!--
@@ -59,21 +58,21 @@ ht-degree: 58%
 
 アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
 
-その方法の1つは、次のとおりです。
+その方法の1つは次のとおりです。
 
 * メインメニューから
 
-   * **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL レプリケーション]**&#x200B;を選択します。
+   * **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL レプリケーション]**&#x200B;を選択します。
    * 「**[!UICONTROL ツリーをアクティブ化]**」を選択します。
    * `Start Path`を`/apps/custom`に設定します。
-   * 「**[!UICONTROL 変更済み]**&#x200B;のみ」を選択解除します。
-   * **[!UICONTROL 「]**&#x200B;アクティブ化」ボタンを選択します。
+   * 「**[!UICONTROL 変更済み]**&#x200B;のみ」の選択を解除します。
+   * 「**[!UICONTROL アクティブ化]**」ボタンを選択します。
 
 ### 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 
 パブリッシュインスタンスで[エクスペリエンスを続行](/help/communities/extend-sample-page.md#publish-sample-page)すると、同じユーザーとしてサインインしたまま、パブリッシュ環境でページを更新してアバターを削除する変更を表示できます。
 
-![表示変更内容](assets/view-modified-content.png)
+![view-modified-content](assets/view-modified-content.png)
 
 ### サンプルコメント拡張パッケージ {#sample-comment-extension-package}
 
