@@ -1,9 +1,9 @@
 ---
 title: アセットのダウンロード
-description: ' [!DNL Adobe Experience Manager] からアセットをダウンロードし、ダウンロード機能を有効または無効にする方法を説明します。'
+description: ' [!DNL Adobe Experience Manager] からアセットをダウンロードする方法と、ダウンロード機能を有効または無効にする方法について説明します。'
 contentOwner: AG
 role: Business Practitioner
-feature: アセット管理，アセットの配布
+feature: アセット管理、アセット配布
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
 source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
 workflow-type: tm+mt
@@ -24,11 +24,11 @@ ht-degree: 74%
 
 アセットをダウンロードするには、次の手順に従います。
 
-1. 左上隅で、ロゴをクリックします。 左側のレールで、「**[!UICONTROL ナビゲーション]**」をクリックします。
+1. 左上隅のロゴをクリックします。 左側のレールで、「**[!UICONTROL ナビゲーション]**」をクリックします。
 1. [!UICONTROL ナビゲーション]ページで、**[!UICONTROL アセット]**/**[!UICONTROL ファイルをクリックします。]**
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の 1 つ以上のアセットを選択します。
-1. ツールバーで、**[!UICONTROL ダウンロードをクリックします。]**
+1. ツールバーの[**[!UICONTROL ダウンロード]**]をクリックします。
 
    ![Experience Manager Assets からアセットをダウンロードする際に使用できるオプション](/help/assets/assets/asset-download1.png)
 
@@ -41,22 +41,22 @@ ht-degree: 74%
    | **[!UICONTROL アセットごとに別のフォルダーを作成]** | このオプションを選択すると、ダウンロードした各アセット（アセットの親フォルダーの下にネストされた子フォルダー内のアセットを含む）が、ローカルコンピューター上の 1 つのフォルダーに含まれます。このオプションを選択しない場合、デフォルトでは、フォルダー階層は無視され、すべてのアセットがローカルコンピューターの 1 つのフォルダーにダウンロードされます。 |
    | **[!UICONTROL 電子メール]** | ユーザーに電子メール通知が送信されます。次の場所にある標準の電子メールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> デプロイメント時にカスタマイズしたテンプレートは、次の場所で利用できます。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
    | **[!UICONTROL アセット]** | レンディションを含めずに、元の形式でアセットをダウンロードする場合に、このオプションを選択します。<br>オリジナルアセットにサブアセットがある場合は、サブアセットオプションを使用できます。 |
-   | **[!UICONTROL レンディション]** | レンディションは、アセットのバイナリ表現です。アセットは、（アップロードされたファイルの）一次表現を持ちます。アセットは任意の数の追加の表現を持つことができます。<br>このオプションを選択すると、ダウンロードするレンディションを選択できます。使用できるレンディションは、選択したアセットに応じて異なります。 このオプションは、アセットにレンディションがある場合に使用できます。 |
+   | **[!UICONTROL レンディション]** | レンディションは、アセットのバイナリ表現です。アセットは、（アップロードされたファイルの）一次表現を持ちます。アセットは任意の数の追加の表現を持つことができます。<br>このオプションを選択すると、ダウンロードするレンディションを選択できます。使用できるレンディションは、選択したアセットによって異なります。 このオプションは、アセットにレンディションがある場合に使用できます。 |
    | **[!UICONTROL スマート切り抜き]** | このオプションを選択すると、選択したアセットのすべてのスマート切り抜きレンディションが AEM 内からダウンロードされます。スマート切り抜きレンディションを含む zip ファイルが作成され、ローカルコンピューターにダウンロードされます。 |
    | **[!UICONTROL 動的レンディション]** | 一連の代替レンディションをリアルタイムで生成するには、このオプションを選択します。また、このオプションを選択すると、動的に作成するレンディションを[画像プリセット](image-presets.md)リストから選択します。<br>さらに、サイズ、測定単位、形式、カラースペース、解像度および、画像の反転用などのオプションの画像修飾子を選択できます。このオプションは、[!DNL Dynamic Media] を有効にしている場合にのみ使用できます。 |
 
-1. ダイアログボックスで、**[!UICONTROL ダウンロード]**&#x200B;をクリックします。
+1. ダイアログボックスで、「**[!UICONTROL ダウンロード]**」をクリックします。
 
 ダウンロードするフォルダーを選択すると、そのフォルダーの下位のアセットの階層全体がダウンロードされます。ダウンロードする各アセット（親フォルダーの下にネストされている子フォルダーのアセットを含む）を個々のフォルダーに格納するには、「**[!UICONTROL アセットごとに別のフォルダーを作成]**」を選択します。
 
 ## アセットダウンロードサーブレットの有効化 {#enable-asset-download-servlet}
 
-[!DNL Experience Manager]のデフォルトサーブレットは、認証済みユーザーが、サーバーやネットワークに負荷をかける可能性のあるアセットのZIPファイルを作成するための、任意の大きさで同時にダウンロード要求を発行できるようにします。 この機能で生じる可能性がある DoS リスクを軽減するために、パブリッシュインスタンスに対しては、`AssetDownloadServlet` OSGi コンポーネントがデフォルトで無効になっています。
+[!DNL Experience Manager]のデフォルトサーブレットを使用すると、認証済みユーザーは、サーバーとネットワークを過負荷にする可能性のある、アセットのZIPファイルを作成するための、任意の大きさの同時ダウンロード要求を発行できます。 この機能で生じる可能性がある DoS リスクを軽減するために、パブリッシュインスタンスに対しては、`AssetDownloadServlet` OSGi コンポーネントがデフォルトで無効になっています。
 
 例えば Asset Share Commons やポータルのような実装などを使用する場合に DAM からアセットをダウンロードできるようにするには、OSGi 設定を通じてサーブレットを手動で有効にします。日常的なダウンロードの要件に影響を与えない範囲で、許容ダウンロードサイズをできるだけ小さく設定することをお勧めします。この値を大きくすれば、パフォーマンスに影響を与える可能性があります。
 
-1. 発行実行モード(`config.publish`)をターゲットする命名規則を持つフォルダーを作成します。`/apps/<your-app-name>/config.publish`. 実行モードの設定プロパティを定義するには、[実行モード](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode)を参照してください。
-1. Configurationフォルダーに、`com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`という名前の`nt:file`型のファイルを作成します。
+1. パブリッシュ実行モード(`config.publish`)を対象とする命名規則でフォルダーを作成します。`/apps/<your-app-name>/config.publish`. 実行モードの設定プロパティを定義するには、[実行モード](/help/sites-deploying/configure-runmodes.md#defining-configuration-properties-for-a-run-mode)を参照してください。
+1. 設定フォルダーに、`com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config`という名前のタイプ`nt:file`のファイルを作成します。
 1. `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet.config` に以下を入力します。ダウンロードの最大サイズ（バイト単位）を `asset.download.prezip.maxcontentsize` の値として設定します。以下のサンプルでは、ZIP ダウンロードの最大サイズを 100 KB を超えないように設定しています。
 
    ```conf
@@ -64,15 +64,15 @@ ht-degree: 74%
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
-デフォルトでは、`GET`リクエストがファイルをダウンロードする場合、[!DNL Experience Manager]はZIPアーカイブのダウンロードサイズに50 MBの制限を適用します。 `POST`リクエストを介して開始されたダウンロード、またはユーザーインターフェイスは、この制限の影響を受けません。
+デフォルトでは、`GET`リクエストがファイルをダウンロードする場合、[!DNL Experience Manager]はZIPアーカイブのダウンロードサイズに対して50 MBの制限を適用します。 `POST`リクエストまたはユーザーインターフェイスを介して開始したダウンロードは、この制限の影響を受けません。
 
 ## アセットダウンロードサーブレットの無効化 {#disable-asset-download-servlet}
 
  パブリッシュインスタンスの `Asset Download Servlet` を無効にするには、アセットダウンロード要求をすべてブロックするように Dispatcher 設定を更新します。[!DNL Experience Manager]サーブレットは、OSGi コンソールから手動で直接無効にすることもできます。
 
-1. ディスパッチャー設定を使用してアセットのダウンロード要求をブロックするには、`dispatcher.any`設定を編集し、[フィルターセクション](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)にルールを追加します。`/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+1. Dispatcher設定を介してアセットダウンロード要求をブロックするには、`dispatcher.any`設定を編集し、[フィルターセクション](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-a-filter)にルールを追加します。`/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
-1. 発行インスタンスでOSGiコンポーネントを無効にするには、`http://[aem_server]:[port]/system/console/components`にあるOSGiコンソールにアクセスします。 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` を探して、「**[!UICONTROL 無効にする]**」をクリックします。
+1. パブリッシュインスタンスでOSGiコンポーネントを無効にするには、`http://[aem_server]:[port]/system/console/components`にあるOSGiコンソールにアクセスします。 `com.day.cq.dam.core.impl.servlet.AssetDownloadServlet` を探して、「**[!UICONTROL 無効にする]**」をクリックします。
 
 >[!MORELIKETHIS]
 >
