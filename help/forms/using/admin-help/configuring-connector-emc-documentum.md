@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
-translation-type: tm+mt
-source-git-commit: 2cf9dcf2e9cf71c54e19e2c6ee825c9a8f00a9b7
+exl-id: a31a496f-87b9-43c0-a98c-5f6ca5d11690
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 93%
 
 ---
-
 
 # Connector for EMC Documentum の設定 {#configuring-connector-for-emc-documentum}
 
@@ -62,15 +61,15 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 
 Documentum と共に使用するリポジトリサービスプロバイダーを設定できます。リポジトリサービスの呼び出しは、設定したプロバイダーに対して委任されます。以下のオプションが利用できます。
 
-**現在のリポジトリサービスプロバイダー名：** 現在のリポジトリサービスプロバイダーの名前
+**Current Repository Service Provider Name:** 現在のリポジトリサービスプロバイダーの名前
 
-**ECM Documentumリポジトリプロバイダー：Documentumリポジトリプロバイダー** をリポジトリのプロバイダーにします。このオプションは非推奨です。
+**ECM Documentumリポジトリプロバイダ：** Documentumリポジトリプロバイダをリポジトリのプロバイダにします。このオプションは非推奨です。
 
-**リポジトリプロバイダー：ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーに** します。
+**repository provider:** ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
 
 >[!NOTE]
 >
->リストに表示された以外のリポジトリサービスプロバイダーを選択するには、Applications and Services/Service ManagementでRepositoryServiceを設定します。<!-- Fix broken link (See Managing Services) -->.
+>リストに表示された以外のリポジトリサービスプロバイダーを選択するには、アプリケーションおよびサービス/サービスの管理でRepositoryServiceを設定します。<!-- Fix broken link (See Managing Services) -->.
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 「リポジトリサービスプロバイダー」領域で、代替リポジトリサービスプロバイダーを選択します。
@@ -117,4 +116,3 @@ Workspace のタスクキュー共有の要求機能が Connector for EMC Docume
 1. 変数ビューで、「theForm」変数のプロパティを開き、手順 5 で QueueSharing.swf ファイルを配置したパスに合わせて URI を変更します。
 1. プロセスを保存します。
 1. 組織のポリシーに従って、プロセスを実稼働環境に移行します。
-
