@@ -2,22 +2,21 @@
 title: フォルダーのアセットとコレクションのレビュー
 description: フォルダーまたはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
-feature: Collaboration, Collections
+feature: コラボレーション、コレクション
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 60%
 
 ---
-
 
 # フォルダーのアセットとコレクションのレビュー {#review-folder-assets-and-collections}
 
 フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
-[!DNL Adobe Experience Manager Assets] フォルダーまたはコレクション内のアセットに対してアドホックレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有して、フィードバックを求めることができます。
+[!DNL Adobe Experience Manager Assets] フォルダーまたはコレクション内のアセットにアドホックなレビューワークフローを設定し、レビュー担当者やクリエイティブパートナーと共有してフィードバックを得ることができます。
 
 レビューワークフローをプロジェクトと関連付けることも、独立したレビュータスクを作成することもできます。
 
@@ -25,10 +24,10 @@ ht-degree: 60%
 
 レビュー担当者がレビューを終了（アセットを承認または拒否）すると、ユーザーはレビューが完了したという通知を受け取ります。
 
-## フォルダーのレビュータスクの作成{#creating-a-review-task-for-folders}
+## フォルダー{#creating-a-review-task-for-folders}のレビュータスクの作成
 
-1. [!DNL Assets]ユーザーインターフェイスから、レビュータスクを作成するフォルダーを選択します。
-1. ツールバーで、**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png)をクリックし、**[!UICONTROL レビュータスク]**&#x200B;ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
+1. [!DNL Assets]ユーザーインターフェイスで、レビュータスクを作成するフォルダーを選択します。
+1. ツールバーの「**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png) 」をクリックして、「**[!UICONTROL レビュータスク]**」ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
@@ -55,26 +54,26 @@ ht-degree: 60%
 
    ![アセットの通知](assets/aemAssetsNotification.png)
 
-1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を調べ、**[!UICONTROL レビュー]**&#x200B;をクリックします。
-1. **[!UICONTROL レビュータスク]**&#x200B;ページで、アセットを選択し、必要に応じて、「**[!UICONTROL 承認/拒否]**」をクリックして、承認または拒否します。
+1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を確認し、「**[!UICONTROL レビュー]**」をクリックします。
+1. **[!UICONTROL レビュータスク]**&#x200B;ページで、アセットを選択し、必要に応じて「**[!UICONTROL 承認/拒否]**」をクリックして、承認するか拒否します。
 
    ![review_task](assets/review_task.png)
 
-1. ツールバーの&#x200B;**[!UICONTROL 完了]**&#x200B;をクリックします。 ダイアログで、コメントを入力し、「**[!UICONTROL 完了]**」をクリックして確認します。
-1. [!DNL Assets]ユーザーインターフェイスに移動し、フォルダーを開きます。 アセットの承認ステータスアイコンは、カードの表示とリストの表示に表示されます。
+1. ツールバーの「**[!UICONTROL 完了]**」をクリックします。 ダイアログで、コメントを入力し、「**[!UICONTROL 完了]**」をクリックして確定します。
+1. [!DNL Assets]ユーザーインターフェイスに移動し、フォルダーを開きます。 アセットの承認ステータスアイコンが、カード表示とリスト表示に表示されます。
 
    **カード表示**
 
-   ![カードの表示に表示されるステータスの確認](assets/chlimage_1-404.png)
+   ![カード表示でのステータスの確認](assets/chlimage_1-404.png)
 
    **リスト表示**
 
-   ![リスト表示に表示されるステータスの確認](assets/review_status_listview.png)
+   ![リスト表示でのステータスの確認](assets/review_status_listview.png)
 
 ## コレクションのレビュータスクの作成{#creating-a-review-task-for-collections}
 
 1. コレクションページで、レビュータスクを作成するコレクションを選択します。
-1. ツールバーで、**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png)をクリックし、**[!UICONTROL レビュータスク]**&#x200B;ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
+1. ツールバーの「**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png) 」をクリックして、「**[!UICONTROL レビュータスク]**」ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
 
 1. （オプション）「**[!UICONTROL プロジェクト]**」リストから、レビュータスクを関連付けるプロジェクトを選択します。デフォルトでは、「**[!UICONTROL なし]**」オプションが選択されています。レビュータスクにプロジェクトを関連付けない場合は、この選択状態のままにします。
 
@@ -94,17 +93,17 @@ ht-degree: 60%
 
 1. 「**[!UICONTROL 送信]**」をクリックし、「**[!UICONTROL 完了]**」をクリックして確認メッセージを閉じます。 新しいタスクに関する通知が承認者に送信されます。
 1. [!DNL Assets] に承認者としてログインし、 コンソールに移動します。[!DNL Assets]アセットを承認するには、「**[!UICONTROL 通知]**」をクリックし、リストからレビュータスクを選択します。
-1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を調べ、**[!UICONTROL レビュー]**&#x200B;をクリックします。
-1. コレクションのすべてのアセットがレビューページに表示されます。アセットを選択し、必要に応じて、「**[!UICONTROL 承認/拒否]**」をクリックして、アセットを承認または拒否します。
+1. **[!UICONTROL レビュータスク]**&#x200B;ページで、レビュータスクの詳細を確認し、「**[!UICONTROL レビュー]**」をクリックします。
+1. コレクションのすべてのアセットがレビューページに表示されます。アセットを選択し、必要に応じて「**[!UICONTROL 承認/拒否]**」をクリックして、アセットを承認または拒否します。
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. ツールバーの&#x200B;**[!UICONTROL 完了]**&#x200B;をクリックします。 ダイアログで、コメントを入力し、「**[!UICONTROL 完了]**」をクリックして確認します。
+1. ツールバーの「**[!UICONTROL 完了]**」をクリックします。 ダイアログで、コメントを入力し、「**[!UICONTROL 完了]**」をクリックして確定します。
 1. コレクションコンソールに移動して、コレクションを開きます。アセットの承認ステータスアイコンは、カード表示とリスト表示の両方に表示されます。
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
-   *図：カードの表示。*
+   *図：カード表示。*
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
