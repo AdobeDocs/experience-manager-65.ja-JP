@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_certificates_and_credentials
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e5f17ba8-8aab-4449-811a-20ad33de1c6f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: facbeab2-de95-4778-894c-faa771d3391e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1313'
 ht-degree: 99%
 
 ---
-
 
 # HSM 秘密鍵証明書の管理 {#managing-hsm-credentials}
 
@@ -35,7 +34,7 @@ AEM Forms の Digital Signatures では、HSM に保存されている秘密鍵�
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックし、「追加」をクリックします。
 1. 「プロファイル名」ボックスに、エイリアスの識別に使用する文字列を入力します。この値は、署名フィールドへの署名操作など、Digital Signatures の一部の操作でプロパティとして使用されます。
 1. 「PKCS11 ライブラリ」ボックスに、サーバーの HSM クライアントライブラリの完全修飾パスを入力します。例えば、`c:\Program Files\LunaSA\cryptoki.dll` のようになります。クラスター環境では、クラスター内のすべてのサーバーでこのパスが同じである必要があります。
-1. 「HSM の接続性をテスト」をクリックします。AEM Forms が HSM デバイスに接続できる場合は、HSM が使用可能であることを示すメッセージが表示されます。「Next」をクリックします。
+1. 「HSM の接続性をテスト」をクリックします。AEM Forms が HSM デバイスに接続できる場合は、HSM が使用可能であることを示すメッセージが表示されます。「次へ」をクリックします。
 1. 「トークン名」、「スロット Id」、「スロットリストのインデックス」のいずれかを使用して、HSM 上で秘密鍵証明書が保存されている場所を識別します。
 
    * **トークン名：**&#x200B;使用する HSM パーティションの名前（HSMPART1 など）に相当します。
@@ -50,7 +49,7 @@ AEM Forms の Digital Signatures では、HSM に保存されている秘密鍵�
 1. 管理コンソールで、設定／Trust Store の管理／HSM 秘密鍵証明書をクリックし、「追加」をクリックします。
 1. 「プロファイル名」ボックスに、エイリアスの識別に使用する文字列を入力します。この値は、署名フィールドへの署名操作など、Digital Signatures の一部の操作でプロパティとして使用されます。
 1. 「PKCS11 ライブラリ」ボックスに、サーバーの HSM クライアントライブラリの完全修飾パスを入力します。例えば、`c:\Program Files\LunaSA\cryptoki.dll` のようになります。クラスター環境では、クラスター内のすべてのサーバーでこのパスが同じである必要があります。
-1. 「オフラインプロファイルの作成」チェックボックスをオンにします。「Next」をクリックします。
+1. 「オフラインプロファイルの作成」チェックボックスをオンにします。「次へ」をクリックします。
 1. 「HSM デバイス」リストから、秘密鍵証明書が保存されている HSM デバイスの製造元を選択します。
 1. 「スロットタイプ」リストで、「スロット Id」、「スロットインデックス」または「トークン名」を選択し、「スロット情報」ボックスで値を指定します。AEM Forms では、これらの設定を使用して、HSM 上の秘密鍵証明書の場所が特定されます。
 
@@ -106,4 +105,3 @@ AEM Forms は、Web サービスベースの IPC/RPC メカニズムを使用し
 
 * 署名者の証明書を渡して、AEM Forms クライアント資格情報を作成します。「[Windows 64 ビットプラットフォームでの Sum JDK を使用した AEM Forms EX の HSM サポートの設定](https://kb2.adobe.com/cps/808/cpsid_80835.html)」に記載されている手順を実行します。Web サービスの場所は資格情報プロパティとして渡されます。また、証明書 DER または 証明書 SHA-1 hex を使用した HSM プロファイルのオフライン作成もサポートされています。ただし、以前のバージョンの AEM forms から AEM forms にアップグレードした場合は、資格情報に証明書と Web サービス情報が含まれているので、クライアントに変更を加える必要があります。
 * Web サービスの場所は管理コンソールの Signatures サービスで指定します（[Signature サービスの設定](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings)を参照）。この場合、クライアントは Trust Store 内の HSM プロファイルのエイリアスのみを保持します。この方法は、以前のバージョンの AEM Forms から AEM Forms にアップグレードした場合でもクライアントに変更を加えることなく、シームレスに使用できます。証明書 SHA-1 を使用して作成した HSM プロファイルは、この方法ではサポートされていません。
-
