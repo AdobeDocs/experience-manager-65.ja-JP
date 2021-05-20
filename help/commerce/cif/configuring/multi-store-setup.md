@@ -5,10 +5,9 @@ sub-product: Commerce
 doc-type: technical-video
 activity: setup
 audience: administrator
-feature: Commerce統合フレームワーク
+feature: コマース統合フレームワーク
 kt: 3046
 thumbnail: 28952.jpg
-translation-type: tm+mt
 source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '381'
@@ -16,7 +15,7 @@ ht-degree: 75%
 
 ---
 
-# コマースマルチストアのセットアップ{#multi-store}
+# コマースマルチストアの設定{#multi-store}
 
 AEM CIF コアコンポーネントは複数の AEM サイト構造で使用でき、基盤となる GraphQL クライアントの実装は異なる Magento ストア／ストア表示に接続できます。これにより、複雑なマルチストア／マルチサイトの設定をプロジェクトに実装できます。
 
@@ -28,7 +27,7 @@ AEM CIF コアコンポーネントは複数の AEM サイト構造で使用で�
 
 推奨される設定は、AEM サイトと Magento ストア表示の間に 1 対 1 の関係を使用することです。
 
-AEMサイトとAEM CIFコアコンポーネントを専用のストア表示に接続するには、次の手順に従います。
+AEMサイトとAEM CIFコアコンポーネントを専用ストア表示に接続するには、次の手順に従います。
 
 ## 設定 {#configuration}
 
@@ -46,12 +45,12 @@ AEMサイトとAEM CIFコアコンポーネントを専用のストア表示に�
 
    >[!TIP]
    >
-   > コマースカタログは、IDまたはUIDを使用してアドレス指定できます。 UIDはMagento2.4.2で導入されました。コマースバックエンドがバージョン2.4.2以降のGraphQLスキーマをサポートしている場合にのみ有効にしてください。
+   > コマースカタログは、IDまたはUIDを使用して対処できます。 UIDはMagento2.4.2で導入されました。コマースバックエンドがバージョン2.4.2以降のGraphQLスキーマをサポートしている場合にのみ、これを有効にしてください。
 
 4. AEM Sites に子設定を割り当てます。
 
    * AEM Sites コンソールに移動します。
-   * サイト構造の地域または言語ルート（例：ベニアサンプルページの場合は/content/venia/us _または_ /content/venia/us/en）に移動します。
+   * サイト構造の地域または言語ルートに移動します（Veniaサンプルページの場合は/content/venia/us _または_ /content/venia/us/enなど）。
    * ページを選択し、ページのプロパティを開きます。
    * 「詳細」タブを選択します。
    * `Configuration` セクションで、手順で作成した設定を選択します。
