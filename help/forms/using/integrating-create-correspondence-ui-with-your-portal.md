@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: 0d3bb98e-7139-4d8e-b110-6ebd11debda1
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c3b6ee31-ccbb-4446-86c8-f618226fefc4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 76%
 
 ---
-
 
 # カスタムポータルにおける通信を作成の UI の統合{#integrating-create-correspondence-ui-with-your-custom-portal}
 
@@ -29,12 +28,12 @@ ht-degree: 76%
 
 通信を作成アプリケーションをカスタムポータルから呼び出す 1 つの方法として、次の要求パラメーターを持つ URL を準備する方法が挙げられます。
 
-* レターテンプレートの識別子（cmLetterIdパラメーターを使用）。
+* レターテンプレートの識別子（cmLetterIdパラメーターを使用）
 
 * 目的のデータソースから取得した XML データの URL（cmDataUrl パラメーターを使用）
 
-例えば、カスタムポータルでは、\
-`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`は、ポータル上のリンクからのhrefになる場合があります。
+例えば、カスタムポータルでは、URLを\
+`https://'[server]:[port]'/[contextPath]/aem/forms/createcorrespondence.html?random=[timestamp]&cmLetterId=[letter identifier]&cmDataUrl=[data URL]`（ポータル上のリンクからのhrefを指定可能）。
 
 >[!NOTE]
 >
@@ -46,13 +45,13 @@ ht-degree: 76%
 
 ## インラインデータベースの呼び出し  {#inline-data-based-invocation}
 
-通信を作成アプリケーションを呼び出す別の（そしてより安全な）方法として、https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.htmlのURLをヒットし、POSTリクエストとして通信を作成アプリケーションを呼び出す方法があります。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
+通信を作成アプリケーションを呼び出すもう1つの（より安全な）方法は、https://&#39;[server]:[port]&#39;/[contextPath]/aem/forms/createcorrespondence.htmlのURLをヒットし、POSTリクエストとして通信を作成アプリケーションを呼び出すことです。 つまり、通信を作成アプリケーションの XML データを（cmData パラメーターを使用して、同じ要求の一部として）インラインで渡すことができることも意味します。これは、前述のアプローチでは、不可能で、理想的ではありませんでした。
 
 ### レターを指定するパラメーター  {#parameters-for-specifying-letter}
 
 | **名前** | **タイプ** | **説明** |
 |---|---|---|
-| cmLetterInstanceId | String | レターインスタンスの識別子。 |
+| cmLetterInstanceId | 文字列 | レターインスタンスの識別子。 |
 | cmLetterId | 文字列 | レターテンプレートの名前です。 |
 
 テーブル中のパラメーターの順序が、レターの読み込みに使用されるパラメーターの優先順位を指定します。
@@ -78,7 +77,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>cmUseTestData</td> 
-   <td>ブール型</td> 
+   <td>ブール値</td> 
    <td>データディクショナリに添付されたテストデータを再利用します。</td> 
   </tr>
  </tbody>
@@ -97,7 +96,7 @@ ht-degree: 76%
   </tr>
   <tr>
    <td>cmPreview<br /> </td> 
-   <td>ブール型</td> 
+   <td>ブール値</td> 
    <td>「True」に設定されている場合、レターをプレビューモードで開きます<br /> </td> 
   </tr>
   <tr>
@@ -108,4 +107,4 @@ ht-degree: 76%
  </tbody>
 </table>
 
-cmDataURLにhttpまたはcqプロトコルを使用している場合、http/cqのURLは匿名でアクセスできる必要があります。
+cmDataURLにhttpまたはcqプロトコルを使用する場合、http/cqのURLは匿名でアクセスできる必要があります。
