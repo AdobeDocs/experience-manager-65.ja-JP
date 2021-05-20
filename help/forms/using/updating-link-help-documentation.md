@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 788c427f-190f-4580-9efd-6a4c4a008837
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: ca637bea-05c1-4920-9283-e782f07607de
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 94%
 
 ---
-
 
 # ドキュメントへのリンクの更新  {#updating-the-link-to-the-documentation}
 
@@ -48,7 +47,7 @@ AEM Forms Workspace のデフォルトのヘルプコンテンツにアクセス
      </li>
    ```
 
-1. 以下の操作を実行してください。
+1. 以下の操作を実行します。
 
    1. /apps/ws/js/registry.js を開いて編集します。
    1. `text!/lc/libs/ws/js/runtime/templates/userinfo.html`を検索して`text!/lc/apps/ws/js/runtime/templates/userinfo.html`に置き換えます。
