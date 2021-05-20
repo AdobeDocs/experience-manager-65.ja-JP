@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8f8367fe-a8e9-46ee-a980-1633be02932d
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0f8e1e46-4fc5-43f6-abb1-19a3f20e1f1d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 98%
 
 ---
-
 
 # データ取得のための Acrobat Reader DC Extensions の設定 {#configuring-acrobat-reader-dc-extensions-for-data-capture}
 
@@ -40,4 +39,3 @@ AEM Forms インストール環境のユーザーが Content Services（非推�
 1. 「ユーザー／グループのロール」タブで、「ユーザーまたはグループを検索」をクリックします。
 1. 「ユーザーおよびグループを検索」画面で「検索」をクリックし、データ取得ユーザーロールを必要とするユーザーを選択して、「OK」をクリックします。
 1. ロールを編集画面で、「保存」をクリックします。
-
