@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 60d67c6b-5994-42ef-b159-ed6edf5cf9d4
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: d0280a15-5d0d-49cf-bce9-ad1c40530eae
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 77%
 
 ---
-
 
 # フォームのイベント追跡のカスタマイズ  {#customizing-form-event-tracking}
 
@@ -68,12 +67,12 @@ AEM Forms のデフォルト設定では、ユーザーが 60 秒以上フィー
 
 ## 追跡イベントのカスタマイズ  {#customizing-the-tracking-events}
 
-`/libs/afanalytics/js/custom.js`ファイルで使用できる`trackEvent`関数を変更して、イベント追跡をカスタマイズできます。 アダプティブフォームで追跡中のイベントが発生すると、`trackEvent` 関数が呼び出されます。`trackEvent`関数は2つのパラメーターを受け付けます。`eventName`および`variableValueMap`。
+`/libs/afanalytics/js/custom.js`ファイルの`trackEvent`関数を変更して、イベント追跡をカスタマイズできます。 アダプティブフォームで追跡中のイベントが発生すると、`trackEvent` 関数が呼び出されます。`trackEvent`関数は、次の2つのパラメーターを受け取ります。`eventName`と`variableValueMap`が含まれます。
 
-*eventName*&#x200B;および&#x200B;*variableValueMap*&#x200B;引数の値を評価して、イベントの追跡動作を変更できます。 例えば、ある一定数のイベントが発生した場合、Analytics サーバーに情報を送信するように指定できます。また、次のカスタマイズを実行できます。
+*eventName*&#x200B;引数と&#x200B;*variableValueMap*&#x200B;引数の値を評価して、イベントの追跡動作を変更できます。 例えば、ある一定数のイベントが発生した場合、Analytics サーバーに情報を送信するように指定できます。また、次のカスタマイズを実行できます。
 
 * イベントが送信されるまでのしきい値を設定できます。
-* アクションを決定する状態を維持できます。例えば、*fieldVisit*&#x200B;は、最後のイベントのタイムスタンプに基づいてダミーのイベントをプッシュします。
+* アクションを決定する状態を維持できます。例えば、 *fieldVisit*&#x200B;は、最後のイベントのタイムスタンプに基づいてダミーのイベントをプッシュします。
 * `pushEvent` 関数を使用して Analytics サーバーにイベントを送信できます。**
 
 * Analytics サーバーにイベントを一切プッシュしないようにすることもできます。
@@ -93,10 +92,10 @@ case 'error':
 
 ## panelVisit イベントのカスタマイズ {#customizing-the-panelvisit-event}
 
-デフォルトの AEM Forms セットアップでは、60 秒ごとに、アダプティブフォームを含むウィンドウがアクティブになっているかどうかがチェックされます。ウィンドウがアクティブな場合、`panelVisit`イベントがAdobe Analyticsにトリガされます。 そうすることで、そのドキュメントまたはフォームがアクティブであることを確認し、対応するフォームまたはドキュメントでの滞在時間を計算できます。
+デフォルトの AEM Forms セットアップでは、60 秒ごとに、アダプティブフォームを含むウィンドウがアクティブになっているかどうかがチェックされます。ウィンドウがアクティブな場合、`panelVisit`イベントがAdobe Analyticsに対してトリガーされます。 そうすることで、そのドキュメントまたはフォームがアクティブであることを確認し、対応するフォームまたはドキュメントでの滞在時間を計算できます。
 
 >[!NOTE]
 >
 >アクティビティの確認と滞在時間の計算に使用されるイベント名は、&quot;panelVisit&quot; です。このイベントは、上記の表に記載されているパネル訪問イベントとは異なります。
 
-`/libs/afanalytics/js/custom.js`ファイルで使用できるscheduleHeartBeatCheck関数を変更して、Adobe Analyticsに送信されるこのイベントを定期的に変更または停止できます。
+`/libs/afanalytics/js/custom.js`ファイル内のscheduleHeartBeatCheck関数を変更して、Adobe Analyticsに送信されるイベントを定期的に変更または停止できます。
