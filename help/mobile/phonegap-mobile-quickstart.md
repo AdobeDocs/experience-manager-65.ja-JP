@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 2de6bafb-47cf-4aca-84a3-0cace2858d5c
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: a7cfe77b-c073-4bed-b81a-503fb4445c96
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 83%
 
 ---
-
 
 # モバイルクイックスタート {#mobile-quickstart}
 
@@ -28,4 +27,4 @@ ht-degree: 83%
 
 >[!CAUTION]
 >
->AEM Verify Appは非推奨となりました。 Apple AppStoreおよびAndroid PlayStoreからアプリが削除されました。
+>AEM Verify Appは非推奨（廃止予定）となりました。 Apple AppStoreおよびAndroid PlayStoreからアプリが削除されました。
