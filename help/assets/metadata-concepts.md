@@ -1,17 +1,16 @@
 ---
-title: メタデータの概念について
-description: アセットの分類と整理を容易にするメタデータの必要性と種類について説明します。
+title: メタデータの概念の理解
+description: アセットの分類と編成を容易におこなえるメタデータのニーズとタイプについて説明します。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Metadata
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: メタデータ
+exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2735'
+source-wordcount: '2732'
 ht-degree: 89%
 
 ---
-
 
 # メタデータの概念を理解する{#why-we-need-metadata}
 
@@ -91,13 +90,13 @@ Exchangeable image file format（Exif）は、デジタル写真で最も一般�
 
 Exif の主な制限は、BMP、GIF、PNG などの一般的な画像ファイル形式ではサポートされないことです。
 
-Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets]オファーはExifプロパティを[共通のメタデータスキーマ](metadata-schemas.md)に、および[XMP](xmp-writeback.md)にマッピングします。
+Exif で定義されるメタデータフィールドは、通常、テクニカルなもので、記述メタデータ管理では使用が制限されています。このため、[!DNL Experience Manager Assets]は、Exifプロパティの[共通のメタデータスキーマ](metadata-schemas.md)と[XMP](xmp-writeback.md)へのマッピングを提供します。
 
 ### その他のメタデータ {#other-metadata}
 
 ファイルから埋め込み可能なその他のメタデータには、[!DNL Microsoft Word]、[!DNL PowerPoint]、[!DNL Excel] などがあります。
 
-## メタデータスキーマを理解{#metadata-schemata}
+## メタデータスキーマを理解する{#metadata-schemata}
 
 メタデータスキーマは、メタデータプロパティの事前定義のセットで、様々なアプリケーションで使用できます。プロパティは常にアセットと関連付けられています。つまり、プロパティはリソースの「説明」です。
 
@@ -165,11 +164,11 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 
 ### Dublin Core {#dublin-core}
 
-Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。[!DNL Assets]では、ダブリンコアはビデオ、サウンド、画像、ドキュメントなどのデジタルアセットを記述しています。
+Dublin Core メタデータは、アセットをより検索しやすい形で記述できるように、標準化された規則のセットを提供します。[!DNL Assets]では、Dublin Coreはビデオ、サウンド、画像、ドキュメントなどのデジタルアセットを記述します。
 
 シンプルな Dublin Core Metadata Element Set（DCMES）には、以下の表に示すように、15 個のメタデータ要素が含まれます。それぞれの Dublin Core 要素はオプションであり、繰り返し可能です。Dublin Core メタデータ情報は、メディアタイプ固有のメタデータと同様に、削除および追加が可能です。
 
-DCMESに加えて、Dublin Core Initiativeによって作成されたその他のメタデータ要素もあります。詳しくは、[Dublin Coreイニシアチブ](https://dublincore.org/)を参照してください。
+DCMESに加えて、Dublin Core Initiativeによって作成された他のメタデータ要素もあります。詳しくは、[Dublin Core initiative](https://dublincore.org/)を参照してください。
 
 | プロパティ | 説明 |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -189,7 +188,7 @@ DCMESに加えて、Dublin Core Initiativeによって作成されたその他�
 | title | アセットの名前。 |
 | type | アセットの性質またはジャンル。 |
 
-### IPTC  {#iptc}
+### IPTC {#iptc}
 
 IPTC（International Press Telecommunications Council）は各国の通信社による協会で、技術的な規格の開発および管理を目的とします。IPTC によって定義された、画像向けの一連のフォトメタデータ標準は、フォトグラファーの間で一般的に広く受け入れられています。これらメタデータ標準は、IPTC Information Interchange Model（IIM）として知られる、1990 年代に制定されたより広範な標準の一部です。
 
@@ -205,17 +204,17 @@ IPTC のヘッダー情報は、ほとんどが XMP に置き換わりました�
 
 ## XMP メタデータ {#xmp-metadata}
 
-XMP(Extensible Metadata Platform)は、[!DNL Adobe Experience Manager Assets]がすべてのメタデータ管理に使用するメタデータ標準です。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
+XMP(Extensible Metadata Platform)は、すべてのメタデータ管理に[!DNL Adobe Experience Manager Assets]で使用されるメタデータ標準です。 XMP で提供される標準形式によって、多様なアプリケーションに対応したメタデータの作成、処理およびやり取りができます。
 
 XMP では、すべてのファイル形式に埋め込むことができる共通のメタデータエンコーディングのほか、リッチ[コンテンツモデル](#xmp-core-concepts)も提供され、[アドビによるサポート](#advantages-of-xmp)やその他各社のサポートがあるので、XMP を と組み合わせて使用すると強力なプラットフォームを構築できます。[!DNL Assets]
 
 [XMP の仕様](https://www.adobe.com/devnet/xmp.html)は、アドビから入手できます。
 
-### XMPとは？{#what-is-xmp}
+### XMPとは{#what-is-xmp}
 
 XMP 規格は、アドビが初めて Adobe Acrobat ソフトウェア製品の一部として導入しました。それ以降、XMP 規格が広く採用されてきました。[!DNL Assets] は、アドビ主導の XMP（Extensible Metadata Platform）をネイティブでサポートしています。XMP は、デジタルアセット内の標準化されたメタデータと独自メタデータを処理および格納するための規格です。XMP は、複数のアプリケーションでメタデータを効率的に使用するための共通規格となるよう設計されています。
 
-例えば制作のプロフェッショナルは、アドビのアプリケーションに組み込まれた XMP サポートを使用して、複数のファイル形式に情報を渡します。[!DNL Assets] repositoryはXMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、オファーは自動化ワークフローを作成する機能を管理します。
+例えば制作のプロフェッショナルは、アドビのアプリケーションに組み込まれた XMP サポートを使用して、複数のファイル形式に情報を渡します。[!DNL Assets] リポジトリは、XMPメタデータを抽出し、それを使用してコンテンツのライフサイクルを管理し、自動化ワークフローを作成する機能を提供します。
 
 XMP が提供するデータモデル、ストレージモデルおよびスキーマを使用して、メタデータの定義、作成および処理方法を規格化できます。これらの概念は、すべてこの節で説明します。
 
@@ -244,7 +243,7 @@ XMP 規格は拡張できるように設計されていて、カスタムタイ�
 >
 >XMP では通常、バイナリデータタイプを埋め込むことはできません。XMP でバイナリデータ（サムネール画像など）を扱う場合、XML に対応するフォーマット（`Base64` など）でエンコーディングする必要があります。
 
-### XMPの概念{#xmp-core-concepts}
+### XMP概念{#xmp-core-concepts}
 
 次の節では、名前空間とスキーマ、プロパティと値、代替言語など、XMP の中心概念について説明します。
 
@@ -260,36 +259,36 @@ XMP スキーマは、一連のプロパティ名を共通の XML 名前空間�
 XMP には、1 つ以上のスキーマからプロパティを選択し含めることができます。多くのアドビアプリケーションで使用される一般的なサブセットに含まれるプロパティの例を示します。
 
 * Dublin Core スキーマ：`dc:title`、`dc:creator`、`dc:subject`、`dc:format`、`dc:rights`。
-* XMP基本スキーマ:`xmp:CreateDate`、`xmp:CreatorTool`、`xmp:ModifyDate`、`xmp:metadataDate`。
-* XMP rights managementスキーマ:`xmpRights:WebStatement`、`xmpRights:Marked`。
-* XMP media managementスキーマ:`xmpMM:DocumentID`.
+* XMP基本スキーマ：`xmp:CreateDate`、`xmp:CreatorTool`、`xmp:ModifyDate`、`xmp:metadataDate`。
+* XMP rights managementスキーマ：`xmpRights:WebStatement`、`xmpRights:Marked`。
+* XMP media managementスキーマ：`xmpMM:DocumentID`.
 
 #### 代替言語 {#language-alternatives}
 
-XMPでは、テキストの言語を指定するために、テキストプロパティに`xml:lang`プロパティを追加できます。
+XMPでは、テキストプロパティに`xml:lang`プロパティを追加して、テキストの言語を指定できます。
 
-## IPTCメタデータを使用する{#support-for-iptc-metadata}
+## IPTCメタデータ{#support-for-iptc-metadata}の操作
 
-[!DNL Adobe Experience Manager Assets]がIPTCメタデータ、クリエイティブレーティング、および[!DNL Adobe Bridge]や他の[!DNL Adobe Creative Cloud]アプリを通じてアセットに追加されたキーワードをがどのようにサポートするかを説明します。
+[!DNL Adobe Experience Manager Assets]が、[!DNL Adobe Bridge]や他の[!DNL Adobe Creative Cloud]アプリを通じてアセットに追加されたIPTCメタデータ、クリエイティブの評価、キーワードをサポートする方法について説明します。
 
-[!DNL Adobe Experience Manager Assets] は、アセットの記述に広く使用されるIPTCメタデータ標準をサポートしています。こうして[!DNL Assets]は、写真家、クリエイティブエージェンシー、図書館、博物館など、さまざまなパーティーでのイメージ受け入れを強化します。
+[!DNL Adobe Experience Manager Assets] は、アセットの記述に広く使用されるIPTCメタデータ標準をサポートしています。こうして、[!DNL Assets]は、写真家、クリエイティブエージェンシー、図書館、美術館など、様々な関係者間での画像の受け入れを強化します。
 
 包括的なメタデータプロパティを定義するための IPTC コアおよび IPTC 拡張のメタデータスキーマが、アセット用のデフォルトのメタデータスキーマに組み込まれました。これにより、画像に示されている人、場所、製品に関して、正確で信頼性の高いデータを追加できます。また、画像作成に関する日付、名前および識別子に加え、著作権情報を表示する柔軟な方法もサポートされています。
 
 アセットのプロパティページに新たなタブが組み込まれていて、編集可能なフィールドに IPTC コアと IPTC 拡張のメタデータが個別に表示されます。
 
-1. [!DNL Assets]ユーザーインターフェイスから画像を選択します。
+1. [!DNL Assets]ユーザーインターフェイスから、画像を選択します。
 1. ツールバーの「**[!UICONTROL プロパティ]**」をクリックします。
 1. 「**[!UICONTROL IPTC]**」タブをクリックして、アセットのIPTCメタデータを表示します。
 1. 必要に応じて、IPTCメタデータのプロパティを編集します。
 
    ![iptc_tab](assets/keywords-in-iptc-tab.png)
 
-1. 「**[!UICONTROL IPTC Extension]**」タブをクリックして、アセットのIPTC Extensionメタデータを表示します。
-1. 必要に応じて、IPTC Extensionメタデータのプロパティを編集します。
-1. 「**[!UICONTROL 保存して閉じる]**」をクリックして変更を保存します。
+1. 「**[!UICONTROL IPTC拡張]**」タブをクリックして、アセットのIPTC拡張メタデータを表示します。
+1. 必要に応じて、IPTC拡張メタデータのプロパティを編集します。
+1. **[!UICONTROL 「保存して閉じる」]**&#x200B;をクリックして変更を保存します。
 
-### クリエイティブ評価のサポート{#creative-rating-support}
+### クリエイティブの評価のサポート{#creative-rating-support}
 
 プロパティページには、個々のユーザーの評価と総評価が表示されるほか、Adobe Bridge およびその他のクリエイティブアプリを通じてアセットに割り当てられた評価も表示されるようになりました。
 
@@ -301,6 +300,6 @@ XMPでは、テキストの言語を指定するために、テキストプロ�
 
 ### キーワードのサポート{#keyword-support}
 
-[!UICONTROL プロパティ]ページの&#x200B;**[!UICONTROL IPTC]**&#x200B;タブには、Adobe Bridgeや他のAdobe Creative Cloudアプリを介してアセットに追加されたキーワードも表示されます。 これらのキーワードの編集や、キーワードの追加も「**[!UICONTROL IPTC]**」タブでおこなえます。
+[!UICONTROL プロパティ]ページの「**[!UICONTROL IPTC]**」タブには、Adobe Bridgeやその他のAdobe Creative Cloudアプリを通じてアセットに追加されたキーワードも表示されます。 これらのキーワードの編集や、キーワードの追加も「**[!UICONTROL IPTC]**」タブでおこなえます。
 
 ![keywords](assets/keywords-in-iptc-tab.png)
