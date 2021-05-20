@@ -1,8 +1,8 @@
 ---
-title: User Manager Java APIクイック開始(SOAP)
-seo-title: User Manager Java APIクイック開始(SOAP)
-description: User Manager APIを使用して、ユーザーの追加、ユーザーの削除、グループの作成、ユーザーとグループの管理、役割と権限の管理、ユーザーのプログラムによる同期、環境設定ノードのプログラムによる管理を行います。
-seo-description: User Manager APIを使用して、ユーザーの追加、ユーザーの削除、グループの作成、ユーザーとグループの管理、役割と権限の管理、ユーザーのプログラムによる同期、環境設定ノードのプログラムによる管理を行います。
+title: User Manager Java APIクイックスタート(SOAP)
+seo-title: User Manager Java APIクイックスタート(SOAP)
+description: User Manager APIを使用して、ユーザーの追加、ユーザーの削除、グループの作成、ユーザーとグループの管理、役割と権限の管理、ユーザーのプログラムによる同期、環境設定ノードの管理を行います。
+seo-description: User Manager APIを使用して、ユーザーの追加、ユーザーの削除、グループの作成、ユーザーとグループの管理、役割と権限の管理、ユーザーのプログラムによる同期、環境設定ノードの管理を行います。
 uuid: 0a2aa4ab-9329-485f-a30e-47bb471ce1b5
 contentOwner: admin
 content-type: reference
@@ -10,42 +10,41 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
+# User Manager Java APIクイックスタート(SOAP) {#user-manager-java-api-quick-start-soap}
 
-# User Manager Java APIクイック開始(SOAP) {#user-manager-java-api-quick-start-soap}
+User Manager APIでJava APIクイックスタート(SOAP)を使用できます。
 
-User Manager APIではJava APIクイック開始(SOAP)を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したユーザーの追加](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したユーザの追加](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したユーザーの削除](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したユーザーの削除](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したグループの作成](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したグループの作成](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したユーザーとグループの管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したユーザーとグループの管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した役割と権限の管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したロールと権限の管理](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したプログラムによるユーザーの同期](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したプログラムによるユーザ同期](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した環境設定ノードのプログラム管理](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した環境設定ノードのプログラム管理](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、Unixなど別のオペレーティングシステムを使用している場合、ドキュメントに基づき、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM formsによるプログラミング」にあるクイックスタートは、Unixなどの別のオペレーティングシステムを使用している場合、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java APIを使用したユーザーの追加{#quick-start-soap-mode-adding-users-using-the-java-api}
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-adding-users-using-the-java-api}を使用したユーザーの追加
 
-次のコード例は、Wendy Blueという名前のユーザをAEM Formsに追加します。 （[ユーザーの追加](/help/forms/developing/users.md#adding-users)を参照）。
+次のコードの例では、Wendy Blueという名前のユーザーをAEM Formsに追加します。 （[ユーザーの追加](/help/forms/developing/users.md#adding-users)を参照）。
 
 ```java
  /*
@@ -161,9 +160,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-deleting-users-using-the-java-api}を使用したユーザの削除
+## クイックスタート（SOAPモード）:Java APIを使用したユーザーの削除{#quick-start-soap-mode-deleting-users-using-the-java-api}
 
-次のコード例は、Wendy Blueという名前のユーザをAEM Formsから削除します。 （[ユーザーの削除](/help/forms/developing/users.md#deleting-users)を参照）。
+次のコードの例では、AEM FormsからWendy Blueという名前のユーザーを削除します。 （[ユーザーの削除](/help/forms/developing/users.md#deleting-users)を参照）。
 
 ```java
  /*
@@ -257,9 +256,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したユーザーとグループの管理{#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
+## クイックスタート（SOAPモード）:Java APIを使用したユーザーとグループの管理{#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
 
-次のコードの例は、ローカルユーザーと、そのユーザーが属するローカルグループを検索します。 （「[ユーザーとグループの管理](/help/forms/developing/users.md#managing-users-and-groups)」を参照）。
+次のコードの例では、ローカルユーザーと、ユーザーが属するローカルグループを検索します。 （[ユーザーとグループの管理](/help/forms/developing/users.md#managing-users-and-groups)を参照）。
 
 ```java
  /*
@@ -381,9 +380,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}を使用したロールと権限の管理
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}を使用した役割と権限の管理
 
-次のコードの例では、サービスユーザーロールをプリンシパルに割り当て、プリンシパルに割り当てられているロールを印刷し、プリンシパルからロールを削除します。 このクイック開始では、2つのサービスが呼び出されます。DirectoryManagerサービスとAuthorizationManagerサービス。（[役割と権限の管理](/help/forms/developing/users.md#managing-roles-and-permissions)を参照）。
+次のコード例では、サービスユーザーロールをプリンシパルに割り当て、プリンシパルに割り当てられたロールを印刷し、その後プリンシパルからロールを削除します。 このクイックスタートには、次の2つのサービスが呼び出されます。DirectoryManagerサービスとAuthorizationManagerサービス。（[役割と権限の管理](/help/forms/developing/users.md#managing-roles-and-permissions)を参照）。
 
 ```java
  /*
@@ -524,9 +523,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}を使用してプログラムによってユーザーを同期する
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}を使用したプログラムによるユーザーの同期
 
-以下のJavaコードの例を使用して、User Management APIを使用してユーザーを同期します。 （「[プログラムによるユーザーの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)」を参照）。
+以下のJavaコードの例では、User Management APIを使用してユーザーを同期します。 （[プログラムによるユーザーの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)を参照）。
 
 ```java
  /*
@@ -633,9 +632,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したユーザーの追加{#quick_start_soap_mode_adding_users_using_the_java_api-1}
+## クイックスタート（SOAPモード）:Java API {#quick_start_soap_mode_adding_users_using_the_java_api-1}を使用したユーザーの追加
 
-次のコード例は、Wendy Blueという名前のユーザをAEM Formsに追加します。 （[ユーザーの追加](/help/forms/developing/users.md#adding-users)を参照）。
+次のコードの例では、Wendy Blueという名前のユーザーをAEM Formsに追加します。 （[ユーザーの追加](/help/forms/developing/users.md#adding-users)を参照）。
 
 ```java
  /*
@@ -751,9 +750,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したグループの作成{#quick-start-soap-mode-creating-groups-using-the-java-api}
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-creating-groups-using-the-java-api}を使用したグループの作成
 
-次のコードの例では、AdobeGroupという名前のグループをAEM Formsに作成します。 （「[グループの作成](/help/forms/developing/users.md#creating-groups)」を参照）。
+次のコードの例では、AdobeGroupという名前のグループをAEM Formsに作成します。 （[グループの作成](/help/forms/developing/users.md#creating-groups)を参照）。
 
 ```java
  /*
@@ -903,9 +902,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）環境設定ノードの管理{#quick-start-soap-mode-managing-preferences-nodes}
+## クイックスタート（SOAPモード）環境設定ノードの管理{#quick-start-soap-mode-managing-preferences-nodes}
 
-以下のJavaコードモデルは、User Management APIを使用した環境設定ノードの管理です。 （「[環境設定ノードのプログラム管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)」を参照）。
+次のJavaコードモデルは、User Management APIを使用して環境設定ノードを管理します。 （[プログラムによる環境設定ノードの管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)を参照）。
 
 ```java
 /*
@@ -1006,9 +1005,9 @@ public class ManagePreferences {
 }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}を使用した環境設定ノードのプログラム管理
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}を使用したプログラムによる環境設定ノードの管理
 
-次のJavaコードモデルは、User Management APIを使用して環境設定ノードを管理します（「[環境設定ノードのプログラムによる管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)」を参照）。
+次のJavaコードモデルは、User Management APIを使用して環境設定ノードを管理します（[環境設定ノードのプログラムによる管理](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes)を参照）。
 
 ```java
 /*
@@ -1092,4 +1091,3 @@ public class ManagePreferences {
 }
 }
 ```
-
