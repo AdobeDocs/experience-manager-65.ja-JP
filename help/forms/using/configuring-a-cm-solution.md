@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 186ca75c-638b-4057-826e-cd5d56aa0397
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: f7f5eb0d-a283-45ea-84d3-d6375d2bb95b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 78%
 
 ---
-
 
 # Correspondence Management Solution の設定 {#configuring-a-correspondence-management-solution}
 
@@ -25,7 +24,7 @@ ht-degree: 78%
 
 1. *https://:&lt;PublishHost>:&lt;PublishPort>/lc/system/console/configMgr*&#x200B;に移動します。 OSGi Management Console のユーザー資格情報を使ってログインします。デフォルトの資格情報は、admin/admin です。
 1. 「**[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]**」設定の横にある「**[!UICONTROL 編集]**」アイコンをクリックします。
-1. **[!UICONTROL VersionRestoreManager作成者URL]**&#x200B;フィールドに、VersionRestoreManagerの作成者インスタンスのURLを指定します。
+1. **[!UICONTROL VersionRestoreManager Author URL]**&#x200B;フィールドに、VersionRestoreManagerのオーサーインスタンスのURLを指定します。
 
    **URL文字列**:
 
@@ -33,7 +32,7 @@ ht-degree: 78%
 
    >[!NOTE]
    >
-   >ロードバランサーによって前付けされる複数の作成者インスタンス（クラスター化）がある場合は、**[!UICONTROL VersionRestoreManager作成者URL]**&#x200B;フィールドにロードバランサーのURLを指定します。
+   >ロードバランサーで先頭に複数のオーサーインスタンス（クラスター化）がある場合は、**[!UICONTROL VersionRestoreManager Author URL]**&#x200B;フィールドにロードバランサーのURLを指定します。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
