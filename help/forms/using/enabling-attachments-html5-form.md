@@ -8,29 +8,28 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: 68912260-179a-4d1b-b944-0a1777c021ac
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 63%
 
 ---
 
-
 # HTML5フォームの添付ファイルの有効化 {#enabling-attachments-for-an-html-form}
 
 HTML5フォームでは、添付ファイルをアップロード、プレビューおよび送信することができます。デフォルトでは、添付ファイルサポートは無効になっています。添付ファイルサポートを有効にするには：
 
 1. [ 文字列プロパティで](/help/forms/using/custom-profile.md)カスタムプロファイル`mfAttachmentOptions`を作成します。
-1. カスタムプロファイルで、`fileSizeLimit`、`multiSelect`および`buttonTex`tのプロパティを指定して、添付ファイルウィジェットのオプションを設定します。 必要に応じて、さらに多くのカスタムプロパティを指定することもできます。
+1. カスタムプロファイルで、`fileSizeLimit`、`multiSelect`および`buttonTex`プロパティを指定して、ファイル添付ウィジェットのオプションを設定します。 必要に応じて、さらに多くのカスタムプロパティを指定することもできます。
 
 1. カスタムプロファイルでは、次の設定を使用します。
 
    * **multiSelect**-> trueまたはfalse （デフォルトでは true）
-   * **fileSizeLimit** -> value_in_mb (say 5) （デフォルトで2 MBs）
-   * **buttonText** ->ポップアップウィンドウのボタンテキスト（デフォルトでは「Attach」）
-   * **受け入れるファイルタイプを受け入れる（デフォルトでは「audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf」）** 
+   * **fileSizeLimit**  -> value_in_mb (say 5) （デフォルトで2 MBs）
+   * **buttonText**  ->ポップアップウィンドウのボタンテキスト（デフォルトでは「Attach」）
+   * **受け入れる**  ->ファイルタイプ（デフォルトでは&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot;）を受け入れます。
 
    >[!NOTE]
    >
@@ -55,10 +54,10 @@ HTML5フォームでは、添付ファイルをアップロード、プレビュ
 
 ## 添付ファイル送信フォーマット {#attachment-submission-format}
 
-添付ファイルが有効である場合、HTML5フォームはマルチパート形式のデータを送信します。マルチパート送信データは、**dataXml**&#x200B;と&#x200B;**attachments**&#x200B;の2つの部分で構成されます。
+添付ファイルが有効である場合、HTML5フォームはマルチパート形式のデータを送信します。マルチパート送信データには、**dataXml**&#x200B;と&#x200B;**attachments**&#x200B;の2つの部分があります。
 
 >[!NOTE]
 >
->後方互換性を確保するために、`mfAllowAttachments`オプションがオフになっている場合、HTML5フォームはマルチパートデータを送信しません。 **application/xml**&#x200B;形式の単純なデータxmlを送信します。
+>後方互換性を保つために、`mfAllowAttachments`オプションがオフになっている場合、HTML5フォームはマルチパートデータを送信しません。 **application/xml**&#x200B;形式で単純なデータxmlを送信します。
 
 mfAllowAttachments フラグがオンになっている場合、[送信サービスのプロキシサービス](/help/forms/using/service-proxy.md)もまたマルチパート形式のデータを dataXml と添付ファイルと共に投稿します。
