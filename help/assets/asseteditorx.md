@@ -1,35 +1,34 @@
 ---
-title: アセットエディタの拡張
+title: アセットエディターの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Developer Tools
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: 開発者ツール
+exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '690'
 ht-degree: 89%
 
 ---
 
-
-# アセットエディタの拡張{#extending-asset-editor}
+# アセットエディターの拡張{#extending-asset-editor}
 
 アセットエディターは、アセット共有を使用して見つけたアセットをクリックすると開くページです。アセットエディターでは、メタデータ、サムネール、タイトルおよびタグなどのアセットの特性を編集できます。
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-既存のエディタコンポーネントを使用するだけでなく、[!DNL Adobe Experience Manager]開発者は独自のコンポーネントを作成することもできます。
+[!DNL Adobe Experience Manager]開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
 
-## アセットエディタテンプレートの作成{#creating-an-asset-editor-template}
+## アセットエディターテンプレート{#creating-an-asset-editor-template}の作成
 
-Geometrixxには、次のサンプルページが含まれています。
+次のサンプルページがGeometrixxに含まれています。
 
 * Geometrixx サンプルページ：`/content/geometrixx/en/press/asseteditor.html`
 * サンプルテンプレート：`/apps/geometrixx/templates/asseteditor`
 * サンプルページコンポーネント：`/apps/geometrixx/components/asseteditor`
 
-### Clientlibの構成{#configuring-clientlib}
+### クライアントライブラリの設定{#configuring-clientlib}
 
 [!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
 
@@ -49,7 +48,7 @@ Geometrixxには、次のサンプルページが含まれています。
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-サンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込みます。
+このサンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込んでいます。
 
 ### 追加のスタイルシート{#additional-style-sheets}
 
@@ -122,7 +121,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 <title><%= title %></title>
 ```
 
-## 単純なフォームフィールドコンポーネントの作成{#creating-a-simple-form-field-component}
+## 単純なフォームフィールドコンポーネント{#creating-a-simple-form-field-component}を作成します。
 
 この例では、読み込んだアセットのメタデータを表示するコンポーネントを作成する方法を説明します。
 
