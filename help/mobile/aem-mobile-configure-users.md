@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 79%
 
 ---
-
 
 # ユーザーとユーザーグループの設定  {#configure-your-users-and-user-groups}
 
@@ -24,11 +23,11 @@ ht-degree: 79%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-この章では、ユーザーの役割と、モバイルアプリのオーサリングと管理をサポートするユーザーとグループを設定する方法について説明します。
+この章では、ユーザーの役割と、モバイルアプリのオーサリングと管理をサポートするようにユーザーとグループを設定する方法について説明します。
 
 ## AEM Mobile アプリケーションユーザーとグループ管理 {#aem-mobile-application-users-and-group-administration}
 
-### AEM Mobileアプリコンテンツ作成者（app-authorグループ） {#aem-mobile-application-content-authors-app-author-group}
+### AEM Mobile Application Content Authors（app-authorグループ） {#aem-mobile-application-content-authors-app-author-group}
 
 app-authors グループのメンバーが、ページ、テキスト、画像、ビデオなど AEM Mobile アプリケーションコンテンツのオーサリングを担当します。
 
@@ -36,7 +35,7 @@ app-authors グループのメンバーが、ページ、テキスト、画像�
 
 1. 「app-authors」という新しいユーザーグループを作成します。
 
-   ユーザーAdmin Consoleに移動します。[http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   ユーザーAdmin Console:[http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    ユーザーグループコンソールから + ボタンを選択して、グループを作成します。
 
@@ -59,9 +58,9 @@ app-authors グループのメンバーが、ページ、テキスト、画像�
    * /etc/designs
    * /etc/cloudservices/dps2015
 
-### AEM Mobileアプリ管理者グループ（app-adminsグループ） {#aem-mobile-application-administrators-group-app-admins-group}
+### AEM Mobile Application Administrators Group （app-adminsグループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
-app-adminsグループのメンバーは、アプリの作成者&#x200B;**AND**&#x200B;に含まれるのと同じ権限を持つアプリのコンテンツを作成することもできます。また、次のことも行います。
+app-adminsグループのメンバーは、app-authors **AND**&#x200B;に含まれるのと同じ権限を持つアプリケーションコンテンツを作成することもできます。また、次の作業も行います。
 
 * アプリケーション ContentSync OTA 更新のステージング、公開および消去
 
@@ -77,7 +76,7 @@ app-adminsグループのメンバーは、アプリの作成者&#x200B;**AND**&
 1. 新しい app-admins グループに次のグループを追加します。
 
    * content-authors
-   * workflow-users
+   * ワークフローユーザー
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -107,9 +106,9 @@ app-adminsグループのメンバーは、アプリの作成者&#x200B;**AND**&
 1. 必要に応じてこのグループにメンバーを追加します。
 1. コンテンツを書き出すか、アップロードするには、権限を次のように設定します。
 
-   * （読み取り）/etc/contentsyncで書き出しテンプレートにアクセスします。
-   * （読み取り）/varに対して読み取り時のパストラバーサル用
-   * /var/contentsyncの（読み取り、書き込み、変更、削除）。ContentSyncキャッシュ済み書き出しコンテンツの書き込み、読み取り、およびクリーンアップを行います。
+   * （読み取り） /etc/contentsyncで、書き出しテンプレートにアクセスする
+   * （読み取り）/varに対し、読み取り時のパストラバーサル用
+   * /var/contentsyncの（読み取り、書き込み、変更、削除）で、ContentSyncでキャッシュされた書き出しコンテンツの書き込み、読み取り、クリーンアップを行います。
 
 ### その他のリソース {#additional-resources}
 
