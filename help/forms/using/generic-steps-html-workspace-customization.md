@@ -10,32 +10,31 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: dd3218c4-2bb2-40fc-9141-5823b0ea4224
 docset: aem65
-translation-type: tm+mt
-source-git-commit: e863089a4328b7222b60429c82ca3df2b8e1dd05
+exl-id: 45e50b47-1b36-4937-9e1a-cc7bfb953861
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 40%
 
 ---
 
-
 # AEM Forms Workspace のカスタマイズの一般的な手順に従います。  {#generic-steps-for-aem-forms-workspace-customization}
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
 1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にアクセスしてCRXDE Liteにログインします。
-1. `sling:Folder`フォルダー`ws`が存在しない場合は、`/apps`に作成します。 `sling:Folder`フォルダーを作成するには、`apps`フォルダーを右クリックし、**[!UICONTROL 作成]**/**[!UICONTROL ノードを作成]**&#x200B;を選択します。 名前を`ws`に指定し、タイプを`sling:Folder`に選択して「**[!UICONTROL OK]**」をクリックします。 「**[!UICONTROL すべて保存]**」をクリックします。
-1. `/apps/ws`を参照し、**[!UICONTROL アクセス制御]**&#x200B;タブに移動します。
-1. 「**[!UICONTROL リポジトリ]**」オプションを選択します。 **[!UICONTROL アクセス制御]**&#x200B;リストーで、**[!UICONTROL +]**&#x200B;をクリックして新しいエントリを追加します。 もう一度「**[!UICONTROL +]**」をクリックします。
+1. `ws`という名前の`sling:Folder`フォルダーが存在しない場合は、`/apps`に作成します。 `sling:Folder`フォルダーを作成するには、`apps`フォルダーを右クリックし、**[!UICONTROL 作成]** / **[!UICONTROL ノードを作成]**&#x200B;を選択します。 名前を`ws`に指定し、タイプを`sling:Folder`に選択して、「**[!UICONTROL OK]**」をクリックします。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. `/apps/ws`を参照し、「**[!UICONTROL アクセス制御]**」タブに移動します。
+1. 「**[!UICONTROL リポジトリ]**」オプションを選択します。 「**[!UICONTROL アクセス制御]**」リストで、「**[!UICONTROL +]**」をクリックして新しいエントリを追加します。 もう一度「**[!UICONTROL +]**」をクリックします。
 1. **PERM_WORKSPACE_USER**&#x200B;プリンシパルを検索して選択します。
 
    ![HTML Workspace をカスタマイズするための汎用手順の一部として PERM_WORKSPACE_USER プリンシパルを選択します](assets/perm_workspace_user.png)
 
-1. プリンシパルに`jcr:read`権限を与えます。
+1. プリンシパルに`jcr:read`権限を付与します。
 1. 「**[!UICONTROL すべて保存]**」をクリックします。
 1. `GET.jsp`、`index`および`html.jsp`ファイルを`/libs/ws`フォルダーから`/apps/ws`フォルダーにコピーします。
 1. `/apps/ws`フォルダーの`/libs/ws/locales`フォルダーをコピーします。 「**[!UICONTROL すべて保存]**」をクリックします。
-1. `GET.jsp`ファイル内の参照と相対パスを次に示すように更新し、「**[!UICONTROL すべて保存]**」をクリックします。
+1. `GET.jsp`ファイル内の参照と相対パスを更新し、「**[!UICONTROL すべて保存]**」をクリックします。
 
    ```javascript
    <meta http-equiv="refresh" content="0;URL='/lc/apps/ws/index.html'" />
@@ -64,7 +63,7 @@ ht-degree: 40%
 
    >[!NOTE]
    >
-   >上に示すように、style.cssのエントリの後に、ユーザー定義CSSファイルのエントリを配置します。
+   >上に示すように、ユーザー定義CSSファイルのエントリを、style.cssのエントリの後に配置します。
 
 1. /apps/ws/html.jsp ファイルで、
 
@@ -78,7 +77,7 @@ ht-degree: 40%
    <script data-main="js/main" src="../../libs/ws/js/libs/require/require.js"></script>
    ```
 
-1. 以下の操作を実行してください。
+1. 以下の操作を実行します。
 
    1. `js`という名前のフォルダーを`/apps/ws`に作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -98,4 +97,4 @@ ht-degree: 40%
 
 1. 「**[!UICONTROL Save All]**」をクリックし、キャッシュをクリアして AEM Forms Workspace を更新します。
 
-   URL `https://'[server]:[port]'/lc/ws`にアクセスし、管理者/パスワードの資格情報でログインします。 ブラウザーは`https://'[server]:[port]'/lc/apps/ws/index.html`にリダイレクトします。
+   URL `https://'[server]:[port]'/lc/ws`にアクセスし、管理者/パスワードの資格情報を使用してログインします。 ブラウザーは`https://'[server]:[port]'/lc/apps/ws/index.html`にリダイレクトします。
