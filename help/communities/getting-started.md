@@ -10,18 +10,17 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 4a2ac67b-d2c9-4703-a1cb-d454786f9e6b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 0270cee1970b5b092361c2f1ad4a117795465311
+exl-id: 14ecaef7-d9fc-45ea-8feb-16ad8946508e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 78%
 
 ---
 
-
 # AEM Communities 使用の手引き {#getting-started-with-aem-communities}
 
-AEM Communities では、サイトテンプレートのライブラリを使用して、ブランド独自のコミュニティエクスペリエンスを作成できます。フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルをWebサイトに統合して、提案、顧客、会社間のやり取りを促進できます。
+AEM Communities では、サイトテンプレートのライブラリを使用して、ブランド独自のコミュニティエクスペリエンスを作成できます。フォーラム、グループ、ブログ、ファイル共有、カレンダー、アクティビティフィード、拡張ユーザープロファイルをWebサイトに統合して、提案者、顧客、企業間のやり取りを促進できます。
 
 以下は、デモ用および開発用の[エンゲージメントコミュニティ](/help/communities/overview.md#engagement-community)を素早くセットアップする方法のチュートリアルです。
 
@@ -33,5 +32,4 @@ AEM Communities では、サイトテンプレートのライブラリを使用�
 
 * [公開したサイトを使ってみる](/help/communities/published-site.md)
 
-* [ネストされたグループのオーサリング](/help/communities/nested-groups.md)
-
+* [ネストされたグループの作成](/help/communities/nested-groups.md)
