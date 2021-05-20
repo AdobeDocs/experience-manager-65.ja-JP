@@ -1,8 +1,8 @@
 ---
 title: JEE上のAEM Formsのセキュリティに関する一般的な考慮事項
 seo-title: JEE上のAEM Formsのセキュリティに関する一般的な考慮事項
-description: JEE環境でのAEM Formsの堅牢化に備える方法を説明します。
-seo-description: JEE環境でのAEM Formsの堅牢化に備える方法を説明します。
+description: JEE上のAEM Forms環境を堅牢化するための準備方法を説明します。
+seo-description: JEE上のAEM Forms環境を堅牢化するための準備方法を説明します。
 uuid: 4d098731-fc8f-41d7-98b5-5c2e31211614
 content-type: reference
 topic-tags: Security
@@ -10,18 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1082'
 ht-degree: 59%
 
 ---
 
-
 # JEE上のAEM Formsのセキュリティに関する一般的な考慮事項{#general-security-considerations-for-aem-forms-on-jee}
 
-この記事には、AEM Forms 環境を堅牢化するための準備に役立つ、基本的な情報を記載しています。これには、JEE 上の Forms、オペレーティングシステム、アプリケーションサーバー、データベースセキュリティに関する前提条件の情報も含まれます。環境のロックダウンを続行する前に、この情報を確認してください。
+この記事には、AEM Forms 環境を堅牢化するための準備に役立つ、基本的な情報を記載しています。これには、JEE 上の Forms、オペレーティングシステム、アプリケーションサーバー、データベースセキュリティに関する前提条件の情報も含まれます。環境のロックを続ける前に、この情報を確認してください。
 
 ## ベンダー固有のセキュリティ情報 {#vendor-specific-security-information}
 
@@ -29,9 +28,9 @@ ht-degree: 59%
 
 このセクションにあるリンクを使用して、使用しているオペレーティングシステム、データベースおよびアプリケーションサーバーのベンダーに固有のセキュリティ情報を検索してください。
 
-### オペレーティングシステムのセキュリティ情報  {#operating-system-security-information}
+### オペレーティングシステムのセキュリティ情報 {#operating-system-security-information}
 
-オペレーティングシステムを保護する際は、オペレーティングシステムのベンダーが挙げている対策を実装することを慎重に検討してください。次の対策があります。
+オペレーティングシステムを保護する際は、次のようなオペレーティングシステムのベンダーが説明する対策を慎重に実装することを検討してください。
 
 * ユーザー、ロール、権限を定義し、制御する
 * ログと監査記録を監視する
@@ -77,7 +76,7 @@ JEE上のAEM Formsがサポートするオペレーティングシステムの�
 
 ### アプリケーションサーバーのセキュリティ情報 {#application-server-security-information}
 
-アプリケーションサーバーを保護する際は、サーバーのベンダーが挙げている対策を実装することを慎重に検討してください。対策には次のものがあります。
+アプリケーションサーバーを保護する際は、次のように、サーバーベンダーが説明する対策を慎重に実装することを検討してください。
 
 * 管理者ユーザー名として推測しにくい名前を使用する
 * 不要なサービスを無効にする
@@ -99,7 +98,7 @@ JEE 上の AEM Forms がサポートするアプリケーションサーバー�
  <tbody>
   <tr>
    <td><p>Oracle WebLogic®</p> </td>
-   <td><p><a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>で、「Understanding WebLogic Security」を探します。</p> </td>
+   <td><p><a href="https://download.oracle.com/docs/">https://download.oracle.com/docs/</a>で、「Understanding WebLogic Security」を検索します。</p> </td>
   </tr>
   <tr>
    <td><p>IBM WebSphere®</p> </td>
@@ -114,7 +113,7 @@ JEE 上の AEM Forms がサポートするアプリケーションサーバー�
 
 ### データベースのセキュリティ情報 {#database-security-information}
 
-データベースを保護する際は、データベースのベンダーが挙げている対策を実装することを検討してください。次に例を示します。
+データベースを保護する場合は、次のような測定をデータベースのベンダーが記述して実装することを検討してください。
 
 * アクセス制御リスト（ACL）を使用して操作を制限する
 * 非標準ポートを使用する
@@ -202,7 +201,7 @@ JEE 上の AEM Forms がサポートするデータベースのセキュリテ�
   </tr>
   <tr>
    <td>&gt;<p>LDAP</p> </td>
-   <td><p>LDAP サーバーを実行しているポート。デフォルトのポートは通常389です。ただし、SSLオプションを選択した場合、デフォルトのポートは通常636です。どのポートを指定するかは、LDAP管理者に確認してください。</p> </td>
+   <td><p>LDAP サーバーを実行しているポート。デフォルトのポートは通常389です。ただし、SSLオプションを選択した場合、デフォルトのポートは通常636です。指定するポートをLDAP管理者に確認してください。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -211,13 +210,13 @@ JEE 上の AEM Forms がサポートするデータベースのセキュリテ�
 
 JBoss Application Server は、デフォルトの HTTP ポートとして 8080 を使用します。また、JBoss には事前設定のポート 8180、8280 および 8380 があり、これらは jboss-service.xml ファイルでコメントアウトされています。既にこのポートを使用しているアプリケーションがコンピューター上にある場合は、以下の手順に従って JEE 上の AEM Forms で使用するポートを変更してください。
 
-1. 次のファイルを開いて編集します。
+1. 次のファイルを編集用に開きます。
 
    シングルサーバーのインストール：[JBoss root]/standalone/configuration/standalone.xml
 
    クラスターのインストール：[JBoss root]/domain/configuration/domain.xml
 
-1. **&lt;socket-binding>**&#x200B;タグの&#x200B;**port**&#x200B;属性の値をカスタムポート番号に変更します。 例えば、次の例ではポート8090を使用しています。
+1. **&lt;socket-binding>**&#x200B;タグの&#x200B;**port**&#x200B;属性の値をカスタムポート番号に変更します。 例えば、次の例ではポート8090を使用します。
 
    &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot; />
 
@@ -234,11 +233,11 @@ JBoss Application Server は、デフォルトの HTTP ポートとして 8080 �
 
 ### データベース内の Rights Management に関する機密性情報  {#sensitive-content-for-rights-management-in-the-database}
 
-JEE上のAEM Formsは、JEE上のAEM Formsのデータベースを使用して、ポリシードキュメントに使用するドキュメントキーの機密情報やその他の暗号化マテリアルを保存します。 データベースへの侵入を防御することで、このような機密性の高い情報を保護することができます。
+JEE上のAEM Formsは、JEE上のAEM Formsデータベースを使用して、ポリシードキュメントに使用される機密ドキュメントキー情報およびその他の暗号化資料を保存します。 データベースへの侵入を防御することで、このような機密性の高い情報を保護することができます。
 
-### クリアテキスト形式{#password-in-clear-text-format-in-adobe-ds-xml}のパスワード
+### クリアテキスト形式のパスワード{#password-in-clear-text-format-in-adobe-ds-xml}
 
-JEE 上の AEM Forms を実行するアプリケーションサーバーでは、そのサーバー上に設定されたデータソースを介してデータベースにアクセスするように設定する必要があります。アプリケーションサーバーで、データベースのパスワードがクリアテキストでデータソース設定ファイルに公開されていないことを確認してください。
+JEE 上の AEM Forms を実行するアプリケーションサーバーでは、そのサーバー上に設定されたデータソースを介してデータベースにアクセスするように設定する必要があります。アプリケーションサーバーが、データソース設定ファイルにデータベースのパスワードをクリアテキストで公開しないようにします。
 
 lc_[database].xmlファイルには、パスワードをクリアテキスト形式で含めることはできません。 アプリケーションサーバーのパスワードを暗号化する方法については、アプリケーションサーバーのベンダーにお問い合わせください。
 
@@ -246,8 +245,8 @@ lc_[database].xmlファイルには、パスワードをクリアテキスト形
 >
 >JEE 上の AEM Forms JBoss 自動インストーラーがデータベースのパスワードを暗号化します。
 
-IBM WebSphere Application Server および Oracle WebLogic Server は、デフォルトでデータソースのパスワードを暗号化している可能性があります。ただし、アプリケーションサーバーのドキュメントで、この問題が発生していることを確認してください。
+IBM WebSphere Application Server および Oracle WebLogic Server は、デフォルトでデータソースのパスワードを暗号化している可能性があります。ただし、アプリケーションサーバーのドキュメントで、この処理がおこなわれていることを確認してください。
 
 ### Trust Store に保管された秘密鍵の保護 {#protecting-the-private-key-stored-in-trust-store}
 
-Trust Store からインポートされた秘密鍵や秘密鍵証明書は、JEE 上の AEM Forms データベースに保管されます。データベースを保護し、アクセスを指定された管理者のみに制限するために、適切な予防策を講じます。
+Trust Store からインポートされた秘密鍵や秘密鍵証明書は、JEE 上の AEM Forms データベースに保管されます。適切な予防措置を講じて、データベースを保護し、アクセスを指定された管理者のみに制限します。
