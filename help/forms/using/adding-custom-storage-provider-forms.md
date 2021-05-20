@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
-feature: Forms Portal
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: フォームポータル
+exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 70%
 
 ---
-
 
 # ドラフトと送信コンポーネントのカスタムストレージ {#custom-storage-for-drafts-and-submissions-component}
 
@@ -24,14 +23,14 @@ ht-degree: 70%
 
 AEM Forms ではフォームをドラフトとして保存できます。ドラフト機能により、作業中のフォームを維持できるようになります。任意のデバイスから後でフォームを完成させて、送信できます
 
-デフォルトでは、AEM Formsはフォームのドラフトと送信に関連付けられたユーザーデータを発行インスタンスの`/content/forms/fp`ノードに保存します。 さらに、AEM Forms ポータルコンポーネントではデータサービスを使用でき、これを使用するとドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。例えば、ユーザーデータをデータストアに保存できます。
+デフォルトでは、AEM Formsはフォームのドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの`/content/forms/fp`ノードに保存します。 さらに、AEM Forms ポータルコンポーネントではデータサービスを使用でき、これを使用するとドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。例えば、ユーザーデータをデータストアに保存できます。
 
 ## 前提条件  {#prerequisites}
 
 * [フォームポータルコンポーネント](/help/forms/using/enabling-forms-portal-components.md)を有効にする
-* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)を作成
-* [フォームポータル用のアダプティブフォーム](/help/forms/using/draft-submission-component.md)を有効にする
-* [カスタムストレージ](/help/forms/using/draft-submission-component.md#customizing-the-storage)の導入の詳細を知る
+* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)を作成します。
+* フォームポータルの[アダプティブフォームを有効にする](/help/forms/using/draft-submission-component.md)
+* [カスタムストレージ](/help/forms/using/draft-submission-component.md#customizing-the-storage)の実装の詳細を説明します。
 
 ## ドラフトデータサービス {#draft-data-service}
 
@@ -189,7 +188,7 @@ public interface SubmitDataService {
 }
 ```
 
-フォームポータルでは、UUID（Universally Unique Identifier）の概念を使用して、ドラフトや送信済みフォームそれぞれに一意の ID を生成します。自分の一意の ID を作成することもできます。インターフェイスFPKeyGeneratorServiceを実装し、そのメソッドを上書きし、カスタムロジックを開発して、すべてのドラフトおよび送信済みフォームに対してカスタムの一意のIDを生成できます。 また、カスタム ID 生成の実装のサービスランクを 0 より高く設定します。これにより、デフォルトの実装ではなくカスタムの実施が確実に使用されるようになります。
+フォームポータルでは、UUID（Universally Unique Identifier）の概念を使用して、ドラフトや送信済みフォームそれぞれに一意の ID を生成します。自分の一意の ID を作成することもできます。インターフェイスFPKeyGeneratorServiceを実装し、そのメソッドを上書きし、カスタムロジックを開発して、ドラフトおよび送信済みフォームごとにカスタムの一意のIDを生成できます。 また、カスタム ID 生成の実装のサービスランクを 0 より高く設定します。これにより、デフォルトの実装ではなくカスタムの実施が確実に使用されるようになります。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -208,10 +207,9 @@ public interface FPKeyGeneratorService {
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 
-上記の注釈を使用するには、次をプロジェクトに読み込みます。
+上記の注釈を使用するには、で次をプロジェクトに読み込みます。
 
 ```java
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 ```
-
