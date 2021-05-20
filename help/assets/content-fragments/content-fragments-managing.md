@@ -10,16 +10,15 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: 636daf55-2225-4780-9c57-1a2d7464fe2c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1488'
 ht-degree: 99%
 
 ---
-
 
 # コンテンツフラグメントの管理 {#managing-content-fragments}
 
@@ -347,4 +346,3 @@ ht-degree: 99%
    >[!CAUTION]
    >
    >フラグメントが既にページで参照されている場合は、警告メッセージが表示されます。「**削除を強制**」を選択して続行を確認する必要があります。フラグメントはコンテンツフラグメントコンポーネントと一緒に、すべてのコンテンツページから削除されます。
-
