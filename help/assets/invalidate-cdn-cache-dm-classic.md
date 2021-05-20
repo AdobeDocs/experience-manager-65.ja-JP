@@ -1,14 +1,13 @@
 ---
 title: Dynamic Media Classic を使用した CDN キャッシュの無効化
-description: CDN(コンテンツ配信ネットワーク)のキャッシュコンテンツを無効にすると、キャッシュの期限が切れるのを待つ代わりに、Dynamic Media Classicによって配信されるアセットをすばやく更新できます。
+description: CDN（コンテンツ配信ネットワーク）にキャッシュされたコンテンツを無効にすると、Dynamic Media Classicで配信されるアセットをすばやく更新できます。キャッシュの期限が切れるのを待つ必要はありません。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-feature: CDN Cache,Dynamic Media Classic
+feature: CDNキャッシュ，Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-translation-type: tm+mt
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '725'
@@ -18,25 +17,25 @@ ht-degree: 48%
 
 # Dynamic Media Classic を使用した CDN キャッシュの無効化 {#invalidating-your-cdn-cached-content}
 
-Dynamic Mediaアセットは、高速配信を実現するために、CDN(コンテンツ配信ネットワーク)によってキャッシュされます。 ただし、アセットを更新する場合は、その変更をすぐに有効にする必要があります。 CDNキャッシュコンテンツを無効にすると、キャッシュの期限が切れるのを待たずに、Dynamic Mediaから配信されるアセットをすばやく更新できます。
+Dynamic Mediaのアセットは、CDN（コンテンツ配信ネットワーク）によってキャッシュされ、高速配信が可能です。 ただし、アセットを更新する場合は、変更をすぐに有効にする必要があります。 CDNにキャッシュされたコンテンツを無効にすると、Dynamic Mediaによって配信されるアセットを、キャッシュの期限切れを待たずにすばやく更新できます。
 
 >[!NOTE]
 >
->この機能を使用するには、Adobe Experience ManagerDynamic Mediaにバンドルされている標準搭載のCDNを使用する必要があります。 この機能では、その他のカスタムCDNはサポートされません。
+>この機能を使用するには、Adobe Experience Manager Dynamic Mediaに組み込まれている標準搭載のCDNを使用する必要があります。 その他のカスタムCDNは、この機能ではサポートされません。
 
 >[!IMPORTANT]
 >
->次の手順は、AEM 6.5、Service Pack 5(AEM 6.5.5)以前のDynamic Mediaにのみ適用されます。<br>AEM 6.5、Service Pack 6(AEM 6.5.6)以降でDynamic Mediaを使用する場合は、「Dynamic Media経由でCDNキャッシュを [無効にする」に記載されている手順に従ってください。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>次の手順は、AEM 6.5、Service Pack 5(AEM 6.5.5)以前のDynamic Mediaにのみ適用されます。<br>AEM 6.5、Service Pack 6(AEM 6.5.6)以降でDynamic Mediaを使用する場合は、「 Dynamic Mediaを使用したCDNキャッシュの無効化」に記載されている手順に従いま [す。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
 
 [Dynamic Media Classic（Scene7）のキャッシュの概要](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)も参照してください。
 
-**Dynamic Mediaクラシックを使用してCDNキャッシュを無効にするには：**
+**Dynamic Media Classicを使用してCDNキャッシュを無効にするには：**
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=en#system-requirements-dmc-app)を開き、アカウントにログインします。
 
    資格情報とログオンは、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
-1. ページの右上隅近くにある&#x200B;**[!UICONTROL セットアップ/アプリケーション設定/全般設定をタップします。]**
+1. ページの右上隅付近にある&#x200B;**[!UICONTROL 設定/アプリケーション設定/一般設定をタップします。]**
 1. アプリケーションの一般設定ページで、「サーバー」グループ見出しの下にある「**[!UICONTROL CDN 無効化テンプレート]**」テキストボックスを見つけます。
 
 1. CDN（コンテンツ配信ネットワーク）のキャッシュの無効化に使用するテンプレートを指定します。
@@ -45,20 +44,20 @@ Dynamic Mediaアセットは、高速配信を実現するために、CDN(コン
 
    `https://server.com/is/image/Company/<ID>?$product$`
 
-   テンプレートに`<ID>`のみが含まれる場合、Dynamic Mediaは`https://<server>/is/image`に入力します。`<server>`は「一般設定」で定義された公開サーバ名で、&lt;ID>は無効にするように選択されたアセットです。
+   テンプレートに`<ID>`のみが含まれる場合、Dynamic Mediaは`https://<server>/is/image`を入力します。ここで、`<server>`は一般設定で定義されているパブリッシュサーバー名で、&lt;ID>は無効にするように選択されたアセットです。
 
-1. ページ右下隅の「**[!UICONTROL 閉じる」をクリックします。]**
-1. Dynamic Mediaクラシックユーザーインターフェイスで、1つまたは複数のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にするをクリックします。]** 作成したテンプレートから生成された1つ以上のURLのリストと、選択したアセットが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
+1. ページの右下隅にある「**[!UICONTROL 閉じる]**」をクリックします。
+1. Dynamic Media Classicユーザーインターフェイスで、1つ以上のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にするをクリックします。]** 作成したテンプレートと選択したアセットから生成された1つ以上のURLのリストが表示されます。このリストに使用されているのは、アプリケーションの一般設定の「公開先サーバー名」にリストされているサーバー URL です。
 
-   例えば、前の手順で設定した CDN 無効化テンプレートを使用して、`Backpack_B` という名前の画像アセットを 1 つだけ選択したとします。**[!UICONTROL ファイル/CDNを無効にする]**&#x200B;をタップすると、CDN無効化ユーザーインターフェイスで次のURLが生成されます。
+   例えば、前の手順で設定した CDN 無効化テンプレートを使用して、`Backpack_B` という名前の画像アセットを 1 つだけ選択したとします。**[!UICONTROL ファイル/CDNを無効にする]**&#x200B;をタップすると、CDN無効化のユーザーインターフェイスに次のように生成されたURLが表示されます。
 
    `https://server.com/is/image/Company/Backpack_B?$product$`
 
-1. 「URLリスト」ボックスで、「**[!UICONTROL 継続]**」をタップして、特定のURLのキャッシュをクリアします。 URLは、編集することも、「URLリスト」ボックスに入力または貼り付けてURLを追加することもできます。事前にCDN無効化テンプレートを設定する必要はありません。
+1. 「URL」リストボックスで、「**[!UICONTROL Continue]**」をタップして、特定のURLごとにキャッシュをクリアします。 URLを編集するか、URLリストボックスにURLを入力または貼り付けてURLを追加できます。事前にCDN無効化テンプレートを設定しておく必要はありません。
 
    「**[!UICONTROL 続行]**」をクリックすると、キャッシュの消去にかかる時間の概算を示すインジケーターが表示されます。
 
-   複数のアセットを選択した場合は、**[!UICONTROL ファイル/CDNを無効にする]**&#x200B;をタップすると、保存された&#x200B;**[!UICONTROL テンプレートURLで各アセットが参照されます。]** したがって、 **** CDN無効化テンプレートを定義して、Webサイトで参照されている各URL画像プリセット（製品の詳細や検索結果など）を参照できます。これにより、キャッシュの無効化の対象として 1 つ以上の画像を選択したときに、それらの URL が自動的にインターフェイスに入力されます。
+   複数のアセットを選択し、**[!UICONTROL ファイル/CDNを無効にする]**&#x200B;をタップした場合、保存された&#x200B;**[!UICONTROL テンプレートのURLで各アセットが参照されます。]** したがって、各URLの画像プ **[!UICONTROL リセット（製品の詳細や検索結果など）を参照するCDN無効化テンプレートを定義]** し、その画像プリセットをWebサイトで参照できます。これにより、キャッシュの無効化の対象として 1 つ以上の画像を選択したときに、それらの URL が自動的にインターフェイスに入力されます。
 
    >[!NOTE]
    >
