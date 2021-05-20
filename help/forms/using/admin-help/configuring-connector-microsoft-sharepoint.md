@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0ec881c9-8dcc-4847-9edf-24d9e6c4a7ea
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: a8be58f1-1961-4bf5-aaad-feb4489fb389
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 63%
 
 ---
-
 
 # Connector for Microsoft SharePoint の設定 {#configuring-connector-for-microsoft-sharepoint}
 
@@ -25,19 +24,19 @@ Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間�
 1. 管理コンソールで、サービス／Connector for Microsoft SharePoint をクリックします。
 1. SharePoint Server の次の設定を指定します。
 
-   **SharePoint Serverホスト名：SharePoint Server** 上のWebアプリケーションのホスト名ポート番号（形式） `[hostname]:'port'`。
+   **SharePoint Server Host Name:** SharePointサーバー上のWebアプリケーションのホスト名ポート番号（形式） `[hostname]:'port'`。
 
-   **ユーザー名：SharePointサーバー** への接続に使用するユーザーアカウント。
+   **ユーザー名：** SharePointサーバーへの接続に使用するユーザーアカウント。
 
-   **パスワード：SharePointサーバーへの接続に使用するユーザーアカウントの** パスワード。
+   **パスワード：** SharePointサーバーへの接続に使用するユーザーアカウントのパスワード
 
-   **ドメイン名：SharePointサーバーが存在する** ドメイン。
+   **ドメイン名：** SharePointサーバーが存在するドメイン。
 
 1. 「保存」をクリックします。
 
 ## Microsoft SharePoint Configuration サービス  {#microsoft-sharepoint-configuration-service}
 
-Microsoft SharePoint Configurationサービス`(MSSharePointConfigService)`を使用すると、他のユーザーとしての権限（仮想権限）を持つAEM formsユーザー用に秘密鍵証明書を指定できます。 他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。`MSSharePointConfigService` の設定を指定するには、次の手順を実行します。
+Microsoft SharePoint Configurationサービス`(MSSharePointConfigService)`を使用して、他のユーザーとしての権限（他のユーザーとしての権限）を持つAEM formsユーザーに対して秘密鍵証明書を指定できます。 他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。`MSSharePointConfigService` の設定を指定するには、次の手順を実行します。
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスのリストに移動して、`MSSharePointConfigService` をクリックします。
@@ -47,4 +46,3 @@ Microsoft SharePoint Configurationサービス`(MSSharePointConfigService)`を�
    * 上記ユーザーのパスワード
 
 1. 「保存」をクリックします。
-
