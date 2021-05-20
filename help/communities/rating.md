@@ -9,41 +9,40 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: a0e5491e-66bc-47b0-94a5-45a02bc558da
-translation-type: tm+mt
-source-git-commit: 0051791da06d15a48b82cf93164a89b4ea42ce98
+exl-id: 7534ad5d-b408-4b09-bd3d-da7ab009d55b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 38%
 
 ---
 
-
 # 評価の使用 {#using-ratings}
 
-`Rating`コンポーネントは、スタンドアロンで、または他のCommunities機能と組み合わせて使用します。 ここでは、ログインコミュニティのメンバーが、コンテンツを評価することで意見を述べることを可能にします。
+`Rating`コンポーネントは、スタンドアロンで、または他のコミュニティ機能と組み合わせて使用されます。 このコンポーネントを使用すると、サインインしたコミュニティメンバーは、コンテンツを評価して意見を表明できます。
 
 ## 評価をページに追加 {#adding-a-rating-to-a-page}
 
-作成者モードで`Rating`コンポーネントをページに追加するには、コンポーネント`Communities / Rating`を見つけてページ上の位置（メンバーが評価する機能に対する相対位置など）にドラッグします。
+`Rating`コンポーネントをオーサリングモードでページに追加するには、コンポーネント`Communities / Rating`を選択し、ページ上の位置（メンバーが評価する機能に対する相対位置など）にドラッグします。
 
-必要な情報については、[Communities Components Basics](basics.md)を参照してください。
+必要な情報については、[コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[必要なクライアント側ライブラリ](rating-basics.md#essentials-for-client-side)が含まれる場合、`Rating`コンポーネントは次のように表示されます。
+[必須のクライアント側ライブラリ](rating-basics.md#essentials-for-client-side)を含めると、`Rating`コンポーネントは次のように表示されます。
 
 ![評価](assets/rating.png)
 
 ## 評価の設定 {#configuring-rating}
 
-アクセスする配置済みの`Rating`コンポーネントを選択し、編集ダイアログを開く`Configure`アイコンを選択します。
+配置済みの`Rating`コンポーネントを選択し、`Configure`アイコンを選択すると、編集ダイアログが開きます。
 
 ![configure-new](assets/configure-new.png)
 
 「**[!UICONTROL テキストとラベル]**」タブでは、評価の内部識別子を指定できます。
 
-![tallyname](assets/tallyname.png)
+![tallname](assets/tallyname.png)
 
-**[!UICONTROL Tally Name]**
-(*必須*)：このインスタンスを一意に識別す `Rating` る、の単純な名前。リポジトリの有効なノード名を指定する必要があります。
+**[!UICONTROL 集計名]**
+(*必須*)このインスタンスを一意に識別 `Rating` する、のシンプルな名前。リポジトリの有効なノード名を指定する必要があります。
 
 ## サイト訪問者のエクスペリエンス  {#site-visitor-experience}
 
@@ -51,10 +50,10 @@ ht-degree: 38%
 
 1 人のメンバーが付けられる評価は 1 つだけです。メンバーは、いつでも評価を変更できます。
 
-### 匿名  {#anonymous}
+### 匿名 {#anonymous}
 
-匿名での評価投稿はサポートされていません。サイト訪問者は参加するには、登録（会員になる）し、サインインする必要があります。
+匿名での評価投稿はサポートされていません。サイト訪問者が参加するには、登録（メンバーになる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[Rating Essentials](rating-basics.md)ページを参照してください。
+詳しくは、開発者向けの[評価の基本事項](rating-basics.md)ページを参照してください。
