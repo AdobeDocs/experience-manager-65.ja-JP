@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5a96f5ea-6fe3-44b1-b314-14097b9e9c01
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e99b72d0-fbd5-4150-a225-1a91ad4c5867
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 97%
 
 ---
-
 
 # Output サービスの概要 {#overview-of-output-service}
 
