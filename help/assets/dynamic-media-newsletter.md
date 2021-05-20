@@ -1,13 +1,12 @@
 ---
 title: Dynamic Media ニュースレター
 description: 'Experience League 提供の Dynamic Media ニュースレターは月刊ニュースレターです。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。必要なものがすべて揃っているこのニュースレターでは、知識構築のための有益なリソースを利用できます。ハウツービデオやソリューション概要のほか、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介などです。 '
-keywords: Dynamic Media；ニュースレター；製品の更新；ヒントとテクニック；イベント；顧客の成功；ブログ；画像；ビデオ；機能
+keywords: Dynamic Media；ニュースレター；製品アップデート；ヒントとテクニック；イベント；顧客の成功；ブログ；ブログ；画像；ビデオ；機能
 contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
 role: Business Practitioner, Administrator
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
-feature: Collaboration,Dynamic Media Classic
-translation-type: tm+mt
+feature: コラボレーション， Dynamic Media Classic
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '1172'
