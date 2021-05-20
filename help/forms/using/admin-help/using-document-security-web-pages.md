@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 2878b145-e6c0-48d3-810c-3540de13c826
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 97%
 
 ---
-
 
 # Document Security Web ページの使用 {#using-the-document-security-webpages}
 
@@ -39,7 +38,7 @@ Document Security では、ユーザー情報を探す際に組織の既存の�
 
 Document Security の複数のインストール環境にアクセスする場合は、アクセスする Document Security のインスタンスに該当する URL が必要です。この情報を持っていない場合は、管理者に問い合わせてください。ユーザーページのデフォルトURLは`https://[host]:[port]/edc`です。 場合によっては、ポート番号が必要でないことがあります。詳しくは、システム管理者に確認してください。
 
-管理者のデフォルトURLは`https://[host]:[port]/adminui`です。
+管理者のデフォルトのURLは`https://[host]:[port]/adminui`です。
 
 管理者の場合、インストール時にデフォルトの上級管理者アカウントが作成されます。Document Security を最初にインストールするときは、このアカウントを使用してログインできます。
 
@@ -107,4 +106,3 @@ Web ページの使用が終了したら、別の目的で Web ブラウザー�
 
 1. ページの右上隅にある「ログアウト」をクリックします。
 1. ログアウトページにメッセージが表示される場合は、ブラウザーウィンドウを閉じて完全にログアウトします。それ以外の場合は、ブラウザーをそのまま他の目的で使用できます。
-
