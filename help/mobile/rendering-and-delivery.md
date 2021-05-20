@@ -8,14 +8,13 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: 672d5b1e-6b2f-4afe-ab04-c398e5ef45d5
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 40%
 
 ---
-
 
 # レンダリングと配信{#rendering-and-delivery}
 
@@ -23,13 +22,13 @@ ht-degree: 40%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEMコンテンツは、[Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)を介して簡単にレンダリングでき、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering)や他の形式でレンダリングできます。
+AEMコンテンツは、[Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)を介して簡単にレンダリングでき、[JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering)やその他の形式をレンダリングできます。
 
 これらの既製のレンダラーは一般に、リポジトリを調べて、コンテンツをそのまま返します。
 
 また、AEM は、Sling を介して、レンダリングされるスキーマとコンテンツのフルコントロールを取得するカスタム sling レンダラーの開発および展開もサポートします。
 
-Content Servicesのデフォルトレンダラーは、標準搭載のSlingのデフォルトとカスタム開発の間のギャップを埋め、開発なしにレンダリングされたコンテンツの多くの要素をカスタマイズおよび制御できます。
+Content Services Default Rendererは、標準のSling DefaultsとCustom Developmentの間のギャップを埋め、開発を行わずにレンダリングされたコンテンツの多くの側面をカスタマイズおよび制御できます。
 
 次の図に、コンテンツサービスのレンダリングの構造を示します。
 
@@ -37,7 +36,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
 
 ## JSON のリクエスト {#requesting-json}
 
-**&lt;RESOURCE.cas[を使用します。&lt;EXPORT-CONFIG][.&lt;export-config>.** jsonリクエストJSON]
+**&lt;RESOURCE.caas[を使用します。&lt;EXPORT-CONFIG][.&lt;export-config>.jsontoは** JSONをリクエストします。]
 
 <table>
  <tbody>
@@ -47,11 +46,11 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/cas/exportConfigs/EXPORT-CONFIG<br /> <br />にあるエクスポート設定が見つかりました。省略すると、デフォルトのエクスポート設定が適用されます </p> </td>
+   <td><p><strong>オプション</strong><br /> </p> <p>/apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG<br /> <br />にある書き出し設定を省略すると、デフォルトの書き出し設定が適用されます </p> </td>
   </tr>
   <tr>
    <td>DEPTH-INT</td>
-   <td><strong>Slingレンダリングで使用される子のレンダリング用の</strong><br /> <br /> OPTIONALdepth再帰</td>
+   <td><strong></strong><br /> <br /> Slingレンダリングで使用される子のレンダリング用のOPTIONALdepth再帰</td>
   </tr>
  </tbody>
 </table>
@@ -60,13 +59,13 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
 
 書き出し設定を作成して、JSON レンダリングをカスタマイズできます。
 
-設定ノードは、*/apps/mobileapps/cas/exportConfigs.*&#x200B;の下に作成できます。
+設定ノードは、*/apps/mobileapps/caas/exportConfigs.*&#x200B;の下に作成できます。
 
 | ノード名 | 設定の名前（レンダリングセレクター用） |
 |---|---|
 | jcr:primaryType | nt:unstructured |
 
-次の表に、設定のエクスポートのプロパティを示します。
+次の表に、書き出し設定のプロパティを示します。
 
 <table>
  <tbody>
@@ -82,63 +81,63 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
    <td>String[]</td>
    <td>すべてを含む</td>
    <td>sling:resourceType</td>
-   <td>sling:resourceTypeがJSONエクスポートから指定されたノードの詳細を除外</td>
+   <td>JSON書き出しから、指定されたsling:resourceTypeを持つノードの詳細を除外</td>
   </tr>
   <tr>
    <td>excludeComponents</td>
    <td>String[]</td>
-   <td>何も含まない</td>
+   <td>何も除外しない</td>
    <td>sling:resourceType</td>
-   <td>sling:resourceTypeがJSONエクスポートから指定されたノードについてのみ詳細を含める</td>
+   <td>JSON書き出しから指定されたsling:resourceTypeを持つノードの詳細のみを含める</td>
   </tr>
   <tr>
    <td>excludePropertyPrefixes</td>
    <td>String[]</td>
-   <td>何も含まない</td>
-   <td>プロパティ接頭辞</td>
-   <td>JSONエクスポートから、指定したプリフィックスを持つ開始の除外プロパティ</td>
+   <td>何も除外しない</td>
+   <td>プロパティのプレフィックス</td>
+   <td>指定されたプレフィックスで始まるプロパティをJSON書き出しから除外する</td>
   </tr>
   <tr>
    <td>excludeProperties</td>
    <td>String[]</td>
-   <td>何も含まない</td>
+   <td>何も除外しない</td>
    <td>プロパティ名</td>
-   <td>JSONエクスポートから指定したプロパティを除外</td>
+   <td>JSON書き出しから指定したプロパティを除外する</td>
   </tr>
   <tr>
    <td>includeProperties</td>
    <td>String[]</td>
    <td>すべてを含む</td>
    <td>プロパティ名</td>
-   <td><p>excludePropertyPrefixesが<br />設定されている場合、除外されるプレフィックスと一致するにもかかわらず、指定されたプロパティが含まれます。</p> <p>else（excludeプロパティは無視され、これらのプロパティのみを含めます）</p> </td>
+   <td><p>excludePropertyPrefixesが<br />に設定されている場合、除外するプレフィックスと一致するにもかかわらず、指定されたプロパティが含まれます。</p> <p>else （excludeプロパティは無視）は、次のプロパティのみを含みます。</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
    <td>String[]</td>
    <td>すべてを含む</td>
    <td>子の名前</td>
-   <td>指定した子をJSONエクスポートから除外</td>
+   <td>JSON書き出しから指定した子を除外</td>
   </tr>
   <tr>
    <td>excludeChildren</td>
    <td>String[]<br /> <br /> </td>
-   <td>何も含まない</td>
+   <td>何も除外しない</td>
    <td>子の名前</td>
-   <td>JSONエクスポートから指定した子のみを含め、他を除外する</td>
+   <td>JSON書き出しから指定された子のみを含め、他の子を除外する</td>
   </tr>
   <tr>
    <td>renameProperties</td>
    <td>String[]<br /> <br /> </td>
-   <td>名前を変更しない</td>
+   <td>何も変更しない</td>
    <td>&lt;actual_property_name&gt;,&lt;replacement_property_name&gt;</td>
-   <td>置換を使用してプロパティ名を変更する</td>
+   <td>置換を使用してプロパティを名前変更</td>
   </tr>
  </tbody>
 </table>
 
 ### リソースタイプの書き出しの上書き {#resource-type-export-overrides}
 
-*/apps/mobileapps/cas/exportConfigs.*&#x200B;の下に設定ノードを作成します。
+*/apps/mobileapps/caas/exportConfigs.*&#x200B;の下に設定ノードを作成します。
 
 | name | resourceTypeOverrides |
 |---|---|
@@ -160,7 +159,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
    <td>String[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>次のSlingリソースタイプでは、デフォルトのCaaS jsonエクスポートを返さないでください。<br /> リソースを；としてレンダリングして、顧客のJSONエクスポートを返します<br /> &lt;resource&gt;。&lt;selector_to_inc&gt;.json </td>
+   <td>次のSlingリソースタイプの場合は、デフォルトのCaaS json書き出しを返さないでください。<br /> リソースを<br /> &lt;resource&gt;としてレンダリングして、顧客のJSON書き出しを返します。&lt;selector_to_inc&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -194,7 +193,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags<br /> cq:lastModified,lastModified</td>
+   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags,tags<br /> cq:lastModified,lastModified</td>
   </tr>
   <tr>
    <td>includeComponents</td>
@@ -214,7 +213,7 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
   </tr>
   <tr>
    <td>Sling JSONの上書き</td>
-   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/cas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
+   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
   </tr>
  </tbody>
 </table>
@@ -232,4 +231,3 @@ Content Servicesのデフォルトレンダラーは、標準搭載のSlingの�
 * [モデルの開発](/help/mobile/administer-mobile-apps.md)
 * [コンテンツサービスのオーサリング](/help/mobile/develop-content-as-a-service.md)
 * [コンテンツサービスの管理](/help/mobile/developing-content-services.md)
-
