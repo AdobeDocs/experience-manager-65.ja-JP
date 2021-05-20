@@ -9,7 +9,6 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
-translation-type: tm+mt
 source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
 workflow-type: tm+mt
 source-wordcount: '639'
@@ -51,7 +50,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Red Hat® Enterprise Linux Advanced Server 4.0でWebLogic Serverを実行している場合は、`export LD_ASSUME_KERNEL=2.4.19`コマンドを使用して`LD_ASSUME_KERNEL`環境変数を2.4.19に設定します。 さらに、この環境変数を設定したシェルと同じシェルから WebLogic Server を実行します。
+>Red Hat® Enterprise Linux Advanced Server 4.0でWebLogic Serverを実行している場合は、`export LD_ASSUME_KERNEL=2.4.19`コマンドを使用して、`LD_ASSUME_KERNEL`環境変数を2.4.19に設定します。 さらに、この環境変数を設定したシェルと同じシェルから WebLogic Server を実行します。
 
 ## WebLogic Server の起動  {#start-weblogic-server}
 
@@ -63,7 +62,7 @@ ht-degree: 77%
 
 ## WebLogic Server の停止 {#stop-weblogic-server}
 
-1. WebブラウザーのURL行に`https://[host name]:7001/console`と入力して、開始WebLogic Server管理コンソールを開きます。
+1. WebブラウザーのURL行に`https://[host name]:7001/console`と入力して、WebLogic Server管理コンソールを起動します。
 1. この WebLogic 設定の作成時に使用したユーザー名とパスワードを入力して、「Log In」をクリックし、ログインします。
 1. 「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックします。
@@ -81,7 +80,7 @@ ht-degree: 77%
    * (Windows) `startWebLogic.cmd`
    * (Linux、UNIX) ./ `startWebLogic.sh`
 
-1. WebブラウザーのURL行に`https://[host name]:[port]/console`と入力してWebLogic Server管理コンソールにアクセスします。*[port]*&#x200B;は、安全でないリスニングポートです。 デフォルトでは、このポート番号は 7001 です。
+1. WebブラウザーのURL行に`https://[host name]:[port]/console`と入力して、WebLogic Server管理コンソールにアクセスします。ここで、*[port]*&#x200B;はセキュリティで保護されていないリスニングポートです。 デフォルトでは、このポート番号は 7001 です。
 1. ログイン画面で、管理者のユーザー名とパスワードを入力して「Log In」をクリックします。
 
 ## Node Manager の起動  {#start-node-manager}
@@ -104,7 +103,7 @@ WebLogic Server を停止した後、Node Manager を呼び出したコマンド
 >WebLogic 管理対象サーバーの起動は、WebLogic ドメインと管理対象サーバーを作成した後にのみ実行できます。
 
 1. WebLogic Server と Node Manager が実行されていることを確認します。
-1. WebブラウザーのURL行に`https://host name]:[port]`/console`と入力して、開始のWebLogic Server管理コンソールを開きます。
+1. WebブラウザーのURL行に`https://host name]:[port]`/console&#39;と入力して、WebLogic Server管理コンソールを起動します。
 1. 「Domain Structure」で、Environment／Servers をクリックします。
 1. 右側のウィンドウで、「Control」タブをクリックします。
 1. 起動する管理対象サーバーを選択します。
@@ -112,7 +111,7 @@ WebLogic Server を停止した後、Node Manager を呼び出したコマンド
 
 ## WebLogic 管理対象サーバーの停止  {#stop-a-weblogic-managed-server}
 
-1. WebブラウザーのURL行に`https://`*[host name]:[port ]*`/console`と入力して、開始のWebLogic Server管理コンソールを起動します。
+1. WebブラウザーのURL行に`https://`*[host name]:[port ]*`/console`と入力して、WebLogic Server管理コンソールを起動します。
 1. 「Domain Structure」で、Environment／Servers をクリックします。
 1. 右側のウィンドウで、「Control」タブをクリックします。
 1. 停止する管理対象サーバーを選択します。
