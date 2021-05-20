@@ -9,30 +9,29 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 59dd61d1-c6b1-4bea-b666-4aa7897384a1
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c5bf9184-a837-4033-9962-7b3052498e75
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
+# DistillerサービスJava APIクイックスタート(SOAP) {#distiller-service-java-api-quickstart-soap}
 
-# DistillerサービスJava APIクイック開始(SOAP) {#distiller-service-java-api-quickstart-soap}
+Distiller®サービスでは、Java APIクイックスタート(SOAP)を使用できます。
 
-Java API Quick開始(SOAP)は、Distiller®サービスで使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したPostScriptファイルからPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPostScriptファイルのPDFドキュメントへの変換](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}を使用したPostScriptファイルのPDFドキュメントへの変換
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}を使用したPostScriptファイルからPDFドキュメントへの変換
 
-次のコードの例では、*Loan.ps*&#x200B;というPostScriptファイルを&#x200B;*Loan.pdf*&#x200B;というPDFファイルに変換します。 ([PostScriptからPDFドキュメントへの変換](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)を参照)。
+次のコードの例では、*Loan.ps*&#x200B;というPostScriptファイルを&#x200B;*Loan.pdf*&#x200B;というPDFファイルに変換します。 （[PostScriptからPDFドキュメントへの変換](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents)を参照）。
 
 ```java
  /*
