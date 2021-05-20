@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 97%
 
 ---
-
 
 # ディレクトリの同期 {#synchronizing-directories}
 
@@ -72,7 +71,7 @@ User Management を設定して、失敗したディレクトリ同期処理を�
 1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「同期完了の Cron 形式」に、失敗した同期を User Management で再試行する間隔を表す Cron 形式を入力します。Cron 形式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます
 
-   デフォルトは0 0/13 &amp;ast；です。? &amp;ast;これは、チェックが13分ごとに行われることを意味します。
+   デフォルトは0 0/13 &amp;ast；です。? &amp;ast;：チェックは13分ごとに実行されます。
 
 ## 手動によるディレクトリの同期 {#manually-synchronize-directories}
 
@@ -100,4 +99,3 @@ Cron 形式の使用方法は、Quartz オープンソースジョブスケジ�
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「中止」をクリックします。ディレクトリ同期が進行中の場合にのみ、このボタンは表示されます。
-
