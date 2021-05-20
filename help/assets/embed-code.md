@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
-feature: Viewers
+feature: ビューア
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '372'
 ht-degree: 91%
 
 ---
-
 
 # Web ページへの Dynamic Media ビデオ、画像ビューア、またはディメンショナルビューアの埋め込み {#embedding-the-video-or-image-viewer-on-a-web-page}
 
@@ -50,10 +49,10 @@ AEM を WCM として使用&#x200B;_していない_&#x200B;場合に限り、UR
 
    [画像プリセットの公開](managing-image-presets.md#publishing-image-presets)を参照してください。
 
-1. 左側のレールで、ドロップダウンメニューを選択し、「**[!UICONTROL ビューア」をタップします。]**
+1. 左側のレールで、ドロップダウンメニューを選択して「**[!UICONTROL ビューア]**」をタップします。
 1. 左側のレールで、ビューアプリセット名をタップします。ビューアプリセットがアセットに適用されます。
-1. 「**[!UICONTROL 埋め込み」をタップします。]**
-1. **[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスで、コード全体をクリップボードにコピーし、**[!UICONTROL 閉じるをタップします。]**
+1. 「**[!UICONTROL 埋め込み]**」をタップします。
+1. **[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスで、コード全体をクリップボードにコピーし、「**[!UICONTROL 閉じる]**」をタップします。
 1. 埋め込みコードを Web ページに貼り付けます。
 
 ## HTTP/2 を使用した Dynamic Media アセットの配信 {#using-http-to-deliver-your-dynamic-media-assets}
