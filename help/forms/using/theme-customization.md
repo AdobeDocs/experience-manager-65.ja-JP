@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: c72f608e-052a-4bf9-b7bc-ddf57483af35
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 9b8c5933-b783-48f9-b463-15a01e06ee98
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 57%
 
 ---
-
 
 # テーマのカスタマイズ {#theme-customization}
 
@@ -26,7 +25,7 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 * 表示ルート数
 * 背景諧調色
 
-## 手順  {#steps}
+## 手順 {#steps}
 
 1. プロジェクトを開きます。
 
@@ -36,9 +35,9 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. テンプレートフォルダーに移動します。
 
-   * Xcodeで、**Capture > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
-   * Eclipseで、**assets > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
-   * Visual Studioで、**MWSWindows > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
+   * Xcodeで、 **Capture > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
+   * Eclipseで、 **assets > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
+   * Visual Studioで、 **MWSWindows > www > wsmobile > js > runtime > templates**&#x200B;フォルダーに移動します。
 
 1. `template.html`ファイルを開いて編集します。
 1. 次の文字列を探します。
@@ -75,12 +74,12 @@ HTML コードおよび CSS ファイルをカスタマイズし、AEM Forms ア
 
 1. css フォルダーに移動します。
 
-   * Xcodeで、**Capture > www > wsmobile > css**&#x200B;に移動します。
+   * Xcodeで、 **Capture > www > wsmobile > css**&#x200B;に移動します。
    * Eclipseで、**assets > www > wsmobile > css**&#x200B;に移動します。
    * Visual Studioで、**MWSWindows > www > wsmobile > css**&#x200B;に移動します。
 
 1. `_style.css`ファイルを開いて編集します。
-1. 背景画像の場合は、`#323232`を`#fff`に変更します。
+1. 背景画像の場合、 `#323232`を`#fff`に変更します。
 1. 変更を保存し、`_style.css`ファイルを閉じます。
 1. AEM Forms アプリケーションを開きます。
 
