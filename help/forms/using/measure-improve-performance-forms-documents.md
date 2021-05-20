@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integrations
 discoiquuid: a128877d-239c-4272-99c2-72d6486d5703
 docset: aem65
-translation-type: tm+mt
-source-git-commit: befbdfd574949a7f7449b70a15480e7c105418fe
+exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 93%
 
 ---
-
 
 # フォームのコンバージョン率の測定と効率性の改善{#measure-and-improve-effectiveness-and-conversion-of-forms}
 
@@ -34,7 +33,7 @@ ROI を最大化するには、顧客がサービスをどのように利用し�
 
 ## ソリューション {#the-solution}
 
-AEM Formsは[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)ソリューション[Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)と[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)に統合されており、フォームのパフォーマンスを監視し、コンバージョン率を高める体験をテストして特定できます。
+AEM Formsは、Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)ソリューション[[Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html)および[Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html)と統合され、フォームのパフォーマンスを監視および分析し、コンバージョン率を向上させるエクスペリエンスを試して特定できます。
 
 ## ワークフロー {#the-workflow}
 
@@ -74,7 +73,7 @@ AEM Formsは[Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html)�
 
 **Target の設定**
 
-アダプティブフォームでA/Bテストを作成および実行するには、「[AEM Forms](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)でのターゲットの設定と統合」の説明に従って、AEM Formsでターゲットを設定します。
+アダプティブフォームのA/Bテストを作成して実行するには、「[AEM FormsでのTargetの設定と統合](../../forms/using/ab-testing-adaptive-forms.md#p-set-up-and-integrate-target-in-aem-forms-p)」の説明に従って、AEM FormsでTargetを設定します。
 
 #### 手順 2：分析レポートの表示 {#step-view-analytics-report-br}
 
@@ -120,7 +119,7 @@ Analytics によってフォーム用に収集されてレポートされたデ�
 
 #### 手順 3：データポイントの分析 {#step-analyze-data-points}
 
-この手順では、分析レポート内のデータポイントを調べて、フォームのパフォーマンスを推測します。サクセス KPI の基準に満たないようであれば、データに基づいて仮定を立てて、問題の修正方法を検討することができます。次に例を示します。
+この手順では、分析レポート内のデータポイントを調べて、フォームのパフォーマンスを推測します。サクセス KPI の基準に満たないようであれば、データに基づいて仮定を立てて、問題の修正方法を検討することができます。以下に例を示します。
 
 * フォームの平均記入時間が予想を上回る場合、フォームが複雑で顧客にとって理解しにくいことが考えられます。または、フォームで標準的な用語が使われていない、長すぎるなどの問題が考えられます。この場合、フォームの構造とフィールドの単純化、デザインの見直し、長さの短縮、または標準的でないフォームフィールドへのヘルプ文章や例示の追加などで対応することが考えられます。
 * フォームパネルで大半の顧客がヘルプにアクセスしていることをデータが示しているような場合は、記入する情報に関して分かりにくいことが明らかです。代替の用語を使用する、またはそのパネルに記入例やヘルプ説明を追加するなどの対応策が考えられます。
@@ -160,4 +159,3 @@ AEM Forms は Target と統合されているため、アダプティブフォ�
 * A/B テストに先立って仮説を立て、成功指標を特定すること。
 * 代替のエクスペリエンスにおいて最小のバリエーション（理想的にはバリエーション一つ）のみを試みて、コンバージョン率への影響度合を把握すること。
 * 頻繁にテストを実施して非効率性を排除すること。
-
