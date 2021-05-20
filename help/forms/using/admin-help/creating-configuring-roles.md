@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 737fb4d1-adef-47e1-9a0d-8cddd13132cb
-translation-type: tm+mt
-source-git-commit: 413af4ef9bc3652e05da78d622183bcf20a8bee7
+exl-id: b447e545-f73e-4fde-a001-86e0e1cf4a12
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2556'
 ht-degree: 51%
 
 ---
-
 
 # ロールの作成および設定{#creating-and-configuring-roles}
 
@@ -24,7 +23,7 @@ User Management Web ページでは、既に User Management データベース�
 
 User Management には、次の 2 種類のロールがあります。
 
-**可変ロール：** この種類のロールは編集および削除でき、ロール権限をこれらのロールタイプに追加および削除できます。作成したロールはすべて可変ロールと見なされます。可変ロールにアサインされるユーザーおよびグループを追加または削除できます。
+**可変ロール：** このタイプのロールは編集および削除でき、ロール権限はこれらのロールタイプに追加および削除できます。作成したロールはすべて可変ロールと見なされます。可変ロールにアサインされるユーザーおよびグループを追加または削除できます。
 
 **不変ロール：** User Managementに含まれるデフォルトのロールは不変ロールです。このロールを編集または削除することはできません。ただし、不変ロールにアサインされるユーザーおよびグループを追加したり削除したりすることはできます。
 
@@ -34,63 +33,63 @@ User Management には、次の 2 種類のロールがあります。
 
 User Management データベースには、次のデフォルトのロールが含まれています。
 
-**管理コンソールユーザー：管理コンソール** にアクセスできます。
+**管理コンソールユーザー：** 管理コンソールにアクセスできます。
 
-**アプリケーション管理者：** すべてのWorkbench機能を使用できます。管理コンソールのアプリケーションおよびサービスページを使用して、サービスの実行時プロパティ、エンドポイント、およびセキュリティを設定できます。
+**アプリケーション管理者：** Workbenchのすべての機能を使用できます。管理コンソールのアプリケーションおよびサービスページを使用して、サービスの実行時プロパティ、エンドポイント、およびセキュリティを設定できます。
 
-**AEM forms管理者：インストール** されているすべてのサービスに対してすべてのタスクを実行できます。
+**AEM forms管理者：** インストールされているすべてのサービスに対して、すべてのタスクを実行できます。
 
-**セキュリティ管理者：User Managementの設定を** 制御し、User Managerドメインに関連付けられているユーザーおよびグループを管理します
+**セキュリティ管理者：** User Management設定を制御し、User Managerドメインに関連付けられたユーザーとグループを管理します。
 
-**サービスユーザー：** 表示を実行し、任意のサービスを呼び出すことができます
+**サービスユーザー：** 任意のサービスを表示および呼び出すことができます。
 
-**上級管理者：サービス** を含む、システム内のすべての管理機能にアクセスできます。
+**上級管理者：** サービスを含む、システム内のすべての管理機能にアクセスできます。
 
-**Trust Administrator：管理コンソール** のTrust Storeの管理ページで管理されるPKI信頼設定およびPKI秘密鍵証明書を管理できます
+**Trust Administrator:** 管理コンソールのTrust Storeの管理ページで管理されるPKI信頼設定およびPKI資格情報を管理できます
 
 ### 追加のデフォルトのロール {#additional-default-roles}
 
 インストールした AEM Forms コンポーネントによっては、次の追加のデフォルトのロールが含まれる場合があります。
 
-**ドキュメントアップロードアプリユーザ：Flexリモートを** 使用してドキュメントをアップロードできます。
+**ドキュメントアップロードアプリケーションユーザー：** Flex Remotingを使用してドキュメントをアップロードできます。
 
-**Forms管理者：** 管理コンソールのFormsページで設定を表示および変更できます
+**Forms管理者：** 管理コンソールのFormsページの設定を表示して変更できます。
 
-**AEM forms Contentspace管理者：** 管理コンソールのContent Services（非推奨）ページの設定を表示および変更できます。
+**AEM forms Contentspace Administrator:** 管理コンソールのContent Services（非推奨）ページの設定を表示して変更できます。
 
-**AEM forms Contentspaceユーザー：Contentspace（非推奨）Webページ** にログインできます。
+**AEM forms Contentspaceユーザー：** Contentspace（非推奨）Webページにログインできます。
 
-**Documentum Connector Administrator：管理コンソールのConnector for EMC Documentumページの設定を表示** および変更できます。
+**Documentum Connector Administrator:** 管理コンソールのConnector for EMC Documentumページの設定を表示して変更できます。
 
-**AEM forms FileNet Connector Administrator：管理コンソール** のConnector for IBM FileNetページの設定を表示して変更できます
+**AEM forms FileNet Connector Administrator:** 管理コンソールのConnector for IBM FileNetページの設定を表示して変更できます
 
-**AEM forms IBM CM Connector Administrator：管理コンソールのConnector for IBM Content Managerページで、設定を表示** して変更できます。
+**AEM forms IBM CM Connector Administrator:** 管理コンソールのConnector for IBM Content Managerページの設定を表示して変更できます
 
-**Rights Management管理者：すべてのタスク設定に必要なすべてのRights Managementを、関連するサーバーページで** 実行します
+**Rights Management管理者：** すべてのサーバー設定に必要なすべてのタスクを、関連するRights Managementページで実行します
 
-**Rights Managementエンドユーザー：Rights Management** のエンドユーザーWebページにアクセスできます。
+**Rights Managementエンドユーザー：** Rights ManagementエンドユーザーWebページにアクセスできます。
 
-**Rights Management招待ユーザー：ユーザー** を招待できます
+**Rights Management招待ユーザー：** ユーザーを招待できます
 
-**Rights Management招待ユーザーとローカルユーザーの管理：すべての招待ユーザー** とローカルユーザーの管理に必要なタスクを、関連するRights Managementページで実行できます
+**Rights Management招待ユーザーとローカルユーザーの管理：** すべての招待ユーザーとローカルユーザーの管理に必要なタスクを、関連するRights Managementページで実行できます。
 
-**Rights Managementポリシーセット管理者：すべてのポリシーセットに必要なすべてのタスクを、関連するRights Managementページで** 実行します
+**Rights Managementポリシーセット管理者：** 関連するRights Managementページで、すべてのポリシーセットに必要なすべてのタスクを実行します
 
-**Rights Management上級管理者：必要なすべてのタスクをRights Managementページから** 実行します。
+**Rights Management上級管理者：** 必要なすべてのタスクを「Rights Management」ページから実行します
 
-**AEM forms Workspace管理者：** 管理コンソールのWorkspaceページの設定を表示および変更できます
+**AEM forms Workspace管理者：** 管理コンソールのWorkspaceページの設定を表示して変更できます
 
 ***注意&#x200B;**：AEM Forms のリリースでは Flex Workspace は廃止されています。*
 
-**Workspaceユーザー：Workspaceエンドユーザーアプリケーション** にログインできます。
+**Workspaceユーザー：** Workspaceエンドユーザーアプリケーションにログインできます。
 
-**Output管理者：管理コンソールのOutputページの設定** を表示および変更できます。
+**Output管理者：** 管理コンソールのOutputページの設定を表示して変更できます
 
-**PDFG管理者：管理コンソールのPDF Generatorページの設定を表示** および変更できます。
+**PDFG管理者：** 管理コンソールのPDF Generatorページの設定を表示して変更できます
 
-**PDFGユーザー：PDF Generatorの管理者以外のすべての機能** にアクセスできます
+**PDFGユーザー：** PDF Generatorの管理以外のすべての機能にアクセスできます
 
-**Acrobat Reader DC拡張機能Web アプリケーション:Acrobat Reader DC拡張機能Webアプリケーション** を使用できます。
+**Acrobat Reader DC Extensions Webアプリケーション：** Acrobat Reader DC Extensions Webアプリケーションを使用できます。
 
 >[!NOTE]
 >
@@ -180,63 +179,63 @@ User Management データベースには、次のデフォルトのロールが�
 
 ### AEM Forms の権限  {#aem-forms-permissions}
 
-**追加_REMOVE_ENDPOINT_PERM：サ追加ービスのエンドポイントの削除、変更** 
+**ADD_REMOVE_ENDPOINT_PERM：サービスの** エンドポイントの追加、削除、変更
 
-**Admin Consoleログイン：管理コンソールの** 表示
+**Admin Consoleログイン：** 管理コンソールを表示します
 
-**証明書の変更：Trust Store内の証明書の信頼設定を** 変更します
+**証明書の変更：** Trust Store内の証明書の信頼設定を変更します
 
-**読み取った証明書：Trust Storeの証明書を** 読み取ります
+**証明書の読み取り：** Trust Store内の証明書を読み取ります
 
-**証明書の書き込み：Trust Store** へ追加の証明書
+**証明書の書き込み：** Trust Storeに証明書を追加します
 
-**コンポーネント追加：システムに新しいコンポーネントを** インストールする
+**コンポーネントの追加：** システムに新しいコンポーネントをインストールします
 
-**コンポーネントの削除：システム内の任意のコンポーネントを** 削除します
+**コンポーネントの削除：** システム内の任意のコンポーネントを削除します
 
-**読み取りコンポーネント：システム内の任意のコンポーネントを** 読み取ります
+**コンポーネント読み取り：** システム内の任意のコンポーネントを読み取ります。
 
-**Contentspace管理者：Contentspace（非推奨）管理者の** 権限
+**Contentspace Administrator:** Contentspace（非推奨）管理者の権限
 
-**Contentspaceコンソールログイン：Contentspace（非推奨）コンソールログインの** 権限
+**Contentspaceコンソールログイン：** Contentspace（非推奨）コンソールログインの権限
 
-**コア設定コントロール：管理コンソールのコアシステム設定ページで設定を** 管理
+**コア設定コントロール：** 管理コンソールのコアシステム設定ページで設定を管理します
 
-**CREATE_VERSION_PERM：サービスの新しいバージョンを** 作成する
+**CREATE_VERSION_PERM:** サービスの新しいバージョンを作成します
 
-**秘密鍵証明書の変更：Trust Storeの署名証明書を** 変更します
+**秘密鍵証明書の変更：** Trust Store内の署名秘密鍵証明書を変更します
 
-**Credential Read:Trust Storeの署名証明書を** 読み取ります
+**Credential Read:** Trust Storeの署名証明書を読み取ります
 
-**Credential Write:Trust Store** へ追加の署名証明書
+**秘密鍵証明書の書き込み：** 署名秘密鍵証明書をTrust Storeに追加します
 
-**CRL Modify:Trust StoreのCRL(証明書の失効リスト)を** 変更します
+**CRLの変更：** Trust StoreのCRL（証明書失効リスト）を変更します
 
-**CRL読み取り：Trust StoreのCRLを** 読み取ります
+**CRL読み取り：** Trust StoreのCRLを読み取ります
 
-**CRL Write:追加CRL to  the Trust Store** 
+**CRLの書き込み：** CRLをTrust Storeに追加します
 
-**委任：リソースにACLを** 設定する
+**委任：** リソースにACLを設定する
 
-**DELETE_VERSION_PERM：サービスのバージョンを** 削除する
+**DELETE_VERSION_PERM:** サービスのバージョンを削除する
 
-**ドキュメントのアップロード：AEMフォームでの** ドキュメントのアップロード
+**ドキュメントのアップロード：** AEM formsでのドキュメントのアップロード
 
-**ドメインコントロール：User Managementドメインの設定（認証プロバイダーやディレクトリプロバイダーなど）を** 作成、削除、または変更します
+**ドメイン制御：** User Managementドメインの設定（認証プロバイダーやディレクトリプロバイダーを含む）の作成、削除、または変更
 
-**イベントタイプの編集：イベントタイプ** に対する編集
+**イベントタイプ編集：** イベントタイプに編集
 
-**Identity Impersonation Control:User Managerでの** 偽装ID
+**ID偽装コントロール：** User ManagerでIDを偽装します
 
-**INVOKE_PERM：サービスのすべての操作を** 呼び出す
+**INVOKE_PERM:** サービスのすべての操作を呼び出す
 
-**LCDS Data Model Control:Data Servicesでデータモデルを** 読み取り、展開します
+**LCDSデータモデルコントロール：** Data Servicesでのデータモデルの読み取りとデプロイ
 
-**License Manager Update：ライセンス情報の** 更新
+**License Managerの更新：** ライセンス情報を更新
 
-**MODIFY_CONFIG_PERM：サービスの設定** を変更します
+**MODIFY_CONFIG_PERM:** サービスの設定を変更します
 
-**TERMサービスのバ** ージョンを変更します
+**** サービスのバージョンの変更
 
 **PDFGAdminPermission:** PDFG管理者
 
@@ -244,101 +243,101 @@ User Management データベースには、次のデフォルトのロールが�
 
 **PERM_DCTM_ADMIN:** Documentum Connector管理者
 
-**PERM_FILENET_ADMIN:FileNet Connector** 管理者
+**PERM_FILENET_ADMIN:** FileNet Connector管理者
 
-**PERM_FORMS_管理者：** Forms管理者
+**PERM_FORMS_ADMIN:** Forms管理者
 
 **PERM_IBMCM_ADMIN:** IBM CM Connector管理者
 
 **PERM_OUTPUT_ADMIN:** Output管理者
 
-**PERM_READER_拡張機能_WEB_APPLICATION:Acrobat Reader DC拡張機能Webアプリケーション** の使用
+**PERM_EXTENSIONS_WEB_APPLICATION:** Acrobat Reader DC Extensions Webアプリケーションの使用
 
-**PERM_SP_ADMIN:SharePoint Connector設定の** 管理
+**PERM_SP_ADMIN:** SharePointコネクタ設定の管理
 
-**PERM_WORKSPACE_ADMIN:Workspace設定の** 管理
+**PERM_WORKSPACE_ADMIN:** Workspace設定の管理
 
-**PERM_WORKSPACE_USER:Workspaceエンドユーザーアプリケーションに** ログインします
+**PERM_WORKSPACE_USER:** Workspaceエンドユーザーアプリケーションにログインします
 
-**Principal Control：任意のドメインのユーザーとグループを** 管理し、任意のドメインのすべてのユーザーとグループのロールアサインを管理します
+**プリンシパルコントロール：** 任意のドメインのユーザーとグループを管理し、任意のドメイン内のすべてのユーザーとグループの役割の割り当てを管理します
 
-**Process Recording Read/Delete：ワークフロー監査インスタンスの** リストと取得
+**読み取り/削除の処理：** ワークフロー監査インスタンスのリストと取得
 
-**PROCESS_OWNER_PERM:** 表示トレンドデータおよびプロセスから作成されたサービスに対する管理アクションの実行
+**PROCESS_OWNER_PERM:** トレンドデータを表示し、プロセスから作成されたサービスに対して管理アクションを実行します
 
-**読み取り：リソースの内容を** 読み取ります
+**読み取り：** リソースのコンテンツの読み取り
 
-**READ_PERM：サービスの** 読み取りまたは表示
+**READ_PERM:** サービスの読み取りまたは表示
 
-**Renew assertion:User Managementでのアサーションの** 更新
+**アサーションを更新：** User Managementでアサーションを更新する
 
-**Repository Delegate：リソースにACLを** 設定
+**リポジトリデリゲート：** リソースにACLを設定します
 
-**Repository Read：リソースの内容を** 読み取ります。
+**リポジトリ読み取り：** リソースのコンテンツの読み取り
 
-**Repository Traverse：リソースリクエストにリストを** 含めるか、リソースのメタデータを読み取ります
+**Repository Traverse:** リストリソースリクエストにリソースを含めるか、リソースのメタデータを読み取ります
 
-**Repository Write:** Write repository metadata and content
+**リポジトリの書き込み：** リポジトリのメタデータとコンテンツの書き込み
 
-**Rights Management変更ポリシー所有者：ポリシー所有者の** 変更
+**Rights Management変更ポリシーの所有者：** ポリシーの所有者の変更
 
-**Rights Managementエンドユーザーコンソールログイン：Rights ManagementエンドユーザーUI** にログイン
+**Rights Managementエンドユーザーコンソールのログイン：** Rights ManagementエンドユーザーUIにログインします。
 
-**Rights Management管理の設定：サーバー設定の** 管理
+**Rights Management管理の設定：** サーバー設定の管理
 
-**Rights Management招待ユーザーとローカルユーザーの管理：招待ユーザーとローカルユーザーの** 管理
+**Rights Management招待ユーザーとローカルユーザーの管理：** 招待ユーザーとローカルユーザーの管理
 
-**Rights Management：ポリシーセットの管理：ポリシーセット内のすべてのポリシーとドキュメントを** 管理します
+**Rights Managementポリシーセットの管理：** 任意のポリシーセット内のすべてのポリシーとドキュメントを管理します
 
-**Rights Managementポリシーセットコーディネーター：追加ポリシーセットコーディネーターの権限** 追加、削除、変更
+**Rights Managementポリシーセットコーディネーターの追加：** ポリシーセットコーディネーターの権限を追加、削除、変更します
 
-**Rights Managementポリシーセットポリシーの作成：ポリシーセット用の新しいポリシーを** 作成します
+**Rights Managementポリシーセットポリシーセットの作成：** ポリシーセットの新しいポリシーを作成します
 
-**Rights Managementポリシーセットの削除ポリシー：ポリシーセットからポリシーを** 削除します
+**Rights Managementポリシーセット削除ポリシー：** ポリシーセットからポリシーを削除します
 
-**Rights Managementポリシーセットポリシーの編集：ポリシーセット内のポリシーの** 編集
+**Rights Managementポリシーセットのポリシーを編集：** ポリシーセット内のポリシーを編集します
 
-**Rights Managementポリシーセットドキュメント発行者の管理：ポリシーセット** を作成するとき、ドキュメント発行者のロールをユーザーに割り当てます。ドキュメント発行者は、ドキュメントをポリシーで保護するユーザーです。
+**Rights Managementポリシーセットドキュメント発行者を管理：** ポリシーセットを作成する際に、ユーザーにドキュメント発行者の役割を割り当てます。ドキュメント発行者は、ドキュメントをポリシーで保護するユーザーです。
 
-**Rights Managementポリシーセット削除コーディネーター：ポリシーセットコーディネーターをポリシーセットから** 削除します
+**Rights Managementポリシーセット削除コーディネーター：** ポリシーセットからポリシーセットコーディネーターを削除します
 
-**Rights Managementポリシーセット取り消しドキュメント：ポリシーセット内のドキュメントへのアクセス** 権限の取り消し
+**Rights Managementポリシーセットドキュメントを取り消し：** ポリシーセット内のドキュメントへのアクセス権を取り消します
 
-**Rights Managementポリシーセットスイッチポリシー：ドキュメントの** ポリシーの切り替え
+**Rights Managementポリシーセットスイッチポリシー：** ドキュメントのポリシーを切り替えます
 
-**Rights Managementポリシーセットの取り消し取り消しドキュメント:ドキュメントの取り消し** の取り消し
+**Rights Managementポリシーセットドキュメントの失効取り消し：** ドキュメントの失効取り消し
 
-**Rights Managementポリシーセット表示イベント:** 表示ポリシーおよびポリシーセット内の任意のポリシーまたはドキュメントのドキュメントイベント
+**Rights Managementポリシーセット表示イベント：** ポリシーセット内の任意のポリシーまたはドキュメントのポリシーイベントとドキュメントイベントを表示します
 
-**Rights Management表示サーバーイベント：すべての監査イベントの** 検索と表示
+**Rights Management表示サーバーイベント：** すべての監査イベントを検索および表示します
 
-**ロールコントロール：User Managementでのロールの** 作成、削除、変更
+**役割の制御：** User Managementでの役割の作成、削除、変更
 
-**サービスのアクティブ化：任意のサービスを** 開始し、呼び出しに使用できるようにします
+**サービスのアクティブ化：** 任意のサービスを開始し、呼び出し可能にします。
 
-**サービス追加：新しいサービスをサービスレジストリに** デプロイします。新しいプロセスとプロセスバリアントの追加が含まれます。
+**サービスの追加：** 新しいサービスをサービスレジストリにデプロイします。新しいプロセスとプロセスバリアントの追加が含まれます。
 
-**サービスの非アクティブ化：システム内の任意のサービスを** 停止します
+**サービスの非アクティブ化：** システム内のサービスを停止します
 
-**サービスの削除：プロセスおよびプロセスバリアントを含む、システム内のサービスを** 削除します
+**サービスの削除：** プロセスおよびプロセスバリアントを含む、システム内の任意のサービスを削除します
 
-**サービスの呼び出し：実行時に使用可能なサービスレジストリの任意のサービスを** 呼び出します
+**サービスの呼び出し：** 実行時に使用可能なサービスレジストリでサービスを呼び出す
 
-**Service Modify：システム内の任意のサービスの設定プロパティを** 変更します。IDE のサービスのロックとロック解除、サービスへのエンドポイントの追加、サービスからのエンドポイントの削除が含まれます。
+**サービスの変更：** システム内の任意のサービスの設定プロパティを変更します。IDE のサービスのロックとロック解除、サービスへのエンドポイントの追加、サービスからのエンドポイントの削除が含まれます。
 
-**Service Read：システム内の任意のサービスを** 読み取ります。すべてのプロセスとプロセスバリアントが含まれます。
+**サービス読み取り：** システム内の任意のサービスを読み取ります。すべてのプロセスとプロセスバリアントが含まれます。
 
-**SERVICE_AGENT_PERM:** 表示データ、およびプロセスから作成されたサービスのプロセスインスタンスとやり取りする
+**SERVICE_AGENT_PERM:** プロセスから作成されたサービスのデータを表示し、プロセスインスタンスとやり取りする
 
-**SERVICE_MANAGER_PERM：プロセスから作成されたサービスに対して、ロードバランシングおよびその他の管理操作を** 実行します
+**SERVICE_MANAGER_PERM:** プロセスから作成されたサービスに対してロードバランシングおよびその他の管理アクションを実行します
 
-**開始_STOP_PERM：サービスの** 開始または停止
+**START_STOP_PERM:** サービスの開始または停止
 
-**SUPERVISOR_PERM：プロセスから作成されたサービスの** 表示プロセスインスタンスデータ
+**SUPERVISOR_PERM:** プロセスから作成されたサービスのプロセスインスタンスデータを表示します
 
-**Traverse：リソースリソースリクエストにリストを** 含めるか、リソースのメタデータを読み取ります
+**トラバース：** リソースリクエストにリソースを含めるか、リソースのメタデータを読み取ります
 
-**書き込み：リポジトリのメタデータと** コンテンツの書き込み
+**書き込み：** リポジトリのメタデータとコンテンツの書き込み
 
 **Workbench でファイルを開く**
 
@@ -360,4 +359,3 @@ Workbench でリソースビューのコンテンツを表示し、ファイル�
 1. ロールのリストで、更新するロールの名前をクリックし、「ロールのユーザー」タブをクリックします。ロールに関連付けられているユーザーおよびグループのリストが表示されます。
 1. ロールから削除するユーザーおよびグループのチェックボックスを選択し、「アサイン解除」をクリックします。
 1. 「保存」をクリックし、「OK」をクリックします。
-
