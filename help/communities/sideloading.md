@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a9cb5294-e5ab-445b-b7c2-ffeecda91c50
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 960e132c-b370-43d1-bd8f-e7d0ded7c0b3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 78%
 
 ---
-
 
 # コンポーネントのサイドローディング {#component-sideloading}
 
@@ -26,20 +25,20 @@ ht-degree: 78%
 
 これは、コミュニティコンポーネントがページテンプレートに存在せず、サイト訪問者の選択後に動的に追加される場合に実現されます。
 
-ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。動的に追加されたSCFコンポーネントをページの読み込み後に登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
+ソーシャルコンポーネントフレームワーク（SCF）は軽量なので、初期ページロード時に存在する SCF コンポーネントのみが登録されます。ページの読み込み後に動的に追加されるSCFコンポーネントを登録するには、SCFを呼び出してコンポーネントを「サイドロード」する必要があります。
 
 コミュニティコンポーネントをサイドローディングするようページが設計されている場合、ページ全体をキャッシュすることができます。
 
 SCF コンポーネントを動的に追加する手順は、次のとおりです。
 
-1. [DOM追加のコンポーネント](#dynamically-add-component-to-dom)
+1. [DOMにコンポーネントを追加する](#dynamically-add-component-to-dom)
 
-1. [次の2つの方法のいずれかを使用して、](#sideload-by-invoking-scf) コンポーネントをサイドロードします。
+1. [次の2つの方法のい](#sideload-by-invoking-scf) ずれかを使用して、コンポーネントをサイドロードします。
 
 * [動的な組み込み](#dynamic-inclusion)
-   * 動的に追加されたすべてのコンポーネントをブーストラップ
-* [動的読み込み](#dynamic-loading)
-   * 追加特定の1つのコンポーネントのオンデマンド
+   * 動的に追加されるすべてのコンポーネントをブーストラップする
+* [動的な読み込み](#dynamic-loading)
+   * 特定のコンポーネントをオンデマンドで追加
 
 >[!NOTE]
 >
@@ -49,13 +48,13 @@ SCF コンポーネントを動的に追加する手順は、次のとおりで�
 
 動的なインクルードの場合も動的なロードの場合も、最初にコンポーネントを DOM に追加する必要があります。
 
-SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへの追加は気づかれません。
+SCF コンポーネントを追加する際に最もよく使用されるタグは DIV タグですが、他のタグを使用することもできます。SCFはページが最初に読み込まれるときにのみDOMを調べるので、SCFが明示的に呼び出されるまで、DOMへのこの追加は無視されます。
 
 どのタグを使用する場合も、最低限、要素が通常の SCF ルート要素パターンに準拠している必要があります。そのためには、次の 2 つの属性を含めます。
 
 * **data-component-id**
 
-   追加したコンポーネントへの有効パス。
+   追加されたコンポーネントへの有効なパス。
 
 * **data-scf-component**
 
@@ -90,4 +89,4 @@ SCF コンポーネントを追加する際に最もよく使用されるタグ�
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-ここで`someId`は`data-component-id`属性の値です。
+`someId`は`data-component-id`属性の値です。
