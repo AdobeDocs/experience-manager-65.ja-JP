@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: df5416ec-5c63-481b-99ed-9e5a91df2432
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 190735bc-1909-4b92-ba4f-a221c0cd5be7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 74%
 
 ---
-
 
 # サーバー側のカスタマイズ  {#server-side-customization}
 
@@ -32,7 +31,7 @@ ht-degree: 74%
 
 ### SocialComponent インターフェイス  {#socialcomponent-interface}
 
-SocialComponent は、AEM Communities 機能のリソースを表す POJO です。各SocialComponentは、特定のresourceTypeを表し、GETterが公開されてリソースが正確に表示されるようにするのが理想的です。 必要に応じて、すべてのビジネスロジックと表示ロジックがSocialComponentにカプセル化されます。この中には、サイト訪問者のセッション情報も含まれます。
+SocialComponent は、AEM Communities 機能のリソースを表す POJO です。理想的には、各SocialComponentは、リソースが正確に表されるように、クライアントにデータを提供する、公開されたGETterを持つ特定のresourceTypeを表します。 必要に応じて、すべてのビジネスロジックとビューロジックはSocialComponentにカプセル化されます。サイト訪問者のセッション情報も含まれます。
 
 このインターフェイスは、リソースを表すために必要な GETter の基本セットを定義します。重要なことは、インターフェイスは、Handlebars テンプレートをレンダリングしリソースの GET JSON エンドポイントを公開するために必要な、Map&lt;String, Object> getAsMap() および String toJSONString() メソッドを規定するということです。
 
@@ -42,11 +41,11 @@ SocialComponent は、AEM Communities 機能のリソースを表す POJO です
 
 SocialCollectionComponent インターフェイスは、他のリソースのコレクションであるリソースをより適切に表すように SocialComponent インターフェイスを拡張します。
 
-すべてのSocialCollectionComponentクラスで、インターフェイスcom.adobe.cq.soscf.SocialCollectionComponentを実装する必要があります
+すべてのSocialCollectionComponentクラスは、インターフェイスcom.adobe.cq.social.scf.SocialCollectionComponentを実装する必要があります
 
 ### SocialComponentFactory インターフェイス {#socialcomponentfactory-interface}
 
-SocialComponentFactory（ファクトリ）は、SocialComponent をフレームワークに登録します。ファクトリは、複数のSocialComponentsが識別された場合に、特定のresourceTypeで使用できるSocialComponentsが何であるか、およびその優先度ランクをフレームワークに知らせる手段を提供します。
+SocialComponentFactory（ファクトリ）は、SocialComponent をフレームワークに登録します。ファクトリは、特定のresourceTypeに対して使用可能なSocialComponentsと、複数のSocialComponentsが識別された場合の優先順位をフレームワークに知らせる手段を提供します。
 
 SocialComponentFactory は、選択された SocialComponent のインスタンスを作成し、SocialComponent に必要なすべての依存関係をファクトリから DI パッケージを使用して挿入できるようにします。
 
@@ -54,11 +53,11 @@ SocialComponentFactory は OSGi サービスであり、コンストラクター
 
 すべての SocialComponentFactory クラスは、インターフェイス `com.adobe.cq.social.scf.SocialComponentFactory` を実装する必要があります。
 
-SocialComponentFactory.getPriority()メソッドの実装は、getResourceType()が返す、特定のresourceTypeに対してファクトリを使用するために、最も高い値を返す必要があります。
+SocialComponentFactory.getPriority()メソッドの実装では、getResourceType()が返す特定のresourceTypeに対してファクトリを使用するために、最も高い値を返す必要があります。
 
 ### SocialComponentFactoryManager インターフェイス {#socialcomponentfactorymanager-interface}
 
-SocialComponentFactoryManager（マネージャー）は、フレームワークに登録されたすべての SocialComponent を管理し、特定のリソース（resourceType）に対して使用される SocialComponentFactory を選択します。特定のresourceTypeにファクトリが登録されていない場合、マネージャは、指定されたリソースに最も近いスーパータイプを持つファクトリを返します。
+SocialComponentFactoryManager（マネージャー）は、フレームワークに登録されたすべての SocialComponent を管理し、特定のリソース（resourceType）に対して使用される SocialComponentFactory を選択します。特定のresourceTypeにファクトリが登録されていない場合、マネージャは指定されたリソースに最も近いスーパータイプを持つファクトリを返します。
 
 SocialComponentFactoryManager は OSGi サービスであり、コンストラクター経由で SocialComponent に渡すことができる他の OSGi サービスにアクセスできます。
 
@@ -80,7 +79,7 @@ HTTP API POST エンドポイントは、`SlingPostOperation` インターフェ
 
 各`SocialOperation`エンドポイントは、AbstractSocialOperationクラスを拡張し、メソッド`performOperation()`を上書きします。 このメソッドは、操作の完了に必要なすべてのアクションを実行し、`SocialOperationResult` を返すか、または `OperationException` をスローします。後者の場合は、HTTP エラーステータスとメッセージ（使用可能な場合）が、通常の JSON 応答または成功 HTTP ステータスコードの代わりに返されます。
 
-`AbstractSocialOperation`を拡張すると、JSON応答を送信するために`SocialComponents`を再利用できます。
+`AbstractSocialOperation`を拡張すると、JSON応答を送信するための`SocialComponents`の再利用が可能になります。
 
 #### SocialOperationResult クラス {#socialoperationresult-class}
 
@@ -102,16 +101,16 @@ HTTP API POST エンドポイントは、`SlingPostOperation` インターフェ
 
 #### OperationService クラス {#operationservice-class}
 
-Socialコンポーネントフレームワークでは、操作を実行するビジネスロジックを`SocialOperation`クラス内に実装せず、代わりにOSGiサービスに委任することをお勧めします。 ビジネスロジックの OSGi サービスを使用すると、`SocialComponent`（`SocialOperation` エンドポイントの影響を受ける）を他のコードと統合でき、異なるビジネスロジックを適用できます。
+ソーシャルコンポーネントフレームワークでは、操作を実行するビジネスロジックを`SocialOperation`クラス内に実装せず、代わりにOSGiサービスに委任することをお勧めします。 ビジネスロジックの OSGi サービスを使用すると、`SocialComponent`（`SocialOperation` エンドポイントの影響を受ける）を他のコードと統合でき、異なるビジネスロジックを適用できます。
 
 すべての `OperationService` クラスは `AbstractOperationService` を拡張し、実行される操作に関連付けることができる追加拡張を可能にします。サービス内の各操作は `SocialOperation` クラスによって表されます。`OperationExtensions` クラスは、操作の実行中に以下のメソッドを呼び出すことによって呼び出すことができます。
 
 * `performBeforeActions()`
 
-   事前確認/前処理と検証を許可
+   事前チェック/前処理および検証を可能にする
 * `performAfterActions()`
 
-   リソースのさらなる変更や、カスタムイベント、ワークフローなどの呼び出しを可能にします。
+   リソースをさらに変更したり、カスタムイベントやワークフローなどを呼び出したりできます。
 
 #### OperationExtension クラス {#operationextension-class}
 
@@ -119,15 +118,14 @@ Socialコンポーネントフレームワークでは、操作を実行する�
 
 ## サンプルコード  {#sample-code}
 
-サンプルコードを [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。プレフィックスが`aem-communities`または`aem-scf`のプロジェクトを検索します。
+サンプルコードを [Adobe Marketing Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。`aem-communities`または`aem-scf`のプレフィックスが付いたプロジェクトを検索します。
 
 ## ベストプラクティス {#best-practices}
 
 AEM Communities 開発者向けの様々なコーディングガイドラインおよびベストプラクティスについては、[コーディングのガイドライン](code-guide.md)の節を参照してください。
 
-ユーザ生成コンテンツへのアクセスについては、[UGC](srp.md)のストレージリソースプロバイダー(SRP)も参照してください。
+ユーザー生成コンテンツへのアクセスについては、UGC](srp.md)の[ストレージリソースプロバイダー(SRP)も参照してください。
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[クライアント側のカスタマイズ ⇒](client-customize.md)** |
 |---|---|
 |  | **[SCF Handlebars ヘルパー ⇒](handlebars-helpers.md)** |
-
