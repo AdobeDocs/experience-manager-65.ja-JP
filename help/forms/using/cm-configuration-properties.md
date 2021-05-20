@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 96%
 
 ---
 
-
 # Correspondence Management設定プロパティ {#correspondence-management-configuration-properties}
 
-これらのプロパティを設定するには、ブラウザーで次のURLを開きます。`https://<server>:<port>/<contextPath>/system/console/configMgr`を選択し、**Correspondence Management設定**&#x200B;を選択します。
+これらのプロパティを設定するには、ブラウザーで次のURLを開きます。`https://<server>:<port>/<contextPath>/system/console/configMgr`を選択し、「**Correspondence Management設定**」を選択します。
 
 Correspondence Management には以下の設定プロパティがあります。
 
@@ -65,7 +64,7 @@ Correspondence Management には以下の設定プロパティがあります。
   <tr>
    <td><p>対象のハイライトの種類</p> </td>
    <td><p>通信を作成アプリケーションでの対象のハイライトの種類</p> </td>
-   <td><p>border</p> </td>
+   <td><p>境界線</p> </td>
    <td><p>境界線／塗りつぶし／なし</p> </td>
   </tr>
   <tr>
