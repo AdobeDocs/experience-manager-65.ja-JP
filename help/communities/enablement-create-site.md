@@ -10,32 +10,31 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: b9333558-6af9-46b2-9f03-3722645c69a6
 docset: aem65
-translation-type: tm+mt
-source-git-commit: e9d5a7acad04d841cbc7d62050163f3de998fab6
+exl-id: 812bbf7b-c49f-4c34-a47d-636b0468e0ba
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1728'
-ht-degree: 48%
+ht-degree: 49%
 
 ---
-
 
 # イネーブルメントのための新しいコミュニティサイトの作成 {#author-a-new-community-site-for-enablement}
 
 ## コミュニティサイトを作成 {#create-community-site}
 
-[コミュニティサイトの](/help/communities/sites-console.md) 作成では、コミュニティサイトの作成手順を案内するウィザードを使用します。最後の手順でサイトをコミットする前に、`Next`または`Back`を前の手順に進むことができます。
+[コミュニティサ](/help/communities/sites-console.md) イトの作成では、コミュニティサイトの作成手順を案内するウィザードを使用します。最後の手順でサイトをコミットする前に、`Next`または`Back`を前の手順に進むことができます。
 
 新しいコミュニティサイトの作成を開始するには：
 
 [オーサーインスタンス](https://localhost:4502/)を使用します。
 
-* 管理者権限でログインし、**[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**&#x200B;に移動します。
+* 管理者権限でログインし、**[!UICONTROL コミュニティ]**/**[!UICONTROL サイト]**&#x200B;に移動します。
 
 * 「**作成**」を選択します。
 
 ### Step 1 : Site Template {#step-site-template}
 
-![有効化サイトテンプレート](assets/enablement-site-template.png)
+![イネーブルメントサイトテンプレート](assets/enablement-site-template.png)
 
 「**サイトテンプレート**」の手順では、URL のタイトル、説明、名前を入力し、コミュニティサイトテンプレートを選択します。次に例を示します。
 
@@ -43,28 +42,28 @@ ht-degree: 48%
 
 * **コミュニティサイトの説明**: `A site for enabling the community to learn.`
 
-* **コミュニティサイトルート**:(デフォルトのルートの場合は空白のまま `/content/sites`)
+* **コミュニティサイトのルート**:(デフォルトのルートの場合は空白のままにし `/content/sites`ます)。
 
 * **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は手を付けないでください）。英語)ドロップダウンを使用して、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)から1つ *または* 複数のベース言語を選択します。追加された言語ごとに1つのコミュニティサイトが作成され、[多言語サイト用のコンテンツの翻訳](/help/sites-administering/translation.md)で説明されているベストプラクティスに従って、同じサイトフォルダー内に存在します。 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **コミュニティサイトのベース言語**:（単一の言語に対しては手を加えないでください）。英語)ドロップダウンを使用し *て、使用可能な言語(ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語(繁体* 語)、中国語（簡体字）)から1つ以上を選択します。追加された言語ごとに1つのコミュニティサイトが作成され、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)で説明されているベストプラクティスに従って、同じサイトフォルダー内に存在します。 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**: `enable`
 
-   * コミュニティサイト名の下に最初のURLが表示されます
-   * 有効なURLの場合は、ベース言語コード+ &quot;.html&quot;を追加します。
-      *例えば*、https://localhost:4502/content/sites/  `enable/en.html`
+   * コミュニティサイト名の下に初期URLが表示されます。
+   * 有効なURLに、ベース言語コード+ &quot;.html&quot;を追加する
+      *例：* https://localhost:4502/content/sites/  `enable/en.html`
 
-* **リファレンスサイトテンプレート**:下に降りて～を選ぶ  `Reference Structured Learning Site Template`
+* **参照サイトテンプレート**:～を選ぶ  `Reference Structured Learning Site Template`
 
 「**次へ**」を選択します。
 
 ### 手順 2：デザイン {#step-design}
 
-デザインの手順は、テーマとブランディングバナーを選択するための2つのセクションで示されます。
+デザインの手順は、テーマとブランディングのバナーを選択する2つの節で説明します。
 
 #### コミュニティサイトテーマ {#community-site-theme}
 
-目的のスタイルを選択し、テンプレートに適用します。選択すると、テーマはチェックマーク付きでオーバーレイされます。
+目的のスタイルを選択し、テンプレートに適用します。選択すると、テーマにチェックマークが付きます。
 
 #### コミュニティサイトブランディング {#community-site-branding}
 
@@ -78,53 +77,53 @@ ht-degree: 48%
 
 ### 手順 3：設定  {#step-settings}
 
-`Next`を選択する前に、設定の手順で7つのセクションがあり、ユーザー管理、タグ付け、役割、モデレート、分析、翻訳、有効化に関連する設定にアクセスできます。
+設定の手順で`Next`を選択する前に、ユーザー管理、タグ付け、役割、モデレート、分析、翻訳およびイネーブルメントに関する設定にアクセスできる7つのセクションがあることに注意してください。
 
 #### ユーザー管理 {#user-management}
 
-[有効化コミュニティ](/help/communities/overview.md#enablement-community)はプライベートにすることをお勧めします。
+[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)はプライベートにすることをお勧めします。
 
 コミュニティサイトを非公開にするとは、匿名のサイト訪問者に対してアクセスを拒否し、自己登録やソーシャルログインを使用禁止にすることです。
 
-[ユーザー管理](/help/communities/sites-console.md#user-management)のほとんどのチェックボックスが選択解除されていることを確認します。
+[User Management](/help/communities/sites-console.md#user-management)のほとんどのチェックボックスがオフになっていることを確認します。
 
-* サイト訪問者が自己登録することを許可しない。
-* 匿名サイト訪問者がサイトに表示することを許可しないでください。
-* コミュニティメンバー間でのメッセージングを許可するかどうかを指定します。
-* Facebookへのログインを許可しない。
-* Twitterでのログインを許可しない。
+* サイト訪問者の自己登録を許可しない。
+* 匿名のサイト訪問者に対し、サイトの閲覧を許可しないでください。
+* コミュニティメンバー間でのメッセージングを許可するかどうかを指定します（オプション）。
+* facebookでのログインを許可しない。
+* twitterでのログインを許可しない。
 
 ![user-mgmt](assets/user-mgmt.png)
 
 #### タグ付け {#tagging}
 
-コミュニティコンテンツに適用できるタグは、[タグ付けコンソール](/help/sites-administering/tags.md#tagging-console)で事前に定義したAEM名前空間([チュートリアル名前空間](/help/communities/enablement-setup.md#create-tutorial-tags)など)を選択することで制御します。
+コミュニティコンテンツに適用できるタグを制御するには、[タグ付けコンソール](/help/sites-administering/tags.md#tagging-console)で以前に定義したAEM名前空間（[Tutorial namespace](/help/communities/enablement-setup.md#create-tutorial-tags)など）を選択します。
 
-また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとイネーブルメントリソースを定義するときに表示される選択肢が制限されます。重要な情報については、[タグ付け可能なリソース](/help/communities/tag-resources.md)を参照してください。
+また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとイネーブルメントリソースを定義するときに表示される選択肢が制限されます。重要な情報については、[イネーブルメントリソースのタグ付け](/help/communities/tag-resources.md)を参照してください。
 
 名前空間は先行入力検索で簡単に検索できます。例：
 
 * タイプ `tut`
 *  `Tutorial`
 
-![有効化タグ付け](assets/enablement-tagging.png)
+![イネーブルメントタグ付け](assets/enablement-tagging.png)
 
 ### 役割 {#roles}
 
-[コミュニティメンバ](/help/communities/users.md) ーロールは、[役割]セクションの設定を通じて割り当てられます。
+[コミュニティメ](/help/communities/users.md) ンバーの役割は、役割セクションの設定を使用して割り当てられます。
 
-コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験できるようにするには、先頭入力検索を使用し、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
+コミュニティメンバー（またはメンバーのグループ）がコミュニティマネージャーとしてサイトを体験するには、先頭入力検索を使用して、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
 例：
 
 * タイプ `q`
-* [クインハーパー](/help/communities/enablement-setup.md#publishcreateenablementmembers)を選択
+* [Quinn Harper](/help/communities/enablement-setup.md#publishcreateenablementmembers)を選択します。
 
 >[!NOTE]
 >
->[トンネル](/help/communities/deploy-communities.md#tunnel-service-on-author) サービスでは、パブリッシュ環境のみに存在するメンバーとグループを選択できます。
+>[トンネル](/help/communities/deploy-communities.md#tunnel-service-on-author) サービスを使用すると、パブリッシュ環境にのみ存在するメンバーとグループを選択できます。
 
-![有効化ロール](assets/site-admin.png)
+![イネーブルメントロール](assets/site-admin.png)
 
 #### モデレート {#moderation}
 
@@ -132,7 +131,7 @@ ht-degree: 48%
 
 ![moderation1](assets/moderation1.png)
 
-#### Analytics {#analytics}
+#### Analytics  {#analytics}
 
 ドロップダウンから、このコミュニティサイト用に設定されたAnalyticsクラウドサービスフレームワークを選択します。
 
@@ -140,11 +139,11 @@ ht-degree: 48%
 
 ![分析](assets/analytics.png)
 
-#### 翻訳{#translation}
+#### 翻訳 {#translation}
 
 [翻訳設定](/help/communities/sites-console.md#translation)では、UGC の翻訳を許可するかどうかと、どの言語に翻訳するかを指定します。
 
-* **機械翻訳を許可**&#x200B;を確認
+* 「**機械翻訳を許可**」をオンにします。
 * デフォルト設定を使用する
 
 ![翻訳](assets/translation.png)
@@ -153,7 +152,7 @@ ht-degree: 48%
 
 1 つのイネーブルメントコミュニティに対し、1 人以上のコミュニティ実施可能マネージャーを指定する必要があります。
 
-* **有効化マネージャ**
+* **イネーブルメントマネージャー**
 （必須） 
 `Community Enablement Managers` グループを選択して、このコミュニティサイトを管理できます。
 
@@ -161,7 +160,7 @@ ht-degree: 48%
    *  `Sirius Nilson`
 
 * **Marketing Cloud組織ID**
-（オプション）有効化レポートに [ビデオハートビート](/help/communities/analytics.md#video-heartbeat-analytics) 分析を含める場合に必要な、Adobe AnalyticsアカウントのID。
+（オプション）Adobe AnalyticsアカウントのIDです。有効化レポートにビデオハートビー [ト分析を含め](/help/communities/analytics.md#video-heartbeat-analytics) る際に必要になります。
 
 ![有効化](assets/enablement.png)
 
@@ -169,7 +168,7 @@ ht-degree: 48%
 
 ### 手順 4：コミュニティサイトの作成 {#step-create-community-site}
 
-「**作成」を選択します。**
+「**作成**」を選択します。
 
 ![プレビュー](assets/preview.png)
 
@@ -193,15 +192,15 @@ ht-degree: 48%
 
 * **サイトを開く**
 
-   ページコンポーネントの追加や設定を行うには、鉛筆アイコンを選択して、作成者編集モードでコミュニティサイトを開きます。
+   鉛筆アイコンを選択して、コミュニティサイトをオーサリング編集モードで開き、ページコンポーネントの追加や設定をおこないます。
 
 * **サイトを編集**
 
-   プロパティアイコンを選択して、コミュニティサイトを開き、タイトルやテーマの変更など、プロパティの変更を行います。
+   プロパティアイコンを選択してコミュニティサイトを開き、タイトルやテーマの変更などのプロパティを変更します。
 
 * **サイトを公開**
 
-   コミュニティサイトを（デフォルトでlocalhost:4503に）公開するには、世界のアイコンを選択します。
+   世界のアイコンを選択してコミュニティサイトを公開します（デフォルトではlocalhost:4503に公開）。
 
 * **サイトを書き出し**
 
@@ -221,7 +220,7 @@ ht-degree: 48%
 
 サイトが公開されると、次のようなメッセージが表示されます。
 
-![サイトが公開した](assets/site-published.png)
+![site-published](assets/site-published.png)
 
 ## コミュニティのユーザーとユーザーグループ {#community-users-user-groups}
 
@@ -229,26 +228,26 @@ ht-degree: 48%
 
 新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。詳しくは、[コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites)を参照してください。
 
-この新しいコミュニティサイトでは、手順1でサイト名を「enable」にした場合、発行環境に存在する新しいユーザーグループは、[Communities Members &amp; Groups console](/help/communities/members.md#groups-console)から確認できます。
+この新しいコミュニティサイトでは、手順1でサイト名「enable」を指定すると、パブリッシュ環境に存在する新しいユーザーグループが[コミュニティメンバーとグループコンソール](/help/communities/members.md#groups-console)から表示されます。
 
 ![community_usergroup](assets/community_usergroup.png)
 
 ### 「Community Enable Members」グループへのメンバー割り当て{#assign-members-to-community-enable-members-group}
 
-作成者は、トンネルサービスを有効にして、初回セットアップ](/help/communities/enablement-setup.md#publishcreateenablementmembers)で作成した[ユーザーを、新しく作成したコミュニティサイトのコミュニティメンバーグループに割り当てることができます。
+オーサー環境で、トンネルサービスを有効にすると、初期セットアップ](/help/communities/enablement-setup.md#publishcreateenablementmembers)中に作成された[ユーザーを、新しく作成したコミュニティサイトのコミュニティメンバーグループに割り当てることができます。
 
 コミュニティグループコンソールでは、メンバーを個別に追加したり、グループのメンバーシップを使用して追加したりできます。
 
 この例では、グループ`Community Ski Class`がグループ`Community Enable Members`のメンバーとして追加され、メンバー`Quinn Harper`も追加されます。
 
-* **コミュニティ、グループ**&#x200B;コンソールに移動します
-* *コミュニティを有効にするメンバー*&#x200B;グループを選択
-* 「ski」を「**グループ追加のメンバー**」検索ボックスに入力します
-* *コミュニティスキークラス*&#x200B;を選択（学習者のグループ）
-* 検索ボックスに「クイン」と入力します。
-* *クインハーパー*&#x200B;を選択します（有効化リソースの連絡先）
+* **コミュニティ/グループ**&#x200B;コンソールに移動します。
+* *Community Enable Members*&#x200B;グループを選択します。
+* 「**Add Members To Group**」検索ボックスに「ski」と入力します。
+* 「*Community Ski Class*」（学習者のグループ）を選択します。
+* 検索ボックスに「quinn」と入力します。
+* *Quinn Harper*（イネーブルメントリソースの連絡先）を選択します。
 
-* **保存**&#x200B;を選択
+* 「**保存**」を選択します。
 
 ![edit-group-settings](assets/edit-group-settings.png)
 
@@ -260,9 +259,9 @@ ht-degree: 48%
 
 ### 認証エラーの設定 {#configure-for-authentication-error}
 
-サイトが設定され、発行にプッシュされたら、発行インスタンスで[ログインマッピング](/help/communities/sites-console.md#configure-for-authentication-error)(`Adobe Granite Login Selector Authentication Handler`)を設定します。 ログイン資格情報が正しく入力されていない場合、認証エラーによりコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
+サイトが設定され、パブリッシュにプッシュされたら、パブリッシュインスタンス上で[ログインマッピング](/help/communities/sites-console.md#configure-for-authentication-error)(`Adobe Granite Login Selector Authentication Handler`)を設定します。 ログイン資格情報が正しく入力されない場合、認証エラーによってコミュニティサイトのログインページが再表示され、エラーメッセージが表示されるという利点があります。
 
-&lt;a0/追加>は次のようになります。`Login Page Mapping`
+`Login Page Mapping`を次のように追加します。
 
 * `/content/sites/enable/en/signin:/content/sites/enable/en`
 
@@ -274,24 +273,24 @@ ht-degree: 48%
 
 開始するには、次のようにします。：
 
-1. 公開時に、CRXDEにアクセスし、管理者権限でログインします
+1. 公開時に、CRXDEにアクセスし、管理者権限でログインします。
 
-   * 例えば、[https://localhost:4503/crx/de](https://localhost:4503/crx/de)を参照し、`admin/admin`でログインします。
+   * 例えば、[https://localhost:4503/crx/de](https://localhost:4503/crx/de)を参照し、`admin/admin`を使用してログインします。
 
-1. プロジェクトブラウザで`/etc/map`を展開します。
-1. `http`ノードを選択
+1. プロジェクトブラウザで、`/etc/map`を展開します。
+1. `http`ノードを選択します。
 
-   * **ノードを作成**&#x200B;を選択
+   * 「**ノードを作成**」を選択します。
 
       * **** Namelocalhost.4503
 
-         (do *not* use &#39;:&#39;)
+         （*not*&#x200B;で、「:」を使用します）。
 
-      * **** [タイプ：マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+      * **** [型：マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
-1. 新しく作成された`localhost.4503`ノードを選択
+1. 新しく作成された`localhost.4503`ノードを選択した状態
 
-   * 追加特性
+   * プロパティの追加
 
       * **名前**：sling:match
       * **タイプ**：String
@@ -299,7 +298,7 @@ ht-degree: 48%
 
    （「$」文字で終わる必要があります）
 
-   * 追加特性
+   * プロパティの追加
 
       * **名前**：sling:internalRedirect
       * **タイプ**：String
@@ -314,7 +313,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->無効にするには、`sling:match`プロパティの値の前に「x」 — `xlocalhost.4503/$` — と&#x200B;**「すべて保存**」を付けます。
+>無効にするには、`sling:match`プロパティの値の前に「x」を付け、`xlocalhost.4503/$`と&#x200B;**すべて保存**&#x200B;を付けます。
 
 ![change-default-homepage](assets/change-default-homepage.png)
 
@@ -326,7 +325,7 @@ ht-degree: 48%
 
 #### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
 
-正規式`sling:match`文字列の末尾の「**$**」が重要なので、正確に`https://localhost:4503/`のみがマッピングされます。そうでない場合、URLのserver:portの後に存在するパスの前にリダイレクト値が付加されます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
+正規表現`sling:match`文字列の末尾にある「**$**」は重要なので、正確に`https://localhost:4503/`のみがマッピングされます。そうでない場合、URLのserver:portの後に存在する任意のパスの前にリダイレクト値が付加されます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ## コミュニティサイトの変更 {#modifying-the-community-site}
 
@@ -344,11 +343,11 @@ ht-degree: 48%
 
 このコミュニティサイトに選択されたコミュニティサイトテンプレートには、カタログ機能が含まれています。
 
-含まれていない場合は、カタログ機能を簡単に追加できます。これにより、有効化リソースや学習パスに割り当てられていないコミュニティの他のメンバーが、カタログから有効化リソースを選択できるようになります。
+含まれていない場合は、カタログ機能を簡単に追加できます。これにより、イネーブルメントリソースや学習パスに割り当てられていないコミュニティの他のメンバーが、カタログからイネーブルメントリソースを選択できるようになります。
 
 サイト構造にカタログ機能が既に含まれている場合、タイトルが変わることがあります。
 
-サイトの構造を変更するには、**[!UICONTROL コミュニティ]**/**[!UICONTROL サイト]**&#x200B;コンソールに移動し、`enable`フォルダーを開き、**サイト**&#x200B;を編集アイコンを選択して`Enablement Tutorial`のプロパティにアクセスします。
+サイトの構造を変更するには、**[!UICONTROL コミュニティ]** / **[!UICONTROL サイト]**&#x200B;コンソールに移動し、`enable`フォルダーを開いて、**サイトを編集**&#x200B;アイコンを選択し、`Enablement Tutorial`のプロパティにアクセスします。
 
 構造パネルを選択し、カタログを追加するか、既存のカタログを変更します。
 
@@ -369,4 +368,3 @@ ht-degree: 48%
 右上隅の「**保存**」を選択してコミュニティサイトに対する変更を保存します。
 
 その後、サイトを再び&#x200B;**公開**&#x200B;します。
-
