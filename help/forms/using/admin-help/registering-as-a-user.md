@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 100%
 
 ---
-
 
 # ユーザーの登録 {#registering-as-a-user}
 
@@ -70,4 +69,3 @@ ht-degree: 100%
 1. ページの右上隅にある「オプション」をクリックします。外部ユーザーページが表示されます。
 1. 「パスワードの変更」を選択し、「古いパスワード」ボックスに一時パスワードを入力します。
 1. 「新規パスワード」ボックスに新しいパスワードを入力し、「パスワードの確認」ボックスにパスワードを再入力します。
-
