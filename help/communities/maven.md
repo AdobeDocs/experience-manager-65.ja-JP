@@ -2,29 +2,28 @@
 title: コミュニティでの Maven の使用
 seo-title: コミュニティでの Maven の使用
 description: AEM Uber API jar
-seo-description: AEM UBER API jar
+seo-description: AEM Uber API jar
 uuid: ea37a89a-db6c-4018-8ab9-f5717e6c0421
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a726c904-aadd-4678-be84-9e05808ab8be
-translation-type: tm+mt
-source-git-commit: 5e7cc6ab82ba450b9be7c97266ec4c81b18fe3d2
+exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 34%
 
 ---
 
-
 # コミュニティでの Maven の使用 {#using-maven-for-communities}
 
 ## 概要 {#overview}
 
-AEM Communitiesのドキュメントのこのセクションには、次のセクションが含まれます。
+AEM Communitiesドキュメントのこの節には、次の内容も含まれます。
 
-* [Apache Mavenを使用したAEMプロジェクトの構築を参照してください](../../help/sites-developing/ht-projects-maven.md)。
+* [Apache Mavenを使用したAEMプロジェクトの構築](../../help/sites-developing/ht-projects-maven.md)を参照してください。
 
 個々のアーティファクトを置き換える「uber」アーティファクトは1つだけです。
 
@@ -32,7 +31,7 @@ AEM Communitiesのドキュメントのこのセクションには、次のセ�
 
 >[!NOTE]
 >
->AEM 6.4以降では、Communities APIは明示的にリリースされません。 すべてのCommunities APIがUber jar自体に含まれるようになりました。
+>AEM 6.4以降では、Communities APIは明示的にリリースされていません。 すべてのCommunities APIがUber jar自体に含まれるようになりました。
 >
 >コミュニティのリリースを常に最新に保つことをお勧めします。
 >
@@ -51,7 +50,7 @@ AEM Communitiesのドキュメントのこのセクションには、次のセ�
 
 >[!NOTE]
 >
->最新のUber jarアーティファクトを特定するには、[AEM Uber jarリポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
+>[AEM Uber jarリポジトリ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照して、最新のUber jarアーティファクトを特定します。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:
