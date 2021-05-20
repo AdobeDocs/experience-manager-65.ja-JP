@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 95%
 
 ---
-
 
 # アプリケーションの作成および設定アクション{#application-create-and-configuration-actions}
 
@@ -34,7 +33,7 @@ ht-degree: 95%
 >
 >ダッシュボードは、アプリのコンテンツ、メタデータおよび AEM Mobile On-Demand の接続ステータスの概要を把握できる一連の便利なタイルです。
 >
->詳しくは、[AEM Mobileアプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+>詳しくは、[AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
 **On-Demand アプリを作成するには：**
 
@@ -43,7 +42,7 @@ ht-degree: 95%
 1. 「**作成**」をクリックし、ドロップダウンから「**アプリ**」を選択します。
 1. モバイルアプリのテンプレートを選択し、「**次へ**」をクリックします。
 1. 「**タイトル**」、「**名前**」、「**説明**」など、アプリのプロパティを入力します。
-1. 「**Next**」をクリックします。
+1. 「**次へ**」をクリックします。
 1. クラウド設定の詳細がわかっている場合は入力し、それ以外の場合は「**作成**」をクリックします。
 1. 「**完了**」をクリックすると、新しい AEM モバイルアプリがカタログに表示されます。
 
@@ -65,7 +64,7 @@ ht-degree: 95%
 
 アプリケーションダッシュボードから On-Demand アプリを作成したら、次のステップでは、アプリをクラウド設定に関連付けます。
 
-詳しくは、[Appをクラウド設定に関連付ける](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
+詳しくは、[アプリのクラウド設定への関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
 
 ### さらに先のステップ {#getting-ahead}
 
