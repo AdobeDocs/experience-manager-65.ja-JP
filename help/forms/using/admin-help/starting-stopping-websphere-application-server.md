@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: bcd16691-67ab-4694-9e6b-c9d3e0c7bf0b
-translation-type: tm+mt
-source-git-commit: 67ea825215d1ca7cc2e350ed1c128c3146de45ec
+exl-id: 1a4e8f20-0644-4c96-9f52-f7a59521eac9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 82%
 
 ---
-
 
 # WebSphere Application Server の起動と停止 {#starting-and-stopping-websphere-application-server}
 
@@ -27,7 +26,7 @@ ht-degree: 82%
 1. コマンドプロンプトで`[appserver root]/bin`ディレクトリに移動します。
 1. 次のコマンドを入力します。*server_name* には、WebSphere Application Server の名前を指定します。
 
-   * (Windows)`serverStatus.bat`*server_name*
+   * (Windows) `serverStatus.bat`*server_name*
    * （Linux、UNIX）/ `serverStatus.sh`*server_name*
 
 ## WebSphere Application Server の起動 {#start-websphere-application-server}
@@ -35,7 +34,7 @@ ht-degree: 82%
 1. コマンドプロンプトで`[appserver root]/bin`ディレクトリに移動します。
 1. 次のコマンドを入力します。*server_name* には、WebSphere Application Server の名前を指定します。
 
-   * (Windows)`startServer.bat`*server_name*
+   * (Windows) `startServer.bat`*server_name*
    * （Linux、UNIX）/ `startServer.sh`*server_name*
 
 ## WebSphere Application Server の停止 {#stop-websphere-application-server}
@@ -43,6 +42,5 @@ ht-degree: 82%
 1. コマンドプロンプトで`[appserver root]/bin`ディレクトリに移動します。
 1. 次のコマンドを入力します。*server_name* には、WebSphere Application Server の名前を指定します。
 
-   * (Windows)`stopServer.bat`*server_name*
+   * (Windows) `stopServer.bat`*server_name*
    * （Linux、UNIX）/ `stopServer.sh`*server_name*
-
