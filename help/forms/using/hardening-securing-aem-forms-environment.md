@@ -7,14 +7,13 @@ uuid: abca7e7c-38c3-44f5-8d8a-4615cfce26c6
 topic-tags: Security
 discoiquuid: b1bd04bf-0d6d-4e6b-8c7c-eafd1a24b5fe
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1463'
 ht-degree: 95%
 
 ---
-
 
 # OSGi 環境における AEM Forms のセキュリティの強化 {#hardening-and-securing-aem-forms-on-osgi-environment}
 
@@ -41,11 +40,11 @@ AEM Forms は非常にカスタマイズ性が高いため、さまざまな環�
 
 ### エンドポイントのアクセスの制限   {#limit-open-endpoints}
 
-外部のファイアウォールを使用して、エンドユーザーによる AEM Forms パブリッシュファームへのアクセスを制限することができます。また、内部のファイアウォールを使用して、社内の他の要素（オーサーインスタンス、処理インスタンス、データベースなど）とパブリッシュファーム間のアクセスを制限することもできます。エンドユーザーおよび組織の要素内で、限られた数のAEM FormsURLへのアクセスをファイアウォールで有効にできるようにします。
+外部のファイアウォールを使用して、エンドユーザーによる AEM Forms パブリッシュファームへのアクセスを制限することができます。また、内部のファイアウォールを使用して、社内の他の要素（オーサーインスタンス、処理インスタンス、データベースなど）とパブリッシュファーム間のアクセスを制限することもできます。ファイアウォールを使用して、エンドユーザーや組織の要素内の限られた数のAEM Forms URLへのアクセスを許可する。
 
 #### 外部ファイアウォールの設定  {#configure-external-firewall}
 
-外部のファイアウォールを設定することにより、AEM Forms の特定の URL に対して、インターネットへのアクセスを許可することができます。アダプティブフォーム、HTML5、Correspondence Managementレターの入力または送信、またはAEM Formsサーバーへのログインには、次のURLへのアクセスが必要です。
+外部のファイアウォールを設定することにより、AEM Forms の特定の URL に対して、インターネットへのアクセスを許可することができます。アダプティブフォーム、HTML5、Correspondence Managementレターの入力や送信、またはAEM Formsサーバーへのログインには、これらのURLへのアクセスが必要です。
 
 <table> 
  <tbody>
@@ -191,7 +190,7 @@ AEM Forms では、事前に定義された場所と一時フォルダーにデ�
 
 ## AEM Forms 環境のイントラネット要素の保護  {#secure-intranet-elements-of-an-aem-forms-environment}
 
-通常、処理クラスタと Forms ワークフローアドオン（JEE 上の AEM Forms）は、ファイアウォールの背後で稼働します。そのため、これらのクラスタとアドオンのセキュリティは確保されています。これらの環境を強化する手順は、引き続きいくつか実行できます。
+通常、処理クラスタと Forms ワークフローアドオン（JEE 上の AEM Forms）は、ファイアウォールの背後で稼働します。そのため、これらのクラスタとアドオンのセキュリティは確保されています。これらの環境を強化するための手順をいくつか実行できます。
 
 ### 処理クラスターの保護 {#secure-processing-cluster}
 
