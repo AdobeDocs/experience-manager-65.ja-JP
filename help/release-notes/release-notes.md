@@ -1,14 +1,13 @@
 ---
 title: ' [!DNL Adobe Experience Manager] 6.5の一般的なリリースノート'
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能情報、インストール方法および詳細な変更リストが記載されています。'
-translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 65%
 
 ---
-
 
 # [!DNL Adobe Experience Manager] 6.5{#general-release-notes-for-adobe-experience-manager}の一般的なリリースノート
 
@@ -19,39 +18,39 @@ ht-degree: 65%
 | バージョン | 6.5 |
 | 種類 | メジャーリリース |
 | 正式版の日付 | 2019 年 4 月 8 日 |
-| 推奨されるアップデート | [AEM最近のアップデート](https://helpx.adobe.com/jp/experience-manager/aem-releases-updates.html)を参照してください。 |
+| 推奨されるアップデート | [AEM最近の更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)を参照してください。 |
 
 ### 参考情報 {#trivia}
 
-このバージョンの[!DNL Adobe Experience Manager]のリリースサイクルは、2018年4月4日を起点とし、23回にわたる品質保証とバグ修正を経て2019年3月28日に終了しました。 このリリースで修正された、機能強化と新機能を含むお客様関連の問題の総数は 1345 件です。   
+このバージョンの[!DNL Adobe Experience Manager]のリリースサイクルは2018年4月4日に開始され、23回の品質保証とバグ修正を繰り返し、2019年3月28日に終了しました。 このリリースで修正された、機能強化と新機能を含むお客様関連の問題の総数は 1345 件です。   
 
-[!DNL Adobe Experience Manager] 6.5は、2019年4月8日から一般に提供されています。
+[!DNL Adobe Experience Manager] 6.5は、2019年4月9日以降、一般に提供されています。
 
 ![AEM 6.5 ログイン画面](/help/assets/assets/aem65-login-v4.png)
 
 ## 新機能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5は、 [!DNL Adobe Experience Manager] 6.4コードベースへのアップグレードリリースです。新機能および強化機能、お客様向けの重要な修正、お客様向けの優先順位の高い機能強化、製品の安定性向上のための全般的なバグ修正が加えられています。また、SP4までの[!DNL Adobe Experience Manager] 6.4 Service Packのリリースも含まれます。
+[!DNL Adobe Experience Manager] 6.5は、 [!DNL Adobe Experience Manager] 6.4コードベースのアップグレードリリースです。新機能および強化機能、お客様向けの重要な修正、お客様向けの優先順位の高い機能強化、製品の安定性向上のための全般的なバグ修正が加えられています。また、SP4までの[!DNL Adobe Experience Manager] 6.4 Service Packリリースも含まれます。
 
-以下のリストで概要を説明します。その後のページでは詳細をリストします。
+以下のリストは概要を示しています。以降のページでは詳細を示します。
 
 ### [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
 変更点の完全なリストについては、[AEM の基盤](/help/release-notes/wcm-platform.md)を参照してください。
 
-[!DNL Adobe Experience Manager] 6.5のプラットフォームは、OSGiベースのフレームワーク（Apache SlingおよびApache Felix）の更新版とJava Content Repositoryの上に構築されます。Apache Jackrabbit Oak 1.10.2。
+[!DNL Adobe Experience Manager] 6.5のプラットフォームは、更新されたバージョンのOSGiベースのフレームワーク（Apache SlingおよびApache Felix）とJavaコンテンツリポジトリの上に構築されています。Apache Jackrabbit Oak 1.10.2.
 
 Quickstart は、サーブレットエンジンとして Eclipse Jetty 9.4.15 を使用します。
 
 #### Java サポート  {#java-support}
 
-* Java 11および既にサポートされているJava 8の新しいサポート。
+* Java 11の新しいサポートと、既にサポートされているJava 8。
 * 最適なパフォーマンスを得るには、デフォルトの GC 値を他の値に置き換えてください。詳しくは、[インストールと更新](/help/sites-deploying/custom-standalone-install.md)の節を参照してください。
-* Java 11およびJava 8のメンテナンスアップデートは、Oracleで公開されていない場合、AEM関連のプロジェクトでのお客様の利用を目的として、Adobeから配布されます。
+* Java 11およびJava 8のメンテナンスアップデートは、AEM関連のプロジェクトでのお客様向けの使用を目的として、Oracleから公開されていない場合に、Adobe別に配布されます。
 
 #### Java の開発 {#java-development}
 
-* 現在は[Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)の2つのバージョンがあり、非推奨とマークされていないパブリックインターフェイスを持つ推奨バージョンと、非推奨とマークされたインターフェイスを含むバージョンがあります。
+* Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)には[2つのバージョンがあり、廃止予定とマークされていないパブリックインターフェイスを備えた推奨バージョンと、廃止予定とマークされたインターフェイスを含むバージョンがあります。
 
 #### ユーザーインターフェイス {#user-interface}
 
@@ -59,8 +58,8 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 * ユーザーとグループの新しい権限管理UI。
 * 列表示では、画面上に表示されるエントリのみを読み込み、それ以外のエントリはユーザーがスクロールを開始した場合にのみ読み込まれるようになりました。リストおよびカード表示では、AEM 6.0 以降、この機能が既に実装されています（AEM 6.4 で改善されました）。。
-* 列表示に、該当する場合にページ/アセットのワークフローステータスが含まれるようになりました。
-* [すべて選択](/help/sites-authoring/basic-handling.md#select-all)アクションを使用すると、同じフォルダー内のすべてのページ/アセットに対して、簡単にアクションを実行できます。
+* 列表示に、該当する場合、ページ/アセットのワークフローステータスが含まれるようになりました。
+* [すべて](/help/sites-authoring/basic-handling.md#select-all)を選択アクションを使用すると、同じフォルダー内のすべてのページ/アセットに対してアクションをすばやく実行できます。
 * 「[すべてを選択](/help/sites-authoring/basic-handling.md#select-all)」アクションは、読み込まれたページ／アセットだけでなく、すべてのページ／アセットに対してアクションを実行しようとします。バルクアクションを処理するようにアップグレードされていない場合は、警告ダイアログが表示されます。
 
 >[!CAUTION]
@@ -69,8 +68,8 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 #### 検索およびインデックス作成 {#indexing-and-search}
 
-* Oak 内の検索では動的ファセットをサポートするようになりました。例えば、アセット検索のフィルターレールに、結果の予測量が表示されます。
-* QueryBuilderが拡張され、動的ファセットを結果に提供するようになりました。
+* Oak 内の検索では動的ファセットをサポートするようになりました。例えば、アセット検索のフィルターレールには、結果の予測量が表示されます。
+* QueryBuilderが拡張され、動的ファセットを使用して結果を提供するようになりました。
 
 #### アップグレード {#upgrade}
 
@@ -91,7 +90,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 SPA のサポートは AEM 6.4 SP2 の一部として導入されたものですが、AEM 6.5 ではさらに以下が可能になりました。
 
 * テンプレートエディターを使用して、AEM で編集可能な SPA の部分を編集および設定できます。
-* マルチサイト管理を使用して、国、フランチャイズ、または白いラベルのSPAエクスペリエンスを作成します。
+* マルチサイト管理を使用して、国、フランチャイズ、またはホワイトラベルの付いたSPAエクスペリエンスを作成する
 
 #### ヘッドレスコンテンツ管理 {#headless-content-management}
 
@@ -122,17 +121,17 @@ AEM では、様々な形式で様々なスタックレベルからコンテン�
 * 動的プレースホルダーを使用して、データでトリガーされるコンテンツの場所または設定別にパーソナライズできます。
 * Adobe Analytics と AEM Screens Player の連携でインサイトの統合が促進されます。
 
-AEM Screensへの変更の詳細については、『[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/aem-screens-introduction.html)』の「リリースノート」を参照してください。
+AEM Screensの変更点について詳しくは、『[AEM Screensユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)』のリリースノートを参照してください。
 
 ### [!DNL Experience Manager Assets] {#experience-manager-assets}
 
-[AEM 6.5 Assetsリリースノート](/help/release-notes/assets.md)の変更の完全リスト。
+変更点の完全なリストは、[AEM 6.5 Assetsリリースノート](/help/release-notes/assets.md)を参照してください。
 
 AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリエイティブおよびマーケティングロールの生産性を高めるため、以下の機能およびき機能強化が導入されています。
 
 #### Adobe Creative Cloud との連携  {#integration-with-adobe-creative-cloud}
 
-[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)（Photoshop、Illustrator、InDesign などの Adobe Creative Cloud アプリケーションを使用するクリエイティブユーザー向けのアプリ内エクスペリエンス）の導入により、コンテンツ作成プロセスにおけるクリエイティブ担当者とマーケティング担当者のコラボレーションが効率化されます。AEMデスクトップアプリケーションは、任意のファイルタイプと任意のデスクトップアプリケーションを使用して、デスクトップ上のAEMのアセットを操作するユーザーのニーズを引き続きサポートします。
+[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)（Photoshop、Illustrator、InDesign などの Adobe Creative Cloud アプリケーションを使用するクリエイティブユーザー向けのアプリ内エクスペリエンス）の導入により、コンテンツ作成プロセスにおけるクリエイティブ担当者とマーケティング担当者のコラボレーションが効率化されます。AEMデスクトップアプリケーションは、任意のファイルタイプと任意のデスクトップアプリケーションを使用して、デスクトップ上でAEMのアセットを操作するユーザーのニーズを引き続きサポートします。
 
 さらに、AEM は Adobe Stock と連携しているので、ユーザーは AEM Web UI から直接 Adobe Stock アセットの検索、プレビュー、ライセンス取得、保存をおこなえます。
 
@@ -140,7 +139,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### Connected Assets {#connected-assets}
 
-「Connected Assets」機能は、中央AEM AssetsDAM展開の資産を活用する必要のあるAEM Sites展開の多い大規模な展開を対象としています。 一元的に管理されるアセットの管理を改善しながら、さまざまなサイトの導入に対するアセットの供給を効率的に行うことができます。
+Connected Assetsの機能は、中央のAEM Assets DAMデプロイメントのアセットを活用する必要のあるAEM Sitesのデプロイメントを多数含む、大規模なデプロイメントを対象としています。 これにより、一元管理されたアセットに関するガバナンスを改善しながら、様々なSitesデプロイメントへのアセットの提供を効率化できます。
 
 ### Dynamic Media {#dynamic-media}
 
@@ -170,7 +169,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 * アダプティブフォームおよびインタラクティブコミュニケーションテーブルの並べ替え
 * フォームデータモデルでの入力データの自動検証
 
-新機能および強化された機能とドキュメントのリソースについては、[AEM 6.5Forms](/help/forms/using/whats-new.md)の新機能および拡張機能の概要を参照してください。
+新機能および改善された機能とドキュメントのリソースについて詳しくは、 AEM 6.5 Forms](/help/forms/using/whats-new.md)の新機能および機能強化の概要を参照してください。[
 
 ### [!DNL Experience Manager Communities] {#communitiesreleasenotes}
 
@@ -178,33 +177,33 @@ AEM 6.5 では、Communities に新機能や機能強化が加えられていま
 
 * ユーザー生成コンテンツのオーサリング中における登録メンバーのタグ付け（@メンション）がサポートされています。
 * グループメンバーへのダイレクトメッセージの一括送信がサポートされるようになりました。
-* カスタムフィルターが開発され一括モデレート UI に追加されました。タグによるフィルタリングをデモする[サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)は、類似したカスタムフィルターを開発するための基盤として使用できます。
+* カスタムフィルターが開発され一括モデレート UI に追加されました。タグによるフィルタリングを示す[サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)は、類似のカスタムフィルターを開発するための基礎として使用できます。
 * 新しいリスト表示には、改善された一括モデレート UI が用意されています。
 * 1 人のコミュニティ管理者ではなく、様々なコミュニティサイトおよびネストされたグループの管理者を個別に割り当てることができます。
 * AEM 6.5 Communitiesのイネーブルメント機能は、[(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)エンジンをサポートします。
 * アクセシビリティを向上させるために、イネーブルメントコンポーネントでキーボードナビゲーションをサポートしています。
 * MSRP および DSRP. の設定時に Apache Solr 7.0 を選択できます。
 
-変更の詳細なリストについては、[AEM 6.5 Communitiesリリースノート](/help/release-notes/communities-release-notes.md)を参照してください。
+変更点の詳細なリストについては、[AEM 6.5 Communitiesリリースノート](/help/release-notes/communities-release-notes.md)を参照してください。
 
 ### [!DNL Experience Manager Livefyre] {#experience-manager-livefyre}
 
-使用している AEM 6.5 インスタンスを Livefyre と連携させることができます。[LivefyreとAEM](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)の統合方法を参照してください。
+使用している AEM 6.5 インスタンスを Livefyre と連携させることができます。[LivefyreとAEM](https://docs.adobe.com/content/help/en/experience-manager-64/administering/integration/livefyre.html)を統合する方法を参照してください。
 
 ### お客様中心の開発を活用{#leverage-customer-focused-development}
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。[Adobe Marketing Cloudサポートポータル](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)は、Adobe機能強化と欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。有料サポート、保証付きの問題、お客様が支払った機能強化に対する開発が優先されます。
+アドビでは、お客様中心のバグ修正と機能強化リクエストの開発に関する情報収集、優先順位付け、追跡の手順およびプロセスを整備しています。[Adobe Marketing Cloudサポートポータル](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html)は、Adobe機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能な場合はカスタマーケアで特定および解決されます。研究開発部門にエスカレートされた場合は、すべての顧客情報が収集され、優先順位付けとレポートに使用されます。開発においては、有料サポート、保証に関する問題、お客様が支払った機能強化が優先されます。
 
 この優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更がおこなわれました。
 
 ## このリリースに含まれるファイルのリスト {#list-of-files-that-are-part-of-the-release}
 
-**Foundation**
+**基盤**
 
-* スタンドアロンクイックスタート：`cq-quickstart-6.5.0.jar`.
-* Application Server Quickstart:`cq-quickstart-6.5.0.war`.
+* スタンドアロンのクイックスタート：`cq-quickstart-6.5.0.jar`.
+* アプリケーションサーバーのクイックスタート：`cq-quickstart-6.5.0.war`.
 * 様々なWebサーバーおよびプラットフォーム向けのDispatcher 4.3.2以降。 [ダウンロードリンク](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/release-notes.html)を参照
 * Eclipse IDE 用プラグイン（[詳細およびダウンロード](/help/sites-developing/aem-eclipse.md)）
 
@@ -236,10 +235,10 @@ AEM 6.5 では、Communities に新機能や機能強化が加えられていま
 * 強化された PDF Rasterizer を追加するためのパッケージ（[詳細](/help/assets/aem-pdf-rasterizer.md)）
 * 強化された RAW 画像のサポートを追加するためのパッケージ（[詳細](/help/assets/camera-raw.md)）
 
-**フォーム**
+**Forms**
 
 * [AEM Forms の機能パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)
-* [AEM FormsOSGiクライアントSDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
+* [AEM Forms OSGi Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/6.0.80/)
 
 ## 言語 {#languages}
 
@@ -258,25 +257,25 @@ AEM 6.5 では、Communities に新機能や機能強化が加えられていま
 
 [!DNL Experience Manager] 6.5 は、中国語エンコーディング規格の使用に関する GB18030-2005 CITS の認定を受けています。
 
-## インストールと更新{#install-update}
+## {#install-update}のインストールと更新
 
-設定要件については、[インストール手順](/help/sites-deploying/custom-standalone-install.md)を参照してください。
+設定の要件については、[インストール手順](/help/sites-deploying/custom-standalone-install.md)を参照してください。
 
-詳細な手順については、[アップグレードドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
+詳しい手順については、[アップグレードのドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
-[AEM 6.5技術要件](/help/sites-deploying/technical-requirements.md)のサポートレベルを含む、サポートされているプラットフォームの完全なマトリックスを見つけます。
+サポートレベルを含む、サポート対象のプラットフォームの完全なマトリックスを[AEM 6.5の技術要件](/help/sites-deploying/technical-requirements.md)で確認します。
 
 >[!NOTE]
 >
->Oracleは、OracleJava SE製品の長期サポート(LTS)モデルに移行しました。 Java 9および10は、OracleのLTS以外のリリースです。[OracleJava SEのサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照。 Adobeは、実稼働環境でのみAEMを実行するJavaのLTSリリースをサポートしています。 AEM 6.5では、Java 11が推奨されるバージョンです。
+>Oracleは、OracleJava SE製品の長期サポート(LTS)モデルに移行しました。 Java 9と10は、LTS以外のリリースで、Oracle別です。[OracleJava SEサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照してください。 Adobeは、AEMを実稼動環境でのみ実行するためのJavaのLTSリリースをサポートしています。 AEM 6.5で使用する場合は、Java 11をお勧めします。
 
 ## 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 
 アドビでは、製品の機能を常時評価して、さらに強力なバージョンへの置き換えの計画や、将来の展望や拡張に備えた部分的な再実装の決定を継続的におこなっています。
 
-[!DNL Adobe Experience Manager] 6.5の場合、[廃止された機能と削除された機能のリスト](/help/release-notes/deprecated-removed-features.md)を読んでください。 このページには、近い将来におこなわれる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
+[!DNL Adobe Experience Manager] 6.5の場合、[廃止および削除された機能](/help/release-notes/deprecated-removed-features.md)のリストを読みます。 このページには、近い将来におこなわれる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
 
 ## 既知の問題 {#known-issues}
 
@@ -284,10 +283,10 @@ AEM 6.5 では、Communities に新機能や機能強化が加えられていま
 
 ### 製品のダウンロードとサポート（制限付きサイト） {#product-download-and-support-restricted-sites}
 
-次のサイトは、お客様のみ利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
+次のサイトは、のお客様のみご利用いただけます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード](https://licensing.adobe.com/).
 
-* [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)の追加機能に対する製品アップデート、パッチ、パッケージ。
+* [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)の追加機能の製品アップデート、パッチ、パッケージ。
 
-* [Admin Consoleを介したカスタマーサポート](https://adminconsole.adobe.com/)。詳しくは、[新しいAdobeカスタマーサポート体験](https://docs.adobe.com/content/help/en/customer-one/using/home.html)を参照してください。
+* [Admin Console](https://adminconsole.adobe.com/)を介したカスタマーサポート。詳しくは、[新しいAdobeカスタマーサポートエクスペリエンス](https://docs.adobe.com/content/help/en/customer-one/using/home.html)を参照してください。
