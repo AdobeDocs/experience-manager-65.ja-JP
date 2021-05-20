@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 3458471a-9815-463e-8044-68631073863c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 88%
 
 ---
-
 
 # アダプティブフォームおよび HTML5 フォームの外観フレームワーク  {#appearance-framework-for-adaptive-and-html-forms}
 
@@ -53,7 +52,7 @@ ht-degree: 88%
   </tr>
   <tr>
    <td>screenReaderText</td>
-   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームには値が提供され、値を上書きできます。<br /> </td>
+   <td>スクリーンリーダーはこの値を使用して、フィールドについての情報を読み上げます。フォームが値を提供し、値を上書きできます。<br /> </td>
   </tr>
   <tr>
    <td>tabIndex</td>
@@ -68,7 +67,7 @@ ht-degree: 88%
    <td>ウィジェットの高さ。高さはピクセルで指定されます。 </td>
   </tr>
   <tr>
-   <td>幅</td>
+   <td>width</td>
    <td>ウィジェットの幅。高さはピクセルで指定されます。</td>
   </tr>
   <tr>
@@ -106,22 +105,22 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>このイベントはフィールドを離れるたびにトリガーされます。エンジンがフィールドの値を設定し、その「終了」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>このイベントはフィールドを離れるたびにトリガーされます。エンジンがフィールドの値を設定し、その「終了」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>このイベントはフィールドで書かれた「変更」スクリプトの実行を可能にします。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>このイベントはフィールドで書かれた「変更」スクリプトの実行を可能にします。イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>このイベントはフィールドがクリックされるたびにトリガーされます。それはエンジンがフィールドで書かれた「クリック」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>このイベントはフィールドがクリックされるたびにトリガーされます。それはエンジンがフィールドで書かれた「クリック」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
 
 #### ウィジェットで実装された API {#apis-implemented-by-widget}
 
-外観フレームワークはカスタムウィジェットで実装されたウィジェットの関数をいくつか呼び出します。ウィジェットは次の関数を実装する必要があります。
+外観フレームワークはカスタムウィジェットで実装されたウィジェットの関数をいくつか呼び出します。ウィジェットは、次の関数を実装する必要があります。
 
 <table>
  <tbody>
@@ -135,10 +134,10 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>click : function()</td>
-   <td>フォーカスをフィールドに移し、XFA_CLICK_イベントを呼び出します。</td>
+   <td>フィールドにフォーカスを置き、XFA_CLICK_EVENTを呼び出します。</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:エラー<br /> <em>errorType：を表す文字列</em>文字列("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:エラー<br /> <em>errorTypeを表す文字列</em>:string ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
    <td>エラーメッセージとエラータイプをウィジェットに送信します。ウィジェットはエラーを表示します。</td>
   </tr>
   <tr>
@@ -150,7 +149,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 
 ## フィールドのタイプに固有のオプション  {#options-specific-to-type-of-field}
 
-すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットはその特定のフィールドのガイドラインに従う必要があります。
+すべてのカスタムウィジェットは上記の仕様に準拠する必要があります。異なるフィールドの機能を使用するには、ウィジェットがその特定のフィールドのガイドラインに従う必要があります。
 
 ### TextEdit: Text Field {#textedit-text-field}
 
@@ -184,11 +183,11 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th>
   </tr>
   <tr>
-   <td>値<br /> </td>
+   <td>value<br /> </td>
    <td>選択された値の配列。<br /> </td>
   </tr>
   <tr>
-   <td>アイテム<br /> </td>
+   <td>item<br /> </td>
    <td>オプションとして表示されるオブジェクトの配列。各オブジェクトには 2 つのプロパティがあります。<br />save：保存する値、display：表示される値。<br /><br /> </td>
   </tr>
   <tr>
@@ -215,7 +214,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th>
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues:displayとsaveの値を含むオブジェクト<br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;値を保存&gt;}</em></p> </td>
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues:表示値と保存値を含むオブジェクト<br /> {sDisplayVal:&lt;displayValue&gt;, sSaveVal:&lt;値を保存&gt;}</em></p> </td>
    <td>リストに項目を追加します。</td>
   </tr>
   <tr>
@@ -268,5 +267,5 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 |---|---|
 | days | そのフィールドのローカライズされた曜日の名前。 |
 | months | そのフィールドのローカライズされた月の名前。 |
-| zero | 数字の 0 のローカライズされたテキスト。 |
+| ゼロ | 数字の 0 のローカライズされたテキスト。 |
 | clearText | 「クリア」ボタンのローカライズされたテキスト。 |
