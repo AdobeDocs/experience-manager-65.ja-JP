@@ -9,15 +9,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 5e344be7-46cd-4e1f-ae3a-1f89c645cffe
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: 7f9c77c6-447a-407f-ae58-6735176dc99c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 96%
 
 ---
-
 
 # HTML5 フォームにおけるパターン形式文字列サポート {#picture-clause-support-for-html-forms}
 
@@ -108,7 +107,7 @@ HTML5 フォームは、数値のパターン形式文字列の記号をサポ�
 
 PDF フォームでは 1000000 の数値は 1,000,000 として形式設定されます。ただし、HTML フォームではその数値は 1000000 として形式設定されていないままになります。
 
-**HTMLForms**&#x200B;でサポートされる数値のパターン形式文字列の式は次のとおりです。
+**HTML Forms**&#x200B;でサポートされている数値のパターン形式文字列の式は次のとおりです。
 
 * num.integer{}
 * num.decimal{}
@@ -205,7 +204,7 @@ PDF フォームでは 1000000 の数値は 1,000,000 として形式設定さ�
 
 HTML5 フォームは、次のテキストのパターン形式文字列の式をサポートしています。
 
-* text{テキストのパターン形式文字列の記号}
+* text{textパターン形式文字列の記号}
 
 | **記号** | **解釈** |
 |---|---|
