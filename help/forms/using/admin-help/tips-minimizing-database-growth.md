@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89441336-babc-4d1f-9053-d1566cd42d22
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: f64efb06-815a-4608-ba1c-39e22f344ebb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 100%
 
 ---
-
 
 # データベースの増大を最小にするためのヒント {#tips-for-minimizing-database-growth}
 
