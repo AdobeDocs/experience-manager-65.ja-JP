@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 88932a3c-ba7f-47ba-9e0b-206755c2d42e
-translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 65%
 
 ---
-
 
 # カレンダーの基本事項 {#calendar-essentials}
 
@@ -32,7 +31,7 @@ ht-degree: 65%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientllibs</strong></a></td>
@@ -56,7 +55,7 @@ ht-degree: 65%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [カレンダー API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/calendar/client/api/package-summary.html)
 
@@ -66,7 +65,7 @@ ht-degree: 65%
 
 ### カレンダー機能 {#calendar-function}
 
-[カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar`コンポーネントが構成されます。 カレンダー関数は、[特権メンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
+[カレンダー機能](functions.md#calendar-function)を含むコミュニティサイト構造には、設定済みの`calendar`コンポーネントが含まれます。 カレンダー機能は、[権限を持つメンバー・ユーザー・グループ](users.md#privileged-members-group)の識別をサポートします。
 
 ### カレンダー投稿(UGC)へのアクセス{#accessing-calendar-posts-ugc}
 
@@ -74,10 +73,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-以下を参照してください。
+次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティメソッドと例
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係
-
