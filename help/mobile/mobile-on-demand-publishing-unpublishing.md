@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 8c88a2ff-766f-481b-b6dc-0b3e2eed8596
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 79%
 
 ---
-
 
 # コンテンツの公開／非公開{#publish-unpublish-content}
 
@@ -28,7 +27,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの「[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)」を参照してください。
+>AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)を参照してください。
 
 ## コンテンツの公開／非公開 {#publishing-unpublishing-the-content}
 
@@ -36,7 +35,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->コンテンツをMobile On-Demandにアップロードしてから、公開する必要があります。
+>コンテンツを公開する前に、Mobile On-Demandにアップロードする必要があります。
 
 記事を公開／非公開にする一般的なワークフローは以下のとおりです。
 
@@ -54,7 +53,7 @@ ht-degree: 79%
 
 ### 次の手順 {#the-next-steps}
 
-コンテンツの作成と公開について詳しくは、
+コンテンツの作成と公開について学習したら、
 
 * [AEM Mobile On-demand Services の AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Services を使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)
