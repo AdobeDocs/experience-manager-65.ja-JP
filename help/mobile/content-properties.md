@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
-translation-type: tm+mt
-source-git-commit: 50c0bdfc3203410d392e53536bc7cd00245406e5
+exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 51%
 
 ---
-
 
 # コンテンツのプロパティとノード  {#content-properties-and-nodes}
 
@@ -34,9 +33,9 @@ ht-degree: 51%
 
 | **プロパティ名** | **型** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | String |  | AEM Mobileによって割り当てられ、1度AEM MobileにアップロードされるかAEM Mobileから輸入され、AEMによって保管される |
-| dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | entity typeプロパティ |
-| dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（完全なaemm-idに含まれる） |
+| dps-id | 文字列 |  | AEM Mobileにアップロードされたり、AEM Mobileから読み込まれたりした後にAEMによってAEM Mobileによって割り当てられ、保存される |
+| dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
+| dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（完全なaem-id内に含まれる） |
 | dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/インポートの日付 |
 | dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最後のアップロード日 |
 | dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロード要求を実行したidユーザー |
@@ -50,7 +49,7 @@ ht-degree: 51%
 | dps-abstract | 文字列 |  |
 | dps-shortAbstract | 文字列 |  |
 | dps-department | 文字列 |  |
-| dps-カテゴリ | 文字列 |  |
+| dps-category | 文字列 |  |
 | dps-keywords | String[] |  |
 | dps-internalKeywords | 文字列[] |  |
 | dps-importance | 文字列[] | {&quot;low&quot;、&quot;normal&quot;、&quot;high&quot;}からの重要度 |
@@ -62,7 +61,7 @@ ht-degree: 51%
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
 | dps-hideFromBrowsePage | ブール値 |  |
-| dps-access | 文字列 | ProtectedAccess from {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
+| dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;}からのProtectedAccess |
 | **Social** |  |  |
 | dps-socialShareURL | 文字列 |  |
 | dps-articleText | 文字列 |  |
@@ -72,8 +71,8 @@ ht-degree: 51%
 
 | **プロパティ名** | **型** | **デフォルト値または期待値** |
 |---|---|---|
-| dps-tapAction |  | {webLink}からのTapAction |
-| dps-tapActionUrl |  |  |
+| dps-tapAction |  | {webLink}のTapAction |
+| dps-tapActinUrl |  |  |
 
 ### コレクション {#collections}
 
@@ -96,11 +95,11 @@ ht-degree: 51%
 
 ### エンティティ {#entities}
 
-#### 記事 {#articles-1}
+#### 記事  {#articles-1}
 
 | ノード名 | タイプ | 期待値のデフォルト | 説明 |
 |--- |--- |--- |--- |
-| ソーシャルシェアの画像 |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
+| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### バナー {#banners-1}
 
