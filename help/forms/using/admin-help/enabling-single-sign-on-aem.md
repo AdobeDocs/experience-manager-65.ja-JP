@@ -9,18 +9,17 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
-translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 95%
 
 ---
 
-
 # AEM forms でのシングルサインオンの有効化{#enabling-single-sign-on-in-aem-forms}
 
-AEM formsでは、シングルサインオン(SSO)を有効にする方法が2つ用意されています（HTTPヘッダーとSPNEGO）。
+AEM formsでは、シングルサインオン(SSO)を有効にする方法が2つあります。HTTPヘッダーとSPNEGOです。
 
 SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
@@ -145,7 +144,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 SPNEGO ベースの認証を機能させるには、ユーザーアカウントを作成しているドメインにクライアントコンピューターが含まれている必要があります。また、SPNEGO ベースの認証を許可するようにクライアントブラウザーを設定する必要があります。さらに、SPNEGO ベースの認証を必要とするサイトを、信頼できるサイトにする必要があります。
 
-https://lcserver:8080など、コンピューター名を使用してサーバーにアクセスする場合は、Internet Explorerの設定は不要です。 入力した URL にドット（「.」）が含まれていない場合は、Internet Explorer はそのサイトをローカルなイントラネットサイトとして扱います。サイトに完全修飾名を使用している場合は、サイトを信頼できるサイトとして追加する必要があります。
+https://lcserver:8080などのコンピューター名を使用してサーバーにアクセスする場合、Internet Explorerの設定は不要です。 入力した URL にドット（「.」）が含まれていない場合は、Internet Explorer はそのサイトをローカルなイントラネットサイトとして扱います。サイトに完全修飾名を使用している場合は、サイトを信頼できるサイトとして追加する必要があります。
 
 **Internet Explorer 6.x の設定**
 
@@ -153,20 +152,19 @@ https://lcserver:8080など、コンピューター名を使用してサーバ�
 1. イントラネットのアイコンをクリックし、「サイト」をクリックします。
 1. 「詳細設定」をクリックし、「次の Web サイトをゾーンに追加する」ボックスに、forms サーバーの URL を入力します。例えば、「`https://lcserver.um.lc.com`
 1. ダイアログボックスがすべて閉じるまで、各ダイアログボックスで「OK」をクリックします。
-1. AEM Forms サーバーの URL にアクセスして、設定をテストします。例えば、「ブラウザーのURL」ボックスに`https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`と入力します。
+1. AEM Forms サーバーの URL にアクセスして、設定をテストします。例えば、「ブラウザーのURL」ボックスに、「`https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`」と入力します。
 
 **Mozilla Firefox の設定**
 
-1. ブラウザーのURLボックスに`about:config`と入力します。
+1. 「ブラウザーのURL」ボックスに、「`about:config`」と入力します。
 
    about:config - Mozilla Firefox ダイアログボックスが表示されます。
 
 1. 「フィルター」ボックスに、`negotiate`
 1. 表示されたリストで、network.negotiate-auth.trusted-uri をダブルクリックし、環境に応じて、次のいずれかのコマンドを入力します。
 
-   `.um.lc.com`- um.lc.comで終わるURLでSPNEGOを許可するようにFirefoxが設定されます。先頭に必ずドット（「.」）を含めてください。
+   `.um.lc.com`- um.lc.comで終わるURLに対してSPNEGOを許可するようにFirefoxが設定されます。先頭に必ずドット（「.」）を含めてください。
 
    `lcserver.um.lc.com` - 特定のサーバーだけに SPNEGO を許可するように Firefox が設定されます。ドット（「.」）から始めないでください。
 
 1. アプリケーションにアクセスして、設定をテストします。ターゲットアプリケーションのようこそページが表示されます。
-
