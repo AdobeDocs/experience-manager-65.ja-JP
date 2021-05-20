@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
 discoiquuid: 8fb7d088-94bf-4799-98b3-8fa58eef83df
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 2f02f541-92db-469b-bf23-ec64d2e282ff
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 90%
 
 ---
-
 
 # リファラーフィルターを「空の値を許可」に設定{#setting-your-referrer-filter-to-allow-empty}
 
@@ -28,6 +27,6 @@ AEM Mobile アプリケーションビューアで AEM オーサーインスタ�
 
 開発中およびステージング中のアプリケーションをアプリケーションビューアでレビューしない場合は、リファラーフィルターのデフォルト設定を変更する必要はありません。
 
-実行中のAEMの作成者インスタンス内で、次の場所に移動します。[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)を検索し、「Apache Sling転送者フィルター」を探します。 リファラーフィルターをクリックして編集し、「空の値を許可」チェックボックスをオンにします（下図を参照）。次に、「保存」ボタンをクリックして、ブラウザーページを閉じます。
+実行中のAEMオーサーインスタンス内で、次の場所に移動します。[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)を検索し、「Apache Sling Referrer Filter」を検索します。 リファラーフィルターをクリックして編集し、「空の値を許可」チェックボックスをオンにします（下図を参照）。次に、「保存」ボタンをクリックして、ブラウザーページを閉じます。
 
 ![リファラーフィルターの設定](assets/chlimage_1-106.png)
