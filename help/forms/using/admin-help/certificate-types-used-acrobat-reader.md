@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 800bffd5-0cdc-4251-bba4-e350f226f019
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 89%
 
 ---
-
 
 # Acrobat Reader DC Extensions で使用される証明書の種類 {#certificate-types-used-by-acrobat-reader-dc-extensions}
 
@@ -35,15 +34,15 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
 
 この文字列には、次の要素が含まれています。
 
-**証明書の種類：証明書** がアクティブにするAEM formsモジュール、およびARE 2D Barcode Fullなどのアクティベーションレベルを記述します。使用可能な証明書の種類の一覧については、証明書プロファイルの表の種類の列を参照してください。
+**証明書の種類：** 証明書がアクティブにするAEM formsモジュールと、アクティブ化のレベル（ARE 2Dバーコードフルなど）を示します。使用可能な証明書の種類の一覧については、証明書プロファイルの表の種類の列を参照してください。
 
-**デプロイメントの種類：証明書の使用目的を** 示します（「実稼働」など）。値は、Evaluation（評価）または Production（実稼働環境）のどちらかです。証明書の各種類に関連付けられているデプロイメントの種類の一覧については、証明書プロファイルの表のデプロイメントの種類の列を参照してください。
+**デプロイメントの種類：** 証明書の使用目的（実稼動など）を示します。値は、Evaluation（評価）または Production（実稼働環境）のどちらかです。証明書の各種類に関連付けられているデプロイメントの種類の一覧については、証明書プロファイルの表のデプロイメントの種類の列を参照してください。
 
-**使用権限バージョン：V6.1など、証明書を使用できる使用権限アルゴリズムのバージョンを** 説明します。このバージョンは、AcrobatまたはAcrobat Reader DCの拡張機能のバージョンを示しません。
+**使用権限のバージョン：** V6.1など、証明書を使用できる使用権限のアルゴリズムのバージョンを示します。このバージョンは、AcrobatまたはAcrobat Reader DC拡張機能のバージョンを示しません。
 
 **プロファイルコード：** プロファイルコードは、P8など、完全な証明書プロパティの簡単な説明です。ファイルの各種類に関連付けられているプロファイルコードの一覧については、証明書プロファイルの表のプロファイルコードの列を参照してください。
 
-**シリアル番号：0002054** など、Adobeが発行した各証明書にはシリアル番号が割り当てられます。アドビの販売代理店または営業担当者は、このシリアル番号を使用して、特定の製品注文または OEM 関係まで証明書を追跡できます。
+**シリアル番号：** シリアル番号は、0002054など、Adobeによって発行された各証明書に割り当てられます。アドビの販売代理店または営業担当者は、このシリアル番号を使用して、特定の製品注文または OEM 関係まで証明書を追跡できます。
 
 ## 証明書プロファイル  {#certificate-profiles}
 
@@ -226,4 +225,3 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
 >[!NOTE]
 >
 >Acrobat Reader DC Extensions の使用権限は、連携して動作する特定の組み合わせでのみ、アドビ システムズ社からライセンスを受けることができます。これらの機能を個別にライセンスすることはできません。使用権限の可能な組み合わせについては、AEM Forms の営業担当者にお問い合わせください。
-
