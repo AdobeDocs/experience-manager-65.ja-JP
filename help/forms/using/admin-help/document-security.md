@@ -225,7 +225,7 @@ Document Security 管理者は、User Management の次の権限を使用して�
 
 >[!NOTE]
 >
->`getAllPolicysetnames()` APIを使用して、データベースから最大1000個のポリシーセット名を取得できます。
+>`getAllPolicysetnames()` APIを使用して、データベースから最大1,000個のポリシーセット名を取得できます。
 
 管理者および権限を持つポリシーセットコーディネーターは、Document Security の管理 Web ページを使用して、ポリシーセットを作成および削除します。
 
