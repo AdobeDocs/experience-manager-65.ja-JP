@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d06f20d-0fbd-447c-8c78-bf6ce0ceed31
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: cfb81f5b-e018-43b1-b76e-bac56b8bd96d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 73%
 
 ---
-
 
 # アプリケーションおよびサービスページに表示するアイテム数の変更 {#change-the-number-of-items-displayed-on-the-applications-and-services-pages}
 
@@ -24,4 +23,3 @@ ht-degree: 73%
 
 1. 管理コンソールで、**[!UICONTROL サービス/アプリケーションおよびサービス/環境設定]**&#x200B;をクリックします。
 1. 環境設定ページで、各ページに表示できるサービス、エンドポイント、カテゴリおよびアーカイブの数を入力し、「**[!UICONTROL 保存]**」をクリックします。
-
