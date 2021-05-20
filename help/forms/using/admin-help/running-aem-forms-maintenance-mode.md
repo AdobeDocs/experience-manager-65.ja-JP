@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 94047c12-ba3d-457a-954f-e035c7cc3ecd
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 6f5ce18b-26b4-4c31-b48a-43ccbb3912f6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 100%
 
 ---
-
 
 # メンテナンスモードでの AEM Forms の実行 {#running-aem-forms-in-maintenance-mode}
 
@@ -54,4 +53,3 @@ ht-degree: 100%
    `https://[hostname]:[port]/dsc/servlet/DSCStartupServlet?maintenanceMode=resume&user=[administrator username]&password=[password]`
 
    ブラウザーウィンドウに「実行中」のメッセージが表示されます。
-
