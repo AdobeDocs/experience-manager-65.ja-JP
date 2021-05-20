@@ -9,15 +9,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 87%
 
 ---
-
 
 # HTML5 フォームのための CSS スタイルの作成 {#creating-css-styles-for-html-forms}
 
@@ -47,11 +46,11 @@ Field 要素にはネストされた要素が 2 つ（widget と caption）あ�
 
 **Widget 要素**
 
-Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。これには3つのCSSクラスがあります。
+Widget 要素にはユーザーとやりとりするためのユーザーインターフェイス要素が含まれています。3つのCSSクラスがあります。
 
 * **ウィジェット**:すべてのウィジェットにこのクラスがあります。
-* **name**:AEMと共に出荷されるすべてのウィジェットにはウィジェット名のクラスが含まれています。カスタムウィジェットの場合、ウィジェット開発者はウィジェット名のクラスを提供します。
-* **type**:すべてのウィジェットにはユーザーインターフェイス要素があります。このクラスは、ユーザーインターフェイス要素のタイプを定義します。
+* **名前**:AEMに付属しているすべてのウィジェットには、ウィジェット名のクラスが含まれます。カスタムウィジェットの場合、ウィジェット開発者はウィジェット名のクラスを提供します。
+* **型**:すべてのウィジェットにはユーザインターフェイス要素があります。このクラスは、ユーザーインターフェイス要素のタイプを定義します。
 
 ```xml
 <!--field with caption-->
@@ -158,21 +157,21 @@ AEM Forms Designer はフォームで NumericField、DecimalField、および Da
    <td>datefield<br type="_moz" /> </td>
    <td>dateField<br type="_moz" /> </td>
    <td>datefieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>inputtype = text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>日時フィールド<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfieldwidget</td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>inputtype = text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>10 進数フィールド<br type="_moz" /> </td>
    <td>numericfield<br type="_moz" /> </td>
    <td>numericInput<br type="_moz" /> </td>
    <td>numericfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>inputtype = text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>ドロップダウンリスト<br type="_moz" /> </td>
@@ -193,7 +192,7 @@ AEM Forms Designer はフォームで NumericField、DecimalField、および Da
    <td>numericfield<br type="_moz" /> </td>
    <td>numericInput<br type="_moz" /> </td>
    <td>numericfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>inputtype = text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>パスワードフィールド<br type="_moz" /> </td>
@@ -214,14 +213,14 @@ AEM Forms Designer はフォームで NumericField、DecimalField、および Da
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>inputtype = text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>時間フィールド<br type="_moz" /> </td>
    <td>textfield<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
    <td>textfieldwidget<br type="_moz" /> </td>
-   <td>input type=text<br type="_moz" /> </td>
+   <td>inputtype = text<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
@@ -239,7 +238,7 @@ AEM Forms Designer を使用して、テキスト、画像など、スタティ�
 
 ## フォームにおける他の部分のスタイル設定  {#styling-other-parts-of-the-form}
 
-HTMLフォームでのUIコンポーネントの外観の他に、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
+HTMLフォームでのUIコンポーネントの外観に加えて、インラインエラー、インライン警告、検証エラーのあるフィールドなどの要素のスタイルを変更できます。
 
 `Styling Inline Errors`
 
@@ -251,4 +250,4 @@ HTMLフォームでのUIコンポーネントの外観の他に、インライ�
 
 `Styling Fields with Validation Errors`
 
-フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。このスタイルの変更は、ウィジェットコンポーネントにCSSクラス&#x200B;**widgetError**&#x200B;を適用することで行います。 デフォルトのスタイル設定を変更するには、**widgetError**&#x200B;クラスをオーバーライドします。
+フィールドの検証に失敗すると、ウィジェットのスタイルが変更されます。このスタイルの変更は、ウィジェットコンポーネントにCSSクラス&#x200B;**widgetError**&#x200B;を適用することでおこなわれます。 デフォルトのスタイル設定を変更するには、 **widgetError**&#x200B;クラスをオーバーライドします。
