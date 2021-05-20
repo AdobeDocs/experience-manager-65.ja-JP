@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: adc7ec13-0675-4071-9c4c-e238202d9d85
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 7d90fade-1ca4-41d8-bbf9-45490465784a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 58%
 
 ---
-
 
 # レター PDF プレビューのカスタム透かし{#custom-watermark-in-letter-pdf-preview}
 
@@ -27,7 +26,7 @@ Create Correspondence UI を使用するエージェントユーザーは、電�
 
 PDF データの不正使用を防ぐため、プレビューの PDF に透かしを付けることができます。デフォルトのウォーターマークは「プレビュー」で、PDF 全体に表示されます。
 
-プレビューPDFで透かしを有効にするには、https://&#39;[server]:[port]&#39;/system/console/configMgrの「**[!UICONTROL Correspondence Management Configurations]**&#x200B;の「プレビュー中に透かしを適用」オプションを選択します。****
+PDFのプレビューで透かしを有効にするには、https://&#39;[server]:[port]&#39;/system/console/configMgrにある「**[!UICONTROL Apply Watermark]** During Preview」オプションを選択します。**[!UICONTROL Correspondence Management Configuration&lt;a3/]**
 
 ![default-watermark](assets/default-watermark.png)
 
@@ -36,7 +35,7 @@ PDF データの不正使用を防ぐため、プレビューの PDF に透か�
 ## Create Correspondence UI で PDF プレビュー内の透かしをカスタマイズする  {#customizewatermark-}
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
-1. appsフォルダーに、libsフォルダー内のpreviewwatermarkフォルダーに類似したパス/構造で&#x200B;**[!UICONTROL previewwatermark]**&#x200B;という名前のフォルダーを作成します。
+1. appsフォルダーに、**[!UICONTROL previewwatermark]**&#x200B;という名前のフォルダーを作成します。このフォルダーのパスや構造は、libsフォルダー内のpreviewwatermarkフォルダーと同じです。
 
    1. 次のパスにある&#x200B;**previewwatermark**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -48,11 +47,11 @@ PDF データの不正使用を防ぐため、プレビューの PDF に透か�
 
       **オーバーレイの場所：** /apps/
 
-      **ノードタイプを一致：** オン
+      **ノードタイプを一致させる：** オン
 
       >[!NOTE]
       >
-      >/libsブランチは変更しないでください。 次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
+      >/libsブランチでは変更を加えないでください。 次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
       >
       >    
       >    
@@ -61,11 +60,11 @@ PDF データの不正使用を防ぐため、プレビューの PDF に透か�
       >    * 機能パックのインストール
 
 
-   1. 「**OK**」をクリックし、「**すべて保存**」をクリックします。指定したパスに&#x200B;**[!UICONTROL previewwatermark]**&#x200B;フォルダーが作成されます。
+   1. 「**OK**」をクリックし、「**すべて保存**」をクリックします。**[!UICONTROL previewwatermark]**&#x200B;フォルダが指定されたパスに作成されます。
 
 
 
-1. 「/libs/fd/cm/configFiles/previewwatermark」フォルダーからddxファイルをコピーして「/apps/fd/cm/configFiles/previewwatermark」フォルダーに貼り付け、「**[!UICONTROL すべて保存]**」をクリックします。
+1. 「/libs/fd/cm/configFiles/previewwatermark」フォルダーのddxファイルを「/apps/fd/cm/configFiles/previewwatermark」フォルダーにコピー&amp;ペーストし、「**[!UICONTROL すべて保存]**」をクリックします。
 1. ddx ファイルは /apps/fd/cm/configFiles/previewwatermark/ から必要に応じて変更します。
 
    ```xml
@@ -83,11 +82,10 @@ PDF データの不正使用を防ぐため、プレビューの PDF に透か�
    </DDX>
    ```
 
-   透かしの外観、テキスト、配置のカスタマイズについて詳しくは、『[アセンブラサービスとDDXリファレンス](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)』ドキュメントの透かしと背景の追加と削除を参照してください。
+   透かしの外観、テキスト、配置のカスタマイズについて詳しくは、『[AssemblerサービスとDDXリファレンス](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf)』ドキュメントの透かしと背景の追加と削除を参照してください。
 
    >[!NOTE]
    >
    >ddx ファイルでは、結果と入力への参照を output.pdf および input.pdf から変化させません。ddx ファイルの名前も変更しません。
 
 1. 「**すべて保存**」をクリックします。
-
