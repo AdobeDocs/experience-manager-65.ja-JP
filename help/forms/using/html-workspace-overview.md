@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 866cd9cb-6661-4b0f-a3af-e39453e6e51b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 21efe30c6a69d04c737bc523aeaab504db8f605b
+exl-id: 0bedcbd9-2cf8-47da-9440-c773982e550c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 87%
 
 ---
 
-
 # AEM Forms Workspace の操作{#working-with-aem-forms-workspace}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 AEM Forms Workspace は AEM Forms の一部です。Workspace は PDF フォームに加え、HTML フォームのレンダリングを容易にします。これで、モバイルインターフェイスや Web アプリケーションからビジネスプロセスに関わることができます。
 
@@ -36,9 +35,9 @@ Forms アプリケーションを作成してビジネスプロセスを自動�
 
 AEM Forms Workspace では、以下のタスクを実行できます。
 
-**ビジネスプロセスの開始:** AEM Formsワークスペースは、組織が設計および設定したとおりにプロセスをカテゴリします。頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
+**ビジネスプロセスの開始：** AEM Forms Workspaceは、組織で設計および設定されたとおりにプロセスを分類します。頻繁に使用するカテゴリをお気に入りに追加して、これらのカテゴリにすばやくアクセスできます。プロセスの開始時は通常、Forms ワークフローによってコントロールされるビジネスプロセスを開始するためのフォームに入力する必要があります。詳しくは、「[プロセスの開始](/help/forms/using/starting-processes.md)」を参照してください。
 
-**表示とタスクに基づく行動：TODOリストを表示す** ると、割り当てられているビジネスプロセスのタスク、または所属するグループ、あるいは他のユーザーの共有タスクが表示されます。必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
+**タスクの表示と操作：** TODOリストを表示すると、自分に割り当てられているビジネスプロセスのタスク、自分が属しているグループ、または他のユーザーの共有タスクが表示されます。必要に応じてタスクを開き、操作して完了することができます。タスクを完了するには通常、情報を入力し、フォームを承認するか拒否します。詳しくは、「[TODO リストの操作](/help/forms/using/todo-lists.md)」を参照してください。
 
 **タスクの追跡**：タスクを追跡するには、AEM Forms Workspace の「追跡」タブを使用します。開始または参加したアクティブなプロセスおよび完了したプロセスを検索できます。プロセスに含まれていたタスク、割り当ておよびフォームを表示できます。また、既に開始したプロセスのフォームデータを使用して、新しいプロセスを開始することもできます。詳しくは、「[プロセスの追跡](/help/forms/using/tracking-processes.md)」を参照してください。
 
@@ -46,7 +45,7 @@ AEM Forms Workspace では、以下のタスクを実行できます。
 
 **タスクの一括承認サポート**
 
-同じタイプのタスクを複数承認できます。承認用のタスクを1つ選択すると、同じプロセスを持ち、タスク名とルートオプションが同じタスクのみが有効になります。 導入の詳細については、[TODOリストの操作](/help/forms/using/todo-lists.md)を参照してください。
+同じタイプのタスクを複数承認できます。1つのタスクを承認用に選択すると、同じプロセスを持ち、タスク名と同じルートオプションを持つタスクのみが有効なままになります。 実装の詳細については、[TODOリストの使用](/help/forms/using/todo-lists.md)を参照してください。
 
 ## Flex Workspace から AEM Forms Workspace への移行 {#migrating-from-flex-workspace-to-aem-forms-workspace}
 
@@ -135,7 +134,7 @@ AEM Forms Workspace の成果物には、CRX にデプロイされる CRX パッ
 
 新しいプロセスではデフォルトで、デスクトップ上では PDF 形式、タブレット上では HTML 形式で XDP フォームがレンダリングされます。XDP フォームはいつでも HTML 形式でレンダリングできます。詳しくは、「[新しいレンダリングと送信サービス](/help/forms/using/new-render-submit-service.md)」を参照してください。
 
-[Mobile ](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) Forms機能は、 [プロファイルと連携して、XDPフォームのHTMLレンダリングを有効にします](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)。「新規 HTML フォームのレンダリング」はデフォルトで `default.html` プロファイルを使用しますが、これは変更することができます。XDP フォームを HTML 形式でレンダリングする前に実行されたカスタム変更を追加することもできます。
+[プロフ](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html) ァイルと連携するMobile  [Forms機能](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)により、XDPフォームのHTMLレンディションが有効になります。「新規 HTML フォームのレンダリング」はデフォルトで `default.html` プロファイルを使用しますが、これは変更することができます。XDP フォームを HTML 形式でレンダリングする前に実行されたカスタム変更を追加することもできます。
 
 ## AEM Forms Workspace アプリケーション  {#aem-forms-workspace-app}
 
