@@ -11,20 +11,19 @@ topic-tags: Configuration
 discoiquuid: 1717b1b4-1c2a-450e-8e79-4156a974d5fa
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d802ac53-e3db-45ca-afcb-7e99d0bb7877
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 78%
+source-wordcount: '279'
+ht-degree: 79%
 
 ---
-
 
 # OSGi 上の AEM Forms のグループと権限{#aem-forms-on-osgi-groups-and-privileges}
 
 AEM では、[グループを作成](/help/sites-administering/user-group-ac-admin.md#group-administration)してそのグループにポリシーと[ユーザー](/help/sites-administering/user-group-ac-admin.md#user-administration)を割り当てることができます。これらのポリシーは、グループに含まれるユーザーの権限を制御します。
 
-[AEM Formsアドオンパッケージ](../../forms/using/installing-configuring-aem-forms-osgi.md)をインストールすると、この記事に記載されているフォームユーザーやフォームパワーユーザーなどのグループが自動的に割り当て可能になります。 次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
+[AEM Formsアドオンパッケージ](../../forms/using/installing-configuring-aem-forms-osgi.md)をインストールすると、この記事に記載されているグループ（forms-usersやforms-power-userなど）が自動的に割り当て可能になります。 次の表に、ユーザーが OSGi 上の AEM Forms でグループの割り当てに基づいて実行できるタスクを示します。
 
 <table>
  <tbody>
@@ -43,7 +42,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>フォームパワーユーザー</td> 
+   <td>forms-power-users</td> 
    <td>
     <ul> 
      <li>アダプティブフォームを作成、プレビュー、パブリッシュ、送信する</li> 
@@ -63,14 +62,14 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>template-authors <sup>[2]</sup></td> 
+   <td>template-authors <sup>[2]</sup></td> 
    <td>
     <ul> 
      <li>アダプティブフォームやインタラクティブ通信テンプレートを作成およびプレビューする</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>fdm-authors</p> </td> 
+   <td><p>FDM 作成者</p> </td> 
    <td>
     <ul> 
      <li>フォームデータモデルを作成および変更する</li> 
@@ -84,7 +83,7 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td><p>workflow-editors</p> </td> 
+   <td><p>ワークフロー編集者</p> </td> 
    <td>
     <ul> 
      <li>インボックスアプリケーションを作成する</li> 
@@ -92,15 +91,15 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
     </ul> </td> 
   </tr>
   <tr>
-   <td>workflow-users</td> 
+   <td>ワークフローユーザー</td> 
    <td>
     <ul> 
-     <li>AEM inbox applications<br /> <strong>を使用します。注意：</strong>AEM受信トレイのInteractive Communications Agent UIにアクセスするには、cm-agent-usersとworkflow-usersグループの割り当てが必要です。</li> 
+     <li>AEMインボックスアプリケーション<br /> <strong>を使用します。注意：</strong>AEMインボックスのインタラクティブ通信エージェントUIにアクセスするには、cm-agent-usersとworkflow-usersのグループ割り当てが必要です。</li> 
      <li>ワークフローインスタンスを管理する</li> 
     </ul> </td> 
   </tr>
   <tr>
-   <td>fd-administrators</td> 
+   <td>FD 管理者</td> 
    <td>
     <ul> 
      <li>PDF Generator を設定する</li> 
@@ -111,6 +110,5 @@ AEM では、[グループを作成](/help/sites-administering/user-group-ac-adm
  </tbody>
 </table>
 
-1. フォームユーザーのグループ権限を持つユーザーは、アダプティブフォームのスクリプトを作成できません。
+1. forms-usersグループ権限を持つユーザーは、アダプティブフォームのスクリプトを作成できません。
 1. template-authors グループ権限を持つユーザーは、テンプレートのスクリプトを書くことができません。
-
