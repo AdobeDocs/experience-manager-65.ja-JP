@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 52187196-b091-4683-85ae-cc7c250dee54
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 93%
 
 ---
-
 
 # AEM Forms データのバックアップ {#backing-up-the-aem-forms-data}
 
@@ -49,13 +48,13 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 
 * 使用可能なオペレーティングシステムまたはサードパーティのバックアップユーティリティを使用して GDS ディレクトリをバックアップします（[GDS の場所](/help/forms/using/admin-help/files-back-recover.md#gds-location)を参照）。
 * （オプション）使用可能なオペレーティングシステム、またはサードパーティのバックアップ機能やユーティリティを使用して、コンテンツ保存場所のルートディレクトリをバックアップします（[コンテンツ保存場所のルートディレクトリ（スタンドアロン環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment)または[コンテンツ保存場所のルートディレクトリ（クラスター環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment)を参照）。
-* オーサーインスタンスと   オーサーインスタンスとパブリッシュインスタンス（crx -repositoryバックアップ）。
+* オーサーインスタンスと   オーサーインスタンスとパブリッシュインスタンス（ crx -repositoryバックアップ）。
 
    Correspondence Management Solution 環境をバックアップするには、[バックアップと復旧](/help/sites-administering/backup-and-restore.md)に説明されているように、オーサーインスタンスとパブリッシュインスタンスに対して手順を実行します。
 
    オーサーインスタンスとパブリッシュインスタンスをバックアップするときには、次の点を考慮してください。
 
-   * オーサーインスタンスと  作成者インスタンスと発行インスタンスは同時に開始に同期されます。バックアップの実行中も、作成者インスタンスと発行インスタンスを引き続き使用できますが、バックアップ中にアセットを発行しないで、キャプチャされない変更を防ぐことをお勧めします。 新しいアセットをパブリッシュする前に、オーサーインスタンスとパブリッシュインスタンスの両方のバックアップが終了するまで待機してください。
+   * オーサーインスタンスと  オーサーインスタンスとパブリッシュインスタンスは同時に開始するように同期されます。バックアップの実行中もオーサーインスタンスとパブリッシュインスタンスを引き続き使用できますが、バックアップ中にアセットを公開しないことをお勧めします。 新しいアセットをパブリッシュする前に、オーサーインスタンスとパブリッシュインスタンスの両方のバックアップが終了するまで待機してください。
    * Author ノードの完全なバックアップには、Forms Manager および AEM Forms ワークスペースデータのバックアップが含まれます。
    * ワークベンチ開発者はそのプロセスに対してローカルで作業を継続できます。ワークベンチ開発者は、バックアップ段階では新しいプロセスをデプロイするべきではありません。
    * 各バックアップセッションの長さについての決定（ローリングバックアップモードの場合）は、AEM forms 内のすべてのデータ（DB、GDS、AEM レポジトリ、その他すべての追加カスタムデータ）をバックアップするための合計時間に基づいて行ってください。
@@ -98,8 +97,8 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 1. オペレーティングシステムに応じて、`LCBackupMode.cmd` または `LCBackupMode.sh` スクリプトを編集して、システムに適合するデフォルト値を指定します。
 1. コマンドプロンプトで、次のコマンドを 1 行で実行します。
 
-   * (Windows)`LCBackupMode.cmd enter [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `] [-label=`*labelname* `] [-timeout=`*seconds* `]`
-   * (Linux、UNIX)`LCBackupMode.sh enter [-host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `] [-label=`*labelname* `]`
+   * (Windows) `LCBackupMode.cmd enter [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `] [-label=`*labelname* `] [-timeout=`*seconds* `]`
+   * (Linux、UNIX) `LCBackupMode.sh enter [-host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `] [-label=`*labelname* `]`
 
    上記のコマンドでは、プレースホルダーは次のように定義されています。
 
@@ -142,8 +141,8 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 
 1. 次のコマンドを 1 行で実行します。
 
-   * (Windows)`LCBackupMode.cmd leaveContinuousCoverage [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `]`
-   * (Linux、UNIX)`LCBackupMode.sh leaveContinuousCoverage [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `]`
+   * (Windows) `LCBackupMode.cmd leaveContinuousCoverage [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `]`
+   * (Linux、UNIX) `LCBackupMode.sh leaveContinuousCoverage [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `]`
 
       上記のコマンドでは、プレースホルダーは次のように定義されています。
 
@@ -165,4 +164,3 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
    >データベースへのドキュメントの保存を有効にした場合、スナップショットバックアップモードとローリングバックアップモードは使用できません。
 
    バックアップモードのコマンドラインインターフェイスについて詳しくは、BackupRestoreCommandline ディレクトリ内にある、お読みくださいファイルを参照してください。
-
