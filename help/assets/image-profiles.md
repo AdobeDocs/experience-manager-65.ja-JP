@@ -1,22 +1,21 @@
 ---
 title: Dynamic Media イメージプロファイル
-description: アンシャープマスク、スマート切り抜き、スマートスウォッチ、またはその両方の設定を含む画像プロファイルを作成し、プロファイルを画像アセットのフォルダーに適用します。
+description: アンシャープマスク、スマート切り抜きとスマートスウォッチのいずれかまたは両方の設定を含むイメージプロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
-feature: Image Profiles
+feature: イメージプロファイル
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '2764'
+source-wordcount: '2761'
 ht-degree: 92%
 
 ---
-
 
 # Dynamic Media イメージプロファイル {#image-profiles}
 
@@ -105,7 +104,7 @@ ht-degree: 92%
  </tbody>
 </table>
 
-シャープの適用については、[画像へのシャープの適用](/help/assets/assets/sharpening_images.pdf.
+シャープニングについては、[画像のシャープニング](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
 ## Dynamic Media イメージプロファイルの作成 {#creating-image-profiles}
 
@@ -117,7 +116,7 @@ ht-degree: 92%
 
 **Dynamic Media イメージプロファイルを作成するには**：
 
-1. AEMロゴをタップし、**[!UICONTROL ツール/アセット/画像プロファイルーに移動します。]**
+1. AEMのロゴをタップし、**[!UICONTROL ツール/アセット/イメージプロファイルに移動します。]**
 1. 「**[!UICONTROL 作成]**」をタップクリックして、新しいイメージプロファイルを追加します。
 1. プロファイル名を入力し、アンシャープマスクのほか、切り抜きとスウォッチのいずれかまたは両方の値を入力します。
 
@@ -131,8 +130,8 @@ ht-degree: 92%
 
 ## Dynamic Media イメージプロファイルの編集または削除 {#editing-or-deleting-image-profiles}
 
-1. AEMロゴをタップし、**[!UICONTROL ツール/アセット/画像プロファイルーに移動します。]**
-1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集」を選択します。]** 削除するには、「画像処理プロファイルを **[!UICONTROL 削除」を選択します。]**
+1. AEMのロゴをタップし、**[!UICONTROL ツール/アセット/イメージプロファイルに移動します。]**
+1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集」を選択します。]** 削除するには、「画像処理プロフ **[!UICONTROL ァイルを削除」を選択します。]**
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
@@ -162,7 +161,7 @@ ht-degree: 92%
 
 #### プロファイルユーザーインターフェイスを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. AEMロゴをタップし、**[!UICONTROL ツール/アセット/画像プロファイルーに移動します。]**
+1. AEMのロゴをタップし、**[!UICONTROL ツール/アセット/イメージプロファイルに移動します。]**
 1. 1 つ以上のフォルダーに適用するイメージプロファイルを選択します。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
@@ -172,7 +171,7 @@ ht-degree: 92%
 #### プロパティを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-properties}
 
 1. AEM のロゴをタップし、「**[!UICONTROL アセット]**」に移動した後、イメージプロファイルを適用するフォルダーに移動します。
-1. フォルダーのチェックマークをタップして選択し、「**[!UICONTROL プロパティ]**」をタップします。
+1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL イメージプロファイル]**」タブをタップします。「**[!UICONTROL プロファイル名]**」ドロップダウンリストからプロファイルを選択し、「**[!UICONTROL 保存して閉じる」をタップします。]**&#x200B;既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
@@ -193,7 +192,7 @@ ht-degree: 92%
 
    * CRXDE Lite で、`/content/dam/jcr:content` ノードに移動します。
 
-      プロパティ追加`imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>`をタップし、「すべて保存」をタップします。****
+      プロパティ`imageProfile:/conf/global/settings/dam/adminui-extension/imageprofile/<name of image profile>`を追加し、**[!UICONTROL 「すべて保存」をタップします。]**
 
       ![configure_image_profiles](assets/configure_image_profiles.png)
 
@@ -217,7 +216,7 @@ ht-degree: 92%
 
 1. フォルダーをタップして、その内容を開きます。
 1. スマート切り抜きまたはスマートスウォッチを調整したい画像をタップます。
-1. ツールバーで、「**[!UICONTROL スマート切り抜き」をタップします。]**
+1. ツールバーで、「**[!UICONTROL スマート切り抜き]**」をタップします。
 
 1. 次のいずれかの操作をおこないます。
 
@@ -239,7 +238,7 @@ ht-degree: 92%
 **複数画像のスマート切り抜きまたはスマートスウォッチを編集するには**：
 
 1. AEM ロゴをタップし、**[!UICONTROL アセット]**&#x200B;に移動した後、スマート切り抜きまたはスマートスウォッチのイメージプロファイルが適用されているフォルダーに移動します。
-1. フォルダーで、**[!UICONTROL その他のアクション]** (...)アイコンをタップし、**[!UICONTROL スマート切り抜き]**&#x200B;をタップします。
+1. フォルダーで、「**[!UICONTROL その他のアクション]**(...)」アイコンをタップし、「**[!UICONTROL スマート切り抜き]**」をタップします。
 
 1. **[!UICONTROL スマート切り抜きを編集]**&#x200B;ページで、次のいずれかの操作をおこないます。
 
@@ -277,7 +276,7 @@ ht-degree: 92%
 
 
 
-1. ページの右上隅近くにある「**[!UICONTROL 保存」をタップします。]**&#x200B;をタップし、「**[!UICONTROL 閉じる]**」をタップすると、アセットのフォルダーに戻ります。
+1. ページの右上隅付近にある「**[!UICONTROL 保存]**」をタップし、「**[!UICONTROL 閉じる]**」をタップして、アセットのフォルダーに戻ります。
 
 ## フォルダーからのイメージプロファイルの削除 {#removing-an-image-profile-from-folders}
 
@@ -287,17 +286,17 @@ ht-degree: 92%
 
 ### プロファイルユーザーインターフェイスを使用したフォルダーからの Dynamic Media イメージプロファイルの削除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. AEMロゴをタップし、**[!UICONTROL ツール/アセット/画像プロファイルーに移動します。]**
+1. AEMのロゴをタップし、**[!UICONTROL ツール/アセット/イメージプロファイルに移動します。]**
 1. 1 つ以上のフォルダーから削除するイメージプロファイルを選択します。
-1. 「**[!UICONTROL フォルダーから処理プロファイルーを削除]**」をタップし、プロファイルーを削除するフォルダーを選択して、「**[!UICONTROL 削除」をタップします。]**
+1. 「**[!UICONTROL フォルダーから処理プロファイルを削除]**」をタップし、プロファイルを削除する1つ以上のフォルダーを選択して、「**[!UICONTROL 削除]**」をタップします。
 
    名前がフォルダー名の下に表示されなくなっていることで、イメージプロファイルがフォルダーに適用されていないことを確認できます。
 
 ### プロパティを使用したフォルダーからの Dynamic Media イメージプロファイルの削除 {#removing-image-profiles-from-folders-via-properties}
 
 1. AEM のロゴをタップして「**[!UICONTROL アセット]**」に移動した後、イメージプロファイルを削除するフォルダーに移動します。
-1. フォルダーのチェックマークをタップして選択し、**[!UICONTROL プロパティをタップします。]**
+1. チェックマークをタップして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をタップします。
 1. 「**[!UICONTROL イメージプロファイル]**」タブを選択します。
-1. **[!UICONTROL プロファイル名]**&#x200B;ドロップダウンリストから「**[!UICONTROL なし]**」を選択し、「**[!UICONTROL 保存して閉じる」をタップします。]**
+1. 「**[!UICONTROL プロファイル名]**」ドロップダウンリストから「**[!UICONTROL なし]**」を選択し、「**[!UICONTROL 保存して閉じる]**」をタップします。
 
    既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
