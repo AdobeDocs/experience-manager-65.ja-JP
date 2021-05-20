@@ -8,20 +8,19 @@ content-type: reference
 topic-tags: customization
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 437e6581-4eb1-4fbd-a6da-86b9c90cec89
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 73b0057f-082d-4502-90e2-5e41b52c1185
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 82%
 
 ---
 
-
 # カスタムアダプティブフォームテーマの作成 {#creating-custom-adaptive-form-themes}
 
 >[!CAUTION]
 >
->AEM Formsは、アダプティブフォーム[テーマ](/help/forms/using/themes.md)を作成および変更するための[テーマエディター](/help/forms/using/themes.md)機能を提供しています。 この記事に示す手順を実行するのは、[Theme Editor](/help/forms/using/themes.md)を持たないバージョンからアップグレードした場合で、LESS/CSSファイルを使用して作成したテーマに対する既存の投資がある場合のみです（テーマ編集前の方法）。
+>AEM Formsには、アダプティブフォーム[のテーマ](/help/forms/using/themes.md)を作成および変更するための[テーマエディター](/help/forms/using/themes.md)機能が用意されています。 この記事に示す手順は、[テーマエディター](/help/forms/using/themes.md)を持たないバージョンからアップグレードし、LESS/CSSファイル（テーマエディター前の方法）を使用して作成したテーマに対する既存の投資がある場合にのみ実行します。
 
 ## 前提条件 {#prerequisites}
 
@@ -45,10 +44,10 @@ ht-degree: 82%
 >
 >この手順にしたがって同じ名前を使用すると、結果として次のスナップショットと同じようなテンプレートが出来上がるはずです：
 
-![フォレストテーマのアダプティブフォーム](assets/thumbnail.png)
-**のスナップショット図：** *フォレストテーマのサンプル*
+![フォレストをテーマにしたアダ](assets/thumbnail.png)
+**プティブフォームのsnapshotFigure:** *フォレストのテーマのサンプル*
 
-1. `/apps`ノードの下に`cq:ClientLibraryFolder`型のノードを作成します。
+1. `/apps`ノードの下に、タイプ`cq:ClientLibraryFolder`のノードを作成します。
 
    例として、以下のノードを作成します：
 
@@ -60,9 +59,9 @@ ht-degree: 82%
 
    ![CRX レポジトリのスナップショット](assets/3-2.png)
 
-1. 手順1で作成したノードに対する追加2つのフォルダー`less`と`css`、ファイル`css.txt`があります。
+1. 手順1で作成したノードに、`less`と`css`の2つのフォルダーと`css.txt`のファイルを追加します。
 
-   * `less` folder:変数を定義する `less` 変数ファイルが含まれます。この `less` 変数は、.cssスタイル `less mixins` の管理に使用されます。
+   * `less` フォルダー：変数を定 `less` 義する変数ファイルと、.cssスタ `less` イルの `less mixins` 管理に使用される変数ファイルが含まれます。
 
       このフォルダーは、`less` 変数ファイル、`less` ミックスインファイル、ミックスインと変数を使用してスタイルを定義する `less` ファイルから構成されています。そして、これらすべての less ファイルは、styles.less にインポートされます。
 
@@ -97,7 +96,7 @@ ht-degree: 82%
 
    `less`変数を上書きするには：
 
-   1. デフォルトのアダプティブフォーム変数の読み込み：
+   1. デフォルトのアダプティブフォーム変数を読み込む：
 
       `/apps/clientlibs/fd/af/guidetheme/common/less/globalvariables.less/apps/clientlibs/fd/af/guidetheme/common/less/layoutvariables.less`
 
@@ -177,7 +176,7 @@ ht-degree: 82%
 
    `css.txt` には、ライブラリにダウンロードする CSS ファイルのパスが含まれています。
 
-   次に例を示します。
+   以下に例を示します。
 
    ```javascript
    #base=/apps/clientlibs/fd/af/third-party/css
@@ -213,7 +212,7 @@ ht-degree: 82%
 
    例：`/apps/myAfCustomizations/myAfPages/forestPage`
 
-   1. 追加`sling:resourceSuperType`プロパティを追加し、その値を`fd/af/components/page/base`に設定します。
+   1. `sling:resourceSuperType`プロパティを追加し、値を`fd/af/components/page/base`に設定します。
 
       ![CRX レポジトリのスナップショット](assets/1-2.png)
 
@@ -230,9 +229,8 @@ ht-degree: 82%
 
    1. **オプション**：カスタムページでは、header.jsp、footer.jsp、the body.jsp を必要に応じて上書きしてください。
 
-1. カスタムテンプレートの作成(例：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`)。jcr:contentは、前の手順で作成したカスタムページを指します(例：`myAfCustomizations/myAfPages/forestPage)`.
+1. カスタムテンプレートを作成します(例：`/apps/myAfCustomizations/myAfTemplates/forestTemplate`)を参照し、そのjcr:contentが前の手順で作成したカスタムページを指す(例：`myAfCustomizations/myAfPages/forestPage)`.
 
    ![CRX レポジトリのスナップショット](assets/2-1.png)
 
 1. 前の手順で作成したテンプレートを使って、アダプティブフォームを作成します。アダプティブフォームのルック＆フィールは、本記事の「アダプティブフォームテーマを作成するには」のセクションで作成されたテーマによって定義されています。
-
