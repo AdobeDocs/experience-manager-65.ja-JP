@@ -8,18 +8,17 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 79%
 
 ---
 
-
 # 追跡テーブルのカスタマイズ{#customize-tracking-tables}
 
-AEM Formsのワークスペースの「追跡」タブは、ログインしたユーザーが関与するプロセスインスタンスの詳細を表示するために使用されます。 追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
+AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与するプロセスインスタンスの詳細を表示するために使用されます。 追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
 
 * ID ( `taskId`)
 * 名前 ( `stepName`)
@@ -116,7 +115,7 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
  </tbody>
 </table>
 
-以下のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDKを使用してセマンティックの変更を行い、変更されたソースから縮小パッケージを構築する方法については、「AEM Formsワークスペースのカスタマイズの概要[」を参照してください。](/help/forms/using/introduction-customizing-html-workspace.md)
+以下のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDKを使用してセマンティックの変更をおこない、変更されたソースから縮小パッケージを構築する方法については、「 [AEM Forms workspaceのカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md) 」を参照してください。
 
 ## テーブル列と順序の変更 {#changing-table-columns-and-their-order}
 
@@ -158,7 +157,7 @@ AEM Formsのワークスペースの「追跡」タブは、ログインした�
 
 列の見出しをクリックするときにタスクリストテーブルを並べ替えるには：
 
-1. ファイル`js/runtime/views/processinstancehistory.js`内の`.fixedTaskTableHeader th`に対するクリックハンドラーを登録します。
+1. ファイル`js/runtime/views/processinstancehistory.js`に`.fixedTaskTableHeader th`のクリックハンドラを登録します。
 
    ```javascript
    events: {
