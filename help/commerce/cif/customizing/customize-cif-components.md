@@ -7,10 +7,9 @@ version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
-feature: Commerce統合フレームワーク
+feature: コマース統合フレームワーク
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
-translation-type: tm+mt
 source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '2541'
@@ -38,7 +37,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
 また、コード例やチュートリアルを実行するには、[GraphiQL](https://github.com/graphql/graphiql) またはブラウザー拡張機能などの GraphQL IDE が必要です。ブラウザー拡張機能をインストールする場合は、その拡張機能にリクエストヘッダーを設定できることを確認してください。Google Chrome の [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) は、ジョブを実行できる拡張機能の 1 つです。
 
-## ベニアプロジェクトのコピー{#clone-venia-project}
+## Veniaプロジェクトのクローン{#clone-venia-project}
 
 Venia プロジェクト[のクローンを作成して](https://github.com/adobe/aem-cif-guides-venia)、デフォルトのスタイルを上書きします。
 
@@ -61,7 +60,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 1. AEM インスタンスを Magento インスタンスに接続するために必要な OSGi 構成を追加するか、新しく作成されたプロジェクトに構成を追加します。
 
-1. この時点で、Magentoインスタンスに接続されたストアフロントの作業バージョンが必要です。 `US`／`Home` ページ（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）にアクセスします。
+1. この時点で、ストアインスタンスに接続されたストアフロントの作業用Magentoが必要です。 `US`／`Home` ページ（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）にアクセスします。
 
    ストアフロントは現在 Venia テーマを使用しています。ストアフロントのメインメニューを展開すると、様々なカテゴリが表示され、接続 Magento が機能していることが示されます。
 
@@ -89,7 +88,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    ![製品ティーザー - デフォルトスタイル](../assets/customize-cif-components/product-teaser-default-style.png)
 
-## Magento追加{#add-custom-attribute}のカスタム属性
+## Magento{#add-custom-attribute}にカスタム属性を追加する
 
 AEM に表示された製品と製品データは Magento に格納されます。次に、Magento UI を使用して設定する製品属性の一部として、新しい&#x200B;**エコフレンドリー**&#x200B;属性を追加します。
 
@@ -196,7 +195,7 @@ Sling モデルは Java として実装され、生成されたプロジェク�
 
    ![コアのロケーション IDE](../assets/customize-cif-components/core-location-ide.png)
 
-   `MyProductTeaser.java` は、CIF ProductTeaserインターフェイスを拡張するJava [](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) インターフェイスです。
+   `MyProductTeaser.java` は、CIF製品ティーザーインターフェイスを拡張するJavaイン [](https://github.com/adobe/aem-core-cif-components/blob/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/models/productteaser/ProductTeaser.java) ターフェイスです。
 
    製品が「新規」と見なされた場合にバッジを表示するための新しい `isShowBadge()` メソッドが既に追加されています。
 
@@ -261,7 +260,7 @@ Sling モデルは Java として実装され、生成されたプロジェク�
 
    `@PostConstruct` 注釈により、Sling モデルが初期化されるとすぐにこのメソッドが呼び出されます。
 
-   `extendProductQueryWith`メソッドを使用して追加の`created_at`属性を取得すると、製品のGraphQLクエリが既に拡張されています。 この属性は、後で `isShowBadge()` メソッドの一部として使用されます。
+   製品のGraphQLクエリは、追加の`created_at`属性を取得するために`extendProductQueryWith`メソッドを使用して既に拡張されています。 この属性は、後で `isShowBadge()` メソッドの一部として使用されます。
 
 1. GraphQL クエリをアップデートし、`eco_friendly` 属性を部分クエリに含めます。
 
@@ -326,7 +325,7 @@ Sling モデルは Java として実装され、生成されたプロジェク�
    }
    ```
 
-   上記のメソッドでは、`productRetriever`を使用して製品を取得し、`getAsInteger()`メソッドを使用して`eco_friendly`属性の値を取得します。 先ほど実行した GraphQL クエリに基づいて、 `eco_friendly` 属性が「**はい**」に設定された場合の期待値は、実際には整数 **1** であることがわかっています。
+   上記のメソッドでは、`productRetriever`が製品の取得に使用され、`getAsInteger()`メソッドが`eco_friendly`属性の値の取得に使用されます。 先ほど実行した GraphQL クエリに基づいて、 `eco_friendly` 属性が「**はい**」に設定された場合の期待値は、実際には整数 **1** であることがわかっています。
 
    Sling モデルがアップデートされたので、Sling モデルに基づいて&#x200B;**エコフレンドリー**&#x200B;という指標を実際に表示するには、コンポーネントマークアップをアップデートする必要があります。
 
@@ -430,7 +429,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
    >
    > また、ティーザーで使用される製品が属性セットの一部としての `eco_friendly` 属性を持たない場合は、スタックトレースが表示されることがあります。
 
-## 環境に優しいバッジ追加のスタイル{#add-styles}
+## エコフレンドリーバッジ{#add-styles}のスタイルの追加
 
 この時点で、**エコフレンドリー**&#x200B;バッジを表示するタイミングのロジックは機能していますが、プレーンテキストなのでスタイルを設定できます。次に、`ui.frontend` モジュールにアイコンとスタイルを追加し、実装を完了します。
 
@@ -488,7 +487,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 ## ボーナスチャレンジ {#bonus-challenge}
 
-製品ティーザーに既に実装されている&#x200B;**新しい**&#x200B;バッジの機能を確認します。 作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。`ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml` でコンポーネントダイアログをアップデートする必要があります。
+製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。 作成者が&#x200B;**エコフレンドリー**&#x200B;バッジをいつ表示するかを制御するためのチェックボックスを追加してみます。`ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml` でコンポーネントダイアログをアップデートする必要があります。
 
 ![新しいバッジの実装の課題](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 
