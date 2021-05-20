@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 44dec184-3ef7-4ba6-a87f-ad171d3cb188
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 34ac5f8b-f209-4f99-ad71-4df6f2c88c1e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 100%
 
 ---
-
 
 # 既存のドメインの編集と変換{#editing-and-converting-existing-domains}
 
@@ -50,4 +49,3 @@ ht-degree: 100%
 1. 「エンタープライズドメインに変換」をクリックします。
 1. ユーザーおよびグループのデータとユーザーの認証に関して表示された情報を確認し、「OK」をクリックします。
 1. 「ディレクトリを追加」をクリックし、必要なディレクトリ情報を設定します（[ディレクトリまたはカスタム SPI の追加](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis)を参照）。
-
