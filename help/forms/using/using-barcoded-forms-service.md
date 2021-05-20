@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: d431c4cb-e4be-41a5-8085-42393d4d468c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+exl-id: edaf12be-473f-4175-b4e0-549b41159a55
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 93%
 
 ---
-
 
 # Barcoded Forms サービス{#barcoded-forms-service}
 
@@ -92,9 +91,9 @@ Barcoded Forms サービスは、バーコードのデコード後、次の XML 
 </xb:scanned_image>
 ```
 
-## このサービスに関する考慮事項  {#considerations}
+## このサービスに関する考慮事項 {#considerations}
 
-### バーコードフォームを使用するワークフロー {#workflows-that-use-barcoded-forms}
+### バーコードフォームを使用するワークフロー  {#workflows-that-use-barcoded-forms}
 
 フォーム作成者は、Designer を使用してインタラクティブなバーコードフォームを作成します（[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照）。ユーザーが Adobe Reader または Acrobat でバーコードフォームに入力すると、バーコードは自動的に更新され、フォームデータがエンコードされます。
 
@@ -129,9 +128,9 @@ Barcoded Forms サービスを使用するときは、次の制限事項につ�
 * このサービスは、Adobe Reader または Acrobat を使用して保存された、2D バーコードを含む AcroForms および静的フォームを完全にサポートします。ただし、1D バーコードの場合は、フォームを統合するか、フォームを変換してスキャンされた PDF または TIFF ドキュメントとして提供してください。
 * 動的 XFA フォームは完全にサポートされているわけではありません。動的フォーム内の 1D および 2D バーコードを正しくデコードするには、フォームを統合するか、フォームを変換してスキャンされた PDF または TIFF ドキュメントとして提供してください。
 
-また、サービスは前記の制限事項に触れない限り、サポートされているコードが使用されていれば、どのようなバーコードでもデコードできます。インタラクティブなバーコードフォームの作成方法について詳しくは、[Designerヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+また、サービスは前記の制限事項に触れない限り、サポートされているコードが使用されていれば、どのようなバーコードでもデコードできます。インタラクティブなバーコードフォームの作成方法について詳しくは、[Designerのヘルプ](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
 
-## サービスのプロパティの設定   {#configureproperties}
+## サービスのプロパティの設定 {#configureproperties}
 
 AEM コンソールにある **AEMFD Barcoded Forms サービス**&#x200B;を使用すると、このサービスのプロパティを設定できます。AEMコンソールのデフォルトURLは`https://[host]:'port'/system/console/configMgr`です。
 
@@ -236,7 +235,7 @@ Barcoded Forms サービスには次の 2 つの API があります。
 
 ワークフローから Barcoded Forms サービスを実行することは、JSP またはサーブレットからサービスを実行することに似ています。唯一の相違点は、JSP またはサーブレットからこのサービスを実行する場合、ドキュメントオブジェクトが ResourceResolverHelper オブジェクトから ResourceResolver オブジェクトのインスタンスを自動で取得する点です。この自動メカニズムは、コードがワークフローから呼び出される場合は機能しません。
 
-ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、ドキュメントオブジェクトは、指定されたResourceResolverオブジェクトを使用してリポジトリからコンテンツを読み取ります。
+ワークフローの場合、ResourceResolver オブジェクトのインスタンスを Document クラスのコンストラクタに明示的に渡します。次に、Documentオブジェクトは、指定されたResourceResolverオブジェクトを使用して、リポジトリからコンテンツを読み取ります。
 
 次のサンプルワークフロープロセスは、ドキュメント内のバーコードをデコードして結果をディスクに保存します。コードは ECMAScript で記述され、ドキュメントはワークフローペイロードとして渡されます。
 
@@ -305,4 +304,3 @@ function saveW3CDocument(inputDoc, filePath) {
    os.close();
 }
 ```
-
