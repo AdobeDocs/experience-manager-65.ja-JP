@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 95%
 
 ---
-
 
 # ジャストインタイムのユーザープロビジョニング {#just-in-time-user-provisioning}
 
@@ -30,11 +29,11 @@ AEM Forms では、User Management にまだ存在していないユーザーの
 1. 認証プロバイダーは、秘密鍵証明書を検証します。
 1. 認証プロバイダーは、次に、ユーザーが User Management データベースに存在するかどうかを確認します。可能性のある結果を次に示します。
 
-   **存在する：ユーザーが** 最新でロック解除されている場合、User Managementは認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
+   **存在する：** ユーザーが現在の状態でロックが解除されている場合、User Managementは認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
-   **存在しない：** User Managementは認証失敗を返します。
+   **存在しない：** User Managementは認証エラーを返します。
 
-   **無効：** User Managementは認証失敗を返します。
+   **無効：** User Managementは認証エラーを返します。
 
 1. 認証プロバイダーが返した結果が評価されます。認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。そうでない場合は、User Management は次の認証プロバイダーに対して確認（手順 2～3）を行います。
 1. ユーザーの秘密鍵証明書を検証する利用可能な認証プロバイダーがなくなると、認証の失敗が返されます。
@@ -105,11 +104,10 @@ public Boolean assign(User user);
 
 1. 認証データを持つ `UserProvisioningBO` オブジェクトを作成し、秘密鍵証明書マップに配置します。
 1. `UserProvisioningBO` によって返されるドメイン情報に基づいて、ドメインの登録された `IdentityCreator` および `AssignmentProvider` を取得して呼び出します。
-1. `IdentityCreator`を呼び出します。 正常な `AuthResponse` が返される場合、秘密鍵証明書マップから `UserInfo` を抽出します。ユーザー作成後のグループ／ロールアサインおよびその他の後処理のために `AssignmentProvider` に渡します。
+1. `IdentityCreator`を起動します。 正常な `AuthResponse` が返される場合、秘密鍵証明書マップから `UserInfo` を抽出します。ユーザー作成後のグループ／ロールアサインおよびその他の後処理のために `AssignmentProvider` に渡します。
 1. ユーザーが正常に作成されると、成功としてユーザーのログイン試行を返します。
 1. ハイブリッドドメインの場合、認証プロバイダーに提供された認証データからユーザー情報を引き出します。この情報が正常に取得されると、ユーザーがオンザフライで作成されます。
 
 >[!NOTE]
 >
 >ジャストインタイムプロビジョニング機能は、動的にユーザーを作成するために使用できる `IdentityCreator` のデフォルトの実装に付属しています。ユーザーは、ドメインのディレクトリに関連付けられている情報を使用して作成されます。
-
