@@ -7,7 +7,6 @@ breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature: Communities
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '502'
@@ -16,7 +15,7 @@ ht-degree: 94%
 ---
 
 
-# Adobe Experience Manager6.5コミュニティガイド{#communities}
+# Adobe Experience Manager 6.5 Communitiesガイド {#communities}
 
 + [Communities ガイド](home.md)
 + AEM Communities の概要 {#introduction}
@@ -28,11 +27,11 @@ ht-degree: 94%
    + [初期設定](setup.md)
    + [新しいコミュニティサイトの作成](create-site.md)
    + [公開したサイトを使ってみる](published-site.md)
-   + [ネストされたグループのオーサリング](nested-groups.md)
+   + [ネストされたグループの作成](nested-groups.md)
    + [イネーブルメントのための初期設定](enablement-setup.md)
    + [イネーブルメントのための新しいコミュニティサイトの作成](enablement-create-site.md)
    + [イネーブルメントリソースの作成と割り当て](resource.md)
-   + [発行済み有効化サイトを体験する](enablement-published-site.md)
+   + [公開済みイネーブルメントサイトを体験する](enablement-published-site.md)
 + デプロイ {#deploy}
    + [Communities のデプロイ](deploy-communities.md)
    + [AEM 6.5 Communities へのアップグレード](upgrade.md)
@@ -49,7 +48,7 @@ ht-degree: 94%
    + [電子メールの設定](email.md)
    + [コミュニティの通知](notifications.md)
    + [コミュニティの購読](subscriptions.md)
-   + [コミュニティのスコアおよびバッジ](implementing-scoring.md)
+   + [コミュニティのスコアとバッジ](implementing-scoring.md)
    + [ユーザーとユーザーグループの管理](users.md)
    + [コミュニティグループコンソール](groups.md)
    + [Facebook と Twitter を使用したソーシャルログイン](social-login.md)
