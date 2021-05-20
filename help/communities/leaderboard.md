@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
-translation-type: tm+mt
-source-git-commit: e7268e43620860b7a1f7aa0a1f1a54199dadcf17
+exl-id: fd1b1749-13f9-4079-ae39-348676105852
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 78%
 
 ---
-
 
 # リーダーボードの基本事項  {#leaderboard-essentials}
 
@@ -24,7 +23,7 @@ ht-degree: 78%
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。
 
-[スコアリングとバッジの初期設定](configure-scoring.md)を参照してください。
+[スコアとバッジの基本事項](configure-scoring.md)を参照してください。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -36,7 +35,7 @@ ht-degree: 78%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -59,6 +58,6 @@ ht-degree: 78%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### ファイルライブラリ機能  {#file-library-function}
+### ファイルライブラリ機能 {#file-library-function}
 
-[リーダーボード機能](functions.md#leaderboard-function)を含むコミュニティサイト構造は、構成された`leaderboard`コンポーネントを含む。
+[リーダーボード機能](functions.md#leaderboard-function)を含むコミュニティサイト構造には、設定済みの`leaderboard`コンポーネントが含まれます。
