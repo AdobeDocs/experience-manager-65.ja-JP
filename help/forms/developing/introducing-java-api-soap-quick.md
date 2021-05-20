@@ -9,26 +9,25 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop, development-tools
 discoiquuid: 38fd51ec-347e-4ae3-86d4-9d2429f79bdd
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1d4062ef-fb24-4527-b899-896ce757beda
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
+# Java APIクイックスタートの概要{#introducing-java-api-quickstart}
 
-# Java APIクイック開始の概要{#introducing-java-api-quickstart}
+**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
 
-**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
+AdobeAEM Forms APIクイックスタートは、AEM Formsサービスとやり取りするプログラムの開発に向けた取り組みを加速するのに役立ちます。 *クイッ*&#x200B;クスタートとは、独自のプロジェクトにコピーして貼り付け、出発点として使用できる完全なプログラムです。クイックスタートを実行して、その動作を確認し、独自のニーズに合わせて変更できます。
 
-AdobeAEM FormsAPIクイック開始は、AEM Formsサービスとやり取りするプログラムの開発に向けた取り組みを迅速化するのに役立ちます。 *クイック*&#x200B;開始は完全なプログラムで、独自のプロジェクトにコピーして貼り付け、開始点として使用できます。クイック開始を実行して、動作を確認し、必要に応じて変更することができます。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+Java厳密に型指定されたAPIクイックスタートには、Javaアプリケーションの実行に必要なJARファイルのリストが用意されています。 ほとんどのJavaクイックスタートは、`main`内で実行されるコンソールアプリケーションです。 ただし、Forms Javaで厳密に型指定されたAPIクイックスタートは、Webアプリケーション内で実行されるJavaサーブレットとして実装されます。
 
-Java厳密に型指定されたAPIクイック開始は、Javaアプリケーションの実行に必要なJARファイルのリストを提供します。 ほとんどのJavaクイック開始は、`main`内で実行するコンソールアプリケーションです。 ただし、FormsJavaが厳密に型指定したAPIクイック開始は、Webアプリケーション内で実行するJavaサーブレットとして実装されます。
-
-JARファイルのリストは、クイック開始の先頭にあるコメントセクションにあります。 例えば、次のコメントはOutputクイック開始にあり、各Javaクイック開始に含まれる一般的なJARファイルリストです。
+JARファイルのリストは、クイックスタートの先頭にあるコメントセクションにあります。 例えば、次のコメントはOutputのクイックスタートにあり、各Javaのクイックスタートで見つかる一般的なJARファイルリストです。
 
 ```java
  /*
@@ -65,29 +64,28 @@ JARファイルのリストは、クイック開始の先頭にあるコメン�
      */
 ```
 
-## 複数のサービスクイック開始{#multiple-services-quick-start}
+## 複数のサービスのクイックスタート{#multiple-services-quick-start}
 
-*JEE上のAEM Formsとのプログラミング*&#x200B;にあるほとんどのクイック開始は、操作を実行するために特定のサービスを呼び出します。 ただし、一部のクイック開始は、特定のワークフローを実行するために複数のAEM Formsサービスを呼び出します。 次のリストは、複数のAEM Formsサービスを呼び出すJavaクイック開始を提供します。
+*JEE上のAEM Formsでのプログラミング*&#x200B;にあるほとんどのクイックスタートでは、操作を実行するために特定のサービスを呼び出します。 ただし、一部のクイックスタートでは、特定のワークフローを実行するために複数のAEM Formsサービスを呼び出します。 次のリストは、複数のAEM Formsサービスを呼び出すJavaクイックスタートを示しています。
 
-[クイック開始（SOAPモード）:Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （RepositoryとOutputサービスを呼び出す）
+[クイックスタート（SOAPモード）:Java APIを使用してAEM Formsリポジトリ内のドキュメントをOutputサービスに渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) （RepositoryとOutputサービスを呼び出す）
 
-[クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （AssemblerとOutputサービスを呼び出す）
+[クイックスタート（SOAPモード）:Java APIを使用したフラグメントに基づくPDFドキュメントの作成](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api) （AssemblerおよびOutputサービスを呼び出す）
 
-[クイック開始（SOAPモード）:Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (Forms、Output、ドキュメントの各サービスを呼び出す)を使用して、送信されたXMLデータを使用してPDFドキュメントを作成する
+[クイックスタート（SOAPモード）:Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api) (Forms、Output、およびDocument Managementサービスを呼び出す)を使用して、送信済みのXMLデータを使用してPDFドキュメントを作成する
 
-[クイック開始（SOAPモード）:Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (Formsおよびドキュメント管理サービスを呼び出す)を使用してFormsサービスにドキュメントを渡す
+[クイックスタート（SOAPモード）:Java APIを使用してFormsサービスにドキュメントを渡す](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api) (FormsおよびDocument Managementサービスを呼び出す)
 
-[クイック開始（SOAPモード）:Java APIを使用したXFAベースのフォームへの電子署名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (FormsおよびSignatureサービスを呼び出す)
+[クイックスタート（SOAPモード）:Java APIを使用したXFAベースフォームのデジタル署名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api) (FormsおよびSignatureサービスを呼び出す)
 
-[クイック開始（SOAPモード）:Java APIを使用したロールと権限の管理](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （DirectoryManagerおよびAuthorizationManagerサービスを呼び出す）
+[クイックスタート（SOAPモード）:Java APIを使用した役割と権限の管理](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （ DirectoryManagerおよびAuthorizationManagerサービスを呼び出す）
 
-[クイック開始（SOAPモード）:Java APIを使用してOutputサービスにドキュメントを渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) (Outputおよびドキュメント管理サービスを呼び出す)
-
->[!NOTE]
->
->「AEM Formsでのプログラミング」にあるクイック開始は、AEM FormsがJBoss® Application ServerおよびMicrosoft® Windows®オペレーティングシステムにデプロイされていることに基づいています。 ただし、UNIX®など別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+[クイックスタート（SOAPモード）:Java APIを使用してOutputサービスにドキュメントを渡す](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api) （OutputおよびDocument Managementサービスを呼び出す）
 
 >[!NOTE]
 >
->ほとんどのWebサービスクイック開始はC#で記述され、.NET Frameworkを使用します。 ただし、SOAP標準をサポートする任意の開発環境で、AEM Formsサービスを呼び出すことができるクライアントアプリケーションロジックを作成できます。 (「[Webサービスを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)」を参照)。
+>「 AEM Formsによるプログラミング」にあるクイックスタートは、AEM FormsがJBoss® Application ServerおよびMicrosoft® Windows®オペレーティングシステムにデプロイされていることに基づいています。 ただし、UNIX®などの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
+>[!NOTE]
+>
+>ほとんどのWebサービスのクイックスタートはC#で記述され、.NETフレームワークを使用します。 ただし、SOAP標準をサポートする任意の開発環境でAEM Formsサービスを呼び出すことができるクライアントアプリケーションロジックを作成できます。 ([Webサービスを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)を参照)。
