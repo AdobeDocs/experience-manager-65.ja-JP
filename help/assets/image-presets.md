@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
-feature: Image Presets
+feature: 画像プリセット
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 90%
+source-wordcount: '326'
+ht-degree: 91%
 
 ---
-
 
 # Dynamic Media 画像プリセットの適用 {#applying-image-presets}
 
@@ -34,11 +33,11 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Dynamic Media-Scene7モードでは、画像プリセットは画像アセットに対してのみサポートされています。
+>Dynamic Media - Scene7モードでは、画像プリセットは画像アセットに対してのみサポートされます。
 
 **Dynamic Media 画像プリセットを適用するには**
 
-1. アセットを開き、左のナビゲーションバーのドロップダウンメニューをタップし、「**[!UICONTROL レンディション」をタップします。]**
+1. アセットを開き、左側のレールでドロップダウンメニューをタップし、「**[!UICONTROL レンディション」をタップします。]**
 
    >[!NOTE]
    >
@@ -60,4 +59,3 @@ ht-degree: 90%
    >アセット&#x200B;*と*&#x200B;画像プリセットがまだ公開されていない場合、「**[!UICONTROL URL]**」ボタン（または該当する場合は「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL RESS]**」ボタン）は使用できません。
    >
    >また、Dynamic Media サーバーでは画像プリセットが自動的に公開されることにも注意してください。
-
