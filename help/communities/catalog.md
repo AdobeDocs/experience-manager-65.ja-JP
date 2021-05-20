@@ -9,25 +9,24 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 discoiquuid: 7cd7921e-6438-450a-a676-9da3c4a5ced3
-translation-type: tm+mt
-source-git-commit: 82affd528f2526384b319fe89082e0f574ab5855
+exl-id: 88356736-47c5-4878-a083-fdb526299d1e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 25%
 
 ---
 
-
 # カタログ機能  {#catalog-feature}
 
-コンポーネントブラウザーのCommunitiesグループにある[`Enablement Assignments`](assignments.md)および`Enablement Catalog`コンポーネントは、[有効化コミュニティ](overview.md#enablement-community)のコンポーネントです。
+コンポーネントブラウザーのコミュニティグループにある[`Enablement Assignments`](assignments.md)と`Enablement Catalog`コンポーネントは、[イネーブルメントコミュニティ](overview.md#enablement-community)のコンポーネントです。
 
-`Enablement Catalog`コンポーネントは、コミュニティのメンバーが[イネーブルメントリソース](resources.md)のカタログにアクセスすることを可能にします。 AEMタグの使用は、カタログ内のイネーブルメントリソースのリストを管理する上で重要です（[タグ付け可能なリソース](tag-resources.md)を参照）。
+`Enablement Catalog`コンポーネントを使用すると、コミュニティメンバーは[イネーブルメントリソース](resources.md)のカタログにアクセスできます。 AEMタグの使用は、カタログ内のイネーブルメントリソースのリストを管理するうえで重要な役割を果たします（[イネーブルメントリソースのタグ付け](tag-resources.md)を参照）。
 
-[有効化のためのAEM Communitiesの使用の手引き](getting-started-enablement.md)チュートリアルで、[発行済みサイトの体験](enablement-published-site.md)のメンバーの割り当てとカタログの表示を参照してください。
+[AEM Communities for Enablementの手引き](getting-started-enablement.md)のチュートリアルで、「[公開済みサイトを体験する](enablement-published-site.md) 」のセクションで、メンバーの割り当てとカタログの表示を確認します。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、[開発者向けの「Catalog Essentials](catalog-developer-essentials.md)」ページを参照してください。
+詳しくは、開発者向けの[カタログの基本事項](catalog-developer-essentials.md)ページを参照してください。
 
-[コミュニティサイト](sites-console.md)の作成時に、[カタログ関数](functions.md#catalog-function)を使用できます。
+[コミュニティサイト](sites-console.md)を作成する際に、[カタログ関数](functions.md#catalog-function)を使用できます。
