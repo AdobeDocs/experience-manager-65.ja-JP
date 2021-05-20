@@ -7,14 +7,13 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 80%
 
 ---
-
 
 # Forms User Management | ユーザーデータの処理 {#forms-user-management-handling-user-data}
 
@@ -30,7 +29,7 @@ User Management は、AEM Forms にアクセスするために AEM Forms ユー�
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
-User Management は、My Sql、Oracle、MS SQL Server、IBM DB2 などのデータベースにユーザーデータを格納します。さらに、`https://'[server]:[port]'lc`のAEM作成者のFormsアプリケーションに少なくとも1回ログインしたユーザは、AEMリポジトリに作成されます。 したがって、User Management のデータは、次のデータストアに格納されます。
+User Management は、My Sql、Oracle、MS SQL Server、IBM DB2 などのデータベースにユーザーデータを格納します。さらに、`https://'[server]:[port]'lc`にAEMオーサー環境のFormsアプリケーションに少なくとも1回ログインしたユーザーは、AEMリポジトリに作成されます。 したがって、User Management のデータは、次のデータストアに格納されます。
 
 * データベース
 * AEM リポジトリ
@@ -40,7 +39,7 @@ User Management は、My Sql、Oracle、MS SQL Server、IBM DB2 などのデー�
 >
 >サードパーティーストレージに格納されたデータについては、この文書で説明していません。このようなストレージでユーザーデータを管理する場合は、サードパーティーのベンダーに直接問い合わせてください。
 
-### データベース  {#database}
+### データベース {#database}
 
 User Management では、次のデータベーステーブルにユーザーデータが格納されます。
 
@@ -89,7 +88,7 @@ User Management では、次のデータベーステーブルにユーザーデ�
 
 ### AEM リポジトリ  {#aem-repository}
 
-`https://'[server]:[port]'lc`の下で少なくとも一度はForms・アプリケーションにアクセスしたユーザのユーザ管理データもAEMリポジトリに保存されます。
+`https://'[server]:[port]'lc`の下のFormsアプリケーションに少なくとも1回アクセスしたユーザーのユーザー管理データもAEMリポジトリに保存されます。
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
@@ -99,7 +98,7 @@ User Management データベースおよび AEM リポジトリにあるユー�
 
 User Management データベースのユーザーデータを書き出すまたは削除するには、データベースクライアントを使用してデータベースに接続し、ユーザーの PII に基づいてプリンシパル ID を検索します。例えば、ログイン ID を使用してユーザーのプリンシパル ID を取得するには、次の `select` コマンドをデータベースで実行します。
 
-`select`コマンドで、`<user_login_id>`を取得するプリンシパルIDを持つユーザーのログインIDに置き換えます。
+`select`コマンドで、`<user_login_id>`を、取得するプリンシパルIDを持つユーザーのログインIDに置き換えます。
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -109,22 +108,22 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 #### ユーザーデータの書き出し  {#export-user-data}
 
-次のデータベースコマンドを実行して、プリンシパル ID の User Management データをデータベーステーブルから書き出します。`select`コマンドで、`<principal_id>`を書き出すデータのユーザーのプリンシパルIDに置き換えます。
+次のデータベースコマンドを実行して、プリンシパル ID の User Management データをデータベーステーブルから書き出します。`select`コマンドで、 `<principal_id>`を、書き出すデータのユーザーのプリンシパルIDに置き換えます。
 
 >[!NOTE]
 >
 >次のコマンドでは、My SQL および IBM DB2 データベースのデータベーステーブル名を使用しています。これらのコマンドを Oracle および MS SQL データベースで実行するときは、コマンドの次のテーブル名を置き換えます。
 >
->* `EdcPrincipalLocalAccountEntity`を`EdcPrincipalLocalAccount`に置き換えます
+>* `EdcPrincipalLocalAccountEntity`を`EdcPrincipalLocalAccount`に置き換えます。
    >
    >
-* `EdcPrincipalEmailAliasEntity`を`EdcPrincipalEmailAliasEn`に置き換えます
+* `EdcPrincipalEmailAliasEntity`を`EdcPrincipalEmailAliasEn`に置き換えます。
    >
    >
-* `EdcPrincipalMappingEntity`を`EdcPrincipalMappingEntit`に置き換えます
+* `EdcPrincipalMappingEntity`を`EdcPrincipalMappingEntit`に置き換えます。
    >
    >
-* `EdcPrincipalGrpCtmntEntity`を`EdcPrincipalGrpCtmntEnti`に置き換えます
+* `EdcPrincipalGrpCtmntEntity`を`EdcPrincipalGrpCtmntEnti`に置き換えます。
 
 >
 
@@ -182,7 +181,7 @@ Forms JEE ユーザーは、AEM Forms オーサーインスタンスに少なく
 
 #### ユーザーデータへのアクセス  {#access-user-data}
 
-AEMリポジトリで作成された表示ユーザーに対して、AEM管理者の資格情報を使用して`https://'[server]:[port]'/lc/useradmin`にログインします。 URL の `server` と `port` は、AEM オーサーインスタンスのサーバーとポートであることに注意してください。ここでは、ユーザー名でユーザーを検索できます。ユーザーをダブルクリックすると、ユーザーのプロパティ、権限、グループなどの情報が表示されます。ユーザーの `Path` プロパティは、AEM リポジトリで作成されたユーザーノードへのパスを指定します。
+AEMリポジトリで作成されたユーザーを表示するには、AEM管理者の資格情報を使用して`https://'[server]:[port]'/lc/useradmin`にログインします。 URL の `server` と `port` は、AEM オーサーインスタンスのサーバーとポートであることに注意してください。ここでは、ユーザー名でユーザーを検索できます。ユーザーをダブルクリックすると、ユーザーのプロパティ、権限、グループなどの情報が表示されます。ユーザーの `Path` プロパティは、AEM リポジトリで作成されたユーザーノードへのパスを指定します。
 
 #### ユーザーデータの削除 {#delete-aem}
 
@@ -190,6 +189,5 @@ AEMリポジトリで作成された表示ユーザーに対して、AEM管理�
 
 1. AEM管理者の資格情報を使用して`https://'[server]:[port]'/lc/useradmin`に移動します。
 1. ユーザーを検索してユーザー名をダブルクリックし、ユーザープロパティを開きます。`Path`プロパティをコピーします。
-1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にあるAEM CRX DELiteに移動し、ユーザーパスを探すか、検索します。
-1. パスを削除し、「**[!UICONTROL すべて保存]**」をクリックして、ユーザーをAEMリポジトリから完全に削除します。
-
+1. `https://'[server]:[port]'/lc/crx/de/index.jsp`のAEM CRX DeLiteに移動し、ユーザーパスに移動または検索します。
+1. パスを削除し、「**[!UICONTROL すべて保存]**」をクリックして、AEMリポジトリからユーザーを完全に削除します。
