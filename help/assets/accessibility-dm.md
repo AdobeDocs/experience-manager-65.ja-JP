@@ -1,29 +1,28 @@
 ---
 title: 'Dynamic Media のアクセシビリティ '
-description: Dynamic MediaおよびDynamic MediaのViewerでのアクセシビリティのサポートについて説明します
+description: Dynamic MediaとDynamic Mediaビューアでのアクセシビリティのサポートについて説明します。
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
-feature: Accessibility
+feature: アクセシビリティ
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 71%
+source-wordcount: '579'
+ht-degree: 72%
 
 ---
-
 
 # [!DNL Dynamic Media] でのアクセシビリティ {#working-with-three-d-assets-dm}
 
 [!DNL Dynamic Media] では、オーサリングユーザーインターフェイス全体でキーボードコントロールおよび支援テクノロジー（JAWS スクリーンリーダーや NVDA スクリーンリーダーなど）をサポートしています。
 
-## [!DNL Dynamic Media]でのキーボードのアクセシビリティのサポート
+## [!DNL Dynamic Media]でのキーボードアクセシビリティのサポート
 
-[!DNL Dynamic Media]は[!DNL Adobe Experience Manager Assets]のプラグインなので、キーボードコントロールの動作のほとんどは[!DNL Experience Manager Assets]の動作とまったく同じです。 例えば、[!DNL Dynamic Media]の`Cancel`ボタンは、[!DNL Experience Manager Assets]と同じフォーカスハイライトを持ち、[!DNL Experience Manager Assets]と同じように`Spacebar`キーに反応します。 詳しくは、[Assets のキーボードショートカット](/help/assets/accessibility.md#keyboard-shortcuts)を参照してください。
+[!DNL Dynamic Media]は[!DNL Adobe Experience Manager Assets]のプラグインなので、キーボード制御の動作のほとんどは[!DNL Experience Manager Assets]の動作とまったく同じです。 例えば、[!DNL Dynamic Media]の`Cancel`ボタンは、[!DNL Experience Manager Assets]と同じフォーカスハイライトを持ち、[!DNL Experience Manager Assets]と同じ`Spacebar`キーに反応します。 詳しくは、[Assets のキーボードショートカット](/help/assets/accessibility.md#keyboard-shortcuts)を参照してください。
 
-[!DNL Dynamic Media]の個々のユーザーインターフェイス要素でサポートされているキーストロークは、ほとんどの場合、明らかで見つけやすいものです。 [!DNL Dynamic Media]のキーボードコントロールは、次のことに関するものです。
+[!DNL Dynamic Media]の個々のユーザーインターフェイス要素でサポートされているキーストロークは、ほとんどの場合、明らかで見つけやすいものです。 [!DNL Dynamic Media]のキーボードコントロールは、次の点に関するものです。
 
 * `Tab` と `Shift+Tab` のキー操作を使用して、ページ上のインタラクティブ要素間を移動できます。`Tab` を使用すると、タブ順序における次のユーザーインターフェイス要素に入力フォーカスが進みます。`Shift+Tab` を使用すると、入力フォーカスが前のユーザーインターフェイス要素に戻ります。フォーカストラバーサルは、画面上のユーザーインターフェイス要素の自然な位置に従い、左から右、上から下の順に移動します。また、フィールドにエラーがある場合は、`Tab` を押して、そのフィールドにフォーカスを移動できます。
 * `Spacebar` キーと `Enter` キーを使用して、ボタン、ドロップダウンリストなどの標準的なユーザーインターフェイス要素をアクティブにできます。
@@ -45,21 +44,21 @@ ht-degree: 71%
 
 ## [!DNL Dynamic Media] {#assistive-technology-support-for-dm}での支援テクノロジーのサポート
 
-[!DNL Dynamic Media] のユーザーインターフェイス要素は、スクリーンリーダーなどの支援テクノロジーと連携動作します。例えば、キーボードショートカット`D`を使用してランドマークを移動したとき、またはキーボードショートカット`R`を使用して領域を移動したときに、ページのランドマークが認識されます。 また、見出しのキーボードショートカット `H` を使用して移動する際に、見出しの読み上げもおこなわれます。
+[!DNL Dynamic Media] のユーザーインターフェイス要素は、スクリーンリーダーなどの支援テクノロジーと連携動作します。例えば、キーボードショートカット`D`を使用してランドマークを移動するとき、またはキーボードショートカット`R`を使用して領域を移動すると、ページ上のランドマークが認識されます。 また、見出しのキーボードショートカット `H` を使用して移動する際に、見出しの読み上げもおこなわれます。
 
-## [!DNL Dynamic Media]ビューア{#keyboard-accessibility-for-dm-viewers}でのキーボードのアクセシビリティのサポート
+## [!DNL Dynamic Media]ビューア{#keyboard-accessibility-for-dm-viewers}でのキーボードアクセシビリティのサポート
 
-標準搭載の[!DNL Dynamic Media]ビューアコンポーネントは、お客様向けのキーボードアクセシビリティをサポートしています。
+すべての標準の[!DNL Dynamic Media]ビューアコンポーネントは、お客様向けにキーボードアクセシビリティをサポートしています。
 
-『Dynamic Mediaビューアリファレンスガイド』の「[キーボードのアクセシビリティとナビゲーション](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=ja)」を参照してください。
+『Dynamic Mediaビューアリファレンスガイド』の[キーボードアクセシビリティとナビゲーション](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=ja)を参照してください。
 
 ## [!DNL Dynamic Media]ビューア{#assistive-technology-support-for-dm-viewers}での支援テクノロジーのサポート
 
-すべての[!DNL Dynamic Media]ビューアコンポーネントは、ARIA(Accessible Rich Internet Applications)の役割と属性をサポートしており、スクリーンリーダーなどの支援テクノロジーとの統合を強化します。
+[!DNL Dynamic Media]のすべてのビューアコンポーネントは、ARIA(Accessible Rich Internet Applications)の役割と属性をサポートし、スクリーンリーダーなどの支援テクノロジーとの統合を強化します。
 詳しくは、『Dynamic Media ビューアリファレンスガイド』の「ビューアのカスタマイズ」のトピックで、**支援テクノロジーのサポート**&#x200B;に関するヘルプトピックを参照してください。例えば、ビデオビューアの[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=ja)や、インタラクティブ画像ビューアの[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)を参照してください。
 
 >[!MORELIKETHIS]
 >
 >* [アドビソリューションのアクセシビリティ](https://www.adobe.com/accessibility.html)
->* [ [!DNL Experience Manager Assets]](/help/assets/accessibility.md) でのアクセシビリティ
+>* [ [!DNL Experience Manager Assets] でのアクセシビリティ](/help/assets/accessibility.md)
 
