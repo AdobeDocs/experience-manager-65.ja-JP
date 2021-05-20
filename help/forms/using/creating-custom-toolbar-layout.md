@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 86%
 
 ---
-
 
 # カスタムツールバーレイアウトの作成{#creating-custom-toolbar-layout}
 
@@ -40,12 +39,12 @@ ht-degree: 86%
 
 次の手順では、カスタムツールバーを作成する手順を示します。ここでは、3 つのアクションがツールバーに表示され、その他のアクションはツールバーのドロップダウンリストに表示されます。
 
-付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールした後、`/content/forms/af/CustomLayoutDemo.html`を開いてカスタムツールバーレイアウトデモを表示します。
+付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールしたら、`/content/forms/af/CustomLayoutDemo.html`を開いてカスタムツールバーレイアウトのデモを表示します。
 
 CustomToolbarLayoutDemo.zip
 
-[Get ](assets/customtoolbarlayoutdemo.zip)
-FileDemoカスタムツールバーレイアウト
+[FileDemoカス](assets/customtoolbarlayoutdemo.zip)
+タムツールバーレイアウトの取得
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
@@ -63,9 +62,9 @@ FileDemoカスタムツールバーレイアウト
 
    >[!NOTE]
    >
-   >カスタムレイアウトを管理するために作成するフォルダーは、`apps`フォルダーで作成されるものが多くあります。
+   >カスタムレイアウトを維持するために作成するフォルダは、`apps`フォルダで作成されます。
 
-1. コピーしたノード`mobileFixedToolbarLayout`の名前を`customToolbarLayout.`に変更します
+1. コピーしたノード`mobileFixedToolbarLayout`の名前を`customToolbarLayout.`に変更します。
 
    また、ノードのための適切な説明も与えます。例えば、ノードの jcr:description を&#x200B;**ツールバーのカスタムレイアウト** に変更します。
 
@@ -87,7 +86,7 @@ FileDemoカスタムツールバーレイアウト
 
 1. このカスタムツールバーレイアウトを選択し、「OK」をクリックします。
 
-   追加clientlib （javascriptとcss）を`/etc/customlayout`ノードに追加し、clientlibの参照を`customToolbarLayout.jsp`に含めます。
+   clientlib（javascriptとcss）を`/etc/customlayout`ノードに追加し、clientlibの参照を`customToolbarLayout.jsp`に含めます。
 
    ![customToolbarLayout.css ファイルのパス](assets/toolbar_3.png)
 
@@ -235,4 +234,3 @@ FileDemoカスタムツールバーレイアウト
 ![カスタムレイアウトツールバーのデスクトップビュー](assets/toolbar_1.png)
 
 カスタムレイアウトツールバーのデスクトップビュー
-
