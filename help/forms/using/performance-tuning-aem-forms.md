@@ -10,14 +10,13 @@ topic-tags: Configuration
 discoiquuid: 38c0ec46-5686-4656-bfb4-7125ec194673
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 79%
 
 ---
-
 
 # AEM Forms サーバーのパフォーマンスチューニング{#performance-tuning-of-aem-forms-server}
 
@@ -50,7 +49,7 @@ AEM Forms のデフォルトキャッシュ設定は、最適なパフォーマ�
 
 ## JVM パラメーター {#jvm-parameters}
 
-最適なパフォーマンスを得るには、次のJVM `init`引数を使用して`Java heap`と`PermGen`を設定することをお勧めします。
+最適なパフォーマンスを得るには、次のJVM `init`引数を使用して`Java heap`および`PermGen`を設定することをお勧めします。
 
 ```shell
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
@@ -61,7 +60,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 >[!NOTE]
 >
->推奨設定は、Windows 2008 R2 8コアおよびOracleHotSpot 1.7（64ビット）JDK用で、ご使用のシステム設定に従って拡大または縮小する必要があります。
+>推奨設定は、Windows 2008 R2 8 CoreおよびOracleHotSpot 1.7（64ビット）JDK用で、システム構成に従って拡大または縮小する必要があります。
 
 ## Web サーバーの使用 {#using-a-web-server}
 
@@ -83,7 +82,7 @@ set CQ_JVM_OPTS=%CQ_JVM_OPTS% -XX:MaxPermSize=1024m
 
 Apache は HTTP プロトコルを使用して CRX と情報をやり取りできます。HTTP を使用した場合に最適化される設定になっています。
 
-1. `APACHE_HOME/conf/httpd.conf`ファイル内の次のモジュール設定のコメントを解除します。
+1. `APACHE_HOME/conf/httpd.conf`ファイル内で次のモジュール設定のコメントを解除します。
 
    ```shell
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -95,14 +94,14 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
    >
    >Linuxの場合、デフォルトの`APACHE_HOME`は`/etc/httpd/`です。
 
-1. crx のポート 4502 のプロキシを設定します。&lt;a0/追加>構成ファイルの構成を次に示します。`APACHE_HOME/conf/httpd.conf`
+1. crx のポート 4502 のプロキシを設定します。次の設定を`APACHE_HOME/conf/httpd.conf`構成ファイルに追加します。
 
    ```shell
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
 
-1. 圧縮を有効化します。&lt;a0/追加>構成ファイルの構成を次に示します。`APACHE_HOME/conf/httpd.conf`
+1. 圧縮を有効化します。次の設定を`APACHE_HOME/conf/httpd.conf`構成ファイルに追加します。
 
    **HTML5 フォームの場合**
 
@@ -148,32 +147,31 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * AEM のインストールディレクトリ。このディレクトリ全体を除外できない場合は、以下の項目を除外してください。
 
-   * [AEM installation directory]\crx-repository\temp
-   * [AEM installation directory]\crx-repository\repository
-   * [AEM installation directory]\crx-repository\launchpad
+   * [AEMインストールディレクトリ]\crx-repository\temp
+   * [AEMインストールディレクトリ]\crx-repository\repository
+   * [AEMインストールディレクトリ]\crx-repository\launchpad
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (Jboss)[AEM installation directory]\jboss\standalone\tmp
+   * (Jboss) [AEM installation directory]\jboss\standalone\tmp
    * Weblogic - \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
    * Websphere - \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
 * **（JEE 上の AEM Forms のみ）** Global Document Storage（GDS）ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (JBoss)[appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
-   * (WebLogic)[appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere)[appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
+   * (JBoss) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+   * (WebSphere) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **（JEE 上の AEM Forms のみ）** AEM Forms サーバーのログファイルと一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * サーバーログ — [AEM Formsのインストールディレクトリ]\Adobe\AEM forms\[app-server]\server\all\logs
-   * 一時ディレクトリ — [AEM Formsのインストールディレクトリ]\temp
+   * サーバーログ — [AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs
+   * 一時ディレクトリ — [AEM Forms installation directory]\temp
 
 >[!NOTE]
 >
->* GDSと一時ディレクトリに別の場所を使用している場合は、`https://'[server]:[port]'/adminui`でAdminUIを開き、**ホーム/設定/コアシステム設定/コア設定**&#x200B;に移動して、使用している場所を確認します。
+>* GDSと一時ディレクトリに別の場所を使用している場合は、`https://'[server]:[port]'/adminui`でAdminUIを開き、**ホーム/設定/コアシステム設定/コア設定**&#x200B;に移動して、使用中の場所を確認します。
 
-* 推奨ディレクトリを除外した後でもAEM Formsサーバーの動作が遅い場合は、Java実行ファイル(java.exe)も除外します。
-
+* 推奨ディレクトリを除外した後でもAEM Formsサーバーのパフォーマンスが低下した場合は、Java実行ファイル(java.exe)も除外します。
 
 
