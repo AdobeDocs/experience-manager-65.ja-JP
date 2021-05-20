@@ -8,21 +8,20 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: f276d150-8936-4bfb-8475-7ca36815b233
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: a3245f05-6ea3-4f90-8981-bfa89d2e7335
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 85%
 
 ---
 
-
 # HTML5 forms の概要 {#getting-started-with-html-forms}
 
 HTML5 forms はモバイル対応の機能を多数用意しています。HTML5 ブラウザーを使用するタブレットやスマートフォンデバイスに対して現在のソリューションとワークフローを拡張することに役立ちます。 以下にいくつかの機能を挙げます。
 
-* **HTML5ベースのXFAフォームテンプレートのレンダリング：** 正規PDF formsに加え、既存のXFAベースのフォームをHTML5形式でレンダリングできるようになりました。それはクライアントプラットフォームを HTML5 をサポートし、XFA フォームを含む Adobe Reader をサポートしないモバイルデバイス（Apple iPad、Android タブレット、スマートフォンなど）に拡張することに役立ちます。HTML5ベースのレンダリング機能について詳しくは、「[HTML5フォームの概要](/help/forms/using/introduction.md)」を参照してください。
+* **HTML5ベースのXFAフォームテンプレートのレンダリング：** 通常のPDF formsに加えて、既存のXFAベースフォームをHTML5形式でレンダリングできるようになりました。それはクライアントプラットフォームを HTML5 をサポートし、XFA フォームを含む Adobe Reader をサポートしないモバイルデバイス（Apple iPad、Android タブレット、スマートフォンなど）に拡張することに役立ちます。HTML5ベースのレンダリング機能について詳しくは、「[HTML5フォームの概要](/help/forms/using/introduction.md)」を参照してください。
 
 * **フォームの管理：**&#x200B;さらに、AEM にはフォームの整理と管理のプロセスを簡単にする新しい機能が含まれています。フォームのアクティベート、アクティベート解除、パブリッシュおよびプレビューを実行できます。詳しくは、「[フォーム管理の概要](/help/forms/using/introduction-managing-forms.md)」を参照してください。
 
