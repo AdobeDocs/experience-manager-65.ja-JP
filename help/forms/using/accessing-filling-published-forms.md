@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 88dc8ef2-95ce-4906-ac28-eecc3a32a64e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 95%
 
 ---
-
 
 # 発行済みフォームへのアクセスと入力{#accessing-and-filling-published-forms}
 
@@ -85,7 +84,7 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 >[!NOTE]
 >
->送信済みのフォームは、アダプティブフォームの送信アクションがFormsポータル送信アクションとして設定されている場合にのみ、「送信済みのForms」タブに表示されます。 送信アクションについて詳しくは、「[送信アクションの設定](../../forms/using/configuring-submit-actions.md)」を参照してください。
+>送信済みのフォームは、アダプティブフォームの送信アクションがFormsポータル送信アクションとして設定されている場合にのみ、「送信済みのForms 」タブに表示されます。 送信アクションについて詳しくは、「[送信アクションの設定](../../forms/using/configuring-submit-actions.md)」を参照してください。
 
 ![ドラフト&amp;送信コンポーネント:](assets/draft-submission.png)
 
@@ -97,6 +96,6 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 AEM Forms は、フォーム入力の作業を最適化する上で役立ち、フォームを再度入力および送信する際にかかる時間を大幅に削減します。エンドユーザーは、送信済みフォームのデータを使用して新規のフォームを開始することができます。この機能は[ドラフト &amp; 送信コンポーネント](../../forms/using/draft-submission-component.md)に組み込まれています。フォームポータルのページにドラフト &amp; 送信コンポーネントを追加して公開すると、送信済みフォームのデータを使用して新しいフォームを開始するオプションが、「送信済みのフォーム」タブと「ドラフトフォーム」タブに表示されます。次の画像は、そのオプションに焦点を当てています。
 
-![開始 — 新しい形式](assets/start-a-new-form.png)
+![start-a-new-form](assets/start-a-new-form.png)
 
 新規のフォームを開始するためにボタンをクリックすると、対応する送信済みフォームから新規フォームが開きます。これで、必要に応じてレビューおよびアップデートして、フォームを送信することができるようになりました。
