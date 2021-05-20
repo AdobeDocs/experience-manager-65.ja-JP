@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: 27605eb7-59b2-42d4-8cc5-02cfa52b4491
-translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 82%
 
 ---
-
 
 # 作成ウィザードを使用した新規 AEM Mobile アプリの作成{#creating-a-new-aem-mobile-app-using-create-wizard}
 
@@ -31,9 +30,9 @@ AEM Mobile アプリは、ページ構成およびプロパティを定義する
 
 * **名前：**&#x200B;デフォルト値は、「タイトル」プロパティの値から空白文字を除外した値です。この名前は、AEM 内でアプリケーションを参照するために使用されます（例えば、アプリケーションを表すリポジトリノードなど）。
 * **説明：**&#x200B;アプリケーションの説明。
-* **サーバー URL：**&#x200B;アプリケーションに対して無線（OTA）によるコンテンツ更新を提供する URL。デフォルト値は、アプリケーションの作成に使用するインスタンスのパブリッシュサーバー URL です（Externalizer サービスから取得されます）。これは、作成者ではなく、発行サーバーインスタンスである必要があります。この場合、認証が必要です。
+* **サーバー URL：**&#x200B;アプリケーションに対して無線（OTA）によるコンテンツ更新を提供する URL。デフォルト値は、アプリケーションの作成に使用するインスタンスのパブリッシュサーバー URL です（Externalizer サービスから取得されます）。これは、認証が必要なオーサーではなく、パブリッシュサーバーインスタンスである必要があります。
 
-アプリケーションサムネールとして使用する画像ファイルを提供したり、使用する PhoneGap Build 設定を選択したり、使用するモバイルアプリ分析設定を選択したりすることもできます。この画像は、Experience Managerのモバイルアプリコンソール内でモバイルアプリを表すためのサムネールとしてのみ使用されます。
+アプリケーションサムネールとして使用する画像ファイルを提供したり、使用する PhoneGap Build 設定を選択したり、使用するモバイルアプリ分析設定を選択したりすることもできます。この画像は、Experience Managerのモバイルアプリコンソール内でモバイルアプリを表すサムネールとしてのみ使用されます。
 
 その他の（オプションの）タブは、ビルドクラウドサービス向けで、Adobe Mobile Services SDK プラグインをアプリに統合する場合に使用します。
 
@@ -48,20 +47,20 @@ AEM Mobile アプリは、ページ構成およびプロパティを定義する
 
 この機能を利用するには、既存のモバイルアプリテンプレートが必要です（またはアプリテンプレートを含むアプリがインストールされている必要があります）。
 
-最新のAEM Appsサンプルパッケージには、Geometrixxアプリの更新版とアプリテンプレートが含まれています。 または、テンプレートも提供する[StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)をインストールできます。
+最新のAEM Appsサンプルパッケージには、Geometrixxアプリの最新バージョンとアプリテンプレートが含まれています。 または、テンプレートも提供する[StarterKit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)をインストールできます。
 
-アプリテンプレートに基づいて新規アプリを作成する手順：
+アプリテンプレートに基づいて新しいアプリを作成する手順は次のとおりです。
 
-1. AEM Mobileアプリカタログに移動します。*server-url* aem/apps.html/content/mobileapps
+1. AEM Mobileアプリカタログに移動します。&lt;*server-url*>aem/apps.html/content/mobileapps
 1. 以下のように「**作成**」を選択し、「**アプリ**」を選択します。
 
 ![chlimage_1-158](assets/chlimage_1-158.png)
 
-AEM 開発者が使用可能にしたアプリテンプレートを選択します。開発者支援については、[AEM Mobileアプリの構造](/help/mobile/phonegap-structure-an-app.md)を参照してください。
+AEM 開発者が使用可能にしたアプリテンプレートを選択します。開発者向けのサポートについては、「 [AEM Mobile App](/help/mobile/phonegap-structure-an-app.md)の構造」を参照してください。
 
 ![chlimage_1-159](assets/chlimage_1-159.png)
 
-新しいアプリの詳細を必要に応じて入力します。オプションで、そのサムネール画像を変更します。これらの値は、後で&#x200B;**アプリ**&#x200B;タイルを管理から編集できます。
+新しいアプリの詳細を必要に応じて入力します。オプションで、そのサムネール画像を変更します。これらの値は、後で&#x200B;**アプリを管理**&#x200B;タイルから編集できます。
 
 ![chlimage_1-160](assets/chlimage_1-160.png)
 
