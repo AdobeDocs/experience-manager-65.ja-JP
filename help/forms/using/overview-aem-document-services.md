@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 10d406db-ac10-479b-b08b-d0735116a12b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+exl-id: 4c8a3877-1a3c-410d-ad1f-69c73ba4fcc1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 95%
 
 ---
 
-
 # AEM ドキュメントサービスの概要{#overview-of-aem-document-services}
 
-AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。ドキュメントサービスには、次のサービスが含まれます。
+AEM ドキュメントサービスは、PDF ドキュメントを作成、アセンブリ、およびセキュリティ保護のための一連の OSGi サービスです。ドキュメントサービスには、次のサービスが含まれています。
 
 ## Output サービス {#output-service}
 
@@ -45,7 +44,7 @@ Output サービスを使用して XML データをフォームデザインと�
 * **generatePrintedOutput**：フォームデザインをフォームデータとマージして、レーザーネットワークプリンターまたはラベルネットワークプリンターに送信するドキュメントを生成します。
 
 * **generatePDFOutputBatch**：複数のテンプレートと複数のデータレコードをマージして、1 回の実行で複数の PDF ファイルを生成します。すべての PDF ファイルをまとめて 1 つの PDF を生成するオプションもあります。
-* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードをマージして、1回の呼び出しで複数の印刷ドキュメント(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。1 つの印刷ドキュメントを生成するオプションもあります。
+* **generatePrintedOutputBatch**:複数のテンプレートと複数のデータレコードを結合して、1回の呼び出しで印刷ドキュメントのバッチ(PS、PCL、ZPL、DPL、IPL、TPCL)を生成します。1 つの印刷ドキュメントを生成するオプションもあります。
 
 ## Assembler サービス {#assembler-service}
 
@@ -108,7 +107,7 @@ Signature サービスでは、AEM サーバーで電子署名とドキュメン
 
 Signature サービスは、Trust Store に格納されている証明書および秘密鍵証明書にアクセスします
 
-### Encryption サービス  {#encryption-service}
+### Encryption サービス {#encryption-service}
 
 Encryption サービスは、ドキュメントの暗号化および復号化を有効にします。ドキュメントを暗号化すると、その内容は判読できなくなります。PDF ドキュメント全体（コンテンツ、メタデータおよび添付ファイル）を暗号化するか、そのメタデータ以外のすべてのデータを暗号化するか、または添付ファイルだけを暗号化することができます。許可されたユーザーはドキュメントを解読して、コンテンツにアクセスできます。PDF ドキュメントがパスワードで暗号化されている場合、ユーザーは開くためのパスワードを指定しないと、Adobe Reader または Adobe Acrobat でドキュメントを表示できません。PDF ドキュメントが証明書で暗号化されている場合、ユーザーはその PDF ドキュメントを秘密鍵（証明書）で復号化する必要があります。PDF ドキュメントの復号化に使用する秘密鍵は、そのドキュメントの暗号化に使用された公開鍵に対応している必要があります。
 
@@ -129,8 +128,8 @@ PDF ドキュメントに適切な使用権限が追加されている場合、�
 
 これらの特別なユーザー機能は、使用権限を付与された PDF ドキュメントを Adobe Reader で開くと自動的にアクティブになります。権限を付与されたドキュメントの編集を終了すると、これらの機能は Adobe Reader で再度無効になります。ユーザーが権限を付与された別のドキュメントを受け取るまで、これらの機能は無効のままです。
 
-初期状態では、Doc Assurance サービスを使用できません。DocAssuranceサービスを設定するには、「[ドキュメントサービスのインストールと設定](../../forms/using/install-configure-document-services.md)」を参照してください。
+初期状態では、Doc Assurance サービスを使用できません。DocAssuranceサービスを設定するには、「[Installing and Configuring Document Services](../../forms/using/install-configure-document-services.md)」を参照してください。
 
 ## プリンターに送信サービス {#send-to-printer-service}
 
-「Send To Printer Service」は、指定したプリンターにドキュメントを送信して印刷するためのAPIを提供します。
+「プリンターに送信」サービスは、ドキュメントを指定したプリンターに送信して印刷するためのAPIを提供します。
