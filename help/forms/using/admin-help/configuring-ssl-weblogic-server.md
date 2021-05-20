@@ -9,7 +9,6 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
-translation-type: tm+mt
 source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
 workflow-type: tm+mt
 source-wordcount: '1074'
@@ -85,7 +84,7 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
   <tr>
    <td><p>-keypass</p></td>
    <td><p>キーペアの秘密鍵を保護するためのパスワード。</p></td>
-   <td><p><code>-storepass</code>オプションと同じパスワードを使用します。 キーパスワードは 6 文字以上で指定する必要があります。</p></td>
+   <td><p><code>-storepass</code>オプションに使用したのと同じパスワードを使用します。 キーパスワードは 6 文字以上で指定する必要があります。</p></td>
   </tr>
   <tr>
    <td><p>-dname</p></td>
@@ -93,9 +92,9 @@ keytool コマンドは通常 Java の jre/bin ディレクトリにあります
    <td><p><code>"CN=</code><code>[User name]</code><code>,OU=</code><code>[Group Name]</code><code>, O=</code><code>[Company Name]</code><code>, L=</code><code>[City Name]</code><code>, S=</code><code>[State or province]</code><code>, C=</code><code>[Country Code]</code><code>"</code></p>
     <ul>
      <li><p><code><i>[User name]</i></code> は、キーストアを所有するユーザーのIDです。</p></li>
-     <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する会社グループのIDです。</p></li>
+     <li><p><code><i>[Group Name]</i></code> は、キーストアの所有者が属する企業グループのIDです。</p></li>
      <li><p><code><i>[Company Name]</i></code> は組織の名前です。</p></li>
-     <li><p><code><i>[City Name]</i></code> は、組織の所在地の市区町村です。</p></li>
+     <li><p><code><i>[City Name]</i></code> は、組織が属する市区町村です。</p></li>
      <li><p><code><i>[State or province]</i></code> は、組織の所在地の都道府県です。</p></li>
      <li><p><code><i>[Country Code]</i></code> は、組織の所在国を示す2文字のコードです。</p></li>
     </ul></td>
@@ -116,7 +115,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    >
    >`[JAVA_HOME]`*をJDKがインストールされているディレクトリに置き換え、斜体のテキストを環境に対応する値に置き換えます。*
 
-   次に例を示します。
+   以下に例を示します。
 
    ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
@@ -134,9 +133,9 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    >[!NOTE]
    >
-   >`[JAVA_HOME]`をJDKがインストールされているディレクトリに置き換え、`store`*_* `password`*をカスタムIDキーストアのパスワードに置き換えます。*
+   >`[JAVA_HOME]`をJDKがインストールされているディレクトリに、 `store`*_* `password`*をカスタムIDキーストアのパスワードに置き換えます。*
 
-   次に例を示します。
+   以下に例を示します。
 
    ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
@@ -153,7 +152,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    >
    >`[JAVA_HOME]`をJDKがインストールされているディレクトリに置き換え、`store`*_* `password`と&#x200B;`key`*_* `password` *を独自のパスワードに置き換えます。*
 
-   次に例を示します。
+   以下に例を示します。
 
    ```java
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -import -v -noprompt -alias bedrock -file "ads-ca.cer" -keystore "ads-ca.jks" -storepass Password1 -keypass Password1
@@ -165,7 +164,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
 ## SSL を使用する WebLogic の設定  {#configure-weblogic-to-use-ssl}
 
-1. WebブラウザーのURL行に`https://`*[host name ]*`:7001/console`と入力して、WebLogic Server管理コンソールを開始します。
+1. WebブラウザーのURL行に`https://`*[host name ]*`:7001/console`と入力して、WebLogic Server管理コンソールを起動します。
 1. 「環境」の「ドメインの設定」で、**Servers/&#39;server&#39;/Configuration/General**&#x200B;を選択します。
 1. 「General」の「Configuration」で、「**Listen Port Enabled**」と「**SSL Listen Port Enabled**」が選択されていることを確認します。有効でない場合は、次の手順を実行します。
 
@@ -174,13 +173,13 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
 1. このサーバーが管理対象サーバーである場合は、リスンポートを未使用のポート番号（8001 など）に、SSL リスンポートを未使用のポート番号（8002 など）に変更します。スタンドアロンサーバーの場合、デフォルトの SSL ポートは 7002 です。
 1. 「**Release Configuration**」をクリックします。
-1. 「環境」の下の「Domain Configurations」で、**Servers/[*Managed Server*]/Configuration/General**&#x200B;をクリックします。
+1. 「環境」の「ドメインの設定」で、**Servers > [*Managed Server*] / Configuration > General**&#x200B;をクリックします。
 1. 「General」の「Configuration」で「**Keystores**」を選択します。
 1. 「Change Center」で、「**Lock &amp; Edit**」をクリックし、選択内容と値を変更します。
 1. 「**Change**」をクリックしてキーストアリストをドロップダウンリストとして取得し、「**Custom Identity And Custom Trust**」を選択します。
 1. 「ID」で、次の値を指定します。
 
-   **Custom Identity Keystore**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jks。ここで、*[appserverdomain] *は実際のパス、 *[server]* nameはアプリケーションサーバーの名前を表します。
+   **カスタムIDキーストア**: *[appserverdomain]*/adobe/*[server name]*/ads-credentials.jksに設定します。ここで、「*[appserverdomain] 」は実際のパス、「 *[server]* name」はアプリケーションサーバーの名前です。
 
    **Custom Identity Keystore Type**：JKS
 
@@ -188,7 +187,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
 1. 「Trust」で、次の値を指定します。
 
-   **Custom Trust Keystore File Name**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`の場合、 `*[appserverdomain]*` は実際のパスです。
+   **カスタム信頼キーストアファイル名**: `*[appserverdomain]*/adobe/*'server'*/ads-ca.jks`( `*[appserverdomain]*` は実際のパス)
 
    **Custom Trust Keystore Type**：JKS
 
