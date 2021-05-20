@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 2d308756-79d1-4d69-b51c-d4b6e692a137
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: a43c1c4d-a6c2-4ef9-9047-a945978e618b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 71%
 
 ---
 
-
 # コンポーネントおよび機能の基本事項   {#component-function-and-feature-essentials}
 
-サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。したがって、[コミュニティサイトテンプレート](sites.md)（コミュニティサイトが[作成](sites-console.md)される）は、ログイン機能に加え、ユーザプロファイル、メッセージング、検索、モデレート、翻訳を含むように設計されています。
+サイト訪問者が AEM Communities の機能を使用し、コンテンツを投稿するには、事前にメンバー登録し、[コミュニティサイト](overview.md#communitiessites)にログインする必要があります。したがって、コミュニティサイトが[作成](sites-console.md)される[コミュニティサイトテンプレート](sites.md)には、ログイン機能と、ユーザープロファイル、メッセージング、検索、モデレート、翻訳が含まれます。
 
-コミュニティサイトは、選択したコミュニティサイトテンプレートに[コミュニティグループ機能](functions.md#groups-function)が含まれる場合に、コミュニティグループの作成をサポートします。
+選択したコミュニティサイトテンプレートに[コミュニティグループ機能](functions.md#groups-function)が含まれると、コミュニティサイトでコミュニティグループの作成がサポートされます。
 
 次のリンクをクリックすると、コミュニティのコンポーネントおよび機能に関する基本情報にアクセスできます。
 
@@ -35,7 +34,7 @@ ht-degree: 71%
    * [「いいね!」の設定](essentials-liking.md)
    * [評価](rating-basics.md)
    * [投票](essentials-voting.md)
-   * *投票（使用できなくなりました）*
+   * *投票（利用不可）*
 
 ## 機能のあるコンポーネント {#components-with-functions}
 
@@ -53,7 +52,7 @@ ht-degree: 71%
 * [リーダーボード](leaderboard.md)
 * [質問と回答](qna-essentials.md) `(QnA)`
 
-## 特長 {#features}
+## 機能 {#features}
 
 * [クライアントライブラリ](clientlibs.md)
 * [コミュニティサイト](sites-for-developers.md)
@@ -68,7 +67,7 @@ ht-degree: 71%
 
 * [タグ付け](tag.md)
 
-## Javadoc  {#javadocs}
+## Javadoc {#javadocs}
 
 [オンライン javadoc](../../help/sites-developing/reference-materials.md) には、AEM 6.3 リリースで使用できる API が反映されています。コミュニティAPIは`com.adobe.cq.social.*`パッケージに含まれています。
 
@@ -85,4 +84,3 @@ ht-degree: 71%
 * [コーディングのガイドライン](code-guide.md)
 * [チュートリアル](tutorials.md)
 * [トラブルシューティング](troubleshooting.md)
-
