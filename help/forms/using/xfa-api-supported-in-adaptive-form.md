@@ -8,27 +8,26 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 86%
+ht-degree: 94%
 
 ---
 
-
 # XDP ベースのアダプティブフォームにおける XFA のサポート{#xfa-support-in-xdp-based-adaptive-forms}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 アダプティブフォームでは、XDP ファイルで定義される各種 XDP イベント、プロパティ、スクリプト、検証に対するサポートが提供されます。サポートには次のものが含まれます。
 
 * XDP ファイルのイベントで定義されたスクリプトの実行
-* XDP ファイル内にある各フィールドのデフォルトの値および動作プロパティの取得
+* XDP ファイル内の各フィールドのデフォルトの値および動作プロパティの取得
 * XDP ファイルで定義された検証スクリプトの実行
 
-XDP ファイルに基づいてアダプティブフォームが作成されると、各種プロパティ、イベント、および検証がフォーム作成 UI に自動入力されます。ただし、フォーム作成者はこれらの要素の一部をオーバーライドして代替エクスペリエンスを作成できます。
+XDP ファイルに基づいてアダプティブフォームが作成されると、各種プロパティ、イベント、および検証がフォーム作成 UI に自動入力されます。ただし、フォーム作成者は、これらの要素の一部を上書きして代替エクスペリエンスを作成できます。
 
 この記事では、アダプティブフォームでサポートされる XFA イベント、プロパティ、スクリプト、検証を一覧表示し、アダプティブフォームでこれらをオーバーライドする方法を説明します。
 
@@ -54,10 +53,10 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>リストボックス </p> </td>
-   <td><p>コンボボックス</p> </td>
+   <td><p>ドロップダウンリスト</p> </td>
   </tr>
   <tr>
-   <td><p>日付 / 時間フィールド </p> </td>
+   <td><p>日付／時間フィールド </p> </td>
    <td><p>日付選択</p> </td>
   </tr>
   <tr>
@@ -119,11 +118,11 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>presence </p> </td>
-   <td><p>アダプティブフォームのvisibleプロパティにマッピング済み。 Visibility 数式を使用してこのプロパティをオーバーライドできます。</p> </td>
+   <td><p>アダプティブフォームのvisibleプロパティにマッピング済み。 表示式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
    <td><p>access </p> </td>
-   <td><p>アダプティブフォームのenabledプロパティにマッピング済み。 Access式を使用して上書きできます。</p> </td>
+   <td><p>アダプティブフォームのenabledプロパティにマッピング済み。 アクセス式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
    <td><p>Accessibility: role </p> </td>
@@ -134,7 +133,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの speakPriority プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>アクセシビリティ：speakText</p> </td>
+   <td><p>Accessibility: speakText</p> </td>
    <td><p>アダプティブフォームのカスタム Accessibility テキストにマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -142,7 +141,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームのshort descriptionプロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>caption<em> （すべてのフィールドタイプ）</em></p> </td>
+   <td><p>caption<em>（すべてのフィールドの種類）</em></p> </td>
    <td><p>アダプティブフォームのTitleプロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -154,11 +153,11 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの value プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>items<em> (リストボックス、チェックボックス)</em></p> </td>
-   <td><p>アダプティブフォームの options プロパティにマッピング済み。これは、オプション式を使用して上書きできます。</p> </td>
+   <td><p>items<em>（リストボックス、チェックボックス）</em></p> </td>
+   <td><p>アダプティブフォームの options プロパティにマッピング済み。オプション式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> （テキストフィールド）</em></p> </td>
+   <td><p>maxChar<em>（テキストフィールド）</em></p> </td>
    <td><p>アダプティブフォームの Maximum characters allowed プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -174,7 +173,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの Lead digits プロパティにマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> (リストボックス)</em></p> </td>
+   <td><p>multiSelect<em>（リストボックス）</em></p> </td>
    <td><p>アダプティブフォームの Allows multiple selection プロパティにマッピング済み。</p> </td>
   </tr>
  </tbody>
@@ -199,7 +198,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>アダプティブフォームの Calculate 数式にマッピング済み。</p> </td>
   </tr>
   <tr>
-   <td><p>検証 </p> </td>
+   <td><p>validate </p> </td>
    <td><p>アダプティブフォームの Validation 数式にマッピング済み。</p> </td>
   </tr>
   <tr>
@@ -212,7 +211,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>click（ボタンフィールド）</p> </td>
-   <td><p>ボタンの Click 数式にマッピング済み。</p> </td>
+   <td><p>ボタンのクリック式にマッピングされる。</p> </td>
   </tr>
   <tr>
    <td><p>Support for server-side script</p> </td>
@@ -223,13 +222,13 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p>このスクリプトは、実行時に実行され、アダプティブフォームではオーバーライドできません。</p> </td>
   </tr>
   <tr>
-   <td><p>Change（手書きフィールド、ラジオボタン、チェックボタン）</p> </td>
+   <td><p>Change（手書きフィールド、ラジオボタン、チェックボックス）</p> </td>
    <td><p>このスクリプトは、実行時に実行され、アダプティブフォームではオーバーライドできません。</p> </td>
   </tr>
  </tbody>
 </table>
 
-### 検証  {#validations}
+### 検証 {#validations}
 
 次の表は、アダプティブフォームで XFA 検証が検証にどのようにマッピングするかを示したものです。
 
@@ -240,23 +239,23 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
    <td><p><strong>アダプティブフォームにおける対応する検証</strong></p> </td>
   </tr>
   <tr>
-   <td><p>検証パターン(formatTest)</p> </td>
+   <td><p>検証パターン（formatTest）</p> </td>
    <td><p>validatePictureClause</p> </td>
   </tr>
   <tr>
-   <td><p>検証パターンのメッセージ(formatTestMessage)</p> </td>
+   <td><p>検証パターンのメッセージ（formatTestMessage）</p> </td>
    <td><p>validatePictureMessage</p> </td>
   </tr>
   <tr>
-   <td><p>必須(nullTest)</p> </td>
+   <td><p>必須（nullTest）</p> </td>
    <td><p>mandatory </p> </td>
   </tr>
   <tr>
-   <td><p>空のメッセージ(nullTestMessage) </p> </td>
+   <td><p>メッセージを空にする（nullTestMessage） </p> </td>
    <td><p>mandatoryMessage</p> </td>
   </tr>
   <tr>
-   <td><p>スクリプトの検証(scriptTest)</p> </td>
+   <td><p>スクリプトを検証（scriptTest）</p> </td>
    <td><p>validateExp</p> </td>
   </tr>
   <tr>
@@ -269,4 +268,3 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
 >[!NOTE]
 >
 >XFA チェックボタンに連結されたアダプティブフォームのラジオボタンおよびチェックボックスの必須プロパティをオーバーライドすることはできません。
-
