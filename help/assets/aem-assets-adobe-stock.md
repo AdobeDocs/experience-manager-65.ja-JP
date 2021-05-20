@@ -1,11 +1,10 @@
 ---
-title: ' [!DNL Adobe Stock] アセットを管理'
+title: ' [!DNL Adobe Stock] アセットの管理'
 description: ' [!DNL Adobe Experience Manager] 内から [!DNL Adobe Stock] アセットを、検索、取得、ライセンス、管理します。ライセンスされたアセットをその他のデジタルアセットとして使用します。'
 contentOwner: AG
-feature: Search, Adobe Stock
+feature: 検索、Adobe Stock
 role: Business Practitioner, Administrator
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
-translation-type: tm+mt
 source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
 workflow-type: tm+mt
 source-wordcount: '1091'
@@ -21,7 +20,7 @@ ht-degree: 87%
 
 ## 前提条件 {#prerequisites}
 
-統合には、[enterprise [!DNL Adobe Stock] プラン](https://stockenterprise.adobe.com/)が必要です。
+統合には、[エンタープライズ [!DNL Adobe Stock] プラン](https://stockenterprise.adobe.com/)が必要です。
 
 ## [!DNL Experience Manager] と [!DNL Adobe Stock] の統合 {#integrate-aem-and-adobe-stock}
 
@@ -35,11 +34,11 @@ ht-degree: 87%
 
 1. [!DNL Experience Manager] ユーザーインターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL Adobe IMS 設定]**&#x200B;に移動します。「**[!UICONTROL 作成]**」をクリックし、**[!UICONTROL クラウドソリューション]**／**[!UICONTROL Adobe Stock]** を選択します。
 1. 既存の証明書を再使用するか、「**[!UICONTROL 新しい証明書を作成]**」を選択します。
-1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。[!UICONTROL AdobeIMSテクニカルアカウント設定]画面は開いたままにし、必要な値を間もなく指定します。
+1. 「**[!UICONTROL 証明書を作成]**」をクリックします。証明書を作成したら、公開鍵をダウンロードします。「**[!UICONTROL 次へ]**」をクリックします。すぐに必要な値を指定するには、 [!UICONTROL AdobeIMSテクニカルアカウント設定]画面を開いたままにします。
 1. [アドビ開発者コンソール](https://console.adobe.io)にアクセスします。自身のアカウントに、統合するために必要な、組織の管理者権限があることを確認します。
 1. 「**[!UICONTROL 新しいプロジェクトを作成]**」をクリックし、「**[!UICONTROL API を追加]**」をクリックします。使用可能な API のリストから **[!UICONTROL Adobe Stock]** を選択します。「[!UICONTROL OAUTH 2.0 Web]」を選択します。
-1. **[!UICONTROL デフォルトのリダイレクトURI]**&#x200B;と&#x200B;**[!UICONTROL リダイレクトURIパターン]**&#x200B;の値を指定します。 「**[!UICONTROL 設定済み API を保存]**」をクリックします。生成されたIDとシークレットをコピーします。
-1. [!UICONTROL AdobeIMSテクニカルアカウント設定]画面で、「**[!UICONTROL タイトル]**」、「**[!UICONTROL 認証サーバー]**」、「**[!UICONTROL APIキー]**」、「**[!UICONTROL クライアントシークレット]**」、「&lt;a10/」の各ボックスに値を入力します。ペイロード&#x200B;]**。**[!UICONTROL &#x200B;これらの値について詳しくは、[JWT認証クイック開始](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)を参照してください。
+1. **[!UICONTROL デフォルトのリダイレクトURI]**&#x200B;と&#x200B;**[!UICONTROL リダイレクトURIパターン]**&#x200B;の値を指定します。 「**[!UICONTROL 設定済み API を保存]**」をクリックします。生成したIDと暗号鍵をコピーします。
+1. [!UICONTROL AdobeIMSテクニカルアカウント設定]画面で、「**[!UICONTROL タイトル]**」、「**[!UICONTROL 認証サーバー]**」、「**[!UICONTROL APIキー]**」、「**[!UICONTROL クライアントシークレット]**」、「&lt;a10/」の各ボックスに値を入力します。ペイロード&#x200B;]**。**[!UICONTROL &#x200B;これらの値について詳しくは、[JWT認証のクイックスタート](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWT.md)を参照してください。
 
 <!-- TBD: Update the URL to update the terminology when AIO team updates their documentation URL. Logged issue github.com/AdobeDocs/adobeio-auth/issues/63.
 -->
@@ -54,17 +53,17 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->複数の [!DNL Adobe Stock] 設定がある場合は、ユーザ環境設定パネルで目的の設定を選択します。[!DNL Experience Manager]ホームページからパネルにアクセスするには、ユーザーアイコンをクリックし、**[!UICONTROL ユーザー環境設定]**/**[!UICONTROL Stock Configuration]**&#x200B;をクリックします。
+>複数の [!DNL Adobe Stock] 設定がある場合は、ユーザ環境設定パネルで目的の設定を選択します。[!DNL Experience Manager]ホームページからパネルにアクセスするには、ユーザーアイコンをクリックし、**[!UICONTROL ユーザーの環境設定]** / **[!UICONTROL Stock設定]**&#x200B;をクリックします。
 
-## [!DNL Experience Manager] での [!DNL Adobe Stock] アセットの使用と管理 {#usemanage}
+## [!DNL Adobe Stock] での [!DNL Experience Manager] アセットの使用と管理  {#usemanage}
 
 この機能を使用すると、[!DNL Experience Manager Assets] で [!DNL Adobe Stock] アセットを操作できます。[!DNL Experience Manager] のユーザーインターフェイス内から [!DNL Adobe Stock] アセットを検索し、必要なアセットのライセンスを取得できます。
 
 [!DNL Experience Manager] 内で [!DNL Adobe Stock] アセットのライセンスを取得すると、そのアセットを通常のアセットと同様に使用および管理できます。ユーザーは [!DNL Experience Manager] 内でアセットの検索およびプレビュー、アセットのコピーおよび公開、[!DNL Brand Portal] でのアセットの共有、[!DNL Experience Manager] デスクトップアプリケーション経由でのアセットのアクセスおよび使用をおこなうことができます。
 
-![ワークス [!DNL Adobe Stock] ペースからのアセットの検索と結果のフィルタリ [!DNL Adobe Experience Manager] ング](assets/adobe-stock-search-results-workspace.png)
+![ワークスペー [!DNL Adobe Stock] スからのアセットの検索と結果のフィルタ [!DNL Adobe Experience Manager] リング](assets/adobe-stock-search-results-workspace.png)
 
-*図：インターフェイスから [!DNL Adobe Stock] アセットを検索し、結果をフィルタリ [!DNL Experience Manager] ングします。*
+*図：インターフェイス [!DNL Adobe Stock] からアセットを検索し、結果をフィルタリ [!DNL Experience Manager] ングします。*
 
 **A.**[!DNL Adobe Stock] 指定された ID のアセットと類似しているアセットを検索します。**B.** 選択した形状や向きと一致するアセットを検索します。**C.** サポートされているアセットタイプのいずれかを検索します。**D.** フィルターウィンドウを開く／折りたたみます。**E.** 選択したアセットのライセンスを取得して に保存します。[!DNL Experience Manager]**F.**[!DNL Experience Manager] アセットを透かし付きで に保存します。**G.**[!DNL Adobe Stock] 選択したアセットと類似したアセットを Web サイトで調べます。**H.**[!DNL Adobe Stock] 選択したアセットを Web サイトに表示します。**I.** 検索結果から選択したアセットの数。**J.** カード表示とリスト表示を切り替えます。
 
@@ -82,7 +81,7 @@ ht-degree: 87%
 >
 >[!DNL Adobe Stock] から検索されたアセットは [!DNL Experience Manager] に表示されるだけです。[アセットを保存](/help/assets/aem-assets-adobe-stock.md#saveassets)するか、[アセットにライセンスを付与して保存](/help/assets/aem-assets-adobe-stock.md#licenseassets)した後でないと、[!DNL Adobe Stock] アセットを取得して [!DNL Experience Manager] リポジトリーに保存することはできません。既に [!DNL Experience Manager] に保存されているアセットが表示され、参照やアクセスが簡単にできるようにハイライトされます。また、[!DNL Stock] アセットは、ソースが [!DNL Stock] であることを示すいくつかの追加メタデータとともに保存されます。
 
-![検索結果での検索フィルター [!DNL Experience Manager] およびハイライ [!DNL Adobe Stock] ト表示されたアセット](assets/aem-search-filters2.jpg)
+![の検索フィルターと、検索結 [!DNL Experience Manager] 果内でハイラ [!DNL Adobe Stock] イトされているアセット](assets/aem-search-filters2.jpg)
 
 *図：[!DNL Experience Manager] の検索フィルターと、検索結果内でハイライトされている [!DNL Adobe Stock] アセット。*
 
@@ -100,7 +99,7 @@ ht-degree: 87%
 
 [!DNL Adobe Stock] エンタープライズプランの割り当てを使用することで、[!DNL Adobe Stock] アセットのライセンスを取得できます。ライセンスを許諾されたアセットは透かしなしで保存され、[!DNL Experience Manager Assets] で検索することも使用することも可能になります。
 
-![ア [!DNL Adobe Stock] セットをライセンス認証して保存するダイアログ  [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
+![でアセットのライセンスを取得して保存す [!DNL Adobe Stock] るためのダイアログ  [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
 
 *図：[!DNL Experience Manager Assets] で [!DNL Adobe Stock] アセットのライセンスを取得して保存するダイアログ。*
 
@@ -124,7 +123,7 @@ ht-degree: 87%
 
 >[!MORELIKETHIS]
 >
->* [アセットの [!DNL Adobe Stock] 使用に関するビデオチュートリアル [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
->* [[!DNL Adobe Stock] エンタープライズプランヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
+>* [でのアセットの使用に関するビ [!DNL Adobe Stock] デオチュートリアル [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
+>* [[!DNL Adobe Stock] エンタープライズプランのヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
 >* [[!DNL Adobe Stock] FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 
