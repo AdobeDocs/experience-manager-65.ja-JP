@@ -7,8 +7,7 @@ contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
-feature: Commerce統合フレームワーク
-translation-type: tm+mt
+feature: コマース統合フレームワーク
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '303'
@@ -25,18 +24,18 @@ AEM の汎用 e コマースは、標準インストールの一部として提�
 |  | CIF オンプレミス | CIF クラウド |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | サポートされている AEM バージョン | AEM オンプレミスまたは AMS 6.x | AEM AMS 6.4 および 6.5 |
-| バックエンド | - AEM, Java <br> — モノリシック統合、ビルド前のマッピング（テンプレート）<br> - JCRリポジトリ | -Magento<br>- JavaとJavaScript <br>- JCRリポジトリにコマースデータが保存されていません。 |
+| バックエンド | - AEM、Java <br> — モノリシック統合、ビルド前マッピング（テンプレート）<br> - JCRリポジトリ | -Magento<br>- JavaおよびJavaScript <br>- JCRリポジトリに保存されたコマースデータはありません |
 | フロントエンド | AEM サーバー側によってページをレンダリング | 混在型ページアプリケーション（ハイブリッドレンダリング） |
-| 製品カタログ |  — 製品インポーター、エディター、AEMでのキャッシュ<br>- AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし<br> — 汎用テンプレート<br> — コネクタ経由のオンデマンドデータ |
-| スケーラビリティ |  — 数百万個までの製品をサポート可能（使用事例によって異なります） <br> — ディスパッチャーでのキャッシュ |  — ボリュームに制限がない<br> — ディスパッチャーまたはCDNのキャッシュ |
-| 標準化されたデータモデル | いいえ | あり。Magento GraphQL スキーマ |
-| 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5 （デフォルト）をサポートするように更新)、Hybris 4 <br>- SalesforceCommerce Cloud(AEM 6.4をサポートするようにオープンソースのコネクタ)との互換性を維持 | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
-| 用途 | 限定的な使用例：小さい静的なカタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
+| 製品カタログ | - AEM <br>の製品インポーター、エディター、キャッシュ — AEMまたはプロキシページを含む通常のカタログ |  — 製品のインポートなし<br> — 汎用テンプレート<br> — コネクタを介したオンデマンドデータ |
+| スケーラビリティ |  — 最大で数百万個の製品をサポートできます（使用例によって異なります）。<br> - Dispatcherでのキャッシュ |  — ボリューム制限なし<br> - DispatcherまたはCDNでのキャッシュ |
+| 標準化されたデータモデル | 不可 | あり。Magento GraphQL スキーマ |
+| 入手方法 | はい：<br> - SAPCommerce Cloud(AEM 6.4とHybris 5をサポートするように更新（デフォルト）、Hybris 4 <br>- SalesforceCommerce Cloud(AEM 6.4をサポートするオープンソースのコネクタ)との互換性を維持) | あり。GitHub 経由のオープンソース。<br>Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり） |
+| 用途 | 限定的な使用例：小さな静的カタログの読み込みが必要な場合 | ほとんどの使用例で好ましいソリューション |
 
 
 ## その他の実装のデプロイ  {#deploying-other-implementations}
 
-AEMとMagentoについては、[Commerce Integration Framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html)を使用したAEMとMagentoの統合](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)を参照してください。[
+AEMとMagentoの場合は、[AEMとMagentoの統合](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)を参照してください。[コマース統合フレームワーク](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html)を使用します。
 
 >[!NOTE]
 >
