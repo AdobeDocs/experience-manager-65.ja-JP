@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
 discoiquuid: 393cf504-917e-4bf6-9a8b-b7a5bd862c65
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0ead982d-2315-4947-b762-596aa2aa42a1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 72%
 
 ---
-
 
 # AEM Mobile のセットアップ{#aem-mobile-setup}
 
@@ -36,7 +35,7 @@ AEM を使用して AEM Mobile アプリ用のコンテンツを作成するに�
 
 AEM Mobile のセットアップを始めるには、以下の作業が必要です。
 
-* **APIキーのリクエスト**:On-Demand Services APIにアクセスするには、APIキーをリクエストする必要があります。API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。記入が完了したら、フォームをAdobe開発者サポートに送信します。[wwds@adobe.com](mailto:wwds@adobe.com)
+* **APIキーのリクエスト**:On-Demand Services APIにアクセスするには、APIキーをリクエストする必要があります。API キーをリクエストするには、[PDF フォーム](https://helpx.adobe.com/jp/digital-publishing-solution/help/integrating-dps.html)に記入します。入力済みのフォームをAdobe開発者サポートに送信します。[wwds@adobe.com](mailto:wwds@adobe.com)
 
 * **デバイスIDとデバイストークンの生成**:APIキーを受け取ったら、デバイスIDとデバイストークンを生成できます。[https://aex.aemmobile.adobe.com](https://aex.aemmobile.adobe.com/)に移動し、次の操作を行います。
 
@@ -56,15 +55,15 @@ AEM Mobile のセットアップを始めるには、以下の作業が必要で
 
 プロジェクトを作成する場合、iOS、Android、Windows、デスクトップ Web Viewer など、ターゲットとするプラットフォームの設定を指定します。指定する多くのプロジェクト設定は、アプリの動作に影響します。
 
-プロジェクトを作成するには、マスター管理者の役割を持つ Adobe ID を使用して、On-demand Services ポータルにサインインする必要があります。プロジェクトを編集するには、マスター管理者の役割、または&#x200B;**プロジェクトとユーザーを管理**&#x200B;権限を持つユーザーの役割が必要です。
+プロジェクトを作成するには、マスター管理者の役割を持つ Adobe ID を使用して、On-demand Services ポータルにサインインする必要があります。プロジェクトを編集するには、マスター管理者の役割か、**プロジェクトとユーザーの管理**&#x200B;権限を持つユーザーの役割が必要です。
 
 >[!NOTE]
 >
->AEM Mobileでプロジェクトを作成する方法の詳細については、[ここ](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html)をクリックしてください。
+>AEM Mobileでのプロジェクトの作成について詳しくは、[ここ](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-projects.html)をクリックしてください。
 
 ## AEM Mobile コネクタの設定 {#configuring-an-aem-mobile-connector}
 
-AEMのセットアップでは、コネクタの設定に次の手順を実行します。 AEM Mobile コネクタの設定が完了すると、ユーザーはユーザーグループおよび権限を設定できます。
+AEMの設定では、コネクタの設定に次の手順を実行します。 AEM Mobile コネクタの設定が完了すると、ユーザーはユーザーグループおよび権限を設定できます。
 
 AEM Mobile On-Demand コネクタは、AEM Mobile で管理するコンテンツを Adobe Experience Manager Mobile On-demand Services にバインドするために使用します。これにより、コンテンツ作成者は AEM のツールを使用してモバイルアプリケーション向けの素材を作成および管理しつつ、AEM Mobile On-demand Services を使用してモバイルコンテンツを容易に配布できます。
 
@@ -79,15 +78,15 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 1. OSGI サービスの設定に移動します。
 
    1. AEM／ツール／運営／Web コンソールを選択します。
-   1. ***Experience ManagerMobile On-demand Servicesクライアント(旧AdobeDigital Publishing Solutionクライアント)***&#x200B;をスクロールまたは検索します
+   1. スクロールするか、***Experience ManagerMobile On-demand Services Client (was aAdobeDigital Publishing Solution Client)***&#x200B;を検索します。
 
-1. ***Experience ManagerMobile On-demand Servicesクライアント***&#x200B;を編集
+1. ***Experience ManagerMobile On-demand Servicesクライアント***&#x200B;を編集します
 
-   1. **（必須）必須フィールド** を入力します。
+   1. **（必須）** 必須フィールドを入力します。
 
       1. クライアント ID
       1. クライアントの秘密鍵
-   1. **（オプション）既存の値を** 編集します。
+   1. **（オプション）** 既存の値を編集します。
 
 
 1. 変更内容を保存します。
@@ -99,16 +98,16 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 
 1. クラウドサービスに移動します。
 
-   1. AEM/ツール/導入/[CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html) ***Adobe Experience Manager Mobileオンデマンドサービス***&#x200B;をスクロールまたは検索
+   1. AEM /ツール/デプロイメント> [CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html) スクロールするか、***Adobe Experience Manager Mobile On-demand Services***&#x200B;を検索します。
 
-1. 「***今すぐ設定***」または「***設定を表示***」を選択し、新しい設定を追加アイコンを選択します
+1. 「***今すぐ設定***」または「***設定を表示***」を選択し、「新しい設定を追加」アイコンを選択します。
 
 1. 新しい設定を作成します。
 
-   1. タイトルと名前を入力
+   1. タイトルと名前を入力します。
    1. デバイスIDを入力
    1. 「デバイストークン」を入力します。
-   1. ***「Test Device Configuration」***&#x200B;を選択して、入力した値を検証します
+   1. 「***デバイス設定をテスト***」を選択して、入力した値を検証します。
    1. 「OK」を選択します。
 
 ## AEM Mobile のユーザーの役割の追加と権限の割り当て  {#adding-aem-mobile-user-roles-and-assigning-permissions}
@@ -117,11 +116,11 @@ AEM Mobile 統合が正しく機能するには、設定手順を完了する必
 
 AEM Mobile アプリの開発では、3 つの異なる役割が存在します。
 
-* Administrator
-* デベロッパー
+* 管理者
+* 開発者
 * 作成者
 
-アプリの作成、コンテンツの作成および公開など、様々な権限を持つロールの作成について詳しくは、AEM Mobileヘルプの「[ユーザーロールの作成とアクセスの許可](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
+アプリの作成やコンテンツの作成および公開など、様々な権限を持つ役割の作成について詳しくは、AEM Mobileヘルプの「 [ユーザーの役割の作成とアクセス権の付与](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) 」をクリックしてください。
 
 >[!NOTE]
 >
@@ -129,7 +128,7 @@ AEM Mobile アプリの開発では、3 つの異なる役割が存在します�
 >
 >AEM Mobileダッシュボードの詳細については、[ここ](/help/mobile/mobile-apps-ondemand-application-dashboard.md)をクリックしてください。
 
-アプリの作成やコンテンツの作成および公開など、様々な権限でロールを作成したら、[**ユーザーおよびユーザーグループの設定**](/help/mobile/aem-mobile-configure-users.md)&#x200B;を参照して、モバイルアプリのオーサリングと管理をサポートするユーザーおよびグループを設定します。
+アプリの作成やコンテンツの作成および公開など、様々な権限を持つ役割の作成が完了したら、[**ユーザーとユーザーグループの設定**](/help/mobile/aem-mobile-configure-users.md)&#x200B;を参照して、モバイルアプリのオーサリングと管理をサポートするようにユーザーとグループを設定します。
 
 ### その他のリソース {#additional-resources}
 
