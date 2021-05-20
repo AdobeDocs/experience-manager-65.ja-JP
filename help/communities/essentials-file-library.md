@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 9019b967-fff8-4dda-bc5a-fd4a3e14a4ef
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: 6d653331-c1ce-4ccb-bb45-656b6413ac3e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 59%
 
 ---
-
 
 # ファイルライブラリの基本事項 {#file-library-essentials}
 
@@ -32,7 +31,7 @@ ht-degree: 59%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -55,7 +54,7 @@ ht-degree: 59%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [ファイルライブラリ API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/filelibrary/client/api/package-summary.html)
 
@@ -63,11 +62,11 @@ ht-degree: 59%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### ファイルライブラリ機能  {#file-library-function}
+### ファイルライブラリ機能 {#file-library-function}
 
-[ファイルライブラリ関数](functions.md#file-library-function)を含むコミュニティサイト構造には、構成された`file library`コンポーネントが含まれます。
+[ファイルライブラリ機能](functions.md#file-library-function)を含むコミュニティサイト構造には、設定済みの`file library`コンポーネントが含まれます。
 
-### ファイルライブラリ(UGC)用に投稿されたコメントへのアクセス{#accessing-comments-posted-for-file-libraries-ugc}
+### ファイルライブラリ(UGC)に投稿されたコメントへのアクセス{#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -75,10 +74,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-以下を参照してください。
+次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
-
