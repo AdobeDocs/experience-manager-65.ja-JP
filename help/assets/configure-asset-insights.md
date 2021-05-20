@@ -3,19 +3,18 @@ title: アセットインサイトを設定して、解析を取得します。
 description: ' [!DNL Adobe Experience Manager Assets]でアセットインサイトを設定します。'
 contentOwner: AG
 role: Architect, Administrator
-feature: Asset Insights,Asset Reports
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: アセットインサイト，アセットレポート
+exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 51%
+source-wordcount: '253'
+ht-degree: 47%
 
 ---
 
-
 # アセットインサイトの設定 {#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] では、サードパーティ Web サイトで使用されているデジタルアセットの使用状況データを [!DNL Adobe Analytics] から取得します。アセットインサイトでこのようなデータを取得して洞察を得るためには、最初に Adobe Analytics と統合するようにこの機能を設定します。
+[!DNL Adobe Experience Manager Assets] では、サードパーティ Web サイトで使用されているデジタルアセットの使用状況データを [!DNL Adobe Analytics] から取得します。アセットインサイトでこのようなデータを取得して洞察を得るためには、まず、[!DNL Adobe Analytics] と連携するようにこの機能を設定します。この機能を使用するには、[!DNL Adobe Analytics]ライセンスを別途購入してください。 [!DNL Managed Services]のお客様は、[!DNL Experience Manager]にバンドルされている[!DNL Analytics]ライセンスを受け取ります。 [Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)を参照してください。
 
 >[!NOTE]
 >
