@@ -3,13 +3,12 @@ title: Connected Assets を使用した [!DNL Sites] での DAM アセットの�
 description: リモート [!DNL Adobe Experience Manager Assets] deployment when creating your web pages on another [!DNL Adobe Experience Manager Sites] デプロイメントで使用可能なアセットを使用します。
 contentOwner: AG
 role: Business Practitioner, Administrator, Leader
-feature: Connected Assets,User and Groups
+feature: 接続されているアセット、ユーザー、グループ
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-translation-type: tm+mt
-source-git-commit: 48e5b55a1d79fef6172f684cb65a4137113fb7fb
+source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
 workflow-type: tm+mt
 source-wordcount: '2739'
-ht-degree: 92%
+ht-degree: 91%
 
 ---
 
@@ -182,7 +181,7 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 
 ## 制限事項とベストプラクティス {#tip-and-limitations}
 
-* アセットの使用状況に関するインサイトを取得するには、[!DNL Sites] インスタンスで[アセットインサイト](/help/assets/asset-insights.md)機能を設定します。
+* アセットの使用に関するインサイトを取得するには、[!DNL Sites]インスタンスで[アセットインサイト](/help/assets/asset-insights.md)機能を設定します。
 
 ### 権限とアセット管理 {#permissions-and-managing-assets}
 
