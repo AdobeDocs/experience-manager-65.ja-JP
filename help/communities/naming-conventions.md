@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 5271feb9-70c6-4c82-8ac7-34a63d80e3aa
-translation-type: tm+mt
-source-git-commit: 22e853ecaf2696c7329a81bb9d375b1dbc74452c
+exl-id: 863900c3-5fe8-41a3-a151-466d0c62eeea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 54%
 
 ---
-
 
 # 命名規則 {#naming-conventions}
 
@@ -26,8 +25,8 @@ Java クラスの場所を作成する際には、パッケージ名がリポジ
 
 AEM の開発では、リポジトリ項目の名前にハイフンを使用することが推奨されていますが、Java パッケージ名でハイフンを使用することはできません。
 
-基盤となるCRXプラットフォームでは、実際のアンダースコア`_ `とハイフン`-`を区別できる必要があります。 したがって、JCRでは、ハイフンをUnicode値(u002d)で置き換え、アンダースコア`_`でエスケープする必要があります。
+基になるCRXプラットフォームでは、実際のアンダースコア`_ `とハイフン`-`を区別できる必要があります。 したがって、JCRでは、ハイフンをそのUnicode値(u002d)に置き換え、アンダースコア`_`でエスケープする必要があります。
 
 例えば、リポジトリパスが&#x200B;**/apps/my-example/component/info/Info.java**&#x200B;の場合、パッケージ名は`java package apps.my_002dexample.component.info;`にする必要があります。
 
-アンダースコアも同様にエスケープする必要があります。例えば、`_`が`_005f`になります。
+アンダースコアも同様にエスケープする必要があり、`_`が`_005f`になることに注意してください。
