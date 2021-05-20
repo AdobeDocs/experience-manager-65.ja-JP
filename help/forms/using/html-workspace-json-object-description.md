@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2134'
 ht-degree: 92%
 
 ---
-
 
 # AEM Forms Workspace JSON オブジェクトの詳細  {#aem-forms-workspace-json-object-description}
 
@@ -28,7 +27,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td><strong>Property</strong></td>
+   <td><strong>プロパティ</strong></td>
    <td><strong>クライアントのみ</strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -93,7 +92,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
 <table>
  <tbody>
   <tr>
-   <td>Property<br /> </td>
+   <td>プロパティ<br /> </td>
    <td>クライアントのみ<br /> </td>
    <td>コメント<br /> </td>
   </tr>
@@ -133,7 +132,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    <td>タスクがデッドラインに達する時間のタイムスタンプが含まれます。<br /> </td>
   </tr>
   <tr>
-   <td>説明<br /> </td>
+   <td>description<br /> </td>
    <td>F</td>
    <td>タスクの説明が含まれます。<br /> </td>
   </tr>
@@ -443,7 +442,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>dateRanges<br type="_moz" /> </td>
    <td>F</td>
-   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトで、startDateフィールドにはスケジュールの開始日が含まれ、endDateフィールドにはスケジュールの終了日が含まれます。 スケジュールのendDateがnullの場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td>
+   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトで、 startDateフィールドにはスケジュールの開始日が含まれ、 endDateフィールドにはスケジュールの終了日が含まれます。 スケジュールのendDateがnullの場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td>
@@ -463,7 +462,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processSpecificDesignates<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定オブジェクトで、processNameはプロセスの名前を含み、対応するプロセスにユーザーが割り当てられていない場合はisNotDesignatedはtrue、対応するプロセスにユーザーの詳細が割り当てられていない場合はuserDesignatedはnullです。<br type="_moz" /> </td>
+   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定オブジェクトでは、processNameにプロセスの名前が含まれ、対応するプロセスにユーザーが割り当てられていない場合はisNotDesignatedがtrueになり、対応するプロセスに割り当てられたユーザーの詳細がuserDesignatedになります。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processes<br type="_moz" /> </td>
@@ -500,7 +499,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    <td><strong>コメント</strong></td>
   </tr>
   <tr>
-   <td>説明<br type="_moz" /> </td>
+   <td>description<br type="_moz" /> </td>
    <td>F</td>
    <td>プロセスインスタンスの説明<br type="_moz" /> </td>
   </tr>
@@ -542,7 +541,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processVariables<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトには、名前（プロセス変数の名前）、値（プロセス変数の値）、タイプ（プロセス変数のタイプ）が含まれます。<br type="_moz" /> </td>
+   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトには、プロセス変数の名前、プロセス変数の値、プロセス変数の型の名前が含まれます。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>tasklist<br type="_moz" /> </td>
@@ -704,7 +703,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    <td>添付ファイルを追加したユーザーの名前。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>説明<br type="_moz" /> </td>
+   <td>description<br type="_moz" /> </td>
    <td>F</td>
    <td>添付ファイルの説明。<br type="_moz" /> </td>
   </tr>
@@ -731,7 +730,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>権限<br type="_moz" /> </td>
    <td>F</td>
-   <td>添付ファイルに関連付けられた権限。allowReadフィールドは読み取り権限、allowWriteは書き込み権限、allowDeleteは削除権限用です。<br type="_moz" /> </td>
+   <td>添付ファイルに関連付けられた権限。allowReadフィールドは読み取り権限用、 allowWriteは書き込み権限用、 allowDeleteは削除権限用です。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>サイズ<br type="_moz" /> </td>
@@ -746,7 +745,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>type<br type="_moz" /> </td>
    <td>F</td>
-   <td>タイプはファイルの添付ファイル、タイプはメモのメモです。<br type="_moz" /> </td>
+   <td>タイプはファイルの添付ファイルで、タイプはメモのメモです。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>formattedCreationDate<br type="_moz" /> </td>
@@ -788,7 +787,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    <td>ユーザーの共通名。<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>説明<br type="_moz" /> </td>
+   <td>description<br type="_moz" /> </td>
    <td>F</td>
    <td>ユーザーの説明。<br type="_moz" /> </td>
   </tr>
