@@ -1,17 +1,16 @@
 ---
-title: 資産のDigital Rights Management
+title: Digital Rights Management
 description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: DRM,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: DRM，アセット管理
+exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1401'
 ht-degree: 79%
 
 ---
-
 
 # アセットのデジタル著作権管理 {#digital-rights-management-in-assets}
 
@@ -21,13 +20,13 @@ ht-degree: 79%
 
 アセットの有効期限は、アセットのライセンス要件を徹底する有効な方法です。公開済みアセットの有効期限が切れたらアセットを非公開にすることで、ライセンス違反が発生する可能性を回避します。管理者権限のないユーザーは、有効期限切れのアセットを編集、コピー、移動、公開、ダウンロードできません。
 
-カードとリストの両方の表示の[!DNL Assets]コンソールで、アセットの有効期限ステータスを表示できます。
+アセットの有効期限切れのステータスは、カード表示とリスト表示の両方の[!DNL Assets]コンソールで確認できます。
 
-![expired_flag_リスト](assets/expired_flag_list.png)
+![expired_flag_list](assets/expired_flag_list.png)
 
-*図：リスト表示の「  Status」列には、  Expiredbannerが表示されます。*
+*図：リスト表示では、「  Status」列に「Expiredbanner」が表示  されます。*
 
-左側のパネルの[!UICONTROL タイムライン]で、アセットの有効期限ステータスを表示できます。
+アセットの有効期限切れのステータスは、左側のパネルの[!UICONTROL タイムライン]で確認できます。
 
 ![chlimage_1-144](assets/chlimage_1-144.png)
 
@@ -35,14 +34,14 @@ ht-degree: 79%
 >
 >アセットの有効期限の表示はタイムゾーンごとに異なります。
 
-また、**[!UICONTROL 参照]**&#x200B;レールのアセットの有効期限ステータスを表示することもできます。 ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
+アセットの有効期限切れのステータスは、**[!UICONTROL 参照]**&#x200B;レールで確認することもできます。 ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
 
 1. 参照先の Web ページと複合アセットを表示するアセットに移動します。
-1. アセットを選択し、左側のレールの&#x200B;**[!UICONTROL 参照]**&#x200B;を開きます。 期限切れアセットの場合、[!UICONTROL 参照]レールの上部に、有効期限ステータス&#x200B;**[!UICONTROL アセットの有効期限が切れた]**&#x200B;が表示されます。
+1. アセットを選択し、左側のレールで「**[!UICONTROL 参照]**」を開きます。 有効期限切れのアセットの場合、[!UICONTROL 参照]レールの上部に有効期限切れのステータス「**[!UICONTROL アセットは期限切れです]**」が表示されます。
 
    ![chlimage_1-147](assets/chlimage_1-147.png)
 
-   アセットの有効期限が切れているサブアセットがある場合、[!UICONTROL 参照]レールにステータス&#x200B;**[!UICONTROL アセットに有効期限が切れたサブアセット]**&#x200B;が表示されます。
+   アセットに有効期限切れのサブアセットがある場合、[!UICONTROL 参照]レールにステータス&#x200B;**[!UICONTROL アセットに有効期限切れのサブアセットがあります]**&#x200B;と表示されます。
 
    ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -53,11 +52,11 @@ ht-degree: 79%
 1. [!DNL Assets] コンソールで、ツールバーの「**[!UICONTROL 検索]**」をクリックしてオムニサーチボックスを表示します。
 
 1. オムニサーチボックスにカーソルを置いて、`Enter` キーを押すと検索結果ページが表示されます。
-1. 左側のレールで検索パネルを開きます。 **[!UICONTROL 有効期限ステータス]**&#x200B;オプションをクリックして展開します。
+1. 左側のパネルで検索パネルを開きます。 「**[!UICONTROL 有効期限ステータス]**」オプションをクリックして展開します。
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
-1. 「**[!UICONTROL 期限切れ]**」を選択します。 検索結果をフィルタリングした後は、期限切れのアセットのみが表示されます。
+1. **[!UICONTROL 期限切れ]**&#x200B;を選択します。 検索結果をフィルタリングした後、期限切れのアセットのみが表示されます。
 
 「**[!UICONTROL 期限切れ]**」オプションを選択すると、[!DNL Assets] コンソールに複合アセットによって参照されている有効期限切れのアセットとサブセットのみが表示されます。有効期限切れのサブアセットを参照する複合アセットは、サブアセットの有効期限切れの直後には表示されません。代わりに、次回スケジューラーが実行されたときに、それらのアセットが有効期限切れのサブアセットを参照していることを [!DNL Experience Manager] が検出した後で表示されます。
 
@@ -70,14 +69,14 @@ ht-degree: 79%
 1. [!DNL Experience Manager] Configuration Manager を開きます。
 1. 「**[!UICONTROL Adobe CQ DAM Expiry Notification]**」を選択します。デフォルトでは、「**[!UICONTROL Time based Scheduler]**」が選択されており、指定の時間にアセットに有効期限切れのサブアセットがあるかどうかをチェックするジョブのスケジュールを設定します。ジョブが完了すると、有効期限切れのサブアセットを持つアセットと参照元のアセットが検索結果に有効期限切れと表示されます。
 
-1. ジョブを定期的に実行するには、「**[!UICONTROL Time Based Scheduler Rule]**」フィールドをクリアして、「**[!UICONTROL Periodic Scheduler]**」フィールドの時間（秒数）を変更します。例えば、式`0 0 0 &ast; &ast; ?`の例では、00時間にジョブをトリガーします。
+1. ジョブを定期的に実行するには、「**[!UICONTROL Time Based Scheduler Rule]**」フィールドをクリアして、「**[!UICONTROL Periodic Scheduler]**」フィールドの時間（秒数）を変更します。例えば、式`0 0 0 &ast; &ast; ?`の例では、ジョブが00時間でトリガーされます。
 1. アセットの有効期限が切れたときに電子メールを受け取るには、「**[!UICONTROL send email]**」を選択します。
 
    >[!NOTE]
    >
-   >アセットの作成者（特定のアセットを[!DNL Assets]にアップロードした人）のみが、アセットの有効期限が切れたときに電子メールを受信します。 [!DNL Experience Manager]全体的な電子メール通知の設定に関する詳細は、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
+   >アセットの有効期限が切れると、アセットの作成者（特定のアセットを[!DNL Assets]にアップロードしたユーザー）のみが電子メールを受け取ります。 [!DNL Experience Manager]レベル全体での電子メール通知の設定に関する詳細については、[電子メール通知の設定方法](/help/sites-administering/notification.md)を参照してください。
 
-1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。アセットの作成者は、アセットの有効期限が切れる前に、指定した時間が経過するとアセットの有効期限が切れることを知らせるメッセージを受け取ります。 アセットの有効期限が切れると、有効期限が切れたことを知らせる別の通知を受け取ります。さらに、有効期限切れのアセットはアクティベートが解除されます。
+1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。アセットの作成者には、アセットの有効期限が切れる前に、指定された時間が経過した後にアセットの有効期限が切れることを知らせるメッセージが表示されます。 アセットの有効期限が切れると、有効期限が切れたことを知らせる別の通知を受け取ります。さらに、有効期限切れのアセットはアクティベートが解除されます。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
@@ -86,19 +85,19 @@ ht-degree: 79%
 [!DNL Assets] コンソールには、アセットの様々な状態を表示できます。特定のアセットの現在の状態により、カード表示にその状態について記述されたラベル（期限切れ、公開済み、承認済み、拒否など）が表示されます。
 
 1. [!DNL Assets] ユーザーインターフェイスでアセットを選択します。
-1. ツールバーの「**[!UICONTROL 公開]**」をクリックします。ツールバーに「**公開**」が表示されない場合は、ツールバーの「**[!UICONTROL 詳細]**」をクリックし、「**[!UICONTROL 公開]**![公開オプション](assets/do-not-localize/publish-globe.png)」を探します。
+1. ツールバーの「**[!UICONTROL 公開]**」をクリックします。ツールバーに「**公開**」が表示されない場合は、ツールバーの「**[!UICONTROL 詳細]**」をクリックし、「**[!UICONTROL 公開]** ![公開オプション](assets/do-not-localize/publish-globe.png)」を探します。
 1. メニューの「**[!UICONTROL 公開]**」を選択して、確認ダイアログを閉じます。
 1. 選択モードを終了します。アセットの公開ステータスは、カード表示のアセットのサムネールの下部に表示されます。リスト表示では、「公開」列にアセットが公開された時間が表示されます。
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. アセットの詳細ページを表示するには、[!DNL Assets]インターフェイスでアセットを選択し、**[!UICONTROL プロパティ]** ![表示プロパティ](assets/do-not-localize/info-circle-icon.png)をクリックします。
+1. アセットの詳細ページを表示するには、[!DNL Assets]インターフェイスでアセットを選択し、「**[!UICONTROL プロパティ]** ![プロパティを表示](assets/do-not-localize/info-circle-icon.png) 」をクリックします。
 
 1. 「[!UICONTROL 詳細]」タブの「**[!UICONTROL 期限切れ]**」フィールドで、アセットの有効期限日を設定します。
 
-   ![[有効期限]フィールドにアセットの有効期限の日時を設定します。](assets/asset-properties-advanced-tab.png)
+   ![「期限切れ」フィールドにアセットの有効期限の日時を設定します](assets/asset-properties-advanced-tab.png)
 
-   *図： [!UICONTROL アセットの]   プロパティページの「詳細」タブを使用して、アセットの有効期限を設定します。*
+   *図：  アセットのプロパティペ  ージの「詳細」タブで、アセットの有効期限を設定します。*
 
 1. 「**[!UICONTROL 保存]**」をクリックし、次に「**[!UICONTROL 閉じる]**」をクリックしてアセットコンソールを表示します。
 1. アセットの公開ステータスは、カード表示のアセットのサムネールの下部に、有効期限切れのステータスを示します。リスト表示では、アセットのステータスが「**[!UICONTROL 期限切れ]**」と表示されます。
@@ -111,7 +110,7 @@ ht-degree: 79%
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-1. ステータスに基づいてアセットを検索するには、「**[!UICONTROL 検索]** ![検索オプション](assets/do-not-localize/search_icon.png)」をクリックしてOmnisearchバーを表示します。
+1. アセットをステータスに基づいて検索するには、「**[!UICONTROL 検索]** ![検索オプション](assets/do-not-localize/search_icon.png)」をクリックしてオムニサーチバーを表示します。
 1. `Return` キーを押し、「[!DNL Experience Manager]」をクリックして検索パネルを表示します。
 1. 検索パネルで、「**[!UICONTROL 公開ステータス]**」をクリックして「**[!UICONTROL 公開済み]**」を選択し、[!DNL Assets] で公開済みのアセットを検索します。
 
