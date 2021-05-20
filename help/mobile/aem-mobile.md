@@ -1,6 +1,6 @@
 ---
 title: AEM Mobile On-Demand
-seo-title: AEM Mobileオンデマンド
+seo-title: AEM Mobile On-Demand
 description: このページでは、AEM Mobile On-Demand Services アプリの管理の概要について説明します。On-Demand Services における AEM 管理者の役割と責任の概要について説明します。
 seo-description: このページでは、AEM Mobile On-Demand Services アプリの管理の概要について説明します。On-Demand Services における AEM 管理者の役割と責任の概要について説明します。
 uuid: fd99c032-287a-489b-9690-b18980c55c29
@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 content-type: reference
 topic-tags: administering-on-demand-services-app
 discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
-translation-type: tm+mt
-source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
+exl-id: 95cbedaf-9a94-45fa-8ddb-15be7a09f86d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 66%
 
 ---
 
-
-# AEM Mobileオンデマンド  {#aem-mobile-on-demand}
+# AEM Mobile On-Demand  {#aem-mobile-on-demand}
 
 >[!NOTE]
 >
@@ -36,11 +35,11 @@ ht-degree: 66%
 >
 >AEM Mobile On-Demand Services の環境を設定する前に、[AEM Mobile アプリケーションダッシュボードまたはコントロールセンター](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
-***AEM管理者***&#x200B;は、新しいアプリを作成ウィザードを使用して作成するか、既存のアプリを読み込むことで、新しいアプリをAEM Mobileカタログに追加します。 AEM Mobileの&#x200B;*作成ウィザード*&#x200B;を使用して新しいアプリを作成するAEM管理者は、通常、標準搭載の参照サンプルから、または（ほとんどの場合は）*AEM開発者が作成したカスタムアプリテンプレートのいずれかを選択します。*
+***AEM管理者***&#x200B;は、作成ウィザードを使用して新しいアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。 AEM Mobileの&#x200B;*作成ウィザード*&#x200B;を使用して新しいアプリを作成するAEM管理者は、通常、標準の参照サンプルから、または（ほとんどの場合は）*AEM開発者が作成したカスタムアプリテンプレートを選択します。*
 
 >[!NOTE]
 >
->AEMグループと権限の設定の詳細については、オンラインヘルプの「[ユーザーロールの作成とアクセスの許可](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
+>AEMグループと権限の設定の詳細については、オンラインヘルプの「[ユーザーの役割の作成とアクセス権の付与](https://helpx.adobe.com/jp/digital-publishing-solution/help/account-admin-dps.html)」をクリックしてください。
 
 AEM 管理者は、AEM Mobile On-Demand Services を使用してアプリを作成する際に以下のタスクを担当します。
 
