@@ -1,18 +1,17 @@
 ---
 title: AEM Communities リリースノート
 description: Adobe Experience Manager 6.5 Communities 固有のリリースノート。
-translation-type: tm+mt
-source-git-commit: 8d60e064ab50f24016c049c8d5d0fceb784c99a3
+exl-id: 8eeaf917-aac8-4f5c-be12-d2a6783c5c5c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 64%
 
 ---
 
-
 # AEM Communities リリースノート{#aem-communities-release-notes}
 
-6.4 リリース以降の AEM Communities の改善点について説明します。新機能の詳細については、『[AEM 6.5 Communitiesユーザーガイド](https://helpx.adobe.com/jp/experience-manager/6-4/communities/user-guide.html)』を参照してください。
+6.4 リリース以降の AEM Communities の改善点について説明します。新機能の詳細については、『AEM 6.5 Communitiesユーザーガイド](https://helpx.adobe.com/jp/experience-manager/6-4/communities/user-guide.html)』を参照してください。[
 
 最新リリースを入手するには、このドキュメントの [Communities のデプロイ](https://helpx.adobe.com/in/experience-manager/6-4/help/communities/deploy-communities.html#LatestReleases)の節を参照してください。
 
@@ -20,26 +19,26 @@ ht-degree: 64%
 
 ### コミュニティエンゲージメントの強化 {#enhancements-to-community-engagement}
 
-**@メンションの**
-サポートAEM Communitiesでは、ユーザー生成コンテンツで、登録ユーザーが他の登録メンバーにタグ（メンション）を付けて、注意を引くことができるようになりました。タグ付け（メンション）されたメンバーには、対応するユーザー生成コンテンツへのディープリンクが付いた通知が届きます。ただし、Web通知や電子メール通知を無効/有効にすることはできます。
+**@Mentions**
+supportAEM Communitiesでは、ユーザー生成コンテンツで、登録ユーザーが他の登録メンバーにタグ付け（メンション）して、注意を引くことができるようになりました。タグ付け（メンション）されたメンバーには、対応するユーザー生成コンテンツへのディープリンクが付いた通知が届きます。ただし、Webおよび電子メール通知の無効化/有効化は、ユーザーが選択できます。
 
 ![@メンションのサポート](assets/at-mentions.png)
 
 コミュニティユーザーは、自分の名、姓またはユーザー名を検索しなくても、誰かが自分に接触してきたかどうか、または誰かが自分の注意を引く必要があるのかどうかを確認することができます。さらに、UGC 作成者は、問題に最もうまく対処し入力を追加できる特定の登録ユーザーからの応答を探すことができます。
 
-コミュニティ管理者は、登録ユーザーがこれらのコンポーネントの機能を使用できるように、コミュニティコンポーネントに対して「メンション&#x200B;**を有効にする」を有効にする必要があります。**
+コミュニティ管理者は、登録ユーザーがこれらのコンポーネントで機能を使用できるように、コミュニティコンポーネントで&#x200B;**メンション**&#x200B;を有効にする必要があります。
 
 **グループメッセージ送信**
 
-コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、1 回の電子メール作成でダイレクトメッセージをグループに一括送信できるようになりました。[グループメッセージング](/help/communities/configure-messaging.md)を許可するには、[Messaging Operations Service](/help/communities/messaging.md#group-messaging)の両方のインスタンスを有効にします。
+コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、1 回の電子メール作成でダイレクトメッセージをグループに一括送信できるようになりました。[グループメッセージング](/help/communities/configure-messaging.md)を許可するには、[メッセージング操作サービス](/help/communities/messaging.md#group-messaging)の両方のインスタンスを有効にします。
 
 ![グループメッセージ](assets/group-messaging.png)
 
 ### 一括モデレートの機能強化 {#enhancements-to-bulk-moderation}
 
-一括モデレートでのカスタムフィルター
+一括モデレートのカスタムフィルター
 
-[カスタム](/help/communities/moderation.md#custom-filters) フィルターが開発され、一括モデレートUIに追加されました。
+[カスタム](/help/communities/moderation.md#custom-filters) フィルターを開発し、一括モデレートUIに追加しました。
 
 タグによるフィルタリングの例を示す[サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)を ](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)GitHub [ で入手できます。このプロジェクトをベースに、類似のスタムフィルターを開発できます。
 
@@ -65,12 +64,12 @@ AEM 6.5 以降の Communities では、様々なコミュニティサイトや�
 
 **SCORM 2017.1 のサポート**
 
-AEM 6.5 Communitiesのイネーブルメント機能は、共有可能コンテンツオブジェクトリファレンスモデル[(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)エンジンをサポートしています。
+AEM 6.5 Communitiesのイネーブルメント機能は、Shareable Content Object Reference Model [(SCORM) 2017.1](https://rusticisoftware.com/blog/scorm-engine-2017-released/)エンジンをサポートします。
 
-* 有効化コンポーネントでのキーボードナビゲーションのサポート
-* AEM Communitiesの有効化コンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、キーボードナビゲーションをサポートし、アクセシビリティを向上しました。
+* イネーブルメントコンポーネントでのキーボードナビゲーションのサポート
+* AEM Communitiesのイネーブルメントコンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）は、キーボードナビゲーションをサポートし、アクセシビリティを向上させます。
 
 ### その他の機能強化 {#other-enhancements}
 
 * Solr 7のサポート
-* AEM 6.5 Communitiesでは、MSRPとDSRPの設定時に、Apache Solr 7.0バージョンの検索プラットフォームをサポートしています。
+* AEM 6.5 Communitiesでは、MSRPとDSRPの設定時に、Apache Solr 7.0バージョンの検索プラットフォームがサポートされます。
