@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
-translation-type: tm+mt
-source-git-commit: b703c59d7d913fc890c713c6e49e7d89211fd998
+exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1520'
 ht-degree: 92%
 
 ---
-
 
 # AEM forms のバックアップと回復方法{#backup-and-recovery-strategy-for-aem-forms}
 
@@ -34,13 +33,13 @@ Adobe Experience Manager (AEM) は AEM Forms の統合機能の一部です。�
 
 AEM Forms のバックアップ方法には、次の 2 種類のバックアップがあります。
 
-**システムイメージ：** ハードドライブまたはコンピューター全体の動作が停止した場合に、コンピューターの内容を復元するために使用できる完全なシステムバックアップです。システムイメージバックアップは、AEM Forms の実稼働用デプロイメントより前にのみ必要です。社内ポリシーで、システムイメージバックアップが必要な頻度を示します。
+**システムイメージ：** ハードドライブまたはコンピューター全体の動作が停止した場合に、コンピューターの内容を復元するために使用できる完全なシステムバックアップ。システムイメージバックアップは、AEM Forms の実稼働用デプロイメントより前にのみ必要です。社内ポリシーで、システムイメージバックアップが必要な頻度を示します。
 
-**AEMフォーム固有のデータ：** アプリケーションデータは、データベース、グローバルドキュメントストレージ(GDS)およびAEMリポジトリに存在し、リアルタイムでバックアップする必要があります。GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。該当するファイルには、PDF、ポリシー、フォームテンプレートなどがあります。
+**AEM forms固有のデータ：** アプリケーションデータは、データベース、グローバルドキュメントストレージ(GDS)、AEMリポジトリに存在し、リアルタイムでバックアップする必要があります。GDS は、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。該当するファイルには、PDF、ポリシー、フォームテンプレートなどがあります。
 
 >[!NOTE]
 >
->Content Services（非推奨）をインストールする場合、コンテンツ保存場所のルートディレクトリもバックアップします「[コンテンツストレージのルートディレクトリ（Content Servicesのみ）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)」を参照してください。
+>Content Services（非推奨）をインストールする場合、コンテンツ保存場所のルートディレクトリもバックアップします[コンテンツ保存場所のルートディレクトリ（Content Servicesのみ）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-directory-content-services-only)を参照してください。
 
 データベースは、フォームの生成結果、サービス設定、プロセスの状態、および GDS ファイルへのデータベース参照を保存するために使用されます。データベースへのドキュメントの保存を有効にすると、GDS 内の永続データと永続ドキュメントもデータベースに保存されます。データベースは、次の方法でバックアップおよび回復できます。
 
@@ -48,7 +47,7 @@ AEM Forms のバックアップ方法には、次の 2 種類のバックアッ�
 
    * 管理コンソールのバックアップ設定ページを使用します。スナップショットモードを開始するには、「セーフバックアップモードで稼動する」チェックボックスを選択します。スナップショットモードを終了するには、このチェックボックスの選択を解除します。
    * LCBackupMode スクリプト（[データベース、GDS およびコンテンツ保存場所のルートディレクトリのバックアップ](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)を参照）を使用します。スナップショットバックアップモードを終了するには、スクリプトの引数で `continuousCoverage` パラメーターを `false` に設定するか、`leaveContinuousCoverage` オプションを使用します。
-   * 提供されているバックアップ/回復APIを使用します。<!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
+   * 提供されているバックアップ/回復APIを使用します。 <!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
 * **ローリングバックアップ**&#x200B;モードでは、システムが常にバックアップモードになり、前のセッションが解放されるとすぐに新しいバックアップモードセッションが初期化されます。ローリングバックアップモードにはタイムアウトは関連付けられません。LCBackupMode スクリプトまたは API を呼び出してローリングバックアップモードを終了すると、新しいローリングバックアップモードセッションが開始します。このモードでは継続的なバックアップがサポートされ、GDS ディレクトリから古いドキュメントや不要なドキュメントを消去できるので便利です。ローリングバックアップモードは、「Backup and Recovery」ページではサポートされません。回復シナリオの後、ローリングバックアップモードは引き続き有効になります。継続的なバックアップモード（ローリングバックアップモード）を終了するには、LCBackupMode スクリプトで `leaveContinuousCoverage` オプションを使用します。
 
@@ -83,12 +82,12 @@ AEM Forms を異なる環境に回復する場合、次のような変更点が�
 1. メンテナンスモードでシステムを起動します。
 1. 次の操作を実行して、Form Manager をメンテナンスモードで AEM Forms と同期させてください。
 
-   1. https://&lt;*server*:*port*/lc/fmに移動し、adminstrator/password秘密鍵証明書を使用してログインします。
+   1. https://&lt;*server*:&lt;*port*/lc/fmに移動し、adminstrator/passwordの資格情報を使用してログインします。
    1. 右上角にあるユーザーの名前（この場合は Super Administrator）をクリックします。
    1. **Admin Options** をクリックします。
    1. **Start** をクリックして、リポジトリのアセットを同期します。
 
-1. クラスター環境では、プライマリノード(AEMに関して)はセカンダリノードの前に立ち上がっている必要があります。
+1. クラスター環境では、(AEMに関して)プライマリノードはセカンダリノードより前に立ち上がっている必要があります。
 1. システムの通常処理が有効になるまで、Web、SOAP、EJB のプロセスイニシエーターなど、内部ソースまたは外部ソースからプロセスが開始されないようにします。
 
 メイン AEM Forms データベースを移動または変更した場合は、ご使用のアプリケーションサーバーに対応するインストールガイドを参照して、AEM Forms データソースの IDP_DS および EDC_DS のデータベース接続情報を更新します。
@@ -103,10 +102,10 @@ AEM Forms を異なる環境に回復する場合、次のような変更点が�
 
 クラスター環境では、リポジトリのファイルシステムパス設定は、バックアップの前と復旧の後で、すべてのクラスターノードに対して同じでなければなりません。
 
-ファイルシステムパスを変更した後、`[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline`フォルダーの`LCSetGDS`スクリプトを使用してGDSパスを設定します。 詳しくは、同じフォルダー内の `ReadMe.txt` ファイルを参照してください。古い GDS ディレクトリパスを使用できない場合は、AEM forms を起動する前に、`LCSetGDS` スクリプトを使用して GDS に新しいパスを設定する必要があります。
+`[*aem-forms root]*\sdk\misc\Foundation\SetGDSCommandline`フォルダーの`LCSetGDS`スクリプトを使用して、ファイルシステムパスを変更した後にGDSパスを設定します。 詳しくは、同じフォルダー内の `ReadMe.txt` ファイルを参照してください。古い GDS ディレクトリパスを使用できない場合は、AEM forms を起動する前に、`LCSetGDS` スクリプトを使用して GDS に新しいパスを設定する必要があります。
 
 >[!NOTE]
 >
->これは、GDS の場所の変更にこのスクリプトを使用する必要がある唯一の状況です。AEM Forms の実行中に GDS の場所を変更するには、管理コンソールを使用します。(「[一般的なAEMフォーム設定の構成](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*」を参照) *
+>これは、GDS の場所の変更にこのスクリプトを使用する必要がある唯一の状況です。AEM Forms の実行中に GDS の場所を変更するには、管理コンソールを使用します。([一般的なAEM formsの設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*を参照) *
 
 GDS パスの設定後、メンテナンスモードで forms サーバーを起動し、管理コンソールを使用して、新しいノードについて残りのファイルシステムパスを更新します。すべての必要な設定が更新されたことを確認してから、AEM Forms を再起動し、テストします。
