@@ -9,15 +9,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3911'
 ht-degree: 97%
 
 ---
-
 
 # HTML5 フォームのスクリプティングのサポート {#scripting-support-for-html-forms}
 
@@ -28,7 +27,7 @@ ht-degree: 97%
 <table>
  <tbody>
   <tr>
-   <th>Property </th>
+   <th>プロパティ </th>
    <th>説明<br /> </th>
    <th>例外</th>
   </tr>
@@ -37,7 +36,7 @@ ht-degree: 97%
    <td>ユーザーの操作に応じて変更される前のフィールドのコンテンツを指定します。この値は「元に戻す」と同様に、再び呼び出すことができます。</td>
    <td><p>ドロップダウンリストとリストボックスでは機能しません。次の場合、<code>PrevText </code> は正常に機能しません。</p>
     <ul>
-     <li>iPadの数値フィールドに一部の特殊文字キー(例えば、$、(、)、&amp;、@など)を入力する際、および </li>
+     <li>iPadの数値フィールドに一部の特殊文字キー(たとえば、$、(、)、&amp;、@など)を入力すると、 </li>
      <li>日付フィールド（カレンダーをとおして日付が入力される場合）<br /> </li>
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td>
   </tr>
@@ -49,7 +48,7 @@ ht-degree: 97%
   <tr>
    <td><code>newtext</code></td>
    <td>ユーザーの操作に応じて変更された後のフィールドのコンテンツを指定します。</td>
-   <td><p><code>newText</code>プロパティは、次の場合は正しく機能しません。</p>
+   <td><p>次の場合、 <code>newText</code>プロパティは正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -64,7 +63,7 @@ ht-degree: 97%
   <tr>
    <td>change</td>
    <td>ユーザーがフィールドに入力したり貼り付けたりした直後の値を表します。 </td>
-   <td><p>changeプロパティは、次の場合は正しく機能しません。</p>
+   <td><p>次の場合、changeプロパティは正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -103,7 +102,7 @@ ht-degree: 97%
   <tr>
    <td><code>name</code></td>
    <td>現在のアプリケーションの名前を返します。</td>
-   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、次の値が返されます。 <code>Chrome &lt;version&gt;.</code></td>
+   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、返される値は <code>Chrome &lt;version&gt;.</code></td>
   </tr>
   <tr>
    <td><code>numPages</code></td>
@@ -381,7 +380,7 @@ ht-degree: 97%
 | `remove` | ノードリストからノードを削除します。 |
 | `insert` | ノードリスト内の特定のノードの前にノードを挿入します。 |
 
-## node  {#node}
+## node {#node}
 
 | プロパティ | 説明 | 例外 |
 |---|---|---|
@@ -401,7 +400,7 @@ ht-degree: 97%
 |---|---|---|
 | 該当なし | 該当なし | 該当なし |
 
-## Subform {#subform}
+## サブフォーム {#subform}
 
 <table>
  <tbody>
@@ -426,7 +425,7 @@ ht-degree: 97%
    <td>なし</td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>境界線</td>
    <td>border オブジェクトは、オブジェクトを囲む境界線を表します。</td>
    <td>なし</td>
   </tr>
@@ -494,7 +493,7 @@ ht-degree: 97%
 |---|---|
 | target | データの送信先 URL。この属性を省略することは、XFA 処理アプリケーションが config オブジェクトの製品固有の情報にアクセスするなどの、製品固有の技術を使用して URI を取得することを意味します。 |
 
-## tree  {#tree}
+## tree {#tree}
 
 <table>
  <tbody>
@@ -508,7 +507,7 @@ ht-degree: 97%
    <td>現在のオブジェクトのすべての子オブジェクトのリストを返します。</td>
    <td>
     <ul>
-     <li>xfa.nodes、descに対してはサポートされていません。</li>
+     <li>xfa.nodes, descに対してはサポートされていません。</li>
      <li>PDF と HTML に対してレポートされるノード数は異なります。 </li>
     </ul> </td>
   </tr>
@@ -584,7 +583,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## fill  {#fill}
+## fill {#fill}
 
 <table>
  <tbody>
@@ -726,7 +725,7 @@ ht-degree: 97%
    <td> </td>
   </tr>
   <tr>
-   <td>presence</td>
+   <td>存在</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
@@ -774,7 +773,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>境界線</td>
    <td>border オブジェクトは、checkButton オブジェクトを囲む境界線を表します。 </td>
    <td>変更はモデルに反映され、スクリプティングに使用できますが、HTML 要素には同期されません。したがって、変更は UI には反映されません。<br /> </td>
   </tr>
@@ -791,7 +790,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>境界線</td>
    <td>border オブジェクトは、choiceList オブジェクトを囲む境界線を表します。</td>
    <td> </td>
   </tr>
@@ -802,7 +801,7 @@ ht-degree: 97%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| border | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
+| 境界線 | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## 画像 {#image}
 
@@ -826,19 +825,19 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## imageEdit  {#imageedit}
+## imageEdit {#imageedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| border | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
+| 境界線 | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## numericEdit {#numericedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| border | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
+| 境界線 | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
 
-## オブジェクト {#object}
+## object {#object}
 
 <table>
  <tbody>
@@ -872,7 +871,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## textEdit  {#textedit}
+## textEdit {#textedit}
 
 <table>
  <tbody>
@@ -904,7 +903,7 @@ ht-degree: 97%
    <td>なし</td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>境界線</td>
    <td>このフィールドを囲む境界線を指定します。</td>
    <td>なし</td>
   </tr>
@@ -950,7 +949,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>caption</td>
-   <td>  captionオブジェクトは、フォームデザインのオブジェクトに関連付けられた説明ラベルを表します。<br /> </td>
+   <td>  captionオブジェクトは、フォームデザインオブジェクトに関連付けられた説明ラベルを表します。<br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -964,12 +963,12 @@ ht-degree: 97%
    <td>なし</td>
   </tr>
   <tr>
-   <td>presence</td>
+   <td>存在</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>access</td>
+   <td>アクセス</td>
    <td>コンテナのコンテンツへのユーザーアクセスを制御します。オブジェクト、例えばサブフォーム。</td>
    <td>exclgrp 内の個々の項目については、常にオープンを返します。 </td>
   </tr>
@@ -995,7 +994,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>calculate</td>
-   <td> <br /> </td>
+   <td>calculate オブジェクトは、フィールドの値の計算を制御します。<br /> </td>
    <td>なし</td>
   </tr>
  </tbody>
@@ -1018,7 +1017,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## border {#border}
+## 境界線 {#border}
 
 <table>
  <tbody>
@@ -1106,11 +1105,11 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## アイテム {#items}
+## item {#items}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| presence | オブジェクトの可視性を指定します。 | なし |
+| 存在 | オブジェクトの可視性を指定します。 | なし |
 
 ## FormCalc {#formcalc}
 
@@ -1258,7 +1257,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   </tr>
   <tr>
    <td>console.println()</td>
-   <td>このAcrobat APIはJavaScriptコンソールに出力をダンプします。</td>
+   <td>このAcrobat APIは、JavaScriptコンソールに出力をダンプします。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1329,7 +1328,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>app.formsVersion</td>
    <td>ビューアフォームソフトウェアのバージョン番号。スクリプトで下位互換性を保つ場合、このプロパティを確認して、ソフトウェアの新しいバージョンにあるオブジェクト、プロパティ、またはメソッドが使用できるかどうかを特定します。</td>
-   <td>11.001常に。</td>
+   <td>11.001は常に。</td>
   </tr>
   <tr>
    <td>app.language</td>
