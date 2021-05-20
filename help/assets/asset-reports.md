@@ -1,17 +1,16 @@
 ---
-title: アセットの使用と共有に関するレポート
+title: アセットの使用および共有に関するレポート
 description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Reports,Asset Management
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: アセットレポート，アセット管理
+exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1143'
 ht-degree: 88%
 
 ---
-
 
 # アセットレポート {#asset-reports}
 
@@ -27,12 +26,12 @@ ht-degree: 88%
 
 ## 前提条件 {#prerequisite-for-reporting}
 
-レポートを生成するには、次の手順を実行します。
+レポートを生成するには、次の操作を行います。
 
-* **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;から[!UICONTROL 日CQ DAMイベントレコーダー]サービスを有効にします。
-* レポートするアクティビティまたはイベントを選択します。 例えば、ダウンロードしたアセットに関するレポートを生成するには、「[!UICONTROL ダウンロードしたアセット(DOWNLOADED)]」を選択します。
+* **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;から[!UICONTROL Day CQ DAM Event Recorder]サービスを有効にします。
+* レポートの対象となるアクティビティまたはイベントを選択します。 例えば、ダウンロードされたアセットに関するレポートを生成するには、「[!UICONTROL ダウンロードされたアセット(DOWNLOADED)]」を選択します。
 
-![Webコンソールでアセットレポートを有効にする](assets/reports-config-day-cq-dam-event-recorder.png)
+![Webコンソールでのアセットレポートの有効化](assets/reports-config-day-cq-dam-event-recorder.png)
 
 ## レポートの生成 {#generate-reports}
 
@@ -157,8 +156,8 @@ ht-degree: 88%
 
 ## トラブルシューティング情報、ヒント、制限事項 {#best-practices-and-limitations}
 
-* レポート内の一部のレポートまたは数値が利用できない場合や期待どおりに表示されない場合は、[!UICONTROL Day CQ DAMイベントレコーダー]サービスが有効になっていることを確認してください。
+* レポート内の一部のレポートまたは数値が利用できない場合や期待どおりに表示されない場合は、[!UICONTROL Day CQ DAM Event Recorder]サービスが有効になっていることを確認してください。
 
-* 不要になったレポートを削除します。 DAM Report Purgeサービスの設定オプションを使用して、レポートを削除する条件を設定します。
+* 不要になったレポートを削除します。 DAM Report Purgeサービスの設定オプションを使用して、レポートをパージする条件を設定します。
 
 * [!DNL Dynamic Media] を使用していて、ディスク使用量レポートが生成されない場合は、すべてのアセットが正しく処理されていることを確認します。問題を解決するには、アセットを再処理してから、レポートを再度生成します。
