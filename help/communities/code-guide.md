@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 244cd43c-a573-495d-b80c-b97ba9d19b75
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: a23aab83-1dfa-4d91-9b6b-6246a2103896
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 38%
 
 ---
-
 
 # コーディングのガイドライン  {#coding-guidelines}
 
@@ -24,23 +23,22 @@ ht-degree: 38%
 
 AEM Communities の操作は、以前は Java Server Pages に大きく依存していましたが、ビジネスロジック、スタイルおよびページコンテンツが相互に異なる場合にテンプレートスクリプト言語を柔軟に選択できるように進化しています。
 
-ユーザー生成コンテンツ(UGC)を柔軟に操作できるのは、SocialResourceProvider APIを使用することで、[SRP](srp.md)オプションが展開用に選択されたことを認識する必要がなくなります。
+ユーザー生成コンテンツ(UGC)の操作を柔軟におこなえるのは、SocialResourceProvider APIを通じてのみです。このAPIを使用すると、デプロイメント用に[SRP](srp.md)オプションを選択したかどうかを認識する必要がなくなります。
 
 AEM Communities 開発者向けのさまざまなコーディングのガイドラインとベストプラクティスを次に示します。
 
 ### コード {#code}
 
-* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md) - UGCがJCR(JSRP)に格納されている場合にのみ機能するアプリケーションの記述を回避する方法。
-* [SocialUtilsリファクタリング](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティメソッド。
+* [SRPを使用したUGCへのアクセス](accessing-ugc-with-srp.md)  - UGCがJCR(JSRP)に格納されている場合にのみ機能するアプリケーションを記述しないようにする方法。
+* [SocialUtilsのリファクタリング](socialutils.md)  - SocialUtilsに代わるSRPのユーティリティメソッド。
 * [命名規則](naming-conventions.md)  — カスタムJavaクラスの命名規則。
 
 ### スクリプト {#scripts}
 
-* [Communitiesコンポーネントのサイドロード](sideloading.md)  — ページの読み込み後にコンポーネントを動的に追加する方法。
-* [リッチテキストエディター](rte.md)  — コンテンツを投稿するためにメンバーに提供されるリッチテキストUIをカスタマイズする方法。
+* [コミュニティコンポーネントのサイドローディング](sideloading.md)  — ページの読み込み後にコンポーネントを動的に追加する方法。
+* [リッチテキストエディターの基本事項](rte.md)  — メンバーがコンテンツを投稿するために提供するリッチテキストUIのカスタマイズ方法。
 
 ### IDE {#ide}
 
-* [Maven for Communitiesの使用](maven.md) - Communities API jarを含める方法。
-* [SocialUtilsリファクタリング](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティメソッド。
-
+* [コミュニティ用のMavenの使用](maven.md)  — コミュニティAPI jarを含める方法。
+* [SocialUtilsのリファクタリング](socialutils.md)  - SocialUtilsに代わるSRPのユーティリティメソッド。
