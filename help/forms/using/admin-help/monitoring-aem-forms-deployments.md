@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 931e8095-5c7c-4c1f-b95b-75ac2827d4f3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 76%
 
 ---
-
 
 # AEM Forms のデプロイメントの監視 {#monitoring-aem-forms-deployments}
 
@@ -75,31 +74,31 @@ JMX コンソール（JConsole）を使用すると、OperationStatistic MBean �
 
 **MBean ツリー**
 
-**Adobeドメイン名：アプリケーションサーバー** に依存します。アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
+**Adobeドメイン名：** アプリケーションサーバーに依存します。アプリケーションサーバーがドメインを定義していない場合、デフォルトは adobe.com です。
 
-**ServiceType:** AdobeServiceは、すべてのサービスのリストに使用する名前です。
+**ServiceType:** AdobeServiceは、すべてのサービスのリストに使用される名前です。
 
 **AdobeServiceName:** サービス名またはサービスID。
 
-**Version：サービスの** バージョン。
+**バージョン：** サービスのバージョン。
 
 **運用の統計情報**
 
-**Invocation Time：メソッドの実行に要した** 時間。要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
+**呼び出し時間：** メソッドの実行に要した時間。要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
 
-**呼び出し回数：サ** ービスが呼び出された回数。
+**呼び出し回数：** サービスが呼び出された回数。
 
-**平均呼び出し時間：サーバーの起動後に実行したすべての呼び出しの** 平均時間です。
+**平均呼び出し時間：** サーバーの起動後に実行されたすべての呼び出しの平均時間。
 
-**Max invocation time：サーバー** の起動後に実行した呼び出しのうち、最も長い呼び出し時間。
+**最大呼び出し時間：** サーバーの起動後に実行された呼び出しの最長時間。
 
-**最小呼び出し時間：サーバー** の起動後に実行した呼び出しのうち、最も短い呼び出し時間。
+**最小呼び出し時間：** サーバーの起動後に実行された呼び出しの最短時間。
 
-**例外数：失敗を引き起こした呼び出しの** 数。
+**例外数：** 失敗につながった呼び出しの数。
 
-**例外メッセージ：発生** した最後の例外のエラーメッセージ。
+**例外メッセージ：** 最後に発生した例外のエラーメッセージ。
 
-**Last Sampling Date Time:** 最後の呼び出しの日付。
+**Last Sampling Date Time:** 最後の呼び出し日。
 
 **時間単位：** デフォルトはミリ秒です。
 
@@ -155,4 +154,3 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
    ```
 
 1. WebSphere を再起動します。
-
