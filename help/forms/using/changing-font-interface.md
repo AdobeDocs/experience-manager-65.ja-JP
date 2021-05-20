@@ -10,20 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 79%
 
 ---
 
-
 # インターフェイスのフォントの変更{#changing-the-font-on-the-interface}
 
 AEM Forms Workspace に表示されているフォントを変更することができます。ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。フォントは選択的にユーザーインタフェイス上で変更することができます。
 
-[AEM Formsワークスペースのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従い、要件に応じて、CSS、HTMLまたはその両方をカスタマイズする手順に従います。
+[AEM Forms Workspaceのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従い、要件に応じて、CSS、HTMLまたはその両方をカスタマイズする手順に従います。
 
 1. 既存のスタイルのフォントファミリを変更または追加します。
 1. HTML 要素でフォントファミリインラインを変更または追加します。
@@ -32,7 +31,7 @@ AEM Forms Workspace に表示されているフォントを変更することが
 例えば、トップナビゲーションバーのアンカーテキストのフォントを「Courier New」に変更するには、次の手順に従います。
 
 1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にアクセスしてCRXDE Liteにログインします。
-1. 次のいずれかの操作をおこないます。
+1. 以下のいずれかの操作を行います。
 
    1. 既存のスタイルでフォントファミリーを変更するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
@@ -53,7 +52,7 @@ AEM Forms Workspace に表示されているフォントを変更することが
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      /apps/ws/js/registry.jsファイルを開いて編集し、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`を`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`に置き換えます。
+      /apps/ws/js/registry.jsファイルを編集用に開き、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`を`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`に置き換えます。
 
    1. フォントファミリを定義するスタイルを追加するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
