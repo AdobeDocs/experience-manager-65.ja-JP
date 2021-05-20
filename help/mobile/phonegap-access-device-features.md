@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 0019e367-8edc-4a23-bfa4-5beda266ace6
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 385f7924-e8ab-4dcb-83f0-7b81bead3dda
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 69%
 
 ---
-
 
 # デバイスの機能へのアクセス{#access-device-features}
 
@@ -26,14 +25,14 @@ ht-degree: 69%
 
 ## デバイスの機能にアクセスする AEM コンポーネントのビルド {#building-aem-components-that-access-device-features}
 
-[AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) Githubリポジトリは、多数のコアCordova APIの使用を説明する機能的なAEMアプリを開発者に提供します。 iOS または Android で PhoneGap CLI からこのアプリを実行すると、次に示すように各デバイス API へのリンクが含まれている次のページが開きます。
+[AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) Githubリポジトリは、多数のコアCordova APIの使用を示す機能AEMアプリを開発者に提供します。 iOS または Android で PhoneGap CLI からこのアプリを実行すると、次に示すように各デバイス API へのリンクが含まれている次のページが開きます。
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-これらの各デバイスAPIコンポーネントのソースコードは[Github](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components)で入手できます。
+これらの各デバイスAPIコンポーネントのソースコードは、Github](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components)で[利用できます。
 
-各APIの使用について詳しくは、[Cordovaプラグインのドキュメント](https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html)を参照することをお勧めします。
+各APIの使用方法について詳しくは、[Cordovaプラグインのドキュメント](https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html)を参照することをお勧めします。
 
 ## 次の手順 {#the-next-steps}
 
-「[Adobeモバイル解析でのアプリのパフォーマンスの追跡](/help/mobile/phonegap-intro-to-app-analytics.md)」を参照してください。
+[Mobile Analyticsでのアプリのパフォーマンスの追跡](/help/mobile/phonegap-intro-to-app-analytics.md)を参照してください。
