@@ -1,21 +1,20 @@
 ---
-sub-product: AEMコンテンツとコマース
-user-guide-title: AEMコンテンツとコマース
+sub-product: AEM のコンテンツとコマース
+user-guide-title: AEM のコンテンツとコマース
 breadcrumb-title: コマースガイド
-user-guide-description: AEMコンテンツとコマースの使用方法と管理方法を理解します。
-translation-type: tm+mt
+user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
 source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 51%
+ht-degree: 73%
 
 ---
 
 
 # Commerce {#commerce}
 
-+ [AEMコンテンツとコマース](/help/commerce/home.md)
-+ [AEMコンテンツとコマースに関する注目すべき変更](cif/changes.md)
++ [AEM のコンテンツとコマース](/help/commerce/home.md)
++ [AEM Content and Commerceの主な変更点](cif/changes.md)
 + [概要と概要](cif/introduction.md)
 + 統合 {#integrations}
    + [Adobe Commerce](cif/integrating/magento.md)
@@ -34,9 +33,9 @@ ht-degree: 51%
       + [CIFカタログピッカーの使用](cif/customizing/use-cif-pickers.md)
 + [移行](cif/migration.md)
 + リリースノート {#release-notes}
-   + [2021](cif/release-notes/release-notes-2021.md)
-   + [2020](cif/release-notes/release-notes-2020.md)
-   + [2019](cif/release-notes/release-notes-2019.md)
+   + [2021年](cif/release-notes/release-notes-2021.md)
+   + [2020年](cif/release-notes/release-notes-2020.md)
+   + [2019年](cif/release-notes/release-notes-2019.md)
 + [FAQ](cif/faq.md)
 + クラシックCIF {#classic}
    + デプロイ {#deploying}
@@ -46,7 +45,7 @@ ht-degree: 51%
       + [e コマース](/help/commerce/cif-classic/administering/ecommerce.md)
       + [概念 ](/help/commerce/cif-classic/administering/concepts.md)
       + [汎用eコマースの管理](/help/commerce/cif-classic/administering/generic.md)
-      + [SAPCommerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
+      + [SAP Commerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
    + 開発 {#developing}
       + [e コマース](/help/commerce/cif-classic/developing/ecommerce.md)
       + [開発（汎用）](/help/commerce/cif-classic/developing/generic.md)
