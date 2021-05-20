@@ -10,16 +10,15 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: ced7c902-193c-4e97-9070-2a4d958b64a3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '243'
 ht-degree: 100%
 
 ---
-
 
 # 関連コンテンツ {#associated-content}
 
@@ -56,4 +55,3 @@ ht-degree: 100%
 * コレクションに&#x200B;**アセットを追加**&#x200B;する。
 * 追加のアクションに対しアセットを選択する。
 * アセットを編集する。
-
