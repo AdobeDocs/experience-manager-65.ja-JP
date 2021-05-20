@@ -11,14 +11,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9e25ea72-e7ba-400b-9cab-de256fe64888
 docset: aem65
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 08e2381e-c7e8-4690-9cbf-6934064a04f8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 79%
 
 ---
-
 
 # PDF Generator の操作の概要 {#introduction-to-working-with-pdf-generator}
 
@@ -29,6 +28,5 @@ PDF Generator では、様々な形式のファイルを PDF に変換できま�
 ファイル処理のために、ファイルは PDF Generator に 3 種類の方法で送信できます。
 
 * 管理者は、管理コンソールで PDFG ページにアクセスできます（[PDF Generator を使用したファイルの変換](/help/forms/using/admin-help/converting-files-using-pdf-generator.md)を参照）。
-* `http(s)://'[server]:[port]'/pdfgui.`にログインしてPDFGエンドユーザーページにアクセスできます。ユーザーは、そこからPDFGネットワークプリンター、PDFの作成、HTMLからPDF、Export PDFおよびOptimize PDFの各ページにアクセスできます。
+* `http(s)://'[server]:[port]'/pdfgui.`にログインして、PDFGエンドユーザーページにアクセスできます。そこから、PDFGネットワークプリンター、PDFを作成、HTMLからPDF、Export PDF、Optimize PDFの各ページにアクセスできます。
 * これらのサービスのエンドポイントを設定できます参照先 <!--Fix broken link to Managing Endpoints --> [Generate PDF サービスの推奨事項](configuring-watched-folder-endpoints.md#generate-pdf-service-recommendations).
-
