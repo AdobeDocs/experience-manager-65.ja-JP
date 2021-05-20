@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: b5e27b54-d141-48dd-a4ed-dd0a691319a5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 95%
 
 ---
-
 
 # サマリー URL でのタスク変数の取得  {#getting-task-variables-in-summary-url}
 
@@ -77,8 +76,8 @@ ht-degree: 95%
       これには 3 つの入力変数が必要です。
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
-      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは一意のノード名文字列です。
-      * **ノードタイプ**:タイプを **nt:unstructured**.このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。一意のノード名文字列です。
+      * **ノードタイプ**:タイプを **nt:unstructured**&#x200B;と定義します。このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 
