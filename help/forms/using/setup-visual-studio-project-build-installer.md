@@ -7,14 +7,13 @@ uuid: 9559e584-2a40-4740-a29a-d7ad66220224
 topic-tags: forms-app
 discoiquuid: c71c2a17-54f9-4c95-a90a-3c89d6d45721
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+exl-id: ae7340c8-38cc-4b2b-ba17-22011471fd7d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 67%
+ht-degree: 69%
 
 ---
-
 
 # Visual Studio プロジェクトの設定と Windows アプリケーションの構築{#set-up-the-visual-studio-project-and-build-the-windows-app}
 
@@ -22,23 +21,23 @@ AEM Forms では、AEM Forms アプリケーションの完全なソースコー
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。 ソフトウェアディストリビューションにログインするには、Adobe ID が必要です。
-1. ヘッダーメニューにある&#x200B;**[!UICONTROL Adobe Experience Manager]**&#x200B;をタップします。
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
+1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して、結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに対応するパッケージ名をタップし、「**[!UICONTROL EULA条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
-1. [Package Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/administering/contentmanagement/package-manager.html)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックして、パッケージをアップロードします。
+   2. パッケージのバージョンとタイプを選択します。 **[!UICONTROL ダウンロードの検索]**&#x200B;オプションを使用して、結果をフィルターすることもできます。
+1. お使いのオペレーティングシステムに適したパッケージ名をタップし、「**[!UICONTROL EULA利用条件]**&#x200B;に同意し、**[!UICONTROL ダウンロード]**」をタップします。
+1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
-1. ソースコードアーカイブをダウンロードするには、ブラウザで`https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip`を開きます。\
+1. ソースコードアーカイブをダウンロードするには、ブラウザーで`https://<server>:<port>/crx/de/content/forms/mobileapps/src/adobe-lc-mobileworkspace-src-<version>.zip`を開きます。\
    ソースパッケージがデバイスにダウンロードされます。
 
-次の画像は、`adobe-lc-mobileworkspace-src-<version>.zip`の抽出された内容を示しています。
+次の画像は、`adobe-lc-mobileworkspace-src-<version>.zip`の抽出されたコンテンツを示しています。
 
 ![mws-content-1](assets/mws-content-1.png)
 
-次の図は、`src`フォルダー内の`windows`フォルダーのディレクトリ構造を示しています。
+次の画像は、`src`フォルダー内の`windows`フォルダーのディレクトリ構造を示しています。
 
 ![win-dir](assets/win-dir.png)
 
@@ -54,10 +53,10 @@ Windows デバイスの場合、以下の環境が必要です。
 
 Visual Studio で AEM Forms アプリケーションのプロジェクトを設定するには、以下の手順を実行します。
 
-1. Visual Studio 2015がインストールおよび構成されているWindows 8.1またはWindows 10デバイスの`adobe-lc-mobileworkspace-src-<version>.zip`フォルダーに`%HOMEPATH%\Projects`アーカイブをコピーします。
-1. アーカイブを`%HOMEPATH%\Projects\MobileWorkspace`ディレクトリに展開します。
+1. `adobe-lc-mobileworkspace-src-<version>.zip`アーカイブを、Visual Studio 2015がインストールおよび構成されたWindows 8.1またはWindows 10デバイスの`%HOMEPATH%\Projects`フォルダーにコピーします。
+1. `%HOMEPATH%\Projects\MobileWorkspace`ディレクトリにアーカイブを展開します。
 1. `%HOMEPATH%\Projects\MobileWorkspace\adobe-lc-mobileworkspace-src-[versionsrc]\windows`ディレクトリに移動します。
-1. Visual Studio 2015を使用して`CordovaApp.sln`ファイルを開き、AEM Formsアプリの作成に進みます。
+1. Visual Studio 2015を使用して`CordovaApp.sln`ファイルを開き、 AEM Formsアプリのビルドに進みます。
 
 ## AEM Forms アプリケーションの構築 {#build-aem-forms-app}
 
@@ -65,22 +64,22 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
 
 >[!NOTE]
 >
->AEM Forms アプリケーション向けに Windows ファイルシステムに保存されるデータは、暗号化されていません。Windows BitLocker Drive Encryptionなどのサードパーティ製ツールを使用して、ディスクデータを暗号化することをお勧めします。
+>AEM Forms アプリケーション向けに Windows ファイルシステムに保存されるデータは、暗号化されていません。Windows BitLocker Drive Encryptionなどのサードパーティツールを使用して、ディスクデータを暗号化することをお勧めします。
 
-1. Visual Studioの標準ツールバーで、ビルドモードのドロップダウンから「**リリース**」を選択します。
+1. Visual Studio Standardのツールバーで、ビルドモードのドロップダウンから「**リリース**」を選択します。
 
 1. 使用しているプラットフォームに応じて Windows-AnyCPU、Windows-x64、または Windows-x86 を選択します。Windows-AnyCPU を選択することをお勧めします。
-1. Visual Studio Solution Explorerで、プロジェクト&#x200B;**CordovaApp.Windows**&#x200B;を右クリックし、**ストア/AppPackagesを作成**&#x200B;を選択します。
+1. Visual Studioソリューションエクスプローラーで、プロジェクト&#x200B;**CordovaApp.Windows**&#x200B;を右クリックし、**ストア/AppPackages**&#x200B;を作成を選択します。
 
    ![createapppackages](assets/createapppackages.png)
 
-   アプリケーションパッケージの作成ウィザードが表示されます。
+   アプリパッケージを作成ウィザードが表示されます。
 
    CordovaApp.Windows_3.0.2.0_anycpu.appx インストーラーファイルが platforms\windows\AppPackages\CordovaApp.Windows_3.0.2.0_anycpu_Test ディレクトリに作成されます。
 
-   エラー`Retarget to windows 8.1 required`が発生した場合は、エラーを右クリックし、ポップアップメニューで[**Windows 8.1にリターゲットする**]を選択します。
+   エラー`Retarget to windows 8.1 required`が発生した場合は、エラーを右クリックし、ポップアップメニューで「**Windows 8.1にリターゲット**」を選択します。
 
-   ![リターゲット解](assets/retarget-solution.png)
+   ![retarget-solution](assets/retarget-solution.png)
 
 1. アプリパッケージの作成ウィザードで、アプリを Windows ストアにアップロードするかどうか選択し、「**次へ**」をクリックします。
 
@@ -95,7 +94,7 @@ AEM Forms アプリケーションを構築しデプロイするには、次の�
    * Windows PowerShell
    * Visual Studio
 
-   `.appx`パッケージを正常にインストールするには、次のアイテムが必要です。
+   `.appx`パッケージを正常にインストールするには、次の項目が必要です。
 
    1. WinJS ライブラリ
    1. WinJS のパッケージに、自己署名証明書または VeriSign などの信頼できる機関によって署名された公開証明書が付帯していることを確認してください。
@@ -146,7 +145,7 @@ Microsoft では VeriSign などの信頼できる機関が発行した公開証
 
 次の手順で Visual Studio によって生成された PowerShell スクリプトを編集し、開発者用のライセンスを取得しないように設定します。
 
-PowerShellスクリプトで、次の変数を設定します。`$NeedDeveloperLicense = $false`.
+PowerShellスクリプトで、変数を設定します。`$NeedDeveloperLicense = $false`.
 
 ドメインに加入していないデバイスの場合は、製品のアクティベーションキーのサイドローディングが必要です。アクティベーションキーは Windows 販売店で購入することができます。
 
@@ -159,8 +158,7 @@ PowerShellスクリプトで、次の変数を設定します。`$NeedDeveloperL
 Visual Studio を使用して Windows にアプリをインストールするには：
 
 1. リモートデバッガーを使用してデバイスに接続します。\
-   詳しくは、「[リモートマシンでWindowsストアアプリケーションを実行する](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine)」を参照してください。
+   詳しくは、[リモートマシンでWindowsストアアプリを実行する](https://docs.microsoft.com/en-us/visualstudio/debugger/run-windows-store-apps-on-a-remote-machine)を参照してください。
 
 1. Visual Studio でアプリケーションを開き、ソリューションプラットフォームリストで Windows-x64、Windows-x86、または Windows-AnyCPU を選択して「**リモートマシン**」を選択します。
 1. リモートマシンにアプリケーションがデプロイされます。
-
