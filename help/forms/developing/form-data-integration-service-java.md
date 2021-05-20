@@ -1,6 +1,6 @@
 ---
-title: Form Data Integration Service JavaAPI Quick開始(SOAP)
-seo-title: Form Data Integration Service JavaAPI Quick開始(SOAP)
+title: フォームデータ統合サービスJavaAPIクイックスタート(SOAP)
+seo-title: フォームデータ統合サービスJavaAPIクイックスタート(SOAP)
 description: Form Data Integrationサービスを使用して、データをPDFフォームに読み込み、Java APIを使用してPDFフォームからデータを書き出します。
 seo-description: Form Data Integrationサービスを使用して、データをPDFフォームに読み込み、Java APIを使用してPDFフォームからデータを書き出します。
 uuid: bde8e83d-56d3-4331-a025-82b327c219b7
@@ -10,32 +10,31 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 91b738ec-aa00-4f05-bf42-2574ced8d993
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
 
+# フォームデータ統合サービスJava APIクイックスタート(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
 
-# Form Data Integration Service Java API Quick開始(SOAP) {#form-data-integration-service-javaapi-quick-start-soap}
+Form Data Integrationサービスでは、次のクイックスタートを使用できます。
 
-Form Data Integrationサービスでは、次のクイック開始を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したフォームデータの読み込み](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したフォームデータの書き出し](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}を使用したフォームデータの読み込み
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}を使用したフォームデータの読み込み
 
-以下のJavaコードの例を使用することで、データをPDFフォームに読み込むことができます。 データは&#x200B;*Loan_data.xml*&#x200B;というXMLファイルにあり、PDFフォームは&#x200B;*ResultLoanForm.pdf*&#x200B;というPDFファイルとして保存されます。 （「[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)」を参照）。
+次のJavaコードの例では、データをPDFフォームに読み込みます。 データは&#x200B;*Loan_data.xml*&#x200B;というXMLファイルに格納され、PDFフォームは&#x200B;*ResultLoanForm.pdf*&#x200B;というPDFファイルとして保存されます。 （[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
 
 ```java
  /*
@@ -135,9 +134,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}を使用したフォームデータの書き出し
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}を使用してフォームデータを書き出す
 
-以下のJavaコードの例は、PDFフォームからデータを書き出します。 フォームデータは、*Loan_data.xml*&#x200B;というXMLファイルとして保存されます。 （「[フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data)」を参照）。
+次のJavaコードの例では、PDFフォームからデータを書き出しています。 フォームデータは、*Loan_data.xml*&#x200B;というXMLファイルとして保存されます。 （[フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data)を参照）。
 
 ```java
  /*
@@ -231,4 +230,3 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
      }
  }
 ```
-
