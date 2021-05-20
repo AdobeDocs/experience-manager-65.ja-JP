@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 59%
 
 ---
 
-
 # コミュニティの開発  {#developing-communities}
 
 ## 概要 {#overview}
 
-AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能により、ユーザ生成コンテンツ(UGC)が公開環境に入力されます。
+AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能を使用すると、パブリッシュ環境にユーザー生成コンテンツ(UGC)が入力されます。
 
-[コミュニティサイト](overview.md#communitiessites)の基盤は、[ソーシャルコンポーネントフレームワーク](scf.md) (SCF)です。 コミュニティサイトの作成は、[コミュニティ機能](functions.md)で構成される[コミュニティサイトテンプレート](sites-console.md)の選択から始まります。
+[コミュニティサイト](overview.md#communitiessites)の基盤は、[ソーシャルコンポーネントフレームワーク](scf.md)(SCF)です。 コミュニティサイトの作成は、[コミュニティ機能](functions.md)で構成される[コミュニティサイトテンプレート](sites-console.md)の選択から始まります。
 
 概要および使用の手引きのチュートリアルについては、以下を参照してください。
 
@@ -43,12 +42,12 @@ AEM Communities により、フォーラム、ユーザーグループ、ブロ�
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [Social Component Framework](scf.md):フレームワークとAPIの概要を説明します。
-* [SCFハンドルヘルパー](handlebars-helpers.md):デフォルトのヘルパーおよびカスタムヘルパーの作成方法。
+* [ソーシャルコンポーネントフレームワーク](scf.md):フレームワークとAPIの概要。
+* [SCF Handlebarsヘルパー](handlebars-helpers.md):デフォルトのヘルパーとカスタムヘルパーの書き込み方法
 * [クライアント側のカスタマイズ](client-customize.md):ブラウザーで実行するコードのカスタマイズ
-* [サーバー側のカスタマイズ](server-customize.md):サーバーで実行するコードのカスタマイズ
-* [ストレージリソースプロバイダ(SRP)](srp.md):コミュニティコンテンツのストレージの概要を示します。
-* [コーディングのガイドライン](code-guide.md):ガイドライン、ヒント、テクニックを参照してください。
+* [サーバー側のカスタマイズ](server-customize.md):サーバー上で実行するコードのカスタマイズ
+* [ストレージリソースプロバイダー(SRP)](srp.md):コミュニティコンテンツストレージの概要。
+* [コーディングのガイドライン](code-guide.md):ガイドライン、ヒント、テクニック。
 * [コミュニティコンポーネントガイド](components-guide.md):インタラクティブ開発ツール
 
 ## コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
@@ -61,14 +60,14 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 * [コミュニティグループテンプレート](tools-groups.md)
 * [コミュニティサイトテンプレート](sites.md)
 
-## コミュニティメンバー  {#community-members}
+## コミュニティメンバー {#community-members}
 
 * [ユーザーとユーザーグループの管理](users.md)
 * [Facebook と Twitter を使用したソーシャルログイン](social-login.md)
 
 ## コミュニティグループ {#community-groups}
 
-[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、発行環境または作成者フォルダーで行うことができます。
+[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、パブリッシュ環境またはオーサー環境でおこなうことができます。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [グループ機能](functions.md#groups-function)
@@ -76,10 +75,10 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 * [ユーザーとユーザーグループの管理](users.md)
 * [作成者のコミュニティグループ](creating-groups.md)
 
-## データの管理  {#managing-data}
+## データの管理 {#managing-data}
 
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRP APIユーティリティのメソッドと例
-* [Tag Essentials](tag.md)  — コミュニティメンバーがUGCやカタログ化された有効化リソースにタグ付けする機能
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例
+* [タグの基本事項](tag.md)  — コミュニティメンバーがUGCやカタログ化されたイネーブルメントリソースにタグ付けする機能
 
 ## チュートリアル {#tutorials}
 
@@ -92,11 +91,10 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 * [トラブルシューティング](troubleshooting.md)
 * [既知の問題](/help/release-notes/known-issues.md)
 
-## 関連するコミュニティドキュメント  {#related-communities-documentation}
+## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントとディスパッチャーの設定については、[Deploying Communities](deploy-communities.md)を参照してください。
+* 推奨されるデプロイメントとDispatcher設定については、 [Communitiesのデプロイ](deploy-communities.md)を参照してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](administer-landing.md)を参照してください。
 
-* Communitiesコンポーネントの作成方法と設定方法については、[Authoring Communities Components](author-communities.md)を参照してください。
-
+* コミュニティコンポーネントを使用してオーサリングおよび設定する方法については、 [コミュニティコンポーネントのオーサリング](author-communities.md)を参照してください。
