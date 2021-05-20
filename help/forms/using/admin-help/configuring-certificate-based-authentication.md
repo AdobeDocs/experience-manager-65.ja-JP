@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 94%
 
 ---
-
 
 # 証明書ベースの認証の設定 {#configuring-certificate-based-authentication}
 
@@ -51,14 +50,14 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    証明書の属性の内容が User Management データベース内のユーザーの属性の内容と異なる場合、Java の正規表現（regex）を使用して、2 つの属性をマッチさせることができます。例えば、証明書の共通名が「*Alex Pink (Authentication)*」や「*Alex Pink (Signing)*」などで、User Management データベースの共通名が「*Alex Pink*」である場合、regex を使用して、証明書の属性の必要な部分（この例では「*Alex Pink*」）を抽出できます。指定する正規表現は、Java regex 仕様に準拠している必要があります。
 
-   「カスタムオーダー」ボックスでグループの順序を指定すると、正規表現を変換できます。カスタム注文は`java.util.regex.Matcher.replaceAll()`メソッドと共に使用されます。 結果の動作はこのメソッドの動作に対応するため、それに従って入力文字列（カスタムオーダー）を指定する必要があります。
+   「カスタムオーダー」ボックスでグループの順序を指定すると、正規表現を変換できます。カスタム順序は`java.util.regex.Matcher.replaceAll()`メソッドで使用されます。 結果の動作はこのメソッドの動作に対応するため、それに従って入力文字列（カスタムオーダー）を指定する必要があります。
 
    regex をテストするには、「テストパラメーター」ボックスに値を入力して、「テスト」をクリックします。
 
    regex では、以下の文字を使用できます。
 
    * ：（任意の文字）
-   * &amp;ast;（0回以上の繰り返し）
+   * &amp;ast;（0回以上）
    * () （グループを括弧で囲んで指定）
    * ¥ （regex 文字を正規文字にエスケープするために使用）
    * $n （n 番目のグループを表すために使用）
@@ -71,11 +70,11 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    * 「Alex (Authentication) Pink」から「Alex Pink」を抽出するには
 
-      **Regex:** (.&amp;ast;)\（認証\） (.&amp;ast;)
+      **正規表現：** (.&amp;ast;)\（認証\） (.&amp;ast;)
 
    * 「Alex (Authentication) Pink」から「Pink Alex」を抽出するには
 
-      **Regex:** (.&amp;ast;)\（認証\） (.&amp;ast;)
+      **正規表現：** (.&amp;ast;)\（認証\） (.&amp;ast;)
 
       カスタムオーダー：$2 $1（2 番目のグループを返し、最初のグループに連結、空白スペース文字で取得）
 
@@ -98,4 +97,3 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
 1. 管理コンソールで、設定／User Management／設定／証明書のマッピングをクリックします。
 1. 削除する証明書のマッピングのチェックボックスをオンにして「削除」をクリックし、「OK」をクリックします。
-
