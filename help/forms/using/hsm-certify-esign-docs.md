@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 536bcba4-b754-4799-b0d2-88960cc4c44a
-translation-type: tm+mt
-source-git-commit: 35b2c9c8c79b3cc3d81e0b92ea17cd7d599fa7ee
+exl-id: 4d423881-18e0-430a-849d-e1762366a849
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 81%
 
 ---
-
 
 # ドキュメントのデジタル署名や証明に HSM を使用する {#use-hsm-to-digitally-sign-or-certify-documents}
 
@@ -40,9 +39,9 @@ Adobe Experience Manager Forms では、HSM や eToken に保存された資格�
 >
 >Microsoft Windows の場合、32 ビットの LunaSA または EToken クライアントのみに対応しています。
 
-## DocAssurance サービスを有効にする  {#configuredocassurance}
+## DocAssurance サービスを有効にする {#configuredocassurance}
 
-デフォルトでは、DocAssurance サービスは無効になっています。次の手順を実行して、サービスを有効にします。
+デフォルトでは、DocAssurance サービスは無効になっています。このサービスを有効にするには、次の手順を実行します。
 
 1. AEM Forms 環境のオーサーインスタンスを停止させます。
 
@@ -50,7 +49,7 @@ Adobe Experience Manager Forms では、HSM や eToken に保存された資格�
 
    >[!NOTE]
    >
-   >[AEM_root]\crx-quickstart\bin\start.batファイルを使用してAEMインスタンスを開始した場合は、[AEM_root]\crx-quickstart\sling.propertiesファイルを開いて編集します。
+   >[AEM_root]\crx-quickstart\bin\start.batファイルを使用してAEMインスタンスを起動した場合は、[AEM_root]\crx-quickstart\sling.propertiesファイルを開いて編集します。
 
 1. sling.properties ファイルに次のプロパティを追加（または書き換え）します。
 
@@ -75,13 +74,13 @@ Adobe Experience Manager Forms では、HSM や eToken に保存された資格�
 
 1. **ユーザー設定を編集**&#x200B;ページで、「**キーストアを管理**」をクリックします。 
 
-1. 「キーストアの管理」ダイアログで、「**キーストアファイル**&#x200B;の追加秘密鍵」オプションを展開し、エイリアスを指定します。 エイリアスは Reader Extensions の操作を実行する際に使用されます。
-1. 証明書ファイルをアップロードするには、「**キーストアファイルを選択**」をクリックし、`.pfx`ファイルをアップロードします。
+1. キーストア管理ダイアログで、「**秘密鍵をキーストアファイルから追加**」オプションを展開し、エイリアスを指定します。 エイリアスは Reader Extensions の操作を実行する際に使用されます。
+1. 証明書ファイルをアップロードするには、「**キーストアファイル**&#x200B;を選択`.pfx`」をクリックし、ファイルをアップロードします。
 1. **キーストアのパスワード**、**秘密鍵のパスワード**、および証明書に関連付けられている&#x200B;**秘密鍵エイリアス**&#x200B;を、各フィールドに追加します。「**送信**」をクリックします。
 
    >[!NOTE]
    >
-   >証明書のP **秘密キーエイリアス**&#x200B;を特定するには、Java keytoolコマンドを使用します。`keytool -list -v -keystore [keystore-file] -storetype pkcs12`
+   >証明書のP **秘密キーエイリアス**&#x200B;を確認するには、次のJava keytoolコマンドを使用します。`keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
    >[!NOTE]
    >
@@ -93,30 +92,30 @@ Adobe Experience Manager Forms では、HSM や eToken に保存された資格�
 
 >[!NOTE]
 >
->実稼働環境に移行する際は、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用の資格情報を更新する前に、古いReader拡張機能の資格情報を削除してください。
+>実稼働環境に移行する際は、評価用の資格情報を実稼働用の資格情報に置き換えます。期限切れの資格情報または評価用のReaderを更新する前に、古いExtensions資格情報を削除してください。
 
 ## デバイスエイリアスの作成 {#configuredeviceinaemconsole}
 
 エイリアスには、HSM や eToken に必要なパラメータがすべて含まれます。eSign やデジタル署名に必要な HSM や eToken の各資格情報に対してエイリアスを作成するには、以下の手順を実行します。
 
-1. AEM コンソールを開きます。AEMコンソールのデフォルトのURLは、https://&lt;host>:&lt;port>/system/console/configMgrです。
+1. AEM コンソールを開きます。AEMコンソールのデフォルトURLは、https://&lt;host>:&lt;port>/system/console/configMgrです。
 1. 「**HSM クレデンシャル設定サービス**」を開き、次のフィールドに値を入力します。
 
-   * **Credential Alias**（クレデンシャルのエイリアス）：エイリアスを識別するための文字列を指定します。この値は、署名フィールドへの署名操作など、Digital Signaturesの一部の操作でプロパティとして使用されます。
+   * **Credential Alias**（クレデンシャルのエイリアス）：エイリアスを識別するための文字列を指定します。この値は、「Sign Signature Field」操作など、一部のDigital Signatures操作のプロパティとして使用されます。
    * **DLL Path**（DLL のパス）：サーバーの HSM クライアントライブラリの完全修飾パスを指定します。例えば、「c:\Program Files\LunaSA\cryptoki.dll」のように入力します。クラスター環境では、クラスター内のすべてのサーバーでこのパスが同じである必要があります。
-   * **HSM Pin**:デバイスキーにアクセスするために必要なパスワードを指定します。
+   * **HSMピン**:デバイスキーへのアクセスに必要なパスワードを指定します。
    * **HSM Slot Id**（HSM スロットの ID）：データタイプが integer のスロットに対して、識別子を指定します。スロット ID はクライアントごとに設定します。2 番目のマシンを別のパーティション（同じ HSM デバイスの HSMPART2 など）に登録すると、スロット 1 はこのクライアントの HSMPART2 パーティションに関連付けられます。
 
    >[!NOTE]
    >
-   >HSM Slot Idフィールドには、eTokenの設定時に数値を指定します。 数値は、Signatures の操作を有効にするために必要です。
+   >Etokenを設定する際に、「HSM Slot Id」フィールドに数値を指定します。 数値は、Signatures の操作を有効にするために必要です。
 
    * **Certificate SHA1**（証明書 SHA1）：使用する秘密鍵証明書について、公開鍵（.cer）ファイルの SHA1 値（拇印）を指定します。SHA1 値にスペースが使用されていないことを確認します。物理証明書を使用している場合は、必要ありません。
-   * **HSM Device Type**:HSM（Lunaなど）またはeTokenデバイスの製造元を選択します。
+   * **HSM Device Type**（HSMデバイスタイプ）:HSM（Lunaなど）またはeTokenデバイスの製造元を選択します。
 
    「**保存**」をクリックします。ハードウェアセキュリティモジュールは、AEM Forms 用に構成されています。これにより、ドキュメントの署名や証明を行う際に、AEM Forms 上でハードウェアセキュリティモジュールを使用できるようになります。
 
-## DocAssurance サービス API を使用して、デバイスに保存されたデジタルキーで文書を署名または証明する  {#programatically}
+## DocAssurance サービス API を使用して、デバイスに保存されたデジタルキーで文書を署名または証明する {#programatically}
 
 次のサンプルコードでは、ドキュメントの署名や証明の際に、HSM または eToken を使用しています。
 
