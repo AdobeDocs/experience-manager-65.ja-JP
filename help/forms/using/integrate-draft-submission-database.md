@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 88%
 
 ---
-
 
 # ドラフトと送信コンポーネントとデータベースの統合のサンプル {#sample-for-integrating-drafts-submissions-component-with-database}
 
@@ -29,7 +28,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 >
 >* このドキュメントで説明されている例および設定は、MySQL 5.6.24 に基づいているため、お使いのデータベースシステムに合わせてそれらを適切に置き換える必要があります。
 >* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認してください。使用可能なパッケージのリストについては、[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
->* サンプルパッケージは、アダプティブFormsの送信アクションでのみ機能します。
+>* サンプルパッケージは、アダプティブForms送信アクションでのみ機能します。
 
 
 ## サンプルのセットアップおよび設定 {#set-up-and-configure-the-sample}
@@ -40,15 +39,15 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    データベース統合のサンプルパッケージ
 
-   [ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+[ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. https://[*host*]:[*port*]/crx/packmgr/のAEM package managerに移動します。
+1. https://[*host*]:[*port*]/crx/packmgr/でAEMパッケージマネージャーに移動します。
 1. 「**[!UICONTROL パッケージをアップロード]**」をクリックします。
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
 1. パッケージの隣にある「**[!UICONTROL インストール]**」をクリックし、パッケージをインストールします。
-1. **[!UICONTROL AEM Webコンソール設定]**に移動します
-https://[*host*]:[*port*]/system/console/configMgrのページ。
+1. **[!UICONTROL AEM Web Console Configuration]**に移動します。
+ページ(https://[*host*]:[*port*]/system/console/configMgr)にあります。
 1. **[!UICONTROL Forms Portal Draft and Submission Configuration]** をクリックし、編集モードで開きます。
 
 1. 次の表の説明に従って、プロパティの値を指定します。
@@ -84,11 +83,11 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
    * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。データソースおよびデータテーブル名の値は変更できます。
    >[!NOTE]
    >
-   >テーブル名を変更する場合は、フォームポータル設定で名前を指定します。
+   >テーブル名を変更する場合は、フォームポータルの設定で名前を指定します。
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
-1. データベース接続は、Apache Sling接続プールされたデータソースを介して行うことができます。
+1. データベース接続は、Apache Sling Connection Pooled Data Sourceを介して実行できます。
 1. Apache Sling 接続の場合は、Web コンソール設定で「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」を見つけてクリックし、編集モードで開きます。次の表の説明に従って、プロパティの値を指定します。
 
 <table>
@@ -317,7 +316,7 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
 1. `https://'[server]:[port]'/system/console/bundles` に移動して「**[!UICONTROL Install/Update]**」をクリックします。
 1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
 1. 「**[!UICONTROL Install」または「Update]**」をクリックします。完了したら、サーバーを再起動します。
-1. （*Windowsのみ*）お使いのオペレーティングシステムのシステムファイアウォールをオフにします。
+1. （*Windowsのみ*）オペレーティングシステムのシステムファイアウォールをオフにします。
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
 
@@ -332,7 +331,7 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
 次の手順を実行して[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成し、次のスクリプトを使用します。
 
 1. CRXDE にログインし、/etc/clientlibs/ に移動します。
-1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。例：`validation`
+1. **cq:ClientLibraryFolder** タイプのノードを作成して、ノードの名前を入力します。（例：`validation`）。
 
    「**[!UICONTROL すべて保存]**」をクリックします。
 
@@ -343,11 +342,11 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
     util.js
    ```
 
-   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。`util`フォルダーと`util.js`ファイルは、上記の手順で作成されます。
+   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。`util`フォルダーと`util.js`ファイルは、以下の手順で作成されます。
 
 1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。`util`という名前のフォルダーを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。`util.js`という名前のファイルを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。ファイル名の検証長のコード。
+1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。ファイル名の長さを検証するコード。
 
    ```javascript
    /*
@@ -414,13 +413,12 @@ https://[*host*]:[*port*]/system/console/configMgrのページ。
 
    * **[!UICONTROL マルチオプション：]** Enabled
 
-1. `/libs/fd/af/runtime/clientlibs/guideRuntime`に移動し、embedプロパティに`fp.validation`値を追加します。
+1. `/libs/fd/af/runtime/clientlibs/guideRuntime`に移動し、 embedプロパティに`fp.validation`値を追加します。
 
-1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFAに移動し、embedプロパティに`fp.validation`値を追加します。
+1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFAに移動し、 embedプロパティに`fp.validation`値を追加します。
 
    >[!NOTE]
    >
-   >guideRuntimeおよびguideRuntimeWithXfaクライアントライブラリの代わりにカスタムクライアントライブラリを使用する場合は、カテゴリ名を使用して、この手順で作成したクライアントライブラリを実行時に読み込むカスタムライブラリに埋め込みます。
+   >guideRuntimeおよびguideRuntimeWithXfaクライアントライブラリの代わりにカスタムクライアントライブラリを使用する場合は、カテゴリ名を使用して、この手順で作成したクライアントライブラリを、実行時に読み込むカスタムライブラリに埋め込みます。
 
 1. 「**[!UICONTROL すべて保存」をクリックします。]** 現在は、ファイル名が150文字（拡張子を含む）を超える場合に、メッセージが表示されます。
-
