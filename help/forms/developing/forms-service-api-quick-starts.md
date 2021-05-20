@@ -1,8 +1,8 @@
 ---
-title: FormsサービスAPIクイック開始
-seo-title: FormsサービスAPIクイック開始
-description: FormsサービスAPIのクイック開始を使用します。
-seo-description: FormsサービスAPIのクイック開始を使用します。
+title: FormsサービスAPIのクイックスタート
+seo-title: FormsサービスAPIのクイックスタート
+description: Forms Service APIのクイックスタートを使用します。
+seo-description: Forms Service APIのクイックスタートを使用します。
 uuid: dfce259a-e392-4929-ad7e-6d902faceaeb
 contentOwner: admin
 content-type: reference
@@ -10,62 +10,61 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
 
+# FormsサービスAPIのクイックスタート{#forms-service-api-quick-starts}
 
-# FormsサービスAPIクイック開始{#forms-service-api-quick-starts}
+**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
 
-**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
+Formsサービスでは、次のクイックスタートを使用できます。
 
-Formsサービスでは、次のクイック開始を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したインタラクティブPDFフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したインタラクティブPDFフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したクライアントでのフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したクライアントでのフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したフラグメントに基づくフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したフラグメントに基づくフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した権限を付与されたフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した使用権限付きフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したHTMLフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したHTMLフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した、カスタムツールバーでのHTMLフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したカスタムツールバーによるHTMLフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用してXMLとして送信されたPDF formsの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用してXMLとして送信されたPDF formsの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用してPDFとして送信されたPDF formsの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用してPDFとして送信されたPDF formsの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用して、XMLとして送信されたHTMLフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したXML形式で送信されたHTMLフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した、送信済みXMLデータを使用したPDFドキュメントの作成](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した、送信されたXMLデータを使用したPDFドキュメントの作成](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した、Formsへの編集可能なレイアウトの事前入力](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した編集可能なレイアウトでのFormsの自動埋め込み](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した計算スクリプトを含むフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した演算スクリプトを含むフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したパフォーマンスの最適化](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したパフォーマンスの最適化](forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した値によるレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した値によるレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用してForms Serviceにドキュメントを渡す](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用してFormsサービスにドキュメントを渡す](forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
-
-FormsサービスAPIを使用するアプリケーションロジックは、Javaサーブレットとして実装されます。 AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+FormsサービスAPIを使用するアプリケーションロジックは、Javaサーブレットとして実装されます。 AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「vによるプログラミング」にあるクイック開始は、別のオペレーティングシステム（Unixなど）を使用しているformsサーバーに基づきます。windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 vによるプログラミング」にあるクイックスタートは、Unixなどの別のオペレーティングシステムを使用しているformsサーバーに基づいています。windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-**ヒント**:Adobe開発者Webサイトには、Formsサービスを呼び出してフォームをレンダリングするASP.NETアプリケーションの作成方法を説明する次の記事が含まれています。[ASP.NETアプリケーションをレンダリングするフォームの作成](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)を参照してください。
+**ヒント**:Adobe開発者のWebサイトには、Formsサービスを呼び出してフォームをレンダリングするASP.NETアプリケーションの作成方法を説明する次の記事が含まれています。[ASP.NETアプリケーションをレンダリングするフォームの作成](https://www.adobe.com/devnet/livecycle/articles/asp_net.html)を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}を使用したインタラクティブPDFフォームのレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-interactive-pdf-form-using-the-java-api}を使用したインタラクティブPDFフォームのレンダリング
 
-次のコードの例は、*Loan.xdp*&#x200B;という名前のインタラクティブPDFフォームをクライアントWebブラウザーにレンダリングします。 フォームにファイルが添付されます。 フォームデザインはアプリケーションの一部で、コンテンツルートURI値`repository:///`を使用して参照されます。 ([インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)を参照)。
+次のコードの例では、*Loan.xdp*&#x200B;という名前のインタラクティブPDFフォームをクライアントWebブラウザーにレンダリングします。 ファイルがフォームに添付されます。 フォームデザインはアプリケーションの一部で、コンテンツルートURI値`repository:///`を使用して参照されます。 ([インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)を参照)。
 
 ```java
  /*
@@ -205,9 +204,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api}を使用してクライアントでフォームをレンダリングする
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api}を使用してクライアントでフォームをレンダリングする
 
-次のコードの例は、FormsサービスのJava APIを使用して、クライアントで&#x200B;*Loan.xdp*&#x200B;という名前のフォームをレンダリングします。 フォームデザインはアプリケーションの一部で、コンテンツルートURI値`repository:///`を使用して参照されます。 ([クライアントでのFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-at-the-client)を参照)。
+次のコードの例では、FormsサービスJava APIを使用して、クライアントで&#x200B;*Loan.xdp*&#x200B;という名前のフォームをレンダリングします。 フォームデザインはアプリケーションの一部で、コンテンツルートURI値`repository:///`を使用して参照されます。 ([クライアントでのFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-at-the-client)を参照)。
 
 ```java
  /*
@@ -338,9 +337,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}を使用したガイド（非推奨）のレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-guide-deprecated-using-the-java-api}を使用したガイドのレンダリング（非推奨）
 
-次のコードの例は、*TLALifeClaim.xdp*&#x200B;という名前のガイド（非推奨）をクライアントWebブラウザーにレンダリングします。
+次のコードの例では、 *TLALifeClaim.xdp*&#x200B;という名前のガイドをクライアントWebブラウザーにレンダリングします。
 
 ```java
  /*
@@ -474,9 +473,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}を使用したフラグメントに基づくフォームのレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api}を使用したフラグメントに基づくフォームのレンダリング
 
-次のコードの例は、フラグメントに基づくフォームをレンダリングします。 フォームデザインの名前は&#x200B;*PurchaseOrderDynamic.xdp*&#x200B;で、AEM Formsリポジトリ内にあります（XDPファイルはリポジトリ内のFormsFolderという名前のフォルダーに保存されます）。 また、POFragmentフォームが参照するフラグメントもリポジトリ内に配置する必要があります。 ([フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)を参照)。
+次のコードの例では、フラグメントに基づくフォームをレンダリングします。 フォームデザインの名前は&#x200B;*PurchaseOrderDynamic.xdp*&#x200B;で、AEM Formsリポジトリ内にあります（XDPファイルはリポジトリ内のFormsFolderという名前のフォルダーに格納されます）。 また、POFragmentフォームが参照するフラグメントもリポジトリ内に配置する必要があります。 ([フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-based-on-fragments)を参照)。
 
 ```java
  /*
@@ -607,9 +606,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}を使用した権限付きフォームのレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}を使用した権限を付与されたフォームのレンダリング
 
-次のコードの例は、使用権限を付与されたフォームをクライアントのWebブラウザーにレンダリングします。 次のコードの例に示す使用権限を使用すると、ユーザーはフォームにコメントを追加し、フォームデータを保存できます。 (「[レンダリング権限を有効にしたForms](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms)」を参照)。
+次のコードの例では、使用権限を付与されたフォームをクライアントのWebブラウザーにレンダリングします。 このコードの例で設定された使用権限により、ユーザーはフォームにコメントを追加し、フォームデータを保存できます。 ([権限が有効なForms](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms)のレンダリングを参照)。
 
 ```java
  /*
@@ -744,9 +743,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}を使用したHTMLフォームのレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}を使用したHTMLフォームのレンダリング
 
-次のコードの例は、FormsサービスJava APIを使用してHTMLフォームをレンダリングします。 HTMLフォームにはツールバーと2つの添付ファイルが追加されます。 また、`HttpServletRequest`オブジェクトからユーザエージェント値を取得する。 ([HTMLとしてのFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-as-html)を参照)。
+次のコード例は、FormsサービスJava APIを使用してHTMLフォームをレンダリングします。 ツールバーがHTMLフォームに追加され、2つの添付ファイルも追加されます。 また、ユーザエージェントの値は`HttpServletRequest`オブジェクトから取得されます。 ([FormsをHTMLとしてレンダリングする](/help/forms/developing/rendering-forms.md#rendering-forms-as-html)を参照)。
 
 ```java
  /*
@@ -905,9 +904,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api}を使用したCSSファイルを使用したHTMLフォームのレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api}を使用したCSSファイルを使用するHTMLフォームのレンダリング
 
-次のコード例は、FormsサービスクライアントAPIを使用してHTMLフォームをレンダリングします。 参照されるカスタムCSSファイルの名前は&#x200B;*custom.css*&#x200B;です。 (「[カスタムCSSファイルを使用したHTMLFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-html-forms-using-custom-css-files)」を参照)。
+次のコード例は、FormsサービスクライアントAPIを使用してHTMLフォームをレンダリングします。 参照されるカスタムCSSファイルの名前は&#x200B;*custom.css*&#x200B;です。 ([カスタムCSSファイルを使用したHTML Formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-html-forms-using-custom-css-files)を参照)。
 
 ```java
  /*
@@ -1060,9 +1059,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}を使用したカスタムツールバーによるHTMLフォームのレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api}を使用したカスタムツールバーでのHTMLフォームのレンダリング
 
-次のコードの例は、HTMLフォームをフランス語で表示されるツールバーでレンダリングします。 fscmenu.xmlの場所はC:\Adobe です(このフォルダーは、AEM Formsをホストするサーバー上に存在する必要があります)。 ロケール値が`fr_FR`であることに注意してください。 カスタムツールバーを使用してHTMLフォームをレンダリングする方法について説明する節では、このクイック開始で使用されるfscmenu.xmlファイルの構文を示します。 ([カスタムツールバーを使用したHTMLFormsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars)を参照)。
+次のコードの例では、フランス語で表示されるツールバーを含むHTMLフォームをレンダリングします。 fscmenu.xmlの場所はC:\Adobe です(このフォルダーはAEM Formsをホストするサーバー上に存在する必要があります)。 ロケール値は`fr_FR`です。 カスタムツールバーを使用してHTMLフォームをレンダリングする方法を説明する節では、このクイックスタートで使用するfscmenu.xmlファイルの構文を示します。 ([カスタムツールバーでのHTML Formsのレンダリング](/help/forms/developing/rendering-forms.md#rendering-html-forms-with-custom-toolbars)を参照)。
 
 ```java
  /*
@@ -1216,9 +1215,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}を使用してXMLとして送信されたPDF formsの処理
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api}を使用してXMLとして送信されたPDF formsの処理
 
-次のコードの例は、XMLとして送信されたフォームを処理します。 `processFormSubmission`メソッドに渡されるコンテンツタイプの値は`CONTENT_TYPE=text/xml`です。 `mortgageAmount`、`lastName`、`firstName`という名前のフィールドに対応する値が表示されます。 `getNodeText`という名前のユーザー定義メソッドをこのクイック開始で使用します。 `org.w3c.dom.Document`インスタンスと、ノード名を指定する文字列値を受け取ります。 このメソッドは、ノードの値を表すstring値を返します。 ([送信されたFormsの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照)。
+次のコードの例は、XMLとして送信されるフォームを処理します。 `processFormSubmission`メソッドに渡されるコンテンツタイプ値は`CONTENT_TYPE=text/xml`です。 `mortgageAmount`、`lastName`、`firstName`という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText`という名前のユーザー定義メソッドを使用します。 `org.w3c.dom.Document`インスタンスと、ノード名を指定する文字列値を受け取ります。 このメソッドは、ノードの値を表すstring値を返します。 ([送信されたForms](/help/forms/developing/rendering-forms.md#handling-submitted-forms)の処理を参照)。
 
 ```java
  /*
@@ -1383,11 +1382,11 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
 
 >[!NOTE]
 >
->`com.adobe.idp.Document`オブジェクトと`org.w3c.dom.Document`を同じアプリケーションで使用する場合は、`org.w3c.dom.Document`を完全に修飾します。
+>同じアプリケーションで`com.adobe.idp.Document`オブジェクトと`org.w3c.dom.Document`を使用する場合、`org.w3c.dom.Document`を完全に修飾します。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}を使用してPDFとして送信されたPDF formsの処理
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}を使用してPDFとして送信されたPDF formsの処理
 
-次のコードの例は、PDFデータとして送信されるフォームを処理します。 `processFormSubmission`メソッドに渡されるコンテンツタイプの値は`CONTENT_TYPE=application/pdf`です。 送信されたフォームは、*tempPDF.pdf*&#x200B;というPDFファイルとして保存されます。 また、フォームはPDFとして送信されるので、添付ファイルを取得できます。 添付ファイルはJPEGファイルとして保存されます。 ([送信されたFormsの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照)。
+次のコードの例では、PDFデータとして送信されるフォームを処理します。 `processFormSubmission`メソッドに渡されるコンテンツタイプ値は`CONTENT_TYPE=application/pdf`です。 送信されたフォームは、*tempPDF.pdf*&#x200B;という名前のPDFファイルとして保存されます。 また、フォームはPDFとして送信されるので、添付ファイルを取得できます。 添付ファイルはJPEGファイルとして保存されます。 ([送信されたForms](/help/forms/developing/rendering-forms.md#handling-submitted-forms)の処理を参照)。
 
 ```java
  /*
@@ -1535,9 +1534,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}を使用したXML形式で送信されたHTMLフォームの処理
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}を使用して、XMLとして送信されたHTMLフォームを処理します
 
-次のコードの例は、XMLデータとして送信されたHTMLフォームを処理します。 `processFormSubmission`メソッドに渡されるコンテンツタイプの値は`CONTENT_TYPE=application/x-www-form-urlencoded`です。`mortgageAmount`、`lastName`、および`firstName`という名前のフィールドに対応する値が表示されます。 `getNodeText`という名前のユーザー定義メソッドをこのクイック開始で使用します。 `org.w3c.dom.Document`インスタンスと、ノード名を指定する文字列値を受け取ります。 このメソッドは、ノードの値を表すstring値を返します。 ([送信されたFormsの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照)。
+次のコードの例は、XMLデータとして送信されるHTMLフォームを処理します。 `processFormSubmission`メソッドに渡されるコンテンツタイプの値は`CONTENT_TYPE=application/x-www-form-urlencoded`です。`mortgageAmount`、`lastName`および`firstName`という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText`という名前のユーザー定義メソッドを使用します。 `org.w3c.dom.Document`インスタンスと、ノード名を指定する文字列値を受け取ります。 このメソッドは、ノードの値を表すstring値を返します。 ([送信されたForms](/help/forms/developing/rendering-forms.md#handling-submitted-forms)の処理を参照)。
 
 ```java
  /*
@@ -1695,9 +1694,9 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}を使用した、送信されたXMLデータを使用したPDFドキュメントの作成
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api}を使用した、送信されたXMLデータを使用したPDFドキュメントの作成
 
-以下のJavaコードの例は、XMLとして送信されるフォームデータを処理します。 フォームデータは、FormsAPIを使用してフォーム送信から取得され、Outputサービスに送信されます。 フォームデータとフォームデザインは、非インタラクティブPDFドキュメントの作成に使用されます。 非インタラクティブPDFドキュメントは、`/Company Home/Test Directory`というContent Services（非推奨）ノードに保存されます。 フォームの名前が動的に作成されます。 つまり、ユーザーの名と姓を使用してPDFファイルが命名されます。 新しいコンテンツのリソース識別子がクライアントWebブラウザに書き出されます。 (「[送信されたXMLデータを使用したPDFドキュメントの作成](/help/forms/developing/rendering-forms.md#creating-pdf-documents-with-submitted-xml-data)」を参照)。
+次のJavaコードの例では、XMLとして送信されるフォームデータを処理します。 フォームデータは、Forms APIを使用してフォーム送信から取得され、Outputサービスに送信されます。 フォームデータとフォームデザインを使用して、非インタラクティブPDFドキュメントを作成します。 非インタラクティブPDFドキュメントは、`/Company Home/Test Directory`という名前のContent Services（非推奨）ノードに保存されます。 フォームの名前が動的に作成されます。 つまり、PDFファイルにはユーザーの姓と名が使用されます。 新しいコンテンツのリソース識別子がクライアントWebブラウザーに書き込まれます。 （[送信されたXMLデータを使用したPDFドキュメントの作成](/help/forms/developing/rendering-forms.md#creating-pdf-documents-with-submitted-xml-data)を参照）。
 
 ```java
  /*
@@ -1967,15 +1966,15 @@ FormsサービスAPIを使用するアプリケーションロジックは、Jav
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用した編集可能なレイアウトでFormsに事前入力{#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}を使用した、Formsへの編集可能なレイアウトの事前入力
 
-次のコードの例は、フォームに動的データソースを事前入力します。 つまり、データソースは実行時に作成され、XMLファイル内に含まれず、デザイン時にも作成されません。 次のコードの例には、3つのユーザー定義メソッドが含まれています。
+次のコードの例では、フォームに動的データソースを事前入力します。 つまり、データソースは実行時に作成され、XMLファイル内に含まれず、デザイン時にも作成されません。 このコードの例には、3つのユーザー定義メソッドが含まれています。
 
-* `createDataSource`:フォームの自動埋め込みに使用されるデータソースを表す `org.w3c.dom.Document` オブジェクトを作成します。このユーザー定義メソッドは、`org.w3c.dom.Document`オブジェクトを返します。
-* `convertDataSource`:オブジェクトを `org.w3c.dom.Document` オブジェクトに変換し `com.adobe.idp.Document` ます。このメソッドは、`org.w3c.dom.Document`オブジェクトを入力パラメーターとして受け取り、`com.adobe.idp.Document`オブジェクトを返します。
-* `renderPOForm`:FormsサービスのJava APIを使用して、動的な発注書フォームをレンダリングします。`convertDataSource`メソッドから返された`com.adobe.idp.Document`オブジェクトは、フォームの自動埋め込みに使用されます。
+* `createDataSource`:フォームの `org.w3c.dom.Document` 事前入力に使用されるデータソースを表すオブジェクトを作成します。このユーザー定義メソッドは、`org.w3c.dom.Document`オブジェクトを返します。
+* `convertDataSource`:オブジェクト `org.w3c.dom.Document` をオブジェクトに変 `com.adobe.idp.Document` 換します。このメソッドは、`org.w3c.dom.Document`オブジェクトを入力パラメーターとして受け取り、`com.adobe.idp.Document`オブジェクトを返します。
+* `renderPOForm`:FormsサービスJava APIを使用して、動的な発注書フォームをレンダリングします。`convertDataSource`メソッドが返した`com.adobe.idp.Document`オブジェクトを使用して、フォームに事前入力します。
 
-   これらのメソッドはすべて、Javaサーブレットの`doPost`メソッド内から呼び出されます。 (「[編集可能なレイアウトでFormsを自動埋め込む](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts)」を参照)。
+   これらのメソッドはすべて、Javaサーブレットの`doPost`メソッド内から呼び出されます。 ([編集可能なレイアウトを使用したFormsの事前入力](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts)を参照)。
 
 ```java
 /*
@@ -2252,9 +2251,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
 }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api}を使用した演算スクリプトを含むフォームの処理
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api}を使用した計算スクリプトを含むフォームの処理
 
-次のコードの例では、演算スクリプトを含むフォームを処理し、結果をクライアントのWebブラウザーに書き戻します。 （「[フォームデータの計算](/help/forms/developing/rendering-forms.md#calculating-form-data)」を参照）。
+次のコード例では、計算スクリプトを含むフォームを処理して結果をクライアントWebブラウザーに書き戻します。 （[フォームデータの計算](/help/forms/developing/rendering-forms.md#calculating-form-data)を参照）。
 
 ```java
  /*
@@ -2370,9 +2369,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したパフォーマンスの最適化{#quick-start-soap-mode-optimizing-performance-using-the-java-api}
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-optimizing-performance-using-the-java-api}を使用したパフォーマンスの最適化
 
-次のコードの例では、キャッシュ、スタンドアロン、線形化の各オプションを設定することで、パフォーマンスを最適化しています。 線形化されたファイルは、Web上での配信に最適化されています。 (「[Formsサービスのパフォーマンスの最適化](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service)」を参照)。
+次のコードの例では、キャッシュ、スタンドアロン、線形化の各オプションを設定することで、パフォーマンスを最適化しています。 線形化されたファイルは、Web上での配信に最適化されます。 (「[Formsサービスのパフォーマンスの最適化](/help/forms/developing/rendering-forms.md#optimizing-the-performance-of-the-forms-service)」を参照)。
 
 ```java
  /*
@@ -2498,9 +2497,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-rendering-by-value-using-the-java-api}を使用した値によるレンダリング
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-rendering-by-value-using-the-java-api}を使用した値によるレンダリング
 
-次のJavaクイック開始は、*Loan.xdp*&#x200B;という名前の値を使用してフォームデザインに基づくインタラクティブPDFフォームをレンダリングします。 フォームデザインは、*inputXDP*&#x200B;という名前の`com.adobe.idp.Document`オブジェクトにデータを埋め込むために使用されます。 ([値](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)によるFormsのレンダリングを参照)。
+次のJavaクイックスタートでは、値別に&#x200B;*Loan.xdp*&#x200B;という名前のフォームデザインに基づいたインタラクティブPDFフォームをレンダリングします。 フォームデザインは、*inputXDP*&#x200B;という名前の`com.adobe.idp.Document`オブジェクトを入力するために使用されます。 ([値](/help/forms/developing/rendering-forms.md#rendering-forms-by-value)によるFormsのレンダリングを参照)。
 
 ```java
  /*
@@ -2625,9 +2624,9 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}を使用してFormsサービスにドキュメントを渡す
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api}を使用してFormsサービスにドキュメントを渡す
 
-次のJavaクイック開始は、Content Services（非推奨）からLoan.xdpファイルを取得します。 このXDPファイルはスペース`/Company Home/Form Designs`にあります。 XDPファイルは`com.adobe.idp.Document`インスタンスで返されます。 `com.adobe.idp.Document`インスタンスがFormsサービスに渡されます。 インタラクティブフォームがクライアントのWebブラウザーに書き込まれます。 (「[Formsサービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)」を参照)。
+次のJavaクイックスタートでは、Content Services（非推奨）からLoan.xdpファイルを取得します。 このXDPファイルは、スペース`/Company Home/Form Designs`にあります。 XDPファイルは`com.adobe.idp.Document`インスタンスで返されます。 `com.adobe.idp.Document`インスタンスがFormsサービスに渡されます。 インタラクティブフォームがクライアントWebブラウザーに書き込まれます。 ([Formsサービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)を参照)。
 
 ```java
  /*
@@ -2772,4 +2771,3 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
  }
  
 ```
-
