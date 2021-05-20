@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/health_monitor
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 41042e08-5e14-4809-89b7-16d98a72d1b4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 88%
 
 ---
-
 
 # ヘルスモニターのパフォーマンスに関する微調整{#fine-tuning-health-monitor-performance}
 
@@ -25,7 +24,7 @@ ht-degree: 88%
 <table>
  <thead>
   <tr>
-   <th><p>Property</p></th>
+   <th><p>プロパティ</p></th>
    <th><p>目的</p></th>
    <th><p>デフォルト値</p></th>
   </tr>
@@ -72,11 +71,11 @@ ht-degree: 88%
 
 ## WebLogic への Java オプションの追加  {#add-java-options-to-weblogic}
 
-1. WebブラウザーのURL行にhttps://[host name]:&#39;port&#39;/consoleと入力して、WebLogic管理コンソールを開始します。
+1. WebブラウザーのURL行にhttps://[host name]:&#39;port&#39;/consoleと入力して、WebLogic管理コンソールを起動します。
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
-1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、- `Dadobe.healthmonitor.enabled=false`を追加すると、ヘルスモニターが無効になります。
+1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、 - `Dadobe.healthmonitor.enabled=false`を追加すると、ヘルスモニターが無効になります。
 1. 「Save」をクリックし、「Activate Changes」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
@@ -93,4 +92,3 @@ ht-degree: 88%
 1. 「Additional Properties」で、「Java Virtual Machine」をクリックします。
 1. 「Generic JVM arguments」ボックスに、必要な引数を入力します。
 1. 「OK」または「Apply」をクリックし、「Save directly to the master configuration」をクリックします。
-
