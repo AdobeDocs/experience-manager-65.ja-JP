@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: d4ae432d-557d-4e89-92b8-dca5f37cb6f8
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 59%
 
 ---
-
 
 # アダプティブフォームのカスタムレイアウトコンポーネントの作成{#creating-custom-layout-components-for-adaptive-forms}
 
@@ -30,8 +29,8 @@ ht-degree: 59%
 
 ## カスタムパネルレイアウトの作成  {#creating-a-custom-panel-layout}
 
-1. `/crx/de`に移動します。
-1. パネルレイアウトを`/libs/fd/af/layouts/panel`（例：`tabbedPanelLayout`）から`/apps`（例：`/apps/af-custom-layout`）にコピーします。
+1. 場所`/crx/de`に移動します。
+1. パネルレイアウトを`/libs/fd/af/layouts/panel`（例えば、`tabbedPanelLayout`）から`/apps`（例えば、`/apps/af-custom-layout`）にコピーします。
 1. コピーしたレイアウトの名前を`customPanelLayout`に変更します。 ノード`qtip`と`jcr:description`のプロパティを変更します。 例えば、`Custom layout - Toggle tabs`に変更します。
 
 qtip
@@ -40,7 +39,7 @@ qtip
 
 >[!NOTE]
 >
->プロパティ`guideComponentType`を値`fd/af/layouts/panel`に設定すると、レイアウトがパネルレイアウトになります。
+>プロパティ`guideComponentType`を値`fd/af/layouts/panel`に設定すると、レイアウトがパネルレイアウトと見なされます。
 
 1. 新しいレイアウトの下のファイル`tabbedPanelLayout.jsp`の名前をcustomPanelLayout.jspに変更します。
 1. 新しいスタイルおよび動作を追加するには、`etc` ノードでクライアントライブラリを作成します。例えば、/etc/af-custom-layout-clientlibで、ノードclient-libraryを作成します。 このノードにカテゴリのプロパティ af.panel.custom を設定します。このプロパティには次の .css ファイルと .js ファイルがあります。
@@ -115,7 +114,7 @@ qtip
    });
    ```
 
-1. 外観と動作をより良くするために、`client library`を含めることができます。
+1. 外観と動作を強化するには、`client library`を含めます。
 
    さらに、.jps ファイルに含まれるスクリプトのパスを更新します。例えば、`customPanelLayout.jsp`ファイルを次のように更新します。
 
@@ -204,7 +203,7 @@ qtip
 
 1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
 
-   ![パネルレイアウトリストに表示されたカスタムパネルレイアウトアダプティブフォームの](assets/auth-layt.png) ![スクリーンショットカスタムパネル](assets/s1.png) ![レイアウトを使用したスクリーンショットカスタムレイアウトの切り替え機能を示したスクリーンショット](assets/s2.png)
+   ![カスタムパネルレイアウトがパネルレイアウトlistに表示されるアダプティブフ](assets/auth-layt.png) ![ォームのスクリーンショットが、カスタムパネルレイアウトを使用し](assets/s1.png) ![て表示されるスクリーンショットカスタムレイアウトの切り替え機能を示すスクリーンショット](assets/s2.png)
 
 カスタムパネルレイアウトとカスタムパネルレイアウトを使用したアダプティブフォームのサンプル ZIP ファイル。
 
