@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archives
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dc53a6d0-317a-4abd-990c-455e13f8b824
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: f17726c0-3591-4d25-a8b5-3a7024249a56
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 98%
 
 ---
-
 
 # アプリケーションの読み込みと管理{#import-and-manage-applications}
 
@@ -115,4 +114,3 @@ Workbench で作成したアプリケーションの読み込みと管理を行�
 1. ReadMe.txt ファイルで詳細な手順を確認します。
 1. readme.txt ファイルの説明に従い、scriptedDeploy.bat および sample-files/sample.xml ファイルを手動で変更します。
 1. scriptedDeploy.bat ファイルを実行します。この操作により、AEM Forms アーカイブファイルが、変更後の設定でデプロイされます。
-
