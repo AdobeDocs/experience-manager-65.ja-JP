@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 687c6569-7189-4039-9c7a-bc29658a7756
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 48%
 
 ---
-
 
 # ルートアクションで使用されるイメージのカスタマイズ  {#customize-images-used-in-route-actions}
 
@@ -27,7 +26,7 @@ ht-degree: 48%
 
    `/apps/ws/css/newStyle.css`
 
-   次に例を示します。次に示すように追加、`myStyle1`という新しいスタイルを作成し、WebDAVクライアントを使用して画像ファイル`myStyleIcon1.png`を`/apps/ws/image`フォルダーにアップロードします。
+   例：以下に示すように、`myStyle1`という新しいスタイルを追加し、WebDAVクライアントを使用して画像ファイル`myStyleIcon1.png`を`/apps/ws/image`のフォルダーにアップロードします。
 
    >[!NOTE]
    >
@@ -47,11 +46,11 @@ ht-degree: 48%
 
 ## タスクリストタスクアクションポップアップ  {#task-list-task-action-popup}
 
-1. タスクリストアクションポップアップを作成します(「[AEM Formsワークスペースコードの作成](introduction-customizing-html-workspace.md#building-html-workspace-code)」を参照)。 これには、Dev パッケージを使用する必要があります。
+1. タスクリストアクションポップアップを作成します(「AEM Forms Workspaceコード](introduction-customizing-html-workspace.md#building-html-workspace-code)の構築」を参照)。 [これには、Dev パッケージを使用する必要があります。
 
 1. `/libs/ws/js/runtime/templates/task.html` を `/apps/ws/js/runtime/templates/task.html` にコピーします。
 
-1. CSSスタイルの名前がサーバーからのルートアクション名と同じである場合は、`/apps/ws/js/runtime/templates/task.html`内の次のコードを変更します。
+1. CSSスタイルの名前がサーバーからのルートアクション名と同じである場合は、`/apps/ws/js/runtime/templates/task.html`で次のコードを変更します。
 
    ```jsp
    <%if(routeList == null){%>
@@ -121,7 +120,7 @@ To
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-1. CSSスタイルの名前がサーバーからのルートアクション名と同じである場合は、`/apps/ws/js/runtime/templates/taskdetails.html`内の次のコードを変更します。
+1. CSSスタイルの名前がサーバーからのルートアクション名と同じである場合は、`/apps/ws/js/runtime/templates/taskdetails.html`で次のコードを変更します。
 
    ```jsp
    <%for (var i = 0; i < availableCommands.directCommands.length; i++) {%>
@@ -172,5 +171,5 @@ To
 1. `/apps/ws/js/registry.js`を開いて編集し、次のテキストを探します。
    `"text!/lc/libs/ws/js/runtime/templates/taskdetails.html"`
 
-1. テキストを次の文字列に置き換えます。
+1. テキストを以下に置き換えます。
    `"text!/lc/apps/ws/js/runtime/templates/taskdetails.html"`
