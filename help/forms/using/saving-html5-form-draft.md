@@ -8,23 +8,22 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 445e24af-cd1a-414d-bd01-9feb6631bbef
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: a9879445-d626-4279-8a95-a9009294b483
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 66%
 
 ---
 
-
 # HTML5 フォームのドラフトでの保存 {#saving-an-html-form-as-a-draft}
 
-HTML5 フォームをドラフトとして保存し、後でフォームへの記入を再開できます。フォームポータルを使用すると、すべてのユーザーが HTML5 フォームを保存および復元できます。「ドラフトとして保存」機能を有効にするには、プロファイルノードに次の設定を追加します。
+HTML5 フォームをドラフトとして保存し、後でフォームへの記入を再開できます。フォームポータルを使用すると、すべてのユーザーが HTML5 フォームを保存および復元できます。「ドラフトとして保存」機能を有効にするには、次の設定をプロファイルノードに追加します。
 
 ## 「ドラフトとして保存」機能を許可するためのカスタムプロファイル{#custom-profile-to-allow-save-as-draft-feature}
 
-AEM Formsは初期状態で、「**ドラフトとして保存**」プロファイルを提供します。 「ドラフトとして保存」プロファイルを持つフォームをレンダリングすると、HTML5 フォームのドラフト機能を有効にすることができます。[Forms Manager](/help/forms/using/introduction-managing-forms.md) で、フォームに対する HTML レンダリングプロファイルを指定できます。
+デフォルトでは、AEM Formsには「**ドラフトとして保存**」プロファイルが用意されています。 「ドラフトとして保存」プロファイルを持つフォームをレンダリングすると、HTML5 フォームのドラフト機能を有効にすることができます。[Forms Manager](/help/forms/using/introduction-managing-forms.md) で、フォームに対する HTML レンダリングプロファイルを指定できます。
 
 既存の[カスタムプロファイル](/help/forms/using/custom-profile.md)に対して「ドラフトとして保存」機能を有効にするには、カスタムプロファイルノードに次のプロパティを追加します。
 
@@ -38,7 +37,7 @@ AEM Formsは初期状態で、「**ドラフトとして保存**」プロファ�
   </tr>
   <tr>
    <td>mfAllowFPDraft</td>
-   <td>String</td>
+   <td>文字列</td>
    <td>true</td>
    <td><p>このプロファイルの「ドラフトとして保存」機能を</p> <p>有効にします。</p> </td>
   </tr>
@@ -55,7 +54,7 @@ AEM Formsは初期状態で、「**ドラフトとして保存**」プロファ�
 
 フォームの「ドラフトとして保存」機能を有効にしてからフォームを保存すると、[ドラフトと送信コンポーネント](/help/forms/using/draft-submission-component.md)に一覧表示されます。ドラフトと送信コンポーネントから保存しておいたフォームを取得して再入力できます。
 
-ドラフトと送信コンポーネントのフォームリストを有効にするには、プロファイルノードに次のプロパティを追加します。
+ドラフトと送信コンポーネントのフォームリストを有効にするには、次のプロパティをプロファイルノードに追加します。
 
 <table>
  <tbody>
@@ -69,9 +68,9 @@ AEM Formsは初期状態で、「**ドラフトとして保存**」プロファ�
    <td>fp.enablePortalSubmit</td>
    <td>文字列</td>
    <td>true</td>
-   <td>ドラフトとフォームを送信後に<br />Formsポータルのドラフトと送信コンポーネントに一覧表示できるようにするには</td>
+   <td>送信後にドラフトとフォームを<br /> Forms Portalのドラフトと送信コンポーネントに一覧表示できるようにする</td>
   </tr>
  </tbody>
 </table>
 
-デフォルトでは、AEM Formsはフォームのドラフトと送信に関連付けられたユーザーデータを発行インスタンスの/content/forms/fpノードに保存します。 カスタムのストレージプロバイダーを追加できます。詳細は、「[ドラフトと送信コンポーネントのカスタムストレージ](/help/forms/using/adding-custom-storage-provider-forms.md)」を参照してください。
+デフォルトでは、AEM Formsはフォームのドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの/content/forms/fpノードに保存します。 カスタムのストレージプロバイダーを追加できます。詳細は、「[ドラフトと送信コンポーネントのカスタムストレージ](/help/forms/using/adding-custom-storage-provider-forms.md)」を参照してください。
