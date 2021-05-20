@@ -1,21 +1,20 @@
 ---
-title: タイムライン表示内のデジタルアセットのアクティビティストリーム
+title: タイムライン表示のデジタルアセットのアクティビティストリーム
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 68%
+source-wordcount: '217'
+ht-degree: 69%
 
 ---
 
-
 # タイムラインのアクティビティストリーム {#activity-stream-in-timeline}
 
-この機能は、タイムラインにアセットのアクティビティログを表示します。[!DNL Adobe Experience Manager Assets]で以下のアセット関連の操作を実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
+この機能は、タイムラインにアセットのアクティビティログを表示します。[!DNL Adobe Experience Manager Assets]で次のアセット関連操作を実行すると、アクティビティストリーム機能によってタイムラインが更新され、アクティビティが反映されます。
 
 アクティビティストリームでログに記録される操作は次のとおりです。
 
@@ -28,7 +27,7 @@ ht-degree: 68%
 * 拒否
 * 移動
 
-タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。さらに、新しいアセットがアップロードされたときや、既存のアセットが変更され、[Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)または[Experience Managerデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)を介して[!DNL Experience Manager]にチェックインされたときに、タイムラインアクティビティが記録されます。
+タイムラインに表示されるアクティビティログは、ログファイルが格納されている CRX の `/var/audit/com.day.cq.dam/content/dam` から取得されます。さらに、新しいAdobeがアップロードされたり、既存のアセットが変更されて[Experience Managerアセットリンク](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)または[アセットデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)を介して[!DNL Experience Manager]にチェックインされたりすると、タイムラインアクティビティが記録されます。
 
 >[!NOTE]
 >
@@ -40,7 +39,7 @@ ht-degree: 68%
 
 タイムラインに、アセットに対して実行した操作のアクティビティストリームが表示されます。
 
-![アクティビティ_ストリーム](assets/activity_stream.png)
+![activity_stream](assets/activity_stream.png)
 
 >[!NOTE]
 >
