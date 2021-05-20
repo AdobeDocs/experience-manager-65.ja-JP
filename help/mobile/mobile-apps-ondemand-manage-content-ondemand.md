@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: 89fc3701-0472-4629-95d3-da577581a0f0
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4e37e814-ceb6-4dfa-a4d3-754f15ca4edf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 72%
 
 ---
-
 
 # コンテンツ管理{#managing-content}
 
@@ -30,15 +29,15 @@ ht-degree: 72%
 
 オンライン雑誌を検討する場合、主要なコンテンツは記事、広告およびカバーです。AEM内では、3つの主なタイプのMobile On-Demandコンテンツを作成できます。
 
-* **記事**:情報を伝えるための芸術と共に基づくテキスト
+* **記事**:情報を伝える技術と共に基づくテキスト
 * **バナー：** 通常、グラフィカルなプロモーションリンク
-* **コレクション：カバーのテーマに合った記事やバナーなどのコンテンツが埋められた、適切に定義された** グループを ** 表します。
+* **コレクション：** カバーのテーマに適 ** した記事やバナーなどのコンテンツが入った、適切に定義されたグループを表します。
 
-* **共有リソース：記事間で共通の部分を再利用または共有** できます
+* **共有リソース：** 記事間で共通する部分の再利用または共有を可能にします
 
 >[!NOTE]
 >
->AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの「[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)」を参照してください。
+>AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)を参照してください。
 
 ## コンテンツの作成と管理 {#creating-and-managing-content}
 
@@ -52,7 +51,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->通常、コンテンツを公開する前に、プリフライトをおこなう必要があります。詳しくは、[プリフライトでのプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
+>通常、コンテンツを公開する前に、プリフライトをおこなう必要があります。詳しくは、[プリフライトによるプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
 
 ### その他のリソース {#additional-resources}
 
@@ -60,4 +59,3 @@ ht-degree: 72%
 
 * [AEM Mobile On-demand Services の AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Services を使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)
-
