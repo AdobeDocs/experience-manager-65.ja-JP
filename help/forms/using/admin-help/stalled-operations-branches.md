@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8c2567f3-7220-436a-b9f2-2824a98c1ccc
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: c96faae0-2b0f-4334-b61c-f13b2d1ec179
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 89%
 
 ---
-
 
 # 停止した操作および停止したブランチの使用 {#working-with-stalled-operations-and-branches}
 
@@ -31,15 +30,15 @@ ht-degree: 89%
 
 **操作名またはブランチ名：** 操作またはブランチの名前。
 
-**ステータス：停止したアイテムの** 場合は常に「停止」です。
+**ステータス：** 停止した項目の場合は常に停止。
 
-**エラー：問題** の短い説明。
+**エラー：** 問題の簡単な説明。
 
-**プロセスID：プロセス** がインスタンス化される（つまり、ユーザーまたは自動ステップによってプロセスが開始される）ときに、formsワークフローによって割り当てられる正の整数。この ID を使用して、プロセスインスタンスをライフサイクル全体にわたって追跡できます。
+**プロセスID:** プロセスがインスタンス化される（つまり、ユーザーまたは自動ステップがプロセスを開始する）際に、formsワークフローによって割り当てられる正の整数。この ID を使用して、プロセスインスタンスをライフサイクル全体にわたって追跡できます。
 
-**プロセス名 — バージョン：Workbench** で割り当てられたプロセスの名前。
+**プロセス名 — バージョン：** Workbenchで割り当てられたプロセスの名前。
 
-**停止した日付：** 操作またはブランチが停止した日時。
+**停止日：** 操作またはブランチが停止した日時。
 
 停止した操作ページまたは停止したブランチページで、次のタスクを実行できます。
 
