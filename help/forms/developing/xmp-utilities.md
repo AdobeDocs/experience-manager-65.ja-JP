@@ -1,8 +1,8 @@
 ---
 title: XMPユーティリティの操作
 seo-title: XMPユーティリティの操作
-description: XMP UtilitiesのJavaおよびWeb Service APIを使用して、プログラムによってXMPメタデータをPDFドキュメントに読み込み、XMPメタデータをPDFドキュメントから取得して保存します。
-seo-description: XMP UtilitiesのJavaおよびWeb Service APIを使用して、プログラムによってXMPメタデータをPDFドキュメントに読み込み、XMPメタデータをPDFドキュメントから取得して保存します。
+description: XMP Utilities JavaおよびWeb Service APIを使用して、PDFドキュメントにXMPメタデータをプログラムで読み込み、PDFドキュメントからXMPメタデータを取得して保存します。
+seo-description: XMP Utilities JavaおよびWeb Service APIを使用して、PDFドキュメントにXMPメタデータをプログラムで読み込み、PDFドキュメントからXMPメタデータを取得して保存します。
 uuid: 90ce6cef-efe1-456a-8e0c-5ba90249dda0
 contentOwner: admin
 content-type: reference
@@ -10,47 +10,46 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
 discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: cff65f74-ba95-438e-88a4-5ec7d22aafba
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1437'
 ht-degree: 3%
 
 ---
 
-
 # XMPユーティリティの操作{#working-with-xmp-utilities}
 
-**このドキュメントのサンプルと例は、JEE環境上のAEM Formsに対してのみ提供されています。**
+**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
 
 **XMP Utilitiesサービスについて**
 
-PDFドキュメントにはメタデータが含まれます。メタデータは、ドキュメントに関する情報で、テキストやグラフィックなどのドキュメントのコンテンツと区別されます。 Adobe拡張メタデータプラットフォーム(XMP)は、ドキュメントのメタデータを処理するための標準です。
+PDFドキュメントには、テキストやグラフィックなど、ドキュメントの内容と区別されるドキュメントに関する情報であるメタデータが含まれます。 Adobe拡張メタデータプラットフォーム(XMP)は、ドキュメントのメタデータを処理するための標準です。
 
 XMP Utilitiesサービスは、PDFドキュメントからXMPメタデータを取得して保存し、XMPメタデータをPDFドキュメントに読み込むことができます。
 
 XMP Utilitiesサービスを使用して、次のタスクを実行できます。
 
-* PDFドキュメントへのメタデータの読み込み (「[PDFドキュメントへのメタデータの読み込み](xmp-utilities.md#importing-metadata-into-pdf-documents)」を参照)。
-* PDFドキュメントからのメタデータの書き出し ([PDFドキュメントからのメタデータの書き出し](xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照)。
+* PDFドキュメントへのメタデータの読み込み （[PDFドキュメントへのメタデータの読み込み](xmp-utilities.md#importing-metadata-into-pdf-documents)を参照）。
+* PDFドキュメントからのメタデータの書き出し （[PDFドキュメントからのメタデータの書き出し](xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照）。
 
 >[!NOTE]
 >
->XMP Utilitiesサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>XMP Utilitiesサービスの詳細については、『 AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)向けサービスリファレンス』を参照してください。[
 
 ## PDFドキュメントへのメタデータの読み込み{#importing-metadata-into-pdf-documents}
 
-XMP UtilitiesのJavaおよびWebサービスAPIを使用して、XMPメタデータをPDFドキュメントにプログラム的に読み込むことができます。 メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDFドキュメントに関する情報を提供します。 メタデータは、次の図に示すように、ドキュメントのドキュメントプロパティダイアログにあります。
+XMP Utilities JavaおよびWebサービスAPIを使用して、XMPメタデータをプログラムでPDFドキュメントに読み込むことができます。 メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDFドキュメントに関する情報を提供します。 メタデータは、次の図に示すように、ドキュメントのドキュメントのプロパティダイアログに配置できます。
 
 ![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
 
-プログラムによってメタデータをPDFドキュメントに読み込むには、メタデータ値を指定する既存のXMLドキュメントを使用するか、`XMPUtilityMetadata`型のオブジェクトを使用します。 (「[AEM FormsAPIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照)。
+プログラムによってPDFドキュメントにメタデータを読み込むには、メタデータ値を指定する既存のXMLドキュメントを使用するか、`XMPUtilityMetadata`型のオブジェクトを使用します。 (『AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』を参照)。[
 
 >[!NOTE]
 >
->この節では、XMLドキュメントを使用してメタデータをPDFドキュメントに読み込む方法について説明します。
+>この節では、XMLドキュメントを使用してPDFドキュメントにメタデータを読み込む方法について説明します。
 
-次のXMLコードには、前の図に対応するメタデータ値が含まれています。 例えば、太字の項目でキーワードを指定しています。
+次のXMLコードには、前の図に対応するメタデータ値が含まれています。 例えば、キーワードを指定する太字の項目に注意してください。
 
 ```xml
  <?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -117,9 +116,9 @@ XMP UtilitiesのJavaおよびWebサービスAPIを使用して、XMPメタデー
 
 >[!NOTE]
 >
->XMP Utilitiesサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>XMP Utilitiesサービスの詳細については、『 AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)向けサービスリファレンス』を参照してください。[
 
-### 手順{#summary-of-steps}の概要
+### 手順の概要{#summary-of-steps}
 
 XMPメタデータをPDFドキュメントに読み込むには、次の手順を実行します。
 
@@ -129,15 +128,15 @@ XMPメタデータをPDFドキュメントに読み込むには、次の手順�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
 
 **XMPUtilityServiceクライアントの作成**
 
-プログラムによってXMP Utilities操作を実行する前に、XMPUtilityServiceクライアントを作成する必要があります。 Java APIを使用すると、`XMPUtilityServiceClient`オブジェクトを作成することで実現できます。 WebサービスAPIでは、`XMPUtilityServiceService`オブジェクトを使用して実行します。
+プログラムによってXMP Utilities操作を実行する前に、XMPUtilityServiceクライアントを作成する必要があります。 Java APIを使用すると、`XMPUtilityServiceClient`オブジェクトを作成することでこれを実現できます。 WebサービスAPIでは、`XMPUtilityServiceService`オブジェクトを使用してこれを実行します。
 
-**XMPメタデータの読み込み操作を呼び出します**
+**「XMP metadata import」操作を呼び出す**
 
-サービスクライアントの作成後、XMPメタデータの読み込み操作の1つを呼び出して、指定したPDFドキュメントにXMPメタデータを読み込むことができます。
+サービスクライアントを作成したら、XMPのメタデータ読み込み操作の1つを呼び出して、指定したPDFドキュメントにXMPのメタデータを読み込むことができます。
 
 **関連トピック**
 
@@ -159,27 +158,27 @@ XMP Utilities API(Java)を使用してXMPメタデータを読み込みます。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラム的に呼び出すことを可能にするクラスが含まれています。
+   >adobe-pdfutility-client.jarファイルには、XMP Utilitiesサービスをプログラムで呼び出すことを可能にするクラスが含まれています。
 
 1. XMPUtilityServiceクライアントの作成
 
    コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`XMPUtilityServiceClient`オブジェクトを作成します。
 
-1. XMPメタデータの読み込み操作を呼び出します
+1. 「XMP metadata import」操作を呼び出す
 
    XMPメタデータを変更するには、`XMPUtilityServiceClient`オブジェクトの`importMetadata`メソッドまたは`importXMP`メソッドを呼び出します。
 
    `importMetadata`メソッドを使用する場合は、次の値を渡します。
 
-   * PDFファイルを表す`com.adobe.idp.Document`オブジェクトです。
+   * PDFファイルを表す`com.adobe.idp.Document`オブジェクト。
    * 読み込むメタデータを含む`XMPUtilityMetadata`オブジェクト。
 
    `importXMP`メソッドを使用する場合は、次の値を渡します。
 
-   * PDFファイルを表す`com.adobe.idp.Document`オブジェクトです。
-   * 読み込むメタデータを含むXMLファイルを表す`com.adobe.idp.Document`オブジェクト。
+   * PDFファイルを表す`com.adobe.idp.Document`オブジェクト。
+   * 読み込むメタデータが含まれるXMLファイルを表す`com.adobe.idp.Document`オブジェクト。
 
-   いずれの場合も、返される値は、新しく読み込まれたメタデータが含まれたPDFファイルを表す`com.adobe.idp.Document`オブジェクトです。 その後、このオブジェクトをディスクに保存できます。
+   どちらの場合も、返される値は、新しく読み込まれたメタデータを含むPDFファイルを表す`com.adobe.idp.Document`オブジェクトです。 このオブジェクトをディスクに保存できます。
 
 **関連トピック**
 
@@ -191,32 +190,32 @@ XMP Utilities API(Java)を使用してXMPメタデータを読み込みます。
 
 ### WebサービスAPI {#importing-xmp-metadata-using-the-web-service-api}を使用したXMPメタデータの読み込み
 
-XMP Utilities WebサービスAPIを使用してXMPメタデータをプログラムで読み込むには、次のタスクを実行します。
+XMP Utilities WebサービスAPIを使用してプログラムでXMPメタデータを読み込むには、次のタスクを実行します。
 
 1. プロジェクトファイルを含める
 
-   * XMP UtilitiesサービスのWSDLファイルを使用するMicrosoft .NETクライアントアセンブリを作成します。 (「[Base64エンコードを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)」を参照)。
-   * Microsoft .NETクライアントアセンブリを参照します。 （「[Base64エンコード](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を使用する.NETクライアントアセンブリの作成」を参照）。
+   * XMP UtilitiesサービスのWSDLファイルを使用するMicrosoft .NETクライアントアセンブリを作成します。 ([Base64エンコーディング](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を使用したAEM Formsの呼び出しを参照)。
+   * Microsoft .NETクライアントアセンブリを参照します。 （[Base64エンコード](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を使用する.NETクライアントアセンブリの作成を参照）。
 
 1. XMPUtilityServiceクライアントの作成
 
-   プロキシクラスのコンストラクターを使用して`XMPUtilityServiceService`オブジェクトを作成します。
+   プロキシクラスのコンストラクターを使用して、`XMPUtilityServiceService`オブジェクトを作成します。
 
-1. XMPメタデータの読み込み操作を呼び出します
+1. 「XMP metadata import」操作を呼び出す
 
    XMPメタデータを変更するには、`XMPUtilityServiceService`オブジェクトの`importMetadata`メソッドまたは`importXMP`メソッドを呼び出します。
 
    `importMetadata`メソッドを使用する場合は、次の値を渡します。
 
-   * PDFファイルを表す`BLOB`オブジェクトです。
+   * PDFファイルを表す`BLOB`オブジェクト。
    * 読み込むメタデータを含む`XMPUtilityMetadata`オブジェクト。
 
    `importXMP`メソッドを使用する場合は、次の値を渡します。
 
-   * PDFファイルを表す`BLOB`オブジェクトです。
-   * 読み込むメタデータを含むXMLファイルを表す`BLOB`オブジェクト。
+   * PDFファイルを表す`BLOB`オブジェクト。
+   * 読み込むメタデータが含まれるXMLファイルを表す`BLOB`オブジェクト。
 
-   いずれの場合も、返される値は、新しく読み込まれたメタデータが含まれたPDFファイルを表す`BLOB`オブジェクトです。 その後、このオブジェクトをディスクに保存できます。
+   どちらの場合も、返される値は、新しく読み込まれたメタデータを含むPDFファイルを表す`BLOB`オブジェクトです。 このオブジェクトをディスクに保存できます。
 
 **関連トピック**
 
@@ -230,31 +229,31 @@ XMP Utilities WebサービスAPIを使用してXMPメタデータをプログラ
 
 ## PDFドキュメントからのメタデータの書き出し{#exporting-metadata-from-pdf-documents}
 
-XMP UtilitiesのJavaおよびWebサービスAPIを使用して、PDFドキュメントからXMPメタデータをプログラム的に取得し、保存できます。
+XMP Utilities JavaおよびWebサービスAPIを使用して、PDFドキュメントからXMPメタデータをプログラムで取得し、保存することができます。
 
 >[!NOTE]
 >
->XMP Utilitiesサービスの詳細については、『[AEM Formsのサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』を参照してください。
+>XMP Utilitiesサービスの詳細については、『 AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)向けサービスリファレンス』を参照してください。[
 
-### 手順{#summary_of_steps-1}の概要
+### 手順の概要{#summary_of_steps-1}
 
 PDFドキュメントからXMPメタデータを書き出すには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
 1. XMPUtilityServiceクライアントを作成します。
-1. XMPメタデータ書き出し操作を呼び出します。
+1. XMPのメタデータ書き出し操作を呼び出します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
 
 **XMPUtilityServiceクライアントの作成**
 
-プログラムによってXMP Utilities操作を実行する前に、XMPUtilityServiceクライアントを作成する必要があります。 Java APでは、`XMPUtilityServiceClient`オブジェクトを作成することで実現します。 WebサービスAPIでは、これは`XMPUtilityServiceService`オブジェクトを使用して実行されます。
+プログラムによってXMP Utilities操作を実行する前に、XMPUtilityServiceクライアントを作成する必要があります。 Java APを使用する場合、`XMPUtilityServiceClient`オブジェクトを作成することで実現します。 WebサービスAPIでは、`XMPUtilityServiceService`オブジェクトを使用してこれを実行します。
 
-**XMPメタデータ書き出し操作の呼び出し**
+**「XMP metadata export」操作を呼び出す**
 
-サービスクライアントを作成したら、XMPメタデータの書き出し操作の1つを呼び出します。この操作は、XMPメタデータを検査したり、ディスクに保存したりするのに使用できます。
+サービスクライアントを作成したら、XMPメタデータの書き出し操作の1つを呼び出します。これは、XMPメタデータを調べたり、ディスクに保存したりするために使用できます。
 
 **関連トピック**
 
@@ -276,17 +275,17 @@ XMP Utilities API(Java)を使用してXMPメタデータを書き出します。
 
    >[!NOTE]
    >
-   >adobe-pdfutility-client.jarファイルには、XMP Utilityサービスをプログラム的に呼び出すことを可能にするクラスが含まれています。
+   >adobe-pdfutility-client.jarファイルには、XMP Utilityサービスをプログラムで呼び出すことを可能にするクラスが含まれています。
 
 1. XMPUtilityServiceクライアントの作成
 
    コンストラクターを使用し、接続プロパティを含む`ServiceClientFactory`オブジェクトを渡して、`XMPUtilityServiceClient`オブジェクトを作成します。
 
-1. XMPメタデータの読み込み操作を呼び出します
+1. 「XMP metadata import」操作を呼び出す
 
-   XMPメタデータを検査するには、`XMPUtilityServiceClient`オブジェクトの`exportMetadata`メソッドを呼び出し、PDFファイルを表す`com.adobe.idp.Document`オブジェクトを渡します。 このメソッドは、取得したメタデータを含む`XMPUtilityMetadata`オブジェクトを返します。
+   XMPメタデータを調べるには、`XMPUtilityServiceClient`オブジェクトの`exportMetadata`メソッドを呼び出して、PDFファイルを表す`com.adobe.idp.Document`オブジェクトを渡します。 メソッドは、取得したメタデータを含む`XMPUtilityMetadata`オブジェクトを返します。
 
-   XMPメタデータを取得して保存するには、`XMPUtilityServiceClient`オブジェクトの`exportXMP`メソッドを呼び出し、PDFファイルを表す`com.adobe.idp.Document`オブジェクトを渡します。 このメソッドは、取得したメタデータを含む`com.adobe.idp.Document`オブジェクトを返します。このオブジェクトは、XMLファイルとしてディスクに保存できます。
+   XMPメタデータを取得して保存するには、`XMPUtilityServiceClient`オブジェクトの`exportXMP`メソッドを呼び出して、PDFファイルを表す`com.adobe.idp.Document`オブジェクトを渡します。 このメソッドは、取得したメタデータを含む`com.adobe.idp.Document`オブジェクトを返します。このオブジェクトは、その後、XMLファイルとしてディスクに保存できます。
 
 **関連トピック**
 
@@ -307,13 +306,13 @@ XMP Utilities API（Webサービス）を使用してXMPメタデータを書き
 
 1. XMPUtilityServiceクライアントの作成
 
-   プロキシクラスのコンストラクターを使用して`XMPUtilityServiceService`オブジェクトを作成します。
+   プロキシクラスのコンストラクターを使用して、`XMPUtilityServiceService`オブジェクトを作成します。
 
-1. XMPメタデータの読み込み操作を呼び出します
+1. 「XMP metadata import」操作を呼び出す
 
-   XMPメタデータを検査するには、`XMPUtilityServiceClient`オブジェクトの`exportMetadata`メソッドを呼び出し、PDFファイルを表す`BLOB`オブジェクトを渡します。 このメソッドは、取得したメタデータを含む`XMPUtilityMetadata`オブジェクトを返します。
+   XMPメタデータを調べるには、`XMPUtilityServiceClient`オブジェクトの`exportMetadata`メソッドを呼び出して、PDFファイルを表す`BLOB`オブジェクトを渡します。 メソッドは、取得したメタデータを含む`XMPUtilityMetadata`オブジェクトを返します。
 
-   XMPメタデータを取得して保存するには、`XMPUtilityServiceClient`オブジェクトの`exportXMP`メソッドを呼び出し、PDFファイルを表す`BLOB`オブジェクトを渡します。 このメソッドは、取得したメタデータを含む`BLOB`オブジェクトを返します。このオブジェクトは、XMLファイルとしてディスクに保存できます。
+   XMPメタデータを取得して保存するには、`XMPUtilityServiceClient`オブジェクトの`exportXMP`メソッドを呼び出して、PDFファイルを表す`BLOB`オブジェクトを渡します。 このメソッドは、取得したメタデータを含む`BLOB`オブジェクトを返します。このオブジェクトは、その後、XMLファイルとしてディスクに保存できます。
 
 **関連トピック**
 
