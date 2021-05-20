@@ -10,14 +10,13 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 1cc8ce66-2c03-44e4-9ddd-8d6944d85c99
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1ecb41e5-c959-4380-a5c7-df9fc3a7703a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '248'
 ht-degree: 76%
 
 ---
-
 
 # ユーザー生成コンテンツのタグ付け {#tagging-user-generated-content}
 
@@ -25,13 +24,13 @@ ht-degree: 76%
 
 ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です。
 
-通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグが公開環境のコミュニティメンバーによって適用されるという点で異なります。
+通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグがパブリッシュ環境のコミュニティメンバーによって適用される点で一意です。
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
 ## Communities の機能  {#communities-features}
 
-The AEM Communities features which can be configured to allow tagging are:
+AEM Communitiesの機能でタグ付けを許可するように設定できるものは次のとおりです。
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -39,9 +38,9 @@ The AEM Communities features which can be configured to allow tagging are:
 * [フォーラム](forum.md#configuretheaddedforum)
 * [Q＆A](working-with-qna.md)
 
-## タグの管理  {#administering-tags}
+## タグの管理 {#administering-tags}
 
-See [Administering Tags](../../help/sites-administering/tags.md#tagging-console) for creating and managing tag namespaces and taxonomies.
+タグ名前空間と分類の作成と管理については、[タグの管理](../../help/sites-administering/tags.md#tagging-console)を参照してください。
 
 開発者向けの情報については、[タグの重要事項](tag.md)を参照してください。
 
@@ -55,7 +54,6 @@ See [Administering Tags](../../help/sites-administering/tags.md#tagging-console)
 
 [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)を参照してください。
 
-管理者がグループ`Community Engage Members`の`/etc/tag/discussions`に読み取り権限を適用した場合、CRXDEでは次のように表示されます。
+管理者が`/etc/tag/discussions`グループ`Community Engage Members`に対して読み取り権限を適用すると、CRXDEでは次のように表示されます。
 
 ![tag-permissions](assets/tag-permissions.png)
-
