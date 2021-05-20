@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b31f9f56-dd33-4478-ad34-01ac7d5a1b40
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '398'
 ht-degree: 94%
 
 ---
 
-
-# フォームと関連リソースの削除 {#deleting-forms-and-related-resources}
+# フォームと関連リソースの削除  {#deleting-forms-and-related-resources}
 
 フォームとアセットを削除して、これらのアセットをリポジトリから削除できます。削除操作は、すべてのアセットタイプとフォルダーに対して動作します。
 
@@ -26,8 +25,8 @@ ht-degree: 94%
 
 ## フォームの削除方法  {#how-to-delete-a-form}
 
-1. `https://[hostname]:'port'/aem/forms.html.`にアクセスして、AEM Formsのユーザーインターフェイスにログインします
-1. 削除するフォームを探して選択します。ツールバーの「![aem6forms_delete2](assets/aem6forms_delete2.png)を削除」をクリックし、削除操作を確認します。
+1. `https://[hostname]:'port'/aem/forms.html.`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
+1. 削除するフォームを探して選択します。ツールバーの「 ![aem6forms_delete2](assets/aem6forms_delete2.png)を削除」をクリックして、削除操作を確定します。
 
    >[!NOTE]
    >
