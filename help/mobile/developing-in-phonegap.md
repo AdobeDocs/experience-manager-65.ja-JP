@@ -8,20 +8,19 @@ contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: bc61e495-b53b-49c5-99e5-c2e35873e6bd
-translation-type: tm+mt
-source-git-commit: 7eb3529de1c99d09eaa78c7589320a85e729400b
+exl-id: 9a97e11b-a683-490a-ab7b-158de32984ef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 82%
 
 ---
 
-
 # PhoneGap{#phonegap}
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
 
 AEM を PhoneGap と連携し、AEM ページを使用してアプリを簡単に作成できます。PhoneGap と連携することで、そのコンテンツを利用するユーティリティアプリを作成できます。コンテンツ同期を使用すると、アプリにバンドルするページのバージョン管理されたアーカイブを作成できます。
 
@@ -37,13 +36,13 @@ Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリ�
 
 * [AEM Mobile コンテンツサービス：概要](/help/mobile/develop-content-as-a-service.md)
 
-   * Content Servicesとデータモデルを有効にするには、「[Content Servicesの管理](/help/mobile/developing-content-services.md)」を参照してください。
+   * コンテンツサービスとデータモデルを有効にするには、「[コンテンツサービスの管理](/help/mobile/developing-content-services.md)」を参照してください。
    * モデルの作成について詳しくは、[モデルの開発](/help/mobile/administer-mobile-apps.md)を参照してください。
-   * レンダリングと配信について詳しくは、[Content Servicesのレンダリングと配信](/help/mobile/rendering-and-delivery.md)を参照してください
+   * レンダリングと配信について詳しくは、[コンテンツサービスのレンダリングと配信](/help/mobile/rendering-and-delivery.md)を参照してください。
 
 >[!NOTE]
 >
->AEMモバイルアプリケーションを任意のiOSまたはAndroidモバイルデバイスで実行するには、[AEM Verify Appを使用したMobile Quickstart](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
+>任意のiOSまたはAndroidモバイルデバイスでAEMモバイルアプリケーションを実行するには、[AEM Verifyアプリを使用したモバイルクイックスタート](/help/mobile/phonegap-mobile-quickstart.md)を参照してください。
 
 ## さらに先のステップ {#getting-ahead}
 
@@ -51,4 +50,3 @@ Adobe PhoneGap と連携して AEM Mobile を使用するには、以下のリ�
 
 * [AEM での Adobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)
 * [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
-
