@@ -6,11 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-translation-type: tm+mt
 source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 59%
+source-wordcount: '588'
+ht-degree: 58%
 
 ---
 
@@ -18,24 +17,24 @@ ht-degree: 59%
 # Assets ガイド {#assets}
 
 + [[!DNL Assets] ユーザーガイド](home.md)
-+ [[!DNL Experience Manager] 6.5アセットリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
++ [[!DNL Experience Manager] 6.5 Assetsリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
 + [DAMについて](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
-+ [ [!DNL Assets]](accessibility.md) でのアクセシビリティ
-+ Experience Managerアセットを使用{#using}
-   + [[!DNL Assets] ホームページ体験](assets-home-page.md)
++ [ [!DNL Assets] でのアクセシビリティ](accessibility.md)
++ Experience Managerアセットの使用{#using}
+   + [[!DNL Assets] ホームページエクスペリエンス](assets-home-page.md)
    + [デジタルアセットの検索](search-assets.md)
    + [アセットメタデータの操作](metadata.md)
    + [多言語のアセット](multilingual-assets.md)
-   + [アセット [!DNL Adobe Stock] の使用](aem-assets-adobe-stock.md)
+   + [アセットでの [!DNL Adobe Stock] アセットの使用](aem-assets-adobe-stock.md)
    + [3D アセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [拡張スマートタグ](enhanced-smart-tags.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットの処理](assets-workflow.md)
-   + [追加画像マップ](image-maps.md)
+   + [画像マップの追加](image-maps.md)
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
-   + [アセットの接続先 [!DNL Sites]](use-assets-across-connected-assets-instances.md)
+   + [ [!DNL Sites]を使用したConnected Assets](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
    + [Experience League 提供の Dynamic Media ニュースレター](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
@@ -43,15 +42,15 @@ ht-degree: 59%
    + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
-   + [Dynamic Media でのアクセシビリティ](accessibility-dm.md)
-   + [Dynamic Media — ハイブリッドモードからDynamic Media- S7モードへの移行](migrate-from-hybrid-to-dms7.md)
+   + [Dynamic Media のアクセシビリティ ](accessibility-dm.md)
+   + [Dynamic Media — ハイブリッドモードからDynamic Media - S7モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
    + [Dynamic Media ビューアプリセットの管理](managing-viewer-presets.md)
    + [Dynamic Media ビューアプリセットの適用](viewer-presets.md)
    + [Dynamic Media 画像プリセットの管理](managing-image-presets.md)
    + [Dynamic Media 画像プリセットの適用](image-presets.md)
-   + [Dynamic Media のビデオプロファイル](video-profiles.md)
+   + [Dynamic Media ビデオプロファイル](video-profiles.md)
    + [Dynamic Media イメージプロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
@@ -81,56 +80,56 @@ ht-degree: 59%
    + [Dynamic Media での選択的公開の操作](selective-publishing.md)
    + [Dynamic Media を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dynamic-media.md)
    + [Dynamic Media Classic を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
-   + [一括アセット移行のための機能パック18912のインストール](bulk-ingest-migrate.md)
+   + [一括アセット移行用の機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
-+ アセットの拡張{#extending}
++ アセットを拡張{#extending}
    + [カスタマイズと拡張 [!DNL Assets]](extending-assets.md)
    + [メディアハンドラーとワークフローを使用したアセットの処理](media-handlers.md)
    + [検索機能の拡張](searchx.md)
-   + [をインストールし、 [!DNL ImageMagick] 設定して、 [!DNL Assets]](best-practices-for-imagemagick.md)
+   + [ [!DNL ImageMagick] をインストールし、 [!DNL Assets]と連携するように設定します。](best-practices-for-imagemagick.md)
    + [アセットとアクティビティストリームの統合](extending-activity-stream.md)
-   + [アセットエディタの拡張](asseteditorx.md)
+   + [アセットエディターの拡張](asseteditorx.md)
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
-   + [ [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
+   + [ [!DNL Assets] HTTP APIでのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
    + [[!DNL Assets] 代理開発](proxy.md)
 + アセットの管理{#administer}
    + [サポートされているファイル形式](assets-formats.md)
    + [検索ファセット](search-facets.md)
-   + [メタデータの概念について](metadata-concepts.md)
+   + [メタデータの概念の理解](metadata-concepts.md)
    + [メタデータ機能の設定](metadata-config.md)
    + [メタデータスキーマ](metadata-schemas.md)
    + [レンディションへの XMP の書き戻し](xmp-writeback.md)
    + [アセットのリンク共有](link-sharing.md)
    + [アセットレポート](asset-reports.md)
-   + [タグ付けのためのSmart Content Serviceの設定](config-smart-tagging.md)
-   + [メタデータ、画像およびビデオの処理プロファイル](processing-profiles.md)
-   + [アセットエディタページの作成と設定](assets-finder-editor.md)
-   + [アセットサイズ変更ガイド](assets-sizing-guide.md)
+   + [タグ付け用のスマートコンテンツサービスの設定](config-smart-tagging.md)
+   + [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md)
+   + [アセットエディターページの作成と設定](assets-finder-editor.md)
+   + [Assetsサイジングガイド](assets-sizing-guide.md)
    + [アセットの翻訳のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
-   + [[!DNL Assets] 性能調整ガイド](performance-tuning-guidelines.md)
+   + [[!DNL Assets] 性能チューニングガイド](performance-tuning-guidelines.md)
    + [[!DNL Assets] 移行ガイド](assets-migration-guide.md)
    + [[!DNL Assets] ネットワークの考慮事項](assets-network-considerations.md)
    + [[!DNL Assets] とMediaLibrary](medialibrary.md)
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
    + [[!DNL Experience Manager] and [!DNL Creative Cloud] 統合](aem-cc-integration-best-practices.md)
-   + [ [!DNL InDesign Server]](indesign.md) との統合
-   + [資産のDigital Rights Management](drm.md)
-   + [アセットのインサイトにデモパッケージを使用する](use-demo-package-for-asset-insights.md)
+   + [ [!DNL InDesign Server] との統合](indesign.md)
+   + [Digital Rights Management](drm.md)
+   + [アセットインサイトにデモパッケージを使用する](use-demo-package-for-asset-insights.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [アセットを監視するためのベストプラクティス](assets-monitoring-best-practices.md)
    + [Camera Raw サポート](camera-raw.md)
-   + [Apache Tikaを使用してアセットのMIMEタイプを検出する](detect-asset-mime-type-with-tika.md)
-   + [トランスコーディングライブラリのイメージング](imaging-transcoding-library.md)
-   + [コレクション、スニペット、スニペットテンプレートのマルチテナンシー](multi-tenancy.md)
+   + [Apache Tikaを使用したアセットのMIMEタイプの検出](detect-asset-mime-type-with-tika.md)
+   + [画像トランスコーディングライブラリ](imaging-transcoding-library.md)
+   + [コレクション、スニペット、スニペットテンプレートのマルチテナント機能](multi-tenancy.md)
    + [アセットの透かしの設定](watermarking.md)
    + [アセットテンプレート](asset-templates.md)
-   + [フォルダーを共有する際のベストプラクティス [!DNL Creative Cloud]](aem-cc-folder-sharing-best-practices.md)
+   + [ [!DNL Creative Cloud]とフォルダーを共有するためのベストプラクティス](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
-   + [ [!DNL Brand Portal]](configure-aem-assets-with-brand-portal.md) での [!DNL Assets] の設定
-   + [ [!DNL Brand Portal]](brand-portal-publish-assets.md) へのアセットの公開
-   + [フォルダの発行先 [!DNL Brand Portal]](brand-portal-publish-folder.md)
-   + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
+   + [ [!DNL Assets]  での [!DNL Brand Portal]の設定](configure-aem-assets-with-brand-portal.md)
+   + [ [!DNL Brand Portal] へのアセットの公開](brand-portal-publish-assets.md)
+   + [ [!DNL Brand Portal]へのフォルダーの公開](brand-portal-publish-folder.md)
+   + [ [!DNL Brand Portal]にコレクションを公開する](brand-portal-publish-collection.md)
 + コンテンツフラグメント {#fragments}
    + [コンテンツフラグメントの操作](content-fragments/content-fragments.md)
    + [コンテンツフラグメントの管理](content-fragments/content-fragments-managing.md)
@@ -140,7 +139,7 @@ ht-degree: 59%
    + [メタデータ - フラグメントのプロパティ](content-fragments/content-fragments-metadata.md)
    + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments/content-fragments-delete.md)
    + [コンテンツフラグメント - Markdown](content-fragments/content-fragments-markdown.md)
-   + [コンテンツフラグメント用の翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
+   + [コンテンツフラグメントの翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
 + アセットの管理{#managing}
    + [デジタルアセットの管理](manage-assets.md)
    + [コレクションの管理](manage-collections.md)
@@ -149,11 +148,11 @@ ht-degree: 59%
    + [ビデオアセットの管理](managing-video-assets.md)
    + [翻訳プロジェクトの作成](translation-projects.md)
    + [翻訳するアセットの準備](preparing-assets-for-translation.md)
-   + [Experience Managerからのアセットのダウンロード](download-assets-from-aem.md)
+   + [アセットのExperience Manager](download-assets-from-aem.md)
    + [Lightbox](light-box.md)
-   + [アセットのインサイト](asset-insights.md)
-   + [DTMを通じたアセットインサイトの有効化](use-dtm-for-asset-insights.md)
-   + [アセットのインサイトの設定](configure-asset-insights.md)
+   + [アセットインサイト](asset-insights.md)
+   + [DTMを使用したアセットインサイトの有効化](use-dtm-for-asset-insights.md)
+   + [アセットインサイトの設定](configure-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
    + [Webページでのページトラッカーと埋め込みコードの使用](use-page-tracker.md)
