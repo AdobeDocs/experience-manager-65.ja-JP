@@ -10,14 +10,13 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 71fac7e9-814a-48b5-b816-9bdcb2a05190
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 67de7e26-3f93-4034-9e3a-5c127f7447bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 63%
+source-wordcount: '208'
+ht-degree: 62%
 
 ---
-
 
 # ストレージ設定 {#storage-configuration}
 
@@ -30,13 +29,13 @@ ht-degree: 63%
 * [コミュニティコンテンツストア](working-with-srp.md)
 * [推奨されるトポロジ](topologies.md)
 
-## ストレージ設定コンソール  {#storage-configuration-console}
+## ストレージ設定コンソール {#storage-configuration-console}
 
 ![jsrp-configuration](assets/jsrp-configuration.png)
 
-作成者環境で、ストレージ設定コンソールに移動します。
+オーサー環境で、ストレージ設定コンソールに移動します。
 
-* グローバルナビゲーションから、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL ストレージ設定]**&#x200B;を選択します。
+* グローバルナビゲーションから、**[!UICONTROL ツール]** / **[!UICONTROL コミュニティ]** / **[!UICONTROL ストレージ設定]**&#x200B;を選択します。
 
 デフォルトの JCR 以外のストレージオプションを選択するには、
 
@@ -53,7 +52,7 @@ ht-degree: 63%
 
 選択しなかった場合は、AEM リポジトリである JCR がデフォルトで使用されることに注意してください。
 
-JCRは、作成者と発行環境が共有する共通のストアではありません。*a1/>*&#x200B;コミュニティコンテンツは、そのコンテンツが作成された作成者または発行環境からのみ表示されます。
+JCRは、オーサー環境とパブリッシュ環境で共有される共通ストアでは&#x200B;*ありません*。 コミュニティコンテンツは、作成先のオーサー環境またはパブリッシュ環境からのみ表示されます。
 
 詳しくは、[JCR ストア](jsrp.md)を参照してください。
 
