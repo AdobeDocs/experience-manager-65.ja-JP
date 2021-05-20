@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 4ade0d6b-041e-4a2f-98f8-3b8fcae0fb29
-translation-type: tm+mt
-source-git-commit: 1429a099288f038510cb0a194fb55632297ef371
+exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 90%
 
 ---
 
-
 # SocialUtils のリファクタリング {#socialutils-refactoring}
 
 ## SocialUtils パッケージの廃止 {#socialutils-package-deprecated}
 
-パッケージ`com.adobe.cq.social.ugcbase.SocialUtils`はAEM 6.1で非推奨となりました。
+パッケージ`com.adobe.cq.social.ugcbase.SocialUtils`はAEM 6.1で非推奨（廃止予定）となりました。
 
 次の表に、`SocialUtils`メソッドの代わりに使用するメソッドを示します。
 
@@ -46,7 +45,7 @@ ht-degree: 90%
 
 | `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilitiesのメソッド |
 |---|
-| SocialResourceProvider getSocialResourceProvider(Resource resource) | replacesSocialResourceProvider getConfiguredProvider(Resource resource) |
+| SocialResourceProvider getSocialResourceProvider(Resource resource) | SocialResourceProvider getConfiguredProvider(Resource resource)を置き換えます。 |
 
 ## SCFUtilities パッケージ {#scfutilities-package}
 
@@ -89,4 +88,3 @@ ht-degree: 90%
 | TranslationManager getTranslationManager() |
 | TranslationSaveQueue getTranslationSaveQueue() |
 | boolean mayAccessUGC(ResourceResolver resolver) |
-
