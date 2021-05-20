@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a9e4f2f0-d1ff-40c0-abcf-645e40586a84
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7ad3592b-f8b5-45c0-97bc-15f781d7b811
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 66%
 
 ---
-
 
 # アイディエーションの基本事項  {#ideation-essentials}
 
@@ -32,7 +31,7 @@ ht-degree: 66%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -48,13 +47,13 @@ ht-degree: 66%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="ideation-feature.md">イデエーション機能</a>を参照</td>
+   <td><a href="ideation-feature.md">アイディエーション機能</a>を参照</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-### アイディエーション機能  {#ideation-function}
+### アイディエーション機能 {#ideation-function}
 
-[イデエーション関数](functions.md#ideation-function)を含むコミュニティサイト構造は、構成された`ideation`コンポーネントを含みます。
+[アイディエーション機能](functions.md#ideation-function)を含むコミュニティサイト構造には、設定済みの`ideation`コンポーネントが含まれます。
