@@ -1,8 +1,8 @@
 ---
 title: Brand Portal へのアセットの公開
 seo-title: Brand Portal へのアセットの公開
-description: Brand Portalにアセットを公開および非公開する方法を説明します。
-seo-description: Brand Portalにアセットを公開および非公開する方法を説明します。
+description: Brand Portalへのアセットの公開と非公開の方法について説明します。
+seo-description: Brand Portalへのアセットの公開と非公開の方法について説明します。
 uuid: 350beb85-c0fb-4a1c-8597-c03592c02d3d
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,14 +12,13 @@ discoiquuid: 39b8cf9b-afec-4c9a-8a5d-7fc87e643f26
 docset: aem65
 feature: Brand Portal
 role: Business Practitioner
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 61%
+source-wordcount: '373'
+ht-degree: 62%
 
 ---
-
 
 # Brand Portal へのアセットの公開 {#publish-assets-to-brand-portal}
 
@@ -31,27 +30,27 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 >
 >AEM オーサーが過剰なリソースを占有しないように、できればピーク時を避け、時間をずらして公開することをお勧めします。
 
-1. アセットコンソールから、公開するアセットまたはフォルダーを選択し、ツールバーの「**[!UICONTROL クイック公開]**」オプションをクリックします。
+1. アセットコンソールで、公開するアセットまたはフォルダーを選択し、ツールバーの「**[!UICONTROL クイック公開]**」オプションをクリックします。
 
    または、Brand Portal に公開するアセットを選択します。
 
    ![publish2bp-2](assets/publish2bp.png)
 
 1. アセットをBrand Portalに公開するには、次の2つのオプションを使用できます。
-   * [アセットを直ちに公開](#publish-to-bp-now)
+   * [アセットを直ちに公開する](#publish-to-bp-now)
    * [アセットを後で公開](#publish-to-bp-now)
 
 ## アセットを今すぐ公開 {#publish-to-bp-now}
 
 選択したアセットを Brand Portal に公開するには、次のいずれかを実行します。
 
-* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューから「**[!UICONTROL ブランドポータルに公開]**」を選択します。
+* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューから「**[!UICONTROL Brand Portalに公開]**」を選択します。
 
 * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 
-   1. 次に、**[!UICONTROL アクション]**&#x200B;で「**[!UICONTROL ブランドポータルに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;で「**[!UICONTROL 今すぐ]**」を選択します。 「**[!UICONTROL Next]**」をクリックします。
+   1. 次に、「**[!UICONTROL アクション]**」から「**[!UICONTROL Brand Portalに公開]**」を選択し、「**[!UICONTROL スケジュール]**」から「**[!UICONTROL 今すぐ]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
 
-   2. **[!UICONTROL スコープ]**&#x200B;内で、選択を確認し、「**[!UICONTROL ブランドポータルに発行]**」をクリックします。
+   2. **[!UICONTROL 範囲]**&#x200B;内で、選択内容を確認し、「**[!UICONTROL Brand Portalに公開]**」をクリックします。
 
 アセットが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたアセットを確認します。
 
@@ -59,9 +58,9 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 アセットを Brand Portal に公開するスケジュールを後の日時に設定するには、次の手順を実行します。
 
-1. 発行するアセット/フォルダを選択したら、上部のツールバーから「**[!UICONTROL パブリケーションを管理]**」を選択します。
+1. 公開するアセット/フォルダーを選択したら、上部のツールバーから「**[!UICONTROL 公開を管理]**」を選択します。
 
-1. **[!UICONTROL パブリケーションの管理]**&#x200B;ページで、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL ブランドポータルに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]**」を選択します。
+1. **[!UICONTROL 公開を管理]**&#x200B;ページで、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portalに公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 後で]**」を選択します。
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
@@ -73,7 +72,6 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
    ![publishworkflow](assets/publishworkflow.png)
 
-次に、Brand Portalにログインして、公開されたアセットがBrand Portalインターフェイスで使用できるかどうかを確認します。
+次に、Brand Portalにログインして、公開済みのアセットがBrand Portalインターフェイスで使用可能かどうかを確認します。
 
 ![bp_landing_page](assets/bp_landing_page.png)
-
