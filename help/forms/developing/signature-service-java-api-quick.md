@@ -1,8 +1,8 @@
 ---
 title: SignatureサービスJava API QuickStart(SOAP)
 seo-title: SignatureサービスJava API QuickStart(SOAP)
-description: Signatureサービスを使用して、PDFドキュメントへの署名フィールドの追加、署名フィールド名の取得、署名フィールドの変更、PDFドキュメントの電子署名、XFAベースのフォームの電子署名、PDFドキュメントの認証、電子署名の検証、複数の電子署名の検証および電子署名の削除を行います。
-seo-description: Signatureサービスを使用して、PDFドキュメントへの署名フィールドの追加、署名フィールド名の取得、署名フィールドの変更、PDFドキュメントの電子署名、XFAベースのフォームの電子署名、PDFドキュメントの認証、電子署名の検証、複数の電子署名の検証および電子署名の削除を行います。
+description: Signatureサービスを使用して、PDFドキュメントへの署名フィールドの追加、署名フィールド名の取得、署名フィールドの変更、PDFドキュメントの電子署名、XFAベースのフォームの電子署名、PDFドキュメントの認証、電子署名の検証、複数の電子署名の検証、電子署名の削除を行います。
+seo-description: Signatureサービスを使用して、PDFドキュメントへの署名フィールドの追加、署名フィールド名の取得、署名フィールドの変更、PDFドキュメントの電子署名、XFAベースのフォームの電子署名、PDFドキュメントの認証、電子署名の検証、複数の電子署名の検証、電子署名の削除を行います。
 uuid: ae6adf23-b119-45f6-bd57-73d8d9ca8ecb
 contentOwner: admin
 content-type: reference
@@ -10,46 +10,45 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 34069505-a6cf-4540-932b-604f81823178
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
 
+# Signature Service Java APIクイックスタート(SOAP) {#signature-service-java-api-quickstart-soap}
 
-# SignatureサービスJava APIクイック開始(SOAP) {#signature-service-java-api-quickstart-soap}
+SignatureサービスでJava API Quick Start(SOAP)を使用できます。
 
-Signatureサービスでは、Java API Quick開始(SOAP)を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへの署名フィールドの追加](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへの署名フィールドの追加](signature-service-java-api-quick.md#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した署名フィールド名の取得](signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した署名フィールド名の取得](signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した署名フィールドの変更](signature-service-java-api-quick.md#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した署名フィールドの変更](signature-service-java-api-quick.md#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントのデジタル署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントへのデジタル署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したXFAベースフォームのデジタル署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したXFAベースのフォームのデジタル署名](signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントの認証](signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したPDFドキュメントの認証](signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したデジタル署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用した電子署名の削除](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用した電子署名の削除](signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsとのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM Formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerとMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}を使用したPDFドキュメントへの署名フィールドの追加
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}を使用したPDFドキュメントへの署名フィールドの追加
 
-次のJavaコードの例では、*SignatureField1*&#x200B;という名前の署名フィールドを、*Loan.pdf*&#x200B;という名前のPDFファイルに基づくPDFドキュメントに追加します。 新しい署名フィールドを含むPDFドキュメントは、*LoanSig.pdf*&#x200B;というPDFファイルとして保存されます。 （「[署名フィールドの追加](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields)」を参照）。
+次のJavaコードの例では、*SignatureField1*&#x200B;という名前の署名フィールドを、*Loan.pdf*&#x200B;という名前のPDFファイルに基づくPDFドキュメントに追加します。 新しい署名フィールドを含むPDFドキュメントは、*LoanSig.pdf*&#x200B;という名前のPDFファイルとして保存されます。 （[署名フィールドの追加](/help/forms/developing/digitally-signing-certifying-documents.md#adding-signature-fields)を参照）。
 
 ```java
  /*
@@ -163,9 +162,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}を使用した署名フィールド名の取得
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api}を使用した署名フィールド名の取得
 
-以下のJavaコードの例を使用すると、*LoanSig.pdf*&#x200B;というPDFドキュメント内の署名フィールドの名前を取得できます。 （[署名フィールド名の取得](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照）。
+次のJavaコードの例を使用すると、*LoanSig.pdf*&#x200B;という名前のPDFドキュメント内にある署名フィールドの名前を取得できます。 （[Retrieving Signature Field Names](/help/forms/developing/digitally-signing-certifying-documents.md#retrieving-signature-field-names)を参照）。
 
 ```java
  /*
@@ -269,9 +268,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}を使用した署名フィールドの変更
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}を使用した署名フィールドの変更
 
-次のJavaコードの例では、署名フィールドに署名が適用されたときにフォーム内のすべてのフィールドをロックし、変更が許可されていないことを確認して、SignatureField1という名前の署名フィールドを変更しています。 Signatureサービスが、変更された署名フィールドを含むPDFドキュメントを返した後、PDFドキュメントはLoanSig.pdfというPDFファイルとして保存されます。 （この例は、Signatureサービスに渡されたPDFファイルを上書きします）。 （「[署名フィールドの変更](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)」を参照）。
+次のJavaコードの例では、署名フィールドに署名が適用されたときにフォーム内のすべてのフィールドをロックし、変更が許可されないようにして、 SignatureField1という名前の署名フィールドを変更します。 Signatureサービスが変更された署名フィールドを含むPDFドキュメントを返すと、そのPDFドキュメントはLoanSig.pdfという名前のPDFファイルとして保存されます。 （この例は、Signatureサービスに渡されたPDFファイルを上書きします）。 （[署名フィールドの変更](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)を参照）。
 
 ```java
  /*
@@ -397,9 +396,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}を使用したPDFドキュメントへのデジタル署名
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api}を使用したPDFドキュメントのデジタル署名
 
-次のJavaコードの例は、*LoanSig.pdf*&#x200B;というPDFファイルに基づいてPDFドキュメントに電子署名を行います。 セキュリティ証明書に指定されたエイリアスはセキュリティで保護されており、失効確認が実行されます。 CRLまたはOCSPサーバー情報が指定されていないので、サーバー情報は、PDFドキュメントのデジタル署名に使用される証明書から取得されます。 署名済みのドキュメントは、*LoanSigned.pdf*&#x200B;というPDFファイルとして保存されます。 (「[PDFドキュメントのデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)」を参照)。
+次のJavaコードの例では、*LoanSig.pdf*&#x200B;というPDFファイルに基づくPDFドキュメントにデジタル署名を行います。 セキュリティ秘密鍵証明書に対して指定されたエイリアスがセキュリティで保護され、失効確認が実行されます。 CRLまたはOCSPサーバー情報が指定されていないので、PDFドキュメントのデジタル署名に使用される証明書からサーバー情報が取得されます。 署名済みのドキュメントは、*LoanSigned.pdf*&#x200B;という名前のPDFファイルとして保存されます。 （[PDFドキュメントのデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照）。
 
 ```java
  /*
@@ -546,9 +545,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}を使用したXFAベースのフォームのデジタル署名
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api}を使用したXFAベースフォームのデジタル署名
 
-以下のJavaコードの例を使用することで、Formsサービスによってレンダリングされるインタラクティブフォームに署名することができます。 Formsサービスから返される`com.adobe.idp.Document`インスタンスがSignatureサービスに渡されます。 署名済みのインタラクティブフォームは、*LoanXFASigned.pdf*&#x200B;というPDFファイルとして保存されます。
+次のJavaコードの例は、Formsサービスによってレンダリングされるインタラクティブフォームに署名します。 Formsサービスから返された`com.adobe.idp.Document`インスタンスがSignatureサービスに渡されます。 署名済みのインタラクティブフォームは、*LoanXFASigned.pdf*&#x200B;という名前のPDFファイルとして保存されます。
 
 ```java
  /*
@@ -758,9 +757,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}を使用したPDFドキュメントの認証
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api}を使用したPDFドキュメントの認証
 
-次のJavaコードの例は、*LoanSig.pdf*&#x200B;というPDFファイルに基づいてPDFドキュメントを認証します。 セキュリティ証明書に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。 認証済みのドキュメントは、*LoanCertified.pdf*&#x200B;というPDFファイルとして保存されます。 ([PDFドキュメントの認証](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照)。
+次のJavaコードの例では、 *LoanSig.pdf*&#x200B;というPDFファイルに基づいてPDFドキュメントを認証しています。 セキュリティ証明書に指定されたエイリアスはセキュリティで保護されており、失効確認は実行されません。 認証済みのドキュメントは、*LoanCertified.pdf*&#x200B;という名前のPDFファイルとして保存されます。 （[PDFドキュメントの認証](/help/forms/developing/digitally-signing-certifying-documents.md#certifying-pdf-documents)を参照）。
 
 ```java
  /*
@@ -907,9 +906,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java APIを使用したデジタル署名の検証{#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}を使用したデジタル署名の検証
 
-以下のJavaコードの例を使用すると、LoanSigned.pdfというPDFファイルに基づいて、署名済みPDFドキュメント内の電子署名を検証できます。 検証時刻は現在時刻に設定され、失効確認オプションはベストエフォートに設定されます。 （[電子署名の検証](#verifying-digital-signatures)を参照）。
+次のJavaコードの例では、LoanSigned.pdfというPDFファイルに基づいた、署名済みPDFドキュメント内の電子署名を検証します。 検証時間は現在時刻に設定され、失効確認オプションはベストエフォートに設定されます。 （「[デジタル署名の確認](#verifying-digital-signatures)」を参照）。
 
 ```java
  /*
@@ -1071,9 +1070,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}を使用した複数の電子署名の検証
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}を使用した複数の電子署名の検証
 
-次のJavaコードの例では、LoanAllSigs.pdfというPDFファイルに基づいて、署名済みPDFドキュメント内にある複数の電子署名を検証します。 検証時刻は現在時刻に設定され、失効確認オプションはベストエフォートに設定されます。 （[複数のデジタル署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照）。
+次のJavaコードの例では、LoanAllSigs.pdfという名前のPDFファイルに基づいた、署名済みPDFドキュメント内にある複数の電子署名を検証します。 検証時間は現在時刻に設定され、失効確認オプションはベストエフォートに設定されます。 （[複数のデジタル署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照）。
 
 ```java
  /*
@@ -1233,9 +1232,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}を使用したデジタル署名の削除
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api}を使用した電子署名の削除
 
-次のJavaコードの例を使用すると、*SignatureField1*&#x200B;という名前の署名フィールドから電子署名を削除できます。 署名フィールドを含むPDFファイルの名前は&#x200B;*LoanSigned.pdf*&#x200B;です。 （「[電子署名の削除](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures)」を参照）。
+次のJavaコードの例では、*SignatureField1*&#x200B;という名前の署名フィールドから電子署名を削除します。 署名フィールドを含むPDFファイルの名前は&#x200B;*LoanSigned.pdf*&#x200B;です。 （[Digital Signatures](/help/forms/developing/digitally-signing-certifying-documents.md#removing-digital-signatures)の削除を参照）。
 
 ```java
  /*
@@ -1339,4 +1338,3 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
  
 ```
-
