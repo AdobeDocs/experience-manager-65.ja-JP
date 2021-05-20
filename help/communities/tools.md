@@ -11,32 +11,30 @@ content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: ba6c4ad3-c393-42d8-9f1f-d59947c3e7ab
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 17%
+source-wordcount: '112'
+ht-degree: 16%
 
 ---
 
-
 # コミュニティツール {#communities-tools}
 
-Communitiesツールコンソールにアクセスするには、作成者インスタンスをログインします。
+コミュニティツールコンソールにアクセスするには、オーサーインスタンスにログインします。
 
 * グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**。
 
    ![コミュニティ](assets/communities-home.png)
 
-* [サイトテンプレート](sites.md)  — コンソール。サイトテンプレートの作成と管理を行います。
+* [サイトテンプレート](sites.md)  — サイトテンプレートの作成と管理のためのコンソール。
 
-* [グループテンプレート](tools-groups.md)  — コンソール：グループテンプレートの作成と管理を行います。
+* [グループテンプレート](tools-groups.md)  — コンソール（グループテンプレートの作成と管理）。
 
-* [コミュニティ機能](functions.md)  — コミュニティ機能の作成と管理を行うコンソール。
+* [コミュニティ機能](functions.md)  — コミュニティ機能の作成と管理のためのコンソール。
 
-* [ストレージの設定](srp-config.md)  — コンソールを使用して、 [デフォルトのSRPの設定と選択を行います](working-with-srp.md)。
+* [ストレージ設定](srp-config.md)  — コンソールを使用して、デフォルトのSRPを設 [定および選択します](working-with-srp.md)。
 
-* [コンポーネントガイド](components-guide.md) - SCFコンポーネントの動作や設定方法、カスタマイズ方法を実験できるインタラクティブサイトを開きます。
+* [コンポーネントガイド](components-guide.md)  - SCFコンポーネントの動作とその設定方法やカスタマイズ方法を実験できるインタラクティブなサイトを開きます。
 
-* [バッジ](badges.md)  — コンソールで、ス [コアリングルールおよびバッジルールに使用するカスタムバッジを追加できます。](implementing-scoring.md)
-
+* [バッジ](badges.md)  — カスタムバッジを追加してスコアルールやバッジルールで使用でき [るコンソール](implementing-scoring.md)
