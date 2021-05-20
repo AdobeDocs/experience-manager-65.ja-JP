@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
-translation-type: tm+mt
-source-git-commit: b7318370c45f37a7faf5434b2de3f145b8d64bce
+exl-id: 49456944-ff0d-4507-b3b8-143c90067573
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 48%
+ht-degree: 47%
 
 ---
 
-
 # 評価の基本事項  {#rating-essentials}
 
-[tally](tally.md)サブクラスの評価コンポーネントを使用すると、コミュニティメンバーがWebサイト上の機能の評価を行うことができます。
+[集計](tally.md)のサブクラスである評価コンポーネントを使用すると、サインインしたコミュニティメンバーがWebサイト上の機能を評価できます。
 
-投票コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
+同じページに投票コンポーネントの複数のインスタンスを配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
-匿名での評価投稿はサポートされていません。サイト訪問者は、1回のみ評価に参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも評価を変更できます。
+匿名での評価投稿はサポートされていません。サイト訪問者が評価に参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも評価を変更できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -52,14 +51,14 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p><a href="rating.md">定格の使用</a>を参照</p> </td>
+   <td><p><a href="rating.md">評価の使用</a>を参照</p> </td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -67,7 +66,7 @@ ht-degree: 48%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された評価（UGC）へのアクセス  {#accessing-posted-ratings-ugc}
+### 投稿された評価(UGC)へのアクセス{#accessing-posted-ratings-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -75,10 +74,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-以下を参照してください。
+次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
-
