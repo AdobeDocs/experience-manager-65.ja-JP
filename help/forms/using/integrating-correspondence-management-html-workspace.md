@@ -1,21 +1,20 @@
 ---
 title: AEM Forms Workspace でのサードパーティアプリケーションの統合
 seo-title: AEM Forms Workspace でのサードパーティアプリケーションの統合
-description: Correspondence ManagementなどのサードパーティアプリケーションをAEM FormsのWorkspaceに統合します。
+description: AEM Forms WorkspaceでCorrespondence Managementなどのサードパーティアプリケーションを統合します。
 seo-description: AEM Forms Workspace で Correspondence Management のようなサードパーティアプリケーションを統合する方法。
 uuid: 7654cf86-b896-4db2-8f5d-6c1b2e6c229f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 39a3f7db-549f-47f3-8d4f-42d583a4532d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 82%
 
 ---
-
 
 # AEM Forms Workspace でのサードパーティアプリケーションの統合{#integrating-third-party-applications-in-aem-forms-workspace}
 
@@ -27,9 +26,9 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-AEM FormsのワークスペースにレンダリングされるサンプルのCorrespondence Managementテンプレートを作成して開始します。 詳しくは、「[レターテンプレートの作成](../../forms/using/create-letter.md)」を参照してください。
+まず、AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成します。 詳しくは、「[レターテンプレートの作成](../../forms/using/create-letter.md)」を参照してください。
 
-Correspondence ManagementテンプレートにそのURLでアクセスし、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`と類似したパターンを持っています
+URLでCorrespondence Managementテンプレートにアクセスして、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`のようなパターンを持ちます
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
@@ -51,11 +50,11 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
 
-      ![usearcxasset](assets/useacrxasset.png)
+      ![useacrxasset](assets/useacrxasset.png)
 
    1. アセットを参照します。フォームアセットの選択ダイアログの「レター」タブに、サーバーのすべてのレターが表示されます。
 
-      ![「Letter」タブ](assets/letter_tab_new.png)
+      ![「レター」タブ](assets/letter_tab_new.png)
 
    1. 適切な文字を選択し、「**OK**」をクリックします。
 
@@ -102,8 +101,8 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [Get ](assets/dscsample.zip)
-FileDownload DSC:サンプルDSCは、上記に添付したDSCSample.zipファイルで入手できます。DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
+   [FileDownload DSC](assets/dscsample.zip)
+を取得：サンプルのDSCは、上記に添付されているDSCSample.zipファイルにあります。DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
