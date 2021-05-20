@@ -9,7 +9,6 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 2ecf05ed-4e56-4e0b-89cf-5161741f9001
-translation-type: tm+mt
 source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
 workflow-type: tm+mt
 source-wordcount: '420'
@@ -24,7 +23,7 @@ ht-degree: 54%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-開発者にとって、開始に最適な場所は、GithubのAdobe Experience Manager Mobile・スターキットを見ることです。
+開発者にとって最も良いのは、githubのAdobe Experience Manager Mobile Starterkitを見てみることです
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
@@ -32,18 +31,18 @@ https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
 開発者は、このサンプルを基に、PhoneGap を使用した AEM Mobile アプリケーションを開発できます。スターターキットおよび参照アプリケーションを使用して学習することで、リッチなモバイルアプリケーションを作成するための基礎を確実に理解できます。
 
-* [AEM PhoneGapスターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)を使用して、AEM Mobileカタログに適したアプリを作成します。
-* 既存のアプリをAEM Mobileに移行する場合でも、新規に開始する場合でも、AEM Mobileの新機能の多くを示す、フルソースの[リファレンスアプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が作成されました。
-* 当社のサンプルはすべて、GitHubで閲覧できます。[https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps)を開き、Mavenでプロジェクトをブートストラップします。
-* ほとんどの電話会議では、Githubでも見られる[Kitchen Sinkチュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)を活用します。このチュートリアルは、Apache Cordovaのネイティブ拡張機能の使用に重点を置いています。
+* [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)を使用して、AEM Mobileカタログに適したアプリを作成します。
+* 既存のアプリをAEM Mobileに移行する場合も、新規に開始する場合も、AEM Mobileの新機能の多くを示す、完全なソースを持つ[参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が作成されました。
+* すべてのサンプルはGitHubにあります。[https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps)を追加し、Mavenでプロジェクトをブートストラップする処理を含めます。
+* ほとんどの会議トークでは、[Kitchen Sinkのチュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)を活用します。これはGithubでも見つけることができ、Apache Cordovaのネイティブ拡張機能の使用に焦点を当てています。
 
 >[!NOTE]
 >
->スターキットの使い方に慣れたら、Adobe Experience Manager *のコンポーネントとテンプレートについて学ぶことが重要です。*
+>スターターキットに慣れる機会を得たら、Adobe Experience Manager *のコンポーネントとテンプレートについて学ぶことが重要です。*
 
 ## テンプレートおよびコンポーネント {#templates-and-components}
 
-AEM *テンプレート*&#x200B;と&#x200B;*コンポーネント*&#x200B;を使用すると、ビジネスオーナーのラインがカスタムエクスペリエンスを作成できます。 *Templates *と&#x200B;*Components*&#x200B;はどちらもすぐに使えます。または、開発者は既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成することで、独自に開発することもできます。 *テン* プレートとコンポ ** ーネントは、AEM Authorがドラッグ&amp;ドロップして、魅力的で関連性のあるエクスペリエンスを作り出すためのものです。
+AEM *テンプレート*&#x200B;と&#x200B;*コンポーネント*&#x200B;を使用すると、ビジネスオーナーはカスタムエクスペリエンスを作成できます。 テンプレートと&#x200B;*コンポーネント*&#x200B;は、両方とも標準で提供されています。または、既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成することで、開発者がカスタム開発できます。 ** テンプレートとコン ** ポーネントを使用すると、AEMオーサーがドラッグ&amp;ドロップして、魅力的で関連性の高いエクスペリエンスを作成できます。
 
 1. [コンポーネントの作成](/help/sites-developing/components.md)
 1. [テンプレートの作成](/help/sites-developing/templates.md)
