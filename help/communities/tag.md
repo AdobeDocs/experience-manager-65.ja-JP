@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 61%
 
 ---
-
 
 # タグの基本事項 {#tag-essentials}
 
@@ -24,11 +23,11 @@ AEM Communities コンポーネントの設定でタグ付けを有効化する�
 
 パブリッシュ環境で適用されるタグの基礎となるインフラストラクチャは、オーサー環境でコンテンツ（ページやアセットなど）に適用されるタグの場合と同じです。
 
-* タグの作成と管理については、[タグ](../../help/sites-administering/tags.md)と[ユーザ生成コンテンツのタグ付け](tag-ugc.md)(UGC)を参照してください。
+* タグの作成と管理について詳しくは、[タグの管理](../../help/sites-administering/tags.md)および[ユーザー生成コンテンツのタグ付け](tag-ugc.md)(UGC)を参照してください。
 
-* [タグ付けフレームワーク](../../help/sites-developing/framework.md)の詳細については、[開発者のタグ付け](../../help/sites-developing/tags.md)を参照してください。また、[カスタムアプリケーション](../../help/sites-developing/building.md)にタグを含めたり、タグを拡張したりする方法についても説明します。
+* [タグ付けフレームワーク](../../help/sites-developing/framework.md)および[カスタムアプリケーション](../../help/sites-developing/building.md)にタグを追加したりタグを拡張したりする方法については、[Tagging for Developers](../../help/sites-developing/tags.md)を参照してください。
 
-* 発行環境で`social tag cloud`コンポーネントをページに追加してUGCに適用されたタグを強調表示する方法については、「[Social Tag Cloud](tagcloud.md)の使用」を参照してください。
+* パブリッシュ環境でUGCに適用されたタグをハイライト表示するために`social tag cloud`コンポーネントをページに追加する方法については、 [Socialタグクラウドの使用](tagcloud.md)を参照してください。
 
 * カタログのリソースをタグ付けする方法については、[イネーブルメントリソースのタグ付け](tag-resources.md)を参照してください。
 
@@ -40,7 +39,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
 * [フォーラム](forum.md)
 * [Q&amp;A](working-with-qna.md)
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 ### Social タグクラウド {#social-tag-cloud}
 
@@ -52,7 +51,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -68,14 +67,14 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td>「<a href="tagcloud.md">Socialタグクラウドの使用</a>」を参照してください。</td>
+   <td><a href="tagcloud.md">Socialタグクラウドの使用</a>を参照してください。</td>
   </tr>
  </tbody>
 </table>
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [Social タグクラウド API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
