@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media アセットの配信
-description: Dynamic Media資産の配信方法を学ぶ
+description: Dynamic Media Assetsの配信方法を説明します
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,8 +10,7 @@ discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 274af114-845a-46bd-b091-802cf589687a
-feature: Asset Management,Renditions
-translation-type: tm+mt
+feature: アセット管理，レンディション
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '309'
@@ -25,7 +24,7 @@ ht-degree: 87%
 
 Dynamic Media を使用する場合、次の複数のオプションがあります。
 
-* WebサイトがAEMでホストされている場合は、Dynamic Mediaのアセットを直接ページに追加する必要があります。
+* WebサイトがAEM上でホストされている場合は、Dynamic Mediaアセットを直接ページに追加する必要があります。
 * Web サイトが AEM 上にない場合は、次のいずれかの方法を選択します。
 
    * ビデオまたは画像を Web サイトに埋め込みます。
@@ -43,12 +42,12 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 * [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
 * [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](/help/assets/responsive-site.md)
-* [コンテンツの HTTP/2 配信](/help/assets/http2.md)
-* [Dynamic Mediaクラシックを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)
+* [コンテンツの HTTP/2 配信の](/help/assets/http2.md)
+* [Dynamic Media Classicを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [ルールセットを使用した URL の変換](/help/assets/using-rulesets-to-transform-urls.md)
 
 
-## Dynamic Media アセットの HTTP/2 配信  {#http-delivery-of-dynamic-media-assets}
+## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
 
 AEM は現在、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートしています。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
 
