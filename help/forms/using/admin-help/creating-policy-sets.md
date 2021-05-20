@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a4fb1a11-8fe3-4092-a036-1c079aea1250
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 736926af-ae41-4da3-b181-444de72407bd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 99%
 
 ---
-
 
 # ポリシーセットの作成および管理 {#creating-and-managing-policy-sets}
 
@@ -115,4 +114,3 @@ Document Security のインストール時に、「*グローバルポリシー�
 1. 「ポリシー」をクリックし、「ポリシーセット」タブをクリックします。
 1. 削除するポリシーセットのチェックボックスを選択します。
 1. 「削除」をクリックし、「OK」をクリックします。
-
