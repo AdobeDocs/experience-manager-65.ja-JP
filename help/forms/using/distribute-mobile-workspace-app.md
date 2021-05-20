@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: 375cfa95-ac6f-44c4-a736-f5dd55d24195
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 92%
 
 ---
-
 
 # AEM Forms アプリの配布  {#distribute-aem-forms-app}
 
@@ -38,7 +37,7 @@ MDM 管理者は ipa ファイルと apk ファイルの両方を MDM サーバ�
 
 ## AEM Forms アプリケーションに影響するプロファイル設定 {#profile-settings-affecting-the-aem-forms-app-br}
 
-お使いのデバイスでの次のプロファイル設定は、お使いのデバイスのAEM Formsアプリの機能に影響を与えます。
+デバイスでの次のプロファイル設定は、デバイスのAEM Formsアプリの機能に影響します。
 
 * 「**Device functionality**」セクションの「**Allow use of camera**」
 
