@@ -8,14 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 16e57cf6-aaa1-406d-a6ad-71ec60b15386
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 48c24442-22d2-4d1a-9462-0aba78340281
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 63%
 
 ---
-
 
 # タスクの詳細ページのカスタマイズ{#customizing-the-task-details-page}
 
@@ -29,9 +28,9 @@ ht-degree: 63%
 タスクの詳細ページをカスタマイズするには：
 
 1. [AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)に従います。
-1. 追加の情報を表示するには、対応するキーと値のペアを`translation.json`ファイル(`todo`block > `details`block > `app`block > [ block `required` a6/>)に追加します。]
+1. 追加の情報を表示するには、対応するキーと値のペアを`translation.json`ファイル(`todo`block > `details`block > `app`block > [ `required`block] )に追加します。
 
-   [ `required`block]は、タスク情報のタスクブロック、プロセス情報のプロセスブロック、保留中のタスク情報のcurrentpendingtaskブロックなど、使用可能なブロックを参照します。
+   [ `required`block]は、タスク情報用のタスクブロック、プロセス情報用のプロセスブロック、保留中のタスク情報用の現在の保留中のタスクブロックなど、使用可能なブロックを指します。
 
    たとえば、タスクの詳細ページに必要なルート選択に関する情報を追加するには、以下のキーと値のペアを task ブロックに追加することができます。
 
@@ -58,7 +57,7 @@ ht-degree: 63%
 
 1. `/libs/ws/js/runtime/templates/taskdetails.html` を `/apps/ws/js/runtime/templates/taskdetails.html` にコピーします。
 
-   追加`/apps/ws/js/runtime/templates/taskdetails.html`に対する新しい情報。 次に例を示します。
+   `/apps/ws/js/runtime/templates/taskdetails.html`に新しい情報を追加します。 以下に例を示します。
 
    ```css
    <div class="detailsContainer">
@@ -85,6 +84,6 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->AEM Formsワークスペースの&#x200B;**開始プロセス**&#x200B;タブで作成されたタスクでタスクの詳細ページをカスタマイズするには、`/apps/ws/js/runtime/templates/startprocess.html`に新しい情報を追加します。
+>AEM Forms Workspaceの「**プロセスを開始**」タブで作成されたタスクでタスクの詳細ページをカスタマイズするには、新しい情報を`/apps/ws/js/runtime/templates/startprocess.html`に追加します。
 >
 >詳細ページに追加された情報に新しいスタイルを追加するには、[Workspaceのカスタマイズ](changing-locale-user-interface.md)の&#x200B;*ユーザーインターフェイスの変更*&#x200B;セクションを使用してCSSファイルを変更します。
