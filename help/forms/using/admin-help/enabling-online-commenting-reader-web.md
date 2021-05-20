@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9c4f8e1e-c2f7-4648-9a2a-104bd540a47a
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 6db1e998-f810-4715-b0b7-981e8d807cf8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする {#enabling-online-commenting-for-adobe-reader-web-browser-plug-in}
 
