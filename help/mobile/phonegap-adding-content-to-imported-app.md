@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b7fd7954-f2a5-402d-b259-e18b5a618be9
 pagetitle: Is your hybrid app ready for AEM Mobile?
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 97%
 
 ---
-
 
 # ハイブリッドアプリの AEM Mobile 対応{#is-your-hybrid-app-ready-for-aem-mobile}
 
@@ -35,7 +34,7 @@ ht-degree: 97%
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-この例では、アプリケーションのようこそページを作成します。ソース[https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75)を見てください。 アプリ開発者がようこそページを定義し、アプリでレンダリングされるページのテンプレートを提供していることがわかります。ここで、アプリ開発者と AEM 開発者が連携して作業する必要があります。Hybrid Reference App のようこそページのテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。AEM 開発者は同じパスを使用して AEM リポジトリ内にようこそページを作成するので、このパスは非常に重要です。
+この例では、アプリケーションのようこそページを作成します。ソース[https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75)を見てみましょう。 アプリ開発者がようこそページを定義し、アプリでレンダリングされるページのテンプレートを提供していることがわかります。ここで、アプリ開発者と AEM 開発者が連携して作業する必要があります。Hybrid Reference App のようこそページのテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。AEM 開発者は同じパスを使用して AEM リポジトリ内にようこそページを作成するので、このパスは非常に重要です。
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
