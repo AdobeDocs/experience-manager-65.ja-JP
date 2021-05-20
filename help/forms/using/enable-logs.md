@@ -10,15 +10,14 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 70%
 
 ---
-
 
 # HTML5 フォーム内でのログの有効化{#enable-logging-for-html-forms}
 
@@ -28,7 +27,7 @@ ht-degree: 70%
 
 次の手順を実行して、サーバーサイドログを構成します。
 
-1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。*Apace Slingロギングロガー設定*&#x200B;オプションを探して開きます。 ダイアログボックスが表示されます。
+1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。*Apace Sling logging logger configuration*&#x200B;オプションを探して開きます。 ダイアログボックスが表示されます。
 
    ![ Apace Sling ロギングのロガー設定オプションのダイアログボックス](assets/logconfig.png)
 
@@ -53,7 +52,7 @@ ht-degree: 70%
 
 ### 要求パラメーターの使用によるログの有効化  {#enabling-logging-using-request-parameter}
 
-この方法を使用して、特定の要求に対するログを生成できます。リクエストパラメータの名前は&#39;logです。 ログURLは次のとおりです。
+この方法を使用して、特定の要求に対するログを生成できます。要求パラメーターの名前は「log」です。 ログURLは次のとおりです。
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -103,7 +102,7 @@ ht-degree: 70%
    <td>ERROR<br type="_moz" /> </td>
   </tr>
   <tr>
-   <td>3</td>
+   <td>1</td>
    <td>WARN<br type="_moz" /> </td>
   </tr>
   <tr>
@@ -154,7 +153,7 @@ ht-degree: 70%
 
 `{destination}-{a level}-{b level}-{c level}`
 
-次に例を示します。
+以下に例を示します。
 
 <table>
  <tbody>
@@ -172,13 +171,13 @@ ht-degree: 70%
 >[!NOTE]
 >
 >a（xfa）、b（xfaView）、および c（xfaPerf）のそれぞれのログカテゴリに対するデフォルトログレベルは 2（エラー）です。そのため、ログ設定 2-b6 では、異なるカテゴリのログレベルは：
->a (xfa):2（デフォルトのレベルERROR）
->b (xfaView):6(ユーザー指定TRACE)
->a (xfaPerf):2（デフォルトのレベルERROR）
+>a (xfa):2 （デフォルトレベルのエラー）
+>b (xfaView):6 (ユーザー指定TRACE)
+>a (xfaPerf):2 （デフォルトレベルのエラー）
 
 ### Configuration Manager の使用によるログの有効化 {#enabling-logging-using-configuration-manager}
 
-ログを有効にするためにConfiguration Managerを使用する場合、ログが再び無効になるまで、すべてのレンダリング要求に対してログが生成されます。
+ログを有効にするためにConfiguration Managerを使用すると、ログが再び無効になるまで、レンダリング要求ごとにログが生成されます。
 
 1. `https://'[server]:[port]'/system/console/configMgr`でCQ Configuration Managerにログインし、管理者の資格情報を使用してログインします。
 1. **「LC Forms Configurations」**&#x200B;を探してクリックします。
@@ -190,7 +189,7 @@ ht-degree: 70%
 
 ## ログのアップロード {#uploading-logs}
 
-宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 このレベルでは、すべてのログがクライアント側のJSオブジェクトに収集され、フォームがデフォルトのプロファイルでレンダリングされる場合、ツールバーの「**既存のフィールドをハイライト**」ボタンの左に「**ログを送信**」ボタンが表示されます。 ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーに投稿され、サーバー上の設定済みのエラーログファイルに記録されます。
+宛先が 1 として設定されている場合、すべてのクライアントスクリプトのログメッセージはコンソールに送信されます。管理者がサーバーログと共にこれらのログを必要とする場合は、宛先レベルを2に設定します。 このレベルでは、すべてのログがクライアント側のJSオブジェクトに収集され、フォームがデフォルトのプロファイルでレンダリングされる場合は、ツールバーの「**既存のフィールドをハイライト**」ボタンの左側に「**ログを送信**」ボタンが表示されます。 ユーザーがリンクをクリックすると、収集されたすべてのログがサーバーに投稿され、サーバー上の設定済みエラーログファイルに記録されます。
 
 デフォルトでは、すべての情報が /crx-repository/logs/ ディレクトリに保存されている error.log ファイルに追加されます。
 
@@ -209,4 +208,4 @@ ht-degree: 70%
    >
    >他のログファイルが保存されている同じディレクトリにログを作成するには、Log Files プロパティで ../logs/&lt;filename> を指定します。
 
-1. **Logger**&#x200B;を&#x200B;**HTMLFormsPerfLogger**&#x200B;に変更し、**「保存**」をクリックします。
+1. **Logger**&#x200B;を&#x200B;**HTMLFormsPerfLogger**&#x200B;に変更し、「**保存**」をクリックします。
