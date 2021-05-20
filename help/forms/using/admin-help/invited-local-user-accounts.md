@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 65720eed-ab06-463f-9567-2fdc468b6219
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 23f71b34-a0cb-4664-bb8b-a60f33dc70d8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 100%
 
 ---
-
 
 # 招待ユーザーおよびローカルユーザーのアカウントの管理 {#managing-invited-and-local-user-accounts}
 
@@ -134,4 +133,3 @@ Document Security からローカルユーザーアカウントを削除する�
    1. 管理コンソールで、サービス／Document Security／招待ユーザーおよびローカルユーザーをクリックします。
    1. 招待ユーザーをソートするには、「ユーザーの招待」タブをクリックし、該当する列見出しをクリックします。
    1. ローカルユーザーをソートするには、「ローカルユーザー」タブをクリックし、該当する列見出しをクリックします。
-
