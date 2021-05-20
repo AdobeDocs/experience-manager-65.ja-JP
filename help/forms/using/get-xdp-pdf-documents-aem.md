@@ -10,14 +10,13 @@ topic-tags: forms-manager
 discoiquuid: 28b9f1d6-6a52-458f-a8ed-a206502eda0d
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '708'
 ht-degree: 92%
 
 ---
-
 
 # AEM Forms での XDP および PDF ドキュメントの取得{#getting-xdp-and-pdf-documents-in-aem-forms}
 
@@ -29,7 +28,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 * PDF のフォーム
 * ドキュメント（非インタラクティブ PDF ドキュメント）
 
-サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。タイプ`Resource`のアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
+サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。`Resource`タイプのアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
 
 >[!NOTE]
 >
@@ -37,7 +36,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 ## フォームのアップロード  {#uploading-forms}
 
-1. `https://'[server]:[port]'/aem/forms.html`にアクセスして、AEM Formsユーザーインターフェイスにログインします。
+1. `https://'[server]:[port]'/aem/forms.html`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
 1. アクションツールバーで、**作成／ファイルのアップロード**&#x200B;をタップします。
 
@@ -86,7 +85,6 @@ XFA を参照しているアダプティブフォームは、そのフィール�
 
 ![関連 XFA の更新後の非同期のアダプティブフォームの警告](assets/dirtyaf.png)
 
-アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。dirtyアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`は`Recommended`値を表示します。
+アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。ダーティなアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`に`Recommended`値が表示されます。
 
 ![アダプティブフォームが XFA モデルと非同期であることを示す](assets/model-refresh.png)
-
