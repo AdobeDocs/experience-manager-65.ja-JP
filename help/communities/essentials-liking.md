@@ -10,22 +10,21 @@ topic-tags: developing
 content-type: reference
 discoiquuid: f176c42b-b16b-42c9-af22-4b6421de5a90
 pagetitle: Liking Essentials
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: ef314385-cd5c-411c-91df-83691a81c1bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '295'
-ht-degree: 55%
+ht-degree: 53%
 
 ---
-
 
 # 「いいね!」の設定の基本事項  {#liking-essentials}
 
 「いいね!」の設定コンポーネントは、[集計](tally.md)のサブクラスであり、メンバーがハートアイコンをオンにするだけで特定のコンテンツに対して賛成を表明できる便利なツールです。
 
-「いいね！」コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
+「いいね！」設定コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
-匿名での「いいね!」の設定の投稿はサポートされていません。サイト訪問者は、「いいね！」に参加するには登録してサインインする必要があります。 ログイン訪問者（メンバ）は、いつでも同様にオン/オフを切り替えることができます。
+匿名での「いいね!」の設定の投稿はサポートされていません。サイト訪問者が「いいね！」を設定するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも「いいね！」のオンとオフを切り替えることができます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -60,7 +59,7 @@ ht-degree: 55%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -68,7 +67,7 @@ ht-degree: 55%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された投票（UGC）へのアクセス  {#accessing-posted-voting-ugc}
+### 投稿された投票(UGC)へのアクセス{#accessing-posted-voting-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -76,10 +75,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-以下を参照してください。
+次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
-
