@@ -7,15 +7,14 @@ uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
-feature: Adaptive Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アダプティブフォーム
+exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
-
 
 # アダプティブフォームのキーワード {#adaptive-forms-keywords}
 
@@ -120,7 +119,7 @@ ht-degree: 96%
   </tr>
   <tr>
    <td><p>validatePictureClauseMessage</p> </td>
-   <td><p>アイテム</p> </td>
+   <td><p>item</p> </td>
    <td><p>nonLocalizedTitle</p> </td>
   </tr>
   <tr>
@@ -129,7 +128,7 @@ ht-degree: 96%
    <td><p>viewVisited</p> </td>
   </tr>
   <tr>
-   <td><p>幅</p> </td>
+   <td><p>width</p> </td>
    <td><p>buttonText</p> </td>
    <td><p>index</p> </td>
   </tr>
@@ -199,7 +198,7 @@ ht-degree: 96%
    <td><p>activePart</p> </td>
   </tr>
   <tr>
-   <td><p>ツールバー</p> </td>
+   <td><p>toolbar</p> </td>
    <td><p>completionBeforeMessage</p> </td>
    <td><p>isLastPart</p> </td>
   </tr>
