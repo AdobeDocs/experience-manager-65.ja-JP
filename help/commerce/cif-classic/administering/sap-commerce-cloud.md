@@ -7,7 +7,6 @@ uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '1726'
@@ -54,7 +53,7 @@ ht-degree: 88%
    >
    >コンテキストメニュー（通常は右ボタンをクリック）を使用して`Create Solr sort`を選択します。
    >
-   >Hybris 5.0.0では、`Indexed Types`タブを開き、`ClothesVariantProduct`を重複クリックし、次に`SOLR Sort`タブをクリックします。
+   >Hybris 5.0.0の場合は、`Indexed Types`タブを開き、`ClothesVariantProduct`をダブルクリックし、次にタブ`SOLR Sort`を開きます。
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
@@ -98,8 +97,8 @@ ht-degree: 88%
 1. 変更内容を&#x200B;**保存**&#x200B;します。
 1. 「**System**」、「**Facet search**」の順に選択すると、**Indexer operation ウィザード**&#x200B;が表示されます。cron ジョブを開始します。
 
-   * **Indexer操作**:  `full`
-   * **Solr設定**:  `Sample Solr Config for Clothes`
+   * **インデクサー操作**:  `full`
+   * **Solrの設定**:  `Sample Solr Config for Clothes`
 
 ## カタログバージョンの設定 {#configure-the-catalog-version}
 
@@ -108,7 +107,7 @@ ht-degree: 88%
 **Day CQ Commerce Hybris Configuration**
 ( `com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`)
 
-**カタログ** バージョンは、通常、 `Online` または `Staged` （デフォルト）に設定されます。
+**カタログ** のバージョンは、通常、 `Online` または(デ `Staged` フォルト)に設定されます。
 
 >[!NOTE]
 >
@@ -161,7 +160,7 @@ ht-degree: 88%
 
 読み込み時に生成される構造を、以下に合わせて設定できます。
 
-&quot;**Day CQコマースハイブリスの既定のインポートハンドラ**
+&quot;**Day CQ Commerce Hybris Default Import Handler**
 `(com.adobe.cq.commerce.hybris.importer.DefaultImportHandler`)
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
@@ -172,7 +171,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 1. OSGi バンドルの設定：
 
-   **Day CQ Commerce Hybrisデフォルト応答パーサー**
+   **Day CQ Commerce Hybris Default Response Parser**
 (`com.adobe.cq.commerce.hybris.impl.importer.DefaultResponseParser`)
 
    ここで、読み込みとマップに必要な、様々なオプションと属性を定義できます。
@@ -201,7 +200,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 >[!NOTE]
 >
->おろかさの実装(`geometrixx-outdoors/en_US`)は、`/etc/commerce`の下に製品IDと他の基本情報のみを保存します。
+>hybris実装(`geometrixx-outdoors/en_US`)は、製品IDやその他の基本情報のみを`/etc/commerce`に格納します。
 >
 >商品に関する情報を要求されるたびに、hybris サーバーが参照されます。
 
@@ -213,7 +212,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
       `/etc/commerce/products`
 
-      次に例を示します。
+      以下に例を示します。
 
       [`http://localhost:4502/crx/de/index.jsp#/etc/commerce/products`](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -224,7 +223,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/importers/hybris.html`
 
-   次に例を示します。
+   以下に例を示します。
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
@@ -240,7 +239,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
        /etc/commerce/products/outdoors
    ```
 
-   これをCRXDE Liteで開ける。例：
+   これはCRXDE Liteで開く。例：
 
    `[http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
 
@@ -250,7 +249,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/commerce/products`
 
-   これをCRXDE Liteで開ける。例：
+   これはCRXDE Liteで開く。例：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -260,14 +259,14 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/importers/hybris.html`
 
-   次に例を示します。
+   以下に例を示します。
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. 「**Incremental Import**」チェックボックスを選択します。
 1. 「**Import Catalog**」をクリックして読み込みを開始します。
 
-   完了したら、AEMで次の場所で更新されたデータを確認できます。
+   完了したら、AEMで更新されたデータを次の場所で確認できます。
 
    ```
        /etc/commerce/products
@@ -282,7 +281,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/commerce/products`
 
-   これをCRXDE Liteで開ける。例：
+   これはCRXDE Liteで開く。例：
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -296,14 +295,14 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/importers/hybris.html`
 
-   次に例を示します。
+   以下に例を示します。
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. 「**Express Update**」チェックボックスを選択します。
 1. 「**Import Catalog**」をクリックして読み込みを開始します。
 
-   完了したら、AEMで次の場所で更新されたデータを確認できます。
+   完了したら、AEMで更新されたデータを次の場所で確認できます。
 
    ```
        /etc/commerce/products
@@ -317,7 +316,7 @@ hybris カタログは、hybris カタログ、カテゴリおよび商品用の
 
 インポーターが使用するパラメーターは、以下に合わせて設定できます。
 
-**Day CQコマースハイブリスカタログインポーター**
+**Day CQ Commerce Hybrisカタログインポーター**
 ( `com.adobe.cq.commerce.hybris.impl.importer.DefaultHybrisImporter`)
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
@@ -372,23 +371,23 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 1. hybris コンソールで商品を削除します。「**Change approval status**」オプションを使用して、ステータスを「`unapproved`」に設定します。商品がライブフィードから削除されます。
 
-   次に例を示します。
+   以下に例を示します。
 
    * [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit) ページを開きます。
-   * カタログを選択`Outdoors Staged`
-   * `Cajamara`を検索
+   * カタログ`Outdoors Staged`を選択します。
+   * `Cajamara`を検索します。
    * この商品を選択し、承認ステータスを「`unapproved`」に変更します。
 
 1. もう一度増分更新を実行します（[カタログの読み込み](#catalog-import)を参照）。削除された商品がログに記録されます。
 1. 該当するカタログを[ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)します。商品と商品ページが AEM 内から削除されます。
 
-   次に例を示します。
+   以下に例を示します。
 
    * 次のファイルを開きます。
 
       [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
-   * `Hybris Base`カタログを展開
+   * `Hybris Base`カタログをロールアウト
    * 次のファイルを開きます。
 
       [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
@@ -410,11 +409,11 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 1. 次のどちらかの方法で、[ClientContext のデザインページ](/help/sites-administering/client-context.md)を開きます。
 
-   * 編集用にページを開き、**Ctrl-Alt-c**(windows)または&#x200B;**control-option-c**(Mac)を使用してクライアントコンテキストを開きます。 ClientContext の左上隅にある鉛筆アイコンを使用して、**ClientContext のデザインページを開きます**。
+   * ページを編集用に開き、Ctrl + Alt + C **(Windows)または** control + option + c **(Mac)を使用してClientContextを開きます。** ClientContext の左上隅にある鉛筆アイコンを使用して、**ClientContext のデザインページを開きます**。
    * [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html) に直接移動します。
 
 1. [**注文履歴**&#x200B;コンポーネント](/help/sites-administering/client-context.md#adding-a-property-component)を ClientContext の&#x200B;**買い物かご**&#x200B;コンポーネントに追加します。
-1. ClientContext に注文履歴の詳細が表示されていることを確認できます。次に例を示します。
+1. ClientContext に注文履歴の詳細が表示されていることを確認できます。以下に例を示します。
 
    1. [ClientContext](/help/sites-administering/client-context.md) を開きます。
    1. アイテムを買い物かごに追加します。
@@ -432,7 +431,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    >
    >* [http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html](http://localhost:4502/content/campaigns/geometrixx-outdoors/hybris-returning-customer.html)に移動します。
    >
-   >  キャンペーンは、1つのエクスペリエンスで構成されます。
+   >  キャンペーンは1つのエクスペリエンスで構成されます。
    >
    >* セグメント([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))をクリックします。
       >
