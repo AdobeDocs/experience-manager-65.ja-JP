@@ -8,16 +8,15 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
-feature: 360 VR Video
+feature: 360 VR ビデオ
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 92%
+source-wordcount: '1097'
+ht-degree: 93%
 
 ---
-
 
 # 360/VR ビデオ {#vr-video}
 
@@ -54,7 +53,7 @@ AEM にアップロードされた 360 ビデオアセットには、通常の�
 **360 ビデオビューアで使用するアセットをアップロードするには：**
 
 1. 360 ビデオアセット専用のフォルダーを作成します。
-1. [アダプティブビデオプロファイルをフォルダーに適用します。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
+1. [フォルダーにアダプティブビデオプロファイルを適用します。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
 
    360 ビデオコンテンツをレンダリングする場合、ソースビデオの解像度とレンディションのエンコード解像度に関する要件が、標準の非 360 ビデオコンテンツの場合よりも高くなります。
 
@@ -110,7 +109,7 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
    360 ビデオアセットをタップしてビデオをプレビューします。
 
-1. プレビューページの左上隅近くにあるドロップダウンリストをタップし、「**[!UICONTROL ビューア」を選択します。]**
+1. プレビューページで、ページの左上隅付近にあるドロップダウンリストをタップし、「**[!UICONTROL ビューア]**」を選択します。
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
@@ -121,13 +120,13 @@ AEM ではデフォルトで、縦横比（幅 / 高さ）が 2.0 のビデオ�
 
    ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット*
 
-   * ビューアリストから、**[!UICONTROL Video360VR.]**&#x200B;をタップします。
+   * 「ビューア」リストから、「Video360VR」をタップします。****
 
       バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットを通じてアクセスする、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
-1. プレビューページの右上近くにある「**[!UICONTROL 閉じる」をタップします。]**
+1. プレビューページの右上付近にある「**[!UICONTROL 閉じる」をタップします。]**
 
 ## 360 ビデオの公開 {#publishing-video}
 
