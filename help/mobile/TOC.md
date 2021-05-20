@@ -7,7 +7,6 @@ breadcrumb-title: モバイルガイド
 user-guide-description: モバイルアプリ用のコンテンツを作成および管理します。
 feature: モバイル
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '332'
@@ -37,7 +36,7 @@ ht-degree: 95%
    + [クラウド設定](mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
    + [バナーの管理](mobile-on-demand-managing-banners.md)
 + On-Demand Services アプリの開発 {#developing}
-   + [AEM Mobileオンデマンド](aem-mobile-on-demand.md)
+   + [AEM Mobile On-Demand](aem-mobile-on-demand.md)
    + [アプリのテンプレートとコンポーネント](app-templates-and-components1.md)
    + [コンテンツのプロパティとノード](content-properties.md)
    + [共有リソースの書き出し設定の作成](creating-shared-resources-export-configuration.md)
@@ -51,7 +50,7 @@ ht-degree: 95%
    + [コンテンツサービス](developing-content-services.md)
    + [コンテンツ配信](develop-content-as-a-service.md)
 + On-Demand Services アプリの管理 {#administering}
-   + [AEM Mobileオンデマンド](aem-mobile.md)
+   + [AEM Mobile On-Demand](aem-mobile.md)
    + [AEM Mobile のセットアップ](aem-mobile-setup.md)
    + [ユーザーとユーザーグループの設定](aem-mobile-configure-users.md)
    + [プリフライトによるプレビュー](aem-mobile-manage-ondemand-services.md)
@@ -78,7 +77,7 @@ ht-degree: 95%
    + [PhoneGap CLI によるアプリの開発](phonegap-apps-pg-cli.md)
    + [既製のアプリハンドラー](contentsync-app-handlers.md)
    + [アプリコンソールを使用したアプリの作成および編集](phonegap-apps-console.md)
-   + [ハイブリッドアプリの AEM Mobile 対応状況](phonegap-adding-content-to-imported-app.md)
+   + [ハイブリッドアプリの AEM Mobile 対応](phonegap-adding-content-to-imported-app.md)
    + [デバイスの機能へのアクセス](phonegap-access-device-features.md)
    + [モバイルアプリケーションへの Adobe Analytics の追加](phonegap-add-analytics-to-apps.md)
    + [モバイルアプリのページテンプレート](phonegap-apps-arch-page-templates.md)
@@ -92,7 +91,7 @@ ht-degree: 95%
 + Adobe PhoneGap Enterprise の管理 {#administering-phonegap}
    + [モバイルクイックスタート](phonegap-mobile-quickstart.md)
    + [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](administer-phonegap.md)
-   + [Adobe PhoneGap Build クラウドサービスを設定します。](configure-phonegap-build-cloud.md)
+   + [Adobe PhoneGap Build クラウドサービスの設定](configure-phonegap-build-cloud.md)
    + [リファラーフィルターを「空の値を許可」に設定](setting-referrer-filter-empty.md)
    + [Adobe Mobile Services クラウドサービスの設定](configure-adobe-mobile-cloud-service.md)
    + [ユーザーとユーザーグループの設定](configure-users-groups.md)
