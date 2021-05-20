@@ -1,8 +1,8 @@
 ---
-title: XMP UtilitiesサービスJava APIQuick開始(SOAP)
-seo-title: XMP UtilitiesサービスJava APIQuick開始(SOAP)
-description: XMP Utilitiesサービスを使用して、XMPメタデータを書き出しおよび読み込みます。
-seo-description: XMP Utilitiesサービスを使用して、XMPメタデータを書き出しおよび読み込みます。
+title: XMP UtilitiesサービスJava APIQuick Start(SOAP)
+seo-title: XMP UtilitiesサービスJava APIQuick Start(SOAP)
+description: XMP Utilitiesサービスを使用して、XMPメタデータの書き出しと読み込みをおこないます。
+seo-description: XMP Utilitiesサービスを使用して、XMPメタデータの書き出しと読み込みをおこないます。
 uuid: 5db4c623-75db-4a34-9ad2-3c917619e296
 contentOwner: admin
 content-type: reference
@@ -10,32 +10,31 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 1b229ddf-9350-40b6-8056-dcbe0c5afd5b
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 699a7309-a976-480e-886f-2e466a477348
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
+# XMP UtilitiesサービスJava APIクイックスタート(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
 
-# XMP UtilitiesサービスJava APIクイック開始(SOAP) {#xmp-utilities-service-java-apiquick-start-soap}
+XMP Utilitiesサービスでは、次のクイックスタートを使用できます。
 
-XMP Utilitiesサービスでは、次のクイック開始を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したXMPメタデータの書き出し](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの書き出し](xmp-utilities-service-java-api.md#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したXMPメタデータの読み込み](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したXMPメタデータの読み込み](xmp-utilities-service-java-api.md#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEMフォームのプログラミング」にあるクイック開始は、UNIXなど別のオペレーティングシステムを使用している場合、Formsサーバーを基にしています。windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM formsによるプログラミング」にあるクイックスタートは、UNIXなど別のオペレーティングシステムを使用している場合に、Formsサーバーに基づいています。windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}を使用したXMPメタデータの書き出し
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}を使用したXMPメタデータの書き出し
 
-次のコードの例は、XMPメタデータを取得、調査、保存します。 ([PDFドキュメントからのメタデータの書き出し](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照)。
+次のコードの例では、XMPメタデータを取得、検査、保存します。 （[PDFドキュメントからのメタデータの書き出し](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照）。
 
 ```java
  /*
@@ -138,9 +137,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}を使用したXMPメタデータの読み込み
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}を使用したXMPメタデータの読み込み
 
-次のコードの例では、XMPメタデータを読み込み、新しいPDFファイルをディスクに保存します。 PDFドキュメントは、Loan.pdfというPDFファイルに基づいています。 PDFドキュメントに読み込むメタデータが含まれるXMLドキュメントは、*LoanMetaData.xml*&#x200B;というXMLファイルに基づいています。 このXMLファイルについて詳しくは、[PDFドキュメントへのメタデータの読み込み](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)を参照してください。
+次のコードの例では、XMPメタデータを読み込み、新しいPDFファイルをディスクに保存します。 PDFドキュメントは、Loan.pdfという名前のPDFファイルに基づいています。 PDFドキュメントに読み込むメタデータが含まれるXMLドキュメントは、*LoanMetaData.xml*&#x200B;というXMLファイルに基づいています。 このXMLファイルについて詳しくは、[PDFドキュメントへのメタデータの読み込み](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents)を参照してください。
 
 ```java
  /*
@@ -245,4 +244,3 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
      }
  }
 ```
-
