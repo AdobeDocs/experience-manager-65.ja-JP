@@ -5,14 +5,13 @@ uuid: a02f9ec1-30d9-4cbb-8746-8391ac614f0a
 contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
-translation-type: tm+mt
-source-git-commit: 66f46a34832254af74c72da16ec8ebe3eb8cd46d
+exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 79%
 
 ---
-
 
 # ビデオレンディション {#video-renditions}
 
@@ -42,6 +41,6 @@ DM エンコードされたレンディションのプロキシサーバーを�
 
 >[!NOTE]
 >
->Microsoft Internet Explorer 11上のOGGファイルとWAVファイルでは、オーディオの再生が動作しません。 拡張子がOGGまたはWAVのアセットのアセットの詳細ページにエラー`Invalid Source`が表示されます。
+>Microsoft Internet Explorer 11のOGGおよびWAVファイルでは、オーディオ再生は機能しません。 拡張子がOGGまたはWAVのアセットの場合、アセットの詳細ページにエラー`Invalid Source`が表示されます。
 >
->MS EdgeおよびiPadでは、OGGファイルは再生されず、サポートされていないフォーマットエラーが発生します。
+>MS EdgeおよびiPadでは、OGGファイルは再生されず、サポートされていない形式のエラーが発生します。
