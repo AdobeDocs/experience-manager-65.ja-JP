@@ -11,14 +11,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: b79c147c-f846-4e48-bec0-8b658502bb6f
 docset: aem65
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 86%
 
 ---
-
 
 # Document Security によって保護された PDF ドキュメントを AEM で検索可能にする{#enable-aem-to-search-document-security-protected-pdf-documents}
 
@@ -41,12 +40,12 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
    * OSGi上のAEM Formsの場合、バンドルはhttps://&#39;[server]:[port]&#39;/system/console/bundlesに一覧表示されます。
    * JEE上のAEM Formsの場合、バンドルはhttps://&#39;[server]:[port]&#39;/[context-path]/system/console/bundlesに一覧表示されます。 例：https://localhost:8080/lc/system/console/bundles
 
-* 許可リスト追加に対する&#x200B;*sun.util.calendar*&#x200B;パッケージ。 パッケージを許可リストに追加するには、次の手順を実行します。
+* *sun.util.calendar*&#x200B;パッケージをに追加し許可リストます。 パッケージをに追許可リスト加するには、次の手順を実行します。
 
    1. AEM Web コンソールを開きます。URLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
    1. **デシリアライゼーションファイアウォール設定**&#x200B;を探して開きます。
 
-   1. sun.util.calendarパッケージ追加を「Allowlisted classes or package prefixes」フィールドに追加し、「**Save**」をクリックします。
+   1. sun.util.calendarパッケージを許可リストに加える済みのクラスまたはパッケージのプレフィックスフィールドに追加し、「**保存**」をクリックします。
 
 ### AEM Forms JEE と OSGi スタック間の安全な接続の確立 {#establish-a-secure-connection-between-aem-forms-jee-and-osgi-stacks}
 
@@ -89,4 +88,3 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 1. AEM Digital Asset Manager でフォルダーを作成し、新しく作成したフォルダーにポリシーで保護された PDF ドキュメントをアップロードします。
 
    これで AEM 検索を使用してポリシーで保護されたドキュメントを検索できるようになりました。
-
