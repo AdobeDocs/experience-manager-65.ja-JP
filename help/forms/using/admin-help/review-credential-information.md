@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_acrobat_reader_dc_extensions
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
-translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 93%
 
 ---
-
 
 # 秘密鍵証明書の使用に関する情報の確認 {#review-credential-use-information}
 
@@ -24,7 +23,7 @@ ht-degree: 93%
 
 1. Web ブラウザーを開き、次の URL を入力します。
 
-   http://localhost:port/ReaderExtensions（*port*&#x200B;は、アプリケーションサーバーのポート番号です）
+   http://localhost:port/ReaderExtensions （ここで、*port*&#x200B;はアプリケーションサーバーのポート番号です）
 
 1. 次のデフォルトのユーザー名とパスワードを使用してログインします。
 
@@ -41,4 +40,3 @@ ht-degree: 93%
 >[!NOTE]
 >
 >証明書の有効期限は、設定／Trust Store の管理を選択し、管理コンソールのローカル秘密鍵証明書ページの「有効期限」で確認することもできます。
-
