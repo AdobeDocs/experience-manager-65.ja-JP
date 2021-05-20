@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9a8b4e3a-f416-4dc6-a90a-9018df5c844e
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1044'
 ht-degree: 96%
 
 ---
-
 
 # ワークマネージャーとスロットリング{#work-manager-and-throttling}
 
@@ -82,12 +81,12 @@ AEM forms 管理者は、ヘルスモニターを使用してワークマネー�
 **JBoss への Java オプションの追加**
 
 1. JBoss アプリケーションサーバーを停止します。
-1. *[appserver root]*/bin/run.bat(Windows)またはrun.sh（LinuxまたはUNIX）をエディターで開き、必要に応じて`-Dproperty=value`の形式でJavaオプションを追加します。
+1. *[appserver root]*/bin/run.bat(Windows)またはrun.sh（LinuxまたはUNIX）をエディターで開き、必要に応じて`-Dproperty=value`形式でJavaオプションを追加します。
 1. サーバーを再起動します。
 
 **WebLogic への Java オプションの追加**
 
-1. Webブラウザーに`https://[host name]:[port]/console`と入力して、WebLogic管理コンソールを開始します。
+1. Webブラウザーに「 `https://[host name]:[port]/console` 」と入力して、WebLogic管理コンソールを起動します。
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
@@ -106,4 +105,3 @@ AEM forms 管理者は、ヘルスモニターを使用してワークマネー�
 1. 「Additional Properties」で、「Java Virtual Machine」をクリックします。
 1. 「Generic JVM arguments」ボックスに、必要な引数を入力します。
 1. 「OK」または「Apply」をクリックし、「Save directly to the master configuration」をクリックします。
-
