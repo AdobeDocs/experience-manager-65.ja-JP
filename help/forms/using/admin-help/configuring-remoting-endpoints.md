@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: aab9d622-d76b-4100-9ca6-e5b86f543381
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 891d7d75-555a-46c6-a8a0-d5238b48bc79
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 67%
 
 ---
-
 
 # リモートエンドポイントの設定 {#configuring-remoting-endpoints}
 
@@ -24,4 +23,4 @@ ht-degree: 67%
 
 ## リモートエンドポイントの設定  {#remoting-endpoint-settings}
 
-**Flexクライアント認証方式：呼び出されたサービスがセキュリティが有効な場合に、サーバーがクライアントに返す応答の種類を** 決定します。呼び出された操作では匿名呼び出しがサポートされず、クライアントは無効または無効な資格情報を渡します。
+**Flex Client Authentication Method:** 呼び出されたサービスのセキュリティが有効になっていて、呼び出された操作で匿名の呼び出しがサポートされず、クライアントが無効または無効な資格情報を渡す場合に、サーバーがクライアントに返す応答のタイプを決定します。
