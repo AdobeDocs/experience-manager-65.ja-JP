@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
-translation-type: tm+mt
-source-git-commit: a876a1a8d4aeb9e9a94c93a16742a4058307b0a8
+exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 90%
 
 ---
-
 
 # アプリのテンプレートとコンポーネント{#app-templates-and-components}
 
@@ -33,7 +32,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->CRXDE Liteを使用したAEMアプリケーションの開発方法については、[CRXDE Liteを使用した開発](/help/sites-developing/developing-with-crxde-lite.md)を参照してください。
+>CRXDE Liteを使用したAEMアプリケーションの開発方法については、[CRXDE Liteによる開発](/help/sites-developing/developing-with-crxde-lite.md)を参照してください。
 
 テンプレートはページの基礎です。
 
@@ -62,13 +61,11 @@ ht-degree: 90%
 >AEM におけるテンプレートとコンポーネントの基礎については、以下のリソースを参照してください。
 >
 >* [テンプレート](/help/sites-developing/templates.md)
->* [コンポーネント](/help/sites-developing/components.md)
-
->
+* [コンポーネント](/help/sites-developing/components.md)
 
 
 
-テンプレートとコンポーネントの基本的な理解ができたら、次のリソースを参照してください。
+テンプレートとコンポーネントについての基本的な知識が得られたら、次のリソースを参照してください。
 
 * [テンプレートとコンポーネントの作成および追加](/help/mobile/mobile-ondemand-app-templates.md)
 * [コンテンツのプロパティを使用したコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
@@ -77,8 +74,7 @@ ht-degree: 90%
 
 ### その他のリソース {#additional-resources}
 
-モバイルアプリに関するその他のトピックについては、以下のリンクを参照してください。
+モバイルアプリに関する追加トピックについては、以下のリンクを参照してください。
 
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
 * [モバイルアプリのテスト](/help/mobile/develop-mobile-apps-testing.md)
-
