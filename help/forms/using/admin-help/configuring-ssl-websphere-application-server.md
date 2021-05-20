@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7c0efcb3-5b07-4090-9119-b7318c8b7980
-translation-type: tm+mt
-source-git-commit: 998a127ce00c6cbb3db3a81d8a89d97ab9ef7469
+exl-id: b0786b52-879e-4a24-9cc9-bd9dcb2473cc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 96%
 
 ---
-
 
 # WebSphere Application Server に対する SSL の設定 {#configuring-ssl-for-websphere-application-server}
 
@@ -84,7 +83,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
 1. WebSphere 管理コンソールで「**Security／Global Security**」を選択します。
 1. 「**Security Configuration Wizard**」をクリックします。
-1. 「**Enable Application Security**」チェックボックスが有効になっていることを確認します。「**Next**」をクリックします。
+1. 「**Enable Application Security**」チェックボックスが有効になっていることを確認します。「**次へ**」をクリックします。
 1. **Federated Repositories** を選択し、「**Next**」をクリックします。
 1. 設定する資格情報を指定し、「**Next**」をクリックします。
 1. 「**Finish**」をクリックします。
@@ -159,7 +158,7 @@ https で始まる URL を変換するには、その URL の署名者証明書�
 
 ## 動的ポートの設定  {#configuring-dynamic-ports}
 
-IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。恒久的な制限については、https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
+IBM WebSphere では、グローバルセキュリティが有効な場合、ORB.init() への複数の呼び出しは許可されません。永続的な制限については、 https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704を参照してください。
 
 動的ポートを設定し、問題を解決するには、次の手順を実行してください。
 
@@ -176,11 +175,10 @@ IBM WebSphere では、グローバルセキュリティが有効な場合、ORB
 ## sling.properties ファイルを構成します。{#configure-the-sling-properties-file}
 
 1. `[aem-forms_root]`\crx-repository\launchpad\sling.propertiesファイルを開いて編集します。
-1. `sling.bootdelegation.ibm`プロパティを探し、`com.ibm.websphere.ssl.*`を値フィールドに追加します。 更新されたフィールドは次のようになります。
+1. `sling.bootdelegation.ibm`プロパティを探し、値フィールドに`com.ibm.websphere.ssl.*`を追加します。 更新されたフィールドは次のようになります。
 
    ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
    ```
 
 1. ファイルを保存し、サーバーを再起動します。
-
