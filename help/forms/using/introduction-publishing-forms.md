@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 9f1beb89-8eb1-4e37-a5e8-19752b21374a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 5831c173114a5a6f741e0721b55d85a583e52f78
+exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 60%
 
 ---
-
 
 # ポータル上のフォーム発行の概要{#introduction-to-publishing-forms-on-a-portal}
 
@@ -59,25 +58,25 @@ Search &amp; Lister コンポーネントはフォーム作成者によって発
 
 Link コンポーネントでは、ページ上の任意の場所にあるフォームへのリンクを作成できます。トレーニングプログラムを提供し、ユーザーがフォームを送信してトレーニングに登録できるようにするシナリオを検討します。お客様は当社の Web サイトに、プログラムの詳細を投稿しました。次に示す詳細に、登録フォームへのリンクを記述しています。Link コンポーネントはリンクの作成に役立ちます。
 
-## Formsポータルのワークフロー{#forms-portal-workflow}
+## Forms Portalのワークフロー{#forms-portal-workflow}
 
-Formsポータルでは、フォームリポジトリからポータルページにフォームをリストできます。 また、検索条件を指定することにより、ポータルユーザーがフォームの一覧から検索できるようにします。ドラフトと送信コンポーネントを使用して、後で完了し、送信されたフォームを完成させるためにドラフトとして保存されたフォームを表示することもできます。 これらの機能をサイトページで使用するには、あらかじめ特定の操作を行う必要があります。 リストに表示された順序で手順を実行し、コンポーネントとそれぞれの機能をサイトページで使用できるようにします。
+Forms portalを使用すると、フォームリポジトリからポータルページにフォームをリストできます。 また、検索条件を指定することにより、ポータルユーザーがフォームの一覧から検索できるようにします。また、ドラフトと送信コンポーネントを使用して、後でフォームや送信済みフォームを完了するためにドラフトとして保存されたフォームを表示することもできます。 これらの機能をサイトページで使用するには、特定の操作を実行する必要があります。 次の手順を実行して、サイトページでコンポーネントと各機能を使用できるようにします。
 
-1. **Formsポータルコンポーネントを有効にする**:デフォルトでは、フォームポータルコンポーネントは使用できません。[AEM SitesページのAEM ](/help/forms/using/enabling-forms-portal-components.md) sidekickのコンポーネントを有効にします。
-1. **ページ上のリストフォーム（フォームポータルページを作成）:AEM Sitesページ** とAEM以外のサイトページの両方でフォームをリストできます。リストには、発行インスタンスで使用できるフォームが含まれます。 ユーザーは、フォームを開いて入力した開始を表示できます。 ユーザーがフォームを開くたびに、フォームの新しいインスタンスが作成されます。
+1. **Forms Portalコンポーネントの有効化**:フォームポータルコンポーネントは、そのままでは使用できません。[AEM SitesページのAEMサイドキッ](/help/forms/using/enabling-forms-portal-components.md) クからコンポーネントを有効にします。
+1. **ページ上のフォームを一覧表示する（フォームポータルページを作成する）:** AEM Sitesページと非AEM Siteページの両方でフォームを一覧表示できます。このリストには、パブリッシュインスタンスで使用できるフォームが含まれます。 ユーザーはフォームを開いて、入力を開始できます。 ユーザーがフォームを開くたびに、フォームの新しいインスタンスが作成されます。
 
-   1. **AEM Sitesページのリストフォーム**:ペ追加ージ上の **[リストフォームに対しては、「](../../forms/using/creating-form-portal-page.md)** Search &amp;  **[Lister」コンポーネントを設定し、そのページ内のリスト](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** パネルを設定します。&lt;a0追加/>検索ペイン&#x200B;**コンポーネントを** Search &amp; Lister **コンポーネントにも設定し、ページに検索機能を追加します。**&#x200B;フォームポータルコンポーネントを含むページは、[フォームポータルページ](../../forms/using/creating-form-portal-page.md)と呼ばれます。
+   1. **AEM Sitesページ上のフォームのリスト**:ページに検 **[索とリス](../../forms/using/creating-form-portal-page.md)** ターコンポーネントを追加し、ページ上のフ **[ォームをリ](../../forms/using/creating-form-portal-page.md#p-list-pane-p)** ストするようにリストパネルを設定します。**検索ペイン**&#x200B;コンポーネントを&#x200B;**Search &amp; Lister**&#x200B;コンポーネントに追加し、ページに検索機能を追加するように設定します。 フォームポータルコンポーネントを含むページは、[フォームポータルページ](../../forms/using/creating-form-portal-page.md)と呼ばれます。
 
-   1. **AEM Sites以外のページ上のリストフォーム：フ** ォームポータル検索 [](/help/forms/using/listing-forms-webpage-using-apis.md) APIを使用して、AEM Sites以外のページ上のクエリ、取得、リストフォームを利用できます。
+   1. **AEM Sites以外のページ上のフォームを一覧表示する：** フォームポータル検索APIを使用し [](/help/forms/using/listing-forms-webpage-using-apis.md) て、AEM Sites以外のページ上のフォームのクエリ、取得、およびリストを行います。
 
-1. **フォームポータルページ上のリストドラフトおよび送信済みフォーム**:フォームポータルページ追加のドラフトと送信コンポーネントを設定します。コンポーネントは、ドラフト状態のすべてのフォームと、既に送信済みのフォームをリストします。
+1. **フォームポータルページにドラフトフォームと送信済みフォームを一覧表示する**:フォームポータルページに「ドラフトと送信」コンポーネントを追加し、設定します。コンポーネントには、ドラフト状態のすべてのフォームと、既に送信済みのフォームが一覧表示されます。
 
-   送信されたアダプティブフォームを「送信」タブに表示できるようにするには、**送信アクション**&#x200B;を&#x200B;**[Formsポータル送信アクション](configuring-submit-actions.md)に設定します。** または、「Formsポータル送信」オプションを有効にします。ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
+   送信済みのアダプティブフォームを「送信」タブに表示するには、「送信アクション&#x200B;**」を「**[ Forms Portal送信アクション](configuring-submit-actions.md)」に設定します。**** または、「 Forms Portal送信」オプションを有効にします。ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
 
-1. **ドラフトおよび送信済みのフォームデータのストレージの設定：** デフォルトでは、ドラフトと送信データはAEMリポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。[データを安全な場所に保存するようにフォームポータルコンポーネントを設定します](../../forms/using/draft-submission-component.md#customizing-the-storage)。
-1. **（オプション）フォームポータルコンポーネントのカスタマイズ：フォームポータルページテンプレートの** [カスタマイズにより、コンポー](../../forms/using/customizing-templates-forms-portal-components.md) ネントに独特の外観を与えます。
-1. **（オプション）フォーム追加のカスタムメタデータ：フォームのカスタムメタデータ追加を使用して、リストと検索の** [](../../forms/using/customizing-templates-forms-portal-components.md) 操作性を向上させます。
-1. **フォームポータルページを発行：** フォームポータルページの準備が整いました。ページを公開します。
+1. **ドラフトおよび送信済みフォームデータのストレージを設定：** デフォルトでは、ドラフトおよび送信データはAEMリポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。[安全な場所にデータを保存するようにフォームポータルコンポーネントを設定します](../../forms/using/draft-submission-component.md#customizing-the-storage)。
+1. **（オプション）フォームポータルコンポーネントのカスタマイズ：** [コンポーネントに独特な外観を与えるた](../../forms/using/customizing-templates-forms-portal-components.md) めに、フォームポータルページテンプレートをカスタマイズします。
+1. **（オプション）フォームへのカスタムメタデータの追加：** [フォームへのカスタムメ](../../forms/using/customizing-templates-forms-portal-components.md) タデータの追加により、リストと検索の操作性が向上します。
+1. **フォームポータルページを発行します。** フォームポータルページの準備が整いました。ページを公開します。
 
 ## 関連記事 {#related-articles}
 
@@ -85,8 +84,7 @@ Formsポータルでは、フォームリポジトリからポータルページ
 * [フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](../../forms/using/draft-submission-component.md)
-* [ドラフトと送信済みフォームのストレージのカスタマイズ](../../forms/using/draft-submission-component.md#customizing-the-storage)
+* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](../../forms/using/draft-submission-component.md#customizing-the-storage)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](../../forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](../../forms/using/introduction-publishing-forms.md)
-
