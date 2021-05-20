@@ -8,15 +8,14 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
-feature: Mobile Forms
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 'モバイルフォーム '
+exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '347'
+ht-degree: 71%
 
 ---
-
 
 # HTML5 フォーム向けのスクリーンリーダー {#screen-readers-for-html-forms}
 
@@ -33,9 +32,9 @@ HTML5 フォームは既知の例外を含むアクセシビリティのリハ�
 * Microsoft Windows の JAWS 14.0
 * Mac OS X と iPad の VoiceOver
 
-### JAWS  {#jaws}
+### JAWS {#jaws}
 
-すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWSの使用について詳しくは、[https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp)を参照してください。
+すべてのデフォルトのキーストロークとショートカットは HTML5 フォームで機能します。JAWSの使用に関する詳細は、[https://www.freedomscientific.com/jaws-hq.asp](https://www.freedomscientific.com/jaws-hq.asp)を参照してください。
 
 ### VoiceOver {#voiceover}
 
@@ -43,7 +42,7 @@ HTML5 フォームは VoiceOver のすべてのデフォルトのキーストロ
 
 ## 既知の問題 {#known-issues}
 
-* **（Internal Explorer 9のみ）HTML5フォーム** では、ページはオンデマンドで（動的に）読み込まれます。オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーがタブを押すと、フォーカスを次のページの最初のフィールドに設定する代わりに、フォームの最初のページの最初のフィールドに戻ります。
+* **（Internal Explorer 9のみ）** HTML5フォームでは、ページはオンデマンドで（動的に）読み込まれます。オンデマンドのページ読み込みは、スクリーンリーダーの機能で問題が生じます。スクリーンリーダーのフォーカスがページの最後のフィールドにあり、ユーザーがタブを押すと、次のページの最初のフィールドにフォーカスを設定する代わりに、フォームの最初のページの最初のフィールドにフォーカスが戻ります。
 * **（Internal Explorer 9 のみ）** HTML5 フォームの日付選択のコントロールはキーボードで完全にアクセスできません。日付選択のコントロールで、上向き／下向き矢印キーを複数回押した場合、日付選択のコントロールが閉じて、フォーカスが次／最後のフィールドに移動します。 
 
 * VoiceOver は、iPad safari では日付ウィジェットで矢印キーを検出できません。
