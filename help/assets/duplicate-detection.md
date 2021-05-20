@@ -1,23 +1,22 @@
 ---
 title: 重複アセットの検出の有効化
-description: Experience Manager内の重複アセットを検出できるようにする方法を説明します。
+description: 重複アセットの検出を有効にする方法をExperience Managerします。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Asset Management,Asset Reports
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+feature: アセット管理、アセットレポート
+exl-id: a403d60e-2193-4835-8f37-4a40f2d01819
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 23%
+source-wordcount: '161'
+ht-degree: 21%
 
 ---
 
-
 # 重複アセットの検出の有効化 {#enable-detection-of-duplicate-assets}
 
-[!DNL Adobe Experience Manager Assets]に存在するアセットをアップロードしようとすると、重複検出機能によって重複と認識されます。 重複項目の検出はデフォルトで無効になっています。この機能を有効にするには、次の手順を実行します。
+[!DNL Adobe Experience Manager Assets]に存在するアセットをアップロードしようとすると、重複の検出機能によって重複と見なされます。 重複項目の検出はデフォルトで無効になっています。この機能を有効にするには、次の手順を実行します。
 
-1. [!DNL Experience Manager]にアクセスして`https://[aem_server]:[port]/system/console/configMgr` Webコンソール設定ページを開きます。
+1. `https://[aem_server]:[port]/system/console/configMgr`にアクセスして、[!DNL Experience Manager] Webコンソール設定ページを開きます。
 1. サーブレット&#x200B;**[!UICONTROL Day CQ DAM Create Asset]**&#x200B;の設定を編集します。
 1. 「**[!UICONTROL 重複を検出]**」オプションを選択し、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -25,9 +24,9 @@ ht-degree: 23%
 
    *図：サーブレットで「重複を検出」オプションを選択します。*
 
-検出重複機能が[!DNL Assets]で有効になりました。 ユーザーが[!DNL Experience Manager]に存在するアセットをアップロードしようとすると、システムは競合がないかどうかを確認し、それを示します。 アセットは、`jcr:content/metadata/dam:sha1`に保存されているSHA-1ハッシュを使用して識別されます。つまり、ファイル名に関係なく、重複アセットが検出されます。
+重複の検出機能が[!DNL Assets]で有効になりました。 ユーザーが[!DNL Experience Manager]に存在するアセットをアップロードしようとすると、競合がないかどうかがチェックされ、その旨が示されます。 アセットは、`jcr:content/metadata/dam:sha1`に保存されているSHA-1ハッシュを使用して識別されます。つまり、重複するアセットは、ファイル名に関係なく検出されます。
 
 >[!MORELIKETHIS]
 >
->* [既存のリポジトリの重複アセット（コミュニティメンバーのチュートリアル）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
+>* [既存のリポジトリ内のアセットの複製（コミュニティメンバーのチュートリアル）](https://experience-aem.blogspot.com/2019/06/aem-65-find-duplicate-assets-binaries-in-existing-repository.html)
 
