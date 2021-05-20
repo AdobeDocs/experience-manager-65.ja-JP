@@ -10,14 +10,13 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8714b456-527a-457b-82c4-21bd445dfd9c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: d98bcbe4-3f80-49ec-b40c-417be0d97350
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 64%
 
 ---
-
 
 # アクティビティストリームの基本事項 {#activity-stream-essentials}
 
@@ -27,9 +26,9 @@ ht-degree: 64%
 
 どの[コミュニティサイト](/help/communities/overview.md#communitiessites)にも、サインインしているメンバーのユーザープロファイルページが用意されており、メンバーのアクティビティが同じ形式で表示されます。
 
-## 概念 {#concepts}
+## 概念  {#concepts}
 
-*アクティビティストリーム*&#x200B;は、アクティビティや最近のアクティビティのリストが、フォーラムトピックやブログなどのコンテンツの単一のスレッドに対して行った最近ののリストです。
+*アクティビティストリーム*&#x200B;は、フォーラムトピックやブログなどのコンテンツの単一のスレッド上でメンバーが実行した最近のアクティビティのリストまたは最近のアクティビティのリストです。
 
 メンバーは、別の個人やコンテンツをフォローすることによって、アクティビティストリームをフォローできます。
 
@@ -47,7 +46,7 @@ ht-degree: 64%
   </tr>
   <tr>
    <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -70,7 +69,7 @@ ht-degree: 64%
 
 * [クライアント側のカスタマイズ](/help/communities/client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [アクティビティストリーム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/activitystreams/api/package-frame.html)
 
@@ -78,6 +77,6 @@ ht-degree: 64%
 
 * [サーバー側のカスタマイズ](/help/communities/server-customize.md)
 
-### アクティビティストリーム機能  {#activity-stream-function}
+### アクティビティストリーム機能 {#activity-stream-function}
 
-[アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)を含むコミュニティサイト構造は、構成された`activity streams`コンポーネントを含みます。
+[アクティビティストリーム機能](/help/communities/functions.md#activity-stream-function)を含むコミュニティサイト構造には、設定済みの`activity streams`コンポーネントが含まれます。
