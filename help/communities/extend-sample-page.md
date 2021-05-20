@@ -10,28 +10,27 @@ topic-tags: developing
 content-type: reference
 discoiquuid: a5040371-3bc2-43bc-a103-7175c4c6252d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: d38395b8f845686492a26329bb732a41f79c85c4
+exl-id: d4295a77-b931-4bc8-b3b4-eec42fdcfc56
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 55%
 
 ---
 
-
 # サンプルページへのコメントの追加   {#add-comment-to-sample-page}
 
-カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ(/apps)に配置されたので、拡張コンポーネントを使用できます。 影響を受けるWebサイト内のコメントシステムのインスタンスでは、そのresourceTypeをカスタムコメントシステムに設定し、必要なすべてのクライアントライブラリを含める必要があります。
+カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ(/apps)に配置されたので、拡張コンポーネントを使用できます。 影響を受けるWebサイト内のコメントシステムのインスタンスでは、そのresourceTypeをカスタムコメントシステムに設定し、必要なクライアントライブラリをすべて含める必要があります。
 
 ## 必要な clientlib の識別 {#identify-required-clientlibs}
 
 デフォルトのコメントのスタイルと機能に必要なクライアントライブラリは、拡張されたコメントにも必要です。
 
-[コミュニティコンポーネントガイド](/help/communities/components-guide.md)は、必要なクライアントライブラリを特定します。 コンポーネントガイドを参照し、コメントコンポーネントの表示を表示します。例：
+[コミュニティコンポーネントガイド](/help/communities/components-guide.md)は、必要なクライアントライブラリを特定します。 コンポーネントガイドを参照し、コメントコンポーネントを表示します。次に例を示します。
 
 [https://localhost:4502/content/community-components/en/comments.html](https://localhost:4502/content/community-components/en/comments.html)
 
-コメントの正常なレンダリングと機能のためには、3 つのクライアントライブラリが必要です。拡張コメントが参照されている場所と、[拡張コメントのクライアントライブラリ](/help/communities/extend-create-components.md#create-a-client-library-folder) ( `apps.custom.comments`)を含める必要があります。
+コメントの正常なレンダリングと機能のためには、3 つのクライアントライブラリが必要です。拡張コメントが参照される場所と、[拡張コメントのクライアントライブラリ](/help/communities/extend-create-components.md#create-a-client-library-folder)(`apps.custom.comments`)を含める必要があります。
 
 ![comments-component1](assets/comments-component1.png)
 
@@ -53,7 +52,7 @@ ht-degree: 55%
 
 #### オーサー環境：サンプルページでのコメントノード {#author-sample-page-comments-node}
 
-CRXDEのresourceTypeは、`/content/sites/sample/en/jcr:content/content/primary/comments`にあるサンプルページのcommentsノードのプロパティを確認することで確認できます。
+CRXDEでresourceTypeを確認するには、`/content/sites/sample/en/jcr:content/content/primary/comments`にあるサンプルページのcommentsノードのプロパティを確認します。
 
 ![verify-comment-crxde](assets/verify-comment-crxde.png)
 
@@ -63,9 +62,9 @@ CRXDEのresourceTypeは、`/content/sites/sample/en/jcr:content/content/primary/
 
 #### パブリッシュ環境：サンプルページでの Alt Comment {#publish-alt-comment-on-sample-page}
 
-カスタムアプリとサンプルページの両方を公開した後に、コメントを入力できます。 [デモユーザー](/help/communities/tutorials.md#demo-users)または管理者と共にログインすると、コメントを投稿できます。
+カスタムアプリケーションとサンプルページの両方を公開した後に、コメントを入力できます。 [デモユーザー](/help/communities/tutorials.md#demo-users)または管理者を使用してサインインすると、コメントを投稿できます。
 
-aaron.mcdonald@mailinator.comコメントの投稿を次に示します。
+aaron.mcdonald@mailinator.comはコメントを投稿しています。
 
 ![publish-alt-comment](assets/publish-alt-comment.png)
 
