@@ -9,21 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 8990b422-f4f6-4080-871a-33cdf7ca6455
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 21623c615ebe69226cfaf84baf4cfb1717b449f4
+exl-id: d080932f-d5fb-482d-9329-62da5df10362
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 84%
 
 ---
 
-
 # AEM Forms Workspace に Microsoft Office SharePoint Server を統合する{#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
 **- 要件**
 
-**必要な**
-知識SharePoint ServerにAEM Formsワークスペースを追加する前に、適切な権限を持つSharePoint Serverにアクセスでき、WorkspaceにアクセスするURLを知っている必要があります。以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
+**前提**
+条件の知識AEM Forms WorkspaceをSharePoint Serverに追加する前に、適切な権限を持つSharePoint Serverにアクセスでき、WorkspaceにアクセスするURLを知っている必要があります。以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の Web パーツの詳細については、「Windows SharePoint Services 内の Webパーツ」を参照してください。
 
 **ユーザレベル**&#x200B;初心者
 
@@ -37,14 +36,14 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 
 次の手順を実行して、AEM Forms Workspace を Web パーツに統合します。
 
-1. Webブラウザで、`https://[myMOSSserver]:44299/default.aspx`などのSharePointサイトに移動します。`[myMOSSserver]`はSharePointサーバーの名前またはIPアドレスです。
+1. Webブラウザで、SharePointサイト（例：`https://[myMOSSserver]:44299/default.aspx`。`[myMOSSserver]`はSharePointサーバーの名前またはIPアドレス）に移動します。
 
    >[!NOTE]
    >
    >SharePoint サーバーにおけるデフォルトのポート番号は 44299 です。ポート番号は、SharePoint Server のインストール構成によって異なります。
 
 1. Web ページの右上で「**サイトの操作**」をクリックし、「**ページの編集**」を選択します。
-1. **Webパーツ追加**&#x200B;ボタンをクリックします。
+1. 「**Webパーツを追加**」ボタンをクリックします。
 1. 「その他」の下に表示される「Web パーツの追加：Web ページダイアログ」のダイアログボックスで、「**ページビューアの Web パーツ**」を選択し、「**追加**」をクリックします。
 1. 「ページビューアの Web パーツ」ボックスで「**編集**」をクリックし、「**共有 Web パーツの変更**」を選択します。
 
@@ -58,7 +57,7 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 
 1. 「ページビューア」ページで、次のタスクを実行します。
 
-   1. 「リンク」ボックスに、AEM FormsワークスペースのURLを入力します(例：`https://[AEM_forms_Server]:8080/lc/ws`。`[AEM_forms_Server]`はAEM formsサーバーのIPアドレスまたは名前を表します)。
+   1. 「リンク」ボックスに、AEM Forms WorkspaceのURL（`https://[AEM_forms_Server]:8080/lc/ws`など）を入力します。`[AEM_forms_Server]`は、AEM formsサーバーのIPまたは名前を表します。
    1. 「**表示方法**」をクリックします。高さ、幅、およびタイトルを変更し、ワークスペースのユーザーインターフェイス全体が表示されるようにします。たとえば、高さと幅をそれぞれ 6 インチと 11 インチに設定することができます。
    1. 「**リンクのテスト**」をクリックします。新しい Web ブラウザのウィンドウが起動し、Workspace が表示されます。
    1. （オプション）「**Layout**」をクリックして、Web パーツ内のワークスペースレイアウトを変更します。
@@ -73,4 +72,3 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（たとえば、Mi
 ![Microsoft Office SharePoint Server を統合した AEM Forms Workspace](assets/aem-forms-workspace.jpg)
 
 図 2：Microsoft Office SharePoint Server を統合した AEM Forms Workspace
-
