@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 100%
 
 ---
-
 
 # マルチスレッドファイル変換の有効化 {#enabling-multi-threaded-file-conversions}
 
@@ -117,4 +116,3 @@ Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoi
 
 1. 管理コンソールで、サービス／PDF Generator／ユーザーアカウントをクリックします。
 1. ユーザー名をクリックし、新しいパスワードを入力して確認します。このパスワードは、ユーザーのシステムパスワードと同じものである必要があります。
-
