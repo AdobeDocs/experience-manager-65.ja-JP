@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '333'
 ht-degree: 93%
 
 ---
-
 
 # レスポンシブサイト用に最適化された画像の配信 {#delivering-optimized-images-for-a-responsive-site}
 
@@ -42,7 +41,7 @@ ht-degree: 93%
    >
    >「**[!UICONTROL URL]**」ボタンまたは「**[!UICONTROL RESS]**」ボタンを使用可能にするには、選択したアセット&#x200B;*と*&#x200B;選択した画像プリセットまたはビューアプリセットを公開する必要があります。
    >
-   >Dynamic Media — ハイブリッドモードでは、画像プリセットを公開する必要があります。Dynamic Media-Scene7モードは、画像プリセットを自動的に公開します。
+   >Dynamic Media — ハイブリッドモードでは、画像プリセットを公開する必要があります。Dynamic Media - Scene7モードでは、画像プリセットが自動的に公開されます。
 
 1. 「**[!UICONTROL RESS]**」をタップします。
 
