@@ -8,7 +8,6 @@ contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '2329'
@@ -34,7 +33,7 @@ ht-degree: 82%
 >
 >[API に関するドキュメント](/help/commerce/cif-classic/developing/ecommerce.md#api-documentation)もお読みください。
 
-統合レイヤーを使用するために、標準搭載の多数のAEMコンポーネントが提供されています。 現時点では、以下のようなものがあります。
+統合レイヤーを使用するために、すぐに使用できるAEMコンポーネントが多数用意されています。 現時点では、以下のようなものがあります。
 
 * 製品表示コンポーネント
 * 買い物かご
@@ -50,14 +49,14 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEMでは、`CommerceService`と`Product`の`Resource.adaptTo()`をサポートしています
+* AEMは`CommerceService`と`Product`の`Resource.adaptTo()`をサポートします
 
    * `adaptTo`実装は、リソースの階層で`cq:commerceProvider`プロパティを探します。
 
       * 見つかった場合は、その値を使用してコマースサービスの検索をフィルタリングします。
 
       * 見つからなかった場合は、最上位のコマースサービスが使用されます。
-   * `cq:Commerce`ミックスインを使用して、`cq:commerceProvider`を厳密に型指定されたリソースに追加できます。
+   * `cq:Commerce` mixinを使用して、強く型指定されたリソースに`cq:commerceProvider`を追加できます。
 
 
 * 適切なコマースファクトリ定義を参照するために、`cq:commerceProvider` プロパティも使用されます。
@@ -102,17 +101,17 @@ e コマースフレームワークは任意の e コマースソリューショ
 
 ### hybris 4 向けの開発 {#developing-for-hybris}
 
-Hybris 4との後方互換性を維持しつつ、Hybris 5をサポートするようにeCommerce Integration Frameworkのhybris拡張が更新されました。
+eコマース統合フレームワークのhybris拡張が更新され、Hybris 4との後方互換性を維持しながら、Hybris 5をサポートするようになりました。
 
 コード内のデフォルト設定は hybris 5 向けに最適化されています。
 
 hybris 4 向けの開発をおこなうには、以下が必要です。
 
-* Mavenを呼び出すときに、次のコマンドライン引数をコマンドに追加します
+* Mavenを呼び出す場合は、次のコマンドライン引数をコマンドに追加します。
 
    `-P hybris4`
 
-   事前に設定されたHybris 4配布物をダウンロードし、バンドル`cq-commerce-hybris-server`に埋め込みます。
+   事前設定済みのHybris 4ディストリビューションをダウンロードし、バンドル`cq-commerce-hybris-server`に埋め込みます。
 
 * OSGi 設定マネージャーで、
 
@@ -128,19 +127,19 @@ hybris では、顧客の買い物かごなどの情報を格納するために�
 
 * その応答からセッション cookie が抽出され、新しい cookie 内でエンコードされ（例えば `hybris-session-rest`）、買い物客への応答に設定されます。新しい cookie 内でエンコーディングが必要なのは、元の cookie は特定のパスでのみ有効であり、そうしないと以降の要求でブラウザーから送り返されてこないからです。したがって、cookie の値にパス情報も追加する必要があります。
 
-* 以降のリクエストでは、cookieは`hybris-session-<*xxx*>` cookieからデコードされ、ハイブリスからデータをリクエストする際に使用されるHTTPクライアントに設定されます。
+* 以降のリクエストでは、Cookieが`hybris-session-<*xxx*>` Cookieからデコードされ、hybrisからデータをリクエストするために使用されるHTTPクライアントに設定されます。
 
 >[!NOTE]
 >
 >元のセッションが無効になっているときは、新しい匿名セッションが作成されます。
 
-#### CommerceSession  {#commercesession}
+#### CommerceSession {#commercesession}
 
 * このセッションは、**買い物かご**&#x200B;を「所有」します
 
    * 追加や削除などを実行します。
 
-   * は、買い物かごにさまざまな計算を行います。
+   * は、買い物かごに対して様々な計算を実行します。
 
       `commerceSession.getProductPrice(Product product)`
 
@@ -204,7 +203,7 @@ hybris で管理されている製品データを AEM で使用できるよう�
 
 ### アーキテクチャ {#architecture}
 
-#### 製品とバリアントのアーキテクチャ {#architecture-of-product-and-variants}
+#### 製品とバリアントのアーキテクチャ  {#architecture-of-product-and-variants}
 
 1 つの製品に複数のバリエーションがある場合があります。例えば、カラーやサイズで異なるバリエーションがある場合があります。製品では、バリエーションを構成するプロパティを定義する必要があります。このようなプロパティをバリアント軸と呼びます。**
 
@@ -214,11 +213,11 @@ hybris で管理されている製品データを AEM で使用できるよう�
 
 製品／バリアントリソースは、実際の製品データを持つとは限らず、本当は別のシステム（hybris など）に格納されているデータの表現にすぎない場合があります。例えば、製品の説明や価格などは AEM には格納されておらず、e コマースエンジンからリアルタイムで取得されます。
 
-任意の製品リソースは`Product API`で表すことができます。 製品APIの呼び出しの多くはバリエーション固有です（バリエーションは親から共有値を継承する場合があります）が、バリエーションのセット（`getVariantAxes()`、`getVariants()`など）を呼び出すリストもあります。
+任意の製品リソースは`Product API`で表すことができます。 製品APIの呼び出しのほとんどはバリエーション固有です（バリエーションは親から共有値を継承する場合がありますが）が、バリエーションのセット（`getVariantAxes()`、`getVariants()`など）をリストする呼び出しもあります。
 
 >[!NOTE]
 >
->実際には`Product.getVariantAxes()`が返す値によってバリアント軸が決まります。
+>実際には、バリアント軸は`Product.getVariantAxes()`が返す値によって決まります。
 >* hybris ではこれを hybris 実装用に定義します。
 >
 >
@@ -227,22 +226,22 @@ hybris で管理されている製品データを AEM で使用できるよう�
 >1. `size`
    >
    >
-1. もう一度
+1. もう1つ
 >
 >
-この追加のバリアントは、Geometrixx Outdoors参照の`variationAxis`プロパティを介して選択されます（製品の場合は通常`color`）。
+この追加のバリアントは、製品参照の`variationAxis`プロパティを使用して選択します(Geometrixx Outdoorsの場合は通常`color`)。
 
 #### 製品リファレンスと製品データ {#product-references-and-product-data}
 
 一般的な手順は次のとおりです。
 
-* 製品データは`/etc`の下にあります
+* 製品データは`/etc`の下にあります。
 
-* および`/content`の下の製品参照を参照してください。
+* および製品参照は`/content`の下にあります。
 
 製品バリエーションと製品データノードの間には 1 対 1 のマッピングが必要です。
 
-製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品のバリエーションがS、M、Lの場合、製品データは次のようになります。
+製品リファレンスには、各バリエーションを表すノードも必要ですが、すべてのバリエーションを表す必要はありません。例えば、製品にS、M、Lのバリエーションがある場合、製品データは次のようになります。
 
 ```shell
 etc
@@ -263,7 +262,7 @@ content
 |     |──shirt-l
 ```
 
-最後に、製品データを使用するための要件はありません。カタログ内の参照の下に、すべての製品データを配置できます。しかし、すべての製品データを複製しない限り、実際には複数のカタログを持つことはできません。
+最後に、製品データを使用するための要件はありません。すべての製品データをカタログ内の参照の下に配置できます。しかし、実際にはすべての製品データを複製しない限り、複数のカタログを持つことはできません。
 
 **API**
 
@@ -346,7 +345,7 @@ public class AxisFilter implements VariantFilter {
 
       * リファレンス。製品データは他の場所に保存されています。
 
-         * 製品参照には`productData`プロパティが含まれ、これは製品データを指します（通常は`/etc/commerce/products`の下）。
+         * 製品参照には、製品データ（通常は`/etc/commerce/products`の下）を指す`productData`プロパティが含まれます。
 
          * 製品データは階層化されています。製品属性は、製品データノードの祖先から継承されます。
 
@@ -416,7 +415,7 @@ public class AxisFilter implements VariantFilter {
 * 買い物かごは、`CommerceSession:` によって管理されます。
 
    * `CommerceSession` は、追加や削除などを実行します。
-   * `CommerceSession`はまた、買い物かごに対してさまざまな計算を行います。&quot;
+   * `CommerceSession`は、買い物かごに対して様々な計算も実行します。&quot;
 
 * 買い物かごに直接関連はしませんが、`CommerceSession` はカタログの価格情報も提供する必要があります（価格を管理しているので）。
 
@@ -441,7 +440,7 @@ public class AxisFilter implements VariantFilter {
 **パーソナライゼーション**
 
 * パーソナライズは、常に [ClientContext](/help/sites-administering/client-context.md) から取得する必要があります。
-* 買い物かごのClientContext`/version/`は、すべての場合に作成されます。
+* 買い物かごのClientContext`/version/`は、次の場合に作成されます。
 
    * 製品は、`CommerceSession.addCartEntry()`メソッドを使用して追加する必要があります。
 
@@ -498,8 +497,8 @@ public class AxisFilter implements VariantFilter {
 * 価格は、品目と注文の詳細（重さや配送先住所など）に基づきます。
 * `CommerceSession` はすべての依存関係にアクセスするので、製品価格と同じ方法で扱うことができます。
 
-   * `CommerceSession`は送料を所有しています。
-   * `updateOrder(Map<String, Object> delta)`を使用して、配信の詳細を取得/更新できます。
+   * `CommerceSession`は出荷価格を所有しています。
+   * `updateOrder(Map<String, Object> delta)`
 
 >[!NOTE]
 >
@@ -507,7 +506,7 @@ public class AxisFilter implements VariantFilter {
 >
 > `yourProject/commerce/components/shippingpicker` の下）で、次の手順をおこないます。
 >
->* 基本的にこれは`foundation/components/form/radio`のコピーでも構いませんが、次の場合は`CommerceSession`へのコールバックがあります。
+>* 基本的には`foundation/components/form/radio`のコピーでもかまいませんが、次の場合は`CommerceSession`へのコールバックを使用します。
    >
    >
 * その方法が使用可能かどうかを確認する
@@ -564,11 +563,11 @@ AEM は様々な e コマースシステムと統合できます。これを実�
 
 * 認証
 
-   AEMは、*唯一*&#x200B;のWebフロントエンドであると推定され、*すべての*&#x200B;認証を実行します。
+   AEMは、*唯一の* Webフロントエンドであると推定され、*すべての*&#x200B;認証を実行します。
 
-* ハイブリスのアカウント
+* Hybrisのアカウント
 
-   AEMは、買い物客ごとにハイブリスで対応する（下位の）アカウントを作成します。 このアカウントのユーザ名はAEMのユーザ名と同じです。 暗号化されたランダムパスワードが自動生成され、暗号化された状態で AEM に保存されます。
+   AEMは、買い物客ごとに対応する（従属の）アカウントをhybrisに作成します。 このアカウントのユーザー名は、AEMユーザー名と同じです。 暗号化されたランダムパスワードが自動生成され、暗号化された状態で AEM に保存されます。
 
 #### 既存ユーザー {#pre-existing-users}
 
@@ -598,9 +597,9 @@ AEM フロントエンドは、既存の hybris 実装の前面に置くこと�
 
 既存の機能に基づいてカスタムの読み込みハンドラーを作成するには、次のようにします。
 
-* は`ImportHandler`インターフェイスを実装する必要があります
+* `ImportHandler`インターフェイスを実装する必要があります。
 
-* `DefaultImportHandler`を拡張できます。
+* は`DefaultImportHandler`を拡張できます。
 
 ```java
 /**
@@ -662,7 +661,7 @@ public interface ImportHandler {
 }
 ```
 
-カスタムハンドラーがインポーターで認識されるようにするには、0より大きい値を持つ`service.ranking`プロパティを指定する必要があります。例えば、
+カスタムハンドラーがインポーターに認識されるようにするには、0より大きい値を持つ`service.ranking`プロパティを指定する必要があります。例：
 
 ```java
 @Component
