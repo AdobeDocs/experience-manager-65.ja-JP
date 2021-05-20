@@ -6,7 +6,6 @@ seo-description: SAP Commerce Cloud を使用した e コマースのデプロ�
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
-translation-type: tm+mt
 source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '733'
@@ -20,7 +19,7 @@ ht-degree: 86%
 >
 >このページには hybris Web サイトへのリンクが含まれています。ページによっては、ログインアカウントが必要となる場合があります。
 
-## SAPCommerce Cloudを使用したeコマースの導入{#deploying-ecommerce-with-sap-commerce-cloud}
+## SAPCommerce Cloud{#deploying-ecommerce-with-sap-commerce-cloud}を使用したeコマースの導入
 
 >[!NOTE]
 >
@@ -30,18 +29,18 @@ ht-degree: 86%
 
 [必要な e コマースパッケージ](#packages-needed-for-ecommerce-with-hybris)をデプロイすると、e コマースフレームワークのすべての機能と共に、hybris 実装（デモカタログを含む）に付属する e コマース機能のリファレンス実装が提供されます。
 
-これは、Geometrixx Outdoorsサイトの英語（米国）分岐(`/content/geometrixx-outdoors/en_US`)で入手できます。
+これは、Geometrixx Outdoorsサイトの英語（米国）ブランチ(`/content/geometrixx-outdoors/en_US`)の下で使用できます。
 
 * [商品情報](#productinformationwithcolorvariants)（必要に応じてカラーバリエーション情報を含む）
 
 * [買い物かごコンテンツの概要](#shoppingcartcontentoverview)
 * [ユーザーのサインアップ](#customersignup)および[ユーザーのサインイン](#customersignin)
 
-* [hybris 管理コンソールへのアクセス](#accesstothehybrismanagementconsole)
+* [Access to the hybris management console](#accesstothehybrismanagementconsole)
 
-### 技術的要件 - hybris サーバー  {#technical-requirements-hybris-server}
+### 技術的要件 - hybris サーバー {#technical-requirements-hybris-server}
 
-eCommerce Integration Frameworkの傲慢な拡張は、Hybris 5 （デフォルト）をサポートするように更新されました。一方、[Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris)との後方互換性は維持されます。
+eコマース統合フレームワークのhybris拡張が更新され、[Hybris 4](/help/commerce/cif-classic/developing/sap-commerce-cloud.md#developing-for-hybris)との後方互換性を維持しながら、Hybris 5が（デフォルトで）サポートされるようになりました。
 
 >[!NOTE]
 >
@@ -57,7 +56,7 @@ eCommerce Integration Frameworkの傲慢な拡張は、Hybris 5 （デフォル�
 
 e コマース機能をインストールするには、以下が必要です。
 
-* お使いのHybrisサーバー
+* hybrisサーバー
 * AEM e コマースフレームワーク：
 
    * AEM の標準インストールの一部です。
@@ -71,7 +70,7 @@ e コマース機能をインストールするには、以下が必要です。
    * `cq-hybris-content-6.3.2`
    * hybris 固有の API 実装
    * `cq-geometrixx-hybris-content-6.3.2`
-   * おろかさの使い方を説明するための参考的な実装(`geometrixx-outdoors/en_US`)
+   * hybris ( `geometrixx-outdoors/en_US` )の使用を説明する参照実装
 
 ### hybris を使用した e コマースのインストール {#installation-of-ecommerce-with-hybris}
 
@@ -138,14 +137,14 @@ e コマース機能をインストールするには、以下が必要です。
    >
    >必要に応じて`Return`を押します。
 
-1. 以下のファイルを、抽出した傲慢さの配布のルートフォルダにダウンロードします。
+1. 次のファイルを、展開したhybris配布物のルートフォルダーにダウンロードします。
 
    ```
        <hybris-root-directory>
    ```
 
 
-   [ファイルを入手](/help/sites-deploying/assets/setup.groovy)
+[ファイルを入手](/help/sites-deploying/assets/setup.groovy)
 
    >[!NOTE]
    >
@@ -153,7 +152,7 @@ e コマース機能をインストールするには、以下が必要です。
 
    5.6.0 以降
 
-   [ファイルを入手](/help/sites-deploying/assets/setup-1.groovy)
+[ファイルを入手](/help/sites-deploying/assets/setup-1.groovy)
 
 1. コマンドラインから、次の操作を実行します。
 
@@ -201,12 +200,12 @@ e コマース機能をインストールするには、以下が必要です。
 
    次の資格情報を使用します。
    * ユーザー名：admin
-   * password:ニムダ
+   * パスワード：ニムダ
 
-1. サイドバーのナビゲーションから、**システム**&#x200B;と&#x200B;**ツール**&#x200B;を展開します。 次に、「**読み込み**」を選択して、**ウィザード : CSV の読み込み**&#x200B;ウィンドウを開きます。
+1. サイドバーナビゲーションから、**システム**&#x200B;と&#x200B;**ツール**&#x200B;を展開します。 次に、「**読み込み**」を選択して、**ウィザード : CSV の読み込み**&#x200B;ウィンドウを開きます。
 1. 「**設定**」タブで、次の読み込みファイルをアップロードします。********
 
-   [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
+[ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-export.csv)
 
 1. 「**ロケール設定**」を次のように設定します。
 
@@ -215,7 +214,7 @@ e コマース機能をインストールするには、以下が必要です。
 1. 「**リソース**」タブを開きます。
 1. 次のメディア Zip をアップロードします。********
 
-   [ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
+[ファイルを入手](/help/sites-deploying/assets/geometrixx-outdoors-images.zip)
 
 1. 「**開始**」をクリックして、指定したファイルを読み込みます。「**結果**」タブにログエントリが表示されます。
 
@@ -225,11 +224,11 @@ e コマース機能をインストールするには、以下が必要です。
 
 1. 次の読み込みファイルをアップロードします。********
 
-   [ファイルを入手](/help/sites-deploying/assets/base-store.csv)
+[ファイルを入手](/help/sites-deploying/assets/base-store.csv)
 
    hybris 5.7 の場合は、次の手順を使用してください。
 
-   [ファイルを入手](/help/sites-deploying/assets/base-store-5_7.csv)
+[ファイルを入手](/help/sites-deploying/assets/base-store-5_7.csv)
 
 1. 「**ロケール設定**」を次のように設定します。
 
