@@ -1,22 +1,21 @@
 ---
 title: システム情報サービス API
 seo-title: システム情報サービス API
-description: このドキュメントは、システム情報サービスが提供するAPIに関する詳細情報を提供します。
-seo-description: このドキュメントは、システム情報サービスが提供するAPIに関する詳細情報を提供します。
+description: このドキュメントでは、システム情報サービスが提供するAPIに関する詳細情報を提供します。
+seo-description: このドキュメントでは、システム情報サービスが提供するAPIに関する詳細情報を提供します。
 uuid: 7f624216-56e6-4d49-b9a1-3c9af045dabe
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/system_information_service
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 79fccce2-d090-4b50-9c58-3f2a00e651b2
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 4da96c8f-8bd0-4cad-9087-18e324f084e7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 69%
 
 ---
-
 
 # システム情報サービス API {#system-information-service-apis}
 
@@ -33,37 +32,37 @@ ht-degree: 69%
  <tbody>
   <tr>
    <td><p>SystemInfo.properties</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/SystemInfo.properties`</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties'</p></td>
    <td><p>この API は <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API のラッパーです。それは現在の作業環境の設定を取得します。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.envVar</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.envVar</p></td>
    <td><p>ホストのオペレーティングシステムにおけるすべての環境変数を取得します。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.logs</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.logs</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.logs</p></td>
    <td><p>アプリケーションのサーバーログを含む zip ファイルをダウンロードします。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.config</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.config</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.config</p></td>
    <td><p>config.xml ファイルのすべてのコンテンツを取得します。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.services</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.services</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.services</p></td>
    <td><p>AEM Forms サービスのステータスと設定パラメーターを取得します。</p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.vitalDetails</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.vitalDetails</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.vitalDetails</p></td>
    <td><p>サーバー稼働時間、JVM 引数、システムメモリ、ヒープサイズ、オペレーティングシステム名、アクティブなスレッド数、およびスレッド数を取得します。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.coreSettings</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.coreSettings</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.coreSettings</p></td>
    <td><p>次のプロパティの値を取得します。</p>
     <ul>
      <li><p>AdobeTempDir</p></li>
@@ -82,22 +81,22 @@ ht-degree: 69%
   </tr>
   <tr>
    <td><p>SystemInfo.database</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.database</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.database</p></td>
    <td><p>データベースに関する詳細を取得します。</p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.licenseInfo</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.licenseInfo</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.licenseInfo</p></td>
    <td><p>インストールされている AEM Forms コンポーネントのバージョンとライセンス情報を取得します。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfNo.serverConfig</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.serverConfig</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.serverConfig</p></td>
    <td><p>ホストのアプリケーションサーバーの設定ファイルをダウンロードします。 </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.threads?delay=[n]&amp;iterations=[n]</p></td>
    <td><p>アクティブなスレッドの数とスタックトレースを取得します。次のパラメーターを受け取ります。</p>
     <ul>
      <li><p>iterations= [n]: 繰り返し回数を指定します。n を数字と置き換えます。 </p></li>
@@ -106,9 +105,8 @@ ht-degree: 69%
   </tr>
   <tr>
    <td><p>SystemInfo.info</p></td>
-   <td><p>https://'[サーバー]:[ポート]'/rest/services/ SystemInfo.info</p></td>
+   <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.info</p></td>
    <td><p>この API はすべてのシステム情報サービス API のラッパーです。内部的に、それはすべてのシステム情報 API を実行し、情報を zip 形式でダウンロードします。 </p><p><i><strong>注意</strong>：SystemInfo.info はアクティブなスレッドの数とスタックトレースを提供しません。 </i></p></td>
   </tr>
  </tbody>
 </table>
-
