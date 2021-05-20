@@ -1,25 +1,24 @@
 ---
 title: リファレンステーマ
 seo-title: リファレンステーマ
-description: AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供しています。
-seo-description: AEM Formsは、ソフトウェアの配布から取得し、フォームのスタイル設定に使用できるアダプティブフォームテーマを提供しています。
+description: AEM Formsは、アダプティブフォームのテーマを提供し、ソフトウェア配布から取得して、フォームのスタイルを設定します。
+seo-description: AEM Formsは、アダプティブフォームのテーマを提供し、ソフトウェア配布から取得して、フォームのスタイルを設定します。
 uuid: 3c6bd309-aa5a-4953-91ed-25ed5ba5671a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a69d3787-8149-4bca-835d-aeecfb11702b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1dfc8fa91d3e5ae8ca49cf1f3cb739b59feb18cf
+exl-id: f6c24894-c322-4c44-b001-8978954d6e53
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 75%
 
 ---
 
-
 # リファレンステーマ{#reference-themes}
 
-[テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM-FORMS-REFERENCE-テーマ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)パッケージをインストールすると、次のテーマが得られます。
+[テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM-FORMS-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)パッケージをインストールすることで、次のテーマを取得できます。
 
 * Beryl
 * Exec
@@ -36,11 +35,11 @@ ht-degree: 75%
 
 このパッケージに含まれるテーマはレスポンシブで、これらのテーマ内のスタイルはモバイルおよびデスクトップ表示用として定義されています。様々なデバイス上のほとんどの最新のブラウザーは、これらのテーマのいずれかが適用されたフォームを問題なくレンダリングできます。
 
-パッケージのインストールについて詳しくは、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
+パッケージのインストールについて詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 
-## Beryl {#beryl}
+## ベリル {#beryl}
 
-Beryl テーマは、We.Gov アダプティブフォームで使用され、背景画像、透明度および大きくてフラットなアイコンの使用を強調します。下のスクリーンショットでは、ベリルテーマの見え方と、フォームのスタイル設定を強化する方法を確認できます。
+Beryl テーマは、We.Gov アダプティブフォームで使用され、背景画像、透明度および大きくてフラットなアイコンの使用を強調します。下のスクリーンショットでは、Berylテーマの外観と、フォームのスタイル設定を強化する方法を確認できます。
 
 ![Beryl テーマ](assets/beryl.png)
 
@@ -68,7 +67,7 @@ Exec Light テーマは、ホワイトスペースを使用してシームレス
 
 ](assets/exec-light-1.png)-->
 
-## Liberty {#liberty}
+## 自由 {#liberty}
 
 Liberty テーマは、最小限のアプローチを使用して、重要な部分を強調します。たとえば、訪問済みのタブのフォントの色は緑に変わります。テキストボックスの下のアウトラインだけが表示されます。これは、線が引かれている紙ベースのフォームの外観をエミュレートしています。アクティブなテキストボックスの下のアウトラインは黒で、その他のテキストボックスの下のアウトラインは薄い灰色です。
 
@@ -98,7 +97,7 @@ Ultramarine テーマは、濃い青色のシェーディングを使用して�
 
 ## Urbane {#urbane}
 
-あか抜けテーマは、フォームのミニマリズム的で機能的な外観を強調します。 Urbaneテーマをフォームに適用すると、コンポーネントがフラットであることがわかります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。
+Urbaneテーマは、フォームのミニマリストで機能的な外観を強調します。 Urbaneテーマをフォームに適用すると、コンポーネントがフラットになっていることがわかります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。
 
 ![Urbane テーマ](assets/urbane.png)
 
@@ -108,7 +107,7 @@ Ultramarine テーマは、濃い青色のシェーディングを使用して�
 
 ## U.S. Web Design Standards {#u-s-web-design-standards}
 
-米国のウェブデザイン標準テーマは、その名の通り、米国のドラフトウェブデザイン標準サイトに記載されている書体とスタイルを使用します。 この Web 標準は、連邦政府の Web サイト間での Web エクスペリエンスを統一するために、連邦政府機関で使用されています。
+U.S. Web Design Standardsテーマは、名前が示すように、Draft U.S. Web Design Standardsサイトに記載されている書体とスタイルを使用します。 この Web 標準は、連邦政府の Web サイト間での Web エクスペリエンスを統一するために、連邦政府機関で使用されています。
 
 ![U.S. Web Design Standards テーマ](assets/us-web-standards.png)
 
