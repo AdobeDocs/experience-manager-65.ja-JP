@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 60%
 
 ---
-
 
 # コミュニティサイトの基本事項  {#community-site-essentials}
 
@@ -24,12 +23,12 @@ ht-degree: 60%
 
 カスタムサイトテンプレートは、コミュニティサイトの言語コピーごとに個別に指定できます。
 
-この作業を行うには：
+この作業を行うには、以下の手順を実行します。
 
 * カスタムテンプレートを作成します。
-* デフォルトのサイトテンプレートパスをオーバーレイします。
-* オーバーレイ追加パスのカスタムテンプレート。
-* `configuration`ノードに`page-template`プロパティを追加して、カスタムテンプレートを指定します。
+* 既定のサイトテンプレートパスをオーバーレイします。
+* オーバーレイパスにカスタムテンプレートを追加します。
+* `page-template`プロパティを`configuration`ノードに追加して、カスタムテンプレートを指定します。
 
 **デフォルトのテンプレート**：
 
@@ -43,7 +42,7 @@ ht-degree: 60%
 
 **種類**：string
 
-**値**: `template-name` （拡張子なし）
+**値**: `template-name` （延長なし）
 
 **設定ノード**：
 
@@ -61,14 +60,14 @@ ht-degree: 60%
 
 ### カスタムサイトテンプレートの例 {#custom-site-template-example}
 
-例えば、`vertical-sitepage.hbs`はサイトテンプレートで、バナーの下ではなく、ページの左下に垂直にメニューリンクを配置します。
+例えば、`vertical-sitepage.hbs`はサイトテンプレートで、メニューリンクをバナーの下に水平方向ではなく、ページの左側に垂直方向に配置します。
 
-[Get ](assets/vertical-sitepage.hbs)
-Fileオーバーレイフォルダー内にカスタムサイトテンプレートを配置します。
+[FilePlaceカス](assets/vertical-sitepage.hbs)
+タムサイトテンプレートをオーバーレイフォルダーに配置します。
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
-設定ノードに`page-template`プロパティを追加して、カスタムテンプレートを特定します。
+設定ノードに`page-template`プロパティを追加して、カスタムテンプレートを識別します。
 
 `/content/sites/sample/en/configuration`
 
@@ -86,11 +85,11 @@ Fileオーバーレイフォルダー内にカスタムサイトテンプレー�
 
 UGC とカスタムコードはコミュニティサイトパッケージに含まれていないことに注意してください。
 
-UGCをエクスポートするには、GitHubで利用可能なオープンソース移行ツール[AEM CommunitiesUGC移行ツール](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)を使用します。
+UGCを書き出すには、GitHubで利用可能なオープンソース移行ツールである[AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)を使用します。
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities6.3 Service Pack 1の時点で、**[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**&#x200B;コンソールからコミュニティサイトにカーソルを重ねると、「サイトを削除」アイコンが表示されます。 開発中に、コミュニティサイトと開始を新規に削除したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
+AEM Communities 6.3 Service Pack 1以降、**[!UICONTROL Communities]**/**[!UICONTROL Sites]**&#x200B;コンソールからコミュニティサイトにカーソルを合わせると、「サイトを削除」アイコンが表示されます。 開発中にコミュニティサイトを削除して新規に開始したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
@@ -103,14 +102,14 @@ CRXDE を使用して、コミュニティに関連付けられている一意�
 
 * `/content/sites/*<site name>*/en/rep:policy`など、サイトの言語ルートに移動します。
 
-* `rep:principalName`を持つ`allow<#>`ノードを`rep:principalName = *community-enable-nrh9h-members*`の形式で探します。
+* `rep:principalName`を持つ`allow<#>`ノードを、`rep:principalName = *community-enable-nrh9h-members*`の形式で探します。
 
-* サイトIDは`rep:principalName`の3番目のコンポーネントです
+* サイトIDは、`rep:principalName`の3番目のコンポーネントです。
 
    例えば、`rep:principalName = community-enable-nrh9h-members`
 
    * **サイト名** = *enable*
-   * **サイトID** =  *nrh9h*
+   * **サイトID**  =  *nrh9h*
    * **一意のサイト ID** = *enable-nrh9h*
 
 ### ユーザー生成コンテンツ {#user-generated-content}
@@ -131,10 +130,10 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 すべてのオーサーインスタンスおよびパブリッシュインスタンスで、[セキュリティコンソール](../../help/sites-administering/security.md)から、以下に該当する[ユーザーグループ](users.md)を検索して削除します。
 
-* 先頭に`community`が付く
-* その後に[一意のサイトID](#community-unique-site-id)が続きます
+* 先頭に`community`が付きます。
+* [一意のサイトID](#community-unique-site-id)が続きます。
 
-例：`community-engage-x0e11-members`
+（例：`community-engage-x0e11-members`）。
 
 ### イネーブルメントアセット {#enablement-assets}
 
@@ -142,8 +141,8 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 * 「**[!UICONTROL アセット]**」を選択します。
 * **[!UICONTROL 選択]**&#x200B;モードに入ります。
-* [一意のサイトID](#community-unique-site-id)を使用して名前が付けられたフォルダーを選択します。
-* 「**[!UICONTROL 削除]**」を選択します（「**[!UICONTROL 詳細情報…」を選択する必要がある場合があります）。]**)。
+* [一意のサイトID](#community-unique-site-id)を持つという名前のフォルダーを選択します。
+* 「**[!UICONTROL 削除]**」を選択します（場合によっては、「**[!UICONTROL 詳細…」から選択する必要があります）。]**)です。
 
 ### データベースレコード {#database-records}
 
