@@ -10,14 +10,13 @@ topic-tags: forms-manager
 discoiquuid: e65925ff-1fbf-4da6-bf09-0cf056c86e5a
 docset: aem65
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1f4f49b7-5f32-47dd-9dc7-a6974faf2bdf
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '721'
 ht-degree: 91%
 
 ---
-
 
 # フォームおよびアセットの検索{#searching-for-forms-and-assets}
 
@@ -39,7 +38,7 @@ Adobe Experience Manager が、メタデータプロパティ内で入力され�
 
 * 検索は、フォームとアセットのメタデータプロパティを利用して実行されます。
 * 複数の単語を入力した場合には、テキスト全体に一致する検索結果が返されます。
-* 検索では、大文字と小文字は区別されません。例えば、`geometrixx`と入力すると、`Geometrixx`、`GEOMETRIXX`、`GeoMetRixx`のタイトルを持つアセットが検索結果に表示されます。
+* 検索では、大文字と小文字は区別されません。例えば、「`geometrixx`」と入力すると、タイトルが`Geometrixx`、`GEOMETRIXX`、`GeoMetRixx`のアセットが検索結果に表示されます。
 
 * 単語の部分一致はサポートされていません。文字列の一部を使って検索するには、ワイルドカード (*) を使用します。ただし、検索クエリが単語全体に一致する場合は、対応するフォームまたはアセットが表示されます。
 * 空白は考慮され、検索時にトリミングされません。例えば、`My form`は`My form`と同じ検索クエリではありません。
@@ -56,7 +55,7 @@ AEM form とアセット検索の検索フィールドおよびパラメータ�
 
 ### アセットパス {#asset-path}
 
-アセットパスフィルタを使用することにより、検索結果を現在のディレクトリに限定することができます。「Search In Current Directory」オプションが選択されていない場合には、ベースディレクトリに存在するアセットが検索結果に含まれます。現在のページがディレクトリではなく、「current directoryで検索」オプションが選択されている場合、親ディレクトリに存在するアセットが検索によって返されます。
+アセットパスフィルタを使用することにより、検索結果を現在のディレクトリに限定することができます。「Search In Current Directory」オプションが選択されていない場合には、ベースディレクトリに存在するアセットが検索結果に含まれます。現在のページがディレクトリではなく、「現在のディレクトリ内を検索」オプションが選択されている場合、親ディレクトリに存在するアセットが検索によって返されます。
 
 ### アセットの変更 {#asset-modification}
 
@@ -106,7 +105,7 @@ AEM form とアセット検索の検索フィールドおよびパラメータ�
    <td>すべてのアダプティブフォームに対して検索を行います。</td> 
   </tr>
   <tr>
-   <td>Resource</td> 
+   <td>リソース</td> 
    <td>すべてのリソースに対して検索を行います。<br /> </td> 
   </tr>
  </tbody>
