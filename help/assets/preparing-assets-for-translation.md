@@ -1,25 +1,24 @@
 ---
 title: 翻訳するアセットの準備
-description: 言語ルートフォルダーを作成して、多言語アセットをサポートする翻訳用のアセットを準備します。
+description: 多言語アセットをサポートするための翻訳用アセットを準備するには、言語ルートフォルダーを作成します。
 contentOwner: AG
 role: Business Practitioner, Administrator
-feature: Projects
-translation-type: tm+mt
-source-git-commit: 174e0703ae541641e3dc602e700bcd31624ae62c
+feature: プロジェクト
+exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 63%
+source-wordcount: '441'
+ht-degree: 62%
 
 ---
-
 
 # 翻訳するアセットの準備 {#preparing-assets-for-translation}
 
 多言語アセットとは、複数の言語のバイナリ、メタデータ、タグを含むアセットです。通常、アセットのバイナリ、メタデータ、タグに使用される言語は 1 つですが、多言語プロジェクト用に他の言語へと翻訳されます。
 
-[!DNL Adobe Experience Manager Assets]では、多言語アセットがフォルダーに含まれ、各フォルダーには異なる言語のアセットが含まれています。
+[!DNL Adobe Experience Manager Assets]では、多言語アセットがフォルダーに含まれ、各フォルダーには異なる言語のアセットが格納されます。
 
-各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。例えば、*/content/dam/it*&#x200B;はイタリア語コピーのイタリア語ルートです。 ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
+各言語のフォルダーは言語コピーと呼ばれます。言語コピーのルートフォルダー（言語ルート）が、言語コピー内のコンテンツの言語を識別します。例えば、 */content/dam/it*&#x200B;はイタリア語の言語コピー用のイタリア語言語ルートです。 ソースアセットの翻訳の実行時に適切な言語がターゲットになるように、言語コピーは、[正しく設定された言語ルート](preparing-assets-for-translation.md#creating-a-language-root)を使用する必要があります。
 
 最初にアセットを追加した言語コピーが言語プライマリです。言語プライマリは、他の言語に翻訳されるソースです。サンプルフォルダー階層にはいくつかの言語ルートが含まれています。
 
@@ -48,25 +47,25 @@ ht-degree: 63%
 
 例えば、サンプル階層のイタリア語言語コピーのルートページの「名前」プロパティは `it` になります。「名前」プロパティは、リポジトリー内の asset ノードの名前として使用されます。そのため、このプロパティによってアセットのパスが指定されます(`https://[aem_server]:[port]/assets.html/content/dam/it/`)。
 
-1. [!DNL Assets]コンソールで、「**[!UICONTROL 作成]**」をクリックし、メニューから「**[!UICONTROL フォルダー]**」を選択します。
+1. [!DNL Assets]コンソールで「**[!UICONTROL 作成]**」をクリックし、メニューから「**[!UICONTROL フォルダー]**」を選択します。
 
    ![フォルダーを作成](assets/Create-folder.png)
 
-1. 「**[!UICONTROL 名前]**」フィールドに、`<language-code>`の形式で国コードを入力します。
+1. 「**[!UICONTROL 名前]**」フィールドに、国コードを`<language-code>`の形式で入力します。
 
-   ![フォルダー内の追加言語コード](assets/Add-language-code-in-folder.png)
+   ![フォルダーへの言語コードの追加](assets/Add-language-code-in-folder.png)
 
 1. 「**[!UICONTROL 作成]**」をクリックします。言語ルートは[!DNL Assets]コンソールに作成されます。
 
 ## 言語ルートの表示 {#viewing-language-roots}
 
-[!DNL Experience Manager] インターフェイスには、内で作成された言語ルートのリストを表示する **** 参照パネルが用意されて [!DNL Assets]います。
+[!DNL Experience Manager] インターフェイスに **** は、内で作成された言語ルートのリストを表示する参照パネルが用意されて [!DNL Assets]います。
 
-1. [!DNL Assets]コンソールで、言語コピーを作成する言語のプライマリを選択します。
-1. 左側のレールから、「**[!UICONTROL 参照]**」オプションを選択して、[!UICONTROL 参照]ペインを開きます。
+1. [!DNL Assets]コンソールで、言語コピーを作成する言語プライマリを選択します。
+1. 左側のレールから、「**[!UICONTROL 参照]**」オプションを選択して、[!UICONTROL 参照]ウィンドウを開きます。
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. 「References」ペインで、「**[!UICONTROL Language Copies]**」をクリックします。 [!UICONTROL 言語コピー]パネルには、アセットの言語コピーが表示されます。
+1. 参照パネルで、「**[!UICONTROL 言語コピー]**」をクリックします。 [!UICONTROL 言語コピー]パネルに、アセットの言語コピーが表示されます。
 
    ![言語コピー](assets/lang-copy2.png)
