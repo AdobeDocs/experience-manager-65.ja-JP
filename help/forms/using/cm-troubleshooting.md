@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: correspondence-management
 discoiquuid: cc473808-e71a-4834-bb30-91e6df783e60
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: cf06796b-bb8c-4a65-8f42-02fb0cfa3ebd
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 90%
 
 ---
 
-
 # Correspondence Management：トラブルシューティング {#correspondence-management-troubleshooting}
 
 ## レターの保存時にエラーが発生する {#errors-when-saving-a-letter}
 
-### OS クリップボードと内部 AEM クリップボードを使用した    {#issue}
+### OS クリップボードと内部 AEM クリップボードを使用した     {#issue}
 
 レターの保存時に、次のいずれかのエラーが表示される：
 
@@ -36,13 +35,13 @@ ht-degree: 90%
 * データディクショナリは文字にバインドされているが、サーバー上には存在していない。
 * データディクショナリは文字にバインドされているが、名前にアンダースコア（_）が含まれている。
 
-### 対処方法  {#workaround}
+### 対処方法 {#workaround}
 
 レターで使用しているデータディクショナリーがサーバー上に存在しており、名前にアンダースコア（_）が含まれていないことを確認してください。
 
 ## レターのプレビュー時にエラーが発生する {#error-when-previewing-a-letter}
 
-### OS クリップボードと内部 AEM クリップボードを使用した    {#issue-1}
+### 問題 {#issue-1}
 
 レターをプレビューしている間、レターに含まれる未公開のテキストアセットが公開されていても、「レターの読み込み中のエラー: XML 入力からアセットを読み込めませんでした」というエラーが表示される。
 
@@ -53,6 +52,5 @@ ht-degree: 90%
 1. **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`**&#x200B;に移動し、管理者としてログインします。
 1. 「**Correspondence Management設定**」を選択します。
 1. 「**Correspondence Management の設定**」で、「**レターのキャッシュを有効にする**」を無効にして「**保存**」をクリックします。
-1. 「**レターキャッシュを有効にする**」を有効にし、「**保存**」をクリックします。
+1. 「**レターのキャッシュを有効にする**」を有効にし、「**保存**」をクリックします。
 1. レターを再度プレビューします。
-
