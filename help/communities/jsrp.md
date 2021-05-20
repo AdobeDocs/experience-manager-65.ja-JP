@@ -10,20 +10,19 @@ topic-tags: administering
 content-type: reference
 discoiquuid: f5316a73-84e2-4a18-98c1-a384eeaa77cf
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 873e013c-a2da-4b37-b0e3-56bdf240004a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '462'
 ht-degree: 52%
 
 ---
-
 
 # JSRP - JCR ストレージリソースプロバイダー {#jsrp-jcr-storage-resource-provider}
 
 ## JSRP について {#about-jsrp}
 
-AEM CommunitiesがJSRPをストレージオプションとして使用する場合（デフォルト）、コミュニティコンテンツはJCRに保存され、ユーザー生成コンテンツ(UGC)は、そのコンテンツが投稿された作成者インスタンスまたは発行インスタンスからのみアクセスできます。
+AEM CommunitiesがJSRPをストレージオプション（デフォルト）として使用する場合、コミュニティコンテンツはJCRに保存され、ユーザー生成コンテンツ(UGC)は、投稿先のオーサーインスタンスまたはパブリッシュインスタンスからのみアクセスできます。
 
 JSRP はデプロイメントが容易なので、一般的に、1 つのパブリッシュインスタンスと 1 つのオーサーインスタンスがあるデモ環境または開発環境に適しています。
 
@@ -31,19 +30,19 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 ## 設定 {#configuration}
 
-### JSRP の選択 {#select-jsrp}
+### JSRP の選択  {#select-jsrp}
 
 デフォルトでは、JSRP が UGC 用のストレージオプションとして選択されています。
 
-[ストレージ設定コンソール](srp-config.md)では、デフォルトのストレージ設定を選択できます。これにより、使用するSRPの実装が識別されます。
+[ストレージ設定コンソール](srp-config.md)では、使用するSRPの実装を指定するデフォルトのストレージ設定を選択できます。
 
 オーサー環境でストレージ設定コンソールに移動するには、
 
-* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL ストレージの構成]**
+* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL ストレージ設定]**
 
-* **[!UICONTROL JCRストレージリソースプロバイダー(JSRP)]**&#x200B;を選択します
+* **[!UICONTROL JCRストレージリソースプロバイダー(JSRP)]**&#x200B;を選択します。
 
-* **[!UICONTROL 送信]**&#x200B;を選択
+* 「**[!UICONTROL 送信]**」を選択します。
 
 ![jsrp-configuration](assets/jsrp-configuration.png)
 
@@ -51,36 +50,36 @@ JSRP はデプロイメントが容易なので、一般的に、1 つのパブ�
 
 JSRP はデフォルト設定ですが、パブリッシュ環境で同じ設定が使用されていることを確認するには、以下の手順をおこないます。
 
-* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL 導入]** > **[!UICONTROL レプリケーション]**
-* **[!UICONTROL ツリーをアクティブ化]**/**[!UICONTROL 開始パス]**&#x200B;を選択します。
+* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL デプロイメント]** > **[!UICONTROL レプリケーション]**
+* 「**[!UICONTROL ツリーをアクティベート]** > **[!UICONTROL 開始パス]**」を選択します。
 
-   * `/conf/global/settings/community/srpc/`を参照
+   * `/conf/global/settings/community/srpc/`を参照します。
 
-* 「**[!UICONTROL アクティブ化]**」を選択します。
+* **[!UICONTROL アクティブ化]**&#x200B;を選択します。
 
 ## ユーザーデータの管理 {#managing-user-data}
 
-*ユーザー*、*ユーザープロファイル*、*ユーザーグループ*&#x200B;に関する情報は、次のページにアクセスしてください。
+パブリッシュ環境で頻繁に入力される&#x200B;*ユーザー*、*ユーザープロファイル*、*ユーザーグループ*&#x200B;に関する情報については、以下を参照してください。
 
-* [ユーザーの同期](sync.md)
+* [ユーザー同期](sync.md)
 * [ユーザーとユーザーグループの管理](users.md)
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC Not Visible in JCR {#ugc-not-visible-in-jcr}
+### UGC が JCR で表示されない  {#ugc-not-visible-in-jcr}
 
 ストレージオプションの設定を確認し、JSRP がデフォルトのプロバイダーに設定されているかを確認してください。デフォルトでは、ストレージリソースプロバイダーはJSRPです。
 
-すべての作成者および発行AEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
+すべてのオーサーインスタンスとパブリッシュAEMインスタンスで、ストレージ設定コンソールに再度アクセスするか、AEMリポジトリを確認します。
 
-* JCRで、[/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
+* JCRで、 [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)ノードを含まない場合、ストレージプロバイダーがJSRPであることを意味します。
-   * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)が含まれる場合、デフォルトの設定のプロパティでJSRPをデフォルトプロバイダーとして定義する必要があります。
+   * [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)ノードが含まれない場合は、ストレージプロバイダーがJSRPであることを意味します。
+   * srpcノードが存在し、ノード[defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)が含まれる場合は、defaultconfigurationのプロパティでJSRPをデフォルトのプロバイダーとして定義する必要があります。
 
 ### UGC がオーサーインスタンスで表示されない {#ugc-not-visible-on-author-instance}
 
-これはバグではありません。JSRPの特徴は、公開環境で入力されたコミュニティコンテンツが公開環境でのみ表示されることです。
+これはバグではありません。JSRPの特徴は、パブリッシュ環境に入力されたコミュニティコンテンツがパブリッシュ環境でのみ表示されることです。
 
 ### UGC がパブリッシュインスタンスで表示されない {#ugc-not-visible-on-publish-instance}
 
