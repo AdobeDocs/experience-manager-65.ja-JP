@@ -8,8 +8,7 @@ content-type: reference
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
-feature: Publishing
-translation-type: tm+mt
+feature: 公開
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '2935'
@@ -25,7 +24,7 @@ AEM または Dynamic Media との間で、アセットをフォルダーレベ�
 
 >[!IMPORTANT]
 >
->一部のみの発行は、Dynamic Media-Scene7モードでのみ使用できます。
+>選択的公開は、Dynamic Media - Scene7モードでのみ使用できます。
 
 >[!NOTE]
 >
@@ -41,7 +40,7 @@ AEM または Dynamic Media との間で、アセットをフォルダーレベ�
 
 * [「公開を管理」を使用して、Dynamic Media または AEM にアセットを選択的に公開する。](#selective-publish-manage-publication)
 * [「公開を管理」を使用して、Dynamic Media または AEM からアセットを選択的に非公開にする。](#selective-unpublish-manage-publication)
-* [クイック公開を使用して、Dynamic Media または AEM にアセットを公開する。](#quick-publish-aem-dm)
+* [クイック公開を使用した Dynamic Media または AEM へのアセットの公開.](#quick-publish-aem-dm)
 * [検索結果を使用して、アセットを選択的に公開または非公開にする。](#selective-publish-unpublish-search-results)
 
 **Dynamic Media のフォルダーレベルで選択的公開を設定するには**
@@ -75,7 +74,7 @@ AEM または Dynamic Media との間で、アセットをフォルダーレベ�
 
 1. ページの右上隅にある「**[!UICONTROL 保存して閉じる]**」をタップし、「**[!UICONTROL OK]**」をタップして AEM Assets に戻ります。
 
-## パブリケーションの管理{#selective-publish-manage-publication}を使用して、アセットを選択してDynamic MediaまたはAEMに発行
+## 「公開を管理」を使用して、Dynamic MediaまたはAEMにアセットを選択的に公開する{#selective-publish-manage-publication}
 
 「**[!UICONTROL 公開を管理]**」を使用して Dynamic Media または AEM にアセットを選択的に公開する前に、**[!UICONTROL Dynamic Media 設定]**&#x200B;の「**[!UICONTROL アセットを公開]**」オプションを「**[!UICONTROL 選択的公開]**」に設定してあるか、またはフォルダーレベルで選択的公開を設定してあることを確認してください。
 
@@ -83,13 +82,13 @@ AEM または Dynamic Media との間で、アセットをフォルダーレベ�
 
 >[!IMPORTANT]
 >
->一部のみの発行は、Dynamic Media-Scene7モードでのみ使用できます。
+>選択的公開は、Dynamic Media - Scene7モードでのみ使用できます。
 
 >[!NOTE]
 >
 >フォルダー間でアセットを&#x200B;*コピー*&#x200B;すると、これらのアセットの公開状態がクリアされます。ただし、フォルダープロパティが「**[!UICONTROL 選択的公開]**」に設定されているフォルダー間でアセットを&#x200B;*移動*&#x200B;すると、それらのアセットの公開状態は維持されます。
 
-**「パブリケーションの管理」を使用して、Dynamic MediaまたはAEMにアセットを選択して公開するには**
+**「公開を管理」を使用して、Dynamic MediaまたはAEMにアセットを選択的に公開するには**
 
 1. AEM で、AEM ロゴをタップして、グローバルナビゲーションコンソールにアクセスします。左側の（ツールアイコンのすぐ上にある）ナビゲーションアイコンをタップし、**[!UICONTROL アセット／ファイル]**&#x200B;をタップします。
 1. **[!UICONTROL カード表示]**、**[!UICONTROL 列表示]**&#x200B;または&#x200B;**[!UICONTROL リスト表示]**&#x200B;で、次のいずれかの操作をおこないます。
