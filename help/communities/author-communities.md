@@ -10,18 +10,17 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: df1ac689-33db-4e30-9f75-3bda2a485652
 docset: aem65
-translation-type: tm+mt
-source-git-commit: f375b40c084ee363757b78c602091f38524b8b03
+exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 73%
 
 ---
 
-
 # コミュニティコンポーネント {#communities-components}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 AEM Communities をライセンス認証すると、コミュニティサイトの作成に加え、標準の AEM オーサリングツールを使用して、あらゆる AEM サイトにコミュニティ機能を付加できます。
 
@@ -33,7 +32,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->オーサリング環境に詳しくない場合は、[基本操作](/help/sites-authoring/basic-handling.md)のドキュメントと、[オーサリングページのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を表示してください。
+>オーサリング環境に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントと、[ページのオーサリングに関するクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
@@ -43,7 +42,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->[Communities Components Basics](/help/communities/basics.md)をお読みください。Communitiesコンポーネントを使用したオーサリングに必要な情報が含まれています。
+>[コミュニティコンポーネントの基本](/help/communities/basics.md)をお読みください。コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれています。
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|
@@ -80,13 +79,12 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->調査コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
+>投票コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 推奨される展開については、[Communitiesの展開](/help/communities/deploy-communities.md)を参照してください。
+* 推奨されるデプロイメントについては、[Communitiesのデプロイ](/help/communities/deploy-communities.md)を参照してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](/help/communities/administer-landing.md)を参照してください。
 
-* Social Component Framework(SCF)とCommunitiesのコンポーネントと機能のカスタマイズについては、[Developing Communities](/help/communities/communities.md)を参照してください。
-
+* ソーシャルコンポーネントフレームワーク(SCF)とコミュニティのコンポーネントと機能のカスタマイズについては、 [コミュニティの開発](/help/communities/communities.md)を参照してください。
