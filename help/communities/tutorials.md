@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: a420b0b1-65f4-4103-a7c9-263657c7870f
-translation-type: tm+mt
-source-git-commit: 77d00c1d6e94b257aa0533ca88b5f9a12dba0054
+exl-id: 061d3b1b-7ceb-4e57-8183-2062a76173f1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 57%
 
 ---
-
 
 # チュートリアル {#tutorials}
 
@@ -34,7 +33,7 @@ ht-degree: 57%
 
 * [コメントコンポーネントの拡張](extend-comments.md)
 
-## サーバー側のカスタマイズ  {#server-side-customization}
+## サーバー側のカスタマイズ {#server-side-customization}
 
 [SCF のサーバー側のカスタマイズ](server-customize.md)も参照してください。
 
@@ -46,11 +45,11 @@ ht-degree: 57%
 
 * [SCF コンポーネントの拡張のサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
-## 使い方説明{#how-to-instructions}
+## ハウツーインストラクション{#how-to-instructions}
 
-* [AEM Communities藤堂MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
+* [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-   ToDo MVCでは、SCF+SRPコンポーネントの開発方法を一からデモします。
+   ToDo MVCでは、SCF+SRPコンポーネントを一から開発する方法を説明します。
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
@@ -60,18 +59,18 @@ ht-degree: 57%
 
 * [サンプルページの作成](create-sample-page.md)
 
-## デモユーザー  {#demo-users}
+## デモユーザー {#demo-users}
 
-Geometrixxサンプルパッケージには、デモユーザーが含まれています。 訪問者（ログインしていない）とメンバー（ログインしている）の間に経験が違うことが多く、Geometrixxサンプルパッケージがインストールされている限り、[コミュニティコンポーネントガイド](components-guide.md)で調査する際に、ログイン状態をシミュレートできます。
+Geometrixxサンプルパッケージには、デモユーザーが含まれています。 訪問者（ログインしていない）またはメンバー（ログインしている）との間に経験の違いが多く、Geometrixxサンプルパッケージがインストールされている限り、これらのユーザーを使用して[コミュニティコンポーネントガイド](components-guide.md)でログイン状態をシミュレートできます。
 
-デモユーザーの完全なリストについては、パネルを使用して&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ>ユーザー]**&#x200B;に移動します。 または、クラシックUI [セキュリティコンソール](http://localhost:4502/useradmin)を使用してユーザーとグループを管理します。
+デモユーザーの完全なリストを表示するには、レールを使用して&#x200B;**[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL セキュリティ/ユーザー]**&#x200B;に移動します。 または、クラシックUIの[セキュリティコンソール](http://localhost:4502/useradmin)を使用して、ユーザーとグループを管理します。
 
 [コミュニティサイトが作成されている](getting-started.md)場合、その[コミュニティユーザーグループ](users.md)にデモユーザーを割り当てることができます。
 
-***user id* /  *password***:
+***ユーザーid* / *password***:
 
 * aaron.mcdonald@mailinator.com／password
-* emily.andrews@mailinator.comパスワード
-* weston.mccall@dodgit.comパスワード
+* emily.andrews@mailinator.com /パスワード
+* weston.mccall@dodgit.com /パスワード
 * andrew.schaeffer@trashymail.com／password
-* rebekah.larsen@trashymail.comパスワード
+* rebekah.larsen@trashymail.com /パスワード
