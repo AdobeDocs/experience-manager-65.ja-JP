@@ -9,7 +9,6 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
-translation-type: tm+mt
 source-git-commit: 23252989bb8649b2f0b96a58972c831257e0c5dc
 workflow-type: tm+mt
 source-wordcount: '776'
@@ -26,7 +25,7 @@ ht-degree: 61%
 
 ドラフトと送信コンポーネントには、「ドラフト」および「送信」の 2 つのタブがあります。
 
-アダプティブフォームの送信を有効にして「送信」タブに表示するには、**送信アクション**&#x200B;を&#x200B;**[Formsポータル送信アクション](../../forms/using/configuring-submit-actions.md)に設定します。 または、**「Formsポータル送信」オプションを有効にします。 ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
+アダプティブフォームの送信を有効にして「送信」タブに表示するには、**送信アクション**&#x200B;を&#x200B;**[Forms Portal送信アクション](../../forms/using/configuring-submit-actions.md)に設定します。 または、**「Formsポータル送信」オプションを有効にします。 ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
 
 ドラフト機能は初期設定で有効になっています。ユーザーがアダプティブフォームで「**保存**」をクリックすると、フォームが「ドラフト」タブに追加されます。
 
@@ -54,12 +53,12 @@ ht-degree: 61%
   <tr>
    <td> </td>
    <td>スタイルタイプ</td>
-   <td>コンポーネントのスタイルを指定します。フォームのリスト表示には、「スタイルなし</strong>」、「<strong>デフォルトのスタイル</strong>」、または「<strong>カスタムスタイル</strong>」を指定できます。 <strong>「カスタムスタイル」オプションの場合、「<strong>カスタムスタイルパス</strong>」フィールドでカスタム CSS ファイルのパスを指定できます<strong>。</strong></strong></td>
+   <td>コンポーネントのスタイルを指定します。フォームのリストを表示するには、「<strong>スタイルなし</strong>」、「<strong>デフォルトのスタイル</strong>」、「<strong>カスタムスタイル</strong>」のいずれかを指定できます。 「カスタムスタイル」オプションの場合、「<strong>カスタムスタイルパス</strong>」フィールドでカスタム CSS ファイルのパスを指定できます<strong>。</strong></td>
   </tr>
   <tr>
    <td> </td>
    <td>カスタムスタイルパス</td>
-   <td>「<strong>スタイルタイプ</strong>」フィールドで「<strong>カスタムスタイル</strong>」オプションを選択した場合は、「<strong>カスタムスタイルパス</strong>」フィールドを使用して、カスタムCSSファイルのパスを指定します。 </td>
+   <td>「<strong>スタイルタイプ</strong>」フィールドで「<strong>カスタムスタイル</strong>」オプションを選択した場合は、「<strong>カスタムスタイルパス</strong>」フィールドを使用してカスタムCSSファイルのパスを指定します。 </td>
   </tr>
   <tr>
    <td> </td>
@@ -89,20 +88,20 @@ ht-degree: 61%
   <tr>
    <td> </td>
    <td>テンプレートのレイアウト</td>
-   <td>送信済みのForms<strong> </strong>リストに使用するレイアウトを指定します。 </td>
+   <td>送信済みForms<strong> </strong>リストに使用するレイアウトを指定します。 </td>
   </tr>
  </tbody>
 </table>
 
-## ストレージのカスタマイズ{#customizing-the-storage}
+## ストレージ{#customizing-the-storage}のカスタマイズ
 
-「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。ドラフトと送信済みのフォームデータを保存するには、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージと統合する必要があります。
+「フォームポータル」送信アクションを使用したり、アダプティブフォームでフォームポータルにデータを保存するオプションを有効にしたりすると、フォームデータは AEM リポジトリに保存されます。実稼働環境では、ドラフトまたは送信されたフォームデータを AEM リポジトリに保存しないことをお勧めします。代わりに、ドラフトと送信コンポーネントをエンタープライズデータベースなどの安全なストレージに統合して、ドラフトと送信済みフォームデータを保存する必要があります。
 
-Formsポータルでは、ローカルのAEMリポジトリ、リモートのAEMリポジトリ、またはデータベースにデータを保存できます。 AEM Formsでは、ドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。 デフォルトのメソッドを上書きして、ドラフトと送信データを任意のストレージに保存する方法を指定できます。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
+Forms portalでは、データをローカルAEMリポジトリ、リモートAEMリポジトリ、またはデータベースに保存できます。 AEM Formsでは、ドラフトと送信用のユーザーデータの保存の実装をカスタマイズできます。 デフォルトの方法を上書きして、ドラフトと送信データを選択したストレージに保存する方法を指定できます。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
-Formsポータルは、ローカルおよびリモートのAEM Forms発行インスタンスのcrx-repositoryにデータを保存するための、初期設定済みのサービス(API)を提供します。 「[ドラフトと送信](/help/forms/using/configuring-draft-submission-storage.md)に対するストレージサービスの設定」で説明されているデフォルトの実装を、デフォルトの機能を置き換えるカスタム実装に置き換えることができます。 保護された場所にコンテンツを保存するためにカスタム実装で必要な方法について詳しくは、「[ドラフトと送信データサービスのカスタマイズ](/help/forms/using/custom-draft-submission-data-services.md)」および「[ドラフトと送信コンポーネントのカスタムストレージ」を参照してください。](/help/forms/using/adding-custom-storage-provider-forms.md)
+Forms portalは、ローカルおよびリモートのAEM Formsパブリッシュインスタンスのcrxリポジトリにデータを保存するための、標準提供のサービス(API)を提供します。 「[ドラフトと送信のストレージサービスの設定](/help/forms/using/configuring-draft-submission-storage.md)」で説明されているデフォルトの実装を、デフォルトの機能を置き換えるカスタム実装に置き換えることができます。 安全な場所にコンテンツを保存するためにカスタム実装で必要な方法について詳しくは、「[ドラフトと送信データサービスのカスタマイズ](/help/forms/using/custom-draft-submission-data-services.md) 」と「[ドラフトと送信コンポーネントのカスタムストレージ](/help/forms/using/adding-custom-storage-provider-forms.md) 」を参照してください。
 
-AEM Formsのドキュメントには、[ドラフトと送信コンポーネントとデータベース](integrate-draft-submission-database.md)の統合のサンプルが記載されています。 サンプルの実装を使用して、独自のカスタム実装を開発できます。
+AEM Formsのドキュメントには、ドラフト&amp;送信コンポーネントとデータベース](integrate-draft-submission-database.md)を統合するサンプルが用意されています。 [サンプル実装を使用して、独自のカスタム実装を開発できます。
 
 ## 関連記事
 
@@ -110,7 +109,7 @@ AEM Formsのドキュメントには、[ドラフトと送信コンポーネン�
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
-* [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
+* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)
