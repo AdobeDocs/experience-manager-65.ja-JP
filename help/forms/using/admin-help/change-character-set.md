@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_output
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 811b31f8-5465-4fb2-b1f9-513936041771
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 9ff75d98-54ad-425d-912f-d5a7501bf564
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 96%
 
 ---
-
 
 # 文字セットの変更 {#change-the-character-set}
 
@@ -30,4 +29,3 @@ ht-degree: 96%
    文字セットは、有効な正規名で指定する必要があります。デフォルト値は「ISO-8859-1」です。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
-
