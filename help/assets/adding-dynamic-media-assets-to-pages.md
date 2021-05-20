@@ -1,6 +1,6 @@
 ---
 title: ページへの Dynamic Media アセットの追加
-description: Adobe Experience ManagerのページにDynamic Mediaコンポーネントを追加する方法
+description: Adobe Experience ManagerでDynamic Mediaコンポーネントをページに追加する方法
 uuid: b5e982f5-fa1c-478a-bcb3-a1ef980df201
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,8 +10,7 @@ discoiquuid: 97a5f018-8255-4b87-9d21-4a0fdf740e4d
 docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
-feature: Components,Publishing
-translation-type: tm+mt
+feature: コンポーネント，公開
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '3098'
@@ -23,7 +22,7 @@ ht-degree: 88%
 
 Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。これをおこなうには、レイアウトモードに入り、Dynamic Media コンポーネントを有効にします。次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらなのかが検出され、それに応じて利用可能なオプションが変わります。
 
-WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaアセットを直接ページに追加します。 サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)をおこないます。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトへの最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
+Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Mediaアセットを直接ページに追加します。 サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)をおこないます。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトへの最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
 
 >[!NOTE]
 >
@@ -34,8 +33,8 @@ WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaア�
 3D メディア、Dynamic Media、インタラクティブメディア、パノラマメディア、スマート切り抜きビデオ、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
 
 1. Dynamic Media コンポーネントを追加するページを Experience Manager で開きます。
-1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要がある場合があります）で、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
-1. 「**[!UICONTROL コンポーネント]**」見出しの下のドロップダウンリストで、「**[!UICONTROL Dynamic Media」を選択します。]**
+1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要が生じる場合があります）で、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
+1. 「**[!UICONTROL コンポーネント]**」見出しの下にあるドロップダウンリストで、「**[!UICONTROL Dynamic Media]**」を選択します。
 
    Dynamic Media コンポーネントのリストがない場合は、使用する Dynamic Media コンポーネントを有効にしなければならない可能性があります。詳しくは、[Dynamic Media コンポーネントの有効化](#enabling-dynamic-media-components)を参照してください。
 
@@ -66,7 +65,7 @@ WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaア�
 
    ![edit-template](/help/assets/assets-dm/edit-template.png)
 
-1. ツールバーの右側、ページの上部付近にあるドロップダウンリストで、「**[!UICONTROL 構造」をタップします。]**
+1. ページ上部付近のツールバーの右側で、ドロップダウンリストから「**[!UICONTROL 構造]**」をタップします。
 
    ![ポリシー](/help/assets/assets-dm/structure-mode.png)
 
@@ -75,7 +74,7 @@ WCMにAdobe Experience Managerを使用している場合は、Dynamic Mediaア�
 
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
-1. **[!UICONTROL Dynamic Media]**&#x200B;が表示されるまでスクロールします。
+1. **[!UICONTROL Dynamic Media.]**&#x200B;が表示されるまでスクロールします。
 1. **[!UICONTROL ダイナミックメディア]**&#x200B;の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
@@ -100,7 +99,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-**[!UICONTROL コンポーネント]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Mediaでフィルターを適用すると、Dynamic Mediaのコンポーネントを使用できます。]**
+Dynamic Mediaコンポーネントは、**[!UICONTROL コンポーネント]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Mediaでフィルターすると使用できます。]**
 
 利用可能な Dynamic Media コンポーネントは次のとおりです。
 
@@ -111,7 +110,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 >[!NOTE]
 >
->これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディタ](/help/sites-authoring/templates.md#editing-templates-template-authors)ーで使用可能になったら、他のExperience Managerコンポーネントと同様に、コンポーネントをページに追加できます。
+>これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディターで](/help/sites-authoring/templates.md#editing-templates-template-authors)使用可能にした後は、他のExperience Managerコンポーネントと同様に、ページに追加できます。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
@@ -135,7 +134,7 @@ Dynamic Media コンポーネントはスマートであり、追加している
 Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 
 * [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
-* 画像にピラミッドのTIFFファイルが含まれています。Dynamic Mediaが有効になる前に読み込まれた画像には、ピラミッドTIFFファイルがありません。
+* 画像にPTIFF(Pyramid TIFF)ファイルが含まれている。Dynamic Mediaを有効にする前に読み込まれた画像には、PTIFF(Pyramid TIFF)ファイルはありません。
 
 #### 画像を操作する場合 {#when-working-with-images}
 
@@ -143,13 +142,13 @@ Dynamic Media コンポーネントでは、画像セット、スピンセット
 
 また、ビューアプリセット、画像プリセットまたは画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
 
-*次のDynamic Media設定を*&#x200B;編集する必要があります。コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Media設定をタップします。]**
+コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Media設定]**&#x200B;をタップして、次のDynamic Media設定を&#x200B;*編集する必要があります。*
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->デフォルトでは、Dynamic Mediaの画像コンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
+>デフォルトでは、Dynamic Media画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントで、「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
 * **[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
@@ -192,7 +191,7 @@ Dynamic Media コンポーネントを使用して、ダイナミックビデオ
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;をクリックして、次のDynamic Media設定を編集する必要があります。
+コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次のDynamic Media設定を編集する必要があります。
 
 >[!NOTE]
 >
@@ -223,11 +222,11 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-コンポーネント内の&#x200B;**[!UICONTROL 「編集]**」をクリックして、次のDynamic Media設定を編集する必要があります。
+コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次のDynamic Media設定を編集する必要があります。
 
 >[!NOTE]
 >
->デフォルトでは、Dynamic Mediaの画像コンポーネントはアダプティブです。固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントに、**[!UICONTROL 幅]**&#x200B;と&#x200B;**[!UICONTROL 高さを指定して設定します。]**
+>デフォルトでは、Dynamic Media画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントで、「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
 * **[!UICONTROL 画像の修飾子]** - 追加の画像コマンドを指定すると、画像エフェクトを適用できます。これらは画像プリセットと画像をサーブするコマンドリファレンスに記述されています。
 
