@@ -8,18 +8,17 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a3ccb1ffe2b2e24c453afac8cf3efc098f393030
+exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 91%
 
 ---
 
-
 # 参照用のアダプティブフォームフラグメント{#reference-adaptive-form-fragments}
 
-[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用してアダプティブフォームフラグメントをフォームにドラッグ&amp;ドロップでき、フォームエディターで編集できます。
+[アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用してアダプティブフォームフラグメントをフォームにドラッグ&amp;ドロップし、フォームエディターで編集することができます。
 
 アダプティブフォームの作成者に向けて、AEM Forms パッケージ [AEM-FORMS-6.3-REFERENCE-FRAGMENTS](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS) で参照用のフラグメントが提供されています。次のフラグメントが含まれています。
 
@@ -34,7 +33,7 @@ ht-degree: 91%
 * 利用条件
 * 署名付き利用条件
 
-パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。
+パッケージをインストールすると、Forms &amp; Documents の下に参照用フラグメントを含む Reference Fragments フォルダーが作成されます。パッケージのインストールについては、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 
 ![すべてのフラグメントが表示されている](assets/ootb-frags.png)
 
@@ -94,7 +93,7 @@ ht-degree: 91%
 
 ## 収入と支出 {#income-expenditure}
 
-1 ヶ月のキャッシュフローと支出を取得するためのフィールドが含まれています。ユーザーに詳しい財務情報を提供するように求めるフォームでは、このフラグメントを使用して収入と支出を取得できます。
+1 か月のキャッシュフローと支出を取得するためのフィールドが含まれています。ユーザーに詳しい財務情報を提供するように求めるフォームでは、このフラグメントを使用して収入と支出を取得できます。
 
 ![収入と支出フラグメント](assets/income.png)
 
