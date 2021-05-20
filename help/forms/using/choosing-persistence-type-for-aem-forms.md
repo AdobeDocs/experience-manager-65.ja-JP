@@ -10,14 +10,13 @@ topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '398'
 ht-degree: 93%
 
 ---
-
 
 # AEM Forms のインストールに永続性タイプを選択する {#choosing-a-persistence-type-for-an-aem-forms-installation}
 
@@ -29,7 +28,7 @@ ht-degree: 93%
 >
 >LiveCycle ES4 SP1 では TarPM 永続性を使用してコンテンツを格納します。
 
-次の表に、サポートされるすべての永続性タイプと、環境の永続性タイプを選択する際に役立つ様々なパラメーターをリストします。
+次の表に、サポートされるすべての永続性タイプと、環境の永続性タイプを選択する際に役立つ様々なパラメーターを示します。
 
 <table>
  <tbody>
@@ -53,7 +52,7 @@ ht-degree: 93%
   </tr>
   <tr>
    <th><strong>ライセンスコスト</strong></th>
-   <td>AEMに付属 </td>
+   <td>AEMに含まれる </td>
    <td>別途ライセンスが必要</td>
    <td>別途ライセンスが必要</td>
   </tr>
