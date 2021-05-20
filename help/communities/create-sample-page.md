@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: developing
 discoiquuid: a03145f7-6697-4797-b73e-6f8d241ce469
-translation-type: tm+mt
-source-git-commit: 824ddd48e4680eed1d4612c6ad450a8f1bc68e7c
+exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 71%
 
 ---
-
 
 # サンプルページの作成 {#create-a-sample-page}
 
@@ -36,15 +35,15 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 
 初めに、シンプルな[コミュニティサイトテンプレート](sites.md)を作成します。
 
-作成者インスタンスのグローバルナビゲーションから、**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL サイトテンプレート]**&#x200B;を選択します。
+オーサーインスタンスのグローバルナビゲーションから、**[!UICONTROL ツール]** / **[!UICONTROL コミュニティ]** / **[!UICONTROL サイトテンプレート]**&#x200B;を選択します。
 
 ![create-site-template](assets/create-site-template1.png)
 
 *  `Create button`
 * 基本情報
 
-   * `Name`:単一ページのテンプレート
-   * `Description`:単一のPage関数で構成されるテンプレートです。
+   * `Name`:単一ページテンプレート
+   * `Description`:単一のPage関数で構成されるテンプレート。
    *  `Enabled`
 
 ![site-template-editor](assets/site-template-editor.png)
@@ -52,21 +51,21 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 * 構造
 
    * `Page`関数をテンプレートビルダーにドラッグします
-   * 「構成関数の詳細」に、
+   * 「構成関数の詳細」に、次のように入力します。
 
       * `Title`:単一ページ
       * `URL`: page
 
 ![site-template-editor-structure](assets/site-template-editor1.png)
 
-* 構成に&#x200B;**`Save`**&#x200B;を選択
-* サイトテンプレートに&#x200B;**`Save`**&#x200B;を選択
+* 設定に&#x200B;**`Save`**&#x200B;を選択します。
+* サイトテンプレートに&#x200B;**`Save`**&#x200B;を選択します。
 
 ### 新しいコミュニティサイトの作成 {#create-new-community-site}
 
 次に、シンプルなサイトテンプレートに基づいて新しいコミュニティサイトを作成します。
 
-サイトテンプレートを作成した後、グローバルナビゲーションで&#x200B;**[!UICONTROL コミュニティ/サイト]**&#x200B;を選択します。
+サイトテンプレートを作成した後、グローバルナビゲーションから&#x200B;**[!UICONTROL コミュニティ/サイト]**&#x200B;を選択します。
 
 ![create-community-site](assets/create-community-site1.png)
 
@@ -74,8 +73,8 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 
 * 手順 `1 - Site Template`
 
-   * `Title`:シンプルコミュニティサイト
-   * `Description`:実験用の単一ページから成るコミュニティサイトです。
+   * `Title`:シンプルなコミュニティサイト
+   * `Description`:実験用の単一ページで構成されるコミュニティサイト。
    * `Community Site Root: (leave blank)`
    * `Community Site Base Language: English`
    * `Name`: sample
@@ -90,7 +89,7 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 *  `Next`
 * 手順 `2 - Design`
 
-   * 任意のデザインを選択
+   * 任意のデザインを選択します
 
 *  `Next`
 *  `Next`
@@ -109,7 +108,7 @@ AEM Communities 6.1 以降では、サンプルページを作成する最も簡
 
 ## オーサー環境でのサイトの編集モードでのオープン  {#open-the-site-on-author-in-edit-mode}
 
-![オープンサイト](assets/open-site.png)
+![open-site](assets/open-site.png)
 
 「サイトを開く」アイコンを選択して、編集モードでサイトを表示します。
 
@@ -121,4 +120,4 @@ URLは[http://localhost:4502/editor.html/content/sites/sample/en.html](http://lo
 
 ## パブリッシュ環境でのサイトの表示  {#view-site-on-publish}
 
-ページを公開したら、[パブリッシュインスタンス](http://localhost:4503/content/sites/sample/en.html)でページを開いて、匿名のサイト訪問者、サインインしたメンバーまたは管理者として機能を確認します。作成者環境に表示される「管理」リンクは、管理者がログインしない限り公開環境に表示されません。
+ページを公開したら、[パブリッシュインスタンス](http://localhost:4503/content/sites/sample/en.html)でページを開いて、匿名のサイト訪問者、サインインしたメンバーまたは管理者として機能を確認します。オーサー環境に表示される「管理」リンクは、管理者がログインしない限り、パブリッシュ環境に表示されません。
