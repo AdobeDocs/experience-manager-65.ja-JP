@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 84%
 
 ---
-
 
 # カスタムツールバーアクションの作成{#creating-a-custom-toolbar-action}
 
@@ -32,13 +31,13 @@ ht-degree: 84%
 
 デフォルトで提供される一連のアクションに加え、カスタムアクションをツールバーに作成することができます。例えば、アクションを追加することで、フォームを送信する前にアダプティブフォームのすべてのフィールドを、ユーザーがレビューできるようにすることが可能です。
 
-## アダプティブフォーム{#steps}でのカスタムアクションの作成手順
+## アダプティブフォームでカスタムアクションを作成する手順 {#steps}
 
 カスタムツールバーアクションを作成するには、次の手順を実行して、記入の済んだフォームを送信する前にアダプティブフォームのすべてのフィールドをエンドユーザーがレビューするためのボタンを作成します。
 
-1. アダプティブフォームでサポートされているすべてのデフォルトアクションは`/libs/fd/af/components/actions`フォルダーに存在します。 CRXDEで、`fileattachmentlisting`ノードを`/libs/fd/af/components/actions/fileattachmentlisting`から`/apps/customaction`にコピーします。
+1. アダプティブフォームでサポートされるデフォルトのアクションはすべて`/libs/fd/af/components/actions`フォルダーに存在します。 CRXDEで、`fileattachmentlisting`ノードを`/libs/fd/af/components/actions/fileattachmentlisting`から`/apps/customaction`にコピーします。
 
-1. ノードを`apps/customaction`フォルダーにコピーした後、ノード名を`reviewbeforesubmit`に変更します。 また、ノードの`jcr:title`プロパティと`jcr:description`プロパティを変更します。
+1. ノードを`apps/customaction`フォルダーにコピーした後、ノード名を`reviewbeforesubmit`に変更します。 また、ノードの`jcr:title`および`jcr:description`プロパティを変更します。
 
    `jcr:title` のプロパティには、ツールバーダイアログに表示されるアクションの名前が含まれます。`jcr:description` のプロパティには、アクションにマウスオーバーしたときに表示される詳細情報が含まれます。
 
@@ -51,7 +50,7 @@ ht-degree: 84%
 
 1. アダプティブフォームの編集のツールバーダイアログからカスタムアクションを選択します。パネルのツールバーにレビューボタンが表示されます。
 
-   ![カスタムアクションは、](assets/custom_action_available_in_toolbar.png) ![toolbarで使用できます。カスタムに作成されたツールバーアクションの表示](assets/action7.png)
+   ![カスタムアクションは、toolbarで使用できま](assets/custom_action_available_in_toolbar.png) ![す。カスタムで作成したツールバーアクションを表示します](assets/action7.png)
 
 1. レビューボタンに機能を持たせるには、`reviewbeforesubmit` ノードにある init.jsp ファイルに JavaScript コード、CSS コード、およびサーバー側コードを追加します。
 
