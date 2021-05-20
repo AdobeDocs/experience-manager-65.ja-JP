@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 7427858d-8eec-423d-a0a9-444140420620
-translation-type: tm+mt
-source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
+exl-id: a4c1d3d8-477e-4edf-9dde-4ef9c766be5a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 66%
 
 ---
-
 
 # フォルダー構造について  {#understanding-the-folder-structure}
 
@@ -28,14 +27,14 @@ AEM Forms Workspace は Backbone を使用して MVC アーキテクチャ上で
 
 すべてのコンポーネントのアセットは、以下に示すフォルダー構造内に配置されています。アセットにアクセスするには、CRXDE Liteにログインし、`/libs/ws/js/runtime/`を参照します。
 
-**** モデルバックボーンモデルを含みます。
+**** modelsバックボーンモデルが含まれます。
 
-**** viewsバックボーン表示を含みます。
+**** viewsBackboneビューを含みます。
 
-**テン** プレートコンポーネント用のHTMLテンプレートのみが含まれます。
+**** templatesコンポーネントのHTMLテンプレートのみが含まれます。
 
-**** routesユニバーサルルートを含みます。routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
+**** routesContains universal routes.routes 内部の Templates フォルダーには、HTML コードとコンポーネントへの参照が含まれます。
 
-**** servicesRESTエンドポイントのAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
+**** servicesRESTエンドポイントでAdobe Experience ManagerサーバーAPIを呼び出すためのサービスインターフェイスが含まれます。
 
-**** util複数のコンポーネントで使用できる汎用ユーティリティを含みます。
+**** utilContains複数のコンポーネントで使用できる汎用ユーティリティ。
