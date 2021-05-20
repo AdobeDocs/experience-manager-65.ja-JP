@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: cfc7ad16-965e-4075-bc4d-5630abeaba55
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 66%
 
 ---
-
 
 # モバイルアプリのページテンプレート  {#page-templates-for-mobile-apps}
 
@@ -26,7 +25,7 @@ ht-degree: 66%
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps-1}
 
-アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/angular/ng-pageコンポーネント([ローカルサーバーでCRXDE Liteして開く](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page))に基づいています。 このコンポーネントには次の JSP スクリプトが含まれており、これらのスクリプトを自分のコンポーネントで継承またはオーバーライドします。
+アプリ用に作成するページコンポーネントは、 /libs/mobileapps/components/ponents/angular/ng-pageコンポーネント([ローカルサーバーでCRXDE Liteして開く](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page))に基づいています。 このコンポーネントには次の JSP スクリプトが含まれており、これらのスクリプトを自分のコンポーネントで継承またはオーバーライドします。
 
 * ng-page.jsp
 * head.jsp
@@ -54,7 +53,7 @@ head.jsp および body.jsp をインクルードしています。
 
 アプリの viewport メタプロパティをオーバーライドする場合は、これがオーバーライド対象のファイルになります。
 
-ベストプラクティスに従い、アプリはクライアントライブラリのcss部分をheadに含め、JSはclosing &lt; `body>`要素に含めます。
+ベストプラクティスに従い、アプリはクライアントライブラリのcss部分をheadに含め、一方、JSは`body>`の終了要素に含めます。
 
 ### body.jsp {#body-jsp}
 
@@ -62,11 +61,11 @@ Angular ページのボディは、wcm モードが検出されたかどうか�
 
 **オーサーモード**
 
-オーサーモードでは、個々のページが個別にレンダリングされます。 Angularは、ページ間のルーティングを処理しません。また、ページのコンポーネントを含む部分的な表示の読み込みに使用されるngテンプレートもありません。 その代わり、ページテンプレート（template.jsp）のコンテンツが `cq:include` タグによってサーバー側にインクルードされます。
+オーサーモードでは、個々のページが個別にレンダリングされます。 Angularは、ページ間のルーティングを処理せず、ページのコンポーネントを含む部分的なテンプレートを読み込むためにng-viewも使用しません。 その代わり、ページテンプレート（template.jsp）のコンテンツが `cq:include` タグによってサーバー側にインクルードされます。
 
 この方法により、何も変更を加えることなく、オーサー機能（段落システム、サイドキック、デザインモードでのコンポーネントの追加および編集など）を使用可能にすることができます。アプリ向けのページなどクライアント側のレンダリングを利用するページは、AEM オーサーモードではパフォーマンスがよくありません。
 
-template.jspインクルードは、`ng-controller`ディレクティブを含む`div`要素に含まれています。 この構造により、DOM コンテンツをコントローラーとリンクできます。このため、クライアント側で自身をレンダリングするページは失敗しますが、同じようにレンダリングする個々のコンポーネントは正常に機能します（下のコンポーネントに関する節を参照）。
+template.jspインクルードは、`ng-controller`ディレクティブを含む`div`要素でラップされます。 この構造により、DOM コンテンツをコントローラーとリンクできます。このため、クライアント側で自身をレンダリングするページは失敗しますが、同じようにレンダリングする個々のコンポーネントは正常に機能します（下のコンポーネントに関する節を参照）。
 
 ```xml
 <div ng-controller="<c:out value="${controllerNameStripped}"/>">
@@ -76,11 +75,11 @@ template.jspインクルードは、`ng-controller`ディレクティブを含�
 
 **パブリッシュモード**
 
-公開モード（コンテンツの同期を使用してアプリを書き出す場合など）では、すべてのページが単一のページアプリ(SPA)になります。 (SPAについて学ぶには、Angularチュートリアルを使用します。特に、[https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07))
+パブリッシュモード（コンテンツ同期を使用してアプリを書き出す場合など）では、すべてのページが単一ページアプリ(SPA)になります。 (SPAについて学ぶには、Angularのチュートリアル(特に[https://docs.angularjs.org/tutorial/step_07](https://docs.angularjs.org/tutorial/step_07))を使用してください。)
 
-SPAには1つのHTMLページ（`<html>`要素を含むページ）しかありません。 このページは、「レイアウトテンプレート」と呼ばれています。Angular 用語では、「アプリケーション内のすべてのビューに共通するテンプレート」となります。このページは、「トップレベルのアプリページ」と考えてください。通常、最上位レベルのアプリページは、ルートに最も近く、リダイレクトではない（ルートに最も近い）アプリケーションの`cq:Page`ノードです。
+SPAには1つのHTMLページ（`<html>`要素を含むページ）しかありません。 このページは、「レイアウトテンプレート」と呼ばれています。Angular 用語では、「アプリケーション内のすべてのビューに共通するテンプレート」となります。このページは、「トップレベルのアプリページ」と考えてください。慣例により、トップレベルのアプリページは、ルートに最も近い（リダイレクトではない）アプリケーションの`cq:Page`ノードになります。
 
-パブリッシュモードではアプリの実際の URI が変わらないので、このページから外部アセットを参照するには相対パスを使用する必要があります。したがって、書き出す画像をレンダリングする際に、この最上位レベルのページが考慮される特別な画像コンポーネントが用意されています。
+パブリッシュモードではアプリの実際の URI が変わらないので、このページから外部アセットを参照するには相対パスを使用する必要があります。したがって、書き出す画像をレンダリングする際に、このトップレベルページを考慮する特別な画像コンポーネントが提供されます。
 
 SPA として、このレイアウトテンプレートページは単に ng-view ディレクティブとともに div 要素を生成します。
 
@@ -88,11 +87,11 @@ SPA として、このレイアウトテンプレートページは単に ng-vie
  <div ng-view ng-class="transition"></div>
 ```
 
-Angularルートサービスはこの要素を使用して、現在のページ（template.jspに含まれる）の承認可能なコンテンツを含む、アプリ内のすべてのページのコンテンツを表示します。
+angularルートサービスでは、この要素を使用して、現在のページ（template.jspに含まれる）のオーサリング可能なコンテンツを含む、アプリ内の各ページのコンテンツを表示します。
 
 body.jsp ファイルには、header.jsp および footer.jsp が空の状態でインクルードされています。どのページにも静的コンテンツを提供する場合には、アプリでこれらのスクリプトをオーバーライドできます。
 
-最後に、&lt;body>要素の末尾にjavascriptクライアントライブラリが含まれます。この中には、サーバー上で生成される2つの特別なJSファイルが含まれます。*&lt;page name>*.angular-app-module.jsと&#x200B;*&lt;page name>*.angular-app-controllers.js。
+最後に、サーバー上で生成される2つの特別なJSファイルを含む、 &lt;body>要素の末尾にJavaScript clientlibsが含まれます。*&lt;page name>*.page-app-module.jsと&#x200B;*&lt;page name>*.angular-app-controllers.js。
 
 ### angular-app-module.js.jsp {#angular-app-module-js-jsp}
 
@@ -106,7 +105,7 @@ ng-app="<c:out value='${applicationName}'/>"
 
 また、`AppController` 変数をスコープに公開するトップレベルのコントローラーを `wcmMode` という名前で定義し、コンテンツ同期更新ペイロードを取得する URI を設定します。
 
-最後に、このモジュールは各子孫ページ（自身を含む）を反復し、各ページのルートフラグメントの内容を（angular-route-fragment.jsセレクターと拡張を介して）レンダリングします。この内容は、Angularの\$routeProviderへのconfigエントリとして含まれます。 つまり、\$routeProviderは、特定のパスがリクエストされた場合にどのコンテンツをレンダリングするかをアプリに指示します。
+最後に、このモジュールは、Angularの\$routeProviderへの設定エントリとして、各ページのルートフラグメントのangularを（自身を含む）繰り返し処理し、（content-route-fragment.js selector &amp; extensionを介して）レンダリングします。 つまり、\$routeProviderは、特定のパスが要求されたときにレンダリングするコンテンツをアプリに伝えます。
 
 ### angular-route-fragment.js.jsp {#angular-route-fragment-js-jsp}
 
@@ -119,7 +118,7 @@ ng-app="<c:out value='${applicationName}'/>"
 })
 ```
 
-このコードは、$routeProvider (angular-app-module.js.jspで定義)に対して、&#39;/&lt;path>&#39;が`templateUrl`のリソースで処理され、`controller`で配線されることを示しています（次に行きます）。
+このコードは、$routeProvider (angular-app-module.js.jspで定義)に対して、「/&lt;path>」が`templateUrl`のリソースで処理され、`controller`で配信されることを示します（次に進みます）。
 
 必要に応じて、変数があるものも含めさらに複雑なパスを処理するように、このスクリプトをオーバーライドできます。この一例を AEM とともにインストールされる /apps/geometrixx-outdoors-app/components/angular/ng-template-page/angular-route-fragment.js.jsp スクリプトで確認できます。
 
@@ -133,7 +132,7 @@ ng-app="<c:out value='${applicationName}'/>"
 
 ### angular-app-controllers.js.jsp  {#angular-app-controllers-js-jsp}
 
-Angularでは、コントローラは\$scope内の変数を配線し、表示に公開します。 angular-app-controllers.js.jspスクリプトは、angular-app-module.js.jspに示すパターンに従って、そのページ自体を含む各子孫ページを繰り返し処理し、各ページが定義したコントローラーフラグメントをcontroller.js.jsp経由で出力します。 このスクリプトが定義しているモジュールは、`cqAppControllers` という名前であり、ページコントローラーが使用可能になるようにトップレベルアプリモジュールの依存関係としてリストされる必要があります。
+angularでは、コントローラは\$scope内の変数をワイヤアップし、ビューに表示します。 angular-app-controllers.js.jspスクリプトは、angular-app-module.js.jspで示すパターンに従い、各子孫ページ（それ自体も含む）を繰り返し処理し、各ページが定義するコントローラーフラグメントを(controller.js.jspを介して)出力します。 このスクリプトが定義しているモジュールは、`cqAppControllers` という名前であり、ページコントローラーが使用可能になるようにトップレベルアプリモジュールの依存関係としてリストされる必要があります。
 
 ### controller.js.jsp {#controller-js-jsp}
 
@@ -149,19 +148,19 @@ controller.js.jsp スクリプトは、ページごとにコントローラー�
 ])
 ```
 
-`data`変数には、Angular `$http.get`メソッドが返す約束が割り当てられます。 このページにインクルードされている各コンポーネントでは、必要に応じて一部の .json コンテンツを（その angular.json.jsp スクリプトを利用して）使用可能にし、この要求を解決する際に要求のコンテンツに対して処理を実行できます。要求は、単にファイルシステムにアクセスするだけなので、モバイルデバイスでは非常に高速です。
+`data`変数には、Angular`$http.get`メソッドで返されるプロミスが割り当てられます。 このページにインクルードされている各コンポーネントでは、必要に応じて一部の .json コンテンツを（その angular.json.jsp スクリプトを利用して）使用可能にし、この要求を解決する際に要求のコンテンツに対して処理を実行できます。要求は、単にファイルシステムにアクセスするだけなので、モバイルデバイスでは非常に高速です。
 
 このようにコンポーネントをコントローラーの一部にするには、コンポーネントを /libs/mobileapps/components/angular/ng-component コンポーネントで拡張し、コンポーネントに `frameworkType: angular`   プロパティを含める必要があります。
 
 ### template.jsp {#template-jsp}
 
-body.jspセクションで最初に導入されたtemplate.jspには、ページのparsysが含まれています。 公開モードでは、このコンテンツは（&lt;page-path>.template.htmlで）直接参照され、\$routeProviderに設定されたtemplateUrlを介してSPAに読み込まれます。
+body.jspの節で最初に導入されたtemplate.jspには、ページのparsysが含まれます。 パブリッシュモードでは、このコンテンツは（&lt;page-path>.template.htmlで）直接参照され、\$routeProviderに設定されたtemplateUrlを介してSPAに読み込まれます。
 
 このスクリプトの parsys は、任意のタイプのコンポーネントを受け入れるように設定できます。ただし、（SPA ではなく）従来の Web サイト向けにビルドされたコンポーネントを扱うときには注意が必要です。例えば、基盤画像コンポーネントは、アプリ内部にあるアセットを参照するように設計されていないため、トップレベルアプリページでのみ正しく機能します。
 
 ### angular-module-list.js.jsp  {#angular-module-list-js-jsp}
 
-このスクリプトは、単にトップレベルの Angular アプリモジュールの Angular 依存関係を出力します。angular-app-module.js.jspで参照されています。
+このスクリプトは、単にトップレベルの Angular アプリモジュールの Angular 依存関係を出力します。angular-app-module.js.jspで参照されます。
 
 ### header.jsp {#header-jsp}
 
@@ -196,7 +195,7 @@ PhoneGap アプリケーション内の特定のアセットの URI は、プラ
 
 PhoneGap 開発者に関係するコンテンツは、www ディレクトリの下にあります。アプリアセットにアクセスするには、相対パスを使用します。
 
-問題が複雑なのは、PhoneGap アプリケーションではシングルページアプリ（SPA）パターンを使用しているので、基準 URI が（ハッシュを除いて）変更されないことです。したがって、**を参照するすべてのアセット、テンプレートまたはスクリプトは、最上位レベルのページを基準としている必要があります。** トップレベルのページは、およびを使用してAngularルーティングとコントローラを初期化 `*<name>*.angular-app-module.js` し `*<name>*.angular-app-controllers.js`ます。このページは、リポジトリのルートに最も近いページで、sling:redirectを*拡張しない。
+問題が複雑なのは、PhoneGap アプリケーションではシングルページアプリ（SPA）パターンを使用しているので、基準 URI が（ハッシュを除いて）変更されないことです。したがって、**を参照するすべてのアセット、テンプレートまたはスクリプトは、トップレベルページに対して相対的である必要があります。** トップレベルページは、とを使用して、Angularルーティングとコントローラを初 `*<name>*.angular-app-module.js` 期化し `*<name>*.angular-app-controllers.js`ます。このページは、sling:redirectを拡張しないリポジトリのルートに最も近いページにする必要があります。
 
 次の複数のヘルパーメソッドで相対パスに対処できます。
 
@@ -204,11 +203,11 @@ PhoneGap 開発者に関係するコンテンツは、www ディレクトリの�
 * FrameworkContentExporterUtils.getRelativePathToRootLevel
 * FrameworkContentExporterUtils.getPathToAsset
 
-使用例を確認するには、/libs/mobileapps/components/angularにあるmobileappsソースを開きます。
+使用例を確認するには、/libs/mobileapps/components/componentsにあるmobileappsソースを開きます。angular
 
 ### リンク {#links}
 
-すべてのWCMモードをサポートするには、リンクで`ng-click="go('/path')"`関数を使用する必要があります。 この関数は、スコープ変数の値を利用して、リンクアクションを正しく判別します。
+リンクでは、`ng-click="go('/path')"`関数を使用して、すべてのWCMモードをサポートする必要があります。 この関数は、スコープ変数の値を利用して、リンクアクションを正しく判別します。
 
 ```xml
 <c:choose><c:when test="${wcmMode}">
@@ -220,9 +219,9 @@ PhoneGap 開発者に関係するコンテンツは、www ディレクトリの�
 </c:otherwise></c:choose>
 ```
 
-`$scope.wcmMode == true`の場合、各ナビゲーションイベントを通常の方法で処理し、その結果、URLのパスやページ部分に対する変更が生じます。
+`$scope.wcmMode == true`の場合は、URLのパスやページ部分に対する変更が結果として発生するように、各ナビゲーションイベントを通常の方法で処理します。
 
-または、`$scope.wcmMode == false`の場合、各ナビゲーションイベントは、URLのハッシュ部分に変更を加えます。この部分は、AngularのngRouteモジュールによって内部的に解決されます。
+また、 `$scope.wcmMode == false`の場合、各ナビゲーションイベントによってURLのハッシュ部分が変更され、AngularのngRouteモジュールによって内部的に解決されます。
 
 ### コンポーネントスクリプトの詳細 {#component-script-details}
 
@@ -234,17 +233,17 @@ PhoneGap 開発者に関係するコンテンツは、www ディレクトリの�
 
 #### template.jsp {#template-jsp-1}
 
-template.jsp スクリプトは、コンポーネントのマークアップをレンダリングします。問題のコンポーネントがAEMから抽出されたJSONデータ（「ng-text」など）によって駆動される場合：/libs/mobileapps/components/angular/ng-text/template.jsp)の場合、このスクリプトは、ページのコントローラースコープによって公開されるデータを使用してマークアップを配線します。
+template.jsp スクリプトは、コンポーネントのマークアップをレンダリングします。問題のコンポーネントが、AEMから抽出されたJSONデータ（「ng-text」など）によって駆動される場合：/libs/mobileapps/components/angular/ng-text/template.jsp)の場合、このスクリプトは、ページのコントローラースコープで公開されるデータを使用してマークアップを配線します。
 
 ただし、パフォーマンス要件のために、クライアント側でテンプレート化（データ連結とも呼ばれます）を実行しないように指示されることがあります。この場合は、単にサーバー側でコンポーネントのマークアップをレンダリングし、それをページテンプレートコンテンツにインクルードします。
 
 #### overhead.jsp  {#overhead-jsp}
 
-JSONデータによって駆動されるコンポーネント（「ng-text」など）の場合：/libs/mobileapps/components/angular/ng-text)、overhead.jspを使用して、template.jspからすべてのJavaコードを削除できます。 overhead.jsp は template.jsp から参照され、overhead.jsp が要求で公開している変数は使用可能です。この方法により、ロジックと表示を分離でき、既存のコンポーネントから新規のコンポーネントを生成する場合にコピーして貼り付ける必要があるコードの量を抑えることができます。
+JSONデータ（「ng-text」など）によって駆動されるコンポーネントの場合：/libs/mobileapps/components/text)では、overhead.jspを使用して、template.jspからすべてのJavaコードを削除できます。 overhead.jsp は template.jsp から参照され、overhead.jsp が要求で公開している変数は使用可能です。この方法により、ロジックと表示を分離でき、既存のコンポーネントから新規のコンポーネントを生成する場合にコピーして貼り付ける必要があるコードの量を抑えることができます。
 
 #### controller.js.jsp  {#controller-js-jsp-1}
 
-AEMページテンプレートで説明されているように、各コンポーネントはJavaScriptフラグメントを出力して、`data`約束で公開されたJSONコンテンツを使用できます。 Angular の表記規則に従って、コントローラーはスコープに変数を割り当てる目的でのみ使用します。
+AEMページテンプレートで説明されているように、各コンポーネントはJavaScriptフラグメントを出力して、 `data`プロミスで公開されたJSONコンテンツを使用できます。 Angular の表記規則に従って、コントローラーはスコープに変数を割り当てる目的でのみ使用します。
 
 #### angular.json.jsp  {#angular-json-jsp}
 
@@ -305,9 +304,9 @@ www/
   |- package-update.json
 ```
 
-### .cordova  {#cordova}
+### .cordova {#cordova}
 
-これは、現在の OS 設定によっては表示されない隠しディレクトリです。OSに含まれるアプリケーションフックを変更する場合に、このディレクトリが表示されるようにOSを設定する必要があります。
+これは、現在の OS 設定によっては表示されない隠しディレクトリです。このディレクトリに含まれるアプリフックを変更する予定がある場合は、OSを設定する必要があります。
 
 #### .cordova/hooks/ {#cordova-hooks}
 
@@ -315,17 +314,17 @@ www/
 
 #### .cordova/hooks/after-platform_add/  {#cordova-hooks-after-platform-add}
 
-after-platform_addディレクトリには`copy_AMS_Conifg.js`ファイルが含まれています。 このスクリプトは、Adobe Mobile Services 分析を収集できるように設定ファイルをコピーします。
+after-platform_addディレクトリには`copy_AMS_Conifg.js`ファイルが含まれます。 このスクリプトは、Adobe Mobile Services 分析を収集できるように設定ファイルをコピーします。
 
 #### .cordova/hooks/after-prepare/  {#cordova-hooks-after-prepare}
 
-after-prepareディレクトリには`copy_resource_files.js`ファイルが含まれています。 このスクリプトは、数多くのアイコンおよびスプラッシュスクリーンの画像をプラットフォーム固有の場所にコピーします。
+after-prepareディレクトリには`copy_resource_files.js`ファイルが含まれます。 このスクリプトは、数多くのアイコンおよびスプラッシュスクリーンの画像をプラットフォーム固有の場所にコピーします。
 
 #### .cordova/hooks/before_platform_add/  {#cordova-hooks-before-platform-add}
 
-before_platform_addディレクトリには`install_plugins.js`ファイルが含まれています。 このスクリプトは、Cordova プラグイン識別子のリストを繰り返し処理して、まだ使用可能でないことが検出されたプラグインをインストールします。
+before_platform_addディレクトリには`install_plugins.js`ファイルが含まれます。 このスクリプトは、Cordova プラグイン識別子のリストを繰り返し処理して、まだ使用可能でないことが検出されたプラグインをインストールします。
 
-この方法では、Maven `content-package:install`コマンドが実行されるたびに、AEMにプラグインをバンドルしてインストールする必要はありません。 別の方法で SCM システムにファイルをチェックインする場合には、バンドルとインストールの作業が繰り返し発生します。
+この方法では、Maven `content-package:install`コマンドを実行するたびに、プラグインをバンドルしてAEMにインストールする必要はありません。 別の方法で SCM システムにファイルをチェックインする場合には、バンドルとインストールの作業が繰り返し発生します。
 
 #### .cordova/hooks/Other Hooks  {#cordova-hooks-other-hooks}
 
@@ -356,23 +355,23 @@ before_platform_addディレクトリには`install_plugins.js`ファイルが�
 * after_run
 * before_run
 
-#### platforms/  {#platforms}
+#### platforms/ {#platforms}
 
-プロジェクトで`phonegap run <platform>`コマンドを実行するまで、このディレクトリは空です。 現在、`<platform>`は`ios`または`android`にすることができます。
+このディレクトリは、プロジェクトで`phonegap run <platform>`コマンドを実行するまで空です。 現在、`<platform>`は`ios`または`android`にすることができます。
 
 特定のプラットフォーム向けのアプリをビルドすると、対応するディレクトリが作成され、プラットフォーム固有のアプリコードが含められます。
 
-#### plugins/  {#plugins}
+#### plugins/ {#plugins}
 
-pluginsディレクトリは、`phonegap run <platform>`コマンドを実行した後、`.cordova/hooks/before_platform_add/install_plugins.js`ファイルにリストされている各プラグインによって設定されます。 初期状態では空になっています。
+pluginsディレクトリには、`phonegap run <platform>`コマンドを実行した後、`.cordova/hooks/before_platform_add/install_plugins.js`ファイルにリストされた各プラグインが入力されます。 初期状態では空になっています。
 
-#### www/  {#www}
+#### www/ {#www}
 
 www ディレクトリには、アプリの外観および動作を実装するすべての Web コンテンツ（HTML、JS、CSS の各ファイル）が含まれています。次に説明する例外を除き、このコンテンツは AEM から発生し、コンテンツ同期によって静的フォームにエクスポートされます。
 
 #### www/config.xml  {#www-config-xml}
 
-[PhoneGapドキュメント](https://docs.phonegap.com)では、このファイルを「グローバル設定ファイル」と呼んでいます。 config.xmlには、アプリの名前、アプリの「環境設定」（iOS Webビューでオーバースクロールが可能かどうかなど）、PhoneGapビルドで使用される&#x200B;*のみ*&#x200B;のプラグインの依存関係など、多くのアプリプロパティが含まれています。
+[PhoneGapのドキュメント](https://docs.phonegap.com)では、このファイルを「グローバル設定ファイル」と呼びます。 config.xmlには、アプリの名前、アプリの「環境設定」（iOS Webビューでオーバースクロールが許可されているかどうかなど）、PhoneGap Buildで使用される&#x200B;*のみ*&#x200B;のプラグインの依存関係など、多くのアプリプロパティが含まれます。
 
 config.xml ファイルは、AEM の静的ファイルで、コンテンツ同期によってそのままエクスポートされます。
 
@@ -384,13 +383,13 @@ config.xml ファイルには、`content` 要素が含まれています。
 
 `<content src="content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en.html" />`
 
-[PhoneGapドキュメント](https://docs.phonegap.com)では、この要素について「オプションの&lt;content>要素は、最上位Webアセットディレクトリ内のアプリの開始ページを定義します。 デフォルト値は index.html です。これは、プロジェクトのトップレベルの www ディレクトリに配置されるのが通例です」と説明しています。
+[PhoneGapのドキュメント](https://docs.phonegap.com)では、この要素は「オプションの&lt;content>要素で、トップレベルのWebアセットディレクトリにアプリの開始ページを定義します。 デフォルト値は index.html です。これは、プロジェクトのトップレベルの www ディレクトリに配置されるのが通例です」と説明しています。
 
-index.html ファイルが存在しない場合、PhoneGap Build は失敗します。したがって、このファイルは含まれます。
+index.html ファイルが存在しない場合、PhoneGap Build は失敗します。したがって、このファイルが含まれます。
 
 #### www/res {#www-res}
 
-res ディレクトリには、スプラッシュスクリーンの画像およびアイコンが含まれています。`copy_resource_files.js`スクリプトは、`after_prepare`構築段階で、プラットフォーム固有の場所にファイルをコピーします。
+res ディレクトリには、スプラッシュスクリーンの画像およびアイコンが含まれています。`copy_resource_files.js`スクリプトは、`after_prepare`ビルドフェーズで、プラットフォーム固有の場所にファイルをコピーします。
 
 #### www/etc {#www-etc}
 
@@ -411,10 +410,10 @@ content ディレクトリには、アプリの残りの Web コンテンツが�
 
 #### www/package.json  {#www-package-json}
 
-package.jsonファイルはマニフェストファイルで、****&#x200B;コンテンツ同期の完全なダウンロードに含まれるファイルをリストします。 このファイルには、コンテンツ同期ペイロードが生成されたタイムスタンプ（`lastModified`）も含まれています。このプロパティは、AEM にアプリの部分的更新を要求するときに使用されます。
+package.jsonファイルはマニフェストファイルで、**完全**&#x200B;コンテンツ同期ダウンロードに含まれるファイルのリストを示します。 このファイルには、コンテンツ同期ペイロードが生成されたタイムスタンプ（`lastModified`）も含まれています。このプロパティは、AEM にアプリの部分的更新を要求するときに使用されます。
 
 #### www/package-update.json  {#www-package-update-json}
 
-このペイロードがアプリ全体のダウンロードである場合、このマニフェストにはファイルの正確な一覧が`package.json`として含まれています。
+このペイロードがアプリ全体のダウンロードである場合、このマニフェストには`package.json`という正確なファイルリストが含まれます。
 
 ただし、このペイロードが部分的な更新である場合、`package-update.json`には、この特定のペイロードに含まれるファイルのみが含まれます。
