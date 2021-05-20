@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 83ca522e-d16e-4196-9aa7-84f85de8dee2
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: fe5d83e8-5e36-4146-a20a-dab2213055e2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '835'
 ht-degree: 92%
 
 ---
-
 
 # ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。{#reader-extending-policy-protected-pdf-documents-using-portable-protection-library}
 
@@ -25,9 +24,9 @@ Document Security のポリシーによって保護された PDF ドキュメン
 
 Document Security を使用して、特定の PDF ドキュメントへのアクセスを認証済のユーザーのみに制限することができます。また、保護されたドキュメントを受信者がどのように使用できるかを指定することができます。例えば、Document Security のポリシーによって保護されたドキュメントで、受信者が印刷、コピー、またはテキスト編集を行えるかどうかを指定できます。Document Security の詳細については、「[Document Security について](/help/forms/using/admin-help/document-security.md)」を参照してください。
 
-Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。通常これらのインタラクティブ機能は、Adobe Acrobat Professional と Standard でのみ可能になります。Reader Extensionで有効にできるインタラクティブ機能については、[Adobe Experience Manager FormsDocAssuranceサービス&#x200B;](/help/forms/using/overview-aem-document-services.md)**を参照してください。**
+Reader Extensions により Acrobat Reader を介して Adobe PDF ドキュメントでインタラクティブ機能を使用できます。通常これらのインタラクティブ機能は、Adobe Acrobat Professional と Standard でのみ可能になります。Reader Extensionで有効にできるインタラクティブ機能については、[Adobe Experience Manager Forms DocAssuranceサービス&#x200B;](/help/forms/using/overview-aem-document-services.md)**.**&#x200B;を参照してください。
 
-Portable Protection Library を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークに送信されるのは、セキュリティ証明書と保護ポリシーの詳細のみです。 実際のドキュメントはクライアントの手元から離れることはなく、保護ポリシーはクライアント側のローカルに適用されます。
+Portable Protection Library を使用して、ネットワークにドキュメントを送信することなくドキュメントにポリシーを適用できます。ネットワークを経由するのは、セキュリティ資格情報と保護ポリシーの詳細のみです。 実際のドキュメントはクライアントの手元から離れることはなく、保護ポリシーはクライアント側のローカルに適用されます。
 
 ## Document Security のポリシーで保護された PDF ドキュメントの Reader 用の拡張  {#reader-extending-document-security-policy-protected-pdf-documents}
 
@@ -78,7 +77,7 @@ Reader Extensions サービスを使用すると、次のタスクを実行で�
 
 ### ポリシーで保護された PDF ドキュメントに適用された使用権限を復元。  {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-`getDocumentUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントの Reader Extension の使用権限を復元できます。使用権限に関する情報を取得することで、ポリシーで保護されたPDFドキュメントで有効になっているReader Extensionの機能を確認できます。
+`getDocumentUsageRights` Java API を使用して、ポリシーで保護された PDF ドキュメントの Reader Extension の使用権限を復元できます。使用権限に関する情報を取得することで、ポリシーで保護されたPDFドキュメントに対して有効になっているReader Extensionの機能を確認できます。
 
 **構文：** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
@@ -189,4 +188,3 @@ System.out.println("RE rights removed successfully from the document.”);
 outputStream.close();
 inputFileStream.close();
 ```
-
