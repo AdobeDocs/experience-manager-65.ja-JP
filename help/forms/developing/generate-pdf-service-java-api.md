@@ -1,8 +1,8 @@
 ---
-title: Generate PDF Service Java API QuickStart(SOAP)
-seo-title: Generate PDF Service Java API QuickStart(SOAP)
-description: Generate PDFサービスを使用して、Microsoft WordドキュメントをPDFドキュメントに変換したり、HTMLコンテンツをPDFドキュメントに変換したり、PDFドキュメントをJava APIを使用してRTFファイルに変換したりします。
-seo-description: Generate PDFサービスを使用して、Microsoft WordドキュメントをPDFドキュメントに変換したり、HTMLコンテンツをPDFドキュメントに変換したり、PDFドキュメントをJava APIを使用してRTFファイルに変換したりします。
+title: Generate PDFサービスJava API QuickStart(SOAP)
+seo-title: Generate PDFサービスJava API QuickStart(SOAP)
+description: Generate PDFサービスを使用して、Microsoft WordドキュメントをPDFドキュメントに変換し、HTMLコンテンツをPDFドキュメントに変換し、Java APIを使用してPDFドキュメントをRTFファイルに変換します。
+seo-description: Generate PDFサービスを使用して、Microsoft WordドキュメントをPDFドキュメントに変換し、HTMLコンテンツをPDFドキュメントに変換し、Java APIを使用してPDFドキュメントをRTFファイルに変換します。
 uuid: f8c4a476-de5e-440a-b419-0bd1d7fde5ca
 contentOwner: admin
 content-type: reference
@@ -10,34 +10,33 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a7c0c4cf-7476-41e7-8d4e-564e6a21458d
 role: Developer
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b856a93b-91fa-47a5-9e46-6a537218fd4e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
+# Generate PDFサービスJava APIクイックスタート(SOAP) {#generate-pdf-service-java-api-quickstart-soap}
 
-# Generate PDF Service Java API Quick開始(SOAP) {#generate-pdf-service-java-api-quickstart-soap}
+Generate PDFサービスでは、Java APIクイックスタート(SOAP)を使用できます。
 
-Generate PDFサービスでは、Java API Quick開始(SOAP)を使用できます。
+[クイックスタート（SOAPモード）:Java APIを使用したMicrosoft Word文書のPDF文書への変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したMicrosoft WordドキュメントのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAPモード）:Java APIを使用したHTMLコンテンツからPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[クイック開始（SOAPモード）:Java APIを使用したHTMLコンテンツのPDFドキュメントへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントからRTFファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
 
-[クイック開始（SOAPモード）:Java API（SOAPモード）を使用したPDFドキュメントのRTFファイルへの変換](generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode)
-
-AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Formsでのプログラミング」にあるクイック開始は、JBoss Application ServerおよびMicrosoft WindowsオペレーティングシステムにデプロイされるFormsサーバーに基づいています。 ただし、UNIXなど別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを指定していることを確認してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM Formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerとMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}を使用したMicrosoft WordドキュメントのPDFドキュメントへの変換
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}を使用したMicrosoft Word文書のPDF文書への変換
 
-次のコードの例では、*Loan.doc*&#x200B;というWordファイルを&#x200B;*Loan.pdf*&#x200B;というPDFドキュメントに変換します。 ([WordドキュメントのPDFドキュメントへの変換](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents)を参照)。
+次のコードの例では、*Loan.doc*&#x200B;というWordファイルを、*Loan.pdf*&#x200B;というPDFドキュメントに変換します。 （[Word文書からPDF文書への変換](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents)を参照）。
 
 ```java
  /*
@@ -149,9 +148,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java API {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}を使用したHTMLコンテンツのPDFドキュメントへの変換
+## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}を使用したHTMLコンテンツのPDFドキュメントへの変換
 
-次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを&#x200B;*AdobeHTML.pdf*&#x200B;というPDFドキュメントに変換できます。 ([HTMLドキュメントをPDFドキュメントに変換する](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)を参照)。
+次のJavaコードの例を使用すると、https://www.adobe.comにあるHTMLコンテンツを、*AdobeHTML.pdf*&#x200B;というPDFドキュメントに変換できます。 （[HTMLドキュメントのPDFドキュメントへの変換](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)を参照）。
 
 ```java
  /*
@@ -255,9 +254,9 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイック開始（SOAPモード）:Java API(SOAPドキュメント){#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}を使用したPDFモードからRTFファイルへの変換
+## クイックスタート（SOAPモード）:Java API（SOAPモード）{#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}を使用したPDFドキュメントのRTFファイルへの変換
 
-次のコードの例では、*Loan.pdf*&#x200B;というPDFドキュメントを&#x200B;*Loan.rtf*&#x200B;というRTFドキュメントに変換します。 ([PDFドキュメントを非画像形式に変換する](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)を参照)。
+次のコードの例では、*Loan.pdf*&#x200B;というPDFドキュメントを、*Loan.rtf*&#x200B;というRTFドキュメントに変換します。 （[PDFドキュメントを非画像形式に変換する](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats)を参照）。
 
 ```java
  /*
@@ -361,4 +360,3 @@ AEM Formsの操作は、AEM Formsで厳密に型指定されたAPIを使用し�
      }
  }
 ```
-
