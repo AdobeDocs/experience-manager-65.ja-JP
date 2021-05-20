@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 feature: PDF Generator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0e2c12b5-24c8-4aca-8826-cb661051ce4f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1182'
 ht-degree: 91%
 
 ---
-
 
 # PDF Generator を使用したファイルの変換{#converting-files-using-pdf-generator}
 
@@ -68,17 +67,17 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 >* HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
    >
    >
-* (UNIXベースのドキュメントのみ)AEM Formsサーバーで日本語フォントを使用して、日本語フォントのWebページをPDFシステムに変換するには、次の日本語フォントのいずれかを使用できます。
+* （UNIXベースのシステムのみ）日本語フォントを含むWebページをPDFドキュメントに変換するには、AEM Formsサーバーで次の日本語フォントの1つを使用できる必要があります。
    >
    >  
-* 「Sazanami Gothic」
->  * &quot;Kozuka GothicPro-VI&quot;
->  * &quot;Kozuka MinchoPro-VI&quot;
->  * 「Sazanami Gothic」
->  * &quot;Kozuka MinchoPr6N&quot;
->  * 『サザナミ明朝』
->  * &quot;AdobeハイティStd&quot;
->  * &quot;Adobe Song標準&quot;
+* 「サザナミゴシック」
+>  * &quot;Kozuka Gothic Pro-VI&quot;
+>  * &quot;Kozuka Mincho Pro-VI&quot;
+>  * 「サザナミゴシック」
+>  * &quot;Kozuka Mincho Pr6N&quot;
+>  * 『サザナミ民帳』
+>  * 「AdobeハイティStd」
+>  * &quot;Adobe Song Std&quot;
 
    >
    >
@@ -120,7 +119,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. （オプション）「カスタムのプリフライトプロファイルを指定&#x200B;**」オプションで、「参照」をクリックし、カスタムのプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を選択します。**[プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用します。
+1. （オプション）「**カスタムプリフライトプロファイルを指定**」オプションで、「参照」をクリックし、[カスタムプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を選択します。 プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用されます。
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
@@ -140,4 +139,3 @@ PDF Generator では、PDF ファイルのサイズを低減することがで�
    * 既存の設定ファイルを使用するには、「設定ファイルをアップロード」を選択し、「参照」をクリックしてファイルの場所に移動します。
 
 1. 「作成」をクリックします。
-
