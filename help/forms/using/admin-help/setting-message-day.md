@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c2b3a412-70c2-4257-bfb4-1430bb1f8891
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d8bab1c4-b830-4491-9486-d7e7f4dc2c99
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 97%
 
 ---
-
 
 # 今日のお知らせの設定 {#setting-the-message-of-the-day}
 
@@ -47,4 +46,3 @@ Workspace ユーザーインターフェイスのようこそページに表示�
 >[!NOTE]
 >
 >AEM Forms のリリースでは Flex Workspace は廃止されています。
-
