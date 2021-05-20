@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1451'
+ht-degree: 97%
 
 ---
-
 
 # 画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
 
@@ -74,7 +73,7 @@ AEM を使用すれば、取り込み時、配信時またはその両方で画�
 
       画像のシャープニングに関する AEM ヘルプトピック。
 
-      ベストプラクティスに関するホワイトペーパー[AdobeDynamic Mediaクラシック](/help/assets/assets/sharpening_images.pdf)の画像へのシャープの適用
+      ベストプラクティスに関するホワイトペーパー[Dynamic Media ClassicのAdobeの画像のシャープ](/help/assets/assets/sharpening_images.pdf)。
 
    * AEM では第 4 パラメーターの monochrome（0,1）も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
@@ -90,7 +89,7 @@ amount を 1.75 から 4 まで少しずつ増やします。シャープニン�
 
 monochrome パラメーター設定は 0 のままにします。
 
-### JPEG圧縮(`&qlt=`) {#best-practices-for-jpeg-compression-qlt}のベストプラクティス
+### JPEG圧縮(`&qlt=`){#best-practices-for-jpeg-compression-qlt}のベストプラクティス
 
 * このパラメーターでは、JPG エンコーディング品質を制御します。値が大きいほど高画質になりますがファイルサイズも大きくなります。逆に、値が小さいほど低画質になりますがファイルサイズは小さくなります。このパラメーターの範囲は 0～100 です。
 * 画質を最適化するには、このパラメーターの値を 100 に設定しないでください。90 や 95 の設定と 100 の設定では、画質の差はほとんど感じられませんが、100 に設定することで画像ファイルのサイズが不必要に増加します。したがって、画質を最適化しながら画像ファイルが大きくなりすぎないようにするために、`qlt= value` を 90 または 95 に設定します。
@@ -108,7 +107,7 @@ JPG 圧縮のベストプラクティスとしては、`&qlt=85,0` を使用し�
 jpegSize は、メモリ容量が限られているデバイスに配信される画像が特定のサイズを超えないようにしたい場合に便利なパラメーターです。
 
 * このパラメーターはキロバイト単位で設定します（`jpegSize=&lt;size_in_kilobytes&gt;`）。画像配信で許可される最大サイズを定義します。
-* `&jpegSize=` は、JPG 圧縮パラメーターである `&qlt=` と相互に作用します。指定したJPG圧縮パラメーター(`&qlt=`)を含むJPG応答がjpegSize値を超えない場合、画像は定義どおり`&qlt=`に返されます。 jpegSize の値を上回る場合は、`&qlt=` が少しずつ減らされ、画像のサイズが最大許容サイズ内に収められるか、またはシステムによってそのサイズ内に収まらないと判断された場合はエラーが返されます。
+* `&jpegSize=` は、JPG 圧縮パラメーターである `&qlt=` と相互に作用します。指定されたJPG圧縮パラメーター(`&qlt=`)でのJPG応答がjpegSizeの値を超えない場合、画像は定義どおり`&qlt=`で返されます。 jpegSize の値を上回る場合は、`&qlt=` が少しずつ減らされ、画像のサイズが最大許容サイズ内に収められるか、またはシステムによってそのサイズ内に収まらないと判断された場合はエラーが返されます。
 
 ベストプラクティスとしては、`&jpegSize=` を設定し、メモリ容量が限られているデバイスに JPG 画像を配信する場合は `&qlt=` パラメーターを追加します。
 
@@ -129,4 +128,3 @@ jpegSize は、メモリ容量が限られているデバイスに配信され�
 * 様々なパラメーターを直接 URL 上でリアルタイムにテストします。
 * ベストプラクティスとしては、Dynamic Media 画像サービングコマンドを画像プリセット内にまとめることができます。画像プリセットは基本的に、`$thumb_low$` や `&product_high$` といったカスタムプリセット名が付けられた URL コマンドマクロです。URL パス内でカスタムプリセット名を指定すると、これらのプリセットがコールされます。この機能によって、Web サイトでの様々な画像使用パターンに応じたコマンドと画質設定を管理でき、URL の全体的な長さを短縮することができます。
 * AEM では、取り込み時に画像のシャープニングを適用するなど、高度な画質調整機能を提供しています。レンダリング結果をさらに調整して最適化するためにこの機能を利用できるような高度な使用例については、[Adobe Professional Services](https://www.adobe.com/jp/experience-cloud/consulting-services.html) がお客様向けにカスタマイズした見識やベストプラクティスを提供して支援いたします。
-
