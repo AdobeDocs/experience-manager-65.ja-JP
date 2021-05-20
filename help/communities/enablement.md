@@ -10,14 +10,13 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 765a3d9b-4552-403e-872c-fdf684ac271d
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b635e2ed-4637-4b2f-a746-ec8dc7541bab
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '447'
 ht-degree: 53%
 
 ---
-
 
 # イネーブルメント機能の設定 {#configuring-enablement-features}
 
@@ -25,7 +24,7 @@ ht-degree: 53%
 
 イネーブルメント機能では、[イネーブルメントコミュニティ](overview.md#enablement-community)を作成できます。
 
-* この機能を使用するには、実稼働環境で使用する追加のライセンスが必要です。
+* この機能を実稼動環境で使用するには、追加のライセンスが必要です。
 
 イネーブルメント機能を使用するには、次の必要があります。
 
@@ -47,7 +46,7 @@ ht-degree: 53%
 
 * **コミュニティマネージャー**
 
-   有効化コミュニティの場合、`Community Enablement Managers`ユーザーグループのメンバーのみが`Community Site Enablement Manager`の役割を割り当てられます。この権限には、発行環境でのコンテンツの作成、割り当て、メンバー管理が含まれます。
+   イネーブルメントコミュニティの場合、`Community Enablement Managers`ユーザーグループのメンバーのみが`Community Site Enablement Manager`の役割を割り当てることができます。この役割には、パブリッシュ環境でのコンテンツの作成、割り当て、メンバー管理の権限が含まれます。
 
 オプションで以下を設定します。
 
@@ -67,14 +66,14 @@ ht-degree: 53%
 
 1. **[MySQL用のJDBCドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   Webコンソールを使用（バンドル）:*http://localhost:4502/system/console/bundles*
+   Webコンソール（バンドル）を使用します。*http://localhost:4502/system/console/bundles*
 
-   SCORMパッケージをインストールする前に&#x200B;**&#x200B;をインストール
+   SCORMパッケージをインストールする&#x200B;*前に*&#x200B;をインストールします。
 
 1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**
 
 
-   Package Managerを使用する：*http://localhost:4502/crx/packmgr/*
+   パッケージマネージャーを使用：*http://localhost:4502/crx/packmgr/*
 
 **任意のサーバーで、次の手順を実行します。**
 
@@ -82,7 +81,7 @@ ht-degree: 53%
 
 1. **[MySQLデータベースのインストール](mysql.md#database-setup)**
 
-   作成者インスタンスからダウンロードしたSQLスクリプトを実行
+   オーサーインスタンスからダウンロードしたSQLスクリプトの実行
 
    MySQL Workbenchの使用
 
@@ -94,21 +93,21 @@ ht-degree: 53%
 
 1. **[JDBC接続プールの設定](mysql.md#configure-jdbc-connections)**
 
-   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
+   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
 
-1. **[SCORMエンジンサービスの構成](mysql.md#aem-communities-scormengine-service)**
+1. **[SCORMエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**
 
-   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
+   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
 
 1. **[CSRFフィルターの設定](mysql.md#adobe-granite-csrf-filter)**
 
-   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
+   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
 
 **オーサーインスタンスで、次の手順を実行します。**
 
 1. （*オプション*） **[Analyticsサービスの設定](analytics.md)**
 
-   ツール、デプロイメント、Cloud Servicesコンソールを使用します。*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   ツール/デプロイメント/Cloud Servicesコンソールを使用します。*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
 1. **[FFmpegの設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
@@ -116,19 +115,19 @@ ht-degree: 53%
 
 1. **[トンネルサービスの有効化](deploy-communities.md#tunnel-service-on-author)**
 
-   Webコンソールを使用(configMgr):*http://localhost:4502/system/console/configMgr*
+   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
 
 1. **[コミュニティ管理者の作成](users.md#creating-community-members)**
 
-   作成者環境に対しては、クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*
+   オーサー環境では、クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*
 
-   パス= /home/users/communityでユーザーを作成
+   パス= /home/users/communityを持つユーザーの作成
 
-   * メ追加ンバーを次のグループに追加します：
+   * 次のグループにメンバーを追加します：
 
       * コミュニティイネーブルメントマネージャー
       * コミュニティ管理者
 
 ## Dispatcher {#dispatcher}
 
-展開に[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)が含まれている場合、有効化機能を正しく動作させるために、`clientheader`セクションと`filter`セクションを変更する必要があります。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
+デプロイメントに[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)が含まれている場合、イネーブルメント機能を正しく動作させるには、`clientheader`セクションと`filter`セクションを変更する必要があります。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
