@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: f8d85d72-0215-4680-a334-e37a530fba58
-translation-type: tm+mt
-source-git-commit: 0b25d956c19c5fc5d79f87b292a0c61a23e5d66a
+exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 23%
 
 ---
 
-
 # ソーシャルグラフの基本事項   {#social-graph-essentials}
 
-コミュニティのメンバーが[アクティビティ](essentials-activities.md)に従う能力は、次の2つの要素を介して確立されます。
+コミュニティメンバーが[アクティビティ](essentials-activities.md)をフォローし、フォローする機能は、次の2つのコンポーネントを通じて確立されます。
 
-`following`コンポーネントは別のリソースと関連付ける必要があります。この関連付けは、既に[コミュニティサイト](overview.md#communitiessites)の既存のコミュニティのメンバーと機能に対して確立されています。
+`following`コンポーネントは別のリソースに関連付ける必要があり、この関連付けは、[コミュニティサイト](overview.md#communitiessites)の既存のコミュニティメンバーおよび機能に対して既に確立されています。
 
-`following`コンポーネントは、現在のメンバーに続くメンバー、または現在のメンバーの後に続くメンバーをリストします。 会員間の関係のこのソーシャルグラフは、コミュニティサイト用に設定されたユーザプロファイルに含まれる。
+`following`コンポーネントは、現在のメンバーをフォローしているメンバー、または現在のメンバーをフォローしているメンバーをリストします。 このメンバー間の関係のソーシャルグラフは、コミュニティサイト用に確立されたユーザープロファイルに含まれます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -38,7 +37,7 @@ ht-degree: 23%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>いいえ</td>
+   <td>不可</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -64,10 +63,10 @@ ht-degree: 23%
      <li>タイプ：Boolean</li>
      <li>値：<br />
       <ul>
-       <li><i>True  </i>- <code>following</code> コンポーネントは、現在サインインしているメンバをリストします <code>follows</code></li>
-       <li><i>False  </i>- <code>following</code> コンポーネントは、現在サインインしているメンバ <code>follow </code>をリストします。</li>
+       <li><i>True — コ </i>ンポー <code>following</code> ネントは、現在サインインしているメンバーをリストします <code>follows</code></li>
+       <li><i>False — コ </i>ンポー <code>following</code> ネントは、現在サインインしてい <code>follow </code>るメンバーをリストします</li>
       </ul> </li>
-    </ul> <p>プロパティが見つからない場合は、デフォルトで<i>true</i>に設定されます。 現在、作成者モードで編集ダイアログを使用してこのプロパティを設定することはできません。 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>を使用して、<code>following </code>ノードのインスタンスにプロパティを追加する必要があります。</p> </td>
+    </ul> <p>プロパティが見つからない場合は、デフォルトで<i>true</i>に設定されます。 現在、オーサーモードの編集ダイアログを使用してこのプロパティを設定することはできません。 <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>を使用して、<code>following </code>ノードのインスタンスにプロパティを追加する必要があります。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -76,17 +75,16 @@ ht-degree: 23%
 
 | **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
-| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | いいえ |
+| [**インクルード可能**](scf.md#add-or-include-a-communities-component) | 不可 |
 | **テンプレート** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
 | **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [ソーシャルグラフ API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
 * [ソーシャルグラフエンドポイント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
 
 * [サーバー側のカスタマイズ](server-customize.md)
-
