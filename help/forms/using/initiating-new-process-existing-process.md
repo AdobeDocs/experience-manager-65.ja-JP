@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: cbc5af90-5d51-4fdb-ac72-eea91137975d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+exl-id: 6fa97c06-9238-4444-b67f-983ef3b6fdc8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 97%
 
 ---
-
 
 # AEM Forms Workspace における既存のプロセスデータを使用した新しいプロセスの開始{#initiating-a-new-process-with-existing-process-data-in-aem-forms-workspace}
 
@@ -30,9 +29,8 @@ ht-degree: 97%
    * 「追跡」で、プロセスインスタンスのリストを表示する検索テンプレートを検索します。使用するデータが含まれているインスタンスを選択します。
    * 「**[!UICONTROL TODO]**」タブで、タスクを選択します。「**[!UICONTROL 履歴]**」タブをクリックし、プロセスインスタンスを開始したタスクを選択します。
 
-   ![タスクの選択](assets/start3_new.png) ![タスクの選択](assets/start1_new.png)
+   ![タスクを選択](assets/start3_new.png) ![するタスクを選択する](assets/start1_new.png)
 
 1. 「タスクアクション」ツールバーで、「**[!UICONTROL 開始]**」をクリックします。データが事前入力された新しいプロセスインスタンスのアダプティブフォームが表示されます。
 
 1. 必要に応じてデータを更新し、「**[!UICONTROL 完了]**」またはフォーム上の適切なボタンをクリックします。
-
