@@ -3,12 +3,11 @@ title: '[!DNL Assets] HTTP API。'
 description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
 contentOwner: AG
 role: Developer
-feature: APIs,Assets HTTP API,Developer Tools
+feature: API,Assets HTTP API，開発者ツール
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
-translation-type: tm+mt
 source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1729'
 ht-degree: 79%
 
 ---
@@ -17,12 +16,12 @@ ht-degree: 79%
 
 ## 概要 {#overview}
 
-[!DNL Assets] HTTP APIを使用すると、メタデータ、レンディション、コメントなどのデジタルアセットに対して、[!DNL Experience Manager]コンテンツフラグメントを使用して構造化されたコンテンツと共に、create-read-update-delete(CRUD)操作を実行できます。 この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
+[!DNL Assets] HTTP APIを使用すると、デジタルアセット（メタデータ、レンディション、コメント、および[!DNL Experience Manager]コンテンツフラグメントを使用した構造化コンテンツを含む）に対して作成、読み取り、更新、削除(CRUD)操作を実行できます。 この API は `/api/assets` で公開されており、REST API として実装されています。[コンテンツフラグメントをサポート](/help/assets/assets-api-content-fragments.md)しています。
 
 この API にアクセスするには、次の手順を実行します。
 
 1. API サービスドキュメント（`https://[hostname]:[port]/api.json`）を開きます。
-1. `https://[hostname]:[server]/api/assets.json`に続く[!DNL Assets]サービスのリンクに従います。
+1. `https://[hostname]:[server]/api/assets.json`に続く[!DNL Assets]サービスリンクをクリックします。
 
 API の応答は、一部の MIME タイプに対する JSON ファイル、およびすべての MIME タイプに対する応答コードです。JSON 応答はオプションであり、PDF ファイルなどでは利用できない場合があります。詳細な分析やアクションをおこなう場合は、応答コードを利用します。
 
@@ -30,7 +29,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 >[!CAUTION]
 >
->[HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
+>[HTTP APIは、名前空間のメタデータプ](#update-asset-metadata) ロパティを更新 `jcr` します。ただし、Experience Managerユーザーインターフェイスは`dc`名前空間のメタデータプロパティを更新します。
 
 ## コンテンツフラグメント {#content-fragments}
 
@@ -40,7 +39,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 ## データモデル {#data-model}
 
-[!DNL Assets] HTTP APIは、（標準アセット用の）フォルダーとアセットの2つの主要な要素を公開します。
+[!DNL Assets] HTTP APIは、（標準アセット用に）フォルダーとアセットの2つの主要な要素を公開します。
 
 さらに、コンテンツフラグメント内の構造化コンテンツを記述するカスタムデータモデルに対する詳細な要素が公開されます。詳しくは、[コンテンツフラグメントのデータモデル](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
 
@@ -67,10 +66,10 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 ### Assets {#assets}
 
-Experience Managerでは、アセットに次の要素が含まれます。
+Experience Managerでは、アセットには次の要素が含まれます。
 
 * アセットのプロパティとメタデータ
-* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加のレンディションには、様々なサイズの画像、ビデオエンコーディングの画像、PDFまたは[!DNL Adobe InDesign]ファイルから抽出したページなどがあります。
+* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加のレンディションは、サイズやビデオエンコーディングが異なる画像や、PDFファイルや[!DNL Adobe InDesign]ファイルから抽出したページなどです。
 * コメント（オプション）
 
 コンテンツフラグメントの要素については、[AEM Assets HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
@@ -81,7 +80,7 @@ Experience Managerでは、アセットに次の要素が含まれます。
 * プロパティ
 * リンク
 
-[!DNL Assets] HTTP APIには次の機能が含まれています。
+[!DNL Assets] HTTP APIには次の機能が含まれます。
 
 * [フォルダーのリストの取得](#retrieve-a-folder-listing).
 * [フォルダーを作成](#create-a-folder)します。
@@ -103,7 +102,7 @@ Experience Managerでは、アセットに次の要素が含まれます。
 
 * `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
 * **[!UICONTROL AdobeGranite CSRF Filter]**&#x200B;に移動します。
-* **[!UICONTROL フィルターメソッド]**&#x200B;のプロパティに次の内容が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
+* プロパティ&#x200B;**[!UICONTROL フィルターメソッド]**&#x200B;に次が含まれていることを確認します。`POST`、`PUT`、`DELETE`。
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -141,9 +140,9 @@ Experience Managerでは、アセットに次の要素が含まれます。
 
 ## アセットの作成 {#create-an-asset}
 
-指定されたファイルを指定されたパスに配置し、DAMリポジトリ内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメータ名またはファイル名をノード名として使用します。
+指定されたパスにファイルを配置して、DAMリポジトリー内にアセットを作成します。 ノード名の代わりに`*`を指定した場合、サーブレットはパラメーター名またはファイル名をノード名として使用します。
 
-**パラメータ**:パラメーターは、アセ `name` ット名とファイル参照 `file` 用のものです。
+**パラメーター**:パラメーターはア `name` セット名とファイル参 `file` 照用です。
 
 **リクエスト**
 
@@ -152,14 +151,14 @@ Experience Managerでは、アセットに次の要素が含まれます。
 
 **応答コード**：応答コードは次のとおりです。
 
-* 201 — 作成済み — アセットが正常に作成された場合。
-* 409 - CONFLICT — アセットが既に存在する場合。
+* 201 - CREATED（アセットが正常に作成された場合）
+* 409 - CONFLICT（アセットが既に存在する場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
 ## アセットバイナリの更新 {#update-asset-binary}
 
-アセットのバイナリ（オリジナルの名前のレンディション）を更新します。 更新トリガーは、デフォルトのアセット処理ワークフローが設定されている場合、実行するワークフローを指定します。
+アセットのバイナリ（オリジナルの名前のレンディション）を更新します。 「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
 
@@ -183,9 +182,9 @@ Experience Managerでは、アセットに次の要素が含まれます。
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でメタデータを同期
+### `dc`と`jcr`名前空間{#sync-metadata-between-namespaces}の間でのメタデータの更新の同期
 
-APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 ユーザーインターフェイスを使用して行った更新により、`dc`名前空間のメタデータプロパティが変更されます。 メタデータ値を`dc`と`jcr`名前空間の間で同期するには、ワークフローを作成し、アセット編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトでは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
+APIメソッドは、`jcr`名前空間のメタデータプロパティを更新します。 ユーザーインターフェイスを使用して行われた更新により、`dc`名前空間のメタデータプロパティが変更されます。 `dc`名前空間と`jcr`名前空間の間でメタデータ値を同期するには、ワークフローを作成し、アセットの編集時にワークフローを実行するようにExperience Managerを設定します。 ECMAスクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、`dc:title`と`jcr:title`の間でタイトル文字列を同期します。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
@@ -281,7 +280,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 **リクエスト**：`MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-URLに`/content/dam`を使用しないでください。 アセットを移動し、既存のアセットを上書きするサンプルコマンドは、次のとおりです。
+URLに`/content/dam`を使用しないでください。 アセットを移動して既存のアセットを上書きするサンプルコマンドは次のとおりです。
 
 ```shell
 curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
@@ -312,6 +311,6 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 ## ヒントと制限事項 {#tips-best-practices-limitations}
 
-* [HTTP APIは、](#update-asset-metadata) 名前空間内のメタデータ `jcr` プロパティを更新します。ただし、Experience Managerユーザーインターフェイスは、`dc`名前空間のメタデータプロパティを更新します。
+* [HTTP APIは、名前空間のメタデータプ](#update-asset-metadata) ロパティを更新 `jcr` します。ただし、Experience Managerユーザーインターフェイスは`dc`名前空間のメタデータプロパティを更新します。
 
-* アセットHTTP APIは、完全なメタデータを返しません。 名前空間はハードコードされ、これらの名前空間のみが返されます。 完全なメタデータについては、アセットのパス`/jcr_content/metadata.json`を参照してください。
+* Assets HTTP APIは完全なメタデータを返しません。 名前空間はハードコードされ、これらの名前空間のみが返されます。 完全なメタデータについては、アセットのパス`/jcr_content/metadata.json`を参照してください。
