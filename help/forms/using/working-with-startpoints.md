@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
-translation-type: tm+mt
-source-git-commit: af326f2d2b278fe36df05afc8c172f74c99a064c
+exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 77%
 
 ---
-
 
 # スタートポイントの使用{#working-with-startpoints}
 
@@ -26,14 +25,14 @@ ht-degree: 77%
 >
 >この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
 
-AEM Formsアプリからプロセスを開始するには、プロセス内にタイプ&#x200B;**Workspace**&#x200B;のスタートポイントが必要です。 また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
+AEM Formsアプリからプロセスを開始するには、プロセスに&#x200B;**Workspace**&#x200B;タイプのスタートポイントが必要です。 また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Workbench で定義されたプロセスを開始するには**
 
 1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](../../forms/using/home-screen.md)に移動してください。
-1. **[!UICONTROL ホーム]**&#x200B;画面には、デフォルトで&#x200B;**[!UICONTROL すべてのForms]**&#x200B;リストが表示されます。
+1. **[!UICONTROL ホーム]**&#x200B;画面に、デフォルトでは、**[!UICONTROL すべてのForms]**&#x200B;リストが表示されます。
 
    スタートポイントはフォームに関連付けられています。リスト内でスタートポイントに関連付けられたフォームをタップして開きます。
 
