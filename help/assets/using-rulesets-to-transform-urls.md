@@ -7,8 +7,7 @@ topic-tags: dynamic-media
 content-type: reference
 role: Business Practitioner, Administrator,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
-feature: Configuration,Rulesets
-translation-type: tm+mt
+feature: 設定，ルールセット
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '765'
@@ -58,7 +57,7 @@ Dynamic Media のコンテキストで、XML ベースのシステムを使用�
 
 **XML ルールセットをデプロイするには：**
 
-1. [Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にサインインします。
+1. [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)にログインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
