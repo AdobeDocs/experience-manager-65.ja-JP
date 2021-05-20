@@ -8,32 +8,31 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
-translation-type: tm+mt
-source-git-commit: c3fddf28c0f2f5377fff7561d29f073cc847c3ca
+exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '6450'
 ht-degree: 84%
 
 ---
 
-
 # AEM Document Services をプログラムとして使用する   {#using-aem-document-services-programmatically}
 
-このドキュメントのサンプルと例は、OSGi環境上のAEM FormsのAEMドキュメントサービスを理解し、使用する際に役立ちます。 JEE上のAEM Forms環境のサンプルと例については、
+このドキュメントのサンプルと例は、OSGi環境のAEM FormsでAEM Document Servicesを理解し、使用するのに役立ちます。 JEE上のAEM Forms環境のサンプルと例については、
 
-* [SignatureサービスJava APIのクイック開始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
+* [SignatureサービスJava APIクイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?#programming-aem-forms-jee)
 
-* [EncryptionサービスJava APIのクイック開始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
+* [EncryptionサービスJava APIクイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?#developer-reference)
 
-* [Acrobat Reader拡張サービスJava APIクイック開始](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
+* [Acrobat Reader Extensions Service Java APIクイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?#developer-reference)
 
 ## 前提条件 {#prerequisite}
 
 * DocAssuranceサービスAPIを使用する前に、[DocAssuranceサービス](/help/forms/using/install-configure-document-services.md)を設定します。
 
-* AEM mavenプロジェクトで[AEM FormsクライアントSDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をダウンロードし、設定します。 AEMドキュメントサービスを使用してMavenプロジェクトを構築するために必要なクライアントクラスは、[AEM FormsクライアントSDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)で利用できます
+* AEM Mavenプロジェクトを使用して[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をダウンロードし、設定します。 AEM Document Servicesを使用してMavenプロジェクトを構築するために必要なクライアントクラスは、[AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)で使用できます。
 
-* Maven](/help/sites-developing/ht-projects-maven.md)を使用したAEMプロジェクトの構築方法を学ぶ[
+* Mavenを使用したAEMプロジェクトの構築方法を[説明します。](/help/sites-developing/ht-projects-maven.md)
 
 ## DocAssurance サービス {#docassurance-service}
 
@@ -73,7 +72,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
 
 >[!NOTE]
 >
->これらすべてのサービスは Document オブジェクトを  URL [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/index.html)でJavadocが見つかる入力パラメーター
+>これらのサービスはすべて、Documentオブジェクトを入力パラメーターとして使用し、JavadocはURL [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/jp/experience-manager/6-3/forms/javadocs/index.html)で見つかります。
 
 ### 非表示署名フィールドの追加 {#adding-an-invisible-signature-field}
 
@@ -112,7 +111,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
  </tbody>
 </table>
 
-PDFドキュメントに非表示の署名フィールドを追加するJavaコードのサンプルを以下に示します。
+PDFドキュメントに不可視署名フィールドを追加するJavaコードのサンプルを以下に示します。
 
 ```java
 /*************************************************************************
@@ -429,7 +428,7 @@ public class AddSignatureField {
 
 ### ドキュメントのタイムスタンプを適用  {#apply-document-timestamp}
 
-[PAdES 4](https://en.wikipedia.org/wiki/PAdES) 仕様に従ってプログラムでドキュメントにタイムスタンプを押すことができます。トランザクション関連のドキュメントには[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)仕様を使用することもできます。
+[PAdES 4](https://en.wikipedia.org/wiki/PAdES) 仕様に従ってプログラムでドキュメントにタイムスタンプを押すことができます。[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)仕様は、トランザクション関連のドキュメントにも使用できます。
 
 **構文**:  `applyDocumentTimeStamp(Document doc, VerificationTime verificationTime, ValidationPreferences dssPrefs, ResourceResolver resourceResolver, UnlockOptions unlockOptions)`
 
@@ -654,7 +653,7 @@ import com.adobe.fd.signatures.pki.client.types.prefs.TSPPreferencesImpl;
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名が含まれている署名フィールドの名前です。署名フィールドの完全修飾名を指定します。XFA フォームに基づく PDF ドキュメントを使用する場合は、署名フィールドの名前の一部を使用できます。例えば、<code>form1[0].#subform[1].SignatureField3[3]</code>は<code>SignatureField3[3]</code>と指定できます。</td>
+   <td>署名が含まれている署名フィールドの名前です。署名フィールドの完全修飾名を指定します。XFA フォームに基づく PDF ドキュメントを使用する場合は、署名フィールドの名前の一部を使用できます。例えば、<code>form1[0].#subform[1].SignatureField3[3]</code>を<code>SignatureField3[3]</code>と指定できます。</td>
   </tr>
   <tr>
    <td><code>UnlockOptions</code></td>
@@ -877,9 +876,9 @@ public class GetSignatureFields {
 
 PDF ドキュメント内の署名フィールドを変更できます。署名フィールドの署名フィールドロックディクショナリまたはシード値ディクショナリの値を操作することで署名フィールドを変更します。
 
-フィールドロックディクショナリは、署名フィールドへの署名時にロックするフィールドのリストを指定します。フィールドがロックされると、ユーザーはフィールドを編集できなくなります。 シード値ディクショナリには、署名の適用時に使用される制約情報が含まれます。例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
+フィールドロックディクショナリは、署名フィールドへの署名時にロックするフィールドのリストを指定します。フィールドがロックされている場合、ユーザーはフィールドを編集できません。 シード値ディクショナリには、署名の適用時に使用される制約情報が含まれます。例えば、署名を無効にすることなく実行できるアクションを制御する権限設定を変更することができます。
 
-既存の署名フィールドを変更すると、PDFドキュメントを編集して、ビジネス要件の変更を反映させることができます。 例えば、新しいビジネス要件では、ドキュメントの署名後にすべてのドキュメントフィールドをロックする必要があります。
+既存の署名フィールドを変更すると、ビジネス要件の変更を反映するようにPDFドキュメントを編集できます。 例えば、新しいビジネス要件では、ドキュメントの署名後にすべてのドキュメントフィールドをロックする必要があります。
 
 **構文**:  `public Document modifySignatureField(Document inDoc, String signatureFieldName, PDFSignatureFieldProperties pdfSignatureFieldProperties, UnlockOptions unlockOptions)`
 
@@ -1045,7 +1044,7 @@ public class ModifySignatureField {
 認証署名と呼ばれる特定のタイプの署名によって PDF ドキュメントを認証することで、PDF ドキュメントを保護することができます。認証署名は、以下の方法で電子署名と区別されます。
 
 * 認証署名は PDF ドキュメントに適用される最初の署名です。つまり、認証署名が適用される場合、ドキュメント内の他の署名フィールドは未署名である必要があります。 認証署名は 1 つの PDF ドキュメントにつき 1 つです。PDF ドキュメントを署名および認証するには、署名の前に認証を行ってください。PDF ドキュメントの認証後、他の署名フィールドに電子署名を行うことができます。
-* ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更が可能になるように指定することができます。例えば、ドキュメントはフォームへの入力やコメント入力を許可できます。 作成者が特定の変更を許可しない設定を行った場合は、Acrobat によってその方法によるドキュメントの変更が制限されます。そのような変更が行われた場合は、認証署名は無効となります。また、Acrobatはドキュメントを開くと警告を発します。 （未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
+* ドキュメントの作成者または発信者は、認証署名を無効にすることなく、特定の方法でドキュメントの変更が可能になるように指定することができます。例えば、フォームの入力やコメントの入力を許可するドキュメントなどがあります。 作成者が特定の変更を許可しない設定を行った場合は、Acrobat によってその方法によるドキュメントの変更が制限されます。そのような変更が行われた場合は、認証署名は無効となります。また、Acrobatは、ユーザーがドキュメントを開くと警告を発します。 （未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
 * 署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。例えば、注釈により、認証される対象を把握するために重要なページ上のテキストが隠れてしまう場合があります。そのようなコンテンツに関する、説明（法的証明）を提供することができます。
 
 **構文**:
@@ -1372,7 +1371,7 @@ PDF ドキュメントをパスワードで暗号化する場合、ユーザー�
 
 >[!NOTE]
 >
->PDFドキュメントを証明書で暗号化する前に、AEM Trust Storeに証明書が追加されていることを確認する必要があります。
+>PDFドキュメントを証明書で暗号化する前に、証明書がAEM Trust Storeに追加されていることを確認する必要があります。
 
 **PDF ドキュメントへの使用権限の適用**
 
@@ -1392,11 +1391,11 @@ PDF ドキュメントは、公開鍵を用いて署名されます。署名者�
 
 >[!NOTE]
 >
->PDFドキュメントに電子署名する前に、秘密鍵証明書がAEMキーストアに追加されていることを確認する必要があります。 証明書は署名に使用する秘密鍵となります。
+>PDFドキュメントに電子署名を行う前に、AEMキーストアに証明書が追加されていることを確認する必要があります。 証明書は署名に使用する秘密鍵となります。
 
 >[!NOTE]
 >
->AEM Formsは、PDFドキュメントのデジタル署名に関する&#x200B;*[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)*&#x200B;仕様もサポートしています。
+>AEM Formsは、PDFドキュメントのデジタル署名に&#x200B;*[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)*&#x200B;仕様もサポートしています。
 
 **PDF ドキュメントの認証**
 
@@ -1420,7 +1419,7 @@ Acrobat はユーザーのその方法によるドキュメントの変更を制
 
 >[!NOTE]
 >
->PDFドキュメントに電子署名する前に、秘密鍵証明書がAEMキーストアに追加されていることを確認する必要があります。 証明書は署名に使用する秘密鍵となります。
+>PDFドキュメントに電子署名を行う前に、AEMキーストアに証明書が追加されていることを確認する必要があります。 証明書は署名に使用する秘密鍵となります。
 
 **構文**:
 
@@ -2094,16 +2093,16 @@ PDFドキュメントのReader用の拡張中に次のエラーメッセージ�
 org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.ThreadDeath: null at com.adobe.internal.pdftoolkit.services.javascript.GibsonContextFactory.observeInstructionCount(GibsonContextFactory.java:138)
 ```
 
-これは、Reader拡張サービスが、定義されたタイムアウト間隔内に、ドキュメントで使用されたJavaScriptを実行できないことを示しています。
+これは、Reader拡張サービスが、定義されたタイムアウト間隔内にドキュメントで使用されたJavaScriptを実行できないことを示します。
 
-PDFドキュメントのJavaScriptに対して定義したタイムアウト間隔を、次を使用して管理します。
+PDFドキュメント内のJavaScripts用に定義されたタイムアウト間隔を管理するには、次の手順を実行します。
 
 ```javascript
 ReaderExtensionsOptionSpec optionSpec = new ReaderExtensionsOptionSpec(usageRights, message);
 optionSpec.setJsScriptExecutionTimeoutInterval(100);
 ```
 
-100は、JavaScriptの実行に定義されたタイムアウト間隔（秒）を示します。 タイムアウト間隔に適切な値を設定します。
+ここで、100は、JavaScriptsの実行に定義されたタイムアウト間隔（秒）を指します。 タイムアウト間隔に適切な値を設定します。
 
 ### 証明書の使用権限の取得 {#getting-credential-usage-rights}
 
@@ -2761,7 +2760,7 @@ public class VerifyFieldEncryptedPDF {
 
 ### 複数のデジタル署名の検証 {#verifying-multiple-digital-signatures}
 
-AEM では、PDF ドキュメントの電子署名を検証することができます。複数の署名者の署名が必要なビジネスプロセスの対象となる場合、1つのPDFドキュメントに複数の電子署名を含めることができます。 例えば、金融取引の場合は、ローン担当者と管理者両方の署名が必要です。Signature サービス API を使用することで、PDF ドキュメント内のすべての署名を検証することができます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。アドビでは、電子署名を信頼する前に検証を行うことをおすすめしています。
+AEM では、PDF ドキュメントの電子署名を検証することができます。複数の署名者からの署名が必要なビジネスプロセスが適用される場合、1つのPDFドキュメントに複数の電子署名を含めることができます。 例えば、金融取引の場合は、ローン担当者と管理者両方の署名が必要です。Signature サービス API を使用することで、PDF ドキュメント内のすべての署名を検証することができます。複数の署名を検証する際は、それぞれの署名のステータスやプロパティを確認できます。アドビでは、電子署名を信頼する前に検証を行うことをおすすめしています。
 
 **構文**:  `verifyDocument(Document doc, RevocationCheckStyle revocationCheckStyle, VerificationTime verificationTime, ValidationPreferences prefStore, ResourceResolver resourceResolver)`
 
@@ -3299,7 +3298,7 @@ public class GetCertifyingSignatureField {
 
 ### PDF の暗号化タイプの取得  {#getting-pdf-encryption-type}
 
-署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signatureサービスは、`asform1[0].grantApplication[0].page1[0].SignatureField1[0]`などの署名フィールドの完全修飾名を返します。
+署名または認証する PDF ドキュメント内のすべての署名フィールドの名前を取得できます。PDF ドキュメント内の署名フィールド名が分からない場合や、名前を検証したい場合に、プログラムによって名前を取得することができます。Signatureサービスは、`asform1[0].grantApplication[0].page1[0].SignatureField1[0]`のような署名フィールドの完全修飾名を返します。
 
 **構文**:  `void getPDFEncryption(Document inDoc)`
 
@@ -3415,7 +3414,7 @@ public class GetPDFEncryption {
 
 ### PDF のパスワード暗号化の削除 {#removing-password-encryption-from-pdf}
 
-PDFドキュメントからパスワードベースの暗号化を削除すると、パスワードを指定しなくても、Adobe ReaderまたはAcrobatでPDFドキュメントを開くことができます。 パスワードベースの暗号化を PDF ドキュメントから削除すると、そのドキュメントは保護されなくなります。
+PDFドキュメントからパスワードベースの暗号化を削除すると、ユーザーはパスワードを指定しなくてもAdobe ReaderまたはAcrobatでPDFドキュメントを開くことができます。 パスワードベースの暗号化を PDF ドキュメントから削除すると、そのドキュメントは保護されなくなります。
 
 **構文**:  `Document removePDFPasswordSecurity (Document inDoc,String password)`
 
@@ -3642,13 +3641,13 @@ Output サービスは、XDP ファイルをレンダリングするための AP
 
 * **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)：**&#x200B;フォームデザインとアプリケーションに保存されたデータをマージして PDF ドキュメントを生成します。
 * **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p)：**&#x200B;フォームデザインをデータとマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p)：フォームデザインと、ネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されたデータファイルから、PCL、PostScriptまたはZPL出力を** 生成します。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** フォームデザインからPCL、PostScript、またはZPL出力を生成し、ネットワーク上の場所、ローカルファイルシステム、またはHTTP上の場所にリテラル値で格納されたデータファイルを生成します。
 
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p)：アプリケーションに保存されているフォームデザインとデータファイルから、PCL、PostScript、およびZPL出力を** 生成します。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p):** フォームデザインとアプリケーションに保存されているデータファイルから、PCL、PostScript、およびZPL出力を生成します。
 
 ### generatePDFOutput {#generatepdfoutput}
 
-generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePDFOutput APIは、フォームデザイン、またはネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されているデータに使用します。 フォームデザインと XML データがアプリケーションに保存されている場合は、「[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)」API を使用します。
+generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePDFOutput APIは、フォームデザイン、またはネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で格納されているデータに使用します。 フォームデザインと XML データがアプリケーションに保存されている場合は、「[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)」API を使用します。
 
 **構文：** `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
@@ -3666,11 +3665,11 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
   </tr>
   <tr>
    <td>data</td>
-   <td>PDFドキュメントとマージされるデータを含むXMLファイルです。<br /> </td>
+   <td>PDFドキュメントとマージされるデータを含むXMLファイル。<br /> </td>
   </tr>
   <tr>
    <td>options</td>
-   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、およびtaggedPDFの変数の値を指定します。このoptionsパラメーターは、PDFOutputOptionsタイプのオブジェクトを受け付けます。<br /> </td>
+   <td>contentRoot、locale、AcrobatVersion、linearizedPDF、およびtaggedPDFの変数の値を指定します。optionsパラメーターは、PDFOutputOptions型のオブジェクトを受け取ります。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -3755,7 +3754,7 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
 
 ### generatePDFOutput  {#generatepdfoutput-1}
 
-generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutput APIは、フォームデザイン、またはアプリケーションに保存されているデータに使用します。 フォームデザインとXMLデータがネットワーク、ローカル、またはHTTP上の場所にリテラル値で保存されている場合は、[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) APIを使用します。
+generatePDFOutput API は、フォームデザインとデータをマージして PDF ドキュメントを生成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutput APIは、フォームデザインや、アプリケーションに保存されたデータに使用します。 フォームデザインとXMLデータがネットワーク上、ローカル、またはHTTP上の場所にリテラル値で格納されている場合は、[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) APIを使用します。
 
 **構文：** `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
@@ -3773,7 +3772,7 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
   </tr>
   <tr>
    <td>data</td>
-   <td>PDFドキュメントとマージされるデータを含むXMLファイルです。<br /> </td>
+   <td>PDFドキュメントとマージされるデータを含むXMLファイル。<br /> </td>
   </tr>
   <tr>
    <td>options</td>
@@ -3863,7 +3862,7 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
     }
 ```
 
-### generatePDFOutputBatch  {#generatepdfoutputbatch}
+### generatePDFOutputBatch {#generatepdfoutputbatch}
 
 フォームデザインをデータとマージして PDF ドキュメントを作成します。オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePDFOutputBatch API は、フォームデザイン、またはネットワーク、ローカルファイルシステム、または HTTP 上の場所にリテラル値で保存されているデータに使用します。
 
@@ -3980,9 +3979,9 @@ String outputFolder="C:/Output";
 }
 ```
 
-### generatePrintedOutput  {#generateprintedoutput}
+### generatePrintedOutput {#generateprintedoutput}
 
-フォームデザインとデータから、PCL、PostScript、および ZPL 出力を生成します。データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力はプリンターに直接送信したり、ファイルとして保存したりできます。generatePrintedOutput APIは、フォームデザイン、またはアプリケーションに保存されているデータに使用します。
+フォームデザインとデータから、PCL、PostScript、および ZPL 出力を生成します。データファイルはフォームデザインとマージされ、印刷用にフォーマットされます。出力はプリンターに直接送信したり、ファイルとして保存したりできます。generatePrintedOutput APIは、フォームデザインや、アプリケーションに保存されたデータに使用します。
 
 **構文：** `Document generatePrintedOutput(String uriOrFileName, Document data, PrintedOutputOptions);`
 
@@ -4000,7 +3999,7 @@ String outputFolder="C:/Output";
   </tr>
   <tr>
    <td>data</td>
-   <td>PDFドキュメントとマージされるデータを含むXMLファイルです。<br /> </td>
+   <td>PDFドキュメントとマージされるデータを含むXMLファイル。<br /> </td>
   </tr>
   <tr>
    <td>options</td>
@@ -4009,7 +4008,7 @@ String outputFolder="C:/Output";
  </tbody>
 </table>
 
-以下のJavaコードのサンプルを使用することで、フォームデザインとデータから、PCL、PostScript、およびZPL出力を生成することができます。 出力タイプは、`printConfig`パラメーターに渡される値によって異なります。
+以下のJavaコードのサンプルを使用することで、フォームデザインとデータからPCL、PostScript、ZPL出力を生成することができます。 出力タイプは、`printConfig`パラメーターに渡された値によって異なります。
 
 ```java
 @Reference private OutputService outputService;
@@ -4091,7 +4090,7 @@ Document doc=null;
   </tr>
   <tr>
    <td>data</td>
-   <td>PDFドキュメントとマージされるデータを含むXMLファイルです。<br /> </td>
+   <td>PDFドキュメントとマージされるデータを含むXMLファイル。<br /> </td>
   </tr>
   <tr>
    <td>options</td>
@@ -4100,7 +4099,7 @@ Document doc=null;
  </tbody>
 </table>
 
-以下のJavaコードのサンプルを使用することで、フォームデザインとデータから、PCL、PostScript、およびZPL出力を生成することができます。 出力タイプは、`printConfig`パラメーターに渡される値によって異なります。
+以下のJavaコードのサンプルを使用することで、フォームデザインとデータからPCL、PostScript、ZPL出力を生成することができます。 出力タイプは、`printConfig`パラメーターに渡された値によって異なります。
 
 ```java
 @Reference private OutputService outputService;
@@ -4158,7 +4157,7 @@ Document doc=null;
 
 ### generatePrintedOutputBatch {#generateprintedoutputbatch}
 
-フォームデザインとデータをマージして、PS、PCL、ZPL形式のドキュメントを生成します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutputBatch APIは、フォームデザイン、またはネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されているデータに使用します。
+フォームデザインとデータをマージして、PS、PCL、およびZPL形式のドキュメントを生成します。 オプションで、レコードごとのメタデータファイルを生成したり、出力を PDF ファイルに保存したりできます。generatePrintedOutputBatch APIは、フォームデザイン、またはネットワーク、ローカルファイルシステム、またはHTTP上の場所にリテラル値で保存されているデータに使用します。
 
 **構文`:`** `BatchResult generatePrintedOutputBatch(Map templates, Map data, PrintedOutputOptions options, BatchOptions batchOptions);`
 
@@ -4189,7 +4188,7 @@ Document doc=null;
  </tbody>
 </table>
 
-以下の Java コードのサンプルを使用することで、複数のフォームデザインテンプレートとデータファイルから、一括で PCL、PostScript、および ZPL 出力を生成することができます。出力タイプは、`printConfig`パラメーターに渡される値によって異なります。
+以下の Java コードのサンプルを使用することで、複数のフォームデザインテンプレートとデータファイルから、一括で PCL、PostScript、および ZPL 出力を生成することができます。出力タイプは、`printConfig`パラメーターに渡された値によって異なります。
 
 ```java
 @Reference private OutputService outputService;
@@ -4468,7 +4467,7 @@ PDF Generator サービスは、ネイティブファイル形式を PDF に変�
 GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（廃止）、 .jpg、 .bmp、 .tif、 .png、.html やその他のファイル形式）を PDF に変換する API を提供します。また、PDF をさまざまなファイル形式で書き出したり、PDF を最適化する API も提供しています。このサービスは、以下の API をサポートしています。
 
 * **createPDF**：対応ファイル形式を PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。また、これらのアプリケーションに加えて、サードパーティ製の汎用 PDF 生成アプリケーションタイプも API にプラグインすることができます。
-* **exportPDF**：PDF ドキュメントを対応ファイル形式に変換します。このメソッドでは、PDF の内容を特定のファイル形式で読み込む（または書き出す）PDF が許可されます。PDFドキュメントは、Encapsulated PostScript( eps)、HTML 3.2(htm、html)、HTML 4.01とCSS 1.0(htm、html)、JPEG(jpg、jpeg、jpe)、JPEG2000(jpf、jpx、jp2、j2k、j2c、jpc)で書き出します。Microsoft Wordドキュメント(doc、docx) Microsoft Excelワークブック(xlsx)、Microsoft PowerPoint Presentation(ptx)、PNG(png)、PostScript(ps)、Rich Text Format(txt)、Text(Accessible)(txt)、TIFF(Tif、tiff)、XML 1.0()、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)形式。 また、PDF出力に対して[カスタムのプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を指定することもできます。
+* **exportPDF**：PDF ドキュメントを対応ファイル形式に変換します。このメソッドでは、PDF の内容を特定のファイル形式で読み込む（または書き出す）PDF が許可されます。PDFドキュメントをEncapsulated PostScript( eps)、HTML 3.2( htm、html)、HTML 4.01とCSS 1.0( htm、html)、JPEG( jpg、jpeg、jpe)、JPEG2000( jpf、jpx、2、j2k、j2c、jpc)、Microsoft Word Document( doc, docx) Microsoft Excelブック( xlsx)、Microsoft PowerPoint Presentation( ptx)、PNG( png)、PostScript( ps)、リッチテキストフォーマット(Accessible)( txt)、Text(Plain)( txt) TIFF( tif, tif)、 XML 1.0()、PDF/A-1a(sRGB)、PDF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)形式。 また、PDF出力に[カスタムのプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を指定することもできます。
 
 * **optimizePDF**：PDF ドキュメントを最適化し、PDF ドキュメントを別の形式に変換します。このメソッドは PDF ドキュメントを入力ファイルとして受け付けます。
 * **htmlToPdf2**:HTMLページをPDFドキュメントに変換します。HTML ページの URL を入力値として受け付けます。
@@ -4489,25 +4488,25 @@ GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt
   <tr>
    <td>createPDF</td>
    <td><strong>✓</strong></td>
-   <td><strong>kid</strong></td>
+   <td><strong>✓</strong></td>
   </tr>
   <tr>
    <td>htmlToPDF</td>
-   <td><strong>kid</strong></td>
-   <td><strong>kid</strong></td>
+   <td><strong>✓</strong></td>
+   <td><strong>✓</strong></td>
   </tr>
    <td>optimizePDF</td>
-   <td><strong>kid</strong></td>
+   <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
   <tr>
    <td>exportPDF</td>
-   <td><strong>kid</strong></td>
+   <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
   <tr>
    <td>OCR PDF（検索可能な PDF）</td>
-   <td><strong>kid</strong></td>
+   <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
  </tbody>
@@ -4581,7 +4580,7 @@ createPDF サービスは以下の例外をスローします。
   </tr>
   <tr>
    <td>xmpDoc </td>
-   <td>生成されたPDFドキュメントに適用されるメタデータ情報が含まれるファイルです。 このパラメーターはオプションです。<br /> </td>
+   <td>ファイルには、生成されたPDFドキュメントに適用されるメタデータ情報が含まれます。 このパラメーターはオプションです。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4648,7 +4647,7 @@ File createPDF(File inputFile, String inputFilename, String fileTypeSettings, St
 }
 ```
 
-#### exportPDF  {#exportpdf}
+#### exportPDF {#exportpdf}
 
 PDF ドキュメントを対応ファイル形式に変換します。このメソッドは、内容を特定のファイル形式で読み込む、または書き出す PDF を受け付けます。
 
@@ -5060,4 +5059,3 @@ File createPDF(File inputFile, String inputFilename, String pdfSettings, String 
  }
 }
 ```
-
