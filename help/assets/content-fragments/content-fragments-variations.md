@@ -10,16 +10,15 @@ topic-tags: content-fragments
 content-type: reference
 discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
 docset: aem65
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: ded05f24-ab5c-4195-b5c4-704a9fd93c7e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1746'
 ht-degree: 92%
 
 ---
-
 
 # バリエーション - フラグメントコンテンツのオーサリング{#variations-authoring-fragment-content}
 
@@ -83,7 +82,7 @@ ht-degree: 92%
 * 様々な[アクション](#actions)へのアクセス
 * [形式](#formats)に応じた、その他の書式設定オプション（[リッチテキスト](#rich-text)）
 
-### アクション  {#actions}
+### アクション {#actions}
 
 全画面表示エディター（複数行テキスト）を開いている場合は、次のアクションも（すべての[形式](#formats)で）使用できます。
 
@@ -167,7 +166,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 ### 重要な統計の表示 {#viewing-key-statistics}
 
-全画面表示エディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。次に例を示します。
+全画面表示エディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。以下に例を示します。
 
 ![cfx-6420-22](assets/cfx-6420-22.png)
 
@@ -185,7 +184,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 >[!CAUTION]
 >
->コンテンツフラグメントには、先祖として有効な言語（ISOコード）フォルダーが必要です。これは、使用する言語モデルを決定するために使用されます。
+>コンテンツフラグメントには、上位ページとして有効な言語（ISOコード）フォルダーが必要です。これは、使用する言語モデルを決定するために使用されます。
 >
 >例えば、次のパスの `en/` です。
 >
@@ -200,7 +199,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >* [フランス語(fr)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 >* [ソフトウェア配布のドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
 >* [ソフトウェア配布のイタリア語(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [ソフトウェア配布によるスペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [ソフトウェア配布のスペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 
 >
 
@@ -382,4 +381,3 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    ![cfm-6420-27](assets/cfm-6420-27.png)
 
 1. 「**同期**」を選択すると、バリエーションが更新され、表示されます。
-
