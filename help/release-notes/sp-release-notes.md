@@ -1,13 +1,12 @@
 ---
 title: '[!DNL Experience Manager] 6.5サービスパックリリースノート'
-description: ' [!DNL Adobe Experience Manager] 6.5 service pack 8に固有のリリースノート'
+description: リリースノート( [!DNL Adobe Experience Manager] 6.5 service pack 8)
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-translation-type: tm+mt
-source-git-commit: 9b23e9d5bbdbdde864ce71f434d6536439067f82
+source-git-commit: 024f03c04a980c544ac59e736caeaa24f7565582
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3409'
 ht-degree: 5%
 
 ---
@@ -25,100 +24,100 @@ ht-degree: 5%
 
 <!-- TBD: Update the SD link when SP8 is available. Same link is duplicated below in install -->
 
-## [!DNL Adobe Experience Manager] 6.5.8.0 {#what-s-included-in-aem}に含まれるもの
+## [!DNL Adobe Experience Manager] 6.5.8.0 {#what-s-included-in-aem}に含まれる内容
 
-[!DNL Adobe Experience Manager] 6.5.8.0には、新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの向上が含まれています。これらの機能は、2019年4月の6.5リリースのリリース以降にリリースされました。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
+[!DNL Adobe Experience Manager] 6.5.8.0には、2019年4月の6.5リリースのリリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
 
-[!DNL Adobe Experience Manager] 6.5.8.0で導入された主な機能と拡張機能は次のとおりです。
+[!DNL Adobe Experience Manager] 6.5.8.0で導入された主な機能と機能強化は次のとおりです。
 
 <!-- TBD:
 * Using the Connected Assets functionality, it is now possible to connect up to 3 [!DNL Sites] instances with 1 [!DNL Assets] instances. The configuration user interface now allows the administrators to provide the details of these [!DNL Sites] instances. -->
 
-* [接続されたアセット機能](/help/assets/use-assets-across-connected-assets-instances.md)を使用する場合、アセットを使用するすべての[!DNL Sites]ページのリストを表示できるようになりました。 アセットへのこれらの参照は、アセットの[!UICONTROL プロパティ]ページで利用できます。 これにより、管理者、マーケターおよびライブラリは、アセットの使用に関する完全な表示を得ることができ、トラッキング、管理、ブランドの一貫性を向上できます。
+* [Connected Assets機能](/help/assets/use-assets-across-connected-assets-instances.md)を使用する場合、そのアセットを使用するすべての[!DNL Sites]ページのリストを表示できるようになりました。 アセットへのこれらの参照は、アセットの[!UICONTROL プロパティ]ページで使用できます。 これにより、管理者、マーケター、ライブラリ担当者がアセットの使用状況を完全に把握でき、トラッキング、管理、ブランドの一貫性を向上させることができます。
 
-* Webページで参照されているアセットを削除すると、[!DNL Experience Manager] [警告](/help/assets/use-assets-across-connected-assets-instances.md#asset-usage-references)が表示されます。 参照されているアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示されている参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites]が開きます。
+* Webページで参照されているアセットを削除すると、[!DNL Experience Manager] [に警告](/help/assets/use-assets-across-connected-assets-instances.md#asset-usage-references)が表示されます。 参照元のアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示される参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites]が開きます。
 
-* [!UICONTROL 名前]、[!UICONTROL 最終変更日、]、[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えます。
+* [!UICONTROL 名前]、[!UICONTROL 最終変更日、]および[!UICONTROL 最終ロールアウト日]のプロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えます。
 
 * 組み込み型のリポジトリ(Apache Jackrabbit Oak)が1.22.6に更新されました。 <!-- TBD: Mention the version -->
 
-[!DNL Experience Manager] 6.5.8.0で導入された機能と拡張機能の完全なリストについては、[ [!DNL Adobe Experience Manager] 6.5 Service Pack 8](new-features-latest-service-pack.md)の新機能を参照してください。
+[!DNL Experience Manager] 6.5.8.0で導入された機能と機能強化の完全なリストについては、 [!DNL Adobe Experience Manager] 6.5サービスパック8](new-features-latest-service-pack.md)の新機能を参照してください。[
 
-[!DNL Experience Manager] 6.5.8.0リリースでの修正のリストを以下に示します。
+[!DNL Experience Manager] 6.5.8.0リリースで提供された修正の一覧を以下に示します。
 
 ### [!DNL Sites] {#sites-6580}
 
-* ページをブループリントに移動すると、リンク先は更新されません(NPR-35724)。
-* 一部のブラウザーで、Tizenベースのプレイヤーの認証に失敗します。 この問題は、samesite=none属性をサポートしていないブラウザー(NPR-35589)で発生します。
-* ロック解除されたレスポンシブコンテナは、許可されているコンポーネントを表示しません(NPR-35565)。
+* ページがブループリントに移動されても、リンク先は更新されない(NPR-35724)。
+* 特定のブラウザーでTizenベースのプレーヤーが認証に失敗する。 この問題は、samesite=none属性をサポートしないブラウザーで発生する(NPR-35589)。
+* ロックが解除されたレスポンシブコンテナに許可されているコンポーネントが表示されない(NPR-35565)。
 * 新しく追加されたページのライブコピーを作成すると、言語マスターは各ドメインに対して2つのコピーを作成します(NPR-35545)。
-* `org.apache.felix.scr.impl.ComponentRegistry`タイマーが原因で多数のスレッドがブロックされた場合、SCRコンポーネントレジストリでデッドロックが発生します。 その結果、[!DNL Experience Manager]は無限に応答を停止します(GRANITE-33125,FELIX-6252)。
-* サイドレールで特定のアセットを検索すると、結果には、検索されていないアセットが含まれます(NPR-35524)。
-* Experience Managerインスタンスに対してSSLを有効にすると、コンテキストパスが削除されます(NPR-35477)。
-* リストを作成する場合、最初の要素としてテキストを追加し、2番目の要素としてテーブルを追加し、テーブル内にリストを追加すると、親リストが歪みます(NPR-35465)。
-* 連続するリスト項目で異なるプラグインを使用すると、リスト項目に余分な<br>タグが追加されます(NPR-35464)。
-* 2つの段落の間にリストを配置する場合、テーブルをリストに追加することはできません(NPR-35356)。
-* AEMインスタンスをAEM 6.3からAEM 6.5にアップグレードすると、アップグレードインスタンスが開始にアップグレードされるまでに時間がかかります(NPR-35323)。
-* 括弧()を含むAEMアセットを複製する場合。 名前では、レプリケーションは失敗します(GRANITE-27004、NPR-35315)。
-* リッチテキストエディターに見出しを追加すると、段落ボタンは無効になります(NPR-35256)。
-* 既存のリストに項目を追加すると、次に表示される折りたたみ可能な項目または切り替え可能なリスト(NPR-35206)が削除されます。
-* [ロールアウトページ]オプションを選択すると、使用可能なすべてのライブコピーが含まれたダイアログボックスが表示され、自動ロールアウトが行われます。 ページのライブコピーは、ユーザーの操作なしですべての地域にロールアウトされます(NPR-35138)。
-* 「子を含む」オプションを使用する場合、「文書の管理」オプションでは、すべてのページがリストされるわけではありません。 22ページのみが掲載される(NPR-35086)。
-* ポリシーが編集されると、テキストコンポーネントはポリシーの変更を保持しません(NPR-35070)。
-* 番号付きリストで一部の項目をインデントする場合、すべての項目で同じ番号が維持されますが、インデントが同じ項目については、番号は1から開始する必要があります。(CQ-4313011)
-* 縮小が有効な場合、ページやコンポーネントを編集できません。 問題は、AEM 6.5 Service Pack 7のインストール後に開始されました(CQ-431133)。
-* オムニ検索とアセットフィルターが無関係な結果または結果を返さない(CQ-4312322、NPR-35793)。
-* 複数のページが同時にクライアントライブラリにアクセスする場合、HTMLライブラリマネージャーはクライアントライブラリの読み込みに失敗します。 その結果、ページが正しくレンダリングされません(NPR-35538)。
-* [!DNL Experience Manager](NPR-35294)でSSLを設定すると、コンテキストパスが自動的に削除されます。
-* パッケージマネージャーは、「ログアウト」オプション(NPR-35160)をクリックした後でもユーザーをログアウトしません。
+* `org.apache.felix.scr.impl.ComponentRegistry`タイマーが原因で多数のスレッドがブロックされた場合、SCRコンポーネントレジストリのデッドロック。 その結果、[!DNL Experience Manager]は無期限に応答を停止します(GRANITE-33125,FELIX-6252)。
+* サイドレールで特定のアセットを検索すると、結果には、検索されなかったアセットが含まれます(NPR-35524)。
+* Experience Managerインスタンスに対してSSLを有効にすると、コンテキストパスが削除される(NPR-35477)。
+* リストを作成し、最初の要素にテキストを追加し、2番目の要素にテーブルを追加し、テーブル内にリストを追加すると、親リストがゆがむ(NPR-35465)。
+* 連続するリスト項目で異なるプラグインを使用する場合、リスト項目に<br>タグが追加される(NPR-35464)。
+* リストが2つの段落の間に配置されている場合、リストにテーブルを追加できない(NPR-35356)。
+* AEMインスタンスをAEM 6.3からAEM 6.5にアップグレードし始めると、アップグレードインスタンスの起動に時間がかかる(NPR-35323)。
+* 角括弧()を含むAEMアセットを複製する場合。 名前でレプリケーションが失敗する(GRANITE-27004、NPR-35315)。
+* 見出しをリッチテキストエディターに追加すると、段落ボタンが無効になる(NPR-35256)。
+* 既存のリストに項目を追加すると、後続の折りたたみ可能なリストまたはトグルリストが削除されます(NPR-35206)。
+* 「ページをロールアウト」オプションを選択すると、使用可能なすべてのライブコピーを含むダイアログボックスが表示され、自動ロールアウトが実行されます。 ページのライブコピーは、ユーザーアクションを実行せずに、すべての地域にロールアウトされます(NPR-35138)。
+* 「子を含める」オプションを使用する場合、「公開を管理」オプションですべてのページがリストされるわけではありません。 22ページのみが表示される(NPR-35086)。
+* ポリシーが編集されると、テキストコンポーネントはポリシーの変更を保持しない(NPR-35070)。
+* 番号付きリストの一部の項目をインデントする場合、すべての項目は同じ番号を保持しますが、同じインデントを持つ項目に対しては、番号が1から始まる必要があります(CQ-4313011)。
+* 縮小化が有効になっている場合、どのページやコンポーネントも編集できません。 問題は、AEM 6.5 Service Pack 7のインストール後に発生しました(CQ-4311133)。
+* オムニサーチおよびアセットフィルターが、無関係な結果または結果を返さない(CQ-4312322、NPR-35793)。
+* 複数のページがクライアントライブラリに同時にアクセスする場合、HTMLライブラリマネージャーはクライアントライブラリを読み込めません。 ページの誤ったレンダリングが発生する。(NPR-35538)
+* [!DNL Experience Manager]でSSLを設定すると、コンテキストパスが自動的に削除されます(NPR-35294)。
+* パッケージマネージャーがログアウトオプションをクリックした後、ユーザーをログアウトしない(NPR-35160)。
 
 ### [!DNL Assets] {#assets-6580}
 
-[!DNL Adobe Experience Manager] 6.5.8.0では、次の問題が [!DNL Assets] 修正され、次の機能強化が行われました。
+[!DNL Adobe Experience Manager] 6.5.8.0では、次の問 [!DNL Assets] 題が修正され、次の機能強化がおこなわれました。
 
-* アセットの以前のバージョンを復元すると、イベントDamEvent.Type RESTOREDはOSGiコンソール(NPR-35789)でトリガーされません。
-* `IndexWriter.merge` を指定すると、スマートタグ機能によって大き `OutOfMemoryError` い `/oak:index/lucene` と `/oak:index/ntBaseLucene` インデックスが作成されるので、エラーが発生します(NPR-35651)。
-* マルチバイト文字を名前に含む[!UICONTROL アセット貢献度]タイプのフォルダーを保存しようとすると、エラーメッセージが表示されます(NPR-35605)。
-* カスケードメタデータのサブタイプフィールドを使用すると、誤った「このフィールドに入力してください」エラーが発生します(NPR-35643)。
-* 既存のアセットを[!DNL Assets]ユーザーインターフェイスにドラッグして新しいバージョンを作成すると、メタデータの変更が永続的に行われません(NPR-34940)。
-* カスケードメニュー用のメタデータスキーマエディターでルールを作成する場合、[!UICONTROL 依存オン]オプションは同じ名前を繰り返します(NPR-35596)。
+* 以前のバージョンのアセットを復元すると、OSGiコンソールでDamEvent.Type RESTOREDイベントがトリガーされない(NPR-35789)。
+* `IndexWriter.merge` スマートタ `OutOfMemoryError` グ機能で大きなおよびインデッ `/oak:index/lucene` クスが作成さ `/oak:index/ntBaseLucene` れるので、エラーが発生する。(NPR-35651)
+* マルチバイト文字を含む[!UICONTROL アセット投稿]タイプのフォルダーを名前に保存しようとすると、エラーメッセージが表示される(NPR-35605)。
+* カスケードメタデータサブタイプフィールドを使用すると、誤った「このフィールドに入力してください」エラーが発生する(NPR-35643)。
+* 既存のアセットを[!DNL Assets]ユーザーインターフェイスにドラッグして新しいバージョンを作成すると、メタデータの変更が永続的に行われない(NPR-34940)。
+* カスケードメニュー用のルールをメタデータスキーマエディターで作成する場合、「[!UICONTROL 依存オン]」オプションは同じ名前を繰り返します(NPR-35596)。
 * [!UICONTROL アセット管理者の検索レール]を編集した後、類似性検索が機能しない(NPR-35588)。
-* フォルダー内から、左のナビゲーションバーの「フィルター]」をクリックしてアセット検索を開くと、[!UICONTROL ステータス]/[!UICONTROL チェックアウト]/[!UICONTROL チェックアウト]が機能しません(NPR-35530)。[!UICONTROL 
-* アセットのすべてのスマートタグを削除して変更を保存しようとしても、タグは削除されません。 ただし、ユーザーインターフェイスは、変更が保存されると示します(NPR-35519)。
-* 順序指定可能なフォルダー(NPR-35516)内のリスト表示で、アセットの並べ替えや並べ替えを行うことはできません。
-* 初期設定のメタデータスキーマを編集すると、アセットの[!UICONTROL プロパティ]ページのタグフィールドがテキストフィールドに変わります。 この変更により、ユーザーがオンデマンドタグを追加できない状態になり、タグがリポジトリ(NPR-35478)に文字列として保存されます。
-* アセットをダウンロードする際に、有効な電子メールアドレスを持たない名前を指定した場合、ダウンロードオプションは使用できません。 ただし、ダウンロードダイアログの別のオプションが選択されている場合は、このボタンは有効になりますが、電子メールは送信されません(NPR-35365)。
-* ユーザーは、[!DNL Adobe InDesign]でアセットを編集した後にチェックインできず、権限がないことに関するエラーを受け取ることができません(NPR-35341)。
-* ハンドルバーのJavaScriptライブラリがv4.7.6にアップグレードされました(NPR-35333)。
-* バルクメタデータ編集から開始し、1つの項目が選択されたままになるまで項目の選択を解除すると、メタデータエディターインターフェイスが期待どおりに動作しなくなります(NPR-35144)。
-* `assets.html`ページ内でクリックすると、グローバルナビゲーションで正しいコンソールが開かない(CQ-4312311)。
-* [!DNL Assets] RGBレンディション(CQ-4310190)を持つアセットのRGBレンディションを表示しません。
-* メニューの「[!UICONTROL 関連付け]」オプションは、[!UICONTROL プロパティ]ページ(CQ-4310188)に正しく表示されません。
-* ドキュメントのfiletype filterを使用してアセットを検索し、スマートコレクションを作成する場合、コレクションにアクセスする際にフィルターは適用されません。 代わりに、すべてのタイプのアセットが検索に表示されます(NPR-35759)。
-* [!DNL Assets]ユーザーインターフェイス(NPR-35901)からライトボックス内のアセットをドラッグして追加することはできません。
+* フォルダー内で、左側のレールの「[!UICONTROL フィルター]」をクリックしてアセット検索を開くと、[!UICONTROL ステータス]/[!UICONTROL チェックアウト]/[!UICONTROL チェックアウト]が機能しません(NPR-35530)。
+* アセットのすべてのスマートタグを削除して変更を保存しようとしても、タグは削除されません。 ただし、ユーザーインターフェイスは、変更が保存されたことを示します(NPR-35519)。
+* 順序指定可能なフォルダーのリスト表示で、ユーザーがアセットの並べ替えや並べ替えを行えない。(NPR-35516)
+* デフォルトのメタデータスキーマを編集すると、アセットの[!UICONTROL プロパティ]ページのタグフィールドがテキストフィールドに変わります。 この変更により、ユーザーがオンデマンドタグを追加することを認識できなくなり、タグがリポジトリに文字列として保存される。(NPR-35478)
+* アセットをダウンロードする際に、有効な電子メールアドレスを持たない名前を指定した場合、ダウンロードオプションは使用できません。 ただし、ダウンロードダイアログの別のオプションが選択されている場合、このボタンは有効になりますが、電子メールは送信されません(NPR-35365)。
+* ユーザーは、[!DNL Adobe InDesign]でアセットを編集した後にチェックインできず、権限の不足に関するエラーが表示される(NPR-35341)。
+* Handlebars JavaScriptライブラリがv4.7.6にアップグレードされました(NPR-35333)。
+* 一括メタデータ編集を開始し、1つの項目が選択されたままになるまで項目の選択を解除すると、メタデータエディターインターフェイスが期待どおりに動作しなくなる(NPR-35144)。
+* `assets.html`ページ内からクリックした場合、グローバルナビゲーションで正しいコンソールが開かれない(CQ-4312311)。
+* [!DNL Assets] RGBレンディションを持つアセットのRGBレンディションが表示されない(CQ-4310190)。
+* メニューの[!UICONTROL Relate]オプションが[!UICONTROL Properties]ページに正しく表示されません(CQ-4310188)。
+* アセットの検索やスマートコレクションの作成にドキュメントのファイルタイプフィルターを使用する場合、コレクションのアクセス時にフィルターが適用されません。 代わりに、すべてのタイプのアセットが検索に表示されます(NPR-35759)。
+* [!DNL Assets]ユーザーインターフェイスからLightboxにアセットをドラッグして追加することはできません(NPR-35901)。
 * 名前の競合を解決した後に既存のアセットの新しいバージョンを作成すると、元のアセットのメタデータが上書きされます(CQ-4313594)。
-* 検索フィルターまたは述語を使用してアセット検索をフィルタリングする場合、表示するアセットを開くか編集し、検索結果ページに戻ると、フィルターは機能しません。 検索されたすべてのアセットがフィルタリングされずに一覧表示されます(NPR-35913)。
+* 検索フィルターまたは述語を使用してアセット検索をフィルターする場合は、アセットを開いて表示または編集し、検索結果ページに戻ると、フィルターは機能しません。 検索されたすべてのアセットが、フィルタリングされていない状態で表示される(NPR-35913)。
 
 #### [!DNL Dynamic Media] {#dynamic-media-6580}
 
-* RESS画像プリセットのURLオプションは、アセットの詳細ページで有効になります。 現在は、「動的レンディション」セクションでRESS画像プリセットを選択した場合に、アセットの詳細ページでURLとRESSの両方のオプションを使用できます。 (CQ-4311241)
-* インタラクティブメディアコンポーネント — インタラクティブビデオは、ユーザーが選択的発行設定を使用する[!DNL Experience Manager]を持っている場合、機能しません。(CQ-4311054)
-* アセットをフォルダー間で移動する場合、API経由の[!DNL Experience Manager]と[!DNL Dynamic Media–Scene7]の間の同期は非常に遅くなります(CQ-4310001)。
-* Omnisearchを使用すると、ログのサイズが大幅に増えます。(CQ-4309153)
-* 選択的な同期が有効で、アセットが同期フォルダーにコピー（移動されない）されると、期待どおりに同期されません(CQ-4307122)。
-* アップロードしたアセットがDMに自動公開される場合、ステータスに「AEMで公開済み」は表示されません。 また、「Dynamic Media公開ステータス」列に正しい公開ステータスが表示されません(CQ-4306415)。
-* アセットが[!DNL Experience Manager]に発行され、アクティベーション上の[!DNL Dynamic Media]に発行するように設定されている場合、`scene7FileStatus`メタデータ値は期待どおりに更新されません(CQ-4308269)。
-* ビデオプロファイルを編集する場合、[!DNL Experience Manager]には、ビデオプリセットに設定された高さとビットレートの値は表示されません。 フィールドが空白で表示されます。(CQ-4311828)
+* RESS画像プリセットの「 URL 」オプションは、アセットの詳細ページで有効になっています。 動的レンディションセクションでRESS画像プリセットが選択されている場合、アセットの詳細ページでURLオプションとRESSオプションの両方が使用できるようになりました。 (CQ-4311241)
+* インタラクティブメディアコンポーネント — インタラクティブビデオは、ユーザーが選択的公開設定の[!DNL Experience Manager]を持っている場合、機能しません(CQ-4311054)。
+* フォルダー間でアセットを移動する場合、APIを介した[!DNL Experience Manager]と[!DNL Dynamic Media–Scene7]の同期は非常に遅くなります(CQ-4310001)。
+* オムニサーチを使用する場合、ログのサイズが大幅に増加します(CQ-4309153)。
+* 選択的同期が有効で、アセットが同期フォルダーにコピー（移動なし）されると、期待どおりに同期されません(CQ-4307122)。
+* DMに自動公開されるアップロード済みアセットの場合、ステータスに「AEMで公開済み」が表示されません。 また、「Dynamic Mediaの公開ステータス」列に正しい公開ステータスが表示されません(CQ-4306415)。
+* アセットが[!DNL Experience Manager]に公開され、アクティベーション時に[!DNL Dynamic Media]に公開するように設定されている場合、 `scene7FileStatus`メタデータの値は期待どおりに更新されません(CQ-4308269)。
+* ビデオプロファイルの編集時に、[!DNL Experience Manager]にはビデオプリセットに設定された高さとビットレートの値が表示されません。 フィールドは空白で表示されます(CQ-4311828)。
 
 ### [!DNL Commerce] {#commerce-6580}
 
-* コマースのすべての製品に対してカスタムタグを作成できません(CQ-4310682)。
+* コマースのすべての製品のカスタムタグを作成できない(CQ-4310682)。
 
-* 製品アセット参照の更新により、ProductAssetListenerスレッドがJCRへのコミットを完了するまで、レプリケーションスレッドは待機状態になります(NPR-35269)。
+* 製品アセットの参照の更新により、ProductAssetListenerスレッドがJCRへのコミットを完了するまで、レプリケーションスレッドが待機状態になる(NPR-35269)。
 
 ### Platform {#platform-6580}
 
-* タブのないCoral Tab表示コンポーネントを使用し、その後Foundationバリデーターをトリガーすると、次のエラーが発生します(NPR-35636)。
+* タブを持たないCoralタブビューコンポーネントを使用し、基盤バリデーターをトリガーすると、次のエラーが発生します(NPR-35636)。
 
    ```TXT
     Uncaught TypeError: Cannot set property 'invalid' of undefined
@@ -126,43 +125,43 @@ ht-degree: 5%
      at foundation.js:10710
    ```
 
-* 名前にコンマが含まれるノード(NPR-35191)の削除イベントで、SCDの転送レプリケーションが失敗する。
+* 名前にコンマを含むノードのSCD転送レプリケーションが、削除イベントで失敗する(NPR-35191)。
 
-* AEM 6.5.7にアップグレードすると、ビルド開始が失敗します。 理由は、古いバージョンであるか、jackson-coreがuber-jarに埋め込まれていない(GRANITE-33006)ためです。
+* AEM 6.5.7にアップグレードすると、ビルドが失敗し始めます。 理由は、古いバージョンがuber-jarに埋め込まれているか、jackson-coreがないかです(GRANITE-33006)。
 
 ### ユーザーインターフェイス {#ui-6580}
 
-* アセットコンソール内のドキュメントのカード表示からリスト表示に切り替えると、並べ替えが適切に動作しません(NPR-35842)。
+* アセットコンソールで、フォルダー内のドキュメントのカード表示からリスト表示に切り替えると、並べ替えが適切に機能しない(NPR-35842)。
 
-* テキストコンポーネント内のテキストをハイパーリンクする場合、検索機能では適切な結果が表示されません(NPR-35849)。
+* テキストコンポーネント内のテキストをハイパーリンクすると、検索機能に適切な結果が表示されない(NPR-35849)。
 
-* 必須とマークされた非表示のフィールドに値が指定されない場合、コンポーネントの保存がブロックされます(NPR-35219)。
+* 値が必須とマークされた非表示フィールドに指定されていない場合、コンポーネントの保存がブロックされます(NPR-35219)。
 
 ### 統合 {#integrations-6580}
 
-* IMSテナントIDとターゲットクライアントコードに異なる値を使用すると、[!DNL Experience Manager]は[!DNL Adobe Target] (NPR-35342)との統合に失敗します。
+* IMSテナントIDとTargetクライアントコードに異なる値を使用すると、 [!DNL Experience Manager]と[!DNL Adobe Target]の統合に失敗します(NPR-35342)。
 
 ### 翻訳プロジェクト{#translation-6580}
 
-* 翻訳ジョブを[!DNL Experience Manager]で書き出しまたは読み込むときに発生する問題(NPR-35259)。
+* [!DNL Experience Manager]で翻訳ジョブを書き出すまたは読み込む際の問題(NPR-35259)。
 
 ### Campaign {#campaign-6580}
 
-* タッチUIの標準搭載されたキャンペーンを使用してテンプレートページを作成し、ページプロパティダイアログの「電子メール」タブを開くと、件名フィールドと本文フィールドのパーソナライズ変数は無効のままになります。(CQ-4312388)
+* タッチUIで標準のテンプレートを使用してキャンペーンページを作成し、ページのプロパティダイアログの「 Eメール」タブを開くと、件名フィールドと本文フィールドのパーソナライゼーション変数が無効のままになります(CQ-4312388)。
 
 ### [!DNL Communities] {#communities-6580}
 
-* コミュニティグループにページ構造を追加すると、パンくずリスト内の[!UICONTROL Group]タイトルが、最初の[!UICONTROL Page](NPR-35803)のタイトルに変更されます。
-* モデレーターとは異なり、標準コミュニティのメンバーはドラフト投稿にアクセスして編集することができません(NPR-35339)。
-* `DSRPReindexServlet`とのアクセス制御とサービス拒否(DoS)の機能が壊れ、インデックス付けが完了するまでコミュニティのサイトが停止します(NPR-35591)。
-* [!UICONTROL 管理者]フィールドから[!UICONTROL すべてのユーザー]を削除しても、実際にはバックエンド(NPR-35592、NPR-35611)からは削除されません。
-* [!UICONTROL 構成メッセージ]コンポーネントは、入力されたテキストが部分一致の場合、結果を返しません(NPR-35666)。
+* コミュニティグループにページ構造を追加すると、パンくずリストの[!UICONTROL Group]タイトルが、最初の[!UICONTROL Page]のタイトルに変更されます(NPR-35803)。
+* モデレーターとは異なり、標準コミュニティメンバーはドラフト投稿にアクセスして編集できません(NPR-35339)。
+* `DSRPReindexServlet`によるアクセス制御とサービス拒否が壊れ、インデックス作成が完了するまでコミュニティサイトが停止します(NPR-35591)。
+* を[!UICONTROL 管理者]フィールドから削除しても、実際にはバックエンドからは削除されません(NPR-35592、NPR-35611)。
+* [!UICONTROL メッセージを構成]コンポーネントは、入力されたテキストが部分一致の場合、結果を返しません(NPR-35666)。
 
-* **[!UICONTROL タグ]**&#x200B;を選択して新しいブログにタグを追加しようとすると、パフォーマンスの低下と遅さに気づくかもしれません。 パフォーマンスを向上させるには、[!DNL Software Distribution]から入手できる[cqTagLucene-0.0.1.zip hotfix](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)をインストールします。
+* **[!UICONTROL タグを追加]**&#x200B;を選択して新しいブログにタグを追加しようとすると、パフォーマンスに影響が出たり遅くなったりする場合があります。 パフォーマンスを向上させるには、[cqTagLucene-0.0.1.zip hotfix](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cqTagLucene-0.0.1.zip)をインストールします。
 
 ### [!DNL Brand Portal] {#brandportal-6580}
 
-* [!UICONTROL アセット貢献度]タイプのフォルダーにメンバーを追加すると、ユーザーインターフェイスに「[!UICONTROL 追加ユーザー」または「グループ]」のキャプションが表示されますが、ブランドポータルのアクティブユーザーのみがサポートされ、グループはサポートされません(NPR-35332)。
+* [!UICONTROL アセット投稿]タイプのフォルダーにメンバーを追加すると、ユーザーインターフェイスに「[!UICONTROL ユーザーまたはグループを追加]」と表示されます。ただし、Brand Portalのアクティブなユーザーのみがサポートされ、グループはサポートされません。(NPR-35332)
 
 ### [!DNL Forms] {#forms-6580}
 
@@ -172,37 +171,37 @@ ht-degree: 5%
 
 **アダプティブフォーム**
 
-* アダプティブフォーム内に複数のインスタンスを持つ繰り返し可能なパネルに、繰り返し可能な行を持つ表を挿入すると、常にその表がパネルの最初のインスタンス(NPR-35635)に追加されます。
+* アダプティブフォーム内に複数のインスタンスを持つ繰り返し可能なパネルに、繰り返し可能な行を含む表を挿入すると、その表は常にパネルの最初のインスタンスに追加される。(NPR-35635)
 
-* アダプティブフォームでタブのフォーカスがCAPTCHAコンポーネントに再び到達した後、アダプティブフォームでの検証が正常に完了すると、[!DNL Experience Manager Forms]は`Provide Captcha phrase to proceed`エラーメッセージを表示します(NPR-35539)。
+* アダプティブフォームでタブフォーカスが正常に検証された後にCAPTCHAコンポーネントに再び到達すると、 [!DNL Experience Manager Forms]は`Provide Captcha phrase to proceed`エラーメッセージを表示する(NPR-35539)。
 
 **インタラクティブコミュニケーション**
 
-* 翻訳済みのフォームを送信すると、送信メッセージは英語で表示され、適切な言語(NPR-35808)に翻訳されません。
+* 翻訳済みのフォームを送信すると、送信メッセージが英語で表示され、適切な言語に翻訳されない(NPR-35808)。
 
-* 添付されたXDPまたはドキュメントフラグメントに非表示条件を含めると、Interactive Communicationは読み込まれません(NPR-35745)。
+* 添付されたXDPまたはドキュメントフラグメントに非表示条件を含めると、インタラクティブ通信の読み込みに失敗する。(NPR-35745)
 
 **Correspondence Management**
 
-* レターを編集する場合、条件が指定されたモジュールの読み込みには時間がかかります(NPR-35325)。
+* レターを編集する際、条件を持つモジュールの読み込みに時間がかかる(NPR-35325)。
 
-* レターに含まれていないアセットを左側のナビゲーションペインから選択し、次のアセットを選択した場合、青いハイライトは、以前に選択されたアセット(NPR-35851)から削除されません。
+* 左側のナビゲーションパネルからレターに含まれていないアセットを選択し、次のアセットを選択した場合、青いハイライトは、以前に選択されたアセットから削除されません(NPR-35851)。
 
-* レター内のテキストフィールドを編集すると、[!DNL Experience Manager Forms]に`Text Edit Failed`エラーメッセージが表示されます(CQ-4313770)。
+* レターのテキストフィールドを編集すると、[!DNL Experience Manager Forms]に`Text Edit Failed`エラーメッセージが表示されます(CQ-4313770)。
 
 **ワークフロー**
 
-* iOS版の[!DNL Experience Manager Forms]モバイルアプリケーションでアダプティブフォームを開こうとすると、アプリケーションは応答を停止します(CQ-4314825)。
+* iOS用の[!DNL Experience Manager Forms]モバイルアプリケーションでアダプティブフォームを開こうとすると、アプリケーションの応答が停止します(CQ-4314825)。
 
-* HTMLワークスペースの「[!UICONTROL TODO]」タブにHTML文字が表示されます(NPR-35298)。
+* HTMLワークスペースの[!UICONTROL To-do]タブにHTML文字が表示される(NPR-35298)。
 
 **XMLFM**
 
-* Outputサービスを使用してXMLドキュメントを生成する場合、一部のXMLファイル(CQ-4311341、CQ-4313893)で`OutputServiceException`エラーが発生します。
+* Outputサービスを使用してXMLドキュメントを生成する場合、一部のXMLファイルに対して`OutputServiceException`エラーが発生します(CQ-4311341、CQ-4313893)。
 
-* 箇条書きの最初の文字に上付きのプロパティを適用すると、箇条書きのサイズが小さくなります(CQ-4306476)。
+* 箇条書きの最初の文字に上付き文字プロパティを適用すると、箇条書きのサイズが小さくなります(CQ-4306476)。
 
-* Outputサービスを使用して生成されるPDF formsには、境界線が含まれません(CQ-4312564)。
+* Output Serviceを使用して生成されるPDF formsには、境界線は含まれません(CQ-4312564)。
 
 **デザイナー**
 
@@ -210,103 +209,103 @@ ht-degree: 5%
 
 **HTML5 のフォーム**
 
-* [!DNL iOS 14.1 or 14.2]の[!DNL Safari] Webブラウザーでアダプティブフォームのチェックボックスを選択すると、追加のフィールドは表示されません(NPR-35652)。
+* [!DNL iOS 14.1 or 14.2]の[!DNL Safari] Webブラウザーでアダプティブフォームのチェックボックスをオンにすると、追加のフィールドが表示されない(NPR-35652)。
 
-**Forms経営**
+**Forms Management**
 
-* XDPファイルのCRXリポジトリ(NPR-35546)へのバルクアップロードが正常に完了したことを示す確認メッセージはありません。
+* XDPファイルのCRXリポジトリへの一括アップロードが正常に完了したことを示す確認メッセージが表示されない(NPR-35546)。
 
 **Document Security**
 
-* AdminUIの[!UICONTROL ポリシー]を編集オプションで複数の問題が報告されました(NPR-35747)。
+* AdminUIの「[!UICONTROL ポリシー]を編集」オプションに関して複数の問題が報告された(NPR-35747)。
 
-セキュリティ更新について詳しくは、[Experience Managerのセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
+セキュリティ更新について詳しくは、[Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
 
-## 6.5.8.0 {#install}のインストール
+## 6.5.8.0 のインストール {#install}
 
 **設定要件と詳細情報**
 
-* Experience Manager6.5.8.0では、Experience Manager6.5が必要です。詳細な手順については、[アップグレードドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
-* Service Packのダウンロードは、Adobe[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)で入手できます。
-* MongoDBと複数のインスタンスを使用するデプロイメントでは、Package Managerを使用して、いずれかの作成者インスタンスにExperience Manager6.5.8.0をインストールします。
+* Experience Manager6.5.8.0にはExperience Manager6.5が必要です。詳細な手順については、[アップグレードのドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
+* サービスパックのダウンロードは、Adobe[「Software Distribution」](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)で入手できます。
+* MongoDBおよび複数のインスタンスを使用したデプロイメントで、パッケージマネージャーを使用して、いずれかのオーサーインスタンスにExperience Manager6.5.8.0をインストールします。
 
 >[!NOTE]
 >
->[!DNL Adobe Experience Manager] 6.5.8.0パッケージの削除またはアンインストールは、Adobeにお勧めしません。
+>Adobeは、[!DNL Adobe Experience Manager] 6.5.8.0パッケージの削除またはアンインストールはお勧めしません。
 
-### サービスパック{#install-service-pack}をインストールします
+### サービスパック{#install-service-pack}をインストールします。
 
 [!DNL Adobe Experience Manager] 6.5インスタンスにService Packをインストールするには、次の手順に従います。
 
-1. インスタンスが更新モードの場合（これは、インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。 Adobeでは、インスタンスの現在の稼働時間が長い場合は再起動を推奨します。
+1. インスタンスが更新モードの場合（以前のバージョンから更新された場合）は、インストール前にインスタンスを再起動します。 Adobeでは、インスタンスの現在の稼動時間が長い場合に再起動を推奨します。
 
-1. インストールする前に、[!DNL Experience Manager]インスタンスのスナップショットまたは新規バックアップを作成します。
+1. インストールする前に、[!DNL Experience Manager]インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.8.zip)からService Packをダウンロードします。
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.8.zip)からサービスパックをダウンロードします。
 
 1. パッケージマネージャーを開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
 1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
 
-1. S3コネクタを更新するには、Service Packのインストール後にインスタンスを停止し、既存のコネクタをinstallフォルダーに指定された新しいバイナリファイルに置き換えてから、インスタンスを再起動します。 [AmazonS3データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
+1. S3コネクタを更新するには、Service Packのインストール後にインスタンスを停止し、既存のコネクタをinstallフォルダーに用意されている新しいバイナリファイルで置き換えて、インスタンスを再起動します。 [Amazon S3データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
 
 >[!NOTE]
 >
->Service Packのインストール中に、Package Manager UIのダイアログが閉じることがあります。 Adobeでは、エラーログが安定するのを待ってからデプロイメントにアクセスすることをお勧めします。 アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。 通常、これは[!DNL Safari]で起こりますが、どのブラウザーでも断続的に起こる可能性があります。
+>サービスパックのインストール中に、パッケージマネージャーUIのダイアログが終了することがあります。 Adobeでは、エラーログが安定するのを待ってから、デプロイメントにアクセスすることをお勧めします。 アップデータバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認します。 通常、[!DNL Safari]ではこのような処理が行われますが、どのブラウザーでも断続的に発生する場合があります。
 
 **自動インストール**
 
-作業インスタンスにAdobe Experience Manager6.5.8.0を自動的にインストールするには、次の2つの方法があります。
+作業用インスタンスにAdobe Experience Manager 6.5.8.0を自動的にインストールするには、次の2つの方法があります。
 
-A.サーバーがオンラインで使用できる状態で、パッケージを`../crx-quickstart/install`フォルダーに配置します。 パッケージが自動的にインストールされます。
+A.サーバーがオンラインで使用可能になったら、 `../crx-quickstart/install`フォルダーにパッケージを配置します。 パッケージが自動的にインストールされます。
 
-B. Package Manager](/help/sites-administering/package-manager.md#package-share)の[HTTP APIを使用します。 `cmd=install&recursive=true`を使用して、ネストされたパッケージをインストールします。
+B.パッケージマネージャーの[HTTP APIを使用します。](/help/sites-administering/package-manager.md#package-share) `cmd=install&recursive=true`を使用して、ネストされたパッケージをインストールします。
 
 >[!NOTE]
 >
->Adobe Experience Manager6.5.8.0は、Bootstrapのインストールをサポートしていません。
+>Adobe Experience Manager 6.5.8.0では、Bootstrapのインストールはサポートされていません。
 
 **インストールの検証**
 
-1. 製品情報ページ(`/system/console/productinfo`)には、[!UICONTROL インストール済み製品]の下に、更新バージョン文字列`Adobe Experience Manager (6.5.8.0)`が表示されます。
+1. 製品情報ページ(`/system/console/productinfo`)に、[!UICONTROL インストール済みの製品]の下に、更新されたバージョン文字列`Adobe Experience Manager (6.5.8.0)`が表示されます。
 
-1. すべてのOSGiバンドルは、OSGiコンソールで&#x200B;**[!UICONTROL ACTIVE]**&#x200B;または&#x200B;**[!UICONTROL FRAGMENT]**&#x200B;です(Webコンソールを使用：`/system/console/bundles`)。
+1. OSGiコンソール内のOSGiバンドルは、すべて&#x200B;**[!UICONTROL ACTIVE]**&#x200B;または&#x200B;**[!UICONTROL FRAGMENT]**&#x200B;です(Webコンソールを使用：`/system/console/bundles`)です。
 
-1. OSGiバンドル`org.apache.jackrabbit.oak-core`はバージョン1.22.3以降です(Webコンソールを使用：`/system/console/bundles`)。
+1. OSGiバンドル`org.apache.jackrabbit.oak-core`は、バージョン1.22.3以降です(Webコンソールを使用：`/system/console/bundles`)です。
 
-このリリースで動作が確認されたプラットフォームについて詳しくは、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
+このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-### Adobe Experience Manager Formsアドオンパッケージ{#install-aem-forms-add-on-package}をインストール
+### Adobe Experience Manager Formsアドオンパッケージ{#install-aem-forms-add-on-package}をインストールします
 
 >[!NOTE]
 >
->Experience ManagerFormsを使用していない場合はスキップします。 Experience ManagerFormsの修正は、[!DNL Experience Manager] Service Packのリリースが予定されてから1週間後に、個別のアドオンパッケージを使用して提供されます。
+>Formsを使用していない場合はスキップします。 Experience ManagerFormsの修正は、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に、別のアドオンパッケージを通じて配信されます。
 
-1. Adobe Experience ManagerService Packがインストールされていることを確認します。
+1. Adobe Experience Manager Service Packがインストールされていることを確認します。
 1. [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. [AEM Formsアドオンパッケージのインストール](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の説明に従って、Formsアドオンパッケージをインストールします。
 
 >[!NOTE]
 >
->AEM 6.5.8.0には、[AEM Forms互換パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、AEM 6.5.8.0にアップデートする場合は、Formsオンパッケージのインストール後に最新バージョンのパッケージをインストールし追加ます。
+>AEM 6.5.8.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、AEM 6.5.8.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
-### JEEにAdobe Experience Manager Formsをインストール{#install-aem-forms-jee-installer}
-
->[!NOTE]
->
->JEE で AEM Forms を使用していない場合はスキップします。JEE上のAdobe Experience Manager Formsの修正は、別のインストーラーを使用して提供されています。
-
-JEE上のExperience ManagerFormsの累積インストーラーのインストールとデプロイメント完了後の設定について詳しくは、[リリースノート](jee-patch-installer-65.md)を参照してください。
+### JEE上のAdobe Experience Manager Forms {#install-aem-forms-jee-installer}のインストール
 
 >[!NOTE]
 >
->JEE上のExperience ManagerFormsの累積インストーラーをインストールした後、最新のFormsアドオンパッケージをインストールし、`crx-repository\install`フォルダーからFormsアドオンパッケージを削除して、サーバーを再起動します。
+>JEE で AEM Forms を使用していない場合はスキップします。JEE上のAdobe Experience Manager Formsの修正は、別のインストーラーを使用して提供されます。
+
+JEE上のFormsExperience Manager用の累積インストーラーのインストールとデプロイ後の設定について詳しくは、[リリースノート](jee-patch-installer-65.md)を参照してください。
+
+>[!NOTE]
+>
+>JEE上のFormsExperience Manager用の累積インストーラーをインストールしたら、最新のFormsアドオンパッケージをインストールし、`crx-repository\install`フォルダーからFormsアドオンパッケージを削除して、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
 
-Experience Manager6.5.8.0のUberJarは、[Maven Centralリポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.8/)で入手できます。
+Experience Manager6.5.8.0用のUberJarは、[Maven Centralリポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.8/)で入手できます。
 
-MavenプロジェクトでUberJarを使用するには、[UberJarの使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクトPOMに次の依存関係を含めます。
+MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-developing/ht-projects-maven.md)の使用方法を参照し、プロジェクトPOMに次の依存関係を含めます。
 
 ```shell
 <dependency>
@@ -319,62 +318,62 @@ MavenプロジェクトでUberJarを使用するには、[UberJarの使用方法
 
 >[!NOTE]
 >
->UberJarおよびその他の関連アーティファクトは、AdobeのパブリックMavenリポジトリ(`repo.adobe.com`)ではなく、Maven Centralリポジトリで使用できます。 メインのUberJarファイルの名前が`uber-jar-<version>.jar`に変更されます。 したがって、`dependency`タグには`apis`を値として持つ`classifier`はありません。
+>UberJarおよびその他の関連アーティファクトは、AdobeのパブリックMavenリポジトリ(`repo.adobe.com`)ではなく、Maven Centralリポジトリで使用できます。 メインのUberJarファイルの名前が`uber-jar-<version>.jar`に変更されます。 したがって、`dependency`タグには`apis`を値とする`classifier`はありません。
 
 ## 非推奨（廃止予定）の機能 {#removed-deprecated-features}
 
-以下は、[!DNL Experience Manager] 6.5.7.0で非推奨とマークされた機能と機能のリストです。機能は、最初は非推奨とされ、今後のリリースで削除されます。 通常は、代替オプションが提供されます。
+[!DNL Experience Manager] 6.5.7.0で非推奨とマークされた機能の一覧を以下に示します。機能は、最初に廃止され、後で将来のリリースで削除されます。 通常は、代替オプションが提供されます。
 
-機能または機能を配置で使用するかどうかを確認します。 また、別のオプションを使用するように実装を変更することを計画します。
+機能または機能をデプロイメントで使用するかどうかを確認します。 また、別のオプションを使用するように実装を変更することを計画します。
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨です。 Experience Manager6.5で更新されたExperience ManagerとAdobe Targetの統合により、AdobeIMSとI/Oを介した認証を使用するAdobe Target標準APIがサポートされ、分析とパーソナライゼーションのExperience Managerページの実装でAdobeの起動の役割が高まり、オプトインウィザードは機能的に無関係になりました。 | 各Experience Managerクラウドサービスを使用して、システム接続、AdobeIMS認証、[!DNL Adobe I/O]統合を設定します。 |
-| コネクタ | Experience Manager6.5では、JCR Connector for Microsoft SharePoint 2010およびMicrosoft SharePoint 2013のAdobeは非推奨です。 | 該当なし |
+| 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨（廃止予定）となりました。 Experience Manager6.5でExperience ManagerとAdobe Targetの統合が更新され、AdobeIMSとI/Oを介した認証を使用するAdobe Target Standard APIがサポートされるようになり、分析とパーソナライゼーション用のExperience Managerページを実装するためのAdobeLaunchの役割が増加しています。 | 各System Cloudサービスを使用して、システム接続、AdobeIMS認証、[!DNL Adobe I/O]統合をExperience Managerします。 |
+| コネクタ | Experience Manager6.5では、Microsoft SharePoint 2010およびMicrosoft SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
 
-* [!DNL Experience Manager]インスタンスを6.5から6.5.8.0バージョンにアップグレードする場合は、`RRD4JReporter`例外を`error.log`ファイルで表示できます。 インスタンスを再起動して問題を解決します。
+* [!DNL Experience Manager]インスタンスを6.5から6.5.8.0バージョンにアップグレードする場合は、`error.log`ファイルで`RRD4JReporter`例外を表示できます。 インスタンスを再起動して問題を解決します。
 
-* [!DNL Experience Manager] 6.5 Service Pack 5または以前のService Packを[!DNL Experience Manager] 6.5にインストールした場合、（`/var/workflow/models/dam`で作成した）アセットカスタムワークフローモデルのランタイムコピーが削除されます。
-ランタイムコピーを取得する場合、Adobeでは、HTTP APIを使用して、カスタムワークフローモデルのデザイン時コピーをそのランタイムコピーと同期することを推奨します。
+* [!DNL Experience Manager] 6.5 Service Pack 5または以前のService Packを[!DNL Experience Manager] 6.5にインストールすると、（`/var/workflow/models/dam`で作成された）アセットカスタムワークフローモデルのランタイムコピーが削除されます。
+ランタイムコピーを取得するには、HTTP APIを使用して、カスタムワークフローモデルのデザイン時コピーをそのランタイムコピーと同期することをお勧めします。
    `<designModelPath>/jcr:content.generate.json`
 
-* [!UICONTROL AdobeメタデータスキーマFormsエディタ]および[!UICONTROL メタデータスキーマFormsエディタ]で、[!UICONTROL ルール]を定義ダイアログを使用してカスケードルールを編集および作成する際に問題が発生した場合は、カスタマーケアにお問い合わせください。 既に作成および保存されているルールは、期待どおりに動作しています。
+* [!UICONTROL ルールの定義]ダイアログを使用して[!UICONTROL フォルダーメタデータスキーマFormsエディター]および[!UICONTROL メタデータスキーマFormsエディター]でカスケードルールを編集および作成する際に問題が発生した場合は、Adobeカスタマーケアにお問い合わせください。 既に作成および保存されたルールは、期待どおりに動作しています。
 
-* 階層内のフォルダーの名前が[!DNL Experience Manager Assets]に変更され、アセットを含むネストされたフォルダーが[!DNL Brand Portal]に発行された場合、ルートフォルダーが再度発行されるまで、フォルダーのタイトルは[!DNL Brand Portal]に更新されません。
+* 階層内のフォルダーの名前が[!DNL Experience Manager Assets]で変更され、アセットを含むネストされたフォルダーが[!DNL Brand Portal]に公開された場合、ルートフォルダーが再び公開されるまで、フォルダーのタイトルは[!DNL Brand Portal]で更新されません。
 
-* ユーザーがアダプティブフォームで初めてフィールドを設定することを選択した場合、設定を保存するオプションはプロパティブラウザーに表示されません。 同じエディターでアダプティブフォームの他のフィールドの設定を選択すると、問題が解決します。
+* アダプティブフォームで初めてフィールドの設定を選択した場合、設定を保存するオプションはプロパティブラウザーに表示されません。 同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 
-* [!UICONTROL 接続されたアセットの構成]ウィザードがインストール後に404エラーメッセージを返す場合は、Package Managerを使用して`cq-remotedam-client-ui-content`および`cq-remotedam-client-ui-components`パッケージを手動で再インストールします。
+* [!UICONTROL Connected assets configuration]ウィザードがインストール後に404エラーメッセージを返した場合は、パッケージマネージャーを使用して`cq-remotedam-client-ui-content`パッケージと`cq-remotedam-client-ui-components`パッケージを手動で再インストールします。
 
 * Experience Manager6.5.x.xのインストール中に、次のエラーおよび警告メッセージが表示される場合があります。
-   * 「Target Standard API（IMS認証）を使用して、Adobe Target統合をExperience Managerで設定した場合、エクスペリエンスフラグメントをターゲットに書き出すと、誤ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」/source「Adobe Experience Manager」タイプではなく、「HTML」/source「Adobe Target Classic」タイプのオファーをいくつか作成します。
+   * 「Adobe Target統合がTarget Standard API（IMS認証）を使用してExperience Managerで設定されている場合、エクスペリエンスフラグメントをTargetに書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」/source「Adobe Experience Manager」タイプではなく、「HTML」/source「Adobe Target Classic」タイプのオファーをいくつか作成します。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
-   * SUM、MAX、MINなどの集計機能を使用すると、アダプティブフォームのサーバー側の検証に失敗します。(CQ-4274424)
+   * SUM、MAX、MINなどの集計関数が使用されると、アダプティブフォームのサーバー側検証が失敗します(CQ-4274424)。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
-   * 買い物かご可能なバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されません。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録の変更が未登録に完了するのを待機中にタイムアウトが発生しました。
+   * ショッパブルバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されない。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録変更が完了するのを待機中のタイムアウトが未登録です。
 
-## OSGiバンドルとコンテンツパッケージ（{#osgi-bundles-and-content-packages-included}に含まれています）
+## {#osgi-bundles-and-content-packages-included}に含まれるOSGiバンドルおよびコンテンツパッケージ
 
-[!DNL Experience Manager] 6.5.8.0に含まれるOSGiバンドルとコンテンツパッケージに関する次のテキストドキュメントリスト。
+以下のテキストドキュメントは、[!DNL Experience Manager] 6.5.8.0に含まれるOSGiバンドルとコンテンツパッケージの一覧です。
 
-* [Experience Manager6.5.8.0に含まれるOSGiバンドルのリスト](assets/6580_bundles.txt)
+* [Experience Manager6.5.8.0に含まれているOSGiバンドルの一覧](assets/6580_bundles.txt)
 
-* [Experience Manager6.5.8.0に含まれるコンテンツパッケージのリスト](assets/6580_packages.txt)
+* [Experience Manager6.5.8.0に含まれているコンテンツパッケージの一覧](assets/6580_packages.txt)
 
 ## 制限付きWebサイト{#restricted-sites}
 
-これらのWebサイトは、お客様のみ利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
+これらのWebサイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com からの製品ダウンロード](https://licensing.adobe.com/)
-* [Adobeカスタマーケアへのお問い合わせ方法](https://experienceleague.adobe.com/docs/customer-one/using/home.html)を参照してください。
+* [Adobeカスタマーケアへの問い合わせ方法](https://experienceleague.adobe.com/docs/customer-one/using/home.html)を参照してください。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 6.5リリースノート](/help/release-notes/release-notes.md)
->* [[!DNL Experience Manager] 製品ページ](https://www.adobe.com/marketing/experience-manager.html)
->* [[!DNL Experience Manager] 6.5ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
->* [Adobe Priority 製品アップデート](https://www.adobe.com/subscription/priority-product-update.html)のサブスクリプションを購入する
+* [[!DNL Experience Manager] 製品ページ](https://www.adobe.com/marketing/experience-manager.html)
+* [[!DNL Experience Manager] 6.5ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
+* [Adobe Priority 製品アップデート](https://www.adobe.com/subscription/priority-product-update.html)のサブスクリプションを購入する
 
