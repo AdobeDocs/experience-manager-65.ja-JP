@@ -6,14 +6,13 @@ uuid: 76f4b30b-6d0c-4cae-98b3-334efdbf27bb
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 discoiquuid: 7cb8140d-dd62-4659-8cc7-21361bd5d3f6
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: e5c80569-d3c0-4358-9b91-b98a64d1c004
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 95%
 
 ---
-
 
 # 別のユーザーの代わりにドキュメントを保護する {#protect-a-document-on-behalf-of-another-user}
 
@@ -151,4 +150,3 @@ AEM Forms Document Security Java SDK には、別のユーザーの代わりに�
    }
    }
    ```
-
