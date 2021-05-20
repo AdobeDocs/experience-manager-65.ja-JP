@@ -7,15 +7,14 @@ uuid: d1a19b83-f630-4648-9ad2-a22374e31aa9
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
-feature: Interactive Communication
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: インタラクティブコミュニケーション
+exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2062'
 ht-degree: 34%
 
 ---
-
 
 # エージェント UI を使用してインタラクティブ通信の準備と送信を行う {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
@@ -23,54 +22,54 @@ ht-degree: 34%
 
 ## 概要 {#overview}
 
-対話型通信の作成後、エージェントはエージェントUIで対話型通信を開き、データを入力し、コンテンツと添付ファイルを管理することで、受信者固有のコピーを作成できます。 最後に、エージェントはインタラクティブ通信を後処理に送信できます。
+インタラクティブ通信を作成した後、エージェントは、エージェントUIでインタラクティブ通信を開き、データを入力し、コンテンツと添付ファイルを管理することで、受信者固有のコピーを準備できます。 最後に、エージェントはインタラクティブ通信を後処理に送信できます。
 
-エージェントUIを使用して対話型通信を準備する際、エージェントは、後処理に送信する前に、エージェントUIで対話型通信の次の側面を管理します。
+エージェントUIを使用してインタラクティブ通信を準備する際、エージェントは後処理に送信する前に、エージェントUIでインタラクティブ通信の次の側面を管理します。
 
-* **データ**：エージェント UI の「データ」タブには、インタラクティブ通信内の変数とロックが解除されたフォームデータモデルプロパティが表示されます（エージェントを使用して編集できる変数とフォームデータモデルプロパティ）。これらの変数とプロパティは、インタラクティブ通信内のドキュメントフラグメントの編集時または作成時に生成されます。「データ」タブには、XDP テンプレートまたは印刷チャネルテンプレートに組み込まれているフィールドも表示されます。「Data」タブは、エージェントが編集可能なインタラクティブ通信の変数、フォームデータモデルのプロパティまたはフィールドがある場合にのみ表示されます。
-* **コンテンツ**：エージェントにより、「コンテンツ」タブに表示される各種コンテンツ（インタラクティブ通信内のドキュメントフラグメントやコンテンツ変数など）が管理されます。エージェントは、ドキュメントフラグメントのプロパティで対話型通信を作成する際に、ドキュメントフラグメントに許可された変更を加えることができます。 また、ドキュメントフラグメントの並べ替え、追加/削除、改ページの追加（可能な場合）を行うこともできます。
-* **添付ファイル**:「添付ファイル」タブは、対話型通信に添付ファイルがある場合、またはエージェントがライブラリにアクセスできる場合にのみ、エージェントUIに表示されます。エージェントは添付ファイルの変更や編集を許可される場合とできない場合があります。
+* **データ**：エージェント UI の「データ」タブには、インタラクティブ通信内の変数とロックが解除されたフォームデータモデルプロパティが表示されます（エージェントを使用して編集できる変数とフォームデータモデルプロパティ）。これらの変数とプロパティは、インタラクティブ通信内のドキュメントフラグメントの編集時または作成時に生成されます。「データ」タブには、XDP テンプレートまたは印刷チャネルテンプレートに組み込まれているフィールドも表示されます。「データ」タブは、エージェントが編集可能な変数、フォームデータモデルのプロパティ、またはフィールドがインタラクティブ通信に存在する場合にのみ表示されます。
+* **コンテンツ**：エージェントにより、「コンテンツ」タブに表示される各種コンテンツ（インタラクティブ通信内のドキュメントフラグメントやコンテンツ変数など）が管理されます。エージェントは、ドキュメントフラグメントのプロパティでインタラクティブ通信を作成する際に、許可されたとおりにドキュメントフラグメントに変更を加えることができます。 エージェントは、許可されている場合、ドキュメントフラグメントの並べ替え、追加/削除、改ページの追加も行えます。
+* **添付ファイル**:「添付ファイル」タブは、インタラクティブ通信に添付ファイルがある場合、またはエージェントがライブラリにアクセスできる場合にのみ、エージェントUIに表示されます。エージェントは、添付ファイルの変更や編集を許可される場合とできない場合があります。
 
-## エージェントUIを使用して対話型通信を準備{#prepare-interactive-communication-using-the-agent-ui}
+## エージェントUIを使用してインタラクティブ通信を準備する{#prepare-interactive-communication-using-the-agent-ui}
 
 1. **[!UICONTROL フォーム]**／**[!UICONTROL フォームとドキュメント]**&#x200B;を選択します。
-1. 適切な対話型通信を選択し、**[!UICONTROL エージェントUIを開く]**&#x200B;をタップします。
+1. 適切なインタラクティブ通信を選択し、**[!UICONTROL エージェントUIを開く]**&#x200B;をタップします。
 
    >[!NOTE]
    >
-   >エージェントUIは、選択した対話型通信に印刷チャネルがある場合にのみ機能します。
+   >エージェントUIは、選択したインタラクティブ通信に印刷チャネルがある場合にのみ機能します。
 
-   ![openagentiui](assets/openagentiui.png)
+   ![openagentui](assets/openagentiui.png)
 
    インタラクティブ通信のコンテンツとプロパティに基づいて、エージェント UI に、「データ」タブ、「コンテンツ」タブ、「添付ファイル」タブという 3 つのタブが表示されます。
 
-   ![無代の](assets/agentuitabs.png)
+   ![無代性](assets/agentuitabs.png)
 
    次に、データの入力、コンテンツの管理、添付ファイルの管理を行います。
 
 ### データの入力 {#enter-data}
 
-1. 「データ」タブで、変数のデータ、フォームデータモデルのプロパティ、印刷テンプレート（XDP）のフィールドを、必要に応じて入力します。アスタリスク(&amp;ast;)が付いている必須フィールドをすべて入力し、「**送信**」ボタンを有効にします。
+1. 「データ」タブで、変数のデータ、フォームデータモデルのプロパティ、印刷テンプレート（XDP）のフィールドを、必要に応じて入力します。アスタリスク(&amp;ast;)が付いた必須フィールドをすべて入力し、「**送信**」ボタンを有効にします。
 
-   対話型通信プレビューのデータフィールドの値をタップすると、「データ」タブで対応するデータフィールドが強調表示されます。逆の場合も同様です。
+   インタラクティブ通信のプレビューでデータフィールドの値をタップして、「データ」タブで対応するデータフィールドをハイライト表示するか、その逆を実行します。
 
 ### コンテンツを管理 {#manage-content}
 
 「コンテンツ」タブで、インタラクティブ通信内のドキュメントフラグメントやコンテンツ変数などのコンテンツを管理します。
 
-1. 「**[!UICONTROL コンテンツ]**」を選択します。対話型通信のコンテンツタブが表示されます。
+1. 「**[!UICONTROL コンテンツ]**」を選択します。インタラクティブ通信の「コンテンツ」タブが表示されます。
 
    ![agentuicontenttab](assets/agentuicontenttab.png)
 
-1. 必要に応じて、「コンテンツ」タブでドキュメントフラグメントを編集します。コンテンツ階層の関連するフラグメントにフォーカスするには、インタラクティブ通信プレビューで関連する行または段落をタップするか、コンテンツ階層で直接フラグメントをタップします。
+1. 必要に応じて、「コンテンツ」タブでドキュメントフラグメントを編集します。コンテンツ階層内の関連するフラグメントにフォーカスを移すには、インタラクティブ通信プレビューで関連する行または段落をタップするか、コンテンツ階層で直接フラグメントをタップします。
 
    例えば、以下のプレビュー画面で、「Make a payment online now ...」という行が含まれているドキュメントフラグメントを選択すると、「コンテンツ」タブでも同じドキュメントフラグメントが選択されます。
 
    ![contentmodulefocus](assets/contentmodulefocus.png)
 
-   「コンテンツ」タブまたは「データ」タブで、プレビューの左上にある「選択したプレビューをコンテンツ内でハイライト」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップすると、関連するテキスト、段落またはデータフィールドをタップまたはで選択したときに、ドキュメントフラグメントに移動する機能を無効または有効にできます。
+   「コンテンツ」タブまたは「データ」タブで、プレビューの左上にある「コンテンツ内の選択済みモジュールをハイライト表示」(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))をタップして、プレビューで関連するテキスト、段落またはデータフィールドをタップ/選択したときにドキュメントフラグメントに移動する機能を無効または有効にします。
 
-   対話型通信の作成時にエージェントが編集できるフラグメントには、選択されたコンテンツを編集(![iconeditselectedcontent](assets/iconeditselectedcontent.png))アイコンが付きます。 このアイコンをタップすると、フラグメントが編集モードで表示され、フラグメントを編集できるようになります。テキストの書式設定と管理を行うには、以下のオプションを使用します。
+   インタラクティブ通信の作成時にエージェントが編集できるフラグメントには、「選択したコンテンツを編集」(![iconeditselectedcontent](assets/iconeditselectedcontent.png))アイコンが表示されます。 このアイコンをタップすると、フラグメントが編集モードで表示され、フラグメントを編集できるようになります。テキストの書式設定と管理を行うには、以下のオプションを使用します。
 
    * [書式設定オプション](#formattingtext)
 
@@ -79,9 +78,9 @@ ht-degree: 34%
    * [特殊文字](#specialcharacters)
    * [ショートカットキー](/help/forms/using/keyboard-shortcuts.md)
 
-   エージェント・ユーザー・インタフェース内の様々なドキュメント・フラグメントで使用できるアクションの詳細については、「[エージェント・ユーザー・インタフェースで使用できるアクションと情報](#actionsagentui)」を参照してください。
+   エージェントユーザーインターフェイスの様々なドキュメントフラグメントで使用できるアクションの詳細については、「[エージェントユーザーインターフェイスで使用できるアクションと情報](#actionsagentui)」を参照してください。
 
-1. インタラクティブ通信の印刷出力に改ページを追加するには、改ページを挿入する位置にカーソルを置き、前の改ページまたは後の改ページ(![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))を選択します。
+1. インタラクティブ通信の印刷出力に改ページを追加するには、改ページを挿入する位置にカーソルを置き、「前の改ページ」または「後の改ページ」(![pagebreakbeforeafter](assets/pagebreakbeforeafter.png))を選択します。
 
    インタラクティブ通信に、改ページのプレースホルダーが明示的に挿入されます。この明示的な改ページによってインタラクティブ通信の外観がどのように変わるのかを確認するには、印刷出力をプレビュー表示します。
 
@@ -91,9 +90,9 @@ ht-degree: 34%
 
 ### 添付ファイルの管理  {#manage-attachments}
 
-1. 「**[!UICONTROL 添付ファイル]**」を選択します。 エージェントUIは、対話型通信の作成時に設定したとおりに、使用可能な添付ファイルを表示します。
+1. **[!UICONTROL 添付ファイル]**&#x200B;を選択します。 エージェントUIには、インタラクティブ通信の作成時に設定された添付ファイルが表示されます。
 
-   表示アイコンをタップして、Interactive Communicationと共に添付ファイルを送信しないように選択できます。また、添付ファイルの×印をタップすると、添付ファイルを削除（エージェントが添付ファイルを削除または非表示にできる場合）をInteractive Communicationから削除できます。 インタラクティブ通信の作成時に必須ファイルとして指定された添付ファイルの場合、ビューアイコンと削除アイコンは無効になります。
+   表示アイコンをタップして、インタラクティブ通信と一緒に添付ファイルを送信しないように選択し、添付ファイルのバツ印をタップして（エージェントが添付ファイルを削除または非表示にできる場合）、インタラクティブ通信から添付ファイルを削除できます。 インタラクティブ通信の作成時に必須ファイルとして指定された添付ファイルの場合、ビューアイコンと削除アイコンは無効になります。
 
    ![attachmentsagentui](assets/attachmentsagentui.png)
 
@@ -101,18 +100,18 @@ ht-degree: 34%
 
    >[!NOTE]
    >
-   >ライブラリアクセスアイコンは、Interactive Communicationの作成中に(印刷チャネルのドキュメントコンテナのプロパティで)ライブラリアクセスが有効になっている場合にのみ使用できます。
+   >ライブラリアクセスアイコンは、（印刷チャネルのDocument Containerプロパティで）インタラクティブ通信の作成時にライブラリアクセスが有効になっている場合にのみ使用できます。
 
 1. インタラクティブ通信の作成時に、添付ファイルの順序をロックしなかった場合は、添付ファイルを選択して上下の矢印をタップすると、添付ファイルの順序を変更することができます。
 1. Web プレビューと印刷プレビューを使用して、2 つの出力が正しく作成されているかどうかを確認します。
 
-   十分な結果が得られるプレビューが見つかった場合は、「**[!UICONTROL 送信]**」をタップして、インタラクティブ通信を後処理に送信または送信します。 または、変更を行うには、プレビューを終了して変更に戻ります。
+   プレビューが十分な場合は、「**[!UICONTROL 送信]**」をタップして、インタラクティブ通信を後処理に送信または送信します。 または、変更を行うには、プレビューを終了して、変更を行う場所に戻ります。
 
 ## テキストの書式設定 {#formattingtext}
 
 エージェント UI でテキストフラグメントを編集する場合、編集のタイプ（フォント、段落、リスト）に応じて、表示されるツールバーが異なります。
 
-![typeofformattingtoolbarフォ](assets/typeofformattingtoolbar.png) ![ントツールバー](do-not-localize/fonttoolbar.png)
+![](assets/typeofformattingtoolbar.png) ![typeofformattingtoolbarFontツールバー](do-not-localize/fonttoolbar.png)
 
 フォントツールバー
 
@@ -124,7 +123,7 @@ ht-degree: 34%
 
 リストツールバー
 
-### テキストの一部をハイライト表示または強調表示する  {#highlightemphasize}
+### テキストの一部をハイライト表示または強調表示する {#highlightemphasize}
 
 編集可能なフラグメント内のテキストの一部をハイライト表示または強調表示するには、目的のテキストを選択して「ハイライト表示の色」をタップします。
 
@@ -136,25 +135,25 @@ ht-degree: 34%
 
 ### テキスト内に特殊文字を挿入する {#specialcharacters}
 
-エージェント UI では、210 個の特殊文字がサポートされています。管理者は、カスタマイズ](/help/forms/using/custom-special-characters.md)によって、追加/カスタムの特殊文字のサポートを追加できます。[
+エージェント UI では、210 個の特殊文字がサポートされています。管理者は、カスタマイズ](/help/forms/using/custom-special-characters.md)により、追加/カスタム特殊文字のサポートを[追加できます。
 
 #### 添付ファイルの配信 {#attachmentdelivery}
 
-* Server-side APIを使用してインタラクティブ通信がインタラクティブまたは非インタラクティブPDFとしてレンダリングされる場合、レンダリングされるPDFには、添付ファイルがPDF添付ファイルとして含まれます。
-* インタラクティブ通信に関連付けられた後処理がエージェントUIを使用して送信の一部として読み込まれると、添付ファイルはリスト&lt;com.adobe.idp.ドキュメント> inAttachmentDocsパラメーターとして渡されます。
+* サーバー側のAPIを使用してインタラクティブ通信がインタラクティブPDFまたは非インタラクティブPDFとしてレンダリングされると、レンダリングされたPDFには添付ファイルがPDF添付ファイルとして含まれます。
+* インタラクティブ通信に関連付けられた後処理がエージェントUIを使用して送信の一部として読み込まれると、添付ファイルはList&lt;com.adobe.idp.Document> inAttachmentDocsパラメーターとして渡されます。
 * 配信メカニズムワークフロー（電子メールや印刷出力など）により、PDF 版のインタラクティブ通信と共に添付ファイルも配信されます。
 
-## エージェント UI で使用できる操作と情報  {#actionsagentui}
+## エージェント UI で使用できる操作と情報 {#actionsagentui}
 
 ### ドキュメントフラグメント {#document-fragments}
 
 ![](do-not-localize/contentoptionsdocfragments.png)
 
 * **上矢印と下矢印**：上矢印と下矢印を使用して、インタラクティブ通信内のドキュメントフラグメントを上下に移動することができます。
-* **削除**:可能な場合は、ドキュメントフラグメントをインタラクティブ通信から削除します。
+* **削除**:可能な場合は、インタラクティブ通信からドキュメントフラグメントを削除します。
 * **直前に改ページ**：（ターゲット領域の子フラグメントで使用可能）ドキュメントフラグメントの直前に改ページが挿入されます。
 * **インデント**:ドキュメントフラグメントのインデントを増減します。
-* **直後に改ページ** (ターゲット領域の子フラグメントに適用):ドキュメントフラグメントの後に改ページを挿入します。
+* **直後に改ページ** （ターゲット領域の子フラグメントに適用可能）:ドキュメントフラグメントの後に改ページを挿入します。
 
 ![docfragoptions](assets/docfragoptions.png)
 
@@ -172,53 +171,53 @@ ht-degree: 34%
 * 箇条書き／番号付けをスキップ：リストドキュメントフラグ内で、箇条書きまたは番号付けをスキップすることができます。
 * 未入力値：ターゲット領域の未入力変数の数が表示されます。これは、表示専用情報です。
 
-## 対話型通信を下書きとして保存{#save-as-draft}
+## インタラクティブ通信を下書きとして保存{#save-as-draft}
 
-エージェントUIを使用して、各対話型通信用の1つ以上のドラフトを保存し、後でドラフトを取得して、そのドラフトの操作を続行できます。 ドラフトごとに異なる名前を指定して、ドラフトを識別できます。
+エージェントUIを使用して、各インタラクティブ通信の1つ以上のドラフトを保存し、後でドラフトを取得して作業を続行できます。 ドラフトごとに異なる名前を指定して識別できます。
 
-Adobeでは、Interactive Communicationをドラフトとして正常に保存するために、これらの手順を順に実行することをお勧めします。
+Adobeは、インタラクティブ通信をドラフトとして正常に保存するために、これらの手順を順に実行することをお勧めします。
 
-### 「ドラフトとして保存」機能を有効にする{#before-save-as-draft}
+### 「ドラフトとして保存」機能{#before-save-as-draft}を有効にします。
 
 「ドラフトとして保存」機能は、デフォルトでは有効になっていません。 この機能を有効にするには、次の手順を実行します。
 
 1. [ccrDocumentInstance](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html)サービスプロバイダーインターフェイス(SPI)を実装します。
 
-   SPIを使用すると、対話型通信の下書きを一意の識別子としてドラフトIDを持つデータベースに保存できます。 これらの手順は、Mavenプロジェクトを使用してOSGiバンドルを構築する方法に関する事前の知識があることを前提としています。
+   SPIを使用すると、インタラクティブ通信の下書きバージョンを、下書きIDを一意の識別子として使用してデータベースに保存できます。 これらの手順は、Mavenプロジェクトを使用してOSGiバンドルを構築する方法に関する事前の知識があることを前提としています。
 
    SPIの実装例については、[サンプルccrDocumentInstance SPIの実装](#sample-ccrDocumentInstance-spi)を参照してください。
-1. `http://<hostname>:<port>/ system/console/bundles`を開き、**[!UICONTROL Install/Update]**&#x200B;をタップして、OSGiバンドルをアップロードします。 アップロードしたパッケージのステータスが&#x200B;**アクティブ**&#x200B;と表示されていることを確認します。 パッケージのステータスが&#x200B;**アクティブ**&#x200B;でない場合は、サーバーを再起動します。
+1. `http://<hostname>:<port>/ system/console/bundles`を開き、**[!UICONTROL Install/Update]**&#x200B;をタップしてOSGiバンドルをアップロードします。 アップロードしたパッケージのステータスが「**アクティブ**」と表示されることを確認します。 パッケージのステータスが「**アクティブ**」と表示されない場合は、サーバーを再起動します。
 1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。
 1. 「**[!UICONTROL 通信設定を作成]**」をタップします。
-1. 「**[!UICONTROL CCRDocumentInstanceService]**&#x200B;を使用して保存を有効にする」を選択し、「**[!UICONTROL 保存]**」をタップします。
+1. 「**[!UICONTROL CCRDocumentInstanceServiceを使用して保存を有効にする]**」を選択して「**[!UICONTROL 保存]**」をタップします。
 
-### 対話型通信をドラフト{#save-as-draft-agent-ui}として保存
+### インタラクティブ通信を下書きとして保存{#save-as-draft-agent-ui}
 
-次の手順を実行して、対話型通信をドラフトとして保存します。
+次の手順を実行して、インタラクティブ通信を下書きとして保存します。
 
-1. Formsマネージャーで対話型通信を選択し、**[!UICONTROL エージェントUIを開く]**&#x200B;をタップします。
+1. Forms Managerでインタラクティブ通信を選択し、**[!UICONTROL エージェントUIを開く]**&#x200B;をタップします。
 
-1. エージェントUIに適切な変更を加え、「**[!UICONTROL ドラフトとして保存]**」をタップします。
+1. エージェントUIで適切な変更を行い、「**[!UICONTROL ドラフトとして保存]**」をタップします。
 
 1. 「**[!UICONTROL 名前]**」フィールドにドラフトの名前を指定し、「**[!UICONTROL 完了]**」をタップします。
 
-対話型通信をドラフトとして保存したら、**[!UICONTROL 「変更を保存]**」をタップして、ドラフトに対する変更を保存します。
+インタラクティブ通信を下書きとして保存したら、「**[!UICONTROL 変更を保存]**」をタップして、下書きに対する変更を保存します。
 
-### 対話型通信の下書きを取得{#retrieve-draft}
+### インタラクティブ通信の下書きを取得する{#retrieve-draft}
 
-インタラクティブ通信をドラフトとして保存した後、その通信を取得して、操作を続行できます。 次を使用して対話型通信を取得します。
+インタラクティブ通信を下書きとして保存した後、引き続き作業を行うために取得できます。 次を使用してインタラクティブ通信を取得します。
 
 `https://server:port/aem/forms/createcorrespondence.hmtl?draftid=[draftid]`
 
-[draftriderは、対話型通信をドラフトとして保存した後に生成されるドラフトバージョンの一意の識別子を] 参照します。
+[] draftidrefersは、インタラクティブ通信をドラフトとして保存した後に生成されるドラフトバージョンの一意の識別子を指定します。
 
 >[!NOTE]
 >
->ドラフトとして保存した後にインタラクティブ通信に変更を加えた場合、ドラフトバージョンは開けません。
+>下書きとして保存した後にインタラクティブ通信に変更を加えた場合、下書きバージョンは開けません。
 
 ### ccrDocumentInstance SPI実装の例{#sample-ccrDocumentInstance-spi}
 
-`ccrDocumentInstance` SPIを実装し、対話型通信をドラフトとして保存します。 以下は、`ccrDocumentInstance` SPIの実装例です。
+`ccrDocumentInstance` SPIを実装して、インタラクティブ通信を下書きとして保存します。 以下は、`ccrDocumentInstance` SPIの実装例です。
 
 ```javascript
 package Implementation;
@@ -318,36 +317,36 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 }
 ```
 
-`save`、`update`、`get`および`getAll`操作は、データベースサービスを呼び出して、Interactive Communicationをドラフトとして保存し、Interactive Communicationを更新し、データベースからデータを取得し、データベース内のすべてのInteractive Communications用のデータを取得します。 このサンプルでは、データベースサービスの名前として`mySQLDataBaseServiceCRUD`を使用しています。
+`save`、`update`、`get`および`getAll`操作は、データベースサービスを呼び出し、インタラクティブ通信を下書きとして保存し、インタラクティブ通信を更新し、データベースからデータを取得し、データベースで使用可能なすべてのインタラクティブ通信のデータを取得します。 このサンプルでは、データベースサービスの名前として`mySQLDataBaseServiceCRUD`を使用しています。
 
-次の表は、サンプル`ccrDocumentInstance` SPIの実装を説明しています。 この例は、`save`、`update`、`get`および`getAll`操作が、サンプル実装でデータベースサービスを呼び出す方法を示しています。
+次の表は、SPIのサンプル`ccrDocumentInstance`の実装を示しています。 この例は、 `save` 、 `update` 、 `get`および`getAll`操作が、サンプル実装でデータベースサービスを呼び出す方法を示しています。
 
 <table> 
  <tbody>
  <tr>
-  <td><p><strong>Operation</strong></p></td>
+  <td><p><strong>操作</strong></p></td>
   <td><p><strong>データベースサービスの例</strong></p></td> 
    </tr>
   <tr>
-   <td><p>対話型通信用のドラフトを作成するか、直接送信することができます。 保存操作のAPIは、対話型通信がドラフトとして送信され、ドラフト名が含まれているかどうかを確認します。 次に、APIは、Saveを入力メソッドとして使用してmySQLDataBaseServiceCRUDサービスを呼び出します。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
-   <td><p>mySQLDataBaseServiceCRUDサービスは、Saveを入力メソッドとして検証し、自動生成されたドラフトIDを生成してAEMに返します。 ドラフトIDを生成するロジックは、データベースによって異なる場合があります。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
+   <td><p>インタラクティブ通信の下書きを作成するか、直接送信することができます。 保存操作用のAPIは、インタラクティブ通信がドラフトとして送信され、ドラフト名が含まれているかどうかを確認します。 次に、APIは、Saveを入力メソッドとしてmySQLDataBaseServiceCRUDサービスを呼び出します。</p></br><img src="assets/save-as-draft-save-operation.png"/></br>[#$sd1_sf1_dp9]</td>
+   <td><p>mySQLDataBaseServiceCRUDサービスは、 Saveを入力メソッドとして検証し、自動生成されたドラフトIDを生成してAEMに返します。 ドラフトIDを生成するロジックは、データベースによって異なる場合があります。</p></br><img src="assets/save-operation-service.png"/></br>[#$sd1_sf1_dp13]</td>
    </tr>
   <tr>
-   <td><p>更新操作のAPIは、Interactive Communicationドラフトのステータスを取得し、Interactive Communicationドラフトにドラフト名が含まれているかどうかを確認します。 APIはmySQLDataBaseServiceCRUDサービスを呼び出して、データベース内のその状態を更新します。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
-   <td><p>mySQLDataBaseServiceCRUDサービスは、Updateを入力メソッドとして検証し、Interactive Communicationドラフトのステータスをデータベースに保存します。</br></p><img src="assets/update-operation-service.png"/></td>
+   <td><p>更新操作のAPIは、インタラクティブ通信のドラフトの状態を取得し、インタラクティブ通信にドラフト名が含まれているかどうかを確認します。 APIはmySQLDataBaseServiceCRUDサービスを呼び出して、データベース内のその状態を更新します。</p></br><img src="assets/save-as-draft-update-operation.png"/></br>[#$sd1_sf1_dp17]</td>
+   <td><p>mySQLDataBaseServiceCRUDサービスは、Updateを入力メソッドとして検証し、インタラクティブ通信の下書きの状態をデータベースに保存します。</br></p><img src="assets/update-operation-service.png"/></td>
    </tr>
    <tr>
-   <td><p>get操作のAPIは、インタラクティブ通信にドラフトIDが含まれているかどうかを確認します。 次に、APIは、Getを入力メソッドとして使用してmySQLDataBaseServiceCRUDサービスを呼び出し、インタラクティブ通信のデータを取得します。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
-   <td><p>mySQLDataBaseServiceCRUDサービスはGetを入力メソッドとして検証し、ドラフトIDに基づいてInteractive Communicationのデータを取得します。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
+   <td><p>get操作用のAPIは、インタラクティブ通信にドラフトIDが含まれているかどうかを確認します。 次に、APIは、Getを入力メソッドとしてmySQLDataBaseServiceCRUDサービスを呼び出し、インタラクティブ通信のデータを取得します。</br></p><img src="assets/save-as-draft-get-operation.png"/></td>
+   <td><p>mySQLDataBaseServiceCRUDサービスは、Getを入力メソッドとして検証し、ドラフトIDに基づいてインタラクティブ通信のデータを取得します。</p></br><img src="assets/get-operation-service.png"/></br>[#$sd1_sf1_dp29]</td>
    </tr>
    <tr>
-   <td><p>getAll操作のAPIは、mySQLGetALLDataサービスを呼び出して、データベースに保存されているすべてのInteractive Communicationsのデータを取得します。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
-   <td><p>mySQLGetALLDataサービスは、データベースに保存されているすべてのInteractive Communicationsのデータを取得します。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
+   <td><p>getAll操作のAPIは、mySQLGetALLDataサービスを呼び出して、データベースに保存されているすべてのインタラクティブ通信のデータを取得します。</br></p><img src="assets/save-as-draft-getall-operation.png"/></td>
+   <td><p>mySQLGetALLDataサービスは、データベースに保存されているすべてのインタラクティブ通信のデータを取得します。</p></br><img src="assets/getall-operation-service.png"/></br>[#$sd1_sf1_dp37]</td>
    </tr>
   </tbody>
 </table>
 
-以下は、実装に含まれる`pom.xml`ファイルの例です。
+次に、実装に含まれる`pom.xml`ファイルの例を示します。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
