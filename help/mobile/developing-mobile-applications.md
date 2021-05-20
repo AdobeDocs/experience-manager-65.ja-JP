@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: fd7bcf17-af7e-4bd6-8137-48401d9743c5
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 76%
 
 ---
-
 
 # AEM でのモバイルアプリの開発  {#developing-mobile-applications-in-aem}
 
@@ -41,7 +40,7 @@ AEM は、Adobe **[PhoneGap Build サービス](https://build.phonegap.com/)と�
 
 ## アプリの作成 {#creating-apps}
 
-開発者は、[AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)と、[https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps)にある追加のリソースを使用して、Cordova Webビューを実行する参照用ネイティブアプリを含む、AEMアプリをPhoneGapでブートストラップできます。
+開発者は、[AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)を[https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps)にある追加リソースと共に使用して、Cordova Webビューを実行する参照用ネイティブアプリを含むAEMアプリをPhoneGapでブートストラップできます。
 
 Starter Kit Git リポジトリの readme には、スターターキットを使用するためのチュートリアルが含まれています。
 
@@ -53,14 +52,14 @@ Starter Kit Git リポジトリの readme には、スターターキットを�
 
 >[!NOTE]
 >
->ラボを含む追加のリファレンス実装ソースは、GitHub [ここ](https://github.com/adobe-marketing-cloud-apps)と、「キッチンシンク」ソース[ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)にあります。
+>ラボを含む追加の参照実装ソースは、GitHub [ここ](https://github.com/adobe-marketing-cloud-apps)と、「kitchen-sink」のソース[ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)にあります。
 
 ## iOS 9 ホストおよび HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
 
-iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。この問題は、安全でないホスト(*http://localhost:4502*&#x200B;など)に対する要求が行われないようにします。 この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
+iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。この問題により、安全でないホスト(*http://localhost:4502*&#x200B;など)に対する要求がおこなわれなくなります。 この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
 
-1. すぐに解決できる方法として、問題なくiOS 8シミュレーターを使用できます。
-1. iOS 9を使用する必要がある場合、（&lt;app root>/platforms/ios/&lt;app name>/&lt;app name>-Info.plist&quot;の`cordova platform add ios`を実行した後に見つかる）アプリケーション —Info.plistを手動で編集し、次のプロパティを含めることができます。
+1. 即時の回避策として、問題なくiOS 8シミュレーターを使用できます。
+1. iOS 9を使用する必要がある場合、apps -Info.plist （&lt;app root>/platforms/ios/&lt;app name>/&lt;app name>-Info.plist&quot;の`cordova platform add ios`を実行した後に見つかる）を手動で編集して、次のプロパティを含めることができます。
 
 ```
 <key>NSAppTransportSecurity</key>
@@ -90,7 +89,7 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 * [プッシュ通知](/help/mobile/phonegap-push-notifications.md)
 * [AEM Mobile のコンテンツパーソナライゼーション](/help/mobile/phonegap-aem-mobile-content-personalization.md)
 * [アプリの詳細な構造](/help/mobile/phonegap-apps-arch.md)
-* [ハイブリッドアプリの AEM Mobile 対応状況](/help/mobile/phonegap-adding-content-to-imported-app.md)
+* [ハイブリッドアプリの AEM Mobile 対応](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
 ### その他のリソース {#additional-resources}
 
