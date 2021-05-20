@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
 discoiquuid: 1a947a06-6a5c-4be9-b2fa-e5fa809ff3b8
-translation-type: tm+mt
-source-git-commit: c897f034edbdbeee74869165ed384c3408a857e0
+exl-id: e8ff751f-404a-498d-8e90-62a13ab593ff
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '289'
-ht-degree: 58%
+ht-degree: 57%
 
 ---
-
 
 # 投票の基本事項  {#voting-essentials}
 
 [集計](tally.md)のサブクラスである投票コンポーネントは、各メンバーが上下の矢印を選択して意見を示すだけで特定のコンテンツを評価できる便利なツールです。
 
-投票コンポーネントの複数のインスタンスを同じページに配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
+同じページに投票コンポーネントの複数のインスタンスを配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
 
-匿名での投票投稿はサポートされていません。サイト訪問者が投票に参加するには、一度だけ登録してサインインする必要があります。サインインした訪問者（会員）は、いつでも投票を変更できます。
+匿名での投票投稿はサポートされていません。サイト訪問者は1回だけ投票に参加するために登録し、サインインする必要があります。サインインした訪問者（メンバー）は、いつでも投票を変更できます。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -59,7 +58,7 @@ ht-degree: 58%
 
 * [クライアント側のカスタマイズ](client-customize.md)
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [集計 API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
@@ -67,7 +66,7 @@ ht-degree: 58%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された投票（UGC）へのアクセス  {#accessing-posted-voting-ugc}
+### 投稿された投票(UGC)へのアクセス{#accessing-posted-voting-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -75,10 +74,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-以下を参照してください。
+次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGC Essentials](srp-and-ugc.md)  - SRPユーティリティのメソッドと例。
-* [SRP](accessing-ugc-with-srp.md)  — コーディングガイドラインを使用したUGCへのアクセス
+* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
+* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
-
