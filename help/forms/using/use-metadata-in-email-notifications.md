@@ -7,14 +7,13 @@ uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
+exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 95%
 
 ---
-
 
 # 電子メール通知におけるメタデータの使用 {#use-metadata-in-an-email-notification}
 
@@ -141,11 +140,11 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
   </tr> 
   <tr> 
    <td>host_prefix</td> 
-   <td>オーサーサーバーの URL。例：https://10.41.42.66:4502<br /> </td> 
+   <td>オーサーサーバーの URL。例： https://10.41.42.66:4502<br /> </td> 
   </tr> 
   <tr> 
    <td>publish_prefix</td> 
-   <td>パブリッシュサーバーの URL。例：https://10.41.42.66:4503</td> 
+   <td>パブリッシュサーバーの URL。例： https://10.41.42.66:4503</td> 
   </tr> 
  </tbody> 
 </table>
@@ -186,7 +185,7 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
    タイトルを自分で指定しない場合、カスタムメタデータフィールドには、ECMAScript ファイルの完全なパスが表示されます。次の手順を実行して、スクリプトに意味のあるタイトルを指定します。
 
-   1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]**&#x200B;ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
+   1. スクリプトノードを拡張します。**[!UICONTROL jcr:content]** ノードを右クリックしてから、「**[!UICONTROL Mixins]**」をクリックします。
    1. Mixin を編集ダイアログに mix:title と入力して、「**+**」をクリックします。
    1. プロパティに次の値を入力します。
 
@@ -205,7 +204,7 @@ Java インターフェイスを使用して OSGi バンドルを作成するに
 
 1. ウィザードを選択画面で、Maven プロジェクトを選択し、「次へ」をクリックします。
 
-1. 新しい Maven プロジェクトではデフォルトを保持し、「次へ」をクリックします。archetype を選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。プロジェクトにグループ ID、アーティファクト ID、バージョン、パッケージを指定して、「完了」をクリックします。プロジェクトが作成されます。
+1. 新しい Maven プロジェクトではデフォルトを保持し、「次へ」をクリックします。アーキタイプを選択して「次へ」をクリックします。例えば、maven-archetype-quickstart などです。プロジェクトにグループ ID、アーティファクト ID、バージョン、パッケージを指定して、「完了」をクリックします。プロジェクトが作成されます。
 
 1. 編集のために pom.xml ファイルを開き、ファイルのすべての中身を次で置き換えます。
 
@@ -245,10 +244,10 @@ Java インターフェイスを使用して OSGi バンドルを作成するに
    }
    ```
 
-1. コマンドプロンプトを開き、OSGi バンドルプロジェクトを含むディレクトリに移動します。次のコマンドを使用して OSGi バンドルを作成します。
+1. コマンドプロンプトを開き、OSGi バンドルプロジェクトを含むディレクトリに移動します。以下のコマンドを使用して OSGi バンドルを作成します。
 
    `mvn clean install`
 
-1. バンドルを AEM Forms サーバーにアップロードします。AEM Package Manager を使用して、バンドルを AEM Forms サーバーに読み込むことができます。
+1. バンドルを AEM Forms サーバーにアップロードします。AEM パッケージマネージャーを使用して、バンドルを AEM Forms サーバーに読み込むことができます。
 
 バンドルをインポートすると、タスクの割り当て手順でメタデータを選択して、電子メールテンプレートで使用できるようになります。
