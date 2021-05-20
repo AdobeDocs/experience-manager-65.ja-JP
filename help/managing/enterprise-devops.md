@@ -1,6 +1,6 @@
 ---
 title: Enterprise DevOps
-seo-title: エンタープライズ開発運用
+seo-title: Enterprise DevOps
 description: デプロイメントやコラボレーションを簡単にするために必要なプロセス、メソッドおよびコミュニケーションについて学習します。
 seo-description: デプロイメントやコラボレーションを簡単にするために必要なプロセス、メソッドおよびコミュニケーションについて学習します。
 uuid: ca4806d2-c845-4c18-9498-4b66f0980a5e
@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing
 content-type: reference
 discoiquuid: 934eda2a-bd3b-4018-86dc-dbb01d246386
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: e67f848a-a8cd-4585-a734-e6b1de8a8d74
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 98%
 
 ---
 
-
-# エンタープライズ開発運用{#enterprise-devops}
+# Enterprise DevOps{#enterprise-devops}
 
 DevOps は、以下の目的で必要なプロセス、メソッドおよびコミュニケーションをカバーしています。
 
@@ -63,9 +62,9 @@ Adobe Experience Manager（AEM）のデプロイメントは通常、次のよ�
 
 ### 品質保証 {#quality-assurance}
 
-この環境は、品質保証チームが新しいシステムを包括的に[テスト](/help/sites-developing/test-plan.md)するために使用します。デザインと機能の両方 適切なコンテンツを持つオーサー環境とパブリッシュ環境の両方を含み、完全なテストを実施するために必要なすべてのサービスを提供する必要があります。
+この環境は、品質保証チームが新しいシステムを包括的に[テスト](/help/sites-developing/test-plan.md)するために使用します。デザインと機能の両方。 適切なコンテンツを持つオーサー環境とパブリッシュ環境の両方を含み、完全なテストを実施するために必要なすべてのサービスを提供する必要があります。
 
-### ステージング  {#staging}
+### ステージング {#staging}
 
 ステージング環境は、設定、コードおよびコンテンツに関して、実稼動環境のミラーである必要があります。
 
@@ -84,7 +83,7 @@ Adobe Experience Manager（AEM）のデプロイメントは通常、次のよ�
 
 プロジェクトの規模によりますが、多くの場合は複数のオーサーインスタンスやパブリッシュインスタンスで構成されます。下位レベルでは、リポジトリが複数のインスタンスにクラスター化される場合もあります。
 
-#### オーサー  {#author}
+#### 作成者 {#author}
 
 オーサーインスタンスは、通常、内部ファイアウォールの内側に配置されます。この環境では、ユーザーやユーザーの同僚が、以下のようなオーサリングタスクを実行します。
 
