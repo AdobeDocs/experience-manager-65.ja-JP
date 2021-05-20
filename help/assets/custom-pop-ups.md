@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
-feature: Viewers
+feature: ビューア
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1102'
 ht-degree: 90%
 
 ---
-
 
 # クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
 
@@ -220,7 +219,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=ja)
    * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=ja)
 
-1. 前の手順で説明したポップアップをビューアに添付するには、次のコードを使用します。
+1. 前の手順で説明したポップアップをビューアにアタッチするには、次のコードを使用します。
 
    ```xml
    "initComplete":function() {
@@ -267,4 +266,3 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    `s7interactiveimageviewer.init()`
 
    ホストページにビューアを埋め込んだ後で、`init()` を使用してビューアを起動する前に、ビューアインスタンスが作成され、ハンドラーが読み込まれていることを確認してください。
-
