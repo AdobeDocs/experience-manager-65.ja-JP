@@ -7,16 +7,15 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
-feature: Asset Management
+feature: アセット管理
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: 2e734041bdad7332c35ab41215069ee696f786f4
+exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 87%
+source-wordcount: '116'
+ht-degree: 89%
 
 ---
-
 
 # Dynamic Media アセットの管理について {#managing-assets}
 
@@ -24,7 +23,7 @@ ht-degree: 87%
 
 プレビューをするときには、画像プリセット（画像の場合のみ）またはビューアプリセット（ビデオおよび画像の場合）を適用することもできます。この両方をアセットに適用することはできません。詳しくは、[ビューアプリセットの適用](/help/assets/viewer-presets.md)および[画像プリセットの適用](/help/assets/image-sets.md)を参照してください。
 
-アセットの管理に関する一般的な情報は、[アセットの管理](/help/assets/manage-assets.md)に記載されています。
+アセットの管理に関する一般的な情報については、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 次のトピックでは、Dynamic Media アセットの管理に必要な事項について説明します。
 
