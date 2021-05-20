@@ -10,16 +10,15 @@ content-type: reference
 topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
-feature: Content Fragments
+feature: コンテンツフラグメント
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: aec4530fa93eacd151ca069c2da5d1bc92408e10
+exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1861'
 ht-degree: 94%
 
 ---
-
 
 # AEM Assets HTTP API でのコンテンツフラグメントのサポート {#content-fragments-support-in-aem-assets-http-api}
 
@@ -36,13 +35,13 @@ ht-degree: 94%
 >
 AEM Assets HTTP API の現在の実装は REST です。
 
-Adobe Experience Manager(AEM) [Assets REST API](/help/assets/mac-api-assets.md)を使用すると、開発者はHTTP API経由で(AEMに保存された)コンテンツに、CRUD操作（作成、読み取り、更新、削除）経由で直接アクセスできます。
+Adobe Experience Manager(AEM)の[Assets REST API](/help/assets/mac-api-assets.md)を使用すると、開発者はHTTP APIを介して(AEMに保存された)コンテンツにCRUD操作（作成、読み取り、更新、削除）を介して直接アクセスできます。
 
 この API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、AEM をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。
 
 例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、HTTP API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 
-AEMコアコンポーネントは、この目的で必要な読み取り操作とJSON出力をカスタマイズできる、非常に包括的で柔軟性とカスタマイズ性に優れたAPIを提供しますが、専用のAEMテンプレートに基づく(API)ページでホストする必要があるAEM WCM(Webコンテンツ管理)ノウハウを実装する必要があります。 すべての SPA 開発組織が、こうしたリソースにアクセスできるわけではありません。
+AEMコアコンポーネントは、この目的で必要な読み取り操作とJSON出力のカスタマイズを可能にする、非常に包括的で柔軟でカスタマイズ可能なAPIを提供しますが、AEM専用のテンプレートに基づく(API)ページでホストする必要があるので、実装のノウハウが必要です。 すべての SPA 開発組織が、こうしたリソースにアクセスできるわけではありません。
 
 これが可能なのは、Assets REST API が使用できる場合です。この場合は、アセット（画像やコンテンツフラグメントなど）に直接アクセスでき、その際に、ページにアセットを埋め込んでからコンテンツをシリアル化 JSON 形式で配信する必要はありません（Assets REST API からの JSON 出力をカスタマイズできないことに注意してください）。また、Assets REST API を使用すると、アセット、コンテンツフラグメント、フォルダーの新規作成、更新、削除のいずれかの操作でコンテンツを変更することもできます。
 
@@ -100,8 +99,8 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
   </tr>
   <tr>
    <td>アクセス</td>
-   <td><p>直接アクセスできます。</p> <p><code>/api/assets </code> エンドポイントを使用し、（リポジトリ内の）<code>/content/dam</code> にマッピングします。</p> <p>例えば、<code class="code">
-       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br />リクエストにアクセスするには：<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
+   <td><p>直接アクセスできます。</p> <p><code>/api/assets </code> エンドポイントを使用し、（リポジトリ内の）<code>/content/dam</code> にマッピングします。</p> <p>例えば、次のようにして：<code class="code">
+       /content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten</code><br />リクエストにアクセスします。<br /> <code>/api/assets/we-retail/en/experiences/arctic-surfing-in-lofoten.model.json</code></p> </td>
    <td><p>AEM ページ上の AEM コンポーネントを通じて参照する必要があります。</p> <p><code>.model</code> セレクターを使用して JSON 表現を作成します。</p> <p>URLの例を次に示します。<br /> <code>https://localhost:4502/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.model.json</code></p> </td>
   </tr>
   <tr>
@@ -191,7 +190,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 >
 >アセットタイプによっては、それぞれの子エンティティを定義するすべてのプロパティが、子エンティティのリストに既に含まれている場合があります。または、この子エンティティリストのエンティティに対して、一部のプロパティのみ公開される場合もあります。
 
-### アセット {#assets}
+### Assets {#assets}
 
 アセットが要求されると、アセットのメタデータ（タイトルや名前など、それぞれのアセットスキーマで定義される情報）が応答で返されます。
 
@@ -203,9 +202,9 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)は特殊なタイプのアセットです。コンテンツフラグメントを使用すれば、テキスト、数値、日付など様々な要素を含む構造化データにアクセスできます。
 
-標準アセット（画像やオーディオなど）との違いがいくつかあるので、それらの処理には追加のルールが適用されます。**
+*標準*&#x200B;アセット（画像やオーディオなど）との違いがいくつかあるので、それらの処理には追加のルールが適用されます。
 
-#### 表現  {#representation}
+#### 表現 {#representation}
 
 コンテンツフラグメント：
 
@@ -267,7 +266,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 本文には、作成するコンテンツフラグメントの JSON 表現を含める必要があります。これには、コンテンツフラグメント要素に設定する必要がある初期コンテンツも含まれます。`cq:model` プロパティの設定が必須で、このプロパティが有効なコンテンツフラグメントモデルを指している必要があります。そうしないと、エラーが発生します。また、`Content-Type` ヘッダーを追加することも必要です。これは `application/json` に設定されます。
 
-### 更新 {#update}
+### アップデート {#update}
 
 使用方法は次のとおりです。
 
@@ -275,7 +274,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 本文には、特定コンテンツフラグメントの更新内容の JSON 表現を含める必要があります。
 
-これには、コンテンツフラグメントのタイトルや説明、単一のエレメント、またはすべての要素値やメタデータを使用できます。また、更新のための有効な`cq:model`プロパティを指定する必要もあります。
+これには、コンテンツフラグメントのタイトルや説明、単一のエレメント、またはすべての要素値やメタデータを使用できます。また、更新の有効な`cq:model`プロパティを指定する必要もあります。
 
 ### 削除 {#delete}
 
@@ -365,7 +364,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
    }
    ```
 
-## API リファレンス  {#api-reference}
+## API リファレンス {#api-reference}
 
 詳細な API リファレンスについては、こちらを参照してください。
 
@@ -380,4 +379,3 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 * [Assets HTTP API ドキュメント](/help/assets/mac-api-assets.md)
 * [AEM Gem セッション：OAuth](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html)
-
