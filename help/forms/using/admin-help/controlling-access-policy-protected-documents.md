@@ -10,14 +10,13 @@ geptopics: SG_AEMFORMS/categories/working_with_document_security
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f34058c3-384a-4b73-a386-5bc9125acbf8
 feature: Document Security
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 0eb6e769-97c1-41ee-8d12-91bece984947
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2190'
 ht-degree: 85%
 
 ---
-
 
 # ポリシーで保護されたドキュメントへのアクセス制御 {#controlling-access-to-policy-protected-documents}
 
@@ -47,17 +46,17 @@ ht-degree: 85%
 
 **ドキュメント名：** 選択したドキュメントの名前。
 
-**ドキュメントID:ドキュメント** セキュリティがドキュメントにポリシーを適用するときに割り当てる一意の識別子。Document Security では、この番号を使用してドキュメントが追跡されます。
+**ドキュメントID:** ドキュメントにポリシーが適用される際にDocument Securityによって割り当てられる一意の識別子。Document Security では、この番号を使用してドキュメントが追跡されます。
 
-**ドキュメントステータス：ドキュメントの** ステータス（アクティブ、失効など）。
+**ドキュメントのステータス：** ドキュメントのステータス（アクティブ、失効など）。
 
-**発行者：ドキュメントにポリシーを適用したユーザーの** 名前。
+**発行者：** ドキュメントにポリシーを添付したユーザーの名前。
 
-**Policy Name:** ドキュメントの保護に使用するポリシーの名前。名前をクリックしてポリシーを開くことができます。Outlook の電子メールに添付されたドキュメントの受信者用に Acrobat で生成されるポリシーにアクセスするには、このリンクを使用する必要があります。これらのポリシーは、ポリシーページには表示されません。
+**Policy Name:** ドキュメントの保護に使用されるポリシーの名前。名前をクリックしてポリシーを開くことができます。Outlook の電子メールに添付されたドキュメントの受信者用に Acrobat で生成されるポリシーにアクセスするには、このリンクを使用する必要があります。これらのポリシーは、ポリシーページには表示されません。
 
-**Policy Type:** ドキュメントに適用されたポリシーの種類です。
+**Policy Type:** ドキュメントに適用されたポリシーのタイプ。
 
-**発行日：** ポリシーがドキュメントに適用された日付。
+**公開日：** ポリシーがドキュメントに適用された日付。
 
 **関連する繰り返し：** ドキュメントに関連する繰り返しがある場合は、この項目もリストに表示されます。ドキュメントの関連する繰り返しのリストを表示するには、そのリンクをクリックします。
 
@@ -89,11 +88,11 @@ ht-degree: 85%
 
 ポリシーで保護されたドキュメントへのアクセス権限を失効および復元できます。
 
-**ユーザー：自分** の個人用ポリシーまたはポリシーを適用したドキュメントに対して失効機能が有効になっている共有ポリシーで保護したユーザーのアクセス権限を失効または復元できます。ドキュメントのアクセス権限を失効させることができない場合またはポリシーを切り替えることができない場合は、管理者に問い合わせてください。
+**ユーザー：** 自分の個人用ポリシーで保護するドキュメントや、ポリシーを適用するユーザーに対して失効機能が有効になっている共有ポリシーで、ドキュメントへのアクセスを失効または回復できます。ドキュメントのアクセス権限を失効させることができない場合またはポリシーを切り替えることができない場合は、管理者に問い合わせてください。
 
-**管理者：個人用ポリシーや共有ポリシーで保護され** たドキュメントを含む、ポリシーで保護された任意の管理者へのアクセス権限を失効または復元できます。共有ポリシーで保護されたドキュメントのアクセス権限を失効させたのが管理者の場合、そのドキュメントのアクセス権限を復元できるのは管理者だけです。
+**管理者：** 個人用または共有ポリシーで保護されているドキュメントを含め、ポリシーで保護されたドキュメントへのアクセス権限を失効または回復できます。共有ポリシーで保護されたドキュメントのアクセス権限を失効させたのが管理者の場合、そのドキュメントのアクセス権限を復元できるのは管理者だけです。
 
-**ポリシーセットコーディネーター：自分** のポリシーセットのポリシーで保護されたドキュメントのアクセス権限を失効または復元できます。
+**ポリシーセットコーディネーター：** 自分のポリシーセットのポリシーで保護されたドキュメントのアクセス権限を失効または復元できます。
 
 ドキュメントのアクセス権限を失効または復元すると、その変更は、次のタイミングで反映されます。
 
@@ -147,17 +146,17 @@ ht-degree: 85%
 
 管理者だけが使用できる追加の検索オプションを次に示します。
 
-**ドキュメントID：ポリシーが適用されるときにドキュメントセキュリティがドキュメントに割り当てる一意のID番号。** 
+**Document ID:** ポリシーが適用される際にDocument Securityによってドキュメントに割り当てられる一意のID番号。
 
-**ドキュメント名：ドキュメントの** 名前。
+**ドキュメント名：** ドキュメントの名前。
 
-**発行者名：ドキュメントにポリシーを適用したユーザーの** 名前。すべてのドメインまたは指定したドメインからユーザーを選択できます。
+**発行者名：** ドキュメントにポリシーを添付したユーザーの名前。すべてのドメインまたは指定したドメインからユーザーを選択できます。
 
-**Policy ID:** IDドキュメントに関連付けられているポリシーの番号。
+**Policy ID:** ドキュメントに添付されるポリシーのID番号。
 
-**ポリシー名：ドキュメントに適用されるポリシーの** 名前。
+**Policy name:** ドキュメントに添付されるポリシーの名前。
 
-**すべてのドキュメント:** 管理者やユーザーが保護するすべてのドキュメント。「すべてのドキュメント」オプションを使用して検索すると、非常に多くのドキュメントが示されたリストが返される場合があります
+**すべてのドキュメント：** 管理者およびユーザーによって保護されているすべてのドキュメント。「すべてのドキュメント」オプションを使用して検索すると、非常に多くのドキュメントが示されたリストが返される場合があります
 
 1. Document Security ページで、「ドキュメント」をクリックします。
 1. 「検索」リストで、必要な検索条件を選択します。
@@ -197,12 +196,12 @@ ht-degree: 85%
 
 Workbench で次のプロセスを使用します。
 
-**表紙付きProtectドキュメント：指定したポリシーでPDFドキュメントを** 保護し、表紙をドキュメントに追加します
+**Protectの表紙付きドキュメント：** 指定したポリシーでPDFドキュメントを保護し、ドキュメントに表紙を追加します
 
-**保護ドキュメントの抽出：ポリシーで保護されたPDFドキュメントを表紙付きのPDFドキュメントから** 抽出します
+**保護されたドキュメントを抽出：** 表紙付きのPDFドキュメントからポリシーで保護されたPDFドキュメントを抽出します
 
 次の Document Security API を使用します。
 
-**protectDocumentWithCoverPage：指定したポリシーで特定のPDFを保護し、表紙と保護されたドキュメントのドキュメントを添付ファイル** extractProtectedDocument：表紙付きのドキュメントの添付ファイルである保護されたドキュメント
-`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **** を抽出します。表紙付きのドキュメントは protectDocumentWithCoverPage メソッドを使用して作成されます
+**protectDocumentWithCoverPage:** 指定されたポリシーで特定のPDFを保護し、表紙付きのドキュメントと保護されたドキュメントを添付ファイルextractProtectedDocumentとして返しま
+`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **す。** 表紙付きのドキュメント内の添付ファイルである保護されたドキュメントを抽出します。表紙付きのドキュメントは protectDocumentWithCoverPage メソッドを使用して作成されます
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`
