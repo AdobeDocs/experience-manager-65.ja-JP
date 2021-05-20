@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
-translation-type: tm+mt
-source-git-commit: a26bc4e4ea10370dd2fc3403500004b9e378c418
+exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1886'
 ht-degree: 95%
 
 ---
-
 
 # アプリケーションサーバーのパフォーマンスの強化{#enhancing-application-server-performance}
 
@@ -108,7 +107,7 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE環境上のAEM FormsとJEE環境上のAEM Formsバンドル上のOSGiのAEM Formsでは、ドキュメントの最大インラインサイズプロパティの値を同じにする必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >JEE環境上のAEM Formsと、OSGiバンドル上のAEM FormsがJEE環境に含まれているAEM Formsについて、Document Maxインラインサイズプロパティの値を同じにする必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
@@ -163,7 +162,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
    * (Windows) `ejbdeploy.bat`
    * （LinuxおよびUNIX） `ejbdeploy.sh`
 
-1. `-Xmx256M`パラメーターを探し、`-Xmx1024M`など、より高い値に変更します。
+1. `-Xmx256M`パラメーターを探し、`-Xmx1024M`のように大きい値に変更します。
 1.  ファイルを保存します。
 1. `ejbdeploy` コマンドを実行するか、または Configuration Manager を使用して再デプロイします。
 
@@ -182,7 +181,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 
    >[!NOTE]
    >
-   >点滅するカーソルとボックス内に`New Value #`が表示されない場合は、右側のパネル内を右クリックし、「名前の変更」を選択し、「名前」ボックスに「`TcpTimedWaitDelay`*.*」と入力します。
+   >点滅するカーソルとボックスの内側に`New Value #`が表示されない場合は、右側のパネル内を右クリックし、「名前の変更」を選択して、「名前」ボックスに&#x200B;`TcpTimedWaitDelay`*.*&#x200B;と入力します。
 
 1. MaxUserPort、MaxHashTableSize および MaxFreeTcbs の値について、手順 4 を繰り返します。
 1. 右側のウィンドウ内をダブルクリックし、TcpTimedWaitDelay 値を設定します。「表記」で「10 進」を選択し、「値のデータ」ボックスに `30` と入力します。
@@ -193,4 +192,3 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 >[!NOTE]
 >
 >レジストリエディターまたは別の方法を使用してレジストリを誤って変更すると、重大な問題が発生する場合があります。これらの問題を解決するために、オペレーティングシステムの再インストールが必要になる場合があります。レジストリの変更はユーザーの責任で行ってください。
-
