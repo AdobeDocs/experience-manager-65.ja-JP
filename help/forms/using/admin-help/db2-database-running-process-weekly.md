@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc0e8183-5d50-4fc0-997a-5f3168ba0d70
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: ca2cfe35-b602-4ef8-b4e3-af846105d4de
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 100%
 
 ---
-
 
 # DB2 データベース：週単位のプロセス実行{#db-database-running-a-process-weekly}
 
