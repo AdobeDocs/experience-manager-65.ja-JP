@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: a3006835-b1d2-47d6-959a-cdb692e34e1e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: db1c33c9-8539-436d-b4d0-3d5e6fd688ed
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 30%
 
 ---
-
 
 # コンテンツのプロパティを使用したコンテンツの書き出し{#using-content-properties-to-export-content}
 
@@ -24,9 +23,9 @@ ht-degree: 30%
 >
 >単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEMでは、アプリは&#x200B;*cq:Pages*&#x200B;と表されます。
+アプリは、AEMでは&#x200B;*cq:Pages*&#x200B;と表されます。
 
-*cq:Page*&#x200B;と同じ共通のプロパティを共有します。また、以下に示す統合サポートプロパティを表す共通のプロパティも共有します。
+これらは、*cq:Page*&#x200B;で見つかる共通のプロパティと、以下に示す統合をサポートするプロパティを表す共通のプロパティを共有します。
 
 ## アプリのプロパティ {#app-properties}
 
@@ -36,23 +35,23 @@ AEMでは、アプリは&#x200B;*cq:Pages*&#x200B;と表されます。
  <tbody>
   <tr>
    <td><strong>プロパティ名</strong></td>
-   <td><strong>種類</strong></td>
+   <td><strong>タイプ</strong></td>
    <td><strong>説明</strong></td>
   </tr>
   <tr>
    <td>dps-cloudConfig</td>
    <td>String:Path</td>
-   <td><p>設定済みのMobile On-DemandCloud Serviceへのパス。 AEM MobileからMobile On-Demandへのアクション（API呼び出し）に使用</p> <p>この関連付けは、作成者がアプリを関連付けるMobile On-DemandCloud Serviceを選択した場合に、接続を管理タイルを介して設定されます。</p> </td>
+   <td><p>設定済みのMobile On-DemandCloud Serviceへのパス。 AEM MobileからMobile On-Demandへのアクション（API呼び出し）に使用</p> <p>この関連付けは、作成者がアプリの関連付け先となるMobile On-DemandCloud Serviceを選択すると、接続を管理タイルで設定されます。</p> </td>
   </tr>
   <tr>
    <td>dps-exportTemplate</td>
    <td>String:Path</td>
-   <td><p>アプリのエクスポート設定のパス 書き出し設定は、2つの子ContentSync書き出し設定テンプレートを持つフォルダーです。</p> <p><i>dps-article</i>:記事のコンテンツを書き出すためのContentSync書き出し設定</p> <p><i>dps-HTMLResources</i>:アプリ/記事の共有リソースを書き出すためのContentSync書き出し設定</p> </td>
+   <td><p>アプリの書き出し設定のパス。 書き出し設定は、2つの子ContentSync書き出し設定テンプレートを持つフォルダーです。</p> <p><i>dps-article</i>:記事のコンテンツを書き出すためのContentSync書き出し設定</p> <p><i>dps-HTMLResources</i>:アプリ/記事の共有リソースを書き出すためのコンテンツ同期書き出し設定</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
-   <td>String</td>
-   <td><p>このアプリがリンクまたは連結されるMobile On-DemandプロジェクトのID/URI。</p> <p>この関連付けは、関連付けられたMobile On-DemandCloud Serviceで使用可能なプロジェクトのリストから作成者がプロジェクトを選択した場合に、接続の管理タイルを介して設定されます。</p> </td>
+   <td>文字列</td>
+   <td><p>このアプリがリンク/バインドされるMobile On-DemandプロジェクトのID/URI。</p> <p>この関連付けは、作成者が関連するMobile On-DemandCloud Serviceで使用可能なプロジェクトのリストからプロジェクトを選択すると、接続を管理タイルで設定されます。</p> </td>
   </tr>
   <tr>
    <td>dps-projectTitle</td>
@@ -67,27 +66,27 @@ AEMでは、アプリは&#x200B;*cq:Pages*&#x200B;と表されます。
   <tr>
    <td>dps-sharedHTMLResources-lastUploaded</td>
    <td>日付</td>
-   <td>共有リソースをAEMからAEM Mobileに最後にアップロードした日付。</td>
+   <td>AEMからAEM Mobileに共有リソースを最後にアップロードした日付。</td>
   </tr>
   <tr>
    <td>dps-sharedHTMLResources-lastUploadedBy</td>
    <td>String:userid</td>
-   <td>AEMからAEM Mobileへの共有リソース要求の最後のアップロードを実行したユーザーのID。</td>
+   <td>AEMからAEM Mobileへの共有リソースリクエストの最後のアップロードを実行したユーザーのID。</td>
   </tr>
   <tr>
-   <td>page-ダッシュボード-config</td>
+   <td>pge-dashboard-config</td>
    <td>String:Path</td>
    <td>ダッシュボード設定へのパス。 パスは、必要に応じてカスタムのダッシュボード設定にリダイレクトできます。</td>
   </tr>
   <tr>
    <td>sling:resourceType</td>
    <td>文字列:パス</td>
-   <td><p><i>mobileapps/core/components/instance.</i>を拡張または拡張するcq:Componentへのパス</p> <p>これにより、アプリカタログでの配置とレンダリングが可能になります。</p> </td>
+   <td><p><i>mobileapps/core/components/instance.</i>を拡張または拡張するcq:Componentへのパス。</p> <p>これにより、アプリカタログに表示とレンダリングが提供されます。</p> </td>
   </tr>
  </tbody>
 </table>
 
-***コンテンツプロパティ***&#x200B;を使用して、コンテンツを作成できます。 記事および共有リソースの作成と書き出しについては、以下のリソースを参照してください。
+***コンテンツのプロパティ***&#x200B;を使用して、コンテンツを作成できます。 記事および共有リソースの作成と書き出しについては、以下のリソースを参照してください。
 
 * [コンテンツのプロパティ](/help/mobile/content-properties.md)
 * [記事の書き出し設定の作成](/help/mobile/creating-article-export-configuration.md)
