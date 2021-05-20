@@ -7,14 +7,13 @@ uuid: ba453d54-813f-4a4f-a82e-1a6a28b6939c
 topic-tags: publish
 discoiquuid: 2ad4b7b5-2162-4599-af3f-9476f1256de6
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 76908a565bf9e6916db39d7db23c04d2d40b3247
+exl-id: d4035c91-ee8d-4f12-bdac-e3912be732d7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 96%
 
 ---
-
 
 # タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用{#use-custom-email-templates-in-an-assign-task-step}
 
