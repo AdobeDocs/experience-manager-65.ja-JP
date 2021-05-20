@@ -9,14 +9,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 89%
 
 ---
-
 
 # モバイルアプリケーションのビルド{#building-mobile-applications}
 
@@ -32,14 +31,14 @@ GitHub から入手できるコードを使用してモバイルアプリケー�
 
 パブリッシュインスタンスにアプリケーションファイルを移動すると、モバイルアプリケーションのインストール済みインスタンスにコンテンツ更新を提供したり、公開済みコンテンツを使用してアプリケーションをビルドしたりできます。アプリケーションは、リポジトリの 2 つのノードブランチで構成されています。
 
-* `/content/phonegap/apps/<application name>`:作成者が作成し、アクティブ化するWebページです。
-* `/content/phonegap/content/<application name>`:アプリケーション設定ファイルとコンテンツ同期の設定
+* `/content/phonegap/apps/<application name>`:作成者が作成およびアクティブ化するWebページ。
+* `/content/phonegap/content/<application name>`:アプリケーション設定ファイルとコンテンツ同期設定。
 
 >[!NOTE]
 >
 >パブリッシュインスタンスにアプリケーションファイルを移動しない場合、コンテンツ作成者はコンテンツ同期キャッシュを更新できません。
 
-`/content/phonegap/content/<application name>`ブランチのファイルは、パブリッシュインスタンスにのみ移動する必要があります。 作成者がページをアクティブにすると、`/content/phonegap/apps/<application name>`分岐内のファイルは移動されます。
+必要なのは、`/content/phonegap/content/<application name>`ブランチ内のファイルをパブリッシュインスタンスに移動するだけです。 作成者がページをアクティベートすると、`/content/phonegap/apps/<application name>`ブランチ内のファイルが移動されます。
 
 AEM には、コンテンツを一括してパブリッシュインスタンスに移動する方法が 2 つ用意されています。
 
@@ -113,9 +112,9 @@ PhoneGap CLI を使用してビルドするには、Node.js および PhoneGap �
 
 ### PhoneGap CLI を使用したビルド  {#using-the-phonegap-cli-to-build}
 
-PhoneGap CLI を使用して、アプリケーションをコンパイルしてインストールします。PhoneGap CLIの使用方法については、PhoneGap [コマンドラインインターフェイス](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html)のドキュメントを参照してください。
+PhoneGap CLI を使用して、アプリケーションをコンパイルしてインストールします。PhoneGap CLIの使用方法について詳しくは、 PhoneGapの[コマンドラインインターフェイス](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html)のドキュメントを参照してください。
 
-1. ターミナルまたはコマンドプロンプトを開き、ダウンロードしたアプリ ZIP ファイルに現在のディレクトリを変更します。例えば、次のようにディレクトリをng-app-cli.1392137825303.zipファイルに変更します。
+1. ターミナルまたはコマンドプロンプトを開き、ダウンロードしたアプリ ZIP ファイルに現在のディレクトリを変更します。例えば、次の例では、ディレクトリがng-app-cli.1392137825303.zipファイルに変更されます。
 
    ```shell
    cd ~/Downloads/ng-app-cli.1392137825303
@@ -163,9 +162,9 @@ PhoneGap Build にアプリケーションリソースを送信して、さま�
 
    **注意：**&#x200B;ベータバージョンの AEM Beta は、ビルドが正常に完了したときにインボックス通知を作成しません。
 
-1. 成功ダイアログボックスで「PhoneGap Build」をクリックし、[https://build.phonegap.com/apps](https://build.phonegap.com/apps)にあるAdobe PhoneGap Buildページを開きます。 アプリが表示されるまで待機している場合には、[PhoneGap Build ステータス](https://status.build.phonegap.com/)ページを確認できます。
+1. 成功ダイアログボックスで、「PhoneGap Build」をクリックしてAdobe PhoneGap Buildページ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))を開きます。 アプリが表示されるまで待機している場合には、[PhoneGap Build ステータス](https://status.build.phonegap.com/)ページを確認できます。
 
-   ビルドのインストールについて詳しくは、[PhoneGap Buildドキュメント](https://docs.build.phonegap.com/en_US/3.1.0/#googtrans%28en%29)を参照してください。
+   ビルドのインストールについて詳しくは、[PhoneGap Buildのドキュメント](https://docs.build.phonegap.com/en_US/3.1.0/#googtrans%28en%29)を参照してください。
 
    >[!NOTE]
    >
