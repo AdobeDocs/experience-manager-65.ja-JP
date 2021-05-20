@@ -6,20 +6,19 @@ seo-description: 'null'
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '697'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
-
 
 # AEM Mobile - GDPR 対応 {#aem-mobile-gdpr-readiness}
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
+>以下の節ではGDPRを例として使用しますが、ここで説明する詳細は、すべてのデータ保護およびプライバシー規制に適用されます。（GDPR、CCPAなど）
 
 ## AEM Mobile の GDPR サポート {#aem-mobile-gdpr-support}
 
@@ -51,17 +50,17 @@ Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカ�
 * Windows アプリユーザーの場合は、エンドユーザーの App Store ID：*dpsc-windowsAppStoreId*
 * エンドユーザーが DPS App とのやり取りに使用する電子メールアドレス：*email*
 
-### よくある質問(FAQ) {#frequently-asked-questions-faq}
+### よくある質問（FAQ）  {#frequently-asked-questions-faq}
 
-**Adobeは、DELETEリクエストを開始する際に、App Storeでの購入を削除しますか？**
+**Adobeリクエストを開始すると、App Storeでの購入がDELETEされますか？**
 
 アドビが削除するのは、App Store での購入品に関する情報（例：サブスクリプションなど）です。購入品そのものは App Store の記録に残っています。アプリ（エンドユーザー）が App Store にログインしたら、それらのレシートが再度取り出されてアドビに送信されます。それ以降は、新しい購入品と見なされ、再度アクセスできるようにアプリで復元されます。
 
-**Adobeは、DELETE要求を開始する際に、ユーザーが提供したエンタイトルメントを削除しますか。**
+**Adobeは、ユーザー要求を開始する際に、顧客が提供したDELETEを削除しますか？**
 
 アドビが削除するのは、顧客の追加の直接権利付与に関する情報です。顧客が使用した OAuth メカニズムにアプリ（エンドユーザー）がログインした場合は、アドビに情報が送信され、サービスによって追加の権利（資格情報）が再び取り出されます。
 
-**エンドユーザーに対する期待値**
+**エンドユーザーに求められる事項**
 
 エンドユーザーは、アプリをアンインストールする必要があります。これは、アプリに権利を割り当てる際のキーが、ビューアソフトウェアの一部としてデバイス上に存在しているからです。アプリを再インストールすると、（App Store ユーザーに関連付けられている）既存の購入品も（顧客の OAuth ユーザーに関連付けられている）直接の権利付与も復元されます。
 
@@ -69,7 +68,7 @@ Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカ�
 
 アドビでは、特定のユーザーに直接結び付く情報はほとんど保有していません。データは、ランダムに生成される UUID を使用して関連付けられます。その ID は、アプリのデータに格納され、アプリで要求が開始されるたびに渡されます。つまり、同じデバイスでアプリを共有するエンドユーザーは同じ UUID を使用することになり、GDPR 要求をおこなうユーザーがすべてのデータを所有していると見なされます。アクセス要求と削除要求の場合、DPSC では、アプリを共有している複数のユーザーが 1 人のユーザーと見なされます。
 
-**Analyticsで追跡される個人データ**
+**Analyticsで追跡される個人データは何ですか？**
 
 なし. 追跡されるデータはありますが、それは（個人データではなく）アプリレベルのデータです。例えば、起動、クラッシュ、終了、アクティビティ、購入、Folio オーバーレイなどのイベントが含まれます。地理的位置、氏名、デバイス ID、IP アドレスなどは追跡されません。
 
@@ -81,9 +80,9 @@ Digital Publishing Suite 製品が進化するにつれて、サービスの実�
 
 GDPR 要求を開始する場合は、アドビカスタマーケアにお問い合わせください。
 
-Digital Publishing Suite GDPRリクエストの入力と出力の例を次に示します。
+Digital Publishing Suite GDPR要求の入力と結果の出力の例を次に示します。
 
-#### 入力：{#inputs}
+#### 入力： {#inputs}
 
 ```
 dpsc-contractId = “12345-1234-12416234” 
@@ -303,4 +302,3 @@ email = “test@what.com”
 
 }
 ```
-
