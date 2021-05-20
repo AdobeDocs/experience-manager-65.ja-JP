@@ -9,7 +9,6 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 docset: aem65
-translation-type: tm+mt
 source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
 workflow-type: tm+mt
 source-wordcount: '151'
@@ -31,15 +30,15 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->eコマースフレームワークはeコマースソリューションと共に使用できるので、開発方法の詳細については、[開発（汎用）](/help/commerce/cif-classic/developing/generic.md)を参照してください。
+>eコマースフレームワークは任意のeコマースソリューションで使用できるので、開発の可能性について詳しくは、 [開発（汎用）](/help/commerce/cif-classic/developing/generic.md)を参照してください。
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースの導入](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースのデプロイ](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
 >
 >e コマースの実装の概念および管理について詳しくは、[e コマースの管理](/help/commerce/cif-classic/administering/ecommerce.md)を参照してください。
 
-## API に関するドキュメント  {#api-documentation}
+## API に関するドキュメント {#api-documentation}
 
 e コマース API は、次のパッケージで提供されます。
 
