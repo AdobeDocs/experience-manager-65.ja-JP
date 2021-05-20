@@ -9,14 +9,13 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms_workflow
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f9b40e1f-956d-498b-92e4-4fe21e23fc4a
-translation-type: tm+mt
-source-git-commit: d3719a9ce2fbb066f99445475af8e1f1e7476f4e
+exl-id: 8944cbae-865d-4b1c-b3bf-00c3a247d776
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 96%
 
 ---
-
 
 # 管理およびプロセスの用語について {#about-administration-and-process-terminology}
 
