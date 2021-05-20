@@ -9,8 +9,7 @@ content-type: reference
 discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: Business Practitioner, Administrator
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
-feature: Collaboration,Asset Management
-translation-type: tm+mt
+feature: コラボレーション、アセット管理
 source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
 workflow-type: tm+mt
 source-wordcount: '442'
@@ -43,7 +42,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 * [スピンセット](spin-sets.md)
 * [ビデオ](video.md)
-* [Dynamic Media アセットの配信 ](delivering-dynamic-media-assets.md)
+* [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
 * [アセットの管理](managing-assets.md)
 * [クイックビューを使用したカスタムポップアップの作成](custom-pop-ups.md)
 
@@ -51,7 +50,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 >[!NOTE]
 >
->Dynamic Mediaを使用する場合と、Dynamic MediaクラシックとAEMを統合する場合の違いについては、「[Dynamic Mediaクラシックの統合とDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)」を参照してください。
+>Dynamic Mediaの使用とDynamic Media ClassicとAEMの統合の違いについては、[Dynamic Media ClassicとDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)の統合を参照してください。
 
 ## Dynamic Media が有効な場合と無効な場合の比較 {#dynamic-media-on-versus-dynamic-media-off}
 
@@ -61,7 +60,7 @@ Dynamic Media が有効（オン）になっているかどうかは、次の特
 * 画像セット、スピンセット、混在メディアセットを使用できる。
 * PTIFF レンディションが作成されている。
 
-画像アセットをクリックした場合、アセットの表示はDynamic Media[enabled](config-dynamic.md#enabling-dynamic-media)とは異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
+Dynamic Media [が有効](config-dynamic.md#enabling-dynamic-media)の場合、画像アセットをクリックしたときのアセットの表示は異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
 
 ### 動的レンディション {#dynamic-renditions}
 
