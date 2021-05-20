@@ -10,14 +10,13 @@ topic-tags: correspondence-management
 discoiquuid: 666fee78-a103-44dc-afe7-71b90ce219b7
 docset: aem65
 feature: Correspondence Management
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 61%
+ht-degree: 63%
 
 ---
-
 
 # テキストエディターのカスタマイズ{#customize-text-editor}
 
@@ -37,12 +36,12 @@ ht-degree: 61%
 1. [CRX の tbxeditor-config.xml ファイルを編集しフォントをカスタマイズ](#customizefonts)
 1. [クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)
 
-## CRX の tbxeditor-config.xml ファイルを編集しフォントをカスタマイズ  {#customizefonts}
+## CRX の tbxeditor-config.xml ファイルを編集しフォントをカスタマイズ {#customizefonts}
 
-tbxeditor-config.xmlファイルを編集してフォントをカスタマイズするには、次の手順を実行します。
+フォントをカスタマイズするには、次のファイルを編集します。 tbxeditor-config.xml file。次の手順を実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
-1. 次の手順を使用して、appsフォルダーにconfigという名前のフォルダーを作成し、libs/fd/cm/configのconfigフォルダーに類似したパス/構造で作成します。
+1. 次の手順を使用して、appsフォルダーに、configフォルダー（libs/fd/cm/configにある）と同じパス/構造を持つconfigという名前のフォルダーを作成します。
 
    1. 次のパスにあるitemsフォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
@@ -56,7 +55,7 @@ tbxeditor-config.xmlファイルを編集してフォントをカスタマイズ
 
       **場所：** /apps/
 
-      **ノードタイプを一致：** 選択
+      **ノードタイプを一致させる：** 選択
 
       ![ノードをオーバーレイ](assets/2.png)
 
@@ -71,11 +70,11 @@ tbxeditor-config.xmlファイルを編集してフォントをカスタマイズ
 
       `apps/fd/cm/config`
 
-   1. 貼り付けたファイルの名前は、デフォルトでは`copy of tbxeditor-config.xml.`ファイル名を`tbxeditor-config.xml`に変更し、**すべて保存**&#x200B;をクリックします。
+   1. 貼り付けたファイルの名前は、デフォルトでは`copy of tbxeditor-config.xml.`ファイル名を`tbxeditor-config.xml`に変更し、「**すべて保存**」をクリックします。
 
 1. apps/fd/cm/configにあるtbxeditor-config.xmlファイルを開き、必要な変更を行います。
 
-   1. apps/fd/cm/configにあるtbxeditor-config.xmlファイルを重複がクリックします。 ファイルが開きます。
+   1. apps/fd/cm/configにあるtbxeditor-config.xmlファイルをダブルクリックします。 ファイルが開きます。
 
       ```xml
       <editorConfig>
@@ -162,21 +161,21 @@ tbxeditor-config.xmlファイルを編集してフォントをカスタマイズ
       </editorConfig>
       ```
 
-   1. 必要に応じてファイルを変更し、フォント設定の次の設定を変更します。
+   1. 必要な変更をファイルに加えて、以下のフォント設定を変更します。
 
       * フォントファミリーとサイズの追加または削除
       * 高さ、文字間隔などのプロパティ
       * フォントファミリーとサイズ、高さ、文字間隔、日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XMLファイル：`<font>Sazanami Mincho Medium</font>`. また、このフォントを、フォントのカスタマイズにアクセスして作業するクライアントコンピューターにインストールする必要があります。 詳しくは、「[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)」を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XMLファイル：`<font>Sazanami Mincho Medium</font>`. また、このフォントを、フォントのカスタマイズにアクセスして操作するクライアントマシンにインストールする必要があります。 詳しくは、「[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)」を参照してください。
 
-      また、テキストの様々な側面のデフォルトを変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
+      また、テキストの様々な側面のデフォルトを変更したり、エントリを削除して、テキストエディターからフォントを削除したりすることもできます。
 
    1. 「**すべて保存**」をクリックします。
 
 
-## クライアントコンピューターへのカスタムフォントの追加  {#addcustomfonts}
+## クライアントコンピューターへのカスタムフォントの追加 {#addcustomfonts}
 
 Correspondence Management テキストエディターに格納されたフォントにアクセスする際、Correspondence Management へアクセスするクライアントマシンにそのフォントがある必要があります。テキストエディターでカスタムフォントを使用するには、まずクライアントマシンに同じフォントをインストールする必要があります。
 
@@ -187,13 +186,12 @@ Correspondence Management テキストエディターに格納されたフォン
 
 ## カスタマイズしたフォントへのアクセス {#access-font-customizations}
 
-CRXのtbxeditor-config.xmlファイルのフォントに変更を加え、AEM Formsへのアクセスに使用するクライアントマシンに必要なフォントをインストールすると、テキストエディターに変更が反映されます。
+CRXのtbxeditor-config.xmlファイルのフォントに変更を加え、AEM Formsにアクセスするクライアントマシンに必要なフォントをインストールすると、変更がテキストエディターに表示されます。
 
-例えば、CRX](#customizefonts)のtbxeditor-config.xmlファイルを編集して[フォントのカスタマイズに追加されたSazanami Mincho Mediumフォントは、テキストエディターUIで次のように表示されます。
+例えば、 [CRX](#customizefonts)のtbxeditor-config.xmlファイルを編集してフォントをカスタマイズすると、Sazanami Mincho MediumフォントがテキストエディターのUIに次のように表示されます。
 
-![sazanamiminchointext](assets/sazanamiminchointext.png)
+![sazanaminchointext](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >
 >テキストを日本語で表示するには、まず日本語の文字でテキストを入力する必要があります。カスタムの日本語フォントを適用すると、テキストは特定の形式のみで表示されます。カスタムの日本語フォントを適用しても英語やその他の言語の文字が日本語の文字に変更されることはありません。
-
