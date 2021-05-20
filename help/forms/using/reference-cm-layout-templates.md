@@ -8,20 +8,19 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 content-type: reference
 topic-tags: correspondence-management
 discoiquuid: afeb9f4d-3feb-4a0e-8884-e3ec1309b33b
-translation-type: tm+mt
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+exl-id: 40d127b5-1ce6-41fb-ac4c-2bf7ae79da82
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 91%
 
 ---
 
-
 # 参照レターテンプレート {#reference-letter-templates}
 
 Correspondence Management のレターテンプレートには、一般的なフォームフィールド、ヘッダーやフッターなどのレイアウト機能、コンテンツを配置するための空の「ターゲット領域」が含まれています。
 
-Correspondence Managementは、AEM Formsパッケージ[AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES)にレターテンプレートを提供します。 パッケージのインストールについては、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください。 ブランドやビジネスニーズに応じて、Designerのテンプレートをカスタマイズできます。 パッケージには次のテンプレートが含まれています。
+Correspondence Managementは、AEM Formsパッケージ[AEM-FORMS-REFERENCE-LAYOUT-TEMPLATES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES)にレターテンプレートを提供します。 パッケージのインストールについては、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。 ブランディングやビジネスのニーズに合わせて、Designerでテンプレートをカスタマイズできます。 パッケージには次のテンプレートが含まれています。
 
 * クラシック
 * クラシックシンプル
@@ -74,7 +73,7 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 
 バランスライトのテンプレートは、会社のロゴが右に配置され、受信者の住所をレターに入力するスペースが設けられています。バランスライトのテンプレートには、レターが複数ページにわたる場合にリフローできるフッターも含まれています。
 
-![balanceright](assets/balancedright.png)
+![balancedright](assets/balancedright.png)
 
 バランスライトのテンプレートを使用して作成されたレターの PDF プレビュー
 
@@ -101,4 +100,3 @@ AEM-FORMS-6.3-REFERENCE-LAYOUT-TEMPLATES パッケージをインストールす
 ![visualtopclassic](assets/visualtopclassic.png)
 
 ビジュアルトップ - クラシックのテンプレートを使用して作成されたレターの PDF プレビュー
-
