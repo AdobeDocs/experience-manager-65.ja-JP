@@ -9,22 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: b5ff918d-08ab-4307-a807-693468fc083b
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: ee5e8ebb-773f-4aa6-9c3e-2cc3bf4a3bbd
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '121'
 ht-degree: 100%
 
 ---
-
 
 # ソリューション統合{#solutions-integration}
 
 * [Adobe Marketing Cloud との統合](/help/sites-administering/marketing-cloud.md)
 * [サードパーティのサービスとの統合](/help/sites-administering/third-party-services.md)
 * [Analytics と外部プロバイダー](/help/sites-administering/external-providers.md)
-* [カタログ作成](/help/sites-administering/catalog-producer.md)
-* [Marketing Cloud および Creative Cloud との AEM Assets 統合の設定](/help/sites-administering/configure-assets-cc-integration.md)
+* [カタログ作成機能](/help/sites-administering/catalog-producer.md)
 * [SharePoint コネクター](/help/sites-administering/sharepoint-connector.md)
 
 AEM と他のアドビサービスまたはサードパーティのサービスの統合については、次の情報を参照してください。
@@ -35,7 +33,7 @@ AEM と他のアドビサービスまたはサードパーティのサービス�
 >
 >* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
->
 
+>
 
 
