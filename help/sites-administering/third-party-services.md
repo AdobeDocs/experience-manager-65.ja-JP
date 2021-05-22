@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
-translation-type: tm+mt
-source-git-commit: 471b57a52efc849eb57201e6397221fa4f88c746
+exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 93%
+source-wordcount: '335'
+ht-degree: 94%
 
 ---
-
 
 # サードパーティのサービスとの統合{#integrating-with-third-party-services}
 
@@ -34,7 +33,7 @@ ht-degree: 93%
 * Twitter - ソーシャルネットワーキング
 * YouTube - ビデオ共有
 
-さらに、AEMを[marketing cloud](/help/sites-administering/marketing-cloud.md)および[Creative Cloud](/help/assets/aem-cc-folder-sharing-best-practices.md)と統合できます。
+さらに、AEMを[Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)と統合できます。
 
 ## Salesforce との統合 {#integrating-with-salesforce}
 
