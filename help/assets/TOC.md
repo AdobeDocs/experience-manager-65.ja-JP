@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 58%
+source-wordcount: '582'
+ht-degree: 59%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 58%
    + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
-   + [Dynamic Media のアクセシビリティ ](accessibility-dm.md)
+   + [Dynamic Media のアクセシビリティ](accessibility-dm.md)
    + [Dynamic Media — ハイブリッドモードからDynamic Media - S7モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media アセットの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
@@ -112,7 +112,7 @@ ht-degree: 58%
    + [[!DNL Assets] とMediaLibrary](medialibrary.md)
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
-   + [[!DNL Experience Manager] and [!DNL Creative Cloud] 統合](aem-cc-integration-best-practices.md)
+   + [[!DNL Experience Manager] and [!DNL Creative Cloud] の統合](aem-cc-integration-best-practices.md)
    + [ [!DNL InDesign Server] との統合](indesign.md)
    + [Digital Rights Management](drm.md)
    + [アセットインサイトにデモパッケージを使用する](use-demo-package-for-asset-insights.md)
@@ -124,7 +124,6 @@ ht-degree: 58%
    + [コレクション、スニペット、スニペットテンプレートのマルチテナント機能](multi-tenancy.md)
    + [アセットの透かしの設定](watermarking.md)
    + [アセットテンプレート](asset-templates.md)
-   + [ [!DNL Creative Cloud]とフォルダーを共有するためのベストプラクティス](aem-cc-folder-sharing-best-practices.md)
 + Brand Portal {#brandportal}
    + [ [!DNL Assets]  での [!DNL Brand Portal]の設定](configure-aem-assets-with-brand-portal.md)
    + [ [!DNL Brand Portal] へのアセットの公開](brand-portal-publish-assets.md)
