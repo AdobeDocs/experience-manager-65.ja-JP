@@ -8,10 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: 管理
 role: Administrator
-translation-type: tm+mt
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '627'
 ht-degree: 92%
 
 ---
@@ -19,11 +18,11 @@ ht-degree: 92%
 
 # AEM 6.5 管理ユーザーガイド {#administering}
 
-+ [管理ユーザガイドの概要](home.md)
++ [管理ユーザーガイドの概要](home.md)
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
    + [非同期ジョブ](asynchronous-jobs.md)
-   + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
+   + [コンテンツの再利用：マルチサイトマネージャとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
@@ -56,7 +55,7 @@ ht-degree: 92%
    + [ビデオコンポーネントの設定](config-video.md)
    + [Bulk Editor](bulk-editor.md)
    + [電子メール通知の設定](notification.md)
-   + [リンクチェッカー](external-link-checker.md)
+   + [リンクチェック](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [ワークフローへのアクセスの管理](workflows-managing.md)
    + [ワークフローの開始](workflows-starting.md)
@@ -82,7 +81,7 @@ ht-degree: 92%
    + [AEM Managed Services に対する Adobe IMS 認証およびアドミンコンソールのサポート](ims-config-and-admin-console.md)
    + [閉じられたユーザーグループの作成](cug.md)
    + [AEM でのシリアル化の問題の軽減](mitigating-serialization-issues.md)
-   + [ユーザーの同期](sync.md)
+   + [ユーザー同期](sync.md)
    + [カプセル化されたトークンのサポート](encapsulated-token.md)
    + [シングルサインオン](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=ja)
    + [AEM でのユーザー管理操作を監査する方法](audit-user-management-operations.md)
@@ -100,8 +99,8 @@ ht-degree: 92%
    + [Content Disposition フィルター](content-disposition-filter.md)
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
    + [同じサイトのcookieのサポート](same-site-cookie-support.md)
-+ パーソナライゼーション {#personalization}
-   + [パーソナライゼーション](personalization.md)
++ パーソナライズ機能 {#personalization}
+   + [パーソナライズ機能](personalization.md)
    + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
@@ -135,8 +134,7 @@ ht-degree: 92%
    + [AEM Livefyre のレシピ](aem-livefyre-recipes.md)
    + [統合に関する問題のトラブルシューティング](troubleshooting-integration-issues.md)
    + [BrightEdge Content Optimizer との結合](brightedge.md)
-   + [カタログ作成](catalog-producer.md)
-   + [Experience Cloud および Creative Cloud との AEM Assets 統合の設定](configure-assets-cc-integration.md)
+   + [カタログ作成機能](catalog-producer.md)
    + [Silverpop Engage との統合](silverpop.md)
    + [Adobe Campaign との統合](campaign.md)
    + [ExactTarget との統合](exacttarget.md)
@@ -145,7 +143,7 @@ ht-degree: 92%
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
    + [Adobe I/O を使用した Adobe Target との統合](integration-ims-adobe-io.md)
-   + [Adobe 分類](adobeanalytics-classifications.md)
+   + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
    + [エクスペリエンスフラグメントのAdobe Targetへの書き出し](experience-fragments-target.md)
