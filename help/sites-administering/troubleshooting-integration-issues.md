@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: 422ee332-23ae-46bd-8394-a4e0915beaa2
-translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 67%
 
 ---
-
 
 # 統合の問題のトラブルシューティング{#troubleshooting-integration-issues}
 
@@ -44,7 +43,7 @@ ${ myHtlVariable }
 -->
 ```
 
-ログ記録に関する詳細については、[ログ](/help/sites-deploying/configure-logging.md)ページおよび[監査レコードとログファイルの操作](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)ページを参照してください。
+ログについて詳しくは、 [ログ](/help/sites-deploying/configure-logging.md)と[監査レコードとログファイルの使用](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)のページを参照してください。
 
 ## Analytics 統合の問題 {#analytics-integration-issues}
 
@@ -59,18 +58,18 @@ ${ myHtlVariable }
 * 大量の PollingImporter が登録されていないことを確認します（下記の「PollingImporter が原因でシャットダウンに時間がかかる」を参照）。
 * `ManagedPollingImporter`OSGi コンソール[で ](/help/sites-deploying/configuring-osgi.md) を設定する CRON 式を使用して、特定の時刻にレポートインポーターを実行します。
 
-AEMでのカスタムデータインポーターサービスの作成について詳しくは、次の記事[https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/jp/experience-manager/using/polling.html)を参照してください。
+AEMでカスタムデータインポーターサービスを作成する方法について詳しくは、次の記事を参照してください。 [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/jp/experience-manager/using/polling.html)
 
 ### PollingImporter が原因でシャットダウンに時間がかかる {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analytics は継承メカニズムを念頭に置いて設計されています。通常、ページプロパティの「[クラウドサービス](/help/sites-developing/extending-cloud-config.md)」タブ内の Analytics 設定への参照を追加することで、サイトの Analytics を有効にします。ページで別の設定が必要な場合を除き、設定は再度参照する必要はなく、自動的にすべてのサブページに継承されます。サイトへの参照の追加により、複数のノードが自動的に作成されます(AEM 6.3以前の場合は12、AEM 6.4の場合は6)   以降)を`cq;PollConfig`型に変更します。この型は、AnalyticsデータのAEMへのインポートに使用するPollingImportersをインスタンス化します。 そのため、以下のようなことが起こりえます。
+Analytics は継承メカニズムを念頭に置いて設計されています。通常、ページプロパティの「[クラウドサービス](/help/sites-developing/extending-cloud-config.md)」タブ内の Analytics 設定への参照を追加することで、サイトの Analytics を有効にします。ページで別の設定が必要な場合を除き、設定は再度参照する必要はなく、自動的にすべてのサブページに継承されます。サイトへの参照を追加すると、複数のノードも自動的に作成されます(AEM 6.3以前の場合は12、AEM 6.4の場合は6)   およびそれ以降)を、AnalyticsデータをAEMに読み込むために使用するPollingImportersをインスタンス化するタイプ`cq;PollConfig`の そのため、以下のようなことが起こりえます。
 
 * Analytics を参照しているページがたくさんあると、大量の PollingImporter につながります。
 * さらに、Analytics 設定への参照とともにページをコピーして貼り付けると、PollingImporters が重複します。
 
 #### 解決策 {#solution-1}
 
-まず、[error.log](/help/sites-deploying/configure-logging.md)を分析すると、アクティブなPollingImportersまたは登録されているPollingImportersの量を知ることができます。 次に例を示します。
+まず、[error.log](/help/sites-deploying/configure-logging.md)を分析すると、アクティブなPollingImportersまたは登録済みのPollingImportersの量に関する洞察が得られる場合があります。 次に例を示します。
 
 ```
 # Count PollingImporter entries
@@ -86,7 +85,7 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 
 次に、トップページ（階層の上位）のみに Analytics 設定が参照されていることを確認します。
 
-AEMでのカスタムデータインポーターサービスの作成について詳しくは、次の記事[https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)を参照してください。
+AEMでカスタムデータインポーターサービスを作成する方法について詳しくは、次の記事を参照してください。 [https://helpx.adobe.com/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 ## DTM（レガシー）の問題 {#dtm-legacy-issues}
 
@@ -100,13 +99,13 @@ AEMでのカスタムデータインポーターサービスの作成につい�
 
 * 暗号化されたプロパティが復号化できることを確認します（暗号化では各 AEM インスタンスで異なる自動生成キーが使用される可能性があることに注意してください）。詳細については、[構成プロパティの暗号化サポート](/help/sites-administering/encryption-support-for-configuration-properties.md)も参照してください。
 * `/etc/cloudservices/dynamictagmanagement`にある設定を再公開します
-* `/etc/cloudservices`上のACLをチェックします。 ACL は次のようになります。
+* `/etc/cloudservices`のACLを確認します。 ACL は次のようになります。
 
    * allow; jcr:read; webservice-support-servicelibfinder
-   * 許可；jcr:read;みんなrep:glob:&amp;ast;/defaults/&amp;ast;
-   * 許可；jcr:read;みんなrep:glob:&amp;ast;/defaults
-   * 許可；jcr:read;みんなrep:glob:&amp;ast;/public/&amp;ast;
-   * 許可；jcr:read;みんなrep:glob:&amp;ast;/public
+   * 許可するjcr:read;誰もがrep:glob:&amp;ast;/defaults/&amp;ast;
+   * 許可するjcr:read;誰もがrep:glob:&amp;ast;/defaults
+   * 許可するjcr:read;誰もがrep:glob:&amp;ast;/public/&amp;ast;
+   * 許可するjcr:read;誰もがrep:glob:&amp;ast;/public
 
 ACL 管理の詳細については、[ユーザー管理とセキュリティ](/help/sites-administering/security.md#permissions-in-aem)ページを参照してください。
 
@@ -120,21 +119,21 @@ ACL 管理の詳細については、[ユーザー管理とセキュリティ](/
 
 次の解決策を試してください。
 
-* カスタム`headlibs.jsp` （`/apps/<CUSTOM-COMPONENTS-PATH>/headlibs.jsp`が含まれる場合）に次の内容が含まれていることを確認します。
+* カスタム`headlibs.jsp`（いずれかの`/apps/<CUSTOM-COMPONENTS-PATH>/headlibs.jsp`）に次が含まれていることを確認します。
 
 ```
 <%@include file="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" %>
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-* カスタム`head.html` （任意の`/apps/<CUSTOM-COMPONENTS-PATH>/head.html`の場合） ****&#x200B;が、次の例のように特定の統合ヘッドライブを選択的に含めないようにします。
+* カスタムの`head.html`（いずれか`/apps/<CUSTOM-COMPONENTS-PATH>/head.html`の場合）**に、次の例のような特定の統合ヘッドライブが選択的に含まれていないことを確認します。**
 
 ```
 <!-- DO NOT MANUALLY INCLUDE SPECIFIC CLOUD SERVICE HEADLIBS LIKE THIS -->
 <meta data-sly-include="/libs/cq/dtm/components/dynamictagmanagement/headlibs.jsp" data-sly-unwrap/>
 ```
 
-この `servicelibs.jsp` によって、必要な分析用 Javascript オブジェクトが追加され、Web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。ターゲットサービスの場合、ライブラリは`/libs/cq/analytics/components/testandtarget/headlibs.jsp`を介して読み込まれます
+この `servicelibs.jsp` によって、必要な分析用 Javascript オブジェクトが追加され、Web サイトに関連付けられているクラウドサービスライブラリが読み込まれます。Targetサービスの場合、ライブラリは`/libs/cq/analytics/components/testandtarget/headlibs.jsp`を介して読み込まれます。
 
 読み込まれるライブラリのセットは、Target の設定で使用されているターゲットクライアントライブラリのタイプ（`mbox.js` または `at.js`）によって異なります。
 
@@ -159,24 +158,24 @@ var s=s_gi(s_account)
 
 この問題には複数の原因が考えられます。
 
-* サードパーティのTag Management Systemを使用してターゲットのクライアントライブラリ（`mbox.js`または`at.js`）を非同期的に読み込むと、ターゲティングがランダムに中断する場合があります。 ターゲットライブラリはページヘッドに同期的にロードされることになっています。ライブラリが AEM から配信される場合、これは常に当てはまります。
+* サードパーティのタグ管理システムを使用してTargetクライアントライブラリ（`mbox.js`または`at.js`）を非同期で読み込むと、ターゲティングがランダムに解除される場合があります。 ターゲットライブラリはページヘッドに同期的にロードされることになっています。ライブラリが AEM から配信される場合、これは常に当てはまります。
 
-* 2つのターゲットクライアントライブラリ(`at.js`)を同時に読み込む(例えば、DTMを使用するライブラリとAEMのターゲット設定を使用するライブラリ)。 `adobe.target` バージョンが異なる場合、これが原因で `at.js` の定義がクラッシュする可能性があります。
+* 2つのTargetクライアントライブラリ(`at.js`)を同時に読み込む(例えば、1つはDTMを使用し、もう1つはAEMのTarget設定を使用)。 `adobe.target` バージョンが異なる場合、これが原因で `at.js` の定義がクラッシュする可能性があります。
 
 #### 解決策 {#solution-5}
 
 次の解決策を試してください。
 
 * DTM のようなライブラリをロードするカスタムコード（Target ライブラリを順番にロードする）が、[ページヘッド](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages) で同期的に実行されることを確認します。
-* サイトがDTMを使用してターゲットライブラリを配信するように設定されている場合は、サイトの[ターゲット設定](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html)で、**DTM**&#x200B;が配信するClientlibがオンになっていることを確認してください。
+* サイトがDTMを使用してTargetライブラリを配信するように設定されている場合は、サイトの[Target設定](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html)で「**DTM**&#x200B;によって配信されるClientlib」オプションがオンになっていることを確認します。
 
-### AT.js 1.3+ {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}を使用する場合、正しいオファーの代わりにデフォルトのオファーが常に表示されます。
+### AT.js 1.3以降{#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}を使用する場合、正しいオファーではなく、デフォルトのオファーが常に表示されます
 
-標準の AEM 6.2 および 6.3 は、AT.js バージョン 1.3.0 以降と互換性がありません。AT.jsバージョン1.3.0では、APIのパラメーター検証が導入されているので、`adobe.target.applyOffer()`には、`atjs-itegration.js`コードで提供されていない「mbox」パラメーターが必要です。
+標準の AEM 6.2 および 6.3 は、AT.js バージョン 1.3.0 以降と互換性がありません。APIのパラメーター検証が導入されたAT.jsバージョン1.3.0では、`adobe.target.applyOffer()`には`atjs-itegration.js`コードで提供されない「mbox」パラメーターが必要です。
 
 #### 解決策 {#solution-6}
 
-この問題を解決するには、`atjs-itegration.js`を編集し、`adobe.target.applyOffer()`のパラメーターオブジェクトに次のように`"mbox": mboxName`フィールドを追加します。
+この問題を解決するには、次のように`atjs-itegration.js`を編集し、`adobe.target.applyOffer()`のパラメーターオブジェクトに`"mbox": mboxName`フィールドを追加します。
 
 ```
 adobe.target.getOffer({
@@ -193,7 +192,7 @@ adobe.target.getOffer({
 
 ### 目標と設定ページにレポートソースセクションが表示されない {#the-goals-settings-page-does-not-show-the-reporting-sources-section}
 
-この問題は、[A4TAnalytics Cloud構成](/help/sites-administering/target-configuring.md)のプロビジョニングの問題である可能性が高くなります。
+この問題は、[A4T Analytics Cloud Configuration](/help/sites-administering/target-configuring.md)のプロビジョニングの問題である可能性が高くなります。
 
 #### 解決策 {#solution-7}
 
@@ -268,4 +267,3 @@ Response for N=4, CLIENT-dayintegrationintern
     ]
 }
 ```
-
