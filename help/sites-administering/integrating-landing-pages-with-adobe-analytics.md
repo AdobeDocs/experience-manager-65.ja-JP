@@ -9,31 +9,30 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 8ae7ccec-489b-4d20-ac56-6101402fb18a
-translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+exl-id: da3f7b7e-87e5-446a-9a77-4b12b850a381
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 48%
 
 ---
 
-
 # ランディングページと Adobe Analytics の統合{#integrating-landing-pages-with-adobe-analytics}
 
-AEMは、次のCTA（コールトゥアクション）コンポーネントを使用して、ランディングページソリューションを[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)と統合しました。
+AEMは、次のコールトゥアクション(CTA)コンポーネントを使用して、ランディングページソリューションを[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)と統合しました。
 
 1. クリックスルーコンポーネント
 1. グラフィックリンクコンポーネント
 
-これらのコンポーネントは、Adobe Analytics変数（トラフィック、コンバージョン変数）と成功イベントを介してマッピングできる特定の属性を公開し、Adobe Analyticsに情報を送信します。
+これらのコンポーネントは、Adobe Analytics変数（トラフィック変数、コンバージョン変数）および成功イベントを使用してマッピングできる特定の属性を公開し、Adobe Analyticsに情報を送信します。
 
 ## 前提条件 {#prerequisites}
 
-Adobeでは、[既存のAEM-Adobe Analytics統合](/help/sites-administering/adobeanalytics.md)を調べて、この統合の仕組みを理解することを推奨しています。
+Adobeでは、[既存のAEM-Adobe Analytics統合](/help/sites-administering/adobeanalytics.md)を確認して、この統合の仕組みを理解することをお勧めします。
 
 ## マッピングに使用できるコンポーネント {#components-available-for-mapping}
 
-AEMでは、サイドキックに表示される&#x200B;**アクションの呼び出し**&#x200B;コンポーネント — **ClickThroughLink**&#x200B;と&#x200B;**GraphicalLink**&#x200B;をAdobe Analytics変数にマッピングできます。
+AEMでは、サイドキックに表示される&#x200B;**Call to Action**&#x200B;コンポーネント（**ClickThroughLink**&#x200B;および&#x200B;**GraphicalLink**）をAdobe Analytics変数にマッピングできます。
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
@@ -54,7 +53,7 @@ AEMでは、サイドキックに表示される&#x200B;**アクションの呼�
   <tr>
    <td><strong>CTA クリックスルーリンク</strong></td>
    <td><i>eventdata.clickthroughLinkLabel</i> <br /> </td>
-   <td>リンク上のラベルまたはリンクのテキスト </td>
+   <td>リンクのラベルまたはリンクのテキスト </td>
   </tr>
   <tr>
    <td><br type="_moz" /> </td>
@@ -89,10 +88,9 @@ AEMでは、サイドキックに表示される&#x200B;**アクションの呼�
  </tbody>
 </table>
 
-1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。フレームワークを使用する準備が整いました。
-1. 新しいランディングページを作成したり、既存のCTAコンポーネントを使用して既存のランディングページを開いたりできます。サイドキックの&#x200B;**ページプロパティ**&#x200B;タブをクリックします(タッチ操作向けUIで「**プロパティを開く**」を選択し、「**Cloud Services**」をクリックします)。をランディングページと共に使用する場合。 ****&#x200B;ドロップダウンリストからフレームワークを選択します。
+1. コンテンツファインダーで、これらの公開される属性と Adobe Analytics 変数をマッピングします。これで、フレームワークを使用する準備が整いました。
+1. 新しいランディングページを作成するか、既存のCTAコンポーネントを使用して既存のランディングページを開き、サイドキックの「**Cloud Services**」タブをクリックします(タッチ操作向けUIでは、**Cloud Services**&#x200B;を選択し、**プロパティ**&#x200B;を設定します)をランディングページと共に使用する場合。 ****&#x200B;ドロップダウンリストからフレームワークを選択します。
 
    ![chlimage_1-25](assets/chlimage_1-25a.png)
 
 1. ランディングページを含むフレームワークを設定したら、実装されたコンポーネントが使用できるようになり、CTA でのクリックがすべて Adobe Analytics に記録されます。
-
