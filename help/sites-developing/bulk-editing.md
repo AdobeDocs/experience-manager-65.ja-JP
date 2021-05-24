@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: fe61ee4b-51b6-4a6f-91d8-1c02b29cc1db
-translation-type: tm+mt
-source-git-commit: b08149e00c418319ebacec71c56472ad4e8e1089
+exl-id: 1787e643-fc8e-40e0-8e14-97b222a7c320
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 82%
 
 ---
-
 
 # ページプロパティの一括編集のためのページの設定  {#configuring-your-page-for-bulk-editing-of-page-properties}
 
@@ -27,7 +26,7 @@ ht-degree: 82%
 * ページタイトルなど、通常は一意なフィールドがあります。1 つの値が適用される場合に、そのようなフィールドの一括編集を有効にして意味があるかどうかを判断する必要があります。
 * 特定のフィールドには、複数の値を持たせることができます。そのためには、レンダリング時に意味のある表現が必要です。
 
-   例えば、「発行の準備ができた」を示すチェックボックスです。 これは、バルク編集の前に複数の値を持つ場合があります（例：準備完了、レビュー中、進行中）。
+   例えば、「公開の準備ができました」を示すチェックボックスが表示されます。 この値は、一括編集の前に複数の値を持つ場合があります（例：準備済み、レビュー中、処理中）。
 
 >[!CAUTION]
 >
@@ -43,7 +42,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->バルク編集は、アセットに対しても使用できます。非常に似ていますが、いくつかの点で異なります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/metadata.md)を参照してください。アセット用のバルクメタデータエディタで、[スキーマエディタ](/help/assets/metadata-schemas.md)を使用してフィールドをカスタマイズできます。
+>一括編集は、アセットに対しても使用できます。非常に似ていますが、いくつかの点が異なります。詳しくは、[複数のアセットのプロパティの編集](/help/assets/metadata.md)を参照してください。[スキーマエディター](/help/assets/metadata-schemas.md)を使用して、アセットの一括メタデータエディターのフィールドをカスタマイズできます。
 
 ## フィールドの有効化 {#enabling-a-field}
 
@@ -70,7 +69,7 @@ ht-degree: 82%
 
    >[!NOTE]
    >
-   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)を参照してください。
+   >この例では、コアコンポーネントがインスタンスにインストールされ、インスタンスが We.Retail サンプルコンテンツと共に実行されていることを想定しています。詳しくは、[コアコンポーネントのドキュメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を参照してください。
 
 1. `cq:dialog`定義内の必須フィールドに移動します。
 1. フィールドノードで次のプロパティを定義します。
@@ -95,9 +94,8 @@ ht-degree: 82%
    >
    >設定およびその他の変更に推奨される方法は次のとおりです。
    >
-   >    1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
+   >    1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
    >    1. `/apps` 内で変更作業をおこないます。
 
 
 1. 「**すべて保存**」を選択して更新内容を保持します。
-
