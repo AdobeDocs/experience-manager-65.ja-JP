@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
-translation-type: tm+mt
-source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 67%
 
 ---
-
 
 # Eclipse を使用して AEM プロジェクトを開発する方法{#how-to-develop-aem-projects-using-eclipse}
 
@@ -49,7 +48,7 @@ Eclipse で AEM の開発を開始するには、次の手順を実行する必�
 
 ## Maven に基づく AEM プロジェクトの設定  {#set-up-your-aem-project-based-on-maven}
 
-次に、[Apache Mavenを使用したAEMプロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)の説明に従って、Mavenを使用してプロジェクトを設定します。
+次に、[Apache Mavenを使用してAEMプロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)の説明に従って、Mavenを使用してプロジェクトをセットアップします。
 
 ## Eclipse 用の JSP サポートの準備 {#prepare-jsp-support-for-eclipse}
 
@@ -60,12 +59,12 @@ Eclipse では JSP との連携もサポートされます。サポートされ�
 
 サポートを有効にするには、次の手順を実行します。
 
-1. [How-To Build AEM Projects using Apache Maven](/help/sites-developing/ht-projects-maven.md)の[How-To Work with JSPs](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)の説明に従ってください。
+1. [Apache Maven](/help/sites-developing/ht-projects-maven.md)を使用してAEMプロジェクトをビルドする方法の[JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)を使用する方法の手順に従ってください。
 1. コンテンツモジュールの POM 内の &lt;build /> セクションに次の項目を追加します。
 
    Eclipse の Maven サポートプラグインである m2e は maven-jspc-plugin のサポートを提供しません。この設定は、プラグインおよび一時的なコンパイルの結果のクリーンアップの関連タスクを無視するように m2e に通知します。
 
-   これは問題ではありません。[JSPとの使い方](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)で述べたように、この設定のmaven-jspc-pluginは、ビルドプロセスの一部としてコンパイルされたJSPを検証する目的でのみ使用されます。EclipseはJSP内の問題を既に報告しており、このMavenプラグインを使用して問題を報告していません。
+   これは問題ではありません。[JSP](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)を使用する方法で述べたように、この設定では、maven-jspc-pluginは、ビルドプロセスの一環としてJSPコンパイルを検証する目的でのみ使用されます。EclipseはJSPで既に問題を報告しており、それを行うためにこのMavenプラグインを使用しません。
 
    **myproject/content/pom.xml**
 
@@ -134,5 +133,4 @@ Eclipse では JSP との連携もサポートされます。サポートされ�
 
    >[!NOTE]
    >
-   >`/libs`に`/libs/foundation/global.jsp`または他のJSPを含める場合は、Eclipseが含める処理を解決できるように、それをプロジェクトにコピーする必要があります。 同時に、Mavenによってコンテンツパッケージにバンドルされていないことを確認する必要があります。 これを達成する方法は、[Apache Mavenを使用したAEMプロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
-
+   >`/libs/foundation/global.jsp`または他のJSPを`/libs`に含める場合は、Eclipseがインクルージョンを解決できるように、そのJSPをプロジェクトにコピーする必要があります。 同時に、Mavenによってコンテンツパッケージにバンドルされていないことを確認する必要があります。 これを実現する方法については、[Apache Mavenを使用してAEMプロジェクトをビルドする方法](/help/sites-developing/ht-projects-maven.md)を参照してください。
