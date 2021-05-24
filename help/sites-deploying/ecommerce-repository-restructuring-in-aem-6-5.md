@@ -8,19 +8,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アップグレード
+exl-id: 78b7c497-c474-4308-bfab-8f424b5f7268
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 77%
 
 ---
 
-
 # AEM 6.5 における e コマースリポジトリの再構築{#e-commerce-repository-restructuring-in-aem}
 
-AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リポジトリの再構築に関する説明に従って、AEM 6.5にアップグレードしたお客様は、このページを使用して、AEM E-Commerce Solutionに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更ではAEM 6.5のアップグレードプロセス中に作業が必要になり、残りの変更は将来のアップグレードまで延期できます。
+AEM 6.5の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.5にアップグレードする場合は、このページを使用して、AEM E-Commerce Solutionに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更では、AEM 6.5のアップグレードプロセス中に作業が必要ですが、それ以外の変更では、将来のアップグレードまで延期することもできます。
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
@@ -58,4 +57,3 @@ AEM 6.5](/help/sites-deploying/repository-restructuring.md)の親ページ[リ�
   </tr>
  </tbody>
 </table>
-
