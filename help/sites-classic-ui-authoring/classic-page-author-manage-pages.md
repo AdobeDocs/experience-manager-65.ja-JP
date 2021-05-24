@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 14b8758b-f164-429a-b299-33b0703f8bec
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 90%
 
 ---
-
 
 # ページの作成と整理{#creating-and-organizing-pages}
 
@@ -41,7 +40,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
 以下は、Geometrixx サイトからの引用です。例として、`Triangle` ページにアクセスする場合を示しています。
 
-* 作成者環境
+* オーサー環境
 
    `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
@@ -49,7 +48,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
    `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-   インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションになる場合があります。
+   インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションの場合があります。
 
 ```xml
   /content
@@ -71,7 +70,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
     /...
 ```
 
-この構造はWebサイトコンソールから表示でき、[ツリー構造](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15)内を移動するのに使用できます。
+この構造はWebサイトコンソールから表示でき、[ツリー構造](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15)内を移動します。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -89,9 +88,9 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
    * これは URI の生成に使用されます。
    * このフィールドへの入力はオプションです。指定しない場合、名前はタイトルから派生します。
 
-新しいページを作成する場合、AEMは、AEMとJCRが定めた規則](/help/sites-developing/naming-conventions.md)に従って、ページ名を[検証します。
+新しいページを作成する際に、AEMはAEMとJCRによって課された規則](/help/sites-developing/naming-conventions.md)に基づいてページ名を検証します。[
 
-実装と使用できる文字のリストは、UIに応じて少し異なります（タッチ対応UIの方が広くなります）が、最小限の許容値は次のとおりです。
+実装と許可される文字のリストは、UIによって少し異なります（タッチ操作対応UIの方が広い）が、許可される最小限の文字は次のとおりです。
 
 * &#39;a&#39; から &#39;z&#39;
 * &#39;A&#39; から &#39;Z&#39;
@@ -103,21 +102,21 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
 #### タイトル {#title}
 
-新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**[がこの文字列から派生され、AEM と JCR によって課された規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)両方の UI とも、無効な文字が含まれている「**タイトル**」フィールドは受け入れられますが、派生された名前の無効な文字は別の文字に置き換えられます。次に例を示します。
+新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**&#x200B;がこの文字列から派生され、AEM と JCR [によって課された規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。両方の UI とも、無効な文字が含まれている「**タイトル**」フィールドは受け入れられますが、派生された名前の無効な文字は別の文字に置き換えられます。次に例を示します。
 
 | タイトル | 派生された名前 |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;ast;cis+ | sc---c-.html |
+| SC%&amp;ast;ç+ | sc---c-.html |
 
 #### 名前 {#name}
 
-新しいページを作成するときにページの「**名前**[」を指定すると、AEM では AEM と JCR の規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)
+新しいページを作成するときにページの「**名前**」を指定すると、AEM では AEM と JCR [の規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。
 
 クラシックUIでは、****&#x200B;名前&#x200B;**フィールドに無効な文字**&#x200B;を入力することはできません。
 
 >[!NOTE]
->タッチ対応UIでは、****&#x200B;名前&#x200B;**フィールドに無効な文字**&#x200B;を送信できません。 AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
+>タッチ操作対応UIでは、**「名前」**&#x200B;フィールドに無効な文字&#x200B;**を送信できません。** AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
 
 >[!NOTE]
 >
@@ -149,7 +148,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 * ビデオ
 * その他
 
-ページを作成して開くと、[サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)から入手できるコンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)を使用して、[コンテンツを追加できます。
+ページを作成して開いたら、[コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph)を使用してコンテンツを追加できます。コンポーネントは[サイドキック](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick)から入手できます。
 
 ## ページの管理 {#managing-pages}
 
@@ -195,7 +194,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
    >[!NOTE]
    >
-   >また、既存のページの編集中にページを作成することもできます。サイドキックの&#x200B;**ページ**&#x200B;タブの**子ページを作成**を使用すると、編集中のページのすぐ下に新しいページが作成されます。
+   >また、既存のページの編集中にページを作成することもできます。サイドキックの「****ページ**」タブの「子ページを作成**」を使用すると、編集中のページの直下に新しいページが作成されます。
 
 ### ページを開いて編集 {#opening-a-page-for-editing}
 
@@ -292,7 +291,7 @@ AEM では、名前変更または移動がおこなわれるページへの内�
       参照しているページを再発行します。この項目も、ページごとに選択または選択解除できます。
    >[!NOTE]
    >
-   >既にアクティベートされているページを移動すると、自動的にアクティベート解除されます。デフォルトでは、移動が完了すると再アクティブ化されますが、**移動**&#x200B;ウィンドウでページの&#x200B;**再公開**&#x200B;フィールドのチェックを外すと、この変更が可能です。
+   >既にアクティベートされているページを移動すると、自動的にアクティベート解除されます。デフォルトでは、移動が完了すると再アクティブ化されますが、**移動**&#x200B;ウィンドウでページの「**再公開**」フィールドをオフにすると、この動作を変更できます。
 
 1. 「**移動**」をクリックします。確認が必要です。「**OK**」をクリックして確定します。
 
@@ -335,4 +334,3 @@ AEM では、名前変更または移動がおこなわれるページへの内�
    ![chlimage_1-152](assets/chlimage_1-152.png)
 
 1. 「**作成**」を選択してフォルダーを作成します。
-
