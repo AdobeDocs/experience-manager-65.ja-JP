@@ -10,14 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4e5e6ef022dc9f083859e13ab9c86b622fc3d46e
+exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 92%
 
 ---
-
 
 # プロキシサーバーツール（proxy.jar）{#proxy-server-tool-proxy-jar}
 
@@ -39,13 +38,13 @@ ht-degree: 92%
 
 ## プロキシサーバーツールの起動  {#starting-the-proxy-server-tool}
 
-このツールは、AEMインストールの/opt/helpersフォルダーにあります。 このツールを起動するには、次のように入力します。
+このツールは、AEMインストール環境の/opt/helpersフォルダーにあります。 このツールを起動するには、次のように入力します。
 
 ```xml
 java -jar proxy.jar <host> <remoteport> <localport> [options]
 ```
 
-### Options {#options}
+### オプション {#options}
 
 * **q（静止モード）**：コンソールウィンドウに出力を書き込みません。接続速度を低下させたくない場合や出力をファイルに記録する場合はこのオプションを使用します（-logfile オプションを参照）。
 * **b（バイナリモード）**：トラフィック内で特定のバイトの組み合わせを検索する場合は、バイナリモードを有効にします。出力には 16 進および文字の出力が含まれます。
@@ -119,7 +118,7 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
 * # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは0です。
-* [GET &lt;?>] は、リクエストの内容です。この例では、HTTPヘッダー(url)の1つです。
+* [GET &lt;?>] は、リクエストの内容です。この例では、HTTPヘッダー(url)の1つを示します。
 
 接続を閉じると、次の情報がログに記録されます。
 
@@ -152,7 +151,7 @@ AEM が localhost:4303 で実行されている場合は、プロキシサーバ
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
 ```
 
-プロキシサーバーを使用せずにサーバー(`localhost:4303`)にアクセスできますが、`localhost:4444`経由でアクセスすると、プロキシサーバーは通信をログに記録します。 ブラウザーを開き、上記のテンプレートで作成されたページにアクセスします。 その後、ログファイルを確認します。
+プロキシサーバーを使用せずにサーバー(`localhost:4303`)にアクセスできますが、`localhost:4444`を使用してサーバーにアクセスすると、プロキシサーバーは通信をログに記録します。 ブラウザーを開き、上記のテンプレートで作成されたページにアクセスします。 その後、ログファイルを確認します。
 
 >[!NOTE]
 >
