@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: personalization
 discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 0954fd5f-cd70-4f2f-85e9-df1c7a3037e1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Campaign の使用{#working-with-adobe-campaign}
 
@@ -27,7 +26,7 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 * Adobe Campaign Classic
 * Adobe Campaign Standard（サブスクリプション形式のソリューション）
 
-次のファイルを参照してください。
+以下を参照してください。
 
 * [Adobe Campaign Classic および Adobe Campaign Standard の使用](/help/sites-authoring/campaign.md)
 * [Adobe Campaign コンポーネント](/help/sites-authoring/adobe-campaign-components.md)
@@ -40,4 +39,3 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 * [カスタム拡張の作成](/help/sites-developing/extending-campaign-extensions.md)
 * [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)
-
