@@ -10,14 +10,13 @@ topic-tags: platform
 content-type: reference
 discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 94%
 
 ---
-
 
 # AEM プラットフォームの概要{#introduction-to-the-aem-platform}
 
@@ -25,7 +24,7 @@ AEM 6 の AEM プラットフォームは、Apache Jackrabbit Oak に基づい�
 
 Apache Jackrabbit Oak は、昨今の世界規模の Web サイトおよび要求の厳しいその他のコンテンツアプリケーションの基盤として使用する、スケーラビリティとパフォーマンスに優れた階層構造のコンテンツリポジトリを実装するための取り組みです。
 
-これはJackrabbit 2の後継で、AEM 6ではコンテンツリポジトリCRXのデフォルトバックエンドとして使用されます。
+これはJackrabbit 2の後継であり、AEM 6でそのコンテンツリポジトリCRXのデフォルトバックエンドとして使用されます。
 
 ## 設計の原則と目的 {#design-principles-and-goals}
 
@@ -69,7 +68,7 @@ Oak JCR の主な目的は、JCR セマンティクスをツリー操作に変�
 
 Oak ストレージレイヤーは、コンテンツの実際のストレージに抽象化レイヤーを提供します。
 
-現在、AEM6では2つのストレージ実装を使用できます。**Tarストレージ**&#x200B;と&#x200B;**MongoDBストレージ**。
+現在、AEM6では2つのストレージ実装を使用できます。**Tar Storage**&#x200B;と&#x200B;**MongoDB Storage**。
 
 ### Tar ストレージ {#tar-storage}
 
@@ -121,7 +120,7 @@ MongoDB ストレージを使用した一般的な AEM クラスターのセッ�
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-## ジャックラビット2とは何が違うの？{#what-is-different-from-jackrabbit}
+## Jackrabbit 2との違いは何ですか。{#what-is-different-from-jackrabbit}
 
 Oak は JCR 1.0 標準との下位互換性を確保するように設計されているので、ユーザーレベルでの変更はほとんどありません。ただし、Oak ベースの AEM インストールをセットアップする場合に考慮しなければならない顕著な違いがいくつか存在します。
 
@@ -137,4 +136,3 @@ AEM プラットフォームについて詳しくは、以下の記事も参照�
 * [Oak クエリとインデックス作成](/help/sites-deploying/queries-and-indexing.md)
 * [AEM 6 のストレージ要素](/help/sites-deploying/storage-elements-in-aem-6.md)
 * [MongoDB を備えた AEM](/help/sites-deploying/aem-with-mongodb.md)
-
