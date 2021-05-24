@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 73%
 
 ---
-
 
 # クラウドサービス設定{#cloud-service-configurations}
 
@@ -24,7 +23,7 @@ ht-degree: 73%
 
 既存のインスタンスを拡張して、独自の設定を作成できます。
 
-## 概念 {#concepts}
+## 概念  {#concepts}
 
 設定の作成に用いられる原則は、以下の概念に基づいています。
 
@@ -32,8 +31,8 @@ ht-degree: 73%
 * 設定（プロパティや段落など）は、親から継承される。
 * パスによって、分析ノードから参照される。
 * 簡単に拡張できる。
-* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)のように、より複雑な設定に対して柔軟に対応できます。
-* 依存関係のサポート([Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)プラグインには[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)の設定が必要です)。
+* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)など、より複雑な設定に対応する柔軟性があります。
+* 依存関係のサポート(例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)プラグインには[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)設定が必要です)。
 
 ## 構造 {#structure}
 
@@ -43,7 +42,7 @@ ht-degree: 73%
 
 設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
-新しいサービスの設定を指定するには、次の操作が必要です。
+新しいサービスの設定を行うには、次の操作が必要です。
 
 * ～にサービスページを作る
 
@@ -111,7 +110,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンテンツモデル {#content-model}
 
-コンテンツモデルは`cq:Page`として次の下に保存されます。
+コンテンツモデルは、次の場所に`cq:Page`として保存されます。
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -122,7 +121,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-構成はサブノード`jcr:content`の下に保存されます。
+設定はサブノード`jcr:content`の下に保存されます。
 
 * ダイアログで定義される固定プロパティは、`jcr:node` に直接保存する必要があります。
 * （`parsys` または `iparsys` を使用する）動的要素は、サブノードを使用してコンポーネントデータを保存します。
@@ -142,7 +141,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 ### AEM の統合 {#aem-integration}
 
-使用可能なサービスは、**ページのプロパティ**&#x200B;ダイアログの&#x200B;**Cloud Services**&#x200B;タブ（`foundation/components/page`または`wcm/mobile/components/page`から継承するページの）に一覧表示されます。
+使用可能なサービスは、**ページのプロパティ**&#x200B;ダイアログの「**Cloud Services**」タブ（`foundation/components/page`または`wcm/mobile/components/page`から継承するページの）に表示されます。
 
 このタブでは以下についても表示されます。
 
@@ -153,7 +152,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドのプロパティ名には`@Encrypted`という注釈が必要です。例えば、`password`フィールドに対しては、名前は次のように書かれます。
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドのプロパティ名には注釈`@Encrypted`が必要です。例えば、`password`フィールドの場合、名前は次のようになります。
 
 `password@Encrypted`
 
@@ -165,7 +164,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 >[!NOTE]
 >
->デフォルトでは、`EcryptionPostProcessor`は`/etc/cloudservices`に対する`POST`リクエストのみを暗号化します。
+>デフォルトでは、`EcryptionPostProcessor`は`/etc/cloudservices`に対して行われた`POST`リクエストのみを暗号化します。
 
 #### サービスページの jcr:content ノード用の追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -177,7 +176,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、ページ上のコンポーネントが含ま<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> れます(通常は <code>body</code> タグの前)。<br /> Analyticsとターゲットの場合は、これを使用して、訪問者の動作を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、が含まれるページ上のコン<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> ポーネントが含まれます(通常はタグの前 <code>body</code> にあります)。<br /> AnalyticsとTargetの場合は、これを使用して、訪問者の行動を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
   </tr>
   <tr>
    <td>description</td>
@@ -227,4 +226,3 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 >[!NOTE]
 >
 >[カスタムクラウドサービスの作成](/help/sites-developing/extending-cloud-config-custom-cloud.md)も参照してください。
-
