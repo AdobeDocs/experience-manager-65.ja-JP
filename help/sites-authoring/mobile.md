@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 89%
 
 ---
-
 
 # モバイルデバイス用のページのオーサリング{#authoring-a-page-for-mobile-devices}
 
@@ -26,14 +25,14 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(「[異なるチャネル用のライブコピーの作成](/help/sites-administering/msm-livecopy.md)」を参照)。
+>既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。（[異なるチャネル用のライブコピーの作成](/help/sites-administering/msm-livecopy.md)を参照）。
 >
->AEM 開発者は、新しいデバイスグループを作成できます。(「[デバイスグループフィルターの作成](/help/sites-developing/groupfilters.md)」を参照)。
+>AEM 開発者は、新しいデバイスグループを作成できます。（[デバイスグループフィルターの作成](/help/sites-developing/groupfilters.md)を参照）。
 
 次の手順を使用して、モバイルページをオーサリングします。
 
 1. グローバルナビゲーションから&#x200B;**サイト**&#x200B;コンソールを開きます。
-1. **We.Retail** -> **米国** -> **英語**&#x200B;のページを開きます。
+1. ページ&#x200B;**We.Retail** -> **米国** -> **英語**&#x200B;を開きます。
 
 1. **プレビュー**&#x200B;モードに切り替えます。
 1. ページ上部のデバイスアイコンをクリックして、必要なエミュレーターに切り替えます。
@@ -46,4 +45,3 @@ ht-degree: 89%
 >[!NOTE]
 >
 >オーサーインスタンスのページがモバイルデバイスから要求されると、エミュレーターは無効になります。
-
