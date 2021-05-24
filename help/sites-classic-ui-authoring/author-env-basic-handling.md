@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 90%
 
 ---
-
 
 # 基本操作{#basic-handling}
 
@@ -60,7 +59,7 @@ ht-degree: 90%
   </tr>
   <tr>
    <td><strong>ローンチ</strong></td>
-   <td>これは、<a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>；の管理に役立ちます。これらを使用すると、1つ以上のアクティブ化されたwebページの将来のリリース向けにコンテンツを開発できます。<br /> <i>注意：タッチ対応UIでは、参照レールと共に、サイトコンソールでも同じ機能のほとんどが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「操作」、「起動」の順に選択します。</i></td>
+   <td>これは、<a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>；の管理に役立ちます。これらを使用すると、アクティブ化された1つ以上のwebページの将来のリリース用にコンテンツを開発できます。<br /> <i>注意：タッチ操作対応UIでは、参照レールと共にサイトコンソールでも同じ機能の多くが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「操作」、「ローンチ」の順に選択します。</i></td>
   </tr>
   <tr>
    <td><strong>インボックス </strong></td>
@@ -93,13 +92,13 @@ ht-degree: 90%
 
 * 左側のウィンドウ
 
-   これにより、Webサイトのツリー構造と、そのWebサイト内のページが表示されます。
+   Webサイトのツリー構造と、そのWebサイト内のページが表示されます。
 
-   また、プロジェクト、設計図、アセットなど、その他の側面やAEMに関する情報も表示されます。
+   また、プロジェクト、ブループリント、アセットなど、AEMのその他の側面に関する情報も表示されます。
 
 * 右側のウィンドウ
 
-   これは、ページ（左側のペインで選択した場所）を表示し、アクションの実行に使用できます。
+   これにより、（左側のウィンドウで選択した場所に）ページが表示され、アクションを実行するために使用できます。
 
 ここから、ツールバーやコンテキストメニューを使用するか、ページを開いて追加のアクションを実行することで、[ページを管理](/help/sites-authoring/managing-pages.md)できます。
 
@@ -168,7 +167,7 @@ ht-degree: 90%
    <td>ページのサムネールを表示します。</td>
   </tr>
   <tr>
-   <td>title（タイトル）</td>
+   <td>タイトル</td>
    <td>ページに表示されるタイトルです。</td>
   </tr>
   <tr>
@@ -234,4 +233,3 @@ ht-degree: 90%
 クラシック UI では、クリック、ダブルクリックなどの馴染みのあるメカニズムを使用して移動やアクションの開始をおこなうことができます。現在の状況に応じて、様々なコンテキストメニュー（通常はマウスの右クリックにより開く）も利用できます。
 
 ![chlimage_1-11](assets/chlimage_1-11a.png)
-
