@@ -10,15 +10,14 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: b88edad4-2a2e-429b-86a2-cc68ba69697e
 docset: aem65
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 言語コピー
+exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 91%
 
 ---
-
 
 # クラシック UI による言語ルートの作成{#creating-a-language-root-using-the-classic-ui}
 
@@ -28,7 +27,7 @@ ht-degree: 91%
 1. サイトの言語バージョンを表す新しい子ページを追加します。
 
    1. 新規／新しいページをクリックします。
-   1. ダイアログで、「タイトル」と「名前」を指定します。名前は`<language-code>`または`<language-code>_<country-code>`の形式にする必要があります（en、en_US、en_us、en_GB、en_gbなど）。
+   1. ダイアログで、「タイトル」と「名前」を指定します。名前の形式は`<language-code>`または`<language-code>_<country-code>`にする必要があります（例：en、en_US、en_us、en_GB、en_gb）。
 
       * サポートされている言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
       * サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
@@ -60,4 +59,3 @@ ht-degree: 91%
 
 1. 「OK」をクリックしてダイアログを閉じます。
 1. 次のダイアログで、「はい」をクリックしてコピーを確定します。
-
