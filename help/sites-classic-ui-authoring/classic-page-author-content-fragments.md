@@ -10,14 +10,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 5b488f41-2cc1-41f9-8c7f-da851d325949
-translation-type: tm+mt
-source-git-commit: 307a1db2e5bbb72d730c89ba14f5ce02b96c108d
+exl-id: b55d9edc-a210-407a-aa4b-a91bb358be7b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 100%
 
 ---
-
 
 # コンテンツフラグメントを使用したページのオーサリング{#page-authoring-with-content-fragments}
 
@@ -30,4 +29,3 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 >クラシック UI では、コンテンツフラグメント管理のすべての機能を使用できるわけではありません。標準オーサリングのドキュメントの[コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
 >
 >コンテンツフラグメントコンポーネントは、クラシック UI のサイドキックに表示されますが、機能を使用することはできません。
-
