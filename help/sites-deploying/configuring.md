@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2133'
 ht-degree: 81%
 
 ---
-
 
 # 設定の基本概念{#basic-configuration-concepts}
 
@@ -31,15 +30,15 @@ AEM では様々な設定をおこなえます。
 
 設定を変更する際には、その設定の種類に応じて、次のいずれかの方法を使用します。
 
-* **Adobe CQウェブコンソール**
+* **Adobe CQ Webコンソール**
 
-   これは、OSGiバンドルとサービスを設定する際の標準的な場所です。
+   これは、OSGiバンドルおよびサービスを設定するための標準的な場所です。
 
-   詳細と推奨プラクティスについては、[OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
+   詳細と推奨プラクティスについては、 [OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
 
 * **リポジトリ**
 
-   OSGi設定のサブセットは、リポジトリで使用できます。 そのため、リポジトリのコンテンツをコピーまたはレプリケートすることにより、同一の設定を再作成できます。実行モードに応じて、独自の設定をリポジトリに追加することもできます。
+   OSGi設定のサブセットはリポジトリで使用できます。 そのため、リポジトリのコンテンツをコピーまたはレプリケートすることにより、同一の設定を再作成できます。実行モードに応じて、独自の設定をリポジトリに追加することもできます。
 
    詳しくは、[リポジトリでの OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)、特に[リポジトリへの新しい設定の追加](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を参照してください。
 
@@ -96,19 +95,19 @@ AEM のすべての要素（リポジトリ、Dispatcher など）は、IPv4 と
 
 * IPv6アドレス
 
-   例：`https://[ab12::34c5:6d7:8e90:1234]:4502`
+   例： `https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4アドレス
 
-   例：`https://123.1.1.4:4502`
+   例： `https://123.1.1.4:4502`
 
 * サーバー名
 
-   例：`https://www.yourserver.com:4502`
+   例： `https://www.yourserver.com:4502`
 
-* `localhost`のデフォルトのケースは、IPv4とIPv6の両方のネットワークインストールに対して解釈されます
+* `localhost`のデフォルトのケースは、IPv4とIPv6の両方のネットワークインストールで解釈されます
 
-   例：`http://localhost:4502`
+   例： `http://localhost:4502`
 
 ### バージョンのパージ {#version-purging}
 
@@ -124,7 +123,7 @@ AEM では、次の設定が可能です。
 
 * 中央のログサービスのグローバルパラメーター
 * 要求データのログ（要求情報用の特殊なログ設定）
-* 個々のサービス固有の設定;例えば、個々のログファイルやログメッセージの形式
+* 個々のサービス固有の設定;例えば、個々のログファイルとログメッセージの形式などです
 
 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
@@ -150,7 +149,7 @@ AEM では、次の設定が可能です。
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
-* 内部構造がWebサイトの訪問者ーに表示されないように、すべてのリクエストの先頭に`/content`を付けます。
+* すべてのリクエストに`/content`というプレフィックスを付けて、Webサイトの訪問者に対して内部構造が非表示になるようにします。
 * Webサイトの`/content/en/gateway`ページへのすべてのリクエストが`https://gbiv.com/`にリダイレクトされるように、リダイレクトを定義します。
 
 詳しくは、[リソースマッピング](/help/sites-deploying/resource-mapping.md)を参照してください。
@@ -167,7 +166,7 @@ AEM では、次の設定が可能です。
 
 ### OSGi 設定 {#osgi-configuration-settings}
 
-[](https://www.osgi.org/) OSGはAEMのテクノロジスタックの基本要素です。AEMの複合バンドルとその設定を制御するために使用されます。
+[](https://www.osgi.org/) OSGは、AEMのテクノロジースタックの基本要素です。AEMの複合バンドルとその設定を制御するために使用されます。
 
 プロジェクト実装に関連する様々なバンドルのリストについては、[OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください（バンドルに基づいてリストされています）。リストされているすべての設定に調整が必要なわけではなく、一部の設定は AEM の動作を説明する目的で記載されています。
 
@@ -177,19 +176,19 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 LDAP 認証は、Active Directory などの（中央の）LDAP ディレクトリに格納されているユーザーを認証するために必要です。これにより、ユーザーアカウントの管理に必要な労力が軽減されます。
 
-LDAP 認証はリポジトリレベルでおこなわれるので、リポジトリによって直接処理されます。詳しくは、[AEMでのLDAPの設定](/help/sites-administering/ldap-config.md)を参照してください。
+LDAP 認証はリポジトリレベルでおこなわれるので、リポジトリによって直接処理されます。詳しくは、[AEM](/help/sites-administering/ldap-config.md)でのLDAPの設定を参照してください。
 
 AEM 内のユーザー管理（アクセス権の割り当てを含む）について詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
 ### Dispatcher の設定  {#configuring-the-dispatcher}
 
-ディスパッチャーは、Adobe Experience Managerのキャッシュおよびロードバランシングのツールで、エンタープライズクラスのWebサーバーと組み合わせて使用できます。
+Dispatcherは、Adobe Experience Managerのキャッシュやロードバランシングを行うツールで、エンタープライズクラスのWebサーバーと組み合わせて使用できます。
 
 詳しくは、[Dispatcher ](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)を参照してください。
 
 ### AEM LiveCycle Connector の設定 {#configuring-aem-livecycle-connector}
 
-AEM Doc ServicesとAEM Doc Securityのリリースにより、LiveCycleドキュメントサービスを呼び出してXFAフォームをレンダリングし、ドキュメントをPDFに変換し、ドキュメントをポリシーで保護できるようになりました。詳しくは、[AEMLiveCycleコネクタ](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html)をお読みください。
+AEM Doc ServicesとAEM Doc Securityのリリースにより、LiveCycleドキュメントサービスを呼び出してXFAフォームをレンダリングし、ドキュメントをPDFに変換し、ドキュメントをポリシーで保護する機能が追加されました。詳しくは、[AEMLiveCycleコネクタ](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html)をお読みください。
 
 ### ジョブのオフロードとトポロジの管理 {#job-offloading-and-topology-administration}
 
@@ -217,7 +216,7 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 ### 共有データストア {#shared-data-store}
 
-リポジトリ・データ・ストアは、大きなバイナリのストレージを別の領域に固有のリポジトリからオフロードするために使用され、リポジトリ・ツリー内の同じバイナリ（例えばイメージ）の複数のインスタンスが1回だけ格納されます。
+リポジトリデータストアは、リポジトリ内の同じバイナリ（例えば画像）の複数のインスタンスが1回だけ保存されるように、大きなバイナリのストレージを別の領域に固有のリポジトリからオフロードするために使用します。
 
 この「1 回の格納で複数回参照する」機能を拡張し、それぞれのデータストアが共有ファイルシステムの同じ場所を参照するように設定すると、単一のリポジトリツリーだけでなく、完全に別々の複数のリポジトリにも対応できます。
 
@@ -249,22 +248,22 @@ HTTP over SSL を有効にして、サーバーへの接続のセキュリティ
 
 個々の Java プロセスがファイルにアクセスする場合がありますが、これにはシステムリソースが必要です。この理由から、プロセスごとに同時にアクセスできるファイル数の上限が定義されています。これを超えると、例外エラーが発生する場合があります。
 
-AEMプロセスがこの最大値を超えると、`too many open files`にメッセージ「`error.log`」が表示されます。
+AEMプロセスがこの最大値を超えると、`error.log`に「`too many open files`」というメッセージが表示されます。
 
 このような例外を回避するには、次の処理をおこなう必要があります。
 
 1. AEMプロセスで使用している開いているファイルの数を確認します。
 
-   このチェックを行う方法は、インスタンスを実行しているプラットフォームに応じて異なります。 lsof(Unix)やProcess Explorer(Windows)などのユーティリティを使用できます。
+   このチェックの実行方法は、インスタンスが実行されているプラットフォームによって異なります。 lsof(UNIX)やProcess Explorer(Windows)などのユーティリティを使用できます。
 
-   この値は、開発およびテスト中に監視する必要があります。
+   この値は、次の目的で開発およびテストする際に監視する必要があります。
 
    * ファイルが必要に応じて閉じられていることを確認するため
    * 様々な状況下での必要な最大値を特定するため
 
 1. 許可する最大値を設定します。
 
-   この新しい値は、現在のニーズと将来のピークの両方に適している必要があるので、現在のニーズを重複することをお勧めします。
+   新しい値は、現在のニーズと今後のピークの両方に対応する必要があるので、現在のニーズを2倍にすることをお勧めします。
 
    デフォルトでは、`serverctl`は`CQ_MAX_OPEN_FILES`を`8192`に設定します。これは、ほとんどのシナリオで十分です。
 
@@ -310,9 +309,8 @@ CQ は、次のようなユーザーに電子メール通知を送信します�
 
 * オーサーインスタンス上：
 
-   * [Adobeページインプレッショントラック](/help/sites-deploying/osgi-configuration-settings.md)
+   * [Adobeページインプレッションの追跡](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >
 >オーサー環境の Adobe Page Impressions Tracker の設定では、トラッキングサービスへの匿名リクエストが許可されます。
-
