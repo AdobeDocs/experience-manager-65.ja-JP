@@ -1,14 +1,13 @@
 ---
 title: 非同期ジョブ
 description: Adobe Experience Manager では、リソースを集中的に消費する一部のタスクを非同期的に処理することでパフォーマンスを最適化します。
-translation-type: tm+mt
-source-git-commit: c3f85314740c4e9ca8ed0c9a724b49ff4276616a
+exl-id: 4af1bcfe-9f2e-44a4-8666-881f2dccc3bc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 98%
 
 ---
-
 
 # 非同期操作 {#asynchronous-operations}
 
@@ -144,9 +143,9 @@ AEM は、毎日午前 1 時にパージジョブを実行して、1 日以上�
 >[!MORELIKETHIS]
 >
 >* [ページの作成と整理](/help/sites-authoring/managing-pages.md)
->* [ライブコピーの作成と同期](/help/sites-administering/msm-livecopy.md)
->* [Experience Managerで電子メールを設定します](/help/sites-administering/notification.md)。
->* [アセットのメタデータの読み込み](/help/assets/metadata.md#import-metadata)。
->* [アセットメタデータを書き出し](/help/assets/metadata.md#export-metadata)。
->* [Connected Assets を使用したリモートデプロイメントからの DAM アセットの共有](/help/assets/use-assets-across-connected-assets-instances.md)
+* [ライブコピーの作成と同期](/help/sites-administering/msm-livecopy.md)
+* [Experience Manager](/help/sites-administering/notification.md)で電子メールを設定します。
+* [アセットメタデータの読み込み](/help/assets/metadata.md#import-metadata)を参照してください。
+* [アセットメタデータの書き出し](/help/assets/metadata.md#export-metadata)を参照してください。
+* [Connected Assets を使用したリモートデプロイメントからの DAM アセットの共有](/help/assets/use-assets-across-connected-assets-instances.md)
 
