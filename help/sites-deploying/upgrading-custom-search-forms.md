@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アップグレード
+exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 81%
 
 ---
-
 
 # カスタム検索フォームのアップグレード{#upgrading-custom-search-forms}
 
@@ -48,9 +47,9 @@ AEM 6.2 では、カスタマイズされた検索フォームのリポジトリ
 
 ## カスタム検索フォームのリスト  {#list-of-custom-search-forms}
 
-すべてのカスタム検索フォームと、アップグレード後に必要な変更点のリストを以下に示します。`/conf/global/settings/cq/search/facets/sites/items`の中の名前を参照します。
+すべてのカスタム検索フォームと、アップグレード後に必要な変更点のリストを以下に示します。`/conf/global/settings/cq/search/facets/sites/items`内の名前を参照します。
 
-### ノード名が&quot;fulltext&quot; {#fulltext-predicate-with-node-name-fulltext}のFulltext Predicate
+### ノード名が「fulltext」のフルテキスト述語{#fulltext-predicate-with-node-name-fulltext}
 
 <table>
  <tbody>
@@ -92,7 +91,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### パスブラウザーの述語 {#path-browser-predicates}
 
@@ -113,7 +112,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### タグの述語 {#tags-predicates}
 
@@ -150,7 +149,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
   </tr>
   <tr>
    <td>6.2 のリソースタイプ</td>
-   <td>該当なし</td>
+   <td>なし</td>
   </tr>
  </tbody>
 </table>
@@ -159,18 +158,18 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 **アクション:**
 
-* `pagestatuspredicate`ノードを削除します
-* ノードをコピー
+* `pagestatuspredicate`ノードを削除します。
+* ノードのコピー
 
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
    * コピー先：`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
-* ノードをコピー
+* ノードのコピー
 
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
    * コピー先：`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
-* `analyticspredicate`ノードの`listOrder`プロパティを&quot;**8**&quot;に設定していることを確認してください。 この設定は、競合を避けるために必要です。
+* `analyticspredicate`ノードの`listOrder`プロパティを&quot;**8**&quot;に設定してください。 この設定は、競合を避けるために必要です。
 
 ### 日付範囲の述語  {#date-range-predicates}
 
@@ -191,7 +190,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 非表示のフィルター {#hidden-filter}
 
@@ -233,7 +232,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 範囲の述語 {#range-predicate}
 
@@ -254,7 +253,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 >[!NOTE]
 >
@@ -279,7 +278,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### スライダー範囲の述語 {#slider-range-predicate}
 
@@ -300,7 +299,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### コンポーネントの述語 {#components-predicate}
 
@@ -321,7 +320,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 作成者の述語 {#author-predicate}
 
@@ -342,7 +341,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### テンプレートの述語 {#templates-predicate}
 
@@ -363,18 +362,18 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  </tbody>
 </table>
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ## アセット管理者の検索パネル {#assets-admin-search-rail}
 
-以下のノードは`/conf/global/settings/dam/search/facets/assets/items`の名前を参照しています
+以下のノードは、`/conf/global/settings/dam/search/facets/assets/items`の名前を参照します。
 
-### ノード名が&quot;fulltext&quot; {#fulltext-predicate-with-node-name-fulltext-1}のFulltext Predicate
+### ノード名が「fulltext」のフルテキスト述語{#fulltext-predicate-with-node-name-fulltext-1}
 
 | 6.1 のデフォルトの検索フォームのノード | fulltext |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/fulltextpredicate |
-| 6.2 のリソースタイプ | 該当なし |
+| 6.2 のリソースタイプ | なし |
 
 6.1 では、標準のフルテキストの述語は検索フォームの一部でした。6.2 では、フルテキストフィールドが OmniSearch で置き換えられました。この述語はプログラムによってスキップされ、削除可能です。
 
@@ -387,7 +386,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/pathbrowserpredicate |
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### MIME タイプの述語 {#mime-type-predicates}
 
@@ -396,7 +395,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**アクション：** プロパティを `resourceType` 調整します(「**/coral**」を上記の6.2の場所のように追加します)。
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### ファイルサイズの述語 {#file-size-predicates}
 
@@ -425,20 +424,20 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 **アクション:**
 
-* `resourceType`プロパティを調整します（上記の6.2の場所に「**/coral**」を追加します）
+* `resourceType`プロパティを調整します（上記の6.2の場所で示したように「**/coral**」を追加します）。
 
-* 値追加を持つ`optionPaths`（文字列型）プロパティ：`/libs/dam/options/predicates/publish`
+* （型がStringの）`optionPaths`プロパティを次の値と共に追加します。`/libs/dam/options/predicates/publish`
 
-* 追加`singleSelect`プロパティとブール値`true`。
+* `singleSelect`プロパティをブール値`true`で追加します。
 
 ### ステータスの述語 {#status-predicates}
 
 | 6.1 のデフォルトの検索フォームのノード | status |
 |---|---|
-| 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicates |
-| 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicates |
+| 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
+| 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**アクション：** プロパティの `resourceType` 調整(「**/coral**」を上記の6.2の場所のように追加)
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 有効期限ステータスの述語 {#expiry-status-predicates}
 
@@ -447,16 +446,16 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/expiredassetpredicate |
 
-**アクション：** プロパティの `resourceType` 調整(「**/coral**」を上記の6.2の場所のように追加)
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### メタデータの妥当性の述語 {#metadata-validity-predicates}
 
 | 6.1 のデフォルトの検索フォームのノード | metadatavalidity |
 |---|---|
-| 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicates |
-| 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicates |
+| 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
+| 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**アクション：** プロパティの `resourceType` 調整(「**/coral**」を上記の6.2の場所のように追加)
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 評価の述語 {#rating-predicates}
 
@@ -465,7 +464,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/ratingpredicate |
 | 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/sliderangepredicate |
 
-**アクション：** プロパティの `resourceType` 調整(「**/coral**」を上記の6.2の場所のように追加)
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### 向きの述語 {#orientation-predicate}
 
@@ -476,7 +475,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 **アクション:**
 
-* `resourceType`プロパティを調整します（上記の6.2の場所に「**/coral**」を追加します）
+* `resourceType`プロパティを調整します（上記の6.2の場所で示したように「**/coral**」を追加します）。
 
 * 同じノードの `fieldLabel` プロパティと同じ値を持つ `text` プロパティを追加します。
 
@@ -493,7 +492,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 **アクション:**
 
-* `resourceType`プロパティを調整します（上記の6.2の場所に「**/coral**」を追加します）
+* `resourceType`プロパティを調整します（上記の6.2の場所で示したように「**/coral**」を追加します）。
 
 * 同じノードの `fieldLabel` プロパティと同じ値を持つ `text` プロパティを追加します。
 
@@ -505,10 +504,10 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 | 6.1 のデフォルトの検索フォームのノード | videoFormat |
 |---|---|
-| 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicates |
-| 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicates |
+| 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/optionspredicate |
+| 6.2 のリソースタイプ | dam/gui/coral/components/admin/customsearch/searchpredicates/optionspredicate |
 
-**アクション：** プロパティの `resourceType` 調整(「**/coral**」を上記の6.2の場所のように追加)
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
 
 ### メインアセットの述語 {#mainasset-predicate}
 
@@ -517,4 +516,4 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 | 6.1 のリソースタイプ | granite/ui/components/foundation/form/hidden |
 | 6.2 のリソースタイプ | granite/ui/components/coral/foundation/form/hidden |
 
-**アクション：** プロパティの `resourceType` 調整(「**/coral**」を上記の6.2の場所のように追加)
+**アクション：** プ `resourceType` ロパティを調整します(上記の6.2の場所のように「**/coral**」を追加します)。
