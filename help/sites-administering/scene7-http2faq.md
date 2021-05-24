@@ -5,14 +5,13 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-translation-type: tm+mt
-source-git-commit: f786b35e77c6b862f7fc6e45d3d0af56a51e3e95
+exl-id: 2428914c-5fb0-439e-a1ef-8ee30b890f58
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '773'
-ht-degree: 83%
+ht-degree: 88%
 
 ---
-
 
 # コンテンツの HTTP/2 配信の FAQ{#http-delivery-of-content-faq}
 
@@ -45,9 +44,9 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 * リッチメディアリクエストにセキュア HTTPS を使用している。
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media ライセンスの一部として使用している。
-* 汎用の Dynamic Media ドメイン（`images.company.com`、`mycompany.scene7.com`、`s7d1.scene7.com` のいずれか）ではなく、専用ドメイン（`s7d2.scene7.com` または `s7d13.scene7.com`）を使用している。
+* 汎用の Dynamic Media ドメイン（`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` のいずれか）ではなく、専用ドメイン（`images.company.com` または `mycompany.scene7.com`）を使用している。
 
-   ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。 次に、**[!UICONTROL 設定/アプリケーション設定/全般設定]**&#x200B;をタップします。 「**公開先サーバー名**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+   ドメインを見つけるには、[Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社のアカウントにログインします。 次に、**[!UICONTROL 設定/アプリケーション設定/一般設定]**&#x200B;をタップします。 「**公開先サーバー名**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
 
 ## Dynamic Media アカウントに対して HTTP/2 を有効にする方法 {#what-is-the-process-for-enabling-http-for-my-scene-account}
 
@@ -57,13 +56,13 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
    * 主要連絡先名、電子メールおよび電話番号。
    * HTTP/2 への切り替えが必要なすべてのドメイン。つまり、`images.company.com` または `mycompany.scene7.com`。
 
-      ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。 次に、**[!UICONTROL 設定/アプリケーション設定/全般設定]**&#x200B;をタップします。 「**[!UICONTROL Published Server Name.]**」というラベルの付いたフィールドを探します。
+      ドメインを見つけるには、[Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社のアカウントにログインします。 次に、**[!UICONTROL 設定/アプリケーション設定/一般設定]**&#x200B;をタップします。 「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを探します。
 
    * リッチメディアリクエストについて、セキュリティで保護された HTTPS を使用していることを確認します。
    * 直接的関係で管理するのではなく、アドビを介して CDN を使用していることを確認します。
-   * 専用ドメインを使用していることを確認します。つまり、`images.company.com`または`mycompany.scene7.com`です。`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com`などの一般的なDynamic Mediaドメインではありません。
+   * 専用ドメインを使用していることを確認します。つまり、`s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用の Dynamic Media ドメインではなく、`images.company.com` または `mycompany.scene7.com` です。
 
-      ドメインを探すには、[Dynamic Mediaクラシックデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社アカウントにサインインします。 次に、**[!UICONTROL 設定/アプリケーション設定/全般設定]**&#x200B;をタップします。 「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+      ドメインを見つけるには、[Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社のアカウントにログインします。 次に、**[!UICONTROL 設定/アプリケーション設定/一般設定]**&#x200B;をタップします。 「**[!UICONTROL 公開先サーバー名」というラベルの付いたフィールドを見つけます。]**&#x200B;現在、汎用の Dynamic Media ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
 
 1. テクニカルサポートによって、リクエストの送信順に基づいて HTTP/2 の顧客待機リストに追加されます。
 1. アドビでリクエストを処理する準備が整うと、サポートから連絡があり、移行についての調整および完了予定日の設定がおこなわれます。
