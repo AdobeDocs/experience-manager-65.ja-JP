@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1925'
 ht-degree: 91%
 
 ---
 
-
 # パフォーマンステストに関するベストプラクティス{#best-practices-for-performance-testing}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 パフォーマンステストは、AEM をデプロイするうえで重要な役割を担っています。顧客の要件に応じて、パブリッシュインスタンスかオーサーインスタンスのどちらか一方またはその両方でパフォーマンステストを実施します。
 
@@ -52,16 +51,16 @@ ht-degree: 91%
 
 ### ツール {#tools}
 
-市販のパフォーマンステストツールは数多く存在します。負荷生成ツールを実行する場合は、テストを実行するコンピューターに十分なネットワーク帯域幅があることを確認することが重要です。 そうしないと、テストマシンが接続の限界に達した場合に、テスト対象の環境にさらなる負荷をかけることができなくなります。
+市販のパフォーマンステストツールは数多く存在します。負荷発生ツールを実行する場合は、テストを実行するコンピューターに十分なネットワーク帯域幅があることを確認することが重要です。 そうしないと、テストマシンが接続の限界に達した場合に、テスト対象の環境にさらなる負荷をかけることができなくなります。
 
 #### テストツール {#testing-tools}
 
-* アドビの **Tough Day** ツールは、AEM インスタンスに負荷を発生させ、パフォーマンスデータを収集するために使用できます。AdobeのAEMエンジニアリングチームは、実際にこのツールを使用してAEM製品自体の読み込みテストを実行します。 Tough Day で実行されるスクリプトは、プロパティファイルと JMX XML ファイルによって設定されています。詳しくは、[Tough Day に関するドキュメント](/help/sites-developing/tough-day.md)を参照してください。
+* アドビの **Tough Day** ツールは、AEM インスタンスに負荷を発生させ、パフォーマンスデータを収集するために使用できます。AdobeのAEMエンジニアリングチームは、実際にツールを使用してAEM製品自体の負荷テストを実行します。 Tough Day で実行されるスクリプトは、プロパティファイルと JMX XML ファイルによって設定されています。詳しくは、[Tough Day に関するドキュメント](/help/sites-developing/tough-day.md)を参照してください。
 
 * AEM にはすぐに使用できるツールが備わっており、問題のあるクエリ、リクエスト、エラーメッセージを素早く確認できます。詳しくは、操作ダッシュボードのドキュメントの[診断ツール](/help/sites-administering/operations-dashboard.md#diagnosis-tools)の節を参照してください。
-* Apache は **JMeter** という製品を提供しています。これは、パフォーマンスおよび負荷テストのほか、機能的性能の確認のために使用できます。オープンソースソフトウェアであり自由に使用できますが、エンタープライズ製品よりも機能セットが少なく、容易に習熟できます。JMeterはApacheのWebサイト([https://jmeter.apache.org/](https://jmeter.apache.org/))で入手できます。
+* Apache は **JMeter** という製品を提供しています。これは、パフォーマンスおよび負荷テストのほか、機能的性能の確認のために使用できます。オープンソースソフトウェアであり自由に使用できますが、エンタープライズ製品よりも機能セットが少なく、容易に習熟できます。JMeterは、ApacheのWebサイト([https://jmeter.apache.org/](https://jmeter.apache.org/))で入手できます。
 
-* **Load** Runnerは、エンタープライズグレードの負荷テスト製品です。無料の評価版が提供されています。 詳しくは、[https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)を参照してください。
+* **Load** Runnerisは、エンタープライズグレードの負荷テスト製品です。無料の評価版をご利用いただけます。 詳しくは、[https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview](https://www.microfocus.com/en-us/products/loadrunner-load-testing/overview)を参照してください。
 
 * [Neustar](https://www.neustar.biz/services/web-performance/load-testing) のようなクラウドベースの負荷テストツールも使用できます。
 * モバイルまたはレスポンシブ Web サイトをテストする際は、また別のツールセットを使用する必要があります。こうしたツールでは、ネットワーク帯域幅の制限、3G や EDGE などの低速なモバイル接続のシミュレートをおこなえます。広く利用されているツールには以下のものがあります。
@@ -81,7 +80,7 @@ AEM 6 のタッチ操作向け UI の新機能の 1 つに、開発者モード�
 
 **rlog.jar を使用したリクエストログの解読**
 
-AEM システムのリクエストログをより包括的に分析するには、`rlog.jar` を使用して、AEM で生成される `request.log` の検索および並べ替えをおこなうことができます。このjarファイルは、AEMのインストールに付属の`/crx-quickstart/opt/helpers`フォルダーに含まれています。 rlog ツールとリクエストログ全般について詳しくは、[監視と保守](/help/sites-deploying/monitoring-and-maintaining.md)に関するドキュメントの参照してください。
+AEM システムのリクエストログをより包括的に分析するには、`rlog.jar` を使用して、AEM で生成される `request.log` の検索および並べ替えをおこなうことができます。このjarファイルは、`/crx-quickstart/opt/helpers`フォルダーのAEMインストールに含まれています。 rlog ツールとリクエストログ全般について詳しくは、[監視と保守](/help/sites-deploying/monitoring-and-maintaining.md)に関するドキュメントの参照してください。
 
 **クエリーの説明を実行ツール**
 
@@ -89,7 +88,7 @@ ACS AEM ツールの[クエリの説明を実行ツール](/help/sites-administe
 
 **PageSpeed ツール**
 
-Google の PageSpeed ツールは、ページパフォーマンスに関するベストプラクティスを実践するためのサイト分析や、さらなる最適化のために Apache インスタンスに Dispatcher と共にインストールできるプラグインを提供します。詳しくは、[PageSpeedツールのWebサイト](https://developers.google.com/speed/pagespeed/)を参照してください。
+Google の PageSpeed ツールは、ページパフォーマンスに関するベストプラクティスを実践するためのサイト分析や、さらなる最適化のために Apache インスタンスに Dispatcher と共にインストールできるプラグインを提供します。詳しくは、[PageSpeed Tools Webサイト](https://developers.google.com/speed/pagespeed/)を参照してください。
 
 ## オーサー環境 {#author-environment}
 
@@ -109,7 +108,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 
 `https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aid%3D6%2Cname%3D%22Consolidated+Cache+statistics%22%2Ctype%3D%22ConsolidatedCacheStats%22`
 
-**ドキュメント — 相違**&#x200B;という名前のキャッシュの場合、ヒット率は`.90`を超える必要があります。 ヒット率が 90 ％を下回る場合は、`DocumentNodeStoreService` の設定を変更しなければならない可能性があります。お使いの環境に最適な設定はアドビの製品サポートからご案内できます。
+**Document-Diff**&#x200B;という名前のキャッシュの場合、ヒット率は`.90`を超える必要があります。 ヒット率が 90 ％を下回る場合は、`DocumentNodeStoreService` の設定を変更しなければならない可能性があります。お使いの環境に最適な設定はアドビの製品サポートからご案内できます。
 
 * **Oak リポジトリ統計** Mbean。次の場所に移動して、直接アクセスできます。
 
@@ -148,4 +147,4 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 * コンポーネントに埋め込まれた CSS と JS を削除します。ページのレンダリングに必要な要求の数を最小限にするには、これらをクライアント側のライブラリに組み込んで最小化する必要があります。
 * Chrome の「ネットワーク」タブなどのツールを使用してサーバーリクエストを調べることで、最も時間がかかるコンポーネントを確認します。
 
-問題の領域を特定したら、パフォーマンスの最適化のためにアプリケーションコードを調べます。Adobeサポートでは、既製のAEM機能のうち、適切に動作しないものに対処できます。
+問題の領域を特定したら、パフォーマンスの最適化のためにアプリケーションコードを調べます。適切に動作しないAEMの標準機能は、Adobeサポートで対処できます。
