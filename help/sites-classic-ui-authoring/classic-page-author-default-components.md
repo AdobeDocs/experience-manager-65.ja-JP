@@ -11,7 +11,6 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9ed820de-c108-416e-aaf7-b63a64ab4f80
 exl-id: 9e0a01da-7940-47aa-8604-788d74e5daa0
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '233'
@@ -35,11 +34,11 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [ページオーサリング用コンポーネント](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 
-   標準ページコンテンツの作成に使用するコンポーネントは、主にグループ&#x200B;**一般**、**列**、**Forms**&#x200B;に含まれます。
+   標準ページコンテンツの作成に使用するコンポーネントは、主に&#x200B;**一般**、**列**&#x200B;および&#x200B;**Forms**&#x200B;のグループに含まれます。
 
 * [e コマース](/help/commerce/cif-classic/administering/ecommerce.md)
 
-   AEMのeコマース機能には、**コマース**&#x200B;グループに含まれる様々なコンポーネントも含まれます。 実際の使用方法は、使用しているコマースエンジンによって異なります。
+   AEM内のeコマース機能には、**コマース**&#x200B;グループに含まれる様々なコンポーネントも含まれています。 実際の使用方法は、使用しているコマースエンジンによって異なります。
 
 ## デザインモードでのコンポーネントの設定 {#using-design-mode-to-configure-components}
 
