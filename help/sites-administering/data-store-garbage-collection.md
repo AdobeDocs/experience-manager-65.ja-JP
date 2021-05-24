@@ -10,14 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 5b1e46c5-7e56-433e-b62e-2a76ea7be0fd
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 80%
 
 ---
-
 
 # データストアのガベージコレクション  {#data-store-garbage-collection}
 
@@ -32,13 +31,13 @@ AEM では、以下に示す様々な内部アクティビティやハウスキ�
 * ワークフローのペイロード
 * DAM レンダリング時に一時的に作成されたアセット
 
-これらの一時オブジェクトがデータストア内の領域をある程度消費するほど大きく、しかもそのオブジェクトが最終的に使用されなかった場合は、そのデータストアレコード自体が「ガベージ」として残ります。標準的な WCM オーサー／パブリッシュアプリケーションの場合、このようなガベージが生まれる最大の原因は、一般的に、パブリッシュアクティベーションのプロセスにあります。データを発行に複製する場合、最初に「Durbo」と呼ばれる効率的なデータ形式でコレクションに収集し、`/var/replication/data`の下のリポジトリに保存すると、データは発行されます。 データバンドルは通常、データストアの上限サイズを超えるので、最終的にデータストアレコードとして保存されます。レプリケーションが完了すると、`/var/replication/data`内のノードは削除されますが、データストアレコードは「ガベージ」のままです。
+これらの一時オブジェクトがデータストア内の領域をある程度消費するほど大きく、しかもそのオブジェクトが最終的に使用されなかった場合は、そのデータストアレコード自体が「ガベージ」として残ります。標準的な WCM オーサー／パブリッシュアプリケーションの場合、このようなガベージが生まれる最大の原因は、一般的に、パブリッシュアクティベーションのプロセスにあります。データをパブリッシュにレプリケートする場合、最初に「Durbo」と呼ばれる効率的なデータ形式でコレクションに収集し、`/var/replication/data`の下のリポジトリに保存します。 データバンドルは通常、データストアの上限サイズを超えるので、最終的にデータストアレコードとして保存されます。レプリケーションが完了すると、`/var/replication/data`内のノードは削除されますが、データストアレコードは「ガベージ」として残ります。
 
 回収可能なガベージが生まれるもう 1 つの原因はパッケージです。他のデータもそうですが、パッケージデータもリポジトリ内に保存され、4 KB を超えるパッケージはデータストア内に保存されます。開発プロジェクトの工程やその後のシステムのメンテナンスでは、パッケージのビルドとリビルドが何度もおこなわれ、ビルドがおこなわれるたびに新しいデータストアレコードができて、以前のビルドのレコードは孤立します。
 
 ## データストアのガベージコレクションの機能  {#how-does-data-store-garbage-collection-work}
 
-リポジトリが外部データストアに設定されている場合、週別メンテナンスウィンドウの一部として、[データストアのガベージコレクションは自動的に実行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection)されます。システム管理者は、必要に応じて、[データストアのガベージコレクションを手動で](#running-data-store-garbage-collection)実行することもできます。 一般的に、データストアのガベージコレクションは定期的に実行することが推奨されますが、データストアのガベージコレクションを計画するときは、次の事項を考慮する必要があります。
+リポジトリが外部データストアに設定されている場合、週別メンテナンスウィンドウの一部として、[データストアのガベージコレクションは自動的に実行](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection)されます。システム管理者は、必要に応じて、データストアのガベージコレクションを手動で[実行することもできます。 ](#running-data-store-garbage-collection)一般的に、データストアのガベージコレクションは定期的に実行することが推奨されますが、データストアのガベージコレクションを計画するときは、次の事項を考慮する必要があります。
 
 * データストアのガベージコレクションは時間がかかり、パフォーマンスに影響する可能性があるので、適切に計画する必要があります。
 * データストアのガベージレコードを削除しても通常のパフォーマンスに影響はないので、これはパフォーマンス最適化ではありません。
@@ -57,13 +56,13 @@ AEM では、以下に示す様々な内部アクティビティやハウスキ�
 
 >[!NOTE]
 >
->（Mongo または Segment Tar を備えた）クラスターまたは共有データストアのセットアップでガベージコレクションを実行するときに、特定の blob ID を削除できないことを知らせる警告がログに表示される場合があります。これは、以前のガベージコレクションで削除されたblob IDが、ID削除に関する情報を持たない他のクラスターまたは共有ノードによって誤って参照されるためです。 その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作は、パフォーマンスや機能には影響しません。
+>（Mongo または Segment Tar を備えた）クラスターまたは共有データストアのセットアップでガベージコレクションを実行するときに、特定の blob ID を削除できないことを知らせる警告がログに表示される場合があります。これは、以前のガベージコレクションで削除されたBLOB IDが、ID削除に関する情報を持たない他のクラスターまたは共有ノードによって誤って再び参照されるためです。 その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作は、パフォーマンスや機能に影響を与えません。
 
 ## データストアのガベージコレクションの実行 {#running-data-store-garbage-collection}
 
 データストアのガベージコレクションは、AEM が実行されているデータストアのセットアップに応じて、3 つの方法で実行できます。
 
-1. [リビジョンのクリーンアップ](/help/sites-deploying/revision-cleanup.md)経由 — 通常、ノードストアのクリーンアップに使用されるガベージコレクションメカニズム。
+1. [リビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md) — 通常、ノードストアのクリーンアップに使用されるガベージコレクションメカニズム。
 
 1. [データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-operations-dashboard) - 外部データストア用のガベージコレクションメカニズムで、操作ダッシュボードで使用可能。
 1. [JMX コンソール](/help/sites-administering/jmx-console.md)。
@@ -82,22 +81,22 @@ TarMK がノードストアとデータストアの両方として使用され�
   <tr>
    <td>TarMK</td>
    <td>TarMK</td>
-   <td>リビジョンのクリーンアップ（バイナリはセグメントストアと共にインライン）</td>
+   <td>リビジョンクリーンアップ（バイナリはセグメントストアとインライン化されます）</td>
   </tr>
   <tr>
    <td>TarMK</td>
    <td>外部ファイルシステム</td>
-   <td><p>オペレーションダッシュボードを介したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td>
+   <td><p>操作ダッシュボードを使用したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td>
   </tr>
   <tr>
    <td>MongoDB</td>
    <td>MongoDB</td>
-   <td><p>オペレーションダッシュボードを介したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td>
+   <td><p>操作ダッシュボードを使用したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td>
   </tr>
   <tr>
    <td>MongoDB</td>
    <td>外部ファイルシステム</td>
-   <td><p>オペレーションダッシュボードを介したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td>
+   <td><p>操作ダッシュボードを使用したデータストアのガベージコレクションタスク</p> <p>JMX コンソール</p> </td>
   </tr>
  </tbody>
 </table>
@@ -125,7 +124,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->「データストアのガベージコレクション」タスクは、外部ファイルデータストアが設定されている場合にのみ表示されます。ファイルのデータストアを設定する方法については、[AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
+>「データストアのガベージコレクション」タスクは、外部ファイルデータストアが設定されている場合にのみ表示されます。ファイルデータストアの設定方法については、 [AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
 
 ### JMX コンソールによるデータストアのガベージコレクションの実行 {#running-data-store-garbage-collection-via-the-jmx-console}
 
@@ -138,9 +137,9 @@ TarMK がノードストアとデータストアの両方として使用され�
 ガベージコレクションを実行するには：
 
 1. Apache Felix OSGi Management Console で、「**メイン**」タブをアクティブにし、次のメニューから「**JMX**」を選択して、
-1. 次に、**リポジトリマネージャー** MBeanを検索してクリックします（または`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`に移動します）。
+1. 次に、**Repository Manager** MBeanを探してクリックします（または`https://<host>:<port>/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Drepository+manager%2Ctype%3DRepositoryManagement`に移動します）。
 1. 「**startDataStoreGC(boolean markOnly)**」をクリックします。
-1. 必要に応じて、`markOnly`パラメーターに&quot;`true`&quot;と入力します。
+1. 必要に応じて、`markOnly`パラメーターに「`true`」と入力します。
 
    | **オプション** | **説明** |
    |---|---|
@@ -154,7 +153,7 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->データストアのガベージコレクションタスクは、外部ファイルのデータストアを設定した場合にのみ開始します。 外部ファイルのデータストアが構成されていない場合、タスクは呼び出し後に`Cannot perform operation: no service of type BlobGCMBean found`メッセージを返します。 ファイルのデータストアを設定する方法については、[AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
+>データストアのガベージコレクションタスクは、外部ファイルデータストアを設定した場合にのみ開始されます。 外部ファイルデータストアが設定されていない場合、タスクは呼び出し後に`Cannot perform operation: no service of type BlobGCMBean found`メッセージを返します。 ファイルデータストアの設定方法については、 [AEM 6](/help/sites-deploying/data-store-config.md#file-data-store)でのノードストアとデータストアの設定を参照してください。
 
 ## データストアのガベージコレクションの自動化 {#automating-data-store-garbage-collection}
 
@@ -164,15 +163,15 @@ TarMK がノードストアとデータストアの両方として使用され�
 
 >[!NOTE]
 >
->同時に実行しないのは、古い（および未使用の）データストアファイルもバックアップされるため、古いリビジョンに戻す必要がある場合でも、バイナリはバックアップに残るためです。
+>同時に実行しない理由は、古い（未使用の）データストアファイルもバックアップされ、古いリビジョンにロールバックする必要がある場合、バイナリはバックアップに残るからです。
 
-オペレーションダッシュボードの週別メンテナンスウィンドウでデータストアのガベージコレクションを実行しない場合は、wgetまたはcurl HTTPクライアントを使用して自動化することもできます。 次の例は、curlを使用してバックアップを自動化する方法を示しています。
+操作ダッシュボードの週別メンテナンスウィンドウでデータストアのガベージコレクションを実行しない場合は、wgetまたはcurl HTTPクライアントを使用して自動化することもできます。 次に、curlを使用してバックアップを自動化する方法の例を示します。
 
 >[!CAUTION]
 >
 >以下の `curl` コマンドでは、インスタンスに対して様々なパラメーターを設定する必要がある場合があります。例えば、ホスト名（`localhost`）、ポート（`4502`）、管理パスワード（`xyz`）および実際のデータストアのガベージコレクションのための各種パラメーターです。
 
-次に、コマンドラインからデータストアのガベージコレクションを呼び出すcurlコマンドの例を示します。
+次に、コマンドラインを使用してデータストアのガベージコレクションを呼び出すcurlコマンドの例を示します。
 
 ```shell
 curl -u admin:admin -X POST --data markOnly=true  https://localhost:4503/system/console/jmx/org.apache.jackrabbit.oak"%"3Aname"%"3Drepository+manager"%"2Ctype"%"3DRepositoryManagement/op/startDataStoreGC/boolean
@@ -185,10 +184,10 @@ curl コマンドはすぐに制御を返します。
 データストアの整合性チェックは、欠落しているもののまだ参照されているデータストアのバイナリを報告します。整合性チェックを開始するには、次の手順を実行します。
 
 1. JMX コンソールに移動します。JMXコンソールの使用方法について詳しくは、[この記事](/help/sites-administering/jmx-console.md#using-the-jmx-console)を参照してください。
-1. **BlobGarbageCollection** Mbeanを探してクリックします。
+1. **BlobGarbageCollection** Mbeanを検索してクリックします。
 1. `checkConsistency()`リンクをクリックします。
 
-整合性チェックが完了すると、メッセージに欠落として報告されるバイナリの数が表示されます。0より大きい数値の場合は、`error.log`を調べて、見つからないバイナリの詳細を調べてください。
+整合性チェックが完了すると、メッセージに欠落として報告されるバイナリの数が表示されます。0より大きい数の場合は、`error.log`を調べて、見つからないバイナリの詳細を確認してください。
 
 欠落しているバイナリがログにどのように表示されるかを次に示します。
 
@@ -199,4 +198,3 @@ curl コマンドはすぐに制御を返します。
 ```xml
 11:32:39.673 WARN [main] MarkSweepGarbageCollector.java:602 Consistency check failure intheblob store : DataStore backed BlobStore [org.apache.jackrabbit.oak.plugins.blob.datastore.OakFileDataStore], check missing candidates in file /tmp/gcworkdir-1467352959243/gccand-1467352959243
 ```
-
