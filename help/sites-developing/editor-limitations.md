@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
 discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
-translation-type: tm+mt
-source-git-commit: 844d42ed50da153077423190684aa85265bce12f
+exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 94%
 
 ---
-
 
 # エディターの制限事項{#editor-limitations}
 
@@ -60,7 +59,7 @@ iframe の高さは AEM によって自動調整されるので、`vh` 単位は
 
 ページの body 要素では、100 ％の高さはサポートされていません。
 
-* 次のようにbody要素を「ストレッチ」してフルスクリーンボディを実装する場合は、回避策があります。
+* 全画面表示の本文を実装するには、次のようにbody要素を「拡張」して回避できます。
 
 ```xml
 body {
@@ -84,4 +83,3 @@ body:before, body:after{
     display: table;
 }
 ```
-
