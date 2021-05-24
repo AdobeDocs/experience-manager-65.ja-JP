@@ -11,14 +11,13 @@ topic-tags: site-features
 discoiquuid: 5d192a48-c86f-4803-bb0d-0411ac7470f5
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
-translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 84%
 
 ---
-
 
 # ページ分析データの表示{#seeing-page-analytics-data}
 
@@ -40,7 +39,7 @@ ht-degree: 84%
 >
 >更新期間を変更するには、[読み込み間隔を設定](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval)します。
 
-1. **サイト**&#x200B;コンソールを開きます。例：[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. **Sites**&#x200B;コンソールを開きます。例： [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
 1. ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「**リスト表示**」（表示されるアイコンは、[現在の表示](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)によって異なる）を選択します。
 
 1. もう一度、ツールバーの右端（右上隅）で、アイコンをクリックまたはタップして、「**設定を表示**」を選択します。**列を構成**&#x200B;ダイアログが開きます。必要な変更を加えて、「**更新**」で確定します。
@@ -67,7 +66,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 >
 >ページのツリーに異なる Adobe Analytics のクラウド設定に関連付けられている子ページがある場合は、そのページで利用できるデータ列を設定できません。
 
-1. リスト表示で、表示セレクター（ツールバーの右）を使用し、「**表示設定**」を選択し、「**カスタム解析データ追加**」を選択します。
+1. リスト表示で、ビューセレクター（ツールバーの右側）を使用し、「**設定を表示**」を選択してから、「**カスタム分析データを追加**」を選択します。
 
    ![spad-03](assets/spad-03.png)
 
@@ -79,7 +78,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 ### サイトからコンテンツインサイトを開く {#opening-content-insights-from-sites}
 
-ページの効果をさらに調べるには、サイトコンソールから「[Content Insight](/help/sites-authoring/content-insights.md)」を開きます。
+ページの効果をさらに調べるには、サイトコンソールから[コンテンツインサイト](/help/sites-authoring/content-insights.md)を開きます。
 
 1. サイトコンソールで、コンテンツインサイトを表示するページを選択します。
 1. ツールバーで、分析と推奨表示アイコンをクリックします。
@@ -92,4 +91,4 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 >
 >Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->現在は、Adobe Analytics](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。
+>Adobe Analytics](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html)が提供する[ActivityMapプラグインを使用する必要があります。
