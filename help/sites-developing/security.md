@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: d2267663-6c1d-413c-9862-e82e21ae6906
-translation-type: tm+mt
-source-git-commit: ea4de28525ec4c2094e84d98aad6a518b03f011e
+exl-id: c4f7f45f-224b-4fc3-b4b0-f5b21b8a466f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 66%
 
 ---
-
 
 # セキュリティ{#security}
 
@@ -24,7 +23,7 @@ ht-degree: 66%
 
 ## リクエストセッションの使用  {#use-request-session}
 
-最小権限の原則に従い、Adobeでは、すべてのリポジトリアクセスは、ユーザー要求と適切なアクセス制御にバインドされたセッションを使用して行うことを推奨します。
+最小権限の原則に従い、Adobeでは、すべてのリポジトリアクセスを、ユーザーリクエストにバインドされたセッションと適切なアクセス制御を使用しておこなうことをお勧めします。
 
 ## クロスサイトスクリプティング（XSS）に対する保護{#protect-against-cross-site-scripting-xss}
 
@@ -32,17 +31,17 @@ ht-degree: 66%
 
 AEM では、ユーザーが提供するコンテンツをすべて出力時にフィルタリングする原則を適用しています。XSS を回避することは、開発時にもテスト時にも第一優先となります。
 
-AEMが提供するXSS保護メカニズムは、[OWASP (The OpenWeb アプリケーションセキュリティプロジェクト)](https://www.owasp.org/)が提供する[AntiSamy Java Library](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)に基づいています。デフォルトのAntiSamy設定は、次を参照してください。
+AEMが提供するXSS保護メカニズムは、[OWASP(The Open Web Application Security Project)](https://www.owasp.org/)が提供する[AntiSamy Java Library](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)に基づいています。デフォルトのAntiSamy設定は、
 
 `/libs/cq/xssprotection/config.xml`
 
-この設定を、設定ファイルをオーバーレイすることで、独自のセキュリティニーズに合わせて調整することが重要です。 [AntiSamyドキュメント](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)は、セキュリティ要件を実装するために必要なすべての情報を提供します。
+設定ファイルをオーバーレイすることで、この設定を独自のセキュリティニーズに合わせて調整することが重要です。 公式の[AntiSamyドキュメント](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project)から、セキュリティ要件を実装するために必要な情報がすべて提供されます。
 
 >[!NOTE]
 >
 >XSS 対策 API にアクセスする場合は、[AEM が提供する XSSAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html) を常に使用することを強くお勧めします。
 
-また、[mod_security for Apache](https://www.modsecurity.org)などのWebアプリケーションファイアウォールは、デプロイメント環境のセキュリティを信頼性の高い一元的な制御で提供し、以前は検出されなかったクロスサイトスクリプティング攻撃から保護できます。
+さらに、Apache](https://www.modsecurity.org)の[mod_securityなどのWebアプリケーションファイアウォールは、デプロイメント環境のセキュリティを確実かつ一元的に管理し、以前に検出されなかったクロスサイトスクリプティング攻撃から保護できます。
 
 ## クラウドサービス情報へのアクセス {#access-to-cloud-service-information}
 
@@ -58,9 +57,9 @@ webservicesupport モジュールは、統計と設定情報を次の場所に�
 
 デフォルトの権限では、次の処理が可能です。
 
-* 作成者環境:`read` for `contributors`
+* オーサー環境：`read`(`contributors`)
 
-* 発行環境:`read` for `everyone`
+* パブリッシュ環境：`read`(`everyone`)
 
 ## クロスサイトリクエストフォージェリ攻撃からの保護 {#protect-against-cross-site-request-forgery-attacks}
 
