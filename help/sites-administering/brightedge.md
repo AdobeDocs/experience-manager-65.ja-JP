@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
-translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 100%
 
 ---
-
 
 # BrightEdge Content Optimizer との結合{#integrating-with-brightedge-content-optimizer}
 
@@ -72,4 +71,3 @@ BrightEdge クラウド設定を作成して、AEM で BrightEdge アカウン�
 1. 表示される設定のリストで、BrightEdge 設定が選択されていることを確認して、「公開」をクリックします。
 
    ![chlimage_1-8](assets/chlimage_1-8a.png)
-
