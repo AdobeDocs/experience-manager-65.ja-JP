@@ -9,48 +9,47 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: be2aa297-5b78-4b1d-8ff1-e6a585a177dd
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 17a4e4dc-804e-44a9-9942-c37dbfc8016f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 72%
 
 ---
 
-
 # Analytics 用のサーバー側ページネーミングの実装{#implementing-server-side-page-naming-for-analytics}
 
 Adobe Analytics は、`s.pageName` プロパティを使用してページを一意に識別し、そのページのために収集されたデータを関連付けます。AEM から Analytics に送信されるこのプロパティに値を割り当てるには、通常は AEM 内で次のタスクを実行します。
 
-* Analytics クラウドサービスフレームワークを使用して、CQ 変数を Analytics の `s.pageName` プロパティにマップする(「[コンポーネントデータとAdobe Analyticsのプロパティとのマッピング](/help/sites-administering/adobeanalytics-mapping.md)」を参照)。
+* Analytics クラウドサービスフレームワークを使用して、CQ 変数を Analytics の `s.pageName` プロパティにマップする([Adobe Analyticsプロパティとのコンポーネントデータのマッピング](/help/sites-administering/adobeanalytics-mapping.md)を参照)。
 
-* ページコンポーネントを、`s.pageName` プロパティにマップする CQ 変数を含むようにデザインする(「[カスタムコンポーネント用のAdobe Analyticsトラッキングの導入](/help/sites-developing/extending-analytics-components.md)」を参照)。
+* ページコンポーネントを、`s.pageName` プロパティにマップする CQ 変数を含むようにデザインする([カスタムコンポーネント用のAdobe Analyticsトラッキングの実装](/help/sites-developing/extending-analytics-components.md)を参照)。
 
-Analytics レポートデータをサイトコンソールとコンテンツインサイトに公開するには、各ページの `s.pageName` プロパティの値が必要です。AEM Analytics Java APIは、`AnalyticsPageNameProvider`プロパティの値をSitesコンソールとContent Insightsに提供するために導入する`s.pageName`インターフェイスを定義します。 `AnaltyicsPageNameProvider` サービスは、レポート生成のためにサーバー上の pageName プロパティを解決します。このプロパティは、追跡のためにクライアント上で Javascript を使用して動的に設定できるからです。
+Analytics レポートデータをサイトコンソールとコンテンツインサイトに公開するには、各ページの `s.pageName` プロパティの値が必要です。AEM Analytics Java APIは、`s.pageName`プロパティの値を使用してサイトコンソールとコンテンツインサイトを提供するために実装する`AnalyticsPageNameProvider`インターフェイスを定義します。 `AnaltyicsPageNameProvider` サービスは、レポート生成のためにサーバー上の pageName プロパティを解決します。このプロパティは、追跡のためにクライアント上で Javascript を使用して動的に設定できるからです。
 
 ## デフォルトの Analytics ページ名プロバイダーサービス {#the-default-analytics-page-name-provider-service}
 
-`DefaultPageNameProvider`サービスは、ページのAnalyticsデータの取得に使用する`s.pageName`プロパティの値を決定するデフォルトのサービスです。 このサービスは、AEM foundationページコンポーネント(`/libs/foundation/components/page`)と連携して動作します。 このページコンポーネントは、`s.pageName` プロパティにマップされる次の CQ 変数を定義します。
+`DefaultPageNameProvider`サービスは、ページのAnalyticsデータの取得に使用する`s.pageName`プロパティの値を決定するデフォルトのサービスです。 このサービスは、AEM基盤ページコンポーネント(`/libs/foundation/components/page`)と組み合わせて動作します。 このページコンポーネントは、`s.pageName` プロパティにマップされる次の CQ 変数を定義します。
 
 * `pagedata.path`：ページのパスに設定されます。
 * `pagedata.title`：ページのタイトルに設定されます。
 * `pagedata.navTitle`：ページのナビゲーションのタイトルに設定されます。
 
-`DefaultPageNameProvider`サービスは、これらのCQ変数のうちどれがAnalyticsクラウドサービスフレームワークの`s.pageName`プロパティにマッピングされるかを決定します。 その後、Analytics レポートデータの取得に使用する適切なページプロパティを決定します。
+`DefaultPageNameProvider`サービスは、これらのCQ変数のうち、Analyticsクラウドサービスフレームワークの`s.pageName`プロパティにマッピングされる変数を決定します。 その後、Analytics レポートデータの取得に使用する適切なページプロパティを決定します。
 
-* `pagedata.path`:サービスで  `page.getPath()`
+* `pagedata.path`:このサービスは、  `page.getPath()`
 
-* `pagedata.title`:サービスで  `page.getTitle()`
+* `pagedata.title`:このサービスは、  `page.getTitle()`
 
-* `pagedata.navTitle`:サービスで  `page.getNavigationTitle()`
+* `pagedata.navTitle`:このサービスは、  `page.getNavigationTitle()`
 
 `page`オブジェクトは、ページの[ `com.day.cq.wcm.api.Page`](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/com/day/cq/wcm/api/Page.html) Javaオブジェクトです。
 
-フレームワークの`s.pageName`プロパティにCQ変数をマップしない場合、`s.pageName`の値はページパスから生成されます。 例えば、パス`/content/geometrixx/en`を持つページでは、`s.pageName`に対して値`content:geometrixx:en`を使用します。
+CQ変数をフレームワークの`s.pageName`プロパティにマップしない場合、`s.pageName`の値はページパスから生成されます。 例えば、パスが`/content/geometrixx/en`のページでは、`s.pageName`に対して値`content:geometrixx:en`が使用されます。
 
 >[!NOTE]
 >
->DefaultPageNameProviderサービスは、100のサービスランクを使用します。
+>DefaultPageNameProviderサービスは、100のサービスランキングを使用します。
 
 ## Analytics レポートにおける連続性の維持 {#maintaining-continuity-in-analytics-reporting}
 
@@ -68,7 +67,7 @@ Analytics レポートデータをサイトコンソールとコンテンツイ�
 例えば、カスタムページコンポーネントに、作成者がページの一意の ID を指定するために使用するページプロパティ（`s.pageProperties` プロパティの値として使用されるもの）を含めることができます。
 
 * ページに含まれる Analytics 変数は、ページプロパティに保存されている一意の ID の値に設定されます。
-* analytics変数は、Analyticsフレームワークの`s.pageProperties`プロパティにマップされます。
+* Analytics変数は、Analyticsフレームワークの`s.pageProperties`プロパティにマッピングされます。
 * AnalytcsPageNameProvider インターフェイスの実装は、このページプロパティの値を取得して、ページの Analytics データのクエリに使用します。
 
 >[!NOTE]
@@ -81,9 +80,9 @@ Analytics レポートデータをサイトコンソールとコンテンツイ�
 
 AnalyticsPageNameProvider インターフェイスで定義されている次の 2 つのメソッドを実装する必要があります。
 
-* `getPageName`:プ `String` ロパティとして使用する値を表す `s.pageName` 値を返します。
+* `getPageName`:プロパティ `String` として使用する値を表す値を返 `s.pageName` します。
 
-* `getResource`:プ `org.apache.sling.api.resource.Resource` ロパティに関連付けられているページを表す `s.pageName` オブジェクトを返します。
+* `getResource`:プロパティ `org.apache.sling.api.resource.Resource` に関連付けられているページを表すオブジェクトを返 `s.pageName` します。
 
 どちらのメソッドも`com.day.cq.analytics.sitecatalyst.AnalyticsPageNameContext`オブジェクトをパラメーターとして取ります。 `AnalyticsPageNameContext` クラスは、Analytics 呼び出しのコンテキストに関する以下の情報を提供します。
 
@@ -99,9 +98,9 @@ AnalyticsPageNameProvider インターフェイスで定義されている次の
 以下に示すサンプル `AnalyticsPageNameProvider` 実装は、以下のようなカスタムページコンポーネントをサポートしています。
 
 * 基盤ページコンポーネントを拡張したコンポーネントです。
-* このダイアログボックスには、作成者が`s.pageName`プロパティの値を指定するために使用するフィールドが含まれます。
+* このダイアログボックスには、作成者が`s.pageName`プロパティの値を指定するために使用するフィールドが含まれています。
 * プロパティの値は、ページインスタンスの `jcr:content` ノードの pageName プロパティに保存されます。
-* `s.pageName` プロパティを保存する Analytics プロパティは、`pagedata.pagename` です。このプロパティは、Analyticsフレームワークの`s.pageName`プロパティにマップされます。
+* `s.pageName` プロパティを保存する Analytics プロパティは、`pagedata.pagename` です。このプロパティは、Analyticsフレームワークの`s.pageName`プロパティにマッピングされます。
 
 以下に示す `getPageName` メソッドの実装は、フレームワークのマッピングが正しく設定されていれば、pageName ノードのプロパティの値を返します。
 
@@ -251,4 +250,3 @@ public class ExamplePageNameProvider implements AnalyticsPageNameProvider {
     }
 }
 ```
-
