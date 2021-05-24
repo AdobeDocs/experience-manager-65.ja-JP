@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7fed51b68c626b54565b9120f69229872946016f
+exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1883'
-ht-degree: 85%
+ht-degree: 90%
 
 ---
-
 
 # ページプロパティの編集{#editing-page-properties}
 
@@ -55,12 +54,12 @@ ht-degree: 85%
 
 * **ブランディング**
 
-   各ページタイトルにブランドスラッグを追加して、ページ間で一貫したブランドアイデンティティを適用します。 この機能には、[コアコンポーネントのリリース2.14.0以降のページコンポーネントを使用する必要があります。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+   各ページタイトルにブランド見出しを追加して、ページ間で一貫したブランドアイデンティティを適用します。この機能では、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)のリリース 2.14.0 以降に含まれているページコンポーネントを使用する必要があります。
 
-   * **上書き**  — このページでブランドスラッグを定義する場合に選択します。
-      * **上書き**&#x200B;値も設定されていない限り、値はすべての子ページに継承されます。
-   * **上書き値**  — ページタイトルに追加するブランドスラッグのテキスト。
-      * この値は、「サイクリング・トスカーナ」などのパイプ文字の後のページ・タイトルに追加されます | WKNDの準備が常に整っています&quot;
+   * **オーバーライド** - このページにブランド見出しを定義する場合にオンにします。
+      * 子ページにも&#x200B;**オーバーライド**&#x200B;値が設定されている場合を除き、値はすべての子ページに継承されます。
+   * **値をオーバーライド** - ページタイトルに追加するブランド見出しのテキストです。
+      * この値は、「Cycling Tuscany | Always ready for the WKND」のように、ページタイトルの末尾にパイプ文字に続けて追加されます。
 * **ページタイトル**
 
    ページで使用されるタイトルです。通常はタイトルコンポーネントで使用されます。空にすると、「**タイトル**」が使用されます。
@@ -93,7 +92,7 @@ ht-degree: 85%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   例えば、バニティURLがWebサイト`http://example.com,`のパス`/v1.0/startpage`で識別されるページに`welcome`に設定されている場合、`http://example.com/welcome`は`http://example.com/content/v1.0/startpage`のバニティURLになります
+   例えば、Webサイト`http://example.com,`のパス`/v1.0/startpage`で識別されるページに対して、バニティURLが`welcome`に設定されている場合、`http://example.com/welcome`は`http://example.com/content/v1.0/startpage`のバニティURLになります
 
    >[!CAUTION]
    >
@@ -104,13 +103,13 @@ ht-degree: 85%
    >* 既存のページには設定しないでください。
 
 
-   また、バニティURLへのアクセスを有効にするために、ディスパッチャーを設定する必要があります。 詳しくは、[バニティURLへのアクセスの有効化](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)を参照してください。
+   また、バニティーURLへのアクセスを有効にするようにDispatcherを設定する必要があります。 詳しくは、[バニティーURL](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)へのアクセスの有効化を参照してください。
 
 * **バニティ URL をリダイレクト**
 
    ページにバニティ URL を使用するかどうかを示します。
 
-### アドバンス {#advanced}
+### 詳細 {#advanced}
 
 * **言語**
 
@@ -138,7 +137,7 @@ ht-degree: 85%
    >
    >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
    >
-   >詳しくは、「SEO」の「[ローカライズされたページ名」と「URL管理のベストプラクティス](/help/managing/seo-and-url-management.md#localized-page-names)」を参照してください。
+   >詳しくは、「SEOとURL管理のベストプラクティス](/help/managing/seo-and-url-management.md#localized-page-names)」の「[ページ名のローカライズ」を参照してください。
 
 * **&lt;*path*> から継承**
 
@@ -162,7 +161,7 @@ ht-degree: 85%
 
    >[!CAUTION]
    >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired`ミックスインの存在に基づいてCUG設定を編集できます。 非推奨のCUG設定を使用してページ権限を設定した場合、`cq:cugEnabled`プロパティの存在に基づいて、**Authentication Requirement**&#x200B;に警告メッセージが表示され、このオプションは編集できず、[Permissions](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
+   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled`プロパティの存在に基づいて、非推奨のCUG設定を使用してページ権限が設定されている場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示され、オプションは編集できず、[権限](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -175,7 +174,7 @@ ht-degree: 85%
 
    書き出し設定を指定します。
 
-### サムネール  {#thumbnail}
+### サムネール {#thumbnail}
 
 ページサムネール画像が表示されます。以下の操作を実行できます。
 
@@ -212,7 +211,7 @@ ht-degree: 85%
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
-### パーソナライゼーション {#personalization}
+### パーソナライズ機能 {#personalization}
 
 * **ContextHub 設定**
 
@@ -237,14 +236,14 @@ ht-degree: 85%
    * [有効な権限](/help/sites-administering/user-group-ac-admin.md)を表示
    >[!CAUTION]
    >
-   >「**権限**」タブでは、`granite:AuthenticationRequired`ミックスインの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >「**権限**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、ドキュメント[User, Group and Access Rights Administration](/help/sites-administering/user-group-ac-admin.md)を参照してください。
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループ、アクセス権の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -252,13 +251,13 @@ ht-degree: 85%
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのブループリントページのプロパティを定義します。変更がライブコピーに適用される条件を制御します。
 
-### ライブコピー  {#live-copy}
+### ライブコピー {#live-copy}
 
 * **ライブコピー**
 
    [マルチサイト管理](/help/sites-administering/msm.md)でのライブコピーページのプロパティを定義します。ブループリントからの変更が適用される条件を制御します。
 
-### サイト構造  {#site-structure}
+### サイト構造 {#site-structure}
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
@@ -306,7 +305,7 @@ ht-degree: 85%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 「**プロパティを開く**」を選択すると、ダイアログが開き、適切なタブで並べ替えたプロパティを編集できます。 ツールバーの右側にある次のボタンも使用できます。
+1. 「**プロパティを開く**」を選択すると、プロパティを編集するためのダイアログが開きます。プロパティは適切なタブに分類されています。 ツールバーの右側にある次のボタンも使用できます。
 
    * **キャンセル**
    * **保存して閉じる**
@@ -360,7 +359,7 @@ ht-degree: 85%
    * 共通の値を持つ共通のプロパティ
 
       * 表示モードで表示されるのは、共通の値を持つプロパティのみです。
-      * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます。**&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
+      * フィールドが複数値（タグなど）の場合は、すべての値が共通の場合に限り、値が表示されます&#x200B;*。*&#x200B;一部の値のみが共通の場合は、それらの値は編集時にのみ表示されます。
 
    一般的な値を含むプロパティがない場合は、メッセージが表示されます。
 
