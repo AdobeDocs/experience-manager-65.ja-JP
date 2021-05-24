@@ -10,7 +10,6 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 53c37f8c-eb75-4134-9f91-8adb0a574360
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '445'
@@ -30,7 +29,7 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 >
 >インスタンスによっては、要件に合わせて明示的に開発されたカスタマイズコンポーネントが存在する場合があります。これらは、ここで説明するいくつかのコンポーネントと同じ名前の場合があります。
 
-## 一般的な使用方法 {#general-usage}
+## 一般的な使用方法  {#general-usage}
 
 コンポーネントは、[ページの編集](/help/sites-authoring/editing-content.md)時にページエディターのサイドパネルの「**コンポーネント**」タブで使用できます。
 
@@ -59,9 +58,9 @@ Adobe Experience Manager（AEM）には、すぐに使用できる様々なコ�
 
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) - コアコンポーネントは柔軟かつ機能豊富なオーサリング機能を提供します。ページを作成するうえで不可欠なコンテンツタイプが用意されています。
 
-* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。これらのコンポーネントの多くは、[コミュニティサイト](/help/communities/overview.md)が作成されたときに含まれます。
+* [コミュニティ](/help/communities/author-communities.md) - コンポーネントには、Web サイトのインタラクティブな機能（フォーラムやコメントなど）が用意されています。これらのコンポーネントの多くは、[コミュニティサイト](/help/communities/overview.md)を作成する際に含まれます。
 
-* [eコマース](/help/commerce/cif-classic/administering/ecommerce.md) - AEMのeコマース機能には、様々なコンポーネントも含まれています。実際の使用方法は、使用するコマースエンジンによって異なります。
+* [eコマース](/help/commerce/cif-classic/administering/ecommerce.md)  - AEMのeコマース機能には、様々なコンポーネントが含まれています。実際の使用方法は、使用するコマースエンジンによって異なります。
 
 ### コンポーネントの設定 {#configuring-components}
 
