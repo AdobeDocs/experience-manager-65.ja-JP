@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d1741525-a475-4a76-bd16-55318023495e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 88%
 
 ---
-
 
 # キャンペーンの管理{#campaign-management}
 
@@ -37,19 +36,19 @@ ht-degree: 88%
 キャンペーン管理は、次の様々な要素から構成されています。
 
 * **ブランド**
-AEMでは、ブランドは最上位レベルのユニットで、 
+AEMでは、ブランドは最上位の単位で、 
 **キャンペーン**.
 
 * ****
 キャンペーンキャンペーンは、個々の 
 **エクスペリエンス**.
 
-* **エ**
-クスペリエンス集中のコンテンツは、様々なエクスペリエンスを形成し、次の場所で訪問者に提示します。 
+* ****
+エクスペリエンスフォーカスされたコンテンツは、様々なエクスペリエンスを形成し、訪問者に対して次の場所に表示されます。 
 **タッチポイント**. 次のような様々なタイプのエクスペリエンスが使用できます。
 
    * **Teaser**
-      [Teaserページ/](#teasers) 段落は、特定の訪問者 **** セグメントを、関心に焦点を当てたコンテンツに導くために使用します。
+      [ティーザーページ/段落](#teasers) は、特定の訪問者セグメントを、その **** 訪問者の関心に焦点を当てたコンテンツに誘導するために使用します。
 
       Teaser ページでは、次のようなことができます。
 
@@ -60,7 +59,7 @@ AEMでは、ブランドは最上位レベルのユニットで、
 
    * **ニュースレター**
 
-      [電子メール](#emailmarketing) 通信は、ユーザを惹きつけ、ウェブサイトに来るよう促すために使用します。通常はニュースレターの形式で&#x200B;**リード**（通常は&#x200B;**リスト**&#x200B;にグループ化されます）に送信されます。**注意：**&#x200B;この機能がさらに強化される予定はありません。[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+      [電子メール通信は、](#emailmarketing) ユーザーを惹きつけ、Webサイトを訪問するよう促すために使用されます。通常はニュースレターの形式で&#x200B;**リード**（通常は&#x200B;**リスト**&#x200B;にグループ化されます）に送信されます。**注意：**&#x200B;この機能がさらに強化される予定はありません。[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
 
    * **Adobe Target**
 
@@ -83,7 +82,7 @@ AEMでは、ブランドは最上位レベルのユニットで、
 
    リードは通常、リストにグループ分けされ、これらのリード全体に対してアクションを実行することができます。**注意：**&#x200B;この機能がさらに強化される予定はありません。
 
-   [Adobe Campaignを活用し、AEMに統合することを推奨します。](/help/sites-administering/campaign.md)
+   Adobe Campaignの活用とAEMへの統合を[お勧めします。](/help/sites-administering/campaign.md)
 
 * **セグメント**
 
@@ -96,4 +95,3 @@ AEMでは、ブランドは最上位レベルのユニットで、
    様々な場所（「**キャンペーン**」のラベル）から、または次の URL などを使用してアクセスできます。
 
    `http://localhost:4502/libs/mcm/content/admin.html`
-
