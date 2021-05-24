@@ -9,14 +9,13 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c1b5df634eba0628c8d2e0b38b9c220cbee8ec62
+exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2112'
 ht-degree: 92%
 
 ---
-
 
 # SPA ブループリント{#spa-blueprint}
 
@@ -24,7 +23,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
 ## はじめに {#introduction}
 
@@ -168,9 +167,9 @@ npmモジュール：近々
 * `gridClassNames:` レスポンシブグリッドに提供されたクラス名
 * `columnClassNames:` レスポンシブ列に提供されたクラス名
 
-npmリソース[@adobe/aem-react-editable-components#srccomponentsresponsevegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)も参照してください。
+npmリソース[@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)も参照してください。
 
-#### 回答グリッドのプレースホルダ{#placeholder-of-the-reponsive-grid}
+#### レポンシブグリッドのプレースホルダー{#placeholder-of-the-reponsive-grid}
 
 SPA コンポーネントは、レスポンシブグリッドなどのグラフィックコンテナにマッピングされるので、コンテンツのオーサリング時に仮想子プレースホルダーを追加する必要があります。ページエディターによって SPA のコンテンツのオーサリングがおこなわれると、該当のコンテンツが iframe によってエディターに埋め込まれ、`data-cq-editor` 属性がそのコンテンツのドキュメントノードに追加されます。`data-cq-editor` 属性が存在する場合、ページに新しいコンポーネントを挿入する際に作成者が操作する領域を表す HTMLElement をコンテナに含める必要があります。
 
@@ -279,7 +278,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 基になる [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその ` [ModelRouter](/help/sites-developing/spa-routing.md)` モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチおよびアクセスを提供する役割を持ちます。
 
-2つのエンティティはルーティングの概念に関係していますが、` [ModelRouter](/help/sites-developing/spa-routing.md)`は、` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`を読み込む際にのみ、現在のアプリケーションの状態と同期する構造を持つデータモデルを作成します。
+2つのエンティティはルーティングの概念に関連していますが、` [ModelRouter](/help/sites-developing/spa-routing.md)`は、現在のアプリケーションの状態と同期して構成されたデータモデルで` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`を読み込む役割のみ担当します。
 
 詳しくは、[SPA モデルのルーティング](/help/sites-developing/spa-routing.md)を参照してください。
 
