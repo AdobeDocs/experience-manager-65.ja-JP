@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 90923d39-3ac5-4028-976c-d011f0404476
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 95%
 
 ---
-
 
 # ワークフローインスタンスの管理{#administering-workflow-instances}
 
@@ -24,7 +23,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->[JMXコンソール](/help/sites-administering/jmx-console.md#workflow-maintenance)は、追加のワークフロー保守操作を提供します。
+>[JMXコンソール](/help/sites-administering/jmx-console.md#workflow-maintenance)は、追加のワークフローメンテナンス操作を提供します。
 
 ワークフローの管理用に、次の各種コンソールが用意されています。[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)を使用して&#x200B;**ツール**&#x200B;パネルを開き、その後「**ワークフロー**」を選択します。
 
@@ -152,7 +151,7 @@ ht-degree: 95%
 
 ## インボックスの最大サイズの設定  {#setting-the-maximum-size-of-the-inbox}
 
-[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用して&#x200B;**AdobeGranite Workflow Service**&#x200B;を設定し、インボックスの最大サイズを設定して、リポジトリ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)にOSGi設定を追加します。 次の表では、どちらの方法でも設定するプロパティについて説明しています。
+インボックスの最大サイズを設定するには、**AdobeGranite Workflow Service**&#x200B;を[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用してリポジトリにOSGi設定を追加します](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)。 次の表では、どちらの方法でも設定するプロパティについて説明しています。
 
 >[!NOTE]
 >
@@ -163,4 +162,3 @@ ht-degree: 95%
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 |
 |---|---|
 | Max Inbox Query Size | granite.workflow.inboxQuerySize |
-
