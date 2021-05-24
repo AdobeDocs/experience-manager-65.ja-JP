@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 99%
 
 ---
-
 
 # アカウント環境の設定{#configuring-your-account-environment}
 
