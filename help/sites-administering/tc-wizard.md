@@ -10,15 +10,14 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 5d68a101-67e1-4dbc-9943-24fb754d4f77
 docset: aem65
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 言語コピー
+exl-id: 99f9929f-26de-4e95-9ee3-d70512d53bb7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 81%
 
 ---
-
 
 # 言語コピーウィザード{#language-copy-wizard}
 
@@ -26,7 +25,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->サイトの言語コピーを作成するには、ユーザーがプロジェクト管理者グループのメンバーである必要があります。
+>サイトの言語コピーを作成するには、ユーザーがproject-administratorsグループのメンバーである必要があります。
 
 このウィザードにアクセスするには、次の手順を実行します。
 
@@ -42,7 +41,7 @@ ht-degree: 81%
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**設定**&#x200B;の手順に進みます。 ここでは、言語を追加または削除し、翻訳方法を選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**設定**&#x200B;手順が表示されます。 ここでは、言語を追加または削除し、翻訳方法を選択できます。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
@@ -50,7 +49,7 @@ ht-degree: 81%
    >
    >デフォルトでは、翻訳設定は 1 つのみです。他の設定を選択するには、最初にクラウド設定を設定する必要があります。[翻訳統合フレームワークの設定](/help/sites-administering/tc-tic.md)を参照してください。
 
-1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;手順に進みます。 ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
+1. 「**次へ**」ボタンをクリックすると、ウィザードの&#x200B;**翻訳**&#x200B;の手順に移動します。 ここでは、構造のみを作成するか、新しい翻訳プロジェクトを作成するか、既存の翻訳プロジェクトに追加するかを選択できます。
 
    >[!NOTE]
    >
@@ -61,4 +60,3 @@ ht-degree: 81%
 1. 「**作成**」ボタンをクリックすると、ウィザードは終了します。
 
    ![chlimage_1-14](assets/chlimage_1-14.jpeg)
-
