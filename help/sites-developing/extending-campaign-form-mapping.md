@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: d5dac1db-2dde-4b75-a31b-e057b447f6e2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: bce6c586-9962-4217-82cb-c837e479abc0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 93%
 
 ---
-
 
 # カスタムフォームマッピングの作成{#creating-custom-form-mappings}
 
@@ -31,7 +30,7 @@ Adobe Campaign にカスタムテーブルを作成したら、そのカスタ�
 * Adobe Experience Manager
 * Adobe Campaign Classic
 
-詳しくは、[AEMとAdobe Campaign Classic](/help/sites-administering/campaignonpremise.md)の統合を参照してください。
+詳しくは、[Adobe Campaign ClassicとのAEMの統合](/help/sites-administering/campaignonpremise.md)を参照してください。
 
 ## カスタムフォームマッピングの作成 {#creating-custom-form-mappings-2}
 
@@ -65,7 +64,7 @@ Adobe Campaign で、「**追加**」をタップまたはクリックして、*
 
 ![chlimage_1-194](assets/chlimage_1-194.png)
 
-次に、**イベント**&#x200B;テーブルのフィールドを使用して、**シード**&#x200B;テーブルを拡張します。
+次に、**event**&#x200B;テーブルのフィールドを使用して、**seed**&#x200B;テーブルを拡張します。
 
 ```xml
 <element label="Event" name="custom_cus_event">
@@ -129,4 +128,3 @@ CRXDE Lite で、（ページ）ノードの **jcr:content** に移動して、*
 フォームを送信すると、このエラーが AEM の **error.log** に記録されます。
 
 日付フィールドのフォーマットが無効であることが原因です。回避策は、値を **yyyy-mm-dd** 形式で指定することです。
-
