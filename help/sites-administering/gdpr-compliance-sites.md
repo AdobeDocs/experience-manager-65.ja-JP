@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
-translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 91%
 
 ---
 
-
 # AEM Sites - GDPR 対応{#aem-sites-gdpr-readiness}
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
+>以下の節ではGDPRを例として使用しますが、ここで説明する詳細は、すべてのデータ保護およびプライバシー規制に適用されます。（GDPR、CCPAなど）
 
 データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。
 
@@ -46,7 +45,7 @@ AEM Sites コンポーネントはデフォルトでは、訪問者によって�
 
 ## オプトイン／オプトアウト {#opt-in-opt-out}
 
-AEMには、ユーザーのオプトイン/オプトアウトの管理に使用できる[cookieオプトアウトサービス](/help/sites-developing/cookie-optout.md)があります。
+AEMには、ユーザーのオプトイン/オプトアウトを管理するために使用できる[cookieオプトアウトサービス](/help/sites-developing/cookie-optout.md)があります。
 
 ## Analytics によるインサイトの拡張 {#enhanced-insights-by-analytics}
 
@@ -62,7 +61,7 @@ Adobe Target に関連する GDPR データサブジェクトリクエストの�
 
 ## ContextHub {#contexthub}
 
-AEMは、[ContextHub](/help/sites-developing/contexthub.md)を持つオプションのデータレイヤーを提供します。 ContextHub を使用する場合、訪問者固有のデータがブラウザー内に格納され、そのデータに基づいてルールベースのパーソナライゼーションが実行されます。
+AEMは、[ContextHub](/help/sites-developing/contexthub.md)を含むオプションのデータレイヤーを提供します。 ContextHub を使用する場合、訪問者固有のデータがブラウザー内に格納され、そのデータに基づいてルールベースのパーソナライゼーションが実行されます。
 
 この訪問者データはデフォルトでは AEM に格納されません。ブラウザー内でパーソナライゼーションに関する決定をおこなうためのルールが、AEM からデータレイヤーに送信されます。
 
@@ -226,4 +225,3 @@ ContextHub の永続性を解除するには：
    * ContextHub.Utils.Persistence.Modes.SESSION
    * ContextHub.Utils.Persistence.Modes.COOKIE
    * ContextHub.Utils.Persistence.Modes.WINDOW
-
