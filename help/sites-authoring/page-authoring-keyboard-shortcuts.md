@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
-translation-type: tm+mt
-source-git-commit: 34aadbc35d7aad127fe98211a5f37d623d101c0c
+exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 91%
 
 ---
-
 
 # ページ編集時のキーボードショートカット{#keyboard-shortcuts-when-editing-pages}
 
@@ -44,7 +43,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->&amp;ast;ユーザー開始がプレビューモードでページを操作すると、`Ctrl-Shift-m`ショートカットは使用できなくなります。 ショートカットをもう一度使用できるようにするには、エディターバーの上部をクリックするか、編集モードに戻る必要があります。
+>&amp;ast;ユーザーがプレビューモードでページの操作を開始すると、`Ctrl-Shift-m`ショートカットは使用できなくなります。 ショートカットをもう一度使用できるようにするには、エディターバーの上部をクリックするか、編集モードに戻る必要があります。
 
 [コンソール](/help/sites-authoring/keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
