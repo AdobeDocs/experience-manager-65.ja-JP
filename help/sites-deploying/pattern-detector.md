@@ -10,15 +10,14 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アップグレード
+exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 89%
 
 ---
-
 
 # パターン検出を使用したアップグレードの複雑性の評価
 
@@ -58,7 +57,7 @@ ht-degree: 89%
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
-* **無効なJSON行インターフェイスを使用して、各行に個別のJSONドキュメントを生成します。
+* **反応性の高いJSON行インターフェイスを使用**、各行に個別のJSONドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
 
