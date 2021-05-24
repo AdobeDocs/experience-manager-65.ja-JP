@@ -7,14 +7,13 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: d8d9a799-3e30-442a-843b-d4d7ba70c557
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 95%
 
 ---
-
 
 # ContextHub ストア候補のサンプル{#sample-contexthub-store-candidates}
 
@@ -64,7 +63,7 @@ contexthub.geolocation サンプルストア候補は、Google マップを使�
 
 ### ベースとなる実装 {#base-implementation-geolocation}
 
-contexthub.geolocationストアの候補は[`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)を拡張しています。
+contexthub.geolocationストア候補は、 [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)を拡張したものです。
 
 ### 設定 {#configuration-geolocation}
 
@@ -122,7 +121,7 @@ contexthub.geolocationストアの候補は[`ContextHub.Store.PersistedJSONPStor
 
 ### ベースとなる実装 {#base-implementation-surferinfo}
 
-contexthub.datetimeストアの候補は[`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)を拡張します。
+contexthub.datetimeストア候補は、[`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)を拡張したものです。
 
 ### 設定 {#configuration-surferinfo}
 
@@ -189,7 +188,7 @@ granite.emulators サンプルストア候補は、クライアントデバイ�
 
 ### ベースとなる実装 {#base-implementation-emulators}
 
-contexthub.geolocationストアの候補は[`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)を拡張しています。
+contexthub.geolocationストア候補は、 [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)を拡張したものです。
 
 ### 設定 {#configuration-emulators}
 
@@ -322,7 +321,7 @@ contexthub.geolocationストアの候補は[`ContextHub.Store.PersistedStore`](/
 
 ### ベースとなる実装 {#base-implementation-profile}
 
-contexthub.datetimeストアの候補は[`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)を拡張します。
+contexthub.datetimeストア候補は、[`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)を拡張したものです。
 
 ### 設定 {#configuration-profile}
 
