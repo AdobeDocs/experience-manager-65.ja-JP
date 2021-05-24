@@ -10,14 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 70b18dbe351901abb333d491dd06a6c1c1c569d6
+exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 75%
 
 ---
-
 
 # Adobe Target との統合の前提条件{#prerequisites-for-integrating-with-adobe-target}
 
@@ -48,13 +47,13 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
    >
    >Test &amp; Target レプリケーションエージェントを設定する場合、URI は、「**トランスポート**」タブでデフォルトで **tnt:///** に設定されています。このURIを&#x200B;**https://admin.testandtarget.omniture.com**&#x200B;に置き換えないでください。
    >
-   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。このURIは内部での使用のみを目的としているので、この動作は期待される動作です。**テスト接続**&#x200B;では使用しないでください。
+   >**tnt:///** を使用して接続をテストしようとすると、エラーが発生することに注意してください。このURIは内部でのみ使用され、**接続のテスト**&#x200B;では使用できないので、この動作は期待どおりです。
 
 ## アクティビティ設定ノードの保護 {#securing-the-activity-settings-node}
 
 権限のないユーザーがアクセスできないように、パブリッシュインスタンスでアクティビティ設定ノード **cq:ActivitySettings** を保護する必要があります。アクティビティ設定ノードには、Adobe Target へのアクティビティの同期を処理するサービスのみがアクセスできるようにしてください。
 
-**cq:ActivitySettings**&#x200B;ノードは、アクティビティjcr:content node;**example `/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`の下の`/content/campaigns/*nameofbrand*`**&#x200B;のCRXDE liteで使用できます。 このノードは、コンポーネントのターゲティング後にのみ作成されます。
+**cq:ActivitySettings**&#x200B;ノードは、CRXDE Liteの`/content/campaigns/*nameofbrand*`* *アクティビティjcr:contentノード；* *例えば`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`の下で使用できます。 このノードは、コンポーネントのターゲティング後にのみ作成されます。
 
 アクティビティのjcr:contentの下の&#x200B;**cq:ActivitySettings**&#x200B;ノードは、次のACLで保護されています。
 
@@ -66,20 +65,19 @@ Test &amp; Target [レプリケーションエージェント](/help/sites-deplo
 
 ## AEM Link Externalizerの設定{#configuring-the-aem-link-externalizer}
 
-Adobe Target でアクティビティを編集する場合、AEM オーサーノードで URL を変更していなければ、URL は **localhost** を指しています。書き出したコンテンツが特定の&#x200B;*publish*&#x200B;ドメインを指すようにする場合は、AEM Link Externalizerを設定できます。
+Adobe Target でアクティビティを編集する場合、AEM オーサーノードで URL を変更していなければ、URL は **localhost** を指しています。書き出したコンテンツが特定の&#x200B;*公開*&#x200B;ドメインを指すようにする場合は、AEM Link Externalizerを設定できます。
 
 >[!NOTE]
 >
->「[追加クラウド設定](/help/sites-administering/experience-fragments-target.md#add-the-cloud-configuration)」も参照してください。
+>[クラウド設定の追加](/help/sites-administering/experience-fragments-target.md#add-the-cloud-configuration)も参照してください。
 
 AEM Externalizer を設定するには：
 
 >[!NOTE]
 >
->詳しくは、[URLの外部化](/help/sites-developing/externalizer.md)を参照してください。
+>詳しくは、[URL](/help/sites-developing/externalizer.md)の外部化を参照してください。
 
 1. OSGi Webコンソール(**https://&lt;server>:&lt;port>/system/console/configMgr.**)に移動します。
 1. **Day CQ Link Externalizer** を探し、オーサーノードのドメインを入力します。
 
    ![chlimage_1-120](assets/aem-externalizer-01.png)
-
