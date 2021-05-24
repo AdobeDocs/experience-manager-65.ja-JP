@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: 4a3a2ad7-40b0-4f19-a012-167453f58bc2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: c7a6ab46-111f-42f0-bf09-7a300486672a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 100%
 
 ---
-
 
 # キャンペーン{#campaigns}
 
@@ -33,4 +32,3 @@ ht-degree: 100%
 * [セグメント化の設定](/help/sites-administering/campaign-segmentation.md)
 * [ランディングページ用のデザインインポーターの拡張と設定](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
 * [ランディングページと Adobe Analytics の統合](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
-
