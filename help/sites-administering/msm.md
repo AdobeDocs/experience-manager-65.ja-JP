@@ -1,6 +1,6 @@
 ---
-title: '"コンテンツの再利用：マルチサイトマネージャーとライブコピー"'
-seo-title: '"コンテンツの再利用：マルチサイトマネージャーとライブコピー"'
+title: '"コンテンツの再利用：マルチサイトマネージャとライブコピー"'
+seo-title: '"コンテンツの再利用：マルチサイトマネージャとライブコピー"'
 description: ライブコピーとマルチサイトマネージャーを使用してコンテンツを再利用する方法について説明します。
 seo-description: ライブコピーとマルチサイトマネージャーを使用してコンテンツを再利用する方法について説明します。
 uuid: 9f955226-8fc9-4357-b90c-c6896b0dc4b4
@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2684'
-ht-degree: 84%
+ht-degree: 89%
 
 ---
-
 
 # コンテンツの再利用：マルチサイトマネージャーとライブコピー{#reusing-content-multi-site-manager-and-live-copy}
 
@@ -24,7 +23,7 @@ ht-degree: 84%
 
 * MSM では、次の操作を実行できます。
 
-   * コンテンツの作成を何度も行う
+   * コンテンツを 1 回作成し、
    * このコンテンツをコピーして同じまたは別のサイトの他の領域で使用します（[ライブコピー](#live-copies)）。
 
 * その後、MSM は次の目的でソースコンテンツとライブコピーの間の（ライブ）関係を維持します。
@@ -73,7 +72,7 @@ MSM とライブコピーには数多くのユースケースがあります。�
 
    >[!NOTE]
    >
-   >MSM はコンテンツを翻訳しません。必要な構造を作成し、コンテンツをデプロイするために使用します。
+   >MSM はコンテンツを翻訳しません。必要な構造の作成とコンテンツの導入に使用します。
    >
    >
    >このような例を拡張する場合は、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
@@ -121,37 +120,37 @@ MSM とライブコピーには数多くのユースケースがあります。�
    >  * 調整する必要がある個々のコピーの割合
 
 
-## UI からの MSM  {#msm-from-the-ui}
+## UI からの MSM {#msm-from-the-ui}
 
 MSM は、該当するコンソールの UI から各種オプションを使用して直接アクセスできます。はじめに、主な場所のリストを次に示します。
 
-* **サイトを作成**（**サイト**）
+* **サイトを作成**（**Sites**）
 
    * MSM は、コンテンツを共有する複数の Web サイトの管理をサポートします。例えば、多くの Web サイトの対象はグローバルであり、すべての国で共通の大多数のコンテンツと、国別に固有のコンテンツのサブセットで構成されています。MSM を使用すると、[ソースサイトをベースとする複数のサイトを自動的に更新するライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)できます。また、共通の基本構造が適用され、複数サイト全体で共通のコンテンツを使用し、共通のルックアンドフィールが保持されるので、サイト間で実際に異なるコンテンツの管理に注力することができます。
    * ソースの指定に事前に定義されたブループリント設定が必要です。
    * （事前に定義された）ソースのライブコピーを作成します。
    * 「**ロールアウト**」ボタンを使用してユーザーを指定します。
 
-* **ライブコピーを作成**（**サイト**）
+* **ライブコピーを作成**（**Sites**）
 
    * MSM を使用すると、[Web サイトの個々のページまたはサブブランチのアドホック（1 回限りの）ライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)できます。例えば、サブブランチを複製して商品の新しいバージョンや更新されたバージョンに関する情報を提供することができます。
    * アドホックライブコピーを作成します（ブループリント設定は不要）。
    * 任意のページまたはブランチのライブコピーを（即座に）作成できます。
-   * **同期**&#x200B;が必要です（**ロールアウト**&#x200B;ボタンを提供しません）。
+   * **同期**&#x200B;が必要です（**ロールアウト**&#x200B;ボタンは提供されません）。
 
-* **プロパティを表示**（**サイト**）
+* **プロパティを表示**（**Sites**）
 
-   * 必要に応じて、[ライブコピー](/help/sites-administering/msm-livecopy.md#monitoring-your-live-copy)を&#x200B;**Live Cop** yまたは&#x200B;**Blueprint**&#x200B;に関する情報を提供し、ライブコピーを監視します。
+   * 必要に応じて、このオプションを使用して、[ライブコピー](/help/sites-administering/msm-livecopy.md#monitoring-your-live-copy)を監視できます。関連する&#x200B;**ライブコピー** yまたは&#x200B;**ブループリント**&#x200B;に関する情報を提供します。
 
-* **参照**（**サイト**）
+* **参照**（**Sites**）
 
-   * [参照](/help/sites-authoring/basic-handling.md#references)レールは、**ライブコピー**&#x200B;に関する情報と、該当するアクションへのアクセスを提供します。
+   * [参照](/help/sites-authoring/basic-handling.md#references)レールには、**ライブコピー**&#x200B;に関する情報が適切なアクションへのアクセスと共に提供されます。
 
-* **ライブコピーの概要**（**サイト**）
+* **ライブコピーの概要**（**Sites**）
 
    * このコンソールを使用すると、[ブループリントとそのライブコピーを表示して管理](/help/sites-administering/msm-livecopy-overview.md)できます。
 
-* **ブループリント**（**ツール**／**サイト**）
+* **ブループリント**（**ツール**／**Sites**）
 
    * このコンソールを使用すると、[ブループリント設定を作成して管理](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)できます。
 
@@ -159,7 +158,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
 >
 >MSM の機能の様々な側面は、AEM のその他各種機能で使用されます（ローンチ、カタログなど）。これらのケースでは、ライブコピーはその機能によって管理されます。
 
-### 使用されている用語  {#terms-used}
+### 使用されている用語 {#terms-used}
 
 はじめに、MSM で使用されている主な用語の概要を次の表に示します。後の節やページでこれらについて詳しく説明します。
 
@@ -173,7 +172,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
   <tr>
    <td><strong>ソース</strong></td>
    <td>元のページ。</td>
-   <td>ブループリントやブループリントページとも呼ばれます。</td>
+   <td>ブループリントやブループリントページとも呼ばれます.</td>
   </tr>
   <tr>
    <td><strong>ライブコピー</strong></td>
@@ -192,17 +191,17 @@ MSM は、該当するコンソールの UI から各種オプションを使用
   </tr>
   <tr>
    <td><strong>ブループリント</strong></td>
-   <td>ソースと同義。</td>
-   <td>ブループリント設定で定義できます。</td>
+   <td>ソースと同期。</td>
+   <td>ブループリント設定で定義できます.</td>
   </tr>
   <tr>
    <td><strong>ブループリント設定</strong></td>
    <td>ソースパスを指定する事前に定義された設定。</td>
-   <td>ブループリント設定でブループリントページが参照されていると、ロールアウトコマンドを使用できます。</td>
+   <td>ブループリント設定でブループリントページが参照されていると、ロールアウトコマンドを使用できます.</td>
   </tr>
   <tr>
    <td><strong>同期化</strong></td>
-   <td>ソースとライブコピー間のコンテンツの同期を表す一般的な用語です（<strong>ロールアウト</strong>と<strong>同期</strong>の両方による）。</td>
+   <td>ソースとライブコピーの間のコンテンツの同期を表す一般的な用語です（<strong>ロールアウト</strong>と<strong>同期</strong>の両方）。</td>
    <td> </td>
   </tr>
   <tr>
@@ -241,7 +240,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
     <ul>
      <li>すべての継承のキャンセルが削除され、かつ<br /> </li>
      <li>ページをソースページと同じ状態に戻します。</li>
-    </ul> <p>「リセット」は、ページプロパティ、段落システムおよびコンポーネントに対して行った変更に影響します。</p> </td>
+    </ul> <p>リセットは、ページのプロパティ、段落システムおよびコンポーネントに対しておこなった変更に影響します。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -259,7 +258,7 @@ MSM は、該当するコンソールの UI から各種オプションを使用
 
 >[!NOTE]
 >
->オブジェクト名については、[Java API](/help/sites-developing/extending-msm.md#overview-of-the-java-api)の概要を参照してください。
+>オブジェクト名については、 [Java API](/help/sites-developing/extending-msm.md#overview-of-the-java-api)の概要を参照してください。
 
 ## ライブコピー {#live-copies}
 
@@ -274,16 +273,16 @@ MSM のライブコピーは、特定のサイトコンテンツのコピーで�
 
 * ロールアウト設定と呼ばれる同期ルールによって、同期するプロパティおよび同期を行うタイミングが決定されます。
 
-前の例では、`/content/we-retail/language-masters/en`は英語のグローバルマスターサイトです。 このサイトのコンテンツを再利用するために、MSM のライブコピーが作成されます。
+前述の例では、`/content/we-retail/language-masters/en` は英語のグローバルマスターサイトです。このサイトのコンテンツを再利用するために、MSM のライブコピーが作成されます。
 
-* `/content/we-retail/language-masters/en`の下の内容がソースです。
+* `/content/we-retail/language-masters/en` の下のコンテンツがソースです。
 
-* `/content/we-retail/language-masters/en`の下のコンテンツは、`/content/we-retail/us/en/`、`/content/we-retail/gb/en`、`/content/we-retail/ca/en`、`/content/we-retail/au/en`の各ノードの下にコピーされます。 これらがライブコピーです。
+* `/content/we-retail/language-masters/en`の下のコンテンツは、`/content/we-retail/us/en/`、`/content/we-retail/gb/en`、`/content/we-retail/ca/en`および`/content/we-retail/au/en`ノードの下にコピーされます。 これらがライブコピーです。
 
-* 作成者は`/content/we-retail/language-masters/en`の下のページに変更を加えます。
+* 作成者は、`/content/we-retail/language-masters/en` の下のページを変更します。
 * トリガーされると、MSM はこれらの変更をライブコピーに同期します。
 
-### ライブコピー - 構成  {#live-copies-composition}
+### ライブコピー - 構成 {#live-copies-composition}
 
 >[!NOTE]
 >
@@ -291,7 +290,7 @@ MSM のライブコピーは、特定のサイトコンテンツのコピーで�
 
 ライブコピーを最初に作成すると、選択したソースページが 1:1 の対応でライブコピーに反映されます。その後、新しいリソース（ページまたは段落）をそのライブコピー内に直接作成することもできるので、これらのバリエーションと同期への影響を理解しておくと役に立ちます。使用可能な構成は次のとおりです。
 
-* [ライブコピー以外のページのライブコピー](#live-copy-with-non-live-copy-pages)
+* [ライブコピー以外のページを使用したライブコピー](#live-copy-with-non-live-copy-pages)
 * [ネストされたライブコピー](#nested-live-copies)
 
 ライブコピーの基本形式は次のとおりです。
@@ -301,24 +300,24 @@ MSM のライブコピーは、特定のサイトコンテンツのコピーで�
 * すべてのリソースに定義されているライブ関係。
 
    * ライブコピーのリソースをブループリントやソースにリンクします。
-   * 継承とロールアウトを実現する際に使用されます。
+   * 継承およびロールアウトの実現時に使用されます。
 
-* 変更は、要件に応じて[同期](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy)できます。
+* 変更は要件に従って[同期](/help/sites-administering/msm-livecopy.md#synchronizing-your-live-copy)できます。
 
 ![chlimage_1-367](assets/chlimage_1-367.png)
 
-#### ライブコピー以外のページのライブコピー {#live-copy-with-non-live-copy-pages}
+#### ライブコピー以外のページを使用したライブコピー {#live-copy-with-non-live-copy-pages}
 
-AEM にライブコピーを作成すると、ライブコピーのブランチを表示して移動できるほか、ライブコピーのブランチで AEM の通常の機能を使用できます。つまり、ライブコピーブランチ(例：`myCanadaOnlyProduct`)。
+AEM にライブコピーを作成すると、ライブコピーのブランチを表示して移動できるほか、ライブコピーのブランチで AEM の通常の機能を使用できます。つまり、ユーザー（またはプロセス）は、ライブコピーのブランチ(例：`myCanadaOnlyProduct`)に置き換えます。
 
 * そのようなリソースにはソースやブループリントのページへのライブ関係がなく、同期されません。
-* このシナリオは、MSM が特殊なケースを処理する場合に発生することがあります。例えば、ユーザー（またはプロセス）がソースやブループリントとライブコピーのブランチの両方で同じ位置に同じ名前のページを作成した場合です。このような状況では、[MSMロールアウトの競合](/help/sites-administering/msm-rollout-conflicts.md)を参照してください。
+* このシナリオは、MSM が特殊なケースを処理する場合に発生することがあります。例えば、ユーザー（またはプロセス）がソースやブループリントとライブコピーのブランチの両方で同じ位置に同じ名前のページを作成した場合です。そのような状況について詳しくは、[MSM ロールアウトの競合](/help/sites-administering/msm-rollout-conflicts.md)を参照してください。
 
 ![chlimage_1-368](assets/chlimage_1-368.png)
 
 #### ネストされたライブコピー {#nested-live-copies}
 
-既存のライブコピー](#live-copy-with-non-live-copy-pages)内に[新しいページを作成する場合、この新しいページは、別の設計図のライブコピーとして設定することもできます。 これはネストされたライブコピーと呼ばれ、2番目（内側）のライブコピーの動作は、次のように、最初（外側）のライブコピーの動作に影響されます。
+既存のライブコピー](#live-copy-with-non-live-copy-pages)内に[新しいページを作成する場合、この新しいページは別のブループリントのライブコピーとして設定することもできます。 これはネストされたライブコピーと呼ばれ、2番目（内側）のライブコピーの動作は、次のように最初（外側）のライブコピーの影響を受けます。
 
 * 最上位レベルのライブコピーに対してトリガーされたディープロールアウトは、ネストされたライブコピーで継続できます（例えば、トリガーが一致する場合）。
 * ソース間のリンクは、ライブコピー内で書き直すことができます。
@@ -331,7 +330,7 @@ AEM にライブコピーを作成すると、ライブコピーのブランチ�
 >
 >ライブコピーのブランチ内のページを移動または名前を変更すると、これは（内部的に）ネストされたライブコピーとして扱われ、AEM で関係を追跡できるようになります。
 
-#### 積み重ねられたライブコピー  {#stacked-live-copies}
+#### 積み重ねられたライブコピー {#stacked-live-copies}
 
 ライブコピーは、シャローライブコピーの子として作成された場合、積み重ねられたライブコピーと呼ばれます。これは、[ネストされたライブコピー](#nested-live-copies)と同様に動作します。
 
@@ -339,23 +338,23 @@ AEM にライブコピーを作成すると、ライブコピーのブランチ�
 
 任意のページまたはページのブランチをライブコピーのソースとして使用できます。
 
-ただし、MSM ではソースパスを指定するブループリント設定も定義できます。BluePrint設定を使用する利点は、次のとおりです。
+ただし、MSM ではソースパスを指定するブループリント設定も定義できます。ブループリント設定を使用する利点は次のとおりです。
 
-* 作成者がBluePrintに対して&#x200B;**ロールアウト**&#x200B;オプションを使用できるように、変更をこのBluePrintから継承するライブコピーに（明示的に）プッシュできます。
-* 作成者が&#x200B;**サイトを作成**；を使用できるようにします。これにより、ユーザーは簡単に言語を選択し、ライブコピーの構造を設定できます。
+* 作成者がブループリントで&#x200B;**ロールアウト**&#x200B;オプションを使用して、このブループリントから継承するライブコピーに変更を（明示的に）プッシュできるようにします。
+* 作成者が&#x200B;**サイトを作成**;これにより、ユーザーは簡単に言語を選択し、ライブコピーの構造を設定できます。
 * ブループリントと関係があるライブコピーのデフォルトのロールアウト設定を定義できます。
 
 ライブコピーのソースは、通常のページまたはブループリント設定に含まれるページのいずれかです。両方とも有効なユースケースです。
 
 ソースはライブコピーのブループリントを構成します。ブループリントは次のいずれかをおこなうと定義されます。
 
-* [Blueprint構成の作成](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
+* [ブループリント設定の作成](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
 
-   この設定では、ライブコピーの作成に使用するページを事前に定義します。
+   この設定は、ライブコピーの作成に使用するページを（事前に）定義します。
 
 * [ページのライブコピーの作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)
 
-   ライブコピー（ソースページ）の作成に使用されたページは、BluePrintページです。
+   ライブコピー（ソースページ）の作成に使用するページは、ブループリントページです。
 
     ソースページはブループリント設定によって参照されることも、参照されないこともあります。
 
@@ -394,17 +393,17 @@ AEM にライブコピーを作成すると、ライブコピーのブランチ�
 
 ロールアウト設定は再利用可能なので、複数のライブコピーで同じロールアウト設定を使用できます。標準のインストールにいくつかの[ロールアウト設定](/help/sites-administering/msm-sync.md#installed-rollout-configurations)が含まれています。
 
-### ロールアウトの競合  {#rollout-conflicts}
+### ロールアウトの競合 {#rollout-conflicts}
 
 ロールアウトは、特に作成者がソースとライブコピーの両方を編集しているときに複雑になることがあります。そのため、[ロールアウト中に発生する可能性がある競合](/help/sites-administering/msm-rollout-conflicts.md)を AEM がどのように処理するかを把握しておくと便利です。
 
-### 継承と同期の休止とキャンセル  {#suspending-and-cancelling-inheritance-and-synchronization}
+### 継承と同期の休止とキャンセル {#suspending-and-cancelling-inheritance-and-synchronization}
 
 ライブコピー内の各ページおよびコンポーネントは、ライブの関係を通じてそのソースページおよびコンポーネントに関連付けられます。ライブ関係は、ソースからライブコピーコンテンツへの同期を設定します。
 
 ライブコピーページのライブコピーの継承を&#x200B;**休止**&#x200B;して、ページのプロパティやコンポーネントを変更できます。継承を休止すると、ページプロパティとコンポーネントがソースと同期されなくなります。
 
-個々のページの編集時に、作成者はコンポーネントの&#x200B;**継承をキャンセル**&#x200B;できます。継承がキャンセルされると、ライブの関係が休止状態になり、そのコンポーネントの同期はおこなわれません。継承と同期をキャンセルすると、コンテンツのサブセクションをカスタマイズする必要がある場合に役立ちます。
+個々のページの編集時に、作成者はコンポーネントの&#x200B;**継承をキャンセル**&#x200B;できます。継承がキャンセルされると、ライブの関係が休止状態になり、そのコンポーネントの同期はおこなわれません。継承と同期のキャンセルは、コンテンツのサブセクションをカスタマイズする必要があるときに便利です。
 
 ### ライブコピーの分離 {#detaching-a-live-copy}
 
@@ -427,14 +426,14 @@ MSM を使用してコンテンツを再利用し、ライブコピーに対す�
 1. ソースサイトのコンテンツを作成します。
 1. 使用するロールアウト設定を決定します。
 
-   1. MSM [は、多くの使用例を満たす可能性のあるいくつかのロールアウト設定](/help/sites-administering/msm-sync.md#installed-rollout-configurations)をインストールします。
+   1. MSM では、複数の使用事例に対応する[複数のロールアウト設定をインストール](/help/sites-administering/msm-sync.md#installed-rollout-configurations)します。
    1. 必要に応じて、[ロールアウト設定を作成](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)できます。
 
 1. [使用するロールアウト設定を指定する](/help/sites-administering/msm-sync.md#specifying-the-rollout-configurations-to-use)場所を決定し、必要に応じて設定をおこないます。
-1. 必要に応じて、ライブコピーのソースコンテンツを識別するBluePrint設定[を作成します。](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
+1. 必要に応じて、ライブコピーのソースコンテンツを識別するブループリント設定[を作成します。](/help/sites-administering/msm-livecopy.md#creating-a-blueprint-configuration)
 1. [ライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy)します。
 1. 必要に応じてソースコンテンツを変更します。組織で確立されている通常のコンテンツのレビュー／承認プロセスを採用してください。
-1. [設計図](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) を公開するか、ライブ [コピーを変更と](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) 同期します。
+1. [ブループ](/help/sites-administering/msm-livecopy.md#rolling-out-a-blueprint) リントをロールアウトする [か、ライブコピーを変](/help/sites-administering/msm-livecopy.md#synchronizing-a-live-copy) 更と同期します。
 
 ## MSM のカスタマイズ {#customizing-msm}
 
@@ -444,7 +443,7 @@ MSM にはツールが用意されており、コンテンツの共有時に例�
    インストール済みのロールアウト設定が要件を満たさない場合に[ロールアウト設定を作成](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)します。有効な任意のロールアウトトリガーおよび同期アクションを使用できます。
 
 * **カスタム同期アクション**
-   [インストールされたアクションが特定のアプリケーション要件を満たさない場合は、カスタム同期](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) アクションを作成します。MSM には、カスタム同期アクションを作成するための Java API が用意されています。
+   [インストールされたアクシ](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action) ョンが特定のアプリケーション要件を満たさない場合に、カスタム同期アクションを作成します。MSM には、カスタム同期アクションを作成するための Java API が用意されています。
 
 ## ベストプラクティス {#best-practices}
 
