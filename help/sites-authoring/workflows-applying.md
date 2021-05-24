@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 611743cc4144f99968845093b3903fe7df8bf9d9
+exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 99%
 
 ---
-
 
 # ページへのワークフローの適用{#applying-workflows-to-pages}
 
