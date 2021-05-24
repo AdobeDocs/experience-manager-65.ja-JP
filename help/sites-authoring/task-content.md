@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 1b79d373-73f4-4228-b309-79e74d191f3e
-translation-type: tm+mt
-source-git-commit: e3f1c932a5937e8a115e2849935b8f5ea5c2613d
+exl-id: a0719745-8d67-44bc-92ba-9ab07f31f8d2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 100%
 
 ---
-
 
 # タスクの操作{#working-with-tasks}
 
@@ -79,7 +78,7 @@ ht-degree: 100%
 
 1. 「**作成**」をタップまたはクリックします。
 
-## インボックス内でのタスクの使用 {#working-with-tasks-in-the-inbox}
+## インボックス内でのタスクの使用  {#working-with-tasks-in-the-inbox}
 
 タスクにアクセスするもう 1 つの方法は、インボックスからアクセスすることです。インボックスからコンテンツを開いて、必要な変更を実行することができます。変更が完了したら、タスクのステータスを「完了」に変更します。所属するユーザーグループにタスクが割り当てられた場合も、そのタスクがインボックスに表示されます。この場合、グループのいずれかのメンバーが作業を実行し、タスクを完了することができます。
 
