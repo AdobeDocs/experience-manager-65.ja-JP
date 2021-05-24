@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
-translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 97%
 
 ---
-
 
 # ページのオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
 
@@ -30,7 +29,7 @@ ht-degree: 97%
 
 AEM によるオーサリングについて詳しくは、以下を参照してください。
 
-* [作成者が行う最初の手順](/help/sites-authoring/first-steps.md)
+* [作成者がおこなう最初の手順](/help/sites-authoring/first-steps.md)
 * [ページのオーサリング](/help/sites-authoring/page-authoring.md)
 
 ## クイックヒント {#a-few-quick-hints}
@@ -63,9 +62,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 >オーサリング作業をより簡単にできる多くのキーボードショートカットがあります。
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
->* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
-
->
+* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
 
 
@@ -123,8 +120,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * ページが選択されていることを示すために、カードにチェックマークが付けられます。
    >[!NOTE]
-   >
-   >選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
+   選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
 
 ### クイックアクション（カード表示／デスクトップのみ） {#quick-actions-card-view-desktop-only}
 
@@ -179,8 +175,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**コピー**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
    >[!NOTE]
-   >
-   >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
+   同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
 
    * コンポーネントを[削除します。](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 
@@ -197,8 +192,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * 「**編集**」ドロップダウンセレクターを使用して、編集モードに戻ります（またはその他のモードを選択します）。
 
    >[!NOTE]
-   >
-   >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
+   コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
 
 ### ページプロパティの編集  {#editing-the-page-properties}
 
@@ -275,8 +269,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * この操作の確認が求められます。
    >[!NOTE]
-   >
-   >削除は、クイックアクションでは使用できません。
+   削除は、クイックアクションでは使用できません。
 
 ### ページのロック（およびロック解除） {#locking-your-page-then-unlocking}
 
