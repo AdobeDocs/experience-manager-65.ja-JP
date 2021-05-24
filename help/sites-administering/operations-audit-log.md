@@ -10,8 +10,7 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 565d89de-b3ca-41a5-8e1c-d10905c25fb5
 exl-id: 1e05faf5-619a-4ea3-acbf-2fd37c71e6d2
-feature: Operations
-translation-type: tm+mt
+feature: 運用
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '616'
@@ -41,9 +40,9 @@ ht-degree: 81%
 
 監査ログのパージを設定するには、次の手順に従います。
 
-1. ブラウザに`http://localhost:4502/system/console/configMgr/`を指定して、Webコンソール管理者に移動します。
+1. ブラウザーで`http://localhost:4502/system/console/configMgr/`
 
-1. **Pages audit Log Purge rule**&#x200B;という名前の項目を検索し、クリックします。
+1. **ページ監査ログのパージルール**&#x200B;という名前の項目を検索し、クリックします。
 
    ![chlimage_1-365](assets/chlimage_1-365.png)
 
@@ -63,15 +62,15 @@ ht-degree: 81%
 
 1. **週別メンテナンスウィンドウ**&#x200B;カードをクリックします。
 
-1. メンテナンスタスクは、**AuditLog Maintenanceタスク**&#x200B;カードに既に存在します。
+1. **AuditLog Maintenance Task**&#x200B;カードに既にメンテナンスタスクが存在します。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
 1. 次回実行の日付を調べて設定するか、再生ボタンをクリックして手動で実行できます。
 
-AEM 6.3では、監査ログの削除タスクが完了する前にスケジュールされたメンテナンスウィンドウが閉じると、タスクが自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
+AEM 6.3では、監査ログのパージタスクが完了する前に、スケジュールされたメンテナンスウィンドウが閉じると、タスクは自動的に停止します。 次回のメンテナンスウィンドウを開くと、タスクは再開されます。
 
-**AEM 6.5では**、「停止」アイコンをクリックして、実行中の監査ログの削除タスクを手動で停止でき **** ます。次回の実行時に、タスクは安全に再開されます。
+**AEM 6.5では**、実行中の監査ログのパージタスクを手動で停止するには、停止アイコンをクリック **** します。次回の実行時に、タスクは安全に再開されます。
 
 >[!NOTE]
 >
