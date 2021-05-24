@@ -11,8 +11,7 @@ content-type: reference
 discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
-feature: Operations
-translation-type: tm+mt
+feature: 運用
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '326'
@@ -22,7 +21,7 @@ ht-degree: 95%
 
 # AEM でのユーザー管理操作を監査する方法{#how-to-audit-user-management-operations-in-aem}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 権限の変更を後で監査できるよう、変更操作をログに記録する機能が追加されました。
 
@@ -38,7 +37,7 @@ ht-degree: 95%
 
 別のログファイルにログ出力をリダイレクトするには、新しい **Apache Sling Logging Logger** 設定を作成する必要があります。次の例では、別のファイルの名前として、`useraudit.log` を使用します。
 
-1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照して、Webコンソールにアクセスします。
+1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照してWebコンソールに移動します。
 1. **Apache Sling Logging Logger Configuration** を検索します。次に、エントリの右側にある「+」を押して、新しいファクトリ設定を作成します。
 1. 次の設定を作成します。
 
