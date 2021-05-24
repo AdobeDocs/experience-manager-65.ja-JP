@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
-translation-type: tm+mt
-source-git-commit: 684d2d5f73d571a15c8155e7870134c28dc892b7
+exl-id: a7281ca0-461f-4762-a631-6bb539596200
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2270'
 ht-degree: 68%
 
 ---
-
 
 # Adobe Campaign Classic との統合{#integrating-with-adobe-campaign-classic}
 
@@ -40,7 +39,7 @@ Adobe Campaign との統合を拡張する場合は、次のページが参考�
 * [カスタム拡張の作成](/help/sites-developing/extending-campaign-extensions.md)
 * [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)
 
-## AEM と Adobe Campaign の統合ワークフロー  {#aem-and-adobe-campaign-integration-workflow}
+## AEM と Adobe Campaign の統合ワークフロー {#aem-and-adobe-campaign-integration-workflow}
 
 ここでは、キャンペーンを作成し、コンテンツを配信する際の AEM と Adobe Campaign の間の一般的なワークフローについて説明します。
 
@@ -85,7 +84,7 @@ AEM を初めて使用する場合は、AEM を理解するのに次のリンク
 * [ログファイルの検索と使用](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files)
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 
-## Adobe Campaign の設定  {#configuring-adobe-campaign}
+## Configuring Adobe Campaign {#configuring-adobe-campaign}
 
 Adobe Campaign の設定には、次が含まれます。
 
@@ -102,49 +101,49 @@ Adobe Campaign の設定には、次が含まれます。
 
 >[!NOTE]
 >
->これらの操作を実行するには、Adobe Campaignに&#x200B;**管理**&#x200B;ロールが必要です。
+>これらの操作を実行するには、Adobe Campaignに&#x200B;**管理**&#x200B;の役割が必要です。
 
 ### 前提条件 {#prerequisites}
 
 事前に、次の要素があることを確認してください。
 
-* [AEM オーサーインスタンス](/help/sites-deploying/deploy.md#getting-started)
-* [AEM パブリッシュインスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)
-* [Adobe Campaign Classicインスタンス](https://helpx.adobe.com/support/campaign/classic.html) （クライアントとサーバを含む）
+* [AEM 作成者インスタンス](/help/sites-deploying/deploy.md#getting-started)
+* [AEM 発行インスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)
+* [Adobe Campaign Classicインスタンス](https://helpx.adobe.com/support/campaign/classic.html) （クライアントとサーバーを含む）
 * Internet Explorer 11
 
 >[!NOTE]
 >
->Adobe Campaign Classicビルド8640より前のバージョンを実行している場合は、[アップグレードドキュメント](https://docs.campaign.adobe.com/doc/AC6.1/en/PRO_Updating_Adobe_Campaign_Upgrading.html)を参照してください。 クライアントとデータベースの両方を同じビルドにアップグレードする必要があります。
+>Adobe Campaign Classicビルド8640より前のバージョンを実行している場合、詳しくは、[アップグレードに関するドキュメント](https://docs.campaign.adobe.com/doc/AC6.1/en/PRO_Updating_Adobe_Campaign_Upgrading.html)を参照してください。 クライアントとデータベースの両方を同じビルドにアップグレードする必要があります。
 
 >[!CAUTION]
 >
->AEMとAdobe Campaign間の統合機能が正しく動作するためには、[Adobe Campaignの設定](#configuring-adobe-campaign)と[Adobe Experience Managerの設定](#configuring-adobe-experience-manager)の節に記載されている作業が必要です。
+>AEMとAdobe Campaignの統合機能が正しく動作するには、[Adobe Campaign](#configuring-adobe-campaign)の設定および[Adobe Experience Manager](#configuring-adobe-experience-manager)の設定で説明されている操作が必要です。
 
 ### AEM 統合パッケージのインストール {#installing-the-aem-integration-package}
 
-**AEM Integration**&#x200B;パッケージをAdobe Campaignにインストールする必要があります。 次の手順を実行します。
+Adobe Campaignに&#x200B;**AEM Integration**&#x200B;パッケージをインストールする必要があります。 次の手順を実行します。
 
 1. AEM とリンクしたい Adobe Campaign インスタンスに移動します。
-1. *ツール*/*詳細*/*パッケージの読み込みを選択します…*。
+1. *ツール* / *詳細* / *パッケージをインポートを選択します。*.
 
    ![chlimage_1-132](assets/chlimage_1-132a.png)
 
-1. 「**標準パッケージのインストール**」をクリックし、**AEM統合**&#x200B;パッケージを選択します。
+1. 「**標準パッケージ**&#x200B;をインストール」をクリックし、**AEM Integration**&#x200B;パッケージを選択します。
 
    ![chlimage_1-133](assets/chlimage_1-133a.png)
 
-1. 「**次へ**」をクリックし、次に「**開始**」をクリックします。
+1. 「**次へ**」をクリックし、「**開始**」をクリックします。
 
-   このパッケージには、AEMサーバーをAdobe Campaignに接続する際に使用する&#x200B;**aemserver**&#x200B;演算子が含まれています。
+   このパッケージには、AEMサーバーをAdobe Campaignに接続するために使用される&#x200B;**aemserver**&#x200B;演算子が含まれています。
 
    >[!CAUTION]
    >
    >デフォルトでは、この演算子には、セキュリティゾーンは設定されていません。AEM を使用して Adobe Campaign に接続するには、これを選択する必要があります。
    >
-   >**serverConf.xml**&#x200B;ファイルで、選択したセキュリティゾーンの&#x200B;**allowUserPassword**&#x200B;属性を&#x200B;**true**&#x200B;に設定し、AEMがログイン/パスワードを使用してAdobe Campaignに接続することを許可する必要があります。
+   >**serverConf.xml**&#x200B;ファイルで、選択したセキュリティゾーンの&#x200B;**allowUserPassword**&#x200B;属性を&#x200B;**true**&#x200B;に設定し、AEMがログイン/パスワードでAdobe Campaignに接続できるようにする必要があります。
    >
-   >セキュリティの問題を回避するために、AEM 専用のセキュリティゾーンを作成することを強くお勧めします。詳しくは、[『インストールガイド](https://docs.campaign.adobe.com/doc/AC/en/INS_Additional_configurations_Configuring_Campaign_server.html)』を参照してください。
+   >セキュリティの問題を回避するために、AEM 専用のセキュリティゾーンを作成することを強くお勧めします。詳しくは、[インストールガイド](https://docs.campaign.adobe.com/doc/AC/en/INS_Additional_configurations_Configuring_Campaign_server.html)を参照してください。
 
    ![chlimage_1-134](assets/chlimage_1-134a.png)
 
@@ -154,7 +153,7 @@ Adobe Campaign を AEM インスタンスに接続可能な外部アカウント
 
 >[!NOTE]
 >
->* **AEM統合**&#x200B;パッケージをインストールすると、外部AEMアカウントが作成されます。 そこから AEM インスタンスへの接続を設定するか、新しいものを作成できます。
+>* **AEM Integration**&#x200B;パッケージをインストールすると、外部AEMアカウントが作成されます。 そこから AEM インスタンスへの接続を設定するか、新しいものを作成できます。
 >* AEM で、campaign-remote ユーザーのパスワードを設定してください。AEM で Adobe Campaign に接続するにはこのパスワードを設定する必要があります。管理者としてログインし、ユーザー管理コンソールで campaign-remote ユーザーを探して「**パスワードを設定**」をクリックします。
 
 >
@@ -173,11 +172,11 @@ Adobe Campaign を AEM インスタンスに接続可能な外部アカウント
 
    ![chlimage_1-135](assets/chlimage_1-135a.png) ![chlimage_1-136](assets/chlimage_1-136a.png)
 
-1. 「**有効**」チェックボックスが選択されていることを確認します。
+1. 「**有効**」チェックボックスがオンになっていることを確認します。
 
 ### AEMResourceTypeFilter オプションの検証 {#verifying-the-aemresourcetypefilter-option}
 
-**AEMResourceTypeFilter**&#x200B;オプションは、Adobe Campaignで使用できるAEMリソースの種類をフィルターするのに使用します。 これにより、Adobe Campaign でのみ使用されるように特別に設計された AEM コンテンツを Adobe Campaign で取得できます。
+**AEMResourceTypeFilter**&#x200B;オプションは、Adobe Campaignで使用できるAEMリソースのタイプをフィルタリングするために使用します。 これにより、Adobe Campaign でのみ使用されるように特別に設計された AEM コンテンツを Adobe Campaign で取得できます。
 
 このオプションは、事前設定されている必要があります。ただし、このオプションを変更すると、統合が機能しなくなる可能性があります。
 
@@ -208,14 +207,14 @@ AEM オーサーインスタンスから作成されたコンテンツは、最�
 
 >[!NOTE]
 >
->レプリケーションURLを使用せず、公開URLを使用する場合は、OSGiの次の設定で&#x200B;**公開URL**&#x200B;を設定できます(**AEM logo** > **ツール**&#x200B;アイコン>a6/>操作&#x200B;**a/>Webコンソール** > **OSGi構成** > **AEMキャンペーン統合 — 構成**):****
-**パブリックURL:** com.day.cq.mcm.キャンペーン.impl.IntegrationConfigImpl#aem.mcm.キャンペーン.publicUrl
+>レプリケーションURLを使用せずに、公開URLを使用する場合は、OSGi(**AEM logo** > **Tools** icon > **Operations** **の次の設定で**&#x200B;パブリックURL **を設定できます。/>Webコンソール** > **OSGi設定** > **AEM Campaign統合 — 設定**):
+**パブリックURL:** com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
 
 また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
 
 AEM インスタンス間のレプリケーションを設定するには：
 
-1. オーサリングインスタンスから、**AEM logo****ツール**&#x200B;アイコン/**デプロイメント**/**レプリケーション**/**作成者**&#x200B;のエージェントを選択し、**デフォルトエージェント**&#x200B;をクリックします。
+1. オーサリングインスタンスから、**AEM logo** **ツール**&#x200B;アイコン/ **デプロイ** / **レプリケーション** / **作成者のエージェント**&#x200B;を選択し、**デフォルトエージェント**&#x200B;をクリックします。
 
    ![chlimage_1-138](assets/chlimage_1-138a.png)
 
@@ -232,14 +231,14 @@ AEM インスタンス間のレプリケーションを設定するには：
 AEM と Adobe Campaign を一緒に使用する前に、両方のソリューション間のリンクを確立して、通信できるようにする必要があります。
 
 1. AEM オーサーインスタンスに接続します。
-1. 「Adobe Campaign」セクションで&#x200B;**AEMロゴ**/**ツール**&#x200B;アイコン>**展開**/**Cloud Services**&#x200B;を選択し、**今すぐ設定**&#x200B;を選択します。
+1. **AEM logo** / **ツール**&#x200B;アイコン/ **デプロイ** / **Cloud Services**&#x200B;を選択し、Adobe Campaignセクションで「今すぐ設定&#x200B;**」を選択します。**
 
    ![chlimage_1-140](assets/chlimage_1-140a.png)
 
-1. **タイトル**&#x200B;を入力し、**作成**&#x200B;をクリックして新しい設定を作成するか、Adobe Campaignインスタンスとリンクする既存の設定を選択します。
+1. 「**タイトル**」を入力して「**作成**」をクリックするか、Adobe Campaignインスタンスにリンクする既存の設定を選択して、新しい設定を作成します。
 1. 設定を編集して、Adobe Campaign インスタンスのパラメーターと一致するようにします。
 
-   * **ユーザー名**: **aemserver**。2つのソリューション間のリンクを確立するために使用されるAdobe CampaignAEM統合パッケージ演算子です。
+   * **ユーザー名**: **aemserver**(2つのソリューション間のリンクを確立するために使用されるAdobe Campaign AEM Integrationパッケージ演算子)。
    * **パスワード**：Adobe Campaign aemserver 演算子のパスワード。この演算子のパスワードを Adobe Campaign で直接再指定する必要があることがあります。
    * **API エンドポイント**：Adobe Campaign インスタンス URL。
 
@@ -254,8 +253,8 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 
 >[!NOTE]
 接続に失敗する場合は、次を確認してください。
-* Adobe Campaign インスタンスへのセキュリティで保護された接続（https）を使用する際、証明書の問題が発生する可能性があります。Adobe Campaignインスタンス証明書をAEMインスタンスのJDKの&#x200B;**cacerts**&#x200B;ファイルに追加する必要があります。
-* セキュリティゾーンは、Adobe Campaign の [aemserver 演算子](#connecting-aem-to-adobe-campaign)用に設定される必要があります。さらに、**serverConf.xml**&#x200B;ファイルでは、セキュリティゾーンの&#x200B;**allowUserPassword**&#x200B;属性を&#x200B;**true**&#x200B;に設定して、ログイン/パスワードモードを使用したAdobe CampaignへのAEM接続を許可する必要があります。
+* Adobe Campaign インスタンスへのセキュリティで保護された接続（https）を使用する際、証明書の問題が発生する可能性があります。Adobe Campaignインスタンスの証明書をAEMインスタンスのJDKの&#x200B;**cacerts**&#x200B;ファイルに追加する必要があります。
+* セキュリティゾーンは、Adobe Campaign の [aemserver 演算子](#connecting-aem-to-adobe-campaign)用に設定される必要があります。さらに、**serverConf.xml**&#x200B;ファイルで、セキュリティゾーンの&#x200B;**allowUserPassword**&#x200B;属性を&#x200B;**true**&#x200B;に設定して、Adobe CampaignへのAEM接続をログイン/パスワードモードで許可する必要があります。
 
 また、[AEM／Adobe Campaign 統合のトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)も参照してください。
 
@@ -263,7 +262,7 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 
 オーサーインスタンスの AEM に [Externalizer を設定](/help/sites-developing/externalizer.md)する必要があります。Externalizer は、リソースパスを外部 URL および絶対 URL に変換できる OSGi サービスです。このサービスは、これらの外部 URL を設定および構築するための一元化された場所を提供します。
 
-一般的な指示については、[Externalizer の設定](/help/sites-developing/externalizer.md)を参照してください。Adobe Campaign統合の場合は、パブリッシュサーバーを`https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`に設定し、`localhost:4503`ではなく、Adobe Campaignコンソールから到達可能なサーバーを指すようにします。
+一般的な指示については、[Externalizer の設定](/help/sites-developing/externalizer.md)を参照してください。Adobe Campaign統合の場合、`https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`でパブリッシュサーバーを`localhost:4503`ではなく、Adobe Campaignコンソールからアクセス可能なサーバーを指すように設定してください。
 
 `localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、Adobe Campaign コンソールに画像が表示されません。
 
@@ -285,34 +284,34 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 
 #### パーソナライゼーションフィールドの追加  {#adding-a-personalization-field}
 
-既に利用可能な個人用設定フィールドに新しい個人用設定フィールドを追加するには、次のようにAdobe Campaign **nms:seedMember**&#x200B;スキーマを拡張する必要があります。
+既に利用可能なパーソナライゼーションフィールドに新しいパーソナライゼーションフィールドを追加するには、次のようにAdobe Campaignの&#x200B;**nms:seedMember**&#x200B;スキーマを拡張する必要があります。
 
 >[!CAUTION]
 追加する必要があるフィールドは、受信者スキーマ拡張（**nms:受信者**）で既に追加されている必要があります。詳しくは、[設定](https://docs.campaign.adobe.com/doc/AC6.1/en/CFG_Editing_schemas_Editing_schemas.html)ガイドを参照してください。
 
-1. Adobe Campaignナビゲーションの&#x200B;**管理** > **設定** > **データスキーマ**&#x200B;ノードに移動します。
+1. Adobe Campaignナビゲーションの&#x200B;**管理** / **設定** / **データスキーマ**&#x200B;ノードに移動します。
 1. 「**新規**」を選択します。
 
    ![chlimage_1-144](assets/chlimage_1-144a.png)
 
-1. ポップアップウィンドウで、「**拡張スキーマを使用して表のデータを拡張**」を選択し、「**次へ**」をクリックします。
+1. ポップアップウィンドウで、「**拡張スキーマを使用してテーブルのデータを拡張**」を選択し、「**次へ**」をクリックします。
 
    ![chlimage_1-145](assets/chlimage_1-145a.png)
 
 1. 拡張されたスキーマの別のパラメーターを入力します。
 
-   * **スキーマ**:nms: **seedMemberschemaを選択し** ます。ウィンドウのその他のフィールドは、自動的に入力されます。
+   * **スキーマ**: **nms:** seedMemberschemaを選択します。ウィンドウのその他のフィールドは、自動的に入力されます。
    * **名前空間**：拡張されたスキーマの名前空間をパーソナライズします。
 
-1. スキーマの XML コードを編集して、そこに追加したいフィールドを指定します。Adobe Campaignでスキーマを拡張する方法の詳細については、『[設定ガイド](https://docs.campaign.adobe.com/doc/AC6.1/en/CFG_Editing_schemas_Extending_a_schema.html)』を参照してください。
-1. スキーマを保存し、コンソールの&#x200B;**ツール** > **詳細** > **データベース構造を更新**&#x200B;メニューを使用して、Adobe Campaignデータベース構造を更新します。
+1. スキーマの XML コードを編集して、そこに追加したいフィールドを指定します。Adobe Campaignでのスキーマの拡張について詳しくは、[設定ガイド](https://docs.campaign.adobe.com/doc/AC6.1/en/CFG_Editing_schemas_Extending_a_schema.html)を参照してください。
+1. スキーマを保存し、コンソールの&#x200B;**ツール** / **詳細** / **データベース構造を更新**&#x200B;メニューを使用して、Adobe Campaignデータベース構造を更新します。
 1. 変更を保存するために、Adobe Campaign コンソールを切断してから再接続します。AEM で利用可能なパーソナライゼーションフィールドのリストに新しいフィールドが表示されます。
 
 #### 例 {#example}
 
 **登録番号**&#x200B;フィールドを追加するには、次の要素が必要です。
 
-* **nms:受信者**&#x200B;スキーマ拡張子&#x200B;**cus:受信者**&#x200B;には次のものが含まれます。
+* **cus:recipient**&#x200B;という名前の&#x200B;**nms:recipient**&#x200B;スキーマ拡張には、次が含まれます。
 
 ```xml
 <element desc="Recipient table (profiles)" img="nms:recipient.png" label="Recipients" labelSingular="Recipient" name="recipient">
@@ -324,7 +323,7 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 </element>
 ```
 
-**nms:seedMember**&#x200B;スキーマ拡張子&#x200B;**cus:seedMember**&#x200B;には次のものが含まれます。
+**cus:seedMember**&#x200B;という名前の&#x200B;**nms:seedMember**&#x200B;スキーマ拡張には、次が含まれます。
 
 ```xml
 <element desc="Seed to insert in the export files" img="nms:unknownad.png" label="Seed addresses" labelSingular="Seed" name="seedMember">
@@ -337,18 +336,18 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 </element>
 ```
 
-**登録番号**&#x200B;フィールドは、使用可能なパーソナライゼーションフィールドの一部になりました。
+「**登録番号**」フィールドが、使用可能なパーソナライゼーションフィールドの一部になります。
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
 #### パーソナライゼーションフィールドを非表示にする {#hiding-a-personalization-field}
 
-既に利用可能なフィールドの中からパーソナライゼーションフィールドを非表示にするには、[パーソナライゼーションフィールド](#adding-a-personalization-field)の追加の節の詳細に従って、Adobe Campaign **nms:seedMember**&#x200B;スキーマを拡張する必要があります。 次の手順を適用します。
+既に利用可能なパーソナライゼーションフィールドを非表示にするには、 [パーソナライゼーションフィールドの追加](#adding-a-personalization-field)の節で説明されているように、Adobe Campaignの&#x200B;**nms:seedMember**&#x200B;スキーマを拡張する必要があります。 次の手順を適用します。
 
 1. 拡張されたスキーマの **nms:seedMember** スキーマから取得したいフィールドをコピーします（例：**cus:seedMember**）。
-1. フィ追加ールドの&#x200B;**advanced=&quot;true&quot;** XML属性。 AEM で利用可能なパーソナライゼーションフィールドのリストに表示されなくなります。
+1. **advanced=&quot;true&quot;** XML属性をフィールドに追加します。 AEM で利用可能なパーソナライゼーションフィールドのリストに表示されなくなります。
 
-   例えば、**ミドル名**&#x200B;フィールドを非表示にするには、**cud:seedMember**&#x200B;スキーマに次の要素を含める必要があります。
+   例えば、「**ミドルネーム**」フィールドを非表示にするには、**cud:seedMember**&#x200B;スキーマに次の要素を含める必要があります。
 
    ```xml
    <element desc="Seed to insert in the export files" img="nms:unknownad.png" label="Seed addresses" labelSingular="Seed" name="seedMember">
@@ -364,18 +363,17 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
 
 利用可能なもののパーソナライゼーションブロックのアクティベートを解除するには：
 
-1. Adobe Campaignナビゲーションの&#x200B;**リソース** > **キャンペーン管理** > **パーソナライゼーションブロック**&#x200B;ノードに移動します。
+1. Adobe Campaignナビゲーションの&#x200B;**リソース** / **キャンペーン管理** / **パーソナライゼーションブロック**&#x200B;ノードに移動します。
 1. AEM でアクティベートを解除したいパーソナライゼーションブロックを選択します。
-1. [カスタマイズメニューに表示]の[**表示]チェックボックスをオフにし、変更を保存します。**&#x200B;ブロックが、Adobe Campaign で利用可能なパーソナライゼーションブロックのリストに表示されなくなります。
+1. 「**カスタマイズメニューに表示**」チェックボックスをオフにして、変更を保存します。 ブロックが、Adobe Campaign で利用可能なパーソナライゼーションブロックのリストに表示されなくなります。
 
    ![chlimage_1-147](assets/chlimage_1-147a.png)
 
 ### ターゲット拡張データの管理 {#managing-target-extension-data}
 
-パーソナライゼーション用にターゲット拡張データを挿入することもできます。ターゲット拡張データ（「Target データ」とも呼ばれる）は、例えば、キャンペーンワークフローのクエリのデータを機能強化または追加することに由来します。詳しくは、「[クエリの作成](https://docs.campaign.adobe.com/doc/AC/en/PTF_Creating_queries_About_queries_in_Campaign.html)」および「[データの富化](https://docs.campaign.adobe.com/doc/AC/en/WKF_Use_cases_Enriching_data.html)」の節を参照してください。
+パーソナライゼーション用にターゲット拡張データを挿入することもできます。ターゲット拡張データ（「Target データ」とも呼ばれる）は、例えば、キャンペーンワークフローのクエリのデータを機能強化または追加することに由来します。詳しくは、 [クエリの作成](https://docs.campaign.adobe.com/doc/AC/en/PTF_Creating_queries_About_queries_in_Campaign.html)および[データのエンリッチメント](https://docs.campaign.adobe.com/doc/AC/en/WKF_Use_cases_Enriching_data.html)の節を参照してください。
 
 >[!NOTE]
-ターゲットにあるデータは、AEM コンテンツが Adobe Campaign 配信と同期されている場合にのみ利用できます。[AEMで作成したコンテンツとAdobe Campaign](/help/sites-authoring/campaign.md#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)の配信との同期を参照してください。
+ターゲットにあるデータは、AEM コンテンツが Adobe Campaign 配信と同期されている場合にのみ利用できます。[Adobe Campaign](/help/sites-authoring/campaign.md#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)からの配信とAEMで作成されたコンテンツの同期を参照してください。
 
 ![chlimage_1-148](assets/chlimage_1-148a.png)
-
