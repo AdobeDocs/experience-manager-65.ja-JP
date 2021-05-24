@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
-translation-type: tm+mt
-source-git-commit: 3cbbad3ce9d93a353f48fc3206df989a8bf1991a
+exl-id: 01e9ab67-15e2-4bc4-9b8f-0c84bcd56862
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 87%
 
 ---
-
 
 # AEM でのシリアル化の問題の軽減{#mitigating-serialization-issues-in-aem}
 
@@ -49,7 +48,7 @@ ht-degree: 87%
 
 ## アプリケーションサーバーへのエージェントのインストール  {#installing-the-agent-on-application-servers}
 
-NotSoSerialエージェントは、アプリケーションサーバーのAEMの標準配布物には含まれません。 ただし、それを AEM JAR 配布版から抽出して、アプリケーションサーバーの設定に使用できます。
+NotSoSerialエージェントは、アプリケーションサーバー用のAEMの標準ディストリビューションには含まれていません。 ただし、それを AEM JAR 配布版から抽出して、アプリケーションサーバーの設定に使用できます。
 
 1. まず、AEM クイックスタートファイルをダウンロードして展開します。
 
@@ -57,7 +56,7 @@ NotSoSerialエージェントは、アプリケーションサーバーのAEMの
    java -jar aem-quickstart-6.2.0.jar -unpack
    ```
 
-1. 新しく解凍されたAEM quickstartの場所に移動し、`crx-quickstart/opt/notsoserial/`フォルダーをAEMアプリケーションサーバーのインストール先の`crx-quickstart`フォルダーにコピーします。
+1. 新しく解凍されたAEM quickstartの場所に移動し、`crx-quickstart/opt/notsoserial/`フォルダーをAEMアプリケーションサーバーインストールの`crx-quickstart`フォルダーにコピーします。
 
 1. `/opt`の所有権を、サーバーを実行しているユーザーに変更します。
 
@@ -69,11 +68,11 @@ NotSoSerialエージェントは、アプリケーションサーバーのAEMの
 
 ## エージェントの設定  {#configuring-the-agent}
 
-ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、既知のリモート実行脆弱クラスのブロックリストと、信頼できるデータの逆シリアル化が比較的安全であるパッケージの許可リストが含まれます。
+ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、既知のリモート実行の脆弱なクラスのブロックリストと、信頼されたデータのシリアル化解除が比較的安全である必要があるパッケージの許可リストが含まれます。
 
    ファイアウォールの設定は動的であり、次の手順でいつでも変更できます。
 
-1. `https://server:port/system/console/configMgr`のWebコンソールに移動
+1. Webコンソール(`https://server:port/system/console/configMgr`)に移動します。
 1. 「**Deserialization Firewall Configuration**」を探してクリックします
 
    >[!NOTE]
@@ -89,9 +88,9 @@ NotSoSerialエージェントは、アプリケーションサーバーのAEMの
 
 許可リストセクションには、シリアル化解除が許可されるクラスやパッケージ接頭辞が表示されます。独自のクラスのシリアル化解除をおこなう場合は、この許可リストにクラスまたはパッケージのいずれかを追加する必要があります。
 
-**ブロック一覧**
+**ブロックリスト**
 
- ブロックリストセクションには、シリアル化解除が許可されないクラスが表示されます。これらのクラスの初期セットは、リモート実行の攻撃に脆弱であると見なされるクラスに限定されています。このブロックリストは、許可されたエントリの一覧の前に適用されます。
+ ブロックリストセクションには、シリアル化解除が許可されないクラスが表示されます。これらのクラスの初期セットは、リモート実行の攻撃に脆弱であると見なされるクラスに限定されています。ブロックリストは、許可リストに登録されたエントリの前に適用されます。
 
 **診断ログ**
 
@@ -133,7 +132,7 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 
    >[!NOTE]
    >
-   >NotSoSerialエージェントjarのAdobe配布は、AEMのインストール先の`crx-quickstart/opt/notsoserial/`フォルダーにあります。
+   >NotSoSerialエージェントJARのAdobe配布は、AEMインストールの`crx-quickstart/opt/notsoserial/`フォルダーにあります。
 
 1. JVM を停止して再開します。
 
