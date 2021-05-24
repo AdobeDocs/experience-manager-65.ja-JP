@@ -8,15 +8,14 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: af9a3e9d-194a-42e5-be28-b238e0c1e55e
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 10dde29b-5dc7-4d4e-80ae-3d4fd0397f7e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 80%
 
 ---
-
 
 # 整合性チェックとトラバーサルチェック{#consistency-and-traversal-checks}
 
@@ -34,13 +33,12 @@ javax.jcr.RepositoryException: Error indexing workspace: Error indexing workspac
 
 ## 整合性チェックの実行 {#perform-a-consistency-check}
 
-整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次のページに移動します。
+整合性チェックを実行するには、JMX Mbean** com.adobe.granite (Repository)**の管理ページに移動します。AEMのメイン画面から、次の操作を行います。
 
-**「Tools」>「Web Console」>「Main」（メニューバー）>「JMX」>「com.adobe.granite」(Repository)**
+**ツール/ Webコンソール/メイン（メニューバー） / JMX / com.adobe.granite (Repository)**
 
 デフォルトのインストールでは、このページは次の場所にあります。**[|表示|](http://localhost:4502/system/console/jmx/com.adobe.granite%3Atype%3DRepository)**
 
 このページの「**Operations**」セクションに、**`traversalCheck`** と **`consistencyCheck`** という 2 つのメソッドがあります。チェックを実行するには、この操作をクリックして必要なパラメーターを入力します。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
-
