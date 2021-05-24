@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 9b492b17-9029-46ae-9dc0-bb21e6b484df
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 27a6b012-576e-40bc-9b50-c310b3c56c9e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 91%
 
 ---
-
 
 # オーサリング時の AEM のトラブルシューティング{#troubleshooting-aem-when-authoring}
 
@@ -71,11 +70,11 @@ ht-degree: 91%
 
 * **問題:**
 
-   * **検索と置換**&#x200B;オプションを使用すると、`find`キーワードの一部のインスタンスがページ上で置き換えられない場合があります。
+   * **検索と置換**&#x200B;オプションを使用すると、`find`用語のすべてのインスタンスがページ上で置き換えられない場合があります。
 
 * **理由**:
 
-   * **検索と置換**&#x200B;の機能は、コンテンツの保存方法と検索可能かどうかによって異なります。 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
+   * **検索と置換**&#x200B;の機能は、コンテンツの保存方法と、コンテンツを検索できるかどうかによって異なります。 例えば、ブログテキストは `jcr:text` プロパティに格納されますが、このプロパティは検索対象として設定されません。検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
 
       * `jcr:title`
       * `jcr:description`
@@ -87,4 +86,3 @@ ht-degree: 91%
    * これらの定義は、例えば次の場所にある **Web コンソール**&#x200B;を使用して、**Day CQ WCM Find Replace Servlet** を設定することで変更できます。
 
       `http://localhost:4502/system/console/configMgr`
-
