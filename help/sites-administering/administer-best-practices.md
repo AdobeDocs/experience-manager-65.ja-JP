@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
-translation-type: tm+mt
-source-git-commit: e594c53b2a26c1c9e484ac07220dc89c283cf7da
+exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 91%
 
 ---
-
 
 # ベストプラクティス{#best-practices}
 
@@ -37,14 +36,14 @@ ht-degree: 91%
 
 ## Assets {#assets}
 
-Dynamic Media機能とDynamic Mediaクラシック統合を含む、アセットに関するベストプラクティスは、次の各トピックで説明されています。
+Dynamic Media機能やDynamic Media Classic統合を含む、Assetsに関するベストプラクティスについては、次のトピックで説明します。
 
 <table>
  <tbody>
   <tr>
-   <td>読み込み中のシステムの安定性とパフォーマンスを高めるための、アセットの周辺のさまざまな領域のベストプラクティス</td>
+   <td>負荷時のシステムの安定性とパフォーマンスを向上させるための、Assetsの様々な領域でのベストプラクティス</td>
    <td><a href="/help/assets/best-practices-for-assets.md">Assets のベストプラクティス</a></td>
-   <td>アセットに関する様々な領域のベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td>
+   <td>Assetsに関する様々な領域のベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td>
   </tr>
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td>
@@ -107,4 +106,3 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
   </tr>
  </tbody>
 </table>
-
