@@ -7,7 +7,6 @@ page-status-flag: never-activated
 uuid: d5bf1eee-d22a-4962-8289-fd56a54d85ae
 contentOwner: jsyal
 discoiquuid: dbc16a51-74c4-43bb-9501-081de1eb2f7d
-translation-type: tm+mt
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
 workflow-type: tm+mt
 source-wordcount: '285'
@@ -127,7 +126,7 @@ aem-screens-player-android-3.3.0.apk.zip
   </tr>
   <tr>
    <td><strong>AEM 6.4</strong></td> 
-   <td><p><strong>3.3.0</strong> -  <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Apple Store で公開予定</p> </td> 
+   <td><p><strong>3.3.0</strong>  -  <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Apple Store で公開予定</p> </td> 
    <td><p><strong>1.0.48 -</strong><br /> </p> <p><a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> </td> 
    <td><p><strong>1.0.42 - </strong></p> <p>Chrome ウェブストアで公開予定</p> </td> 
    <td><strong>3.3.0</strong> - <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></td> 
