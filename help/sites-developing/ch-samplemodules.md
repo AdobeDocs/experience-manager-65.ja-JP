@@ -7,14 +7,13 @@ contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: df28180f-7af4-437d-8e91-bfd305f73113
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 91%
 
 ---
-
 
 # ContextHub UI モジュールタイプのサンプル {#sample-contexthub-ui-module-types}
 
@@ -91,7 +90,7 @@ contexthub.browserinfo UI モジュールは、クライアント Web ブラウ�
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
-UIモジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfoにあります。 contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
+このUIモジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfoにあります。 contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
 
 ### 設定 {#configuration-1}
 
@@ -137,7 +136,7 @@ contexthub.location UI モジュールは、クライアントの緯度と経度
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
-UIモジュールのソースは、/etc/cloudsettings/default/contexthub/geolocationにあります。
+このUIモジュールのソースは、/etc/cloudsettings/default/contexthub/geolocationにあります。
 
 ### 設定 {#configuration-4}
 
@@ -180,7 +179,7 @@ contexthub.screen-orientation UI モジュールは、クライアントの現�
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
-UIモジュールのソースは、/libs/granite/contexthub/components/modules/screen-orientationにあります。
+このUIモジュールのソースは、/libs/granite/contexthub/components/modules/screen-orientationにあります。
 
 ### 設定 {#configuration-5}
 
@@ -204,7 +203,7 @@ contexthub.tagcloud UI モジュールは、タグに関する情報を表示し
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
-UIモジュールのソースは、/libs/granite/contexthub/components/modules/tagcloudにあります。
+このUIモジュールのソースは、/libs/granite/contexthub/components/modules/tagcloudにあります。
 
 ### 設定 {#configuration-6}
 
@@ -228,7 +227,7 @@ granite.profile ContextHub UI モジュールは、現在のユーザーの表�
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-UIモジュールのソースは/libs/granite/contexthub/components/modules/modules/プロファイルにあります。
+このUIモジュールのソースは、/libs/granite/contexthub/components/modules/profileにあります。
 
 ### 設定 {#configuration-7}
 
