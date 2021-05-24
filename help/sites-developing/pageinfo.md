@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
-translation-type: tm+mt
-source-git-commit: b3e1493811176271ead54bae55b1cd0cf759fe71
+exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 81%
 
 ---
 
-
 # JSON 形式のページ情報の取得{#obtaining-page-information-in-json-format}
 
 ページ情報を取得するには、JSON 形式のページメタデータを取得するための要求を PageInfo サーブレットに送信します。
 
-PageInfoサーブレットは、リポジトリ内のリソースに関する情報を返します。 サーブレットはURL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json`にバインドされ、`path`パラメーターを使用してリソースを識別します。 次の例のURLは、`/content/we-retail/us/en`ノードに関する情報を返します。
+PageInfoサーブレットは、リポジトリ内のリソースに関する情報を返します。 このサーブレットはURL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json`にバインドされ、 `path`パラメーターを使用してリソースを識別します。 次の例のURLは、`/content/we-retail/us/en`ノードに関する情報を返します。
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -67,7 +66,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 * **エミュレーター情報プロバイダー：**&#x200B;このリソースで使用可能なモバイルデバイスエミュレーターに関する情報。ページコンポーネントがモバイルページをレンダリングしない場合、エミュレーターは使用できません。
 * **注釈情報プロバイダー：**&#x200B;ページ上の注釈に関する情報。
 
-例えば、PageInfoサーブレットは`/content/we-retail/us/en`ノードに対して次のJSON応答を返します。
+例えば、PageInfoサーブレットは、`/content/we-retail/us/en`ノードに対して次のJSON応答を返します。
 
 ```
 {
@@ -474,7 +473,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 ## ワークフローパッケージ情報のフィルター処理 {#filtering-workflow-package-information}
 
-Day CQ WCMワークフローパッケージ情報プロバイダーサービスを設定し、関心のあるワークフローパッケージに関する情報のみが返されるようにします。 デフォルトでは、Workflow Package Info Providerサービスはリポジトリ内のすべてのワークフローパッケージに関する情報を返します。 ワークフローパッケージのサブセットを反復すると、使用されるサーバーリソースが減少します。
+Day CQ WCM Workflow Package Info Providerサービスを設定して、目的のワークフローパッケージに関する情報のみを返すようにします。 デフォルトでは、Workflow Package Info Providerサービスは、リポジトリ内のすべてのワークフローパッケージに関する情報を返します。 ワークフローパッケージのサブセットを反復すると、使用されるサーバーリソースが減少します。
 
 >[!NOTE]
 >
@@ -532,7 +531,7 @@ Day CQ WCMワークフローパッケージ情報プロバイダーサービス�
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. `workflowpackageinfoprovider.filter`プロパティを囲む角括弧(`[]`)内に、次の例のようなフィルター値のカンマ区切りリストを入力します。
+1. `workflowpackageinfoprovider.filter`プロパティを囲む角括弧(`[]`)内に、次の例のようなフィルター値のコンマ区切りリストを入力します。
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
@@ -544,9 +543,9 @@ Day CQ WCMワークフローパッケージ情報プロバイダーサービス�
 
 1. `com.day.cq.wcm.api.PageInfoProvider` インターフェイスを実装します。
 1. クラスをバンドルし、OSGi サービスとしてデプロイします。
-1. アプリケーションのページコンポーネントを作成します。`foundation/components/page`を`sling:resourceSuperType`プロパティの値として使用します。
+1. アプリケーションのページコンポーネントを作成します。`sling:resourceSuperType`プロパティの値として`foundation/components/page`を使用します。
 
-1. &lt;a0追加/>という名前のコンポーネントノードの下のノード。`cq:infoProviders`
+1. `cq:infoProviders`という名前のコンポーネントノードの下にノードを追加します。
 1. `cq:infoProviders` ノードの下に、PageInfoProvider サービスのノードを追加します。ノードには、任意の名前を指定できます。
 1. PageInfoProvider ノードに次のプロパティを追加します。
 
@@ -609,11 +608,10 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
-PageUrlInfoProviderサービスは、`/content/we-retail/us/en`ノードに対して次のデータを返します。
+PageUrlInfoProviderサービスは、`/content/we-retail/us/en`ノードに関する次のデータを返します。
 
 ```xml
 "URLs": {
     "publishURL": "http://localhost:4503/content/we-retail/us/en"
 }
 ```
-
