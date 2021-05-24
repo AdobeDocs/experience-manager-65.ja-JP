@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 4c5b52c3-5e23-4125-9306-48bf2ded23cb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 1ff9ac47-9a3a-4a4e-8af8-bc73048e0409
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 96%
 
 ---
-
 
 # エクスペリエンスフラグメント{#experience-fragments}
 
@@ -85,7 +84,7 @@ ht-degree: 96%
    >[!NOTE]
    エクスペリエンスフラグメントの構造をサイトのページ構造に合わせる必要はありません。
 
-* [許可されたテンプレートをフォルダーレベルで割り当てる](#configure-allowed-templates-folder)。
+* [許可されたテンプレートをフォルダーレベルで割り当てる。](#configure-allowed-templates-folder)
 
    >[!NOTE]
    [テンプレートエディター](/help/sites-authoring/templates.md)を使用すると、独自のテンプレートを作成できます。
@@ -238,7 +237,7 @@ WKND プロジェクトでは、`Contributors` に従って一部のエクスペ
 
 1. 編集するページを開きます。
 
-   次に例を示します。[https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
+   例：[https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html](https://localhost:4502/editor.html/content/we-retail/language-masters/en/products/men.html)
 
 1. コンポーネントブラウザーからページ段落システムにコンポーネントをドラッグして、エクスペリエンスフラグメントコンポーネントのインスタンスを作成します。
 
