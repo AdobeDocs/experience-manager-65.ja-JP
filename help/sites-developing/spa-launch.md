@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: spa
 discoiquuid: 6c320633-ce0b-4eb1-bb54-05e1a514d139
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 2dad220d6593ed542816f8a97b0d4b44f0d57876
+exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 90%
 
 ---
-
 
 # SPA と Adobe Experience Platform Launch の統合{#spa-and-adobe-experience-platform-launch-integration}
 
@@ -25,7 +24,7 @@ Adobe Experience Platform Launch は、Analytics、ターゲットおよび Audi
 
 >[!NOTE]
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
 ## チュートリアル {#tutorial}
 
