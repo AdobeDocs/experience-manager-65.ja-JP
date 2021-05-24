@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 2d374e88-ea09-43d5-986c-5d77b0705b93
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 6df5fb10-a7f1-4d5d-ac00-b4be3d5d3d18
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 75%
 
 ---
 
-
 # We.Retail のレスポンシブレイアウトの使用{#trying-out-responsive-layout-in-we-retail}
 
-すべてのWeb.Retailページで、レスポンシブデザインの実装にレイアウトコンテナコンポーネントが使用されます。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントは、ページエディターの&#x200B;**レイアウト**&#x200B;モードと組み合わせて使用されます。これにより、デバイスに依存したレスポンシブレイアウトを作成および編集できます。
+すべてのWe.Retailページは、レスポンシブデザインを実装するためにレイアウトコンテナコンポーネントを使用します。 レイアウトコンテナは、レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。このグリッドでは、デバイスやウィンドウのサイズおよび形式に従ってレイアウトを再編成できます。このコンポーネントを、ページエディターの&#x200B;**レイアウト**&#x200B;モードと組み合わせて使用すると、デバイスに依存するレスポンシブレイアウトを作成および編集できます。
 
 ## 試してみる {#trying-it-out}
 
@@ -48,4 +47,4 @@ ht-degree: 75%
 
 ## その他の情報 {#further-information}
 
-詳しくは、オーサリングドキュメント[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)または管理者ドキュメント[レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
+技術的な詳細については、オーサリングドキュメント[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)または管理者ドキュメント[レイアウトコンテナとレイアウトモードの設定](/help/sites-administering/configuring-responsive-layout.md)を参照してください。
