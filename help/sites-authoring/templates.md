@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 149cdd00f745ad897f506434d7156b8147ef5bae
+exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '4901'
-ht-degree: 96%
+ht-degree: 97%
 
 ---
-
 
 # ページテンプレートの作成{#creating-page-templates}
 
@@ -46,7 +45,7 @@ ht-degree: 96%
 
 >[!CAUTION]
 >
->**テンプレートコンソール**&#x200B;で作成したページとテンプレートは、従来のUIでは使用できないので、このような使用はサポートされていません。
+>**テンプレートコンソール**&#x200B;で作成されたページやテンプレートは、クラシックUIでは使用できず、そのような使用はサポートされていません。
 
 ## 始める前に {#before-you-start}
 
@@ -111,7 +110,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    * これらは[開発者によって提供されているため、](/help/sites-developing/page-templates-static.md)作成者が作成および変更することはできません。
    * 新しいページはテンプレートをコピーして作成されるので、動的接続は存在しません（ただし、情報としてテンプレート名は登録されます）。
    * 設計プロパティを保持するには、[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用します。
-   * 静的テンプレートの編集は開発者のみがタスクするため、詳しくは開発者ドキュメント[ページテンプレート — 静的](/help/sites-developing/page-templates-static.md)を参照してください。
+   * 静的テンプレートの編集は開発者専用のタスクなので、詳しくは、開発者ドキュメント「[ページテンプレート — 静的](/help/sites-developing/page-templates-static.md)」を参照してください。
 
 定義により、テンプレートコンソールおよびテンプレートエディターでは、編集可能なテンプレートの作成および編集だけが可能です。このため、このドキュメントは、編集可能なテンプレートだけにフォーカスします。
 
@@ -148,7 +147,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 >[!CAUTION]
 >
->テンプレートには[国際化](/help/sites-developing/i18n.md)が必要な情報は絶対に入れないようにしてください。内部化の目的では、コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)の[ローカライゼーション機能を推奨します。
+>テンプレートには[国際化](/help/sites-developing/i18n.md)が必要な情報は絶対に入れないようにしてください。国際化のためには、[コアコンポーネントのローカライゼーション機能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=ja)の利用をお勧めします。
 
 ### テンプレートフォルダーの作成 - 管理者 {#creating-a-template-folder-admin}
 
@@ -184,7 +183,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
    >
    >新しく作成されたテンプレートは、コンソールで&#x200B;**ドラフト**&#x200B;とマークされます。これは、ページ作成者がまだテンプレートを使用できないことを示します。
 
-### テンプレートプロパティの定義 - テンプレート作成者  {#defining-template-properties-template-author}
+### テンプレートプロパティの定義 - テンプレート作成者 {#defining-template-properties-template-author}
 
 テンプレートには、次のプロパティを指定できます。
 
@@ -211,9 +210,9 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 >[!NOTE]
 >
->テンプレートは、ページ作成ワークフローを合理化する強力なツールです。 ただし、テンプレートが多すぎると作成者を圧倒し、ページ作成を混乱させる可能性があります。 テンプレートの数を100未満に抑えるのが一般的です。
+>テンプレートは、ページ作成ワークフローを効率化する強力なツールです。ただし、テンプレートが多すぎると作成者が圧倒され、ページ作成がを混乱するおそれがあります。経験上、テンプレートの数を 100 未満に抑えるのがよいでしょう。
 >
->Adobeでは、パフォーマンスに影響が及ぶ可能性があるので、1000を超えるテンプレートを使用することはお勧めしません。
+>パフォーマンスに影響が及ぶ可能性があるので、1000 個を超えるテンプレートを用意することはお勧めしません。
 
 >[!NOTE]
 >
@@ -297,7 +296,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 1. ツールバーから「**公開**」を選択してアクションを完了します。
 
-## テンプレートの編集 - テンプレート作成者 {#editing-templates-template-authors}
+## テンプレートの編集- テンプレート作成者 {#editing-templates-template-authors}
 
 テンプレートを作成（または編集）するときに、様々な側面を定義できます。テンプレートの編集は、ページのオーサリングに似ています。
 
@@ -492,7 +491,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    >[!NOTE]
    >
-   >[](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)リッチテキストエディターを実装するコンポーネントのコンテンツポリシーは、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。  [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+   >[リッチテキストエディターを実装するコンポーネントのコンテンツポリシー](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)は、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。 [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **ポリシーおよびプロパティ（レイアウトコンテナ）**
 
@@ -623,7 +622,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 **ページデザイン**&#x200B;ダイアログにアクセスするには
 
-1. **テンプレートエディター**&#x200B;から、ツールバーから「**ページ情報**」を選択し、「**ページデザイン**」を選択してダイアログを開きます。
+1. **テンプレートエディター**&#x200B;で、ツールバーの「**ページ情報**」を選択し、「**ページデザイン**」を選択してダイアログを開きます。
 1. **ページデザイン**&#x200B;ダイアログが開いて、次の 2 つのセクションに分割されます。
 
    * 左半分は、[ページポリシー](/help/sites-authoring/templates.md#page-policies)を定義します。
