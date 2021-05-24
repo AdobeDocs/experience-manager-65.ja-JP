@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: e7b6b9ee-d807-4eb0-8e96-75ca1e66a4e4
-translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+exl-id: 4e6f452d-0251-46f3-ba29-1bd85cda73a6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 86%
 
 ---
-
 
 # オフロードのためのジョブの作成と使用{#creating-and-consuming-jobs-for-offloading}
 
@@ -28,8 +27,8 @@ Apache Sling Discovery 機能が提供する Java API によって、JobManager 
 
 オフロードフレームワークによって、ジョブペイロードを識別するために使用する 2 つのジョブプロパティが定義されています。これらのプロパティは、オフロードレプリケーションエージェントによって使用され、トポロジ内のインスタンスにレプリケートするリソースが識別されます。
 
-* `offloading.job.input.payload`:コンテンツパスのカンマ区切りリスト。コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
-* `offloading.job.output.payload`:コンテンツパスのカンマ区切りリスト。ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
+* `offloading.job.input.payload`:コンテンツパスのコンマ区切りのリスト。コンテンツは、ジョブを実行するインスタンスにレプリケートされます。
+* `offloading.job.output.payload`:コンテンツパスのコンマ区切りのリスト。ジョブの実行が完了すると、ジョブペイロードはジョブを作成したインスタンス上のこれらのパスにレプリケートされます。
 
 `OffloadingJobProperties` 列挙を使用して、プロパティ名を参照します。
 
@@ -94,7 +93,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-`com/adobe/example/offloading`トピックと`/content/geometrixx/de/services`ペイロードに対してJobGeneratorImpl.createJobが呼び出された場合、ログには次のメッセージが含まれます。
+`com/adobe/example/offloading`トピックと`/content/geometrixx/de/services`ペイロードに対してJobGeneratorImpl.createJobが呼び出されると、ログに次のメッセージが含まれます。
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
@@ -104,7 +103,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 
 ジョブを使用するには、`org.apache.sling.event.jobs.consumer.JobConsumer` インターフェイスを実装する OSGi サービスを開発します。`JobConsumer.PROPERTY_TOPICS` プロパティを使用して、使用するトピックを特定します。
 
-次の例のJobConsumer実装は、`com/adobe/example/offloading`トピックに登録します。 JobConsumer では、単にペイロードコンテンツノードの consumed プロパティが true に設定されます。
+次の例のJobConsumer実装は、 `com/adobe/example/offloading`トピックに登録します。 JobConsumer では、単にペイロードコンテンツノードの consumed プロパティが true に設定されます。
 
 ```java
 package com.adobe.example.offloading;
@@ -217,4 +216,3 @@ Maven でオフロード関連クラスを解決できるように、以下の�
    <scope>provided</scope>
 </dependency>
 ```
-
