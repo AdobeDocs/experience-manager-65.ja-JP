@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
 discoiquuid: 6148f8e6-ab62-4eb8-8a2d-c431b8318000
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 5a16be40-eede-4a47-b03b-3993e285232e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 99%
 
 ---
-
 
 # テスト - 実行のタイミングとテスター{#testing-when-and-with-whom}
 
@@ -26,7 +25,7 @@ ht-degree: 99%
  <tbody>
   <tr>
    <td>テストチーム</td>
-   <td>責任は… </td>
+   <td>責任… </td>
    <td>参加する時期</td>
   </tr>
   <tr>
@@ -51,4 +50,3 @@ ht-degree: 99%
   </tr>
  </tbody>
 </table>
-
