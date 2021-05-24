@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 85%
 
 ---
-
 
 # AEM の開発 - ガイドラインとベストプラクティス{#aem-development-guidelines-and-best-practices}
 
@@ -53,7 +52,7 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
 独自のコンポーネントを作成したり、既存のコンポーネントをカスタマイズしたりするとき、多くの場合は、既存の定義を再利用する方法が最も簡単（かつ安全）です。同じ原則が、エラーハンドラーなど、AEM 内の他の要素にも当てはまります。
 
-これは、既存の定義をコピーしてオーバーレイすることで実行できます。 つまり、`/libs`から`/apps/<your-project>`に定義をコピーします。 `/apps`のこの新しい定義は、要件に従って更新できます。
+これは、既存の定義をコピーしてオーバーレイすることで実行できます。 つまり、`/libs`から`/apps/<your-project>`に定義をコピーします。 `/apps`のこの新しい定義は、必要に応じて更新できます。
 
 >[!NOTE]
 >
@@ -72,7 +71,7 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
          * コピー元：`/libs/foundation/components/text`
          * コピー先：`/apps/myProject/components/text`
 
-* [エラーハンドラーで表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
+* [エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
    この場合、サーブレットをオーバーレイします。
 
@@ -89,7 +88,7 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 >
 >設定およびその他の変更の手順は以下のとおりです。
 >
->1. `/libs`の項目を`/apps`にコピー
+>1. `/libs`の項目を`/apps`にコピーします。
 >1. `/apps`内で変更を加える
 
 
@@ -100,7 +99,7 @@ JCR クエリは、正しく採用すれば強力なツールとなります。�
 * コンテンツのフルテキスト検索など、実際のエンドユーザークエリ。
 * 構造化されたコンテンツがリポジトリ全体で見つかる必要がある場合。
 
-   このような場合は、クエリは、コンポーネントのアクティベーション時やキャッシュの無効化時など、絶対に必要な場合にのみ実行してください(例：ワークフローステップ、コンテンツの変更やフィルターのトリガーを行うイベントハンドラー)。
+   このような場合は、クエリは必ず必要な場合にのみ実行してください(例：コンポーネントのアクティベーションやキャッシュの無効化(例：コンテンツの変更やフィルターをトリガーするワークフローステップ、イベントハンドラー))。
 
 JCR クエリは、純粋なレンダリング要求には決して使用しないでください。JCR クエリが不適切な場合の例は以下のとおりです。
 
@@ -115,7 +114,7 @@ JCR クエリは、純粋なレンダリング要求には決して使用しな�
 >[Query Builder](/help/sites-developing/querybuilder-api.md) を使用する場合は、JCR クエリを使用します。Query Builder では、内部で JCR クエリが生成されるからです。
 
 
-## セキュリティに関する考慮事項 {#security-considerations}
+## セキュリティに関する考慮事項  {#security-considerations}
 
 >[!NOTE]
 >
@@ -135,7 +134,7 @@ slingRequest.getResourceResolver().adaptTo(Session.class);
 
 AEM では、ユーザーが提供するコンテンツをすべて出力時にフィルタリングする原則を適用しています。XSS を回避することは、開発時にもテスト時にも第一優先となります。
 
-また、[mod_security for Apache](https://modsecurity.org)などのWebアプリケーションファイアウォールは、デプロイメント環境のセキュリティを信頼性の高い一元的な制御で提供し、以前は検出されなかったクロスサイトスクリプティング攻撃から保護できます。
+さらに、Apache](https://modsecurity.org)の[mod_securityなどのWebアプリケーションファイアウォールは、デプロイメント環境のセキュリティを確実かつ一元的に管理し、以前に検出されなかったクロスサイトスクリプティング攻撃から保護できます。
 
 >[!CAUTION]
 >
