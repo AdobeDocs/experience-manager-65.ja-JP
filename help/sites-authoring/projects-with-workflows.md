@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
-translation-type: tm+mt
-source-git-commit: 0033dfac2540f56b3903c19f6ca19677af050db3
+exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 100%
 
 ---
-
 
 # プロジェクトワークフローの操作{#working-with-project-workflows}
 
@@ -35,7 +34,7 @@ ht-degree: 100%
 |---|:-:|:-:|:-:|:-:|
 | コピーをリクエスト |  | x |  |  |
 | 撮影した製品写真 |  | x | x |  |
-| 撮影した製品写真 (Commerce) |  |  | x |  |
+| 撮影した製品写真 (コマース) |  |  | x |  |
 | プロジェクト承認 | x |  |  |  |
 | ローンチをリクエスト | x |  |  |  |
 | ランディングページをリクエスト | x |  |  |  |
