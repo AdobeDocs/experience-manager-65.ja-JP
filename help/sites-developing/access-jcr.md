@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 69f62a38-7991-4009-8db7-ee8fd35dc535
-translation-type: tm+mt
-source-git-commit: 6d216e7521432468a01a29ad2879f8708110d970
+exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 43%
 
 ---
-
 
 # AEM JCR へのプログラムからのアクセス方法{#how-to-programmatically-access-the-aem-jcr}
 
@@ -24,11 +23,11 @@ Adobe Marketing Cloud に搭載されている Adobe CQ リポジトリ内にあ
 
 >[!NOTE]
 >
->この開発向けの記事では、外部 Java アプリケーションから Adobe CQ JCR を変更します。これに対して、OSGi バンドル内から JCR API を使用して JCR を変更することもできます。詳しくは、[Java Content RepositoryにCQデータを保存する](https://helpx.adobe.com/experience-manager/using/persisting-cq-data-java-content1.html)を参照してください。
+>この開発向けの記事では、外部 Java アプリケーションから Adobe CQ JCR を変更します。これに対して、OSGi バンドル内から JCR API を使用して JCR を変更することもできます。詳しくは、[JavaコンテンツリポジトリへのCQデータの永続化](https://helpx.adobe.com/experience-manager/using/persisting-cq-data-java-content1.html)を参照してください。
 
 >[!NOTE]
 >
->JCR APIを使用するには、`jackrabbit-standalone-2.4.0.jar`ファイルをJavaアプリケーションのクラスパスに追加します。 このJARファイルは、Java JCR APIのWebページ([https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html))から取得できます。
+>JCR APIを使用するには、Javaアプリケーションのクラスパスに`jackrabbit-standalone-2.4.0.jar`ファイルを追加します。 このJARファイルは、Java JCR API Webページ([https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html))から取得できます。
 
 >[!NOTE]
 >
@@ -47,14 +46,14 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 ## Session インスタンスの作成 {#create-a-session-instance}
 
-`Repository`インスタンスはCRXリポジトリを表します。 `Repository`インスタンスを使用して、リポジトリとのセッションを確立します。 セッションを作成するには、`Repository`インスタンスの`login`メソッドを呼び出し、`javax.jcr.SimpleCredentials`オブジェクトを渡します。 `login`メソッドは、`javax.jcr.Session`インスタンスを返します。
+`Repository`インスタンスはCRXリポジトリを表します。 `Repository`インスタンスを使用して、リポジトリとのセッションを確立します。 セッションを作成するには、`Repository`インスタンスの`login`メソッドを呼び出して、`javax.jcr.SimpleCredentials`オブジェクトを渡します。 `login`メソッドは、`javax.jcr.Session`インスタンスを返します。
 
 `SimpleCredentials`オブジェクトを作成するには、コンストラクターを使用し、次の文字列値を渡します。
 
 * ユーザー名
 * 対応するパスワード
 
-2番目のパラメーターを渡す場合は、文字列オブジェクトの`toCharArray`メソッドを呼び出します。 次のコードは、`javax.jcr.Sessioninstance`を返す`login`メソッドを呼び出す方法を示しています。
+2番目のパラメーターを渡す際に、Stringオブジェクトの`toCharArray`メソッドを呼び出します。 次のコードは、`javax.jcr.Sessioninstance`を返す`login`メソッドを呼び出す方法を示しています。
 
 ```java
 //Create a Session instance
@@ -63,14 +62,14 @@ javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "ad
 
 ## Node インスタンスの作成 {#create-a-node-instance}
 
-`Session`インスタンスを使用して`javax.jcr.Node`インスタンスを作成します。 `Node`インスタンスを使用して、ノード操作を実行できます。 例えば、新しいノードを作成できます。 ルートノードを表すノードを作成するには、次のコード行に示すように、`Session`インスタンスの`getRootNode`メソッドを呼び出します。
+`Session`インスタンスを使用して、`javax.jcr.Node`インスタンスを作成します。 `Node`インスタンスを使用して、ノード操作を実行できます。 例えば、新しいノードを作成できます。 ルートノードを表すノードを作成するには、次のコード行に示すように、`Session`インスタンスの`getRootNode`メソッドを呼び出します。
 
 ```java
 //Create a Node
 Node root = session.getRootNode();
 ```
 
-`Node`インスタンスを作成したら、別のノードの作成や値の追加などのタスクを実行できます。 例えば、次のコードは2つのノードを作成し、2番目のノードに値を追加します。
+`Node`インスタンスを作成したら、別のノードを作成し、そのノードに値を追加するなどのタスクを実行できます。 例えば、次のコードは2つのノードを作成し、2番目のノードに値を追加します。
 
 ```java
 // Store content
@@ -80,7 +79,7 @@ day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suit
 
 ## ノードの値の取得 {#retrieve-node-values}
 
-ノードとその値を取得するには、`Node`インスタンスの`getNode`メソッドを呼び出し、ノードへの完全修飾パスを表す文字列値を渡します。 前のコードの例で作成したノード構造を考えてみましょう。 dayノードを取得するには、次のコードに示すように、adobe/dayを指定します。
+ノードとその値を取得するには、`Node`インスタンスの`getNode`メソッドを呼び出して、ノードへの完全修飾パスを表す文字列値を渡します。 前のコードの例で作成したノード構造について考えてみましょう。 dayノードを取得するには、次のコードに示すように、 adobe/dayを指定します。
 
 ```java
 // Retrieve content
@@ -91,7 +90,7 @@ System.out.println(node.getProperty("message").getString());
 
 ## Adobe CQ リポジトリ内でのノードの作成 {#create-nodes-in-the-adobe-cq-repository}
 
-以下のJavaコードの例は、Adobe CQに接続し、`Session`インスタンスを作成し、新しいノードを追加するJavaクラスを表しています。 ノードにデータ値が割り当てられ、ノードの値とパスがコンソールに書き出されます。 セッションが終了したら、必ずログアウトします。
+次のJavaコードの例は、Adobe CQに接続し、`Session`インスタンスを作成して新しいノードを追加するJavaクラスを表しています。 ノードにデータ値が割り当てられ、ノードの値とそのパスがコンソールに書き出されます。 セッションが完了したら、必ずログアウトしてください。
 
 ```java
 /*
@@ -143,7 +142,6 @@ try {
 }
 ```
 
-完全なコードの例を実行してノードを作成した後、次の図に示すように、**[!UICONTROL CRXDE Lite]**&#x200B;に新しいノードを表示できます。
+完全なコード例を実行してCRXDE Liteを作成したら、次の図に示すように、**[!UICONTROL ノード]**&#x200B;に新しいノードを表示できます。
 
 ![chlimage_1-68](assets/chlimage_1-68a.png)
-
