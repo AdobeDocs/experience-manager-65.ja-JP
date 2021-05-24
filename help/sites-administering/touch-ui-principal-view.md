@@ -10,20 +10,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a156e09e77951041dce017f2f78069bc050b6bdb
+exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 86%
 
 ---
 
-
 # 権限管理のプリンシパルビュー{#principal-view-for-permissions-management}
 
 ## 概要 {#overview}
 
-AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能は従来のUIと同じですが、使いやすくて効率的です。
+AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能はクラシックUIと同じですが、より使いやすく効率的です。
 
 ## 使用方法 {#how-to-use}
 
@@ -91,9 +90,9 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 >
 >それぞれの制限の意味についての詳細は、[このページ](/help/sites-administering/user-group-ac-admin.md#restrictions)を参照してください。
 
-以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。  ![](assets/sapte-1.png) ![](assets/opt-1.png)
+以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。 ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-新しい ACE がアクセス制御リストに反映されます。`jcr:write`は、上に追加された`jcr:removeNode`を含む集計権限ですが、`jcr:write`の下では説明しません。
+新しい ACE がアクセス制御リストに反映されます。`jcr:write`は、上記で追加された`jcr:removeNode`を含む集計権限ですが、`jcr:write`の下で扱われるとは限りません。
 
 ### ACE の編集 {#editing-aces}
 
@@ -111,7 +110,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-右上の「**保存**」ボタンをクリックして変更を保存できます。変更内容は**dam-users **の新しい権限に反映されます。次に示すように変更を加えます。
+右上の「**保存**」ボタンをクリックして変更を保存できます。以下に示すように、変更は**dam-users**の新しい権限に反映されます。
 
 ![](assets/zece-1.png)
 
@@ -163,4 +162,3 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
   </tr>
  </tbody>
 </table>
-
