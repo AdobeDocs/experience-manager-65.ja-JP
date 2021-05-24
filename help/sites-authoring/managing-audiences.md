@@ -1,7 +1,7 @@
 ---
 title: オーディエンスの管理
 seo-title: オーディエンスの管理
-description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub 用のセグメントを管理したりできます。 またはClient Context
+description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub 用のセグメントを管理したりできます。 またはClientContext
 seo-description: オーディエンスコンソールを使用して、Adobe Target アカウント用のオーディエンスを作成、整理および管理したり、ContextHub または ClientContext 用のセグメントを管理したりできます。
 uuid: 76408a8c-25db-4e9f-8a69-27e820a2a7cf
 contentOwner: msm-service
@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: personalization
 discoiquuid: 9a7a31f9-aeb8-455f-a07e-7b1d1f0a88b6
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a8ba56849f6bb9f0cf6571fc51f4b5cae71620e0
+exl-id: 97e02986-049f-4747-a67a-6aa0677b281e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 93%
 
 ---
-
 
 # オーディエンスの管理{#managing-audiences}
 
@@ -26,7 +25,7 @@ ht-degree: 93%
 * オーディエンス（Adobe Target オーディエンスまたは ContextHub セグメント）の追加
 * オーディエンスの管理
 
-ContextHubとClient Contextの&#x200B;*segment*&#x200B;と呼ばれるオーディエンスは、特定の条件で定義される訪問者のクラスで、ターゲットアクティビティを表示するユーザーを決定します。 アクティビティにターゲットを設定すると、ターゲット設定プロセスで直接オーディエンスを選択したり、オーディエンスコンソールで新しいオーディエンスを作成したりできます。
+オーディエンス（ContextHubおよびClientContextの&#x200B;*セグメント*）とは、特定の条件で定義される訪問者のクラスで、ターゲットアクティビティが表示される対象を決定します。 アクティビティにターゲットを設定すると、ターゲット設定プロセスで直接オーディエンスを選択したり、オーディエンスコンソールで新しいオーディエンスを作成したりできます。
 
 オーディエンスコンソールでは、オーディエンスはブランド別に整理されます。
 
@@ -67,7 +66,7 @@ ContextHub を使用するセグメント作成の詳細については、「[Co
 
 >[!NOTE]
 >
->「**作成**」メニューに「**ターゲットオーディエンスを作成**」が表示されない場合は、オーディエンスを作成するのに必要な権限がありません。 オーディエンスを作成するには、**/etc/segmentation**&#x200B;の下で書き込み権限が必要です。 content-authors グループには、デフォルトで書き込み権限があります。
+>**Create**&#x200B;メニューに「**Create Target Audience**」が表示されない場合は、オーディエンスを作成するために必要な権限がありません。 オーディエンスを作成するには、**/etc/segmentation**&#x200B;の下に書き込み権限が必要です。 content-authors グループには、デフォルトで書き込み権限があります。
 
 Adobe Target オーディエンスを作成するには：
 
