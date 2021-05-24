@@ -10,18 +10,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 93ee9338fc2e78d01a9b62e8040c4674262ef6be
+exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 74%
 
 ---
 
-
 # デフォルトの SSL{#ssl-by-default}
 
-AEMのセキュリティを継続的に強化するため、AdobeではデフォルトでSSLと呼ばれる機能が導入されています。 AEM インスタンスへの接続で HTTPS の使用を促すことがその目的です。
+AEMのセキュリティを継続的に改善するために、AdobeではデフォルトでSSLと呼ばれる機能が導入されました。 AEM インスタンスへの接続で HTTPS の使用を促すことがその目的です。
 
 ## デフォルトの SSL の有効化  {#enabling-ssl-by-default}
 
@@ -33,11 +32,11 @@ AEM ホーム画面から該当するインボックスメッセージをクリ�
 
 >[!NOTE]
 >
->**HTTPSの設定**&#x200B;警告がインボックスにない場合は、*<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*&#x200B;に移動してHTTPSウィザードに直接移動できます
+>**HTTPSを設定**&#x200B;アラートがインボックスにない場合は、*<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*&#x200B;に移動して、HTTPSウィザードに直接移動できます
 
-**ssl-service** というサービスユーザーが、この機能のために作成されています。アラートを開くと、次の設定ウィザードに従って操作します。
+**ssl-service** というサービスユーザーが、この機能のために作成されています。アラートを開くと、次の設定ウィザードに従います。
 
-1. 最初に、「ストア資格情報」を設定します。これらは、HTTPSリスナーの秘密鍵とTrust Storeを含む&#x200B;**ssl-service**&#x200B;システムユーザーのキーストアの資格情報です。
+1. 最初に、「ストア資格情報」を設定します。これらは、HTTPSリスナーの秘密鍵とTrust Storeを格納する&#x200B;**ssl-service**&#x200B;システムユーザーのキーストアの資格情報です。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
@@ -98,7 +97,7 @@ Content-Disposition: form-data; name="httpsPort"
 
 成功の応答とエラーの応答の両方の例を次に示します。
 
-**成功の例** (status = 200):
+**成功の例** （ステータス= 200）:
 
 ```xml
 <!DOCTYPE html>
@@ -156,7 +155,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 または、以下の必要な項目が既に含まれているパッケージをアップロードすることにより、SSL 設定を自動化できます。
 
 * ssl-service ユーザーのキーストア。これは、リポジトリの */home/users/system/security/ssl-service/keystore* にあります。
-* `GraniteSslConnectorFactory`構成
+* `GraniteSslConnectorFactory`設定
 
 ### ウィザードで使用する秘密鍵／証明書ペアの生成 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
@@ -197,7 +196,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 >[!NOTE]
 >
->AEMで便利なcURLコマンドを一元的にリストする方法については、[AEM](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html)でのcURLの使用を参照してください。
+>AEMで役立つcURLコマンドの一元化されたリストについては、[AEMでのcURLの使用](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html)を参照してください。
 
 cURL ツールを使用して SSL 設定を自動化することもできます。そのためには、設定パラメーターを次の URL に送信します。
 
@@ -205,11 +204,11 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 
 以下は、設定ウィザードの様々な設定を変更するために使用できるパラメーターです。
 
-* `-F "keystorePassword=password"`  — キーストアパスワード；
+* `-F "keystorePassword=password"`  — キーストアのパスワード。
 
-* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードの確認；
+* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードを確認します。
 
-* `-F "truststorePassword=password"` - truststoreのパスワード；
+* `-F "truststorePassword=password"` - truststoreのパスワード
 
 * `-F "truststorePasswordConfirm=password"` - truststoreのパスワードを確認します。
 
@@ -224,7 +223,7 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 >
 >SSL 設定を自動化するための cURL は、DER および CRT ファイルが存在するフォルダーから実行すると最も速く実行されます。または、`privatekeyFile` および certificateFile 引数でフルパスを指定できます。
 >
->更新を実行するには、認証も必要です。そのため、cURLコマンドに`-u user:passeword`パラメーターを必ず追加してください。
+>また、更新を実行するには認証が必要なので、cURLコマンドに`-u user:passeword`パラメーターを必ず追加してください。
 >
 >正しい cURL POST コマンドは、次のようになります。
 
