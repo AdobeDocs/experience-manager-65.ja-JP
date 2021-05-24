@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 91%
 
 ---
-
 
 # ページ編集時のキーボードショートカット{#keyboard-shortcuts-when-editing-pages}
 
@@ -24,7 +23,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->次の表では、**ショートカット**&#x200B;列のキーの組み合わせについて、CtrlキーとCommandキーの両方がmacOSで機能します。
+>次の表では、**ショートカット**&#x200B;列のキーの組み合わせに対して、CtrlキーとCommandキーの両方がmacOSで機能します。
 
 >[!NOTE]
 >
@@ -175,4 +174,3 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr>
  </tbody>
 </table>
-
