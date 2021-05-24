@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 90%
 
 ---
-
 
 # 翻訳のための文字列の抽出{#extracting-strings-for-translating}
 
@@ -71,7 +70,7 @@ i18n.any ファイルの /filter セクションでは、xgettext-maven-plugin �
 | &amp;ast; | ファイルシステム上の標準ファイルを指定します。 |
 | なし | プレフィックスがない場合または pattern がフォルダーまたはファイル名で始まる場合は、ファイルシステム上の標準ファイルを指定します。 |
 
-パターン内で使用する場合、/文字はサブディレクトリと&amp;ast；を示します。文字はすべてに一致します。 次の表に、規則の例をいくつか示します。
+パターン内で使用する場合、 /文字はサブディレクトリおよび&amp;ast；を示します。文字はすべてに一致します。 次の表に、規則の例をいくつか示します。
 
 <table>
  <tbody>
@@ -137,10 +136,9 @@ mvn xgettext:extract
 ### 出力ファイル {#output-files}
 
 * `raw.xliff`:抽出文字列
-* `warn.log`:警告（存在する場合）を送信する場合、 `CQ.I18n.getMessage()` APIが正しく使用されていないとき。これらは常に修正が必要で、再実行する必要があります。
+* `warn.log`:警告（存在する場合）、APIが正しく使 `CQ.I18n.getMessage()` 用されない場合。これらは常に修正を必要とし、再実行します。
 
 * `parserwarn.log`：パーサーの警告（ある場合）。js パーサーの問題など。
 * `potentials.xliff`：抽出されなかったものの、翻訳が必要な、人間が判読できる文字列である可能性がある「候補」（無視してかまいません。大量の誤検出が生じます）。
 * `strings.xliff`：ALF にインポートするために、フラット化された xliff ファイル。
 * `backrefs.txt`：これにより、指定された文字列のソースコードの場所を簡単に調べることができます。
-
