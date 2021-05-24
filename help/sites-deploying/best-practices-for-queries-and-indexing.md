@@ -9,22 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
-translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '4618'
 ht-degree: 84%
 
 ---
 
-
 # クエリとインデックスに関するベストプラクティス{#best-practices-for-queries-and-indexing}
 
-AEM 6 での Oak への移行に伴い、クエリとインデックスの管理方法に関して大きな変更がいくつか導入されました。Jackrabbit 2では、すべてのコンテンツのインデックスがデフォルトで作成され、自由にクエリできます。 Oakでは、`oak:index`ノードの下にインデックスを手動で作成する必要があります。 クエリはインデックスなしで実行できますが、大きなデータセットの場合は、実行が非常に遅くなるか、中止されます。
+AEM 6 での Oak への移行に伴い、クエリとインデックスの管理方法に関して大きな変更がいくつか導入されました。Jackrabbit 2では、すべてのコンテンツはデフォルトでインデックス付けされ、自由にクエリできます。 Oakでは、インデックスは`oak:index`ノードの下に手動で作成する必要があります。 クエリはインデックスなしで実行できますが、大規模なデータセットの場合は、実行が非常に遅くなるか、中止されます。
 
 この記事では、インデックスを作成するべき場合とインデックスが不要な場合、クエリが不要な場合にクエリの使用を回避するためのヒント、インデックスとクエリの機能をできる限り最適化するためのヒントを概説します。
 
-さらに、[クエリとインデックスの作成に関する Oak のドキュメント](/help/sites-deploying/queries-and-indexing.md)をお読みください。AEM 6の新しい概念であるインデックスに加え、Oakクエリには構文上の違いがあり、以前のAEMからコードを移行する際に考慮する必要があります。
+さらに、[クエリとインデックスの作成に関する Oak のドキュメント](/help/sites-deploying/queries-and-indexing.md)をお読みください。AEM 6の新しい概念であるインデックスに加えて、Oakクエリの構文上の違いもあり、以前のAEMインストールからコードを移行する際に考慮する必要があります。
 
 ## クエリを使用する必要がある場合 {#when-to-use-queries}
 
@@ -54,7 +53,7 @@ AEM 6 での Oak への移行に伴い、クエリとインデックスの管理
 /content/myUnstructuredContent/parentCategory/childCategory/contentPiece
 ```
 
-`/content/myUnstructuredContent/parentCategory/childCategory`ノードは単に取得でき、その子を解析して、コンポーネントのレンダリングに使用できます。
+`/content/myUnstructuredContent/parentCategory/childCategory`ノードは単に取得でき、その子を解析してコンポーネントのレンダリングに使用できます。
 
 さらに、小規模または一様なデータセットを扱う場合は、同じ結果セットを返すためにクエリを作成するよりも、リポジトリを走査して必要なノードを収集するほうが速い場合があります。一般論として、クエリはできる限り使用せずに済ませることを推奨します。
 
@@ -68,7 +67,7 @@ AEM 6 での Oak への移行に伴い、クエリとインデックスの管理
 
 ## クエリの最適化 {#query-optimization}
 
-インデックスを使用していないクエリを実行すると、ノードの走査に関する警告がログに記録されます。このクエリが頻繁に実行されるものである場合は、インデックスを作成する必要があります。特定のクエリが使用しているインデックスを確認するには、[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を推奨します。詳しくは、関連する検索APIに対してデバッグログを有効にすることができます。
+インデックスを使用していないクエリを実行すると、ノードの走査に関する警告がログに記録されます。このクエリが頻繁に実行されるものである場合は、インデックスを作成する必要があります。特定のクエリが使用しているインデックスを確認するには、[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を推奨します。詳しくは、関連する検索APIでデバッグログを有効にすることができます。
 
 >[!NOTE]
 >
@@ -78,7 +77,7 @@ AEM 6 での Oak への移行に伴い、クエリとインデックスの管理
 
 AEM では、次の 3 つの方法でクエリを記述できます。
 
-* [QueryBuilder APIs](/help/sites-developing/querybuilder-api.md)経由（推奨）
+* [QueryBuilder API](/help/sites-developing/querybuilder-api.md)を使用（推奨）
 * XPath を使用（推奨）
 * SQL2 を使用
 
@@ -90,7 +89,7 @@ AEM では、次の 3 つの方法でクエリを記述できます。
 
 ### クエリーの説明を実行ツール  {#the-explain-query-tool}
 
-どのクエリ言語でも、クエリ最適化の最初の手順は、クエリの実行方法を把握することです。これをおこなうには、操作ダッシュボードにある[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を使用します。このツールを使うと、クエリを接続して説明することができます。 クエリによって、大規模なリポジトリや、実行時間や使用されるインデックスに関する問題が引き起こされる場合は、警告が表示されます。このツールでは、低速なクエリやよく使用されるクエリのリストを読み込み、これらを説明および最適化できます。
+どのクエリ言語でも、クエリ最適化の最初の手順は、クエリの実行方法を把握することです。これをおこなうには、操作ダッシュボードにある[クエリの説明を実行ツール](/help/sites-administering/operations-dashboard.md#explain-query)を使用します。このツールを使用すると、クエリをプラグインして説明できます。 クエリによって、大規模なリポジトリや、実行時間や使用されるインデックスに関する問題が引き起こされる場合は、警告が表示されます。このツールでは、低速なクエリやよく使用されるクエリのリストを読み込み、これらを説明および最適化できます。
 
 ### クエリのための DEBUG ログ  {#debug-logging-for-queries}
 
@@ -108,7 +107,7 @@ Oak による使用するインデックスの選択方法と、クエリエン�
 
 Lucene では、インデックス付きのコンテンツに関する詳細（各インデックス内に存在するドキュメントのサイズと数を含む）を提供する JMX Bean が登録されます。
 
-`https://server:port/system/console/jmx`のJMXコンソールにアクセスすると、アクセスできます
+JMXコンソール(`https://server:port/system/console/jmx`)にアクセスしてアクセスできます。
 
 JMX コンソールにログインしたら、検索を実行して **Lucene Index Statistics** を探します。他のインデックス統計は、**IndexStats** MBean にあります。
 
@@ -116,19 +115,19 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 [Luke](https://code.google.com/p/luke/) などのツールを使用してインデックスを詳しく調べる場合は、Oak コンソールを使用して `NodeStore` のインデックスをファイルシステムディレクトリにダンプする必要があります。これを実行する手順については、[Lucene のドキュメント](https://jackrabbit.apache.org/oak/docs/query/lucene.html) を参照してください。
 
-また、JSON 形式でシステム内のインデックスを抽出できます。これを行うには、`https://server:port/oak:index.tidy.-1.json`にアクセスする必要があります
+また、JSON 形式でシステム内のインデックスを抽出できます。これを行うには、`https://server:port/oak:index.tidy.-1.json`にアクセスする必要があります。
 
 ### クエリ制限 {#query-limits}
 
 **開発時**
 
-`oak.queryLimitInMemory`のしきい値を小さく設定します(例： 10000)とoak。 `queryLimitReads` (例：UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
+`oak.queryLimitInMemory`に低いしきい値を設定します(例： 10000)とoak。 `queryLimitReads` (例：UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは I/O が増加し、アプリケーションの全体的なパフォーマンスに悪影響が生じます。上述のような制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
 #### **デプロイメント後**  {#post-deployment}
 
-* クエリが大きなノードトラバーサルまたは大きなヒープメモリの消費をトリガーしているかどうかログを監視します。&quot;
+* ログを監視して、ノードの大量のトラバーサルやヒープメモリの大量消費を引き起こすクエリを探します。&quot;
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * クエリを最適化して、走査するノードの数を減らします。
@@ -138,7 +137,7 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
    * クエリを最適化して、ヒープメモリの使用量を減らします。
 
-AEM 6.0 - 6.2バージョンでは、AEM開始スクリプトのJVMパラメーターを使用してノードトラバーサルのしきい値を調整し、大きなクエリが環境をオーバーロードするのを防ぐことができます。
+AEM 6.0 ～ 6.2バージョンの場合は、AEM開始スクリプトのJVMパラメーターを使用してノードトラバーサルのしきい値を調整し、大きなクエリが環境をオーバーロードしないようにすることができます。
 
 推奨される値は次のとおりです。
 
@@ -147,7 +146,7 @@ AEM 6.0 - 6.2バージョンでは、AEM開始スクリプトのJVMパラメー�
 
 AEM 6.3 では、この 2 つのパラメーターは標準で事前に設定されており、OSGi QueryEngineSettings で保持することができます。
 
-詳細は、次を参照してください。[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
+詳しくは、以下を参照してください。[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
 ## 効率的なインデックス作成のヒント {#tips-for-creating-efficient-indexes}
 
@@ -155,9 +154,9 @@ AEM 6.3 では、この 2 つのパラメーターは標準で事前に設定さ
 
 インデックスを作成または最適化する際にまず考える必要があるのは、その状況でインデックスが本当に必要かどうかという点です。そのクエリを一度またはごくまれにしか実行せず、システムのオフピーク時に一括処理で実行するならば、インデックスをまったく作成しないほうが良いことがあります。
 
-インデックスを作成すると、そのインデックスが付けられたデータを更新するたびに、インデックスも更新する必要が生じます。これはシステムのパフォーマンスに影響を与えるので、インデックスは実際に必要な場合にのみ作成する必要があります。
+インデックスを作成すると、そのインデックスが付けられたデータを更新するたびに、インデックスも更新する必要が生じます。これは、システムにパフォーマンス上の影響を与えるので、インデックスは、実際に必要な場合にのみ作成する必要があります。
 
-さらに、インデックスが役に立つのは、そのインデックスのデータが十分な一意性を持っている場合に限られます。このことは、本の索引（インデックス）と、その本が扱うトピックとの関係を考えてみればわかります。本文中の一連のトピックに索引を付けると、通常は数百または数千の索引項目が作成されます。この索引項目を使用して、特定のページを素早く開き、探している情報をすぐに見つけることができます。もし索引項目が 2、3 個しかなく、各項目が数百ものページを指していれば、その索引はほとんど役に立ちません。データベースのインデックスについても同じことが言えます。一意の値がいくつかしか存在しない場合は、インデックスはあまり役立ちません。とはいえ、インデックスが大きすぎて役に立たなくなることもあります。 インデックスの統計を確認するには、前述の[インデックスの統計](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics)を参照してください。
+さらに、インデックスが役に立つのは、そのインデックスのデータが十分な一意性を持っている場合に限られます。このことは、本の索引（インデックス）と、その本が扱うトピックとの関係を考えてみればわかります。本文中の一連のトピックに索引を付けると、通常は数百または数千の索引項目が作成されます。この索引項目を使用して、特定のページを素早く開き、探している情報をすぐに見つけることができます。もし索引項目が 2、3 個しかなく、各項目が数百ものページを指していれば、その索引はほとんど役に立ちません。データベースのインデックスについても同じことが言えます。一意の値がいくつかしか存在しない場合は、インデックスはあまり役立ちません。ただし、インデックスが大きすぎて役に立たなくなることもあります。 インデックスの統計を確認するには、前述の[インデックスの統計](/help/sites-deploying/best-practices-for-queries-and-indexing.md#index-statistics)を参照してください。
 
 ### Lucene インデックスとプロパティインデックス  {#lucene-or-property-indexes}
 
@@ -191,12 +190,12 @@ Lucene インデックスに関する Oak のドキュメントでは、以下�
 * クエリで並べ替えを使用する場合は、並べ替えるプロパティの明示的なプロパティ定義を用意し、そのプロパティの `ordered` を `true` に設定します。これにより、結果がインデックスどおりの順番に並ぶので、コストがかかる並べ替え処理をクエリ実行時におこなう必要がなくなります。
 
 * インデックスには必要なものだけを追加します。不要な機能やプロパティを追加すると、インデックスの増大とパフォーマンスの低下につながります。
-* プロパティインデックスでは、一意のプロパティ名を使用すると、インデックスのサイズを削減できます。しかし Lucene インデックスでは、統一されたインデックスを実現するために、`nodeTypes` と `mixins` を使用する必要があります。特定の`nodeType`または`mixin`をクエリする方が、`nt:base`をクエリするよりもパフォーマンスが高くなります。 この方法を使用する場合は、対象の`nodeTypes`の`indexRules`を定義します。
+* プロパティインデックスでは、一意のプロパティ名を使用すると、インデックスのサイズを削減できます。しかし Lucene インデックスでは、統一されたインデックスを実現するために、`nodeTypes` と `mixins` を使用する必要があります。特定の`nodeType`または`mixin`に対するクエリの方が、`nt:base`に対するクエリの方がパフォーマンスが向上します。 この方法を使用する場合は、問題の`nodeTypes`に対して`indexRules`を定義します。
 
 * クエリを特定のパスでのみ実行する場合は、そのパスの下でインデックスを作成します。インデックスにリポジトリのルートを含める必要はありません。
 * インデックスを付けるすべてのプロパティが関連しているときは、Lucene ができるだけ多くのプロパティ制限をネイティブで評価できるようにするために、単一のインデックスを使用することを推奨します。また、結合を実行する場合でも、クエリは 1 つのインデックスだけを使用します。
 
-### CopyOnRead  {#copyonread}
+### CopyOnRead {#copyonread}
 
 `NodeStore` がリモートに格納されている場合は、`CopyOnRead` というオプションを有効にできます。このオプションを使用すると、リモートインデックスが読み込まれるときに、リモートインデックスがローカルのファイルシステムに書き込まれます。このオプションは、こうしたリモートインデックスに対して頻繁に実行されるクエリのパフォーマンス向上に役立ちます。
 
@@ -216,15 +215,15 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 ## 再インデックス {#re-indexing}
 
-この節では、Oakインデックスを再インデックスする&#x200B;**唯一**&#x200B;の受け入れ可能な理由について説明します。
+この節では、Oakインデックスを再インデックスする理由として許容できる&#x200B;**のみ**&#x200B;について説明します。
 
-以下に説明する理由の外、Oakインデックスの再インデックスを開始しても、動作の変更や問題の解決は&#x200B;**行われず**、AEMでの負荷が不必要に増加します。
+以下に説明する理由の外、Oakインデックスの再インデックスを開始しても、動作の変更や問題の解決は&#x200B;**おこなわれず、AEMの負荷が不必要に増加します。**
 
 以下の各表に記載されている理由に該当しない限り、Oak インデックスの再インデックスを実行しないでください。
 
 >[!NOTE]
 >
->以下の表を参照して再インデックスが有用であるかを判断する前に、**常に**verify:
+>以下の表を参照して再インデックスが有用であるかを判断する前に、常に次の点を確認してくださ**。**
 >
 >* クエリが正しい
 >* クエリが予期したインデックスに解決されること（[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#diagnosis-tools)を使用）
@@ -245,7 +244,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 * [プロパティインデックスの定義の変更](#property-index-definition-change)
 * [Lucene インデックスの定義の変更](#lucene-index-definition-change)
 
-#### プロパティインデックスの定義の変更  {#property-index-definition-change}
+#### プロパティインデックスの定義の変更 {#property-index-definition-change}
 
 * 適用対象：
 
@@ -259,7 +258,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 * 検証方法：
 
    * 更新したインデックス定義をデプロイする前に、見つからないノードが作成または変更されていたかどうかを確認します。
-   * 見つからないノードの`jcr:created`または`jcr:lastModified`プロパティを、インデックスの変更時間に対して確認します
+   * インデックスの変更時刻に対して、見つからないノードの`jcr:created`または`jcr:lastModified`プロパティを確認します。
 
 * 解決方法：
 
@@ -285,7 +284,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 * 検証方法：
 
-   * Lucene Index統計JMX Mbean (LuceneIndex)メソッド`diffStoredIndexDefinition`を使用して、インデックス定義が変更されたことを確認します。
+   * Lucene Index統計JMX Mbean(LuceneIndex)メソッド`diffStoredIndexDefinition`を使用して、インデックス定義が変更されたことを確認します。
 
 * 解決方法：
 
@@ -296,7 +295,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
       * 既存の内容が変更の影響を受けない場合は、更新のみが必要です。
 
-         * [oak:queryIndexDefinition](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) @refresh=trueに設定して、luceneインデックス []を更新します。
+         * [](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition) oak:queryIndexDefinition [@refresh=trueを設定し]て、Luceneインデックスを更新します。
       * それ以外の場合は、Lucene インデックスの[再インデックス](#how-to-re-index)を実行します。
 
          * 注意：新しい再インデックスが実行されるまで、前回の正常な再インデックス（または最初のインデックス作成）のインデックス状態が使用されます。
@@ -314,7 +313,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 * [Lucene インデックスのバイナリが見つからない](#lucene-index-binary-is-missing)
 * [Lucene インデックスのバイナリが破損している](#lucene-index-binary-is-corrupt)
 
-#### Lucene インデックスのバイナリが見つからない  {#lucene-index-binary-is-missing}
+#### Lucene インデックスのバイナリが見つからない {#lucene-index-binary-is-missing}
 
 * 適用対象：
 
@@ -331,17 +330,17 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 * 解決方法：
 
-   * トラバースリポジトリチェックの実行例：
+   * トラバースリポジトリチェックを実行する。例：
 
       [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
 
-      リポジトリ内での移動は、他のバイナリ（luceneファイル以外）がないかどうかを判断する
+      リポジトリを走査することで、（luceneファイル以外の）他のバイナリが見つからないかどうかを判断します
 
    * Lucene インデックス以外のバイナリが見つからない場合は、バックアップから復元します。
-   * それ以外の場合は、[re-index](#how-to-re-index) *すべての* luceneインデックス
+   * それ以外の場合は、 [再インデックス](#how-to-re-index) *すべての* Luceneインデックス
    * 注意：
 
-      この状態は、ANYバイナリ( アセットバイナリ)が見つかりません。
+      この状態は、データストアの設定が誤っていることを示し、バイナリ(例： アセットのバイナリ)が見つからなくなる問題を修正しました。
 
       この場合は、正常であることがわかっている最新のリポジトリバージョンに復元し、見つからないすべてのバイナリを回復します。
 
@@ -358,7 +357,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 * 検証方法：
 
-   * `AsyncIndexUpdate` （5秒ごと）は、error.log内の例外で失敗します。
+   * `AsyncIndexUpdate`（5秒ごと）は、error.logで例外として失敗します。
 
       `...a Lucene index file is corrupt...`
 
@@ -367,19 +366,19 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
    * Lucene インデックスのローカルコピーを削除します。
 
       1. AEM を停止します。
-      1. `crx-quickstart/repository/index`にあるluceneインデックスのローカルコピーを削除します
+      1. `crx-quickstart/repository/index`にあるLuceneインデックスのローカルコピーを削除します。
       1. AEM を再起動します。
-   * これで問題が解決せず、`AsyncIndexUpdate`例外が続く場合：
+   * これで問題が解決せず、`AsyncIndexUpdate`例外が持続する場合は、次の手順に従います。
 
       1. エラーがあるインデックスの[再インデックス](#how-to-re-index)を実行します。
-      1. [Adobeサポート](https://helpx.adobe.com/jp/support.html)チケットも送信する
+      1. また、[Adobeサポート](https://helpx.adobe.com/jp/support.html)チケットを提出します。
 
 
 ### 再インデックスを実行する方法 {#how-to-re-index}
 
 >[!NOTE]
 >
->AEM 6.5では、[oak-run.jarは、MongoMKまたはRDBMKリポジトリで再インデックスを作成するためにサポートされている唯一のメソッド](/help/sites-deploying/indexing-via-the-oak-run-jar.md#reindexingapproachdecisiontree)です。
+>AEM 6.5では、MongoMKまたはRDBMKリポジトリでのインデックス再作成で[oak-run.jarのみがサポートされています。](/help/sites-deploying/indexing-via-the-oak-run-jar.md#reindexingapproachdecisiontree)
 
 #### プロパティインデックスの再インデックス {#re-indexing-property-indexes}
 
@@ -388,16 +387,16 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
    * `[oak:queryIndexDefinition]@reindex-async=true`
 
-* **PropertyIndexAsyncReindex** MBeanを介して、Webコンソールを使用してプロパティインデックスを非同期的に再インデックス化します。
+* **PropertyIndexAsyncReindex** MBeanを使用して、Webコンソールを使用してプロパティインデックスを非同期で再インデックスします。
 
-   例えば、
+   例：
 
    [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DPropertyIndexAsyncReindex)
 
 #### Lucene プロパティインデックスの再インデックス {#re-indexing-lucene-property-indexes}
 
 * Lucene プロパティインデックスの[再インデックスをおこなうには、oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) を使用します。
-* Lucene プロパティインデックスで async-reindex プロパティを true に  ルセン特性指数
+* Lucene プロパティインデックスで async-reindex プロパティを true に  luceneプロパティインデックス
 
    * `[oak:queryIndexDefinition]@reindex-async=true`
 
@@ -409,16 +408,16 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 テキスト事前抽出は、分離されたプロセスのデータストアから直接バイナリのテキストを抽出して処理し、抽出されたテキストを後続の Oak インデックスの再インデックス／インデックス作成に直接公開するプロセスです。
 
-* Oak textのプリ抽出は、抽出可能なテキスト(例えば、デプロイ済みのOakインデックスを介した全文検索に該当するPDF、Wordドキュメント、PPT、TXTなど)例：`/oak:index/damAssetLucene`
+* Oakテキストの事前抽出は、抽出可能なテキスト(例えば、デプロイされたOakインデックスを介してフルテキスト検索の対象となるPDF、Wordドキュメント、PPT、TXTなど)。例： `/oak:index/damAssetLucene`
 * テキスト事前抽出は、Lucene インデックスの再インデックス／インデックス作成の場合にのみ利点があります。Oak プロパティインデックスの場合、プロパティインデックスはバイナリからテキストを抽出しないので、利点がありません。
 * テキスト事前抽出は、大量のテキストを含むバイナリ（PDF、Doc、TXT など）のフルテキスト再インデックスには大きな効果がありますが、画像には抽出可能なテキストが含まれないので、画像のリポジトリでは同様の効果は得られません。
 * テキスト事前抽出では、フルテキスト検索に関連するテキストの抽出がきわめて効率的に実行され、きわめて効率的に使用できるような形式で Oak の再インデックス／インデックス作成プロセスに渡されます。
 
-#### テキストの事前抽出を使用できるのはいつですか。{#when-can-text-pre-extraction-be-used}
+#### テキスト事前抽出を使用できる状況{#when-can-text-pre-extraction-be-used}
 
 バイナリ抽出が有効な&#x200B;**既存の** Lucene インデックスの再インデックス
 
-* リポジトリ内の&#x200B;**すべての**&#x200B;候補コンテンツの再インデックス処理；全文を抽出するバイナリが多数あるいは複雑な場合、全文抽出を実行するための計算上の負担が増大します。 テキスト事前抽出では、テキスト抽出の「計算コストが高い作業」が分離されたプロセスに移行され、このプロセスが直接 AEM のデータストアにアクセスするので、AEM におけるオーバーヘッドやリソースの競合が回避されます。
+* リポジトリ内の&#x200B;**すべての**&#x200B;候補コンテンツのインデックス再作成処理フルテキストを抽出するバイナリが多数または複雑な場合は、フルテキスト抽出を実行する際の計算上の負荷が高くなります。 テキスト事前抽出では、テキスト抽出の「計算コストが高い作業」が分離されたプロセスに移行され、このプロセスが直接 AEM のデータストアにアクセスするので、AEM におけるオーバーヘッドやリソースの競合が回避されます。
 
 バイナリ抽出が有効になった&#x200B;**新しい** Lucene インデックスの AEM へのデプロイメントのサポート
 
@@ -438,8 +437,8 @@ Web UI を介したアセットのアップロードやプログラムによる�
 * テキストを事前抽出する元のコンテンツ（バイナリ）がリポジトリ内に存在すること
 * CSV ファイルの生成および最終的な再インデックスの実行のためのメンテナンスウィンドウ
 * Oak バージョン 1.0.18 以降、1.2.3 以降
-* [oak-run.](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)jarversion 1.7.4+
-* インデックス作成AEMインスタンスからアクセス可能な抽出テキストを保存するファイルシステムフォルダ/共有
+* [oak-run.](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)jarversion 1.7.4以降
+* インデックス作成AEMインスタンスからアクセス可能な抽出テキストを保存するファイルシステムのフォルダー/共有
 
    * テキスト事前抽出の OSGi 設定には、AEM インスタンスから直接それらのファイルにアクセスできるように、抽出されたテキストファイルへのファイルシステムパスが必要です（ローカルドライブまたはファイル共有マウント）。
 
@@ -447,7 +446,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 >[!NOTE]
 >
->***以下に説明するoak-run.jarコマンドは、https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.htmlに完全に列挙され [ます。](https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.html)***
+>***以下に概要を示すoak-run.jarコマンドは、 https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.htmlに完全に列挙されてい [ます。](https://jackrabbit.apache.org/oak/docs/query/pre-extract-text.html)***
 >
 >上の図と後述の手順は、Apache Oak のドキュメントに記載されているテキスト事前抽出の技術的な手順を解説および補足しています。
 
@@ -461,7 +460,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 1b.ノードのリスト（1a）が CSV ファイルとしてファイルシステムに格納されます。
 
-ノードストア全体は、`--generate`が実行されるたびに（oak-runコマンドのパスで指定したとおり）トラバースされ、**新しい** CSVファイルが作成されることに注意してください。 CSVファイルは、抽出前のテキスト・プロセスの個別実行間で&#x200B;****&#x200B;再使用されません（手順1～2）。
+`--generate`が実行されるたびに（oak-runコマンドのパスで指定された）ノードストア全体が走査され、**新しい** CSVファイルが作成されることに注意してください。 CSVファイルは、テキスト事前抽出プロセスの個別の実行の間、****&#x200B;再利用されません（手順1 ～ 2）。
 
 **ファイルシステムへのテキストの事前抽出**
 
@@ -483,5 +482,4 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 3a.Lucene インデックスの[再インデックス](#how-to-re-index)が AEM で実行されます。
 
-3b.Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi設定（ファイルシステムパスを介して抽出済みテキストを指すように設定）は、抽出済みファイルからフルテキストをソースにするようOakに指示し、リポジトリに保存されたデータを直接ヒットして処理するのを防ぎます。
-
+3b.Apache Jackrabbit Oak DataStore PreExtractedTextProvider OSGi設定（ファイルシステムパスを介して抽出されたテキストを指すように設定）は、抽出されたファイルからフルテキストテキストをソースにするようOakに指示し、リポジトリに格納されたデータを直接ヒットおよび処理しません。
