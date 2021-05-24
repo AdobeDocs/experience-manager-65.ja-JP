@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
-translation-type: tm+mt
-source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
+exl-id: e47270e8-bace-4d0f-a088-7269b6356315
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1545'
 ht-degree: 98%
 
 ---
-
 
 # ワークフローへの参加{#participating-in-workflows}
 
@@ -30,7 +29,7 @@ ht-degree: 98%
 * [ワークフロー項目を開いて、詳細を表示（またはアクションを実行）](#opening-a-workflow-item-to-view-details-and-take-actions)
 * [ワークロードペイロード（複数のリソース）を表示](#viewing-the-workflow-payload-multiple-resources)
 
-## 使用可能なワークフローアクションの通知  {#notifications-of-available-workflow-actions}
+## 使用可能なワークフローアクションの通知 {#notifications-of-available-workflow-actions}
 
 作業項目（**コンテンツを承認**&#x200B;など）が割り当てられると、様々なアラートや通知が表示されます。
 
