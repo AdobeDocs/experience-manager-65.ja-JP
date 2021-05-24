@@ -8,14 +8,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: c8a505ab-a075-47da-8007-43645a8c3ce5
-translation-type: tm+mt
-source-git-commit: 3f53945579eaf5de1ed0b071aa9cce30dded89f1
+exl-id: dcec8c1b-13cc-486c-b1a4-62e6eb3184ad
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 92%
 
 ---
-
 
 # Oak-run Jar を使用したインデックス作成 {#indexing-via-the-oak-run-jar}
 
@@ -24,7 +23,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 1. AEM 6.4 用の新しいインデックス作成ツールセットです。
 1. インデックス再作成時間を削減します。より大きいリポジトリでのインデックス再作成時間に有益な影響があります。
 1. AEM でのインデックス再作成時のリソース消費を削減します。これにより、他の AEM アクティビティのシステムパフォーマンスが向上します。
-1. Oak-runは帯域外サポートを提供：実稼働環境で実稼働インスタンスに対して再インデックスを実行できない場合は、重要なパフォーマンスへの影響を回避するために、クローン環境を再インデックスに使用できます。
+1. Oak-runは、帯域外サポートを提供します。実稼動環境で実稼動インスタンスに対して再インデックスを実行できない場合は、重要なパフォーマンスへの影響を避けるために、クローン環境を使用してインデックスを再作成できます。
 
 次に、`oak-run` ツールを使用したインデックス作成操作を実行する際に活用できる使用例のリストを示します。
 
@@ -50,11 +49,11 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
 ![image2017-12-19_9-47-40](assets/image2017-12-19_9-47-40.png)
 
-## アプローチのデシジョンツリーの再インデックス作成{#reindexingapproachdecisiontree}
+## インデックス再作成アプローチのデシジョンツリー {#reindexingapproachdecisiontree}
 
 次の図に、様々なインデックス再作成アプローチを使用する状況に関するデシジョンツリーを示します。
 
-![oak_-_reindexingwithoak run](assets/oak_-_reindexingwithoak-run.png)
+![oak_-_reindexingwithoak-run](assets/oak_-_reindexingwithoak-run.png)
 
 ## MongoMK／RDMBMK のインデックス再作成 {#reindexingmongomk}
 
@@ -116,7 +115,7 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
 >[!NOTE]
 >
->このシナリオに関する詳細は、[オンライン再インデックス — SegmentNodeStore - AEMインスタンスは実行中](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning)を参照してください。
+>このシナリオに関する詳細は、[オンラインインデックス再作成 — SegmentNodeStore - AEMインスタンスは実行中](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning)を参照してください。
 
 TarMK のオンラインインデックス再作成は、前述の TarkMK オンラインインデックス再作成よりも高速です。ただし、メンテナンスウィンドウ中に実行する必要があり、時間は短くなりますが、インデックス再作成を実行するためにより多くの手順が必要となります。
 
@@ -158,7 +157,7 @@ Out-of-band インデックス再作成は、使用中の AEM インスタンス
 
 >[!NOTE]
 >
->このシナリオの詳細については、「[使用事例4 — インデックス定義の更新](/help/sites-deploying/oak-run-indexing-usecases.md#usecase4updatingindexdefinitions)」を参照してください。
+>このシナリオについて詳しくは、[使用例4 — インデックス定義の更新](/help/sites-deploying/oak-run-indexing-usecases.md#usecase4updatingindexdefinitions)を参照してください。
 
 ### ACS Ensure Index を使用した TarMK でのインデックス定義の作成と更新 {#creatingandupdatingindexdefinitionsontarmkusingacsensureindex}
 
@@ -181,4 +180,3 @@ Out-of-band インデックス再作成は、使用中の AEM インスタンス
 `oak-run.jar` 以外の方法を使用したインデックス再作成の時間またはパフォーマンスへの影響が大きすぎる場合、次の `oak-run.jar` ベースのアプローチを使用して、MongoMK ベースの AEM インストール環境に Lucene インデックス定義を読み込んでインデックスを再作成できます。
 
 ![11](assets/11.png)
-
