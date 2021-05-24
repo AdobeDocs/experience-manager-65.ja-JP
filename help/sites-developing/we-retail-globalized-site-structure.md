@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: d674458c-d5f3-4dee-a673-b0777c02ad30
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 92%
 
 ---
-
 
 # We.Retail のグローバル化されたサイト構造の使用{#trying-out-the-globalized-site-structure-in-we-retail}
 
@@ -25,7 +24,7 @@ We.Retail は、国固有の Web サイトにライブコピーできる言語�
 ## 試してみる  {#trying-it-out}
 
 1. **グローバルナビゲーション／サイト**&#x200B;からサイトコンソールを開きます。
-1. 列表示（まだアクティブでない場合）に切り替え、We.Retail を選択します。スイス、米国、フランスなどの国構造の例を、言語マスターと共に示します。
+1. 列表示（まだアクティブでない場合）に切り替え、We.Retail を選択します。例えば、スイス、米国、フランスなどの国の構造を、言語マスターの横に並べて表示します。
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
 
@@ -73,4 +72,4 @@ We.Retail は、国固有の Web サイトにライブコピーできる言語�
 
 ## その他の情報 {#further-information}
 
-詳細については、オーサリングドキュメント[Translating Content for Multilingual Sites](/help/sites-administering/translation.md)を参照して、技術的な詳細を確認してください。
+技術的な詳細については、オーサリングドキュメント[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
