@@ -11,16 +11,15 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 5b33f615f1c82ec7cf80ae00c440cb5e3f0741fa
+exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 87%
 
 ---
 
-
-# API ガイド  {#api-guides}
+# API ガイド {#api-guides}
 
 Adobe Experience Manager（AEM）では、アプリケーション開発および AEM 拡張用の API をいくつか提供しています。以下は、AEM でサポートされている API のドキュメントの一覧です。
 
@@ -29,7 +28,7 @@ Adobe Experience Manager（AEM）では、アプリケーション開発およ�
 * [Coral UI ガイド](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html)
 * [ウィジェット API（クラシック UI）ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
 * [UI テストフレームワーク JavaScript API リファレンス](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/test-api/index.html)
-* [エディターコアJavaScript APIリファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
+* [EditorコアJavaScript APIリファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)
 
 AEM シングルページアプリケーション（SPA）エディター SDK フレームワーク JavaScript API リファレンス：
 
