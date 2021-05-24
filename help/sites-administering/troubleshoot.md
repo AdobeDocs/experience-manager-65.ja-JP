@@ -10,14 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 83%
 
 ---
-
 
 # AEM のトラブルシューティング {#troubleshooting-aem}
 
@@ -80,16 +79,16 @@ ht-degree: 83%
 
 ### Sling Thread Dumper の使用  {#using-sling-thread-dumper}
 
-1. **AEM Webコンソール**&#x200B;を開きます。（例：`https://localhost:4502/system/console/`）。
-1. 「**ステータス**」タブで、「**スレッド**」を選択します。
+1. **AEM Webコンソール**&#x200B;を開きます。例えば、`https://localhost:4502/system/console/`に配置します。
+1. 「**ステータス**」タブで「**スレッド**」を選択します。
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
-### jstack （コマンドライン） {#using-jstack-command-line}を使用
+### jstack（コマンドライン） {#using-jstack-command-line}の使用
 
 1. AEM Java インスタンスの PID（プロセス ID）を確認します。
 
-   例えば、`ps -ef`または`jps`を使用できます。
+   例えば、`ps -ef`や`jps`を使用できます。
 
 1. 実行:
 
@@ -110,7 +109,7 @@ ht-degree: 83%
 AEM WCM 用の機能を開発する場合は、JCR セッションが開かれる可能性があります（データベース接続を開く処理に相当します）。開かれたセッションが閉じられないと、システムで以下の症状が発生する可能性があります。
 
 * システムの速度が低下する。
-* 多くのCacheManagerが表示されます。resizeAllエントリ（ログファイル内）;次の数(size=&lt;x>)はキャッシュの数を示し、各セッションは複数のキャッシュを開きます。
+* 多くのCacheManagerが表示されます。resizeAllログファイル内のエントリ；次の数(size=&lt;x>)は、キャッシュの数を示し、各セッションは複数のキャッシュを開きます。
 * システムのメモリが不足することがある（重大度に応じて数時間後、数日後、数週間後に発生）。
 
 閉じられていないセッションを分析して、セッションを閉じていないコードを特定するには、ナレッジベースの記事[閉じられていないセッションの分析](https://helpx.adobe.com/crx/kb/AnalyzeUnclosedSessions.html)を参照してください。
@@ -119,12 +118,11 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 発生する可能性のある問題の初期の兆候を OSGi バンドルのステータスで確認することもできます。
 
-1. **AEM Webコンソール**&#x200B;を開きます。（例：`https://localhost:4502/system/console/`）。
-1. 「**OSGI**」タブの「**バンドル**」を選択します。
+1. **AEM Webコンソール**&#x200B;を開きます。例えば、`https://localhost:4502/system/console/`に配置します。
+1. 「**OSGI**」タブの下の「**Bundles**」を選択します。
 1. 次の項目を確認します。
 
    * バンドルのステータス。「Inactive」または「Unsatisfied」と表示されているバンドルがある場合は、そのバンドルを停止してから再起動してください。問題が解決しない場合は、他の方法を使用した詳細な調査が必要になる可能性があります。
    * いずれかのバンドルで依存関係が失われていないかどうか。個々のバンドル名（リンク）をクリックすると、詳細を確認できます（問題が発生していない場合の例を次に示します）。
 
 ![screen_shot_2012-02-13at44706pm](assets/screen_shot_2012-02-13at44706pm.png)
-
