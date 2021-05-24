@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 19ad4751-1d5d-49de-b76b-3501b3e98e62
 docset: aem65
-translation-type: tm+mt
-source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 98%
 
 ---
-
 
 # キャンペーンの設定{#setting-up-your-campaign}
 
@@ -39,15 +38,15 @@ ht-degree: 98%
 * ニュースレターを作成する場合：
 
    1. [ニュースレターのエクスペリエンスを作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience)します。
-   1. [ニュースレターにコンテンツを追加](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)します。
-   1. [ニュースレターを個人用に設定](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)します。
+   1. [ニュースレターにコンテンツを追加します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+   1. [ニュースレターを個人用に設定します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
    1. [魅力的なニュースレターのランディングページを作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)します。
    1. サブスクライバーまたはリードに[ニュースレターを送信します](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
 
 * Adobe Target（旧称 Test&amp;Target）オファーを作成する場合：
 
    1. [Adobe Target オファーエクスペリエンスを作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)します。
-   1. [Adobe Target と統合](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)します。
+   1. [Adobe Target と統合します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
 >
@@ -93,7 +92,7 @@ ht-degree: 98%
 
 動作を制御するキャンペーンのプロパティを設定します。
 
-* **優先度：**&#x200B;他のキャンペーンと比較した場合の、このキャンペーンの優先度です。複数のキャンペーンを同時にオンにすると、最も優先度の高いキャンペーンが訪問者エクスペリエンスを制御します。
+* **優先度：**&#x200B;他のキャンペーンと比較した場合の、このキャンペーンの優先度です。複数のキャンペーンが同時にオンの場合、優先順位の最も高いキャンペーンが訪問者エクスペリエンスを制御します。
 * **オン／オフタイム：**&#x200B;これらのプロパティは、キャンペーンが訪問者エクスペリエンスを制御する期間を制御します。オンタイムプロパティは、キャンペーンがエクスペリエンスの制御を開始する時間を制御します。オフタイムプロパティは、キャンペーンがエクスペリエンスの制御をいつ停止するかを制御します。
 * **画像：** AEM でキャンペーンを示す画像
 * **クラウドサービス：**&#x200B;キャンペーンを統合するクラウドサービスの設定です（[Adobe Marketing Cloud との統合](/help/sites-administering/marketing-cloud.md)を参照してください）。
@@ -128,19 +127,19 @@ ht-degree: 98%
 
 * [ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers):
 
-   * [ティーザーページを訪問者セグメントに接続](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)します。
+   * [ティーザーページを訪問者セグメントに接続します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
    * [ティーザーのタッチポイントを作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser)します（コンテンツページにティーザーを追加します）。
 
 * [ニュースレター](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)：
 
-   * [ニュースレターにコンテンツを追加](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)します。
-   * [ニュースレターを個人用に設定](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)します。
+   * [ニュースレターにコンテンツを追加します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+   * [ニュースレターを個人用に設定します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
    * サブスクライバーまたはリードに[ニュースレターを送信します](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
    * [魅力的なニュースレターのランディングページを作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)します。
 
 * [Adobe Target オファー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
-   * [Adobe Target と統合](/help/sites-administering/target.md)します。
+   * [Adobe Target と統合します。](/help/sites-administering/target.md)
 
 ### 新しいタッチポイントの追加 {#adding-a-new-touchpoint}
 
@@ -239,7 +238,7 @@ AEM MCM では、リードの構成および追加を実行できます。これ
    >CSV リストの最初の行は事前定義されたラベルで、次の例のとおりに記述する必要があります。
    >
    >
-   >`email,givenName,familyName` 例えば、と書かれ `givenname`た場合、システムはそれを認識しない。
+   >`email,givenName,familyName`  — 例えば、と書き込ま `givenname`れた場合、システムはそれを認識しません。
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
