@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 801d57bbe8a1bede6dcb4bf7884e5f71ddea1e83
+exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 88%
 
 ---
-
 
 # オーサリング - 環境とツール {#authoring-the-environment-and-tools}
 
@@ -103,7 +102,7 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 ### ページの検索 {#finding-pages}
 
-このタブには、すべてのページが表示されます。任意のページを重複クリックして、編集用に開きます。
+このタブには、すべてのページが表示されます。任意のページをダブルクリックして、編集用に開きます。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -135,7 +134,7 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 >
 >ワイルドカード検索を実行するには、擬似プロパティの「name」を使用する必要があります。
 
-例えば、次の名前の画像がある場合、
+例えば、という名前の画像がある場合、
 
 `ad-nmvtis.jpg`
 
@@ -143,10 +142,10 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 * `name:*nmv*`
 * `name:AD*`
-文字の一致では、大文字と小文字が区別され ** ません。
+文字のマッチングでは、大文字と小文 ** 字は区別されません。
 
 * `name:ad?nm??is.*`
-クエリには、任意の数のワイルドカードを使用できます。
+1つのクエリで任意の数のワイルドカードを使用できます。
 
 >[!NOTE]
 >
@@ -162,7 +161,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **参照を表示を選択…** AEMは、参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
+1. **参照を表示を選択します。** AEMは参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -183,7 +182,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 ## ページ情報 {#page-information}
 
-また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリケーション、変更、ロック、LiveCopyなど）も提供します。
+また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリッシュ、変更、ロック、ライブコピーなど）も提供します。
 
 ## ページモード {#page-modes}
 
@@ -207,9 +206,9 @@ AEM では、現在作業しているページにリンクしているページ�
 >その他に次のオプションも利用できます。
 >
 >* [基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
->* [ClientContext](/help/sites-administering/client-context.md)
->* Web サイト - Web サイトコンソールを開きます。
->* 再読み込み - ページを更新します。
+* [ClientContext](/help/sites-administering/client-context.md)
+* Web サイト - Webサイトコンソールを開きます。
+* 再読み込み - ページを更新します。
 
 
 ## キーボードショートカット {#keyboard-shortcuts}
