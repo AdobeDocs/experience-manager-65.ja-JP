@@ -11,15 +11,14 @@ content-type: reference
 discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アップグレード
+exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 78%
 
 ---
-
 
 # AEM 6.5 へのアップグレード  {#upgrading-to-aem}
 
@@ -56,7 +55,7 @@ AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました�
 
 アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
-6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3より古いバージョンからアップグレードする場合は、システムのダウンタイムを伴う、アップグレードの一環としてリポジトリの移行が必要になります。
+6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3より前のバージョンからアップグレードする場合は、アップグレードの一環として、システムのダウンタイムが伴うリポジトリの移行が必要です。
 
 アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
@@ -87,11 +86,10 @@ AEM のアップグレードには複数の段階があり、場合によって�
 
 ## アップグレードフロー {#upgrade-overview-1}
 
-以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターンディテクターと開始する必要があります（[パターンディテクターによるアップグレードの複雑さの評価](/help/sites-deploying/pattern-detector.md)を参照）。これにより、生成されたレポート内のパターンに基づいて、AEM 6.4との互換性を確保するパスを決定できます。
+以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターン検出から始める必要があります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。生成されたレポートのパターンに基づいて、AEM 6.4との互換性を保つためにとるパスを決定できます。
 
-6.5では、すべての新機能の下位互換性を維持するために大きな焦点が当てられましたが、下位互換性の問題が引き続き発生する場合は、カスタムコードを6.5に準拠させる開発を一時的に延期できます。[](/help/sites-deploying/backward-compatibility.md)
+6.5では、すべての新機能の後方互換性を維持する重点が大きくなりましたが、後方互換性の問題が引き続き発生する場合は、開発を一時的に遅らせて、カスタムコードを6.5に準拠させることができます。[](/help/sites-deploying/backward-compatibility.md)
 
-最後に、6.5開発サイクルで、「持続可能なアップグレード」（「[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)」を参照）に導入された機能を使用すると、今後のアップグレードをより効率的かつシームレスに行うためのベストプラクティスに従うことができます。
+最後に、6.5の開発サイクルで、「持続可能なアップグレード」（「[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)」を参照）で導入された機能は、今後のアップグレードをより効率的かつシームレスにするためのベストプラクティスに従うのに役立ちます。
 
 ![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
-
