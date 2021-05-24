@@ -10,14 +10,13 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 91%
 
 ---
-
 
 # SPA エディターの概要{#spa-editor-overview}
 
@@ -27,7 +26,7 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 
 >[!NOTE]
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
 ## はじめに {#introduction}
 
@@ -82,7 +81,7 @@ SPA と AEM 間のインタラクションのフローは、SPA エディター�
 
 SPA エディターの主な要素に留意すると、AEM 内での SPA 編集ワークフローの概要は、作成者の観点では次のようになります。
 
-![名称未設定1](assets/untitled1.gif)
+![untitled1](assets/untitled1.gif)
 
 1. SPA エディターが読み込まれます。
 1. SPA が別個のフレームに読み込まれます。
@@ -161,7 +160,7 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 
 ## 要件と制限事項 {#requirements-limitations}
 
-作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。最低限必要な場合は、AEM](/help/sites-developing/spa-getting-started-react.md)の[SPA使用の手引きドキュメントを参照してください。
+作成者がページエディターを使用して SPA のコンテンツを編集できるようにするには、AEM SPA Editor SDK とやり取りする SPA アプリケーションを実装する必要があります。お使いの環境を動かすために必要な最低限の知識については、[AEMでのSPAの概要](/help/sites-developing/spa-getting-started-react.md)ドキュメントを参照してください。
 
 ### サポートされているフレームワーク {#supported-frameworks}
 
@@ -178,22 +177,22 @@ AEM SPA Editor SDK で動作する他の SPA フレームワークを追加で�
 
 ### 複数のセレクターの使用 {#multiple-selectors}
 
-追加のカスタムセレクターを定義し、AEM SPA SDK 用に開発された SPA の一部として使用することができます。ただし、このサポートには、`model`セレクターを最初のセレクターに、拡張子を`.json`を[必須にするJSONエクスポーター](json-exporter-components.md#multiple-selectors)が必要です。
+追加のカスタムセレクターを定義し、AEM SPA SDK 用に開発された SPA の一部として使用することができます。ただし、このサポートをおこなうには、`model`セレクターを最初のセレクターにし、拡張子を`.json`に[してJSONエクスポーターで必要にする必要があります。](json-exporter-components.md#multiple-selectors)
 
 ### テキストエディターの要件 {#text-editor-requirements}
 
 SPA で作成したテキストコンポーネントのインプレースエディタを使用する場合は、追加の設定が必要です。
 
-1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKNDジャーナルのサンプルコンテンツの場合、この要素は`<div>`要素で、使用されているセレクターは`data-rte-editelement`です。
+1. テキスト HTML を含んだコンテナラッパー要素に（任意の）属性を設定します。WKNDジャーナルのサンプルコンテンツの場合は、`<div>`要素で、使用されているセレクターは`data-rte-editelement`です。
 1. 対応する AEM テキストコンポーネントの `cq:InplaceEditingConfig` で、そのセレクター（例：`data-rte-editelement` など）を指す設定 `editElementQuery` を指定します。これにより、HTML テキストを折り返す HTML 要素をエディターが把握できます。
 
-これを行う方法の例については、[WKNDジャーナルのサンプルコンテンツを参照してください。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
+この方法の例については、[WKND Journalのサンプルコンテンツを参照してください。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
 リッチテキストエディターの `editElementQuery` プロパティと設定について詳しくは、[リッチテキストエディターの設定](/help/sites-administering/rich-text-editor.md)を参照してください。
 
 ### 制限事項 {#limitations}
 
-AEM SPAエディタSDKは、AEM 6.4 Service Pack 2で導入されました。 この機能はAdobeで完全にサポートされ、新機能として引き続き拡張および拡張されます。 次の AEM 機能は、SPA エディターではまだサポートされていません。
+AEM SPA Editor SDKは、AEM 6.4サービスパック2で導入されました。 この機能はAdobeで完全にサポートされ、新機能として引き続き強化および拡張されます。 次の AEM 機能は、SPA エディターではまだサポートされていません。
 
 * ターゲットモード
 * ContextHub
