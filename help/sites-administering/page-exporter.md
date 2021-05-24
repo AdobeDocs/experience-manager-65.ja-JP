@@ -1,51 +1,50 @@
 ---
 title: ページエクスポーター
 description: AEM ページエクスポーターの使用方法について説明します。
-translation-type: tm+mt
-source-git-commit: 6aee1506b54a932bae8f2521fce4488de7d2a52a
+exl-id: 15d08758-cf75-43c0-9818-98a579d64183
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 25%
 
 ---
 
-
 # ページエクスポーター{#the-page-exporter}
 
-AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページとしてページを書き出すことができます。
+AEMでは、画像、`.js`および`.css`ファイルを含む完全なWebページとしてページを書き出すことができます。
 
-設定が完了したら、URLの`html`を`export.zip`に置き換えて、ブラウザーからページエクスポートを要求します。 これにより、HTML形式でレンダリングされたページと参照先のアセットが含まれたアーカイブ(zip)ファイルが生成されます。 ページ内のすべてのパス（例えば、画像へのパス）が、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き直されます。 アーカイブ(zip)ファイルをブラウザーからダウンロードできます。
+設定が完了したら、URLの`html`を`export.zip`に置き換えて、ブラウザーからのページ書き出しを要求します。 これにより、HTML形式でレンダリングされたページと参照元のアセットが含まれるアーカイブ(zip)ファイルが生成されます。 ページ内のすべてのパス（例えば、画像へのパス）は、アーカイブに含まれるファイルまたはサーバー上のリソースを指すように書き換えられます。 アーカイブ(zip)ファイルは、ブラウザーからダウンロードできます。
 
 >[!NOTE]
 >
 >ブラウザーと設定に応じて、ダウンロードは次のいずれかになります。
 >* アーカイブファイル(`<page-name>.export.zip`)
->* フォルダー(`<page-name>`);効果的にアーカイブ・ファイルは既に拡張済み
+>* フォルダー(`<page-name>`);事実上、アーカイブ・ファイルは既に拡張済
 
 
 ## ページの書き出し {#exporting-a-page}
 
-次の手順では、ページを書き出す方法、およびサイトに書き出しテンプレートが存在すると仮定します。 書き出しテンプレートは、ページの書き出し方法を定義し、サイトに固有のものです。 書き出しテンプレートを作成する方法については、「[サイト](#creating-a-page-exporter-configuration-for-your-site)のページエクスポーター設定の作成」を参照してください。
+次の手順は、ページを書き出す方法と、サイトに書き出しテンプレートが存在することを前提としています。 書き出しテンプレートは、ページの書き出し方法を定義し、サイトに固有です。 書き出しテンプレートを作成するには、「[サイトのページエクスポーター設定の作成](#creating-a-page-exporter-configuration-for-your-site)」の節を参照してください。
 
 ページを書き出すには：
 
-1. **サイト**&#x200B;コンソールの必要なページに移動します。
+1. **サイト**&#x200B;コンソールで必要なページに移動します。
 
 1. ページを選択し、**プロパティ**&#x200B;ダイアログを開きます。
 
 1. 「**詳細**」タブを選択します。
 
 1. 「**エクスポート**」フィールドを展開して、エクスポートテンプレートを選択します。
-サイトに必要なテンプレートを選択し、**OK**&#x200B;で確認します。
+サイトに必要なテンプレートを選択し、「**OK**」で確定します。
 
-1. 「**保存して閉じる**」を選択して、ページのプロパティダイアログを閉じます。
+1. 「**保存して閉じる**」を選択して、ページプロパティダイアログを閉じます。
 
-1. ページの書き出しを要求し、URLのサフィックス`html`を`export.zip`に置き換えます。
+1. URLのサフィックス`html`を`export.zip`に置き換えて、ページの書き出しを要求します。
 
    次に例を示します。
    * localhost:4502/content/we-retail/language-masters/en.html
 
-   次を介してアクセス：
+   次の場所からアクセスします。
    * localhost:4502/content/we-retail/language-masters/en.export.zip
 
 
@@ -53,57 +52,57 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
 
 1. ファイルシステムで、必要に応じてファイルを解凍します。 展開すると、選択したページと同じ名前のフォルダーが作成されます。 このフォルダーには次が含まれます。
 
-   * サブフォルダー`content`。リポジトリ内のページへのパスを反映した一連のサブフォルダーのルートです
+   * サブフォルダー`content`：リポジトリ内のページへのパスを反映する一連のサブフォルダーのルートです。
 
-      * この構造内には、選択されたページ(`<page-name>.html`)のhtmlファイルがあります
+      * この構造内には、選択されたページのhtmlファイル(`<page-name>.html`)があります。
    * その他のリソース（`.js`ファイル、`.css`ファイル、画像など） は、書き出しテンプレートの設定に従って配置されます。
 
 
-1. ブラウザーでページhtmlファイル(`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`)を開き、レンダリングを確認します。
+1. ブラウザーでページのhtmlファイル(`<unzip-dir>/<path>/<to>/<page>/<page-path>.html`)を開き、レンダリングを確認します。
 
 ## サイト用のページエクスポーター設定の作成 {#creating-a-page-exporter-configuration-for-your-site}
 
-ページエクスポーターは、[コンテンツ同期フレームワーク](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)に基づいています。 **ページプロパティ**&#x200B;ダイアログで使用できる設定は、ページに必要な依存関係を定義する書き出しテンプレートです。
+ページエクスポーターは、[コンテンツ同期フレームワーク](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/package-summary.html)に基づいています。 **ページのプロパティ**&#x200B;ダイアログで使用できる設定は、ページに必要な依存関係を定義する書き出しテンプレートです。
 
-ページの書き出しがトリガーされると、書き出しテンプレートが参照され、ページパスとデザインパスの両方が動的に適用されます。 その後、標準のコンテンツ同期機能を使用してzipファイルを作成します。
+ページの書き出しがトリガーされると、書き出しテンプレートが参照され、ページパスとデザインパスの両方が動的に適用されます。 zipファイルは、標準のコンテンツ同期機能を使用して作成されます。
 
-標準搭載のAEMインストールには、`/etc/contentsync/templates/default`の下にデフォルトのテンプレートが含まれています。
+標準インストールのAEMには、`/etc/contentsync/templates/default`の下にデフォルトのテンプレートが含まれています。
 
-* このテンプレートは、リポジトリにエクスポートテンプレートが見つからない場合のフォールバックテンプレートです。
+* このテンプレートは、リポジトリ内に書き出しテンプレートが見つからない場合のフォールバックテンプレートです。
 
-* `default`テンプレートは、ページエクスポートの設定方法を示し、新しい書き出しテンプレートのベースとして機能します。
+* `default`テンプレートは、新しい書き出しテンプレートのベースとなるために、ページの書き出しを設定する方法を示します。
 
-* テンプレートのノード構造をJSON形式で表示するには、次のURLを要求します。
+* テンプレートのノード構造をJSON形式でブラウザーに表示するには、次のURLを要求します。
    `http://localhost:4502/etc/contentsync/templates/default.json`
 
 新しいページエクスポーターテンプレートを作成する最も簡単な方法は次のとおりです。
 
-* `default`テンプレートをコピーし、
+* `default`テンプレートをコピーします。
 
-* サイトに適した新しい名前を割り当て、
+* サイトに適切な新しい名前を割り当てます。
 
 * 次に、必要な更新を行います。
 
 完全に新しいテンプレートを作成するには：
 
-1. **CRXDE Lite**&#x200B;に、`/etc/contentsync/templates`の下にノードを作成します。
+1. **CRXDE Lite**&#x200B;で、`/etc/contentsync/templates`の下にノードを作成します。
 
-   * `Name`:サイトに適した名前例えば、 `<mysite>`。ページエクスポーターテンプレートを選択すると、ページプロパティダイアログに名前が表示されます。
+   * `Name`:サイトに適した名前例：  `<mysite>`。この名前は、ページエクスポーターテンプレートを選択する際に、ページプロパティダイアログに表示されます。
 
-   * `Type`:  `nt:unstructured`
+   * `Type`: `nt:unstructured`
 
 2. テンプレートノード（ここでは `mysite`）の下に、以下で説明する設定ノードを使用してノード構造を作成します。
 
-## ページのページエクスポータテンプレートのアクティブ化{#activating-a-page-exporter-configuration-for-your-pages}
+## ページのページエクスポーターテンプレートのアクティブ化{#activating-a-page-exporter-configuration-for-your-pages}
 
 テンプレートを設定したら、使用可能にする必要があります。
 
-1. CRXDEで、`/content`ブランチの必要なページに移動します。 これは、個々のページ、またはサブツリーのルートページにすることができます。
+1. CRXDEで、`/content`ブランチ内の必要なページに移動します。 これは、個々のページまたはサブツリーのルートページにすることができます。
 
-1. ページの`jcr:content`ノードで、プロパティを作成します。
+1. ページの`jcr:content`ノードで、次のプロパティを作成します。
    * `Name`:  `cq:exportTemplate`
    * `Type`:  `String`
-   * `Value`:テンプレートのパス例：  `/etc/contentsync/templates/mysite`
+   * `Value`:テンプレートへのパス例：  `/etc/contentsync/templates/mysite`
 
 ### ページエクスポーター設定ノード {#page-exporter-configuration-nodes}
 
@@ -117,9 +116,9 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
 * `page`page ノードは、ページの HTML を zip ファイルにコピーする際に使用します。次のような特徴があります。
 
    * 必須ノードである。
-   * `/etc/contentsync/templates/<mysite>`の下に配置されています。
-   * `Name`プロパティを`page`に設定して定義します。
-   * ノードタイプは`nt:unstructured`です
+   * `/etc/contentsync/templates/<mysite>`の下にあります。
+   * プロパティ`Name`を`page`に設定して定義します。
+   * ノードタイプは`nt:unstructured`です。
 
    `page` ノードには以下のプロパティがあります。
 
@@ -137,8 +136,8 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
 * `design`design ノードは、書き出されるページに使用されているデザインをコピーする際に使用します。次のような特徴があります。
 
    * オプションである。
-   * `/etc/contentsync/templates/<mysite>`の下に配置されています。
-   * `Name`プロパティを`design`に設定して定義します。
+   * `/etc/contentsync/templates/<mysite>`の下にあります。
+   * プロパティ`Name`を`design`に設定して定義します。
    * ノードタイプは `nt:unstructured` です。
 
    `design` ノードには以下のプロパティがあります。
@@ -149,16 +148,16 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
 
 
 * `generic`
-汎用ノードは、clientlibsのようなリソースのコピーに使用されます。 
-`.js` または `.css` ファイルをzipファイルに保存します。次の特性を持ちます。
+汎用ノードは、clientlibsなどのリソースのコピーに使用されます 
+`.js` または `.css` ファイルをzipファイルにコピーします。次の特性があります。
 
    * オプションである。
-   * `/etc/contentsync/templates/<mysite>`の下に配置されています。
+   * `/etc/contentsync/templates/<mysite>`の下にあります。
    * 特定の名前を持たない。
    * ノードタイプは `nt:unstructured` です。
-   * `type`プロパティと`type`関連するプロパティがあります。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
+   * `type`プロパティと`type`関連プロパティがある。<!--Has a `type` property and any `type` related properties as defined in the Overview of configuration types section of the Content Sync framework.-->
 
-   例えば、次の設定ノードは`mysite.clientlibs.js`ファイルをzipファイルにコピーします。
+   例えば、次の設定ノードでは、`mysite.clientlibs.js`ファイルをzipファイルにコピーします。
 
    ```xml
    "mysite.clientlibs.js": {
@@ -177,7 +176,7 @@ AEMでは、画像、`.js`、`.css`ファイルを含む完全なWebページと
 As you may have noticed in the node structure, the **Geometrixx** page export template has a `logo` node with a `type` property set to `image`. This is a special configuration type that has been created to copy the image logo to the zip file. 
 -->
 
-特定の要件を満たすには、[カスタム更新ハンドラ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/handler/package-summary.html)を実装する必要がある場合があります。
+特定の要件を満たすには、場合によっては[カスタム更新ハンドラー](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/contentsync/handler/package-summary.html)を実装する必要があります。
 
 <!-- To meet some specific requirements, you may need to implement a custom `type` property: to do so, refer to the Implementing a custom update handler section in the Content Sync page.
 -->
@@ -193,4 +192,4 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 ## トラブルシューティング {#troubleshooting}
 
-zipファイルのダウンロードに問題が発生した場合は、リポジトリの`/var/contentsync`ノードを削除して、再度エクスポートリクエストを送信できます。
+zipファイルのダウンロードで問題が発生した場合は、リポジトリ内の`/var/contentsync`ノードを削除し、書き出しリクエストを再度送信できます。
