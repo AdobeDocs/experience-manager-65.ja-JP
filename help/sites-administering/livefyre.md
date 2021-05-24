@@ -9,14 +9,13 @@ content-type: reference
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
-translation-type: tm+mt
-source-git-commit: ce64b148ba96cc64670aaf96c1b201bafa282b98
+exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
-
 
 # Livefyre との統合{#integrating-with-livefyre}
 
@@ -32,31 +31,31 @@ AEM 6.5 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 >
 >AEM-LF パッケージの一部の機能は、ソーシャルコンポーネントフレームワーク（SCF）に依存しています。Livefyre 機能パックをコミュニティ以外のサイトの一部として使用している場合は、Web サイトのオーサー clientlibs に依存関係として *cq.social.scf* を宣言する必要があります。コミュニティ Web サイトの一部として LF 機能パックを使用している場合、この依存関係はすでに宣言されているはずです。
 
-1. AEMのホームページから、左側のレールの&#x200B;**ツール**&#x200B;アイコンをクリックします。
-1. **展開/パッケージ**&#x200B;に移動します。
-1. パッケージマネージャーで、プリインストールされたLivefyre機能パッケージが表示されるまでスクロールし、パッケージタイトル&#x200B;**cq-social-livefyre-pkg-1.2.6.zip**&#x200B;をクリックしてオプションを展開します。
-1. **その他/**&#x200B;のアンインストールをクリックします。
+1. AEMホームページで、左側のレールの&#x200B;**ツール**&#x200B;アイコンをクリックします。
+1. **デプロイメント/パッケージ**&#x200B;に移動します。
+1. パッケージマネージャーで、事前にインストールされたLivefyre機能パッケージが表示されるまでスクロールし、パッケージタイトル&#x200B;**cq-social-livefyre-pkg-1.2.6.zip**&#x200B;をクリックしてオプションを展開します。
+1. **その他>アンインストール**&#x200B;をクリックします。
 
    ![livefyre-aem-uninstall-64](assets/livefyre-aem-uninstall-64.png)
 
 1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からLivefyreパッケージをダウンロードします。
 
-1. パッケージマネージャーから、ダウンロードしたパッケージをインストールします。 AEMでのソフトウェアの配布とパッケージの使い方の詳細は、[パッケージの使い方](/help/sites-administering/package-manager.md)を参照してください
+1. パッケージマネージャーから、ダウンロードしたパッケージをインストールします。 AEMでのソフトウェア配布とパッケージの使用について詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 
    ![livefyre-aem4-6-4](assets/livefyre-aem4-6-4.png)
 
    Livefyre-AEM パッケージがインストールされます。統合機能を使い始める前に、Livefyre を使用するように AEM を設定する必要があります。
 
-   機能パックの詳細およびリリースノートについては、「[機能パック](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/feature-packs-release-notes.html)」を参照してください。
+   機能パックの詳細とリリースノートについては、[機能パック](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes/feature-packs-release-notes.html)を参照してください。
 
-### Livefyreを使用するようにAEMを設定します。構成フォルダーの作成{#configure-aem-to-use-livefyre-create-a-configuration-folder}
+### Livefyreを使用するようにAEMを設定します。構成フォルダー{#configure-aem-to-use-livefyre-create-a-configuration-folder}の作成
 
-1. AEMのホームページから、左のナビゲーションバーの&#x200B;**ツール**&#x200B;アイコンをクリックし、**一般/設定ブラウザー**&#x200B;に移動します。
+1. AEMホームページで、左側のレールの&#x200B;**ツール**&#x200B;アイコンをクリックし、**一般/設定ブラウザー**&#x200B;に移動します。
    * 詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
 1. 「**作成**」をクリックして、設定を作成ダイアログを開きます。
 1. 設定に名前を付け、「**クラウド設定**」チェックボックスをオンにします。
 
-   これにより、**ツール/デプロイメント/Livefyre設定**&#x200B;の下に、指定した名前のフォルダーが作成されます。
+   これにより、**ツール/デプロイメント/Livefyre設定**&#x200B;の下に、指定された名前のフォルダーが作成されます。
 
    ![livefyre-aem-create-config-folder](assets/livefyre-aem-create-config-folder.png)
 
@@ -64,14 +63,14 @@ AEM 6.5 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 
 組織の Livefyre ライセンス資格情報を使用するように AEM を設定して、Livefyre と AEM の間で通信できるようにします。
 
-1. AEMのホームページから、左のナビゲーションバーの&#x200B;**ツール**&#x200B;アイコンをクリックし、**デプロイメント/Livefyre設定**&#x200B;に移動します。
+1. AEMホームページで、左側のレールの&#x200B;**ツール**&#x200B;アイコンをクリックし、**デプロイメント/Livefyre設定**&#x200B;に移動します。
 1. 新しい Livefyre 設定を作成する設定フォルダーを選択して、「**作成**」をクリックします。
 
    ![create-livefyre-configuration1](assets/create-livefyre-configuration1.png)
 
    >[!NOTE]
    >
-   >Livefyreの設定をフォルダーに追加する前に、フォルダーのプロパティでクラウド設定を有効にする必要があります。 構成フォルダーは[構成ブラウザーで作成および管理します。](/help/sites-administering/configurations.md)
+   >Livefyre設定を追加する前に、フォルダーのプロパティでクラウド設定を有効にしておく必要があります。 設定フォルダーは[設定ブラウザーで作成および管理されます。](/help/sites-administering/configurations.md)
    >
    >設定の名前は作成できません。フォルダーのパスによって参照されます。設定はフォルダーごとに 1 つのみです。
 
@@ -79,11 +78,11 @@ AEM 6.5 には、Livefyre 機能パッケージ 1.2.6 がプリインストー�
 
    ![create-livefyre-configuration2](assets/create-livefyre-configuration2.png)
 
-1. 組織のLivefyre資格情報を入力し、**OK**&#x200B;をクリックします。
+1. 組織のLivefyre資格情報を入力し、「**OK**」をクリックします。
 
    ![configure-aem2](assets/configure-aem2.png)
 
-   この情報にアクセスするには、Livefyre studioを開き、**設定/統合設定/秘密鍵証明書**&#x200B;に移動します。
+   この情報にアクセスするには、Livefyre Studioを開き、**設定/統合設定/資格情報**&#x200B;に移動します。
 
    Livefyre を使用するように AEM インスタンスが設定され、統合機能を使用できます。
 
@@ -95,10 +94,10 @@ AEM 用 Livefyre パッケージには、AEM Communities プロファイルと L
 
 デフォルトの認証統合は、すべてのサイトに対して完璧なわけではありません。サイトテンプレートの認証フローに完全に合致させるために、ニーズに合わせてデフォルトの Livefyre Authentication Delegate を上書きすることができます。次の手順を実行します。
 
-1. CRXDE Liteを使用して、*/libs/social/integrations/livefyre/components/authorizablecomponent/authclientlib*&#x200B;を&#x200B;*/apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib*&#x200B;にコピーします。
-1. */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib/auth.js*&#x200B;を編集して保存し、ニーズに合ったLivefyre認証委任を実装します。
+1. CRXDE Liteを使用して、 */libs/social/integrations/livefyre/components/authorizablecomponent/authclientlib*&#x200B;を&#x200B;*/apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib*&#x200B;にコピーします。
+1. */apps/social/integrations/livefyre/components/authorizablecomponent/authclientlib/auth.js*&#x200B;を編集して保存し、ニーズに合ったLivefyre Auth Delegateを実装します。
 
-   認証委任のカスタマイズの詳細については、[ID統合](https://answers.livefyre.com/developers/identity-integration/)を参照してください。
+   Auth Delegateのカスタマイズについて詳しくは、[ID統合](https://answers.livefyre.com/developers/identity-integration/)を参照してください。
 
    AEM Clientlibsの詳細については、[クライアント側ライブラリの使用](https://helpx.adobe.com/jp/experience-manager/6-3/sites/developing/using/clientlibs.html)を参照してください。
 
@@ -112,9 +111,9 @@ Livefyre コンポーネントを Sites 内のページに追加する前に、L
 
 >[!NOTE]
 >
->認証を必要とするアプリは、「シングルサインオン統合のカスタマイズ」で認証が設定されるまで機能しません。
+>認証が必要なアプリは、シングルサインオン統合のカスタマイズで認証が設定されるまで機能しません。
 
-1. デザインモードの&#x200B;**コンポーネント**&#x200B;サイドパネルから、メニューから&#x200B;**Livefyre**&#x200B;を選択して、使用可能なLivefyreコンポーネントにリストを制限します。
+1. デザインモードの&#x200B;**コンポーネント**&#x200B;サイドパネルから、メニューから&#x200B;**Livefyre**&#x200B;を選択して、使用可能なLivefyreコンポーネントに限定します。
 
    ![livefyre-add](assets/livefyre-add.png)
 
@@ -123,9 +122,9 @@ Livefyre コンポーネントを Sites 内のページに追加する前に、L
 
    既存のアプリを埋め込む場合、アプリを選択するように促されます。新しいアプリを作成する場合、アプリは、コンテンツが表示される前に設定しておく必要があります。アプリは、Livefyre サイト、およびページ用に Livefyre クラウド設定を有効にした際に選択したネットワークに作成されます。
 
-   コンポーネントの挿入について詳しくは、「[ページコンテンツの編集](https://helpx.adobe.com/jp/experience-manager/6-3/sites/authoring/using/editing-content.html)」を参照してください。
+   コンポーネントの挿入について詳しくは、[ページコンテンツの編集](https://helpx.adobe.com/jp/experience-manager/6-3/sites/authoring/using/editing-content.html)を参照してください。
 
-### AEMページ用のLivefyreコンポーネントの編集を参照してください。{#edit-a-livefyre-component-for-an-aem-page}
+### AEMページ用のLivefyreコンポーネントを編集します。{#edit-a-livefyre-component-for-an-aem-page}
 
 Livefyre コンポーネントは、Livefyre Studio でのみ設定および編集できます。AEM で次の手順を実行します。
 
@@ -142,11 +141,11 @@ UGC Importer を使用して、Twitter および Instagram ユーザー生成コ
 
 >[!NOTE]
 >
->Assets を使用して UGC を読み込む前に、Livefyre Studio でソーシャルアカウントと権限リクエストアカウントを設定する必要があります。[設定を参照：権限の要求](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html)を参照してください。
+>Assets を使用して UGC を読み込む前に、Livefyre Studio でソーシャルアカウントと権限リクエストアカウントを設定する必要があります。[設定を参照：権限リクエスト](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html)を参照してください。
 
 UGC を AEM Assets に読み込むには：
 
-1. AEMのホームページから、**アセット/ファイル**&#x200B;に移動します。
+1. AEMのホームページから、**Assets/Files**&#x200B;に移動します。
 1. 「**作成**」をクリックし、「**UGCを読み込み**」をクリックします。
 
    ![livefyre-aem-import-ugc](assets/livefyre-aem-import-ugc.png)
@@ -156,9 +155,9 @@ UGC を AEM Assets に読み込むには：
    * Livefyre からコンテンツを見つけるには、「UGC ライブラリ」タブをクリックします。フィルターおよび検索を使用して UGC ライブラリからコンテンツを見つけます。
    * Twitter および Instagram からコンテンツを見つけるには、「Twitter」または「Instagram」タブをクリックします。検索またはフィルターを使用してコンテンツを見つけます。
 
-1. 読み込むアセットを選択します。選択したアセットは自動的にカウントされ、**選択済み**&#x200B;タブに保存されます。
-1. **オプション**:「 **** 選択済み」タブをクリックし、読み込むUGCコンテンツを確認します。
-1. 「**Next**」をクリックします。
+1. 読み込むアセットを選択します。選択したアセットが自動的にカウントされ、「**選択済み**」タブに保存されます。
+1. **オプション**:「選択済み」タ **** ブをクリックし、読み込むUGCコンテンツを確認します。
+1. 「**次へ**」をクリックします。
 
    ![livefyre-aem-import-ugc2](assets/livefyre-aem-import-ugc2.png)
 
@@ -166,19 +165,19 @@ UGC を AEM Assets に読み込むには：
 
    Instagram の場合：
 
-   * **手動要求** 権を使用して、コピー&amp;ペーストできるメッセージを取得し、Instagram経由でコンテンツ所有者に手動で送信できます。
-   * **手動でコンテンツ** 権限を属性付けして、個々のアセットの権限を上書きします。
+   * **手動で** の要求：コピー&amp;ペーストできるメッセージを取得し、Instagramを介して手動でコンテンツ所有者に送信する権限。
+   * **手動でのコンテンツ** 権限の属性を指定して、個々のアセットの権限を上書きします。
 
    >[!NOTE]
    >
-   >非ビジネスユーザーアカウントからのコンテンツの集計に影響する更新により、お客様に代わってコメントを投稿したり、作成者からの返信を自動的に確認したりすることはできません。 [詳しくは、ここをクリックしてください](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/)。
+   >ビジネス以外のユーザーアカウントからのコンテンツの集約に影響する更新により、お客様に代わってコメントを投稿したり、作成者からの返信を自動的に確認したりできなくなりました。 [詳しくはここをクリック](https://developers.facebook.com/blog/post/2018/04/04/facebook-api-platform-product-changes/)してください。
 
    ![livefyre-aem-import-ugc3-6-4](assets/livefyre-aem-import-ugc3-6-4.png)
 
    Twitter の場合
 
    * **作成者へメッセージ**：コンテンツ所有者に、アセットに対する権限をリクエストするメッセージを送信します。
-   * **手動でコンテンツ** 権限を属性付けして、個々のアセットの権限を上書きします。
+   * **手動でのコンテンツ** 権限の属性を指定して、個々のアセットの権限を上書きします。
 
 
 1. 「**読み込み**」をクリックします。
@@ -191,7 +190,7 @@ UGC を AEM Assets に読み込むには：
    >
    >Twitter には、同じアカウントから来る同じリクエストに対して制限があります。2 つ以上のアセットを読み込む場合、メッセージを個別に変更して、フラグが設定されるのを避けます。
 
-1. 右上隅の「**完了**」をクリックして、権限要求ワークフローを終了します。
+1. 右上隅の「**完了**」をクリックして、権限リクエストワークフローを終了します。
 
     Livefyre Studio で、アセットに対する保留中の権限リクエストのステータスを確認できます。コンテンツが権限リクエストを保留している場合、権限が付与されるまで、AEM Assets でアセットが表示されません。権限リクエストが許可されると、AEM Assets にアセットが自動的に表示されます。
 
@@ -206,11 +205,11 @@ AEM Commerce ユーザーは、既存の製品カタログを Livefyre にシー
 製品カタログを読み込んだら、製品がリアルタイムに Livefyre インスタンスに表示されます。AEM Commerce 製品カタログの項目を編集または削除する場合、変更は Livefrye で自動的に更新されます。
 
 1. AEMインスタンスに最新のLivefyre for AEMパッケージがインストールされていることを確認します。
-1. AEMのホームページから、**AEMコマース**&#x200B;に移動します。
+1. AEMのホームページから、**AEM Commerce**&#x200B;に移動します。
 1. 新しいコレクションを作成するか、既存のコレクションを使用します。
-1. コレクションの上にカーソルを置き、「コレクションのプロパティ」**（鉛筆アイコン）をクリックします。**
-1. 「**Livefyre**&#x200B;と同期」をチェックします。
-1. **Livefyreページのプレフィックス**&#x200B;に入力し、このコレクションをAEMの特定のページにリンクします。
+1. コレクションの上にマウスポインターを置き、「**コレクションのプロパティ**」（鉛筆アイコン）をクリックします。
+1. 「 **Livefyre**&#x200B;と同期」をオンにします。
+1. **Livefyreページのプレフィックス**&#x200B;に入力して、このコレクションをAEMの特定のページにリンクします。
 
    ページのプレフィックスは、環境のルートパスを定義します（そこから製品ページの検索が開始されます）。Livefyre で、関連付けられた対応する製品を含む最初のページが選択されます。別の製品のための別のページを取得するには、複数のコレクションが必要です。
 
@@ -232,4 +231,3 @@ AEM Commerce ユーザーは、既存の製品カタログを Livefyre にシー
 | Storify 2 |  | X | X | X |
 | トレンド分析 |  | X | X | X |
 | アップロードボタン |  | X | X | X |
-
