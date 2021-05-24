@@ -9,16 +9,15 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: a76425e9-fd3b-4c73-80f9-0ebabb8fd94f
-translation-type: tm+mt
-source-git-commit: 2da3da1a36f074593e276ddd15ed8331239ab70f
+exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2748'
 ht-degree: 81%
 
 ---
 
-
-# VLTツールの使い方{#how-to-use-the-vlt-tool}
+# VLTツールの使用方法{#how-to-use-the-vlt-tool}
 
 Jackrabbit FileVault ツール（VLT）は、Jackrabbit／AEM インスタンスのコンテンツをファイルシステムにマップするためのツールで、[The Apache Foundation](https://www.apache.org/) によって開発されました。VLT ツールの機能はソース管理システムクライアント（Subversion（SVN）クライアントなど）に似ており、通常のチェックイン、チェックアウト、管理操作をおこなうことができるほか、プロジェクトのコンテンツを柔軟に表現するための設定オプションも用意されています。
 
@@ -26,7 +25,7 @@ VLT ツールはコマンドラインから実行します。このドキュメ�
 
 ## 概念およびアーキテクチャ {#concepts-and-architecture}
 
-Filevaultツールの概念と構造の詳細については、[Apache Jackrabbit Filevaultドキュメント](https://jackrabbit.apache.org/filevault/index.html)の[Filevaultの概要](https://jackrabbit.apache.org/filevault/overview.html)と[Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html)のページを参照してください。
+Filevaultツールの概念と構造の概要については、[Filevaultの概要](https://jackrabbit.apache.org/filevault/overview.html)と[Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html)のページ（[Apache Jackrabbit Filevaultのドキュメント](https://jackrabbit.apache.org/filevault/index.html)を参照）を参照してください。
 
 ## VLT の導入 {#getting-started-with-vlt}
 
@@ -40,18 +39,18 @@ VLT の使用を開始するには、次の手順を実行する必要があり�
 
 ### VLTツールのインストール{#installing-the-vlt-tool}
 
-VLT ツールを使用するには、まず VLT ツールをインストールする必要があります。このツールは追加のツールなので、デフォルトではインストールされません。 また、システムの環境変数を設定する必要があります。
+VLT ツールを使用するには、まず VLT ツールをインストールする必要があります。追加のツールなので、デフォルトではインストールされません。 また、システムの環境変数を設定する必要があります。
 
 1. [MavenアーティファクトリポジトリからFileVaultアーカイブファイルをダウンロードします。](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
-   >VLTツールのソースはGitHubで[利用できます。](https://github.com/apache/jackrabbit-filevault)
+   >VLTツールのソースは[GitHubで入手できます。](https://github.com/apache/jackrabbit-filevault)
 1. アーカイブを解凍します。
-1. &lt;a追加0/>を環境`PATH`に送信し、必要に応じて`vlt`または`vlt.bat`にアクセスできるようにします。 `<archive-dir>/vault-cli-<version>/bin`次に例を示します。
+1. `<archive-dir>/vault-cli-<version>/bin`を環境`PATH`に追加して、コマンドファイル`vlt`または`vlt.bat`に適宜アクセスできるようにします。 次に例を示します。
 
    `<aem-installation-dir>/crx-quickstart/opt/helpers/vault-cli-3.1.16/bin>`
 
-1. コマンドラインシェルを開き、`vlt --help`を実行します。 出力が次のヘルプ画面のようになっていることを確認します。
+1. コマンドラインシェルを開き、`vlt --help`を実行します。 出力が次のヘルプ画面に似ていることを確認します。
 
    ```shell
    vlt --help
@@ -123,7 +122,7 @@ svn co https://svn.server.com/repos/myproject
 
 filevault とリポジトリを同期する必要があります。次の手順を実行します。
 
-1. コマンドラインで`content/jcr_root`に移動します。
+1. コマンドラインで、 `content/jcr_root`に移動します。
 1. 次のように入力してリポジトリをチェックアウトします（**4502** をお使いのポート番号に置き換えて、お使いの admin パスワードを使用してください）。
 
    ```shell
@@ -132,9 +131,9 @@ filevault とリポジトリを同期する必要があります。次の手順�
 
    >[!NOTE]
    >
-   >資格情報は、初回のチェックアウト時に1回だけ指定する必要があります。その後、`.vault/auth.xml`内のホームディレクトリに保存されます。
+   >資格情報は、最初のチェックアウト時に1回だけ指定する必要があります。その後、`.vault/auth.xml`内のホームディレクトリに保存されます。
 
-### 同期が動作したかどうかをテストする{#testing-whether-the-synchronization-worked}
+### 同期が正常に動作したかどうかのテスト{#testing-whether-the-synchronization-worked}
 
 リポジトリのチェックアウトと同期が完了したら、すべてが適切に機能しているかどうかをテストする必要があります。このテストを簡単におこなうには、**.jsp** ファイルを編集して、変更のコミット後にその変更が反映されているかどうかを確認します。
 
@@ -143,8 +142,8 @@ filevault とリポジトリを同期する必要があります。次の手順�
 1. `.../jcr_content/libs/foundation/components/text` に移動します。
 1. `text.jsp`で何かを編集します。
 1. `vlt st`と入力して、変更されたファイルを確認します。
-1. `vlt diff text.jsp`と入力して変更を確認してください
-1. 変更をコミット：`vlt ci test.jsp`.
+1. `vlt diff text.jsp`と入力して変更を確認します。
+1. 変更をコミットします。`vlt ci test.jsp`.
 1. テキストコンポーネントを含むページを再読み込みして、変更が反映されているかどうかを確認します。
 
 ## VLT ツールのヘルプの表示 {#getting-help-with-the-vlt-tool}
@@ -220,15 +219,15 @@ VLT で実行される一般的なタスクの一部を以下に示します。�
 
 ### サブツリーのチェックアウト{#checking-out-a-subtree}
 
-リポジトリのサブツリー（例：`/apps/geometrixx`）だけをチェックアウトする場合は、次のように入力します。
+リポジトリのサブツリー（例：`/apps/geometrixx`）のみをチェックアウトする場合は、次のように入力します。
 
 ```shell
 vlt co http://localhost:4502/crx/-/jcr:root/apps/geometrixx geo
 ```
 
-これを行うと、`META-INF`と`jcr_root`ディレクトリを持つ新しい書き出しルート`geo`が作成され、すべてのファイルが`geo/jcr_root`の`/apps/geometrixx`の下に配置されます。
+これにより、`META-INF`と`jcr_root`ディレクトリを持つ新しい書き出しルート`geo`が作成され、すべてのファイルが`geo/jcr_root`の`/apps/geometrixx`の下に配置されます。
 
-### フィルター適用済みチェックアウトの実行{#performing-a-filtered-checkout}
+### フィルターを適用したチェックアウトの実行{#performing-a-filtered-checkout}
 
 既存のワークスペースフィルターがあり、チェックアウトにそのフィルターを使用する場合は、最初に `META-INF/vault` ディレクトリを作成して、そこにフィルターを配置するか、またはコマンドラインで次のようにフィルターを指定します。
 
@@ -246,11 +245,11 @@ $ vlt co --filter filter.xml http://localhost:4502/crx/-/jcr:root geo
 </workspaceFilter>
 ```
 
-### .vltコントロール{#using-import-export-instead-of-vlt-control}の代わりにインポート/エクスポートを使用
+### .vlt Control {#using-import-export-instead-of-vlt-control}の代わりに読み込み/書き出しを使用する
 
 コントロールファイルを使用せずに、JCR リポジトリとローカルファイルシステムとの間でコンテンツの読み込みと書き出しをおこなうことができます。
 
-`.vlt`コントロールを使用せずにコンテンツを読み込んで書き出すには：
+`.vlt`コントロールを使用せずにコンテンツを読み込み/書き出すには：
 
 1. 最初にリポジトリをセットアップします。
 
@@ -336,7 +335,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 | `rcp` |  | ノードツリーをリモートリポジトリ間でコピーします。 |
 | `sync` |  | vault 同期サービスを制御できるようにします。 |
 
-### export {#export}
+### 書き出し {#export}
 
 &lt;uri> でマウントされた Vault ファイルシステムをローカルファイルシステム（&lt;local-path>）に書き出します。サブツリーのみを書き出すには、オプションの &lt;jcr-path> を指定できます。
 
@@ -346,7 +345,7 @@ vlt [options] <command> [arg1 [arg2 [arg3] ..]]
 export -v|-t <arg>|-p <uri> <jcr-path> <local-path>
 ```
 
-#### Options {#options}
+#### オプション {#options}
 
 |  |  |
 |--- |--- |
@@ -365,7 +364,7 @@ vlt export http://localhost:4502/crx /apps/geometrixx myproject
 
 ### import {#import}
 
-ローカルファイルシステム（`<local-path>`から始まる）を`<uri>`のボールトファイルシステムに読み込みます。 `<jcr-path>`をインポートルートとして指定できます。 `--sync`を指定した場合、インポートされたファイルは自動的にVault管理下に置かれます。
+（`<local-path>`から始まる）ローカルファイルシステムを`<uri>`のVaultファイルシステムに読み込みます。 `<jcr-path>`をインポートルートとして指定できます。 `--sync`を指定した場合、読み込まれたファイルは自動的にVault管理下に置かれます。
 
 #### 構文 {#syntax-1}
 
@@ -373,7 +372,7 @@ vlt export http://localhost:4502/crx /apps/geometrixx myproject
 import -v|-s <uri> <local-path> <jcr-path>
 ```
 
-#### オプション{#options-1}
+#### Options {#options-1}
 
 |  |  |
 |--- |--- |
@@ -445,7 +444,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | 修正プログラムリンク（名前、ID）のprintf形式（例：`[CQ520_HF_%s|%s]`） |
+| `-l (--linkFormat) <format>` | ホットフィックスリンク（名前、ID）のprintf形式（例：`[CQ520_HF_%s|%s]`） |
 | `-v (--verbose)` | 詳細出力 |
 | `-q (--quiet)` | 出力を最小限に抑えます |
 | `<localPaths> [<localPaths> ...]` | ローカルパス |
@@ -454,7 +453,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 作業用コピーファイルとディレクトリのステータスを出力します。
 
-`--show-update`を指定した場合は、各ファイルをリモートバージョンと比較してチェックします。 2 番目の文字は、更新操作によって実行されるアクションを指定します。
+`--show-update`を指定した場合、各ファイルがリモートバージョンと照合されます。 2 番目の文字は、更新操作によって実行されるアクションを指定します。
 
 #### 構文 {#syntax-4}
 
@@ -472,7 +471,7 @@ status -v|-q|-u|-N <file1> [<file2> ...]
 | `-N (--non-recursive)` | 単一のディレクトリで処理が実行されます |
 | `<file> [<file> ...]` | ステータスを表示するファイルまたはディレクトリ |
 
-### 更新 {#update}
+### アップデート {#update}
 
 リポジトリから作業用コピーに変更をコピーします。
 
@@ -615,7 +614,7 @@ proplist -q|-R <file1> [<file2> ...]
 
 >[!NOTE]
 >
->VLTは、次の特別なバージョン付きプロパティを認識します。
+>VLTは、次の特別なバージョン管理されたプロパティを認識します。
 >
 >`vlt:mime-type`
 >
@@ -637,7 +636,7 @@ propset -q|-R <propname> <propval> <file1> [<file2> ...]
 | `<propval>` | プロパティ値 |
 | `<file> [<file> ...]` | プロパティを設定するファイルまたはディレクトリ |
 
-### {#add}
+### add {#add}
 
 ファイルとディレクトリのバージョンを管理し、それらをリポジトリに追加するスケジュールを設定します。ファイルとディレクトリは次回のコミット時に追加されます。
 
@@ -711,7 +710,7 @@ console -F <file>
 
 ### rcp {#rcp}
 
-ノードツリーをリモートリポジトリ間でコピーします。`<src>` はソースノードを指し、親ノードが存在する必要がある宛先パスを `<dst>` 指定します。rcp は、データをストリーミングすることでノードを処理します。
+ノードツリーをリモートリポジトリ間でコピーします。`<src>` はソースノードを指し、親ノ `<dst>` ードが存在する必要がある宛先パスを指定します。rcp は、データをストリーミングすることでノードを処理します。
 
 #### 構文 {#syntax-17}
 
@@ -725,7 +724,7 @@ rcp -q|-r|-b <size>|-t <seconds>|-u|-n|-e <arg1> [<arg2> ...] <src> <dst>
 |--- |--- |
 | `-q (--quiet)` | 出力を最小限に抑えます。 |
 | `-r (--recursive)` | 処理を再帰的に実行します。 |
-| `-b (--batchSize) <size>` | 中間保存前に処理されるノード数。 |
+| `-b (--batchSize) <size>` | 中間保存の前に処理されるノードの数。 |
 | `-t (--throttle) <seconds>` | 中間保存の後に待機する秒数。 |
 | `-u (--update)` | 既存のノードを上書き／削除します。 |
 | `-n (--newer)` | lastModified プロパティを更新に適用します。 |
@@ -780,7 +779,7 @@ VLT で使用するステータスコードは次のとおりです。
 * !：項目が見つからない（svn 以外のコマンドによって削除済み）か不完全である
 * ~：バージョン管理された項目が別の種類の項目によって遮断されている
 
-## FileVault同期の設定{#setting-up-filevault-sync}
+## FileVault同期{#setting-up-filevault-sync}のセットアップ
 
 vault 同期サービスは、リポジトリのコンテンツをローカルファイルシステム表現と同期する（またはその逆の同期をおこなう）場合に使用します。そのためには、リポジトリの変更をリッスンし、ファイルシステムのコンテンツを定期的にスキャンする OSGi サービスをインストールします。このサービスでは、vault と同じシリアル化形式を使用して、リポジトリのコンテンツをディスクにマップします。
 
@@ -792,7 +791,7 @@ vault 同期サービスは、リポジトリのコンテンツをローカル�
 
 `vlt sync install` コマンドを使用すると、vault 同期サービスのバンドルおよび設定を自動的にインストールできます。
 
-バンドルは`/libs/crx/vault/install`の下にインストールされ、configノードは`/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`に作成されます。 最初はサービスが有効になっていますが、同期のルートは設定されていません。
+バンドルは`/libs/crx/vault/install`の下にインストールされ、設定ノードは`/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`に作成されます。 最初はサービスが有効になっていますが、同期のルートは設定されていません。
 
 次の例では、特定の uri によってアクセス可能な CRX インスタンスに同期サービスをインストールします。
 
@@ -802,7 +801,7 @@ $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
 
 ### サービスのステータスの表示  {#displaying-the-service-status}
 
-`status`コマンドは、実行中の同期サービスに関する情報を表示するのに使用できます。&quot;
+`status`コマンドを使用して、実行中の同期サービスに関する情報を表示できます。&quot;
 
 ```shell
 $ vlt sync status --uri http://localhost:4502/crx
@@ -814,7 +813,7 @@ Listing sync status for http://localhost:4502/crx/server/-/jcr:root
 
 >[!NOTE]
 >
->`status`コマンドは、サービスからライブデータを取得せず、`/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`の設定を読み取ります。
+>`status`コマンドは、サービスからライブデータを取得せずに、`/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`の設定を読み取ります。
 
 ### 同期フォルダーの追加 {#adding-a-sync-folder}
 
@@ -867,14 +866,14 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 * `.vlt-sync-config.properties`:設定ファイル。
 
-* `.vlt-sync.log`:同期中に実行された操作に関する情報を含むログファイルです。
-* `.vlt-sync-filter.xml`:リポジトリのどの部分が同期されるかを定義するフィルター。このファイルの形式は、[フィルターを適用したチェックアウトの実行](#performing-a-filtered-checkout)セクションで定義されています。
+* `.vlt-sync.log`:同期中に実行された操作に関する情報を含むログファイル。
+* `.vlt-sync-filter.xml`:リポジトリのどの部分を同期するかを定義するフィルター。このファイルの形式は、[フィルターを適用したチェックアウトの実行](#performing-a-filtered-checkout)セクションで説明されます。
 
 `.vlt-sync-config.properties`ファイルでは、次のプロパティを設定できます。
 
 **** disabled同期のオン/オフを切り替えます。デフォルトでは、このパラメーターは false に設定されており、同期が許可されます。
 
-**sync-** once空でない場合、次のスキャンで指定された方向のフォルダーが同期され、パラメーターがクリアされます。次の 2 つの値がサポートされています。
+**sync-once** 空でない場合、次のスキャンは指定された方向にフォルダーを同期し、パラメーターがクリアされます。次の 2 つの値がサポートされています。
 
 * `JCR2FS`：JCR リポジトリ内のコンテンツをすべて書き出して、ローカルディスクに書き込みます。
 * `FS2JCR`：ディスクから JCR リポジトリにすべてのコンテンツを読み込みます。
@@ -924,7 +923,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
    appropriate flag in the /Users/trushton/Applications/aem/vltsync/sandbox/dev/jcr_root/.vlt-sync-config.properties file.
    ```
 
-1. `.vlt-sync-config.properties`隠しファイルを編集し、リポジトリのコンテンツを同期する同期を設定します。
+1. `.vlt-sync-config.properties`隠しファイルを編集し、リポジトリのコンテンツを同期するように同期を設定します。
 
    ```xml
    sync-once=JCR2FS
@@ -934,7 +933,7 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
    >
    >この手順では、フィルター条件に従ってリポジトリ全体をダウンロードします。
 
-1. ログファイル`.vlt-sync.log`を確認して進行状況を確認します。
+1. ログファイル`.vlt-sync.log`で進行状況を確認します。
 
    ```xml
    ***
