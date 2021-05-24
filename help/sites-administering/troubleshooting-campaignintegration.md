@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 72%
 
 ---
-
 
 # Adobe Campaign 統合に関するトラブルシューティング{#troubleshooting-your-adobe-campaign-integration}
 
@@ -40,9 +39,9 @@ Adobe Campaign で **aemserver** 演算子が設定されていることをチ�
 
 ## 画像が Adobe Campaign コンソールに表示されない場合 {#if-images-do-not-appear-in-the-adobe-campaign-console}
 
-HTML ソースをチェックし、クライアントマシンから URL を開くことができることを検証します。URLにlocalhost:4503が含まれる場合は、Adobe Campaignコンソールマシンから到達できる発行インスタンスを指すように、作成者インスタンスのDay CQ Link Externalizerの設定を変更します。
+HTML ソースをチェックし、クライアントマシンから URL を開くことができることを検証します。URLにlocalhost:4503が含まれている場合は、オーサーインスタンス上のDay CQ Link Externalizerの設定を、Adobe Campaignコンソールマシンから到達できるパブリッシュインスタンスを指すように変更します。
 
-[Externalizerの設定を参照してください。](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)
+[Externalizerの設定](/help/sites-administering/campaignstandard.md#configuring-the-externalizer)を参照してください。
 
 ## AEM から Adobe Campaign に接続できない場合 {#if-you-cannot-connect-from-aem-to-adobe-campaign}
 
@@ -52,7 +51,7 @@ Adobe Campaign で次のエラーメッセージを探します。
 
 `Make sure the DNS alias used to access the server is correct (for example, avoid hard-coded IP addresses). (iRc=16384)`
 
-この問題を修正するには、**$キャンペーン_HOME/conf/config-&lt;インスタンス名>.xml**&#x200B;で次の内容を変更します。
+この問題を修正するには、**$CAMPAIGN_HOME/conf/config-&lt;instance-name>.xml**&#x200B;で次の変更を行います。
 
 `<dataStore hosts="*" lang="en_GB">`
 
@@ -64,7 +63,7 @@ Adobe Campaign で、ポート番号の末尾がスラッシュ（/）で終わ�
 
 ## setlocale について警告が表示される場合 {#if-you-get-a-warning-about-your-setlocale}
 
-Apache HTTPDサービスを起動していて、エラー`"Warning: setlocale: LC_CTYPE cannot change locale"`が表示される場合は、**en_CA.ISO-8859-15 locale**&#x200B;がシステムにインストールされていることを確認してください。
+Apache HTTPDサービスを起動し、エラー`"Warning: setlocale: LC_CTYPE cannot change locale"`が表示される場合は、**en_CA.ISO-8859-15 locale**&#x200B;がシステムにインストールされていることを確認してください。
 
 `local -a` を使用することで、インストールされているかどうかをチェックできます。インストールされていない場合は、**/usr/local/neolane/nl6/env.sh** スクリプトをパッチして、ロケールをインストールされたロケールに変更します。
 
@@ -78,7 +77,7 @@ AEM ログファイルに次のエラーメッセージが表示される場合�
 
 1. **$CAMPAIGN_HOME/datakit/nms/fra/js/amcIntegration.js** ファイルを開きます。
 1. メソッド amcGetSeedMetaData の 467 行目を変更します。
-1. `label : [inclView.@label](mailto:inclView.@label)`を`label : String([inclView.@label](mailto:inclView.@label))`に変更
+1. `label : [inclView.@label](mailto:inclView.@label)`を`label : String([inclView.@label](mailto:inclView.@label))`に変更します。
 
 1. 保存.
 1. サーバーを再起動します。
@@ -128,12 +127,12 @@ Adobe Campaign の配信でコンテンツを同期しようとすると、AEM �
 この問題を解決するには：
 
 * 元のプロトコルをヘッダーとして渡すように、ディスパッチャーまたはリバースプロキシを設定する必要があります。
-* OSGi構成([https://&lt;host>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr))の&#x200B;*Apache Felix HttpサービスSSLフィルター*&#x200B;は、それぞれのヘッダー設定に設定する必要があります。 [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)を参照
+* OSGi設定([https://&lt;host>:&lt;port>/system/console/configMgr](http://localhost:4502/system/console/configMgr))の&#x200B;*Apache Felix HttpサービスSSLフィルター*&#x200B;は、それぞれのヘッダー設定に設定する必要があります。 [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter)を参照
 
 ## 自身で作成したカスタムテンプレートをページのプロパティで選択できない場合 {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-Adobe Campaign用の電子メールテンプレートを作成する場合は、テンプレートの&#x200B;**jcr:content**&#x200B;ノードに&#x200B;**mapRecipient**&#x200B;という値を持つ&#x200B;**acMapping**&#x200B;プロパティを含める必要があります。含めないと、AEMフィールドの&#x200B;**ページプロパティ**&#x200B;に選択でききれません)。
+Adobe Campaignのメールテンプレートを作成する場合、テンプレートの&#x200B;**jcr:content**&#x200B;ノードに&#x200B;**mapRecipient**&#x200B;の値を持つ&#x200B;**acMapping**&#x200B;プロパティを含める必要があります。含めないと、AEMの&#x200B;**Page Properties**&#x200B;でAdobe Campaignテンプレートを選択できません。
 
 ## ログに「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」というエラーが発生する場合 {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
-カスタムテンプレートを使用すると、ログに「com.day.cq.mcm.キャンペーン.servlets.util.ParameterMapper」というエラーが表示されます。 この場合は、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)からフィーチャーパック 6576 をインストールしてください。これは、acMappingプロパティを受信者.firstName以外の値に設定すると、Adobe Campaignマネージャ側に空白の値が作成される問題です。
+カスタムテンプレートを使用する場合、ログに「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」というエラーが表示されます。 この場合は、[パッケージ共有](/help/sites-administering/package-manager.md#package-share)からフィーチャーパック 6576 をインストールしてください。これは、acMappingプロパティがrecipient.firstName以外の値に設定されている場合、Adobe Campaign Manager側で空白の値が作成される問題です。
