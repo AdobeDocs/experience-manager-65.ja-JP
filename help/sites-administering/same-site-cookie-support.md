@@ -1,29 +1,28 @@
 ---
-title: AEM 6.5と同じサイトのcookieサポート
-description: AEM 6.5と同じサイトのcookieサポート
+title: AEM 6.5に対する同じサイトのcookieのサポート
+description: AEM 6.5に対する同じサイトのcookieのサポート
 topic-tags: security
-translation-type: tm+mt
-source-git-commit: ac2f3d69fd20d7779120a194c698d6f0dd6e6a84
+exl-id: e1616385-0855-4f70-b787-b01701929bbc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '188'
-ht-degree: 1%
+ht-degree: 69%
 
 ---
 
+# AEM 6.5での同じサイトのcookieのサポート{#same-site-cookie-support-for-aem-65}
 
-# AEM 6.5 {#same-site-cookie-support-for-aem-65}と同じサイトのcookieサポート
+バージョン 80 以降、Chrome およびそれ以降の Safari では、cookie セキュリティの新しいモデルが導入されました。このモードは、`SameSite`と呼ばれる設定を通じて、サードパーティサイトにCookieの可用性に関するセキュリティ制御を導入するように設計されています。 詳しくは、こちらの[記事](https://web.dev/samesite-cookies-explained/)を参照してください。
 
-バージョン80以降、Chromeおよびそれ以降のSafariでは、cookieセキュリティの新しいモデルが導入されました。 このモードは、`SameSite`と呼ばれる設定を通じて、サードパーティサイトにcookieの利用に関するセキュリティ制御を導入するように設計されています。 詳しくは、[記事](https://web.dev/samesite-cookies-explained/)を参照してください。
-
-この設定のデフォルト値(`SameSite=Lax`)は、AEMインスタンスまたはサービス間の認証が機能しない原因になる場合があります。 これは、これらのサービスのドメインやURL構造が、このcookieポリシーの制約に該当しない可能性があるからです。
+この設定のデフォルト値（`SameSite=Lax`）により、AEM インスタンスまたはサービス間の認証が機能しないことがあります。これは、これらのサービスのドメインや URL 構造が、この cookie ポリシーの制約に該当しない可能性があるためです。
 
 この問題を回避するには、ログイントークンのSameSite cookieを`None`に設定する必要があります。
 
-これを行うには、次の手順に従います。
+これは、次の手順でおこなえます。
 
-1. `http://serveraddress:serverport/system/console/configMgr`のWebコンソールに移動
-1. **AdobeGranite Token Authentication Handler**&#x200B;を検索してクリックします。
-1. 次の図に示すように、login-token cookie **の** SameSite属性を`None`に設定します
-   ![サメサイト](assets/samesite1.png)
+1. Web コンソール（`http://serveraddress:serverport/system/console/configMgr`）にアクセスします。
+1. **Adobe Granite Token Authentication Handler** を検索してクリックします。
+1. 次の図に示すように、**login-token cookie の SameSite 属性**&#x200B;を `None` に設定します。
+   ![samesite](assets/samesite1.png)
 1. 「保存」をクリックします。
-1. この設定が更新され、ユーザーがログアウトしてから再度ログインすると、`login-token` cookieには`None`属性が設定され、クロスサイトリクエストに含められます。
+1. この設定が更新され、ユーザーがログアウトしてから再度ログインすると、`login-token` cookieに `None` 属性が設定され、クロスサイトリクエストに含められるようになります。
