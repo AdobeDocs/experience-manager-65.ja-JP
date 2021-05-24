@@ -10,14 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: aca444f6-418a-4c01-ae19-663b4e04fab9
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+exl-id: 15f45978-a983-49a0-91cf-c7610fc37eef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 77%
 
 ---
-
 
 # Adobe Search&amp;Promote との統合{#integrating-with-adobe-search-promote}
 
@@ -53,7 +52,7 @@ Search&amp;Promoteサービスに設定されるデフォルトのURLは`https:/
 
 Search&amp;Promote への 1 つ以上の接続を設定して、Web ページがサービスとやり取りできるようにします。接続するには、Search&amp;Promote アカウントのメンバー ID とアカウント番号が必要です。
 
-1. **ツール**&#x200B;アイコン/**デプロイメント**&#x200B;から、**Cloud Services**&#x200B;を選択します。
+1. **ツール**&#x200B;アイコン/**デプロイ**&#x200B;から、「**Cloud Services**」を選択します。
 
    これにより、クラウドサービスダッシュボードが表示されます。ローカルマシンの場合、ダッシュボードの URI は、次のようになります。
 
@@ -61,9 +60,9 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
 1. クラウドサービスページで、Adobe Search&amp;Promote リンクまたは Search&amp;Promote アイコンをクリックします。
 
-1. 初めてAdobeSearch&amp;Promoteを設定する場合は、「**今すぐ設定**」をクリックして設定を作成パネルを開きます。
+1. AdobeSearch&amp;Promoteを初めて設定する場合は、「**今すぐ設定**」をクリックして「設定を作成」パネルを開きます。
 
-   Search&amp;Promoteの詳細を表示するには、[**詳細情報**]をクリックしてください。
+   Search&amp;Promoteの詳細を確認する場合は、代わりに&#x200B;**詳細**&#x200B;をクリックします。
 
    ![](assets/chlimage_1-59.png)
 
@@ -82,7 +81,7 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
 
    >[!NOTE]
    >
-   >**自分でこの情報を得るには、**&#x200B;まずログインする必要があります
+   >**自分でこの情報を得るには、まず**&#x200B;にログインする必要があります。
    >
    >[https://searchandpromote.omniture.com/center/](https://searchandpromote.omniture.com/center/)
    >
@@ -93,17 +92,17 @@ Search&amp;Promote への 1 つ以上の接続を設定して、Web ページが
    >
    >[https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY](https://searchandpromote.omniture.com/px/home/?sp_id=XXXXXXXX-spYYYYYYYY)
    >
-   >**この場合：**
+   >**ここで、**
    >
-   >    * **XXXXXXXXXXXX** は、お使いの**メンバid**に対応します
-   >    * **spYYYYYYYYは、使用する**  **アカウント番号に対応します**
+   >    * **** XXXXXXXは、使用するメンバーID**に対応します**
+   >    * **** spYYYYYYYYYはアカウント番 **号に対応します**
 
 
 1. 「**Search&amp;Promote に接続**」をクリックします。
 
    接続成功メッセージが表示されたら、「**OK**」をクリックします。
 
-   (接続後、ボタンのテキストは「**Search&amp;Promoteに再接続**」に変わります)。
+   (接続後、ボタンのテキストが「**Search&amp;Promoteに再接続**」に変わります)。
 
 1. 「**OK**」をクリックします。今作成した設定の Search&amp;Promote 設定ページが表示されます。
 
@@ -113,7 +112,7 @@ Search&amp;Promote アカウントがアジアまたはヨーロッパのもの�
 
 データセンター：
 
-1. `https://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`のWebコンソールに移動します。
+1. Webコンソール(`https://localhost:4502/system/console/configMgr/com.day.cq.searchpromote.impl.SearchPromoteServiceImpl`)に移動します。
 
    ![](assets/chlimage_1-61.png)
 
@@ -141,7 +140,7 @@ Search&amp;Promote アカウントがアジアまたはヨーロッパのもの�
 >
 >サービス接続は、既に設定されている必要があります（[Search&amp;Promote への接続の設定](#connection)を参照）。
 
-1. **ページプロパティ**&#x200B;ダイアログボックスを開きます。例えば、** Webサイト**ページで、ページを右クリックし、**プロパティ**&#x200B;をクリックします。
+1. **ページプロパティ**&#x200B;ダイアログボックスを開きます。例えば、** Webサイト**ページで、ページを右クリックし、「**プロパティ**」をクリックします。
 1. 「**クラウドサービス**」タブをクリックします。
 1. 親ページからのクラウドサービス設定の継承を無効にするには、継承パスの横にある南京錠アイコンをクリックします。
 
