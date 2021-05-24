@@ -8,21 +8,20 @@ contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
-translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 70%
 
 ---
 
-
 # リッチテキストエディターを使用したコンテンツのオーサリング {#use-rich-text-editor-to-author-content}
 
-リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。様々なコンポーネントの基礎となります。、次を含みます。
+リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。様々なコンポーネントの基礎となります。を含む：
 
 * テキスト
-* テキスト画像
+* テキスト 画像
 * テーブル
 
 ## インプレース編集 {#in-place-editing}
@@ -47,9 +46,9 @@ ht-degree: 70%
 
 ## フルスクリーン編集  {#full-screen-editing}
 
-テキストベースのコンポーネントの場合、ツールバー![](do-not-localize/screen_shot_2018-03-21at163236.png)からフルスクリーンモードをタップすると、リッチテキストエディターが開き、ページコンテンツの残りの部分が非表示になります。
+テキストベースのコンポーネントの場合は、ツールバー![](do-not-localize/screen_shot_2018-03-21at163236.png)からフルスクリーンモードをタップすると、リッチテキストエディターが開き、残りのページコンテンツが非表示になります。
 
-フルスクリーンモードでは、オーサリングに使用できる設定済みのすべてのオプションが表示されます。 使用できるオプションは[構成](/help/sites-administering/rich-text-editor.md)によって異なります。
+全画面表示モードでは、オーサリングに使用できる設定済みのオプションがすべて表示されます。 使用可能なオプションは、設定](/help/sites-administering/rich-text-editor.md)によって異なります。[
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
@@ -66,4 +65,4 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->ネストされたリストをMicrosoft WordからRTEにコピーすると、結果が一貫しなくなり、RTE内でテキストを貼り付けた後に手動で調整する必要が生じる場合があります。
+>ネストされたリストをMicrosoft WordからRTEにコピーすると、結果に一貫性がなく、RTEにテキストを貼り付けた後に手動で調整する必要が生じる場合があります。
