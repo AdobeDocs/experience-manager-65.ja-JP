@@ -8,7 +8,6 @@ breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントを含む、Adobe Experience Manager 6.5 のインストール、デプロイメント、およびアーキテクチャについて詳しく説明します。
 feature: デプロイ
 role: Architect
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '328'
@@ -17,7 +16,7 @@ ht-degree: 92%
 ---
 
 
-# AEM 6.5ユーザーガイドの展開{#deploying}
+# AEM 6.5デプロイユーザーガイド {#deploying}
 
 + [デプロイユーザーガイド](home.md)
 + AEM プラットフォームの概要 {#introduction}
@@ -71,7 +70,7 @@ ht-degree: 92%
    + [AEM 6.5 における後方互換性](backward-compatibility.md)
    + [アップグレード手順](upgrade-procedure.md)
    + [インプレースアップグレードの実行](in-place-upgrade.md)
-   + [オフライン再インデックスを使用したアップグレード中のダウンタイムの短縮](upgrade-offline-reindexing.md)
+   + [オフラインでのインデックス再作成を使用したアップグレード中のダウンタイムの削減](upgrade-offline-reindexing.md)
    + [遅延コンテンツ移行](lazy-content-migration.md)
    + [CRX2Oak 移行ツールの使用](using-crx2oak.md)
    + [アップグレード前のメンテナンスタスク](pre-upgrade-maintenance-tasks.md)
@@ -81,7 +80,7 @@ ht-degree: 92%
    + [コードのアップグレードとカスタマイズ](upgrading-code-and-customizations.md)
    + [アプリケーションサーバーのインストール環境のアップグレード手順](app-server-upgrade.md)
    + [アップグレード後にアンインストールされる廃止されたバンドルの一覧](obsolete-bundles.md)
-+ リポジトリの再構築 {#restructuring}
++ リポジトリーの再構築 {#restructuring}
    + [AEM 6.5 におけるリポジトリの再構築](repository-restructuring.md)
    + [AEM 6.5 における共通リポジトリの再構築](all-repository-restructuring-in-aem-6-5.md)
    + [AEM 6.5 における Sites リポジトリの再構築](sites-repository-restructuring-in-aem-6-5.md)
