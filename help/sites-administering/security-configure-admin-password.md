@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 00806e6e-3578-4caa-bafa-064f200a871f
-translation-type: tm+mt
-source-git-commit: 1c1ade947f2cbd26b35920cfd10b1666b132bcbd
+exl-id: b55ff9d5-8139-4ecf-ba09-5cf88207c5c4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 87%
 
 ---
-
 
 # インストール時の admin パスワードの設定{#configure-the-admin-password-on-installation}
 
@@ -52,7 +51,7 @@ java -jar aem6.3.jar
 
 ## -nointeractive フラグの使用  {#using-the-nointeractive-flag}
 
-プロパティファイルでパスワードを指定することもできます。これは、`-Dadmin.password.file`システムプロパティと組み合わされた`-nointeractive`フラグを使用して行います。
+プロパティファイルでパスワードを指定することもできます。これは、`-Dadmin.password.file`システムプロパティと組み合わせた`-nointeractive`フラグを使用しておこないます。
 
 次に例を示します。
 
@@ -68,5 +67,4 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->`-Dadmin.password.file`システムプロパティを指定せずに`-nointeractive`パラメーターを使用すると、AEMは、変更を求めることなくデフォルトの管理者パスワードを使用し、基本的に以前のバージョンの動作を複製します。 インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
-
+>`-Dadmin.password.file`システムプロパティを指定せずに`-nointeractive`パラメーターを使用する場合、AEMは、以前のバージョンの動作をレプリケートするために、変更を求めることなく、デフォルトの管理パスワードを使用します。 インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
