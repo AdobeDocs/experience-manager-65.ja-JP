@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 86%
 
 ---
-
 
 # ページへのワークフローの適用{#applying-workflows-to-pages}
 
@@ -54,9 +53,8 @@ ht-degree: 86%
 1. Web サイトコンソールを開きます。
 1. 必要なページを開きます。
 1. サイドキックの「ワークフロー」タブを選択します。
-1. **ワークフロー**&#x200B;ダイアログを展開し、「**ワークフロー**」を選択して、必要に応じて「**ワークフロータイトル**」と「**コメント**」を入力します。
+1. **ワークフロー**&#x200B;ダイアログを展開し、「**ワークフロー**」を選択して、オプションで「**ワークフロータイトル**」と「**コメント**」を入力できます。
 
    ![workflowstartsidekick](assets/workflowstartsidekick.png)
 
 1. 「**ワークフローを開始**」をクリックして、設定したプロパティで現在のページをペイロードとして新しいワークフローインスタンスを開始します。ワークフローが実行状態になります。
-
