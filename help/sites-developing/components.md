@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
-translation-type: tm+mt
-source-git-commit: 5597fb39500ac1f85d03263bfa1e5239d35d2a2c
+exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 82%
 
 ---
-
 
 # コンポーネントの概要{#components-overview}
 
@@ -33,7 +32,7 @@ ht-degree: 82%
 * 標準化されたユーザーインターフェイスがあります。
 * 設定可能な編集動作があります。
 * Granite UIコンポーネントに基づくサブ要素を使用して構築されたダイアログボックスを使用する
-* [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)（推奨）またはJSPを使用して開発されます。
+* [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)（推奨）またはJSPを使用して開発されています。
 * デフォルトの機能を拡張するカスタマイズされたコンポーネントを作成するために開発できます。
 
 コンポーネントはモジュールなので、次のことができます。
@@ -47,14 +46,14 @@ ht-degree: 82%
 
 * リソースタイプです。
 * 特定の機能を完全に実現するスクリプトのコレクションです。
-* *隔離*&#x200B;で機能します。つまり、AEMまたはポータル内で機能します。
+* *分離*&#x200B;で(AEM内またはポータル内で)機能できます。
 
 ## AEM 内の既成のコンポーネント {#out-of-the-box-components-within-aem}
 
 AEM には、次のような包括的な機能を提供する、](/help/sites-authoring/default-components.md)すぐに使用できる様々なコンポーネント[が付属しています。
 
 * 段落システム ( `parsys`)
-* ページ（`responsivegrid` — タッチ対応UIのみ）
+* ページ（`responsivegrid` — タッチ操作対応UIのみ）
 * テキスト
 * 画像（説明テキスト付き）
 * ツールバー
@@ -68,15 +67,15 @@ AEM には、次のような包括的な機能を提供する、](/help/sites-au
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)
 
-**コア** コンポーネントはAEM 6.3で導入され、オファーの柔軟で豊富な機能を備えたオーサリング機能を備えています。[We.Retailリファレンスサイト](/help/sites-developing/we-retail.md)は、コアコンポーネントの使用方法と、コンポーネント開発の現在のベストプラクティスを示します。
+**コアコン** ポーネントはAEM 6.3で導入され、柔軟で豊富なオーサリング機能を提供します。[We.Retail参照サイト](/help/sites-developing/we-retail.md)は、コアコンポーネントの使用方法と、コンポーネント開発の現在のベストプラクティスを示しています。
 
-**基盤コンポーネント**&#x200B;は、多くのバージョンの AEM で使用でき、標準 AEM インストールでそのまま使用できます。現在もサポートされていますが、ほとんどの機能は非推奨となり、拡張されなくなり、既存のテクノロジーに基づいています。
+**基盤コンポーネント**&#x200B;は、多くのバージョンの AEM で使用でき、標準 AEM インストールでそのまま使用できます。まだサポートされていますが、ほとんどは非推奨となり、拡張はおこなわれなくなり、従来のテクノロジーに基づいています。
 
 >[!NOTE]
 >
 >[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
 >
->[AEM Modernization ](modernization-tools.md) Toolscanは、コアコンポーネントへの移行に役立ちます。
+>[AEM Modernization Toolscan](modernization-tools.md) は、コアコンポーネントへの移行に役立ちます。
 
 ### 利用可能なコンポーネントの表示 {#viewing-available-components}
 
@@ -96,7 +95,7 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 
 ## その他のリソース {#further-reading}
 
-以下のページでは、これらのコンポーネント（およびその他のコンポーネント）の開発に関する詳細を説明します。
+以下のページでは、これらのコンポーネントやその他のコンポーネントの開発に関する詳細情報を示します。
 
 * [AEM コンポーネント - 基本](/help/sites-developing/components-basics.md)
 * [AEM コンポーネントの開発](/help/sites-developing/developing-components.md)
@@ -112,7 +111,6 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 * クラシック UI
 
    * [AEM コンポーネント（クラシック UI）](/help/sites-developing/developing-components-classic.md)
-   * [ウィジェットの使用と拡張（クラシック UI）](/help/sites-developing/widgets.md)
+   * [ウィジェットの使用および拡張（クラシック UI）](/help/sites-developing/widgets.md)
    * [xtype の使用（クラシック UI）](/help/sites-developing/xtypes.md)
-   * [フォームの開発（クラシック UI）](/help/sites-developing/developing-forms.md)
-
+   * [フォームの作成（クラシック UI）](/help/sites-developing/developing-forms.md)
