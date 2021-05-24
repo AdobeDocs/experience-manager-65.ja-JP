@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
-translation-type: tm+mt
-source-git-commit: 06f1f753b9bb7f7336454f166e03f753e3735a16
+exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 81%
 
 ---
-
 
 # カスタム拡張の作成{#creating-custom-extensions}
 
@@ -39,7 +38,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
 
 >[!NOTE]
 >
->[この例については、「パッケージ共有](/help/sites-developing/we-retail.md)」から利用できるGeometrixxを参照してください。
+>[この例については、Geometrixx](/help/sites-developing/we-retail.md)（パッケージ共有から入手可能）を参照してください。
 
 この例では、新しいカスタム JSSP ファイルを作成し、AEM 側から呼び出して、結果を取得します。例えば、この方法を利用して、Adobe Campaign からデータを取得したり、Adobe Campaign にデータを保存したりできます。
 
@@ -47,7 +46,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
 
    ![](do-not-localize/chlimage_1-4a.png)
 
-1. この JSSP ファイルの名前を入力します。この例では、**cus:custom.jssp**&#x200B;を使用します(つまり、**cus**&#x200B;名前空間ーにあります)。
+1. この JSSP ファイルの名前を入力します。この例では、**cus:custom.jssp**&#x200B;を使用します（**cus**&#x200B;名前空間に格納されます）。
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -66,7 +65,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
    * AEM と Adobe Campaign 間に有効な接続がある
    * Adobe Campaign クラウドサービスが **/content/geometrixx-outdoors** に設定されている
 
-   この例で最も重要なオブジェクトは&#x200B;**GenericCampaignConnector**&#x200B;です。これにより、Adobe Campaign側でjsspファイルを呼び出す（取得して投稿する）ことができます。
+   この例で最も重要なオブジェクトは&#x200B;**GenericCampaignConnector**&#x200B;です。これにより、Adobe Campaign側でJSSPファイルを呼び出す（取得して投稿する）ことができます。
 
    コードの抜粋を以下に示します。
 
@@ -171,9 +170,9 @@ AEM には、サイト管理エクスプローラービューのどこでも使�
 
 >[!NOTE]
 >
->[この例については、「パッケージ共有](/help/sites-developing/we-retail.md)」から利用できるGeometrixxを参照してください。
+>[この例については、Geometrixx](/help/sites-developing/we-retail.md)（パッケージ共有から入手可能）を参照してください。
 
-エクスプローラー内の各ノードにリンクされたAPIがあります。 例えば、ノードの場合：
+エクスプローラー内の各ノードには、それにリンクされたAPIがあります。 ノードの例：
 
 * [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
@@ -205,4 +204,3 @@ request.header["Content-Type"] = "application/json; charset=UTF-8";
 request.execute();
 var response = request.response;
 ```
-
