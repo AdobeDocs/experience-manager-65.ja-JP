@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
 discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 95%
 
 ---
-
 
 # 相互 SSL を使用したレプリケーション{#replicating-using-mutual-ssl}
 
@@ -43,7 +42,7 @@ ht-degree: 95%
 オーサーインスタンスとパブリッシュインスタンスの秘密鍵および公開証明書が必要です。
 
 * pkcs#12 または JKS 形式の秘密鍵を含める必要があります。
-* 証明書は、pkcs#12またはJKS形式で含める必要があります。また、「CER」形式の証明書もGranite Truststoreに追加できます。
+* 証明書はpkcs#12形式またはJKS形式で含める必要があります。また、「CER」形式に含まれる証明書もGranite Truststoreに追加できます。
 * 自己署名証明書または認定された CA が署名した証明書を使用できます。
 
 ### JKS 形式  {#jks-format}
@@ -68,7 +67,7 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
    keytool -genkeypair -keyalg RSA -validity 3650 -alias alias -keystore keystorename.keystore  -keypass key_password -storepass  store_password -dname "CN=Host Name, OU=Group Name, O=Company Name,L=City Name, S=State, C=Country_ Code"
    ```
 
-   | オプション | オーサー | 公開 |
+   | オプション | 作成者 | 公開 |
    |---|---|---|
    | -alias | 作成者 | publish |
    | -keystore | author.keystore | publish.keystore |
@@ -79,9 +78,9 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
    keytool -exportcert -alias alias -file cert_file -storetype jks -keystore keystore -storepass store_password
    ```
 
-   | オプション | オーサー | 公開 |
+   | オプション | 作成者 | 公開 |
    |---|---|---|
-   | -alias | 作成者 | publish |
+   | -alias | 作成者 | 公開 |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
@@ -95,7 +94,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl genrsa -out keyname.key 2048
    ```
 
-   | オプション | オーサー | 公開 |
+   | オプション | 作成者 | 公開 |
    |---|---|---|
    | -out | author.key | publish.key |
 
@@ -105,7 +104,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl req -new -key keyname.key -out key_request.csr
    ```
 
-   | オプション | オーサー | 公開 |
+   | オプション | 作成者 | 公開 |
    |---|---|---|
    | -key | author.key | publish.key |
    | -out | author_request.csr | publish_request.csr |
@@ -118,7 +117,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl x509 -req -days 3650 -in key_request.csr -signkey keyname.key -out certificate.cer
    ```
 
-   | オプション | オーサー | 公開 |
+   | オプション | 作成者 | 公開 |
    |---|---|---|
    | -signkey | author.key | publish.key |
    | -in | author_request.csr | publish_request.csr |
@@ -130,12 +129,12 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certificate.cer -inkey keyname.key -out pkcs12_archive.pfx -name "alias"
    ```
 
-   | オプション | オーサー | 公開 |
+   | オプション | 作成者 | 公開 |
    |---|---|---|
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
-   | -name | 作成者 | publish |
+   | -name | 作成者 | 公開 |
 
 ## 作成者への秘密鍵と TrustStore のインストール  {#install-the-private-key-and-truststore-on-author}
 
@@ -212,7 +211,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
 
 ## パブリッシュでの HTTP サービスの設定  {#configure-the-http-service-on-publish}
 
-Apache Felix Jetty Based HTTP Serviceのプロパティをパブリッシュインスタンスで設定し、Graniteキーストアにアクセスする際にHTTPSを使用するようにします。サービスのPIDは`org.apache.felix.http`です。
+Graniteキーストアへのアクセス時にHTTPSを使用するように、パブリッシュインスタンス上でApache Felix JettyベースのHTTPサービスのプロパティを設定します。サービスのPIDは`org.apache.felix.http`です。
 
 次の表は、Web コンソールを使用する場合に設定する必要のある OSGi のプロパティを示しています。
 
@@ -295,4 +294,3 @@ MSSL を有効にするには、次の表に示すように、「トランスポ
 29.08.2014 14:02:46 - Replication (TEST) of /content successful.
 Replication test succeeded
 ```
-
