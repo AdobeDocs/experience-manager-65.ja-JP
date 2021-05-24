@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 6af48ef5-75e6-4b66-bc0d-ecf254b1c4ef
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 725c81d0-0258-4118-8b01-29fd7bcaf9b3
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 64%
 
 ---
-
 
 # グラフィックレンダリング用のフォントの追加{#adding-fonts-for-graphic-rendering}
 
@@ -30,7 +29,7 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    `/apps/<your-project>/`
 
-1. `/apps/<your-project>/`の下に新しいノードを作成します。
+1. `/apps/<your-project>/`の下に、新しいノードを作成します。
 
    * **名前**：`fonts`
    * **型**：`sling:Folder`
@@ -41,13 +40,12 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
 
    >[!NOTE]
    >
-   >リポジトリ内のフォントファイルにはサフィックス`*.ttf`または`*.TTF`が必要です。
+   >リポジトリ内のフォントファイルには、サフィックス`*.ttf`または`*.TTF`が必要です。
 
-1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md)の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォ追加ントフォルダーのパス例えば`/apps/<your-project>/fonts`。
+1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md)の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォントフォルダーにパスを追加します。例：`/apps/<your-project>/fonts`と入力します。
 
-1. CRXDE Lite に戻ります。これで、読み込んだフォントの名前を含む`.fontlist`ノードがフォルダーに表示されます。
+1. CRXDE Lite に戻ります。これで、読み込んだフォントの名前を含む`.fontlist`ノードがフォルダー内に表示されます。
 
    これらのフォントは、今後 Java API で使用できます。
 
 Java API でのフォントの使用方法について詳しくは、[Java API の Font クラスに関するドキュメント](https://download.oracle.com/javase/6/docs/api/java/awt/Font.html)を参照してください。
-
