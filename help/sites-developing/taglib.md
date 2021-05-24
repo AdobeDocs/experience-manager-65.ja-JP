@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2487'
 ht-degree: 62%
 
 ---
-
 
 # タグライブラリ{#tag-libraries}
 
@@ -40,29 +39,29 @@ global では、[Sling ライブラリ](/help/sites-developing/taglib.md#sling-t
 
 ### <ui:includeClientLib> {#ui-includeclientlib}
 
-`<ui:includeClientLib>`タグには、AEM htmlクライアントライブラリが含まれます。このライブラリは、js、css、またはテーマライブラリにすることができます。 jsやcssなど、異なるタイプの複数の挿入タグの場合は、このタグをJSPで複数回使用する必要があります。 このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
+`<ui:includeClientLib>`タグは、AEM HTMLクライアントライブラリを含みます。このライブラリは、js、css、テーマライブラリのいずれかです。 jsやcssなど、異なるタイプの複数のインクルージョンの場合、このタグをjsp内で複数回使用する必要があります。 このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
 
 このタグの属性を以下に示します。
 
-**カテゴリ**  — カンマ区切りのクライアントライブラリカテゴリのリスト。指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
+**categories**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeIncludes`
 
-**テーマ**  — カンマ区切りのクライアントライブラリカテゴリのリスト。指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
+**theme**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeThemeInclude`
 
-**js**  — カンマで区切られたクライアントライブラリカテゴリのリスト。指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+**js**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeJsInclude`
 
-**css**  — カンマで区切られたクライアントライブラリカテゴリのリスト。指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+**css**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリの CSS ライブラリがすべてインクルードされます。
 
 等価な式: `com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeCssInclude`
 
-**themed**  — 主題設定されたライブラリまたは主題設定されていないライブラリのみを示すフラグを含めます。省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
+**themed**  — テーマの設定されたライブラリまたはテーマの設定されていないライブラリのみを示すフラグを含めます。省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
 
-`<ui:includeClientLib>`タグは、JSPで次のように使用できます。
+`<ui:includeClientLib>`タグはjspで次のように使用できます。
 
 ```xml
 <%-- all: js + theme (theme-js + css) --%>
@@ -90,7 +89,7 @@ CQ タグライブラリには便利な機能が用意されています。
 
 >[!NOTE]
 >
->`/libs/foundation/global.jsp`ファイルがスクリプトに含まれると、taglibが自動的に宣言されます。
+>スクリプトに`/libs/foundation/global.jsp`ファイルが含まれると、taglibが自動的に宣言されます。
 
 AEM コンポーネントの jsp スクリプトを開発する場合は、スクリプトの先頭に次のコードをインクルードすることをお勧めします。
 
@@ -98,7 +97,7 @@ AEM コンポーネントの jsp スクリプトを開発する場合は、ス�
 <%@include file="/libs/foundation/global.jsp"%>
 ```
 
-sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defineobjects)タグで定義されている、定期的に使用されるスクリプティングオブジェクトを公開します。 これにより、コンポーネントの jsp コードが短縮および簡略化されます。
+このコードは、sling、CQおよびjstlの各タグライブラリを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defineobjects)タグで定義される、定期的に使用されるスクリプトオブジェクトを公開します。 これにより、コンポーネントの jsp コードが短縮および簡略化されます。
 
 ### <cq:text> {#cq-text}
 
@@ -110,25 +109,25 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 **value**  — 出力に使用する値。この属性が存在する場合は、property 属性の使用が上書きされます。
 
-**oldValue** - diff出力に使用する値。この属性が存在する場合は、property 属性の使用が上書きされます。
+**oldValue**  — 差分出力に使用する値。この属性が存在する場合は、property 属性の使用が上書きされます。
 
-**escapeXml**  — 結果の文字列内の文字 &lt;>、&amp;、&#39;、&#39;を、対応する文字エンティティコードに変換するかどうかを定義します。デフォルト値は false です。オプションの書式設定の後はエスケープが適用されます。
+**escapeXml**  — 結果の文字列の文 &lt;>字、&amp;、&#39;および&quot;を、対応する文字エンティティコードに変換するかどうかを定義します。デフォルト値は false です。オプションの書式設定の後はエスケープが適用されます。
 
 **format**  — オプションのjava.text.Format。テキストの書式設定に使用します。
 
-**noDiff**  - diff情報が存在する場合でも、diff出力の計算を省略します。
+**noDiff**  — 差分情報が存在する場合でも、差分出力の計算を行いません。
 
 **tagClass**  — 空でない出力を囲む要素のCSSクラス名。空の場合は、要素が追加されません。
 
 **tagName**  — 空でない出力を囲む要素の名前。デフォルト値は DIV です。
 
-**placeholder**  — 編集モードでnullまたは空のテキスト（プレースホルダーなど）に使用するデフォルト値。オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。デフォルト値は次のとおりです。
+**placeholder**  — 編集モードでnullまたは空のテキスト（プレースホルダー）に使用するデフォルト値。オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。デフォルト値は次のとおりです。
 
 `<div><span class="cq-text-placeholder">&para;</span></div>`
 
-**default** -nullまたは空のテキストに使用するデフォルト値。オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。
+**default**  - nullまたは空のテキストに使用するデフォルト値。オプションの書式設定およびエスケープの後にデフォルトチェックが実行され、そのまま出力に書き込まれます。
 
-`<cq:text>`タグをJSPで使用する例をいくつか示します。
+JSPでの`<cq:text>`タグの使用例を以下に示します。
 
 ```xml
 <cq:text property="jcr:title" tagName="h2"/>
@@ -160,34 +159,34 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 ### <cq:setContentBundle> {#cq-setcontentbundle}
 
-`<cq:setContentBundle>`タグは、i18nローカライゼーションコンテキストを作成し、`javax.servlet.jsp.jstl.fmt.localizationContext`設定変数に保存します。
+`<cq:setContentBundle>`タグは、i18nローカリゼーションコンテキストを作成し、`javax.servlet.jsp.jstl.fmt.localizationContext`設定変数に保存します。
 
 このタグの属性を以下に示します。
 
 **language**  — リソースバンドルを取得するロケールの言語。
 
-**source**  — ロケールの取得元。次のいずれかの値に設定できます。
+**source**  — ロケールの取得元のソース。次のいずれかの値に設定できます。
 
-* **static**  — ロケールが使用可能な場合は `language` 属性から取得され、それ以外の場合はサーバーのデフォルトロケールから取得されます。
+* **static**  — ロケールが属性（使用可能な場合）から取得さ `language` れます。それ以外の場合は、サーバーのデフォルトロケールから取得されます。
 
-* **page**  — ロケールは、現在のページまたはリソース（使用可能な場合）の言語から取得され、使用可能な場合は `language` 属性から取得されます。それ以外の場合は、サーバーのデフォルトロケールから取得されます。
+* **page**  — ロケールが現在のページまたはリソースの言語（使用可能な場合）から取得され、それ以外の場合は属性（使用可能な場合）から取得さ `language` れ、それ以外の場合はサーバーのデフォルトロケールから取得されます。
 
-* **request**  — ロケールは、リクエストのロケール(  `request.getLocale()`)から取得されます。
+* **request**  — ロケールは要求のロケール(  `request.getLocale()` )から取得されます。
 
-* **auto**  — ロケールが使用可能な場合は `language` 属性から取得され、使用可能な場合は現在のページまたはリソースの言語から取得されます。それ以外の場合はリクエストから取得されます。
+* **auto**  — ロケールが属性（使用可能な場合）から取得されま `language` す。それ以外の場合は、現在のページまたはリソースの言語（使用可能な場合）から取得され、それ以外の場合はリクエストから取得されます。
 
 `source` 属性が設定されていない場合：
 
-* `language`属性が設定されている場合、`source`属性のデフォルトは&quot;`static`です。
+* `language`属性を設定した場合、`source`属性のデフォルト値は「 `static` 」です。
 
-* `language`属性が設定されていない場合、`source`属性のデフォルトは`auto`です。
+* `language`属性が設定されていない場合、`source`属性はデフォルトで`auto`になります。
 
-「コンテンツバンドル」は、標準のJSTL `<fmt:message>`タグで単純に使用できます。 キーによるメッセージのルックアップは次の 2 つの処理で構成されます。
+「コンテンツバンドル」は、標準のJSTL `<fmt:message>`タグで簡単に使用できます。 キーによるメッセージのルックアップは次の 2 つの処理で構成されます。
 
 1. 最初に、現在レンダリングされている基盤となるリソースの JCR プロパティが翻訳用に検索されます。これにより、JCR プロパティの値を編集するためのシンプルなコンポーネントのダイアログを定義できます。
-1. ノードにキーと完全に同じ名前のプロパティが含まれていない場合、代替策は、sling要求(`SlingHttpServletRequest.getResourceBundle(Locale)`)からリソースバンドルを読み込むことです。 このバンドルの言語またはロケールは、`<cq:setContentBundle>`タグの言語およびソース属性によって定義されます。
+1. ノードにキーと完全に同じ名前のプロパティが含まれていない場合、フォールバックは、Sling要求( `SlingHttpServletRequest.getResourceBundle(Locale)`)からリソースバンドルを読み込むことです。 このバンドルの言語またはロケールは、`<cq:setContentBundle>`タグのlanguage属性とsource属性で定義されます。
 
-`<cq:setContentBundle>`タグは、JSPでは次のように使用できます。
+`<cq:setContentBundle>`タグはjspで次のように使用できます。
 
 言語を定義するページの場合：
 
@@ -245,45 +244,45 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 </div>
 ```
 
-スクリプトを含めるには、`<%@ include file="myScript.jsp" %>`または`<cq:include script="myScript.jsp" %>`を使用する必要がありますか？
+`<%@ include file="myScript.jsp" %>`または`<cq:include script="myScript.jsp" %>`を使用してスクリプトを含める必要がありますか？
 
 * `<%@ include file="myScript.jsp" %>`ディレクティブは、完全なファイルを現在のファイルに含めるようJSPコンパイラに通知します。 これにより、インクルードするファイルのコンテンツが元のファイルに直接貼り付けられるかのように処理されます。
-* `<cq:include script="myScript.jsp">`タグを使用すると、ファイルは実行時に含まれます。
+* `<cq:include script="myScript.jsp">`タグを使用すると、ファイルが実行時にインクルードされます。
 
-`<cq:include>`または`<sling:include>`を使用しますか？
+`<cq:include>`または`<sling:include>`を使用する必要がありますか？
 
-* AEMコンポーネントを開発する場合、Adobeは`<cq:include>`を使用することを推奨します。
-* `<cq:include>` script属性を使用する場合、名前を指定してスクリプトファイルを直接含めることができます。これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
+* AEMコンポーネントを開発する場合は、Adobeで`<cq:include>`を使用することをお勧めします。
+* `<cq:include>` script属性を使用すると、スクリプトファイルを名前で直接含めることができます。これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
 
 ### <cq:includeClientLib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>` はAEM 5.6以降で非推奨となっています。代わりに使用 [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) します。
+>`<cq:includeClientLib>` はAEM 5.6以降で非推奨（廃止予定）となっていま [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#ui-includeclientlib) す。代わりにを使用してください。
 
-`<cq:includeClientLib>`タグには、AEM htmlクライアントライブラリが含まれます。このライブラリは、js、css、またはテーマライブラリにすることができます。 jsやcssなど、異なるタイプの複数の挿入タグの場合は、このタグをJSPで複数回使用する必要があります。 このタグは、`com.day.cq.widget.HtmlLibraryManager` サービスインターフェイスを囲む便利なラッパーです。
+`<cq:includeClientLib>`タグは、AEM HTMLクライアントライブラリを含みます。このライブラリは、js、css、テーマライブラリのいずれかです。 jsやcssなど、異なるタイプの複数のインクルージョンの場合、このタグをjsp内で複数回使用する必要があります。 このタグは、`com.day.cq.widget.HtmlLibraryManager` サービスインターフェイスを囲む便利なラッパーです。
 
 このタグの属性を以下に示します。
 
-**カテゴリ**  — カンマ区切りのクライアントライブラリカテゴリのリスト。指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
+**categories**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリの JavaScript ライブラリと CSS ライブラリがすべてインクルードされます。テーマ名は要求から抽出されます。
 
 等価な式: `com.day.cq.widget.HtmlLibraryManager#writeIncludes`
 
-**テーマ**  — カンマ区切りのクライアントライブラリカテゴリのリスト。指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
+**theme**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリのテーマに関連するライブラリ（CSS と JS の両方）がすべてインクルードされます。テーマ名は要求から抽出されます。
 
-次と等価：`com.day.cq.widget.HtmlLibraryManager#`writeThemeInclude
+次と同等です。`com.day.cq.widget.HtmlLibraryManager#`writeThemeInclude
 
-**js**  — カンマで区切られたクライアントライブラリカテゴリのリスト。指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+**js**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
 
 等価な式: `com.day.cq.widget.HtmlLibraryManager#writeJsInclude`
 
-**css**  — カンマで区切られたクライアントライブラリカテゴリのリスト。指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+**css**  — クライアントライブラリカテゴリのコンマ区切りリスト。指定したカテゴリの CSS ライブラリがすべてインクルードされます。
 
 等価な式: `com.day.cq.widget.HtmlLibraryManager#writeCssInclude`
 
-**themed**  — 主題設定されたライブラリまたは主題設定されていないライブラリのみを示すフラグを含めます。省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
+**themed**  — テーマの設定されたライブラリまたはテーマの設定されていないライブラリのみを示すフラグを含めます。省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
 
-`<cq:includeClientLib>`タグは、JSPで次のように使用できます。
+`<cq:includeClientLib>`タグはjspで次のように使用できます。
 
 ```xml
 <%-- all: js + theme (theme-js + css) --%>
@@ -301,7 +300,7 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 ### <cq:defineObjects> {#cq-defineobjects}
 
-`<cq:defineObjects>`タグは、次のように定期的に使用され、開発者が参照できるスクリプティングオブジェクトを公開します。 また、[ `<sling:defineObjects>`](#amp-lt-sling-defineobjects)タグで定義されたオブジェクトも公開します。
+`<cq:defineObjects>`タグは、定期的に使用される次のスクリプトオブジェクトを公開し、開発者が参照できます。 また、 [ `<sling:defineObjects>`](#amp-lt-sling-defineobjects)タグで定義されたオブジェクトも公開します。
 
 **componentContext**
 
@@ -439,19 +438,19 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 >[!NOTE]
 >
->`/libs/foundation/global.jsp`ファイルをスクリプトに含めると、`<cq:defineObjects />`タグが自動的に含まれます。
+>スクリプトに`/libs/foundation/global.jsp`ファイルがインクルードされると、`<cq:defineObjects />`タグが自動的にインクルードされます。
 
 ### <cq:requestURL> {#cq-requesturl}
 
-`<cq:requestURL>`タグは、現在のリクエストURLをJspWriterに書き込みます。 2つのタグ[ `<cq:addParam>`](#amp-lt-cq-addparam)と[ `<cq:removeParam>`](#amp-lt-cq-removeparam)が書き込まれる前に、このタグの本文内で使用して現在のリクエストURLを変更できます。
+`<cq:requestURL>`タグは現在の要求URLをJspWriterに書き込みます。 2つのタグ[ `<cq:addParam>`](#amp-lt-cq-addparam)と[ `<cq:removeParam>`](#amp-lt-cq-removeparam)をこのタグの本文内で使用して、現在のリクエストURLを書き込む前に変更できます。
 
 これにより、様々なパラメーターを使用して現在のページへのリンクを作成できます。例えば、次のように要求を変換できます。
 
 `mypage.html?mode=view&query=something` 対象 `mypage.html?query=something`.
 
-`addParam`または`removeParam`を使用すると、指定したパラメーターのオカレンスのみが変更され、その他のすべてのパラメーターは影響を受けません。
+`addParam`または`removeParam`を使用すると、指定されたパラメーターの出現のみが変更されます。その他のパラメーターは影響を受けません。
 
-`<cq:requestURL>` に属性がありません。
+`<cq:requestURL>` に属性がない。
 
 例：
 
@@ -465,7 +464,7 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 ### <cq:addParam> {#cq-addparam}
 
-`<cq:addParam>`タグは、指定された名前と値を持つリクエストパラメーターを含む[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグに追加します。
+`<cq:addParam>`タグは、指定された名前と値を持つリクエストパラメーターを外側の[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグに追加します。
 
 このタグの属性を以下に示します。
 
@@ -485,7 +484,7 @@ sling、CQ、jstl taglibを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defi
 
 ### <cq:removeParam> {#cq-removeparam}
 
-`<cq:removeParam>`タグは、指定された名前と値を持つリクエストパラメーターを含む[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグから削除します。 値が指定されていない場合は、特定の名前を持つすべてのパラメーターが削除されます。
+`<cq:removeParam>`タグは、囲む[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグから、指定された名前と値を持つリクエストパラメーターを削除します。 値が指定されていない場合は、特定の名前を持つすべてのパラメーターが削除されます。
 
 このタグの属性を以下に示します。
 
@@ -511,7 +510,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 >[!NOTE]
 >
->`/libs/foundation/global.jsp`ファイルがスクリプトに含まれると、sling taglibが自動的に宣言されます。
+>`/libs/foundation/global.jsp`ファイルがスクリプトに含まれると、slingタグライブラリが自動的に宣言されます。
 
 ### <sling:include> {#sling-include}
 
@@ -527,7 +526,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 * 現在の要求の処理にインクルードするリソースオブジェクト。resource または path を指定する必要があります。どちらも指定されている場合は、resource が優先されます。
 
-**path**
+**パス**
 
 * 現在の要求の処理にインクルードするリソースオブジェクトのパス。このパスが相対パスの場合は、スクリプトが特定のリソースをインクルードする現在のリソースのパスに追加されます。resource または path を指定する必要があります。どちらも指定されている場合は、resource が優先されます。
 
@@ -550,7 +549,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 >[!NOTE]
 >
->`<sling:include>`タグに含まれるリソースとスクリプトの解像度は、通常のSling URLの解像度と同じです。 デフォルトでは、セレクター、拡張子など の値を現在のリクエストに含めるスクリプトにも使用します。 これらは、タグ属性を使用して変更できます。例えば、`replaceSelectors="foo.bar"`ではセレクターを上書きできます。
+>`<sling:include>`タグに含まれるリソースとスクリプトの解決方法は、通常のSling URLの解決方法と同じです。 デフォルトでは、セレクター、拡張子など 現在のリクエストからも、インクルードスクリプトに使用されます。 これらは、タグ属性を使用して変更できます。例えば、`replaceSelectors="foo.bar"`ではセレクターを上書きできます。
 
 例：
 
@@ -580,7 +579,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 ### <sling:defineObjects> {#sling-defineobjects}
 
-`<sling:defineObjects>`タグは、次のように定期的に使用されるスクリプティングオブジェクトを公開します。このスクリプティングオブジェクトは開発者が参照できます。
+`<sling:defineObjects>`タグは、定期的に使用される次のスクリプトオブジェクトを公開し、開発者が参照できます。
 
 **slingRequest**
 
@@ -600,7 +599,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 * SlingScriptHelper オブジェクト。スクリプト用の便利なメソッドが格納されています。主なメソッドは、他のリソースの応答をこの応答内にインクルードする（例：ヘッダーの html スニペットを埋め込む）ための sling.include(&#39;/some/other/resource&#39;) と、Sling で使用可能な OSGi サービス（スクリプト言語に応じたクラス表記）を取得するための sling.getService(foo.bar.Service.class) です。
 
-**リソース**
+**resource**
 
 * 処理する現在のリソースオブジェクト（要求の URL によって異なります）。slingRequest.getResource() と同じです。
 
@@ -635,7 +634,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 ## JSTL タグライブラリ  {#jstl-tag-library}
 
-[JavaServer Pages Standardタグライブラリ](https://www.oracle.com/technetwork/java/index-jsp-135995.html)には、便利なタグや標準タグがたくさん含まれています。 taglibの中核となる、書式設定と関数は、次のスニペットのように`/libs/foundation/global.jsp`で定義されます。
+[JavaServer Pages Standard Tag Library](https://www.oracle.com/technetwork/java/index-jsp-135995.html)には、多くの便利な標準タグが含まれています。 以下のスニペットに示すように、コア、書式設定および関数のタグライブは`/libs/foundation/global.jsp`によって定義されます。
 
 ### /libs/foundation/global.jsp からの抜粋{#extract-of-libs-foundation-global-jsp}
 
@@ -645,4 +644,4 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions" %>
 ```
 
-前述のように`/libs/foundation/global.jsp`ファイルを読み込んだ後、`c`、`fmt`、`fn`のプリフィックスを使用して、これらのtaglibにアクセスできます。 JSTL の公式ドキュメントは[「The Java EE 5 Tutorial」の「JavaServer Pages Standard Tag Library」](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html)にあります。
+前述のように`/libs/foundation/global.jsp`ファイルを読み込んだ後、`c`、`fmt`および`fn`プレフィックスを使用して、これらのタグライブラリにアクセスできます。 JSTL の公式ドキュメントは[「The Java EE 5 Tutorial」の「JavaServer Pages Standard Tag Library」](https://docs.oracle.com/javaee/5/tutorial/doc/bnakc.html)にあります。
