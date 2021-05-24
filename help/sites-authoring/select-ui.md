@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: e418d330-f234-411d-8cad-3fd9906dcbee
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 2d7492cdee9f7f730dfa6ad2ffae396b3a737b15
+exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 83%
 
 ---
-
 
 # UI の選択{#selecting-your-ui}
 
@@ -47,7 +46,7 @@ ht-degree: 83%
 >
 >以前のバージョンからアップグレードされたインスタンスでは、ページオーサリング用にクラシック UI が保持されます。
 >
->アップグレード後、ページオーサリングはタッチ対応UIに自動的に切り替わりませんが、**WCMオーサリングUIモードサービス**（`AuthoringUIMode`サービス）の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を使用して設定できます。 [エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
+>アップグレード後、ページオーサリングが自動的にタッチ操作対応UIに切り替わることはありませんが、 **WCMオーサリングUIモードサービス**（ `AuthoringUIMode`サービス）の[OSGi設定](/help/sites-deploying/configuring-osgi.md)を使用して設定できます。 [エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
 
 ## ユーザーのインスタンス用のデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
@@ -82,7 +81,7 @@ ht-degree: 83%
 
 * **URL**
 
-   従来のUIは、`welcome.html`にあるスタートアップスクリーンのURLを使用してアクセスできます。次に例を示します。
+   クラシックUIには、`welcome.html`のようこそ画面のURLを使用してアクセスできます。例：
 
    `https://localhost:4502/welcome.html`
 
@@ -111,15 +110,15 @@ ht-degree: 83%
 
 * ページのオーサリング時には次のようになります。
 
-   * URLに`cf#`を使用してページにアクセスする場合は、クラシックエディターを使用する必要があります。 次に例を示します。
+   * URLに`cf#`を使用してページにアクセスする場合、クラシックエディターが強制的に使用されます。 次に例を示します。
       `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * URLで`/editor.html`を使用する場合、またはタッチデバイスを使用する場合、タッチ対応エディターの使用が強制されます。 次に例を示します。
+   * URLで`/editor.html`を使用する場合、またはタッチデバイスを使用する場合、タッチ操作対応エディターが強制的に使用されます。 次に例を示します。
       `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 強制は一時的なものであり、ブラウザーセッションでのみ有効です。
 
-   * Cookieのセットは、タッチ対応(`editor.html`)とクラシック(`cf#`)のどちらを使用するかによって異なります。
+   * Cookieの設定は、タッチ操作対応(`editor.html`)とクラシック(`cf#`)のどちらが使用されるかに応じて異なります。
 
 * `siteadmin` を使用してページを開くと、以下が存在するかがチェックされます。
 
