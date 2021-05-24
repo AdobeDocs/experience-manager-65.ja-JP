@@ -10,14 +10,13 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6612f89d-c518-4e5a-8df1-6487cc330a9a
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b07134b2-074a-4d52-8d0c-7e7abe51fc3a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 92%
 
 ---
-
 
 # 開発とページの差分{#developing-and-page-diff}
 
@@ -41,7 +40,7 @@ ht-degree: 92%
 
 ## 権限 {#permissions}
 
-以前は、Classic UIでは、AEMの変更を容易にするために、特別な開発上の考慮が必要でした（例えば、`cq:text`タグライブラリを使用したり、`DiffService` OSGiサービスをコンポーネントに統合するなど）。 新しい差分機能ではこのような考慮は必要なくなりました。差分は DOM 比較を介してクライアント側で実行されるからです。
+以前は、クラシックUIでは、AEMの違いを容易にするために、開発に関する特別な考慮が必要でした（`cq:text`タグライブラリの使用や、`DiffService` OSGiサービスのコンポーネントへの統合など）。 新しい差分機能ではこのような考慮は必要なくなりました。差分は DOM 比較を介してクライアント側で実行されるからです。
 
 ただし、開発者が考慮する必要がある制限事項はいくつかあります。
 
