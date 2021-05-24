@@ -10,8 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 9cfe5f11-8a0e-4a27-9681-a8d50835c864
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
-feature: Security
-translation-type: tm+mt
+feature: セキュリティ
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '1789'
@@ -23,13 +22,13 @@ ht-degree: 78%
 
 ## 概要 {#overview}
 
-AEMで管理セッションまたはリソースリゾルバーを取得する主な方法は、Slingが提供する`SlingRepository.loginAdministrative()`メソッドと`ResourceResolverFactory.getAdministrativeResourceResolver()`メソッドを使用することです。
+AEMで管理セッションまたはリソースリゾルバーを取得する主な方法は、Slingが提供する`SlingRepository.loginAdministrative()`および`ResourceResolverFactory.getAdministrativeResourceResolver()`メソッドを使用することでした。
 
 ただし、これらのメソッドはいずれも[最小権限の原則](https://en.wikipedia.org/wiki/Principle_of_least_privilege)に基づいて設計されておらず、開発者がコンテンツの構造や対応するアクセス制御レベル（ACL）を早期に適切に計画しないことがよくあります。そのため、このようなサービスに脆弱性があると、コード自体を動作させるのに管理者権限が不要であっても、`admin` ユーザーへの権限のエスカレーションが発生することがよくあります。
 
 ## 管理セッションの廃止方法 {#how-to-phase-out-admin-sessions}
 
-### 優先度0:この機能はアクティブ/必要/中断されているか。{#priority-is-the-feature-active-needed-derelict}
+### 優先度0:機能はアクティブ/必要/破棄されていますか。{#priority-is-the-feature-active-needed-derelict}
 
 管理セッションが使用されていなかったり、機能が完全に無効化されている場合があります。現在の実装環境がこれに当てはまる場合は、機能を削除するか、[NOP コード](https://ja.wikipedia.org/wiki/NOP)を埋め込んでください。
 
@@ -67,24 +66,24 @@ AEMで管理セッションまたはリソースリゾルバーを取得する�
 
 * **プライバシー設定に配慮する**
 
-   * プライベートプロファイルの場合、例えば、プライベート`/profile`ノード上のプロファイルの画像、電子メール、またはフルネームを公開しないことが考えられます。
+   * プライベートプロファイルの場合、例えば、プライベート`/profile`ノードで見つかったプロファイルの画像、Eメールまたは完全な名前を公開しないようにします。
 
 ## 厳格なアクセス制御 {#strict-access-control}
 
-コンテンツの再構築時にアクセス制御を適用する場合でも、新しいサービスユーザーに対して適用する場合でも、可能な限り厳密なACLを適用する必要があります。 考えられるすべてのアクセス制御機能を使用してください。
+コンテンツの再構築中にアクセス制御を適用するか、新しいサービスユーザーに対してアクセス制御を適用するかは、可能な限り厳格なACLを適用する必要があります。 考えられるすべてのアクセス制御機能を使用してください。
 
-* 例えば、`/apps`に`jcr:read`を適用する代わりに、`/apps/*/components/*/analytics`にのみ適用します
+* 例えば、`/apps`に`jcr:read`を適用する代わりに、`/apps/*/components/*/analytics`にのみ適用します。
 
 * [制限](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)を使用します。
 
 * ノードタイプに ACL を適用します。
 * 権限を制限します。
 
-   * 例えば、プロパティの書き込みだけが必要な場合は、`jcr:write`権限を与えないでください。代わりに`jcr:modifyProperties`を使用
+   * 例えば、プロパティの書き込みのみが必要な場合は、`jcr:write`権限を付与しないでください。代わりに`jcr:modifyProperties`を使用します。
 
 ## サービスユーザーとマッピング {#service-users-and-mappings}
 
-上記の処理が失敗した場合、Sling 7ではService User Mappingサービスがオファーされます。これにより、バンドルとユーザーのマッピングと、対応する2つのAPIメソッドを設定できます。` [SlingRepository.loginService()](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)`と` [ResourceResolverFactory.getServiceResourceResolver()](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)`は、設定されたユーザーのみの権限を持つセッション/リソースリゾルバを返します。 これらのメソッドの特徴は次のとおりです。
+上記のエラーが発生した場合、Sling 7はサービスユーザーマッピングサービスを提供します。このサービスでは、バンドルとユーザーのマッピングおよび2つの対応するAPIメソッドを設定できます。` [SlingRepository.loginService()](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)`と` [ResourceResolverFactory.getServiceResourceResolver()](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)`は、設定済みユーザーの権限のみを持つセッション/リソースリゾルバーを返します。 これらのメソッドの特徴は次のとおりです。
 
 * サービスをユーザーにマッピングできます。
 * サブサービスユーザーを定義できます。
@@ -107,23 +106,23 @@ AEMで管理セッションまたはリソースリゾルバーを取得する�
 1. 最小権限の原則を念頭に置いて、サービスに必要な権限を特定します。
 1. 必要な権限が正確に設定されたユーザーが既に存在するかどうかをチェックします。既存のユーザーがニーズを満たさない場合は、新しいシステムサービスユーザーを作成します。新しいサービスユーザーを作成するには、RTC が必要です。場合によっては、複数のサブサービスユーザー（例えば、書き込み用と読み取り用にそれぞれ 1 つ）を作成して、アクセスをさらに区分化します。
 1. ユーザーに対する ACE を設定してテストします。
-1. ご追加使用のサービスと`user/sub-users`の`service-user`マッピング
+1. サービスと`user/sub-users`の`service-user`マッピングを追加します
 
 1. サービスユーザーの sling 機能をバンドルから使用できるようにします。つまり、`org.apache.sling.api` を最新バージョンに更新します。
 
-1. コード内の`admin-session`を`loginService`または`getServiceResourceResolver` APIに置き換えます。
+1. コードの`admin-session`を`loginService`または`getServiceResourceResolver` APIで置き換えます。
 
 ## 新しいサービスユーザーの作成 {#creating-a-new-service-user}
 
 ユースケースに適したユーザーが AEM サービスユーザーのリストに存在せず、対応する RTC の発行が承認されていることを確認したら、デフォルトコンテンツに新しいユーザーを追加できます。
 
-推奨されるアプローチは、*https://&lt;server>:&lt;port>/crx/explorer/index.jsp*&#x200B;にあるリポジトリエクスプローラーを使用するサービスユーザーを作成することです。
+推奨されるアプローチは、リポジトリエクスプローラー(*https://&lt;server>:&lt;port>/crx/explorer/index.jsp*)を使用するサービスユーザーを作成することです
 
 目的は、有効な `jcr:uuid` プロパティを取得することです。このプロパティは、コンテンツパッケージのインストール環境を使用してユーザーを作成する場合に必須です。
 
 サービスユーザーは次の方法で作成できます。
 
-1. *https://&lt;server>:&lt;port>/crx/explorer/index.jsp*&#x200B;にあるリポジトリエクスプローラーに移動します。
+1. リポジトリエクスプローラー(*https://&lt;server>:&lt;port>/crx/explorer/index.jsp*)に移動します。
 1. 画面の左上隅にある「**ログイン**」リンクをクリックして、admin としてログインします。
 1. 次に、システムユーザーを作成して名前を付けます。ユーザーをシステムユーザーとして作成するには、中間パスとして `system` を設定し、ニーズに合わせてオプションのサブフォルダーを追加します。
 
@@ -152,11 +151,11 @@ AEMで管理セッションまたはリソースリゾルバーを取得する�
 
 サービスから対応するシステムユーザーへのマッピングを追加するには、` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` サービスのファクトリ設定を作成する必要があります。この操作をモジュール化するには、[Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578)を使用してこのような設定をおこなうことができます。このような設定をバンドルと共にインストールする場合は、[Sling の初期コンテンツ読み込み機能](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)を使用することをお勧めします。
 
-1. バンドルのsrc/main/resourcesフォルダーの下にサブフォルダーSLING-INF/contentを作成します
-1. このフォルダーに、org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;some unique name for your factory configuration>.xmlという名前のファイルを作成し、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を入力します。 例：
+1. バンドルのsrc/main/resourcesフォルダーの下にサブフォルダーSLING-INF/contentを作成します。
+1. このフォルダーに、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を含むorg.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;ファクトリ設定の一意の名前>.xmlという名前のファイルを作成します。 例：
 
 1. バンドルの`src/main/resources`フォルダーの下に`SLING-INF/content`フォルダーを作成します。
-1. このフォルダーに、すべてのサブサービスユーザーマッピングを含む、ファクトリ構成の内容を含むファイル`named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml`を作成します。
+1. このフォルダーに、すべてのサブサービスユーザーマッピングを含む、ファクトリ設定の内容を含むファイル`named org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-<a unique name for your factory configuration>.xml`を作成します。
 
    例示のために、`org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-com.adobe.granite.auth.saml.xml` というファイルを取り上げています。
 
@@ -177,7 +176,7 @@ AEMで管理セッションまたはリソースリゾルバーを取得する�
    </node>
    ```
 
-1. バンドルの`pom.xml`内の`maven-bundle-plugin`の設定でSlingの初期コンテンツを参照します。 例：
+1. バンドルの`pom.xml`内の`maven-bundle-plugin`の設定で、Slingの初期コンテンツを参照します。 例：
 
    ```xml
    <Sling-Initial-Content>
@@ -193,18 +192,18 @@ AEMで管理セッションまたはリソースリゾルバーを取得する�
 
 ## サービスでの共有セッションの処理 {#dealing-with-shared-sessions-in-services}
 
-`loginAdministrative()`への呼び出しは、多くの場合、共有セッションと共に表示されます。 これらのセッションはサービスのアクティベート時に取得され、サービスが停止された場合にのみログアウトされます。これは一般的な方法ですが、次の2つの問題が生じます。
+`loginAdministrative()`への呼び出しは、多くの場合、共有セッションと共に表示されます。 これらのセッションはサービスのアクティベート時に取得され、サービスが停止された場合にのみログアウトされます。これは一般的な方法ですが、次の2つの問題が発生します。
 
 * **セキュリティ：**&#x200B;このような管理セッションは、共有セッションにバインドされているリソースやその他のオブジェクトをキャッシュしたり、返したりする目的で使用されます。その後、呼び出しスタックではこれらのオブジェクトが昇格された権限でセッションまたはリソースリゾルバーに適応される可能性があり、それが操作中の管理セッションであるかどうかを呼び出し元が判別できなくなることがよくあります。
 * **パフォーマンス：** Oak では、共有セッションはパフォーマンス問題の原因となることがあるので、現在使用は推奨されていません。
 
-セキュリティ上のリスクの最も明白な解決策は、`loginAdministrative()`呼び出しを`loginService()`呼び出しに置き換えるだけで、制限付きの権限を持つユーザに対して行うことです。 ただし、この方法は潜在的なパフォーマンスの低下には効果がありません。代わりに、セッションに関連しないオブジェクトに要求されたすべての情報をラップすることによって、パフォーマンスの低下を軽減できる可能性があります。その後、要求に応じてセッションを作成（または破棄）します。
+セキュリティ上のリスクに対する最も明白な解決策は、権限が制限されたユーザーに対して、`loginAdministrative()`呼び出しを`loginService()`呼び出しで置き換えることです。 ただし、この方法は潜在的なパフォーマンスの低下には効果がありません。代わりに、セッションに関連しないオブジェクトに要求されたすべての情報をラップすることによって、パフォーマンスの低下を軽減できる可能性があります。その後、要求に応じてセッションを作成（または破棄）します。
 
 推奨されるアプローチは、サービスの API のリファクタリングをおこなって、呼び出し元がセッションの作成と破棄を制御できるようにすることです。
 
 ## JSP の管理セッション  {#administrative-sessions-in-jsps}
 
-関連するサービスがないため、JSPは`loginService()`を使用できません。 ただし、JSPの管理セッションは、通常、MVCパラダイムの違反の兆候です。
+JSPは、関連するサービスがないので、`loginService()`を使用できません。 ただし、JSPの管理セッションは通常、MVCパラダイムの違反の兆候です。
 
 これは次の 2 つの方法で解決できます。
 
@@ -219,21 +218,21 @@ AEMで管理セッションまたはリソースリゾルバーを取得する�
 
 1. `user-id` をイベントペイロードに渡し、代理実行を使用します。
 
-   **利点：** 使いやすさ。
+   **メリット：** 使いやすさ。
 
-   **デメリット：** まだ使用 `loginAdministrative()`中です。認証済みの要求が再認証されます。
+   **デメリット：** は引き続きを使用しま `loginAdministrative()`す。認証済みの要求が再認証されます。
 
 1. データへのアクセス権限を持つサービスユーザーを作成または再利用します。
 
    **利点：**&#x200B;現在の設計と一貫している。変更が最小限で済みます。
 
-   **デメリット：非常に強力なサービスユーザーが柔軟に対応できる** 必要があり、その結果、特権エスカレーションが容易になります。セキュリティモデルに抜け道ができます。
+   **デメリット：** 非常に強力なサービスユーザーが柔軟である必要があり、権限のエスカレーションを容易におこなえます。セキュリティモデルに抜け道ができます。
 
 1. `Subject` のシリアル化をイベントペイロードに渡し、そのサブジェクトに基づいて `ResourceResolver` を作成します。例えば、`doAsPrivileged` で JAAS `ResourceResolverFactory` を使用します。
 
    **利点：**&#x200B;セキュリティの観点からクリーンな実装。再認証は回避し、元の権限で動作します。セキュリティ関連のコードはイベントの消費者に対して透過的です。
 
-   **デメリット：リファクタリング** が必要です。セキュリティ関連のコードがイベントの消費者に対して透過的であることから、問題に発展する可能性があります。
+   **デメリット：** リファクタリングが必要です。セキュリティ関連のコードがイベントの消費者に対して透過的であることから、問題に発展する可能性があります。
 
 3 番目のアプローチが現在推奨されている処理手法です。
 
