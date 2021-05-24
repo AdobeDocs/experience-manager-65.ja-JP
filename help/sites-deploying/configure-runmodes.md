@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '764'
 ht-degree: 74%
 
 ---
-
 
 # 実行モード{#run-modes}
 
@@ -25,9 +24,9 @@ ht-degree: 74%
 
 以下の操作を実行できます。
 
-* [各実行モードに対して設定パラメーターのコレクションを定義します](#defining-configuration-properties-for-a-run-mode)。
+* [各実行モードに対する設定パラメーターのコレクションを定義します](#defining-configuration-properties-for-a-run-mode)。
 
-   すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。 これらは、必要に応じて適用されます。
+   すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。 これらは必要に応じて適用されます。
 
 * [特定のモード用にインストールする追加のバンドルを定義します](#defining-additional-bundles-to-be-installed-for-a-run-mode)。
 
@@ -46,9 +45,9 @@ ht-degree: 74%
 
 これらは相互に排他的な実行モードの 2 つのペアです。例えば、次のことが可能です。
 
-* `author`または`publish`のいずれかを定義し、両方を同時に定義するわけではありません
+* `author`または`publish`を定義します。両方を同時に定義することはできません。
 
-* `author`を`samplecontent`または`nosamplecontent`と組み合わせる（両方ではない）
+* `author`を`samplecontent`または`nosamplecontent`と組み合わせます（両方は不可）。
 
 >[!CAUTION]
 >
@@ -60,7 +59,7 @@ ht-degree: 74%
 
 独自のカスタマイズされた実行モードも作成できます。これらを組み合わせて次のようなシナリオに対応できます。
 
-* `author` +  `development`
+* `author` + `development`
 
 * `publish` +  `test`
 
@@ -90,19 +89,19 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 * `config`
 
-   すべての実行モードに適用可能
+   すべての実行モードに適用
 
 * `config.author`
 
-   作成者の実行モードに使用
+   オーサー実行モードに使用
 
 * `config.publish`
 
-   公開実行モードに使用
+   パブリッシュ実行モードに使用
 
 * `config.<run-mode>`
 
-   該当する実行モードで使用されます。例えば、config
+   該当する実行モードに使用されます。例：config
 
 これらのフォルダー内で個々の設定ノードを定義する方法、および複数の実行モードの組み合わせに関する設定を作成する方法について詳しくは、[リポジトリでの OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を参照してください。
 
@@ -112,7 +111,7 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 ## 特定の実行モード用にインストールする追加のバンドルの定義  {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
-特定の実行モードに対してインストールする必要のある追加のバンドルも指定できます。 これらの定義では、バンドルの保持にインストールフォルダーが使用されます。 再び、実行モードは、プレフィックスで示されます。
+特定の実行モード用にインストールする必要がある追加のバンドルも指定できます。 これらの定義に関しては、インストールフォルダーを使用してバンドルが保持されます。 繰り返しになりますが、実行モードはプレフィックスで示されます。
 
 * `install.author`
 * `install.publish`
@@ -123,9 +122,9 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 複数の実行モードの設定を定義した場合は、起動時にどれを使用するかを定義する必要があります。使用する実行モードを指定する方法は複数あります。優先順位は次のとおりです。
 
-1. [ `sling.properties` file](#using-the-sling-properties-file)
-1. [ `-r` オプション](#using-the-r-option)
-1. [システムのプロパティ(`-D`)](#using-a-system-property-in-the-start-script)
+1. [ ](#using-the-sling-properties-file)
+1. [ ](#using-the-r-option)
+1. [システムのプロパティ(](#using-a-system-property-in-the-start-script)
 
 1. [ファイル名検出](#filename-detection-renaming-the-jar-file)
 
@@ -139,13 +138,13 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
    `<cq-installation-dir>/crx-quickstart/conf/sling.properties`
 
-1. 追加次のプロパティ次に示すのは、authorの例です。
+1. 次のプロパティを追加します。作成者の場合の例を次に示します。
 
    `sling.run.modes=author`
 
 ### -r オプションの使用{#using-the-r-option}
 
-クイックスタートの起動時に`-r`オプションを使用すると、カスタム実行モードをアクティブにできます。 例えば、実行モードがdevに設定されたAEMインスタンスを起動するには、次のコマンドを使用します。&quot;
+クイックスタートを起動する際に`-r`オプションを使用して、カスタム実行モードを有効にすることができます。 例えば、次のコマンドを使用して、実行モードをdevに設定したAEMインスタンスを起動します。&quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -155,13 +154,13 @@ java -jar cq-56-p4545.jar -r dev
 
 起動スクリプトのシステムプロパティを使用して実行モードを指定できます。
 
-* 例えば、次の例を使用して、米国にある実稼働用発行インスタンスとしてインスタンスを起動します。
+* 例えば、次の例を使用して、米国内にある実稼動パブリッシュインスタンスとしてインスタンスを起動します。
 
    `-Dsling.run.modes=publish,prod,us`
 
 ### ファイル名検出 - jar ファイルの名前変更 {#filename-detection-renaming-the-jar-file}
 
-次の2つのインストール実行モードは、インストール前にインストールjarファイルの名前を変更することでアクティブ化できます。
+次の2つのインストール実行モードは、インストール前にインストールjarファイルの名前を変更することで有効化できます。
 
 * publish
 * 作成者
