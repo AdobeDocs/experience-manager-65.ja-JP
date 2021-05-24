@@ -21,23 +21,23 @@ ht-degree: 66%
 
 ここでは、アプリケーションサーバーインストール用の AEM を更新するために必要になる手順を説明します。
 
-この手順の例では、アプリケーションサーバーとしてTomcatを使用し、AEMの稼働バージョンが既にデプロイされていることを示しています。 ここでは、**AEM バージョン 6.4 から 6.5** へのアップグレードについて説明します。
+この手順の例では、すべてTomcatをアプリケーションサーバーとして使用し、AEMが既に実装済みであることを意味します。 ここでは、**AEM バージョン 6.4 から 6.5** へのアップグレードについて説明します。
 
-1. まず、開始のトムキャット。 ほとんどの場合、`./catalina.sh`開始の起動スクリプトを実行し、ターミナルから次のコマンドを実行することで、これを行うことができます。
+1. まず、TomCatを起動します。 ほとんどの状況では、`./catalina.sh`起動スクリプトを実行し、ターミナルから次のコマンドを実行することで起動を行うことができます。
 
    ```shell
    $CATALINA_HOME/bin/catalina.sh start
    ```
 
-1. AEM 6.4が既にデプロイされている場合は、次のリンクにアクセスして、バンドルが正しく機能していることを確認してください。
+1. AEM 6.4が既にデプロイされている場合は、次のにアクセスして、バンドルが正しく機能していることを確認します。
 
    ```shell
    https://<serveraddress:port>/cq/system/console/bundles
    ```
 
-1. 次に、AEM 6.4のデプロイを解除します。これはTomCat App Manager (`http://serveraddress:serverport/manager/html`)から実行できます。
+1. 次に、AEM 6.4のデプロイを解除します。これは、TomCat App Manager (`http://serveraddress:serverport/manager/html`)から実行できます。
 
-1. 次に、crx2oak移行ツールを使用してリポジトリを移行します。 これを行うには、[この](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak)からcrx2oakの最新バージョンをダウンロードしてください。
+1. 次に、crx2oak移行ツールを使用してリポジトリを移行します。 そのためには、[この場所](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak)からcrx2oakの最新バージョンをダウンロードします。
 
    ```shell
    SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
@@ -45,7 +45,7 @@ ht-degree: 66%
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
 
-   1. `crx-quickstart/launchpad/sling.properties`にあるファイルを開きます
+   1. `crx-quickstart/launchpad/sling.properties`にあるファイルを開きます。
    1. 次のプロパティを削除してファイルを保存します。
 
       1. `sling.installer.dir`
@@ -72,7 +72,7 @@ ht-degree: 66%
 
    * **BootstrapCommandFile_timestamp.txtファイル**:`rm -f crx-quickstart/launchpad/felix/bundle0/BootstrapCommandFile_timestamp.txt`
 
-   * **sling.options.file**&#x200B;を次を実行して削除します。`find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
+   * 次のコマンドを実行して、**sling.options.file**&#x200B;を削除します。`find crx-quickstart/launchpad -type f -name "sling.options.file" -exec rm -rf`
 
 1. 次に、AEM 6.5 で使用されるノードストアとデータストアを作成します。そのためには、次の名前を持つ 2 つのファイルを `crx-quickstart\install` の下に作成します。
 
@@ -83,7 +83,7 @@ ht-degree: 66%
 
 1. 設定ファイルを編集し、使用できる状態にします。具体的には、次のように編集します。
 
-   * 追加`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`に次の行を追加します。
+   * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`に次の行を追加します。
 
       `customBlobStore=true`
 
@@ -123,4 +123,4 @@ ht-degree: 66%
    jar cvf aem65.war
    ```
 
-1. 最後に、新しいwarファイルをTomCatに展開します。
+1. 最後に、TomCatに新しいwarファイルをデプロイします。
