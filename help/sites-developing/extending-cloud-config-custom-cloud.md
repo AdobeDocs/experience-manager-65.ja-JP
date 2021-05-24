@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: e48e87c6-43ca-45ba-bd6b-d74c969757cd
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 62%
 
 ---
-
 
 # カスタムクラウドサービスの作成{#creating-a-custom-cloud-service}
 
@@ -36,7 +35,7 @@ ht-degree: 62%
    * **名前**：`analytics`
    * **型**：`sling:Folder`
 
-1. `/apps/acs/analytics`の下に2つの新しいノードを作成：
+1. `/apps/acs/analytics`の下に2つの新しいノードを作成します。
 
    * **名前**:コンポーネント
    * **型**：`sling:Folder`
@@ -54,18 +53,18 @@ ht-degree: 62%
    * **スーパータイプ**:  `cq/cloudserviceconfigs/components/configpage`
    * **グループ**: `.hidden`
 
-1. 「**次へ**」を2回クリックし、次を指定します。
+1. 「**次へ**」を2回クリックし、次の項目を指定します。
 
    * **許可された親:** `acs/analytics/templates/googleanalytics`
 
    「**次へ**」を2回クリックし、「**OK**」をクリックします。
 
-1. &lt;a0/追加>に対するプロパティ：`googleanalyticspage`
+1. `googleanalyticspage`にプロパティを追加します。
 
-   * **名前：**`cq:defaultView`
+   * **名前:** `cq:defaultView`
    * **値:** `html`
 
-1. `/apps/acs/analytics/components/googleanalyticspage`の下に`content.jsp`という名前の新しいファイルを作成し、次の内容を入力します。
+1. `/apps/acs/analytics/components/googleanalyticspage`の下に、次の内容の`content.jsp`という名前の新しいファイルを作成します。
 
    ```xml
    <%@page contentType="text/html"
@@ -142,16 +141,16 @@ ht-degree: 62%
       * **型**：`String`
       * **値**: `textfield`
 
-1. `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp`を`/apps/acs/analytics/components/googleanalyticspage/body.jsp`にコピーし、`libs`を`apps`に変更して、行34に対するスクリプト参照を完全修飾パスにします。
-1. `/apps/acs/analytics/templates/`の下に新しいテンプレートを作成：
+1. `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp`を`/apps/acs/analytics/components/googleanalyticspage/body.jsp`にコピーし、34行目の`libs`を`apps`に変更し、79行目のスクリプト参照を完全修飾パスにします。
+1. `/apps/acs/analytics/templates/`の下に新しいテンプレートを作成します。
 
-   * **リソースタイプ** = `acs/analytics/components/googleanalyticspage`の
+   * **リソースタイプ** = `acs/analytics/components/googleanalyticspage`
    * **ラベル** = `googleanalytics`
-   * **タイトル**= `Google Analytics Configuration`
-   * **allowedPath** = `/etc/cloudservices/googleanalytics(/.*)?`の
-   * **allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`の
-   * **sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage`（テンプレートノードで、jcr:contentノードではなく）
-   * と&#x200B;**cq:designPath** = `/etc/designs/cloudservices/googleanalytics`(jcr:content)
+   * **タイトル**= `Google Analytics Configuration`を使用
+   * と&#x200B;**allowedPath** = `/etc/cloudservices/googleanalytics(/.*)?`
+   * と&#x200B;**allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`
+   * と&#x200B;**sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage`（jcr:contentノードではなく、テンプレートノード）
+   * と&#x200B;**cq:designPath** = `/etc/designs/cloudservices/googleanalytics`（jcr:content上）
 
 1. 新しいコンポーネントの作成：`/apps/acs/analytics/components/googleanalytics`.
 
@@ -201,14 +200,14 @@ ht-degree: 62%
    * **タイトル**: `Google Analytics`
    * **名前**：`googleanalytics`
 
-   CRXDE Liteに戻り、`/etc/cloudservices/googleanalytics`の下で次のプロパティを`jcr:content`に追加します。
+   CRXDE Liteに戻り、`/etc/cloudservices/googleanalytics`の下で、次のプロパティを`jcr:content`に追加します。
 
    * **名前**：`componentReference`
    * **型**：`String`
    * **値**: `acs/analytics/components/googleanalytics`
 
 
-1. 新しく作成したサービスページ(`http://localhost:4502/etc/cloudservices/googleanalytics.html`)に移動し、**+**&#x200B;をクリックして、新しい設定を作成します。
+1. 新しく作成したサービスページ( `http://localhost:4502/etc/cloudservices/googleanalytics.html` )に移動し、**+**&#x200B;をクリックして新しい設定を作成します。
 
    * **親設定**: `/etc/cloudservices/googleanalytics`
    * **タイトル:**  `My First GA Config`
@@ -218,4 +217,3 @@ ht-degree: 62%
 1. **アカウント ID**（例：`AA-11111111-1`）を入力します。「**OK**」をクリックします。
 1. ページに移動し、「**クラウドサービス**」タブで、新たに作成された設定をページプロパティに追加します。
 1. このページにカスタムマークアップが追加されます。
-
