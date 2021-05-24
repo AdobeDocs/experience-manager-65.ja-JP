@@ -10,14 +10,13 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 63%
 
 ---
-
 
 # SPA の概要およびガイド{#spa-introduction-and-walkthrough}
 
@@ -27,9 +26,9 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 
 >[!NOTE]
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 ### 記事の目的 {#article-objective}
 
@@ -37,16 +36,16 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 
 この概要とガイドの目標は、SPA が注目される理由、その一般的な動作、AEM エディターでの SPA の処理方法、標準の AEM アプリケーションとの違いを AEM 開発者に示すことです。
 
-チュートリアルは、標準的なAEM機能とサンプルのWeb.Retailジャーナルアプリに基づいています。 以下の要件を満たす必要があります。
+このガイドは、標準のAEM機能とサンプルのWe.Retail Journalアプリに基づいています。 以下の要件を満たす必要があります。
 
-* [AEMバージョン6.4（Service Pack 2以降）](/help/release-notes/sp-release-notes.md)
-* [GitHubにあるサンプルのWe.Retailジャーナルアプリをここにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+* [AEM version 6.4 （service pack 2以降）](/help/release-notes/sp-release-notes.md)
+* [GitHubで入手可能なサンプルのWe.Retail Journalアプリをこちらにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 >[!CAUTION]
 >
->このドキュメントでは、[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)は、デモ目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
+>このドキュメントでは、[We.Retail Journalアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)をデモ目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
 >
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ### SPA について {#what-is-a-spa}
 
@@ -79,34 +78,32 @@ AEM SPA エディターを使用すると、フロントエンド開発者は AE
 
 ### SPA の仕組み {#how-does-a-spa-work}
 
-SPAの主な概念は、SPAがネイティブアプリケーションの応答性に近づくように、サーバー呼び出しに伴う遅延を最小限に抑えるために、サーバーの呼び出しと依存関係が低下するということです。
+SPAの背後にある主な考え方は、SPAがネイティブアプリケーションの応答性に近づくように、サーバー呼び出しによる遅延を最小限に抑えるために、呼び出しとサーバーへの依存性を低減することです。
 
-従来のシーケンシャルな Web ページでは、そのページに必要なデータのみが読み込まれます。つまり、訪問者が別のページに移動すると、サーバーが追加のリソースを呼び出します。訪問者がページ上の要素とやり取りする際に、追加の呼び出しが必要になる場合があります。 これらの複数の呼び出しでは、ページが訪問者のリクエストに追いつく必要があるので、遅いという感覚を与える可能性があります。
+従来のシーケンシャルな Web ページでは、そのページに必要なデータのみが読み込まれます。つまり、訪問者が別のページに移動すると、サーバーが追加のリソースを呼び出します。訪問者がページ上の要素を操作する際に、追加の呼び出しが必要になる場合があります。 これらの複数の呼び出しでは、ページが訪問者のリクエストに追いつく必要があるので、遅いという感覚を与える可能性があります。
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
-より流動的なエクスペリエンスを実現するために、SPAは、モバイルやネイティブのアプリから訪問者が期待する動作に近いものとして、最初の読み込み時に訪問者に必要なすべてのデータを読み込みます。 最初は少し時間がかかる場合がありますが、その後はサーバーコールを追加する必要はありません。
+訪問者がモバイルやネイティブアプリから期待する動作に近い、より流動的なエクスペリエンスを実現するために、SPAは、最初の読み込み時に訪問者に必要なすべてのデータを読み込みます。 最初は少し時間がかかる場合がありますが、その後はサーバーコールを追加する必要はありません。
 
-クライアント側でレンダリングすると、ページ要素の反応が速くなり、訪問者によるページとのやり取りが即時に行われます。 ページの速度を最大化するために、必要になる可能性のある追加データはすべて非同期に呼び出されます。
+クライアント側でレンダリングすると、ページ要素の反応が速くなり、訪問者によるページとのインタラクションが直ちにおこなわれます。 ページの速度を最大化するために、必要になる可能性のある追加データはすべて非同期で呼び出されます。
 
 >[!NOTE]
 >
->AEMでのSPAの動作方法に関する技術的な詳細については、AEM](/help/sites-developing/spa-getting-started-react.md)の「SPA使用の手引き」を参照してください。[
+>AEMでのSPAの動作方法に関する技術的な詳細については、「[AEMでのSPAの概要](/help/sites-developing/spa-getting-started-react.md)」を参照してください。
 >
->SPAエディタのデザイン、アーキテクチャ、および技術的なワークフローについて詳しくは、「[SPAエディタの概要](/help/sites-developing/spa-overview.md)」を参照してください。
+>SPA Editorのデザイン、アーキテクチャ、技術的なワークフローについて詳しくは、「 [SPA Editorの概要](/help/sites-developing/spa-overview.md) 」を参照してください。
 
 ## SPA でのコンテンツ編集エクスペリエンス {#content-editing-experience-with-spa}
 
-AEM SPA Editorを利用するSPAが構築されている場合、コンテンツの編集と作成の際に、コンテンツ作成者は何の違いも認識しません。 共通の AEM 機能を利用でき、作成者のワークフローに変更を加える必要はありません。
+AEM SPA Editorを活用するSPAが構築されている場合、コンテンツ作成者は、コンテンツの編集時と作成時に違いを認識しません。 共通の AEM 機能を利用でき、作成者のワークフローに変更を加える必要はありません。
 
 >[!NOTE]
 >
->チュートリアルは、標準的なAEM機能とサンプルのWeb.Retailジャーナルアプリに基づいています。 以下の要件を満たす必要があります。
+>このガイドは、標準のAEM機能とサンプルのWe.Retail Journalアプリに基づいています。 以下の要件を満たす必要があります。
 >
->* [AEMバージョン6.4(Service Pack 2)](/help/release-notes/sp-release-notes.md)
->* [GitHubにあるサンプルのWe.Retailジャーナルアプリをここにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
-
->
+>* [AEMバージョン6.4（Service Pack 2を適用）](/help/release-notes/sp-release-notes.md)
+* [GitHubで入手可能なサンプルのWe.Retail Journalアプリをこちらにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
 
 
 
@@ -116,7 +113,7 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
 
    ![screen_shot_2018-06-07at142533](assets/screen_shot_2018-06-07at142533.png)
 
-1. 見出しコンポーネントを選択すると、ツールバーが他のコンポーネントと同様に表示されます。 「**編集**」を選択します。
+1. 見出しコンポーネントを選択すると、他のコンポーネントと同様にツールバーが表示されます。 「**編集**」を選択します。
 
    ![screen_shot_2018-06-07at142937](assets/screen_shot_2018-06-07at142937.png)
 
@@ -125,7 +122,7 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
    ![screen_shot_2018-06-07at143419](assets/screen_shot_2018-06-07at143419.png)
 
    >[!NOTE]
-   >インプレーステキストエディタとSPAの詳細については、[SPAエディタの概要](spa-overview.md#requirements-limitations)を参照してください。
+インプレーステ [キストエ](spa-overview.md#requirements-limitations) ディタとSPAについて詳しくは、 SPAエディタの概要を参照してください。
 
 1. アセットブラウザーを使用して、新しい画像を画像コンポーネントにドラッグ＆ドロップします。
 
@@ -138,18 +135,16 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
 追加のコンポーネントをページにドラッグ＆ドロップしたり、コンポーネントを並べ替えたり、レイアウトを変更したりするなどのオーサリングツールは、SPA 以外のどの アプリケーションでもサポートされます。
 
 >[!NOTE]
->
->SPA エディターは、アプリケーションの DOM を変更しません。SPA 自体が DOM を管理します。
->
->この機能を確認するには、この記事の次の節、[SPA アプリと AEM SPA エディター](/help/sites-developing/spa-walkthrough.md#spa-apps-and-the-aem-spa-editor)に進みます。
+SPA エディターは、アプリケーションの DOM を変更しません。SPA 自体が DOM を管理します。
+この機能を確認するには、この記事の次の節、[SPA アプリと AEM SPA エディター](/help/sites-developing/spa-walkthrough.md#spa-apps-and-the-aem-spa-editor)に進みます。
 
 ## SPA アプリと AEM SPA エディター {#spa-apps-and-the-aem-spa-editor}
 
-エンドユーザーがSPAを動作させ、SPAページを検査すると、SAPアプリがAEMのSPA Editorと連携する方法をより深く理解できます。
+エンドユーザーに対してSPAがどのように動作するかを体験し、SPAページを調べると、AEMのSPA EditorでSAPアプリがどのように動作するかをより深く理解できます。
 
 ### SPA アプリケーションの使用 {#using-an-spa-application}
 
-1. We.Retailジャーナルアプリをパブリッシュサーバーで読み込むか、ページエディターの&#x200B;**ページ情報**&#x200B;メニューから&#x200B;**表示を発行済み**&#x200B;として読み込みます。
+1. We.Retail Journalアプリを公開サーバーに読み込むか、ページエディターの&#x200B;**ページ情報**&#x200B;メニューから「**公開済みとして表示**」オプションを使用して読み込みます。
 
    `/content/we-retail-journal/react.html`
 
@@ -171,7 +166,7 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
 
 子ページをナビゲートする際にページがリロードされないとすると、どのように読み込まれるのでしょうか。
 
-次のセクション[SPAアプリケーションの読み込み](/help/sites-developing/spa-walkthrough.md#loading-an-spa-application)では、SPAの読み込みの仕組みと、コンテンツの同期および非同期での読み込み方法を詳しく調べます。
+次の節[SPAアプリケーションの読み込み](/help/sites-developing/spa-walkthrough.md#loading-an-spa-application)では、SPAの読み込みの仕組みと、コンテンツの同期および非同期での読み込み方法を詳しく説明します。
 
 ### SPA アプリケーションの読み込み {#loading-an-spa-application}
 
@@ -182,7 +177,7 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
    ![screen_shot_2018-06-07at144736](assets/screen_shot_2018-06-07at144736.png)
 
 1. ブラウザーの組み込みツールを使用して、ページのソースを表示します。
-1. ソースのコンテンツは非常に限られていることに注意してください。
+1. ソースのコンテンツは非常に制限されています。
 
    ```
    <!DOCTYPE HTML>
@@ -208,9 +203,9 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
    </html>
    ```
 
-   ページの本文にはコンテンツが含まれていません。主にスタイルシートとReactスクリプト`we-retail-journal-react.js`の呼び出しで構成されます。
+   ページの本文にはコンテンツが含まれていません。主に、スタイルシートとReactスクリプトの呼び出し`we-retail-journal-react.js`で構成されます。
 
-   このReactスクリプトは、このアプリケーションの主なドライバーであり、すべてのコンテンツのレンダリングを担当します。
+   このReactスクリプトは、このアプリケーションのプライマリドライバーで、すべてのコンテンツのレンダリングを担当します。
 
 1. ブラウザーに組み込まれているツールを使用して、ページを調べます。完全に読み込まれた DOM のコンテンツを表示します。
 
@@ -232,17 +227,17 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
 
    特定のインターフェイスを実装することで、Sling Model は SPA に必要な情報を提供します。JSON データの配信は、各コンポーネント（ページから段落、コンポーネントなど）に下方向に委任されます。
 
-   各コンポーネントは、そのコンポーネントが何を公開し、どのようにレンダリングされるかを選択します（HTLを使用するサーバー側またはReactを使用するクライアント側）。 もちろん、この記事では、Reactを使用したクライアント側のレンダリングに重点を置いています。
+   各コンポーネントは、表示内容とレンダリング方法を選択します（HTLを使用するサーバー側、またはReactを使用するクライアント側）。 もちろん、この記事では、Reactを使用したクライアント側のレンダリングに焦点を当てています。
 
 1. このモデルでは、ページを同期して読み込むように複数のページをグループ化できるので、必要なページ再読み込み数を減らせます。
 
-   We.Retailジャーナルの例では、訪問者は一般的にこれらのすべてのページを訪問するので、`home`、`blog`、および`aboutus`の各ページは同期的に読み込まれます。 ただし、`weather`ページは非同期で読み込まれます。訪問者がこのページを訪問する可能性は低いからです。
+   We.Retailジャーナルの例では、訪問者は一般的にこれらのすべてのページを訪問するので、 `home`、 `blog`、 `aboutus`の各ページは同期して読み込まれます。 ただし、`weather`ページは非同期で読み込まれます。これは、訪問者がページを訪問する可能性が低いからです。
 
    この動作は必須ではなく、完全に定義可能です。
 
    ![screen_shot_2018-06-07at153945](assets/screen_shot_2018-06-07at153945.png)
 
-1. この動作の違いを表示するには、 ページを再読み込みし、インスペクターのネットワークアクティビティをクリアします。ページメニューでブログや会社のページに移動し、ネットワークアクティビティが報告されていないことを確認します。
+1. この動作の違いを表示するには、 ページを再読み込みし、インスペクターのネットワークアクティビティをクリアします。ページメニューのブログおよび会社のページに移動し、ネットワークアクティビティが報告されていないことを確認します。
 
    天気予報ページに移動し、`weather.model.json`が非同期で呼び出されることを確認します。
 
@@ -250,7 +245,7 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
 
 ### SPA エディターとのインタラクション {#interaction-with-the-spa-editor}
 
-サンプルのWeb.Retailジャーナルアプリケーションを使用すると、JSONコンテンツ配信のコンテンツサービスやリソースの非同期的な読み込みを利用し、アプリケーションの動作と公開時の読み込み方法が明確になります。
+サンプルのWe.Retailジャーナルアプリケーションを使用すると、JSONコンテンツ配信のコンテンツサービスやリソースの非同期読み込みを利用し、アプリの動作と公開時の読み込み方法が明確になります。
 
 また、コンテンツ作成者は、SPA エディターを使用したコンテンツを AEM 内でシームレスに作成できます。
 
@@ -270,23 +265,20 @@ AEM SPA Editorを利用するSPAが構築されている場合、コンテンツ
 
    `data-cq-data-path="root/responsivegrid/paragraph_1`
 
-   このパスにより、各コンポーネントの編集コンテキスト設定オブジェクトの取得と関連付けが可能になります。
+   このパスを使用すると、各コンポーネントの編集コンテキスト設定オブジェクトの取得と関連付けが可能になります。
 
    これは、SPA 内の編集可能なコンポーネントとして、エディターが認識するために必要なマークアップ属性です。この属性に基づいて、SPA エディターは、どの編集可能な設定がコンポーネントに関連付けられているかを判断し、正しいフレームやツールバーなどが読み込まれます。
 
    また、プレースホルダのマーキングやアセットのドラッグ＆ドロップ機能用に、いくつかの特定のクラス名が追加されています。
 
    >[!NOTE]
-   >
-   >これは、AEMのサーバー側でレンダリングされたページでの動作の変更です。編集可能な各コンポーネントに対して`cq`要素が挿入されます。
-   >
-   >
-   >SPAでのこのアプローチは、カスタム要素を挿入する必要がなくなり、追加のデータ属性に依存するだけで、フロントエンド開発者にとってマークアップが簡単になります。
+   これは、AEMのサーバーサイドレンダリングページの動作の変更です。編集可能な各コンポーネントに`cq`要素が挿入されます。
+   SPAのこのアプローチは、カスタム要素を挿入する必要がなくなり、依存するデータ属性は追加のみなので、フロントエンド開発者にとってマークアップがより簡単になります。
 
 ## 次の手順 {#next-steps}
 
 AEM での SPA の編集エクスペリエンスと、SPA と SPA エディターとの関係を理解したら、SPA の構築方法を深く掘り下げます。
 
-* [SPA使用の手引き(](/help/sites-developing/spa-getting-started-react.md) AEM)では、AEMのSPAエディタで動作する基本的なSPAの構築方法を示します。
+* [AEMでのSPAの概要で](/help/sites-developing/spa-getting-started-react.md) は、AEMでSPA Editorを使用するための基本SPAの構築方法を示します
 * 「[SPA エディターの概要](/help/sites-developing/spa-overview.md)」では、AEM と SPA 間の通信モデルをより深く分析しています。
 * [AEM 向け SPA の開発](/help/sites-developing/spa-architecture.md)では、フロントエンド開発者を AEM 向け SPA の開発に関与させる方法、および SPA と AEM アーキテクチャとのやり取りについて説明しています。
