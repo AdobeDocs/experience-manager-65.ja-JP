@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 11ff8bb3-39eb-4f77-b3dc-720262fa7f3f
 docset: aem65
-translation-type: tm+mt
-source-git-commit: dc1985c25c797f7b994f30195d0586f867f9b3ee
+exl-id: 0e13112b-d9df-4ba6-bd73-431c87890b79
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 97%
 
 ---
-
 
 # Marketing Campaign Manager の使用{#working-with-the-marketing-campaign-manager}
 
@@ -55,7 +54,7 @@ MCM から、以下にアクセスできます。
 
 ダッシュボードには、（リードの）リスト、セグメント、レポートおよびキャンペーンの概要を提供する 4 つのウィンドウが表示されます。ダッシュボードから、これらの基本機能にアクセスすることもできます。
 
-![mcm_ダッシュボード](assets/mcm_dashboard.png)
+![mcm_dashboard](assets/mcm_dashboard.png)
 
 ### リード数 {#leads}
 
