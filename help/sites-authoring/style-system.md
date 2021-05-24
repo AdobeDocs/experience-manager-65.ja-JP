@@ -8,14 +8,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
-translation-type: tm+mt
-source-git-commit: 0985ba24f7430381fccc40faf3a316d3abd85a30
+exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 98%
 
 ---
-
 
 # スタイルシステム{#style-system}
 
@@ -131,7 +130,7 @@ ht-degree: 98%
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 
-AEMバージョン6.5.3.0以降、「編集」ダイアログの「スタイル」タブはオプションで使用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
+AEMバージョン6.5.3.0以降では、編集ダイアログのオプションの「スタイル」タブが使用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
 
 編集ダイアログのタブは、デザインダイアログのタブと同様の方法で組み込むことができます。
 
