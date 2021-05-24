@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 81%
 
 ---
-
 
 # We.Retail のコアコンポーネントの使用{#trying-out-core-components-in-we-retail}
 
@@ -30,7 +29,7 @@ ht-degree: 81%
 
 1. コンポーネントコンソールでレールを開くと、特定のコンポーネントグループをフィルタリングできます。コアコンポーネントは以下の場所にあります。
 
-   * `.core-wcm`:標準コアコンポーネント
+   * `.core-wcm`:標準のコアコンポーネント
    * `.core-wcm-form`:フォーム送信コアコンポーネント
 
    `.core-wcm`を選択します。
@@ -40,7 +39,7 @@ ht-degree: 81%
 1. すべてのコアコンポーネントの名前が **v1** になっています。これは、このコアコンポーネントの最初のバージョンであることを示しています。将来的には、定期的にバージョンがリリースされます。これは、AEM とバージョンの互換性があり、簡単にアップグレードできるので、最新機能を利用することができます。
 1. **Text (v1)** をクリックします。
 
-   コンポーネントの&#x200B;**リソースタイプ**&#x200B;が`/apps/core/wcm/components/text/v1/text`であることを確認します。 コアコンポーネントは`/apps/core/wcm/components`の下にあり、コンポーネントごとにバージョン付けされます。
+   コンポーネントの&#x200B;**リソースタイプ**&#x200B;が`/apps/core/wcm/components/text/v1/text`であることを確認します。 コアコンポーネントは`/apps/core/wcm/components`の下にあり、コンポーネントごとにバージョン管理されます。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -49,11 +48,11 @@ ht-degree: 81%
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
 1. コンポーネントコンソールに戻ります。**We.Retail** グループをフィルタリングし、**テキスト**&#x200B;コンポーネントを選択します。
-1. **リソースタイプ**&#x200B;は、`/apps/weretail`の下で期待通りにコンポーネントを指し、**リソーススーパータイプ**&#x200B;はコアコンポーネント`/apps/core/wcm/components/text/v1/text`を指すようにしてください。
+1. **リソースタイプ**&#x200B;が`/apps/weretail`の下で期待どおりにコンポーネントを指し、**リソーススーパータイプ**&#x200B;がコアコンポーネント`/apps/core/wcm/components/text/v1/text`を指していることを確認します。
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. 「**使用状況**」タブをクリックして、このコンポーネントが現在使用されているページを確認します。 最初の&#x200B;**ありがとう**&#x200B;ページをクリックしてページを編集します。
+1. 「**ライブ使用状況**」タブをクリックして、このコンポーネントが現在使用されているページを確認します。 最初の&#x200B;**ありがとう**&#x200B;ページをクリックしてページを編集します。
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
@@ -90,4 +89,4 @@ ht-degree: 81%
 
 コアコンポーネントについて詳しくは、オーサリングドキュメントの[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)でコアコンポーネントの概要を参照し、開発者用ドキュメントの[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)で技術的な概要を参照してください。
 
-また、[編集可能テンプレート](/help/sites-developing/we-retail-editable-templates.md)も詳しく調査することをお勧めします。編集可能なテンプレートの詳細については、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者向けドキュメントページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
+また、[編集可能テンプレート](/help/sites-developing/we-retail-editable-templates.md)も詳しく調査することをお勧めします。編集可能なテンプレートについて詳しくは、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者ドキュメントのページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
