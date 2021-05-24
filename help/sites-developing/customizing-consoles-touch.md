@@ -10,14 +10,13 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
-translation-type: tm+mt
-source-git-commit: c13eabdf4938a47ddf64d55b00f845199591b835
+exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 78%
 
 ---
-
 
 # コンソールのカスタマイズ  {#customizing-the-consoles}
 
@@ -27,10 +26,10 @@ ht-degree: 78%
 
 AEM には、オーサーインスタンスのコンソール（および[ページオーサリング機能](/help/sites-developing/customizing-page-authoring-touch.md)）をカスタマイズできる様々な仕組みが用意されています。
 
-* クライアントライブラリクライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。をカスタマイズする際、`/apps.`の下に独自のclientlibを作成できます。たとえば、カスタムコンポーネントに必要なコードを保持できます。
+* クライアントライブラリクライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズする際に、`/apps.`の下に独自のクライアントライブラリを作成できます。例えば、カスタムコンポーネントに必要なコードを保持できます。
 
 * オーバーレイ
-オーバーレイはノード定義に基づいており、（`/libs`内の）標準機能をカスタマイズした独自の機能（`/apps`内の）でオーバーレイできます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+オーバーレイはノード定義に基づいており、（`/libs`の）標準的な機能を（`/apps`の）カスタマイズした独自の機能に重ねることができます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
 
@@ -54,7 +53,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
+>1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
    >
    >
 1. `/apps` 内で変更作業をおこないます。
@@ -63,7 +62,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 
 
-例えば、`/libs`構造内の次の場所はオーバーレイできます。
+例えば、`/libs`構造内の次の場所をオーバーレイできます。
 
 * コンソール（Granite UI ページに基づくすべてのコンソール）。次に例を示します。
 
@@ -83,7 +82,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
    先頭のエントリがデフォルトになります。
 
-   使用できるノードは、使用できる表示オプションに関連しています。
+   使用可能なノードは、使用可能な表示オプションと関連があります。
 
    * `column`
    * `card`
@@ -133,13 +132,13 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   このノードでプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例：`administrators`
+   このノードのプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例： `administrators`
 
 ### リスト表示で列のカスタマイズ {#customizing-columns-in-the-list-view}
 
 >[!NOTE]
 >
->この機能は、テキストフィールドの列に対して最適化されています。他のデータ型の場合は、`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`を`/apps`にオーバーレイできます。
+>この機能は、テキストフィールドの列用に最適化されています。他のデータ型の場合は、`/apps`内の`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`をオーバーレイできます。
 
 リスト表示で列をカスタマイズするには、次の手順を実行します。
 
@@ -156,7 +155,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 1. 省略可能：
 
-   * 追加のデータをプラグインする場合は、[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)を
+   * 追加データをプラグインする場合は、[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)を
       `pageInfoProviderType` property.
 
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
