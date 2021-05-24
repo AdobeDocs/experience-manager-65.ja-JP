@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 96%
 
 ---
-
 
 # 電子メールマーケティング{#e-mail-marketing}
 
@@ -134,7 +133,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`にあるDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
@@ -222,7 +221,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`にあるDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
 >
 >デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
