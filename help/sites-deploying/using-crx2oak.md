@@ -9,19 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アップグレード
+exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 66%
 
 ---
 
-
 # CRX2Oak 移行ツールの使用{#using-the-crx-oak-migration-tool}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 CRX2Oak は、異なるリポジトリ間でデータを移行するために設計されたツールです。
 
@@ -49,7 +48,7 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-## 特長 {#features}
+## 機能 {#features}
 
 CRX2Oak は AEM のアップグレード中に呼び出され、このとき、永続性モードの再設定を自動化する事前定義済みの移行プロファイルをユーザーが指定できます。これはクイックスタートモードと呼ばれます。
 
@@ -81,7 +80,7 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 #### カスタマイズ可能なアップグレードロジック  {#customizable-upgrade-logic}
 
-カスタムJavaロジックを`CommitHooks`を使用して実装することもできます。 カスタム `RepositoryInitializer` クラスを実装して、カスタム値でリポジトリを初期化できます。
+カスタムJavaロジックも`CommitHooks`を使用して実装できます。 カスタム `RepositoryInitializer` クラスを実装して、カスタム値でリポジトリを初期化できます。
 
 #### メモリマップ操作のサポート {#support-for-memory-mapped-operations}
 
@@ -89,17 +88,17 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 >[!CAUTION]
 >
->ただし、メモリマップ操作は Windows プラットフォームではサポートされないことに注意してください。したがって、Windowsで移行を実行する際は、**—disable-mmap**&#x200B;パラメーターを追加することをお勧めします。
+>ただし、メモリマップ操作は Windows プラットフォームではサポートされないことに注意してください。したがって、Windowsで移行を実行する際には、 **—disable-mmap**&#x200B;パラメーターを追加することをお勧めします。
 
 #### コンテンツの選択的移行 {#selective-migration-of-content}
 
-デフォルトでは、ツールは`"/"`パスの下にリポジトリ全体を移行します。 しかし、どのコンテンツを移行するかは完全に制御できます。
+デフォルトでは、このツールは`"/"`パスの下のリポジトリ全体を移行します。 しかし、どのコンテンツを移行するかは完全に制御できます。
 
-新しいインスタンスで必要とされないコンテンツの一部がある場合は、`--exclude-path`パラメーターを使用してコンテンツを除外し、アップグレード手順を最適化できます。
+新しいインスタンスで不要な部分がコンテンツに含まれている場合は、`--exclude-path`パラメーターを使用してコンテンツを除外し、アップグレード手順を最適化できます。
 
 #### パスの結合 {#path-merging}
 
-2つのリポジトリ間でデータをコピーする必要があり、両方のインスタンスで異なるコンテンツパスがある場合は、`--merge-path`パラメーターで定義できます。 定義すると、CRX2Oak は新しいノードのみをコピー先リポジトリにコピーし、古いノードは元の場所に保持します。
+2つのリポジトリ間でデータをコピーする必要があり、両方のインスタンスで異なるコンテンツパスがある場合は、 `--merge-path`パラメーターで定義できます。 定義すると、CRX2Oak は新しいノードのみをコピー先リポジトリにコピーし、古いノードは元の場所に保持します。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -109,9 +108,9 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ただし、元のページが削除されても、これらのバージョンはパージされません。長時間使用されているリポジトリを扱う場合は、孤立したバージョンによって生じた多数の冗長なデータを移行で処理しなければならないことがあります。
 
-このような状況で役立つ機能は、`--copy-versions`パラメーターの追加です。 リポジトリの移行またはコピーの際にバージョンノードをスキップする場合に使用します。
+このような状況で役立つ機能は、`--copy-versions`パラメーターの追加です。 リポジトリの移行またはコピー中にバージョンノードをスキップする場合に使用できます。
 
-また、`--copy-orphaned-versions=true`を追加して、親なしのバージョンをコピーするかどうかを選択することもできます。
+`--copy-orphaned-versions=true`を追加して、孤立したバージョンをコピーするかどうかを選択することもできます。
 
 特定の日付までのバージョンをコピーする場合、どちらのパラメーターも日付形式 `YYYY-MM-DD` をサポートしています。
 
@@ -129,11 +128,11 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ## パラメーター {#parameters}
 
-### ノードストアオプション {#node-store-options}
+### ノードストアオプション  {#node-store-options}
 
-* `--cache`:キャッシュサイズ（MB単位）(デフォルト `256`)
+* `--cache`:キャッシュサイズ（MB単位）(デフォルトは `256`)
 
-* `--mmap`:セグメントストアのメモリマップファイルアクセスの有効化
+* `--mmap`:セグメントストアのメモリマップファイルアクセスを有効にする
 * `--src-password:` ソースRDBデータベースのパスワード
 
 * `--src-user:` ソースRDBのユーザー
@@ -144,22 +143,22 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ### 移行オプション {#migration-options}
 
-* `--early-shutdown`:ノードのコピー後、およびコミットフックの適用前に、ソースJCR2リポジトリをシャットダウンします。
-* `--fail-on-error`:ノードをソースリポジトリから読み取れない場合に、移行の失敗を強制します。
+* `--early-shutdown`:ノードのコピー後、コミットフックの適用前に、ソースJCR2リポジトリをシャットダウンします。
+* `--fail-on-error`:ソースリポジトリからノードを読み取れない場合、強制的に移行が失敗します。
 * `--ldap`:LDAPユーザーをCQ 5.xインスタンスからOakベースのインスタンスに移行します。この機能を有効にするには、Oak 設定内の ID プロバイダーを ldap という名前にする必要があります。詳しくは、[LDAP に関するドキュメント](/help/sites-administering/ldap-config.md)を参照してください。
 
-* `--ldap-config:` これは、認証に複数のLDAPサーバーを使用したCQ 5.xリポジトリの `--ldap` パラメーターと組み合わせて使用します。CQ 5.x `ldap_login.conf`または`jaas.conf`の設定ファイルを指すのに使用できます。 形式は`--ldapconfig=path/to/ldap_login.conf`です。
+* `--ldap-config:` これは、複数のLDAPサーバーを認証に使 `--ldap` 用したCQ 5.xリポジトリのパラメーターと組み合わせて使用します。CQ 5.xの`ldap_login.conf`または`jaas.conf`設定ファイルを指すのに使用できます。 形式は`--ldapconfig=path/to/ldap_login.conf`です。
 
 ### バージョンストアオプション {#version-store-options}
 
-* `--copy-orphaned-versions`:孤立したバージョンをコピーするのをスキップします。サポートされるパラメーターは次のとおりです。`true`、`false`、`yyyy-mm-dd`。 デフォルトは `true`.
+* `--copy-orphaned-versions`:孤立したバージョンのコピーをスキップします。次のパラメーターがサポートされています。`true`、`false`および`yyyy-mm-dd`。 デフォルトは `true`.
 
 * `--copy-versions:` バージョンストレージをコピーします。パラメーター: `true`, `false`, `yyyy-mm-dd`. デフォルトは `true`.
 
 #### パスオプション {#path-options}
 
 * `--include-paths:` コピー時に含めるパスのコンマ区切りリスト
-* `--merge-paths`:コピー中に結合するパスのコンマ区切りリスト
+* `--merge-paths`:コピー時に結合するパスのコンマ区切りリスト
 * `--exclude-paths:` コピー時に除外するパスのコンマ区切りリスト。
 
 ### コピー元 BLOB ストアオプション {#source-blob-store-options}
@@ -170,7 +169,7 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 * `--src-s3datastore`:ソースに使用するデータストアディレクトリ  `S3DataStore`
 
-* `--src-s3config`:ソースの設定ファイル `S3DataStore`。
+* `--src-s3config`:ソースの設定ファイ `S3DataStore`ル。
 
 ### コピー先 BLOB ストアオプション {#destination-blobstore-options}
 
@@ -180,7 +179,7 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 * `--s3datastore`:ターゲットに使用するデータストアディレクトリ  `S3DataStore`
 
-* `--s3config`:ターゲットの設定ファイル `S3DataStore`。
+* `--s3config`:ターゲットの設定ファイ `S3DataStore`ル。
 
 ### ヘルプオプション {#help-options}
 
@@ -194,15 +193,15 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
  <tbody>
   <tr>
    <td><strong>CRX2Oak モード</strong></td>
-   <td><strong>アクション</strong></td>
+   <td><strong>動作</strong></td>
   </tr>
   <tr>
    <td>クイックスタートモード</td>
-   <td>CRX2Oakの実行時に、コマンドラインに<strong>—log-levelTRACE</strong>または<strong>—log-level DEBUG </strong>オプションを追加できます。 このモードでは、ログは自動的に<strong>upgrade.logファイル</strong>にリダイレクトされます。</td>
+   <td>CRX2Oakの実行時に、<strong>—log-levelTRACE</strong>または<strong>—log-level DEBUG </strong>オプションをコマンドラインに追加できます。 このモードでは、ログは自動的に<strong>upgrade.logファイル</strong>にリダイレクトされます。</td>
   </tr>
   <tr>
    <td>スタンドアロンモード</td>
-   <td><p>CRX2Oakの追加コマンドラインに対する<strong>—trace</strong>オプションを設定し、標準出力でTRACEイベントを表示します(リダイレクト文字を使用してログをリダイレクトする必要があります。「&gt;」または「tee」コマンドを使用して、後で検査することができます)。</p> </td>
+   <td><p><strong>—trace</strong>オプションをCRX2Oakコマンドラインに追加して、標準出力でTRACEイベントを表示します（リダイレクト文字を使用してログを自分でリダイレクトする必要があります）。後で検査するための'&gt;'または'tee'コマンド)。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -220,4 +219,3 @@ java -Xmx4092m -XX:MaxPermSize=1024m -jar crx2oak.jar crx-quickstart/repository/
 >[!NOTE]
 >
 >詳しくは、MongoDB の接続文字列に関するドキュメントで[書き込み確認](https://docs.mongodb.org/manual/reference/connection-string/#write-concern-options)について参照してください。
-
