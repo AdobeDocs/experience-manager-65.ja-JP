@@ -9,18 +9,17 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
-translation-type: tm+mt
-source-git-commit: 07eb53f19cf7c7c2799c95ba9df54f4673d72fdc
+exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1918'
 ht-degree: 46%
 
 ---
 
-
 # カスタムノードタイプ{#custom-node-types}
 
-AEMはSlingに基づいており、JCRリポジトリを使用するので、次の2つのノードタイプが提供されるノードタイプを使用できます。
+AEMはSlingに基づいており、JCRリポジトリを使用するので、次の両方で提供されるノードタイプを使用できます。
 
 * [JCR ノードタイプ](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling ノードタイプ](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
@@ -29,7 +28,7 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 
 ## 監査 {#audit}
 
-### cq:AuditEvent {#cq-auditevent}
+### cq:AuditEvent  {#cq-auditevent}
 
 **説明**
 
@@ -57,7 +56,7 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 
 ## コメント {#comment}
 
-### cq:Comment {#cq-comment}
+### cq:Comment  {#cq-comment}
 
 **説明**
 
@@ -111,8 +110,8 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 
 地理的な位置を 10 進数の度（DD）で定義する mixin です。
 
-* `@prop latitude`  — 緯度（10進法）を使用して重複としてエンコードされた緯度
-* `@prop longitude`  — 度（10進法）を使用して重複としてエンコードされた経度
+* `@prop latitude`  — 倍精度浮動小数点数としてエンコードされた緯度（十進角を使用）
+* `@prop longitude`  — 倍精度浮動小数点数としてエンコードされた経度（十進角を使用）
 
 **定義**
 
@@ -132,7 +131,7 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 
 ## コア {#core}
 
-### cq:Page {#cq-page}
+### cq:Page  {#cq-page}
 
 **説明**
 
@@ -164,11 +163,11 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 
 * `@prop jcr:title`  — ページのタイトル。
 * `@prop jcr:description`  — このページの説明。
-* `@prop cq:template`  — ページの作成に使用するテンプレートのパス。
-* `@prop cq:allowedTemplates`  — 許可される式のパスを決定するために使用される正規テンプレートのリスト。
-* `@prop pageTitle`  — 通常、 `<title>` タグに表示されるタイトル。
+* `@prop cq:template`  — ページの作成に使用されるテンプレートへのパス。
+* `@prop cq:allowedTemplates`  — 許可されるテンプレートへのパスを決定するために使用される正規表現のリスト。
+* `@prop pageTitle`  — タイトルは通常、タグに表示さ `<title>` れます。
 * `@prop navTitle`  — 通常、ナビゲーションで使用されるタイトル。
-* `@prop hideInNav`  — ページをナビゲーションで非表示にするかどうかを指定します。
+* `@prop hideInNav`  — ページをナビゲーション内で非表示にするかどうかを指定します。
 * `@prop onTime`  — このページが有効になる時間。
 * `@prop offTime`  — このページが無効になる時間。
 * `@prop cq:lastModified`  — ページ（またはその段落）が最後に変更された日付。
@@ -200,16 +199,16 @@ AEMはSlingに基づいており、JCRリポジトリを使用するので、次
 CQ テンプレートを定義します。
 
 * `@node jcr:content`  — 新しいページのデフォルトコンテンツ。
-* `@node icon.png`  — 特徴的なアイコンを持つファイル。
+* `@node icon.png`  — 特性のアイコンを保持するファイル。
 * `@node thumbnail.png`  — 特有のサムネール画像を保持するファイル。
-* `@node workflows`  — ワークフロー設定の自動割り当て。設定は次の構造に従います。
+* `@node workflows`  — ワークフロー設定を自動割り当てます。設定は次の構造に従います。
    * `+ workflows`
       * `+ name1`
          * `- cq:path`
             * `- cq:workflowName`
-* `@prop allowedParents`  — 親式として許可されるテンプレートへのパスを決定する正規テンプレートパターン。
-* `@prop allowedChildren`  — 子テンプレートとして許可される式へのパスを決定する正規テンプレートパターン。
-* `@prop ranking`  — ページの作成ダイアログ内でのテンプレートのリスト内の位置。
+* `@prop allowedParents`  — 親テンプレートとして許可されるテンプレートへのパスを決定する正規表現パターン。
+* `@prop allowedChildren`  — 子テンプレートとして許可されるテンプレートへのパスを決定する正規表現パターン。
+* `@prop ranking`  — ページを作成ダイアログで、テンプレートのリスト内に配置します。
 
 **定義**
 
@@ -233,22 +232,22 @@ CQ コンポーネントを定義します。
 
 * `@prop jcr:title`  — コンポーネントのタイトル。
 * `@prop jcr:description`  — コンポーネントの説明。
-* `@node dialog` -プライマリダイアログ
-* `@prop dialogPath` -プライマリダイアログパス（ダイアログの代替）
-* `@node design_dialog`  — 設計ダイアログ
-* `@prop cq:cellName`  — 設計セルの名前。
-* `@prop cq:isContainer`  — これがコンテナコンポーネントであるかどうかを示します。これにより、子コンポーネントのセル名がパス名の代わりに使用されます。 例えば、`parsys`はコンテナコンポーネントです。 この値を定義しない場合、`cq:childEditConfig`の存在に基づいてチェックが行われます。
-* `@prop cq:noDecoration` - trueの場合、このコンポーネントを含めるときに装飾 `div` タグは描画されません。
+* `@node dialog` -プライマリダイアログ。
+* `@prop dialogPath` -プライマリダイアログのパス（ダイアログの代替）。
+* `@node design_dialog`  — デザインダイアログ。
+* `@prop cq:cellName`  — デザインセルの名前。
+* `@prop cq:isContainer`  — これがコンテナコンポーネントであるかどうかを示します。これにより、パス名の代わりに子コンポーネントのセル名が強制的に使用されます。 例えば、`parsys`はコンテナコンポーネントです。 この値を定義しない場合、`cq:childEditConfig`の存在に基づいてチェックが実行されます。
+* `@prop cq:noDecoration` - trueの場合、このコンポーネントを `div` 含める際に装飾タグは描画されません。
 * `@node cq:editConfig`  — 編集バーのパラメーターを定義する設定。
 * `@node cq:childEditConfig`  — 子コンポーネントに継承される編集設定。
-* `@node cq:htmlTag`  — コンポーネントが含まれる際に「囲む」 `div` タグに追加される追加のタグ属性を定義します。
-* `@node icon.png` — 特徴的なアイコンを持つファイル。
+* `@node cq:htmlTag`  — コンポーネントが含まれる際に「囲む」タグに追加さ `div` れる追加のタグ属性を定義します。
+* `@node icon.png` — 特性のアイコンを保持するファイル。
 * `@node thumbnail.png`  — 特有のサムネール画像を保持するファイル。
-* `@prop allowedParents`  — 親コンポーネントとして許可されるコンポーネントのパスを決定する正規式パターン。
-* `@prop allowedChildren`  — 子コンポーネントとして許可されるコンポーネントのパスを決定する正規式パターン。
+* `@prop allowedParents`  — 親コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
+* `@prop allowedChildren`  — 子コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
 * `@node virtual`  — コンポーネントのドラッグ&amp;ドロップに使用される仮想コンポーネントを反映するサブノードが含まれます。
 * `@prop componentGroup`  — コンポーネントのドラッグ&amp;ドロップに使用されるコンポーネントグループの名前。
-* `@node cq:infoProviders`  — サブノードを含みます。各サブノードは、を参照するプロパティ `className` を持ち `PageInfoProvider`ます。
+* `@node cq:infoProviders`  — サブノードを含み、各サブノードにはを参照す `className` るプロパティがあり `PageInfoProvider`ます。
 
 **定義**
 
@@ -293,16 +292,16 @@ CQ コンポーネントを mixin タイプとして定義します。
    * `floating` - 通常のフローティングダイアログの場合
    * `inline`  — インライン編集
    * `auto` - 自動検出（空きスペースによって異なる）
-* `@node cq:inplaceEditing`  — このコンポーネントのインプレイス編集設定。
+* `@node cq:inplaceEditing`  — このコンポーネントのインプレース編集設定。
 * `@prop cq:layout` — 編集バーのレイアウト：
-   * `editbar`  — バーの編集
+   * `editbar`  — 編集バー
    * `rollover`  — ロールオーバーフレーム
    * `auto`  — 自動検出
-* `@node cq:formParameters` — ダイアログフォームに追加する追加のパラメータ。
-* `@prop cq:actions` — アクションのリスト（編集バーのボタン、メニュー項目）
+* `@node cq:formParameters` — ダイアログフォームに追加する追加のパラメーター。
+* `@prop cq:actions` — アクションのリスト（編集バーのボタンまたはメニュー項目）。
 * `@node cq:actionConfigs`  — 編集バーまたはメニュー項目のウィジェット設定。
-* `@prop cq:emptyText`  — 視覚的なコンテンツがない場合に表示されるテキスト。
-* `@node cq:dropTargets` - `{@link cq:DropTargetConfig}` ノードの収集。
+* `@prop cq:emptyText`  — 視覚的なコンテンツが存在しない場合に表示されるテキスト。
+* `@node cq:dropTargets`  — ノードの `{@link cq:DropTargetConfig}` 収集。
 
 **定義**
 
@@ -321,9 +320,9 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 コンポーネントの 1 つのドロップターゲットを設定します。このノードの名前が、ドラッグ＆ドロップの ID として使用されます。
 
-* `@prop accept`  — このドロップターゲットで受け入れられるMIMEタイプのリスト。例えば  `["image/*"]`
+* `@prop accept`  — このドロップターゲットで受け入れられるMIMEタイプのリスト。例：  `["image/*"]`
 * `@prop groups`  — ソースを受け入れるドラッグ&amp;ドロップグループのリスト。
-* `@prop propertyName`  — 参照の保存に使用するプロパティの名前。
+* `@prop propertyName`  — 参照を保存するために使用されるプロパティの名前。
 
 **定義**
 
@@ -341,13 +340,13 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 * `@prop jcr:title`  — このコンポーネントのタイトル。
 * `@prop jcr:description`  — このコンポーネントの説明。
-* `@node cq:editConfig`  — 編集バーのパラメータを定義する設定を編集します。
+* `@node cq:editConfig`  — 編集バーのパラメーターを定義する設定を編集します。
 * `@node cq:childEditConfig` — 子コンポーネントに継承される設定を編集します。
-* `@node icon.png`  — 特徴的なアイコンを持つファイル。
+* `@node icon.png`  — 特性のアイコンを保持するファイル。
 * `@node thumbnail.png`  — 特有のサムネール画像を保持するファイル。
-* `@prop allowedParents`  — 親コンポーネントとして許可されるコンポーネントのパスを決定する正規式パターン。
-* `@prop allowedChildren`  — 子コンポーネントとして許可されるコンポーネントのパスを決定する正規式パターン。
-* `@prop componentGroup`  — コンポーネントのドラッグ&amp;ドロップに使用するコンポーネントグループの名前。
+* `@prop allowedParents`  — 親コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
+* `@prop allowedChildren`  — 子コンポーネントとして許可されるコンポーネントのパスを決定する正規表現パターン。
+* `@prop componentGroup`  — コンポーネントのドラッグ&amp;ドロップ用のコンポーネントグループの名前。
 
 **定義**
 
@@ -377,7 +376,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 * `@prop afterdelete`  — コンポーネントが削除された後に発生します。
 * `@prop afterinsert`  — コンポーネントがこのコンテナに追加された後に発生します。
 * `@prop afterremove`  — コンポーネントがこのコンテナから削除された後に発生します。
-* `@prop aftermove`  — このコンテナでコンポーネントが移動された後に発生します。
+* `@prop aftermove`  — コンポーネントがこのコンテナ内に移動された後に発生します。
 
 **定義**
 
@@ -394,7 +393,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 ## DAM {#dam}
 
-### dam:AssetContent {#dam-assetcontent}
+### dam:AssetContent  {#dam-assetcontent}
 
 **説明**
 
@@ -451,10 +450,10 @@ DAM アセットを表すサムネール。
 
 `cq:attributes` は、ContentBus バージョンタグ用のノードタイプです。このノードには一連のプロパティのみが含まれ、そのうち 3 つのプロパティが「created」、「csd」および「timestampe」として事前定義されています。
 
-* `@prop created (long) mandatory copy`  — バージョン情報の作成のタイムスタンプ。通常は、前のバージョンのチェックイン時刻またはページ作成時刻です。
+* `@prop created (long) mandatory copy`  — バージョン情報の作成のタイムスタンプ。通常は、以前のバージョンのチェックイン時またはページ作成時です。
 * `@prop csd (string) mandatory copy` - csd標準属性、ページノードのcq:csdプロパティのコピー
-* `@prop timestamp (long) mandatory copy`  — 最後に変更されたバージョンのタイムスタンプ。通常はチェックイン時間。
-* `@prop * (string) copy`  — 親ノードでバージョン付けされた追加の属性。
+* `@prop timestamp (long) mandatory copy`  — 最後のバージョン変更のタイムスタンプ。通常はチェックイン時間。
+* `@prop * (string) copy`  — 親ノードでバージョン管理される追加の属性。
 
 **定義**
 
@@ -468,13 +467,13 @@ DAM アセットを表すサムネール。
 
 **説明**
 
-ノードタイプ `cq:contentPage` には、ContentBus コンテンツページのプロパティと子ノードの定義が含まれます。このミックスイン型が`cq:page`型のノードに追加された場合にのみ、ノードはContentBusコンテンツページになります。
+ノードタイプ `cq:contentPage` には、ContentBus コンテンツページのプロパティと子ノードの定義が含まれます。このmixinタイプが`cq:page`タイプのノードに追加された場合にのみ、ノードはContentBusコンテンツページになります。
 
 `cq:Cq4ContentPage`内の項目は次のとおりです。
 
 * `@prop cq:csd`  — ページのContentBusCSD。
 * `@node cq:content`  — ページのコンテンツ。この子ノードは、ページノードが「コンテンツなしで存在」または「削除済み」の状態の場合には存在しません。
-* `@node cq:attributes`  — ページ属性のリスト。以前はバージョンタグと呼ばれていました。cq:contentPage タイプの場合、このノードは必須です。ページがノードのバージョン付けされる場合、属性ノードはバージョン付けされます。
+* `@node cq:attributes`  — ページ属性のリスト（旧称：バージョンタグ）。cq:contentPage タイプの場合、このノードは必須です。属性ノードは、ページのノードがバージョン付けされる際にバージョン付けされます。
 
 **定義**
 
@@ -484,15 +483,15 @@ DAM アセットを表すサムネール。
 
 ## インポーター {#importer}
 
-### cq:PollConfig {#cq-pollconfig}
+### cq:PollConfig  {#cq-pollconfig}
 
 **説明**
 
 ポールの設定。
 
-* `@prop source (String) mandatory`  — データソースURI。これは必須で、空にはできません
-* `@prop target (String)`  — データソースから取得したデータが格納されるターゲットの場所。これはオプションであり、デフォルトは cq:PollConfig ノードです。
-* `@prop interval (Long)`  — データソースから新しいデータまたは更新されたデータをポーリングする間隔（秒）。これはオプションで、デフォルトで30分（1800秒）に設定されます。
+* `@prop source (String) mandatory`  — データソースURI（必須で空にできない）
+* `@prop target (String)`  — データソースから取得したデータが保存されるターゲットの場所。これはオプションであり、デフォルトは cq:PollConfig ノードです。
+* `@prop interval (Long)`  — データソースから新しいデータまたは更新されたデータをポーリングする間隔（秒）。これはオプションで、デフォルトは30分（1800秒）です。
 * [Adobe Experience Manager の Custom Data Importer Service の作成](https://helpx.adobe.com/jp/experience-manager/using/polling.html)
 
 **定義**
@@ -515,14 +514,14 @@ DAM アセットを表すサムネール。
 
 ## 場所 {#location}
 
-### cq:GeoLocation {#cq-geolocation-1}
+### cq:GeoLocation  {#cq-geolocation-1}
 
 **説明**
 
 地理的な場所を十進角（DD）で定義した mixin。
 
-* `@prop latitude` -重複としてエンコードされたLatitudeで、度数は10進数です。
-* `@prop longitude` -重複としてエンコードされた経度（度単位）。
+* `@prop latitude`  — 倍精度浮動小数点数としてエンコードされた緯度（十進角を使用）。
+* `@prop longitude`  — 倍精度浮動小数点数としてエンコードされた経度（十進角を使用）。
 
 **定義**
 
@@ -533,7 +532,7 @@ DAM アセットを表すサムネール。
 
 ## メーラー {#mailer}
 
-### cq:mailerMessage {#cq-mailermessage}
+### cq:mailerMessage  {#cq-mailermessage}
 
 **説明**
 
@@ -549,11 +548,11 @@ MailerService ノードタイプ。メーラーは、この mixin をメッセ�
 
 ## MSM {#msm}
 
-### cq:LiveRelationship {#cq-liverelationship}
+### cq:LiveRelationship  {#cq-liverelationship}
 
 **説明**
 
-LiveRelationshipミックスインを定義します。 プライマリソース（制御）ノードとライブコピー（制御）ノードは、LiveRelationshipを介して事実上リンクできます。
+LiveRelationship mixinを定義します。 プライマリソース（制御）ノードとライブコピー（制御）ノードは、LiveRelationshipを介して仮想的にリンクできます。
 
 **定義**
 
@@ -566,11 +565,11 @@ LiveRelationshipミックスインを定義します。 プライマリソース
 
 **説明**
 
-LiveSync mixin を定義します。ノードがプライマリソース（制御）ノードおよびライブコピー（制御）ノードとLiveRelationshipに関係している場合、そのノードはLiveSyncとしてマークされます。
+LiveSync mixin を定義します。ノードがプライマリソース（制御）ノードおよびライブコピー（制御）ノードとのLiveRelationshipに関係している場合、そのノードはLiveSyncとしてマークされます。
 
-* `@prop cq:master` - LiveRelationshipのプライマリソース（制御）のパス。
-* `@prop cq:isDeep`  — 子に関係があるかどうかを定義します。
-* `@prop cq:syncTrigger`  — 同期をトリガーするタイミングを定義します。
+* `@prop cq:master` - LiveRelationshipのプライマリソース（コントロール）のパス。
+* `@prop cq:isDeep`  — 子に関係を使用できるかどうかを定義します。
+* `@prop cq:syncTrigger`  — 同期がトリガーされるタイミングを定義します。
 * `@node * LiveSyncAction`  — 同期時に実行するアクション
 
 **定義**
@@ -583,9 +582,9 @@ LiveSync mixin を定義します。ノードがプライマリソース（制�
 
 **説明**
 
-LiveSyncCancelled mixin を定義します。親の1つが原因でLiveRelationshipに含まれる可能性のあるライブコピー（制御）ノードのLiveSync動作をキャンセルします。
+LiveSyncCancelled mixin を定義します。親の1つによりLiveRelationshipに関与する可能性があるライブコピー（制御）ノードのLiveSync動作をキャンセルします。
 
-* `@prop cq:isCancelledForChildren` - LiveSyncをキャンセルするかどうかを定義します。子供の場合も同様です。
+* `@prop cq:isCancelledForChildren` - LiveSyncをキャンセルするかどうかを定義します。子ども向けです。
 
 **定義**
 
@@ -618,7 +617,7 @@ Live Sync 設定。
    * `- cq:isDeep (boolean)`
    * `- cq:trigger (string) /** deprecated **/`
 
-AEM 5.4の場合、リストの最後に次を追加します。
+AEM 5.4の場合、リストの末尾に次を追加します。
 
 * `- cq:rolloutConfigs (string) multiple /** deprecated **/`
 
@@ -626,7 +625,7 @@ AEM 5.4の場合、リストの最後に次を追加します。
 
 **説明**
 
-Blueprintアクション
+ブループリントアクション
 
 **定義**
 
@@ -634,7 +633,7 @@ Blueprintアクション
 
 ## プラットフォーム {#platform}
 
-### cq:Console {#cq-console}
+### cq:Console  {#cq-console}
 
 **説明**
 
@@ -647,18 +646,18 @@ Blueprintアクション
 
 ## レプリケーション {#replication}
 
-### cq:ReplicationStatus {#cq-replicationstatus}
+### cq:ReplicationStatus  {#cq-replicationstatus}
 
 **説明**
 
 レプリケーションステータス情報 mixin を定義します。
 
-* `@prop cq:lastPublished` — ページが最後に発行された日付（使用は停止）。
-* `@prop cq:lastPublishedBy` — 最後にページを投稿した（使用されなくなった）ユーザー。
-* `@prop cq:lastReplicated`  — ページが最後に複製された日付。
-* `@prop cq:lastReplicatedBy`  — 最後にページを複製したユーザー。
-* `@prop cq:lastReplicationAction`  — レプリケーション操作：アクティブ化または非アクティブ化。
-* `@prop cq:lastReplicationStatus`  — レプリケーションの状態（使用されなくなりました）。
+* `@prop cq:lastPublished` — ページが最後に公開された日付（使用されなくなりました）。
+* `@prop cq:lastPublishedBy` — 最後にページを公開したユーザー（使用されなくなりました）。
+* `@prop cq:lastReplicated`  — ページが最後にレプリケートされた日付。
+* `@prop cq:lastReplicatedBy`  — 最後にページをレプリケートしたユーザー。
+* `@prop cq:lastReplicationAction`  — レプリケーションアクション：アクティブ化または非アクティブ化。
+* `@prop cq:lastReplicationStatus`  — レプリケーションステータス（使用されなくなりました）。
 
 **定義**
 
@@ -673,7 +672,7 @@ Blueprintアクション
 
 ## セキュリティ {#security}
 
-### cq:ApplicationPrivilege {#cq-applicationprivilege}
+### cq:ApplicationPrivilege  {#cq-applicationprivilege}
 
 **説明**
 
@@ -767,7 +766,7 @@ Blueprintアクション
 
 ## タグ付け {#tagging}
 
-### cq:Tag {#cq-tag}
+### cq:Tag  {#cq-tag}
 
 **説明**
 
@@ -819,7 +818,7 @@ Blueprintアクション
 
 **説明**
 
-ユーザーが変更できる`cq:userContent`サブノードを追加します。 各ユーザは独自の`cq:userContent/<userid>`サブノードを持ち、通常はmixin `cq:UserTaggable`を持ちます。
+ユーザーが変更できる`cq:userContent`サブノードを追加します。 各ユーザーには独自の`cq:userContent/<userid>`サブノードがあり、通常はmixin `cq:UserTaggable`が含まれます。
 
 **定義**
 
@@ -827,7 +826,7 @@ Blueprintアクション
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-`cq:userContent`ツリーをより明示的に定義する拡張バリアント
+拡張バリアント（`cq:userContent`ツリーをより明示的に定義）
 
 * `[cq:AllowsUserContent]`
    * `mixin`
@@ -859,7 +858,7 @@ Blueprintアクション
 
 ## ウィジェット {#widgets}
 
-### cq:ClientLibraryFolder {#cq-clientlibraryfolder}
+### cq:ClientLibraryFolder  {#cq-clientlibraryfolder}
 
 **説明**
 
@@ -925,7 +924,7 @@ Widgetコレクション
 
 **定義**
 
-* `[cq:TabPanel] > cq:Panel orderable&quot;
+* &#39;[cq:TabPanel] > cq:Panel orderable&quot;
    * `- activeTab (long)`
 
 ### cq:Field {#cq-field}
@@ -943,7 +942,7 @@ Widgetコレクション
 
 ## Wiki {#wiki}
 
-### wiki:Topic {#wiki-topic}
+### wiki:Topic  {#wiki-topic}
 
 **説明**
 
@@ -968,7 +967,7 @@ Wikiトピック
 
 **説明**
 
-Wikiユーザ
+Wikiユーザー
 
 **定義**
 
@@ -979,7 +978,7 @@ Wikiユーザ
 
 **説明**
 
-Wikiのプロパティ
+Wikiプロパティ
 
 **定義**
 
@@ -989,7 +988,7 @@ Wikiのプロパティ
 
 ## ワークフロー {#workflow}
 
-### cq:Workflow {#cq-workflow}
+### cq:Workflow  {#cq-workflow}
 
 **説明**
 
@@ -1067,7 +1066,7 @@ Wikiのプロパティ
 
 **説明**
 
-ワークフロー設定の自動割り当て。設定は次の構造に従います。
+ワークフロー設定を自動割り当て。設定は、次の構造に従います。
 * `workflows`
    * `+ name1`
       * `- cq:path`
