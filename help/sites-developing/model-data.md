@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
 content-type: reference
 discoiquuid: 39546c0a-b72f-42df-859b-98428ee0d5fb
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1828'
 ht-degree: 80%
 
 ---
-
 
 # データのモデル化 - David Nuescheler のモデル{#data-modeling-david-nuescheler-s-model}
 
@@ -26,7 +25,7 @@ ht-degree: 80%
 
 同氏は、アドビが 2010 年に買収した、グローバルなコンテンツ管理およびコンテンツインフラストラクチャソフトウェアの大手プロバイダーである Day Software AG 社の共同創立者兼 CTO です。現在は、アドビのフェローであり、Enterprise Technology のバイスプレジデントです。また、コンテンツ管理の技術標準である Java コンテンツリポジトリ（JCR）アプリケーションプログラミングインターフェイス（API）、JSR-170 開発の第一人者でもあります。
 
-[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)で更新情報を見ることもできます。
+[https://wiki.apache.org/jackrabbit/DavidsModel](https://wiki.apache.org/jackrabbit/DavidsModel)でさらに更新を確認することもできます。
 
 ## David からのあいさつ {#introduction-from-david}
 
@@ -42,7 +41,7 @@ ht-degree: 80%
 
 ## 簡単な 7 つのルール {#seven-simple-rules}
 
-### ルール#1:最初にデータを、後で構造化します。たぶん。{#rule-data-first-structure-later-maybe}
+### ルール#1:データを最初に、後で構造化します。多分。{#rule-data-first-structure-later-maybe}
 
 #### 説明 {#explanation-1}
 
@@ -60,13 +59,13 @@ ERD の意味では、宣言されているデータ構造について気にし�
 
 #### 例 {#example-1}
 
-上記の例で、「ブログ投稿」ノードなどで`lastModified` Dateプロパティを使用する場合は、特別なノードタイプが必要であるとは限りません。 最初は`nt:unstructured`をブログ投稿ノードに必ず使います。 ブログアプリでは、lastModified日付を表示するだけなので（「順番」を付けても）、日付になってもほとんど気にしません。 私はブログ書き出しのアプリケーションに&quot;date&quot;を付けるのを暗黙的に信じているので、nodetypeの形式で`lastModified`日付の存在を宣言する必要はありません。
+上記の例で、「blog post」ノードなどに`lastModified` Dateプロパティを使用する場合、特別なノードタイプが必要とは限りません。 少なくとも最初は`nt:unstructured`をブログ投稿ノードに使うのは間違いない。 私のブログアプリケーションでは、私が行うすべてのlastModified日付を表示することです（おそらく&quot;order by&quot;）私は、それがDateであるかどうかほとんど気にしません。 私はブログ書き込みアプリケーションを暗黙的に信頼して「日付」を付けるので、実際には`lastModified`日付の存在をノード型の形で宣言する必要はありません。
 
-### ルール#2:コンテンツ階層を推進し、それを実現させない。{#rule-drive-the-content-hierarchy-don-t-let-it-happen}
+### ルール#2:コンテンツ階層を動かして、実現させないでください。{#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
 #### 説明 {#explanation-2}
 
-コンテンツ階層は非常に価値の高いアセットです。だから、それを実現させるのはやめ、設計してみてください。 ノードに「良い」人間が読み取り可能な名前がない場合は、それを再考する必要があると思います。 任意の数字が「良い名前」とはほとんど言えません。
+コンテンツ階層は非常に役に立つアセットです。だから、それを実現させるのではなく、設計してください。 人間が読み取り可能な「良い」ノード名がない場合は、それを考え直す必要があるでしょう。 任意の数字は、「良い名前」ではほとんどありません。
 
 既存のリレーショナルモデルをすぐに階層モデルに変換できれば非常に簡単かもしれませんが、その際は多少の配慮が必要です。
 
@@ -78,7 +77,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 >
 >コンテンツリポジトリの構造化の方法はパフォーマンスにも影響を及ぼす可能性があります。最適なパフォーマンスを確保するために、コンテンツリポジトリ内の個々のノードに接続される子ノードの数は、通常 1,000 個以下にする必要があります。
 >
->[CRXで処理できるデータ量は？を参照してください。](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) を参照してください。
+>[CRXで処理できるデータの量](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html) を参照してください。
 
 #### 例 {#example-2}
 
@@ -94,7 +93,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 /content/myblog/comments/iphone_shipping/i_like_it_too/i_hate_it
 ```
 
-私が明らかになったのは、この例に基づく内容の構造を理解している人が、それ以上の説明をすることなくいることです。
+私が明らかになるのは、私たちは皆、例に基づく内容の構造を理解し、それ以上の説明をしないことです。
 
 「コメント（comments）」を「投稿（post）」と共に格納しないことを最初は疑問にお思いかもしれませんが、これは、アクセス制御を合理的に階層化された方法で適用したいからです。
 
@@ -104,7 +103,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 
 #### 説明 {#explanation-3}
 
-アプリケーションで`clone()`、`merge()`、または`update()`メソッドを使用しない場合は、1つのワークスペースがおそらく使用できます。
+アプリケーションで`clone()`、`merge()`または`update()`メソッドを使用しない場合、1つのワークスペースが最適です。
 
 「対応するノード」は、JCR 仕様で定義されている概念です。結局のところは、本質的に、それぞれ異なるいわゆるワークスペース内の、同じコンテンツを表すノードのことです。
 
@@ -143,7 +142,7 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 #### 例 {#example-4}
 
-以下のように
+使用方法
 
 ```xml
 /content/myblog/posts/what_i_learned_today
@@ -177,13 +176,13 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 #### 説明 {#explanation-6}
 
-コンテンツモデルが、ファイルやフォルダーのように&#x200B;*に*&#x200B;においても、`nt:file`、`nt:folder`、`nt:resource`を使用（または拡張）しようとするような、リモートで公開する場合。
+コンテンツモデルが、リモートで&#x200B;*臭い*&#x200B;を公開する場合、`nt:file`、`nt:folder`、`nt:resource`を使用（または拡張）しようとするファイルやフォルダーのように、臭いを付けます。
 
 私の経験では、多くの汎用アプリケーションで、nt:folder および nt:files とのインタラクションが暗黙的に許可されており、メタ情報が追加された場合にイベントを処理して表示する方法が認識されています。例えば、JCR をベースとしている CIFS や WebDAV のようなファイルサーバー実装との直接のインタラクションは暗黙となります。
 
-大ざっぱに言えば、次のようなものが使えると思う。ファイル名とMIMEタイプを保存する必要がある場合は、`nt:file`/ `nt:resource`は非常に良いマッチです。 複数の「ファイル」を保存できる場合は、nt:folderを保存するのが適切です。
+私は経験則として、次のように考える。ファイル名とMIMEタイプを保存する必要がある場合は、 `nt:file`/ `nt:resource`が適切に一致します。 複数の「ファイル」を保存できる場合は、nt:folderを保存するとよいでしょう。
 
-リソースにメタ情報を追加する必要がある場合は、「author」プロパティや「description」プロパティなど、`nt:file`ではなく`nt:resource`を拡張します。 nt:fileを拡張することはほとんどなく、頻繁に`nt:resource`を拡張します。
+リソースのメタ情報を追加する必要がある場合（例えば、「author」プロパティや「description」プロパティなど）、`nt:file`ではなく`nt:resource`を拡張します。 nt:fileを拡張することはほとんどなく、頻繁に`nt:resource`を拡張します。
 
 #### 例 {#example-6}
 
@@ -215,13 +214,13 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 項目はパスによっても識別できることも心に留めておいてください。UNIX ファイルシステムで「シンボリックリンク」が多くのユーザーにとってハードリンクよりはるかに大きな意味を持つのと同様に、ターゲットノードを参照する場合は、ほとんどのアプリケーションでパスが意味を持ちます。
 
-さらに重要なのは、**mix**:referenceableです。これは、実際に参照する必要がある時点で、ノードに適用できることを意味します。
+さらに重要なのは、**mix**:referenceableです。つまり、実際に参照する必要がある時点でノードに適用できます。
 
 よって、タイプが「ドキュメント」であるノードを参照可能にしたいからといって、「ドキュメント」ノードタイプを静的な方法で mix:referenceable から拡張しなければならないということにはなりません。「ドキュメント」の任意のインスタンスに動的に追加できるからです。
 
 #### 例 {#example-7}
 
-以下のように:
+使用方法:
 
 ```xml
 /content/myblog/posts/iphone_shipping/attachments/front.jpg
@@ -245,4 +244,3 @@ XML の読み込みや既存の XML とのインタラクションのために S
 -- filename
 + resource (nt:resource)
 ```
-
