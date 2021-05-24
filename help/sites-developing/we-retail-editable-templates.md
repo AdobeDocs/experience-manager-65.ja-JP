@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 86%
 
 ---
-
 
 # We.Retail の編集可能テンプレートの使用{#trying-out-editable-templates-in-we-retail}
 
@@ -31,7 +30,7 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
 1. モードセレクターにデザインモードがなくなったことを確認します。We.Retail のページはすべて編集可能テンプレートに基づいています。編集可能テンプレートのデザインを変更するには、テンプレートエディターで編集する必要があります。
-1. **ページ情報**&#x200B;メニューから、「**テンプレートを編集**」を選択します。
+1. **ページ情報**&#x200B;メニューから「**テンプレートを編集**」を選択します。
 1. 現在編集しているのはヒーローページテンプレートです。
 
    ページの構造モードにより、テンプレートの構造を変更できます。これには、例えば、レイアウトコンテナで使用可能なコンポーネントが含まれます。
@@ -74,7 +73,6 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
 ## 詳細情報  {#more-information}
 
-編集可能なテンプレートの技術的な詳細については、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者向けドキュメントページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
+詳しくは、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者ドキュメントのページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照して、編集可能なテンプレートの技術的詳細を確認してください。
 
-また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。技術的な概要については、オーサリングドキュメント[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および開発者向けドキュメント[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
-
+また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。コアコンポーネントの機能の概要については、オーサリングドキュメント[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を、技術概要については、開発者ドキュメント[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
