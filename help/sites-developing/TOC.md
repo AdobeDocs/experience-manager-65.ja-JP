@@ -8,7 +8,6 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: 開発
 role: Developer
-translation-type: tm+mt
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
 workflow-type: tm+mt
 source-wordcount: '910'
@@ -19,8 +18,8 @@ ht-degree: 81%
 
 # AEM 6.5 開発ユーザーガイド {#developing}
 
-+ [開発ユーザガイドの概要](home.md)
-+ 開発者向けの紹介{#introduction}
++ [開発ユーザーガイドの概要](home.md)
++ 開発者向けの概要{#introduction}
    + [AEM Sites の開発の手引き - WKND チュートリアル](getting-started.md)
    + [AEM の中心概念](the-basics.md)
    + [AEM タッチ操作対応 UI の構造](touch-ui-structure.md)
@@ -34,9 +33,9 @@ ht-degree: 81%
    + [AEM への貢献](contributing-to-cq.md)
    + [セキュリティ](security.md)
    + [参照資料](reference-materials.md)
-   + [フル機能を備えたWebサイトの作成（クラシックUI）](website.md)
-   + [デザインとDesigner（クラシックUI）](designer.md)
-   + [タッチ操作対応UIへの移行](/help/sites-developing/touch-ui-migration.md)
+   + [完全に機能するWebサイトの作成（クラシックUI）](website.md)
+   + [デザインとデザイナー（クラシックUI）](designer.md)
+   + [タッチUIへの移行](/help/sites-developing/touch-ui-migration.md)
 + Platform{#platform}
    + [Sling チートシート](sling-cheatsheet.md)
    + [Sling アダプターの使用](sling-adapters.md)
@@ -94,17 +93,17 @@ ht-degree: 81%
       + [翻訳のための文字列の抽出](i18n-extract.md)
    + クラシックUIコンポーネント{#classic-ui-components}
       + [AEM コンポーネントの開発（クラシック UI）](developing-components-classic.md)
-      + [ウィジェットの使用と拡張（クラシック UI）](widgets.md)
+      + [ウィジェットの使用および拡張（クラシック UI）](widgets.md)
       + [xtype の使用（クラシック UI）](xtypes.md)
-      + [フォームの開発（クラシック UI）](developing-forms.md)
+      + [フォームの作成（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスおよび AEM とのハイブリッド](https://www.adobe.com/content/dam/www/us/en/marketing/experience-manager-sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 単一ページアプリケーション{#spas}
       + [SPA の概要およびガイド](spa-walkthrough.md)
       + [SPA WKND チュートリアル](spa-wknd.md)
-      + [AEMのSPAを使い始める — React](spa-getting-started-react.md)
-      + [AEMのSPA使用の手引き —Angular](spa-getting-started-angular.md)
+      + [AEMでのSPAの概要 — React](spa-getting-started-react.md)
+      + [AEMでのSPAの概要 —Angular](spa-getting-started-angular.md)
       + [SPA への React コンポーネントの実装](spa-implementing-react-component.md)
       + [SPA の詳細](spa-deep-dives.md)
       + [SPA エディターの概要](spa-overview.md)
@@ -112,9 +111,9 @@ ht-degree: 81%
       + [SPA ブループリント](spa-blueprint.md)
       + [SPA ページコンポーネント](spa-page-component.md)
       + [SPA の動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
-      + [SPA モデルルーティング ](spa-routing.md)
+      + [SPA モデルルーティング](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
-      + [SPA およびサーバーサイドレンダリング ](spa-ssr.md)
+      + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
       + [RemotePage コンポーネント](spa-remote-page.md)
       + [AEM 内での外部 SPA の編集](spa-edit-external.md)
       + [SPAの複合コンポーネント](spa-composite-component.md)
@@ -136,9 +135,9 @@ ht-degree: 81%
    + [VLT ツールを使用する方法](ht-vlttool.md)
    + [プロキシサーバーツールを使用する方法](ht-proxy-server.md)
    + [AEM Brackets Extension](aem-brackets.md)
-   + [AEM Developer Tools for Eclipse](aem-eclipse.md)
+   + [AEM Developer Tools for Eclipse ](aem-eclipse.md)
    + [AEM Repo ツール](aem-repo-tool.md)
-+ パーソナライゼーション{#personlization}
++ パーソナライズ機能{#personlization}
    + [ContextHub](contexthub.md)
    + [Context Hubの設定](ch-configuring.md)
    + [ページへの ContextHub の追加とストアへのアクセス](ch-adding.md)
@@ -167,12 +166,12 @@ ht-degree: 81%
       + [ワークフローステップのリファレンス](workflows-step-ref.md)
       + [ワークフローのベストプラクティス](workflows-best-practices.md)
       + [ワークフロープロセスのリファレンス](workflows-process-ref.md)
-      + [AEMワークフローの変数](/help/sites-developing/using-variables-in-aem-workflows.md)
+      + [AEMワークフロー内の変数](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Multi Site Manager の拡張](extending-msm.md)
-   + 追跡と解析{#extending-analytics}
+   + トラッキングと分析{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
       + [コンポーネントへのAdobe Analyticsトラッキングの追加](extending-analytics-components.md)
-      + [Adobe Analyticsフレームワークのカスタマイズ](extending-analytics-framework.md)
+      + [Adobe Analytics Frameworkのカスタマイズ](extending-analytics-framework.md)
       + [Analytics 用のサーバー側ページネーミングの実装](extending-analytics-pa-naming.md)
    + Cloud Services {#extending-cloud-services}
       + [クラウドサービス設定](extending-cloud-config.md)
@@ -214,7 +213,7 @@ ht-degree: 81%
       + [We.Retail の編集可能テンプレートの使用](we-retail-editable-templates.md)
       + [We.Retail のレスポンシブレイアウトの使用](we-retail-responsive-layout.md)
       + [We.Retail のグローバル化されたサイト構造の使用](we-retail-globalized-site-structure.md)
-      + [Web.Retailでのエクスペリエンスフラグメントの試用](we-retail-experience-fragments.md)
+      + [We.Retailでのエクスペリエンスフラグメントの試行](we-retail-experience-fragments.md)
    + [コーディングのヒント](coding-tips.md)
    + [コードの落とし穴](code-pitfalls.md)
    + [OSGi バンドル](osgi-bundles.md)
