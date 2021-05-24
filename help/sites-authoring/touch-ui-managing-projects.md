@@ -1,22 +1,21 @@
 ---
 title: プロジェクトの管理
 seo-title: プロジェクトの管理
-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにして、プロジェクトを整理できます
-seo-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化して、プロジェクトコンソールでアクセスおよび管理できるようにして、プロジェクトを整理できます
+description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化し、プロジェクトコンソールでアクセスして管理できるようにし、プロジェクトを整理できます
+seo-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化し、プロジェクトコンソールでアクセスして管理できるようにし、プロジェクトを整理できます
 uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
 content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
-translation-type: tm+mt
-source-git-commit: 58fa0f05bae7ab5ba51491be3171b5c6ffbe870d
+exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 88%
 
 ---
-
 
 # プロジェクトの管理{#managing-projects}
 
@@ -38,7 +37,7 @@ ht-degree: 88%
 
 >[!CAUTION]
 >
->プロジェクトのユーザーが、プロジェクトの作成、タスク/ワークフローの作成、チームの表示と管理など、プロジェクト機能を使用して他のユーザー/グループを表示するには、**/home/users**&#x200B;と&#x200B;**/home/groups**&#x200B;で読み取りアクセス権が必要です。 これを実装する最も簡単な方法は、**projects-users**&#x200B;グループに&#x200B;**/home/users**&#x200B;と&#x200B;**/home/groups**&#x200B;への読み取りアクセスを与えることです。
+>プロジェクトのユーザーが、プロジェクトの作成、タスク/ワークフローの作成、チームの表示と管理など、プロジェクト機能を使用して他のユーザー/グループを表示するには、**/home/users**&#x200B;と&#x200B;**/home/groups**&#x200B;に対する読み取りアクセス権が必要です。 これを実装する最も簡単な方法は、**projects-users**&#x200B;グループに&#x200B;**/home/users**&#x200B;および&#x200B;**/home/groups**&#x200B;への読み取りアクセス権を付与することです。
 
 ## プロジェクトの作成 {#creating-a-project}
 
@@ -52,7 +51,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 プロジェクトの作成手順は、どのプロジェクトでも同じです。プロジェクトのタイプによって異なるものとしては、使用可能な[ユーザーの役割](/help/sites-authoring/projects.md)と[ワークフロー](/help/sites-authoring/projects-with-workflows.md)があります。新しいプロジェクトを作成するには、次の手順を実行します。
 
 1. **プロジェクト**&#x200B;で「**作成**」をタップまたはクリックして「**プロジェクトを作成**」ウィザードを開きます。
-1. テンプレートを選択します。初期設定では、シンプルプロジェクト、メディアプロジェクト、[翻訳プロジェクト](/help/sites-administering/tc-manage.md)、[製品フォトシュート製品](/help/sites-authoring/managing-product-information.md)が用意され、**次へ**&#x200B;をクリックします。
+1. テンプレートを選択します。初期設定で、シンプルなプロジェクト、メディアプロジェクト、[翻訳プロジェクト](/help/sites-administering/tc-manage.md)、[撮影した製品写真製品](/help/sites-authoring/managing-product-information.md)を使用でき、**次へ**&#x200B;をクリックします。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -164,4 +163,3 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
    ![chlimage_1-267](assets/chlimage_1-267.png)
 
 1. 「**完了**」をタップまたはクリックして、変更内容を保存します。
-
