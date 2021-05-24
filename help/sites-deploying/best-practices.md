@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 4b5c0677-c630-4fae-867e-4f4583ac8507
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4cbc0a30-d5f6-40ff-b7f6-8d64762e1970
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 73%
 
 ---
-
 
 # デプロイのベストプラクティス{#deploying-best-practices}
 
@@ -31,13 +30,13 @@ ht-degree: 73%
 
 管理、デプロイまたはオーサリングのベストプラクティスについては、次のページを参照してください。
 
-* [管理のベストプラクティス](/help/sites-administering/administer-best-practices.md)
+* [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [オーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
 
 以降の表では、特定のドキュメントの説明とリンクを示します。
 
-## Oak  {#oak}
+## Oak {#oak}
 
 [Oak](/help/sites-deploying/platform.md) は、AEM の基礎となっている、拡張性の高い高性能の階層コンテンツリポジトリです。
 
@@ -71,13 +70,13 @@ ht-degree: 73%
  </tbody>
 </table>
 
-## Communities  {#communities}
+## コミュニティ {#communities}
 
-AEM Communitiesはオンプレミスコミュニティの作成と管理を簡素化します。 AEM Communitiesのベストプラクティスは以下のとおりです。
+AEM Communitiesは、オンプレミスのコミュニティの作成と管理を簡素化します。 AEM Communitiesのベストプラクティスについては、以下を参照してください。
 
-[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザ生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となる [トポロジを選択する際の考慮点について説明します](/help/communities/topologies.md)。
+[コミュニティコンテンツストア](/help/communities/working-with-srp.md)  — ユーザー生成コンテンツ(UGC)の新しい共有ストレージ機能と、基盤となるトポロジを選択する際の考慮事項について [説明します](/help/communities/topologies.md)。
 
-[コミュニティの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Communitiesの推奨デプロイメントについて説明します。 |
+[コミュニティの推奨デプロイメント](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities)  - Communitiesの推奨デプロイメントについて説明します。 |
 
 ## UI {#ui}
 
@@ -85,7 +84,7 @@ AEM Communitiesはオンプレミスコミュニティの作成と管理を簡�
 
 [顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)
 
-AEMには現在2つのUIがあります。従来のUIとタッチ操作向けUIが同じリリースに含まれています。したがって、お客様は、プロジェクトの導入時にどの使用を行うかを決定する必要があります。このドキュメントは、適切な選択肢を見つけるのに役立ちます。
+AEMには現在、2つのUIがあります。クラシックUIとタッチ操作向けUIが同じリリースに含まれている。したがって、お客様は、プロジェクトの実装時に、どの使用をするかを決定する必要があります。このドキュメントは、適切な選択を見つけるのに役立つように作成されています。
 
 ## パフォーマンス {#performance}
 
@@ -96,7 +95,7 @@ AEMには現在2つのUIがあります。従来のUIとタッチ操作向けUI�
   <tr>
    <td>品質保証のベストプラクティス</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">品質保証のベストプラクティス</a></td>
-   <td><em>publish</em>環境でのパフォーマンステスト専用に、テスト概念の定義に関する問題の標準化された概要です。 主に QA エンジニア、プロジェクトマネージャーおよびシステム管理者向けの内容となっています。</td>
+   <td>テストの概念の定義に関する問題の標準化された概要です。特に、<em>publish</em>環境のパフォーマンステスト用です。 主に QA エンジニア、プロジェクトマネージャーおよびシステム管理者向けの内容となっています。</td>
   </tr>
   <tr>
    <td>CDN での Dispatcher の使用</td>
@@ -115,4 +114,3 @@ AEMには現在2つのUIがあります。従来のUIとタッチ操作向けUI�
   </tr>
  </tbody>
 </table>
-
