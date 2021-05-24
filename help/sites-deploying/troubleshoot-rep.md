@@ -10,55 +10,54 @@ content-type: reference
 topic-tags: configuring
 discoiquuid: 0d055be7-7189-4587-8c7c-2ce34e22a6ad
 docset: aem65
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: cfa822c8-f9a9-4122-9eac-0293d525f6b5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 67%
 
 ---
 
-
 # レプリケーションのトラブルシューティング{#troubleshooting-replication}
 
 このページでは、レプリケーションに関する問題のトラブルシューティング方法について説明します。
 
-## 問題  {#problem}
+## 問題 {#problem}
 
 レプリケーション（順方向のレプリケーション）が何らかの原因で失敗する
 
-## 解像度 {#resolution}
+## 解決方法 {#resolution}
 
 レプリケーションが失敗するのには様々な原因があります。ここでは、これらの問題を分析する際に採用できるアプローチについて説明します。
 
 **「アクティベート」ボタンをクリックすると、レプリケーションがトリガーされますか。トリガーされない場合は、次の操作をおこないます。**
 
-1. /crx/explorerに移動し、adminとしてログインします。
+1. /crx/explorerに移動し、管理者としてログインします。
 1. 「Content Explorer」を開きます。
 1. ノード /bin/replicate または /bin/replicate.json が存在するかを確認します。ノードが存在する場合は、削除して保存します。
 
 **レプリケーションがレプリケーションエージェントのキュー内で待機している状態ですか。**
 
-/etc/replication/agents.author.htmlに移動し、レプリケーションエージェントをクリックして確認します。
+/etc/replication/agents.author.htmlに移動し、確認するレプリケーションエージェントをクリックして確認します。
 
 **1 つまたは複数のエージェントキューで動きがない場合：**
 
-1. キューに&#x200B;**blocked**&#x200B;の状態が表示されますか。その場合、発行インスタンスは実行されていないか、完全に無応答ですか。発行インスタンスを調べて、問題がないか確認します（例：ログを確認し、OutOfMemoryエラーまたはその他の問題があるかどうかを確認します）。その場合、通常はスレッドダンプを取り、分析します。
-1. キューのステータスに「**キューはアクティブです — #保留中**」と表示されますか。基本的に、レプリケーションジョブは、発行インスタンスまたはディスパッチャーが応答するのを待つ読み取りソケットで停止する可能性があります。これは、発行インスタンスまたはディスパッチャーが高い読み込み下にあるか、ロック状態にあることを意味する可能性があります。この場合、作成者からスレッドダンプを取得し、発行します。
+1. キューに&#x200B;**blocked**&#x200B;ステータスが表示されますか。その場合、パブリッシュインスタンスは実行されていないか、完全に応答しないか。パブリッシュインスタンスを調べて、問題を調べます（例：ログを確認し、OutOfMemoryエラーまたはその他の問題があるかどうかを確認します）。通常は遅い場合は、スレッドダンプを取り、それらを分析します。
+1. キューのステータスに「**Queue is active - # pending**」と表示されますか。基本的に、レプリケーションジョブは、パブリッシュインスタンスまたはDispatcherが応答するのを待つソケット読み取りで停止する可能性があります。これは、パブリッシュインスタンスまたはDispatcherが高負荷になっているか、ロック状態になっている可能性があります。この場合、オーサーとパブリッシュからスレッドダンプを取得します。
 
    * スレッドダンプアナライザーでオーサーのスレッドダンプを開き、レプリケーションエージェントの sling イベントジョブが socketRead で動かなくなっていないかを確認します。
-   * 発行からのスレッドダンプをスレッドダンプアナライザーで開き、発行インスタンスが応答しない原因となっている可能性があるものを分析します。/bin/receiveというPOSTを持つスレッド（作成者からレプリケーションを受け取るスレッド）が名前に含まれているはずです。
+   * スレッドダンプアナライザーで発行のスレッドダンプを開き、発行インスタンスが応答しない原因を分析します。名前にPOST/bin/receiveを持つスレッド（作成者からレプリケーションを受け取るスレッド）が表示されます。
 
 **すべてのエージェントキューに動きがない場合**
 
-1. リポジトリの破損やその他の問題が原因で、/var/replication/dataの下で特定のコンテンツ部分をシリアライズできない可能性があります。logs/error.logを参照して、関連するエラーがないか確認します。不正なレプリケーションアイテムを消去するには、次の手順を実行します。
+1. リポジトリの破損やその他の問題が原因で、特定のコンテンツを/var/replication/dataの下にシリアル化できない可能性があります。logs/error.logで関連するエラーを確認します。不正なレプリケーション項目を消去するには、次の操作を行います。
 
    1. https://&lt;host>:&lt;port>/crx/deに移動し、管理者ユーザーとしてログインします。
    1. トップメニューから「ツール」をクリックしてください。
    1. 拡大鏡ボタンをクリックしてください。
    1. 種類として「XPath」を選択します。
-   1. 「クエリ」ボックスに、@slingevent:createdによる/jcr:root/var/eventing/jobs//element(*,slingevent:Job)順序を/jcr:root/var/eventing/jobクエリーに入力します。
+   1. 「Query」ボックスに、@slingevent:createdの順序で/jcr:root/var/eventing/jobs//element(*,slingevent:Job)を入力します。
    1. 「検索」をクリックします。
    1. 検索結果の上位の項目が、最新の Sling イベントジョブです。各ジョブをクリックして、キューの一番上に表示されるものと同じ、動きのないレプリケーションを見つけます。
 
@@ -70,19 +69,19 @@ ht-degree: 67%
 1. また、DefaultJobManager 設定に不整合がある状態になる場合もあります。OSGi コンソール経由で「Apache Sling Job Event Handler」を手動で変更したユーザーがいる場合にこのような事態になります（例えば、「Job Processing Enabled」プロパティを無効にした後に再度有効にして、設定を保存した場合）。
 
    * この時点で、crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.config に保存されている DefaultJobManager 設定に不整合がある状態になります。さらに、「Apache Sling Job Event Handler」プロパティで「Job Processing Enabled」がチェックされた状態でも、いずれかのユーザーが「Sling Eventing」タブに移動すると、「JOB PROCESSING IS DISABLED」というメッセージが表示され、レプリケーションが動作しません。
-   * この問題を解決するには、OSGiコンソールの設定ページに移動して、「Apache Slingジョブイベントハンドラ」の設定を削除する必要があります。次に、クラスターのマスターノードを再起動して、設定を一貫した状態に戻します。この問題は修正され、レプリケーションは再び機能します。
+   * この問題を解決するには、OSGiコンソールの設定ページに移動し、「Apache Sling Job Event Handler」設定を削除する必要があります。次に、クラスターのマスターノードを再起動して、構成を一貫性のある状態に戻します。これにより問題が解決し、レプリケーションが再び機能し始めます。
 
 **replication.log の作成**
 
 すべてのレプリケーションログを、個別のログファイルに DEBUG レベルで追加するように設定すると、場合によっては非常に便利です。次の手順を実行します。
 
-1. https://host:port/system/console/configMgrに移動し、adminとしてログインします。
-1. Apache Sling Logging Loggerファクトリを探し、ファクトリ設定の右側の&#x200B;**+**&#x200B;ボタンをクリックしてインスタンスを作成します。これにより、新しいログロガーが作成されます。
+1. https://host:port/system/console/configMgrに移動し、管理者としてログインします。
+1. Apache Sling Logging Loggerファクトリを探し、ファクトリ設定の右側にある&#x200B;**+**&#x200B;ボタンをクリックしてインスタンスを作成します。これにより、新しいログロガーが作成されます。
 1. 次のように設定します。
 
-   * ログレベル：DEBUG
-   * Log File Path:logs/replication.log
-   * カテゴリ:com.day.cq.replication
+   * ログレベル：デバッグ
+   * ログファイルのパス：logs/replication.log
+   * カテゴリ：com.day.cq.replication
 
 1. 問題が何らかの形で Sling イベントまたはジョブに関連する疑いがある場合は、この Java パッケージをカテゴリ org.apache.sling.event に追加することもできます。
 
@@ -101,17 +100,16 @@ ht-degree: 67%
 
 ## オーサーからパブリッシュに名前空間情報をレプリケーションするときにレプリケーションキューがブロックされました  {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
 
-場合によっては、オーサーインスタンスからパブリッシュインスタンスに名前空間情報をレプリケーションしようとすると、レプリケーションキューがブロックされます。これは、レプリケーションユーザーに`jcr:namespaceManagement`権限がないためです。 この問題を回避するには、次のことを確認してください。
+場合によっては、オーサーインスタンスからパブリッシュインスタンスに名前空間情報をレプリケーションしようとすると、レプリケーションキューがブロックされます。これは、レプリケーションユーザーに`jcr:namespaceManagement`権限がないために発生します。 この問題を回避するには、次のことを確認してください。
 
-* レプリケーションユーザー（[「トランスポート](/help/sites-deploying/replication.md#replication-agents-configuration-parameters)」タブ>Userで設定）も発行インスタンスに存在します。
+* レプリケーションユーザー（「[トランスポート](/help/sites-deploying/replication.md#replication-agents-configuration-parameters)」タブの「ユーザー」で設定）もパブリッシュインスタンスに存在します。
 * ユーザーは、コンテンツがインストールされているパスで読み取りおよび書き込み権限を持っています。
-* ユーザーはリポジトリレベルで`jcr:namespaceManagement`権限を持っています。 次のようにして権限を付与できます。
+* ユーザーは、リポジトリレベルで`jcr:namespaceManagement`権限を持っています。 次のようにして権限を付与できます。
 
-1. CRX/DE (`https://localhost:4502/crx/de/index.jsp`)に管理者としてログインします。
+1. CRX/DE(`https://localhost:4502/crx/de/index.jsp`)に管理者としてログインします。
 1. 「**アクセス制御**」タブをクリックします。
 1. 「**リポジトリ**」を選択します。
 1. 「**エントリを追加**」（プラスアイコン）をクリックします。
 1. ユーザーの名前を入力します。
 1. 権限リストから`jcr:namespaceManagement`を選択します。
 1. 「OK」をクリックします。
-
