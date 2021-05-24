@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
-translation-type: tm+mt
-source-git-commit: 2fc35bfd93585a586cb1d4e3299261611db49ba6
+exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 94%
 
 ---
-
 
 # AEM 6 での LDAP の設定 {#configuring-ldap-with-aem}
 
@@ -32,7 +31,7 @@ LDAP サーバーからアカウントが削除されると、検証はおこな
 
 AEM 6 の LDAP のサポートには、以前のバージョンとは異なるタイプの設定が必要な新しい実装が付属します。
 
-すべてのLDAP設定をOSGi設定として使用できるようになりました。これらは、Web管理コンソールから次の場所で設定できます。
+すべてのLDAP設定をOSGi設定として使用できるようになりました。これらは、Web管理コンソールを使用して次の場所で設定できます。
 `https://serveraddress:4502/system/console/configMgr`
 
 LDAP と AEM を連携させるには、次の 3 つの OSGi 設定を作成する必要があります。
@@ -99,7 +98,7 @@ LDAP Identity Provider では次の設定オプションを使用できます。
   </tr>
   <tr>
    <td><strong>User pool max active</strong></td>
-   <td>ユーザー接続プールの最大アクティブサイズです。</td>
+   <td>ユーザー接続プールの最大アクティブサイズ。</td>
   </tr>
   <tr>
    <td><strong>User base DN</strong></td>
@@ -246,7 +245,7 @@ SSL 経由で LDAP を使用して認証をおこなうように AEM を設定�
 
 1. SSL ライブラリがインストールされ、機能していることを確認します。この手順では、例として OpenSSL を使用します。
 
-1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーしてカスタマイズすることで実行できます。 UNIXシステムでは、通常`/usr/lib/ssl/openssl.cnf`にあります。
+1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーし、カスタマイズすることで実行できます。 UNIXシステムでは、通常、`/usr/lib/ssl/openssl.cnf`に配置されます。
 
 1. ターミナルで次のコマンドを実行して CA ルートキーを作成します。
 
@@ -282,12 +281,12 @@ LDAP Identity Provider と External Login Module の両方に対してデバッ�
 
 * Log level：Debug
 * Log File：logs/ldap.log
-* Message Pattern:{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
+* メッセージパターン：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * Log level：Debug
 * Log File：logs/external.log
-* Message Pattern:{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
+* メッセージパターン：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## グループへの関連付けに関する注意事項 {#a-word-on-group-affiliation}
@@ -305,4 +304,3 @@ AEM は `rep:externalId` プロパティを使用して、外部グループか�
 ## 既知の問題 {#known-issues}
 
 LDAP over SSL を使用する場合は、Netscape のコメントオプションを指定せずに、使用する証明書が作成されていることを確認してください。このオプションが有効な場合は、SSL ハンドシェイクエラーが発生して認証が失敗します。
-
