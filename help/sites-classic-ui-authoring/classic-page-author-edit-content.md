@@ -10,16 +10,15 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 71b1301faf3ea3d881bcbf34eac101f3ed5c514c
+exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 99%
 
 ---
 
-
-# ページのコンテンツの編集{#editing-page-content}
+# ページのコンテンツの編集 {#editing-page-content}
 
 ページが作成されたら（新規作成、またはローンチやライブコピーの一部として作成）、コンテンツを編集して、必要な更新をおこなうことができます。
 
@@ -31,7 +30,7 @@ ht-degree: 99%
 >
 >問題が発生した場合は、システム管理者にお問い合わせください。
 
-## サイドキック  {#sidekick}
+## サイドキック {#sidekick}
 
 サイドキックはページのオーサリングをおこなう際の重要なツールです。ページのオーサリング中はフローティングされるので、常に表示されます。
 
@@ -61,7 +60,7 @@ ht-degree: 99%
 
 * [ページプロパティの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)
 
-* [基礎モード](/help/sites-authoring/scaffolding.md)
+* [基礎](/help/sites-authoring/scaffolding.md)
 
 * [ClientContext](/help/sites-administering/client-context.md)
 
@@ -177,7 +176,7 @@ ht-degree: 99%
 
 継承されたコンポーネントは、次のような様々なシナリオによって生成されます。
 
-* [複数サイト管理](/help/sites-administering/msm.md)。[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用されます。
+* [マルチサイト管理](/help/sites-administering/msm.md);また、[scaffolding](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用することもできます。
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
 * 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
@@ -298,7 +297,7 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 * 段落の追加、編集、削除および移動
 * 段落コンテンツのインプレース編集
 * ページ内部での項目のコピー、カットおよび貼り付け
-* ページ間でのアイテムのコピー、切り取り、貼り付け
+* ページ間での項目のコピー、切り取り、貼り付け
 * ファイルおよび画像の追加、削除および変更
 * 注釈およびスケッチの追加、削除および変更
 * 基礎モードに対する変更
