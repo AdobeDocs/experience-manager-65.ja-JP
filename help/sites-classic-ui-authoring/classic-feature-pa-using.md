@@ -10,7 +10,6 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 28529cae-6fbd-4879-a5b8-3ec8e1bcd586
 docset: aem65
-translation-type: tm+mt
 source-git-commit: bcb1840d23ae538c183eecb0678b6a75d346aa50
 workflow-type: tm+mt
 source-wordcount: '106'
@@ -33,4 +32,4 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->サイトの分析データを直接コンソールに表示できるのは、タッチ操作向け UI の場合のみです。詳しくは、標準のオーサリングドキュメントの「[ページ分析データの表示](/help/sites-authoring/page-analytics-using.md)」を参照してください。
+>サイトの分析データを直接コンソールに表示できるのは、タッチ操作向け UI の場合のみです。詳しくは、標準のオーサリングドキュメントの[ページ分析データ](/help/sites-authoring/page-analytics-using.md)の表示を参照してください。
