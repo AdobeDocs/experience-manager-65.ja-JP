@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 430a27b5-f344-404f-8bf8-0d91b49b605e
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d5372474-d8aa-4e64-919d-0bd29ba99d99
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 92%
 
 ---
-
 
 # モバイルデバイス用のページのオーサリング{#authoring-a-page-for-mobile-devices}
 
@@ -26,9 +25,9 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。(「[異なるチャネル用のライブコピーの作成](/help/sites-administering/msm-livecopy.md)」を参照)。
+>既存の標準サイトに基づいたモバイルサイトを作成するには、標準サイトのライブコピーを作成します。（[異なるチャネル用のライブコピーの作成](/help/sites-administering/msm-livecopy.md)を参照）。
 >
->AEM 開発者は、新しいデバイスグループを作成できます。(「[デバイスグループフィルターの作成」を参照)。](/help/sites-developing/groupfilters.md)
+>AEM 開発者は、新しいデバイスグループを作成できます。（[デバイスグループフィルターの作成](/help/sites-developing/groupfilters.md)を参照）。
 
 次の手順を使用して、モバイルページをオーサリングします。
 
@@ -49,5 +48,4 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->オーサーインスタンスのページがモバイルデバイスから要求されると、エミュレーターは無効になります。その後、タッチ操作対応UIを使用してオーサリングを行うことができます。
-
+>オーサーインスタンスのページがモバイルデバイスから要求されると、エミュレーターは無効になります。その後、タッチ操作対応UIを使用してオーサリングを実行できます。
