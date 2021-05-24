@@ -9,20 +9,19 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
 discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '6414'
 ht-degree: 53%
 
 ---
 
-
 # xtype の使用（クラシック UI）{#using-xtypes-classic-ui}
 
 このページでは、Adobe Experience Manager（AEM）で利用できるすべての xtype について説明します。
 
-ExtJS 言語では、xtype はクラスに付与されるシンボル名です。xtypeが何で、どのように使えるかについての詳細は、[ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2)の概要の「Component XTypes」段落を読むことができます。
+ExtJS 言語では、xtype はクラスに付与されるシンボル名です。xtypeとは何か、およびその使用方法について詳しくは、 [Overview of ExtJS 2](https://www.sencha.com/learn/overview-of-extjs-2)の「Component XTypes」の段落を参照してください。
 
 AEM で利用できるすべてのウィジェットの完全な情報については、[ウィジェット API のドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)を参照してください。
 
@@ -34,7 +33,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 >
 >このページでは、クラシック UI での ExtJS xtype の使用方法について説明します。
 >
->Adobeでは、[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)と[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)に基づいて、[タッチ対応の標準的なUI](/help/sites-developing/touch-ui-concepts.md)を活用することを推奨しています。
+>Adobeでは、[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)および[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)に基づく、標準の[タッチ操作対応UI](/help/sites-developing/touch-ui-concepts.md)を活用することをお勧めします。
 
 ## xtype {#xtypes}
 
@@ -96,7 +95,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.form.BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField)
 
-   **廃止：代わりに、 [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldを使用します。**
+   **廃止：代わ [りに、CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldを使用します**
 
 * bulkeditor
 
@@ -134,7 +133,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.Ext.form.Checkbox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Checkbox)
 
-   単一のチェックボックスフィールド 従来のチェックボックスフィールドにそのまま置き換えて使用できます。
+   単一のチェックボックスフィールド。 従来のチェックボックスフィールドにそのまま置き換えて使用できます。
 
 * checkboxgroup
 
@@ -398,7 +397,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
 * heavymovedialog
 
-   [CQ.wcm.HeyMoveDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.HeavyMoveDialog)
+   [CQ.wcm.HeavyMoveDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.HeavyMoveDialog)
 
     HeavyMoveDialog は、ページとその子ページを移動するためのダイアログであり、以前アクティブ化したページの再アクティブ化も考慮に入れます（名前の「heavy」はこれを表しています）。
 
@@ -418,7 +417,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.Ext.form.HtmlEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor)
 
-   軽量のHTMLエディターコンポーネントを提供します。 ツールバーの機能の一部は、Safari ではサポートされておらず、必要に応じて自動的に非表示になります。該当する場合、設定オプションに記載されています。
+   軽量なHTMLエディターコンポーネントを提供します。 ツールバーの機能の一部は、Safari ではサポートされておらず、必要に応じて自動的に非表示になります。該当する場合、設定オプションに記載されています。
 
      エディターのツールバーボタンには、[buttonTips](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.HtmlEditor) プロパティで定義されたツールチップがあります。
 
@@ -450,7 +449,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.Ext.form.Label](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Label)
 
-   基本ラベルフィールド
+   基本ラベルフィールド。
 
 * languagecopydialog
 
@@ -504,7 +503,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.MediaBrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.MediaBrowseDialog)
 
-   **廃止：代わりに、 [コンテンツフ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) ァインダーを使用してメディアを参照します。**
+   **廃止：代わりに、コ [ンテン](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder) ツファインダーを使用してメディアを参照します。**
 
    MediaBrowseDialog は、メディアライブラリを参照するためのダイアログです。
 
@@ -620,7 +619,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.form.PathCompletion](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathCompletion)
 
-   **廃止：代わりに、 [CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldを使用します。**
+   **廃止：代わ [りに、CQ.form.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.PathField) PathFieldを使用します**
 
 * pathfield
 
@@ -822,7 +821,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.form.TableEdit](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit)
 
-   **廃止：代わりに、 [CQ.form.TableEdit2を使用](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) します。**
+   **廃止：代わり [に、CQ.form.TableEdit2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.TableEdit2) を使用します。**
 
 * tableedit2
 
@@ -834,7 +833,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel)
 
-   基本のタブコンテナ。TabPanelsは、標準の[CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)とまったく同じようにレイアウト用に使用できますが、子コンポーネントを含める特別なサポートもあります([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container))。
+   基本のタブコンテナ。TabPanelは、レイアウトの目的で、標準の[CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel)と同じように使用できますが、子コンポーネント([`items`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Container))を含めるための特別なサポートも備えています。
 
 * タグ
 
@@ -886,7 +885,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
     メニューに区切りバーを追加します。区切りバーは、メニューアイテムを論理的なグループに分けるために使用されます。この区切りには、タイトルを表示することもできます。
 
-* ツールバー
+* toolbar
 
    [CQ.Ext.Toolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Toolbar)
 
@@ -950,4 +949,4 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    XML データから簡単に [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store) を作成できるようにする小規模なヘルパークラスです。XmlStore には自動的に [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader) が設定されます。
 
-   **リポジトリ内の別のパスのウィジェット定義を含む** cqincludePseudo xtype。ページダイアログで最もよく使用されます。実際には、この xtype の JavaScript ウィジェットクラスは存在しません。CQ.Util クラスの formatData() 関数によって処理されます。詳しくは、このナレッジベースの記事を参照してください。
+   **リポジトリ内の別のパスのウィジェット定義を含むcqincludePseudo xtype。** ページダイアログで最もよく使用されます。実際には、この xtype の JavaScript ウィジェットクラスは存在しません。CQ.Util クラスの formatData() 関数によって処理されます。詳しくは、このナレッジベースの記事を参照してください。
