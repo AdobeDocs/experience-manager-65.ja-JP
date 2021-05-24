@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
-translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 90%
 
 ---
-
 
 # AEM Sites の開発の手引き - WKND チュートリアル {#getting-started-developing-aem-sites-wknd-tutorial}
 
@@ -40,11 +39,11 @@ WKND 開発者向けチュートリアルは[こちら](https://docs.adobe.com/c
 * [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)
 * [Sling Model](https://sling.apache.org/documentation/bundles/models.html)
 * [タッチ UI](/help/sites-developing/touch-ui-concepts.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 * [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
 
 まずチュートリアルを済ませてから、上記の概念の詳細に進んでください。
 
 ## 次の手順 {#next-steps}
 
-[チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)を完了したら、ドキュメント[AEMコアコンセプト](/help/sites-developing/the-basics.md)を見直して、AEMの基盤となるテクノロジーと開発パラダイムの一部を理解してください。
+[チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)を完了したら、[AEMの中心概念](/help/sites-developing/the-basics.md)ドキュメントを確認し、AEMの基盤となるテクノロジーと開発枠組みの一部をより深く理解することを検討してください。
