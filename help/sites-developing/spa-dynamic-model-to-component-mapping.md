@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 discoiquuid: 8b4b0afc-8534-4010-8f34-cb10475a8e79
-translation-type: tm+mt
-source-git-commit: 4c9a0bd73e8d87d3869c6a133f5d1049f8430cd1
+exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 85%
 
 ---
-
 
 # SPA の動的モデルとコンポーネントのマッピング{#dynamic-model-to-component-mapping-for-spas}
 
@@ -24,7 +23,7 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
 ## ComponentMapping モジュール {#componentmapping-module}
 
@@ -47,7 +46,7 @@ AEM 用 JavaScript SPA SDK を利用する単一ページアプリケーショ�
 
 ## アプリの初期化 {#app-initialization}
 
-各コンポーネントは、[ `ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider)の機能で拡張されます。 初期化は、次の一般的な形式をとります。
+各コンポーネントは、 [ `ModelProvider`](/help/sites-developing/spa-blueprint.md#the-model-provider)の機能で拡張されます。 初期化は、次の一般的な形式をとります。
 
 1. 各モデルプロバイダーは自身を初期化し、内部コンポーネントに対応するモデルの部分に対しておこなわれる変更をリッスンします。
 1. [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager)は、[初期化フロー](/help/sites-developing/spa-blueprint.md)で表されるように初期化する必要があります。
@@ -57,4 +56,3 @@ AEM 用 JavaScript SPA SDK を利用する単一ページアプリケーショ�
 1. モデルの断片は、最後に個々の子コンポーネントに伝播されます。
 
 ![app_model_initialization](assets/app_model_initialization.png)
-
