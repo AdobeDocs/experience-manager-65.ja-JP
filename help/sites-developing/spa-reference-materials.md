@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 discoiquuid: c3a81baa-98b0-40b4-bd34-f39e8491acca
-translation-type: tm+mt
-source-git-commit: fd2a33d08ef77632d335ab19c4feef93d943fb2e
+exl-id: 3d66e861-aaf4-4227-b31a-3545bb3561d0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 87%
 
 ---
-
 
 # SPA 参照資料 {#spa-reference-materials}
 
@@ -26,7 +25,7 @@ AEM SPA エディター SDK フレームワーク用の NPM モジュールに�
 
 >[!NOTE]
 >
->SPAフレームワークベースのクライアント側レンダリング（ReactやAngularなど）を必要とするプロジェクトには、SPA Editorが推奨されるソリューションです。
+>SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
