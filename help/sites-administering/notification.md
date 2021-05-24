@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
-translation-type: tm+mt
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 65%
 
 ---
-
 
 # 電子メール通知の設定{#configuring-email-notification}
 
@@ -61,20 +60,20 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
 ページまたはフォーラムのイベント通知を購読するとき、送信元の電子メールアドレスは、デフォルトで `no-reply@acme.com` に設定されます。この値は、Web コンソールで **Notification Email Channel** サービスを設定することで変更できます。
 
-送信元の電子メールアドレスを設定するには、リポジトリに`sling:OsgiConfig`ノードを追加します。 CRXDE Liteを使用してノードを直接追加するには、次の手順を実行します。
+差出人の電子メールアドレスを設定するには、リポジトリに`sling:OsgiConfig`ノードを追加します。 次の手順を実行し、ノードを直接CRXDE Liteします。
 
 1. CRXDE Lite で、`config` という名前のノードを、アプリケーションフォルダーの下に追加します。
 1. configフォルダーに、次の名前のノードを追加します。
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel`リソースのタイプは次のとおりとします。`sling:OsgiConfig`
 
-1. 追加`email.from`という名前のノードの`String`プロパティ。 値には、使用する電子メールアドレスを指定します。
+1. `String`プロパティを`email.from`という名前のノードに追加します。 値には、使用する電子メールアドレスを指定します。
 
 1. 「**すべて保存**」をクリックします。
 
 次の手順を使用して、コンテンツパッケージソースフォルダーでノードを定義します。
 
-1. `jcr_root/apps/*app_name*/config folder`に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml`という名前のファイルを作成します
+1. `jcr_root/apps/*app_name*/config folder`に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml`という名前のファイルを作成します。
 
 1. このノードを表現する次の XML を追加します。
 
@@ -140,10 +139,10 @@ This is an automatically generated message. Please do not reply.
 
 * `${time}`、イベントの日時。
 
-* `${userFullName}`イベントをトリガーしたユーザーのフルネーム。
+* `${userFullName}`：イベントをトリガーしたユーザーの完全名。
 
-* `${userId}`、イベントをトリガーしたユーザーのID。
-* `${modifications}`に、ページイベントのタイプとページパスを次の形式で示します。
+* `${userId}`：イベントをトリガーしたユーザーのID。
+* `${modifications}`は、ページイベントのタイプとページパスを次の形式で表します。
 
    &lt;page event=&quot;&quot; type=&quot;&quot;> =>  &lt;page path=&quot;&quot;>
 
@@ -194,13 +193,13 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-`<text_x>`は、静的テキスト変数と動的文字列変数の組み合わせにすることができます。
+`<text_x>`は、静的テキストと動的文字列変数を組み合わせた値にすることができます。
 
 フォーラム通知用の電子メールテンプレート内では次の変数を使用できます。
 
 * `${time}`、イベントの日時。
 
-* `${forum.path}`、フォーラムページへのパス。
+* `${forum.path}`：フォーラムページへのパス。
 
 ### ワークフロー通知用の電子メールテンプレート {#email-templates-for-workflow-notification}
 
@@ -251,58 +250,58 @@ subject=<text_1>
 
 >[!NOTE]
 >
->`<text_x>`は、静的テキスト変数と動的文字列変数の組み合わせにすることができます。 `<text_x>`項目の各行は、最後のインスタンスを除き、バックスラッシュ(`\`)で終わる必要があります。バックスラッシュがない場合は、文字列変数`<text_x>`の終わりを示します。
+>`<text_x>`は、静的テキストと動的文字列変数を組み合わせた値にすることができます。 `<text_x>`項目の各行は、最後のインスタンスを除き、バックスラッシュ(`\`)で終わる必要があります。バックスラッシュがない場合、`<text_x>`文字列変数の終わりを示します。
 >
 >テンプレート形式について詳しくは、[Properties.load() メソッドの javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) を参照してください。
 
-メソッド`${payload.path.open}`は、作業項目のペイロードへのパスを明らかにします。 例えば、Sitesのページの場合、`payload.path.open`は`/bin/wcmcommand?cmd=open&path=…`に似ています。;これはサーバ名がないため、テンプレートでは`${host.prefix}`が先頭に付きます。
+メソッド`${payload.path.open}`は、作業項目のペイロードへのパスを表示します。 例えば、Sitesのページの場合、`payload.path.open`は`/bin/wcmcommand?cmd=open&path=…`に似ています。;これはサーバー名が付いていないので、テンプレートでは`${host.prefix}`が先頭に追加されます。
 
 電子メールテンプレート内では以下の変数を使用できます。
 
 * `${event.EventType}`、イベントのタイプ
 * `${event.TimeStamp}`、イベントの日時
-* `${event.User}`、イベントをトリガーしたユーザー
-* `${initiator.home}`、イニシエータノードのパス
+* `${event.User}`：イベントをトリガーしたユーザー
+* `${initiator.home}`、イニシエータノードパス
 
 * `${initiator.name}`、イニシエータ名
 
-* `${initiator.email}`、イニシエータの電子メールアドレス
-* `${item.id}`、作業項目のID
-* `${item.node.id}`、この作業項目に関連付けられたワークフローモデル内のノードのid
-* `${item.node.title}`、作業項目のタイトル
-* `${participant.email}`、参加者の電子メールアドレス
+* `${initiator.email}`（イニシエーターのEメールアドレス）
+* `${item.id}`（作業項目のID）
+* `${item.node.id}`（この作業項目に関連付けられたワークフローモデル内のノードのid）
+* `${item.node.title}`（作業項目のタイトル）
+* `${participant.email}`（参加者の電子メールアドレス）
 * `${participant.name}`、参加者の名前
-* `${participant.familyName}`、参加者の姓
+* `${participant.familyName}`（参加者の姓）
 * `${participant.id}`、参加者のid
 * `${participant.language}`、参加者の言語
 * `${instance.id}`、ワークフローID
-* `${instance.state}`、ワークフローの状態
-* `${model.title}`、ワークフローモデルのタイトル
-* `${model.id}`、ワークフローモデルのid
+* `${instance.state}`（ワークフローの状態）
+* `${model.title}`（ワークフローモデルのタイトル）
+* `${model.id}`（ワークフローモデルのid）
 
-* `${model.version}`、ワークフローモデルのバージョン
+* `${model.version}`（ワークフローモデルのバージョン）
 * `${payload.data}`、ペイロード
 
 * `${payload.type}`、ペイロードタイプ
-* `${payload.path}`、ペイロードのパス
-* `${host.prefix}`、ホストのプレフィックス、例：http://localhost:4502
+* `${payload.path}`（ペイロードのパス）
+* `${host.prefix}`、ホストプレフィックス。例：http://localhost:4502
 
 ### 新しい言語用の電子メールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
 新しい言語用のテンプレートを追加するには：
 
-1. CRXDEで、次の`<language-code>.txt`ファイルを追加します。
+1. CRXDEで、以下に`<language-code>.txt`ファイルを追加します。
 
-   * `/etc/notification/email/default/com.day.cq.wcm.core.page` :ページ通知
+   * `/etc/notification/email/default/com.day.cq.wcm.core.page` :（ページ通知の場合）
    * `/etc/notification/email/default/com.day.cq.collab.forum` :フォーラム通知
-   * `/etc/workflow/notification/email/default` :ワークフロー通知
+   * `/etc/workflow/notification/email/default` :ワークフロー通知の場合
 
 1. 言語に合わせてファイルを調整します。
 1. 変更内容を保存します。
 
 >[!NOTE]
 >
->電子メールテンプレートのファイル名として使用する`<language-code>`は、AEMで認識される小文字の2文字の言語コードである必要があります。 言語コードについては、AEM は ISO-639-1 に依存しています。
+>電子メールテンプレートのファイル名として使用される`<language-code>`は、AEMで認識される2文字の小文字の言語コードにする必要があります。 言語コードについては、AEM は ISO-639-1 に依存しています。
 
 ## AEM Assets の電子メール通知の設定 {#assetsconfig}
 
@@ -311,4 +310,3 @@ AEM Assets のコレクションが共有されている場合も共有されて
 1. [メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)で説明したように、電子メールサービスを設定します。
 1. AEM に管理者としてログインします。**ツール**／**操作**／**Web コンソール**&#x200B;をクリックして、Web コンソール設定を開きます。
 1. **Day CQ DAM Resource Collection Servlet** を編集します。「**send email**」を選択します。「**保存**」をクリックします。
-
