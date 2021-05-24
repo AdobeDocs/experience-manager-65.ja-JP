@@ -10,14 +10,13 @@ topic-tags: components
 content-type: reference
 discoiquuid: 402c0d6b-2c26-490a-97c5-dfd4dea778e0
 legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 4059af12-49a7-489c-a2b8-d0481be57cc5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 97%
 
 ---
-
 
 # AEM コンポーネントの開発 - コードサンプル{#developing-aem-components-code-samples}
 
@@ -35,9 +34,7 @@ ht-degree: 97%
 >AEM では、コンポーネントの分析、テストおよびデバッグを支援するために次のものが提供されています。
 >
 >* [開発者モード](/help/sites-developing/developer-mode.md)
->* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
-
->
+* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
 
 
 
@@ -47,12 +44,11 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-dialog-fields-customizationプロジェクトを開きます。](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
+* [GitHubのaem-authoring-dialog-fields-customizationプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/archive/master.zip)としてダウンロードします
 
 >[!NOTE]
->
->このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションに関連しています。
+このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションに関連しています。
 
 ## 関連リソース {#related-resources}
 
@@ -67,4 +63,3 @@ GitHub のコード
 標準のコンテンツフラグメントコンポーネントを拡張して、機能を追加できます。
 
 詳しくは、[コンテンツフラグメントのカスタマイズと拡張](/help/sites-developing/customizing-content-fragments.md)を参照してください。
-
