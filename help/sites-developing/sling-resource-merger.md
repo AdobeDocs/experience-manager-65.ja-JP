@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
-translation-type: tm+mt
-source-git-commit: 5128a08d4db21cda821de0698b0ac63ceed24379
+exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 99%
 
 ---
-
 
 # AEM での Sling Resource Merger の使用{#using-the-sling-resource-merger-in-aem}
 
@@ -63,7 +62,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
+>1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
    >
    >
 1. `/apps` 内で変更作業をおこないます。
@@ -275,4 +274,3 @@ Sling Resource Merger には 2 つのカスタムリソースプロバイダー�
 * オーバーライド：
 
    * [ページプロパティの設定](/help/sites-developing/page-properties-views.md#configuring-your-page-properties)
-
