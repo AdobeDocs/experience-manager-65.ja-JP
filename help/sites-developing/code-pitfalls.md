@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
 discoiquuid: 01362026-a696-4a5d-94e9-ea784eaa6e4b
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: c448c5d5-def8-4c1a-8db4-41eb49d0cd20
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 94%
 
 ---
-
 
 # コードの落とし穴{#code-pitfalls}
 
