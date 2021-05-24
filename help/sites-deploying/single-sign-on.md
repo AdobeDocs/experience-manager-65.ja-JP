@@ -9,21 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring, Security
 content-type: reference
 discoiquuid: 86e8dc12-608d-4aff-ba7a-5524f6b4eb0d
-feature: Configuring
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 設定
+exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 74%
 
 ---
 
-
 # シングルサインオン {#single-sign-on}
 
 シングルサインオン（SSO）は、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すれば、その後は複数のシステムにアクセスできるようにするものです。個別のシステム（信頼された認証として知られる）が認証を実行し、Adobe Experience Manager に対してユーザーの資格情報を提供します。Adobe Experience Manager がそのユーザーのアクセス権を確認し、適用します（つまり、ユーザーがアクセスを許可されているリソースを決定します）。
 
-SSO認証ハンドラーサービス(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO認証ハンドラは、次の順序で、特別な属性の値としてssid（SSO識別子）を検索します。
+SSO Authentication Handlerサービス(`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`)は、信頼された認証子が提供する認証結果を処理します。 SSO Authentication Handlerは、次の順序で、特殊な属性の値としてssid（SSO識別子）を検索します。
 
 1. 要求ヘッダー
 1. cookie
@@ -36,7 +35,7 @@ SSO認証ハンドラーサービス(`com.adobe.granite.auth.sso.impl.SsoAuthent
 * ログインモジュール
 * SSO 認証サービス
 
-両方のサービスに同じ属性名を指定する必要があります。 属性は、`Repository.login`に提供される`SimpleCredentials`に含まれます。 属性の値は無関係で無視され、単に存在するだけが重要で、検証されます。
+両方のサービスに同じ属性名を指定する必要があります。 属性は、`Repository.login`に指定された`SimpleCredentials`に含まれます。 属性の値は無関係で無視され、単に存在するだけが重要で、検証されます。
 
 ## SSO の設定 {#configuring-sso}
 
@@ -46,20 +45,20 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
    例えば、NTLM の場合は以下のように設定します。
 
-   * **パス：** 必要に応じて；例えば、  `/`
+   * **パス：** 必要に応じて例：  `/`
    * **ヘッダー名**:  `LOGON_USER`
-   * **IDの形式**:  `^<DOMAIN>\\(.+)$`
+   * **ID形式**:  `^<DOMAIN>\\(.+)$`
 
       `<*DOMAIN*>`は、独自のドメイン名に置き換えます。
    CoSign の場合：
 
-   * **パス：** 必要に応じて；例えば、  `/`
+   * **パス：** 必要に応じて例：  `/`
    * **ヘッダー名**：remote_user
-   * **ID形式：** 現状
+   * **ID形式：** AsIs
 
    SiteMinder の場合：
 
-   * **パス：** 必要に応じて；例えば、  `/`
+   * **パス：** 必要に応じて例：  `/`
    * **ヘッダー名**：SM_USER
    * **ID 形式**：AsIs
 
@@ -91,8 +90,8 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 
 >
 >
-`disp_iis.ini`セット：
->（詳しくは、[Microsoft Internet Information Serverと共にディスパッチャーをインストールする](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)を参照）
+`disp_iis.ini`内で、次の設定を行います。
+>（詳しくは、[Microsoft Internet Information Serverと共にDispatcherをインストールする](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)を参照）。
 >
 >* `servervariables=1`（IIS サーバー変数を要求ヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを、その「Basic」と同等のものに置き換えます）
@@ -114,13 +113,13 @@ Felix コンソールの「**Authenticator**」オプションを使用すると
 
 `http://localhost:4502/system/console/slingauth`
 
-パスに最適なハンドラーが最初に照会されます。例えば、パス`/`にhandler-Aを設定し、パス`/content`にhandler-Bを設定した場合、`/content/mypage.html`に対する要求が最初にクエリhandler-Bに送られます。
+パスに最適なハンドラーが最初に照会されます。例えば、パス`/`にhandler-Aを設定し、パス`/content`にhandler-Bを設定した場合、`/content/mypage.html`に対する要求が最初にhandler-Bに対してクエリを実行します。
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
 ### 例 {#example}
 
-Cookieリクエストの場合（URL `http://localhost:4502/libs/wcm/content/siteadmin.html`を使用）:
+Cookieリクエスト（URL `http://localhost:4502/libs/wcm/content/siteadmin.html`を使用）の場合：
 
 ```xml
 GET /libs/cq/core/content/welcome.html HTTP/1.1
@@ -136,9 +135,9 @@ Cookie: TestCookie=admin
 
 * **Cookie Names**: `TestCookie`
 
-* **パラメータ名**:  `TestParameter`
+* **パラメーター名**:  `TestParameter`
 
-* **IDの形式**:  `AsIs`
+* **ID形式**:  `AsIs`
 
 応答は次のようになります。
 
@@ -158,10 +157,10 @@ Transfer-Encoding: chunked
 ....
 ```
 
-これは、次の条件を満たす場合にも機能します。
+これは、次を要求した場合にも機能します。
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-または、次のcurlコマンドを使用して`TestHeader`ヘッダーを`admin:`に送信できます
+または、次のcurlコマンドを使用して、 `TestHeader`ヘッダーを`admin:`に送信できます。
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
@@ -193,4 +192,3 @@ SSO を使用する場合、サインインとサインアウトは外部で処�
    });
    menu.addSeparator();
    ```
-
