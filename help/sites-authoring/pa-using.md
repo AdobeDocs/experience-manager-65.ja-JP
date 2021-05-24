@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
-translation-type: tm+mt
-source-git-commit: e3683f6254295e606e9d85e88979feaaea76c42e
+exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 92%
 
 ---
-
 
 # ページ分析データの表示{#seeing-page-analytics-data}
 
@@ -63,7 +62,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 >
 >ページのツリーに異なる Adobe Analytics のクラウド設定に関連付けられている子ページがある場合は、そのページで利用できるデータ列を設定できません。
 
-1. リスト表示で、表示セレクター（ツールバーの右）を使用し、「**表示設定**」を選択し、「**カスタム解析データ追加**」を選択します。
+1. リスト表示で、ビューセレクター（ツールバーの右側）を使用し、「**設定を表示**」を選択してから、「**カスタム分析データを追加**」を選択します。
 
    ![aa-15](assets/aa-15.png)
 
@@ -75,7 +74,7 @@ analytics-administrators ユーザーグループのメンバーは、作成者�
 
 ### サイトからコンテンツインサイトを開く {#opening-content-insights-from-sites}
 
-ページの効果をさらに調べるには、サイトコンソールから「[Content Insight](/help/sites-authoring/content-insights.md)」を開きます。
+ページの効果をさらに調べるには、サイトコンソールから[コンテンツインサイト](/help/sites-authoring/content-insights.md)を開きます。
 
 1. サイトコンソールで、コンテンツインサイトを表示するページを選択します。
 1. ツールバーで、分析と推奨表示アイコンをクリックします。
@@ -158,4 +157,3 @@ Web サイトが [Adobe Analytics 用に設定されている](/help/sites-admin
    * 上に表示（勝者または敗者）
    * 下位を除外（％）
    * 自動更新（データと期間）
-
