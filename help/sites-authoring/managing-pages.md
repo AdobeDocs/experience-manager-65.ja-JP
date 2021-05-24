@@ -1,14 +1,13 @@
 ---
 title: ページの作成と整理
 description: AEM を使用してページを作成および管理する方法
-translation-type: tm+mt
-source-git-commit: 90364cdf6044616d43c1851b3def9b1f063449ca
+exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2523'
 ht-degree: 94%
 
 ---
-
 
 # ページの作成と整理 {#creating-and-organizing-pages}
 
@@ -35,15 +34,15 @@ ht-degree: 94%
 
 Web サイトの構造は、コンテンツページを保持する「ツリー構造」と見なすことができます。これらのコンテンツページの名前は、URL の形成に使用されます。一方でタイトルは、ページコンテンツを表示したときに表示されます。
 
-次の例は、Web.Retailサイトでハイキング短縮ページ(`desert-sky-shorts`)にアクセスする場合の例を示しています。
+次に、We.Retailサイトの例です。ハイキングショートページ(`desert-sky-shorts`)にアクセスします。
 
-* 作成者環境
+* オーサー環境
    `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 * 発行環境
    `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションになる場合があります。
+インスタンスの設定によっては、パブリッシュ環境での`/content`の使用はオプションの場合があります。
 
 ```xml
  /content
@@ -123,7 +122,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
 #### タイトル {#title}
 
-新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**[がこの文字列から派生され、AEM と JCR によって課された規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)「**タイトル**」フィールドに無効な文字が含まれていてもエラーにはなりませんが、派生された名前では、無効な文字が別の文字に置き換えられます。次に例を示します。
+新しいページを作成するときにページの&#x200B;**タイトル**&#x200B;のみを指定した場合、AEM ではページの&#x200B;**名前**&#x200B;がこの文字列から派生され、AEM と JCR [によって課された規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。「**タイトル**」フィールドに無効な文字が含まれていてもエラーにはなりませんが、派生された名前では、無効な文字が別の文字に置き換えられます。次に例を示します。
 
 | タイトル | 派生された名前 |
 |---|---|
@@ -132,7 +131,7 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 
 #### 名前 {#name}
 
-新しいページを作成するときにページの&#x200B;**名前**&#x200B;を指定すると、AEM では AEM と JCR によって課された規則に基づいてページ名が検証されます。[](/help/sites-developing/naming-conventions.md)「**名前**」フィールドに無効な文字は指定できません。AEM で無効な文字が検出されると、フィールドが強調表示され、説明メッセージが表示されます。
+新しいページを作成するときにページの&#x200B;**名前**&#x200B;を指定すると、AEM では AEM と JCR [によって課された規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。「**名前**」フィールドに無効な文字は指定できません。AEM で無効な文字が検出されると、フィールドが強調表示され、説明メッセージが表示されます。
 
 ![caop-02](assets/caop-02.png)
 
@@ -162,7 +161,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
 ### コンポーネント {#components}
 
-コンポーネントは、特定の種類のコンテンツを追加できるように、AEMが提供する要素です。AEMには、包括的な機能を提供する[標準搭載のコンポーネント](/help/sites-authoring/default-components-console.md)が付属しています。以下が含まれます。
+コンポーネントは、特定のタイプのコンテンツを追加できるようにAEMが提供する要素です。AEMには、包括的な機能を提供する[標準のコンポーネント](/help/sites-authoring/default-components-console.md)が用意されています。次のようなものがあります。
 
 * テキスト
 * 画像
@@ -182,7 +181,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
 
 コンテンツの作成を開始する前に、事前に各ページが作成されていない場合は、ページを作成する必要があります。
 
-1. サイトコンソール(例：[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))を開きます。
+1. サイトコンソールを開きます(例：[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))。
 1. 新しいページを作成する場所に移動します。
 1. ツールバーの「**作成**」を使用してドロップダウンセレクターを開き、リストから「**ページ**」を選択します。
 
@@ -210,7 +209,7 @@ AEM では、複数のテンプレートが標準提供されています。使�
    * **名前**：
 
       * これは URI の生成に使用されます。指定しない場合、名前はタイトルから派生します。
-      * 新しいページを作成するときにページの「**名前**[」を指定すると、AEM では AEM と JCR の規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)
+      * 新しいページを作成するときにページの「**名前**」を指定すると、AEM では AEM と JCR [の規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。
 
       * 「**名前**」フィールドに&#x200B;**無効な文字は指定できません**。AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
    >[!NOTE]
@@ -390,11 +389,11 @@ AEM では、名前変更または移動がおこなわれるページへの内�
 
 >[!NOTE]
 >
->非同期ジョブ処理の詳細およびページ移動/名前変更アクションの制限の設定方法については、管理ユーザーガイドの[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)ドキュメントを参照してください。
+>非同期ジョブ処理の詳細およびページ移動/名前変更アクションの制限の設定方法については、管理ユーザーガイドの[非同期ジョブ](/help/sites-administering/asynchronous-jobs.md)のドキュメントを参照してください。
 
 >[!NOTE]
 >
->非同期ページ移動処理にはAEM 6.5.3.0以降が必要です。
+>非同期ページ移動処理には、AEM 6.5.3.0以降が必要です。
 
 ### ページの削除 {#deleting-a-page}
 
