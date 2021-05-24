@@ -6,22 +6,21 @@ seo-description: 'null'
 uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
 contentOwner: sarchiz
 discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 57%
 
 ---
 
-
 # AEM の基盤での GDPR 要求の処理{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
->以下の節ではGDPRを例に挙げていますが、詳細はデータ保護とプライバシーに関するすべての規制に適用されます。GDPR、CCPAなど
+>以下の節ではGDPRを例として使用しますが、ここで説明する詳細は、すべてのデータ保護およびプライバシー規制に適用されます。（GDPR、CCPAなど）
 
-## AEM Foundation GDPRのサポート{#aem-foundation-gdpr-support}
+## AEM FoundationのGDPRサポート{#aem-foundation-gdpr-support}
 
 AEM Foundationレベルでは、保存される個人データはユーザープロファイルです。 したがって、この記事では主に、GDPR のアクセス要求と削除要求にそれぞれ対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
 
@@ -29,7 +28,7 @@ AEM Foundationレベルでは、保存される個人データはユーザープ
 
 ### 手動の手順 {#manual-steps}
 
-1. **[!UICONTROL 設定→セキュリティ→ユーザー]**&#x200B;を開くか、`https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`を直接参照して、ユーザー管理コンソールを開きます。
+1. **[!UICONTROL Settings - Security - Users]**&#x200B;を参照するか、`https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`を直接参照して、ユーザー管理コンソールを開きます。
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -62,7 +61,7 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
 
 *ユーザーデータを取得する*
 
-上記のコマンドから返されたJSONペイロードのホームプロパティのノードパスを使用する：
+上記のコマンドから返されたJSONペイロードのhomeプロパティからのノードパスを使用する。
 
 ```shell
 curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile.-1.json'
@@ -87,7 +86,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   次に、ユーザーインターフェイスは、ユーザーが次のようにグレーアウトし、プロファイルカードにロックを追加することで非アクティブ化されたことを示します。
+   次に、ユーザーインターフェイスは、グレーアウトし、プロファイルカードにロックを追加することで、ユーザーが非アクティブになったことを示します。
 
    ![disableduser](assets/disableduser.png)
 
@@ -104,7 +103,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
 
    1. `[!UICONTROL /profile]`の下のデフォルトのプライベートプロファイル
-   1. `[!UICONTROL /profiles]`AEM 6.5を使用して作成された新しいプロファイル用。
+   1. `[!UICONTROL /profiles]`(AEM 6.5を使用して作成された新しいプロファイル用)
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
@@ -121,7 +120,7 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
 
 * *ユーザーの無効化*
 
-上記のコマンドから返されたJSONペイロードのホームプロパティのノードパスを使用する：
+上記のコマンドから返されたJSONペイロードのhomeプロパティからのノードパスを使用する。
 
 ```shell
 curl -X POST -u user:password -FdisableUser="describe the reasons for disabling this user (GDPR in this case)" 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN.rw.userprops.html'
@@ -129,7 +128,7 @@ curl -X POST -u user:password -FdisableUser="describe the reasons for disabling 
 
 * *ユーザープロファイルの削除*
 
-アカウント検出コマンドから返されたJSONペイロードのホームプロパティのノードパスと、既知のプロファイルノードの場所を使用します。
+アカウント検出コマンドから返されるJSONペイロードのhomeプロパティからのノードパスと、既知の標準プロファイルノードの場所を使用します。
 
 ```shell
 curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':operation=delete' 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile'
@@ -138,4 +137,3 @@ curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':ope
 ```shell
 curl -X POST -u user:password -H "Accept: application/json,**/**;q=0.9" -d ':operation=delete' 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN/profile'
 ```
-
