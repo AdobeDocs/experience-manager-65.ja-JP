@@ -25,7 +25,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->[オープンWeb アプリケーションセキュリティプロジェクト(OWASP)](https://owasp.org/www-project-top-ten/)が公開した、最も危険なセキュリティの脅威に関する詳細情報も得られます。
+>[Open Web Application Security Project(OWASP)](https://owasp.org/www-project-top-ten/)によって公開された、最も危険なセキュリティ上の脅威に関する詳細情報も参照できます。
 
 >[!NOTE]
 >
@@ -55,13 +55,13 @@ ht-degree: 81%
 
 以下のアカウントが該当します。
 
-* AEM `admin`アカウント
+* AEMの`admin`アカウント
 
-   AEM管理者アカウントのパスワードを変更した後は、CRXにアクセスする際に新しいパスワードを使用する必要があります。
+   AEM adminアカウントのパスワードを変更したら、CRXにアクセスする際に新しいパスワードを使用する必要があります。
 
 * OSGi Webコンソールの`admin`パスワード
 
-   この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセスする際に同じパスワードを使用する必要があります。
+   この変更は、Webコンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセス時に同じパスワードを使用する必要があります。
 
 これらの 2 つのアカウントは、個別の資格情報を使用する異なるアカウントです。デプロイメントをセキュリティで保護するには、それぞれに強力なパスワードを設定することが不可欠です。
 
@@ -86,14 +86,14 @@ Web コンソールのパスワードの変更について詳しくは、以下�
 
 #### OSGi Web コンソールの admin パスワードの変更  {#changing-the-osgi-web-console-admin-password}
 
-また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi管理コンソール](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することで行います。
+また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することでおこなわれます。
 
 **User Name** および **Password**：Apache Felix Web Management Console 自体にアクセスするための資格情報です。
 インスタンスのセキュリティを確実にするために、初期インストール後にパスワードを変更する必要があります。
 
 次の手順を実行します。
 
-1. `<server>:<port>/system/console/configMgr`にあるWebコンソールに移動します。
+1. Webコンソール(`<server>:<port>/system/console/configMgr`)に移動します。
 1. **Apache Felix OSGi Management Console** に移動して、「**User Name**」と「**Password**」を変更します。
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
@@ -124,7 +124,7 @@ AEM の標準インストールでは、`admin` をデフォルトの[レプリ�
 
 セキュリティを考慮して、特定の使用事例に対応するように両方のユーザーを変更してください。その際の注意事項を次に示します。
 
-* **トランスポートユーザー**&#x200B;は管理者ユーザーにしないでください。代わりに、パブリッシュシステムの関連する部分へのアクセス権限のみを持つユーザーをパブリッシュシステムに設定し、そのユーザーの秘密鍵証明書をトランスポートに使用します。
+* **トランスポートユーザー**&#x200B;を管理者ユーザーにすることはできません。代わりに、パブリッシュシステムの関連する部分に対するアクセス権のみを持つユーザーをパブリッシュシステム上に設定し、そのユーザーの資格情報をトランスポートに使用します。
 
    バンドルされたレプリケーション受信者ユーザーから開始し、状況に合わせてそのユーザーのアクセス権限を設定できます。
 
@@ -144,7 +144,7 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 
 >[!NOTE]
 >
->このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの We.Retail アプリケーションは削除されます。何らかの理由でこのようにならない場合は、Package Managerに移動し、Web.Retailのすべてのパッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。 詳しくは、[パッケージの操作](package-manager.md)を参照してください。
+>このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの We.Retail アプリケーションは削除されます。何らかの理由でこのようにならない場合は、パッケージマネージャーに移動し、すべてのWe.Retailパッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。 詳しくは、[パッケージの使用](package-manager.md)を参照してください。
 
 ### CRX 開発バンドルが存在するかどうかの確認 {#check-if-the-crx-development-bundles-are-present}
 
@@ -164,7 +164,7 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 
 #### CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
-AEM 6.1には、**CSRF保護フレームワーク**&#x200B;と呼ばれるクロスサイト要求偽造攻撃からの保護に役立つメカニズムが付属しています。 使用方法について詳しくは、[ドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。
+AEM 6.1には、**CSRF保護フレームワーク**&#x200B;と呼ばれる、クロスサイトリクエストフォージェリ攻撃からの保護に役立つメカニズムが付属しています。 使用方法について詳しくは、[ドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。
 
 #### Sling Referrer Filter {#the-sling-referrer-filter}
 
@@ -174,13 +174,13 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 * フィルター処理する HTTP メソッド
 * 空のリファラーヘッダーを使用できるかどうか
-* サーバ・ホストに加えて、サーバのリストも許可されます。
+* と、サーバホストに加えて許可されるサーバのリスト。
 
-   デフォルトでは、localhostとサーバーがバインドされる現在のホスト名のすべてのバリエーションがリスト内にあります。
+   デフォルトでは、localhostのバリエーションと、サーバーがバインドされている現在のホスト名がすべてリストに含まれます。
 
 リファラーフィルターサービスを設定するには：
 
-1. 次の場所にあるApache Felixコンソール（**設定**）を開きます。
+1. 次の場所にあるApache Felixコンソール(**Configurations**)を開きます。
 
    `https://<server>:<port_number>/system/console/configMgr`
 
@@ -193,7 +193,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    &lt;protocol>://&lt;server>:&lt;port>
 
-   以下に例を示します。
+   次に例を示します。
 
    * `https://allowed.server:80`の場合、特定のポートを使用して、このサーバーからの要求がすべて許可されます。
    * https 要求も許可する場合は、2 行目を入力する必要があります。
@@ -298,15 +298,15 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
    * 具体的には、ツリー構造が複数のレベルに及ぶ JSON レンダラーです。
 
-      例えば、リクエストは次のようになります。
+      例えば、次のリクエストがあります。
 
       `http://localhost:4502/.json`
 
-      リポジトリ全体をJSON表現でダンプできました。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSONレンダリングの深さを制限するには、次の値を設定します。
+      は、JSON表現でリポジトリ全体をダンプできます。 これにより、サーバーで重大な問題が発生します。そのため、Sling では結果の最大数に制限を設定します。JSONレンダリングの深さを制限するには、次の値を設定します。
 
-      **JSONの最大結果** (  `json.maximumresults`)
+      **JSONの最大結果** ( `json.maximumresults`)
 
-      [Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定に含まれています。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
+      ([Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定)を参照してください。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet) を設定します。
    >[!CAUTION]
@@ -327,7 +327,7 @@ AEM は `FormChooserServlet` 用の標準インデックスを提供していな
 
 これを軽減するために、以下の手順に従ってください。
 
-1. Webコンソールに移動し、ブラウザで&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;を指定します。
+1. ブラウザーで&#x200B;*https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*&#x200B;を参照して、Webコンソールに移動します。
 
 1. **Day CQ WCM Form Chooser Servlet** を検索します。
 1. エントリをクリックした後、次のウィンドウで「**Advanced Search Require**」を無効にします。
@@ -336,9 +336,9 @@ AEM は `FormChooserServlet` 用の標準インデックスを提供していな
 
 **アセットダウンロードサーブレット使用することで生じる DoS を軽減**
 
-デフォルトのアセットダウンロードサーブレットを使用すると、認証済みユーザは任意の大きさの同時ダウンロード要求を発行して、アセットのZIPファイルを作成できます。 大きなZIPアーカイブを作成すると、サーバーとネットワークに大きな負荷がかかる場合があります。 この動作が原因で発生する可能性のあるサービス拒否(DoS)のリスクを軽減するために、`AssetDownloadServlet` OSGiコンポーネントは、デフォルトで[!DNL Experience Manager]発行インスタンスで無効になっています。 デフォルトでは、[!DNL Experience Manager]作成者インスタンスで有効になっています。
+デフォルトのアセットダウンロードサーブレットを使用すると、認証済みユーザーは、任意の大きさの同時ダウンロードリクエストを発行して、アセットのZIPファイルを作成できます。 大きなZIPアーカイブを作成すると、サーバーとネットワークが過負荷になる場合があります。 この動作によって生じる可能性があるサービス拒否(DoS)のリスクを軽減するために、 `AssetDownloadServlet`パブリッシュインスタンスでは、OSGiコンポーネントがデフォルトで無効になっています。 [!DNL Experience Manager][!DNL Experience Manager]オーサーインスタンスでは、デフォルトで有効になっています。
 
-ダウンロード機能が不要な場合は、作成者デプロイメントとパブリッシュデプロイメントでサーブレットを無効にします。 設定でアセットのダウンロード機能を有効にする必要がある場合は、[この記事](/help/assets/download-assets-from-aem.md)を参照してください。 また、展開でサポートできるダウンロードの最大数を定義できます。
+ダウンロード機能が必要ない場合は、オーサーデプロイメントとパブリッシュデプロイメントでサーブレットを無効にします。 設定でアセットのダウンロード機能が有効になっている必要がある場合は、[この記事](/help/assets/download-assets-from-aem.md)を参照してください。 また、デプロイメントでサポートできる最大ダウンロード数を定義できます。
 
 ### WebDAV の無効化 {#disable-webdav}
 
@@ -376,7 +376,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 既存のアプリケーションとの後方互換性を確保するために以前の実装が必要な場合、非推奨ではありますが、この機能を無効にすることもできます。これをおこなうには、次の手順を実行する必要があります。
 
-1. Webコンソールに移動し、**Apache Jackrabbit Oak SecurityProvider**&#x200B;のプロパティ&#x200B;**requiredServicePids**&#x200B;から** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。
+1. Webコンソールに移動し、**Apache Jackrabbit Oak SecurityProvider**&#x200B;の&#x200B;**requiredServicePids**&#x200B;プロパティから** org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**エントリを削除します。
 
    また、OSGi 設定の **org.apache.jackrabbit.oak.security.internal.SecurityProviderRegistration** PID を探すことで、Oak Security Provider を見つけることもできます。
 
@@ -392,7 +392,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 クリックジャッキングを防ぐには、`SAMEORIGIN` に設定した HTTP ヘッダー `X-FRAME-OPTIONS` を指定するように Web サーバーを設定することをお勧めします。
 
-クリックジャックに関する詳細[は、OWASPサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。
+クリックジャッキングに関する詳細は、OWASPのサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。[
 
 ### 必要な場合は暗号鍵を適切にレプリケーションする {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
@@ -417,12 +417,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
-1. データフォルダーに移動します。以下に例を示します。
+1. データフォルダーに移動します。次に例を示します。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC とマスターファイルをコピーします。
-1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。以下に例を示します。
+1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。次に例を示します。
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
@@ -453,4 +453,4 @@ AEM 6.2以前のバージョンでは、キーは`/etc/key`ノードの下のリ
 
 ### 開発のベストプラクティス {#development-best-practices}
 
-新しい開発が[セキュリティのベストプラクティス](/help/sites-developing/security.md)に従っていることは、AEM環境を安全に保つために重要です。
+AEM環境を安全に保つためには、新しい開発が[セキュリティのベストプラクティス](/help/sites-developing/security.md)に従うことが重要です。
