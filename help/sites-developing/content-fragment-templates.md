@@ -10,14 +10,13 @@ topic-tags: platform
 content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
-translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 84%
 
 ---
-
 
 # コンテンツフラグメントテンプレート{#content-fragment-templates}
 
@@ -36,12 +35,12 @@ ht-degree: 84%
 次の場所に、サイト固有のコンテンツフラグメントテンプレートを作成できます。
 
 * `/apps/settings/dam/cfm/templates`
-標準搭載のテンプレートをオーバーレイする場所、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場所です。
+標準のテンプレートをオーバーレイする場所、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場所。
 
 * `/conf/global/settings/dam/cfm/templates`
 実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
 
-優先順位は（降順）`/conf`、`/apps`、`/libs`です。
+優先順位は（降順に）`/conf`、`/apps`、`/libs`です。
 
 >[!CAUTION]
 >
@@ -51,7 +50,7 @@ ht-degree: 84%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
+>1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
    >
    >
 1. `/apps` 内で変更作業をおこないます。
@@ -120,7 +119,7 @@ conf
     </tr>
     <tr>
      <td><code>jcr:title</code></td>
-     <td><p><code>String</code></p> <p>必須<br /> </p> </td>
+     <td><p><code>String</code></p> <p>required<br /> </p> </td>
      <td>テンプレートのタイトル（<strong>フラグメントを作成</strong>ウィザードに表示されます）。</td>
     </tr>
     <tr>
@@ -135,7 +134,7 @@ conf
     </tr>
     <tr>
      <td><code>precreateElements</code></td>
-     <td><p><code>Boolean</code></p> <p>必須</p> </td>
+     <td><p><code>Boolean</code></p> <p>required</p> </td>
      <td><p><code>true</code>コンテンツフラグメントの要素（マスター要素を除く）を表すサブアセットをコンテンツフラグメントの作成時に作成する必要がある場合は 、、そのつど作成する場合は <em>false</em> に設定します。</p> <p><strong>注意</strong>：現在、このパラメーターは <code>true</code> に設定する必要があります。</p> </td>
     </tr>
     <tr>
@@ -146,7 +145,7 @@ conf
    </tbody>
   </table>
 
-* **要素**
+* **エレメント**
 
    <table>
    <tbody>
@@ -158,7 +157,7 @@ conf
     <tr>
      <td><code>elements</code> </td>
      <td><p><code>nt:unstructured</code></p> <p>必須</p> </td>
-     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。必須であり、<strong>Main</strong>要素の子ノードを少なくとも1つ含める必要がありますが、[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td>
+     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。必須で、<strong>Main</strong>要素の子ノードを少なくとも1つ含める必要がありますが、[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td>
     </tr>
    </tbody>
   </table>
@@ -185,12 +184,12 @@ conf
     <tr>
      <td><code>defaultContent</code></td>
      <td><p><code>String</code></p> <p>オプション</p> <p>デフォルト：""</p> </td>
-     <td>要素の初期内容<code>precreateElements</code><i> = </i><code>true</code></td>
+     <td>要素の初期コンテンツ<code>precreateElements</code><i> = </i><code>true</code>の場合にのみ使用されます。</td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
      <td><p><code>String</code></p> <p>オプション</p> <p>default: <code>text/html</code></p> </td>
-     <td><p>要素の初期コンテンツタイプ<code>precreateElements</code><i> = </i><code>true</code>；の場合にのみ使用現在のサポート：</p>
+     <td><p>要素の初期コンテンツタイプ<code>precreateElements</code><i> = </i><code>true</code>;現在サポートされている：</p>
       <ul>
        <li><code>text/html</code></li>
        <li><code>text/plain</code></li>
