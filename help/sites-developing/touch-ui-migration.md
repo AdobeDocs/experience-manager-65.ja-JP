@@ -1,8 +1,8 @@
 ---
-title: タッチ操作対応UIへの移行
-seo-title: タッチ操作対応UIへの移行
-description: タッチ操作対応UIへの移行
-seo-description: タッチ操作対応UIへの移行
+title: タッチUIへの移行
+seo-title: タッチUIへの移行
+description: タッチUIへの移行
+seo-description: タッチUIへの移行
 uuid: 47c43b56-532b-4ada-8503-04d66bab3564
 contentOwner: aheimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,20 +10,19 @@ content-type: reference
 topic-tags: introduction
 discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 7035c19a109ff67655ee0419aa37d1723e2189cc
+exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 14%
 
 ---
 
-
 # タッチ操作対応UIへの移行{#migration-to-the-touch-ui}
 
-バージョン6.0以降、Adobe Experience Manager(AEM)は、*タッチ対応UI*（単に&#x200B;*タッチUI*&#x200B;とも呼ばれる）と呼ばれる新しいユーザーインターフェイスを導入しました。 これは、Adobe Marketing CloudおよびAdobeのユーザインターフェイスの全体的なガイドラインと一致します。 これは、従来のデスクトップ指向インターフェイス（*クラシックUI*）を備えたAEMの標準UIになりました。
+バージョン6.0以降、Adobe Experience Manager(AEM)では、*タッチ操作対応UI*（単に&#x200B;*タッチUI*&#x200B;とも呼ばれる）と呼ばれる新しいユーザーインターフェイスが導入されました。 これは、Adobe Marketing Cloudおよび全体的なAdobeユーザーインターフェイスのガイドラインに従います。 これは、従来のデスクトップ指向のインターフェイス（*クラシックUI*&#x200B;と呼ばれる）を備えたAEMの標準UIになりました。
 
-クラシックUIを使用してAEMを使用している場合は、インスタンスを移行するための対策を講じる必要があります。 このページは、個々のリソースへのリンクを提供することで、スプリングボードとしての役割を果たすことを目的としています。
+クラシックUIでAEMを使用している場合は、インスタンスを移行するための対策を講じる必要があります。 このページは、個々のリソースへのリンクを提供することで、スプリングボードとして機能することを目的としています。
 
 >[!NOTE]
 >
@@ -31,7 +30,7 @@ ht-degree: 14%
 
 ## 基本知識 {#the-basics}
 
-移行時には、クラシックUIとタッチUIの（主に）次の点に注意する必要があります。
+移行時には、クラシックUIとタッチUIの（主な）違いを次に示します。
 
 <table>
  <tbody>
@@ -40,8 +39,8 @@ ht-degree: 14%
    <td>タッチ操作対応 UI</td>
   </tr>
   <tr>
-   <td>JCRリポジトリでは、ノードの構造として記述されます。 UIの要素を表すすべてのノードを<em>ExtJSウィジェット</em>と呼び、<code>ExtJS</code>によってクライアント側にレンダリングします。</td>
-   <td>JCRリポジトリでもノードの構造として説明されます。 ただし、この場合、すべてのノードはレンダリングを担当するSlingリソースタイプ（Slingコンポーネント）を参照します。 したがって、UIは（基本的に）サーバ側でレンダリングされます。</td>
+   <td>ノードの構造としてJCRリポジトリに記述されます。 UIの要素を表すすべてのノードは、<em>ExtJSウィジェット</em>と呼ばれ、<code>ExtJS</code>によってクライアント側にレンダリングされます。</td>
+   <td>JCRリポジトリでもノードの構造として説明されています。 ただし、この場合、すべてのノードは、レンダリングを担当するSlingリソースタイプ（Slingコンポーネント）を参照します。 したがって、UIは（基本的に）サーバーサイドでレンダリングされます。</td>
   </tr>
   <tr>
    <td><p><code>sling:resourceType</code></p>
@@ -69,63 +68,63 @@ ht-degree: 14%
   <tr>
    <td><p>JavaScriptの場所：</p>
     <ul>
-     <li>命令部はリスナーを使用して直接埋め込まれるか、clientlibで管理されます。</li>
+     <li>必須部分は、リスナーを使用して直接埋め込むか、clientlibで管理します。</li>
     </ul> </td>
    <td><p>JavaScriptの場所：</p>
     <ul>
-     <li>命令部はダイアログ定義に埋め込むことはできません。責任の分離。</li>
+     <li>必須部分は、ダイアログ定義に埋め込むことはできません。責任の分離。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td><p>イベント処理：</p>
+   <td><p>イベントの処理：</p>
     <ul>
      <li>ダイアログウィジェットはJavaScriptコードを直接参照します。</li>
     </ul> </td>
-   <td><p>イベント処理：</p>
+   <td><p>イベントの処理：</p>
     <ul>
-     <li>JavaScriptはダイアログのイベントを監視します。</li>
+     <li>JavaScriptがダイアログイベントを観察します。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>クライアントが実行したレンダリング：
+   <td>クライアントによるレンダリング：
     <ul>
      <li>クライアントはUIコンポーネントを動的に作成します。</li>
-     <li>クライアントは、（JSONとして）コンポーネント定義をサーバーから要求（プル）します。</li>
+     <li>クライアントは、（JSONとして）サーバーからコンポーネント定義を要求（プル）します。</li>
     </ul> </td>
-   <td>サーバーが実行したレンダリング：
+   <td>サーバーによるレンダリング：
     <ul>
-     <li>クライアントは、関連するUIと共にページをリクエストします。</li>
-     <li>サーバーはUIをHTMLドキュメントとして送信（プッシュ）します。Coral UIコンポーネントを使用しています。<br /> </li>
+     <li>クライアントは、関連するUIと共にページを要求します。</li>
+     <li>サーバーは、UIをHTMLドキュメントとして送信（プッシュ）します。Coral UIコンポーネントを使用します。<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-つまり、UIの一部をクラシックUIからタッチUIに移行するとは、*ExtJSウィジェット*&#x200B;を&#x200B;*Slingコンポーネント*&#x200B;に移行することです。 これを容易にするために、タッチUIはGranite UIフレームワークに基づいています。このフレームワークは、既にUI用のSlingコンポーネント（Granite UIコンポーネントと呼ばれます）を提供しています。
+つまり、UIのセクションをクラシックUIからタッチUIに移行すると、*ExtJSウィジェット*&#x200B;を&#x200B;*Slingコンポーネント*&#x200B;に移行することになります。 これを容易にするために、タッチUIは、Granite UIフレームワークに基づいており、既にUI用のSlingコンポーネント（Granite UIコンポーネント）が提供されています。
 
-開始する前に、ステータスと関連する推奨事項を確認します。
+開始する前に、ステータスと関連するレコメンデーションを確認します。
 
 * [タッチ操作対応UI機能のステータス](/help/release-notes/touch-ui-features-status.md)
 * [顧客向けのユーザーインターフェイスの推奨事項](/help/sites-deploying/ui-recommendations.md)
 
-タッチ操作対応UI開発の基本は、堅実な基盤を提供します。
+タッチUIの開発の基本は、次のように明確な基盤を提供します。
 
 * [AEM タッチ操作対応 UI の概念](/help/sites-developing/touch-ui-concepts.md)
 * [AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)
 
 ## ページオーサリングの移行{#migrating-page-authoring}
 
-コンポーネントの移行時の主な要因は、ダイアログです。
+コンポーネントを移行する際の主な要因は、ダイアログです。
 
-* [AEMコンポーネントの開発](/help/sites-developing/developing-components.md) （タッチ操作対応UI）
+* [AEMコンポーネントの開発](/help/sites-developing/developing-components.md) （タッチ操作対応UIを使用）
 * [クラシックコンポーネントからの移行](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [AEM最新化ツール](/help/sites-developing/modernization-tools.md)  — クラシックUIコンポーネントのダイアログをタッチ操作対応UIに変換するのに役立ちます。
+* [AEM Modernization Tools](/help/sites-developing/modernization-tools.md)  — クラシックUIコンポーネントのダイアログをタッチUIに変換するのに役立ちます。
 
-   * タッチUIには、「タッチUIラッパー」内でクラシックUIダイアログを開く互換性レイヤーがありますが、機能には制限があり、長期的にはお勧めしません。
+   * タッチUIには、「タッチUIラッパー」内でクラシックUIダイアログを開くための互換性レイヤーがありますが、機能は限られているので、長期的にはお勧めしません。
 
-* [タッチ操作対応UIでのダイアログフィールドのカスタマイズ](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
+* [タッチUIのダイアログフィールドのカスタマイズ](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [新しい Granite UI フィールドコンポーネントの作成](/help/sites-developing/granite-ui-component.md)
-* [ページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md) （タッチ操作対応UI）
+* [ページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md) （タッチ操作対応UIを使用）
 
 ## コンソールの移行{#migrating-consoles}
 
@@ -135,9 +134,9 @@ ht-degree: 14%
 
 ## 関連する考慮事項{#related-considerations}
 
-タッチ操作対応UIへの移行とは直接の関係はありませんが、同時に検討する価値のある関連する問題があります。これらの問題も推奨される方法です。
+タッチUIへの移行とは直接関連していませんが、同時に検討する価値のある関連する問題もあります。これらも推奨される方法です。
 
-* [テンプレート](/help/sites-developing/templates.md) - [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
+* [テンプレート](/help/sites-developing/templates.md)  — 編集可能な [テンプレート](/help/sites-developing/page-templates-editable.md)
 * [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 * [HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
 
@@ -147,16 +146,15 @@ ht-degree: 14%
 
 ## その他のリソース{#further-resources}
 
-AEMの開発に関する詳細は、次のリソースのコレクションを参照してください。
+AEMの開発について詳しくは、以下のリソースのコレクションを参照してください。
 
 * [開発ユーザーガイド](/help/sites-developing/home.md)
 * [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5サイトのTutorialsとビデオ](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
+* [AEM 6.5 SitesのTutorialsとビデオ](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/overview.html)
 * [AEM Sites の開発の手引き - WKND チュートリアル](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]
 >
->AEM Modernization Toolsはコミュニティでの取り組みであり、Adobeによるサポートや警戒は行われていません。
-
+>AEM Modernization Toolsはコミュニティの取り組みであり、Adobeによるサポートや保証はありません。
