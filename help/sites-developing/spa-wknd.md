@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
 discoiquuid: 2dbe18c1-8d79-4685-911b-3c6fe87d7e2c
-translation-type: tm+mt
-source-git-commit: b67693829e1fa16e29b8fb6293e4212ac866130d
+exl-id: 59ada14e-3cb1-4f2c-b866-a2bb130db3fc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 72%
 
 ---
-
 
 # SPA WKND チュートリアル{#spa-wknd-tutorial}
 
@@ -24,10 +23,9 @@ ht-degree: 72%
 
 ## チュートリアル {#tutorials}
 
-AEMで編集可能な、アプリケーションルーティングを介したプロジェクト設定から始まる独自のシングルページアプリケーションの構築のエンドツーエンドの例については、WKND SPAのTutorialsを参照してください。
+AEMを使用した、アプリケーションルーティングを通じたプロジェクト設定から開始して編集可能な独自のシングルページアプリケーションを構築するエンドツーエンドの例については、 WKND SPATutorialsを参照してください。
 
 * [AEM SPA エディターと Angular の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [AEM SPA Editor と React の使用の手引き](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/spa-react-tutorial/overview.html)
 
-ただし、AEM向けの独自のSPAプロジェクトを開始する前に、必ず[AEM](/help/sites-developing/spa-architecture.md)向けSPAの開発ドキュメントも確認してください。
-
+AEM向けの独自のSPAプロジェクトを開始する前に、『 SPA for AEMの開発](/help/sites-developing/spa-architecture.md) 』ドキュメントも必ず確認してください。[
