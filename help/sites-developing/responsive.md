@@ -1,6 +1,6 @@
 ---
-title: Webページ用レスポンシブデザイン
-seo-title: Webページ用レスポンシブデザイン
+title: Webページ用のレスポンシブデザイン
+seo-title: Webページ用のレスポンシブデザイン
 description: レスポンシブデザインを使用すると、同じページを複数のデバイスで、複数の向きで効果的に表示できます
 seo-description: レスポンシブデザインを使用すると、同じページを複数のデバイスで、複数の向きで効果的に表示できます
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
@@ -10,20 +10,19 @@ topic-tags: mobile-web
 content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '5339'
 ht-degree: 63%
 
 ---
 
-
 # Web ページのレスポンシブデザイン{#responsive-design-for-web-pages}
 
 >[!NOTE]
 >
->Adobeでは、単一ページアプリケーションのフレームワークベースのクライアント側レンダリング（_React_&#x200B;など）を必要とするプロジェクトには、SPAエディターを使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアント側レンダリング（_React_&#x200B;など）が必要なプロジェクトではSPA Editorを使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 
 Web ページが表示されるクライアントの表示域に適応するように Web ページをデザインします。レスポンシブデザインを使用すると、同じページを複数のデバイスで、縦、横の両方の向きで効果的に表示できます。次の画像の例は、表示域サイズの変更に対してページがどのように応答するかを示しています。
@@ -46,7 +45,7 @@ Web ページが表示されるクライアントの表示域に適応するよ�
 
 レスポンシブデザインの動作の実装について詳しくは、次のトピックを参照してください。
 
-* [メディアクエリ](/help/sites-developing/responsive.md#using-media-queries)
+* [メディアクエリー](/help/sites-developing/responsive.md#using-media-queries)
 * [可変グリッド](/help/sites-developing/responsive.md#developing-a-fluid-grid)
 * [アダプティブ画像](/help/sites-developing/responsive.md#using-adaptive-images)
 
@@ -68,13 +67,13 @@ Web ページをサポートする AEM アプリケーションを開発する�
 * テンプレート：/apps/*application_name*/templates 以下に存在
 * デザイン：/etc/designs 以下に存在
 
-## メディアクエリの使用{#using-media-queries}
+## メディアクエリ{#using-media-queries}の使用
 
 メディアクエリによって、ページレンダリング用の CSS スタイルを選択的に使用できます。AEM 開発ツールおよび機能を使用すれば、アプリケーションでメディアクエリを効果的かつ効率的に実装できます。
 
 W3C グループが、この CSS3 機能と構文について示した、[メディアクエリ](https://www.w3.org/TR/css3-mediaqueries/)に関する推奨事項を提供しています。
 
-### CSSファイルの作成{#creating-the-css-file}
+### CSSファイル{#creating-the-css-file}の作成
 
 CSS ファイルでは、ターゲットとしているデバイスのプロパティに基づいてメディアクエリを定義します。次の実装方法は、各メディアクエリのスタイルを管理するのに効果的です。
 
@@ -83,7 +82,7 @@ CSS ファイルでは、ターゲットとしているデバイスのプロパ�
 * すべてのデバイスに共通するスタイルを、個別の 1 つの CSS ファイルで定義します。
 * ClientLibraryFolder の css.txt ファイルで、組み立てられた CSS ファイル内で必要とされる順に CSS ファイルを並べます。
 
-We.Retail Media サンプルではこの実装方法を使用して、サイトデザインのスタイルを定義しています。We.Retailで使用されるCSSファイルは`*/apps/weretail/clientlibs/clientlib-site/less/grid.less`にあります。
+We.Retail Media サンプルではこの実装方法を使用して、サイトデザインのスタイルを定義しています。We.Retailで使用されるCSSファイルは、`*/apps/weretail/clientlibs/clientlib-site/less/grid.less`にあります。
 
 次の表に、css 子フォルダー内のファイルを示します。
 
@@ -132,7 +131,7 @@ We.Retail Media サンプルではこの実装方法を使用して、サイト�
  </tbody>
 </table>
 
-`/etc/designs/weretail/clientlibs`フォルダー内のcss.txtファイルは、クライアントライブラリリストーに含まれるCSSファイルをします。 ファイルの記載順序により、スタイルの優先順位が実装されます。スタイルは、デバイスのサイズが小さくなるほど特化されます。
+`/etc/designs/weretail/clientlibs`フォルダー内のcss.txtファイルには、クライアントライブラリフォルダーに含まれるCSSファイルが一覧表示されます。 ファイルの記載順序により、スタイルの優先順位が実装されます。スタイルは、デバイスのサイズが小さくなるほど特化されます。
 
 `#base=css`
 
@@ -149,7 +148,7 @@ responsive-1200px.css
  responsive-480px.css
 ```
 
-**ヒント**:説明的なファイル名を使用すると、対象となるビューポートサイズを簡単に識別できます。
+**ヒント**:説明的なファイル名を使用すると、ターゲットの表示域サイズを簡単に識別できます。
 
 ### AEM ページでのメディアクエリの使用 {#using-media-queries-with-aem-pages}
 
@@ -161,7 +160,7 @@ responsive-1200px.css
 
 >[!NOTE]
 >
->`apps.weretail.all`クライアントライブラリフォルダーには、clientlibsライブラリが埋め込まれています。
+>`apps.weretail.all`クライアントライブラリフォルダーにclientlibsライブラリが埋め込まれます。
 
 この JSP スクリプトにより、スタイルシートを参照する次の HTML コードが生成されます。
 
@@ -172,23 +171,23 @@ responsive-1200px.css
 
 ## 特定のデバイスのプレビュー{#previewing-for-specific-devices}
 
-異なる表示域サイズでページのプレビューを参照して、レスポンシブデザインの動作をテストします。**[!UICONTROL プレビュー]**&#x200B;モードでは、**[!UICONTROL サイドキック]**&#x200B;には、デバイスを選択するために使用する&#x200B;**[!UICONTROL デバイス]**&#x200B;ドロップダウンメニューが含まれています。 デバイスを選択すると、その表示域サイズに合わせてページが変更されます。
+異なる表示域サイズでページのプレビューを参照して、レスポンシブデザインの動作をテストします。**[!UICONTROL プレビュー]**&#x200B;モードでは、**[!UICONTROL サイドキック]**&#x200B;には、デバイスを選択する際に使用する&#x200B;**[!UICONTROL デバイス]**&#x200B;ドロップダウンメニューが含まれます。 デバイスを選択すると、その表示域サイズに合わせてページが変更されます。
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-**[!UICONTROL サイドキック]**&#x200B;でデバイスプレビューを有効にするには、ページと&#x200B;**[!UICONTROL MobileEmulatorProvider]**&#x200B;サービスを設定する必要があります。別のページ設定で、**[!UICONTROL デバイス]**&#x200B;リストに表示されるデバイスのリストを制御します。
+**[!UICONTROL サイドキック]**&#x200B;でデバイスのプレビューを有効にするには、ページと&#x200B;**[!UICONTROL MobileEmulatorProvider]**&#x200B;サービスを設定する必要があります。別のページ設定で、「**[!UICONTROL デバイス]**」リストに表示されるデバイスのリストを制御します。
 
 ### 「デバイス」リストの追加{#adding-the-devices-list}
 
-ページに&#x200B;**[!UICONTROL デバイス]**&#x200B;リストをレンダリングするJSPスクリプトが含まれている場合、**[!UICONTROL デバイス]**&#x200B;リストが&#x200B;**[!UICONTROL サイドキック]**&#x200B;に表示されます。 **[!UICONTROL デバイス]**&#x200B;リストを&#x200B;**[!UICONTROL サイドキック]**&#x200B;に追加するには、ページの`head`セクションに`/libs/wcm/mobile/components/simulator/simulator.jsp`スクリプトを含めます。
+**[!UICONTROL デバイス]**&#x200B;リストをレンダリングするJSPスクリプトがページに含まれている場合、**[!UICONTROL デバイス]**&#x200B;リストが&#x200B;**[!UICONTROL サイドキック]**&#x200B;に表示されます。 **[!UICONTROL デバイス]**&#x200B;リストを&#x200B;**[!UICONTROL サイドキック]**&#x200B;に追加するには、ページの`head`セクションに`/libs/wcm/mobile/components/simulator/simulator.jsp`スクリプトを含めます。
 
 この `head` セクションを定義している JSP で次のコードをインクルードします。
 
 `<cq:include script="/libs/wcm/mobile/components/simulator/simulator.jsp"/>`
 
-例を見るには、`/apps/weretail/components/page/head.jsp`ファイルをCRXDE Liteで開きます。
+例を確認するには、`/apps/weretail/components/page/head.jsp`ファイルをCRXDE Liteで開きます。
 
-### シミュレーション{#registering-page-components-for-simulation}用のページコンポーネントを登録しています
+### シミュレーション用のページコンポーネントの登録{#registering-page-components-for-simulation}
 
 デバイスシミュレーターを有効にしてページで使用できるようにするには、MobileEmulatorProvider ファクトリサービスによってページコンポーネントを登録して `mobile.resourceTypes` プロパティを定義します。
 
@@ -199,7 +198,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 * 親フォルダー：`/apps/application_name/config`
 * 名前：`com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-   - `*alias*`サフィックスは必須です。これは、MobileEmulatorProviderサービスがファクトリサービスであるためです。 このファクトリで一意となる任意のエイリアスを使用します。
+   MobileEmulatorProviderサービスはファクトリサービスなので、 - `*alias*`サフィックスが必要です。 このファクトリで一意となる任意のエイリアスを使用します。
 
 * jcr:primaryType: `sling:OsgiConfig`
 
@@ -216,9 +215,9 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
     geometrixx-unlimited/components/pages/issue
    ```
 
-### デバイスグループの指定{#specifying-the-device-groups}
+### デバイスグループ{#specifying-the-device-groups}の指定
 
-Devicesリストーに表示されるデバイスグループを指定するには、サイトのルートページの`jcr:content`ノードに`cq:deviceGroups`プロパティを追加します。 プロパティの値は、デバイスグループノードへのパスの配列です。
+「デバイス」リストに表示されるデバイスグループを指定するには、サイトのルートページの`cq:deviceGroups`ノードに`jcr:content`プロパティを追加します。 プロパティの値は、デバイスグループノードへのパスの配列です。
 
 デバイスグループノードは`/etc/mobile/groups`フォルダーにあります。
 
@@ -251,17 +250,17 @@ Devicesリストーに表示されるデバイスグループを指定するに�
 
 ### JavaScript {#evaluating-media-queries-using-javascript}を使用したメディアクエリの評価
 
-W3Cで定義される[MediaQueryListインターフェイス](https://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)の実装により、javascriptを使用してメディアクエリを評価できます。メディアクエリの結果にロジックを適用し、現在のウィンドウを対象としたスクリプトを実行できます。
+W3Cが定義する[MediaQueryListインターフェイス](https://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
 
-* MediaQueryListインターフェイスを実装するブラウザーは`window.matchMedia()`関数をサポートしています。 この関数は、指定した文字列に対してメディアクエリをテストします。 この関数は、クエリ結果へのアクセスを提供する`MediaQueryList`オブジェクトを返します。
+* MediaQueryListインターフェイスを実装するブラウザーは、 `window.matchMedia()`関数をサポートしています。 この関数は、指定された文字列に対してメディアクエリをテストします。 この関数は、クエリ結果へのアクセスを提供する`MediaQueryList`オブジェクトを返します。
 
-* インターフェイスを実装しないブラウザーでは、[matchMedia.js](https://github.com/paulirish/matchMedia.js)などの`matchMedia()`ポリフィルを使用できます。これは、無料で利用可能なjavascriptライブラリです。
+* インターフェイスを実装していないブラウザーでは、`matchMedia()`ポリフィル（自由に利用できるJavaScriptライブラリである[matchMedia.js](https://github.com/paulirish/matchMedia.js)など）を使用できます。
 
 #### メディア固有のリソースの選択{#selecting-media-specific-resources}
 
 W3C で提言されている [picture 要素](https://picture.responsiveimages.org/)では、メディアクエリーを使用して画像要素用のソースを決定します。picture 要素では、要素の属性を使用してメディアクエリーを画像パスに関連付けます。
 
-自由に利用できる[picturefill.jsライブラリ](https://github.com/scottjehl/picturefill)は、提案された`picture`要素と同様の機能を提供し、同様の戦略を使用します。 picturefill.jsライブラリは、`window.matchMedia`を呼び出して、`div`要素のセットに定義されているメディアクエリを評価します。 各`div`要素はまた、画像ソースも指定します。 このソースは、`div`要素のメディアクエリが`true`を返すときに使用されます。
+自由に利用できる[picturefill.jsライブラリ](https://github.com/scottjehl/picturefill)は、提案された`picture`要素と同様の機能を提供し、同様の方法を使用します。 picturefill.jsライブラリは、 `window.matchMedia`を呼び出して、`div`要素のセットに対して定義されたメディアクエリを評価します。 各`div`要素は、画像ソースも指定します。 ソースは、`div`要素のメディアクエリが`true`を返す場合に使用されます。
 
 `picturefill.js`ライブラリには、次の例のようなHTMLコードが必要です。
 
@@ -274,7 +273,7 @@ W3C で提言されている [picture 要素](https://picture.responsiveimages.o
 </div>
 ```
 
-ページがレンダリングされると、picturefull.jsは`<div data-picture>`要素の最後の子として`img`要素を挿入します。
+ページがレンダリングされると、picturefull.jsは`img`要素を`<div data-picture>`要素の最後の子として挿入します。
 
 ```xml
 <div data-picture>
@@ -288,7 +287,7 @@ W3C で提言されている [picture 要素](https://picture.responsiveimages.o
 
 AEM ページでは、`data-src` 属性の値は、リポジトリ内のリソースへのパスを表します。
 
-### AEMでのアダプティブ画像の実装{#implementing-adaptive-images-in-aem}
+### AEM {#implementing-adaptive-images-in-aem}でのアダプティブ画像の実装
 
 AEM アプリケーションでアダプティブ画像を実装するには、必要な JavaScript ライブラリを追加し、ページに必要な HTML マークアップを含める必要があります。
 
@@ -296,16 +295,16 @@ AEM アプリケーションでアダプティブ画像を実装するには、�
 
 次の JavaScript ライブラリを取得し、クライアントライブラリフォルダーに格納します。
 
-* [matchMedia.js](https://github.com/paulirish/matchMedia.js) （MediaQueryListインターフェイスを実装していないブラウザ用）
+* [matchMedia.js](https://github.com/paulirish/matchMedia.js) （MediaQueryListインターフェイスを実装していないブラウザー用）
 * [picturefill.js](https://github.com/scottjehl/picturefill)
-* jquery.js(`/etc/clientlibs/granite/jquery`クライアントライブラリフォルダー(カテゴリ= jquery)経由で使用可能)
+* jquery.js (`/etc/clientlibs/granite/jquery`クライアントライブラリフォルダー(category = jquery)を通じて使用可能)
 * [jquery.debouncedresize.js](https://github.com/louisremi/jquery-smartresize)（ウィンドウのサイズ変更後に一度発生する jquery イベント）
 
-**ヒント：** 埋め込むことで、複数のクライアントライブラリフォルダーを自動的に連結でき [ます](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries)。
+**ヒント：** 複数のクライアントライブラリフォルダーは、 [を埋め込むことで自動的に連](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries)結できます。
 
 **HTML**
 
-picturefill.jsコードで必要となるdiv要素を生成するコンポーネントを作成します。AEMページでは、data-src属性の値は、リポジトリ内のリソースへのパスです。例えば、ページコンポーネントは、メディアクエリと、DAM内の画像レンディションに関連付けられたパスをハードコード化できます。または、作成者が画像レンディションを選択したり、ランタイムレンダリングオプションを指定したりできるカスタム画像コンポーネントを作成します。
+picturefill.jsコードが想定する必要なdiv要素を生成するコンポーネントを作成します。AEMページでは、 data-src属性の値は、リポジトリ内のリソースへのパスです。例えば、ページコンポーネントは、DAM内の画像レンディション用のメディアクエリと関連するパスをハードコード化できます。または、作成者が画像レンディションを選択したり、ランタイムレンダリングオプションを指定したりできるカスタムの画像コンポーネントを作成します。
 
 次の HTML の例では、同じ画像の 2 つの DAM レンディションから選択されます。
 
@@ -331,7 +330,7 @@ picturefill.jsコードで必要となるdiv要素を生成するコンポーネ
 
 ### AEM {#understanding-image-rendering-in-aem}での画像レンダリングについて
 
-画像レンダリングをカスタマイズするには、静的画像レンダリングの AEM デフォルト実装を理解する必要があります。AEM は画像コンポーネントと画像レンダリングサーブレットを提供しており、これらが連携して Web ページ用の画像をレンダリングします。イベントコンポーネントがページの段落システムに含まれると、次の一連の画像が発生します。
+画像レンダリングをカスタマイズするには、静的画像レンダリングの AEM デフォルト実装を理解する必要があります。AEM は画像コンポーネントと画像レンダリングサーブレットを提供しており、これらが連携して Web ページ用の画像をレンダリングします。画像コンポーネントがページの段落システムに含まれると、次の一連のイベントが発生します。
 
 1. オーサリング：作成者は画像コンポーネントを編集し、HTML ページに含める画像ファイルを指定します。このファイルパスが、その画像コンポーネントノードのプロパティ値として格納されます。
 1. ページの要求：ページコンポーネントの JSP により HTML コードが生成されます。画像コンポーネントの JSP により img 要素が生成され、この要素がページに追加されます。
@@ -346,17 +345,17 @@ picturefill.jsコードで必要となるdiv要素を生成するコンポーネ
 
 ブラウザーがページを読み込むときに、src 属性の値を URL として使用して画像を要求します。Sling によりこの URL が次のように分解されます。
 
-* Resource: `/content/mywebsite/en/_jcr_content/par/image_0`
+* リソース: `/content/mywebsite/en/_jcr_content/par/image_0`
 * ファイル名拡張子：`.jpg`
 * セレクター: `img`
 * サフィックス: `1358372073597.jpg`
 
-`image_0`ノードの`jcr:resourceType`値は`foundation/components/image`で、`sling:resourceSuperType`値は`foundation/components/parbase`です。 このパーベスコンポーネントには、セレクターと要求URLのファイル名拡張子に一致するimg.GET.javaスクリプトが含まれています。 CQは、このスクリプト（サーブレット）を使用してイメージをレンダリングします。
+`image_0`ノードの`jcr:resourceType`値は`foundation/components/image`で、`sling:resourceSuperType`値は`foundation/components/parbase`です。 parbaseコンポーネントには、セレクターと要求URLのファイル名拡張子に一致するimg.data.javaスクリプトが含まれます。 CQは、このスクリプト（サーブレット）を使用して画像をレンダリングします。
 
-スクリプトのソースコードを確認するには、CRXDE Liteを使用して`/libs/foundation/components/parbase/img.GET.java`を開きます
+スクリプトのソースコードを確認するには、CRXDE Liteを使用して`/libs/foundation/components/parbase/img.GET.java`
 ファイル。
 
-## 現在のビューポートサイズに対するイメージのスケール{#scaling-images-for-the-current-viewport-size}
+## 現在のビューポートサイズ{#scaling-images-for-the-current-viewport-size}に対するイメージのスケーリング
 
 クライアントの表示域の特性に合わせて画像を実行時に拡大縮小し、レスポンシブデザインの原則に従った画像を配信します。静的画像レンダリングと同じ、サーブレットとオーサリングコンポーネントによるデザインパターンを使用します。
 
@@ -367,7 +366,7 @@ picturefill.jsコードで必要となるdiv要素を生成するコンポーネ
 
 >[!NOTE]
 >
->Webクライアントは、matchMediaおよびPicturefillのJavaScriptライブラリ（または類似のライブラリ）を使用して、メディアセレクターを評価します。
+>Webクライアントは、 matchMediaおよびPicturefill JavaScriptライブラリ（または類似のライブラリ）を使用して、メディアセレクターを評価します。
 
 
 画像要求を処理するサーブレットは、次のタスクを実行する必要があります。
@@ -382,15 +381,15 @@ AEM により、ユーザーが利用または拡張できる次の実装がイ�
 * メディアクエリを生成するアダプティブ画像基盤コンポーネント、および画像の拡大縮小をおこなう Adaptive Image Component Servlet への HTTP 要求
 * Geometrixx Commons パッケージによりインストールされる、画像の解像度を変更するための Image Reference Modification Servlet サンプルサーブレット
 
-### アダプティブイメージコンポーネントについて{#understanding-the-adaptive-image-component}
+### アダプティブ画像コンポーネント{#understanding-the-adaptive-image-component}について
 
-アダプティブイメージコンポーネントは、デバイス画面に従ってサイズ設定されたイメージをレンダリングするためのAdaptive Image Componentサーブレットへの呼び出しを生成します。 このコンポーネントには次のリソースが含まれています。
+アダプティブ画像コンポーネントは、デバイス画面に従ってサイズが設定された画像をレンダリングするための呼び出しをAdaptive Image Component Servletに生成します。 このコンポーネントには次のリソースが含まれています。
 
 * JSP：メディアクエリと Adaptive Image Component Servlet への呼び出しを関連付ける div 要素を追加します。
-* クライアントライブラリ：clientlibsフォルダーは、matchMedia polyfill javascriptライブラリと変更されたPicturefill javascriptライブラリをアセンブリする`cq:ClientLibraryFolder`です。
-* 編集ダイアログボックス：`cq:editConfig`ノードは、CQ foundation imageコンポーネントを上書きするので、ドロップターゲットは、foundation imageコンポーネントではなく、アダプティブ画像コンポーネントを作成します。
+* クライアントライブラリ：clientlibsフォルダーは、 matchMedia polyfill JavaScriptライブラリと変更されたPicturefill JavaScriptライブラリをアセンブリする`cq:ClientLibraryFolder`です。
+* 編集ダイアログボックス：`cq:editConfig`ノードは、CQ基盤画像コンポーネントを上書きし、ドロップターゲットが基盤画像コンポーネントではなくアダプティブ画像コンポーネントを作成するようにします。
 
-#### DIV要素の追加{#adding-the-div-elements}
+#### DIV要素{#adding-the-div-elements}の追加
 
 adaptive-image.jsp スクリプトには div 要素とメディアクエリを生成する次のコードが含まれています。
 
@@ -414,7 +413,7 @@ adaptive-image.jsp スクリプトには div 要素とメディアクエリを�
 
 `<div data-scr = "*path-to-parent-node*.adaptive-image.adapt.*width*.*quality*.jpg" data-media="*media query*"></div>`
 
-`data-scr`属性の値は、Slingが画像をレンダリングするアダプティブ画像コンポーネントサーブレットに解決されるURLです。 data-media属性には、クライアントのプロパティに対して評価されるメディアクエリが含まれます。
+`data-scr`属性の値は、Slingが画像をレンダリングするAdaptive Image Component Servletに解決されるURLです。 data-media属性には、クライアントプロパティに対して評価されるメディアクエリが含まれます。
 
 次の HTML コードは、JSP によって生成される `div` 要素の例です。
 
@@ -435,7 +434,7 @@ adaptive-image.jsp スクリプトには div 要素とメディアクエリを�
 
 Adaptive Component Servlet は、指定された幅に応じて JPEG 画像のサイズを変更し、JPEG 画質を設定します。
 
-#### Adaptive Image Component Servlet {#the-interface-of-the-adaptive-image-component-servlet}のインターフェイス
+#### アダプティブ画像コンポーネントサーブレット{#the-interface-of-the-adaptive-image-component-servlet}のインターフェイス
 
 Adaptive Image Component Servlet は、デフォルトの Sling サーブレットにバインドされ、.jpg、.jpeg、.gif および .png ファイル拡張子をサポートします。このサーブレットのセレクターは img です。
 
@@ -447,7 +446,7 @@ Adaptive Image Component Servlet は、デフォルトの Sling サーブレッ�
 
 `*path-to-node*.img.*extension*`
 
-例えば、Slingは、URL `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg`を持つHTTPリクエストをアダプティブ画像コンポーネントサーブレットに転送します。
+例えば、Slingは、URL `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg`を持つHTTP要求をアダプティブ画像コンポーネントサーブレットに転送します。
 
 2 つの追加セレクターにより、要求される画像の幅と JPEG 画質を指定します。次の例では、幅 480 ピクセルで中程度の画質の画像を要求します。
 
@@ -492,7 +491,7 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
    <td>com.day.cq.wcm.foundation.impl. AdaptiveImageComponentServlet</td>
   </tr>
   <tr>
-   <th>Property</th>
+   <th>プロパティ</th>
    <td><p>サポートされる幅</p>
     <ul>
      <li>サポートされる幅を追加するには、+ ボタンをクリックし、正の整数を入力します。</li>
@@ -509,7 +508,7 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
 
 #### 実装の詳細  {#implementation-details}
 
-`com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet`クラスは、[AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html)クラスを拡張します。 AdaptiveImageComponentServletソースコードは`/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl`フォルダーにあります。
+`com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet`クラスは、[AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html)クラスを拡張します。 AdaptiveImageComponentServletのソースコードは`/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl`フォルダーにあります。
 
 このクラスは、Felix SCR アノテーションを使用して、サーブレットが関連付けられるリソースタイプとファイル拡張子および 1 つ目のセレクターの名前を設定します。
 
@@ -542,15 +541,15 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
             description = "List of widths this component is permitted to generate.")
 ```
 
-`AbstractImageServlet`クラスは、HTTP要求を処理する`doGet`メソッドを提供します。 このメソッドは、リクエストに関連付けられているリソースを決定し、リポジトリからリソースプロパティを取得して、[ImageContext](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html)オブジェクトに返します。
+`AbstractImageServlet`クラスは、HTTP要求を処理する`doGet`メソッドを提供します。 このメソッドは、リクエストに関連付けられているリソースを決定し、リポジトリからリソースプロパティを取得し、[ImageContext](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html)オブジェクトで返します。
 
 >[!NOTE]
 >
->[com.day.cq.commons.DownloadResource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/DownloadResource.html)クラスは`getFileReference method`を提供します。このクラスは、リソースの`fileReference`プロパティの値を取得します。
+>[com.day.cq.commons.DownloadResource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/DownloadResource.html)クラスに`getFileReference method`が指定され、リソースの`fileReference`プロパティの値を取得します。
 
-`AdaptiveImageComponentServlet`クラスは、`createLayer`メソッドをオーバーライドします。 このメソッドは、`ImageContext`オブジェクトからイメージリソースのパスと要求されたイメージ幅を取得します。 次に、`info.geometrixx.commons.impl.AdaptiveImageHelper`クラスのメソッドを呼び出し、実際の画像の拡大/縮小を実行します。
+`AdaptiveImageComponentServlet`クラスは、`createLayer`メソッドを上書きします。 このメソッドは、`ImageContext`オブジェクトからイメージリソースのパスと要求されたイメージ幅を取得する。 次に、 `info.geometrixx.commons.impl.AdaptiveImageHelper`クラスのメソッドを呼び出し、実際の画像の拡大/縮小を実行します。
 
-また、AdaptiveImageComponentServletクラスは、writeLayerメソッドをオーバーライドします。この方法では、画像にJPEG画質を適用します。
+また、 AdaptiveImageComponentServletクラスはwriteLayerメソッドをオーバーライドします。この方法は、画像にJPEG画質を適用します。
 
 ### 画像参照変更サーブレット(Geometrixx共通) {#image-reference-modification-servlet-geometrixx-common}
 
@@ -558,11 +557,11 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
 
 #### サーブレットの呼び出し  {#calling-the-servlet}
 
-このサーブレットは `cq:page` リソースにバインドされ、.jpg ファイル拡張子をサポートしています。サーブレットセレクタは`image`です。 そのため、Sling は次の形式の HTTP 要求 URL をこのサーブレットへと解決します。
+このサーブレットは `cq:page` リソースにバインドされ、.jpg ファイル拡張子をサポートしています。サーブレットセレクターは`image`です。 そのため、Sling は次の形式の HTTP 要求 URL をこのサーブレットへと解決します。
 
 `path-to-page-node.image.jpg`
 
-例えば、SlingはURL `http://localhost:4502/content/geometrixx/en.image.jpg`を持つHTTP要求を画像参照変更サーブレットに転送します。
+例えば、Slingは、URL `http://localhost:4502/content/geometrixx/en.image.jpg`を持つHTTP要求をImage Reference Modification Servletに転送します。
 
 3 つの追加セレクターにより、要求される画像の幅、高さおよび画質（オプション）を指定します。次の例では、幅 770 ピクセル、高さ 360 ピクセルで中程度の画質の画像を要求します。
 
@@ -606,7 +605,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 * 画像のパスは、`fileReference` というプロパティの値として格納します。
 
-ページを作成する場合は、**サイドキック**&#x200B;を使用して画像を指定し、`image`ノードをページのプロパティに追加します。
+ページをオーサリングする際に、**サイドキック**&#x200B;を使用して画像を指定し、`image`ノードをページのプロパティに追加します。
 
 1. **サイドキック**&#x200B;で、「**ページ**」タブをクリックし、「**ページのプロパティ**」をクリックします。
 1. 「**画像**」タブをクリックし、画像を指定します。
@@ -614,7 +613,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 #### 実装の詳細 {#implementation-details-1}
 
-info.geometrixx.commons.impl.servlets.ImageReferenceModificationServletクラスは、[AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html)クラスを拡張します。 cq-geometrixx-commons-pkgパッケージをインストールしている場合、ImageReferenceModificationServletソースコードは`/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets`フォルダーにあります。
+info.geometrixx.commons.impl.servlets.ImageReferenceModificationServletクラスは、[AbstractImageServlet](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html)クラスを拡張します。 cq-geometrixx-commons-pkgパッケージがインストールされている場合、ImageReferenceModificationServletのソースコードは`/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets`フォルダーにあります。
 
 このクラスは、Felix SCR アノテーションを使用して、サーブレットが関連付けられるリソースタイプとファイル拡張子および 1 つ目のセレクターの名前を設定します。
 
@@ -654,32 +653,32 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServletクラス
             description = "List of resolutions this component is permitted to generate.")
 ```
 
-`AbstractImageServlet`クラスは、HTTP要求を処理する`doGet`メソッドを提供します。 このメソッドは、呼び出しに関連付けられているリソースを決定し、リポジトリからリソースプロパティを取得して、[ImageContext](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html)オブジェクトに保存します。
+`AbstractImageServlet`クラスは、HTTP要求を処理する`doGet`メソッドを提供します。 このメソッドは、呼び出しに関連付けられるリソースを決定し、リポジトリからリソースプロパティを取得して、[ImageContext](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html)オブジェクトに保存します。
 
-`ImageReferenceModificationServlet`クラスは`createLayer`メソッドをオーバーライドし、レンダリングするイメージリソースを決定するロジックを実装します。 このメソッドは、ページの`jcr:content`ノード(`image`)の子ノードを取得します。 [Image](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/Image.html)オブジェクトがこの`image`ノードから作成され、`getFileReference`メソッドはイメージノードの`fileReference`プロパティからイメージファイルへのパスを返します。
+`ImageReferenceModificationServlet`クラスは、`createLayer`メソッドを上書きし、レンダリングするイメージリソースを決定するロジックを実装します。 このメソッドは、ページの`jcr:content`ノード(`image`)の子ノードを取得します。 この`image`ノードから[Image](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/Image.html)オブジェクトが作成され、`getFileReference`メソッドは画像ノードの`fileReference`プロパティから画像ファイルへのパスを返します。
 
 >[!NOTE]
->[com.day.cq.commons.DownloadResource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/DownloadResource.html)クラスは、getFileReferenceメソッドを提供します。
+>[com.day.cq.commons.DownloadResource](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/DownloadResource.html)クラスはgetFileReferenceメソッドを提供します。
 
 
 ## 流体グリッドの開発{#developing-a-fluid-grid}
 
-AEMを使用すると、流体グリッドを効率的かつ効果的に実装できます。このページでは、流体グリッドまたは既存のグリッド実装([Bootstrap](https://twitter.github.com/bootstrap/)など)をAEMアプリケーションに統合する方法を説明します。
+AEMを使用すると、流体グリッドを効率的かつ効果的に実装できます。このページでは、流体グリッドまたは既存のグリッド実装([Bootstrap](https://twitter.github.com/bootstrap/)など)をAEMアプリケーションに統合する方法について説明します。
 
 可変グリッドについて詳しくない場合は、このページの下部にある[可変グリッドの概要](/help/sites-developing/responsive.md#developing-a-fluid-grid)を参照してください。この概要では、可変グリッドの概要を説明し、その設計方法についてアドバイスしています。
 
-### ページコンポーネントを使用したグリッドの定義{#defining-the-grid-using-a-page-component}
+### ページコンポーネント{#defining-the-grid-using-a-page-component}を使用したグリッドの定義
 
 ページコンポーネントを使用して、ページのコンテンツブロックを定義する HTML 要素を生成します。ページが参照する ClientLibraryFolder には、コンテンツブロックのレイアウトを制御する CSS が含まれています。
 
 * ページコンポーネント：一連のコンテンツブロックを表す div 要素を追加します。コンテンツブロックを表す div 要素には、作成者がコンテンツを追加できる parsys コンポーネントなどがあります。
 * クライアントライブラリフォルダー：div 要素用のメディアクエリとスタイルが含まれる CSS ファイルが格納されます。
 
-例えば、サンプルのgeometrixx-mediaアプリケーションにはmedia-homeコンポーネントが含まれています。 このページコンポーネントは2つのスクリプトを挿入します。このスクリプトは、クラス`row-fluid`の`div`要素を2つ生成します。
+例えば、サンプルのgeometrixx-mediaアプリケーションにはmedia-homeコンポーネントが含まれています。 このページコンポーネントは、2つのスクリプトを挿入し、次のように`row-fluid`クラスの`div`要素を2つ生成します。
 
-* 最初の行には、クラス`span12`の`div`要素が含まれています（コンテンツは12列に及びます）。 `div`要素にはparsysコンポーネントが含まれています。
+* 最初の行には、クラス`span12`の`div`要素が含まれます（コンテンツは12列に及びます）。 `div`要素にはparsysコンポーネントが含まれます。
 
-* 2番目の行には2つの`div`要素が含まれています。1つはクラス`span8`で、もう1つはクラス`span4`です。 それぞれの `div` 要素には parsys コンポーネントが含まれます。
+* 2番目の行には、2つの`div`要素が含まれます。1つはクラス`span8`、もう1つはクラス`span4`です。 それぞれの `div` 要素には parsys コンポーネントが含まれます。
 
 ```xml
 <div class="page-content">
@@ -701,17 +700,17 @@ AEMを使用すると、流体グリッドを効率的かつ効果的に実装�
 
 >[!NOTE]
 >
->コンポーネントにparsysコンポーネントを参照する複数の`cq:include`要素が含まれる場合、各`path`属性は異なる値を持つ必要があります。
+>コンポーネントにparsysコンポーネントを参照する複数の`cq:include`要素が含まれる場合、各`path`属性に異なる値を指定する必要があります。
 
 
 #### ページコンポーネントグリッドの拡大/縮小{#scaling-the-page-component-grid}
 
-geometrixx-mediaページコンポーネント(`/etc/designs/geometrixx-media`)に関連付けられているデザインには、`clientlibs` ClientLibraryFolderが含まれています。 このClientLibraryFolderは、`row-fluid`クラス、`span*`クラス、`row-fluid`クラスの子である`span*`クラスのCSSスタイルを定義します。 メディアクエリを使用すると、ビューポートサイズごとにスタイルを再定義できます。
+geometrixx-mediaページコンポーネント(`/etc/designs/geometrixx-media`)に関連付けられているデザインには、 `clientlibs` ClientLibraryFolderが含まれます。 このClientLibraryFolderは、`row-fluid`クラス、`span*`クラス、`row-fluid`クラスの子である`span*`クラスのCSSスタイルを定義します。 メディアクエリを使用すると、異なる表示域サイズに対してスタイルを再定義できます。
 
-次の例のCSSは、これらのスタイルのサブセットです。 このサブセットは、`span12`、`span8`、`span4`の各クラスと、2つのビューポートサイズ用のメディアクエリに焦点を当てています。 CSSの次の特性に注意してください。
+次のCSSの例は、これらのスタイルのサブセットです。 このサブセットでは、`span12`、`span8`、`span4`の各クラスと、2つの表示域サイズに対するメディアクエリに焦点を当てます。 CSSの次の特性に注意してください。
 
-* `.span`スタイルは、絶対値を使用して要素の幅を定義します。
-* `.row-fluid .span*`スタイルは、親の中心として要素の幅を定義します。 パーセンテージは、幅の絶対数から計算します。
+* `.span`スタイルは、絶対数を使用して要素の幅を定義します。
+* `.row-fluid .span*`スタイルは、要素の幅を親を基準としたパーセンテージとして定義します。 パーセンテージは、幅の絶対数から計算します。
 * 大きい表示域のメディアクエリでは、大きい幅の絶対数が割り当てられます。
 
 >[!NOTE]
@@ -746,7 +745,7 @@ geometrixx-mediaページコンポーネント(`/etc/designs/geometrixx-media`)�
 }
 ```
 
-#### ページコンポーネントグリッド内のコンテンツの位置変更{#repositioning-content-in-the-page-component-grid}
+#### ページコンポーネントグリッド内のコンテンツの再配置{#repositioning-content-in-the-page-component-grid}
 
 Geometrixx Media サンプルアプリケーションのページでは、幅の広い表示域の場合に、コンテンツブロックの行が水平方向に広げられます。小さい表示域では、同じブロックが垂直方向に広げられます。次の CSS の例は、media-home ページコンポーネントが生成する HTML コードに対してこの動作を実装するスタイルを示しています。
 
@@ -769,13 +768,13 @@ Geometrixx Media サンプルアプリケーションのページでは、幅の
 }
 ```
 
-#### ページコンポーネントをモジュール化{#tip-modularize-your-page-components}
+#### ページコンポーネント{#tip-modularize-your-page-components}をモジュール化します。
 
 コンポーネントをモジュール化すると、コードを効率的に使用できます。サイトでは、ようこそページ、記事ページ、製品ページなどの様々なタイプのページを使用します。それぞれのタイプのページには、様々なタイプのコンテンツが含まれ、おそらく様々なレイアウトが使用されます。ただし、各レイアウトの特定の要素が複数のページで共通している場合、そのレイアウト部を実装するコードを再利用できます。
 
 **ページコンポーネントのオーバーレイの使用**
 
-ページの様々な部分（例：`head`、`body`セクション、本文内の`header`、`content`、`footer`セクション）を生成するためのスクリプトを提供するメインページコンポーネントを作成します。
+ページの様々な部分（`head`セクションや`body`セクション、本文内の`header`セクション、`content`セクション、`footer`セクションなど）を生成するスクリプトを提供するメインページコンポーネントを作成します。
 
 そのメインページコンポーネントを `cq:resourceSuperType` として使用する他のページコンポーネントを作成します。これらのコンポーネントには、必要に応じてメインページのスクリプトをオーバーライドするスクリプトが含まれます。
 
@@ -783,13 +782,13 @@ Geometrixx Media サンプルアプリケーションのページでは、幅の
 
 **スクリプトの再利用**
 
-複数のページコンポーネントに共通する行と列の組み合わせを生成する、複数の JSP スクリプトを作成します。例えば、記事の`content.jsp`スクリプトとメディアホームコンポーネントは共に`8x4col.jsp`スクリプトを参照します。
+複数のページコンポーネントに共通する行と列の組み合わせを生成する、複数の JSP スクリプトを作成します。例えば、記事の`content.jsp`スクリプトとメディアホームコンポーネントの両方が`8x4col.jsp`スクリプトを参照します。
 
 **ターゲットの表示域サイズによる CSS スタイルの整理**
 
 異なる表示域サイズ用の CSS スタイルとメディアクエリを、それぞれ別のファイルに追加します。クライアントライブラリフォルダーを使用してこれらのファイルを連結します。
 
-### ページグリッドへのコンポーネントの挿入{#inserting-components-into-the-page-grid}
+### ページグリッド{#inserting-components-into-the-page-grid}へのコンポーネントの挿入
 
 コンポーネントが 1 つのコンテンツブロックを生成する場合、一般に、そのページコンポーネントが構築するグリッドがコンテンツの配置を制御します。
 
@@ -804,7 +803,7 @@ Geometrixx Media サンプルアプリケーションのページでは、幅の
 * div 要素を行およびコンテンツブロックとして表現するには、周囲のページコンポーネントと同じクラス名を使用します。
 * ページデザインの CSS で実装している動作をオーバーライドするには、行の div 要素に対して 2 つ目のクラス名を使用し、クライアントライブラリフォルダー内に関連する CSS を格納します。
 
-例えば、`/apps/geometrixx-media/components/2-col-article-summary`コンポーネントは2列のコンテンツを生成します。 このコンポーネントが生成する HTML の構造は次のとおりです。
+例えば、`/apps/geometrixx-media/components/2-col-article-summary`コンポーネントは、2列のコンテンツを生成します。 このコンポーネントが生成する HTML の構造は次のとおりです。
 
 ```xml
 <div class="row-fluid mutli-col-article-summary">
@@ -824,7 +823,7 @@ Geometrixx Media サンプルアプリケーションのページでは、幅の
 * CSS ではページコンポーネントと同じメディアクエリを使用して、レイアウトの変更を、同じ離散したページ幅により確立します。
 * セレクターでは、行の `multi-col-article-summary` 要素の `div` クラスを使用して、ページの `row-fluid` クラスの動作をオーバーライドします。
 
-例えば、`/apps/geometrixx-media/components/2-col-article-summary/clientlibs/css/responsive-480px.css`ファイルには次のスタイルが含まれています。
+例えば、次のスタイルが`/apps/geometrixx-media/components/2-col-article-summary/clientlibs/css/responsive-480px.css`ファイルに含まれているとします。
 
 ```xml
 @media (max-width: 480px) {
@@ -847,7 +846,7 @@ Geometrixx Media サンプルアプリケーションのページでは、幅の
 }
 ```
 
-## 流体グリッドの紹介{#introduction-to-fluid-grids}
+## 可変グリッドの概要{#introduction-to-fluid-grids}
 
 可変グリッドでは、ページレイアウトをクライアントの表示域サイズに合わせて変更できます。グリッドは、ページ上のコンテンツブロックを配置する論理的な列と行で構成されます。
 
@@ -856,28 +855,28 @@ Geometrixx Media サンプルアプリケーションのページでは、幅の
 
 HTML5 テクノロジーを使用すれば、グリッドを実装して、ページレイアウトを異なる表示域サイズに合わせて変更するようにグリッドを操作できます。
 
-* HTML `div`要素には、一定数の列にまたがるコンテンツのブロックが含まれます。
+* HTMLの`div`要素には、特定の数の列にまたがるコンテンツブロックが含まれます。
 * これらのdiv要素の1つ以上が、共通の親divelementを共有する場合に行を構成します。
 
-### 離散的な幅の使用{#using-discrete-widths}
+### 離散幅{#using-discrete-widths}の使用
 
 ターゲットにしている表示域の幅の各範囲について、静的なページ幅と、一定の幅を持つコンテンツブロックを使用します。ブラウザーウィンドウのサイズを手動で変更すると、離散したウィンドウ幅のそれぞれでコンテンツサイズが変更されます（これらの離散した幅はブレークポイントとも呼ばれます）。そのため、ページデザインはより安定し、ユーザーエクスペリエンスが最大化されます。
 
-#### グリッドのスケール{#scaling-the-grid}
+#### グリッド{#scaling-the-grid}のスケール
 
 グリッドを使用してコンテンツブロックを異なる表示域サイズに合わせて拡大縮小します。コンテンツブロックは特定の列数にまたがります。列の幅が異なる表示域サイズに合うように拡大縮小し、それに合わせてコンテンツブロックの幅も拡大縮小します。拡大縮小では、コンテンツブロックを隣り合わせで配置できる十分な幅を持つ大規模から中規模の表示域がサポートされます。
 
 ![](do-not-localize/chlimage_1-1a.png)
 
-#### グリッド内の内容の位置変更{#repositioning-content-in-the-grid}
+#### グリッド内のコンテンツの再配置{#repositioning-content-in-the-grid}
 
 コンテンツブロックのサイズは、幅の最小値による制約を受けます。その幅未満になると、拡大縮小は実行されません。小さい表示域の場合、コンテンツブロックを水平方向ではなく垂直方向に広げるためにグリッドを使用できます。
 
 ![](do-not-localize/chlimage_1-2a.png)
 
-### グリッドの設計{#designing-the-grid}
+### グリッド{#designing-the-grid}の設計
 
-ページ上にコンテンツのブロックを配置する必要がある列と行を決定します。ページレイアウトによって、グリッドにまたがる列数と行数が決まります。
+ページ上にコンテンツブロックを配置する必要がある列と行を決定します。ページレイアウトによって、グリッドにまたがる列数と行数が決まります。
 
 **列数**
 
@@ -890,11 +889,11 @@ HTML5 テクノロジーを使用すれば、グリッドを実装して、ペ�
 * すべてのレイアウトで、水平方向に隣り合うコンテンツブロックは同じ行内に位置します。
 * 水平方向（幅の広い表示域の場合）および垂直方向（小さい表示域の場合）で隣り合うコンテンツブロックは同じ行内に位置します。
 
-### グリッドの実装{#grid-implementations}
+### グリッド実装{#grid-implementations}
 
 ページ上のコンテンツブロックのレイアウトを制御するには、CSS クラスおよびスタイルを作成します。ページデザインは多くの場合、表示域内のコンテンツブロックの相対的なサイズと位置に基づいています。表示域によってコンテンツブロックの実際のサイズが決定します。CSS では、相対サイズと絶対サイズを指定する必要があります。次の 3 つのタイプの CSS クラスを使用して可変グリッドを実装できます。
 
-* すべての行のコンテナである`div`要素のクラス。 このクラスは、グリッドの絶対幅を設定します。
+* すべての行のコンテナである`div`要素のクラス。 このクラスは、グリッドの幅の絶対値を設定します。
 * 行を表す`div`要素のクラス。 このクラスでは、格納するコンテンツブロックの水平方向または垂直方向の位置を制御します。
 * 異なる幅のコンテンツブロックを表す `div` 要素用のクラス。幅は親（行）のパーセンテージとして表します。
 
@@ -931,32 +930,32 @@ CSS には、次の構造を使用した一連のメディアクエリが含ま�
 ページ用の要素のクラスと CSS スタイルを開発するための出発点として、次のアルゴリズムを使用します。
 
 1. すべての行を含む div 要素のクラス名を定義します（例：`content.`）。
-1. `row-fluid`など、行を表すdiv要素に対してCSSクラスを定義します。
-1. コンテンツブロック要素のクラス名を定義します。可能なすべての幅に対して、列の範囲に関してクラスが必要です。 例えば、3列にまたがる`div`要素には`span3`クラスを使用し、4列の範囲には`span4`クラスを使用します。 グリッド内の列数に応じてクラスを定義します。
+1. `row-fluid`など、行を表すdiv要素のCSSクラスを定義します。
+1. コンテンツブロック要素のクラス名を定義します。クラスは、列の範囲に関して、可能なすべての幅に必要です。 例えば、3列にまたがる`div`要素に`span3`クラスを使用し、4列にまたがるには`span4`クラスを使用します。 グリッド内の列と同じ数のクラスを定義します。
 
 1. ターゲットとする表示域サイズごとに、対応するメディアクエリを CSS ファイルに追加します。各メディアクエリに次の項目を追加します。
 
    * `content`クラスのセレクター（例：`.content{}`）。
    * 各spanクラスのセレクター（例：`.span3{ }`）。
    * `row-fluid`クラスのセレクター（例：`.row-fluid{ }`）
-   * 行と流体のクラス内にあるspanクラスのセレクター（例：`.row-fluid span3 { }`）。
+   * row-fluidクラス内にあるspanクラスのセレクター（例：`.row-fluid span3 { }`）。
 
 1. 各セレクターに幅のスタイルを追加します。
 
    1. `content` セレクターの幅を、ページの絶対サイズに設定します（例：`width:480px`）。
    1. すべての row-fluid セレクターの幅を 100％に設定します。
-   1. すべてのスパンセレクターの幅を、コンテンツブロックの絶対幅に設定します。簡単なグリッドでは、同じ幅の均等に分布する列が使用されます。`(absolute width of page)/(number of columns)`.
+   1. すべてのspanセレクターの幅を、コンテンツブロックの幅の絶対値に設定します。単純なグリッドでは、同じ幅の均等に分布した列が使用されます。`(absolute width of page)/(number of columns)`.
    1. `.row-fluid .span`セレクターの幅を、全幅に対する割合で設定します。 `(absolute span width)/(absolute page width)*100`式を使用してこの幅を計算します。
 
 #### 行内のコンテンツブロックの配置 {#positioning-content-blocks-in-rows}
 
-`.row-fluid`クラスのfloatスタイルを使用して、行内のコンテンツブロックを水平または垂直に配置するかどうかを制御します。
+`.row-fluid`クラスのfloatスタイルを使用して、行のコンテンツブロックを水平または垂直に配置するかどうかを制御します。
 
 * `float:left`または`float:right`スタイルは、子要素（コンテンツブロック）を水平方向に分布させます。
 
 * `float:none`スタイルは、子要素を垂直方向に分布させます。
 
-各メディアクエリ追加内の`.row-fluid`セレクターのスタイル。 そのメディアクエリに使用するページレイアウトに従って値を設定します。 例えば、次の図は、幅の広いビューポートではコンテンツを水平に、幅の狭いビューポートでは垂直に分配する行を示しています。
+各メディアクエリ内の`.row-fluid`セレクターにスタイルを追加します。 そのメディアクエリに使用するページレイアウトに従って値を設定します。 例えば、次の図は、幅の広いビューポートではコンテンツを水平方向に、幅の狭いビューポートでは垂直方向に配分する行を示しています。
 
 ![](do-not-localize/chlimage_1-3a.png)
 
@@ -978,7 +977,7 @@ CSS には、次の構造を使用した一連のメディアクエリが含ま�
 }
 ```
 
-#### コンテンツブロックへのクラスの割り当て{#assigning-classes-to-content-blocks}
+#### コンテンツブロック{#assigning-classes-to-content-blocks}へのクラスの割り当て
 
 ターゲットとしているそれぞれの表示域サイズのページレイアウトに対して、各コンテンツブロックがまたがる列数を決定します。次に、それぞれのコンテンツブロックの div 要素で使用するクラスを決定します。
 
