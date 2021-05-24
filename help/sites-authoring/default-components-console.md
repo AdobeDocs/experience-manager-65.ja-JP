@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 97%
 
 ---
-
 
 # コンポーネントコンソール{#components-console}
 
@@ -75,4 +74,3 @@ ht-degree: 97%
    開発者が[コンポーネント用ドキュメント](/help/sites-developing/developing-components.md#documenting-your-component)を提供している場合、「**ドキュメント**」タブに表示されます。利用できるドキュメントがない場合は、「**ドキュメント**」タブは表示されません。
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
-
