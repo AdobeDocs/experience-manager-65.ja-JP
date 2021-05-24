@@ -14,7 +14,7 @@ exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
 source-git-commit: bed7ffd413c7826cf0e419fa1c31e3d3c325d4b1
 workflow-type: tm+mt
 source-wordcount: '1571'
-ht-degree: 80%
+ht-degree: 91%
 
 ---
 
@@ -26,14 +26,14 @@ ht-degree: 80%
 * 翻訳統合フレームワーク設定を作成します。
 * クラウド設定をページに関連付けます。
 
-AEMのコンテンツ翻訳機能の概要については、[多言語サイト用のコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
+AEM のコンテンツ翻訳機能の概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
 ## 翻訳サービスプロバイダーへの接続 {#connecting-to-a-translation-service-provider}
 
-AEM を翻訳サービスプロバイダーに接続するためのクラウド設定を作成します。AEM には、Microsoft Translator にデフォルトで接続する機能が用意されています。 次の翻訳ベンダーは翻訳プロジェクト用の新しい API の実装を提供します。統合の詳細を参照するためのリンク：
+AEM を翻訳サービスプロバイダーに接続するためのクラウド設定を作成します。AEM には、Microsoft Translator にデフォルトで接続する機能が用意されています。 次の翻訳ベンダーは翻訳プロジェクト用の新しい API の実装を提供します。統合に関する詳細情報へのリンク：
 
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe交換プレミアパートナー)
-* [Clayタブレットテクノロジ](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
+* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)（Adobe Exchange プレミアパートナー）
+* [Clay Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Cloudwords](https://exchange.adobe.com/experiencecloud.details.90019.html)
@@ -68,21 +68,21 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 
 翻訳統合フレームワーク設定を作成して、コンテンツの翻訳方法を指定します。この設定には以下の情報が含まれます。
 
-* 使用する翻訳サービスプロバイダー
-* 人間による翻訳と機械翻訳のどちらを実行するか
-* ページまたはアセットに関連付けられている他のコンテンツ（タグなど）を翻訳するかどうか
+* 使用する翻訳サービスプロバイダー.
+* 人間による翻訳と機械翻訳のどちらを実行するか.
+* ページまたはアセットに関連付けられている他のコンテンツ（タグなど）を翻訳するかどうか.
 
 フレームワーク設定を作成したら、その設定に従って、翻訳するページにクラウド設定を関連付けます。翻訳プロセスが開始すると、関連付けられているフレームワーク設定に従って翻訳ワークフローが進行します。
 
 Web サイトのセクションごとに翻訳要件が異なる場合は、それに応じて複数のフレームワーク設定を作成します。例えば、多言語の Web サイトに英語、スペイン語、日本語の言語コピーが含まれているとします。サイトの所有者は、スペイン語と日本語の翻訳のために 2 つの異なる翻訳サービスプロバイダーを使用します。そのため、フレームワークの設定が 2 つ指定されます。使用する翻訳サービスプロバイダーは設定ごとに異なります。
 
-翻訳統合フレームワークを設定したら、それを使用するページ](/help/sites-administering/tc-prep.md)に[関連付けることができます。
+翻訳統合フレームワークの設定が完了したら、[その設定を使用するページに関連付ける](/help/sites-administering/tc-prep.md)ことができます。
 
 **注意：** AEM のコンテンツ翻訳機能の概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
 フレームワークの単一の設定によって、ページのコンテンツ、コミュニティのコンテンツおよびアセットの翻訳方法が制御されます。![chlimage_1-386](assets/translation-config-65.jpg)
 
-### 「サイト」の設定プロパティ{#sites-configuration-properties}
+### 「Sites」の設定プロパティ {#sites-configuration-properties}
 
 「サイト」のプロパティは、ページのコンテンツの翻訳を実行する方法を制御します。
 
@@ -107,7 +107,7 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
+   <td>（機械翻訳の場合のみ）翻訳するコンテンツを示すカテゴリです。カテゴリは、コンテンツを翻訳する際の用語や言葉遣いの選択を左右します。</td>
   </tr>
   <tr>
    <td>タグを翻訳</td>
@@ -136,12 +136,12 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
 | プロパティ | 説明 |
 |---|---|
 | 翻訳プロバイダー | 翻訳を実行する翻訳プロバイダーを選択します。クラウド設定の作成対象となるプロバイダーがリストに表示されます。 |
-| コンテンツのカテゴリ | 変換するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。 |
-| グローバル共有ストアとして使用するロケールを選択 | （オプション）UGCを保存するロケールを選択すると、すべての言語コピーの投稿が1つのグローバル会話で表示されます。規則に従って、Webサイトの[基本言語](/help/communities/sites-console.md#translation)のロケールを選択します。「共通ストアなし」を選択すると、グローバル翻訳が無効になります。デフォルトでは、グローバル翻訳は無効になっています。 |
+| コンテンツのカテゴリ | 翻訳するコンテンツを示すカテゴリです。カテゴリは、コンテンツを翻訳する際の用語や言葉遣いの選択を左右します。 |
+| グローバル共有ストアとして使用するロケールを選択 | （オプション）UGCを保存するロケールを選択すると、すべての言語コピーからの投稿が1つのグローバルな会話に表示されます。慣例により、Webサイトの[ベース言語](/help/communities/sites-console.md#translation)のロケールを選択します。「共通ストアなし」を選択すると、グローバル翻訳が無効になります。デフォルトでは、グローバル翻訳は無効になっています。 |
 
-### 「アセット」の設定プロパティ{#assets-configuration-properties}
+### アセットの設定プロパティ {#assets-configuration-properties}
 
-アセットプロパティは、アセットの設定方法を制御します。アセットの変換について詳しくは、[アセットの言語コピーの作成](/help/assets/translation-projects.md)を参照してください。
+アセットのプロパティは、アセットを設定する方法を制御します。アセットの翻訳について詳しくは、[アセット用の言語コピーの作成](/help/assets/translation-projects.md)を参照してください。
 
 <table>
  <tbody>
@@ -164,7 +164,7 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
   </tr>
   <tr>
    <td>コンテンツのカテゴリ</td>
-   <td>（機械翻訳のみ）翻訳するコンテンツを説明するカテゴリ。カテゴリは、コンテンツを翻訳する際の用語やフレーズの選択に影響を与える場合があります。</td>
+   <td>（機械翻訳の場合のみ）翻訳するコンテンツを示すカテゴリです。カテゴリは、コンテンツを翻訳する際の用語や言葉遣いの選択を左右します。</td>
   </tr>
   <tr>
    <td>アセットを翻訳</td>
@@ -194,7 +194,7 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
 1. 設定の名前を入力して、「作成」をクリックまたはタップします。
 1. 「サイト」、「コミュニティ」および「アセット」の各タブのプロパティを設定して、「OK」をクリックまたはタップします。
 
-## 翻訳するページの設定  {#configuring-pages-for-translation}
+## 翻訳するページの設定 {#configuring-pages-for-translation}
 
 ソースページを他の言語に翻訳するように設定するには、そのページを次のクラウド設定に関連付けます。
 
@@ -203,11 +203,11 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
 
 翻訳統合フレームワークのクラウド設定によって、サービスプロバイダーへの接続に使用するクラウド設定が特定されます。ソースページをフレームワークのクラウド設定に関連付ける場合は、フレームワークのクラウド設定が使用するサービスプロバイダーのクラウド設定にページを関連付ける必要があります。
 
-ページをクラウド設定に関連付ける場合は、そのページの子ページが関連付けを継承します。例えば、/content/geometrixx/en/productsページを翻訳統合フレームワークに関連付けた場合、製品ページとその下のすべてのページがフレームワークに従って翻訳されます。
+ページをクラウド設定に関連付ける場合は、そのページの子ページが関連付けを継承します。例えば、/content/geometrixx/en/productsページを翻訳統合フレームワークに関連付けた場合、製品ページとその下にあるすべてのページがフレームワークに従って翻訳されます。
 
 必要に応じて、子ページの関連付けを上書きできます。例えば、Web サイトのコンテンツがほとんど衣料品に関するものだとします。しかし、ページの 1 つのブランチには企業の説明が記述されています。サイトのルートページは、「衣料品」カテゴリを使用して、機械翻訳を指定する翻訳統合フレームワークに関連付けられます。企業の説明が記述されているブランチでは、「一般」カテゴリを使用して、機械翻訳を実行するフレームワークを使用します。
 
-また、ページ上のコミュニティ[SCFコンポーネント](/help/communities/scf.md)では、ユーザ生成コンテンツ(UGC)にコンテンツの翻訳機能が含まれます。詳しくは、[ユーザー生成コンテンツの変換](/help/communities/translate-ugc.md)を参照してください。
+さらに、ページ上のコミュニティ[SCFコンポーネント](/help/communities/scf.md)に対しては、ユーザー生成コンテンツ(UGC)にコンテンツを翻訳する機能が含まれます。詳しくは、[ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
 
 ### 翻訳プロバイダーへのページの関連付け {#associating-a-page-with-a-translation-provider}
 
@@ -218,7 +218,7 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
 1. 設定を追加／翻訳統合をクリックまたはタップします。
 1. 使用する翻訳プロバイダーを選択して、「完了」をクリックまたはタップします。
 
-### 翻訳統合フレームワークへのページの関連付け  {#associating-pages-with-a-translation-integration-framework}
+### 翻訳統合フレームワークへのページの関連付け {#associating-pages-with-a-translation-integration-framework}
 
 ページおよび子ページの翻訳を実行する方法を定義する翻訳統合フレームワークにページを関連付けます。
 
