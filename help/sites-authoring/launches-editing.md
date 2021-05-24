@@ -11,14 +11,13 @@ topic-tags: site-features
 discoiquuid: 30aa3177-bcf4-4260-8f64-e73bc907942a
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 6f1f4fbaf9ee4b5ab073a27a58cb040c76230ebd
+exl-id: 2d441820-b394-47c8-b4ca-a8aede590937
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '551'
-ht-degree: 93%
+ht-degree: 99%
 
 ---
-
 
 # ローンチの編集{#editing-launches}
 
@@ -31,9 +30,9 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->開始内でページを移動することはできません。 この操作を試みると、次の警告メッセージが表示されます：
+>ローンチ内でページを移動することはできません。この操作を試みると、次の警告メッセージが表示されます：
 >
->* 警告：このページは開始のソースです。 ページの移動は許可されません。
+>* 警告：このページはローンチのソースです。ページの移動は許可されません。
 
 
 ### ライブコピーへのローンチページサブジェクトの編集 {#editing-launch-pages-subject-to-a-live-copy}
@@ -75,7 +74,7 @@ ht-degree: 93%
    * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**編集**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
+   * [「参照」（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**ローンチを編集**」を選択します。
 
@@ -96,7 +95,7 @@ ht-degree: 93%
    * [ローンチコンソール](/help/sites-authoring/launches.md#the-launches-console)：
 
       * 「**プロパティ**」を選択します。
-   * [「参照」（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
+   * [「参照」（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)：使用可能なアクションを表示します。
 
       * 「**プロパティを編集**」を選択します。
 
@@ -108,6 +107,6 @@ ht-degree: 93%
 
 ## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
 
-「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（サイトコンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
+「参照」タブから特定のローンチを選択すると、ステータスが表示されます（[「参照」のローンチ（Sites コンソール）](/help/sites-authoring/launches.md#launches-in-references-sites-console)を参照）。
 
 ![screen-shot_2019-03-05at121901](assets/screen-shot_2019-03-05at121901.png)
