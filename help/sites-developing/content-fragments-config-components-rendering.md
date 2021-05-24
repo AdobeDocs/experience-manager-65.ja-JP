@@ -9,14 +9,13 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 86%
 
 ---
-
 
 # レンダリングコンポーネントのコンテンツフラグメントの設定{#content-fragments-configuring-components-for-rendering}
 
@@ -49,7 +48,7 @@ ht-degree: 86%
 * Dispatcher は、参照されるフラグメントをフラッシュします（フラグメントを含むページが再度公開される場合）。
 * 段落ベースのレンダリングの使用
 
-これらの機能の1つ以上が必要な場合は（通常）、標準搭載された機能を一から開発する代わりに（標準）使用する方が簡単です。
+これらの機能を1つ以上使用する必要がある場合は（通常）、標準搭載の機能を使用する方が、一から開発するよりも簡単です。
 
 ## OSGi サービス - コンテンツフラグメントコンポーネントの設定 {#osgi-service-content-fragment-component-configuration}
 
@@ -59,7 +58,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->詳細は、[OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
+>詳しくは、 [OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
 
 次に例を示します。
 
@@ -97,7 +96,7 @@ OSGi の設定は次のとおりです。
  </tbody>
 </table>
 
-一部の機能（例えば、段落範囲のみをレンダリングする場合など）では、いくつかの規則に従う必要があります。
+一部の機能（段落範囲のみをレンダリングする場合など）では、いくつかの規則に従う必要があります。
 
 <table>
  <tbody>
@@ -148,4 +147,3 @@ dam.cfm.component.fileReferenceProp="fragmentPath"
 dam.cfm.component.elementsProp="elementName"
 dam.cfm.component.variationProp="variationName"
 ```
-
