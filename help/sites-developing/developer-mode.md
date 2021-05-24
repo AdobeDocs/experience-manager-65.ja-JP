@@ -10,14 +10,13 @@ topic-tags: components
 content-type: reference
 discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: ebf3f34af7da6b1a659ac8d8843152b97f30b652
+exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 87%
 
 ---
-
 
 # 開発者モード{#developer-mode}
 
@@ -43,7 +42,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
    >
    >   
    * ウィンドウの幅が 1024 px 未満の場合は使用できません。
->* `administrators`グループのメンバーであるユーザーのみ利用できます。
+>* `administrators`グループのメンバーであるユーザーのみが使用できます。
 
 
 >[!CAUTION]
@@ -52,7 +51,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >必要に応じて、次の環境で使用するように設定できます。
 >
->* nosamplecontent実行モードを使用した作成者インスタンスに対する
+>* nosamplecontent実行モードを使用するオーサーインスタンスで
 >* パブリッシュインスタンス
 
 >
@@ -78,7 +77,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 パネルは、次の 2 つのタブで構成されています。
 
-* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**  — 作成者の [コンテンツツリーと同様のコンポーネントツリー](/help/sites-authoring/author-environment-tools.md#content-tree) を表示します
+* **[コンポーネント](/help/sites-developing/developer-mode.md#components)**  — 作成者向けのコンテンツツリーと同様に、コンポーネントツリ [ーが表](/help/sites-authoring/author-environment-tools.md#content-tree) 示されます
 
 * **[エラー](/help/sites-developing/developer-mode.md#errors)** - 問題が発生すると、各コンポーネントの詳細が表示されます。
 
@@ -127,7 +126,7 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 >[!CAUTION]
 >
->一部のリンクは`/libs`の下のスクリプトを指しています。 ただし、これらは参照用です。変更を加えると失われる可能性があるので、**`/libs`下では**&#x200B;編集しないでください。 このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は`/apps`の下で行う必要があります。[オーバーレイと上書き](/help/sites-developing/overlays.md)を参照してください。
+>一部のリンクは、`/libs`の下のスクリプトを指します。 ただし、これらは参照用です。`/libs`の下にあるものは&#x200B;**編集しないでください。変更を加えると失われる可能性があります。**&#x200B;このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更は`/apps`の下でおこなう必要があります。[オーバーレイとオーバーライド](/help/sites-developing/overlays.md)を参照してください。
 
 ### エラー {#errors}
 
@@ -144,11 +143,10 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 
 エラーが発生すると、「コンポーネント」タブのツリーにあるコンポーネントエントリもインジケーターでマークされます。
 
-### テスト  {#tests}
+### テスト {#tests}
 
 >[!CAUTION]
 >
 >AEM 6.2 では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
 >
 >詳しくは、[UIのテスト](/help/sites-developing/hobbes.md)を参照してください。
-
