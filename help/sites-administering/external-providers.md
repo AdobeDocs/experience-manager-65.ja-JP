@@ -10,20 +10,19 @@ topic-tags: integration
 content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 90c99e527a40bb663d4f32d8746b46cf34a2319f
+exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 79%
 
 ---
 
-
 # Analytics と外部プロバイダー {#analytics-with-external-providers}
 
 Analytics は、Web サイトがどのように使用されているかに関する、重要で興味深い情報を提供できます。
 
-次に示すように、あらかじめ用意されている様々な設定を、適切なサービスとの統合に使用できます。
+次のような、様々な標準設定を、適切なサービスとの統合に使用できます。
 
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
@@ -57,9 +56,9 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->Geometrixx — アウトドアデモサイトは、ページプロパティで指定された属性が、対応する`js`スクリプトのhtmlソースコード（`</html>`endtagのすぐ上）に追加されるように設定されています。
+>Geometrixxアウトドアデモサイトは、ページプロパティで指定した属性が、対応する`js`スクリプトのHTMLソースコード（`</html>`終了タグのすぐ上）に追加されるように設定されます。
 >
->独自の`/apps`がデフォルトのページコンポーネント(`/libs/foundation/components/page`)を継承しない場合は、`cq/cloudserviceconfigs/components/servicescomponents`を含めるか、類似のメカニズムを使用して、（または開発者が）対応する`js`スクリプトが含まれていることを確認する必要があります。
+>独自の`/apps`がデフォルトのページコンポーネント(`/libs/foundation/components/page`)から継承されない場合は、`cq/cloudserviceconfigs/components/servicescomponents`を含めるか、同様のメカニズムを使用して、対応する`js`スクリプトが必ず含まれるようにする必要があります。
 >
 >これをしないと、どのサービス（汎用、Analytics、Target など）も機能しません。
 
@@ -94,7 +93,7 @@ _gaq.push(['_trackPageview']);
    ![](assets/analytics_selectservice.png)
 
 1. 「**OK**」をクリックして保存します。
-1. 「**クラウドサービス**」タブに戻されます。**一般的なAnalyticsスニペット**&#x200B;がメッセージ`Configuration reference missing`と共に一覧表示されます。 ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
+1. 「**クラウドサービス**」タブに戻されます。**汎用分析スニペット**&#x200B;がメッセージ`Configuration reference missing`と共に表示されます。 ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
 
    ![](assets/analytics_selectspecificservice.png)
 
