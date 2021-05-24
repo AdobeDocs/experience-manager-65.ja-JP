@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 71%
 
 ---
-
 
 # Target オファー{#target-offers}
 
@@ -28,7 +27,7 @@ ht-degree: 71%
    ![](do-not-localize/chlimage_1-11.png)
 
 1. 「**新規...**」をクリックします。
-1. **タイトル**、**名前**&#x200B;および作成するエクスペリエンスのタイプを指定できます。この場合、Test&amp;ターゲットオファーが発生します。
+1. **タイトル**、**名前**&#x200B;および作成するエクスペリエンスのタイプを指定できます。この場合、Test&amp;Targetオファーです。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -40,4 +39,4 @@ ht-degree: 71%
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-詳しくは、[Adobeとの統合](/help/sites-administering/target.md) [ターゲット](/help/sites-administering/target.md)を参照してください。
+詳しくは、[Adobeとの統合](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md)を参照してください。
