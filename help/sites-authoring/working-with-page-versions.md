@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 188434543403fab48f79be06356b86e132e2888a
+exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 97%
 
 ---
-
 
 # ページバージョンの処理{#working-with-page-versions}
 
@@ -129,7 +128,7 @@ ht-degree: 97%
 
 1. 「**現在のバージョンと比較**」を選択します。[ページの比較](/help/sites-authoring/page-diff.md)が開き、ページの違いが表示されます。
 
-## タイムワープ  {#timewarp}
+## タイムワープ {#timewarp}
 
 タイムワープは、過去の特定の時間にページが&#x200B;*公開された*&#x200B;状態をシミュレートするために設計された機能です。
 
@@ -172,4 +171,4 @@ ht-degree: 97%
 
 >[!CAUTION]
 >
->Timewarpは、作成者がコンテンツを理解し、作成できるようにするツールとして設計されています。 監査ログや法的な目的のためのものではありません。
+>タイムワープは、作成者がコンテンツを理解し、作成できるようにするツールとして設計されています。 監査ログや法的な目的のためのものではありません。
