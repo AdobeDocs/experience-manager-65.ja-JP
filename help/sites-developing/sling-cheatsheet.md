@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: c5ce62ad-ce9f-4681-bf85-78f7e72e1506
-translation-type: tm+mt
-source-git-commit: c6b1d651940b5c556dea81d19354aac36d14b423
+exl-id: ea97ac1f-84d1-4707-892d-b2249ee1cab5
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 100%
 
 ---
-
 
 # Sling チートシート{#sling-cheatsheet}
 
