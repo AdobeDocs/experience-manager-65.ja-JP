@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
 content-type: reference
 discoiquuid: dfbc1d2f-80c1-4564-a01c-a5028b7257d7
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7222a0c3-cdb9-4c73-9d53-26f00792e439
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 88%
 
 ---
-
 
 # プロキシサーバーツールを使用する方法{#how-to-use-the-proxy-server-tool}
 
@@ -73,7 +72,7 @@ ht-degree: 88%
 
 クライアントとサーバーのやり取りをログファイルに書き込みます。このパラメーターは静止モードでも使用できます。
 
-**`-i <numIndentions>`**（インデントを追加）
+**`-i <numIndentions>`**（インデントの追加）
 
 アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです。この機能は`proxy.jar version 1.16`で導入されました。
 
@@ -90,7 +89,7 @@ proxy-2.1.jarによって生成されるログエントリは、すべて次の�
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
 * # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは0です。
-* `[GET <?>]` は、リクエストの内容です。この例では、HTTPヘッダー(url)の1つを示します。
+* `[GET <?>]` は、リクエストのコンテンツです。この例では、HTTPヘッダー(url)の1つを示します。
 
 接続を閉じると、次の情報がログに記録されます。
 
@@ -129,11 +128,11 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-AEMインスタンスが`localhost:4502`上で実行されていると仮定して、次のようにプロキシを開始します。
+AEMインスタンスが`localhost:4502`上で実行されていると仮定して、次のようにプロキシを起動します。
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
-これで、`localhost:4444`のプロキシ経由でCQ/CRXインスタンスにアクセスでき、このポートを介するすべての通信が`test.log`に記録されます。
+これで、CQ/CRXインスタンスは、`localhost:4444`のプロキシを介してアクセスでき、このポートを介するすべての通信が`test.log`に記録されます。
 
 プロキシの出力を監視する場合は、ブラウザーと AEM インスタンス間のやり取りを確認します。
 
@@ -148,7 +147,7 @@ using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 
 `http://localhost:4444/content/test.html`
 
-ブラウザが`GET`リクエストをページに対して行うのがわかります。
+ブラウザーがページに対して`GET`リクエストを送信するのを確認します。
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -233,4 +232,3 @@ S-7-#000017 -> [Connection: Keep-Alive ]
 * プロキシを起動します。
 * 待機するか、タイムスタンプを持つ各エントリと共にアクセスログをファイルに書き込みます。
 * 要求がハングし始めたら、開いた接続の数および問題の原因となった要求を確認できます。
-
