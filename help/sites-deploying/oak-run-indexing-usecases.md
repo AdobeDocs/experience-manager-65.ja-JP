@@ -9,20 +9,19 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 084075b8-826d-4f27-9342-35f33368f24f
 noindex: true
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: d25e3070-080a-4594-8fdb-9f09164135fc
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1392'
 ht-degree: 88%
 
 ---
 
-
 # oak-run.jar でのインデックス作成の使用例{#oak-run-jar-indexing-use-cases}
 
 Oak-run は、コマンドラインで以下のようなインデックスに関する使用例をサポートします。AEM の JMX コンソールを使用する必要はありません。
 
-Oakインデックスを管理するためのoak-run.jarインデックスコマンドを使用すると、次のようなメリットが得られます。
+Oakインデックスを管理するためのoak-run.jar indexコマンドアプローチを使用する主な利点は次のとおりです。
 
 1. Oak-run indexコマンドは、AEM 6.4用の新しいインデックス作成ツールセットを提供します。
 1. Oak-run を使用すると、インデックス再作成の時間を短縮でき、大規模なリポジトリでのインデックス再作成時間を削減できます。
@@ -39,7 +38,7 @@ Oakインデックスを管理するためのoak-run.jarインデックスコマ
 1. このツールは、AEM にアクセスできない場合でも使用可能です。
 1. このツールは簡単に使用できます。
 
-破損したインデックスのチェックは、`--index-consistency-check`操作を使用して実行できます：
+破損したインデックスのチェックは、`--index-consistency-check`操作を使用して実行できます。
 
 ```shell
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-consistency-check
@@ -73,7 +72,7 @@ Valid indexes :
 
 このツールを使用することにより、サポートおよびシステム管理者は、破損しているインデックスをすばやく特定し、これらのインデックスを再作成できるようになりました。
 
-## 使用例 2 - インデックス統計  {#usecase2indexstatistics}
+## 使用例 2 - インデックス統計 {#usecase2indexstatistics}
 
 以前は、クエリパフォーマンスに関して診断する場合、お客様のセットアップの既存のインデックス定義やインデックス関連統計が必要になることがありました。これらの情報は、これまで複数のリソースに散在していました。より簡単にトラブルシューティングできるように、次の特長を持つツールが用意されています。
 
@@ -87,11 +86,11 @@ Valid indexes :
 
 前述の操作は、次の操作用の index コマンドを使用して実行できるようになりました。
 
-* `--index-info`  — インデックスに関連する各種統計を収集してダンプ
+* `--index-info`  — インデックスに関連する様々な統計を収集し、ダンプします
 
-* `--index-definitions`  — インデックス定義を収集し、ダンプする
+* `--index-definitions`  — インデックス定義を収集し、ダンプします
 
-* `--index-dump`  — インデックス内容をダンプします
+* `--index-dump`  — インデックスコンテンツをダンプします
 
 コマンドが実際にどのように機能するかについての例は、次を参照してください。
 
@@ -99,7 +98,7 @@ Valid indexes :
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-info --index-definitions --index-dump
 ```
 
-レポートは`indexing-result/index-info.txt`と`indexing-result/index-definitions.json`に生成されます
+レポートは`indexing-result/index-info.txt`と`indexing-result/index-definitions.json`に生成されます。
 
 また、同じ詳細が Web コンソール経由でも提供され、設定のダンプ zip にも含まれます。この詳細には、次の場所からアクセスできます。
 
@@ -109,9 +108,9 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 
 このツールを使用すると、インデックス作成またはクエリの問題に関連するすべての必要な詳細をすばやく収集できるので、この情報の抽出にかかる時間を短縮できます。
 
-## 使用例 3 - インデックス再作成  {#usecase3reindexing}
+## 使用例 3 - インデックス再作成 {#usecase3reindexing}
 
-[シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)によっては、インデックス再作成の実行が必要な場合があります。現在、再インデックスは、CRXDEまたはIndex Managerユーザーインターフェイスを介して、インデックス定義ノードの`reindex`フラグを`true`に設定することで行われます。 このフラグが設定されると、インデックス再作成が非同期的におこなわれます。
+[シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)によっては、インデックス再作成の実行が必要な場合があります。現在、インデックス再作成は、CRXDEまたはインデックスマネージャーユーザーインターフェイスを使用して、インデックス定義ノードの`reindex`フラグを`true`に設定することでおこなわれます。 このフラグが設定されると、インデックス再作成が非同期的におこなわれます。
 
 次に、インデックス再作成に関するいくつかの注意点を示します。
 
@@ -144,7 +143,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 これには次のメリットがあります。
 
 * 実行中の AEM インスタンスへの影響が少ない。ほとんどの読み取りはセカンダリサーバーから実行できます。実行中の AEM のキャッシュは、インデックス再作成に必要とされるトラバーサルをすべて考慮しても、悪影響は受けません。
-* また、`--index-definitions-file`オプションを使用して、新しいインデックスや更新されたインデックスのJSONを指定することもできます。
+* `--index-definitions-file`オプションを使用して、新しいインデックスや更新されたインデックスのJSONを提供することもできます。
 
 ### インデックス再作成 - SegmentNodeStore {#reindexsegmentnodestore}
 
@@ -171,7 +170,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 このシナリオでは、AEM サーバーを停止したり、新しいインスタンスをプロビジョニングしたりする必要はありません。ただし、インデックス作成にはリポジトリ全体のトラバーサルが伴うので、インストールへの I/O 負荷が増加し、実行時のパフォーマンスに悪影響があります。
 
-#### オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンスのシャットダウン  {#onlinereindexsegmentnodestoreaeminstanceisdown}
+#### オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンスのシャットダウン {#onlinereindexsegmentnodestoreaeminstanceisdown}
 
 `SegmentNodeStore` インストールでは、単一の oak-run コマンドを使用してインデックス再作成をおこなうことができます。ただし、AEM インスタンスをシャットダウンする必要があります。
 
@@ -183,19 +182,19 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 この方法と前述の方法の違いは、チェックポイントの作成とインデックスの読み込みが自動的におこなわれることです。欠点は、処理中に AEM を終了する必要があることです。
 
-#### Out of Band のインデックス再作成 - SegmentNodeStore  {#outofbandreindexsegmentnodestore}
+#### Out of Band のインデックス再作成 - SegmentNodeStore {#outofbandreindexsegmentnodestore}
 
 この使用例では、クローン作成された設定でインデックスを再作成して、実行中の AEM インスタンスへの影響を最小限に抑えることができます。
 
-1. JMX 操作でチェックポイントを作成します。これをおこなうには、[JMX コンソール](/help/sites-administering/jmx-console.md)に移動して、`CheckpointManager` を検索します。次に、有効期限を秒数で示す高い値（**2592000**&#x200B;など）を使用して、**createCheckpoint(long p1)**&#x200B;操作をクリックします。
-1. `crx-quickstart`フォルダーを新しいマシンにコピーします
+1. JMX 操作でチェックポイントを作成します。これをおこなうには、[JMX コンソール](/help/sites-administering/jmx-console.md)に移動して、`CheckpointManager` を検索します。次に、秒単位の有効期限に高い値を使用して&#x200B;**createCheckpoint(long p1)**&#x200B;操作をクリックします(例：**2592000**)。
+1. `crx-quickstart`フォルダーを新しいマシンにコピーします。
 1. oak-run の index コマンドを使用してインデックスを再作成します。
 
 1. 生成されたインデックスファイルを AEM サーバーにコピーします。
 
 1. JMX を使用してインデックスファイルを読み込みます。
 
-この使用例では、別のインスタンスのデータストアにアクセスできることを前提としています。`FileDataStore` が EBS などのクラウドベースのストレージソリューションに配置されている場合は、このデータストアにアクセスできないことがあります。これは、`FileDataStore`も複製されるシナリオを除外します。 インデックス定義でフルテキストのインデックス作成が実行されない場合は、`DataStore` へのアクセスは必要ありません。
+この使用例では、別のインスタンスのデータストアにアクセスできることを前提としています。`FileDataStore` が EBS などのクラウドベースのストレージソリューションに配置されている場合は、このデータストアにアクセスできないことがあります。これにより、`FileDataStore`のクローンも作成されるシナリオが除外されます。 インデックス定義でフルテキストのインデックス作成が実行されない場合は、`DataStore` へのアクセスは必要ありません。
 
 ## 使用例 4 - インデックス定義の更新 {#usecase4updatingindexdefinitions}
 
@@ -207,9 +206,8 @@ oak-run では、インデックス定義を JSON 形式で提供したり、out
 
 この使用例を検討する必要があるプロセスは次のとおりです。
 
-1. 開発者は、ローカルインスタンスのインデックス定義を更新し、`--index-definitions`オプションを使用してインデックス定義JSONファイルを生成します
+1. 開発者は、ローカルインスタンス上のインデックス定義を更新し、`--index-definitions`オプションを使用してインデックス定義JSONファイルを生成します
 
 1. 更新された JSON がシステム管理者に提供されます。
 1. システム管理者は out-of-band 方式に従って、別のインストールでインデックスを準備します。
 1. これが完了すると、生成されたインデックスファイルが、実行中の AEM インストールに読み込まれます。
-
