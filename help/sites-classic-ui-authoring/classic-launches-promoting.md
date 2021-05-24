@@ -10,14 +10,13 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 8d38c6f7-8fea-4d27-992d-03b604b9541f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
-translation-type: tm+mt
-source-git-commit: 016c705230dffec052c200b058a36cdbe0520fc4
+exl-id: 3013adc3-bec6-4ecc-aefd-f8df2b86dfef
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 92%
 
 ---
-
 
 # ローンチの昇格{#promoting-launches}
 
@@ -34,8 +33,8 @@ ht-degree: 92%
 1. サイドキックの「**ページ**」タブで、「**ローンチを昇格**」をクリックします。
 1. 昇格するページを指定します。
 
-   * （デフォルト）現在のページのみをプロモートするには、「**Promote Page Changes To Production Version**」を選択します。
-   * 現在のページの子ページもプロモートするには、「**サブページを含める**」を選択します。
+   * （デフォルト）現在のページのみを昇格させるには、「**ページの変更を実稼動版に昇格**」を選択します。
+   * 現在のページの子ページも昇格させるには、「**サブページを含める**」を選択します。
    * ローンチ内のすべてのページを昇格させるには、「**完全なローンチを実稼動版に昇格**」を選択します。
 
 1. 実稼動版ページをワークフローパッケージに追加する場合は、「**ワークフローパッケージに追加**」を選択してワークフローパッケージを選択します。
@@ -54,4 +53,3 @@ ht-degree: 92%
 例えば、作成者がローンチページを昇格したとき、ページのアクティベートのリクエストを自動的に生成することができます。パッケージノードが変更されたときにリクエストのアクティベートワークフローを開始するよう、ワークフローランチャーを設定します。
 
 ![chlimage_1-136](assets/chlimage_1-136.png)
-
