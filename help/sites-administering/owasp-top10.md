@@ -10,8 +10,7 @@ topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
 exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
-feature: Security
-translation-type: tm+mt
+feature: セキュリティ
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '510'
@@ -25,7 +24,7 @@ ht-degree: 89%
 
 これらのリスクおよび CRX での対処方法を以下に示します。
 
-## 1. インジェクション  {#injection}
+## 1. インジェクション {#injection}
 
 * SQL - 設計により防止されます。デフォルトのリポジトリ設定には従来のデータベースが含まれず、また必要でもありません。データはすべてコンテンツリポジトリに格納されます。すべてのアクセスは認証されたユーザーに制限され、JCR API を使用してのみ実行可能です。SQL は検索クエリ（SELECT）のみをサポートします。さらに、SQL は値バインディングをサポートします。
 * LDAP - 認証モジュールによって入力にフィルターが適用され、バインドメソッドを使用してユーザーの読み込みが実行されるので、LDAP インジェクションは不可能です。
@@ -47,9 +46,9 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 
 ## 5. クロスサイトリクエストフォージェリ（CSRF）  {#cross-site-request-forgery-csrf}
 
-クロスサイト要求偽造(CSRF)は、すべてのフォームとAJAX要求に暗号化トークンを自動的に挿入し、POSTごとにサーバー上でこのトークンを検証することで軽減されます。
+クロスサイトリクエストフォージェリ(CSRF)は、すべてのフォームとAJAXリクエストに暗号化トークンを自動的に挿入し、POSTごとにサーバー上でこのトークンを検証することで軽減されます。
 
-また、AEMには転送者ヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト(リストで定義)からのPOST要求を&#x200B;**&#x200B;のみ許可するように設定できます。
+さらに、AEMにはリファラーヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト（リストで定義）からのPOSTリクエストを&#x200B;*のみ*&#x200B;に設定できます。
 
 ## 6. セキュリティ設定のミス {#security-misconfiguration}
 
