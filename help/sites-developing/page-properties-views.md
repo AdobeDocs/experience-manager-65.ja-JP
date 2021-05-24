@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
-translation-type: tm+mt
-source-git-commit: c38c27d6f7172734f80735dd2f42cfa7bf58ad1d
+exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 75%
 
 ---
-
 
 # ページプロパティのビューのカスタマイズ{#customizing-views-of-page-properties}
 
@@ -39,7 +38,7 @@ ht-degree: 75%
    * 名前：`cq:showOnCreate`
    * 型：`Boolean`
 
-* 編集表示で使用できるページプロパティ(例：**表示**/**編集**) **プロパティ**&#x200B;オプション):
+* 編集ビューで使用できるページプロパティ(例：**表示**/**編集**) **プロパティ**&#x200B;オプション):
 
    * 名前：`cq:hideOnEdit`
    * 型：`Boolean`
@@ -52,7 +51,7 @@ ht-degree: 75%
 
 >[!TIP]
 >
->ページプロパティのカスタマイズのガイドについては、[ページプロパティの拡張チュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html)を参照してください。
+>ページプロパティのカスタマイズのガイドについては、 [ページプロパティの拡張のチュートリアル](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html)を参照してください。
 
 ## ページプロパティの設定 {#configuring-your-page-properties}
 
@@ -61,7 +60,7 @@ ht-degree: 75%
 例えば、デフォルトでは、[**ページを作成**&#x200B;ウィザード](/help/sites-authoring/managing-pages.md#creating-a-new-page)には「**その他のタイトルと説明**」の下にグループ化されたフィールドが表示されます。これらのフィールドを非表示にするには、次のように設定します。
 
 1. `/apps`の下にページコンポーネントを作成します。
-1. ページコンポーネントの`basic`セクションに対して、[Sling Resource Marger](/help/sites-developing/sling-resource-merger.md)が提供する&#x200B;*ダイアログdiff*&#x200B;を使用して上書きを作成します。例：
+1. ページコンポーネントの`basic`セクションの上書きを作成します（*[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md)から提供されるダイアログ差分*&#x200B;を使用）。例：
 
    ```xml
    <your-page-component>/cq:dialog/content/items/tabs/items/basic
@@ -72,10 +71,10 @@ ht-degree: 75%
    >リファレンスとして、以下を参照してください。
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
-   ただし、******&#x200B;は`/libs`パス内の何も変更しないでください。
+   ただし、***パス内の設定は***&#x200B;変更しないでください。`/libs`
    `/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
    設定およびその他の変更に推奨される方法は次のとおりです。
-   1. `/apps`の下に必要な項目（例：`/libs`に存在する項目）を再作成します
+   1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
    1. `/apps` 内で変更作業をおこないます。
 
 
@@ -85,7 +84,7 @@ ht-degree: 75%
    /apps/demos/components/page/tabs/basic
    ```
 
-1. 対応するパスに`basic` - `moretitles`セクションの上書きを作成します。例：
+1. 対応するパスに`basic` - `moretitles`セクションのオーバーライドを作成します。例：
 
    ```xml
    /apps/demos/components/page/tabs/basic/items/column/items/moretitles
@@ -104,10 +103,10 @@ ht-degree: 75%
 
 ## ページプロパティの設定サンプル  {#sample-configuration-of-page-properties}
 
-このサンプルは、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) のダイアログ差分比較の手法を示しており、[`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties) が使用されています。また、`cq:showOnCreate`と`cq:hideOnEdit`の両方の使い方を説明します。
+このサンプルは、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) のダイアログ差分比較の手法を示しており、[`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties) が使用されています。また、`cq:showOnCreate`と`cq:hideOnEdit`の両方の使用方法も示しています。
 
 GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubでaem-authoring-extension-page-dialogプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog)
+* [GitHubのaem-authoring-extension-page-dialogプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog)
