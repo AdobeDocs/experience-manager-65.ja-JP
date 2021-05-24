@@ -10,14 +10,13 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 99528fda-5c8c-4034-bcbe-a4cea42f694b
 docset: aem65
-translation-type: tm+mt
-source-git-commit: b97452eb42275d889a82eb9364b5daf7075fcc41
+exl-id: b5f3d3a6-39c0-4aa5-8562-3cc6fa2b9e46
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '6097'
 ht-degree: 85%
 
 ---
-
 
 # AEM ポータルとポートレット{#aem-portals-and-portlets}
 
@@ -36,9 +35,9 @@ AEM ポータルのアーキテクチャには、ポータルおよびポート�
 
 ポータルとは、パーソナライゼーション、シングルサインオン、様々なソースからのコンテンツ統合の機能を備え、情報システムのプレゼンテーションレイヤーをホストする Web アプリケーションです。
 
-AEMでは、JSR 286準拠のポートレットを実行できます。 ポートレットコンポーネントによって、ページにポートレットを埋め込むことができます。[AEM コンテンツポートレットの管理](#administeringthecqcontentportlet)を参照してください。
+AEMでJSR 286準拠のポートレットを実行できます。 ポートレットコンポーネントによって、ページにポートレットを埋め込むことができます。[AEM コンテンツポートレットの管理](#administeringthecqcontentportlet)を参照してください。
 
-### ポートレットとは何ですか。{#what-is-a-portlet}
+### ポートレットとは{#what-is-a-portlet}
 
 ポートレットとは、動的コンテンツを生成するコンテナ内部にデプロイされる Web コンポーネントです。ポートレットインターフェイスは .war ファイルとしてパッケージ化され、ポートレットコンテナ内にデプロイされます。AEM をポータルとして実行している場合、ポートレットを実行するには、そのポートレットの .war ファイルが必要になります。
 
@@ -111,11 +110,11 @@ AEM コンテンツポートレットでは、ポータル内に AEM コンテ�
  <tbody>
   <tr>
    <td>startPath</td>
-   <td><p>ポートレットの開始パス。最初に表示されるコンテンツを定義します。</p> <p><strong>重要</strong>:/<strong> /と異なるコンテキストパスで実行しているAEM作成者インスタンスとパブリッシュインスタンスに接続するようにポートレットが設定されている場合は</strong> <strong></strong> 、これらのAEMインスタンスのHtml Library Manager設定でCQUrlInfoを強制的に有効にする必要があります（Felix Webconsole経由など）。</p> </td>
+   <td><p>ポートレットの開始パス。最初に表示されるコンテンツを定義します。</p> <p><strong>重要</strong>:<strong> /</strong>以外のコンテキストパスで実行しているAEMオーサーインスタンスとパブリッシュインスタンスに接続するようにポートレットが設定されている場合は、これらのAEMインスタンスのHtml Library Manager設定で <strong></strong> CQUrlInfoを強制的に有効にする必要があります。</p> </td>
   </tr>
   <tr>
    <td>htmlSelector</td>
-   <td>各 URL に追加されるセレクター。デフォルトでは、これは<strong>portlet</strong>なので、htmlページへのリクエストはすべて<strong>.portlet.htmlで終わるURLを使用します。</strong>このセレクター設定により、ポートレットのレンダリングのために、AEM 内でカスタムスクリプトを使用できるようになります。</td>
+   <td>各 URL に追加されるセレクター。デフォルトでは<strong>portlet</strong>なので、HTMLページへのすべてのリクエストは<strong>.portlet.htmlで終わるURLを使用します。</strong>このセレクター設定により、ポートレットのレンダリングのために、AEM 内でカスタムスクリプトを使用できるようになります。</td>
   </tr>
   <tr>
    <td>addCssToPortalHeader</td>
@@ -156,7 +155,7 @@ AEM コンテンツポートレットでは、ポータル内に AEM コンテ�
 
 起動時に、システムプロパティの **com.day.cq.portet.config** が読み取られ、現在の環境が検出されます。通常、このプロパティの値は **dev**、**prod**、**test** などになります。環境を設定していない場合、設定は読み取られません。
 
-環境が設定されている場合、構成ファイルがクラスパス(***com/day/cq/portlet/{env}.config**)で検索されます。ここで、**env**&#x200B;は、環境の実際の値に置き換えられます。 このファイルに、その環境のすべての設定ファイルを一覧で指定しておく必要があります。これらのファイルは、config ファイルからの相対位置として検索されます。例えば、ファイルに`my.service.xml,`行が含まれている場合、このファイルは`com/day/cq/portlet/my.service.config.`のクラスパスから読み取られます。ファイル名はサービスの永続性IDで構成され、その後に&#x200B;**.config**&#x200B;が続きます。 先ほどの例では、永続性 ID は **my.service** です。設定ファイルの形式は、Apache Sling OSGi インストーラーによって使用されている形式と同じです。
+環境を設定した場合、クラスパス(****com/day/cq/portlet/{env}.config**)で設定ファイルが検索されます。ここで、**env**&#x200B;は、環境の実際の値に置き換えられます。 このファイルに、その環境のすべての設定ファイルを一覧で指定しておく必要があります。これらのファイルは、config ファイルからの相対位置として検索されます。例えば、ファイルに`my.service.xml,`行が含まれている場合、このファイルは`com/day/cq/portlet/my.service.config.`のクラスパスから読み取られます。ファイル名はサービスの永続性IDで構成され、その後に&#x200B;**.config**&#x200B;が続きます。 先ほどの例では、永続性 ID は **my.service** です。設定ファイルの形式は、Apache Sling OSGi インストーラーによって使用されている形式と同じです。
 
 つまり、環境ごとに、対応する config ファイルを追加する必要があります。すべての環境に適用される設定については、これらすべてのファイルに入力する必要があります。1 つの環境にのみ適用される設定については、そのファイルだけに入力します。このメカニズムによって、どの環境でどの設定を読み取るのかを完全に管理できます。
 
@@ -173,7 +172,7 @@ AEM コンテンツポートレットでは、ポータル内に AEM コンテ�
 キャッシュがデプロイされた後は、ポートレットによってパブリッシュインスタンスからコンテンツがキャッシュされます。ポートレットのキャッシュは、AEM から Dispatcher をフラッシュすることで無効にすることができます。独自のキャッシュを使用するようにポートレットを設定するには：
 
 1. ポータルサーバーをターゲットとするオーサーインスタンス内で、レプリケーションエージェントを設定します。
-1. ポータルサーバーがホスト&#x200B;**localhost**&#x200B;上で動作し、**port 8080 **と、AEMポートレットWebアプリケーションがコンテキスト&#x200B;**cqportlet**&#x200B;にマウントされている場合、キャッシュをフラッシュするURLは`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`です。 GET メソッドを使用してください。
+1. ポータルサーバーがホスト&#x200B;**localhost**、**port 8080 **上で実行され、AEMポートレットWebアプリケーションがコンテキスト&#x200B;**cqportlet**&#x200B;にマウントされている場合、キャッシュをフラッシュするURLは`https://localhost:8080/cqportlet/cqbridge/cqpcache?Path=$(path)`になります。 GET メソッドを使用してください。
    **注意：**&#x200B;要求パラメーターを使用する代わりに、**Path** という名前の http ヘッダーを送信できます。
 
 #### Flushing the Cache via Replication Agent {#flushing-the-cache-via-replication-agent}
@@ -186,11 +185,11 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
 
 1. オーサーインスタンスにログインします。
 1. 「Webサイト」タブで、「*ツール*」タブをクリックします。
-1. [**新しいページ…]をクリックします。**&#x200B;レプリケーションエージェント&#x200B;**新規…**&#x200B;メニュー。
+1. 「**新しいページ…」をクリックします。レプリケーションエージェント**&#x200B;の&#x200B;**新規…**&#x200B;メニュー。
 
    ![screen_shot_2012-02-15at40647pm](assets/screen_shot_2012-02-15at40647pm.png)
 
-1. 「*テンプレート*」で、「*複製エージェント*」を選択し、エージェントの名前を入力します。 「*作成*」をクリックします。
+1. 「*テンプレート*」で、「*レプリケーションエージェント*」を選択し、エージェントの名前を入力します。 「*作成*」をクリックします。
 
    ![screen_shot_2012-02-15at40817pm](assets/screen_shot_2012-02-15at40817pm.png)
 
@@ -199,11 +198,11 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
    ![screen_shot_2012-02-15at41001pm](assets/screen_shot_2012-02-15at41001pm.png)
 
 1. 「**編集**」をクリックします。
-1. 「**設定**」タブで、「**有効**」チェックボックスを選択し、シリアル化タイプとして「**ディスパッチャーフラッシュ**」を選択し、再試行のタイムアウト（60000など）を入力します。
+1. 「**設定**」タブで、「**有効**」チェックボックスを選択し、シリアル化の種類として「**Dispatcherフラッシュ**」を選択して、再試行のタイムアウト(例：60000)を入力します。
 
    ![screen_shot_2012-02-15at42101pm](assets/screen_shot_2012-02-15at42101pm.png)
 
-1. 「**Transport**」タブをクリックします。
+1. 「**トランスポート**」タブをクリックします。
 1. 「**URI**」フィールドに、ポートレットのフラッシュURI(URL)を入力します。 URL は次の形式です。
 
    ```xml
@@ -217,8 +216,8 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
    ![screen_shot_2012-02-15at42515pm](assets/screen_shot_2012-02-15at42515pm.png)
 
 1. **HTTPメソッド**&#x200B;フィールドに、**GET**&#x200B;と入力します。
-1. 「**HTTPヘッダー**」フィールドで、**+**&#x200B;をクリックして新しいエントリを追加し、「**パス：{path}**。
-1. 必要に応じて、「**プロキシ**」タブをクリックし、エージェントに対するプロキシ情報を入力します。
+1. 「**HTTP Headers**」フィールドで、**+**&#x200B;をクリックして新しいエントリを追加し、「**Path:{path}**.
+1. 必要に応じて、「**プロキシ**」タブをクリックし、エージェントのプロキシ情報を入力します。
 1. 「**OK**」をクリックして変更を保存します。
 1. 接続をテストするには、「**接続をテスト**」リンクをクリックします。 レプリケーションのテストが成功したかを示すログメッセージが表示されます。次に例を示します。
 
@@ -230,7 +229,7 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
 
 次に例を示します。
 
-`https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=*` 完全なキャッシュをフラッシュします。`https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=/content/mypage/xyz` キャッシュ `/content/mypage/xyz` からフラッシュします。
+`https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=*` は、完全なキャッシュをフラッシュします。`https://10.0.20.99:10040/wps/PA_CQ5_Portlet/cqbridge/cqpcache?Path=/content/mypage/xyz` キャッシュか `/content/mypage/xyz` らフラッシュします。
 
 ### ポータルのセキュリティ {#portal-security}
 
@@ -271,7 +270,7 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
    | Day Portal Director Authenticator | AEM WCM インスタンスに対して使用する認証モードを設定します。選択したモードに応じて、テクニカルユーザーまたは SSO cookie の名前を指定できます。また、AEM WCM パブリッシュインスタンスに対する認証を有効にすることができます。 |
    | Day Portal Director File Cache | ポートレットが AEM WCM インスタンスから受け取ったレスポンスをどのようにキャッシュするかに関するパラメーターを設定します。 |
    | Day Portal Director HTTP Client Service | ポートレットが基盤の AEM WCM インスタンスに HTTP 接続する方法を設定します。例えば、プロキシサーバーを指定できます。 |
-   | Day Portal Director Locale Handler | ポートレットがサポートするロケールを設定します。AEM WCMインスタンスへの要求は、ユーザーのロケールに基づきます。例えば、ユーザー言語*ドイツ語*は`/content/geometrixx/de/`を要求します…. |
+   | Day Portal Director Locale Handler | ポートレットがサポートするロケールを設定します。AEM WCMインスタンスへの要求は、ユーザーのロケールに基づいています。例えば、ユーザーの言語*ドイツ語*は`/content/geometrixx/de/`...を要求します。. |
    | Day Portal Director Privilege Manager | ポートレットで、現在ログインしているユーザーに基づいて「Web サイト」タブの検証をおこなうかどうかを設定します。 |
    | Day Portal Director Toolbar Renderer | ポートレットのツールバーのレンダリング方法をカスタマイズします。 |
 
@@ -281,13 +280,13 @@ AEM ポートレットを実行する複数のポータルノードを運用し�
 
 デフォルトのモードでは、現在のポータルユーザーに関係なく、AEM WCM オーサーインスタンスに対してポートレットから発行されたすべてのリクエストが、同じテクニカルユーザーを使用して認証されます。テクニカルユーザーモードはデフォルトで有効です。OSGi 管理コンソールの該当する設定画面で、このモードを有効または無効にすることができます。
 
-指定する技術ユーザーは、AEM WCM作成者インスタンスと、**発行で認証**&#x200B;が有効な場合は発行インスタンスに存在する必要があります。 オーサリング用の十分なアクセス権限をそのユーザーに付与するようにしてください。
+指定したテクニカルユーザーは、AEM WCMオーサーインスタンス上と、**パブリッシュ環境での認証**&#x200B;が有効な場合はパブリッシュインスタンス上に存在する必要があります。 オーサリング用の十分なアクセス権限をそのユーザーに付与するようにしてください。
 
-#### SSO  {#sso}
+#### SSO {#sso}
 
 ポートレットでは、AEM によって SSO が標準でサポートされます。オーセンティケーターサービスが SSO を使用し、現在のポータルユーザーを **という cookie として** Basic`cqpsso` 形式で AEM に送信するように設定することができます。AEM は、パス / に対して SSO 認証ハンドラーを使用するように設定する必要があります。cookie 名をもここで設定する必要があります。
 
-AEMリポジトリの`crx-quickstart/repository/repository.xml`は、次の条件に従って設定する必要があります。
+AEMリポジトリの`crx-quickstart/repository/repository.xml`は、それに応じて設定する必要があります。
 
 ```xml
 <LoginModule class="com.day.crx.security.authentication.CRXLoginModule">
@@ -299,7 +298,7 @@ AEMリポジトリの`crx-quickstart/repository/repository.xml`は、次の条�
 
 #### SSO 認証モード {#sso-authentication-mode}
 
-ポートレットでは、シングルサインオン（SSO）スキームを使用して AEM WCM の認証をおこなうことができます。このモードでは、ポータルに現在ログインしているユーザーが SSO cookie の形式で AEM WCM に転送されます。SSO モードを使用している場合、AEM ポートレットへのアクセス権を持つすべてのポータルユーザーの情報が基盤の AEM WCM インスタンスに存在する必要があります。通常は、AEM WCM が LDAP に接続する形式をとるか、事前にユーザーを手動で作成しておきます。また、ポートレットでSSOを有効にする前に、基になるAEM WCM作成者インスタンス(および発行インスタンス（**発行で認証**&#x200B;が有効な場合）が、SSOベースの要求を受け入れるように設定する必要があります。
+ポートレットでは、シングルサインオン（SSO）スキームを使用して AEM WCM の認証をおこなうことができます。このモードでは、ポータルに現在ログインしているユーザーが SSO cookie の形式で AEM WCM に転送されます。SSO モードを使用している場合、AEM ポートレットへのアクセス権を持つすべてのポータルユーザーの情報が基盤の AEM WCM インスタンスに存在する必要があります。通常は、AEM WCM が LDAP に接続する形式をとるか、事前にユーザーを手動で作成しておきます。また、ポートレットでSSOを有効にする前に、基になるAEM WCMオーサーインスタンス（および&#x200B;**Authenticate on Publish**&#x200B;が有効な場合はパブリッシュインスタンス）がSSOベースの要求を受け入れるように設定する必要があります。
 
 ポートレットが SSO 認証モードを使用するように設定するには、次の手順を実行します（各手順については、以降の節で詳しく説明します）。
 
@@ -331,7 +330,7 @@ AEM WCM で SSO を有効にする前に、基盤のリポジトリが AEM WCM �
 
 AEM WCM で SSO を有効にするには、AEM WCM の Apache Felix Web 管理コンソール（OSGi）で関連する設定エントリにアクセスします。
 
-1. https://&lt;AEM-host>:&lt;port>/system/consoleのURIを使用してコンソールにアクセスします。
+1. https://&lt;AEM-host>:&lt;port>/system/consoleで、URIを使用してコンソールにアクセスします。
 1. Configuration メニューで、「SSO Authentication Handler」を選択します。この例では、SSO ハンドラーは AEM ポートレットによって提供された cookie に基づいて、すべてのパスの SSO リクエストを受け入れます。実際の設定はこれとは異なる可能性があります。
 
    | パス | ／ | すべてのリクエストに対して SSO ハンドラーを有効にします。 |
@@ -344,7 +343,7 @@ AEM WCM が受け取るすべてのリクエストに対して、最初に SSO �
 
 #### AEM ポートレットでの SSO 認証の有効化  {#enabling-sso-authentication-in-a-aem-portlet}
 
-基になるAEM WCMインスタンスがSSO要求を受け入れるためには、ポートレットの認証モードを&#x200B;**技術的な**&#x200B;から&#x200B;**SSO**&#x200B;に切り替える必要があります。
+基になるAEM WCMインスタンスがSSOリクエストを受け入れるには、ポートレットの認証モードを&#x200B;**Technical**&#x200B;から&#x200B;**SSO**&#x200B;に切り替える必要があります。
 
 AEM ポートレットで SSO 認証を有効にするには：
 
@@ -391,10 +390,10 @@ Web サイトの管理ページを開くか、ポートレットからページ�
    </LoginModule>
    ```
 
-1. OSGi設定コンソールで、デフォルトでhttps://localhost:4502/system/console/configMgrにある「CQ PIN Authentication Handler **」をドロップダウンメニューから選択します。**
+1. OSGi設定コンソール(デフォルトはhttps://localhost:4502/system/console/configMgr)で、ドロップダウンメニューから「**CQ PIN Authentication Handler**」を選択します。
 1. 「**URL Root Path**」パラメーターを編集し、「**/**」という 1 文字だけを入力します。
 
-### 権限  {#privileges}
+### 権限 {#privileges}
 
 ポートレットの一部の機能は権限によって保護されます。現在のユーザーがその機能にアクセスするには、そのための権限を持っている必要があります。次の権限が事前に定義されています。
 
@@ -496,7 +495,7 @@ Maven などのツールを使用してこのバンドルをビルドするか�
 | {buttonRefresh} | 現在のビューを更新します。 |
 | {buttonBack} | ポートレットを公開ビューに戻します。 |
 
-#### ボタン  {#buttons}
+#### ボタン {#buttons}
 
 表示されるビューを問わず、ボタンには button.html に定義された同じ共通の HTML が使用されます。
 
@@ -506,7 +505,7 @@ Maven などのツールを使用してこのバンドルをビルドするか�
 
 | プレースホルダー文字列 | 説明 |
 |---|---|
-| {name} | ボタンの名前（** author、back、refresh**など）。 |
+| {name} | ボタンの名前(例：**author、back、refresh**)。 |
 | {id} | ボタンの CSS ID。 |
 | {url} | ボタンのターゲット URL。 |
 | {text} | ボタンのラベル。 |
@@ -528,7 +527,7 @@ title="{text}"/>
 
 #### カスタムレイアウトのインストール  {#installing-a-custom-layout}
 
-カスタムレイアウトをインストールするには、ポートレットのOSGI Webコンソール**Bundles **セクションにアクセスし、バンドルをアップロードします。
+カスタムレイアウトをインストールするには、ポートレットのOSGI Webコンソールの「**Bundles**」セクションにアクセスし、バンドルをアップロードします。
 
 #### パッケージ {#packages}
 
@@ -549,9 +548,9 @@ AEM コンテンツポートレットにはローカリゼーション機能が�
 ローカリゼーションは次の 2 つの手順で実行されます。
 
 1. Portal Directory Locale Detector がポータルのロケール設定を取得して、ポータルユーザーのロケールを検出します。このサービスには、AEM で使用可能な言語のリストを設定しておく必要があります。
-1. Portal Director Locale Handler が現在のリクエストのローカリゼーションを処理します。リクエストされたコンテンツのパス（例：`/content/geometrixx/en/company.html`）を取り、設定に従って&#x200B;**en**&#x200B;をユーザーの実際のロケールで書き換えます。
+1. Portal Director Locale Handler が現在のリクエストのローカリゼーションを処理します。リクエストされたコンテンツのパス（例：`/content/geometrixx/en/company.html`）を取得し、設定に従って、**en**&#x200B;をユーザーの実際のロケールに書き換えます。
 
-ポータルDirectorロケールハンドラは、ロケール情報をチェックするパスを使用して設定できます。通常は`/content`以下のすべての要素と、パス内のロケール情報の位置が含まれます。 Portal Director Locale Handler はデフォルトで、AEM 内の多言語サイトの推奨構造に従います。
+Portal Director Locale Handlerには、ロケール情報を確認するパスを設定できます。通常、`/content`以下のすべてと、パス内のロケール情報の位置が含まれます。 Portal Director Locale Handler はデフォルトで、AEM 内の多言語サイトの推奨構造に従います。
 
 パス内のロケール情報を処理するための厳格なルールがないサイトの場合は、ロケールハンドラーを独自の実装に置き換えることが可能です。
 
@@ -651,16 +650,16 @@ AEM をポータルとして使用するには、次のタスクを実行しま�
 
 AEM Quickstart JAR ファイルには、ポートレットコンポーネントファイルが含まれています。ファイル（cq-portlet-components.zip）を取得するには、Quickstart を実行するか、その内容を抽出します。
 
-1. Quickstart JARファイルの内容を実行または抽出し、それに応じてcq-portlet-components.zipファイルを見つけます。
+1. Quickstart JARファイルの内容を実行または抽出し、それに応じてcq-portlet-components.zipファイルを探します。
 
    * Quickstart を実行する場合：crx-quickstart/opt/portal
    * Quickstart の内容を抽出する場合：static/opt/portal
 
 1. アプリケーションサーバーにデプロイされている CQ5 オーサーインスタンスのパッケージマネージャーを開きます(https://*appserverhost*:*port*/cq5author/crx/packmgr)
 
-1. Package Managerを使用して、cq-portlets-components.zipパッケージを[アップロードしてインストールします。](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)
+1. パッケージマネージャーを使用して、cq-portlets-components.zipパッケージを[アップロードしてインストールします。](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)
 
-   パッケージは、リポジトリの/libs/portal/directorフォルダーにcq-portlet-director-sharedlibs-x.x.x.jarをインストールします。
+   このパッケージは、リポジトリの/libs/portal/directorフォルダーにcq-portlet-director-sharedlibs-x.x.x.jarをインストールします。
 
 1. cq-portlet-director-sharedlibs-x.x.x.jar をハードドライブにコピーします。FileVault や WebDAV クライアントなどを使用して、このファイルを取得します。
 1. cq-portlet-director-sharedlibs.x.x.x.jar ファイルをアプリケーションサーバーの共有ライブラリフォルダーに移動して、ライブラリのクラスをデプロイ済みのポートレットアプリケーションから使用できるようにします。
@@ -670,7 +669,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 ポートレットコンポーネントを段落システムに追加して、作成者が使用できるようにします。
 
 1. サイドキックで、定規アイコンをクリックしてデザインモードに切り替えます。
-1. 最初の段落の上の`Design of par`見出しの横にある&#x200B;**編集**&#x200B;をクリックします。
+1. 最初の段落の上の`Design of par`見出しの横にある「**編集**」をクリックします。
 
 1. 「**一般**」コンポーネントカテゴリで、ポートレットコンポーネントの横にあるチェックボックスをオンにして「OK」をクリックします。
 
@@ -680,12 +679,12 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 アプリケーションサーバーの Web コンテナにポートレットをデプロイして、ポータルコンポーネントから使用できるようにします。ポートレットアプリケーションをデプロイする前に、このアプリケーションが AEM ポータルコンテナサーブレットを読み込むように設定する必要があります。この設定によって、ポートレットコンポーネントがポートレットにアクセスできるようになります。
 
-1. ポートレット・アプリケーションのWARファイルの内容を抽出します。
+1. ポートレットアプリケーションのWARファイルの内容を抽出します。
 
-   **ヒント：jar xf** nameofapp **.warコマンドはファイルを抽出します。
+   **ヒント：** jar xf nameofapp *.warコマン*&#x200B;ドはファイルを抽出します。
 
 1. web.xml ファイルをテキストエディターで開きます。
-1. web追加-app要素内の次のサーブレット設定：
+1. 次のサーブレット設定をWeb-app要素内に追加します。
 
    ```xml
    <servlet>
@@ -701,7 +700,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 1. web.xml ファイルを保存し、WAR ファイルを再度パッケージ化します。
 
-   **ヒント：** この `jar cvf nameofapp.war *` コマンドは、現在のディレクトリの内容をnameofapp.warファイルに追加します。
+   **ヒント：** このコ `jar cvf nameofapp.war *` マンドは、現在のディレクトリの内容をnameofapp.warファイルに追加します。
 
 1. ポートレットアプリケーションをアプリケーションサーバーにデプロイします。詳しくは、アプリケーションサーバーのドキュメントを参照してください。
 
@@ -717,7 +716,7 @@ AEM Quickstart JAR ファイルには、ポートレットコンポーネント�
 
 1. コンポーネントをダブルクリックして、ポートレットのプロパティを開きます。
 1. 「**ポートレットエンティティ**」ドロップダウンメニューで、リストからポートレットを選択します。
-1. ポートレットのタイトルバーを表示するかどうかに応じて、「**タイトルバーを非表示**」チェック・ボックスを選択または選択解除します。
+1. ポートレットのタイトルバーを表示するかどうかに応じて、「**タイトルバーを非表示**」チェックボックスをオンまたはオフにします。
 1. 「**ポートレットウィンドウ**」フィールドに、必要に応じて一意のポートレットウィンドウ ID を入力します。
 
    >[!NOTE]
@@ -752,7 +751,7 @@ AEM WCM によって提供されるコンテンツにアクセスするには、
 1. Web ポータルのポートレット管理画面に移動します。
 1. 「Install」をクリックして、ダウンロードした AEM ポートレットアプリケーション（cq-portlet-webapp.war）を参照し、ポートレットに関するその他の重要な情報を入力します。
 
-   他のポートレット基本情報については、デフォルト値を使用するか、値を変更します。デフォルト値を受け入れると、ポートレットはhttps://&lt;wps-host>:&lt;port>/wps/PA_CQ5_Portletで使用できます。 ポートレットが提供するOSGi管理コンソールは、https://&lt;wps-host>:&lt;port>/wps/ PA_CQ5_Portlet/cqbridge/system/console（デフォルトのユーザー名/パスワードはadmin/admin）で入手できます。
+   他のポートレット基本情報については、デフォルト値を使用するか、値を変更します。デフォルト値を受け入れると、ポートレットはhttps://&lt;wps-host>:&lt;port>/wps/PA_CQ5_Portletで使用できます。 ポートレットが提供するOSGi管理コンソールは、 https://&lt;wps-host>:&lt;port>/wps/ PA_CQ5_Portlet/cqbridge/system/consoleで利用できます（デフォルトのユーザー名/パスワードはadmin/admin）。
 
 1. 自動起動オプションまたはチェックボックスを選択して変更を保存し、ポートレットアプリケーションが自動的に起動するようにします。インストールが成功したことを示すメッセージが表示されます。
 
@@ -767,7 +766,7 @@ AEM WCM によって提供されるコンテンツにアクセスするには、
 
    >[!NOTE]
    >
-   >** /**とは異なるコンテキストパス上で実行されているAEM作成者およびパブリッシュインスタンスに接続するようにポートレットを設定する場合は、これらのAEMインスタンスのHtml Library Manager設定で&#x200B;**CQUrlInfo**&#x200B;を有効にする必要があります。
+   >** /**以外のコンテキストパスで実行されているAEMオーサーインスタンスとパブリッシュインスタンスに接続するようにポートレットを設定する場合は、これらのAEMインスタンスのHtml Library Manager設定で&#x200B;**CQUrlInfo**&#x200B;を強制的に有効にする必要があります。
 
 1. アプリケーションサーバーで設定の変更を保存します
 
@@ -787,13 +786,13 @@ AEM WCM によって提供されるコンテンツにアクセスするには、
 
 コンテンツが AEM からリクエストされたとき、ポートレットにより、現在の表示モード（パブリッシュまたはオーサー）と現在のパスから完全な URL が作成されます。デフォルト値の場合、最初のURLは`https://localhost:4503/content/geometrixx/en.portlet.html`です。 `htmlSelector` の値が URL の拡張子の前に自動的に追加されます。
 
-ポートレットがヘルプモードに切り替わり、`appendHelpViewModeAsSelector`が選択された場合は、`help`セレクターも追加されます（例：`https://localhost:4503/content/geometrixx/en.portlet.html.help`）。 ポートレットウィンドウが最大化され、`appendMaxWindowStateAsSelector`が選択された場合は、`https://localhost:4503/content/geometrixx/en.portlet.max.help`のようにセレクターも追加されます。
+ポートレットがヘルプモードに切り替わり、`appendHelpViewModeAsSelector`が選択された場合は、`help`セレクターも追加されます（例：`https://localhost:4503/content/geometrixx/en.portlet.html.help`）。 ポートレットウィンドウが最大化され、`appendMaxWindowStateAsSelector`が選択された場合は、セレクターも追加されます（例：`https://localhost:4503/content/geometrixx/en.portlet.max.help`）。
 
 セレクターは AEM によって評価され、セレクターごとに様々なテンプレートを使用できます。
 
 ### AEM でのコンテンツ URL マップの使用  {#using-a-content-url-map-in-aem}
 
-通常、開始パスは直接 AEM 内のコンテンツを示しますが、ただし、ポートレットの環境設定ではなくAEMで開始パスを維持したい場合は、開始パスをAEMのコンテンツマップ（例：`/var/portlets`）に向けることができます。 この場合、AEM で実行されるスクリプトでは、ポートレットから送信された情報を使用して、どの URL が開始 URL であるかを判断することができます。このスクリプトは、正しい URL へのリダイレクトを発行する必要があります。
+通常、開始パスは直接 AEM 内のコンテンツを示しますが、ただし、ポートレット環境設定ではなくAEMで開始パスを維持する場合は、開始パスがAEMのコンテンツマップ（`/var/portlets`など）を指すように指定できます。 この場合、AEM で実行されるスクリプトでは、ポートレットから送信された情報を使用して、どの URL が開始 URL であるかを判断することができます。このスクリプトは、正しい URL へのリダイレクトを発行する必要があります。
 
 #### ポータルページへのポートレットの追加 {#adding-the-portlet-to-the-portal-page}
 
@@ -811,4 +810,3 @@ AEM WCM によって提供されるコンテンツにアクセスするには、
 
 1. ポートレットのパーソナライゼーションメニューで、ポータル内で設定したとおりにポートレットを設定します。
 1. その設定を開き（ポートレットに、ポートレットの設定で指定した公開用の開始 URL が表示されます）、必要に応じて編集をおこない、保存します。
-
