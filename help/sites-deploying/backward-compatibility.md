@@ -10,15 +10,14 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: f3b4ec1d-9054-47d4-afcb-0a0121b94190
 docset: aem65
-feature: Upgrading
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: アップグレード
+exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 79%
 
 ---
-
 
 # AEM 6.5 における後方互換性{#backward-compatibility-in-aem}
 
@@ -32,7 +31,7 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 ほとんどの場合、AEM 6.3 を実行しているお客様は、アップグレードの際にコードやカスタマイズの修正をおこなう必要はありません。AEM 6.1 および 6.2 のお客様の場合、6.3 にアップグレードする際よりも大きい変更はありません。
 
-機能に下位互換性を維持できない例外が発生した場合は、バンドルとコンテンツの下位互換性の問題を、6.4用の互換性パッケージをインストールすると軽減できます（ダウンロードする場所の詳細は、下の設定方法を参照）。 このコンパクトパッケージは、AEM 6.4に準拠したアプリケーションで、ほとんどの場合の互換性を回復するのに役立ちます。
+機能に後方互換性を維持できない例外は、6.4用の互換性パッケージをインストールすることで、バンドルとコンテンツの後方非互換性の問題を軽減できます（ダウンロード先の詳細については、以下の設定方法を参照してください）。 この互換パッケージは、AEM 6.4に準拠したアプリケーションのほとんどの場合に、互換性を復元するのに役立ちます。
 
 互換パッケージを使用すると、AEM を互換モードで実行でき、新しい AEM 機能に対するカスタム開発を先送りできます。
 
@@ -40,7 +39,7 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 >
 >互換パッケージは、AEM 6.5 での互換性を確保するために必要な開発作業を先送りする一時的なソリューションであり、アップグレード後すぐに開発をおこなって互換性の問題に対応することができない場合の最終手段としてのみ使用をお勧めします。6.5 をベースにしたカスタム開発を進め、6.5 のすべての機能を利用できるようになったら、ネイティブモードに切り替えて、互換パッケージをアンインストールすることを強くお勧めします。
 
-![早め](assets/sase.png)
+![sase](assets/sase.png)
 
 互換パッケージには、**ルーティング有効**&#x200B;と&#x200B;**ルーティング無効**&#x200B;の 2 つのモードがあります。
 
@@ -60,11 +59,11 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 レガシーモードは、互換パッケージで移行された AEM のレガシーコードまたは廃止されたコードに基づくカスタムインターフェイスを持つお客様用です。
 
-![サペット](assets/sapte.png)
+![サプト](assets/sapte.png)
 
 ## 設定方法 {#how-to-set-up}
 
-AEM 6.3互換パッケージは、Package Managerを使用してパッケージとしてインストールできます。 [AEM 6.3 Compatibility Packageは、Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)サイトからダウンロードできます。
+AEM 6.3互換パッケージは、パッケージマネージャーを使用してパッケージとしてインストールできます。 [AEM 6.3互換性パッケージは、「ソフトウェア配布」](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/compatpack/aem-compat-cq64-to-cq63)サイトからダウンロードできます。
 
 互換パッケージがインストールされると、次に示すように、OSGI 設定のスイッチを使用して、ルーティングを有効または無効にできます。
 
