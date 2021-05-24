@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: page-authoring, introduction
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
-translation-type: tm+mt
-source-git-commit: 46f2ae565fe4a8cfea49572eb87a489cb5d9ebd7
+exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 93%
 
 ---
-
 
 # 作成者がおこなう最初の手順{#first-steps-for-authors}
 
@@ -24,9 +23,9 @@ ht-degree: 93%
 
 次の内容について説明します。
 
-* [はじめに](#getting-started):最初のページを作成して公開する際に必要なイベントの基本的な順序の詳細を説明します。
+* [はじめに](#getting-started):最初のページを作成して公開するために必要な基本的なイベントの順序を詳しく説明します。
 
-* [その他のアクション](#further-actions):オーサリング時に使用できる他の多数のアクションについて説明します。
+* [その他のアクション](#further-actions):以降、オーサリング時に使用できるその他の多くのアクションについて説明します。
 
 ## はじめに {#getting-started}
 
@@ -58,7 +57,7 @@ Web サイトのコンテンツはツリー構造により管理されます。�
 * [ページのロック](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#locking-a-page)
 * [ページのロック解除](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#unlocking-a-page)
 
-### ページの公開  {#publishing-a-page}
+### ページの公開 {#publishing-a-page}
 
 ページの編集が完了したら、Web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)します。
 
