@@ -10,14 +10,13 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: b41de64a-7d27-4633-a8d5-ac91d47eb1bb
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 27a054cc5d502d95c664c3b414d0066c6c120b65
+exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 95%
 
 ---
-
 
 # 効果的なニュースレターのランディングページの作成{#creating-an-effective-newsletter-landing-page}
 
