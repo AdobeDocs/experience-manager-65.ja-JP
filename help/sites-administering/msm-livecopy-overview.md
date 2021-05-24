@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
-feature: Multi Site Manager
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: マルチサイトマネージャー
+exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '551'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
-
 
 # ライブコピーの概要コンソール{#live-copy-overview-console}
 
@@ -31,16 +30,16 @@ ht-degree: 97%
 
 * ロールアウトアクションの実行
 
-## ライブコピーの概要を開く  {#opening-the-live-copy-overview}
+## ライブコピーの概要を開く {#opening-the-live-copy-overview}
 
 ライブコピーの概要は、以下から開くことができます。
 
-* [ブループリントページの参照サイドパネル（サイトコンソール）](#opening-live-copy-overview-references-for-a-blueprint-page)
+* [ブループリントページの参照サイドパネル（Sites コンソール）](#opening-live-copy-overview-references-for-a-blueprint-page)
 * [ブループリントページのプロパティ](#opening-live-copy-overview-properties-of-a-blueprint-page)
 
-### ライブコピーの概要を開く - ブループリントページの参照  {#opening-live-copy-overview-references-for-a-blueprint-page}
+### ライブコピーの概要を開く - ブループリントページの参照 {#opening-live-copy-overview-references-for-a-blueprint-page}
 
-**ライブコピーの概要**&#x200B;は、**サイト**&#x200B;コンソールの&#x200B;**参照**&#x200B;サイドパネルから開くことができます。
+「**ライブコピーの概要**」は、**Sites** コンソールの&#x200B;**参照**&#x200B;サイドパネルから開くことができます。
 
 1. **サイト**&#x200B;コンソールで、[ブループリントページに移動して選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
 1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、「**ライブコピー**」を選択します。
@@ -78,7 +77,7 @@ ht-degree: 97%
 1. **ライブコピーの概要**&#x200B;を開きます。
 1. 必要なブループリントページまたはライブコピーページを選択します。ツールバーが更新され、使用できるアクションが表示されます。使用できる[アクション](/help/sites-administering/msm.md#terms-used)は、[ブループリント](#actions-for-a-blueprint-page)ページと[ライブコピー](#actions-for-a-live-copy-page)ページのどちらを選択したかによって異なります。
 
-### ブループリントページのアクション  {#actions-for-a-blueprint-page}
+### ブループリントページのアクション {#actions-for-a-blueprint-page}
 
 ブループリントページを選択した場合は、以下のアクションを使用できます。
 
@@ -92,7 +91,7 @@ ht-degree: 97%
 
    * ロールアウトを実行して、ソースからライブコピーに変更をプッシュします。
 
-### ライブコピーページのアクション  {#actions-for-a-live-copy-page}
+### ライブコピーページのアクション {#actions-for-a-live-copy-page}
 
 ライブコピーページを選択した場合は、以下のアクションを使用できます。
 
@@ -126,14 +125,14 @@ ht-degree: 97%
 
    * ライブコピーとそのブループリントページの間のライブ関係を永続的に削除します。
 
-## 関係ステータス  {#relationship-status}
+## 関係ステータス {#relationship-status}
 
 **関係ステータス**&#x200B;コンソールには、様々な機能を提供する 2 つのタブがあります。
 
 * [関係ステータス情報](#relationship-status-information)
 * [ライブコピー情報](#live-copy-information)
 
-### 関係ステータス情報  {#relationship-status-information}
+### 関係ステータス情報 {#relationship-status-information}
 
 このタブには、ブループリントとライブコピーの間の関係のステータスに関する詳細情報が表示されます。
 
@@ -144,4 +143,3 @@ ht-degree: 97%
 このタブでは、ライブコピー設定を表示および編集できます。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
-
