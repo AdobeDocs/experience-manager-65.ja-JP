@@ -10,14 +10,13 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 92%
 
 ---
-
 
 # ページの公開 {#publishing-pages}
 
@@ -40,7 +39,7 @@ ht-degree: 92%
    >
    >
 * **レプリケート／レプリケーション**
-   >  これらは、ユーザーコメントの発行時や逆複製時など、ある環境から別のユーザーへのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を説明する技術用語です。
+   >  これらは、ユーザーのコメントを公開またはリバースレプリケートする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
 
 
@@ -102,7 +101,7 @@ ht-degree: 92%
 * [クイック公開](/help/sites-authoring/publishing-pages.md#quick-publish)
 * [公開を管理](/help/sites-authoring/publishing-pages.md#manage-publication)
 
-#### クイック公開  {#quick-publish}
+#### クイック公開 {#quick-publish}
 
 **クイック公開**&#x200B;は、単純な場合のためのもので、選択したページが即座に公開されます。他に何か操作する必要はありません。このため、すべての非公開の参照も自動的に公開されます。
 
@@ -145,7 +144,7 @@ ht-degree: 92%
 
    「**次へ**」をクリックして次に進みます。
 
-1. パブリケーションの管理ウィザード&#x200B;**スコープ**&#x200B;の次の手順では、子ページを含めたり、参照を含めたりするなど、パブリケーション/非パブリケーションの範囲を定義できます。
+1. 公開を管理ウィザードの次の手順（**範囲**）で、子ページを含めたり、参照を含めたりするなど、公開/非公開の範囲を定義できます。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -195,7 +194,7 @@ ht-degree: 92%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳細については、このページ](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)の[前の注意事項、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページ](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)へのワークフローの適用を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。公開権限に関する前述の[ページ](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)の注意を参照し、詳しくは、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
@@ -216,7 +215,7 @@ ht-degree: 92%
 * [ページエディターから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-editor)
 * [サイトコンソールから](/help/sites-authoring/publishing-pages.md#unpublishing-from-the-console)
 
-### エディターから非公開にする  {#unpublishing-from-the-editor}
+### エディターから非公開にする {#unpublishing-from-the-editor}
 
 ページを編集する際に、そのページを非公開にする場合、[ページを公開](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)するときと同じように、**ページ情報**&#x200B;メニューで「**ページを非公開にする**」を選択します。
 
@@ -262,7 +261,7 @@ ht-degree: 92%
 
    「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [ツリーのパブリケーションまたは非パブリケーションを完了するには、](#manage-publication) 通常どおり[パブリケーションの管理]ウィザードを続行します。
+1. [通常どおりに公開を管理ウィザードを](#manage-publication) 続行し、ツリーの公開または非公開を完了します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
