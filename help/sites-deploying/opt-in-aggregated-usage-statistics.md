@@ -10,18 +10,17 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 075f53cc-146b-4eea-bfbb-54beaed97915
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 1f7a45adc73b407c402a51b061632e72d97ca306
+exl-id: e626bdd8-b7ae-4de5-a0a0-47fb74c080d7
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 63%
 
 ---
 
-
 # 集計した使用状況の統計の収集をオプトインする方法{#opting-into-aggregated-usage-statistics-collection}
 
-## 概要 {#introduction}
+## はじめに {#introduction}
 
 AEM とのやり取りの状況に関する統計情報をアドビに送信することで、Adobe Marketing Cloud の改善に協力することができます。この情報は、貴社のサイト訪問者に関するデータを含んでおらず、アドビによるユーザーエクスペリエンスの提供、サポート、改善に役立てるためにのみ使用されます。
 
@@ -29,13 +28,13 @@ AEM とのやり取りの状況に関する統計情報をアドビに送信す�
 
 >[!NOTE]
 >
->データ保護とプライバシーに関する様々な規制があり、たとえば、GDPRやCCPAを含む。 AEM Sitesは、お客様のデータ保護とプライバシーコンプライアンスの義務を支援する準備が整っています。 このページでは、集計した使用状況の統計の収集をオプトイン（またはオプトアウト）する手順を説明します。
+>様々なデータ保護およびプライバシー規制があります。例えば、GDPRやCCPAを含みます。 AEM Sitesは、お客様がデータ保護とプライバシーコンプライアンスの義務を果たすのを支援する準備が整っています。 このページでは、集計した使用状況の統計の収集をオプトイン（またはオプトアウト）する手順を説明します。
 >
 >詳しくは、[Adobeのプライバシーセンター](https://www.adobe.com/privacy.html)も参照してください。
 
 >[!NOTE]
 >
->[Webコンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)を使用するか、AEMオプトイン画面でオプトインオプションを選択しないと、いつでもオプトアウトできます。
+>また、[Webコンソール](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)を使用するか、AEMオプトイン画面でオプトインオプションを選択しないことで、いつでもオプトアウトできます。
 
 ## タッチ UI を使用したオプトイン {#opt-in-by-using-the-touch-ui}
 
@@ -61,9 +60,9 @@ Web コンソールを次のように使用してオプトイン（またはオ�
 
 1. AEMのナビゲーション画面で、「**ツール**」をクリックし、「**操作**」をクリックします。
 
-   ![usage_statisticshopsdashboard](assets/usage_statisticsopsdashboard.png)
+   ![usage_statisticsboard](assets/usage_statisticsopsdashboard.png)
 
-1. 「Operations」ウィンドウで、「**Web Console**」をクリックします。
+1. 操作ウィンドウで、**Webコンソール**&#x200B;をクリックします。
 
    ![usage_statisticswebconsole](assets/usage_statisticswebconsole.png)
 
@@ -72,9 +71,8 @@ Web コンソールを次のように使用してオプトイン（またはオ�
 
    ![usage_statisticscollectionedit](assets/usage_statisticscollectionedit.png)
 
-1. 「**有効**」チェックボックスを選択します。 また、使用状況の統計情報の収集をオプトアウトする場合は、このチェックボックスの選択を解除することもできます。
+1. 「**有効**」チェックボックスを選択します。 または、使用状況の統計の収集をオプトアウトする場合は、このチェックボックスの選択を解除できます。
 
    ![usage_statisticsselect](assets/usage_statisticsselect.png)
 
 1. 「**保存**」をクリックします。
-
