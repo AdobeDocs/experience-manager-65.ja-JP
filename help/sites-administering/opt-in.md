@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: de466511-d82f-4ddb-8f6a-7ca9240fdeab
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 3603e929-2aa1-4c25-ad9a-b10ff52a59f4
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 91%
 
 ---
-
 
 # Adobe Analytics および Adobe Target との統合のオプトイン{#opting-into-adobe-analytics-and-adobe-target}
 
@@ -28,7 +27,7 @@ AEM には、Adobe Analytics および Adobe Target との統合に役立つオ�
 
 * タスクによる統合の設定。
 
-   これは、即座に、または後でおこなうことができ、何らかのアクションがおこなわれるまで、タスクはインボックスに残ります。どちらの場合も、設定はUIで直接行うことも、事前定義された`.properties`ファイルを使用して行うこともできます。
+   これは、即座に、または後でおこなうことができ、何らかのアクションがおこなわれるまで、タスクはインボックスに残ります。どちらの場合でも、設定はUIで直接おこなうことも、事前定義された`.properties`ファイルを使用しておこなうこともできます。
 
 * 統合のオプトアウト。
 
@@ -117,7 +116,7 @@ Analytics および Target との統合用のアカウントプロパティを�
 
 プロパティと値は等号（=）で区切ります。 プロパティの先頭には `analytics`analytics が付き、 プロパティの先頭には `target`target が付きます。サービスを設定するには、そのサービスのすべてのプロパティの値を設定します。サービスを設定しない場合は、そのサービスの値を設定しないでください。
 
-次の例の`.properties`ファイルには、Analyticsのクラウド設定を作成するためのプロパティ値が含まれています。
+次のサンプルの`.properties`ファイルには、Analytics用のクラウド設定を作成するためのプロパティ値が含まれています。
 
 ```xml
 analytics.server=https://test.omniture.com/login/
@@ -146,7 +145,7 @@ target.password=
 1. サーバーを起動または再起動し、管理者アカウントを使用してログインします。
 1. [統合の設定](/help/sites-administering/opt-in.md#configuring-the-integration)で説明されているように、Analytics &amp; Targeting を設定タスクを開きます。アカウント情報を要求する代わりに、ウィザードは`.properties`ファイルの値を使用します。
 
-   適切なサービスに対して&#x200B;**追加**&#x200B;を選択し、ウィザードに進みます。
+   適切なサービスに対して「****&#x200B;を追加」を選択し、ウィザードを続行します。
 
    ![optin-02](assets/optin-02.png)
 
@@ -154,7 +153,7 @@ target.password=
 
 Analytics および Target との統合を設定すると、必要なクラウド設定とフレームワークを AEM が自動的に作成します。例えば、Analytics のクラウド設定は Provisioned Analytics Account という名前です。
 
-このクラウド設定を変更する必要はありません。ただし、必要に応じてフレームワークを設定できます(「[コンポーネントデータとAdobe Analyticsプロパティのマッピング](/help/sites-administering/adobeanalytics-mapping.md)」および「[追加ターゲットフレームワーク](/help/sites-administering/target.md)」を参照)。
+このクラウド設定を変更する必要はありません。ただし、必要に応じてフレームワークを設定できます([Adobe Analyticsのプロパティを使用したコンポーネントデータのマッピング](/help/sites-administering/adobeanalytics-mapping.md)および[Targetフレームワークの追加](/help/sites-administering/target.md)を参照)。
 
 >[!NOTE]
 >
@@ -182,7 +181,7 @@ Analytics および Target との統合を設定すると、必要なクラウ�
 
 * 必要な資格情報がすべて入力された **marketingcloud.properties** ファイルを使用する場合は、次のパラメーターを送信する必要があります。
 
-   * `automaticProvisioning`=  `true`
+   * `automaticProvisioning`= `true`
    * `servicename`=  `analytics|target`
    * `path`=作成したクラウドサービス設定を接続する AEM ページへのパス
 
@@ -192,23 +191,22 @@ Analytics および Target との統合を設定すると、必要なクラウ�
    curl -v -u admin:admin -X POST -d"automaticProvisioning=true&servicename=target&servicename=analytics&path=/content/we-retail" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
    ```
 
-* **marketingcloud.properties**&#x200B;ファイルを使用したくない場合は、資格情報とパラメーターを送信する必要があります。例：
+* **marketingcloud.properties**&#x200B;ファイルを使用しない場合は、資格情報とパラメーターを送信する必要があります。例：
 
    * automaticProvisioning= `true`
    * servicename= `analytics|target`
    * path=作成したクラウドサービス設定を接続する AEM ページへのパス（複数のパスを定義可能）
    * analytics.server= `https://servername`
-   * analytics.会社= `Name of company`
+   * analytics.company= `Name of company`
    * analytics.username= `me`
    * analytics.secret= `secret`
    * analytics.reportsuite= `we-retail`
-   * ターゲット.clientcode= `mycompany`
-   * ターゲット.email= `me@adobe.com`
-   * ターゲット.パスワード= `password`
+   * target.clientcode= `mycompany`
+   * target.email= `me@adobe.com`
+   * target.password= `password`
 
    この場合、Analytics と Target の両方の設定を作成し、それらを we-retail ページに添付する curl 要求は次のようになります。
 
    ```shell
    curl -v -u admin:admin -X POST -d"automaticProvisioning=false&servicename=target&servicename=analytics&path=/content/we-retail&analytics.server=https://servername/&analytics.company=Name of company&analytics.username=me&analytics.secret=secret&analytics.reportsuite=weretail&target.clientcode=mycompany&target.email=me@adobe.com&target.password=password" http://localhost:4502/libs/cq/cloudservicesprovisioning/content/autoprovisioning.json
    ```
-
