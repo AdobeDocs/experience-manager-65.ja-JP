@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 discoiquuid: fdea5ede-d44f-463e-af8a-111ee7469ede
-translation-type: tm+mt
-source-git-commit: 072898f18d418eac8e9d9e94453db34d62dd3ed9
+exl-id: 7ccd67a7-9945-48c1-9986-f4eaf0f2b961
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1559'
 ht-degree: 73%
 
 ---
-
 
 # AEM Livefyre のレシピ{#aem-livefyre-recipes}
 
@@ -28,11 +27,11 @@ Media Wall は、ソーシャルおよびネイティブの Livefyre コンテ�
 
 AEM Livefyre パッケージでは初期設定済みの実装が提供されますが、従来の統合ではカスタム Livefyre AEM コンポーネントを作成する機能が提供されます。
 
-### AEM の統合 {#aem-integration}
+### AEM の統合  {#aem-integration}
 
 Livefyre Adobe Experience Manager パッケージは、AEM 6.1、6.2Sp1、6.3、6.4、6.4 SP1 で使用できます。AEM 5.x および 6.0 ではサポートされていません。詳しい手順については、[Livefyreとの統合](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html)を参照してください。
 
-サポートされているLivefyreアプリケーションを確認するには、[AEM Support Matrix for Livefyre Apps](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps)を参照してください。
+サポートされているLivefyreアプリを確認するには、 Livefyreアプリの[AEMサポート一覧](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#AEMSupportMatrixforLivefyreApps)を参照してください。
 
 ### 従来の実装(カスタマイズされたAEMコンポーネント用) {#traditional-implementation-for-customized-aem-components}
 
@@ -41,7 +40,7 @@ Livefyre をカスタム AEM コンポーネントまたは WordPress、Sitecore
 **方法 1：Designer アプリの実装**
 
 * **説明：** Livefyre アプリを統合するための最も簡単で最速の方法。数分で Media Wall App をページに統合するためのカスタマイズされた JavaScript 埋め込みコードを設計、構成、および生成できます。
-* **方法：Media Wallアプリの**  [作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
+* **方法：**  [Media Wallアプリの作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
 
 * **例：**[https://codepen.io/dharafyre/pen/bvGrLo](https://codepen.io/dharafyre/pen/bvGrLo)
 
@@ -59,13 +58,13 @@ SDK を使用した高度なカスタマイズについては、[StreamHub SDK](
 
 * カスタマイズされたエクスペリエンスとデータの視覚化を作成するために、[ブートストラップとストリーム API](https://docs.adobe.com/content/help/en/livefyre/implementation/advanced-topics/bootstrap-stream-api.html) を使用して Livefyre とソーシャルデータを利用することで、一から Livefyre Apps を作成できます。
 
-UGC用UIを作成する際は、[Twitter](https://developer.twitter.com/en/developer-terms/display-requirements.html)、[Facebook](https://ja.facebookbrand.com/#brand-guidelines-assets)、[Instagram](https://en.instagram-brand.com/)の表示ガイドラインに従っていることを確認してください。
+UGC用のUIを作成する際は、必ず[Twitter](https://developer.twitter.com/en/developer-terms/display-requirements.html)、[Facebook](https://ja.facebookbrand.com/#brand-guidelines-assets)、[Instagram](https://en.instagram-brand.com/)の表示ガイドラインに従ってください。
 
 ### Media Wall 認証の統合 {#media-wall-authentication-integration}
 
 認証を必要とする Media Wall の統合については、以下を参照してください。
 
-* [AEMIdentity Management用のシングルサインオン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) 統合のカスタマイズ
+* [AEM Identity Managementのシングルサインオン統](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) 合のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### ユースケースの概要  {#use-case-overview}
@@ -79,7 +78,7 @@ AEM の顧客として、標準 Livefyre AEM コンポーネントを使用し�
 1. [AEM Media Wall コンポーネントをページにドラッグアンドドロップ](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/livefyre.html#UseLivefyrewithAEMSites)
 1. [UGC をキュレートして Media Wall コンポーネントに表示するための、ストリームの設定とルールの追加](https://docs.adobe.com/content/help/en/livefyre/using/streams/c-streams.html)
 
-UGCのストリーミングに関するトレーニングビデオについては、[Livefyreでの自動コンテンツストリームの作成とソーシャルコンテンツの検索](https://helpx.adobe.com/jp/experience-manager/tutorials.html)を参照してください。
+ストリーミングUGCのトレーニングビデオについては、[自動コンテンツストリームの作成とAdobe Experience Manager Livefyreでのソーシャルコンテンツの検索](https://helpx.adobe.com/jp/experience-manager/tutorials.html)を参照してください。
 
 ### お客様の例 {#customer-examples}
 
@@ -88,7 +87,7 @@ UGCのストリーミングに関するトレーニングビデオについて�
 
 カスタマイズされたエクスペリエンスとデータの視覚化を作成するために、[ブートストラップとストリーム API](https://docs.adobe.com/content/help/en/livefyre/implementation/advanced-topics/bootstrap-stream-api.html) を使用して Livefyre とソーシャルデータを利用することで、一から Livefyre Apps を作成できます。
 
-認証が必要なLivefyreアプリについては、サードパーティの認証プラットフォームの[IDの統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)を参照してください。
+認証が必要なLivefyreアプリの場合は、サードパーティの認証プラットフォームの[ID統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)を参照してください。
 
 * [PGAツアーメディアウォール](https://www.pgatour.com/social-hub.html)
 * [TimeOut](https://www.timeout.com/london/restaurants/forest-bar-kitchen#tab_panel_3)
@@ -106,7 +105,7 @@ Livefyre コメントアプリケーションをカスタム AEM コンポーネ
 **方法 1：Designer アプリの実装**
 
 * **説明：** Livefyre アプリを統合するための最も簡単で最速の方法。数分で Media Wall App をページに統合するためのカスタマイズされた JavaScript 埋め込みコードを設計、構成、および生成できます。
-* **方法：コメントアプリの** [作成、プレビュー、投稿、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
+* **方法：** [コメントアプリの作成、プレビュー、公開、埋め込み](https://docs.adobe.com/content/help/en/livefyre/using/apps/c-create-an-app.html)
 
 * **例：**[https://codepen.io/dharafyre/pen/oYoJdP](https://codepen.io/dharafyre/pen/oYoJdP)
 
@@ -121,7 +120,7 @@ Livefyre コメントアプリケーションをカスタム AEM コンポーネ
 
 * **例：**[https://codepen.io/dharafyre/pen/oYoJdP](https://codepen.io/dharafyre/pen/oYoJdP)
 
-SDKを使用した高度なカスタマイズについては、[StreamHub SDKs](https://github.com/Livefyre/streamhub-sdk)を参照してください。
+SDKを使用した高度なカスタマイズについては、[StreamHub SDK](https://github.com/Livefyre/streamhub-sdk)を参照してください。
 
 **方法 3：API の実装**
 
@@ -129,12 +128,12 @@ SDKを使用した高度なカスタマイズについては、[StreamHub SDKs](
 
 ### コメントアプリ認証の統合  {#comments-app-authentication-integration}
 
-* [AEMIdentity Management用のシングルサインオン](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) 統合のカスタマイズ
+* [AEM Identity Managementのシングルサインオン統](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) 合のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-1}
 
-* [ポイズ語（キンバリークラーク）](https://www.poise.com/en-us/advice-and-support/blog-and-podcast/blog/5-holiday-party-tips-for-managing-lbl)
+* [ポイズ語（キンバリー・クラーク）](https://www.poise.com/en-us/advice-and-support/blog-and-podcast/blog/5-holiday-party-tips-for-managing-lbl)
 
 ## Livefyre AEM Assets 統合を使用して AEM Assets に UGC を読み込む {#use-livefyre-aem-assets-integration-to-import-ugc-in-aem-assets}
 
@@ -142,11 +141,11 @@ SDKを使用した高度なカスタマイズについては、[StreamHub SDKs](
 
 1. [Livefyre Asset Library フォルダーに UGC をキュレートするためのストリームの設定とルールの追加](https://docs.adobe.com/content/help/en/livefyre/using/streams/c-streams.html)。
 
-   1. UGCのストリーミングに関するトレーニングビデオについては、[Livefyreでの自動コンテンツストリームの作成とソーシャルコンテンツの検索](https://helpx.adobe.com/experience-manager/tutorials.html)を参照してください。
+   1. ストリーミングUGCのトレーニングビデオについては、[自動コンテンツストリームの作成とAdobe Experience Manager Livefyreでのソーシャルコンテンツの検索](https://helpx.adobe.com/experience-manager/tutorials.html)を参照してください。
 
 1. [Livefyre Asset Library フォルダー内のキュレーション済み UGC の収集、整理、管理](https://docs.adobe.com/content/help/en/livefyre/using/library/assets/c-assets.html)。
 
-   1. Livefyre Studioアセットライブラリでのフォルダーの作成と管理に関するトレーニングビデオについては、[Adobe Experience ManagerLivefyreでのアセットの操作](https://helpx.adobe.com/experience-manager/tutorials.html)を参照してください。
+   1. Livefyre Studio Asset Libraryでのフォルダーの作成と管理に関するトレーニングビデオについては、 [Adobe Experience Manager Livefyreでのアセットの操作](https://helpx.adobe.com/experience-manager/tutorials.html)を参照してください。
 
 1. [Livefyre Studio を使用してキュレーションされた UGC の権限のリクエスト](https://docs.adobe.com/content/help/en/livefyre/using/rights-requests/c-how-requesting-rights-works.html)。
 
@@ -181,21 +180,20 @@ Livefyre レビューアプリをカスタム AEM コンポーネントまたは
 
 * **例：**[https://codepen.io/dharafyre/pen/GXgvvd](https://codepen.io/dharafyre/pen/GXgvvd)
 
-SDKを使用した高度なカスタマイズについては、[StreamHub SDKs](https://github.com/Livefyre/streamhub-sdk)を参照してください。
+SDKを使用した高度なカスタマイズについては、[StreamHub SDK](https://github.com/Livefyre/streamhub-sdk)を参照してください。
 
 **メソッド 2：API の実装**
 
 * カスタマイズされたエクスペリエンスとデータの視覚化を作成するために、ブートストラップとストリーム API を使用して Livefyre とソーシャルデータを利用することで、一から Livefyre Apps を作成できます。
 
-その他の評価およびレビューAPIについては、[こちら](https://api.livefyre.com/docs/apis/by-category/ratings-and-reviews)を参照してください。
+追加の評価およびレビューAPIは、[こちら](https://api.livefyre.com/docs/apis/by-category/ratings-and-reviews)を参照してください。
 
 ### コメントアプリ認証の統合 {#comments-app-authentication-integration-1}
 
-* [AEMIdentity Management用のシングルサインオン](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) 統合のカスタマイズ
+* [AEM Identity Managementのシングルサインオン統](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/livefyre.html#CustomizeSingleSignonIntegration) 合のカスタマイズ
 * サードパーティ製認証プラットフォーム用 [ID 統合](https://docs.adobe.com/content/help/en/livefyre/implementation/identity-integration/t-about-identity-integration.html)
 
 ### お客様の例 {#customer-examples-2}
 
 * [TimeOut](https://www.timeout.com/london/restaurants/forest-bar-kitchen#tab_panel_3)
 * [myrecipes](https://www.myrecipes.com/recipe/shrimp-florentine-pasta)
-
