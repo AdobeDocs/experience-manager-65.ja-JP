@@ -10,26 +10,25 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: a6e5810b-dac5-4137-93cf-5d8d53cacc49
 feature: Context Hub
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: 24bdf9fc-71e6-4b99-9dad-0f41a5e36b98
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3165'
 ht-degree: 90%
 
 ---
 
-
 # ClientContext JavaScript API{#client-context-javascript-api}
 
 ## CQ_Analytics.ClientContextMgr {#cq-analytics-clientcontextmgr}
 
-CQ_Analytics.ClientContextMgrオブジェクトは、自己登録済みのセッションストアのセットを含むシングルトンで、セッションストアの登録、保存、管理のためのメソッドを提供します。
+CQ_Analytics.ClientContextMgrオブジェクトは、自己登録されたセッションストアのセットを含むシングルトンで、セッションストアを登録、永続化、および管理するためのメソッドを提供します。
 
 CQ_Analytics.PersistedSessionStore を拡張します。
 
-### メソッド  {#methods}
+### メソッド {#methods}
 
-#### getRegisteredStore(name) {#getregisteredstore-name}
+#### getRegisteredStore(name)  {#getregisteredstore-name}
 
 指定された名前のセッションストアを返します。[セッションストアへのアクセス](/help/sites-developing/client-context.md#accessing-session-stores)も参照してください。
 
@@ -55,7 +54,7 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 ## CQ_Analytics.ClientContextUtils  {#cq-analytics-clientcontextutils}
 
-セッションストアのアクティベートと登録をリッスンするためのメソッドを提供します。[セッションストアが定義されていて初期化されているかの確認](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized)も参照してください。
+セッションストアのアクティベートと登録をリッスンするためのメソッドを提供します。[セッションストアが定義され、初期化されているかどうかの確認](/help/sites-developing/client-context.md#checking-that-a-session-store-is-defined-and-initialized)も参照してください。
 
 ### メソッド {#methods-1}
 
@@ -79,7 +78,7 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 * storeName：String。リスナーに追加するセッションストアの名前。
 * callback：Function。ストアの初期化時に呼び出す関数。
-* delay：Boolean または Number。コールバック関数の呼び出しを遅延させる時間（ミリ秒単位）。`true`のboolean値は、デフォルトの遅延`200 ms`を使用します。 `false`または負の数のboolean値は、遅延を使用しません。
+* delay：Boolean または Number。コールバック関数の呼び出しを遅延させる時間（ミリ秒単位）。ブール値`true`は、デフォルトの遅延`200 ms`を使用します。 `false`または負の数のboolean値を指定すると、遅延は使用されません。
 
 **戻り値**
 
@@ -87,7 +86,7 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 #### onStoreRegistered(storeName, callback)  {#onstoreregistered-storename-callback}
 
-セッションストアが登録されたときに呼び出されるコールバック関数を登録します。登録イベントは、ストアが[CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr)に登録されたときに発生します。
+セッションストアが登録されたときに呼び出されるコールバック関数を登録します。ストアが[CQ_Analytics.ClientContextMgr](#cq-analytics-clientcontextmgr)に登録されると、登録イベントが発生します。
 
 **パラメーター**
 
@@ -100,7 +99,7 @@ CQ_Analytics.PersistedSessionStore を拡張します。
 
 ## CQ_Analytics.JSONPStore  {#cq-analytics-jsonpstore}
 
-JSON データを格納する非永続セッションストア。データは外部 JSONP サービスから取得されます。`getInstance`または`getRegisteredInstance`メソッドを使用して、このクラスのインスタンスを作成します。
+JSON データを格納する非永続セッションストア。データは外部 JSONP サービスから取得されます。`getInstance`メソッドまたは`getRegisteredInstance`メソッドを使用して、このクラスのインスタンスを作成します。
 
 CQ_Analytics.JSONStore を拡張します。
 
@@ -156,7 +155,7 @@ JSONP サービスを呼び出します。JSONP の URL は、指定されたコ
 
 #### registerNewInstance(storeName, serviceURL, dynamicData, callback)  {#registernewinstance-storename-serviceurl-dynamicdata-callback}
 
-CQ_Analytics.JSONPStoreオブジェクトを作成し、ストアをClient Contextに登録します。
+CQ_Analytics.JSONPStoreオブジェクトを作成し、ストアをClientContextに登録します。
 
 **パラメーター**
 
@@ -205,7 +204,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 継承されるメソッドについては、CQ_Analytics.SessionStore も参照してください。
 
-#### clear()  {#clear}
+#### clear() {#clear}
 
 セッションストアのデータを削除し、すべての初期化プロパティを削除します。
 
@@ -230,7 +229,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 CQ_Analytics.JSONStore オブジェクト。
 
-#### getJSON()  {#getjson}
+#### getJSON() {#getjson}
 
 セッションストアのデータを JSON 形式で取得します。
 
@@ -242,9 +241,9 @@ CQ_Analytics.JSONStore オブジェクト。
 
 JSON 形式のストアデータを表すオブジェクト。
 
-#### init()  {#init}
+#### init() {#init}
 
-セッションストアをクリアし、初期化プロパティを使用して初期化します。初期化フラグを`true`に設定し、`initialize`と`update`のイベントを実行します。
+セッションストアをクリアし、初期化プロパティを使用して初期化します。初期化フラグを`true`に設定し、`initialize`イベントと`update`イベントを発生させます。
 
 **パラメーター**
 
@@ -279,7 +278,7 @@ B/B1: "valueBB1"
 **パラメーター**
 
 * jsonData：保存するデータを格納する JSON オブジェクト。
-* doNotClear:値をtrueに設定すると、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値をfalseに設定した場合、既存の初期化プロパティが削除された後で、JSONオブジェクトから派生した初期化プロパティが追加されます。
+* doNotClear:値がtrueの場合は、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値がfalseの場合、既存の初期化プロパティを削除してから、JSONオブジェクトから派生した初期化プロパティを追加します。
 
 **戻り値**
 
@@ -385,7 +384,7 @@ JSONP サービスを呼び出します。JSONP の URL は、指定されたコ
 
 #### registerNewInstance(storeName, serviceURL, dynamicData, callback)  {#registernewinstance-storename-serviceurl-dynamicdata-callback-1}
 
-CQ_Analytics.PersistedJSONPStoreオブジェクトを作成し、ストアをクライアントコンテキストに登録します。
+CQ_Analytics.PersistedJSONPStoreオブジェクトを作成し、ストアをClientContextに登録します。
 
 **パラメーター**
 
@@ -480,7 +479,7 @@ B/B1: "valueBB1"
 **パラメーター**
 
 * jsonData：保存するデータを格納する JSON オブジェクト。
-* doNotClear:値をtrueに設定すると、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値をfalseに設定した場合、既存の初期化プロパティが削除された後で、JSONオブジェクトから派生した初期化プロパティが追加されます。
+* doNotClear:値がtrueの場合は、既存の初期化プロパティが保持され、JSONオブジェクトから派生した初期化プロパティが追加されます。 値がfalseの場合、既存の初期化プロパティを削除してから、JSONオブジェクトから派生した初期化プロパティを追加します。
 
 **戻り値**
 
@@ -517,7 +516,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 継承されるメソッドについては、CQ_Analytics.SessionStore を参照してください。
 
-継承されたメソッド`clear`、`setProperty`、`setProperties`、`removeProperty`を使用してストアデータを変更する場合、変更されたプロパティにnotPersistedというフラグが付けられていない限り、変更は自動的に保持されます。
+継承されたメソッド`clear`、`setProperty`、`setProperties`、`removeProperty`を使用してストアデータを変更すると、変更されたプロパティに「notPersisted」とフラグが付けられない限り、変更は自動的に保持されます。
 
 #### getStoreKey() {#getstorekey}
 
@@ -545,7 +544,7 @@ CQ_Analytics.SessionStore を拡張します。
 
 #### persist() {#persist}
 
-セッションストアを保持します。デフォルトの永続性モードでは、ブラウザー`localStorage`が使用され、`ClientSidePersistence`が名前として使用されます(`window.localStorage.set("ClientSidePersistance", store);`)
+セッションストアを保持します。デフォルトの永続モードでは、`ClientSidePersistence`を名前(`window.localStorage.set("ClientSidePersistance", store);`)として使用するブラウザー`localStorage`を使用します
 
 localStorage が使用できないまたは書き込めない場合、ストアはウィンドウのプロパティとして保持されます。
 
@@ -687,7 +686,7 @@ excluded：（オプション）結果から除外するプロパティ名の配
 
 セッションプロパティ名を表す String 値の配列。
 
-#### getSessionStore()  {#getsessionstore}
+#### getSessionStore() {#getsessionstore}
 
 現在のオブジェクトに結び付けられているセッションストアを返します。
 
@@ -711,7 +710,7 @@ this
 
 戻り値はありません。
 
-#### isInitialized()  {#isinitialized}
+#### isInitialized() {#isinitialized}
 
 セッションストアが初期化されていることを示します。
 
