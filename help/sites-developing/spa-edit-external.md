@@ -1,8 +1,8 @@
 ---
 title: AEM 内での外部 SPA の編集
 description: このドキュメントでは、スタンドアロン SPA を AEM インスタンスにアップロードし、編集可能なコンテンツのセクションを追加し、オーサリングを有効にするための推奨手順について説明します。
-translation-type: tm+mt
-source-git-commit: 431bed450ed5b0239d9191dcf061f01e64b8981a
+exl-id: 25236af4-405a-4152-8308-34d983977e9a
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2118'
 ht-degree: 99%
@@ -332,5 +332,5 @@ AEM のコンテキストで SPA を理解するには、次の参照資料が�
 * [React を使用した AEM での SPA の概要](spa-getting-started-react.md)
 * [SPA リファレンス資料（API リファレンス）](spa-reference-materials.md)
 * [SPA 青写真と PageModelManager](spa-blueprint.md#pagemodelmanager)
-* [SPA モデルルーティング ](spa-routing.md)
-* [SPA およびサーバーサイドレンダリング ](spa-ssr.md)
+* [SPA モデルルーティング](spa-routing.md)
+* [SPA およびサーバーサイドレンダリング](spa-ssr.md)
