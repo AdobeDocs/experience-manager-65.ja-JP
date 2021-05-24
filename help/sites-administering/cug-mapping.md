@@ -11,8 +11,7 @@ content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
-feature: Security
-translation-type: tm+mt
+feature: セキュリティ
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
 workflow-type: tm+mt
 source-wordcount: '505'
@@ -34,7 +33,7 @@ ht-degree: 74%
   <tr>
    <td><p>プロパティ：cq:cugEnabled</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td><p>認証：</p> <p>ノード：rep:cugPolicyのノードタイプ rep:CugPolicy</p> <p>ノードタイプの宣言：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 認証:</p> <p>Mixin タイプ：granite:AuthenticationRequired</p> </td>
-   <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>メモ：ポリシーは、設定されているサポート対象パスにのみ適用できます。</p> <p>rep:cugPolicy および rep:CugPolicy という名前のノードは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードで認証要件を適用するには、mixin type granite:AuthenticationRequiredを追加すれば十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
+   <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>メモ：ポリシーは、設定されているサポート対象パスにのみ適用できます。</p> <p>rep:cugPolicy および rep:CugPolicy という名前のノードは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードに認証要件を適用するには、mixinタイプgranite:AuthenticationRequiredを追加するだけで十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
    <td><p>プロパティ：cq:cugPrincipals</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
@@ -44,7 +43,7 @@ ht-degree: 74%
   <tr>
    <td><p>プロパティ：cq:cugLoginPage</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td><p>プロパティ：granite:loginPath（オプション）</p> <p>ノードタイプの宣言：granite:AuthenticationRequired</p> </td>
-   <td><p>mixinタイプgranite:AuthenticationRequiredが定義されたJCRノード。オプションで別のログインパスを定義できます。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
+   <td><p>mixinタイプgranite:AuthenticationRequiredが定義されたJCRノードは、オプションで別のログインパスを定義できます。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
    <td><p>プロパティ：cq:cugRealm</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
@@ -94,9 +93,9 @@ ht-degree: 74%
    特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
 
 * LoginSelectorHandler に一致するログインパスを公開する LoginPathProvider を実装する OSGi コンポーネント。これは、granite:AuthenticationRequired mixin タイプによって、コンテンツに格納されている変更された認証要件を監視するオブザーバを登録するために使用される RequirementHandler への必須参照を持っています。
-* SlingAuthenticatorに認証要件の変更を通知するRequirementHandlerの実装OSGiコンポーネント。
+* RequirementHandlerを実装するOSGiコンポーネント。SlingAuthenticatorに対し、認証要件の変更を通知します。
 
-   このコンポーネントの構成ポリシーはREQUIREなので、サポートされるパスのセットが指定されている場合にのみアクティブ化されます。
+   このコンポーネントの構成ポリシーはREQUIREなので、サポートされているパスのセットが指定されている場合にのみ有効化されます。
 
    サービスを有効にすると RequirementService が起動します。
 
