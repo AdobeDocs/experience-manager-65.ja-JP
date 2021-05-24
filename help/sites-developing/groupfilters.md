@@ -11,14 +11,13 @@ content-type: reference
 discoiquuid: 9fef1f91-a222-424a-8e20-3599bedb8b41
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
-translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 83%
 
 ---
-
 
 # デバイスグループフィルターの作成{#creating-device-group-filters}
 
@@ -36,7 +35,7 @@ ht-degree: 83%
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、この例のJavaクラスでは`@Component`および`@Service`注釈が使用されています。 このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、この例のJavaクラスでは`@Component`注釈と`@Service`注釈を使用しています。 このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -117,7 +116,7 @@ cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML
 
 以下に示すサンプルの DeviceGroupFilter 実装では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。このフィルターは、タッチデバイスグループに精度を追加します。アプリケーション UI のボタンのサイズは、画面の物理サイズに関係なく同じにしてください。他の項目（テキストなど）のサイズは変更できます。フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
 
-このフィルタは、`physical_screen_height`と`physical_screen_width` WURFL™のプロパティ名にサイズ条件を適用します。
+このフィルターは、 `physical_screen_height`および`physical_screen_width` WURFL™のプロパティ名にサイズ条件を適用します。
 
 ```java
 package com.adobe.example.myapp;
@@ -186,13 +185,13 @@ getTitle メソッドと getDescription メソッドが返す値 String は、�
 
 **依存関係:**
 
-* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroupとDeviceGroupFilterインターフェイスを提供します。
+* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroupおよびDeviceGroupFilterインターフェイスを提供します。
 
 * `org.apache.felix.scr.annotations.jar`：Component アノテーションと Service アノテーションを提供します。
 
-DeviceGroupインターフェイスとDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれます。このJARファイルは、パブリックAdobeリポジトリから取得できます。
+DeviceGroupおよびDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれています。このJARファイルは、パブリック・リポジトリからAdobeできます。
 
-この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。AdobeのWebコンソール([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))を使用して、これが環境ーに展開されたバンドルバージョンであることを確認します。
+この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。AdobeWebコンソール([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))を使用して、これが環境にデプロイされるバンドルのバージョンであることを確認します。
 
 **POM：**（ユーザーの POM では別の groupId と version が使用されます。）
 
