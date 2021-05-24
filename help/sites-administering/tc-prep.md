@@ -9,15 +9,14 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
-feature: Language Copy
-translation-type: tm+mt
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+feature: 言語コピー
+exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '694'
-ht-degree: 81%
+ht-degree: 97%
 
 ---
-
 
 # 翻訳するコンテンツの準備{#preparing-content-for-translation}
 
@@ -37,17 +36,17 @@ ht-degree: 81%
              |- zh
 ```
 
-サイトの各言語ブランチは言語コピーと呼ばれます。言語コピーのルートページ（言語ルート）では、言語コピー内のコンテンツの言語を識別します。例えば、`/content/geometrixx/fr`はフランス語のコピーの言語ルートです。 言語コピーでは、ソースサイトの翻訳を実行する際に正しい言語がターゲットになるように、[正しく設定された言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root)を使用する必要があります。
+サイトの各言語ブランチは言語コピーと呼ばれます。言語コピーのルートページ（言語ルート）では、言語コピー内のコンテンツの言語を識別します。例えば、`/content/geometrixx/fr` は、フランス語の言語コピー用の言語ルートです。ソースサイトの翻訳の実行時に適切な言語がターゲットになるように、言語コピーでは、[正しく設定された言語ルート](/help/sites-administering/tc-prep.md#creating-a-language-root)を使用する必要があります。
 
 サイトのコンテンツを最初にオーサリングするための言語コピーが言語マスターです。言語マスターは、他の言語に翻訳されるソースです。
 
 翻訳するサイトを準備するには、次の手順を使用します。
 
-1. 言語マスターの言語ルートを作成します。例えば、英語の Geometrixx Demo Site の言語ルートは /content/geometrixx/en です。[言語ルートの作成](/help/sites-administering/tc-prep.md#creating-a-language-root)の情報に従って言語ルートが正しく設定されていることを確認します。
+1. 言語マスターの言語ルートを作成します。例えば、英語の Geometrixx Demo Site の言語ルートは /content/geometrixx/en です。[言語ルートの作成](/help/sites-administering/tc-prep.md#creating-a-language-root)に記載の情報に従って言語ルートが正しく設定されていることを確認してください。
 1. 言語マスターのコンテンツをオーサリングします。
 1. サイトの各言語コピーの言語ルートを作成します。例えば、Geometrixx のサンプルサイトのフランス語の言語コピーは /content/geometrixx/fr です。
 
-翻訳用にコンテンツを準備した後、言語コピーや関連する翻訳プロジェクトに、見つからないページを自動的に作成できます。（「[翻訳プロジェクトの作成](/help/sites-administering/tc-manage.md)」を参照）。AEMでのコンテンツ翻訳プロセスの概要については、「[多言語Webサイト用のコンテンツの翻訳](/help/sites-administering/translation.md)」を参照してください。
+翻訳するコンテンツの準備が完了したら、言語コピーおよび関連する翻訳プロジェクトの不足ページを自動的に作成できます（[翻訳プロジェクトの作成](/help/sites-administering/tc-manage.md)を参照）。AEM のコンテンツ翻訳プロセスの概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
 
 ## 言語ルートの作成 {#creating-a-language-root}
 
@@ -57,7 +56,7 @@ ht-degree: 81%
 
 * `<language-code>`サポートされている言語コードは、ISO-639-1 で定義されている 2 文字のコード（例：`en`）です。
 
-* `<language-code>_<country-code>` またはサポ `<language-code>-<country-code>`ートされる国コードは、ISO 3166で定義される小文字または大文字の2文字のコードです(例：、 `en_US` `en_us` `en_GB` `en-gb`、など)。
+* `<language-code>_<country-code>` また `<language-code>-<country-code>`は、ISO 3166で定義されている小文字または大文字の2文字コード(例： `en_US`、 `en_us`、 `en_GB`、 `en-gb`)がサポートされています。
 
 グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。「名前」プロパティは、リポジトリ内の page ノードの名前として使用されます。そのため、このプロパティによってページのパスが指定されます（http://localhost:4502/content/geometrixx/fr.html）。
 
@@ -73,7 +72,7 @@ ht-degree: 81%
    ![chlimage_1-21](assets/chlimage_1-21a.png)
 
 1. ページテンプレートを選択して、「次へ」をクリックまたはタップします。
-1. 「名前」フィールドに、国コードを`<language-code>`または`<language-code>_<country-code>`の形式で入力します。例：`en`、`en_US`、`en_us`、`en_GB`、`en_gb`。 ページのタイトルを入力します。
+1. 「名前」フィールドに言語コードを入力します。言語コードの形式は `<language-code>` または `<language-code>_<country-code>` です。例：`en`、`en_US`、`en_us`、`en_GB`、`en_gb`。ページのタイトルを入力します。
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
@@ -92,4 +91,3 @@ ht-degree: 81%
    ![chlimage_1-24](assets/chlimage_1-24a.png)
 
 1. 参照パネルで、「**言語コピー**」をクリックまたはタップします。Web サイトの言語コピーが言語コピーパネルに表示されます。
-
