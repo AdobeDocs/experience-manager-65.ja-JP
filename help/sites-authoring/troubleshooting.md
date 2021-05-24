@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
-translation-type: tm+mt
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 100%
 
 ---
-
 
 # オーサリング時の AEM のトラブルシューティング{#troubleshooting-aem-when-authoring}
 
@@ -65,4 +64,3 @@ ht-degree: 100%
 * **解決策**:
 
    * ページを更新します。
-
