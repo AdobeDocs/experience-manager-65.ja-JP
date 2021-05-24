@@ -10,14 +10,13 @@ topic-tags: platform
 content-type: reference
 discoiquuid: cfd90e8f-9b9b-4d0b-be31-828469b961de
 docset: aem65
-translation-type: tm+mt
-source-git-commit: ec528e115f3e050e4124b5c232063721eaed8df5
+exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 67%
 
 ---
-
 
 # ページテンプレート - 静的{#page-templates-static}
 
@@ -30,7 +29,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->[編集可能なテ](/help/sites-developing/page-templates-editable.md) ンプレートも利用でき、最も柔軟性の高い最新の機能を備えたテンプレートとしてお勧めします。
+>[編集可能](/help/sites-developing/page-templates-editable.md) なテンプレートも使用でき、最も柔軟性が高く、最新の機能を利用するために推奨されるタイプのテンプレートです。
 
 ## テンプレートのプロパティおよび子ノード {#properties-and-child-nodes-of-a-template}
 
@@ -56,7 +55,7 @@ ht-degree: 67%
   <tr>
    <td> allowedParents</td>
    <td> String[]</td>
-   <td>このテンプレートの親として許可されているテンプレートのパスです。<br /> </td>
+   <td>このテンプレートの親として許可されているテンプレートのパス。<br /> </td>
   </tr>
   <tr>
    <td> allowedPaths</td>
@@ -70,7 +69,7 @@ ht-degree: 67%
   </tr>
   <tr>
    <td> jcr:description</td>
-   <td> String</td>
+   <td> 文字列</td>
    <td>テンプレートの説明。<br /> </td>
   </tr>
   <tr>
@@ -103,7 +102,7 @@ ht-degree: 67%
 
 テンプレートはページの基礎です。
 
-ページを作成するには、テンプレート(node-tree `/apps/<myapp>/template/<mytemplate>`)をサイトツリー内の対応する位置にコピーする必要があります。これは、「**Webサイト**」タブを使用してページを作成した場合に起こることです。
+ページを作成するには、テンプレート(node-tree `/apps/<myapp>/template/<mytemplate>`)をサイトツリー内の対応する位置にコピーする必要があります。これは、**「Webサイト」**&#x200B;タブを使用してページを作成した場合に発生することです。
 
 このコピー処理により、ページには、初期コンテンツ（通常はトップレベルコンテンツのみ）と sling:resourceType プロパティ、ページのレンダリングに使用するページコンポーネントのパス（子ノード jcr:content に含まれるすべてのもの）が与えられます。
 
@@ -135,11 +134,11 @@ ht-degree: 67%
 
 ### テンプレートによって作成されるコンテンツ {#the-content-produced-by-a-template}
 
-テンプレートは、`cq:Page`タイプのページの作成に使用されます（前述のように、ページは特別なタイプのコンポーネントです）。 各AEMページには、構造化されたノード`jcr:content`があります。 このスケーリングは：
+テンプレートは、`cq:Page`型のページを作成するために使用されます（前述のように、ページは特別なタイプのコンポーネントです）。 各AEMページには、構造化されたノード`jcr:content`があります。 このスケーリングは：
 
 * タイプが cq:PageContent である。
 * 定義済みのコンテンツ定義を保持する構造化ノードタイプである。
-* コンテンツのレンダリングに使用されるslingスクリプトを保持するコンポーネントを参照するプロパティ`sling:resourceType`を持ちます
+* には、コンテンツのレンダリングに使用されるslingスクリプトを保持するコンポーネントを参照するプロパティ`sling:resourceType`があります
 
 ### デフォルトテンプレート {#default-templates}
 
@@ -168,31 +167,31 @@ AEM にはそのまま使用できるデフォルトのテンプレートが多�
 
 多くの場合、既存のテンプレートを使用して、各自の用途に合わせて新しいテンプレートを開発します。詳しくは、[ページテンプレートの開発](#developing-page-templates)を参照してください。
 
-Webサイト用の既存のテンプレートを有効にし、**Webサイト**&#x200B;コンソールから&#x200B;**Webサイト**&#x200B;のすぐ下にあるページを作成する際に、**ページ**&#x200B;を作成ダイアログに表示するには、テンプレートノードのallowedPathsプロパティを次のように設定します。**/content(/.*)?**
+Webサイトの既存のテンプレートを有効にし、**Webサイト**&#x200B;コンソールから&#x200B;**Webサイト**&#x200B;のすぐ下にページを作成する際に、**ページを作成**&#x200B;ダイアログに表示するには、テンプレートノードのallowedPathsプロパティを次のように設定します。**/content(/.*)?**
 
 ## テンプレートデザインの適用方法{#how-template-designs-are-applied}
 
-[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用してUIでスタイルを定義すると、スタイルが定義されているコンテンツノードの正確なパスでデザインが維持されます。
+UIで[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用してスタイルを定義すると、そのスタイルが定義されているコンテンツノードの正確なパスでデザインが保持されます。
 
 >[!CAUTION]
 >
->Adobeでは、[デザインモード](/help/sites-authoring/default-components-designmode.md)を通じてのみデザインを適用することをお勧めします。
+>Adobeは、[デザインモード](/help/sites-authoring/default-components-designmode.md)を介してのみデザインを適用することをお勧めします。
 >
 >例えば、CRX DE でデザインを変更することはベストプラクティスではなく、そのようなデザインのアプリケーションは、意図した動作とは異なることがあります。
 
-デザインモードを使用してのみデザインが適用される場合、次のセクション[デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)、[デシジョンツリー](/help/sites-developing/page-templates-static.md#decision-tree)および[例](/help/sites-developing/page-templates-static.md#example)は適用されません。
+デザインがデザインモードを使用してのみ適用される場合、次の節（[デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)、[デシジョンツリー](/help/sites-developing/page-templates-static.md#decision-tree)、[例](/help/sites-developing/page-templates-static.md#example)）は適用されません。
 
 ### 設計パスの解像度{#design-path-resolution}
 
-静的テンプレートに基づいてコンテンツをレンダリングする場合、AEMは、コンテンツ階層の移動に基づいて、最も関連性の高いデザインとスタイルをコンテンツに適用しようとします。
+静的テンプレートに基づいてコンテンツをレンダリングする場合、AEMは、コンテンツ階層のトラバーサルに基づいて、最も関連性の高いデザインとスタイルをコンテンツに適用しようとします。
 
-AEMは、次の順序で、コンテンツノードに最も適したスタイルを決定します。
+AEMは、次の順序でコンテンツノードに最も関連するスタイルを決定します。
 
-* コンテンツノードの完全で正確なパスのデザインがある場合（デザインモードでデザインを定義した場合など）、そのデザインを使用します。
+* （デザインモードでデザインを定義する場合と同様に）コンテンツノードの完全で正確なパスのデザインがある場合は、そのデザインを使用します。
 * 親のコンテンツノードのデザインがある場合は、そのデザインを使用します。
-* コンテンツノードのパス上のノードにデザインがある場合は、そのデザインを使用します。
+* コンテンツノードのパス上にノードのデザインがある場合は、そのデザインを使用します。
 
-最後の2つの場合、該当するデザインが複数ある場合は、コンテンツノードに最も近いデザインを使用します。
+最後の2つのケースで、適用可能なデザインが複数ある場合は、コンテンツノードに最も近いものを使用します。
 
 ### デシジョンツリー {#decision-tree}
 
@@ -202,18 +201,18 @@ AEMは、次の順序で、コンテンツノードに最も適したスタイ�
 
 ### 例 {#example}
 
-任意のノードにデザインを適用できる単純なコンテンツ構造を次に示します。
+デザインを任意のノードに適用できる、シンプルなコンテンツ構造を次のように考えます。
 
 `/root/branch/leaf`
 
-次の表に、AEMがデザインを選択する方法を示します。
+次の表に、AEMによるデザインの選択方法を示します。
 
 <table>
  <tbody>
   <tr>
    <td><strong>デザインの検索<br /> </strong></td>
-   <td><strong>のデザインが存在する<br /> </strong></td>
-   <td><strong>選択されたデザイン<br /> </strong></td>
+   <td><strong>デザインは<br /> </strong></td>
+   <td><strong>選択したデザイン<br /> </strong></td>
    <td><strong>コメント</strong></td>
   </tr>
   <tr>
@@ -221,19 +220,19 @@ AEMは、次の順序で、コンテンツノードに最も適したスタイ�
       </code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> <p><code>leaf</code></p> </td>
    <td><code>leaf</code></td>
-   <td>最も正確な一致は常に取得されます。<br /> </td>
+   <td>最も正確な一致は常に取られます。<br /> </td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> </td>
    <td><code>branch</code></td>
-   <td>ツリー内で最も近いマッチの下位にフォールバックします。</td>
+   <td>ツリー内の最も近いマッチの下部に戻ります。</td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
    <td><code>root</code></td>
    <td><code>root</code></td>
-   <td>他のすべてが失敗した場合は、残りのものを取ってください。<br /> </td>
+   <td>他のすべてが失敗した場合は、残りの値を取ります。<br /> </td>
   </tr>
   <tr>
    <td><code>branch</code></td>
@@ -260,7 +259,7 @@ AEMは、次の順序で、コンテンツノードに最も適したスタイ�
    <td><p><code>root</code></p> <p><code class="code">leaf
        </code></p> </td>
    <td><code>root</code></td>
-   <td><p>完全一致がない場合は、ツリーの下の方を選択します。</p> <p>これは常に適用できるが、ツリーの上のほうは特定しすぎると仮定しています。<br /> </p> </td>
+   <td><p>完全一致がない場合は、ツリーの下の方を選択します。</p> <p>これは常に当てはまるが、ツリーの上には特定しすぎる可能性があると仮定します。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -287,7 +286,7 @@ AEM ページのテンプレートは、新しいページを作成する際に�
 
    >[!NOTE]
    >
-   >**Webサイト**&#x200B;コンソールから&#x200B;**Webサイト**&#x200B;の下にページを作成する際に、**ページを作成**&#x200B;ダイアログにテンプレートを表示する場合は、テンプレートノードの`allowedPaths`プロパティを次のように設定します。`/content(/.*)?`
+   >**Webサイト**&#x200B;コンソールから&#x200B;**Webサイト**&#x200B;のすぐ下にページを作成する際に、**ページを作成**&#x200B;ダイアログにテンプレートを表示する場合は、テンプレートノードの`allowedPaths`プロパティを次のように設定します。`/content(/.*)?`
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
@@ -314,9 +313,9 @@ AEM ページのテンプレートは、新しいページを作成する際に�
 
 ## 既存のテンプレートを使用可能にする {#making-an-existing-template-available}
 
-この例では、特定のコンテンツパスにテンプレートを使用できるようにする方法を示しています。新しいページを作成するときにページ作成者が使用できるテンプレートは、[利用可能なテンプレート](/help/sites-developing/templates.md#template-availability)で定義されているロジックによって決まります。
+この例では、特定のコンテンツパスにテンプレートを使用できるようにする方法を示しています。新しいページを作成する際にページ作成者が使用できるテンプレートは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)で定義されたロジックによって決まります。
 
 1. CRXDE Lite で、ページに使用するテンプレート（Newsletter テンプレートなど）に移動します。
-1. `allowedPaths`プロパティと、[テンプレートの可用性](/help/sites-developing/templates.md#template-availability)に使用する他のプロパティを変更します。 例：`allowedPaths`:`/content/geometrixx-outdoors/[^/]+(/.*)?`は、このテンプレートが`/content/geometrixx-outdoors`以下の任意のパスで許可されることを意味します。
+1. `allowedPaths`プロパティと、[テンプレートの使用可能性](/help/sites-developing/templates.md#template-availability)に使用する他のプロパティを変更します。 例： `allowedPaths`:`/content/geometrixx-outdoors/[^/]+(/.*)?`は、このテンプレートが`/content/geometrixx-outdoors`以下の任意のパスで許可されることを意味します。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
