@@ -9,14 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
-translation-type: tm+mt
-source-git-commit: f64eb57a69f2124523bd6eaed3e2f58a54c1ea8e
+exl-id: 42e8d804-6b6a-432e-a651-940b9f45db4e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 89%
 
 ---
-
 
 # Cookie の使用法の設定{#configuring-cookie-usage}
 
@@ -31,7 +30,7 @@ AEM では、Web ページでの Cookie の使用方法を設定および制御�
 
 Adobe Granite Opt-Out Service の設定によって、Web ページでの Cookie の使用方法を指定します。次の表に、設定可能なプロパティについて説明します。
 
-サービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用して、OSGi設定をリポジトリ](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)に追加します。次の表に、どちらのメソッドにも必要なプロパティを示します。OSGi設定の場合、サービスPIDは`com.adobe.granite.optout`です。
+サービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用して、リポジトリ](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)にOSGi設定を追加します。次の表に、どちらの方法でも必要なプロパティを示します。OSGi設定の場合、サービスPIDは`com.adobe.granite.optout`です。
 
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 | 説明 |
 |---|---|---|
