@@ -80,8 +80,8 @@ Tar Micro Kernel のコールドスタンバイ機能では、1 つ以上のス�
 >
 >セグメントノードストアおよびスタンバイストアサービスの PID は、AEM 6.3 では以前のバージョンと比較して次のように変更されました。
 >
->* org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreServiceからorg.apache.jackrabbit.oak.segment.standby.store.StandbyStoreServiceへ
->* org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreServiceからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreServiceへの
+>* org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreServiceからorg.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
+>* org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreServiceからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreService
 
 >
 >
@@ -96,14 +96,14 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
 1. インスタンスをシャットダウンし、コールドスタンバイインスタンスを実行する場所にインストールフォルダーをコピーします。異なるマシンから実行する場合でも、各フォルダーにわかりやすい名前を付けて（*aem-primary* や *aem-standby* など）、各インスタンスを区別するようにしてください。
 1. プライマリインスタンスのインストールフォルダーに移動し、次の手順を実行します。
 
-   1. `aem-primary/crx-quickstart/install`下に存在する可能性のある以前のOSGi設定を確認して削除します
+   1. `aem-primary/crx-quickstart/install`の下にある可能性のある以前のOSGi設定を確認して削除します。
 
-   1. `aem-primary/crx-quickstart/install`の下に`install.primary`という名前のフォルダーを作成
+   1. `aem-primary/crx-quickstart/install`の下に`install.primary`という名前のフォルダーを作成します。
 
-   1. `aem-primary/crx-quickstart/install/install.primary`の下に、事前に設定したノードストアとデータストアに必要な構成を作成します
+   1. `aem-primary/crx-quickstart/install/install.primary`の下に、優先ノードストアとデータストアに必要な設定を作成します。
    1. `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config` というファイルを同じ場所に作成し、適切に設定します。設定オプションについて詳しくは、[設定](/help/sites-deploying/tarmk-cold-standby.md#configuration)を参照してください。
 
-   1. AEM TarMKインスタンスを外部データストアと共に使用する場合は、`aem-primary/crx-quickstart/install`の下に`crx3`という名前のフォルダー`crx3`を作成します
+   1. 外部データストアと共にAEM TarMKインスタンスを使用する場合は、`aem-primary/crx-quickstart/install`の下に`crx3`という名前のフォルダーを作成します。`crx3`
 
    1. データストア設定ファイルを `crx3` フォルダーに配置します。
 
@@ -150,14 +150,14 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
 1. プライマリと同じログ設定を作成します。その後、インスタンスを停止します。
 1. 次に、スタンバイインスタンスの準備をおこないます。そのためには、プライマリインスタンスの場合と同様の手順を実行します。
 
-   1. `aem-standby/crx-quickstart/install`以下にある可能性のあるファイルを削除します。
-   1. `aem-standby/crx-quickstart/install`の下に`install.standby`という名前の新しいフォルダーを作成します
+   1. `aem-standby/crx-quickstart/install`の下にあるファイルをすべて削除します。
+   1. `aem-standby/crx-quickstart/install`の下に`install.standby`という名前の新しいフォルダーを作成します。
 
    1. 次の 2 つの設定ファイルを作成します。
 
       * `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
       * `org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService.config`
-   1. `aem-standby/crx-quickstart/install`の下に`crx3`という名前の新しいフォルダーを作成します
+   1. `aem-standby/crx-quickstart/install`の下に`crx3`という名前の新しいフォルダーを作成します。
 
    1. データストア設定を作成し、`aem-standby/crx-quickstart/install/crx3`の下に配置します。 この例では、作成する必要があるファイルは次のとおりです。
 
@@ -204,15 +204,15 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
 
 このサービスは、次の手順により Web コンソール経由で設定することもできます。
 
-1. Webコンソールへのアクセス先：*https://serveraddress:serverport/system/console/configMgr*
-1. **Apache Jackrabbit Oak Segment Tar Cold Standby Service**&#x200B;というサービスを探し、重複がそれをクリックして設定を編集します。
+1. Webコンソール( )に移動します。*https://serveraddress:serverport/system/console/configMgr*
+1. **Apache Jackrabbit Oak Segment Tar Cold Standby Service**&#x200B;というサービスを探し、ダブルクリックして設定を編集します。
 1. 設定を保存してインスタンスを再起動し、新しい設定を有効にします。
 
 >[!NOTE]
 >
 >インスタンスの役割は、Sling Settings Web コンソールで **primary** または **standby** 実行モードの存在をチェックすることで、いつでも確認できます。
 >
->これは、*https://localhost:4502/system/console/status-slingsettings*&#x200B;に移動し、**&quot;Run Modes&quot;**&#x200B;行をチェックすることで行えます。
+>これは、*https://localhost:4502/system/console/status-slingsettings*&#x200B;に移動し、**&quot;Run Modes&quot;**&#x200B;行をチェックすることで実行できます。
 
 ## 初回の同期 {#first-time-synchronization}
 
@@ -254,7 +254,7 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
 
 これらのエントリがログに記録されなくなったら、同期プロセスが完了したと見なして問題ありません。
 
-前述のエントリはポーリングメカニズムが正常に機能していることを示しますが、多くの場合、ポーリングが発生している間にデータが同期されているかどうかを把握するために役立ちます。これを行うには、次のようなエントリを探します。
+前述のエントリはポーリングメカニズムが正常に機能していることを示しますが、多くの場合、ポーリングが発生している間にデータが同期されているかどうかを把握するために役立ちます。そのためには、次のようなエントリを探します。
 
 ```xml
 *DEBUG* [defaultEventExecutorGroup-156-1] org.apache.jackrabbit.oak.segment.file.TarWriter Writing segment 3a03fafc-d1f9-4a8f-a67a-d0849d5a36d5 to /<<CQROOTDIRECTORY>>/crx-quickstart/repository/segmentstore/data00014a.tar
@@ -272,18 +272,18 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 * **Persist Configuration：**&#x200B;有効にした場合、従来の OSGi 設定ファイルではなくリポジトリに設定が保存されます。本番システムでは、プライマリ設定がスタンバイによって取得されないように、この設定を無効にすることを推奨します。
 
-* **モード(`mode`):** これは、インスタンスの実行モードを選択します。
+* **モード(`mode`):** インスタンスの実行モードを選択します。
 
 * **Port (port)：**&#x200B;通信に使用するポート。デフォルトは、`8023` です。
 
 * **プライマリホスト(`primary.host`):**  — プライマリインスタンスのホスト。この設定は、スタンバイにのみ適用されます。
-* **同期間隔(`interval`):**  — この設定は、同期要求間隔を決定し、スタンバイインスタンスにのみ適用されます。
+* **同期間隔(`interval`):** この設定は、同期リクエスト間の間隔を決定し、スタンバイインスタンスにのみ適用されます。
 
-* **Allowed IP-Ranges (`primary.allowed-client-ip-ranges`):**  — プライマリが接続を許可するIP範囲。
-* **セキュア(`secure`):SSL暗号化を** 有効にします。この設定を利用するには、すべてのインスタンスで有効にする必要があります。
-* **スタンバイ読み取りタイムアウト(`standby.readtimeout`)：スタンバイインスタンスから発行された要求の** タイムアウト（ミリ秒）。デフォルト値は60000（1分）です。
+* **許可されるIP範囲(`primary.allowed-client-ip-ranges`):**  — プライマリが接続を許可するIP範囲。
+* **セキュア(`secure`):** SSL暗号化を有効にします。この設定を利用するには、すべてのインスタンスで有効にする必要があります。
+* **スタンバイ読み取りタイムアウト(`standby.readtimeout`):** スタンバイインスタンスから発行されたリクエストのタイムアウト（ミリ秒）。デフォルト値は60000（1分）です。
 
-* **スタンバイ自動クリーンアップ(`standby.autoclean`)：ストアのサイズが同期サイクルで増加した場合に、クリーンアップメソッドを** 呼び出します。
+* **スタンバイ自動クリーンアップ(`standby.autoclean`):** 同期サイクルでストアのサイズが増加した場合は、cleanupメソッドを呼び出します。
 
 >[!NOTE]
 >
@@ -319,9 +319,9 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 これをおこなうには、次に示す手順に従います。
 
-1. JMXコンソールに移動し、**org.apache.jackrabbit.oakを使用して、コールドスタンバイインスタンスで同期プロセスを停止します。ステータス（「スタンバイ」）**bean この方法の詳細については、[監視](#monitoring)の節を参照してください。
+1. JMXコンソールに移動し、 **org.apache.jackrabbit.oakを使用して、コールドスタンバイインスタンスで同期プロセスを停止します。ステータス（「スタンバイ」）**bean。 この方法について詳しくは、[監視](#monitoring)の節を参照してください。
 1. コールドスタンバイインスタンスを停止します。
-1. プライマリインスタンスにホットフィックスをインストールします。修正プログラムのインストール方法について詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
+1. プライマリインスタンスにホットフィックスをインストールします。ホットフィックスのインストール方法について詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 1. インストール後の問題についてインスタンスをテストします。
 1. コールドスタンバイインスタンスのインストールフォルダーを削除して、コールドスタンバイインスタンスを削除します。
 1. プライマリインスタンスを停止し、インストールフォルダー全体をコールドスタンバイの場所にファイルシステムコピーして、クローンを作成します。
@@ -330,7 +330,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 ## 監視 {#monitoring}
 
-この機能は、JMXまたはMBeanを使用して情報を公開します。これを行うには、[JMXコンソール](/help/sites-administering/jmx-console.md)を使用して、スタンバイとマスターの現在の状態を調べます。 この情報は、`type org.apache.jackrabbit.oak:type="Standby"``Status`というMBeanで確認できます。
+この機能は、JMXまたはMBeanを使用して情報を公開します。これにより、[JMXコンソール](/help/sites-administering/jmx-console.md)を使用して、スタンバイとマスターの現在の状態を調べることができます。 この情報は、`Status`という名前の`type org.apache.jackrabbit.oak:type="Standby"`のMBeanに含まれています。
 
 **スタンバイ**
 
@@ -338,31 +338,31 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 このノードには次の 5 つの読み取り専用属性があります。
 
-* `Running:` 同期プロセスが実行中かどうかを示すboolean値。
+* `Running:` 同期プロセスが実行されているかどうかを示すboolean値。
 
-* `Mode:` クライアント：インスタンスの識別に使用されるUUIDが続きます。この UUID は、設定が更新されるたびに変更されます。
+* `Mode:` クライアント：その後に、インスタンスを識別するために使用されるUUIDが続きます。この UUID は、設定が更新されるたびに変更されます。
 
-* `Status:` 現在の状態をテキスト形式で表したもの( `running` やなど `stopped`)。
+* `Status:` 現在の状態をテキストで表したも `running` の(や `stopped`など)。
 
-* `FailedRequests:`連続したエラーの数。
-* `SecondsSinceLastSuccess:` サーバーとの最後の通信が成功してからの秒数。通信が成功しない場合は`-1`と表示されます。
+* `FailedRequests:`連続エラーの数。
+* `SecondsSinceLastSuccess:` サーバーとの最後の通信が成功してからの秒数。通信が成功しなかった場合は`-1`と表示されます。
 
 次のような 3 つの呼び出し可能なメソッドもあります。
 
-* `start():` 同期プロセスの開始。
-* `stop():` 同期処理を停止します。
+* `start():` 同期プロセスを開始します。
+* `stop():` 同期プロセスを停止します。
 * `cleanup():` スタンバイでクリーンアップ操作を実行します。
 
 **プライマリ**
 
 プライマリを観察することで、MBean 経由で一般的な情報を取得できます。この MBean の ID 値は、TarMK スタンバイサービスが使用しているポート番号（デフォルトは 8023）です。メソッドと属性の大部分はスタンバイと同じですが、次の点で一部異なります。
 
-* `Mode:` は常に値を表示し `primary`ます。
+* `Mode:` は常に値を表示しま `primary`す。
 
 さらに、マスターに接続する最大 10 のクライアント（スタンバイインスタンス）の情報を取得できます。MBean ID はインスタンスの UUID です。これらの MBean には呼び出し可能なメソッドはありませんが、次のように非常に便利な読み取り専用属性が存在します。
 
 * `Name:` クライアントのID。
-* `LastSeenTimestamp:` テキスト表現での最後の要求のタイムスタンプ。
+* `LastSeenTimestamp:` 最後のリクエストのタイムスタンプ（テキスト表現）。
 * `LastRequest:` クライアントの最後のリクエスト。
 * `RemoteAddress:` クライアントのIPアドレス。
 * `RemotePort:` クライアントが最後の要求に使用したポート。
@@ -375,24 +375,24 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 
 >[!NOTE]
 >
->プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。また、オンラインリビジョンクリーンアップを使用している場合は、スタンバイインスタンスでの`cleanup ()`操作が自動的に実行されます。
+>プライマリインスタンスで[オンラインリビジョンクリーンアップ](/help/sites-deploying/revision-cleanup.md)を実行した場合は、以下に示す手動での手順は必要ありません。また、オンラインでのリビジョンクリーンアップを使用している場合は、スタンバイインスタンスで`cleanup ()`操作が自動的に実行されます。
 
 >[!NOTE]
 >
 >スタンバイでオフラインリビジョンクリーンアップを実行しないでください。オフラインコンパクションは不要であり、segmentstore のサイズは縮小されません。
 
-Adobeでは、時間の経過とともに過剰なリポジトリの増大を防ぐため、定期的にメンテナンスを実行することを推奨しています。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
+Adobeでは、リポジトリの過剰な増加を時間の経過と共に防ぐために、定期的にメンテナンスを実行することをお勧めします。 コールドスタンバイリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
 
 1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status（&quot;Standby&quot;）** bean を使用して、スタンバイインスタンスでスタンバイプロセスを停止します。この方法について詳しくは、[監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring)に関する前述の節を参照してください。
 
 1. プライマリ AEM インスタンスを停止します。
-1. プライマリインスタンスで oak コンパクションツールを実行します。詳しくは、[リポジトリの管理](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
+1. プライマリインスタンスで oak コンパクションツールを実行します。詳しくは、[リポジトリのメンテナンス](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
 1. プライマリインスタンスを起動します。
 1. 最初の手順で説明したものと同じ JMX bean を使用して、スタンバイインスタンスでスタンバイプロセスを開始します。
 1. ログを監視し、同期が完了するまで待ちます。この時点で、スタンバイリポジトリの大幅な増加が見られる可能性があります。
-1. 最初の手順で説明したとおりに、同じJMX Beanを使用して、スタンバイインスタンスで`cleanup()`操作を実行します。
+1. 最初の手順で説明したのと同じJMX Beanを使用して、スタンバイインスタンスで`cleanup()`操作を実行します。
 
-オフラインコンパクションではリポジトリ履歴が実質的には書き直されるので、リポジトリでの変更の計算により多くの時間がかかり、スタンバイインスタンスとプライマリとの同期が完了するまで通常より時間がかかる場合があります。また、このプロセスが完了した後は、スタンバイ側のリポジトリのサイズは、プライマリ側のリポジトリとほぼ同じサイズになることに注意してください。
+オフラインコンパクションではリポジトリ履歴が実質的には書き直されるので、リポジトリでの変更の計算により多くの時間がかかり、スタンバイインスタンスとプライマリとの同期が完了するまで通常より時間がかかる場合があります。また、このプロセスが完了すると、スタンバイ側のリポジトリのサイズは、プライマリ側のリポジトリのサイズとほぼ同じサイズになることに注意してください。
 
 別の方法として、プライマリでコンパクションを実行した後にプライマリリポジトリをスタンバイに手動でコピーすることもできます。つまり、コンパクションを実行するたびにスタンバイを再構築します。
 
@@ -400,11 +400,11 @@ Adobeでは、時間の経過とともに過剰なリポジトリの増大を防
 
 ファイルデータストアインスタンスに対してガベージコレクションをときどき実行することが重要です。そうしないと、削除されたバイナリがファイルシステムに残り、最終的にドライブがいっぱいになります。ガベージコレクションを実行するには、次の手順に従います。
 
-1. [](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)のセクションの説明に従って、コールドスタンバイリポジトリメンテナンスを実行します。
+1. 上記の[](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance)の節で説明したように、コールドスタンバイリポジトリメンテナンスを実行します。
 1. メンテナンスプロセスが完了し、インスタンスが再起動したら、次の手順を実行します。
 
-   * 主に、[この記事](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)で説明されているように、関連するJMX Beanを介してデータストアのガベージコレクションを実行します。
-   * スタンバイ時には、データストアのガベージコレクションは、**BlobGarbageCollection** MBean - `startBlobGC()`経由でのみ利用できます。 **RepositoryManagement **MBeanはスタンバイでは使用できません。
+   * プライマリで、[この記事](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console)で説明したように、関連するJMX Beanを使用してデータストアのガベージコレクションを実行します。
+   * スタンバイでは、データストアのガベージコレクションは、**BlobGarbageCollection** MBean - `startBlobGC()`経由でのみ使用できます。 **RepositoryManagement **MBeanはスタンバイでは使用できません。
 
    >[!NOTE]
    >
