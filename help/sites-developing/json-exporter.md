@@ -9,14 +9,13 @@ content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
-translation-type: tm+mt
-source-git-commit: a430c4de89bde3b907d342106465d3b5a7c75cc8
+exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 95%
 
 ---
-
 
 # コンテンツサービス用の JSON エクスポーター{#json-exporter-for-content-services}
 
@@ -32,7 +31,7 @@ AEM コンテンツサービスにより、あらゆるクライアントで使�
 
 >[!NOTE]
 >
->ここで説明する機能は、[リリース1.1.0以降のコアコンポーネント](https://docs.adobe.com/content/docs/en/core-components/v1.html)で使用できます。
+>ここで説明する機能は、コアコンポーネント](https://docs.adobe.com/content/docs/en/core-components/v1.html)の[リリース1.1.0以降のすべてのコアコンポーネントで使用できます。
 
 ## JSON エクスポーターとコンテンツフラグメントコアコンポーネント {#json-exporter-with-content-fragment-core-components}
 
@@ -104,5 +103,4 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
 
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
-
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
