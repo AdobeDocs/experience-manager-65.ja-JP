@@ -10,18 +10,17 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 5b2f624d-e5b8-4484-a773-7784ebce58bd
 docset: aem65
-translation-type: tm+mt
-source-git-commit: 0eda6ee61acf737abc91d1e5df731e719663b3f2
+exl-id: 4183fe78-5055-4b77-8a54-55666e86a04e
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 79%
 
 ---
 
-
 # ExactTarget との統合{#integrating-with-exacttarget}
 
-AEMと完全一致ターゲットを統合すると、AEMで作成した電子メールを管理し、完全一致ターゲットを使用して送信できます。 また、AEMページのAEM formsを介した正確なターゲットのリード管理機能を使用することもできます。
+AEMをExactTargetと統合すると、AEMで作成した電子メールをExactTarget経由で管理および送信できます。 また、AEMページ上のAEM formsを使用して、ExactTargetのリード管理機能を使用することもできます。
 
 この統合によって次の機能を使用できるようになります。
 
@@ -38,7 +37,7 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 クラウドサービスで ExactTarget 設定を作成するには：
 
-1. ようこそページで「**クラウドサービス**」をクリックします（または`https://<hostname>:<port>/etc/cloudservices.html`で直接アクセスする）。
+1. ようこそページで「**クラウドサービス**」をクリックします（または`https://<hostname>:<port>/etc/cloudservices.html`から直接アクセスします）。
 1. 「**ExactTarget**」をクリックし、「**設定**」をクリックします。 ExactTarget 設定ウィンドウが開きます。
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
@@ -54,7 +53,7 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 1. アカウントを使用できる場合は選択します。アカウントは Enterprise 2.0 ユーザー向けのものです。「**OK**」をクリックします。
 
-   これで、ExactTarget が設定されました。「**編集**」をクリックして、この設定を編集できます。「ExactTarget **ExactTarget**&#x200B;に移動」をクリックすると、ExactTargetに移動できます。
+   これで、ExactTarget が設定されました。「**編集**」をクリックして、この設定を編集できます。「**ExactTarget**&#x200B;に移動」をクリックして、ExactTargetに移動できます。
 
 1. AEM にはデータ拡張機能が備わっています。ExactTarget データ拡張列を読み込むことができます。ExactTarget データ拡張列は、作成後の ExactTarget 設定の横にある「+」記号をクリックして設定できます。ドロップダウンリストから既存のデータ拡張を選択できます。データ拡張の設定方法について詳しくは、[ExactTarget のドキュメント](https://help.exacttarget.com/en/documentation/exacttarget/subscribers/data_extensions_and_data_relationships)を参照してください。
 
@@ -66,9 +65,9 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 ツールで ExactTarget 設定を作成するには：
 
-1. ようこそページで「**ツール**」をクリックします。または`https://<hostname>:<port>/misadmin#/etc`に移動して直接移動します。
+1. ようこそページで「**ツール**」をクリックします。または、`https://<hostname>:<port>/misadmin#/etc`に移動して直接移動します。
 1. 「**ツール**」、「**クラウドサービス設定**」、「**ExactTarget**」の順に選択します。
-1. 「**新規**」をクリックして、**ページを作成**ウィンドウを開きます。
+1. 「**新規**」をクリックして、「**ページを作成**」ウィンドウを開きます。
 
    ![chlimage_1-34](assets/chlimage_1-3.jpeg)
 
@@ -79,5 +78,5 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
 複数の設定を追加するには：
 
-1. ようこそページで「**クラウドサービス**」をクリックし、「**ExactTarget**」をクリックします。**Show Configurations**&#x200B;ボタンをクリックします。このボタンは、1つ以上のExactTarget設定が使用可能な場合に表示されます。 利用可能なすべての設定が一覧表示されます。
+1. ようこそページで「**クラウドサービス**」をクリックし、「**ExactTarget**」をクリックします。「**設定を表示**」ボタンをクリックします。このボタンは、1つ以上のExactTarget設定が使用可能な場合に表示されます。 利用可能なすべての設定が一覧表示されます。
 1. 「利用可能な設定」の横にある「**+**」記号をクリックします。**設定を作成**&#x200B;ウィンドウが開きます。前述の設定手順に従って新しい設定を作成します。
