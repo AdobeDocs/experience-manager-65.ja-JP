@@ -8,7 +8,6 @@ breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
 feature: オーサリング
 role: Business Practitioner
-translation-type: tm+mt
 source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
 workflow-type: tm+mt
 source-wordcount: '299'
@@ -20,8 +19,8 @@ ht-degree: 88%
 # AEM 6.5 オーサリングユーザーガイド {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEMオーサリングに不可欠なタスク、ツール、概念{#essentials}
-   + [作成者が行う最初の手順](first-steps.md)
++ AEM Authoringの基本的なタスク、ツール、概念{#essentials}
+   + [作成者がおこなう最初の手順](first-steps.md)
    + [ページオーサリング](page-authoring.md)
    + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
    + [オーサリングの概念](author.md)
@@ -56,7 +55,7 @@ ht-degree: 88%
    + [コンポーネントコンソール](default-components-console.md)
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
-   + [アクセシブルなコンテンツ（WCAG 2.1 適合）の作成 ](creating-accessible-content.md)
+   + [アクセシブルなコンテンツ（WCAG 2.1 適合）の作成](creating-accessible-content.md)
    + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
    + [基礎モード](scaffolding.md)
@@ -82,9 +81,9 @@ ht-degree: 88%
    + [ページパフォーマンスの分析](ci-analyze.md)
    + [ページ分析データの表示](pa-using.md)
    + [ページへの Search&amp;Promote 機能の追加](search-and-promote.md)
-+ パーソナライゼーション {#personalization}
-   + [パーソナライゼーション](personalization.md)
-   + [ContextHub データを使用したページのプレビュー ](ch-previewing.md)
++ パーソナライズ機能 {#personalization}
+   + [パーソナライズ機能](personalization.md)
+   + [ContextHub データを使用したページのプレビュー](ch-previewing.md)
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
    + [ターゲットコンテンツ用マルチサイト管理の構造](technical-multisite-targeted.md)
