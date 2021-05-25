@@ -1,14 +1,13 @@
 ---
-title: Adobe Experience Manager向けアクセシブルコンテンツの作成（WCAG 2.1準拠）
-description: 障害を持つユーザーがWebコンテンツにアクセスし、利用できるようにするためにAEMを使用します。
-translation-type: tm+mt
-source-git-commit: df992fc0204519509c4662a7d4315939af2fc92c
+title: Adobe Experience Manager（WCAG 2.1適合）用アクセシブルなコンテンツの作成
+description: 障碍のあるユーザーがWebコンテンツにアクセスして利用できるよう、AEMを使用します。
+exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '13956'
 ht-degree: 99%
 
 ---
-
 
 # アクセシブルなコンテンツ（WCAG 2.1 適合）の作成 {#creating-accessible-content-wcag-conformance}
 
@@ -25,7 +24,7 @@ ht-degree: 99%
 さらに、詳細は次を参照してください。
 * アドビの [WCAG 2.1 クイックガイド](/help/managing/qg-wcag.md)
 * [Accessibility conformance reports for Adobe solutions](https://www.adobe.com/accessibility/compliance.html)（アドビソリューションのアクセシビリティ準拠レポート）
-* [アクセシブルなコンテンツを作成するためのリッチテキストエディタの設定](/help/sites-administering/rte-accessible-content.md)
+* [アクセシブルなコンテンツを生成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
 
 ガイドラインは 3 つの適合レベル（レベル A（最低）、レベル AA、レベル AAA（最高））に分けられます。各レベルの簡単な定義を次に示します。
 
@@ -281,7 +280,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * [達成基準 1.2.5 について](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html)
 * [達成基準 1.2.5 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-prerecorded)
 
-### 適応可能（1.3）  {#adaptable}
+### 適応可能（1.3） {#adaptable}
 
 [ガイドライン 1.3 適応可能：情報および構造を損なうことなく、様々な方法（例えば、よりシンプルなレイアウト）で提供できるようにコンテンツを制作している。](https://www.w3.org/TR/WCAG/#adaptable)
 
@@ -333,7 +332,7 @@ AEM では、適切な HTML 要素を使用することにより、意味のあ�
 
    >[!NOTE]
    >
-   >デフォルトでは、これらの要素と属性は直接使用できませんが、システム管理者は、**テーブルのプロパティ**&#x200B;ダイアログボックスでこれらの値のサポートを追加できます（「[追加のHTML要素と属性のサポートの追加](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)」を参照）。
+   >デフォルトでは、これらの要素と属性は直接使用できませんが、システム管理者は、**表のプロパティ**&#x200B;ダイアログボックスでこれらの値のサポートを追加できます（[追加のHTML要素と属性のサポートの追加](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)を参照）。
 
    「**テーブルのプロパティ**」タブを選択できる&#x200B;**テーブル**&#x200B;ダイアログを開くには、次のようにします。
 
@@ -454,7 +453,7 @@ AEM では、適切な HTML 要素を使用することにより、意味のあ�
 * [達成基準 1.3.3 について](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
 * [達成基準 1.3.3 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)
 
-### 判別可能（1.4）  {#distinguishable}
+### 判別可能（1.4） {#distinguishable}
 
 [ガイドライン 1.4 判別可能：コンテンツを、利用者にとって見やすく、聞きやすいものにします。これには、前景と背景を区別することも含む。](https://www.w3.org/TR/WCAG/#distinguishable)
 
@@ -628,7 +627,7 @@ AEM では、適切な HTML 要素を使用することにより、意味のあ�
 
 これは、キーボードを使用してすべての機能のアクセスを確保することを目的としています。
 
-### キーボード（2.1.1） {#keyboard}
+### キーボード（2.1.1）   {#keyboard}
 
 * 達成基準 2.1.1
 * レベル A
@@ -757,7 +756,7 @@ Web ページの機能によって、フォーカスがコンテンツのサブ�
 * [達成基準 2.3.1 について](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)
 * [達成基準 2.3.1 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)
 
-### ナビゲーション可能（2.4） {#navigable}
+### ナビゲーション可能（2.4）  {#navigable}
 
 [ガイドライン 2.4 ナビゲーション可能：ユーザーのナビゲーション、コンテンツの検索、位置の特定に役立つ方法を提供します。](https://www.w3.org/TR/WCAG/#navigable)
 
@@ -1039,7 +1038,7 @@ span 要素を適切な言語で追加するには、RTE のソース編集モ�
 * [達成基準 3.1.2 について](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html)
 * [達成基準 3.1.2 の達成方法](https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts)
 
-### 予測可能（3.2） {#predictable}
+### 予測可能（3.2）  {#predictable}
 
 [ガイドライン 3.2 予測可能：Web ページを予測可能な方法で表示および操作できるようにします。](https://www.w3.org/TR/WCAG/#predictable)
 
@@ -1272,13 +1271,13 @@ AEM WKND デモプロジェクトでは、**テキストフィールド**&#x200B
 
 [原則 4：堅牢 - コンテンツは、支援テクノロジーを含む様々なユーザーエージェントが確実に解釈できるように十分に堅牢でなければならない。](https://www.w3.org/TR/WCAG/#robust)
 
-### 互換性（4.1） {#compatible}
+### 互換性（4.1）  {#compatible}
 
 [ガイドライン 4.1 互換性：支援テクノロジーを含む、現在および将来のユーザーエージェントとの互換性を最大化します。](https://www.w3.org/TR/WCAG/#compatible)
 
 支援テクノロジーを含む、現在および将来のユーザーエージェントとの互換性を最大化します。
 
-### 構文解析（4.1.1） {#parsing}
+### 構文解析（4.1.1）   {#parsing}
 
 * 達成基準 4.1.1
 * レベル A
