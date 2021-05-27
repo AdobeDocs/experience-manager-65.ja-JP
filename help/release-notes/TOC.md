@@ -7,7 +7,7 @@ breadcrumb-title: リリースノート
 user-guide-description: リリースノートのAEM 6.5の最新の新機能について説明します。
 feature: リリース情報
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Administrator, Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: dafc10e6e73967566ec8bff8ac0e4c39bc7cd885
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 46%
@@ -21,7 +21,7 @@ ht-degree: 46%
 + [一般リリースノート](release-notes.md)
 + Service Pack リリースノート {#service-pack}
    + [新機能](new-features-latest-service-pack.md)
-   + [Service Pack 8 リリースノート](sp-release-notes.md)
+   + [Service Pack 9 リリースノート](sp-release-notes.md)
    + [以前のService Packリリースノート](previous-hotfixes-featurepacks.md)
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
