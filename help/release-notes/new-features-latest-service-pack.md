@@ -1,17 +1,17 @@
 ---
-title: ' [!DNL Experience Manager] 6.5 Service Pack 8の新機能'
-description: ' [!DNL Experience Manager] 6.5 Service Pack 8の新機能'
+title: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
+description: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 48a5f9ffb33ae09f5d4e6e57cf66b871a9ff6981
 workflow-type: tm+mt
-source-wordcount: '3041'
-ht-degree: 7%
+source-wordcount: '3294'
+ht-degree: 6%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 Service Pack 8 {#aem-whats-new-service-pack}の新機能
+# [!DNL Adobe Experience Manager] 6.5 Service Pack 9 {#aem-whats-new-service-pack}の新機能
 
 ![新機能](assets/whatsnew.jpeg)
 
@@ -21,15 +21,57 @@ ht-degree: 7%
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
-### ロールアウト可能なライブコピーページを並べ替え{#sort-livecopy-pages}
+### 削除されたページとツリーを復元する機能{#ability-to-restore-pages-tree}
 
-[!UICONTROL 名前]、[!UICONTROL 最終変更日]および[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えることができるようになりました。 ページの[!UICONTROL 最終ロールアウト日]は、このリリースで導入された新しいプロパティです。
+これで、[!DNL Experience Manager Sites]ページ上の削除されたページとツリービュー全体を復元できます。
 
 ## [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-* [Connected Assets機能](/help/assets/use-assets-across-connected-assets-instances.md)を使用する場合、そのアセットを使用するすべての[!DNL Sites]ページのリストを表示できるようになりました。 アセットへのこれらの参照は、アセットの[!UICONTROL プロパティ]ページで使用できます。 これにより、管理者、マーケター、ライブラリ担当者がアセットの使用状況を完全に把握でき、トラッキング、管理、ブランドの一貫性を向上させることができます。
+* 中国の社会的・政治的見解に合わせて、香港、マカオ、台湾に関する中国のロケールと地域の命名を更新しました。
 
-* Webページで参照されているアセットを削除すると、[!DNL Experience Manager]に警告が表示されます。 参照元のアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示される参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites]が開きます。
+* [!DNL Adobe Experience Manager]からのACP api応答で、電子メールIDを小文字にするオプションの設定が導入されました。
+
+   ![AEMからのACP応答の電子メールIDを小文字に変換した設定](assets/email-lowcase-config.png)
+
+* 様々な場所でのテキストとアイコンのコントラスト（背景と共に）がWCAGのように強化され、視覚や色の知覚が限られているユーザーがアクセシブルになります。 詳しくは、[Assetsのアクセシビリティの強化](sp-release-notes.md#assets-accessibility-6590)を参照してください。
+
+### Dynamic Media {#assets-dynamic-media}
+
+* [Dynamic Mediaは、次の点で](sp-release-notes.md#assets-accessibility-6590) よりアクセスしやすい
+
+   * キーボードキーを使いやすくする。
+   * 様々なエディターでのテキスト、プレースホルダーテキスト、コントロールのコントラスト（背景付き）。
+   * スクリーンリーダーによるアクセシビリティとナレーション
+
+* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。（高解像度のディスプレイとネットワーク帯域幅の制限があるデバイス） 詳しくは、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
+
+   >[!NOTE]
+   >
+   >上記のスマートイメージング機能強化のリリースタイムラインは次のとおりです。
+   >
+   >* 北米2021年5月24日、NA、
+      >
+      >
+   * ヨーロッパ、中東、アフリカ2021年6月25日、
+      >
+      >
+   * アジア太平洋2021年7月19日。
+
+
+* Dynamic Media配信で、次世代画像形式AVIFのサポートが導入されました（fmt URL修飾子）。 詳しくは、[画像サービングとレンダリングapi fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
+
+   >[!NOTE]
+   >
+   >AVIFサポートのリリースタイムラインは次のとおりです。
+   >
+   >* 北米2021年5月10日、
+      >
+      >
+   * 2021年5月24日、ヨーロッパ、中東、アフリカ
+      >
+      >
+   * アジア太平洋2021年6月24日。
+
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -37,25 +79,13 @@ ht-degree: 7%
 >
 >[!DNL Experience Manager Forms]のアドオンパッケージは、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に提供されます。
 
-### ルール{#show-hide-captcha}に基づくアダプティブフォーム内のCAPTCHAコンポーネントの表示/非表示を切り替えます。
-
-アダプティブフォーム送信時またはユーザーアクション時に、CAPTCHAを検証できるようになりました。 また、ルールに基づいてアダプティブフォーム内のCAPTCHAコンポーネントの表示と非表示を切り替えるための条件を追加して、ユーザーアクションでCAPTCHAを検証することもできます。
-
-### カスタム CAPTCHA サービスの追加 {#add-custom-captcha-services}
-
-[!DNL Experience Manager Forms] は、Google reCAPTCHA（Google reCAPTCHA APIの別のライセンスが必要）をCAPTCHA検証サービスとして使用するための標準サポートを提供します。また、カスタムCAPTCHAサービスを使用してCAPTCHAを検証することもできます。
-
-### その他の機能強化 {#other-enhancements-forms-6580}
-
-* [!DNL Experience Manager Forms]日付選択コンポーネントのアクセシビリティを改善しました。
-
-* PrintChannel APIを使用してPCL形式のインタラクティブ通信を生成するサポートを追加しました。
-
-* PDFG変換を実行する際に、カスタムブックマーク生成用の[!DNL Experience Manager Forms]レジストリの変更を有効または無効にできるようになりました。
-
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
 ### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
+
+#### ロールアウトに使用可能なライブコピーページの並べ替え(6.5.8.0) {#sort-livecopy-pages}
+
+[!UICONTROL 名前]、[!UICONTROL 最終変更日]および[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えることができるようになりました。 ページの[!UICONTROL 最終ロールアウト日]は、このリリースで導入された新しいプロパティです。
 
 #### ページ移動およびMSMロールアウトが非同期操作(6.5.7.0)として使用可能({#page-moves-msm-asynchronous})
 
@@ -108,6 +138,10 @@ ht-degree: 7%
 * 不完全なURLまたは無効なURLの処理を改善しました。 このようなURLを使用すると、テンプレートエディターの速度が低下する可能性があります。
 
 ### [!DNL Adobe Experience Manager Assets] {#aem-assets-previous-service-packs}
+
+* [Connected Assets機能](/help/assets/use-assets-across-connected-assets-instances.md)を使用する場合、そのアセットを使用するすべての[!DNL Sites]ページのリストを表示できるようになりました。 アセットへのこれらの参照は、アセットの[!UICONTROL プロパティ]ページで使用できます。 これにより、管理者、マーケターおよびライブラリ担当者は、アセットの使用状況を完全に把握でき、トラッキング、管理およびブランドの一貫性(6.5.8.0)を向上させることができます。
+
+* Webページで参照されているアセットを削除すると、[!DNL Experience Manager]に警告が表示されます。 参照元のアセットを強制的に削除するか、アセットの[!DNL Properties]ページに表示される参照を確認して変更できます。 参照をクリックすると、ローカルページとリモートページの[!DNL Sites](6.5.8.0)が開きます。
 
 * [!DNL Assets] およびで [!DNL Dynamic Media] は、複数のアクセシビリティ強化がおこなわれています。この機能強化は、キーボードナビゲーション、スクリーンリーダーの使用、支援テクノロジー(AT)を使用するための同様の機能強化に関連しています。 [[!DNL Assets] enhancements](/help/release-notes/sp-release-notes.md#assets-6570)および[[!DNL Dynamic Media] enhancements](/help/release-notes/sp-release-notes.md#dynamic-media-6570)(6.5.7.0)を参照してください。
 
@@ -175,7 +209,7 @@ ht-degree: 7%
 
 [!DNL Experience Manager Assets]を[!DNL Brand Portal]で設定する手順は、[!DNL Experience Manager]のバージョンと、初めて設定するか既存の設定をアップグレードするかによって異なります。 詳しくは、[Brand Portal](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)とのExperience Managerアセットの設定を参照してください。
 
-#### アクセシビリティの強化(6.5.4.0) {#accessibility-enhancements}
+#### アクセシビリティの強化(6.5.4.0) {#accessibility-enhancements-6540}
 
 [!DNL Experience Manager Assets] には、次のアクセシビリティ機能の強化が含まれています。
 
@@ -223,6 +257,22 @@ ht-degree: 7%
 ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。[ビデオプロファイルでのスマート切り抜きの使用について](../assets/video-profiles.md)を参照してください。
 
 ### Experience Manager Forms {#aem-forms-previous-service-packs}
+
+#### ルールに基づくアダプティブフォーム内のCAPTCHAコンポーネントの表示/非表示(6.5.8.0) {#show-hide-captcha}
+
+アダプティブフォーム送信時またはユーザーアクション時に、CAPTCHAを検証できるようになりました。 また、ルールに基づいてアダプティブフォーム内のCAPTCHAコンポーネントの表示と非表示を切り替えるための条件を追加して、ユーザーアクションでCAPTCHAを検証することもできます。
+
+#### カスタムCAPTCHAサービス(6.5.8.0)を追加します。 {#add-custom-captcha-services}
+
+[!DNL Experience Manager Forms] は、Google reCAPTCHA（Google reCAPTCHA APIの別のライセンスが必要）をCAPTCHA検証サービスとして使用するための標準サポートを提供します。また、カスタムCAPTCHAサービスを使用してCAPTCHAを検証することもできます。
+
+#### その他の機能強化(6.5.8.0) {#other-enhancements-forms-6580}
+
+* [!DNL Experience Manager Forms]日付選択コンポーネントのアクセシビリティを改善しました。
+
+* PrintChannel APIを使用してPCL形式のインタラクティブ通信を生成するサポートを追加しました。
+
+* PDFG変換を実行する際に、カスタムブックマーク生成用の[!DNL Experience Manager Forms]レジストリの変更を有効または無効にできるようになりました。
 
 #### パフォーマンスの向上(6.5.7.0) {#performance-improvements-forms}
 
