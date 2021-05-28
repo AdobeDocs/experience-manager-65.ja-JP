@@ -5,9 +5,9 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: アセットインサイト，アセットレポート
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '760'
 ht-degree: 52%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 52%
 
 [!DNL Assets]インサイトでWebサイトから画像の使用状況の統計を取り込むには、Webサイトコードに画像の埋め込みコードを含める必要があります。
 
-アセットインサイトにアセットの使用状況の統計を表示するには、まずAdobe Analyticsからレポートデータを取得するようにこの機能を設定します。 詳しくは、[アセットインサイトの設定](/help/assets/configure-asset-insights.md)を参照してください。 この機能を使用するには、[!DNL Adobe Analytics]ライセンスを別途購入してください。 [!DNL Managed Services]をご利用のお客様は、[!DNL Experience Manager]にバンドルされている[!DNL Analytics]ライセンスを受け取ります。 [Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)を参照してください。
+アセットインサイトにアセットの使用状況の統計を表示するには、まずAdobe Analyticsからレポートデータを取得するようにこの機能を設定します。 詳しくは、[アセットインサイトの設定](/help/assets/configure-asset-insights.md)を参照してください。 この機能をオンプレミスインストールで使用するには、[!DNL Adobe Analytics]ライセンスを別途購入してください。 [!DNL Managed Services]をご利用のお客様は、[!DNL Experience Manager]にバンドルされている[!DNL Analytics]ライセンスを受け取ります。 [Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)を参照してください。
 
 >[!NOTE]
 >
