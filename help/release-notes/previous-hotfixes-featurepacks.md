@@ -3,7 +3,7 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: ' [!DNL Adobe Experience Manager] 6.5サービスパックのリリースノート。'
 contentOwner: AK
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 8c69687ef4fbc2e4ee729d98232fe56db9b1df5a
+source-git-commit: d06e60baac692c92358244944226b77d5dad4022
 workflow-type: tm+mt
 source-wordcount: '20321'
 ht-degree: 15%
