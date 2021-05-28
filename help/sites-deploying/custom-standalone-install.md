@@ -3,15 +3,10 @@ title: カスタムスタンドアロンインストール
 seo-title: カスタムスタンドアロンインストール
 description: スタンドアロン AEM インスタンスのインストール時に使用可能なオプションについて学習します。
 seo-description: スタンドアロン AEM インスタンスのインストール時に使用可能なオプションについて学習します。
-uuid: 83fc49d8-2c44-4bb2-988a-f29475066efc
-contentOwner: Tyler Rushton
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
-discoiquuid: deae8ecb-a2ee-4442-97ca-98bfd1b85738
-docset: aem65
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3e18eed63d676e22e12483a1ee68e7e0148d8083
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 73%
