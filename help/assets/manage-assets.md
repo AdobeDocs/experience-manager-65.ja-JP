@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: Business Practitioner
 feature: アセット管理，検索
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: a7f8e98729dd27f6976d3289a51f22435fced585
+source-git-commit: d06e60baac692c92358244944226b77d5dad4022
 workflow-type: tm+mt
 source-wordcount: '9775'
 ht-degree: 59%
@@ -113,7 +113,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 >
 >[!UICONTROL 名前の競合]ダイアログで「**[!UICONTROL 置換]**」を選択すると、新しいアセットのアセット ID が再生成されます。この ID は以前のアセットの ID とは異なります。
 >
->アセットインサイトによる [!DNL Adobe Analytics] でのインプレッション数やクリック数の追跡が有効になっている場合は、再生成されたアセット ID により、[!DNL Analytics] から取得したアセットのデータが無効になります。
+>アセットインサイトで[!DNL Adobe Analytics]を使用したインプレッションまたはクリックの追跡が有効になっている場合、再生成されたアセットIDは、[!DNL Analytics]で取り込まれたアセットのデータを無効化します。
 
 アップロードしたアセットが[!DNL Assets]に存在する場合、**[!UICONTROL 検出された重複]**&#x200B;ダイアログで、重複するアセットをアップロードしようとしていることが警告されます。 このダイアログは、既存のアセットのバイナリの`SHA 1`チェックサム値が、アップロードするアセットのチェックサム値と一致する場合にのみ表示されます。 この場合、アセットの名前は関係ありません。
 
