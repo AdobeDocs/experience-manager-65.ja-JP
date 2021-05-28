@@ -11,32 +11,32 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: コンポーネント，公開
-source-git-commit: fde3cb4a2461ca80f410f360fd5d56f359cec149
+source-git-commit: 00fc290d91de3c194ada837a931f1d86a5557939
 workflow-type: tm+mt
-source-wordcount: '3274'
-ht-degree: 71%
+source-wordcount: '3108'
+ht-degree: 67%
 
 ---
 
 # ページへの Dynamic Media アセットの追加 {#adding-dynamic-media-assets-to-pages}
 
-Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。これをおこなうには、レイアウトモードに入り、Dynamic Media コンポーネントを有効にします。次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらなのかが検出され、それに応じて利用可能なオプションが変わります。
+Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。コンポーネントを追加するには、レイアウトモードに入り、Dynamic Mediaコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらなのかが検出され、それに応じて利用可能なオプションが変わります。
 
-Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Mediaアセットを直接ページに追加します。 サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)をおこないます。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトへの最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
+Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Mediaアセットを直接ページに追加します。 サードパーティの製品を WCM として使用している場合は、アセットの[リンク](/help/assets/linking-urls-to-yourwebapplication.md)または[埋め込み](/help/assets/embed-code.md)を行います。サードパーティのレスポンシブ Web サイトの場合は、[レスポンシブサイトへの最適化された画像の配信](/help/assets/responsive-site.md)を参照してください。
 
 >[!NOTE]
 >
->Experience Manager でページに追加する前にアセットを公開する必要があります。[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+>アセットをページに追加する前に、必ずアセットをExperience Managerに公開してください。 [Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 ## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
 3D メディア、Dynamic Media、インタラクティブメディア、パノラマメディア、スマート切り抜きビデオ、ビデオ 360 メディアのいずれかのコンポーネントを 1 つのページに追加することは、コンポーネントを任意のページに追加することと同じです。Dynamic Media コンポーネントについては、後の節で説明します。
 
 1. Dynamic Media コンポーネントを追加するページを Experience Manager で開きます。
-1. ページの左側にあるパネル（サイドパネルの表示を切り替える必要が生じる場合があります）で、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
+1. ページの左側にあるパネルで（必要に応じて、サイドパネルの表示を切り替えます）、**[!UICONTROL コンポーネント]**&#x200B;アイコンをクリックします。
 1. 「**[!UICONTROL コンポーネント]**」見出しの下にあるドロップダウンリストで、「**[!UICONTROL Dynamic Media]**」を選択します。
 
-   Dynamic Media コンポーネントのリストがない場合は、使用する Dynamic Media コンポーネントを有効にしなければならない可能性があります。詳しくは、[Dynamic Media コンポーネントの有効化](#enabling-dynamic-media-components)を参照してください。
+   使用可能なDynamic Mediaコンポーネントのリストがない場合は、使用するDynamic Mediaコンポーネントを有効にする必要があります。 詳しくは、[Dynamic Media コンポーネントの有効化](#enabling-dynamic-media-components)を参照してください。
 
    ![6_5_360video_wcmcomponent](/help/assets/assets/6_5_360video_wcmcomponent.png)
 
@@ -58,7 +58,7 @@ Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Med
 
 ### Dynamic Media コンポーネントの有効化 {#enabling-dynamic-media-components}
 
-ページに追加できる Dynamic Media コンポーネントがない場合は、使用するコンポーネントをまず有効にしなければならない可能性があります。
+ページに追加できるDynamic Mediaコンポーネントがない場合は、使用するコンポーネントをまず有効にする必要がある可能性があります。
 
 1. Dynamic Media コンポーネントを追加するページを Experience Manager で開きます。
 1. ページ上部付近のツールバーの左側にあるページ情報アイコンをタップした後、ドロップダウンリストから「**[!UICONTROL テンプレートを編集]**」をタップします。
@@ -75,7 +75,7 @@ Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Med
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
 1. **[!UICONTROL Dynamic Media.]**&#x200B;が表示されるまでスクロールします。
-1. **[!UICONTROL ダイナミックメディア]**&#x200B;の左側にある「>」アイコンをタップしてリストを展開し、有効にする Dynamic Media コンポーネントを選択します。
+1. **[!UICONTROL Dynamic Media]**&#x200B;の左側にある「>」アイコンをタップしてリストを展開し、有効にするDynamic Mediaコンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
 
@@ -110,13 +110,13 @@ Dynamic Mediaコンポーネントは、**[!UICONTROL コンポーネント]**&#
 
 >[!NOTE]
 >
->これらのコンポーネントはデフォルトでは使用できないので、使用前にテンプレートエディターで使用可能にする必要があります。[テンプレートエディターで](/help/sites-authoring/templates.md#editing-templates-template-authors)使用可能にした後は、他のExperience Managerコンポーネントと同様に、ページに追加できます。
+>これらのコンポーネントは、デフォルトでは使用できません。これらを使用する前に、テンプレートエディターを通じて使用可能にする必要があります。 [テンプレートエディターで](/help/sites-authoring/templates.md#editing-templates-template-authors)使用可能にした後は、他のExperience Managerコンポーネントと同様に、ページに追加できます。
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
 ### Dynamic Media コンポーネント {#dynamic-media-component}
 
-Dynamic Media コンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、様々なオプションを使用できます。このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。さらに、レスポンシブビューアであるので、ビューアのサイズは画面サイズに合わせて自動的に変化します。すべてのビューアは HTML5 ビューアです。
+Dynamic Media コンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、様々なオプションを使用できます。このコンポーネントは画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートします。また、レスポンシブなビューアなので、画面のサイズは画面のサイズに基づいて自動的に変更されます。 すべてのビューアは HTML5 ビューアです。
 
 >[!NOTE]
 >
@@ -127,22 +127,22 @@ Dynamic Media コンポーネントはスマートであり、追加している
 
 >
 >
-そのページの各 Dynamic Media コンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされないことに注意してください。
+そのページの各 Dynamic Media コンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされていません。
 >
 >一方、ページ内で、同じタイプのアセットを使用するすべての Dynamic Media コンポーネントで同じビューアプリセットを使用することは可能です。
 
 Dynamic Media コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 
 * [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
-* 画像にPTIFF(Pyramid TIFF)ファイルが含まれている。Dynamic Mediaを有効にする前に読み込まれた画像には、PTIFF(Pyramid TIFF)ファイルはありません。
+* 画像が PTIFF（Pyramid TIFF）ファイルであること。Dynamic Mediaを有効にする前に読み込んだ画像には、PTIFF(Pyramid TIFF)ファイルはありません。
 
 #### 画像を操作する場合 {#when-working-with-images}
 
 Dynamic Media コンポーネントでは、画像セット、スピンセット、混在メディアセットなどの動的イメージを追加できます。ズームイン、ズームアウト、スピンセット内での画像の回転（該当する場合）または別のタイプのセットからの画像の選択を行うことができます。
 
-また、ビューアプリセット、画像プリセットまたは画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
+また、ビューアプリセット、画像プリセット、画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
 
-コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Media設定]**&#x200B;をタップして、次のDynamic Media設定を&#x200B;*編集する必要があります。*
+コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、次に&#x200B;**[!UICONTROL Dynamic Media設定]**&#x200B;をタップして、次のDynamic Media設定を編集します。
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
@@ -150,9 +150,9 @@ Dynamic Media コンポーネントでは、画像セット、スピンセット
 >
 >デフォルトでは、Dynamic Media画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントで、「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
-* **[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+* **[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-   これは、画像セット、スピンセットまたは混在メディアセットを表示している場合に唯一使用できるオプションです。表示されるビューアプリセットもスマートであり、関連するビューアプリセットのみが表示されます。
+   画像セット、スピンセットまたは混在メディアセットを表示している場合は、このオプションのみ使用できます。表示されるビューアプリセットはスマートで、関連するビューアプリセットのみが表示されます。
 
 * **[!UICONTROL ビューア修飾子]**  — ビューア修飾子は、name=valueの形式で、&amp;を区切り文字として使用し、ビューアリファレンスガイドで概要を説明しているようにビューアを変更できます。`posterimage=img.jpg&caption=text.vtt,1` はビューア修飾子の一例で、これはビデオのサムネールに異なる画像を設定し、ビデオにクローズキャプションや字幕ファイルを関連付けます。
 
@@ -160,26 +160,26 @@ Dynamic Media コンポーネントでは、画像セット、スピンセット
 
    このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-* **[!UICONTROL 画像の修飾子]**  — 追加の画像コマンドを指定して、画像エフェクトを適用できます。これらは画像プリセットと画像をサーブするコマンドリファレンスに記述されています。
+* **[!UICONTROL 画像の修飾子]**  — 追加の画像コマンドを指定して、画像エフェクトを適用できます。これらの効果については、画像プリセットおよび画像サービングコマンドリファレンスで説明しています。
 
    このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
-* **[!UICONTROL ブレークポイント]**  — レスポンシブサイトでこのアセットを使用する場合は、画像のブレークポイントを追加する必要があります。画像のブレークポイントをコンマ（,）で区切って指定する必要があります。このオプションを使用できるのは、画像プリセットで高さまたは幅が定義されていないときです。
+* **[!UICONTROL ブレークポイント]**  — レスポンシブサイトでこのアセットを使用する場合は、画像のブレークポイントを追加する必要があります。画像のブレークポイントはコンマ(,)で区切ります。 このオプションを使用できるのは、画像プリセットで高さまたは幅が定義されていないときです。
 
    このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
    コンポーネントの「**[!UICONTROL 編集]**」をタップして、次の詳細設定を編集できます。
 
-* **[!UICONTROL 高解像度デバイス向けに最適化]**  - DPR（デバイスピクセル比）の最適化を許可する場合は、このチェックボックスをオン（デフォルト）にします。
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 * **[!UICONTROL Optimize for higher resolution devices]** - Select (default) the checkbox to allow DPR (Device Pixel Ratio) optimization.
 
-   [デバイスのピクセル比の最適化](/help/assets/imaging-faq.md#dpr)についても参照してください。
+  See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
 
-   Adobe Experience Manager Dynamic MediaスマートイメージングDPRの値は無視されます。
+  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored.
 
-   **[!UICONTROL 高解像度デバイス向けの最適化]**&#x200B;オプションは、次の条件が満たされる場合にのみ表示されます。
-   * 「プリセットの種類」で、「**[!UICONTROL 画像プリセット]**」を選択し、「**[!UICONTROL 画像プリセット]**」ドロップダウンリストから「**[!UICONTROL RESS_IP]**」を選択します。
+  The **[!UICONTROL Optimize for higher resolution devices]** option is only shown when the following is true:
+  * Under Preset Type, **[!UICONTROL Image Preset]** is selected, and **[!UICONTROL RESS_IP]** is selected from the **[!UICONTROL Image Preset]** drop-down list.
 
-   ![画像プリセットのデバイスピクセル比設定](/help/assets/assets-dm/dpr-ress-ip.png)
+  ![device pixel ratio setting for image preset](/help/assets/assets-dm/dpr-ress-ip.png) -->
 
 * **[!UICONTROL タイトル]**  — 画像のタイトルを変更します。
 
@@ -202,19 +202,19 @@ Dynamic Media コンポーネントを使用して、ダイナミックビデオ
 
 ![chlimage_1-173](assets/chlimage_1-540.png)
 
-コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次のDynamic Media設定を編集する必要があります。
+コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次のDynamic Media設定を編集します。
 
 >[!NOTE]
 >
 >デフォルトでは、Dynamic Media ビデオコンポーネントはアダプティブです。ビデオコンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
-* **[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。
+* **[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビデオビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
 * **[!UICONTROL ビューア修飾子]**  — ビューア修飾子は、name=valueの形式で&amp;を区切り文字として使用し、『Adobeビューアリファレンスガイド』で概要を説明しているようにビューアを変更できます。`posterimage=img.jpg&caption=text.vtt,1` はビューア修飾子の一例です。
 
-   ビューア修飾子を使用すると、例えば次のことが可能です。
+   ビューア修飾子を使用して、例えば次の操作を実行できます。
 
-   * ビデオにキャプションファイルを関連付ける：[キャプション][https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=ja)
+   * ビデオにキャプションファイルを関連付ける：[caption][https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
    * ナビゲーションファイルとビデオの関連付け：[navigation][https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
       コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の詳細設定を編集できます。
@@ -233,13 +233,13 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 ![dm-settings-smart-crop](assets/dm-settings-smart-crop.png)
 
-コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次のDynamic Media設定を編集する必要があります。
+コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次のDynamic Media設定を編集します。
 
 >[!NOTE]
 >
 >デフォルトでは、Dynamic Media画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントで、「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
-* **[!UICONTROL 画像の修飾子]**  — 追加の画像コマンドを指定して、画像エフェクトを適用できます。これらは画像プリセットと画像をサーブするコマンドリファレンスに記述されています。
+* **[!UICONTROL 画像の修飾子]**  — 追加の画像コマンドを指定して、画像エフェクトを適用できます。これらの効果については、画像プリセットおよび画像サービングコマンドリファレンスで説明しています。
 
    このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
@@ -247,17 +247,17 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 * **[!UICONTROL 縦横比の一致を有効にする]**  — 元の画像の縦横比に最も適した縦横比のスマート切り抜きレンディションをDynamic Mediaで選択できるようにするには、このオプションを選択します。
 
-* **[!UICONTROL 高解像度デバイス向けに最適化]**  - DPR（デバイスピクセル比）の最適化を許可する場合は、このチェックボックスをオン（デフォルト）にします。
+<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 * **[!UICONTROL Optimize for higher resolution devices]** - Select (default) the checkbox to allow DPR (Device Pixel Ratio) optimization. 
 
-   [デバイスのピクセル比の最適化](/help/assets/imaging-faq.md#dpr)についても参照してください。
+  See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr).
 
-   Adobe Experience Manager Dynamic MediaスマートイメージングDPRの値は無視されます。
+  Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored.
 
-   **[!UICONTROL 高解像度デバイス向けの最適化]**&#x200B;オプションは、次の条件が満たされる場合にのみ表示されます。
+  The **[!UICONTROL Optimize for higher resolution devices]** option is only shown when the following is true:
 
-   * 「プリセットの種類」で、「**[!UICONTROL スマート切り抜き]**」オプションが選択されます。
+  * Under Preset Type, **[!UICONTROL Smart Crop]** option is selected.
 
-   ![スマート切り抜きのデバイスピクセル比設定](/help/assets/assets-dm/dpr-smartcrop.png)
+  ![device pixel ratio setting for smart crop](/help/assets/assets-dm/dpr-smartcrop.png) -->
 
 * **[!UICONTROL タイトル]**  — スマート切り抜き画像のタイトルを変更します。
 
@@ -277,7 +277,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 インタラクティブメディアコンポーネントは、インタラクティビティ（ホットスポットまたは画像マップ）を含むアセット用です。インタラクティブ画像、インタラクティブビデオまたはカルーセルバナーがある場合は、**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを使用します。
 
-インタラクティブメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、様々なオプションを使用できます。さらに、レスポンシブビューアであるので、ビューアのサイズは画面サイズに合わせて自動的に変化します。すべてのビューアは HTML5 ビューアです。
+インタラクティブメディアコンポーネントはスマートです。画像を追加するかビデオを追加するかに関わらず、様々なオプションがあります。 また、レスポンシブなビューアなので、画面のサイズは画面のサイズに基づいて自動的に変更されます。 すべてのビューアは HTML5 ビューアです。
 
 >[!NOTE]
 >
@@ -288,7 +288,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 >
 >
-そのページの各インタラクティブメディアコンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされないことに注意してください。
+そのページの各インタラクティブメディアコンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされていません。
 >
 >一方、ページ内で、同じタイプのアセットを使用するすべてのインタラクティブメディアコンポーネントで同じビューアプリセットを使用することは可能です。
 
@@ -330,7 +330,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 >
 >
-そのページの各&#x200B;**[!UICONTROL パノラマメディア]**&#x200B;コンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされないことに注意してください。
+そのページの各&#x200B;**[!UICONTROL パノラマメディア]**&#x200B;コンポーネントにそれぞれ異なるビューアプリセットを割り当てることは、サポートされていません。
 >
 >一方、ページ内で、同じタイプのアセットを使用するすべてのパノラマメディアコンポーネントで同じビューアプリセットを使用することは可能です。
 
@@ -340,13 +340,13 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 * **[!UICONTROL ビューアプリセット]**  - 「ビューアプリセット」ドロップダウンメニューから既存のビューアを選択します。
 
-探しているビューアプリセットが表示されない場合は、そのビューアプリセットが公開されていることを確認してください。ビューアプリセットを使用するには、公開する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
+探しているビューアプリセットが表示されない場合は、そのビューアプリセットが公開されていることを確認してください。ビューアプリセットは、公開してから使用してください。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
 ### ビデオ 360 メディアコンポーネント {#video-media-component}
 
 Web ページ上でエクイレクタングラー形式のビデオをレンダリングして部屋、物件、場所、風景、医療処置などの没入感のある視聴体験が得られるようにするには、**[!UICONTROL ビデオ 360 メディア]**&#x200B;コンポーネントを使用します。
 
-フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を利用します。
+フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を使用します。
 
 ビューアでは、360 ビデオアセットの配信をネイティブサポートしています。デフォルトでは、表示または再生するための追加設定は不要です。360 ビデオは、.mp4、.mkv、.mov といった標準のビデオ拡張子を使用して配信されます。最も一般的なコーデックは H.264 です。
 
@@ -356,7 +356,7 @@ Web ページ上でエクイレクタングラー形式のビデオをレンダ�
 
 * **[!UICONTROL ビューアプリセット]**  - 「ビューアプリセット」ドロップダウンメニューから既存のビューアを選択します。バーチャルリアリティグラスを使用するエンドユーザーには、Video360VR を使用します。基本的なビデオ再生コントロールとソーシャルメディア機能を含んでいます。基本的なビデオ再生コントロールを含む Video360_social を使用します。ビデオのレンダリングはステレオモードで行われます。視点の手動制御はオフになり、ジャイロスコープ制御がオンになります。ソーシャルメディア機能はありません。
 
-探しているビューアプリセットが表示されない場合は、そのビューアプリセットが公開されていることを確認してください。ビューアプリセットを使用するには、公開する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
+探しているビューアプリセットが表示されない場合は、そのビューアプリセットが公開されていることを確認してください。ビューアプリセットを使用する前に必ず公開してください。 詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
 ### HTTP/2 を使用した Dynamic Media アセットの配信 {#using-http-to-delivery-dynamic-media-assets}
 
@@ -366,10 +366,10 @@ Dynamic Media アカウントでの HTTP/2 の使用方法について詳しく�
 
 >[!MORELIKETHIS]
 >
->* [AEM Dynamic Media でのビデオプレーヤーの使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-player-feature-video-use.html)
->* [AEM Dynamic Media でのインタラクティブビデオの使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-interactive-video-feature-video-use.html)
->* [AEM Dynamic Media でのアセットビューアについて](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-viewer-feature-video-understand.html)
->* [AEM Dynamic Media でのカスタムビデオサムネールの使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-video-thumbnails-feature-video-use.html)
->* [AEM Dynamic Media でのカラーマネジメントについて](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-color-management-technical-video-setup.html)
->* [AEM Dynamic Media での画像シャープニングの使用](https://helpx.adobe.com/experience-manager/kt/assets/using/dynamic-media-image-sharpening-feature-video-use.html)
+>* [Experience Manager Dynamic Media でのビデオプレーヤーの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-video-player-feature-video-use.html)
+>* [Experience Manager Dynamic Media でのインタラクティブビデオの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html)
+>* [Experience Manager Dynamic Media でのアセットビューアについて](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-feature-video-understand.html)
+>* [Experience Manager Dynamic Media でのカスタムビデオサムネールの使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [Experience Manager Dynamic Media でのカラーマネジメントについて](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-color-management-technical-video-setup.html)
+>* [Experience Manager Dynamic Media での画像シャープ処理の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-image-sharpening-feature-video-use.html)
 
