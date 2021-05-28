@@ -1,10 +1,10 @@
 ---
 title: AEMコンテンツおよびコマースリリースノート2021
 description: AEMコンテンツおよびコマースリリースノート2021
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: 99636664a49da3ac5d236db5a1185ad6659ee255
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 14%
+source-wordcount: '648'
+ht-degree: 16%
 
 ---
 
@@ -14,13 +14,37 @@ ht-degree: 14%
 
 現在使用しているCIFバージョン、または将来使用する予定のCIFバージョンについて、以下の表の最小必要システム構成を確認します。
 
-**CIFアドオンが [Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から利用できるようになりました。古いAEM CIFコネクタはメンテナンスモードに入り、使用しないでください。 新しいCIFアドオンに移行してください。**
+**4月のリリースでは、GitHubのCIFコネクタを[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)で利用できるCIFアドオンに置き換えました。 アドオンに切り替えると、次のような大きなメリットが得られます。
+
+* 新機能のほとんどは、AEM 6.5ですぐに使用できます（機能側ポートを待つ必要はありません）。
+* 新しいアドオンバージョンへの容易なアップグレード
+* Cloud Service準備完了
+
+古いAEM CIFコネクタはメンテナンスモードに入り、使用しないでください。 CIFコネクタを新しいCIFアドオンに置き換えてください。 ほとんどのプロジェクトでは、単にパッケージの置き換えが可能です。 **
 
 | コンポーネント | システム要件 |
 |:-------|:-----:|
 | CIFアドオン | 最小：AEM 6.5.7、Magento2.3.5のGraphQLスキーマ |
 | CIFコアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## リリース日：2021年5月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIFアドオン | 2021.05.26 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
+| CIFコアコンポーネント | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
+| CIF Veniaリファレンスサイト | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
+
+### 新機能 {#what-is-new-may}
+
+* 製品コンソールのプロパティでの関連コンテンツのページネーションのサポート
+
+### バグの修正 {#bug-fixes-may}
+
+* 製品プロパティの「アセット」タブにアセットサムネールが表示されない
+
+* 製品コンソールのプレビューデータをリセットするパンくずリスト
 
 ## リリース日：2021年4月
 
@@ -74,7 +98,7 @@ ht-degree: 14%
 
 ### 新機能 {#what-is-new-february}
 
-* 製品エクスペリエンス管理：エクスペリエンスフラグメントを使用して、製品カタログページを個別に強化する。
+* 製品エクスペリエンス管理：エクスペリエンスフラグメントを使用して製品カタログページを個別に拡充することができます。
 
 * 製品コンソールの拡張プロパティを使用して、リンクされたアセットとエクスペリエンスフラグメントを表示します。関連コンテンツにすばやく移動するアクションも含まれます。
 
