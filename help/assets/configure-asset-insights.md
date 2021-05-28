@@ -5,16 +5,16 @@ contentOwner: AG
 role: Architect, Administrator
 feature: アセットインサイト，アセットレポート
 exl-id: 67be0ae6-5939-40fe-bf8a-b8a2c2f68f15
-source-git-commit: c07467feb96c25a4bac1916f88f04fdb37979ee1
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 47%
+source-wordcount: '257'
+ht-degree: 29%
 
 ---
 
-# アセットインサイトの設定 {#configure-asset-insights}
+# アセットインサイトの設定{#configure-asset-insights}
 
-[!DNL Adobe Experience Manager Assets] では、サードパーティ Web サイトで使用されているデジタルアセットの使用状況データを [!DNL Adobe Analytics] から取得します。アセットインサイトでこのようなデータを取得して洞察を得るためには、まず、[!DNL Adobe Analytics] と連携するようにこの機能を設定します。この機能を使用するには、[!DNL Adobe Analytics]ライセンスを別途購入してください。 [!DNL Managed Services]をご利用のお客様は、[!DNL Experience Manager]にバンドルされている[!DNL Analytics]ライセンスを受け取ります。 [Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)を参照してください。
+[!DNL Adobe Experience Manager Assets] では、サードパーティ Web サイトで使用されているデジタルアセットの使用状況データを [!DNL Adobe Analytics] から取得します。アセットインサイトでこのデータを取得してインサイトを生成できるようにするには、まず[!DNL Adobe Analytics]と統合するように機能を設定します。 この機能をオンプレミスインストールで使用するには、[!DNL Adobe Analytics]ライセンスを別途購入してください。 [!DNL Managed Services]をご利用のお客様は、[!DNL Experience Manager]にバンドルされている[!DNL Analytics]ライセンスを受け取ります。 [Managed Services製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)を参照してください。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 47%
    *図：のアセッ [!DNL Adobe Analytics] トインサイト用にを設定し [!DNL Experience Manager]ます。*
 
 1. 「**[!UICONTROL 認証]**」をクリックします。
-1. [!DNL Experience Manager] によって資格情報が認証されたら、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトでデータをフェッチする レポートスイートを選択します。[!DNL Adobe Analytics]「**[!UICONTROL 追加]**」をクリックします。
+1. [!DNL Experience Manager]が資格情報を認証した後、**[!UICONTROL レポートスイート]**&#x200B;リストから、アセットインサイトでデータを取得する[!DNL Adobe Analytics]レポートスイートを選択します。 「**[!UICONTROL 追加]**」をクリックします。
 1. [!DNL Experience Manager]がレポートスイートを設定したら、「**[!UICONTROL 完了]**」をクリックします。
 
 ## ページトラッカー{#page-tracker}
