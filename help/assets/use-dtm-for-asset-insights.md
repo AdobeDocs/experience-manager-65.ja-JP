@@ -1,31 +1,31 @@
 ---
-title: DTM でのアセットインサイトの有効化
-description: Adobe Dynamic Tag Management（DTM）を使用してアセットインサイトを有効にする方法を学習します。
+title: DTMを使用したアセットインサイトの有効化
+description: Assets Insightsを有効にするために、AdobeのDynamic Tag Management(DTM)を使用する方法について説明します。
 contentOwner: AG
 role: Business Practitioner, Administrator
 feature: アセットインサイト，アセットレポート
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '675'
-ht-degree: 33%
+ht-degree: 29%
 
 ---
 
-# DTM でのアセットインサイトの有効化 {#enable-asset-insights-through-dtm}
+# DTM {#enable-asset-insights-through-dtm}を使用したアセットインサイトの有効化
 
-Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。これは Adobe Analytics のユーザーに無償で提供されます。トラッキングコードをカスタマイズして、サードパーティのCMSソリューションでAsset Insightsを使用できるようにするか、DTMを使用してAsset Insightsタグを挿入できます。 インサイトのサポートおよび提供がおこなわれるのは、画像に対してのみです。
+Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。これは Adobe Analytics のユーザーに無償で提供されます。トラッキングコードをカスタマイズして、サードパーティのCMSソリューションでAssets Insightsを使用できるようにするか、DTMを使用してAssets Insightsタグを挿入することができます。 インサイトのサポートおよび提供がおこなわれるのは、画像に対してのみです。
 
 >[!CAUTION]
 >
->AdobeDTMは[!DNL Adobe Experience Platform Launch]のために廃止され、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達します。 Adobeでは、アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)に[ [!DNL Launch] を使用することをお勧めします。
+>AdobeDTMは[!DNL Adobe Experience Platform Launch]のために廃止され、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達します。 Adobeでは、アセットのインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)に[ [!DNL Launch] を使用することをお勧めします。
 
-DTM を使用してアセットインサイトを有効にするには、次の手順を実行します。
+DTMを使用してアセットインサイトを有効にするには、次の手順を実行します。
 
 1. Experience Managerのロゴをクリックし、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL インサイト設定]**&#x200B;に移動します。
 1. [DTMを使用したExperience ManagerデプロイメントのCloud Service](/help/sites-administering/dtm.md)
 
-   APIトークンは、[https://dtm.adobe.com](https://dtm.adobe.com/)にログオンし、ユーザープロファイルの&#x200B;**[!UICONTROL アカウント設定]**&#x200B;にアクセスすると使用できます。 Experience Managerサイトとアセットインサイトの統合は引き続き機能するので、アセットインサイトの観点からは、この手順は必要ありません。
+   APIトークンは、[https://dtm.adobe.com](https://dtm.adobe.com/)にログオンし、ユーザープロファイルの&#x200B;**[!UICONTROL アカウント設定]**&#x200B;にアクセスすると使用できます。 Experience Managerサイトとアセットインサイトの統合は、引き続き機能するので、アセットインサイトの観点からは、この手順は必要ありません。
 
 1. [https://dtm.adobe.com](https://dtm.adobe.com/)にログオンし、必要に応じて会社を選択します。
 1. 既存のWebプロパティを作成するか、開きます
