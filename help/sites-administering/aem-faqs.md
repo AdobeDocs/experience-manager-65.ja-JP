@@ -8,10 +8,10 @@ contentOwner: jsyal
 discoiquuid: a3bb5695-6593-413d-9c2f-4c164e663b15
 docset: aem65
 exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 72%
+source-wordcount: '1114'
+ht-degree: 66%
 
 ---
 
@@ -91,17 +91,9 @@ Adobe Experience Managerの最新バージョンへのアップグレードを�
 
 ムービーファイルをアップロードするユーザーが asset ノード以下の削除権限を持っていない場合、削除チャンクノードは失敗し、アップロードが再開します。
 
-#### AEM 6.4 で一度に操作できるデジタルアセットの最大数を教えてください。  {#what-is-the-maximum-number-of-digital-assets-that-can-be-operated-with-aem-at-a-time}
-
-Adobe Experience Manager（AEM）6.5 では現在、一度に 2 GB のアセットをアップロードできます。
-
-AEM 6.5 で操作できるアセットの最大数について詳しくは、[Assets サイジングガイド](/help/assets/assets-sizing-guide.md)を参照してください。
-
 #### 言語コピーの作成時のOOTB設定のデフォルト設定は何ですか？{#what-are-the-default-settings-for-ootb-configurations-while-creating-language-copy}
 
-クラシック UI を利用して言語コピーを作成するときは、Assets は新しい言語階層下に移動されるのではなく、言語マスターから使用されます。
-
-一方で、タッチ UI を利用して言語コピーを作成するときは（**参照**／**言語コピーを更新**）、新しい DAM フォルダーが新しい言語下に作成され、アセットはそのフォルダーから参照されます。
+タッチUI（**参照** -> **言語コピーを更新**）を使用して言語コピーを作成すると、新しい言語の下に新しいDAMフォルダーが作成され、アセットが参照されます。
 
 これは OOTB 設定のデフォルト設定です。翻訳設定で「**ページのアセットを翻訳**」を「**翻訳しない**」に設定できます。AEM 6.4 の場合は、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;を選択して設定します。
 
@@ -112,10 +104,6 @@ OSGi Component Disabler を無効にできます。このサービスの使用�
 回避策として、AEM が再開するたびに、UI または `curl` コマンド（以下の例を参照）を使用して、このコンポーネントを手動で無効にすることもできます。
 
 `curl -u admin:$(pass CQ_Admin) 'https://localhost:4502/system/console/components/com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporter' --data 'action=disable'`
-
-#### AEM 6.5インスタンスでアセットインサイトを設定する方法を教えてください。{#how-to-configure-asset-insights-with-aem-instance}
-
-Adobeのアクティベーション(DTM)を介してデプロイされたExperience Manager用にAsset Insightsを設定および設定するには、[AEM Assets](https://docs.adobe.com/content/help/en/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)でAsset Insightsを設定する方法を参照してください。
 
 #### 管理コンソールのカスタマイズ方法は？{#how-to-customize-admin-consoles}
 
@@ -133,20 +121,8 @@ Granite UI Foundationの新しいSlingコンポーネントのセットがCoral3
 
 簡易検索の実装は、2017 Summit lab AEM Search Demystified の資料です。
 
-#### AEM AssetsとAEM MediaLibraryの違いは何ですか。{#what-is-the-difference-between-aem-assets-and-aem-medialibrary}
-
-AEM Assets は、AEM プラットフォーム上のアプリケーションです。お客様はこのアプリケーションを使用して、Web ベースのリポジトリ内でデジタルアセット（画像、ビデオ、ドキュメントおよびオーディオクリップ）を管理できますが、AEM Media Library は、画像やその他の共有リソースの保存専用に設けられた、AEM WCM コンテンツリポジトリ内の構成要素です。
-
-詳細については、[AEM Assets と AEM Media Library との比較](/help/assets/medialibrary.md)を参照してください。
-
-#### 顧客が Adobe アセットピッカーにアクセスして画像を選択できるように、WordPress 用のプラグインを作成することは可能ですか。  {#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
+#### 顧客がアセットピッカーにアクセスして画像を選択できるWordPress用のAdobeを構築することは可能ですか？{#is-it-possible-to-build-plugin-for-wordpress-that-allows-a-customer-to-access-adobe-asset-picker-to-select-images}
 
 はい、WordPress を使用しているお客様は、Adobe アセットピッカーを使用して AEM Assets サーバーから画像を選択し、WordPress サイトの投稿に追加できます。
 
 詳細については、[アセットセレクター](../assets/search-assets.md#assetpicker)を参照してください。
-
-#### 述語を追加するために AEM Assets の検索ファセットを拡張することは可能ですか。  {#is-it-possible-to-extend-the-search-facets-in-aem-assets-to-add-additional-predicates}
-
-Adobe Experience Manager (AEM) Assets の企業全体のデプロイメントには、多くのアセットが格納されています。述語をデフォルトフォームに追加する、または選択したファセットを含むカスタムフォームを使用することができます。
-
-詳しくは、[検索ファセット](/help/assets/search-facets.md)を参照してください。
