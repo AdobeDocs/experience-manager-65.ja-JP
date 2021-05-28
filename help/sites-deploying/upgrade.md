@@ -13,10 +13,10 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: アップグレード
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 78%
+ht-degree: 73%
 
 ---
 
@@ -53,11 +53,11 @@ ht-degree: 78%
 
 AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました。Persistence Manager は、[マイクロカーネル](/help/sites-deploying/platform.md#contentbody_title_4)で置き換えられました。バージョン 6.1 から CRX2 がサポートされなくなりました。5.6.1 のインスタンスから CRX2 リポジトリを移行するには、crx2oak という移行ツールを実行する必要があります。詳しくは、[CRX2OAK 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。
 
-アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
+Assets Insightsを使用し、AEM 6.2より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Beanを使用してIDを生成する必要があります。 アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
 6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3より前のバージョンからアップグレードする場合は、アップグレードの一環として、システムのダウンタイムが伴うリポジトリの移行が必要です。
 
-アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
+アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ありません。 また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
 **AEM 6.3 から AEM 6.5 へのアップグレード時には、この移行は必要ありません。**
 
