@@ -6,7 +6,7 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 59%
@@ -150,7 +150,7 @@ ht-degree: 59%
    + [アセットのExperience Manager](download-assets-from-aem.md)
    + [Lightbox](light-box.md)
    + [アセットインサイト](asset-insights.md)
-   + [DTMを使用したアセットインサイトの有効化](use-dtm-for-asset-insights.md)
+   + [DTMを通じたアセットインサイトの有効化](use-dtm-for-asset-insights.md)
    + [アセットインサイトの設定](configure-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
