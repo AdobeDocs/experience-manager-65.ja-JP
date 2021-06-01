@@ -9,10 +9,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 設定，Scene7モード
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 485464350f391fca327207b78b165897fdacc2d3
 workflow-type: tm+mt
-source-wordcount: '6154'
-ht-degree: 56%
+source-wordcount: '6156'
+ht-degree: 62%
 
 ---
 
@@ -32,15 +32,15 @@ ht-degree: 56%
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->次の機能のリストを使用するには、Adobe Experience Manager - Dynamic Mediaに組み込まれている標準搭載のCDNを使用する必要があります。 その他のカスタムCDNは、これらの機能ではサポートされません。
+>次の機能のリストを使用するには、Adobe Experience Manager - Dynamic Mediaに組み込まれている標準搭載のCDNを使用する必要があります。 他のカスタム CDN は、これらの機能ではサポートされません。
 >
 >* [スマートイメージング](/help/assets/imaging-faq.md)
 * [キャッシュの無効化](/help/assets/invalidate-cdn-cache-dynamic-media.md)
-* [ホットリンク保護](/help/assets/hotlink-protection.md)
+* [ホットリンクの保護](/help/assets/hotlink-protection.md)
 * [コンテンツの HTTP/2 配信](/help/assets/http2.md)
-* CDNレベルでのURLリダイレクト
+* CDN レベルでの URL リダイレクト
 * Akamai ChinaCDN（中国での最適な配信用）
 
 
@@ -48,8 +48,8 @@ ht-degree: 56%
 
 [Dynamic Media はデフォルトで無効になっています。](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)Dynamic Mediaの機能を活用するには、有効にする必要があります。
 
->[!NOTE]
-Dynamic Media - Scene7モードは、Experience Managerオーサーインスタンス専用です。 そのため、Experience Managerオーサーインスタンスで`runmode=dynamicmedia_scene7`を設定し、Experience Managerパブリッシュインスタンスでは&#x200B;*設定*&#x200B;しないようにする必要があります。
+>[!WARNING]
+Dynamic Media - Scene7モードは、*Experience Managerオーサーインスタンス専用です*。 そのため、Experience Managerオーサーインスタンスで`runmode=dynamicmedia_scene7`を設定し、Experience Managerパブリッシュインスタンスでは&#x200B;*設定*&#x200B;しないようにする必要があります。
 
 Dynamic Mediaを有効にするには、コマンドラインから`dynamicmedia_scene7`実行モードを使用してExperience Managerを起動する必要があります。ターミナルウィンドウで次のように入力します（使用されるポートの例は4502）。
 
@@ -80,17 +80,17 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 
 詳しくは、[一括アセット移行用の機能パック18912のインストール](/help/assets/bulk-ingest-migrate.md)を参照してください。
 
-## Cloud Services{#configuring-dynamic-media-cloud-services}でのDynamic Media設定の作成
+## Cloud Services での Dynamic Media 設定の作成 {#configuring-dynamic-media-cloud-services}
 
 **Dynamic Mediaを設定する前に**  - Dynamic Media資格情報を含んだプロビジョニング電子メールを受け取ったら、 [Dynamic Media Classicデスクトップアプリケーションを開いてから](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)、アカウントにサインインしてパスワードを変更する必要があります。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**Cloud ServicesでDynamic Media設定を作成するには**
+**Cloud ServicesでDynamic Media設定を作成するには：**
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップしてから、**[!UICONTROL Cloud Services/Dynamic Media設定]**&#x200B;をタップします。
+1. Experience Managerオーサーモードで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、ツールアイコンをタップしてから、**[!UICONTROL Cloud Services/Dynamic Media設定]**&#x200B;をタップします。
 1. Dynamic Media 設定ブラウザーページの左側のパネルで、「**[!UICONTROL グローバル]**」をタップし（「**[!UICONTROL グローバル]**」の左側にあるフォルダーアイコンをタップまたは選択しないでください）、次に、「**[!UICONTROL 作成]**」をタップします。
-1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ページで、タイトル、Dynamic Media アカウントの電子メールアドレス、パスワードを入力し、地域を選択します。この情報は、プロビジョニング電子メールでAdobeによって提供されます。 Eメールを受け取っていない場合は、Adobeカスタマーケアにお問い合わせください。
+1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ページで、タイトル、Dynamic Media アカウントの電子メールアドレス、パスワードを入力し、地域を選択します。この情報は、プロビジョニングの電子メールでアドビから提供されます。Eメールを受け取っていない場合は、Adobeカスタマーケアにお問い合わせください。
 
    「**[!UICONTROL Dynamic Mediaに接続]**」をタップします。
 
@@ -111,7 +111,7 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 
       * **[!UICONTROL 一部のみ]** の公開このオプションを使用すると、Dynamic Mediaで公開するフォルダーを制御できます。スマート切り抜きや動的レンディションなどの機能を使用したり、プレビュー用にExperience Managerーのみに公開するフォルダーを指定したりできます。 これらの同じアセットは、パブリックドメインでの配信のためにDynamic Mediaで公開されて&#x200B;*いません*。<br>このオプションは、 **[!UICONTROL Dynamic Media Cloud]** Configurationで設定できます。また、必要に応じて、フォルダーレベルで、フォルダーの「 **[!UICONTROL Properties]**」で設定することもできます。<br>詳しくは、[Dynamic Media での選択的公開の操作を参照してください。](/help/assets/selective-publishing.md)<br>この設定を後で変更した場合、または後でフォルダーレベルで変更した場合、その変更の影響を受けるのは、その時点からアップロードする新しいアセットだけです。フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、Experience Managerは、リモートのDynamic Mediaレンディションに安全にアクセスし、プレビューできます(バイナリはExperience Managerインスタンスに送り返されません)。
-自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない限り、Adobeでは、この設定を指定されたとおりにしておくことをお勧めします。
+自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない限り、アドビでは、この設定を指定されたとおりにしておくことをお勧めします。
 
    * **[!UICONTROL すべてのコンテンツを同期]**  — デフォ <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->ルトで選択されています。Dynamic Media との同期で、アセットを選択して含めるまたは除外する場合は、このオプションの選択を解除します。このオプションの選択を解除すると、次の 2 つの Dynamic Media 同期モードから選択できるようになります。
 
@@ -130,7 +130,7 @@ Experience ManagerDynamic Mediaを6.3から6.4または6.5にアップグレー�
 1. 「**[!UICONTROL 保存]**」をタップします。
 1. Dynamic Mediaコンテンツを公開する前に安全にプレビューするには、Experience Managerオーサーインスタンスを「許可リスト」してDynamic Mediaに接続する必要があります。
 
-   * [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   * [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
    * ページ右上付近のナビゲーションバーで、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Server]**&#x200B;をタップします。
 
@@ -161,14 +161,14 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 
 セットアップおよび設定タスクには、次のものが含まれます。
 
-* [Image Server の公開設定         ](#publishing-setup-for-image-server)
+* [Image Server の公開設定](#publishing-setup-for-image-server)
 * [アプリケーションの一般設定の指定](#configuring-application-general-settings)
 * [カラーマネジメントの設定](#configuring-color-management)
 * [サポートされる形式の MIME タイプの編集](#editing-mime-types-for-supported-formats)
 * [サポートされていない形式のカスタム MIME タイプの追加](#adding-mime-types-for-unsupported-formats)
 * [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### Image Server の公開設定           {#publishing-setup-for-image-server}
+#### Image Server の公開設定  {#publishing-setup-for-image-server}
 
 公開設定は、アセットがデフォルトで Dynamic Media からどのように配信されるかを決定します。設定が指定されていない場合、Dynamic Media は、公開設定で定義されたデフォルト設定に従ってアセットを配信します。例えば、解像度属性が含まれていない画像を配信するように要求した場合、画像は初期設定のオブジェクト解像度設定で配信されます。
 
@@ -182,7 +182,7 @@ Image Server 画面では、画像を配信するためのデフォルト設定�
 * **[!UICONTROL カタログフィールドの初期設定]** - これらの設定は、画像の解像度とデフォルトのサムネールの種類に関係します。
 * **[!UICONTROL カラーマネジメント属性]** - これらの設定は、使用する ICC カラープロファイルを決定します。
 * **[!UICONTROL 互換性の属性]** - この設定により、後方互換性の確保のためにバージョン 3.6 の場合と同様に、テキストレイヤーの先頭と末尾の段落が処理されます。
-* **[!UICONTROL ローカリゼーションサポート]** - これらの設定によって、複数のロケール属性を管理します。また、ロケールマップ文字列を指定することもできます。これにより、ビューアのツールチップで使用する言語を指定できます。**[ローカリゼーションサポート]**&#x200B;の設定について詳しくは、[アセットのローカライゼーションを設定する場合の考慮事項](https://docs.adobe.com/content/help/ja-JP/dynamic-media-classic/using/intro/introduction.html)を参照してください。
+* **[!UICONTROL ローカリゼーションサポート]** - これらの設定によって、複数のロケール属性を管理します。また、ロケールマップ文字列を指定することもできます。これにより、ビューアのツールチップで使用する言語を指定できます。**[ローカライゼーションサポート]**&#x200B;の設定について詳しくは、[アセットのローカライゼーションを設定する場合の考慮事項](https://docs.adobe.com/content/help/ja-JP/dynamic-media-classic/using/intro/introduction.html)を参照してください。
 
 #### アプリケーションの一般設定の指定 {#configuring-application-general-settings}
 
@@ -231,10 +231,10 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 それには、次のようにします。
 
 * RGB および CMYK 画像のカラー補正を有効にします。
-* カラープロファイルを持たないRGB画像は、*sRGB*&#x200B;カラースペースと見なされます。
-* カラープロファイルを持たないCMYK画像は、*WebCoated*&#x200B;カラースペースと見なされます。
-* RGB出力を返す動的レンディションは、RGB出力を&#x200B;*sRGB*&#x200B;カラースペースで返します。
-* CMYK出力を返す動的レンディションは、CMYK出力を&#x200B;*WebCoated*&#x200B;カラースペースで返します。
+* カラープロファイルを持たない RGB 画像は、*sRGB* カラースペースにあると見なされます。
+* カラープロファイルを持たない CMYK 画像は、*WebCoated* カラースペースにあると見なされます。
+* RGB 出力を返す動的レンディションは、RGB 出力を *sRGB* カラースペース内で返します。
+* CMYK 出力を返す動的レンディションは、CMYK 出力を *WebCoated* カラースペース内で返します。
 
 #### サポートされる形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
 
@@ -242,7 +242,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 * Adobe PDF を eCatalog アセットに変換する。
 * Adobe Photoshop ドキュメント（.PSD）をパーソナライズ用のバナーテンプレートアセットに変換する。
-* Adobe Illustratorファイル(.AI)またはAdobe Photoshop Encapsulated PostScript®ファイル(.EPS)をラスタライズします。
+* Adobe Illustrator ファイル（.AI）または Adobe Photoshop Encapsulated PostScript® ファイル（.EPS）をラスタライズする。
 * [ビデオプロファイル](/help/assets/video-profiles.md)および[イメージングプロファイル](/help/assets/image-profiles.md)は、それぞれ、ビデオおよび画像の処理を定義するのに使用できます。
 
 [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
@@ -265,14 +265,14 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 1. 次のいずれかの操作をおこないます。
 
-   * 手順3 ～ 4を繰り返して、さらにMIMEタイプを編集します。
+   * 手順 3～4 を繰り返して、その他の MIME タイプを編集します。
    * CRXDE Liteページのメニューバーで、「**[!UICONTROL すべて保存]**」をタップします。
 
 1. ページの左上隅にある「**[!UICONTROL CRXDE Lite]**」をタップして、Experience Managerに戻ります。
 
 #### サポートされていない形式のカスタム MIME タイプの追加 {#adding-mime-types-for-unsupported-formats}
 
-Assetsでは、サポートされていない形式のカスタムMIMEタイプをExperience Managerできます。 CRXDE Liteに追加する新しいノードが、MIMEタイプを`image_`の前に移動して、Experience Managerによって削除されないようにします。 また、有効値が&#x200B;**[!UICONTROL false]**&#x200B;に設定されていることを確認してください。
+Experience Manager Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Liteに追加する新しいノードが、MIMEタイプを`image_`の前に移動して、Experience Managerによって削除されないようにします。 また、有効値が&#x200B;**[!UICONTROL false]**&#x200B;に設定されていることを確認してください。
 
 **サポートされていない形式のカスタム MIME タイプを追加するには:**
 
@@ -294,7 +294,7 @@ Assetsでは、サポートされていない形式のカスタムMIMEタイプ�
 
 1. 空のテキストフィールドに追加した `DWG=image/vnd.dwg` を入力します。
 
-   例`DWG=image/vnd.dwg`は説明用です。 ここで追加する MIME タイプは、その他のサポートされていない形式でもかまいません。
+   この `DWG=image/vnd.dwg` 例は、説明の目的でのみ使用します。ここで追加する MIME タイプは、その他のサポートされていない形式でもかまいません。
 
    ![2019-08-02_16-36-36](assets/2019-08-02_16-36-36.png)
 
@@ -344,7 +344,7 @@ Assetsでは、サポートされていない形式のカスタムMIMEタイプ�
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
-   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページの上付近にあるナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／バッチセットプリセット／デフォルトの名前]**&#x200B;をタップします。
 1. 「**[!UICONTROL フォームを表示]**」または「**[!UICONTROL コードを表示]**」を選択し、各要素に関する情報の表示と入力の方法を指定します。
@@ -377,7 +377,7 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
-   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページの上付近にあるナビゲーションバーで、**[!UICONTROL 設定／アプリケーション設定／バッチセットプリセット／バッチセットプリセット]**&#x200B;をタップします。
 
@@ -433,7 +433,7 @@ spin-01-01
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
-   資格情報とログインの詳細は、プロビジョニング時にAdobeから提供されました。 この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
+   資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、テクニカルサポートにお問い合わせください。
 
 1. ページの上付近にあるナビゲーションバーで、**[!UICONTROL 設定] / [!UICONTROL アプリケーション設定] / [!UICONTROL バッチセットプリセット] / [!UICONTROL バッチセットプリセット]**&#x200B;をタップします。
 
@@ -497,13 +497,13 @@ Dynamic Media - Scene7モードのスムーズな実行を維持するために�
 
 #### 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する
 
-ジョブパラメータを調整して、ファイルアップロード時の処理を高速化できます。例えば、PSDファイルをアップロードしても、テンプレートとして処理したくない場合は、レイヤー抽出をfalse（オフ）に設定できます。 この場合、調整されたジョブパラメータは次のように表示されます。`process=None&createTemplate=false`.
+ジョブパラメーターを調整して、ファイルアップロード時の処理を高速化できます。例えば、PSDファイルをアップロードしても、テンプレートとして処理したくない場合は、レイヤー抽出をfalse（オフ）に設定できます。 この場合、調整されたジョブパラメータは次のように表示されます。`process=None&createTemplate=false`.
 
 テンプレートの作成を有効にする場合は、次のパラメーターを使用します。`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`.
 
 <!-- THIS PARAGRAPH WAS REPLACED WITH THE TWO PARAGRAPHS DIRECTLY ABOVE BASED ON CQDOC-17657 You can tune job parameters for faster processing when you upload files. For example, if you are uploading PSD files, but do not want to process them as templates, you can set layer extraction to false (off). In such case, the tuned job parameter would appear as `process=None&createTemplate=false`. -->
 
-Adobeでは、PDF、PostScript®およびPSDファイルに対して、次の「調整済み」ジョブパラメーターを使用することをお勧めします。
+PDF ファイル、PostScript® ファイル、PSD ファイルには、以下の「調整済み」ジョブパラメーターを使用することをお勧めします。
 
 <!-- OLD PDF JOB PARAMETERS `pdfprocess=Rasterize&resolution=150&colorspace=Auto&pdfbrochure=false&keywords=false&links=false` -->
 
@@ -532,7 +532,7 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
-   **[!UICONTROL 並列ジョブの最大数]**&#x200B;を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。正確な値は、ハードウェア容量によって異なります。 初期移行や1回限りの一括アップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の2倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があります。 そのため、特定の使用例に基づいて値をテストし、調整します。
+   **[!UICONTROL 並列ジョブの最大数]**&#x200B;を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。正確な値は、ハードウェアの容量に依存します。初期移行や1回限りの一括アップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の 2 倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。そのため、特定事例で値をテストして整する必要があります。
 
 <!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
@@ -544,7 +544,7 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 #### Graniteのワークフローキュー{#updating-the-granite-workflow-queue}の更新
 
-Granite のワークフローキューは、一時的でないワークフローに使用されます。Dynamic Mediaでは、 **[!UICONTROL Dynamic Media Encode Video]**&#x200B;ワークフローでビデオを処理するために使用されます。
+Granite のワークフローキューは、一時的でないワークフローに使用されます。Dynamic Media では、**[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローでビデオを処理するために使用されます。
 
 **Graniteのワークフローキューを更新するには：**
 
@@ -555,7 +555,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
-   並列ジョブの最大数を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。正確な値は、ハードウェア容量によって異なります。 初期移行や1回限りの一括アップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の2倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があります。 そのため、特定の使用例に基づいて値をテストし、調整します。
+   並列ジョブの最大数を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。正確な値は、ハードウェアの容量に依存します。初期移行や1回限りの一括アップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の 2 倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。そのため、特定事例で値をテストして整する必要があります。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -563,7 +563,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 
 #### Dynamic Media Classicアップロード接続{#updating-the-scene-upload-connection}の更新
 
-Scene7アップロード接続設定は、Experience ManagerアセットをDynamic Media Classicサーバーに同期します。
+Scene7 アップロード接続の設定は、Experience Manager Assets を Dynamic Media Classic サーバーと同期します。
 
 **Dynamic Media Classicアップロード接続を更新するには：**
 
