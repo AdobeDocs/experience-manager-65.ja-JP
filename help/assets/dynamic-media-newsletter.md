@@ -1,16 +1,16 @@
 ---
 title: Dynamic Media ニュースレター
-description: 'Experience League 提供の Dynamic Media ニュースレターは月刊ニュースレターです。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。必要なものがすべて揃っているこのニュースレターでは、知識構築のための有益なリソースを利用できます。ハウツービデオやソリューション概要のほか、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介などです。 '
+description: 'Experience League 提供の Dynamic Media ニュースレターは月刊ニュースレターです。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。このワンストップのショップニュースレターでは、知識の構築に役立つ貴重なリソースをご利用いただけます。画像プリセット、ビューアプリセット、ビデオプロファイルなど、主な機能の一部に関するビデオ、ソリューションの概要、紹介などが含まれています。 '
 keywords: Dynamic Media；ニュースレター；製品アップデート；ヒントとテクニック；イベント；顧客の成功；ブログ；ブログ；画像；ビデオ；機能
 contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
 role: Business Practitioner, Administrator
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: コラボレーション， Dynamic Media Classic
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 98%
+source-wordcount: '1182'
+ht-degree: 79%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 98%
 
 Experience League 提供の月刊の Dynamic Media ニュースレターは、Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。
 
-必要なものがすべて揃っているこのニュースレターで、知識構築のための有益なリソースを見つけましょう。ハウツービデオやソリューション概要のほか、画像プリセット、ビューアプリセット、ビデオプロファイルといった、ソリューションの主要な機能の紹介などが含まれています。
+このワンストップのショップニュースレターでは、知識の構築に役立つ貴重なリソースをご利用いただけます。画像プリセット、ビューアプリセット、ビデオプロファイルなど、主な機能の一部に関するビデオ、ソリューションの概要、紹介などが含まれています。
 
-## 最新情報とインスピレーション
+## インスピレーションを得る — 常に情報を得る
 
 [新規登録](https://www.adobe.com/subscription/dynamic-media-newsletter.html)して、Dynamic Media ニュースレターを毎月インボックスに受信しましょう。
 
@@ -52,18 +52,18 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 無料の Dynamic Media Classic 監査の詳細
    * John Monroe 氏（カスタマーサクセスサービス担当シニアプログラムマネージャー）へのインタビュー
 
-   >[!IMPORTANT]
-   >
-   >Dynamic Media ニュースレターを希望する方のみに送信するようにしています。本号の後も引き続きニュースレターを受信するには、[こちら](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)から新規登録してください。
+      >[!IMPORTANT]
+      >
+      >Adobeは、Dynamic Mediaのニュースレターを受信したい人にのみ送信するよう希望しています。 本号の後も引き続きニュースレターを受信するには、[こちら](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)から新規登録してください。
 
 * **[2020 年 2 月、第 2 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
    この号の主な内容：
 
    * 新しいスキルビルダーの Web セミナーに参加し、Dynamic Media Classic のエキスパートになる
-   * Adobe Summit 2020 から Dynamic Media を探し出す
+   * Dynamic Mediaサミット2020でのAdobeの場所を見る。
    * Dynamic Media の切り抜きマジックの使い方を知る
-   * 無料の監査を活用して、Dynamic Media Classic の価値を高める
+   * 無料の監査を活用して、Dynamic Media Classicからより多くの価値を得ることができます。
    * Dynamic Media Classic の新しいユーザーインターフェイスの説明
    * Georgia Myers 氏（Adobe Experience Cloud カスタマーサクセス担当マネージャー）へのインタビュー。
 
@@ -73,7 +73,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
 
    * 5 つの新しいスキルビルダー Web セミナーを使用して、Dynamic Media Classic のスキルを習得する
    * 無料の監査を活用して、Dynamic Media Classic からより多くの価値を得る
-   * リッチメディア顧客にとって過去最高のホリデーショッピングシーズン
+   * アドビのリッチメディア顧客にとって過去最高のホリデーショッピングシーズン
    * 今日のニーズを満たす DAM（Digital Asset Manager）の選択ガイドを参照し、リッチメディアの新機能に備える
    * Mark Dean 氏（デジタルメディアスペシャリスト）へのインタビュー
 
@@ -92,7 +92,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    この号の主な内容：
 
    * Dynamic Media ビューアでの訪問者のアクションに関する高度な分析を取得する方法
-   * 高画質の画像やビデオの配信で得られる驚くべき結果の解説図とヒント
+   * 高画質の画像やビデオの配信で得られる驚きの結果の解説図とヒント
    * 今日の顧客の期待に応えることができるようにリッチメディア戦略を更新する方法に関する CMSwire の有用な記事
    * スキルビルダーシリーズから Dynamic Media のオンデマンド Web セミナーへのアクセス
    * Nick Peters 氏（Adobe Experience Manager のサイトリライアビリティエンジニアリング担当マネージャー）へのインタビュー
@@ -109,7 +109,6 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * Bridget Roman 氏（Adobe Experience Manager Assets 担当シニアプロダクトマーケティングマネージャー）へのインタビュー
    * Experience League での Dynamic Media および Dynamic Media Classic のすばやい習得
 
-
 * **[2019 年 8 月、第 08 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_08_2019_Aug.html)**
 
    この号の主な内容：
@@ -120,7 +119,6 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 訪問者がリッチメディアとどのようにやり取りしているかを分析できる強力な統合機能（今年 9 月にリリース予定）のプレビュー
    * PieterJan Pieper 氏（Dynamic Media テクニカルサポートエキスパート）へのインタビュー
 
-
 * **[2019 年 7 月、第 07 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
 
    この号の主な内容：
@@ -128,15 +126,15 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 価値の高いアセットを適切に管理して、訪問者の再訪を維持できるエクスペリエンスを自信を持って提供するためのリソースと情報
    * デジタルアセットの保護に関する今後の Web セミナーの紹介
    * 情報満載の Adobe Insider Tour の次のステップ
-   * Adobe Experience Manager Assets（AEM Assets）内に Dynamic Media が組み込まれている場合に利用できる優れた機能
+   * Adobe Experience Manager Assets(Adobe Experience Manager Assets)内にDynamic Mediaがある場合に利用できる優れた機能。
    * Web サイトへの 360 度ビデオとカスタムビデオサムネールの追加
-   * Andrew Hathaway 氏（AEM Assets 内 Dynamic Media 担当主任ソリューションコンサルタント）へのインタビュー
+   * Andrew Hathaway氏(Experience Manager・アセット内Dynamic Media担当主任ソリューション・コンサルタント)へのインタビュー
 
 * **[2019 年 6 月、第 06 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
 
    この号の主な内容：
 
-   * AEM Assets 内 Dynamic Media へのアップグレードの大きなメリットを紹介するビデオについて
+   * Assets内でのDynamic Mediaへのアップグレードの大きなメリットを紹介するビデオをごExperience Managerください。
    * Experience League の主なハウツービデオの視聴
    * 今後の Adobe Insider Tour の詳細
    * デジタルアセットを不正コピーから保護する方法について
@@ -147,18 +145,18 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
 
    この号の主な内容：
 
-   * ブログ投稿で紹介されている Dynamic Media Classic の隠された機能トップ 10.
+   * ブログ投稿でDynamic Media Classicの隠された機能トップ10を紹介します。
    * Experience League の主なハウツービデオの視聴
    * 今後の Adobe Insider Tour の紹介
-   * リッチメディア戦略の見直しに役立つ 3 部構成のブログシリーズについて
+   * リッチメディア戦略の更新に役立つ3部構成のブログシリーズをお読みください。
    * AI を利用したビデオのスマート切り抜きの紹介
 
 * **[2019 年 4 月、第 04 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
 
-   Dynamic Media ニュースレターの創刊号にようこそ。これは、Adobe Experience Manager Assets 内 Dynamic Media および Adobe Dynamic Media Classic のユーザーを対象としたニュース、イベント、リソースの情報を満載した新しい月刊ニュースレターです。
+   このたびは、Dynamic Media AssetsとAdobeDynamic Media ClassicのDynamic Mediaのユーザー向けにニュース、イベント、リソースが満載された、Adobeの新しい月刊ニュースレター「Adobe Experience Managerニュースレター」の創刊号にようこそ。
 
    この号の主な内容：
-   * Dynamic Media Classic の隠された機能に関する Web セミナーへの登録について
-   * リッチメディア戦略の策定に役立つオンデマンド Web セミナーシリーズの紹介
+   * アドビの Dynamic Media Classic の隠された機能に関する Web セミナーへの登録について
+   * リッチメディア戦略の策定に役立つ、AdobeのオンデマンドWebセミナーシリーズについて説明します。
    * 主要なリッチメディア使用例とそれに対応するアドビのソリューションについて
    * その他多数
