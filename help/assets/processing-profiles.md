@@ -11,10 +11,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 feature: ワークフロー，アセット管理，レンディション
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1374'
-ht-degree: 87%
+ht-degree: 90%
 
 ---
 
@@ -76,33 +76,33 @@ ht-degree: 87%
    * 選択したメインフォルダー内にアセットを含んだ 1 つ以上のサブフォルダーが存在する場合、ワークフローはフォルダー階層内のあらゆるアセットを再処理します。
    * ベストプラクティスとしては、1,000 個を超えるアセットを含んだフォルダー階層に対しては、このワークフローを実行しないでください。
 
-1. ページの左上隅付近にあるドロップダウンリストで、「**[!UICONTROL タイムライン]**」をクリックします。
+1. ページの左上隅付近にあるドロップダウンリストで「**[!UICONTROL タイムライン]**」をクリックします。
 1. ページ左下隅付近の「コメント」フィールドの右側にあるカラットアイコン（**^**）をクリックします。
 
    ![アセット再処理ワークフロー（その 1）](/help/assets/assets/reprocess-assets1.png)
 
 1. 「**[!UICONTROL ワークフローを開始]**」をクリックします。
-1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから、「**[!UICONTROL Scene7」を選択します。アセットを再処理します。]**
+1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
 1. （オプション）「**ワークフローのタイトルを入力**」テキストフィールドに、ワークフローの名前を入力します。必要に応じて、ワークフローインスタンスを参照する名前を使用できます。
 
    ![アセット再処理ワークフロー（その 2）](/help/assets/assets/reprocess-assets2.png)
 
-1. 「**[!UICONTROL 開始]**」をクリックし、「**[!UICONTROL 確認]**」をクリックします。
+1. 「**[!UICONTROL 開始]**」をクリックした後、「**[!UICONTROL 確認]**」をクリックします。
 
-   ワークフローを監視したり、進行状況を確認したりするには、AEM のメインコンソールページで&#x200B;**[!UICONTROL ツール／ワークフローをクリックします。]**&#x200B;ワークフローインスタンスページで、ワークフローを選択します。メニューバーの「**[!UICONTROL 履歴を開く」をクリックします。]**&#x200B;同じワークフローインスタンスページで、選択したワークフローの終了、休止、名前変更をおこなうこともできます。
+   ワークフローを監視したり、進行状況を確認したりするには、AEMのメインコンソールページで&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL ワークフロー]**&#x200B;をクリックします。 ワークフローインスタンスページで、ワークフローを選択します。メニューバーの「**[!UICONTROL 履歴を開く]**」をクリックします。同じワークフローインスタンスページで、選択したワークフローの終了、休止、名前変更をおこなうこともできます。
 
 ### 再処理ワークフローのバッチサイズの調整 {#adjusting-load}
 
-（オプション）再処理ワークフローのデフォルトのバッチサイズは、1 ジョブあたり 50 アセットです。この最適なバッチサイズは、再処理が実行されるアセットの平均アセットサイズとMIMEタイプによって決まります。 値を大きくすると、1 回の再処理ジョブのファイル数が多くなります。したがって、処理バナーが AEM Assets 上に長時間表示されたままになります。ただし、平均ファイルサイズが小さい（1 MB 以下の）場合は、値を数百個（1000 以下）に増やすことをお勧めします。平均ファイルサイズが大きい（数百 MB の）場合は、バッチサイズを最大 10 までに減らすことをお勧めします。
+（オプション）再処理ワークフローのデフォルトのバッチサイズは、1 ジョブあたり 50 アセットです。この最適なバッチサイズは、再処理の実行対象となるアセットの平均アセットサイズと MIME タイプによって決まります。値を大きくすると、1 回の再処理ジョブのファイル数が多くなります。したがって、処理バナーが AEM Assets 上に長時間表示されたままになります。ただし、平均ファイルサイズが小さい（1 MB 以下の）場合は、値を数百個（1000 以下）に増やすことをお勧めします。平均ファイルサイズが大きい（数百 MB の）場合は、バッチサイズを最大 10 までに減らすことをお勧めします。
 
-**再処理ワークフローのバッチサイズを調整するには（オプション）**：
+**再処理ワークフローのバッチサイズを調整するには（オプション）**：:
 
-1. Experience Managerで、**[!UICONTROL Adobe Experience Manager]**&#x200B;をクリックしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**（ハンマー）アイコン/**[!UICONTROL ワークフロー/モデル]**&#x200B;をクリックします。
+1. Experience Managerで、**[!UICONTROL Adobe Experience Manager]**&#x200B;をクリックしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**（ハンマー）アイコン/**[!UICONTROL ワークフロー]**/**[!UICONTROL モデル]**&#x200B;をクリックします。
 1. ワークフローモデルページのカード表示またはリスト表示で、「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
 
    ![カード表示で「Scene7：アセットを再処理」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. ツールバーの「**[!UICONTROL 編集」をクリックします。]**&#x200B;新しいブラウザータブに、「Scene7：アセットを再処理」ワークフローモデルページが開きます。
+1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「Scene7：アセットを再処理」ワークフローモデルページが開きます。
 1. Scene7:アセット再処理ワークフローページの右上隅付近にある「**[!UICONTROL 編集]**」をクリックして、ワークフローを「ロック解除」します。
 1. ワークフローで、Scene7バッチアップロードコンポーネントを選択してツールバーを開き、ツールバーの「**[!UICONTROL 設定]**」をクリックします。
 
@@ -127,7 +127,7 @@ ht-degree: 87%
 1. 「Scene7：アセットを再処理」ワークフローモデルを表示しているブラウザータブを閉じます。
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
-1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite.]**
+1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
    `/conf/global/settings/workflow/models/scene7_reprocess_assets/jcr:content/flow/reprocess/metaData`
@@ -138,10 +138,10 @@ ht-degree: 87%
     * **[!UICONTROL Name]**: `reprocess-batch-size`
     * **[!UICONTROL Type]**: `Long`
     * **[!UICONTROL Value]**: enter a default value (50-1000) for the batch size
-1. In the lower-right corner, click **[!UICONTROL Add.]** The new property appears as the following:
+1. In the lower-right corner, click **[!UICONTROL Add]**. The new property appears as the following:
 
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
-1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All.]**
+1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
 1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main AEM console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
