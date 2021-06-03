@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Administrator
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
 workflow-type: tm+mt
-source-wordcount: '3309'
+source-wordcount: '3323'
 ht-degree: 83%
 
 ---
@@ -94,6 +94,16 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
   <tr>
    <td><p>Oracle Java™ SE 11（64 ビット版）</p> </td>
    <td><p>Z：サポート対象外</p> </td>
+   <td><p> </p> </td>
+  </tr>
+  <tr>
+   <td>Azul Zulu OpenJDK 11 - 64ビット</td>
+   <td>Z：サポート対象外</td>
+   <td><p> </p> </td>
+  </tr>
+  <tr>
+   <td>Azul Zulu OpenJDK 8 - 64ビット</td>
+   <td>Z：サポート対象外</td>
    <td><p> </p> </td>
   </tr>
   <tr>
@@ -719,7 +729,7 @@ JEE 上の AEM Forms では、指定されたメジャーおよびマイナー�
 
 ## サードパーティパッチサポートポリシー {#third-party-patch-support-policy}
 
-JEE 上の AEM Forms のサードパーティソフトウェアの必要システム構成は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、 [https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65)からアクセスできます。
+JEE 上の AEM Forms のサードパーティソフトウェアの必要システム構成は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、 [https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65_jp)からアクセスできます。
 
 JEE 上の AEM Forms のサードパーティリファレンスプラットフォームは、JEE 上の AEM Forms の開発とリリースの時点におけるサードパーティインフラストラクチャの特定のパッチレベルを記述してあり、そのバージョンの JEE 上の AEM Forms によってサポートされているインフラストラクチャの最小パッチ/サービスパックレベルを形成しています。
 
