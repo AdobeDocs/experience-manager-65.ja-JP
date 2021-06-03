@@ -10,10 +10,10 @@ discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: Business Practitioner, Administrator
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: ビデオ
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 51%
+source-wordcount: '1589'
+ht-degree: 48%
 
 ---
 
@@ -74,7 +74,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 ユニバーサルプリセットを設定するには：
 
-1. **[!UICONTROL Cloud Services]**&#x200B;で、**[!UICONTROL Scene7]**&#x200B;設定に移動し、「**[!UICONTROL 編集]**」をクリックします。
+1. **[!UICONTROL クラウドサービス]**&#x200B;で、**[!UICONTROL Scene7]** の設定に移動して、「**[!UICONTROL 編集]**」をクリックします。
 1. 「**[!UICONTROL ビデオ]**」タブを選択します。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -95,7 +95,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 ## ビューアとエンコーディングプリセットの更新  {#updating-viewer-and-encoding-presets}
 
-Scene7でプリセットが更新されたので、AEMでビデオのビューアとエンコーディングプリセットを更新する必要がある場合は、クラウド設定のScene7設定に移動し、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」をクリックします。
+Scene7でプリセットが更新されたので、Experience Managerでビデオのビューアとエンコーディングプリセットを更新する必要がある場合は、クラウド設定のScene7設定に移動し、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」をクリックします。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
@@ -112,9 +112,9 @@ Scene7でプリセットが更新されたので、AEMでビデオのビュー�
 
 ## 基盤ビデオコンポーネントと Scene7 ビデオコンポーネントの比較 {#foundation-video-component-versus-scene-video-component}
 
-AEM を使用する場合は、サイトで使用可能なビデオコンポーネントと Scene7 ビデオコンポーネントの両方にアクセスします。これらのコンポーネントに互換性はありません。
+Experience Managerを使用する場合、Sitesで使用できるビデオコンポーネントとScene7ビデオコンポーネントの両方にアクセスできます。 これらのコンポーネントに互換性はありません。
 
-Scene7 ビデオコンポーネントは、Scene7 ビデオでのみ使用できます。基盤コンポーネントは、AEM から保存された（ffmpeg を使用）ビデオと Scene7 ビデオで使用できます。
+Scene7 ビデオコンポーネントは、Scene7 ビデオでのみ使用できます。基盤コンポーネントは、Experience Manager（ffmpegを使用）とScene7ビデオから保存されたビデオで使用します。
 
 次の表は、どのコンポーネントをどのようなシナリオで使用すべきかを示しています。
 
@@ -122,13 +122,13 @@ Scene7 ビデオコンポーネントは、Scene7 ビデオでのみ使用でき
 
 >[!NOTE]
 >
->既製の S7 ビデオコンポーネントはユニバーサルビデオプロファイルを使用します。ただし、Scene7で次のいずれかの操作をおこなうことで、AEMで使用するHTML5ベースのビデオプレーヤーを入手できます。標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーして、AEMページに配置します。
+>既製の S7 ビデオコンポーネントはユニバーサルビデオプロファイルを使用します。ただし、Scene7で次のいずれかの操作を行うことで、Experience Managerで使用するHTML5ベースのビデオプレーヤーを入手できます。標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーして、Experience Managerページに配置します。
 
 ## AEM ビデオコンポーネント {#aem-video-component}
 
-Scene7 のビデオを表示するには Scene7 のビデオコンポーネントを使用することが推奨されますが、ここでは、完全を期すために、AEM の基盤ビデオコンポーネントで Scene7 ビデオを使用する方法を説明します。
+Scene7ビデオの視聴にScene7ビデオコンポーネントの使用をお勧めしますが、完全性を考慮して、Scene7ビデオをExperience Managerで使用する方法について説明します。
 
-### AEM ビデオと Scene7 ビデオの比較  {#aem-video-and-scene-video-comparison}
+### AEM ビデオと Scene7 ビデオの比較 {#aem-video-and-scene-video-comparison}
 
 次の表は、AEM 基盤ビデオコンポーネントと Scene7 ビデオコンポーネントでサポートされている機能の簡単な比較です。
 
@@ -137,7 +137,7 @@ Scene7 のビデオを表示するには Scene7 のビデオコンポーネン�
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
 | 追跡 | はい | はい |
-| 拡張性 | はい | いいえ |
+| 拡張性 | 可 | 不可 |
 | モバイルビデオ | はい | はい |
 
 ### 設定  {#setting-up}
@@ -150,9 +150,9 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
-1. AEMで、**[!UICONTROL ツール] /[!UICONTROL 設定コンソール]**&#x200B;をタップします。
-1. **[!UICONTROL 設定コンソール]**&#x200B;で、ナビゲーションツリーの&#x200B;**[!UICONTROL ツール/DAM/ビデオプロファイル]**&#x200B;に移動します。
-1. 新しいS7ビデオプロファイルを作成します。**[!UICONTROL 新規…]**&#x200B;メニューで、「**[!UICONTROL ページを作成]**」を選択し、「Scene7ビデオプロファイル」テンプレートを選択します。新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」をクリックします。
+1. AEMで、**[!UICONTROL ツール]** /**[!UICONTROL 設定コンソール]**&#x200B;をタップします。
+1. **[!UICONTROL 設定コンソール]**&#x200B;で、ナビゲーションツリーの&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL DAM]**/**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. 新しいS7ビデオプロファイルを作成します。**[!UICONTROL 新規]**&#x200B;メニューで、「**[!UICONTROL ページを作成]**」を選択し、「Scene7ビデオプロファイル」テンプレートを選択します。新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」をクリックします。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
