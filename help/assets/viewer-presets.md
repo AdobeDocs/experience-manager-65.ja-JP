@@ -10,10 +10,10 @@ discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 feature: ビューアプリセット
 role: Business Practitioner, Administrator
 exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -29,12 +29,12 @@ ht-degree: 94%
 
 ## アセットへの Dynamic Media ビューアプリセットの適用 {#applying-a-viewer-preset-to-an-asset}
 
-1. アセットを開き、左側のレールで「**[!UICONTROL ビューア」をタップします。]**
+1. アセットを開き、左側のレールで「**[!UICONTROL ビューア]**」をタップします。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
    * 「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL 埋め込み]**」ボタンは、ビューアプリセットの選択後に表示されます。
-   * アセットの&#x200B;**[!UICONTROL 詳細表示で「ビューア」を選択すると、多数のビューアプリセットが表示されます。]**&#x200B;表示されるプリセットの数を増やすことができます。[表示されるビューアプリセットの数を増やす](managing-viewer-presets.md)を参照してください。
+   * アセットの&#x200B;**[!UICONTROL 詳細表示]**&#x200B;で「ビューア」を選択すると、多数のビューアプリセットが表示されます。表示されるプリセットの数を増やすことができます。[表示されるビューアプリセットの数を増やす](managing-viewer-presets.md)を参照してください。
 
 1. 左側のウィンドウからビューアを選択してアセットに適用します。結果が右側のウィンドウに表示されます。[この URL を共有用にコピー](linking-urls-to-yourwebapplication.md)して、他のユーザーと共有することもできます。
 
