@@ -11,10 +11,10 @@ docset: aem65
 feature: パノラマ画像，アセット管理
 role: Business Practitioner, Administrator
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 61%
+ht-degree: 74%
 
 ---
 
@@ -45,11 +45,11 @@ ht-degree: 61%
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、アカウントにログインします。
 
-1. ページの右上隅付近で、**[!UICONTROL 設定/アプリケーション設定/公開設定/Image Serverをクリックします。]**
-1. Image Server公開ページで、上部付近の「**[!UICONTROL 公開コンテキスト]**」ドロップダウンメニューから「**[!UICONTROL 画像サービング]**」を選択します。
+1. ページの右上隅付近で、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。
+1. Image Server 公開ページの上部にある「**[!UICONTROL 公開コンテキスト]**」ドロップダウンリストで、「**[!UICONTROL 画像サービング]**」を選択します。
 
-1. 同じImage Server公開ページで、「**[!UICONTROL 要求属性]**」という見出しを探します。
-1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限」を探します。]** 次に、関連する「幅」フィールドと「高さ」フィールドで、パノラマ画像に許容される最大画像サイズを大きくします。
+1. 同じ Image Server 公開ページで、「**[!UICONTROL 要求属性]**」という見出しを探します。
+1. 「要求属性」の見出しの下で、「**[!UICONTROL 返信画像のサイズ制限]**」を探します。次に、関連する「幅」フィールドと「高さ」フィールドで、パノラマ画像に許容される最大画像サイズを大きくします。
 
    Dynamic Media Classicの制限は25,000,000ピクセルです。 縦横比が2:1の画像で許容される最大サイズは7,000 x 3500です。 ただし、通常のデスクトップ画面の場合、4096 x 2048 ピクセルで十分です。
 
@@ -59,16 +59,16 @@ ht-degree: 61%
 
 1. 「要求属性」の見出しの下で、次の操作をおこないます。
 
-   * 「リクエストの難読化モード」を「**[!UICONTROL Disabled.]**」に設定します。
-   * Request Locking Modeを&#x200B;**[!UICONTROL Disabledに設定します。]**
+   * 「要求難読化モード」を「**[!UICONTROL 無効]**」に設定します。
+   * 「要求ロックモード」を「**[!UICONTROL 無効]**」に設定します。
 
    これらの設定は、AEMで`Panoramic Media` WCMコンポーネントを使用する場合に必要です。
 
-1. Image Server公開ページの下部にある左側の「**[!UICONTROL 保存]**」をクリックします。
+1. Image Server 公開ページの下部で、左側にある「**[!UICONTROL 保存]**」をクリックします。
 
-1. 右下隅の「**[!UICONTROL 閉じる」をクリックします。]**
+1. 右下隅にある「**[!UICONTROL 閉じる]**」をクリックします。
 
-### パノラマメディア WCM コンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
+### パノラマメディア WCM コンポーネントのトラブルシューティング  {#troubleshooting-the-panoramic-media-wcm-component}
 
 WCM でパノラマメディアコンポーネントに画像をドロップしたときに、コンポーネントプレースホルダーが壊れた場合、以下のトラブルシューティングをおこなってください。
 
