@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 49%
@@ -43,7 +43,7 @@ AEM を WCM として使用している場合は、Dynamic Media アセットを
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
- Dynamic MediaのSidekickでDynamic  [!UICONTROL Mediaおよ] びInteractive Mediaを利用でき   **[!UICONTROL ます。]****[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他のすべてのDynamic Mediaコンポーネントには、**[!UICONTROL Dynamic Media]**&#x200B;コンポーネントを使用します。
+ Dynamic Media [!UICONTROL のサイドキッ] クで、Dynamic Mediaおよびインタラクティブメディアを利用   ****&#x200B;できます。**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントは、すべてのインタラクティブアセット（インタラクティブビデオ、インタラクティブ画像、カルーセルセットなど）に使用します。その他のすべてのDynamic Mediaコンポーネントには、**[!UICONTROL Dynamic Media]**&#x200B;コンポーネントを使用します。
 
 ![chlimage_1-71](assets/chlimage_1-71a.png)
 
