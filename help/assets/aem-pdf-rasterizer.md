@@ -5,7 +5,7 @@ contentOwner: AG
 role: Developer, Administrator
 feature: 開発者ツール，レンディション
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: eb687a85f0612df7776dace7b81f97bff5f5ad35
+source-git-commit: fbabf714a3b5066fdef144a4092eaad7e8a6b370
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 40%
@@ -24,8 +24,7 @@ ht-degree: 40%
 
 PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、何もしなくてもすぐに使用できる出力に比べて高品質です。そのため、デバイス全体で一貫した表示エクスペリエンスを得ることができます。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
-1. [ソフトウェア配布]から、[!DNL Adobe Experience Manager]デプロイメントにPDF Rasterizerパッケージをインストールします。
-(https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.4.zip)。
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.4.zip)から、[!DNL Adobe Experience Manager]デプロイメントにPDF Rasterizerパッケージをインストールします。
 
    >[!NOTE]
    >
