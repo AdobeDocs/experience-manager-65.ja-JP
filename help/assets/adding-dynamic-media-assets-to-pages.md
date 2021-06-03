@@ -11,10 +11,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: コンポーネント，公開
-source-git-commit: 1c95217c98cdf24182eebbfea09c807318b2d514
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '3210'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
@@ -74,7 +74,7 @@ Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Med
 
    ![許可されたコンポーネント](/help/assets/assets-dm/allowed-components.png)
 
-1. **[!UICONTROL Dynamic Media.]**&#x200B;が表示されるまでスクロールします。
+1. **[!UICONTROL ダイナミックメディア]**&#x200B;が表示されるまでスクロールします。
 1. **[!UICONTROL Dynamic Media]**&#x200B;の左側にある「>」アイコンをタップしてリストを展開し、有効にするDynamic Mediaコンポーネントを選択します。
 
    ![Dynamic Media コンポーネントリスト](/help/assets/assets-dm/dm-components-select.png)
@@ -99,7 +99,7 @@ Dynamic Media コンポーネントのローカライズの方法は 2 つあり
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
-Dynamic Mediaコンポーネントは、**[!UICONTROL コンポーネント]**&#x200B;アイコンをタップし、**[!UICONTROL Dynamic Mediaでフィルターすると使用できます。]**
+「**[!UICONTROL コンポーネント]**」アイコンをタップし、「**[!UICONTROL Dynamic Media]**」でフィルタリングすると、Dynamic Media コンポーネントが利用可能になります。
 
 利用可能な Dynamic Media コンポーネントは次のとおりです。
 
@@ -142,13 +142,13 @@ Dynamic Media コンポーネントでは、画像セット、スピンセット
 
 また、ビューアプリセット、画像プリセット、画像形式をコンポーネント内で直接設定することもできます。画像をレスポンシブにするために、ブレークポイントの設定かレスポンシブ画像プリセットの適用のいずれかを実行できます。
 
-コンポーネント内の&#x200B;**[!UICONTROL 編集]**&#x200B;アイコンをタップし、次に&#x200B;**[!UICONTROL Dynamic Media設定]**&#x200B;をタップして、次のDynamic Media設定を編集します。
+コンポーネント内の「****&#x200B;を編集&#x200B;**[!UICONTROL 」アイコンをタップし、次に「]** Dynamic Media設定」をタップして、次のDynamic Media設定を編集します。
 
 ![dm-settings-image-preset](assets/dm-settings-image-preset.png)
 
 >[!NOTE]
 >
->デフォルトでは、Dynamic Media画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントで、「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
+>デフォルトでは、Dynamic Media 画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
 * **[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
@@ -236,7 +236,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
 >[!NOTE]
 >
->デフォルトでは、Dynamic Media画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、「**[!UICONTROL 詳細]**」タブのコンポーネントで、「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
+>デフォルトでは、Dynamic Media 画像コンポーネントはアダプティブです。画像コンポーネントを固定サイズにする場合は、そのコンポーネントで、「**[!UICONTROL 詳細]**」タブの「**[!UICONTROL 幅]**」と「**[!UICONTROL 高さ]**」を使用してサイズを設定します。
 
 * **[!UICONTROL 画像の修飾子]**  — 追加の画像コマンドを指定して、画像エフェクトを適用できます。これらの効果については、画像プリセットおよび画像サービングコマンドリファレンスで説明しています。
 
