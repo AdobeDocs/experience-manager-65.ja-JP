@@ -11,10 +11,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: トラブルシューティング
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1286'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 94%
 
    このオプションの機能パックは、FTPサポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
 
-* Cloud Servicesユーザーインターフェイスに移動し、「**[!UICONTROL 利用可能な設定]**」の下にプロビジョニング済みのアカウントが表示されることを確認します。
+* クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
 * `Dynamic Media Asset Activation (scene7)`レプリケーションエージェントが有効になっていることを確認します。
 
    このレプリケーションエージェントは、「作成者のエージェント」にあります。
@@ -52,7 +52,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Dynamic Media のリモートアセットへの URL を生成するには、これを入力する必要があります。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **success** または **failed:`<error text>`** | セット（スピンセット、画像セットなど）、画像プリセット、ビューアプリセット、アセットの画像マップの更新、編集された画像などの同期ステータス。 |
 
-### 同期のログ  {#synchronization-logging}
+### 同期のログ {#synchronization-logging}
 
 同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Sling コンソール（[https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)）を通じて `com.adobe.cq.dam.ips` パッケージのログレベルをデバッグに引き上げると、さらに詳しい情報を集めることができます。
 
