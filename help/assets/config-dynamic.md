@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 設定，ハイブリッドモード
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
 workflow-type: tm+mt
 source-wordcount: '7843'
 ht-degree: 39%
@@ -259,16 +259,18 @@ Dynamic Mediaの画像配信は、ビデオサムネールを含む画像アセ�
 PTIFF 作成のデフォルトのメモリ制限は、すべてのワークフローで 3 GB です。例えば、他のワークフローを一時停止して、3 GB のメモリを必要とする 1 個の画像を処理できます。または、それぞれ 300 MB のメモリを必要とする 10 個の画像を並行して処理できます。
 メモリ制限は設定可能で、システムリソースの可用性と処理する画像コンテンツのタイプに合わせて調整されます。 大きなアセットが多く、システムに十分なメモリがある場合は、この制限を増やして、画像が並行して処理されるようにすることができます。
 最大メモリ制限を超える画像が拒否されます。
-PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール／運営／Web コンソール／Adobe CQ Scene7 PTiffManager]** に移動して、**[!UICONTROL maxMemory]** の値を変更します。
+PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL Web コンソール]**／**[!UICONTROL Adobe CQ Scene7 PTiffManager]** に移動して、**[!UICONTROL maxMemory]** の値を変更します。
 
 ### 認証の設定 {#setting-up-authentication}
 
 オーサー環境でレプリケーション認証を設定し、画像をDynamic Media画像配信サービスにレプリケートできるようにします。 最初にキーストアを取得し、**[!UICONTROL dynamic-media-replication]**&#x200B;ユーザーの下に保存して、設定します。 会社の管理者に、プロビジョニングプロセス中にキーストアファイルと必要な資格情報が記載されたようこそメールが届きました。 この情報を受け取っていない場合は、Adobeカスタマーケアにお問い合わせください。
 
-**認証を設定するには**
+**認証を設定するには：**
 
 1. キーストアファイルとパスワードをまだ持っていない場合は、Adobeカスタマーケアに連絡してください。 この情報は、プロビジョニングに必要な部分です。 キーがアカウントに関連付けられます。
+
 1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL ユーザー]**&#x200B;をタップします。
+
 1. ユーザー管理ページで、**[!UICONTROL dynamic-media-replication]**&#x200B;ユーザーに移動し、をタップして開きます。
 
    ![dm-replication](assets/dm-replication.png)
@@ -817,7 +819,7 @@ Dynamic Mediaは、有効にした後に[標準で動作します。](#enabling-
 Dynamic Media 画像サーバーを設定するには：
 
 1. Experience Managerの左上隅にある「**[!UICONTROL Adobe Experience Manager]**」をタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;をタップします。
-1. Adobe Experience Manager WebコンソールのExperience Managerページで、**[!UICONTROL OSGi/Configuration]**&#x200B;をタップして、設定内で現在実行中のすべてのバンドルをリストします。
+1. Adobe Experience Manager Webコンソール設定ページで、**[!UICONTROL OSGi]** /**[!UICONTROL Configuration]**&#x200B;をタップして、Experience Manager内で現在実行中のすべてのバンドルを一覧表示します。
 
    Dynamic Media Delivery Serverは、リスト内の次の名前の下に表示されます。
 
