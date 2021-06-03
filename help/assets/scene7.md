@@ -10,10 +10,10 @@ discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '2863'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
@@ -211,7 +211,7 @@ Dynamic Media Classicの&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネ�
 
 #### テキストの動的な変更 {#changing-text-dynamically}
 
-テキストを動的に変更するには、フィールドに新しいテキストを入力し、「**[!UICONTROL OK]**」をクリックします。この例では、**[!UICONTROL Price]**&#x200B;が$50になり、出荷は99セントになります。
+テキストを動的に変更するには、新しいテキストをフィールドに入力して、「**[!UICONTROL OK]**」をクリックします。この例では、「**[!UICONTROL 価格]**」が $50 で、送料が 99 セントです。
 
 ![chlimage_1-234](assets/chlimage_1-234.png)
 
@@ -221,7 +221,7 @@ Dynamic Media Classicの&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネ�
 
 #### ClientContext の値を反映したテキストの変更 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-フィールドをClientContext値にリンクするには、**[!UICONTROL 「]**&#x200B;を選択」をタップしてClientContextメニューを開き、ClientContextを選択して「**[!UICONTROL OK」をタップします。]**&#x200B;この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
+フィールドをClientContext値にリンクするには、**[!UICONTROL 「]**&#x200B;を選択」をタップしてClientContextメニューを開き、ClientContextを選択して「**[!UICONTROL OK]**」をタップします。 この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
 
 ![chlimage_1-236](assets/chlimage_1-236.png)
 
@@ -347,6 +347,6 @@ Dynamic Media Classicアセットの検索は、AEMアセットの検索と似�
 
 
 
-**[!UICONTROL 公開ステータス]**  — 公開ステータスに基づいてアセットをフィルタリングできます。 **** 非公開または **[!UICONTROL 公開済み。]** 「公開ステータス」を選択しない **[!UICONTROL 場合]**、AEMはデフォルトですべての公開ステータスを検索します。
+**[!UICONTROL 公開ステータス]**  — 公開ステータスに基づいてアセットをフィルタリングできます。 **** 非公開または **[!UICONTROL 公開済み]**「**[!UICONTROL 公開ステータス]**」を選択しない場合、AEMはデフォルトですべての公開ステータスを検索します。
 
 ![chlimage_1-247](assets/chlimage_1-247.png)
