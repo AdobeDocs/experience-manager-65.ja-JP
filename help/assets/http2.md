@@ -1,5 +1,5 @@
 ---
-title: コンテンツの HTTP/2 配信の
+title: コンテンツの HTTP/2 配信
 description: HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 uuid: d9deb945-bdf5-4d6b-95c8-8bae4442e618
 contentOwner: Rick Brough
@@ -10,10 +10,10 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: Business Practitioner, Administrator
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 公開，設定
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 52%
+source-wordcount: '732'
+ht-degree: 60%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->この機能を使用するには、Adobe Experience Manager Dynamic Mediaに組み込まれている標準搭載のCDNを使用する必要があります。 その他のカスタムCDNは、この機能ではサポートされません。
+>この機能を使用するには、Adobe Experience Manager Dynamic Media にバンドルされている標準搭載の CDN を使用する必要があります。この機能では、その他のカスタム CDN はサポートされません。
 
 ## HTTP/2 とは {#what-is-http}
 
@@ -31,7 +31,7 @@ HTTP/2 によりブラウザーとサーバーの通信が改善され、必要�
 
 HTTP/2 とその利点については、次の Web サイトで簡潔に説明されています。
 
-[https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/](https://www.engadget.com/2015/02/24/what-you-need-to-know-about-http-2/)
+[HTTP/2について知っておくべきこと](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
 ## コンテンツ配信を HTTP/2 に移行する主なメリット {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -62,7 +62,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2に切り替えるためのリクエストを開始します。自動的にはおこなわれません。
 
-1. HTTP/2に切り替えるには、カスタマーケアリクエストをAdobeに送信します。 [AEM サポートポータルへのアクセス](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html)を参照してください。
+1. HTTP/2に切り替えるには、カスタマーケアリクエストをAdobeに送信します。 [Adobe Experience Managerサポートポータルへのアクセス](https://helpx.adobe.com/jp/experience-manager/kb/accessing-aem-support-portal.html)を参照してください。
 
    1. サポートリクエストには、以下の情報を記入してください。
 
@@ -72,7 +72,7 @@ HTTP/2に切り替えるためのリクエストを開始します。自動的�
       1. Adobeを通じてCDNを使用し、直接関係で管理されていないことを確認します。
       1. 専用ドメインを使用していることを確認します。 Dynamic Mediaを使用する場合は、専用ドメインを使用します。
    1. カスタマーケアは、リクエストが送信された順序に基づいてHTTP/2顧客待機リストにユーザーを追加します。
-   1. Adobeでリクエストを処理する準備が整うと、カスタマーケアから連絡があり、移行の調整と目標日の設定がおこなわれます。
+   1. アドビでリクエストを処理する準備が整うと、移行についての調整や完了予定日の設定のため、サポートから連絡が入ります。
    1. 完了後に通知が届き、HTTP/2への正常な切り替えを確認できます。
 
       ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
@@ -92,7 +92,7 @@ HTTP/2に切り替えるためのリクエストを開始します。自動的�
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
-キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。したがって、Adobeは、接触チャネルからリクエストをプルする際に許容可能なパフォーマンスが維持されるように、一度に少数の顧客の移行を処理する予定です。
+キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
 ## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法  {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
