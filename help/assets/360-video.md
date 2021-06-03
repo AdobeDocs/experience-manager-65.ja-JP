@@ -11,10 +11,10 @@ docset: aem65
 feature: 360 VR ビデオ
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 77%
+ht-degree: 79%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 **360 ビデオビューアで使用するアセットをアップロードするには：**
 
 1. 360 ビデオアセット専用のフォルダーを作成します。
-1. [フォルダーにアダプティブビデオプロファイルを適用します。](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)
+1. [フォルダーにアダプティブビデオプロファイルを適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
 
    360 ビデオコンテンツをレンダリングする場合、ソースビデオの解像度とレンディションのエンコード解像度に関する要件が、標準の非 360 ビデオコンテンツの場合よりも高くなります。
 
@@ -99,7 +99,7 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
 360 ビデオの設定が完了したら、このビデオを公開できます。
 
-[Web ページへのビデオビューアまたは画像ビューアの埋め込みを参照してください。](/help/assets/embed-code.md)[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 
 **360 ビデオをプレビューするには:**
 
@@ -120,16 +120,16 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
    ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット*
 
-   * 「ビューア」リストから、「Video360VR」をタップします。****
+   * 「ビューア」リストから **[!UICONTROL Video360VR]** をタップします。
 
       バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットで視聴する、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
-1. プレビューページの右上付近にある「**[!UICONTROL 閉じる」をタップします。]**
+1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」をタップします。
 
 ## 360 ビデオの公開 {#publishing-video}
 
 360ビデオを公開して使用できるようにします。 360 ビデオを公開すると、URL と埋め込みコードがアクティベートされます。また、スケーラブルで効率の良い配信のために CDN と統合された Dynamic Media クラウドにも、360 ビデオが公開されます。
 
-360 ビデオの公開方法について詳しくは、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)も参照してください。[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)も参照してください。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)も参照してください。
+360 ビデオの公開方法について詳しくは、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)も参照してください。[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)も参照してください。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)も参照してください。
