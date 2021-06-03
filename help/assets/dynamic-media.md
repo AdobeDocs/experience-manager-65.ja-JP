@@ -10,24 +10,24 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: Business Practitioner, Administrator
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: コラボレーション、アセット管理
-source-git-commit: c9aec973faf4caef741961d92a6f258646aeddb7
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 90%
+source-wordcount: '424'
+ht-degree: 87%
 
 ---
 
 # Dynamic Media の操作 {#working-with-dynamic-media}
 
-[Dynamic Media ](https://www.adobe.com/solutions/web-experience-management/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
-Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
+ダイナミックメディアは、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。ダイナミックメディアは Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
 
->[!NOTE]
+<!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
->[Adobe Experience Manager および Dynamic Media の操作](https://helpx.adobe.com/jp/experience-manager/using/aem_dynamic_media.html)にコミュニティの記事があります。
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
-## Dynamic Media の機能  {#what-you-can-do-with-dynamic-media}
+## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
 Dynamic Media では、公開前のアセットを管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集および公開、プロパティの表示と編集、アセットの検索が含まれます。
 
@@ -50,7 +50,7 @@ Dynamic Media 限定の機能は次のとおりです。
 
 >[!NOTE]
 >
->Dynamic Mediaの使用とDynamic Media ClassicとAEMの統合の違いについては、[Dynamic Media ClassicとDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)の統合を参照してください。
+>Dynamic Mediaの使用とDynamic Media ClassicとAdobe Experience Managerの統合の違いについては、[Dynamic Media ClassicとDynamic Media](/help/sites-administering/scene7.md#aem-scene-integration-versus-dynamic-media)の統合を参照してください。
 
 ## Dynamic Media が有効な場合と無効な場合の比較 {#dynamic-media-on-versus-dynamic-media-off}
 
