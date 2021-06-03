@@ -6,10 +6,10 @@ docset: aem65
 feature: 3D アセット
 role: Business Practitioner
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 666bc5d943af371726708cb2ef157a9b3f07eb8e
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '553'
-ht-degree: 61%
+ht-degree: 65%
 
 ---
 
@@ -54,7 +54,7 @@ Adobe Experience Manager では、オーサリングプロセスの一環とし�
 **3Dアセットをプレビューするには、Experience Manager:**
 
 1. 3D アセットが Experience Manager にアップロードされていることを確認します。詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
-1. Experience Managerの&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、**[!UICONTROL アセット/ファイルをタップします。]**
+1. Experience Manager の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット／ファイル]**&#x200B;をタップします。
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
 
@@ -78,4 +78,4 @@ Adobe Experience Manager では、オーサリングプロセスの一環とし�
    | **リセット** | ページの右下隅付近にあるリセットアイコンをタップして、視野のターゲットポイントを3Dアセットの中心に戻します。 リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |  |  |
    | **全画面表示モード** | 全画面表示モードに入るには、ページの右下隅にある全画面表示アイコンをタップします。 |  |  |
 
-1. 作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 閉じる」をタップします。]**
+1. 作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 閉じる]**」をタップします。
