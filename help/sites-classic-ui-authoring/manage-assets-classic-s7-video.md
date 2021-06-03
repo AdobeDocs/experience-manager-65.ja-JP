@@ -8,10 +8,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
-source-wordcount: '1698'
-ht-degree: 34%
+source-wordcount: '1699'
+ht-degree: 33%
 
 ---
 
@@ -148,8 +148,8 @@ Dynamic Media Classicビデオの視聴には、Dynamic Media Classicビデオ�
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
-1. AEM で、**[!UICONTROL ツール]**&#x200B;に移動し、「**[!UICONTROL 設定コンソール」を選択します。]** 設定コンソールで、ナビゲーショ **[!UICONTROL ンツリーのツール]** / **[!UICONTROL アセット]** /ビ **[!UICONTROL デオ]** プロファイルに移動します。
-1. 新しいDynamic Media Classicビデオプロファイルを作成します。 **[!UICONTROL 新規…]**&#x200B;メニューで、「**[!UICONTROL ページを作成]**」を選択し、「Dynamic Media Classicビデオプロファイル」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」をクリックします。
+1. Experience Managerで、**[!UICONTROL ツール]**&#x200B;に移動し、**[!UICONTROL 設定コンソール]**&#x200B;を選択します。 設定コンソールで、ナビゲーションツリーの&#x200B;**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
+1. 新しいDynamic Media Classicビデオプロファイルを作成します。 **[!UICONTROL New]**&#x200B;で、 メニューで、「**[!UICONTROL ページを作成]**」を選択し、「Dynamic Media Classicビデオプロファイル」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」をクリックします。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
