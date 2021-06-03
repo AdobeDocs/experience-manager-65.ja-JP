@@ -5,10 +5,10 @@ contentOwner: AG
 role: Business Practitioner
 feature: アセット管理、アセット配布
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: 92983232216a5c7c563ebddc3baf6fcd81aaa4e2
+source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
 workflow-type: tm+mt
 source-wordcount: '891'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 74%
 
 画像セット、スピンセット、混在メディアセット、カルーセルセットの各アセットタイプはダウンロードできません。
 
-アセットをダウンロードするには、次の手順に従います。
+**アセットをダウンロードするには、次の手順に従います。**
 
 1. 左上隅のロゴをクリックします。 左側のレールで、「**[!UICONTROL ナビゲーション]**」をクリックします。
-1. [!UICONTROL ナビゲーション]ページで、**[!UICONTROL アセット]**/**[!UICONTROL ファイルをクリックします。]**
+1. [!UICONTROL ナビゲーション]ページで、**[!UICONTROL アセット]**/**[!UICONTROL ファイル]**&#x200B;をクリックします。
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の 1 つ以上のアセットを選択します。
-1. ツールバーの[**[!UICONTROL ダウンロード]**]をクリックします。
+1. ツールバーの「**[!UICONTROL ダウンロード]**」をクリックします。
 
    ![Experience Manager Assets からアセットをダウンロードする際に使用できるオプション](/help/assets/assets/asset-download1.png)
 
@@ -45,7 +45,7 @@ ht-degree: 74%
    | **[!UICONTROL スマート切り抜き]** | このオプションを選択すると、選択したアセットのすべてのスマート切り抜きレンディションが AEM 内からダウンロードされます。スマート切り抜きレンディションを含む zip ファイルが作成され、ローカルコンピューターにダウンロードされます。 |
    | **[!UICONTROL 動的レンディション]** | 一連の代替レンディションをリアルタイムで生成するには、このオプションを選択します。また、このオプションを選択すると、動的に作成するレンディションを[画像プリセット](image-presets.md)リストから選択します。<br>さらに、サイズ、測定単位、形式、カラースペース、解像度および、画像の反転用などのオプションの画像修飾子を選択できます。このオプションは、[!DNL Dynamic Media] を有効にしている場合にのみ使用できます。 |
 
-1. ダイアログボックスで、「**[!UICONTROL ダウンロード]**」をクリックします。
+1. ダイアログボックスで、「**[!UICONTROL ダウンロード]**」をクリックします。。
 
 ダウンロードするフォルダーを選択すると、そのフォルダーの下位のアセットの階層全体がダウンロードされます。ダウンロードする各アセット（親フォルダーの下にネストされている子フォルダーのアセットを含む）を個々のフォルダーに格納するには、「**[!UICONTROL アセットごとに別のフォルダーを作成]**」を選択します。
 
@@ -76,7 +76,7 @@ ht-degree: 74%
 
 >[!MORELIKETHIS]
 >
->* [Brand Portalを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html)
+>* [Brand Portalを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html?lang=ja)
 >* [DRM で保護されたアセットのダウンロード](drm.md).
 >* [Windows／Mac OS デスクトップで Adobe Experience Manager デスクトップアプリケーションを使用したアセットのダウンロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#download-assets).
 >* [サポートされている Adobe Creative Cloud アプリ内から Adobe Asset Link を使用したアセットのダウンロード](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html).
