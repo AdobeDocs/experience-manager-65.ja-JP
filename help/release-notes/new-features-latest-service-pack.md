@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: f0398d63aa7d9c994c56217cce52b3fb4de04769
+source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3727'
 ht-degree: 6%
 
 ---
@@ -18,6 +18,13 @@ ht-degree: 6%
 [!DNL Adobe Experience Manager] 6.5サービスパックは、新機能、お客様から要望を受けた機能強化、パフォーマンス、安定性、セキュリティの改善を四半期ごとに提供します。四半期ごとの可用性により、新機能やイノベーションに容易にアクセスし、採用できます。
 
 この記事では、最新のサービスパックに含まれる機能、以前の6.5サービスパック](#key-features-previous-service-packs)に含まれる主な機能、および前回のサービスパック](#key-releases-since-last-sp)リリース以降の[キーリリースについて説明します。[
+
+>[!NOTE]
+>
+>AEM Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠した標準規格のOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および運用できます。
+>[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
+>[!DNL Azul Zulu JDKs]の関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
+>oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -78,6 +85,36 @@ ht-degree: 6%
 >[!NOTE]
 >
 >[!DNL Experience Manager Forms]のアドオンパッケージは、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に提供されます。
+
+### [!DNL Azul Zulu OpenJDK] {#support-azul-zulu}のサポート
+
+OSGiデプロイメント上の[!DNL Experience Manager Forms]用の[!DNL Azul Zulu]ビルドの[!DNL OpenJDK]を使用して、アプリケーションを開発および操作できるようになりました。 詳細については、「[Experience Manager6.5 Service Pack 9リリースノート](sp-release-notes.md)」および「[技術要件](../sites-deploying/technical-requirements.md)」を参照してください。
+
+### [!UICONTROL タスクの割り当て] {#group-notification-email}を使用して通知電子メールをグループに送信する機能
+
+タスクの割り当てワークフローステップを使用して、グループ電子メールアドレスに通知電子メールを送信できるようになりました。
+
+### ソースインタラクティブ通信を変更した後にインタラクティブ通信の下書きを取得する機能{#retrieve-draft-after-source-modifications}
+
+ソースのインタラクティブ通信に変更を加えた後、下書きとして保存されたインタラクティブ通信を取得できるようになりました。
+
+### reCAPTCHAサービス{#set-custom-domain-name-recaptcha}の読み込み、レンダリングおよび検証用のカスタムドメイン名を設定します。
+
+reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトドメインとして使用します。設定を変更して、`https://www.google.com/`またはreCAPTCHAサービスの読み込み、レンダリング、検証用の任意のカスタムドメイン名を設定できるようになりました。
+
+### [!UICONTROL フォームデータモデルサービスを起動]ワークフローステップ{#input-data-enhancements-fdm}の入力データの強化
+
+[!UICONTROL フォームデータモデルサービスを起動]ワークフローステップでフォームデータモデルとサービスを選択する場合、入力データのサービス引数を指定します。
+
+「[!UICONTROL ペイロードに対して相対]」オプションを選択してファイルをサービス引数として添付する場合、実際のファイル名の代わりにファイルを含むフォルダーパスを指定できるようになりました。 ファイルの添付ファイル名の代わりにフォルダー名を定義すると、ワークフローモデルを再利用できます。 ワークフローモデルを1つのファイル添付ファイル名に制限することはできません。
+
+### レコードのドキュメントテンプレート{#use-multiple-master-pages-dor-template}で複数のマスターページを使用できる
+
+レコードのドキュメントテンプレートで複数のマスターページを使用できるようになりました。 その結果、タイトルページやテンプレートの他のページに、異なるヘッダー、フッター、フォント、ロゴ情報を表示できるようになりました。
+
+### レコードのドキュメントでの改ページのサポート{#support-page-breaks-dor}
+
+レコードのドキュメントに改ページを追加できるようになりました。 その結果、ページ内でパネルが分割された場合、改ページを追加して、レコードのドキュメント内の新しいページにパネルを移動できます。
 
 ## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
 
