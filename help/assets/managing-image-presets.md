@@ -12,7 +12,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: 画像プリセット
 role: Business Practitioner, Administrator
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '3831'
 ht-degree: 89%
