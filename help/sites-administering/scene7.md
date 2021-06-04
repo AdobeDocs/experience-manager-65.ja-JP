@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '5517'
 ht-degree: 12%
@@ -53,7 +53,7 @@ Experience Managerユーザーは、Dynamic Mediaを使用する2つのソリュ
 * Dynamic Media Classicに直接アセットをアップロードし、**Dynamic Media Classic**&#x200B;コンテンツブラウザーを介してアクセスして、ページオーサリングまたは
 * Experience Managerアセットにアップロードして、Dynamic Media Classicへの自動公開を有効にする。**アセット**&#x200B;コンテンツブラウザーを介してページオーサリング用にアクセス
 
-この統合に使用するコンポーネントは、[デザインモードの&#x200B;**Dynamic Media Classic**&#x200B;コンポーネント領域にあります。](/help/sites-authoring/author-environment-tools.md#page-modes)
+この統合に使用するコンポーネントは、[デザインモード](/help/sites-authoring/author-environment-tools.md#page-modes)の&#x200B;**Dynamic Media Classic**&#x200B;コンポーネント領域にあります。
 
 ### Experience ManagerDynamic Media {#aem-dynamic-media}
 
@@ -423,8 +423,8 @@ Dynamic Media Classicにアセットをプッシュする際に、すぐにア�
 
 公開せずにDynamic Media Classicにアセットをプッシュするには、次の設定を行う必要があります。
 
-1. [Admin Console を使用して、サポートケースを作成します。](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html) サポートケースで、Dynamic Media Classicアカウントのセキュアプレビューの有効化をリクエストします。
-1. [Dynamic Media Classicアカウントのセキュアプレビューの設定の手順に従います。](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)
+1. [「 」Admin Consoleを使用して、サポートケースを作成します](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。サポートケースで、Dynamic Media Classicアカウントのセキュアプレビューの有効化をリクエストします。
+1. [Dynamic Media Classicアカウントのセキュアプレビューの設定](https://help.adobe.com/en_US/scene7/using/WSd968ca97bf00cf72-5eeee3a113268dc80f5-8000.html)の手順に従います。
 
 これらの手順は、Dynamic Media Classicで安全なテスト設定を作成する場合と同じです。
 
