@@ -5,9 +5,9 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 50%
 
 ---
@@ -52,10 +52,12 @@ Linux適切なディレクトリに移動し、コマンドプロンプトで次
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
 1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 
-1. 「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。**ConfigurationManager.exe**&#x200B;または&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;を使用してConfiguration Managerを実行する前に、*&lt;AEMorms_Install_Dir>\configurationManager\bin*&#x200B;ディレクトリに移動し、**axis.jar**&#x200B;を&#x200B;**に更新します —1.4.1.1.jar**（次のファイル）
+1. 「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。**ConfigurationManager.exe**&#x200B;または&#x200B;**ConfigurationManager_IPv6.exe**&#x200B;を使用してConfiguration Managerを実行する前に、*&lt;AEMorms_Install_Dir>\configurationManager\bin*&#x200B;ディレクトリに移動し、次の名前変更操作で`ConfigurationManager.lax`ファイルと`ConfigurationManager_IPv6.lax`ファイルを更新します。
 
-   * ConfigurationManager.lax
-   * ConfigurationManager_IPv6.lax
+   * `axis.jar`コピー先：`axis-1.4.1.1.jar`
+   * `serializer-2.7.1.jar`コピー先：`serializer-2.7.2.jar`
+   * `xalan-2.7.1.jar`コピー先：`xalan-2.7.2.jar`
+   * `xercesImpl-2.9.1.jar`コピー先：`xercesImpl-2.12.0.jar`
 
 1. 「 Configuration Managerを起動」チェックボックスはデフォルトで選択されています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager を実行します。
 
