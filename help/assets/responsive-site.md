@@ -10,7 +10,7 @@ discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: アセット管理
 role: Business Practitioner, Administrator
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 93%
@@ -27,7 +27,7 @@ ht-degree: 93%
 
 [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)も参照してください。
 
-**レスポンシブサイトに最適化された画像を配信するには**：
+**レスポンシブサイトに最適化された画像を配信するには：**
 
 1. レスポンシブコードを提供する画像の場所に移動して、ドロップダウンメニューで「**[!UICONTROL レンディション]**」をタップします。
 
