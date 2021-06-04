@@ -11,10 +11,10 @@ docset: aem65
 feature: 混在メディアセット，アセット管理
 role: Business Practitioner, Administrator
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1470'
-ht-degree: 98%
+ht-degree: 96%
 
 ---
 
@@ -38,7 +38,7 @@ ht-degree: 98%
 
    まずは混在メディアセット用の画像およびビデオをアップロードします。必要に応じて、[画像セット](/help/assets/image-sets.md)と[スピンセット](/help/assets/spin-sets.md)を作成します。ユーザーは混在メディアセットビューアで画像をズームできるので、画像を選択する際にはズームを考慮します。最大サイズで 2,000 ピクセル以上の画像を使用してください。
 
-1. [混在メディアセットを作成します。](#creating-mixed-media-sets)
+1. [混在メディアセットの作成](#creating-mixed-media-sets)を参照してください。
 
    アセットページで混在メディアセットを作成するには、**[!UICONTROL 作成／混在メディアセット]**&#x200B;をタップし、セットの名前を付け、アセットを選択し、さらに画像の表示順を選択します。
 
@@ -50,13 +50,13 @@ ht-degree: 98%
 
    **[!UICONTROL ツール／アセット／ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
 
-   詳しくは、[ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
+   [ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
 
-1. [混在メディアセットをプレビューします。](#previewing-mixed-media-sets)
+1. [混在メディアセットのプレビュー](#previewing-mixed-media-sets)を参照してください。
 
    混在メディアセットを選択すると、プレビューできます。サムネールアイコンをクリックして、選択したビューアでの混在メディアセットの表示を確認します。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左側のレールのドロップダウンメニューにあります。
 
-1. [混在メディアセットを公開します。](#publishing-mixed-media-sets)
+1. [混在メディアセットの公開](#publishing-mixed-media-sets)を参照してください。
 
    混在メディアセットを公開すると、URL と埋め込み文字列がアクティベートされます。また、[ビューアプリセットを公開](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)する必要があります。
 
@@ -86,7 +86,7 @@ ht-degree: 98%
 
 画像セットに追加したアセットは、自動的に英数字順で追加されます。追加後に、手動でアセットの順番を変更したり、並べ替えたりすることができます。
 
-**混在メディアセットを作成するには：**
+**混在メディアセットを作成するには：:**
 
 1. Assets で、混在メディアセットを作成する場所に移動し、**[!UICONTROL 作成]**／**[!UICONTROL 混在メディアセット]**&#x200B;を選択します。アセットを格納しているフォルダー内からセットを作成することもできます。混在メディアセットエディターが表示されます。
 
@@ -132,7 +132,7 @@ ht-degree: 98%
 * ビューアプリセットの適用
 * デフォルトサムネールの変更
 
-**混在メディアセットを編集するには：**
+**混在メディアセットを編集するには：:**
 
 1. 次のいずれかの操作をおこないます。
 
