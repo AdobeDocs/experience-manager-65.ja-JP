@@ -8,7 +8,7 @@ content-type: reference
 feature: CDNキャッシュ，Dynamic Media Classic
 role: Business Practitioner, Administrator
 exl-id: 7020343a-b556-4091-9717-93fcc55e623b
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 79%
@@ -25,7 +25,7 @@ Dynamic Media アセットは、配信を高速化するために、CDN（コン
 
 >[!IMPORTANT]
 >
->次の手順は、AEM 6.5、Service Pack 5(AEM 6.5.5)以前のDynamic Mediaにのみ適用されます。<br>AEM 6.5、Service Pack 6(AEM 6.5.6)以降でDynamic Mediaを使用する場合は、「 Dynamic Mediaを使用したCDNキャッシュの無効化」に記載されている手順に従いま [す。](/help/assets/invalidate-cdn-cache-dynamic-media.md)
+>次の手順は、AEM 6.5、Service Pack 5(AEM 6.5.5)以前のDynamic Mediaにのみ適用されます。<br>AEM 6.5、Service Pack 6(AEM 6.5.6)以降でDynamic Mediaを使用する場合は、「  [Dynamic Mediaを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dynamic-media.md)」に記載されている手順に従います。
 
 [Dynamic Media Classic（Scene7）のキャッシュの概要](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)も参照してください。
 
