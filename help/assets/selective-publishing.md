@@ -9,10 +9,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
 feature: 公開
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2935'
-ht-degree: 81%
+ht-degree: 79%
 
 ---
 
@@ -38,10 +38,10 @@ AEM または Dynamic Media との間で、アセットをフォルダーレベ�
 
 フォルダーで選択的公開を設定した後、次の操作をおこなうことができます。
 
-* [「公開を管理」を使用して、Dynamic Media または AEM にアセットを選択的に公開する。](#selective-publish-manage-publication)
-* [「公開を管理」を使用して、Dynamic Media または AEM からアセットを選択的に非公開にする。](#selective-unpublish-manage-publication)
-* [クイック公開を使用した Dynamic Media または AEM へのアセットの公開.](#quick-publish-aem-dm)
-* [検索結果を使用して、アセットを選択的に公開または非公開にする。](#selective-publish-unpublish-search-results)
+* [「公開を管理」を使用して、Dynamic MediaまたはAEMにアセットを選択的に公開する](#selective-publish-manage-publication)。
+* [「公開を管理」を使用して、Dynamic MediaまたはAEMからアセットを選択的に非公開にする](#selective-unpublish-manage-publication)。
+* [クイック公開を使用した Dynamic Media または AEM へのアセットの公開](#quick-publish-aem-dm).
+* [検索結果を使用して、アセットを選択的に公開または非公開にする](#selective-publish-unpublish-search-results)。
 
 **Dynamic Media のフォルダーレベルで選択的公開を設定するには**
 
@@ -186,7 +186,7 @@ AEM または Dynamic Media との間で、アセットをフォルダーレベ�
 
 検索結果には、異なる Dynamic Media 公開設定を持つ複数のアセットフォルダーのアセットが表示される場合があります。検索結果から 1 つ以上のアセットを選択し、そのアセットに異なる Dynamic Media 公開モードの設定がある場合は、ツールバーから「**[!UICONTROL 公開を管理]**」をトリガーして、公開または非公開にできます。
 
-[AEM でのアセットの検索](/help/assets/search-assets.md)も参照してください。
+[AEM](/help/assets/search-assets.md)でのアセットの検索も参照してください。
 
 **検索結果を使用して、アセットを選択的に公開または非公開にするには**
 
