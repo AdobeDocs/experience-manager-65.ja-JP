@@ -6,10 +6,10 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 79%
+ht-degree: 73%
 
 ---
 
@@ -33,7 +33,7 @@ AEM Assets では、クライアント側でのこのようなレンディショ
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-DM エンコードされたレンディションのプロキシサーバーを設定するには、[Dynamic Media クラウドサービス](config-dynamic.md)を設定します。
+DMエンコードされたレンディションのプロキシサーバーを設定するには、[Dynamic Media Cloudサービス](config-dynamic.md)を設定します。
 
 必要なパラメーターを指定してビデオレンディションを生成するには、[対応するビデオプロファイルを作成](video-profiles.md)します。
 
