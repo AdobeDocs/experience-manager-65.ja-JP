@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: ビューアプリセット
 role: Business Practitioner, Administrator
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
-source-wordcount: '4338'
+source-wordcount: '4339'
 ht-degree: 96%
 
 ---
@@ -61,7 +61,7 @@ Web ページごとに異なるニーズがあります。例えば、個別の�
 >[!NOTE]
 >
 >標準提供ビューアを使用するには、まずすべて公開する必要があります。
->[ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
+>[ビューアプリセットの公開]を参照してください。(#publishing-viewer-presets)
 
 ### ビューアプリセットのシステム互換性 {#viewer-preset-system-compatibility}
 
