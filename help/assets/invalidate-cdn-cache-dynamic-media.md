@@ -8,7 +8,7 @@ content-type: reference
 role: Business Practitioner, Administrator
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDNキャッシュ
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1366'
 ht-degree: 69%
@@ -25,7 +25,7 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
 
 >[!IMPORTANT]
 >
->次の手順は、Dynamic Media - Adobe Experience Manager 6.5、Service Pack 6(Experience Manager6.5.6)以降のScene7モードにのみ適用されます。 また、このCDN無効化機能を使用するには、Experience ManagerDynamic Mediaに組み込まれている標準搭載のCDNを使用する必要があります。その他のカスタムCDNはサポートされていません。<br>Experience Manager6.5、Service Pack 5(Experience Manager6.5.5)以前でDynamic Mediaを使用する場合は、  [Dynamic Media Classicを使用したCDNキャッシュの無効化の手順に従います。](/help/assets/invalidate-cdn-cache-dm-classic.md)
+>次の手順は、Dynamic Media - Adobe Experience Manager 6.5、Service Pack 6(Experience Manager6.5.6)以降のScene7モードにのみ適用されます。 また、このCDN無効化機能を使用するには、Experience ManagerDynamic Mediaに組み込まれている標準搭載のCDNを使用する必要があります。その他のカスタムCDNはサポートされていません。<br>Experience Manager6.5、Service Pack 5(Experience Manager6.5.5)以前でDynamic Mediaを使用している場合は、「  [Dynamic Media Classicを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)」に記載されている手順に従います。
 
 [Dynamic Media のキャッシュの概要](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html)も参照してください。
 
