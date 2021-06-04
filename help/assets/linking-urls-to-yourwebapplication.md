@@ -10,10 +10,10 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: Business Practitioner, Administrator
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 設定
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '1275'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 94%
 
 Web サイトやアプリケーションは、URL コールによって Dynamic Media のサービスにアクセスします。アセットの公開後、Dynamic Media によって、そのアセットを参照する URL 文字列がアクティベートされます。これらの URL を Web ブラウザーに貼り付けてテストすることができます。
 
-AEM を WCM として使用&#x200B;*していない*&#x200B;場合に限り、URL へのリンクを使用します。ビデオプレーヤーをポップアップウィンドウまたはモーダルウィンドウとして配信する場合には、（埋め込みではなく）リンク機能を使用します。AEM を WCM として使用している場合は、[ページに直接アセットを追加します。](adding-dynamic-media-assets-to-pages.md)
+AEM を WCM として使用&#x200B;*していない*&#x200B;場合に限り、URL へのリンクを使用します。ビデオプレーヤーをポップアップウィンドウまたはモーダルウィンドウとして配信する場合には、（埋め込みではなく）リンク機能を使用します。AEMをWCMとして使用している場合は、[ページ](adding-dynamic-media-assets-to-pages.md)に直接アセットを追加します。
 
 Web ページやアプリケーションにこれらの URL 文字列を配置するには、Dynamic Media からコピーします。
 
