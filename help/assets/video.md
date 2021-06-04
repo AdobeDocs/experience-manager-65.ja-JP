@@ -11,7 +11,7 @@ docset: aem65
 feature: アセット管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '11748'
 ht-degree: 94%
@@ -30,7 +30,7 @@ ht-degree: 94%
 >
 >Dynamic Mediaのビデオを操作する前に、AEM管理者がDynamic Media - Scene7モードまたはDynamic Media — ハイブリッドモードでDynamic MediaCloud Servicesを既に有効にして設定していることを確認してください。
 >
->* 「Dynamic Media - Scene7 モードの設定」の[ Dynamic Media クラウドサービスの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)、および[ Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
+>* Dynamic Media - Scene7モードの設定の[Dynamic MediaCloud Servicesの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)および[Dynamic Media - Scene7モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
    >
    >
 * [](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)Dynamic Media - ハイブリッドモードの設定の Dynamic Media クラウドサービスの設定を参照してください。
@@ -353,7 +353,7 @@ VBR と CBR のどちらを使用するべきかVBR と CBR のどちらを選�
 
 ### 解決方法 {#resolution}
 
-「解像度」は、ビデオファイルの高さと幅をピクセル単位で表したものです。ほとんどのソースビデオは、1,920 x 1,080 などの高解像度で保存されます。ストリーミング用のソースビデオは、比較的低い解像度（640 x 480 以下）に圧縮されます。
+**解像度**&#x200B;は、ビデオファイルの高さと幅をピクセル単位で表したものです。ほとんどのソースビデオは、1,920 x 1,080 などの高解像度で保存されます。ストリーミング用のソースビデオは、比較的低い解像度（640 x 480 以下）に圧縮されます。
 
 解像度とデータレートは、ビデオの品質を決める、一体的な関連を持つ 2 つの要素です。同じビデオ品質を維持するには、ビデオファイル内のピクセル数が多いほど（解像度が高いほど）、データレートを高くする必要があります。例えば、320 x 240 の解像度と 640 x 480 の解像度のビデオファイルにおけるフレームあたりピクセル数を考察すると、次のようになります。
 
@@ -546,7 +546,7 @@ YouTube にビデオを公開するには、1 つ以上のチャネルが必要�
 >
 >*AEM* の「YouTube 設定」にチャネルを追加する前に、YouTube のチャネルを既に 1 つ以上セットアップ済みであることを確認してください（以下の [AEM での YouTube の設定](#setting-up-youtube-in-aem)を参照してください）。この確認をおこなわなくても、既存のチャネルが存在しないことを知らせる警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
 
-YouTube チャンネルを作成するには：
+**YouTube チャンネルを作成するには：**
 
 1. [https://www.youtube.com](https://www.youtube.com/) にアクセスし、Google アカウントの資格情報を使用してログインします。
 1. YouTube ページの右上隅にあるプロフィール写真（内側に文字が表示された、べた塗りの円が表示されている場合はその円）をクリックし、「**[!UICONTROL 設定]**」（丸い歯車アイコン）をクリックします。
@@ -753,7 +753,7 @@ AEM 6.4 以降では、AEM で YouTube への公開をセットアップする�
 >
 >詳細な進行状況については、レプリケーション下の YouTube ログを監視できます。ただし、このような監視には管理者アクセスが必要です。
 
-YouTube チャンネルにビデオを公開するには：
+**YouTube チャンネルにビデオを公開するには：**
 
 1. AEM で、YouTube チャンネルに公開するビデオアセットの場所に移動します。
 1. ビデオアセット（アダプティブビデオセット）を選択します。
@@ -789,7 +789,7 @@ YouTube チャンネルにビデオを公開するには：
 >
 >YouTube URL は、ビデオアセットを YouTube に公開するまではコピーできません。
 
-Web アプリケーションに YouTube URL をリンクするには：
+**Web アプリケーションに YouTube URL をリンクするには：**
 
 1. URL のコピー先となる、*YouTube への公開済み*&#x200B;ビデオアセットの場所に移動して選択します。
 
@@ -813,7 +813,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 >
 >詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。
 
-ビデオを非公開にして YouTube から削除するには：
+**ビデオを非公開にして YouTube から削除するには：**
 
 1. YouTube チャンネルで非公開にするビデオアセットの場所に移動します。
 1. アセット選択モードで、1 つ以上の公開済みビデオアセットを選択します。
@@ -828,7 +828,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 ### 進行状況の監視 {#monitoring-progress}
 
-進行状況を監視するには（エンコーディング／YouTube の公開の失敗を含む）：
+**進行状況を監視するには（エンコーディング／YouTube の公開の失敗を含む）：**
 
 1. アセットフォルダー内のビデオエンコーディングの進行状況を表示します。
 
@@ -979,7 +979,7 @@ AEM でビデオアセットを非公開にすると、そのビデオは YouTub
 
 ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、そのためにはパブリッシュサーバーを事前にセットアップしておく必要があります。パブリッシュサーバーがセットアップされていない場合でも、公開してビデオレポートを確認することはできますが、その際には Dynamic Media クラウド設定に戻って「**[!UICONTROL OK]**」をタップする必要があります。
 
-ビデオレポートを表示するには：
+**ビデオレポートを表示するには：**
 
 1. AEM の左上隅にある AEM ロゴをタップしてから、左側のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL Assets]**／**[!UICONTROL ビデオレポート]**&#x200B;をタップします。
 1. ビデオレポートページで、次のいずれかの操作をおこないます。
@@ -999,7 +999,7 @@ Dynamic Media で標準提供されているビデオビューアを使用して
 
 独自のビデオビューアを作成するには、『 Dynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=ja)Adobe』と『HTML5ビューアSDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)』を使用します。[[
 
-HTML5ビューアSDK APIを使用して作成したビデオビューアに基づくビデオレポートを表示するには：
+**HTML5ビューアSDK APIを使用して作成したビデオビューアに基づくビデオレポートを表示するには：**
 
 1. 公開済みビデオアセットの場所に移動します。
 1. アセットのページの左上隅付近にある、ドロップダウンリストで「**[!UICONTROL ビューア]**」を選択します。
