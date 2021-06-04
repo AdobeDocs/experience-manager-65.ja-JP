@@ -11,7 +11,7 @@ docset: aem65
 feature: ビデオプロファイル
 role: Business Practitioner, Administrator
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '3704'
 ht-degree: 98%
@@ -42,7 +42,7 @@ Dynamic Media には、事前定義済みのアダプティブビデオエンコ
 >
 >メタデータは、アセットの検索時に役に立ちます。サムネールは、エンコーディング中に生成される静的なビデオ画像です。サムネールは AEM システムによって必要とされ、ユーザーインターフェイス内のカード表示、検索結果表示およびアセットのリスト表示でビデオを視覚的に識別するために使用されます。エンコードされたビデオのレンディションアイコン（絵画用パレット）をタップすれば、生成されたサムネールを確認できます。
 
-ビデオプロファイルの作成が完了したら、そのプロファイルを 1 つまたは複数のフォルダーに適用します。[ビデオプロファイルのフォルダーへの適用](#applying-a-video-profile-to-folders)を参照してください。
+ビデオプロファイルの作成が完了したら、そのプロファイルを 1 つまたは複数のフォルダーに適用します。[フォルダーへのビデオプロファイルの適用](#applying-a-video-profile-to-folders)を参照してください。
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](/help/assets/config-dms7.md#configuring-asset-processing)を参照してください。
 
