@@ -10,10 +10,10 @@ discoiquuid: 99d7025f-d022-4213-83c0-815a4712c573
 role: Business Practitioner, Administrator
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: 公開
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 87%
+ht-degree: 83%
 
 ---
 
@@ -21,7 +21,8 @@ ht-degree: 87%
 
 Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開]**」をタップします。Dynamic Mediaアセットを公開したら、URLを使用してWebページに含めたり、ページにコードを埋め込んだりできます。
 
-また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[Dynamic Media - Scene7モードの設定を参照してください。](config-dms7.md) または、フォルダーレベルで「**[!UICONTROL 選択的公開]**」を使用して、相互に排他的なアセットを Dynamic Media または AEM に選択的に公開することもできます。詳しくは、[Dynamic Media での選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
+また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。[Dynamic Media - Scene7モード](config-dms7.md)の設定を参照してください。
+ または、フォルダーレベルで「**[!UICONTROL 選択的公開]**」を使用して、相互に排他的なアセットを Dynamic Media または AEM に選択的に公開することもできます。[Dynamic Mediaでの選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
 
 **[!UICONTROL カード表示]**&#x200B;で、アセット名のすぐ下、アセットが発行されたことを示す日時の左側に、小さな地球アイコンが表示されます。**[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 
@@ -44,9 +45,9 @@ Dynamic Media アセットを公開するには、既にアップロード済み
 
 
 
-一連のアセットを公開する方法について詳しくは、[アセットの公開](manage-assets.md)を参照してください。
+セットまたはアセットの公開について詳しくは、[アセットの公開](manage-assets.md)を参照してください。
 
-## Dynamic Media アセットの HTTP/2 配信  {#http-delivery-of-dynamic-media-assets}
+## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
 
 AEM は現在、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートしています。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
 
