@@ -11,10 +11,10 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 274af114-845a-46bd-b091-802cf589687a
 feature: アセット管理，レンディション
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '313'
-ht-degree: 76%
+ht-degree: 73%
 
 ---
 
@@ -29,7 +29,7 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 
    * ビデオまたは画像を Web サイトに埋め込みます。
    * Web アプリケーションに URL をリンクします。ビデオプレーヤーをポップアップウィンドウまたはモーダルウィンドウとして配信する場合には、リンク機能を使用します。
-   * レスポンシブサイトの場合は、[最適化された画像を配信できます。](/help/assets/responsive-site.md)
+   * レスポンシブサイトの場合は、[最適化された画像を配信](/help/assets/responsive-site.md)できます。
 
 >[!NOTE]
 >
