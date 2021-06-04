@@ -11,10 +11,10 @@ docset: aem65
 feature: 画像セット，アセット管理
 role: Business Practitioner, Administrator
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
 workflow-type: tm+mt
 source-wordcount: '2085'
-ht-degree: 84%
+ht-degree: 83%
 
 ---
 
@@ -40,13 +40,13 @@ ht-degree: 84%
 
 **すぐに使い始めるには：**
 
-1. [複数ビュー用のプライマリソース画像をアップロードします。](#uploading-assets-in-image-sets)
+1. [複数ビュー用のプライマリソース画像をアップロードします](#uploading-assets-in-image-sets)。
 
    まずは画像セット用の画像をアップロードします。画像を選択する場合は、画像セットビューアで画像をズームできます。 最適なズーム詳細には、最大サイズで 2,000 ピクセル以上の画像を使用してください。Dynamic Media では、各画像を最大 25 メガピクセルまでレンダリングできます。例えば、5,000 x 5,000 メガピクセルの画像や、その他のサイズの組み合わせを 25 メガピクセルまで使用できます。
 
    Adobe Experience Manager Assetsでは多くの画像ファイル形式がサポートされますが、可逆圧縮TIFF、PNGおよびEPS画像の使用が推奨されます。
 
-1. [画像セットを作成します。](#creating-image-sets)
+1. [画像セットの作成](#creating-image-sets)を参照してください。
 
    画像セットで、画像セットビューア内のサムネール画像をクリックします。
 
@@ -68,11 +68,11 @@ ht-degree: 84%
    ビューアプリセットを作成または編集する場合は、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL ビューアプリセット]**&#x200B;を参照してください。
 
 1. （オプション）バッチセットプリセットを使用して作成した[画像セットの表示](/help/assets/image-sets.md#viewing-image-sets)
-1. [画像セットをプレビューします。](/help/assets/previewing-assets.md)
+1. [画像セットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
    画像セットを選択すると、プレビューできます。サムネールアイコンをクリックして、選択したビューアで画像セットを確認できます。 **[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左側のレールのドロップダウンメニューにあります。
 
-1. [画像セットを公開します。](/help/assets/publishing-dynamicmedia-assets.md)
+1. [画像セットを公開します](/help/assets/publishing-dynamicmedia-assets.md)。
 
    画像セットを公開すると、URLと埋め込みコードがアクティベートされます。 さらに、作成した[カスタムビューアプリセットを公開する](/help/assets/managing-viewer-presets.md)必要があります。既製のビューアプリセットが既に公開されています。
 
@@ -84,7 +84,7 @@ ht-degree: 84%
 
    詳しくは、[Web ページへの画像セットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)および[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-画像セットを編集するには、[画像セットの編集](#editing-image-sets)を参照してください。また、[画像セットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および編集することができます。
+画像セットを編集するには、[画像セットの編集](#editing-image-sets)を参照してください。 を参照してください。また、[画像セットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および編集することができます。
 
 セットの作成で問題が発生した場合は、[Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md#images-and-sets)の「画像とセット」を参照してください。
 
