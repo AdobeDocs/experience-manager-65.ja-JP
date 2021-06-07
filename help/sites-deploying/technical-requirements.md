@@ -6,9 +6,9 @@ seo-description: AEM でサポートされているクライアントおよび�
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: ed10c7230557f84511dfadd6fddb6b566466a049
+source-git-commit: 5ce72a51d69e97d7e07e9f734bfd7547fccd51f1
 workflow-type: tm+mt
-source-wordcount: '3265'
+source-wordcount: '3273'
 ht-degree: 81%
 
 ---
@@ -132,7 +132,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  </tbody>
 </table>
 
-1. Azul Zuluのサポートと配布LTSリリースのすべてのメンテナンスアップデートを含むOpenJDKのビルドは、AEM 6.5 SP9以降、OpenJDKのAzul Zuluビルドを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 詳しくは、Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)の[Azul Javaサポートを参照してください。
+1. Azul Zuluのサポートと配布LTSリリースのすべてのメンテナンスアップデートを含むOpenJDKのビルドは、AEM 6.5 SP9以降、OpenJDKのAzul Zuluビルドを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 AEM Forms Java EE向けAEM 6.5 SP10 詳しくは、Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)の[Azul Javaサポートを参照してください。
 
 1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12は、Oracle別の非LTSリリースです([OracleJava SEサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDKのサポートと配布（公開アップデートの終了後にLTSリリースのすべてのメンテナンスアップデートを含む）は、2022年12月まで、OracleJava SEテクノロジー&#x200B;**を利用しているすべてのAEMのお客様に対して直接Adobeでサポートされます。** 詳しくは、 [Adobe Experience Manager Q&amp;AのOracleJavaサポート](assets/adobe-oracle-java-license-agreement.pdf)を参照してください。
 
