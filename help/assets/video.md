@@ -11,10 +11,10 @@ docset: aem65
 feature: アセット管理
 role: Business Practitioner, Administrator
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: 900a2ccbf33575644f934e5a75380d8dd3eab5d8
 workflow-type: tm+mt
-source-wordcount: '11655'
-ht-degree: 68%
+source-wordcount: '11657'
+ht-degree: 67%
 
 ---
 
@@ -120,7 +120,7 @@ ht-degree: 68%
 
 ## Dynamic Media でのビデオの操作  {#working-with-video-in-dynamic-media}
 
-Dynamic Mediaのビデオは、デスクトップ、iOS、Android™、BlackberryおよびWindowsモバイルデバイスを含む複数の画面にストリーミング用の高品質なアダプティブビデオを簡単に公開できるエンドツーエンドのソリューションです。アダプティブビデオセットは、同じビデオのバージョンを、400 kbps、800 kbps、1000 kbpsなど、異なるビットレートおよび形式でエンコードしてグループ化します。デスクトップコンピューターまたはモバイルデバイスが、使用可能な帯域幅を検出します。
+Dynamic Mediaのビデオは、デスクトップ、iOS、Android™、BlackBerry®、Windowsモバイルデバイスなど、複数の画面にストリーミング用の高品質なアダプティブビデオを簡単に公開できるエンドツーエンドのソリューションです。アダプティブビデオセットは、同じビデオのバージョンを、400 kbps、800 kbps、1000 kbpsなど、異なるビットレートおよび形式でエンコードしてグループ化します。デスクトップコンピューターまたはモバイルデバイスが、使用可能な帯域幅を検出します。
 
 例えば、iOS モバイルデバイスでは、3G、4G、Wi-Fi などの帯域幅が検出されます。次に、アダプティブビデオセット内の様々なビデオのビットレートの中から、適切なエンコード済みビデオが自動的に選択されます。そのビデオが、デスクトップ、モバイルデバイスまたはタブレットにストリーミングされます。
 
@@ -145,11 +145,11 @@ Dynamic Mediaのビデオは、デスクトップ、iOS、Android™、Blackberr
 
 * すべての HTML5 ビデオビューアでのビデオキャプション。
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
-* アダプティブビデオセットをWebやデスクトップ、およびiPhone、iPad、Android、Blackberry、Windows Phoneを含むモバイルデバイスに配信します。
+* アダプティブビデオセットをWebやデスクトップ、およびiPhone、iPad、Android™、BlackBerry®、Windows Phoneなどのモバイルデバイスに配信します。
 
 アダプティブビデオのストリーミングは、様々なiOSプラットフォームでサポートされています。 詳しくは、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html?lang=ja#ビデオ)を参照してください。
 
-Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする Blackberry デバイスについては、[Blackberry でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
+Dynamic Mediaは、MP4 H.264ビデオのモバイルビデオ再生をサポートしています。このビデオ形式をサポートするBlackBerry®デバイスは、次の場所にあります。[BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)でサポートされているビデオ形式。
 
 このビデオ形式をサポートするWindowsデバイスは、次の場所にあります。[Windows Phone 8](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))でサポートされているメディアコーデック
 
@@ -239,17 +239,17 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   </tr>
   <tr>
    <td>モバイル</td>
-   <td>Chrome（Android 6 以前）</td>
+   <td>Chrome(Android™ 6以前)</td>
    <td>プログレッシブダウンロード。</td>
   </tr>
   <tr>
    <td>モバイル</td>
-   <td>Chrome（Android 7 以降）</td>
+   <td>Chrome(Android™ 7以降)</td>
    <td>HLS</td>
   </tr>
   <tr>
    <td>モバイル</td>
-   <td>Android（デフォルトブラウザー）</td>
+   <td>Android™（デフォルトのブラウザー）</td>
    <td>プログレッシブダウンロード。</td>
   </tr>
   <tr>
@@ -264,7 +264,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   </tr>
   <tr>
    <td>モバイル</td>
-   <td>Blackberry</td>
+   <td>BlackBerry®</td>
    <td>HLS</td>
   </tr>
  </tbody>
@@ -600,7 +600,7 @@ Experience Manager6.4以降、YouTubeをExperience Managerで設定するため�
 1. グローバルページの右上隅にある「**[!UICONTROL 作成]**」をタップします。
 1. YouTube 設定を作成ページの「Google Cloud Platform 設定」で、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
-   このプロジェクト ID は、先ほど Google Cloud 設定をおこなったときに指定したものです。YouTube 設定を作成ページを開いたままにしておきます。このページには後で戻ります。
+   このプロジェクト ID は、先ほど Google Cloud 設定をおこなったときに指定したものです。「 YouTube設定を作成」ページを開いたままにします。すぐに戻ってきます
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -1031,7 +1031,7 @@ Dynamic Mediaが提供する標準提供のビデオビューアを使用する�
 
 1. 次の操作をおこなって、TrackingManager コンポーネントを作成します。
 
-   * `s7sdk.Util.init();` をコールした後に、次の行を追加して、TrackingManager インスタンスを作成し、イベントを追跡します。
+   * `s7sdk.Util.init();`を呼び出した後に、以下を追加して、TrackingManagerインスタンスを作成し、イベントを追跡します。
 
       `var trackingManager = new s7sdk.TrackingManager();`
 
@@ -1204,7 +1204,7 @@ Cost-efficient access to rapidly evolving technology.
 
 ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオをクリックするよう促すのに役立ちます。
 
-Experience Manager内のすべてのビデオには、関連するサムネールが必要です。サムネールは、置き換えずに削除できません。 デフォルトでは、ビデオをExperience Managerにアップロードする場合、最初のフレームがサムネールとして使用されます。 例えば、ブランド設定やビジュアル検索用にサムネールをカスタマイズできます。ビデオサムネールをカスタマイズする場合は、ビデオを再生し、使用するフレームで一時停止するか、Digital Asset Manager に既にアップロードして&#x200B;*公開*&#x200B;した画像アセットを選択することができます。
+Experience Manager内のすべてのビデオには、関連するサムネールが必要です。サムネールは、置き換えずに削除できません。 デフォルトでは、ビデオをExperience Managerにアップロードする場合、最初のフレームがサムネールとして使用されます。 例えば、ブランド設定やビジュアル検索用にサムネールをカスタマイズできます。ビデオサムネールをカスタマイズする場合は、ビデオを再生し、使用するフレームで一時停止できます。 または、既にアップロードして&#x200B;*公開済み*&#x200B;の画像アセットをDigital Asset Managerで選択することもできます。
 
 ビデオから選択したカスタムビデオサムネール画像は、抽出されず、個別のアセットとしてDAMに保存されません。 ただし、既存の画像アセットから選択したカスタムビデオサムネールは JCR に保存されます。次のサンプルパスのように、選択したアセットのパスがビデオアセットのノードの下に保存されます。
 
