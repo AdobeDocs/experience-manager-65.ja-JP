@@ -3,9 +3,9 @@ title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノ�
 description: ' [!DNL Adobe Experience Manager] 6.5サービスパックのリリースノート。'
 contentOwner: AK
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: d06e60baac692c92358244944226b77d5dad4022
+source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
 workflow-type: tm+mt
-source-wordcount: '20321'
+source-wordcount: '20313'
 ht-degree: 15%
 
 ---
@@ -590,9 +590,9 @@ Adobe Experience Manager 6.5.6.0で導入された主な機能および機能強
 
 * [翻訳済みアダプティブフォームページのキャッシュ機能が強化されました](../../help/forms/using/configure-adaptive-forms-cache.md)。
 
-* automated forms conversionサービス](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)での[Adobe Signテキストタグのサポート。
+* automated forms conversionサービス](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html?lang=ja)での[Adobe Signテキストタグのサポート。
 
-* [[!DNL Automated Forms Conversion service]を使用して、色付きのフォームをアダプティブフォームに変換する](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)をサポートします。
+* [[!DNL Automated Forms Conversion service]を使用して、色付きのフォームをアダプティブフォームに変換する](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)をサポートします。
 
 * SMB 2およびSMB 3プロトコルのサポート。
 
@@ -1001,7 +1001,7 @@ Experience Manager6.5 Service Pack 5で導入された主な機能の一覧に�
 
 >[!IMPORTANT]
 >
->[!DNL Experience Manager desktop app]のWindowsユーザーは、[!DNL Adobe Experience Manager 6.5.5.0]インスタンス上のDAMリポジトリにアクセスするために、[デスクトップアプリケーションバージョン2.0.3.2](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html#whats-new-added)にアップグレードすることをお勧めします。 デスクトップアプリケーションバージョン2.0.2を使用して[!DNL Adobe Experience Manager] 6.5.5.0インスタンスのDAMリポジトリにアクセスする際に問題が発生する可能性があるので、
+>[!DNL Experience Manager desktop app]のWindowsユーザーは、[!DNL Adobe Experience Manager 6.5.5.0]インスタンス上のDAMリポジトリにアクセスするために、[デスクトップアプリケーションバージョン2.0.3.2](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html#what-is-new)にアップグレードすることをお勧めします。 デスクトップアプリケーションバージョン2.0.2を使用して[!DNL Adobe Experience Manager] 6.5.5.0インスタンスのDAMリポジトリにアクセスする際に問題が発生する可能性があるので、
 
 **Experience Managerアセットのアクセシビリティの強化**
 
@@ -2183,7 +2183,7 @@ Remove one mention of this fix.
 
 #### Assets  — 含む
 
-* [!DNL Experience Manager Assets]に対するマルチサイトマネージャーのサポートを有効にしました。 詳しくは、[MSMを使用したExperience Managerアセットの再利用](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/reuse-assets-using-msm.html)を参照してください。 NPR-29199：CQ-4259922 のホットフィックス
+* [!DNL Experience Manager Assets]に対するマルチサイトマネージャーのサポートを有効にしました。 詳しくは、[MSMを使用したExperience Managerアセットの再利用](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/reuse-assets-using-msm.html)を参照してください。 NPR-29199：CQ-4259922 のホットフィックス
 
 #### サイト — 含まれる
 
