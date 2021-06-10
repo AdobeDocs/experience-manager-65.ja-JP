@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 2e01bb0b16728a8073e5de47deb88de69486d408
+source-git-commit: f62c675af34a4b11cc152eafb7bc561f8b6890a9
 workflow-type: tm+mt
-source-wordcount: '3877'
+source-wordcount: '3857'
 ht-degree: 4%
 
 ---
@@ -22,17 +22,15 @@ ht-degree: 4%
 | 日付 | 2021 年 5 月 27 日 |
 | ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9.zip) |
 
-<!-- TBD: Update the SD link when SP8 is available. Same link is duplicated below in install -->
-
 ## [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}に含まれる内容
 
 [!DNL Adobe Experience Manager] 6.5.9.0には、2019年4月の6.5リリースのリリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
 
 [!DNL Adobe Experience Manager] 6.5.9.0で導入された主な機能と機能強化は次のとおりです。
 
-* AEM Sites Dynamic Media Foundationコンポーネントで、レスポンシブ画像プリセットまたはスマート切り抜きを使用する際に、高解像度デバイス向けの最適化のオン/オフを切り替えることができるようになりました。
+* [!DNL Experience Manager Sites] Dynamic Media Foundationコンポーネントで、レスポンシブな画像プリセットまたはスマート切り抜きを使用する際に、高解像度デバイスの最適化のオン/オフを切り替えることができるようになりました。
 
-* パフォーマンスを向上させるために、hidden=false条件がJCRクエリからQueryBuilderエバリュエーターに移動されます。 変更後に非表示の述語が機能していることを確認するために、Adobe Experience Managerは非表示のフォルダーがインターフェイスに表示されていないことを確認します。
+* パフォーマンスを向上させるために、hidden=false条件がJCRクエリからQueryBuilderエバリュエーターに移動されます。 変更後に非表示の述語が機能していることを確認するために、Experience Managerは非表示のフォルダーがインターフェイスに表示されていないことを確認します。
 
 * [!DNL Experience Manager Sites]ページで削除されたページとツリーを復元する機能。
 
@@ -94,9 +92,9 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->AEM Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠した標準規格のOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および運用できます。
+>Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠した標準規格のOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および操作できます。
 >[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
->[!DNL Azul Zulu JDKs]の関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
+>[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
 >oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
 
 [!DNL Experience Manager] 6.5.9.0リリースで提供された修正の一覧を以下に示します。
@@ -212,7 +210,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * 読み取り専用の権限を持つサイト作成者は、アセットに対してスマート切り抜き機能を使用し、スマート切り抜きレンディションを編集できます。 ただし、読み取り専用権限を持つユーザーは、Sites開発インスタンスでアセットのプロパティを編集できない必要があります(CQ-4316450)。
 
-* AEMインスタンスがDynamic Mediaモードを設定している場合でも、Dynamic Media設定が有効になっていないフォルダーパスに対してビデオ注釈が機能しない(CQ-4314950)。
+* [!DNL Dynamic Media]モードで[!DNL Experience Manager]インスタンスが設定されている場合でも、フォルダーパス[!DNL where Dynamic]に対してビデオ注釈が機能しません。メディア設定は有効になっていません。(CQ-4314950)
 
 * アセットのタイトルに2バイト、2バイト、高ASCII、キリル、サロゲートペア、ヘブライ語、アラビア語、GB18030文字が含まれる場合、Dynamic Mediaに公開すると、アセットのタイトルに疑問符(?)が付きます。 (CQ-4311872).
 
@@ -261,7 +259,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * `resourceresolver` Slingバンドルが原因で`Sling:alias`クエリが失敗する(NPR-35335)。
 
-* AEMでSSLを設定すると、コンテキストパスが削除される(NPR-35294)。
+* Experience ManagerでSSLを設定すると、コンテキストパスが削除される(NPR-35294)。
 
 * 長時間実行セッションの後に`SegmentNotFound`例外が返される(NPR-36405)。
 
@@ -275,11 +273,11 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 ### プロジェクト {#projects-6590}
 
-* プロジェクトのJCRパスがプロジェクトパスに追加された余分なスラッシュ(/)によって解決されないので、プロジェクトのプロパティを保存できない。(NPR-36191)
+* プロジェクトパスに追加された余分なスラッシュ(`/`)が原因でプロジェクトへのJCRパスが解決されないので、プロジェクトのプロパティを保存できない。(NPR-36191)
 
 ### スクリーン {#screens-6590}
 
-* [!DNL Experience Manager Screens] カスタム2FA認証ハンドラーが使用されている場合、プレーヤーは認証できない(NPR-35854)。
+* [!DNL Experience Manager Screens] カスタムの2要素認証ハンドラーが使用されている場合、プレーヤーは認証できない(NPR-35854)。
 
 ### Commerce {#commerce-6590}
 
@@ -291,7 +289,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * 人間による翻訳を含むプロジェクトに対して「自動承認」オプションが選択されている場合、ジョブステータスは`Unknown`と表示されます(NPR-35981)。
 
-* ページを翻訳する際に、エクスペリエンスフラグメントの参照パスが、宛先のエクスペリエンスフラグメント参照パスに更新されない(NPR-35911)。
+* ページを翻訳する際、[!DNL Experience Fragments]の参照パスは、宛先の[!DNL Experience Fragment]参照パスに更新されません(NPR-35911)。
 
 * 親ページと子ページに変更を加え、翻訳用に親ページを送信すると、子ページも誤って翻訳される(NPR-35896)。
 
@@ -303,12 +301,12 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 ### ワークフロー {#workflow-6590}
 
-* インボックスで使用可能な項目に対して「完了」、「委任」、「開く」の各アクションをクリックした場合、これらのアクションの完了を示す視覚的な手がかりはありません。(NPR-36317)
+* インボックスで使用可能な項目に対して「完了」、「委任」、「開く」の各アクションをクリックした場合、これらのアクションを完了するための視覚的な手がかりはありません(NPR-36317)。
 
 ### [!DNL Communities] {#communities-6590}
 
-* スパムフィルタリングでは、システムがAEMサーバーを停止させるJAVAヒープ領域の100%を消費します(NPR-36316、NPR-36493)。
-* フォーラムで、 SearchCommentSocialComponentListProviderからのJCRセッションデータが漏洩した(NPR-36235)。
+* スパムフィルタリングでは、システムがJavaヒープ領域の100%を消費し、Experience Managerサーバーが応答しなくなる(NPR-36316、NPR-36493)。
+* フォーラムで、`SearchCommentSocialComponentListProvider`からのJCRセッションデータが漏れ出している(NPR-36235)。
 * 特定のインボックスメッセージを開くと、不適切なページネーションおよびその他の問題が発生したすべてのメッセージが反映される(NPR-35917)。
 
 ### [!DNL Brand Portal] {#brandportal-6590}
@@ -364,7 +362,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * AdminUIで「エンドポイント管理」を選択すると、 [!DNL Experience Manager Forms]に`endpoint registry failure`エラーメッセージが表示されます(CQ-4320249)。
 
-セキュリティ更新について詳しくは、[Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
+セキュリティ更新について詳しくは、[[!DNL Experience Manager] セキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
 
 ## 6.5.9.0 のインストール {#install}
 
@@ -400,7 +398,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 **自動インストール**
 
-作業用インスタンスにAdobe Experience Manager 6.5.9.0を自動的にインストールするには、次の2つの方法があります。
+[!DNL Experience Manager] 6.5.9.0を作業インスタンスに自動的にインストールする方法は2つあります。
 
 A.サーバーがオンラインで使用可能になったら、 `../crx-quickstart/install`フォルダーにパッケージを配置します。 パッケージが自動的にインストールされます。
 
@@ -473,7 +471,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨（廃止予定）となりました。 Experience Manager6.5でExperience ManagerとAdobe Targetの統合が更新され、AdobeIMSとI/Oを介した認証を使用するAdobe Target Standard APIがサポートされるようになり、分析とパーソナライゼーション用のExperience Managerページを実装するためのAdobeLaunchの役割が増加しています。 | 各System Cloudサービスを使用して、システム接続、AdobeIMS認証、[!DNL Adobe I/O]統合をExperience Managerします。 |
+| 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨（廃止予定）となりました。 Experience Manager6.5でExperience ManagerとAdobe Targetの統合が更新され、AdobeIMSと[!DNL Adobe I/O]を介した認証を使用するAdobe Target Standard APIがサポートされるようになり、分析とパーソナライゼーション用のExperience Managerページを実装するためのAdobeLaunchの役割が増加しています。 | 各[!DNL Experience Manager]クラウドサービスを使用して、システム接続、AdobeIMS認証、および[!DNL Adobe I/O]統合を設定します。 |
 | コネクタ | Experience Manager6.5では、Microsoft SharePoint 2010およびMicrosoft SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
@@ -484,7 +482,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 ランタイムコピーを取得するには、HTTP APIを使用して、カスタムワークフローモデルのデザイン時コピーをそのランタイムコピーと同期することをお勧めします。
    `<designModelPath>/jcr:content.generate.json`
 
-* 階層内のフォルダーの名前が[!DNL Experience Manager Assets]で変更され、アセットを含むネストされたフォルダーが[!DNL Brand Portal]に公開された場合、ルートフォルダーが再び公開されるまで、フォルダーのタイトルは[!DNL Brand Portal]で更新されません。
+* 階層内のフォルダーの名前が[!DNL Assets]で変更され、アセットを含むネストされたフォルダーが[!DNL Brand Portal]に公開された場合、ルートフォルダーが再公開されるまで、フォルダーのタイトルは[!DNL Brand Portal]で更新されません。
 
 * アダプティブフォームで初めてフィールドの設定を選択した場合、設定を保存するオプションはプロパティブラウザーに表示されません。 同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 
