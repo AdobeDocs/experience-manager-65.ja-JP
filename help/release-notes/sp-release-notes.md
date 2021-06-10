@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 7d3c8d9266bdec3f75211cfa0636217fd8b054ca
+source-git-commit: 2e01bb0b16728a8073e5de47deb88de69486d408
 workflow-type: tm+mt
-source-wordcount: '3874'
+source-wordcount: '3877'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 4%
 
 * 新しいユーザーがメーラー設定サービスの更新トークンを使用してアクセストークンを更新する機能をサポートします。
 
-* メーラー設定サービスの[!DNL SMTP XOAUTH2]メカニズムのサポート。
+* [メール設定サービスのSMTP XOAUTH2](/help/sites-administering/notification.md#setting-up-oauth) メカニズムのサポート。
 
 * [!DNL MongoDB]バージョン4.2および4.4のサポート。
 
