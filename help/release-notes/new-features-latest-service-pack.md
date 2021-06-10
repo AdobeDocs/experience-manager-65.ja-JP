@@ -4,10 +4,10 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
+source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
 workflow-type: tm+mt
-source-wordcount: '3727'
-ht-degree: 6%
+source-wordcount: '3726'
+ht-degree: 5%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 >
 >AEM Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠した標準規格のOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および運用できます。
 >[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
->[!DNL Azul Zulu JDKs]の関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
+>[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
 >oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
@@ -244,7 +244,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 [!DNL Experience Manager Assets]と[!DNL Brand Portal]の間の承認チャネルが変更されます。 以前は、[!DNL Brand Portal]は、旧来のOAuthゲートウェイを通じてクラシックUIで設定されていました。このゲートウェイは、JWTトークン交換を使用して認証用のIMSアクセストークンを取得します。 [!DNL Experience Manager Assets] がで設定されるようにな [!DNL Brand Portal] りま [!DNL Adobe I/O]した。このは、テナントの認証用のIMSトークンを取得 [!DNL Brand Portal] します。
 
-[!DNL Experience Manager Assets]を[!DNL Brand Portal]で設定する手順は、[!DNL Experience Manager]のバージョンと、初めて設定するか既存の設定をアップグレードするかによって異なります。 詳しくは、[Brand Portal](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)とのExperience Managerアセットの設定を参照してください。
+[!DNL Experience Manager Assets]を[!DNL Brand Portal]で設定する手順は、[!DNL Experience Manager]のバージョンと、初めて設定するか既存の設定をアップグレードするかによって異なります。 詳しくは、[Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)とのExperience Managerアセットの設定を参照してください。
 
 #### アクセシビリティの強化(6.5.4.0) {#accessibility-enhancements-6540}
 
