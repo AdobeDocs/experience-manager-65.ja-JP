@@ -11,10 +11,10 @@ docset: aem65
 feature: インタラクティブ画像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
 workflow-type: tm+mt
-source-wordcount: '4327'
-ht-degree: 72%
+source-wordcount: '4291'
+ht-degree: 69%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 72%
 
 この Web ページの実際のインタラクティブ画像は、次の URL から参照してください。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html)
 
 ## インタラクティブ画像バナーの作成方法 {#watch-how-interactive-image-banners-are-created}
 
@@ -40,7 +40,7 @@ ht-degree: 72%
 
 一部のクイックスタートタスク内には「**例**」という見出しがあります。これには、まだインタラクティブ画像が追加されていない次のサンプル Web ページに基づく簡単なチュートリアルが含まれています。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 このチュートリアルでは、Web サイトにインタラクティブ画像を統合する手順が説明されています。
 
@@ -158,7 +158,7 @@ Experience Managerアセットのバナー画像にホットスポットを追�
 
 この 3 つの例で使用されているものと同じアプローチを次のデモ Web ページに適用できます。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 このデモ Web ページにはいくつかの製品サムネールがあり、それぞれのサムネールには、「See More」というラベルの付いたクイックビューボタンが用意されています。Web ブラウザーのデバッグツールをアクティブにしたまま各ボタンをクリックし、記録されたクイックビュー URL に注目してください。そのページの 4 つの製品クイックビューのすべてをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが作成されます。
 
@@ -347,7 +347,7 @@ Sitesのユーザーである場合は、Experience Managerメディアコンポ
 
 次のデモ Web サイトを例として使用します。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
 3 人の男性の写真には次のような静的 `IMG` タグが使用されています。
 
@@ -357,7 +357,7 @@ Sitesのユーザーである場合は、Experience Managerメディアコンポ
 
 統合は、 `IMG`タグを削除して、Experience ManagerAssetsからコピーした埋め込みコードに置き換えるだけで簡単にできます。 次のURLで結果を確認できます。このURLは、3つの円のホットスポットを含むページ上でショッパブルインタラクティブ画像を表示します。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html)
 
 >[!NOTE]
 この時点では、デモ Web サイトのショッパブルインタラクティブ画像上のホットスポットは表示用のみで、まだ既存のクイックビューと統合されていません。
@@ -504,7 +504,7 @@ loadQuickView(quickViewUrl);
 
 インタラクティブ画像が完全に統合された最終的なデモ Web サイトは次のようになります。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-banner/we-fashion/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html)
 
 ## クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
 
