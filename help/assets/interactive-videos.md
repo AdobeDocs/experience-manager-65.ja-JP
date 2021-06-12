@@ -11,10 +11,10 @@ docset: aem65
 feature: インタラクティブビデオ
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
 workflow-type: tm+mt
-source-wordcount: '6050'
-ht-degree: 83%
+source-wordcount: '6014'
+ht-degree: 81%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 83%
 
 * ビデオを一時停止する場合は、サムネールをクリックし、製品のクイックビューを開きます。 例えば、ビデオ内の KitchenAid のサムネール画像をクリックすると、このミキサーの 360 度のスピンビューを見たり、細部を拡大表示したりすることができます。
 
-<!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
+<!-- There was a link here that showed the video frame of an interactive video and when the reader clicked the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
 ![インタラクティブでショッパブルなビデオからのフレ](assets/chlimage_1-126.png) *ームインタラクティブでショッパブルなビデオからのビデオフレームキャプチャ。*
 
@@ -61,13 +61,13 @@ ht-degree: 83%
 
 一部のクイックスタートタスク内には「**例**」という見出しがあります。これには、まだインタラクティビティが追加されて&#x200B;*いない*&#x200B;次の開始デモ Web ページに基づく、簡単なチュートリアルが含まれています。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 「**例**」では、Web サイトにインタラクティブビデオを統合する手順が説明されています。
 
 最後の「例」節のチュートリアルを完了すると、完全に統合されたインタラクティブビデオを含む最終的なデモ Web ページは、次のようになります。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 インタラクティブビデオの手順：
 
@@ -176,7 +176,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 前述の方法をサンプルの Web サイトに適用すると、いくつの製品サムネールが含まれる Web ページが生成され、「SEE MORE」ボタンが表示されます。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 そのページのすべての製品のクイックビューをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが作成されます。
 
@@ -522,7 +522,7 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 
 次のデモ Web サイトを例として使用します。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 埋め込みコードは標準です。
 
@@ -553,9 +553,9 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 
 統合は、ビデオ埋め込みコードを削除して、Adobe Experience Manager のインタラクティブビデオ埋め込みコードで置き換えるだけで簡単にできます。次の URL で結果を確認できます。ページに存在するインタラクティブビデオが表示されますが、既存のクイックビューにまだ統合されていません。
 
-[https://marketing.adobe.com/resources/help/ja_JP/dm/shoppable-video/john-lewis/landing-1.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
 
-## インタラクティブビデオの既存のクイックビューへの統合  {#integrating-an-interactive-video-with-an-existing-quickview}
+## インタラクティブビデオの既存のクイックビューへの統合 {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
 >
@@ -753,7 +753,7 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 インタラクティブビデオが完全に統合された最終的なデモ Web サイトは次のようになります。
 
-[https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html](https://marketing.adobe.com/resources/help/en_US/dm/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
 ## クイックビュー{#using-quickviews-to-create-custom-pop-ups}を使用したカスタムポップアップの作成
 
