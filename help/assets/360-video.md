@@ -11,10 +11,10 @@ docset: aem65
 feature: 360 VR ビデオ
 role: Business Practitioner, Administrator
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
@@ -82,8 +82,8 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **プロパティタイプ**：Double
-   * **値**：縦横比を表す浮動小数点、デフォルト 2.0。
+   * **プロパティタイプ**  — 倍精度浮動小数点数
+   * **値**  — 縦横比（デフォルトは2.0）。
 
 このプロパティの設定が完了すると、既存のビデオと新しくアップロードされたビデオの両方で、すぐに設定が有効になります。
 
