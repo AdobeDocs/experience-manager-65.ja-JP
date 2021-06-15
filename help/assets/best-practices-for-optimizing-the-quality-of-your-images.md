@@ -10,10 +10,10 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: アセット管理
 role: Business Practitioner, Administrator
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: d2649ec83424978ba01b9bb61e9f935bdc79aa62
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1448'
-ht-degree: 82%
+ht-degree: 81%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Managerには、画像とレンダリング結果を調整お�
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
 
-Experience Managerを使用すると、取り込み時、配信時またはその両方で画像をシャープにできます。 ただし、通常は、一方の方法のみを使用して画像をシャープにします。両方は使用しません。 一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
+Experience Managerを使用すると、取り込み時、配信時またはその両方で画像をシャープにできます。 ただし、通常は、1つの方法のみを使用して画像をシャープにします。両方は使用しません。 一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
 
 画像のシャープニングでは、次の 2 つの方法を使用できます。
 
@@ -81,10 +81,10 @@ Experience Managerを使用すると、取り込み時、配信時またはそ�
 
 ベストプラクティスとして、まずはアンシャープマスクの radius パラメーターを使用します。手始めに使用できる radius 設定は次のとおりです。
 
-* **[!UICONTROL Web サイト]**：0.2～0.3 ピクセル
-* **[!UICONTROL 写真印刷（250～300 ppi）]**：0.3～0.5 ピクセル
-* **[!UICONTROL オフセット印刷（266～300 ppi）]**：0.7～1.0 ピクセル
-* **[!UICONTROL キャンバス印刷（150 ppi）]**：1.5～2.0 ピクセル
+* **[!UICONTROL Webサイト]**  - 0.2～0.3ピクセル
+* **[!UICONTROL 写真印刷(250～300 ppi)]**  - 0.3～0.5ピクセル
+* **[!UICONTROL オフセット印刷(266～300 ppi)]**  - 0.7～1.0ピクセル
+* **[!UICONTROL キャンバス印刷(150 ppi)]** ～ 1.5～2.0ピクセル
 
 amount を 1.75 から 4 まで少しずつ増やします。シャープニングの結果に満足できない場合は、radius を小数点以下の単位で増やして、再度 amount を 1.75 から 4 の範囲で実行します。必要に応じてこの手順を繰り返します。
 
