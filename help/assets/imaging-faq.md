@@ -9,10 +9,10 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: アセット管理，レンディション
 role: Business Practitioner, Administrator
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '1917'
-ht-degree: 65%
+ht-degree: 64%
 
 ---
 
@@ -220,7 +220,7 @@ The release schedule for Smart Imaging DPR and network optimization is as follow
 
 1. Adobeカスタマーケアにより、要求が送信された順序に基づいてスマートイメージングの顧客待ちリストに追加されます。
 1. Adobeがリクエストを処理する準備が整ったら、サポートから連絡を受けて調整し、目標日を設定します。
-1. **オプション**：アドビが実稼働環境にスマートイメージングをプッシュする前に、この新機能をステージングでテストするためのオプションがあります。
+1. **オプション**  — オプションで、Adobeが実稼動環境にスマートイメージングをプッシュする前に、スマートイメージングをテストできます。
 1. 完了後、サポートから通知があります。
 1. スマートイメージングのパフォーマンス向上を最大限にするため、アドビでは、有効期間（TTL）を 24 時間以上に設定することを推奨しています。TTL によって定義されるのは、アセットが CDN によってキャッシュされる期間です。この設定を変更するには、次の手順を実行します。
 
