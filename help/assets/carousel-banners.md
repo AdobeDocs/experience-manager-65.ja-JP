@@ -11,9 +11,9 @@ docset: aem65
 feature: カルーセルバナー
 role: Business Practitioner, Administrator
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
-source-git-commit: a4e9a4003bf0ce686578d3f8b3fddc19bc49dfb4
+source-git-commit: 4ad5237939289b5411a988424b2a3ecad15ca029
 workflow-type: tm+mt
-source-wordcount: '4734'
+source-wordcount: '4740'
 ht-degree: 71%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 71%
 
 プロモーションバナーに表示するコンテンツの作成や変更には時間がかかるので、新しいコンテンツをすぐに公開したり、ターゲットを絞り込んだりする際に制約が生じます。カルーセルバナーを使用すると、回転するバナーをすばやく作成または変更できます。 製品の詳細や関連リソースにリンクするホットスポットなどのインタラクティビティを追加し、それらを任意の画面に配信できます。これにより、新しいプロモーションコンテンツをより迅速に市場に投入できます。
 
-カルーセルバナーには「**[!UICONTROL CAROUSELSET]**」と表示されます。
+カルーセルバナーには、「**[!UICONTROL CAROUSELSET]**」と表示されます。
 
 ![chlimage_1-438](assets/chlimage_1-438.png)
 
@@ -48,7 +48,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
 ## クイックスタート：カルーセルバナー {#quick-start-carousel-banners}
 
-すぐに使い始めるには：
+カルーセルバナーを使用してすばやく作業を開始するには、次の手順を実行します。
 
 1. [ホットスポットと画像マップの変数を識別します](#identifying-hotspot-and-image-map-variables)（ Experience Manager Assets と Dynamic Media の両方を使用するユーザーのみ）。
 
@@ -56,7 +56,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
    >[!NOTE]
    >
-   >Experience ManagerサイトまたはEコマースのお客様は、組み込み機能を使用して製品ページに移動し、製品カタログ内の既存のSKUを参照できます。 ホットスポットまたは画像マップの変数を手動で入力する必要はありません。[eCommerce の設定](/help/commerce/cif-classic/administering/generic.md)に関する情報を参照してください。
+   >Experience ManagerサイトまたはEコマースのお客様は、組み込み機能を使用して製品ページに移動し、製品カタログ内の既存のSKU(Stock Keeping Unit)を参照できます。 ホットスポットまたは画像マップの変数を手動で入力する必要はありません。[eCommerce の設定](/help/commerce/cif-classic/administering/generic.md)に関する情報を参照してください。
    >
    >
    >Experience ManagerAssetsとDynamic Mediaのユーザーである場合は、ホットスポットと画像マップのデータを手動で入力し、公開済みURLまたは埋め込みコードをサードパーティのコンテンツ管理システムと統合します。
