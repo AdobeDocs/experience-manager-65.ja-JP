@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 設定，ハイブリッドモード
-source-git-commit: c4221ede672c131aa0864438bc9fd16c73ddf10c
+source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
 workflow-type: tm+mt
 source-wordcount: '7843'
-ht-degree: 39%
+ht-degree: 40%
 
 ---
 
@@ -211,7 +211,7 @@ Dynamic Mediaはデフォルトでは有効になっていません。 ただし
 
 Dynamic Mediaを有効にした後で無効にするには、`-r dynamicmedia`実行モードフラグを削除します。
 
-**有効化後にDynamic Mediaを無効にするには**
+**有効にした Dynamic Media を無効にするには：**
 
 1. コマンドラインでクイックスタートを起動するときに、次のいずれかを実行します。
 
@@ -224,12 +224,12 @@ Dynamic Mediaを有効にした後で無効にするには、`-r dynamicmedia`�
 1. リクエスト `https://localhost:4502/is/image`. Dynamic Media が無効化されたことを示すメッセージが表示されます。
 
    >[!NOTE]
-   Dynamic Media実行モードが無効になると、`cqdam.pyramid.tiff`レンディションを生成するワークフロー手順は自動的にスキップされます。 また、動的レンディションのサポートやその他のDynamic Mediaの機能も無効になります。
+   Dynamic Media実行モードが無効になると、`cqdam.pyramid.tiff`レンディションを生成するワークフロー手順は自動的にスキップされます。 また、動的レンディションのサポートやその他のDynamic Media機能も無効になります。
    また、Experience Managerサーバーを設定した後でDynamic Media実行モードが無効になった場合、その実行モードにアップロードされたすべてのアセットが無効になります。
 
 ## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.5 にダウンタイムなしで移行{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
-Experience ManagerDynamic Mediaを6.3から6.5にアップグレードする場合（ダウンタイムなしのデプロイメント機能を含むようになりました）は、次のcurlコマンドを実行する必要があります。 このコマンドは、すべてのプリセットと設定をCRXDE Liteの`/etc`から`/conf`に移行します。
+Experience Manager(Dynamic Media)を6.3から6.5にアップグレードする場合（ダウンタイムなしのデプロイメント機能を含むようになりました）、次のcurlコマンドを実行する必要があります。 このコマンドは、すべてのプリセットと設定をCRXDE Liteの`/etc`から`/conf`に移行します。
 
 >[!NOTE]
 互換モードでExperience Managerインスタンスを実行する場合（つまり、互換パッケージがインストールされている場合）、これらのコマンドを実行する必要はありません。
@@ -373,7 +373,8 @@ Replication test to s7delivery:https://s7bern.macromedia.com:8580/is-publish/
  Server returned status code 401 with message: Authorization required.
 ```
 
-**解決策**:が `KeyStore` dynamic-media-replicationuserに保存さ **れ、正しいパスワードが指定されていることを確認しま** す。
+**解決方法：**
+が `KeyStore` dynamic-media-replicationuserに保存さ **れ、正しいパスワードが指定されていることを確認しま** す。
 
 #### 問題：鍵を復号化できない - データを復号化できない {#problem-could-not-decrypt-key-could-not-decrypt-data}
 
@@ -389,7 +390,8 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 17.06.2016 19:00:16 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1466215216662, userId='admin', revision='null'}. java.lang.SecurityException: java.security.UnrecoverableKeyException: Could not decrypt key: Could not decrypt data.
 ```
 
-**解決策**：パスワードを確認します。レプリケーションエージェントに保存されたパスワードがキーストアの作成に使用されたパスワードと同じでありません。
+**解決方法：**
+パスワードを確認してください。レプリケーションエージェントに保存されたパスワードがキーストアの作成に使用されたパスワードと同じでありません。
 
 #### 問題：InvalidAlgorithmParameterException  {#problem-invalidalgorithmparameterexception}
 
@@ -409,7 +411,8 @@ java.io.IOException: Failed to execute request 'https://replicate-na.assetsadobe
         at com.scene7.is.catalog.service.publish.atomic.PublishingServiceHttp.executePost(PublishingServiceHttp.scala:195)
 ```
 
-**解決策**:Experience Manager作成者のJava™プロセスのシステムプロパティが有効な信頼ストアに設定さ `-Djavax.net.ssl.trustStore=` れていることを確認してください。
+**解決方法：**
+Experience Manager作成者のJava™プロセスのシステムプロパティが有効なトラストストアに設定さ `-Djavax.net.ssl.trustStore=` れていることを確認してください。
 
 #### 問題：キーストアが設定されていないか初期化されていない {#problem-keystore-is-either-not-set-up-or-it-is-not-initialized}
 
@@ -427,7 +430,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 02.08.2016 14:37:44 - Transfer failed for ReplicationAction{type=TEST, path[0]='/content/dam', time=1470173864834, userId='admin', revision='null'}. com.adobe.granite.keystore.KeyStoreNotInitialisedException: Uninitialised key store for user dynamic-media-replication
 ```
 
-**解決策**:
+**解決策:**
 
 1. ユーザー管理ページに移動します。
    `localhost:4502/libs/granite/security/content/useradmin.html`
@@ -583,8 +586,8 @@ dam/dm/presets/analytics/jcr:content/userdata`に移動します。
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **Experience Managerのビデオレポートツールを使用してビデオ分析プリセットをチェックし、ツ**
-ール/アセ **[!UICONTROL ット/ビデオレポートをタップします。]**
+   * **Experience Managerのビデオレポートツールでビデオ分析プリセットを確認しま**
+す。ツ **[!UICONTROL ール]** / **[!UICONTROL アセット]** /ビデオレポ **[!UICONTROL ート]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -814,7 +817,7 @@ Dynamic Media 画像サーバーの設定では、Adobe CQ Scene7 ImageServer �
 >[!NOTE]
 Dynamic Mediaは、有効にした後に[標準で動作します。](#enabling-dynamic-media) ただし、オプションで、特定の仕様または要件を満たすようにDynamic Media Image Serverを設定することで、インストールを微調整することもできます。
 
-**前提条件**: ** Dynamic Media Image Serverを設定する前に、Windows®のVMにMicrosoft® Visual C++ Librariesがインストールされていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[こちら](https://www.microsoft.com/ja-jp/download/details.aspx?id=26999)からMicrosoft® Visual C++ 2010再頒布可能パッケージ(x64)をダウンロードできます。
+**前提条件**  -  ** Dynamic Media Image Serverを設定する前に、Windows®のVMにMicrosoft® Visual C++ライブラリのインストールが含まれていることを確認してください。Dynamic Media 画像サーバーを実行するには、このライブラリが必要です。[こちら](https://www.microsoft.com/ja-jp/download/details.aspx?id=26999)からMicrosoft® Visual C++ 2010再頒布可能パッケージ(x64)をダウンロードできます。
 
 Dynamic Media 画像サーバーを設定するには：
 
@@ -890,7 +893,7 @@ Dynamic Media 画像サーバーを設定するには：
 
 デフォルトのマニフェストを使用して、Dynamic Media 配信の応答を生成するために使用する公開を設定できます。画質（JPEG画質、解像度、再サンプリングモード）、キャッシュ（有効期限）を微調整し、大きすぎる画像のレンダリングを防ぐことができます(defaultpix、defaultthumbpix、maxpix)。
 
-デフォルトのマニフェスト設定の場所は、**[!UICONTROL Adobe CQ Scene7 PlatformServer]** バンドルの **[!UICONTROL Catalog root]** デフォルト値から取得されます。デフォルトでは、この値は&#x200B;**[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;内の次のパスにあります。
+デフォルトのマニフェスト設定の場所は、**[!UICONTROL Adobe CQ Scene7 PlatformServer]** バンドルの **[!UICONTROL Catalog root]** デフォルト値から取得されます。デフォルトでは、この値は&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**&#x200B;内の次のパスにあります。
 
 `/conf/global/settings/dam/dm/imageserver/`
 
@@ -997,9 +1000,9 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
 
 機能パックをインストールした後、RGBまたはCMYK画像データを要求する際にカラー補正を有効にするために、適切なデフォルトカラープロファイルを設定します。
 
-**デフォルトのカラープロファイルを設定するには**
+**デフォルトカラープロファイルを設定するには：**
 
-1. **[!UICONTROL ツール/一般/CRXDE Lite]**&#x200B;で、デフォルトのAdobe Colorプロファイルを含む`/conf/global/settings/dam/dm/imageserver/jcr:content`に移動します。
+1. **[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**&#x200B;で、デフォルトのAdobe Colorプロファイルを含む`/conf/global/settings/dam/dm/imageserver/jcr:content`に移動します。
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
