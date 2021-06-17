@@ -5,9 +5,9 @@ contentOwner: AG
 feature: アセット管理
 role: Business Practitioner, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1926'
 ht-degree: 90%
 
 ---
@@ -85,7 +85,7 @@ Possible topics to cover in this article are below.
 | [!DNL Assets] ユーザーインターフェイスの列表示 | 上向き矢印キーと下向き矢印キー | 同じ階層内のファイルやフォルダーに移動します。 |
 | [!DNL Assets] ユーザーインターフェイスの列表示 | 左向き矢印キーと右向き矢印キー | 現在のフォルダーの上または下のファイルとフォルダーに移動します。 |
 | [!DNL Assets] 内のフォルダーの参照 | `/` | オムニサーチボックスを開いて検索を呼び出します。 |
-| [!DNL Assets] コンソール | ` | サイドパネルを切り替えます。 |
+| [!DNL Assets] コンソール | &amp;grave; | サイドパネルを切り替えます。 |
 | [!DNL Assets] コンソール | `Alt + 1` | コンテンツツリーを開きます。 |
 | [!DNL Assets] コンソール | `Alt + 2` | 左側のパネルで[!UICONTROL ナビゲーション]を開きます。 |
 | [!DNL Assets] コンソール | `Alt + 3` | 選択したアセットの[!UICONTROL タイムライン]を表示します。 |
