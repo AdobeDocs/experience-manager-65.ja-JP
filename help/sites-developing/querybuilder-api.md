@@ -12,9 +12,9 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2334'
 ht-degree: 91%
 
 ---
@@ -189,7 +189,7 @@ orderby.sort=desc
 
 ### 特定のタグ付きページの検索 {#search-for-pages-tagged-with-a-certain-tag}
 
-`http://localhost:4502/bin/querybuilder.json?type=cq:Page&amp;tagid=marketing:interest/product&amp;tagid.property=jcr:content/cq:tags``
+`http://localhost:4502/bin/querybuilder.json?type=cq:Page&tagid=marketing:interest/product&tagid.property=jcr:content/cq:tags`
 
 ```xml
 type=cq:Page
