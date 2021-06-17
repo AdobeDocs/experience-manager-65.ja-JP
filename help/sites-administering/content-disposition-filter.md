@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: Security
 discoiquuid: badfaa18-472e-4777-a7dc-9c28441b38b7
 exl-id: 1c3d0d48-5c31-42a8-8698-922d7c2127e9
-source-git-commit: cd895fcab5adce600ce230fb6867392e45963c16
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 30%
 
 ---
@@ -29,7 +29,7 @@ GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/sr
 
 Content Dispositionフィルターオプションには、次の機能があります。
 
-* **Content Disposition Paths:** フィルターが適用されるパスのリストの後に、そのパスで除外するMIMEタイプのリストが続きます。このパスは絶対パスで、指定されたパスプレフィックスを持つすべてのリソースパスに一致するワイルドカード(`*`)を末尾に含める必要があります。例：`/content/*:image/jpeg,image/svg+xml`は、「/content」内のすべてのノードにフィルターを適用しますか？ jpgおよびsvg画像を除く
+* **Content Disposition Paths:** フィルターが適用されるパスのリストの後に、そのパスで除外するMIMEタイプのリストが続きます。このパスは絶対パスで、指定されたパスプレフィックスを持つすべてのリソースパスに一致するワイルドカード(`*`)を末尾に含める必要があります。例：`/content/*:image/jpeg,image/svg+xml`は、jpg画像とsvg画像を除く、`/content?`のすべてのノードにフィルターを適用します
 
 * **除外されたリソースパス：** 除外されたリソースのリスト。各リソースパスは絶対パスと完全修飾パスとして指定する必要があります。プレフィックスマッチング／ワイルドカードはサポートされていません。
 
