@@ -3,9 +3,9 @@ title: リッチテキストエディタープラグインの設定
 description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインの設定について説明します。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 443115b306ff34ee98da9403222874a9700d8aed
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '4397'
+source-wordcount: '4395'
 ht-degree: 95%
 
 ---
@@ -338,7 +338,7 @@ AEM を使用して日本語コンテンツを作成する作成者は、改行�
 
 1. スタイルノードの下に新しいノードを作成します。[新しいスタイルを指定する](#stylesindropdown)を参照してください。
    * 名前：`jpn-word-wrap`
-   * 型：`nt:unstructure
+   * 型：`nt:unstructure`
 
 1. CSS クラスを参照する `cssName` プロパティをノードに追加します。このクラス名は日本語のワードラップ機能のための予約名です。
    * 名前：`cssName`
