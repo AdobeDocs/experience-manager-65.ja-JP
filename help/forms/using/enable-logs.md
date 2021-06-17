@@ -12,9 +12,9 @@ discoiquuid: 973806f8-fb44-4d52-ad3f-bfbf335f60a1
 docset: aem65
 feature: 'モバイルフォーム '
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '647'
 ht-degree: 70%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 70%
 
 ### 要求パラメーターの使用によるログの有効化  {#enabling-logging-using-request-parameter}
 
-この方法を使用して、特定の要求に対するログを生成できます。要求パラメーターの名前は「log」です。 ログURLは次のとおりです。
+この方法を使用して、特定の要求に対するログを生成できます。リクエストパラメーターの名前は`log`です。 ログURLは次のとおりです。
 
 `https://<server>:<port>/content/xfaforms/profiles/test.html?contentRoot=<path of the folder containing form xdp>&template=<name of the xdp>&log=<log configuration>.`
 
@@ -153,7 +153,7 @@ ht-degree: 70%
 
 `{destination}-{a level}-{b level}-{c level}`
 
-以下に例を示します。
+次に例を示します。
 
 <table>
  <tbody>
