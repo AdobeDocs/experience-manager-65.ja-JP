@@ -12,7 +12,7 @@ discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
 role: Administrator
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 41%
@@ -66,7 +66,7 @@ ht-degree: 41%
 * **スコア付けの重み**
 
    特定のトピックについて、スコア計算時に最も高い優先度を与える動詞を指定します。1つ以上のトピックを入力できますが、1つのトピック&#x200B;**につき**&#x200B;動詞に制限されます。 [トピックと動詞](/help/communities/implementing-scoring.md#topics-and-verbs)を参照してください。
-コンマはエスケープして`topic,verb`と入力します。 以下に例を示します。
+コンマはエスケープして`topic,verb`と入力します。 次に例を示します。
    `/social/forum/hbs/social/forum\,ADD`
 デフォルトでは、Q&amp;Aとフォーラムコンポーネントの「ADD」動詞が設定されます。
 
@@ -130,7 +130,7 @@ ht-degree: 41%
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th>値の説明</th>
+   <th>値 説明</th>
   </tr>
   <tr>
    <td>badgingPath</td>
@@ -184,28 +184,28 @@ ht-degree: 41%
 
 1. `/libs/settings/community/scoring/rules/adv-comments-scoring`
 
-   * `subRules[] =
-/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
-/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
-/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule`
+   ```
+   subRules[] =
+   /libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+   /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+   /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule
+   ```
 
 1. `/libs/settings/community/scoring/rules/adv-forums-scoring`
 
-   * `subRules[] =
-/libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
-/libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
-/libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner`
+   ```
+   subRules[] =
+   /libs/settings/community/scoring/rules/sub-rules/adv-forums-rule
+   /libs/settings/community/scoring/rules/sub-rules/adv-comments-rule
+   /libs/settings/community/scoring/rules/sub-rules/adv-voting-rule-owner
+   ```
 
 **備考:**
 
 * `rules`ノードと`sub-rules`ノードの型は`cq:Page`です。
-
-* `subRules` は、ルールのノード[] のString型の属性 `jcr:content` です。
-
+* `subRules` は、ルールのノード`[]` のString型の属性 `jcr:content` です。
 * `sub-rules` は、様々なスコアルールで共有できます。
-
 * `rules` は、リポジトリの場所に配置され、全員に対して読み取り権限が付与されます。
-
 * ルール名は、場所に関係なく一意である必要があります。
 
 ### このリリースに含まれるバッジルール {#included-badging-rules}
