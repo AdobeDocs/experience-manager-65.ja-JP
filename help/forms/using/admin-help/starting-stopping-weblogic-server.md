@@ -9,9 +9,9 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
-source-git-commit: 317fadfe48724270e59644d2ed9a90fbee95cf9f
+source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '638'
 ht-degree: 77%
 
 ---
@@ -103,7 +103,7 @@ WebLogic Server を停止した後、Node Manager を呼び出したコマンド
 >WebLogic 管理対象サーバーの起動は、WebLogic ドメインと管理対象サーバーを作成した後にのみ実行できます。
 
 1. WebLogic Server と Node Manager が実行されていることを確認します。
-1. WebブラウザーのURL行に`https://host name]:[port]`/console&#39;と入力して、WebLogic Server管理コンソールを起動します。
+1. WebブラウザーのURL行に`https://host name]:[port]/console`と入力して、WebLogic Server管理コンソールを起動します。
 1. 「Domain Structure」で、Environment／Servers をクリックします。
 1. 右側のウィンドウで、「Control」タブをクリックします。
 1. 起動する管理対象サーバーを選択します。
