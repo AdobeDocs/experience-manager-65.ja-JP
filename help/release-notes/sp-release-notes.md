@@ -4,7 +4,7 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 0ed031e8be43633caf6d9916542b6650e3dfd327
+source-git-commit: 101cbd0d06d370da315e1579a8c2f274a6138b9a
 workflow-type: tm+mt
 source-wordcount: '3857'
 ht-degree: 4%
@@ -446,7 +446,7 @@ JEE上のFormsExperience Manager用の累積インストーラーのインスト
 
 ### UberJar {#uber-jar}
 
-Experience Manager6.5.9.0用のUberJarは、[Maven Centralリポジトリ](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.9/)で入手できます。
+Experience Manager6.5.9.0用のUberJarは、[Maven Centralリポジトリ](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.9-1.0/)で入手できます。
 
 MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-developing/ht-projects-maven.md)の使用方法を参照し、プロジェクトPOMに次の依存関係を含めます。
 
@@ -454,7 +454,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 <dependency>
      <groupId>com.adobe.aem</groupId>
      <artifactId>uber-jar</artifactId>
-     <version>6.5.9</version>
+     <version>6.5.9-1.0</version>
      <scope>provided</scope>
 </dependency>
 ```
