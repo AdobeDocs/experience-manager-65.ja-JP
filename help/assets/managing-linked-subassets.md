@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: アセット管理
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1379'
 ht-degree: 18%
 
 ---
 
-# 複合アセットと複数ページアセットの管理{#managing-compound-assets}
+# 複合アセットと複数ページアセットの管理 {#managing-compound-assets}
 
 [!DNL Adobe Experience Manager Assets] は、アップロードされたファイルに、リポジトリ内に既に存在するアセットへの参照が含まれているかどうかを識別できます。この機能は、サポート対象のファイル形式でのみ使用できます。アップロードされたアセットに[!DNL Experience Manager]アセットへの参照が含まれている場合、アップロードされたアセットと参照先のアセットの間に双方向のリンクが作成されます。
 
@@ -45,7 +45,7 @@ ht-degree: 18%
 
    *図：アセットの詳細でのアセット参照。*
 
-## [!DNL Adobe InDesign]:デジタルアセットを参照として追加  {#add-aem-assets-as-references-in-adobe-indesign}
+## [!DNL Adobe InDesign]:デジタルアセットを参照として追加 {#add-aem-assets-as-references-in-adobe-indesign}
 
 [!DNL InDesign]ファイル内からデジタルアセットを参照するには、アセットを[!DNL InDesign]ファイルにドラッグするか、[!DNL InDesign]ファイルをZIPアーカイブとして書き出します。
 
@@ -57,7 +57,7 @@ ht-degree: 18%
 
 INDDファイルがアップロードされると、リポジトリ内に`xmpMM:InstanceID`プロパティと`xmpMM:DocumentID`プロパティを持つアセットに対するクエリを実行することで、参照が取得されます。
 
-###  アセットをドラッグして参照を作成 {#create-references-by-dragging-aem-assets}
+###  アセットをドラッグして参照を作成  {#create-references-by-dragging-aem-assets}
 
 この手順は、Adobe Illustrator](#refai)でデジタルアセットを参照として追加する[の場合と同様です。
 
@@ -73,8 +73,6 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 
 1. [!DNL Experience Manager]デスクトップアプリケーションを使用して[!DNL Experience Manager Assets]にアクセスします。 ローカルファイルシステムでアセットをダウンロードして表示します。 [!UICONTROL リンクされた]を[!DNL Adobe Photoshop]に配置する機能を使用します。 [デスクトップアプリケーションへのアセットの配置](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#place-assets-in-native-documents)を参照してください。
 
-   ![chlimage_1-87](assets/chlimage_1-261.png)
-
 1. [!DNL Photoshop]ファイルをマウントしたドライブに保存するか、[](/help/assets/manage-assets.md#uploading-assets)を[!DNL Experience Manager]リポジトリにアップロードします。
 1. ワークフローが完了すると、既存の[!DNL Experience Manager]アセットへの参照がアセットの詳細ページに表示されます。
 
@@ -86,7 +84,7 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 >
 >複合アセット内のアセットも、ドキュメント ID とインスタンス ID に基づいて参照できます。この機能は、[!DNL Adobe Illustrator]と[!DNL Adobe Photoshop]のバージョンでのみ使用できます。 その他の場合は、以前のバージョンの[!DNL Experience Manager]と同様に、メイン複合アセット内のリンクされたアセットの相対パスに基づいて参照がおこなわれます。
 
-## サブアセット{#generate-subassets}を作成します。
+## サブアセットの作成 {#generate-subassets}
 
 複数ページ形式のアセット（PDFファイル、AIファイル、[!DNL Microsoft PowerPoint]ファイル、[!DNL Apple Keynote]ファイル、[!DNL Adobe InDesign]ファイル）をサポートしている場合、元のアセットの各ページに対応するサブアセットを[!DNL Experience Manager]で生成できます。 これらのサブアセットは&#x200B;*親*&#x200B;アセットにリンクされ、複数ページ表示が容易になります。 その他の目的では、サブアセットは[!DNL Experience Manager]では通常のアセットと同じように扱われます。
 
@@ -132,7 +130,7 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
 
 * **** 左側のレールを開くには、「オプション」をクリックした後 ![の左側のレールのタイムラインオ](assets/do-not-localize/aem_leftrail_contentonly.png) プションに、ファイルのアクティビティストリームが表示されます。
 
-## ベストプラクティスと制限事項{#best-practice-limitation-tips}
+## ベストプラクティスと制限事項 {#best-practice-limitation-tips}
 
 * サブアセットの生成は、あらゆる[!DNL Experience Manager]デプロイメントでリソースを大量に消費する可能性があります。 複雑なアセットがアップロードされたときにサブアセットを生成する場合は、 DAMアセットの更新ワークフローにステップを追加します。 オンデマンドでサブアセットを生成する場合は、サブアセットを生成する別のワークフローを作成します。 専用のワークフローを使用すると、 DAMアセットの更新ワークフローの他の手順をスキップして、計算リソースを保存できます。
 
