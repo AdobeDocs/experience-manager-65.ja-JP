@@ -1,10 +1,11 @@
 ---
 title: AEMコンテンツおよびコマースリリースノート2021
 description: AEMコンテンツおよびコマースリリースノート2021
-source-git-commit: 99636664a49da3ac5d236db5a1185ad6659ee255
+exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
+source-git-commit: 71782a3caae3f74a4886c52cf9b29f9e998913fa
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 16%
+source-wordcount: '758'
+ht-degree: 22%
 
 ---
 
@@ -27,6 +28,23 @@ ht-degree: 16%
 | CIFアドオン | 最小：AEM 6.5.7、Magento2.3.5のGraphQLスキーマ |
 | CIFコアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## リリース日：2021年6月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIFアドオン | 2021.06.18 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
+| CIFコアコンポーネント | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
+| CIF Veniaリファレンスサイト | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
+
+### 新機能 {#what-is-new-june}
+
+* コンテンツフラグメント( 製品/カテゴリピッカーのUIのサポート)
+* 新しいコマースコンテンツフラグメントコアコンポーネント
+* AEMバックエンドでサポートされるフルテキストコマース検索
+* コマースコアコンポーネントは、AdobeCommerce Sensei Recsのデータ収集をサポートします。
+* カテゴリページのSEOに対応するURLの改善
+* サイト/設定ごとのカスタムHTTPヘッダーのサポート
 
 ## リリース日：2021年5月
 
@@ -58,17 +76,17 @@ ht-degree: 16%
 
 * カテゴリUIDのサポート — カテゴリIDに文字列を使用するシステム用のサードパーティコマース統合のロックを解除します
 
-* AEM extension forPWA Studio（を含む） 統合の例
+* PWA Studio 用 AEM 拡張機能（統合の例を含む）
 
-* WCMナビゲーションコアコンポーネントを拡張する新しいCIFナビゲーションコアコンポーネント
+* WCM ナビゲーションコアコンポーネントを拡張する新しい CIF ナビゲーションコアコンポーネント
 
-* AEMストアフロントのステージング済みカタログデータの視覚的インジケーター
+* AEM ストアフロントのステージング済みカタログデータの視覚的インジケーター
 
 ### バグの修正 {#bug-fixes-april}
 
 * カテゴリページのページプロパティの「コマース」タブに、ルートカテゴリフィールドが表示されなかった問題を修正しました。
 
-## リリース日：2021年3月{#what-is-new-march}
+## リリース日：2021年3月 {#what-is-new-march}
 
 | GitHub | バージョン | 詳細なリリースノート |
 |:-------|:-----:|---------------------:|
@@ -102,7 +120,7 @@ ht-degree: 16%
 
 * 製品コンソールの拡張プロパティを使用して、リンクされたアセットとエクスペリエンスフラグメントを表示します。関連コンテンツにすばやく移動するアクションも含まれます。
 
-### 改善点{#what-is-improved-february}
+### 改善点  {#what-is-improved-february}
 
 * 製品画像のURLとカテゴリ情報を使用して、クライアント側のデータレイヤーを強化しました。
 
@@ -120,7 +138,7 @@ ht-degree: 16%
 
 * 製品エクスペリエンス管理：アセットとエクスペリエンスフラグメントの新しい「コマース」プロパティタブ。 このタブでは、アセットとエクスペリエンスフラグメントを製品およびカテゴリにリンクできます。 また、「 」タブには、リンクされたコマースオブジェクトのリアルタイムデータと、製品コンソールに詳細を表示するリンクも表示されます。
 
-### 改善点{#what-is-improved-january}
+### 改善点  {#what-is-improved-january}
 
 * 認証後にユーザーデータをAdobeクライアントデータレイヤーに送信します。
 
