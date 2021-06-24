@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner
 feature: ワークフロー，レンディション
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 15f83387629687994bc2ffee4156d7d42dc1c537
+source-git-commit: e78b42a899de3c8009817ba9e60bac40e161270f
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 48%
 
 ---
 
-# メディアハンドラーとワークフローを使用したアセットの処理{#processing-assets-using-media-handlers-and-workflows}
+# メディアハンドラーとワークフローを使用したアセットの処理 {#processing-assets-using-media-handlers-and-workflows}
 
 [!DNL Adobe Experience Manager Assets] には、アセットの処理に使用するデフォルトのワークフローとメディアハンドラーのセットが付属しています。ワークフローは、アセットに対して実行するタスクを定義し、特定のタスクをメディアハンドラーに委任します（サムネールの生成やメタデータの抽出など）。
 
@@ -24,7 +24,7 @@ ht-degree: 48%
 >
 >[!DNL Assets]でサポートされるすべての形式と、各形式でサポートされる機能の説明については、[アセットでサポートされる形式](assets-formats.md)を参照してください。
 
-## デフォルトのメディアハンドラー{#default-media-handlers}
+## デフォルトのメディアハンドラー {#default-media-handlers}
 
 [!DNL Assets]内では、次のメディアハンドラーを使用でき、最も一般的なMIMEタイプを処理できます。
 
@@ -57,11 +57,11 @@ ht-degree: 48%
 
 1. ブラウザーで、`http://localhost:4502/system/console/components`に移動します。
 1. 「`com.day.cq.dam.core.impl.store.AssetStoreImpl`」をクリックします。
-1. すべてのアクティブなメディアハンドラーリストが表示されます。以下に例を示します。
+1. すべてのアクティブなメディアハンドラーリストが表示されます。次に例を示します。
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
-## ワークフローでメディアハンドラーを使用して、アセットに対してタスクを実行する{#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
+## ワークフローでメディアハンドラーを使用したアセットに対するタスクの実行 {#using-media-handlers-in-workflows-to-perform-tasks-on-assets}
 
 通常、メディアハンドラーはワークフローと組み合わせて使用されるサービスです。
 
@@ -71,7 +71,7 @@ ht-degree: 48%
 
 以下の例は、**[!UICONTROL AEM Assets 同期]**&#x200B;ワークフローを拡張して、PDF ドキュメント以外のすべてのアセットについてサブアセットを生成するための方法を示しています。
 
-### メディアハンドラー{#disabling-enabling-a-media-handler}を無効または有効にします
+### メディアハンドラーの無効化または有効化 {#disabling-enabling-a-media-handler}
 
 メディアハンドラーを無効または有効にするには、Apache Felix Web Management Console を使用します。メディアハンドラーを無効にすると、そのアセットに対してメディアハンドラーのタスクは実行されません。
 
@@ -82,11 +82,11 @@ ht-degree: 48%
 1. ページを更新します。メディアハンドラーの横に、無効であることを示すアイコンが表示されます。
 1. メディアハンドラーを有効にするには、メディアハンドラーの名前の横にある「**[!UICONTROL Enable]**」をクリックします。
 
-### 新しいメディアハンドラー{#creating-a-new-media-handler}を作成します。
+### 新しいメディアハンドラーの作成 {#creating-a-new-media-handler}
 
 新しいメディアタイプをサポートしたり、アセットで特定のタスクを実行したりするには、新しいメディアハンドラーを作成する必要があります。ここでは、その進め方について説明します。
 
-#### 重要なクラスとインターフェイス{#important-classes-and-interfaces}
+#### 重要なクラスとインターフェイス {#important-classes-and-interfaces}
 
 実装を開始するための最適な方法は、最も多くの点について対応し、適切なデフォルト動作を提供している付属の抽象実装から継承することです。それが `com.day.cq.dam.core.AbstractAssetHandler` クラスです。
 
@@ -129,7 +129,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 * `com.day.cq.dam.core.AbstractAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。
 * `com.day.cq.dam.core.AbstractSubAssetHandler` クラス：その他すべてのアセットハンドラー実装の基礎として機能し、よく使用される機能を提供します。さらに、サブアセットの抽出についてよく使用される機能も提供します。
 
-#### 例：特定のテキストハンドラを作成します。 {#example-create-a-specific-text-handler}
+#### 例：特定のテキストハンドラーを作成する {#example-create-a-specific-text-handler}
 
 ここでは、透かしありのサムネールを生成する固有の Text Handler を作成します。
 
@@ -368,7 +368,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
      Layer watermarkLayer;
      try {
       final Session session = node.getSession();
-      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/geometrixx/icons/certificate.png");
+      watermarkLayer = ImageHelper.createLayer(session, "/content/dam/samplesite/icons/certificate.png");
       watermarkLayer.setX(MARGIN);
       watermarkLayer.setY(MARGIN);
       layer.merge(watermarkLayer);
@@ -441,7 +441,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 1. バンドル`myBundle-0.0.1-SNAPSHOT.jar`をコピーし、`/apps/myApp/install`の下に格納します（例えば、WebDAVを使用）。 これで、新しいテキストハンドラーが[!DNL Experience Manager]でアクティブになります。
 1. ブラウザーで、[!UICONTROL Apache Felix Web Management Console]を開きます。 「[!UICONTROL コンポーネント]」タブを選択し、デフォルトのテキストハンドラー`com.day.cq.dam.core.impl.handler.TextHandler`を無効にします。
 
-## コマンドラインベースのメディアハンドラー{#command-line-based-media-handler}
+## コマンドラインベースのメディアハンドラー {#command-line-based-media-handler}
 
 [!DNL Experience Manager] を使用すると、ワークフロー内で任意のコマンドラインツールを実行して、アセットを変換し（ など）、新しいレンディションをアセットに追加できます。[!DNL ImageMagick]必要なのは、[!DNL Experience Manager]サーバーをホストするディスクにコマンドラインツールをインストールし、ワークフローにプロセスステップを追加して設定することだけです。 また、`CommandLineProcess` という起動プロセスによって、特定の MIME タイプに従ってフィルター処理を実行し、新しいレンディションに基づいて複数のサムネールを作成することもできます。
 
@@ -466,7 +466,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 * 一時ディレクトリを削除します。
 * 指定した場合は、それらのレンディションに基づいてサムネールを作成します。サムネールの数とサイズは、ステップの引数で定義されます。
 
-### [!DNL ImageMagick] {#an-example-using-imagemagick}の使用例
+### [!DNL ImageMagick]の使用例 {#an-example-using-imagemagick}
 
 次の例は、miMIME eタイプGIFまたはTIFFのアセットが[!DNL Experience Manager]サーバーの`/content/dam`に追加されるたびに、元の反転画像が3つの追加のサムネール(140x100、48x48、10x25)と共に作成されるように、コマンドライン処理手順を設定する方法を示しています0)。
 
@@ -482,7 +482,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
    >[!NOTE]
    >
-   >Windowsの一部のバージョンでは、[!DNL Windows]インストールに含まれるネイティブな変換ユーティリティと競合するので、convertコマンドが実行できない場合があります。 この場合は、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全パスを指定します。 （例：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`）。
+   >Windowsの一部のバージョンでは、[!DNL Windows]インストールに含まれるネイティブな変換ユーティリティと競合するので、convertコマンドが実行できない場合があります。 この場合は、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全パスを指定します。 例：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
 
 1. ツールが正しく実行されているかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンドconvert `<image-name>.jpg -flip <image-name>-flipped.jpg`をコマンドラインで実行します。 反転画像がディレクトリに追加されます。次に、コマンドラインプロセスのステップを&#x200B;**[!UICONTROL DAM Update Asset]**&#x200B;ワークフローに追加します。
 1. **[!UICONTROL ワークフロー]**&#x200B;コンソールを開きます。
@@ -496,7 +496,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 1. **[!UICONTROL CQ5 DAM]** コンソール（例：`http://localhost:4502/libs/wcm/core/content/damadmin.html`）を開きます。
 1. アセット **[!UICONTROL myImage.tiff]** を開き、反転画像と 3 つのサムネールが作成されたことを確認します。
 
-#### CommandLineProcessプロセスステップ{#configuring-the-commandlineprocess-process-step}の設定
+#### CommandLineProcessプロセスステップの設定 {#configuring-the-commandlineprocess-process-step}
 
 ここでは、[!UICONTROL CommandLineProcess] の[!UICONTROL プロセス引数]を設定する方法について説明します。
 
