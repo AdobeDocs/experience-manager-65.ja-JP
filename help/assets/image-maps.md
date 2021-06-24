@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner, Administrator
 feature: アセット管理
 exl-id: 77da4917-47ce-4f2e-b062-73cee312a7ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1cfa58bb7dcbe70906071a22fbae4a9f479a31d9
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 13%
+source-wordcount: '268'
+ht-degree: 14%
 
 ---
 
-# 画像マップ{#adding-image-maps}を追加します。
+# 画像マップの追加 {#adding-image-maps}
 
 画像マップを使用すると、ハイパーリンクが指定された 1 つ以上の領域を追加できます。この領域は、他のハイパーリンクと同様に機能します。
 
@@ -26,8 +26,6 @@ ht-degree: 13%
 
    * **[!UICONTROL カード]**&#x200B;または&#x200B;**[!UICONTROL リスト]**&#x200B;表示で、アセットを選択し、ツールバーの「**[!UICONTROL 編集]**」をクリックします。
    * アセットページで「**[!UICONTROL 編集]**」をクリックします。
-
-      ![編集オプション](assets/do-not-localize/edit_icon.png)
 
 1. 画像マップを挿入するには、ツールバーの「**[!UICONTROL マップを起動]** ![画像マップ](assets/do-not-localize/image-map-icon.png) 」をクリックします。
 1. 画像マップの図形を選択します。選択した図形のホットスポットが画像上に置かれます。
