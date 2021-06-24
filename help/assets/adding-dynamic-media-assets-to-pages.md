@@ -11,14 +11,14 @@ docset: aem65
 role: Business Practitioner, Administrator
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: コンポーネント，公開
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: 3221454e2d2dfd90b645a4c0303404d44f8d373d
 workflow-type: tm+mt
-source-wordcount: '3210'
-ht-degree: 68%
+source-wordcount: '3252'
+ht-degree: 67%
 
 ---
 
-# ページへの Dynamic Media アセットの追加 {#adding-dynamic-media-assets-to-pages}
+# ページへの Dynamic Media アセットの追加{#adding-dynamic-media-assets-to-pages}
 
 Web サイトで使用するアセットに Dynamic Media 機能を追加するには、**Dynamic Media**、**インタラクティブメディア**、**パノラマメディア**、**ビデオ 360 メディア**&#x200B;のいずれかのコンポーネントをページに直接追加します。コンポーネントを追加するには、レイアウトモードに入り、Dynamic Mediaコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Media コンポーネントはスマートです。追加しようとしているアセットが画像、ビデオのどちらなのかが検出され、それに応じて利用可能なオプションが変わります。
 
@@ -178,7 +178,7 @@ Dynamic Media コンポーネントでは、画像セット、スピンセット
 
    ![画像プリセットのデバイスピクセル比設定](/help/assets/assets-dm/dpr-ress-ip.png)
 
-<!--   See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+   [デバイスのピクセル比の最適化](/help/assets/imaging-faq.md#dpr)についても参照してください。 Adobe Experience Manager Dynamic MediaスマートイメージングDPRの値は無視されます。
 
 * **[!UICONTROL タイトル]**  — 画像のタイトルを変更します。
 
@@ -254,7 +254,7 @@ Dynamic Media コンポーネントを使用して、スマート切り抜き画
 
    ![スマート切り抜きのデバイスピクセル比設定](/help/assets/assets-dm/dpr-smartcrop.png)
 
-<!-- CQDOC-17915 HIDDEN FOR NOW AS OF MAY 28 2021 See also [About device pixel ratio optimization](/help/assets/imaging-faq.md#dpr). Note that any Adobe Experience Manager Dynamic Media Smart Imaging DPR values are ignored. -->
+   [デバイスのピクセル比の最適化](/help/assets/imaging-faq.md#dpr)についても参照してください。 Adobe Experience Manager Dynamic MediaスマートイメージングDPRの値は無視されます。
 
 * **[!UICONTROL タイトル]**  — スマート切り抜き画像のタイトルを変更します。
 
