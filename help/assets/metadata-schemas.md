@@ -5,9 +5,9 @@ contentOwner: AG
 role: Business Practitioner,Administrator
 feature: メタデータ
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: ae0c8bda918e2e8a7a6a32e0228d1a2410b283d9
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3547'
 ht-degree: 60%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 60%
 
    アセットの MIME タイプを変更するには、カスタムメタデータスキーマフォームを使用するか、既存のフォームを変更します。詳しくは、[メタデータスキーマの編集Forms](#edit-metadata-schema-forms)を参照してください。 MIMEタイプのメタデータスキーマを変更すると、アセットとすべてのサブタイプのプロパティページレイアウトが変更されます。 例えば、`default/image` 配下の jpeg スキーマを変更すると、MIME タイプが `image/jpeg` のアセットのメタデータのレイアウト（アセットプロパティ）のみが変更されます。ただし、デフォルトスキーマを編集する場合は、すべてのタイプのアセットのメタデータのレイアウトを変更します。
 
-## メタデータスキーマフォーム{#default-metadata-schema-forms}
+## メタデータスキーマフォーム {#default-metadata-schema-forms}
 
 フォームやテンプレートのリストを表示するには、[!DNL Experience Manager]インターフェイスで&#x200B;**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータスキーマ]**&#x200B;に移動します。
 
@@ -73,13 +73,9 @@ ht-degree: 60%
 
 1. **[!UICONTROL メタデータスキーマフォームエディター]**&#x200B;ページで、メタデータフォームをカスタマイズします。 必要なコンポーネントを「**[!UICONTROL フォームを作成]**」タブからいずれかのタブにドラッグします。
 
-   ![アセットのプロパティページをカスタマイズするメタデータスキーマエディター](assets/metadata-schema-editor.png)
-
-   *図：使用可能な [!UICONTROL タブを含むメタデータス] キーマフォームエディターページ。*
-
 1. コンポーネントを設定するには、コンポーネントを選択して、「**[!UICONTROL 設定]**」タブでそのプロパティを変更します。
 
-### 「[!UICONTROL フォームを作成]」タブ内のコンポーネント{#components-within-the-build-form-tab}
+### 「[!UICONTROL フォームを作成]」タブ内のコンポーネント {#components-within-the-build-form-tab}
 
 「**[!UICONTROL フォームを作成]**」タブには、スキーマフォーム内で使用するフォーム項目が表示されます。「**[!UICONTROL 設定]**」タブに、「**[!UICONTROL フォームを作成]**」タブで選択した各項目の属性が表示されます。「**[!UICONTROL フォームを作成]**」タブで使用できるフォーム項目を次の表に示します。
 
@@ -152,8 +148,6 @@ ht-degree: 60%
 
 スキーマエディターで、タブを追加または削除できます。デフォルトのスキーマフォームには、「**[!UICONTROL 基本]**」、「**[!UICONTROL 詳細]**」、「**[!UICONTROL IPTC]**」、「**[!UICONTROL IPTC拡張]**」の各タブが含まれます。
 
-![メタデータスキーマフォームのデフォルトタブ](assets/metadata-schema-form-tabs.png)
-
 `+`をクリックして、スキーマフォームにタブを追加します。 デフォルトでは、新しいタブには`Unnamed-1`という名前が付けられます。 この名前は、「**[!UICONTROL 設定]**」タブから編集できます。タブを削除するには、「`X`」をクリックします。
 
 ![メタデータスキーマエディターを使用したタブの追加または削除](assets/metadata-schema-form-new-tab.png)
@@ -177,7 +171,7 @@ ht-degree: 60%
 * 別のフィールドに指定された値に基づいて、特定のフィールドに表示されるオプションを変更します。
 * 別のフィールドに指定された値に基づいて、特定のフィールドにデフォルトのメタデータ値を設定します。
 
-### [!DNL Experience Manager] でのカスケードメタデータの設定 {#configure-cascading-metadata-in-aem}
+### [!DNL Experience Manager] でのカスケードメタデータの設定  {#configure-cascading-metadata-in-aem}
 
 選択されたアセットタイプに基づいて、カスケードメタデータを表示するシナリオを検討します。いくつかの例を示します。
 
@@ -282,11 +276,11 @@ ht-degree: 60%
 
 [!DNL Experience Manager] には、様々な MIME タイプですぐに使用できるデフォルトのフォームが用意されています。ただし、様々な MIME タイプのアセットにカスタムのフォームを追加することができます。
 
-### MIMEタイプ{#add-new-forms-for-mime-types}用の新しいフォームの追加
+### MIMEタイプ用の新しいフォームの追加 {#add-new-forms-for-mime-types}
 
 適切なフォームタイプの下にフォームを作成します。 例えば、`image/png`サブタイプのテンプレートを追加するには、「image」フォームの下にフォームを作成します。 スキーマフォームのタイトルはサブタイプ名です。この場合、タイトルは`png`です。
 
-#### 様々なMIMEタイプ用の既存のスキーマテンプレートを使用します。 {#use-an-existing-schema-template-for-various-mime-types}
+#### 様々なMIMEタイプ用の既存のスキーマテンプレートの使用 {#use-an-existing-schema-template-for-various-mime-types}
 
 別の MIME タイプに対して既存のテンプレートを使用できます。例えば、MIME タイプ `image/png` のアセットに対して `image/jpeg` フォームを使用します。
 
@@ -349,7 +343,7 @@ ht-degree: 60%
 1. 「**OK**」をクリックして、成功メッセージを閉じます。
 1. 変更したメタデータスキーマを適用したフォルダーに移動します。
 
-## 必須メタデータの定義  {#define-mandatory-metadata}
+## 必須メタデータの定義 {#define-mandatory-metadata}
 
 必須フィールドをフォルダーレベルで定義すると、そのフォルダーにアップロードされるアセットに強制的に適用されます。既に定義した必須フィールドのメタデータが設定されていないアセットをアップロードすると、カード表示のアセットに、メタデータが設定されていないことを示す視覚的な表示が表示されます。
 
