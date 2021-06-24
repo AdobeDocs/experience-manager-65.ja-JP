@@ -5,14 +5,14 @@ contentOwner: AG
 role: Business Practitioner
 feature: アセット管理、アセット配布
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '875'
 ht-degree: 76%
 
 ---
 
-# [!DNL Adobe Experience Manager] からのアセットのダウンロード {#download-assets-from-aem}
+# [!DNL Adobe Experience Manager] からのアセットのダウンロード  {#download-assets-from-aem}
 
 静的レンディションおよび動的レンディションを含むアセットをダウンロードできます。または、アセットへのリンクを含む電子メールを [!DNL Adobe Experience Manager Assets] から直接送信できます。ダウンロードされたアセットは、ZIP ファイルにバンドルされています。書き出しジョブ用に圧縮する ZIP ファイルの最大サイズは 1 GB です。書き出しジョブあたり、最大で 500 個のアセットの合計を指定できます。
 
@@ -29,11 +29,6 @@ ht-degree: 76%
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の 1 つ以上のアセットを選択します。
 1. ツールバーの「**[!UICONTROL ダウンロード]**」をクリックします。
-
-   ![Experience Manager Assets からアセットをダウンロードする際に使用できるオプション](/help/assets/assets/asset-download1.png)
-
-   *図：ダウンロードダイアログで使用できるオプション。*
-
 1. ダウンロードダイアログボックスで、目的のダウンロードオプションを選択します。
 
    | 書き出しまたはダウンロードオプション | 説明 |
