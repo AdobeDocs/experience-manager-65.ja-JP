@@ -1,17 +1,18 @@
 ---
-title: AEMコンテンツとコマースの概要
+title: AEM Content and Commerce - はじめに
 description: AEM Content and Commerceプロジェクトをデプロイする方法について説明します。
 topics: Commerce
 feature: コマース統合フレームワーク
 thumbnail: 37843.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
+source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 6%
+source-wordcount: '721'
+ht-degree: 38%
 
 ---
 
-# AEMコンテンツとコマースの概要 {#start}
+# AEM Content and Commerce - はじめに {#start}
 
 AEMコンテンツとコマースの使用を開始するには、AEM Content and Commerce Add-On for AEM 6.5をインストールする必要があります。
 
@@ -27,7 +28,7 @@ AEMコンテンツとコマースのオンボーディングは、次の2つの�
 
 2. AEMとコマースソリューションの接続
 
-### AEM 6.5用AEMコンテンツおよびコマースアドオンのインストール{#install-add-on}
+### AEM 6.5用AEMコンテンツおよびコマースアドオンのインストール {#install-add-on}
 
 AEM 6.5用AEM Commerce Add-Onを[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)ポータルからダウンロードしてインストールします。
 
@@ -55,33 +56,36 @@ CIFアドオンは、`/api/graphql`にGraphQLプロキシサーブレットを�
 
 アドオンと[CIFコアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、異なるコマースストア（またはストア表示など）に接続された複数のAEMサイト構造で使用できます。 デフォルトでは、CIFアドオンは、Adobeコマースのデフォルトのストアおよびカタログ(Magento)に接続するデフォルト設定を使用してデプロイされます。
 
-この設定は、次の手順に従って、CIFCloud Service設定を使用してプロジェクトに合わせて調整できます。
+この設定は、次の手順に従って、CIF Cloud Service 設定を使用してプロジェクトに合わせて調整できます。
 
-1. AEMで、ツール/Cloud Services/CIF設定に移動します。
+1. AEM で、ツール／Cloud Services／CIF 設定に移動します。
 
-2. 変更するコマース設定を選択します
+2. 変更するコマース設定を選択します。
 
-3. アクションバーから設定プロパティを開く
+3. アクションバーから設定プロパティを開きます。
 
-![CIFCloud Servicesの設定](/help/commerce/cif/assets/cif-cloud-service-config.png)
+![CIF Cloud Services の設定](/help/commerce/cif/assets/cif-cloud-service-config.png)
 
 次のプロパティを設定できます。
 
-- GraphQLクライアント — コマースバックエンド通信用に設定済みのGraphQLクライアントを選択します。 これは通常、デフォルトのままになります。
-- ストア表示 — (Magento)ストア表示の識別子。 空の場合は、デフォルトのストア表示が使用されます。
-- GraphQLプロキシパス — AEMのURLパスGraphQLプロキシは、コマースバックエンドGraphQLエンドポイントに要求をプロキシするために使用します。
+- GraphQL クライアント - コマースバックエンド通信用に設定済みの GraphQL クライアントを選択します。これは通常、デフォルトのままです。
+- ストア表示 -（Magento）ストア表示の識別子。空の場合は、デフォルトのストア表示が使用されます。
+- GraphQL プロキシパス - AEM の GraphQL プロキシが、コマースバックエンドの GraphQL エンドポイントへのリクエストをプロキシするために使用する URL パス。
    >[!NOTE]
    >
-   > ほとんどの設定では、デフォルト値`/api/graphql`は変更できません。 指定されたGraphQLプロキシを使用しない高度な設定のみが、この設定を変更する必要があります。
-- カタログUIDのサポートを有効にする — コマースバックエンドのGraphQL呼び出しで、IDではなくUIDのサポートを有効にします。
+   > ほとんどの設定で、デフォルト値 `/api/graphql` は変更できません。この設定を変更するのは、指定された GraphQL プロキシを使用しない高度な設定でのみです。
+- カタログ UID のサポートを有効にする - コマースバックエンドの GraphQL 呼び出しで、ID ではなく UID のサポートを有効にします。
    >[!NOTE]
    >
-   > UIDのサポートは、Adobeコマース(Magento)2.4.2で導入されました。コマースバックエンドがバージョン2.4.2以降のGraphQLスキーマをサポートしている場合にのみ有効にします。
-- カタログのルートカテゴリ識別子 — ストアカタログルートの識別子（UIDまたはID）
+   > UID のサポートは、Adobe Commerce（Magento）2.4.2 で導入されました。コマースバックエンドがバージョン 2.4.2 以降の GraphQL スキーマをサポートしている場合にのみ有効にします。
+- カタログのルートカテゴリ識別子 - ストアカタログルートの識別子（UID または ID）
+   >[!CAUTION]
+   >
+   > CIFコアコンポーネントバージョン2.0.0以降、`id`のサポートは削除され、`uid`に置き換えられました。 プロジェクトでCIFコアコンポーネントバージョン2.0.0を使用している場合は、カタログUIDのサポートを有効にし、有効なカテゴリUIDを「カタログルートカテゴリ識別子」として使用する必要があります。
 
-上記の設定は参照用です。 プロジェクトは独自の設定を提供する必要があります。
+上記の設定は参照用です。プロジェクトは独自の設定を提供する必要があります。
 
-複数のAEMサイト構造を異なるコマースカタログと組み合わせて使用する、より複雑な設定については、『コマースマルチストアの設定](configuring/multi-store-setup.md)』チュートリアルを参照してください。[
+複数の AEM サイト構造を異なるコマースカタログと組み合わせて使用する、より複雑な設定については、チュートリアル「[コマースマルチストアの設定](configuring/multi-store-setup.md)」を参照してください。
 
 ## その他のリソース {#additional-resources}
 
