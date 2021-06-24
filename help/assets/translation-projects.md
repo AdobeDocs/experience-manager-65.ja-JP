@@ -5,9 +5,9 @@ contentOwner: AG
 role: Architect, Administrator
 feature: 翻訳
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a564f158cf1040ef43cb9f5dde9f7cb22769587f
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1875'
 ht-degree: 65%
 
 ---
@@ -69,15 +69,9 @@ ht-degree: 65%
 
 1. 「**[!UICONTROL ターゲット言語]**」リストで、フォルダー構造を作成しようとしている言語を選択します。
 
-   ![chlimage_1-65](assets/chlimage_1-65.png)
-
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 新しい翻訳プロジェクトを作成]**」を選択します。
 
-   ![chlimage_1-66](assets/chlimage_1-66.png)
-
 1. 「**[!UICONTROL プロジェクトタイトル]**」フィールドに、プロジェクトのタイトルを入力します。
-
-   ![chlimage_1-67](assets/chlimage_1-67.png)
 
 1. 「**[!UICONTROL 作成]**」をクリックします。[!DNL Assets] ソースフォルダーから、手順4で選択したロケールのターゲットフォルダーにコピーされます。
 
@@ -233,8 +227,6 @@ ht-degree: 65%
 1. 下部の「**[!UICONTROL 言語コピーを更新]**」をクリックします。
 
 1. 「**[!UICONTROL プロジェクト]**」リストで「**[!UICONTROL 既存の翻訳プロジェクトに追加]**」を選択します。
-
-   ![chlimage_1-97](assets/chlimage_1-97.png)
 
 1. 「**[!UICONTROL 既存の翻訳プロジェクト]**」リストで、翻訳のためのアセットを追加するプロジェクトを選択します。
 
