@@ -127,7 +127,7 @@ AssemblerサービスAPI(Java)を使用して、DDXドキュメントを動的�
 
 1. DDXドキュメントを作成します。
 
-   * `DocumentBuilderFactory`クラス` `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
+   * `DocumentBuilderFactory`クラス&grave; `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
    * `DocumentBuilderFactory`オブジェクトの`newDocumentBuilder`メソッドを呼び出して、Java `DocumentBuilder`オブジェクトを作成します。
    * `DocumentBuilder`オブジェクトの`newDocument`メソッドを呼び出して、`org.w3c.dom.Document`オブジェクトをインスタンス化します。
    * `org.w3c.dom.Document`オブジェクトの`createElement`メソッドを呼び出して、DDXドキュメントのルートエレメントを作成します。 このメソッドは、ルート要素を表す`Element`オブジェクトを作成します。 要素の名前を表す文字列値を`createElement`メソッドに渡します。 戻り値を `Element` にキャストします。次に、子要素の`setAttribute`メソッドを呼び出して値を設定します。 最後に、ヘッダー要素の`appendChild`メソッドを呼び出してヘッダー要素に要素を追加し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
