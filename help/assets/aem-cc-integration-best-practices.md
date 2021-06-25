@@ -2,17 +2,18 @@
 title: Adobe Creative Cloudとの統合のベストプラクティス
 description: ' [!DNL Adobe Experience Manager] with [!DNL Adobe Creative Cloud] を統合し、アセット転送ワークフローを効率化し、高いコンテンツ速度を実現するためのベストプラクティス。'
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: コラボレーション，Adobeアセットリンク，デスクトップアプリ
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: c4cfb709162ca8f8f6e8508516c39542347c6bc4
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
 source-wordcount: '3254'
 ht-degree: 54%
 
 ---
 
-# [!DNL Adobe Experience Manager] と統合の [!DNL Creative Cloud] ベストプラクティス  {#aem-and-creative-cloud-integration-best-practices}
+# [!DNL Adobe Experience Manager] と統合の [!DNL Creative Cloud] ベストプラクティス {#aem-and-creative-cloud-integration-best-practices}
 
 [!DNL Adobe Experience Manager Assets] は、と統合できるデジタルアセット管理(DAM)ソリューションで [!DNL Adobe Creative Cloud] す。DAMユーザーがクリエイティブチームと連携し、コンテンツ作成プロセスでのコラボレーションを効率化できます。
 
@@ -24,7 +25,7 @@ ht-degree: 54%
 >
 >[!DNL Experience Manager] をフォ [!DNL Creative Cloud] ルダー共有に変更することは廃止され、このガイドでは取り上げません。Adobeでは、[!DNL Experience Manager]で管理されたAdobeへのアクセス権をクリエイティブユーザーに与えるために、[Experience Managerアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html)や[アセットデスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html)などの新しい機能を使用することをお勧めします。
 
-## クリエイティブ、マーケター、DAMユーザーのコラボレーションニーズ{#collaboration-needs-of-creatives-marketers-and-dam-users}
+## クリエイティブ、マーケター、DAMユーザーのコラボレーションニーズ {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
 | 要件 | 使用例 | 関係するサーフェス |
 |---|---|---|
@@ -44,16 +45,16 @@ ht-degree: 54%
 
 ![Creative CloudのExperience Manager接続、使用する機能の決定](assets/creative-connections-aem.png)
 
-### 使用例とアドビソリューションの対応関係        {#mapping-of-use-cases-and-adobe-solutions}
+### 使用例とアドビソリューションの対応関係 {#mapping-of-use-cases-and-adobe-solutions}
 
 <!-- TBD: Add some info about XD integration and possibly info about DA v2.0.
 -->
 
-| 使用例 | [!DNL Adobe Asset Link] | [!DNL Experience Manager] デスクトップアプリケーション | 備考／その他のソリューション |
+| ユースケース | [!DNL Adobe Asset Link] | [!DNL Experience Manager] デスクトップアプリケーション | 備考／その他のソリューション |
 |---|---|---|---|
-| 検出 — DAMフォルダーの参照 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
-| Discover - DAMコレクションにアクセス | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
-| 検出 — DAMからアセットを検索 | 可 | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
+| 検出 — DAMフォルダーの参照 | ○ | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
+| Discover - DAMコレクションにアクセス | ○ | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
+| 検出 — DAMからアセットを検索 | ○ | [!DNL Experience Manager] Webインターフェイスとデスクトップアクション |  |
 | 使用 - アセットを開く | はい | はい | 「[Web インターフェイスから開く](manage-assets.md#previewing-assets)」またはファインダーから開く |
 | を使用 — DAMのアセットをドキュメントに配置する | 対応 - 埋め込み | 対応 - リンクまたは埋め込み | [!DNL Experience Manager] デスクトップアプリケーションでは、ローカルファイルシステム上のファイルとしてアセットにアクセスできます。ネイティブアプリでは、これらのリンクはローカルパスで表されます。 |
 | 編集 - 編集用に開く | 対応 - チェックアウトアクション | 対応 - 「開く」アクション（ネットワーク共有内） | 「[AAL でチェックアウト](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html)」の場合は、デフォルトでは、アセットをユーザーの Creative Cloud ストレージアカウント（Creative Cloud アプリで同期）に保存します。 |
@@ -79,14 +80,14 @@ ht-degree: 54%
 * **作業中（WIP）またはクリエイティブ WIP：**&#x200B;アセットライフサイクルのフェーズ。アセットに対してまだ複数の変更がおこなわれている最中であり、通常は、より広範なチームと共有するための準備がまだできていない状態。
 * **クリエイティブレディアセット：** [!DNL Assets] 様々なチームと共有する準備ができているアセット。または、クリエイティブチームがマーケティングチームやLOBチームとの共有用に選択または承認済みのアセット。
 * **アセット承認：** 既に DAM にアップロードされているアセットに対して実行される承認プロセス。通常、ブランド承認および法的承認などが含まれます。
-* **最終アセット：**&#x200B;すべての                      承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
+* **最終アセット：**&#x200B;すべての承認／メタデータタグ付けが完了し、より広範なチームに使用される準備ができているアセット。このようなアセットは DAM に保存され、すべてのユーザー（またはすべての関係者）が使用できるようになっています。マーケティングチャネルで使用したり、クリエイティブチームがデザインの作成に使用したりできます。
 * **アセットの小規模な更新／変更：**&#x200B;デジタルアセットに対する迅速で小規模な変更。多くの場合、リタッチ作業や小規模な編集の要求、アセットレビューまたは承認に対応するためにおこなわれます（例えば、再配置、テキストサイズの変更、彩度／明るさ、色などの調整）。
 * **アセットの大規模な更新／変更：**&#x200B;デジタルアセットに加えられる、大規模な作業が必要な変更。その変更作業は比較的長期にわたる場合もあります。通常は複数の変更が含まれます。アセットは、更新中、複数回保存する必要があります。アセットの大規模な更新により、ほとんどの場合、アセットのステージは WIP になります。
 * **DAM：**&#x200B;デジタルアセット管理。このドキュメントでは、特に断りのない限り、[!DNL Experience Manager Assets]と同義です。
 * **クリエイティブユーザー：** Creative Cloud のアプリケーションとサービスを使用してデジタルアセットを作成するクリエイティブプロフェッショナル。クリエイティブチームに所属し、Creative Cloud を使用するが、デジタルアセットの作成はおこなわないメンバー（クリエイティブディレクターやクリエイティブチームマネージャーなど）を含む場合もあります。
 * **DAM ユーザー：** DAM システムの一般的な利用者。組織によっては、マーケティング分野のユーザーもマーケティング以外の分野のユーザーも含まれます（例えば、事業部門（LOB）ユーザー、ライブラリアン、販売担当者など）。
 
-### [!DNL Experience Manager]と[!DNL Creative Cloud]の統合{#considerations-when-using-aem-and-creative-cloud-integration}を使用する際の考慮事項
+### [!DNL Experience Manager]と[!DNL Creative Cloud]の統合を使用する際の考慮事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
 * [デスクトップアプリケーションのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)を参照してください。
 * [Adobe Stock統合](aem-assets-adobe-stock.md)を参照
@@ -101,7 +102,7 @@ ht-degree: 54%
 * **アセットのライフサイクルを理解する：**&#x200B;組織内のそれぞれのチームでアセットがどのように処理されるかを理解します。
 * **アセットへの頻繁な保存を慎重に処理する：** Adobe Asset Link では、PS、AI、ID を使用して自動的に処理します。他のアプリケーションの場合は、すべての変更が DAM で必要な場合を除き、マップされたフォルダーや共有フォルダーでは WIP 状態のタスクを実行しないでください。
 
-### [!DNL Assets] {#access-to-adobe-stock-assets-from-aem-assets}からの[!DNL Adobe Stock]アセットへのアクセス
+### [!DNL Assets]から[!DNL Adobe Stock]アセットにアクセス {#access-to-adobe-stock-assets-from-aem-assets}
 
 [Experience ManagerとAdobe Stock](/help/assets/aem-assets-adobe-stock.md) の統 [!DNL Experience Manager] 合により、からにアセットを検索、プレビュー、ライセンス、保存で [!DNL Adobe Stock] きま [!DNL Experience Manager]す。ライセンスが付与され、保存された[!DNL Stock]アセットでは、追加のフィルターで検索できる[!DNL Stock]メタデータが選択されています。
 
@@ -122,7 +123,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 クリエイティブチームとマーケティング／事業部門（LOB）チームの間の効率的なワークフローをデザインし、最適なサポート機能を選択するには、アセットを DAM に保存するタイミングと理由を理解することが重要です。
 
-### アセットを DAM に保存する理由  {#why-assets-are-stored-in-dam}
+### アセットを DAM に保存する理由 {#why-assets-are-stored-in-dam}
 
 アセットを DAM に保存すると、アクセスおよび検索がしやすくなります。これにより、組織またはエコシステムの多数のユーザー（パートナー、顧客などを含む）が、アセットを活用できるようになります。
 
@@ -132,7 +133,7 @@ TBD: A condensed version of the below content is better placed in the Adobe DAM 
 
 多くの場合、アセットおよび更新をすべて保存することは推奨されません。例えば、特定のアセットの更新の質が低く、大量のリソースを消費するような場合、そのアセットは DAM に保存しないようにします。
 
-#### アセットを DAM に保存するタイミング  {#when-assets-are-stored-in-dam}
+#### アセットを DAM に保存するタイミング {#when-assets-are-stored-in-dam}
 
 クリエイティブチーム（および組織）は、通常、アセットのライフサイクルのステージごとにアセットを保存しようとは考えません。例えば、以下のような場合、アセットは保存されません。
 
@@ -163,9 +164,9 @@ DAM の既存アセットに対する変更要求が出された後、マーケ�
 
 [!DNL Assets] は、デプロイメントへのアクセスに基づいて、2種類のユーザーをサポー [!DNL Assets] トします。通常、エンタープライズネットワーク（ファイアウォール）の内側にいるユーザーは、DAM に直接アクセスできます。エンタープライズネットワークの外側にいるその他のユーザーは、直接アクセスすることはできません。このユーザータイプにより、技術的観点から、どの統合を使用できるかが決定されます。
 
-#### DAM への直接アクセス権を持つクリエイティブユーザー  {#creative-users-with-direct-access-to-dam}
+#### DAM への直接アクセス権を持つクリエイティブユーザー {#creative-users-with-direct-access-to-dam}
 
-通常、社内ネットワークにオンボーディングされた社内クリエイティブチームやエージェンシー/クリエイティブプロフェッショナルは、[!DNL Experience Manager]ログインを含むDAMデプロイメントへのアクセス権を持ちます。 [!DNL Experience Manager] また、ネットワークインフラストラクチャを設定して、外部の関係者（通常はクライアントで働く代理店などの信頼できる組織）に直接アクセスし、VPNやIP許可リストなどを介し [!DNL Experience Manager] て、ネットワーク経由でアクセスできるようにします。
+通常、社内のクリエイティブチームや、社内ネットワークに 内部ネットワークに転送された場合、[!DNL Experience Manager]ログインを含むDAMデプロイメントへのアクセス権が付与されます。 [!DNL Experience Manager] また、ネットワークインフラストラクチャを設定して、外部の関係者（通常はクライアントで働く代理店などの信頼できる組織）に直接アクセスし、VPNやIP許可リストなどを介し [!DNL Experience Manager] て、ネットワーク経由でアクセスできるようにします。
 
 このような場合、Adobeアセットリンクまたは[!DNL Experience Manager]デスクトップアプリケーションを使用すると、最終/承認済みアセットに簡単にアクセスし、クリエイティブレディアセットをDAMに保存できます。
 
@@ -180,7 +181,7 @@ DAMデプロイメントに直接アクセスできない外部のエージェ�
 * [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) に基づいた、配布および調達用ポータルのカスタム実装を使用します。
 * [!DNL Experience Manager]に設定されたアクセス制御と、必要なネットワークインフラストラクチャ(VPNやIP許可リストなど)を使用して、外部の関係者がDAM内のコンテンツの専用領域にアクセスできるようにします。 [!DNL Experience Manager] Web UIを使用してアセットを取得し、新しいコンテンツをDAMにアップロードできます。
 
-####  内のアセットの更新 [!DNL Experience Manager]{#work-in-progress-on-assets-from-aem}
+####  内のアセットの更新 [!DNL Experience Manager] {#work-in-progress-on-assets-from-aem}
 
 このドキュメントで説明するように、ローカルファイルに保存したすべての編集内容を変更として[!DNL Experience Manager]にアップロードすることなく、アセット（「作業中」とも呼ばれる）に対して大幅な更新を行うことをお勧めします。 これにより、デスクトップユーザーの作業がはかどり、使用されるネットワーク帯域幅が制限され、アセットのタイムラインが適切な状態に保たれ、管理された大規模な更新に集中するようになります。
 
@@ -212,7 +213,7 @@ Adobe Asset Link は、この使用例を適切にサポートしています。
 * 1つのフォルダーから少数のファイルをアップロードするには、ファイルを直接Webインターフェイスにドラッグするか、[!DNL Assets] Webインターフェイスの「作成」オプションを使用します。
 * ビジネス要件によっては、カスタムアップローダーを使用することもできます。
 
-#### デスクトップから直接デジタルアセットを管理する{#managing-digital-assets-directly-from-desktop}
+#### デスクトップから直接デジタルアセットを管理 {#managing-digital-assets-directly-from-desktop}
 
 ネットワークファイル共有を使用してデジタルアセットを管理する場合、[!DNL Experience Manager]デスクトップアプリケーションでマッピングされたネットワーク共有を使用するだけで、便利な方法と見なされます。 [!DNL Experience Manager] Webインターフェイスは、ネットワーク共有（検索、コレクション、メタデータ、コラボレーション、プレビューなど）で可能な限り多くのデジタルアセット管理機能を提供し、[!DNL Experience Manager]デスクトップアプリは、サーバー側DAMリポジトリをデスクトップ上の作業と接続します。
 
