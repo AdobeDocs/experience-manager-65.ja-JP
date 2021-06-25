@@ -2,17 +2,18 @@
 title: サポートされているファイル形式と MIME タイプ
 description: ' [!DNL Assets] and [!DNL Dynamic Media] でサポートされているファイル形式とMIMEタイプ、および各形式でサポートされている機能。'
 contentOwner: AG
+mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: アセット管理，レンディション
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
 source-wordcount: '1582'
 ht-degree: 60%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}でサポートされる形式
+# [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
 
 [!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。[!DNL Assets]を他の標準準拠のデジタルアセット管理(DAM)ソリューションやデスクトップソフトウェアと統合するには、Adobeの[!DNL Extensible Metadata Platform](XMP)を使用します。
 
@@ -24,7 +25,7 @@ ht-degree: 60%
 | * | アドオン機能により対応 |
 | - | 適用なし |
 
-## [!DNL Experience Manager] {#supported-raster-image-formats}でサポートされるラスターイメージ形式
+## [!DNL Experience Manager]でサポートされるラスターイメージ形式 {#supported-raster-image-formats}
 
 [!DNL Assets]でサポートされるラスターイメージ形式は次のとおりです。
 
@@ -71,7 +72,7 @@ ht-degree: 60%
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## サポートされる3D形式{#support-3d-formats}
+## サポートされる3D形式 {#support-3d-formats}
 
 次の 3D 形式のリストがサポートされています。
 
@@ -86,7 +87,7 @@ ht-degree: 60%
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
 | USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
 
-## Dynamic Media {#unsupported-image-formats-dynamic-media}でサポートされていないラスターイメージ形式
+## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
 次のリストは、Dynamic Mediaでサポートされていない&#x200B;**&#x200B;ラスターイメージファイル形式のサブタイプを示しています。
 
@@ -127,7 +128,7 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 [PDF Rasterizerの使用](aem-pdf-rasterizer.md)を参照してください。
 
-## サポートされる画像トランスコーディングライブラリ{#supported-image-transcoding-library}
+## サポートされる画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
 Adobe画像トランスコーディングライブラリは、エンコーディング、トランスコーディング、再サンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
@@ -139,7 +140,7 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 
 [!DNL Adobe Camera Raw]ライブラリを使用して、[!DNL Assets]は生の画像を取り込むことができます。 [Camera Raw的なサポート](camera-raw.md)を参照してください。
 
-## サポートされる[!DNL Assets]ドキュメント形式{#supported-document-formats}
+## サポートされる[!DNL Assets]ドキュメント形式 {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
@@ -164,7 +165,7 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 | QXP | ✓ | ✓ | - | - | - | - | - | - |
 | EPUB | ✓ | ✓ | - | ✓ | ✓ | - | - | - |
 
-## Dynamic Media {#supported-document-formats-dynamic-media}でサポートされるドキュメント形式
+## Dynamic Mediaでサポートされるドキュメント形式 {#supported-document-formats-dynamic-media}
 
 | 形式 | <br>（入力形式）をアップロード | <br>画像<br>プリセット<br>（出力形式）を作成します。 | <br>動的<br>レンディションのプレビュー | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションのダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -203,7 +204,7 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 | WMV | ✓ | ✓ | - | * | * |
 | SWF | ✓ | ✓ | - | - | - |
 
-## {#supported-input-video-formats-for-dynamic-media-transcoding}のトランスコードに対してDynamic Mediaでサポートされる入力ビデオ形式
+## Dynamic Mediaでトランスコードでサポートされる入力ビデオ形式 {#supported-input-video-formats-for-dynamic-media-transcoding}
 
 | ビデオファイル拡張子 | コンテナ | 推奨されるビデオコーデック | サポートされないビデオコーデック |
 |---|---|---|---|
