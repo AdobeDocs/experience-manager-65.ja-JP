@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
+source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
 workflow-type: tm+mt
-source-wordcount: '3680'
+source-wordcount: '3674'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 5%
    * 様々なエディターでのテキスト、プレースホルダーテキストおよびコントロールのコントラスト（背景付き）。
    * スクリーンリーダーによるアクセシビリティとナレーション。
 
-* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。（高解像度のディスプレイとネットワーク帯域幅の制限があるデバイス） 詳細とタイムラインについては、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
+* スマートイメージングDPR(Device Pixel Ratio)とネットワーク帯域幅の最適化により、高解像度のディスプレイとネットワーク帯域幅の制限があるデバイスで、最高品質の画像を効率的に配信できます。 [スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
 
 * [!DNL Dynamic Media] 配信(URL修`fmt` 飾子)で、次世代の画像形式AVIF（AV1画像形式）がサポートされるようになりました。詳しくは、 [画像サービングとレンダリングAPI fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
 
