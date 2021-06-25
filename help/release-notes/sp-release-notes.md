@@ -4,14 +4,14 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 101cbd0d06d370da315e1579a8c2f274a6138b9a
+source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
 workflow-type: tm+mt
-source-wordcount: '3857'
+source-wordcount: '3805'
 ht-degree: 4%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5サービスパックリリースノート  {#aem-service-pack-release-notes}
+# [!DNL Adobe Experience Manager] 6.5サービスパックリリースノート {#aem-service-pack-release-notes}
 
 ## リリース情報 {#release-information}
 
@@ -22,7 +22,7 @@ ht-degree: 4%
 | 日付 | 2021 年 5 月 27 日 |
 | ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.9-1.0.zip) |
 
-## [!DNL Adobe Experience Manager] 6.5.9.0 {#what-s-included-in-aem}に含まれる内容
+## [!DNL Adobe Experience Manager] 6.5.9.0に含まれるもの {#what-s-included-in-aem}
 
 [!DNL Adobe Experience Manager] 6.5.9.0には、2019年4月の6.5リリースのリリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
 
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 * [!DNL Experience Manager Sites] Dynamic Media Foundationコンポーネントで、レスポンシブな画像プリセットまたはスマート切り抜きを使用する際に、高解像度デバイスの最適化のオン/オフを切り替えることができるようになりました。
 
-* パフォーマンスを向上させるために、hidden=false条件がJCRクエリからQueryBuilderエバリュエーターに移動されます。 変更後に非表示の述語が機能していることを確認するために、Experience Managerは非表示のフォルダーがインターフェイスに表示されていないことを確認します。
+* パフォーマンスを向上させるために、`hidden=false`条件をJCRクエリから[!UICONTROL QueryBuilder]エバリュエーターに移動します。 変更後に非表示の述語が機能していることを確認するために、[!DNL Experience Manager]は非表示のフォルダーが表示されていないことを確認します。
 
 * [!DNL Experience Manager Sites]ページで削除されたページとツリーを復元する機能。
 
@@ -42,37 +42,11 @@ ht-degree: 4%
 
 * 香港、マカオ、台湾に関連する名前の出現は、中国のロケールと地域の新しい命名規則に従って更新されます。
 
-* [!DNL Experience Manager] [Assets](#assets-accessibility-6590)および[Dynamic Media](#accessibility-dm-6590)のアクセシビリティの強化。
+* [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)と[[!DNL Dynamic Media]](#accessibility-dm-6590)のアクセシビリティの強化。
 
-* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。高解像度のディスプレイとネットワーク帯域幅の制約があるデバイスで使用する。 詳しくは、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
+* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。（高解像度のディスプレイとネットワーク帯域幅の制限があるデバイス） 詳細とタイムラインについては、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
 
-   >[!NOTE]
-   >
-   >上記のスマートイメージング機能強化のリリースタイムラインは、次のとおりです。
-   >
-   >* 北米2021年5月24日、NA、
-      >
-      >
-   * ヨーロッパ、中東、アフリカ2021年6月25日、
-      >
-      >
-   * アジア太平洋2021年7月19日。
-
-
-* Dynamic Media配信で、次世代画像形式AVIFのサポートが導入されました（fmt URL修飾子）。 詳しくは、[画像サービングとレンダリングapi fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
-
-   >[!NOTE]
-   >
-   >AVIFサポートのリリースタイムラインは次のとおりです。
-   >
-   >* 北米2021年5月10日、
-      >
-      >
-   * ヨーロッパ、中東、アフリカ2021年5月24日、
-      >
-      >
-   * アジア太平洋2021年6月24日。
-
+* [!DNL Dynamic Media] 配信(URL修`fmt` 飾子)は、次世代の画像形式AVIF（AV1画像形式）をサポートします。詳しくは、 [画像サービングとレンダリングAPI fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
 
 * [!UICONTROL タスクの割り当て]ワークフローステップを使用して、グループに通知電子メールを送信する機能。
 
@@ -167,13 +141,13 @@ ht-degree: 4%
 
 * DAMフォルダーを削除または移動できず、例外がログに記録される(NPR-35942)。
 
-#### Assetsの機能強化{#assets-enhancements}
+#### アセットの機能強化 {#assets-enhancements}
 
 * カード、列およびインサイトの表示に[!UICONTROL なし]オプションが導入され、JCRノードに格納されている順序でアセットを並べ替えることができるようになりました(NPR-36356)。
 
 * Adobe Experience ManagerからのAPI応答に電子メールIDを小文字で追加するオプションが追加されました(CQ-4317704)。
 
-#### Assetsのアクセシビリティの強化{#assets-accessibility-6590}
+#### Assetsのアクセシビリティの強化 {#assets-accessibility-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0では、次のアクセシビリ [!DNL Assets] ティの強化がおこなわれています。
 
@@ -214,7 +188,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * アセットのタイトルに2バイト、2バイト、高ASCII、キリル、サロゲートペア、ヘブライ語、アラビア語、GB18030文字が含まれる場合、Dynamic Mediaに公開すると、アセットのタイトルに疑問符(?)が付きます。 (CQ-4311872).
 
-#### Dynamic Media {#accessibility-dm-6590}のアクセシビリティの強化
+#### Dynamic Mediaのアクセシビリティの強化 {#accessibility-dm-6590}
 
 [!DNL Adobe Experience Manager] 6.5.9.0では、次のアクセ [!DNL Assets] シビリティ強化がおこなわれま [!DNL Dynamic Media]した。
 
@@ -245,7 +219,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * スクリーンリーダーは、アセットの詳細ページで、ビューア内の様々なインタラクティブオプションの目的にアクセスし、説明できるようになりました(CQ-4290708)。
 
-### Platform {#platform-6590}
+### プラットフォーム {#platform-6590}
 
 * ブループリントのサムネールを生成し、ライブコピーに対する変更をロールアウトすると、一部のフィールドの継承が機能しなくなります(CQ-4319517)。
 
@@ -279,11 +253,11 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 * [!DNL Experience Manager Screens] カスタムの2要素認証ハンドラーが使用されている場合、プレーヤーは認証できない(NPR-35854)。
 
-### Commerce {#commerce-6590}
+### コマース {#commerce-6590}
 
 * [!UICONTROL コマースカタログ]ウィザードで、列表示で40個を超える項目を読み込めません(CQ-4318379)。
 
-### 翻訳プロジェクト{#translation-6590}
+### 翻訳プロジェクト {#translation-6590}
 
 * `es`を`es_es`ページに再変換する際に、更新または上書きのオプションが表示されない(NPR-36170)。
 
@@ -376,7 +350,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 >
 >Adobeは、[!DNL Adobe Experience Manager] 6.5.9.0パッケージの削除またはアンインストールはお勧めしません。
 
-### サービスパック{#install-service-pack}をインストールします。
+### サービスパックのインストール {#install-service-pack}
 
 [!DNL Adobe Experience Manager] 6.5インスタンスにService Packをインストールするには、次の手順に従います。
 
@@ -418,7 +392,7 @@ B.パッケージマネージャーの[HTTP APIを使用します。](/help/site
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-### Adobe Experience Manager Formsアドオンパッケージ{#install-aem-forms-add-on-package}をインストールします
+### Adobe Experience Manager Formsアドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -432,7 +406,7 @@ B.パッケージマネージャーの[HTTP APIを使用します。](/help/site
 >
 >AEM 6.5.9.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、AEM 6.5.9.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
-### JEE上のAdobe Experience Manager Forms {#install-aem-forms-jee-installer}のインストール
+### JEEへのAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
@@ -494,7 +468,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
    * ショッパブルバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されない。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録変更が完了するのを待機中のタイムアウトが未登録です。
 
-## {#osgi-bundles-and-content-packages-included}に含まれるOSGiバンドルおよびコンテンツパッケージ
+## OSGiバンドルとコンテンツパッケージが含まれています {#osgi-bundles-and-content-packages-included}
 
 以下のテキストドキュメントは、[!DNL Experience Manager] 6.5.9.0に含まれるOSGiバンドルとコンテンツパッケージの一覧です。
 
@@ -502,7 +476,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 
 * [Experience Manager6.5.9.0に含まれているコンテンツパッケージの一覧](assets/6590_packages.txt)
 
-## 制限付きWebサイト{#restricted-sites}
+## 制限付きWebサイト {#restricted-sites}
 
 これらのWebサイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
