@@ -248,7 +248,7 @@ Forms API(Java)を使用してフォームに編集可能なレイアウトを�
 
 1. メモリ内XMLデータソースの作成
 
-   * `DocumentBuilderFactory`クラス` `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
+   * `DocumentBuilderFactory`クラス&grave; `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
    * `DocumentBuilderFactory`オブジェクトの`newDocumentBuilder`メソッドを呼び出して、Java `DocumentBuilder`オブジェクトを作成します。
    * `DocumentBuilder`オブジェクトの`newDocument`メソッドを呼び出して、`org.w3c.dom.Document`オブジェクトをインスタンス化します。
    * `org.w3c.dom.Document`オブジェクトの`createElement`メソッドを呼び出して、XMLデータソースのルート要素を作成します。 これにより、ルート要素を表す`Element`オブジェクトが作成されます。 要素の名前を表す文字列値を`createElement`メソッドに渡します。 戻り値を `Element` にキャストします。次に、`Document`オブジェクトの`appendChild`メソッドを呼び出してルート要素をドキュメントに追加し、ルート要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
@@ -326,7 +326,7 @@ Forms API（Webサービス）を使用してフォームに編集可能なレ�
 
 1. メモリ内XMLデータソースの作成
 
-   * `DocumentBuilderFactory`クラス` `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
+   * `DocumentBuilderFactory`クラス&grave; `newInstance`メソッドを呼び出して、Java `DocumentBuilderFactory`オブジェクトを作成します。
    * `DocumentBuilderFactory`オブジェクトの`newDocumentBuilder`メソッドを呼び出して、Java `DocumentBuilder`オブジェクトを作成します。
    * `DocumentBuilder`オブジェクトの`newDocument`メソッドを呼び出して、`org.w3c.dom.Document`オブジェクトをインスタンス化します。
    * `org.w3c.dom.Document`オブジェクトの`createElement`メソッドを呼び出して、XMLデータソースのルート要素を作成します。 これにより、ルート要素を表す`Element`オブジェクトが作成されます。 要素の名前を表す文字列値を`createElement`メソッドに渡します。 戻り値を `Element` にキャストします。次に、`Document`オブジェクトの`appendChild`メソッドを呼び出してルート要素をドキュメントに追加し、ルート要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
