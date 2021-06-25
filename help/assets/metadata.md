@@ -1,14 +1,15 @@
 ---
 title: デジタルアセットのメタデータの管理
-description: メタデータのタイプと、 [!DNL Adobe Experience Manager Assets] helps manage metadata for assets to allow easier categorization and organization of assets. [!DNL Experience Manager]  でメタデータに基づいてアセットを自動的に整理および処理できる方法について説明します。
+description: メタデータのタイプと、アセットのメタデータを管理してアセットを簡単に整理および処理する方法について説明します。
 contentOwner: AG
+mini-toc-levels: 1
 feature: タグ付け、メタデータ
 role: Architect, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
-source-git-commit: a7a9a31364497ab67d805e45ba4fa03c927828ed
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
-source-wordcount: '2341'
-ht-degree: 54%
+source-wordcount: '2339'
+ht-degree: 56%
 
 ---
 
@@ -22,7 +23,7 @@ ht-degree: 54%
 
 [!DNL Adobe Experience Manager Assets] では、あらゆるアセットのメタデータを保持します。したがって、アセットの分類と編成が容易にでき、特定のアセットを検索しやすくなります。メタデータ管理は、[!DNL Experience Manager Assets] にアップロードされるファイルからメタデータを抽出する機能と共に、クリエイティブワークフローに統合されます。アセットの任意のメタデータを保持して管理する機能によって、メタデータに基づいてアセットを自動的に編成および処理できます。
 
-## メタデータとその接触チャネル{#how-to-edit-or-add-metadata}
+## メタデータとその接触チャネル {#how-to-edit-or-add-metadata}
 
 メタデータは、検索可能なアセットに関する追加情報です。アセットに追加され、[!DNL Experience Manager]内でアセットをアップロードする際に処理されます。 既存のメタデータを編集し、既存のフィールドに新しいメタデータプロパティを追加できます。 メタデータの語彙を制御し、信頼性を確保する必要があります。 したがって、[!DNL Experience Manager Assets]では、新しいメタデータプロパティをオンデマンドで追加することはできません。 メタデータを保持する新しいプロパティやフィールドを追加できるのは、管理者と開発者だけです。 ユーザーは、既存のフィールドにメタデータを入力できます。
 
@@ -36,11 +37,11 @@ ht-degree: 54%
 
 * [!DNL Experience Manager Assets]の[メタデータプロファイル](/help/assets/metadata-config.md#metadata-profiles)機能を利用して、DAMにアセットがアップロードされる際にメタデータを自動的に追加できます。
 
-## [!DNL Experience Manager Assets] {#add-edit-metadata}でのメタデータの追加または編集
+## [!DNL Experience Manager Assets]でのメタデータの追加または編集 {#add-edit-metadata}
 
 [!DNL Assets]ユーザーインターフェイスでアセットのメタデータを編集するには、次の手順に従います。
 
-1. 以下のいずれかの操作を行います。
+1. 次のいずれかの操作を行います。
 
    * [!DNL Assets]インターフェイスでアセットを選択し、ツールバーの「**[!UICONTROL プロパティを表示]**」をクリックします。
    * アセットのサムネールから、「**[!UICONTROL プロパティを表示]**」クイックアクションを選択します。
@@ -62,7 +63,7 @@ ht-degree: 54%
 
 XMPの書き戻しは、[技術要件に記載されているプラットフォームおよびファイル形式に対してサポートされ、有効になっています。](/help/sites-deploying/technical-requirements.md)
 
-## 複数のアセットのメタデータプロパティの編集{#editing-metadata-properties-of-multiple-assets}
+## 複数のアセットのメタデータプロパティの編集 {#editing-metadata-properties-of-multiple-assets}
 
 [!DNL Adobe Enterprise Manager Assets] 複数のアセットのメタデータを同時に編集できるので、アセットに対する共通のメタデータの変更を一括ですばやく反映できます。複数のコレクションのメタデータを同時に編集することもできます。プロパティページを使用して、複数のアセットまたはコレクションのメタデータを変更できます。
 
@@ -109,20 +110,20 @@ XMPの書き戻しは、[技術要件に記載されているプラットフォ�
    | [!UICONTROL バッチサイズ] | メタデータを読み込むバッチ内のアセット数。デフォルト値は 50 です。最大値は 100 です。 |
    | [!UICONTROL フィールドセパレーター] | デフォルト値は `,`（コンマ）です。他の文字も指定できます。 |
    | [!UICONTROL 複数の値の区切り文字] | メタデータ値のセパレーター。デフォルト値は `|` です。 |
-   | [!UICONTROL ワークフローを開始] | デフォルトでは false です。`true`に設定し、(メタデータをバイナリXMPデータに書き込む)[!UICONTROL DAMメタデータ書き戻し]ワークフローに対してデフォルトのランチャー設定が有効になっている場合。 「ワークフローを開始」を有効にすると、システムの反応が遅くなります。 |
+   | [!UICONTROL ワークフローを開始] | デフォルトでは false です。`true` に設定すると、（メタデータをバイナリ XMP データに書き込む）DAM メタデータ書き戻しワークフローでデフォルトのランチャー設定が有効になります。「ワークフローを開始」を有効にすると、システムの反応が遅くなります。 |
    | [!UICONTROL アセットパス列名] | アセットが含まれている、CSV ファイルの列名を定義します。 |
 
 1. ツールバーから「**[!UICONTROL インポート]**」をクリックします。メタデータが読み込まれると、[!UICONTROL 通知]インボックスに通知が表示されます。
 
 1. 正しい読み込みを検証するには、アセットの[!UICONTROL プロパティ]ページに移動し、フィールドの値を確認します。
 
-メタデータの読み込み時に日付とタイムスタンプを追加するには、日付と時刻の `YYYY-MM-DDThh:mm:ss.fff-00:00` 形式を使用します。日付と時刻は `T` で区切られます。`hh` は 24 時間形式の時間、`fff` はナノ秒、`-00:00` はタイムゾーンオフセットです。例えば、`2020-03-26T11:26:00.000-07:00` は、2020 年 3 月 26 日の午前 11:26:00.000 PST 時間です。
+メタデータの読み込み時に日付とタイムスタンプを追加するには、日付と時刻の `YYYY-MM-DDThh:mm:ss.fff-00:00` 形式を使用します。日付と時刻は `T` で区切られます。`hh` は 24 時間形式の時間、`fff` はナノ秒、`-00:00` はタイムゾーンオフセットです。例えば、`2020-03-26T11:26:00.000-07:00`は2020年3月26日の午前11時:26:00.000 PST時間です。
 
 >[!CAUTION]
 >
 >日付形式が `YYYY-MM-DDThh:mm:ss.fff-00:00` と一致しない場合、日付値は設定されません。書き出されたメタデータ CSV ファイルの日付形式は、`YYYY-MM-DDThh:mm:ss-00:00` 形式になります。インポートする場合は、`fff` で示すナノ秒値を追加して、有効な形式に変換します。
 
-## メタデータ{#export-metadata}の書き出し
+## メタデータの書き出し {#export-metadata}
 
 複数のアセットのメタデータを CSV 形式で書き出すことができます。メタデータは非同期的に書き出され、システムのパフォーマンスに影響を及ぼしません。メタデータを書き出すために、[!DNL Experience Manager]はアセットノード`jcr:content/metadata`とその子ノードのプロパティを走査し、メタデータプロパティをCSVファイルに書き出します。
 
@@ -151,7 +152,7 @@ XMPの書き戻しは、[技術要件に記載されているプラットフォ�
 
    *図：一括で書き出したメタデータを格納した CSV ファイルをダウンロードするためのダイアログ.*
 
-## コレクションのメタデータの編集{#collections-metadata}
+## コレクションのメタデータの編集 {#collections-metadata}
 
 詳しくは、 [コレクションのメタデータ](/help/assets/manage-collections.md#view-edit-collection-metadata)の表示と編集および[複数のコレクションのメタデータの一括編集](/help/assets/manage-collections.md#editing-collection-metadata-in-bulk)を参照してください。
 
@@ -178,7 +179,7 @@ XMPの書き戻しは、[技術要件に記載されているプラットフォ�
 
 後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
-### [!UICONTROL プロファイル]ユーザーインターフェイス{#applying-metadata-profiles-to-folders-from-profiles-user-interface}からのフォルダーへのメタデータプロファイルの適用
+### [!UICONTROL プロファイル]ユーザーインターフェイスからのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-profiles-user-interface}
 
 メタデータプロファイルを適用する手順は次のとおりです。
 
@@ -186,7 +187,7 @@ XMPの書き戻しは、[技術要件に記載されているプラットフォ�
 1. 1 つまたは複数のフォルダーに適用するメタデータプロファイルを選択します。
 1. 「 **[!UICONTROL メタデータプロファイルをフォルダーに適用]** 」をクリックし、新たにアップロードされたアセットを受け取る1つ以上のフォルダーを選択して、「**[!UICONTROL 完了]** 」をクリックします。 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-### [!UICONTROL プロパティ] {#applying-metadata-profiles-to-folders-from-properties}からのフォルダーへのメタデータプロファイルの適用
+### [!UICONTROL プロパティ]からのフォルダーへのメタデータプロファイルの適用 {#applying-metadata-profiles-to-folders-from-properties}
 
 1. 左側のレールで、「**[!UICONTROL アセット]**」をクリックし、メタデータプロファイルを適用するフォルダーに移動します。
 1. チェックマークをクリックして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をクリックします。
@@ -201,21 +202,21 @@ XMPの書き戻しは、[技術要件に記載されているプラットフォ�
 
 For details, see [configuration to apply metadata profile globally](/help/assets/metadata-config.md#apply-a-metadata-profile-globally). -->
 
-### フォルダーからのメタデータプロファイルの削除{#removing-a-metadata-profile-from-folders}
+### フォルダーからのメタデータプロファイルの削除 {#removing-a-metadata-profile-from-folders}
 
 フォルダーからメタデータプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
 **[!UICONTROL ツール]**&#x200B;メニュー内から、または&#x200B;**[!UICONTROL プロパティ]**&#x200B;内から、フォルダーからメタデータプロファイルを削除できます。
 
-#### プロファイルユーザーインターフェイス{#removing-metadata-profiles-from-folders-via-profiles-user-interface}を使用したフォルダーからのメタデータプロファイルの削除
+#### プロファイルユーザーインターフェイスを使用したフォルダーからのメタデータプロファイルの削除 {#removing-metadata-profiles-from-folders-via-profiles-user-interface}
 
 1. [!DNL Experience Manager]ロゴをクリックし、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL メタデータプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーから削除するメタデータプロファイルを選択します。
-1. 「**[!UICONTROL フォルダーからメタデータプロファイルを削除]**」をクリックし、プロファイルを削除する1つ以上のフォルダーを選択して、「**[!UICONTROL 完了]**」をクリックします。
+1. 「**[!UICONTROL フォルダーからメタデータプロファイルを削除]**」をクリックし、プロファイルを削除する 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 完了]**」をクリックします。
 
    名前がフォルダー名の下に表示されなくなっていることで、メタデータプロファイルがフォルダーに適用されていないことを確認できます。
 
-#### 「プロパティ{#removing-metadata-profiles-from-folders-via-properties} 」を使用してフォルダーからメタデータプロファイルを削除します。
+#### 「プロパティ」を使用したフォルダーからのメタデータプロファイルの削除 {#removing-metadata-profiles-from-folders-via-properties}
 
 1. [!DNL Experience Manager]ロゴをクリックし、**[!UICONTROL アセット]**&#x200B;に移動した後、メタデータプロファイルを削除するフォルダーに移動します。
 1. チェックマークをクリックして対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」をクリックします。
