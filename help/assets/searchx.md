@@ -1,11 +1,11 @@
 ---
-title: 検索機能の拡張。
+title: 検索機能の拡張
 description: ' [!DNL Adobe Experience Manager Assets] の検索機能をデフォルト値を超えて拡張します。'
 contentOwner: AG
 role: Developer
 feature: 検索
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 77%
@@ -55,7 +55,7 @@ ht-degree: 77%
 
 ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、**/libs/cq/search/components/predicates** にあります。
 
-### 例：シンプルなプロパティ述語の作成  {#example-build-a-simple-property-predicate}
+### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
 プロパティ述語の作成手順
 
@@ -148,7 +148,7 @@ ht-degree: 77%
    >
    >検索時は、大文字と小文字の違いを含めて、語句を正確に入力してください。
 
-### 例：シンプルなグループ述語の作成  {#example-build-a-simple-group-predicate}
+### 例：シンプルなグループ述語の作成 {#example-build-a-simple-group-predicate}
 
 グループ述語の作成手順
 
@@ -295,7 +295,7 @@ ht-degree: 77%
 | searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
-## 検索結果のカスタマイズ{#customizing-search-results}
+## 検索結果のカスタマイズ {#customizing-search-results}
 
 アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
