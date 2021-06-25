@@ -13,10 +13,10 @@ docset: aem65
 legacypath: /deploy/platform/data-store-config
 feature: 設定
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7038e9c2949cb6326470d0248b640e576c7f919
 workflow-type: tm+mt
-source-wordcount: '3424'
-ht-degree: 68%
+source-wordcount: '3487'
+ht-degree: 67%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Manager（AEM）では、バイナリデータをコンテン�
 
 1. AEM を起動します。
 
-## ノードストアの設定  {#node-store-configurations}
+## ノードストアの設定 {#node-store-configurations}
 
 >[!CAUTION]
 >
@@ -57,7 +57,7 @@ Adobe Experience Manager（AEM）では、バイナリデータをコンテン�
 >
 >**AEM 5.x** のインストール環境からのアップグレードに備えてこの記事をお読みになっている場合は、[アップグレード](https://docs.adobe.com/content/docs/ja/aem/6-0/deploy/upgrade.html)に関するドキュメントを先に参照してください。
 
-### セグメントノードストア  {#segment-node-store}
+### セグメントノードストア {#segment-node-store}
 
 セグメントノードストアは、AEM6 におけるアドビの TarMK 実装の基盤です。このストアでは、`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` という PID を設定に使用します。
 
@@ -142,7 +142,7 @@ customBlobStore=B"false"
 >
 >NAS を使用して共有ファイルデータストアを格納する場合は、パフォーマンスの問題を回避するために、必ず高性能のデバイスのみを使用してください。
 
-## Amazon S3 データストア  {#amazon-s-data-store}
+## Amazon S3 データストア {#amazon-s-data-store}
 
 Amazon の Simple Storage Service（S3）にデータを格納するように AEM を設定できます。このストアでは、`org.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` という PID を設定に使用します。
 
@@ -310,7 +310,7 @@ S3 によるバイナリなしのレプリケーションを設定するには�
 
 1. オーサーインスタンスとパブリッシュインスタンスをすべて再起動して、変更を有効にします。
 
-#### S3 と MongoDB を使用したクラスターの作成  {#creating-a-cluster-using-s-and-mongodb}
+#### S3 と MongoDB を使用したクラスターの作成 {#creating-a-cluster-using-s-and-mongodb}
 
 1. 次のコマンドを使用して CQ クイックスタートを展開します。
 
@@ -335,7 +335,7 @@ S3 によるバイナリなしのレプリケーションを設定するには�
 1. 2 つ目の AEM インスタンスについて手順 1 ～ 4 を繰り返します。
 1. 2 つ目の AEM インスタンスを起動します。
 
-#### 共有データストアの設定  {#configuring-a-shared-data-store}
+#### 共有データストアの設定 {#configuring-a-shared-data-store}
 
 1. まず、データストアを共有するために必要なデータストア設定ファイルを各インスタンスで作成します。
 
@@ -467,7 +467,15 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 
 >[!NOTE]
 >
->（Mongo または Segment Tar を備えた）クラスターまたは共有データストアのセットアップでガベージコレクションを実行するときに、特定の blob ID を削除できないことを知らせる警告がログに表示される場合があります。これは、以前のガベージコレクションで削除されたBLOB IDが、ID削除に関する情報を持たない他のクラスターまたは共有ノードによって誤って再び参照されるためです。 その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作はパフォーマンスや機能に影響しません。
+>クラスターまたは共有データストア設定（Mongo または Segment Tar を使用）でガベージコレクションを実行すると、特定の Blob ID を削除できないことについての警告がログに表示されることがあります。これは、以前のガベージコレクションで削除されたBLOB IDが、ID削除に関する情報を持たない他のクラスターまたは共有ノードによって誤って再び参照されるためです。 その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作はパフォーマンスや機能に影響しません。
+
+>[!NOTE]
+> 共有データストアの設定を使用し、データストアのガベージコレクションが無効になっている場合、Luceneバイナリクリーンアップタスクを実行すると、使用するディスク領域が突然増加する可能性があります。 この問題を回避するには、次のように、すべてのオーサーインスタンスとパブリッシュインスタンスでBlobTrackerを無効にする必要があります。
+>
+> 1. AEM Instanceを停止します。
+> 2. `blobTrackSnapshotIntervalInSecs=L"0"`パラメーターを`crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`ファイルに追加します。 このパラメーターにはOak 1.12.0、1.10.2以降が必要です。
+> 3. AEM Instanceを再起動します。
+
 
 新しいバージョンの AEM では、複数のリポジトリによって共有されるデータストアでもガベージコレクションを実行できます。共有データストアでデータストアのガベージコレクションを実行できるようにするには、次の手順に従います。
 
