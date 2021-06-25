@@ -4,14 +4,14 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
+source-git-commit: 557615a019fedee1863e4d1970445fbfa17736cb
 workflow-type: tm+mt
-source-wordcount: '3726'
+source-wordcount: '3680'
 ht-degree: 5%
 
 ---
 
-# [!DNL Adobe Experience Manager] 6.5 Service Pack 9 {#aem-whats-new-service-pack}の新機能
+# [!DNL Adobe Experience Manager] 6.5 Service Pack 9の新機能 {#aem-whats-new-service-pack}
 
 ![新機能](assets/whatsnew.jpeg)
 
@@ -21,14 +21,14 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->AEM Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠した標準規格のOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および運用できます。
+>[!DNL Experience Manager] Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠したOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および運用できます。
 >[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
 >[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
 >oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
-### 削除されたページとツリーを復元する機能{#ability-to-restore-pages-tree}
+### 削除されたページとツリーを復元する機能 {#ability-to-restore-pages-tree}
 
 これで、[!DNL Experience Manager Sites]ページ上の削除されたページとツリービュー全体を復元できます。
 
@@ -36,49 +36,23 @@ ht-degree: 5%
 
 * 中国の社会的・政治的見解に合わせて、香港、マカオ、台湾に関する中国のロケールと地域の命名を更新しました。
 
-* [!DNL Adobe Experience Manager]からのACP api応答で、電子メールIDを小文字にするオプションの設定が導入されました。
+* [!DNL Adobe Experience Manager]からのACP API応答で、電子メールIDの大文字と小文字を変更するためのオプションの設定が導入されました。
 
-   ![AEMからのACP応答の電子メールIDを小文字に変換した設定](assets/email-lowcase-config.png)
+   ![ACP応答の電子メールIDを次の値から小文字に変更するための設定  [!DNL Experience Manager]](assets/email-lowcase-config.png)
 
-* 様々な場所でのテキストとアイコンのコントラスト（背景と共に）がWCAGのように強化され、視覚や色の知覚が限られているユーザーがアクセシブルになります。 詳しくは、[Assetsのアクセシビリティの強化](sp-release-notes.md#assets-accessibility-6590)を参照してください。
+* 様々な機能で、テキストとアイコンの背景に対するコントラストが強化されます。 このWCAGガイドラインの実装により、色の視覚や知覚が限られているユーザーが、 [!DNL Assets]にアクセスしやすくなります。  [!DNL Assets]](sp-release-notes.md#assets-accessibility-6590)の[アクセシビリティの強化を参照してください。
 
-### Dynamic Media {#assets-dynamic-media}
+### [!DNL Dynamic Media] {#assets-dynamic-media}
 
-* [Dynamic Mediaは、次の点で](sp-release-notes.md#assets-accessibility-6590) よりアクセスしやすい
+* [[!DNL Dynamic Media] は、次の点で](sp-release-notes.md#assets-accessibility-6590) よりアクセシビリティが高いです。
 
    * キーボードキーを使いやすくする。
-   * 様々なエディターでのテキスト、プレースホルダーテキスト、コントロールのコントラスト（背景付き）。
-   * スクリーンリーダーによるアクセシビリティとナレーション
+   * 様々なエディターでのテキスト、プレースホルダーテキストおよびコントロールのコントラスト（背景付き）。
+   * スクリーンリーダーによるアクセシビリティとナレーション。
 
-* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。（高解像度のディスプレイとネットワーク帯域幅の制限があるデバイス） 詳しくは、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
+* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。（高解像度のディスプレイとネットワーク帯域幅の制限があるデバイス） 詳細とタイムラインについては、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
 
-   >[!NOTE]
-   >
-   >上記のスマートイメージング機能強化のリリースタイムラインは次のとおりです。
-   >
-   >* 北米2021年5月24日、NA、
-      >
-      >
-   * ヨーロッパ、中東、アフリカ2021年6月25日、
-      >
-      >
-   * アジア太平洋2021年7月19日。
-
-
-* Dynamic Media配信で、次世代画像形式AVIFのサポートが導入されました（fmt URL修飾子）。 詳しくは、[画像サービングとレンダリングapi fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
-
-   >[!NOTE]
-   >
-   >AVIFサポートのリリースタイムラインは次のとおりです。
-   >
-   >* 北米2021年5月10日、
-      >
-      >
-   * 2021年5月24日、ヨーロッパ、中東、アフリカ
-      >
-      >
-   * アジア太平洋2021年6月24日。
-
+* [!DNL Dynamic Media] 配信(URL修`fmt` 飾子)で、次世代の画像形式AVIF（AV1画像形式）がサポートされるようになりました。詳しくは、 [画像サービングとレンダリングAPI fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
 
 ## [!DNL Adobe Experience Manager Forms] {#aem-forms}
 
@@ -86,37 +60,37 @@ ht-degree: 5%
 >
 >[!DNL Experience Manager Forms]のアドオンパッケージは、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に提供されます。
 
-### [!DNL Azul Zulu OpenJDK] {#support-azul-zulu}のサポート
+### [!DNL Azul Zulu OpenJDK]のサポート {#support-azul-zulu}
 
 OSGiデプロイメント上の[!DNL Experience Manager Forms]用の[!DNL Azul Zulu]ビルドの[!DNL OpenJDK]を使用して、アプリケーションを開発および操作できるようになりました。 詳細については、「[Experience Manager6.5 Service Pack 9リリースノート](sp-release-notes.md)」および「[技術要件](../sites-deploying/technical-requirements.md)」を参照してください。
 
-### [!UICONTROL タスクの割り当て] {#group-notification-email}を使用して通知電子メールをグループに送信する機能
+### [!UICONTROL タスクの割り当て]を使用して通知電子メールをグループに送信する機能 {#group-notification-email}
 
 タスクの割り当てワークフローステップを使用して、グループ電子メールアドレスに通知電子メールを送信できるようになりました。
 
-### ソースインタラクティブ通信を変更した後にインタラクティブ通信の下書きを取得する機能{#retrieve-draft-after-source-modifications}
+### ソースインタラクティブ通信を変更した後にインタラクティブ通信の下書きを取得する機能 {#retrieve-draft-after-source-modifications}
 
 ソースのインタラクティブ通信に変更を加えた後、下書きとして保存されたインタラクティブ通信を取得できるようになりました。
 
-### reCAPTCHAサービス{#set-custom-domain-name-recaptcha}の読み込み、レンダリングおよび検証用のカスタムドメイン名を設定します。
+### reCAPTCHAサービスの読み込み、レンダリングおよび検証用のカスタムドメイン名の設定 {#set-custom-domain-name-recaptcha}
 
 reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトドメインとして使用します。設定を変更して、`https://www.google.com/`またはreCAPTCHAサービスの読み込み、レンダリング、検証用の任意のカスタムドメイン名を設定できるようになりました。
 
-### [!UICONTROL フォームデータモデルサービスを起動]ワークフローステップ{#input-data-enhancements-fdm}の入力データの強化
+### [!UICONTROL フォームデータモデルサービスを起動]ワークフローステップの入力データの強化 {#input-data-enhancements-fdm}
 
 [!UICONTROL フォームデータモデルサービスを起動]ワークフローステップでフォームデータモデルとサービスを選択する場合、入力データのサービス引数を指定します。
 
 「[!UICONTROL ペイロードに対して相対]」オプションを選択してファイルをサービス引数として添付する場合、実際のファイル名の代わりにファイルを含むフォルダーパスを指定できるようになりました。 ファイルの添付ファイル名の代わりにフォルダー名を定義すると、ワークフローモデルを再利用できます。 ワークフローモデルを1つのファイル添付ファイル名に制限することはできません。
 
-### レコードのドキュメントテンプレート{#use-multiple-master-pages-dor-template}で複数のマスターページを使用できる
+### レコードのドキュメントテンプレートで複数のマスターページを使用できる {#use-multiple-master-pages-dor-template}
 
 レコードのドキュメントテンプレートで複数のマスターページを使用できるようになりました。 その結果、タイトルページやテンプレートの他のページに、異なるヘッダー、フッター、フォント、ロゴ情報を表示できるようになりました。
 
-### レコードのドキュメントでの改ページのサポート{#support-page-breaks-dor}
+### レコードのドキュメントでの改ページのサポート {#support-page-breaks-dor}
 
 レコードのドキュメントに改ページを追加できるようになりました。 その結果、ページ内でパネルが分割された場合、改ページを追加して、レコードのドキュメント内の新しいページにパネルを移動できます。
 
-## 以前の[!DNL Experience Manager] 6.5サービスパック{#key-features-previous-service-packs}の主な機能
+## 以前の[!DNL Experience Manager] 6.5サービスパックの主な機能 {#key-features-previous-service-packs}
 
 ### [!DNL Experience Manager Sites] {#aem-sites-previous-service-packs}
 
@@ -124,11 +98,11 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 [!UICONTROL 名前]、[!UICONTROL 最終変更日]および[!UICONTROL 最終ロールアウト日]の各プロパティを使用して、ロールアウトに使用できるライブコピーページを並べ替えることができるようになりました。 ページの[!UICONTROL 最終ロールアウト日]は、このリリースで導入された新しいプロパティです。
 
-#### ページ移動およびMSMロールアウトが非同期操作(6.5.7.0)として使用可能({#page-moves-msm-asynchronous})
+#### ページ移動およびMSMロールアウトを非同期操作として使用できる(6.5.7.0) {#page-moves-msm-asynchronous}
 
 これで、ページの移動およびMSMロールアウトを非同期操作として実行し、実行時のパフォーマンスへの影響を軽減できます。 操作を即時または後で実行するようにスケジュールできます。 関連するジョブとプロセスステップのステータスは、コンソールに表示されます。これは、大規模なMSMロールアウトの監視に役立ちます。
 
-#### 非同期モード(6.5.6.0)でのページ移動操作の可用性{#page-move-asynchronous}
+#### 非同期モードでのページ移動操作の可用性(6.5.6.0) {#page-move-asynchronous}
 
 非同期モードでページ移動操作を使用できるようになりました。 即時実行に加えて、後で実行するように「ページ移動」操作をスケジュールすることもできます。
 
@@ -164,7 +138,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 拡張スタイルシステムを使用して、コンポーネントダイアログ内のスタイルを選択できるようになりました。
 
-#### 様々な領域でのパフォーマンス向上(6.5.4.0) {#performance-improvements}
+#### 様々な領域でのパフォーマンスの向上(6.5.4.0) {#performance-improvements}
 
 * サイト内でのContextHubの読み込みと初期化に要する時間が短縮されました(`contexthub.kernel.js`)。 これにより、サイト訪問中のページ読み込みが高速になります。
 
@@ -210,11 +184,11 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
    * スクリーンリーダーは、検索フィルターパネルのオプションを拡大可能なアコーディオンとして読み上げます。
 
-#### [!DNL Assets](6.5.6.0) {#other-enhancements-assets-6560}のその他の機能強化
+#### [!DNL Assets]のその他の機能強化(6.5.6.0) {#other-enhancements-assets-6560}
 
 * フォルダーに関連付けられたユーザーグループ（プライベートおよび非プライベート）が、[これらのフォルダー](/help/assets/private-folder.md#delete-private-folder)の削除時にリポジトリから削除されるようになりました。 ただし、既存の冗長な、孤立した、未使用の、自動生成されたユーザーグループは、JMXを使用してリポジトリから削除できます。
 
-#### [!DNL Assets](6.5.5.0) {#assets-accessibility}のアクセシビリティの強化
+#### [!DNL Assets](6.5.5.0)のアクセシビリティの強化 {#assets-accessibility}
 
 [!DNL Experience Manager Assets] は、Webコンテンツアクセシビリティガイドライン(WCAG)に準拠してアクセシビリティを強化しました。次の機能強化により、アクセシビリティが向上しました。
 
@@ -230,7 +204,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 [!DNL Assets] ユーザーインターフェイスのフローの例外処理が改善されました。アセットのディメンションにタイプがない場合、観察された例外はログファイルに記録されます。
 
-#### [!DNL Dynamic Media](6.5.5.0) {#support-for-3d}での3Dアセットのサポート
+#### [!DNL Dynamic Media](6.5.5.0)での3Dアセットのサポート {#support-for-3d}
 
 [!DNL Dynamic Media]での3D画像のサポートにより、3DコンテンツをWebページやアプリケーションに公開および追加できます。 サポートには次のものが含まれます。
 
@@ -240,7 +214,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 * [!DNL Sites] WCMコンポーネントを使用して、[!DNL Experience Manager Sites]ページ上の共通の3Dアセットを公開および表示します。
 
-#### [!DNL Experience Manager Assets]を[!DNL Brand Portal](6.5.4.0) {#configure-assets-bp}に設定します
+#### [!DNL Experience Manager Assets]を[!DNL Brand Portal]で設定します(6.5.4.0) {#configure-assets-bp}
 
 [!DNL Experience Manager Assets]と[!DNL Brand Portal]の間の承認チャネルが変更されます。 以前は、[!DNL Brand Portal]は、旧来のOAuthゲートウェイを通じてクラシックUIで設定されていました。このゲートウェイは、JWTトークン交換を使用して認証用のIMSアクセストークンを取得します。 [!DNL Experience Manager Assets] がで設定されるようにな [!DNL Brand Portal] りま [!DNL Adobe I/O]した。このは、テナントの認証用のIMSトークンを取得 [!DNL Brand Portal] します。
 
@@ -265,13 +239,13 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 ![作成日の並べ替え可能な列](assets/asset-created-date.png)
 
-#### [!DNL Adobe Experience Manager Assets] (6.5.2.0) {#visual-search}のビジュアル検索
+#### [!DNL Adobe Experience Manager Assets]のビジュアル検索(6.5.2.0) {#visual-search}
 
 [!DNL Assets] ユーザーは、視覚的に類似した画像を検索できます。Experience Managerは、ユーザーが選択した画像に類似した、DAMリポジトリのスマートタグ付き画像を表示します。 [ビジュアル検索](../assets/search-assets.md)を参照してください。
 
 ### Dynamic Media {#dynamic-media-previous-service-packs}
 
-#### CDNにキャッシュされたコンテンツ(6.5.6.0) {#invalidate-cdn-cached-content}を無効にする
+#### CDNにキャッシュされたコンテンツの無効化(6.5.6.0) {#invalidate-cdn-cached-content}
 
 [!DNL Dynamic Media]ユーザーインターフェイスを使用して、キャッシュされたコンテンツをコンテンツ配信ネットワーク(CDN)を無効にできるようになりました。 その結果、キャッシュの有効期限が切れるのを待たずに、更新されたアセットを即座に使用できるようになります。 CDNを無効にするには、次の手順を実行します。
 
@@ -281,15 +255,15 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 * 完全なアセットURLの追加
 
-#### [!DNL Experience Manager]および[!DNL Dynamic Media](6.5.6.0){#selective-publishing}へのアセットの選択的公開
+#### [!DNL Experience Manager]および[!DNL Dynamic Media](6.5.6.0)へのアセットの選択的公開 {#selective-publishing}
 
 [!UICONTROL クイック公開]ウィザードまたは[!UICONTROL 公開を管理]ウィザードを使用して、[!DNL Experience Manager]または[!DNL Dynamic Media]に対してアセットを選択的に公開または非公開にできるようになりました。 `Publish`モードまたは`Unpublish`モードをフォルダーレベルで設定することもできます。
 
-#### Dynamic Media向けスマートイメージング{#smart-imaging}
+#### Dynamic Media向けスマートイメージング {#smart-imaging}
 
 スマートイメージングは、各ユーザーに固有の閲覧特性を使用して、エクスペリエンスに最適化された適切な画像を自動的に提供し、パフォーマンスとエンゲージメントを向上させます。 スマートイメージングは、既存の画像プリセットで機能し、配信の直前にインテリジェンスを使用して、ブラウザーまたはネットワークの接続速度に基づいて画像のファイルサイズをさらに低減します。詳しくは、[スマートイメージング](../assets/imaging-faq.md)を参照してください。
 
-#### Dynamic Media(6.5.3.0)のビデオプロファイルでのスマート切り抜き{#smart-crop-video}
+#### Dynamic Mediaのビデオプロファイルでのスマート切り抜き(6.5.3.0) {#smart-crop-video}
 
 ビデオのスマート切り抜き（ビデオプロファイルで使用できるオプション機能）は、Adobe Sensei の人工知能機能を使用して、サイズに関係なく、アップロードしたアダプティブビデオやプログレッシブビデオの重要な部分を自動的に検出して切り抜くツールです。[ビデオプロファイルでのスマート切り抜きの使用について](../assets/video-profiles.md)を参照してください。
 
@@ -299,7 +273,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 アダプティブフォーム送信時またはユーザーアクション時に、CAPTCHAを検証できるようになりました。 また、ルールに基づいてアダプティブフォーム内のCAPTCHAコンポーネントの表示と非表示を切り替えるための条件を追加して、ユーザーアクションでCAPTCHAを検証することもできます。
 
-#### カスタムCAPTCHAサービス(6.5.8.0)を追加します。 {#add-custom-captcha-services}
+#### カスタムCAPTCHAサービスの追加(6.5.8.0) {#add-custom-captcha-services}
 
 [!DNL Experience Manager Forms] は、Google reCAPTCHA（Google reCAPTCHA APIの別のライセンスが必要）をCAPTCHA検証サービスとして使用するための標準サポートを提供します。また、カスタムCAPTCHAサービスを使用してCAPTCHAを検証することもできます。
 
@@ -319,7 +293,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 * [!DNL Automated Forms Conversion service]を使用したPDFフォームのアダプティブフォームへの変換
 
-#### Microsoft SQL Server 2016 Always On可用性グループのサポート(6.5.7.0) {#always-on-availability-groups}
+#### Microsoft SQL Server 2016 Always On可用性グループの高可用性のサポート(6.5.7.0) {#always-on-availability-groups}
 
 [!DNL Experience Manager Forms] は、OSGiデプロイメ [!DNL Microsoft] ントの高可用性を実現するために、SQL Server 2016 Always On可用性グループをサポートするようになりました。
 
@@ -327,7 +301,7 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 [!DNL Experience Manager Forms] フォームデータモデルを使用して、データソースとしてRESTful Webサービスとの統合時に、パフォーマンス最適化用のHTTPクライアント設定が含まれるようになりました。[データソースの設定](../../help/forms/using/configure-data-sources.md#fdm-http-client-configuration)を参照してください。
 
-#### レイアウトモード(6.5.7.0) {#reset-option-layout-mode}で各コンポーネントのリセットオプションが使用可能
+#### レイアウトモード(6.5.7.0)での各コンポーネントのリセットオプションの使用可能 {#reset-option-layout-mode}
 
 これで、アダプティブフォームのレイアウトモードで、各コンポーネントのリセットオプションを使用できるようになりました。 パネルに複数列のレイアウトを定義する場合、この機能を使用して、パネル内の個々のコンポーネントをリセットできます。 [レイアウトモードを使用したコンポーネントのサイズ変更](../../help/forms/using/resize-using-layout-mode.md#resize-components)を参照してください。
 
@@ -335,19 +309,19 @@ reCAPTCHA サービスは、`https://www.recaptcha.net/` をデフォルトド�
 
 アダプティブフォームに事前に入力すると、[!DNL Experience Manager Forms]サーバーはデータをアダプティブフォームにマージし、入力済みのフォームをユーザーに配信します。 デフォルトでは、データの結合アクションはサーバーで実行されます。これで、[!DNL Experience Manager Forms]サーバーを[に設定して、サーバーではなくクライアント](../../help/forms/using/prepopulate-adaptive-form-fields.md)でデータ結合アクションを実行できるようになりました。 これにより、アダプティブフォームの事前入力とレンダリングに要する時間が大幅に短縮されます。
 
-#### 双方向SSL実装(6.5.6.0)を使用したサーバー上のRESTful APIとのフォームデータモデル統合(6.5.6.0) {#fdm-integration-rest-apis-two-way-ssl}
+#### 双方向SSL実装(6.5.6.0)を使用したサーバー上のRESTful APIとのフォームデータモデル統合 {#fdm-integration-rest-apis-two-way-ssl}
 
 [!DNL Experience Manager Forms] フォームデータモデル [は、双方向SSLが実装されたサーバー上のRESTful APIと統合できるようになりました](../../help/forms/using/configure-data-sources.md)。
 
-#### automated forms conversionサービス(6.5.6.0)の[!DNL Adobe Sign]テキストタグのサポートを追加しました。 {#sign-integration-acroform-afcs}
+#### automated forms conversionサービス(6.5.6.0)での[!DNL Adobe Sign]テキストタグのサポートを追加しました。 {#sign-integration-acroform-afcs}
 
 AcroFormsに[!DNL Adobe Sign]テキストタグが含まれる場合、それらのフィールドは認識され、 [!DNL Automated Forms Conversion service]を使用して変換されたアダプティブフォーム内の[!DNL Adobe Sign]フィールドとして表されます。 署名者は、アダプティブフォームの署名時に、このようなフィールドに入力できます。
 
-#### 色付きPDF formsのアダプティブフォーム(6.5.6.0)への変換のサポート{#colored-PDF-forms}
+#### カラーPDF formsのアダプティブフォームへの変換のサポート(6.5.6.0) {#colored-PDF-forms}
 
 [!DNL Automated Forms Conversion service]を使用して、色付きのPDF formsをアダプティブフォームに変換できます。
 
-#### SMB 2およびSMB 3プロトコル(6.5.6.0) {#smb-support}のサポート
+#### SMB 2およびSMB 3プロトコル(6.5.6.0)のサポート {#smb-support}
 
 [!DNL Experience Manager Forms] は、SMB 2およびSMB 3プロトコルをサポートするようになりました。
 
@@ -355,15 +329,15 @@ AcroFormsに[!DNL Adobe Sign]テキストタグが含まれる場合、それら
 
 アダプティブフォームURLで](../../help/forms/using/supporting-new-language-localization.md)の引数の代わりに、アダプティブフォームURLで[ロケールをセレクターとして指定できるようになりました。 変換済みのアダプティブフォームを[!DNL Experience Manager Dispatcher]上でキャッシュするのに役立ちます。 翻訳済みのアダプティブフォームのキャッシュは、以前のバージョンでは実行できませんでした。 アダプティブフォームURLでロケールをセレクターとして使用するためのキャッシュの設定について詳しくは、「[Dispatcher](../../help/forms/using/configure-adaptive-forms-cache.md)でのアダプティブフォームのキャッシュの設定」を参照してください。
 
-#### フォームデータモデルサービスの出力を変数(6.5.6.0)に保存する{#save-fdm-service-to-variable}
+#### フォームデータモデルサービスの出力を変数に保存する(6.5.6.0) {#save-fdm-service-to-variable}
 
 フォームデータモデルを使用すると、フォームデータモデルサービスの出力を変数に保存できます。 [!DNL Experience Manager Forms] では、フォームデータモデルサービスのタイプを変数のタイプに自動的にマッピングするようになりました。
 
-#### 添付ファイルコンポーネントに複数のファイルを添付する(6.5.6.0) {#attach-multiple-files}
+#### 添付ファイルコンポーネントの複数のファイルの添付(6.5.6.0) {#attach-multiple-files}
 
 複数のファイル](../../help/forms/using/introduction-forms-authoring.md)を、アダプティブフォームの[!UICONTROL 添付ファイル]コンポーネントに[添付できるようになりました。
 
-#### Adobe Experience Managerの受信トレイ列のカスタマイズ(6.5.5.0) {#customize-aem-inbox-columns}
+#### Adobe Experience Manager受信トレイ列のカスタマイズ(6.5.5.0) {#customize-aem-inbox-columns}
 
 [!DNL Experience Manager]インボックスをカスタマイズして、列のデフォルトのタイトルの変更、列の位置の並べ替え、ワークフローのデータに基づく追加の列の表示を行うことができます。 `administrators`または`workflow-administrators`グループのメンバーは、列をカスタマイズできます。 詳しくは、[管理コントロール](../sites-authoring/inbox.md#inbox-admin-control)を参照してください。
 
@@ -375,7 +349,7 @@ AcroFormsに[!DNL Adobe Sign]テキストタグが含まれる場合、それら
 
 ![ドラフトとして保存](assets/save-as-draft.gif)
 
-#### [!DNL Oracle WebLogic] アプリケーションサーバーのサポート(6.5.5.0)  {#weblogic-support}
+#### [!DNL Oracle WebLogic] アプリケーションサーバーのサポート(6.5.5.0) {#weblogic-support}
 
 Adobe Experience Manager Formsは、JEE上のAdobe Experience Manager Formsの[!DNL Oracle WebLogic 12]のサポートを追加しました。 以前のバージョンからアップグレードするか、[!DNL Oracle WebLogic] 12.2.1.4以降でJEEサーバー上の新しいExperience Manager6.5 Formsを設定します。 後で、マイナーバージョンの変更に対応します。12.2.1.xのxはバージョン番号に置き換えられます。
 
@@ -389,7 +363,7 @@ Adobe Experience Manager Formsには、次のアクセシビリティの強化�
 
 * アダプティブフォームにいくつかの必須フィールドがある場合、ARIAアクセシビリティスキーマのそのようなフィールドに対して、mandatory属性は`True`に設定されます。
 
-#### フォームデータモデル(6.5.5.0)のSOAPベースWebサービス用のX-509証明書ベースの認証{#x509-based-authentication-soap}
+#### フォームデータモデル(6.5.5.0)のSOAPベースWebサービス用のX-509証明書ベースの認証 {#x509-based-authentication-soap}
 
 フォームデータモデルで、SOAP Webサービスをデータソースとして使用する際に、X-509証明書ベースの認証がサポートされるようになりました。 詳しくは、[SOAP Webサービスの設定](../forms/using/configure-data-sources.md#configure-soap-web-services)を参照してください。
 
@@ -399,19 +373,19 @@ Adobe Experience Manager Formsには、次のアクセシビリティの強化�
 
 * [!DNL Oracle Real Applications Cluster (RAC) 19c]のサポートを追加しました。
 
-#### FormsExperience Manager(6.5.4.0)で印刷可能な出力を生成する{#generate-printable-output}
+#### FormsExperience Managerでの印刷可能な出力の生成(6.5.4.0) {#generate-printable-output}
 
 印刷可能な出力を生成ワークフローステップでは、ソーステンプレートファイルをデータファイルと統合できます。 この統合により、テンプレートファイルの別のコピーを印刷または保存できます。 このステップは、PCL、PostScript、ZPL、IPL、TPCL、またはDPL出力を生成します。 この機能について詳しくは、[OSGi上のForms中心型ワークフロー — ステップリファレンス](../forms/using/aem-forms-workflow-step-reference.md)を参照してください。
 
 ![印刷可能な出力を生成](assets/generate-print-output-step.gif)
 
-#### レイアウトモード(6.5.4.0) {#multi-column-adaptive-forms}でのアダプティブフォームとインタラクティブ通信の複数列サポート
+#### レイアウトモード(6.5.4.0)でのアダプティブフォームとインタラクティブ通信の複数列サポート {#multi-column-adaptive-forms}
 
 アダプティブフォームおよびインタラクティブ通信で、パネルの列数を定義できるようになりました。 新しい複数列オプションを使用するには、レイアウトモードに切り替えます。 詳しくは、[レイアウトモードを使用したコンポーネントのサイズ変更](../forms/using/resize-using-layout-mode.md)を参照してください。
 
 ![複数列レイアウト](assets/multi-column-layout.gif)
 
-#### Experience Manager受信ボックスのカスタマイズ(6.5.4.0) {#aem-inbox}
+#### Experience Managerインボックスのカスタマイズ(6.5.4.0) {#aem-inbox}
 
 新しい「管理コントロール」オプションでは、管理者は次の操作を実行できます。
 
@@ -421,7 +395,7 @@ Adobe Experience Manager Formsには、次のアクセシビリティの強化�
 
 「管理コントロール」オプションは、`administrators`または`workflow-administrators`グループのメンバーにのみ表示されます。 この機能について詳しくは、[インボックス](../sites-authoring/inbox.md)を参照してください。
 
-#### HTML5フォーム(6.5.4.0)でのリッチテキストのサポート{#rich-text-support}
+#### HTML5フォームでのリッチテキストのサポート(6.5.4.0) {#rich-text-support}
 
 XFAフォームのテキストフィールドをHTML5フォームのリッチテキストフィールドに変換します。 詳しくは、「[HTML5フォーム用のフォームテンプレートのデザイン](../forms/using/designing-form-template.md)」を参照してください。
 
@@ -433,22 +407,22 @@ Experience ManagerFormsのアクセシビリティが次のように強化され
 
 * アダプティブフォームの各ページに、1つのタイトルと1つのメインランドマークラベルが含まれるようになりました。
 
-#### Experience ManagerのFormsユーザー(6.5.3.0)の受信ボックス項目へのアクセス権を共有し、要求します{#share-request-access}
+#### Experience ManagerのFormsユーザーのインボックス項目へのアクセス権を共有し、要求する(6.5.3.0) {#share-request-access}
 
 インボックスの項目を別のユーザーと共有できます。 別のユーザーが受信トレイ項目にアクセスできるようになると、ユーザーは共有項目に対して適切なアクションを実行できます。 同様に、他のユーザーからインボックス項目へのアクセスをリクエストすることもできます。[ユーザーのインボックス項目へのアクセス権を共有して要求する](../forms/using/configure-shared-queues-osgi.md)を参照してください。
 
-#### Experience ManagerのFormsユーザー(6.5.3.0)の受信トレイ項目の不在設定を行います{#configure-out-of-office}
+#### Experience ManagerFormsユーザー(6.5.3.0)のインボックス項目に対する不在設定の指定 {#configure-out-of-office}
 
 不在にする予定がある場合は、その期間に割り当てられる項目に対して実行する操作を指定できます。不在設定が有効になる開始日時および終了日時を指定するオプションがあります。すべてのアイテムを送信する既定のユーザーを設定できます。 [「不在設定の構成](../forms/using/configure-out-of-office-settings.md)」を参照してください。
 
-#### FormsExperience Manager(6.5.3.0)用のBatch APIを使用して複数のインタラクティブ通信を生成する{#generate-multiple-ic}
+#### FormsExperience Manager(6.5.3.0)用のBatch APIを使用して複数のインタラクティブ通信を生成する {#generate-multiple-ic}
 
 Batch APIを使用すると、テンプレートから複数のインタラクティブ通信を作成できます。 テンプレートは、データのないインタラクティブ通信です。 Batch APIは、データとテンプレートを組み合わせて、インタラクティブ通信を作成します。 このAPIは、インタラクティブ通信を大量に生産する際に役立ちます。 例えば、電話料金、複数の顧客のクレジットカード明細などです。 [Batch API](../forms/using/generate-multiple-interactive-communication-using-batch-api.md)を使用した複数のインタラクティブ通信の生成を参照してください。
 
 <!-- TBD: Check if the wider team released anything in FY21.
 -->
 
-## [!DNL Adobe Experience Manager] 6.5 SP8 {#key-releases-since-last-sp}以降の主なリリース
+## [!DNL Adobe Experience Manager] 6.5 SP8以降の主なリリース {#key-releases-since-last-sp}
 
 2021年2月25日～ 2021年5月27日に、Adobeはサービスパックに加えて、以下をリリースしました。
 
