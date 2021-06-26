@@ -11,14 +11,14 @@ docset: aem65
 feature: インタラクティブ画像
 role: Business Practitioner, Administrator
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '4291'
-ht-degree: 69%
+source-wordcount: '4284'
+ht-degree: 67%
 
 ---
 
-# インタラクティブ画像 {#interactive-images}
+# インタラクティブ画像{#interactive-images}
 
 「ショッパブル」ホットスポットを画像にドラッグ&amp;ドロップすることで、静的画像をリッチで魅力的なエクスペリエンスを簡単に作成できます。ショッパブルホットスポットは、製品やサービスに関する追加情報と、直接販売時点管理機能の「買い物かごに追加」または「購入」機能を組み合わせます。顧客は、これらのホットスポットをタップまたはクリックして、製品やサービスに直接リンクしたり、買い物かごに追加したり、Webページにリンクしたりできます。 このような直接的なエクスペリエンスにより、Webサイトでの顧客エンゲージメントやコンバージョンが増加します。
 
@@ -49,24 +49,23 @@ ht-degree: 69%
 1. **（オプション）ホットスポットの変数の識別**  -Experience ManagerのアセットとDynamic Mediaをスタンドアロンで使用する場合は、まず既存のクイックビュー実装で使用されている動的変数を識別します。次に、インタラクティブ画像を作成する際に、ホットスポットデータを入力できます。 [（オプション）ホットスポットの変数の識別](#optional-identifying-hotspot-variables)を参照してください。ただし、Adobe Experience Manager Sites、Adobe Experience Manager eコマース、またはその両方を使用する場合、この手順は必要ありません。
 [Experience Managerアセットのeコマースの概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
 
-1. **（オプション）インタラクティブ画像ビューアプリセットの作成** - ホットスポットを表すために使用するグラフィック画像をカスタマイズします。独自のインタラクティブ画像ビューアプリセットの作成は、標準提供のインタラクティブ画像ビューアプリセット `Shoppable_Banner` を使用する場合には必要ありません。[（オプション）インタラクティブ画像ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)を参照してください。
+1. **（オプション）インタラクティブ画像ビューアプリセットの作成**  — ホットスポットを表すために使用するグラフィック画像をカスタマイズします。独自のインタラクティブ画像ビューアプリセットの作成は、標準提供のインタラクティブ画像ビューアプリセット `Shoppable_Banner` を使用する場合には必要ありません。[（オプション）インタラクティブ画像ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)を参照してください。
 
-1. **画像バナーのアップロード** - インタラクティブとして設定する画像バナーをアップロードします。
-[画像バナーのアップロード](#uploading-an-image-banner)を参照してください。
+1. **画像バナーをアップロード**  — インタラクティブにする画像バナーをアップロードします。[画像バナーのアップロード](#uploading-an-image-banner)を参照してください。
 
-1. **画像バナーへのホットスポットの追加** - 1 つ以上のホットスポットを画像バナーに追加し、それぞれにアクション（ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなど）を関連付けます。ホットスポットを追加した後は、インタラクティブ画像を公開するとタスクが終了します。
+1. **画像バナーへのホットスポットの追加**  — 画像バナーに1つ以上のホットスポットを追加し、それぞれにアクション（ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなど）を関連付けます。ホットスポットを追加した後は、インタラクティブ画像を公開するとタスクが終了します。
 
    * [画像バナーへのホットスポットの追加](#adding-hotspots-to-an-image-banner)を参照してください。
    * [（オプション）インタラクティブ画像のプレビュー](#optional-previewing-interactive-images)を参照してください。必要に応じて、ショッパブルバナーの表示を確認して、インタラクティビティをテストすることができます。
    * インタラクティブ画像アセットの公開方法について詳しくは、[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
-1. **WebサイトまたはExperience Manager内のWebサイトへのインタラクティブ画像の追加**  -Experience Managerサイトまたはeコマース（またはその両方）を使用している場合、Experience ManagerでWebページにインタラクティブ画像を追加できます。インタラクティブメディアのコンポーネントを Web ページにドラッグします。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+1. **Webサイトへのインタラクティブ画像の追加**  -Experience Managerサイトまたはeコマース（またはその両方）を使用している場合は、Experience ManagerでWebページにインタラクティブ画像を追加できます。インタラクティブメディアのコンポーネントを Web ページにドラッグします。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 
    Experience ManagerアセットとDynamic Mediaをスタンドアロンで使用する場合は、埋め込みコードをWebサイトにコピーしてから、既存のクイックビューに統合する必要があります。 [インタラクティブ画像の Web サイトへの統合](#integrating-an-interactive-image-with-your-website)を参照してください。
 
    サードパーティのWCM(Web Content Manager)を使用している場合は、新しいインタラクティブビデオを、Webサイトで使用されている既存のクイックビュー実装に統合する必要があります。 [インタラクティブ画像の既存のクイックビューへの統合](#integrating-an-interactive-image-with-an-existing-quickview)を参照してください。
 
-## （オプション）ホットスポットの変数の識別 {#optional-identifying-hotspot-variables}
+## （オプション）ホットスポットの変数の識別  {#optional-identifying-hotspot-variables}
 
 >[!NOTE]
 >
@@ -162,14 +161,14 @@ Experience Managerアセットのバナー画像にホットスポットを追�
 
 このデモ Web ページにはいくつかの製品サムネールがあり、それぞれのサムネールには、「See More」というラベルの付いたクイックビューボタンが用意されています。Web ブラウザーのデバッグツールをアクティブにしたまま各ボタンをクリックし、記録されたクイックビュー URL に注目してください。そのページの 4 つの製品クイックビューのすべてをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが作成されます。
 
-* `/datafeed/Men-Windbreaker.json`
-* `/datafeed/Men-SimpleHenley.json`
-* `/datafeed/Men-CamoPullover.json`
-* `/datafeed/Women-QuiltedDownJacket.json`
+* `/datafeed/Male-Windbreaker.json`
+* `/datafeed/Male-SimpleHenley.json`
+* `/datafeed/Male-CamoPullover.json`
+* `/datafeed/Female-QuiltedDownJacket.json`
 
 サーバー呼び出しを見ると、製品固有の情報がリクエストパスにのみ存在することがわかります。 また、クエリ文字列がまったく使用されていないこと、2 つの異なるタイプのデータが含まれることもわかります。
 
-* 最初のタイプは Men または Women です。これは「製品カテゴリ」と呼ばれます。
+* 1つ目のタイプは「男性」または「女性」です。 これは「製品カテゴリ」と呼ばれます。
 * 2 つ目のタイプは製品名（CamoPullover など）です。この情報が製品のSKUであると想定できます。
 
 この情報に基づいて、全体的なクイックビュー URL は次のようなパターンであることがわかります。
@@ -180,7 +179,7 @@ Experience Managerアセットのバナー画像にホットスポットを追�
 
 これで、Experience Managerアセットのショッパブルインタラクティブ画像機能を使用して、画像バナーをアップロードし、ホットスポットを追加する準備が整いました。
 
-## （オプション）インタラクティブ画像ビューアプリセットの作成{#optional-creating-an-interactive-image-viewer-preset}
+## （オプション）インタラクティブ画像ビューアプリセットの作成 {#optional-creating-an-interactive-image-viewer-preset}
 
 Experience Managerアセットに付属する、デフォルトの標準提供インタラクティブ画像ビューアプリセット(`Shoppable_Banner`)を使用するように選択できます。 または、インタラクティブ画像で使用するために独自のカスタムビューアプリセットを作成できます。
 
@@ -212,7 +211,7 @@ Experience Managerアセットに付属する、デフォルトの標準提供�
 
    これで、画像バナーをアップロードできるようになりました。
 
-## 画像バナーのアップロード  {#uploading-an-image-banner}
+## 画像バナーのアップロード {#uploading-an-image-banner}
 
 使用する画像を既にアップロードしている場合は、次の手順（[画像バナーへのホットスポットの追加](#adding-hotspots-to-an-image-banner)）に進んでください。
 
@@ -224,7 +223,7 @@ Experience Managerアセットに付属する、デフォルトの標準提供�
 
    これで、画像バナーにホットスポットを追加する準備が整いました。この後のタスクを参照してください。
 
-## 画像バナーへのホットスポットの追加  {#adding-hotspots-to-an-image-banner}
+## 画像バナーへのホットスポットの追加 {#adding-hotspots-to-an-image-banner}
 
 ホットスポット管理ページのエディターを使用して、画像バナーにホットスポットを追加できます。
 
@@ -280,7 +279,7 @@ Experience Managerアセットに付属する、デフォルトの標準提供�
 
          * [ホットスポット変数の識別](#optional-identifying-hotspot-variables)を参照してください。これらの変数を定義する必要があります。
          * 次に、SKU 値を手動で入力します。「SKU 値」テキストフィールドに、製品の SKU（Stock Keeping Unit）を入力します。SKU は、提供している製品またはサービスごとの一意の識別子です。入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
-         * （オプション）クイックビュー内で製品をさらに識別するために使用する必要がある他の変数がある場合は、「**[!UICONTROL 汎用変数を追加]**」をタップします。 テキストフィールドに追加の変数を指定します。例えば、追加の変数として `category=Mens` などと指定します。
+         * （オプション）クイックビュー内で製品をさらに識別するために使用する必要がある他の変数がある場合は、「**[!UICONTROL 汎用変数を追加]**」をタップします。 テキストフィールドに追加の変数を指定します。例えば、追加の変数として `category=Males` などと指定します。
    * 「**[!UICONTROL ハイパーリンク]**」をタップします。
 
       * Sitesのユーザーである場合は、Experience Managerセレクターアイコン（フォルダー）をタップまたはクリックしてURLに移動します。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
@@ -314,7 +313,7 @@ Experience Managerアセットに付属する、デフォルトの標準提供�
    >[!NOTE]
    ホットスポットを含むインタラクティブ画像を編集しているときに、画像を切り取ると、ホットスポットは削除されます。
 
-### （オプション）インタラクティブ画像のプレビュー  {#optional-previewing-interactive-images}
+### （オプション）インタラクティブ画像のプレビュー {#optional-previewing-interactive-images}
 
 プレビューを使用して、顧客に対するインタラクティブ画像の表示を確認したり、画像のホットスポットをテストして動作が期待どおりであることを確認したりできます。
 
@@ -349,7 +348,7 @@ Sitesのユーザーである場合は、Experience Managerメディアコンポ
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
 
-3 人の男性の写真には次のような静的 `IMG` タグが使用されています。
+3人の雄の写真は静的な`IMG`タグです。
 
 ```xml
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
@@ -370,7 +369,7 @@ Sitesのユーザーである場合は、Experience Managerメディアコンポ
 
 これで、インタラクティブ画像を Web サイト上の既存のクイックビューに統合できるようになりました。
 
-## インタラクティブ画像の既存のクイックビューへの統合  {#integrating-an-interactive-image-with-an-existing-quickview}
+## インタラクティブ画像の既存のクイックビューへの統合 {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
 このタスクはスタンドアロン Adobe Experience Manager Assets のユーザーにのみ当てはまります。
