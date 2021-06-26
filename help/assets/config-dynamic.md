@@ -1,6 +1,7 @@
 ---
 title: Dynamic Media - ハイブリッドモードの設定
 description: Dynamic Media - ハイブリッドモードの設定方法を学習します。
+mini-toc-levels: 3
 uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,10 +13,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: Business Practitioner, Administrator
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 設定，ハイブリッドモード
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 48463a72108621e94f1c50cf43f911794ec759dd
 workflow-type: tm+mt
-source-wordcount: '7843'
-ht-degree: 40%
+source-wordcount: '7838'
+ht-degree: 39%
 
 ---
 
@@ -187,23 +188,23 @@ Dynamic Mediaを有効にするには、コマンドラインまたはクイッ�
 
    これらのログは、Dynamic Media が有効の場合のみ使用されます。これらは、`system/console/status-Bundlelist`ページから生成される&#x200B;**Download Full**&#x200B;パッケージには含まれません。Dynamic Mediaに関する問題がある場合は、カスタマーサポートに連絡する際に、これらのログを両方とも問題に追加します。
 
-### Experience Managerを別のポートまたはコンテキストパスにインストールした場合… {#if-you-installed-aem-to-a-different-port-or-context-path}
+### Experience Managerを別のポートまたはコンテキストパスにインストールした場合 {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-[Experience Managerをアプリケーションサーバー](/help/sites-deploying/application-server-install.md)にデプロイし、Dynamic Mediaを有効にする場合は、Externalizerで&#x200B;**self**&#x200B;ドメインを設定する必要があります。 そうしないと、アセットのサムネールの生成がDynamic Mediaアセットに対して正しく機能しません。
+アプリケーションサーバー](/help/sites-deploying/application-server-install.md)に[Experience Managerをデプロイし、Dynamic Mediaを有効にしている場合は、Externalizerで&#x200B;**self-domain**&#x200B;を設定する必要があります。 そうしないと、アセットのサムネールの生成がDynamic Mediaアセットに対して正しく機能しません。
 
-さらに、異なるポートまたはコンテキストパスで quickstart を実行する場合、**self** ドメインを変更する必要もあります。
+また、別のポートやコンテキストパスでquickstartを実行する場合は、**self-domain**&#x200B;も変更する必要があります。
 
 ダイナミックメディアが有効の場合、画像アセットの静的サムネールレンディションがダイナミックメディアを使用して生成されます。サムネールの生成がDynamic Mediaで正しく機能するには、Experience Managerが自身に対してURLリクエストを実行し、ポート番号とコンテキストパスの両方を認識する必要があります。
 
 Experience Manager:
 
-* [Externalizer](/help/sites-developing/externalizer.md) の **self** ドメインがポート番号とコンテキストパスの両方を取得するために使用されます。
-* **self**&#x200B;ドメインが設定されていない場合、ポート番号とコンテキストパスがJetty HTTPサービスから取得されます。
+* [externalizer](/help/sites-developing/externalizer.md)の&#x200B;**self-domain**&#x200B;は、ポート番号とコンテキストパスの両方を取得するために使用されます。
+* **self-domain**&#x200B;が設定されていない場合、ポート番号とコンテキストパスがJetty HTTPサービスから取得されます。
 
-Experience ManagerのQuickStart WARデプロイメントでは、ポート番号とコンテキストパスを導き出すことはできないので、**self**&#x200B;ドメインを設定する必要があります。 **self** ドメインの設定方法については、[Externalizer のドキュメント](/help/sites-developing/externalizer.md)を参照してください。
+Experience ManagerのQuickStart WARデプロイメントでは、ポート番号とコンテキストパスを導き出すことはできないので、**自己ドメイン**&#x200B;を設定する必要があります。 **self-domain**&#x200B;の設定方法については、[externalizerのドキュメント](/help/sites-developing/externalizer.md)を参照してください。
 
 >[!NOTE]
-[Experience Managerクイックスタートのスタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、**self**&#x200B;ドメインは通常、設定する必要はありません。これは、ポート番号とコンテキストパスを自動設定できるからです。 ただし、すべてのネットワークインターフェイスがオフになっている場合は、**self**&#x200B;ドメインを設定する必要があります。
+[Experience Managerクイックスタートのスタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、**自己ドメイン**&#x200B;は通常、ポート番号とコンテキストパスを自動設定できるので、設定する必要はありません。 ただし、すべてのネットワークインターフェイスがオフになっている場合は、**self-domain**&#x200B;を設定する必要があります。
 
 ## Dynamic Media の無効化  {#disabling-dynamic-media}
 
@@ -227,7 +228,7 @@ Dynamic Mediaを有効にした後で無効にするには、`-r dynamicmedia`�
    Dynamic Media実行モードが無効になると、`cqdam.pyramid.tiff`レンディションを生成するワークフロー手順は自動的にスキップされます。 また、動的レンディションのサポートやその他のDynamic Media機能も無効になります。
    また、Experience Managerサーバーを設定した後でDynamic Media実行モードが無効になった場合、その実行モードにアップロードされたすべてのアセットが無効になります。
 
-## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.5 にダウンタイムなしで移行{#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.5 にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 Experience Manager(Dynamic Media)を6.3から6.5にアップグレードする場合（ダウンタイムなしのデプロイメント機能を含むようになりました）、次のcurlコマンドを実行する必要があります。 このコマンドは、すべてのプリセットと設定をCRXDE Liteの`/etc`から`/conf`に移行します。
 
@@ -393,7 +394,7 @@ Replication test to s7delivery:https://<localhost>:8580/is-publish/
 **解決方法：**
 パスワードを確認してください。レプリケーションエージェントに保存されたパスワードがキーストアの作成に使用されたパスワードと同じでありません。
 
-#### 問題：InvalidAlgorithmParameterException  {#problem-invalidalgorithmparameterexception}
+#### 問題：InvalidAlgorithmParameterException {#problem-invalidalgorithmparameterexception}
 
 この問題は、Experience Managerオーサーインスタンスの設定エラーが原因で発生します。 オーサー上のJava™プロセスが正しい`javax.net.ssl.trustStore`を取得していません。 このエラーは次のレプリケーションログで確認できます。
 
@@ -498,7 +499,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 アセットが配信されたことをテストするもう 1 つの方法は、URL に req=exists を追加することです。
 
-## Dynamic Media クラウドサービスの設定  {#configuring-dynamic-media-cloud-services}
+## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
 
 Dynamic MediaCloud Serviceは、画像やビデオ、ビデオ分析、ビデオエンコーディングなどのハイブリッド公開および配信をサポートします。
 
@@ -547,7 +548,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 1. パッケージをビルドします。
 1. ビデオ分析プリセットパッケージを後続の新しいオーサーノードで共有できるように、パッケージをダウンロードまたは共有します。
 
-### 追加のオーサーノードを設定する前にビデオ分析プリセットパッケージをインストールする{#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### 他のオーサーノードを設定する前にビデオ分析プリセットパッケージをインストールする {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 このタスクは必ず、Dynamic Media 設定（6.3 以前）を設定する「前」に実行してください。******&#x200B;そうしないと、別の未使用レポートスイートが作成されます。 また、ビデオレポートが正しく機能し続ける場合でも、データの収集は最適化されません。
 
@@ -557,7 +558,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 1. ビデオ分析プリセットパッケージをインストールします。
 1. Dynamic Media 設定（6.3 以前）を設定します。
 
-### パッケージインストールの確認やデバッグ  {#verifying-and-debugging-the-package-installation}
+### パッケージインストールの確認やデバッグ {#verifying-and-debugging-the-package-installation}
 
 1. 以下のいずれかをおこなってパッケージのインストールを確認し、必要に応じてそのデバッグをおこないます。
 
@@ -603,7 +604,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 
    このエラーは、Dynamic Media 設定（6.3 以前）サービスの設定前にビデオレポートが実行された場合にも表示されます。
 
-### ビデオレポートの設定のトラブルシューティング  {#troubleshooting-the-video-reporting-configuration}
+### ビデオレポートの設定のトラブルシューティング {#troubleshooting-the-video-reporting-configuration}
 
 * インストール中に Analytics API サーバーへの接続がタイムアウトすることがあります。インストール中に接続が 20 回再試行されますが、それでも失敗します。この状況が発生すると、ログファイルに複数のエラーが記録されます。`SiteCatalystReportService` を検索。
 * 最初に分析プリセットパッケージをインストールしないと、新しいレベルスイートが作成されてしまう可能性があります。
@@ -637,7 +638,7 @@ JCRを通じて、設定プロセスの一環として独自のデフォルト�
 1. 「**[!UICONTROL レプリケーション]**」タブをタップします。
 1. 「**[!UICONTROL 複製]**」をタップします。
 
-## ビューアプリセットのレプリケート  {#replicating-viewer-presets}
+## ビューアプリセットのレプリケート {#replicating-viewer-presets}
 
 ビューアプリセットを使用して&#x200B;*アセットを配信するには、ビューアプリセットをレプリケート/公開*&#x200B;する必要があります。 (URLを取得したりアセットのコードを埋め込んだりするには、すべてのビューアプリセットをアクティベート&#x200B;*および*をレプリケートする必要があります。
 詳しくは、[ビューアプリセットの公開](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)を参照してください。
@@ -661,7 +662,7 @@ Dynamic Media以外のデプロイメントでは、Experience Managerオーサ�
 
 ### レプリケーション用のデフォルトのアセットフィルターの使用 {#using-default-asset-filters-for-replication}
 
-実稼動環境でDynamic Media(1)の画像を使用している場合は&#x200B;**または**(2)の画像とビデオを使用している場合は、Adobeがそのまま提供するデフォルトのフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
+実稼動環境でDynamic Media(1)の画像処理に&#x200B;*または*(2)の画像処理とビデオ処理を使用する場合は、Adobeがそのまま提供するデフォルトのフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
 
 <table>
  <tbody>
@@ -963,7 +964,7 @@ Dynamic Media 画像サーバーを設定するには：
  </tbody>
 </table>
 
-## Dynamic Media カラーマネジメントの設定  {#configuring-dynamic-media-color-management}
+## Dynamic Media カラーマネジメントの設定 {#configuring-dynamic-media-color-management}
 
 Dynamic Mediaカラーマネジメントを使用すると、プレビュー用にアセットをカラー補正できます。
 
@@ -1091,11 +1092,11 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
  <tbody>
   <tr>
    <th><p>名前</p> </th>
-   <th><p>カラースペース</p> </th>
+   <th><p>色の間隔</p> </th>
    <th><p>説明</p> </th>
   </tr>
   <tr>
-   <td>AdobeRGB</td>
+   <td>Adobe RGB</td>
    <td>RGB</td>
    <td>Adobe RGB(1998)</td>
   </tr>
@@ -1137,12 +1138,12 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
   <tr>
    <td>EuroscaleCoated</td>
    <td>CMYK</td>
-   <td>Euroscale Coated v2</td>
+   <td>Euro scale Coated v2</td>
   </tr>
   <tr>
    <td>EuroscaleUncoated</td>
    <td>CMYK</td>
-   <td>Euroscale Uncoated v2</td>
+   <td>ユーロスケール非コートv2</td>
   </tr>
   <tr>
    <td>JapanColorCoated</td>
@@ -1269,7 +1270,7 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
 * RGB出力を返す動的レンディションは、RGB出力をsRGBカラースペースで返します。
 * CMYK 出力を返す動的レンディションは、CMYK 出力を *WebCoated* カラースペース内で返します。
 
-## Delivering Assets {#delivering-assets}
+## アセットの配信 {#delivering-assets}
 
 上記のすべてのタスクが完了すると、アクティブ化されたDynamic Mediaアセットが画像またはビデオサービスから提供されます。 Experience Managerでは、この機能は、 **[!UICONTROL 画像のコピーURL]**、 **[!UICONTROL ビューアのコピーURL]**、 **[!UICONTROL ビューアコードの埋め込み]**&#x200B;およびWCMに表示されます。
 
@@ -1314,6 +1315,6 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
  </tbody>
 </table>
 
-### WCM の Dynamic Media コンポーネントとインタラクティブメディアコンポーネント  {#wcm-dynamic-media-and-interactive-media-components}
+### WCM の Dynamic Media コンポーネントとインタラクティブメディアコンポーネント {#wcm-dynamic-media-and-interactive-media-components}
 
 Dynamic Media コンポーネントとインタラクティブメディアコンポーネントを参照する WCM ページは、配信サービスを参照します。
