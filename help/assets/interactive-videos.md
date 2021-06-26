@@ -11,14 +11,14 @@ docset: aem65
 feature: インタラクティブビデオ
 role: Business Practitioner, Administrator
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 3110c1d4424179dbc9eda9e07cf3353c4b4bb4b0
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '6014'
+source-wordcount: '6013'
 ht-degree: 81%
 
 ---
 
-# インタラクティブビデオ {#interactive-videos}
+# インタラクティブビデオ{#interactive-videos}
 
 インタラクティブビデオ（ショッパブルビデオとも呼ばれます）を簡単に作成して、ビデオから直接コンバージョンを促すことができます。 ビデオに対する顧客エンゲージメントは、ビデオプレーヤーの隣のパネルで行われ、関連するサービス、情報または製品のサムネールが、ビデオの特集に基づいてスクロール表示されます。顧客はサムネールをタップして、サービスを直接参照したり、買い物かごに商品を追加して即時に購入したり、Web ページを参照して詳細を確認したりできます。
 
@@ -26,7 +26,7 @@ ht-degree: 81%
 
 [インタラクティブ画像](/help/assets/interactive-images.md)も参照してください。
 
-## インタラクティブビデオの使用例  {#interactive-video-in-action}
+## インタラクティブビデオの使用例 {#interactive-video-in-action}
 
 インタラクティブでショッパブルなビデオを実際に確認するには、「[ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)」をクリックし、ページ上の「**[!UICONTROL ショッパブルメディア]**」見出しまでスクロールして、ショッパブルビデオをクリックします。
 
@@ -42,7 +42,7 @@ ht-degree: 81%
 >
 >ユーザーがサムネール画像をクリックしたときにWebページを起動するインタラクティブビデオを作成する場合、一部のデバイスでは、ポップアップWebページがブロックされて開かれません。 そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。例えば、Apple iPhone 6 では **[!UICONTROL 設定]**／**Safari**／**ポップアップブロック**&#x200B;をタップして、コントロールを&#x200B;**[!UICONTROL オフ]**&#x200B;にスライドします。こうすると、インタラクティブビデオを再生してサムネールをクリックしたときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
 
-### インタラクティブビデオの作成方法を見る  {#watch-how-interactive-videos-are-created}
+### インタラクティブビデオの作成方法を見る {#watch-how-interactive-videos-are-created}
 
 [インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)（7分30秒）の説明を再生します。
 このビデオガイドの対象はAssets on Demandですが、原則や手順はAdobe Experience Manager Assetsのインタラクティブビデオにも適用されます。
@@ -84,7 +84,7 @@ ht-degree: 81%
 埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。サードパーティのWCM(Web Content Manager)を使用している場合は、新しいインタラクティブビデオを、Webサイトで使用されている既存のクイックビュー実装に統合する必要があります。 [インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
    [ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
-## （オプション）クイックビュー変数の特定 {#optional-identifying-quickview-variables}
+## （オプション）クイックビュー変数の特定  {#optional-identifying-quickview-variables}
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 これで、ビデオおよび関連するサムネールアセットをアップロードできます。
 
-## （オプション）インタラクティブビデオのビューアプリセットの作成  {#optional-creating-an-interactive-video-viewer-preset}
+## （オプション）インタラクティブビデオのビューアプリセットの作成 {#optional-creating-an-interactive-video-viewer-preset}
 
 デフォルトの標準提供インタラクティブビデオビューアプリセットタイプ`Shoppable_Video_dark`または`Shoppable_Video_light`を使用する予定がある場合は、このタスクをスキップして次に進むことができます。
 
@@ -700,7 +700,7 @@ var inner_container = document.getElementById(sdkContainerId);
 
 実際にモーダルダイアログボックス要素を探して前述のコンテナにアタッチする手順は、ケースごとに異なります。ここでも、必要なクイックビュー実装に詳しいフロントエンド開発者の助けを借りることをお勧めします。
 
-サンプル Web サイトの場合、クイックビューモーダルダイアログボックスは `DIV` として実装され、クイックビューモーダル ID がドキュメント `BODY` に直接アタッチされています。このため、このダイアログをビューアのコンテナに移動するコードは、次のとおり単純です。
+サンプルWebサイトを使用する場合、クイックビューモーダルダイアログボックスは`DIV`として実装され、クイックビューモーダルIDがドキュメント`BODY`に直接アタッチされます。 このため、このダイアログをビューアのコンテナに移動するコードは、次のとおり単純です。
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -755,6 +755,6 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
-## クイックビュー{#using-quickviews-to-create-custom-pop-ups}を使用したカスタムポップアップの作成
+## クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
 
 [クイックビューを使用したカスタムポップアップの作成](/help/assets/custom-pop-ups.md)を参照してください。
