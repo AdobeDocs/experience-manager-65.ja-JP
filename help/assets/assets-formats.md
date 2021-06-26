@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: Business Practitioner, Administrator
 feature: アセット管理，レンディション
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1581'
 ht-degree: 60%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 60%
 
 ## サポートされる3D形式 {#support-3d-formats}
 
-次の 3D 形式のリストがサポートされています。
+次の3D形式のリストがサポートされています。
 
 [Dynamic Media での 3D アセット操作](/help/assets/assets-3d.md)も参照してください。
 
@@ -89,7 +89,7 @@ ht-degree: 60%
 
 ## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
-次のリストは、Dynamic Mediaでサポートされていない&#x200B;**&#x200B;ラスターイメージファイル形式のサブタイプを示しています。
+次のリストは、Dynamic Mediaでサポートされていない&#x200B;**&#x200B;ラスター画像ファイル形式のサブタイプを示しています。
 
 [Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)でサポートされていないファイル形式の検出も参照してください。
 
@@ -130,13 +130,13 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 ## サポートされる画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
-Adobe画像トランスコーディングライブラリは、エンコーディング、トランスコーディング、再サンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
+アドビの画像トランスコーディングライブラリは、エンコーディング、トランスコーディング、リサンプリング、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
 
 画像トランスコーディングライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートします。
 
 [画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
 
-## サポートされるCamera Raw {#supported-camera-raw}
+## サポート対象の Camera Raw {#supported-camera-raw}
 
 [!DNL Adobe Camera Raw]ライブラリを使用して、[!DNL Assets]は生の画像を取り込むことができます。 [Camera Raw的なサポート](camera-raw.md)を参照してください。
 
@@ -211,10 +211,10 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 | MP4 | MPEG-4 | H264/AVC（すべてのプロファイル） | - |
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV（DV25）、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
 | FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（ベクターアニメーションファイル） |
-| WMV | Windows Media 9 | WMV3（v9）、WMV2（v8）、WMV1（v7）、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft Screen（MSS2）、Microsoft Photo Story（WVP2） |
+| WMV | Windows Media 9 | WMV3（v9）、WMV2（v8）、WMV1（v7）、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft® Screen (MSS2)、Microsoft® Photo Story (WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
 | M4V | Apple iTunes | H264/AVC | - |
-| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV（DV25）、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3（IV30）、MJPEG、Microsoft Video 1（MS-CRAM） |
+| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV（DV25）、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV、OGG | Ogg | Theora、VP3、Dirac | - |
 | MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
@@ -251,13 +251,13 @@ Adobe画像トランスコーディングライブラリは、エンコーディ
 
 >[!NOTE]
 >
->JavaScriptファイルのアップロードと配布は安全である場合とそうでない場合があります。 必要に応じて、オーバーレイを使用して、ユーザーがJSファイルをアップロードできないようにできます。
+>JavaScriptファイルのアップロードと配布は安全である場合とそうでない場合があります。 必要に応じて、オーバーレイを使用して、ユーザーがJSファイルをアップロードできないようにすることができます。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
 デフォルトでは、[!DNL Experience Manager]はファイル拡張子を使用してファイルの種類を検出します。 [!DNL Experience Manager] は、ファイルの内容からこれを検出できます。後者の場合は、[!DNL Experience Manager] Webコンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
 
-サポートされるMIMEタイプのリストは、`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`のCRXDE Liteで利用できます。
+サポートされているMIMEタイプのリストは、`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`のCRXDE Liteで入手できます。
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
