@@ -1,6 +1,7 @@
 ---
 title: Dynamic Media ビューアと Adobe Analytics および Experience Platform Launch の統合
 description: Experience Platform Launch用Dynamic Mediaビューア拡張機能は、Dynamic Mediaビューア5.13と共にAdobe Analyticsのお客様やPlatform launchが、Platform launch設定でDynamic Mediaビューアに固有のイベントとデータを使用できます。
+mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,7 +10,7 @@ docset: aem65
 feature: ビューア
 role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 22a181e77a563ee3590cd661507f4dfeaf9d14da
+source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
 workflow-type: tm+mt
 source-wordcount: '6616'
 ht-degree: 83%
@@ -18,7 +19,7 @@ ht-degree: 83%
 
 # Dynamic Media ビューアと Adobe Analytics および Experience Platform Launch の統合 {#integrating-dynamic-media-viewers-with-adobe-analytics-and-adobe-launch}
 
-## Adobe Analytics と Experience Platform Launch および Dynamic Media ビューアの統合とは {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
+## Adobe Analytics と Experience Platform Launch および Dynamic Media ビューアの統合とは  {#what-is-dynamic-media-viewers-integration-with-adobe-analytics-and-adobe-launch}
 
 <!-- Leave this hidden path here; it points to the topic source from Sasha https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=~oufimtse&title=Dynamic+Media+Viewers+integration+with+Adobe+Launch -->
 
@@ -54,7 +55,7 @@ Adobe Experience Manager AssetsとAdobe Experience Manager Sitesの両方を使�
 
 この統合では、*Adobe Analytics* と *Adobe Analytics for Audio and Video* という、2 種類の独立したタイプの Dynamic Media ビューアのトラッキングを利用します。
 
-### Adobe Analytics を使用したトラッキングについて {#about-tracking-using-adobe-analytics}
+### Adobe Analytics を使用したトラッキングについて   {#about-tracking-using-adobe-analytics}
 
 Adobe Analytics を使用すると、エンドユーザーが Web サイト上で Dynamic Media ビューアとやり取りしたときに実行したアクションを追跡できます。また、Adobe Analytics では、ビューア固有のデータも追跡できます。例えば、ビューの読み込みイベントを、アセット名や、発生したズーム操作、ビデオ再生操作などと共に追跡して記録できます。
 
