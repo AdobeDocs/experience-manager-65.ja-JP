@@ -5,10 +5,10 @@ contentOwner: AG
 role: Developer
 feature: 検索
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 124f44b7893631703b1bd79e5c78976463f01efc
+source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
 workflow-type: tm+mt
 source-wordcount: '839'
-ht-degree: 77%
+ht-degree: 74%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 77%
 
 プロパティ述語の作成手順
 
-1. プロジェクトディレクトリにコンポーネントフォルダーを作成します（**/apps/geometrixx/components/titlepredicate** など）。
+1. プロジェクトディレクトリにコンポーネントフォルダーを作成します（例： **/apps/weretail/components/titlepredicate**）。
 1. 次の **content.xml** を追加します。
 
    ```xml
@@ -152,7 +152,7 @@ ht-degree: 77%
 
 グループ述語の作成手順
 
-1. プロジェクトディレクトリにコンポーネントフォルダーを作成します（**/apps/geometrixx/components/picspredicate** など）。
+1. プロジェクトディレクトリにコンポーネントフォルダーを作成します（例： **/apps/weretail/components/picspredicate**）。
 1. 次の **content.xml** を追加します。
 
    ```xml
