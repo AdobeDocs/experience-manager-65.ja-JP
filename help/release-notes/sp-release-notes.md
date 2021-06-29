@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
+source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3837'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 4%
 
 [!DNL Adobe Experience Manager] 6.5.9.0で導入された主な機能と機能強化は次のとおりです。
 
-* [!DNL Experience Manager Sites] Dynamic Media Foundationコンポーネントで、レスポンシブな画像プリセットまたはスマート切り抜きを使用する際に、高解像度デバイスの最適化のオン/オフを切り替えることができるようになりました。
+* [!DNL Experience Manager Sites] Dynamic Media Foundationコンポーネントで、レスポンシブな画像プリセットまたはスマート切り抜きを使用する際に、高解像度のデバイス向けの最適化のオン/オフを切り替えることができるようになりました。
 
 * パフォーマンスを向上させるために、`hidden=false`条件をJCRクエリから[!UICONTROL QueryBuilder]エバリュエーターに移動します。 変更後に非表示の述語が機能していることを確認するために、[!DNL Experience Manager]は非表示のフォルダーが表示されていないことを確認します。
 
@@ -66,10 +66,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠した標準規格のOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および操作できます。
+>Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java™ SEに準拠した標準規格に準拠したOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および操作できます。
 >[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
 >[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
->oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
+>oracleJava™テクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java™]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
 
 [!DNL Experience Manager] 6.5.9.0リリースで提供された修正の一覧を以下に示します。
 
@@ -83,7 +83,7 @@ ht-degree: 4%
 
 * 別のサイズ変更されたレイアウトコンテナ内にネストされたレイアウトコンテナが子コンポーネントの列数を正しく表示しないため、これらのコンポーネントがグリッドに揃えられない(NPR-36359)。
 
-* 外部リンクチェッカーが、有効な外部リンクを無効なリンクとして表示する(NPR-36289)。
+* 外部リンクチェッカーは、有効な外部リンクを無効なリンクとして表示する(NPR-36289)。
 
 * しばらくの間、参照パネルがエラーメッセージを表示し始める(NPR-36167)。
 
@@ -91,7 +91,7 @@ ht-degree: 4%
 
 * （ロールアウト設定[!UICONTROL Blueprintのアクティベーションで有効化]と[!UICONTROL ブループリントのアクティベーションで無効化]を使用して）ライブコピーを同期しようとすると、同期が失敗し、`NullPointerException`がログに記録されます(NPR-36127)。
 
-* ユーザーがタグ（システムに存在しないタグ）のアドホックテキストを入力し、Enterキーを押すと、そのタグがフィールドの下に表示されますが、コンテンツフラグメントを保存して再び開くと、アドホックタグが消えます(NPR-36132)。
+* ユーザーがタグ（システムに存在しないタグ）の即席テキストを入力し、Enterキーを押すと、そのタグがフィールドの下に表示されますが、コンテンツフラグメントを保存して再び開くと、即席タグが消えます(NPR-36132)。
 
 * インボックスに、非同期操作のステータスを表示するオプションがない(NPR-36104)。
 
@@ -119,7 +119,7 @@ ht-degree: 4%
 
 * [!UICONTROL 作成]、[!UICONTROL 変更]、[!UICONTROL 名前]のいずれかのパラメーターに基づいて並べ替えられていないアセットを表示するには、[!DNL Adobe Experience Manager]「[!UICONTROL 並べ替え]」オプション内に「[!UICONTROL なし]」オプションを用意します。 「[!UICONTROL なし]」オプションを選択すると、Assetsユーザーインターフェイス（カード、列およびインサイト表示）のアセットがJCRノードに存在するのと同じ順序になります(NPR-36356)。
 
-* [!DNL Adobe Experience Manager]からのACP API応答で電子メールIDを小文字にするために、オプションの設定が導入されました。を使用します。 [!DNL Adobe Asset Link][!DNL Adobe Asset Link]パネルは、[!DNL Adobe Experience Manager]からのACP API応答を使用します(CQ-4317704)。
+* [!DNL Adobe Experience Manager]からのACP API応答で電子メールIDを小文字にするために、オプションの設定が導入されました。を使用します。 [!DNL Adobe Asset Link][!DNL Adobe Asset Link]パネルは、[!DNL Adobe Experience Manager]からACP API応答を使用します(CQ-4317704)。
 
 [!DNL Adobe Experience Manager] 6.5.9.0では、次のアクセシビリ [!DNL Assets] ティの強化がおこなわれています。
 
@@ -144,7 +144,7 @@ ht-degree: 4%
 
 * 小さな楕円を使用してアセットに注釈を付けると、楕円は印刷バージョンの注釈の数と重なります(NPR-36114)。
 
-* 列表示では、場合によっては、重複アセットがアップロードされたときに[!DNL Experience Manager]が重複アセットの競合を確認するメッセージを表示しないことがあります(NPR-36048)。
+* 列表示で、重複アセットがアップロードされたときに、[!DNL Experience Manager]が重複アセットの競合を確認するメッセージを表示しない場合があります(NPR-36048)。
 
 * リンクを共有ダイアログが開いていていて、変更が行われていない場合、閉じるボタンをクリックして閉じない(NPR-36030)。
 
@@ -194,6 +194,16 @@ ht-degree: 4%
 * 必須フィールドを示す視覚的なアスタリスクが画像セットエディターのアセットの「タイトル」フィールドに表示され、スクリーンリーダーがそのフィールドに必要な情報を読み上げるようになりました(CQ-4290712)。
 
 * スクリーンリーダーは、アセットの詳細ページで、ビューア内の様々なインタラクティブオプションの目的にアクセスし、説明できるようになりました(CQ-4290708)。
+
+[!DNL Dynamic Media]の既知のビデオ再生の問題：
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+
+* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 
 Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の問題が修正されました。
 
@@ -275,7 +285,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 ### [!DNL Communities] {#communities-6590}
 
-* スパムフィルタリングでは、システムがJavaヒープ領域の100%を消費し、Experience Managerサーバーが応答しなくなる(NPR-36316、NPR-36493)。
+* スパムフィルタリングでは、システムがJava™ヒープ領域の100%を消費し、Experience Managerサーバーが応答しなくなる(NPR-36316、NPR-36493)。
 * フォーラムで、`SearchCommentSocialComponentListProvider`からのJCRセッションデータが漏れ出している(NPR-36235)。
 * 特定のインボックスメッセージを開くと、不適切なページネーションおよびその他の問題が発生したすべてのメッセージが反映される(NPR-35917)。
 
@@ -310,7 +320,7 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 
 **ワークフロー**
 
-* JBoss上の[!DNL Experience Manager Forms]サービスのRESTエンドポイントを呼び出すと、[!DNL Experience Manager]に次のエラーメッセージが表示されます(NPR-36305)。
+* JBoss®上の[!DNL Experience Manager Forms]サービスのRESTエンドポイントを呼び出すと、[!DNL Experience Manager]に次のエラーメッセージが表示されます(NPR-36305)。
 
    ```TXT
    Invalid input. The maximum length of 2000 characters was exceeded.
@@ -400,7 +410,7 @@ B.パッケージマネージャーの[HTTP APIを使用します。](/help/site
 
 >[!NOTE]
 >
->AEM 6.5.9.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、AEM 6.5.9.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
+>Experience Manager6.5.9.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換性パッケージを使用し、Experience Manager6.5.9.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
 ### JEEへのAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
 
@@ -435,14 +445,14 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 
 ## 非推奨（廃止予定）の機能 {#removed-deprecated-features}
 
-[!DNL Experience Manager] 6.5.7.0で非推奨とマークされた機能の一覧を以下に示します。機能は、最初に廃止され、後で将来のリリースで削除されます。 通常は、代替オプションが提供されます。
+[!DNL Experience Manager] 6.5.7.0で非推奨とマークされた機能の一覧を以下に示します。機能は、最初に廃止され、後で将来のリリースで削除されます。 別のオプションが提供されます。
 
 機能または機能をデプロイメントで使用するかどうかを確認します。 また、別のオプションを使用するように実装を変更することを計画します。
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
 | 統合 | **[!UICONTROL AEMクラウドサービスのオプトイン]**&#x200B;画面は非推奨（廃止予定）となりました。 Experience Manager6.5でExperience ManagerとAdobe Targetの統合が更新され、AdobeIMSと[!DNL Adobe I/O]を介した認証を使用するAdobe Target Standard APIがサポートされるようになり、分析とパーソナライゼーション用のExperience Managerページを実装するためのAdobeLaunchの役割が増加しています。 | 各[!DNL Experience Manager]クラウドサービスを使用して、システム接続、AdobeIMS認証、および[!DNL Adobe I/O]統合を設定します。 |
-| コネクタ | Experience Manager6.5では、Microsoft SharePoint 2010およびMicrosoft SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
+| コネクタ | Experience Manager6.5では、Microsoft® SharePoint 2010およびMicrosoft® SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
 
