@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: end-user
 user-guide-title: AEM 6.5 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: 開発
 role: Developer
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
@@ -110,13 +110,13 @@ ht-degree: 81%
       + [AEM 向け SPA の開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
       + [SPA ページコンポーネント](spa-page-component.md)
-      + [SPA の動的モデルとコンポーネントのマッピング](spa-dynamic-model-to-component-mapping.md)
+      + [コンポーネントマッピングの動的モデル (SPA用)](spa-dynamic-model-to-component-mapping.md)
       + [SPA モデルルーティング](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
       + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
       + [RemotePage コンポーネント](spa-remote-page.md)
       + [AEM 内での外部 SPA の編集](spa-edit-external.md)
-      + [SPAの複合コンポーネント](spa-composite-component.md)
+      + [SPA の複合コンポーネント](spa-composite-component.md)
       + [SPA 参照資料](spa-reference-materials.md)
    + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
    + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
