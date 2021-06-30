@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: end-user
 user-guide-title: AEM 6.5 オーサリングユーザーガイド
 breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
 feature: オーサリング
 role: Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '299'
-ht-degree: 88%
+ht-degree: 87%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 88%
    + [検索](search.md)
    + [アカウント環境の設定](user-properties.md)
    + [インボックス](inbox.md)
-   + [コンソールのキーボードショートカット](keyboard-shortcuts.md)
+   + [キーボードショートカット コンソールの場合](keyboard-shortcuts.md)
    + [UI の選択](select-ui.md)
 + オーサリング {#authoring}
    + [オーサリング環境とツール](author-environment-tools.md)
