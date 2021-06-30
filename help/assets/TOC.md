@@ -1,12 +1,12 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Assets
+solution: Experience Manager, Experience Manager Assets, Experience Manager 6.5
 audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 59%
@@ -39,7 +39,7 @@ ht-degree: 59%
    + [Experience League 提供の Dynamic Media ニュースレター](dynamic-media-newsletter.md)
    + [Dynamic Media のセットアップ](administering-dynamic-media.md)
    + [Dynamic Media の操作](dynamic-media.md)
-   + [Dynamic Media - Scene7 モードの設定](config-dms7.md)
+   + [Dynamic Media の設定 - Scene7モード](config-dms7.md)
    + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
    + [Dynamic Media のアクセシビリティ](accessibility-dm.md)
@@ -51,7 +51,7 @@ ht-degree: 59%
    + [Dynamic Media 画像プリセットの管理](managing-image-presets.md)
    + [Dynamic Media 画像プリセットの適用](image-presets.md)
    + [Dynamic Media ビデオプロファイル](video-profiles.md)
-   + [Dynamic Media イメージプロファイル](image-profiles.md)
+   + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
    + [ページへのDynamic Media機能の追加](scene7.md)
@@ -63,7 +63,7 @@ ht-degree: 59%
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)
    + [スピンセット](spin-sets.md)
-   + [Dynamic Mediaのビデオ](video.md)
+   + [ビデオ Dynamic Media](video.md)
    + [カルーセルバナー](carousel-banners.md)
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
