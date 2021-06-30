@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites
+solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
 audience: admin-user
 user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: 管理
 role: Administrator
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 92%
@@ -22,7 +22,7 @@ ht-degree: 92%
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
    + [非同期ジョブ](asynchronous-jobs.md)
-   + [コンテンツの再利用：マルチサイトマネージャとライブコピー](msm.md)
+   + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
