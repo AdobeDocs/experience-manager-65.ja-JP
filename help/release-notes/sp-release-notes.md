@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
+source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
 workflow-type: tm+mt
-source-wordcount: '3837'
+source-wordcount: '3843'
 ht-degree: 4%
 
 ---
@@ -195,16 +195,6 @@ ht-degree: 4%
 
 * スクリーンリーダーは、アセットの詳細ページで、ビューア内の様々なインタラクティブオプションの目的にアクセスし、説明できるようになりました(CQ-4290708)。
 
-[!DNL Dynamic Media]の既知のビデオ再生の問題：
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
-
-* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
-
 Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の問題が修正されました。
 
 * [!DNL Dynamic Media]が選択的にアクティブ化され、[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)によって無効化されている場合、カスタムのビューアプリセットとCSSが[!DNL Dynamic Media]に複製されない(NPR-36232)。
@@ -224,6 +214,16 @@ Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の
 * [!DNL Dynamic Media]設定が有効になっていないフォルダーパスに対しては、[!DNL Dynamic Media]モードで[!DNL Experience Manager]インスタンスが設定されている場合でも、ビデオ注釈は機能しません(CQ-4314950)。
 
 * アセットのタイトルに2バイト、2バイト、高ASCII、キリル、サロゲートペア、ヘブライ語、アラビア語、GB18030文字が含まれる場合、Dynamic Mediaに公開すると、アセットのタイトルに疑問符(?)が付きます。 (CQ-4311872).
+
+>Dynamic Media *のExperience Manager6.5.9.0のみ*&#x200B;の既知のビデオ再生の問題：
+>
+>* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+>* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
+
 
 ### プラットフォーム {#platform-6590}
 
