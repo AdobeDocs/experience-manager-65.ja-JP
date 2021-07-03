@@ -2,10 +2,10 @@
 title: サポートされるファイル形式を処理するためのベストプラクティス
 description: ' [!DNL Experience Manager Assets]を使用して、サポートされる様々なファイルタイプを処理するためのベストプラクティス。'
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: アセット管理、開発者ツール
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 46%
@@ -22,7 +22,7 @@ ht-degree: 46%
 >
 >Adobe Managed Services(AMS)で[!DNL Experience Manager]を使用している場合、大量のPSDまたはPSBファイルを処理する予定がある場合は、Adobeカスタマーケアにお問い合わせください。 Adobeカスタマーケア担当者と協力して、AMSデプロイメントに対してこれらのベストプラクティスを実装し、Adobe独自の形式に対して可能な限り最適なツールとモデルを選択します。 [!DNL Experience Manager] は、30000 x 23000ピクセルを超える高解像度のPSBファイルを処理しない場合があります。
 
-## [!DNL Adobe Camera Raw] ライブラリ  {#adobe-camera-raw-library}
+## [!DNL Adobe Camera Raw] ライブラリ {#adobe-camera-raw-library}
 
 最適なパフォーマンスを得るために、AdobeではRAWファイルとDNGファイルに[!DNL Adobe Camera Raw]ライブラリを使用することをお勧めします。
 
@@ -61,7 +61,7 @@ Adobeでは、[!DNL Adobe InDesign Server]を使用して、IDMLやHTMLなど、
 
 [!DNL Experience Manager]で[!DNL ImageMagick]ライブラリを設定する方法については、[ImageMagick](/help/assets/media-handlers.md#an-example-using-imagemagick)の使用を参照してください。 最適な使用方法については、[ImageMagick の設定のベストプラクティス](/help/assets/best-practices-for-imagemagick.md)を参照してください。
 
-## 画像トランスコーディングライブラリ  {#image-transcoding-library}
+## 画像トランスコーディングライブラリ {#image-transcoding-library}
 
 Adobe画像トランスコーディングライブラリは、画像のエンコーディング、トランスコーディング、再サンプリング、サイズ変更など、主要な画像処理機能を実行する画像処理ソリューションです。
 
