@@ -2,17 +2,17 @@
 title: アセットを共有するプライベートフォルダー
 description: ' [!DNL Adobe Experience Manager Assets] でプライベートフォルダーを作成し、他のユーザーと共有して、様々な権限を割り当てる方法を説明します。'
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: コラボレーション
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 12%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] {#private-folder}のプライベートフォルダー
+# [!DNL Adobe Experience Manager Assets]のプライベートフォルダー {#private-folder}
 
 [!DNL Adobe Experience Manager Assets]ユーザーインターフェイスで、自分だけが使用できるプライベートフォルダーを作成できます。 このプライベートフォルダーを他のユーザーと共有し、他のユーザーに様々な権限を割り当てることができます。 ユーザーはフォルダーに対して、割り当てられた特権のレベルに応じた様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 >
 >プライベートフォルダーには、所有者の役割を持つメンバーが少なくとも1人含まれています。
 
-## プライベートフォルダーの作成と共有{#create-share-private-folder}
+## プライベートフォルダーの作成と共有 {#create-share-private-folder}
 
 プライベートフォルダーを作成して共有するには：
 
@@ -70,7 +70,7 @@ ht-degree: 12%
 >
 >プライベートフォルダーを作成するには、プライベートフォルダーを作成する親フォルダーに対する[アクセス制御権限](/help/sites-administering/security.md#permissions-in-aem)の読み取りと変更が必要です。 管理者でない場合、これらの権限は`/content/dam`ではデフォルトで有効になっていません。 この場合、プライベートフォルダーを作成する前に、ユーザーID/グループに対するこれらの権限を取得してください。
 
-## プライベートフォルダーの削除{#delete-private-folder}
+## プライベートフォルダーの削除 {#delete-private-folder}
 
 フォルダーを削除するには、フォルダーを選択して上部のメニューから「[!UICONTROL Delete]」オプションを選択するか、キーボードのBackspaceキーを使用します。
 
