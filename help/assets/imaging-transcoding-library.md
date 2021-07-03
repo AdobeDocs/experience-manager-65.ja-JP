@@ -2,10 +2,10 @@
 title: 画像トランスコーディングライブラリ
 description: エンコーディング、トランスコーディング、画像のリサンプリング、画像のサイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションであるアドビの画像トランスコーディングライブラリを設定および使用する方法について説明します。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: レンディション，開発者ツール，アセット処理
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 38%
@@ -71,7 +71,7 @@ ht-degree: 38%
 
 ITL処理を設定するには、設定ファイルを作成し、ワークフローを更新して実行します。
 
-### 抽出されたバンドルの設定ファイル{#create-conf-file}を作成します
+### 抽出されたバンドルの設定ファイルの作成 {#create-conf-file}
 
 ライブラリを設定するには、次の手順を使用して、ライブラリを示すCONFファイルを作成します。 管理者権限またはルート権限が必要です。
 
@@ -102,7 +102,7 @@ ITL処理を設定するには、設定ファイルを作成し、ワークフ�
 
 1. パスの値が`.`に設定されるようにするには、`echo $LD_LIBRARY_PATH`コマンドを使用します。 出力は`.`にする必要があります。 値が`.`に設定されていない場合は、セッションを再開します。
 
-### [!UICONTROL DAMアセットの更新]ワークフロー{#configure-dam-asset-update-workflow}を設定します
+### [!UICONTROL DAMアセットの更新]ワークフローを設定 {#configure-dam-asset-update-workflow}
 
 画像の処理にライブラリを使用するように、[!UICONTROL DAMアセットの更新]ワークフローを更新します。
 
