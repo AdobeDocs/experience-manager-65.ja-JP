@@ -3,12 +3,12 @@ title: タイムライン表示のデジタルアセットのアクティビテ�
 description: この記事では、アセットのアクティビティログをタイムラインに表示する方法について説明します。
 contentOwner: AG
 feature: アセット管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 28dc0aa5-f2be-4e27-b7d8-415569b7ecd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 69%
+ht-degree: 70%
 
 ---
 
