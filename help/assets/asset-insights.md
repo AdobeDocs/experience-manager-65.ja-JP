@@ -2,13 +2,13 @@
 title: アセットインサイト
 description: アセットインサイト機能を使用して、サードパーティWebサイト、マーケティングキャンペーン、Adobeのクリエイティブソリューションで使用される画像のユーザーの評価と使用状況の統計を追跡する方法について説明します。
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: アセットインサイト，アセットレポート
+role: User, Admin
+feature: アセットインサイト、アセットレポート
 exl-id: 0130ac40-a72b-4caf-a10f-3c7d76eaa1e6
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '760'
-ht-degree: 52%
+ht-degree: 56%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 52%
    >
    >「ソリューション」セクションのデータとは異なり、「パフォーマンス統計」セクションには最新データが表示されます。
 
-1. パフォーマンスデータを得るためにWebサイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をクリックします。 サードパーティのWebページに埋め込みコードを含める方法について詳しくは、[Webページでのページトラッカーと埋め込みコードの使用](/help/assets/use-page-tracker.md)を参照してください。
+1. パフォーマンスデータを得るために Web サイトに組み込んだアセットの埋め込みコードを取得するには、アセットのサムネールの下の「**[!UICONTROL 埋め込みコードの取得]**」をクリックします。サードパーティのWebページに埋め込みコードを含める方法について詳しくは、[Webページでのページトラッカーと埋め込みコードの使用](/help/assets/use-page-tracker.md)を参照してください。
 
    ![chlimage_1-98](assets/chlimage_1-303.png)
 
