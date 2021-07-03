@@ -3,12 +3,12 @@ title: 多言語アセットとアセット翻訳
 description: バイナリ、メタデータ、タグなどのアセットを複数の言語に翻訳するワークフローを自動化する方法を説明します。
 contentOwner: AG
 feature: アセット管理
-role: Administrator
+role: Admin
 exl-id: edccf23c-087e-4253-babb-dd4c6610517d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
