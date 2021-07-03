@@ -2,21 +2,21 @@
 title: アセットインサイトにデモパッケージを使用する
 description: デモパッケージを使用して、AdobeアセットインサイトでWebページのデータをキャプチャし、インサイトを生成できるようにします。
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: アセットインサイト，アセットレポート
+role: User, Admin
+feature: アセットインサイト、アセットレポート
 exl-id: 13947513-da76-43e1-ae01-abd24a59752a
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 50%
+ht-degree: 53%
 
 ---
 
-# アセットインサイトにデモパッケージを使用{#using-demo-package-for-asset-insights}
+# アセットインサイトにデモパッケージを使用する {#using-demo-package-for-asset-insights}
 
 デモパッケージを使用して、AdobeアセットインサイトでサンプルWebページのデータをキャプチャし、インサイトを生成できます。
 
-## [!DNL Use Experience Manager Assets] サンプルWebページを使用したインサイト   {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] サンプルWebページを使用したインサイト  {#using-aem-assets-insights-with-sample-web-page}
 
 1. [アセットインサイトの設定](configure-asset-insights.md)の手順に従って、アセットインサイトを設定します。
 1. 次に示すサンプル Assets パッケージをダウンロードして、CRXDE パッケージマネージャーでインストールします。
