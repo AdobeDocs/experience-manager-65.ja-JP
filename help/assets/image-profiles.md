@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media イメージプロファイル
+title: Dynamic Media 画像プロファイル
 description: アンシャープマスク、スマート切り抜きとスマートスウォッチのいずれかまたは両方の設定を含むイメージプロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
@@ -8,16 +8,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: イメージプロファイル
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2752'
-ht-degree: 82%
+ht-degree: 85%
 
 ---
 
-# Dynamic Media イメージプロファイル {#image-profiles}
+# Dynamic Media 画像プロファイル {#image-profiles}
 
 画像をアップロードするときに、フォルダーにイメージプロファイルを適用することで、アップロード時に自動的に画像を切り抜くことができます。
 
@@ -99,9 +99,9 @@ ht-degree: 82%
 
 [処理プロファイルを使用するためのデジタルアセットの編成のベストプラクティス](/help/assets/organize-assets.md)を参照してください。
 
-**Dynamic Media イメージプロファイルを作成するには**：:
+**Dynamic Media 画像プロファイルを作成するには**：
 
-1. Adobe Experience Managerのロゴをタップし、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL イメージプロファイル]**&#x200B;に移動します。
+1. Adobe Experience Manager のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
 1. 「**[!UICONTROL 作成]**」をタップして、イメージプロファイルを追加できます。
 1. プロファイル名を入力し、アンシャープマスクのほか、切り抜きとスウォッチのいずれかまたは両方の値を入力します。
 
@@ -115,7 +115,7 @@ ht-degree: 82%
 
 ## Dynamic Media イメージプロファイルの編集または削除 {#editing-or-deleting-image-profiles}
 
-1. Experience Managerのロゴをタップし、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL イメージプロファイル]**&#x200B;に移動します。
+1. Experience Manager のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
 1. 編集または削除するイメージプロファイルを選択します。編集するには、「**[!UICONTROL 画像処理プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像処理プロファイルを削除]**」を選択します。
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
@@ -146,7 +146,7 @@ ht-degree: 82%
 
 #### プロファイルユーザーインターフェイスを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. Experience Managerのロゴをタップし、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL イメージプロファイル]**&#x200B;に移動します。
+1. Experience Manager のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
 1. 1 つ以上のフォルダーに適用するイメージプロファイルを選択します。
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
@@ -161,9 +161,9 @@ ht-degree: 82%
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-### Dynamic Mediaイメージプロファイルのグローバルな適用{#applying-an-image-profile-globally}
+### Dynamic Mediaイメージプロファイルのグローバルな適用 {#applying-an-image-profile-globally}
 
-Experience Managerをフォルダーに適用する以外に、プロファイルをグローバルに適用して、任意のフォルダー内のプロファイルアセットにアップロードされたコンテンツに、選択したプロファイルが適用されるようにすることもできます。
+特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、Experience Manager Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
 
 後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
@@ -271,7 +271,7 @@ Experience Managerをフォルダーに適用する以外に、プロファイ�
 
 ### プロファイルユーザーインターフェイスを使用したフォルダーからの Dynamic Media イメージプロファイルの削除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. Experience Managerのロゴをタップし、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL イメージプロファイル]**&#x200B;に移動します。
+1. Experience Manager のロゴをタップし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
 1. 1 つ以上のフォルダーから削除するイメージプロファイルを選択します。
 1. 「**[!UICONTROL フォルダーから処理プロファイルを削除]**」をタップし削除するフォルダーを 1 つ以上選択して、「**[!UICONTROL 削除]**」をタップします。
 
