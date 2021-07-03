@@ -2,17 +2,17 @@
 title: メタデータ機能の設定と管理。
 description: メタデータの追加と管理に関連する [!DNL Experience Manager Assets] 機能の設定と管理。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: メタデータ
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 55%
 
 ---
 
-# [!DNL Assets] {#config-metadata}でのメタデータ機能の設定と管理
+# [!DNL Assets]でのメタデータ機能の設定と管理 {#config-metadata}
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -22,11 +22,11 @@ ht-degree: 55%
 
 [!DNL Adobe Experience Manager Assets] では、あらゆるアセットのメタデータを保持します。したがって、アセットの分類と編成が容易にでき、特定のアセットを検索しやすくなります。アセットの任意のメタデータを保持して管理する機能によって、メタデータに基づいてアセットを自動的に編成および処理できます。[!DNL Adobe Experience Manager Assets] 管理者は、メタデータ機能を設定およびカスタマイズして、デフォルトのAdobe機能を変更できます。
 
-## メタデータスキーマ{#metadata-schema}を編集
+## メタデータスキーマの編集 {#metadata-schema}
 
 詳しくは、[メタデータスキーマフォームの編集](metadata-schemas.md#edit-metadata-schema-forms)を参照してください。
 
-## [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}内にカスタム名前空間を登録します
+## [!DNL Experience Manager]内にカスタム名前空間を登録します {#registering-a-custom-namespace-within-aem}
 
 [!DNL Experience Manager]内に独自の名前空間を追加できます。 `cq`、`jcr`、`sling`などの定義済みの名前空間があるのと同様に、リポジトリのメタデータとXML処理用の名前空間を指定できます。
 
@@ -35,7 +35,7 @@ ht-degree: 55%
 1. 名前空間を追加するには、ページの下部にある「**[!UICONTROL 新規]**」をクリックします。
 1. XML名前空間規則に従って、カスタム名前空間を指定します。URI形式のIDと、IDに関連付けられたプレフィックスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
 
-## 一括メタデータ更新の制限を設定します{#bulk-metadata-update-limit}
+## 一括メタデータ更新の制限の設定 {#bulk-metadata-update-limit}
 
 DoS(DoS)のような状況を防ぐために、[!DNL Enterprise Manager]はSling要求でサポートされるパラメーターの数を制限します。 一度に多くのアセットのメタデータを更新すると、上限に到達する可能性があり、それ以上のアセットでメタデータが更新されなくなります。Enterprise Managerでは、次の警告がログに生成されます。
 
@@ -130,7 +130,7 @@ To apply a metadata profile globally, follow these steps:
   ![See applied metadata profile to a folder in the JCR in CRXDE](assets/metadata-profile-folder-setting2.png)
 -->
 
-## フォルダー{#folder-metadata-schema}のメタデータスキーマ
+## フォルダーのメタデータスキーマ {#folder-metadata-schema}
 
 [!DNL Adobe Experience Manager Assets] では、フォルダープロパティページに表示されるレイアウトおよびメタデータを定義する、アセットフォルダーのメタデータスキーマを作成できます。
 
@@ -149,7 +149,7 @@ To apply a metadata profile globally, follow these steps:
 * タブ
 * タブ内のフォーム項目
 
-これらのフォーム項目を CRX リポジトリのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
+これらのフォーム項目を CRX リポジトリーのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
 
 1. スキーマFormsページで、作成したフォームを選択し、ツールバーの「**[!UICONTROL 編集]**」オプションを選択します。
 1. フォルダーメタデータスキーマエディターページで、「`+`」をクリックしてフォームにタブを追加します。 タブの名前を変更するには、デフォルト名をクリックし、「**[!UICONTROL 設定]**」で新しい名前を指定します。
@@ -213,7 +213,7 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL クラス]**：プロパティに関連付けられているオブジェクトクラス。
 
-### フォルダーメタデータスキーマフォームの削除  {#delete-folder-metadata-schema-forms}
+### フォルダーメタデータスキーマフォームの削除 {#delete-folder-metadata-schema-forms}
 
 フォルダーメタデータスキーマフォームページから、フォルダーメタデータスキーマフォームを削除できます。フォームを削除するには、フォームを選択し、ツールバーの「削除」オプションをクリックします。
 
