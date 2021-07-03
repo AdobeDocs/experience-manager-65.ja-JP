@@ -3,16 +3,16 @@ title: '[!DNL Assets] ホームページエクスペリエンス'
 description: ' [!DNL Experience Manager Assets] ホームページをパーソナライズして、アセットに関する最近のアクティビティのスナップショットなど、豊富なようこそ画面エクスペリエンスを実現します。'
 contentOwner: AG
 feature: 開発者ツール/アセット管理
-role: Administrator, Business Practitioner
+role: Admin, User
 exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 32%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] ホームページエクスペリエンス  {#aem-assets-home-page-experience}
+# [!DNL Adobe Experience Manager Assets] ホームページエクスペリエンス {#aem-assets-home-page-experience}
 
 [!DNL Adobe Experience Manager Assets]ホームページをパーソナライズして、アセットに関する最近のアクティビティのスナップショットなど、豊富なようこそ画面エクスペリエンスを実現します。
 
