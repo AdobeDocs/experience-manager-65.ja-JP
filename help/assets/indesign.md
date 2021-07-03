@@ -1,18 +1,18 @@
 ---
-title: ' [!DNL Assets] と [!DNL InDesign Server]を統合'
+title: ' [!DNL Assets]  と  [!DNL InDesign Server] の統合'
 description: ' [!DNL Adobe Experience Manager Assets] と [!DNL Adobe InDesign Server]を統合する方法を説明します。'
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 公開
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 3c1a30f36222c319c354afa408555982bfe2804e
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1565'
 ht-degree: 31%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]と[!DNL Adobe InDesign Server] {#integrating-aem-assets-with-indesign-server}を統合します
+# [!DNL Adobe Experience Manager Assets] と [!DNL Adobe InDesign Server] の統合 {#integrating-aem-assets-with-indesign-server}
 
 [!DNL Adobe Experience Manager Assets] 使用する:
 
@@ -25,7 +25,7 @@ ht-degree: 31%
 >
 >[!DNL Adobe InDesign] は、2つの異なるオファーとして提供されます。[Adobe](https://www.adobe.com/jp/products/indesign.html) 印刷やデジタル配信用のページレイアウトのデザインに使用するInDesignデスクトップアプリケーション。[Adobe InDesign ](https://www.adobe.com/jp/products/indesignserver.html) Serveleでは、での作成に基づいて、自動化されたドキュメントをプログラムで作成できま [!DNL InDesign]す。[ExtendScript](https://www.adobe.com/jp/devnet/scripting.html)エンジンへのインターフェイスを提供するサービスとして動作します。スクリプトは[!DNL ExtendScript]で記述され、[!DNL JavaScript]に似ています。 [!DNL InDesign]スクリプトについて詳しくは、[https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)を参照してください。
 
-## 抽出の仕組み{#how-the-extraction-works}
+## 抽出の仕組み {#how-the-extraction-works}
 
 [!DNL Adobe InDesign Server]を[!DNL Experience Manager Assets]と統合して、[!DNL InDesign]で作成されたINDDファイルのアップロード、レンディションの生成、すべてのメディアの抽出（ビデオなど）をおこない、アセットとして保存できます。
 
@@ -59,7 +59,7 @@ ht-degree: 31%
    * 抽出されたテキストとファイルは、[!DNL Experience Manager Assets]に格納されます。
    * すべてのレンディションは、アセット自体の[!DNL Experience Manager Assets]に保存されます。
 
-## [!DNL InDesign Server]をExperience Manager{#integrating-the-indesign-server-with-aem}と統合する
+## [!DNL InDesign Server]とExperience Manager {#integrating-the-indesign-server-with-aem}
 
 [!DNL InDesign Server]を[!DNL Experience Manager Assets]と共に使用するために統合するには、プロキシを設定した後に次の手順を実行する必要があります。
 
@@ -87,7 +87,7 @@ ht-degree: 31%
    >ファイルに出力メッセージを保存してリダイレクトを使用する場合は、例えば Windows の場合は次のように実行します。
    >`<ids-installation-dir>/InDesignServer.com -port 8080 > ~/temp/INDD-logfile.txt 2>&1`
 
-### [!DNL Experience Manager Assets]ワークフロー{#configuring-the-aem-assets-workflow}を設定します
+### [!DNL Experience Manager Assets]ワークフローを設定する {#configuring-the-aem-assets-workflow}
 
 [!DNL Experience Manager Assets] には、特に次の処理手順を含む、事前設 **[!UICONTROL 定済みのワークフロー「DAMアセットの更新]**」があり [!DNL InDesign]ます。
 
@@ -98,7 +98,7 @@ ht-degree: 31%
 
 設定後、（通常の方法のいずれかによって）[!DNL InDesign]ファイルを[!DNL Experience Manager Assets]にアップロードすると、ワークフローがトリガーされ、アセットが処理されて様々なレンディションが準備されます。 INDDファイルを[!DNL Experience Manager Assets]にアップロードし、`<*your_asset*>.indd/Renditions`の下にIDSで作成された様々なレンディションが表示されることを確認して、設定をテストします。
 
-#### メディア抽出{#media-extraction}
+#### メディア抽出 {#media-extraction}
 
 このステップでは、INDD ファイルからのメディアの抽出を制御します。
 
@@ -124,7 +124,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 サムネールを処理ワークフローステップは、異なるサイズの静的レンディションを生成するように設定できます。デフォルト値は[!DNL Experience Manager Assets]インターフェイスで必要になるので、削除しないでください。 最後に、画像プレビューレンディションを削除ワークフローステップで、JPGサムネールレンディションが不要になったので削除されます。
 
-#### ページ抽出{#page-extraction}
+#### ページ抽出 {#page-extraction}
 
 抽出された要素から[!DNL Experience Manager]ページが作成されます。 抽出ハンドラーが、レンディション（現時点では HTML または IDML）からデータを抽出するために使用されます。このデータを元に、PageBuilder を使用してページが作成されます。
 
@@ -145,7 +145,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 * **ページデザイン**:ページの生成時に使用するページデザイン。
 
-### [!DNL InDesign Server] {#configuring-the-proxy-worker-for-indesign-server}のプロキシワーカーを設定します。
+### [!DNL InDesign Server]のプロキシワーカーを設定します。 {#configuring-the-proxy-worker-for-indesign-server}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ Pool：との通信に使用するSOAPエンドポイント [!DNL InDesign Serve
 
 1. 「OK」をクリックして保存します。
 
-### Day CQ Link Externalizer {#configuring-day-cq-link-externalizer}の設定
+### Day CQ Link Externalizerの設定 {#configuring-day-cq-link-externalizer}
 
 [!DNL InDesign Server]と[!DNL Experience Manager]が別のホスト上にある場合、またはこれらのアプリケーションの一方または両方がデフォルトのポートで動作しない場合は、[!UICONTROL Day CQ Link Externalizer]を設定して、[!DNL InDesign Server]のホスト名、ポートおよびコンテンツのパスを設定します。
 
@@ -174,7 +174,7 @@ Pool：との通信に使用するSOAPエンドポイント [!DNL InDesign Serve
 
    ![Link Externalizerの設定](assets/link-externalizer-config.png)
 
-### [!DNL InDesign Server] {#enabling-parallel-job-processing-for-indesign-server}の並列ジョブ処理を有効にする
+### [!DNL InDesign Server]の並列ジョブ処理を有効にする {#enabling-parallel-job-processing-for-indesign-server}
 
 IDS の並列ジョブ処理を有効にすることができます。[!DNL InDesign Server]が処理できる並列ジョブの最大数(`x`)を決定します。
 
@@ -212,7 +212,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >デフォルトでは、設定可能な(`retry.interval.to.whitelist.name`)時間（分）が経過すると、IDSワーカーが再検証されます。 ワーカーがオンラインである場合は、ブロックリストから削除されます。
 
-## [!DNL InDesign Server] 10.0以降の{#enabling-support-for-indesign-server-or-later}のサポートを有効にする
+## [!DNL InDesign Server] 10.0以降のサポートを有効にする {#enabling-support-for-indesign-server-or-later}
 
 [!DNL InDesign Server] 10.0以降の場合は、次の手順を実行してマルチセッションサポートを有効にします。
 
@@ -224,7 +224,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 >
 >[!DNL Experience Manager Assets]との[!DNL InDesign Server]統合の場合、統合に必要なセッションサポート機能はシングルコアシステムではサポートされないので、マルチコアプロセッサを使用してください。
 
-## [!DNL Experience Manager]資格情報{#configure-aem-credentials}の設定
+## [!DNL Experience Manager]資格情報の設定 {#configure-aem-credentials}
 
 [!DNL InDesign Server]との統合を中断することなく、[!DNL Experience Manager]デプロイメントから[!DNL InDesign Server]にアクセスするためのデフォルトの管理者資格情報（ユーザー名とパスワード）を変更できます。
 
