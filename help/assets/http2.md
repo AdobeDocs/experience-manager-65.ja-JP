@@ -7,17 +7,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: c8e145ad-f021-4043-8190-62151775e296
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 公開，設定
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 60%
 
 ---
 
-# コンテンツのHTTP/2配信{#http-delivery-of-content}
+# コンテンツのHTTP/2配信 {#http-delivery-of-content}
 
 アドビは、パフォーマンスの向上という全体的な利点をもたらすコンテンツの HTTP/2 配信に対応しました。
 
@@ -25,7 +25,7 @@ ht-degree: 60%
 >
 >この機能を使用するには、Adobe Experience Manager Dynamic Media にバンドルされている標準搭載の CDN を使用する必要があります。この機能では、その他のカスタム CDN はサポートされません。
 
-## HTTP/2 とは {#what-is-http}
+## HTTP/2 とは  {#what-is-http}
 
 HTTP/2 によりブラウザーとサーバーの通信が改善され、必要な処理能力を抑えながら情報をより高速に転送できます。
 
@@ -33,7 +33,7 @@ HTTP/2 とその利点については、次の Web サイトで簡潔に説明�
 
 [HTTP/2について知っておくべきこと](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
-## コンテンツ配信を HTTP/2 に移行する主なメリット {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
+## コンテンツ配信を HTTP/2 に移行する主なメリット  {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
 パフォーマンスの向上は、大きく異なる場合があります。 これは、Webサイトのコード、Dynamic Mediaの使用方法、消費者のデバイス、画面、場所など、様々な要因に基づきます。
 
@@ -46,7 +46,7 @@ HTTP/2 とその利点については、次の Web サイトで簡潔に説明�
 
 [https://http2.akamai.com/demo](https://http2.akamai.com/demo)
 
-## HTTP/2 に切り替えるには  {#am-i-eligible-to-switch-over-to-http}
+## HTTP/2 に切り替えるには {#am-i-eligible-to-switch-over-to-http}
 
 HTTP/2 を使用するには、以下の要件を満たしている必要があります。
 
@@ -58,7 +58,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
    専用ドメインがない場合、Adobeでは2018年にHTTP/2への移行をスケジュールする予定です。
 
-## Dynamic Media アカウントに対して HTTP/2 を有効にする方法 {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
+## Dynamic Media アカウントに対して HTTP/2 を有効にする方法  {#what-is-the-process-for-enabling-http-for-my-dynamic-media-account}
 
 HTTP/2に切り替えるためのリクエストを開始します。自動的にはおこなわれません。
 
@@ -80,7 +80,7 @@ HTTP/2に切り替えるためのリクエストを開始します。自動的�
       FirefoxおよびChromeの場合、「HTTP/2 and SPDY Indicator」という拡張機能があります。 ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。http/2がサポートされている場合、拡張機能は青いFlash記号とヘッダー「X-Firefox-Spdy」で示されます。&quot;h2&quot;です。
 
 
-## HTTP/2 への切り替え見込み時期 {#when-can-i-expect-to-be-transitioned-over-to-http}
+## HTTP/2 への切り替え見込み時期  {#when-can-i-expect-to-be-transitioned-over-to-http}
 
 リクエストは、カスタマーケアに届いた順に処理されます。
 
@@ -88,13 +88,13 @@ HTTP/2に切り替えるためのリクエストを開始します。自動的�
 >
 >HTTP/2への切り替えにはキャッシュのクリアが伴うので、リードタイムが長くなる場合があります。 そのため、一度に処理できる顧客の移行は数件のみとなります。
 
-## HTTP/2 への切り替えに伴うリスク  {#what-are-the-risks-with-moving-to-http}
+## HTTP/2 への切り替えに伴うリスク {#what-are-the-risks-with-moving-to-http}
 
 HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うので、CDN でキャッシュがクリアされます。
 
 キャッシュが再作成されるまで、キャッシュされていないコンテンツはアドビの元のサーバーに直接アクセスして取得されます。このため、元のサーバーからリクエストをプルするときに許容できるパフォーマンスが維持されるように、アドビでは一度に少数の顧客の移行を処理するよう計画します。
 
-## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法  {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
+## URL または Web サイトが HTTP/2 でアクティベートされていることを確認する方法 {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
 ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
