@@ -9,12 +9,12 @@ content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
 feature: インタラクティブビデオ
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: c59ec6e2429095c07c9b2d6bb83dad6ab4f80aa0
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '6015'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -74,15 +74,14 @@ ht-degree: 74%
 1. **（オプション）クイックビュー変数の特定**  — まず、既存のクイックビュー実装で使用される動的変数を特定します。これらの変数を使用して、インタラクティブビデオを作成するときに、製品のサムネールを対応する製品のクイックビューにマッピングします。[（オプション）クイックビュー変数の識別](#optional-identifying-quickview-variables)を参照してください。
    *この手順は、次のすべてに該当する場合にのみ必要です*。・クイックビューにトリガーして、ビデオにインタラクティビティを追加したい。・ eコマースソリューション(IBM® WebSphere® Commerce、Elastic Path、Hybris、Intershopなど)からExperience Managerに製品データを取り出すために、Experience Managerの実装がeコマース統合フレームワークを使用&#x200B;*していない*。 [Experience Managerアセットのeコマースの概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
 
-1. **（オプション）インタラクティブビデオのビューアプリセットの作成**  — プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。独自のインタラクティブビデオビューアプリセットの作成は、標準提供のインタラクティブビデオビューアプリセット（`Shoppable_Video_Light` または `Shoppable_Video_Dark`）を使用する場合には必要ありません。[ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（オプション）および[インタラクティブビューアプリセットの作成に関する考慮事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。
+1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。独自のインタラクティブビデオビューアプリセットの作成は、標準提供のインタラクティブビデオビューアプリセット（`Shoppable_Video_Light` または `Shoppable_Video_Dark`）を使用する場合には必要ありません。[ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（オプション）および[インタラクティブビューアプリセットの作成に関する考慮事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。
 
-1. **ビデオおよび関連する画像アセットのアップロード**  — インタラクティブにするビデオと関連する画像をアップロードします。[ビデオとそれに関連するサムネールアセットのアップロード](#uploading-a-video-and-its-associated-thumbnail-assets)を参照してください。
+1. **ビデオおよび関連する画像アセットのアップロード** - インタラクティブにするビデオと関連する画像をアップロードします。[ビデオとそれに関連するサムネールアセットのアップロード](#uploading-a-video-and-its-associated-thumbnail-assets)を参照してください。
 
-1. **ビデオへのインタラクティビティの追加**  — ビデオに1つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます（インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。インタラクティブビデオアセットを公開して作業は完了です。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL をコピーして、Web サイトのランディングページに適用します。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。
+1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます（インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。インタラクティブビデオアセットを公開して作業は完了です。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL をコピーして、Web サイトのランディングページに適用します。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。
 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
 1. **WebサイトまたはExperience Manager内のWebサイトにインタラクティブビデオを追加します**  -Experience Managerサイトまたはeコマース（またはその両方）を使用する場合、Webページにインタラクティブビデオを追加できます。インタラクティブメディアコンポーネントをページのExperience Managerにドラッグします。 [ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
-
 埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオのWebサイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
 サードパーティのWCM(Web Content Manager)を使用している場合は、新しいインタラクティブビデオを、Webサイトで使用されている既存のクイックビュー実装に統合する必要があります。 [インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
    [ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
@@ -219,7 +218,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 ## （オプション）インタラクティブビデオのビューアプリセットの作成 {#optional-creating-an-interactive-video-viewer-preset}
 
-デフォルトの標準提供インタラクティブビデオビューアプリセットタイプ`Shoppable_Video_dark`または`Shoppable_Video_light`を使用する予定がある場合は、このタスクをスキップして次に進むことができます。
+デフォルトの標準提供インタラクティブビデオビューアプリセットタイプ（`Shoppable_Video_dark` または `Shoppable_Video_light`）を使用する予定がある場合は、このタスクをスキップして次に進むことができます。
 
 オーサリング環境でサムネールをクリックすると、クイックビューダイアログボックスのプレビューが表示されます。
 
@@ -268,10 +267,10 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 インタラクティブビデオを保存すると、ビデオがすぐにプレビューで開きます。そこから、インタラクティブビデオのビューアプリセットを選択し、ビデオを再生して、顧客にどのように表示されるかを大まかに確認できます。
 
-**ビデオにインタラクティビティを追加するには：**
+**ビデオにインタラクティブ機能を追加するには：**
 
 1. Assets ビューで、インタラクティブにするアップロード済みのビデオに移動します。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 画像の上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップします。ツールバーの「**[!UICONTROL 編集]**」をタップします。
 
@@ -279,7 +278,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    * 画像をタップして、詳細ビューページで開きます。 ツールバーの「**[!UICONTROL 編集]**」をタップします。
 
-1. インタラクティブビデオを作成ページで、次のいずれかの操作をおこないます。
+1. インタラクティブビデオを作成ページで、次のいずれかの操作を行います。
 
    * ビデオの再生を開始するには、「**[!UICONTROL 再生]**」ボタンをタップします。取り上げたい特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」をタップします。ビデオの最後に達するまで繰り返します。
 
@@ -346,7 +345,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    上のスクリーンショット C では、タイムラインスケール設定が 8 秒になっています。製品サムネールを含むセグメントの表示が縮小されていることに注意してください。このような縮小表示が役立つのは、ビデオが長く、通常はページの幅に収まらないセグメントの概要を確認する場合です。
 
-1. （オプション）次のいずれかの操作をおこないます。
+1. （オプション）次のいずれかの操作を行います。
 
    * セグメントの開始時刻と終了時刻を調整します。
 
@@ -373,7 +372,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 1. ビデオの右側にある「**[!UICONTROL コンテンツ]**」タブをタップします。
 1. 「コンテンツ」タブの下で「**[!UICONTROL アセットを選択]**」をタップし、ビデオで使用するすべての画像アセットを参照して選択します。選択したアセットは「コンテンツ」タブのアセットセレクターパネルに追加されます。
 
-1. 「コンテンツ」タブの下にあるアセットセレクターで、次のいずれかの操作をおこないます。
+1. 「コンテンツ」タブの下にあるアセットセレクターで、次のいずれかの操作を行います。
 
    <table>
       <tbody>
@@ -383,7 +382,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
         </tr>
         <tr>
         <td>選択したタイムラインセグメントからサムネールを削除するには</td>
-        <td><p>次のいずれかの操作をおこないます。</p>
+        <td><p>次のいずれかの操作を行います。</p>
           <ul>
           <li>アセットセレクターパネルで、チェックマークの付いている画像をタップして選択を解除します。画像アセットがタイムラインセグメントから削除されます。<br /> </li>
           <li>選択したタイムラインセグメントで、画像をタップし、ツールバーの「<strong>製品を削除</strong>」をタップします。</li>
@@ -397,7 +396,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
    アセットセレクターパネルで画像をタップすると、選択したタイムラインセグメントにその画像が追加されます。
 
 1. 1 つのタイムラインセグメント内のサムネール画像を 1 つ選択し、「**[!UICONTROL アクション]**」タブをタップします。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
    <table> 
     <tbody> 
       <tr> 
@@ -425,7 +424,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
       <td>選択したサムネール画像をエクスペリエンスフラグメントに関連付けるには</td> 
       <td><p>「アクションタイプ」の下の「<strong>エクスペリエンスフラグメント</strong>」をタップし、次のいずれかを実行します。<p> 
        <ul> 
-       <li>Sitesのユーザーである場合は、検索アイコン（虫眼鏡）をタップまたはクリックしてExperience Managerフラグメントページを開きます。 使用するエクスペリエンスフラグメントをタップまたはクリックし、ページの右上隅にある「<strong></strong>」をタップして、前のページのアクションパネルに戻ることができます。<br /><a href="/help/sites-authoring/experience-fragments.md">エクスペリエンスフラグメント</a>を参照してください。</li> 
+       <li>Adobe Experience Manager Sites のユーザーである場合は、検索アイコン（虫眼鏡）をタップまたはクリックしてエクスペリエンスフラグメントページを開きます。使用するエクスペリエンスフラグメントをタップまたはクリックし、ページの右上隅にある「<strong></strong>」をタップして、前のページのアクションパネルに戻ることができます。<br /><a href="/help/sites-authoring/experience-fragments.md">エクスペリエンスフラグメント</a>を参照してください。</li> 
       </ul> 
        <ul> 
        <li>エクスペリエンスフラグメントをビデオに表示する際の幅と高さを指定します。</li>
@@ -439,7 +438,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
       <td><p>デフォルトでは、テキストラベルはサムネール画像の <code>Title</code> メタデータフィールドを使用します。<code>Title</code>がない場合は、代わりにサムネール画像のファイル名が使用されますが、拡張子は付きません。</p> <p>サムネール画像のテキストラベルを変更するには、「<strong>アクション</strong>」タブで、表示される画像アセットのすぐ下に目的のテキストを入力します。以下のスクリーンショットを参照してください。</p> <p>新しいテキストラベルは、ビデオプレーヤー自体と、タイムラインセグメントに表示されているサムネールテキストでのみ使用されています。ラベルの変更は、サムネール画像の「タイトル」メタデータフィールドとファイル名には影響しません。</p> </td> 
       </tr> 
       <tr> 
-      <td>変更を元に戻すには：</td> 
+      <td>変更を元に戻すには：：</td> 
       <td>ページの右上隅にある「<strong>取り消し</strong>」または「<strong>元に戻す</strong>」をタップします。</td> 
       </tr> 
     </tbody> 
@@ -449,12 +448,12 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    新しいテキストラベルがサムネール画像に追加されています。
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 手順 6～11 を繰り返して、ビデオのタイムラインセグメントに複数のサムネール画像を追加します。
    * オプションの手順 13 を行います。
 
-1. （オプション）次のいずれかの操作をおこないます。
+1. （オプション）次のいずれかの操作を行います。
 
    * **[!UICONTROL セグメントを統合]** ‐ 2 つの隣接したセグメントを（製品サムネールが割り当てられているものも割り当てられていないものも）1 つのセグメントに統合できます。
 
