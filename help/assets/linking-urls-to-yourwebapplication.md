@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: 設定
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 92%
@@ -65,7 +65,7 @@ URL 文字列を取得するには複数の方法があります。以下の手�
 
    [画像プリセットの公開](managing-image-presets.md#publishing-image-presets)を参照してください。
 
-1. 選択したアセットに応じて、次のいずれかの操作をおこないます。
+1. 選択したアセットに応じて、次のいずれかの操作を行います。
 
    * 画像を選択した場合は、ドロップダウンメニューで「**[!UICONTROL レンディション]**」をタップします。
 
@@ -158,12 +158,12 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    これは、公開されたビデオレンディションの完全なビデオ URL です。
 
-## アダプティブストリーミング（HLS）用のビデオ URL の取得 {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## アダプティブストリーミング（HLS）用のビデオ URL の取得  {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. AEMで、**[!UICONTROL ツール]** / **[!UICONTROL デプロイメント]** / **[!UICONTROL Cloud]** / **[!UICONTROL Cloud Services]**&#x200B;に移動します。
 1. **[!UICONTROL Cloud Services]** ページで、「**[!UICONTROL Dynamic Media Cloud Services]**」見出しまでスクロールダウンして、「**[!UICONTROL 設定を表示]**」をタップします。
 1. 「**[!UICONTROL 利用可能な設定]**」の下で、必要な設定をタップします。
-1. **[!UICONTROL Dynamic Media Cloud Services を設定]**&#x200B;ページで、以下の作業をおこないます。
+1. **[!UICONTROL Dynamic Media Cloud Services を設定]**&#x200B;ページで、以下の作業を行います。
 
    * 「**[!UICONTROL ビデオサービスの URL]**」の下で、URL パス全体をコピーします。コピーした URL パスは後の手順で必要になります。例えば、URL パスは、次のように表示されることがあります。
 
