@@ -2,17 +2,17 @@
 title: DTMを使用したアセットインサイトの有効化
 description: Assets Insightsを有効にするために、AdobeのDynamic Tag Management(DTM)を使用する方法について説明します。
 contentOwner: AG
-role: Business Practitioner, Administrator
-feature: アセットインサイト，アセットレポート
+role: User, Admin
+feature: アセットインサイト、アセットレポート
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 29%
 
 ---
 
-# DTM {#enable-asset-insights-through-dtm}を使用したアセットインサイトの有効化
+# DTMを使用したアセットインサイトの有効化 {#enable-asset-insights-through-dtm}
 
 Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。これは Adobe Analytics のユーザーに無償で提供されます。トラッキングコードをカスタマイズして、サードパーティのCMSソリューションでAssets Insightsを使用できるようにするか、DTMを使用してAssets Insightsタグを挿入することができます。 インサイトのサポートおよび提供がおこなわれるのは、画像に対してのみです。
 
