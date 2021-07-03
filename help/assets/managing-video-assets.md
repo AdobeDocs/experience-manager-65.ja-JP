@@ -2,17 +2,17 @@
 title: ビデオアセットの管理
 description: ' [!DNL Adobe Experience Manager] でビデオアセットをアップロード、プレビュー、注釈、公開します。'
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: アセット管理
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 58%
 
 ---
 
-# ビデオアセットの管理  {#manage-video-assets}
+# ビデオアセットの管理 {#manage-video-assets}
 
 ビデオ形式は、組織のデジタルアセットの重要な部分です。[!DNL Adobe Experience Manager] は、ビデオアセットの作成後に、ビデオアセットのライフサイクル全体を管理するための充実した機能を提供しています。
 
@@ -26,7 +26,7 @@ ht-degree: 58%
 1. アセットをアップロードするには、ツールバーの「**[!UICONTROL 作成]**」をクリックして、「**[!UICONTROL ファイル]**」を選択します。または、ユーザーインターフェイス上でファイルをドラッグします。詳しくは、[アセットのアップロード](manage-assets.md#uploading-assets)を参照してください。
 1. カード表示でビデオをプレビューするには、ビデオアセットの&#x200B;**[!UICONTROL 再生]** ![再生オプション](assets/do-not-localize/play.png)オプションをクリックします。 ビデオの一時停止や再生は、カード表示でのみ可能です。リスト表示では、[!UICONTROL 再生]および[!UICONTROL 一時停止]オプションを使用できません。
 
-1. アセットの詳細ページでビデオをプレビューするには、カードの「**[!UICONTROL 編集]**」をクリックします。 ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示をおこなうことができます。
+1. アセットの詳細ページでビデオをプレビューするには、カードの「**[!UICONTROL 編集]**」をクリックします。 ビデオは、ブラウザーのネイティブなビデオプレーヤーで再生されます。再生、一時停止、音量の調節およびビデオの全画面表示を行うことができます。
 
    ![ビデオ再生コントロール](assets/video-playback-controls.png)
 
