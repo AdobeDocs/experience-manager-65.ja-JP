@@ -2,17 +2,17 @@
 title: アセットの翻訳のベストプラクティス
 description: 翻訳された各バージョンを同期し、翻訳ワークフローを合理化するための、アセットの効率的な管理に関するベストプラクティス。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: アセット管理
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 81%
+ht-degree: 82%
 
 ---
 
-# アセットの翻訳のベストプラクティス{#best-practices-for-translating-assets-efficiently}
+# アセットの翻訳のベストプラクティス {#best-practices-for-translating-assets-efficiently}
 
 [!DNL Adobe Experience Manager Assets] は、デジタルアセットのバイナリ、メタデータ、タグを複数のロケールに翻訳し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
@@ -28,7 +28,7 @@ ht-degree: 81%
 
 いくつかのワークフローや翻訳統合フレームワークの設定を少し変更して、処理の効率を上げることもできます。
 
-1. 以下のいずれかの操作を行います。
+1. 次のいずれかの操作を行います。
 
    * [ファイルデータストアの設定](/help/sites-deploying/data-store-config.md)
    * [Amazon S3 データストアの設定](/help/sites-deploying/data-store-config.md)
