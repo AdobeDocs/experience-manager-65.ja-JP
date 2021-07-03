@@ -2,21 +2,21 @@
 title: レンディションへの XMP の書き戻し
 description: XMP の書き戻し機能を使用して、アセットのメタデータの変更を、そのアセットのすべてのレンディションまたは特定のレンディションに反映させる方法を学習します。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: メタデータ
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '785'
-ht-degree: 57%
+ht-degree: 64%
 
 ---
 
 # レンディションへの XMP の書き戻し {#xmp-writeback-to-renditions}
 
-[!DNL Adobe Experience Manager Assets]のこのXMPの書き戻し機能は、メタデータの変更を元のアセットのレンディションにレプリケートします。 アセット内から、またはアセットをアップロードする際に、アセットのメタデータを変更すると、その変更は最初にアセット階層のメタデータノードに保存されます。
+[!DNL Adobe Experience Manager Assets] の XMP 書き戻し機能では、メタデータの変更内容を元のアセットのレンディションに複製します。アセット内から、またはアセットをアップロードする際に、アセットのメタデータを変更すると、その変更は最初にアセット階層のメタデータノードに保存されます。
 
-XMP の書き戻し機能によって、メタデータの変更が、アセットのすべてのレンディションまたは特定のレンディションに反映されます。この機能は、`jcr`名前空間を使用するメタデータプロパティ（`dc:title`という名前のプロパティは書き戻されますが、`mytitle`という名前のプロパティは書き戻されません）のみを書き戻します。
+XMP の書き戻し機能によって、メタデータの変更が、アセットのすべてのレンディションまたは特定のレンディションに反映されます。この機能は、`jcr` 名前空間を使用するメタデータプロパティのみを書き戻します。つまり、`dc:title` という名前のプロパティは書き戻されますが、`mytitle` という名前のプロパティは書き戻されません。
 
 「`Classic Leather`」というタイトルのアセットの「[!UICONTROL タイトル]」プロパティを「`Nylon`」に変更するシナリオについて考えます。
 
@@ -26,9 +26,9 @@ XMP の書き戻し機能によって、メタデータの変更が、アセッ�
 
 ![metadata_stored](assets/metadata_stored.png)
 
-ただし、[!DNL Experience Manager Assets]は、メタデータの変更をアセットのレンディションに自動的に反映しません。 [XMPの書き戻しを有効にする方法](#enable-xmp-writeback)を参照してください。
+ただし、[!DNL Experience Manager Assets] では、メタデータの変更はアセットのレンディションに自動的に反映されません。[XMPの書き戻しを有効にする方法](#enable-xmp-writeback)を参照してください。
 
-## XMPの書き戻し{#enable-xmp-writeback}を有効にする
+## XMP の書き戻しの有効化 {#enable-xmp-writeback}
 
 アセットのアップロード時にメタデータの変更をアセットのレンディションに反映させるには、設定マネージャーで「**[!UICONTROL Adobe CQ DAM Rendition Maker]**」の設定を変更します。
 
