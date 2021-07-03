@@ -3,10 +3,10 @@ title: メディアハンドラーとワークフローを使用したアセッ�
 description: メディアハンドラーと、ワークフローを使用してデジタルアセットに対してタスクを実行する方法について説明します。
 mini-toc-levels: 1
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: ワークフロー，レンディション
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 48%
@@ -483,7 +483,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 
    >[!NOTE]
    >
-   >Windowsの一部のバージョンでは、[!DNL Windows]インストールに含まれるネイティブな変換ユーティリティと競合するので、convertコマンドが実行できない場合があります。 この場合は、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全パスを指定します。 例：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`
+   >Windowsの一部のバージョンでは、[!DNL Windows]インストールに含まれるネイティブな変換ユーティリティと競合するので、convertコマンドが実行できない場合があります。 この場合は、画像ファイルをサムネールに変換するために使用する[!DNL ImageMagick]ソフトウェアの完全パスを指定します。 （例：`"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`）。
 
 1. ツールが正しく実行されているかどうかを確認するには、作業ディレクトリにJPG画像を追加し、コマンドconvert `<image-name>.jpg -flip <image-name>-flipped.jpg`をコマンドラインで実行します。 反転画像がディレクトリに追加されます。次に、コマンドラインプロセスのステップを&#x200B;**[!UICONTROL DAM Update Asset]**&#x200B;ワークフローに追加します。
 1. **[!UICONTROL ワークフロー]**&#x200B;コンソールを開きます。
