@@ -8,13 +8,13 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 discoiquuid: 632a9074-b747-49a1-a57d-1f42bba1f4e9
 docset: aem65
-feature: パノラマ画像，アセット管理
-role: Business Practitioner, Administrator
+feature: パノラマ画像,アセット管理
+role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '578'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 56%
 
 パノラマ画像ビューアで使用するアセットをアップロードするには、[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 
-## Dynamic Media Classic {#configuring-dynamic-media-classic-scene}の設定
+## Dynamic Media Classicの設定 {#configuring-dynamic-media-classic-scene}
 
 パノラマ画像ビューアがAdobe Experience Manager内で正しく動作するようにするには、パノラマ画像ビューアプリセットをDynamic Media ClassicおよびDynamic Media Classic固有のメタデータと同期して、ビューアプリセットがJCRで更新されるようにします。 この同期をおこなうには、次のようにDynamic Media Classicを設定します。
 
@@ -68,7 +68,7 @@ ht-degree: 56%
 
 1. 右下隅にある「**[!UICONTROL 閉じる]**」をクリックします。
 
-### パノラマメディア WCM コンポーネントのトラブルシューティング  {#troubleshooting-the-panoramic-media-wcm-component}
+### パノラマメディア WCM コンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
 
 WCMのパノラマメディアコンポーネントに画像をドロップしたときに、コンポーネントプレースホルダーが折りたたまれた場合は、次のトラブルシューティングをおこないます。
 
@@ -82,6 +82,6 @@ WCMのパノラマメディアコンポーネントに画像をドロップし�
 
 詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
-## パノラマ画像の公開  {#publishing-panoramic-images}
+## パノラマ画像の公開 {#publishing-panoramic-images}
 
 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
