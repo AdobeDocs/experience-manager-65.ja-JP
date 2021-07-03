@@ -2,10 +2,10 @@
 title: アセットのダウンロード
 description: ' [!DNL Adobe Experience Manager] からアセットをダウンロードする方法と、ダウンロード機能を有効または無効にする方法について説明します。'
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: アセット管理、アセット配布
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
-source-git-commit: eefd19768cc52350ba5858a439b793c125fd23cc
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 76%
