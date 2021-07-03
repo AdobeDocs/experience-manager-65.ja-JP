@@ -1,12 +1,12 @@
 ---
-title: パフォーマンスチューニング [!DNL Assets]。
+title: パフォーマンスチューニング [!DNL Assets].
 description: ' [!DNL Experience Manager] 構成、ハードウェア、ソフトウェア、ネットワーク・コンポーネントの変更に関する推奨事項とガイダンス。ボトルネックを解消し、 [!DNL Experience Manager Assets]のパフォーマンスを最適化します。'
 contentOwner: AG
 mini-toc-levels: 1
-role: Architect, Administrator
+role: Architect, Admin
 feature: アセット管理
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2743'
 ht-degree: 51%
@@ -15,7 +15,7 @@ ht-degree: 51%
 
 <!-- TBD: Get reviewed by engineering. -->
 
-# [!DNL Adobe Experience Manager Assets] 性能チューニングガイド  {#assets-performance-tuning-guide}
+# [!DNL Adobe Experience Manager Assets] 性能チューニングガイド {#assets-performance-tuning-guide}
 
 [!DNL Experience Manager Assets]設定には、多数のハードウェア、ソフトウェア、ネットワークコンポーネントが含まれます。 導入のシナリオによっては、パフォーマンス上のボトルネックを排除するために、ハードウェア、ソフトウェアおよびネットワークコンポーネントに対して特殊な設定変更が必要になる場合があります。
 
@@ -31,7 +31,7 @@ ht-degree: 51%
 
 Experience Managerは多くのプラットフォームでサポートされていますが、AdobeはLinuxやWindowsで最も優れたネイティブツールをサポートし、パフォーマンスと実装の容易さを実現しています。 [!DNL Experience Manager Assets]デプロイメントの高いメモリ要件を満たすには、64ビットオペレーティングシステムをデプロイする必要が理想的です。 任意のExperience Managerデプロイメントと同様に、TarMKは可能な限り実装する必要があります。 TarMK は単一のオーサーインスタンスを超えて拡張できませんが、パフォーマンスは MongoMK よりも優れています。TarMKオフロードインスタンスを追加して、[!DNL Experience Manager Assets]デプロイメントのワークフロー処理能力を高めることができます。
 
-### 一時フォルダー{#temp-folder}
+### 一時フォルダー {#temp-folder}
 
 アセットのアップロード時間を短縮するには、Javaの一時ディレクトリに高パフォーマンスのストレージを使用します。 Linux および Windows の場合は、RAM ドライブまたは SSD を使用できます。クラウドベースの環境では、同等の高速ストレージタイプを使用できます。例えば、Amazon EC2では、[エフェメラルドライブ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)を一時フォルダーに使用できます。
 
@@ -75,7 +75,7 @@ Adobeでは、最適なパフォーマンスを得るために、Java 8に[!DNL 
 
 すべての[!DNL Experience Manager Assets]ユーザーに対して、データストアをセグメントストアから分離することをお勧めします。 また、`maxCachedBinarySize` パラメーターと `cacheSizeInMB` パラメーターを設定することでパフォーマンスを最大化するのに役立ちます。キャッシュに含めることができるように、`maxCachedBinarySize` を最小のファイルサイズに設定します。`cacheSizeInMB` 内のデータストアで使用するインメモリキャッシュのサイズを指定します。この値は合計ヒープサイズの 2～10％に設定することをお勧めします。ただし、負荷テストやパフォーマンステストが理想的な設定を決定するのに役立ちます。
 
-### バッファーされる画像キャッシュの最大サイズの設定  {#configure-the-maximum-size-of-the-buffered-image-cache}
+### バッファーされる画像キャッシュの最大サイズの設定 {#configure-the-maximum-size-of-the-buffered-image-cache}
 
 大量のアセットを[!DNL Adobe Experience Manager]にアップロードする場合、メモリ消費の予期しないスパイクを防ぎ、OutOfMemoryErrorsでJVMが失敗するのを防ぐために、バッファーされる画像キャッシュの最大サイズを減らします。 例えば、最大ヒープ（-`Xmx` パラメーター）が 5 GB のシステムで、Oak BlobCache が 1 GB、文書キャッシュが 2 GB に設定されているとします。このときに、バッファーされるキャッシュが最大 1.25 GB のメモリを使用した場合、予期しないスパイクに使用できるメモリは 0.75 GB のみとなります。
 
@@ -83,7 +83,7 @@ Adobeでは、最適なパフォーマンスを得るために、Java 8に[!DNL 
 
 Experience Manager6.1 SP1以降で`sling:osgiConfig`ノードを使用してこのプロパティを設定する場合は、データタイプを必ずLongに設定します。 詳しくは、[CQBufferedImageCache がアセットのアップロード中にヒープを消費する](https://helpx.adobe.com/jp/experience-manager/kb/cqbufferedimagecache-consumes-heap-during-asset-uploads.html)を参照してください。
 
-### 共有データストア  {#shared-data-stores}
+### 共有データストア {#shared-data-stores}
 
 S3 または共有ファイルデータストアの実装は、ディスク領域の節約と大規模な実装におけるネットワークスループットの向上に役立ちます。共有データストアの使用に関する長所と短所について詳しくは、[Assetsサイジングガイド](/help/assets/assets-sizing-guide.md)を参照してください。
 
@@ -151,7 +151,7 @@ accessKey=<snip>
 
 例えば、一時的でない多数のワークフロー（ワークフローのインスタンスノードを作成する）を実行した後に、 [ACS AEM Commons Workflow Remover](https://adobe-consulting-services.github.io/acs-aem-commons/features/workflow-remover.html)をアドホックベースで実行できます。 これにより、冗長および完了したワークフローのインスタンスが即座に削除されるので、Adobe Granite のワークフローのパージスケジューラーが実行されるのを待つ必要がありません。
 
-### 並列ジョブの最大数  {#maximum-parallel-jobs}
+### 並列ジョブの最大数 {#maximum-parallel-jobs}
 
 デフォルトでは、[!DNL Experience Manager]はサーバー上のプロセッサ数と同じ数の並列ジョブを実行します。 この設定の問題は、負荷が大きい時間帯に、すべてのプロセッサーが[!UICONTROL DAMアセットの更新]ワークフローに占有され、UIの応答性が低下し、[!DNL Experience Manager]がサーバーのパフォーマンスと安定性を保護する他のプロセスを実行できないことです。 次の手順を実行して、この値をサーバーで使用できるプロセッサーの半分の値にすることをお勧めします。
 
@@ -230,7 +230,7 @@ XMPの書き戻しでは、[!DNL Experience Manager]でメタデータが変更�
 
 Sites の実装などで、アセットを多数のパブリッシュインスタンスにレプリケートするときは、チェーンレプリケーションを使用することをお勧めします。この場合、オーサーインスタンスが単一のパブリッシュインスタンスにレプリケートし、そのパブリッシュインスタンスが代わりに他のパブリッシュインスタンスにレプリケートすることで、オーサーインスタンスを解放します。
 
-### チェーンレプリケーションの設定  {#configure-chain-replication}
+### チェーンレプリケーションの設定 {#configure-chain-replication}
 
 1. レプリケーションのチェーン先に使用するパブリッシュインスタンスを選択します。
 1. そのパブリッシュインスタンスで、他のパブリッシュインスタンスを指すレプリケーションエージェントを追加します。
@@ -276,17 +276,17 @@ Oakインデックス設定で最適化を行うと、[!DNL Experience Manager A
 
 [!DNL Experience Manager]導入のたびに、ボトルネックを迅速に特定して解決できるパフォーマンステスト体制を確立します。 留意点は次のとおりです。
 
-### ネットワークのテスト  {#network-testing}
+### ネットワークのテスト {#network-testing}
 
 お客様からのネットワークのパフォーマンスに関するすべての懸念については、次のタスクを実行してください。
 
 * お客様のネットワーク内からネットワークのパフォーマンスをテストする
-* アドビのネットワーク内からネットワークのパフォーマンスをテストする：AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
+* アドビのネットワーク内からネットワークのパフォーマンスをテストする。AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
 * 別のアクセスポイントからネットワークのパフォーマンスをテストする
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
 
-### [!DNL Experience Manager] デプロイメントテスト  {#aem-deployment-testing}
+### [!DNL Experience Manager] デプロイメントテスト {#aem-deployment-testing}
 
 CPUの効率的な使用と負荷分散を通じて遅延を最小限に抑え、高いスループットを実現するには、[!DNL Experience Manager]デプロイメントのパフォーマンスを定期的に監視します。 具体的には、以下のようになります。
 
