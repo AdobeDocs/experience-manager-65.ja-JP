@@ -3,24 +3,24 @@ title: ワークフローを使用したアセットの処理
 description: 形式の変換、レンディションの作成、アセットの管理、アセットの検証、ワークフローの実行をおこなうアセット処理。
 contentOwner: AG
 feature: ワークフロー、レンディション
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: e7c84385-efb3-4997-83ff-7a7f31582469
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 27%
 
 ---
 
-# デジタルアセットの処理{#process-assets}
+# デジタルアセットの処理 {#process-assets}
 
 [!DNL Adobe Experience Manager Assets] では、様々な方法でデジタルアセットを操作し、堅牢なアセット処理を実現できます。デフォルトまたはカスタマイズされた処理方法を使用して、エンドツーエンドのビジネスプロセスの完了、監査とコンプライアンス、洗い出しと配布、デジタルアセットの基本的な安全性を確保できます。 必要なスケールとカスタマイズを達成しながら、アセット管理タスクを実行できます。
 
-## ワークフローについて{#understand-workflows}
+## ワークフローについて {#understand-workflows}
 
 アセット処理では、[!DNL Experience Manager]はワークフローを使用します。 ワークフローは、ビジネスロジックやアクティビティの自動化に役立ちます。 特定のタスクを実行するための詳細な手順は、デフォルトで提供され、開発者は独自のカスタム手順を作成できます。 これらの手順を論理的な順序で組み合わせて、ワークフローを作成できます。 例えば、ワークフローは、アップロード先のフォルダーや画像の解像度など、特定の条件に基づいて、アップロードされた画像に透かしを適用できます。 もう1つの例として、透かしを設定し、メタデータを同時に追加し、レンディションを作成し、インテリジェントタグを追加して、データストアに公開するワークフローがあります。
 
-## [!DNL Experience Manager] {#default-workflows}で使用できるデフォルトのワークフロー
+## [!DNL Experience Manager]で使用できるデフォルトのワークフロー {#default-workflows}
 
 デフォルトでは、アップロードされたすべてのアセットは、[!UICONTROL DAMアセットの更新]ワークフローを使用して処理されます。 ワークフローは、アップロードされたアセットごとに実行され、レンディションの生成、メタデータの書き戻し、ページの抽出、メディアの抽出、トランスコーディングなど、基本的なアセット管理タスクを実行します。
 
@@ -30,7 +30,7 @@ ht-degree: 27%
 
 *図：で使用できるデフォルトのワークフローの一部で [!DNL Experience Manager]す。*
 
-## アセットを処理するためのワークフローの適用{#applying-workflows-to-assets}
+## アセットの処理へのワークフローの適用 {#applying-workflows-to-assets}
 
 ワークフローをデジタルアセットに適用する方法は、Web サイトページに適用する場合と同様です。ワークフローの作成および使用方法に関する完全なガイドについては、[ワークフローの開始](/help/sites-authoring/workflows-participating.md)を参照してください。
 
@@ -40,7 +40,7 @@ ht-degree: 27%
 >
 >クラシックUIで使用可能なワークフローが、[!UICONTROL Request to Activate]や[!UICONTROL Request to Deactivate]などのタッチ操作対応UIで使用できない場合は、[ワークフローモデルの作成](/help/sites-developing/workflows-models.md#classic2touchui)を参照してください。
 
-##  のアセットへのワークフローの適用 {#apply-a-workflow-to-an-asset}
+##  のアセットへのワークフローの適用  {#apply-a-workflow-to-an-asset}
 
 <!-- 
 TBD: Add animated GIF for these steps instead of all these screenshots.
@@ -87,7 +87,7 @@ TBD: Add animated GIF for these steps instead of all these screenshots.
 
 [コレクションへのワークフローの適用](/help/assets/manage-collections.md#running-a-workflow-on-a-collection)を参照してください。
 
-## アセットを条件付きで処理するワークフローの自動開始{#auto-execute-workflow-on-some-assets}
+## アセットを条件付きで処理するワークフローの自動開始 {#auto-execute-workflow-on-some-assets}
 
 管理者は、事前に定義された条件に基づいてアセットを自動的に実行および処理するようにワークフローを設定できます。 この機能は、特定のフォルダーにカスタムワークフローを作成する場合など、事業部門のユーザーやマーケターに役立ちます。 例えば、代理店の撮影したすべてのアセットに透かしを付けたり、フリーランサーがアップロードしたすべてのアセットを処理して特定のレンディションを作成したりできます。
 
