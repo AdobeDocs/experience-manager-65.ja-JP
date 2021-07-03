@@ -8,12 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4ae76d8a-208f-4099-9f17-a94df424685e
 feature: ビューア
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 203ea349-ef4c-421c-b4b6-76ee9d46ec34
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '375'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 87%
 
 Web ページに埋め込んでビデオを再生したりアセットを表示したりする場合は、**[!UICONTROL 埋め込みコード]**&#x200B;機能を使用します。埋め込みコードをクリップボードにコピーして、Web ページに貼り付けることができます。**[!UICONTROL 埋め込みコード]**&#x200B;ダイアログボックスでは、コードの編集はできません。
 
-Adobe Experience ManagerをWCMとして使用して&#x200B;**&#x200B;しない場合にのみ、URLを埋め込みます。 WCMとしてExperience Managerを使用している場合は、[ページ](adding-dynamic-media-assets-to-pages.md)に直接アセットを追加します。
+Adobe Experience Manager を WCM として使用&#x200B;*していない*&#x200B;場合に限り、URL の埋め込みを実行します。Experience Manager を WCM として使用している場合は、[ページに直接アセットを追加します。](adding-dynamic-media-assets-to-pages.md)
 
-[WebアプリケーションへのURLのリンク](linking-urls-to-yourwebapplication.md)を参照してください。
+「[Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)」を参照してください。
 
-[レスポンシブサイト用に最適化された画像の配信](responsive-site.md)を参照してください。
+「[レスポンシブサイト用に最適化された画像の配信](responsive-site.md)」を参照してください。
 
 >[!NOTE]
 >
