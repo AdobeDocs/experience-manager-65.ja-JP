@@ -6,17 +6,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 docset: aem65
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: Scene7モード，ハイブリッドモード
 exl-id: 07f0803c-4ec4-4745-8214-63370e9d0282
-source-git-commit: 61e703e73b831a9b4e7045e5d5fffeef5be7ed6d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# Dynamic Media — ハイブリッドからDynamic Media-Scene7への移行について{#about-migrating}
+# Dynamic Media — ハイブリッドからDynamic Media-Scene7への移行について {#about-migrating}
 
 Dynamic Media — ハイブリッドは、Dynamic MediaとAdobe Experience Managerの古いバージョン統合です。 ハイブリッドバージョンは、AEM(Adobe Experience Manager)6.1で最初に導入されました。Adobeは引き続きハイブリッドモードをサポートしますが、これは推奨モードではありません(Dynamic Media-Scene7が推奨モードです)。 また、スマート切り抜きやパノラマ画像などの新機能はサポートされません。 Dynamic Media-Scene7はそうです
 
@@ -33,11 +33,11 @@ Dynamic Media — ハイブリッドからDynamic Media-Scene7に移行する場
 >
 >Adobeでは、Dynamic Mediaハイブリッド実装を実稼動インスタンス上のDynamic Media-Scene7に移行しないことをお勧めします。
 
-## オプション1 - AEM上のDynamic Media-Scene7の新しいインスタンスのプロビジョニング{#provision-new-dms7}
+## オプション1 - AEM上のDynamic Media-Scene7の新しいインスタンスのプロビジョニング {#provision-new-dms7}
 
 Adobe Experience Manager上のDynamic Media-Scene7の新しいプロビジョニング済みインスタンスを使用して、新規に作成することを検討します。 Dynamic MediaCloud Serviceを通じたアセットの取り込みと処理に加えて、アセットの使用状況、ワークフロー、コンポーネントのAdobe監査を強くお勧めします。 多くの場合、カスタムコンポーネントとワークフローは、新しい標準搭載機能に置き換えられます。
 
-## オプション2 - Dynamic Media — ハイブリッドの既存のインスタンスをDynamic Media-Scene7に移行する{#process-for-migrating}
+## オプション2 - Dynamic Mediaハイブリッドの既存のインスタンスからDynamic Media-Scene7への移行 {#process-for-migrating}
 
 | ステップ | タスク | 検討事項 |
 |---|---|---|
