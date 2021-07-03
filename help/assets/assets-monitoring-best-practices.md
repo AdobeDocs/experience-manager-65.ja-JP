@@ -2,17 +2,17 @@
 title: ' [!DNL Assets] デプロイメントを監視するためのベストプラクティス'
 description: デプロイ後の [!DNL Adobe Experience Manager] デプロイメントの環境とパフォーマンスを監視するためのベストプラクティス。
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 feature: アセット管理
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1670'
 ht-degree: 67%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]デプロイメント{#assets-monitoring-best-practices}を監視するためのベストプラクティス
+# [!DNL Adobe Experience Manager Assets]デプロイメントを監視するためのベストプラクティス {#assets-monitoring-best-practices}
 
 [!DNL Experience Manager Assets]の観点から、監視には、次のプロセスとテクノロジーの観察と報告を含める必要があります。
 
@@ -25,7 +25,7 @@ ht-degree: 67%
 
 通常、[!DNL Experience Manager Assets]は、ライブ監視と長期監視の2つの方法で監視できます。
 
-## ライブ監視{#live-monitoring}
+## ライブ監視 {#live-monitoring}
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
@@ -53,11 +53,11 @@ ht-degree: 67%
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
-## 長期監視{#long-term-monitoring}
+## 長期的な監視 {#long-term-monitoring}
 
 [!DNL Experience Manager]デプロイメントの長期的な監視には、ライブで監視されるのと同じ部分を、長期間監視する必要があります。 また、環境に固有のアラートも定義します。
 
-### ログの集約とレポート  {#log-aggregation-and-reporting}
+### ログの集約とレポート {#log-aggregation-and-reporting}
 
 ログを集計するツールがいくつかあります。例えば、Splunk(TM)やElastic Search、Logstash、Kabana(ELK)などです。 [!DNL Experience Manager]デプロイメントの稼動時間を評価するには、システム固有のログイベントを理解し、それらに基づいてアラートを作成することが重要です。 開発と運用に関する十分な知識があれば、ログ集計プロセスを調整して重要なアラートを生成する方法をより深く理解できます。
 
@@ -74,7 +74,7 @@ ht-degree: 67%
 
 それぞれの項目を監視するには、NewRelic（TM）や AppDynamics（TM）などの外部ツールが必要です。これらのツールを使用して、システム固有のアラート（システム利用率が高い、ワークフローのバックアップ、ヘルスチェック失敗、Web サイトへの不正なアクセスなど）を定義できます。アドビでは、特定のツールを推奨することはありません。ご自身に合ったツールを見つけ、説明した項目の監視に利用してください。
 
-#### 内部アプリケーション監視  {#internal-application-monitoring}
+#### 内部アプリケーション監視 {#internal-application-monitoring}
 
 内部アプリケーションの監視には、JVM、コンテンツリポジトリ、プラットフォーム上に構築されたカスタムアプリケーションコードを介した監視など、[!DNL Experience Manager]スタックを構成するアプリケーションコンポーネントの監視が含まれます。 通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
 
@@ -188,7 +188,7 @@ JVMを監視できるベースラインパラメーターを次に示します�
    * アラームしきい値：ステータスが OK ではない場合。
    * アラーム定義：ログファイルにエラーがあります。問題の原因について詳しくは、ログ属性を確認してください。
 
-## 一般的な問題と解決方法{#common-issues-and-resolutions}
+## 一般的な問題と解決策  {#common-issues-and-resolutions}
 
 監視の過程で問題が発生した場合は、次に示すトラブルシューティングタスクを実行して、[!DNL Experience Manager]デプロイメントの一般的な問題を解決します。
 
