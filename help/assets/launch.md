@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
 feature: ビューア
-role: Business Practitioner, Administrator,Developer,Data Engineer,Data Architect
+role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '6616'
 ht-degree: 83%
@@ -209,13 +209,13 @@ Dynamic Media ビューア拡張機能で提供されるデータ要素タイプ
 
 次に、Dynamic Mediaビューアの&#x200B;*データ要素*&#x200B;のライフサイクルを考えてみましょう。 このようなデータ要素の値は、対応する Dynamic Media ビューアイベントがページで発生した後に設定されます。例えば、データ要素が **[!UICONTROL LOAD]** イベントとその「asset」引数を指しているとします。その場合、このようなデータ要素の値は、ビューアが初めて&#x200B;**[!UICONTROL LOAD]**&#x200B;イベントを実行した後で有効なデータを受け取ります。 データ要素が **[!UICONTROL ZOOM]** イベントとその「scale」引数を指している場合、このようなデータ要素の値は、ビューアが初めて **[!UICONTROL ZOOM]** イベントを送信するまで空のままです。
 
-同様に、ビューアがページ上の対応するイベントを送信すると、データ要素の値は自動的に更新されます。値の更新は、特定のイベントがルール設定で指定されていない場合でもおこなわれます。例えば、ZOOMイベントの「scale」パラメータにデータ要素&#x200B;**[!UICONTROL ZoomScale]**&#x200B;が定義されているとします。 ただし、ルール設定に存在する唯一のルール は、**[!UICONTROL LOAD]** イベントによってトリガーされます。**[!UICONTROL ZoomScale]** の値は、ユーザーがビューア内でズームを実行するたびに更新されます。
+同様に、ビューアがページ上の対応するイベントを送信すると、データ要素の値は自動的に更新されます。値の更新は、特定のイベントがルール設定で指定されていない場合でもおこなわれます。例えば、ZOOMイベントの「scale」パラメータにデータ要素&#x200B;**[!UICONTROL ZoomScale]**&#x200B;が定義されているとします。 ただし、ルール設定に存在する唯一のルールは、**[!UICONTROL LOAD]** イベントによってトリガーされます。**[!UICONTROL ZoomScale]** の値は、ユーザーがビューア内でズームを実行するたびに更新されます。
 
 Dynamic Media ビューアは Web ページ上で一意の識別子を持ちます。データ要素は、値自体と、値が入力されたビューアを追跡します。例えば、同じページに複数のビューアがあり、**[!UICONTROL LOAD]** イベントとその「asset」引数を指す **[!UICONTROL AssetName]** データ要素があるとします。**[!UICONTROL AssetName]** データ要素は、ページに読み込まれた各ビューアに関連付けられたアセット名のコレクションを保持します。
 
 データ要素から返される正確な値は、コンテキストによって異なります。Dynamic Media ビューアイベントによってトリガーされたルール内でデータ要素が要求された場合、ルールを開始したビューアに対してデータ要素の値が返されます。また、他の Platform Launch 拡張機能のイベントによってトリガーされたルール内でもデータ要素が要求されます。この時点で、データ要素の値は、このデータ要素を最後に更新したビューアから取得されます。
 
-**次のサンプル設定を考えてみましょう。**
+**次の設定例を考えてみましょう**。
 
 * 2 つの Dynamic Media ズームビューアを持つ Web ページ：*viewer1* および *viewer2*。
 
@@ -241,7 +241,7 @@ Dynamic Media ビューアは Web ページ上で一意の識別子を持ちま�
 
 いずれの場合も、Dynamic Media ビューアによって駆動されるデータ要素の値は、ローカルストレージやサーバーに保存されず、クライアント側の Experience Platform Launch ライブラリにのみ保存されます。Web ページがリロードされると、このようなデータ要素の値は消去されます。
 
-一般に、データ要素エディターでは、[ストレージ期間の選択](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html?lang=en#create-a-data-element)がサポートされます。ただし、Dynamic Media ビューア拡張機能を使用するデータ要素では、ストレージ期間「**[!UICONTROL なし]**」オプションのみがサポートされます。その他の値はユーザーインターフェイスで設定可能ですが、この場合、データ要素の動作は定義されていません。拡張機能は、データ要素の値を独自に管理します。データ要素は、ビューアのライフサイクル全体でビューアのイベント引数の値を維持します。
+一般に、データ要素エディターでは、[ストレージ期間の選択](https://experienceleague.adobe.com/docs/launch/using/ui/data-elements.html?lang=ja#create-a-data-element)がサポートされます。ただし、Dynamic Media ビューア拡張機能を使用するデータ要素では、ストレージ期間「**[!UICONTROL なし]**」オプションのみがサポートされます。その他の値はユーザーインターフェイスで設定可能ですが、この場合、データ要素の動作は定義されていません。拡張機能は、データ要素の値を独自に管理します。データ要素は、ビューアのライフサイクル全体でビューアのイベント引数の値を維持します。
 
 ### Dynamic Media ビューア拡張機能のルールについて {#about-rules-in-the-dynamic-media-viewers-extension}
 
@@ -437,7 +437,7 @@ Adobe Analytics を設定した後、統合のために次の設定がおこな�
 
 [Analytics 導入ガイド](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=ja)も参照してください。
 
-**Adobe Analyticsを統合用に設定するには：**
+**統合のために Adobe Analytics を設定するには**：
 
 1. まず、Experience Cloud [ホームページ](https://experience.adobe.com/#/home)から Adobe Analytics にアクセスします。メニューバーで、ページの右上隅付近にあるソリューションアイコン（3 x 3 のドットテーブル）をクリックし、**[!UICONTROL Analytics]** をクリックします。
 
@@ -503,7 +503,7 @@ Experience Platform Launch を設定した後、統合のために次の設定�
 * データ要素とルールの設定。この設定は、Dynamic Media ビューアから取得するデータ、トラッキングロジックをトリガーするタイミング、Adobe Analytics でビューアのデータを送信する場所を定義するものです。
 * ライブラリの公開。
 
-**統合のExperience Platform Launchを設定するには：**
+**統合のために Experience Platform Launch を設定するには**：
 
 1. まず、Experience Cloud の[ホームページ](https://experience.adobe.com/#/home)から Experience Platform Launch にアクセスします。メニューバーで、ページの右上隅付近にあるソリューションアイコン（3 x 3 ドットのテーブル）をクリックし、**[!UICONTROL Launch]** をクリックします。
 
@@ -596,7 +596,7 @@ Experience Platform Launch を使用したトラッキングの概要につい�
 
 Experience Platform Launchの設定（プロパティ、拡張機能、ルール、データ要素の設定を含む）を変更するには、*publish*&#x200B;する必要があります。 Experience Platform Launch での公開は、プロパティ設定の「公開」タブから実行します。
 
-Platform Launch には、複数の開発環境、1 つのステージング環境、1 つの実稼動環境が存在する場合があります。デフォルトの Experience Manager の Platform Launch クラウド設定では、Experience Manager のオーサーノードは Platform Launch のステージ環境を指します。Experience Managerのパブリッシュノードが、Platform launchの実稼動環境を指している。 これは、デフォルトの Experience Manager 設定では、Platform Launch ライブラリをステージング環境に公開する必要があることを意味します。これにより、ライブラリを Experience Manager オーサーで使用できるようになります。その後、実稼動環境に公開することで、Experience Manager のパブリッシュで使用できるようになります。
+Platform Launch には、複数の開発環境、1 つのステージング環境、1 つの実稼動環境が存在する場合があります。デフォルトの Experience Manager の Platform Launch クラウド設定では、Experience Manager のオーサーノードは Platform Launch のステージ環境を指します。Experience Manager のパブリッシュノードは、Platform Launch の実稼動環境を指します。これは、デフォルトの Experience Manager 設定では、Platform Launch ライブラリをステージング環境に公開する必要があることを意味します。これにより、ライブラリを Experience Manager オーサーで使用できるようになります。その後、実稼動環境に公開することで、Experience Manager のパブリッシュで使用できるようになります。
 
 Experience Platform Launch 環境について詳しくは、[環境](https://experienceleague.adobe.com/docs/launch/using/publish/environments/environments.html?lang=ja#environment-types)を参照してください。
 
