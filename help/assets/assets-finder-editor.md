@@ -2,17 +2,17 @@
 title: アセットエディターページの作成と設定
 description: カスタムのアセットエディターページを作成し、複数のアセットを同時に編集する方法を学習します。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 開発者ツール，アセット管理
 exl-id: 53e310a9-c511-447a-91bd-8c5b2760dc03
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2129'
 ht-degree: 69%
 
 ---
 
-# アセットエディターページの作成と設定{#creating-and-configuring-asset-editor-pages}
+# アセットエディターページの作成と設定 {#creating-and-configuring-asset-editor-pages}
 
 このドキュメントは次の内容について説明します。
 
@@ -26,7 +26,7 @@ ht-degree: 69%
 >
 >アセット共有は、オープンソースの参照実装として使用できます。[Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) を参照してください。アセット共有は正式にはサポートされていません。
 
-## アセットエディターページを作成して設定する理由{#why-create-and-configure-asset-editor-pages}
+## アセットエディターページを作成して設定する理由 {#why-create-and-configure-asset-editor-pages}
 
 デジタルアセット管理は、ますます広く使用されるようになっています。専門的な訓練を受けたユーザー（写真家や分類学者など）の小規模なソリューションから、ビジネスユーザー、WCM作成者、ジャーナリストなど、より多様なユーザーグループに移行する場合、専門的なユーザー向けの[!DNL Adobe Experience Manager Assets]の強力なユーザーインターフェイス。
 
@@ -190,7 +190,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 ![screen_shot_2012-04-23at15640pm](assets/screen_shot_2012-04-23at15640pm.png)
 -->
 
-## アセットエディターページ{#creating-and-configuring-an-asset-editor-page}の作成と設定
+## アセットエディターページの作成と設定 {#creating-and-configuring-an-asset-editor-page}
 
 アセットエディターをカスタマイズして、ユーザーによるデジタルアセットの表示および編集方法を指定します。これをおこなうには、新規のアセットエディターページを作成してから、ユーザーがページに対して実行できる表示とアクションをカスタマイズします。
 
@@ -198,7 +198,7 @@ For more information, see the [predicate Javadocs](https://helpx.adobe.com/exper
 >
 >DAMアセットエディターにカスタムフィールドを追加する場合は、新しい`cq:Widget`ノードを`/apps/dam/content/asseteditors.`に追加します。
 
-### アセットエディターページ{#creating-the-asset-editor-page}の作成
+### アセットエディターページの作成 {#creating-the-asset-editor-page}
 
 アセットエディターページを作成する場合に、アセット共有ページのすぐ下にページを作成することをお勧めします。
 
@@ -217,7 +217,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![assetshare6](assets/assetshare6.png)
 
-#### アセット共有ページから開くようにアセットエディターを設定する{#setting-which-asset-editor-opens-from-an-asset-share-page}
+#### アセット共有ページから開くようにアセットエディターを設定する {#setting-which-asset-editor-opens-from-an-asset-share-page}
 
 カスタムのアセットエディターページを作成したら、アセット（作成したカスタムのアセット共有）をダブルクリックすると、カスタマイムのエディターページでアセットが開くことを確認する必要があります。
 
@@ -233,7 +233,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![screen_shot_2012-04-23at21653pm](assets/screen_shot_2012-04-23at21653pm.png)
 
-#### アセットエディターコンポーネントの追加{#adding-asset-editor-components}
+#### アセットエディターコンポーネントの追加 {#adding-asset-editor-components}
 
 アセットエディターに含める機能を指定するには、ページにコンポーネントを追加します。
 
@@ -361,7 +361,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![chlimage_1-164](assets/chlimage_1-392.png)
 
-#### アセットエディターのアクションの追加{#adding-asset-editor-actions}
+#### アセットエディターのアクションの追加 {#adding-asset-editor-actions}
 
 定義済みのアクションの選択から、選択したデジタルアセットに対してユーザーが実行できるアクションを決定できます。
 
@@ -386,7 +386,7 @@ Geometrixx アセットエディターテンプレートを使用して作成さ
 
 ![chlimage_1-165](assets/chlimage_1-393.png)
 
-## アセットエディターページ{#multi-editing-assets-with-the-asset-editor-page}でアセットをマルチ編集する
+## アセットエディターページでのアセットのマルチ編集 {#multi-editing-assets-with-the-asset-editor-page}
 
 [!DNL Experience Manager Assets]を使用すると、複数のアセットを一度に変更できます。 アセットを選択した後、それらのアセットの次の情報を同時に変更できます。
 
