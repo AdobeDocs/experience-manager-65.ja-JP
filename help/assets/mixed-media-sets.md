@@ -9,16 +9,16 @@ content-type: reference
 discoiquuid: ed84157a-e6b4-4dde-af2e-a1e0b6259628
 docset: aem65
 feature: 混在メディアセット，アセット管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 82%
+ht-degree: 84%
 
 ---
 
-# 混在メディアセット {#mixed-media-sets}
+# 混在メディアセット{#mixed-media-sets}
 
 混在メディアセットは、画像、画像セット、スピンセットおよびビデオを 1 つのプレゼンテーションで混在させて表示するものです。
 
@@ -38,7 +38,7 @@ ht-degree: 82%
 
    まずは混在メディアセット用の画像およびビデオをアップロードします。必要に応じて、[画像セット](/help/assets/image-sets.md)と[スピンセット](/help/assets/spin-sets.md)を作成します。ユーザーは混在メディアセットビューアで画像をズームできるので、画像は慎重に選択します。 最大サイズで 2,000 ピクセル以上の画像を使用してください。
 
-1. [混在メディアセットの作成](#creating-mixed-media-sets)を参照してください。
+1. [混在メディアセットを作成します](#creating-mixed-media-sets)。
 
    アセットページで混在メディアセットを作成するには、**[!UICONTROL 作成]** / **[!UICONTROL 混在メディアセット]**&#x200B;をタップし、セットの名前を付け、アセットを選択し、画像の表示順を選択します。
 
@@ -48,15 +48,15 @@ ht-degree: 82%
 
    管理者は、混在メディアセットビューアプリセットを作成または編集できます。混在メディアセットを特定のビューアプリセットで表示するには、混在メディアセットを選択し、左側のレールのドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択します。
 
-   ビューアプリセットを作成または編集するには、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL ビューアプリセット]**&#x200B;を参照してください。
+   ビューアプリセットを作成または編集するには、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL ビューアプリセット]**&#x200B;を選択します。
 
-   [ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
+   詳しくは、[ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
 
-1. [混在メディアセットのプレビュー](#previewing-mixed-media-sets)を参照してください。
+1. [混在メディアセットをプレビューします](#previewing-mixed-media-sets)。
 
    混在メディアセットを選択すると、プレビューできます。サムネールアイコンをクリックして、選択したビューアでの混在メディアセットの表示を確認します。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左側のレールのドロップダウンメニューにあります。
 
-1. [混在メディアセットの公開](#publishing-mixed-media-sets)を参照してください。
+1. [混在メディアセットを公開します](#publishing-mixed-media-sets)。
 
    混在メディアセットを公開すると、URL と埋め込み文字列がアクティベートされます。また、[ビューアプリセットを公開](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)する必要があります。
 
@@ -122,7 +122,7 @@ ht-degree: 82%
 1. プリセットを適用するには、右上隅にある「**[!UICONTROL プリセット]**」をタップし、アセットに適用するプリセットを選択します。
 1. 「**[!UICONTROL 保存]**」をクリックします。新しく作成した混在メディアセットが、作成先のフォルダーに表示されます。
 
-## 混在メディアセットの編集  {#editing-mixed-media-sets}
+## 混在メディアセットの編集 {#editing-mixed-media-sets}
 
 [Assets 内のアセットの場合と同じように](/help/assets/manage-assets.md)、ユーザーインターフェイスで直接、混在メディアセット内のアセットに対して様々な編集タスクを実行できます。また、混在メディアセットでは次のアクションも実行できます。
 
@@ -134,7 +134,7 @@ ht-degree: 82%
 
 **混在メディアセットを編集するには：:**
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 混在メディアセットアセットの上にマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）をタップします。
    * 混在メディアセットアセットの上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップしてからツールバーの「**[!UICONTROL 編集]**」をタップします。
@@ -172,7 +172,7 @@ ht-degree: 82%
 
 混在メディアセットのプレビュー方法について詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
-## 混在メディアセットの公開  {#publishing-mixed-media-sets}
+## 混在メディアセットの公開 {#publishing-mixed-media-sets}
 
 混在メディアセットの公開方法について詳しくは、[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
