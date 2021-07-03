@@ -2,10 +2,10 @@
 title: 関連アセット
 description: 一部の共通属性を共有するデジタルアセットを関連付ける方法について説明します。 また、デジタルアセット間にソースから派生した関係を作成することもできます。
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: コラボレーション、アセット管理
 exl-id: ddb69727-74a0-4a4d-a14e-7d3bb5ceea2a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 46%
