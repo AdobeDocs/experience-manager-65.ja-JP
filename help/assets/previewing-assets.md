@@ -1,6 +1,6 @@
 ---
 title: アセットのプレビュー
-description: Dynamic Media のアセットをプレビューする方法について説明します。
+description: Dynamic Media のアセットをプレビューする方法について説明します
 uuid: 09e97245-373b-4d50-8ba3-5d1034a29988
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -9,16 +9,16 @@ content-type: reference
 discoiquuid: bb8c355c-4475-45ec-9096-0975f0ce2c27
 docset: aem65
 feature: アセット管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1346'
-ht-degree: 83%
+ht-degree: 84%
 
 ---
 
-# ソフトウェアインターフェイス{#previewing-assets}を使用したアセットのプレビュー
+# ソフトウェアインターフェイスを使用したアセットのプレビュー {#previewing-assets}
 
 プレビューを使用して、アップロードしたデジタルアセットがユーザーによる Web ブラウザーでの閲覧時にどのように表示されるかを確認できます。アセットに割り当てられたデフォルトのクロスデバイス対応組み込みビューアがプレビューに使用されます。
 
@@ -41,7 +41,7 @@ ht-degree: 83%
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」をタップします。
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
 1. 「**[!UICONTROL タイトル]**」列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
-1. クリックしたアセットの種類に応じて、次のいずれかの操作をおこないます。
+1. クリックしたアセットの種類に応じて、次のいずれかの操作を行います。
 
 
    <table>
@@ -144,7 +144,7 @@ ht-degree: 83%
     </tbody>
     </table>
 
-## キーボード{#keyboard-navigation-asset-preview}を使用したアセットのプレビュー
+## キーボードを使用したアセットのプレビュー {#keyboard-navigation-asset-preview}
 
 1. Assetsユーザーインターフェイスで、プレビューするアセットを含むフォルダーに移動します。
 
