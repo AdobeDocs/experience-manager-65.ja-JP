@@ -8,12 +8,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: アセット管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: 3267fba890424e18c8c3c61a0cf4c79387b074a8
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1448'
-ht-degree: 81%
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 81%
 
 許容できる結果のレンダリングには多くの要因が関係するので、画質の最適化には時間がかかることがあります。画質に対する個人の感覚は異なるので、結果は一部主観的なものです。構造化された実験をおこなうことが重要になります。
 
-Adobe Experience Managerには、画像とレンダリング結果を調整および最適化するための、100を超えるDynamic Media画像配信コマンドが含まれています。 次のガイドラインは、一部の基本コマンドとベストプラクティスを使用してこのプロセスを効率化し、すぐに良好な結果を得るために活用できます。
+Adobe Experience Manager には、画像をチューニングおよび最適化して結果をレンダリングするための、100 を超える Dynamic Media 画像配信コマンドがあります。次のガイドラインは、一部の基本コマンドとベストプラクティスを使用してこのプロセスを効率化し、すぐに良好な結果を得るために活用できます。
 
 ## 画像形式（`&fmt=`）のベストプラクティス {#best-practices-for-image-format-fmt}
 
@@ -45,14 +45,14 @@ Adobe Experience Managerには、画像とレンダリング結果を調整お�
 
 ## 画像のシャープニングに関するベストプラクティス {#best-practices-for-image-sharpening}
 
-画像のシャープニングは、Webサイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。 次の役立つリソースを参照し、Experience Managerでのシャープおよびアンシャープマスクの仕組みについて詳しく学んでください。
+画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。次の役立つリソースを参照し、Experience Manager でのシャープおよびアンシャープマスクの仕組みについて詳しく学んでください。
 
 ベストプラクティスに関するホワイトペーパー[Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)Adobeの画像のシャープニング(Experience Managerにも適用)。
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
 
-Experience Managerを使用すると、取り込み時、配信時またはその両方で画像をシャープにできます。 ただし、通常は、1つの方法のみを使用して画像をシャープにします。両方は使用しません。 一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
+Experience Manager を使用すれば、取得時、配信時またはその両方で画像をシャープにすることができます。ただし、通常は、1つの方法のみを使用して画像をシャープにします。両方は使用しません。 一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
 
 画像のシャープニングでは、次の 2 つの方法を使用できます。
 
@@ -76,7 +76,7 @@ Experience Managerを使用すると、取り込み時、配信時またはそ�
 
          ベストプラクティスに関するホワイトペーパー[Dynamic Media ClassicのAdobeの画像のシャープ](/help/assets/assets/sharpening_images.pdf)。
 
-      * Experience Managerでは、4番目のパラメーターを制御することもできます。モノクロ(0、1) このパラメーターは、アンシャープマスクを各カラーコンポーネントに個別に適用するか（値0を使用）、画像の明るさ/強さを適用するか（値1を使用）を決定します。
+      * Experience Manager では第 4 パラメーターの monochrome (0,1) も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
 
 ベストプラクティスとして、まずはアンシャープマスクの radius パラメーターを使用します。手始めに使用できる radius 設定は次のとおりです。
