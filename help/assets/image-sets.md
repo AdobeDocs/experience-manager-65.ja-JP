@@ -9,12 +9,12 @@ content-type: reference
 discoiquuid: ccc4eb23-934c-4e67-860b-a6faa2bcaafc
 docset: aem65
 feature: 画像セット，アセット管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '2085'
-ht-degree: 83%
+ht-degree: 85%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 83%
 
    Adobe Experience Manager Assetsでは多くの画像ファイル形式がサポートされますが、可逆圧縮TIFF、PNGおよびEPS画像の使用が推奨されます。
 
-1. [画像セットの作成](#creating-image-sets)を参照してください。
+1. [画像セットを作成します](#creating-image-sets)。
 
    画像セットで、画像セットビューア内のサムネール画像をクリックします。
 
@@ -68,11 +68,11 @@ ht-degree: 83%
    ビューアプリセットを作成または編集する場合は、**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL ビューアプリセット]**&#x200B;を参照してください。
 
 1. （オプション）バッチセットプリセットを使用して作成した[画像セットの表示](/help/assets/image-sets.md#viewing-image-sets)
-1. [画像セットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
+1. [画像セットをプレビューします](/help/assets/previewing-assets.md)。
 
    画像セットを選択すると、プレビューできます。サムネールアイコンをクリックして、選択したビューアで画像セットを確認できます。 **[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左側のレールのドロップダウンメニューにあります。
 
-1. [画像セットを公開します](/help/assets/publishing-dynamicmedia-assets.md)。
+1. [画像セットを発行します](/help/assets/publishing-dynamicmedia-assets.md)。
 
    画像セットを公開すると、URLと埋め込みコードがアクティベートされます。 さらに、作成した[カスタムビューアプリセットを公開する](/help/assets/managing-viewer-presets.md)必要があります。既製のビューアプリセットが既に公開されています。
 
@@ -84,7 +84,7 @@ ht-degree: 83%
 
    詳しくは、[Web ページへの画像セットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)および[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-画像セットを編集するには、[画像セットの編集](#editing-image-sets)を参照してください。 を参照してください。また、[画像セットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および編集することができます。
+画像セットを編集するには、[画像セットの編集](#editing-image-sets)を参照してください。を参照してください。また、[画像セットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および編集することができます。
 
 セットの作成で問題が発生した場合は、[Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md#images-and-sets)の「画像とセット」を参照してください。
 
@@ -112,7 +112,7 @@ ht-degree: 83%
 >* ブラック、ブラウンおよびグリーンの色のサムネール。
 
 
-## 画像セットの作成  {#creating-image-sets}
+## 画像セットの作成 {#creating-image-sets}
 
 画像セットは、ユーザーインターフェイスまたは API 経由で作成できます。ここでは、UI で画像セットを作成する方法について説明します。
 
@@ -139,7 +139,7 @@ ht-degree: 83%
 
    ![6_5_imageset-creatingnewset](assets/6_5_imageset-creatingnewset.png)
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 画像セットエディターページの左上隅付近にある「**[!UICONTROL アセットを追加]**」をタップします。
 
@@ -154,13 +154,13 @@ ht-degree: 83%
 
 1. 画像セットに追加したアセットは、自動的に英数字順で追加されます。追加後に、手動でアセットの順番を変更したり、並べ替えたりすることができます。
 
-   必要に応じて、アセットの並べ替えアイコンをアセットのファイル名の右にドラッグして、セットリスト内で画像を上下に並べ替えます。
+   必要に応じて、アセットのファイル名の右にあるアセットの並べ替えアイコンをドラッグして、画像をセットリスト内で上下に並べ替えます。
 
    ![6_5_imageset-reorderassets](assets/6_5_imageset-reorderassets.png)
 
    サムネールまたはスウォッチを変更する場合は、画像の横の「**+**」**サムネール**&#x200B;アイコンをクリックし、必要なサムネールまたはスウォッチに移動します。すべての画像の選択が完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
-1. （オプション）次のいずれかの操作をおこないます。
+1. （オプション）次のいずれかの操作を行います。
 
    * 画像を削除するには、画像を選択し、「**[!UICONTROL アセットを削除]**」をタップします。
 
@@ -171,7 +171,7 @@ ht-degree: 83%
 
 1. 「**[!UICONTROL 保存]**」をクリックします。新しく作成した画像セットが、作成先のフォルダーに表示されます。
 
-## 画像セットの表示  {#viewing-image-sets}
+## 画像セットの表示 {#viewing-image-sets}
 
 画像セットは、ユーザーインターフェイスで作成することも、[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して自動的に作成することもできます。
 
@@ -199,7 +199,7 @@ ht-degree: 83%
 >
 >[画像セットの編集](#editing-image-sets)の説明に従って、ユーザーインターフェイスを通じて画像セットを表示できます。
 
-## 画像セットの編集  {#editing-image-sets}
+## 画像セットの編集 {#editing-image-sets}
 
 画像セットには、次のような様々な編集タスクを実行できます。
 
@@ -211,13 +211,13 @@ ht-degree: 83%
 
 **画像セットを編集するには:**
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 画像セットアセット上にマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）をタップします。
    * 画像セットアセット上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）をタップした後、ツールバーの「**[!UICONTROL 編集]**」をタップします。
    * 画像セットアセットをタップしてから、ツールバーの&#x200B;**[!UICONTROL 編集]**（鉛筆アイコン）をタップします。
 
-1. 画像セット内の画像を編集するには、次のいずれかの操作をおこないます。
+1. 画像セット内の画像を編集するには、次のいずれかの操作を行います。
 
    * アセットを並べ替えるには、画像を新しい位置までドラッグします（並べ替えアイコンを選択して項目を移動します）。
    * 項目を昇順または降順に並べ替えるには、列の見出しをクリックします。
@@ -237,10 +237,10 @@ ht-degree: 83%
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」をタップします。
 
-## 画像セットのプレビュー  {#previewing-image-sets}
+## 画像セットのプレビュー {#previewing-image-sets}
 
 詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
-## 画像セットの公開  {#publishing-image-sets}
+## 画像セットの公開 {#publishing-image-sets}
 
 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
