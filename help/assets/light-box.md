@@ -2,10 +2,10 @@
 title: 個人用画像ギャラリーとしてのLightbox
 description: Lightboxについては、Adobe Experience Manager Assetsの個人用画像ギャラリーを参照してください]。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: 開発者ツール，レンディション
 exl-id: 7652663a-11ba-4a78-9a9f-221d514fe992
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 53%
@@ -33,7 +33,7 @@ Lightbox は、アセットに容易にアクセスするための特別なタ�
    >
    >Lightbox はコレクションに似ていますが、コレクションに対して通常実行するすべてのアクションを実行できるわけではありません。例えば、Lightbox の設定を削除、共有または表示することはできません。また、Lightbox を他のコレクションに追加することはできません。ただし、Lightbox 内のアセットを編集することはできます。
 
-## Lightboxからのアセットの削除{#removing-assets-from-lightbox}
+## Lightboxからのアセットの削除 {#removing-assets-from-lightbox}
 
 1. コレクションコンソールに移動し、「 Lightbox 」をクリックしてアセットを表示します。
 1. 削除するアセットを選択します。
