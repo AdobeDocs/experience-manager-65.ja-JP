@@ -2,17 +2,17 @@
 title: コレクション、スニペット、スニペットテンプレートのマルチテナント機能
 description: マルチテナント機能を使用して、お客様の組織に基づいてCRXリポジトリ内のコンテンツを分離し、不正アクセスを防ぐ方法を説明します。
 contentOwner: AG
-role: Architect, Administrator, Leader
+role: Architect, Admin, Leader
 feature: コレクション
 exl-id: f95560c9-f1b9-4e86-94a7-70347d268d8f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 2%
 
 ---
 
-# コレクション、スニペット、スニペットの各テンプレートのマルチテナント化{#multi-tenancy-for-collections-snippets-and-snippet-templates}
+# コレクション、スニペット、スニペットテンプレートのマルチテナント機能 {#multi-tenancy-for-collections-snippets-and-snippet-templates}
 
 マルチテナント機能を使用すると、組織のプレフィックスと組織IDに基づいてCRX内のコンテンツを区別し、他の組織のユーザーによるコンテンツへの不正アクセスを防ぐことができます。
 
