@@ -2,17 +2,17 @@
 title: ネットワークに関する考慮事項と要件
 description: ' [!DNL Adobe Experience Manager Assets] デプロイメントを設計する際のネットワークの考慮事項について説明します。'
 contentOwner: AG
-role: Architect, Administrator
+role: Architect, Admin
 feature: 開発者ツール
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 70%
 
 ---
 
-# [!DNL Assets] ネットワークの考慮事項  {#assets-network-considerations}
+# [!DNL Assets] ネットワークの考慮事項 {#assets-network-considerations}
 
 ネットワークの理解は、[!DNL Adobe Experience Manager Assets]を理解するのと同じくらい重要です。 ネットワークはアップロード、ダウンロードおよびユーザーのエクスペリエンスに影響を与えることがあります。ネットワークトポロジを図解することで、ネットワークのパフォーマンスとユーザーエクスペリエンスの向上のために、ネットワーク上の渋滞地点や改善を要する部分を特定できます。
 
@@ -41,13 +41,13 @@ ht-degree: 70%
 
 右に表示されているコンピューターは VPN を介して企業ネットワークに接続されており、アップストリームの上限は 1 Mbps です。1 Mbps 接続と 1 Gbps 接続では、ユーザーエクスペリエンスは大幅に異なります。アセットのサイズによっては、そのタスクに対して VPN アップリンクが不十分になる可能性があります。
 
-## 企業ネットワークのトポロジ  {#topology-of-the-corporate-network}
+## 企業ネットワークのトポロジ {#topology-of-the-corporate-network}
 
 ![chlimage_1-354](assets/chlimage_1-354.png)
 
 図では、企業ネットワーク内で使用されているアップリンクの速度が、通常使用されるものよりも高速になっています。これらのパイプは共有リソースです。共有スイッチが50個のクライアントを処理すると予想される場合は、チョークポイントになる可能性があります。 最初の図では、2 台のコンピューターのみがその特定の接続を共有しています。
 
-## 企業ネットワークおよび[!DNL Experience Manager]環境からインターネットへのアップリンク{#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## 企業ネットワークおよび[!DNL Experience Manager]環境からインターネットへのアップリンク {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
@@ -63,7 +63,7 @@ ht-degree: 70%
 
 このサンプル図より、6 台のデバイスが 10 Mbps の概念的なチャネルを共有していると結論付けることができます。使用しているアセットのサイズによっては、これではユーザーの期待に応えるには不十分である可能性があります。
 
-## [!DNL Experience Manager]環境のトポロジ{#topology-of-the-aem-environment}
+## [!DNL Experience Manager]環境のトポロジ {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
@@ -77,7 +77,7 @@ Dispatcherは、100 Mbpsの接続を、外部と[!DNL Experience Manager]の2つ
 
 クライアントデバイスから[!DNL Experience Manager]デプロイメントへのネットワークを確認すると、最も小さなチョークポイントは10 Mbitエンタープライズファイアウォールスロットルのようです。 [アセットのサイズ設定ガイド](assets-sizing-guide.md)のサイズ計算ツールでこれらの値を使用して、ユーザーエクスペリエンスを決定できます。
 
-## [!DNL Experience Manager]デプロイメント{#defined-workflows-of-the-aem-deployment}の定義済みワークフロー
+## [!DNL Experience Manager]デプロイメントの定義済みワークフロー {#defined-workflows-of-the-aem-deployment}
 
 ネットワークのパフォーマンスを考慮する際には、システムで発生するワークフローや公開を考慮することが重要であることがあります。さらに、S3 などのネットワークに接続されたストレージや入出力のリクエストはネットワークの帯域幅を消費します。そのため、完全に最適化されたネットワークであっても、パフォーマンスはディスクの入出力によって制限されることがあります。
 
