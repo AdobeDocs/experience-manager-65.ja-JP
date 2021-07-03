@@ -2,17 +2,17 @@
 title: Apache Tikaを使用したアセットのMIMEタイプの検出
 description: 'Apache Tikaを有効にして、アップロード操作中にファイル拡張子ではなくコンテンツストリームからアセットのMIMEタイプを検出するのに役立ちます。 [!DNL Experience Manager Assets] '
 contentOwner: AG
-role: Administrator, Architect
+role: Admin, Architect
 feature: メタデータ，開発者ツール，アセット管理
 exl-id: a312466d-8d84-4c94-af85-1549afc61aed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 11%
 
 ---
 
-# [!DNL Apache Tika] {#detecting-mime-type-of-assets-using-apache-tika}を使用してアセットのMIMEタイプを検出する
+# [!DNL Apache Tika]を使用してアセットのMIMEタイプを検出する {#detecting-mime-type-of-assets-using-apache-tika}
 
 通常、[!DNL Adobe Experience Manager Assets]は、アップロードするアセットのMIMEタイプをファイル拡張子から検出します。
 
