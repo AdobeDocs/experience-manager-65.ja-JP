@@ -2,10 +2,10 @@
 title: 翻訳するアセットの準備
 description: 多言語アセットをサポートするための翻訳用アセットを準備するには、言語ルートフォルダーを作成します。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: プロジェクト
 exl-id: eee768e3-3eb4-46fa-b9ae-9ef8764a3a94
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 62%
@@ -41,7 +41,7 @@ ht-degree: 62%
 1. 言語プライマリにアセットを追加します。
 1. 言語コピーが必要な各ターゲット言語の言語ルートを作成します。
 
-## 言語ルート{#creating-a-language-root}の作成
+## 言語ルートの作成 {#creating-a-language-root}
 
 言語ルートを作成するには、フォルダーを作成し、「名前」プロパティの値として ISO 言語コードを使用します。言語ルートを作成したら、言語ルート内の任意のレベルに言語コピーを作成できます。
 
