@@ -2,17 +2,17 @@
 title: PDFラスタライザーを使用したレンディションの生成
 description: Adobe PDF Rasterizerライブラリを使用して、高品質のサムネールとレンディションを生成します。
 contentOwner: AG
-role: Developer, Administrator
+role: Developer, Admin
 feature: 開発者ツール，レンディション
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
-source-git-commit: fbabf714a3b5066fdef144a4092eaad7e8a6b370
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 40%
 
 ---
 
-# PDF Rasterizer {#using-pdf-rasterizer}を使用
+# PDF Rasterizerを使用 {#using-pdf-rasterizer}
 
 コンテンツを多用する大きなPDFまたはAIファイルを[!DNL Adobe Experience Manager Assets]にアップロードすると、デフォルトのライブラリで正確な出力が生成されない場合があります。 AdobeのPDF Rasterizerライブラリを使用すると、デフォルトライブラリの出力と比較して、より信頼性が高く正確な出力を生成できます。 Adobeは、次のシナリオでPDF Rasterizerライブラリを使用することをお勧めします。
 
