@@ -3,9 +3,9 @@ title: Assets ガイド
 description: このガイドでは、デジタルExperience Managerの作成、管理、配信、最適化の方法など、すべてのアセットアセットタスクについて説明します。
 user-guide-title: Assets ガイド
 feature: アセット管理
-role: Business Practitioner, Architect, Administrator
+role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 25%
