@@ -5,13 +5,13 @@ contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
 content-type: reference
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 feature: CDNキャッシュ
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1366'
-ht-degree: 69%
+ht-degree: 78%
 
 ---
 
@@ -42,16 +42,16 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
    | シナリオ | オプション |
    | --- | --- |
    | Dynamic Media Classic を使用して、以前に CDN 無効化テンプレートを作成したことがある。 | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、テンプレートデータが事前に入力されています。この場合は、テンプレートを編集するか、続行して次の手順に進みます。 |
-   | テンプレートを作成する必要がある。何を入力すればよいか？ | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、特定の画像IDではなく`<ID>`を参照する画像URL（画像プリセットまたは修飾子を含む）を入力します。<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>テンプレートに`<ID>`が含まれる場合は、`https://<publishserver_name>/is/image/<company_name>/<ID>`に入力します。`<publishserver_name>`はDynamic Media Classicの一般設定。 `<company_name>`は、このExperience Managerインスタンスに関連付けられている会社のルートの名前で、`<ID>`は、無効化するアセットピッカーを使用して選択されたアセットです。<br>プリセット／修飾子の post `<ID>` は、そのまま URL 定義内にコピーされます。<br>テンプレートに基づいて自動 `/is/image` 形成できるのは、画像（つまり）のみです。<br>`/is/content/` の場合、アセットピッカーを使用してビデオや PDF などのアセットを追加しても、URL は自動生成されません。代わりに、CDN 無効化テンプレートでそのようなアセットを指定するか、*パート 2 / 2 CDN 無効化オプションの設定*&#x200B;で、URL を手動で追加する必要があります。<br>**例：**<br>&#x200B;最初の例では、無効化テンプレートに `<ID>` と、`/is/content` を持つアセット URL が含まれます。例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>` のようになります。Dynamic Media は、このパスに基づいて URL を作成し、`<ID>` は、アセットピッカーを使用して選択された、無効にするアセットとなります。<br>2 つ目の例では、無効化テンプレートに、`/is/content` が用いられ、Web プロパティで使用されるアセットの完全な URL が含まれます（アセットピッカーに依存しません）。例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` の backpack はアセット ID です。<br>Dynamic Media でサポートされているアセット形式は、無効化の対象となります。CDN の無効化で&#x200B;*サポートされない*&#x200B;アセットファイルタイプには、PostScript®、Encapsulated PostScript®、Adobe Illustrator、Adobe InDesign、Microsoft PowerPoint、Microsoft Excel、Microsoft Word、リッチテキスト形式などがあります。<br>テンプレートを作成する際は、構文と入力ミスに注意する必要があります。Dynamic Media では、テンプレートの検証は行われません。<br>画像スマートトリミングの URL は、この CDN 無効化テンプレート、またはパート 2：CDN 無効化オプションの設定の「**[!UICONTROL URL を追加]**」テキストフィールドのいずれかで指定します&#x200B;*。*<br>**重要：** CDN 無効化テンプレートの各エントリは、それぞれ別の行にする必要があります。<br>*次のテンプレートの例は説明用です。* |
+   | テンプレートを作成する必要がある。何を入力すればよいか？ | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、次の例のように、特定の画像 ID ではなく `<ID>` を参照する画像 URL（画像プリセットまたは修飾子を含む）を入力します。<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>テンプレートに `<ID>` だけが含まれる場合は、Dynamic Media が `https://<publishserver_name>/is/image/<company_name>/<ID>` を入力します。ここで、`<publishserver_name>` はDynamic Media Classic の一般設定で定義されているパブリッシュサーバーの名前です。`<company_name>` は、この Experience Manager インスタンスに関連付けられている会社ルートの名前で、`<ID>` は、アセットピッカーで選択した無効化するアセットです。<br>プリセット／修飾子の post `<ID>` は、そのまま URL 定義内にコピーされます。<br>テンプレートに基づいて自動 `/is/image` 形成できるのは、画像（つまり）のみです。<br>`/is/content/` の場合、アセットピッカーを使用してビデオや PDF などのアセットを追加しても、URL は自動生成されません。代わりに、CDN 無効化テンプレートでそのようなアセットを指定するか、*パート 2 / 2 CDN 無効化オプションの設定*&#x200B;で、URL を手動で追加する必要があります。<br>**例：**<br>&#x200B;最初の例では、無効化テンプレートに `<ID>` と、`/is/content` を持つアセット URL が含まれます。例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>` のようになります。Dynamic Media は、このパスに基づいて URL を作成し、`<ID>` は、アセットピッカーを使用して選択された、無効にするアセットとなります。<br>2 つ目の例では、無効化テンプレートに、`/is/content` が用いられ、Web プロパティで使用されるアセットの完全な URL が含まれます（アセットピッカーに依存しません）。例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` の backpack はアセット ID です。<br>Dynamic Media でサポートされているアセット形式は、無効化の対象となります。CDN の無効化で&#x200B;*サポートされない*&#x200B;アセットファイルタイプには、PostScript®、Encapsulated PostScript®、Adobe Illustrator、Adobe InDesign、Microsoft PowerPoint、Microsoft Excel、Microsoft Word、リッチテキスト形式などがあります。<br>テンプレートを作成する際は、構文と入力ミスに注意する必要があります。Dynamic Media では、テンプレートの検証は行われません。<br>画像スマートトリミングの URL は、この CDN 無効化テンプレート、またはパート 2：CDN 無効化オプションの設定の「**[!UICONTROL URL を追加]**」テキストフィールドのいずれかで指定します&#x200B;*。*<br>**重要：** CDN 無効化テンプレートの各エントリは、それぞれ別の行にする必要があります。<br>*次のテンプレートの例は説明用です。* |
 
    ![CDN 無効化テンプレート - 作成](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
-1. **[!UICONTROL CDN無効化テンプレート]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」をタップし、「**[!UICONTROL OK]**」をタップします。<br>
+1. **[!UICONTROL CDN 無効化テンプレート]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」をタップし、「**[!UICONTROL OK]**」をタップします。<br>
 
    *パート 2 / 2：CDN 無効化オプションの設定*
    <br>
 
-1. Experience Managerで、Cloud Serviceとして&#x200B;**[!UICONTROL ツール]** / **[!UICONTROL アセット]** / **[!UICONTROL CDN無効化]**&#x200B;をタップします。
+1. Experience Manager as a Cloud Service で、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL CDN 無効化]**&#x200B;をタップします。
 
    ![CDN 検証機能](/help/assets/assets-dm/cdn-invalidation-path2.png)
 
@@ -71,7 +71,7 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
    | **[!UICONTROL アセットを追加]** | アセットピッカーを使用して、無効にするアセットを選択します。公開済みまたは非公開のアセットを選択できます。<br>CDN でのキャッシュは、アセットベースではなく URL ベースです。したがって、Web サイト上での完全な URL を認識しておく必要があります。これらの URL を決定したら、テンプレートに追加できます。それから、アセットを選択して追加し、ワンステップで URL を無効にできます。<br>このオプションは、「**[!UICONTROL CDN でアセット関連の画像プリセットを無効化する]**」、または「**[!UICONTROL テンプレートに基づいて無効化]**」、あるいはその両方と組み合わせて使用します。 |
    | **[!UICONTROL URL を追加]** | CDN キャッシュを無効にする Dynamic Media セットに、完全な URL パスを手動で追加または貼り付けます。***パート 1 / 2：CDN 無効化テンプレートの作成***&#x200B;で CDN 無効化テンプレートを作成しておらず、無効にするアセットが数個の場合にこのオプションを使用します。<br>**重要：**&#x200B;追加する各 URL は、それぞれ別の行に記述する必要があります。<br>一度に 1000 個までの URL を無効にできます。「**[!UICONTROL URL を追加]**」テキストフィールドの URL 数が 1000 を超える場合、「**[!UICONTROL 次へ]**」をタップできません。その場合、選択したアセットの右側の **[!UICONTROL X]** をタップするか、手動で追加した URL をタップして、アセットを無効化リストから削除する必要があります。<br>画像スマートトリミングの URL は、CDN 無効化テンプレートまたはこの「**[!UICONTROL URL を追加]**」テキストフィールドのいずれかで指定します。 |
 
-1. ページの右上隅付近にある「**[!UICONTROL 次へ]**」をタップします。
+1. ページの右上隅にある「**[!UICONTROL 次へ]**」をタップします。
 1. **[!UICONTROL CDN無効化 — 確認]**&#x200B;ページの&#x200B;**[!UICONTROL URL]**&#x200B;リストボックスに、前に作成したCDN無効化テンプレートから生成された1つ以上のURLと、先ほど追加したアセットのリストが表示されます。
 
    例えば、前の手順で示した CDN 無効化テンプレートの例を使用して、`spinset` という名前のアセットを 1 つ追加したとします。**[!UICONTROL ツール／アセット／CDN 無効化]**&#x200B;をタップすると、**[!UICONTROL CDN 無効化 - 確認]**&#x200B;ユーザーインターフェイスで以下の 5 つの URL が生成されます。
