@@ -2,10 +2,10 @@
 title: 重複アセットの検出の有効化
 description: 重複アセットの検出を有効にする方法をExperience Managerします。
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: アセット管理、アセットレポート
 exl-id: a403d60e-2193-4835-8f37-4a40f2d01819
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 21%
