@@ -10,16 +10,16 @@ discoiquuid: cf7823f4-82c2-4e36-9b65-3c58359b8104
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer-presets
 feature: ビューアプリセット
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '4339'
 ht-degree: 96%
 
 ---
 
-# ビューアプリセットの管理 {#managing-viewer-presets}
+# ビューアプリセットの管理{#managing-viewer-presets}
 
 ビューアプリセットは、ユーザーのコンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する様々な設定のコレクションです。管理者は、ビューアプリセットを作成できます。設定は、幅広いビューア設定オプションで使用できます。例えば、ビューアの表示サイズやズームの動作を変更できます。
 
@@ -36,7 +36,7 @@ ht-degree: 96%
 >
 >*事前に定義された標準提供ビューアプリセット*&#x200B;を編集するシナリオはサポートされていません。標準提供ビューアプリセットを編集しようとすると、そのビューアプリセットを新しい名前で保存するように指示されます。
 
-## ビューアのキーボードアクセシビリティ  {#keyboard-accessibility-for-viewers}
+## ビューアのキーボードアクセシビリティ {#keyboard-accessibility-for-viewers}
 
 すべての標準提供ビューアでキーボードアクセシビリティがサポートされています。
 
@@ -63,7 +63,7 @@ Web ページごとに異なるニーズがあります。例えば、個別の�
 >標準提供ビューアを使用するには、まずすべて公開する必要があります。
 >[ビューアプリセットの公開]を参照してください。(#publishing-viewer-presets)
 
-### ビューアプリセットのシステム互換性 {#viewer-preset-system-compatibility}
+### ビューアプリセットのシステム互換性   {#viewer-preset-system-compatibility}
 
 Dynamic Media に付属するすべての標準提供ビューアプリセットは、次のシステムと完全に互換します。
 
@@ -151,7 +151,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
  </tbody>
 </table>
 
-### 標準提供ビューアプリセットのリスト  {#list-of-out-of-the-box-viewer-presets}
+### 標準提供ビューアプリセットのリスト {#list-of-out-of-the-box-viewer-presets}
 
 次の表に、Dynamic Media に付属するすべての事前定義済みの標準提供ビューアプリセットについて示します。
 
@@ -292,7 +292,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    <td><code>html5_videoviewer.css</code></td>
   </tr>
   <tr>
-   <td><p>Video360_social</p> <p>（基本的なビデオ再生制御を含んでいます。ビデオレンダリングはステレオモードでおこなわれます。手動の視点制御はオフですが、ジャイロスコープ制御はオンです。ソーシャルメディア機能はありません）</p> </td>
+   <td><p>Video360_social</p> <p>（基本的なビデオ再生制御を含んでいます。ビデオレンダリングはステレオモードで行われます。手動の視点制御はオフですが、ジャイロスコープ制御はオンです。ソーシャルメディア機能はありません）</p> </td>
    <td>ビデオ 360</td>
    <td><code>html5_video360viewersocial.css</code></td>
   </tr>
@@ -433,7 +433,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
    [ビューアプリセットのリッチメディアタイプ](#rich-media-types-for-viewer-presets)を参照してください。
 
 1. ビューアプリセットエディターページで、「**[!UICONTROL 外観]**」タブをタップします。
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 選択したタイプ]**」プルダウンメニューで、ビジュアルデザインをカスタマイズするコンポーネントを選択します。または、設定するビジュアル要素をビューアでタップまたはクリックして選択することもできます。
 
@@ -475,7 +475,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    [ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
 
-### インタラクティブビデオのビューアプリセットの作成に関する考慮事項  {#special-considerations-for-creating-an-interactive-viewer-preset}
+### インタラクティブビデオのビューアプリセットの作成に関する考慮事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 
 **パネル内の画像サムネールのディスプレイモードについて**
 
@@ -561,7 +561,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 1. 公開するビューアプリセットを 1 つ以上選択します。
 1. ツールバーの&#x200B;**[!UICONTROL 公開]**&#x200B;アイコンをタップします。
 
-## ビューアプリセットの並べ替え  {#sorting-viewer-presets}
+## ビューアプリセットの並べ替え {#sorting-viewer-presets}
 
 1. AEM の左上隅にある AEM のロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL ビューアプリセット]**&#x200B;をタップします。
 1. 「**[!UICONTROL プリセットのタイトル]**」、「**[!UICONTROL タイプ]**」、「**[!UICONTROL 公開]**」または「**[!UICONTROL 状態]**」をクリックして、その見出しの列でソートします。例えば、「**[!UICONTROL タイプ]**」をクリックすると、ビューアプリセットのタイプが、アルファベット順で、またはアルファベットの逆の順序でソートされます。
@@ -579,7 +579,7 @@ Dynamic Media に付属するすべての標準提供ビューアプリセット
 
    「**[!UICONTROL 外観]**」タブで、ビューアプリセットエディターページの左上隅近くにある「**[!UICONTROL デスクトップ]**」、「**[!UICONTROL タブレット]**」、「**[!UICONTROL 電話]**」のいずれかをタップして、アセットの表示モードを変更します。
 
-1. ページの右上隅近くで、次のいずれかの操作をおこないます。
+1. ページの右上隅近くで、次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 保存]**」をタップして変更内容を保存し、ビューアプリセットページに戻ります。
    * 「**[!UICONTROL キャンセル]**」をタップして変更内容をキャンセルし、ビューアプリセットページに戻ります。
