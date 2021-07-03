@@ -8,9 +8,9 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5c1f60ac-3741-4002-9c5d-c128f118342b
 feature: 画像プリセット
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 98d88b59-eb8f-42db-abb8-04506a5b8c30
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 76%
@@ -23,7 +23,7 @@ ht-degree: 76%
 
 さらに、レスポンシブな画像プリセットを選択することもできます（画像プリセットを選択した後に「**[!UICONTROL RESS]**」ボタンを使用して指定します）。
 
-ここでは、画像プリセットの使用方法を説明します。[画像プリセットの作成と設定は管理者がおこなうことができます](managing-image-presets.md)。
+ここでは、画像プリセットの使用方法を説明します。[画像プリセットの作成と設定は管理者が行うことができます](managing-image-presets.md)。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ ht-degree: 76%
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 
-1. 次のいずれかの操作をおこないます。
+1. 次のいずれかの操作を行います。
 
    * 画像プリセットをプレビューできるように、動的レンディションを選択します。
    * ポップアップを表示するには、**[!UICONTROL URL]**、**[!UICONTROL 埋め込み]**、または&#x200B;**[!UICONTROL RESS]**&#x200B;をタップします。
