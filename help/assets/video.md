@@ -10,9 +10,9 @@ content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
 feature: アセット管理
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '11672'
 ht-degree: 74%
