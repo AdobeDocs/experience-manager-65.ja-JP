@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: ビデオ
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 35%
@@ -27,7 +27,7 @@ Dynamic Media Classicビデオの統合により、最適化されたビデオ�
 * アセット — 単一のビデオアセットではなく、アダプティブビデオセットを含めることができます。 アダプティブビデオセットには、複数の画面をシームレスに再生するために必要なすべてのビデオレンディションが含まれています。 アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップ、iOS、Android™、BlackBerry®、Windowsモバイルデバイスを含む複数の画面にわたるアダプティブビデオストリーミングには、アダプティブビデオセットとS7ビデオコンポーネントを使用します。
 <!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
-## FFMPEGとDynamic Media Classic {#about-ffmpeg-and-scene}について
+## FFMPEGとDynamic Media Classicについて {#about-ffmpeg-and-scene}
 
 デフォルトのビデオエンコーディングプロセスは、ビデオプロファイルとの FFMPEG ベースの統合の使用に基づいています。そのため、組み込みの DAM 収集ワークフローには、ffmpeg ベースの次の 2 つのワークフローのステップが含まれています。
 
@@ -45,7 +45,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 * F4V H.264
 * MP4 H.264
 
-## ビデオのアップロード先の指定  {#deciding-where-to-upload-your-video}
+## ビデオのアップロード先の指定 {#deciding-where-to-upload-your-video}
 
 ビデオアセットのアップロード先の指定は、次の条件によって決まります。
 
@@ -62,7 +62,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 1. Experience Managerで、WCMのビデオアセットにアクセスするには、コンテンツファインダーの「**[!UICONTROL Movies]**」タブを使用します。
 1. **[!UICONTROL Scene7ビデオ]**&#x200B;または&#x200B;**[!UICONTROL 基盤ビデオ]**&#x200B;コンポーネントを使用するオーサー。
 
-### ビデオをDynamic Media Classic {#if-you-are-uploading-your-video-to-scene}にアップロードする場合
+### ビデオをDynamic Media Classicにアップロードする場合 {#if-you-are-uploading-your-video-to-scene}
 
 アセットのワークフローやバージョン管理が必要ない場合は、Scene7にアセットをアップロードします。 推奨されるワークフローは次のとおりです。
 
@@ -93,13 +93,13 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 1. 選択したエンコーディングプロファイルは、この Scene7 クラウド設定用に指定した CQ DAM のターゲットフォルダーにアップロードされたすべてのビデオに自動的に適用されます。必要に応じて、別のターゲットフォルダーに別のエンコーディングプロファイルを適用することで、複数の Scene7 クラウド設定を指定できます。
 
-## ビューアとエンコーディングプリセットの更新  {#updating-viewer-and-encoding-presets}
+## ビューアとエンコーディングプリセットの更新 {#updating-viewer-and-encoding-presets}
 
 Scene7でプリセットが更新されたのでビデオのビューアとエンコーディングプリセットを更新するには、クラウド設定のScene7設定に移動し、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」をタップします。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
-## AdobeDAMからScene7にプライマリソースビデオをアップロード中{#uploading-your-master-video}
+## AdobeDAMからScene7にプライマリソースビデオをアップロード {#uploading-your-master-video}
 
 1. Scene7 のエンコーディングプロファイルと共にクラウド設定を指定した CQ DAM のターゲットフォルダーに移動します。
 1. 「**[!UICONTROL アップロード]**」をクリックして、プライマリソースビデオをアップロードします。 ビデオのアップロードとエンコーディングは、[!UICONTROL DAMアセットの更新]ワークフローが完了し、**[!UICONTROL Scene7に公開]**&#x200B;にチェックマークが付いた後に完了します。
@@ -124,11 +124,11 @@ Scene7 ビデオコンポーネントは、Scene7 ビデオでのみ使用でき
 >
 >既製の S7 ビデオコンポーネントはユニバーサルビデオプロファイルを使用します。ただし、Experience Managerで使用するHTML5ベースのビデオプレーヤーを入手することはできます。 Scene7で、標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーし、Experience Managerページに配置します。
 
-## Experience Managerビデオコンポーネント{#aem-video-component}
+## Experience Managerビデオコンポーネント {#aem-video-component}
 
 Scene7ビデオの視聴にScene7ビデオコンポーネントの使用をお勧めしますが、完全性を考慮して、Scene7ビデオをExperience Managerで使用する方法について説明します。
 
-### Experience ManagerビデオとScene7ビデオの比較{#aem-video-and-scene-video-comparison}
+### Experience ManagerビデオとScene7ビデオの比較 {#aem-video-and-scene-video-comparison}
 
 次の表に、Experience Manager基盤ビデオコンポーネントとScene7ビデオコンポーネントの間でサポートされている機能の大まかな比較を示します。
 
@@ -140,7 +140,7 @@ Scene7ビデオの視聴にScene7ビデオコンポーネントの使用をお�
 | 拡張性 | 可 | 不可 |
 | モバイルビデオ | はい | はい |
 
-### 設定  {#setting-up}
+### 設定 {#setting-up}
 
 #### ビデオプロファイルの作成 {#creating-video-profiles}
 
@@ -168,7 +168,7 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 
    ビデオコンポーネントで使用する、クラウド設定で選択したすべてのエンコーディングプリセットについて、この手順を繰り返します。
 
-#### デザイン{#configuring-design}の設定
+#### デザインの設定 {#configuring-design}
 
 **[!UICONTROL 基盤ビデオ]**&#x200B;コンポーネントは、ビデオソースリストを作成するために使用するビデオプロファイルについて認識する必要があります。 ビデオコンポーネントデザインダイアログボックスを開き、新しいビデオプロファイルを使用するためのコンポーネントデザインを設定します。
 
