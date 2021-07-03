@@ -2,10 +2,10 @@
 title: Digital Rights Management
 description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: DRM，アセット管理
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 79%
