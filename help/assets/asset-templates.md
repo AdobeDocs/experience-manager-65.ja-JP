@@ -2,17 +2,17 @@
 title: アセットテンプレート
 description: ' [!DNL Adobe Experience Manager Assets] のアセットテンプレートと、アセットテンプレートを使用してマーケティング販促物を作成する方法について説明します。'
 contentOwner: AG
-role: Business Practitioner
+role: User
 feature: アセット管理、開発者ツール
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 32%
 
 ---
 
-# アセットテンプレート{#asset-templates}
+# アセットテンプレート {#asset-templates}
 
 アセットテンプレートは、デジタルメディアや印刷メディア向けに、視覚的に豊富なコンテンツをすばやく再利用できる、特別なアセットクラスです。 アセットテンプレートには、固定メッセージセクションと編集可能セクションの 2 つの部分があります。固定メッセージセクションには、編集できないブランドロゴおよび著作権情報など、独自のコンテンツを含めることができます。編集可能なセクションには、編集可能なフィールド内にビジュアルおよびテキストコンテンツを含め、メッセージをカスタマイズできます。
 
@@ -36,7 +36,7 @@ Webインターフェイスから[!DNL Adobe InDesign]テンプレートを編�
 
 親フォルダー内の更新されたファイルを、INDD、PDF、JPG形式で書き出すことができます。 また、これらの形式の出力をローカルファイルシステムにダウンロードすることもできます。
 
-## 販促物の作成{#creating-a-collateral}
+## 販促物の作成 {#creating-a-collateral}
 
 今後のキャンペーンのために、パンフレット、チラシおよび広告など、デジタルの印刷可能な販促物を作成し、世界中のアウトレットストアで共有するシナリオについて考えてみます。テンプレートに基づいた販促物の作成は、チャネルをまたいで統合されたカスタマーエクスペリエンスを実現するのに役立ちます。デザイナーは、[!DNL InDesign]などのクリエイティブソリューションを使用してキャンペーンテンプレート（単一ページまたは複数ページ）を作成し、テンプレートを[!DNL Experience Manager Assets]にアップロードします。 販促物を作成する前に、1つ以上のINDDテンプレートを[!DNL Experience Manager]に事前にアップロードしておき、使用できるようにします。
 
@@ -64,7 +64,7 @@ Webインターフェイスから[!DNL Adobe InDesign]テンプレートを編�
 
    ![chlimage_1-107](assets/chlimage_1-312.png)
 
-## 販促物の編集{#editing-a-collateral}
+## 販促物の編集 {#editing-a-collateral}
 
 販促物を作成したら、すぐに編集できます。または、[!UICONTROL テンプレート]ページまたはアセットページから開きます。
 
@@ -139,7 +139,7 @@ Webインターフェイスから[!DNL Adobe InDesign]テンプレートを編�
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 
-## 販促物{#merge-collateral}を結合
+## 販促物の結合 {#merge-collateral}
 
 1. [!DNL Experience Manager]インターフェイスで、ナビゲーションページの「[!UICONTROL アセット]」をクリックします。
 
