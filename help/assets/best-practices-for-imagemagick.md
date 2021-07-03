@@ -2,17 +2,17 @@
 title: ImageMagickのインストールと設定
 description: ImageMagick ソフトウェアの概要と、インストール方法、コマンドラインプロセスのステップの設定方法、ImageMagick を使用して画像の編集、組み立て、サムネール生成をおこなう方法を学習します。
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: レンディション、開発者ツール
 exl-id: 6c149d31-1e64-4d29-a32a-58bd69e9fa98
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 48%
 
 ---
 
-# [!DNL Experience Manager Assets] {#install-and-configure-imagemagick-to-work-with-aem-assets}と連携するようにImageMagickをインストールして設定します。
+# [!DNL Experience Manager Assets]と連携するようにImageMagickをインストールして設定します。 {#install-and-configure-imagemagick-to-work-with-aem-assets}
 
 ImageMagickは、ビットマップ画像の作成、編集、作成、変換を行うソフトウェアプラグインです。 PNG、JPEG、JPEG-2000、GIF、TIFF、DPX、EXR、WebP、Postscript、PDF、SVGなど、様々な形式（200以上）の画像の読み取りと書き込みが可能です。 ImageMagick は、画像のサイズ変更、反転、ミラー、回転、変形、剪断および変換をおこなう場合に使用します。ImageMagick を使用して、画像の色を調整したり、各種特殊効果を適用したりすることもできます。また、テキスト、直線、多角形、楕円および曲線を描画することもできます。
 
