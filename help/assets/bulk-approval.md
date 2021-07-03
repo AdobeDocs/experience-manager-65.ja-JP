@@ -3,9 +3,9 @@ title: フォルダーのアセットとコレクションのレビュー
 description: フォルダーまたはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 contentOwner: AG
 feature: コラボレーション、コレクション
-role: Business Practitioner
+role: User
 exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 60%
@@ -24,7 +24,7 @@ ht-degree: 60%
 
 レビュー担当者がレビューを終了（アセットを承認または拒否）すると、ユーザーはレビューが完了したという通知を受け取ります。
 
-## フォルダー{#creating-a-review-task-for-folders}のレビュータスクの作成
+## フォルダーのレビュータスクの作成 {#creating-a-review-task-for-folders}
 
 1. [!DNL Assets]ユーザーインターフェイスで、レビュータスクを作成するフォルダーを選択します。
 1. ツールバーの「**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png) 」をクリックして、「**[!UICONTROL レビュータスク]**」ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
@@ -70,7 +70,7 @@ ht-degree: 60%
 
    ![リスト表示でのステータスの確認](assets/review_status_listview.png)
 
-## コレクションのレビュータスクの作成{#creating-a-review-task-for-collections}
+## コレクション用レビュータスクの作成 {#creating-a-review-task-for-collections}
 
 1. コレクションページで、レビュータスクを作成するコレクションを選択します。
 1. ツールバーの「**[!UICONTROL レビュータスクを作成]** ![レビュータスクを作成](assets/do-not-localize/create-review-task.png) 」をクリックして、「**[!UICONTROL レビュータスク]**」ページを開きます。 ツールバーにこのオプションが表示されない場合は、「**[!UICONTROL 詳細]**」をクリックし、オプションを選択します。
