@@ -2,17 +2,17 @@
 title: ' [!DNL Adobe Creative Cloud] ベストプラクティスへのフォルダー共有'
 description: ' [!DNL Adobe Experience Manager] to allow users in [!DNL Experience Manager Assets] を設定して、Adobe Creative Cloud(CC)ユーザーとフォルダーを交換します。'
 contentOwner: AG
-role: Business Practitioner, Administrator
+role: User, Admin
 feature: コラボレーション
 exl-id: 130cec6d-1cdd-4304-94bb-65e6bb573e55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 18%
 
 ---
 
-# [!DNL Adobe Experience Manager] フォルダ [!DNL Adobe Creative Cloud] ー共有へ  {#aem-to-creative-cloud-folder-sharing-best-practices}
+# [!DNL Adobe Experience Manager] フォルダ [!DNL Adobe Creative Cloud] ー共有へ {#aem-to-creative-cloud-folder-sharing-best-practices}
 
 >[!CAUTION]
 >
@@ -42,7 +42,7 @@ ht-degree: 18%
 * **[!DNL Experience Manager Assets]** エンタープライズネットワーク（マネージドサービスまたはオンプレミス）にデプロイされる場合：フォルダーの共有はここで開始されます。
 * **[!DNL Adobe Marketing Cloud Assets]コアサービス**:とストレージサービスの間の [!DNL Experience Manager] 仲介 [!DNL Creative Cloud] として機能します。統合を使用する組織の管理者は、Marketing Cloud組織と[!DNL Assets]デプロイメントの間に信頼関係を確立する必要があります。 また、管理者は、 ユーザーがフォルダーも共有してセキュリティを強化できるように、[承認済みの Creative Cloud 共同作業者のリストを定義](https://experienceleague.adobe.com/docs/core-services/interface/assets/t-admin-add-cc-user.html)します。[!DNL Assets]
 
-* **[!DNL Creative Cloud]アセットWebサービス** (ストレージおよび [!DNL Creative Cloud] ファイルWeb UI):ここでは、特定のCreative Cloudアプリユーザー（フォルダーの共有相手）が招待を受け入 [!DNL Assets] れ、自分のCreative Cloudアカウントストレージにそのフォルダーを表示できます。
+* **[!DNL Creative Cloud]アセットWebサービス** (ストレージおよび [!DNL Creative Cloud] ファイルWeb UI):ここでは、特定のCreative Cloudアプリユーザー（フォルダーの共有相手）が招待を受け入 [!DNL Assets] れ、自分のCreative Cloudアカウントストレージのフォルダーを確認できます。
 * **Creative Cloudデスクトップアプリケーション**:（オプション）クリエイティブユーザーのデスクトップから、アセットストレージと同期を介して共有フォルダー/ファイルに直接ア [!DNL Creative Cloud] クセスできます。
 
 ## 特徴と制限事項 {#characteristics-and-limitations}
