@@ -3,9 +3,9 @@ title: ' [!DNL Experience Manager Assets]のアクセス可能な機能とイン
 description: 障害を持つユーザーにとって  [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]  のアクセシビリティ機能がどのように役立つかを説明します。
 contentOwner: AG
 feature: アセット管理
-role: Business Practitioner, Architect, Leader
+role: User, Architect, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 90%
@@ -28,7 +28,7 @@ Possible topics to cover in this article are below.
   * Link to a11y-specific online methods to report issues, seek support, or request enhancements, if any. Asked the a11y team on Slack.
 -->
 
-# [!DNL Adobe Experience Manager Assets] {#accessibility-in-aem-assets}のアクセシビリティ機能
+# [!DNL Adobe Experience Manager Assets]のアクセシビリティ機能 {#accessibility-in-aem-assets}
 
 [!DNL Adobe Experience Manager] を使用すると、コンテンツクリエーターやコンテンツパブリッシャーが素晴らしいエクスペリエンスを Web 上で提供できます。アドビでは、[!DNL Experience Manager] のアクセシビリティを向上させることで、障害を持つクリエイターもこの作業に参加できるように努めています。このソフトウェアは、あらゆるタイプのユーザーのニーズに応え、視覚、聴覚、運動などの障害を持つユーザーも対象とした世界的な標準に準拠するように継続的に機能強化されています。
 
@@ -55,7 +55,7 @@ Possible topics to cover in this article are below.
 * スイッチコントロール、更新可能な点字ディスプレイ、その他のコンピュータ入力デバイスを含む支援ハードウェア
 * UI 拡大ツール
 
-## アクセシブルな [!DNL Experience Manager Assets] の使用例 {#accessible-assets-use-cases}
+## アクセシブルな [!DNL Experience Manager Assets] の使用例  {#accessible-assets-use-cases}
 
 [!DNL Experience Manager] のアクセシビリティ機能は、[!DNL Experience Manager] ユーザーとその顧客の 2 つの主要な要件に対応しています。
 
@@ -76,7 +76,7 @@ Possible topics to cover in this article are below.
 * Read-only form fields can be focused with the keyboard. Can users tab to these fields to understand the contents and are they able to copy text from the fields?
 -->
 
-### [!DNL Assets] のキーボードショートカット {#keyboard-shortcuts}
+### [!DNL Assets] のキーボードショートカット  {#keyboard-shortcuts}
 
 [!DNL Assets] の下記のアクションは、一覧に示したキーボードショートカットで動作します。[!DNL Experience Manager] コンソールに適用されるほとんどのキーボードショートカットは、[!DNL Assets] にも適用されます。詳しくは、[コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)を参照してください。キーボードショートカットを[有効または無効にする方法](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)を参照してください。
 
