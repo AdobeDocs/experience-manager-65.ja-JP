@@ -2,17 +2,17 @@
 title: アセットのアップロード制限の設定
 description: 'ユーザーがアップロードできるアセット（ファイル）のタイプを制限する '
 contentOwner: AG
-role: Developer, Administrator, Architect
-feature: アセット管理，アップロード
+role: Developer, Admin, Architect
+feature: アセット管理、アップロード
 exl-id: 0e009b9a-54c4-4715-98ee-0207839f90f6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '193'
-ht-degree: 54%
+ht-degree: 55%
 
 ---
 
-# アセットのアップロード制限の設定{#configuring-asset-upload-restrictions}
+# アセットのアップロード制限の設定 {#configuring-asset-upload-restrictions}
 
 [!DNL Adobe Experience Manager Assets]を設定して、ユーザーがアップロードできるアセットのタイプを制限できます。 これにより、意図しない形式や悪意のあるファイルが誤ってアップロードされるのを防ぐことができます。 `Day CQ DAM Asset Upload Restriction` サービスを使用すると、ユーザーがアップロードできるファイルの種類を制御できます。デフォルトでは、[!DNL Assets]を使用すると、すべてのMIMEタイプのアセットのアップロードが許可されます。 ただし、アップロードを特定の MIME タイプのファイルのみに制限するようにサービスを設定できます。
 
