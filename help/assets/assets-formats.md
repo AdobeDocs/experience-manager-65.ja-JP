@@ -3,13 +3,13 @@ title: サポートされているファイル形式と MIME タイプ
 description: ' [!DNL Assets] and [!DNL Dynamic Media] でサポートされているファイル形式とMIMEタイプ、および各形式でサポートされている機能。'
 contentOwner: AG
 mini-toc-levels: 1
-role: Business Practitioner, Administrator
-feature: アセット管理，レンディション
+role: User, Admin
+feature: アセット管理、レンディション
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 663d7b886ba31521789b41002333715ce447e5ca
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1581'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
