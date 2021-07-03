@@ -2,17 +2,17 @@
 title: '[!DNL Adobe Camera Raw] サポート。'
 description: ' [!DNL Adobe Experience Manager Assets]で [!DNL Adobe Camera Raw] サポートを有効にする方法を説明します。'
 contentOwner: AG
-role: Administrator
+role: Admin
 feature: 開発者ツール
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 35%
 
 ---
 
-# Camera Rawの{#camera-raw-support}を使用して画像を処理する
+# Camera Raw {#camera-raw-support}
 
 [!DNL Adobe Camera Raw]サポートを有効にして、CR2、NEF、RAFなどの生のファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、ソフトウェア配布から入手可能な[Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を使用して[!DNL Adobe Experience Manager Assets]でサポートされます。
 
