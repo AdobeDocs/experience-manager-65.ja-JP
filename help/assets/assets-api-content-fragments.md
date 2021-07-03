@@ -11,9 +11,9 @@ topic-tags: extending-assets
 discoiquuid: 03502b41-b448-47ab-9729-e0a66a3389fa
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 94%
@@ -213,7 +213,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 * アトミックと見なされます。つまり、エレメントとバリエーションは、リンクまたは子エンティティとしてではなく、フラグメントのプロパティの一部として公開されます。これにより、フラグメントのペイロードに効率的にアクセスできます。
 
-#### コンテンツモデルとコンテンツフラグメント  {#content-models-and-content-fragments}
+#### コンテンツモデルとコンテンツフラグメント {#content-models-and-content-fragments}
 
 現在、コンテンツフラグメントの構造を定義するモデルは、HTTP API では公開されません。そのため、*コンシューマー*&#x200B;は（最低でも）フラグメントのモデルについて理解する必要があります。ただし、ほとんどの情報はペイロードから推測することができます。データタイプなどは定義の一部だからです。
 
