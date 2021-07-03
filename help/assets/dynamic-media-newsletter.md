@@ -4,10 +4,10 @@ description: 'Experience League 提供の Dynamic Media ニュースレターは
 keywords: Dynamic Media；ニュースレター；製品アップデート；ヒントとテクニック；イベント；顧客の成功；ブログ；ブログ；画像；ビデオ；機能
 contentOwner: Rick Brough
 solution: Dynamic Media Classic, Experience Manager
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: コラボレーション， Dynamic Media Classic
-source-git-commit: b1e0ea01688095b29d8fb18baf6fa0bda660dad5
+source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
 workflow-type: tm+mt
 source-wordcount: '1182'
 ht-degree: 79%
@@ -61,7 +61,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    この号の主な内容：
 
    * 新しいスキルビルダーの Web セミナーに参加し、Dynamic Media Classic のエキスパートになる
-   * Dynamic Mediaサミット2020でのAdobeの場所を見る。
+   * Dynamic Mediaの場所はAdobe Summit2020で確認できます。
    * Dynamic Media の切り抜きマジックの使い方を知る
    * 無料の監査を活用して、Dynamic Media Classicからより多くの価値を得ることができます。
    * Dynamic Media Classic の新しいユーザーインターフェイスの説明
