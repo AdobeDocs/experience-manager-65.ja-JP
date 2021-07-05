@@ -10,7 +10,7 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: 08269877be5e98405474e4b1793526763cab174f
+source-git-commit: 071bc0e36ed2d8eb4ce7bd0ba46823adc0e43095
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 48%
@@ -50,34 +50,17 @@ AEMで提供される標準レポートの場合：
 >以下の例と定義では、次の表記が使用されています。
 >
 >* 各行は、次の場合にノードまたはプロパティを定義します。
-   >
-   >  
-* `N:<name> [<nodeType>]`
-   >
-   >     
-   名前が`<*name*>`、ノードタイプが&#x200B;`<*nodeType*>`*.*&#x200B;のノードを表します。
-   >
-   >  
-* `P:<name> [<propertyType]`
-   >
-   >     
-   名前が`<*name*>`で、プロパティタイプが`<*propertyType*>`のプロパティについて説明します。
-   >
-   >  
-* `P:<name> = <value>`
-   >
-   >     
-   `<value>`の値に設定する必要があるプロパティ`<name>`について説明します。
+   >  `N:<name> [<nodeType>]` :との名前を持つノードを表 `<*name*>` しま `<*nodeType*>`*す。*
+   >  `P:<name> [<propertyType]` :という名前で、プロパティタイプ `<*name*>` がのプロパティを示しま `<*propertyType*>`す。
+   >  `P:<name> = <value>` :の値に設定す `<name>` る必要があるプロパティを説明し `<value>`ます。
    >
    >
 * インデントは、ノード間の階層的依存関係を示します。
->* 次で区切られた項目 |は、指定可能な項目のリストを示します。例：タイプまたは名前：
+>* 次で区切られた項目 |は、指定可能な項目のリストを示します。例：タイプまたは名前例：`String|String[]`は、プロパティがStringまたはString[]であることを意味します。
 
->
->  
-例：`String|String[]`は、プロパティがStringまたはString[]であることを意味します。
->
->* `[]` 配列を描く例えば、[] クエリ定義 [の文字列やノードの配](#query-definition)列などです。
+   >
+   >
+* `[]` 配列を描く例えば、[] クエリ定義 [の文字列やノードの配](#query-definition)列などです。
 >
 >
 特に指定のない限り、デフォルトのタイプは次のとおりです。
