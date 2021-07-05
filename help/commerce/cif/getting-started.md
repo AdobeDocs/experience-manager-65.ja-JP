@@ -3,14 +3,13 @@ title: AEM Content and Commerce - はじめに
 description: AEM Content and Commerceプロジェクトをデプロイする方法について説明します。
 topics: Commerce
 feature: コマース統合フレームワーク
-thumbnail: 37843.jpg
-exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
-source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
+source-git-commit: 1b200ea21709cd9234c92da8a8ef6145d2c2f635
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 38%
 
 ---
+
 
 # AEM Content and Commerce - はじめに {#start}
 
