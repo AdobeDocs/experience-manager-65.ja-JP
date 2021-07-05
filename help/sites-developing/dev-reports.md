@@ -10,14 +10,15 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 08269877be5e98405474e4b1793526763cab174f
 workflow-type: tm+mt
 source-wordcount: '5252'
 ht-degree: 48%
 
 ---
 
-# レポートの開発{#developing-reports}
+
+# レポートの開発 {#developing-reports}
 
 AEMは、[標準のレポート](/help/sites-administering/reporting.md)を選択できます。そのほとんどはレポートフレームワークに基づいています。
 
@@ -107,7 +108,7 @@ AEMで提供される標準レポートの場合：
 * 標準のCQ5ページです。
 * [レポート用に設定された CQ5 の標準テンプレート](#report-template)に基づいています。
 
-### レポートベース  {#report-base}
+### レポートベース {#report-base}
 
 [`reportbase` コンポーネント](#report-base-component)は、次のようにすべてのレポートの基礎となるものです。
 
@@ -125,7 +126,7 @@ AEMで提供される標準レポートの場合：
 * [基になる結果セット](#the-query-and-data-retrieval)へのリンクを定義します。つまり、この結果セット内で参照される特定のデータと、その処理方法を定義します。
 * 追加の定義が含まれる。例えば、使用可能な集計やフィルター、およびデフォルト値です。
 
-### クエリとデータの取得  {#the-query-and-data-retrieval}
+### クエリとデータの取得 {#the-query-and-data-retrieval}
 
 クエリの概要は次のとおりです。
 
@@ -149,7 +150,7 @@ AEMで提供される標準レポートの場合：
 
 開発者は、レポートに対して定義したクエリによって、そのレポートに適切なノードセットが返されることを確認する必要があります。ただし、ノード自体に必要な情報をすべて保持する必要はありません。親ノードや子ノードから派生させることもできます。 例えば、[ユーザーレポート](/help/sites-administering/reporting.md#user-report)で使用されるクエリでは、ノードタイプ（この場合は `rep:user`）に基づいてノードが選択されます。ただし、このレポートの列のほとんどは、これらのノードから直接データを取り出すのではなく、子ノード`profile`からデータを取り出します。
 
-### Processing Queue {#processing-queue}
+### 処理キュー {#processing-queue}
 
 [クエリ](#the-query-and-data-retrieval)によって返される結果セットのデータが、レポート上で行として表示されます。結果セットの各行は、（サーバー側の）[いくつかのフェーズ](#phases-of-the-processing-queue)で処理をおこなってから、クライアントに転送され、レポートに表示されます。
 
@@ -218,7 +219,7 @@ AEMで提供される標準レポートの場合：
 * [レポートデザイン](#report-design)
 * [レポートテンプレート](#report-template)
 
-### レポートコンポーネントの場所  {#location-of-report-components}
+### レポートコンポーネントの場所 {#location-of-report-components}
 
 デフォルトのレポートコンポーネントは`/libs/cq/reporting/components`の下に保持されます。
 
@@ -251,7 +252,7 @@ N:apps
 
 ページコンポーネントのカスタマイズは、（ほとんどの場合）必要ありません。
 
-## レポートベースコンポーネント  {#report-base-component}
+## レポートベースコンポーネント {#report-base-component}
 
 各レポートタイプには、`/libs/cq/reporting/components/reportbase`から派生したコンテナコンポーネントが必要です。
 
@@ -269,7 +270,7 @@ N:<reportname> [cq:Component]
     N:queryBuilder
 ```
 
-### クエリ定義  {#query-definition}
+### クエリ定義 {#query-definition}
 
 ```xml
 N:queryBuilder
@@ -380,7 +381,7 @@ N:charting
          * `totals`（`Boolean`）
 
             **Total**を示す追加の行が表示される場合は、trueを指定します。
-デフォルト値: `false`
+default: `false`
 
          * `series`（`Long`）
 
@@ -485,7 +486,7 @@ N:charting
    * [レポートテンプレート](#report-template)（固定値または設定ダイアログのデフォルト値）
    * ユーザー（このパラメーターを使用）
 
-## 列ベースコンポーネント  {#column-base-component}
+## 列ベースコンポーネント {#column-base-component}
 
 各列タイプには、`/libs/cq/reporting/components/columnbase`から派生したコンポーネントが必要です。
 
@@ -525,7 +526,7 @@ N:<columnname> [cq:Component]
 
 [新規レポートの定義](#defining-your-new-report)も参照してください。
 
-### 列固有のクエリ  {#column-specific-query}
+### 列固有のクエリ {#column-specific-query}
 
 個別の列で使用する特定のデータを（[レポートデータの結果セット](#the-query-and-data-retrieval)から）抽出する方法を定義します。
 
@@ -600,7 +601,7 @@ function(v) {
 }
 ```
 
-### リゾルバーと前処理  {#resolvers-and-preprocessing}
+### リゾルバーと前処理 {#resolvers-and-preprocessing}
 
 [処理キュー](#processing-queue)で様々なリゾルバーを指定し、前処理を設定します。
 
@@ -787,7 +788,7 @@ N:definitions
                 P:format          // data type formatter
 ```
 
-#### 前処理 - パターンの検索と置換  {#preprocessing-find-and-replace-patterns}
+#### 前処理 - パターンの検索と置換 {#preprocessing-find-and-replace-patterns}
 
 前処理の場合は、 `pattern` （[正規表現](https://en.wikipedia.org/wiki/Regular_expression)または正規表現として定義）を指定し、 `replace`パターンで置き換えます。
 
@@ -803,7 +804,7 @@ N:definitions
 
 * 次の2つのプロパティを持つノード`definitions/data/preprocessing/apply`の場合：
 
-   * `pattern`: `(.*)(/jcr:content)(/|$)(.*)`
+   * `pattern`:  `(.*)(/jcr:content)(/|$)(.*)`
    * `replace`:  `$1`
 
 * 次のような文字列が検索されます。
@@ -906,7 +907,7 @@ N:definitions
 
    * `timeslot`  — 値は、対応する定数と比較できま `java.utils.Calendar`す。
 
-      * `timeslot:year` - `Calendar.YEAR`
+      * `timeslot:year` -  `Calendar.YEAR`
       * `timeslot:month-of-year` -  `Calendar.MONTH`
       * `timeslot:week-of-year` -  `Calendar.WEEK_OF_YEAR`
       * `timeslot:day-of-month` -  `Calendar.DAY_OF_MONTH`
@@ -1041,11 +1042,11 @@ N:cq:editConfig [cq:EditConfig]
 
 * 列の`definition`ノードの`type`プロパティを`generic`に設定します。
 
-   参照先 `/libs/cq/reporting/components/userreport/genericcol/definitions`
+   `/libs/cq/reporting/components/userreport/genericcol/definitions` を参照してください。
 
 * 列の `definition` ノードで、（標準）ダイアログの定義をおこないます。
 
-   参照先 `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog`
+   `/libs/cq/reporting/components/userreport/genericcol/definitions/dialog` を参照してください。
 
    * ダイアログのフィールドが、対応するコンポーネントプロパティと同じ名前（パスを含む）を参照する必要があります。
 
@@ -1055,7 +1056,7 @@ N:cq:editConfig [cq:EditConfig]
 
 * 編集設定を定義します。
 
-   参照先 `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig`
+   `/libs/cq/reporting/components/userreport/genericcol/cq:editConfig` を参照してください。
 
 * 標準のAEMの方法を使用して、列のプロパティを定義します。
 
@@ -1131,7 +1132,7 @@ N:cq:editConfig [cq:EditConfig]
 >
 >レポートの作成時に、デフォルトの列を自動的に作成できます。 これらは、テンプレートで指定されます。
 
-## レポートテンプレート  {#report-template}
+## レポートテンプレート {#report-template}
 
 各レポートタイプは、テンプレートを提供する必要があります。 これらは標準の[CQテンプレート](/help/sites-developing/templates.md)であり、そのように設定できます。
 
@@ -1407,7 +1408,7 @@ N:apps
 
 これらは、Webコンソールの設定メニュー（`http://localhost:4502/system/console/configMgr`など）を使用して表示できます。 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-### 基本サービス（Day CQ レポート設定）  {#basic-service-day-cq-reporting-configuration}
+### 基本サービス（Day CQ レポート設定） {#basic-service-day-cq-reporting-configuration}
 
 * **** Timezoneは、タイムゾーン履歴データの作成対象となるタイムゾーンを定義します。これは、履歴グラフに世界中の各ユーザーの同じデータが表示されるようにするためです。
 * **** Localeは、履歴データに対してタイムゾーンと組み合わせて使用す **** るロケールを定義します。ロケールは、ロケール固有のカレンダー設定の一部（例えば、週の最初の日が日曜日か月曜日か）を決定するために使用されます。
@@ -1431,7 +1432,7 @@ N:apps
 
 * 「**Enforce snapshot user**」を有効にすると、すべてのスナップショットが、「Snapshot user **」で指定したユーザーを使用して取得されます。正しく処理されないと、セキュリティに重大な影響が生じる可能性があります。
 
-### キャッシュ設定(Day CQ Reporting Cache) {#cache-settings-day-cq-reporting-cache}
+### キャッシュ設定（Day CQ レポートキャッシュ） {#cache-settings-day-cq-reporting-cache}
 
 * **** 「有効」を使用すると、レポートデータのキャッシュを有効または無効にできます。レポートのキャッシュを有効にすると、複数の要求がおこなわれる間、レポートデータがメモリに保持されます。これにより、パフォーマンスが向上しますが、メモリ消費が増加し、極端な状況ではメモリ不足になる場合があります。
 * **** TTLは、レポートデータをキャッシュする時間（秒）を定義します。数値を大きくするとパフォーマンスが向上しますが、期間内にデータが変更された場合は、不正確なデータが返される場合もあります。
