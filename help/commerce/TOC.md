@@ -1,25 +1,25 @@
 ---
-sub-product: AEM のコンテンツとコマース
-user-guide-title: AEM のコンテンツとコマース
+sub-product: AEM Content and Commerce
+user-guide-title: AEMコンテンツとコマース
 breadcrumb-title: コマースガイド
 user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
-source-git-commit: 8612e7c4105a9872fc8bba1988716eaa4b18d550
+source-git-commit: 538dc7620317f86c0b3d762eaef597d0a7969ace
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 73%
+source-wordcount: '108'
+ht-degree: 82%
 
 ---
 
 
-# Commerce {#commerce}
+# コマース {#commerce}
 
-+ [AEM のコンテンツとコマース](/help/commerce/home.md)
++ [AEMコンテンツとコマース](/help/commerce/home.md)
 + [AEM Content and Commerceの主な変更点](cif/changes.md)
-+ [概要と概要](cif/introduction.md)
++ [概要](cif/introduction.md)
 + 統合 {#integrations}
    + [Adobe Commerce](cif/integrating/magento.md)
    + [サードパーティコマースソリューション](cif/integrating/third-party.md)
-+ AEMストアフロント{#storefront}
++ AEM ストアフロント{#storefront}
    + [概要](cif/getting-started.md)
    + 管理 {#administering}
       + [マルチストアの設定](cif/configuring/multi-store-setup.md)
@@ -30,7 +30,8 @@ ht-degree: 73%
       + [AEMを使用した開発](cif/develop.md)
       + [CIF コンポーネントのスタイル設定](cif/customizing/style-cif-component.md)
       + [CIF コンポーネントのカスタマイズ](cif/customizing/customize-cif-components.md)
-      + [CIFカタログピッカーの使用](cif/customizing/use-cif-pickers.md)
+      + [CIF カタログピッカーの使用](cif/customizing/use-cif-pickers.md)
++ [AdobeコマースPWA Studio](cif/pwa-studio/getting-started.md)
 + [移行](cif/migration.md)
 + リリースノート {#release-notes}
    + [2021年](cif/release-notes/release-notes-2021.md)
