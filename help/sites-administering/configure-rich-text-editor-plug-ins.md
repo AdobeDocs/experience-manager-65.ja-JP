@@ -3,12 +3,13 @@ title: リッチテキストエディタープラグインの設定
 description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインの設定について説明します。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
 workflow-type: tm+mt
-source-wordcount: '4395'
-ht-degree: 95%
+source-wordcount: '4405'
+ht-degree: 92%
 
 ---
+
 
 # リッチテキストエディタープラグインの設定 {#configure-the-rich-text-editor-plug-ins}
 
@@ -155,53 +156,18 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
    >
    >明示的に定義されていない場合は、デフォルト値である true が使用され、書式が承認されます。
 
-1. その他の様々なプロパティやノードを使用して、その他の書式も定義でき、`htmlPasteRules` ノードに適用できます。
+1. その他の様々なプロパティやノードを使用して、その他の形式も定義でき、`htmlPasteRules`ノードに適用できます。 すべての変更を保存します。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>プロパティ</strong></td>
-   <td><strong>型</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td>allowBlockTags</td>
-   <td>String[]</td>
-   <td><p>使用可能なブロックタグのリストを定義します。</p> <p>ブロックタグの例を次に示します。</p>
-    <ul>
-     <li>見出し（h1、h2、h3）</li>
-     <li>段落（p）</li>
-     <li>リスト（ol、ul）</li>
-     <li>テーブル（table）</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>fallbackBlockTag</td>
-   <td>文字列</td>
-   <td><p>allowBlockTags に含まれていないブロックタグを含むブロックに使用されるブロックタグを定義します。</p> <p> ほとんどの場合は p で十分です。</p> </td>
-  </tr>
-  <tr>
-   <td>table</td>
-   <td>nt:unstructured</td>
-   <td><p>テーブルを貼り付けるときの動作を定義します。<br /> </p> <p>このノードには、テーブルの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p><code>allow</code> を <code>false</code> に設定した場合、貼り付けたテーブルコンテンツの処理方法を定義するプロパティ <code>ignoreMode</code>（<code> String</code> 型）を指定する必要があります。<code>ignoreMode</code> の有効な値は次のとおりです。</p>
-    <ul>
-     <li><code>remove</code>：テーブルコンテンツを削除します。</li>
-     <li><code>paragraph</code>：テーブルのセルを段落に変換します。</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>list</td>
-   <td>nt:unstructured</td>
-   <td><p>リストを貼り付けるときの動作を定義します。<br /> </p> <p>リストの貼り付けを許可するかどうかを定義するプロパティ <code>allow</code>（型は <code>Boolean</code>）が必要です。</p> <p><code>allow</code> を <code>false</code> に設定した場合、<code>ignoreMode</code> プロパティ（<code>String</code> 型）を指定して、貼り付けたリストコンテンツの処理方法を定義する必要があります。<code>ignoreMode</code> の有効な値は次のとおりです。</p>
-    <ul>
-     <li><code>remove</code>：リストコンテンツを削除します。</li>
-     <li><code>paragraph</code>：リストの項目を段落に変換します。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+`htmlPasteRules`には次のプロパティを使用できます。
 
-有効な `htmlPasteRules` 構造の例を以下に示します。
+| プロパティ | 型 | 説明 |
+|---|---|---|
+| `allowBlockTags` | 文字列 | 使用可能なブロックタグのリストを定義します。ブロックタグの例を次に示します。 <ul> <li>見出し（h1、h2、h3）</li> <li>段落（p）</li> <li>リスト（ol、ul）</li> <li>テーブル（table）</li> </ul> |
+| `fallbackBlockTag` | 文字列 | `allowBlockTags` に含まれていないブロックタグを含むブロックに使用されるブロックタグを定義します。`p` ほとんどの場合はで十分です。 |
+| table | nt:unstructured | テーブルを貼り付けるときの動作を定義します。このノードには、テーブルの貼り付けを許可するかどうかを定義するプロパティ `allow`（型は Boolean）が必要です。allowを`false`に設定した場合、プロパティ`ignoreMode`（String型）を指定して、貼り付けたテーブルコンテンツの処理方法を定義する必要があります。 `ignoreMode` の有効な値は次のとおりです。 <ul> <li>`remove`：テーブルコンテンツを削除します。</li> <li>`paragraph`：テーブルのセルを段落に変換します。</li> </ul> |
+| list | nt:unstructured | リストを貼り付けるときの動作を定義します。リストの貼り付けを許可するかどうかを定義するプロパティ `allow`（Boolean 型）が必要です。`allow`を`false`に設定した場合は、`ignoreMode`プロパティ（String型）を指定して、貼り付けたリストコンテンツの処理方法を定義する必要があります。 `ignoreMode` の有効な値は次のとおりです。 <ul><li> `remove`：リストコンテンツを削除します。</li> <li>`paragraph`：リストの項目を段落に変換します。</li> </ul> |
+
+有効な`htmlPasteRules`構造の例を以下に示します。
 
 ```xml
 "htmlPasteRules": {
@@ -223,13 +189,9 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
 }
 ```
 
-1. すべての変更を保存します。
-
 ## テキストスタイルの設定 {#textstyles}
 
-スタイルを適用して、テキストの外観を部分的に変更できます。スタイルは、CSS スタイルシートに事前定義する CSS クラスに基づきます。スタイル設定したコンテンツは、CSS クラスを参照する `span` 属性を使用して `class` タグで囲まれます。次に例を示します。
-
-`<span class=monospaced>Monospaced Text Here</span>`
+スタイルを適用して、テキストの外観を部分的に変更できます。スタイルは、CSS スタイルシートに事前定義する CSS クラスに基づきます。スタイル設定したコンテンツは、CSS クラスを参照する `span` 属性を使用して `class` タグで囲まれます。（例：`<span class=monospaced>Monospaced Text Here</span>`）。
 
 スタイルプラグインを初めて有効にしたときは、使用可能なデフォルトのスタイルがありません。ポップアップリストは空です。スタイルを使用できるようにするには、次の操作をおこないます。
 
@@ -237,11 +199,11 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
 * スタイルシートの場所を指定します。
 * 「スタイル」ドロップダウンリストから選択可能な個々のスタイルを指定します。
 
-後で（再）設定する場合、例えばスタイルを追加する場合は、新しいスタイルシートを参照して追加スタイルを指定する手順にのみ従います。
+後で設定する場合（例えばスタイルを追加する場合）は、新しいスタイルシートを参照し、追加のスタイルを指定する手順にのみ従います。
 
 >[!NOTE]
 >
->[テーブルやテーブルセル](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)のスタイルを定義することもできます。これらの設定には別の手順が必要となります。
+>[テーブルまたはテーブルセル](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)にスタイルを定義できます。 これらの設定には、別の手順が必要です。
 
 ### 「スタイル」ドロップダウンセレクターリストの有効化 {#styleselectorlist}
 
@@ -708,10 +670,7 @@ AEM にリンクを追加する場合、次の定義が可能です。
    * **型** `String`
    * **値** `richtext`
 
-   `../items/text` ノードの場所は、ダイアログの構造によって異なる場合があります。以下に例を 2 つ挙げます。
-   * `/apps/myProject>/components/text/dialog/items/text`
-   * `/apps/<myProject>/components/text/dialog/items/panel/items/text`
-
+   `../items/text`ノードの場所は、ダイアログの構造によって異なる場合があります。`/apps/myProject>/components/text/dialog/items/text`と`/apps/<myProject>/components/text/dialog/items/panel/items/text`の2つの例があります。
 
 1. `htmlRules` の下に、新しいノードを作成します。
 
