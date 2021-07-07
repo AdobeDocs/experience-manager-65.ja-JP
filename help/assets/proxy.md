@@ -4,10 +4,10 @@ description: プロキシは、 [!DNL Experience Manager] instance that uses pro
 contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 61%
+source-wordcount: '831'
+ht-degree: 62%
 
 ---
 
@@ -105,9 +105,11 @@ API の使用例を以下に示します。
 
 ### Cloud Service設定 {#cloud-service-configurations}
 
+<!-- TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
 >[!NOTE]
 >
->プロキシ API の参考ドキュメントは、[`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html) にあります。
+>Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
+-->
 
 プロキシとプロキシワーカーの両方の設定は、クラウドサービスの設定を介して使用できます。[!DNL Assets] **ツール**&#x200B;コンソールまたは`/etc/cloudservices/proxy`でアクセスできます。 各プロキシワーカーは、`/etc/cloudservices/proxy`の下に、ワーカー固有の設定の詳細（`/etc/cloudservices/proxy/workername`など）を示すノードを追加する必要があります。
 
