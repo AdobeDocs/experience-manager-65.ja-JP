@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin
 feature: 共同作業、アドビのアセットリンク、デスクトップアプリ
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3254'
+source-wordcount: '3250'
 ht-degree: 54%
 
 ---
@@ -89,7 +89,7 @@ ht-degree: 54%
 
 ### [!DNL Experience Manager]と[!DNL Creative Cloud]の統合を使用する際の考慮事項 {#considerations-when-using-aem-and-creative-cloud-integration}
 
-* [デスクトップアプリケーションのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html?lang=en#best-practices-to-prevent-troubles)を参照してください。
+* [デスクトップアプリケーションのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html#best-practices-to-prevent-troubles)を参照してください。
 * [Adobe Stock統合](aem-assets-adobe-stock.md)を参照
 * [Adobeアセットリンク](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)を参照
 
@@ -209,7 +209,7 @@ Adobe Asset Link は、この使用例を適切にサポートしています。
 
 次のアップロード機能を利用できます。
 
-* 大きなフォルダーや階層フォルダーを一括でアップロードするには、[フォルダーアップロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=en#upload-and-add-new-assets-to-aem)機能を提供する[!DNL Experience Manager]デスクトップアプリケーションを使用します。 フォルダーの階層構造もアップロードできます。[!DNL Assets] はバックグラウンドでアップロードされるので、webブラウザーセッションに結び付けられることはありません
+* 大きなフォルダーや階層フォルダーを一括でアップロードするには、[フォルダーアップロード](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#upload-and-add-new-assets-to-aem)機能を提供する[!DNL Experience Manager]デスクトップアプリケーションを使用します。 フォルダーの階層構造もアップロードできます。[!DNL Assets] はバックグラウンドでアップロードされるので、webブラウザーセッションに結び付けられることはありません
 * 1つのフォルダーから少数のファイルをアップロードするには、ファイルを直接Webインターフェイスにドラッグするか、[!DNL Assets] Webインターフェイスの「作成」オプションを使用します。
 * ビジネス要件によっては、カスタムアップローダーを使用することもできます。
 
