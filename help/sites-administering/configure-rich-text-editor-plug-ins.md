@@ -3,9 +3,9 @@ title: リッチテキストエディタープラグインの設定
 description: 個々の機能を有効にするAdobe Experience Managerリッチテキストエディタープラグインの設定について説明します。
 contentOwner: AG
 exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
-source-git-commit: 7f8263a9304ff51e08878c13115c8aeeafce3de3
+source-git-commit: 11cda989e6a28428f03a269c407a7672e6eab747
 workflow-type: tm+mt
-source-wordcount: '4405'
+source-wordcount: '4406'
 ht-degree: 92%
 
 ---
@@ -245,19 +245,11 @@ Microsoft Word として貼り付け（`paste-wordhtml`）モードをさらに�
 >
 >リッチテキストエディターでは、`CQrte` という ID を持つコンテナ DOM 要素を使用します。これを使用して、表示や編集用に様々なスタイルを提供できます。
 >
+>`#CQ td {`
+>` // defines the style for viewing }`
 >
-```
->#CQ td {
-> // defines the style for viewing
-> }
->```
->
->
-```
->#CQrte td {
-> // defines the style for editing
-> }
->```
+>`#CQrte td {`
+>` // defines the style for editing }`
 
 ### ポップアップリストで使用可能なスタイルの指定 {#stylesindropdown}
 
@@ -496,7 +488,7 @@ RTE コンポーネント内または RTE コンポーネントからのテー�
 
    * **名前** `features`
    * **型** `String`
-   * **値** `*`
+   * **値** `*`（アスタリスク）
 
    >[!NOTE]
    テーブルの機能をすべて有効にはしない場合は、`features` プロパティを次のように作成します。
@@ -613,7 +605,7 @@ RTE では、以前の編集を取り消す、またはやり直すことがで�
 
    * **名前** `tabSize`
    * **型** `String`
-   * **値** タブに使用するスペース文字の数.
+   * **値** タブに使用するスペース文字の数
 
 1. 変更内容を保存します。
 
