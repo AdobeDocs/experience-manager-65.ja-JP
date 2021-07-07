@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 0c5759786a698f7c7503a56da7f472229d18f763
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3843'
+source-wordcount: '3835'
 ht-degree: 4%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 4%
 >Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java™ SEに準拠した標準規格に準拠したOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および操作できます。
 >[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
 >[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
->oracleJava™テクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java™]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
+>oracleJava™テクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java™]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)を参照してください。
 
 [!DNL Experience Manager] 6.5.9.0リリースで提供された修正の一覧を以下に示します。
 
@@ -197,7 +197,7 @@ ht-degree: 4%
 
 Adobe Experience Manager 6.5.9.0 Assetsの[!DNL Dynamic Media]に関する次の問題が修正されました。
 
-* [!DNL Dynamic Media]が選択的にアクティブ化され、[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=en#troubleshoot-dm-config)によって無効化されている場合、カスタムのビューアプリセットとCSSが[!DNL Dynamic Media]に複製されない(NPR-36232)。
+* [!DNL Dynamic Media]が選択的にアクティブ化され、[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html#troubleshoot-dm-config)によって無効化されている場合、カスタムのビューアプリセットとCSSが[!DNL Dynamic Media]に複製されない(NPR-36232)。
 
 * アセットの詳細ページでビデオレンディションをプレビューしようとすると、ビデオの読み込みが遅くなる(CQ-4320122)。
 
@@ -405,12 +405,12 @@ B.パッケージマネージャーの[HTTP APIを使用します。](/help/site
 >Formsを使用していない場合はスキップします。 Experience ManagerFormsの修正は、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に、別のアドオンパッケージを通じて配信されます。
 
 1. Adobe Experience Manager Service Packがインストールされていることを確認します。
-1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#forms-updates)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
+1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. [AEM Formsアドオンパッケージのインストール](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の説明に従って、Formsアドオンパッケージをインストールします。
 
 >[!NOTE]
 >
->Experience Manager6.5.9.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換性パッケージを使用し、Experience Manager6.5.9.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
+>Experience Manager6.5.9.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換性パッケージを使用し、Experience Manager6.5.9.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
 ### JEEへのAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
 
