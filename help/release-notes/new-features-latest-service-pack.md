@@ -4,10 +4,10 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 9の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: a0f47b4e0e9f38df208ed78fde63c70813fb7dcc
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '3674'
-ht-degree: 5%
+source-wordcount: '3668'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 >[!DNL Experience Manager] Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java SEに準拠したOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および運用できます。
 >[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
 >[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
->oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf?lang=en)を参照してください。
+>oracleJavaテクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)を参照してください。
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -426,11 +426,11 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 2021年2月25日～ 2021年5月27日に、Adobeはサービスパックに加えて、以下をリリースしました。
 
-* [!DNL Adobe Experience Manager] (Cloud Service [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html)、 [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html)、 [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en#release-date))。
+* [!DNL Adobe Experience Manager] (Cloud Service [2021.2.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-2-0.html)、 [2021.3.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-3-0.html)、 [2021.4.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html#release-date))。
 
 * [[!DNL Experience Manager] デスクトップアプリ2.1(2.1.2.0)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)を参照してください。
 
-* [Experience Manager Screens:機能パック202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html?lang=en)
+* [Experience Manager Screens:機能パック202103](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202103.html?lang=ja)
 
 >[!MORELIKETHIS]
 >
