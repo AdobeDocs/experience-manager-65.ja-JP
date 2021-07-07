@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: 検索、メタデータ
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
 workflow-type: tm+mt
-source-wordcount: '5575'
+source-wordcount: '5573'
 ht-degree: 88%
 
 ---
@@ -358,7 +358,7 @@ ht-degree: 88%
    変更内容を保存します。
 
 1. `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags`にアクセスし、`true`の値を持つ`Boolean`型の`similarityTags`プロパティを追加します。
-1. [!DNL Experience Manager]リポジトリ内のアセットにスマートタグを適用します。 [スマートタグの設定方法](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=en#configuring)を参照してください。
+1. [!DNL Experience Manager]リポジトリ内のアセットにスマートタグを適用します。 [スマートタグの設定方法](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring)を参照してください。
 1. CRXDEの`/oak-index/damAssetLucene`ノードで、`reindex`プロパティを`true`に設定します。 変更内容を保存します。
 1. （オプション）検索フォームをカスタマイズした場合は、`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch`ノードを`/conf/global/settings/dam/search/facets/assets/jcr:content/items`にコピーします。 変更内容を保存します。
 
