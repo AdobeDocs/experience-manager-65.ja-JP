@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4a2a9f177049e8199662ed94cf7aace9aa937655
 workflow-type: tm+mt
-source-wordcount: '3934'
-ht-degree: 75%
+source-wordcount: '3964'
+ht-degree: 74%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 75%
 
 パッケージマネージャー、ソフトウェア配布、およびお使いのファイルシステム間でパッケージを転送できます。
 
-## パッケージとは{#what-are-packages}
+## パッケージとは {#what-are-packages}
 
 パッケージとは、ファイルシステムシリアル化（「vault」シリアル化）の形式でリポジトリコンテンツが格納されている zip ファイルです。これにより、使いやすく編集しやすい方法でファイルおよびフォルダーを表現できます。
 
@@ -150,7 +150,7 @@ ht-degree: 75%
 | 依存 | 現在のパッケージを期待どおりに実行するために他のパッケージが必要な場合に配慮する必要のある依存関係情報をリストします。このフィールドはホットフィックスを使用する場合に重要です。 | groupId:name:version |
 | 置き換え | このパッケージで置き換えられる廃止されたパッケージのリスト。インストール前に、古いパッケージの必要なコンテンツがすべてこのパッケージに含まれていることを確認し、コンテンツが上書きされないようにしてください。 | groupId:name:version |
 
-### パッケージフィルター  {#package-filters}
+### パッケージフィルター {#package-filters}
 
 フィルターは、パッケージに含めるリポジトリノードを識別します。**フィルター定義**&#x200B;は、次の情報を指定します。
 
@@ -206,7 +206,7 @@ ht-degree: 75%
 
 パッケージにスクリーンショットを付加すると、コンテンツの外観を視覚的に表現できます。例えば、新機能のスクリーンショットを用意するなどです。
 
-### パッケージアイコン  {#package-icons}
+### パッケージアイコン {#package-icons}
 
 また、パッケージにアイコンを付加すると、パッケージの内容をすぐに参照できるように視覚的に表現できます。これはパッケージリストに表示され、パッケージやパッケージのクラスを簡単に識別できます。
 
@@ -240,9 +240,15 @@ ht-degree: 75%
 * **/etc/packages**（削除を除く完全な権限）
 * パッケージコンテンツを含むノード
 
+>[!CAUTION]
+>
+>パッケージに権限を付与すると、機密情報の開示やデータの損失が生じる場合があります。
+>
+>これらのリスクを制限するには、専用のサブツリーに対してのみ特定のグループ権限を付与することを強くお勧めします（例：`/etc/packages/site-content`）。
+
 権限の変更手順については、[権限の設定](/help/sites-administering/security.md#setting-page-permissions)を参照してください。
 
-### 新しいパッケージの作成  {#creating-a-new-package}
+### 新しいパッケージの作成 {#creating-a-new-package}
 
 新しいパッケージ定義を作成するには：
 
@@ -325,7 +331,7 @@ RulesRulesはオプションです。シンプルなパッケージ定義の場�
    >
    >この時点でパッケージをビルドしなければならないわけではありません。後からビルドしても構いません。
 
-### Building a Package {#building-a-package}
+### パッケージのビルド {#building-a-package}
 
 パッケージは多くの場合、[パッケージ定義の作成](#creating-a-new-package)と同時にビルドされますが、後から戻ってパッケージをビルドまたは再ビルドできます。これは、リポジトリ内のコンテンツが変更された場合に便利です。
 
@@ -357,7 +363,7 @@ RulesRulesはオプションです。シンプルなパッケージ定義の場�
 
 1. 「**再度含める**」をクリックすると、確認のダイアログが表示されます。
 
-### Viewing and Editing Package Information {#viewing-and-editing-package-information}
+### パッケージ情報の表示と編集 {#viewing-and-editing-package-information}
 
 パッケージ定義に関する情報を表示または編集するには：
 
@@ -428,7 +434,7 @@ RulesRulesはオプションです。シンプルなパッケージ定義の場�
    >
    >AEM でコンテンツを利用できるようにするには、必ず[パッケージをインストール](#installing-packages)してください。
 
-### パッケージの検証  {#validating-packages}
+### パッケージの検証 {#validating-packages}
 
 パッケージをインストールする前に、内容を確認することが可能です。パッケージは`/apps`の下のオーバーレイファイルを変更したり、ACLを追加、変更、削除したりできるので、多くの場合、インストール前にこれらの変更を検証すると便利です。
 
@@ -506,7 +512,7 @@ RulesRulesはオプションです。シンプルなパッケージ定義の場�
    >
    >ベストプラクティスとして、予期しない製品の動作を引き起こす可能性があるため、パッケージは AEM 提供の ACL に影響を与えないようにすることをお勧めします。
 
-#### 検証の実行  {#performing-validation}
+#### 検証の実行 {#performing-validation}
 
 パッケージの検証は 2 とおりの方法で行うことができます。
 
@@ -564,7 +570,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >
 >検証 HTTP POST リクエストへの応答は、検証結果を含む JSON オブジェクトになります。
 
-### Installing Packages {#installing-packages}
+### パッケージのインストール {#installing-packages}
 
 パッケージをアップロードしたら、コンテンツをインストールする必要があります。パッケージコンテンツがインストールされ、機能する状態になるには、以下の両方の条件が満たされている必要があります。
 
@@ -620,7 +626,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 
    インストールが完了すると、そのパッケージの横に「**インストール済み**」と表示されます。
 
-### ファイルシステムベースのアップロードおよびインストール  {#file-system-based-upload-and-installation}
+### ファイルシステムベースのアップロードおよびインストール {#file-system-based-upload-and-installation}
 
 別の方法でパッケージをインスタンスにアップロードおよびインストールすることもできます。ファイルシステムには、jarファイルと`license.properties`ファイルと共に`crx-quicksart`フォルダーがあります。 `crx-quickstart`の下に`install`という名前のフォルダーを作成する必要があります。 次のようになります。`<aem_home>/crx-quickstart/install`
 
@@ -632,7 +638,7 @@ https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImpor
 >
 >この作業はインスタンスの初回起動前におこなうこともできます。その場合は、`crx-quickstart` フォルダーを手動で作成し、その下に `install` フォルダーを作成してそこにパッケージを追加する必要があります。これで、インスタンスの初回起動時に、パッケージがアルファベット順にインストールされるようになります。
 
-### パッケージのアンインストール  {#uninstalling-packages}
+### パッケージのアンインストール {#uninstalling-packages}
 
 AEMでは、パッケージをアンインストールできます。 このアクションにより、パッケージのインストール直前に作成されたスナップショットに含まれているリポジトリのコンテンツが元に戻ります。
 
@@ -684,7 +690,7 @@ AEMでは、パッケージをアンインストールできます。 このア�
 
 [ソフトウェア配布](#software-distribution)に置き換えられました。
 
-## ソフトウェア配布{#software-distribution}
+## ソフトウェア配布 {#software-distribution}
 
 [ソフトウェア配布](https://downloads.experiencecloud.adobe.com) は、AEMパッケージの検索とダウンロードを簡素化する新しいユーザーインターフェイスです。
 
