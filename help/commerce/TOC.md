@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEMコンテンツとコマース
 breadcrumb-title: コマースガイド
 user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
-source-git-commit: 538dc7620317f86c0b3d762eaef597d0a7969ace
+source-git-commit: a5bf6a1a6e9013e44209ea865145af1557445318
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 82%
+source-wordcount: '111'
+ht-degree: 80%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 82%
       + [マルチテンプレートの使用](cif/configuring/multi-template-usage.md)
       + [SEO 用の URL の設定](cif/configuring/advanced-url-configuration.md)
       + [キャッシュオプション](cif/configuring/caching.md)
+      + [カスタムHTTPヘッダー](/help/commerce/cif/configuring/custom-http-headers.md)
    + 開発 {#developing}
       + [AEMを使用した開発](cif/develop.md)
       + [CIF コンポーネントのスタイル設定](cif/customizing/style-cif-component.md)
