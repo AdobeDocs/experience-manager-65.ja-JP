@@ -8,10 +8,10 @@ activity: develop
 audience: developer
 feature: コマース統合フレームワーク
 exl-id: 1e7c3748-92b5-45f1-8dd9-f1816e3e34aa
-source-git-commit: 61b8d0bf960bd03a19d22061f3c897a56259dd24
+source-git-commit: 2fadfa65242b208a750b0d5392fdd2c41e9ff20e
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 87%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +69,7 @@ AEM Content &amp; Commerce Authoring には、AEM の作成者やマーケター
 
 カテゴリピッカーフィールドでは、次のオプションプロパティをサポートしています。
 
-- selectionId（id、uid、slug、idAndUrlPath、uidAndUrlPath）- ピッカーが返すカテゴリ属性を選択できます（デフォルトは id）。idAndUrlPath と uidAndUrlPath は、カテゴリの id／uid と url_path を | 文字で区切ったもの（例：1|men/tops）を格納する特別なオプションです。
+- selectionId(id, uid, slug, urlPath, idAndUrlPath _（非推奨）_, uidAndUrlPath _（非推奨）_) — ピッカーから返されるカテゴリ属性を選択できます（デフォルト= id）。
 - multiple（true、false）- 1 つまたは複数のカテゴリの選択を有効にします（デフォルトは false）。
 
 また、`name`、`fieldLabel`、`fieldDescription` などの標準のダイアグログフィールドプロパティもサポートされています。
@@ -79,6 +79,6 @@ AEM Content &amp; Commerce Authoring には、AEM の作成者やマーケター
 >`cifproductfield` コンポーネントと同様に、`cifcategoryfield` コンポーネントにも クライアントライブラリが必要です。`cif.shell.picker`ダイアログにクライアントライブラリを追加するには、`extraClientlibs` プロパティを使用します。AEM コアコンポーネントドキュメントの[ダイアログのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=en#customizing-dialogs)を参照してください。
 >[!CAUTION]
 >
->CIFコアコンポーネントバージョン2.0.0以降、`id`のサポートは削除され、`uid`に置き換えられました。 カテゴリ識別子として`uid`または`slug`を使用することを強くお勧めします。 CIFコアコンポーネントバージョン1.xを使用するプロジェクトでのみ、引き続き`id`と`idAndUrlPath`をサポートします。
+>CIFコアコンポーネントバージョン2.0.0以降、`id`のサポートは削除され、`uid`に置き換えられました。 カテゴリ識別子として`uid`または`urlPath`を使用することを強くお勧めします。 CIFコアコンポーネントバージョン1.xを使用するプロジェクトでのみ、引き続き`id`と`idAndUrlPath`をサポートします。
 
 完全に動作する `cifcategoryfield` の例は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml)プロジェクトにあります。
