@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
-role: Administrator
+role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 93%
@@ -63,7 +63,7 @@ TarMK はパフォーマンスを考慮して設計されています。一方�
 
 サポートされる Microkernel については、「[OSGi の AEM Forms の技術要件](/help/sites-deploying/technical-requirements.md)」または「[JEE がサポートされるプラットフォームの組み合わせにおける AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md)」の記事の一覧を参照してください。
 
-## TarMK の代わりに Mongo または Relational Database Microkernel を選択する  {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
+## TarMK の代わりに Mongo または Relational Database Microkernel を選択する {#choosing-mongo-or-a-relational-database-microkernel-over-tarmk}
 
 スケーラブルなクラスター化された AEM Forms 環境は、並列的に構成された 2 つ以上のアクティブなオーサーインスタンスの組み合わせです。そのため、すべての同時オーサリングのアクティビティをサポートしている 1 つのサーバーが維持できなくなるような場合に備え、2 つ以上のオーサーインスタンスを実行することができます。
 
