@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '3292'
 ht-degree: 46%
@@ -21,7 +21,7 @@ ht-degree: 46%
 
 # コミュニティサイトコンソール {#communities-sites-console}
 
-コミュニティサイトコンソールでは、次の機能にアクセスできます。
+コミュニティサイトコンソールでは、以下の操作ができます。：
 
 * サイトの作成
 * サイト編集
@@ -53,7 +53,7 @@ ht-degree: 46%
 
 ## コミュニティサイトコンソールへのアクセス {#accessing-communities-sites-console}
 
-オーサー環境でコミュニティサイトコンソールにアクセスするには、次の手順を実行します。
+オーサー環境でコミュニティサイトコンソールに移動するには、：
 
 * グローバルナビゲーションから：**[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**
 
@@ -77,7 +77,7 @@ ht-degree: 46%
 
 作成プロセスでは、一連の手順がパネル形式で表示されます。パネルには、設定する機能セット（サブパネルとして表示）が含まれています。最後の手順でサイトをコミットする前に、**次の**&#x200B;または&#x200B;**前の手順に戻る**&#x200B;を選択できます。
 
-### Step 1 : Site Template {#step-site-template}
+### 手順 1：サイトテンプレート {#step-site-template}
 
 ![newsitetemplate](assets/newsitetemplate.png)
 
@@ -136,7 +136,7 @@ ht-degree: 46%
 
 コミュニティサイトの公開後は、[プロパティを編集](#modifying-site-properties)し、別のテーマを選択できます。
 
-#### コミュニティサイトブランディング  {#community-site-branding}
+#### コミュニティサイトブランディング {#community-site-branding}
 
 ![サイトブランディング](assets/site-branding.png)
 
@@ -155,7 +155,7 @@ ht-degree: 46%
 
 * 「**次へ**」を選択します。
 
-### 手順 3：設定  {#step-settings}
+### 手順 3：設定 {#step-settings}
 
 設定パネルには複数のサブパネルが含まれています。各サブパネルに表示される機能を設定した後に、サイト作成の最後の手順に進みます。
 
@@ -249,7 +249,7 @@ ht-degree: 46%
 
 * **コミュニティ権限を持つメンバー**
 
-   [コミュニティ機能](/help/communities/functions.md)に対して`Allow Privileged Member`が選択されている場合に、1つ以上のコミュニティメンバーまたはメンバーグループを選択して、新しいコンテンツを作成できます。
+   [コミュニティ機能](/help/communities/functions.md)に対して`Allow Privileged Member`が選択されている場合に、1つ以上のコミュニティメンバーまたはメンバーグループを選択して、新しいコンテンツを作成できるようにします。
 
 * **コミュニティ管理者**
 
@@ -342,7 +342,7 @@ ht-degree: 46%
 
    次のいずれかを選択します。
 
-   * `Always show contributions in the original language` (デフォルト値)
+   * `Always show contributions in the original language`（デフォルト）
    * `Always show contributions in user preferred language`
    * `Show contributions in user preferred language for only logged-in users`
 
@@ -361,7 +361,7 @@ ht-degree: 46%
 
 * 「**次へ**」を選択します。
 
-### 手順 4：コミュニティサイトの作成  {#step-create-communities-site}
+### 手順 4：コミュニティサイトの作成 {#step-create-communities-site}
 
 調整が必要な場合は、「**戻る**」ボタンを使用して調整します。
 
@@ -396,7 +396,7 @@ ht-degree: 46%
 >
 >AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
 
-## サイトプロパティの変更  {#modifying-site-properties}
+## サイトプロパティの変更 {#modifying-site-properties}
 
 ![サイトを編集](assets/edit-site.png)
 
@@ -408,7 +408,7 @@ ht-degree: 46%
 
 ### 基本事項の変更 {#modify-basic}
 
-BASICパネルでは、次の変更が可能です。
+基本パネルでは、次のものを変更できます。：
 
 * コミュニティサイトのタイトル
 * コミュニティサイトの説明
@@ -419,7 +419,7 @@ BASICパネルでは、次の変更が可能です。
 
 その一方で、コミュニティサイトの[構造](#modify-structure)は変更できます。
 
-### 構造の変更  {#modify-structure}
+### 構造の変更 {#modify-structure}
 
 構造パネルでは、最初にコミュニティサイトテンプレートから作成された構造を変更できます。パネルから、次のことが可能です。
 
@@ -455,7 +455,7 @@ BASICパネルでは、次の変更が可能です。
 >
 >他の機能（[ページ機能](/help/communities/functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
-#### 例：コミュニティのサイト構造へのカタログ機能の追加  {#example-adding-a-catalog-function-to-a-community-site-structure}
+#### 例：コミュニティのサイト構造へのカタログ機能の追加 {#example-adding-a-catalog-function-to-a-community-site-structure}
 
 ![add-catalog-site](assets/add-catalog-site.png)
 
@@ -483,7 +483,7 @@ BASICパネルでは、次の変更が可能です。
 
 サムネイルパネルでは、コミュニティサイトコンソールでサイトを表現する画像をアップロードできます。
 
-### イネーブルメントの変更  {#modify-enablement}
+### イネーブルメントの変更 {#modify-enablement}
 
 イネーブルメントパネルでは、コミュニティサイトの作成中に表示された設定にアクセスできます。
 
@@ -503,7 +503,7 @@ BASICパネルでは、次の変更が可能です。
 
 コミュニティサイトを公開した後、[グループコンソール](/help/communities/groups.md)を使用して作成された各サブコミュニティ（ネストされたグループ）を個別に公開する必要があります。
 
-## サイトの書き出し  {#exporting-the-site}
+## サイトの書き出し {#exporting-the-site}
 
 ![export-site](assets/export-site.png)
 
@@ -559,7 +559,7 @@ UGC はサイトパッケージに含まれていません。
 
    `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
-   以下に例を示します。
+   次に例を示します。
    `/content/sites/engage/en/signin:/content/sites/engage/en`
 
 * 「**保存**」を選択します。
