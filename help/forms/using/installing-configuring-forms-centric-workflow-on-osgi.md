@@ -7,16 +7,16 @@ uuid: 1ceae822-215a-4b83-a562-4609a09c3a54
 topic-tags: installing
 discoiquuid: de292a19-07db-4ed3-b13a-7a2f1cd9e0dd
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 56%
 
 ---
 
-# OSGi{#installing-and-configuring-forms-centric-workflow-on-osgi}へのForms中心型ワークフローのインストールと設定
+# OSGiへのForms中心型ワークフローのインストールと設定{#installing-and-configuring-forms-centric-workflow-on-osgi}
 
 ## はじめに {#introduction}
 
@@ -30,7 +30,7 @@ AEM Forms は強力なエンタープライズクラスのプラットフォー�
 
 >[!NOTE]
 >
->OSGi での Forms 中心のワークフローを使用すると、JEE スタックに本格的なプロセス管理機能をインストールしなくても、OSGi スタックでさまざまなタスクのワークフローを迅速に構築およびデプロイできます。機能の違いと類似点については、OSGi上のForms中心型AEM WorkflowsとJEE上のProcess Managementの[比較](capabilities-osgi-jee-workflows.md)を参照してください。
+>OSGi での Forms 中心のワークフローを使用すると、JEE スタックに本格的なプロセス管理機能をインストールしなくても、OSGi スタックで様々なタスクのワークフローを迅速に構築およびデプロイできます。機能の違いと類似点については、OSGi上のForms中心型AEM WorkflowsとJEE上のProcess Managementの[比較](capabilities-osgi-jee-workflows.md)を参照してください。
 >
 >比較の後、JEEスタックにProcess Management機能をインストールする場合は、JEEスタックのインストールと設定およびProcess Management機能について詳しくは、[JEE上のAEM Formsのインストールまたはアップグレード](/help/forms/home.md)を参照してください。
 
