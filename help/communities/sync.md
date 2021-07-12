@@ -10,12 +10,12 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2509'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -31,7 +31,7 @@ AEM Communitiesでは、パブリッシュ環境から（設定されている�
 
 ユーザーデータについて詳しくは、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
 
-## パブリッシュファーム間のユーザーの同期  {#synchronizing-users-across-a-publish-farm}
+## パブリッシュファーム間のユーザーの同期 {#synchronizing-users-across-a-publish-farm}
 
 仕様上、パブリッシュ環境で作成されたデータは、オーサー環境では表示されません。
 
@@ -41,13 +41,13 @@ AEM Communitiesでは、パブリッシュ環境から（設定されている�
 
 ユーザーの同期を有効にすると、ファーム内のパブリッシュインスタンス間でユーザーデータが自動的に同期されます。
 
-### ユーザーの同期のセットアップ手順  {#user-sync-setup-instructions}
+### ユーザーの同期のセットアップ手順 {#user-sync-setup-instructions}
 
-パブリッシュファーム間で同期を有効にする手順について詳しくは、次を参照してください。
+詳細なステップバイステップの手順については、以下を参照してください。：
 
 * [ユーザー同期](/help/sites-administering/sync.md)
 
-## バックグラウンドでのユーザー同期{#user-sync-in-the-background}
+## バックグラウンドでのユーザー同期  {#user-sync-in-the-background}
 
 ![sling-dist-workflow](assets/sling-dist-workflow.png)
 
@@ -59,13 +59,13 @@ AEM Communitiesでは、パブリッシュ環境から（設定されている�
 
    Slingの配布情報が含まれます。 これは、コンテンツの配信先と最後に配信された日時に関する情報です。
 
-## ... {#what-happens-when}の場合の影響
+## 各種操作の結果 {#what-happens-when}
 
 ### コミュニティのサイトコンソールでのサイトの公開 {#publish-site-from-communities-sites-console}
 
 オーサー環境で、コミュニティサイトを[コミュニティサイトコンソール](/help/communities/sites-console.md)から公開すると、関連するページが[レプリケート](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents)されます。また、Sling によって、動的に作成されたコミュニティユーザーグループ（メンバーシップを含む）が配信されます。
 
-### パブリッシュ環境でのユーザーの作成またはプロファイルの編集  {#user-is-created-or-edits-profile-on-publish}
+### パブリッシュ環境でのユーザーの作成またはプロファイルの編集 {#user-is-created-or-edits-profile-on-publish}
 
 仕様上、パブリッシュ環境で（自己登録、ソーシャルログイン、LDAP 認証などで）作成されたユーザーやプロファイルはオーサー環境では表示されません。
 
@@ -276,7 +276,7 @@ Sling配布で、サブスクリプションとフォローに矛盾がある問
 
    ![user-sync-listner](assets/user-sync-listner.png)
 
-### 一意の Sling ID{#unique-sling-id} の節を参照してください 
+### 一意の Sling ID {#unique-sling-id}
 
 AEMオーサーインスタンスは、Sling IDを使用して、データの送信元と、パッケージの送り先（または送り先の不要な発行者）を特定します。
 
@@ -307,7 +307,7 @@ AEMオーサーインスタンスは、Sling IDを使用して、データの送
 
 すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
 
-### Vault Package Builder Factory  {#vault-package-builder-factory}
+### Vault Package Builder Factory {#vault-package-builder-factory}
 
 更新を正しく同期するには、ユーザ同期用にVaultパッケージビルダを変更する必要があります。
 `/home/users`に`*/rep:cache`ノードが作成されます。 これは、ノードのプリンシパル名に対してクエリを実行すると、このキャッシュを直接使用できることを見つけるために使用されるキャッシュです。
@@ -333,7 +333,7 @@ AEMオーサーインスタンスは、Sling IDを使用して、データの送
 
    ![Vaultパッケージビルダーファクトリ](assets/vault-package-builder-factory.png)
 
-## AEM Communities {#troubleshoot-sling-distribution-in-aem-communities}でのSling配布のトラブルシューティング
+## AEM CommunitiesでのSling配布のトラブルシューティング {#troubleshoot-sling-distribution-in-aem-communities}
 
 Sling配布が失敗した場合は、次のデバッグ手順を試してください。
 
