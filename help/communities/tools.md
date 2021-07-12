@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 410149d6-15bd-41e5-bdba-1d8e6eab7b87
 pagetitle: Communities Tools
-role: Administrator
+role: Admin
 exl-id: ba6c4ad3-c393-42d8-9f1f-d59947c3e7ab
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 16%
