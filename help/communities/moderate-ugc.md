@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 56%
@@ -207,7 +207,7 @@ UGC の事前モデレートがおこなわれる場合、投稿は、モデレ�
 
 ### スパム検出 {#spam-detection}
 
-スパム検出は、自動モデレート機能で、送信されたユーザーが生成した望ましくないコンテンツをスパムとしてマークして除外します。 有効にすると、事前に設定されたスパムワードの集合に基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
+スパム検出は、送信済みのユーザー生成コンテンツの中から、好ましくないコンテンツをスパムとしてマーキングして除外する自動モデレート機能です。 ユーザーが生成したコンテンツをスパムとしてマークし、望ましくない部分を送信した。 有効にすると、事前に設定されたスパムワードの集合に基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
 
 `/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`
 
