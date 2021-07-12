@@ -6,8 +6,8 @@ user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM プロジェクトの管理方法について学びます。
 feature: デプロイ
-role: Business Practitioner
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+role: User
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 93%
