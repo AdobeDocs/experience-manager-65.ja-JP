@@ -8,9 +8,9 @@ topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1907'
 ht-degree: 76%
@@ -124,7 +124,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、 ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージがファイルに表示されなくな `[AEM-Installation-Directory]/crx-quickstart/logs/error.log` り、ログが安定するまで待ちます。
 1. 手順 1 から 7 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
-### （Windowsのみ）Visual Studioの再頒布可能パッケージの自動インストール{#automatic-installation-visual-studio-redistributables}
+### （Windowsのみ）Visual Studioの再頒布可能パッケージの自動インストール {#automatic-installation-visual-studio-redistributables}
 
 AEMインスタンスを管理者権限モードでインストールした場合、見つからないVisual Studioの再配布可能パッケージは、AEM Formsアドオンパッケージのインストール中に自動的にインストールされます。
 
@@ -223,7 +223,7 @@ Adobe Sign とアダプティブフォームの一般的なシナリオでは、
 
 AEM Forms で Adobe Sign を使用するには、「[Adobe Sign を AEM Forms に統合する](/help/forms/using/adobe-sign-integration-adaptive-forms.md)」を参照してください。
 
-#### Adobe Analytics の設定  {#configure-adobe-analytics}
+#### Adobe Analytics の設定 {#configure-adobe-analytics}
 
 AEM Forms は、Adobe Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
 
