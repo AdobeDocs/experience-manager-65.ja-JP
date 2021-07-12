@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 9222bc93-c231-4ac8-aa28-30d784a4ca3b
-role: Administrator
+role: Admin
 exl-id: 2d33e6ba-cd32-40d1-8983-58f636b21470
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 47%
@@ -39,7 +39,7 @@ MySQL をコミュニティサイトのイネーブルメント機能用に設�
 
 対象 OS の手順に従い、MySQL をダウンロードしてインストールする必要があります。
 
-### 小文字のテーブル名  {#lower-case-table-names}
+### 小文字のテーブル名 {#lower-case-table-names}
 
 SQL では大文字と小文字が区別されます。大文字と小文字が区別されるオペレーティングシステムでは、すべてのテーブル名を小文字にする設定を含める必要があります。
 
@@ -92,7 +92,7 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 
 ![mysqlconnection1](assets/mysqlconnection1.png)
 
-#### 新しい接続 Enablement {#new-enablement-connection}
+#### 新しい接続 Enablement  {#new-enablement-connection}
 
 ![mysqlconnection2](assets/mysqlconnection2.png)
 
@@ -141,7 +141,7 @@ SQL スクリプトを取得するには、オーサーインスタンスで CRX
 * [SCORM 設定](#configure-scorm)
 
 
-#### 手順 1：SQL ファイルを開く {#step-open-sql-file}
+#### Step 1 : open SQL file {#step-open-sql-file}
 
 MySQL Workbench で、以下の設定をおこないます。
 
@@ -153,7 +153,7 @@ MySQL Workbench で、以下の設定をおこないます。
 
 ![scromデータベース](assets/scrom-database.png)
 
-#### 手順 2：SQL スクリプトの実行 {#step-execute-sql-script}
+#### Step 2 : execute SQL Script {#step-execute-sql-script}
 
 手順1で開いたファイルのWorkbenchウィンドウで、スクリプトを実行する`lightening (flash) icon`を選択します。
 
@@ -173,7 +173,7 @@ SCHEMAS のインストールと更新が完了すると、`scormenginedb` が�
 
 ![scrom-database3](assets/scrom-database3.png)
 
-## Configure JDBC Connections {#configure-jdbc-connections}
+## JDBC 接続の設定 {#configure-jdbc-connections}
 
 **Day Commons JDBC Connections Pool** の OSGi 設定では、MySQL JDBC ドライバーを設定します。
 
