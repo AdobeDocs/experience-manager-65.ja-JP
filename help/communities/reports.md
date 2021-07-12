@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: fde053ff-b671-456b-869c-81f16ea1f1be
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 2aff2ffe-ba6f-4cc9-a126-40fc2a1161e2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 39%
@@ -43,7 +43,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 表形式のレポートは .csv 形式でエクスポートして別の処理に使用できます。
 
-## レポートコンソール  {#reporting-consoles}
+## レポートコンソール {#reporting-consoles}
 
 ### コミュニティサイトのレポート {#reports-for-community-sites}
 
@@ -90,7 +90,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 詳しくは、リソースコンソールの[レポートセクション](/help/communities/resources.md#report)を参照してください。
 
-## 割り当てレポート  {#assignments-report}
+## 割り当てレポート {#assignments-report}
 
 割り当てコンソールでは、イネーブルメントコミュニティサイト、ユーザー、グループおよび割り当てによってレポートをフィルタリングできます。
 
@@ -118,7 +118,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 ![generate-report](assets/generate-assignment-report.png)
 
-## Views Report {#views-report}
+## 表示レポート {#views-report}
 
 表示コンソールでは、指定した期間におけるコミュニティ機能別のページ表示回数のレポートを生成できます。
 
@@ -147,7 +147,7 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 ![generate-views](assets/generate-views.png)
 
-## Posts Report {#posts-report}
+## 投稿レポート {#posts-report}
 
 投稿コンソールでは、指定した期間におけるコミュニティ機能への投稿数のレポートを生成できます。
 
@@ -178,11 +178,11 @@ AEM Communities には様々なレポートがあり、オーサー環境から�
 
 ## トラブルシューティング {#troubleshooting}
 
-### コミュニティサイトが 1 つも表示されない  {#no-community-sites-listed}
+### コミュニティサイトが 1 つも表示されない {#no-community-sites-listed}
 
 コミュニティサイトが 1 つも表示されない場合は、Adobe Analytics がサイトに対して有効になっているかを確認してください。割り当てに関するレポートを選択する場合は、割り当て機能がコミュニティサイトの構造内にあることを確認します。
 
-### AEMオーサーインスタンス{#reports-do-not-show-in-aem-author-instance}にレポートが表示されない
+### AEMオーサーインスタンスにレポートが表示されない {#reports-do-not-show-in-aem-author-instance}
 
 レポートがAEMオーサーインスタンスに表示されない場合は、パブリッシュインスタンスでのURLマッピングなど、カスタマイズ内容を確認します。 URLマッピングがコミュニティサイトのAEMパブリッシュインスタンスでのみ実行される場合は、**サイトトレンドレポートのソーシャルコンポーネントファクトリ**&#x200B;設定のAEMオーサーインスタンスで同じ設定がおこなわれていることを確認します。
 
