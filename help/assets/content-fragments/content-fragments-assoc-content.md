@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 5af45caf-5e85-4c57-bcd1-e8f7fc460315
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: ced7c902-193c-4e97-9070-2a4d958b64a3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 100%
 
 ---
 
-# 関連コンテンツ {#associated-content}
+# 関連コンテンツ{#associated-content}
 
 関連コンテンツによって関連性がわかり、フラグメントをページに追加するときに、（オプションで）アセットをフラグメントと一緒に使用できるようになります。これにより、[ページでコンテンツフラグメントを使用するときに利用できるアセットが広範になることで](/help/sites-authoring/content-fragments.md#using-associated-content)柔軟性が生まれると同時に、適切なアセットを検索するのに要する時間の削減にもつながります。
 
