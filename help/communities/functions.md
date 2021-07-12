@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 91833914-b811-4355-a97d-e1a9cb7441f1
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 43%
@@ -29,7 +29,7 @@ ht-degree: 43%
 >
 >[コミュニティサイト](/help/communities/sites-console.md)、[コミュニティサイトテンプレート](/help/communities/sites.md)、[コミュニティグループテンプレート](/help/communities/tools-groups.md)、[コミュニティ機能](/help/communities/functions.md)の作成用のコンソールは、オーサー環境でのみ使用できます。
 
-## Community Functions Console {#community-functions-console}
+## コミュニティ機能コンソール {#community-functions-console}
 
 オーサー環境でコミュニティ機能コンソールにアクセスするには：
 
@@ -43,13 +43,13 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 コミュニティサイトテンプレートは、ログイン、ユーザープロファイル、通知、メッセージング、サイトメニュー、検索、テーマ、ブランディング機能など、コミュニティサイトの構造を定義します。
 
-### タイトルと URL の設定  {#title-and-url-settings}
+### タイトルと URL の設定 {#title-and-url-settings}
 
 **タイトル**&#x200B;と **URL** は、すべてのコミュニティ機能に共通するプロパティです。
 
 コミュニティ機能をコミュニティサイトテンプレートに追加するか、コミュニティサイトの構造を[変更](/help/communities/sites-console.md#modifying-site-properties)すると、その機能のダイアログが開き、タイトルと URL を設定できます。
 
-#### 設定機能の詳細  {#configuration-function-details}
+#### 設定機能の詳細 {#configuration-function-details}
 
 ![title-url-details](assets/title-url-details.png)
 
@@ -104,7 +104,7 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### ブログ機能  {#blog-function}
+### ブログ機能 {#blog-function}
 
 ブログ機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[ブログコンポーネント](/help/communities/blog-feature.md)を含むページです。開発者向けの[ブログの基本事項](/help/communities/blog-developer-basics.md)も参照してください。
 
@@ -187,13 +187,13 @@ AEM Communities で提供される機能を以下で簡単に説明します。�
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### ファイルライブラリ機能  {#file-library-function}
+### ファイルライブラリ機能 {#file-library-function}
 
 ファイルライブラリ機能は、コメントの追加と削除に対応した[ファイルライブラリコンポーネント](/help/communities/file-library.md)を含むページです。
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### フォーラム機能  {#forum-function}
+### フォーラム機能 {#forum-function}
 
 フォーラム機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した[フォーラムコンポーネント](/help/communities/forum.md)を含むページです。
 
@@ -319,7 +319,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 
 テンプレートへの追加時には、[タイトルと URL 設定](#title-and-url-settings)のみを設定します。
 
-### Q&amp;A 機能  {#qna-function}
+### Q&amp;A 機能 {#qna-function}
 
 Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロー、メンバー自身による編集、投票、モデレートに対応した [Q&amp;A コンポーネント](/help/communities/working-with-qna.md)を含むページです。
 
@@ -349,7 +349,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
    選択した場合、そのコンテンツは[おすすめコンテンツ](/help/communities/featured.md)として識別されます。 デフォルトで選択されています。
 
-## Create Community Function {#create-community-function}
+## コミュニティ機能を作成 {#create-community-function}
 
 コミュニティ機能を作成するには、コミュニティ機能コンソールの上部にある`Create Community Function`アイコンを選択します。 同じAEMブループリントに基づく複数の機能を作成し、オーサー編集モードで開いて一意にカスタマイズできます。
 
@@ -391,7 +391,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 サムネールパネルでは、[コミュニティ機能コンソール](#community-functions-console)に表示する画像をアップロードできます。
 
-## コミュニティ機能を開く  {#open-community-function}
+## コミュニティ機能を開く {#open-community-function}
 
 ![開関数](assets/open-function.png)
 
@@ -407,7 +407,7 @@ Q&amp;A 機能は、タグ付け、ファイルのアップロード、フォロ
 
 設定について詳しくは、作成者向けの[コミュニティコンポーネント](/help/communities/author-communities.md)を参照してください。
 
-## コミュニティ機能を編集  {#edit-community-function}
+## コミュニティ機能を編集 {#edit-community-function}
 
 ![編集機能](assets/edit-function.png)
 
