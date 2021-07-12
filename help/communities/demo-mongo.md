@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 0b126218-b142-4d33-a28c-a91ab4fe99ac
-role: Administrator
+role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 53%
@@ -62,7 +62,7 @@ ht-degree: 53%
 
 * MongoDBは、AEMと同じホスト上で実行するか、リモートで実行できます。
 
-### MongoDB を起動します。{#start-mongodb}
+### MongoDB を起動します。 {#start-mongodb}
 
 * &lt;mongo-install>/bin/mongod --dbpath &lt;mongo-dbpath>
 
@@ -139,7 +139,7 @@ Solr を実行する方法は、バージョンとインストール方法によ
 
 * `java -Dbootstrap_confdir=./solr/collection1/conf -Dbootstrap_conf=true -DzkRun -jar start.jar`
 
-##  MongoDB を共通ストアとして指定{#identify-mongodb-as-common-store}
+##  MongoDB を共通ストアとして指定 {#identify-mongodb-as-common-store}
 
 AEM オーサーインスタンスとパブリッシュインスタンスを起動します（必要な場合）。
 
@@ -178,7 +178,7 @@ MongoDB 共通ストアをテストおよび検証するために、パブリッ
 
 ## トラブルシューティング {#troubleshooting}
 
-### UGC が表示されない  {#no-ugc-appears}
+### UGC が表示されない {#no-ugc-appears}
 
 1. MongoDBがインストールされ、正しく動作していることを確認します。
 
