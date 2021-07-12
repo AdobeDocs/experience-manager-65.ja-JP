@@ -9,12 +9,12 @@ topic-tags: Security
 products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1082'
-ht-degree: 59%
+ht-degree: 60%
 
 ---
 
@@ -223,19 +223,19 @@ JBoss Application Server は、デフォルトの HTTP ポートとして 8080 �
 1. ファイルを保存して閉じます。
 1. JBoss アプリケーションサーバーを再起動します。
 
-## JEE上のAEM Formsのセキュリティに関する考慮事項{#aem-forms-on-jee-security-considerations}
+## JEE 上の AEM Forms セキュリティに関する考慮事項 {#aem-forms-on-jee-security-considerations}
 
 ここでは、理解しておく必要のある JEE 上の AEM Forms 固有のセキュリティの問題について説明します。
 
-### データベース内の電子メールの資格情報は暗号化されない  {#email-credentials-not-encrypted-in-database}
+### データベース内の電子メールの資格情報は暗号化されない {#email-credentials-not-encrypted-in-database}
 
 アプリケーションに保存されている電子メールの資格情報は、JEE 上の AEM Forms データベースに保存される前に暗号化されません。サービスのエンドポイントで電子メールを使用するように設定した場合、エンドポイント設定の一部として使用したパスワード情報は、データベースに保存される前に暗号化されません。
 
-### データベース内の Rights Management に関する機密性情報  {#sensitive-content-for-rights-management-in-the-database}
+### データベース内の Rights Management に関する機密性情報 {#sensitive-content-for-rights-management-in-the-database}
 
 JEE上のAEM Formsは、JEE上のAEM Formsデータベースを使用して、ポリシードキュメントに使用される機密ドキュメントキー情報およびその他の暗号化資料を保存します。 データベースへの侵入を防御することで、このような機密性の高い情報を保護することができます。
 
-### クリアテキスト形式のパスワード{#password-in-clear-text-format-in-adobe-ds-xml}
+### クリアテキスト形式のパスワード {#password-in-clear-text-format-in-adobe-ds-xml}
 
 JEE 上の AEM Forms を実行するアプリケーションサーバーでは、そのサーバー上に設定されたデータソースを介してデータベースにアクセスするように設定する必要があります。アプリケーションサーバーが、データソース設定ファイルにデータベースのパスワードをクリアテキストで公開しないようにします。
 
