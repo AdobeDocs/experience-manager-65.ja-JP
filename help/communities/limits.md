@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: d855aac2-f34d-402f-9dc3-c7ad494b45f2
-role: Administrator
+role: Admin
 exl-id: d00a8eb2-47ce-425a-a312-f043f82912be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '449'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
-# メンバーの貢献度の制限  {#member-contribution-limits}
+# メンバーの貢献度の制限 {#member-contribution-limits}
 
 ## 概要 {#overview}
 
@@ -32,7 +32,7 @@ ht-degree: 43%
 
 ## AEM Communities ユーザー生成コンテンツの貢献度の制限の設定 {#aem-communities-user-generated-content-contribution-limits-configuration}
 
-次のOSGi設定：
+この OSGi 設定では、次をおこないます。：
 
 * 貢献度の制限（期間内の投稿数）の特性を定義します。
 * 制限に達したときにメッセージを送信できるメンバーを識別します。
