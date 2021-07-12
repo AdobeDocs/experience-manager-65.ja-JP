@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: c0a71870-8f95-40c8-9ffd-b7af49723288
-role: Administrator
+role: Admin
 exl-id: aed9247c-eb81-470c-9fa4-a98c3df2dcaa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2803'
 ht-degree: 37%
@@ -61,11 +61,11 @@ we-retailサンプルは、FacebookおよびTwitterのサンプルアプリと�
    * これらのフィールドは、[AEM Communities Facebook OAuth Provider](#aem-communities-facebook-oauth-provider)および[AEM Communities Twitter OAuth Provider](#aem-communities-twitter-oauth-provider)で指定します。
    * デフォルトのフィールドはほとんどの使用例で十分ですが、変更できます。
 
-## 「Facebook ログイン」{#facebook-login}を選択します。
+## Facebook ログイン {#facebook-login}
 
 ### Facebook API バージョン {#facebook-api-version}
 
-ソーシャルログインとwe-retail Facebookのサンプルは、Facebook Graph APIがバージョン1.0のときに開発されました。
+ソーシャルログインと we-retail の Facebook アプリのサンプルは、Facebook Graph API 1.0 バージョンで開発されたものです。
 AEM 6.4 GAおよびAEM 6.3 SP1のソーシャルログインが更新され、新しいFacebook Graph API 2.5バージョンと連携するようになりました。
 
 >[!NOTE]
@@ -74,7 +74,7 @@ AEM 6.4 GAおよびAEM 6.3 SP1のソーシャルログインが更新され、�
 
 facebook Graph APIのバージョン情報については、[Facebook API変更ログ](https://developers.facebook.com/docs/apps/changelog)を参照してください。
 
-### Create a Facebook App {#create-a-facebook-app}
+### Facebook アプリの作成 {#create-a-facebook-app}
 
 facebookのソーシャルログインを有効にするには、適切に設定されたFacebookアプリケーションが必要です。
 
@@ -136,7 +136,7 @@ facebookアプリケーションを作成するには、 Facebookの[https://dev
 
 その結果、[AdobeのGranite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)インスタンスが生成され、追加の範囲（権限）を追加しない限り、追加の変更は必要ありません。 デフォルトの範囲は、Facebookログインの標準の権限です。 追加の範囲が必要な場合は、OSGi設定を直接編集する必要があります。 システムまたはコンソールから直接変更がおこなわれている場合は、上書きしないよう、タッチ UI からクラウドサービス設定を編集しないでください。
 
-### AEM Communities Facebook OAuth Provider  {#aem-communities-facebook-oauth-provider}
+### AEM Communities Facebook OAuth Provider {#aem-communities-facebook-oauth-provider}
 
 AEM Communitiesプロバイダーは、[AdobeGranite OAuth Application and Provider](#adobe-granite-oauth-application-and-provider)インスタンスを拡張します。
 
@@ -212,7 +212,7 @@ AEM Communitiesプロバイダーは、[AdobeGranite OAuth Application and Provi
 
 ## Twitter ログイン {#twitter-login}
 
-### Create a Twitter App {#create-a-twitter-app}
+### Twitter アプリの作成 {#create-a-twitter-app}
 
 Twitter ソーシャルログインを有効にするには、設定された Twitter アプリが必要です。
 
@@ -300,7 +300,7 @@ Twitter アプリケーション管理の権限のセクションで、次の設
 
 結果として得られるのは、[AdobeGranite OAuth Application and Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider)インスタンスで、これ以上変更する必要はありません。 デフォルトの範囲には、Twitter にログインするための標準的な権限が含まれています。
 
-### AEM Communities Twitter OAuth Provider  {#aem-communities-twitter-oauth-provider}
+### AEM Communities Twitter OAuth Provider {#aem-communities-twitter-oauth-provider}
 
 AEM Communities設定は、[AdobeGranite OAuth Application and Provider](#adobe-granite-oauth-application-and-provider)インスタンスを拡張します。 ユーザー更新を許可するには、このプロバイダーを編集する必要があります。
 
