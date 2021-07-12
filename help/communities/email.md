@@ -10,18 +10,18 @@ topic-tags: administering
 content-type: reference
 discoiquuid: b4d38e45-eaa0-4ace-a885-a2e84fdfd5a1
 pagetitle: Configuring Email
-role: Administrator
+role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '822'
-ht-degree: 33%
+ht-degree: 34%
 
 ---
 
-# 電子メールの設定  {#configuring-email}
+# 電子メールの設定 {#configuring-email}
 
-AEM Communitiesでは、次の電子メールを使用します。
+AEM Communities では次の用途のために電子メールを使用します。：
 
 * [コミュニティの通知](notifications.md)
 * [コミュニティの購読](subscriptions.md)
@@ -168,7 +168,7 @@ Communities の電子メール設定インスタンスに接続するには：
 
 電子メールがリポジトリに取り込まれるように、ポーリングインポーターを設定し、そのプロパティをリポジトリで手動で設定する必要があります。
 
-### 新しいポーリングインポーターの追加  {#add-new-polling-importer}
+### 新しいポーリングインポーターの追加 {#add-new-polling-importer}
 
 * 管理者権限を持つプライマリパブリッシャーにログインし、ポーリングインポーターコンソールを参照します。
 
