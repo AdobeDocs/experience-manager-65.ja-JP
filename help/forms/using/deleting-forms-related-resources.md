@@ -8,22 +8,22 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: c8519eec-f841-4867-baa9-a9e03042755e
-role: Administrator
+role: Admin
 exl-id: b31f9f56-dd33-4478-ad34-01ac7d5a1b40
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 94%
 
 ---
 
-# フォームと関連リソースの削除  {#deleting-forms-and-related-resources}
+# フォームと関連リソースの削除 {#deleting-forms-and-related-resources}
 
 フォームとアセットを削除して、これらのアセットをリポジトリから削除できます。削除操作は、すべてのアセットタイプとフォルダーに対して動作します。
 
 オーサーインスタンスからアセットを削除すると、そのアセットはパブリッシュインスタンスからも削除されます。AEM Forms サーバーはオーサーインスタンスとパブリッシュインスタンスからなります。オーサーインスタンスは、フォームのアセットとリソースを作成したり管理したりするためのものです。パブリッシュインスタンスは、発行済みフォームのアセットと関連リソースを含み、これらはエンドユーザーが使用できます。
 
-## フォームの削除方法  {#how-to-delete-a-form}
+## フォームの削除方法 {#how-to-delete-a-form}
 
 1. `https://[hostname]:'port'/aem/forms.html.`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
 1. 削除するフォームを探して選択します。ツールバーの「 ![aem6forms_delete2](assets/aem6forms_delete2.png)を削除」をクリックして、削除操作を確定します。
@@ -42,7 +42,7 @@ ht-degree: 94%
    >
    >選択したアセットがフォルダーで、その階層にそのようなアセットが含まれている場合は、他のアセットを個別に削除するかあるいはフォルダー全体を削除します。
 
-## 参照先 XFA フォームを削除した場合の影響  {#impact-of-deleting-a-referenced-xfa-form}
+## 参照先 XFA フォームを削除した場合の影響 {#impact-of-deleting-a-referenced-xfa-form}
 
 AEM Forms では、XFA フォームテンプレートは、アダプティブフォームまたは別の XFA フォームテンプレートによって参照されることができます。また、テンプレートはリソースまたは別の XFA テンプレートを参照することもできます。
 
