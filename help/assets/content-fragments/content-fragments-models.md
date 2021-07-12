@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 9da10294-2dc8-4e82-8d32-f034e6a5aeeb
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 76f3a684-027d-4822-9eb4-220fc96956e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 97%
@@ -23,7 +23,7 @@ ht-degree: 97%
 
 コンテンツフラグメントモデルは、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)のコンテンツの構造を定義します。
 
-## コンテンツフラグメントモデルの有効化  {#enable-content-fragment-models}
+## コンテンツフラグメントモデルの有効化 {#enable-content-fragment-models}
 
 >[!CAUTION]
 >
@@ -34,7 +34,7 @@ ht-degree: 97%
 * [設定ブラウザー](/help/sites-administering/configurations.md)でコンテンツフラグメントモデルの使用を有効にする
 * アセットフォルダーへの設定の適用
 
-### Configuration Manager でのコンテンツフラグメントモデルの有効化  {#enable-content-fragment-models-in-configuration-manager}
+### Configuration Manager でのコンテンツフラグメントモデルの有効化 {#enable-content-fragment-models-in-configuration-manager}
 
 [新しいコンテンツフラグメントモデルを作成する](#creating-a-content-fragment-model)には、最初に設定マネージャーを使用してコンテンツフラグメントモデルを有効にする&#x200B;**必要があります**。
 
@@ -77,7 +77,7 @@ ht-degree: 97%
 
 1. 「**作成**」を使用して空のモデルを保存します。操作の成功を示すメッセージが表示されます。「**開く**」を選択してモデルをすぐに編集するか、「**完了**」を選択してコンソールに戻ることができます。
 
-## コンテンツフラグメントモデルの定義  {#defining-your-content-fragment-model}
+## コンテンツフラグメントモデルの定義 {#defining-your-content-fragment-model}
 
 コンテンツフラグメントモデルは、生成されるコンテンツフラグメントの構造を効果的に定義します。モデルエディターを使用して、必要なフィールドを追加および設定できます。
 
@@ -147,7 +147,7 @@ ht-degree: 97%
    >[!NOTE]
    モデルが参照されている場合は、警告が表示されます。適切に対処します。
 
-## コンテンツフラグメントモデルの公開  {#publishing-a-content-fragment-model}
+## コンテンツフラグメントモデルの公開 {#publishing-a-content-fragment-model}
 
 コンテンツフラグメントモデルは、依存するコンテンツフラグメントの公開時または公開前に公開する必要があります。
 
