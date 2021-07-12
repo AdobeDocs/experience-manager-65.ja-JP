@@ -7,9 +7,9 @@ topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e9e0d8fb-955e-4021-9e9a-9c95c6ffe88d
 feature: Adobe Sign
-role: Administrator
+role: Admin
 exl-id: b43ed9b7-b1ef-4878-ae3b-643b558eed7b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 70%
@@ -28,7 +28,7 @@ ht-degree: 70%
 
 [!DNL Adobe Sign] 対応のアダプティブフォームには署名者に関する情報が含まれています。これにはアダプティブフォームで収集された他のユーザーのデータが含まれている場合があります。[!DNL Adobe Sign]サービスは、契約内の署名を使用してユーザーデータを保存します。 契約は[!DNL AEM Forms]クラウドサービスで設定された[!DNL Adobe Sign]サーバーに保存されます。 さらに、Forms Portal の送信アクションを使用するようにアダプティブフォームが構成されている場合、契約書のデータはフォームデータとともに Forms Portal のデータストアに格納されます。
 
-## ユーザーデータへのアクセスと削除  {#access-and-delete-user-data}
+## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
 ユーザーデータは契約書内で収集されますが、いずれのサービステーブルにも保存されません。[!DNL Adobe Sign] を使用すると、管理者はサービスで管理する管理データを自身で選択できます。[!DNL Adobe Sign]サービスのプライバシー管理者は、要求者の電子メールアドレスに基づいて契約書を一覧表示または削除できます。
 
