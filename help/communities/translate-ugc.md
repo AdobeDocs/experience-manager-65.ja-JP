@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: bfaf80c5-448b-47fb-9f22-57ee0eb169b2
-role: Administrator
+role: Admin
 exl-id: ac54f06e-1545-44bb-9f8f-970f161ebb72
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1117'
 ht-degree: 63%
 
 ---
 
-# ユーザー生成コンテンツの翻訳  {#translating-user-generated-content}
+# ユーザー生成コンテンツの翻訳 {#translating-user-generated-content}
 
 AEM Communities の翻訳機能は、[ソーシャルコンポーネントフレームワーク（SCF）](scf.md)を使用することで、[ページコンテンツの翻訳](../../help/sites-administering/translation.md)という概念を、コミュニティサイトに投稿されたユーザー生成コンテンツ（UGC）にまで拡張します。
 
@@ -70,7 +70,7 @@ Web サイトに[複数の言語コピー](../../help/sites-administering/tc-pre
 >
 >言語別のコンテンツをグローバル共有ストアに移動または統合する移行ツールはありません。
 
-### 翻訳統合の設定  {#translation-integration-configuration}
+### 翻訳統合の設定 {#translation-integration-configuration}
 
 新しい翻訳統合を作成するには、以下の手順を実行します。この操作により、オーサーインスタンスで翻訳サービスコネクターと Web サイトが統合されます。
 
