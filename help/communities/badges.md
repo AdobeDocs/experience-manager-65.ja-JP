@@ -10,22 +10,22 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 135b3077-5343-4888-858d-de5e9b1d4b04
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 50ed9ec4-ff04-4f9d-aefb-0837542a9455
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 62%
 
 ---
 
-# バッジコンソール  {#badges-console}
+# バッジコンソール {#badges-console}
 
 ## バッジについて {#about-badges}
 
 Communities のバッジコンソールでは、バッジを獲得（授与された）したとき、またはコミュニティで特定の役割についた（割り当てられた）ときにメンバーに表示できるカスタムバッジを追加できます
 
-### バッジの表示  {#badge-visibility}
+### バッジの表示 {#badge-visibility}
 
 現在、コミュニティメンバーが獲得するバッジ、またはコミュニティメンバーに割り当てられるバッジは、次の場所にメンバーの名前とアバターとともに表示されます。
 
