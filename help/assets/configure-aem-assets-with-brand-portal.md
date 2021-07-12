@@ -10,12 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: dca5a2ac-1fc8-4251-b073-730fd6f49b1c
 docset: aem65
 feature: Brand Portal
-role: Administrator
+role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2086'
-ht-degree: 62%
+ht-degree: 63%
 
 ---
 
@@ -148,7 +148,7 @@ Adobe 開発者コンソールで、プロジェクトと API を Brand Portal �
 
 サービスアカウント資格情報と JWT ペイロードを生成するには、次の手順を実行します。
 
-1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトのURLは[https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui)です。
+1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトの URL は [https://www.adobe.com/go/devs_console_ui_jp](https://www.adobe.com/go/devs_console_ui) です。
 
 
    >[!NOTE]
@@ -342,7 +342,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 次の操作が可能になっています。
 
 * [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
-* [Brand PortalからAEM Assetsへのアセットの公開](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)  - Brand Portalでのアセットソーシング
+* [Brand Portal から AEM Assets への公開](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Brand Portal でのアセットのソーシング
 * [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
 * [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
 * [Brand Portal へのプリセット、スキーマ、ファセットの公開](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
@@ -358,7 +358,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 1. [既存の設定の削除](#delete-existing-configuration)
 1. [設定の作成](#configure-new-integration-65)
 
-### 実行中のジョブの確認{#verify-jobs}
+### 実行中のジョブの確認 {#verify-jobs}
 
 変更を加える前に、AEM Assetsオーサーインスタンスで公開ジョブが実行されていないことを確認してください。 そのために、4つのレプリケーションエージェントすべてでアクティブジョブのステータスを確認し、キューがアイドル状態であることを確認できます。
 
@@ -376,7 +376,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
    ![](assets/test-integration3.png)
 
-### 既存の構成{#delete-existing-configuration}を削除します
+### 既存の設定の削除 {#delete-existing-configuration}
 
 既存の設定を削除する際は、次のチェックリストを実行する必要があります。
 * 4つのレプリケーションエージェントをすべて削除する
