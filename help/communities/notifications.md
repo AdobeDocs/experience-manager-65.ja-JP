@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: ab9088b7-a691-4153-ac82-1e8c0a19ed5d
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 39%
@@ -122,7 +122,7 @@ Web チャネルは常に有効になっています。
 
 ![notifications5](assets/notifications5.png)
 
-## 電子メール通知のカスタマイズ{#customize-email-notifications}
+## 電子メール通知のカスタマイズ {#customize-email-notifications}
 
 組織は、**/libs/settings/community/templates/email/html**&#x200B;にあるテンプレートを[オーバーレイ](/help/communities/client-customize.md#overlays)することで、電子メール通知をカスタマイズできます。
 
