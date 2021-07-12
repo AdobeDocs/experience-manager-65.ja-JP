@@ -4,20 +4,20 @@ seo-title: Workbenchのインストール
 description: workbenchをインストールします。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-role: Administrator
+role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 57%
 
 ---
 
-# Workbench {#install-workbench}のインストール
+# Workbenchのインストール {#install-workbench}
 
 このドキュメントでは、AEM Forms Workbenchのインストールと設定の手順を説明します。 また、このインストールプログラムでは、Forms Designerもインストールされます。
 
-## この文書は誰が読むべきですか？{#who-should-read-this-doc}
+## このドキュメントの対象読者 {#who-should-read-this-doc}
 
 このドキュメントは、インストール、設定、管理または Workbench のデプロイを担当している管理者または開発者を対象としています。また、アップグレードされたAEM Formsプロセスをサポートするためにシステムを設定するために必要な情報も含まれています。 このドキュメントで扱う内容は、Microsoft® Windows®オペレーティングシステムに関する十分な知識がある読者を対象としています。
 
@@ -73,7 +73,7 @@ Workbench は、開発者およびフォーム作成者が自動化されたビ�
 
 この節では、ハードウェアとソフトウェアの要件、およびサポートされるプラットフォームについて説明します。
 
-### ハードウェアおよびソフトウェアの最小要件  {#minimum-hardware-software-requirements}
+### ハードウェアおよびソフトウェアの最小要件 {#minimum-hardware-software-requirements}
 
 ****
 Workbench最低限、次の要件が推奨されます。インストール用のディスク領域：
@@ -124,7 +124,7 @@ Workbench のインストールには、対応する Designer（英語版のみ�
  </tbody>
 </table>
 
-### Windows 10でDesigner（スタンドアロン）をアンインストールするには{#uninstall-designer-standalone-windows10}
+### Windows 10でDesigner（スタンドアロン）をアンインストールするには {#uninstall-designer-standalone-windows10}
 
 1. **Campaign コントロールパネル/プログラム/プログラムと機能**&#x200B;に移動します。
 1. 「現在インストールされているプログラム」リストで、「**Adobe Designer**」を選択します。
@@ -171,7 +171,7 @@ Workbenchをインストールする前に、Workbenchの実行に必要なソ�
 1. リリースノートを確認して「完了」をクリックします。
 1. コンピューターに以下のアイテムがインストールされました。
    * **Workbench**:スタートメニューからWorkbenchを実行するには、すべてのプログラム/AEM Forms/Workbenchを選択します（ショートカットフォルダーをそこに保存する場合）。詳しくは、   <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbenchの使用</a>のドキュメントを参照してください。
-   * **デザイナー**:Designerは、Workbench内からアクセスできます。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/jp/experience-manager/6-5/forms/pdf/using-designer.pdf">Designerヘルプ</a>の「はじめに」を参照してください。
+   * **デザイナー**:Designerは、Workbench内からアクセスできます。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designerヘルプ</a>の「はじめに」を参照してください。
    * **AEM Forms SDK**:SDKの使用について詳しくは、「  <a href="http://www.adobe.com/go/learn_aemforms_programming_65">AEM Formsでのプログラミング</a>」を参照してください。
 
 ## プロセスのアップグレード {#upgrading-processes}
@@ -252,11 +252,11 @@ UUID およびコンテンツルートがキャッシュのキーとして機能
    * UUID を削除するか、動的に生成されたすべてのテンプレートで同一の UUID を渡します。
    * テンプレートのバイト、またはディスク上の同じファイル名からドキュメントを生成します。
 
-### Workbench のアンインストール  {#uninstalling-workbench}
+### Workbench のアンインストール {#uninstalling-workbench}
 
 アンインストーラーを起動するには、Campaign コントロールパネルの[プログラムの追加と削除]機能を使用します。 Workbench および Designer アプリケーションには、個別のアンインストールプログラムがあります。
 
-## AEM Forms XDC Editorの設定{#configuring-aem-forms-xdc-editor}
+## AEM Forms XDC Editorの設定 {#configuring-aem-forms-xdc-editor}
 
 XDC Editor を使用すると、ネットワークプリンターの管理者は XML Forms Architecture Device Configuration（XDC）ファイルの作成および変更ができます。XDC ファイルには、プリンターの機能が記述されます。例えば、プリンター言語、用紙サイズとトレイ位置との関係付けなどが記述されます。
 
