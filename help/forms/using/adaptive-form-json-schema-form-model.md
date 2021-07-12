@@ -2,10 +2,10 @@
 title: JSONスキーマを使用してアダプティブFormsを作成する方法
 description: JSONスキーマをフォームモデルとして使用してアダプティブフォームを作成する方法を説明します。 既存のJSONスキーマを使用してアダプティブフォームを作成することができます。 JSONスキーマのサンプルを使用して、より深く掘り下げ、JSONスキーマ定義のフィールドを事前設定し、アダプティブフォームコンポーネントの有効な値を制限し、サポートされていない構成要素を学びます。
 feature: アダプティブフォーム
-role: Business Practitioner, Developer
+role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: ad67634278088f8f953fde61a3543acdd70537dd
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1450'
 ht-degree: 73%
@@ -21,7 +21,7 @@ JSONスキーマをフォームモデルとして使用してアダプティブ�
 * [アダプティブフォームの作成](creating-adaptive-form.md)
 * [JSON スキーマ](https://json-schema.org/)
 
-## フォームモデルとしての JSON スキーマの使用     {#using-a-json-schema-as-form-model}
+## フォームモデルとしての JSON スキーマの使用  {#using-a-json-schema-as-form-model}
 
 [!DNL Adobe Experience Manager Forms] では、既存の JSON スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。JSON スキーマは、組織内のバックエンドシステムによってデータが作成または使用される構造を表します。使用する JSON スキーマは、[v4 仕様](https://json-schema.org/draft-04/schema)に準拠している必要があります。
 
@@ -332,7 +332,7 @@ JSON スキーマの例を示します。
 
 上記の例では、各顧客が出荷先と請求先の両方の住所を持つ顧客レコードを定義します。どちらの住所も構造（都道府県、市区町村、番地など）が同じ場合は、住所が重複しないようにすることをお勧めします。また、今後変更が行われたときに、簡単にフィールドを追加したり削除したりできます。
 
-## JSON スキーマ定義でのフィールドの事前設定  {#pre-configuring-fields-in-json-schema-definition}
+## JSON スキーマ定義でのフィールドの事前設定 {#pre-configuring-fields-in-json-schema-definition}
 
 **aem:afProperties**&#x200B;プロパティを使用して、JSONスキーマフィールドを事前設定し、カスタムのアダプティブフォームコンポーネントにマッピングすることができます。 以下に例を示します。
 
@@ -354,7 +354,7 @@ JSON スキーマの例を示します。
 }
 ```
 
-## フォームオブジェクトのスクリプトまたは式の設定{#configure-scripts-or-expressions-for-form-objects}
+## フォームオブジェクトのスクリプトまたは式の設定  {#configure-scripts-or-expressions-for-form-objects}
 
 アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。フォームイベントで式](adaptive-form-expressions.md)を評価するように、フォームオブジェクトを事前に設定することができます。[
 
@@ -385,7 +385,7 @@ JSON スキーマの例を示します。
    <th>initialize <br /> </th>
    <td>Calculate</td>
    <td>視認性</td>
-   <td>Validate</td>
+   <td>Validate（検証）</td>
    <td>Enabled</td>
    <td>値コミット</td>
    <td>クリック </td>
@@ -535,7 +535,7 @@ JSON スキーマの例を示します。
    <td> </td>
   </tr>
   <tr>
-   <td>添付ファイル</td>
+   <td>ファイル添付</td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td><img alt="" src="assets/yes_tick.png" /></td>
@@ -585,7 +585,7 @@ JSONでのイベントの使用例としては、initializeイベントのフィ
 
 前述の例のサンプルJSONコードを以下に示します。
 
-### initializeイベント{#hiding-a-field-on-initialize-event}でのフィールドの非表示
+### initializeイベントでのフィールドの非表示 {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -598,7 +598,7 @@ JSONでのイベントの使用例としては、initializeイベントのフィ
 }
 ```
 
-#### 値コミットイベントの別のフィールドの値を設定する{#configure-value-of-another-field-on-value-commit-event}
+#### 値コミットイベントで別のフィールドの値を設定する {#configure-value-of-another-field-on-value-commit-event}
 
 ```json
 "Income": {
@@ -720,7 +720,7 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
  </tbody>
 </table>
 
-## サポート対象外の構成 {#non-supported-constructs}
+## サポート対象外の構成   {#non-supported-constructs}
 
 アダプティブフォームは、次のJSONスキーマ構成をサポートしていません。
 
@@ -731,7 +731,7 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
 
 ## よくある質問 {#frequently-asked-questions}
 
-**繰り返し可能なサブフォーム（minOccours 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
+**繰り返し可能なサブフォーム（minOccurs 値または maxOccurs 値が 1 より大きい）では、サブフォーム（任意の複合型から生成された構造）の個々の要素をドラッグできないのはなぜですか？**
 
 繰り返し可能なサブフォームでは、完全なサブフォームを使用する必要があります。選択した一部のフィールドのみを使用する場合は、構造全体を使用し、不要部分を削除します。
 
