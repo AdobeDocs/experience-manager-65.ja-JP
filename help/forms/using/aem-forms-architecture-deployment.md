@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 0156b5c3-3bef-4213-9ada-c7b6ae96ada4
-role: Administrator
+role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2490'
 ht-degree: 41%
 
 ---
 
-# AEM Forms のアーキテクチャとデプロイメントトポロジー  {#architecture-and-deployment-topologies-for-aem-forms}
+# AEM Forms のアーキテクチャとデプロイメントトポロジー {#architecture-and-deployment-topologies-for-aem-forms}
 
 ## アーキテクチャ {#architecture}
 
@@ -50,7 +50,7 @@ JEE上のAEM Formsには、AEMコンポーネントに対して次のサポー�
 
 AEM Formsオーサリングユーザーインターフェイスは、レコードのドキュメント(DOR)、PDF forms、HTML5 Formsの作成をサポートしていません。 このようなアセットは、スタンドアロンのForms Designerアプリケーションを使用して設計され、AEM Forms Managerに個別にアップロードされます。 または、JEE上のAEM Formsの場合、フォームを(AEM Forms Workbenchの)アセットとして設計し、JEE上のAEM Formsにデプロイすることもできます。
 
-OSGi上のAEM FormsとJEE上のAEM Formsの両方にワークフロー機能があります。 JEE上のAEM Formsの本格的なProcess Management機能をインストールする必要なく、OSGi上のAEM formsで様々なタスクの基本ワークフローを迅速に構築し、デプロイできます。 OSGi上のAEM Forms上のForms中心のワークフローの[機能と、JEE上のAEM Forms](capabilities-osgi-jee-workflows.md)のProcess Management機能には、いくつかの違いがあります。 OSGi上のAEM Forms上でのフォーム中心のワークフローの開発と管理では、使い慣れたAEM WorkflowとAEM Inboxの機能を使用します。
+OSGi上のAEM FormsとJEE上のAEM Formsの両方にワークフロー機能があります。 JEE上のAEM Formsの本格的なProcess Management機能をインストールする必要なく、OSGi上のAEM formsで様々なタスクの基本ワークフローを迅速に構築し、デプロイできます。 OSGi上のAEM Forms上のForms中心のワークフローの[機能と、JEE上のAEM FormsのProcess Management機能には、いくつかの違いがあります。](capabilities-osgi-jee-workflows.md) OSGi上のAEM Forms上でのフォーム中心のワークフローの開発と管理では、使い慣れたAEM WorkflowとAEM Inboxの機能を使用します。
 
 ## 用語 {#terminologies}
 
@@ -99,7 +99,7 @@ AEM Formsでは、1台のサーバーからすべての機能を設定および�
 
 ![basic-features](assets/basic-features.png)
 
-### AEM Formsプロセス管理{#topology-for-using-aem-forms-process-management}を使用するためのトポロジ
+### AEM Forms Process Managementを使用するためのトポロジ {#topology-for-using-aem-forms-process-management}
 
 AEM Formsのお客様は、AEM Formsのプロセス管理機能（例：HTML Workspace）を使用する予定で、以下に示すようなトポロジーを使用できます。 JEE上のAEM Formsサーバーは、単一のサーバーまたはクラスター構成にすることができます。
 
@@ -111,7 +111,7 @@ LiveCycleES4からアップグレードする場合、このトポロジは、JE
 
 後処理、アダプティブフォーム、HTML5フォーム、インタラクティブ通信機能を使用せずに、JEE上のAEM Formsサーバーをプロセス管理機能(HTML Workspace)に使用する場合は、このトポロジーをお勧めします。
 
-### アダプティブフォーム、HTML5フォーム、インタラクティブ通信機能を使用するためのトポロジー{#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
+### アダプティブフォーム、HTML5フォーム、インタラクティブ通信機能を使用するためのトポロジー {#topology-for-using-adaptive-forms-html-forms-interactive-communication-capabilities}
 
 アダプティブフォーム、HTML5 フォーム、PDF フォームなど、AEM Forms のデータ取得機能を使用する場合は、以下のようなトポロジーを構成することをお勧めします。このトポロジは、AEM Formsのインタラクティブ通信機能を使用する場合にも推奨されます。
 
@@ -126,7 +126,7 @@ LiveCycleES4からアップグレードする場合、このトポロジは、JE
 
 ## OSGi 上の AEM Forms を使用する場合の物理的なトポロジーの例 {#sample-physical-topologies-for-using-aem-forms-on-osgi}
 
-### データキャプチャ、インタラクティブ通信、OSGi上のフォーム中心のワークフロー機能のトポロジ{#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
+### データキャプチャ、インタラクティブ通信、OSGi上のフォーム中心のワークフロー機能のトポロジー {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
 
 アダプティブフォーム、HTML5 フォーム、PDF フォームなど、AEM Forms のデータ取得機能を使用する場合は、以下のようなトポロジーを構成することをお勧めします。インタラクティブ通信機能と OSGi 上のフォームベースワークフロー機能を使用する場合も、このトポロジーを構成することをお勧めします。例えば、ビジネスプロセスワークフローで AEM インボックスと AEM Forms アプリケーションを使用する場合などです。
 
