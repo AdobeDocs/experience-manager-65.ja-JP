@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
-role: Administrator
+role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '963'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
-# メンバーコンソールとグループ管理コンソール  {#members-groups-management-consoles}
+# メンバーコンソールとグループ管理コンソール {#members-groups-management-consoles}
 
 ## 概要 {#overview}
 
@@ -115,7 +115,7 @@ IDがデフォルトで電子メールアドレスに設定されている場合
 
 ### 一般 - アカウント設定 {#general-account-settings}
 
-「アカウントの設定」では、コミュニティ管理者は次の操作を実行できます。
+アカウント設定では、コミュニティ管理者は以下の設定をおこなうことができます。：
 
 * **[!UICONTROL ステータス]**
    * 禁止
@@ -146,7 +146,7 @@ IDがデフォルトで電子メールアドレスに設定されている場合
 
 1 つ以上のメンバーグループにメンバーを追加できます。まず、テキストボックスにテキストを入力します。
 
-### 「バッジ」タブ{#badges-tab}
+### 「バッジ」タブ {#badges-tab}
 
 `BADGES`パネルでは、バッジの割り当てと取り消しを手動でおこなうことができます。 バッジは通常、獲得するものですが、役割の割り当てに使用することもできます。
 
