@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: ff97424d-b384-4149-9a3c-b4f00aaa1def
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 025a3314-8b9d-48e1-a74f-ea0c933e21e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 81%
