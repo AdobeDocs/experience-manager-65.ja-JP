@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: e228f1db-91ea-4ec3-86da-06d89d74bc72
-role: Administrator
+role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1483'
-ht-degree: 49%
+ht-degree: 50%
 
 ---
 
-# SRP 用の Solr 設定  {#solr-configuration-for-srp}
+# SRP 用の Solr 設定 {#solr-configuration-for-srp}
 
 ## AEM プラットフォーム用の Solr {#solr-for-aem-platform}
 
@@ -57,7 +57,7 @@ SolrCloud の手順に従い、以下をインストールすることを推奨�
 
 また、メモリ使用量とガベージコレクションを調整するために、JVM を設定することを推奨します。
 
-### JVM の設定例  {#jvm-configuration-example}
+### JVM の設定例 {#jvm-configuration-example}
 
 ```shell
 JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xloggc:../logs/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Djava.awt.headless=true"
@@ -67,7 +67,7 @@ JVM_OPTS="-server -Xmx2048m -XX:MaxPermSize=768M -XX:+UseConcMarkSweepGC -XX:+CM
 
 SolrCloud モードで実行する場合は、MLS をインストールする前に、以下の SolrCloud セットアップコマンドを理解して使用する必要があります。
 
-#### 1. 設定を ZooKeeper にアップロード  {#upload-a-configuration-to-zookeeper}
+#### 1. 設定を ZooKeeper にアップロード {#upload-a-configuration-to-zookeeper}
 
 リファレンス：
 [https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities](https://cwiki.apache.org/confluence/display/solr/Command+Line+Utilities)
@@ -142,7 +142,7 @@ AEM Communities の MLS は、標準の MLS と高度な MLS のどちらかを�
 | フィンランド語 | ラトビア語 | タイ語 |
 | フランス語 | リトアニア語 | トルコ語 |
 
-#### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較  {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
+#### AEM 6.1 Solr 検索、標準の MLS、高度な MLS の比較 {#comparison-of-aem-solr-search-standard-mls-and-advanced-mls}
 
 **注意**:AEM 6.1は、AEM 6.1 Communities FP3以前を表します。
 
@@ -180,7 +180,7 @@ Solr 5.x用の標準のMLSファイル(schema.xml、solrconfig.xml)
 
 #### SolrCloud モード - 標準の MLS {#solrcloud-mode-standard-mls}
 
-1. SolrをSolrCloudモードでインストールして設定します。
+1. SolrCloud モードの Solr をインストールして設定します。。
 1. 以下の手順で新しい設定を用意します。
 
    1. `solr-install-dir*/myconfig/`のようなnew-config-dir*を作成します。
@@ -200,7 +200,7 @@ Solr 5.x用の標準のMLSファイル(schema.xml、solrconfig.xml)
 
 #### スタンドアロンモード - 標準の MLS {#standalone-mode-standard-mls}
 
-1. スタンドアロンモードでSolrをインストールします。
+1. スタンドアロンモードの Solr をインストールします。。
 1. Solr5 を実行している場合、以下のコマンドで collection1 を作成します（Solr4 と同様）。
 
    * `./bin/solr start`
