@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 99%
