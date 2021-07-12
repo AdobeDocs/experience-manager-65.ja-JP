@@ -11,23 +11,23 @@ content-type: reference
 discoiquuid: 148803f3-1e7b-4d35-99c5-e0d82f3adf24
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 319cd6b0-c866-4838-96a5-eceb7edae9af
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 100%
 
 ---
 
-# メタデータ - フラグメントのプロパティ {#metadata-fragment-properties}
+# メタデータ - フラグメントのプロパティ{#metadata-fragment-properties}
 
 ## プロパティ／メタデータの編集 {#editing-properties-meta-data}
 
 コンテンツフラグメントのメタデータ（プロパティ）を表示して編集できます。
 
 1. **Assets** コンソールで、コンテンツフラグメントの場所に移動します。
-1. 以下のどちらかの操作をおこないます。
+1. 以下のどちらかの操作を行います。
 
    * [**「プロパティを表示**」を選択してダイアログを開きます](/help/assets/manage-assets.md#editing-properties)。開いて表示されたら、編集することもできます。
    * [編集するコンテンツフラグメント](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor)を開き、サイドパネルから「**メタデータ**」を選択します。
