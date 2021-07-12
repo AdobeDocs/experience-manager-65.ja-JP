@@ -6,9 +6,9 @@ uuid: 1624a465-8b0c-4347-a53f-1118bfa6e18f
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 898268cb-4426-421f-8f63-d75bd85cb57f
-role: Administrator
+role: Admin
 exl-id: 00c01a12-1180-4f35-9179-461bf177c787
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 58%
@@ -80,7 +80,7 @@ Document Security は保護されたドキュメントに関するポリシー�
  </tbody>
 </table>
 
-## ユーザーデータへのアクセスと削除  {#access-and-delete-user-data}
+## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
 データベースにあるユーザーの Document Security データにアクセスしてデータを書き出すことができます。また、必要に応じてデータを永続的に削除できます。
 
@@ -94,7 +94,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 プリンシパル ID が分かったら、ユーザーデータを書き出したり、削除したりすることができます。
 
-### ユーザーデータの書き出し  {#export-user-data}
+### ユーザーデータの書き出し {#export-user-data}
 
 次のデータベースコマンドを実行して、プリンシパル ID のユーザーデータをデータベーステーブルから書き出します。`select`コマンドで、 `<principal_id>`を、書き出すデータのユーザーのプリンシパルIDに置き換えます。
 
