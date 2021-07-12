@@ -10,16 +10,16 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 404582ab-bb4c-4775-9ae3-17356d376dca
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '2110'
 ht-degree: 51%
 
 ---
 
-# モデレートコンソール  {#moderation-console}
+# モデレートコンソール {#moderation-console}
 
 AEM Communitiesでは、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）が、オーサー環境とパブリッシュ環境の両方でコミュニティコンテンツ[の一括モデレートを実行できます。](/help/communities/moderate-ugc.md)
 
@@ -230,7 +230,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 ![sentiment](assets/sentiment.png)
 
-## カスタムフィルター{#custom-filters}
+## カスタムフィルター {#custom-filters}
 
 [フィルターレール](/help/communities/moderation.md#ootbfilters)の既製のフィルターに加えて、メタデータに対するカスタムフィルターをモデレートUIに追加できます。 開発者は、GitHubのサンプルコードを使用して、既存のモデレートUIフィルターを拡張できます。
 
@@ -269,7 +269,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 コンテンツ領域内の 1 つの投稿のみをモデレートする場合は、その投稿の上にマウスポインターを置く（デスクトップの場合）か、その投稿を指で長押しして（モバイルの場合）ボタンを表示します。1 つのコンテンツを操作するときは、削除アクションの場合に限り確認メッセージが表示されます。
 
-### 複数の投稿のモデレート  {#moderating-multiple-posts}
+### 複数の投稿のモデレート {#moderating-multiple-posts}
 
 投稿の`Select`アイコンをクリックして、一括選択モードに入ります。
 
@@ -346,7 +346,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 1つの投稿を操作する場合、UGCタイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしている場合は、閉じるアイコンが表示されます。
 
-#### Moderation History {#moderation-history}
+#### モデレート履歴 {#moderation-history}
 
 ![モデレート](assets/moderation.png)
 
@@ -354,7 +354,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 
-以下に例を示します。
+次に例を示します。
 
 ![moderation-history](assets/moderation-history.png)
 
@@ -368,6 +368,6 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 
-以下に例を示します。
+次に例を示します。
 
 ![view1](assets/view1.png)
