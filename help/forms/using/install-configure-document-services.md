@@ -6,9 +6,9 @@ seo-description: AEM Forms ドキュメントサービスをインストール�
 uuid: 908806a9-b0d4-42d3-9fe4-3eae44cf4326
 topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
-role: Administrator
+role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '4295'
 ht-degree: 67%
@@ -263,7 +263,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 >  
 `export OpenOffice_PATH=/opt/openoffice.org4`
 
-### （IBM WebSphere のみ）IBM SSL ソケットプロバイダーの設定{#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
+### （IBM WebSphere のみ）IBM SSL ソケットプロバイダーの設定 {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
 次の手順を実行して、IBM SSLソケットプロバイダーを設定します。
 
@@ -296,7 +296,7 @@ Acrobat をインストールしてから、Microsoft Word を開きます。「
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
-### （Windowsのみ）インクおよび手書きサービスのインストールを構成する{#configure-install-ink-and-handwriting-service}
+### （Windowsのみ）インクおよび手書きサービスのインストールの構成 {#configure-install-ink-and-handwriting-service}
 
 Microsoft Windows Server を実行している場合、インクおよび手書きサービスを設定します。サービスを使うには、Microsoft Office のインキング機能を使用する Microsoft PowerPoint ファイルを開くことが必要です。
 
@@ -304,7 +304,7 @@ Microsoft Windows Server を実行している場合、インクおよび手書�
 1. **[!UICONTROL 機能]**&#x200B;メニューで「**[!UICONTROL 機能を追加]**」をクリックします。 「**[!UICONTROL インクと手書きサービス]**」チェックボックスをオンにします。
 1. 「**[!UICONTROL インクおよび手書きサービス]**」が&#x200B;**[!UICONTROL 機能の選択]**&#x200B;ダイアログボックスで選択されます。「**[!UICONTROL インストール]**」をクリックするとサービスがインストールされます。
 
-### （Windowsのみ）Microsoft Officeのファイルブロック設定を構成する{#configure-the-file-block-settings-for-microsoft-office}
+### （Windowsのみ）Microsoft Officeのファイルブロック設定の構成 {#configure-the-file-block-settings-for-microsoft-office}
 
 Microsoft Office のセキュリティセンターの設定を変更して、PDF Generator サービスが古いバージョンの Microsoft Office で作成されたファイルを変換できるようにします。
 
@@ -314,7 +314,7 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 1. 「**[!UICONTROL セキュリティ センターの設定]**」で、「**[!UICONTROL ファイル制限機能の設定]**」をクリックします。
 1. 「**[!UICONTROL ファイルタイプ]**」リストで、PDF GeneratorサービスでPDFドキュメントへの変換を許可するファイルタイプの「**[!UICONTROL 開く]**」を選択解除します。
 
-### （Windowsのみ）「プロセスレベルトークンの置き換え」権限{#grant-the-replace-a-process-level-token-privilege}を付与します
+### （Windowsのみ）「プロセスレベルトークンの置き換え」権限を付与する {#grant-the-replace-a-process-level-token-privilege}
 
 アプリケーションサーバーを起動したユーザーアカウントは、「**プロセス レベル トークンの置き換え**」権限が必要です。ローカルシステムアカウントには、デフォルトで「**プロセス レベル トークンの置き換え**」権限があります。ローカル管理グループのユーザーが運用しているサーバーでは、権限は明示的に付与されなければなりません。次の手順を実行して権限を付与します：
 
@@ -322,7 +322,7 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 1. **[!UICONTROL ローカル コンピューター ポリシー]**／**[!UICONTROL コンピューターの構成]**／**[!UICONTROL Windows の設定]**／**[!UICONTROL セキュリティの設定]**／**[!UICONTROL ローカル ポリシー]**／**[!UICONTROL ユーザー権利の割り当て]**&#x200B;に移動して、**[!UICONTROL Administrators グループが含まれるように「プロセス レベル トークンの置き換え]**」ポリシーを編集します。
 1. 「プロセス レベル トークンの置き換え」エントリにユーザーを追加します。
 
-### （Windowsのみ）管理者以外のユーザーに対してPDF Generatorサービスを有効にする{#enable-the-pdf-generator-service-for-non-administrators}
+### （Windowsのみ）管理者以外のユーザーに対するPDF Generatorサービスの有効化 {#enable-the-pdf-generator-service-for-non-administrators}
 
 管理者以外のユーザーに対して、PDF Generator サービスの使用を許可することができます。通常は、管理者権限を持つユーザーのみがこのサービスを実行できます。
 
@@ -330,7 +330,7 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 1. 環境変数の値を TRUE に設定します。
 1. AEM Forms のインスタンスを再起動します。
 
-### （Windowsのみ）ユーザーアカウント制御(UAC)を無効にする{#disable-user-account-control-uac}
+### （Windowsのみ）ユーザーアカウント制御の無効化(UAC) {#disable-user-account-control-uac}
 
 1. システム構成ユーティリティにアクセスするには、**[!UICONTROL [スタート]>[実行]]**&#x200B;に移動し、**[!UICONTROL MSCONFIG]**&#x200B;と入力します。
 1. 「**[!UICONTROL ツール]**」タブをクリックし、下にスクロールして「**[!UICONTROL UAC設定を変更]**」を選択します。 「**[!UICONTROL 起動]**」をクリックして新しいウィンドウでコマンドを実行します。
@@ -344,13 +344,13 @@ Microsoft Office のセキュリティセンターの設定を変更して、PDF
 
 1. コンピューターを再起動します。
 
-### （Windowsのみ）エラー報告サービス{#disable-error-reporting-service}の無効化
+### （Windowsのみ）エラー報告サービスを無効にする {#disable-error-reporting-service}
 
 Windows Server上のPDF Generatorサービスを使用してドキュメントをPDFに変換する際に、実行ファイルに問題が発生し、ファイルを閉じる必要があるとWindows Serverから報告される場合があります。 ただし、PDF 変換はバックグラウンドで続行されるため、影響を与えません。
 
 エラーを受信しないようにするために、Windows エラー報告を無効にすることができます。エラー報告を無効にする方法については、[https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx)を参照してください。
 
-### （Windowsのみ）HTMLからPDFへの変換の設定{#configure-html-to-pdf-conversion}
+### （Windowsのみ）HTMLからPDFへの変換の設定 {#configure-html-to-pdf-conversion}
 
 PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換するWebKit、WebCapture、およびPhantomJSのルートまたはメソッドを提供します。 Windows で WebKit および Acrobat WebCapture ルートの変換を有効にするには、Unicode フォントを %windir%¥fonts ディレクトリにコピーします。
 
@@ -358,11 +358,11 @@ PDF Generatorサービスは、HTMLファイルをPDFドキュメントに変換
 >
 >フォントフォルダーに新しいフォントをインストールする場合は、必ずAEM Formsインスタンスを再起動します。
 
-### （UNIXベースのプラットフォームのみ）HTMLからPDFへの変換用の追加設定{#extra-configurations-for-html-to-pdf-conversion}
+### （UNIXベースのプラットフォームのみ）HTMLからPDFへの変換の追加設定  {#extra-configurations-for-html-to-pdf-conversion}
 
 UNIX ベースのプラットフォーム上の PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および PhantomJS の各ルートをサポートしています。HTML から PDF への変換を有効にするには、以下から目的の変換ルートに該当する設定を行います。
 
-### （UNIXベースのプラットフォームのみ） Unicodeフォントのサポートを有効にします（WebKitのみ） {#enable-support-for-unicode-fonts-webkit-only}
+### （UNIXベースのプラットフォームのみ） Unicodeフォントのサポートを有効にする（WebKitのみ） {#enable-support-for-unicode-fonts-webkit-only}
 
 Unicode フォントを、使用しているシステムに応じて、次のいずれかのディレクトリにコピーします。
 
@@ -426,7 +426,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 1. ファイルを保存して閉じます。
 
-### フォントマネージャーサービスの設定   {#configuring-the-font-manager-service}
+### フォントマネージャーサービスの設定  {#configuring-the-font-manager-service}
 
 1. 管理者として[AEM Configuration Manager](http://localhost:4502/system/console/configMgr)にログインします。
 1. **[!UICONTROL CQ-DAM-Handler-Gibson Font Managers]**&#x200B;サービスを探して開きます。 System Fonts、System Server Fonts、およびCustomer Fontsの各Adobeのパスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
@@ -481,7 +481,7 @@ PDF Generator サービスを実行するには、ローカルユーザーのア
  </tbody> 
 </table>
 
-### （Windowsのみ）PDF Generatorサービス用のAcrobatの設定{#configure-acrobat-for-the-pdf-generator-service}
+### （Windowsのみ）PDF Generatorサービス用のAcrobatの設定 {#configure-acrobat-for-the-pdf-generator-service}
 
 Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用して、サポートされているファイル形式を PDF ドキュメントに変換します。次の手順を実行して、Adobe AcrobatをPDF Generatorサービス用に設定します。
 
@@ -499,7 +499,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
 1. System Readiness Tool（SRT）を実行して、Acrobat インストールを検証します。このツールは、PDF Generator変換を実行するように装置が正しく設定されているかどうかを確認し、指定されたパスでレポートを生成します。
 
-   1. コマンドプロンプトを開きます。`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt` フォルダーに移動し、コマンドプロンプトから次のコマンドを実行します。
+   1. コマンドプロンプトを開きます。`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\etc\fd\ pdfg\tools\adobe-aemfd-pdfg-utilities-[version]-win.zip\srt`フォルダーに移動します。 コマンドプロンプトから次のコマンドを実行します。
 
       `cscript SystemReadinessTool.vbs [Path_of_reports_folder] en`
 
@@ -509,7 +509,7 @@ Microsoft Windows では、PDF Generator サービスは Adobe Acrobat を使用
 
    1. `[Path_of_reports_folder]` に移動します。SystemReadinessTool.htmlファイルを開きます。 レポートを検証して前述の問題を修正します。
 
-### （Windowsのみ）HTMLからPDFへの変換のプライマリルートを設定する{#configure-primary-route-for-html-to-pdf-conversion-windows-only}
+### （Windowsのみ）HTMLからPDFへの変換のプライマリルートを設定する {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
 PDF Generator サービスは、Webkit、Acrobat WebCapture（Windows のみ）および PhantomJS の、HTML ファイルを PDF ドキュメントに変換する複数のルートを提供します。Adobeは、動的コンテンツを処理する機能を持ち、32ビットライブラリ、32ビットJDKに依存しないか、追加のフォントが必要ないので、PhantomJSルートの使用をお勧めします。 また、PhantomJS ルートでは、変換を実行するために sudo または root アクセスは必要ありません。
 
@@ -519,7 +519,7 @@ HTML から PDF への変換のデフォルトの主要ルートは WebKit で�
 
 1. 「**[!UICONTROL 一般設定]**」タブで、「**[!UICONTROL HTMLからPDFへの変換のプライマリルート]**」ドロップダウンから、目的の変換ルートを選択します。
 
-### グローバルTrust Store {#intialize-global-trust-store}を初期化します
+### グローバルTrust Storeの初期化 {#intialize-global-trust-store}
 
 Trust Store の管理では、電子署名の検証および証明書認証のために、サーバーで信頼される証明書の読み込み、編集および削除を行うことができます。証明書はいくつでも読み込みと書き出しを行うことができます。証明書が読み込まれたら、信頼設定および Trust Store の種類を編集できます。次の手順を実行して、Trust Storeを初期化します。
 
@@ -527,7 +527,7 @@ Trust Store の管理では、電子署名の検証および証明書認証の�
 1. **[!UICONTROL ツール]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL Trust Store]**&#x200B;に移動します。
 1. 「**[!UICONTROL TrustStoreを作成]**」をクリックします。 パスワードを設定し、**[!UICONTROL 「保存」]**&#x200B;をタップします。
 
-### Reader 拡張機能および Encription サービス用の証明書を設定します。{#set-up-certificates-for-reader-extension-and-encryption-service}
+### Reader 拡張機能および Encription サービス用の証明書を設定します。 {#set-up-certificates-for-reader-extension-and-encryption-service}
 
 DocAssurance サービスは PDF ドキュメントに使用権限を適用できます。PDFドキュメントに使用権限を適用するには、証明書を設定します。
 
