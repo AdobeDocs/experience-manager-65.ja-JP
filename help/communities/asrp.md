@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: 3e81b519-57ca-4ee1-94bd-7adac4605407
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 6430ed96-5d96-41b6-866f-90b34ff84f7a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 33%
@@ -42,7 +42,7 @@ UGC用のASRPを使用するようにAEM Communitiesサイトを設定するに�
 
 ## 設定 {#configuration}
 
-### ASRP の選択  {#select-asrp}
+### ASRP の選択 {#select-asrp}
 
 [ストレージ設定コンソール](/help/communities/srp-config.md)では、使用するSRPの実装を指定するデフォルトのストレージ設定を選択できます。
 
@@ -89,7 +89,7 @@ UGC用のASRPを使用するようにAEM Communitiesサイトを設定するに�
 
 ASRP エンドポイントでの認証を正常におこなうには、[ネットワークタイムプロトコル（NTP）](https://www.ntp.org/)などを使用して、AEM Communities を実行しているマシンの時刻を同期する必要があります。
 
-### 設定の公開  {#publishing-the-configuration}
+### 設定の公開 {#publishing-the-configuration}
 
 すべてのオーサーインスタンスとパブリッシュインスタンスで、ASRP が共通ストアとして指定されている必要があります。
 
@@ -113,7 +113,7 @@ AEMオーサーインスタンスで、次の操作を実行します。
 
 新しいストレージ構造により、ソーシャルコミュニティからコミュニティにアップグレードするときは、[アップグレード](/help/communities/upgrade.md#adobe-cloud-storage)手順に従う必要があります。
 
-## ユーザーデータの管理  {#managing-user-data}
+## ユーザーデータの管理 {#managing-user-data}
 
 パブリッシュ環境で頻繁に入力されるユーザー、ユーザープロファイルおよびユーザーグループについては、以下を参照してください。******
 
@@ -122,7 +122,7 @@ AEMオーサーインスタンスで、次の操作を実行します。
 
 ## トラブルシューティング {#troubleshooting}
 
-### アップグレード後に UGC が表示されない  {#ugc-disappears-after-upgrade}
+### アップグレード後に UGC が表示されない {#ugc-disappears-after-upgrade}
 
 既存のAEM 6.0ソーシャルコミュニティサイトからアップグレードする場合は、[アップグレード手順](/help/communities/upgrade.md#adobe-cloud-storage)に従ってください。そうしないと、UGCが失われてしまいます。
 
