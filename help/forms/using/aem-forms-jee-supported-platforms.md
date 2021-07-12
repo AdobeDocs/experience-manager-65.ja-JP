@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 3d6b0c696b625869bc4ed682a310399b3b6301fb
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '3323'
 ht-degree: 83%
@@ -80,7 +80,7 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >
 >既存のユーザーは、JEEスタック上にAEM Formsをデプロイし続ける必要があることを認識しています。 そのような場合は、AEM Forms JEE を本文書に記載されている対応インフラストラクチャでデプロイしていただく必要があります。前回の AEM Forms リリースをサポート対象ではないプラットフォームでご使用で、AEM 6.5 Forms にアップグレードされる場合は、アドビサポートにご連絡ください。サポート対象のプラットフォームへのアップグレードをお手伝いします。
 
-### Java 仮想マシン (JVM) {#java-virtual-machines-jvm}
+### Java 仮想マシン（JVM） {#java-virtual-machines-jvm}
 
 Adobe Experience Manager Forms を使用するには、Java 仮想マシンが必要です。Java 仮想マシンは、Java Development Kit（JDK）ディストリビューションに付属しています。Adobe Experience Manager は、次のバージョンの Java 仮想マシンで動作します。
 
@@ -350,7 +350,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 * JEE 上の AEM Forms では、クラスター環境での MySQL データベースをサポートしていません。
 * 削除または更新されたプラットフォームの一覧は、[AEM 6.5 Forms 新機能の概要](../../forms/using/whats-new.md)の文書を参照ししてください。
 
-### LDAP サーバー (オプション) {#ldap-servers-optional}
+### LDAP サーバー（オプション） {#ldap-servers-optional}
 
 <table>
  <tbody>
@@ -373,7 +373,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
  </tbody>
 </table>
 
-### 電子メールサーバー (オプション) {#email-servers-optional}
+### 電子メールサーバー（オプション） {#email-servers-optional}
 
 | 製品 |
 |---|
@@ -478,7 +478,7 @@ AEM Forms AppはApache Cordovaをサポートするようになりました。�
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)または[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))に従って、AEM Forms製品の説明を参照してください。
    >
    >
-* PDF Generator サービスは、Microsoft Windows 10 をサポートしていません。
+* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 >
 
 
@@ -570,7 +570,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 * 1024 x 768 ピクセル以上のモニター解像度
 * ビデオハードウェアアクセラレーション（オプション）
 * Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC。
-* Designerをインストールするための管理者権限。
+* Designer をインストールするための管理者権限。
 
 ### Adobe Acrobat と Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
@@ -743,7 +743,7 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
 
-## リビジョン履歴{#revision-history}
+## リビジョン履歴 {#revision-history}
 
 * 2020年9月09日
    * AEM Forms AppでサポートされているiOSのバージョンをiOS 12に変更しました。 以前のバージョンはiOS 11でした。
