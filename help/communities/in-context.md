@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
-role: Administrator
+role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '796'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -87,7 +87,7 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
    * 返信の選択
    * 「ログアウト」を選択します。
 
-### 匿名サイト訪問者(#5) {#anonymous-site-visitor}
+### 匿名のサイト訪問者（#5） {#anonymous-site-visitor}
 
 以下は、(5)にサインインしていないサイト訪問者が閲覧したフォーラムのビューです。
 
@@ -95,7 +95,7 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 
 ![community-forum-visitor](assets/community-forum-visitor.png)
 
-### 新しいメンバー(#4) {#new-member}
+### 新しいメンバー（#4） {#new-member}
 
 オーサー環境で、管理者としてログインし、[メンバーコンソール](members.md)を使用してBoyd Larsen(boyd.larsen@dodgit.com)をcommunity-engage-membersグループの新しいメンバーとして追加し、ログアウトします。
 
@@ -134,7 +134,7 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### コミュニティモデレーター(#2) {#community-moderator}
+### コミュニティモデレーター（#2） {#community-moderator}
 
 コミュニティモデレーターのAaron McDonald(aaron.mcdonal@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「詳細を表示」を選択します。
 
@@ -157,7 +157,7 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![moderator-access](assets/moderator-access.png)
 
-### コンテンツ作成者(#1) {#content-author}
+### コンテンツ作成者（#1） {#content-author}
 
 スレッドを開始したコミュニティメンバーであるRebekah Larsen(rebekah.larsen@mailinator.com)としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbirdの投稿の「続きを読む」を選択します。
 
