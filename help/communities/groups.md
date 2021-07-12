@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d381ea40-fe49-4d32-bfad-1379c7a02aba
 docset: aem65
 pagetitle: Community Groups Console
-role: Administrator
+role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 42%
@@ -121,7 +121,7 @@ ht-degree: 42%
 
 コミュニティサイトがパブリッシュされた後、[プロパティを編集](#modifyinggroupproperties)して、別のテーマを選択できます。
 
-### コミュニティグループブランディング  {#community-group-branding}
+### コミュニティグループブランディング {#community-group-branding}
 
 ![community-group-branding](assets/community-group-branding.png)
 
@@ -204,13 +204,13 @@ ht-degree: 42%
 >
 >それぞれのコミュニティサイトのコミュニティグループコンソールに、[手順 1：コミュニティグループテンプレート](/help/communities/groups.md#step-community-group-template)の「追加の使用可能なコミュニティグループの言語」で指定したすべての言語でグループが作成されます。
 
-## オーサーグループのコンテンツ{#author-group-content}
+## オーサーグループコンテンツ {#author-group-content}
 
 ![open-site](assets/open-site.png)
 
 グループのページコンテンツは、他のAEMページと同じツールを使用してオーサリングできます。 グループをオーサリング用に開くには、グループカードの上にマウスポインターを置くと表示される「サイトを開く」アイコンを選択します。
 
-## グループのプロパティを変更{#modify-group-properties}
+## グループのプロパティの変更 {#modify-group-properties}
 
 コミュニティグループの作成プロセスで指定された既存のサブコミュニティサイトのプロパティは、グループカードの上にマウスポインターを置くと表示される「サイトを編集」アイコンを選択して変更できます。
 
@@ -233,7 +233,7 @@ ht-degree: 42%
 
 その一方で、サブコミュニティの[構造](#modify-structure)は変更できます。
 
-### 構造の変更  {#modify-structure}
+### 構造の変更 {#modify-structure}
 
 構造パネルでは、オーサー環境またはパブリッシュ環境でサブコミュニティを作成するときに選択したコミュニティグループテンプレートから最初に作成した構造を変更できます。パネルから、次のことが可能です。
 
@@ -278,7 +278,7 @@ ht-degree: 42%
 
 設定パネルでは、コミュニティの[モデレーター](#moderation)を追加できます。
 
-### メンバーシップの変更  {#modify-membership}
+### メンバーシップの変更 {#modify-membership}
 
 [メンバーシップ](#membership)パネルは情報提供のみを目的としています。設定されたグループメンバーシップの種類は、オプション、必須、制限のいずれでも変更できません。
 
@@ -286,7 +286,7 @@ ht-degree: 42%
 
 [サムネイル](#thumbnail)パネルでは、コミュニティグループを表す画像をアップロードできます。この画像は、パブリッシュ環境でサイト訪問者に表示され、オーサー環境のコミュニティサイトのグループコンソールにも表示されます。
 
-## グループ{#publish-the-group}を公開します。
+## グループの公開 {#publish-the-group}
 
 ![publish-site](assets/publish-site.png)
 
@@ -302,7 +302,7 @@ ht-degree: 42%
 >
 >コミュニティサイトおよびネストされたグループは、階層の上から下の順に公開される必要があります。
 
-## グループ{#delete-the-group}を削除します。
+## グループの削除 {#delete-the-group}
 
 ![削除アイコン](assets/deleteicon.png)
 
