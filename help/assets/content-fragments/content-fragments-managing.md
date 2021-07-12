@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 21a18d60-f3fe-4048-9949-8416b5cb4596
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 636daf55-2225-4780-9c57-1a2d7464fe2c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1488'
 ht-degree: 99%
 
 ---
 
-# コンテンツフラグメントの管理 {#managing-content-fragments}
+# コンテンツフラグメントの管理{#managing-content-fragments}
 
 コンテンツフラグメントは **Assets** として保存されるので、主に **Assets** コンソールから管理します。
 
@@ -70,7 +70,7 @@ ht-degree: 99%
       * **説明**
 
       * **タグ**
-   * **アドバンス**
+   * **詳細**
 
       * **名前**
 
@@ -220,19 +220,19 @@ ht-degree: 99%
 
 フラグメントを開いたら、「[バリエーション](/help/assets/content-fragments/content-fragments-variations.md)」タブを使用してコンテンツをオーサリングできます。
 
-## フラグメント内のバリエーションの作成と管理  {#creating-and-managing-variations-within-your-fragment}
+## フラグメント内のバリエーションの作成と管理 {#creating-and-managing-variations-within-your-fragment}
 
-マスターコンテンツを作成したら、そのコンテンツの[バリエーション](/help/assets/content-fragments/content-fragments-variations.md)を作成して管理できます。
+プライマリコンテンツを作成したら、そのコンテンツの[バリエーション](/help/assets/content-fragments/content-fragments-variations.md)を作成して管理できます。
 
-## コンテンツをフラグメントと関連付ける  {#associating-content-with-your-fragment}
+## コンテンツをフラグメントと関連付ける {#associating-content-with-your-fragment}
 
 フラグメントに[コンテンツを関連付ける](/help/assets/content-fragments/content-fragments-assoc-content.md)こともできます。これにより関連性を付加して、フラグメントをコンテンツページに追加するときに、アセット（画像など）を（オプションで）フラグメントと一緒に使用できるようになります。
 
-## フラグメントのメタデータ（プロパティ）の表示と編集  {#viewing-and-editing-the-metadata-properties-of-your-fragment}
+## フラグメントのメタデータ（プロパティ）の表示と編集 {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 
 「[メタデータ](/help/assets/content-fragments/content-fragments-metadata.md)」タブを使用し、フラグメントのプロパティを表示して編集できます。
 
-## コンテンツフラグメントのタイムライン  {#timeline-for-content-fragments}
+## コンテンツフラグメントのタイムライン {#timeline-for-content-fragments}
 
 [タイムライン](/help/assets/manage-assets.md#timeline)では標準のオプションに加え、コンテンツフラグメントに固有の情報とアクションの両方が提供されます。
 
@@ -302,7 +302,7 @@ ht-degree: 99%
 
 ![cfm-6420-20](assets/cfm-6420-20.png)
 
-## 特定のバージョンへの復帰 {#reverting-to-a-version}
+## 特定のバージョンへの復帰   {#reverting-to-a-version}
 
 次の方法で特定のバージョンのフラグメントに戻すことができます。
 
