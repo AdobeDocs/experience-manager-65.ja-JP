@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 53%
@@ -22,7 +22,7 @@ ht-degree: 53%
 
 キャッシュは、データへのアクセスにかかる時間を短縮し、遅延を削減して I／O 速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、クライアント上でのアダプティブフォームのレンダリングに要する時間を短縮できます。 これは、アダプティブフォーム専用に設計されています。
 
-## オーサーインスタンスとパブリッシュインスタンスでアダプティブフォームのキャッシュを設定する{#configure-adaptive-forms-caching-at-author-and-publish-instances}
+## オーサーインスタンスとパブリッシュインスタンスでアダプティブフォームのキャッシュを設定する {#configure-adaptive-forms-caching-at-author-and-publish-instances}
 
 1. `https://[server]:[port]/system/console/configMgr` の AEM Web コンソール設定マネージャーに移動します。
 1. 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定]**」をクリックして、設定値を編集します。
@@ -39,7 +39,7 @@ ht-degree: 53%
 環境は、アダプティブフォームと関連アセットをキャッシュするように設定されています。
 
 
-## （オプション）ディスパッチャー{#configure-the-cache}でアダプティブフォームのキャッシュを設定する
+## （オプション）Dispatcherでのアダプティブフォームのキャッシュの設定 {#configure-the-cache}
 
 また、Dispatcherでのアダプティブフォームのキャッシュを設定して、パフォーマンスを向上させることもできます。
 
@@ -132,7 +132,7 @@ ht-degree: 53%
 
 ## トラブルシューティング {#troubleshooting}
 
-### 画像やビデオを含むアダプティブフォームの一部は、Dispatcherのキャッシュ{#videos-or-images-not-auto-invalidated}から自動的に無効化されません
+### 画像やビデオを含むアダプティブフォームの一部が、Dispatcherのキャッシュから自動的に無効化されない {#videos-or-images-not-auto-invalidated}
 
 #### OS クリップボードと内部 AEM クリップボードを使用した     {#issue1}
 
@@ -142,7 +142,7 @@ ht-degree: 53%
 
 画像とビデオを公開した後で、これらのアセットを参照しているアダプティブフォームを明示的に非公開にして公開します。
 
-### アダプティブフォームの最初のインスタンスのみがキャッシュされます。{#only-first-instance-of-adaptive-forms-is-cached}
+### アダプティブフォームの最初のインスタンスのみがキャッシュされます {#only-first-instance-of-adaptive-forms-is-cached}
 
 #### OS クリップボードと内部 AEM クリップボードを使用した     {#issue3}
 
