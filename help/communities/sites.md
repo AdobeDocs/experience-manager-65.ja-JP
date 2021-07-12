@@ -9,16 +9,16 @@ products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
 discoiquuid: 202d7dba-2b34-431d-b10f-87775632807f
-role: Administrator
+role: Admin
 exl-id: 05a944a3-adb1-47b4-b4a5-15bac91c995e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '463'
-ht-degree: 61%
+ht-degree: 63%
 
 ---
 
-# サイトテンプレート  {#site-templates}
+# サイトテンプレート {#site-templates}
 
 サイトテンプレートコンソールは、コミュニティグループに関心のある機能に焦点を当てた[グループテンプレート](tools-groups.md)コンソールと非常に似ています。
 
@@ -26,9 +26,9 @@ ht-degree: 61%
 >
 >[コミュニティサイト](sites-console.md)、[コミュニティサイトテンプレート](sites.md)、[コミュニティグループテンプレート](tools-groups.md)、[コミュニティ機能](functions.md)の作成用のコンソールは、オーサー環境でのみ使用できます。
 
-## Site Templates Console {#site-templates-console}
+## サイトテンプレートコンソール {#site-templates-console}
 
-オーサー環境でコミュニティサイトコンソールにアクセスするには、次の手順を実行します。
+オーサー環境でコミュニティサイトコンソールに移動するには、：
 
 * グローバルナビゲーションから：**[!UICONTROL ツール/コミュニティ/サイトテンプレート]**
 
@@ -36,13 +36,13 @@ ht-degree: 61%
 
 ![site-template](assets/site-template.png)
 
-## Create Site Template {#create-site-template}
+## サイトテンプレートを作成 {#create-site-template}
 
 新しいサイトテンプレートの作成を開始するには、「`Create`」を選択します。
 
 するとサイトエディターパネルに移動します。パネルには以下の 3 つのサブパネルがあります。
 
-### 基本情報{#basic-info}
+### 基本情報 {#basic-info}
 
 ![site-template-basicinfo](assets/site-template-basicinfo.png)
 
