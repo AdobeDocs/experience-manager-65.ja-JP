@@ -10,9 +10,9 @@ topic-tags: Configuration
 discoiquuid: d4e2acb0-8d53-4749-9d84-15b8136e610b
 docset: aem65
 feature: アダプティブフォーム
-role: Administrator
+role: Admin
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 84%
@@ -38,7 +38,7 @@ ht-degree: 84%
 * 指定した順序で次のパラメーターを確認します。
 
    * リクエストパラメーター`afAcceptLang`
-ユーザーのブラウザ-ロケールを上書きするには、 
+ユーザーのブラウザーロケールを上書きするには、 
 `afAcceptLang` リクエストパラメーターを渡して、ロケールを強制します。例えば、次の URL は日本語ロケールでのフォームのレンダリングを強制します。
       `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
@@ -46,8 +46,8 @@ ht-degree: 84%
 
    * AEM のユーザー指定の言語設定です。
 
-   * ブラウザ-のロケールはデフォルトで有効です。ブラウザーのロケール設定を変更するには
-      * 設定マネージャーを開きます。URL は `http://[server]:[port]/system/console/configMgr` です。
+   * ブラウザーのロケールはデフォルトで有効です。ブラウザーロケール設定を変更するには
+      * 設定マネージャーを開きます。URL は `http://[server]:[port]/system/console/configMgr` です
       * 「**[!UICONTROL アダプティブフォームおよびインタラクティブ通信 Web チャネル]**」の設定を検索して開きます。
       * 「**[!UICONTROL ブラウザーロケールを使用]**」オプションのステータスを変更して設定を「**[!UICONTROL 保存]**」します。
 
@@ -63,27 +63,27 @@ AEM Formsでは、現在、英語(en)、スペイン語(es)、フランス語(fr
 
 アダプティブフォーム実行時に新しいロケールのサポートを追加するには、次を参照してください。
 
-1. [GuideLocalizationService にロケールを追加する](../../forms/using/supporting-new-language-localization.md#p-add-a-locale-to-the-guide-localization-service-br-p)
+1. [GuideLocalizationService へのロケールの追加](../../forms/using/supporting-new-language-localization.md#p-add-a-locale-to-the-guide-localization-service-br-p)
 
-1. [XFA クライアントライブラリをロケール用に追加する](../../forms/using/supporting-new-language-localization.md#p-add-xfa-client-library-for-a-locale-br-p)
+1. [XFA クライアントライブラリをロケール用に追加](../../forms/using/supporting-new-language-localization.md#p-add-xfa-client-library-for-a-locale-br-p)
 
 1. [アダプティブフォームのクライアントライブラリをロケール用に追加する](../../forms/using/supporting-new-language-localization.md#p-add-adaptive-form-client-library-for-a-locale-br-p)
-1. [辞書のロケールサポートを追加する](../../forms/using/supporting-new-language-localization.md#p-add-locale-support-for-the-dictionary-br-p)
+1. [辞書のロケールサポートの追加](../../forms/using/supporting-new-language-localization.md#p-add-locale-support-for-the-dictionary-br-p)
 1. [サーバーの再起動](../../forms/using/supporting-new-language-localization.md#p-restart-the-server-p)
 
-### ロケールを Guide Localization Service に追加する {#add-a-locale-to-the-guide-localization-service-br}
+### Guide Localization Service へのロケールの追加 {#add-a-locale-to-the-guide-localization-service-br}
 
 1. `https://'[server]:[port]'/system/console/configMgr` にアクセスします。
 1. **Guide Localization Service** をクリックしてコンポーネントを編集します。
 1. 追加するロケールを、サポート対象のロケールの一覧に追加します。
 
-![GuideLocalizationSevice](assets/configservice.png)
+![GuideLocalizationService](assets/configservice.png)
 
-### XFA クライアントライブラリをロケール用に追加する {#add-xfa-client-library-for-a-locale-br}
+### XFA クライアントライブラリをロケール用に追加 {#add-xfa-client-library-for-a-locale-br}
 
-`etc/<folderHierarchy>`　の下にカテゴリ　`xfaforms.I18N.<locale>`　のタイプ　`cq:ClientLibraryFolder`　のノードを作成し、次のファイルをクライアントライブラリに追加します。
+`etc/<folderHierarchy>` の下にカテゴリ `xfaforms.I18N.<locale>` のタイプ `cq:ClientLibraryFolder` のノードを作成し、次のファイルをクライアントライブラリに追加します。
 
-* `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`　で定義されている　`<locale>`　の　`xfalib.locale.Strings`　を定義している　**I18N.js**。
+* `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N` で定義されている `<locale>` の `xfalib.locale.Strings` を定義している **I18N.js**。
 
 * 以下を含む **js.txt** ファイル。
 
@@ -95,12 +95,12 @@ I18N.js
 
 ### アダプティブフォームのクライアントライブラリをロケール用に追加する {#add-adaptive-form-client-library-for-a-locale-br}
 
-`etc/<folderHierarchy>`　の下にタイプ　`cq:ClientLibraryFolder`　のノードを作成します。カテゴリは　`guides.I18N.<locale>`、依存関係は　`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`、`guide.common`　です。 「
+`etc/<folderHierarchy>` の下にタイプ `cq:ClientLibraryFolder` のノードを作成します。カテゴリは `guides.I18N.<locale>`、依存関係は `xfaforms.3rdparty`、`xfaforms.I18N.<locale>`、`guide.common` です。
 
 クライアントライブラリに次のファイルを追加します。
 
-* **I18n.js　で** `guidelib.i18n`　を定義し、`<locale>` の「calendarSymbols」、`datePatterns`、`timePatterns`、`dateTimeSymbols`、`numberPatterns`、`numberSymbols`、`currencySymbols`、`typefaces`　のパターンを持つファイルです。これらは[ロケールセットの仕様](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)に記載されている XFA 仕様に従ってください。また、サポート対象の他のロケールがどのように定義されているか、`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js` で確認することができます。
-* **LogMessages.js　で**　で `/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js` で定義された `<locale>` の `guidelib.i18n.strings` と `guidelib.i18n.LogMessages` を定義します。
+* **i18n.js** は `guidelib.i18n` を定義し、`<locale>` の「calendarSymbols」、`datePatterns`、`timePatterns`、`dateTimeSymbols`、`numberPatterns`、`numberSymbols`、`currencySymbols`、`typefaces` のパターンを持つファイルです。これらは[ロケールセットの仕様](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)に記載されている XFA 仕様に従います。また、サポート対象の他のロケールがどのように定義されているか、`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js` で確認することができます。
+* **LogMessages.js** は、`/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js` で定義された `<locale>` の `guidelib.i18n.strings` と `guidelib.i18n.LogMessages` を定義します。
 * 以下を含む **js.txt** ファイル。
 
 ```text
@@ -108,14 +108,14 @@ i18n.js
 LogMessages.js
 ```
 
-### 辞書のロケールサポートを追加する {#add-locale-support-for-the-dictionary-br}
+### 辞書のロケールサポートの追加 {#add-locale-support-for-the-dictionary-br}
 
-追加する`<locale>`が、`en`、`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`以外の場合にのみ、この手順を実行してください。
+追加する `<locale>` が、`en`、`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr` 以外の場合にのみ、この手順を実行してください。
 
-1. すでに存在しない場合は、`nt:unstructured` の下に、`languages`ノード`etc` を作成します。
+1. 既に存在しない場合は、`nt:unstructured` の下に、`languages` ノード `etc` を作成します。
 
-1. すでに存在しない場合は、複数の値を持つ文字列プロパティ `languages` をノードに追加します。
-1. すでに存在しない場合は、`<locale>`デフォルトのロケール値`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr` を追加します。
+1. 既に存在しない場合は、複数の値を持つ文字列プロパティ `languages` をノードに追加します。
+1. 既に存在しない場合は、`<locale>`デフォルトのロケール値`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr` を追加します。
 
 1. `<locale>` を `/etc/languages` の `languages` プロパティの値に追加します。
 
