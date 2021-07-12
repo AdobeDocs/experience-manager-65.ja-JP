@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 7ecc1bcf-38a9-4a59-8dd3-79cb90dec33d
 docset: aem65
 feature: コンテンツフラグメント
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: b204df18-2aef-4905-82f8-c777928ba828
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1975'
 ht-degree: 99%
 
 ---
 
-# コンテンツフラグメントの操作 {#working-with-content-fragments}
+# コンテンツフラグメントの操作{#working-with-content-fragments}
 
 Adobe Experience Manager（AEM）コンテンツフラグメントを使用すると、ページに依存しないコンテンツの設計、作成、キュレーション、[公開](/help/sites-authoring/content-fragments.md)が可能になります。複数の場所、複数のチャネル上で使用可能なコンテンツを用意できるようになります。
 
@@ -188,8 +188,8 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
    * アセット（画像）が実際のフラグメントに挿入され、フラグメントの内部コンテンツとして使用されます。
    * フラグメントの段落システムに埋め込まれます。
    * [フラグメントをページ上で使用または参照](/help/sites-authoring/content-fragments.md)するときに書式設定できます。
-   * フラグメントへの追加、フラグメントからの削除、フラグメント内での移動は、フラグメントエディターのみでおこなえます。これらのアクションは、ページエディターではおこなえません。
-   * フラグメントへの追加、フラグメントからの削除、フラグメント内での移動は、[フラグメントエディターのみで、リッチテキストフォーマットを使用して](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)おこなえます。
+   * フラグメントへの追加、フラグメントからの削除、フラグメント内での移動は、フラグメントエディターのみで行えます。これらのアクションは、ページエディターでは行えません。
+   * フラグメントへの追加、フラグメントからの削除、フラグメント内での移動は、[フラグメントエディターのみで、リッチテキストフォーマットを使用して](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)行えます。
    * 複数行テキスト要素（任意のフラグメントタイプ）にのみ追加できます。
    * 前のテキスト（段落）に添付されます。
 
@@ -215,7 +215,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
 * **フラグメントのメタデータ**
 
    * [アセットメタデータスキーマ](/help/assets/metadata.md)を使用します。
-   * タグは、次のことをおこなうときに作成できます。
+   * タグは、次のことを行うときに作成できます。
 
       * フラグメントを作成してオーサリングするとき
       * または、その後、次の方法でも作成できます。
