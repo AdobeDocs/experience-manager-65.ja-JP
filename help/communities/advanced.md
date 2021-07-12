@@ -10,9 +10,9 @@ topic-tags: administering
 content-type: reference
 discoiquuid: eb3d5c37-8097-46de-8c4f-804ea723f1c5
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: d3bb6664-6c01-4bcf-840c-072fc491fc99
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 41%
@@ -117,7 +117,7 @@ ht-degree: 41%
 
 ストップワードファイルが存在しない場合は、スコアエンジンによりエラーがスローされます。
 
-## 高度なバッジルール  {#advanced-badging-rules}
+## 高度なバッジルール {#advanced-badging-rules}
 
 高度なバッジルールのプロパティは、[基本バッジルールのプロパティ](/help/communities/implementing-scoring.md#badging-rules)とは異なります。
 
@@ -130,7 +130,7 @@ ht-degree: 41%
   <tr>
    <th>プロパティ</th>
    <th>タイプ</th>
-   <th>値 説明</th>
+   <th>値の説明</th>
   </tr>
   <tr>
    <td>badgingPath</td>
