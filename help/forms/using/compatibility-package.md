@@ -10,9 +10,9 @@ topic-tags: correspondence-management, installing
 geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: 73e8ccc6-f857-493e-b6e3-878f93e2a356
 docset: aem65
-role: Administrator
+role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 59%
@@ -34,7 +34,7 @@ AEMFD互換性パッケージを使用すると、AEM Forms 6.5上のAEM Forms 6
 
 詳しくは、[互換性パッケージ](../../forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、AEM Forms 6.5と互換性を持たせたアセットを参照してください。
 
-## AEM Forms 6.5でAEM Forms 6.4、6.3および6.2のアセットのサポートを追加{#add-support-for-aem-forms-and-assets-in-aem-forms}
+## AEM Forms 6.5でAEM Forms 6.4、6.3および6.2のアセットのサポートを追加 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.5 との互換性を持たせるには、以下を実行します。
 
