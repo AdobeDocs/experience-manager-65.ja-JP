@@ -7,8 +7,8 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
-role: Business Practitioner
-source-git-commit: 5536ee27ad51356c2dcd0f0f36b91025bf1d228c
+role: User
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '3718'
 ht-degree: 72%
