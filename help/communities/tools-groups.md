@@ -10,8 +10,8 @@ topic-tags: administering
 content-type: reference
 discoiquuid: e9bfbbce-93fc-455c-a2f7-4ee44e63c03f
 docset: aem65
-role: Administrator
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+role: Admin
+source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 42%
@@ -33,7 +33,7 @@ Communities [機能パック 1](/help/communities/deploy-communities.md#latestfe
 >
 >[コミュニティサイト](/help/communities/sites-console.md)、[コミュニティサイトテンプレート](/help/communities/sites.md)、[コミュニティグループテンプレート](/help/communities/tools-groups.md)、[コミュニティ機能](/help/communities/functions.md)の作成用のコンソールは、オーサー環境でのみ使用できます。
 
-## Group Templates Console {#group-templates-console}
+## グループテンプレートコンソール {#group-templates-console}
 
 AEMオーサー環境でグループテンプレートコンソールにアクセスするには：
 
