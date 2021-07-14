@@ -12,10 +12,10 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: aed6e28d7ff228ecbaeaf0d468d1d9bcb4373f90
 workflow-type: tm+mt
-source-wordcount: '2086'
-ht-degree: 63%
+source-wordcount: '2076'
+ht-degree: 62%
 
 ---
 
@@ -70,13 +70,13 @@ AEMオーサーインスタンスを設定するには、AEM 6.5を使用する�
 
 * Adobeパートナーの場合は、[Adobeパートナートレーニングプログラム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)を使用してAEM 6.5をリクエストします。
 
-AEM をダウンロードしたら、「[デプロイメントと保守](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html#default-local-install)」の説明に従い、AEM オーサーインスタンスの設定を行ってください。
+AEM をダウンロードしたら、「[デプロイメントと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#default-local-install)」の説明に従い、AEM オーサーインスタンスの設定を行ってください。
 
 ### 最新の AEM サービスパックをダウンロードしてインストールする {#servicepack}
 
 詳しい手順については、
 
-* [AEM 6.5 Service Pack リリースノート](https://docs.adobe.com/content/help/ja/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
+* [AEM 6.5 Service Pack リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/sp-release-notes.html?lang=ja)
 
 **最新の** AEMパッケージまたはService Packが見つからない場合は、サポートにお問い合わせください。
 
@@ -337,18 +337,18 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
    >
    >どのレプリケーションエージェントも無効にしないでください。無効にすると、（実行中のキュー内の）アセットのレプリケーションが失敗する可能性があります。
    >
-   >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて設定されていることを確認します。 [Brand Portal](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)への並列公開における問題のトラブルシューティングを参照してください。
+   >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて設定されていることを確認します。 [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=en#connection-timeout)への並列公開における問題のトラブルシューティングを参照してください。
 
 次の操作が可能になっています。
 
 * [AEM Assets から Brand Portal へのアセットの公開](../assets/brand-portal-publish-assets.md)
-* [Brand Portal から AEM Assets への公開](https://docs.adobe.com/content/help/ja/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Brand Portal でのアセットのソーシング
+* [Brand Portal から AEM Assets への公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=ja) - Brand Portal でのアセットのソーシング
 * [AEM Assets から Brand Portal へのフォルダーの公開](../assets/brand-portal-publish-folder.md)
 * [AEM Assets から Brand Portal へのコレクションの公開](../assets/brand-portal-publish-collection.md)
-* [Brand Portal へのプリセット、スキーマ、ファセットの公開](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
-* [Brand Portal へのタグの公開](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
+* [Brand Portal へのプリセット、スキーマ、ファセットの公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Brand Portal へのタグの公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
-詳しくは、[Brand Portal ドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-brand-portal/using/home.html)を参照してください。
+詳しくは、[Brand Portal ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html)を参照してください。
 
 
 ## 設定のアップグレード {#upgrade-integration-65}
