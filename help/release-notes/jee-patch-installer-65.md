@@ -5,28 +5,28 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: ecac6269b5e12b847136f4af534016bc7b88bb2b
+source-git-commit: e54d8633aa3b8c1554df90d1b9650713246b95e8
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 50%
+source-wordcount: '484'
+ht-degree: 51%
 
 ---
 
-# AEM Forms JEEパッチインストーラー{#aem-forms-jee-patch-installer}
+# AEM Forms JEEパッチインストーラー {#aem-forms-jee-patch-installer}
 
 >[!NOTE]
 >
 >[詳細情報](https://www.adobe.com/account/sign-in.supportportal.html) やパッチの入手方法については、サポートにお問い合わせください。
 
-## パッチインストーラーについて{#about-the-patch-installer}
+## パッチインストーラーについて {#about-the-patch-installer}
 
 AEM 6.5 Forms JEEパッチインストーラーには、このパッチのリリースまでに利用可能なAEM 6.5 Forms JEEのすべてのコンポーネントに関する修正済みの問題がすべて含まれています。 修正された問題の完全なリストについては、最新の「[サービスパックリリースノート](sp-release-notes.md)」を参照してください。
 
-## パッチ{#prerequisites-to-installing-the-patch}のインストールの前提条件
+## パッチのインストールの前提条件 {#prerequisites-to-installing-the-patch}
 
 * AEM 6.5 Forms
 
-## パッチ{#installing-and-configuring-the-patch}のインストールと設定
+## パッチのインストールと設定 {#installing-and-configuring-the-patch}
 
 1. &lt;*AEM_forms_root*>/deploy フォルダーのバックアップを作成します。Quick Fix をアンインストールする場合は必須です。
 1. アプリケーションサーバーを停止します。
@@ -58,6 +58,7 @@ Linux適切なディレクトリに移動し、コマンドプロンプトで次
    * `serializer-2.7.1.jar`コピー先：`serializer-2.7.2.jar`
    * `xalan-2.7.1.jar`コピー先：`xalan-2.7.2.jar`
    * `xercesImpl-2.9.1.jar`コピー先：`xercesImpl-2.12.0.jar`
+   * `xml-apis-2.7.1.jar`コピー先：`xml-apis-2.7.2.jar`
 
 1. 「 Configuration Managerを起動」チェックボックスはデフォルトで選択されています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager を実行します。
 
@@ -70,9 +71,9 @@ Linux適切なディレクトリに移動し、コマンドプロンプトで次
 
 1. （JBossのみ）パッチをインストールしてサーバーを設定した後、JBossアプリケーションサーバーのtmpディレクトリとworkディレクトリを削除します。
 
-## デプロイ後の設定{#post-deployment-configurations}
+## デプロイ後の設定 {#post-deployment-configurations}
 
-### SAML設定{#saml-configurations}
+### SAML設定 {#saml-configurations}
 
 SAML認証を設定済みで、大きなIDPメタデータに関する問題が発生する場合は、パッチをインストールした後に次の手順を実行します。
 
@@ -81,7 +82,7 @@ SAML認証を設定済みで、大きなIDPメタデータに関する問題が�
 1. サーバーを再起動します。
 1. 既存のSAML認証プロバイダーを削除し、SAML設定の説明に従って、既存のドメインに対して再度追加します。
 
-## 影響を受けたモジュール{#impacted-modules}
+## 影響を受けるモジュール {#impacted-modules}
 
 * ドキュメントサービス
 * Document Security
