@@ -10,10 +10,10 @@ topic-tags: hTML5_forms
 discoiquuid: 8eebfcd6-0597-44ed-b718-bf9a1baa6c12
 feature: 'モバイルフォーム '
 exl-id: 68912260-179a-4d1b-b944-0a1777c021ac
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6e2a0f053a1f6989524e9ae2b1dcb001b0397ac6
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 63%
+source-wordcount: '353'
+ht-degree: 60%
 
 ---
 
@@ -21,15 +21,20 @@ ht-degree: 63%
 
 HTML5フォームでは、添付ファイルをアップロード、プレビューおよび送信することができます。デフォルトでは、添付ファイルサポートは無効になっています。添付ファイルサポートを有効にするには：
 
-1. [ 文字列プロパティで](/help/forms/using/custom-profile.md)カスタムプロファイル`mfAttachmentOptions`を作成します。
-1. カスタムプロファイルで、`fileSizeLimit`、`multiSelect`および`buttonTex`プロパティを指定して、ファイル添付ウィジェットのオプションを設定します。 必要に応じて、さらに多くのカスタムプロパティを指定することもできます。
+1. `mfAttachmentOptions`複数選択文字列プロパティを持つ[カスタムプロファイル](/help/forms/using/custom-profile.md)を作成します。 `mfAttachmentOptions`プロパティの各文字列は、ファイル添付ウィジェットのオプションを設定する`property=value`形式にする必要があります。 `property`と`value`には、次のいずれかの値を指定できます。
 
-1. カスタムプロファイルでは、次の設定を使用します。
+   | プロパティ | 値 |
+   |--- |---|
+   | multiSelect | trueまたはfalse (デフォルトではtrue) |
+   | fileSizeLimit | MB単位の数（デフォルトは2 MB）。 例：5 |
+   | buttonText | ポップアップウィンドウのボタンテキスト（デフォルトでは「添付」） |
+   | 同意 | 受け入れるファイルタイプのコンマ区切りリスト（デフォルトでは&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot;） |
 
-   * **multiSelect**-> trueまたはfalse （デフォルトでは true）
-   * **fileSizeLimit**  -> value_in_mb (say 5) （デフォルトで2 MBs）
-   * **buttonText**  ->ポップアップウィンドウのボタンテキスト（デフォルトでは「Attach」）
-   * **受け入れる**  ->ファイルタイプ（デフォルトでは&quot;audio/&amp;ast;, video/&amp;ast;, image/&amp;ast;, text/&amp;ast;, .pdf&quot;）を受け入れます。
+   次に例を示します。
+
+   ![オプションの設定](assets/mfAttachmentOptions.png)
+
+   必要に応じて、`mfAttachmentOptions`プロパティに対して、さらに多くのカスタムオプションを指定することもできます。
 
    >[!NOTE]
    >
