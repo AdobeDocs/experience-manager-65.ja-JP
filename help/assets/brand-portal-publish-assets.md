@@ -13,10 +13,10 @@ docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 39a44c4b706f68d2f4f220811aa9bcc80aec55e4
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 62%
+source-wordcount: '372'
+ht-degree: 61%
 
 ---
 
@@ -74,4 +74,4 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 次に、Brand Portalにログインして、公開済みのアセットがBrand Portalインターフェイスで使用可能かどうかを確認します。
 
-![bp_landing_page](assets/bp_landing_page.png)
+![bp_landingpage](assets/bp_landingpage.png)
