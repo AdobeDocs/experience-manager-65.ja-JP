@@ -11,7 +11,7 @@ docset: aem65
 feature: 混在メディアセット，アセット管理
 role: User, Admin
 exl-id: 70a72fb9-a289-4eda-abcc-300edf9f1961
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f5eccfc1b81d8e24cafe917f3ad74b472c0676bd
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 84%
