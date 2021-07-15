@@ -7,10 +7,10 @@ content-type: reference
 feature: アクセシビリティ
 role: User, Admin
 exl-id: bbdb800c-b6f8-4506-b8ac-daf64edcd6c0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 73%
+source-wordcount: '568'
+ht-degree: 71%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 73%
 
 [!DNL Dynamic Media]は[!DNL Adobe Experience Manager Assets]のプラグインなので、キーボード制御の動作のほとんどは[!DNL Experience Manager Assets]の動作と同じです。 例えば、[!DNL Dynamic Media]の`Cancel`ボタンは、[!DNL Experience Manager Assets]と同じフォーカスハイライトを持ち、[!DNL Experience Manager Assets]と同じ`Spacebar`キーに反応します。 詳しくは、[Assets のキーボードショートカット](/help/assets/accessibility.md#keyboard-shortcuts)を参照してください。
 
-[!DNL Dynamic Media]の個々のユーザーインターフェイス要素でサポートされているキーストロークは、ほとんどの場合、明らかで見つけやすいものです。 [!DNL Dynamic Media]のキーボードコントロールは、次の点に関するものです。
+[!DNL Dynamic Media]の個々のユーザーインターフェイス要素でサポートされているキーストロークは、明確で検出が容易です。 [!DNL Dynamic Media]のキーボードコントロールは、次の点に関するものです。
 
 * `Tab` と `Shift+Tab` のキー操作を使用して、ページ上のインタラクティブ要素間を移動できます。`Tab` を使用すると、タブ順序における次のユーザーインターフェイス要素に入力フォーカスが進みます。`Shift+Tab` を使用すると、入力フォーカスが前のユーザーインターフェイス要素に戻ります。フォーカストラバーサルは、画面上のユーザーインターフェイス要素の自然な位置に従い、左から右、上から下の順に移動します。また、フィールドにエラーがある場合は、`Tab` を押して、そのフィールドにフォーカスを移動できます。
 * `Spacebar` キーと `Enter` キーを使用して、ボタン、ドロップダウンリストなどの標準的なユーザーインターフェイス要素をアクティブにできます。
@@ -32,7 +32,7 @@ ht-degree: 73%
 * 画像切り抜き／スマート切り抜きエディターで、次の操作を実行できます。
    * 矢印キーを使用して、フレームサイズの切り抜きや画像位置の変更、またはその両方を行います。
    * 最初の `Tab` ストップで画像フレーム全体がハイライト表示されます。その場合、キーボードの矢印キーを使用してフレームの位置を変更できます。
-   * その次の 4 つの `Tab` ストップはフレームの四隅です。フレームの隅をフォーカスすると、その隅がハイライト表示されます。この場合も、キーボードの矢印キーを使用して、フォーカスされた隅を移動できます。詳しくは、[単一の画像のスマート切り抜きまたはスマートスウォッチの編集](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)を参照してください。
+   * その次の 4 つの `Tab` ストップはフレームの四隅です。フレームの隅をフォーカスすると、その隅がハイライト表示されます。この場合も、キーボードの矢印キーを使用して、フォーカスされた隅を移動できます。[単一の画像のスマート切り抜きまたはスマートスウォッチの編集](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)を参照してください。
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
 
