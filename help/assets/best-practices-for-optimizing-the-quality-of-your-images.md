@@ -1,5 +1,5 @@
 ---
-title: 画質最適化のベストプラクティス
+title: 画質最適化のベストプラクティス Dynamic Media
 description: Dynamic Media の画質を最適化するベストプラクティスについて説明します。
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
@@ -10,14 +10,14 @@ discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
 feature: アセット管理
 role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 89%
+source-wordcount: '1451'
+ht-degree: 88%
 
 ---
 
-# 画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
+# Dynamic Mediaでの画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
 
 許容できる結果のレンダリングには多くの要因が関係するので、画質の最適化には時間がかかることがあります。画質に対する個人の感覚は異なるので、結果は一部主観的なものです。構造化された実験をおこなうことが重要になります。
 
@@ -47,7 +47,7 @@ Adobe Experience Manager には、画像をチューニングおよび最適化�
 
 画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。次の役立つリソースを参照し、Experience Manager でのシャープおよびアンシャープマスクの仕組みについて詳しく学んでください。
 
-ベストプラクティスに関するホワイトペーパー[Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)Adobeの画像のシャープニング(Experience Managerにも適用)。
+ベストプラクティスに関するホワイトペーパー[Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)Adobeの画像をシャープにします。Experience Managerにも適用されます。
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
@@ -59,14 +59,14 @@ Experience Manager を使用すれば、取得時、配信時またはその両�
 * シンプルシャープニング（`&op_sharpen`）- Photoshop で使用するシャープニングフィルターと同様に、シンプルシャープニングでは、動的なサイズ変更の後に、画像の最終表示形に対して基本的なシャープニングを適用します。ただし、この方法ではユーザーによる設定は不可能です。ベストプラクティスは、必要な場合を除いて &amp;op_sharpen を使用しないことです。
 * アンシャープマスク（`&op_USM`）- アンシャープマスクは、業界標準のシャープニングフィルターです。ベストプラクティスは、以下のガイドラインに従ってアンシャープマスクを使用して画像をシャープニングすることです。アンシャープマスクによって、次の 3 つのパラメーターを制御できます。
 
-   * `&op_sharpen=`amount,radius,threshold
+   * `&op_sharpen=amount,radius,threshold`
 
-      * **[!UICONTROL amount]**（0～5、効果の強さ）
-      * **[!UICONTROL radius]**（0～250、シャープニングにされるオブジェクトの周囲に描かれる「シャープニングされた線」の幅、ピクセル単位）
+      * **[!UICONTROL *amount *]**（0～5、効果の強さ）
+      * **[!UICONTROL *radius *]**（0～250、シャープニングにされるオブジェクトの周囲に描かれる「シャープニングされた線」の幅、ピクセル単位）
 
       radius パラメーターと amount パラメーターは互いに反対に作用することに注意してください。radius 値の減少は、amount 値の増加によって補うことができます。radius によって、より細やかな制御が可能になります。値が小さいとエッジ部のピクセルのみがシャープニングされ、値が大きいとより幅広いピクセルがシャープニングされます。
 
-      * **[!UICONTROL threshold]**（0～255、効果の感度）
+      * **[!UICONTROL *threshold *]**（0～255、効果の感度）
 
              このパラメーターは、シャープにされるピクセルが周囲の領域とどの程度違えば、そのピクセルをエッジのピクセルと見なしてフィルターによりシャープにするかを決定するものです。「**[!UICONTROL しきい値]**」パラメーターを使用することで、肌のトーンなど、同じような色の領域が過剰にシャープニングされるのを防ぎます。例えば、しきい値を 12 にした場合、肌のトーンの明るさにわずかな差があっても無視して「ノイズ」が加わるのを防ぎながら、まつげと肌が隣り合う場所など、コントラストの高い領域に対してエッジコントラストを追加することができます。
          
@@ -74,7 +74,7 @@ Experience Manager を使用すれば、取得時、配信時またはその両�
 
          Experience Managerのヘルプトピックの画像のシャープニング。
 
-         ベストプラクティスに関するホワイトペーパー[Dynamic Media ClassicのAdobeの画像のシャープ](/help/assets/assets/sharpening_images.pdf)。
+         ベストプラクティスに関するホワイトペーパー[Dynamic Media ClassicのAdobeで画像をシャープにする](/help/assets/assets/sharpening_images.pdf)。
 
       * Experience Manager では第 4 パラメーターの monochrome (0,1) も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
