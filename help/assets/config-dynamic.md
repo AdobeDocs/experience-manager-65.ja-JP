@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media - ハイブリッドモードの設定
+title: Dynamic Media — ハイブリッドモードの設定
 description: Dynamic Media - ハイブリッドモードの設定方法を学習します。
 mini-toc-levels: 3
 uuid: 39ad7d83-d310-4baf-9d85-5532c2f201f3
@@ -13,20 +13,20 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
 feature: 設定，ハイブリッドモード
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
 workflow-type: tm+mt
-source-wordcount: '7838'
-ht-degree: 39%
+source-wordcount: '7797'
+ht-degree: 34%
 
 ---
 
-# Dynamic Media - ハイブリッドモードの設定 {#configuring-dynamic-media-hybrid-mode}
+# Dynamic Media — ハイブリッドモードの設定 {#configuring-dynamic-media-hybrid-mode}
 
 Dynamic Media — ハイブリッドを使用するには、有効にし、設定する必要があります。 Dynamic Media では、使用例に応じて、[サポートされる設定](#supported-dynamic-media-configurations)がいくつか用意されています。
 
 >[!NOTE]
 >
->Scene7 実行モードの Dynamic Media を設定して実行する場合は、[Dynamic Media - Scene7 モードの設定](/help/assets/config-dms7.md)を参照してください。
+>Scene7実行モードでDynamic Mediaを設定して実行する場合は、「 Dynamic Media - Scene7モードの設定](/help/assets/config-dms7.md) 」を参照してください。[
 >
 >ハイブリッド実行モードの Dynamic Media を設定して実行する場合は、このページの手順に従ってください。
 
@@ -45,7 +45,7 @@ Dynamic Media での[ビデオ](/help/assets/video.md)の操作方法を参照�
 
 >
 >
-詳しくは、[Experience Managerインスタンスの監視と保守](/help/sites-deploying/monitoring-and-maintaining.md)を参照してください。
+これらは、[Experience Managerインスタンス](/help/sites-deploying/monitoring-and-maintaining.md)の監視と保守に記載されています。
 
 ハイブリッド公開および配信は、Adobe Experience Manager に対して Dynamic Media によって追加される中心機能です。ハイブリッド公開を使用すると、画像、セット、ビデオなどのDynamic Mediaアセットを、Experience Managerの公開ノードからではなく、クラウドから配信できます。
 
@@ -140,7 +140,7 @@ Dynamic Mediaは、画像のみ、ビデオのみ、または画像とビデオ�
  </tbody>
 </table>
 
-## Dynamic Media の有効化 {#enabling-dynamic-media}
+## Dynamic Mediaの有効化 {#enabling-dynamic-media}
 
 [Dynamic Media はデフォルトで無効になっています。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)Dynamic Mediaの機能を活用するには、`publish`実行モードなどと同様に`dynamicmedia`実行モードを使用してDynamic Mediaを有効にする必要があります。 有効にする前に、必ず[技術要件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)を確認してください。
 
@@ -190,7 +190,7 @@ Dynamic Mediaを有効にするには、コマンドラインまたはクイッ�
 
 ### Experience Managerを別のポートまたはコンテキストパスにインストールした場合 {#if-you-installed-aem-to-a-different-port-or-context-path}
 
-アプリケーションサーバー](/help/sites-deploying/application-server-install.md)に[Experience Managerをデプロイし、Dynamic Mediaを有効にしている場合は、Externalizerで&#x200B;**self-domain**&#x200B;を設定する必要があります。 そうしないと、アセットのサムネールの生成がDynamic Mediaアセットに対して正しく機能しません。
+[Experience Managerをアプリケーションサーバー](/help/sites-deploying/application-server-install.md)にデプロイし、Dynamic Mediaを有効にする場合は、Externalizerで&#x200B;**self-domain**&#x200B;を設定する必要があります。 そうしないと、アセットのサムネールの生成がDynamic Mediaアセットに対して正しく機能しません。
 
 また、別のポートやコンテキストパスでquickstartを実行する場合は、**self-domain**&#x200B;も変更する必要があります。
 
@@ -198,21 +198,21 @@ Dynamic Mediaを有効にするには、コマンドラインまたはクイッ�
 
 Experience Manager:
 
-* [externalizer](/help/sites-developing/externalizer.md)の&#x200B;**self-domain**&#x200B;は、ポート番号とコンテキストパスの両方を取得するために使用されます。
+* [Externalizer](/help/sites-developing/externalizer.md)の&#x200B;**self-domain**&#x200B;は、ポート番号とコンテキストパスの両方を取得するために使用されます。
 * **self-domain**&#x200B;が設定されていない場合、ポート番号とコンテキストパスがJetty HTTPサービスから取得されます。
 
-Experience ManagerのQuickStart WARデプロイメントでは、ポート番号とコンテキストパスを導き出すことはできないので、**自己ドメイン**&#x200B;を設定する必要があります。 **self-domain**&#x200B;の設定方法については、[externalizerのドキュメント](/help/sites-developing/externalizer.md)を参照してください。
+Experience ManagerのQuickStart WARデプロイメントでは、ポート番号とコンテキストパスを導き出すことはできないので、**自己ドメイン**&#x200B;を設定する必要があります。 **自己ドメイン**&#x200B;の設定方法については、[Externalizerのドキュメント](/help/sites-developing/externalizer.md)を参照してください。
 
 >[!NOTE]
 [Experience Managerクイックスタートのスタンドアロンデプロイメント](/help/sites-deploying/deploy.md)では、**自己ドメイン**&#x200B;は通常、ポート番号とコンテキストパスを自動設定できるので、設定する必要はありません。 ただし、すべてのネットワークインターフェイスがオフになっている場合は、**self-domain**&#x200B;を設定する必要があります。
 
-## Dynamic Media の無効化  {#disabling-dynamic-media}
+## Dynamic Mediaを無効にする  {#disabling-dynamic-media}
 
 Dynamic Mediaはデフォルトでは有効になっていません。 ただし、以前にDynamic Mediaを有効にしておいた場合は、後で無効にすることができます。
 
 Dynamic Mediaを有効にした後で無効にするには、`-r dynamicmedia`実行モードフラグを削除します。
 
-**有効にした Dynamic Media を無効にするには：**
+**ダイナミックメディアを無効にするには：**
 
 1. コマンドラインでクイックスタートを起動するときに、次のいずれかを実行します。
 
@@ -228,7 +228,7 @@ Dynamic Mediaを有効にした後で無効にするには、`-r dynamicmedia`�
    Dynamic Media実行モードが無効になると、`cqdam.pyramid.tiff`レンディションを生成するワークフロー手順は自動的にスキップされます。 また、動的レンディションのサポートやその他のDynamic Mediaの機能も無効になります。
    また、Experience Managerサーバーを設定した後でDynamic Media実行モードが無効になった場合、その実行モードにアップロードされたすべてのアセットが無効になります。
 
-## （オプション）Dynamic Media のプリセットおよび設定を 6.3 から 6.5 にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
+## （オプション）Dynamic Mediaのプリセットと設定を6.3から6.5にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
 
 Experience Manager(Dynamic Media)を6.3から6.5にアップグレードする場合（ダウンタイムなしのデプロイメント機能を含むようになりました）、次のcurlコマンドを実行する必要があります。 このコマンドは、すべてのプリセットと設定をCRXDE Liteの`/etc`から`/conf`に移行します。
 
@@ -243,7 +243,7 @@ Experience Manager(Dynamic Media)を6.3から6.5にアップグレードする�
 
 `curl -u admin:admin -X POST https://<server_address>:<server_port>/libs/settings/dam/dm/presets.migratedmcontent.json`
 
-## 画像レプリケーションの設定 {#configuring-image-replication}
+## イメージレプリケーションの設定 {#configuring-image-replication}
 
 Dynamic Mediaの画像配信は、ビデオサムネールを含む画像アセットをExperience Managerオーサーから公開し、Adobeのオンデマンドレプリケーションサービス（レプリケーションサービスのURL）にレプリケートすることで機能します。 アセットは、オンデマンドの画像配信サービス（画像サービスのURL）を通じて配信されます。
 
@@ -268,15 +268,15 @@ PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール]**
 
 **認証を設定するには：**
 
-1. キーストアファイルとパスワードをまだ持っていない場合は、Adobeカスタマーケアに連絡してください。 この情報は、プロビジョニングに必要な部分です。 キーがアカウントに関連付けられます。
+1. キーストアファイルとパスワードをまだ持っていない場合は、Adobeカスタマーケアに連絡して、キーストアファイルとパスワードを伝えます。 この情報は、プロビジョニングに必要な部分です。 キーがアカウントに関連付けられます。
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL ユーザー]**&#x200B;をタップします。
+1. Experience Managerで、Experience Managerのロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL ユーザー]**&#x200B;に移動します。
 
-1. ユーザー管理ページで、**[!UICONTROL dynamic-media-replication]**&#x200B;ユーザーに移動し、をタップして開きます。
+1. ユーザー管理ページで、**[!UICONTROL dynamic-media-replication]**&#x200B;ユーザーに移動し、「 」を選択して開きます。
 
    ![dm-replication](assets/dm-replication.png)
 
-1. dynamic-media-replication のユーザー設定を編集ページで、「**[!UICONTROL キーストア]**」をタップし、「**[!UICONTROL キーストアを作成]**」をクリックします。
+1. Edit User Settings For dynamic-media-replicationページで、「**[!UICONTROL キーストア]**」タブを選択し、「**[!UICONTROL キーストアを作成]**」を選択します。
 
    ![dm-replication-keystore](assets/dm-replication-keystore.png)
 
@@ -290,23 +290,23 @@ PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール]**
 1. **[!UICONTROL dynamic-media-replication のユーザー設定を編集]**&#x200B;ページで「**秘密鍵をキーストアファイルから追加**」領域を展開し、以下の情報を追加します（下の画像を参照）。
 
    * 「**[!UICONTROL 新しいエイリアス]**」フィールドに、後でレプリケーション設定で使用するエイリアスの名前を入力します。 例えば、`replication`をエイリアスとして使用できます。
-   * 「**[!UICONTROL キーストアファイル]**」をタップします。アドビから提供されたキーストアファイルに移動して選択し、「**[!UICONTROL 開く]**」をタップします。
+   * **[!UICONTROL キーストアファイル]**&#x200B;を選択します。 Adobeから提供されたキーストアファイルに移動して選択し、「**[!UICONTROL 開く]**」を選択します。
    * 「**[!UICONTROL キーストアファイルのパスワード]**」フィールドに、キーストアファイルのパスワードを入力します。 このAdobeは、手順5で作成したキーストアパスワードではなく、プロビジョニング中に送信される「ようこそ」の電子メールに記載されているキーストアファイルパスワードが&#x200B;****&#x200B;です。 キーストアファイルパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
    * 「**[!UICONTROL 秘密鍵のパスワード]**」フィールドに、秘密鍵のパスワードを入力します（前の手順で指定したのと同じ秘密鍵のパスワードを使用できます）。 秘密鍵のパスワードは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のパスワードを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
    * 「**[!UICONTROL 秘密鍵のエイリアス]**」フィールドに、秘密鍵のエイリアスを入力します。例：`*companyname*-alias`。 秘密鍵のエイリアスは、プロビジョニング中にアドビから送信されたようこそメールに記載されています。秘密鍵のエイリアスを受け取っていない場合は、アドビのカスタマーケアに問い合わせてください。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
-1. 「**[!UICONTROL 保存して閉じる]**」をタップして、このユーザーに対する変更を保存します。
+1. 「**[!UICONTROL 保存して閉じる]**」を選択して、このユーザーに対する変更を保存します。
 
    次に、[レプリケーションエージェント](#configuring-the-replication-agent)を設定する必要があります。
 
 ### レプリケーションエージェントの設定 {#configuring-the-replication-agent}
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL デプロイ]** / **[!UICONTROL レプリケーション]** / **[!UICONTROL 作成者のエージェント]**&#x200B;をタップします。
-1. 作成者のエージェントページで、「**[!UICONTROL Dynamic Media ハイブリッド画像レプリケーション（s7delivery）]**」をタップします。
-1. 「**[!UICONTROL 編集]**」をタップします。
-1. 「**[!UICONTROL 設定]**」タブをタップし、次のように入力します。
+1. Experience Managerで、Experience Managerのロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL デプロイ]** / **[!UICONTROL レプリケーション]** / **[!UICONTROL 作成者のエージェント]**&#x200B;に移動します。
+1. オーサーのエージェントページで、「**[!UICONTROL Dynamic Mediaハイブリッド画像レプリケーション(s7delivery)]**」を選択します。
+1. 「**[!UICONTROL 編集]**」を選択します。
+1. 「**[!UICONTROL 設定]**」タブを選択し、次のように入力します。
 
    * **[!UICONTROL 有効]** - レプリケーションエージェントを有効にするには、このチェックボックスを選択します。
    * **[!UICONTROL 地域]**  — 適切な地域に設定します。北米、ヨーロッパ、アジア
@@ -318,13 +318,13 @@ PTIFF 作成のメモリ制限を変更するには、**[!UICONTROL ツール]**
 
    ![chlimage_1-509](assets/chlimage_1-509.png)
 
-1. 「**[!UICONTROL OK]**」をタップします。
+1. 「**[!UICONTROL OK]**」を選択します。
 
-### Dynamic Media 用のレプリケーションエージェントの検証 {#validating-the-replication-agent-for-dynamic-media}
+### Dynamic Mediaのレプリケーションエージェントの検証 {#validating-the-replication-agent-for-dynamic-media}
 
 Dynamic Mediaのレプリケーションエージェントを検証するには、以下の手順を実行します。
 
-「**[!UICONTROL 接続をテスト]**」をタップします。 次のように出力されます。
+「**[!UICONTROL 接続をテスト]**」を選択します。 次のように出力されます。
 
 ```shell
 11.03.2016 10:57:55 - Transferring content for ReplicationAction{type=TEST, path[0]='/content/dam', time=1457722675402, userId='admin', revision='null'}
@@ -343,7 +343,7 @@ Replication test succeeded
 >[!NOTE]
 次のいずれかを実行してチェックすることもできます。
 * レプリケーションログを調べて、アセットがレプリケートされていることを確認します。
-* 画像を公開する。画像をタップし、ドロップダウンメニューの「**[!UICONTROL ビューア]**」を選択し、ビューアプリセットを選択します。 **[!UICONTROL URL]**&#x200B;をクリックします。 画像が表示されることを確認するには、URLパスをコピーしてブラウザーに貼り付けます。
+* 画像を公開する。画像を選択し、ドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択し、ビューアプリセットを選択します。 **[!UICONTROL URL]**&#x200B;を選択します。 画像が表示されることを確認するには、URLパスをコピーしてブラウザーに貼り付けます。
 
 
 
@@ -435,14 +435,14 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 1. ユーザー管理ページに移動します。
    `localhost:4502/libs/granite/security/content/useradmin.html`
-1. ユーザー管理ページで、`dynamic-media-replication`ユーザーに移動し、をタップして開きます。
-1. 「**[!UICONTROL キーストア]**」タブをクリックします。「**[!UICONTROL キーストアを作成]**」ボタンが表示された場合は、前の「[認証の設定](#setting-up-authentication)」の手順をやり直す必要があります。
+1. ユーザー管理ページで、`dynamic-media-replication`ユーザーに移動し、「 」を選択して開きます。
+1. 「**[!UICONTROL キーストア]**」タブを選択します。 「**[!UICONTROL キーストアを作成]**」ボタンが表示された場合は、前の「[認証の設定](#setting-up-authentication)」の手順をやり直す必要があります。
 1. KeyStoreの設定をやり直す必要がある場合は、[レプリケーションエージェントの設定](/help/assets/config-dynamic.md#configuring-the-replication-agent)もう一度行う必要があります。
 
    s7delivery レプリケーションエージェントを再設定します。
    `localhost:4502/etc/replication/agents.author/s7delivery.html`
 
-1. 「**[!UICONTROL 接続をテスト]**」をタップして、設定が有効であることを確認します。
+1. 「**[!UICONTROL 接続をテスト]**」を選択すると、設定が有効であることを確認できます。
 
 #### 問題：公開エージェントが OAuth ではなく SSL を使用している {#problem-publish-agent-is-using-ssl-instead-of-oauth}
 
@@ -462,7 +462,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **解決策:**
 
-1. Experience Managerで、**[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**&#x200B;をクリックします。
+1. Experience Managerで、**[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**&#x200B;に移動します。
 
    `localhost:4502/crx/de/index.jsp`
 
@@ -473,7 +473,7 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
    `enableOauth=true`
 
-1. ページの左上隅付近にある「**[!UICONTROL すべて保存]**」をタップします。
+1. ページの左上隅付近にある「**[!UICONTROL すべて保存]**」を選択します。
 
 ### 設定のテスト {#testing-your-configuration}
 
@@ -486,20 +486,20 @@ Replication test to s7delivery:https://replicate-na.assetsadobe.com/is-publish
 
 **設定をテストするには：**
 
-1. 画像アセットをアップロードします（Assetsで、**[!UICONTROL 作成]** /**[!UICONTROL ファイル]**&#x200B;をタップし、ファイルを選択します）。
+1. 画像アセットをアップロードします（Assetsで、**[!UICONTROL 作成]** / **[!UICONTROL ファイル]**&#x200B;に移動し、ファイルを選択します）。
 1. ワークフローが完了するまで待ちます。
-1. 画像アセットを公開します（アセットを選択し、「**[!UICONTROL クイック公開]**」をタップします。）
+1. 画像アセットを公開します（アセットを選択し、「**[!UICONTROL クイック公開]**」を選択します）。
 1. 画像を開いて、その画像のレンディションに移動し、「**[!UICONTROL レンディション]**」をタップします。
 
    ![chlimage_1-510](assets/chlimage_1-510.png)
 
 1. 任意の動的レンディションを選択します。
-1. このアセットのURLを取得するには、「**[!UICONTROL URL]**」をクリックします。
+1. このアセットのURLを取得するには、「**[!UICONTROL URL]**」を選択します。
 1. 選択した URL に移動して画像が期待どおりに動作するかどうかを確認します。
 
 アセットが配信されたことをテストするもう 1 つの方法は、URL に req=exists を追加することです。
 
-## Dynamic Media クラウドサービスの設定 {#configuring-dynamic-media-cloud-services}
+## Dynamic MediaCloud Services {#configuring-dynamic-media-cloud-services}
 
 Dynamic MediaCloud Serviceは、画像やビデオ、ビデオ分析、ビデオエンコーディングなどのハイブリッド公開および配信をサポートします。
 
@@ -508,10 +508,10 @@ Dynamic MediaCloud Serviceは、画像やビデオ、ビデオ分析、ビデオ
 >[!NOTE]
 Dynamic MediaCloud Servicesを設定する前に、パブリッシュインスタンスを必ず設定しておいてください。 また、Dynamic MediaCloud Servicesを設定する前に、レプリケーションを設定する必要があります。
 
-Dynamic MediaCloud Servicesを設定するには：
+**Dynamic MediaCloud Servicesを設定するには：**
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL Cloud Services]** / **[!UICONTROL Dynamic Media設定(Pre-6.3)]**&#x200B;をタップします。
-1. Dynamic Media設定ブラウザーページの左側のウィンドウで、「**[!UICONTROL global]**」を選択し、「**[!UICONTROL 作成]**」をタップします。
+1. Experience Managerで、Experience Managerのロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL Cloud Services]** / **[!UICONTROL Dynamic Media設定（6.3以前）]**&#x200B;に移動します。
+1. Dynamic Media設定ブラウザーページの左側のウィンドウで、「**[!UICONTROL グローバル]**」を選択し、「**[!UICONTROL 作成]**」を選択します。
 1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ダイアログボックスで、「タイトル」フィールドにタイトルを入力します。
 1. ビデオ用に Dynamic Media を設定する場合は、次の操作をおこないます。
 
@@ -519,8 +519,8 @@ Dynamic MediaCloud Servicesを設定するには：
    * 「**[!UICONTROL ビデオサービスの URL]**」フィールドに、Dynamic Media ゲートウェイのビデオサービス URL を入力します。
 
 1. 画像用に Dynamic Media を設定する場合は、「**[!UICONTROL 画像サービスの URL]**」フィールドに Dynamic Media ゲートウェイの画像サービスの URL を入力します。
-1. 「**[!UICONTROL 保存]**」をタップして Dynamic Media 設定ブラウザーページに戻ります。
-1. グローバルナビゲーションコンソールにアクセスするには、Experience Managerロゴをタップします。
+1. 「**[!UICONTROL 保存]**」を選択して、「Dynamic Media設定ブラウザー」ページに戻ります。
+1. グローバルナビゲーションコンソールにアクセスするには、Experience Managerロゴを選択します。
 
 ## ビデオレポートの設定 {#configuring-video-reporting}
 
@@ -534,7 +534,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 1. 「新しい」オーサーノードで Dynamic Media 設定（6.3 以前）を設定する「前」に、それらのノードのすべてにビデオ分析プリセットパッケージをインストールします。************
 1. パッケージインストールの確認やデバッグをおこないます。
 
-### 最初のオーサーノードの設定後にビデオ分析プリセットパッケージを作成する {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
+### 最初のオーサーノードを設定した後に、ビデオ分析プリセットパッケージを作成します {#creating-a-video-analytics-preset-package-after-configuring-the-first-author-node}
 
 このタスクが完了すると、ビデオ分析プリセットを含むパッケージファイルが作成されます。 これらのプリセットには、レポートスイート、トラッキングサーバー、トラッキング名前空間およびExperience Cloud組織ID（使用可能な場合）が含まれます。
 
@@ -548,7 +548,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 1. パッケージをビルドします。
 1. ビデオ分析プリセットパッケージを後続の新しいオーサーノードで共有できるように、パッケージをダウンロードまたは共有します。
 
-### 他のオーサーノードを設定する前にビデオ分析プリセットパッケージをインストールする {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
+### 他のオーサーノードを設定する前に、ビデオ分析プリセットパッケージをインストールします {#installing-the-video-analytics-preset-package-before-you-configure-additional-author-nodes}
 
 このタスクは必ず、Dynamic Media 設定（6.3 以前）を設定する「前」に実行してください。******&#x200B;そうしないと、別の未使用レポートスイートが作成されます。 また、ビデオレポートが正しく機能し続ける場合でも、データの収集は最適化されません。
 
@@ -558,7 +558,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 1. ビデオ分析プリセットパッケージをインストールします。
 1. Dynamic Media 設定（6.3 以前）を設定します。
 
-### パッケージインストールの確認やデバッグ {#verifying-and-debugging-the-package-installation}
+### パッケージのインストールの確認とデバッグ {#verifying-and-debugging-the-package-installation}
 
 1. 以下のいずれかをおこなってパッケージのインストールを確認し、必要に応じてそのデバッグをおこないます。
 
@@ -586,8 +586,8 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
        trackingServer=aemvideodal.d2.sc.omtrdc.net
       ```
 
-   * **Experience Managerのビデオレポートツールでビデオ分析プリセットを確認しま**
-す。ツ **[!UICONTROL ール]** / **[!UICONTROL アセット]** /ビデオレポ **[!UICONTROL ート]**
+   * **Experience Managerのビデオレポートツールを使用してビデオ分析プリセットを確認しま**
+す。ツー **[!UICONTROL ル]** / **[!UICONTROL アセット]** /ビデオレポ **[!UICONTROL ートに移動します。]**
 
       `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -604,7 +604,7 @@ Dynamic Mediaハイブリッドを使用して、複数のインストールのE
 
    このエラーは、Dynamic Media 設定（6.3 以前）サービスの設定前にビデオレポートが実行された場合にも表示されます。
 
-### ビデオレポートの設定のトラブルシューティング {#troubleshooting-the-video-reporting-configuration}
+### ビデオレポート設定のトラブルシューティング {#troubleshooting-the-video-reporting-configuration}
 
 * インストール中に Analytics API サーバーへの接続がタイムアウトすることがあります。インストール中に接続が 20 回再試行されますが、それでも失敗します。この状況が発生すると、ログファイルに複数のエラーが記録されます。`SiteCatalystReportService` を検索。
 * 最初に分析プリセットパッケージをインストールしないと、新しいレベルスイートが作成されてしまう可能性があります。
@@ -635,16 +635,16 @@ JCRを通じて、設定プロセスの一環として独自のデフォルト�
 
    `https://<*server*>:<*port*>/crx/de/index.jsp#/conf/global/settings/dam/dm/imageserver/`
 
-1. 「**[!UICONTROL レプリケーション]**」タブをタップします。
-1. 「**[!UICONTROL 複製]**」をタップします。
+1. 「**[!UICONTROL レプリケーション]**」タブを選択します。
+1. 「**[!UICONTROL レプリケート]**」を選択します。
 
-## ビューアプリセットのレプリケート {#replicating-viewer-presets}
+## ビューアプリセットの複製 {#replicating-viewer-presets}
 
 ビューアプリセットを使用して&#x200B;*アセットを配信するには、ビューアプリセットをレプリケート/公開*&#x200B;する必要があります。 (URLを取得したりアセットのコードを埋め込んだりするには、すべてのビューアプリセットをアクティベート&#x200B;*および*をレプリケートする必要があります。
 詳しくは、[ビューアプリセットの公開](/help/assets/managing-viewer-presets.md#publishing-viewer-presets)を参照してください。
 
 >[!NOTE]
-デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択すると様々なレンディションが表示され、「**[!UICONTROL ビューア]**」を選択すると様々なビューアプリセットが表示されます。 表示される数を増減させることができます。[表示する画像プリセットの数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセットの数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
+デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択すると様々なレンディションが表示され、「**[!UICONTROL ビューア]**」を選択すると様々なビューアプリセットが表示されます。 表示される数を増減させることができます。[表示される画像プリセットの数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示されるビューアプリセットの数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
 
 ## レプリケーション用のアセットのフィルタリング {#filtering-assets-for-replication}
 
@@ -669,7 +669,7 @@ Dynamic Media以外のデプロイメントでは、Experience Managerオーサ�
   <tr>
    <td> </td>
    <td><strong>フィルター</strong></td>
-   <td><strong>MIME タイプ</strong></td>
+   <td><strong>MIMEタイプ</strong></td>
    <td><strong>レンディション</strong></td>
   </tr>
   <tr>
@@ -708,20 +708,20 @@ Dynamic Media以外のデプロイメントでは、Experience Managerオーサ�
 >[!NOTE]
 フィルターはMIMEタイプに適用され、パス固有にすることはできません。
 
-### ビデオ専用デプロイメントでのアセットフィルターのセットアップ {#setting-up-asset-filters-for-video-only-deployments}
+### ビデオのみのデプロイメント用のアセットフィルターのセットアップ {#setting-up-asset-filters-for-video-only-deployments}
 
 Dynamic Media をビデオのみに使用している場合は、次の手順に従ってレプリケーション用のアセットフィルターを設定します。
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL デプロイ]** / **[!UICONTROL レプリケーション]** / **[!UICONTROL 作成者のエージェント]**&#x200B;をタップします。
-1. 作成者のエージェントページで、「**[!UICONTROL デフォルトエージェント（公開）]**」をタップします。
-1. 「**[!UICONTROL 編集]**」をタップします。
+1. Experience Managerで、Experience Managerのロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL デプロイ]** / **[!UICONTROL レプリケーション]** / **[!UICONTROL 作成者のエージェント]**&#x200B;に移動します。
+1. 作成者のエージェントページで、「**[!UICONTROL デフォルトエージェント(publish)]**」を選択します。
+1. 「**[!UICONTROL 編集]**」を選択します。
 1. **[!UICONTROL エージェント設定]**&#x200B;ダイアログボックスの「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL 有効]**」をオンにしてエージェントを有効にします。
-1. 「**[!UICONTROL OK]**」をタップします。
-1. Experience Managerで、**[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL CRXDE Lite]**&#x200B;をタップします。
+1. 「**[!UICONTROL OK]**」を選択します。
+1. Experience Managerで、**[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**&#x200B;に移動します。
 1. 左側のフォルダーツリーで、`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`に移動します。
-1. **[!UICONTROL filter-video]** を探して右クリックし、「**[!UICONTROL コピー]**」を選択します。
+1. **[!UICONTROL filter-video]**&#x200B;を探して右クリックし、「**[!UICONTROL コピー]**」を選択します。
 1. 左側のフォルダーツリーで、`/etc/replication/agents.author/publish`に移動します。
-1. **[!UICONTROL filter-video]** を探して右クリックし、「**[!UICONTROL 貼り付け]**」を選択します。
+1. `jcr:content`を探して右クリックし、「**[!UICONTROL 貼り付け]**」を選択します。
 
 次の手順では、ビデオポスター画像と再生に必要なビデオメタデータを配信し、ビデオ自体をDynamic MediaCloud Serviceが配信するExperience Managerパブリッシュインスタンスを設定します。 また、このフィルターは、元のビデオと静的なサムネールのレンディションをレプリケーションから除外します（パブリッシュインスタンスでは不要）。
 
@@ -729,43 +729,41 @@ Dynamic Media をビデオのみに使用している場合は、次の手順に
 
 実稼動環境以外のデプロイメントで画像に Dynamic Media を使用している場合は、次の手順に従ってレプリケーション用のアセットフィルターを設定します。
 
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL デプロイ]** / **[!UICONTROL レプリケーション]** / **[!UICONTROL 作成者のエージェント]**&#x200B;をタップします。
-1. 作成者のエージェントページで、「**[!UICONTROL デフォルトエージェント（公開）]**」をタップします。
-1. 「**[!UICONTROL 編集]**」をタップします。
+1. Experience Managerで、Experience Managerのロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL デプロイ]** / **[!UICONTROL レプリケーション]** / **[!UICONTROL 作成者のエージェント]**&#x200B;に移動します。
+1. 作成者のエージェントページで、「**[!UICONTROL デフォルトエージェント(publish)]**」を選択します。
+1. 「**[!UICONTROL 編集]**」を選択します。
 1. **[!UICONTROL エージェント設定]**&#x200B;ダイアログボックスの「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL 有効]**」をオンにしてエージェントを有効にします。
-1. 「**[!UICONTROL OK]**」をタップします。
-1. Experience Managerで、**[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL CRXDE Lite]**&#x200B;をタップします。
+1. 「**[!UICONTROL OK]**」を選択します。
+1. Experience Managerで、**[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**&#x200B;に移動します。
 1. 左側のフォルダーツリーで、`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`に移動します。
 
    ![image-2018-01-16-10-22-40-410](assets/image-2018-01-16-10-22-40-410.png)
 
-1. **[!UICONTROL filter-images]** を探して右クリックし、「**[!UICONTROL コピー]**」を選択します。
+1. **[!UICONTROL filter-images]**&#x200B;を探して右クリックし、「**[!UICONTROL コピー]**」を選択します。
 1. 左側のフォルダーツリーで、`/etc/replication/agents.author/publish`に移動します。
-1. **[!UICONTROL jcr:content]**&#x200B;を探し、右クリックして&#x200B;**[!UICONTROL 作成]** / **[!UICONTROL ノードを作成]**&#x200B;を選択します。 タイプ`nt:unstructured`の名前`damRenditionFilters`を入力します。
-1. `damRenditionFilters`を探し、右クリックして「**[!UICONTROL 貼り付け]**」を選択します。
+1. `jcr:content`を探して右クリックし、**[!UICONTROL 作成]** /**[!UICONTROL ノードを作成]**&#x200B;に移動します。 タイプ`nt:unstructured`の名前`damRenditionFilters`を入力します。
+1. `damRenditionFilters`を探して右クリックし、「**[!UICONTROL 貼り付け]**」を選択します。
 
 これらの手順では、Experience Managerパブリッシュインスタンスを設定して、実稼動以外の環境に画像を配信します。 また、このフィルターは、元の画像と静的レンディションをレプリケーションから除外します。静的レンディションはパブリッシュインスタンスでは不要です。
 
 >[!NOTE]
 1 人の作成者に異なるフィルターが多数ある場合は、各エージェントに異なるユーザーを割り当てる必要があります。Granite コードでは、ユーザーごとに 1 つのフィルターというモデルが適用されます。フィルターの設定ごとに異なるユーザーを必ず使用する。
-1つのサーバーで複数のフィルターを使用しているか。 例えば、パブリッシュするレプリケーション用のフィルターと、s7delivery用の2番目のフィルターがあります。 その場合は、これら2つのフィルターに異なる&#x200B;**userId**&#x200B;が&#x200B;**jcr:content**&#x200B;ノードで割り当てられていることを確認する必要があります。 次の画像を参照してください。
+1つのサーバーで複数のフィルターを使用しているか。 例えば、パブリッシュするレプリケーション用のフィルターと、s7delivery用の2番目のフィルターがあります。 その場合は、これら2つのフィルターに異なる&#x200B;**userId**&#x200B;が`jcr:content`ノードで割り当てられていることを確認する必要があります。 次の画像を参照してください。
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
-### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
+### レプリケーション用のアセットフィルターのカスタマイズ（オプション） {#customizing-asset-filters-for-replication}
 
-（オプション）レプリケーション用のアセットフィルターをカスタマイズするには：
-
-1. Experience Managerで、Experience Managerのロゴをタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL CRXDE Lite]**&#x200B;をタップします。
+1. Experience Managerで、Experience Managerのロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]** / **[!UICONTROL 一般]** / **[!UICONTROL CRXDE Lite]**&#x200B;に移動します。
 1. 左側のフォルダーツリーで、`/etc/replication/agents.author/dynamic_media_replication/jcr:content/damRenditionFilters`に移動してフィルターを確認します。
 
    ![chlimage_1-511](assets/chlimage_1-511.png)
 
 1. フィルターの MIME タイプを定義するために、次のように MIME タイプを特定することができます。
 
-   左側のレールで`content > dam > <locate_your_asset> >  jcr:content > metadata`を展開し、表内で&#x200B;**[!UICONTROL dc:format]**&#x200B;を探します。
+   左側のレールで`content > dam > <locate_your_asset> >  jcr:content > metadata`を展開し、表内で`dc:format`を見つけます。
 
-   次の図は、あるアセットの dc:format へのパスの例を示しています。
+   次の図は、`dc:format`へのアセットのパスの例です。
 
    ![chlimage_1-512](assets/chlimage_1-512.png)
 
@@ -779,36 +777,21 @@ Dynamic Media をビデオのみに使用している場合は、次の手順に
 
    レプリケーション用のフィルターに使用できる文字は次のとおりです。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>使用する文字</strong></td>
-   <td><strong>レプリケーション用のアセットのフィルター方法</strong></td>
-  </tr>
-  <tr>
-   <td>*</td>
-   <td>ワイルドカード文字<br /> </td>
-  </tr>
-  <tr>
-   <td>+</td>
-   <td>レプリケーション用にアセットを含める</td>
-  </tr>
-  <tr>
-   <td>-</td>
-   <td>レプリケーションからアセットを除外する</td>
-  </tr>
- </tbody>
-</table>
+   | 使用する文字 | レプリケーション用のアセットのフィルター方法 |
+   | --- | --- |
+   | `*` | ワイルドカード文字 |
+   | `+` | レプリケーション用のアセットを含む |
+   | `-` | レプリケーションからアセットを除外 |
 
-`content/dam/<locate your asset>/jcr:content/renditions` に移動します。
+   `content/dam/<locate your asset>/jcr:content/renditions` に移動します。
 
-次の図は、あるアセットのレンディションの例を示しています。
+   次の図は、あるアセットのレンディションの例を示しています。
 
-![chlimage_1-513](assets/chlimage_1-4.png)
+   ![chlimage_1-513](assets/chlimage_1-4.png)
 
-上記の例を使用して、PTIFF（ピラミッドTIFF）のみをレプリケートする場合は、`cqdam`で始まるすべてのレンディションを含む`+cqdam,*`と入力します。 この例では、そのレンディションは`cqdam.pyramid.tiff`です。
+   上記の例を使用して、PTIFF（ピラミッドTIFF）のみをレプリケートする場合は、`cqdam`で始まるすべてのレンディションを含む`+cqdam,*`と入力します。 この例では、そのレンディションは`cqdam.pyramid.tiff`です。
 
-オリジナルを複製するだけの場合は、`+original`と入力します。
+   オリジナルを複製するだけの場合は、`+original`と入力します。
 
 ## Dynamic Media 画像サーバーの設定 {#configuring-dynamic-media-image-server-settings}
 
@@ -821,62 +804,31 @@ Dynamic Mediaは、有効にした後に[標準で動作します。](#enabling-
 
 Dynamic Media 画像サーバーを設定するには：
 
-1. Experience Managerの左上隅にある「**[!UICONTROL Adobe Experience Manager]**」をタップしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;をタップします。
-1. Adobe Experience Manager Webコンソール設定ページで、**[!UICONTROL OSGi]** /**[!UICONTROL Configuration]**&#x200B;をタップして、Experience Manager内で現在実行中のすべてのバンドルを一覧表示します。
+1. Experience Managerの左上隅にある「**[!UICONTROL Adobe Experience Manager]**」を選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;に移動します。
+1. Adobe Experience Manager Webコンソールの設定ページで、**[!UICONTROL OSGi]**/**[!UICONTROL Configuration]**&#x200B;に移動し、Experience Manager内で現在実行中のすべてのバンドルを一覧表示します。
 
    Dynamic Media Delivery Serverは、リスト内の次の名前の下に表示されます。
 
    * `Adobe CQ Scene7 ImageServer`
    * `Adobe CQ Scene7 PlatformServer`
 
-1. バンドルのリストで、Adobe CQ Scene7 ImageServerの右側にある「****&#x200B;を編集」アイコンをタップします。
+1. バンドルのリストで、Adobe CQ Scene7 ImageServerの右側にある「****&#x200B;を編集」アイコンを選択します。
 1. Adobe CQ Scene7 ImageServer ダイアログボックスで、次の設定値を指定します。
 
    >[!NOTE]
    通常は、デフォルト値を変更する必要はありません。 ただし、デフォルト値を変更した場合、変更を有効にするには、バンドルを再起動する必要があります。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>プロパティ</strong></td>
-   <td><strong>デフォルト値</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td>TcpPort.name</td>
-   <td><code><em>empty</em></code></td>
-   <td>ImageServerプロセスとの通信に使用するポート番号。デフォルトでは、空きポートは自動的に検出されます。</td>
-  </tr>
-  <tr>
-   <td>AllowRemoteAccess.name</td>
-   <td><code><em>empty</em></code></td>
-   <td><p>ImageServerプロセスへのリモートアクセスを許可または禁止します。falseの場合、画像サーバーはlocalhostでのみリッスンします。</p> <p>localhostを指すデフォルトのExternalizer設定では、特定のVMインスタンスの実際のドメインまたはIPアドレスを指定する必要があります。 理由は、localhostがVMの親システムを指しているためです。</p> <p>VMのドメインまたはIPアドレスは、自分自身を解決できるように、ホストファイルエントリを持つ必要があります。</p> </td>
-  </tr>
-  <tr>
-   <td>MaxRenderRgnPixels</td>
-   <td>16 MPixels</td>
-   <td>レンダリングされる最大サイズ（メガピクセル単位）。</td>
-  </tr>
-  <tr>
-   <td>MaxMessageSize</td>
-   <td>16 MBytes</td>
-   <td>配信されるメッセージの最大サイズ（メガピクセル単位）。</td>
-  </tr>
-  <tr>
-   <td>RandomAccessUrlTimeout</td>
-   <td>20</td>
-   <td>Image Serverが幅のあるタイル要求への応答をJCRが待機する時間（秒）のタイムアウト値。</td>
-  </tr>
-  <tr>
-   <td>WorkerThreads</td>
-   <td>10</td>
-   <td>ワーカースレッドの数。</td>
-  </tr>
- </tbody>
-</table>
+   | プロパティ | デフォルト値 | 説明 |
+   | --- | --- | --- |
+   | `TcpPort.name` | *`empty`* | ImageServerプロセスとの通信に使用するポート番号。デフォルトでは、空きポートは自動的に検出されます。 |
+   | `AllowRemoteAccess.name` | *`empty`* | ImageServerプロセスへのリモートアクセスを許可または禁止します。falseの場合、画像サーバーはlocalhostでのみリッスンします。<br> localhostを指すデフォルトのExternalizer設定では、特定のVMインスタンスの実際のドメインまたはIPアドレスを指定する必要があります。理由は、localhostがVMの親システムを指しているためです。<br>VMのドメインまたはIPアドレスは、自分自身を解決できるように、ホストファイルエントリを持つ必要があります。 |
+   | `MaxRenderRgnPixels` | 16 MP | レンダリングされる最大サイズ（メガピクセル単位）。 |
+   | `MaxMessageSize` | 16 MB | 配信されるメッセージの最大サイズ（メガピクセル単位）。 |
+   | `RandomAccessUrlTimeout` | 20 | Image Serverが幅のあるタイル要求への応答をJCRが待機する時間（秒）のタイムアウト値。 |
+   | `WorkerThreads` | 10 | ワーカースレッドの数。 |
 
-1. 「**[!UICONTROL 保存]**」をタップします。
-1. バンドルのリストで、Adobe CQ Scene7 PlatformServerの右側にある「****&#x200B;を編集」アイコンをタップします。
+1. 「**[!UICONTROL 保存]**」を選択します。
+1. バンドルのリストで、Adobe CQ Scene7 PlatformServerの右側にある「****&#x200B;を編集」アイコンを選択します。
 1. Adobe CQ Scene7 PlatformServer ダイアログボックスで、次のデフォルト値のオプションを設定します。
 
    >[!NOTE]
@@ -901,68 +853,25 @@ Dynamic Media 画像サーバーを設定するには：
 
 下の表に記載されているプロパティの値を変更するには、新しい値を入力します。
 
-デフォルトのマニフェストの変更が完了したら、ページの左上隅にある「**[!UICONTROL すべて保存]**」をタップします。
+デフォルトのマニフェストの変更が完了したら、ページの左上隅にある「**[!UICONTROL すべて保存]**」を選択します。
 
-必ず「**[!UICONTROL アクセス制御]**」タブ（「プロパティ」タブの右側）をタップし、全員およびdynamic-media-replicationユーザーのアクセス制御権限を`jcr:read`に設定してください。
+必ず「**[!UICONTROL アクセス制御]**」タブ（「プロパティ」タブの右側）を選択し、全員およびdynamic-media-replicationユーザーのアクセス制御権限を`jcr:read`に設定してください。
 
 ![「CRXDE Lite」でのImage Serverの設定と「アクセス制御」タブの設定](assets/configimageservercrxdeliteaccesscontroltab.png)
 
 マニフェスト設定とそのデフォルト値の表：
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>プロパティ</strong></td>
-   <td><strong>デフォルト値</strong></td>
-   <td><strong>説明</strong></td>
-  </tr>
-  <tr>
-   <td>bkgcolor</td>
-   <td>FFFFFF</td>
-   <td><p>デフォルトの背景色。実際の画像データが含まれない返信画像のすべての領域を埋めるために使用される RGB 値。</p> <p>画像サービング API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api">BkgColor</a> も参照してください。</p> </td>
-  </tr>
-  <tr>
-   <td>defaultpix</td>
-   <td>300,300</td>
-   <td><p>デフォルトの表示サイズ。サーバーによって、返信画像がこの幅と高さ以内になるように制限されます（要求で wid=、hei= または scl= を使用して表示サイズが明示的に指定されていない場合）。</p> <p>2 つの整数値（0 以上）をコンマ区切りで指定します。幅と高さをピクセル単位で指定します。どちらかまたは両方の値を0に設定して、非拘束のままにすることができます。 ネストされた要求または埋め込まれた要求に対しては適用されません。</p> <p>画像サービング API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api">DefaultPix</a> も参照してください。</p> <p>ただし、通常はビューアプリセットまたは画像プリセットを使用してアセットを配信します。DefaultPix はビューアプリセットや画像プリセットを使用していないアセットに適用されます。</p> </td>
-  </tr>
-  <tr>
-   <td>defaultthumbpix</td>
-   <td>100,100</td>
-   <td><p>デフォルトのサムネールのサイズ。サムネール要求（req=tmb）の attribute::DefaultPix の代わりに使用されます。</p> <p>サーバーは、返信画像をこの幅と高さ以下に制限します。 このアクションは、サムネール要求(req=tmb)でサイズが明示的に指定されておらず、「wid=」、「hei=」または「scl=」を使用してビューサイズを明示的に指定していない場合にtrueになります。</p> <p>2 つの整数値（0 以上）をコンマ区切りで指定します。幅と高さをピクセル単位で指定します。どちらかまたは両方の値を0に設定して、非拘束のままにすることができます。 </p> <p>ネストされた要求または埋め込まれた要求に対しては適用されません。</p> <p>画像サービング API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api">DefaultThumbPix</a> も参照してください。 </p> </td>
-  </tr>
-  <tr>
-   <td>expiration</td>
-   <td>36000000</td>
-   <td><p>デフォルトのクライアントキャッシュの存続時間。特定のカタログレコードに有効な catalog::Expiration 値が含まれていない場合のデフォルトの有効期限間隔を指定します。</p> <p>0 以上の実数。返信データが生成されてから有効期限が切れるまでの時間数（ミリ秒単位）。0 に設定すると、常に返信画像が即座に有効期限切れになります。実質的に、クライアントキャッシュが無効になります。デフォルトでは、この時間は 10 時間に設定されています。つまり、新しい画像が公開される場合に、古い画像がユーザーのキャッシュから削除されるまで 10 時間かかります。より早くキャッシュをクリアする必要がある場合は、カスタマーケアに問い合わせてください。</p> <p>画像サービング API の<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html">有効期限</a>も参照してください。</p> </td>
-  </tr>
-  <tr>
-   <td>jpegquality</td>
-   <td>80</td>
-   <td><p>デフォルトの JPEG エンコード属性。JPEG 返信画像のデフォルト属性を指定します。</p> <p>整数とフラグをコンマ区切りで指定します。1 つ目の値には 1～100 の範囲で画質を定義します。2つ目の値は、通常の動作の場合は0に、JPEGエンコーダーで使用されるRGB色度のダウンサンプリングを無効にする場合は1に設定します。</p> <p>画像サービング API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api">JpegQuality</a> も参照してください。</p> </td>
-  </tr>
-  <tr>
-   <td>maxpix</td>
-   <td>2000,2000</td>
-   <td><p>返信画像のサイズ制限。クライアントに返される返信画像の最大の幅と高さ。</p> <p>要求によって、幅または高さがattribute::MaxPixより大きい応答イメージが生成された場合、サーバはエラーを返します。</p> <p>画像サービング API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api">MaxPix</a> も参照してください。</p> </td>
-  </tr>
-  <tr>
-   <td>resmode</td>
-   <td>SHARP2</td>
-   <td><p>デフォルトの再サンプリングモード。画像データの拡大縮小に使用するデフォルトの再サンプリングおよび補間属性を指定します。</p> <p>resMode= が要求内で指定されていない場合に使用されます。</p> <p>使用できる値は、BILIN、BICUB、SHARP2です。</p> <p>列挙bilinの場合は2、bicubの場合は3、sharp2補間モードの場合は4に設定します。最適な結果を得るには、 sharp2を使用します。</p> <p>画像サービング API の <a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api">ResMode</a> も参照してください。</p> </td>
-  </tr>
-  <tr>
-   <td>resolution</td>
-   <td>72</td>
-   <td><p>デフォルトのオブジェクト解像度。特定のカタログレコードに有効な catalog::Resolution 値が含まれていない場合のデフォルトのオブジェクト解像度を指定します。</p> <p>0より大きい実数。 通常は、1インチあたりのピクセル数で表されますが、他の単位（1メートルあたりのピクセル数など）で表すこともできます。</p> <p>画像サービング API の<a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api">解像度</a>も参照してください。</p> </td>
-  </tr>
-  <tr>
-   <td>thumbnailtime</td>
-   <td>1%,11%,21%,31%,41%,51%,61%,71%,81%,91%</td>
-   <td>これらの値は、ビデオ再生時間のスナップショットを表し、<a href="https://www.encoding.com/">encoding.com</a>に渡されます。 詳しくは、<a href="/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode">ビデオサムネールについて</a>を参照してください。</td>
-  </tr>
- </tbody>
-</table>
+| プロパティ | デフォルト値 | 説明 |
+| --- | --- | --- |
+| `bkgcolor` | `FFFFFF` | デフォルトの背景色。実際の画像データが含まれない返信画像のすべての領域を埋めるために使用される RGB 値。画像サービング API の [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api) も参照してください。 |
+| `defaultpix` | `300,300` | デフォルトの表示サイズ。サーバーによって、返信画像がこの幅と高さ以内になるように制限されます（要求で wid=、hei= または scl= を使用して表示サイズが明示的に指定されていない場合）。<br>0以上の2つの整数をコンマで区切って指定します。幅と高さ（ピクセル単位）。どちらかまたは両方の値を0に設定して、非拘束のままにすることができます。 ネストされた要求または埋め込まれた要求に対しては適用されません。<br>画像サービング API の [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api) も参照してください。<br>ただし、通常はビューアプリセットまたは画像プリセットを使用してアセットを配信します。DefaultPix はビューアプリセットや画像プリセットを使用していないアセットに適用されます。 |
+| `defaultthumbpix` | `100,100` | デフォルトのサムネールのサイズ。サムネールリクエスト(`req=tmb`)にattribute::DefaultPixの代わりに使用されます。<br>サーバーは、返信画像をこの幅と高さ以下に制限します。このアクションは、サムネール要求(`req=tmb`)でサイズが明示的に指定されておらず、`wid=`、`hei=`または`scl=`を使用してビューサイズを明示的に指定していない場合にtrueになります。<br>0以上の2つの整数をコンマで区切って指定します。幅と高さ（ピクセル単位）。どちらかまたは両方の値を0に設定して、非拘束のままにすることができます。<br>ネストされた要求または埋め込まれた要求に対しては適用されません。<br>画像サービング API の [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) も参照してください。 |
+| `expiration` | `36000000` | デフォルトのクライアントキャッシュの存続時間。特定のカタログレコードに有効な catalog::Expiration 値が含まれていない場合のデフォルトの有効期限間隔を指定します。<br>0 以上の実数。返信データが生成されてから有効期限が切れるまでの時間数（ミリ秒単位）。0 に設定すると、常に返信画像が即座に有効期限切れになります。実質的に、クライアントキャッシュが無効になります。デフォルトでは、この時間は 10 時間に設定されています。つまり、新しい画像が公開される場合に、古い画像がユーザーのキャッシュから削除されるまで 10 時間かかります。より早くキャッシュをクリアする必要がある場合は、カスタマーケアに問い合わせてください。<br>画像サービング API の[有効期限](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html)も参照してください。 |
+| `jpegquality` | `80` | デフォルトの JPEG エンコード属性。JPEG 返信画像のデフォルト属性を指定します。<br>整数とフラグ（コンマ区切り）。最初の値は1 ～ 100の範囲で、画質を定義します。2つ目の値は、通常の動作の場合は0に、JPEGエンコーダーで使用されるRGB色度のダウンサンプリングを無効にする場合は1に設定します。<br>画像サービング API の [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) も参照してください。 |
+| `maxpix` | `2000,2000` | 返信画像のサイズ制限。クライアントに返される返信画像の最大の幅と高さ。<br>要求によって、幅または高さがattribute::MaxPixより大きい応答イメージが生成された場合、サーバはエラーを返します。<br>画像サービング API の [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api) も参照してください。 |
+| `resmode` | `SHARP2` | デフォルトの再サンプリングモード。画像データの拡大縮小に使用するデフォルトの再サンプリングおよび補間属性を指定します。<br>リクエストで `resMode=` が指定されていない場合に使用されます。<br>使用できる値には、 `BILIN` 、また `BICUB`はがあります `SHARP2`。<br>列挙`bilin`の場合は2、`bicub`の場合は3、`sharp2`の場合は4に設定します。 最良の結果を得るには`sharp2`を使用します。<br>画像サービング API の [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) も参照してください。 |
+| `resolution` | `72` | デフォルトのオブジェクト解像度。特定のカタログレコードに有効な catalog::Resolution 値が含まれていない場合のデフォルトのオブジェクト解像度を指定します。<br>0より大きい実数。通常は、1インチあたりのピクセル数で表されますが、他の単位（1メートルあたりのピクセル数など）で表すこともできます。<br>画像サービング API の[解像度](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api)も参照してください。 |
+| `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | これらの値は、ビデオ再生時間のスナップショットを表し、[encoding.com](https://www.encoding.com/)に渡されます。 詳しくは、[ビデオのサムネール](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)についてを参照してください。 |
 
 ## Dynamic Media カラーマネジメントの設定 {#configuring-dynamic-media-color-management}
 
@@ -1006,11 +915,11 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
 
    ![chlimage_1-514](assets/chlimage_1-514.png)
 
-1. 「**[!UICONTROL プロパティ]**」タブの下部にスクロールして、色補正プロパティを追加します。 次の表に示すプロパティ名、タイプ、値を手動で入力します。 値を入力したら、「**[!UICONTROL 追加]**」をタップし、「**[!UICONTROL すべて保存]**」をタップして値を保存します。
+1. 「**[!UICONTROL プロパティ]**」タブの下部にスクロールして、色補正プロパティを追加します。 次の表に示すプロパティ名、タイプ、値を手動で入力します。 値を入力したら、「**[!UICONTROL 追加]**」を選択し、「**[!UICONTROL すべて保存]**」を選択して値を保存します。
 
    カラー補正プロパティは、**カラー補正プロパティ**&#x200B;の表に記載しています。カラー補正プロパティに割り当てることができる値は、**カラープロファイル**&#x200B;の表に記載しています。
 
-   例えば、**[!UICONTROL 名前]**&#x200B;に`iccprofilecmyk`を追加し、**[!UICONTROL タイプ]** `String`を選択して、`WebCoated`を&#x200B;**[!UICONTROL 値]**&#x200B;として追加します。 次に、「**[!UICONTROL 追加]**」をタップし、「**[!UICONTROL すべて保存]**」をタップして値を保存します。
+   例えば、**[!UICONTROL 名前]**&#x200B;に`iccprofilecmyk`を追加し、**[!UICONTROL タイプ]** `String`を選択して、`WebCoated`を&#x200B;**[!UICONTROL 値]**&#x200B;として追加します。 次に、「**[!UICONTROL 追加]**」を選択し、「**[!UICONTROL すべて保存]**」を選択して値を保存します。
 
    ![chlimage_1-515](assets/chlimage_1-515.png)
 
@@ -1258,7 +1167,7 @@ Dynamic Mediaのカラーマネジメント機能を使用するには、機能�
  </tbody>
 </table>
 
-1. 「**[!UICONTROL すべて保存]**」をタップします。
+1. 「**[!UICONTROL すべて保存]**」を選択します。
 
 例えば、**[!UICONTROL iccprofilergb]**&#x200B;を`sRGB`に、**[!UICONTROL iccprofilecmyk]**&#x200B;を&#x200B;**[!UICONTROL WebCoated]**&#x200B;に設定できます。
 
