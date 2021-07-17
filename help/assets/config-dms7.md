@@ -9,10 +9,10 @@ docset: aem65
 role: User, Admin
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 設定，Scene7モード
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+source-git-commit: 752eacca9d29b272c040b48c35e4717b13e34b12
 workflow-type: tm+mt
 source-wordcount: '6160'
-ht-degree: 54%
+ht-degree: 55%
 
 ---
 
@@ -270,7 +270,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 1. ページの左上隅で、「**[!UICONTROL CRXDE Lite]**」を選択してExperience Managerに戻ります。
 
-#### サポートされていない形式のMIMEタイプの追加 {#adding-mime-types-for-unsupported-formats}
+#### サポートされていない形式のカスタム MIME タイプの追加 {#adding-mime-types-for-unsupported-formats}
 
 Experience Manager Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Liteに追加する新しいノードが、MIMEタイプを`image_`の前に移動して、Experience Managerによって削除されないようにします。 また、有効値が&#x200B;**[!UICONTROL false]**&#x200B;に設定されていることを確認してください。
 
