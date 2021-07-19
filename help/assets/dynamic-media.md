@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media の操作
+title: Dynamic Mediaの使用
 description: Dynamic Media を使用して、Web、モバイルおよびソーシャルサイトで使用するためにアセットを配信する方法を学習します。
 uuid: 4dc0f436-d20e-4e8b-aeff-5515380fa44d
 contentOwner: Rick Brough
@@ -10,10 +10,10 @@ discoiquuid: a8063d43-923a-42ac-9a16-0c7fadd8f73f
 role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: コラボレーション、アセット管理
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 89%
+source-wordcount: '422'
+ht-degree: 80%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 89%
 
 [Dynamic Media ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
-ダイナミックメディアは、ズーム、360 度スピン、ビデオなどのインタラクティブな閲覧エクスペリエンスを提供します。ダイナミックメディアは Adobe Experience Manager デジタルアセット管理（AEM アセット）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡易化し、効率化します。
+Dynamic Media は、ズーム、360 度スピン、ビデオなどのインタラクティブな視聴エクスペリエンスを提供します。Dynamic Media は Adobe Experience Manager デジタルアセット管理（AEM Assets）ソリューションのワークフローを独自に取り込むことで、デジタルキャンペーン管理プロセスを簡素化および効率化します。
 
 <!-- >ARTICLE IS MISSING. GIVES 404 [!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 89%
 
 ## Dynamic Media の機能 {#what-you-can-do-with-dynamic-media}
 
-Dynamic Media では、公開前のアセットを管理できます。一般的なアセットの操作方法については、[デジタルアセットの操作](manage-assets.md)で詳しく説明しています。一般的なトピックには、アセットのアップロード、ダウンロード、編集および公開、プロパティの表示と編集、アセットの検索が含まれます。
+Dynamic Media では、公開前のアセットを管理できます。一般的なアセットの操作方法について詳しくは、[デジタルアセットの操作](manage-assets.md)で説明しています。 一般的なトピックには、アセットのアップロード、ダウンロード、編集および公開、プロパティの表示と編集、アセットの検索が含まれます。
 
 Dynamic Media 限定の機能は次のとおりです。
 
@@ -42,11 +42,11 @@ Dynamic Media 限定の機能は次のとおりです。
 
 * [スピンセット](spin-sets.md)
 * [ビデオ](video.md)
-* [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
+* [Dynamic Mediaアセットの配信](delivering-dynamic-media-assets.md)
 * [アセットの管理](managing-assets.md)
 * [クイックビューを使用したカスタムポップアップの作成](custom-pop-ups.md)
 
-[Dynamic Media の設定](administering-dynamic-media.md)も参照してください。
+[Dynamic Media](administering-dynamic-media.md)の設定も参照してください。
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Dynamic Media が有効（オン）になっているかどうかは、次の特
 * 画像セット、スピンセット、混在メディアセットを使用できる。
 * PTIFF レンディションが作成されている。
 
-Dynamic Media [が有効](config-dynamic.md#enabling-dynamic-media)の場合、画像アセットをクリックしたときのアセットの表示は異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
+Dynamic Media [有効](config-dynamic.md#enabling-dynamic-media)に設定されている場合、画像アセットを選択したときのアセットの表示は異なります。 Dynamic Media では、オンデマンドの HTML5 ビューアが使用されます。
 
 ### 動的レンディション {#dynamic-renditions}
 
@@ -76,7 +76,7 @@ Dynamic Media [が有効](config-dynamic.md#enabling-dynamic-media)の場合、�
 
 ### PTIFF レンディション {#ptiff-renditions}
 
-Dynamic Media 対応のアセットには `pyramid.tiffs` が含まれています。
+Dynamic Media対応のアセットには`pyramid.tiffs`が含まれます。
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
