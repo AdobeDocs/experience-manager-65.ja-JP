@@ -4,10 +4,10 @@ description: 流体エクスペリエンス機能リスト
 index: n
 feature: オーサリング
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例にのみ対処す�
 >
 >AEM Fluid Experiencesは、AEM機能のサブセットです。 これらのテーブルのにリンクされる機能には、AEMに含まれる追加の機能が含まれる場合がありますが、AEM Fluid Experiencesには含まれません。
 
-## リポジトリ機能{#repository-features}
+## リポジトリの機能 {#repository-features}
 
 |  |
 |---|
@@ -43,7 +43,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例にのみ対処す�
 | [重複の検出](/help/assets/duplicate-detection.md) |
 | [スマートタグ](/help/assets/enhanced-smart-tags.md) |
 
-## アクセス、API、配信機能{#access-api-and-delivery-features}
+## アクセス、API、配信機能 {#access-api-and-delivery-features}
 
 |  |
 |---|
@@ -56,7 +56,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例にのみ対処す�
 | [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) |
 | [Dynamic Media](/help/assets/dynamic-media.md) |
 
-## 管理および統合機能{#admin-and-integration-features}
+## 管理および統合機能 {#admin-and-integration-features}
 
 |  |
 |---|
@@ -72,7 +72,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例にのみ対処す�
 | [ワークフロー](/help/sites-administering/workflows-starting.md) |
 | 接続（クラウドサービス） |
 
-## 分析とパーソナライゼーション{#analytics-and-personalization}
+## Analyticsとパーソナライゼーション {#analytics-and-personalization}
 
 |  |
 |---|
@@ -80,7 +80,7 @@ AEM Fluid Experiencesは、ヘッドレス配信の使用例にのみ対処す�
 | Adobe Analyticsによるインサイトの強化 |
 | Adobe Targetによるインサイトの強化 |
 
-## 詳細 {#learn-more}
+## 詳しく見る {#learn-more}
 
 * [流動的なエクスペリエンスのユースケース](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
 * [AEM Content Service:なに、なぜ、どのように？](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
