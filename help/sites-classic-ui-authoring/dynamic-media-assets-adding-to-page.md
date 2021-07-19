@@ -1,19 +1,19 @@
 ---
-title: ページへの Dynamic Media アセットの追加
+title: ページへのDynamic Mediaアセットの追加
 description: Webサイトで使用するアセットにDynamic Media機能を追加するには、Dynamic Mediaまたはインタラクティブメディアコンポーネントをページに直接追加します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: d2ebfca5-19f9-4fa5-b142-b978f46a912f
-source-git-commit: 1349d9929fc64ad46fc91f0d189bab54cca9de81
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '1668'
-ht-degree: 41%
+ht-degree: 43%
 
 ---
 
-# ページへの Dynamic Media アセットの追加{#adding-dynamic-media-assets-to-pages}
+# ページへのDynamic Mediaアセットの追加{#adding-dynamic-media-assets-to-pages}
 
 Webサイトで使用するアセットにDynamic Media機能を追加するには、**[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントをページに直接追加します。 **[!UICONTROL デザイン]**&#x200B;モードに入り、Dynamic Mediaコンポーネントを有効にします。 次に、これらのコンポーネントをページに追加し、そのコンポーネントにアセットを追加できます。Dynamic Mediaとインタラクティブメディアコンポーネントはスマートで、追加する画像またはビデオの有無が判別され、それに応じて使用可能なオプションが変わります。
 
@@ -23,14 +23,16 @@ Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Med
 >
 >画像マップは追加設定なしでカルーセルバナーで使用できます。
 
-## ページへの Dynamic Media コンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
+## ページへのDynamic Mediaコンポーネントの追加 {#adding-a-dynamic-media-component-to-a-page}
 
 [!UICONTROL Dynamic Media]または[!UICONTROL インタラクティブメディア]コンポーネントをページに追加する操作は、任意のページにコンポーネントを追加する操作と同じです。 [!UICONTROL Dynamic Media]と[!UICONTROL インタラクティブメディア]のコンポーネントについて、以降の節で詳しく説明します。
 
 ページにダイナミックメディアコンポーネント／ビューアを追加するには：
 
 1. Dynamic Media コンポーネントを追加するページを Experience Manager で開きます。
-1. Dynamic Mediaコンポーネントが使用できない場合は、[!UICONTROL サイドキック]のルーラーをクリックして&#x200B;**[!UICONTROL デザイン]**&#x200B;モードに入り、**[!UICONTROL 編集]** parsysをクリックし、**[!UICONTROL Dynamic Media]**&#x200B;を選択してDynamic Mediaコンポーネントを使用可能にします。
+1. 使用可能なDynamic Mediaコンポーネントがない場合は、[!UICONTROL サイドキック]でルーラーを選択して、**[!UICONTROL デザイン]**&#x200B;モードに入ります。
+1. **[!UICONTROL Edit]** parsysを選択します。
+1. **[!UICONTROL Dynamic Media]**&#x200B;を選択して、Dynamic Mediaコンポーネントを使用可能にします。
 
    >[!NOTE]
    >
@@ -38,8 +40,9 @@ Adobe Experience ManagerをWCMとして使用している場合は、Dynamic Med
 
 1. [!UICONTROL サイドキック]の鉛筆アイコンをクリックして、**[!UICONTROL 編集]**&#x200B;モードに戻ります。
 1. **[!UICONTROL Dynamic Media]**&#x200B;または&#x200B;**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを、サイドキックの&#x200B;**[!UICONTROL その他]**&#x200B;グループからページの目的の場所にドラッグします。
-1. 「**[!UICONTROL 編集]**」をクリックして、コンポーネントを開きます。
-1. [](#dynamic-media-component)コンポーネントの編集を必要に応じておこない、「**[!UICONTROL OK]**」をクリックして変更内容を保存します。
+1. 「**[!UICONTROL 編集]**」を選択して、コンポーネントを開きます。
+1. [必要に応じてコン](#dynamic-media-component) ポーネントを編集します。
+1. 「**[!UICONTROL OK]**」を選択して、変更内容を保存します。
 
 ## Dynamic Media コンポーネント {#dynamic-media-components}
 
@@ -100,9 +103,9 @@ Dynamic Mediaコンポーネントはスマートです。追加する画像が�
 
 コンポーネント内の「**[!UICONTROL 編集]**」をクリックして、次の「[!UICONTROL 詳細設定]」を編集できます。
 
-**[!UICONTROL タイトル]**  — 画像のタイトルを変更します。
+**[!UICONTROL タイトル]** - 画像のタイトルを変更します。
 
-**[!UICONTROL 代替テキスト]**  — グラフィックの表示をオフにしているユーザー向けのタイトルを画像に追加します。
+**[!UICONTROL 代替テキスト]** - グラフィックの表示をオフにしているユーザー向けのタイトルを画像に追加します。
 
 このオプションは、画像セット、スピンセットまたは混在メディアセットを表示している場合には使用できません。
 
@@ -112,7 +115,7 @@ Dynamic Mediaコンポーネントはスマートです。追加する画像が�
 
 **[!UICONTROL 幅と高さ]**  — 画像を固定サイズで表示する場合は、値をピクセル単位で入力します。これらの値を空にすると、アダプティブなアセットになります。
 
-#### ビデオを操作する場合{#when-working-with-video}
+#### ビデオを操作する場合 {#when-working-with-video}
 
 **[!UICONTROL Dynamic Media]**&#x200B;コンポーネントを使用して、Webページにダイナミックビデオを追加します。コンポーネントの編集時に、ページ上でビデオを再生するための定義済みのビデオビューアプリセットを使用するように選択できます。
 
@@ -128,11 +131,11 @@ Dynamic Mediaコンポーネントはスマートです。追加する画像が�
 
 コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の「[!UICONTROL 詳細]」設定を編集できます。
 
-**[!UICONTROL タイトル]**  — ビデオのタイトルを変更します。
+**[!UICONTROL タイトル]** - ビデオのタイトルを変更します。
 
 **[!UICONTROL 幅と高さ]**  — ビデオを固定サイズで表示する場合は、値をピクセル単位で入力します。これらの値を空にすると、アダプティブな画像になります。
 
-#### セキュアビデオの配信方法 {#how-to-delivery-secure-video}
+#### セキュアビデオの配信 {#how-to-delivery-secure-video}
 
 Experience Manager6.2では、[FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480)をインストールする際に、ビデオを安全なSSL接続(HTTPS)と安全でない接続(HTTP)のどちらで配信するかを制御できます。 デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆に、WebページがHTTP上にある場合、ビデオはHTTP経由で配信されます。 通常、このデフォルトの動作は問題なく、設定を変更する必要はありません。 ただし、このデフォルトの動作を上書きすることはできます。 URLパスの末尾または埋め込みコードスニペット内の他のビューア設定パラメータのリストに`VideoPlayer.ssl=on`を追加します。 どちらのアクションでも、ビデオの安全な配信が強制されます。
 
@@ -148,16 +151,16 @@ Experience Manager6.2では、[FP-13480](https://experience.adobe.com/#/download
 
 コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の&#x200B;**[!UICONTROL 一般]**&#x200B;設定を編集できます。
 
-**[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。ビューアプリセットを使用するには、あらかじめ公開する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
+**[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。ビューアプリセットを使用するには、あらかじめ公開する必要があります。[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
-**[!UICONTROL タイトル]**  — ビデオのタイトルを変更します。
+**[!UICONTROL タイトル]** - ビデオのタイトルを変更します。
 
 **[!UICONTROL 幅と高さ]**  — ビデオを固定サイズで表示する場合は、値をピクセル単位で入力します。これらの値を空にすると、アダプティブな画像になります。
 
 コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の&#x200B;**[!UICONTROL 買い物かごに追加]**&#x200B;設定を編集できます。
 
-**[!UICONTROL 製品アセットを表示]**  — デフォルトでは、この値が選択されています。製品アセットには、コマースモジュールで定義された製品の画像が表示されます。製品アセットを表示しない場合はチェックマークをオフにします。
+**[!UICONTROL 製品アセットを表示]** - デフォルトでは、この値が選択されています。製品アセットには、コマースモジュールで定義された製品の画像が表示されます。製品アセットを表示しない場合はチェックマークをオフにします。
 
-**[!UICONTROL 製品価格を表示]**  — デフォルトでは、この値が選択されています。製品価格には、コマースモジュールで定義されたアイテムの価格が表示されます。製品価格を表示しない場合はチェックマークをオフにします。
+**[!UICONTROL 製品価格を表示]** - デフォルトでは、この値が選択されています。製品価格には、コマースモジュールで定義されたアイテムの価格が表示されます。製品価格を表示しない場合はチェックマークをオフにします。
 
-**[!UICONTROL 製品フォームを表示]**  — デフォルトでは、この値は選択されていません。製品フォームには、サイズや色など製品のバリエーションが含まれます。製品のバリエーションを表示しない場合はチェックマークをオフにします。
+**[!UICONTROL 製品フォームを表示]** - デフォルトでは、この値は選択されていません。製品フォームには、サイズや色など製品のバリエーションが含まれます。製品のバリエーションを表示しない場合はチェックマークをオフにします。
