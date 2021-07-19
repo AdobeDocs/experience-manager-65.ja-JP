@@ -10,14 +10,14 @@ discoiquuid: c8e145ad-f021-4043-8190-62151775e296
 role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: 公開，設定
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
-# コンテンツのHTTP/2配信 {#http-delivery-of-content}
+# コンテンツの HTTP/2 配信 {#http-delivery-of-content}
 
 アドビは、パフォーマンスの向上という全体的な利点をもたらすコンテンツの HTTP/2 配信に対応しました。
 
