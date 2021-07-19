@@ -7,10 +7,10 @@ solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: コラボレーション， Dynamic Media Classic
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 79%
+source-wordcount: '1170'
+ht-degree: 75%
 
 ---
 
@@ -65,7 +65,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * Dynamic Media の切り抜きマジックの使い方を知る
    * 無料の監査を活用して、Dynamic Media Classicからより多くの価値を得ることができます。
    * Dynamic Media Classic の新しいユーザーインターフェイスの説明
-   * Georgia Myers 氏（Adobe Experience Cloud カスタマーサクセス担当マネージャー）へのインタビュー。
+   * Adobe Experience Cloudのカスタマーサクセス担当マネージャーの`Georgia Myers`様にお会いします。
 
 * **[2020 年 1 月、第 1 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
@@ -85,7 +85,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 新しい強力なセキュリティ機能
    * 休暇シーズンを無事迎えるための準備方法
    * ニュースレターを同僚と共有してチームの専門知識を構築
-   * Aporva Gupta 氏（Dynamic Media 担当シニアプロダクトマネージャー）へのインタビュー
+   * `Apoorva Gupta`氏(Dynamic Media、上級製品マネージャー)へのインタビュー
 
 * **[2019 年 10 月、第 10 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_10_2019_Oct.html)**
 
@@ -95,7 +95,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 高画質の画像やビデオの配信で得られる驚きの結果の解説図とヒント
    * 今日の顧客の期待に応えることができるようにリッチメディア戦略を更新する方法に関する CMSwire の有用な記事
    * スキルビルダーシリーズから Dynamic Media のオンデマンド Web セミナーへのアクセス
-   * Nick Peters 氏（Adobe Experience Manager のサイトリライアビリティエンジニアリング担当マネージャー）へのインタビュー
+   * `Nick Peters`氏(Adobe Experience Manager、サイトリライアビリティエンジニアリング担当マネージャ)へのインタビュー
    * Experience League での Dynamic Media および Dynamic Media Classic のすばやい習得
 
 * **[2019 年 9 月、第 09 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_09_2019_Sept.html)**
@@ -117,7 +117,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * Adobe Experience Manager Assets と Dynamic Media をすばやく習得できるように工夫されている Web セミナーシリーズの概要
    * Dynamic Media で価値を実現する取り組みの出発点としての Experience League
    * 訪問者がリッチメディアとどのようにやり取りしているかを分析できる強力な統合機能（今年 9 月にリリース予定）のプレビュー
-   * PieterJan Pieper 氏（Dynamic Media テクニカルサポートエキスパート）へのインタビュー
+   * `PieterJan Pieper`様、Dynamic Mediaのテクニカルサポートをお待ちしております。
 
 * **[2019 年 7 月、第 07 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_07_2019_July.html)**
 
@@ -128,7 +128,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 情報満載の Adobe Insider Tour の次のステップ
    * Adobe Experience Manager Assets(Adobe Experience Manager Assets)内にDynamic Mediaがある場合に利用できる優れた機能。
    * Web サイトへの 360 度ビデオとカスタムビデオサムネールの追加
-   * Andrew Hathaway氏(Experience Manager・アセット内Dynamic Media担当主任ソリューション・コンサルタント)へのインタビュー
+   * Dynamic Mediaの主要ソリューションコンサルタントである`Andrew Hathaway`に、Experience Managerアセットでお会いします。
 
 * **[2019 年 6 月、第 06 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_06_2019_June.html)**
 
@@ -139,7 +139,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 今後の Adobe Insider Tour の詳細
    * デジタルアセットを不正コピーから保護する方法について
    * AI を利用した画像のスマート切り抜きの紹介
-   * Alex Thiers 氏（Dynamic Media および Dynamic Media Classic の数々の優れた機能とイノベーションを推進してきたキーマンの 1 人）へのインタビュー
+   * Dynamic MediaとDynamic Media Classicの優れた機能とイノベーションの多くを支える原動力の1つである`Alex Thiers`に出会う。
 
 * **[2019 年 5 月、第 05 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_05_2019_May.html)**
 
