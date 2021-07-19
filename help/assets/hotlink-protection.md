@@ -10,7 +10,7 @@ discoiquuid: a70aa448-0f58-4ed2-9381-afcc76fa827f
 role: User, Admin
 exl-id: 698e8bdb-9b31-49ab-8560-26b05109bb23
 feature: 設定
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 47%
