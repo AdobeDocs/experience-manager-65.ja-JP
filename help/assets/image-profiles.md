@@ -10,7 +10,7 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: イメージプロファイル
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3411c5c4498cc45451a5874fae2bfccfaddae251
+source-git-commit: 6ac0be454a5410f55155490941cb5aa6e2d8620b
 workflow-type: tm+mt
 source-wordcount: '2755'
 ht-degree: 85%
