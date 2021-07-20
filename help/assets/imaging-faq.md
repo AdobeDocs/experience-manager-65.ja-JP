@@ -1,6 +1,6 @@
 ---
 title: スマートイメージング
-description: スマートイメージングでは、各ユーザーに固有の閲覧特性を利用して、ユーザーのエクスペリエンス用に最適化された適切な画像を自動的に提供することで、より良いパフォーマンスとエンゲージメントをもたらします。
+description: スマートイメージングは、各ユーザーに固有の視聴特性を適用し、エクスペリエンスに最適化された適切な画像を自動的に提供するので、パフォーマンスとエンゲージメントが向上します。
 contentOwner: Rick Brough
 topic-tags: dynamic-media
 content-type: reference
@@ -9,10 +9,10 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: アセット管理、レンディション
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
 workflow-type: tm+mt
-source-wordcount: '2626'
-ht-degree: 60%
+source-wordcount: '2633'
+ht-degree: 56%
 
 ---
 
@@ -94,13 +94,13 @@ ht-degree: 60%
 
 最新バージョンのスマートイメージングの機能強化：
 
-* 最新のスマートイメージングを利用して Web ページの Google SEO ランキングを改善しました。
+* 最新のスマートイメージングを使用するWebページのGoogle SEOランキングを改善しました。
 * 最適化されたコンテンツをすぐに提供（実行時）
 * Adobe Sensei テクノロジーを使用して、イメージリクエストで指定された品質（qlt）に従って変換します。
 * スマートイメージングは、「bfc」 URL パラメータを使用してオフにできます。
 * TTL（Time To Live）独立。以前は、スマートイメージングを機能させるには、最小 TTL 値 12 時間が必要でした。
 * 以前は、元の画像と派生画像の両方がキャッシュされていて、キャッシュを無効にする 2 つの手順がありました。最新のスマートイメージングでは、派生画像のみがキャッシュされ、1 ステップのキャッシュ無効化プロセスが可能です。
-* ルールセットでカスタムヘッダーを使用しているユーザーは、以前のバージョンのスマートイメージングとは異なってこれらのヘッダーがブロックされないので、最新のスマートイメージングのメリットが得られます。例えば、「[画像応答へのカスタム接触チャネル値の追加 | Dynamic Media Classic](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)」で推奨される「Timing Allow Header」、「X-Robot」などは、最新のスマートイメージングによるメリットを享受できます。
+* ルールセットでカスタムヘッダーを使用しているユーザーは、以前のバージョンのスマートイメージングとは異なってこれらのヘッダーがブロックされないので、最新のスマートイメージングのメリットが得られます。例えば、「[画像応答にカスタムヘッダー値を追加する|Dynamic Media Classic](https://helpx.adobe.com/jp/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)」で推奨される「タイミング許可原点」、「X-Robot」。
 
 ## スマートイメージングにはライセンス費用がかかりますか？  {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
@@ -180,7 +180,7 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
-**[!UICONTROL 設定]** / **[!UICONTROL アプリケーション設定]** / **[!UICONTROL 一般設定]**&#x200B;をタップします。「**[!UICONTROL 公開先サーバー名]**」というラベルのフィールドを探します。 現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
+**[!UICONTROL 設定]** / **[!UICONTROL アプリケーション設定]** / **[!UICONTROL 一般設定]**&#x200B;に移動します。「**[!UICONTROL 公開先サーバー名]**」というラベルのフィールドを探します。 現在汎用ドメインを使用している場合は、この切り替えの一部として、テクニカルサポートチケットを送信するときに、独自のカスタムドメインへの移行を要求できます。
 
 最初のカスタムドメインは、Dynamic Media ライセンスを使用する場合、追加費用はかかりません。
 
@@ -206,7 +206,7 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 
       ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
-      **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;をクリックします。
+      **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]** > **[!UICONTROL 一般設定]**&#x200B;に移動します。
 
       「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。
    1. 直接的な関係で管理されているのではなく、アドビを通じて CDN を使用していることを確認します。
@@ -214,7 +214,7 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 
       ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
-      **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;をクリックします。
+      **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]** > **[!UICONTROL 一般設定]**&#x200B;に移動します。
 
       「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
    1. また、HTTP/2上で機能するためにスマートイメージングが必要な場合は、その旨を伝えます。
@@ -225,7 +225,7 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 1. 完了後、サポートから通知があります。
 1. スマートイメージングのパフォーマンス向上を最大限にするため、アドビでは、有効期間（TTL）を 24 時間以上に設定することを推奨しています。TTL によって定義されるのは、アセットが CDN によってキャッシュされる期間です。この設定を変更するには、次の手順を実行します。
 
-   1. Dynamic Media Classic を使用している場合は、**[!UICONTROL 設定／アプリケーション設定／公開設定／Image Server]** をクリックします。「**[!UICONTROL 初期設定のクライアントキャッシュの有効期限]**」の値を 24 以上に設定します。
+   1. Dynamic Media Classicを使用する場合は、**[!UICONTROL 設定]** / **[!UICONTROL アプリケーション設定]** / **[!UICONTROL 公開設定]** / **[!UICONTROL Image Server]**&#x200B;に移動します。 「**[!UICONTROL 初期設定のクライアントキャッシュの有効期限]**」の値を 24 以上に設定します。
    1. Dynamic Media を使用する場合は、[次の手順](config-dynamic.md)に従います。「**[!UICONTROL 有効期限]**」の値を 24 時間以上に設定します。
 
 ## 自分のアカウントでスマートイメージングが有効になるのはいつ頃ですか？  {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
@@ -245,7 +245,7 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 ## スマートイメージングが想定どおりに機能しているかどうかを確認するには、どうすればいいですか？ {#how-can-i-verify-whether-smart-imaging-is-working-as-expected}
 
 1. アカウントにスマートイメージングが設定されたら、ブラウザーで、Dynamic Media Classic または Adobe Experience Manager - Dynamic Media の画像の URL を読み込みます。
-1. Chrome ブラウザーで&#x200B;**[!UICONTROL 表示]**／**[!UICONTROL デベロッパー]**／**[!UICONTROL デベロッパーツール]**&#x200B;をクリックしてデベロッパーパネルを開きます。または、別のブラウザーのデベロッパーツールを使用します。
+1. Chromeデベロッパーウィンドウを開くには、ブラウザーで&#x200B;**[!UICONTROL View]** / **[!UICONTROL Developer]** / **[!UICONTROL Developer Tools]**&#x200B;に移動します。 または、別のブラウザーのデベロッパーツールを使用します。
 
 1. デベロッパーツールを開いたときにキャッシュが無効化されるようにします。
 
