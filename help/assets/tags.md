@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media ViewersとAdobe AnalyticsおよびExperience Platformタグの統合
-description: Experience PlatformタグおよびDynamic Mediaビューア5.13のDynamic Mediaビューア拡張機能を使用すると、Adobe AnalyticsおよびExperience Platformタグのお客様は、Experience Platformタグ設定でDynamic Mediaビューア固有のイベントとデータを使用できます。
+description: Experience PlatformタグおよびDynamic Mediaビューア5.13のDynamic Media Viewers拡張機能について説明します。Adobe AnalyticsおよびExperience Platformタグのお客様は、Experience Platformタグ設定でDynamic Mediaビューア固有のイベントとデータを使用できます。
 mini-toc-levels: 3
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -10,9 +10,9 @@ docset: aem65
 feature: ビューア
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 997eeafa03d3148fb0754eaa27a5a99217e0d1bc
 workflow-type: tm+mt
-source-wordcount: '6630'
+source-wordcount: '6636'
 ht-degree: 51%
 
 ---
@@ -802,7 +802,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
 1. **[!UICONTROL Experience Platformタグ設定]**&#x200B;ページの左側のパネルで、Experience Platformタグ設定を適用するExperience Managerサイトを選択します。
 
-   サンプル目的でのみ、以下のスクリーンショットで`We.Retail`サイトが選択されています。
+   サンプル目的でのみ、以下のスクリーンショットで&#x200B;**`We.Retail`**&#x200B;サイトが選択されています。
 
    ![2019-07-26_12-20-06](assets/2019-07-26_12-20-06.png)
 
