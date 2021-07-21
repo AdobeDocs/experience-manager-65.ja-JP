@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: ed213692bc72ab727a5fa105796fb68aef33904e
+source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 59%
+source-wordcount: '584'
+ht-degree: 57%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 59%
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
    + [360 VR ビデオ](/help/assets/360-video.md)
-   + [Dynamic Media ビューアと Adobe Analytics および Adobe Launch の統合](/help/assets/launch.md)
+   + [Dynamic Media ViewersとAdobe AnalyticsおよびAdobe Experience Platformタグの統合](/help/assets/tags.md)
    + [クイックビューを使用したカスタムポップアップの作成](custom-pop-ups.md)
    + [レスポンシブサイト用に最適化された画像の配信](responsive-site.md)
    + [Dynamic Media アセットのプレビュー](previewing-assets.md)
