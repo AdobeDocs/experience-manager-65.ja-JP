@@ -12,9 +12,9 @@ docset: aem65
 feature: アセット管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
 workflow-type: tm+mt
-source-wordcount: '11672'
+source-wordcount: '11665'
 ht-degree: 74%
 
 ---
@@ -161,7 +161,7 @@ Dynamic Mediaのビデオは、デスクトップ、iOS、Android™、BlackBerr
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする BlackBerry® デバイスについては、[BlackBerry® でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
-このビデオ形式をサポートするWindowsデバイスは、次の場所にあります。[Windows Phone 8](https://docs.microsoft.com/en-us/previous-versions/windows/apps/ff462087(v=vs.105))でサポートされているメディアコーデック
+このビデオ形式をサポートするWindowsデバイスは、次の場所にあります。[Windows Phone 8](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)でサポートされているメディアコーデック
 
 * Dynamic Media ビデオビューアプリセットを使用してビデオを再生します。このビューアプリセットには、次のビューアが含まれます。
 
@@ -316,7 +316,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 ビデオ編集ツールを使用してメタデータを参照するか、メタデータ取得用のアプリケーションを使用して、ファイルのメタデータを取得することができます。以下は、サードパーティアプリケーションの MediaInfo を使用してビデオファイルのメタデータを取得する手順です。
 
-1. 次の Web ページにアクセスします。[https://mediainfo.sourceforge.net/en/Download](https://mediainfo.sourceforge.net/en/Download)
+1. [MediaInfoのダウンロード](https://mediaarea.net/en/MediaInfo/Download)に移動します。
 1. GUI バージョンのインストーラーを選択してダウンロードし、インストール手順に従って操作します。
 1. インストールの完了後、ビデオファイルを右クリックして（Windows のみ）MediaInfo を選択するか、MediaInfo を開いてビデオファイルをアプリケーションにドラッグします。ビデオの幅、高さ、fps を含む、ビデオファイルに関連するすべてのメタデータが表示されます。
 
@@ -415,9 +415,9 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 | ビデオタイプ | 幅 x 高さ | 幅の比率 | 高さの比率 |
 |--- |--- |--- |--- |
-| ソース | 1,920 x 1,080 | 1 | 1 |
+| ソース | 1,920 x 1,080 | 1 | 3 |
 | エンコード | 960 x 540 | 2 | 2 |
-| エンコード | 640 x 360 | 3 | 1 |
+| エンコード | 640 x 360 | 3 | 3 |
 | エンコード | 480 x 270 | 4 | 4 |
 
 ### エンコードされたビデオのファイル形式 {#encoded-video-file-format}
@@ -450,7 +450,7 @@ YouTube は独自のエンコーディングを行います。そのため、Exp
 
 ### Google Cloud設定 {#configuring-google-cloud-settings}
 
-YouTube に公開するには、Google アカウントが必要です。Gmail のアカウントを持っている場合は、既に Google アカウントも所有しています。Google アカウントがない場合も、簡単に作成できます。Google アカウントが必要な理由は、YouTube へのビデオアセットの公開時に秘密鍵証明書が必要だからです。既にアカウントを作成済みの場合は、このタスクをスキップして [YouTube チャンネルの作成](#creating-a-youtube-channel)タスクに進んでください。
+YouTube に公開するには、Google アカウントが必要です。Gmail のアカウントを持っている場合は、既に Google アカウントも所有しています。Google アカウントがない場合も、簡単に作成できます。Google アカウントが必要な理由は、YouTube へのビデオアセットの公開時に秘密鍵証明書が必要だからです。既にアカウントを作成している場合は、このタスクをスキップし、[YouTubeチャネルの作成](#creating-a-youtube-channel)に直接進みます。
 
 Google Cloud で使用するアカウントと YouTube に使用する Google アカウントは、必ずしも同じである必要はありません。
 
@@ -504,7 +504,7 @@ Google Cloud を設定するには：
 
    * 「**[!UICONTROL 使用する API]**」ドロップダウンリストから、「**[!UICONTROL YouTube Data API v3]**」を選択します。
 
-   * 「**[!UICONTROL API を呼び出す場所]**」ドロップダウンリストから、「**[!UICONTROL ウェブサーバー（node.js、Tomcat など）]**」を選択します。
+   * 「**[!UICONTROL API を呼び出す場所]** 」ドロップダウンリストから、「 **[!UICONTROL Webサーバー」（node.js、Tomcatなど）を選択します。]**
 
    * 「**[!UICONTROL アクセスするデータの種類]**」ドロップダウンリストから、「**[!UICONTROL ユーザーデータ]**」を選択します。
 
