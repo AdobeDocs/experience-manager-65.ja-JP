@@ -6,7 +6,7 @@ contentOwner: AG
 role: User
 feature: ワークフロー，レンディション
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
-source-git-commit: 4851d61d9897ac71c6512829fdccf1895ad58bcd
+source-git-commit: acc4b78f551e0e0694f41149fff7e24d855f504f
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 48%
@@ -451,7 +451,7 @@ package my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot
 * [ImageMagick](https://www.imagemagick.org/script/index.php)と[Ghostscript](https://www.ghostscript.com/)を使用したEPSおよびAI変換。
 * [FFmpeg](https://ffmpeg.org/)を使用したFLVビデオのトランスコーディング。
 * [LAME](https://lame.sourceforge.io/)を使用したMP3エンコーディング。
-* [SOX](https://sox.sourceforge.net/)を使用したオーディオ処理。
+* [SOX](https://sox.sourceforge.io/)を使用したオーディオ処理。
 
 >[!NOTE]
 >
