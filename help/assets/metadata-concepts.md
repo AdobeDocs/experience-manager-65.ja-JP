@@ -5,9 +5,9 @@ contentOwner: AG
 role: User, Admin
 feature: メタデータ
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: acc4b78f551e0e0694f41149fff7e24d855f504f
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '2721'
 ht-degree: 88%
 
 ---
@@ -121,7 +121,7 @@ Exif で定義されるメタデータフィールドは、通常、テクニカ
 * Album - [!DNL Adobe Photoshop Album]。
 * CQ - [!DNL Experience Manager Assets] で使用。
 * DAM - [!DNL Experience Manager Assets] で使用。
-* DEX - [Optima SC Description explorer](http://www.optimasc.com/products/dex/index.html) は、Windows オペレーティングシステム向けのメタデータおよびファイル管理向けのツールのコレクションです。
+* DEX - [!DNL Optima SC Description explorer]は、Windowsオペレーティングシステム向けのメタデータおよびファイル管理用のツールの集まりです。
 * CRS - [Adobe Photoshop Camera Raw](https://helpx.adobe.com/jp/camera-raw/using/introduction-camera-raw.html)。
 * LR - [!DNL Adobe Lightroom]。
 * MediaPro - [iView MediaPro](https://en.wikipedia.org/wiki/Phase_One_Media_Pro)。
