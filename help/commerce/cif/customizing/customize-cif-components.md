@@ -10,10 +10,11 @@ audience: developer
 feature: コマース統合フレームワーク
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
-source-git-commit: b132fc30e9ab77da24557c5d644a255173dc23c2
+exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
+source-git-commit: 90a19e84e2a8e2ff8c4216a6c0beab0b65b582d4
 workflow-type: tm+mt
 source-wordcount: '2587'
-ht-degree: 92%
+ht-degree: 93%
 
 ---
 
@@ -37,7 +38,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
 また、コード例やチュートリアルを実行するには、[GraphiQL](https://github.com/graphql/graphiql) またはブラウザー拡張機能などの GraphQL IDE が必要です。ブラウザー拡張機能をインストールする場合は、その拡張機能にリクエストヘッダーを設定できることを確認してください。Google Chrome の [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) は、ジョブを実行できる拡張機能の 1 つです。
 
-## Veniaプロジェクトのクローン{#clone-venia-project}
+## Venia プロジェクトのクローン {#clone-venia-project}
 
 Venia プロジェクト[のクローンを作成して](https://github.com/adobe/aem-cif-guides-venia)、デフォルトのスタイルを上書きします。
 
@@ -55,7 +56,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallPackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
 1. AEM インスタンスを Magento インスタンスに接続するために必要な OSGi 構成を追加するか、新しく作成されたプロジェクトに構成を追加します。
@@ -88,7 +89,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    ![製品ティーザー - デフォルトスタイル](../assets/customize-cif-components/product-teaser-default-style.png)
 
-## Magento{#add-custom-attribute}にカスタム属性を追加する
+## Magento カスタム属性の追加 {#add-custom-attribute}
 
 AEM に表示された製品と製品データは Magento に格納されます。次に、Magento UI を使用して設定する製品属性の一部として、新しい&#x200B;**エコフレンドリー**&#x200B;属性を追加します。
 
@@ -134,7 +135,7 @@ AEM に表示された製品と製品データは Magento に格納されます�
    >
    > キャッシュ管理の詳細については、『[Magento ユーザーガイド](https://docs.magento.com/user-guide/system/cache-management.html)』を参照してください。
 
-## GraphQL IDEを使用した属性の検証{#use-graphql-ide}
+## GraphQL IDE を使用した属性の検証 {#use-graphql-ide}
 
 AEM コードを始める前に、GraphQL IDE を使用して [Magento GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) を調べてみると役に立ちます。AEM との Magento 統合は、主に一連の GraphQL クエリを介して実行されます。GraphQL クエリを理解し変更することは、CIF コアコンポーネントを拡張するのに重要なことの 1 つです。
 
@@ -274,11 +275,9 @@ Sling モデルは Java として実装され、生成されたプロジェク�
        productRetriever = productTeaser.getProductRetriever();
    
        if (productRetriever != null) {
-           productRetriever.extendProductQueryWith(p ->
-                productRetriever.extendProductQueryWith(p -> p
-                   .createdAt()
-                   .addCustomSimpleField(ECO_FRIENDLY_ATTRIBUTE)
-               );
+           productRetriever.extendProductQueryWith(p -> p
+               .createdAt()
+               .addCustomSimpleField(ECO_FRIENDLY_ATTRIBUTE)
            );
        }
    }
@@ -329,7 +328,7 @@ Sling モデルは Java として実装され、生成されたプロジェク�
 
    Sling モデルがアップデートされたので、Sling モデルに基づいて&#x200B;**エコフレンドリー**&#x200B;という指標を実際に表示するには、コンポーネントマークアップをアップデートする必要があります。
 
-## 製品ティーザーのマークアップのカスタマイズ{#customize-markup-product-teaser}
+## 製品ティーザーのマークアップのカスタマイズ {#customize-markup-product-teaser}
 
 AEM コンポーネントの一般的な拡張機能は、コンポーネントによって生成されたマークアップを変更することです。これは、コンポーネントがマークアップのレンダリングに使用する [HTL スクリプト](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)を上書きすることでおこなわれます 。HTML Template Language（HTL）は、AEM コンポーネントがオーサリングされたコンテンツに基づいて動的にマークアップをレンダリングし、コンポーネントを再利用する際に使用する、軽量なテンプレート言語です。例えば、製品ティーザーを何度も繰り返し使用すれば、異なる製品を表示できます。
 
@@ -399,7 +398,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallPackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
 1. 新しいブラウザーウィンドウを開いて AEM に移動し、**OSGi コンソール**／**ステータス**／**Sling モデル**：[http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels) に移動します。
@@ -433,7 +432,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
    >
    > また、ティーザーで使用される製品が属性セットの一部としての `eco_friendly` 属性を持たない場合は、スタックトレースが表示されることがあります。
 
-## エコフレンドリーバッジ{#add-styles}のスタイルの追加
+## エコフレンドリーバッジにスタイルを追加 {#add-styles}
 
 この時点で、**エコフレンドリー**&#x200B;バッジを表示するタイミングのロジックは機能していますが、プレーンテキストなのでスタイルを設定できます。次に、`ui.frontend` モジュールにアイコンとスタイルを追加し、実装を完了します。
 
@@ -478,7 +477,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    ```shell
    $ cd aem-cif-guides-venia/
-   $ mvn clean install -PautoInstallPackage,cloud
+   $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
 1. **Venia ホームページ**（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）を更新します。製品ティーザーが追加されています。
@@ -502,4 +501,4 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 - [AEM CIF コアコンポーネントのカスタマイズ](https://github.com/adobe/aem-core-cif-components/wiki/Customizing-CIF-Core-Components)
 - [コアコンポーネントのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=ja)
 - [AEM Sites 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
-- [CIF製品およびカテゴリピッカーの使用](use-cif-pickers.md)
+- [CIF 製品およびカテゴリピッカーの使用](use-cif-pickers.md)
