@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: User,Admin
 feature: メタデータ
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
 workflow-type: tm+mt
 source-wordcount: '3547'
 ht-degree: 86%
