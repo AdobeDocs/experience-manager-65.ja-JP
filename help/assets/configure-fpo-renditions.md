@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: レンディション
 exl-id: null
-source-git-commit: 865370e38368072c39ad337eb52259c586403efb
+source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 4%
@@ -24,10 +24,10 @@ Experience Managerを使用すると、FPOレンディションの生成に使�
 
 ImageMagickを使用して、画像を処理し、FPOレンディションの生成に使用できます。 このようなレンディションはダウンサンプリングされます。つまり、元の画像のPPIが72を超える場合、レンディションのピクセルサイズは比例的に縮小されます。 [ImageMagickのインストールと設定でExperience Managerアセットを操作する](best-practices-for-imagemagick.md)を参照してください。
 
-|  |Experience Managerの組み込みワークフローの使用 | ImageMagickワークフローの使用 |備考 |
-|— |— |—|— |
-|新しいアセットの場合 | FPOレンディションを有効にする([help](#generate-renditions-of-new-assets-using-aem-workflow)) |Experience Managerワークフロー（[ヘルプ](#generate-renditions-of-new-assets-using-imagemagick)）にImageMagickコマンドラインを追加 |Experience Managerは、アップロードのたびにDAMアセットの更新ワークフローを実行します。 |
-|既存のアセットの場合 |新しい専用のExperience Managerワークフロー（[ヘルプ](#generate-renditions-of-existing-assets-using-aem-workflow)）でFPOレンディションを有効にする |新しい専用のExperience Managerワークフロー（[ヘルプ](#generate-renditions-of-existing-assets-using-imagemagick)）にImageMagickコマンドラインを追加 |既存のアセットのFPOレンディションは、オンデマンドまたは一括で作成できます。 |
+|  | Experience Managerの組み込みワークフローの使用 | ImageMagickワークフローの使用 | 備考 |
+|--- |--- |---|--- |
+| 新しいアセットの場合 | FPOレンディションを有効にする([help](#generate-renditions-of-new-assets-using-aem-workflow)) | Experience ManagerワークフローにImageMagickコマンドラインを追加します([help](#generate-renditions-of-new-assets-using-imagemagick))。 | Experience Managerは、アップロードのたびにDAMアセットの更新ワークフローを実行します。 |
+| 既存のアセットの場合 | 新しい専用のExperience ManagerワークフローでFPOレンディションを有効にする([help](#generate-renditions-of-existing-assets-using-aem-workflow)) | 新しい専用のExperience Managerワークフロー([help](#generate-renditions-of-existing-assets-using-imagemagick))にImageMagickコマンドラインを追加します。 | 既存のアセットのFPOレンディションは、オンデマンドまたは一括で作成できます。 |
 
 >[!CAUTION]
 >
