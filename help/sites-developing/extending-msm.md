@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
 workflow-type: tm+mt
 source-wordcount: '2601'
 ht-degree: 67%
@@ -41,7 +41,7 @@ ht-degree: 67%
 >
 >Multi Site Manager とその API は Web サイトのオーサリング時に使用するものなので、オーサー環境での使用のみを目的としています。
 
-## Java API の概要  {#overview-of-the-java-api}
+## Java API の概要 {#overview-of-the-java-api}
 
 Multi Site Management は、以下のパッケージで構成されています。
 
@@ -64,14 +64,18 @@ Multi Site Management は、以下のパッケージで構成されています�
       * 作成者が「**サイトを作成**」を使用できます（これにより、ユーザーが簡単に言語を選択し、ライブコピーの構造を設定できます）。
       * 作成されるすべてのライブコピーに対するデフォルトのロールアウト設定を定義できます。
 
-* **`LiveRelationship`** は、ラ `LiveRelationship` イブコピーブランチ内のリソースと、同等のソース/ブループリントリソースとの接続（関係）を指定します。
+* **`LiveRelationship`**
+
+   `LiveRelationship`は、ライブコピーブランチ内のリソースと同等のソース/ブループリントリソースとの接続（関係）を指定します。
 
    * この関係は、継承およびロールアウトの実現時に使用されます。
    * `LiveRelationship` オブジェクトは、ロールアウト設定( )、関係に関連するオブジ `RolloutConfig`ェクトにア `LiveCopy`クセス(参 `LiveStatus` 照)します。
 
    * 例えば、`/content/we-retail/language-masters`のソース/ブループリントから`/content/copy/us`にライブコピーが作成されるとします。 リソース`/content/we.retail/language-masters/en/jcr:content`と`/content/copy/us/en/jcr:content`が関係を形成します。
 
-* **`LiveCopy`** `LiveCopy` ライブコピーリソースとそのソース/ブループリ `LiveRelationship`ントリソースとの関係( )の設定詳細が格納されます。
+* **`LiveCopy`**
+
+   `LiveCopy` ライブコピーリソースとそのソース/ブループリ `LiveRelationship`ントリソースとの関係( )の設定詳細が格納されます。
 
    * `LiveCopy`クラスを使用して、ページのパス、ソース/ブループリントページのパス、ロールアウト設定、および子ページも`LiveCopy`に含まれているかどうかにアクセスします。
 
@@ -91,11 +95,13 @@ Multi Site Management は、以下のパッケージで構成されています�
 
    `LiveAction`設定を指定して`LiveAction`オブジェクトを作成します。 設定は、リポジトリ内にリソースとして保存されます。
 
-* **`RolloutConfig`** は、ト `RolloutConfig` リガーされたときに使 `LiveActions`用されるのリストを保持します。`LiveCopy`は`RolloutConfig`を継承し、結果は`LiveRelationship`に存在します。
+* **`RolloutConfig`**
+
+   `RolloutConfig`は、トリガー時に使用される`LiveActions`のリストを保持します。 `LiveCopy`は`RolloutConfig`を継承し、結果は`LiveRelationship`に存在します。
 
    * 初めてライブコピーを設定するときは、（LiveAction を呼び出す）RolloutConfig も使用します。
 
-## 新しい同期アクションの作成  {#creating-a-new-synchronization-action}
+## 新しい同期アクションの作成 {#creating-a-new-synchronization-action}
 
 カスタム同期アクションを作成して、ロールアウト設定と併用します。[インストール済みのアクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)が特定のアプリケーション要件を満たさない場合に同期アクションを作成します。同期アクションを作成するには、次の 2 つのクラスを作成します。
 
@@ -175,7 +181,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 >
 >[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
 
-### ロールアウト設定の作成  {#create-the-rollout-configuration}
+### ロールアウト設定の作成 {#create-the-rollout-configuration}
 
 新しいロールアウト設定を作成するには：
 
@@ -277,7 +283,7 @@ GitHub のコード
 
 1. インタラクティブなプロンプトで、次の値を指定します。
 
-   * `groupId`: `com.adobe.example.msm`
+   * `groupId`:  `com.adobe.example.msm`
    * `artifactId`:  `MyLiveActionFactory`
    * `version`:  `1.0-SNAPSHOT`
    * `package`:  `MyPackage`
@@ -287,7 +293,7 @@ GitHub のコード
 
 1. Eclipse を起動して、[Maven プロジェクトを読み込みます](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)。
 
-### POM ファイルへの依存関係の追加  {#add-dependencies-to-the-pom-file}
+### POM ファイルへの依存関係の追加 {#add-dependencies-to-the-pom-file}
 
 `LiveActionFactory` コード内で使用されるクラスを Eclipse コンパイラーが参照できるようにするために、依存関係を追加します。
 
@@ -377,7 +383,7 @@ GitHub のコード
     </dependency>
    ```
 
-### LiveActionFactory の実装  {#implement-liveactionfactory}
+### LiveActionFactory の実装 {#implement-liveactionfactory}
 
 次の `LiveActionFactory` クラスは、ソースページとターゲットページに関するメッセージをログに記録し、ソースノードからターゲットノードに `LiveAction` プロパティをコピーする `cq:lastModifiedBy` を実装します。ライブアクションの名前は`exampleLiveAction`です。
 
@@ -574,7 +580,7 @@ GitHub のコード
 
 1. 「**すべて保存**」をクリックします。
 
-### ライブコピーの作成  {#create-the-live-copy}
+### ライブコピーの作成 {#create-the-live-copy}
 
 ロールアウト設定を使用して、We.Retail 参照サイトの English/Products ブランチの[ライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)します。
 
@@ -650,7 +656,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
-## ページプロパティに対するMSMロックの設定（タッチ操作対応UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
+## ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
 カスタムページプロパティの作成時に、新しいプロパティをすべてのライブコピーへのロールアウトの対象にするかどうかを検討しなければならない場合があります。
 
