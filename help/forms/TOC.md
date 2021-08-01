@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
 workflow-type: tm+mt
-source-wordcount: '3718'
-ht-degree: 72%
+source-wordcount: '3771'
+ht-degree: 71%
 
 ---
 
@@ -168,7 +168,7 @@ ht-degree: 72%
    + [アダプティブフォームテンプレート](using/template-editor.md)
    + [アダプティブフォームの式](using/adaptive-form-expressions.md)
    + [アダプティブフォームにおけるレコードのドキュメントの生成](using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
-   + [遅延読み込みによる大きなフォームのパフォーマンスの向上](using/lazy-loading-adaptive-forms.md)
+   + [遅延読み込みによる大きなフォームのパフォーマンスの向上 ](using/lazy-loading-adaptive-forms.md)
    + [アダプティブフォームのフィールドの事前入力](using/prepopulate-adaptive-form-fields.md)
    + [アダプティブフォームでの SOM 式の使用](using/using-som-expressions-adaptive-forms.md)
    + [ユーザーデータからフォーム送信メタデータへの情報の追加](using/form-submission-metadata.md)
@@ -679,3 +679,10 @@ ht-degree: 72%
          + [環境設定ノードをプログラムで管理する](developing/programmatically-preferences-nodes.md)
          + [ポリシーを使用したドキュメントの保護](developing/protecting-documents-policies.md)
          + [WebサービスAPIを使用したDDXドキュメントの検証](developing/validate-ddx-document-using-web.md)
+      + 従来のドキュメント{#legacy-documentation}
+         + [JEE上のAEM Forms Workbenchでのexecute scriptサービスを使用したXMLデータの作成](developing/building-xml.md)
+         + [JEE上のAEM Forms Custom DSCを使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
+         + [JEE上のAEM Formsサーバークラスターの設定とトラブルシューティング](developing/configure-server-cluster.md)
+         + [動的なハッシュの生成と操作のPDF forms](developing/hashing-forms.md)
+         + [WS-Securityヘッダーを使用して資格情報を渡す](developing/passing-credentials.md)
+
