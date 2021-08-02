@@ -12,9 +12,9 @@ docset: aem65
 feature: アセット管理
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: b42a14729a88bda563b0773dac735ad569ad3097
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '11665'
+source-wordcount: '11702'
 ht-degree: 74%
 
 ---
@@ -60,8 +60,10 @@ ht-degree: 74%
       * [ビデオプロファイルをフォルダーに適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
       * [処理プロファイルを使用するためのデジタルアセットの整理におけるベストプラクティス](/help/assets/organize-assets.md)に関する詳細
       * [デジタルアセットの整理](/help/assets/organize-assets.md)の詳細をご覧ください。
-   * フォルダーにプライマリソースビデオをアップロードします。15 GB までのビデオファイルをアップロードできます。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
+   * フォルダーにプライマリソースビデオをアップロードします。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
+      * Dynamic Mediaでは、長さが30分の短いビデオを主にサポートしています。
+      * 15 GB までのビデオファイルをアップロードできます。
       * [ビデオのアップロード](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)
       * [サポートされる入力ファイル形式](/help/assets/assets-formats.md#supported-multimedia-formats)に関する詳細
    * アセットまたはワークフロー表示から[ビデオ処理の進行状況](#monitoring-video-encoding-and-youtube-publishing-progress)を監視します。
@@ -303,6 +305,9 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 ### ソースビデオファイル {#source-video-files}
 
 ビデオファイルをエンコードするときは、可能な限り最高品質のソースビデオファイルを使用します。以前にエンコードされたビデオファイルの使用は避けてください。そのようなファイルは既に圧縮済みで、さらにエンコードすると標準を下回る品質のビデオが作成されるからです。
+
+* Dynamic Mediaでは、主に長さ30分の短いビデオをサポートしています。
+* 15 GBまでのプライマリソースビデオファイルをアップロードできます。
 
 次の表に、ソースビデオファイルのエンコード前の推奨サイズ、縦横比および最小ビットレートを示します。
 
