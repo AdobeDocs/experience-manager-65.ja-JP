@@ -9,9 +9,9 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: アセット管理、レンディション
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
+source-git-commit: a166ea9e56ba6b69793e9949a920a7a24b5b9b25
 workflow-type: tm+mt
-source-wordcount: '2633'
+source-wordcount: '2607'
 ht-degree: 56%
 
 ---
@@ -190,13 +190,13 @@ Adobe is working on a permanent fix that does not require you to append `bfc=off
 
 Dynamic Mediaの会社アカウントでは、デフォルトで、スマートイメージングDPRとネットワーク最適化が無効（オフ）になっています。 これらの標準の機能強化の1つまたは両方を有効（オン）にする場合は、以下に説明するように、サポートケースを作成します。
 
-スマートイメージングDPRおよびネットワーク最適化のリリーススケジュールは次のとおりです。
+<!-- NOW AVAILABLE IN ALL THREE REGIONS AS OF AUGUST 2. 2021. SEE CQDOC- 17915 The release schedule for Smart Imaging DPR and network optimization is as follows:
 
-| 地域  | ターゲット日 |
+| Region | Target date |
 |---|---|
-| 北米 | ライブ |
-| ヨーロッパ、中東、アフリカ | 2021年8月14日 |
-| アジア太平洋 | 2021年7月23日 |
+| North America | Live |
+| Europe, Middle East, Africa | 13 Aug 2021 |
+| Asia-Pacific | 22 Jul 2021 | -->
 
 1. [Admin Console を使用して、サポートケースを作成します。](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
 1. サポートケースには、次の情報を記入してください。
