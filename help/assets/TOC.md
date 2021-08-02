@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: a8fef5d797efb3a6ce25760df6f710b8b99c2dc0
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
 source-wordcount: '584'
-ht-degree: 57%
+ht-degree: 34%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 57%
    + [アセットメタデータの操作](metadata.md)
    + [多言語のアセット](multilingual-assets.md)
    + [アセットでの [!DNL Adobe Stock] アセットの使用](aem-assets-adobe-stock.md)
-   + [3D アセットのプレビュー](previewing-3d-assets.md)
+   + [3Dアセットのプレビュー](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [拡張スマートタグ](enhanced-smart-tags.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
@@ -36,28 +36,28 @@ ht-degree: 57%
    + [MSMを使用したアセットの再利用](reuse-assets-using-msm.md)
    + [ [!DNL Sites]を使用したConnected Assets](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
-   + [Experience League 提供の Dynamic Media ニュースレター](dynamic-media-newsletter.md)
-   + [Dynamic Media のセットアップ](administering-dynamic-media.md)
-   + [Dynamic Media の操作](dynamic-media.md)
-   + [Dynamic Media の設定 - Scene7モード](config-dms7.md)
-   + [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md)
-   + [Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md)
+   + [Dynamic Mediaニュースレターアーカイブ(Experience League別)](dynamic-media-newsletter.md)
+   + [Dynamic Mediaの設定](administering-dynamic-media.md)
+   + [Dynamic Mediaの使用](dynamic-media.md)
+   + [Dynamic Media - Scene7モードの設定](config-dms7.md)
+   + [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)
+   + [Dynamic Media - Scene7モードのトラブルシューティング](troubleshoot-dms7.md)
    + [Dynamic Media のアクセシビリティ](accessibility-dm.md)
    + [Dynamic Media — ハイブリッドモードからDynamic Media - S7モードへの移行](migrate-from-hybrid-to-dms7.md)
-   + [Dynamic Media アセットの管理](managing-assets.md)
+   + [Dynamic Media Assetsの管理](managing-assets.md)
    + [画質最適化のベストプラクティス](best-practices-for-optimizing-the-quality-of-your-images.md)
-   + [Dynamic Media ビューアプリセットの管理](managing-viewer-presets.md)
-   + [Dynamic Media ビューアプリセットの適用](viewer-presets.md)
-   + [Dynamic Media 画像プリセットの管理](managing-image-presets.md)
-   + [Dynamic Media 画像プリセットの適用](image-presets.md)
+   + [Dynamic Mediaビューアプリセットの管理](managing-viewer-presets.md)
+   + [Dynamic Mediaビューアプリセットの適用](viewer-presets.md)
+   + [Dynamic Media画像プリセットの管理](managing-image-presets.md)
+   + [Dynamic Media画像プリセットの適用](image-presets.md)
    + [Dynamic Media ビデオプロファイル](video-profiles.md)
    + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
    + [ページへのDynamic Media機能の追加](scene7.md)
    + [コンテンツの HTTP/2 配信](http2.md)
-   + [Dynamic Media アセットの配信](delivering-dynamic-media-assets.md)
-   + [Dynamic Media でのホットリンク保護の有効化](hotlink-protection.md)
+   + [Dynamic Mediaアセットの配信](delivering-dynamic-media-assets.md)
+   + [Dynamic Mediaでのホットリンク保護の有効化](hotlink-protection.md)
    + [3D サポート](/help/assets/assets-3d.md)
    + [画像セット](image-sets.md)
    + [パノラマ画像](panoramic-images.md)
@@ -68,18 +68,18 @@ ht-degree: 57%
    + [インタラクティブ画像](interactive-images.md)
    + [インタラクティブビデオ](interactive-videos.md)
    + [360 VR ビデオ](/help/assets/360-video.md)
-   + [Dynamic Media ViewersとAdobe AnalyticsおよびAdobe Experience Platformタグの統合](/help/assets/tags.md)
+   + [Dynamic Media ViewerとAdobe AnalyticsおよびAdobe Experience Platformタグの統合](/help/assets/tags.md)
    + [クイックビューを使用したカスタムポップアップの作成](custom-pop-ups.md)
    + [レスポンシブサイト用に最適化された画像の配信](responsive-site.md)
-   + [Dynamic Media アセットのプレビュー](previewing-assets.md)
-   + [ページへの Dynamic Media アセットの追加](adding-dynamic-media-assets-to-pages.md)
-   + [Web ページへのダイナミックビデオ／画像ビューアの埋め込み](embed-code.md)
-   + [Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)
+   + [Dynamic Mediaアセットのプレビュー](previewing-assets.md)
+   + [ページへのDynamic Mediaアセットの追加](adding-dynamic-media-assets-to-pages.md)
+   + [Webページにダイナミックビデオビューアまたは画像ビューアを埋め込む](embed-code.md)
+   + [WebアプリケーションへのURLのリンク](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
-   + [Dynamic Media アセットの公開](publishing-dynamicmedia-assets.md)
-   + [Dynamic Media での選択的公開の操作](selective-publishing.md)
-   + [Dynamic Media を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dynamic-media.md)
-   + [Dynamic Media Classic を使用した CDN キャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
+   + [Dynamic Media Assetsの公開](publishing-dynamicmedia-assets.md)
+   + [Dynamic Mediaでの選択的公開の操作](selective-publishing.md)
+   + [Dynamic Mediaを使用したCDNキャッシュの無効化](invalidate-cdn-cache-dynamic-media.md)
+   + [Dynamic Media Classicを使用したCDNキャッシュの無効化](invalidate-cdn-cache-dm-classic.md)
    + [一括アセット移行用の機能パック18912のインストール](bulk-ingest-migrate.md)
    + [セレクターの操作](working-with-selectors.md)
 + アセットを拡張{#extending}
