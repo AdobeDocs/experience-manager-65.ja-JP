@@ -1,30 +1,34 @@
 ---
-title: Dynamic Media ニュースレター
-description: 'Experience League 提供の Dynamic Media ニュースレターは月刊ニュースレターです。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。このワンストップのショップニュースレターでは、知識の構築に役立つ貴重なリソースをご利用いただけます。画像プリセット、ビューアプリセット、ビデオプロファイルなど、主な機能の一部に関するビデオ、ソリューションの概要、紹介などが含まれています。 '
+title: Dynamic Mediaニュースレターアーカイブ
+description: 'アーカイブしたDynamic Mediaニュースレター(Experience League別)は、月刊ニュースレターでした。 Dynamic MediaとDynamic Media Classicをすばやく習得して、すぐに価値を実現できるようにすることを目的に設計されています。 アーカイブされたニュースレターには、廃止されたワンストップショップニュースレターで利用できる貴重な知識構築リソースが含まれています。 アーカイブされたニュースレターには、ハウツービデオとソリューションの概要が含まれます。 また、画像プリセット、ビューアプリセット、ビデオプロファイルなどの主な機能を紹介します。 '
 keywords: Dynamic Media；ニュースレター；製品アップデート；ヒントとテクニック；イベント；顧客の成功；ブログ；ブログ；画像；ビデオ；機能
 contentOwner: Rick Brough
 solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: コラボレーション， Dynamic Media Classic
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 75%
+source-wordcount: '1074'
+ht-degree: 64%
 
 ---
 
 # ![Dynamic Media ニュースレターのロゴ](/help/assets/assets/dynamic-media-newsletter-logo.png)
 
-Experience League 提供の月刊の Dynamic Media ニュースレターは、Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されています。
+>[!NOTE]
+>
+>月刊ニュースレターの提供が終了しました。 ただし、以下のニュースレターのアーカイブには引き続きアクセスできます。
 
-このワンストップのショップニュースレターでは、知識の構築に役立つ貴重なリソースをご利用いただけます。画像プリセット、ビューアプリセット、ビデオプロファイルなど、主な機能の一部に関するビデオ、ソリューションの概要、紹介などが含まれています。
+Dynamic Media Newsletter by Experience Leagueは、Dynamic MediaとDynamic Media Classicをすばやく習得して、すぐに価値を実現できるようにすることを目的としています。
 
-## インスピレーションを得る — 常に情報を得る
+このワンストップショップのアーカイブされたニュースレターでは、ハウツービデオやソリューションの概要など、価値ある知識構築リソースを見つけることができます。 また、画像プリセット、ビューアプリセット、ビデオプロファイルなどの主な機能を紹介します。
 
-[新規登録](https://www.adobe.com/subscription/dynamic-media-newsletter.html)して、Dynamic Media ニュースレターを毎月インボックスに受信しましょう。
+<!-- ## Get inspired - Stay informed
 
-## Dynamic Media ニュースレターを見逃した方のための各号の内容紹介
+[Sign up](https://www.adobe.com/subscription/dynamic-media-newsletter.html) to receive the Dynamic Media Newsletter on a monthly basis in your inbox. -->
+
+## Dynamic Mediaニュースレターアーカイブ
 
 <!-- * **[May 2020, Issue 4](https://expleague.azureedge.net/assets/aem/Experience-Insider-vol.31.html)**
 
@@ -52,9 +56,9 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
    * 無料の Dynamic Media Classic 監査の詳細
    * John Monroe 氏（カスタマーサクセスサービス担当シニアプログラムマネージャー）へのインタビュー
 
-      >[!IMPORTANT]
-      >
-      >Adobeは、Dynamic Mediaのニュースレターを受信したい人にのみ送信するよう希望しています。 本号の後も引き続きニュースレターを受信するには、[こちら](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&amp;data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&amp;sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&amp;reserved=0)から新規登録してください。
+<!--     >[!IMPORTANT]
+    >
+    >Adobe wants to make sure they are only sending the Dynamic Media newsletter to people who want to receive it. To continue receiving the newsletter after this issue, please sign up for it [here](https://nam04.safelinks.protection.outlook.com/?url=http%3A%2F%2Ft.messages.adobe.com%2Fr%2F%3Fid%3Dha6c66e%2C266d7ba%2C26edbee&data=02%7C01%7Crbrough%40adobe.com%7Ce0ec0f8dde0f4eb03d9c08d7e2173fd3%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C637226461801398160&sdata=3c1oREsqy%2FeDPKC3dd4IO9dXomQ1XbokaBAYQl8obrk%3D&reserved=0). -->
 
 * **[2020 年 2 月、第 2 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -153,7 +157,7 @@ Experience League 提供の月刊の Dynamic Media ニュースレターは、Dy
 
 * **[2019 年 4 月、第 04 号](https://expleague.azureedge.net/assets/dynamic-media/Dynamic_Media_Newsletter_04_2019_April.html)**
 
-   このたびは、Dynamic Media AssetsとAdobeDynamic Media ClassicのDynamic Mediaのユーザー向けにニュース、イベント、リソースが満載された、Adobeの新しい月刊ニュースレター「Adobe Experience Managerニュースレター」の創刊号にようこそ。
+   このたびは、Dynamic Media AssetsとAdobeDynamic Media ClassicのDynamic Mediaのユーザー向けのニュース、イベント、リソースが満載されたAdobeのニュースレター「Adobe Experience Manager Newsletter」の創刊号をご利用いただき、誠にありがとうございます。
 
    この号の主な内容：
    * アドビの Dynamic Media Classic の隠された機能に関する Web セミナーへの登録について
