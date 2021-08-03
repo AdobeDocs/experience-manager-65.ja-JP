@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 3dd49715c7c3078f2ef9495c99c98d4dd566db9b
+source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 34%
+source-wordcount: '590'
+ht-degree: 33%
 
 ---
 
@@ -116,6 +116,7 @@ ht-degree: 34%
    + [ [!DNL InDesign Server] との統合](indesign.md)
    + [Digital Rights Management](drm.md)
    + [アセットインサイトにデモパッケージを使用する](use-demo-package-for-asset-insights.md)
+   + [Adobe InDesign用のFPOレンディションの生成](configure-fpo-renditions.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [アセットを監視するためのベストプラクティス](assets-monitoring-best-practices.md)
    + [Camera Raw サポート](camera-raw.md)
