@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: レンディション
 exl-id: null
-source-git-commit: 771bccf12f79648afd59573dad0b7fdf95c6e1e2
+source-git-commit: 1e8b5ab66668215e0eeed676b42f533d4e210e1c
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1051'
 ht-degree: 4%
 
 ---
@@ -61,9 +61,11 @@ ImageMagickを使用して、画像を処理し、FPOレンディションの生
 
 Experience Managerでは、新しいアセットがアップロードされると、DAMアセットの更新ワークフローが実行されます。 ImageMagickを使用して新しくアップロードされたアセットのレンディションを処理するには、ワークフローモデルに新しいコマンドを追加します。
 
-1. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル]**&#x200B;をクリックします。 「**[!UICONTROL DAMアセットの更新]**」モデルを選択し、「**[!UICONTROL 編集]**」をクリックします。
+1. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル]**&#x200B;をクリックします。
 
-1. 左上隅の&#x200B;**[!UICONTROL サイドパネルを切り替え]**&#x200B;をクリックします。 コマンドラインステップを検索します。
+1. 「**[!UICONTROL DAMアセットの更新]**」モデルを選択し、「**[!UICONTROL 編集]**」をクリックします。
+
+1. 左上隅の「**[!UICONTROL サイドパネルを切り替え]**」をクリックし、コマンドラインステップを検索します。
 
 1. **[!UICONTROL コマンドライン]**&#x200B;ステップをドラッグし、**[!UICONTROL サムネールを処理]**&#x200B;ステップの前に追加します。
 
@@ -89,13 +91,21 @@ ImageMagickのコマンドライン機能について詳しくは、[https://ima
 
 Experience Managerワークフローを使用して既存のアセットのFPOレンディションを生成するには、組み込みのFPOレンディションオプションを使用する専用のワークフローモデルを作成します。
 
-1. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル]**&#x200B;をクリックします。 モデルを作成するには、**[!UICONTROL 作成]** > **[!UICONTROL モデルを作成]**&#x200B;をクリックします。 意味のある&#x200B;**[!UICONTROL タイトル]**&#x200B;と&#x200B;**[!UICONTROL 名前]**&#x200B;を追加します。
+1. **[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル]**&#x200B;をクリックします。
 
-1. モデルを選択し、**[!UICONTROL 編集]**&#x200B;をクリックします。 **[!UICONTROL ページ情報]** / **[!UICONTROL プロパティを開く]**&#x200B;をクリックします。 「**[!UICONTROL 一時的なワークフロー]**」を選択します。 これにより、拡張性とパフォーマンスが向上します。 「******[!UICONTROL 保存して閉じる]**」をクリックします。
+1. モデルを作成するには、**[!UICONTROL 作成]** > **[!UICONTROL モデルを作成]**&#x200B;をクリックします。
 
-1. 左上隅の&#x200B;**[!UICONTROL サイドパネルを切り替え]**&#x200B;をクリックします。 プロセスサムネールステップを検索します。 **[!UICONTROL サムネールを処理]**&#x200B;のステップをドラッグします。
+1. 意味のある&#x200B;**[!UICONTROL タイトル]**&#x200B;と&#x200B;**[!UICONTROL 名前]**&#x200B;を追加します。
 
-1. 「**[!UICONTROL サムネールを処理]**」を選択し、「**[!UICONTROL 設定]**」をクリックします。 [設定に従い、Experience Managerワークフロー](#generate-renditions-of-new-assets-using-aem-workflow)を使用して新しいアセットのレンディションを生成します。 変更を有効にするには、「**[!UICONTROL 同期]**」をクリックします。
+1. モデルを選択し、**[!UICONTROL 編集]**&#x200B;をクリックします。 **[!UICONTROL ページ情報]** / **[!UICONTROL プロパティを開く]**&#x200B;をクリックし、「**[!UICONTROL 一時的なワークフロー]**」を選択します。 これにより、拡張性とパフォーマンスが向上します。
+
+1. 「******[!UICONTROL 保存して閉じる]**」をクリックします。
+
+1. 左上隅の「**[!UICONTROL サイドパネルを切り替え]**」をクリックし、プロセスのサムネールステップを検索します。
+
+1. 「**[!UICONTROL サムネールを処理]**」を選択し、「**[!UICONTROL 設定]**」をクリックします。 [設定に従い、Experience Managerワークフロー](#generate-renditions-of-new-assets-using-aem-workflow)を使用して新しいアセットのレンディションを生成します。
+
+1. 変更を有効にするには、「**[!UICONTROL 同期]**」をクリックします。
 
 
 ## ImageMagickを使用した既存のアセットのレンディションの生成 {#generate-renditions-of-existing-assets-using-imagemagick}
