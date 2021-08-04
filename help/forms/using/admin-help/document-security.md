@@ -12,9 +12,9 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: Document Security
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: a84f9bd590193cbb8c2549b34df1bbcec618ba67
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '3298'
+source-wordcount: '3310'
 ht-degree: 71%
 
 ---
@@ -61,7 +61,7 @@ Document Security は、サーバーとユーザーインターフェイスで�
 1. 受信者は、適切なクライアントアプリケーションでドキュメントを開きます。受信者は、そのポリシーに従ってドキュメントを使用できます。
 1. ドキュメント所有者、ポリシーセットコーディネーターまたは管理者は、Web ページを使用して、ドキュメントを追跡し、ドキュメントへのアクセスを変更することができます。
 
-## Document Security ユーザーについて  {#about-document-security-users}
+## Document Security ユーザーについて {#about-document-security-users}
 
 Document Security では、様々な種類のユーザーがそれぞれ異なるタスクを実行します。
 
@@ -147,7 +147,7 @@ Document Security 管理者は、User Management の次の権限を使用して�
 * Document Security サーバーイベントの表示
 * Document Security ポリシー所有者の変更
 
-## ポリシーおよびポリシーで保護されたドキュメント  {#policies-and-policy-protected-documents}
+## ポリシーおよびポリシーで保護されたドキュメント {#policies-and-policy-protected-documents}
 
 *ポリシー*&#x200B;では、機密設定、およびポリシーが適用されるドキュメントにアクセスできるユーザーのセットを定義します。ポリシーによって、ドキュメントに関する権限を動的に変更することもできます。ポリシーによって、ドキュメントを保護するユーザーに、機密設定の変更、ドキュメントのアクセス権限の失効またはポリシーの切り替えを行う権限を付与します。
 
@@ -182,11 +182,11 @@ Document Security 管理者は、User Management の次の権限を使用して�
 
 オフラインでの使用が有効になっている場合、受信者は、ポリシーで保護されたドキュメントを、ポリシーで指定される期間、オフライン（アクティブなインターネット接続やネットワーク接続がない状態）で使用することもできます。
 
-### ポリシーで保護されたドキュメントの動作方法  {#how-policy-protected-documents-work}
+### ポリシーで保護されたドキュメントの動作方法 {#how-policy-protected-documents-work}
 
 ポリシーで保護されたドキュメントを開いて使用するには、ポリシーに自分の名前が受信者として含まれている必要があり、さらに有効な Document Security アカウントを保持している必要があります。PDF ドキュメントの場合は、Acrobat または Adobe Reader® が必要です。その他のファイルタイプの場合は、Acrobat Reader DC Extensionsがインストールされたファイルに適したアプリケーションが必要です。
 
-ポリシーで保護されたドキュメントを開こうとすると、Acrobat、Adobe Reader、またはAcrobat Reader DC ExtensionsがDocument Securityに接続され、認証がおこなわれます。 その後、ログオンに進むことができます。ドキュメントの使用が監査されている場合は、通知メッセージが表示されます。Document Security は、付与されるドキュメント権限を判別した後、ドキュメントの復号化を管理します。この後で、ユーザーはポリシーの機密設定に従ってドキュメントを使用できるようになります。
+ポリシーで保護されたドキュメントを開こうとすると、Acrobat、Adobe Reader、またはAcrobat Reader DC ExtensionsがDocument Securityに接続し、認証がおこなわれます。 その後、ログオンに進むことができます。ドキュメントの使用が監査されている場合は、通知メッセージが表示されます。Document Security は、付与されるドキュメント権限を判別した後、ドキュメントの復号化を管理します。この後で、ユーザーはポリシーの機密設定に従ってドキュメントを使用できるようになります。
 
 ![rm_psopen_online](assets/rm_psopen_online.png)
 
@@ -207,7 +207,7 @@ Document Security 管理者は、User Management の次の権限を使用して�
 
 ポリシーで保護されたドキュメントを「保存」メニューコマンドまたは「別名で保存」メニューコマンドを使用して保存すると、新しいドキュメントにポリシーが自動的に適用および実行されます。新しいドキュメントを開くなどのイベントも監査されて、元のドキュメントで記録されます。
 
-## ポリシーセット  {#policy-sets}
+## ポリシーセット {#policy-sets}
 
 ポリシーセット&#x200B;**&#x200B;は、ある共通の目的を持つ一群のポリシーをグループ化するために使用します。作成されたポリシーセットは、システム内のユーザーのサブセットに対して提供されます。
 
@@ -276,4 +276,4 @@ Document Security のインストール時に、*グローバルポリシーセ�
 
    >[!NOTE]
    >
-   > [getAllPolicysetnames()]((https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html)) APIを使用して、最大1,000個のポリシーセット名を取得できます。 APIは内部的に、API呼び出し元がドキュメント発行者権限を持つ最大1,000個のポリシーを取得し、取得したポリシーに関連付けられた一意のポリシーセット名のリストを作成して返します。 例えば、APIが1,000個のポリシーを取得し、取得したポリシーが合計200個のポリシーセットに関連付けられている場合、APIは200個のポリシーセット名のみを返します。
+   > [getAllPolicysetnames()](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) APIを使用して、最大1,000個のポリシーセット名を取得できます。 APIは内部的に、API呼び出し元がドキュメント発行者権限を持つ最大1,000個のポリシーを取得し、取得したポリシーに関連付けられた一意のポリシーセット名のリストを作成して返します。 例えば、APIが1,000個のポリシーを取得し、取得したポリシーが合計200個のポリシーセットに関連付けられている場合、APIは200個のポリシーセット名のみを返します。
