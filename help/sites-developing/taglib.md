@@ -10,9 +10,9 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2509'
 ht-degree: 62%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 62%
 
 Granite、CQ および Sling のタグライブラリを使用すると、テンプレートやコンポーネントの JSP スクリプトで使用する特定の機能にアクセスできます。
 
-## Granite タグライブラリ  {#granite-tag-library}
+## Granite タグライブラリ {#granite-tag-library}
 
 Granite タグライブラリには便利な機能が用意されています。
 
@@ -37,7 +37,7 @@ global では、[Sling ライブラリ](/help/sites-developing/taglib.md#sling-t
 <%@taglib prefix="sling" uri="https://sling.apache.org/taglibs/sling" %>
 ```
 
-### <ui:includeClientLib> {#ui-includeclientlib}
+### &lt;ui:includeclientlib> {#ui-includeclientlib}
 
 `<ui:includeClientLib>`タグは、AEM HTMLクライアントライブラリを含みます。このライブラリは、js、css、テーマライブラリのいずれかです。 jsやcssなど、異なるタイプの複数のインクルージョンの場合、このタグをjsp内で複数回使用する必要があります。 このタグは、` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)` サービスインターフェイスを囲む便利なラッパーです。
 
@@ -99,7 +99,7 @@ AEM コンポーネントの jsp スクリプトを開発する場合は、ス�
 
 このコードは、sling、CQおよびjstlの各タグライブラリを宣言し、[ `<cq:defineObjects />`](#amp-lt-cq-defineobjects)タグで定義される、定期的に使用されるスクリプトオブジェクトを公開します。 これにより、コンポーネントの jsp コードが短縮および簡略化されます。
 
-### <cq:text> {#cq-text}
+### &lt;cq:text> {#cq-text}
 
 `<cq:text>`タグは、JSP内のコンポーネントテキストを出力する便利なタグです。
 
@@ -157,7 +157,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 <cq:text property="text" tagClass="text"/>
 ```
 
-### <cq:setContentBundle> {#cq-setcontentbundle}
+### &lt;cq:setContentBundle> {#cq-setcontentbundle}
 
 `<cq:setContentBundle>`タグは、i18nローカリゼーションコンテキストを作成し、`javax.servlet.jsp.jstl.fmt.localizationContext`設定変数に保存します。
 
@@ -204,7 +204,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 </div> ...
 ```
 
-### <cq:include> {#cq-include}
+### &lt;cq:include> {#cq-include}
 
 `<cq:include>`タグは、現在のページにリソースを含めます。
 
@@ -254,7 +254,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 * AEMコンポーネントを開発する場合は、Adobeで`<cq:include>`を使用することをお勧めします。
 * `<cq:include>` script属性を使用すると、スクリプトファイルを名前で直接含めることができます。これにより、コンポーネントとリソースタイプの継承が考慮されます。多くの場合、この方法はセレクターと拡張子を使用する Sling のスクリプト解決を厳守するよりも簡単です。
 
-### <cq:includeClientLib> {#cq-includeclientlib}
+### &lt;cq:includeClientLib> {#cq-includeclientlib}
 
 >[!CAUTION]
 >
@@ -298,7 +298,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 <cq:includeClientLib css="cq.collab.calendar, cq.security" />
 ```
 
-### <cq:defineObjects> {#cq-defineobjects}
+### &lt;cq:defineObjects> {#cq-defineobjects}
 
 `<cq:defineObjects>`タグは、定期的に使用される次のスクリプトオブジェクトを公開し、開発者が参照できます。 また、 [ `<sling:defineObjects>`](#amp-lt-sling-defineobjects)タグで定義されたオブジェクトも公開します。
 
@@ -440,7 +440,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 >
 >スクリプトに`/libs/foundation/global.jsp`ファイルがインクルードされると、`<cq:defineObjects />`タグが自動的にインクルードされます。
 
-### <cq:requestURL> {#cq-requesturl}
+### &lt;cq:requestURL> {#cq-requesturl}
 
 `<cq:requestURL>`タグは現在の要求URLをJspWriterに書き込みます。 2つのタグ[ `<cq:addParam>`](#amp-lt-cq-addparam)と[ `<cq:removeParam>`](#amp-lt-cq-removeparam)をこのタグの本文内で使用して、現在のリクエストURLを書き込む前に変更できます。
 
@@ -452,7 +452,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 
 `<cq:requestURL>` に属性がない。
 
-例：
+例えば、次のような問題です。
 
 ```xml
 <a href="<cq:requestURL><cq:removeParam name="language"/></cq:requestURL>">remove filter</a>
@@ -462,7 +462,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### <cq:addParam> {#cq-addparam}
+### &lt;cq:addParam> {#cq-addparam}
 
 `<cq:addParam>`タグは、指定された名前と値を持つリクエストパラメーターを外側の[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグに追加します。
 
@@ -482,7 +482,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 <a title="filter results" href="<cq:requestURL><cq:addParam name="language" value="${bucket.value}"/></cq:requestURL>">${label} (${bucket.count})</a>
 ```
 
-### <cq:removeParam> {#cq-removeparam}
+### &lt;cq:removeParam> {#cq-removeparam}
 
 `<cq:removeParam>`タグは、囲む[ `<cq:requestURL>`](#amp-lt-cq-requesturl)タグから、指定された名前と値を持つリクエストパラメーターを削除します。 値が指定されていない場合は、特定の名前を持つすべてのパラメーターが削除されます。
 
@@ -498,7 +498,7 @@ JSPでの`<cq:text>`タグの使用例を以下に示します。
 <a href="<cq:requestURL><cq:removeParam name="language"/></cq:requestURL>">remove filter</a>
 ```
 
-## Sling タグライブラリ  {#sling-tag-library}
+## Sling タグライブラリ {#sling-tag-library}
 
 Sling タグライブラリには Sling の便利な機能が用意されています。
 
@@ -512,7 +512,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 >
 >`/libs/foundation/global.jsp`ファイルがスクリプトに含まれると、slingタグライブラリが自動的に宣言されます。
 
-### <sling:include> {#sling-include}
+### &lt;sling:include> {#sling-include}
 
 `<sling:include>`タグは、現在のページにリソースを含めます。
 
@@ -551,7 +551,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 >
 >`<sling:include>`タグに含まれるリソースとスクリプトの解決方法は、通常のSling URLの解決方法と同じです。 デフォルトでは、セレクター、拡張子など 現在のリクエストからも、インクルードスクリプトに使用されます。 これらは、タグ属性を使用して変更できます。例えば、`replaceSelectors="foo.bar"`ではセレクターを上書きできます。
 
-例：
+例えば、次のような問題です。
 
 ```xml
 <div class="item"><sling:include path="<%= pathtoinclude %>"/></div>
@@ -577,7 +577,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 <sling:include replaceSelectors="content" />
 ```
 
-### <sling:defineObjects> {#sling-defineobjects}
+### &lt;sling:defineObjects> {#sling-defineobjects}
 
 `<sling:defineObjects>`タグは、定期的に使用される次のスクリプトオブジェクトを公開し、開発者が参照できます。
 
@@ -623,7 +623,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 **slingName**
 
-**例：**
+**例:**
 
 ```xml
 <%@page session="false" %><%
@@ -632,11 +632,11 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 %><sling:defineObjects/>
 ```
 
-## JSTL タグライブラリ  {#jstl-tag-library}
+## JSTL タグライブラリ {#jstl-tag-library}
 
 [JavaServer Pages Standard Tag Library](https://www.oracle.com/technetwork/java/index-jsp-135995.html)には、多くの便利な標準タグが含まれています。 以下のスニペットに示すように、コア、書式設定および関数のタグライブは`/libs/foundation/global.jsp`によって定義されます。
 
-### /libs/foundation/global.jsp からの抜粋{#extract-of-libs-foundation-global-jsp}
+### /libs/foundation/global.jsp からの抜粋 {#extract-of-libs-foundation-global-jsp}
 
 ```xml
 <%@taglib prefix="c" uri="https://java.sun.com/jsp/jstl/core" %>
