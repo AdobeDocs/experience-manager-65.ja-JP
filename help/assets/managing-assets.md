@@ -10,16 +10,16 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: アセット管理
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 91%
+source-wordcount: '118'
+ht-degree: 73%
 
 ---
 
 # Dynamic Media アセットの管理について {#managing-assets}
 
-アップロード後の Dynamic Media アセット（画像、ビデオ、インタラクティブアセット）の管理には、アセットのプレビュー、ダウンロード、公開を含む数多くのタスクが必要になります。
+アップロード後のDynamic Mediaアセット（画像、ビデオ、インタラクティブアセット）の管理には、アセットのプレビュー、ダウンロード、公開など、多くのタスクが必要になります。
 
 プレビューをするときには、画像プリセット（画像の場合のみ）またはビューアプリセット（ビデオおよび画像の場合）を適用することもできます。この両方をアセットに適用することはできません。詳しくは、[ビューアプリセットの適用](/help/assets/viewer-presets.md)および[画像プリセットの適用](/help/assets/image-sets.md)を参照してください。
 
