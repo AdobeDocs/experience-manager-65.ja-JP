@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: メタデータ
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b36448449830aa8e19f6dc29ab7fb62608bb39dd
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 55%
+source-wordcount: '1982'
+ht-degree: 54%
 
 ---
 
@@ -66,7 +66,7 @@ DoS(DoS)のような状況を防ぐために、[!DNL Enterprise Manager]はSling
 
    ![メタデータプロファイルのプロパティ設定にマッピング](assets/metadata-profile-setting-map-property.png)
 
-   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットの metadata ノードの下のプロパティとして保存されます。例えば、**[!UICONTROL プロパティにマッピング]**&#x200B;の名前として`./jcr:content/metadata/dc:desc`を指定した場合、[!DNL Assets]はアセットのメタデータノードに値`dc:desc`を保存します。
+   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットの metadata ノードの下のプロパティとして保存されます。例えば、**[!UICONTROL プロパティにマッピング]**&#x200B;の名前として`./jcr:content/metadata/dc:desc`を指定した場合、[!DNL Assets]はアセットのメタデータノードに値`dc:desc`を保存します。 1つのフィールドのみをメタデータスキーマの特定のプロパティにマップすることをお勧めします。 それ以外の場合は、プロパティにマッピングされた最新の追加フィールドがシステムによって選択されます。
 
    * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。例えば、「My description」と指定すると、この値がアセットのメタデータノードの `dc:desc` プロパティに割り当てられます。
 
