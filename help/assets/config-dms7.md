@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 設定，Scene7モード
-source-git-commit: 9cca48f13f2e6f26961cff86d71f342cab422a78
+source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
 workflow-type: tm+mt
-source-wordcount: '6856'
+source-wordcount: '6941'
 ht-degree: 49%
 
 ---
@@ -162,14 +162,19 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 
 この機能を使用する場合は、次の前提条件とポイントに注意してください。
 
-* Experience Manager6.5とService Pack 6.5.4.0以降を実行している。
-* [Oakの直接バイナリアクセスダウンロードが有](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) 効になっています。
+* Dynamic Media - Scene7モードで、Experience Manager6.5とService Pack 6.5.4.0以降を実行している。
+* この大規模なアップロード機能は、[*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html)のお客様に対してのみサポートされます。
+* Experience ManagerインスタンスがAmazon S3またはMicrosoft® Azure Blobストレージを使用して設定されていることを確認してください。
 
-   有効にするには、データストア設定でプロパティ`presignedHttpDownloadURIExpirySeconds > 0`を設定します。 値は、大きなバイナリをダウンロードし、再試行するのに十分な長さにする必要があります。
+   >[!NOTE]
+   この大規模なアップロード機能はBLOBストレージ構成のAzureSasではサポートされていないので、両方のアクセスキー（key1とkey2）を使用してAzure BLOBストレージを構成します。
+
+* Oakの[直接バイナリアクセスのダウンロード](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)が有効になっています（Oakの&#x200B;*直接バイナリアクセスのアップロード*&#x200B;は不要です）。
+
+   直接バイナリアクセスのダウンロードを有効にするには、データストア設定でプロパティ`presignedHttpDownloadURIExpirySeconds > 0`を設定します。 値は、大きなバイナリをダウンロードし、再試行するのに十分な長さにする必要があります。
 
 * 15 GBを超えるアセットはアップロードされません。 （サイズ制限は、以下の手順8で設定します）。
-* Scene7アセットの再処理ワークフローがフォルダーでトリガーされると、そのフォルダー内にある、既にアップロード済みの大きなアセットが再処理されます。 ただし、Scene7の会社に存在しない大きなアセットはアップロードされません。
-* 大きなアップロードは、単一のアセットペイロードに対してのみ機能し、ワークフローがフォルダーでトリガーされた場合は機能しません。
+* フォルダーで&#x200B;**[!UICONTROL Dynamic Media再処理]**&#x200B;アセットワークフローがトリガーされると、Dynamic Mediaの会社と既に同期している大きなアセットが再処理されます。 ただし、大きなアセットがまだフォルダー内で同期されていない場合は、アセットはアップロードされません。 したがって、Dynamic Media内の既存の大きなアセットを同期するには、個々のアセットに対して&#x200B;**[!UICONTROL Dynamic Mediaアセットの再処理]**&#x200B;ワークフローを実行します。
 
 **2 GBを超えるアセットのアップロード用にDynamic Media - Scene7モードを設定するには：**
 
@@ -236,7 +241,7 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスの「**[!UICONTROL 共通]**」タブで、「**[!UICONTROL 詳細設定]**」の下の「**[!UICONTROL タイムアウト]**」フィールドに、`18000`分（5時間）の値を入力します。 デフォルトは`3600`分（1時間）です。
 1. 「**[!UICONTROL OK]**」を選択します。
 1. 「**[!UICONTROL 同期]**」を選択します。
-1. **[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローモデルと&#x200B;**[!UICONTROL Scene7ワークフローの再処理]**&#x200B;ワークフローモデルに対して、手順14～21を繰り返します。
+1. **[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローモデルと&#x200B;**[!UICONTROL Dynamic Media再処理]**&#x200B;ワークフローモデルに対して、手順14～21を繰り返します。
 
 ### （オプション）Dynamic Media - Scene7 モードのセットアップと設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
