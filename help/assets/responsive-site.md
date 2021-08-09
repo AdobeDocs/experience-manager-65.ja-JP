@@ -10,10 +10,10 @@ discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: アセット管理
 role: User, Admin
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 94%
+source-wordcount: '336'
+ht-degree: 75%
 
 ---
 
@@ -21,15 +21,15 @@ ht-degree: 94%
 
 レスポンシブサービング用のコードを Web 開発者と共有する場合は、レスポンシブコード機能を使用します。レスポンシブ（**[!UICONTROL RESS]**）コードをクリップボードにコピーして、Web 開発者と共有することができます。
 
-この機能は、Web サイトがサードパーティの WCM で稼動する場合に有効です。ただし、Web サイトが AEM で稼動する場合は、オフサイトの Image Server が画像をレンダリングして Web ページに提供します。
+この機能は、Web サイトがサードパーティの WCM で稼動する場合に有効です。ただし、Web サイトが Adobe Experience Manager で稼動する場合は、オフサイトの画像サーバーが画像をレンダリングして Web ページに提供します。
 
-[Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
+[Webページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
 
-[Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)も参照してください。
+[WebアプリケーションへのURLのリンク](linking-urls-to-yourwebapplication.md)も参照してください。
 
 **レスポンシブサイトに最適化された画像を配信するには：**
 
-1. レスポンシブコードを提供する画像の場所に移動して、ドロップダウンメニューで「**[!UICONTROL レンディション]**」をタップします。
+1. レスポンシブコードを提供する画像の場所に移動し、ドロップダウンメニューで「**[!UICONTROL レンディション]**」を選択します。
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
@@ -43,12 +43,12 @@ ht-degree: 94%
    >
    >Dynamic Media — ハイブリッドモードでは、画像プリセットを公開する必要があります。Dynamic Media - Scene7モードでは、画像プリセットが自動的に公開されます。
 
-1. 「**[!UICONTROL RESS]**」をタップします。
+1. **[!UICONTROL RESS]**&#x200B;を選択します。
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
 1. **[!UICONTROL レスポンシブ画像を埋め込み]**&#x200B;ダイアログボックスで、レスポンシブコードテキストを選択してコピーし Web サイトに貼り付けて、レスポンシブアセットにアクセスします。
-1. 埋め込みコード内でデフォルトのブレークポイントを編集して、コード内で直接、レスポンシブ Web サイトのブレークポイントに合わせます。また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
+1. 埋め込みコード内のデフォルトのブレークポイントを編集し、レスポンシブWebサイトのブレークポイントと一致させます。 また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
 
 ## HTTP/2 による Dynamic Media アセットの配信 {#using-http-to-delivery-your-dynamic-media-assets}
 
