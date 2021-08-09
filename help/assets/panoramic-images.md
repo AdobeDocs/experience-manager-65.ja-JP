@@ -11,10 +11,10 @@ docset: aem65
 feature: パノラマ画像,アセット管理
 role: User, Admin
 exl-id: 4d6fbeb1-94db-4154-9e41-b76033fb4398
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '578'
-ht-degree: 57%
+ht-degree: 43%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 57%
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、アカウントにログインします。
 
-1. ページの右上隅付近で、**[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 公開設定]**／**[!UICONTROL Image Server]** をクリックします。
+1. ページの右上隅付近で、**[!UICONTROL 設定]** / **[!UICONTROL アプリケーション設定]** / **[!UICONTROL 公開設定]** / **[!UICONTROL Image Server]**&#x200B;を選択します。
 1. Image Server 公開ページの上部にある「**[!UICONTROL 公開コンテキスト]**」ドロップダウンリストで、「**[!UICONTROL 画像サービング]**」を選択します。
 
 1. 同じ Image Server 公開ページで、「**[!UICONTROL 要求属性]**」という見出しを探します。
@@ -64,15 +64,15 @@ ht-degree: 57%
 
    これらの設定は、Experience Managerで`Panoramic Media` WCMコンポーネントを使用する場合に必要です。
 
-1. Image Server 公開ページの下部で、左側にある「**[!UICONTROL 保存]**」をクリックします。
+1. Image Server公開ページの下部の左側で、「**[!UICONTROL 保存]**」を選択します。
 
-1. 右下隅にある「**[!UICONTROL 閉じる]**」をクリックします。
+1. 右下隅で「**[!UICONTROL 閉じる]**」を選択します。
 
-### パノラマメディア WCM コンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
+### パノラマメディアWCMコンポーネントのトラブルシューティング {#troubleshooting-the-panoramic-media-wcm-component}
 
 WCMのパノラマメディアコンポーネントに画像をドロップしたときに、コンポーネントプレースホルダーが折りたたまれた場合は、次のトラブルシューティングをおこないます。
 
-* 403 Forbiddenエラーが発生した場合は、要求された画像サイズが大きすぎることが原因である可能性があります。 [Dynamic Media Classic](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)の設定で、「**[!UICONTROL 返信画像のサイズ制限]**」設定を確認します。
+* 403 Forbiddenエラーが発生した場合は、要求された画像サイズが大きすぎることが原因である可能性があります。 [Dynamic Media Classicの設定](/help/assets/panoramic-images.md#configuring-dynamic-media-classic-scene)で、「**[!UICONTROL 返信画像のサイズ制限]**」設定を確認します。
 
 * アセットの「無効なロック」やページに表示される「解析エラー」については、「要求難読化モード」と「要求ロックモード」が無効になっていることを確認します。
 * 汚染されたキャンバスエラーの場合は、画像アセットに対する以前の要求に対してルールセット定義ファイルのパスを設定し、CTNを無効にします。
@@ -80,7 +80,7 @@ WCMのパノラマメディアコンポーネントに画像をドロップし�
 
 ## パノラマ画像のプレビュー {#previewing-panoramic-images}
 
-詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
+[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
 ## パノラマ画像の公開 {#publishing-panoramic-images}
 
