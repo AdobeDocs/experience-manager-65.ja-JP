@@ -10,10 +10,10 @@ discoiquuid: a323bf5a-b5b2-4b15-bcf8-48d0fe819512
 feature: アセット管理
 role: User, Admin
 exl-id: 74242ee5-1036-498b-88ef-2310ba2643ce
-source-git-commit: b0286341c1b643bd39a3009185c0d4c8d76ccba5
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 73%
+source-wordcount: '114'
+ht-degree: 64%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 73%
 
 アセットの管理に関する一般的な情報については、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
-次のトピックでは、Dynamic Media アセットの管理に必要な事項について説明します。
+以下のトピックでは、Dynamic Mediaアセットの管理方法について説明します。
 
 * [画質最適化のベストプラクティス](/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md)
 * [Dynamic Media アセットのプレビュー](/help/assets/previewing-assets.md)
