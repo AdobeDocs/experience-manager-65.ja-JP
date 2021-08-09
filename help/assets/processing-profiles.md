@@ -11,10 +11,10 @@ docset: aem65
 role: User, Admin
 feature: ワークフロー，アセット管理，レンディション
 exl-id: 3d9367ed-5a02-43aa-abd9-24fae457d4c5
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
 workflow-type: tm+mt
 source-wordcount: '1379'
-ht-degree: 72%
+ht-degree: 66%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 72%
 
 オプションで、再処理ワークフローのバッチサイズを、デフォルトの 50 アセットから最大 1,000 アセットまで調整できます。フォルダーに対して「_Scene7：アセットを再処理_」ワークフローを実行すると、アセットは一括でグループ化された後、Dynamic Media サーバーに送信されて処理されます。処理の後、バッチセット全体の各アセットのメタデータが Experience Manager 上で更新されます。バッチサイズが大きい場合は、処理に遅延が生じる可能性があります。 また、バッチサイズが小さすぎると、Dynamic Media サーバーへのラウンドトリップの数が多くなりすぎるおそれがあります。
 
-詳しくは、[再処理ワークフローのバッチサイズの調整](#adjusting-load)を参照してください。
+[再処理ワークフローのバッチサイズの調整](#adjusting-load)を参照してください。
 
 >[!NOTE]
 >
@@ -78,20 +78,20 @@ ht-degree: 72%
    * 選択したメインフォルダー内にアセットを含んだ 1 つ以上のサブフォルダーが存在する場合、ワークフローはフォルダー階層内のあらゆるアセットを再処理します。
    * ベストプラクティスとしては、1,000 個を超えるアセットを含んだフォルダー階層に対しては、このワークフローを実行しないでください。
 
-1. ページの左上隅付近にあるドロップダウンリストで「**[!UICONTROL タイムライン]**」をクリックします。
-1. ページ左下隅付近の「コメント」フィールドの右側にあるカラットアイコン（**^**）をクリックします。
+1. ページの左上隅付近にあるドロップダウンリストで、「**[!UICONTROL タイムライン]**」を選択します。
+1. ページの左下隅付近にある「コメント」フィールドの右側で、カラットアイコン( **^** )を選択します。
 
    ![アセット再処理ワークフロー（その 1）](/help/assets/assets/reprocess-assets1.png)
 
-1. 「**[!UICONTROL ワークフローを開始]**」をクリックします。
+1. 「**[!UICONTROL ワークフローを開始]**」を選択します。
 1. 「**[!UICONTROL ワークフローを開始]**」ドロップダウンリストから「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
 1. （オプション）「**ワークフローのタイトルを入力**」テキストフィールドに、ワークフローの名前を入力します。必要に応じて、ワークフローインスタンスを参照する名前を使用できます。
 
    ![アセット再処理ワークフロー（その 2）](/help/assets/assets/reprocess-assets2.png)
 
-1. 「**[!UICONTROL 開始]**」をクリックした後、「**[!UICONTROL 確認]**」をクリックします。
+1. 「**[!UICONTROL 開始]**」を選択し、「**[!UICONTROL 確認]**」を選択します。
 
-   Experience Managerを監視したり、進行状況を確認したりするには、ワークフローのメインコンソールページで&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL ワークフロー]**&#x200B;をクリックします。 ワークフローインスタンスページで、ワークフローを選択します。メニューバーの「**[!UICONTROL 履歴を開く]**」をクリックします。同じワークフローインスタンスページで、選択したワークフローの終了、休止、名前変更を行うこともできます。
+   Experience Managerを監視したり、進行状況を確認したりするには、ワークフローのメインコンソールページで&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL ワークフロー]**&#x200B;を選択します。 ワークフローインスタンスページで、ワークフローを選択します。メニューバーで、「**[!UICONTROL 履歴を開く]**」を選択します。 同じワークフローインスタンスページで、選択したワークフローの終了、休止、名前変更を行うこともできます。
 
 ### 再処理ワークフローのバッチサイズの調整 {#adjusting-load}
 
@@ -99,14 +99,14 @@ ht-degree: 72%
 
 **再処理ワークフローのバッチサイズを調整するには（オプション）**：
 
-1. Experience Managerで、**[!UICONTROL Adobe Experience Manager]**&#x200B;をクリックしてグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**（ハンマー）アイコン/**[!UICONTROL ワークフロー]**/**[!UICONTROL モデル]**&#x200B;をクリックします。
+1. Experience Managerで、**[!UICONTROL Adobe Experience Manager]**&#x200B;を選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**（ハンマー）アイコン/**[!UICONTROL ワークフロー]**/**[!UICONTROL モデル]**&#x200B;を選択します。
 1. ワークフローモデルページのカード表示またはリスト表示で、「**[!UICONTROL Scene7：アセットを再処理]**」を選択します。
 
    ![カード表示で「Scene7：アセットを再処理」ワークフローが選択されたワークフローモデルページ](/help/assets/assets-dm/reprocess-assets7.png)
 
-1. ツールバーの「**[!UICONTROL 編集]**」をクリックします。新しいブラウザータブに、「Scene7：アセットを再処理」ワークフローモデルページが開きます。
-1. Scene7:アセット再処理ワークフローページの右上隅付近にある「**[!UICONTROL 編集]**」をクリックして、ワークフローを「ロック解除」します。
-1. ワークフローで、Scene7バッチアップロードコンポーネントを選択してツールバーを開き、ツールバーの「**[!UICONTROL 設定]**」をクリックします。
+1. ツールバーで、**[!UICONTROL 編集]**&#x200B;を選択します。 新しいブラウザータブに、「Scene7：アセットを再処理」ワークフローモデルページが開きます。
+1. Scene7:アセット再処理ワークフローページの右上隅付近にある「**[!UICONTROL 編集]**」を選択して、ワークフローを「ロック解除」します。
+1. ワークフローで、Scene7バッチアップロードコンポーネントを選択してツールバーを開き、ツールバーの「**[!UICONTROL 設定]**」を選択します。
 
    ![Scene7 バッチアップロードコンポーネント](/help/assets/assets-dm/reprocess-assets8.png)
 
@@ -120,16 +120,16 @@ ht-degree: 72%
 
    ![プロパティダイアログボックス](/help/assets/assets-dm/reprocess-assets3.png)
 
-1. **[!UICONTROL Scene7へのバッチアップロード — ステップのプロパティ]**&#x200B;ダイアログボックスの右上隅にある「**[!UICONTROL 完了]**」をクリックします。
+1. **[!UICONTROL Scene7へのバッチアップロード — ステップのプロパティ]**&#x200B;ダイアログボックスの右上隅にある「**[!UICONTROL 完了]**」を選択します。
 
-1. Scene7の右上隅：アセットワークフローモデルページを再処理し、「**[!UICONTROL 同期]**」をクリックします。 「**[!UICONTROL 同期済み]**」と表示された場合、ワークフローランタイムモデルは正常に同期されており、フォルダー内のアセットを再処理する準備が整います。
+1. Scene7の右上隅：アセットワークフローモデルページを再処理し、「**[!UICONTROL 同期]**」を選択します。 「**[!UICONTROL 同期済み]**」と表示された場合、ワークフローランタイムモデルは正常に同期されており、フォルダー内のアセットを再処理する準備が整います。
 
    ![ワークフローモデルの同期](/help/assets/assets-dm/reprocess-assets1.png)
 
 1. 「Scene7：アセットを再処理」ワークフローモデルを表示しているブラウザータブを閉じます。
 
 <!--1. Return to the browser tab that has the open Workflow Models page, then press **Esc** to exit the selection.
-1. In the upper-left corner of the page, click **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then click the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
+1. In the upper-left corner of the page, select **[!UICONTROL Adobe Experience Manager]** to access the global navigation console, then select the **[!UICONTROL Tools]** (hammer) icon > **[!UICONTROL General > CRXDE Lite]**.
 1. In the folder tree on the left side of the CRXDE Lite page, navigate to the following location:
 
    `/conf/global/settings/workflow/models/scene7_reprocess_assets/jcr:content/flow/reprocess/metaData`
@@ -140,10 +140,10 @@ ht-degree: 72%
     * **[!UICONTROL Name]**: `reprocess-batch-size`
     * **[!UICONTROL Type]**: `Long`
     * **[!UICONTROL Value]**: enter a default value (50-1000) for the batch size
-1. In the lower-right corner, click **[!UICONTROL Add]**. The new property appears as the following:
+1. In the lower-right corner, select **[!UICONTROL Add]**. The new property appears as the following:
 
     ![Saving the new property](/help/assets/assets/workflow-models10.png)
 
-1. On the menu bar of the CRXDE Lite page, click **[!UICONTROL Save All]**.
-1. In the upper-left corner of the page, click **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
+1. On the menu bar of the CRXDE Lite page, select **[!UICONTROL Save All]**.
+1. In the upper-left corner of the page, select **[!UICONTROL CRXDE Lite]** to return to the main Experience Manager console
 1. Repeat steps 1-7 to re-synchronize the new batch size to the Scene7: Reprocess Assets workflow model.-->
