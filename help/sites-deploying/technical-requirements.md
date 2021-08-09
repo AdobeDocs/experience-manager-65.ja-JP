@@ -6,9 +6,9 @@ seo-description: AEM でサポートされているクライアントおよび�
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 5ce72a51d69e97d7e07e9f734bfd7547fccd51f1
+source-git-commit: 0f0dfe8af5feed5227a091b89d65ef58d71eb299
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3266'
 ht-degree: 81%
 
 ---
@@ -81,7 +81,7 @@ Adobe Experience Managerを実行するための最小要件：
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
-### Java Virtual Machines {#java-virtual-machines}
+### Java 仮想マシン {#java-virtual-machines}
 
 このアプリケーションの実行には、Java 仮想マシンが必要です。Java 仮想マシンは、Java Development Kit（JDK）ディストリビューションによって提供されます。
 
@@ -132,7 +132,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  </tbody>
 </table>
 
-1. Azul Zuluのサポートと配布LTSリリースのすべてのメンテナンスアップデートを含むOpenJDKのビルドは、AEM 6.5 SP9以降、OpenJDKのAzul Zuluビルドを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 AEM Forms Java EE向けAEM 6.5 SP10 詳しくは、Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)の[Azul Javaサポートを参照してください。
+1. Azul Zuluのサポートと配布LTSリリースのすべてのメンテナンスアップデートを含むOpenJDKのビルドは、AEM 6.5 SP9以降、OpenJDKのAzul Zuluビルドを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 詳しくは、Adobe Experience Manager Q&amp;A](assets/adobe-azul-openjdk-license-agreement.pdf)の[Azul Javaサポートを参照してください。
 
 1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12は、Oracle別の非LTSリリースです([OracleJava SEサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDKのサポートと配布（公開アップデートの終了後にLTSリリースのすべてのメンテナンスアップデートを含む）は、2022年12月まで、OracleJava SEテクノロジー&#x200B;**を利用しているすべてのAEMのお客様に対して直接Adobeでサポートされます。** 詳しくは、 [Adobe Experience Manager Q&amp;AのOracleJavaサポート](assets/adobe-oracle-java-license-agreement.pdf)を参照してください。
 
@@ -190,7 +190,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 >
 >**AEM 6.5 では現在、ほとんどのリレーショナルデータベースがレベル R の範囲でサポートされ、前述のレベル R の説明にあるサポートの基準とサポートプログラムが適用されます。**
 
-### サーブレットエンジン／アプリケーションサーバー  {#servlet-engines-application-servers}
+### サーブレットエンジン／アプリケーションサーバー {#servlet-engines-application-servers}
 
 Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR ファイル）として実行することも、サード-パーティのアプリケーションサーバー内の Web アプリケーション（WAR ファイル）として実行することもできます。
 
@@ -241,7 +241,7 @@ AEM を Azure や AWS にデプロイするその他あらゆる場合、また�
 
 Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合は、クラウドプロバイダーまたは使用するクラウド環境への AEM のデプロイメントをサポートするパートナーと直接共同作業することを強くお勧めします。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
 
-### Dispatcher のプラットフォーム（Web サーバー）  {#dispatcher-platforms-web-servers}
+### Dispatcher のプラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
 
 Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンのDispatcherをダウンロードします](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
@@ -260,7 +260,7 @@ Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバ
 
 1. Dispatcher は、Windows オペレーティングシステム版の Apache 2.4.x ではサポートされていません。
 
-## サポートされているクライアントプラットフォーム  {#supported-client-platforms}
+## サポートされているクライアントプラットフォーム {#supported-client-platforms}
 
 ### オーサリングユーザーインターフェイス向けにサポートされているブラウザー {#supported-browsers-for-authoring-user-interface}
 
@@ -332,11 +332,11 @@ AEM のユーザーインターフェイスは、大きめの画面（通常は�
 1. Firefox の延長サポート版（ESR）。[詳しくは、mozilla.org を参照してください。](https://www.mozilla.org/en-US/firefox/organizations/faq/)
 1. Apple iPad のサポート。
 
-### Web サイト向けにサポートされているブラウザー  {#supported-browsers-for-websites}
+### Web サイト向けにサポートされているブラウザー {#supported-browsers-for-websites}
 
 一般的に、AEM Sites でレンダリングされる Web サイトのブラウザーサポートは、AEM ページテンプレート、デザイン、コンポーネント出力の実装に依存するので、これらの部品を実装する団体によって管理されます。
 
-### WebDAV クライアント  {#webdav-clients}
+### WebDAV クライアント {#webdav-clients}
 
 **Microsoft Windows 7 以降**
 
@@ -350,11 +350,11 @@ Microsoft Windows 7 以降を使用して、SSL で保護されていない AEM 
 
 Windows で WebDav クライアントの応答性を改善する方法については、[Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) を参照してください。
 
-## プラットフォームに関するその他の注意点  {#additional-platform-notes}
+## プラットフォームに関するその他の注意点 {#additional-platform-notes}
 
 ここでは、Adobe Experience Manager およびそのアドオンの実行に関する注意点や詳細情報を説明します。
 
-### IPv4 と IPv6  {#ipv-and-ipv}
+### IPv4 と IPv6 {#ipv-and-ipv}
 
 Adobe Experience Manager のすべての要素（インスタンス、Dispatcher）は、IPv4 と IPv6 のいずれのネットワークにもインストールできます。
 
@@ -450,7 +450,7 @@ Windows x86 の場合：
 * 10.9.x 以降
 * 試用およびデモの目的でのみサポート
 
-### AEM Forms PDF Generator の要件  {#requirements-for-aem-forms-pdf-generator}
+### AEM Forms PDF Generator の要件 {#requirements-for-aem-forms-pdf-generator}
 
 <table>
  <tbody>
@@ -510,7 +510,7 @@ Windows x86 の場合：
 
 
 
-### AEM Forms Designer {#requirements-for-aem-forms-designer}の要件
+### AEM Forms Designerの要件 {#requirements-for-aem-forms-designer}
 
 * Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server または Microsoft® Windows® 10
 * 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
@@ -521,7 +521,7 @@ Windows x86 の場合：
 * 1024 x 768 ピクセル以上のモニター解像度
 * ビデオハードウェアアクセラレーション（オプション）
 * Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC。
-* Designerをインストールするための管理者権限。
+* Designer をインストールするための管理者権限。
 
 ### AEM Assets の XMP メタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
