@@ -10,10 +10,10 @@ discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
 feature: アセット管理
 role: User, Admin
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '336'
-ht-degree: 75%
+ht-degree: 72%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 75%
 1. **[!UICONTROL レスポンシブ画像を埋め込み]**&#x200B;ダイアログボックスで、レスポンシブコードテキストを選択してコピーし Web サイトに貼り付けて、レスポンシブアセットにアクセスします。
 1. 埋め込みコード内のデフォルトのブレークポイントを編集し、レスポンシブWebサイトのブレークポイントと一致させます。 また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
 
-## HTTP/2 による Dynamic Media アセットの配信 {#using-http-to-delivery-your-dynamic-media-assets}
+## HTTP/2を使用したDynamic Mediaアセットの配信 {#using-http-to-delivery-your-dynamic-media-assets}
 
 HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。Dynamic Media アセットの配信は HTTP/2 を使用しておこなうことができ、応答時間と読み込み時間を短縮できます。
 
