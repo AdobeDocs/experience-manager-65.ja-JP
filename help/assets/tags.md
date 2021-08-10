@@ -10,10 +10,10 @@ docset: aem65
 feature: ビューア
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 997eeafa03d3148fb0754eaa27a5a99217e0d1bc
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '6636'
-ht-degree: 51%
+ht-degree: 50%
 
 ---
 
@@ -811,7 +811,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    * **[!UICONTROL タイトル]** - 説明的な設定のタイトルを入力します。例： `We.Retail Tags cloud configuration`
 
-   * **[!UICONTROL 関連付けられた Adobe IMS 設定]** - [Experience Manager IMS の設定](#configuring-aem-ims)で前に作成した IMS 設定を選択します。
+   * **[!UICONTROL 関連するAdobeのIMS設定]**  -Experience ManagerのIMSの設定で作成したIMS設定を [選択します](#configuring-aem-ims)。
 
    * **[!UICONTROL 会社]** - 「**[!UICONTROL 会社]**」ドロップダウンリストから、Experience Cloud の会社を選択します。リストが自動的に入力されます。
 
