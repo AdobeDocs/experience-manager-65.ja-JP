@@ -9,11 +9,12 @@ topic-tags: managing-assets
 discoiquuid: e7b95732-a571-48e8-afad-612059cdbde7
 feature: Dynamic Media Classic
 role: User, Admin
+mini-toc-levels: 3
 exl-id: 815f577d-4774-4830-8baf-0294bd085b83
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '2849'
-ht-degree: 22%
+source-wordcount: '2850'
+ht-degree: 21%
 
 ---
 
@@ -31,7 +32,7 @@ Dynamic Media Classicで公開されたExperience Managerアセットは、様�
 
 デジタルアセットをExperience ManagerからDynamic Media Classicに直接公開したり、Dynamic Media ClassicからExperience Managerに公開したりできます。
 
-このドキュメントでは、Dynamic Media ClassicにデジタルアセットをExperience Managerから公開する方法と、反対に公開する方法について説明します。 また、ビューアについても詳しく説明します。Dynamic Media ClassicのExperience Managerの設定について詳しくは、[Dynamic Media ClassicとExperience Manager](/help/sites-administering/scene7.md)の統合を参照してください。
+このドキュメントでは、Dynamic Media ClassicにデジタルアセットをExperience Managerから公開する方法と、反対に公開する方法について説明します。 また、ビューアについても詳しく説明します。Dynamic Media Classic用のExperience Managerの設定について詳しくは、[Dynamic Media ClassicとExperience Manager](/help/sites-administering/scene7.md)の統合を参照してください。
 
 [画像マップの追加](image-maps.md)も参照してください。
 
@@ -107,7 +108,7 @@ Dynamic Media Classic(Scene7)コンポーネントをページに追加する方
 
 アセットのレスポンシブデザインとは、アセットが表示される場所に応じて適応することを意味します。 レスポンシブデザインを使用すると、同じアセットを複数のデバイスで効果的に表示できます。
 
-[Web ページのレスポンシブデザイン](/help/sites-developing/responsive.md)も参照してください。
+[Webページのレスポンシブデザイン](/help/sites-developing/responsive.md)も参照してください。
 
 **レスポンシブサイトにインタラクティブな表示エクスペリエンスを追加するには：**
 
@@ -169,11 +170,11 @@ Dynamic Media Classicの&#x200B;**[!UICONTROL 画像]**&#x200B;コンポーネ�
 
 ![chlimage_1-230](assets/chlimage_1-230.png)
 
-**[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+**[!UICONTROL ビューアプリセット]**  — ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。 画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
 **[!UICONTROL Dynamic Media Classic設定]**  - SPSからアクティブな画像プリセットを取得するために使用するDynamic Media Classic設定を選択します。
 
-**[!UICONTROL 画像プリセット]**  — ドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+**[!UICONTROL 画像プリセット]**  — ドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。[画像プリセットの管理](/help/assets/managing-image-presets.md)を参照してください。 画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
 **[!UICONTROL 出力形式]**  — 画像の出力形式（例：jpeg）を選択します。選択する出力形式に応じて、追加の設定オプションがあります。 [画像プリセットのベストプラクティス](/help/assets/managing-image-presets.md#image-preset-options)を参照してください。
 
