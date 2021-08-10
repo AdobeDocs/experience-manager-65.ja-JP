@@ -10,26 +10,26 @@ discoiquuid: 82bed457-794e-4bf2-bc80-abde24fd2851
 feature: ビューアプリセット
 role: User, Admin
 exl-id: daa1ffdd-de5c-470e-8875-84144b7d327f
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 100%
+source-wordcount: '221'
+ht-degree: 61%
 
 ---
 
-# Dynamic Media ビューアプリセットの適用 {#applying-viewer-presets}
+# Dynamic Mediaビューアプリセットの適用 {#applying-viewer-presets}
 
 ビューアプリセットは、ユーザーのコンピューター画面やモバイルデバイスでのリッチメディアアセットの表示方法を決定する様々な設定のコレクションです。作成者は、管理者がアセットに対して作成した任意のビューアプリセットを適用できます。
 
-管理者がビューアプリセットの管理、作成、並べ替え、削除を行う必要がある場合は、[ビューアプリセットの管理](managing-viewer-presets.md)を参照してください。
+ビューアプリセットの管理、作成、並べ替え、削除をおこなう必要がある管理者は、[ビューアプリセットの管理](managing-viewer-presets.md)を参照してください。
 
 [ビューアプリセットの公開](managing-viewer-presets.md#publishing-viewer-presets)も参照してください。
 
-使用しているパブリッシュモードによっては、ビューアプリセットを公開する必要がない場合があります。ビューアプリセットで問題が発生した場合は、[Dynamic Media - Scene7 モードのトラブルシューティング](troubleshoot-dms7.md#viewers)を参照してください。
+使用しているパブリッシュモードによっては、ビューアプリセットを公開する必要がない場合があります。ビューアプリセットで問題が発生した場合は、[Dynamic Media - Scene7](troubleshoot-dms7.md#viewers)のトラブルシューティングを参照してください。
 
-## アセットへの Dynamic Media ビューアプリセットの適用 {#applying-a-viewer-preset-to-an-asset}
+## アセットへのDynamic Mediaビューアプリセットの適用 {#applying-a-viewer-preset-to-an-asset}
 
-1. アセットを開き、左側のレールで「**[!UICONTROL ビューア]**」をタップします。
+1. アセットを開き、左側のレールで「**[!UICONTROL ビューア]**」を選択します。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
@@ -38,6 +38,6 @@ ht-degree: 100%
 
 1. 左側のウィンドウからビューアを選択してアセットに適用します。結果が右側のウィンドウに表示されます。[この URL を共有用にコピー](linking-urls-to-yourwebapplication.md)して、他のユーザーと共有することもできます。
 
-## ビューアプリセットの URL の取得 {#obtaining-viewer-preset-urls}
+## ビューアプリセットのURLの取得 {#obtaining-viewer-preset-urls}
 
-ビューアプリセットの URL を取得する方法については、[Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)を参照してください。
+ビューアプリセットのURLを取得するには、[WebアプリケーションへのURLのリンク](linking-urls-to-yourwebapplication.md)を参照してください。
