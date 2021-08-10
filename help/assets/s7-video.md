@@ -8,12 +8,13 @@ topic-tags: managing-assets
 content-type: reference
 discoiquuid: 2685f9f3-0973-40a9-89b8-e7db0a6a75f2
 role: User, Admin
+mini-toc-levels: 3
 exl-id: 56009925-1a36-48b5-b96c-ec2e468da106
 feature: ビデオ
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 35%
+source-wordcount: '1564'
+ht-degree: 33%
 
 ---
 
@@ -45,7 +46,7 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 * F4V H.264
 * MP4 H.264
 
-## ビデオのアップロード先の指定 {#deciding-where-to-upload-your-video}
+## ビデオのアップロード場所の決定 {#deciding-where-to-upload-your-video}
 
 ビデオアセットのアップロード先の指定は、次の条件によって決まります。
 
@@ -70,11 +71,9 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 1. Experience Managerで、WCMのコンテンツファインダーの「**[!UICONTROL Scene7]**」タブでビデオアセットにアクセスします。
 1. **[!UICONTROL Scene7ビデオ]**&#x200B;コンポーネントを使用してオーサーします。
 
-## Scene7 ビデオとの統合の設定 {#configuring-integration-with-scene-video}
+## Scene7との統合の設定ビデオ {#configuring-integration-with-scene-video}
 
-ユニバーサルプリセットを設定するには：
-
-1. **[!UICONTROL クラウドサービス]**&#x200B;で、**[!UICONTROL Scene7]** の設定に移動して、「**[!UICONTROL 編集]**」をクリックします。
+1. **[!UICONTROL Cloud Services]**&#x200B;で、**[!UICONTROL Scene7]**&#x200B;設定に移動し、「**[!UICONTROL 編集]**」を選択します。
 1. 「**[!UICONTROL ビデオ]**」タブを選択します。
 
    ![chlimage_1-363](assets/chlimage_1-363.png)
@@ -93,16 +92,16 @@ Scene7 ビデオコンポーネントでは次の形式がサポートされま�
 
 1. 選択したエンコーディングプロファイルは、この Scene7 クラウド設定用に指定した CQ DAM のターゲットフォルダーにアップロードされたすべてのビデオに自動的に適用されます。必要に応じて、別のターゲットフォルダーに別のエンコーディングプロファイルを適用することで、複数の Scene7 クラウド設定を指定できます。
 
-## ビューアとエンコーディングプリセットの更新 {#updating-viewer-and-encoding-presets}
+## ビューアとエンコーディングプリセットを更新 {#updating-viewer-and-encoding-presets}
 
-Scene7でプリセットが更新されたのでビデオのビューアとエンコーディングプリセットを更新するには、クラウド設定のScene7設定に移動し、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」をタップします。
+Scene7でプリセットが更新されたのでビデオのビューアとエンコーディングプリセットを更新するには、クラウド設定のScene7設定に移動し、「**[!UICONTROL ビューアとエンコーディングプリセットを更新]**」を選択します。
 
 ![chlimage_1-364](assets/chlimage_1-364.png)
 
 ## AdobeDAMからScene7にプライマリソースビデオをアップロード {#uploading-your-master-video}
 
 1. Scene7 のエンコーディングプロファイルと共にクラウド設定を指定した CQ DAM のターゲットフォルダーに移動します。
-1. 「**[!UICONTROL アップロード]**」をクリックして、プライマリソースビデオをアップロードします。 ビデオのアップロードとエンコーディングは、[!UICONTROL DAMアセットの更新]ワークフローが完了し、**[!UICONTROL Scene7に公開]**&#x200B;にチェックマークが付いた後に完了します。
+1. 「**[!UICONTROL アップロード]**」を選択して、プライマリソースビデオをアップロードします。 ビデオのアップロードとエンコーディングは、[!UICONTROL DAMアセットの更新]ワークフローが完了し、**[!UICONTROL Scene7に公開]**&#x200B;にチェックマークが付いた後に完了します。
 
    >[!NOTE]
    >
@@ -150,9 +149,9 @@ S7 クラウド設定で選択した S7 エンコーディングプリセット�
 >
 >新しいビデオプロファイルおよびビデオプロファイルに対する変更をアクティベートして公開する必要があります。
 
-1. Experience Managerで、**[!UICONTROL ツール]** /**[!UICONTROL 設定コンソール]**&#x200B;をタップします。
+1. Experience Managerで、**[!UICONTROL ツール]** / **[!UICONTROL 設定コンソール]**&#x200B;を選択します。
 1. **[!UICONTROL 設定コンソール]**&#x200B;で、ナビゲーションツリーの&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL DAM]**/**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
-1. S7ビデオプロファイルを作成します。 **[!UICONTROL New]**&#x200B;で、 メニューで、「**[!UICONTROL ページを作成]**」を選択し、「Scene7ビデオプロファイル」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」をクリックします。
+1. S7ビデオプロファイルを作成します。 **[!UICONTROL New]**&#x200B;で、 メニューで、「**[!UICONTROL ページを作成]**」を選択し、「Scene7ビデオプロファイル」テンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」を選択します。
 
    ![chlimage_1-366](assets/chlimage_1-366.png)
 
