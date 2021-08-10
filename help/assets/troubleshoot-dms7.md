@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media のトラブルシューティング - Scene7モード
-description: Dynamic MediaをScene7モードで実行している場合のトラブルシューティング。
+title: Dynamic Media - Scene7モードのトラブルシューティング
+description: Dynamic MediaがScene7モードで実行されている場合のトラブルシューティング。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,14 +11,14 @@ docset: aem65
 role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: トラブルシューティング
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '1286'
-ht-degree: 95%
+ht-degree: 83%
 
 ---
 
-# Dynamic Media - Scene7 モードのトラブルシューティング{#troubleshooting-dynamic-media-scene-mode}
+# Dynamic Media - Scene7モードのトラブルシューティング{#troubleshooting-dynamic-media-scene-mode}
 
 以下のドキュメントでは、**dynamicmedia_scene7** 実行モードで実行している Dynamic Media のトラブルシューティングについて説明します。
 
@@ -26,8 +26,8 @@ ht-degree: 95%
 
 以下の手順で、Dynamic Media が適切に設定されていることを確認します。
 
-* 起動コマンドには、`-r dynamicmedia_scene7`実行モード引数が含まれます。
-* 使用可能な Dynamic Media 機能パックよりも先に、AEM 6.4 累積修正パック（CFP）がインストールされていることを確認します。**
+* 起動コマンドには、実行モード引数`-r dynamicmedia_scene7`が含まれます。
+* Adobe Experience Manager 6.4累積修正パック(CFP)は、Dynamic Media機能パックの&#x200B;*前に*&#x200B;インストールされました。
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
    このオプションの機能パックは、FTPサポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
@@ -37,13 +37,13 @@ ht-degree: 95%
 
    このレプリケーションエージェントは、「作成者のエージェント」にあります。
 
-## 一般（すべてのアセット）  {#general-all-assets}
+## 一般（すべてのアセット） {#general-all-assets}
 
 次に全般的なヒントやテクニックを示します。
 
 ### アセット同期ステータスプロパティ {#asset-synchronization-status-properties}
 
-CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dynamic Media へのアセットの同期に成功したことが確認できます。
+CRXDE Lite で次のアセットプロパティを見直すと、 Experience Manager から Dynamic Media へのアセットの同期に成功したことが確認できます。
 
 | **プロパティ** | **例** | **説明** |
 |---|---|---|
@@ -54,7 +54,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 ### 同期のログ {#synchronization-logging}
 
-同期のエラーと問題は `error.log`（AEM サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Sling コンソール（[https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)）を通じて `com.adobe.cq.dam.ips` パッケージのログレベルをデバッグに引き上げると、さらに詳しい情報を集めることができます。
+同期のエラーと問題は `error.log`（Experience Manager サーバーディレクトリの `/crx-quickstart/logs/`）に記録されます。ログにはほとんどの問題の根本原因を突き止めるのに十分な情報が記録されますが、Sling コンソール（[https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)）を通じて `com.adobe.cq.dam.ips` パッケージのログレベルをデバッグに引き上げると、さらに詳しい情報を集めることができます。
 
 ### 移動、コピー、削除 {#move-copy-delete}
 
@@ -62,15 +62,15 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
 
 * 画像やビデオの移動、コピーまたは削除操作の前に `<object_node>/jcr:content/metadata/dam:scene7ID` の値が存在することを確認します。
 * 画像やビューアプリセットの移動、コピーまたは削除操作の前に `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata` の値が存在することを確認します。
-* 上記のメタデータ値がない場合、移動、コピーまたは削除処理の前にアセットを再度アップロードする必要があります。
+* 上記のメタデータ値がない場合は、移動、コピーまたは削除操作の前にアセットを再アップロードする必要があります。
 
 ### バージョン管理 {#version-control}
 
-既存の Dynamic Media アセット（同じ名称、同じ場所）を置換する際、両方のアセットを保持するか、バージョンを置換／作成するかの選択が可能です。
+既存の Dynamic Media アセット（同じ名称、同じ場所）を置換する際、双方のアセットを保持またはバージョンを置換／作成の選択が可能です。
 
-* 両方を保持すると、公開済みアセット URL の名前が一意な新しいアセットが作成されます。例えば、`image.jpg` は元のアセットで、`image1.jpg` は新しくアップロードされたアセットです。
+* 両方を保持すると、公開済みアセット URL の名前が一意なアセットが作成されます。例えば、`image.jpg` は元のアセットで、`image1.jpg` は新しくアップロードされたアセットです。
 
-* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信で新しいバージョンが既存のアセットを置換します。
+* Dynamic Media - Scene7 モードの配信ではバージョン作成はサポートされていません。配信の既存アセットが新しいバージョンに置き換わります。
 
 ## 画像とセット {#images-and-sets}
 
@@ -89,7 +89,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
     <ol>
      <li><p>CRX/DE に移動します。</p>
       <ul>
-       <li>JCR 内のプリセット <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> が定義されているかどうかを確認します。この場所は、AEM 6.x から 6.4 にアップグレードし、移行をオプトアウトした場合に適用されます。それ以外の場合、場所は <code>/conf/global/settings/dam/dm/presets/viewer</code> になります。</li>
+       <li>JCR 内のプリセット <code>/etc/dam/presets/viewer/&lt;preset&gt; has lastReplicationAction</code> が定義されているかどうかを確認します。この場所は、Experience Manager 6.x から 6.4 にアップグレードし、移行をオプトアウトした場合に適用されます。それ以外の場合、場所は <code>/conf/global/settings/dam/dm/presets/viewer</code> になります。</li>
        <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong> </strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li>
       </ul> </li>
     </ol> </td>
@@ -107,7 +107,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
   <tr>
    <td>セットの編集でアセットを選択した後、<strong>選択</strong>ボタンが有効にならない</td>
    <td><p> </p> <p>6.4 で解決予定の既知の問題です。</p> <p> </p> </td>
-   <td><p>アセットセレクターで別のフォルダーをクリックしてからアセットの選択に戻ります。</p> </td>
+   <td><p>最初にアセットセレクターで別のフォルダーを選択し、再度アセットを選択します。</p> </td>
   </tr>
   <tr>
    <td>スライドを切り替えた後、カルーセルホットスポットが移動する</td>
@@ -161,7 +161,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
      <li>ビデオプロファイルをフォルダーに割り当てます。</li>
      <li>エンコーディングプリセットを 2 つ以上含むよう、ビデオプロファイルを編集します。</li>
      <li>ビデオの処理が終わるのを待ちます。</li>
-     <li>ビデオを再度読み込み、「Dynamic Media エンコーディングビデオ」ワークフローが実行されていないことを確認します。<br /> </li>
+     <li>ビデオを再読み込みし、 Dynamic Media Encode Videoワークフローが実行されていないことを確認してください。<br /> </li>
      <li>ビデオを再度アップロードします。</li>
     </ol> </td>
   </tr>
@@ -175,8 +175,8 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
     </ul> </td>
    <td>
     <ol>
-     <li>AEMインスタンスを <code>-r dynamicmedia_scene7</code></li>
-     <li>クラウドサービスページで Dynamic Media 設定が正しくセットアップされていることを確認します。</li>
+     <li>Experience Managerインスタンスを <code>-r dynamicmedia_scene7</code></li>
+     <li>「Cloud Services」の下の「Dynamic Media設定」が正しく設定されていることを確認します。</li>
      <li>フォルダーにビデオプロファイルがあることを確認します。そのビデオプロファイルも確認します。</li>
     </ol> </td>
   </tr>
@@ -218,12 +218,12 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
   </tr>
   <tr>
    <td>ビューアプリセットが公開されていない</td>
-   <td><p>次のサンプルマネージャー診断ページに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>計算された値を確認します。正常に動作している場合は、次のようになります。</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>：Dynamic Media クラウドの設定後、ビューアアセットが同期するまで 10 分ほどかかることがあります。</p> <p>アクティブでないアセットが残る場合は、「<strong>アクティブでないアセットをすべて表示</strong>」ボタンのどちらかをクリックして詳細を確認してください。</p> </td>
+   <td><p>次のサンプルマネージャー診断ページに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>計算された値を確認します。正しく動作すると、次のようになります。</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
+       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>：Dynamic Media クラウドの設定後、ビューアアセットが同期するまで 10 分ほどかかることがあります。</p> <p>アクティブでないアセットが残る場合は、「<strong>アクティブでないすべてのアセットをリスト</strong>」ボタンを選択して詳細を確認します。</p> </td>
    <td>
     <ol>
      <li>管理ツールのビューアプリセットリストに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>すべてのビューアプリセットを選択し、「<strong>公開</strong>」をクリックします。</li>
+     <li>すべてのビューアプリセットを選択し、「<strong>公開</strong>」を選択します。</li>
      <li>サンプルマネージャーに戻り、アクティブでないアセット数がゼロになったことを確認します。</li>
     </ol> </td>
   </tr>
@@ -249,14 +249,14 @@ CRXDE Lite で次のアセットプロパティを見直すと、AEM から Dyna
       <ul>
        <li><code>&lt;sync-folder&gt;/_CSS/_OOTB</code> を削除します。</li>
       </ul> </li>
-     <li>CRX パッケージマネージャー（<code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>）に移動します。
+     <li>CRXパッケージマネージャーに移動します。<code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>
       <ol>
        <li>リストでビューアパッケージを検索します（<code>cq-dam-scene7-viewers-content</code> で始まります）。</li>
-       <li>「<strong>再インストール</strong>」をクリックします。</li>
+       <li>「<strong>再インストール</strong>」を選択します。</li>
       </ol> </li>
      <li>クラウドサービスページで、Dynamic Media 設定ページに移動した後、Dynamic Media - Scene7 設定の設定ダイアログボックスを開きます。
       <ul>
-       <li>何も変更せず、「<strong>保存</strong>」をクリックします。これで、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが再度トリガーされます。<br />  </li>
+       <li>変更を加えないで、「<strong>保存</strong>」を選択します。 このアクションでは、サンプルアセット、ビューアプリセットCSSおよびアートワークを作成および同期するロジックを再度トリガーします。<br />  </li>
       </ul> </li>
     </ol> </td>
   </tr>
