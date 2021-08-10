@@ -6,26 +6,26 @@ contentOwner: rbrough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: 1601b473-7227-4a56-bb7c-289de2987e4b
 exl-id: a644558e-5be9-4ba2-b560-fc300497fbdf
-source-git-commit: 99230f2b9ce8179de4034d8bd739a5535b2cc0da
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 73%
+source-wordcount: '221'
+ht-degree: 39%
 
 ---
 
 # ビデオレンディション {#video-renditions}
 
-Adobe Experience Manager (AEM) Assets では、様々な形式（OGG、FLV など）のビデオアセット用のビデオレンディションを生成します。
+Adobe Experience Manager Assetsは、OGG、FLVなど、様々な形式のビデオアセット用のビデオレンディションを生成します。
 
-AEM Assets では、メディアアセットの静的レンディションと動的レンディション（DM エンコードされたレンディション）がサポートされています。
+Experience Managerアセットは、メディアアセットの静的レンディションと動的レンディション（DMエンコードされたレンディション）をサポートします。
 
 静的レンディションは、FFMPEG（システムパスにインストールされ、使用できるもの）を使用してネイティブに生成され、コンテンツリポジトリに保存されます。
 
 DM エンコードされたレンディションは、プロキシサーバーに保存され、実行時に提供されます。
 
-AEM Assets では、クライアント側でのこのようなレンディションの再生をサポートしています。
+Experience Managerアセットは、クライアント側でのこれらのレンディションの再生をサポートします。
 
-特定のビデオアセットのレンディションを表示するには、アセットのページを開いて、グローバルナビゲーションアイコンをタップします。次に、リストから「**[!UICONTROL レンディション]**」を選択します。
+特定のビデオアセットのレンディションを表示するには、そのアセットのページを開き、グローバルナビゲーションアイコンを選択します。 次に、リストから「**[!UICONTROL レンディション]**」を選択します。
 
 ![chlimage_1-478](assets/chlimage_1-478.png)
 
@@ -41,6 +41,6 @@ DMエンコードされたレンディションのプロキシサーバーを設
 
 >[!NOTE]
 >
->Microsoft Internet Explorer 11のOGGおよびWAVファイルでは、オーディオ再生は機能しません。 拡張子がOGGまたはWAVのアセットの場合、アセットの詳細ページにエラー`Invalid Source`が表示されます。
+>Microsoft® Internet Explorer 11のOGGおよびWAVファイルでは、オーディオ再生は機能しません。 拡張子がOGGまたはWAVのアセットの場合、アセットの詳細ページにエラー`Invalid Source`が表示されます。
 >
->MS EdgeおよびiPadでは、OGGファイルは再生されず、サポートされていない形式のエラーが発生します。
+>MS® EdgeおよびiPadでは、OGGファイルは再生されず、サポートされていない形式のエラーが発生します。
