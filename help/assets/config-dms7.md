@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: 設定，Scene7モード
-source-git-commit: 5769ddeefe2d01d32bb9a0611dc06af68a848936
+source-git-commit: 6c042d2c95f18ae4a0d5fd57a048aa12761495b6
 workflow-type: tm+mt
 source-wordcount: '6941'
 ht-degree: 49%
@@ -167,7 +167,7 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 * Experience ManagerインスタンスがAmazon S3またはMicrosoft® Azure Blobストレージを使用して設定されていることを確認してください。
 
    >[!NOTE]
-   この大規模なアップロード機能はBLOBストレージ構成のAzureSasではサポートされていないので、両方のアクセスキー（key1とkey2）を使用してAzure BLOBストレージを構成します。
+   この大規模なアップロード機能はBLOBストレージ構成のAzureSasではサポートされていないので、アクセスキーと秘密鍵を使用してAzure BLOBストレージを構成します。
 
 * Oakの[直接バイナリアクセスのダウンロード](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)が有効になっています（Oakの&#x200B;*直接バイナリアクセスのアップロード*&#x200B;は不要です）。
 
