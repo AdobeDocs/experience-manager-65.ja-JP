@@ -6,9 +6,9 @@ seo-description: AEM でサポートされているクライアントおよび�
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 0f0dfe8af5feed5227a091b89d65ef58d71eb299
+source-git-commit: f3c99936c1bbfd8a942ffefb1fcd3c2c0b3e9094
 workflow-type: tm+mt
-source-wordcount: '3266'
+source-wordcount: '3270'
 ht-degree: 81%
 
 ---
@@ -107,7 +107,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
   </tr>
   <tr>
    <td>Oracle Java SE 11 JDK - 64 ビット</td>
-   <td>A：サポート対象 [2]</td>
+   <td>A：サポート対象 [2] [4]</td>
   </tr>
   <tr>
    <td>Oracle Java SE 10 JDK</td>
@@ -137,6 +137,8 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12は、Oracle別の非LTSリリースです([OracleJava SEサポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照)。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDKのサポートと配布（公開アップデートの終了後にLTSリリースのすべてのメンテナンスアップデートを含む）は、2022年12月まで、OracleJava SEテクノロジー&#x200B;**を利用しているすべてのAEMのお客様に対して直接Adobeでサポートされます。** 詳しくは、 [Adobe Experience Manager Q&amp;AのOracleJavaサポート](assets/adobe-oracle-java-license-agreement.pdf)を参照してください。
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
+
+1. [!DNL Oracle Java SE 11 JDK] はに対してサポートされていま [!DNL Experience Manager Forms]せん。
 
 
 ### ストレージと永続性 {#storage-persistence}
