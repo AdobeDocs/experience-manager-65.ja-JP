@@ -13,9 +13,9 @@ docset: aem65
 pagetitle: Community Groups Console
 role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1674'
 ht-degree: 42%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 42%
 
 ![communitygrouptheme](assets/communitygrouptheme.png)
 
-このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、[Twitter Bootstrap](https://twitterbootstrap.org/) を使用しています。プリロードされた多数のBootstrapテーマの1つを選択して、選択したコミュニティグループテンプレートのスタイルを設定するか、Bootstrapテーマをアップロードできます。
+このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、`Twitter Bootstrap` を使用しています。プリロードされた多数のBootstrapテーマの1つを選択して、選択したコミュニティグループテンプレートのスタイルを設定するか、Bootstrapテーマをアップロードできます。
 
 選択すると、テーマは不透明な青色のチェックマークでオーバーレイされます。
 
