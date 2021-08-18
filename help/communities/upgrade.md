@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: abe5a998-bbe3-4a2b-bcf7-b490a8275219
 docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
-source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
+source-git-commit: 07f8a9f629122102d30676926b225d57e542147d
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '677'
 ht-degree: 59%
 
 ---
@@ -87,7 +87,7 @@ AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレード�
 
 ### JSP コンポーネントテンプレートの廃止 {#no-jsp-component-templates}
 
-[ソーシャルコンポーネントフレームワーク](/help/communities/scf.md)(SCF)は、AEM 6.0より前に使用されていたJava Server Pages(JSP)の代わりに、`HandlebarsJS`(HBS)テンプレート言語を使用します。
+[ソーシャルコンポーネントフレームワーク](/help/communities/scf.md)(SCF)は、AEM 6.0より前に使用されていたJava Server Pages(JSP)の代わりに、[HandlebarsJS](https://handlebarsjs.com/)(HBS)テンプレート言語を使用します。
 
 AEM 6.0 では、JSP コンポーネントは新しい HBS フレームワークコンポーネントと同じ場所に残っています（HBS コンポーネントは通常、「hbs」という名前のサブフォルダーに存在します）。
 
