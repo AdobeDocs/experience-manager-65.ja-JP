@@ -12,9 +12,9 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: f4f4be3d9885723953b1306ff25a52d27799aa93
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2508'
+source-wordcount: '2490'
 ht-degree: 21%
 
 ---
@@ -119,7 +119,7 @@ AEM Communitiesでユーザー同期を有効にするには、次の設定が�
 Apache Sling Sync Agents設定を設定するには：
 
 1. AEMオーサーインスタンスで管理者権限でログインします。
-1. [Webコンソール](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)にアクセスします。 例えば、[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)のようにします。
+1. [Webコンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例えば、[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)のようにします。
 1. **Apache Sling Distribution Agent - Sync Agents Factory**&#x200B;を探します。
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）。
@@ -165,7 +165,7 @@ Apache Sling Sync Agents設定を設定するには：
 同期するデータ（ノードパス）を設定するには：
 
 1. パブリッシュインスタンス上で管理者権限でログインします。
-1. [Webコンソール](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)にアクセスします。
+1. [Webコンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
    例えば、[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)のようにします。
 
@@ -188,7 +188,7 @@ Apache Sling Sync Agents設定を設定するには：
 メンバーの同期を確実に行う手順は、次のとおりです。
 
 1. パブリッシュインスタンス上で管理者権限でログインします。
-1. [Webコンソール](https://helpx.adobe.com/experience-manager/6-4/help/sites-deploying/configuring-osgi.html)にアクセスします。
+1. [Webコンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
    例えば、[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)のようにします。
 
