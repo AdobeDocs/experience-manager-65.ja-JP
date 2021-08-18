@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d7b5b5e3-2d84-4a6b-bcc2-d490882ff3ed
 exl-id: 5ca58bc3-8505-4d91-9cd1-6b2e2671f1be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d5cfff10735ea31dc0289b6909851b8717936eb
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 51%
+source-wordcount: '1501'
+ht-degree: 52%
 
 ---
 
@@ -111,9 +111,9 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 ![scf-post-request](assets/scf-post-request.png)
 
-### ストレージリソースプロバイダー（SRP）{#storage-resource-provider-srp}
+### ストレージリソースプロバイダー（SRP） {#storage-resource-provider-srp}
 
-[コミュニティコンテンツストア](working-with-srp.md)に保存されたUGCの処理については、以下を参照してください。
+[コミュニティコンテンツストア](working-with-srp.md)に格納された UGC の処理については、以下を参照してください。：
 
 * [ストレージリソースプロバイダーの概要](srp.md)  — 概要とリポジトリの使用方法の概要。
 * [SRPとUGCの基本事項](srp-and-ugc.md) - SRP APIユーティリティのメソッドと例。
@@ -123,9 +123,9 @@ SocialComponent 操作ごとに Sling POST :operation があります。各操�
 
 サーバー側のコミュニティコンポーネントのビジネスロジックおよび動作のカスタマイズについて詳しくは、[サーバー側のカスタマイズ](server-customize.md)を参照してください。
 
-## Handlebars JS テンプレート言語  {#handlebars-js-templating-language}
+## Handlebars JS テンプレート言語 {#handlebars-js-templating-language}
 
-新しいフレームワークの顕著な変更の1つは、サーバークライアントレンダリング用の一般的なオープンソーステクノロジーである[Handlebars JSテンプレート言語(HBS)](https://www.handlebarsjs.com/)の使用です。
+新しいフレームワークの顕著な変更の1つは、サーバーとクライアントのレンダリングに一般的なオープンソーステクノロジーである`Handlebars JS`(HBS)テンプレート言語の使用です。
 
 HBS スクリプトは、単純で、ロジックがなく、サーバーとクライアントの両方でコンパイルされ、オーバーレイやカスタマイズが容易であり、HBS ではクライアント側のレンダリングがサポートされているのでクライアント UX と自然にバインドします。
 
@@ -141,7 +141,7 @@ Handlebars（HBS）テンプレートファイル（.hbs）は、.jsp および 
 
 .hbs ファイルへの HTTP アクセスは禁止できません。
 
-### コミュニティコンポーネントの追加またはインクルード  {#add-or-include-a-communities-component}
+### コミュニティコンポーネントの追加またはインクルード {#add-or-include-a-communities-component}
 
 ほとんどのコミュニティコンポーネントは、Sling アドレス可能リソースとして追加する必要があります。**&#x200B;一部のコミュニティコンポーネントは、ユーザー生成コンテンツ(UGC)を書き込む場所を動的に含めたりカスタマイズしたりするために、存在しないリソースとしてテンプレートに&#x200B;*含める*&#x200B;ことができます。
 
@@ -183,11 +183,11 @@ AEM 6.1以降では、コンポーネントが追加される代わりに動的�
 >
 >コンポーネントを、テンプレートに追加またはインクルードせずに、ページに動的に追加するには、[コンポーネントのサイドローディング](sideloading.md)を参照してください。
 
-### Handlebars ヘルパー  {#handlebars-helpers}
+### Handlebars ヘルパー {#handlebars-helpers}
 
 SCF で使用できるカスタムヘルパーのリストおよび説明については、[SCF Handlebars ヘルパー](handlebars-helpers.md)を参照してください。
 
-## クライアント側フレームワーク  {#client-side-framework}
+## クライアント側フレームワーク {#client-side-framework}
 
 ### モデル - ビュー JavaScript フレームワーク {#model-view-javascript-framework}
 
