@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '390'
 ht-degree: 59%
 
 ---
@@ -28,9 +28,9 @@ ht-degree: 59%
 
 * [使用方法の詳細とデバッ](/help/sites-developing/clientlibs.md) グツールを提供するクライアント側ライブラリの使用
 * [SCF用clientlibs :SCFコン](/help/communities/client-customize.md#clientlibs) ポーネントをカスタマイズする際に役立つ情報を提供します。
-* [ブログ：AEM Client Libraries explained by example](https://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/)
 
-## clientlib が必要になる理由  {#why-clientlibs-are-required}
+
+## clientlib が必要になる理由 {#why-clientlibs-are-required}
 
 コンポーネントを正しく機能させ（JavaScript）、スタイル設定する（CSS）には、clientlib が必要です。
 
@@ -38,7 +38,7 @@ ht-degree: 59%
 
 必須の clientlib が欠落していると、[ページにコミュニティコンポーネントを追加](/help/communities/author-communities.md)したときに、JavaScript エラーが発生したり、予期しない外観が生じたりする可能性があります。
 
-### 例：clientlib が欠落している場合のレビューの配置  {#example-placed-reviews-without-clientlibs}
+### 例：clientlib が欠落している場合のレビューの配置 {#example-placed-reviews-without-clientlibs}
 
 ![配置レビュー](assets/placed-reviews.png)
 
