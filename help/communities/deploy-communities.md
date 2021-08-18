@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: c8d7355f-5a70-40d1-bf22-62fab8002ea0
 docset: aem65
 exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
 workflow-type: tm+mt
-source-wordcount: '1898'
-ht-degree: 36%
+source-wordcount: '1905'
+ht-degree: 35%
 
 ---
 
@@ -167,7 +167,8 @@ SRP コレクション（MSRP または DSRP）で高度な多言語検索（MLS
 
 高度な MLS のダウンロード（「phasetwo」ともいう）は、アドビのリポジトリから入手できます。
 
-* [AEM-SOLR-MLS-phasetwo](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/tat/AEM-SOLR-MLS-phasetwo/1.2.40/)
+* AEM-SOLR-MLS-phasetwo(
+高度なMLSパッケージを入手するには、ドキュメントのデプロイセクションの[AEM Advanced MLS](deploy-communities.md#aem-advanced-mls)を参照してください。
 
    * バージョン1.2.40（2016年4月7日）
    * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロードします。
@@ -213,7 +214,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ(UGC)
 
 ## 設定 {#configurations}
 
-### プライマリパブリッシャー  {#primary-publisher}
+### プライマリパブリッシャー {#primary-publisher}
 
 選択したデプロイメントが[パブリッシュファーム](/help/communities/topologies.md#tarmk-publish-farm)の場合、**通知**&#x200B;や&#x200B;**Adobe Analytics**&#x200B;に依存する機能など、すべてのインスタンスで発生しないアクティビティの場合、1つのAEMパブリッシュインスタンスを&#x200B;**`primary publisher`**&#x200B;として識別する必要があります。
 
@@ -263,11 +264,11 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ(UGC)
 
 以下の画像は、ポートを 4503 から 6103 に変更した結果を示しています。
 
-#### デフォルトエージェント（パブリッシュ） {#default-agent-publish}
+#### デフォルトエージェント（publish） {#default-agent-publish}
 
 ![default-agent-publish](assets/default-agent-publish.png)
 
-#### リバースレプリケーションエージェント（publish reverse）{#reverse-replication-agent-publish-reverse}
+#### リバースレプリケーションエージェント（publish reverse） {#reverse-replication-agent-publish-reverse}
 
 ![reverse-replication-agent](assets/reverse-replication-agent.png)
 
