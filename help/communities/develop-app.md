@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 910229a3-38b1-44f1-9c09-55f8fd6cbb1d
 exl-id: 7ac0056c-a742-49f4-8312-2cf90ab9f23a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '578'
 ht-degree: 50%
 
 ---
 
-# サンドボックスアプリケーションの開発   {#develop-sandbox-application}
+# サンドボックスアプリケーションの開発  {#develop-sandbox-application}
 
 [初期アプリケーション](initial-app.md)の節でテンプレートをセットアップし、[初期コンテンツ](initial-content.md)の節で初期ページを設定したので、ここでは、作成時にコミュニティコンポーネントを使用できるようにするとともに、基盤スクリプトを使用してアプリケーションを開発できます。この節の最後に、Webサイトが機能するようになります。
 
@@ -25,7 +25,7 @@ ht-degree: 50%
 
 デフォルトのスクリプトは、playpage テンプレートをレンダリングするコンポーネントを追加したときに作成されましたが、このスクリプトを変更して、基盤ページの head.jsp およびローカルの body.jsp を含めます。
 
-### スーパーリソースタイプ  {#super-resource-type}
+### スーパーリソースタイプ {#super-resource-type}
 
 最初の手順は、`/apps/an-scf-sandbox/components/playpage`ノードにリソースのスーパータイププロパティを追加し、スーパータイプのスクリプトとプロパティを継承することです。
 
@@ -45,7 +45,7 @@ CRXDE Lite の使用:
 
    ![page-script](assets/page-script.png)
 
-### 先頭と本文のスクリプト{#head-and-body-scripts}
+### headおよびbodyスクリプト {#head-and-body-scripts}
 
 1. **CRXDE Lite**&#x200B;エクスプローラーウィンドウで、`/apps/an-scf-sandbox/components/playpage`に移動し、ファイル`playpage.jsp`をダブルクリックして編集ウィンドウで開きます。
 
@@ -121,7 +121,7 @@ CRXDE Lite の使用:
 
 **ページを編集モードでブラウザーに表示します。**
 
-* 標準 UI：[http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html](http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.md)
+* 標準 UI: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
 **コミュニティ再生**&#x200B;の見出しだけでなく、ページコンテンツを編集するためのUIも表示される必要があります。
 
@@ -129,7 +129,7 @@ CRXDE Lite の使用:
 
 ![view-page](assets/view-page.png)
 
-* クラシックUI:[http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html](http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html)
+* クラシック UI: `http://localhost:4502/cf#/content/an-scf-sandbox/en/play.html`
 
 クラシックUIでの再生ページの表示方法を次に示します(コンテンツファインダー(cf)を含む)。
 
@@ -155,7 +155,7 @@ CRXDE Lite の使用:
 * 画像
 * テーブル
 * テキスト
-* タイトル（基盤）
+* タイトル (基盤)
 
 >[!NOTE]
 >
@@ -169,7 +169,7 @@ CRXDE Lite の使用:
 
 この簡単な例では、ルートページは英語のページにリダイレクトするように静的に設定されています。英語のページは、今後、再生ページへのリンクを持つメインランディングページとして開発される可能性があります。
 
-ブラウザーの URL をルートページ [http://localhost:4502/editor.html/content/an-scf-sandbox.html](https://locahost:4502/editor.html/content/an-scf-sandbox.html) に変更します。
+ブラウザーのURLをルートページに変更します。`http://localhost:4502/editor.html/content/an-scf-sandbox.html`
 
 * ページ情報アイコンを選択します。
 * 「**[!UICONTROL プロパティを開く]**」を選択します。
