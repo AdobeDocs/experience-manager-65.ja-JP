@@ -6,10 +6,10 @@ mini-toc-levels: 1
 role: User, Admin
 feature: アセット管理、レンディション
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 61%
+source-wordcount: '1555'
+ht-degree: 60%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 61%
 
 [!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。[!DNL Assets]を他の標準準拠のデジタルアセット管理(DAM)ソリューションやデスクトップソフトウェアと統合するには、Adobeの[!DNL Extensible Metadata Platform](XMP)を使用します。
 
-凡例を使用して、サポートレベルについて理解します。
+凡例を使用すると、サポートレベルがわかります。
 
 | サポートレベル | 説明 |
 | :-----------: | ------------------------------ |
 | ✓ | サポート対象 |
 | * | アドオン機能により対応 |
-| - | 適用なし |
+| − | 適用なし |
 
 ## [!DNL Experience Manager]でサポートされるラスターイメージ形式 {#supported-raster-image-formats}
 
@@ -217,12 +217,8 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 | AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV（DV25）、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV、OGG | Ogg | Theora、VP3、Dirac | - |
-| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
-| MTS | AVCHD | H264/AVC | - |
 | MKV | Matroska | H264/AVC | - |
-| R3D、RM | Red Raw Video | MJPEG 2000 | - |
 | RAM、RM | RealVideo | サポート対象外 | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
-| FLAC | Native Flac | Free lossless audio codec | - |
 | MJ2 | Motion JPEG2000 | Motion JPEG 2000 codec | - |
 
 ## サポートされるアーカイブ形式 {#supported-archive-formats}
