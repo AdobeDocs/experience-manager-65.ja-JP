@@ -10,14 +10,14 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 55%
+source-wordcount: '1521'
+ht-degree: 56%
 
 ---
 
-# SCF Handlebars ヘルパー  {#scf-handlebars-helpers}
+# SCF Handlebars ヘルパー {#scf-handlebars-helpers}
 
 | **[⇐ 機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
 |---|---|
@@ -340,11 +340,11 @@ AEM html クライアントライブラリとして js、css、または theme �
     <link href="/etc/clientlibs/social/hbs/comments.css" rel="stylesheet" type="text/css">
 ```
 
-## プリティタイム{#pretty-time}
+## Pretty-time {#pretty-time}
 
 カットオフポイントに達するまでは経過時間を表示し、それ以降は通常の日付形式を表示するヘルパーです。
 
-以下に例を示します。
+次に例を示します。
 
 * 12 時間前
 * 7 日前
@@ -449,8 +449,6 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 ## Handlebars.js の基本的概要 {#handlebars-js-basic-overview}
 
-[Handlebars.jsドキュメント](https://handlebarsjs.com/expressions.html)のヘルパー関数の概要を簡単に説明します。
-
 * Handlebars ヘルパーを呼び出すには、単純な識別子（ヘルパーの名前&#x200B;**）を使用し、それに続けて 0 個以上のパラメーターをスペースで区切って指定します。
 * パラメーターには、単純な文字列、数値、ブール値、または JSON オブジェクトを指定し、オプションで最後のパラメーターとして一連のキー／値ペア（ハッシュ引数）を指定します。
 * ハッシュ引数内のキーは単純な識別子にする必要があります。
@@ -470,7 +468,7 @@ XSS に対する保護として、HTML の href または src 属性値として
 
 * ヘルパーから返される HTML 文字列コンテンツは SafeString になるようにすることをお勧めします。
 
-### Handlebars.jsドキュメントのシンプルなヘルパーの例を次に示します。{#an-example-of-a-simple-helper-from-handlebars-js-documentation}
+### Handlebars.js ドキュメントで紹介されている単純なヘルパーの例を次に示します。 {#an-example-of-a-simple-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link_to', function(title, options) {
@@ -496,7 +494,7 @@ template(context);
 &lt;li>&lt;a href=&quot;/posts/hello-world&quot;>ポスト！&lt;/a>&lt;/li>
 &lt;/ul>
 
-### Handlebars.jsドキュメントのブロックヘルパーの例を次に示します。{#an-example-of-a-block-helper-from-handlebars-js-documentation}
+### Handlebars.js ドキュメントで紹介されているブロックヘルパーの例を次に示します。 {#an-example-of-a-block-helper-from-handlebars-js-documentation}
 
 ```
 Handlebars.registerHelper('link', function(options) {
@@ -530,7 +528,7 @@ template(data);
 
 カスタムSCFヘルパーをサーバー側に実装して登録するには、Javaインターフェイス[TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)を実装し、[OSGi Service](../../help/sites-developing/the-basics.md#osgi)にして、OSGiバンドルの一部としてインストールします。
 
-以下に例を示します。
+次に例を示します。
 
 ### FooTextHelper.java {#footexthelper-java}
 
@@ -576,7 +574,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 
 ### クライアント側カスタムヘルパー {#client-side-custom-helpers}
 
-クライアント側ヘルパーは、`Handlebars.registerHelper()` () を呼び出すことによって登録する Handlebars スクリプトです。以下に例を示します。
+クライアント側ヘルパーは、`Handlebars.registerHelper()` () を呼び出すことによって登録する Handlebars スクリプトです。次に例を示します。
 
 ### custom-helpers.js {#custom-helpers-js}
 
