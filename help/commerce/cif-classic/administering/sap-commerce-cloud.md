@@ -7,7 +7,8 @@ uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
+source-git-commit: 61691c300322edcdee33b121ca400e4c89256e45
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 88%
@@ -26,7 +27,7 @@ ht-degree: 88%
 1. [カタログインポーターを設定する](#configure-the-catalog-importer)
 1. [インポーターを使用して、カタログを AEM 内の特定の場所に読み込む](#catalog-import)
 
-## Geometrixx Outdoors 用のファセット検索の設定  {#configure-the-facetted-search-for-geometrixx-outdoors}
+## Geometrixx Outdoors 用のファセット検索の設定 {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -115,7 +116,7 @@ ht-degree: 88%
 
 ログ出力は、作成されたページとコンポーネントに関するフィードバックを提供し、潜在的なエラーを報告します。
 
-## 読み込み構造の設定  {#configure-the-import-structure}
+## 読み込み構造の設定 {#configure-the-import-structure}
 
 デフォルトで作成される（アセット、ページおよびコンポーネントの）サンプル構造を以下に示します。
 
@@ -165,7 +166,7 @@ ht-degree: 88%
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
-## 読み込む商品属性の設定  {#configure-the-product-attributes-to-load}
+## 読み込む商品属性の設定 {#configure-the-product-attributes-to-load}
 
 商品（バリアント）用に読み込むプロパティと属性を定義するように、応答パーサーを設定できます。
 
@@ -204,7 +205,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 >
 >商品に関する情報を要求されるたびに、hybris サーバーが参照されます。
 
-### 完全読み込み  {#full-import}
+### 完全読み込み {#full-import}
 
 1. 必要に応じて、CRXDE Lite を使用して既存の商品データをすべて削除します。
 
@@ -212,7 +213,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
       `/etc/commerce/products`
 
-      以下に例を示します。
+      次に例を示します。
 
       [`http://localhost:4502/crx/de/index.jsp#/etc/commerce/products`](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
@@ -223,7 +224,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/importers/hybris.html`
 
-   以下に例を示します。
+   次に例を示します。
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
@@ -259,7 +260,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/importers/hybris.html`
 
-   以下に例を示します。
+   次に例を示します。
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
@@ -295,7 +296,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    `/etc/importers/hybris.html`
 
-   以下に例を示します。
+   次に例を示します。
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
@@ -308,9 +309,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
        /etc/commerce/products
    ```
 
-   ` [](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)`
-
-## Configure the Catalog Importer {#configure-the-catalog-importer}
+## カタログインポーターの設定 {#configure-the-catalog-importer}
 
 hybris カタログは、hybris カタログ、カテゴリおよび商品用のバッチインポーターを使用して AEM に読み込むことができます。
 
@@ -321,7 +320,7 @@ hybris カタログは、hybris カタログ、カテゴリおよび商品用の
 
 AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
-## Catalog Import {#catalog-import}
+## カタログの読み込み {#catalog-import}
 
 hybris パッケージには、初期ページ構造を設定するためのカタログインポーターが付属しています。
 
@@ -371,7 +370,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 1. hybris コンソールで商品を削除します。「**Change approval status**」オプションを使用して、ステータスを「`unapproved`」に設定します。商品がライブフィードから削除されます。
 
-   以下に例を示します。
+   次に例を示します。
 
    * [http://localhost:9001/productcockpit](http://localhost:9001/productcockpit) ページを開きます。
    * カタログ`Outdoors Staged`を選択します。
@@ -381,14 +380,14 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 1. もう一度増分更新を実行します（[カタログの読み込み](#catalog-import)を参照）。削除された商品がログに記録されます。
 1. 該当するカタログを[ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)します。商品と商品ページが AEM 内から削除されます。
 
-   以下に例を示します。
+   次に例を示します。
 
-   * 次のファイルを開きます。
+   * 次を開きます：:
 
       [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
    * `Hybris Base`カタログをロールアウト
-   * 次のファイルを開きます。
+   * 次を開きます：:
 
       [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
@@ -403,7 +402,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
       1. 該当するカタログを再度ロールアウトします。
       1. 該当するカテゴリページを更新します。
 
-## 注文履歴特性の ClientContext への追加  {#add-order-history-trait-to-the-client-context}
+## 注文履歴特性の ClientContext への追加 {#add-order-history-trait-to-the-client-context}
 
 注文履歴を [ClientContext](/help/sites-developing/client-context.md) に追加するには：
 
@@ -413,7 +412,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    * [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html) に直接移動します。
 
 1. [**注文履歴**&#x200B;コンポーネント](/help/sites-administering/client-context.md#adding-a-property-component)を ClientContext の&#x200B;**買い物かご**&#x200B;コンポーネントに追加します。
-1. ClientContext に注文履歴の詳細が表示されていることを確認できます。以下に例を示します。
+1. ClientContext に注文履歴の詳細が表示されていることを確認できます。次に例を示します。
 
    1. [ClientContext](/help/sites-administering/client-context.md) を開きます。
    1. アイテムを買い物かごに追加します。
