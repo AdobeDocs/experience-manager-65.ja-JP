@@ -13,7 +13,7 @@ discoiquuid: 39dfef85-d047-4b6d-a0f5-92bd77df103b
 docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 66%
@@ -191,7 +191,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
 ### 移行ユーティリティ実行後のハウスキーピングタスク {#housekeepingtasks}
 
-移行ユーティリティを実行した後、次のハウスキーピングタスクを行います。[](../../forms/using/import-export-forms-templates.md)
+移行ユーティリティを実行した後、次のハウスキーピングタスクを行います。
 
 1. レイアウトおよびフラグメントレイアウトのXFAバージョンが3.3以降であることを確認します。 古いバージョンのレイアウトとフラグメントレイアウトを使用している場合、レターのレンダリングで問題が発生する可能性があります。 古いXFAのバージョンを最新バージョンに更新するには、次の手順を実行します。
 
