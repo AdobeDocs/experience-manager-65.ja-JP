@@ -12,10 +12,10 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: 設定
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 83383d46a4200eb3d21deee15c71032314694860
 workflow-type: tm+mt
-source-wordcount: '5892'
-ht-degree: 75%
+source-wordcount: '5878'
+ht-degree: 76%
 
 ---
 
@@ -65,7 +65,7 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 >
 >バックアップのパフォーマンスについて詳しくは、[バックアップのパフォーマンス](/help/sites-deploying/configuring-performance.md#backup-performance)を参照してください。
 
-### ソフトウェアインストールのバックアップ  {#backing-up-your-software-installation}
+### ソフトウェアインストールのバックアップ {#backing-up-your-software-installation}
 
 インストール後または設定を大幅に変更した後に、ソフトウェアインストールのバックアップを取ります。
 
@@ -76,7 +76,7 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 
 >[!CAUTION]
 >
->サードパーティ製のアプリケーションサーバーを使用している場合は、追加のフォルダーが別の場所に存在し、そのフォルダーのバックアップも必要になることがあります。アプリケーションサーバーのインストールについて詳しくは、[アプリケーションサーバーと共に AEM をインストールする方法](/help/sites-deploying/application-server-install.md)を参照してください。[](/content/docs/en/aem/6-3/deploy/installing.md#installing adobe experience manager with an application server)
+>サードパーティ製のアプリケーションサーバーを使用している場合は、追加のフォルダーが別の場所に存在し、そのフォルダーのバックアップも必要になることがあります。アプリケーションサーバーのインストールについて詳しくは、[アプリケーションサーバーと共に AEM をインストールする方法](/help/sites-deploying/application-server-install.md)を参照してください。
 
 >[!CAUTION]
 >
@@ -86,7 +86,7 @@ AEM インスタンスがデプロイされた後は、操作、パフォーマ�
 >
 >ディスクミラーリングも、バックアップメカニズムとして使用できます。
 
-### リポジトリのバックアップ  {#backing-up-your-repository}
+### リポジトリのバックアップ {#backing-up-your-repository}
 
 CRX ドキュメントの[バックアップと復元](/help/sites-administering/backup-and-restore.md)に、CRX リポジトリのバックアップに関連するすべての問題が掲載されています。
 
@@ -168,7 +168,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
 Adobe Experience Manager（AEM）に関連する監査記録とログファイルは、様々な場所にあります。以下では、どこに何があるかについて、概要を説明します。
 
-### ログの使用  {#working-with-logs}
+### ログの使用 {#working-with-logs}
 
 AEM WCM では詳細なログを記録します。クイックスタートを展開して起動すると、次の場所にログが見つかります。
 
@@ -256,7 +256,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 | 2 | 警告 | アクションは成功しましたが、問題が発生しました。AEM WCM は正常に機能する場合と機能しない場合があります。 |
 | 3 | 情報 | アクションが成功しました。 |
 
-### カスタムログファイルの作成  {#create-a-custom-log-file}
+### カスタムログファイルの作成 {#create-a-custom-log-file}
 
 >[!NOTE]
 >
@@ -342,7 +342,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`。
    >
    >また、ログファイルが
    >
@@ -441,7 +441,7 @@ Felix コンソールでは、`../system/console/slinglog` の Sling Log Support
 
 監査記録は、いつ、誰が、何をしたかの記録を提供するために保持されます。AEM WCM と OSGi の両方のイベントに関して、様々な監査記録が生成されます。
 
-#### ページオーサリング時に表示される AEM WCM の監査記録  {#aem-wcm-audit-records-shown-when-page-authoring}
+#### ページオーサリング時に表示される AEM WCM の監査記録 {#aem-wcm-audit-records-shown-when-page-authoring}
 
 1. ページを開きます。
 1. サイドキックから、ロックアイコンを含むタブを選択できます。次に、「**監査ログ**」をダブルクリックします。
@@ -451,13 +451,13 @@ Felix コンソールでは、`../system/console/slinglog` の Sling Log Support
 
 1. ウィンドウを閉じるには、「**OK**」をクリックします。
 
-#### リポジトリ内の AEM WCM 監査記録  {#aem-wcm-auditing-records-within-the-repository}
+#### リポジトリ内の AEM WCM 監査記録 {#aem-wcm-auditing-records-within-the-repository}
 
 `/var/audit`フォルダー内には、リソースに応じて監査レコードが保持されます。 個々のレコードとそれらに含まれる情報が表示されるまでドリルダウンできます。
 
 これらのエントリに保持されている情報は、ページ編集時に表示される情報と同じです。
 
-#### Web コンソールの OSGi 監査記録  {#osgi-audit-records-from-the-web-console}
+#### Web コンソールの OSGi 監査記録 {#osgi-audit-records-from-the-web-console}
 
 OSGi イベントで生成される監査記録は、AEM Web コンソールの「**設定ステータス**」タブ／「**ログファイル**」タブから確認できます。 
 
@@ -559,7 +559,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
    * できる限り多くの情報を収集し、正常な状態のシステムに関する知識と比較します。
 
 
-### パフォーマンスの監視および分析のツール  {#tools-for-monitoring-and-analyzing-performance}
+### パフォーマンスの監視および分析のツール {#tools-for-monitoring-and-analyzing-performance}
 
 パフォーマンスの監視および分析に使用できるツールの一部について、以下で簡単に概要を説明します。
 
@@ -650,7 +650,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
  </tbody>
 </table>
 
-### request.log の解釈  {#interpreting-the-request-log}
+### request.log の解釈 {#interpreting-the-request-log}
 
 このファイルには、AEM に対するあらゆるリクエストに関する基本情報が登録されています。このことから、貴重な結論を引き出すことができます。
 
@@ -669,7 +669,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 特定の期間内の（例えば 24 時間の監視を何度かおこなって）すべての GET エントリを合計することにより、Web サイトの平均トラフィックを把握できます。
 
-####  request.log での応答時間の監視  {#monitoring-response-times-with-the-request-log}
+####  request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
 
 パフォーマンス分析は、request.log から始めることをお勧めします。
 
@@ -703,7 +703,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 サイズの小さいスクリプトを使用して、ログファイルから必要な情報を抽出し、必要な統計を取ることができます。これらの統計から、どのページ、またはどんなタイプのページが低速か、全体的なパフォーマンスが十分かどうかを確認できます。
 
-####  request.log での検索応答時間の監視  {#monitoring-search-response-times-with-the-request-log}
+####  request.log での検索応答時間の監視 {#monitoring-search-response-times-with-the-request-log}
 
 検索要求は常にログファイルに登録されます。
 
@@ -738,7 +738,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 31/Mar/2009:11:45:44 +0200 [337] <- 304 text/html 0ms
 ```
 
-### rlog.jar を使用した所要時間の長い要求の検索  {#using-rlog-jar-to-find-requests-with-long-duration-times}
+### rlog.jar を使用した所要時間の長い要求の検索 {#using-rlog-jar-to-find-requests-with-long-duration-times}
 
 AEMには、次の様々なヘルパーツールが含まれています。
 `<cq-installation-dir>/crx-quickstart/opt/helpers`
@@ -869,7 +869,7 @@ Percentage of the requests served within a certain time (ms)
 * 冗長なインスタンス
 * 再起動（カウンターが 0 にリセット）があるかどうか
 
-### HTML Comments {#html-comments}
+### HTML コメント {#html-comments}
 
 サーバーのパフォーマンスを向上させるために、すべてのプロジェクトに`html comments`を含めることをお勧めします。 多くの良い例が見つかる。ページを選択し、表示するページソースを開き、下までスクロールします。次のようなコードが表示されます。
 
@@ -881,7 +881,7 @@ Percentage of the requests served within a certain time (ms)
          -->
 ```
 
-### Monitoring Performance using JConsole {#monitoring-performance-using-jconsole}
+### JConsole を使用したパフォーマンスの監視 {#monitoring-performance-using-jconsole}
 
 ツールコマンド `jconsole` を、JDK で使用できます。
 
@@ -895,7 +895,7 @@ Percentage of the requests served within a certain time (ms)
 
    この後、他のオプションを選択できます。
 
-### Monitoring Performance using (J)VisualVM {#monitoring-performance-using-j-visualvm}
+### （J）VisualVM を使用したパフォーマンスの監視 {#monitoring-performance-using-j-visualvm}
 
 JDK 1.6以降では、ツールコマンド`jvisualvm`を使用できます。 JDK 1.6をインストールすると、次の操作が可能になります。
 
@@ -920,7 +920,7 @@ JDK 1.6以降では、ツールコマンド`jvisualvm`を使用できます。 J
 
 このツールを使用すると、スレッドダンプおよびメモリヘッドダンプを生成できます。これは、テクニカルサポートチームから要求されることの多い情報です。
 
-### 情報収集  {#information-collection}
+### 情報収集 {#information-collection}
 
 インストールについてできる限り知っておくことは、パフォーマンスの変化の原因や、変化が正当かどうかを追跡する上で役立ちます。これらの指標を一定の間隔で収集し、重大な変化を簡単に確認できるようにする必要があります。
 
@@ -938,7 +938,7 @@ JDK 1.6以降では、ツールコマンド`jvisualvm`を使用できます。 J
 * [ピーク時のオーサーシステムの 1 時間あたりの要求数](#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time)
 * [ピーク時のパブリッシュシステムの 1 時間あたりの要求数](#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time)
 
-#### システムで作業をしている作成者の数{#how-many-authors-are-working-with-the-system}
+#### システムで作業をしている作成者の数 {#how-many-authors-are-working-with-the-system}
 
 インストール以降にシステムを使用した作成者の数を確認するには、次のコマンドラインを使用します。
 
@@ -953,7 +953,7 @@ cut -d " " -f 3 access.log | sort -u | wc -l
 grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 ```
 
-#### 1 日あたりのページアクティベーションの平均数  {#what-is-the-average-number-of-page-activations-per-day}
+#### 1 日あたりのページアクティベーションの平均数 {#what-is-the-average-number-of-page-activations-per-day}
 
 サーバーのインストール以降のページアクティベーションの合計数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -965,7 +965,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 その後、インストール以降の経過日数を計算し、平均を計算します。
 
-#### このシステムで現在保守しているページ数{#how-many-pages-do-you-currently-maintain-on-this-system}
+#### このシステムで現在保守しているページ数 {#how-many-pages-do-you-currently-maintain-on-this-system}
 
 現在サーバー上にあるページの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -975,7 +975,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 * **クエリ** `//element(*, cq:Page)`
 
-#### MSM を使用する場合は、1 ヶ月あたりのロールアウトの平均数{#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
+#### MSM を使用する場合は、1 ヶ月あたりのロールアウトの平均数 {#if-you-use-msm-what-is-the-average-number-of-rollouts-per-month}
 
 インストール以降のロールアウトの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -987,7 +987,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 インストール以降の経過月数を計算し、平均を計算します。
 
-#### 1 ヶ月あたりのライブコピーの平均数{#what-is-the-average-number-of-live-copies-per-month}
+#### 1 ヶ月あたりのライブコピーの平均数 {#what-is-the-average-number-of-live-copies-per-month}
 
 インストール以降におこなわれたライブコピーの合計数を特定するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -999,7 +999,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 ここでも、インストール以降の経過月数を使用して、平均を計算します。
 
-#### AEM Assets を使用する場合は、Assets で現在保守しているアセットの数{#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
+#### AEM Assets を使用する場合は、Assets で現在保守しているアセットの数 {#if-you-use-aem-assets-how-many-assets-do-you-currently-maintain-in-assets}
 
 現在保守している DAM アセットの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -1007,7 +1007,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * **パス** `/`
 * **クエリ** `/jcr:root/content/dam//element(*, dam:Asset)`
 
-#### アセットの平均サイズ{#what-is-the-average-size-of-the-assets}
+#### アセットの平均サイズ {#what-is-the-average-size-of-the-assets}
 
 `/var/dam`フォルダーの合計サイズを確認するには：
 
@@ -1022,7 +1022,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    平均サイズを求めるには、`/var/dam`内の（上記で取得した）アセットの合計数でグローバルサイズを割ります。
 
-#### 現在使用されているテンプレートの数{#how-many-templates-are-currently-used}
+#### 現在使用されているテンプレートの数 {#how-many-templates-are-currently-used}
 
 現在サーバー上にあるテンプレートの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -1030,7 +1030,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * **パス** `/`
 * **クエリ** `//element(*, cq:Template)`
 
-#### 現在使用されているコンポーネントの数{#how-many-components-are-currently-used}
+#### 現在使用されているコンポーネントの数 {#how-many-components-are-currently-used}
 
 現在サーバー上にあるコンポーネントの数を確認するには、リポジトリクエリを使用します。CRXDE のツール／クエリで、次のように指定します。
 
@@ -1038,7 +1038,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * **パス** `/`
 * **クエリ** `//element(*, cq:Component)`
 
-#### ピーク時のオーサーシステムの 1 時間あたりの要求数{#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
+#### ピーク時のオーサーシステムの 1 時間あたりの要求数 {#how-many-requests-per-hour-do-you-have-on-the-author-system-at-peak-time}
 
 ピーク時のオーサーシステムの 1 時間あたりの要求数を特定するには：
 
@@ -1058,7 +1058,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    これらの値を使用して、インストール以降の経過時間数、さらに 1 時間あたりの要求の平均数を計算します。
 
-#### ピーク時のパブリッシュシステムの 1 時間あたりの要求数  {#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time}
+#### ピーク時のパブリッシュシステムの 1 時間あたりの要求数 {#how-many-requests-per-hour-do-you-have-on-the-publish-system-at-peak-time}
 
 パブリッシュインスタンスで上記の手順を繰り返します。
 
@@ -1079,7 +1079,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 
 
-### CPU 使用率が 100 ％  {#cpu-at}
+### CPU 使用率が 100 ％ {#cpu-at}
 
 システムの CPU が常に 100 ％で動作している場合は、以下を参照してください。
 
@@ -1087,7 +1087,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    * [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
-### Out of Memory {#out-of-memory}
+### メモリ不足 {#out-of-memory}
 
 このようなエラーは開発およびテストの段階で検出されるべきですが、特定のシナリオが見落とされる可能性もあります。
 
@@ -1102,7 +1102,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    * [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
 
-### ディスク I/O  {#disk-i-o}
+### ディスク I/O {#disk-i-o}
 
 システムがディスク容量不足になっている場合や、ディスクスラッシングが始まっていることに気付いた場合は、以下を参照してください。
 
@@ -1113,7 +1113,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
    * [Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
    * [CQ HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
    * [CQ WCM Debug Filter](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [ロガー](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level) [](/help/sites-deploying/configuring.md#loggersandwritersforindividualservices)
+   * [Logger](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
 * ナレッジベース
@@ -1121,7 +1121,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
    * [開いているファイルが多すぎる](https://helpx.adobe.com/experience-manager/kb/TooManyOpenFiles.html)
    * [ジャーナルの消費ディスクスペースが大きすぎる](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
-### 通常のパフォーマンス低下  {#regular-performance-degradation}
+### 通常のパフォーマンス低下 {#regular-performance-degradation}
 
 リブートのたびにインスタンスのパフォーマンスの低下が確認される場合（場合によって 1 週間後またはそれ以降）は、以下を確認できます。
 
@@ -1130,7 +1130,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
    * [閉じられていないセッション](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)
 
-### JVM のチューニング  {#jvm-tuning}
+### JVM のチューニング {#jvm-tuning}
 
 Java 仮想マシン（JVM）のチューニング機能は大幅に改善されています（特に Java 7 以降）。したがって、ある程度の固定の JVM サイズを指定し、デフォルトを使用すれば、たいていの場合に対応できます。
 
