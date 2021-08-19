@@ -12,9 +12,9 @@ discoiquuid: 3cae081e-93e3-4317-b307-1316283c307a
 docset: aem65
 feature: 設定
 exl-id: 09943de5-8d62-4354-a37f-0521a66b4c49
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '3444'
+source-wordcount: '3437'
 ht-degree: 75%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 75%
 >
 >パブリッシュインスタンスが複数ある場合は、[ユーザーの同期](/help/sites-administering/sync.md)が有効化されたときにユーザーデータが Sling 分配されます。
 
-## オーサーからパブリッシュへのレプリケーション  {#replicating-from-author-to-publish}
+## オーサーからパブリッシュへのレプリケーション {#replicating-from-author-to-publish}
 
 パブリッシュインスタンスまたは Dispatcher へのレプリケーションは、いくつかの段階を踏んで実行されます。
 
@@ -88,7 +88,7 @@ AEMの標準インストールに含まれるwe-retail Webサイトを使用し�
 エージェントまたはキューのステータスを確認するには、**ツール**コンソールを使用します。
 >[レプリケーションエージェントの監視](#monitoring-your-replication-agents)を参照してください。
 
-#### Replication (Author to Publish) {#replication-author-to-publish}
+#### レプリケーション（オーサー環境からパブリッシュ環境へ） {#replication-author-to-publish}
 
 1. オーサー環境のサポートページに移動します。
    **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
@@ -103,7 +103,7 @@ AEMの標準インストールに含まれるwe-retail Webサイトを使用し�
 * **デフォルトエージェント（パブリッシュ）**
 このエージェントは、デフォルトのパブリッシュインスタンスにコンテンツをレプリケートします。この詳細（設定とログ）は、オーサー環境のツールコンソールからアクセスできます。または
 
-   `https://localhost:4502/etc/replication/agents.author/publish.html`
+   `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
 #### レプリケーションエージェント（デフォルト） {#replication-agents-out-of-the-box}
 
@@ -120,7 +120,7 @@ AEMの標準インストールに含まれるwe-retail Webサイトを使用し�
 例えば、デフォルト設定では、コンテンツページとDAMアセットは、HTMLまたは適切なアセット形式で`/tmp`に保存されます。 設定については、 `Settings`タブと`Rules`タブを参照してください。
 これは、ページがアプリケーションサーバーから直接要求される場合に、コンテンツを確認できるようにするためのエージェントです。これは特殊なエージェントであり、（おそらく）ほとんどのインスタンスでは必要ありません。
 
-## Replication Agents - Configuration Parameters {#replication-agents-configuration-parameters}
+## レプリケーションエージェント - 設定パラメーター {#replication-agents-configuration-parameters}
 
 ツールコンソールからレプリケーションエージェントを設定する場合は、ダイアログ内の 4 つのタブを使用できます。
 
@@ -348,17 +348,17 @@ AEMの標準インストールに含まれるwe-retail Webサイトを使用し�
 
    オンにすると、エージェントはアクティベートされたページのバージョン管理を強制しません。
 
-## レプリケーションエージェントの設定  {#configuring-your-replication-agents}
+## レプリケーションエージェントの設定 {#configuring-your-replication-agents}
 
 MSSL を使用してレプリケーションエージェントをパブリッシュインスタンスに接続する方法については、[相互 SSL を使用したレプリケーション](/help/sites-deploying/mssl-replication.md)を参照してください。
 
-### オーサー環境からのレプリケーションエージェントの設定  {#configuring-your-replication-agents-from-the-author-environment}
+### オーサー環境からのレプリケーションエージェントの設定 {#configuring-your-replication-agents-from-the-author-environment}
 
 オーサー環境の「ツール」タブから、オーサー環境（**作成者のエージェント**）またはパブリッシュ環境（**発行のエージェント**）にあるレプリケーションエージェントを設定できます。次の手順は、オーサー環境用のエージェントの設定方法を示していますが、どちらの環境にも使用できます。
 
 >[!NOTE]
 >
->Dispatcher がオーサーインスタンスまたはパブリッシュインスタンスの HTTP 要求を処理する場合は、レプリケーションエージェントからの HTTP 要求に PATH ヘッダーが含まれている必要があります。次の手順に加えて、クライアントヘッダーの Dispatcher のリストに PATH ヘッダーを追加する必要があります（[/clientheaders（クライアントヘッダー）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)に関するページを参照してください）。[](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+>Dispatcher がオーサーインスタンスまたはパブリッシュインスタンスの HTTP 要求を処理する場合は、レプリケーションエージェントからの HTTP 要求に PATH ヘッダーが含まれている必要があります。次の手順に加えて、クライアントヘッダーの Dispatcher のリストに PATH ヘッダーを追加する必要があります（[/clientheaders（クライアントヘッダー）](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)に関するページを参照してください）。
 
 
 1. AEM の「**ツール**」タブにアクセスします。
@@ -377,7 +377,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 >
 >このユーザーを、必要なパスをレプリケーションする権限を持つ、サイト固有のレプリケーションのユーザーアカウントに変更する必要があります。
 
-### リバースレプリケーションの設定  {#configuring-reverse-replication}
+### リバースレプリケーションの設定 {#configuring-reverse-replication}
 
 リバースレプリケーションは、パブリッシュインスタンスで生成されたユーザーコンテンツをオーサーインスタンスに戻すために使用されます。この機能は、通常はアンケート調査や登録フォームなどで使用されます。
 
@@ -434,7 +434,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
    * 「**トランスポート**」タブで、次のように設定します。
 
       * 新しいパブリッシュインスタンスに必要なURIを入力します。例：
-         `https://localhost:4504/bin/receive`.
+         `https://localhost:4504/bin/receive`。
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。
@@ -460,7 +460,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
 
 
 
-### Dispatcher フラッシュエージェントの設定  {#configuring-a-dispatcher-flush-agent}
+### Dispatcher フラッシュエージェントの設定 {#configuring-a-dispatcher-flush-agent}
 
 デフォルトエージェントはインストールに付属しています。ただし、一部の設定については調整が必要です。新しいエージェントを定義する場合も同様です。
 
@@ -480,7 +480,7 @@ MSSL を使用してレプリケーションエージェントをパブリッシ
    * 「**トランスポート**」タブで、次のように設定します。
 
       * 新しいパブリッシュインスタンスに必要なURIを入力します。例：
-         `https://localhost:80/dispatcher/invalidate.cache`.
+         `https://localhost:80/dispatcher/invalidate.cache`。
 
       * レプリケーションに使用する、サイト固有のユーザーアカウントを入力します。
       * 必要に応じて、その他のパラメーターを設定できます。
@@ -522,7 +522,7 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
-## Monitoring your Replication Agents {#monitoring-your-replication-agents}
+## レプリケーションエージェントの監視 {#monitoring-your-replication-agents}
 
 レプリケーションエージェントを監視するには：
 
@@ -561,7 +561,7 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
    >
    >`/jcr:root/var/replication/outbox//*[@cq:repActionType='TEST']`
 
-## バッチレプリケーション{#batch-replication}
+## バッチレプリケーション {#batch-replication}
 
 バッチレプリケーションは、個々のページやアセットをレプリケートしませんが、時間やサイズに基づいて、2つの最初のしきい値がトリガーされるのを待ちます。
 
@@ -569,7 +569,7 @@ CRXDE Lite を使用して、レプリケーションエージェントの様々
 
 発行者は、すべての項目を解凍し、保存して作成者に報告します。
 
-### バッチレプリケーションの設定{#configuring-batch-replication}
+### バッチレプリケーションの設定 {#configuring-batch-replication}
 
 1. `http://serveraddress:serverport/siteadmin` に移動します。
 1. 画面の上側にある&#x200B;**[!UICONTROL ツール]**&#x200B;アイコンを押します。
