@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: dd0cbc05-a361-46bc-b9f1-d045f8f23890
 docset: aem65
 exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 33%
@@ -50,7 +50,7 @@ ht-degree: 33%
 
 様々なリンクを選択すると、読み取り専用モードになります。
 
-### JCR {#prevent-anonymous-access-on-jcr}での匿名アクセスを防ぐ
+### JCRでの匿名アクセスの防止 {#prevent-anonymous-access-on-jcr}
 
 既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツを匿名訪問者に公開しますが、サイトのコンテンツに対して&#x200B;**匿名アクセスを許可**&#x200B;は無効になっています。 ただし、この動作は、Slingの制限を回避策として使用して制御できます。
 
@@ -205,7 +205,7 @@ Web ページリンクを選択すると、サイトに含まれる基本的な 
 
 コミュニティメンバーがモデレート権限を持っている場合は、モデレートリンクが表示され、投稿されたコミュニティコンテンツが表示され、オーサー環境の[モデレートコンソール](/help/communities/moderation.md)と同様の方法で[モデレート](/help/communities/moderate-ugc.md)できます。
 
-ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。ほとんどのコンソールは、パブリッシュ環境のグローバルナビゲーションからはアクセスできません。[](/help/communities/moderate-ugc.md)
+ブラウザーの戻るボタンを使用して、公開したサイトに戻ります。ほとんどのコンソールは、パブリッシュ環境のグローバルナビゲーションからはアクセスできません。
 
 ![moderationlink](assets/moderationlink.png)
 
