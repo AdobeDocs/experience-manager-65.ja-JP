@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 88%
@@ -62,10 +62,10 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 * [ドキュメント](#finding-documents)
 * [ムービー](#finding-movies)
 * [Dynamic Mediaブラウザー](/help/sites-administering/scene7.md#scene7contentbrowser)
-* [](#products) [ページ](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#finding-pages)
+* [ページ](#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
-* [製品](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#products)
+* [製品](#products)
 * または、[リポジトリ構造から Web サイトを参照](#the-content-finder)できます
 
 すべてのオプションについて、[特定の項目を検索](#the-content-finder)できます。
@@ -174,7 +174,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 その他の[ページ間の関係は Web サイトコンソールから確認できます](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)。
 
-## 監査ログ  {#audit-log}
+## 監査ログ {#audit-log}
 
 **監査ログ**&#x200B;には、サイドキックの「**情報**」タブからアクセスできます。ここには、現在のページで実行された最近のアクションが一覧表示されます。次に例を示します。
 
