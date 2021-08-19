@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: c097b60f-bcdf-45de-babe-b4c2e2b746a1
 docset: aem65
 exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 77%
@@ -28,7 +28,7 @@ ht-degree: 77%
 
 ユーザーがワークフローを開始すると、インスタンスが開始されます。これは対応するランタイムモデルです。変更内容を[同期](#sync-your-workflow-generate-a-runtime-model)すると作成されます。
 
-## 新しいワークフローの作成  {#creating-a-new-workflow}
+## 新しいワークフローの作成 {#creating-a-new-workflow}
 
 初めて作成する新しいワークフローモデルには、次のものが含まれています。
 
@@ -56,7 +56,7 @@ ht-degree: 77%
 >
 >このフォルダーは、[そのフォルダー内のモデルへのアクセス権を管理](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)するために利用できます。
 
-## ワークフローの編集  {#editing-a-workflow}
+## ワークフローの編集 {#editing-a-workflow}
 
 既存のワークフローモデルを編集して、次のことができます。
 
@@ -67,7 +67,7 @@ ht-degree: 77%
 
 ワークフローの変更を完了するには、「**同期**」を使用して、**ランタイムモデルを生成**&#x200B;する必要があります。詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### ワークフローの同期 - ランタイムモデルの生成  {#sync-your-workflow-generate-a-runtime-model}
+### ワークフローの同期 - ランタイムモデルの生成 {#sync-your-workflow-generate-a-runtime-model}
 
 「**同期**」（エディターのツールバーの右側）をクリックすると、[ランタイムモデル](/help/sites-developing/workflows.md#runtime-model)が生成されます。ランタイムモデルは、ユーザーがワークフローを開始したときに実際に使用されるモデルです。変更内容を&#x200B;**同期**&#x200B;しない場合は、その変更内容は実行時には反映されません。
 
@@ -143,7 +143,7 @@ ht-degree: 77%
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### ワークフローステップの設定  {#configuring-a-workflow-step}
+### ワークフローステップの設定 {#configuring-a-workflow-step}
 
 **ステップのプロパティ**&#x200B;ダイアログを使用して、ワークフローステップの動作を&#x200B;**設定**&#x200B;およびカスタマイズできます。
 
@@ -181,7 +181,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->ワークフローを[一時的](/help/sites-developing/workflows.md#transient-workflows)モードでした場合は、AEM にはワークフロー履歴が保存されません。したがって、そのワークフローに関連する情報は、[タイムライン](/help/sites-authoring/basic-handling.md#timeline)に表示されません。[](/help/sites-authoring/basic-handling.md#timeline)
+>ワークフローを[一時的](/help/sites-developing/workflows.md#transient-workflows)モードでした場合は、AEM にはワークフロー履歴が保存されません。したがって、そのワークフローに関連する情報は、[タイムライン](/help/sites-authoring/basic-handling.md#timeline)に表示されません。
 
 ## タッチ UI でワークフローモデルを使用可能にする {#classic2touchui}
 
@@ -220,7 +220,7 @@ ht-degree: 77%
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-### （ワークフローの進行状況を表示する）ワークフローステージの設定{#configuring-workflow-stages-that-show-workflow-progress}
+### （ワークフローの進行状況を表示する）ワークフローステージの設定 {#configuring-workflow-stages-that-show-workflow-progress}
 
 [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)は、タスクを処理するときにワークフローの進行状況を確認するのに役立ちます。
 
@@ -260,7 +260,7 @@ ht-degree: 77%
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-## パッケージのワークフローモデルのエクスポート  {#exporting-a-workflow-model-in-a-package}
+## パッケージのワークフローモデルのエクスポート {#exporting-a-workflow-model-in-a-package}
 
 パッケージのワークフローモデルをエクスポートする方法は次のとおりです。
 
@@ -431,7 +431,7 @@ OR ルールを定義するには、次の手順に従います。
 
    詳しくは、[ワークフローの同期](#sync-your-workflow-generate-a-runtime-model)を参照してください。
 
-#### 関数 Check()  {#function-check}
+#### 関数 Check() {#function-check}
 
 >[!NOTE]
 >
