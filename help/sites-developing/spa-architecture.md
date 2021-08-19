@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
 source-wordcount: '2122'
 ht-degree: 86%
@@ -55,7 +55,7 @@ AEM オーサリング機能をサポートする必要がない場合は、別�
 
 ### 動的レンダリング {#dynamic-rendering}
 
-SPA では、コンテンツの動的レンダリングのみに依存する必要があります。AEM がコンテンツ構造のすべての子を取得してレンダリングすることは、デフォルトで期待されています。  [](/help/sites-developing/spa-architecture.md#portability)
+SPA では、コンテンツの動的レンダリングのみに依存する必要があります。AEM がコンテンツ構造のすべての子を取得してレンダリングすることは、デフォルトで期待されています。
 
 特定のコンテンツを指す明示的なレンダリングは静的レンダリングと見なされ、サポートされているものの、AEM コンテンツオーサリング機能との互換性はありません。これは[移植性](/help/sites-developing/spa-architecture.md#portability)の原則に反するものでもあります。
 
@@ -67,11 +67,11 @@ SPA では、コンテンツの動的レンダリングのみに依存する必�
 
 ## AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## SPA デザインモデル {#spa-design-models}
 
-[AEM での SPA 開発の原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)に従えば、SPA はサポートされるすべての AEM コンテンツオーサリング機能と共に機能します。  [](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)
+[AEM での SPA 開発の原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)に従えば、SPA はサポートされるすべての AEM コンテンツオーサリング機能と共に機能します。
 
 ただし、これが全く必要でない場合もあります。次の表に、様々なデザインモデルの長所と短所の概要を示します。
 
@@ -103,7 +103,6 @@ AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https
 >[!NOTE]
 >
 >AEM ではすべてのモデルがサポートされていますが、3 番目のモデルを実装することでのみ（つまり AEM で推奨される [SPA 開発原則](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)に従うことで）、コンテンツ作成者は SPA のコンテンツをいつもどおりに操作、編集できます。
->[](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)
 
 ## 既存の SPA から AEM への移行 {#migrating-existing-spas-to-aem}
 
