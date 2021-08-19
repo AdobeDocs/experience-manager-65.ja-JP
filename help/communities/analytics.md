@@ -12,7 +12,7 @@ discoiquuid: e6fdaf56-402f-418d-96d8-e46bd3ad1e8c
 docset: aem65
 role: Admin
 exl-id: 7d54928b-6512-4da9-a209-eb4488bf2b64
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: fcdadcf691ed5a569a5a40ca070f8ec266ec3eb9
 workflow-type: tm+mt
 source-wordcount: '2756'
 ht-degree: 46%
@@ -154,7 +154,7 @@ Video Heartbeat Analyticsのライセンスを取得すると、`Marketing Cloud
 * コミュニティサイトの[Analyticsを有効にする](#enable-analytics-for-a-community-site)
 * `Marketing Cloud Org Id`をコミュニティサイトに関連付けます。
 
-`Marketing Cloud Org Id`は、[コミュニティサイトの作成時](/help/communities/sites-console.md#enablement)以降に、[コミュニティサイトのプロパティを変更](/help/communities/sites-console.md#modifying-site-properties)することで入力できます。[](#aem-analytics-cloud-service-configuration)
+`Marketing Cloud Org Id`は、[コミュニティサイトの作成時](/help/communities/sites-console.md#enablement)以降に、[コミュニティサイトのプロパティを変更](/help/communities/sites-console.md#modifying-site-properties)することで入力できます。
 
 ![marketing-org-id](assets/marketing-org-id.png)
 
