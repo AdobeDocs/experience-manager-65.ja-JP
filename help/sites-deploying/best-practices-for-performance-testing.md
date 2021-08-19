@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1920'
 ht-degree: 91%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 91%
 
 このドキュメントでは、全体的な戦略とパフォーマンステストの実行方法を概説するほか、アドビが提供するテスト支援ツールをいくつか紹介します。最後に、コード分析とシステム設定の両観点から、AEM 6 でのパフォーマンス調整に役立つツールをいくつか取り上げます。
 
-### 実際の状況に近いシミュレーション  {#simulating-reality}
+### 実際の状況に近いシミュレーション {#simulating-reality}
 
 パフォーマンステストを実行するときに最も重要なのは、可能な限り実稼動環境に近い状況を再現することです。これは簡単なことではありませんが、正確なパフォーマンステストをおこなうには不可欠です。パフォーマンステストを設計する際は、以下の点を考慮することが重要です。
 
@@ -45,7 +45,7 @@ ht-degree: 91%
 
 パフォーマンス問題の多くは、システムが高負荷状態になるまで認識されません。パフォーマンステストでは、実稼動システムのピーク時の負荷をシミュレートする必要があります。
 
-### 目標の設定  {#setting-goals}
+### 目標の設定 {#setting-goals}
 
 パフォーマンステストを開始する前に、負荷と応答時間を指定するための非機能要件を設定する必要があります。既存のシステムから移行する場合は、応答時間が現在の稼動時の値に近いかを確認します。負荷に関しては、現在のピーク負荷の 2 倍を想定します。こうしておけば、Web サイトが拡大しても十分なパフォーマンスが維持されることを保証できます。
 
@@ -65,8 +65,8 @@ ht-degree: 91%
 * [Neustar](https://www.neustar.biz/services/web-performance/load-testing) のようなクラウドベースの負荷テストツールも使用できます。
 * モバイルまたはレスポンシブ Web サイトをテストする際は、また別のツールセットを使用する必要があります。こうしたツールでは、ネットワーク帯域幅の制限、3G や EDGE などの低速なモバイル接続のシミュレートをおこなえます。広く利用されているツールには以下のものがあります。
 
-   * **[Network Link Conditioner](https://nshipster.com/network-link-conditioner/)** - 簡単に使用できる UI を備えており、またかなり低いレベルのネットワークスタックで動作します。OS X と iOS のバージョンがあります。[](https://nshipster.com/network-link-conditioner/)
-   * [**Charles**](https://www.charlesproxy.com/) - ネットワーク制限を使用できる Web デバッグプロキシアプリケーションです。他にも用途がいくつかあります。提供されているバージョンは、Windows、OS X および Linux です。[](https://www.charlesproxy.com/)
+   * **[Network Link Conditioner](https://nshipster.com/network-link-conditioner/)** - 簡単に使用できる UI を備えており、またかなり低いレベルのネットワークスタックで動作します。OS X と iOS のバージョンがあります。
+   * [**Charles**](https://www.charlesproxy.com/) - ネットワーク制限を使用できる Web デバッグプロキシアプリケーションです。他にも用途がいくつかあります。提供されているバージョンは、Windows、OS X および Linux です。
 
 #### 最適化ツール {#optimization-tools}
 
@@ -130,7 +130,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 
 基本的なテストの場合は、Apache Bench を使用して Web サーバーの応答時間を測定し、メモリリークなどの問題を測定するための負荷を生成できます。詳しくは、[監視に関するドキュメント](/help/sites-deploying/monitoring-and-maintaining.md#apache-bench)の例を参照してください。
 
-## パフォーマンス問題のトラブルシューティング  {#troubleshooting-performance-issues}
+## パフォーマンス問題のトラブルシューティング {#troubleshooting-performance-issues}
 
 オーサーインスタンスでパフォーマンステストを実行した後に、問題が発生した場合は、調査、診断および対応をおこなう必要があります。問題の分析と対応をおこなう際には、いくつかのツールと手法を使用できます。
 
