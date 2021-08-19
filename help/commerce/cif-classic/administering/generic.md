@@ -8,14 +8,14 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
+source-git-commit: 812d1a43176a75ff22e3a0bc07bc658cb5070a62
 workflow-type: tm+mt
-source-wordcount: '3009'
+source-wordcount: '3002'
 ht-degree: 84%
 
 ---
 
-# 汎用 e コマースの管理  {#administering-generic-ecommerce}
+# 汎用 e コマースの管理 {#administering-generic-ecommerce}
 
 AEM の汎用ソリューションは、（外部の e コマースエンジンを使用するのではなく）リポジトリ内に保持されているコマース情報を管理する手段を提供します。これには以下が含まれます。
 
@@ -33,7 +33,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 >
 >現時点では、デモンストレーション目的またはユーザーの要件に応じたカスタム実装の基盤として使用されています。
 
-## 商品と商品バリエーション  {#products-and-product-variations}
+## 商品と商品バリエーション {#products-and-product-variations}
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 >
 >この場所の下のどこにでも、新しい商品定義を追加の設定なしで作成できます。
 
-### 商品の読み込み  {#importing-products}
+### 商品の読み込み {#importing-products}
 
 #### 商品の読み込み - タッチ操作向け UI {#importing-products-touch-optimized-ui}
 
@@ -99,7 +99,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
 1. 「**完了**」を選択して、ウィザードを閉じます。
 
-#### 商品の読み込み - クラシック UI  {#importing-products-classic-ui}
+#### 商品の読み込み - クラシック UI {#importing-products-classic-ui}
 
 1. **ツール**&#x200B;コンソールを使用して、**コマース**&#x200B;フォルダーを開きます。
 1. ダブルクリックして&#x200B;**製品インポーター**&#x200B;を開きます。
@@ -128,7 +128,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
 1. 「**製品を読み込み**」をクリックします。
 
-### 商品情報の作成  {#creating-product-information}
+### 商品情報の作成 {#creating-product-information}
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 >
 >商品とそのバリアントはツリー構造として保存されます。商品情報が一番上にあり、バリアントがその下にあります（この構造は UI によって強制されます）。
 
-### 商品情報の編集  {#editing-product-information}
+### 商品情報の編集 {#editing-product-information}
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 >
 >つまり、デフォルトでは [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja) によって商品画像がブロックされるので、必要に応じて設定してください。
 
-#### 商品情報の編集 - タッチ操作向け UI  {#editing-product-information-touch-optimized-ui}
+#### 商品情報の編集 - タッチ操作向け UI {#editing-product-information-touch-optimized-ui}
 
 1. （**コマース**&#x200B;から）**製品**&#x200B;コンソールを使用して、商品情報に移動します。
 1. 次のいずれかを使用します。
@@ -216,7 +216,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
 1. 商品をクリックまたはタップして開きます。商品を公開したり、商品データを表示したりもできます。
 
-#### 検索の拡張  {#extending-search}
+#### 検索の拡張 {#extending-search}
 
 CRXDE Lite を使用して、既存のファセットを変更したり、新しいファセットを追加したりできます。
 
@@ -229,7 +229,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 1. `propertyValues`は変更できます。 例えば、XS または XXL を追加したり、サイズを削除したりできます。
 1. 「**すべて保存**」をクリックし、製品検索ページに移動します。 変更内容が表示されます。
 
-### 複数アセット  {#multiple-assets}
+### 複数アセット {#multiple-assets}
 
 商品コンポーネントに複数のアセットを追加して、商品ページに表示するアセットを指定できます。
 
@@ -237,7 +237,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 >
 >複数アセットに関連する作業はすべて、タッチ操作向け UI で実行します。
 
-#### 複数アセットの追加  {#adding-multiple-assets}
+#### 複数アセットの追加 {#adding-multiple-assets}
 
 1. **コマース**&#x200B;から&#x200B;**製品**&#x200B;コンソールに移動します。
 1. **製品**&#x200B;コンソールを使用して、必要な製品に移動します。
@@ -293,7 +293,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 >
 >カタログレベルと製品コンソールレベルの両方で変更内容をロールアウトして、変更を適用し、商品ページ上で違いを確認する必要があります。
 
-#### 製品ページ {#product-page}
+#### 商品ページ {#product-page}
 
 1. 商品ページに移動します。
 1. 製品コンポーネントを&#x200B;**編集**&#x200B;します。
@@ -319,7 +319,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 1. 「**完了**」をタップまたはクリックします。
 1. 変更内容を[ロールアウト](#rolling-out-a-catalog)します。
 
-### 商品情報の公開／非公開  {#publishing-unpublishing-product-information}
+### 商品情報の公開／非公開 {#publishing-unpublishing-product-information}
 
 #### 商品情報の公開／非公開 - タッチ操作向け UI {#publishing-unpublishing-product-information-touch-optimized-ui}
 
@@ -352,7 +352,7 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 
 詳しくは、[製品フィード](/help/sites-administering/product-feed.md)を参照してください。
 
-### 商品アップデート用のイベントハンドラー  {#event-handler-for-product-updates}
+### 商品アップデート用のイベントハンドラー {#event-handler-for-product-updates}
 
 商品が追加、変更または削除された場合や、商品ページが追加、変更または削除された場合にイベントを記録するイベントハンドラーがあります。次の OSGi イベントが用意されています。
 
@@ -371,7 +371,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 >[!NOTE]
 >
->AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)の[イベント処理もお読みください。 [](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)
+>AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)でのイベント処理もお読みください。[
 
 ### カートへ追加リンクを含む画像 {#image-with-add-to-cart-links}
 
@@ -443,7 +443,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 ## カタログ {#catalogs}
 
-### カタログの生成  {#generating-a-catalog}
+### カタログの生成 {#generating-a-catalog}
 
 #### カタログの生成 - タッチ操作向け UI {#generating-a-catalog-touch-optimized-ui}
 
@@ -486,7 +486,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 1. **Web サイト**&#x200B;コンソールを使用して、**カタログのブループリント**&#x200B;に移動し、基本カタログに移動します。
 
-   以下に例を示します。
+   次に例を示します。
 
    `http://localhost:4502/siteadmin#/content/catalogs/geometrixx-outdoors/base-catalog`
 
@@ -508,7 +508,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 1. 「**OK**」をクリックしてプロパティを保存します。バナー情報が、ブループリントページの「**製品の選択条件**」の下に表示されます。
 1. これらの新しい変更をロールアウトします。
 
-### カタログのロールアウト  {#rolling-out-a-catalog}
+### カタログのロールアウト {#rolling-out-a-catalog}
 
 #### カタログのロールアウト - タッチ操作向け UI {#rolling-out-a-catalog-touch-optimized-ui}
 
@@ -532,7 +532,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 カタログをロールアウトするには：
 
-1. ロールアウトするカタログに移動します。 以下に例を示します。
+1. ロールアウトするカタログに移動します。 次に例を示します。
 
    `http://localhost:4502/cf#/content/catalogs/geometrixx-outdoors/base-catalog.html`
 
@@ -556,11 +556,11 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 1. 読み込みが終了したら、「**完了**」をタップまたはクリックします。
 
-#### ブループリントインポーター - クラシック UI  {#blueprint-importer-classic-ui}
+#### ブループリントインポーター - クラシック UI {#blueprint-importer-classic-ui}
 
 1. **ツール**&#x200B;コンソールを使用して、**コマース**&#x200B;に移動します。
 
-   以下に例を示します。
+   次に例を示します。
 
    `http://localhost:4502/miscadmin#/etc/commerce`
 
@@ -570,7 +570,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 ## プロモーション {#promotions}
 
-### プロモーションの作成  {#creating-a-promotion}
+### プロモーションの作成 {#creating-a-promotion}
 
 #### プロモーションの作成 - クラシック UI {#creating-a-promotion-classic-ui}
 
@@ -600,7 +600,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 ## 割引券 {#vouchers}
 
-### 割引券の作成  {#creating-a-voucher}
+### 割引券の作成 {#creating-a-voucher}
 
 #### 割引券の作成 - クラシック UI {#creating-a-voucher-classic-ui}
 
@@ -614,7 +614,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 1. これで割引券をアクティベートできるので、買い物客はパブリッシュインスタンス上でこの割引券を買い物かごに入れて使用できます。
 
-### 割引券の削除  {#removing-vouchers}
+### 割引券の削除 {#removing-vouchers}
 
 #### 割引券の削除 - クラシック UI {#removing-vouchers-classic-ui}
 
@@ -625,13 +625,13 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 どちらのアクションも、**Web サイト**&#x200B;コンソールから実行できます。
 
-### 割引券の変更  {#modifying-vouchers}
+### 割引券の変更 {#modifying-vouchers}
 
 #### 割引券の変更 - クラシック UI {#modifying-vouchers-classic-ui}
 
 割引券またはプロモーションのプロパティを変更するには、**Web サイト**&#x200B;コンソールでその割引券またはプロモーションをダブルクリックし、「**編集**」をクリックします。保存後、変更がパブリッシュインスタンスにプッシュされるように、アクティベートする必要があります。
 
-### 買い物かごへの割引券の追加  {#adding-vouchers-to-a-cart}
+### 買い物かごへの割引券の追加 {#adding-vouchers-to-a-cart}
 
 ユーザーが買い物かごに割引券を追加できるようにするには、組み込みの&#x200B;**割引券**&#x200B;コンポーネント（コマースカテゴリ）を使用します。このコンポーネントを、買い物かごが表示されているのと同じページに追加する必要があります（ただし必須ではありません）。ほとんどの場合、割引券コンポーネントはユーザーが割引券コードを入力できるフォームにすぎません。適用された割引券とその割引の一覧を実際に表示するのは、買い物かごコンポーネントです。
 
@@ -654,7 +654,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 >
 > 顧客の注文情報はそのホームディレクトリに保持され、顧客のアカウントの注文履歴で公開されます。この情報は、ホームディレクトリの残りの情報とともに公開されます。
 
-### 注文情報の作成  {#creating-order-information}
+### 注文情報の作成 {#creating-order-information}
 
 #### 注文情報の作成 - タッチ操作向け UI {#creating-order-information-touch-optimized-ui}
 
@@ -667,7 +667,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 1. 「**作成**」を選択して情報を保存します。
 
-### 注文情報の編集  {#editing-order-information}
+### 注文情報の編集 {#editing-order-information}
 
 #### 注文情報の編集 - タッチ操作向け UI {#editing-order-information-touch-optimized-ui}
 
