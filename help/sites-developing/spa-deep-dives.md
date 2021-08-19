@@ -10,9 +10,9 @@ topic-tags: spa
 content-type: reference
 discoiquuid: 48ab972b-ca26-40d1-b89e-86124ceb173b
 exl-id: aba1dc0f-eab1-40aa-8ab6-317e2fa7891c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '336'
 ht-degree: 100%
 
 ---
@@ -23,6 +23,6 @@ AEM SPA エディター SDK は、一連の AEM Gems セッションで特集さ
 
 ## Gem セッション {#gem-sessions}
 
-* **[AEM SPA エディター](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-spa-editor.html)[](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-spa-editor.html)** - 初心者向けに、SPA エディターの概要を説明します。AEM で SPA を使い始めたばかりの方は、こちらをご覧ください。
+* **[AEM SPA エディター](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-spa-editor.html)** - 初心者向けに、SPA エディターの概要を説明します。AEM で SPA を使い始めたばかりの方は、こちらをご覧ください。
 * **[SPA エディター SDK の詳細 - 第 1 部 - React](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/SPA-Editor-SDK-Deep-Dive-React.html)** - AEM ページエディターを使用して作成できる単一ページアプリの開発に深く掘り下げます。プロジェクトの構造に関する考慮事項や推奨事項の説明、プロジェクトのアーキテクチャを構成するすべてのレイヤーの確認、AEM と SPA のコンポーネントの役割、モデルオブジェクトの構造と主要な JSON フィールドなど。
 * **[SPA エディター SDK の詳細 - 第 2 部 - Angular](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/SPA-Editor-SDK-Deep-Dive-Angular.html)** - AEM ページエディターを使用して作成できる単一ページアプリの開発について詳しく説明します。プロジェクトの構造に関する考慮事項や推奨事項の説明、プロジェクトのアーキテクチャを構成するすべてのレイヤーの確認、AEM と SPA のコンポーネントの役割、モデルオブジェクトの構造と主要な JSON フィールドなど。
