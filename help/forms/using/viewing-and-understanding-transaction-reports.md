@@ -9,18 +9,18 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c04c488b-73f3-49ba-9e89-f97497965757
 docset: aem65
 exl-id: 3c7cbe1f-ac81-4df9-96b2-662cbc5f2075
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 75e1697c301dca3a649833a45caa1753fdc81514
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
-# トランザクションレポートの表示と理解{#viewing-and-understanding-transaction-reports}
+# 取引レポートの表示と理解{#viewing-and-understanding-transaction-reports}
 
 トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を取得し、トラッキングすることができます。 これらのトランザクションを追跡する目的は、製品の使用状況に関する十分な情報に基づく判断を下し、ハードウェアとソフトウェアに対する投資を再調整することです。 詳しくは、「[AEM Formsトランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)」を参照してください。
 
-## トランザクションレポートの設定{#setting-up-transaction-reports}
+## トランザクションレポートの設定  {#setting-up-transaction-reports}
 
 トランザクションレポート機能は、AEM formsアドオンパッケージの一部です。 すべてのオーサーインスタンスとパブリッシュインスタンスにアドオンパッケージをインストールする方法について詳しくは、「[AEM formsのインストールと設定](/help/forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。 AEM formsアドオンパッケージをインストールしたら、次の手順を実行します。
 
@@ -39,11 +39,11 @@ ht-degree: 0%
 
 
 
-### すべてのパブリッシュインスタンスでリバースレプリケーションを有効にする{#enable-reverse-replication-on-all-the-publish-instances}
+### すべてのパブリッシュインスタンスでリバースレプリケーションを有効にする {#enable-reverse-replication-on-all-the-publish-instances}
 
 トランザクションレポートでは、リバースレプリケーションを使用して、パブリッシュインスタンスからオーサーインスタンスにトランザクションの数を統合します。 すべてのパブリッシュインスタンスでリバースレプリケーションを設定します。 リバースレプリケーションを設定する詳細な手順については、[レプリケーション](/help/sites-deploying/replication.md)を参照してください。
 
-### トランザクションレポートを有効にする{#enable-transaction-reports}
+### トランザクションレポートの有効化 {#enable-transaction-reports}
 
 トランザクションレポートは、デフォルトで無効になっています。 AEM Webコンソールからレポートを有効にできます。 AEM Forms環境でトランザクションレポートを有効にするには、すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行します。
 
@@ -53,13 +53,13 @@ ht-degree: 0%
 
    すべてのオーサーインスタンスとパブリッシュインスタンスで、手順1 ～ 3を繰り返します。
 
-### トランザクションレポートを表示する権限の提供{#provide-rights-to-view-a-transaction-report}
+### トランザクションレポートを表示する権限の指定 {#provide-rights-to-view-a-transaction-report}
 
 トランザクションレポートを表示できるのはfd-administratorグループのメンバーだけです。 ユーザーにトランザクションレポートの表示を許可するには、ユーザーをfd-administratorグループのメンバーにします。 ユーザーをAEMグループのメンバーにする手順については、[User, Group and Access Rights Administration](/help/sites-administering/user-group-ac-admin.md)を参照してください。
 
-### （オプション）トランザクションフラッシュ期間とアウトボックスの設定{#optional-configure-transaction-flush-period-and-outboxes}
+### （オプション）トランザクションフラッシュ期間とアウトボックスの設定 {#optional-configure-transaction-flush-period-and-outboxes}
 
-トランザクションは、リポジトリに保存される前にメモリ内にキャッシュされます。 デフォルトでは、キャッシュ期間（トランザクションフラッシュ期間）は60秒に設定されています。 デフォルトのキャッシュ期間を変更するには、次の手順を実行します。
+トランザクションは、リポジトリに保存される前にメモリにキャッシュされます。 リポジトリへの書き込みが頻繁におこなわれないように、プロセスが実行されます。 デフォルトでは、キャッシュ期間（トランザクションフラッシュ期間）は60秒に設定されています。 デフォルトの期間は、環境に合わせて変更できます。 デフォルトのキャッシュ期間を変更するには、次の手順を実行します。
 
 1. オーサーインスタンスに管理者としてログインします。 **ツール** > **操作** > **Webコンソール**&#x200B;に移動します。
 1. **Forms Transaction Repository Storage Provider**&#x200B;サービスを探して開きます。
@@ -71,14 +71,14 @@ ht-degree: 0%
 1. **Forms Transaction Repository Storage Provider**&#x200B;サービスを探して開きます。
 1. カスタムアウトボックスの名前を&#x200B;**アウトボックス**&#x200B;フィールドに指定します。 「**保存**」をクリックします。指定した名前のアウトボックスがすべてのオーサーインスタンス上に作成されます。
 
-## トランザクションレポートの表示{#viewing-the-transaction-report}
+## トランザクションレポートの表示 {#viewing-the-transaction-report}
 
 オーサーインスタンスまたはパブリッシュインスタンスでトランザクションレポートを表示できます。 オーサーインスタンス上のトランザクションレポートは、設定済みのオーサーインスタンスとパブリッシュインスタンス上で発生するすべてのトランザクションの集計合計を提供します。 パブリッシュインスタンスのトランザクションレポートは、基になるパブリッシュインスタンスでのみ発生するトランザクションの数を示します。 次の手順を実行して、レポートを表示します。
 
 1. `https://[hostname]:'port'`でAEM Formsサーバーにログインします。
 1. **ツール** / **Forms****トランザクションレポートを表示**&#x200B;に移動します。
 
-## レポート{#understanding-the-report}について
+## レポートについて {#understanding-the-report}
 
 AEM Formsには、次のサマリレポートに示すように、設定日以降のトランザクションレポートが表示されます。
 
@@ -88,7 +88,7 @@ AEM Formsには、次のサマリレポートに示すように、設定日以�
 * 設定済みのパブリッシュインスタンスまたはパブリッシュファームでのみ発生したすべてのトランザクションを表示するには、**「パブリッシュインスタンスのトランザクションのみを表示**」を使用します。
 * 次のカテゴリを使用します。**処理されたドキュメント**、**レンダリングされたドキュメント**、および&#x200B;**Formsが送信した**&#x200B;を参照して、対応するトランザクションを表示します。 これらのカテゴリに計上される取引のタイプについては、[請求可能な取引レポートAPI](../../forms/using/transaction-reports-billable-apis.md)を参照してください。
 
-## トランザクションレポートログ{#view-transaction-reporting-logs}を表示します
+## トランザクションレポートログの表示 {#view-transaction-reporting-logs}
 
 トランザクションレポートでは、レポートに表示されるすべての情報と一部の追加情報がログに配置されます。 ログに表示される情報は、上級ユーザーにとって役立ちます。 例えば、ログでは、レポートに表示される3つの統合カテゴリに比べて、トランザクションを複数の詳細カテゴリに分割します。 ログは、`/crx-repository/logs/`ディレクトリの`error.log`ファイルにあります。 ログは、AEM Webコンソールからトランザクションレポートを有効にしない場合でも使用できます。
 
