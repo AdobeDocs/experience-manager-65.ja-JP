@@ -5,7 +5,7 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 3e4e9ab8b3940f539228bccf759dcade03a8b015
+source-git-commit: 218e97eb31061e833f3b291a6607b2ebf4762471
 workflow-type: tm+mt
 source-wordcount: '2967'
 ht-degree: 91%
@@ -116,7 +116,7 @@ Connected Assets とローカル [!DNL Sites] の接続を構成するには、�
 ![設定済み Connected Assets の接続テスト [!DNL Sites]](assets/connected-assets-multiple-config.png) 
 *図：設定済みのConnected Assetsの接続テスト [!DNL Sites]。*
 
-### Dynamic Mediaアセットの接続の設定{#sites-dynamic-media-connected-assets}
+### Dynamic Mediaアセットの接続の設定 {#sites-dynamic-media-connected-assets}
 
 [!DNL Sites] デプロイメントと [!DNL Dynamic Media] デプロイメントの間の接続を設定して、Web ページの作成者が Web ページで [!DNL Dynamic Media] の画像を使用できるようにすることができます。Web ページをオーサリングする際に、リモートアセットとリモート [!DNL Dynamic Media] デプロイメントを使用するエクスペリエンスは同じです。
 
