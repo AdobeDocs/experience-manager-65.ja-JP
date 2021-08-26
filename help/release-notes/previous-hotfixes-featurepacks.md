@@ -1,18 +1,360 @@
 ---
-title: '[!DNL Adobe Experience Manager] 6.5以前のService Packリリースノート'
-description: ' [!DNL Adobe Experience Manager] 6.5サービスパックのリリースノート。'
+title: '[!DNL Adobe Experience Manager] 6.5以前のサービスパックリリースノート'
+description: ' [!DNL Adobe Experience Manager] 6.5サービスパックのリリースノート'
 contentOwner: AK
+mini-toc-levels: 2
 exl-id: aeed49a0-c7c2-44da-b0b8-ba9f6b6f7101
-source-git-commit: 29e045ef3080866a94e0925bc0c176a91092c729
+source-git-commit: 97d0b0d85276c733b487a8f3c5095bc4feb7e08d
 workflow-type: tm+mt
-source-wordcount: '20313'
-ht-degree: 15%
+source-wordcount: '23168'
+ht-degree: 13%
 
 ---
 
-# 以前のサービスパック{#hotfixes-and-feature-packs-included-in-previous-service-packs}に含まれているホットフィックスと機能パック
+# 以前のサービスパックに含まれていたホットフィックスと機能パック {#hotfixes-and-feature-packs-included-in-previous-service-packs}
 
-## [!DNL Adobe Experience Manager] 6.5.8.0  {#experience-manager-6580}
+## [!DNL Adobe Experience Manager] 6.5.9.0 {#experience-manager-6590}
+
+[!DNL Adobe Experience Manager] 6.5.9.0には、2019年4月の6.5リリースのリリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
+
+[!DNL Adobe Experience Manager] 6.5.9.0で導入された主な機能と機能強化は次のとおりです。
+
+* [!DNL Experience Manager Sites] Dynamic Media Foundationコンポーネントで、レスポンシブな画像プリセットまたはスマート切り抜きを使用する際に、高解像度のデバイス向けの最適化のオン/オフを切り替えることができるようになりました。
+
+* パフォーマンスを向上させるために、`hidden=false`条件をJCRクエリから[!UICONTROL QueryBuilder]エバリュエーターに移動します。 変更後に非表示の述語が機能していることを確認するために、[!DNL Experience Manager]は非表示のフォルダーが表示されていないことを確認します。
+
+* [!DNL Experience Manager Sites]ページで削除されたページとツリーを復元する機能。
+
+* 新しいユーザーがメーラー設定サービスの更新トークンを使用してアクセストークンを更新する機能をサポートします。
+
+* [メール設定サービスのSMTP XOAUTH2](/help/sites-administering/notification.md#setting-up-oauth) メカニズムのサポート。
+
+* [!DNL MongoDB]バージョン4.2および4.4のサポート。
+
+* 香港、マカオ、台湾に関連する名前の出現は、中国のロケールと地域の新しい命名規則に従って更新されます。
+
+* [!DNL Experience Manager] [[!DNL Assets]](#assets-accessibility-6590)と[[!DNL Dynamic Media]](#accessibility-dm-6590)のアクセシビリティの強化。
+
+* スマートイメージングDPR（デバイスピクセル比）とネットワーク帯域幅の最適化により、最高品質の画像を効率的に配信できます。（高解像度のディスプレイとネットワーク帯域幅の制限があるデバイス） 詳細とタイムラインについては、[スマートイメージングのFAQ](/help/assets/imaging-faq.md)を参照してください。
+
+* [!DNL Dynamic Media] 配信(URL修`fmt` 飾子)は、次世代の画像形式AVIF（AV1画像形式）をサポートします。詳しくは、 [画像サービングとレンダリングAPI fmt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-is-http-fmt.html)を参照してください。
+
+* [!UICONTROL タスクの割り当て]ワークフローステップを使用して、グループに通知電子メールを送信する機能。
+
+* ソースのインタラクティブ通信を変更した後に、インタラクティブ通信の下書きを取得する機能。
+
+* [!DNL Experience Manager Forms]でreCAPTCHAサービスの読み込み、レンダリングおよび検証用のカスタムドメイン名を設定します。
+
+* [!UICONTROL 「フォームデータモデルサービスを起動」]ワークフローステップの入力データの強化。
+
+* [!DNL Experience Manager Forms]内のレコードのドキュメントテンプレートで複数のマスターページを使用できます。
+
+* [!DNL Experience Manager Forms]のレコードのドキュメントで改ページをサポートします。
+
+* 組み込み型のリポジトリ(Apache Jackrabbit Oak)が1.22.7に更新されました。
+
+[!DNL Experience Manager] 6.5.9.0で導入された機能と機能強化の完全なリストについては、 [!DNL Adobe Experience Manager] 6.5サービスパック9](new-features-latest-service-pack.md)の新機能を参照してください。[
+
+>[!NOTE]
+>
+>Service Pack 9以降、[!DNL Experience Manager]のお客様は、Java™ SEに準拠した標準規格に準拠したOpenJDKの[!DNL Azul Zulu]ビルドの配布を使用して、[!DNL Experience Manager]アプリケーションを開発および操作できます。
+>[!DNL Azul Zulu] JDKのサポートは、[!DNL Experience Manager]のお客様へのAdobeによっても提供されます。
+>[!DNL Azul Zulu] JDKの関連バージョンは、[Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
+>oracleJava™テクノロジーの使用権は、Adobe別に配布され、2022年12月末までに期限が切れます。 [!DNL Experience Manager] のお客様は、この日までに最新のJDKの使用を計 [!DNL Azul Zulu] 画し、実装することをお勧めします。[!DNL Oracle Java™]テクノロジーと[!DNL Azul Zulu]テクノロジーの使用方法について詳しくは、関連する[FAQ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/adobe-azul-openjdk-license-agreement.pdf)を参照してください。
+
+[!DNL Experience Manager] 6.5.9.0リリースで提供された修正の一覧を以下に示します。
+
+### [!DNL Sites] {#sites-6590}
+
+* 認証要件プロパティが有効な公開済みページがログインページにリダイレクトされず、404エラーメッセージが返される(NPR-36354)。
+
+* ハイパーリンクを作成する際に、リンクを検索するオプションがテキストコンポーネントで機能しない(NPR-35849)。
+
+* `com.day.cq.wcm.commons.ReferenceSearch` APIを使用してトラバーサルクエリがトリガーされます。 [!DNL Experience Manager]サーバーのパフォーマンスに影響を与えます(NPR-36407)。
+
+* 別のサイズ変更されたレイアウトコンテナ内にネストされたレイアウトコンテナが子コンポーネントの列数を正しく表示しないため、これらのコンポーネントがグリッドに揃えられない(NPR-36359)。
+
+* 外部リンクチェッカーは、有効な外部リンクを無効なリンクとして表示する(NPR-36289)。
+
+* しばらくの間、参照パネルがエラーメッセージを表示し始める(NPR-36167)。
+
+* コンポーネントを移動する際、自動的に作成されたparsysに`sling:resourceType`ノードがない(NPR-36165)。
+
+* （ロールアウト設定[!UICONTROL Blueprintのアクティベーションで有効化]と[!UICONTROL ブループリントのアクティベーションで無効化]を使用して）ライブコピーを同期しようとすると、同期が失敗し、`NullPointerException`がログに記録されます(NPR-36127)。
+
+* ユーザーがタグ（システムに存在しないタグ）の即席テキストを入力し、Enterキーを押すと、そのタグがフィールドの下に表示されますが、コンテンツフラグメントを保存して再び開くと、即席タグが消えます(NPR-36132)。
+
+* インボックスに、非同期操作のステータスを表示するオプションがない(NPR-36104)。
+
+* 継承を復元した後に、重複コンポーネントが作成される(NPR-36000)。
+
+* `RemoteContentRenderingService`を使用する場合、`RemoteContentRendererRequestHandler.getRequest`へのリクエストには常に`ComponentExporter`のルートページが含まれますが、トラバーサルの深さとフィルタリングオプションセットに基づくルートモデルに含まれない場合は、要求されたページは含まれません。 SPAが応答をレンダリングするのに十分な情報を持つように、要求には常に要求されたページを含める必要がある(NPR-35961)。
+
+* onTime/offTime項目が、期待されたonTime/offTimeでアクティブ化/非アクティブ化されない(NPR-35936)。
+
+* `cq:lastModified`プロパティを持たないエクスペリエンスフラグメントを含むページを公開すると、`NullPointerException`が発生する(NPR-35914)。
+
+* コンテナ内のコンポーネントのサイズを変更しようとすると、元のサイズに戻すことはできません。 コンポーネントのコンテナのサイズを小さくすると、元のサイズに戻すことはできない(NPR-35809)。
+
+* エディターまたはライブコピーの概要でトリガーされるロールアウトダイアログで、分離されたページ、休止されたページ、作成されていないページのステータスアイコンが正しく表示されない(NPR-35691)。
+
+* マスターの「ロールアウトページを無視する」および「サブページを無視する」チェックボックスのページプロパティに対するマルチサイトマネージャーのロールアウト(NPR-35634)。
+
+* クラシックUIで使用可能な復元ツリー機能がタッチUIにない(CQ-4315352、CQ-4309415)。
+
+* 継承を元に戻し、[!DNL Experience Manager Sites]ページのページをロールアウトする際の問題(NPR-36033)。
+
+### [!DNL Assets] {#assets-6590}
+
+[!DNL Assets]では、次のユーザーエクスペリエンスの強化がおこなわれました。
+
+* [!UICONTROL 作成]、[!UICONTROL 変更]、[!UICONTROL 名前]のいずれかのパラメーターに基づいて並べ替えられていないアセットを表示するには、[!DNL Adobe Experience Manager]「[!UICONTROL 並べ替え]」オプション内に「[!UICONTROL なし]」オプションを用意します。 「[!UICONTROL なし]」オプションを選択すると、Assetsユーザーインターフェイス（カード、列およびインサイト表示）のアセットがJCRノードに存在するのと同じ順序になります(NPR-36356)。
+
+* [!DNL Adobe Experience Manager]からのACP API応答で電子メールIDを小文字にするために、オプションの設定が導入されました。を使用します。 [!DNL Adobe Asset Link][!DNL Adobe Asset Link]パネルは、[!DNL Adobe Experience Manager]からACP API応答を使用します(CQ-4317704)。
+
+[!DNL Assets]では、サービスパック9の一部として次のアクセシビリティの強化が利用できます。
+
+以下のテキストとアイコンのコントラスト（背景と共に）が改善され、視覚や色の知覚が限られているユーザーが理解できるようになりました。
+
+* [!UICONTROL プロパティ]ページのアセットタイトル(NPR-35967)。
+* 様々な場所の[!UICONTROL Rating]セクションの星評価アイコン(NPR-36009)。
+* アセットおよびフォルダーのカード表示のテキスト。(NPR-35966)
+* [!UICONTROL タイムライン]ビューのプレースホルダーテキスト(NPR-35965)。
+* アセット検索結果のアセット名(NPR-35964)。
+* [!UICONTROL リンク共有]ダイアログのプレースホルダーテキスト(NPR-35963)。
+* [!UICONTROL 設定を表示ダイアログの「リスト」オプショ]ンのメタデー [!UICONTROL タ]  、  ステータス [!UICONTROL 、その他] のテキスト(NPR-35910)。
+*  グローバル検 [!UICONTROL 索で、] 場所と入力して検索プレースホルダーテキストを検索します(NPR-35909)。
+* [!UICONTROL コンテンツツリー]の下のアイコンを展開および折りたたみます(NPR-35908)。
+* アセットフォルダーが表示されるページの[!UICONTROL アセット]テキスト(NPR-35905)。
+* アセットの詳細ページの[!UICONTROL 概要]オプション内の[!UICONTROL アセットメタデータ]、[!UICONTROL 使用状況統計]のテキスト(NPR-35904)。
+* アセットの詳細ページの[!UICONTROL properties]および[!UICONTROL edit]オプションのショートカットキーのテキスト(NPR-35904)。
+
+[!DNL Assets]では、次のバグ修正がサービスパック9の一部として利用できます。
+
+* [!UICONTROL フォルダーメタデータスキーマ]フォームのタグ選択要素内から作成されたタグは保存されません(NPR-36119)。
+
+* 小さな楕円を使用してアセットに注釈を付けると、楕円は印刷バージョンの注釈の数と重なります(NPR-36114)。
+
+* 列表示で、重複アセットがアップロードされたときに、[!DNL Experience Manager]が重複アセットの競合を確認するメッセージを表示しない場合があります(NPR-36048)。
+
+* リンクを共有ダイアログが開いていていて、変更が行われていない場合、閉じるボタンをクリックして閉じない(NPR-36030)。
+
+* 複数のアセットを選択してプロパティを更新すると、エラーが発生したり、選択が解除されたアセットのプロパティが更新されたりする(NPR-36002)。
+
+* アセットのアップロード時に、アセットファイル名の先頭または末尾に空白が追加され、残りの文字がリポジトリ内の既存のアセットの名前と同じ場合、エラーを記録せずに既存のアセットが置き換えられる(NPR-36001)。
+
+* アセットの詳細ページでビデオが再生されると、再生および一時停止オプションが機能しない(NPR-35999)。
+
+* アセットを一括して非公開にすると、Brand Portalが要求URIが長すぎることを示すエラーを生成する(NPR-35954)。
+
+* 注釈テキストが長いアセットを印刷すると、スペースが使用可能な場合でも注釈テキストがトリミングされる(NPR-35948)。
+
+* 「次のページに移動」オプションは、カタログを作成ページの「テンプレートを選択」ビューでページを選択すると無効になります(CQ-4315462)。
+
+* ビデオアセットでアセットの更新ワークフローが開始されると、ページが繰り返し更新されます(CQ-4313375)。
+
+* DAMフォルダーを削除または移動できず、例外がログに記録される(NPR-35942)。
+
+### [!DNL Dynamic Media] {#dynamic-media-6590}
+
+[!DNL Adobe Experience Manager] 6.5.9.0では、[!DNL Dynamic Media]で次のアクセシビリティの強化を利用できます。
+
+* [!UICONTROL 画像セット]エディターのキーボードキーを使用してアセットを追加するダイアログを開くと、次のようになります。
+   * スクリーンリーダーは、ダイアログが開いたことを読み上げる。
+   * キーボードフォーカスは、ダイアログを開くとダイアログに移動する。
+   * ダイアログが閉じると、キーボードフォーカスが「アセットを追加」オプションに戻る(CQ-4312134)。
+
+* ホットスポットエディターのキーボードキーを使用して、アセットのホットスポットを追加および編集できるようになりました(CQ-4305965)。
+
+* キーボードキーを使用して、ホットスポット管理を使用して、ホットスポットにハイパーリンクを配置できるようになりました。 スクリーンリーダーのフォーカスがフィールドに移動して、URLパスを編集し、「選択ダイアログを開く」オプションを選択できるようになりました(CQ-4290735)。
+
+* 画像セットエディターページのテキストとコントロールのコントラスト（背景）が改善され、視覚や色の知覚が制限されたユーザーが理解できるようになりました(CQ-4290733)。
+
+* ビューアプリセットエディターでアセット共有オプションに移動し、キーボードキーを使用して展開された共有オプションを折りたためることができるようになりました(CQ-4290724)。
+
+* キーボードキーを使用して、ビデオエンコーディングを編集ページの「基本」タブと「詳細」タブの情報アイコンと警告アイコンのツールチップに移動して表示できるようになりました(CQ-4290722)。
+
+* スクリーンリーダーで、ビューアプリセットエディターの「外観」タブと「ビヘイビアー」タブの様々なフィールドに関する説明を読み上げるようになりました(CQ-4290721)。
+
+* フォームモードで画像プリセットを編集ページに移動すると、スクリーンリーダーは様々なフィールドおよびコントロールの目的と名前をナレーションします(CQ-4290717)。
+
+* アセットの詳細ページを移動する際に、スクリーンリーダーでビューア内の様々なオプションの目的が説明されるようになりました(CQ-4290716)。
+
+* プレースホルダーテキストの（背景と共に）コントラストを強化し、アセットの詳細ページの「レンディションのすべてのレンディション」オプションを改善し、視覚や色の知覚が制限されたユーザーが理解できるようにしました(CQ-4290713)。
+
+* 必須フィールドを示す視覚的なアスタリスクが画像セットエディターのアセットの「タイトル」フィールドに表示され、スクリーンリーダーがそのフィールドに必要な情報を読み上げるようになりました(CQ-4290712)。
+
+* スクリーンリーダーは、アセットの詳細ページで、ビューア内の様々なインタラクティブオプションの目的にアクセスし、説明できるようになりました(CQ-4290708)。
+
+Adobe Experience Manager 6.5.9.0 Assetsの修正[!DNL Dynamic Media]における次の問題：
+
+* [!DNL Dynamic Media]が選択的にアクティブ化され、[default](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html#troubleshoot-dm-config)によって無効化されている場合、カスタムのビューアプリセットとCSSが[!DNL Dynamic Media]に複製されない(NPR-36232)。
+
+* アセットの詳細ページでビデオレンディションをプレビューしようとすると、ビデオの読み込みが遅くなる(CQ-4320122)。
+
+* 重複アセット検出が有効な200個を超えるアセットをアップロードすると、ブラウザーページが応答しなくなり、低速になります(CQ-4319633)。
+
+* ページのパノラマメディアコンポーネントにパノラマ画像アセットを追加すると、キャッチできない参照エラーが記録されます(CQ-4317666)。
+
+* エクスペリエンスフラグメントを使用してインタラクティブメディアビューアを実装する場合、パブリッシャーからエクスペリエンスフラグメントが開かれず、エラーが記録されます(CQ-4317655)。
+
+* [!UICONTROL 「動的メディアに公] 開」オプションは、プロパテ [!UICONTROL ィペ] ージのクイック公  開オプションでは使用できません(CQ-4317199)。
+
+* 読み取り専用権限を持つサイト作成者は、アセットに対してスマート切り抜き機能を使用し、スマート切り抜きレンディションを編集できます(CQ-4316450)。
+
+* [!DNL Dynamic Media]設定が有効になっていないフォルダーパスに対しては、[!DNL Dynamic Media]モードで[!DNL Experience Manager]インスタンスが設定されている場合でも、ビデオ注釈は機能しません(CQ-4314950)。
+
+* アセットのタイトルに2バイト、2バイト、高ASCII、キリル、サロゲートペア、ヘブライ語、アラビア語、GB18030文字が含まれる場合、Dynamic Mediaに公開すると、アセットのタイトルに疑問符(?)が付きます。 (CQ-4311872).
+
+>Dynamic Media *のExperience Manager6.5.9.0のみ*&#x200B;の既知のビデオ再生の問題：
+>
+>* 
+
+   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
+>* 
+
+   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
+
+
+### プラットフォーム {#platform-6590}
+
+* ブループリントのサムネールを生成し、ライブコピーに対する変更をロールアウトすると、一部のフィールドの継承が機能しなくなります(CQ-4319517)。
+
+* フォルダーを作成する際に、「Orderable」プロパティを選択し、20個を超えるアセットをフォルダーに追加すると、そのフォルダー内のすべてのアセットを選択するとカウントが正しく表示されません(CQ-4316243)。
+
+* ページを更新すると、フォルダーまたはアセットの並べ替えに適切な結果が表示されません(CQ-4316200)。
+
+* Handlebars JavaScriptライブラリがv4.7.7にアップグレードされました(NPR-36375)。
+
+* パッケージマネージャー(NPR-35949)を使用して新しいコードパッケージをインストールしても、カスタムバンドルが更新されない。
+
+* `resourceresolver` Slingバンドルが原因で`Sling:alias`クエリが失敗する(NPR-35335)。
+
+* Experience ManagerでSSLを設定すると、コンテキストパスが削除される(NPR-35294)。
+
+* 長時間実行セッションの後に`SegmentNotFound`例外が返される(NPR-36405)。
+
+### 統合 {#integrations-6590}
+
+* Cloud Servicesエクスペリエンスフラグメントの継承が有効なページプロパティを保存できない。(NPR-36107)
+
+* IMSユーザーインターフェイスのページネーションと遅延読み込みが適切な結果を表示しない(NPR-36046)。
+
+* A4T Target設定を作成し、レポートソースに[!DNL Adobe Analytics]を選択した場合、ドロップダウンリストにAdobe Target対応のレポートスイートが表示されません(NPR-36006)。
+
+### プロジェクト {#projects-6590}
+
+* プロジェクトパスに追加された余分なスラッシュ(`/`)が原因でプロジェクトへのJCRパスが解決されないので、プロジェクトのプロパティを保存できない。(NPR-36191)
+
+### スクリーン {#screens-6590}
+
+* [!DNL Experience Manager Screens] カスタムの2要素認証ハンドラーが使用されている場合、プレーヤーは認証できない(NPR-35854)。
+
+### コマース {#commerce-6590}
+
+* [!UICONTROL コマースカタログ]ウィザードで、列表示で40個を超える項目を読み込めません(CQ-4318379)。
+
+### 翻訳プロジェクト {#translation-6590}
+
+* `es`を`es_es`ページに再変換する際に、更新または上書きのオプションが表示されない(NPR-36170)。
+
+* 人間による翻訳を含むプロジェクトに対して「自動承認」オプションが選択されている場合、ジョブステータスは`Unknown`と表示されます(NPR-35981)。
+
+* ページを翻訳する際、[!DNL Experience Fragments]の参照パスは、宛先の[!DNL Experience Fragment]参照パスに更新されません(NPR-35911)。
+
+* 親ページと子ページに変更を加え、翻訳用に親ページを送信すると、子ページも誤って翻訳される(NPR-35896)。
+
+* 選択したページに対して同時翻訳プロジェクトが複数ある場合、「[!UICONTROL プロジェクトに移動]」オプションが最新の翻訳プロジェクトにリンクされない(NPR-35454)。
+
+* [!DNL Dynamic Media]にアセットを公開すると、[!DNL Experience Manager]に非公開のタグに対して誤ったメッセージが表示されます(CQ-4315914、CQ-4315913)。
+
+* 削除されたジョブを開くと、[!DNL Experience Manager]に誤ったメッセージが表示されます(CQ-4315910)。
+
+### ワークフロー {#workflow-6590}
+
+* インボックスで使用可能な項目に対して「完了」、「委任」、「開く」の各アクションをクリックした場合、これらのアクションを完了するための視覚的な手がかりはありません(NPR-36317)。
+
+### [!DNL Communities] {#communities-6590}
+
+* スパムフィルタリングでは、システムがJava™ヒープ領域の100%を消費し、Experience Managerサーバーが応答しなくなる(NPR-36316、NPR-36493)。
+* フォーラムで、`SearchCommentSocialComponentListProvider`からのJCRセッションデータが漏れ出している(NPR-36235)。
+* 特定のインボックスメッセージを開くと、不適切なページネーションおよびその他の問題が発生したすべてのメッセージが反映される(NPR-35917)。
+
+### [!DNL Brand Portal] {#brandportal-6590}
+
+* [!DNL Brand Portal]を使用して[!DNL Experience Manager Assets]を設定すると、アセットソーシング機能フラグが自動的に有効になる(NPR-36010)。
+
+### [!DNL Forms] {#forms-6590}
+
+>[!NOTE]
+>
+>* [!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
+
+
+**アダプティブフォーム**
+
+* 複数の翻訳辞書を生成する際の[!DNL Experience Manager Forms] 6.5.7.0での言語初期化の問題(NPR-36439)。
+* アダプティブフォームフラグメントに添付ファイルを追加してフォームを送信すると、[!DNL Experience Manager Forms]は次のエラーメッセージを表示します(NPR-36195)。
+
+   ```TXT
+    POST /content/forms/af/attachmentissue/jcr:content/guideContainer.af.submit.jsp HTTP/1.1] com.adobe.aemds.guide.servlet.GuideSubmitServlet [AF] Invalid file name or mime type for file resulted in submission failure
+   ```
+
+* 人間による翻訳を使用して辞書を更新し、アダプティブフォームをプレビューすると、変更が表示されない(NPR-36035)。
+
+**インタラクティブコミュニケーション**
+
+* インタラクティブ通信の印刷チャネルを使用して画像をアップロードし、編集すると、画像が表示されなくなる(NPR-36518)。
+
+* テキストアセットを編集してプレースホルダーを入力すると、すべてのインタラクティブ要素がナビゲーションペインから削除される(NPR-35991)。
+
+**ワークフロー**
+
+* JBoss®上の[!DNL Experience Manager Forms]サービスのRESTエンドポイントを呼び出すと、[!DNL Experience Manager]に次のエラーメッセージが表示されます(NPR-36305)。
+
+   ```TXT
+   Invalid input. The maximum length of 2000 characters was exceeded.
+   ```
+
+**BackendIntegration**
+
+* 読み取りサービスの引数をダッシュを含むリテラル値にバインド中にフォームデータモデルを保存できない(NPR-36366)。
+
+**Document Security**
+
+* GlobalSignに対して証明書とHSMを設定すると、 [!DNL Experience Manager Forms]は、LTVにタイムスタンプを追加する際に、`Unsuported Algorithm`および`Invalid TSA Certificate`エラーメッセージを表示します(NPR-36026、NPR-36025)。
+
+**ドキュメントサービス**
+
+* [!DNL Experience Manager Forms]と統合するための[!DNL Gibson]ライブラリの更新(NPR-36211)。
+
+**Foundation JEE**
+
+* AdminUIで「エンドポイント管理」を選択すると、 [!DNL Experience Manager Forms]に`endpoint registry failure`エラーメッセージが表示されます(CQ-4320249)。
+
+セキュリティ更新について詳しくは、[[!DNL Experience Manager] セキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
+
+### Experience Manager6.5.9.0の既知の問題 {#known-issues-6590}
+
+* [!DNL Experience Manager]インスタンスを6.5から6.5.10.0バージョンにアップグレードする場合は、`error.log`ファイルで`RRD4JReporter`例外を表示できます。 この問題を解決するには、インスタンスを再起動します。
+
+* [!DNL Experience Manager] 6.5 Service Pack 5または以前のService Packを[!DNL Experience Manager] 6.5にインストールすると、（`/var/workflow/models/dam`で作成された）アセットカスタムワークフローモデルのランタイムコピーが削除されます。
+ランタイムコピーを取得するには、HTTP APIを使用して、カスタムワークフローモデルのデザイン時コピーをそのランタイムコピーと同期することをお勧めします。
+   `<designModelPath>/jcr:content.generate.json`。
+
+* ユーザーは、[!DNL Assets]の階層内のフォルダーの名前を変更し、ネストされたフォルダーを[!DNL Brand Portal]に公開できます。 ただし、[!DNL Brand Portal]では、ルートフォルダーが再公開されるまで、フォルダーのタイトルは更新されません。
+
+* アダプティブフォームで初めてフィールドの設定を選択した場合、設定を保存するオプションはプロパティブラウザーに表示されません。 同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
+
+* Experience Manager6.5.x.xのインストール中に、次のエラーおよび警告メッセージが表示される場合があります。
+   * 「Adobe Target統合がTarget Standard API（IMS認証）を使用してExperience Managerで設定されている場合、エクスペリエンスフラグメントをTargetに書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」/source「Adobe Experience Manager」タイプではなく、「HTML」/source「Adobe Target Classic」タイプのオファーをいくつか作成します。
+   * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
+   * SUM、MAX、MINなどの集計関数が使用されると、アダプティブフォームのサーバー側検証が失敗します(CQ-4274424)。
+   * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
+   * ショッパブルバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されない。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録変更が完了するのを待機中のタイムアウトが未登録です。
+
+## [!DNL Adobe Experience Manager] 6.5.8.0 {#experience-manager-6580}
 
 [!DNL Adobe Experience Manager] 6.5.8.0には、2019年4月の6.5リリースのリリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
 
@@ -103,7 +445,7 @@ ht-degree: 15%
 
 * 製品アセットの参照の更新により、ProductAssetListenerスレッドがJCRへのコミットを完了するまで、レプリケーションスレッドが待機状態になる(NPR-35269)。
 
-### Platform {#platform-6580}
+### プラットフォーム {#platform-6580}
 
 * タブを持たないCoralタブビューコンポーネントを使用し、基盤バリデーターをトリガーすると、次のエラーが発生します(NPR-35636)。
 
@@ -129,7 +471,7 @@ ht-degree: 15%
 
 * IMSテナントIDとTargetクライアントコードに異なる値を使用すると、 [!DNL Experience Manager]と[!DNL Adobe Target]の統合に失敗します(NPR-35342)。
 
-### 翻訳プロジェクト{#translation-6580}
+### 翻訳プロジェクト {#translation-6580}
 
 * [!DNL Experience Manager]で翻訳ジョブを書き出すまたは読み込む際の問題(NPR-35259)。
 
@@ -207,13 +549,13 @@ ht-degree: 15%
 
 * AdminUIの「[!UICONTROL ポリシー]を編集」オプションに関して複数の問題が報告された(NPR-35747)。
 
-### [!DNL Experience Manager 6.5.8.0] {#known-issues}の既知の問題
+### Experience Manager6.5.8.0の既知の問題 {#known-issues-6580}
 
 * [!DNL Experience Manager]インスタンスを6.5から6.5.8.0バージョンにアップグレードする場合は、`error.log`ファイルで`RRD4JReporter`例外を表示できます。 インスタンスを再起動して問題を解決します。
 
 * [!DNL Experience Manager] 6.5 Service Pack 5または以前のService Packを[!DNL Experience Manager] 6.5にインストールすると、（`/var/workflow/models/dam`で作成された）アセットカスタムワークフローモデルのランタイムコピーが削除されます。
 ランタイムコピーを取得するには、HTTP APIを使用して、カスタムワークフローモデルのデザイン時コピーをそのランタイムコピーと同期することをお勧めします。
-   `<designModelPath>/jcr:content.generate.json`
+   `<designModelPath>/jcr:content.generate.json`。
 
 * [!UICONTROL ルールの定義]ダイアログを使用して[!UICONTROL フォルダーメタデータスキーマFormsエディター]および[!UICONTROL メタデータスキーマFormsエディター]でカスケードルールを編集および作成する際に問題が発生した場合は、Adobeカスタマーケアにお問い合わせください。 既に作成および保存されたルールは、期待どおりに動作しています。
 
@@ -231,7 +573,7 @@ ht-degree: 15%
    * ショッパブルバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されない。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録変更が完了するのを待機中のタイムアウトが未登録です。
 
-## [!DNL Adobe Experience Manager] 6.5.7.0  {#experience-manager-6570}
+## [!DNL Adobe Experience Manager] 6.5.7.0 {#experience-manager-6570}
 
 [!DNL Adobe Experience Manager] 6.5.7.0は重要なアップデートであり、2019年4月の6.5リリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。サービスパックは[!DNL Adobe Experience Manager] 6.5にインストールされています。
 
@@ -323,7 +665,7 @@ ht-degree: 15%
 
 * 「右に回転」オプションを使用すると、スクリーンリーダーは現在の回転または反転状態のナレーションを停止します(CQ-4282128)。
 
-* 「完了」および「設定をキャンセル」ダイアログボタンには、複数のタブストップがあります(CQ-4274601)。
+* 「完了」および「設定をキャンセル」ダイアログボタンには、多数のタブストップがあります(CQ-4274601)。
 
 * 同じレベルで同じ名前のページを移動することは許可されない(NPR-35041)。
 
@@ -458,7 +800,7 @@ ht-degree: 15%
 
 * アップロード後に、画像以外のアセットが公開済みとして表示されない(CQ-4306415)。
 
-#### [!DNL Experience Manager] 3Dアセット  {#three-d-assets-6570}
+#### [!DNL Experience Manager] 3Dアセット {#three-d-assets-6570}
 
 * `DAM CQ MIME Type` サービスにより、間違ったMIMEタイプが3Dアセットに適用され、誤ったレンダリングが発生する(NPR-34731)。
 
@@ -466,7 +808,7 @@ ht-degree: 15%
 
 * コマース製品コレクションのユーザーインターフェイスで、1つのコレクション内に15個を超える製品がリストされない(NPR-34502)。
 
-### プラットフォーム{#platform-6570}
+### プラットフォーム {#platform-6570}
 
 * HTTPSを介したHTTPセッションが無効化されない(NPR-35083)。
 * ユーザーインターフェイスから日次または週次のメンテナンスタスクを開始すると、`NullPointerException`が返される。(NPR-34953)
@@ -499,7 +841,7 @@ ht-degree: 15%
 
 * デフォルトのログインヘルスチェックは、存在しないユーザーの資格情報を検証します(NPR-34686)。
 
-### 翻訳プロジェクト{#translation-6570}
+### 翻訳プロジェクト {#translation-6570}
 
 * [!DNL Experience Manager]で翻訳プロジェクトをキャンセルしても、キャンセルする要求は翻訳プロバイダーに送信されない。(NPR-34433)
 
@@ -564,7 +906,7 @@ ht-degree: 15%
 
 セキュリティ更新について詳しくは、[Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
 
-## [!DNL Adobe Experience Manager] 6.5.6.0  {#experience-manager-6560}
+## [!DNL Adobe Experience Manager] 6.5.6.0 {#experience-manager-6560}
 
 Adobe Experience Manager 6.5.6.0は、2019年4月の&#x200B;**4月の6.5リリースの一般リリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善を含む重要なアップデートです。**&#x200B;これはAdobe Experience Manager 6.5の上にインストールできます。
 
@@ -716,7 +1058,7 @@ Experience Manager6.5.6.0で導入された機能と機能強化の完全なリ�
 
 * 次の中のキーボードを使用して、フォーカスを変更できるようになりました。
 
-   * [!UICONTROL リンク共有ダイアログの「電子メ] ールアドレスを検 [!UICONTROL 索/] 追加」フィールド
+   * [!UICONTROL リンク共有ダイアログの「電子メ] ールアドレスを検 [!UICONTROL 索/追] 加」フィールド
 
    * [!UICONTROL フォルダーのプロパテ] ィの「権限」タブの「閉じら [!UICONTROL れたユーザーグ] ループ」の下にユーザーまたはグルー  プフィールド  を追加します(NPR-34452)。
 
@@ -759,7 +1101,7 @@ Experience Manager6.5.6.0で導入された機能と機能強化の完全なリ�
 * [!UICONTROL フォルダーメタデータスキーマフォーム]でドロップダウンのルールを作成すると、ユーザーは[!UICONTROL フィールドの選択肢]列から値を選択できなくなります(CQ-4297530)。
 
 * [!DNL Experience Manager] 6.5 Service Pack 5または以前のバージョンを[!DNL Experience Manager] 6.5にインストールすると、（`/var/workflow/models/dam`で作成された）アセットのカスタムワークフローモデルの実行時コピーが削除されます(NPR-34532)。 ランタイムコピーを取得するには、HTTP APIを使用して、ワークフローモデルのデザイン時コピーをランタイムコピーと同期します。
-   `<designModelPath>/jcr:content.generate.json`.
+   `<designModelPath>/jcr:content.generate.json`。
 
 **Dynamic Mediaで修正された問題**
 
@@ -791,7 +1133,7 @@ Experience Manager6.5.6.0で導入された機能と機能強化の完全なリ�
 
 * アセットが移動された場合、製品からのアセットへのリンクがリファクタリングされない(NPR-34098)。
 
-### プラットフォーム{#platform-6560}
+### プラットフォーム {#platform-6560}
 
 * アップグレードされたExperience Managerインスタンスで診断ツールを使用してログをダウンロードできない。(NPR-34336)
 * `cq-wcm-api`基盤パッケージの特定のバージョンへの依存関係が原因で、アップグレードが失敗します(CQ-4300520)。
@@ -937,7 +1279,7 @@ Experience Manager6.5.6.0で導入された機能と機能強化の完全なリ�
 
 セキュリティ更新について詳しくは、[Experience Managerセキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html)を参照してください。
 
-## [!DNL Adobe Experience Manager] 6.5.5.0  {#experience-manager-6550}
+## [!DNL Adobe Experience Manager] 6.5.5.0 {#experience-manager-6550}
 
 Adobe Experience Manager 6.5.5.0は、2019年4月の&#x200B;**4月の6.5リリースの一般リリース(GA)以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善を含む重要なアップデートです。**&#x200B;これはAdobe Experience Manager 6.5の上にインストールできます。
 
@@ -1163,7 +1505,7 @@ Experience Manager6.5 Service Pack 5で導入された主な機能の一覧に�
 
 * Experience ManagerのSSRF脆弱性(NPR-33435)。
 
-### プラットフォーム{#platform-6550}
+### プラットフォーム {#platform-6550}
 
 * `/etc/maps`の下に`sling:match`マップエントリが作成された場合、[!DNL Sling]フィルターは呼び出されません(NPR-33362)。
 * [!DNL Apache Lucene]のセグメント化障害が原因でExperience Managerがクラッシュする(NPR-32988)。
@@ -1211,7 +1553,7 @@ Experience Manager6.5 Service Pack 5で導入された主な機能の一覧に�
 
 ### [!DNL Communities] {#communities-6550}
 
-* クイック編集メニューオプションを使用してモデレートコンソールのカードを削除できない(NPR-33117)。
+* クイック編集メニューオプションを使用してモデレートコンソールでカードを削除できない(NPR-33117)。
 * [!UICONTROL アクティビティストリーム]ページへのアクセス時にエラーが発生する(NPR-33146)。
 * オーサーインスタンスで削除されたグループが、すべてのパブリッシュインスタンスから削除されない(NPR-33199)。
 * 作成者は、新しいグループを作成した後、 [!DNL Internet Explorer] 11の[!UICONTROL コミュニティグループ]セクションにリダイレクトされない(NPR-33205)。
@@ -1319,7 +1661,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * インボックスを使用してワークフロー情報を表示する際に、エラーメッセージが表示されます(CQ-4282168)。
 
-### アセット {#assets-6540-enhancements}
+### Assets {#assets-6540-enhancements}
 
 * アセットコレクションページのトリガーワークフローへのボタンが無効になっている(NPR-32471)。
 
@@ -1373,9 +1715,9 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * Experience ManagerでDMクラウド設定を追加しようとする際、「すべてのコンテンツを同期」チェックボックスがデフォルトで有効になりません(CQ-4288533)。
 
-### 基盤UI {#foundation-ui-6540}
+### Foundation UI {#foundation-ui-6540}
 
-* フィルターパネルを使用してアセットを検索する際に、既存のフィルターフィールドに留まる代わりに、マウスの制御が前のフィルターフィールドに移動します(NPR-32538)。
+* フィルターパネルを使用してアセットを検索する際に、既存のフィルターフィールドに留まる代わりに、前のフィルターフィールドに移動します(NPR-32538)。
 
 * プラットフォームタグ付け：タグフィールドに入力してタグを検索すると、ルート境界の外にあるタグが表示され、タグフィールドの`rootPath`プロパティが適用されない(NPR-31895)。
 
@@ -1383,7 +1725,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * 通知が、ページ選択のスティッキーメニューの後ろで非表示になる(NPR-31628)。
 
-### プラットフォーム{#platform-sling-6540}
+### プラットフォーム {#platform-sling-6540}
 
 * (HTL)アンダースコアは、URLのパスセクションのコロンを置き換えます(NPR-32231)。
 
@@ -1391,7 +1733,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * サブフォルダーにプロジェクトを作成する権限をユーザーが持っている場合でも、「作成」ボタンが表示されない。(NPR-31832)
 
-### プロジェクトの翻訳{#projects-translation-6540}
+### プロジェクトの翻訳 {#projects-translation-6540}
 
 * `Apache Sling JSP Script Handler`で「トリムスペース」オプションが有効になっていると、翻訳プロジェクトの作成によってUIが壊れる(NPR-32154)。
 
@@ -1405,11 +1747,11 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * ReportSuitesServlet が SSRF に対して脆弱である。（NPR-32156）
 
-### WCMテンプレートエディター{#wcm-template-editor-6540}
+### WCMテンプレートエディター {#wcm-template-editor-6540}
 
 * 編集可能なテンプレートの構造モードで、レイアウトコンテナで許可されたコンポーネントリストにリンクボタンコンポーネントが表示されない(CQ-4282099)。
 
-### WCMページエディター{#wcm-page-editor-6540}
+### WCMページエディター {#wcm-page-editor-6540}
 
 * オーバーレイを選択し、レスポンシブグリッドコンポーネントをここにドラッグすると、エラーが発生します(CQ-4283342)。
 
@@ -1441,11 +1783,11 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * ユーザーがオーサーインスタンスでAnalyticsレポートを表示できない(NPR-30913)。
 
-### Oak — インデックス作成とクエリ{#oak-indexing-6540}
+### Oak — インデックス作成とクエリ {#oak-indexing-6540}
 
 * JPEG画像を含むMS WordおよびMS Excelドキュメントは、Tikaパーサーで解析に失敗し、クラスが見つからないエラーが表示される。(NPR-31952)
 
-### Forms {#forms-6540}
+### フォーム {#forms-6540}
 
 >[!NOTE]
 >
@@ -1505,7 +1847,7 @@ Adobe Experience Manager 6.5.4.0で導入された主な機能と機能強化に
 
 * ContextHubにバンドルされているjQueryのバージョンを3.4.1に更新しました。
 
-### アセット {#assets-6530-enhancements}
+### Assets {#assets-6530-enhancements}
 
 **製品の機能強化**
 
@@ -1635,7 +1977,7 @@ Remove one mention of this fix.
 * 一部のエクスペリエンスフラグメントを含むページがエディター以外のモードで（`editor.html`プレフィックスと`wcmmode=disabled`のないオーサーまたはパブリッシャーで）開かれると、リクエストはHTTPステータスエラーコード`500`(NPR-30743)で終了します。
 * ユーザーはパスワードを変更して自分のプロファイルページにアクセスできない(NPR-31161)。
 
-### 検索とユーザー・インターフェイス{#ui-interface-and-search}
+### 検索とユーザーインターフェイス {#ui-interface-and-search}
 
 * カード表示から検索結果ページのリスト表示に切り替えると、ページをスクロールできるまでに遅れが生じる(NPR-31286)。
 
@@ -1687,7 +2029,7 @@ Remove one mention of this fix.
 * 投稿フォルダー（ネストされたフォルダー）内に投稿フォルダーを作成することは、複雑さを避けるために禁止されています(CQ-4278391)。
 * [!DNL Experience Manager]Admin Consoleから読み込まれた[!DNL Brand Portal]ユーザーリスト（.csvファイル）のアップロード時に例外がスローされる。 .csvファイル内の「Email」、「FirstName」、「LastName」の各フィールドのみが必須です(CQ-4278390)。
 
-### コミュニティ{#communities-6530}
+### コミュニティ {#communities-6530}
 
 **安定性および**
 
@@ -1704,7 +2046,7 @@ Remove one mention of this fix.
 
 * オーサーサーバーの速度が低下する原因となるLuceneインデックスの更新(NPR-31548)。
 
-### Forms {#forms-6530}
+### フォーム {#forms-6530}
 
 >[!NOTE]
 >
@@ -1736,7 +2078,7 @@ Remove one mention of this fix.
 
 * XDP フォームの HTML5 プレビューを生成すると、サブフォームのインスタンス追加中にちらつきが表示される。（NPR-30909）
 
-#### JEE上のFormsのインストーラー{#forms-jee-installer-6530}
+#### JEE上のFormsのインストーラー {#forms-jee-installer-6530}
 
 **Forms - ドキュメントサービス**
 
@@ -1807,7 +2149,7 @@ Remove one mention of this fix.
 * 名前にスペースや「&amp;」文字が含まれるフォルダーのアセット共有リンクで、一部のアセットに対して空白の灰色カードが表示されます。NPR-30557：CQ-4270187 のホットフィックス
 * フォルダーメタデータスキーマフォームでデータ型が自動的に検出されないので、フォーム送信で関連するタイプヒントが作成されません。NPR-30599：CQ-4275227 のホットフィックス
 * DMS7 のオーサリング UI で切り抜きと回転のアセット編集オプションが無効になっています。NPR-30118：CQ-4273221 のホットフィックス
-* DMS7設定の[!DNL Experience Manager]インスタンスで共有リンク機能が動作しない。 NPR-30080、NPR-30492：CQ-4273651 のホットフィックス
+* DMS7構成の[!DNL Experience Manager]インスタンスで共有リンク機能が動作しない。 NPR-30080、NPR-30492：CQ-4273651 のホットフィックス
 * [!DNL Dynamic Media]-Scene7コンポーネントをページに追加してからページを公開しても、毎回dmscene7設定がトリガーされるわけではありません。 NPR-30641：CQ-4275962 のホットフィックス
 * [!DNL Experience Manager]にIPSJobJournalを追加し、1つの処理プロファイルにつき1つのIntrusion Prevention Systems(IPS)ジョブのみを作成できるようにしました。 NPR-30490：CQ-4273614 のホットフィックス
 * [!DNL Dynamic Media]:パブリッシュノードへのアセットのレプリケートを除外するデフォルトのフィルター [!DNL Experience Manager] を追加しました。NPR-30538：CQ-4274678 のホットフィックス
@@ -1836,7 +2178,7 @@ Remove one mention of this fix.
 * jpg をアップロードすると、「ReplicateOnModifyWorker Replicating UPDATED」というメッセージがアセットごとに複数回表示され、パフォーマンスが低下します。
 * 「アーカイブを抽出」機能を使用して zip アーカイブを解凍すると、名前やタイトルにパーセント（％）が含まれるフォルダーで問題が発生します。NPR-29990：CQ-4270467 のホットフィックス
 
-### サイト{#sites-6520}
+### Sites {#sites-6520}
 
 * ライブコピーの継承が壊れている場合、ライブコピーページには、ライブコピーリンクではなく言語コピーリンクが表示されます(NPR-30980)。
 * 新しいブループリントの場合、レコード数が40を超えると、最初の40個のレコードのみが表示されます。 ブループリントに残りのレコードの空白行が表示される(NPR-31182)。
@@ -1852,7 +2194,7 @@ Remove one mention of this fix.
 
 **製品の機能強化**
 
-* 複数の値を持つオプションをサポートするため、ドキュメントタイプフィルターのMIMEタイプが増えました。 CQ-4270694 のホットフィックス
+* `EnhanceDocument` タイプフィルターを、より多くのMIMEタイプで使用して、複数値のオプションをサポートします。CQ-4270694 のホットフィックス
 
 ### コンテンツフラグメント管理 {#content-fragment-management-6520}
 
@@ -1868,7 +2210,7 @@ Remove one mention of this fix.
 
 * 翻訳の問題 - 機械翻訳を使用して翻訳されているコンポーネントはごくわずかです。NPR-30079：CQ-4273764 のホットフィックス
 
-### プラットフォーム{#platform-6520}
+### プラットフォーム {#platform-6520}
 
 * [!DNL Experience Manager] のデフォルトメール送信者が TLS v1.2 を介してリモート SMTP サーバーにメールを送信できません。NPR-30476：GRANITE-26605 のホットフィックス
 
@@ -1877,7 +2219,7 @@ Remove one mention of this fix.
 * フォルダー内のアセットを削除した後でも、dam:folderThumbnailPaths 値が更新されず、古いサムネールが表示されます。NPR-30424：CQ-4273667 のホットフィックス
 * 「移動」オプションを完了しても、アセットのタイトルと名前が元のまま変更されません。NPR-30647：CQ-4276265 のホットフィックス
 
-### コミュニティ{#communities-6520}
+### コミュニティ {#communities-6520}
 
 * ユーザー同期診断がまったく機能しません。NPR-30004、NPR-29943：CQ-4270287、CQ-4271348 のホットフィックス
 
@@ -1890,7 +2232,7 @@ Remove one mention of this fix.
 * パブリッシュインスタンスを再起動するまで、カスタマイズされたコンテンツがインスタンス上で正しく表示されません。NPR-30377：CQ-4273706 のホットフィックス
 * Web サイトで Launch を設定すると、ライブラリアドレスの先頭にスラッシュ（/）が付加され、毎回手動の対応が必要になります。NPR-30694：CQ-4275501 のホットフィックス
 
-### Forms {#forms-6520}
+### フォーム {#forms-6520}
 
 >[!NOTE]
 >
@@ -1938,7 +2280,7 @@ Remove one mention of this fix.
 
 **Forms - ドキュメントサービス**
 
-* 「SubmitURL」にアンパサンド（＆）が含まれている場合、renderpdf サーブレットに対して POST 要求がおこなわれると、ログに解析エラーが表示されます。NPR-30865：CQ-4278232 のホットフィックス
+* 「SubmitURL」にアンパサンド(&amp;)が含まれている場合、`renderpdf`サーブレットにPOSTリクエストが送信されると、解析エラーがログに記録されます。 NPR-30865：CQ-4278232 のホットフィックス
 
 **Forms - Foundation JEE**
 
@@ -1951,7 +2293,7 @@ Remove one mention of this fix.
 >
 >[!DNL Experience Manager Forms]のお客様は、任意の[!DNL Experience Manager]サービスパック、累積修正パック、または機能パックをインストールした後に、[!DNL Experience Manager Forms]アドオンパッケージをインストールする必要があります。
 
-#### サイト{#sites-feature-packs-included}
+#### Sites {#sites-feature-packs-included}
 
 * [!DNL Adobe Target]のユーザー定義ワークスペースにエクスペリエンスフラグメントを直接書き出せるようにする設定プロパティが追加されました。 NPR-29189：CQ-4249782 のホットフィックス
 
@@ -2046,7 +2388,7 @@ Remove one mention of this fix.
 * 送信ボタンに追跡機能を設定できません。GRANITE-26326 のホットフィックス
 * ウィザードで、送信ボタンに追跡機能を設定できません。NPR-29995、NPR-30025：CQ-4264289 のホットフィックス
 
-### Communities
+### コミュニティ
 
 * メンバープロフィールページのドロップダウンに新しいバッジを整列配置できません。NPR-29381：CQ-4267987 のホットフィックス
 * モデレーター権限のない訪問者とメンバーが、URL を貼り付けて未承認または承認待ちの投稿を表示できます。NPR-29724：CQ-4271124、CQ-4271441 のホットフィックス
@@ -2181,7 +2523,7 @@ Remove one mention of this fix.
 
 ### 含まれている機能パック
 
-#### Assets  — 含む
+#### アセット — 含まれる
 
 * [!DNL Experience Manager Assets]に対するマルチサイトマネージャーのサポートを有効にしました。 詳しくは、[MSMを使用したExperience Managerアセットの再利用](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/reuse-assets-using-msm.html)を参照してください。 NPR-29199：CQ-4259922 のホットフィックス
 

@@ -2,12 +2,12 @@
 title: Assets ガイド
 description: このガイドでは、デジタルExperience Managerの作成、管理、配信、最適化の方法など、すべてのアセットアセットタスクについて説明します。
 user-guide-title: Assets ガイド
-feature: アセット管理
+feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: 883c279330b199d4e3a301e240cae02a6e04fd20
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '333'
 ht-degree: 27%
 
 ---
@@ -17,9 +17,6 @@ ht-degree: 27%
 このガイドでは、デジタルアセットの作成、管理、配信、最適化の方法など、すべての[!DNL Experience Manager Assets]タスクについて説明します。
 
 ## [!DNL Experience Manager] に関する主要な記事 
-
-<!-- TBD: Some of these links will soon be updated. Change these when new articles go live on docs.adobe.com.
--->
 
 * [Experience Manager6.5リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)

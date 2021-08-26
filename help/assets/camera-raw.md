@@ -1,18 +1,18 @@
 ---
-title: '[!DNL Adobe Camera Raw] サポート。'
+title: '[!DNL Adobe Camera Raw] デジタルアセット処理のサポート'
 description: ' [!DNL Adobe Experience Manager Assets]で [!DNL Adobe Camera Raw] サポートを有効にする方法を説明します。'
 contentOwner: AG
 role: Admin
-feature: 開発者ツール
+feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '375'
 ht-degree: 35%
 
 ---
 
-# Camera Raw {#camera-raw-support}
+# [!DNL Adobe Camera Raw]を使用して画像を処理する {#camera-raw-support}
 
 [!DNL Adobe Camera Raw]サポートを有効にして、CR2、NEF、RAFなどの生のファイル形式を処理し、画像をJPEG形式でレンダリングできます。 この機能は、ソフトウェア配布から入手可能な[Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を使用して[!DNL Adobe Experience Manager Assets]でサポートされます。
 
@@ -22,9 +22,9 @@ ht-degree: 35%
 
 [!DNL Experience Manager Assets]で[!DNL Camera Raw]サポートを有効にするには、次の手順に従います。
 
-1. ソフトウェア配布から[Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)をダウンロードします。
+1. [Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を[!DNL Software Distribution]からダウンロードします。
 1. `https://[aem_server]:[port]/workflow` にアクセスします。**[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローを開きます。
-1. **[!UICONTROL サムネールを処理]**&#x200B;の手順を開きます。
+1. **[!UICONTROL サムネールを処理]**&#x200B;の手順を編集します。
 1. 「**[!UICONTROL サムネール]**」タブで次の設定を指定します。
 
    * **[!UICONTROL サムネール]**:  `140:100:false, 48:48:false, 319:319:false`
@@ -36,7 +36,7 @@ ht-degree: 35%
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. サイドパネルから、**[!UICONTROL Camera Raw/DNGハンドラー]**&#x200B;ステップを&#x200B;**[!UICONTROL サムネールの作成]**&#x200B;ステップの下に追加します。
+1. サイドパネルから、**[!UICONTROL Camera Raw/DNGハンドラー]**&#x200B;ステップを&#x200B;**[!UICONTROL サムネールを処理]**&#x200B;ステップの下に追加します。
 1. **[!UICONTROL Camera Raw/DNGハンドラー]**&#x200B;の手順で、**[!UICONTROL 「引数]**」タブに次の設定を追加します。
 
    * **[!UICONTROL MIMEタイプ]**: `image/dng` および  `image/x-raw-(.*)`
