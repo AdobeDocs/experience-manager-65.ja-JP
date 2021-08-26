@@ -4,7 +4,7 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 55b2e8d3d198857205b81b6974d9d6bfb8527fa6
+source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
 workflow-type: tm+mt
 source-wordcount: '3648'
 ht-degree: 3%
@@ -319,7 +319,9 @@ B.パッケージマネージャーの[HTTP APIを使用します。](/help/site
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-<!--### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+<!--
+
+### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
@@ -343,7 +345,9 @@ For information about installing the cumulative installer for Experience Manager
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.-->
+>After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+
+-->
 
 ### UberJar {#uber-jar}
 

@@ -5,12 +5,12 @@ audience: end-user
 user-guide-title: Adobe Experience Manager 6.5リリースノート
 breadcrumb-title: リリースノート
 user-guide-description: リリースノートのAEM 6.5の最新の新機能について説明します。
-feature: リリース情報
+feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 46%
+source-wordcount: '75'
+ht-degree: 45%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 46%
 + [一般リリースノート](release-notes.md)
 + Service Pack リリースノート {#service-pack}
    + [新機能](new-features-latest-service-pack.md)
-   + [Service Pack 9 リリースノート](sp-release-notes.md)
+   + [Service Pack 10 リリースノート](sp-release-notes.md)
    + [以前のService Packリリースノート](previous-hotfixes-featurepacks.md)
 + [AEM Sites リリースノート](sites.md)
 + [AEM Assets リリースノート](assets.md)
