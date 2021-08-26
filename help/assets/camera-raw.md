@@ -5,10 +5,10 @@ contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
-source-git-commit: 73e53f516d8e10b548f913db079c7e9812deb907
+source-git-commit: 9e1eea90945bb77e83e15d25708e47f2f3009fd8
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 35%
+source-wordcount: '374'
+ht-degree: 29%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 35%
 
 [!DNL Experience Manager Assets]で[!DNL Camera Raw]サポートを有効にするには、次の手順に従います。
 
-1. [Camera Rawパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を[!DNL Software Distribution]からダウンロードします。
+1. [[!DNL Camera Raw] パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip)を[!DNL Software Distribution]からダウンロードします。
 1. `https://[aem_server]:[port]/workflow` にアクセスします。**[!UICONTROL DAMアセットの更新]**&#x200B;ワークフローを開きます。
 1. **[!UICONTROL サムネールを処理]**&#x200B;の手順を編集します。
 1. 「**[!UICONTROL サムネール]**」タブで次の設定を指定します。
