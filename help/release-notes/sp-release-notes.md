@@ -4,7 +4,7 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
+source-git-commit: 861f5f4ae87da106bc42895e03bc42c0b17bd9fc
 workflow-type: tm+mt
 source-wordcount: '3652'
 ht-degree: 3%
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 * **モデル [!DNL Content Fragment] とエディターの強化**:ネストされたモデルを使用して、構造化コンテンツ用の複雑なモデルおよびカスタムモデルを作成できるよう [!DNL Content Fragment] になりました。コンテンツ構造は、サブフラグメントとしてモデル化された基本要素にモジュール化されます。 上位レベルのフラグメントは、これらのサブフラグメントを参照します。 高度な検証ルールなどのデータタイプの強化により、[!DNL Content Fragments]を使用したコンテンツモデリングの柔軟性がさらに向上します。 [!DNL Experience Manager] [!DNL Content Fragment]エディターは、一般的なエディターセッションでネストされたフラグメント構造をサポートし、構造ツリー表示やフラグメント階層でのタブ付きパンくずナビゲーションなどの機能が強化されました。
 
-* **次のためのGraphQL API[!DNL Content Fragments]**:新しいGraphQL APIは、構造化コンテンツをJSON形式で配信する標準の方法です。GraphQLクエリを使用すると、クライアントは、エクスペリエンスをレンダリングする関連コンテンツ項目のみを要求できます。 このような選択により、クライアント側でのコンテンツ解析を必要とするコンテンツの過剰配信（HTTP REST APIで使用可能）が排除されます。 GraphQLスキーマは[!DNL Content Fragment]モデルから派生し、API応答はJSON形式でおこなわれます。 [!DNL Experience Manager]では、[!DNL Cloud Service]として[GraphQLクエリが保持され、キャッシュに適したGETリクエストが処理されます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) [!DNL Experience Manager] 6.5ではまだ可能ではありません。
+* **次のためのGraphQL API[!DNL Content Fragments]**:新しいGraphQL APIは、構造化コンテンツをJSON形式で配信する標準の方法です。GraphQLクエリを使用すると、クライアントは、エクスペリエンスをレンダリングする関連コンテンツ項目のみを要求できます。 このような選択により、クライアント側でのコンテンツ解析を必要とするコンテンツの過剰配信（HTTP REST APIで使用可能）が排除されます。 GraphQLスキーマは[!DNL Content Fragment]モデルから派生し、API応答はJSON形式でおこなわれます。 [!DNL Experience Manager]では、[!DNL Cloud Service]として[GraphQLクエリが保持され、キャッシュに適したGETリクエストが処理されます。](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html#persisted-queries-caching) [!DNL Experience Manager] 6.5.10.0ではまだ可能ではありません。
 
 * **階層の管理と今後のプレビュー**:ローンチのページの追加や削除機能を含む、ローンチのコン [!DNL Experience Manager] テンツ構造にアクセスするためのインターフェイスがユーザーに追加されました。この機能により、今後の公開をターゲットとしたコンテンツバージョンを作成する際に、[!DNL Experience Manager]ローンチの柔軟性が向上します。 [タイムワープ機能を使用す](/help/sites-authoring/working-with-page-versions.md#timewarp) ると、ユーザーはローンチを将来のコンテンツ状態としてプレビューできます。
 
@@ -376,7 +376,7 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 
 | 領域 | 機能 | 代替手段 |
 |---|---|---|
-| 統合 | **[!UICONTROL AEM Cloud Servicesオプトイン]**&#x200B;画面は廃止されました。Experience Manager6.5では[!DNL Experience Manager]と[!DNL Adobe Target]の統合が更新されているためです。この統合は、Adobe Target Standard APIをサポートしています。 APIは、AdobeIMSと[!DNL Adobe I/O]を介したAdobeを使用し、分析やパーソナライゼーション用に[!DNL Experience Manager]ページを実装するために、認証Launchの役割の拡大をサポートしています。オプトインウィザードは、機能的に無関係です。 | 各[!DNL Experience Manager]クラウドサービスを使用して、システム接続、AdobeIMS認証、および[!DNL Adobe I/O]統合を設定します。 |
+| 統合 | **[!UICONTROL AEM Cloud Servicesオプトイン]**&#x200B;画面は廃止されました。Experience Manager6.5では[!DNL Experience Manager]と[!DNL Adobe Target]の統合が更新されているためです。この統合は、Adobe Target Standard APIをサポートしています。 APIは、Adobe IMSと[!DNL Adobe I/O]を介したAdobeを使用し、分析やパーソナライゼーション用に[!DNL Experience Manager]ページを実装するために、認証開始の役割の拡大をサポートしています。オプトインウィザードは、機能的に無関係です。 | 各[!DNL Experience Manager]クラウドサービスを使用して、システム接続、Adobe IMS認証、[!DNL Adobe I/O]統合を設定します。 |
 | コネクタ | Experience Manager6.5では、Microsoft® SharePoint 2010およびMicrosoft® SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
