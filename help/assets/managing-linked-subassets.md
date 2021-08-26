@@ -3,12 +3,12 @@ title: 参照と複数のページを含む複合アセットの管理
 description: ' [!DNL Adobe InDesign], [!DNL Adobe Illustrator], and [!DNL Adobe Photoshop]内からデジタルアセットへの参照を作成する方法を説明します。 ページビューア機能を使用して、PDF、INDD、PPT、PPTX、AIファイルなど、複数ページのファイルの個々のサブアセットページを表示します。'
 contentOwner: AG
 role: User, Admin
-feature: アセット管理
+feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1379'
-ht-degree: 18%
+source-wordcount: '1423'
+ht-degree: 17%
 
 ---
 
@@ -102,7 +102,11 @@ INDDファイルがアップロードされると、リポジトリ内に`xmpMM:
    * アセットを選択し、「[!UICONTROL タイムライン]」をクリックして左のパネルを開きます。 または、キーボードショートカット`alt + 3`を使用します。 「[!UICONTROL ワークフローを開始]」をクリックし、「[!UICONTROL DAMアセットの更新]」を選択して、「[!UICONTROL 開始]」をクリックし、「[!UICONTROL 続行]」をクリックします。
    * アセットを選択し、ツールバーの[!UICONTROL 作成] / [!UICONTROL ワークフロー]をクリックします。 ポップアップダイアログで、「[!UICONTROL DAMアセットの更新]」ワークフローを選択し、「[!UICONTROL 開始]」をクリックして、「[!UICONTROL 続行]」をクリックします。
 
-特にMicrosoft Wordドキュメントの場合は、**[!UICONTROL DAM Wordドキュメントの解析]**&#x200B;ワークフローを実行します。 Microsoft Wordドキュメントの内容から`cq:Page`コンポーネントが生成されます。 このドキュメントから抽出された画像は `cq:Page` コンポーネントから参照されます。これらの画像は、サブアセットの生成が無効な場合も抽出されます。
+特にMicrosoft Wordドキュメントの場合は、**[!UICONTROL DAM Wordドキュメントの解析]**&#x200B;ワークフローを実行します。 Microsoft Wordドキュメントの内容から`cq:Page`コンポーネントが生成されます。 このドキュメントから抽出された画像は `cq:Page` コンポーネントから参照されます。これらの画像は、サブアセットの生成が無効な場合でも抽出されます。
+
+>[!NOTE]
+>
+>[!UICONTROL [!UICONTROL プロセスの引数]の「&lt;Create Sub Asset Process - Step Properties]」で、[!DNL Experience Manager]が生成するサブアセットの数を指定できます。 デフォルト値は 5 です。すべてのサブアセットを生成するには、「 」フィールドを空のままにします。 フィールドに負の値が設定されている場合、サブアセットは生成されません。
 
 ## サブアセットの表示 {#viewing-subassets}
 

@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 4fca7799bf33bf90f601ab72a354f76e48ccdb04
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3648'
+source-wordcount: '3652'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 3%
 
 * **アセットやレンディションをダウンロードするためのリンク共有オプション**:アセットとコレクションをリンクとして共有する場合、元のアセットのダウンロードを許可するか、レンディションのダウンロードを許可するか、共有リンクを使用して両方を許可するかを選択できます。また、リンクを通じて共有されているアセットをダウンロードしたユーザーは、元のアセットのみ、レンディションのみ、またはその両方をダウンロードするオプションを使用できます。
 
-* **生成されるサブアセットの制限**:管理者は、PDF、PowerPoint、InDesign、Keynoteファイルな [!DNL Experience Manager] どの複合アセットに対して生成されるサブアセットの数を制限できます。
+* **生成されるサブアセットの制限**:管理者は、PDF、PowerPoint、InDesign、Keynoteファイルな [!DNL Experience Manager] どの複合アセットに対して生成されるサブアセットの数を制限できます。[複合アセットの管理](/help/assets/managing-linked-subassets.md#generate-subassets)を参照してください。
 
 * **Camera Rawサポート**:v10.4をサ [!DNL Camera Raw] ポートする新しいパッケー [!DNL Adobe Camera Raw] ジが利用できます。 [を使用した画像の処 [!DNL Camera Raw]](/help/assets/camera-raw.md)理を参照してください。
 

@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: d83f8d6e4b99ac7f287c0f091b84bbbf9d82fc75
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '3974'
+source-wordcount: '3983'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 4%
 [!DNL Adobe Experience Manager] 6.5サービスパックは、新機能、お客様から要望を受けた機能強化、パフォーマンス、安定性、セキュリティの改善を四半期ごとに提供します。四半期ごとの可用性により、新機能やイノベーションに容易にアクセスし、採用できます。
 
 この記事では、最新のサービスパックに含まれる機能、以前の6.5サービスパック](#key-features-previous-service-packs)に含まれる主な機能、および前回のサービスパック](#key-releases-since-last-sp)リリース以降の[キーリリースについて説明します。[
-
 
 ## [!DNL Adobe Experience Manager Sites] {#aem-sites}
 
@@ -41,13 +40,13 @@ ht-degree: 4%
 
 * [!DNL Experience Manager] は、適用可能なコアコンポーネント内の画像を使用す [!DNL Dynamic Media] るためにConnected Assets機能を拡張します。「[Connected Assets の使用](/help/assets/use-assets-across-connected-assets-instances.md)」を参照してください。
 
-* 個々のアセットとコレクションをリンクとして共有する（[!UICONTROL リンク共有]ダイアログを使用）場合、受信者に元のアセットをダウンロードさせるか、レンディションをダウンロードさせるかを選択できます。
+* 個々のアセットとコレクションをリンクとして共有する（[!UICONTROL リンク共有]ダイアログを使用）場合、受信者に元のアセットをダウンロードさせるか、レンディションをダウンロードさせるかを選択できます。 [リンク](/help/assets/link-sharing.md)を介したアセットの共有を参照してください。
 
-   ![元のアセットのみ、レンディションのみ、またはその両方をダウンロードするオプション](/help/assets/assets/share-renditions.png)
+   ![オリジナルのアセットのみ、レンディションのみ、またはその両方をダウンロードするオプション](/help/release-notes/assets/share-assets-as-link.png)
 
 * ユーザーがリンクとして共有されているアセットをダウンロードする場合、元のアセット、レンディションまたはその両方をダウンロードするよう選択できます。
 
-* 管理者は、PDF、PowerPoint、InDesign、Keynoteファイルなどの複合アセットに対して[!DNL Experience Manager]が生成するサブアセットの数を制限できます。
+* **生成されるサブアセットの制限**:管理者は、PDF、PowerPoint、InDesign、Keynoteファイルな [!DNL Experience Manager] どの複合アセットに対して生成されるサブアセットの数を制限できます。
 
    ![サブアセットの生成を制限する](/help/assets/assets/sub-asset-limit.png)
 

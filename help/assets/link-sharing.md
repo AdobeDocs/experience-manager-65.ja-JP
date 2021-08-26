@@ -3,12 +3,12 @@ title: リンクを使用したアセットの共有
 description: アセット、フォルダー、コレクションをURLとして共有します。
 contentOwner: AG
 role: User
-feature: リンク共有，アセット管理
+feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 36%
+source-wordcount: '998'
+ht-degree: 34%
 
 ---
 
@@ -24,20 +24,17 @@ ht-degree: 36%
 
 ## アセットの共有 {#share-assets}
 
-ユーザーと共有するアセットのURLを生成するには、リンク共有ダイアログを使用します。 `/var/dam/share` の場所への管理者特権または読み取り権限を持つユーザーが、共有されたリンクを表示することができます。
+ユーザーと共有するアセットのURLを生成するには、[!UICONTROL リンク共有]ダイアログを使用します。 `/var/dam/share` の場所への管理者特権または読み取り権限を持つユーザーが、共有されたリンクを表示することができます。
 
 1. [!DNL Assets] のユーザーインターフェイスで、リンクとして共有するアセットを選択します。
-1. ツールバーの「**[!UICONTROL リンクを共有]** ![アセットを共有アイコン](assets/do-not-localize/assets_share.png) 」をクリックします。 「**[!UICONTROL 共有]**」をクリックした後に作成されるリンクが、「[!UICONTROL リンクを共有]」フィールドにあらかじめ表示されます。 「**[!UICONTROL 送信]**」をクリックするまで、リンクはまだ作成されません。
 
-   ![「リンクを共有」と表示されたダイアログ](assets/Link-sharing-dialog-box.png)
+1. ツールバーの「**[!UICONTROL リンクを共有]** ![アセットを共有アイコン](assets/do-not-localize/assets_share.png) 」をクリックします。 「**[!UICONTROL 共有]**」をクリックした後に作成されるリンクが、「[!UICONTROL リンクを共有]」フィールドにあらかじめ表示されます。 「**[!UICONTROL 送信]**」を選択するまで、リンクは作成されません。
+
+   ![「リンクを共有」と表示されたダイアログ](/help/assets/assets/share-assets-as-link.png)
 
    *図：アセットをリンクとして共有するためのダイアログ。*
 
 1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。1人以上のユーザーを追加できます。
-
-   ![アセットへのリンクをリンク共有ダイアログから直接共有する](assets/Asset-Sharing-LinkShareDialog.png)
-
-   *図：リンク共有ダイアログから直接アセットへのリ [!UICONTROL ンクを] 共有します。*
 
    >[!NOTE]
    >
@@ -51,7 +48,7 @@ ht-degree: 36%
 
    ![共有リンクの有効期限の設定](assets/Set-shared-link-expiration.png)
 
-1. ユーザーがレンディションと共に元のアセットをダウンロードできるようにするには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。 デフォルトでは、ユーザーはリンクとして共有されているアセットのレンディションのみをダウンロードできます。
+1. ユーザーが元のアセットをダウンロードできるようにするには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。 ユーザーが共有アセットのレンディションのみをダウンロードできるようにするには、「**[!UICONTROL ファイルのレンディションのダウンロードを許可]**」を選択します。
 
 1. 「**[!UICONTROL 共有]**」をクリックします。リンクが電子メールでユーザーと共有されることを確認するメッセージが表示されます。
 
