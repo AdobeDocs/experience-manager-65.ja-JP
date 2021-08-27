@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントテンプレート
-seo-title: コンテンツフラグメントテンプレート
+seo-title: Content Fragment Templates
 description: テンプレートは、コンテンツフラグメントの作成時に選択され、新しいフラグメントに基本構造、要素、バリエーションを提供します
-seo-description: テンプレートは、コンテンツフラグメントの作成時に選択され、新しいフラグメントに基本構造、要素、バリエーションを提供します
+seo-description: Templates are selected when creating a content fragmen and provide the new fragment with the basic structure, element, and variation
 uuid: d147bac8-b710-40ed-9664-decb5ffcf8e7
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 84%
+source-wordcount: '656'
+ht-degree: 79%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 84%
 >[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)は、すべてのフラグメント作成で使用することが推奨されています。
 >
 >コンテンツフラグメントモデルは、We.Retail のすべてのサンプルでも使用されています。
+
+>[!NOTE]
+>
+>AEM 6.3より前のコンテンツフラグメントは、モデルの代わりにテンプレートを使用して作成されていました。 新しいフラグメントを作成する際に、テンプレートは使用できなくなりましたが、そのようなテンプレートで作成されたフラグメントは引き続きサポートされます。
 
 コンテンツフラグメントの作成時に選択されるテンプレートです。このテンプレートは、新しいフラグメントに基本構造、要素、バリエーションを提供します。コンテンツフラグメントに使用されるテンプレートは、Granite 設定マネージャーに従います。
 
@@ -51,12 +55,10 @@ ht-degree: 84%
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
 >1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
-   >
-   >
-1. `/apps` 内で変更作業をおこないます。
+>
+>1. `/apps` 内で変更作業をおこないます。
 
 >
-
 
 
 テンプレートの基本構造は、次の場所に保持されます。
@@ -183,7 +185,7 @@ conf
     </tr>
     <tr>
      <td><code>defaultContent</code></td>
-     <td><p><code>String</code></p> <p>オプション</p> <p>デフォルト：""</p> </td>
+     <td><p><code>String</code></p> <p>オプション</p> <p>default: ""</p> </td>
      <td>要素の初期コンテンツ<code>precreateElements</code><i> = </i><code>true</code>の場合にのみ使用されます。</td>
     </tr>
     <tr>

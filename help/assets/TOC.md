@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 85736791b7a8f518b57180b0139d6a76ebf1c6dc
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 33%
+source-wordcount: '629'
+ht-degree: 37%
 
 ---
 
@@ -91,6 +91,9 @@ ht-degree: 33%
    + [アセットエディターの拡張](asseteditorx.md)
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [ [!DNL Assets] HTTP APIでのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
+   + [コンテンツフラグメント用 GraphQL API](content-fragments/graphql-api-content-fragments.md)
+   + [コンテンツフラグメントに対するリモート GraphQL クエリの認証](content-fragments/graphql-authentication-content-fragments.md)
+   + [GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] 代理開発](proxy.md)
 + アセットの管理{#administer}
    + [サポートされているファイル形式](assets-formats.md)
@@ -130,15 +133,19 @@ ht-degree: 33%
    + [ [!DNL Brand Portal] へのアセットの公開](brand-portal-publish-assets.md)
    + [ [!DNL Brand Portal]へのフォルダーの公開](brand-portal-publish-folder.md)
    + [ [!DNL Brand Portal]にコレクションを公開する](brand-portal-publish-collection.md)
-+ コンテンツフラグメント {#fragments}
++ コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントの操作](content-fragments/content-fragments.md)
-   + [コンテンツフラグメントの管理](content-fragments/content-fragments-managing.md)
+   + [コンテンツフラグメントと GraphQL のヘッドレス配信](content-fragments/content-fragments-graphql.md)
+   + [インスタンスに対するコンテンツフラグメント機能の有効化](content-fragments/content-fragments-configuration-browser.md)
    + [コンテンツフラグメントモデル](content-fragments/content-fragments-models.md)
+   + [コンテンツフラグメントの管理](content-fragments/content-fragments-managing.md)
    + [バリエーション - フラグメントコンテンツのオーサリング](content-fragments/content-fragments-variations.md)
    + [コンテンツフラグメントを関連付けられたコンテンツ](content-fragments/content-fragments-assoc-content.md)
    + [メタデータ - フラグメントのプロパティ](content-fragments/content-fragments-metadata.md)
    + [コンテンツフラグメント - 削除に関する考慮事項](content-fragments/content-fragments-delete.md)
-   + [コンテンツフラグメント - Markdown](content-fragments/content-fragments-markdown.md)
+   + [Markdown](content-fragments/content-fragments-markdown.md)
+   + [構造ツリー](/help/assets/content-fragments/content-fragments-structure-tree.md)
+   + [プレビュー - JSON 表現](/help/assets/content-fragments/content-fragments-json-preview.md)
    + [コンテンツフラグメントの翻訳プロジェクトの作成](creating-translation-projects-for-content-fragments.md)
 + アセットの管理{#managing}
    + [デジタルアセットの管理](manage-assets.md)

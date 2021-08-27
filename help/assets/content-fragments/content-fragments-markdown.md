@@ -1,30 +1,20 @@
 ---
 title: Markdown
-seo-title: Markdown
-description: オーサリング中に、コンテンツフラグメントエディターは Markdown 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
-seo-description: オーサリング中に、コンテンツフラグメントエディターは Markdown 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
-uuid: afcbf82f-3a75-4491-9172-706188db65bb
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: content-fragments
-content-type: reference
-discoiquuid: b193f28c-46c2-4eab-bbb8-578530f80ba5
-docset: aem65
-feature: コンテンツフラグメント
-role: User, Admin
-exl-id: 28e1052f-62b5-47bc-9bc8-f2d92f0254f6
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: コンテンツフラグメントエディターで Markdown 構文を使用してヘッドレスコンテンツを簡単に作成する方法を説明します。
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '522'
 ht-degree: 97%
 
 ---
 
-# Markdown{#markdown}
+# Markdown {#markdown}
 
-[オーサリング](content-fragments-variations.md#authoring-your-content)中に、コンテンツフラグメントエディターは *Markdown* 構文を使用してユーザーがコンテンツを簡単に記述できるようにします。
+[オーサリング](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)中に、コンテンツフラグメントエディターは *Markdown* 構文を使用してユーザーがヘッドレスコンテンツを簡単に記述できるようにします。
 
-![Markdown エディター](/help/assets/content-fragments/assets/cfm-6420-08.png)
+![Markdown エディター](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
 次を定義できます。
 

@@ -1,42 +1,34 @@
 ---
 title: バリエーション - フラグメントコンテンツのオーサリング
-seo-title: バリエーション - フラグメントコンテンツのオーサリング
-description: バリエーションでは、フラグメントのコンテンツをオーサリングし、目的に応じてそのコンテンツのバリエーションを作成できます（必要な場合）。
-seo-description: バリエーションでは、フラグメントのコンテンツをオーサリングし、目的に応じてそのコンテンツのバリエーションを作成できます（必要な場合）。
-uuid: 0844f271-79bc-4f76-8031-d388b81d6feb
-contentOwner: Alison Heimoz
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: content-fragments
-content-type: reference
-discoiquuid: 324df1da-78fa-460f-a744-3504259f1d4a
-docset: aem65
-feature: コンテンツフラグメント
-role: User, Admin
-exl-id: ded05f24-ab5c-4195-b5c4-704a9fd93c7e
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: フラグメントのコンテンツを作成し、目的に応じてそのコンテンツのバリエーションを作成できるようにすることで、バリエーションによって AEM でのヘッドレスコンテンツの柔軟性をさらに高める方法を説明します。
+feature: Content Fragments
+role: User
+source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
 workflow-type: tm+mt
-source-wordcount: '1746'
-ht-degree: 92%
+source-wordcount: '2256'
+ht-degree: 95%
 
 ---
 
 # バリエーション - フラグメントコンテンツのオーサリング{#variations-authoring-fragment-content}
 
-[バリエーション](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)は、特定のチャネルやシナリオで使用するためにプライマリコンテンツのコピーを作成して編集できる、コンテンツフラグメントの重要な機能です。
+[バリエーション](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)は、特定のチャネルやシナリオで使用するためにプライマリコンテンツのコピーを作成して編集するための AEM のコンテンツフラグメントの重要な機能で、ヘッドレスコンテンツの配信をさらに柔軟にします。
 
 「**バリエーション**」タブから、次の操作を実行できます。
 
 * フラグメントの[コンテンツの入力](#authoring-your-content)
-* **マスター**&#x200B;コンテンツの[バリエーションの作成および管理](#managing-variations)
+* **プライマリ**&#x200B;コンテンツの[バリエーションの作成および管理](#managing-variations)
 
 編集中のデータタイプに応じて他の様々なアクションを実行します。次に例を示します。
 
 * [フラグメントへのビジュアルアセットの挿入](#inserting-assets-into-your-fragment)（画像）
+
 * 編集する[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)および [Markdown](#markdown) の選択
 
 * [コンテンツのアップロード](#uploading-content)
 
 * [重要な統計の表示](#viewing-key-statistics)（複数行テキストについて）
+
 * [テキストの要約](#summarizing-text)
 
 * [バリエーションとプライマリコンテンツの同期](#synchronizing-with-master)
@@ -47,37 +39,37 @@ ht-degree: 92%
 
 ## コンテンツのオーサリング {#authoring-your-content}
 
-コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。以下の操作を実行できます。
-
-* 「**バリエーション**」タブで直接編集できます。
-* [全画面表示エディター](#full-screen-editor)を開いて次のことをおこないます。
-
-   * [形式](#formats)の選択
-   * その他の編集オプションの表示（[リッチテキスト](#rich-text)形式の場合）
-
-   * 様々な[アクション](#actions)へのアクセス
+コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。構造化されたフラグメントには、コンテンツモデルで定義された、様々なデータタイプの各種フィールドが含まれています。
 
 次に例を示します。
 
-* 単純なフラグメントの編集
+![全画面表示エディ
+ター](assets/cfm-variations-02.png)
+次の操作が可能です。
 
-   単純なフラグメントは 1 つの複数行テキストフィールドで構成されます（全画面表示エディターからビジュアルアセットを追加できます）。
+* 「**バリエーション**」タブで直接編集できます。
 
-   ![cfm-6420-21](assets/cfm-6420-21.png)
+   * 各データタイプには、異なる編集オプションが用意されています。
 
-* 構造化コンテンツを含むフラグメントの編集
+* **複数行テキスト**&#x200B;フィールドの場合は、[全画面表示エディター](#full-screen-editor)を開いて次の操作をおこなうこともできます。
 
-   構造化されたフラグメントには、コンテンツモデルで定義された、様々なデータタイプの各種のフィールドが含まれています。複数行フィールドについては、[全画面表示エディター](#full-screen-editor)を使用できます。
+   * [形式](#formats)の選択
+   * その他の編集オプションの表示（[リッチテキスト](#rich-text)形式の場合）
+   * 様々な[アクション](#actions)へのアクセス
 
-   ![cfm-6420-16](assets/cfm-6420-16.png)
+* **フラグメント参照**&#x200B;フィールドの場合は、モデル定義に応じて、「**[コンテンツフラグメントを編集](#fragment-references-edit-content-fragment)**」オプションを使用できます。
 
 ### 全画面表示エディター {#full-screen-editor}
 
-複数行テキストフィールドの編集時には、フルスクリーンエディターを開くことができます。
+複数行テキストフィールドの編集時には、全画面表示エディターを開くことができます。実際のテキスト内でタップまたはクリックしてから、次のアクションアイコンを選択します。
 
-![cf-fullscreeneditor-icon](assets/cf-fullscreeneditor-icon.png)
+![全画面表示エディターアイコン](assets/cfm-variations-03.png)
 
-全画面表示エディターでは次の情報が表示されます。
+テキストエディターが全画面表示で開きます。
+
+![全画面表示エディター](assets/cfm-variations-fullscreentexteditor.png)
+
+全画面表示テキストエディターでは以下が提供されます。
 
 * 様々な[アクション](#actions)へのアクセス
 * [形式](#formats)に応じた、その他の書式設定オプション（[リッチテキスト](#rich-text)）
@@ -88,14 +80,13 @@ ht-degree: 92%
 
 * [形式](#formats)（[リッチテキスト](#rich-text)、[プレーンテキスト](#plain-text)、[Markdown](#markdown)）の選択
 
+* [コンテンツのアップロード](#uploading-content)
+
 * [テキスト統計の表示](#viewing-key-statistics)
 
-* [コンテンツのアップロード](#uploading-content)
 * [プライマリとの同期](#synchronizing-with-master)（バリエーションの編集時）
-* [テキストの要約](#summarizing-text)
-* テキストへの[注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)の追加
 
-* [フラグメントへのビジュアルアセットの挿入](#inserting-assets-into-your-fragment)（画像）
+* [テキストの要約](#summarizing-text)
 
 ### 形式 {#formats}
 
@@ -119,16 +110,16 @@ ht-degree: 92%
 * 番号付きリスト
 * インデント：増、減
 * ハイパーリンクの作成および解除
+* テキストを貼り付け／Word から貼り付け
+* 表を挿入
+* 段落スタイル：段落、見出し 1/2/3
+* [アセットを挿入](#inserting-assets-into-your-fragment)
 * 全画面表示エディターを開く。次の書式設定オプションを使用できます。
-
-   * テキストを貼り付け／Word から貼り付け
-   * 表を挿入
-   * 段落スタイル：段落、見出し 1/2/3
-   * [ビジュアルアセットの挿入](#inserting-assets-into-your-fragment)
    * 検索
    * 検索と置換
    * スペルチェッカー
    * [注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+* [コンテンツフラグメントを挿入](#inserting-content-fragment-into-your-fragment)は、「**複数行テキスト**」フィールドが「**フラグメント参照を許可**」に設定されている場合に使用できます。
 
 [アクション](#actions)は、全画面表示エディターからアクセスすることもできます。
 
@@ -164,11 +155,48 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 >
 >**リッチテキスト**&#x200B;と **Markdown** を切り替えると、ブロック引用やコードブロックに予期しない影響が出ることがあります。ブロック引用とコードブロックの 2 つの形式は処理方法が異なる場合があるからです。
 
+### フラグメント参照 {#fragment-references}
+
+コンテンツフラグメントモデルにフラグメント参照が含まれる場合、フラグメント作成者には次の追加オプションがあります。
+
+* [コンテンツフラグメントを編集](#fragment-references-edit-content-fragment)
+* [新しいコンテンツフラグメント](#fragment-references-new-content-fragment)
+
+![フラグメント参照](assets/cfm-variations-12.png)
+
+#### コンテンツフラグメントを編集 {#fragment-references-edit-content-fragment}
+
+「**コンテンツフラグメントを編集**」オプションを選択すると、そのフラグメントが新しいウィンドウタブで開きます。
+
+<!--
+The option **Edit Content Fragment** will open that fragment in a new editor tab (within the same browser tab).
+
+Selecting the original tab again (for example, **Little Pony Inc.**), will close this secondary tab (in this case, **Adam Smith**).
+
+![Fragment References](assets/cfm-variations-editreference.png)
+-->
+
+#### 新しいコンテンツフラグメント {#fragment-references-new-content-fragment}
+
+「**新しいコンテンツフラグメント**」オプションを使用すると、完全に新しいフラグメントを作成できます。このために、コンテンツフラグメント作成ウィザードがエディターで開きます。
+
+その後、次の方法で新しいフラグメントを作成できます。
+
+1. 目的のフォルダーに移動して選択します。
+1. 「**次へ**」を選択します。
+1. プロパティを指定します（例：**タイトル**）
+1. 「**作成**」を選択します。
+1. 最後に、
+   1. 「**終了**」 で（元のフラグメントに）戻り、新しいフラグメントを参照します。
+   1. 「**開く**」では、新しいフラグメントを参照すると共に、新しいフラグメントが編集用に新しいブラウザータブで開きます。
+
 ### 重要な統計の表示 {#viewing-key-statistics}
 
-全画面表示エディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。次に例を示します。
+全画面表示エディターを開くと、「**テキスト統計**」アクションには、テキストに関する様々な情報が表示されます。
 
-![cfx-6420-22](assets/cfx-6420-22.png)
+次に例を示します。
+
+![統計](assets/cfm-variations-04.png)
 
 ### コンテンツのアップロード {#uploading-content}
 
@@ -184,25 +212,19 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 >[!CAUTION]
 >
->コンテンツフラグメントには、上位ページとして有効な言語（ISOコード）フォルダーが必要です。これは、使用する言語モデルを決定するために使用されます。
+>コンテンツフラグメントには、親フォルダー（ISO コード）として有効な言語フォルダーが必要です。使用する言語モデルを決定するためにこれが使用されます。
 >
 >例えば、次のパスの `en/` です。
 >
->`/content/dam/my-brand/en/path-down/my-content-fragment`
+>  `/content/dam/my-brand/en/path-down/my-content-fragment`
 
 >[!CAUTION]
->
->英語版は標準で提供されています。
->
->他の言語版は、ソフトウェア配布から言語モデルパッケージとして使用できます。
->
->* [フランス語(fr)（ソフトウェア配布版）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [ソフトウェア配布のドイツ語(de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [ソフトウェア配布のイタリア語(it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [ソフトウェア配布のスペイン語(es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
-
->
-
+英語版は標準で提供されています。
+他の言語版は、パッケージ共有から言語モデルパッケージとして使用できます。
+* [フランス語（fr）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+* [ドイツ語（de）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+* [イタリア語（it）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+* [スペイン語（es）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 
 
 1. 「**プライマリ**」または必要なバリエーションを選択します。
@@ -210,7 +232,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 
 1. ツールバーの「**テキストを要約**」を選択します。
 
-   ![cf-17](assets/cf-17.png)
+   ![要約](assets/cfm-variations-05.png)
 
 1. ターゲットの単語数を指定し、「**開始**」を選択します。
 1. 元のテキストが、提案された要約の横に並んで表示されます。
@@ -219,23 +241,49 @@ Markdown を使用してテキストの形式を設定できます。次を定�
    * 強調表示された文をクリックすると、その文書はコンテンツの要約に保持されます。
    * 強調表示されていない文をクリックすると、削除されます。
 
-   ![cfm-6420-23](assets/cfm-6420-23.png)
-
 1. 変更を確定するには、「**要約**」を選択します。
+
+1. 元のテキストが、提案された要約の横に並んで表示されます。
+
+   * 削除される文には取り消し線が付けられ、赤く表示されます。
+   * 強調表示された文をクリックすると、その文書はコンテンツの要約に保持されます。
+   * 強調表示されていない文をクリックすると、削除されます。
+   * 要約統計（**実際**&#x200B;と&#x200B;**ターゲット**）が表示されます。
+   * 変更を&#x200B;**プレビュー**&#x200B;できます。
+
+   ![要約とオリジナルの比較](assets/cfm-variations-06.png)
 
 ### コンテンツフラグメントへの注釈の追加 {#annotating-a-content-fragment}
 
 フラグメントに注釈を追加するには：
 
 1. 「**プライマリ**」または必要なバリエーションを選択します。
-1. 全画面表示エディターを開きます。
-1. テキストをどれか選択します。「**注釈**」アイコンが利用可能になります。
 
-   ![cfm-6420-24](assets/cfm-6420-24.png)
+1. 全画面表示エディターを開きます。
+
+1. 上部のツールバーに、**注釈**&#x200B;アイコンが表示されます。必要に応じて、一部のテキストを選択できます。
+
+   ![注釈](assets/cfm-variations-07.png)
 
 1. ダイアログが開きます。ここで注釈を入力できます。
 
-1. 全画面表示エディターを閉じ、フラグメントを&#x200B;**保存**&#x200B;します。
+   ![注釈](assets/cfm-variations-07a.png)
+
+1. ダイアログで「**適用**」をクリックします。
+
+   ![注釈](assets/cfm-variations-annotations-apply-icon.png)
+
+   選択したテキストに注釈が適用された場合、そのテキストはハイライト表示されたままになります。
+
+   ![注釈](assets/cfm-variations-07b.png)
+
+1. 全画面表示エディターを閉じても、注釈はハイライト表示されたままです。それを選択するとダイアログが開くので、そこで注釈をさらに編集できます。
+
+1. 「**保存**」を選択します。
+
+1. 全画面表示エディターを閉じても、注釈はハイライト表示されたままです。それを選択するとダイアログが開くので、そこで注釈をさらに編集できます。
+
+   ![注釈](assets/cfm-variations-07c.png)
 
 ### 注釈の表示、編集、削除 {#viewing-editing-deleting-annotations}
 
@@ -244,14 +292,13 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 * エディターの全画面表示モードと通常モードのどちらの場合も、注釈はテキストのハイライトとして示されます。注釈の完全な詳細を表示、編集および削除するには、ハイライト表示されたテキストをクリックします。するとダイアログが再度開きます。
 
    >[!NOTE]
-   >
-   >1 つのテキストに複数の注釈が適用されている場合は、ドロップダウンセレクターが表示されます。
+   1 つのテキストに複数の注釈が適用されている場合は、ドロップダウンセレクターが表示されます。
 
 * 注釈が適用されたテキスト全体を削除すると、注釈も削除されます。
 
 * 注釈の一覧表示や削除をおこなうには、フラグメントエディターで「**注釈**」タブを選択します。
 
-   ![cfm-6420-25](assets/cfm-6420-25.png)
+   ![注釈](assets/cfm-variations-08.png)
 
 * 選択されたフラグメントの[タイムライン](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)で、注釈の表示や削除をおこなえます。
 
@@ -262,19 +309,16 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 アセットは書式設定なしでフラグメントの段落シーケンスに追加されます。[ページでフラグメントを利用、参照](/help/sites-authoring/content-fragments.md)する際に書式を設定できます。
 
 >[!CAUTION]
->
->参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
->
->ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)でおこなう必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
+ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)でおこなう必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
 
 >[!NOTE]
->
->[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
+[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. 画像を追加したい位置にカーソルを置きます。
 1. **アセットを挿入**&#x200B;アイコンを使用して、検索ダイアログを開きます。
 
-   ![cf-insertasset-icon](assets/cf-insertasset-icon.png)
+   ![アセット挿入アイコン](assets/cfm-variations-09.png)
 
 1. ダイアログでは以下が可能です。
 
@@ -286,11 +330,45 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 1. 「**選択**」を使用して、コンテンツフラグメント段落システムの現在の位置にアセットを追加します。
 
    >[!CAUTION]
-   >
-   >アセットを追加後に形式を変更すると次のようになります。
-   >
-   >* **プレーンテキスト**：アセットはフラグメントから完全に失われます。
-   >* **Markdown**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとアセットがまた表示されます。
+   アセットを追加後に形式を変更すると次のようになります。
+   * **プレーンテキスト**：アセットはフラグメントから完全に失われます。
+   * **Markdown**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとアセットがまた表示されます。
+
+
+### コンテンツフラグメントのフラグメントへの挿入 {#inserting-content-fragment-into-your-fragment}
+
+コンテンツフラグメントの作成プロセスを容易にするために、別のコンテンツフラグメントをフラグメントに追加することもできます。
+
+これらは参照として、フラグメント内の現在の場所に追加されます。
+
+>[!NOTE]
+このオプションは、「**複数行テキスト**」が「**フラグメント参照を許可**」に設定されている場合に使用できます。
+
+>[!CAUTION]
+参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
+ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)でおこなう必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+
+>[!NOTE]
+[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
+
+1. フラグメントを追加したい位置にカーソルを置きます。
+1. **コンテンツフラグメントを挿入**&#x200B;アイコンを使用して、検索ダイアログを開きます。
+
+   ![コンテンツフラグメントを挿入アイコン](assets/cfm-variations-13.png)
+
+1. ダイアログでは以下が可能です。
+
+   * Assets フォルダー内の必要なフラグメントに移動する
+   * フラグメントを検索する
+
+   必要なフラグメントが見つかったら、サムネールをクリックしてフラグメントを選択します。
+
+1. 「**選択**」を使用して、選択したコンテンツフラグメントへの参照を現在のコンテンツフラグメント（現在の場所）に追加します。
+
+   >[!CAUTION]
+   別のフラグメントへの参照を追加した後に、次の形式に変更する場合：
+   * **プレーンテキスト**：参照はフラグメントから完全に失われます。
+   * **Markdown**：参照は残ります。
 
 
 ## バリエーションの管理 {#managing-variations}
@@ -308,8 +386,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 1. 「**追加**」を選択します。フラグメントの&#x200B;**プライマリ**&#x200B;が新しいバリエーションにコピーされ、[編集](#editing-a-variation)用に開かれます。
 
    >[!NOTE]
-   >
-   >新しいバリエーションを作成すると、常に&#x200B;**プライマリ**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
+   新しいバリエーションを作成すると、常に&#x200B;**プライマリ**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
 
 ### バリエーションの編集 {#editing-a-variation}
 
@@ -318,7 +395,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 * [バリエーションを作成](#creating-a-variation)する。
 * 既存のフラグメントを開いた後、サイドパネルから必要なバリエーションを選択する。
 
-![cfm-6420-26](assets/cfm-6420-26.png)
+![バリエーションの編集](assets/cfm-variations-10.png)
 
 ### バリエーションの名前変更 {#renaming-a-variation}
 
@@ -333,8 +410,7 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 1. 「**名前を変更**」アクションを確認します。
 
 >[!NOTE]
->
->この手順はバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
+この手順はバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
 
 ### バリエーションの削除 {#deleting-a-variation}
 
@@ -347,37 +423,40 @@ Markdown を使用してテキストの形式を設定できます。次を定�
 1. ダイアログで「**削除**」アクションを確認します。
 
 >[!NOTE]
->
->**プライマリ**&#x200B;は削除できません。
+**プライマリ**&#x200B;は削除できません。
 
 ### プライマリとの同期 {#synchronizing-with-master}
 
-**プライマリ**&#x200B;はコンテンツフラグメントの必須の部分であり、定義に従ってコンテンツのプライマリコピーを保持します。一方、バリエーションはそのコンテンツの更新および適合された個別のバージョンを保持します。プライマリを更新した場合、これらの変更はバリエーションにも関連するので、バリエーションに送信する必要があります。
+**プライマリ**&#x200B;はコンテンツフラグメントの必須の部分であり、定義に従ってコンテンツのプライマリコピーを保持します。一方、バリエーションはそのコンテンツの更新および適合された個別のバージョンを保持します。プライマリを更新した場合、これらの変更はバリエーションにも関連するので、バリエーションに伝播させる必要があります。
 
 バリエーションの編集時には、バリエーションの現在の要素をプライマリと同期させるアクションにアクセスできます。これにより、プライマリにおこなわれた変更内容を必要なバリエーションに自動的にコピーできます。
 
 >[!CAUTION]
->
->同期を使用できるのは、変更内容を&#x200B;***プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
->
->バリエーションの現在の要素のみが同期されます。
->
->同期は、**複数行テキスト**&#x200B;データタイプに対してのみ機能します。
->
->*バリエーションから&#x200B;**プライマリ***へ変更内容を転送することはできません。
+同期を使用できるのは、変更内容を&#x200B;***プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
+バリエーションの現在の要素のみが同期されます。
+同期は、**複数行テキスト**&#x200B;データタイプに対してのみ機能します。
+*バリエーションから&#x200B;**プライマリ***へ変更内容を転送することはできません。
+
+<!-- needs new screenshot for synchronize effect -->
 
 1. フラグメントエディターでコンテンツフラグメントを開きます。**プライマリ**&#x200B;が編集されていることを確認します。
+
 1. 特定のバリエーションを選択し、次のいずれかから適切な同期アクションを選択します。
 
    * 「**アクション**」ドロップダウンセレクター - **現在の要素をプライマリと同期**
 
+      ![プライマリとの同期](assets/cfm-variations-11a.png)
+
    * 全画面表示エディターのツールバー - **マスターと同期**
+
+      ![プライマリとの同期](assets/cfm-variations-11b.png)
 
 1. マスターとバリエーションが横並びに表示されます。
 
    * 緑は追加されたコンテンツを示します（バリエーションへの追加）
    * 赤は削除されたコンテンツを示します（バリエーションからの削除）
+   * 青は置換されたテキストを示します
 
-   ![cfm-6420-27](assets/cfm-6420-27.png)
+   ![プライマリとの同期](assets/cfm-variations-11c.png)
 
 1. 「**同期**」を選択すると、バリエーションが更新され、表示されます。

@@ -1,26 +1,18 @@
 ---
 title: コンテンツフラグメント - 削除に関する考慮事項
-seo-title: コンテンツフラグメント - 削除に関する考慮事項
-description: コンテンツフラグメント - 削除に関する考慮事項
-seo-description: コンテンツフラグメント - 削除に関する考慮事項
-uuid: e7ac1809-159f-4d02-ad30-dc6c246e8a04
-contentOwner: aheimoz
-topic-tags: content-fragments
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-content-type: reference
-discoiquuid: ec21237f-9186-49b4-8039-99df4db7c14a
-docset: aem65
-feature: コンテンツフラグメント
-role: User, Admin
-exl-id: cc212f95-0be0-4705-8dfd-beda9bfb13e0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+description: AEM でコンテンツフラグメント削除ポリシーを定義する前に、以下の重要な考慮事項を確認してください。コンテンツフラグメントはヘッドレスコンテンツを配信する強力なツールです。削除する際は、影響を慎重に考慮する必要があります。
+feature: Content Fragments
+role: User
+source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '509'
 ht-degree: 99%
 
 ---
 
-# コンテンツフラグメント - 削除に関する考慮事項{#content-fragments-delete-considerations}
+# コンテンツフラグメント - 削除に関する考慮事項 {#content-fragments-delete-considerations}
+
+AEM でコンテンツフラグメント削除ポリシーを定義する前に、以下の重要な考慮事項を確認してください。コンテンツフラグメントはヘッドレスコンテンツを配信する強力なツールです。削除する際は、影響を慎重に考慮する必要があります。
 
 ## 権限 - 削除または削除禁止 {#permissions-delete-or-not-delete}
 
@@ -33,12 +25,12 @@ ht-degree: 99%
    * **使用例**：コンテンツフラグメントの編集または更新を必要とするユーザーが&#x200B;**フラグメント全体を削除できる**&#x200B;場合。
    * **権限**：[削除](/help/sites-administering/security.md#actions)権限は[ユーザー管理やグループ管理で割り当てる](/help/sites-administering/security.md#managing-permissions)ことができます。
 
-1. **コンテンツフラグメントを構成する複数のサブエンティティ（例：バリエーション、サブノードなど）。**
+2. **コンテンツフラグメントを構成する複数のサブエンティティ（例：バリエーション、サブノードなど）。**
 
    コンテンツフラグメントエディターの基本操作を使用するには、そうした一時的なサブ要素を削除できる必要があります。例えば、バリエーションの操作、メタデータの編集、関連コンテンツの管理などをおこなう場合です。
 
    * **使用例**：コンテンツフラグメントの編集または更新を必要とするユーザーが&#x200B;**フラグメント全体を削除できない**&#x200B;場合。
-   * **権限**：[エディター機能のみに必要な権限](/help/assets/content-fragments/content-fragments-delete.md#permissions-required-for-editor-functionality-only)を参照してください。
+   * **権限**：[エディター機能のみに必要な権限](#permissions-required-for-editor-functionality-only)を参照してください。
 
 >[!NOTE]
 >

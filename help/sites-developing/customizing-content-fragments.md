@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントのカスタマイズと拡張
-seo-title: コンテンツフラグメントのカスタマイズと拡張
+seo-title: Customizing and Extending Content Fragments
 description: コンテンツフラグメントは、標準アセットを拡張します。
-seo-description: コンテンツフラグメントは、標準アセットを拡張します。
+seo-description: A content fragment extends a standard asset.
 uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
 workflow-type: tm+mt
-source-wordcount: '2749'
-ht-degree: 84%
+source-wordcount: '2772'
+ht-degree: 83%
 
 ---
 
-# コンテンツフラグメントのカスタマイズと拡張 {#customizing-and-extending-content-fragments}
+# コンテンツフラグメントのカスタマイズと拡張{#customizing-and-extending-content-fragments}
 
 コンテンツフラグメントは、標準アセットを拡張します。
 
@@ -41,6 +41,10 @@ ht-degree: 84%
 >[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)は、すべてのフラグメント作成で使用することが推奨されています。
 >
 >コンテンツフラグメントモデルは、We.Retail のすべてのサンプルでも使用されています。
+
+>[!NOTE]
+>
+>AEM 6.3より前のコンテンツフラグメントは、モデルの代わりにテンプレートを使用して作成されていました。 新しいフラグメントを作成する際に、テンプレートは使用できなくなりましたが、そのようなテンプレートで作成されたフラグメントは引き続きサポートされます。
 
 * コンテンツフラグメントモデル:
 
@@ -222,9 +226,8 @@ ht-degree: 84%
    >AEM 翻訳ワークフローでは、`/content` が使用されます。
    >
    >    * コンテンツフラグメントモデルは `/conf` 内に配置されるので、これらの翻訳には含まれません。[UI 文字列を国際化](/help/sites-developing/i18n-dev.md)できます。
-      >
-      >    
-   * テンプレートをコピーしてフラグメントを作成するので、これは暗黙的になります。
+   >
+   >    * テンプレートをコピーしてフラグメントを作成するので、これは暗黙的になります。
 
 
 * **メタデータスキーマ**
@@ -238,7 +241,7 @@ ht-degree: 84%
 
    * 各スキーマフォームは、フラグメントエディターと統合されています。
 
-## コンテンツフラグメント管理 API - サーバー側  {#the-content-fragment-management-api-server-side}
+## コンテンツフラグメント管理 API - サーバー側 {#the-content-fragment-management-api-server-side}
 
 サーバー側 API を使用して、コンテンツフラグメントにアクセスできます。以下を参照してください。
 
@@ -248,7 +251,7 @@ ht-degree: 84%
 >
 >コンテンツ構造に直接アクセスする代わりに、サーバー側 API を使用することを強くお勧めします。
 
-### 主要インターフェイス  {#key-interfaces}
+### 主要インターフェイス {#key-interfaces}
 
 次の 3 つのインターフェイスが、入口の役割を果たします。
 
@@ -357,7 +360,7 @@ ht-degree: 84%
 
 
 
-### 適応 - adaptTo() の使用 {#adapting-using-adaptto}
+### 適応 - adaptTo() の使用  {#adapting-using-adaptto}
 
 次のものを適応させることができます。
 
@@ -496,7 +499,7 @@ if (fragmentResource != null) {
 }
 ```
 
-### 例：新しいコンテンツフラグメントの作成  {#example-creating-a-new-content-fragment}
+### 例：新しいコンテンツフラグメントの作成 {#example-creating-a-new-content-fragment}
 
 新しいコンテンツフラグメントをプログラムによって作成するには、以下を使用する必要があります。
 
@@ -510,7 +513,7 @@ FragmentTemplate tpl = templateOrModelRsc.adaptTo(FragmentTemplate.class);
 ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "A fragment description.");
 ```
 
-### 例：自動保存間隔の指定  {#example-specifying-the-auto-save-interval}
+### 例：自動保存間隔の指定 {#example-specifying-the-auto-save-interval}
 
 自動保存間隔（秒単位）は、設定マネージャー（ConfMgr）を使用して定義できます。
 
