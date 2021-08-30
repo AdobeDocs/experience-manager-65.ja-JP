@@ -2,9 +2,9 @@
 title: AEMコンテンツおよびコマースリリースノート2021
 description: AEMコンテンツおよびコマースリリースノート2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: d1e2a2b11bd4eaece80a2538ddc34ada59e63578
+source-git-commit: b6703f519295eef728d5504360d99de69438064c
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '989'
 ht-degree: 22%
 
 ---
@@ -29,12 +29,38 @@ ht-degree: 22%
 | CIFコアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## リリース日：2021年8月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIF アドオン | 2021.08.20 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.08.20.zip) |
+| CIFコアコンポーネント | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
+| CIF Veniaリファレンスサイト | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
+
+### 新機能 {#what-is-new-august}
+
+* 新しいカテゴリピッカーUIにより、ユーザーエクスペリエンスの向上、効率の向上、複雑な製品カタログのサポートの向上を実現
+
+   ![新しいカテゴリピッカー](/help/assets/CIF/category-picker.png)
+
+* CIFコアコンポーネントのサポートの向A11Y
+
+### バグの修正 {#bug-fixes-august}
+
+* アコーディオンを開くと、カテゴリフィルタを閉じることができません
+
+* 製品ティーザーの「コールトゥアクションテキスト」プロパティが壊れています
+
+* AEM CSデプロイメント手順中のCIF JSエラー
+
+* マッピングされた製品リスト項目の生の製品アクセスを修正
+
 ## リリース日：2021年7月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
 | CIF アドオン | 2021.07.21 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
-| CIFコアコンポーネント | 1.13.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.13.0) |
+| CIFコアコンポーネント | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
 | CIF Veniaリファレンスサイト | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
 ### 新機能 {#what-is-new-july}
