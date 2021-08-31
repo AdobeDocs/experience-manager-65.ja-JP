@@ -1,25 +1,25 @@
 ---
 title: We.GovおよびWe.Financeリファレンスサイトのセットアップと設定
-seo-title: We.Govリファレンスサイトのセットアップと設定
+seo-title: Set up and configure We.Gov reference site
 description: AEM Formsデモパッケージをインストール、設定、カスタマイズします。
-seo-description: AEM Formsデモパッケージをインストール、設定、カスタマイズします。
+seo-description: Install, configure, and customize an AEM Forms demo package.
 uuid: 0a6ad8f9-0d38-40c3-ad8d-e705edef55f8
 contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '4743'
+source-wordcount: '4703'
 ht-degree: 4%
 
 ---
 
-# We.GovおよびWe.Financeリファレンスサイト{#set-up-and-configure-we-gov-reference-site}の設定
+# We.GovおよびWe.Financeリファレンスサイトのセットアップと設定 {#set-up-and-configure-we-gov-reference-site}
 
-## デモパッケージの詳細{#demo-package-details}
+## デモパッケージの詳細 {#demo-package-details}
 
-### インストールの前提条件{#installation-prerequisites}
+### インストールの前提条件 {#installation-prerequisites}
 
 このパッケージは&#x200B;**AEM Forms 6.4 OSGI Author**&#x200B;用に作成され、テスト済みです。そのため、次のプラットフォームバージョンでサポートされています。
 
@@ -41,7 +41,7 @@ ht-degree: 4%
 * パッケージは、他のデモパッケージや古いデモパッケージバージョンがないクリーンなサーバーにインストールされる予定です
 * パッケージは、オーサーモードで実行されているOSGiサーバーにインストールされる必要があります
 
-### このパッケージには{#what-does-this-package-include}が含まれます。
+### このパッケージの内容 {#what-does-this-package-include}
 
 [AEM Forms We.Govデモパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/we-gov-forms.pkg.all-2.0.2.zip)(**we-gov-forms.pkg.all-&lt;version>.zip**)は、他のサブパッケージおよびサービスを含むパッケージとして提供されます。 このパッケージには、次のモジュールが含まれています。
 
@@ -76,11 +76,11 @@ ht-degree: 4%
 * サンプル（メモリ内）Apache Derbyデータベース
 * Apache Derbyデータソース（フォームデータモデルで使用）
 
-## デモパッケージのインストール{#demo-package-installation}
+## デモパッケージのインストール {#demo-package-installation}
 
 この節では、デモパッケージのインストールに関する情報を説明します。
 
-### ソフトウェア配布から{#from-software-distribution}
+### ソフトウェア配布から {#from-software-distribution}
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
@@ -96,7 +96,7 @@ ht-degree: 4%
 1. インストールプロセスを完了する。
 1. *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html?wcmmode=disabled*&#x200B;に移動して、インストールが成功したことを確認します。
 
-### ローカルZIPファイル{#from-a-local-zip-file}から
+### ローカルZIPファイルから {#from-a-local-zip-file}
 
 1. **we-gov-forms.pkg.all-&lt;version>.zip**&#x200B;ファイルをダウンロードして見つけます。
 1. *https://&lt;aemserver>:&lt;port>/crx/packmgr/index.jsp*&#x200B;に移動します。
@@ -113,7 +113,7 @@ ht-degree: 4%
 1. インストールプロセスを完了する。
 1. *https://&lt;aemserver>:&lt;port>/content/we-gov/home.html?wcmmode=disabled*&#x200B;に移動して、インストールが成功したことを確認します。
 
-### 新しいパッケージバージョン{#installing-new-package-versions}をインストールしています
+### 新しいパッケージバージョンのインストール {#installing-new-package-versions}
 
 新しいパッケージバージョンをインストールするには、4.1と4.2で定義されている手順に従います。新しいパッケージバージョンをインストールすると、別の古いパッケージが既にインストールされますが、最初に古いパッケージバージョンをアンインストールすることをお勧めします。 それには、次の手順に従います。
 
@@ -126,11 +126,11 @@ ht-degree: 4%
 
 1. 確認時に、「アンインストール」を再度選択し、アンインストールプロセスを完了させます。
 
-## デモパッケージの設定{#demo-package-configuration}
+## デモパッケージの設定 {#demo-package-configuration}
 
 この節では、プレゼンテーション前のデモパッケージのデプロイ後の設定の詳細と手順について説明します。
 
-### 架空のユーザー設定{#fictional-user-configuration}
+### 架空のユーザー設定 {#fictional-user-configuration}
 
 1. *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html*&#x200B;に移動します。
 1. 以下のタスクを実行するには、管理者としてログインします。
@@ -148,7 +148,7 @@ ht-degree: 4%
 1. 手順2～7を繰り返し、「**forms users**」を検索し、「**forms-power-users**」グループを選択して、「**We.Gov Forms Users**」グループをメンバーとして追加します。
 1. 手順2～7を繰り返し、「**forms-users**」を検索し、「**forms-users**」グループを選択して、次に「**We.Gov Users**」グループをメンバーとして追加します。
 
-### 電子メールサーバーの設定{#email-server-configuration}
+### 電子メールサーバーの設定 {#email-server-configuration}
 
 1. セットアップドキュメント[電子メール通知の設定](/help/sites-administering/notification.md)を確認します。
 1. このタスクを実行するには、管理者としてログインします。
@@ -192,7 +192,7 @@ ht-degree: 4%
 1. HTTPSホスト名は&#x200B;*localhost*&#x200B;に設定する必要があります。
 1. ポートは、システムが公開しているポートに設定する必要があります。
 
-### （オプション）Adobe Signクラウド設定{#adobe-sign-cloud-configuration}
+### （オプション）Adobe Signクラウド設定 {#adobe-sign-cloud-configuration}
 
 この節では、 Adobe Sign Cloud設定の詳細と手順について説明します。
 
@@ -200,7 +200,7 @@ ht-degree: 4%
 
 1. [Adobe Sign の AEM Forms への統合](adobe-sign-integration-adaptive-forms.md)
 
-#### クラウド設定{#cloud-configuration}
+#### クラウド設定 {#cloud-configuration}
 
 1. 前提条件を確認します。 必要なSSL設定については、[AEM SSL設定](../../forms/using/forms-install-configure-gov-reference-site.md#aemsslconfig)を参照してください。
 1. 次の URL に移動します。
@@ -219,7 +219,7 @@ ht-degree: 4%
 1. 「Adobe Signに接続」をクリックします。
 1. 接続に成功したら、「保存して閉じる」をクリックして統合を完了します。
 
-### （オプション） MS Dynamicsクラウド設定{#ms-dynamics-cloud-configuration}
+### （オプション）MS Dynamicsクラウド設定 {#ms-dynamics-cloud-configuration}
 
 この節では、MS Dynamicsクラウド設定の詳細と手順について説明します。
 
@@ -228,7 +228,7 @@ ht-degree: 4%
 1. [Microsoft Dynamics OData の設定](https://docs.adobe.com/content/help/en/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html)
 1. [AEM Forms用のMicrosoft Dynamicsの設定](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
 
-#### MS Dynamics ODataクラウドサービス{#ms-dynamics-odata-cloud-service}
+#### MS Dynamics ODataクラウドサービス {#ms-dynamics-odata-cloud-service}
 
 1. 次の URL に移動します。
 
@@ -244,7 +244,7 @@ ht-degree: 4%
 1. 「認証設定」タブに移動します。
 1. 以下の詳細を入力します。
 
-   1. **サービスルート：** 例：https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/
+   1. **サービスルート：** 例：  `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
    1. **認証の種類：** OAuth 2.0
    1. **認証設定** (この情報を収 [集するため](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) のMS Dynamicsクラウド設定を参照):
 
@@ -255,7 +255,7 @@ ht-degree: 4%
       1. アクセストークンURL（例： ）[https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. 承認スコープ — **openid**
       1. 認証ヘッダー — **Authorization Bearer**
-      1. リソース — 例： [https://msdynamicsserver.api.crm3.dynamics.com](https://msdynamicsserver.api.crm3.dynamics.com)
+      1. リソース — 例： `https://msdynamicsserver.api.crm3.dynamics.com`
    1. 「OAuthに接続」をクリックします。
 
 
@@ -283,13 +283,13 @@ ht-degree: 4%
 1. 右下の「カスタマイズ」と「開発者向けリソース」をクリックします。
 1. 次に、サービスルートURLを示します。例：
 
-   *[https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/](https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/)*
+   * など、特定の拡張子をファイル名に持つファイル。`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 
 1. 更新およびアクセストークンのURLについて詳しくは、以下を参照してください。
 
    *[https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app](https://docs.microsoft.com/en-us/rest/api/datacatalog/authenticate-a-client-app)*
 
-#### Formsデータモデル(Dynamics)のテスト{#testing-the-form-data-model}
+#### Formsデータモデル(Dynamics)のテスト {#testing-the-form-data-model}
 
 クラウド設定が完了したら、フォームデータモデルをテストする必要が生じる場合があります。
 
@@ -316,7 +316,7 @@ ht-degree: 4%
    >[!NOTE]
    データ・ソースをFDMに正常にバインドするには、AEM Serverの再起動が必要であったと報告されています。
 
-#### Formsデータモデル(Derby)のテスト{#test-fdm-derby}
+#### Formsデータモデルのテスト(Derby) {#test-fdm-derby}
 
 クラウドの設定が完了したら、フォームデータモデルをテストする必要が生じる場合があります。
 
@@ -354,7 +354,7 @@ ht-degree: 4%
 
 * [AEM Forms の分析レポートの確認方法と詳細](view-understand-aem-forms-analytics-reports.md)
 
-### Adobe Analyticsクラウドサービス設定{#adobe-analytics-cloud-service-configuration}
+### Adobe Analyticsクラウドサービスの設定 {#adobe-analytics-cloud-service-configuration}
 
 このパッケージは、Adobe Analyticsに接続するように事前に設定されています。 この設定を更新するために、以下の手順を実行します。
 
@@ -370,7 +370,7 @@ ht-degree: 4%
 
 1. フレームワーク設定を更新する場合は、同じページで「We.Gov Adobe Analytics Framework (Analytics Framework)」をクリックします(オーサリングを有効にするには、「[AEMオーサリングを有効にする](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring)」を参照)。
 
-#### Adobe Analyticsユーザー資格情報の検索{#analytics-locating-user-credentials}
+#### Adobe Analyticsユーザー資格情報の検索 {#analytics-locating-user-credentials}
 
 Adobe Analyticsアカウントのユーザー資格情報を探すには、アカウント管理者が次のタスクを実行する必要があります。
 
@@ -389,7 +389,7 @@ Adobe Analyticsアカウントのユーザー資格情報を探すには、ア�
 1. ユーザー名には、名前の中にコロンが含まれ、コロンの左側にあるすべての情報はユーザー名で、コロンの右側にある情報はすべて会社名です。
    * 次に例を示します。*ユーザー名：会社名*
 
-#### Adobe Analytics {#setup-user-authentication}でのユーザー認証の設定
+#### Adobe Analyticsでのユーザー認証の設定 {#setup-user-authentication}
 
 管理者は、次の操作を実行して、AEM Analyticsの権限をユーザーに付与できます。
 
@@ -413,9 +413,9 @@ Adobe Analyticsアカウントのユーザー資格情報を探すには、ア�
 
 1. ユーザーのログイン機能に関して権限がマッピングされると、数時間かかる場合があります。
 
-### Adobe Analyticsレポート{#adobe-analytics-reporting}
+### Adobe Analyticsレポート {#adobe-analytics-reporting}
 
-#### Adobe Analyticsサイトレポートを表示します{#view-adobe-analytics-sites-reporting}
+#### Adobe Analytics Sitesレポートの表示 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
 AEM Forms Analyticsのデータは、オフライン時に、または`we-gov-forms.ui.analytics-<version>.zip`パッケージがインストールされている場合にAdobe Analyticsクラウド設定なしで使用できますが、AEM Sitesのデータにはアクティブなクラウド設定が必要です。
@@ -443,7 +443,7 @@ AEM Forms Analyticsのデータは、オフライン時に、または`we-gov-fo
 
    ![新しい列の表示](assets/new_columns_display.jpg)
 
-#### Adobe Analytics formsレポートの表示{#view-adobe-analytics-forms-reporting}
+#### Adobe Analytics formsレポートの表示 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
 AEM Forms Analyticsのデータは、オフライン時に、または`we-gov-forms.ui.analytics-<version>.zip`パッケージがインストールされている場合にAdobe Analyticsクラウド設定なしで使用できますが、AEM Sitesのデータにはアクティブなクラウド設定が必要です。
@@ -460,7 +460,7 @@ AEM Forms Analyticsのデータは、オフライン時に、または`we-gov-fo
 
    ![Analyticsレポートデータの表示](assets/analytics_report_data.jpg)
 
-### Adobe自動Forms設定有効化{#automated-forms-enablement}
+### Adobe自動Forms設定の有効化 {#automated-forms-enablement}
 
 FormsAdobeと共にAEM Formsをインストールして設定するには、コンバージョンツールのユーザーが以下をおこなう必要があります。
 
@@ -479,7 +479,7 @@ FormsAdobeと共にAEM Formsをインストールして設定するには、コ�
 フォーム変換ツールと正しく通信するようにサービスを設定するには、ユーザーがIdentity Management System(IMS)サービスをAdobe I/Oに登録できるように設定する必要があります。
 
 1. https://&lt;aemserver>:&lt;port>に移動し、「Adobe Experience」をクリックします。
-左上のマネージャー/ツール/セキュリティ/AdobeIMS設定
+左上のマネージャー/ツール/セキュリティ/Adobe IMS設定
 
 1. 「作成」をクリックします。
 
@@ -494,7 +494,7 @@ FormsAdobeと共にAEM Formsをインストールして設定するには、コ�
 >[!NOTE]
 この節で作成した証明書は、統合サービスの作成にAdobe I/Oされます。統合サービスでユーザーが作成された情報は、Adobe I/Oから使用して設定を完了できます。
 
-#### Adobe I/O{#create-integration-adobeio}での統合の作成
+#### 統合の作成Adobe I/O {#create-integration-adobeio}
 
 Adobe管理者に問い合わせない場合は、システムドメイン内で統合を作成する権限を持っていることを確認してください。
 
@@ -518,7 +518,7 @@ Adobe管理者に問い合わせない場合は、システムドメイン内で
 
    ![新しい統合の作成](assets/aftia-create-new-integration.jpg)
 
-#### IMS設定パート2 {#create-ims-config-part-next}の作成
+#### IMS設定の作成パート2 {#create-ims-config-part-next}
 
 これで、統合が作成され、IMS設定のインストールを完了できます。
 
@@ -542,7 +542,7 @@ Adobe管理者に問い合わせない場合は、システムドメイン内で
 
    ![正常性確認](assets/aftia-health-confirmation.jpg)
 
-#### クラウド設定（We.Gov AFC実稼動）の設定{#configure-cloud-configuration}
+#### クラウド設定（We.Gov AFC実稼動）の設定 {#configure-cloud-configuration}
 
 IMSの設定が完了したら、AEMでクラウド設定を確認する必要があります。 設定が存在しない場合は、次の手順を使用してAEMでクラウド設定を作成します。
 
@@ -572,7 +572,7 @@ IMSの設定が完了したら、AEMでクラウド設定を確認する必要�
 
    * これらのオプションについて詳しくは、[クラウドサービスの設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service)を参照してください。
 
-#### クラウド設定（We.Finance AFC実稼動）の設定{#configure-cloud-configuration-wefinance}
+#### クラウド設定（We.Finance AFC実稼動）の設定 {#configure-cloud-configuration-wefinance}
 
 IMSの設定が完了したら、AEMでクラウド設定を作成する作業に進むことができます。
 
@@ -602,7 +602,7 @@ IMSの設定が完了したら、AEMでクラウド設定を作成する作業�
 
    * これらのオプションについて詳しくは、[クラウドサービスの設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service)を参照してください。
 
-#### フォーム変換のテスト（We.Gov登録アプリケーション） {#test-forms-conversion}
+#### フォーム変換のテスト(We.Gov Enrollment Application) {#test-forms-conversion}
 
 設定が完了したら、PDFドキュメントをアップロードしてテストできます。
 
@@ -638,7 +638,7 @@ IMSの設定が完了したら、AEMでクラウド設定を作成する作業�
 
    **Output**&#x200B;フォルダーをクリックして、生成後のアダプティブフォームを表示します。
 
-#### 既知の問題と注意{#known-issues-notes}
+#### 既知の問題とメモ {#known-issues-notes}
 
 automated forms conversionサービスには、特定の[ベストプラクティス、既知の複雑なパターン](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices.html)、[既知の問題](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/known-issues.html)が含まれます。 AEM FormsAutomated forms conversionサービスの使用を開始する前に、これらを確認してください。
 
@@ -646,11 +646,11 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 
 1. テンプレートフォルダーですべてのユーザーの権限に対してjcr:readが有効になっていることを確認してください。そうしないと、サービスユーザーがリポジトリからテンプレートを読み取れず、変換が失敗します。
 
-## デモパッケージのカスタマイズ{#demo-package-customizations}
+## デモパッケージのカスタマイズ {#demo-package-customizations}
 
 この節では、デモのカスタマイズ手順について説明します。
 
-### テンプレートのカスタマイズ{#templates-customization}
+### テンプレートのカスタマイズ {#templates-customization}
 
 編集可能テンプレートは、次の場所にあります。
 
@@ -674,7 +674,7 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 
 [スタイルシステム](../../sites-authoring/style-system.md)
 
-#### テンプレートロゴ{#template-logos}
+#### テンプレートロゴ {#template-logos}
 
 プロジェクトDAM Assetsには、We.Govのロゴと画像も含まれます。 これらのアセットは、次の場所で使用できます。
 
@@ -688,13 +688,13 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 
 [ページのコンテンツの編集](../../sites-authoring/editing-content.md)
 
-### サイトページのカスタマイズ{#sites-pages-customization}
+### サイトページのカスタマイズ {#sites-pages-customization}
 
 すべてのサイトページは、次の場所から利用できます。*https://&lt;aemserver>:&lt;port>/sites.html/content/we-gov*
 
 これらのサイトページでは、AEM Gridパッケージを使用して、一部のコンポーネントのレイアウトを制御することもできます。
 
-#### スタイルシステム{#style-system}
+#### スタイルシステム {#style-system}
 
 このパッケージに含まれるページは、スタイルシステムもサポートしています。
 
@@ -702,7 +702,7 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 
 また、サポートされるスタイルに関するドキュメントについては、「[テンプレートカスタマイズスタイルシステム](../../forms/using/forms-install-configure-gov-reference-site.md#customizetemplates)」を参照してください。
 
-### アダプティブフォームのカスタマイズ{#adaptive-forms-customization}
+### アダプティブフォームのカスタマイズ {#adaptive-forms-customization}
 
 すべてのアダプティブフォームは、次の場所から利用できます。
 
@@ -716,14 +716,14 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 * 送信 — コールバックをサポートするために、送信ボタンのロジックにカスタマイズが必要でした。 カスタマイズについては説明していますが、Formsデータモデルを介してPOST操作とGET操作の両方をMS Dynamicsに対して実行する際に、フォームを送信するには大きなスクリプトが必要でした。
 * ルートパネル — Initializeイベントは、すべてのAEMインボックスGranite UIコンポーネントが変更不可能なので、可能な限り控えめな方法でMS DynamicsボタンをAEMインボックスに追加するために使用します。
 
-#### アダプティブフォームのスタイル{#adaptive-form-styling}
+#### アダプティブフォームのスタイル設定 {#adaptive-form-styling}
 
 アダプティブフォームは、スタイルエディターまたはテーマエディターを使用してスタイルを設定することもできます。
 
 * [アダプティブフォームコンポーネントのインラインスタイリング](inline-style-adaptive-forms.md)
 * [テーマの作成および使用](themes.md)
 
-### ワークフローのカスタマイズ{#workflow-customization}
+### ワークフローのカスタマイズ {#workflow-customization}
 
 登録アダプティブフォームは、処理のためにOSGIワークフローに送信されます。 このワークフローは、*https://&lt;aemserver>:&lt;port>/conf/we-gov/settings/models/we-gov-process.html*&#x200B;にあります。
 
@@ -731,11 +731,11 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 
 すべてのワークフローステップのJavaコードは、**we-gov-forms.core-&lt;version>.jar**&#x200B;バンドルに含まれています。
 
-## デモに関する考慮事項と既知の問題{#demo-considerations-and-known-issues}
+## デモに関する考慮事項と既知の問題 {#demo-considerations-and-known-issues}
 
 この節では、デモ機能と、デモプロセス中に特別な考慮が必要になる可能性のある設計上の決定に関する情報を説明します。
 
-### デモに関する考慮事項{#demo-considerations}
+### デモに関する考慮事項 {#demo-considerations}
 
 * AGRS-159に従い、登録アダプティブフォームで使用する連絡先の名前（最初、中間、最後）が一意であることを確認します。
 * 登録アダプティブフォームは、フォームの「電子メール」フィールドに指定された電子メールにAdobe Signの電子メールを送信します。 その電子メールアドレスを、Adobe Signクラウド設定の設定に使用する電子メールと同じ電子メールアドレスにすることはできません。
@@ -745,9 +745,9 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 * (AGRS-120)サイトナビゲーションコンポーネントは、現在、2レベルを超える深さのネストされた子ページをサポートしていません。
 * (AGRS-159)現在のMS Dynamics FDMは、最初に2回の操作を実行し、登録アダプティブフォームのデータをDynamicsにPOSTしてから、連絡先IDを取得するためにユーザーレコードを取得する必要があります。 現在の状態では、同じ名前を持つユーザーがDynamicsに3人以上存在し、登録アダプティブフォームの送信が許可されない場合、連絡先IDの取得が失敗します。
 
-## アクセシビリティテストの設定{#configure-accessibility-testing}
+## アクセシビリティテストの設定 {#configure-accessibility-testing}
 
-### {#enable-chrome-add-on}でのChromeアドオンのアクセシビリティテストの有効化
+### アクセシビリティテストChromeアドオンの有効化 {#enable-chrome-add-on}
 
 最初にアクセシビリティテストを実行するには、Chromeプラグインをインストールする必要があります。これは[ここ](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)にあります。
 
@@ -764,7 +764,7 @@ automated forms conversionサービスには、特定の[ベストプラクテ�
 
 ![アクセシビリティレポート](assets/aftia-accessibility-report.jpg)
 
-### Ultramarineテーマ{#ultramarine-theme}
+### Ultramarineテーマ {#ultramarine-theme}
 
 Adobeが管理するUltramarineテーマは、
 `we-gov-forms.pkg.all-<version>.zip`インストール可能なZIPファイル。 CRXを使用してこのパッケージをインストールしたら、

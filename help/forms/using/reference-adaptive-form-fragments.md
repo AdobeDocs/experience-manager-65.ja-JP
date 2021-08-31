@@ -1,18 +1,18 @@
 ---
 title: 参照用のアダプティブフォームフラグメント
-seo-title: 参照用のアダプティブフォームフラグメント
+seo-title: Reference adaptive form fragments
 description: 'AEM Forms には、フォームをすばやく作成するためにアセットとして使用できるアダプティブフォームフラグメントが用意されています。 '
-seo-description: 'AEM Forms には、フォームをすばやく作成するためにアセットとして使用できるアダプティブフォームフラグメントが用意されています。 '
+seo-description: AEM Forms provides adaptive form fragments that you can use as assets to create a form quickly.
 uuid: 85401274-6691-4726-8b70-b93fd46de053
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
 exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 91%
+source-wordcount: '389'
+ht-degree: 85%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 91%
 
 [アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。これを使用してフォームを簡単にすばやく作成できます。サイドバーのアセットブラウザーを使用してアダプティブフォームフラグメントをフォームにドラッグ&amp;ドロップし、フォームエディターで編集することができます。
 
-アダプティブフォームの作成者に向けて、AEM Forms パッケージ [AEM-FORMS-6.3-REFERENCE-FRAGMENTS](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS) で参照用のフラグメントが提供されています。次のフラグメントが含まれています。
+アダプティブフォームの作成者の場合、[AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)に参照フラグメントが提供されます。 次のフラグメントが含まれています。
 
 * アドレス
 * 連絡先情報

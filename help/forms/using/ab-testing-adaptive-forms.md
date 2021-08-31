@@ -1,8 +1,8 @@
 ---
 title: アダプティブフォームの A/B テストの作成と管理
-seo-title: アダプティブフォームの A/B テストの作成と管理
+seo-title: Create and manage A/B test for adaptive forms
 description: アダプティブフォームで A/B テストを実行する Adobe Target と AEM Forms を統合し、顧客体験を高めてコンバージョン率を向上させることができます。
-seo-description: アダプティブフォームで A/B テストを実行する Adobe Target と AEM Forms を統合し、顧客体験を高めてコンバージョン率を向上させることができます。
+seo-description: AEM Forms integrates with Adobe Target that allows running A/B tests for adaptive forms to enhance customer experience and improve conversion rates.
 uuid: e258805c-4da8-4c5d-ae91-7bea78a6a71b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,10 +10,10 @@ topic-tags: integrations
 discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '1569'
-ht-degree: 90%
+source-wordcount: '1544'
+ht-degree: 89%
 
 ---
 
@@ -27,17 +27,17 @@ AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target 
 
 AEM Forms により、リアルタイムでアダプティブフォーム上に A/B テストを設定し、実行することが可能です。また、事前設定されているカスタマイズ可能なレポート機能で、フォームのエクスペリエンスのリアルタイムなパフォーマンスを可視化し、ユーザーの利用状況とコンバージョンを最大限に高めるエクスペリエンスを特定します。
 
-## AEM Forms での Target の設定と統合  {#set-up-and-integrate-target-in-aem-forms}
+## AEM Forms での Target の設定と統合 {#set-up-and-integrate-target-in-aem-forms}
 
 アダプティブフォームで A/B テストを作成および分析する前に、Target サーバーを設定し、AEM Forms に統合する必要があります。
 
-### Target の設定  {#set-up-target}
+### Target の設定 {#set-up-target}
 
 AEM を Target と統合するには、有効な Adobe Target のアカウントを保有していることを確認してください。Adobe Target に登録すると、クライアントコードを受け取ります。クライアントコード、Target アカウントに関連付けられた電子メール、AEM と Target を接続するパスワードが必要です。
 
-クライアントコードは Adobe Target の顧客アカウントを識別するもので、Adobe Target サーバーの呼び出し時に URL 内のサブドメインとして使用されます。開始する前に、この資格情報で [/](https://testandtarget.omniture.com/)https://testandtarget.omniture.com/ にログインできるか確認してください。
+クライアントコードは Adobe Target の顧客アカウントを識別するもので、Adobe Target サーバーの呼び出し時に URL 内のサブドメインとして使用されます。続行する前に、[https://experience.adobe.com/](https://experience.adobe.com/)にログオンし、アクセス権がある場合は、[!UICONTROL クイックアクセス]セクションの[!DNL Adobe Target]オプションを表示します。
 
-### AEM Forms に Target を統合  {#integrate-target-in-aem-forms}
+### AEM Forms に Target を統合 {#integrate-target-in-aem-forms}
 
 実行中の Target サーバーを AEM Forms と統合するには、次の手順を実行します。
 
@@ -80,8 +80,7 @@ JBoss サーバーに加えて、アプリケーションサーバーのサー�
 >
 >設定した Target URL をあとで更新する場合、実行中の A/B テストを必ず更新し、現在の URL が指定されるようにしてください。A/B テストの更新について詳しくは、[A/B テストを更新](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p)を参照してください。
 
-
-## AEM 内でのオーディエンスの作成  {#create-audiences-within-aem}
+## AEM 内でのオーディエンスの作成 {#create-audiences-within-aem}
 
 AEM では、オーディエンスを作成し、それを A/B テストで使用できます。AEM 内で作成したオーディエンスは AEM Forms 内で使用できます。次の手順を実行して、AEM 内でオーディエンスを作成します。
 
@@ -99,7 +98,7 @@ AEM では、オーディエンスを作成し、それを A/B テストで使�
 
 以下に示すように、フォームに対して A/B テストを設定するときにオーディエンスを選択できます。
 
-## A/B テストの作成  {#create-a-b-test}
+## A/B テストの作成 {#create-a-b-test}
 
 アダプティブフォームのA/Bテストを作成するには、次の手順を実行します。
 
@@ -132,7 +131,7 @@ AEM では、オーディエンスを作成し、それを A/B テストで使�
 
 A/B テストが実行され、指定された対象者に、設定された配分に基づいてランダムにエクスペリエンスが提供されます。
 
-## A/B テストの更新  {#update-a-b-test}
+## A/B テストの更新 {#update-a-b-test}
 
 実行中の A/B テストのオーディエンスとエクスペリエンスの配布を更新することができます。この作業を行うには、以下の手順を実行します。
 

@@ -1,24 +1,24 @@
 ---
 title: リファレンステーマ
-seo-title: リファレンステーマ
+seo-title: Reference Themes
 description: AEM Formsは、アダプティブフォームのテーマを提供し、ソフトウェア配布から取得して、フォームのスタイルを設定します。
-seo-description: AEM Formsは、アダプティブフォームのテーマを提供し、ソフトウェア配布から取得して、フォームのスタイルを設定します。
+seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 uuid: 3c6bd309-aa5a-4953-91ed-25ed5ba5671a
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: a69d3787-8149-4bca-835d-aeecfb11702b
 docset: aem65
 exl-id: f6c24894-c322-4c44-b001-8978954d6e53
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '533'
 ht-degree: 75%
 
 ---
 
 # リファレンステーマ{#reference-themes}
 
-[テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM-FORMS-REFERENCE-THEMES](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-THEMES)パッケージをインストールすることで、次のテーマを取得できます。
+[テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。デフォルトのテーマに加えて、[AEM Formsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)をインストールすることで、次のテーマを取得できます。
 
 * Beryl
 * Exec
@@ -105,7 +105,7 @@ Urbaneテーマは、フォームのミニマリストで機能的な外観を�
 
 ](assets/urbane-1.png)-->
 
-## U.S. Web Design Standards {#u-s-web-design-standards}
+## 米国Webデザイン規格 {#u-s-web-design-standards}
 
 U.S. Web Design Standardsテーマは、名前が示すように、Draft U.S. Web Design Standardsサイトに記載されている書体とスタイルを使用します。 この Web 標準は、連邦政府の Web サイト間での Web エクスペリエンスを統一するために、連邦政府機関で使用されています。
 
