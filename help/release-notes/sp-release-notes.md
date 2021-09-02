@@ -4,10 +4,10 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 9c262f57b3c3b7a1d2deaba78d13d02b74c5208d
+source-git-commit: 8c345f5f78ca5f9e8981611ef377e23309fcbe3d
 workflow-type: tm+mt
-source-wordcount: '3652'
-ht-degree: 3%
+source-wordcount: '4376'
+ht-degree: 5%
 
 ---
 
@@ -55,6 +55,23 @@ ht-degree: 3%
    * [!DNL Experience Manager] は、フォルダーの下にすべてのコンテンツモデルのリストを直接表示します。コンテンツ作成者はファイル構造内を移動する必要はありません。この機能により、クリック数が少なくなり、オーサリングの効率が向上しました。
 
    * [!DNL Sites]エディターのパスフィールドを使用すると、作成者は[!DNL Content Finder]からアセットをドラッグできます。
+
+* [!DNL AEM Forms]での`GuideBridge#getGuidePath` APIのサポートを追加しました。
+
+* 自動フォーム変換サービスを使用して、[フランス語、ドイツ語、スペイン語の PDF フォームをアダプティブフォームに変換](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)できるようになりました。
+
+* **プロパティブラウザーのエラーメッセージ**：アダプティブフォームのプロパティブラウザーに各プロパティのエラーメッセージが追加されました。これらのメッセージは、フィールドに使用できる値を理解するのに役立ちます。
+
+* **リテラルオプションを使用してJSONタイプの変数の値を設定する機能**&#x200B;をサポートします。リテラルオプションを使用して、AEM Workflowの変数設定手順でJSONタイプの変数の値を設定できます。リテラルオプションを使用すると、文字列の形式で JSON を指定できます。
+
+* **プラットフォームのアップデート**: [!DNL Adobe Experience Manager Forms] JEE上では、次のプラットフォームのサポートが追加されました。
+   * [!DNL Adobe Acrobat 2020]
+   * [!DNL Ubuntu 20.04]
+   * [!DNL Open Office 4.1.10]
+   * [!DNL Microsoft Office 2019]
+   * [!DNL Microsoft Windows Server 2019]
+   * [!DNL RHEL8.3]
+   * [!DNL Apache Geode cache solution]
 
 [!DNL Experience Manager] 6.5.10.0で導入されたすべての機能と機能強化の一覧については、 [!DNL Adobe Experience Manager] 6.5 Service Pack 10](new-features-latest-service-pack.md)の新機能を参照してください。[
 
@@ -255,6 +272,71 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
 
 
+**アダプティブフォーム**
+
+* アダプティブフォームのフィールド値に対して実行された検証が正常に完了した場合、[!DNL AEM Forms]はフォームデータモデルの呼び出しに失敗します(CQ-4325491)。
+
+* 翻訳プロジェクトに言語辞書を追加してからプロジェクトを開くと、[!DNL AEM Forms]にエラーメッセージが表示されます(CQ-4324933)。
+
+   ```TXT
+   Uncaught TypeError: Cannot read property 'PROJECT_LISTING_PATH' of undefined
+   at openButtonClickHandler (clientlibs.js:245)
+   at HTMLButtonElement.onclick (clientlibs.js:258)
+   ```
+
+* [!DNL AEM Forms] Service Pack 7をインストールした後のパフォーマンスの問題(CQ-4326828)。
+
+**Correspondence Management**
+
+* 「[!UICONTROL データ]」タブおよびHTMLレタープレビューでの文字表示の遅延(NPR-37020)。
+
+* テキストドキュメントフラグメントを編集している場合、フラグメントを保存すると、新しい単語がHTMLタグとして表示される(NPR-36837)。
+
+* ドラフトとして保存されたレターを表示できない(NPR-36816)。
+
+* テキストドキュメントフラグメントを編集してレターをプレビューすると、AEM FormsはHTMLレタープレビューに式言語を表示します(CQ-4322331)。
+
+* セルフサービスレターテンプレートを使用してデータをレンダリングする際の問題(NPR-37161)。
+
+
+**インタラクティブコミュニケーション**
+
+* テキストドキュメントフラグメントの編集後にインタラクティブ通信のプレビューを印刷するたびに、タブ文字が2つの単語間で重複する(NPR-37021)。
+
+* [!DNL AEM Forms] 最大サイズ制限を超えるテキストドキュメントフラグメントを保存すると、エラーが表示される(NPR-36874)。
+
+* インタラクティブ通信に画像を追加すると、画像の後に追加の空のブロックが表示される(NPR-36659)。
+
+* エディターですべてのテキストを選択すると、フォントテキストをArialに変更できない(NPR-36646)。
+
+* エディターでURLを作成し、変更をプレビューすると、URLテキストの代わりに黒い背景が表示される(NPR-36640)。
+
+* テキストをエディターにコピー&amp;ペーストする際、ドキュメントで使用可能な箇条書きのフォントをArialに変更する際に問題が発生する。(NPR-36628)
+
+* テキストエディターでの箇条書きのインデントの問題(NPR-36513)。
+
+**デザイナー**
+
+* 画面Readerが、マスターページ上のテキストラベルまたはダイナミックPDFのサブフォームページに配置されたフローティングフィールドデータを読み取れない(CQ-4321587)。
+
+**ドキュメントサービス**
+
+* XDPファイルをPDFファイルに変換し、結果のPDFをアセンブリすると、PDFの生成に失敗し、次のエラーメッセージが表示されます。
+
+   ```TXT
+   Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
+   ```
+
+**Forms のワークフロー**
+
+* AEM Forms Service Pack 8にアップグレードした後、Workbenchプロセスにフォームを送信できない(CQ-4325846)。
+
+**HTML5 のフォーム**
+
+* CRX DEリポジトリで`mfAllowAttachments`プロパティの値を`True`に設定すると、HTML5フォームの送信時に`dataXml`が破損する(NPR-37035)。
+
+* `dataXml`を使用してXDPをHTMLとしてレンダリングする場合、[!DNL AEM Forms]は`Page Unresponsive`エラーを表示します(NPR-36631)。
+
 ### コマース {#commerce-65100}
 
 * 表示される&#x200B;**[!UICONTROL 「Published By]**」フィールドの値が列表示で正しくない。(NPR-36902)
@@ -319,35 +401,32 @@ B.パッケージマネージャーの[HTTP APIを使用します。](/help/site
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-<!--
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+### Adobe Experience Manager Formsアドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>Formsを使用していない場合はスキップします。 Experience ManagerFormsの修正は、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に、別のアドオンパッケージを通じて配信されます。
 
-1. Ensure that you have installed the Adobe Experience Manager Service Pack.
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) for your operating system.
-1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->Experience Manager 6.5.10.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to Experience Manager 6.5.10.0, install the latest version of the package post installation of Forms Add-On Package.
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+1. Adobe Experience Manager Service Packがインストールされていることを確認します。
+1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
+1. [AEM Formsアドオンパッケージのインストール](../forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の説明に従って、Formsアドオンパッケージをインストールします。
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>Experience Manager6.5.10.0には、[AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases)の新しいバージョンが含まれています。 古いバージョンのAEM Forms互換パッケージを使用し、Experience Manager6.5.10.0に更新する場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+### JEEへのAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+>JEE で AEM Forms を使用していない場合はスキップします。JEE上のAdobe Experience Manager Formsの修正は、別のインストーラーを使用して提供されます。
 
--->
+JEE上のFormsExperience Manager用の累積インストーラーのインストールとデプロイ後の設定について詳しくは、[リリースノート](jee-patch-installer-65.md)を参照してください。
+
+>[!NOTE]
+>
+>JEE上のFormsExperience Manager用の累積インストーラーをインストールしたら、最新のFormsアドオンパッケージをインストールし、`crx-repository\install`フォルダーからFormsアドオンパッケージを削除して、サーバーを再起動します。
+
 
 ### UberJar {#uber-jar}
 
@@ -380,6 +459,8 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 | コネクタ | Experience Manager6.5では、Microsoft® SharePoint 2010およびMicrosoft® SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
+
+* [!DNL Microsoft Windows Server 2019]は[!DNL MySQL 5.7]と[!DNL JBoss EAP 7.1]をサポートしていないので、[!DNL Microsoft Windows Server 2019]は[!DNL AEM Forms 6.5.10.0]の自動インストールをサポートしていません。
 
 * [!DNL Experience Manager]インスタンスを6.5から6.5.10.0バージョンにアップグレードする場合は、`error.log`ファイルで`RRD4JReporter`例外を表示できます。 この問題を解決するには、インスタンスを再起動します。
 
