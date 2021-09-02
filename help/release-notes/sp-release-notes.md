@@ -4,10 +4,10 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f9b53df7d235fa6be2cee8c05071790114a91da1
+source-git-commit: d107a31ff109be6ae848eef5d3102f63983fd120
 workflow-type: tm+mt
-source-wordcount: '4376'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -458,6 +458,9 @@ MavenプロジェクトでUberJarを使用するには、[UberJar](/help/sites-d
 | コネクタ | Experience Manager6.5では、Microsoft® SharePoint 2010およびMicrosoft® SharePoint 2013用のAdobeJCR Connectorが非推奨（廃止予定）となりました。 | 該当なし |
 
 ## 既知の問題 {#known-issues}
+
+* （Microsoft Windows上のJBossのみ） [!DNL AEM Forms on JEE]で引き続きPDFを作成するには、ソフトウェア配布から[omniORB_4.1.1_x86_win32_vc10.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/omniORB_4.1.1_x86_win32_vc10.zip)をダウンロードし、Zipファイル内の使用可能なフォルダーを次の場所にコピーします。
+   `[AEM Forms Installation]\Adobe\Adobe_Experience_Manager_Forms\jboss\standalone\svcnative\CommonNatives\lib`
 
 * [!DNL Microsoft Windows Server 2019]は[!DNL MySQL 5.7]と[!DNL JBoss EAP 7.1]をサポートしていないので、[!DNL Microsoft Windows Server 2019]は[!DNL AEM Forms 6.5.10.0]の自動インストールをサポートしていません。
 
