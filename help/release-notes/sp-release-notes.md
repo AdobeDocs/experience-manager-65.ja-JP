@@ -4,7 +4,7 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 8c345f5f78ca5f9e8981611ef377e23309fcbe3d
+source-git-commit: f9b53df7d235fa6be2cee8c05071790114a91da1
 workflow-type: tm+mt
 source-wordcount: '4376'
 ht-degree: 5%
@@ -70,8 +70,7 @@ ht-degree: 5%
    * [!DNL Open Office 4.1.10]
    * [!DNL Microsoft Office 2019]
    * [!DNL Microsoft Windows Server 2019]
-   * [!DNL RHEL8.3]
-   * [!DNL Apache Geode cache solution]
+   * [!DNL RHEL8]
 
 [!DNL Experience Manager] 6.5.10.0で導入されたすべての機能と機能強化の一覧については、 [!DNL Adobe Experience Manager] 6.5 Service Pack 10](new-features-latest-service-pack.md)の新機能を参照してください。[
 
