@@ -1,8 +1,8 @@
 ---
 title: JEE 上の AEM Forms でサポートされているプラットフォーム
-seo-title: JEE 上の AEM Forms でサポートされているプラットフォーム
+seo-title: Supported Platforms for AEM Forms on JEE
 description: JEE での AEM Forms のインストールに必要な（およびサポートされた）インフラストラクチャコンポーネントのリスト
-seo-description: JEE での AEM Forms のインストールに必要な（およびサポートされた）インフラストラクチャコンポーネントのリスト
+seo-description: List of infrastructure components required and supported for installing AEM Forms on JEE
 uuid: 777f943b-4cb4-444e-a036-8032b9fce5be
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: f0caaaf72a75aff3099f4a9184653353639035e4
 workflow-type: tm+mt
-source-wordcount: '3323'
-ht-degree: 83%
+source-wordcount: '3458'
+ht-degree: 81%
 
 ---
 
@@ -33,7 +33,6 @@ JEE サーバー上の AEM Forms は、サポートされているオペレー�
 >* サポートされているサーバープラットフォームへの例外エラーの完全リストについては、[サポートされているサーバープラットフォームへの例外エラー](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)を参照してください。
 >* JEE 上の AEM Forms でサポートされるのは、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみです。
 >
-
 
 
 ### 推奨設定 {#recommendedconfigurations}
@@ -184,11 +183,11 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>リポジトリ Microkernel</td>
    <td>R：制限サポート</td>
   </tr>
-    <tr>
-   <td>MySQL 5.7.19 </td>
+  <tr>
+   <td>MySQL 5.7.35 </td>
    <td>-</td>
    <td>R：制限サポート</td>
-  </tr>
+  </tr>  
  </tbody>
 </table>
 
@@ -278,13 +277,28 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <th><p><strong>サポートレベル</strong></p> </th>
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
-  <tr>
-   <td>Microsoft Windows Server 2016（64ビット）</td>
+   <tr>
+   <td>Microsoft Windows Server 2019（64ビット）</td>
    <td>A：サポート対象</td>
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7（カーネル3.x）（64ビット）</br><b>注意：</b> <a href="https://access.redhat.com/articles/4665701">Red Hat Enterprise Linux 6</a>はメンテナンス終了段階に達し、2020年11月30日に延長ライフサイクルサポート段階に移行します。 Adobeでは、アップグレードおよび新規インストールにRed Hat Enterprise Linux 7を推奨します。 既存のインストールでは、延長ライフサイクルサポートフェーズでRed Hat Enterprise Linux 6を使用できます。</p> </td>
+   <td>Ubuntu 20.04 を含む）</td>
+   <td>A：サポート対象</td>
+   <td>サービスパックと重要なアップデート</td>
+  </tr>
+  <tr>
+   <td>Microsoft Windows Server 2016（64ビット）（廃止）</td>
+   <td>A：サポート対象</td>
+   <td>サービスパックと重要なアップデート</td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 8（カーネル4.x）（64ビット）</p> </td>
+   <td><p>A：サポート対象</p> </td>
+   <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
+  </tr>
+  <tr>
+   <td><p>Red Hat Enterprise Linux 7 （Kernel 3.x） （64ビット）（廃止）</td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
   </tr>
@@ -434,11 +448,19 @@ AEM Forms AppはApache Cordovaをサポートするようになりました。�
    <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic </a> track最新バージョン</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic </a> track最新バージョン</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic </a> tracklatest version（非推奨）</td>
+   <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2019</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Office 2016（非推奨）</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
   </tr>
   <tr>
@@ -446,21 +468,37 @@ AEM Forms AppはApache Cordovaをサポートするようになりました。�
    <td>WP、WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2016<br /> </td>
+   <td>Microsoft® Office Visio 2019<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
   <tr>
-   <td>Microsoft® Publisher 2016<br /> </td>
+   <td>Microsoft® Office Visio 2016（非推奨）<br /> </td>
+   <td>VSD、VSDX</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Publisher 2019<br /> </td>
    <td>PUB</td>
   </tr>
   <tr>
-   <td>Microsoft® Project 2016<br /> </td>
+   <td>Microsoft® Publisher 2016（非推奨）<br /> </td>
+   <td>PUB</td>
+  </tr>
+  <tr>
+   <td>Microsoft® Project 2019<br /> </td>
    <td>MPP</td>
   </tr>
   <tr>
-   <td>OpenOffice 4.1.2</td>
+   <td>Microsoft® Project 2016（非推奨）<br /> </td>
+   <td>MPP</td>
+  </tr>
+  <tr>
+   <td>OpenOffice 4.1.10</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、PNG、TIF、TIFF、TIF、TIF、TIF、TIF、TIFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
   </tr>
+  <tr>
+   <td>OpenOffice 4.1.2（非推奨）</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、PNG、TIF、TIFF、TIF、TIF、TIF、TIF、TIFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
+  </tr>  
  </tbody>
 </table>
 
@@ -470,17 +508,15 @@ AEM Forms AppはApache Cordovaをサポートするようになりました。�
 >
 >さらに、次の点に注意してください。
 >
->* PDF Generatorで変換を実行するには、32ビット版の[Acrobat 2017クラシックトラックバージョン17.011.30078以降の](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)が必要です。
+>* PDF Generatorで変換を実行するには、32ビット版の[Acrobat 2020クラシックトラックバージョン20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)が必要です。
 >* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* PDF Generator では Microsoft Office 365 をサポートしていません。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 >* 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)または[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))に従って、AEM Forms製品の説明を参照してください。
-   >
-   >
-* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 >
-
+>* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
+>
 
 
 ### アクセシビリティサポートの例外事項 {#exceptions-to-accessibility-support}
@@ -545,7 +581,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td>Microsoft® Windows® 2016 Server</td>
+   <td>Microsoft® Windows® 2016 Server (TBD)</td>
    <td>サービスパックと重要なアップデート</td>
   </tr>
  </tbody>
@@ -581,10 +617,15 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
   <tr>
-   <td>Acrobat 2017（クラシックトラック）</td>
+   <td>Acrobat 2020（クラシックトラック）</td>
+   <td>バージョン 20.004.30006 以降<br /> </td>
+  </tr>
+  <tr>
+   <td>Acrobat 2017（クラシックトラック）（廃止）</td>
    <td>バージョン 17.011.30078 以降<br /> </td>
   </tr>
- </tbody>
+
+</tbody>
 </table>
 
 >[!NOTE]
@@ -653,7 +694,6 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >
 
 
-
 #### モバイルクライアント {#mobile-clients}
 
 <table>
@@ -685,7 +725,6 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 >
 >* Forms Portal は iPad の Safari でのみサポートされています。
 >
-
 
 
 ### AEM Forms アプリケーション {#aem-forms-workspace-app}
@@ -742,6 +781,26 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 アドビシステムズ社は、任意の時点で、JEE 上の AEM Forms リリースおよびそれらのサポートされているパッチ定義によってサポートされているサードパーティリファレンスプラットフォームを変更する権利を保留します。
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
+
+## プラットフォームの更新 {#platform-updates}
+
+2021年9月2日のAEM Forms 6.5.10.0リリースでは、次のプラットフォームが非推奨（廃止予定）となっています。
+
+* Adobe Acrobat 2017 - [Adobe Acrobat 2017のコアサポートは2022年6月6日に終了します](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)。
+
+* Microsoft Windows Server 2016（64ビット）
+
+* Red Hat Enterprise Linux 7(Kernel 3.x)（64ビット）
+
+* Microsoft® Office 2016
+
+* OpenOffice 4.1.2
+
+>[!NOTE]
+>
+>[非推奨とマークされたプラットフォームは、AEM Forms 6.5 Service Pack 15(6.5.15.0)リリース](https://helpx.adobe.com/support/programs/eol-matrix.html)までサポートされ続けます。
+
+
 
 ## リビジョン履歴 {#revision-history}
 

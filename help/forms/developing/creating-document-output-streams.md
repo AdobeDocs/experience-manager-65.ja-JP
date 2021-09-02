@@ -1,8 +1,8 @@
 ---
 title: ドキュメント出力ストリームの作成
-seo-title: ドキュメント出力ストリームの作成
+seo-title: Creating Document Output Streams
 description: Outputサービスを使用して、ドキュメントをPDF（PDF/Aドキュメントを含む）、PostScript、Printer Control Language(PCL)およびZebra - ZPL、Intermec - IPL、Datamax - DPL、TecToshiba - TPCLラベル形式で変換します。
-seo-description: Outputサービスを使用して、ドキュメントをPDF（PDF/Aドキュメントを含む）、PostScript、Printer Control Language(PCL)およびZebra - ZPL、Intermec - IPL、Datamax - DPL、TecToshiba - TPCLラベル形式で変換します。
+seo-description: Use the Output service to convert documents as PDF (including PDF/A documents), PostScript, Printer Control Language (PCL), and Zebra - ZPL, Intermec - IPL, Datamax - DPL, and TecToshiba - TPCL label formats.
 uuid: 80c28efa-35ce-4073-9ca6-2d93bcd67fdd
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 74882ccf78a62d543f1598f12ee009f9922c18a4
 workflow-type: tm+mt
-source-wordcount: '19044'
-ht-degree: 4%
+source-wordcount: '19016'
+ht-degree: 5%
 
 ---
 
-# ドキュメント出力ストリームの作成{#creating-document-output-streams}
+# ドキュメント出力ストリームの作成  {#creating-document-output-streams}
 
 **このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
 
@@ -73,7 +73,7 @@ Outputサービスを使用して、次のタスクを実行できます。
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-## PDFドキュメントの作成{#creating-pdf-documents}
+## PDFドキュメントの作成 {#creating-pdf-documents}
 
 Outputサービスを使用して、指定したフォームデザインとXMLフォームデータに基づくPDFドキュメントを作成できます。 Outputサービスで作成されるPDFドキュメントは、インタラクティブPDFドキュメントではありません。ユーザーはフォームデータを入力または変更できません。
 
@@ -85,7 +85,7 @@ Outputサービスを使用して、指定したフォームデザインとXML�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary-of-steps}
+### 手順の概要 {#summary-of-steps}
 
 PDFドキュメントを作成するには、次の手順を実行します。
 
@@ -117,7 +117,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 **XMLデータソースの参照**
 
-データとフォームデザインを結合するには、データを含むXMLデータソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合や、XML要素名がフィールド名と一致しない場合は無視されます。 すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データとフォームデザインを結合するには、データを含むXMLデータソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
 
 次のサンプルのローン申し込みフォームを考えてみましょう。
 
@@ -210,7 +210,7 @@ Outputサービスが操作を実行すると、その操作が成功したか�
 
 [OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java API {#create-a-pdf-document-using-the-java-api}を使用してPDFドキュメントを作成します
+### Java APIを使用したPDFドキュメントの作成 {#create-a-pdf-document-using-the-java-api}
 
 Output API(Java)を使用してPDFドキュメントを作成します。
 
@@ -291,7 +291,7 @@ Output API(Java)を使用してPDFドキュメントを作成します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#create-a-pdf-document-using-the-web-service-api}を使用してPDFドキュメントを作成します
+### WebサービスAPIを使用したPDFドキュメントの作成 {#create-a-pdf-document-using-the-web-service-api}
 
 Output API（Webサービス）を使用してPDFドキュメントを作成します。
 
@@ -383,7 +383,7 @@ Output API（Webサービス）を使用してPDFドキュメントを作成し�
    >
    >`OutputServiceService`オブジェクトの`generateOutput`メソッドは非推奨です。
 
-## PDF/Aドキュメントの作成{#creating-pdf-a-documents}
+## PDF/Aドキュメントの作成 {#creating-pdf-a-documents}
 
 Outputサービスを使用してPDF/Aドキュメントを作成できます。 PDF/Aはドキュメントのコンテンツを長期保存するためのアーカイブ形式なので、すべてのフォントが埋め込まれ、ファイルが非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。また、PDF/Aドキュメントにはオーディオおよびビデオコンテンツは含まれません。 他のOutputサービスタスクと同様に、フォームデザインとフォームデザインとのマージ用のデータの両方を提供して、PDF/Aドキュメントを作成します。
 
@@ -401,13 +401,13 @@ AcrobatでPDF/Aドキュメントを開くと、次の図に示すように、�
 
 >[!NOTE]
 >
->AIIMのWebサイトには、[https://www.aiim.org/documents/standards/19005-1_FAQ.pdf](https://www.aiim.org/documents/standards/19005-1_FAQ.pdf)でアクセスできるPDF/AのFAQセクションがあります。
+>AIIMのWebサイトには、[https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml](https://www.loc.gov/preservation/digital/formats/fdd/fdd000125.shtml)でアクセスできるPDF/AのFAQセクションがあります。
 
 >[!NOTE]
 >
->Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_65)
 
-### 手順の概要{#summary_of_steps-1}
+### 手順の概要 {#summary_of_steps-1}
 
 PDF/Aドキュメントを作成するには、次の手順を実行します。
 
@@ -439,7 +439,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 **XMLデータソースの参照**
 
-データとフォームデザインを結合するには、データを含むXMLデータソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合や、XML要素名がフィールド名と一致しない場合は無視されます。 すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データとフォームデザインを結合するには、データを含むXMLデータソースを参照する必要があります。 データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
 
 **PDF/Aランタイムオプションの設定**
 
@@ -475,7 +475,7 @@ Outputサービスが操作を実行すると、その操作が成功したか�
 
 [OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java API {#create-a-pdf-a-document-using-the-java-api}を使用したPDF/Aドキュメントの作成
+### Java APIを使用したPDF/Aドキュメントの作成 {#create-a-pdf-a-document-using-the-java-api}
 
 Output API(Java)を使用してPDF/Aドキュメントを作成します。
 
@@ -549,7 +549,7 @@ Output API(Java)を使用してPDF/Aドキュメントを作成します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### WebサービスAPI {#create-a-pdf-a-document-using-the-web-service-api}を使用してPDF/Aドキュメントを作成します
+### WebサービスAPIを使用したPDF/Aドキュメントの作成 {#create-a-pdf-a-document-using-the-web-service-api}
 
 Output API（Webサービス）を使用してPDF/Aドキュメントを作成します。
 
@@ -630,7 +630,7 @@ Output API（Webサービス）を使用してPDF/Aドキュメントを作成�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## Content Services（非推奨）にあるドキュメントをOutputサービスに渡す{#passing-documents-located-in-content-services-deprecated-to-the-output-service}
+## Content Services（非推奨）にあるドキュメントをOutputサービスに渡す {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
 Outputサービスは、通常はXDPファイルとして保存され、Designerで作成されたフォームデザインに基づく非インタラクティブPDFフォームをレンダリングします。 フォームデザインを含む`com.adobe.idp.Document`オブジェクトをOutputサービスに渡すことができます。 次に、Outputサービスは、`com.adobe.idp.Document`オブジェクト内のフォームデザインをレンダリングします。
 
@@ -642,7 +642,7 @@ Outputサービスは、通常はXDPファイルとして保存され、Designer
 >
 >Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-2}
+### 手順の概要 {#summary_of_steps-2}
 
 Content Services（非推奨）から取得したドキュメントをOutputサービスに渡すには、次のタスクを実行します。
 
@@ -690,7 +690,7 @@ JavaまたはWebサービスAPIを使用して、Content Services（非推奨）
 
 [フラグメントを使用したPDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-### Java API {#pass-documents-to-the-output-service-using-the-java-api}を使用してドキュメントをOutputサービスに渡す
+### Java APIを使用してドキュメントをOutputサービスに渡す {#pass-documents-to-the-output-service-using-the-java-api}
 
 OutputサービスおよびContent Services（非推奨）API(Java)を使用してContent Services（非推奨）から取得したドキュメントを渡します。
 
@@ -745,7 +745,7 @@ OutputサービスおよびContent Services（非推奨）API(Java)を使用し�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#pass-documents-to-the-output-service-using-the-web-service-api}を使用してドキュメントをOutputサービスに渡す
+### WebサービスAPIを使用してドキュメントをOutputサービスに渡す {#pass-documents-to-the-output-service-using-the-web-service-api}
 
 OutputサービスおよびContent Services（非推奨）API（Webサービス）を使用してContent Services（非推奨）から取得したドキュメントを渡します。
 
@@ -818,7 +818,7 @@ OutputサービスおよびContent Services（非推奨）API（Webサービス�
 
 [MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## リポジトリ内のドキュメントをOutputサービスに渡す{#passing-documents-located-in-the-repository-to-the-output-service}
+## リポジトリ内のドキュメントをOutputサービスに渡す {#passing-documents-located-in-the-repository-to-the-output-service}
 
 Outputサービスは、通常はXDPファイルとして保存され、Designerで作成されたフォームデザインに基づく非インタラクティブPDFフォームをレンダリングします。 フォームデザインを含む`com.adobe.idp.Document`オブジェクトをOutputサービスに渡すことができます。 次に、Outputサービスは、`com.adobe.idp.Document`オブジェクト内のフォームデザインをレンダリングします。
 
@@ -842,7 +842,7 @@ Outputサービスは、通常はXDPファイルとして保存され、Designer
 >
 >Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-3}
+### 手順の概要 {#summary_of_steps-3}
 
 AEM Formsリポジトリから取得したドキュメントをOutputサービスに渡すには、次のタスクを実行します。
 
@@ -890,7 +890,7 @@ XDPファイルは、`com.adobe.idp.Document`インスタンス（Webサービ�
 
 ResourceRepositoryClient
 
-### Java API {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}を使用して、リポジトリ内のドキュメントをOutputサービスに渡します。
+### Java APIを使用して、リポジトリ内のドキュメントをOutputサービスに渡す {#pass-documents-located-in-the-repository-to-the-output-service-using-the-java-api}
 
 OutputサービスとリポジトリAPI(Java)を使用してリポジトリから取得したドキュメントを渡します。
 
@@ -937,7 +937,7 @@ OutputサービスとリポジトリAPI(Java)を使用してリポジトリか�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## フラグメント{#creating-pdf-documents-using-fragments}を使用したPDFドキュメントの作成
+## フラグメントを使用したPDFドキュメントの作成 {#creating-pdf-documents-using-fragments}
 
 OutputサービスとAssemblerサービスを使用して、フラグメントに基づく出力ストリーム（PDFドキュメントなど）を作成できます。 Assemblerサービスは、複数のXDPファイル内のフラグメントに基づくXDPドキュメントをアセンブリします。 アセンブリされたXDPドキュメントがOutputサービスに渡され、PDFドキュメントが作成されます。 このワークフローでは、生成中のPDFドキュメントが表示されますが、Outputサービスでは、このワークフローに対してZPLなどの他の出力タイプを生成できます。 PDFドキュメントは、ディスカッションの目的でのみ使用します。
 
@@ -955,7 +955,7 @@ OutputサービスとAssemblerサービスを使用して、フラグメント�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-4}
+### 手順の概要 {#summary_of_steps-4}
 
 フラグメントに基づいてPDFドキュメントを作成するには、次の手順を実行します。
 
@@ -1001,7 +1001,7 @@ OutputサービスでPDFドキュメントが生成されたら、PDFファイ�
 
 [PDFドキュメントの作成](creating-document-output-streams.md#creating-pdf-documents)
 
-### Java API {#create-a-pdf-document-based-on-fragments-using-the-java-api}を使用して、フラグメントに基づいたPDFドキュメントを作成します
+### Java APIを使用して、フラグメントに基づくPDFドキュメントを作成する {#create-a-pdf-document-based-on-fragments-using-the-java-api}
 
 OutputサービスAPIとAssemblerサービスAPI(Java)を使用して、フラグメントに基づいたPDFドキュメントを作成します。
 
@@ -1061,7 +1061,7 @@ OutputサービスAPIとAssemblerサービスAPI(Java)を使用して、フラ�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### WebサービスAPI {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}を使用して、フラグメントに基づいてPDFドキュメントを作成します
+### WebサービスAPIを使用して、フラグメントに基づくPDFドキュメントを作成する {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
 
 OutputサービスAPIとAssemblerサービスAPI（Webサービス）を使用して、フラグメントに基づいたPDFドキュメントを作成します。
 
@@ -1144,7 +1144,7 @@ OutputサービスAPIとAssemblerサービスAPI（Webサービス）を使用�
 
 [MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
 
-## ファイル{#printing-to-files}への印刷
+## ファイルへの印刷 {#printing-to-files}
 
 Outputサービスを使用して、PostScript、Printer Control Language(PCL)、または次のラベル形式などのストリームをファイルに印刷できます。
 
@@ -1163,7 +1163,7 @@ Outputサービスを使用すると、XMLデータをフォームデザイン�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-5}
+### 手順の概要 {#summary_of_steps-5}
 
 ファイルに印刷するには、次の手順を実行します。
 
@@ -1194,7 +1194,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 **XMLデータソースの参照**
 
-データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドに対して、XML要素を含むXMLデータソースを参照する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合や、XML要素名がフィールド名と一致しない場合は無視されます。 すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドに対して、XML要素を含むXMLデータソースを参照する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
 
 **ファイルへの印刷に必要な印刷実行時オプションの設定**
 
@@ -1224,7 +1224,7 @@ Outputサービスが操作を実行すると、XMLデータなど、操作が�
 
 [OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java API {#print-to-files-using-the-java-api}を使用してファイルに出力します
+### Java APIを使用してファイルに出力 {#print-to-files-using-the-java-api}
 
 出力API(Java)を使用してファイルに出力：
 
@@ -1281,7 +1281,7 @@ Outputサービスが操作を実行すると、XMLデータなど、操作が�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-### WebサービスAPI {#print-to-files-using-the-web-service-api}を使用してファイルに出力します
+### WebサービスAPIを使用してファイルに出力 {#print-to-files-using-the-web-service-api}
 
 Output API（Webサービス）を使用してファイルに出力します。
 
@@ -1349,7 +1349,7 @@ Output API（Webサービス）を使用してファイルに出力します。
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## プリンタへの印刷ストリームの送信{#sending-print-streams-to-printers}
+## プリンターへの印刷ストリームの送信 {#sending-print-streams-to-printers}
 
 Outputサービスを使用して、PostScript、Printer Control Language(PCL)、または次のラベル形式などの印刷ストリームをネットワークプリンターに送信できます。
 
@@ -1368,7 +1368,7 @@ Outputサービスを使用すると、XMLデータをフォームデザイン�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-6}
+### 手順の概要 {#summary_of_steps-6}
 
 印刷ストリームをネットワークプリンタに送信するには、次の手順に従います。
 
@@ -1399,7 +1399,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 **XMLデータソースの参照**
 
-データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドに対して、XML要素を含むXMLデータソースを参照する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合や、XML要素名がフィールド名と一致しない場合は無視されます。 すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データを含むドキュメントを印刷するには、データを入力するすべてのフォームフィールドに対して、XML要素を含むXMLデータソースを参照する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
 
 **印刷実行時オプションの設定**
 
@@ -1568,7 +1568,7 @@ Output API(Java)を使用して、印刷ストリームをネットワークプ�
    >
    >`sendToPrinter`メソッドがバージョン8.2.1のAEM Forms APIに追加されました。
 
-### WebサービスAPI {#send-a-print-stream-to-a-printer-using-the-web-service-api}を使用して印刷ストリームをプリンターに送信します
+### WebサービスAPIを使用したプリンターへの印刷ストリームの送信 {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
 Output API（Webサービス）を使用して、印刷ストリームをネットワークプリンターに送信します。
 
@@ -1639,7 +1639,7 @@ Output API（Webサービス）を使用して、印刷ストリームをネッ�
    >
    >`sendToPrinter`メソッドがバージョン8.2.1のAEM Forms APIに追加されました。
 
-## 複数の出力ファイルの作成{#creating-multiple-output-files}
+## 複数の出力ファイルの作成 {#creating-multiple-output-files}
 
 Outputサービスでは、XMLデータソース内のレコードごとに別々のドキュメントを作成することも、すべてのレコードを含む単一のファイルを作成することもできます（この機能はデフォルトです）。 例えば、10件のレコードがXMLデータソース内に配置され、Output Service APIを使用して各レコードに対して個別のPDFドキュメント（または他のタイプの出力）を作成するようにOutputサービスに指示したとします。 その結果、Outputサービスは10個のPDFドキュメントを生成します。 （ドキュメントを作成する代わりに、1台のプリンターに複数の印刷ストリームを送信できます）。
 
@@ -1708,7 +1708,7 @@ Outputサービスでは、XMLデータソース内のレコードごとに別�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-7}
+### 手順の概要 {#summary_of_steps-7}
 
 1つのXMLデータソースに基づいて複数のPDFファイルを作成するには、次の手順を実行します。
 
@@ -1742,7 +1742,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 複数のレコードを含むXMLデータソースを参照します。 データレコードを区切るには、XML要素を使用する必要があります。 例えば、この節で前述したXMLデータソースの例では、データレコードを区切るXML要素の名前は`LoanRecord`です。
 
-データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合や、XML要素名がフィールド名と一致しない場合は無視されます。 すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
+データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素を指定した場合、XML要素の表示順序を一致させる必要はありません。
 
 **PDF実行時オプションの設定**
 
@@ -1805,7 +1805,7 @@ Outputサービスが操作を実行すると、その操作が成功したか�
 
 [OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java API {#create-multiple-pdf-files-using-the-java-api}を使用して複数のPDFファイルを作成します
+### Java APIを使用した複数のPDFファイルの作成 {#create-multiple-pdf-files-using-the-java-api}
 
 Output API(Java)を使用して複数のPDFファイルを作成します。
 
@@ -1863,7 +1863,7 @@ Output API(Java)を使用して複数のPDFファイルを作成します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#create-multiple-pdf-files-using-the-web-service-api}を使用して複数のPDFファイルを作成します
+### WebサービスAPIを使用した複数のPDFファイルの作成 {#create-multiple-pdf-files-using-the-web-service-api}
 
 Output API（Webサービス）を使用して複数のPDFファイルを作成します。
 
@@ -1938,7 +1938,7 @@ Output API（Webサービス）を使用して複数のPDFファイルを作成�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## 検索ルールの作成{#creating-search-rules}
+## 検索ルールの作成 {#creating-search-rules}
 
 Outputサービスで入力データを調べ、データコンテンツに基づいて様々なフォームデザインを使用して出力を生成する検索ルールを作成できます。 例えば、入力データ内にテキスト&#x200B;*mortgage*&#x200B;が配置されている場合、OutputサービスはMortgage.xdpという名前のフォームデザインを使用できます。 同様に、入力データ内にテキスト&#x200B;*automobile*&#x200B;が配置されている場合、Outputサービスでは、AutomobileLoan.xdpとして保存されたフォームデザインを使用できます。 Outputサービスでは異なる出力タイプを生成できますが、この節では、OutputサービスでPDFファイルが生成されることを前提としています。 次の図に、XMLデータファイルを処理し、様々なフォームデザインの1つを使用してPDFファイルを生成するOutputサービスを示します。
 
@@ -1950,7 +1950,7 @@ Outputサービスで入力データを調べ、データコンテンツに基�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-8}
+### 手順の概要 {#summary_of_steps-8}
 
 ドキュメントの生成時に検索ルールを使用するようにOutputサービスに指示するには、次の手順を実行します。
 
@@ -1983,7 +1983,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 **XMLデータソースの参照**
 
-データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML要素名は、フィールド名と一致する必要があります。 XML要素がフォームフィールドに対応していない場合や、XML要素名がフィールド名と一致しない場合は無視されます。 すべてのXML要素が指定されている限り、XML要素の表示順を一致させる必要はありません。
+データを入力するフォームフィールドごとに、XML要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。すべてのXML要素が指定されている限り、XML要素の表示順を一致させる必要はありません。
 
 **検索ルールの定義**
 
@@ -2021,7 +2021,7 @@ Outputサービスが操作を実行すると、その操作が成功したか�
 
 [OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java API {#create-search-rules-using-the-java-api}を使用した検索ルールの作成
+### Java APIを使用した検索ルールの作成 {#create-search-rules-using-the-java-api}
 
 Output API(Java)を使用して検索ルールを作成します。
 
@@ -2096,7 +2096,7 @@ Output API(Java)を使用して検索ルールを作成します。
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#create-search-rules-using-the-web-service-api}を使用して検索ルールを作成します。
+### WebサービスAPIを使用した検索ルールの作成 {#create-search-rules-using-the-web-service-api}
 
 Output API（Webサービス）を使用して検索ルールを作成します。
 
@@ -2197,11 +2197,11 @@ Output API（Webサービス）を使用して検索ルールを作成します�
 
 [SwaRefを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)
 
-## PDFドキュメントのフラット化{#flattening-pdf-documents}
+## PDFドキュメントの統合 {#flattening-pdf-documents}
 
 Outputサービスを使用して、インタラクティブPDFドキュメントを非インタラクティブPDFに変換できます。 インタラクティブPDFドキュメントを使用すると、ユーザーはPDFドキュメントフィールドにデータを入力または変更できます。 インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに変換するプロセスは、*統合*&#x200B;と呼ばれます。 PDFドキュメントを統合すると、ユーザーはドキュメントフィールド内のデータを変更できなくなります。 PDF ドキュメントを統合する理由の 1 つは、データを変更できないようにすることです。
 
-次のタイプのPDFドキュメントを統合できます。
+次のタイプの PDF ドキュメントを統合できます。
 
 * インタラクティブXFA PDFドキュメント
 * AcrobatForms
@@ -2212,7 +2212,7 @@ Outputサービスを使用して、インタラクティブPDFドキュメン�
 >
 >Outputサービスについて詳しくは、『AEM Formsのサービスリファレンス[』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
 
-### 手順の概要{#summary_of_steps-9}
+### 手順の概要 {#summary_of_steps-9}
 
 インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合するには、次の手順を実行します。
 
@@ -2264,7 +2264,7 @@ AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサ�
 
 [OutputサービスAPIのクイックスタート](/help/forms/developing/output-service-java-api-quick.md#output-service-java-api-quick-start-soap)
 
-### Java API {#flatten-a-pdf-document-using-the-java-api}を使用したPDFドキュメントの統合
+### Java APIを使用したPDFドキュメントの統合 {#flatten-a-pdf-document-using-the-java-api}
 
 Output API(Java)を使用して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合します。
 
@@ -2311,7 +2311,7 @@ Output API(Java)を使用して、インタラクティブPDFドキュメント�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### WebサービスAPI {#flatten-a-pdf-document-using-the-web-service-api}を使用してPDFドキュメントを統合する
+### WebサービスAPIを使用したPDFドキュメントの統合 {#flatten-a-pdf-document-using-the-web-service-api}
 
 Output API（Webサービス）を使用して、インタラクティブPDFドキュメントを非インタラクティブPDFドキュメントに統合します。
 
