@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 0b5b545f796a5a36f7e7f160c11ebd64e5a3c2ce
+source-git-commit: 54ace42972b2d6c7b807dbb2c7a40c2542c0b7c0
 workflow-type: tm+mt
 source-wordcount: '3250'
 ht-degree: 84%
@@ -524,10 +524,10 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
  </tbody>
 </table>
 
-上記以外の要件については、以下を参照してください。
+その他の要件については、以下を参照してください。
 
-* [JEE上のシングルサーバーAEM Formsの導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_63)
-* [JEE 上でのクラスター化された AEM Forms の導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_63)
+* [JEE上のシングルサーバーAEM Formsの導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
+* [JEE 上でのクラスター化された AEM Forms の導入に必要なシステム構成](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
 ## JEE 上の AEM Forms でサポートされているクライアント {#supported-clients-for-aem-forms-on-jee}
 
