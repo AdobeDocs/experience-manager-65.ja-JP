@@ -1,22 +1,26 @@
 ---
 title: 高度な URL 設定
 description: 製品ページとカテゴリページの URL をカスタマイズする方法について説明します。このカスタマイズにより、実装で URL を検索エンジン向けに最適化し、検出を促進できます。
-sub-product: コマース
+sub-product: Commerce
 doc-type: technical-video
 activity: setup
 audience: administrator
-feature: コマース統合フレームワーク
+feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: dbd38aa75caa7c3c2feee79702ab85ab397eb583
+source-git-commit: fd973cb3693872e4850f860a625cab70553d2754
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 45%
+source-wordcount: '784'
+ht-degree: 46%
 
 ---
 
 # 高度な URL 設定 {#url}
+
+>[!NOTE]
+>
+> 検索エンジン最適化（SEO）は、多くのマーケティング担当者にとって重要な課題となっています。したがって、多くの AEM プロジェクトで SEO に関する課題に対処する必要があります。詳しくは、[SEOとURL管理のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html)をお読みください。
 
 [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、製品ページとカテゴリページの URL をカスタマイズする高度な設定を提供します。多くの実装では、検索エンジン最適化（SEO）用にこれらの URL をカスタマイズします。次のビデオでは、`UrlProvider` サービスと [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)の機能を設定して、製品ページとカテゴリページの URL をカスタマイズする方法について詳しく説明します。
 
