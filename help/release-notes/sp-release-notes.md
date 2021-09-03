@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: a3d52ecf9284ba22cac3739ba543e5dd5c855331
+source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
 workflow-type: tm+mt
-source-wordcount: '4205'
+source-wordcount: '4245'
 ht-degree: 5%
 
 ---
@@ -272,8 +272,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 >[!NOTE]
 >
->* [!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
-
+>このサービスパックを使用すると、最新のサーバーオペレーティングシステム、アプリケーションサーバー、およびデータベースで[!DNL AEM Forms]を実行できます。 また、オンプレミス環境でのCloud Serviceで使用できる機能もいくつか提供され、お客様から報告された問題の修正を提供します。 [!DNL AEM Forms] OSGiサービスパックをダウンロードしてインストールできます。[!DNL AEM Forms on JEE]  サービスパックは、2021年9月10日に提供される予定です。
 
 **アダプティブフォーム**
 

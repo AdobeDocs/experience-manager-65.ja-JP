@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 496516f7f4b0e59bbfdae4cbe061a793f28449d2
+source-git-commit: 2095159a76380f7d17abcea9965ed6f82da69c8c
 workflow-type: tm+mt
-source-wordcount: '3472'
-ht-degree: 81%
+source-wordcount: '3248'
+ht-degree: 84%
 
 ---
 
@@ -185,7 +185,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>R：制限サポート</td>
   </tr>
   <tr>
-   <td>MySQL 5.7.34 </td>
+   <td>MySQL 5.7.19 </td>
    <td>-</td>
    <td>R：制限サポート</td>
   </tr>  
@@ -277,29 +277,14 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <th><p><strong> プラットフォーム</strong></p> </th>
    <th><p><strong>サポートレベル</strong></p> </th>
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
-  </tr>
-   <tr>
-   <td>Microsoft Windows Server 2019（64ビット）</td>
+  </tr>   
+  <tr>
+   <td>Microsoft Windows Server 2016（64ビット）</td>
    <td>A：サポート対象</td>
    <td>サービスパックと重要なアップデート</td>
-  </tr>
+  </tr>  
   <tr>
-   <td>Ubuntu 20.04 を含む）</td>
-   <td>A：サポート対象</td>
-   <td>サービスパックと重要なアップデート</td>
-  </tr>
-  <tr>
-   <td>Microsoft Windows Server 2016（64ビット）（廃止）</td>
-   <td>A：サポート対象</td>
-   <td>サービスパックと重要なアップデート</td>
-  </tr>
-  <tr>
-   <td><p>Red Hat Enterprise Linux 8（カーネル4.x）（64ビット）</p> </td>
-   <td><p>A：サポート対象</p> </td>
-   <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
-  </tr>
-  <tr>
-   <td><p>Red Hat Enterprise Linux 7 （Kernel 3.x） （64ビット）（廃止）</td>
+   <td><p>Red Hat Enterprise Linux 7(Kernel 3.x)（64ビット）</td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
   </tr>
@@ -447,57 +432,33 @@ AEM Forms AppはApache Cordovaをサポートするようになりました。�
   <tr>
    <th><p><strong>製品</strong></p> </th>
    <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
-  </tr>
+  </tr>  
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic </a> track最新バージョン</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic </a> track最新バージョン</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
-  </tr>
+  </tr> 
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic </a> tracklatest version（非推奨）</td>
-   <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Office 2019</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Office 2016（非推奨）</td>
+   <td>Microsoft® Office 2016</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF、TXT</td>
   </tr>
   <tr>
    <td>WordPerfect X7</td>
    <td>WP、WPD</td>
-  </tr>
+  </tr>  
   <tr>
-   <td>Microsoft® Office Visio 2019<br /> </td>
+   <td>Microsoft® Office Visio 2016<br /> </td>
    <td>VSD、VSDX</td>
-  </tr>
+  </tr>  
   <tr>
-   <td>Microsoft® Office Visio 2016（非推奨）<br /> </td>
-   <td>VSD、VSDX</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Publisher 2019<br /> </td>
+   <td>Microsoft® Publisher 2016<br /> </td>
    <td>PUB</td>
-  </tr>
+  </tr>  
   <tr>
-   <td>Microsoft® Publisher 2016（非推奨）<br /> </td>
-   <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Project 2019<br /> </td>
+   <td>Microsoft® Project 2016<br /> </td>
    <td>MPP</td>
-  </tr>
+  </tr>  
   <tr>
-   <td>Microsoft® Project 2016（非推奨）<br /> </td>
-   <td>MPP</td>
-  </tr>
-  <tr>
-   <td>OpenOffice 4.1.10</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、PNG、TIF、TIFF、TIF、TIF、TIF、TIF、TIFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
-  </tr>
-  <tr>
-   <td>OpenOffice 4.1.2（非推奨）</td>
+   <td>OpenOffice 4.1.2</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、DOC、DOCX、PPT、PPTX、画像形式(BMP、GIF、JPEG、PNG、TIF、TIFF、TIF、TIF、TIF、TIF、TIFJPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
   </tr>  
  </tbody>
@@ -509,7 +470,7 @@ AEM Forms AppはApache Cordovaをサポートするようになりました。�
 >
 >さらに、次の点に注意してください。
 >
->* PDF Generatorで変換を実行するには、32ビット版の[Acrobat 2020クラシックトラックバージョン20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)またはActobat 2017バージョン17.011.30078が必要です。
+>* PDF Generatorで変換を実行するには、32ビット版の[Acrobat 2017バージョン17.011.30078](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)が必要です。
 >* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* PDF Generator では Microsoft Office 365 をサポートしていません。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
@@ -618,12 +579,8 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
    <th><p><strong>Acrobat および Adobe Reader（Base）</strong></p> </th>
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
-  <tr>
-   <td>Acrobat 2020（クラシックトラック）</td>
-   <td>バージョン 20.004.30006 以降<br /> </td>
-  </tr>
-  <tr>
-   <td>Acrobat 2017（クラシックトラック）（廃止）</td>
+    <tr>
+   <td>Acrobat 2017（クラシックトラック）</td>
    <td>バージョン 17.011.30078 以降<br /> </td>
   </tr>
 
@@ -786,37 +743,9 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
 
-## プラットフォームの更新 {#platform-updates}
-
-2021年9月2日のAEM Forms 6.5.10.0リリースでは、次のプラットフォームが非推奨（廃止予定）となっています。
-
-* Adobe Acrobat 2017 - [Adobe Acrobat 2017のコアサポートは2022年6月6日に終了します](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)。
-
-* Microsoft Windows Server 2016（64ビット）
-
-* Red Hat Enterprise Linux 7(Kernel 3.x)（64ビット）
-
-* Microsoft® Office 2016
-
-* OpenOffice 4.1.2
-
->[!NOTE]
->
->[非推奨とマークされたプラットフォームは、AEM Forms 6.5 Service Pack 15(6.5.15.0)リリース](https://helpx.adobe.com/support/programs/eol-matrix.html)までサポートされ続けます。
-
-
-
 ## リビジョン履歴 {#revision-history}
 
 * 2020年9月09日
    * AEM Forms AppでサポートされているiOSのバージョンをiOS 12に変更しました。 以前のバージョンはiOS 11でした。
 
-* 2021年9月02日
-   * **プラットフォームのアップデート**: [!DNL Adobe Experience Manager Forms] JEE上では、次のプラットフォームのサポートが追加されました。
-      * [!DNL Adobe Acrobat 2020]
-      * [!DNL Ubuntu 20.04]
-      * [!DNL Open Office 4.1.10]
-      * [!DNL Microsoft Office 2019]
-      * [!DNL Microsoft Windows Server 2019]
-      * [!DNL RHEL8]
 
