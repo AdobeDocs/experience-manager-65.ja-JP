@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f75c6898eee9bbd6cdf9ce5e21dacc7898b80938
+source-git-commit: 59cc855e937c7be71cfc7a28fccd1db0b91e9f97
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4394'
 ht-degree: 5%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 5%
 
 * [!DNL AEM Forms]での`GuideBridge#getGuidePath` APIのサポートを追加しました。
 
-* 自動フォーム変換サービスを使用して、[フランス語、ドイツ語、スペイン語の PDF フォームをアダプティブフォームに変換](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)できるようになりました。
+* automated forms conversionサービスを使用して、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語のPDF formsを](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)アダプティブフォームに変換できるようになりました。[
 
 * **プロパティブラウザーのエラーメッセージ**：アダプティブフォームのプロパティブラウザーに各プロパティのエラーメッセージが追加されました。これらのメッセージは、フィールドに使用できる値を理解するのに役立ちます。
 
@@ -272,9 +272,9 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
 
 
-[!DNL AEM Forms 6.5.10.0] には、次のバグ修正が含まれています。
+[!DNL AEM 6.5.10.0 Forms] には、次のバグ修正が含まれています。
 
-* [!DNL AEM Forms 6.5]をインストールすると、次のサードパーティライブラリが自動的にインストールされます(CQDOC-18373)。
+* [!DNL AEM 6.5 Forms]をインストールすると、次のサードパーティライブラリが自動的にインストールされます(CQDOC-18373)。
    * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
    * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
 
