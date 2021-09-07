@@ -3,11 +3,11 @@ title: ' [!DNL Assets]  と  [!DNL InDesign Server] の統合'
 description: ' [!DNL Adobe Experience Manager Assets] と [!DNL Adobe InDesign Server]を統合する方法を説明します。'
 contentOwner: AG
 role: Admin
-feature: 公開
+feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: f74190692d718da6074affa87d283f326eca7faa
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1577'
 ht-degree: 31%
 
 ---
@@ -170,7 +170,9 @@ Pool：との通信に使用するSOAPエンドポイント [!DNL InDesign Serve
 
 1. `https://[aem_server]:[port]/system/console/configMgr`のWebコンソールにアクセスします。
 1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 **[!UICONTROL 編集]**&#x200B;をクリックして開きます。
-1. Link Externalizerの設定は、[!DNL Experience Manager]デプロイメントと[!DNL InDesign Server]の絶対URLを作成するのに役立ちます。 **[!UICONTROL Domains]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名とコンテキストパスを指定します。 「**保存**」をクリックします。
+1. Link Externalizerの設定は、[!DNL Experience Manager]デプロイメントと[!DNL InDesign Server]の絶対URLを作成するのに役立ちます。 **[!UICONTROL ドメイン]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名を指定します。 「**保存**」をクリックします。
+
+   絶対URLを作成する場合は、ローカルインスタンス、オーサーインスタンス、パブリッシュインスタンスのホスト名`localhost`を使用する必要があります。
 
    ![Link Externalizerの設定](assets/link-externalizer-config.png)
 
