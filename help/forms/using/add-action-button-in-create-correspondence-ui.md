@@ -11,14 +11,14 @@ discoiquuid: 046e3314-b436-47ed-98be-43d85f576789
 docset: aem65
 feature: Correspondence Management
 exl-id: a582ba41-83cb-46f2-9de9-3752f6a7820a
-source-git-commit: 9f3ca2da0828ce5170622852220a1926df0d5150
+source-git-commit: ba2c753cfd041ccfcd6ba7a45648234290b99d25
 workflow-type: tm+mt
-source-wordcount: '1868'
-ht-degree: 52%
+source-wordcount: '1881'
+ht-degree: 49%
 
 ---
 
-# 「通信を作成」UI へのカスタムアクションまたはボタンの追加 {#add-custom-action-button-in-create-correspondence-ui}
+# 通信を作成UIにカスタムアクションボタンを追加する {#add-custom-action-button-in-create-correspondence-ui}
 
 ## 概要 {#overview}
 
@@ -359,7 +359,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 >
 >このプロセスの処理を表示するか、独自の類似プロセスを作成するには、Workbench が必要になります。
 
-1. `https:/[lc server]/:[lc port]/adminui`で、Livecycle Server adminuiに管理者としてログインします。
+1. `https:/[lc server]/:[lc port]/adminui`で、LiveCycle®サーバadminuiに管理者としてログインします。
 
 1. **ホーム／サービス／アプリケーションおよびサービス／アプリケーションの管理**&#x200B;に移動します。
 
@@ -381,7 +381,7 @@ LCA プロセスは LiveCycle サーバー上で実行され、サーバーア�
 
 #### サービス名リストへの許可リストServiceNameの追加 {#adding-servicename-to-the-allowlist-service-list}
 
-AEM サーバーにアクセスする必要のある LiveCycle サービスを AEM サーバーで指定します。
+Experience ManagerサーバーにアクセスするLiveCycleサービスをExperience Managerサーバーで指定します。
 
 1. `https:/[host]:'port'/system/console/configMgr`に管理者としてログインします。
 
@@ -394,7 +394,7 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 このシナリオでは、Correspondence Management で電子メールを送信できるようにするため、LiveCycle サーバーで電子メールサービスを設定します。
 
-1. `https:/[lc server]:[lc port]/adminui`で、Livecycle Server adminuiに管理者の資格情報を使用してログインします。
+1. `https:/[lc server]:[lc port]/adminui`で、管理者の資格情報を使用してLiveCycleサーバーadminuiにログインします。
 
 1. **ホーム／サービス／アプリケーションおよびサービス／サービスの管理**&#x200B;に移動します。
 
@@ -406,30 +406,30 @@ AEM サーバーにアクセスする必要のある LiveCycle サービスを A
 
 #### DSC サービスの設定 {#configure-the-dsc-service}
 
-Correspondence Management APIを使用するには、DSCSample.jar（このドキュメントに添付されているcomponents.zipの一部として添付）をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされると、AEMサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
+Correspondence Management APIを使用するには、DSCSample.jar（このドキュメントに添付されているcomponents.zipの一部として添付）をダウンロードし、LiveCycleサーバーにアップロードします。 DSCSample.jarファイルがLiveCycleサーバーにアップロードされた後、Experience ManagerサーバーはDSCSample.jarファイルを使用してrenderLetter APIにアクセスします。
 
 詳しくは、「[AEM FormsとAdobeLiveCycle](/help/forms/using/aem-livecycle-connector.md)の接続」を参照してください。
 
-1. DSCSample.jarのcmsa.propertiesのAEMサーバーURLを更新します。次の場所にあります。
+1. DSCSample.jarのcmsa.propertiesのExperience ManagerサーバーURLを更新します。次の場所にあります。
 
    DSCSample.jar\com\adobe\livecycle\cmsa.properties
 
 1. 設定ファイルに次のパラメーターを指定します。
 
    * **crx.serverUrl**=https:/host:port/[context path]/[AEM URL]
-   * **crx.username**= AEM ユーザー名
-   * **crx.password** = AEM password
+   * **crx.username** =Experience Managerユーザー名
+   * **crx.password** =Experience Managerパスワード
    * **crx.appRoot**=/content/apps/cm
 
    >[!NOTE]
    >
-   >サーバー側で変更を加えるたびに LiveCycle サーバーは再起動します。
+   >サーバー側で変更を加えるたびに、LiveCycleサーバーを再起動します。
 
-   DSCSample.jarファイルはrenderLetter APIを使用します。 renderLetter APIについて詳しくは、[Interface LetterRenderService](https://helpx.adobe.com/aem-forms/6-1/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)を参照してください。
+   DSCSample.jarファイルはrenderLetter APIを使用します。 renderLetter APIについて詳しくは、[Interface LetterRenderService](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)を参照してください。
 
 #### LiveCyle への DSC の読み込み {#import-dsc-to-livecyle}
 
-DSCSample.jarファイルは、 renderLetter APIを使用して、Cが入力として与えるXMLデータからPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://helpx.adobe.com/aem-forms/6-2/javadocs/com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
+DSCSample.jarファイルは、 renderLetter APIを使用して、DSCが入力として提供するXMLデータからPDFバイトとしてレターをレンダリングします。 renderLetter およびその他の API について詳しくは、「[レターのレンダリングサービス](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)」を参照してください。
 
 1. Livecycle Workbenchを起動してログインします。
 1. **Window/Show Views/Components**&#x200B;を選択します。 ComponentsビューがWorkbench ES2に追加されます。
