@@ -1,8 +1,8 @@
 ---
-title: Communities 用のディスパッチャーの設定
-seo-title: Communities 用の Dispatcher の設定
+title: Communities 用の Dispatcher の設定
+seo-title: Configuring Dispatcher for Communities
 description: AEM Communities 用の Dispatcher の設定
-seo-description: AEM Communities 用の Dispatcher の設定
+seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 69%
+source-wordcount: '668'
+ht-degree: 68%
 
 ---
 
-# Communities 用の Dispatcher の設定  {#configuring-dispatcher-for-communities}
+# Communities 用の Dispatcher の設定 {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
@@ -70,7 +70,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
    *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。この値はゼロ（0）より大きくする必要があります。
 
-## Dispatcher クライアントヘッダー  {#dispatcher-client-headers}
+## Dispatcher クライアントヘッダー {#dispatcher-client-headers}
 
 `dispatcher.any`の/clientheadersセクションで、特定のヘッダーのセットをリストする場合、[イネーブルメント機能](enablement.md)が正しく動作するように、`"CSRF-Token"`を含める必要があります。
 
@@ -93,11 +93,9 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 >**プロパティ名の例**
 >表示されるすべてのプロパティ名（**/0050**&#x200B;や&#x200B;**/0170**&#x200B;など）は、既存のdispatcher.any設定ファイルに合わせて調整する必要があります。
 
-
 >[!CAUTION]
 >
->Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en)を参照してください。また、AEMのインストールに関するセキュリティの詳細については、[AEM Security Checklist](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html)を参照してください。
-
+>Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)を参照してください。また、AEMのインストールに関するセキュリティの詳細については、[AEM Security Checklist](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html)を参照してください。
 
 以下のエントリを /filter セクションの最後に追加する必要があります（特にすべての拒否エントリの後）。
 

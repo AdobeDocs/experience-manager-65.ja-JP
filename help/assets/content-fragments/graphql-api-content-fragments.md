@@ -2,13 +2,13 @@
 title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager(AEM)のコンテンツフラグメントを、ヘッドレスコンテンツ配信にAEM GraphQL APIと共に使用する方法を説明します。
 feature: Content Fragments,GraphQL API
-source-git-commit: 955fd54c94ca7144965ce407ea628806d90d8336
+exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '3921'
+source-wordcount: '3919'
 ht-degree: 97%
 
 ---
-
 
 # コンテンツフラグメントと共に使用する AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
@@ -816,7 +816,7 @@ POST リクエストを使用してクエリを準備した後、HTTP キャッ�
 
 >[!NOTE]
 >
->AEM での CORS リソース共有ポリシーについて詳しくは、[クロスオリジンリソース共有（CORS）について](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja#understand-cross-origin-resource-sharing-(cors))を参照してください。
+>AEM での CORS リソース共有ポリシーについて詳しくは、[クロスオリジンリソース共有（CORS）について](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors))を参照してください。
 
 GraphQL エンドポイントにアクセスするには、顧客の Git リポジトリーに CORS ポリシーを設定する必要があります。それには、目的のエンドポイントに適した OSGi CORS 設定ファイルを追加します。
 

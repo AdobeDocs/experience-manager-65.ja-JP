@@ -4,9 +4,9 @@ description: ' [!DNL Experience Manager] 6.5 Service Pack 10の新機能'
 contentOwner: AK
 mini-toc-levels: 1
 exl-id: 32470e6e-8a66-4670-82da-2259f6e001c3
-source-git-commit: 355cea8e5d3d3426788cd23e6d55297363adf05b
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4102'
 ht-degree: 5%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 5%
 >
 >[!DNL Experience Manager Forms]のアドオンパッケージは、スケジュールされた[!DNL Experience Manager] Service Packリリースの1週間後に提供されます。
 
-* automated forms conversionサービスを使用して、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語のPDF formsを](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)アダプティブフォームに変換できるようになりました。[
+* automated forms conversionサービスを使用して、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語のPDF formsを](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html#language-specific-meta-model)アダプティブフォームに変換できるようになりました。[
 
 * **プロパティブラウザーのエラーメッセージ**：アダプティブフォームのプロパティブラウザーに各プロパティのエラーメッセージが追加されました。これらのメッセージは、フィールドに使用できる値を理解するのに役立ちます。
 
@@ -466,11 +466,11 @@ Batch APIを使用すると、テンプレートから複数のインタラク�
 
 2021年5月27日～ 2021年8月26日に、Adobeはサービスパックに加えて、以下をリリースしました。
 
-* [!DNL Adobe Experience Manager] (Cloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)、 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=en))。
+* [!DNL Adobe Experience Manager] (Cloud Service [2021.6.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-6-0.html)、 [2021.7.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-7-0.html)、 [2021.8.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=ja))。
 
 * [[!DNL Experience Manager] デスクトップアプリ2.1(2.1.3.3)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)を参照してください。
 
-* [Experience Manager Screens:機能パック202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html?lang=en)
+* [Experience Manager Screens:機能パック202105](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202105.html?lang=ja)
 
 >[!MORELIKETHIS]
 >

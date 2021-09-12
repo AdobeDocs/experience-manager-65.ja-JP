@@ -12,10 +12,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/config-dynamic
 role: User, Admin
 exl-id: 5719d32c-4f19-47c1-bea9-8fd0bc8439ed
-feature: 設定，ハイブリッドモード
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
+feature: Configuration,Hybrid Mode
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '7797'
+source-wordcount: '7792'
 ht-degree: 34%
 
 ---
@@ -44,8 +44,7 @@ Dynamic Media での[ビデオ](/help/assets/video.md)の操作方法を参照�
 >* `ImageServing.log`
 
 >
->
-これらは、[Experience Managerインスタンス](/help/sites-deploying/monitoring-and-maintaining.md)の監視と保守に記載されています。
+>これらは、[Experience Managerインスタンス](/help/sites-deploying/monitoring-and-maintaining.md)の監視と保守に記載されています。
 
 ハイブリッド公開および配信は、Adobe Experience Manager に対して Dynamic Media によって追加される中心機能です。ハイブリッド公開を使用すると、画像、セット、ビデオなどのDynamic Mediaアセットを、Experience Managerの公開ノードからではなく、クラウドから配信できます。
 
@@ -344,7 +343,6 @@ Replication test succeeded
 次のいずれかを実行してチェックすることもできます。
 * レプリケーションログを調べて、アセットがレプリケートされていることを確認します。
 * 画像を公開する。画像を選択し、ドロップダウンメニューで「**[!UICONTROL ビューア]**」を選択し、ビューアプリセットを選択します。 **[!UICONTROL URL]**&#x200B;を選択します。 画像が表示されることを確認するには、URLパスをコピーしてブラウザーに貼り付けます。
-
 
 
 ### 認証のトラブルシューティング {#troubleshooting-authentication}
@@ -868,7 +866,7 @@ Dynamic Media 画像サーバーを設定するには：
 | `defaultthumbpix` | `100,100` | デフォルトのサムネールのサイズ。サムネールリクエスト(`req=tmb`)にattribute::DefaultPixの代わりに使用されます。<br>サーバーは、返信画像をこの幅と高さ以下に制限します。このアクションは、サムネール要求(`req=tmb`)でサイズが明示的に指定されておらず、`wid=`、`hei=`または`scl=`を使用してビューサイズを明示的に指定していない場合にtrueになります。<br>0以上の2つの整数をコンマで区切って指定します。幅と高さ（ピクセル単位）。どちらかまたは両方の値を0に設定して、非拘束のままにすることができます。<br>ネストされた要求または埋め込まれた要求に対しては適用されません。<br>画像サービング API の [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api) も参照してください。 |
 | `expiration` | `36000000` | デフォルトのクライアントキャッシュの存続時間。特定のカタログレコードに有効な catalog::Expiration 値が含まれていない場合のデフォルトの有効期限間隔を指定します。<br>0 以上の実数。返信データが生成されてから有効期限が切れるまでの時間数（ミリ秒単位）。0 に設定すると、常に返信画像が即座に有効期限切れになります。実質的に、クライアントキャッシュが無効になります。デフォルトでは、この時間は 10 時間に設定されています。つまり、新しい画像が公開される場合に、古い画像がユーザーのキャッシュから削除されるまで 10 時間かかります。より早くキャッシュをクリアする必要がある場合は、カスタマーケアに問い合わせてください。<br>画像サービング API の[有効期限](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html)も参照してください。 |
 | `jpegquality` | `80` | デフォルトの JPEG エンコード属性。JPEG 返信画像のデフォルト属性を指定します。<br>整数とフラグ（コンマ区切り）。最初の値は1 ～ 100の範囲で、画質を定義します。2つ目の値は、通常の動作の場合は0に、JPEGエンコーダーで使用されるRGB色度のダウンサンプリングを無効にする場合は1に設定します。<br>画像サービング API の [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api) も参照してください。 |
-| `maxpix` | `2000,2000` | 返信画像のサイズ制限。クライアントに返される返信画像の最大の幅と高さ。<br>要求によって、幅または高さがattribute::MaxPixより大きい応答イメージが生成された場合、サーバはエラーを返します。<br>画像サービング API の [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=en#image-serving-api) も参照してください。 |
+| `maxpix` | `2000,2000` | 返信画像のサイズ制限。クライアントに返される返信画像の最大の幅と高さ。<br>要求によって、幅または高さがattribute::MaxPixより大きい応答イメージが生成された場合、サーバはエラーを返します。<br>画像サービング API の [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api) も参照してください。 |
 | `resmode` | `SHARP2` | デフォルトの再サンプリングモード。画像データの拡大縮小に使用するデフォルトの再サンプリングおよび補間属性を指定します。<br>リクエストで `resMode=` が指定されていない場合に使用されます。<br>使用できる値には、 `BILIN` 、また `BICUB`はがあります `SHARP2`。<br>列挙`bilin`の場合は2、`bicub`の場合は3、`sharp2`の場合は4に設定します。 最良の結果を得るには`sharp2`を使用します。<br>画像サービング API の [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api) も参照してください。 |
 | `resolution` | `72` | デフォルトのオブジェクト解像度。特定のカタログレコードに有効な catalog::Resolution 値が含まれていない場合のデフォルトのオブジェクト解像度を指定します。<br>0より大きい実数。通常は、1インチあたりのピクセル数で表されますが、他の単位（1メートルあたりのピクセル数など）で表すこともできます。<br>画像サービング API の[解像度](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api)も参照してください。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | これらの値は、ビデオ再生時間のスナップショットを表し、[encoding.com](https://www.encoding.com/)に渡されます。 詳しくは、[ビデオのサムネール](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)についてを参照してください。 |

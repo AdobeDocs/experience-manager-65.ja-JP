@@ -3,10 +3,11 @@ title: コンテンツフラグメントの操作
 description: Adobe Experience Manager(AEM)のコンテンツフラグメントを使用すると、ヘッドレス配信に最適な、ページに依存しないコンテンツの設計、作成、キュレーション、使用が可能になります。
 feature: Content Fragments
 role: User
-source-git-commit: 819df6d6123575b378676dda200064725de47b84
+exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 95%
+source-wordcount: '1989'
+ht-degree: 94%
 
 ---
 
@@ -82,7 +83,7 @@ Adobe Experience Manager(AEM)では、コンテンツフラグメントを使用
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 >
->詳細については、](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=ja#content-fragments)AEM のコンテンツフラグメントおよびエクスペリエンスフラグメントについて[も参照してください。
+>詳細については、](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)AEM のコンテンツフラグメントおよびエクスペリエンスフラグメントについて[も参照してください。
 
 >[!NOTE]
 >

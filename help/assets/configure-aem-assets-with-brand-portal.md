@@ -1,8 +1,8 @@
 ---
 title: AEM Assets と Brand Portal の連携の設定
-seo-title: AEM Assets と Brand Portal の連携の設定
+seo-title: Configure AEM Assets with Brand Portal
 description: AEM AssetsとBrand Portalを連携させて、アセットとコレクションをBrand Portalに公開する方法を説明します。
-seo-description: AEM AssetsとBrand Portalを連携させて、アセットとコレクションをBrand Portalに公開する方法を説明します。
+seo-description: Learn how to configure AEM Assets with Brand Portal for publishing assets and Collections to Brand Portal.
 uuid: b95c046e-9988-444c-b50e-ff5ec8cafe14
 topic-tags: brand-portal
 content-type: reference
@@ -12,9 +12,9 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: aed6e28d7ff228ecbaeaf0d468d1d9bcb4373f90
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2047'
 ht-degree: 62%
 
 ---
@@ -70,7 +70,7 @@ AEMオーサーインスタンスを設定するには、AEM 6.5を使用する�
 
 * Adobeパートナーの場合は、[Adobeパートナートレーニングプログラム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)を使用してAEM 6.5をリクエストします。
 
-AEM をダウンロードしたら、「[デプロイメントと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=en#default-local-install)」の説明に従い、AEM オーサーインスタンスの設定を行ってください。
+AEM をダウンロードしたら、「[デプロイメントと保守](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install)」の説明に従い、AEM オーサーインスタンスの設定を行ってください。
 
 ### 最新の AEM サービスパックをダウンロードしてインストールする {#servicepack}
 
@@ -148,7 +148,7 @@ Adobe 開発者コンソールで、プロジェクトと API を Brand Portal �
 
 サービスアカウント資格情報と JWT ペイロードを生成するには、次の手順を実行します。
 
-1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトの URL は [https://www.adobe.com/go/devs_console_ui_jp](https://www.adobe.com/go/devs_console_ui) です。
+1. IMS 組織（Brand Portal テナント）のシステム管理者権限で Adobe 開発者コンソールにログインします。デフォルトの URL は [https://www.adobe.com/go/devs_console_ui](https://www.adobe.com/go/devs_console_ui) です。
 
 
    >[!NOTE]
@@ -290,7 +290,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
    [IMS アカウントの設定](#create-ims-account-configuration)時に作成した IMS 設定を選択します。
 
-   「**[!UICONTROL サービス URL]**」に、Brand Portal テナント（組織） URL を入力します。
+   「**[!UICONTROL サービス URL]**」に、Brand Portal テナント（組織）URL を入力します。
 
    ![](assets/create-cloud-service.png)
 
@@ -337,7 +337,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
    >
    >どのレプリケーションエージェントも無効にしないでください。無効にすると、（実行中のキュー内の）アセットのレプリケーションが失敗する可能性があります。
    >
-   >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて設定されていることを確認します。 [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=en#connection-timeout)への並列公開における問題のトラブルシューティングを参照してください。
+   >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて設定されていることを確認します。 [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)への並列公開における問題のトラブルシューティングを参照してください。
 
 次の操作が可能になっています。
 

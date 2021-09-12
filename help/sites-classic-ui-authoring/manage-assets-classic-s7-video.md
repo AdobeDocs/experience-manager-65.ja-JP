@@ -1,6 +1,6 @@
 ---
 title: ビデオ
-seo-title: ビデオ
+seo-title: Video
 description: Assetsでは、ビデオアセット管理を一元化し、Assetsに直接ビデオをアップロードしてDynamic Media Classicに自動エンコーディングし、Assetsから直接Dyビデオにアクセスしてページをオーサリングできます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,9 +8,9 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1678'
 ht-degree: 25%
 
 ---
@@ -63,7 +63,7 @@ Dynamic Media Classicビデオコンポーネントでは、次の形式がサ�
 
 アセットのワークフローやバージョン管理が必要ない場合は、Dynamic Media Classicにアセットをアップロードする必要があります。 推奨されるワークフローは次のとおりです。
 
-1. Dynamic Media Classicデスクトップアプリケーションで、[Dynamic Media Classicに対するFTPのアップロードとエンコーディングのスケジュールを設定します（システム自動）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=en#upload-options)。
+1. Dynamic Media Classicデスクトップアプリケーションで、[Dynamic Media Classicに対するFTPのアップロードとエンコーディングのスケジュールを設定します（システム自動）](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options)。
 1. Experience Managerで、WCMのビデオアセットにアクセスするには、コンテンツファインダーの「**[!UICONTROL Dynamic Media Classic]**」タブを使用します。
 1. Dynamic Media Classicビデオコンポーネントを使用したオーサリング。
 
@@ -80,7 +80,7 @@ Dynamic Media Classicビデオコンポーネントでは、次の形式がサ�
 
    >[!NOTE]
    >
-   >ビデオプリセットの意味について詳しくは、[ビデオファイルのエンコーディング用のビデオプリセット](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=en#video-presets-for-encoding-video-files)を参照してください。
+   >ビデオプリセットの意味について詳しくは、[ビデオファイルのエンコーディング用のビデオプリセット](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files)を参照してください。
    >
    >ユニバーサルプリセットを設定する際に両方のアダプティブビデオセットを選択するか、「**[!UICONTROL アダプティブビデオエンコーディング]**」オプションを選択することをお勧めします。
 
@@ -118,7 +118,6 @@ Dynamic Media Classicビデオコンポーネントは、Dynamic Media Classic�
 >[!NOTE]
 >
 >標準では、Dynamic Media Classicビデオコンポーネントはユニバーサルビデオプロファイルを使用します。 ただし、HTML5ベースのビデオプレーヤーを入手して、Experience Managerで使用することはできます。 Dynamic Media Classicで、標準搭載のHTML5ビデオプレーヤーの埋め込みコードをコピーし、Experience Managerページに配置します。
-
 
 ## Experience Managerビデオコンポーネント {#aem-video-component}
 

@@ -7,12 +7,12 @@ topic-tags: dynamic-media
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 content-type: reference
 docset: aem65
-feature: ビューア
+feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '6636'
+source-wordcount: '6633'
 ht-degree: 50%
 
 ---
@@ -241,7 +241,7 @@ Dynamic Media ビューアは Web ページ上で一意の識別子を持ちま�
 
 いずれの場合も、Dynamic Mediaビューアによって駆動されるデータ要素の値は、ローカルストレージやサーバーには保存されません。代わりに、クライアント側のタグライブラリにのみExperience Platformされます。 Web ページがリロードされると、このようなデータ要素の値は消去されます。
 
-一般に、データ要素エディターでは、[ストレージ期間の選択](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/data-elements.html?lang=en#create-a-data-element)がサポートされます。ただし、Dynamic Media ビューア拡張機能を使用するデータ要素では、ストレージ期間「**[!UICONTROL なし]**」オプションのみがサポートされます。その他の値はユーザーインターフェイスで設定可能ですが、この場合、データ要素の動作は定義されていません。拡張機能は、データ要素の値を独自に管理します。データ要素は、ビューアのライフサイクル全体でビューアのイベント引数の値を維持します。
+一般に、データ要素エディターでは、[ストレージ期間の選択](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/data-elements.html#create-a-data-element)がサポートされます。ただし、Dynamic Media ビューア拡張機能を使用するデータ要素では、ストレージ期間「**[!UICONTROL なし]**」オプションのみがサポートされます。その他の値はユーザーインターフェイスで設定可能ですが、この場合、データ要素の動作は定義されていません。拡張機能は、データ要素の値を独自に管理します。データ要素は、ビューアのライフサイクル全体でビューアのイベント引数の値を維持します。
 
 ### Dynamic Media ビューア拡張機能のルールについて {#about-rules-in-the-dynamic-media-viewers-extension}
 
@@ -673,12 +673,12 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
 ### Experience ManagerIMSの設定 {#configuring-aem-ims}
 
-1. Experience Managerオーサーで、**[!UICONTROL ツール]**&#x200B;アイコン（ハンマー）を選択し、**[!UICONTROL セキュリティ]** / **[!UICONTROL AdobeIMS設定]**&#x200B;に移動します。
+1. Experience Manager作成者で、**[!UICONTROL ツール]**&#x200B;アイコン（ハンマー）を選択し、**[!UICONTROL セキュリティ]** / **[!UICONTROL Adobe IMS設定]**&#x200B;に移動します。
 
    ![2019-07-25_11-52-58](assets/2019-07-25_11-52-58.png)
 
 1. AdobeIMC設定ページの左上隅付近で、「**[!UICONTROL 作成]**」を選択します。
-1. **[!UICONTROL AdobeIMSテクニカルアカウント設定]**&#x200B;ページの「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで、「**[!UICONTROL Experience Platformタグ]**」を選択します。
+1. **[!UICONTROL Adobe IMSテクニカルアカウント設定]**&#x200B;ページの「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで、「**[!UICONTROL Experience Platformタグ]**」を選択します。
 1. 「**[!UICONTROL 新しい証明書を作成]**」を有効にし、テキストフィールドに証明書に意味のある値を入力します。例えば、*AdobeLaunchIMSCert* と入力します。「**[!UICONTROL 証明書を作成]**」を選択します。
 
    次の情報メッセージが表示されます。
@@ -693,7 +693,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    >[!NOTE]
    >
-   >この時点で、******&#x200B;を開いたまま&#x200B;**[!UICONTROL AdobeIMSテクニカルアカウント設定]**&#x200B;ページを開きます。***ページを閉じない***&#x200B;で、***「次へ」を選択しない***&#x200B;でください。 このページには、手順の後半で戻ってきます。
+   >この時点で、******&#x200B;を開いたままにします。**[!UICONTROL Adobe IMSテクニカルアカウント設定]**&#x200B;ページ&#x200B;***ページを閉じない***&#x200B;で、***「次へ」を選択しない***&#x200B;でください。 このページには、手順の後半で戻ってきます。
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
@@ -737,9 +737,9 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    統合の詳細ページ.
 
-1. 前に開いておいた **[!UICONTROL Adobe IMS テクニカルアカウント設定]**&#x200B;ページに戻ります。ページの右上隅にある「**[!UICONTROL 次へ]**」を選択して、**[!UICONTROL AdobeIMSテクニカルアカウント設定]**&#x200B;ウィンドウで&#x200B;**[!UICONTROL アカウント]**&#x200B;ページを開きます。
+1. 前に開いておいた **[!UICONTROL Adobe IMS テクニカルアカウント設定]**&#x200B;ページに戻ります。ページの右上隅にある「**[!UICONTROL 次へ]**」を選択して、**[!UICONTROL Adobe IMSテクニカルアカウント設定]**&#x200B;ウィンドウで&#x200B;**[!UICONTROL アカウント]**&#x200B;ページを開きます。
 
-   (前にページを閉じた場合は、Experience Manager作成者に戻り、**[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL AdobeIMS設定]**&#x200B;に移動します。 「**[!UICONTROL 作成]**」を選択します。「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで、「**[!UICONTROL Experience Platformタグ]**」を選択します。 「**[!UICONTROL 証明書]**」ドロップダウンリストで、以前に作成した証明書の名前を選択します。)
+   (前にページを閉じた場合は、Experience Manager作成者に戻り、**[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL Adobe IMS設定]**&#x200B;に移動します。 「**[!UICONTROL 作成]**」を選択します。「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで、「**[!UICONTROL Experience Platformタグ]**」を選択します。 「**[!UICONTROL 証明書]**」ドロップダウンリストで、以前に作成した証明書の名前を選択します。)
 
    ![2019-07-25_20-57-50](assets/2019-07-25_20-57-50.png)
 
@@ -811,7 +811,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    * **[!UICONTROL タイトル]** - 説明的な設定のタイトルを入力します。例： `We.Retail Tags cloud configuration`
 
-   * **[!UICONTROL 関連するAdobeのIMS設定]**  -Experience ManagerのIMSの設定で作成したIMS設定を [選択します](#configuring-aem-ims)。
+   * **[!UICONTROL 関連するAdobe IMS設定]**  -Experience ManagerIMSの設定で前に作成したIMS設 [定を選択します](#configuring-aem-ims)。
 
    * **[!UICONTROL 会社]** - 「**[!UICONTROL 会社]**」ドロップダウンリストから、Experience Cloud の会社を選択します。リストが自動的に入力されます。
 

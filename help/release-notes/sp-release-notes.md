@@ -4,9 +4,9 @@ description: リリースノート（ [!DNL Adobe Experience Manager] 6.5 servic
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 59cc855e937c7be71cfc7a28fccd1db0b91e9f97
+source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
-source-wordcount: '4394'
+source-wordcount: '4392'
 ht-degree: 5%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 5%
 
 * [!DNL AEM Forms]での`GuideBridge#getGuidePath` APIのサポートを追加しました。
 
-* automated forms conversionサービスを使用して、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語のPDF formsを](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#language-specific-meta-model)アダプティブフォームに変換できるようになりました。[
+* automated forms conversionサービスを使用して、フランス語、ドイツ語、スペイン語、イタリア語、ポルトガル語のPDF formsを](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html#language-specific-meta-model)アダプティブフォームに変換できるようになりました。[
 
 * **プロパティブラウザーのエラーメッセージ**：アダプティブフォームのプロパティブラウザーに各プロパティのエラーメッセージが追加されました。これらのメッセージは、フィールドに使用できる値を理解するのに役立ちます。
 
