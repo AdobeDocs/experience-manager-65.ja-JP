@@ -5,9 +5,9 @@ contentOwner: AG
 role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
-source-git-commit: 610f294c314489032ec71b863542d269d302ee01
+source-git-commit: 0a4c27432e4005fa3999f7c6a776ef51b10d9746
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1589'
 ht-degree: 31%
 
 ---
@@ -172,7 +172,7 @@ Pool：との通信に使用するSOAPエンドポイント [!DNL InDesign Serve
 1. 設定&#x200B;**[!UICONTROL Day CQ Link Externalizer]**&#x200B;を探します。 **[!UICONTROL 編集]**&#x200B;をクリックして開きます。
 1. Link Externalizerの設定は、[!DNL Experience Manager]デプロイメントと[!DNL InDesign Server]の絶対URLを作成するのに役立ちます。 **[!UICONTROL ドメイン]**&#x200B;フィールドを使用して、[!DNL Adobe InDesign Server]のホスト名を指定します。 「**保存**」をクリックします。
 
-   絶対URLでは、ローカルインスタンス、オーサーインスタンス、パブリッシュインスタンスのホスト名として`localhost`を使用する必要があります。
+   次の図に示すように、絶対URLでは、ローカル（オーサー）インスタンスのホスト名として`localhost`を使用し、パブリッシュインスタンスのホスト名またはIPアドレスを使用します。
 
    ![Link Externalizerの設定](assets/link-externalizer-config.png)
 
