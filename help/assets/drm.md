@@ -3,12 +3,12 @@ title: Digital Rights Management
 description: ' [!DNL Experience Manager]  でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
 contentOwner: AG
 role: User, Admin
-feature: DRM，アセット管理
+feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: e87facbad559aa7e45656f621de17e6ef3109273
 workflow-type: tm+mt
-source-wordcount: '1401'
-ht-degree: 79%
+source-wordcount: '1398'
+ht-degree: 80%
 
 ---
 
@@ -69,7 +69,7 @@ ht-degree: 79%
 1. [!DNL Experience Manager] Configuration Manager を開きます。
 1. 「**[!UICONTROL Adobe CQ DAM Expiry Notification]**」を選択します。デフォルトでは、「**[!UICONTROL Time based Scheduler]**」が選択されており、指定の時間にアセットに有効期限切れのサブアセットがあるかどうかをチェックするジョブのスケジュールを設定します。ジョブが完了すると、有効期限切れのサブアセットを持つアセットと参照元のアセットが検索結果に有効期限切れと表示されます。
 
-1. ジョブを定期的に実行するには、「**[!UICONTROL Time Based Scheduler Rule]**」フィールドをクリアして、「**[!UICONTROL Periodic Scheduler]**」フィールドの時間（秒数）を変更します。例えば、式`0 0 0 &ast; &ast; ?`の例では、ジョブが00時間でトリガーされます。
+1. ジョブを定期的に実行するには、「**[!UICONTROL Time Based Scheduler Rule]**」フィールドをクリアして、「**[!UICONTROL Periodic Scheduler]**」フィールドの時間（秒数）を変更します。例えば、式`0 0 0 * * ?`の例では、ジョブが00時間でトリガーされます。
 1. アセットの有効期限が切れたときに電子メールを受け取るには、「**[!UICONTROL send email]**」を選択します。
 
    >[!NOTE]
@@ -143,7 +143,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
-> の以前のリリースにライセンスを保存するために使用されていた場所 `/etc/dam/drm/licenses` は非推奨（廃止予定）となりました。[!DNL Experience Manager]
+>の以前のリリースにライセンスを保存するために使用されていた場所 `/etc/dam/drm/licenses` は非推奨（廃止予定）となりました。[!DNL Experience Manager]
 >
 >ライセンスページを作成または変更する場合、または [!DNL Experience Manager] の以前のリリースから移植する場合は、ライセンスページを `/apps/settings/dam/drm/licenses` または `/conf/&ast;/settings/dam/drm/licenses` に保存することをお勧めします。
 
