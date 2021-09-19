@@ -2,12 +2,12 @@
 title: 拡張スマートタグ
 description: 拡張スマートタグ
 contentOwner: AG
-feature: スマートタグ、検索
+feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: 20442918270b484e0b3c3ce8e68df90e0f305a52
+source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1544'
 ht-degree: 50%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 50%
 
 要約すると、スマートコンテンツサービスを使用するための主な手順は次のとおりです。
 
-* オンボーディング
+* オンボーディング 
 * アセットおよびタグの検討（分類の定義）
 * スマートコンテンツサービスのトレーニング
 * 自動タグ付け
@@ -47,42 +47,38 @@ ht-degree: 50%
 
 このサービスは、次のMIMEタイプのアセットにスマートタグを適用します。
 
-* image/jpeg
-* image/tiff
-* image/png
-* image/bmp
-* image/gif
-* image/pjpeg
-* image/x-portable-anymap
-* image/x-portable-bitmap
-* image/x-portable-graymap
-* image/x-portable-pixmap
-* image/x-rgb
-* image/x-xbitmap
-* image/x-xpixmap
-* image/x-icon
-* image/photoshop
-* image/x-photoshop
-* image/psd
-* image/vnd.adobe.photoshop
+* `image/jpeg`
+* `image/tiff`
+* `image/png`
+* `image/bmp`
+* `image/gif`
+* `image/pjpeg`
+* `image/x-portable-anymap`
+* `image/x-portable-bitmap`
+* `image/x-portable-graymap`
+* `image/x-portable-pixmap`
+* `image/x-rgb`
+* `image/x-xbitmap`
+* `image/x-xpixmap`
+* `image/x-icon`
+* `image/photoshop`
+* `image/x-photoshop`
+* `image/psd`
+* `image/vnd.adobe.photoshop`
 
 このサービスは、次のMIMEタイプのアセットレンディションにスマートタグを適用します。
 
-* image/jpeg
-* image/pjpeg
-* image/png
+* `image/jpeg`
+* `image/pjpeg`
+* `image/png`
 
-## オンボーディング {#onboarding}
+## オンボーディング  {#onboarding}
 
 スマートコンテンツサービスは、[!DNL Experience Manager]のアドオンとして購入できます。購入後、[!DNL Adobe I/O]へのリンクを記載した電子メールが組織の管理者に送信されます。
 
 管理者は、リンクをたどってスマートコンテンツサービスを[!DNL Experience Manager]と統合できます。 このサービスを[!DNL Experience Manager Assets]と統合するには、[スマートタグの設定](config-smart-tagging.md)を参照してください。
 
 管理者がサービスを設定し、[!DNL Experience Manager]にユーザーを追加すると、オンボーディングプロセスが完了します。
-
->[!NOTE]
->
->[!DNL Experience Manager] 6.3以前のバージョンを使用し、アセットにタグ付けサービスが必要な場合は、[スマートタグ](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)を参照してください。 スマートタグは最新のAI機能を使用しないので、拡張スマートタグサービスに比べて正確性が低くなります。
 
 ## アセットとタグの確認 {#reviewing-assets-and-tags}
 
