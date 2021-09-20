@@ -1,8 +1,8 @@
 ---
 title: 手動での Adobe Target との統合の設定
-seo-title: 手動での Adobe Target との統合の設定
+seo-title: Manually Configuring the Integration with Adobe Target
 description: Adobe Target との統合を手動で設定する方法について説明します。
-seo-description: Adobe Target との統合を手動で設定する方法について説明します。
+seo-description: Learn how to manually configure the integration with Adobe Target.
 uuid: 0bb76a65-f981-4cc5-bee8-5feb3297137c
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 78%
+source-wordcount: '2210'
+ht-degree: 77%
 
 ---
 
@@ -65,9 +65,13 @@ ht-degree: 78%
 
 [Target フレームワークの追加](/help/sites-administering/target-configuring.md#adding-a-target-framework)で説明されているとおり、追加のコンテキスト情報を Target に送信するようにフレームワークを設定できます。
 
-### A4T Analytics クラウド設定の設定  {#configuring-a-t-analytics-cloud-configuration}
+### A4T Analytics クラウド設定の設定 {#configuring-a-t-analytics-cloud-configuration}
 
 コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用するように Adobe Target を設定できます。
+
+>[!NOTE]
+>
+>ユーザー資格情報認証（レガシー）は、A4T（TargetとAnalyticsの両方）では機能しません。 そのため、ユーザー資格情報認証の代わりに[IMS認証](/help/sites-administering/integration-ims-adobe-io.md)を使用する必要があります。
 
 これをおこなうには、Adobe Target クラウド設定を接続する A4T クラウド設定を指定する必要があります。
 
@@ -92,7 +96,7 @@ ht-degree: 78%
 
    「**OK**」をクリックします。Adobe Target でコンテンツをターゲット化すると、[レポートソースを選択](/help/sites-authoring/content-targeting-touch.md)できるようになります。
 
-## 手動での Adobe Target との統合  {#manually-integrating-with-adobe-target}
+## 手動での Adobe Target との統合 {#manually-integrating-with-adobe-target}
 
 オプトインウィザードを使用せずに手動で Adobe Target と統合します。
 
@@ -103,7 +107,6 @@ AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善
 * セキュリティが改善されています。
 * 単一ページアプリケーションの実装オプションが改善されています。
 * target.js に含まれていたコンポーネントが AT.js にも含まれているので、target.js への呼び出しがなくなりました。
-
 **クライアントライブラリ**&#x200B;ドロップダウンメニューでは、AT.js または mbox.js を選択できます。
 
 ### Target クラウド設定の作成 {#creating-a-target-cloud-configuration}
@@ -164,7 +167,7 @@ Adobe Target からセグメントを同期するように、クラウド設定�
 
    Target に接続できない場合は、[トラブルシューティング](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems)のセクションを参照してください。
 
-### Target フレームワークの追加  {#adding-a-target-framework}
+### Target フレームワークの追加 {#adding-a-target-framework}
 
 Target クラウド設定を設定したら、Target フレームワークを追加します。このフレームワークは、使用可能な [Client Context](/help/sites-administering/client-context.md) コンポーネントまたは [ContextHub](/help/sites-developing/ch-configuring.md) コンポーネントから Adobe Target に送信されるデフォルトのパラメーターを識別します。Target はこのパラメーターを使用して、現在のコンテキストに該当するセグメントを判別します。
 
@@ -197,19 +200,17 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
 フレームワークが作成されます。フレームワークをパブリッシュインスタンスにレプリケートするには、サイドキックで「**フレームワークをアクティベート**」オプションを使用します。
 
-### アクティビティと Target クラウド設定の関連付け   {#associating-activities-with-the-target-cloud-configuration}
+### アクティビティと Target クラウド設定の関連付け  {#associating-activities-with-the-target-cloud-configuration}
 
 [AEMアクティビティ](/help/sites-authoring/activitylib.md)をTargetクラウド設定に関連付け、[Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html)のアクティビティをミラーリングできるようにします。
 
 >[!NOTE]
 使用可能なアクティビティの種類は、次のオプションによって決まります。
 * Adobe Target の接続に AEM 側で使用される Adobe Target テナント（clientcode）で **xt_only** オプションがオンになっている場合は、XT アクティビティ&#x200B;**のみ**&#x200B;を AEM で作成できます。
-
 * Adobe Target テナント（clientcode）で **xt_only** オプションが&#x200B;**オフ**&#x200B;になっている場合は、XT アクティビティと A/B アクティビティの&#x200B;**両方**&#x200B;を AEM で作成できます。
-
 **追加のメモ：** **xt_only** オプションは特定の Target テナント（clientcode）に適用される設定で、Adobe Target でのみ直接編集できます。このオプションは AEM で有効および無効にすることはできません。
 
-### Target フレームワークとサイトの関連付け  {#associating-the-target-framework-with-your-site}
+### Target フレームワークとサイトの関連付け {#associating-the-target-framework-with-your-site}
 
 AEM に Target フレームワークを作成したら、Web ページとフレームワークを関連付けます。この Web ページ上のターゲット化されたコンポーネントが、フレームワークで定義されたデータを追跡のために Adobe Target に送信します（[コンテンツのターゲティング](/help/sites-authoring/content-targeting-touch.md)を参照）。
 
@@ -234,7 +235,7 @@ AEM に Target フレームワークを作成したら、Web ページとフレ�
    >[!NOTE]
    ページに追加したフレームワークがまだアクティベートされていなかった場合は、ウィザードが開き、同様に公開できます。
 
-## Target の接続の問題に関するトラブルシューティング  {#troubleshooting-target-connection-problems}
+## Target の接続の問題に関するトラブルシューティング {#troubleshooting-target-connection-problems}
 
 次のタスクを実行して、Target に接続するときに発生する問題をトラブルシューティングします。
 
