@@ -9,12 +9,12 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 1103b849-0042-4e11-b170-38ee81dd0157
 docset: aem65
-feature: アセット管理
+feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '11699'
+source-wordcount: '11713'
 ht-degree: 74%
 
 ---
@@ -32,21 +32,15 @@ ht-degree: 74%
 >Dynamic Mediaのビデオを操作する前に、Adobe Experience Manager管理者がDynamic Media - Scene7モードまたはDynamic Media — ハイブリッドモードでDynamic MediaCloud Servicesを既に有効にして設定していることを確認してください。
 >
 >* Dynamic Media - Scene7Cloud Servicesの設定の[Dynamic Mediaモードの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)および[Dynamic Media - Scene7モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
-   >
-   >
-* Dynamic Media — ハイブリッドモードの設定の[Dynamic MediaCloud Servicesの設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。
 >
->
-現在、Dynamic Media *のExperience Manager6.5.9.0のみ*&#x200B;のビデオ再生の問題として知られています。
->
->* 
+>* Dynamic Media — ハイブリッドモードの設定の[Dynamic MediaCloud Servicesの設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。
 
-   <!-- CQDOC-18116 -->You cannot play video renditions from the asset's Details page on Experience Manager - Dynamic Media running in hybrid mode.
->* 
-
-   <!-- CQDOC-18116 -->You cannot stream videos on Experience Manager - Dynamic Media running in hybrid mode.
 >
+>現在Dynamic Media *のExperience Manager6.5.9.0のみ*&#x200B;で発生しているビデオ再生の問題は既知です。
+>
+>* 公開済みのビデオを更新した場合は、配信の変更を反映するために、再度公開する必要があります。
 
+>
 
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
@@ -420,9 +414,9 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 | ビデオタイプ | 幅 x 高さ | 幅の比率 | 高さの比率 |
 |--- |--- |--- |--- |
-| ソース | 1,920 x 1,080 | 1 | 3 |
+| ソース | 1,920 x 1,080 | 1 | 1 |
 | エンコード | 960 x 540 | 2 | 2 |
-| エンコード | 640 x 360 | 3 | 3 |
+| エンコード | 640 x 360 | 3 | 1 |
 | エンコード | 480 x 270 | 4 | 4 |
 
 ### エンコードされたビデオのファイル形式 {#encoded-video-file-format}
