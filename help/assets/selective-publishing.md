@@ -8,10 +8,10 @@ content-type: reference
 docset: aem65
 role: User, Admin
 exl-id: cd025e9d-6fb1-436c-9e78-795f2daaf345
-feature: 公開
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
+feature: Publishing
+source-git-commit: a5164c0c2ef175f1bf63ef911bf92df36e413a6f
 workflow-type: tm+mt
-source-wordcount: '2945'
+source-wordcount: '2960'
 ht-degree: 67%
 
 ---
@@ -70,6 +70,8 @@ Adobe Experience ManagerまたはDynamic Mediaに対して、フォルダーレ�
    >[!IMPORTANT]
    >
    >選択した「Dynamic Media 公開モード」オプションに関係なく、*既に*&#x200B;公開されているアセットに対して後で更新を加えた場合、その更新は、それ以上のユーザー操作なしに即時に公開されます。
+   >
+   >公開済みのビデオを更新した場合は、配信の変更を反映するために、再度公開する必要があります。
 
    | Dynamic Media 公開モードのオプション | 説明 |
    | --- | --- |
