@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 6850fc2e4251ad408936ee71600ab8923f54e9a3
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2196'
 ht-degree: 77%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->ユーザー資格情報認証（レガシー）は、A4T（TargetとAnalyticsの両方）では機能しません。 そのため、ユーザー資格情報認証の代わりに[IMS認証](/help/sites-administering/integration-ims-adobe-io.md)を使用する必要があります。
+>ユーザー資格情報認証（レガシー）は、A4T（TargetとAnalyticsの両方）では機能しません。 そのため、ユーザー資格情報認証の代わりにIMS認証を使用する必要があります。
 
 これをおこなうには、Adobe Target クラウド設定を接続する A4T クラウド設定を指定する必要があります。
 
@@ -87,7 +87,7 @@ ht-degree: 77%
    >AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
    >
    >1. **ツール** > **一般** > **CRXDE Lite**&#x200B;に移動します。
-   1. **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**&#x200B;に移動します。
+   1. `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig` に移動します。
    1. プロパティ&#x200B;**disable**&#x200B;を&#x200B;**false**&#x200B;に設定します。
    1. 「**すべて保存**」をタップまたはクリックします。
 

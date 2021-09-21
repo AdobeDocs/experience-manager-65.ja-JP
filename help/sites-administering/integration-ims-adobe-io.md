@@ -11,10 +11,10 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: baf68f43decec6631516442c3f9e319ce879696f
+source-git-commit: baacb6623757c4a7a67ae2be4232a36c4a509b69
 workflow-type: tm+mt
-source-wordcount: '1563'
-ht-degree: 18%
+source-wordcount: '1538'
+ht-degree: 19%
 
 ---
 
@@ -196,7 +196,7 @@ AEMに戻ると、TargetのAdobe I/O統合から必要な値を追加して、IM
 
    * `https://localhost<port>/libs/cq/adobeims-configuration/content/configurations.html`
 
-   次に例を示します。
+   例えば、次の操作が可能です。
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
@@ -245,9 +245,6 @@ AEMに戻ると、TargetのAdobe I/O統合から必要な値を追加して、IM
    * **IMSの設定**:IMS設定の名前を選択します。
    * **APIタイプ**:REST
    * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、[A4T Analytics Cloud設定の設定](/help/sites-administering/target-configuring.md#configuring-a-t-analytics-cloud-configuration)の注意を参照してください。
-
-   >[!NOTE]
-   >ユーザー資格情報認証（レガシー）は、A4T（TargetとAnalyticsの両方）では機能しません。 そのため、     ユーザー資格情報認証の代わりにIMS認証を使用することもできます。
    * **正確なターゲット設定を使用する**:デフォルトでは、このチェックボックスはオンになっています。オンにすると、クラウドサービス設定はコンテンツが読み込まれるまでコンテキストの読み込みを待機します。続きのメモを確認してください。
    * **Adobe Targetからのセグメントの同期**:このオプションを選択すると、Targetで定義されたセグメントをダウンロードしてAEMで使用できます。「API のタイプ」プロパティが REST のときは、インラインのセグメントがサポートされておらず、常に Target からセグメントを使用する必要があるので、このオプションをオンにする必要があります（AEM の用語「セグメント」は、Target の「オーディエンス」と同じです）。
    * **クライアントライブラリ**:AT.jsクライアントライブラリとmbox.js（非推奨）のどちらを使用するかを選択します。
