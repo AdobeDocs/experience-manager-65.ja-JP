@@ -12,9 +12,9 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: d995173140237f34a03c8e84128ad9d657c9a026
 workflow-type: tm+mt
-source-wordcount: '2047'
+source-wordcount: '2053'
 ht-degree: 62%
 
 ---
@@ -338,6 +338,8 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
    >どのレプリケーションエージェントも無効にしないでください。無効にすると、（実行中のキュー内の）アセットのレプリケーションが失敗する可能性があります。
    >
    >タイムアウトエラーを回避するために、4つのレプリケーションエージェントがすべて設定されていることを確認します。 [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout)への並列公開における問題のトラブルシューティングを参照してください。
+   >
+   >自動生成された設定は変更しないでください。
 
 次の操作が可能になっています。
 
