@@ -87,8 +87,7 @@ ht-degree: 77%
    >AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
    >
    >1. **ツール** > **一般** > **CRXDE Lite**&#x200B;に移動します。
-   1. 次の URL に移動します。
-      `/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
+   1. 次の URL に移動します。`/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig`
    1. プロパティ&#x200B;**disable**&#x200B;を&#x200B;**false**&#x200B;に設定します。
    1. 「**すべて保存**」をタップまたはクリックします。
 
