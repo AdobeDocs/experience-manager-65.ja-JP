@@ -6,12 +6,12 @@ topic-tags: dynamic-media
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: a166ea9e56ba6b69793e9949a920a7a24b5b9b25
+source-git-commit: cd0ff8f3f595e4c97668abc8c296b2f15f9d4810
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2618'
 ht-degree: 56%
 
 ---
@@ -198,7 +198,7 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 | Europe, Middle East, Africa | 13 Aug 2021 |
 | Asia-Pacific | 22 Jul 2021 | -->
 
-1. [Admin Console を使用して、サポートケースを作成します。](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)
+1. [Admin Console を使用して、サポートケースを作成します。](https://helpx.adobe.com/jp/enterprise/using/support-for-experience-cloud.html)
 1. サポートケースには、次の情報を記入してください。
 
    1. 主要連絡先の氏名、電子メールアドレス、電話番号。
@@ -288,3 +288,9 @@ Dynamic Mediaの会社アカウントでは、デフォルトで、スマート�
 * ビューア側のDPRの最適化は、サーバ側のスマートイメージングDPRの最適化と連携して機能し、画像のサイズが大きくなることはありません。 つまり、ズーム対応ビューアのみのメインビューなど、ビューアでDPRが処理される場所であれば、サーバー側のスマートイメージングDPR値はトリガーされません。 同様に、スウォッチやサムネールなどのビューア要素にDPR処理がない場合は、サーバー側のスマートイメージングDPR値がトリガーされます。
 
 [画像を操作する場合](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-images)および[スマート切り抜きを使用する場合](/help/assets/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop)も参照してください。
+
+>[!MORELIKETHIS]
+>
+>* [次世代の画像形式WebPおよびAVIFを使用した画像の最適化。](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+>
+
