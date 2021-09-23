@@ -10,9 +10,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: e2b13bf47a2a816add7678587d51347266cc3552
+source-git-commit: 1a3430ef3d9e9f4fcd0aaced904644b36953292b
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2198'
 ht-degree: 77%
 
 ---
@@ -87,15 +87,18 @@ ht-degree: 77%
    >AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
    >
    >1. **ツール** > **一般** > **CRXDE Lite**&#x200B;に移動します。
-   1. 次の場所に移動します。
-/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
+   1. [1]に移動します（下記を参照）。
    1. プロパティ&#x200B;**disable**&#x200B;を&#x200B;**false**&#x200B;に設定します。
    1. 「**すべて保存**」をタップまたはクリックします。
 
 
-   ![chlimage_1-159](assets/chlimage_1-159.png)
+```
+/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
+```
 
-   「**OK**」をクリックします。Adobe Target でコンテンツをターゲット化すると、[レポートソースを選択](/help/sites-authoring/content-targeting-touch.md)できるようになります。
+![chlimage_1-159](assets/chlimage_1-159.png)
+
+「**OK**」をクリックします。Adobe Target でコンテンツをターゲット化すると、[レポートソースを選択](/help/sites-authoring/content-targeting-touch.md)できるようになります。
 
 ## 手動での Adobe Target との統合 {#manually-integrating-with-adobe-target}
 
