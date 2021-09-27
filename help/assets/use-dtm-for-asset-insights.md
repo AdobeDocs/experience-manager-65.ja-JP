@@ -3,11 +3,11 @@ title: DTMを使用したアセットインサイトの有効化
 description: Assets Insightsを有効にするために、AdobeのDynamic Tag Management(DTM)を使用する方法について説明します。
 contentOwner: AG
 role: User, Admin
-feature: アセットインサイト、アセットレポート
+feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: b3acfdba41e1bd94c65bb7a87f63b9c326a80dd2
+source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '647'
 ht-degree: 30%
 
 ---
@@ -18,7 +18,7 @@ Adobe Dynamic Tag Management は、デジタルマーケティングツールを
 
 >[!CAUTION]
 >
->AdobeDTMは[!DNL Adobe Experience Platform Launch]のために廃止され、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達します。 Adobeでは、アセットのインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)に[ [!DNL Launch] を使用することをお勧めします。
+>AdobeDTMは[!DNL Adobe Experience Platform]のために廃止され、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)に達します。 Adobeでは、アセットのインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)に[ [!DNL Adobe Experience Platform] を使用することをお勧めします。
 
 DTMを使用してアセットインサイトを有効にするには、次の手順を実行します。
 
