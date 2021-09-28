@@ -1,8 +1,8 @@
 ---
 title: カプセル化されたトークンのサポート
-seo-title: カプセル化されたトークンのサポート
+seo-title: Encapsulated Token Support
 description: AEM でのカプセル化されたトークンのサポートについて説明します。
-seo-description: AEM でのカプセル化されたトークンのサポートについて説明します。
+seo-description: Learn about the Encapsulated Token support in AEM.
 uuid: a7c6f269-bb5a-49ba-abef-ea029202ab6d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 88%
+source-wordcount: '833'
+ht-degree: 86%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 88%
 
 あるパブリッシュインスタンスが使用できなくなると、そのインスタンスで認証されているすべてのユーザーのセッションが失われます。これは、認証の cookie の検証にはリポジトリへのアクセスが必要なためです。
 
-## カプセル化されたトークンを使用したステートレス認証  {#stateless-authentication-with-the-encapsulated-token}
+## カプセル化されたトークンを使用したステートレス認証 {#stateless-authentication-with-the-encapsulated-token}
 
 AEM の新しいカプセル化されたトークンサポートを使用したステートレス認証により、水平方向のスケーラビリティを確保できます。
 
@@ -51,16 +51,14 @@ MongoMK オーサーインスタンスと TarMK パブリッシュインスタ�
 >
 >例えば、パブリッシュインスタンス 1 に新しく作成されたユーザーは、カプセル化されたトークンにより、パブリッシュインスタンス 2 でも正常に認証されます。ユーザーがパブリッシュインスタンス 2 に存在しない場合、リクエストは失敗します。
 
-
-## カプセル化されたトークンの設定  {#configuring-the-encapsulated-token}
+## カプセル化されたトークンの設定 {#configuring-the-encapsulated-token}
 
 >[!NOTE]
 >ユーザーを同期し、トークン認証（SAMLやOAuthなど）に依存するすべての認証ハンドラーは、カプセル化されたトークンでのみ機能します。
 >
 >* スティッキーセッションが有効になっている。
-   >
-   >
-* 同期の開始時に、AEMで既にユーザーが作成されています。 つまり、同期処理中にハンドラー&#x200B;**create**&#x200B;ユーザーが発生する状況では、カプセル化されたトークンはサポートされません。
+>
+>* 同期の開始時に、AEMで既にユーザーが作成されています。 つまり、同期処理中にハンドラー&#x200B;**create**&#x200B;ユーザーが発生する状況では、カプセル化されたトークンはサポートされません。
 
 
 カプセル化されたトークンを設定する際には、いくつかの点を考慮する必要があります。
@@ -68,7 +66,7 @@ MongoMK オーサーインスタンスと TarMK パブリッシュインスタ�
 1. 関与する暗号作成技術により、すべてのインスタンスに同じ HMAC 鍵が必要です。AEM 6.3 以降、鍵要素はリポジトリではなく、実際のファイルシステムに保存されます。したがって、鍵をレプリケーションするのに最適な方法は、ソースインスタンスのファイルシステムから、鍵のレプリケーション先となるターゲットインスタンスのファイルシステムに鍵要素をコピーすることです。詳しくは、次の「HMAC 鍵のレプリケーション」を参照してください。
 1. カプセル化されたトークンを有効にする必要があります。これは Web コンソールで実行できます。
 
-### HMAC 鍵のレプリケーション  {#replicating-the-hmac-key}
+### HMAC 鍵のレプリケーション {#replicating-the-hmac-key}
 
 HMACキーは、リポジトリ内に`/etc/key`のバイナリプロパティとして存在します。 その横にある **View** リンクをクリックすることで別個にダウンロードできます。
 
@@ -83,12 +81,12 @@ HMACキーは、リポジトリ内に`/etc/key`のバイナリプロパティと
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
-1. データフォルダーに移動します。次に例を示します。
+1. データフォルダーに移動します。例えば、次の操作が可能です。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC とマスターファイルをコピーします。
-1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。次に例を示します。
+1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。例えば、次の操作が可能です。
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
@@ -102,5 +100,5 @@ HMACキーは、リポジトリ内に`/etc/key`のバイナリプロパティと
 HMAC 鍵がレプリケートされたら、Web コンソールを介してカプセル化されたトークンを有効化できます。
 
 1. ブラウザーで`https://serveraddress:port/system/console/configMgr`を参照します。
-1. **Day CRX Token Authentication Handler** というエントリを探し、クリックします。
+1. **Granite Token Authentication Handler**&#x200B;というAdobeを探してクリックします。
 1. 次の画面で「**Enable encapsulated token support**」ボックスにチェックマークを入れて「**Save**」を押します。
