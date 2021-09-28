@@ -1,8 +1,8 @@
 ---
 title: ページオーサリングのカスタマイズ
-seo-title: ページオーサリングのカスタマイズ
+seo-title: Customizing Page Authoring
 description: AEM には、ページオーサリング機能のカスタマイズを可能にする様々なメカニズムがあります
-seo-description: AEM には、ページオーサリング機能のカスタマイズを可能にする様々なメカニズムがあります
+seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
 uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 77%
+source-wordcount: '1383'
+ht-degree: 74%
 
 ---
 
@@ -52,8 +52,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 
 >
->
-このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
+>このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
 
 >[!CAUTION]
 >
@@ -67,11 +66,11 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >1. `/apps` 内で変更作業をおこないます。
 
 
-## 新しい画層を追加（モード） {#add-new-layer-mode}
+## 新しいレイヤー（モード）の追加 {#add-new-layer-mode}
 
 ページを編集するときに、さまざまな[モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用できます。これらのモードは、[レイヤー](/help/sites-developing/touch-ui-structure.md#layer)を使用して実装されます。これらにより、同じページコンテンツの異なるタイプの機能にアクセスできます。標準のレイヤーは、編集、プレビュー、注釈、開発者およびターゲット設定です。
 
-### レイヤーの例：ライブコピーステータス  {#layer-example-live-copy-status}
+### レイヤーの例：ライブコピーステータス {#layer-example-live-copy-status}
 
 標準 AEM インスタンスは、MSM レイヤーを提供します。これは、[マルチサイト管理](/help/sites-administering/msm.md)に関連するデータにアクセスし、レイヤーでハイライトします。
 
@@ -124,7 +123,7 @@ GitHub のコード
 >
 >クラシック UI でカスタム述語を実装する例については、[このナレッジベースの記事](https://helpx.adobe.com/jp/experience-manager/using/creating-custom-cq-tree.html)を参照してください。
 
-## 新しいアクションをコンポーネントツールバーに追加  {#add-new-action-to-a-component-toolbar}
+## 新しいアクションをコンポーネントツールバーに追加 {#add-new-action-to-a-component-toolbar}
 
 各コンポーネントには、多くの場合、そのコンポーネントに対して実行できる様々なアクションを呼び出すためのツールバーがあります。
 
@@ -210,7 +209,7 @@ GitHub のコード
 
 1. エディターと、エディターを使用できる各リソースタイプが（コンポーネントと同様に）関連付けられます。
 
-#### 新しいインプレースエディターを作成するためのコードサンプル  {#code-sample-for-creating-a-new-in-place-editor}
+#### 新しいインプレースエディターを作成するためのコードサンプル {#code-sample-for-creating-a-new-in-place-editor}
 
 `aem-authoring-extension-inplace-editor` は、AEMで新しいインプレースエディターを作成する方法を示すサンプルパッケージです。
 
@@ -229,7 +228,7 @@ GitHub のコード
 
 新しいページアクション（**サイトに戻る**（コンソール）アクションなど）をページツールバーに追加します。
 
-### コードサンプル  {#code-sample-3}
+### コードサンプル {#code-sample-3}
 
 `aem-authoring-extension-header-backtosites` は、サイトコンソールに戻るカスタムヘッダーバーアクションを作成する方法を示すサンプルパッケージです。
 
@@ -242,7 +241,11 @@ GitHub のコード
 
 ## アクティベーションをリクエストワークフローのカスタマイズ {#customizing-the-request-for-activation-workflow}
 
-既成のワークフローである&#x200B;**アクティベーションをリクエスト**&#x200B;は、コンテンツ作成者が適切な複製権限を持っていない場合に、自動的にトリガーされます。
+既製のワークフローである&#x200B;**Request for Activation**:
+
+* 適切なレプリケーション権限を&#x200B;**コンテンツ作成者**&#x200B;に持たず、**DAM-Usersと作成者のメンバーシップを**&#x200B;持たない場合、適切なメニューに自動的に表示されます。
+
+* それ以外の場合は、レプリケーション権限が削除されているので、何も表示されません。
 
 このようなアクティベーションの動作をカスタマイズするには、**アクティベーションのリクエスト**&#x200B;ワークフローをオーバーレイします。
 
