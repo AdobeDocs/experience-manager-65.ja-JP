@@ -1,8 +1,8 @@
 ---
 title: セキュリティチェックリスト
-seo-title: セキュリティチェックリスト
+seo-title: Security Checklist
 description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
-seo-description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
+seo-description: Learn about the various security considerations when configuring and deploying AEM.
 uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
-feature: セキュリティ
-source-git-commit: 1c6ee9b547fd0870feb510e35ffdcb8e3f857f18
+feature: Security
+source-git-commit: f60d3049b10a8ec500dd0cd4b1b5d4efbe415d84
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2859'
 ht-degree: 81%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 81%
 
 [アドビが提供する最新のセキュリティホットフィックス](https://helpx.adobe.com/jp/experience-manager/kb/aem63-available-hotfixes.html)がインストールされていることを確認してください。
 
-### AEM および OSGi コンソールの admin アカウントのデフォルトパスワードの変更  {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### AEM および OSGi コンソールの admin アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
 インストール後に、（すべてのインスタンスに対する）権限のある [**AEM** `admin` アカウント](#changing-the-aem-admin-password)のパスワードを変更することを強くお勧めします。
 
@@ -84,7 +84,7 @@ AEM `admin` アカウントとは別に、OSGi Web コンソールのデフォ�
 
 Web コンソールのパスワードの変更について詳しくは、以下の [OSGi Web コンソールの admin パスワードの変更](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password)を参照してください。
 
-#### OSGi Web コンソールの admin パスワードの変更  {#changing-the-osgi-web-console-admin-password}
+#### OSGi Web コンソールの admin パスワードの変更 {#changing-the-osgi-web-console-admin-password}
 
 また、Webコンソールへのアクセスに使用するパスワードも変更する必要があります。これは、[Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md)の次のプロパティを設定することでおこなわれます。
 
@@ -98,9 +98,9 @@ Web コンソールのパスワードの変更について詳しくは、以下�
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-1. 「**Save**」をクリックします。
+1. 「**保存**」をクリックします。
 
-### カスタムエラーハンドラーの実装  {#implement-custom-error-handler}
+### カスタムエラーハンドラーの実装 {#implement-custom-error-handler}
 
 情報が開示されないようにするには、（404 および 500 HTTP 応答コード専用の）カスタムエラーハンドラーページを定義することをお勧めします。
 
@@ -116,7 +116,7 @@ AEM ディスパッチャーはインフラストラクチャの重要な部分�
 >
 >Dispatcher を使用して「.form」セレクターを無効にする必要があります。
 
-## 検証手順  {#verification-steps}
+## 検証手順 {#verification-steps}
 
 ### レプリケーションおよびトランスポートユーザーの設定 {#configure-replication-and-transport-users}
 
@@ -154,13 +154,13 @@ AEM 6 には新しく操作ダッシュボードが導入されています。�
 * Adobe Granite CRX Explorer（com.adobe.granite.crx-explorer）
 * Adobe Granite CRXDE Lite（com.adobe.granite.crxde-lite）
 
-### Sling 開発バンドルが存在するかどうかの確認  {#check-if-the-sling-development-bundle-is-present}
+### Sling 開発バンドルが存在するかどうかの確認 {#check-if-the-sling-development-bundle-is-present}
 
 [AEM Developer Tools for Eclipse](/help/sites-developing/aem-eclipse.md)は、Apache Sling Tooling Support Install(org.apache.sling.tooling.support.install)をデプロイします。
 
 実稼動のオーサーシステムとパブリッシュシステムへのアクセスを可能にする前に、それらの両方のシステムで、この OSGi バンドルをアンインストールしておく必要があります。
 
-### クロスサイトリクエストフォージェリからの保護  {#protect-against-cross-site-request-forgery}
+### クロスサイトリクエストフォージェリからの保護 {#protect-against-cross-site-request-forgery}
 
 #### CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
@@ -193,7 +193,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    &lt;protocol>://&lt;server>:&lt;port>
 
-   次に例を示します。
+   例えば、次の操作が可能です。
 
    * `https://allowed.server:80`の場合、特定のポートを使用して、このサーバーからの要求がすべて許可されます。
    * https 要求も許可する場合は、2 行目を入力する必要があります。
@@ -249,7 +249,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-## 追加情報  {#further-readings}
+## 追加情報 {#further-readings}
 
 ### サービス拒否（DoS）攻撃の軽減 {#mitigate-denial-of-service-dos-attacks}
 
@@ -274,7 +274,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 **DoS を防ぐための Sling の設定**
 
-Sling はコンテンツ中心型です&#x200B;*。*&#x200B;つまり、（HTTP）要求がそれぞれ JCR リソース（リポジトリーノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理がおこなわれるということです。
+Sling はコンテンツ中心型です&#x200B;*。*&#x200B;つまり、（HTTP）要求がそれぞれ JCR リソース（リポジトリーノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理が行われるということです。
 
 * 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。。
 * 次に、リソースのプロパティを要求の特定の部分（例：セレクター、拡張子など）と組み合わせてレンダラー（スクリプト）が特定されます。
@@ -306,7 +306,7 @@ DoS の悪用を防ぐ方法は次のとおりです。
 
       **JSONの最大結果** ( `json.maximumresults`)
 
-      ([Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定)を参照してください。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `200` です。
+      ([Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定)を参照してください。 この制限を超えると、レンダリングは行われません。AEM 内での Sling 用のデフォルト値は `1000` です。
 
    * 予防策として、デフォルトの他のレンダラー（HTML、プレーンテキスト、XML）を無効にします。この場合も [Apache Sling GET Servlet](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet) を設定します。
    >[!CAUTION]
@@ -402,7 +402,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 詳しくは、以下を参照してください。
 
-#### AEM 6.3 での鍵のレプリケーション  {#replicating-keys-for-aem}
+#### AEM 6.3 での鍵のレプリケーション {#replicating-keys-for-aem}
 
 以前のバージョンではレプリケーション鍵はリポジトリに保存されましたが、AEM 6.3 からはファイルシステム上に保存されます。
 
@@ -417,12 +417,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
-1. データフォルダーに移動します。次に例を示します。
+1. データフォルダーに移動します。例えば、次の操作が可能です。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC とマスターファイルをコピーします。
-1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。次に例を示します。
+1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。例えば、次の操作が可能です。
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
