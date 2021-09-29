@@ -1,8 +1,8 @@
 ---
 title: Oak クエリとインデックス作成
-seo-title: Oak クエリとインデックス作成
+seo-title: Oak Queries and Indexing
 description: AEM でインデックスを設定する方法について説明します。
-seo-description: AEM でインデックスを設定する方法について説明します。
+seo-description: Learn how to configure indexes in AEM.
 uuid: a1233d2e-1320-43e0-9b18-cd6d1eeaad59
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,12 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
-feature: 設定
+feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7cd4b6918a8b0de68f9f5c6a79ab3b49e8ef6fc1
 workflow-type: tm+mt
-source-wordcount: '2881'
-ht-degree: 89%
+source-wordcount: '2868'
+ht-degree: 82%
 
 ---
 
@@ -35,7 +35,7 @@ Oak では、インデックスが使用されないクエリが実行される�
 *WARN* Traversed 1000 nodes with filter Filter(query=select ...) consider creating an index or changing the query
 ```
 
-## サポートされているクエリ言語  {#supported-query-languages}
+## サポートされているクエリ言語 {#supported-query-languages}
 
 Oak クエリエンジンでは、次の言語がサポートされています。
 
@@ -44,7 +44,7 @@ Oak クエリエンジンでは、次の言語がサポートされています�
 * SQL（廃止）
 * JQOM
 
-## インデクサーのタイプとコスト計算  {#indexer-types-and-cost-calculation}
+## インデクサーのタイプとコスト計算 {#indexer-types-and-cost-calculation}
 
 Apache Oak ベースのバックエンドでは、様々なインデクサーをリポジトリにプラグインすることができます。
 
@@ -64,19 +64,19 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 
 次に、各インデックスが参照されて、クエリのコストが見積もられます。この見積もりが完了すると、最もコストの低いインデックスの結果が取得されます。最後に、その結果がフィルター処理され、現在のユーザーがその結果の読み取りアクセス権を保持していること、およびその結果がクエリ全体に一致していることが確認されます。
 
-## インデックスの設定  {#configuring-the-indexes}
+## インデックスの設定 {#configuring-the-indexes}
 
 >[!NOTE]
 >
->大規模なリポジトリの場合、インデックスの構築には時間がかかります。 これは、最初にインデックスを作成するときと、再インデックス（定義を変更した後にインデックスを再構築すること）をおこなうときの両方に当てはまります。[Oakインデックスのトラブルシューティング](/help/sites-deploying/troubleshooting-oak-indexes.md)および[低速なインデックス再作成の防止](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing)も参照してください。
+>大規模なリポジトリの場合、インデックスの構築には時間がかかります。 これは、インデックスの初期作成とインデックスの再作成（定義を変更した後にインデックスを再構築）の両方に当てはまります。 [Oakインデックスのトラブルシューティング](/help/sites-deploying/troubleshooting-oak-indexes.md)および[低速なインデックス再作成の防止](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing)も参照してください。
 
-非常に大規模なリポジトリで再インデックスが必要な場合、特に MongoDB を使用してフルテキストのインデックスを作成する場合は、テキスト事前抽出と、oak-run を使用した初期インデックス構築および再インデックスを検討してください。
+非常に大規模なリポジトリでインデックス再作成が必要な場合、特にMongoDBおよびフルテキストインデックスの場合は、テキスト事前抽出を検討し、oak-runを使用して初期インデックスを作成して再インデックスを実行します。
 
 インデックスは、リポジトリ内の **oak:index** ノードの下で、ノードとして設定されます。
 
 インデックスノードのタイプは、**oak:QueryIndexDefinition** とする必要があります。各インデクサーでは、ノードのプロパティとして複数の設定オプションを使用できます。詳しくは、以下の各インデクサータイプに関する設定の詳細説明を参照してください。
 
-### プロパティインデックス  {#the-property-index}
+### プロパティインデックス {#the-property-index}
 
 プロパティインデックスは通常、プロパティの制約はあるがフルテキスト検索ではないクエリに適しています。このインデックスを設定するには、次の手順に従います。
 
@@ -101,9 +101,9 @@ Apache Oak ベースのバックエンドでは、様々なインデクサーを
 * **unique** フラグは、**true** に設定されている場合、プロパティインデックスに対して一意性制約を付加します。
 
 * **declaringNodeTypes** プロパティでは、インデックスが唯一適用される特定のノードタイプを指定できます。
-* **reindex** フラグは、**true** に設定されている場合、コンテンツ全体の再インデックスをトリガーします。
+* **reindex**&#x200B;フラグ。**true**&#x200B;に設定すると、コンテンツの完全な再インデックスがトリガーされます。
 
-### 順序付きインデックス  {#the-ordered-index}
+### 順序付きインデックス {#the-ordered-index}
 
 順序付きインデックスはプロパティインデックスの拡張です。ただし、これは廃止されました。このタイプのインデックスは、[Luceneプロパティインデックス](#the-lucene-property-index)に置き換える必要があります。
 
@@ -115,7 +115,7 @@ AEM 6 では、Apache Lucene ベースのフルテキストインデクサーを
 
 フルテキストインデックスを設定しないと、フルテキスト条件が設定されたクエリは想定どおりに機能しません。
 
-インデックスは、非同期のバックグラウンドスレッドによって更新されるので、一部のフルテキスト検索は、バックグラウンドプロセスが完了するまでの短い期間、使用できない場合があります。
+インデックスは非同期のバックグラウンドスレッドを介して更新されるので、一部のフルテキスト検索は、バックグラウンド処理が完了するまで、少しの時間枠で使用できません。
 
 次の手順に従って、Lucene フルテキストインデックスを設定できます。
 
@@ -136,7 +136,7 @@ Lucene インデックスでは次の設定オプションを使用できます�
 * **excludePropertyNames**&#x200B;プロパティは、プロパティ名のリスト（インデックスから除外する必要があるプロパティ）を定義します。
 * **reindex** フラグ。**true** に設定されている場合、コンテンツ全体の再インデックスをトリガーします。
 
-### Lucene プロパティインデックス  {#the-lucene-property-index}
+### Lucene プロパティインデックス {#the-lucene-property-index}
 
 **Oak 1.0.8** 以降、Lucene を使用して、フルテキストではないプロパティ制約に関するインデックスを作成できます。
 
@@ -148,7 +148,7 @@ Lucene プロパティインデックスを有効にするには、**fulltextEna
 select * from [nt:base] where [alias] = '/admin'
 ```
 
-このクエリのための Lucene プロパティインデックスを定義するには、**oak:index** の下に新しいノードを作成して、次の定義を追加します。
+上記のクエリのLuceneプロパティインデックスを定義するには、**oak:index:**&#x200B;の下に新しいノードを作成して、次の定義を追加します
 
 * **名前:** `LucenePropertyIndex`
 * **型:** `oak:QueryIndexDefinition`
@@ -157,19 +157,19 @@ select * from [nt:base] where [alias] = '/admin'
 
 * **type:**
 
-   ```
+   ```xml
    lucene (of type String)
    ```
 
 * **非同期:**
 
-   ```
+   ```xml
    async (of type String)
    ```
 
 * **fulltextEnabled:**
 
-   ```
+   ```xml
    false (of type Boolean)
    ```
 
@@ -199,7 +199,7 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 >
 >使用可能なアナライザーのリストについては、使用中の Lucene バージョンの API ドキュメントを参照してください。
 
-#### アナライザークラスの直接の指定  {#specifying-the-analyzer-class-directly}
+#### アナライザークラスの直接の指定 {#specifying-the-analyzer-class-directly}
 
 標準のアナライザーを使用する場合は、次の手順に従って設定できます。
 
@@ -290,7 +290,7 @@ AEM での統合はリポジトリレベルで実行されるので、Solr は�
 
 Solr は、組み込みサーバーとして AEM インスタンスと共に動作するか、リモートサーバーとして動作するように設定できます。
 
-### AEM での組み込み Solr サーバーの設定  {#configuring-aem-with-an-embedded-solr-server}
+### AEM での組み込み Solr サーバーの設定 {#configuring-aem-with-an-embedded-solr-server}
 
 >[!CAUTION]
 >
@@ -319,12 +319,12 @@ AEM は、Web コンソール経由で設定可能な組み込み Solr サーバ
 
 1. 変更内容を保存します。
 
-### AEM での単一リモート Solr サーバーの設定  {#configuring-aem-with-a-single-remote-solr-server}
+### AEM での単一リモート Solr サーバーの設定 {#configuring-aem-with-a-single-remote-solr-server}
 
-AEM は、リモート Solr サーバーインスタンスと連携するように設定することもできます。
+AEMは、リモートのSolrサーバーインスタンスと連携するように設定することもできます。
 
 1. 最新バージョンの Solr をダウンロードして展開します。この方法について詳しくは、[Apache Solr のインストールドキュメント](https://cwiki.apache.org/confluence/display/solr/Installing+Solr)を参照してください。
-1. 2 つの Solr シャードを作成します。そのためには、Solr の展開先フォルダー内に、各シャード用のフォルダーを作成します。
+1. 2 つの Solr シャードを作成します。これをおこなうには、Solrが展開されたフォルダー内に各シャードのフォルダーを作成します。
 
    * 1 つ目のシャード用に、次のフォルダーを作成します。
 
@@ -382,9 +382,9 @@ AEM は、リモート Solr サーバーインスタンスと連携するよう�
 
 1. 変更内容を保存します。
 
-#### Solr の推奨設定  {#recommended-configuration-for-solr}
+#### Solr の推奨設定 {#recommended-configuration-for-solr}
 
-この記事で説明した 3 つの Solr デプロイメントのすべてで使用できる基本設定のサンプルを次に示します。この基本設定は、AEM に既に存在する専用のプロパティインデックスに対応するものであり、他のアプリケーションでは使用しないでください。
+この記事で説明する3つのSolrデプロイメントすべてで使用できる基本設定の例を以下に示します。 AEMに既に存在し、他のアプリケーションでは使用しない専用プロパティインデックスに対応します。
 
 この設定を適切に使用するには、アーカイブの内容を直接 Solr ホームディレクトリに配置する必要があります。複数のノードから成るデプロイメントの場合は、各ノードの root フォルダー直下に配置してください。
 
@@ -403,7 +403,7 @@ AEM 6.1 では、AEM 6.0 の次の 2 つのインデックス作成ツールが 
 
 これらのツールの使用方法について詳しくは、[操作ダッシュボードに関するドキュメント](/help/sites-administering/operations-dashboard.md)を参照してください。
 
-#### OSGi 経由でのプロパティインデックスの作成  {#creating-property-indexes-via-osgi}
+#### OSGi 経由でのプロパティインデックスの作成 {#creating-property-indexes-via-osgi}
 
 ACS Commons パッケージは、プロパティインデックスの作成に使用できる OSGi 設定も公開しています。
 
@@ -423,7 +423,7 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 
 何らかの理由でこのツールを使用できない場合は、インデックスログを単一のファイルで収集し、そのファイルを使用して特定の問題をトラブルシューティングすることができます。
 
-#### ログの有効化  {#enable-logging}
+#### ログの有効化 {#enable-logging}
 
 ログを有効にするには、Oak インデックスおよびクエリに関連するカテゴリで **DEBUG** レベルのログを有効にする必要があります。対象のカテゴリは以下のとおりです。
 
@@ -457,7 +457,7 @@ ACS Commons パッケージは、プロパティインデックスの作成に�
 
 インデックスが別の場所で設定されている場合は、その場所に従ってパスを変更してください。
 
-#### MBean 出力  {#mbean-output}
+#### MBean 出力 {#mbean-output}
 
 インデックス関連の MBean の出力を取得すると、デバッグに役立つことがあります。手順は次のとおりです。
 
