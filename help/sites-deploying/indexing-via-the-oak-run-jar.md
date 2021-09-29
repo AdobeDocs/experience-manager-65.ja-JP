@@ -1,18 +1,18 @@
 ---
 title: Oak-run Jar を使用したインデックス作成
-seo-title: Oak-run Jar を使用したインデックス作成
+seo-title: Indexing via the Oak-run Jar
 description: Oak-run Jar を使用したインデックス作成方法について説明します。
-seo-description: Oak-run Jar を使用したインデックス作成方法について説明します。
+seo-description: Learn how to perform indexing via the Oak-run Jar.
 uuid: 09a83ab9-92ec-4b55-8d24-2302f28fc2e4
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 discoiquuid: c8a505ab-a075-47da-8007-43645a8c3ce5
 exl-id: dcec8c1b-13cc-486c-b1a4-62e6eb3184ad
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c61bf629e35db848c3f2f88c6c7e1dd3b7074b1c
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 92%
+source-wordcount: '913'
+ht-degree: 79%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 92%
 Oak-run は、コマンドラインでのすべてのインデックス作成の使用例をサポートします。JMX レベルで操作する必要はありません。次に Oak-run アプローチのメリットを示します。
 
 1. AEM 6.4 用の新しいインデックス作成ツールセットです。
-1. インデックス再作成時間を削減します。より大きいリポジトリでのインデックス再作成時間に有益な影響があります。
+1. これにより、インデックスの再作成に要する時間が短縮され、大規模なリポジトリでのインデックスの再作成に役立ちます。
 1. AEM でのインデックス再作成時のリソース消費を削減します。これにより、他の AEM アクティビティのシステムパフォーマンスが向上します。
 1. Oak-runは、帯域外サポートを提供します。実稼動環境で実稼動インスタンスに対して再インデックスを実行できない場合は、重要なパフォーマンスへの影響を避けるために、クローン環境を使用してインデックスを再作成できます。
 
@@ -33,10 +33,10 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 >
 >このシナリオについて詳しくは、[使用例 1 - インデックスの整合性チェック](/help/sites-deploying/oak-run-indexing-usecases.md#usercase1indexconsistencycheck)を参照してください。
 
-* `oak-run.jar` は、Lucene Oak インデックスが破損しているかどうかをすばやく判別します。
+* `oak-run.jar`Lucene Oakインデックスが破損しているかどうかを迅速に判断します。
 * 整合性チェックレベル 1 および 2 の場合は、使用中の AEM インスタンスで実行しても安全です。
 
-![screen_shot_2017-12-14at135758](assets/screen_shot_2017-12-14at135758.png)
+![インデックスの整合性チェック](assets/screen_shot_2017-12-14at135758.png)
 
 ## インデックスの統計 {#indexstatistics}
 
@@ -67,23 +67,23 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
 `oak-run.jar` インデックス作成アプローチに応じて、次の図のインデックス再作成の実行手順のどちらの側にも様々な手順があります。
 
-![4](assets/4.png)
+![SegmentNodeStore および DocumentNodeStore のテキスト事前抽出](assets/4.png)
 
 >[!NOTE]
 >
 >オレンジは、AEM がメンテナンスウィンドウ内にある必要があるアクティビティを意味します。
 
-### oak-run.jar を使用した MongoMK または RDBMK のオンラインインデックス再作成  {#onlinere-indexingformongomk}
+### oak-run.jar を使用した MongoMK または RDBMK のオンラインインデックス再作成 {#onlinere-indexingformongomk}
 
 >[!NOTE]
 >
 >このシナリオについて詳しくは、[インデックス再作成 - DocumentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#reindexdocumentnodestore) を参照してください。
 
-これは、MongoMK（および RDBMK）AEM インストールのインデックスを再作成する場合にお勧めする方法です。他の方法は使用しないでください。
+これは、MongoMK（およびRDBMK） AEMインストールのインデックス再作成に推奨される方法です。 他の方法は使用しないでください。
 
 このプロセスは、クラスターの単一の AEM インスタンスに対してのみ実行する必要があります。
 
-![5](assets/5.png)
+![oak-run.jar を使用した MongoMK または RDBMK のオンラインインデックス再作成](assets/5.png)
 
 ## TarMK のインデックス再作成 {#re-indexingtarmk}
 
@@ -99,17 +99,17 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 
    * パブリッシュファームの場合は、すべてのパブリッシュで実行するか、単一のパブリッシュでこの手順を実行してから他のセットアップのクローンを作成する必要があります（AEM インスタンスのクローンを作成する際には、通常のすべての対策を取ります。sling.id をここの何かにリンクする必要があります）。
 
-### TarMK のオンラインインデックス再作成  {#onlinere-indexingfortarmk}
+### TarMK のオンラインインデックス再作成 {#onlinere-indexingfortarmk}
 
 >[!NOTE]
 >
 >このシナリオについて詳しくは、[オンラインのインデックス再作成 - SegmentNodeStore](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestore) を参照してください。
 
-これは、oak-run.jar の新しいインデックス作成機能の導入前に使用した方法です。Oak インデックスの `reindex=true` プロパティを設定することによっておこなうことができます。
+これは、oak-run.jarの新しいインデックス作成機能が導入される前に使用された方法です。 Oak インデックスの `reindex=true` プロパティを設定することによっておこなうことができます。
 
 この方法は、インデックス作成のための時間とパフォーマンスへの影響をお客様が受け入れられる場合に使用できます。これは、小～中規模の AEM インストールでよくある事例です。
 
-![6](assets/6.png)
+![TarMK のオンラインインデックス再作成](assets/6.png)
 
 ### oak-run.jar を使用した TarMK のオンラインインデックス再作成 {#onlinere-indexingtarmkusingoak-run-jar}
 
@@ -117,13 +117,13 @@ Oak-run は、コマンドラインでのすべてのインデックス作成の
 >
 >このシナリオに関する詳細は、[オンラインインデックス再作成 — SegmentNodeStore - AEMインスタンスは実行中](/help/sites-deploying/oak-run-indexing-usecases.md#onlinereindexsegmentnodestoretheaeminstanceisrunning)を参照してください。
 
-TarMK のオンラインインデックス再作成は、前述の TarkMK オンラインインデックス再作成よりも高速です。ただし、メンテナンスウィンドウ中に実行する必要があり、時間は短くなりますが、インデックス再作成を実行するためにより多くの手順が必要となります。
+oak-run.jarを使用したTarMKのオンラインインデックス再作成は、前述のTarMK](#onlinere-indexingfortarmk)のオンラインインデックス再作成よりも高速です。 [ただし、メンテナンスウィンドウ中にも実行する必要があります。ウィンドウが短くなり、インデックスの再作成を実行するためにより多くの手順が必要になるというメンションが表示されます。
 
 >[!NOTE]
 >
 >オレンジは、AEM でメンテナンス期間が実行されている必要がある操作を意味します。
 
-![7](assets/7.png)
+![oak-run.jar を使用した TarMK のオンラインインデックス再作成](assets/7.png)
 
 ### oak-run.jar を使用した TarMK のオフラインインデックス再作成 {#offlinere-indexingtarmkusingoak-run-jar}
 
@@ -137,7 +137,7 @@ TarMK のオフラインインデックス再作成は、1 つの `oak-run.jar` 
 >
 >赤は、AEM をシャットダウンする必要がある操作を意味します。
 
-![8](assets/8.png)
+![oak-run.jar を使用した TarMK のオフラインインデックス再作成](assets/8.png)
 
 ### oak-run.jar を使用した TarMK の Out-of-band インデックス再作成  {#out-of-bandre-indexingtarmkusingoak-run-jar}
 
@@ -151,7 +151,7 @@ Out-of-band インデックス再作成は、使用中の AEM インスタンス
 >
 >赤は、AEM をシャットダウンしたほうがよい操作を意味します。
 
-![9](assets/9.png)
+![oak-run.jar を使用した TarMK の Out-of-band インデックス再作成](assets/9.png)
 
 ## インデックス作成定義の更新 {#updatingindexingdefinitions}
 
@@ -165,18 +165,18 @@ Out-of-band インデックス再作成は、使用中の AEM インスタンス
 >
 >ACS Ensure Index は、コミュニティがサポートするプロジェクトで、アドビサポートはサポートしていません。
 
-これにより、コンテンツパッケージを介したインデックス定義の送信が可能になります。コンテンツパッケージは、reindex フラグを `true` に設定することで、後でインデックスが再作成されます。これは、インデックス再作成に時間がかからない小規模なセットアップで機能します。
+これにより、コンテンツパッケージを介してインデックス定義を送信でき、後で再インデックスフラグを`true`に設定して再インデックスを実行できます。 これは、インデックスの再作成に時間がかからない小規模なセットアップで機能します。
 
 詳しくは、[ACS Ensure Index のドキュメント](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html)を参照してください。
 
-### oak-run.jar を使用した TarMK でのインデックス定義の作成と更新  {#creatingandupdatingindexdefinitionsontarmkusingoak-run-jar}
+### oak-run.jar を使用した TarMK でのインデックス定義の作成と更新 {#creatingandupdatingindexdefinitionsontarmkusingoak-run-jar}
 
 `oak-run.jar` 以外の方法を使用したインデックス再作成の時間またはパフォーマンスへの影響が大きすぎる場合、次の `oak-run.jar` ベースのアプローチを使用して、TarMK ベースの AEM インストール環境に Lucene インデックス定義を読み込んでインデックスを再作成できます。
 
-![10](assets/10.png)
+![oak-run.jar を使用した TarMK でのインデックス定義の作成と更新](assets/10.png)
 
 ### oak-run.jar を使用した MonogMK でのインデックス定義の作成と更新 {#creatingandupdatingindexdefinitionsonmonogmkusingoak-run-jar}
 
 `oak-run.jar` 以外の方法を使用したインデックス再作成の時間またはパフォーマンスへの影響が大きすぎる場合、次の `oak-run.jar` ベースのアプローチを使用して、MongoMK ベースの AEM インストール環境に Lucene インデックス定義を読み込んでインデックスを再作成できます。
 
-![11](assets/11.png)
+![oak-run.jar を使用した MonogMK でのインデックス定義の作成と更新](assets/11.png)

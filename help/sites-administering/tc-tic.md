@@ -1,19 +1,19 @@
 ---
 title: 翻訳統合フレームワークの設定
-seo-title: 翻訳統合フレームワークの設定
+seo-title: Configuring the Translation Integration Framework
 description: 翻訳統合フレームワークを設定する方法について説明します。
-seo-description: 翻訳統合フレームワークを設定する方法について説明します。
+seo-description: Learn how to configure the Translation Integration Framework.
 uuid: 5ecfe154-732f-4a13-96f8-92f55023c54d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 200f51ab-f9bf-4989-91af-c3904fc673e5
-feature: 言語コピー
+feature: Language Copy
 exl-id: 7562754b-d9fd-441b-8ae5-c7eebe458cef
-source-git-commit: bed7ffd413c7826cf0e419fa1c31e3d3c325d4b1
+source-git-commit: cadf2e240327ef52ef57f8fb2e911f36fd003852
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1550'
 ht-degree: 91%
 
 ---
@@ -37,7 +37,6 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Cloudwords](https://exchange.adobe.com/experiencecloud.details.90019.html)
-* [CrossLang NV](https://exchange.adobe.com/experiencecloud.details.90049.crosslang-xtm-for-adobe-experience-manager.html)
 * [XTM Cloud](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
 * [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
@@ -57,14 +56,13 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 >
 
 
-
 コネクターパッケージをインストールしたら、コネクター用のクラウド設定を作成できます。通常は、翻訳サービスで認証をおこなうための資格情報を指定する必要があります。Microsft Translator コネクター用のクラウド設定の追加については、[Microsoft Translator との統合](/help/sites-administering/tc-msconf.md)を参照してください。
 
 必要に応じて、同じコネクターに対して複数のクラウド設定を作成できます。例えば、同じベンダーを使用するアカウントまたはプロジェクトごとに設定を 1 つずつ作成します。
 
 接続の設定が完了したら、その接続を使用する翻訳統合フレームワーク設定を作成できます。
 
-## 翻訳統合フレームワーク設定の作成  {#creating-a-translation-integration-configuration}
+## 翻訳統合フレームワーク設定の作成 {#creating-a-translation-integration-configuration}
 
 翻訳統合フレームワーク設定を作成して、コンテンツの翻訳方法を指定します。この設定には以下の情報が含まれます。
 
@@ -82,7 +80,7 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
 
 フレームワークの単一の設定によって、ページのコンテンツ、コミュニティのコンテンツおよびアセットの翻訳方法が制御されます。![chlimage_1-386](assets/translation-config-65.jpg)
 
-### 「Sites」の設定プロパティ {#sites-configuration-properties}
+### 「Sites」の設定プロパティ  {#sites-configuration-properties}
 
 「サイト」のプロパティは、ページのコンテンツの翻訳を実行する方法を制御します。
 
@@ -129,7 +127,7 @@ Web サイトのセクションごとに翻訳要件が異なる場合は、そ�
  </tbody>
 </table>
 
-### 「コミュニティ」の設定プロパティ  {#communities-configuration-properties}
+### 「コミュニティ」の設定プロパティ {#communities-configuration-properties}
 
 「コミュニティ」のプロパティは、ユーザー生成コンテンツの翻訳を実行する方法を制御します。ユーザー生成コンテンツの翻訳では常に機械翻訳を使用します。詳しくは、[ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。
 
