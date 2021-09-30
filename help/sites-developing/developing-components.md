@@ -1,8 +1,8 @@
 ---
 title: AEM コンポーネントの開発
-seo-title: AEM コンポーネントの開発
+seo-title: Developing AEM Components
 description: AEM コンポーネントを使用して、Web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
-seo-description: AEM コンポーネントを使用して、Web ページ上で使用できるコンテンツを保持、書式設定およびレンダリングします。
+seo-description: AEM components are used to hold, format, and render the content made available on your webpages.
 uuid: 1f39daa6-7277-45a2-adcc-74b58c93b8e4
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: f2a208acfa28f23cbf63d055c5d28698df476892
 workflow-type: tm+mt
-source-wordcount: '3533'
-ht-degree: 90%
+source-wordcount: '3485'
+ht-degree: 89%
 
 ---
 
@@ -33,11 +33,11 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 >[!NOTE]
 >
->このページは、[AEM Components - The Basics](/help/sites-developing/components-basics.md)ドキュメントの続きです。
+>このページは、[AEM Components - The Basics](/help/sites-developing/components-basics.md) ドキュメントの続きです。
 
 >[!CAUTION]
 >
->`/libs/cq/gui/components/authoring/dialog`の下のコンポーネントは、エディター（オーサリングのコンポーネントダイアログ）でのみ使用することを目的としています。 他の場所で使用すると（インスタンスのウィザードダイアログ内など）、予期したとおりに動作しないことがあります。
+>`/libs/cq/gui/components/authoring/dialog` の下のコンポーネントは、エディター（オーサリングのコンポーネントダイアログ）でのみ使用することを目的としています。 他の場所で使用すると（インスタンスのウィザードダイアログ内など）、予期したとおりに動作しないことがあります。
 
 ## コードサンプル {#code-samples}
 
@@ -45,7 +45,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ## 構造 {#structure}
 
-コンポーネントの基本構造については、[AEM コンポーネント - 基本](/help/sites-developing/components-basics.md#structure)で説明しています。このドキュメントでは、タッチ操作対応UIとクラシックUIの両方について説明します。 新しいコンポーネントでクラシック設定を使用する必要がない場合でも、既存のコンポーネントから継承する際にクラシック設定について知っていると役立ちます。
+コンポーネントの基本構造については、[AEM コンポーネント - 基本](/help/sites-developing/components-basics.md#structure)で説明しています。このドキュメントでは、タッチ操作対応 UI とクラシック UI の両方について説明します。 新しいコンポーネントでクラシック設定を使用する必要がない場合でも、既存のコンポーネントから継承する際にクラシック設定について知っていると役立ちます。
 
 ## 既存のコンポーネントおよびダイアログの拡張 {#extending-existing-components-and-dialogs}
 
@@ -53,7 +53,7 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 既存のコンポーネントまたはダイアログを拡張またはカスタマイズする際に、構造全体またはダイアログに必要な構造をコピーまたは複製してから変更することができます。
 
-### 既存コンポーネントの拡張  {#extending-an-existing-component}
+### 既存コンポーネントの拡張 {#extending-an-existing-component}
 
 既存コンポーネントは、[リソースタイプ階層](/help/sites-developing/components-basics.md#component-hierarchy-and-inheritance)と関連する継承メカニズムを使用して拡張できます。
 
@@ -65,15 +65,15 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 >
 >[コンテンツフラグメントコンポーネント](/help/sites-developing/customizing-content-fragments.md)もカスタマイズおよび拡張できますが、構造全体やアセットとの関係を考慮する必要があります。
 
-### 既存のコンポーネントダイアログのカスタマイズ  {#customizing-a-existing-component-dialog}
+### 既存のコンポーネントダイアログのカスタマイズ {#customizing-a-existing-component-dialog}
 
 *Sling Resource Merger* を使用し、[ プロパティを定義して、コンポーネントダイアログをオーバーライドすることもできます。](/help/sites-developing/sling-resource-merger.md)`sling:resourceSuperType`
 
-つまり、ダイアログ全体を再定義するのではなく、必要な違いのみを再定義する必要があります（`sling:resourceSuperType`を使用）。 これは、推奨されるコンポーネントダイアログ拡張方法です。
+つまり、ダイアログ全体を再定義するのではなく、必要な違いを再定義するだけで済みます（`sling:resourceSuperType` を使用）。 これは、推奨されるコンポーネントダイアログ拡張方法です。
 
 詳しくは、[Sling Resource Merger ](/help/sites-developing/sling-resource-merger.md) を参照してください。
 
-## マークアップの定義  {#defining-the-markup}
+## マークアップの定義 {#defining-the-markup}
 
 コンポーネントは [HTML](https://www.w3schools.com/htmL/html_intro.asp) を使用してレンダリングされます。コンポーネントでは、リクエストされたコンテンツを取得して、オーサリング環境とパブリッシュ環境の両方で必要に応じてレンダリングするために必要な HTML を定義しなければなりません。
 
@@ -95,23 +95,23 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 [HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります](https://helpx.adobe.com/jp/experience-manager/htl/using/use-api-java.html)。そのため、Java コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
 
-### JavaScript の使用  {#using-javascript}
+### JavaScript の使用 {#using-javascript}
 
 [HTL JavaScript Use-API を使用すると、HTL ファイルから JavaScript で書かれたヘルパーコードへのアクセスが可能になります](https://helpx.adobe.com/experience-manager/htl/using/use-api-javascript.html)。そのため、JavaScript コードを使用して、コンポーネントのコンテンツを選択および設定するためのロジックを実装できます。
 
-### クライアント側 HTML ライブラリの使用  {#using-client-side-html-libraries}
+### クライアント側 HTML ライブラリの使用 {#using-client-side-html-libraries}
 
 最近の Web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題に対処するために、AEMには&#x200B;**クライアント側ライブラリフォルダー**&#x200B;が用意されています。このフォルダーを使用して、クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。
+この問題に対処するために、AEMでは **クライアント側ライブラリフォルダー** を提供しています。このフォルダーを使用して、クライアント側コードをリポジトリに保存し、カテゴリに整理し、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
 詳しくは、[クライアント側 HTML ライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
 
-## 編集動作の設定  {#configuring-the-edit-behavior}
+## 編集動作の設定 {#configuring-the-edit-behavior}
 
 コンポーネントの編集動作を設定できます。編集動作には、コンポーネントに使用できるアクション、インプレースエディターの特性、コンポーネントに対するイベントに関連するリスナーなどの属性が含まれます。固有の相違点は多少ありますが、設定はタッチ操作対応 UI とクラシック UI の両方に共通です。
 
-コンポーネントの[編集動作は、タイプ`cq:EditConfig`の`cq:editConfig`ノードを（タイプ`cq:Component`の）コンポーネントノードの下に追加し、特定のプロパティと子ノードを追加することで](/help/sites-developing/components-basics.md#edit-behavior)設定します。
+コンポーネントの [ 編集動作は、タイプ `cq:EditConfig` の `cq:editConfig` ノードを（タイプ `cq:Component` の）コンポーネントノードの下に追加し、特定のプロパティと子ノードを追加することで ](/help/sites-developing/components-basics.md#edit-behavior) 設定します。
 
 ## プレビュー動作の設定 {#configuring-the-preview-behavior}
 
@@ -125,15 +125,13 @@ AEM コンポーネントを使用して、Web ページ上で使用できるコ
 
 ## ダイアログの作成と設定 {#creating-and-configuring-a-dialog}
 
-作成者はダイアログを使用してコンポーネントとやり取りできます。ダイアログを使用すると、作成者や管理者は、コンテンツの編集、コンポーネントの設定、デザインパラメーターの定義（[デザインダイアログ](#creating-and-configuring-a-design-dialog)を使用）をおこなうことができます
+作成者はダイアログを使用してコンポーネントとやり取りできます。ダイアログを使用すると、作成者や管理者はコンテンツの編集、コンポーネントの設定、デザインパラメーターの定義（[ デザインダイアログ ](#creating-and-configuring-a-design-dialog) を使用）をおこなえます。
 
 ### Coral UI と Granite UI {#coral-ui-and-granite-ui}
 
 AEM の現代的なルックアンドフィールは [Coral UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/index.html) と [Granite UI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) で定義されています。
 
 [Granite UI で提供される幅広い基本コンポーネント（ウィジェット）](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)は、オーサー環境でダイアログを作成するために使用されます。必要な場合には、選択したウィジェットを拡張し、[独自のウィジェットを作成](#creatinganewwidget)することができます。
-
-Coral および Granite リソースタイプを使用してコンポーネントを開発する方法について詳しくは、[Coral／Granite リソースタイプを使用した Experience Manager コンポーネントの作成](https://helpx.adobe.com/experience-manager/using/aem64_coral_resourcetypes.html)を参照してください。
 
 詳しくは、以下を参照してください。
 
@@ -146,26 +144,26 @@ Coral および Granite リソースタイプを使用してコンポーネン�
 * Granite UI
 
    * UI コンソールおよびダイアログの構築用に Coral UI マークアップを Sling コンポーネントにラップして提供
-   * [AEMタッチ操作対応UIの概念 — Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+   * [AEMタッチ操作対応 UI の概念 — Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
    * [Granite UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 >[!NOTE]
 >
 >Granite UI コンポーネントの性質（および ExtJS ウィジェットとの違い）により、タッチ操作対応 UI と[クラシック UI](/help/sites-developing/developing-components-classic.md) では、コンポーネントとのやり取りにいくつかの相違点があります。
 
-### 新しいダイアログの作成  {#creating-a-new-dialog}
+### 新しいダイアログの作成 {#creating-a-new-dialog}
 
 タッチ操作対応 UI 用ダイアログは、以下のように実装されます。
 
-* の名前は`cq:dialog`です。
-* は、`sling:resourceType`プロパティが設定された`nt:unstructured`ノードとして定義されます。
+* は `cq:dialog` という名前です。
+* は、`sling:resourceType` プロパティが設定された `nt:unstructured` ノードとして定義されます。
 
 * `cq:Component` ノードの下のコンポーネント定義の横にあります。
 * コンテンツ構造と `sling:resourceType` プロパティに基づいて、サーバー側で（Sling コンポーネントとして）レンダリングされます。
 * Granite UI フレームワークを使用します。
 * ダイアログ内のフィールドを記述したノード構造を含みます。
 
-   * これらのノードは、必要な`sling:resourceType`プロパティを持つ`nt:unstructured`です。
+   * これらのノードは、必要な `sling:resourceType` プロパティを持つ `nt:unstructured` です。
 
 ノード構造の例は次のようになります。
 
@@ -204,7 +202,6 @@ newComponent (cq:Component)
 >
 
 
-
 #### 新しいフィールドの作成 {#creating-a-new-field}
 
 タッチ操作対応 UI 用のウィジェットは、Granite UI コンポーネントとして実装されています。
@@ -231,7 +228,7 @@ newComponent (cq:Component)
 
 コンポーネントのスタイル設定と動作を定義する場合は、カスタム CSS/LESS および JS を定義する専用の[クライアントライブラリ](/help/sites-developing/clientlibs.md)を作成できます。
 
-クライアントライブラリをコンポーネントダイアログ用にのみ読み込む（別のコンポーネント用に読み込まない）には、ダイアログの`extraClientlibs`** **プロパティを作成したクライアントライブラリのカテゴリ名に設定する必要があります。 この方法は、クライアントライブラリが非常に大きい場合や、フィールドがそのダイアログに固有で、他のダイアログで必要になることがない場合にお勧めです。
+クライアントライブラリをコンポーネントダイアログ用にのみ読み込む（別のコンポーネント用に読み込まれない）には、ダイアログの `extraClientlibs`** **プロパティを作成したクライアントライブラリのカテゴリ名に設定する必要があります。 この方法は、クライアントライブラリが非常に大きい場合や、フィールドがそのダイアログに固有で、他のダイアログで必要になることがない場合にお勧めです。
 
 クライアントライブラリをすべてのダイアログ用に読み込むには、クライアントライブラリのカテゴリプロパティを `cq.authoring.dialog` に設定します。これは、すべてのダイアログのレンダリング時にデフォルトで含まれるクライアントライブラリのカテゴリ名です。クライアントライブラリが小さい場合や、フィールドが汎用的で、他のダイアログで再利用できる場合には、この方法を使用できます。
 
@@ -241,7 +238,7 @@ newComponent (cq:Component)
 
    * [コードサンプル](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)で提供
 
-#### フィールドの拡張（フィールドからの継承）  {#extending-inheriting-from-a-field}
+#### フィールドの拡張（フィールドからの継承） {#extending-inheriting-from-a-field}
 
 要件に応じて、次のどちらかを実行できます。
 
@@ -260,11 +257,11 @@ newComponent (cq:Component)
     - groups = ["administrators"]
 ```
 
-### Handling Field Events {#handling-field-events}
+### フィールドイベントの処理 {#handling-field-events}
 
 ダイアログフィールドのイベントの処理は、[カスタムクライアントライブラリのリスナー](#listeners-in-a-custom-client-library)でおこなわれるようになりました。これは以前の方法からの変更点です。以前は、[コンテンツ構造のリスナー](#listenersinthecontentstructureclassicui)を使用していました。
 
-#### カスタムクライアントライブラリのリスナー  {#listeners-in-a-custom-client-library}
+#### カスタムクライアントライブラリのリスナー {#listeners-in-a-custom-client-library}
 
 フィールドにロジックを挿入するには、以下を実行する必要があります。
 
@@ -279,7 +276,7 @@ newComponent (cq:Component)
 
    * [コードサンプル](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)で提供
 
-#### コンテンツ構造のリスナー  {#listeners-in-the-content-structure}
+#### コンテンツ構造のリスナー {#listeners-in-the-content-structure}
 
 ExtJS を使用するクラシック UI では、コンテンツ構造内に指定のウィジェットのリスナーを用意することが普通でした。タッチ操作対応 UI では、同じことを別の方法で実現します。JS のリスナーコード（またはあらゆるコード）はコンテンツ内で定義されないからです。
 
@@ -308,7 +305,7 @@ ExtJS を使用するクラシック UI では、コンテンツ構造内に指�
 /libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title
 ```
 
-#### フィールドの検証（Granite UI）  {#field-validation-granite-ui}
+#### フィールドの検証（Granite UI） {#field-validation-granite-ui}
 
 Granite UI でのフィールド検証および Granite UI コンポーネント（ウィジェットと同等）のフィールド検証は、`foundation-validation` API を使用して実行します。[詳しくは、`foundation-valdiation`Granite のドキュメントを参照してください。](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
@@ -337,13 +334,13 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 
 詳しくは、[ページオーサリングの拡張 - 新しいインプレースエディターを追加](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor)を参照してください。
 
-## コンポーネントツールバーのカスタマイズ  {#customizing-the-component-toolbar}
+## コンポーネントツールバーのカスタマイズ {#customizing-the-component-toolbar}
 
 [コンポーネントツールバー](/help/sites-developing/touch-ui-structure.md#component-toolbar)は、ユーザーがコンポーネントに対する幅広いアクション（編集、設定、コピー、削除など）にアクセスできるようにする機能です。
 
 詳しくは、[ページオーサリングの拡張 - 新しいアクションをコンポーネントツールバーに追加](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar)を参照してください。
 
-## 参照レール用のコンポーネント（借りた／貸したコンテンツ）の設定  {#configuring-a-component-for-the-references-rail-borrowed-lent}
+## 参照レール用のコンポーネント（借りた／貸したコンテンツ）の設定 {#configuring-a-component-for-the-references-rail-borrowed-lent}
 
 新しいコンポーネントが他のページのコンテンツを参照する場合は、[**参照**](/help/sites-authoring/basic-handling.md#references)&#x200B;レールの「**借りたコンテンツ**」セクションおよび「**貸したコンテンツ**」セクションに影響を与えるかどうかを考慮できます。
 
@@ -357,7 +354,7 @@ Granite UI でのフィールド検証および Granite UI コンポーネント
 >
 >AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-## コンポーネントの有効化と段落システムへの追加  {#enabling-and-adding-your-component-to-the-paragraph-system}
+## コンポーネントの有効化と段落システムへの追加 {#enabling-and-adding-your-component-to-the-paragraph-system}
 
 コンポーネントを開発したら、必要なページで使用できるよう、適切な段落システムでの使用を有効にする必要があります。
 
@@ -430,12 +427,12 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-project-archetypeプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
+* [GitHub の aem-project-archetype プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype/archive/master.zip)としてダウンロードします
 
 >[!NOTE]
 >
->[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)と編集可能なテンプレートを使用する場合、UI内でコンポーネントインスタンスの自動作成を簡単に設定できるようになりました。 特定のメディアタイプに自動的に関連付けられるコンポーネントの定義について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
+>[ コアコンポーネント ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) と編集可能テンプレートを使用する場合、UI 内でコンポーネントインスタンスの自動作成を簡単に設定できるようになりました。 特定のメディアタイプに自動的に関連付けられるコンポーネントの定義について詳しくは、[ ページテンプレートの作成 ](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) を参照してください。
 
 ## AEM Brackets 拡張の使用 {#using-the-aem-brackets-extension}
 
@@ -444,13 +441,13 @@ GitHub のコード
 この拡張には、次の機能があります。
 
 * 同期を容易にして（Maven や File Vault は不要）、開発者の効率を向上させるだけでなく、AEM に関する知識が限られたフロントエンド開発者もプロジェクトに参加できるようにします。
-* コンポーネントの開発を簡素化し、セキュリティを強化するために設計されたテンプレート言語である[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html)のサポートを提供します。
+* コンポーネントの開発を簡素化し、セキュリティを強化するために設計されたテンプレート言語である [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) のサポートを提供します。
 
 >[!NOTE]
 >
 >Brackets は、コンポーネントを作成するための推奨メカニズムです。Brackets は、クラシック UI 向けに設計された CRXDE Lite のコンポーネント作成機能の代わりになります。
 
-## クラシックコンポーネントからの移行  {#migrating-from-a-classic-component}
+## クラシックコンポーネントからの移行 {#migrating-from-a-classic-component}
 
 クラシック UI で使用するようにデザインされたコンポーネントを、タッチ操作対応 UI 専用または両方の UI で使用できるコンポーネントに移行する場合は、以下の問題を考慮する必要があります。
 
@@ -467,15 +464,15 @@ GitHub のコード
 * ダイアログ
 
    * タッチ操作対応 UI で使用される新しいダイアログを作成する必要があります。ただし、タッチ操作対応 UI 用のダイアログが定義されていないときは、互換性のために、タッチ操作対応 UI でクラシック UI ダイアログの定義を使用できます。
-   * 既存のコンポーネントを拡張するのに役立つ[AEM Modernization Tools](/help/sites-developing/modernization-tools.md)が提供されています。
+   * 既存のコンポーネントを拡張するのに役立つ [AEM Modernization Tools](/help/sites-developing/modernization-tools.md) が提供されています。
    * [ExtJS の Granite UI コンポーネントへのマッピング](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)では、ExtJS の xtype およびノードタイプと同等な Granite UI リソースタイプに関する簡単な概要について説明しています。
    * フィールドをカスタマイズします。詳しくは、[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
    * vtypes から [Granite UI 検証](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)に移行します。
    * JS リスナーを使用します。詳しくは、[フィールドイベントの処理](#handling-field-events)および[ダイアログフィールドのカスタマイズ](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html)に関する AEM Gems セッションを参照してください。
 
-### cq:listener コードの移行  {#migrating-cq-listener-code}
+### cq:listener コードの移行 {#migrating-cq-listener-code}
 
-クラシックUI用に設計されたプロジェクトを移行する場合、`cq:listener`コード（およびコンポーネント関連のclientlib）では、クラシックUI専用の関数（`CQ.wcm.*`など）を使用できます。 移行するには、タッチ操作対応 UI 用の同等のオブジェクトまたは関数を使用して、このようなコードを更新する必要があります。
+クラシック UI 用に設計されたプロジェクトを移行する場合、`cq:listener` コード（およびコンポーネント関連の clientlib）では、クラシック UI に固有の関数（`CQ.wcm.*` など）を使用できます。 移行するには、タッチ操作対応 UI 用の同等のオブジェクトまたは関数を使用して、このようなコードを更新する必要があります。
 
 プロジェクトをタッチ操作対応 UI に完全に移行する場合は、タッチ操作対応 UI に関連するオブジェクトや関数を使用するように、このようなコードを置き換える必要があります。
 
@@ -491,7 +488,7 @@ if (Granite.author) {
 }
 ```
 
-## コンポーネントのドキュメント化  {#documenting-your-component}
+## コンポーネントのドキュメント化 {#documenting-your-component}
 
 開発者は、以下をすばやく把握できるようにコンポーネントドキュメントに簡単にアクセスしたいと考えます。
 
@@ -507,4 +504,4 @@ if (Granite.author) {
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
-サポートされるMarkdownは、[コンテンツフラグメント](/help/assets/content-fragments/content-fragments-markdown.md)の場合と同じです。
+サポートされる Markdown は、[ コンテンツフラグメント ](/help/assets/content-fragments/content-fragments-markdown.md) の場合と同じです。
