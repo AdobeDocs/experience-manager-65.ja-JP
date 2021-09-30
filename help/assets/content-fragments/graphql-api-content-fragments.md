@@ -1,9 +1,9 @@
 ---
 title: コンテンツフラグメントと共に使用する AEM GraphQL API
-description: Adobe Experience Manager(AEM)のコンテンツフラグメントを、ヘッドレスコンテンツ配信にAEM GraphQL APIと共に使用する方法を説明します。
+description: Adobe Experience Manager(AEM) のコンテンツフラグメントを、ヘッドレスコンテンツ配信にAEM GraphQL API と共に使用する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
 workflow-type: tm+mt
 source-wordcount: '3919'
 ht-degree: 97%
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 # コンテンツフラグメントと共に使用する AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-Adobe Experience Manager(AEM)のコンテンツフラグメントを、ヘッドレスコンテンツ配信にAEM GraphQL APIと共に使用する方法を説明します。
+Adobe Experience Manager(AEM) のコンテンツフラグメントを、ヘッドレスコンテンツ配信にAEM GraphQL API と共に使用する方法を説明します。
 
 コンテンツフラグメントと共に使用する AEM GraphQL API は、オープンソースの標準 GraphQL API に大きく依存しています。
 
@@ -24,7 +24,7 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 
 >[!NOTE]
 >
->GraphQLは、現在、Adobe Experience Manager(AEM)の2つの（個別の）シナリオで使用されています。
+>GraphQL は、現在、Adobe Experience Manager(AEM) の 2 つの（個別の）シナリオで使用されています。
 >
 >* [AEM Commerce が、GraphQL 経由でコマースプラットフォームのデータを使用する](/help/commerce/cif/integrating/magento.md)。
 >* AEM コンテンツフラグメントが、AEM GraphQL API（標準の GraphQL に基づくカスタム実装）と連携して、アプリケーションで使用するための構造化コンテンツを配信する。
@@ -56,7 +56,7 @@ GraphQL API の詳細については、（多くのリソースの中でも特�
 
    * [GraphQL の概要](https://graphql.org/learn)
 
-   * [GraphQL の仕様](http://spec.graphql.org/)
+   * [GraphQL の仕様](https://spec.graphql.org/)
 
 * [graphql.com](https://graphql.com)：
 
@@ -157,7 +157,7 @@ GraphQL エンドポイントを有効にするには、まず適切な設定が
 
 対応するエンドポイントを有効にするには、以下を行います。
 
-1. **ツール**、**アセット**&#x200B;に移動し、**GraphQL**&#x200B;を選択します。
+1. **ツール**、**アセット** に移動し、**GraphQL** を選択します。
 1. 「**作成**」を選択します。
 1. **新しい GraphQL エンドポイントを作成**&#x200B;ダイアログが開きます。以下を指定します。
    * **名前**：エンドポイントの名前。任意のテキストを入力できます。
@@ -228,7 +228,7 @@ GraphiQL ユーザーインターフェイスは、専用のパッケージ（[G
 
 * オーサー環境の使用目的：
    * 「コンテンツ管理用」のデータのクエリ：
-      * AEMのGraphQLは、現在、読み取り専用APIです。
+      * AEMの GraphQL は、現在、読み取り専用の API です。
       * CR（U）D 操作には REST API を使用できます。
 
 ## 権限 {#permission}
