@@ -1,8 +1,8 @@
 ---
 title: ページプロパティの編集
-seo-title: ページプロパティの編集
+seo-title: Editing Page Properties
 description: ページに必要なプロパティを定義します
-seo-description: ページに必要なプロパティを定義します
+seo-description: Define the required properties for a page
 uuid: d3a2183b-8082-4cfc-aeed-26facbf3f3e6
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 90%
+source-wordcount: '1898'
+ht-degree: 87%
 
 ---
 
@@ -92,7 +92,7 @@ ht-degree: 90%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   例えば、Webサイト`http://example.com,`のパス`/v1.0/startpage`で識別されるページに対して、バニティURLが`welcome`に設定されている場合、`http://example.com/welcome`は`http://example.com/content/v1.0/startpage`のバニティURLになります
+   例えば、Web サイト `http://example.com,` のパス `/v1.0/startpage` で識別されるページに対して、バニティ URL が `welcome` に設定されている場合、`http://example.com/welcome` は `http://example.com/content/v1.0/startpage` のバニティ URL になります。
 
    >[!CAUTION]
    >
@@ -103,7 +103,7 @@ ht-degree: 90%
    >* 既存のページには設定しないでください。
 
 
-   また、バニティーURLへのアクセスを有効にするようにDispatcherを設定する必要があります。 詳しくは、[バニティーURL](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)へのアクセスの有効化を参照してください。
+   また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。 詳しくは、[ バニティー URL へのアクセスの有効化 ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
 
 * **バニティ URL をリダイレクト**
 
@@ -131,13 +131,10 @@ ht-degree: 90%
 
    このページで使用されるエイリアスを指定します。
 
-   >[!NOTE]
-   >
-   >「エイリアス」は、リソースのエイリアス名を定義する `sling:alias` プロパティを設定します（これはリソースにのみ影響を及ぼし、パスには影響しません）。
-   >
-   >例えば、`/content/we-retail/spanish` ノードに `latin-lang` というエイリアスを定義した場合、このページは `/content/we-retail/latin-language` でアクセスできます。
-   >
-   >詳しくは、「SEOとURL管理のベストプラクティス](/help/managing/seo-and-url-management.md#localized-page-names)」の「[ページ名のローカライズ」を参照してください。
+   * 例えば、ページ `/content/wknd/us/en/magazine/members-only` に `private` というエイリアスを定義した場合、このページは `/content/wknd/us/en/magazine/private` を介してもアクセスできます
+   * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定され、リソースにのみ影響を与えます。リポジトリパスには影響を与えません。
+   * エディターでエイリアスによってアクセスされたページは公開できません。 [エディ](/help/sites-authoring/publishing-pages.md) ターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
+   * 詳しくは、[SEO と URL 管理のベストプラクティス ](/help/managing/seo-and-url-management.md#localized-page-names) のページ名のローカライズを参照してください。
 
 * **&lt;*path*> から継承**
 
@@ -161,7 +158,7 @@ ht-degree: 90%
 
    >[!CAUTION]
    >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled`プロパティの存在に基づいて、非推奨のCUG設定を使用してページ権限が設定されている場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示され、オプションは編集できず、[権限](/help/sites-authoring/editing-page-properties.md#permissions)も編集できません。
+   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 `cq:cugEnabled` プロパティの存在に基づいて、非推奨の CUG 設定を使用してページ権限が設定されている場合は、**認証要件** の下に警告メッセージが表示され、オプションは編集できず、[ 権限 ](/help/sites-authoring/editing-page-properties.md#permissions) も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -236,14 +233,14 @@ ht-degree: 90%
    * [有効な権限](/help/sites-administering/user-group-ac-admin.md)を表示
    >[!CAUTION]
    >
-   >「**権限**」タブでは、`granite:AuthenticationRequired` mixinの存在に基づいてCUG設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >「**権限**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループ、アクセス権の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ ユーザー、グループ、アクセス権の管理 ](/help/sites-administering/user-group-ac-admin.md) を参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -274,7 +271,7 @@ ht-degree: 90%
       * 単一のページ
       * 複数のページ（まとめて編集する場合は、プロパティのサブセットのみを使用できます）
 
-* ページエディターから、次の操作をおこないます。
+* ページエディターから、次の操作を行います。
 
    * 「**ページ情報**」（その後、「**プロパティを開く**」）を使用します
 
@@ -340,7 +337,7 @@ ht-degree: 90%
 
    * いずれかのページがライブコピー中である場合、プロパティを開くときにメッセージが表示されます。
 
-一括編集を開始すると、次の操作をおこなうことができます。
+一括編集を開始すると、次の操作を行うことができます。
 
 * **表示**
 
@@ -371,7 +368,7 @@ ht-degree: 90%
 
       * 新しい値は、「**完了**」を選択したときに、選択したすべてのページに適用されます。
       * フィールドが複数値（タグなど）の場合は、新しい値を追加するか、共通の値を削除できます。
-   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重におこなう必要があります。
+   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重に行う必要があります。
 
 
 >[!NOTE]

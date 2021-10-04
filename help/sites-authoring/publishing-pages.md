@@ -1,8 +1,8 @@
 ---
 title: ページの公開
-seo-title: ページの公開
+seo-title: Publishing Pages
 description: ページの公開
-seo-description: 'null'
+seo-description: null
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 92%
+source-wordcount: '1661'
+ht-degree: 89%
 
 ---
 
@@ -32,16 +32,13 @@ ht-degree: 92%
 >
 >* **公開／非公開**
    >  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
-   >
-   >
-* **アクティブ化／非アクティブ化**
-   >  公開／非公開と同義です。
-   >
-   >
-* **レプリケート／レプリケーション**
-   >  これらは、ユーザーのコメントを公開またはリバースレプリケートする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
-
+>* **アクティブ化／非アクティブ化**
+   >  公開／非公開と同義です。
+>
+>* **レプリケート／レプリケーション**
+   >  これらは、ユーザーのコメントを公開または逆複製する場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
+>
 
 
 >[!NOTE]
@@ -53,7 +50,6 @@ ht-degree: 92%
 >* ワークフローがトリガーされたことを通知するメッセージが少しの間表示されます。
 
 >
-
 
 
 ## ページの公開 {#publishing-pages-1}
@@ -71,7 +67,7 @@ ht-degree: 92%
 
    ![screen_shot_2018-03-21at152734](assets/screen_shot_2018-03-21at152734.png)
 
-1. 公開が必要な参照がページに含まれているかどうかに応じて、次の操作をおこないます。
+1. 公開が必要な参照がページに含まれているかどうかに応じて、次の操作を行います。
 
    * 公開する参照がない場合、ページが直接公開されます。
    * 公開が必要な参照がページに含まれている場合は、それらのリストが&#x200B;**公開**&#x200B;ウィザードに表示され、ウィザードで次のいずれかを実行できます。
@@ -93,6 +89,10 @@ ht-degree: 92%
 >[!NOTE]
 >
 >エディターからの公開は、浅い公開です。つまり、選択したページだけが公開され、子ページは公開されません。
+
+>[!NOTE]
+>
+>エディターで [ エイリアス ](/help/sites-authoring/editing-page-properties.md#advanced) によってアクセスされたページは公開できません。 エディターの「公開」オプションは、実際のパスからアクセスしたページでのみ使用できます。
 
 ### コンソールからの公開 {#publishing-from-the-console}
 
@@ -121,7 +121,7 @@ ht-degree: 92%
 >
 >クイック公開は、浅い公開です。つまり、選択したページだけが公開され、子ページは公開されません。
 
-#### 公開を管理  {#manage-publication}
+#### 公開を管理 {#manage-publication}
 
 **公開を管理**&#x200B;には、クイック公開よりも多くのオプションがあります。子ページを含めたり、参照をカスタマイズしたり、使用可能なワークフローを開始したり、後日公開するためのオプションを提供したりします。
 
@@ -144,7 +144,7 @@ ht-degree: 92%
 
    「**次へ**」をクリックして次に進みます。
 
-1. 公開を管理ウィザードの次の手順（**範囲**）で、子ページを含めたり、参照を含めたりするなど、公開/非公開の範囲を定義できます。
+1. 公開を管理ウィザードの次の手順の **範囲** では、子ページを含めたり、参照を含めたりするなど、公開/非公開の範囲を定義できます。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -194,7 +194,7 @@ ht-degree: 92%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。公開権限に関する前述の[ページ](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)の注意を参照し、詳しくは、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)を参照してください。
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。公開権限に関する前述の [ を参照してください。詳しくは、[ ワークフローへのアクセスの管理 ](/help/sites-administering/workflows-managing.md) および [ ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) を参照してください。](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
@@ -219,7 +219,11 @@ ht-degree: 92%
 
 ページを編集する際に、そのページを非公開にする場合、[ページを公開](/help/sites-authoring/publishing-pages.md#publishing-from-the-editor)するときと同じように、**ページ情報**&#x200B;メニューで「**ページを非公開にする**」を選択します。
 
-### コンソールから非公開にする  {#unpublishing-from-the-console}
+>[!NOTE]
+>
+>エディターで [aliases](/help/sites-authoring/editing-page-properties.md#advanced) によってアクセスされたページを非公開にすることはできません。 エディターの「公開」オプションは、実際のパスからアクセスしたページでのみ使用できます。
+
+### コンソールから非公開にする {#unpublishing-from-the-console}
 
 [「公開を管理」オプションを使用して公開する](/help/sites-authoring/publishing-pages.md#manage-publication)場合と同様に、「公開を管理」オプションを使用して非公開にできます。
 
@@ -238,7 +242,7 @@ ht-degree: 92%
 
 多数のコンテンツページを入力または更新した場合、これらのページがすべて同じルートページの下にあれば、ツリー全体を 1 回の操作で簡単に公開できます。
 
-サイトコンソールにある「[公開を管理](/help/sites-authoring/publishing-pages.md#manage-publication)」オプションを使用すると、これをおこなうことができます。
+サイトコンソールにある「[公開を管理](/help/sites-authoring/publishing-pages.md#manage-publication)」オプションを使用すると、これを行うことができます。
 
 1. サイトコンソールで、公開または非公開するツリーのルートページを選択し、「**公開を管理**」を選択します。
 1. **公開を管理**&#x200B;ウィザードが起動します。公開または非公開と実行するタイミングを選択して、「**次へ**」を選択して続行します。
@@ -261,7 +265,7 @@ ht-degree: 92%
 
    「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [通常どおりに公開を管理ウィザードを](#manage-publication) 続行し、ツリーの公開または非公開を完了します。
+1. [通常どおりに公開を管理ウィザード](#manage-publication) を続行し、ツリーの公開または非公開を完了します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
