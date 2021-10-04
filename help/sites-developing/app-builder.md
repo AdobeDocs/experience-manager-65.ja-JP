@@ -1,19 +1,19 @@
 ---
-title: Adobe開発者 App Builder を使用して、Cloud Serviceとして  [!DNL Adobe Experience Manager]  を拡張しています。
-description: Adobe開発者 App Builder を使用して、Cloud Serviceとして  [!DNL Adobe Experience Manager]  を拡張しています。
-source-git-commit: 8128cb074b9a027c3a51ea7dbd3a4987fc0df03e
+title: ' [!DNL Adobe Experience Manager] 6.5 を拡張 (Adobe開発者アプリビルダーを使用 )。'
+description: ' [!DNL Adobe Experience Manager] 6.5 を拡張 (Adobe開発者アプリビルダーを使用 )。'
+source-git-commit: aab7d4aaf11b6aef3b729f906259a76c152fd6f0
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Adobe開発者 App Builder を使用したCloud Serviceとしての [!DNL Adobe Experience Manager] の拡張 {#extend-using-app-builder}
+# [!DNL Adobe Experience Manager] 拡張 (Adobe開発者 App Builder を使用 ) {#extend-using-app-builder}
 
-## AEM as aCloud Serviceの App Builder とは {#project-firefly}
+## AEMの App Builder とは {#project-firefly}
 
-新しいAdobe開発者アプリビルダーは、開発者がCloud Service機能としてAEMを簡単に拡張できる拡張フレームワークを提供します。
+新しいAdobe開発者アプリビルダーは、AEM機能を簡単に拡張できる拡張フレームワークを開発者に提供します。
 
 App Builder は、Adobe Experience Managerを拡張するカスタムエクスペリエンスを統合および作成するための、統合されたサードパーティの拡張フレームワークを提供します。 Adobeのインフラストラクチャに基づいて構築されたこの完全な拡張フレームワークを使用すると、開発者は、カスタムマイクロサービスを構築し、Adobeソリューションとその他の IT スタックをまたいでAdobe Experience Managerを拡張し、統合できます。
 
