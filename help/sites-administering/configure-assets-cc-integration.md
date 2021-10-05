@@ -1,32 +1,32 @@
 ---
 title: AEM Assets統合とExperience Cloudの設定
-description: AEM Assetsとの統合を設定する方法についてExperience Cloudします。
+description: AEM Assetsとの統合を設定するExperience Cloud。
 contentOwner: AG
-feature: アセット管理
+feature: Asset Management
 role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 46%
+source-wordcount: '987'
+ht-degree: 44%
 
 ---
 
 # AEM Assets統合とExperience Cloudの設定 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Assets内のアセットをAdobe Creative Cloudと（または内のアセットを同期）できます。 また、アセットを Experience Cloud に（またはその逆に）同期することもできます。この同期は[!DNL Adobe I/O]を使用して設定できます。 [!DNL Adobe Marketing Cloud]の更新名は[!DNL Adobe Experience Cloud]です。
+Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Assets 内のアセットをAdobe Creative Cloudと（またはその逆と）同期できます。 また、アセットを Experience Cloud に（またはその逆に）同期することもできます。この同期は [!DNL Adobe I/O] を使用して設定できます。 [!DNL Adobe Marketing Cloud] の更新名は [!DNL Adobe Experience Cloud] です。
 
 この統合をセットアップするためのワークフローを以下に示します。
 
-1. [!DNL Adobe I/O]で公開ゲートウェイを使用して認証を作成し、アプリケーションIDを取得します。
-1. アプリケーションIDを使用して、AEM Assetsインスタンス上にプロファイルを作成します。
+1. [!DNL Adobe I/O] で公開ゲートウェイを使用して認証を作成し、アプリケーション ID を取得します。
+1. アプリケーション ID を使用して、AEM Assetsインスタンス上にプロファイルを作成します。
 1. この設定を使用して、アセットを同期します。
 
 バックエンドでは、 サーバーがゲートウェイを使用してプロファイルを認証し、AEM Assets と Experience Cloud 間でデータを同期します。
 
 >[!NOTE]
 >
->この機能は[!DNL Assets]では非推奨です。 [AEMとCreative Cloudの統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)で代替品を検索します。 質問がある場合は、[カスタマーケアにお問い合わせください。](https://www.adobe.com/account/sign-in.supportportal.html)
+>この機能は [!DNL Assets] で非推奨（廃止予定）となりました。 [AEMとCreative Cloudの統合のベストプラクティス ](/help/assets/aem-cc-integration-best-practices.md) で代替品を検索します。 質問がある場合は、[Adobeカスタマーケア ](https://www.adobe.com/account/sign-in.supportportal.html) にお問い合わせください。
 
 <!-- Hiding this for now via cqdoc-16834.
 ![Flow of data when AEM Assets and Creative Cloud are integrated](assets/chlimage_1-48.png)
@@ -44,18 +44,18 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
    >
    >アプリケーション ID を作成するには管理者権限が必要です。
 
-1. 左側のウィンドウから、**[!UICONTROL 開発者ツール]** / **[!UICONTROL アプリケーション]**&#x200B;に移動して、アプリケーションのリストを表示します。
-1. **** ![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png)をクリックして、アプリケーションを作成します。
+1. 左側のウィンドウから、**[!UICONTROL 開発者ツール]** / **[!UICONTROL アプリケーション]** に移動して、アプリケーションのリストを表示します。
+1. 「**** ![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png) を追加」をクリックして、アプリケーションを作成します。
 1. 「**[!UICONTROL クライアント資格情報]**」リストから「**[!UICONTROL サービスアカウント（JWT アサーション）]**」を選択します。これは、サーバー認証用のサーバー間通信サービスです。
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 1. アプリケーションの名前とオプションの説明を指定します。
 1. 「**[!UICONTROL 組織]**」リストからアセットを同期する組織を選択します。
-1. **[!UICONTROL スコープ]**&#x200B;リストから、**[!UICONTROL dam-read]**、**[!UICONTROL dam-sync]**、**[!UICONTROL dam-write]**&#x200B;および&#x200B;**[!UICONTROL cc-share]**&#x200B;を選択します。
+1. **[!UICONTROL スコープ]** リストから、**[!UICONTROL dam-read]**、**[!UICONTROL dam-sync]**、**[!UICONTROL dam-write]**、**[!UICONTROL cc-share]** を選択します。
 1. 「**[!UICONTROL 作成]**」をクリックします。アプリケーションが作成されたことを示すメッセージが表示されます。
 
-   ![AEM Assets と Adobe CC を統合するアプリケーションの作成成功通知](assets/chlimage_1-50.png)
+   ![AEM AssetsとCreative Cloudを統合するアプリケーションが正常に作成されたことの通知](assets/chlimage_1-50.png)
 
 1. 新規アプリケーションに対して生成された&#x200B;**[!UICONTROL アプリケーション ID]** をコピーします。
 
@@ -67,7 +67,7 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 
 1. AEM Assets のローカルインスタンスの UI で AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL 従来のクラウドサービス]**&#x200B;の順に移動します。
 
-1. **[!UICONTROL Adobe Experience Cloud]**&#x200B;サービスを探します。 設定が存在しない場合は、「**[!UICONTROL 今すぐ設定]**」をクリックします。 設定が存在する場合は、「**[!UICONTROL 設定を表示]**」をクリックし、「`+`」をクリックして新しい設定を追加します。
+1. **[!UICONTROL Adobe Experience Cloud]** サービスを探します。 設定が存在しない場合は、「**[!UICONTROL 今すぐ設定]**」をクリックします。 設定が存在する場合は、「**[!UICONTROL 設定を表示]**」をクリックし、「`+`」をクリックして新しい設定を追加します。
 
    >[!NOTE]
    >
@@ -75,27 +75,27 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 
 1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、新しい設定のタイトルと名前を指定し、「**[!UICONTROL 作成]**」をクリックします。
 
-   ![AEM Assets と CC を統合する新しい設定の命名](assets/aem-ec-integration-config1.png)
+   ![AEM Assets と Creative Cloud を統合する新しい設定の命名](assets/aem-ec-integration-config1.png)
 
-1. 「**[!UICONTROL テナント URL]**」フィールドに、AEM Assets の URL を指定します。以前は、URLが`https://<tenant_id>.marketing.adobe.com`と定義されていた場合、`https://<tenant_id>.experiencecloud.adobe.com`に変更しました。
+1. 「**[!UICONTROL テナント URL]**」フィールドに、AEM Assets の URL を指定します。以前は、URL が `https://<tenant_id>.marketing.adobe.com` と定義されていた場合は、`https://<tenant_id>.experiencecloud.adobe.com` に変更します。
 
    1. **ツール／クラウドサービス／従来のクラウドサービス**&#x200B;に移動します。Adobe Experience Cloudで、「**設定を表示**」をクリックします。
-   1. 編集する既存の設定を選択します。 設定を編集し、 `marketing.adobe.com`を`experiencecloud.adobe.com`に置き換えます。
-   1. 設定を保存します。MAC同期レプリケーションエージェントをテストします。
+   1. 編集する既存の設定を選択します。 設定を編集し、 `marketing.adobe.com` を `experiencecloud.adobe.com` に置き換えます。
+   1. 設定を保存します。MAC-sync レプリケーションエージェントをテストします。
 
-1. **[!UICONTROL Client ID]**&#x200B;フィールドに、手順[の最後にコピーしたアプリケーションIDを貼り付けます。](#create-an-application)
+1. **[!UICONTROL クライアント ID]** フィールドに、コピーしたアプリケーション ID を、手順 [ アプリケーション ](#create-an-application) の作成の最後に貼り付けます。
 
    ![AEM Assets と Creative Cloud の統合に必要なアプリケーション ID 値の入力](assets/cloudservices_tenant_info.png)
 
-1. 「 **[!UICONTROL 同期]**」で「**[!UICONTROL 有効]**」を選択して同期を有効にし、「**[!UICONTROL OK]**」をクリックします。「**無効**」を選択した場合、同期は単一方向で動作します。
+1. 「 **[!UICONTROL 同期]**」で「**[!UICONTROL 有効]**」を選択して同期を有効にし、「**[!UICONTROL OK]**」をクリックします。**disabled** を選択した場合、同期は単一の方向で動作します。
 
-1. 設定ページから「**[!UICONTROL 公開鍵を表示]**」をクリックして、インスタンスに対して生成された公開鍵を表示します。または、「 **[!UICONTROL OAuth Gatewayの公開鍵をダウンロード]** 」をクリックして、公開鍵が含まれているファイルをダウンロードします。 次に、ファイルを開いて公開鍵を表示します。
+1. 設定ページから「**[!UICONTROL 公開鍵を表示]**」をクリックして、インスタンスに対して生成された公開鍵を表示します。または、「**[!UICONTROL OAuth Gateway の公開鍵をダウンロード]**」をクリックして、公開鍵を含むファイルをダウンロードします。 次に、ファイルを開いて公開鍵を表示します。
 
 ## 同期の有効化 {#enable-synchronization}
 
-1. [Experience Cloud](#add-a-new-configuration)に新しい設定を追加する手順の最後で説明した、以下の方法のいずれかを使用して公開鍵を表示します。 「**[!UICONTROL 公開鍵を表示]**」をクリックします。
+1. 手順 [ の最後の手順で説明した、次のいずれかの方法を使用して公開鍵を表示し、新しい設定をExperience Cloud](#add-a-new-configuration) に追加します。 「**[!UICONTROL 公開鍵を表示]**」をクリックします。
 
-1. 公開鍵をコピーし、[アプリケーションの作成](#create-an-application)で作成したアプリケーションの設定インターフェイスの「**[!UICONTROL 公開鍵]**」フィールドに貼り付けます。
+1. 公開鍵をコピーして、[ アプリケーションの作成 ](#create-an-application) で作成したアプリケーションの設定インターフェイスの **[!UICONTROL 「公開鍵]**」フィールドに貼り付けます。
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
@@ -103,8 +103,8 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 
 ## 同期のテスト {#test-the-synchronization}
 
-1. ローカルのAEM AssetsインスタンスのユーザーインターフェイスでAEMロゴをクリックし、**[!UICONTROL ツール]** **[!UICONTROL デプロイメント]** **[!UICONTROL レプリケーション]**に移動して、同期用に作成されたレプリケーションプロファイルを探します。
-1. **[!UICONTROL レプリケーション]**&#x200B;ページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
+1. ローカルのAEM AssetsインスタンスのユーザーインターフェイスでAEMのロゴをクリックし、**[!UICONTROL ツール]** **[!UICONTROL デプロイメント]** **[!UICONTROL  レプリケーション ]**に移動して、同期用に作成されたレプリケーションプロファイルを探します。
+1. **[!UICONTROL レプリケーション]** ページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
 1. プロファイルのリストから、組織のデフォルトのレプリケーションプロファイルをクリックし、それを開きます。
 1. ダイアログで、「**[!UICONTROL 接続をテスト]**」をクリックします。
 
@@ -115,9 +115,9 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 ## ユーザーをExperience Cloudに追加 {#add-users-to-experience-cloud}
 
 1. 管理者の資格情報を使用してExperience Cloudにログインします。
-1. レールから、**[!UICONTROL 管理]**&#x200B;に移動し、**[!UICONTROL Enterprise Dashboardを起動]**&#x200B;をクリックします。
+1. レールから、**[!UICONTROL 管理]** に移動し、**[!UICONTROL Enterprise Dashboard を起動]** をクリックします。
 1. レールの「**[!UICONTROL ユーザー]**」をクリックして、**[!UICONTROL ユーザー管理]**&#x200B;ページを開きます。
-1. ツールバーの「****![aem_assets_add_icon](assets/aem_assets_add_icon.png)を追加」をクリックします。
+1. ツールバーの「****![aem_assets_add_icon](assets/aem_assets_add_icon.png) を追加」をクリックします。
 1. Creative Cloud とアセットを共有できるようにするユーザーを 1 人以上追加します。
 
 <!-- TBD: Check.
@@ -132,14 +132,14 @@ Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Ass
 1. AEM Assets にログインします。
 1. Assets コンソールで、フォルダーを作成し、いくつかのアセットをアップロードします。例えば、**mc-demo** というフォルダーを作成して、アセットをアップロードします。
 1. フォルダーを選択し、「**共有** ![assets_share](assets/do-not-localize/assets_share.png)」をクリックします。
-1. メニューから「**[!UICONTROL Adobe Experience Cloud]**」を選択し、「**[!UICONTROL 共有]**」をクリックします。 フォルダーがExperience Cloudと共有されたことを示すメッセージが表示されます。
+1. メニューから **[!UICONTROL Adobe Experience Cloud]** を選択し、「**[!UICONTROL 共有]**」をクリックします。 フォルダーがフォルダーと共有されたことを示すメッセージがExperience Cloudされます。
 
    >[!NOTE]
    >
-   >タイプ`sling:OrderedFolder`のAssetsフォルダーの共有は、Adobe Experience Cloudでの共有のコンテキストではサポートされていません。 フォルダーを共有したい場合は、AEM Assets でフォルダーを作成するときに「**[!UICONTROL 並べ替え]**」オプションを選択しないでください。
+   >タイプ `sling:OrderedFolder` の Assets フォルダーの共有は、Adobe Experience Cloudでの共有のコンテキストではサポートされません。 フォルダーを共有したい場合は、AEM Assets でフォルダーを作成するときに「**[!UICONTROL 並べ替え]**」オプションを選択しないでください。
 
-1. AEM Assetsユーザーインターフェイスを更新します。 ローカルのAEM AssetsインスタンスのAssetsコンソールで作成したフォルダーが、AssetsユーザーインターフェイスにExperience Cloudされます。 AEM Assetsのフォルダーにアップロードしたアセットは、AEMサーバーで処理された後、Experience Cloudー内のフォルダーのコピーに表示されます。
-1. フォルダー内のレプリケートされたコピーにExperience Cloudをアップロードすることもできます。 処理された後、アセットは AEM Assets 内の共有フォルダーに表示されます。
+1. AEM Assetsユーザーインターフェイスを更新します。 ローカルのAEM Assetsインスタンスの Assets コンソールで作成したフォルダーが、Experience Cloudユーザーインターフェイスにコピーされます。 AEM Assetsのフォルダーにアップロードしたアセットは、AEMサーバーで処理された後、Experience Cloudーのフォルダーのコピーに表示されます。
+1. フォルダー内のレプリケートされたコピーにアセットをアップロードすることもできます。Experience Cloud 処理された後、アセットは AEM Assets 内の共有フォルダーに表示されます。
 
 <!-- Removing as per PM guidance via https://jira.corp.adobe.com/browse/CQDOC-16834?focusedCommentId=22881523&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-22881523.
 

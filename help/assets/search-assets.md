@@ -1,14 +1,14 @@
 ---
-title: ' でのデジタルアセットと画像の検索 [!DNL Adobe Experience Manager]'
+title: でのデジタルアセットと画像の検索 [!DNL Adobe Experience Manager]
 description: フィルターパネルを使用した [!DNL Adobe Experience Manager] での必要なアセットの検索方法と検索で表示されたアセットの使用方法を説明します。
 contentOwner: AG
 mini-toc-levels: 1
-feature: 検索、メタデータ
+feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
+source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
 workflow-type: tm+mt
-source-wordcount: '5573'
+source-wordcount: '5570'
 ht-degree: 88%
 
 ---
@@ -74,22 +74,22 @@ ht-degree: 88%
 
 ### 拡張スマートタグのある場合とない場合の結果 {#withsmarttags}
 
-デフォルトでは、[!DNL Experience Manager]検索は、検索用語をAND句で組み合わせます。 例えば、キーワード「woman running」を検索するとします。 デフォルトでは、「 woman 」と「 running 」の両方のキーワードがメタデータに含まれるアセットのみが検索結果に表示されます。 キーワードで特殊文字（ピリオド、アンダースコアまたはダッシュ）を使用する場合も、同じ動作が保持されます。 次の検索クエリは、同じ結果を返します。
+デフォルトでは、[!DNL Experience Manager] 検索は、検索用語を AND 句で組み合わせます。 例えば、キーワード「woman running」を検索するとします。 デフォルトでは、woman と running の両方のキーワードがメタデータに含まれるアセットのみが検索結果に表示されます。 キーワードで特殊文字（ピリオド、アンダースコアまたはダッシュ）を使用する場合も、同じ動作が保持されます。 次の検索クエリは、同じ結果を返します。
 
 * `woman running`
 * `woman.running`
 * `woman-running`
 
-ただし、クエリ`woman -running`は、メタデータに`running`を含まないアセットを返します。
-スマートタグを使用すると、適用されたスマートタグとして任意の検索語句を検索する`OR`句が追加されます。 スマートタグを使用して`woman`または`running`でタグ付けされたアセットも、このような検索クエリに表示されます。 つまり、検索結果は、以下を組み合わせたものになります。
+ただし、クエリ `woman -running` の場合は、メタデータに `running` が含まれていないアセットが返されます。
+スマートタグを使用すると、適用されたスマートタグとして任意の検索語句を検索する `OR` 句が追加されます。 スマートタグを使用して `woman` または `running` でタグ付けされたアセットも、このような検索クエリに表示されます。 つまり、検索結果は、以下を組み合わせたものになります。
 
-* メタデータに`woman`および`running`キーワードを含むアセット（デフォルトの動作）。
+* メタデータに `woman` および `running` キーワードを含むアセット（デフォルトの動作）。
 
 * いずれかのキーワードでスマートタグ付けされたアセット（スマートタグ動作）。
 
 ### 入力に応じて提示される検索候補 {#searchsuggestions}
 
-キーワードの入力を開始すると、[!DNL Experience Manager]は検索キーワードまたは語句を候補として提示します。 候補は、既存のアセットのメタデータに基づいています。 [!DNL Experience Manager] では、検索に役立つすべてのメタデータフィールドのインデックスを作成します。検索候補を提示するために、以下のいくつかのメタデータフィールドの値が使用されます。検索候補の提示をおこなう場合は、次のフィールドに適切なキーワードを入力することを検討してください。
+キーワードの入力を開始すると、[!DNL Experience Manager] は、検索可能なキーワードまたは語句を候補として提示します。 候補は、既存のアセットのメタデータに基づいています。 [!DNL Experience Manager] では、検索に役立つすべてのメタデータフィールドのインデックスを作成します。検索候補を提示するために、以下のいくつかのメタデータフィールドの値が使用されます。検索候補の提示をおこなう場合は、次のフィールドに適切なキーワードを入力することを検討してください。
 
 * アセットのタグ（`jcr:content/metadata/cq:tags` にマッピングされます）
 * アセットのタイトル（`jcr:content/metadata/dc:title` にマッピングされます）
@@ -97,9 +97,9 @@ ht-degree: 88%
 * JCR リポジトリ内でのタイトル。この値はアセットのタイトルにマッピングされる可能性があります（`jcr:content/jcr:title` にマッピングされます）
 * JCR リポジトリ内での説明。この値はアセットの説明にマッピングされる可能性があります（`jcr:content/jcr:description` にマッピングされます）
 
-複数の検索キーワードのサーチクエリを受け取る場合は、1つのキーワードのサーチクエリを選択せずに、すべてのキーワードを引き続き入力します。
+複数の検索キーワードの候補を受け取る場合は、引き続き 1 つのキーワードの候補を選択せずにすべてのキーワードを入力します。
 
-![複数のキーワードを入力して、すべてに合うサーチクエリを表示する](assets/search_suggestionsmanykeywords.gif)
+![複数のキーワードを入力すると、すべてに適した候補が表示されます](assets/search_suggestionsmanykeywords.gif)
 
 *図：複数のキーワードを入力すると、すべてに適した候補が表示されます。*
 
@@ -161,7 +161,7 @@ ht-degree: 88%
 | 作成者 | creator:John |
 | 場所 | location:NA |
 | 説明 | description:&quot;Sample Image&quot; |
-| 作成ツール | creatortool:&quot;Adobe Photoshop CC 2015&quot; |
+| 作成ツール | creatortool:&quot;Adobe Photoshop&quot; |
 | 著作権の所有者 | copyrightowner:&quot;Adobe Systems&quot; |
 | 投稿者 | contributor:John |
 | 使用条件 | usageterms:&quot;CopyRights Reserved&quot; |
@@ -188,7 +188,7 @@ ht-degree: 88%
 
 複雑なクエリの検索形式の例：
 
-* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：       `title:"John Doe" creatortool:Adobe*`
+* 複数のファセットフィールドを持つアセットをすべて表示する（例：title=John Doe および creatortool=Adobe Photoshop）：  `title:"John Doe" creatortool:Adobe*`
 * ファセット値が 1 語でなく文になっているアセットをすべて表示する（例：title=Scott Reynolds）：`title:"Scott Reynolds"`
 * 1 つのプロパティに複数の値が指定されているアセットを表示する（例：title=Scott Reynolds または John Doe）：`title:"Scott Reynolds" OR "John Doe"`
 * プロパティ値が特定の文字列で始まるアセットを表示する（例：title=Scott Reynolds）：`title:Scott*`
@@ -232,7 +232,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->アセットセレクターは、以前のバージョンの [!DNL Adobe Experience Manager] では[アセットピッカー](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)という名前でした。。
+>アセットセレクターは、以前のバージョンの [!DNL Adobe Experience Manager] では[アセットピッカー](https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/asset-picker.html)という名前でした。。
 
 アセットセレクターを使用すると、DAM アセットを特別な方法で検索、フィルタリングおよび参照できます。アセットセレクターは、`https://[aem_server]:[port]/aem/assetpicker.html` で利用できます。アセットセレクターを使用して選択したアセットのメタデータを取得できます。アセットタイプ（画像、ビデオ、テキスト）や選択モード（単一選択または複数選択）など、サポートされているリクエストパラメーターを使用して、アセットセレクターを起動できます。これらのパラメーターは、特定の検索インスタンスのアセットセレクターのコンテキストを設定し、選択中もそのままの状態を維持します。
 
@@ -289,7 +289,7 @@ ht-degree: 88%
 
 * **インデックス作成**：インデックスが作成されたメタデータおよびアセットのみが検索結果に返されます。検索範囲とパフォーマンスを向上させるには、適切なインデックス作成をおこない、ベストプラクティスに従ってください。詳しくは、[インデックス作成](#searchindex)を参照してください。
 
-* 検索結果から特定のアセットを除外するには、Luceneインデックスの`excludedPath`プロパティを使用します。
+* 検索結果から特定のアセットを除外するには、Lucene インデックスの `excludedPath` プロパティを使用します。
 
 ## 検索の例 {#samples}
 
@@ -332,15 +332,15 @@ ht-degree: 88%
 
 ### 検索インデックスの設定 {#searchindex}
 
-アセットの検出は、メタデータを含むDAMコンテンツのインデックス作成に依存します。 迅速で正確なアセット検出は、最適化されたインデックス作成と適切な設定に依存します。 [検索インデックス](/help/assets/performance-tuning-guidelines.md#search-indexes)、[Oakクエリとインデックス](/help/sites-deploying/queries-and-indexing.md)、[ベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
+アセットの検出は、メタデータを含む DAM コンテンツのインデックス作成に依存します。 迅速で正確なアセット検出は、最適化されたインデックス作成と適切な設定に依存します。 [ 検索インデックス ](/help/assets/performance-tuning-guidelines.md#search-indexes)、[Oak クエリとインデックス ](/help/sites-deploying/queries-and-indexing.md)、[ ベストプラクティス ](/help/sites-deploying/best-practices-for-queries-and-indexing.md) を参照してください。
 
-検索結果から特定のアセットを除外するには、Luceneインデックスの`excludedPath`プロパティを使用します。
+検索結果から特定のアセットを除外するには、Lucene インデックスの `excludedPath` プロパティを使用します。
 
 ### 視覚検索または類似検索 {#configvisualsearch}
 
 ビジュアル検索では、スマートタグを使用します。 スマートタグ機能を設定したら、次の手順に従います。
 
-1. [!DNL Experience Manager] CRXDEの`/oak:index/lucene`ノードで、次のプロパティと値を追加し、変更を保存します。
+1. [!DNL Experience Manager] CRXDE の `/oak:index/lucene` ノードで、次のプロパティと値を追加し、変更を保存します。
 
    * `costPerEntry` プロパティの値 `Double` を返しま `10`す。
    * `costPerExecution` プロパティの値 `Double` を返しま `2`す。
@@ -348,39 +348,39 @@ ht-degree: 88%
 
    この設定を使用すると、適切なインデックスから検索できます。
 
-1. Luceneインデックスを作成するには、CRXDEの`/oak:index/damAssetLucene/indexRules/dam:Asset/properties`に、`nt-unstructured`型の`imageFeatures`という名前のノードを作成します。 `imageFeatures`ノードで、
+1. Lucene インデックスを作成するには、CRXDE の `/oak:index/damAssetLucene/indexRules/dam:Asset/properties` に、`nt-unstructured` 型の `imageFeatures` という名前のノードを作成します。 `imageFeatures` ノードで、
 
-   * 値`jcr:content/metadata/imageFeatures/haystack0`を持つ`String`型の`name`プロパティを追加します。
-   * `true`の値を持つ`Boolean`型の`nodeScopeIndex`プロパティを追加します。
-   * `true`の値を持つ`Boolean`型の`propertyIndex`プロパティを追加します。
-   * 値`true`を持つ`Boolean`型の`useInSimilarity`プロパティを追加します。
+   * 値 `jcr:content/metadata/imageFeatures/haystack0` を持つ `String` 型の `name` プロパティを追加します。
+   * `true` の値を持つ `Boolean` 型の `nodeScopeIndex` プロパティを追加します。
+   * `true` の値を持つ `Boolean` 型の `propertyIndex` プロパティを追加します。
+   * 値 `true` を持つ `Boolean` 型の `useInSimilarity` プロパティを追加します。
 
    変更内容を保存します。
 
-1. `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags`にアクセスし、`true`の値を持つ`Boolean`型の`similarityTags`プロパティを追加します。
-1. [!DNL Experience Manager]リポジトリ内のアセットにスマートタグを適用します。 [スマートタグの設定方法](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring)を参照してください。
-1. CRXDEの`/oak-index/damAssetLucene`ノードで、`reindex`プロパティを`true`に設定します。 変更内容を保存します。
-1. （オプション）検索フォームをカスタマイズした場合は、`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch`ノードを`/conf/global/settings/dam/search/facets/assets/jcr:content/items`にコピーします。 変更内容を保存します。
+1. `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` にアクセスし、`true` の値を持つ `Boolean` 型の `similarityTags` プロパティを追加します。
+1. [!DNL Experience Manager] リポジトリーのアセットにスマートタグを適用します。 [ スマートタグの設定方法 ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring) を参照してください。
+1. CRXDE の `/oak-index/damAssetLucene` ノードで、`reindex` プロパティを `true` に設定します。 変更内容を保存します。
+1. （オプション）検索フォームをカスタマイズした場合は、`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` ノードを `/conf/global/settings/dam/search/facets/assets/jcr:content/items` にコピーします。 変更内容を保存します。
 
-関連情報については、[Experience Managerのスマートタグについて](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)および[スマートタグの管理方法](/help/assets/enhanced-smart-tags.md)を参照してください。
+関連情報については、[Experience Managerのスマートタグについて ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html) および [ スマートタグの管理方法 ](/help/assets/enhanced-smart-tags.md) を参照してください。
 
 >[!CAUTION]
 >
->[!DNL Adobe Experience Manager]を使用してLuceneのインデックス作成を行うと、スマートタグに基づく検索が期待どおりに動作しません。
+>[!DNL Adobe Experience Manager] から Lucene のインデックス作成が行われた場合、スマートタグに基づく検索は期待どおりに動作しません。
 
 ### 必須メタデータ {#mandatorymetadata}
 
-ビジネスユーザー、管理者またはDAMライブラリは、一部のメタデータを、ビジネスプロセスが機能するために必須の必須メタデータとして定義できます。 様々な理由で、レガシーアセットや一括移行されたアセットなど、一部のアセットにこのメタデータがない場合があります。 メタデータが見つからない、または無効なアセットが、インデックス付きのメタデータプロパティに基づいて検出され、報告されます。 設定するには、[必須のメタデータ](/help/assets/metadata-schemas.md#define-mandatory-metadata)を参照してください。
+ビジネスユーザー、管理者または DAM ライブラリは、一部のメタデータを、ビジネスプロセスが機能するために必須の必須メタデータとして定義できます。 様々な理由で、レガシーアセットや一括移行されたアセットなど、一部のアセットでこのメタデータが欠落している可能性があります。 メタデータが見つからない、または無効なアセットが、インデックスで指定されたメタデータプロパティに基づいて検出され、報告されます。 設定するには、[ 必須のメタデータ ](/help/assets/metadata-schemas.md#define-mandatory-metadata) を参照してください。
 
 ### 検索ファセットの変更 {#searchfacets}
 
-検出の速度を向上させるために、[!DNL Experience Manager Assets]は検索ファセットを提供し、検索結果をフィルタリングできます。 フィルターパネルには、デフォルトでいくつかの標準ファセットが含まれています。 管理者は、フィルターパネルをカスタマイズし、組み込みの述語を使用してデフォルトのファセットを変更できます。 [!DNL Experience Manager] には、組み込みの述語と、ファセットをカスタマイズするエディターの適切なコレクションが用意されています。[検索ファセット](/help/assets/search-facets.md)を参照してください。
+[!DNL Experience Manager Assets] は、検出の速度を向上させるために、検索結果をフィルタリングできる検索ファセットを提供します。 フィルターパネルには、デフォルトでいくつかの標準ファセットが含まれています。 管理者は、フィルターパネルをカスタマイズし、組み込みの述語を使用してデフォルトのファセットを変更できます。 [!DNL Experience Manager] は、組み込みの述語と、ファセットをカスタマイズするエディターの適切なコレクションを提供します。[ 検索ファセット ](/help/assets/search-facets.md) を参照してください。
 
 ### アセットのアップロード時にテキストを抽出する {#extracttextupload}
 
-PSDやPDFファイルなどのアセットをアップロードする際に、アセットからテキストを抽出するように[!DNL Experience Manager]を設定できます。 [!DNL Experience Manager] は抽出したテキストのインデックスを作成し、抽出したテキストに基づいてこれらのアセットを検索するのに役立ちます。[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
+PSDやPDFファイルなどのアセットをアップロードする際に、アセットからテキストを抽出するように [!DNL Experience Manager] を設定できます。 [!DNL Experience Manager] は抽出したテキストのインデックスを作成し、抽出したテキストに基づいてこれらのアセットを検索するのに役立ちます。[ アセットのアップロード ](/help/assets/manage-assets.md#uploading-assets) を参照してください。
 
-テキスト抽出がデプロイメントでリソースを大量に消費する可能性が高い場合は、[テキスト抽出](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html)を無効にすることを検討してください。
+テキスト抽出がデプロイメントでリソースを大量に消費する場合は、[ テキスト抽出 ](https://helpx.adobe.com/experience-manager/kb/Disable-binary-text-extraction-to-optimize-Lucene-indexing-AEM.html) を無効にすることを検討してください。
 
 ### 検索結果を絞り込むためのカスタム述語 {#custompredicates}
 
