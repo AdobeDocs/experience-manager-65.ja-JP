@@ -1,9 +1,9 @@
 ---
 title: ' [!DNL Adobe Experience Manager] 6.5 を拡張 (Adobe開発者アプリビルダーを使用 )。'
 description: ' [!DNL Adobe Experience Manager] 6.5 を拡張 (Adobe開発者アプリビルダーを使用 )。'
-source-git-commit: aab7d4aaf11b6aef3b729f906259a76c152fd6f0
+source-git-commit: e6153e1a816bb9169f96fa75827593485a6ddbd4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ App Builder（旧 Project Firefly）は、2020 年夏以降、デベロッパー
 
 >[!NOTE]
 >
-> AEM as a App Builder を活用するCloud Serviceのお客様は、[Adobe開発者 App Builder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html) を使用して、Adobe Experience ManagerをCloud Serviceとして拡張するにはに進んでください。
+> App Builder を活用するAEMのas a Cloud Serviceのお客様の場合は、[Adobe開発者 App Builder を使用したAdobe Experience Manager as a Cloud Serviceの拡張 ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html) に進んでください。
 
 ## アーキテクチャ {#architecture}
 
@@ -42,26 +42,26 @@ App Builder（旧 Project Firefly）は、2020 年夏以降、デベロッパー
 
 ![アーキテクチャ](assets/firefly-architecture.jpg)
 
-App Builder のアーキテクチャの詳細については、「[ アーキテクチャの概要 ](https://www.adobe.io/project-firefly/docs/guides/)」を参照してください。
+App Builder のアーキテクチャの詳細については、「[ アーキテクチャの概要 ](https://www.adobe.io/app-builder/docs/guides/)」を参照してください。
 
 ## App Builder の概要 {#additional-resources}
 
 App Builder の使用を開始する際に役立つ一連のドキュメントを作成しました。
 
-* [App Builder はじめに](https://www.adobe.io/project-firefly/docs/getting_started/)
+* [App Builder はじめに](https://www.adobe.io/app-builder/docs/getting_started/)
 
 ## ドキュメントで学習を続ける {#appbuilder-documentation}
 
 App Builder には、開発者向けのビデオとドキュメント（ガイドなど）と、独自のカスタムアプリケーションの開発を開始する際に役立つリファレンスドキュメントが用意されています。
 
-* [App Builder ドキュメント](https://www.adobe.io/project-firefly/docs/overview/)
+* [App Builder ドキュメント](https://www.adobe.io/app-builder/docs/overview/)
 * [App Builder ビデオ](https://www.youtube.com/playlist?list=PLcVEYUqU7VRfDij-Jbjyw8S8EzW073F_o)
 
 ## サンプルアプリケーションの 1 つを試してみる {#appbuilder-codesamples}
 
 開発を始める準備は？ 迅速に作業を進めるのに役立つサンプルアプリケーションが多数あります。
 
-* [App Builder コードラボ (Adobe開発者 Web サイト )](https://www.adobe.io/project-firefly/docs/resources/)
+* [App Builder コードラボ (Adobe開発者 Web サイト )](https://www.adobe.io/app-builder/docs/resources/)
 
 ## サポート {#support}
 
