@@ -1,17 +1,17 @@
 ---
 title: '電子メール通知におけるメタデータの使用 '
-seo-title: '電子メール通知におけるメタデータの使用 '
+seo-title: Use metadata in an email notification
 description: メタデータを使用したフォームワークフローの電子メール通知の情報の作成
-seo-description: メタデータを使用したフォームワークフローの電子メール通知の情報の作成
+seo-description: Use metadata to populate information in a forms workflow email notification
 uuid: 9075b64e-1934-44d5-8b16-aa6e95e93da9
 topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9cf4a68a2b3312fe53282e2fd4ec81988f2fd453
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 95%
+source-wordcount: '897'
+ht-degree: 94%
 
 ---
 
@@ -96,7 +96,7 @@ message=<html><body>\n\
 </html>\n\
 ```
 
-## 電子メール通知におけるシステム生成メタデータの使用  {#using-system-generated-metadata-in-an-email-notification}
+## 電子メール通知におけるシステム生成メタデータの使用 {#using-system-generated-metadata-in-an-email-notification}
 
 AEM Forms アプリケーションには、すぐに使えるメタデータ変数（キーと値のペア）がいくつか用意されています。これらの変数を電子メールテンプレートに使用することができます。変数の値は、関連する Forms アプリケーションに基づいています。次の表では、すぐに使える全メタデータ変数のリストを示します。
 
@@ -151,13 +151,13 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
 
 ## 電子メール通知におけるカスタムメタデータの使用 {#using-custom-metadata-in-an-email-notification}
 
-電子メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScriptまたはOSGiバンドルを使用して、crx-repositoryにカスタムメタデータを追加できます。
+電子メール通知ではカスタムメタデータを使用することもできます。カスタムメタデータには、システム生成メタデータに加えて追加情報が含まれています。例えば、データベースから取得したポリシーの詳細などです。ECMAScript または OSGi バンドルを使用して、crx-repository にカスタムメタデータを追加できます。
 
 ### ECMAScript を使用したカスタムメタデータの追加  {#use-ecmascript-to-add-custom-metadata}
 
 [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) はスクリプト言語です。この言語は、クライアント側のスクリプト作成とサーバーアプリケーションに使用されます。次の手順を実行して、ECMAScrip を使用して電子メールテンプレートにカスタムメタデータを追加します。
 
-1. 管理者アカウントを使用して CRX DE にログインします。URLはhttps://&#39;[server]:[port]&#39;/crx/de/index.jspです。
+1. 管理者アカウントを使用して CRX DE にログインします。URL はhttps://&#39;[server]:[port]&#39;/crx/de/index.jspです。
 
 1. /apps/fd/dashboard/scripts/metadataScripts に移動します。拡張子が .ecma のファイルを作成します。例えば、usermetadata.ecma です。
 
@@ -194,11 +194,11 @@ AEM Forms アプリケーションには、すぐに使えるメタデータ変�
       | 型 | String |
       | 値 | スクリプトのタイトルを指定します。例えば、ポリシーホルダーのカスタムメタデータとします。指定した値がタスクの割り当て手順に表示されます。 |
 
-### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加  {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
+### OSGi バンドルと Java インターフェースを使用したカスタムメタデータの追加 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 
 WorkitemUserMetadataService Java インターフェースを使用して電子メールテンプレートにカスタムメタデータを追加することができます。WorkitemUserMetadataService Java インターフェースを使用する OSGi バンドルを作成して、AEM Forms サーバーにデプロイすることができます。これにより、タスクの割り当て手順でメタデータを選択できるようになります。
 
-Java インターフェイスを使用して OSGi バンドルを作成するには、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar ファイルと [granite jar](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルを、外部の依存関係として OSGi バンドルプロジェクトに追加します。OSGi バンドルの作成には、任意の Java IDE を使用できます。以下の手順では、Eclipse を使用して OSGi バンドルを作成します。
+Java インターフェイスを使用して OSGi バンドルを作成するには、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) jar ファイルと [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) ファイルを、外部の依存関係として OSGi バンドルプロジェクトに追加します。OSGi バンドルの作成には、任意の Java IDE を使用できます。以下の手順では、Eclipse を使用して OSGi バンドルを作成します。
 
 1. Eclipse IDE を開きます。ファイル／新規プロジェクトに移動します。
 

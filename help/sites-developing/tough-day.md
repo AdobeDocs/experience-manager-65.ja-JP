@@ -3,18 +3,13 @@ title: Tough Day
 seo-title: Tough Day
 description: Tough Day テストでは、約 1,000 人の作成者がいる環境で、すべての操作が同時進行しているという最悪の状況を想定して、1 日の負荷をシミュレートします。。
 seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
-uuid: 1b672182-40f5-4580-b038-2e3c8fbfb8b7
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: testing
 content-type: reference
-discoiquuid: ea6b40fe-b6e1-495c-b34f-8815a4e2e42e
-docset: aem65
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: e1f9cf160892c2fa5c7cc7f80f998166dbc877e6
+source-git-commit: 8b72715c15a65794bb6d1497961071aaea96c35e
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 52%
+source-wordcount: '1881'
+ht-degree: 51%
 
 ---
 
@@ -22,11 +17,11 @@ ht-degree: 52%
 
 ## Tough Day 2 について {#what-is-tough-day}
 
-「Tough Day 2」は、AEM インスタンスの限界についてストレステストを実行するためのアプリケーションです。Tough Day 2 は、デフォルトのテストスイートを使用してそのまま実行することも、テストのニーズに合わせて設定することも可能です。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)を参照してください。
+「Tough Day 2」は、AEM インスタンスの限界についてストレステストを実行するためのアプリケーションです。Tough Day 2 は、デフォルトのテストスイートを使用してそのまま実行することも、テストのニーズに合わせて設定することも可能です。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html)を参照してください。
 
 ## Tough Day 2 の実行方法 {#how-to-run-tough-day}
 
-[アドビのリポジトリ](https://repo.adobe.com/nexus/content/repositories/releases/com/adobe/qe/toughday2/)から最新バージョンの Tough Day 2 をダウンロードします。アプリケーションをダウンロードした後、`host` パラメーターを指定することで、そのまま実行できます。 次の例では、AEMインスタンスがローカルで実行され、`localhost` 値が使用されます。
+[アドビのリポジトリ](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/)から最新バージョンの Tough Day 2 をダウンロードします。アプリケーションをダウンロードした後、`host` パラメーターを指定することで、そのまま実行できます。 次の例では、AEMインスタンスがローカルで実行され、`localhost` 値が使用されます。
 
 ```xml
 java -jar toughday2.jar --host=localhost

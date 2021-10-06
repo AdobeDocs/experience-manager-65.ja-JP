@@ -1,8 +1,8 @@
 ---
 title: アダプティブフォームフィールドのカスタム外観の作成
-seo-title: アダプティブフォームフィールドのカスタム外観の作成
+seo-title: Create custom appearances for adaptive form fields
 description: Adaptive Forms の追加設定不要コンポーネントの外観をカスタマイズします。
-seo-description: Adaptive Forms の追加設定不要コンポーネントの外観をカスタマイズします。
+seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
 uuid: 1aa36443-774a-49fb-b3d1-d5a2d5ff849a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: d388acef-7313-4e68-9395-270aef6ef2c6
 docset: aem65
 exl-id: 770e257a-9ffd-46a4-9703-ff017ce9caed
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8a24ca02762e7902b7d0033b36560629ee711de1
 workflow-type: tm+mt
-source-wordcount: '1728'
+source-wordcount: '1713'
 ht-degree: 72%
 
 ---
@@ -27,39 +27,39 @@ ht-degree: 72%
 
 まずは、この記事で使用される重要な用語と概念について見てみましょう。
 
-**** 外観アダプティブフォームフィールドの様々な要素のスタイル、ルックアンドフィール、および編成を指します。通常、ラベル、入力用のインタラクティブ領域、ヘルプアイコン、ならびにフィールドについての短い説明や長い説明などが含まれます。この記事で扱われる外観のカスタマイズは、フィールドの入力領域の外観に適用できます。
+**** 外観アダプティブフォームフィールドの様々な要素のスタイル、ルックアンドフィール、および構成を指します。通常、ラベル、入力用のインタラクティブ領域、ヘルプアイコン、ならびにフィールドについての短い説明や長い説明などが含まれます。この記事で扱われる外観のカスタマイズは、フィールドの入力領域の外観に適用できます。
 
-**jQuery pluginjQueryウィ** ジェットフレームワークに基づいて、代替の外観を実装するための標準メカニズムを提供します。
+**jQuery プラグ** イン jQuery ウィジェットフレームワークに基づいて、代替の外観を実装するための標準メカニズムを提供します。
 
-**** ClientLib複雑なJavaScriptとCSSコードによって駆動される、AEMクライアント側処理のクライアント側ライブラリシステム。詳しくは、「クライアント側ライブラリの使用」を参照してください。
+**** ClientLib 複雑な JavaScript と CSS コードによって駆動される、AEMのクライアント側処理のクライアント側ライブラリシステム。詳しくは、「クライアント側ライブラリの使用」を参照してください。
 
-**** アーキタイプMavenプロジェクトの元のパターンまたはモデルとして定義されるMavenプロジェクトテンプレートツールキット。詳しくは、「アーキタイプの概要」を参照してください。
+**** アーキタイプ Maven プロジェクトの元のパターンまたはモデルとして定義される Maven プロジェクトテンプレートツールキット。詳しくは、「アーキタイプの概要」を参照してください。
 
-**ユーザ** ーコントロール：フィールドの値を含むウィジェットのメイン要素を指し、カスタムウィジェットUIをアダプティブフォームモデルにバインドするための外観フレームワークで使用されます。
+**ユーザ** ー制御フィールドの値を含むウィジェットのメイン要素を指し、カスタムウィジェット UI をアダプティブフォームモデルにバインドするための外観フレームワークで使用されます。
 
 ## カスタム外観の作成手順 {#steps-to-create-a-custom-appearance}
 
 カスタム外観を作成する手順は、高レベルでは次のようになります。
 
-1. **プロジェクトの作成**:AEMにデプロイするコンテンツパッケージを生成するMavenプロジェクトを作成します。
+1. **プロジェクトの作成**:AEMにデプロイするコンテンツパッケージを生成する Maven プロジェクトを作成します。
 1. **既存のウィジェットクラスの拡張**:既存のウィジェットクラスを拡張し、必要なクラスを上書きします。
 1. **クライアントライブラリを作成する**：`clientLib: af.customwidget` ライブラリを作成して、必要な JavaScript と CSS ファイルを追加します。
 
-1. **プロジェクトをビルドしてインストールします**。Mavenプロジェクトを構築し、生成したコンテンツパッケージをAEMにインストールします。
+1. **プロジェクトをビルドしてインストールします**。Maven プロジェクトを構築し、生成されたコンテンツパッケージをAEMにインストールします。
 1. **アダプティブフォームの更新**:カスタム外観を使用するようにアダプティブフォームフィールドのプロパティを更新する。
 
 ### プロジェクトの作成 {#create-a-project}
 
 Maven アーキタイプは、カスタム外観作成の開始点です。使用するアーキタイプの詳細は、次のとおりです。
 
-* **リポジトリ**:https://repo.adobe.com/nexus/content/groups/public/
-* **アーティファクトID**:custom-appearance-archetype
-* **グループID**:com.adobe.aemforms
+* **リポジトリ**:https://repo1.maven.org/maven2/com/adobe/
+* **アーティファクト ID**:custom-appearance-archetype
+* **グループ ID**:com.adobe.aemforms
 * **バージョン**:1.0.4
 
 次のコマンドを実行して、アーキタイプに基づいたローカルプロジェクトを作成します。
 
-`mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+`mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
 このコマンドにより Maven プラグインおよびリポジトリからのアーキタイプ情報がダウンロードされ、次の情報に基づいたプロジェクトが生成されます。
 
@@ -113,7 +113,7 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
 
 1. プロジェクトにサードパーティのプラグインを含めます。
 
-   1. サードパーティまたはカスタムのjQueryプラグインを`jqueryplugin/javascript`フォルダーに、関連するCSSファイルを`jqueryplugin/css`フォルダーに配置します。 詳しくは、`jqueryplugin/javascript and jqueryplugin/css`フォルダーのJSファイルとCSSファイルを参照してください。
+   1. サードパーティまたはカスタムの jQuery プラグインを `jqueryplugin/javascript` フォルダーに、関連する CSS ファイルを `jqueryplugin/css` フォルダーに配置します。 詳しくは、`jqueryplugin/javascript and jqueryplugin/css` フォルダーの JS ファイルと CSS ファイルを参照してください。
 
    1. `js.txt` および `css.txt` ファイルを変更して、jQuery プラグインの JavaScript ファイルと CSS ファイルが含まれるようにします。
 
@@ -127,13 +127,13 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;li&gt;</code>などです。 返された要素は<code>$userControl</code>として使用されます。 <code>$userControl</code>が上記の制約を指定する場合、<code>AbstractWidget</code>クラスの関数は期待どおりに動作します。それ以外の場合は、一般的なAPI（フォーカス、クリック）の一部に変更が必要です。 </td>
+   <td>レンダリング関数は、ウィジェットのデフォルト HTML 要素のための jQuery オブジェクトを返します。デフォルトの HTML 要素は、フォーカス可能タイプとします。例えば、<code>&lt;a&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;li&gt;</code> などです。 返された要素は <code>$userControl</code> として使用されます。 <code>$userControl</code> が上記の制約を指定する場合、<code>AbstractWidget</code> クラスの関数は期待どおりに動作します。それ以外の場合は、一般的な API（フォーカス、クリック）の一部に変更が必要です。 </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
    <td>HTML イベントを XFA イベントに変換するマップを返します。<br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> この例では、がHTMLイ <code>blur</code> ベントで、が対応するXFA <code>XFA_EXIT_EVENT</code> イベントであることを示しています。 </td>
+      }</code><br /> この例では、が <code>blur</code> HTMLイベントで、 <code>XFA_EXIT_EVENT</code> が対応する XFA イベントであることを示しています。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
@@ -145,22 +145,22 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
   </tr>
   <tr>
    <td><code>showValue</code></td>
-   <td>デフォルトでは、XFA での enter イベント時に、フィールドの <code>rawValue</code> が表示されます。この関数は、<code>rawValue</code>をユーザーに表示するために呼び出されます。 </td>
+   <td>デフォルトでは、XFA での enter イベント時に、フィールドの <code>rawValue</code> が表示されます。この関数は、<code>rawValue</code> をユーザーに表示するために呼び出されます。 </td>
   </tr>
   <tr>
    <td><code>showDisplayValue</code></td>
-   <td>デフォルトでは、XFA での exit イベント時に、フィールドの <code>formattedValue</code> が表示されます。この関数は、<code>formattedValue</code>をユーザーに表示するために呼び出されます。 </td>
+   <td>デフォルトでは、XFA での exit イベント時に、フィールドの <code>formattedValue</code> が表示されます。この関数は、<code>formattedValue</code> をユーザーに表示するために呼び出されます。 </td>
   </tr>
  </tbody>
 </table>
 
 1. 必要に応じて `integration/javascript` フォルダーの JavaScript ファイルを更新します。
 
-   * テキスト`__widgetName__`を実際のウィジェット名に置き換えます。
+   * テキスト `__widgetName__` を実際のウィジェット名に置き換えます。
    * 適切なデフォルトのウィジェットクラスからウィジェットを拡張します。多くの場合は、置き換えられる既存のウィジェットに対応したウィジェットクラスになります。親クラス名は複数の場所で使用されるため、ファイル内すべての文字列 `xfaWidget.textField` のインスタンスを検索して、実際使用する親クラスで置き換えることを推奨します。
    * `render` メソッドを拡張して代替の UI を設定します。その場所から jQuery プラグインが起動し、UI またはインタラクション動作を更新します。`render` メソッドは、ユーザーコントロール要素を返します。
 
-   * `getOptionsMap` メソッドを拡張して、ウィジェット内の変更により影響を受けるオプション設定をオーバーライドします。この関数は、オプションの変更時に実行するアクションの詳細を提供するマッピングを返します。 キーはウィジェットに提供されるオプションで、値はオプションの変更が検出されるたびに呼び出される関数です。
+   * `getOptionsMap` メソッドを拡張して、ウィジェット内の変更により影響を受けるオプション設定をオーバーライドします。この関数は、オプションの変更時に実行するアクションの詳細を提供するマッピングを返します。 キーはウィジェットに提供されるオプションで、値はオプションの変更が検出されたたびに呼び出される関数です。
    * `getEventMap` メソッドは、そのウィジェットによりトリガーされるイベントを、アダプティブフォームモデルが必要とするイベントとあわせてマッピングします。デフォルト値ではデフォルトのウィジェットの標準 HTML イベントがマッピングされ、代替のイベントがトリガーされた場合は更新の必要があります。
    * `showDisplayValue` および `showValue` は、表示値を適用し、パターン形式文字列を編集します。また、別の動作にオーバーライドすることができます。
 
@@ -168,7 +168,7 @@ Maven アーキタイプは、カスタム外観作成の開始点です。使�
 
    * テンプレートファイルでは、さまざまなメソッドでの導入例が紹介されています。拡張しないメソッドは削除してください。
 
-### クライアントライブラリの作成  {#create-a-client-library}
+### クライアントライブラリの作成 {#create-a-client-library}
 
 Maven アーキタイプで生成されたサンプルプロジェクトは、必要なクライアントライブラリを自動で作成し、`af.customwidgets` カテゴリでそれらをクライアントライブラリに含めます。`af.customwidgets` で使用できる JavaScript および CSS ファイルはランタイム時に自動で含まれます。
 
@@ -188,15 +188,15 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
 
 1. アダプティブフォームを編集モードで開きます。
 1. カスタム外観を適用するフィールドの **Property** ダイアログを開きます。
-1. 「**スタイル設定**」タブで、`CSS class`プロパティを更新して`widget_<widgetName>`形式の外観名を追加します。 例えば、**widget_numericstepper** です。
+1. 「**スタイル設定**」タブで、`CSS class` プロパティを更新して `widget_<widgetName>` 形式の外観名を追加します。 例えば、**widget_numericstepper** です。
 
-## サンプル：カスタム外観の作成  {#sample-create-a-custom-appearance-nbsp}
+## サンプル：カスタム外観の作成 {#sample-create-a-custom-appearance-nbsp}
 
 それでは、数値のフィールドを数値ステッパーまたはスライダーとして表示されるようにカスタム外観を作成する例をみてみましょう。以下の手順を実行します。
 
 1. 以下のコマンドを実行して、Maven アーキタイプをベースとするローカルプロジェクトを作成します。
 
-   `mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
+   `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
    ここでは、次のパラメーターの値の指定が求められます。
    *このサンプルで使用される値は、太字でハイライト表示されています*。
@@ -235,18 +235,18 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
 
    Eclipse プロジェクトでは、`plugin.js` ファイルのプラグインコードを見直して、外観の要件を満たすようにします。このサンプルでは、外観は以下の要件を満たしています。
 
-   * 数値ステッパーは`- $.xfaWidget.numericInput`から伸びているはずです。
+   * 数値ステッパは `- $.xfaWidget.numericInput` から伸びているはずです。
    * フィールドにフォーカスすると、ウィジェットの `set value` メソッドが値を設定します。これは、アダプティブフォームウィジェットでは必須要件です。
    * `render` メソッドを起動するには、`bootstrapNumber` メソッドをオーバーライドする必要があります。
 
    * プラグインのメインソースコード以外でプラグインに依存しません。
    * サンプルではステッパーのスタイル設定を実行しないため、CSS の追加を必要としません。
-   * `$userControl`オブジェクトは、`render`メソッドで使用できる必要があります。 これは、`text` タイプのフィールドであり、プラグインコードで複製されます。
+   * `$userControl` オブジェクトは、`render` メソッドで使用できる必要があります。 これは、`text` タイプのフィールドであり、プラグインコードで複製されます。
 
    * フィールドが無効の場合に「**+**」および「**-**」ボタンが無効になります。
 
 1. `bootstrap-number-input.js`（jQuery プラグイン）のコンテンツを `numericStepper-plugin.js` ファイルのコンテンツと置き換えます。
-1. `numericStepper-widget.js`ファイルで、次のコードを追加して、プラグインを呼び出して`$userControl`オブジェクトを返すレンダリングメソッドをオーバーライドします。
+1. `numericStepper-widget.js` ファイルで、次のコードを追加して、プラグインを呼び出して `$userControl` オブジェクトを返すレンダリングメソッドをオーバーライドします。
 
    ```javascript
    render : function() {
@@ -266,7 +266,7 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
    }
    ```
 
-1. `numericStepper-widget.js`ファイルで、`getOptionsMap`プロパティを上書きしてアクセスオプションを上書きし、無効モードで+ボタンと — ボタンを非表示にします。
+1. `numericStepper-widget.js` ファイルで、`getOptionsMap` プロパティを上書きしてアクセスオプションを上書きし、無効モードで+ボタンと — ボタンを非表示にします。
 
    ```javascript
    getOptionsMap: function(){
@@ -308,7 +308,7 @@ Maven アーキタイプで生成されたサンプルプロジェクトは、�
     }
    ```
 
-1. 変更を保存し、`pom.xml`ファイルを含むフォルダーに移動し、次のMavenコマンドを実行してプロジェクトを構築します。
+1. 変更を保存し、`pom.xml` ファイルを含むフォルダーに移動し、次の Maven コマンドを実行してプロジェクトを構築します。
 
    `mvn clean install`
 
