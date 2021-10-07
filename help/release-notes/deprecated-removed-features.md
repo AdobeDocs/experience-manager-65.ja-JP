@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5 リリースの非推奨（廃止予定）および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: a76772b8761e35a828814ffe0ac3b019266ff008
+source-git-commit: 99d38dddbcd06fecb82c744d446b9cef981e0781
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 42%
@@ -57,7 +57,7 @@ AEM機能の差し迫った削除または置き換えを伝達するには、�
 
 | 領域 | 機能 | 代替手段 |
 |--- |--- |--- |
-| [!DNL Experience Cloud] との統合 | [!DNL Adobe I/O] を介した設定を使用して、アセットを [!DNL Experience Cloud] と同期できます。 [!DNL Adobe Experience Cloud] は、以前はと呼ばれていま [!DNL Adobe Marketing Cloud]した。 | 質問がある場合は、[Adobeカスタマーケア ](https://www.adobe.com/account/sign-in.supportportal.html) にお問い合わせください。 |
+| [!DNL Experience Cloud] との統合 | [!DNL Adobe I/O] を介した設定を使用して、アセットを [!DNL Experience Cloud] と同期できます。 [!DNL Adobe Experience Cloud] は、以前はと呼ばれていま [!DNL Adobe Marketing Cloud]した。 | 質問がある場合は、[Adobeカスタマーサポート ](https://www.adobe.com/account/sign-in.supportportal.html) にお問い合わせください。 |
 | Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。Adobe Analytics](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.translate.html) が提供する [ActivityMap プラグインを使用します。 |
 | 統合 | ExactTarget の統合は、デフォルトの配布（クイックスタート）から削除され、使用できなくなりました。 | 代替機能はありません. |
 | 統合 | Salesforce Force API 統合は、デフォルトの配布版（クイックスタート）から削除され、[ ソフトウェア配布版 ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) からインストールする追加のパッケージになりました。 | この機能は引き続き使用できます。 |

@@ -1,47 +1,47 @@
 ---
-title: ' [!DNL Assets] デプロイメントを監視するためのベストプラクティス'
-description: デプロイ後の [!DNL Adobe Experience Manager] デプロイメントの環境とパフォーマンスを監視するためのベストプラクティス。
+title: ' [!DNL Assets]  デプロイメントを監視するためのベストプラクティス'
+description: デプロイ後の  [!DNL Adobe Experience Manager]  デプロイメントの環境とパフォーマンスを監視するためのベストプラクティス。
 contentOwner: AG
 role: Admin, Architect
-feature: アセット管理
+feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1668'
 ht-degree: 67%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets]デプロイメントを監視するためのベストプラクティス {#assets-monitoring-best-practices}
+# [!DNL Adobe Experience Manager Assets] デプロイメントを監視するためのベストプラクティス {#assets-monitoring-best-practices}
 
-[!DNL Experience Manager Assets]の観点から、監視には、次のプロセスとテクノロジーの観察と報告を含める必要があります。
+[!DNL Experience Manager Assets] の観点から見ると、監視には、次のプロセスとテクノロジーに関する観察と報告を含む必要があります。
 
 * システム CPU
 * システムメモリ使用量
 * システムディスク IO および IO 待機時間
 * システムネットワーク IO
-* ヒープ使用率と非同期プロセス（ワークフローなど）のためのJMX MBean
+* ヒープ使用率および非同期プロセス（ワークフローなど）のための JMX MBean
 * OSGi コンソールヘルスチェック
 
-通常、[!DNL Experience Manager Assets]は、ライブ監視と長期監視の2つの方法で監視できます。
+通常、[!DNL Experience Manager Assets] は、ライブ監視と長期監視の 2 つの方法で監視できます。
 
 ## ライブ監視 {#live-monitoring}
 
 開発のパフォーマンステストの段階、または高負荷な状態になったときに、環境のパフォーマンス特性を把握するためにライブ監視を実行する必要があります。通常、ライブ監視はいくつかのツールを使用して実行します。以下にお勧めのツールを示します。
 
-* [ビジュアルVM](https://visualvm.github.io/):Visual VMを使用すると、CPU使用率、Javaメモリ使用率など、詳細なJava VM情報を表示できます。さらに、デプロイメントで実行するコードのサンプリングと評価もおこなえます。
+* [ビジュアル VM](https://visualvm.github.io/):Visual VM を使用すると、CPU 使用率、Java メモリ使用率など、詳細な Java VM 情報を表示できます。さらに、デプロイメントで実行するコードのサンプリングと評価をおこなうことができます。
 * [Top](https://man7.org/linux/man-pages/man1/top.1.html)：Top は、CPU、メモリ、IO 使用量などの使用量統計を表示するダッシュボードを開く Linux コマンドです。インスタンスの状況の概要を示します。
-* [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htopは、`yum install htop`または`apt-get install htop`を使用して、ほとんどのLinuxシステムにインストールできます。
+* [Htop](https://hisham.hm/htop/)：Htop は、インタラクティブなプロセスビューアです。Top が提供する情報に加えて、詳細な CPU およびメモリ使用状況が表示されます。Htop は、`yum install htop` または `apt-get install htop` を使用して、ほとんどの Linux システムにインストールできます。
 
-* Iotop：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotopは、`yum install iotop`または`apt-get install iotop`を使用して、ほとんどのLinuxシステムにインストールできます。
+* Iotop：Iotop は、ディスク IO 使用量の詳細なダッシュボードです。ディスク IO を使用するプロセス、およびそのプロセスによる使用量を示すバーやメーターが表示されます。Iotop は、`yum install iotop` または `apt-get install iotop` を使用して、ほとんどの Linux システムにインストールできます。
 
-* [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftopは、`yum install iftop`または`apt-get install iftop`を使用して、ほとんどのLinuxシステムにインストールできます。
+* [Iftop](https://www.ex-parrot.com/pdw/iftop/)：Iftop は、イーサネット／ネットワークの使用量についての詳細情報を表示します。Iftop では、イーサネットを使用するエンティティについての通信チャネルごとの統計情報、および使用されている帯域幅の量が表示されます。Iftop は、`yum install iftop` または `apt-get install iftop` を使用してほとんどの Linux システムにインストールできます。
 
-* Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorderを使用してCQランタイムの問題を診断する方法](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq)を参照してください。
-* [!DNL Experience Manager] `error.log` ファイル：ファイルを調べて、シ [!DNL Experience Manager] `error.log` ステムに記録されたエラーの詳細を調べることができます。`tail -F quickstart/logs/error.log`コマンドを使用して、調査するエラーを特定します。
+* Java Flight Recorder（JFR）：非実稼動環境で自由に使用できる、Oracle の市販ツールです。詳しくは、[Java Flight Recorder を使用して CQ ランタイムの問題を診断する方法 ](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq) を参照してください。
+* [!DNL Experience Manager] `error.log` ファイル：ファイルを調べて、シ [!DNL Experience Manager] `error.log` ステムに記録されたエラーの詳細を調べることができます。`tail -F quickstart/logs/error.log` コマンドを使用して、調査するエラーを特定します。
 * [ワークフローコンソール](/help/sites-administering/workflows.md)：ワークフローコンソールを使用して、遅れているワークフローや、停止しているワークフローを監視できます。
 
-通常は、これらのツールを一緒に使用して、[!DNL Experience Manager]デプロイメントのパフォーマンスに関する包括的なアイデアを得ます。
+通常は、これらのツールを一緒に使用して、[!DNL Experience Manager] デプロイメントのパフォーマンスに関する包括的なアイデアを得ます。
 
 >[!NOTE]
 >
@@ -49,17 +49,17 @@ ht-degree: 67%
 
 ![chlimage_1-33](assets/chlimage_1-143.png)
 
-*図：Visual VMツールを使用したライブ監視。*
+*図：Visual VM ツールを使用したライブ監視。*
 
 ![chlimage_1-32](assets/chlimage_1-142.png)
 
 ## 長期的な監視 {#long-term-monitoring}
 
-[!DNL Experience Manager]デプロイメントの長期的な監視には、ライブで監視されるのと同じ部分を、長期間監視する必要があります。 また、環境に固有のアラートも定義します。
+[!DNL Experience Manager] デプロイメントの長期監視では、ライブで監視されるのと同じ部分を、長期間監視します。 また、環境に固有のアラートも定義します。
 
 ### ログの集約とレポート {#log-aggregation-and-reporting}
 
-ログを集計するツールがいくつかあります。例えば、Splunk(TM)やElastic Search、Logstash、Kabana(ELK)などです。 [!DNL Experience Manager]デプロイメントの稼動時間を評価するには、システム固有のログイベントを理解し、それらに基づいてアラートを作成することが重要です。 開発と運用に関する十分な知識があれば、ログ集計プロセスを調整して重要なアラートを生成する方法をより深く理解できます。
+ログの集計に使用できるツールはいくつかあります。例えば、Splunk(TM) や Elastic Search、Logstash、Kabana(ELK) などです。 [!DNL Experience Manager] デプロイメントの稼動時間を評価するには、システム固有のログイベントを理解し、それらに基づいてアラートを作成することが重要です。 開発と運用の実践に関する十分な知識は、ログ集約プロセスを調整して重要なアラートを生成する方法をより深く理解するのに役立ちます。
 
 ### 環境の監視 {#environment-monitoring}
 
@@ -76,17 +76,17 @@ ht-degree: 67%
 
 #### 内部アプリケーション監視 {#internal-application-monitoring}
 
-内部アプリケーションの監視には、JVM、コンテンツリポジトリ、プラットフォーム上に構築されたカスタムアプリケーションコードを介した監視など、[!DNL Experience Manager]スタックを構成するアプリケーションコンポーネントの監視が含まれます。 通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
+内部アプリケーションの監視には、JVM、コンテンツリポジトリ、プラットフォーム上に構築されたカスタムアプリケーションコードを介した監視など、[!DNL Experience Manager] スタックを構成するアプリケーションコンポーネントの監視が含まれます。 通常、SolarWinds（TM）、HP OpenView（TM）、Hyperic（TM）、Zabbix（TM）などの一般的な多くの監視ソリューションで直接監視できる JMX MBean を通して監視を実行します。JMX への直接接続をサポートしないシステムでは、JMX データを抽出して、それらのシステムがネイティブで理解できる形式で公開するシェルスクリプトを記述できます。
 
-JMX MBean へのリモートアクセスは、デフォルトで無効になっています。JMXによる監視の詳細は、[Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html)を参照してください。
+JMX MBean へのリモートアクセスは、デフォルトで無効になっています。JMX による監視の詳細は、[JMX テクノロジを使用した監視と管理 ](https://docs.oracle.com/javase/7/docs/technotes/guides/management/agent.html) を参照してください。
 
 多くの場合、統計情報を効果的に監視するにはベースラインが必要です。ベースラインを作成するには、通常の動作条件の下で一定期間システムを監視し、通常の指標を特定します。
 
 **JVM 監視**
 
-Javaベースのアプリケーションスタックと同様に、[!DNL Experience Manager]は、基盤となるJava仮想マシンを通じて提供されるリソースに依存します。 JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
+Java ベースのアプリケーションスタックと同様に、[!DNL Experience Manager] は基盤の Java 仮想マシンを通じて提供されるリソースに依存します。 JVM により公開されているプラットフォーム MXBean によって、それらのリソースの多くの状態を監視できます。MXBean について詳しくは、[プラットフォーム MBean サーバーおよびプラットフォーム MXBean の使用](https://docs.oracle.com/javase/7/docs/technotes/guides/management/mxbeans.html)を参照してください。
 
-JVMを監視できるベースラインパラメーターを次に示します。
+JVM で監視できる基準パラメーターを次に示します。
 
 メモリ
 
@@ -98,7 +98,7 @@ JVMを監視できるベースラインパラメーターを次に示します�
 
 >[!NOTE]
 >
->このBeanが提供する情報はバイト単位で表されます。
+>この Bean が提供する情報はバイト単位で表されます。
 
 スレッド
 
@@ -112,7 +112,7 @@ JVMを監視できるベースラインパラメーターを次に示します�
 
 [!DNL Experience Manager] も、JMX を通して一連の統計情報および操作を公開しています。これにより、システムヘルスの評価をおこない、ユーザーに影響を与える前に問題を特定できます。詳しくは、 JMX MBean の[ドキュメント](/help/sites-administering/jmx-console.md)を参照してください。[!DNL Experience Manager]
 
-[!DNL Experience Manager]に対して監視できるベースラインパラメーターを以下に示します。
+[!DNL Experience Manager] に対して監視できる基準パラメータを次に示します。
 
 レプリケーションエージェント
 
@@ -125,7 +125,7 @@ JVMを監視できるベースラインパラメーターを次に示します�
 
 >[!NOTE]
 >
->MBeanおよびURLパラメーターの`<AGENT_NAME>`を、監視するレプリケーションエージェントの名前に置き換えます。
+>MBean および URL パラメーターの `<AGENT_NAME>` を、監視するレプリケーションエージェントの名前に置き換えます。
 
 セッションカウンター
 
@@ -190,14 +190,14 @@ JVMを監視できるベースラインパラメーターを次に示します�
 
 ## 一般的な問題と解決策  {#common-issues-and-resolutions}
 
-監視の過程で問題が発生した場合は、次に示すトラブルシューティングタスクを実行して、[!DNL Experience Manager]デプロイメントの一般的な問題を解決します。
+監視の過程で問題が発生した場合は、次のトラブルシューティングタスクを実行して、[!DNL Experience Manager] デプロイメントの一般的な問題を解決できます。
 
-* TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリのメンテナンス](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
-* `OutOfMemoryError`ログを確認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
+* TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[ リポジトリのメンテナンス ](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository) を参照してください。
+* `OutOfMemoryError` ログを確認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
 
-* ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリとインデックスのパフォーマンスの最適化に関するベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
+* ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリとインデックスのパフォーマンスの最適化に関するベストプラクティスについては、[ クエリとインデックスに関するベストプラクティス ](/help/sites-deploying/best-practices-for-queries-and-indexing.md) を参照してください。
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
 * ライブ監視を再確認し、他にボトルネックがないか、または特定のリソースを大量に使用している箇所がないかを確認します。
-* クライアントネットワークからのエグレスポイントと、ディスパッチャーを含む[!DNL Experience Manager]デプロイメントネットワークへの入口ポイントを調べます。 多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
-* [!DNL Experience Manager]サーバのサイズを大きくします。 [!DNL Experience Manager]デプロイメントのサイズが不適切な可能性があります。 Adobeカスタマーケアは、サーバーのサイズが小さいかどうかを特定するのに役立ちます。
+* クライアントネットワークからの出力ポイントと、Dispatcher を含む [!DNL Experience Manager] デプロイメントネットワークへの入力ポイントを調べます。 多くの場合、これらがボトルネックが発生する領域となります。詳しくは、[Assets のネットワークにおける考慮事項](/help/assets/assets-network-considerations.md)を参照してください。
+* [!DNL Experience Manager] サーバのサイズを大きくします。 [!DNL Experience Manager] デプロイメントのサイズが不適切な可能性があります。 Adobeカスタマーサポートは、サーバーのサイズが小さいかどうかを特定するのに役立ちます。
 * `access.log` および `error.log` ファイルで、不具合の発生した時刻付近のエントリを調査します。カスタムコードの異常の兆候となるパターンを探します。それらを監視するイベントのリストに追加します。
