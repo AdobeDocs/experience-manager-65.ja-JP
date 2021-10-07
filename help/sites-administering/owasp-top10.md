@@ -1,8 +1,8 @@
 ---
 title: OWASP Top 10
-seo-title: OWASPトップ10
+seo-title: OWASP Top 10
 description: AEM で OWASP Top 10 のセキュリティリスクに対処する方法について説明します。
-seo-description: AEM で OWASP Top 10 のセキュリティリスクに対処する方法について説明します。
+seo-description: Learn how AEM deals with the top 10 OWASP security risks.
 uuid: a5a7e130-e15b-47ae-ba21-448f9ac76074
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,15 +10,15 @@ topic-tags: Security
 content-type: reference
 discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
 exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
-feature: セキュリティ
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+feature: Security
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 89%
+source-wordcount: '496'
+ht-degree: 87%
 
 ---
 
-# OWASP Top 10{#owasp-top}
+# OWASP トップ 10{#owasp-top}
 
 [Open Web Application Security Project](https://www.owasp.org)（OWASP）は、[Top 10 Web Application Security Risks](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)（Web アプリケーションに関する上位 10 件のセキュリティリスク）のリストを保持しています。
 
@@ -30,7 +30,7 @@ ht-degree: 89%
 * LDAP - 認証モジュールによって入力にフィルターが適用され、バインドメソッドを使用してユーザーの読み込みが実行されるので、LDAP インジェクションは不可能です。
 * OS - アプリケーション内からのシェル実行はありません。
 
-## 2. クロスサイトスクリプティング（XSS）  {#cross-site-scripting-xss}
+## 2. クロスサイトスクリプティング（XSS） {#cross-site-scripting-xss}
 
 このリスクを軽減する一般的な方法は、[OWASP Encoder](https://www.owasp.org/index.php/OWASP_Java_Encoder_Project) と [AntiSamy](https://www.owasp.org/index.php/Category:OWASP_AntiSamy_Project) に基づくサーバー側の XSS 保護ライブラリを使用して、ユーザーが生成したコンテンツのすべての出力をエンコードすることです。
 
@@ -44,11 +44,11 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 
 データオブジェクトへのすべてのアクセスは、リポジトリが介在するので、役割に基づくアクセス制御によって制限されます。
 
-## 5. クロスサイトリクエストフォージェリ（CSRF）  {#cross-site-request-forgery-csrf}
+## 5. クロスサイトリクエストフォージェリ（CSRF） {#cross-site-request-forgery-csrf}
 
-クロスサイトリクエストフォージェリ(CSRF)は、すべてのフォームとAJAXリクエストに暗号化トークンを自動的に挿入し、POSTごとにサーバー上でこのトークンを検証することで軽減されます。
+クロスサイトリクエストフォージェリ (CSRF) は、すべてのフォームに暗号化トークンを自動的に挿入し、各POSTに対してサーバー上でこのトークンを検証することで軽減されます。
 
-さらに、AEMにはリファラーヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト（リストで定義）からのPOSTリクエストを&#x200B;*のみ*&#x200B;に設定できます。
+また、AEMにはリファラーヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト（リストで定義）からのPOSTリクエストを *のみ* に許可するように設定できます。
 
 ## 6. セキュリティ設定のミス {#security-misconfiguration}
 
@@ -62,9 +62,9 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 
 サードパーティの資格情報などのような重要な情報は、FIPS 140-2 認定を受けた暗号ライブラリを使用して、暗号化された形式で保存されます。
 
-## 8. URL アクセス制限の失敗  {#failure-to-restrict-url-access}
+## 8. URL アクセス制限の失敗 {#failure-to-restrict-url-access}
 
-リポジトリでは、アクセス制御エントリを使用して、特定のパスの特定のユーザーまたはグループに対して[（JCR で指定された）詳細な権限](https://docs.adobe.com/content/docs/en/spec/jcr/2.0/16_Access_Control_Management.html)を設定できます。アクセス制限はリポジトリによって適用されます。
+リポジトリでは、アクセス制御エントリを使用して、特定のパスの特定のユーザーまたはグループに対して[（JCR で指定された）詳細な権限](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)を設定できます。アクセス制限はリポジトリによって適用されます。
 
 ## 9. 不十分なトランスポート層の保護 {#insufficient-transport-layer-protection}
 
