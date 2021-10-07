@@ -1,123 +1,151 @@
 ---
-title: AEMコンテンツおよびコマースリリースノート2021
-description: AEMコンテンツおよびコマースリリースノート2021
+title: AEMコンテンツおよびコマースリリースノート 2021
+description: AEMコンテンツおよびコマースリリースノート 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: fd973cb3693872e4850f860a625cab70553d2754
+source-git-commit: a401955e4b163a8062a498ea897d4a3d95ae0208
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1135'
 ht-degree: 22%
 
 ---
 
-# Commerce統合フレームワークGitHubリリースの概要
+# Commerce 統合フレームワーク GitHub リリースの概要
 
 ## システム要件の概要
 
-現在使用しているCIFバージョン、または将来使用する予定のCIFバージョンについて、以下の表の最小必要システム構成を確認します。
+現在使用している CIF バージョンまたは将来使用する予定の CIF バージョンについて、次の表の最小必要システム構成を確認します。
 
-**4月のリリースでは、GitHubのCIFコネクタを** Adobeソフトウェア配布 [](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)で利用できるCIFアドオンに置き換えました。アドオンに切り替えると、次のような大きなメリットが得られます。
+**4 月のリリースでは、GitHub の CIF コネクタを** Adobeソフトウェア配布 [で利用できる CIF アドオンに置き換えまし](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)た。アドオンに切り替えると、次のようなプロジェクトに大きなメリットがもたらされます。
 
-* 新機能のほとんどは、AEM 6.5ですぐに使用できます（機能側ポートを待つ必要はありません）。
+* 新機能のほとんどは、AEM 6.5 ですぐに利用できます（機能側ポートを待つ必要はありません）
 * 新しいアドオンバージョンへの容易なアップグレード
 * Cloud Service準備完了
 
-古いAEM CIFコネクタはメンテナンスモードに入り、使用しないでください。 CIFコネクタを新しいCIFアドオンに置き換えてください。 ほとんどのプロジェクトでは、単にパッケージの置き換えが可能です。
+古いAEM CIF コネクタはメンテナンスモードに入り、使用しないでください。 CIF コネクタを新しい CIF アドオンに置き換えてください。 ほとんどのプロジェクトでは、単にパッケージの交換が可能です。
 
 | コンポーネント | システム要件 |
 |:-------|:-----:|
-| CIF アドオン | 最小：AEM 6.5.7、Magento2.3.5のGraphQLスキーマ |
-| CIFコアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
+| CIF アドオン | 最小：AEM 6.5.7、Magento2.3.5 GraphQL スキーマ |
+| CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
-## リリース日：2021年8月
+## リリース日：2021 年 9 月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIF アドオン | 2021.09.27 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.27.zip) |
+| CIF コアコンポーネント | 2.2.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.2.0) |
+| CIF Venia リファレンスサイト | 2021.09.23 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.09.23) |
+
+### 新機能 {#what-is-new-september}
+
+* サイトエディターの新しい「関連するコマースコンテンツ」タブでは、現在のコンテキストの関連するAEM製品コンテンツにすばやくアクセスできるので、作成者の効率が向上します。
+
+   ![関連するコマースコンテンツ](/help/assets/CIF/associated-commerce-content.png)
+
+* 製品ピッカーの UI が改善され、ユーザーエクスペリエンスが向上し、効率が向上し、複雑な製品カタログのサポートが向上
+
+   ![新しい製品ピッカー](/help/assets/CIF/product-picker.png)
+
+* ナビゲーションコンポーネントで「include_in_menu」プロパティを適用する
+
+### バグの修正 {#bug-fixes-september}
+
+* メニューキャッシュのフラッシュが期待どおりに機能しない
+
+* AEM CS のデプロイメント手順中およびクライアント側コンポーネントを使用していない場合の JS エラー
+
+* sling:configs ノードを持つフォルダー内に CIF クラウド設定を作成できない
+
+## リリース日：2021 年 8 月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
 | CIF アドオン | 2021.09.02 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.09.02.zip) |
-| CIFコアコンポーネント | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
-| CIF Veniaリファレンスサイト | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
+| CIF コアコンポーネント | 2.1.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.1.0) |
+| CIF Venia リファレンスサイト | 2021.08.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.08.27) |
 
 ### 新機能 {#what-is-new-august}
 
-* 新しいカテゴリピッカーUIにより、ユーザーエクスペリエンスの向上、効率の向上、複雑な製品カタログのサポートの向上を実現
+* 新しいカテゴリピッカー UI により、ユーザーエクスペリエンスの向上、効率の向上、複雑な製品カタログのサポートの向上を実現
 
    ![新しいカテゴリピッカー](/help/assets/CIF/category-picker.png)
 
-* CIFコアコンポーネントのサポートの向A11Y
+* CIF コアコンポーネントのサポートの向A11Y
 
 ### バグの修正 {#bug-fixes-august}
 
-* アコーディオンを開くと、カテゴリフィルタを閉じることができません
+* アコーディオンを開いた後、カテゴリフィルタを閉じることはできません
 
 * 製品ティーザーの「コールトゥアクションテキスト」プロパティが壊れています
 
-* AEM CSデプロイメント手順中のCIF JSエラー
+* AEM CS デプロイメント手順中の CIF JS エラー
 
 * マッピングされた製品リスト項目の生の製品アクセスを修正
 
-## リリース日：2021年7月
+## リリース日：2021 年 7 月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
 | CIF アドオン | 2021.07.21 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.07.21.zip) |
-| CIFコアコンポーネント | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
-| CIF Veniaリファレンスサイト | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
+| CIF コアコンポーネント | 2.0.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.0.0) |
+| CIF Venia リファレンスサイト | 2021.07.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.07.22) |
 
 ### 新機能 {#what-is-new-july}
 
-* CIFコアコンポーネントv2
-   * PDP/PLP URLとSEOの構成の簡素化と改善
-   * オーサリングモードでのステージングされた製品データの視覚的インジケーターにより、今後の変更の可視性が向上
+* CIF コアコンポーネント v2
+   * PDP/PLP URL と SEO の構成を簡素化し、改善
+   * オーサリングモードでの段階別製品データの視覚的インジケーターにより、今後の変更の可視性が向上
    * コンテンツページとコマースページ用の新しいサイトマップコンポーネント
 
-* 事前定義済みのレコメンデーションまたはオンザフライで作成されたレコメンデーションを使用した、AEM StorefrontのAdobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html)による[AdobeコマースSensei製品レコメンデーションのサポート
+* 事前定義済みまたはオンザフライで作成されたレコメンデーションを使用した、AEMストアフロントのAdobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) による [Adobe Commerce Sensei製品レコメンデーションのサポート
 
-## リリース日：2021年6月
+## リリース日：2021 年 6 月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
 | CIF アドオン | 2021.06.18 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.06.18.zip) |
-| CIFコアコンポーネント | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
-| CIF Veniaリファレンスサイト | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
+| CIF コアコンポーネント | 1.12.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.12.0) |
+| CIF Venia リファレンスサイト | 2021.06.12 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.06.17) |
 
 ### 新機能 {#what-is-new-june}
 
-* コンテンツフラグメント( 製品/カテゴリピッカーのUIのサポート)
+* コンテンツフラグメント ( 製品/カテゴリピッカー UI のサポート )
 * 新しいコマースコンテンツフラグメントコアコンポーネント
 * AEMバックエンドでサポートされるフルテキストコマース検索
-* コマースコアコンポーネントは、AdobeCommerce Sensei Recsのデータ収集をサポートします。
-* カテゴリページのSEOに対応するURLの改善
-* サイト/設定ごとのカスタムHTTPヘッダーのサポート
+* Commerce コアコンポーネントは、Adobe Commerce Sensei Recs のデータ収集をサポートします。
+* カテゴリページの SEO 対応 URL の改善
+* サイト/設定ごとのカスタム HTTP ヘッダーのサポート
 
-## リリース日：2021年5月
+## リリース日：2021 年 5 月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
 | CIF アドオン | 2021.05.26 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.05.26.zip) |
-| CIFコアコンポーネント | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
-| CIF Veniaリファレンスサイト | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
+| CIF コアコンポーネント | 1.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.11.0) |
+| CIF Venia リファレンスサイト | 2021.05.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.05.24) |
 
 ### 新機能 {#what-is-new-may}
 
-* 製品コンソールのプロパティでの関連コンテンツのページネーションのサポート
+* 製品コンソールのプロパティで関連するコンテンツのページネーションをサポート
 
 ### バグの修正 {#bug-fixes-may}
 
-* 製品プロパティの「アセット」タブにアセットサムネールが表示されない
+* 製品プロパティの「アセット」タブにアセットのサムネールが表示されない
 
-* 製品コンソールのプレビューデータをリセットするパンくずリスト
+* 製品コンソールのプレビューデータをリセットするパンくず
 
-## リリース日：2021年4月
+## リリース日：2021 年 4 月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
 | CIF アドオン | 2021.04.22 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.04.22.zip) |
-| CIFコアコンポーネント | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Veniaリファレンスサイト | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF コアコンポーネント | 1.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia リファレンスサイト | 2021.04.22 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新機能 {#what-is-new-april}
 
-* カテゴリUIDのサポート — カテゴリIDに文字列を使用するシステム用のサードパーティコマース統合のロックを解除します
+* カテゴリ UID のサポート — カテゴリ ID に文字列を使用するシステム用のサードパーティコマース統合をロック解除します
 
 * PWA Studio 用 AEM 拡張機能（統合の例を含む）
 
@@ -127,13 +155,13 @@ ht-degree: 22%
 
 * カテゴリページのページプロパティの「コマース」タブに、ルートカテゴリフィールドが表示されなかった問題を修正しました。
 
-## リリース日：2021年3月 {#what-is-new-march}
+## リリース日：2021 年 3 月 {#what-is-new-march}
 
 | GitHub | バージョン | 詳細なリリースノート |
 |:-------|:-----:|---------------------:|
-| CIFコネクタ | 1.9.0 | [リリースノート](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIFコアコンポーネント | 1.9.0 | [リリースノート](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Veniaリファレンスサイト | 2021.03.25 | [リリースノート](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF コネクタ | 1.9.0 | [リリースノート](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF コアコンポーネント | 1.9.0 | [リリースノート](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia リファレンスサイト | 2021.03.25 | [リリースノート](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新機能
 
@@ -141,39 +169,39 @@ ht-degree: 22%
 
 ### 改善点
 
-* コンテンツ駆動型ページの製品詳細コンポーネントの再利用性の向上
+* コンテンツ駆動型のページでの製品詳細コンポーネントの再利用性の向上
 
-* キャッシュの改善とPDPのバックエンド呼び出しの削減
+* キャッシュの向上と PDP のバックエンド呼び出しの削減
 
 * 複数のバグ修正。
 
-## リリース日：2021年2月
+## リリース日：2021 年 2 月
 
 | GitHub | バージョン | 詳細なリリースノート |
 |:-------|:-----:|---------------------:|
-| CIFコネクタ | 1.8.0 | [リリースノート](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIFコアコンポーネント | 1.8.0 | [リリースノート](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Veniaリファレンスサイト | 2021.02.24 | [リリースノート](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF コネクタ | 1.8.0 | [リリースノート](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF コアコンポーネント | 1.8.0 | [リリースノート](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia リファレンスサイト | 2021.02.24 | [リリースノート](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新機能 {#what-is-new-february}
 
 * 製品エクスペリエンス管理：エクスペリエンスフラグメントを使用して製品カタログページを個別に拡充することができます。
 
-* 製品コンソールの拡張プロパティを使用して、リンクされたアセットとエクスペリエンスフラグメントを表示します。関連コンテンツにすばやく移動するアクションも含まれます。
+* 製品コンソールの拡張プロパティを使用して、リンクされたアセットとエクスペリエンスフラグメントを表示できます。これには、関連するコンテンツにすばやく移動するアクションが含まれます。
 
 ### 改善点  {#what-is-improved-february}
 
-* 製品画像のURLとカテゴリ情報を使用して、クライアント側のデータレイヤーを強化しました。
+* 製品画像の URL とカテゴリ情報により、クライアント側のデータレイヤーが強化されました。
 
 * 複数のバグ修正。
 
-## リリース日：2021年1月
+## リリース日：2021 年 1 月
 
 | GitHub | バージョン | 詳細なリリースノート |
 |:-------|:-----:|---------------------:|
-| CIFコネクタ | 1.7.0 | [リリースノート](https://github.com/adobe/commerce-cif-connector/releases) |
-| CIFコアコンポーネント | 1.7.0 | [リリースノート](https://github.com/adobe/aem-core-cif-components/releases) |
-| CIF Veniaリファレンスサイト | 2021.02.02 | [リリースノート](https://github.com/adobe/aem-cif-guides-venia/releases) |
+| CIF コネクタ | 1.7.0 | [リリースノート](https://github.com/adobe/commerce-cif-connector/releases) |
+| CIF コアコンポーネント | 1.7.0 | [リリースノート](https://github.com/adobe/aem-core-cif-components/releases) |
+| CIF Venia リファレンスサイト | 2021.02.02 | [リリースノート](https://github.com/adobe/aem-cif-guides-venia/releases) |
 
 ### 新機能 {#what-is-new-january}
 
