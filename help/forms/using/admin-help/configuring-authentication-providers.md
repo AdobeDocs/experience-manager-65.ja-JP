@@ -1,8 +1,8 @@
 ---
 title: 認証プロバイダーの設定
-seo-title: 認証プロバイダーの設定
+seo-title: Configuring authentication providers
 description: 認証プロバイダーの追加、編集、削除、認証設定の変更、ユーザーのジャストインタイムプロビジョニングについて説明します。
-seo-description: 認証プロバイダーの追加、編集、削除、認証設定の変更、ユーザーのジャストインタイムプロビジョニングについて説明します。
+seo-description: Add, edit, or delete authentication providers, change authentication settings, and read about just-in-time provisioning of users.
 uuid: 90e7690b-1ce0-4604-b58f-6dca4f2372cf
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 31dd8db3-ddac-429e-82f8-8c5dc4ffc186
 exl-id: d72a3977-1423-49e0-899b-234bb76be378
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 82%
+source-wordcount: '1576'
+ht-degree: 79%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 82%
 
 SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした Kerberos 認証プロバイダーのほか、バックアップとして LDAP プロバイダーを追加します。この設定にすると、SPNEGO が機能しない場合でもユーザー ID とパスワードを使用したユーザー認証が可能になります（[SPNEGO を使用した SSO の有効化](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#enable-sso-using-spnego)を参照）。
 
-## 認証プロバイダーの追加  {#add-an-authentication-provider}
+## 認証プロバイダーの追加 {#add-an-authentication-provider}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. リストから既存のドメインをクリックします。新しいドメインに認証を追加する場合は、[エンタープライズドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain)または [ハイブリッドドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain)を参照してください。
@@ -32,14 +32,14 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 1. （オプション）「テスト」をクリックして設定をテストします。
 1. 「OK」をクリックし、「OK」を再度クリックします。
 
-## 既存の認証プロバイダーの編集  {#edit-an-existing-authentication-provider}
+## 既存の認証プロバイダーの編集 {#edit-an-existing-authentication-provider}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. リストから目的のドメインをクリックします。
 1. 表示されるページで、リストから適切な認証プロバイダーを選択し、必要に応じて変更します（[認証の設定](configuring-authentication-providers.md#authentication-settings)を参照）。
 1. 「OK」をクリックします。
 
-## 認証プロバイダーの削除  {#delete-an-authentication-provider}
+## 認証プロバイダーの削除 {#delete-an-authentication-provider}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. リストから目的のドメインをクリックします。
@@ -58,11 +58,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 認証を実行するために異なる LDAP サーバーを使用するには、認証プロバイダーとして LDAP を選択し、「カスタム LDAP 認証」チェックボックスをオンにします。次の環境設定が表示されます。
 
-**サーバー：** （必須）ディレクトリサーバーの完全修飾ドメイン名(FQDN)。例えば、corp.example.com ネットワーク上の x というコンピューターの場合、FQDN は x.corp.example.com です。FQDN サーバー名の代わりに IP アドレスを使用することもできます。
+**サーバー：** （必須）ディレクトリサーバーの完全修飾ドメイン名 (FQDN)。例えば、example.com ネットワーク上の x というコンピューターの場合、FQDN は x.example.com です。 FQDN サーバー名の代わりに IP アドレスを使用することもできます。
 
 **Port:** （必須）ディレクトリサーバーが使用するポート。通常は 389 で、Secure Sockets Layer（SSL）プロトコルを使用してネットワーク経由で認証情報を送信する場合は 636 です。
 
-**SSL:** （必須）ネットワーク経由でデータを送信する際に、ディレクトリサーバーでSSLを使用するかどうかを指定します。デフォルトは「いいえ」です。「はい」に設定する場合、対応する LDAP サーバー証明書はアプリケーションサーバーの Java™ ランタイム環境（JRE）によって信頼されている必要があります。
+**SSL:** （必須）ネットワーク経由でデータを送信する際に、ディレクトリサーバーで SSL を使用するかどうかを指定します。デフォルトは「いいえ」です。「はい」に設定する場合、対応する LDAP サーバー証明書はアプリケーションサーバーの Java™ ランタイム環境（JRE）によって信頼されている必要があります。
 
 **Binding** （必須）ディレクトリへのアクセス方法を指定します。
 
@@ -70,13 +70,13 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 **ユーザー：** 認証が必要です。「名前」ボックスに、ディレクトリにアクセスできるユーザーレコードの名前を指定します。ユーザーアカウントの完全な識別名（DN）を入力することをお勧めします。例えば、cn=Jane Doe, ou=user, dc=can, dc=com などです。「パスワード」ボックスに、関連付けられているパスワードを指定します。これらの設定は、「バインド」オプションとして「ユーザー」を選択する場合は必須です。
 
-**BaseDNを取得：** （必須ではありません）BaseDNを取得し、ドロップダウンリストに表示します。この設定は、複数の BaseDN がある場合に 1 つの値を選択する必要があるときに便利です。
+**BaseDN を取得：** （必須ではありません）BaseDN を取得し、ドロップダウンリストに表示します。この設定は、複数の BaseDN がある場合に 1 つの値を選択する必要があるときに便利です。
 
-**Base DN:** （必須）LDAP階層からユーザーとグループを同期するための開始点として使用されます。サービスのために同期する必要があるすべてのユーザーおよびグループを含む階層の最下位レベルの BaseDN を指定することをお勧めします。この設定にユーザーの DN は含めないでください。特定のユーザーを同期するには、検索フィルター設定を使用します。
+**Base DN:** （必須）LDAP 階層からユーザーとグループを同期するための開始点として使用されます。サービスのために同期する必要があるすべてのユーザーおよびグループを含む階層の最下位レベルの BaseDN を指定することをお勧めします。この設定にユーザーの DN は含めないでください。特定のユーザーを同期するには、検索フィルター設定を使用します。
 
-**ページに次の情報を入力：** （非必須）選択すると、ユーザーおよびグループ設定ページの属性に、対応するデフォルトのLDAP値が設定されます。
+**ページへの入力：** （非必須）選択すると、ユーザーおよびグループ設定ページの属性に、対応するデフォルトの LDAP 値が設定されます。
 
-**検索フィルター：** （必須）ユーザーに関連付けられているレコードの検索に使用する検索フィルター。「検索フィルターの構文」を参照してください。
+**検索フィルター：** （必須）ユーザーに関連付けられているレコードを検索するために使用する検索フィルター。「検索フィルターの構文」を参照してください。
 
 ### Kerberos 設定 {#kerberos-settings}
 
@@ -84,11 +84,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 **DNS IP：** AEM Forms を実行しているサーバーの DNS IP アドレス。Windows の場合、この IP アドレスは、コマンドラインで ipconfig /all を実行して確認できます。
 
-**KDCホスト：** 認証に使用されるActive Directoryサーバーの完全修飾ホスト名またはIPアドレス。
+**KDC ホスト：** 認証に使用する Active Directory サーバーの完全修飾ホスト名または IP アドレス。
 
-**Service User:** Active Directory 2003を使用している場合、この値はフォーム内のサービスプリンシパル用に作成されるマッピングになりま `HTTP/<server name>`す。Active Directory 2008 を使用している場合、サービスプリンシパルのログイン ID になります。例えば、サービスプリンシパル名が um spnego、ユーザー ID が spnegodemo、マッピングが HTTP/example.corp.yourcompany.com であるとします。この場合、Active Directory 2003 では、「サービスユーザー」を HTTP/example.corp.yourcompany.com に設定します。Active Directory 2008 では、「サービスユーザー」を spnegodemo に設定します（SPNEGO を使用した SSO の有効化を参照）。
+**Service User:** Active Directory 2003 を使用している場合、この値はフォーム内のサービスプリンシパル用に作成されたマッピングになりま `HTTP/<server name>`す。Active Directory 2008 を使用している場合、サービスプリンシパルのログイン ID になります。例えば、サービスプリンシパルの名前が um spnego で、ユーザー ID が spnegodemo で、マッピングがHTTP/example.yourcompany.com であるとします。 Active Directory 2003 では、サービスユーザーをHTTP/example.yourcompany.com に設定します。 Active Directory 2008 では、「サービスユーザー」を spnegodemo に設定します（SPNEGO を使用した SSO の有効化を参照）。
 
-**サービス領域：** Active Directoryのドメイン名
+**サービス領域：** Active Directory のドメイン名
 
 **サービスパスワード：** サービスユーザーのパスワード
 
@@ -98,11 +98,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 エンタープライズドメインまたはハイブリッドドメインの認証を設定している場合、SAML 認証を選択するには、次の設定を使用できます。SAML 設定について詳しくは、[SAML サービスプロバイダーの設定](/help/forms/using/admin-help/configure-saml-service-provider-settings.md#configure-saml-service-provider-settings)を参照してください。
 
-**読み込むSAML IDプロバイダーメタデータファイルを選択してください：** 「参照」をクリックし、IDPから生成されたSAML IDプロバイダーメタデータファイルを選択して、「読み込み」をクリックします。IDP の詳細が表示されます。
+**読み込む SAML ID プロバイダーメタデータファイルを選択してください：** 「参照」をクリックし、IDP から生成された SAML ID プロバイダーメタデータファイルを選択して、「読み込み」をクリックします。IDP の詳細が表示されます。
 
-**タイトル：** EntityIDで示すURLのエイリアス。タイトルは、エンタープライズユーザーおよびローカルユーザーのログインページにも表示されます。
+**タイトル：** EntityID で示す URL のエイリアス。タイトルは、エンタープライズユーザーおよびローカルユーザーのログインページにも表示されます。
 
-**IDプロバイダーがクライアント基本認証をサポート：** クライアント基本認証は、IDPがSAMLアーティファクト解決プロファイルを使用する場合に使用されます。このプロファイルでは、User Management は、実際の SAML アサーションを取得するために、IDP で実行されている Web サービスに接続します。IDP では認証が必要である場合があります。IDP で認証が必要であれば、このオプションを選択して、表示されたボックスにユーザー名とパスワードを指定します。
+**ID プロバイダーがクライアント基本認証をサポート：** クライアント基本認証は、IDP が SAML アーティファクト解決プロファイルを使用する場合に使用されます。このプロファイルでは、User Management は、実際の SAML アサーションを取得するために、IDP で実行されている Web サービスに接続します。IDP では認証が必要である場合があります。IDP で認証が必要であれば、このオプションを選択して、表示されたボックスにユーザー名とパスワードを指定します。
 
 **カスタムプロパティ：** 追加のプロパティを指定できます。追加のプロパティは name=value のペアで指定し、各ペアは新しい行によって区切られます。
 
@@ -121,7 +121,7 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 エンタープライズドメインまたはハイブリッドドメインの認証を設定していてカスタム認証を選択する場合は、カスタム認証プロバイダーの名前を選択します。
 
-## ユーザーのジャストインタイムプロビジョニング  {#just-in-time-provisioning-of-users}
+## ユーザーのジャストインタイムプロビジョニング {#just-in-time-provisioning-of-users}
 
 ユーザーが認証プロバイダーに認証されると、ジャストインタイムプロビジョニングによって User Management データベースにユーザーが自動的に作成されます。この新しいユーザーには、関連するロールとグループも動的に割り当てられます。エンタープライズドメインおよびハイブリッドドメインに対して、ジャストインタイムプロビジョニングを有効にできます。
 
@@ -131,11 +131,11 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 1. 認証プロバイダーは、秘密鍵証明書を検証します。
 1. 認証プロバイダーは、次に、ユーザーが User Management データベースに存在するかどうかを確認します。可能性のあるステータスは、次のとおりです。
 
-   **** Existsユーザーが現在のロックが解除されている場合、User Managementは認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
+   **** Exists ユーザーが最新でロックが解除されている場合、User Management は認証成功を返します。これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
-   **存在しな** いUser Managementは認証エラーを返します。
+   **存在しな** い User Management は認証エラーを返します。
 
-   **** InvalidUser Managementは認証エラーを返します。
+   **** InvalidUser Management は認証エラーを返します。
 
 1. 認証プロバイダーが返した結果が評価されます。認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。そうでない場合は、User Management は次の認証プロバイダーに対して確認（手順 2～3）を行います。
 1. ユーザーの秘密鍵証明書を検証する利用可能な認証プロバイダーがなくなると、認証の失敗が返されます。
@@ -144,7 +144,7 @@ SPNEGO を使用して SSO を有効にする場合、SPNEGO を有効にした 
 
 ジャストインタイムプロビジョニングが有効になっていないと、ユーザーが認証されても、User Management データベースに存在しない場合は、その認証は失敗します。ジャストインタイムプロビジョニングによって、ユーザーを作成し、そのユーザーにロールとグループを割り当てる手順が認証プロセスに追加されます。
 
-### ドメインに対するジャストインタイムプロビジョニングの有効化  {#enable-just-in-time-provisioning-for-a-domain}
+### ドメインに対するジャストインタイムプロビジョニングの有効化 {#enable-just-in-time-provisioning-for-a-domain}
 
 1. IdentityCreator および AssignmentProvider インターフェイスを実装するサービスコンテナを作成します。（「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」を参照してください。）
 1. そのサービスコンテナを AEM Forms サーバーにデプロイします。
