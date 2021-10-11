@@ -1,20 +1,21 @@
 ---
 title: インタラクティブ通信の概要
-seo-title: インタラクティブ通信の概要
+seo-title: Interactive Communications Overview
 description: この記事では、インタラクティブ通信の概要、サンプルのユースケース、作成ワークフロー、インタラクティブ通信とレターの違いについて説明します。
-seo-description: インタラクティブ通信の主要な機能, サンプルのユースケース, 作成ワークフロー, インタラクティブ通信と Correspondence Management との違い
+seo-description: Interactive Communication key capabilities, sample use cases, creation workflow, and differences between Interactive Communication and Correspondence Management
 uuid: a06b4ac7-ca20-4d6d-b2b7-87b21e2f5cf9
 contentOwner: gtalwar
 topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 73%
+source-wordcount: '489'
+ht-degree: 71%
 
 ---
+
 
 # インタラクティブ通信の概要 {#interactive-communications-overview}
 
@@ -22,32 +23,32 @@ ht-degree: 73%
 
 ![](do-not-localize/correspondence-management.png)
 
-Interactive Communicationsは、ビジネス通信、ドキュメント、声明書、便益通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
+Interactive Communications は、ビジネス通信、ドキュメント、声明書、特典通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
 
 ## 主な機能 {#key-capabilities}
 
 以下に、インタラクティブ通信の主要な機能を示します。
 
-* すぐに使用できる、フォームデータモデルとの統合機能が付属しています。この機能により、バックエンドのデータベースと、MS® Dynamics などの CRM システムに簡単にアクセスすることができます。
-* 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから Web チャネルを自動的に生成することができます。
-* 印刷チャネルと Web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
-* ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
-* エージェントユーザーインターフェイスに、インタラクティブ通信の印刷とWebプレビューが表示されます
-* ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
+- すぐに使用できる、フォームデータモデルとの統合機能が付属しています。この機能により、バックエンドのデータベースと、MS® Dynamics などの CRM システムに簡単にアクセスすることができます。
+- 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから Web チャネルを自動的に生成することができます。
+- 印刷チャネルと Web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
+- ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
+- エージェントのユーザーインターフェイスに、インタラクティブ通信の印刷と Web プレビューが表示されます
+- ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
 
-## インタラクティブ通信の作成  {#interactive-communication-creation}
+## インタラクティブ通信の作成 {#interactive-communication-creation}
 
 ![interactive_communication-01](assets/interactive_communication-01.jpg)
 
 ### ワークフロー {#workflow}
 
-インタラクティブ通信を作成するには、インタラクティブ通信用の[構築ブロック](#buildingblocks)を準備し、次の手順を実行します。
+インタラクティブ通信を作成するには、インタラクティブ通信用の [ 構築ブロック ](#buildingblocks) を準備し、次の手順を実行します。
 
-1. [インタラクティブ通信を作成](/help/forms/using/create-interactive-communication.md)します。
+1. [ インタラクティブ通信を作成 ](/help/forms/using/create-interactive-communication.md) します。
 
-1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。印刷チャネルからWebチャネルを生成することもできます。
+1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。印刷チャネルから Web チャネルを生成することもできます。
 
-1. [ドラッグ&amp;ドロップインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)を使用して、必要に応じて、インタラクティブ通信の印刷チャネルとWebチャネルにドキュメントフラグメント、画像、コンポーネントを追加します。
+1. [ ドラッグ&amp;ドロップインターフェイス ](/help/forms/using/introduction-interactive-communication-authoring.md) を使用して、必要に応じて、インタラクティブ通信の印刷チャネルと Web チャネルにドキュメントフラグメント、画像、コンポーネントを追加します。
 1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
 
    1. [画像](/help/forms/using/create-interactive-communication.md#step2)
@@ -62,11 +63,11 @@ Interactive Communicationsは、ビジネス通信、ドキュメント、声明
 
 インタラクティブ通信を作成するために必要な構築ブロックを以下に示します。
 
-* [フォームデータモデル](/help/forms/using/data-integration.md)
-* [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
-* [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
-* 画像
-* [](/help/forms/using/themes.md) Webチャネルのテーマ
+- [フォームデータモデル](/help/forms/using/data-integration.md)
+- [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
+- [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
+- 画像
+- [](/help/forms/using/themes.md) Web チャネルのテーマ
 
 ## インタラクティブ通信と Correspondence Management の比較 {#interactive-communications-vs-correspondence-management}
 
@@ -106,7 +107,7 @@ Interactive Communicationsは、ビジネス通信、ドキュメント、声明
   <tr>
    <td>オーサリング</td>
    <td>ドラッグアンドドロップ方式のインターフェイスを使用して、印刷チャネルと Web チャネルを作成できる</td>
-   <td>ドラッグ&amp;ドロップメカニズムなし </td>
+   <td>ドラッグ&amp;ドロップメカニズムがない </td>
   </tr>
   <tr>
    <td>グラフ</td>
@@ -118,14 +119,24 @@ Interactive Communicationsは、ビジネス通信、ドキュメント、声明
    <td>テーマを使用して Web チャネルのスタイルを設定できる</td>
    <td>テーマはサポートされていない</td>
   </tr>
-  <tr>
-   <td>監査とバージョン管理</td>
-   <td>サポートされていない</td>
+   <tr>
+   <td>ドラフト</td>
+   <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
   <tr>
-   <td>下書きとインスタンスの管理</td>
-   <td>サポートされていない</td>
+   <td>監査</td>
+   <td>サポートなし</td>
+   <td>サポート対象</td>
+  </tr>
+   <tr>
+   <td>バージョン管理</td>
+   <td>サポートなし</td>
+   <td>サポート対象</td>
+  </tr>
+   <tr>
+   <td>ドラフト：インスタンスの管理</td>
+   <td>サポートなし</td>
    <td>サポート対象</td>
   </tr>
   <tr>
