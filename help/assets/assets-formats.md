@@ -1,21 +1,21 @@
 ---
 title: サポートされているファイル形式と MIME タイプ
-description: ' [!DNL Assets] and [!DNL Dynamic Media] でサポートされているファイル形式とMIMEタイプ、および各形式でサポートされている機能。'
+description: ' [!DNL Assets] and [!DNL Dynamic Media]  でサポートされているファイル形式と MIME タイプ、および各形式でサポートされている機能。'
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: f0a0ea53675afa16463a3cf863257020ba5374d3
+source-git-commit: c8e83622070572d104f2cdc20c592ac2e9d0d31b
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 60%
+source-wordcount: '1535'
+ht-degree: 59%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] {#assets-supported-formats}
+# [!DNL Adobe Experience Manager Assets] でサポートされる形式 {#assets-supported-formats}
 
-[!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。[!DNL Assets]を他の標準準拠のデジタルアセット管理(DAM)ソリューションやデスクトップソフトウェアと統合するには、Adobeの[!DNL Extensible Metadata Platform](XMP)を使用します。
+[!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。[!DNL Assets] を他の標準準拠のデジタルアセット管理 (DAM) ソリューションやデスクトップソフトウェアと統合するには、Adobeの [!DNL Extensible Metadata Platform] (XMP) を使用します。
 
 凡例を使用すると、サポートレベルがわかります。
 
@@ -25,9 +25,9 @@ ht-degree: 60%
 | * | アドオン機能により対応 |
 | − | 適用なし |
 
-## [!DNL Experience Manager]でサポートされるラスターイメージ形式 {#supported-raster-image-formats}
+## [!DNL Experience Manager] でサポートされるラスターイメージ形式 {#supported-raster-image-formats}
 
-[!DNL Assets]でサポートされるラスターイメージ形式は次のとおりです。
+[!DNL Assets] でサポートされるラスターイメージ形式は次のとおりです。
 
 | 形式 | ストレージ | メタデータの管理 | メタデータ抽出 | サムネールの生成 | 編集 | メタデータの書き戻し | インサイト |
 | ------------ | :------: | :-----------------: | :-----------------: | :------------------: | :------: | :----------------: | :------: |
@@ -47,16 +47,16 @@ ht-degree: 60%
 
 ‡ 結合された画像は PSD ファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-[!DNL Dynamic Media]でサポートされるラスターイメージ形式は次のとおりです。
+[!DNL Dynamic Media] でサポートされるラスターイメージ形式は次のとおりです。
 
-| 形式 | <br>（入力形式）をアップロード | <br>画像<br>プリセット<br>（出力形式）を作成します。 | <br>動的<br>レンディションのプレビュー | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションのダウンロード |
+| 形式 | <br> をアップロード（入力形式） | <br> 画像 <br> プリセット <br> を作成（出力形式） | <br> 動的 <br> レンディションのプレビュー | <br> 動的 <br> レンディションを配信 | <br> 動的 <br> レンディションのダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ |
 | BMP | ✓ | - | - | - | - |
-| PSD ‡ | ✓ | - | - | - | - |
+| PSD‡ | ✓ | - | - | - | - |
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
 | PICT | ✓ | - | - | - | - |
 
@@ -64,17 +64,17 @@ ht-degree: 60%
 
 上記の情報に加えて、以下を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
+* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick](best-practices-for-imagemagick.md) を設定してください。サードパーティのツールを統合して追加機能を有効にするには、[ コマンドラインベースのメディアハンドラー ](media-handlers.md#command-line-based-media-handler) を参照してください。
 
-* PSBファイル形式が`NComm`ハンドラーに追加されると、メタデータの書き戻しが機能します。
+* PSB ファイル形式が `NComm` ハンドラに追加されると、メタデータの書き戻しが機能します。
 
-* [!DNL Dynamic Media]を使用してEPSファイルの動的レンディションをプレビューおよび生成するには、[Adobe Illustrator(AI)、Postscript(EPS)およびPDFファイル形式を参照してください。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
+* [!DNL Dynamic Media] を使用してEPSファイルの動的レンディションをプレビューし生成するには、[Adobe Illustrator(AI)、Postscript(EPS) およびPDFファイル形式を参照してください。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## サポートされる3D形式 {#support-3d-formats}
+## サポートされる 3D 形式 {#support-3d-formats}
 
-次の3D形式のリストがサポートされています。
+次の 3D 形式のリストがサポートされます。
 
 [Dynamic Media での 3D アセット操作](/help/assets/assets-3d.md)も参照してください。
 
@@ -89,9 +89,9 @@ ht-degree: 60%
 
 ## Dynamic Mediaでサポートされていないラスターイメージ形式 {#unsupported-image-formats-dynamic-media}
 
-次のリストは、Dynamic Mediaでサポートされていない&#x200B;**&#x200B;ラスター画像ファイル形式のサブタイプを示しています。
+次のリストは、Dynamic Mediaでサポートされていない ** ラスター画像ファイル形式のサブタイプを示しています。
 
-[Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html)でサポートされていないファイル形式の検出も参照してください。
+[Dynamic Media](https://helpx.adobe.com/experience-manager/kb/detect-unsupported-assets-for-dynamic-media.html) でサポートされていないファイル形式の検出も参照してください。
 
 * 100 MB を超える IDAT チャンクサイズを持つ PNG ファイル。
 * PSB ファイル。
@@ -120,13 +120,13 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## サポートされている PDF Rasterizer ライブラリ {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に消費する[!DNL Adobe Illustrator]ファイルとPDFファイル用に、高品質のサムネールとプレビューを生成します。 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
+Adobe PDF Rasterizer ライブラリは、大きくコンテンツを大量に消費する [!DNL Adobe Illustrator] ファイルとPDFファイルに対して、高品質のサムネールとプレビューを生成します。 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
-* リソースを大量に消費するコンテンツに負荷がかかるAI/PDFファイル。
+* 処理にリソースを大量に消費する、コンテンツを集中的に消費する AI/PDFファイル。
 * AI／PDF ファイル。デフォルトではサムネールは生成されません。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
-[PDF Rasterizerの使用](aem-pdf-rasterizer.md)を参照してください。
+[PDFラスタライザの使用 ](aem-pdf-rasterizer.md) を参照してください。
 
 ## サポートされる画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
@@ -134,17 +134,17 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 画像トランスコーディングライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートします。
 
-[画像トランスコーディングライブラリ](imaging-transcoding-library.md)を参照してください。
+[ 画像トランスコーディングライブラリ ](imaging-transcoding-library.md) を参照してください。
 
 ## サポート対象の Camera Raw {#supported-camera-raw}
 
-[!DNL Adobe Camera Raw]ライブラリを使用して、[!DNL Assets]は生の画像を取り込むことができます。 [Camera Raw的なサポート](camera-raw.md)を参照してください。
+[!DNL Adobe Camera Raw] ライブラリを使用すると、[!DNL Assets] は生の画像を取り込むことができます。 [Camera Raw的なサポート ](camera-raw.md) を参照してください。
 
-## サポートされる[!DNL Assets]ドキュメント形式 {#supported-document-formats}
+## サポートされる [!DNL Assets] ドキュメント形式 {#supported-document-formats}
 
 アセット管理機能でサポートされるドキュメント形式は次のとおりです。
 
-| 形式 | ストレージ | [メタデータの管理](metadata.md) | フルテキスト<br>の抽出 | [メタデータ抽出](metadata.md) | サムネール<br>の生成 | [サブアセットの抽出](managing-linked-subassets.md) | [メタデータの書き戻し](xmp-writeback.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
+| 形式 | ストレージ | [メタデータの管理](metadata.md) | フルテキスト <br> 抽出 | [メタデータ抽出](metadata.md) | サムネイル <br> の生成 | [サブアセットの抽出](managing-linked-subassets.md) | [メタデータの書き戻し](xmp-writeback.md) | [Connected Assets](use-assets-across-connected-assets-instances.md) |
 |---|---|---|---|---|---|---|---|---|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | - |
 | DOC | ✓ | ✓ | ✓ | ✓ | - | - | - | ✓ |
@@ -167,7 +167,7 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 ## Dynamic Mediaでサポートされるドキュメント形式 {#supported-document-formats-dynamic-media}
 
-| 形式 | <br>（入力形式）をアップロード | <br>画像<br>プリセット<br>（出力形式）を作成します。 | <br>動的<br>レンディションのプレビュー | <br>動的<br>レンディションを配信 | <br>動的<br>レンディションのダウンロード |
+| 形式 | <br> をアップロード（入力形式） | <br> 画像 <br> プリセット <br> を作成（出力形式） | <br> 動的 <br> レンディションのプレビュー | <br> 動的 <br> レンディションを配信 | <br> 動的 <br> レンディションのダウンロード |
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
 | [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -179,7 +179,7 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 * AI ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
-* Dynamic Mediaを使用してINDDファイルの動的レンディションを生成するには、[InDesign(INDD)ファイル形式](../assets/managing-image-presets.md#indesign-indd-file-format)を参照してください。
+* Dynamic Mediaを使用して INDD ファイルの動的レンディションを生成するには、[InDesign(INDD) ファイル形式 ](../assets/managing-image-presets.md#indesign-indd-file-format) を参照してください。
 
 ## サポートされるマルチメディア形式 {#supported-multimedia-formats}
 
@@ -214,12 +214,10 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 | WMV | Windows Media 9 | WMV3（v9）、WMV2（v8）、WMV1（v7）、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft® Screen (MSS2)、Microsoft® Photo Story (WVP2) |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
 | M4V | Apple iTunes | H264/AVC | - |
-| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV（DV25）、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3(IV30)、MJPEG、Microsoft® Video 1(MS-CRAM) |
+| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV（DV25）、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3 (IV30)、MJPEG、Microsoft®ビデオ 1 (MS-CRAM) |
 | WebM | WebM | Google VP8 | - |
 | OGV、OGG | Ogg | Theora、VP3、Dirac | - |
 | MKV | Matroska | H264/AVC | - |
-| RAM、RM | RealVideo | サポート対象外 | Real G2（RV20）、Real 8（RV30）、Real 10（RV40） |
-| MJ2 | Motion JPEG2000 | Motion JPEG 2000 codec | - |
 
 ## サポートされるアーカイブ形式 {#supported-archive-formats}
 
@@ -235,7 +233,7 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 ## その他のサポートされる形式 {#other-supported-formats}
 
-いくつかの特定のファイル形式に対する通常のDAM機能の適用について、以下で説明します。
+いくつかの特定のファイル形式に対する通常の DAM 機能の適用性について、以下で説明します。
 
 | 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -247,13 +245,13 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 >[!NOTE]
 >
->JavaScriptファイルのアップロードと配布は安全である場合とそうでない場合があります。 必要に応じて、オーバーレイを使用して、ユーザーがJSファイルをアップロードできないようにすることができます。
+>JavaScript ファイルのアップロードと配布は安全である場合とそうでない場合があります。 必要に応じて、オーバーレイを使用して、ユーザーが JS ファイルをアップロードできないようにすることができます。
 
 ## サポートされる MIME タイプ {#supported-mime-types}
 
-デフォルトでは、[!DNL Experience Manager]はファイル拡張子を使用してファイルの種類を検出します。 [!DNL Experience Manager] は、ファイルの内容からこれを検出できます。後者の場合は、[!DNL Experience Manager] Webコンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
+デフォルトでは、[!DNL Experience Manager] はファイル拡張子を使用してファイルの種類を検出します。 [!DNL Experience Manager] は、ファイルの内容からこれを検出できます。後者の場合は、[!DNL Experience Manager] Web コンソールの「[!UICONTROL Day CQ DAM Mime Type Service]」で「[!UICONTROL Detect MIME from content]」オプションを選択します。
 
-サポートされているMIMEタイプのリストは、`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`のCRXDE Liteで入手できます。
+サポートされる MIME タイプのリストは、`/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes` のCRXDE Liteで入手できます。
 
 | ファイル拡張子 | MIME タイプ／インターネットメディアタイプ | デフォルトの jobParam 値 | 許可される jobParam 値 |
 |---|---|---|---|
@@ -315,6 +313,6 @@ Adobe PDF Rasterizerライブラリは、大きくコンテンツを集中的に
 
 >[!MORELIKETHIS]
 >
->* [MIMEタイプベースのAssetsとDynamic Media Classicアップロードジョブパラメーターサポートを有効にします](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
->* [アップロードジョブパラメーターサポートのMIMEタイプベースを設定](config-dynamic.md)します。
+>* [MIME タイプベースの Assets とDynamic Media Classicアップロードジョブパラメーターサポートを有効にします](/help/sites-administering/scene7.md#enabling-mime-type-based-assets-scene-upload-job-parameter-support)。
+>* [アップロードジョブパラメーターサポートに対して MIME タイプベースを設定](config-dynamic.md)します。
 
