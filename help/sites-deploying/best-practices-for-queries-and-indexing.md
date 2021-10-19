@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 52c8d4c425213718678543e9e9e8e5a4c2af4f95
+source-git-commit: 9f7bd996d2ec77d29fbee3ee51ac6469f94e9bd7
 workflow-type: tm+mt
-source-wordcount: '4684'
+source-wordcount: '4679'
 ht-degree: 82%
 
 ---
@@ -121,7 +121,7 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 **開発時**
 
-に低いしきい値を設定する `oak.queryLimitInMemory` ( 例： 10000) と oak `queryLimitReads` ( 例： UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
+低しきい値の設定 `oak.queryLimitInMemory` ( 例： 10000) と oak `queryLimitReads` ( 例： UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは I/O が増加し、アプリケーションの全体的なパフォーマンスに悪影響が生じます。上述のような制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
@@ -215,19 +215,19 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 ### JCR クエリチートシート {#jcrquerycheatsheet}
 
-効率的な JCR クエリとインデックス定義の作成をサポートするには、 [JCR Query Cheat Sheet|assets/JCR_query_cheatsheet-v1.0.pdf] は、開発時にダウンロードして参照用として使用できます。 QueryBuilder、XPath、SQL-2 のクエリ例が含まれ、クエリのパフォーマンスの面で動作が異なる複数のシナリオに対応しています。 また、Oak インデックスの作成やカスタマイズの方法に関する推奨事項も提供します。 この参照シートの内容は、AEM 6.5 およびAEM as a Cloud Serviceに適用されます。
+効率的な JCR クエリとインデックス定義の作成をサポートするには、 [JCR クエリチートシート](assets/JCR_query_cheatsheet-v1.0.pdf) は、開発時にダウンロードして参照用として使用できます。 QueryBuilder、XPath、SQL-2 のクエリ例が含まれ、クエリのパフォーマンスの面で動作が異なる複数のシナリオに対応しています。 また、Oak インデックスの作成やカスタマイズの方法に関する推奨事項も提供します。 この参照シートの内容は、AEM 6.5 およびAEM as a Cloud Serviceに適用されます。
 
 ## 再インデックス {#re-indexing}
 
 この節では、 **のみ** Oak インデックスの再インデックスを行う理由として許容できます。
 
-以下に説明する理由の外、Oak インデックスの再インデックスを開始すると、 **not** 動作を変更したり、問題を解決したりして、AEMの負荷を不必要に増やします。
+以下に説明する理由の外、Oak インデックスの再インデックスを開始すると、 **not** 動作を変更したり問題を解決したりして、AEMの負荷を不必要に増やします。
 
 以下の各表に記載されている理由に該当しない限り、Oak インデックスの再インデックスを実行しないでください。
 
 >[!NOTE]
 >
->以下の表を参照してインデックス再作成が有用であるかを判断する前に、常に次の点を確認してくださ**。 **
+>以下の表を参照してインデックス再作成が役立つかどうかを判断する前に、 **always** 確認：
 >
 >* クエリが正しい
 >* クエリが予期したインデックスに解決されること（[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#diagnosis-tools)を使用）
