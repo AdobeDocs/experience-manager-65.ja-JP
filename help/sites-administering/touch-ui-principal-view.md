@@ -1,8 +1,8 @@
 ---
 title: 権限管理のプリンシパルビュー
-seo-title: 権限管理のプリンシパルビュー
+seo-title: Principal View for Permissions Management
 description: 権限管理を容易にする新しいタッチ UI インターフェイスについて説明します。
-seo-description: 権限管理を容易にする新しいタッチ UI インターフェイスについて説明します。
+seo-description: Learn about the new Touch UI interface that facilitates permissions management.
 uuid: 16c5889a-60dd-4b66-bbc4-74fbdb5fc32f
 contentOwner: sarchiz
 content-type: reference
@@ -11,10 +11,10 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4ea49fe6745b23f01f46edfe07ff3dd8c8299729
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 86%
+source-wordcount: '699'
+ht-degree: 83%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 
 ## 概要 {#overview}
 
-AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能はクラシックUIと同じですが、より使いやすく効率的です。
+AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能は、従来の UI と同じですが、より使いやすく、効率的です。
 
 ## 使用方法 {#how-to-use}
 
@@ -42,7 +42,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/image2019-3-20_23-52-51.png)
 
-### プリンシパルの権限の表示  {#viewing-permissions-for-a-principal}
+### プリンシパルの権限の表示 {#viewing-permissions-for-a-principal}
 
 左側のフレームでは、下にスクロールしてプリンシパルを見つけるか、下に示すように、選択したフィルターに基づいてグループまたはユーザーを検索できます。
 
@@ -52,7 +52,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/trei-1.png)
 
-### プリンシパルへの新規アクセス制御エントリの追加  {#adding-new-access-control-entry-for-a-principal}
+### プリンシパルへの新規アクセス制御エントリの追加 {#adding-new-access-control-entry-for-a-principal}
 
 「ACE を追加」ボタンをクリックして新しいアクセス制御エントリを追加することで、新しい権限を追加できます。
 
@@ -66,7 +66,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/sase-1.png)
 
-パスを選択すると、ワークフローはこの画面に戻り、次に示すように、使用可能な名前空間（`jcr`、`rep`、`crx`など）から1つ以上の権限を選択できます。
+パスを選択すると、ワークフローはこの画面に戻り、ユーザーは使用可能な名前空間 ( `jcr`, `rep` または `crx`) を次のように表示します。
 
 テキストフィールドを使用して検索し、リストから選択することで権限を追加できます。
 
@@ -80,7 +80,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/screen_shot_2019-03-17at63938pm.png) ![](assets/screen_shot_2019-03-17at63947pm.png)
 
-### 制限の使用  {#using-restrictions}
+### 制限の使用 {#using-restrictions}
 
 与えられたパス上の特権と許可の種類のリストに加えて、この画面では、以下に示すように、きめ細かいアクセス制御の制限を追加することもできます。
 
@@ -88,11 +88,13 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 >[!NOTE]
 >
->それぞれの制限の意味についての詳細は、[このページ](/help/sites-administering/user-group-ac-admin.md#restrictions)を参照してください。
+>各制限の意味について詳しくは、 [Jackrabbit Oak ドキュメント](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
-以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。 ![](assets/sapte-1.png) ![](assets/opt-1.png)
+以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。
 
-新しい ACE がアクセス制御リストに反映されます。`jcr:write`は、上記で追加された`jcr:removeNode`を含む集計権限ですが、`jcr:write`の下で扱われるとは限りません。
+![](assets/sapte-1.png) ![](assets/opt-1.png)
+
+新しい ACE がアクセス制御リストに反映されます。注意： `jcr:write` は、 `jcr:removeNode` 上記に追加したが、以下の `jcr:write`.
 
 ### ACE の編集 {#editing-aces}
 
@@ -100,17 +102,17 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 例えば、ここでは **dam-users** の以下のエントリを、右側の鉛筆アイコンをクリックして編集できます。
 
-![](assets/image2019-3-21_0-35-39.png)
+![制限の追加](assets/image2019-3-21_0-35-39.png)
 
 編集画面には事前に選択された設定済み ACE が表示されます。これらは ACE の横にある × アイコンをクリックすると削除できます。また、下に示すように、指定したパスに新しい権限を追加できます。
 
-![](assets/noua-1.png)
+![エントリの編集](assets/noua-1.png)
 
 ここでは、与えられたパス上の `addChildNodes`dam-users **に** の権限を追加しています。
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-右上の「**保存**」ボタンをクリックして変更を保存できます。以下に示すように、変更は**dam-users**の新しい権限に反映されます。
+変更を保存するには、 **保存** 」ボタンをクリックすると、変更が**dam-users**の新しい権限に反映されます（下図を参照）。
 
 ![](assets/zece-1.png)
 
@@ -120,7 +122,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/image2019-3-21_0-53-19.png) ![](assets/unspe.png)
 
-### クラシック UI 権限の組み合わせ  {#classic-ui-privilege-combinations}
+### クラシック UI 権限の組み合わせ {#classic-ui-privilege-combinations}
 
 新しい権限 UI は、付与された基本的な特権を正確に反映しなかった定義済みの組み合わせではなく、基本的な権限セットを明示的に使用しています。
 
