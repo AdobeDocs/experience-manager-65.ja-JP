@@ -1,8 +1,8 @@
 ---
 title: コミュニティグループ
-seo-title: コミュニティグループ
+seo-title: Community Groups
 description: コミュニティグループの作成
-seo-description: コミュニティグループの作成
+seo-description: Creating community groups
 uuid: c677d23d-5edb-414c-9013-130c88c2ea52
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,30 +11,30 @@ content-type: reference
 discoiquuid: d94708ee-ca6b-420c-9536-6889d752f9de
 docset: aem65
 exl-id: edcda6cb-df47-4afe-8a9a-82d8e386fe05
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1074843a0105df39382b64defe66fc262986b9c9
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 37%
+source-wordcount: '543'
+ht-degree: 35%
 
 ---
 
 # コミュニティグループ {#community-groups}
 
-コミュニティグループ機能は、パブリッシュ環境とオーサー環境から許可されたユーザー（コミュニティメンバーと作成者）がコミュニティサイト内でサブコミュニティを動的に作成する機能です。
+コミュニティグループ機能を使用すると、パブリッシュ環境とオーサー環境から許可されたユーザー（コミュニティメンバーと作成者）がコミュニティサイト内でサブコミュニティを動的に作成できます。
 
-この機能は、[グループ関数](/help/communities/functions.md#groups-function)が[コミュニティサイト](/help/communities/sites-console.md)構造に存在する場合に使用できます。
+この機能は [グループ機能](/help/communities/functions.md#groups-function) が [コミュニティサイト](/help/communities/sites-console.md) 構造。
 
-[コミュニティグループテンプレート](/help/communities/tools-groups.md)は、コミュニティグループが動的に作成される際のコミュニティグループページのデザインを提供します。
+A [コミュニティグループテンプレート](/help/communities/tools-groups.md) コミュニティグループを動的に作成する際のコミュニティグループページのデザインを提供します。
 
 グループ機能をコミュニティサイトの構造またはコミュニティサイトテンプレートに追加すると、1 つ以上のテンプレートがグループ機能用に選択されます。このグループテンプレートのリストは、コミュニティサイト内から新しいグループを動的に作成するメンバーまたは作成者に表示されます。
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
-新しいコミュニティグループを作成する機能は、[参照サイトテンプレート](/help/communities/sites.md)から作成したコミュニティサイトなど、グループ機能を含むコミュニティサイトが存在することに依存します。
+新しいコミュニティグループを作成する機能は、グループ機能を含むコミュニティサイトが存在するかどうかに依存します。このサイトには、 [参照サイトテンプレート](/help/communities/sites.md).
 
-以降の例では、 [AEM Communities](/help/communities/getting-started.md)使用の手引きのチュートリアルで説明したように、 `Reference Site Template`から作成したコミュニティサイトを使用します。
+以下の例では、 `Reference Site Template` 詳しくは、 [AEM Communitiesの概要](/help/communities/getting-started.md) チュートリアル
 
-これは、**Groups**&#x200B;メニュー項目が選択された場合にパブリッシュ時に読み込まれるページです。
+これは、 **グループ** メニュー項目を選択：
 
 ![new-group](assets/new-group.png)
 
@@ -46,7 +46,7 @@ ht-degree: 37%
 
 * **Group Name**
 
-   コミュニティサイトに表示するグループのタイトル。
+   コミュニティサイトに表示するグループのタイトル。 アンダースコア文字 (_) や、リソースや設定などのキーワードをグループ名に使用することは避けてください。
 
 * **説明**
 
@@ -58,22 +58,21 @@ ht-degree: 37%
 
 * **グループ URL 名**
 
-   URLの一部となるグループページの名前。
+   URL の一部となるグループページの名前。
 
 * **オープングループ**
 
-   「`Open Group`」を選択すると、匿名のサイト訪問者がコンテンツを閲覧できることを示し、「`Member Only Group`」の選択を解除します。
+   選択 `Open Group` 匿名のサイト訪問者がコンテンツを閲覧できる場合は、そのコンテンツの選択を解除します `Member Only Group`.
 
 * **メンバーのみのグループ**
 
-   `Member Only Group`を選択すると、グループのメンバーのみがコンテンツを表示でき、`Open Group`の選択が解除されます。
+   選択 `Member Only Group` グループのメンバーのみがコンテンツを表示でき、選択を解除できることを示します `Open Group`.
 
-「**テンプレート**」タブでは、次の操作が可能です。
-コミュニティサイトの構造またはコミュニティサイトテンプレートにグループ機能を含めたときに指定したコミュニティグループテンプレートのリストから選択します。
+の **テンプレート** 「 」タブでは、コミュニティサイトの構造やコミュニティサイトテンプレートにグループ機能を含めたときに指定したコミュニティグループテンプレートのリストから選択できます。
 
 ![group-template](assets/group-template.png)
 
-「**画像**」タブでは、コミュニティサイトのグループページにグループ用に表示する画像をアップロードできます。デフォルトのスタイルシートでは、画像のサイズが170 x 90ピクセルに設定されます。
+「**画像**」タブでは、コミュニティサイトのグループページにグループ用に表示する画像をアップロードできます。デフォルトのスタイルシートでは、画像のサイズが 170 x 90 ピクセルに設定されます。
 
 ![group-image](assets/group-image.png)
 
@@ -83,16 +82,16 @@ ht-degree: 37%
 
 ![group-page](assets/group-page.png)
 
-`Focus Group`リンクを選択すると、ブラウザーでフォーカスグループページが開きます。このページは、選択したテンプレートに基づいて初期表示され、メインコミュニティサイトのメニューの下にサブメニューが表示されます。
+の選択 `Focus Group` リンクをクリックすると、ブラウザーでフォーカスグループページが開きます。このページは、選択したテンプレートに基づいて初期の外観を持ち、メインのコミュニティサイトのメニューの下にサブメニューが表示されます。
 
 ![open-group-page](assets/open-group-page.png)
 
 ### コミュニティグループメンバーのリストコンポーネント {#community-group-member-list-component}
 
-`Community Group Member List`コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
+10. `Community Group Member List` コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
 
 ### 追加情報 {#additional-information}
 
-詳しくは、開発者向けの[コミュニティグループの基本事項](/help/communities/essentials-groups.md)ページを参照してください。
+詳しくは、 [コミュニティグループの基本事項](/help/communities/essentials-groups.md) 開発者向けのページ
 
 コミュニティグループに関連するその他の情報は、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
