@@ -9,9 +9,9 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: dc8e3ed70ebaf064993ef5af910430b7fc2e521d
+source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '486'
 ht-degree: 71%
 
 ---
@@ -42,13 +42,13 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
 
 ### ワークフロー {#workflow}
 
-インタラクティブ通信を作成するには、インタラクティブ通信用の [ 構築ブロック ](#buildingblocks) を準備し、次の手順を実行します。
+インタラクティブ通信を作成するには、 [構築ブロック](#buildingblocks) インタラクティブ通信の準備ができたら、次の手順を実行します。
 
-1. [ インタラクティブ通信を作成 ](/help/forms/using/create-interactive-communication.md) します。
+1. 選択して [インタラクティブ通信の作成](/help/forms/using/create-interactive-communication.md).
 
 1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。印刷チャネルから Web チャネルを生成することもできます。
 
-1. [ ドラッグ&amp;ドロップインターフェイス ](/help/forms/using/introduction-interactive-communication-authoring.md) を使用して、必要に応じて、インタラクティブ通信の印刷チャネルと Web チャネルにドキュメントフラグメント、画像、コンポーネントを追加します。
+1. の使用 [ドラッグ&amp;ドロップインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)必要に応じて、ドキュメントフラグメント、画像、コンポーネントをインタラクティブ通信の印刷チャネルと Web チャネルに追加します。
 1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
 
    1. [画像](/help/forms/using/create-interactive-communication.md#step2)
@@ -67,7 +67,7 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
 - [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
 - [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
 - 画像
-- [](/help/forms/using/themes.md) Web チャネルのテーマ
+- [テーマ](/help/forms/using/themes.md) （Web チャネル用）
 
 ## インタラクティブ通信と Correspondence Management の比較 {#interactive-communications-vs-correspondence-management}
 
@@ -124,6 +124,12 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
    <td>サポート対象</td>
    <td>サポート対象</td>
   </tr>
+   <tr>
+   <td>送信</td>
+   <td>サポート対象</td>
+   <td>サポート対象</td>
+  </tr>
+  <tr>
   <tr>
    <td>監査</td>
    <td>サポートなし</td>
@@ -134,12 +140,6 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
    <td>サポートなし</td>
    <td>サポート対象</td>
   </tr>
-   <tr>
-   <td>ドラフト：インスタンスの管理</td>
-   <td>サポートなし</td>
-   <td>サポート対象</td>
-  </tr>
-  <tr>
    <td>バッチ処理</td>
    <td>サポート対象 </td>
    <td>サポート対象</td>
