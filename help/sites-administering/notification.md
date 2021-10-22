@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 676299c741684708d420ac208f44b0c7a285de0c
+source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2116'
 ht-degree: 36%
 
 ---
@@ -319,7 +319,7 @@ AEMは、組織が安全な電子メール要件に準拠できるように、OA
 
 >[!NOTE]
 >
->以下に、パブリッシュインスタンスの例を示します。 必要に応じて、オーサーインスタンスに対してこの手順を実行することもできます。
+>この手順は、パブリッシュインスタンスの例です。 オーサーインスタンスで電子メール通知を有効にする場合は、オーサーインスタンスで同じ手順を実行する必要があります。
 
 ### Gmail {#gmail}
 
