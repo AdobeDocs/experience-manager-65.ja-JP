@@ -2,7 +2,7 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: bfe5bb744223be1ff9a00c382734abd9bf4db59a
+source-git-commit: 1e02ad94459ff2893d96055c026d0873b1d69991
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 42%
@@ -63,7 +63,7 @@ AEM機能の差し迫った削除または置き換えを伝達するために�
 | 統合 | Salesforce Force API 統合は、デフォルトの配布版（クイックスタート）から削除され、今後は、追加のパッケージとしてからインストールされます。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | この機能は引き続き使用できます。 |
 | Forms | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートが削除されました。 | 代替機能はありません. |  |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 代替機能はありません. |  |
-| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 代替機能はありません |
+| Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 代替機能はありません |  |
 | Forms | LiveCycleES4 SP1 からAEM 6.5 Forms on JEE へのシングルホップアップグレードは使用できません | 詳しくは、 [使用可能なアップグレードパス](../forms/using/upgrade.md) (AEM Formsアップグレードドキュメント ) |  |
 | Forms | JEE 上のAEM Formsから、UPD ベースのクラスタリングのサポートを削除しました。 | JEE 上のAEM Formsで使用できるのは、TCP ベースのクラスタリングのみです。 UDP マルチキャストサーバーを以前のバージョンから JEE 上のAEM 5.5 Formsにアップグレードする場合は、手動設定を実行して、TCP ベースの GemFire クラスタリングに切り替えます。 詳しい手順については、 [JEE 上のAEM 6.5 Forms へのアップグレード](../forms/using/upgrade-forms-jee.md) |  |
 | デベロッパー向け | デフォルトの配布版（クイックスタート）から Firebug Lite が削除されました | ブラウザー組み込みのデベロッパーコンソールを使用してください。 |
