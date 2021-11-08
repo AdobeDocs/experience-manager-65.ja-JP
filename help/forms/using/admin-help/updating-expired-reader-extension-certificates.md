@@ -1,9 +1,9 @@
 ---
 title: 期限切れのReader拡張サービス証明書を更新しています
 description: 'Readerの拡張ドキュメントが機能しません。証明書を更新してください '
-source-git-commit: 5f2fc6a32f67cfed3bc4b09b63bcf9689659a99d
+source-git-commit: a26e4fb53458beae9b259e5ee5dc74a95264f9e1
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1581'
 ht-degree: 24%
 
 ---
@@ -15,10 +15,10 @@ Adobe Experience Manager Forms(AEM Forms) をご利用のお客様は、Adobe Ma
 
 Adobeでは、PKI（公開鍵インフラストラクチャ）を活用して、ライセンスや機能のイネーブルメントに使用する電子証明書を発行します。 Adobeは、証明機関「Adobeルート CA」に基づいて証明書を発行しており、2023 年 1 月 7 日に期限が切れる予定です。 この認証局に基づいて発行されたすべての証明書の有効期限が切れます。 証明書の有効期限が切れると、証明書に依存するすべての機能は機能しなくなります。 例えば、Adobe Acrobat Readerを使用してコメントを追加できる読者用に拡張されたPDFドキュメントは、2023 年 1 月 7 日以降に、お客様に対して機能しなくなります。 この問題を解決するには、Reader拡張サービスの管理者は、古い証明書を使用して、新しいAdobeルート CA G2 が発行した新しい証明書を取得し、PDFドキュメントに再適用する必要があります (reader は、新しい証明書でPDFドキュメントを拡張します )。
 
-証明書の有効期限は、JEE 上のAEM Formsと OSGi スタック上のAEM Formsの両方に影響します。 両方のスタックには、異なる命令のセットがあります。 スタックに応じて、次のパスのいずれかを選択します。
+証明書の有効期限は、JEE 上のAEM Formsと OSGi スタック上のAEM Formsの両方に影響します。 両方のスタックには、異なる命令のセットがあります。 次に [前提条件](#Pre-requisites) および [新しい証明書の取得](#obtain-the-certificates)（スタックに応じて、次のパスのいずれかを選択します）。
 
-* JEE 環境上のAEM Formsの証明書の更新
-* OSGi 環境でのAEM Formsの証明書の更新
+* [JEE 環境上のAEM Formsの証明書の更新](#Updating-and-Applying-certificates-for-an-AEM-Forms-on-JEE-environment)
+* [OSGi 環境でのAEM Formsの証明書の更新](#Updating-and-applying-certificates-for-an-AEM-Forms-on-OSGi-environment)
 
 >[!NOTE]
 >
@@ -97,14 +97,14 @@ OSGi スタック上のAEM Formsで新しい証明書を更新および適用す
 OSGi 環境のAEM Formsでは、Reader拡張資格情報が fd-service ユーザーに関連付けられます。 fd-user キーストアの資格情報を追加する前に、次の手順を実行してキーストアを作成します。
 
 1. AEM オーサーインスタンスに管理者としてログインします。
-1. ツール／セキュリティ／ユーザーに移動します。
+1. **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;に移動します。
 1. fd-service ユーザーアカウントが見つかるまで、ユーザーのリストを下にスクロールします。
-1. fd-service ユーザーをクリックします。
+1. クリック **[!UICONTROL fd-service]** ユーザー。
 1. 「キーストア」タブをクリックします。
-1. 「キーストアを作成」をクリックします。
+1. クリック **[!UICONTROL キーストアを作成]**.
 1. キーストアアクセスパスワードを設定し、設定を保存してキーストアパスワードを作成します。
 
-キーストアを作成した後、fd-service ユーザーに資格情報を追加します。
+キーストアを作成した後、fd-service ユーザーに資格情報を追加します。 次のビデオでは、手順を説明しています。
 
 >[!VIDEO](https://images-tv.adobe.com/mpcv3/5577/8db8e554-f04b-4fae-8108-b9b5e0eb03ad_1627925794.854x480at800_h264.mp4)
 
