@@ -6,11 +6,11 @@ audience: admin-user
 user-guide-title: AEM 6.5 管理ユーザーガイド
 breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
-feature: 管理
+feature: Administering
 role: Admin
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '623'
 ht-degree: 92%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 92%
 + Sites の機能 {#introduction}
    + [Web サイト管理](msm-and-translation.md)
    + [非同期ジョブ](asynchronous-jobs.md)
-   + [コンテンツの再利用：マルチサイトマネージャーとライブコピー](msm.md)
+   + [コンテンツの再利用：マルチサイトマネージャとライブコピー](msm.md)
    + [ライブコピーの概要コンソール](msm-livecopy-overview.md)
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
@@ -55,7 +55,7 @@ ht-degree: 92%
    + [ビデオコンポーネントの設定](config-video.md)
    + [Bulk Editor](bulk-editor.md)
    + [電子メール通知の設定](notification.md)
-   + [リンクチェック](external-link-checker.md)
+   + [リンクチェッカー](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [ワークフローへのアクセスの管理](workflows-managing.md)
    + [ワークフローの開始](workflows-starting.md)
@@ -98,7 +98,7 @@ ht-degree: 92%
    + [権限管理のプリンシパルビュー](touch-ui-principal-view.md)
    + [Content Disposition フィルター](content-disposition-filter.md)
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
-   + [同じサイトのcookieのサポート](same-site-cookie-support.md)
+   + [同じサイト cookie のサポート](same-site-cookie-support.md)
 + パーソナライズ機能 {#personalization}
    + [パーソナライズ機能](personalization.md)
    + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
@@ -157,7 +157,7 @@ ht-degree: 92%
    + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
    + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
 + コンテンツ管理 {#contentmanagement}
-   + [パッケージの使用方法](package-manager.md)
+   + [パッケージマネージャー](package-manager.md)
    + [タグの管理](tags.md)
    + [ページエクスポーター](page-exporter.md)
    + [クラシック UI のタグ付けコンソール](classic-console.md)
