@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: e3067a17153864babaf0243c4c3f6cf9cd8d30bc
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '3098'
+source-wordcount: '3114'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,6 @@ ht-degree: 4%
 >* Scene7モードでDynamic Mediaを実行しています。
 >* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 またはExperience Manageras a Cloud Serviceで使用する場合。
 >* 管理者権限を持つExperience Manager・システム管理者です。
-
 
 
 Dynamic Media公開設定ページの設定によって、デフォルトでAdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法が決まります。 設定が指定されていない場合、AdobeDynamic Mediaサーバーは公開設定ページのデフォルト設定に従ってアセットを配信します。 例えば、解像度属性を含まない画像を配信するように要求すると、Image Server ページの「デフォルトのオブジェクト解像度」設定を持つ画像が生成されます。
@@ -50,6 +49,9 @@ Dynamic Media公開設定ページの設定によって、デフォルトでAdob
    * [要求属性](#request-attributes-tab) タブ
    * [共通のサムネール属性](#common-thumbnail-attributes-tab) タブ
    * [カラーマネジメント属性](#color-management-attributes-tab) タブ
+
+   ![Dynamic Media Publish Setup ページ](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media公開設定ページ、**[!UICONTROL 要求属性]**」タブが選択されています。*<br><br>
 
 1. 作業が完了したら、ページの右上隅付近にある「 」を選択します。 **[!UICONTROL 保存]**.
 

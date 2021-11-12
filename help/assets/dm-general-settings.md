@@ -10,9 +10,9 @@ role: User, Admin
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: bbced918e67c64c0bf2f5a3de8cbcb9063fff669
+source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2216'
 ht-degree: 38%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 38%
 
 1. Experience Manager作成モードで、Experience Managerロゴを選択して、グローバルナビゲーションコンソールにアクセスします。
 1. 左側のレールでツールアイコンを選択し、に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Setting]**.
-1. サーバーページで、 **[!UICONTROL 公開先サーバー名]** および **[!UICONTROL オリジンサーバー名]**&#x200B;をクリックし、5 つのタブを使用してデフォルトの公開設定を構成します。
+1. サーバーページで、 **[!UICONTROL 公開先サーバー名]** および **[!UICONTROL オリジンサーバー名]**&#x200B;をクリックし、5 つのタブを使用してデフォルトの公開設定を指定します。
 
    * [サーバー](#server-general-setting)
    * [アプリケーションへのアップロード](#upload-to-application)
@@ -46,6 +46,9 @@ ht-degree: 38%
    * [Photoshop](#photoshop-tab) タブ
    * [PDF](#pdf-tab) タブ
    * [Illustrator](#illustrator-tab) タブ
+
+   ![Dynamic Mediaの一般設定ページ](/help/assets/assets-dm/dm-general-settings.png)
+   *Dynamic Mediaの一般設定ページ、**[!UICONTROL 画像編集]**」タブが選択されています。*<br><br>
 
 1. 作業が完了したら、ページの右上隅付近にある「 」を選択します。 **[!UICONTROL 保存]**.
 
