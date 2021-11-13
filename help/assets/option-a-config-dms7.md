@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
+source-git-commit: b6000516b88342d6abf8072623cfece43e2ba19d
 workflow-type: tm+mt
-source-wordcount: '11558'
+source-wordcount: '11571'
 ht-degree: 32%
 
 ---
@@ -169,11 +169,11 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
 Dynamic Media - Scene7 モードのセットアップと設定をさらにカスタマイズしたり、パフォーマンスを最適化したりする場合は、次の&#x200B;*オプション*&#x200B;タスクを 1 つまたは複数実行できます。
 
 * [（オプション）2 GB を超えるアセットのアップロードに対するDynamic Media - Scene7モードの設定](#optional-config-dms7-assets-larger-than-2gb)
-
-* [（オプション）Dynamic Media - Scene7 モードのセットアップと設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
-
+* [（オプション） Dynamic Media Publish Setup の設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
+   * [（オプション）アセットを公開する前にテストする](#test-assets-before-making-public)
+* [（オプション） Dynamic Mediaの一般設定を構成する](#configuring-application-general-settings)
+* [（オプション）追加の設定タスク](#additional-configuration-tasks)
 * [（オプション） Dynamic Media - Scene7モードのパフォーマンスの調整](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
-
 * [（オプション）レプリケーション用のアセットのフィルタリング](#optional-filtering-assets-for-replication)
 
 ### （オプション）2 GB を超えるアセットのアップロードに対するDynamic Media - Scene7モードの設定 {#optional-config-dms7-assets-larger-than-2gb}
@@ -643,7 +643,7 @@ Illustrator(AI) 画像ファイルをアップロードする際に、様々な�
 >[!NOTE]
 デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。詳しくは、 [表示される画像プリセットの数を増やします](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) または [表示されるビューアプリセットの数を増やします](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-### （オプション）追加の設定タスク
+### （オプション）追加の設定タスク {#additional-configuration-tasks}
 
 オプションのセットアップおよび設定タスクは次のとおりです。
 
