@@ -4,9 +4,9 @@ description: 固有のリリースノート [!DNL Adobe Experience Manager] 6.5 
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 14339f6a34952c00351c6dee8537b5df6f6fbcd3
+source-git-commit: 0a35b26c5f790d67db55421b8f3e98e5ddb30528
 workflow-type: tm+mt
-source-wordcount: '4436'
+source-wordcount: '4430'
 ht-degree: 5%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 5%
 * ローンチの昇格時に、昇格済みのローンチの変更が他のローンチに二重にロールアウトされます。 ユーザーがダブルロールアウトされたローンチを昇格すると、2 倍のコンテンツがソースページに反映される (NPR-36893)。
 * [!DNL Experience Manager] 画像コアコンポーネントを使用してページに画像を追加する場合、または基盤画像コンポーネントを使用してサイズを変更する場合に、透明度を持つ一部の PNG 画像にグレーの境界線を追加する。(NPR-36879)
 * [!DNL Experience Manager Sites] 多数のテンプレートを含む管理 UI で、ナビゲーションが遅くなる (NPR-36870)。
-* Service Pack 9 にアップグレードすると、一部のコンポーネントが作成されなくなります。 この問題では、 [!DNL Sites] 新しいページを作成するユーザー (NPR-36857)。
+* リンクがカスタムサーブレットフィルターバンドルによって変更された場合、Web ページがレンダリングに失敗する (NPR-36857)。
 * この `ContextHubImpl` メソッドは `ResourceResolver` それは閉じられていません。 長時間実行に関する警告メッセージが表示されます。 `ResourceResolver` また、サービスが予期しない結果を時々返す (NPR-36853)。
 * ブループリントページのプロパティから単一のライブコピーを同期すると、その他のすべてのライブコピーも同期される (NPR-36829、NPR-36522)。
 * XLS の MIME タイプのみを使用した場合、ファイルのアップロード機能が期待どおりに動作しない (NPR-36785)。
@@ -159,7 +159,7 @@ ht-degree: 5%
 
 * スクリーンリーダーが、プレースホルダーテキストを読み上げ、アセットをリンクダイアログとして共有する際に、電子メールアドレスを必須フィールドとして追加し、 [!UICONTROL このフィールドに入力してください] tooltip(CQ-4327761)
 
-* スクリーンリーダーで、 [!UICONTROL 画像プリセットエディター] キーボードを使用してユーザーインターフェイスフィールドにアクセスする際 (CQ-4325677)。
+* スクリーンリーダーで、 [!UICONTROL 画像プリセットエディター] キーボードを使用してユーザーインターフェイスフィールドにアクセスする際に (CQ-4325677)。
 
 * キーボードフォーカスがの検索タブに適切に移動するようになりました。 [!UICONTROL ビューアプリセット] のアセットピッカーのダイアログボックス [!UICONTROL リッチメディアタイプ] オプション (CQ-4324736) が表示されます。
 
@@ -185,7 +185,7 @@ ht-degree: 5%
 
 * スクリーンリーダーで、 [!UICONTROL スプライト] および [!UICONTROL 背景] タブ [!UICONTROL 外観] タブ [!UICONTROL ビューアプリセットエディター] (CQ-4290727)。
 
-* 編集するフィールドなどの必須フィールド [!UICONTROL 幅]、 [!UICONTROL 基本] タブ [!UICONTROL ビデオエンコーディングを編集] ページにアスタリスク記号 (*) が付くようになりました (CQ-4290725)。
+* 編集するフィールドなどの必須フィールド [!UICONTROL 幅]、 [!UICONTROL 基本] タブ [!UICONTROL ビデオエンコーディングを編集] ページにアスタリスク記号 (*) が表示されるようになりました (CQ-4290725)。
 
 * スクリーンリーダーで、 [!UICONTROL イメージプロファイル] ページ (CQ-4290723) に表示されます。
 
@@ -341,7 +341,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 **HTML5 のフォーム**
 
-* この `mfAllowAttachments` プロパティ `True` CRX DE リポジトリで、 `dataXml` 送信時に破損するHTML5 フォーム (NPR-37035)。
+* この `mfAllowAttachments` プロパティとして `True` CRX DE リポジトリで、 `dataXml` 送信時に破損するHTML5 フォーム (NPR-37035)。
 
 * を使用して XDP をHTMLとしてレンダリングする場合 `dataXml`, [!DNL AEM Forms] が表示されます `Page Unresponsive` エラー (NPR-36631)。
 
@@ -361,7 +361,7 @@ Need to verify with Engineering, the status is currently showing as Resolved
 
 * Experience Manager6.5.10.0にはExperience Manager6.5 が必要です。 [アップグレードドキュメント](/help/sites-deploying/upgrade.md) を参照してください。
 * サービスパックのダウンロードは、Adobeで利用できます [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
-* MongoDB および複数のインスタンスを使用したデプロイメントで、パッケージマネージャーを使用して、いずれかのオーサーインスタンスにExperience Manager6.5.10.0をインストールします。
+* MongoDB および複数のインスタンスを使用するデプロイメントで、パッケージマネージャーを使用して、いずれかのオーサーインスタンスにExperience Manager6.5.10.0をインストールします。
 
 >[!NOTE]
 >
