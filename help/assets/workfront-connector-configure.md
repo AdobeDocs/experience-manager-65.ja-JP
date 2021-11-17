@@ -3,7 +3,7 @@ title: ' [!DNL Workfront for Experience Manager enhanced connector] の設定'
 description: ' [!DNL Workfront for Experience Manager enhanced connector] の設定'
 role: Admin
 feature: Integrations
-source-git-commit: 468a8d96153c67232524eea6f180c9ceb364d60a
+source-git-commit: 8d39e1c86e5185a181400f10b7822a57c9d3aeae
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Adobeには、 [!DNL Adobe Workfront for Experience Manager enhanced connector] 認定パートナーまたは [!DNL Adobe Professional Services]. 認定パートナーなしでデプロイおよび設定した場合、または [!DNL Adobe Professional Services]の場合、Adobeではサポートされません。
 >
->Adobeが次の更新をリリースする可能性がある： [!DNL Adobe Workfront] および [!DNL Adobe Experience Manager] これにより、このコネクタは冗長になります。この場合、お客様はこのコネクタの使用から移行する必要が生じる場合があります。
+>Adobeが次の更新をリリースする可能性がある： [!DNL Adobe Workfront] および [!DNL Adobe Experience Manager] このコネクタを冗長にするこの場合、お客様はこのコネクタの使用から移行する必要が生じる場合があります。
 
 ## イベント購読の設定 {#event-subscriptions}
 

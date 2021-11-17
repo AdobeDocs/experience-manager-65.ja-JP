@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 468a8d96153c67232524eea6f180c9ceb364d60a
+source-git-commit: 37d298378b7d33ec7c9803cbf9f4f7eb4d2193f9
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '651'
 ht-degree: 58%
 
 ---
@@ -173,5 +173,5 @@ ht-degree: 58%
    + [ビデオレンディション](video-renditions.md)
 + 他のソリューションとの統合 {#integrations}
    + [との統合 [!DNL Adobe Workfront]](workfront-integrations.md)
-   + [インストール [!DNL enhanced connector for [!DNL Workfront]]](workfront-connector-install.md)
-   + [ [!DNL enhanced connector for [!DNL Workfront]] の設定](workfront-connector-configure.md)
+   + [インストール [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-install.md)
+   + [設定 [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-configure.md)
