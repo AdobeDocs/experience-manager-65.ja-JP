@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Search, Adobe Stock
 role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
-source-git-commit: 231c153fadceb08b4110ba7a41ef29d1bc9c458f
+source-git-commit: bfc4aa92770b001bdf89d89fa149d8e4ceefa6c2
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 43%
@@ -308,9 +308,9 @@ Adobe Stockアセットの検索とライセンス取得に必要な権限は次
 | User | グループ | 権限 | ユーザーの環境設定で Stock 設定を受け入れる | アセットにアクセス | Adobe Stockにアクセス |
 | --- | --- | --- | --- | --- | --- |
 | admin | 該当なし | すべて | 該当なし | はい | はい |
-| test-doc1 | DAM ユーザー | /conf/global/settings/stock/cloud-config | はい | 可 | はい |
-| test-doc1 | DAM ユーザー | /conf/global/settings/stock/cloud-config | 不可 | エラー：データの読み込みに失敗しました | 不可 |
-| test-doc1 | DAM ユーザー | **許可**:/conf/global/settings/stock     **拒否**:/cloud-config | 在庫設定が表示されません | 可 | 不可 |
+| test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | はい | 可 | はい |
+| test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | 不可 | エラー：データの読み込みに失敗しました | 不可 |
+| test-doc1 | DAM ユーザー | **許可**:/conf/global /settings/stock     **拒否**:/cloud-config | 在庫設定が表示されません | 可 | 不可 |
 
 
 ## [!DNL Adobe Stock] での [!DNL Experience Manager] アセットの使用と管理  {#usemanage}
