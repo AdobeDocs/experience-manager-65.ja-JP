@@ -7,29 +7,23 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
-mini-toc-levels: 3
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: bfa41deb156ffd0adb8138c11548912bc954f084
+source-git-commit: 680c0e00a739c5e880286cb4adf33f4ea5f6a318
 workflow-type: tm+mt
-source-wordcount: '6438'
+source-wordcount: '6058'
 ht-degree: 44%
 
 ---
 
-# RICK:オプション B - Dynamic Mediaの設定 — Scene7モード{#configuring-dynamic-media-scene-mode}
-
->[!NOTE]
->
->RICK:オプション B — 私が書いた 2 つの新しいトピックはまだ存在します。 しかし、このトピックでは、既に一般的な設定と公開設定のOPTIONSについてお話ししているそれぞれの領域で、2 つの新しいトピック。
+# Dynamic Media - Scene7モードの設定{#configuring-dynamic-media-scene-mode}
 
 開発、ステージング、実稼動など、異なる環境用にAdobe Experience Managerを設定して使用する場合は、それらの環境のそれぞれにDynamic MediaCloud Servicesを設定します。
 
 ## Dynamic Media - Scene7 モードのアーキテクチャ図 {#architecture-diagram-of-dynamic-media-scene-mode}
-
-**RICK:現状のままに保つ**
 
 以下のアーキテクチャ図に Dynamic Media - Scene7 モードの仕組みを示します。
 
@@ -55,23 +49,19 @@ ht-degree: 44%
 
 ## Scene7モードでのDynamic Mediaの有効化 {#enabling-dynamic-media-in-scene-mode}
 
-**RICK:現状のままに保つ**
-
 [Dynamic Media はデフォルトで無効になっています。](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)Dynamic Mediaの機能を活用するには、有効にする必要があります。
 
 >[!WARNING]
 >
 >Dynamic Media - Scene7モードは *Experience Managerオーサーインスタンスのみ*. そのため、 `runmode=dynamicmedia_scene7` Experience Managerオーサーインスタンスで、 *not* Experience Managerパブリッシュインスタンス
 
-Dynamic Mediaを有効にするには、 `dynamicmedia_scene7` ターミナルウィンドウで次のように入力して、コマンドラインから実行モードを指定します（使用するポートの例は 4502）。
+Dynamic Mediaを有効にするには、次を使用してExperience Managerを起動します。 `dynamicmedia_scene7` ターミナルウィンドウで次のように入力して、コマンドラインから実行モードを指定します（使用するポートの例は 4502）。
 
 ```shell
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
 ## （オプション）Dynamic Mediaのプリセットと設定を 6.3 から 6.5 にダウンタイムなしで移行 {#optional-migrating-dynamic-media-presets-and-configurations-from-to-zero-downtime}
-
-**RICK:現状のままに保つ**
 
 Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグレードする際に、ダウンタイムなしのデプロイメントを実行できるようになりました。 すべてのプリセットと設定を次の場所から移行するには： `/etc` から `/conf` CRXDE Liteでは、次の curl コマンドを必ず実行してください。
 
@@ -89,8 +79,6 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
 
 ## 一括アセット移行用の機能パック18912をインストールする {#installing-feature-pack-for-bulk-asset-migration}
 
-**RICK:現状のままに保つ**
-
 機能パック18912のインストールは次のとおりです。 *オプション*.
 
 機能パック18912では、FTP を使用してアセットを一括取り込むことも、Experience Manager時にDynamic Media — ハイブリッドモードまたはDynamic Media ClassicからDynamic Media - Scene7モードにアセットを移行することもできます。 次の場所から利用できます。 [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html).
@@ -98,8 +86,6 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
 詳しくは、 [一括アセット移行用の機能パック18912をインストールする](/help/assets/bulk-ingest-migrate.md) を参照してください。
 
 ## Cloud Services での Dynamic Media 設定の作成 {#configuring-dynamic-media-cloud-services}
-
-**RICK:現状のままに保つ**
 
 **Dynamic Mediaを設定する前に** - Dynamic Media資格情報を含むプロビジョニング電子メールを受け取ったら、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)をクリックし、アカウントにサインインしてパスワードを変更します。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
@@ -143,7 +129,7 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
          * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
 
    >[!NOTE]
-   DMS7 ではバージョン管理はサポートされていません。また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
+   Dynamic Media - Scene7モードでは、バージョン管理はサポートされていません。 また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
    アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
@@ -164,8 +150,6 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
 
 ## （オプション） Dynamic Media - Scene7モードでの詳細設定 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
-**RICK:現状のままに保つ**
-
 Dynamic Media - Scene7 モードのセットアップと設定をさらにカスタマイズしたり、パフォーマンスを最適化したりする場合は、次の&#x200B;*オプション*&#x200B;タスクを 1 つまたは複数実行できます。
 
 * [（オプション）2 GB を超えるアセットのアップロードに対するDynamic Media - Scene7モードの設定](#optional-config-dms7-assets-larger-than-2gb)
@@ -177,8 +161,6 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 * [（オプション）レプリケーション用のアセットのフィルタリング](#optional-filtering-assets-for-replication)
 
 ### （オプション）2 GB を超えるアセットのアップロードに対するDynamic Media - Scene7モードの設定 {#optional-config-dms7-assets-larger-than-2gb}
-
-**RICK:現状のままに保つ**
 
 Dynamic Media - Scene7モードでは、デフォルトのアセットアップロードファイルサイズは 2 GB 以下です。 ただし、オプションで、2 GB を超え 15 GB までのアセットのアップロードを設定できます。
 
@@ -266,49 +248,39 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 
 ### （オプション）Dynamic Media - Scene7 モードのセットアップと設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-**RICK:新しい「公開設定」トピックへのリンク**
-
 実行モードの場合 `dynamicmedia_scene7`を使用する場合は、Dynamic Media Classicユーザーインターフェイスを使用してDynamic Media設定を変更します。
 
 セットアップおよび設定タスクには、次のものが含まれます。
 
-* [Image Server の公開設定](#publishing-setup-for-image-server)
-* [アプリケーションの一般設定の指定](#configuring-application-general-settings)
+* [Image Server 用のDynamic Media公開設定の指定](/help/assets/dm-publish-settings.md)
+* [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md)
 * [カラーマネジメントの設定](#configuring-color-management)
-* [サポートされる形式の MIME タイプの編集](#editing-mime-types-for-supported-formats) **RICK:保つ？**
-* [サポートされていない形式の MIME タイプを追加](#adding-mime-types-for-unsupported-formats) **RICK:保つ？**
-* [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) **RICK:保つ？**
+* [サポートされている形式の MIME タイプの編集](#editing-mime-types-for-supported-formats)
+* [サポートされていない形式の MIME タイプの追加](#adding-mime-types-for-unsupported-formats)
+* [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
 
-#### Image Server の公開設定 {#publishing-setup-for-image-server}
+<!-- #### Configure Dynamic Media Publish Setup for Image Server {#publishing-setup-for-image-server} 
 
-公開設定は、アセットがデフォルトで Dynamic Media からどのように配信されるかを決定します。設定が指定されていない場合、Dynamic Media は、公開設定で定義されたデフォルト設定に従ってアセットを配信します。例えば、解像度属性が含まれていない画像を配信するように要求した場合、画像は初期設定のオブジェクト解像度設定で配信されます。
+The Dynamic Media Publish Setup page establishes default settings that determine how assets are delivered from Adobe Dynamic Media servers to web sites or applications.
 
-Image Server ページでは、画像を配信する際のデフォルト設定を指定します。
+See [Configure Dynamic Media Publish Setup for Image Server](/help/assets/dm-publish-settings.md).
 
-**RICK:新しい「公開設定」トピックへのリンク** 詳しくは、 [Dynamic Media Publish Setup](/help/assets/dm-publish-settings.md).
+#### Configure Dynamic Media General Settings {#configuring-application-general-settings}
 
+To configure the default color properties so color correction is enabled when images are requested, see [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md).
 
-* **[!UICONTROL 互換性の属性]** - **RICK:まだ必要なの？** この設定により、後方互換性を保つためにバージョン 3.6 と同様に、テキストレイヤーの先頭と末尾の段落が処理されます。 **RICK:まだ必要なの？**
-* **[!UICONTROL ローカリゼーションサポート]** - **RICK:まだ必要なの？** これらの設定を使用すると、複数のロケール属性を管理できます。 また、ロケールマップ文字列を指定することもできます。これにより、ビューアのツールチップで使用する言語を指定できます。**[ローカライゼーションサポート]**&#x200B;の設定について詳しくは、[アセットのローカライゼーションを設定する場合の考慮事項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=ja#considerations-when-setting-up-localization-of-assets)を参照してください。**RICK:まだ必要なの？**
-
-#### アプリケーションの一般設定の指定 {#configuring-application-general-settings}
-
-**RICK:新しい「一般設定」トピックへのリンク** 詳しくは、 [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md).
+See [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md). -->
 
 #### カラーマネジメントの設定 {#configuring-color-management}
 
-**RICK:新しい「一般設定」トピックへのリンク**
+Dynamic Media カラーマネジメントを使用すると、アセットをカラー補正できます。カラー補正により、取り込まれたアセットは、カラースペース（RGB、CMYK、グレー）および埋め込みカラープロファイルを維持します。動的レンディションを要求した場合、画像の色は、CMYK、RGB またはグレー出力を使用するターゲットのカラースペースに補正されます。
 
-Dynamic Media カラーマネジメントを使用すると、アセットをカラー補正できます。カラー補正により、取り込まれたアセットは、カラースペース（RGB、CMYK、グレー）および埋め込みカラープロファイルを維持します。動的レンディションを要求した場合、画像の色は、CMYK、RGB またはグレー出力を使用するターゲットのカラースペースに補正されます。[画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
+[画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
 
 >[!NOTE]
 デフォルトでは、「 **[!UICONTROL レンディション]** 選択時に 15 個のビューアプリセット **[!UICONTROL ビューア]** （アセットの詳細ビュー）。 この制限は増やすことができます。詳しくは、 [表示される画像プリセットの数を増やします](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) または [表示されるビューアプリセットの数を増やします](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
-画像が要求されたときにカラー補正が有効になるようにデフォルトのカラープロパティを設定するには、次の手順を実行します。 **RICK:新しい「一般設定」トピックへのリンク** 参照 [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md).
-
 #### サポートされている形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
-
-**RICK:現状のままに保つ**
 
 Dynamic Media によって処理されるアセットタイプを定義して、高度なアセット処理パラメーターをカスタマイズできます。例えば、アセット処理パラメーターを指定して次のことができます。
 
@@ -343,8 +315,6 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 1. ページの左上隅で、「 **[!UICONTROL CRXDE Lite]** Experience Managerに戻る
 
 #### サポートされていない形式のカスタム MIME タイプの追加 {#adding-mime-types-for-unsupported-formats}
-
-**RICK:現状のままに保つ**
 
 Experience Manager Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Liteに追加する新しいノードがExperience Managerによって削除されないようにするには、MIME タイプを `image_`. また、有効な値が **[!UICONTROL false]**.
 
@@ -398,8 +368,6 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 #### 画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成 {#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets}
 
-**RICK:現状のまま？**
-
 アセットを Dynamic Media にアップロードしながら画像セットやスピンセットを自動作成するには、バッチセットプリセットを使用します。
 
 まず、アセットを 1 つのセットにグループ化する際の命名規則を定義します。 次に、一意の名前を持つ、自己完結型の命令のセットであるバッチセットプリセットを作成します。 プリセットレシピ内で定義された命名規則に一致する画像を使用してセットを作成する方法を定義する必要があります。
@@ -417,8 +385,6 @@ Experience Manager Assets でサポートされていない形式のカスタム
 定義には、一致とベース名という 2 つの要素を使用できます。これらのフィールドでは、命名規則のすべての要素を定義して、要素が含まれるセットを命名するために使用される規則の一部を指定できます。会社の個々の命名規則では、多くの場合、これらの要素ごとに 1 行以上の定義を使用します。 独自の定義行を必要なだけ使用して、メイン画像、カラー要素、代替表示要素およびスウォッチ要素などの個別の要素にグループ化できます。
 
 **デフォルトの命名規則を設定するには：:**
-
-**RICK:現状のまま？**
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
@@ -455,8 +421,6 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 **バッチセットプリセットを作成するには：:**
 
-**RICK:現状のまま？**
-
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報がない場合は、Adobeカスタマーサポートにお問い合わせください。
@@ -489,8 +453,6 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 ##### 2D スピンセットを自動生成するためのバッチセットプリセットの作成
 
-**RICK:現状のままに保つ??**
-
 バッチセットの種類の&#x200B;**[!UICONTROL 多軸スピンセット]**&#x200B;を使用して、2D スピンセットの生成を自動化する手法を作成できます。画像のグループ化では行と列の正規表現を使用するので、画像アセットが多次元の配列の対応する場所に正しく配置されます。多軸スピンセットの行数または列数には、上限または下限はありません。
 
 例として、`spin-2dspin` という名前の多軸スピンセットを作成します。1 行あたり 12 個の画像が含まれる 3 行のスピンセット画像セットがあります。画像の名前は次のとおりです。
@@ -514,8 +476,6 @@ spin-01-01
 このスピンセットをアップロードして公開する際に、**[!UICONTROL アップロードオプションを設定]**&#x200B;ダイアログボックスの&#x200B;**[!UICONTROL バッチセットプリセット]**&#x200B;の下に表示される 2D スピンセット手法の名前をアクティブ化します。
 
 **2D スピンセットを自動生成するためのバッチセットプリセットを作成するには：:**
-
-**RICK:現状のまま？**
 
 1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
 
@@ -574,8 +534,6 @@ spin-01-01
 
 ### （オプション） Dynamic Media - Scene7モードのパフォーマンスの調整 {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-**RICK:現状のまま？**
-
 Dynamic Media - Scene7モードのスムーズな実行を維持するために、Adobeでは、次の同期パフォーマンス/拡張性の微調整のヒントをお勧めします。
 
 * 様々なファイル形式の処理に対応する定義済みのジョブパラメーターを更新する。
@@ -584,8 +542,6 @@ Dynamic Media - Scene7モードのスムーズな実行を維持するために�
 * Dynamic Media Classic サーバーへの最大アップロード接続数を更新する。
 
 #### 様々なファイル形式の処理に対応する定義済みジョブパラメーターの更新
-
-**RICK:現状のまま？**
 
 ジョブパラメーターを調整して、ファイルアップロード時の処理を高速化できます。例えば、PSD ファイルをアップロードしても、テンプレートとして処理しない場合は、レイヤー抽出を false（オフ）に設定できます。この場合、調整されたジョブパラメーターは次のように表示されます。`process=None&createTemplate=false`
 
@@ -611,8 +567,6 @@ PDF ファイル、PostScript® ファイル、PSD ファイルには、以下�
 
 #### Granite の一時的なワークフローキューの更新 {#updating-the-granite-transient-workflow-queue}
 
-**RICK:現状のまま？**
-
 Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローに使用されます。Dynamic Media では、画像の取り込みおよび処理に使用されます。
 
 **Granite の一時的なワークフローキューを更新するには：**
@@ -636,8 +590,6 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 #### Granite のワークフローキューの更新 {#updating-the-granite-workflow-queue}
 
-**RICK:現状のままに保つ??**
-
 Granite のワークフローキューは、一時的でないワークフローに使用されます。Dynamic Media では、**[!UICONTROL Dynamic Media エンコーディングビデオ]**&#x200B;ワークフローでビデオを処理するために使用されます。
 
 **Granite のワークフローキューを更新するには：**
@@ -656,8 +608,6 @@ Granite のワークフローキューは、一時的でないワークフロー
 1. 「**[!UICONTROL 保存]**」を選択します。
 
 #### Dynamic Media Classicアップロード接続の更新 {#updating-the-scene-upload-connection}
-
-**RICK:現状のまま？**
 
 Scene7 アップロード接続の設定は、Experience Manager Assets を Dynamic Media Classic サーバーと同期します。
 
@@ -678,8 +628,6 @@ Scene7 アップロード接続の設定は、Experience Manager Assets を Dyna
 
 ### （オプション）レプリケーション用のアセットのフィルタリング {#optional-filtering-assets-for-replication}
 
-**RICK:現状のままに保つ**
-
 非Dynamic Mediaデプロイメントでは、 *すべて* アセット（画像とビデオの両方）をExperience Managerオーサー環境からExperience Manager公開ノードに移動します。 このワークフローは、Experience Managerパブリッシュサーバーもアセットを配信するので、必要です。
 
 ただし、Dynamic Mediaデプロイメントでは、アセットはCloud Serviceを通じて配信されるので、Experience Managerのパブリッシュノードに同じアセットをレプリケートする必要はありません。 このような「ハイブリッド公開」ワークフローを使用すると、余分なストレージコストと、アセットをレプリケートする処理時間が長くなるのを防ぐことができます。 サイトページなどのその他のコンテンツは、引き続きExperience Managerパブリッシュノードから提供されます。
@@ -687,8 +635,6 @@ Scene7 アップロード接続の設定は、Experience Manager Assets を Dyna
 フィルターを使用すると、次のことができます。 *除外* アセットのパブリッシュノードへのExperience Managerのレプリケートから。
 
 #### レプリケーションにデフォルトのアセットフィルターを使用 {#using-default-asset-filters-for-replication}
-
-**RICK:現状のままに保つ**
 
 Dynamic Mediaを画像やビデオ、またはその両方に使用する場合、Adobeがそのまま提供するデフォルトのフィルターを使用できます。 次のフィルターがデフォルトでアクティブです。
 
@@ -701,8 +647,6 @@ Dynamic Mediaを画像やビデオ、またはその両方に使用する場合�
 フィルターは MIME タイプに適用され、パスに固有にはできません。
 
 #### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
-
-**RICK:現状のままに保つ**
 
 1. Experience Managerで、Experience Managerロゴを選択してグローバルナビゲーションコンソールにアクセスし、に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
 1. 左側のフォルダーツリーで、に移動します。 `/etc/replication/agents.author/publish/jcr:content/damRenditionFilters` をクリックして、フィルターを確認します。

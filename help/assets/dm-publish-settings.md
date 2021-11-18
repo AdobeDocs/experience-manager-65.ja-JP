@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media Publish Setup の設定
+title: Image Server 用のDynamic Media公開設定の指定
 description: Dynamic Mediaで公開を設定する方法を説明します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -7,43 +7,43 @@ topic-tags: administering
 content-type: reference
 feature: Image Profiles
 role: User, Admin
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
+source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
 workflow-type: tm+mt
-source-wordcount: '3114'
-ht-degree: 4%
+source-wordcount: '3443'
+ht-degree: 5%
 
 ---
 
 
-# Dynamic Media Publish Setup の設定
+# Image Server 用のDynamic Media公開設定の指定
 
->[!IMPORTANT]
->
->Dynamic Media公開設定は、次の場合にのみ使用できます。
->
->* Scene7モードでDynamic Mediaを実行しています。
->* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 またはExperience Manageras a Cloud Serviceで使用する場合。
->* 管理者権限を持つExperience Manager・システム管理者です。
+Dynamic Media公開設定の指定は、次の場合にのみ使用できます。
 
+* Scene7モードでDynamic Mediaを実行しています。 詳しくは、 [Scene7モードでのDynamic Mediaの有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
+* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 またはExperience Manageras a Cloud Serviceで使用する場合。
+* 管理者権限を持つExperience Manager・システム管理者です。
 
-Dynamic Media公開設定ページの設定によって、デフォルトでAdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法が決まります。 設定が指定されていない場合、AdobeDynamic Mediaサーバーは公開設定ページのデフォルト設定に従ってアセットを配信します。 例えば、解像度属性を含まない画像を配信するように要求すると、Image Server ページの「デフォルトのオブジェクト解像度」設定を持つ画像が生成されます。
+Dynamic Media公開設定は、経験豊富な Web サイト開発者およびプログラマーが使用することを目的としています。 AdobeDynamic Mediaでは、これらの公開設定を変更するユーザーに、AdobeDynamic Media、HTTP プロトコルの標準と規則、基本的な画像技術に精通していることをお勧めします。
 
-管理者は、Image Server、Image Renderer およびビネットページのデフォルト設定を変更して、サーバーからアセットを配信する際のデフォルト設定を指定できます。
+Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。 設定が指定されていない場合、AdobeDynamic Mediaサーバーは、Dynamic Media公開設定ページで設定されたデフォルト設定に従ってアセットを配信します。
 
 >[!NOTE]
 >
->Dynamic Media公開設定は、経験豊富な Web サイト開発者およびプログラマーが使用することを目的としています。 AdobeDynamic Mediaでは、これらのデフォルトの公開設定を変更するユーザーは、Dynamic MediaAdobe、HTTP プロトコルの標準と規則、基本的なイメージングテクノロジーに精通していると想定しています。
+>Dynamic Media ClassicからAdobe Experience Manager上のDynamic Mediaにアップグレードする場合 Dynamic Mediaの「一般設定」ページと「公開設定」ページに、Dynamic Media Classicアカウントから取得した値が事前に設定されています。 例外は、 **[!UICONTROL デフォルトのアップロードオプション]** 」領域に表示されます。 これらの値は既にExperience Manager中です。 したがって、以下で行う変更 **[!UICONTROL デフォルトのアップロードオプション]**、5 つすべてのタブにわたって、Experience Managerユーザーインターフェイスを介して、Dynamic Media ClassicではなくDynamic Mediaに反映されます。 一般設定および公開設定ページのその他すべての設定と値は、Experience Manager上のDynamic Media ClassicとDynamic Mediaの間で維持されます。
 
-**Dynamic Media Publish Setup を設定するには：**
+関連トピック [Dynamic Media - Scene7モードの設定のセットアップと設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+
+**Dynamic Media Publish Setup Image Server を設定するには：**
 
 1. Experience Manager作成モードで、Experience Managerロゴを選択して、グローバルナビゲーションコンソールにアクセスします。
 1. 左側のレールでツールアイコンを選択し、に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
 1. Image Server ページで、Image Server — 公開コンテキストを設定し、5 つのタブを使用してデフォルトの公開設定を指定します。
 
-   * [Image Server](#image-server)
+   * [画像サーバー](#image-server)
    * [「Security」タブ](#security-tab)
    * [カタログ管理](#catalog-management-tab) タブ
    * [要求属性](#request-attributes-tab) タブ
@@ -55,14 +55,14 @@ Dynamic Media公開設定ページの設定によって、デフォルトでAdob
 
 1. 作業が完了したら、ページの右上隅付近にある「 」を選択します。 **[!UICONTROL 保存]**.
 
-## Image Server {#image-server}
+## 画像サーバー {#image-server}
 
 Image Server ページでは、Image Server から画像を配信するためのデフォルト設定を指定します。 設定は 5 つのカテゴリで使用できます
 
 | 公開コンテキスト | 説明 |
 | --- | --- |
 | 画像サービング | パブリッシュ設定のコンテキストを指定します。 |
-| テスト画像サービング | 公開設定をテストするコンテキストを指定します。<br>詳しくは、 [アセットを公開する前にテストする](#test-assets-before-making-public). |
+| テスト画像サービング | 公開設定をテストするコンテキストを指定します。<br>新しいDynamic Mediaアカウントのみの場合、デフォルト **[!UICONTROL クライアントアドレス]** フィールドが `127.0.0.1` 自動的に。<br>詳しくは、 [アセットを公開する前にテストする](#test-assets-before-making-public). |
 
 ### 「Security」タブ {#security-tab}
 
@@ -74,27 +74,31 @@ Image Server ページでは、Image Server から画像を配信するための
 
 関連トピック [RuleSetFile](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。
 
+>[!NOTE]
+>
+>Dynamic Media Classicアカウントに既に **[!UICONTROL ルールセット定義ファイルのパス]** 選択済み（以下に設定済み） **[!UICONTROL 設定]** > **[!UICONTROL アプリ]** > **[!UICONTROL 公開設定]**&#x200B;の下 **[!UICONTROL カタログ管理]** グループ )、Experience ManagerのDynamic MediaアカウントがDynamic Media Classicからファイルを取得します。 その後、ファイルが保存され、このフィールドで使用可能になります ( を開く際に **[!UICONTROL Dynamic Media Publish Setup]** ページを初めて表示します。
+
 ### 「要求属性」タブ {#request-attributes-tab}
 
 これらの設定は、画像のデフォルトの表示に関係します。
 
 | 設定 | 説明 |
 | --- | --- |
-| **[!UICONTROL 返信画像のサイズ制限]** | 必須。<br>クライアントに返される返信画像の最大の幅と高さを指定します。 要求によって返信画像の幅または高さ（またはその両方）がこの設定よりも大きい場合、サーバーはエラーを返します。<br>関連トピック [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL 返信画像のサイズ制限]** | 必須。<br>新しいDynamic Mediaアカウントのみの場合、デフォルトのサイズ制限は自動的に「幅」に設定されます。 `3000` 高さ： `3000` 両方 **[!UICONTROL 画像サービング]** および **[!UICONTROL 画像サービングをテスト]**.<br>クライアントに返される返信画像の最大の幅と高さを指定します。 要求によって返信画像の幅または高さ（またはその両方）がこの設定よりも大きい場合、サーバーはエラーを返します。<br>関連トピック [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL リクエスト暗号化モード]** | 有効な要求に base64 エンコーディングを適用する場合は、有効にします。<br>関連トピック [RequestObfuscation](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL リクエストロックモード]** | リクエストに単純なハッシュロックを含める場合は、有効にします。<br>関連トピック [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトのリクエスト属性]** |  |
 | **[!UICONTROL デフォルトの画像ファイルサフィックス]** | 必須。<br>パスにファイルサフィックスが含まれていない場合に、カタログの [ パス ] および [ マスクパス ] フィールドの値に追加される既定のデータファイル拡張子。<br>関連トピック [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトのフォント書体名]** | テキストレイヤー要求でフォントが提供されない場合に使用するフォントを指定します。 指定する場合は、この画像カタログのフォントマップまたはデフォルトカタログのフォントマップで有効なフォント名の値を指定する必要があります。<br>関連トピック [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
-| **[!UICONTROL デフォルト画像]** | リクエストされた画像が見つからない場合にリクエストに応じて返すデフォルトの画像を提供します。<br>関連トピック [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL デフォルト画像]** | リクエストされた画像が見つからない場合にリクエストに応じて返すデフォルトの画像を提供します。<br>関連トピック [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。<br>**注意**:Dynamic Media Classicアカウントに既に **[!UICONTROL デフォルトの画像]** 選択済み（以下に設定済み） **[!UICONTROL 設定]** > **[!UICONTROL アプリ]** > **[!UICONTROL 公開設定]**&#x200B;の下 **[!UICONTROL デフォルトの要求属性]** グループ )、Experience ManagerのDynamic MediaアカウントがDynamic Media Classicからファイルを取得します。 その後、ファイルが保存され、このフィールドで **[!UICONTROL Dynamic Media Publish Setup]** ページを初めて表示します。 |
 | **[!UICONTROL デフォルトの画像モード]** | スライダボックスが有効な場合（右側のスライダ）、 **[!UICONTROL デフォルトの画像]** ソースイメージ内の見つからない各レイヤをデフォルトのイメージで置き換え、通常どおり合成を返します。 スライダボックスが無効の場合（左側のスライダ）、見つからないイメージが複数のレイヤの 1 つに過ぎない場合でも、デフォルトのイメージが合成イメージ全体を置き換えます。<br>関連トピック [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
-| **[!UICONTROL デフォルトの表示サイズ]** | 必須。<br>要求で `wid=`, `hei=`または `scl=`.<br>関連トピック [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL デフォルトの表示サイズ]** | 必須。<br>新しいDynamic Mediaアカウントの場合のみ、デフォルトの表示サイズが自動的に「幅」に設定されます。 `1280` 高さ： `1280` 両方 **[!UICONTROL 画像サービング]** および **[!UICONTROL 画像サービングをテスト]**.<br>要求で `wid=`, `hei=`または `scl=`.<br>関連トピック [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトのサムネールサイズ]** | 必須。<br>属性の代わりに使用 **[!UICONTROL デフォルトの表示サイズ]** (`req=tmb`) をクリックします。 サムネール要求 (`req=tmb`) は、 `wid=`, `hei=`または `scl=`.<br>関連トピック [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトの背景色]** | 実際のRGBデータを含まない返信画像の任意の領域を埋めるのに使用する画像値を指定します。<br>関連トピック [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL JPEG エンコード属性]** |  |
-| **[!UICONTROL 品質]** | JPEG 返信画像のデフォルト属性を指定します。この **[!UICONTROL 品質]** フィールドは 1 ～ 100 の範囲で定義されます。<br>関連トピック [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL 品質]** | <br>JPEG 返信画像のデフォルト属性を指定します。<br>新しいDynamic Mediaアカウントの場合のみ、 **[!UICONTROL 品質]** デフォルト値は自動的ににに設定されます。 `80` 両方 **[!UICONTROL 画像サービング]** および **[!UICONTROL 画像サービングをテスト]**.<br>このフィールドは 1 ～ 100 の範囲で定義されます。<br>関連トピック [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL 色度のダウンサンプリング]** | JPEGエンコーダーで使用される色分けダウンサンプリングを有効または無効にします。 |
-| **[!UICONTROL デフォルトの再サンプリングモード]** | 画像データの拡大/縮小に使用する初期設定の再サンプリングおよび補間属性を指定します。 使用条件 `resMode` がリクエストで指定されていません。<br>関連トピック [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL デフォルトの再サンプリングモード]** | 画像データの拡大/縮小に使用する初期設定の再サンプリングおよび補間属性を指定します。 使用条件 `resMode` がリクエストで指定されていません。<br>新しいDynamic Mediaアカウントのみの場合、デフォルトの再サンプリングモードは自動的ににに設定されます。 `Sharp2` 両方 **[!UICONTROL 画像サービング]** および **[!UICONTROL 画像サービングをテスト]**.<br>関連トピック [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 
 ### 「共通のサムネール属性」タブ {#common-thumbnail-attributes-tab}
 
@@ -103,8 +107,8 @@ Image Server ページでは、Image Server から画像を配信するための
 | 設定 | 説明 |
 | --- | --- |
 | **[!UICONTROL サムネールのデフォルトの背景色]** | 実際のRGBデータを含まない出力サムネール画像の領域を埋めるための画像値を指定します。 サムネール要求 (`req=tmb`) および **[!UICONTROL 初期設定のサムネールの種類]** 設定が **[!UICONTROL フィット]** または **[!UICONTROL テクスチャ]**.<br>関連トピック [ThumbBkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
-| **[!UICONTROL 水平方向の整列]** | 返信画像の長方形で、サムネール画像の水平方向の配置を指定します ( `wid=` および `hei=` 値。<br>サムネール要求 (`req=tmb`) および **[!UICONTROL 初期設定のサムネールの種類]** 設定が **[!UICONTROL フィット]**.<br>次の 3 つの水平線形から選択できます。 **[!UICONTROL 中央揃え]**, **[!UICONTROL 左揃え]**、および **[!UICONTROL 右揃え]**.<br>関連トピック [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
-| **[!UICONTROL 垂直方向の整列]** | 返信画像の長方形で、サムネール画像の垂直方向の配置を指定します ( `wid=` および `hei=` 値。 サムネール要求 (`req=tmb`) および **[!UICONTROL 初期設定のサムネールの種類]** 設定が **[!UICONTROL フィット]**.<br>次の 3 つの垂直線形から選択できます。 **[!UICONTROL 上揃え]**, **[!UICONTROL 中央揃え]**、および **[!UICONTROL 下揃え]**.<br>関連トピック [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL 水平方向揃え]** | 返信画像の長方形で、サムネール画像の水平方向の配置を指定します ( `wid=` および `hei=` 値。<br>サムネール要求 (`req=tmb`) および **[!UICONTROL 初期設定のサムネールの種類]** 設定が **[!UICONTROL フィット]**.<br>次の 3 つの水平線形から選択できます。 **[!UICONTROL 中央揃え]**, **[!UICONTROL 左揃え]**、および **[!UICONTROL 右揃え]**.<br>関連トピック [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL 垂直方向揃え]** | 返信画像の長方形で、サムネール画像の垂直方向の配置を指定します ( `wid=` および `hei=` 値。 サムネール要求 (`req=tmb`) および **[!UICONTROL 初期設定のサムネールの種類]** 設定が **[!UICONTROL フィット]**.<br>次の 3 つの垂直線形から選択できます。 **[!UICONTROL 上揃え]**, **[!UICONTROL 中央揃え]**、および **[!UICONTROL 下揃え]**.<br>関連トピック [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトのクライアントキャッシュの有効期限]** | 特定のカタログレコードに有効なカタログ有効期限の値が含まれていない場合のデフォルトの有効期限間隔（時間単位）を指定します。に設定 `-1` 期限切れにならないとマークする <br>関連トピック [有効期限](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトのサムネールの種類]** | 特定のカタログレコードに有効なカタログの ThumbType 値が含まれていない場合のサムネールの種類の初期設定を指定します。 サムネール要求 (`req=tmb`) をクリックします。<br>選択できるサムネールの種類は次の 3 つです。 **[!UICONTROL 切り抜き]**, **[!UICONTROL フィット]**、および **[!UICONTROL テクスチャ]**.<br>関連トピック [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL デフォルトのサムネール解像度]** | 特定のカタログレコードに有効な catalog ThumbRes 値が含まれていない場合の、サムネールオブジェクトの解像度の初期設定を指定します。 サムネール要求 (`req=tmb`) および **[!UICONTROL デフォルトのサムネールの種類]** 設定が **[!UICONTROL テクスチャ]**.<br>関連トピック [ThumbRes](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
@@ -126,13 +130,13 @@ Image Server ページでは、Image Server から画像を配信するための
 
 >[!NOTE]
 >
->一般に、選択したカラー設定に対しては、業界標準に準拠するためにAdobeがテストしたデフォルトのレンダリング方法を使用することをお勧めします。 例えば、北米またはヨーロッパのカラー設定を選択した場合、デフォルトのカラー変換レンダリング方法は次のようになります。 **[!UICONTROL 相対的な色域]**. 日本のカラー設定を選択した場合のデフォルトのカラー変換レンダリング方法は次のとおりです。 **[!UICONTROL 知覚的]**.
+>一般に、選択したカラー設定に対しては、業界標準に準拠するためにAdobeがテストしたデフォルトのレンダリング方法を使用することをお勧めします。 例えば、北米またはヨーロッパのカラー設定を選択した場合、デフォルトのカラー変換レンダリング方法は次のようになります。 **[!UICONTROL 相対的な色域を維持]**. 日本のカラー設定を選択した場合のデフォルトのカラー変換レンダリング方法は次のとおりです。 **[!UICONTROL 知覚的]**.
 
 | 設定 | 特徴 |
 | --- | --- |
-| **[!UICONTROL CMYK の初期設定カラースペース]** | CMYK データの作業プロファイルとして使用する ICC カラープロファイルの名前を指定します。 If **[!UICONTROL 指定なし]** が選択されている場合、CMYK ソース画像が関係しているときは、この画像カタログのカラーマネジメントが無効になります。 すべての CMYK 作業用スペースはデバイスに依存します。つまり、実際のインクと紙の組み合わせに基づいています。 CMYK 作業用スペースAdobeの供給は、標準的な商業印刷条件に基づいています。<br> 関連トピック [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
-| **[!UICONTROL グレースケールの初期設定カラースペース]** | グレースケールデータの作業プロファイルとして使用する ICC カラープロファイルの名前を指定します。 If **[!UICONTROL 指定なし]** を選択した場合、グレースケールのソース画像が関係する場合、この画像カタログのカラーマネジメントは無効になります。<br>関連トピック [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
-| **[!UICONTROL RGBの初期設定のカラースペース]** | RGBデータの作業プロファイルとして使用する ICC カラープロファイルの名前を指定します。 If **[!UICONTROL 指定なし]** が選択されている場合、RGBソース画像が関係すると、この画像カタログのカラーマネジメントは無効になります。 一般に、選択するのが最善です **[!UICONTROL Adobe RGB]** または **[!UICONTROL sRGB]**&#x200B;特定のデバイス（モニタープロファイルなど）のプロファイルではなく。 **[!UICONTROL sRGB]** は、web またはモバイルデバイス用の画像を準備する際に推奨されます。これは、web 上の画像の表示に使用される標準モニタのカラースペースを定義するからです。 **[!UICONTROL sRGB]** また、消費者レベルのデジタルカメラの画像を操作する場合にも適しています。これらのカメラのほとんどは sRGB をデフォルトのカラースペースとして使用するからです。<br>関連トピック [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL CMYK のデフォルトカラースペース]** | CMYK データの作業プロファイルとして使用する ICC カラープロファイルの名前を指定します。 If **[!UICONTROL 指定なし]** が選択されている場合、CMYK ソース画像が関係しているときは、この画像カタログのカラーマネジメントが無効になります。 すべての CMYK 作業用スペースはデバイスに依存します。つまり、実際のインクと紙の組み合わせに基づいています。 CMYK 作業用スペースAdobeの供給は、標準的な商業印刷条件に基づいています。<br> 関連トピック [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL グレースケールのデフォルトカラースペース]** | グレースケールデータの作業プロファイルとして使用する ICC カラープロファイルの名前を指定します。 If **[!UICONTROL 指定なし]** を選択した場合、グレースケールのソース画像が関係する場合、この画像カタログのカラーマネジメントは無効になります。<br>関連トピック [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
+| **[!UICONTROL RGB のデフォルトカラースペース]** | RGBデータの作業プロファイルとして使用する ICC カラープロファイルの名前を指定します。 If **[!UICONTROL 指定なし]** が選択されている場合、RGBソース画像が関係すると、この画像カタログのカラーマネジメントは無効になります。 一般に、選択するのが最善です **[!UICONTROL Adobe RGB]** または **[!UICONTROL sRGB]**&#x200B;特定のデバイス（モニタープロファイルなど）のプロファイルではなく。 **[!UICONTROL sRGB]** は、web またはモバイルデバイス用の画像を準備する際に推奨されます。これは、web 上の画像の表示に使用される標準モニタのカラースペースを定義するからです。 **[!UICONTROL sRGB]** また、消費者レベルのデジタルカメラの画像を操作する場合にも適しています。これらのカメラのほとんどは sRGB をデフォルトのカラースペースとして使用するからです。<br>関連トピック [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) パラメーターに関する情報をDynamic Mediaビューアリファレンスガイドで参照してください。 |
 | **[!UICONTROL カラー変換レンダリングの方法]** | **[!UICONTROL 知覚的]**  — 色の値自体が変化する場合でも、人間の目に自然と感じられるように、色間の視覚的な関係を保つことを目的としています。 この目的は、色域外の色が多い写真画像に適しています。 この設定は、日本の印刷業界にとっての標準的なレンダリング意図です。 |
 |  | **[!UICONTROL 相対的な色域を維持]**  — ソースカラースペースの極端なハイライトを、目的のカラースペースのハイライトと比較し、それに応じてすべての色をシフトします。 色域外の色は、出力先のカラースペースで最も近く再現可能な色にシフトします。 「相対的な色域を維持」では、「知覚的」よりも多くの元の色が画像に保持されます。 この設定は、北米およびヨーロッパでの印刷の標準的なレンダリング方法です。 |
 |  | **[!UICONTROL 彩度]**  — 画像内で色の精度を犠牲にして鮮やかな色を生成しようとします。 このレンダリング方法は、グラフやグラフなどのビジネスグラフィックに適しています。色間の正確な関係よりも明るい飽和色が重要です。 |
@@ -253,6 +257,3 @@ Adobeケアに問い合わせて、サーバー名が見つからないか、サ
    外部（自宅のコンピューターや 4G/5G 接続など）からネットワークにアクセスし、サイトの公開バージョンに公開済みのアセットがすべて表示され、非公開のコンテンツは表示されないことを確認します。
 
    未承認の IP アドレスからセキュアテストサービスにアクセスしているので、ステージングバージョンでアセットが表示されないことを確認します。
-
-
-

@@ -1,5 +1,5 @@
 ---
-title: Dynamic Mediaの一般設定の設定
+title: Dynamic Mediaの一般設定
 description: Dynamic Mediaで一般設定を管理する方法を説明します。 ここでパブリッシュサーバー名とオリジンサーバー名を設定し、画像の上書きオプションを設定できます。 また、画像のアンシャープマスク用のデフォルトのアップロードオプションや、PostScript、Adobe Photoshop、PDF、Adobe Illustratorの各ファイルを処理する方法に関するアップロードオプションも用意されています。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -7,37 +7,43 @@ topic-tags: administering
 content-type: reference
 feature: Image Profiles
 role: User, Admin
+mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 1985058faa2a85a4544b35f2a6925670207df9e1
+source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
 workflow-type: tm+mt
-source-wordcount: '2216'
-ht-degree: 38%
+source-wordcount: '2454'
+ht-degree: 34%
 
 ---
 
 
-# Dynamic Mediaの一般設定の設定
+# Dynamic Mediaの一般設定
 
->[!IMPORTANT]
->
->Dynamic Mediaの一般設定は、次の場合にのみ使用できます。
->
->* Scene7モードでDynamic Mediaを実行しています。
->* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 またはExperience Manageras a Cloud Serviceで使用する場合。
->* 管理者権限を持つExperience Manager・システム管理者です。
+設定 **[!UICONTROL Dynamic Media General Settings]** は、次の場合にのみ使用できます。
 
+* Scene7モードでDynamic Mediaを実行しています。 詳しくは、 [Scene7モードでのDynamic Mediaの有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
+* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 またはExperience Manageras a Cloud Serviceで使用する場合。
+* 管理者権限を持つExperience Manager・システム管理者です。
+
+Dynamic Mediaの一般設定は、経験豊富な Web サイト開発者やプログラマーが使用することを目的としています。 AdobeDynamic Mediaでは、これらの公開設定を変更するユーザーに、Adobe Experience Manager上のDynamic Mediaと基本的な画像技術に精通していることをお勧めします。
 
 アカウントの作成時に、AdobeDynamic Mediaが会社に割り当てられたサーバーを自動的に提供します。 これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。
 
-関連トピック [セキュアテストサービスのテスト](/help/assets/dm-publish-settings.md#test-assets-before-making-public).
+Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。 設定が指定されていない場合、AdobeDynamic Mediaサーバーは、Dynamic Media公開設定ページで設定されたデフォルト設定に従ってアセットを配信します。
 
-**Dynamic Mediaの一般設定を設定するには：**
+関連トピック [Dynamic Media - Scene7モードの設定のセットアップと設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+
+>[!NOTE]
+>
+>Dynamic Media ClassicからAdobe Experience Manager上のDynamic Mediaにアップグレードする場合 Dynamic Mediaの「一般設定」ページと「公開設定」ページに、Dynamic Media Classicアカウントから取得した値が事前に設定されています。 例外は、 **[!UICONTROL デフォルトのアップロードオプション]** 」領域に表示されます。 これらの値は既にExperience Manager中です。 したがって、以下で行う変更 **[!UICONTROL デフォルトのアップロードオプション]**、5 つすべてのタブにわたって、Experience Managerユーザーインターフェイスを介して、Dynamic Media ClassicではなくDynamic Mediaに反映されます。 一般設定および公開設定ページのその他すべての設定と値は、Experience Manager上のDynamic Media ClassicとDynamic Mediaの間で維持されます。
+
+**Dynamic Mediaの一般設定を構成するには：**
 
 1. Experience Manager作成モードで、Experience Managerロゴを選択して、グローバルナビゲーションコンソールにアクセスします。
-1. 左側のレールでツールアイコンを選択し、に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Setting]**.
-1. サーバーページで、 **[!UICONTROL 公開先サーバー名]** および **[!UICONTROL オリジンサーバー名]**&#x200B;をクリックし、5 つのタブを使用してデフォルトの公開設定を指定します。
+1. 左側のレールでツールアイコンを選択し、に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Settings]**.
+1. サーバーページで、 **[!UICONTROL 公開先サーバー名]** および **[!UICONTROL オリジンサーバー名]**&#x200B;画像編集用のデフォルトのアップロードオプションと、Postscript、Photoshop、PDF、Illustratorの各ファイル用のデフォルトのアップロードオプションを設定するには、5 つのタブを使用します。
 
    * [サーバー](#server-general-setting)
    * [アプリケーションへのアップロード](#upload-to-application)
@@ -58,7 +64,7 @@ ht-degree: 38%
 
 | オプション | 説明 |
 | --- | --- |
-| **[!UICONTROL 公開先サーバ名]** | 必須。<br>このサーバーは、アカウントに固有のすべてのシステム生成 URL 呼び出しで使用されるライブ CDN（コンテンツ配信ネットワーク）サーバーです。 Adobe・テクニカル・サポートから指示されない限り、このサーバ名は変更しないでください。 名前は `https://` パスに含まれています。 |
+| **[!UICONTROL 公開先サーバ名]** | 必須。<br>名前は `https://` パスに含まれています。<br>このサーバーは、アカウントに固有のすべてのシステム生成 URL 呼び出しで使用されるライブ CDN（コンテンツ配信ネットワーク）サーバーです。 Adobe・テクニカル・サポートから指示されない限り、このサーバ名は変更しないでください。 |
 | **[!UICONTROL 公開元サーバ名]** | 必須。<br>このサーバーは、品質保証テストにのみ使用されます。 Adobe・テクニカル・サポートから指示がない限り、このサーバ名を変更しないでください。 |
 
 ## アプリケーションへのアップロード {#upload-to-application}
@@ -69,7 +75,7 @@ ht-degree: 38%
 
    | 「画像を上書き」オプション | 説明 |
    | --- | --- |
-   | **[!UICONTROL 現在のフォルダーでベース名と拡張子が同じファイルを上書き]** | デフォルト.<br>このオプションは最も厳格な置換規則です。 置き換え画像を元の画像と同じフォルダーにアップロードし、置き換え画像と元の画像のファイル名拡張子が同じになっている必要があります。これらの要件が満たされない場合は、重複する画像が作成されます。 |
+   | **[!UICONTROL 現在のフォルダーでベース名と拡張子が同じファイルを上書き]** | 新しいDynamic Mediaアカウントのみのデフォルト。<br>このオプションは最も厳格な置換規則です。 置き換え画像を元の画像と同じフォルダーにアップロードし、置き換え画像と元の画像のファイル名拡張子が同じになっている必要があります。これらの要件が満たされない場合は、重複する画像が作成されます。 |
    | **[!UICONTROL 現在のフォルダーでベース名が同じファイルを上書き]** | 置き換え画像を元の画像と同じフォルダーにアップロードする必要がありますが、ファイル名の拡張子は元の画像と異なる場合があります。 例えば、chair.tif は chair.jpg を置き換えます。 |
    | **[!UICONTROL 任意のフォルダでベース名と拡張子が同じファイルを上書き]** | 置き換え画像のファイル名拡張子が元の画像と同じである必要があります（例えば、chair.jpg は chair.tif ではなく chair.jpg を置き換える必要があります）。 ただし、置き換え画像を、元の画像と別のフォルダーにアップロードできます。更新された画像は新しいフォルダーにあり、元の場所のファイルはなくなります。  |
    | **[!UICONTROL 任意のフォルダーでベース名が同じファイルを上書き]** | このオプションは、最も包括的な置換規則です。 置き換え画像を、元の画像と別のフォルダーにアップロードでき、ファイル名拡張子が異なるファイルをアップロードして、元のファイルと置き換えることができます。元のファイルが別のフォルダーにある場合、置き換え画像は、アップロード先の新しいフォルダーに存在します。 |
