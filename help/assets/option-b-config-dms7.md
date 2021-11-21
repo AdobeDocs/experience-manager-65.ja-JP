@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: b1f2a6b8fecd9ee98f345d1de8c26c6f42a44823
+source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
 workflow-type: tm+mt
-source-wordcount: '6107'
+source-wordcount: '6063'
 ht-degree: 44%
 
 ---
@@ -100,7 +100,7 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
    「**[!UICONTROL Dynamic Media に接続]**」をクリックします。
 
    >[!NOTE]
-   **RICK:現状のまま？** Dynamic Media資格情報を含むプロビジョニング電子メールを受け取ったら、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)をクリックし、アカウントにサインインしてパスワードを変更します。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+   Dynamic Media資格情報を含むプロビジョニング電子メールを受け取ったら、 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)をクリックし、アカウントにサインインしてパスワードを変更します。 プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
 
 1. 接続に成功したら、次のように設定します。 アスタリスク (*) を含む見出しは必須です。
 
@@ -135,14 +135,13 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
 1. 「**[!UICONTROL 保存]**」を選択します。
 1. Dynamic Mediaコンテンツを公開する前に安全にプレビューするには、Experience Managerオーサーインスタンスを「許可リスト」して、Dynamic Mediaに接続する必要があります。
 
-   * **RICK:新しい「公開設定」トピックへのリンク** を開きます。 [Dynamic Media Classicデスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)をクリックし、アカウントにログインします。 資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報がない場合は、Adobeカスタマーサポートにお問い合わせください。
-
-   * ページ右上付近のナビゲーションバーで、に移動します。 **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]** > **[!UICONTROL 公開設定]** > **[!UICONTROL Image Server]**.
-
-   * Image Server 公開ページの「公開コンテキスト」ドロップダウンリストで、「**[!UICONTROL 画像サービングをテスト]**」を選択します。
-   * 「クライアントアドレスフィルター」で、**[!UICONTROL 「追加」]**&#x200B;を選択します。
-   * アドレスを有効（オン）にするには、チェックボックスをオンにします。Dispatcher IP ではなく、Experience Managerオーサーインスタンスの IP アドレスを入力します。
-   * 「**[!UICONTROL 保存]**」を選択します。
+   * Experience Manager作成モードで、Experience Managerロゴを選択して、グローバルナビゲーションコンソールにアクセスします。
+   * 左側のレールで、 **[!UICONTROL ツール]** アイコンをクリックし、次に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+   * Dynamic Media Image Server ページの **[!UICONTROL 公開コンテキスト]** ドロップダウンリストで、「 **[!UICONTROL 画像サービングをテスト]**.
+   * を選択します。 **[!UICONTROL セキュリティ]** タブをクリックします。
+   * の **[!UICONTROL クライアントアドレス]**&#x200B;を選択します。 **[!UICONTROL 追加]**.
+   * Dispatcher IP ではなく、Experience Managerオーサーインスタンスの IP アドレスを入力します。
+   * ページの右上隅にある「**[!UICONTROL 保存]**」を選択します。
 
 これで基本設定が完了しました。Dynamic Media - Scene7 モードを使用する準備が整いました。
 
