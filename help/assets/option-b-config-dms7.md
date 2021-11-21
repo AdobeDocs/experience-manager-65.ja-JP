@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 680c0e00a739c5e880286cb4adf33f4ea5f6a318
+source-git-commit: b1f2a6b8fecd9ee98f345d1de8c26c6f42a44823
 workflow-type: tm+mt
-source-wordcount: '6058'
+source-wordcount: '6107'
 ht-degree: 44%
 
 ---
@@ -248,28 +248,26 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 
 ### （オプション）Dynamic Media - Scene7 モードのセットアップと設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-実行モードの場合 `dynamicmedia_scene7`を使用する場合は、Dynamic Media Classicユーザーインターフェイスを使用してDynamic Media設定を変更します。
-
-セットアップおよび設定タスクには、次のものが含まれます。
+<!-- When you are in run mode `dynamicmedia_scene7`, use the Dynamic Media Classic user interface to change your Dynamic Media settings. -->
 
 * [Image Server 用のDynamic Media公開設定の指定](/help/assets/dm-publish-settings.md)
 * [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md)
 * [カラーマネジメントの設定](#configuring-color-management)
 * [サポートされている形式の MIME タイプの編集](#editing-mime-types-for-supported-formats)
 * [サポートされていない形式の MIME タイプの追加](#adding-mime-types-for-unsupported-formats)
-* [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+* [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) (Dynamic Media Classicユーザーインターフェイスで実行 )
 
-<!-- #### Configure Dynamic Media Publish Setup for Image Server {#publishing-setup-for-image-server} 
+#### Image Server 用のDynamic Media公開設定の指定 {#publishing-setup-for-image-server}
 
-The Dynamic Media Publish Setup page establishes default settings that determine how assets are delivered from Adobe Dynamic Media servers to web sites or applications.
+Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。
 
-See [Configure Dynamic Media Publish Setup for Image Server](/help/assets/dm-publish-settings.md).
+詳しくは、 [Image Server 用のDynamic Media公開設定の指定](/help/assets/dm-publish-settings.md).
 
-#### Configure Dynamic Media General Settings {#configuring-application-general-settings}
+#### Dynamic Mediaの一般設定 {#configuring-application-general-settings}
 
-To configure the default color properties so color correction is enabled when images are requested, see [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md).
+画像が要求されたときにカラー補正が有効になるように、デフォルトのカラープロパティを設定します。
 
-See [Configure Dynamic Media General Settings](/help/assets/dm-general-settings.md). -->
+詳しくは、 [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md).
 
 #### カラーマネジメントの設定 {#configuring-color-management}
 
