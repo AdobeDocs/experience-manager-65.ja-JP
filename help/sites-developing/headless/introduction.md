@@ -1,10 +1,10 @@
 ---
 title: 'AEM 6.5 Sites 向けヘッドレス開発 '
 description: コンテンツモデル、コンテンツフラグメント、GraphQL API などAEM 6.5 の強力なヘッドレス機能を連携させて、エクスペリエンスを一元管理し、複数のチャネルで提供する方法を説明します。
-source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
+source-git-commit: 8c7acd06f3909897e5756170c606e00aead098b8
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 76%
+source-wordcount: '405'
+ht-degree: 72%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 76%
 
 ## AEM 6.5 およびヘッドレス {#aem-headless}
 
-AEM as a Cloud Service は、次の 3 つの強力なサービスを提供することで、ヘッドレス実装モデルの柔軟なツールになっています。
+AEM 6.5 は、次の 3 つの強力なサービスを提供することで、ヘッドレス実装モデルの柔軟なツールです。
 
 1. コンテンツモデル
    * コンテンツモデルはコンテンツの構造化表現です。
