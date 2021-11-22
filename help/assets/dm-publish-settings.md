@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: 26f521868d0b983a05579d0d4c1ef50684b721ee
+source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3450'
 ht-degree: 5%
 
 ---
@@ -23,19 +23,19 @@ ht-degree: 5%
 
 Dynamic Media公開設定の指定は、次の場合にのみ使用できます。
 
-* Scene7モードでDynamic Mediaを実行しています。 詳しくは、 [Scene7モードでのDynamic Mediaの有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)
-* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 またはExperience Manageras a Cloud Serviceで使用する場合。
+* Scene7モードでDynamic Mediaを実行しています。 詳しくは、 [Scene7モードでのDynamic Mediaの有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
+* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 以降で使用する場合。
 * 管理者権限を持つExperience Manager・システム管理者です。
 
 Dynamic Media公開設定は、経験豊富な Web サイト開発者およびプログラマーが使用することを目的としています。 AdobeDynamic Mediaでは、これらの公開設定を変更するユーザーに、AdobeDynamic Media、HTTP プロトコルの標準と規則、基本的な画像技術に精通していることをお勧めします。
 
 Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。 設定が指定されていない場合、AdobeDynamic Mediaサーバーは、Dynamic Media公開設定ページで設定されたデフォルト設定に従ってアセットを配信します。
 
+関連トピック [オプション — Dynamic Mediaのセットアップと設定 — Scene7モードの設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) を参照してください。
+
 >[!NOTE]
 >
->Dynamic Media ClassicからAdobe Experience Manager上のDynamic Mediaにアップグレードする場合 Dynamic Mediaの「一般設定」ページと「公開設定」ページに、Dynamic Media Classicアカウントから取得した値が事前に設定されています。 例外は、 **[!UICONTROL デフォルトのアップロードオプション]** 」領域に表示されます。 これらの値は既にExperience Manager中です。 したがって、以下で行う変更 **[!UICONTROL デフォルトのアップロードオプション]**、5 つすべてのタブにわたって、Experience Managerユーザーインターフェイスを介して、Dynamic Media ClassicではなくDynamic Mediaに反映されます。 一般設定および公開設定ページのその他すべての設定と値は、Experience Manager上のDynamic Media ClassicとDynamic Mediaの間で維持されます。
-
-関連トピック [Dynamic Media - Scene7モードの設定のセットアップと設定](/help/assets/option-b-config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings).
+>Dynamic Media ClassicからAdobe Experience Manager上のDynamic Mediaにアップグレードする場合 この [一般設定](/help/assets/dm-general-settings.md) ページおよび公開設定ページが、Dynamic Mediaアカウントから取得した値で事前設定されています。 例外は、 **[!UICONTROL デフォルトのアップロードオプション]** 」領域に表示されます。 これらの値は既にExperience Manager中です。 したがって、以下で行う変更 **[!UICONTROL デフォルトのアップロードオプション]**&#x200B;では、5 つのタブのいずれかにまたがって、Experience Managerユーザーインターフェイスを介して、Dynamic Media ClassicではなくDynamic Mediaに反映されます。 その他の設定と値は、 [一般設定](/help/assets/dm-general-settings.md) ページと公開設定ページは、Experience Manager時にDynamic Media ClassicとDynamic Mediaの間で維持されます。
 
 **Dynamic Media Publish Setup Image Server を設定するには：**
 
