@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: true
 hidefromtoc: true
 exl-id: null
-source-git-commit: f76f02f97de477af80666ea76a499578c36fb09e
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
 source-wordcount: '2461'
 ht-degree: 34%
@@ -24,7 +24,7 @@ ht-degree: 34%
 設定 **[!UICONTROL Dynamic Media General Settings]** は、次の場合にのみ使用できます。
 
 * Scene7モードでDynamic Mediaを実行しています。 詳しくは、 [Scene7モードでのDynamic Mediaの有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode).
-* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5 以降で使用する場合。
+* 次のアカウントがある *既存* **[!UICONTROL Dynamic Media Configuration]** ( **[!UICONTROL Cloud Services]**) をAdobe Experience Manager 6.5.11 以降で使用する場合にのみ有効です。
 * 管理者権限を持つExperience Manager・システム管理者です。
 
 Dynamic Mediaの一般設定は、経験豊富な Web サイト開発者やプログラマーが使用することを目的としています。 AdobeDynamic Mediaでは、これらの公開設定を変更するユーザーに、Adobe Experience Manager上のDynamic Mediaと基本的な画像技術に精通していることをお勧めします。

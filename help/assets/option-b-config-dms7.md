@@ -12,9 +12,9 @@ hide: true
 hidefromtoc: true
 feature: Configuration,Scene7 Mode
 exl-id: null
-source-git-commit: 3b5e65efc9aaedbc3385cc348ead80afecae2f06
+source-git-commit: 343b48a4ec5e7124aaa48b7550465982d61fa5ab
 workflow-type: tm+mt
-source-wordcount: '6063'
+source-wordcount: '6082'
 ht-degree: 44%
 
 ---
@@ -264,7 +264,7 @@ Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーか�
 
 #### Dynamic Mediaの一般設定 {#configuring-application-general-settings}
 
-画像が要求されたときにカラー補正が有効になるように、デフォルトのカラープロパティを設定します。
+Dynamic Mediaの設定 **[!UICONTROL 公開サーバ名]** URL と **[!UICONTROL オリジンサーバー名]** URL。 また、 **[!UICONTROL アプリケーションにアップロード]** 設定と **[!UICONTROL デフォルトのアップロードオプション]** すべて、特定の使用例に基づいておこないます。
 
 詳しくは、 [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md).
 
