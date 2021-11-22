@@ -8,9 +8,9 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: eda59d12d96ecc55bd58749985d2c15706344fe0
+source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '920'
 ht-degree: 80%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 80%
 # AEM 6.5 開発ユーザーガイド {#developing}
 
 + [開発ユーザーガイドの概要](home.md)
-+ 開発者向けの概要 {#introduction}
-   + [AEM Sites の開発の手引き - WKND チュートリアル](getting-started.md)
++ 開発者向けの概要{#introduction}
+   + [AEM Sites の開発の手引き - WKND チュートリアル ](getting-started.md)
    + [AEM の中心概念](the-basics.md)
    + [AEM タッチ操作対応 UI の構造](touch-ui-structure.md)
    + [AEM タッチ操作対応 UI の概念](touch-ui-concepts.md)
@@ -91,18 +91,19 @@ ht-degree: 80%
       + [UI 文字列の国際化](i18n-dev.md)
       + [トランスレーターを使用した辞書の管理](i18n-translator.md)
       + [翻訳のための文字列の抽出](i18n-extract.md)
-   + クラシック UI コンポーネント {#classic-ui-components}
+   + クラシック UI コンポーネント{#classic-ui-components}
       + [AEM コンポーネントの開発（クラシック UI）](developing-components-classic.md)
       + [ウィジェットの使用および拡張（クラシック UI）](widgets.md)
       + [xtype の使用（クラシック UI）](xtypes.md)
       + [フォームの作成（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
+   + [ヘッドレスと AEM](headless/introduction.md)
    + [ヘッドレスおよび AEM とのハイブリッド](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
    + 単一ページアプリケーション{#spas}
       + [SPA の概要およびガイド](spa-walkthrough.md)
       + [SPA WKND チュートリアル](spa-wknd.md)
-      + [AEMでのSPAの概要 — React](spa-getting-started-react.md)
+      + [AEMでSPAを使い始める — React](spa-getting-started-react.md)
       + [AEMでのSPAの概要 —Angular](spa-getting-started-angular.md)
       + [SPA への React コンポーネントの実装](spa-implementing-react-component.md)
       + [SPA の詳細](spa-deep-dives.md)
@@ -110,7 +111,7 @@ ht-degree: 80%
       + [AEM 向け SPA の開発](spa-architecture.md)
       + [SPA ブループリント](spa-blueprint.md)
       + [SPA ページコンポーネント](spa-page-component.md)
-      + [コンポーネントマッピングの動的モデル SPA](spa-dynamic-model-to-component-mapping.md)
+      + [コンポーネントマッピングの動的モデル (SPAの場合 )](spa-dynamic-model-to-component-mapping.md)
       + [SPA モデルルーティング](spa-routing.md)
       + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
       + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
@@ -151,7 +152,7 @@ ht-degree: 80%
       + [ClientContext の詳細](client-context.md)
       + [ClientContext JavaScript API](ccjsapi.md)
 + AEM の拡張{#extending-aem}
-   + [Developer App Builder を使用したAdobeの拡張](app-builder.md)
+   + [Extending AEM using Extending Adobe Developer App Builder](app-builder.md)
    + [ページオーサリングのカスタマイズ](customizing-page-authoring-touch.md)
    + [コンソールのカスタマイズ](customizing-consoles-touch.md)
    + [ページプロパティのビューのカスタマイズ](page-properties-views.md)
@@ -159,7 +160,7 @@ ht-degree: 80%
    + [コンテンツフラグメントのカスタマイズと拡張](customizing-content-fragments.md)
    + [レンダリングコンポーネントのコンテンツフラグメントの設定](content-fragments-config-components-rendering.md)
    + [エクスペリエンスフラグメント](experience-fragments.md)
-   + ワークフローの拡張 {#extending-workflows}
+   + ワークフローの拡張{#extending-workflows}
       + [ワークフローの作成と拡張](workflows.md)
       + [ワークフローモデルの作成](workflows-models.md)
       + [ワークフロー機能の拡張](workflows-customizing-extending.md)
@@ -167,9 +168,9 @@ ht-degree: 80%
       + [ワークフローステップのリファレンス](workflows-step-ref.md)
       + [ワークフローのベストプラクティス](workflows-best-practices.md)
       + [ワークフロープロセスのリファレンス](workflows-process-ref.md)
-      + [AEMワークフロー内の変数](/help/sites-developing/using-variables-in-aem-workflows.md)
+      + [AEMワークフローの変数](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Multi Site Manager の拡張](extending-msm.md)
-   + トラッキングと分析 {#extending-analytics}
+   + トラッキングと分析{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
       + [コンポーネントへのAdobe Analyticsトラッキングの追加](extending-analytics-components.md)
       + [Adobe Analytics Framework のカスタマイズ](extending-analytics-framework.md)
@@ -184,7 +185,7 @@ ht-degree: 80%
       + [リクエスト分析スクリプト](analyze-request.md)
    + [JMX コンソールを使用したサービスの統合](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html)
    + [Bulk Editor の開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html)
-   + クラシック UI の拡張 {#extending-classic-ui}
+   + クラシック UI の拡張{#extending-classic-ui}
       + [Web サイトコンソールのカスタマイズ（クラシック UI）](customizing-siteadmin.md)
       + [ようこそコンソールのカスタマイズ（クラシック UI）](customizing-the-welcome-console.md)
       + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html)
