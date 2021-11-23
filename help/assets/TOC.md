@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 41ffd39d6815988b2b172d7dc1748570eb5ef584
+source-git-commit: bec1a7b7e2fca1e27a1dee274f7d7234a57ce8d8
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '655'
 ht-degree: 57%
 
 ---
@@ -39,10 +39,9 @@ ht-degree: 57%
    + [Experience League別ニュースレターアーカイブ](dynamic-media-newsletter.md)
    + [Dynamic Media をセットアップする](administering-dynamic-media.md)
    + [Dynamic Media を使用する](dynamic-media.md)
-   + [Dynamic Media - Scene7モードの設定]{#config-scene7-mode}
-      + [Dynamic Media - Scene7モードの設定](config-dms7.md)
-      + [オプション — Dynamic Mediaの一般設定の指定](dm-general-settings.md)
-      + [オプション — Dynamic Media Publish Setup Image Server](dm-publish-settings.md)
+   + [Dynamic Media を構成する - Scene7モード](config-dms7.md)
+   + [オプション — Dynamic Mediaの設定 — Scene7モード、一般設定](dm-general-settings.md)
+   + [オプション — Dynamic Mediaの設定 — Scene7モード、公開設定](dm-publish-settings.md)
    + [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)
    + [オプション B](option-b-config-dms7.md)
    + [Dynamic Media - Scene7モードのトラブルシューティング](troubleshoot-dms7.md)
