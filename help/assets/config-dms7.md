@@ -7,13 +7,13 @@ topic-tags: dynamic-media
 content-type: reference
 docset: aem65
 role: User, Admin
-mini-toc-levels: 3
+mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b5835d16efb0f2112ec8a6917e8cf2529cbf19c7
+source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
 workflow-type: tm+mt
-source-wordcount: '6940'
-ht-degree: 51%
+source-wordcount: '6080'
+ht-degree: 44%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 51%
 >
 >Dynamic Media - Scene7モードは *Experience Managerオーサーインスタンスのみ*. そのため、 `runmode=dynamicmedia_scene7` Experience Managerオーサーインスタンスで、 *not* Experience Managerパブリッシュインスタンス
 
-Dynamic Mediaを有効にするには、 `dynamicmedia_scene7` ターミナルウィンドウで次のように入力して、コマンドラインから実行モードを指定します（使用するポートの例は 4502）。
+Dynamic Mediaを有効にするには、次を使用してExperience Managerを起動します。 `dynamicmedia_scene7` ターミナルウィンドウで次のように入力して、コマンドラインから実行モードを指定します（使用するポートの例は 4502）。
 
 ```shell
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
@@ -127,20 +127,19 @@ Experience ManagerDynamic Mediaを 6.3 から 6.4 または 6.5 にアップグ�
          * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
 
    >[!NOTE]
-   DMS7 ではバージョン管理はサポートされていません。また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
+   Dynamic Media - Scene7モードでは、バージョン管理はサポートされていません。 また、遅延アクティベーションは、Dynamic Media 設定を編集ページの「**[!UICONTROL アセットを公開]**」が「**[!UICONTROL アクティベーション時]**」に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
    アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 1. Dynamic Mediaコンテンツを公開する前に安全にプレビューするには、Experience Managerオーサーインスタンスを「許可リスト」して、Dynamic Mediaに接続する必要があります。
 
-   * [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報がない場合は、Adobeカスタマーサポートにお問い合わせください。
-
-   * ページ右上付近のナビゲーションバーで、に移動します。 **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]** > **[!UICONTROL 公開設定]** > **[!UICONTROL Image Server]**.
-
-   * Image Server 公開ページの「公開コンテキスト」ドロップダウンリストで、「**[!UICONTROL 画像サービングをテスト]**」を選択します。
-   * 「クライアントアドレスフィルター」で、**[!UICONTROL 「追加」]**&#x200B;を選択します。
-   * アドレスを有効（オン）にするには、チェックボックスをオンにします。Dispatcher IP ではなく、Experience Managerオーサーインスタンスの IP アドレスを入力します。
-   * 「**[!UICONTROL 保存]**」を選択します。
+   * Experience Manager作成モードで、Experience Managerロゴを選択して、グローバルナビゲーションコンソールにアクセスします。
+   * 左側のレールで、 **[!UICONTROL ツール]** アイコンをクリックし、次に移動します。 **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+   * Dynamic Media Image Server ページの **[!UICONTROL 公開コンテキスト]** ドロップダウンリストで、「 **[!UICONTROL 画像サービングをテスト]**.
+   * を選択します。 **[!UICONTROL セキュリティ]** タブをクリックします。
+   * の **[!UICONTROL クライアントアドレス]**&#x200B;を選択します。 **[!UICONTROL 追加]**.
+   * Dispatcher IP ではなく、Experience Managerオーサーインスタンスの IP アドレスを入力します。
+   * ページの右上隅にある「**[!UICONTROL 保存]**」を選択します。
 
 これで基本設定が完了しました。Dynamic Media - Scene7 モードを使用する準備が整いました。
 
@@ -211,7 +210,6 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 1. サイズ制限を、必要な最大アップロードサイズに増やせるよう、適切な値をバイト単位で入力します。 例えば、アップロードアセットのサイズ制限を 10 GB に増やすには、 `10737418240` 」と入力します。
 最大 15 GB の値を入力できます (`2013265920` バイト ) です。 この場合、15 GB を超えるアップロード済みアセットはアップロードされません。
 
-
    ![サイズ制限値](/help/assets/assets-dm/uploadassets15gb_c.png)
 
 1. [CRXDE Lite] ウィンドウの左上隅付近で、 **[!UICONTROL すべて保存]**.
@@ -247,85 +245,35 @@ Dynamic Media - Scene7モードでは、デフォルトのアセットアップ�
 
 ### （オプション）Dynamic Media - Scene7 モードのセットアップと設定 {#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings}
 
-実行モードの場合 `dynamicmedia_scene7`を使用する場合は、Dynamic Media Classicユーザーインターフェイスを使用してDynamic Media設定を変更します。
+<!-- When you are in run mode `dynamicmedia_scene7`, use the Dynamic Media Classic user interface to change your Dynamic Media settings. -->
 
-上記のタスクの一部では、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開いて、アカウントにログインする必要があります。
-
-セットアップおよび設定タスクには、次のものが含まれます。
-
-* [Image Server の公開設定](#publishing-setup-for-image-server)
-* [アプリケーションの一般設定の指定](#configuring-application-general-settings)
+* [Image Server 用のDynamic Media公開設定の指定](/help/assets/dm-publish-settings.md)
+* [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md)
 * [カラーマネジメントの設定](#configuring-color-management)
 * [サポートされている形式の MIME タイプの編集](#editing-mime-types-for-supported-formats)
 * [サポートされていない形式の MIME タイプの追加](#adding-mime-types-for-unsupported-formats)
-* [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)
+* [画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets) (Dynamic Media Classicユーザーインターフェイスで実行 )
 
-#### Image Server の公開設定 {#publishing-setup-for-image-server}
+#### Image Server 用のDynamic Media公開設定の指定 {#publishing-setup-for-image-server}
 
-公開設定は、アセットがデフォルトで Dynamic Media からどのように配信されるかを決定します。設定が指定されていない場合、Dynamic Media は、公開設定で定義されたデフォルト設定に従ってアセットを配信します。例えば、解像度属性が含まれていない画像を配信するように要求した場合、画像は初期設定のオブジェクト解像度設定で配信されます。
+Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。
 
-公開設定を設定するには：Dynamic Media Classicで、に移動します。 **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]** > **[!UICONTROL 公開設定]** > **[!UICONTROL Image Server]**.
+詳しくは、 [Image Server 用のDynamic Media公開設定の指定](/help/assets/dm-publish-settings.md).
 
-Image Server 画面では、画像を配信するためのデフォルト設定を指定します。各設定の説明については、UI 画面を参照してください。
+#### Dynamic Mediaの一般設定 {#configuring-application-general-settings}
 
-* **[!UICONTROL 要求属性]** - これらの設定は、サーバーから配信できる画像を制限します。
-* **[!UICONTROL 初期設定の要求属性]** - これらの設定は、画像のデフォルトの表示に関係します。
-* **[!UICONTROL 共通のサムネール属性]** - これらの設定は、サムネール画像のデフォルトの表示に関係します。
-* **[!UICONTROL カタログフィールドの初期設定]** - これらの設定は、画像の解像度とデフォルトのサムネールの種類に関係します。
-* **[!UICONTROL カラーマネジメント属性]** - これらの設定は、使用する ICC カラープロファイルを決定します。
-* **[!UICONTROL 互換性の属性]** - この設定により、後方互換性の確保のためにバージョン 3.6 の場合と同様に、テキストレイヤーの先頭と末尾の段落が処理されます。
-* **[!UICONTROL ローカリゼーションサポート]** - これらの設定によって、複数のロケール属性を管理します。また、ロケールマップ文字列を指定することもできます。これにより、ビューアのツールチップで使用する言語を指定できます。**[ローカライゼーションサポート]**&#x200B;の設定について詳しくは、[アセットのローカライゼーションを設定する場合の考慮事項](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/publish-setup.html?lang=ja#considerations-when-setting-up-localization-of-assets)を参照してください。
+Dynamic Mediaの設定 **[!UICONTROL 公開サーバ名]** URL と **[!UICONTROL オリジンサーバー名]** URL。 また、 **[!UICONTROL アプリケーションにアップロード]** 設定と **[!UICONTROL デフォルトのアップロードオプション]** すべて、特定の使用例に基づいておこないます。
 
-#### アプリケーションの一般設定の指定 {#configuring-application-general-settings}
-
-アプリケーションの一般設定ページを開くには、Dynamic Media Classicグローバルナビゲーションバーで、に移動します。 **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]** > **[!UICONTROL 一般設定]**.
-
-**[!UICONTROL サーバー -]**&#x200B;アカウントのプロビジョニング時に、会社に割り当てられているサーバーが Dynamic Media によって自動的に提供されます。これらのサーバーは、Web サイトとアプリケーションの URL 文字列を生成するのに使用されます。これらの URL 呼び出しは、アカウントに固有です。Adobeカスタマーサポートから明示的に指示されない限り、サーバー名は変更しないでください。
-
-**[!UICONTROL 画像を上書き]** - Dynamic Media は、2 つのファイルが同じ名前を持つことを許可しません。各項目の URL ID（ファイル名から拡張子を取り除いた部分）は一意である必要があります。これらのオプションは、置き換えるアセットのアップロード方法、つまり元のアセットを置き換えるか、重複させるかを指定します。重複するアセット名には「-1」が付けられます（例えば、chair.tif は chair-1.tif に変更されます）。これらのオプションは、元のアセットとは別のフォルダーにアップロードされるアセットや、元のアセットと異なるファイル名拡張子（JPG、TIF、PNG など）を持つアセットに影響を与えます。
-
-* **[!UICONTROL 現在のフォルダーでベース名と拡張子が同じファイルを上書き]** - このオプションは最も厳格な置換規則です。置き換え画像を元の画像と同じフォルダーにアップロードし、置き換え画像と元の画像のファイル名拡張子が同じになっている必要があります。これらの要件が満たされない場合は、重複する画像が作成されます。
-
->[!NOTE]
-Experience Managerとの一貫性を維持するには、常に次の設定を選択します。 **現在のフォルダでベース名と拡張子が同じファイルを上書き**
-
-* **[!UICONTROL 任意のフォルダーでベース名と拡張子が同じファイルを上書き]** - 置き換え画像と元の画像のファイル名拡張子は同じになっている必要があります（例えば、chair.jpg は chair.jpg で置き換えられますが、chair.tif では置き換えられません）。ただし、置き換え画像を、元の画像と別のフォルダーにアップロードできます。更新された画像は新しいフォルダーにあり、元の場所のファイルはなくなります
-* **[!UICONTROL 任意のフォルダーでベース名が同じファイルを上書き]** - このオプションは最も包括的な置換規則です。置き換え画像を、元の画像と別のフォルダーにアップロードでき、ファイル名拡張子が異なるファイルをアップロードして、元のファイルと置き換えることができます。元のファイルが別のフォルダーにある場合、置き換え画像は、アップロード先の新しいフォルダーに存在します。
-
-**[!UICONTROL 初期設定のカラープロファイル]** - 詳細については、[カラーマネジメントの設定](#configuring-color-management)を参照してください。
-
->[!NOTE]
-デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]**」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。詳しくは、 [表示される画像プリセットの数を増やします](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) または [表示されるビューアプリセットの数を増やします](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
+詳しくは、 [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md).
 
 #### カラーマネジメントの設定 {#configuring-color-management}
 
-Dynamic Media カラーマネジメントを使用すると、アセットをカラー補正できます。カラー補正により、取り込まれたアセットは、カラースペース（RGB、CMYK、グレー）および埋め込みカラープロファイルを維持します。動的レンディションを要求した場合、画像の色は、CMYK、RGB またはグレー出力を使用するターゲットのカラースペースに補正されます。[画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
+Dynamic Media カラーマネジメントを使用すると、アセットをカラー補正できます。カラー補正により、取り込まれたアセットは、カラースペース（RGB、CMYK、グレー）および埋め込みカラープロファイルを維持します。動的レンディションを要求した場合、画像の色は、CMYK、RGB またはグレー出力を使用するターゲットのカラースペースに補正されます。
 
-画像が要求されたときにカラー補正が有効になるようにデフォルトのカラープロパティを設定するには：
+[画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、プロビジョニング時に提供された資格情報を使用してアカウントにログインします。
-1. に移動します。 **[!UICONTROL 設定]** > **[!UICONTROL アプリケーション設定]**.
-1. 「**[!UICONTROL 公開設定]**」領域を展開して、「**[!UICONTROL Image Server]**」を選択します。パブリッシュインスタンスのデフォルトを設定する際に、「**[!UICONTROL 公開コンテキスト]**」を「**[!UICONTROL 画像サービング]**」に設定します。
-1. 変更するプロパティまでスクロールします。 例えば、 **[!UICONTROL カラーマネジメント属性]** 領域
-
-   次のカラー補正プロパティを設定できます。
-
-   * **[!UICONTROL CMYK のデフォルトカラースペース]** - デフォルトの CMYK カラープロファイルの名前
-   * **[!UICONTROL グレースケールのデフォルトカラースペース]** - デフォルトのグレーカラープロファイルの名前
-   * **[!UICONTROL RGB のデフォルトカラースペース]** - デフォルトの RGB カラープロファイルの名前
-   * **[!UICONTROL カラー変換レンダリングの方法]** - レンダリング方法を指定します。指定できる値は、**[!UICONTROL 知覚的]**、**[!UICONTROL 相対的な色域を維持]**、**[!UICONTROL 彩度]**、**[!UICONTROL 絶対的な色域を維持]**&#x200B;です。アドビでは、デフォルトとして&#x200B;**[!UICONTROL 相対的]**&#x200B;をお勧めします。
-
-1. 「**[!UICONTROL 保存]**」を選択します。
-
-例えば、**[!UICONTROL RGB の初期設定カラースペース]**&#x200B;を *sRGB* に、**[!UICONTROL CMYK の初期設定カラースペース]**&#x200B;を *WebCoated* に設定できます。
-
-それには、次のようにします。
-
-* RGB および CMYK 画像のカラー補正を有効にします。
-* カラープロファイルを持たない RGB 画像は、*sRGB* カラースペースにあると見なされます。
-* カラープロファイルを持たない CMYK 画像は、*WebCoated* カラースペースにあると見なされます。
-* RGB 出力を返す動的レンディションは、RGB 出力を *sRGB* カラースペース内で返します。
-* CMYK 出力を返す動的レンディションは、CMYK 出力を *WebCoated* カラースペース内で返します。
+>[!NOTE]
+デフォルトでは、「 **[!UICONTROL レンディション]** 選択時に 15 個のビューアプリセット **[!UICONTROL ビューア]** （アセットの詳細ビュー）。 この制限は増やすことができます。詳しくは、 [表示される画像プリセットの数を増やします](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display) または [表示されるビューアプリセットの数を増やします](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display).
 
 #### サポートされている形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
 
@@ -457,6 +405,8 @@ Experience Manager Assets でサポートされていない形式のカスタム
    * 選択 **[!UICONTROL 保存]** （既存のプリセットを編集している場合）
 
 ##### バッチセットプリセットの作成
+
+
 
 Dynamic Media では、バッチセットプリセットを使用して、アセットをビューアで表示するための画像のセット（代替画像、カラーオプション、360 スピン）に整理します。バッチセットプリセットは、Dynamic Media でのアセットアップロード処理と同時に自動的に実行されます。
 
