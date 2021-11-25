@@ -3,18 +3,14 @@ title: コンテンツフラグメントのカスタマイズと拡張
 seo-title: Customizing and Extending Content Fragments
 description: コンテンツフラグメントは、標準アセットを拡張します。
 seo-description: A content fragment extends a standard asset.
-uuid: f72c3a23-9b0d-4fab-a960-bb1350f01175
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
+source-git-commit: 9ad531738ac5e3c9d888f685b47c8b322712a89e
 workflow-type: tm+mt
-source-wordcount: '2789'
-ht-degree: 81%
+source-wordcount: '2778'
+ht-degree: 83%
 
 ---
 
@@ -135,9 +131,9 @@ ht-degree: 81%
 
 >[!CAUTION]
 >
->[コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)が推奨されます。詳しくは、[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
+>[コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)が推奨されます。詳しくは、[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。
 
-コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****&#x200B;コンテンツフラグメントコアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。また、 **コンテンツフラグメント** コアコンポーネント。
+コンテンツフラグメントは、その他のアセットタイプと同様に、AEM ページから参照できます。AEM では、[****&#x200B;コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。また、 **コンテンツフラグメント** コアコンポーネント。
 
 * このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
@@ -248,7 +244,7 @@ ht-degree: 81%
 
 サーバー側 API を使用して、コンテンツフラグメントにアクセスできます。以下を参照してください。
 
-[com.adobe.cq.dam.cfm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
+[com.adobe.cq.dam.cfm](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
 >[!CAUTION]
 >
@@ -258,7 +254,7 @@ ht-degree: 81%
 
 次の 3 つのインターフェイスが、入口の役割を果たします。
 
-* **フラグメントテンプレート**（[FragmentTemplate](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)）
+* **フラグメントテンプレート**（[FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html)）
 
    用途 `FragmentTemplate.createFragment()` 新しいフラグメントを作成する場合。
 
@@ -303,7 +299,7 @@ ht-degree: 81%
 
 
 
-* **コンテンツフラグメント**（[ContentFragment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)）
+* **コンテンツフラグメント**（[ContentFragment](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)）
 
    このインターフェイスでは、コンテンツフラグメントを抽象化して使用できます。
 
@@ -333,7 +329,7 @@ ht-degree: 81%
 
    フラグメントの主要要素を表すインターフェイスには、次のものがあります。
 
-   * **コンテンツ要素**（[ContentElement](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentElement.html)）
+   * **コンテンツ要素**（[ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html)）
 
       * 基本データ（名前、タイトル、説明）を取得する
       * コンテンツを取得／設定する
@@ -345,7 +341,7 @@ ht-degree: 81%
          * バリエーションを削除する（[注意事項](#caveats)を参照）
          * バリエーションデータにアクセスする（`ContentVariation` を参照）
       * バリエーションを解決するためのショートカット（要素に指定されたバリエーションを使用できない場合は実装固有の追加のフォールバックロジックを適用）
-   * **コンテンツバリエーション**（[ContentVariation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html)）
+   * **コンテンツバリエーション**（[ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html)）
 
       * 基本データ（名前、タイトル、説明）を取得する
       * コンテンツを取得／設定する
@@ -543,5 +539,5 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 詳しくは、次を参照してください。
 
-* [コアコンポーネント - コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)（推奨）
+* [コアコンポーネント - コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)（推奨）
 * [コンテンツフラグメントコンポーネント — ページオーサリング用コンポーネント](/help/sites-developing/components-content-fragments.md#components-for-page-authoring)
