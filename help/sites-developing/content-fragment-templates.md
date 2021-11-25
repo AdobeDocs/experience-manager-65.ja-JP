@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
-source-git-commit: 2ec9625d480eb8cae23f44aa247fce2a519dec31
+source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 79%
+source-wordcount: '674'
+ht-degree: 75%
 
 ---
 
@@ -22,13 +22,15 @@ ht-degree: 79%
 
 >[!CAUTION]
 >
->[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)は、すべてのフラグメント作成で使用することが推奨されています。
+>[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md) は、すべての新しいコンテンツフラグメントを作成する場合に推奨されます。
 >
->コンテンツフラグメントモデルは、We.Retail のすべてのサンプルでも使用されています。
+>コンテンツフラグメントモデルは、WKND のすべてのサンプルでも使用されています。
 
 >[!NOTE]
 >
->AEM 6.3より前のコンテンツフラグメントは、モデルの代わりにテンプレートを使用して作成されていました。 新しいフラグメントを作成する際に、テンプレートは使用できなくなりましたが、そのようなテンプレートで作成されたフラグメントは引き続きサポートされます。
+>AEM 6.3 以前は、モデルではなくテンプレートに基づいてコンテンツフラグメントを作成していました。
+>
+>コンテンツフラグメントテンプレートは非推奨になりました。 フラグメントの作成には引き続き使用できますが、代わりにコンテンツフラグメントモデルを使用することをお勧めします。 フラグメントテンプレートに新しい機能は追加されず、将来のバージョンで削除されます。
 
 コンテンツフラグメントの作成時に選択されるテンプレートです。このテンプレートは、新しいフラグメントに基本構造、要素、バリエーションを提供します。コンテンツフラグメントに使用されるテンプレートは、Granite 設定マネージャーに従います。
 
@@ -39,12 +41,12 @@ ht-degree: 79%
 次の場所に、サイト固有のコンテンツフラグメントテンプレートを作成できます。
 
 * `/apps/settings/dam/cfm/templates`
-標準のテンプレートをオーバーレイする場所、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場所。
+標準のテンプレートをオーバーレイする場合、または実行時に拡張/変更することを意図していない、顧客固有のアプリケーション全体のテンプレートを提供する場合の場所。
 
 * `/conf/global/settings/dam/cfm/templates`
 実行時に変更する必要がある、インスタンス全体の顧客固有のテンプレートの場所。
 
-優先順位は（降順に）`/conf`、`/apps`、`/libs`です。
+優先順位は（降順）です `/conf`, `/apps`, `/libs`.
 
 >[!CAUTION]
 >
@@ -54,7 +56,7 @@ ht-degree: 79%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
 >
 >1. `/apps` 内で変更作業をおこないます。
 
@@ -142,7 +144,7 @@ conf
     <tr>
      <td><code>version</code></td>
      <td><p><code>Long</code></p> <p>必須</p> </td>
-     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要があり <code>2</code>ます。<br /> </p> </td>
+     <td><p>コンテンツ構造のバージョン。現在サポートされています。</p> <p><strong>注意</strong>:現在、このパラメーターはに設定する必要があります <code>2</code>.<br /> </p> </td>
     </tr>
    </tbody>
   </table>
@@ -159,7 +161,7 @@ conf
     <tr>
      <td><code>elements</code> </td>
      <td><p><code>nt:unstructured</code></p> <p>必須</p> </td>
-     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。必須で、<strong>Main</strong>要素の子ノードを少なくとも1つ含める必要がありますが、[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td>
+     <td><p>コンテンツフラグメントの要素の定義を格納するノードです。これは必須で、 <strong>メイン</strong> 要素です。[1...n] 個です。</p> <p>テンプレートを使用すると、要素のサブブランチがフラグメントのモデルのサブブランチにコピーされます。</p> <p>CRXDE Lite に表示される最初の要素は、自動的にメイン要素<i></i>と見なされます。ノード名に意味はなく、メインアセットによって表されるという点を除き、ノード自体に特別な重要性はありません。その他の要素はサブアセットとして扱われます。</p> </td>
     </tr>
    </tbody>
   </table>
@@ -186,12 +188,12 @@ conf
     <tr>
      <td><code>defaultContent</code></td>
      <td><p><code>String</code></p> <p>オプション</p> <p>default: ""</p> </td>
-     <td>要素の初期コンテンツ<code>precreateElements</code><i> = </i><code>true</code>の場合にのみ使用されます。</td>
+     <td>要素の初期コンテンツ次の場合にのみ使用 <code>precreateElements</code><i> = </i><code>true</code></td>
     </tr>
     <tr>
      <td><code>initialContentType</code></td>
      <td><p><code>String</code></p> <p>オプション</p> <p>default: <code>text/html</code></p> </td>
-     <td><p>要素の初期コンテンツタイプ<code>precreateElements</code><i> = </i><code>true</code>;現在サポートされている：</p>
+     <td><p>要素の初期コンテンツタイプ次の場合にのみ使用 <code>precreateElements</code><i> = </i><code>true</code>;現在サポートされている：</p>
       <ul>
        <li><code>text/html</code></li>
        <li><code>text/plain</code></li>

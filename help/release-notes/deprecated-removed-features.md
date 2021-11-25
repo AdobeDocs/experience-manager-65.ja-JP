@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 1e02ad94459ff2893d96055c026d0873b1d69991
+source-git-commit: c9db5a1764d98bb049c08a0e6962b7ed5e1bfe5c
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1753'
 ht-degree: 42%
 
 ---
@@ -28,7 +28,7 @@ AEM機能の差し迫った削除または置き換えを伝達するために�
 
 | 領域 | 機能 | 代替手段 | バージョン (SP) |
 |---|---|---|---|
-| [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | [モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md) 今すぐ。 |  |
+| [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | [モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md) 今すぐ。 | 6.5.11.0 |
 | Creative Cloud統合 | AEMからCreative Cloudフォルダーへの共有は、クリエイティブユーザーがAEMのアセットにアクセスできるようにする方法としてAEM 6.2 で導入され、 [!DNL Creative Cloud] アプリケーションを起動し、新しいファイルをアップロードしたり、変更をAEMに保存したりします。 Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。この機能は AEM に含まれてはいますが、代替ソリューションを使用することを強くお勧めします。 | AdobeAsset Link やAEMデスクトップCreative Cloudなど、新しいアプリケーション統合機能に切り替えることをお勧めします。 |  |
 | Assets | `AssetDownloadServlet` は、パブリッシュインスタンスに対してデフォルトで無効になっています。詳しくは、](/help/sites-administering/security-checklist.md)AEM セキュリティチェックリスト[を参照してください。 | 設定について詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 |  |
 | Assets | ユーザーが、に対する十分な（読み取りおよび書き込み）権限を持っていない場合 `/content/dam/collections`に値を指定しない場合、ユーザーはコレクションを作成できません。 | ユーザーのアクセス制御設定を保持し、適切な権限を確保します。 |  |
@@ -36,7 +36,7 @@ AEM機能の差し迫った削除または置き換えを伝達するために�
 | DTM タグマネージャー | DTM（Dynamic Tag Manager）との統合は廃止されました。 | Adobe Experience Platform Launch をタグマネージャーとして使用してください。。 |  |
 | Adobe Target | を使用してAEMがAdobe Targetサービスに接続する機能を追加すると、 [!DNL Adobe I/O] AEM 6.5 のAdobe Target Standard API(Rest API) をベースとしている場合、Target Classic API(XML) の方法は非推奨（廃止予定）となりました。 | 統合の再設定先： [新しい API の使用](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/aem-sites-target-standard-technical-video-understand.html). |  |
 | Adobe Target | の使用 `mbox.js` AEMでのAdobe Targetとの統合は非推奨（廃止予定）となりました。 | 使用に切り替え `at.js` 1.x. |  |
-| Commerce | [CIF REST](https://github.com/adobe/commerce-cif-api) は、AEMとコマースエンジン間の統合を可能にするマイクロサービスのセットとして 2018 年に提供されています。 Adobeが 2018 年半ばにMagentoを獲得した後、Adobeは 2 つの理由でアプローチを変更することを決定しました。 Magentoには独自のコマース API（REST および GraphQL）のセットがあり、2 組の API を維持することはお勧めしません。 市場の動向から、お客様は GraphQL に移行していることが示されました。これは、データをクエリするより効率的な方法であるからです。 2019 年に、Adobeは、Magentoの GraphQL API を情報源として使用した新しい Commerce Integration Framework をリリースしました。 Adobeは、CIF REST にこれ以上投資する予定はありません。 お客様は、代替ソリューションを使用することを強くお勧めします。 | AEM-Magento統合の場合は、 [AEM CIF アーキタイプ](https://github.com/adobe/aem-cif-project-archetype) および [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components). AEMとMagentoの統合を参照 [コマース統合フレームワークの使用](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md). 新しいアプローチとのサードパーティ (Magento以外 ) 統合のサポートは、アドビのロードマップに記載されています。 |  |
+| コマース | [CIF REST](https://github.com/adobe/commerce-cif-api) は、AEMとコマースエンジン間の統合を可能にするマイクロサービスのセットとして 2018 年に提供されています。 Adobeが 2018 年半ばにMagentoを獲得した後、Adobeは 2 つの理由でアプローチを変更することを決定しました。 Magentoには独自のコマース API（REST および GraphQL）のセットがあり、2 組の API を維持することはお勧めしません。 市場の動向から、お客様は GraphQL に移行していることが示されました。これは、データをクエリするより効率的な方法であるからです。 2019 年に、Adobeは、Magentoの GraphQL API を情報源として使用した新しい Commerce Integration Framework をリリースしました。 Adobeは、CIF REST にこれ以上投資する予定はありません。 お客様は、代替ソリューションを使用することを強くお勧めします。 | AEM-Magento統合の場合は、 [AEM CIF アーキタイプ](https://github.com/adobe/aem-cif-project-archetype) および [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components). AEMとMagentoの統合を参照 [コマース統合フレームワークの使用](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md). 新しいアプローチとのサードパーティ (Magento以外 ) 統合のサポートは、アドビのロードマップに記載されています。 |  |
 | コンポーネント（AEM Sites） | Adobeでは、 `/libs/foundation/components`. を探します。 `cq:deprecated` および `cq:deprecatedReason` プロパティをコンポーネントフォルダーに追加します。 AEM 6.5 には基盤コンポーネントが含まれています。以前のリリースからアップグレードするお客様は、それらをそのまま使用できます。 また、基盤コンポーネントは、非推奨（廃止予定）の場合でも完全にサポートされます。 | Adobeは、将来のプロジェクトではコアコンポーネントを使用することをお勧めします。 既存のサイトは、そのまま残すか、 [AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools) を使用して、コアコンポーネントを使用するようにサイトをリファクタリングします。 |  |
 | コンポーネント（AEM Sites） | デザインインポーターのコンポーネント `/libs/wcm/designimporter/components` は 6.5 以降、非推奨としてマークされています。Adobeは、デザインインポーターのその実装をさらに強化する予定はありません。 | Adobeは、今後のリリースでこのユースケースの代替実装を提供する予定です。 |  |
 | 基盤 | Granite オフロードフレームワーク. Adobeは、CQ 5.6.1 で導入されたオフロードフレームワークをさらに強化して、アセット処理を外部化する予定はありません。 | アドビでは、クラウドネイティブな次世代オフロードフレームワークの構築に取り組んでいます。 |  |
