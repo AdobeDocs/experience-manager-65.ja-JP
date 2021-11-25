@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: d0770bee-4be5-4a6a-8415-70fdfd75015c
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
+source-git-commit: e68f6203d7629cab16e59778ce64908f943d5b3f
 workflow-type: tm+mt
 source-wordcount: '2789'
 ht-degree: 81%
 
 ---
+
 
 # コンテンツフラグメントのカスタマイズと拡張{#customizing-and-extending-content-fragments}
 
@@ -227,9 +228,9 @@ ht-degree: 81%
    >
    >AEM 翻訳ワークフローでは、`/content` が使用されます。
    >
-   >    * コンテンツフラグメントモデルは `/conf` 内に配置されるので、これらの翻訳には含まれません。[UI 文字列を国際化](/help/sites-developing/i18n-dev.md)できます。
+   >* コンテンツフラグメントモデルは `/conf` 内に配置されるので、これらの翻訳には含まれません。[UI 文字列を国際化](/help/sites-developing/i18n-dev.md)できます。
    >
-   >    * テンプレートをコピーしてフラグメントを作成するので、これは暗黙的になります。
+   >* テンプレートをコピーしてフラグメントを作成するので、これは暗黙的になります。
 
 
 * **メタデータスキーマ**
