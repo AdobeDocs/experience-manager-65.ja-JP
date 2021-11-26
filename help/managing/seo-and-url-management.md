@@ -1,20 +1,16 @@
 ---
 title: SEO と URL 管理のベストプラクティス
-seo-title: SEO と URL 管理のベストプラクティス
+seo-title: SEO and URL Management Best Practices
 description: AEM の実装でこうした目的を達成するための SEO のベストプラクティスおよび推奨事項について学習します。
-seo-description: AEM の実装でこうした目的を達成するための SEO のベストプラクティスおよび推奨事項について学習します。
-uuid: 943e76c4-bd88-4b52-bb43-db375eb89d23
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/MANAGING
+seo-description: Learn about SEO best practices and recommendations for achieving these on an AEM implementation.
 topic-tags: managing
 content-type: reference
-discoiquuid: 7c8f2cec-870b-41a8-8d98-70e29b495587
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
 workflow-type: tm+mt
-source-wordcount: '3119'
-ht-degree: 100%
+source-wordcount: '3802'
+ht-degree: 76%
 
 ---
 
@@ -24,7 +20,7 @@ ht-degree: 100%
 
 このドキュメントでは、まず、AEM の実装でこうした目的を達成するための [SEO のベストプラクティス](#seo-best-practices)および推奨事項を説明します。その次に、最初の節で提示するより[複雑な実装手順](#aem-configurations)のいくつかについて詳しく説明していきます。
 
-## SEO のベストプラクティス     {#seo-best-practices}
+## SEO のベストプラクティス {#seo-best-practices}
 
 ここでは、SEO の一般的なベストプラクティスを説明します。
 
@@ -45,17 +41,16 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
    * ページに名前を付けるときには、ハイフン（-）を区切り文字として使用します。
    * キャメルケース（単語の先頭を大文字で表記する）、アンダースコアおよびスペースの使用は避けます。
 
-* 可能な場合、クエリーパラメーターの使用は避けます。必要な場合は、パラメーターを 2 つ以下に制限してください。
+* 可能な場合、クエリパラメーターの使用は避けます。必要な場合は、パラメーターを 2 つ以下に制限してください。
 
    * 使用可能な場合、ディレクトリ構造を使用して情報アーキテクチャを示します。
-   * ディレクトリ構造を使用できない場合は、クエリー文字列の代わりに、Sling セレクターを URL で使用します。Sling セレクターを使用すると、提供される SEO 値に加えて、Dispatcher でページをキャッシュできるようになります。
+   * ディレクトリ構造を使用できない場合は、クエリ文字列の代わりに、Sling セレクターを URL で使用します。Sling セレクターを使用すると、提供される SEO 値に加えて、Dispatcher でページをキャッシュできるようになります。
 
 * ユーザーにとって URL がわかりやすいほど、効果的です。URL にキーワードを含めると、価値が高まります。
 
    * ページでセレクターを使用する場合、セマンティック値を提供するセレクターが推奨されます。
    * ユーザーが理解できない URL は、検索エンジンでも理解できません。
    * 次に例を示します。
-
       `mybrand.com/products/product-detail.product-category.product-name.html`
 の方が より望ましい 
 `mybrand.com/products/product-detail.1234.html`
@@ -110,15 +105,15 @@ SEO に対応した URL を作成する方法について、一般的なヒン�
 
 ### Sling セレクターの使用 {#using-sling-selectors}
 
-これまで、エンタープライズ Web アプリケーションを構築する場合、クエリーパラメーターを使用するのが一般的に認められた手法でした。
+これまで、エンタープライズ Web アプリケーションを構築する場合、クエリパラメーターを使用するのが一般的に認められた手法でした。
 
-近年は、URL をよりわかりやすくするために、クエリーパラメーターを削除する傾向にあります。多くのプラットフォームでは、Web サーバーやコンテンツ配信ネットワーク（CDN）へのリダイレクトの実装などがおこなわれますが、Sling を使用すると簡単です。Sling セレクターの特長は次のとおりです。
+近年は、URL をよりわかりやすくするために、クエリパラメーターを削除する傾向にあります。多くのプラットフォームでは、Web サーバーやコンテンツ配信ネットワーク（CDN）へのリダイレクトの実装などが行われますが、Sling を使用すると簡単です。Sling セレクターの特長は次のとおりです。
 
 * URL のわかりやすさが向上します。
 * Dispatcher でページをキャッシュでき、多くの場合、セキュリティが強化されます。
-* 汎用サーブレットを使用してコンテンツを取得する代わりに、コンテンツを直接アドレス指定できます。これにより、リポジトリに適用する ACL や、ディスパッチャーで適用するフィルターを活用できます。
+* 汎用サーブレットを使用してコンテンツを取得する代わりに、コンテンツを直接アドレス指定できます。これにより、リポジトリーに適用する ACL や、ディスパッチャーで適用するフィルターを活用できます。
 
-#### サーブレットでのセレクターの使用  {#using-selectors-for-servlets}
+#### サーブレットでのセレクターの使用 {#using-selectors-for-servlets}
 
 AEM では、サーブレットを作成するときに次の 2 つのオプションが用意されています。
 
@@ -127,9 +122,9 @@ AEM では、サーブレットを作成するときに次の 2 つのオプシ�
 
 次に示す各例では、この両方のパターンに準拠したサーブレットを登録する方法とともに、Sling サーブレットを使用することによって得られる利点を説明します。
 
-#### bin サーブレット（1 レベル下）  {#bin-servlets-one-level-down}
+#### bin サーブレット（1 レベル下） {#bin-servlets-one-level-down}
 
-**bin** サーブレットは、多くの開発者が使い慣れている J2EE プログラミングのパターンに準拠しています。このサーブレットは、特定のパスに登録されます。AEM の場合は通常 `/bin` に登録され、必要な要求パラメーターをクエリー文字列から抽出します。
+**bin** サーブレットは、多くの開発者が使い慣れている J2EE プログラミングのパターンに準拠しています。このサーブレットは、特定のパスに登録されます。AEM の場合は通常 `/bin` に登録され、必要な要求パラメーターをクエリ文字列から抽出します。
 
 このタイプのサーブレットの SCR 注釈は、次のようになります。
 
@@ -137,7 +132,7 @@ AEM では、サーブレットを作成するときに次の 2 つのオプシ�
 @SlingServlet(paths = "/bin/myApp/myServlet", extensions = "json", methods = "GET")
 ```
 
-続いて、`SlingHttpServletRequest` メソッドに含まれる `doGet` オブジェクトを使用して、クエリー文字列からパラメーターを抽出します。次に例を示します。
+続いて、`SlingHttpServletRequest` メソッドに含まれる `doGet` オブジェクトを使用して、クエリ文字列からパラメーターを抽出します。次に例を示します。
 
 ```
 String myParam = req.getParameter("myParam");
@@ -150,13 +145,13 @@ String myParam = req.getParameter("myParam");
 このアプローチで考慮すべき点は次のとおりです。
 
 * URL 自体から SEO 値が失われます。URL は、コンテンツ階層ではなく、プログラムにおけるパスを表すので、検索エンジンを含め、サイトにアクセスするユーザーが URL からセマンティック値を受け取ることはありません。
-* URL にクエリーパラメーターが含まれていることは、Dispatcher で応答をキャッシュできないことを意味します。
+* URL にクエリパラメーターが含まれていることは、Dispatcher で応答をキャッシュできないことを意味します。
 * このサーブレットを保護するには、独自のカスタムセキュリティロジックをサーブレットに実装する必要があります。
 * `/bin/myApp/myServlet` を公開するように Dispatcher を（慎重に）設定する必要があります。単に `/bin` を公開すると、サイト訪問者に公開してはいけない特定のサーブレットへのアクセスが許可されます。
 
-#### Sling サーブレット（1 レベル下）{#sling-servlets-one-level-down}
+#### Sling サーブレット（1 レベル下） {#sling-servlets-one-level-down}
 
-**Sling** サーブレットを使用すると、逆の方法でサーブレットを登録できます。サーブレットをアドレス指定し、クエリーパラメーターに基づいてサーブレットでレンダリングするコンテンツを指定するのではなく、目的のコンテンツをアドレス指定し、Sling セレクターに基づいてコンテンツをレンダリングするサーブレットを指定します。
+**Sling** サーブレットを使用すると、逆の方法でサーブレットを登録できます。サーブレットをアドレス指定し、クエリパラメーターに基づいてサーブレットでレンダリングするコンテンツを指定するのではなく、目的のコンテンツをアドレス指定し、Sling セレクターに基づいてコンテンツをレンダリングするサーブレットを指定します。
 
 このタイプのサーブレットの SCR 注釈は、次のようになります。
 
@@ -177,17 +172,17 @@ Resource myPage = req.getResource();
 このアプローチの利点は次のとおりです。
 
 * サイト階層およびページ名に存在するセマンティックによって得られた SEO 値でベイクできます。
-* クエリーパラメーターがないので、Dispatcher で応答をキャッシュできます。さらに、アドレス指定されたページが更新されていると、ページがアクティベートされたときに、そのキャッシュは無効になります。
+* クエリパラメーターがないので、Dispatcher で応答をキャッシュできます。さらに、アドレス指定されたページが更新されていると、ページがアクティベートされたときに、そのキャッシュは無効になります。
 * ユーザーがこのサーブレットにアクセスしようとすると、`/content/my-brand/my-page` に適用されているすべての ACL が有効になります。
 * Dispatcher は、Web サイトを提供する機能の 1 つとしてこのコンテンツを提供するようにあらかじめ設定されます。追加の設定は必要ありません。
 
 ### URL の書き換え {#url-rewriting}
 
-AEM では、すべての Web ページが `/content/my-brand/my-content` に保存されます。これは、リポジトリデータ管理の観点では便利な場合がありますが、必ずしもこの方法で顧客にサイトを表示するわけではなく、URL をできるだけ短くするという SEO のガイダンスと矛盾する可能性があります。さらに、同じ AEM インスタンスや異なるドメイン名から複数の Web サイトを提供している場合もあります。
+AEM では、すべての Web ページが `/content/my-brand/my-content` に保存されます。これは、リポジトリーデータ管理の観点では便利な場合がありますが、必ずしもこの方法で顧客にサイトを表示するわけではなく、URL をできるだけ短くするという SEO のガイダンスと矛盾する可能性があります。さらに、同じ AEM インスタンスや異なるドメイン名から複数の Web サイトを提供している場合もあります。
 
 ここでは、これらの URL を管理し、よりわかりやすく、SEO に適した方法で URL をユーザーに表示するために AEM で使用可能なオプションを検討します。
 
-#### バニティー URL  {#vanity-urls}
+#### バニティー URL {#vanity-urls}
 
 作成者が、プロモーション目的で別の場所からアクセス可能なページを作成する場合、ページごとに定義される AEM のバニティー URL が役立つことがあります。ページのバニティー URL を追加するには、**Sites** コンソールで該当するページに移動し、ページのプロパティを編集します。「**基本**」タブの下部に、バニティー URL を追加できるセクションが表示されます。複数の URL を使用してページにアクセスできるようにすると、ページの SEO 値が分断されるので、正規 URL タグをページに追加して、この問題を回避する必要があることに留意してください。
 
@@ -229,7 +224,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
 * OSGi 設定には
    **Apache Sling Resource Resolver Factory**
-( 
+（ 
 `org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`）
 
 * プロパティ
@@ -237,7 +232,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
 * デフォルト `/etc/map` に設定。
 
-AEM で受信要求のマッピングまたはページ上の URL の書き換え、あるいはその両方をおこなうために、この場所にマッピング定義を追加できます。
+AEM で受信要求のマッピングまたはページ上の URL の書き換え、あるいはその両方を行うために、この場所にマッピング定義を追加できます。
 
 新しいマッピングを作成するには、この場所の `sling:Mapping` または `/http` の下に新しい `/https` ノードを作成します。このノードで設定された `sling:match` および `sling:internalRedirect` プロパティに基づいて、AEM は、一致した URL のすべてのトラフィックを `internalRedirect` プロパティで指定された値にリダイレクトします。
 
@@ -294,7 +289,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
    }
    ```
 
-#### Apache HTTP Server の mod_rewrite  {#apache-http-server-mod-rewrite}
+#### Apache HTTP Server の mod_rewrite {#apache-http-server-mod-rewrite}
 
 これまでに、URL をページに出力するときに、定義したマッピングを使用するために、マッピングをロジックとともにコンポーネントに実装しました。
 
@@ -311,7 +306,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 </VirtualHost>
 ```
 
-### 正規 URL タグ  {#canonical-url-tags}
+### 正規 URL タグ {#canonical-url-tags}
 
 正規 URL タグは、コンテンツのインデックスを作成するときに検索エンジンでページをどのように処理する必要があるかを明確化するために、HTML ドキュメントの先頭に配置されるリンクタグです。このタグを使用すると、ページの URL に異なる部分が含まれていても、同じものとしてページ（の様々なバージョン）のインデックスが作成されるという利点があります。
 
@@ -363,18 +358,121 @@ Disallow: /
 
 ただし、`robots.txt` ファイルをサイトのルートに配置すると、Dispatcher フラッシュ要求によって、このファイルが除去されることがあり、URL マッピングによって、Apache HTTP Server の設定で定義された `DOCROOT` とは異なる場所にサイトのルートが置かれる可能性があります。こうした理由から、このファイルをオーサーインスタンスのサイトのルートに配置し、パブリッシュインスタンスにレプリケートするのが一般的です。
 
-### AEM での XML サイトマップの作成  {#building-an-xml-sitemap-on-aem}
+### AEM での XML サイトマップの作成 {#building-an-xml-sitemap-on-aem}
 
 クローラーでは、Web サイトの構造をより的確に把握するために XML サイトマップが使用されます。サイトマップを提供すれば SEO ランキングが上がるという保証はありませんが、ベストプラクティスの 1 つとして認められています。サイトマップとして使用する XML ファイルを Web サーバーで手動で管理することもできますが、作成者が新しいコンテンツを作成すると、変更内容がサイトマップに自動的に反映されるように、プログラムによってサイトマップを生成することをお勧めします。
 
-プログラムによってサイトマップを生成するには、`sitemap.xml` の呼び出しをリスンする Sling サーブレットを登録します。このサーブレットは、サーブレット API によって提供されるリソースを使用して、現在のページおよびその子を確認し、XML を出力します。XML はその後、Dispatcher でキャッシュされます。`robots.txt` ファイルのサイトマッププロパティで、この場所を参照する必要があります。さらに、新しいページがアクティベートされたときには必ず、このファイルがフラッシュされるように、カスタムフラッシュルールを実装する必要があります。
+AEMは [Apache Sling Sitemap モジュール](https://github.com/apache/sling-org-apache-sling-sitemap) を使用して XML サイトマップを生成します。開発者とエディターは、サイトの XML サイトマップを最新の状態に保つための様々なオプションを提供します。
 
 >[!NOTE]
 >
->Sling サーブレットを登録すると、拡張子 `sitemap` のセレクター `xml` をリスンできます。これにより、末尾が以下のようになっている URL が要求されると、サーブレットによってリクエストが処理されます。
->    `/<path-to>/page.sitemap.xml`
->その後、要求されたリソースをリクエストから取得し、JCR API を使用してコンテンツツリーのその地点からサイトマップを生成できます。
->このようなアプローチは、複数のサイトを同じインスタンスから処理している場合にメリットがあります。`/content/siteA.sitemap.xml` に対するリクエストでは `siteA` 用のサイトマップが生成され、`/content/siteB.sitemap.xml` のリクエストでは `siteB` 用のサイトマップが生成されます。コードを追加する必要はありません。
+> これは、Adobe Experience Managerバージョン 6.5.11.0以降の製品機能として使用できます。
+> 
+> 古いバージョンの場合は、自身で Sling サーブレットを登録し、 `sitemap.xml` を呼び出し、サーブレット API を介して提供されたリソースを使用して、現在のページとその子孫を参照し、sitemap.xml ファイルを出力します。
+
+Apache Sling Sitemap モジュールは、トップレベルのサイトマップとネストされたサイトマップを区別します。両方とも、 `sling:sitemapRoot` プロパティを `true`. 通常、サイトマップは、ツリーの最上位サイトマップ（他のサイトマップのルートの親を持たないリソース）のパスにあるセレクターを使用してレンダリングされます。 このトップレベルのサイトマップルートは、サイトマップのインデックスも公開します。通常は、サイトの所有者が検索エンジンの設定ポータルで設定したり、サイトの `robots.txt`.
+
+例えば、最上位レベルのサイトマップルートを次の場所に定義するサイトについて考えてみましょう。 `my-page` とネストされたサイトマップのルート ( `my-page/news`:news サブツリーのページ用の専用サイトマップを生成します。 結果として、関連する URL は次のようになります。
+
+* https://www.mydomain.com/my-brand/my-page.sitemap-index.xml
+* https://www.mydomain.com/my-brand/my-page.sitemap.xml
+* https://www.mydomain.com/my-brand/my-page.sitemap.news-sitemap.html
+
+>[!NOTE]
+>
+> セレクター `sitemap` および `sitemap-index` は、カスタム実装に影響を与える可能性があります。 製品機能を使用しない場合は、これらのセレクターを `service.ranking` が 0 より大きい。
+
+デフォルトの設定では、ページのプロパティダイアログには、ページをサイトマップルートとしてマークするオプションが用意されています。前述のように、ページ自体とその子孫のサイトマップを生成します。 この動作は、 `SitemapGenerator` インターフェイスとは、代替実装を追加することで拡張できます。 ただし、XML サイトマップを再生成する頻度はコンテンツオーサリングワークフローとワークロードに大きく依存するので、製品には何も付属していません `SitemapScheduler` 設定。 これにより、機能が効果的にオプトインします。
+
+XML サイトマップを生成するバックグラウンドジョブを有効にするには、 `SitemapScheduler` を設定する必要があります。 これをおこなうには、PID の OSGi 設定を作成します。 `org.apache.sling.sitemap.impl.SitemapScheduler`. スケジューラー式 `0 0 0 * * ?` は、すべての XML サイトマップを 1 日 1 回午前 0 時に再生成する出発点として使用できます。
+
+![Apache Sling Sitemap - Scheduler](assets/sling-sitemap-scheduler.png)
+
+サイトマップ生成ジョブは、オーサー層インスタンスとパブリッシュ層インスタンスの両方で実行できます。 適切な正規 URL はそこでのみ生成できるので、ほとんどの場合はパブリッシュ層インスタンスで生成を実行することをお勧めします（通常、Sling リソースマッピングルールはパブリッシュ層インスタンスでのみ存在するので）。 ただし、 [SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html) インターフェイス。 カスタム実装で、オーサー層インスタンス上にサイトマップの正規 URL を生成できる場合、 `SitemapScheduler` オーサー実行モード用に設定でき、XML サイトマップ生成ワークロードをオーサーサービスクラスターのインスタンス全体に分散させることができます。 このシナリオでは、まだ公開されていない、変更されている、または制限されたユーザーグループにのみ表示されるコンテンツの処理に、特に注意が必要です。
+
+AEM Sitesには、 `SitemapGenerator` はページのツリーを横断してサイトマップを生成します。 サイトの正規 URL と代替言語（使用可能な場合）のみを出力するように事前設定されています。 また、必要に応じて、ページの最終変更日を含めるように設定することもできます。 その場合は、 _最終変更日を追加_ オプション _AdobeAEM SEO - Page Tree Sitemap Generator_ 設定および _最終変更ソース_. サイトマップがパブリッシュ層で生成される場合は、 `cq:lastModified` 日付。
+
+![AdobeAEM SEO - Page Tree Sitemap Generator の設定](assets/sling-sitemap-pagetreegenerator.png)
+
+サイトマップの内容を制限するために、必要に応じて次のサービスインターフェイスを実装できます。
+
+* の [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) を実装して、AEM Sites固有のサイトマップジェネレーターで生成された XML サイトマップからページを非表示にすることができます
+* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) または [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) を実装して、 [コマース統合フレームワーク](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) 特定のサイトマップジェネレーター
+
+特定の使用例でデフォルトの実装が機能しない場合、または拡張機能が十分に柔軟性を持たない場合は、カスタム `SitemapGenerator` は、生成されたサイトマップのコンテンツを完全に制御するために実装できます。 次の例は、AEM Sitesのデフォルトの実装のロジックを利用して、これをおこなう方法を示しています。 使用する [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) ページのツリーをトラバースするための開始点として、次の操作をおこないます。
+
+```
+import java.util.Optional;
+
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.sitemap.SitemapException;
+import org.apache.sling.sitemap.builder.Sitemap;
+import org.apache.sling.sitemap.builder.Url;
+import org.apache.sling.sitemap.spi.common.SitemapLinkExternalizer;
+import org.apache.sling.sitemap.spi.generator.ResourceTreeSitemapGenerator;
+import org.apache.sling.sitemap.spi.generator.SitemapGenerator;
+import org.jetbrains.annotations.NotNull;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.aem.wcm.seo.sitemap.PageTreeSitemapGenerator;
+import com.day.cq.wcm.api.Page;
+
+@Component(
+    service = SitemapGenerator.class,
+    property = { "service.ranking:Integer=20" }
+)
+public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
+
+    private static final Logger LOG = LoggerFactory.getLogger(SitemapGeneratorImpl.class);
+
+    @Reference
+    private SitemapLinkExternalizer externalizer;
+    @Reference
+    private PageTreeSitemapGenerator defaultGenerator;
+
+    @Override
+    protected void addResource(@NotNull String name, @NotNull Sitemap sitemap, Resource resource) throws SitemapException {
+        Page page = resource.adaptTo(Page.class);
+        if (page == null) {
+            LOG.debug("Skipping resource at {}: not a page", resource.getPath());
+            return;
+        }
+        String location = externalizer.externalize(resource);
+        Url url = sitemap.addUrl(location + ".html");
+        // add any additional content to the Url like lastmod, change frequency, etc
+    }
+
+    @Override
+    protected final boolean shouldFollow(@NotNull Resource resource) {
+        return super.shouldFollow(resource)
+            && Optional.ofNullable(resource.adaptTo(Page.class)).map(this::shouldFollow).orElse(Boolean.TRUE);
+    }
+
+    private boolean shouldFollow(Page page) {
+        // add additional conditions to stop traversing some pages
+        return !defaultGenerator.isProtected(page);
+    }
+
+    @Override
+    protected final boolean shouldInclude(@NotNull Resource resource) {
+        return super.shouldInclude(resource)
+            && Optional.ofNullable(resource.adaptTo(Page.class)).map(this::shouldInclude).orElse(Boolean.FALSE);
+    }
+
+    private boolean shouldInclude(Page page) {
+        // add additional conditions to stop including some pages
+        return defaultGenerator.isPublished(page)
+            && !defaultGenerator.isNoIndex(page)
+            && !defaultGenerator.isRedirect(page)
+            && !defaultGenerator.isProtected(page);
+    }
+}
+```
+
+さらに、XML サイトマップ用に実装された機能は、例えば、正規リンクや代替言語をページの先頭に追加するなど、様々な使用例に使用できます。 詳しくは、 [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) インターフェイスを参照してください。
 
 ### レガシー URL の 301 リダイレクトの作成 {#creating-redirects-for-legacy-urls}
 
