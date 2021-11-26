@@ -8,10 +8,10 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: a95cf285be84f6aed194f3ae904556f5d017c7be
+source-git-commit: 879e69aa17c7142c2b1e86b72ce23226a7f09a88
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 80%
+source-wordcount: '1055'
+ht-degree: 76%
 
 ---
 
@@ -98,31 +98,45 @@ ht-degree: 80%
       + [フォームの作成（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスと AEM](headless/introduction.md)
-   + [ヘッドレスおよび AEM とのハイブリッド](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [コンテンツフラグメント]{#content-fragments}
+      + [コンテンツフラグメントと GraphQL のヘッドレス配信](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
+      + [コンテンツフラグメントの操作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
+      + [インスタンスに対するコンテンツフラグメント機能の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
+      + [コンテンツフラグメントモデル](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html)
+      + [コンテンツフラグメントの管理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html)
+      + [バリエーション - フラグメントコンテンツのオーサリング](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html)
+      + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-markdown.html)
+      + [関連コンテンツの使用](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-assoc-content.html)
+      + [メタデータ - フラグメントのプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
+      + [構造ツリー](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
+      + [プレビュー - JSON 表現](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
+   + [配信 API]{#delivery-api}
+      + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
+      + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
+      + [コンテンツフラグメント GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
+      + [AEM GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
+      + [コンテンツフラグメントに対するリモート AEM GraphQL クエリの認証](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
++ AEM 対応のハイブリッドおよび SPA 開発{#spas}
+   + [AEM でのハイブリッドと SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
+   + [SPA の概要およびガイド](spa-walkthrough.md)
+   + [SPA WKND チュートリアル](spa-wknd.md)
+   + [React の使用を開始する](spa-getting-started-react.md)
+   + [SPA への React コンポーネントの実装](spa-implementing-react-component.md)
+   + [Angular の使用を開始する](spa-getting-started-angular.md)
+   + [SPA の詳細](spa-deep-dives.md)
+   + [AEM 向け SPA の開発](spa-architecture.md)
+   + [SPA エディターの概要](spa-overview.md)
+   + [SPA ブループリント](spa-blueprint.md)
+   + [SPA ページコンポーネント](spa-page-component.md)
+   + [コンポーネントマッピングの動的モデル (SPAの場合 )](spa-dynamic-model-to-component-mapping.md)
+   + [SPA モデルルーティング](spa-routing.md)
+   + [RemotePage コンポーネント](spa-remote-page.md)
+   + [AEM 内での外部 SPA の編集](spa-edit-external.md)
+   + [SPA の複合コンポーネント](spa-composite-component.md)
+   + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
    + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
-   + 単一ページアプリケーション{#spas}
-      + [SPA の概要およびガイド](spa-walkthrough.md)
-      + [SPA WKND チュートリアル](spa-wknd.md)
-      + [AEMでSPAを使い始める — React](spa-getting-started-react.md)
-      + [AEMでのSPAの概要 —Angular](spa-getting-started-angular.md)
-      + [SPA への React コンポーネントの実装](spa-implementing-react-component.md)
-      + [SPA の詳細](spa-deep-dives.md)
-      + [SPA エディターの概要](spa-overview.md)
-      + [AEM 向け SPA の開発](spa-architecture.md)
-      + [SPA ブループリント](spa-blueprint.md)
-      + [SPA ページコンポーネント](spa-page-component.md)
-      + [コンポーネントマッピングの動的モデル (SPAの場合 )](spa-dynamic-model-to-component-mapping.md)
-      + [SPA モデルルーティング](spa-routing.md)
-      + [SPA と Adobe Experience Platform Launch の統合](spa-launch.md)
-      + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
-      + [RemotePage コンポーネント](spa-remote-page.md)
-      + [AEM 内での外部 SPA の編集](spa-edit-external.md)
-      + [SPA の複合コンポーネント](spa-composite-component.md)
-      + [SPA 参照資料](spa-reference-materials.md)
-   + [HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-   + [コンテンツフラグメント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
-   + [エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
-   + [AEMのコンテンツフラグメントとコンテンツサービスについて](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-content-services-feature-video-understand.html)
+   + [ローンチの統合](spa-launch.md)
+   + [SPA 参照資料](spa-reference-materials.md)
 + 開発ツール{#devtools}
    + [開発ツール](dev-tools.md)
    + [AEM Modernization Tools](modernization-tools.md)
