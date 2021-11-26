@@ -8,7 +8,7 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: 879e69aa17c7142c2b1e86b72ce23226a7f09a88
+source-git-commit: fccfcc71d61b483273cc3501fbcc411fce5c1424
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 76%
@@ -98,7 +98,7 @@ ht-degree: 76%
       + [フォームの作成（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスと AEM](headless/introduction.md)
-   + [コンテンツフラグメント]{#content-fragments}
+   + コンテンツフラグメント{#content-fragments}
       + [コンテンツフラグメントと GraphQL のヘッドレス配信](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
       + [コンテンツフラグメントの操作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
       + [インスタンスに対するコンテンツフラグメント機能の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
@@ -110,7 +110,7 @@ ht-degree: 76%
       + [メタデータ - フラグメントのプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
       + [構造ツリー](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
       + [プレビュー - JSON 表現](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
-   + [配信 API]{#delivery-api}
+   + 配信 API{#delivery-api}
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
       + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
       + [コンテンツフラグメント GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
