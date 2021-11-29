@@ -1,7 +1,7 @@
 ---
 title: 'AEM 6.5 Sites 向けヘッドレス開発 '
 description: コンテンツモデル、コンテンツフラグメント、GraphQL API などAEM 6.5 の強力なヘッドレス機能を連携させて、エクスペリエンスを一元管理し、複数のチャネルで提供する方法を説明します。
-source-git-commit: 8c7acd06f3909897e5756170c606e00aead098b8
+source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 72%
@@ -25,7 +25,7 @@ ht-degree: 72%
 
 このドキュメントでは、AEM の完全なヘッドレス実装モデルを重点的に説明します。ただし、AEM でヘッドフルとヘッドレスは二者択一である必要はありません。ヘッドレス機能を使用すると、コンテンツを管理し様々なエンドポイントに配信できると同時に、コンテンツ作成者が単一ページアプリケーションを編集できるようになります。すべてが AEM にあります。
 
-<!--
+<!-- HM-Links
 >[!TIP]
 >
 >See the document [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md) for more information.
@@ -56,7 +56,7 @@ AEM ヘッドレス機能を使い始めるためのリソースは多数用意�
 |---|---|---|---|---|
 | [AEM ヘッドレスをはじめる前に：実践チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) | **実践的なアプローチを好み、AEMに精通している場合**&#x200B;このチュートリアルでは、シンプルなヘッドレスプロジェクトの作成に直接取り組みます。 | チュートリアル | デベロッパー向け | 2 時間 |
 
-<!--
+<!-- HM-Links
 |Resource|Description|Type|Audience|Est. Time|
 |---|---|---|---|---|
 |[Headless Developer Journey](/help/journey-headless/developer/overview.md)|**For users new to AEM and headless** technologies, start here for a comprehensive introduction to AEM and its headless features from the theory of headless through going live with your first headless project.|Guide|Developers **new to AEM and headless**|1 hour|

@@ -8,10 +8,10 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: fccfcc71d61b483273cc3501fbcc411fce5c1424
+source-git-commit: ba6b910add6770753efeb576d9df1db42d5720b8
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 76%
+source-wordcount: '1080'
+ht-degree: 77%
 
 ---
 
@@ -98,6 +98,13 @@ ht-degree: 76%
       + [フォームの作成（クラシック UI）](developing-forms.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスと AEM](headless/introduction.md)
+   + 「はじめる前に」ガイド {#getting-started}
+      + [はじめに](headless/getting-started/introduction.md)
+      + [設定の作成](headless/getting-started/create-configuration.md)
+      + [コンテンツフラグメントモデルの作成](headless/getting-started/create-content-model.md)
+      + [アセットフォルダーの作成](headless/getting-started/create-assets-folder.md)
+      + [コンテンツフラグメントの作成](headless/getting-started/create-content-fragment.md)
+      + [コンテンツフラグメントへのアクセスと配信](headless/getting-started/create-api-request.md)
    + コンテンツフラグメント{#content-fragments}
       + [コンテンツフラグメントと GraphQL のヘッドレス配信](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
       + [コンテンツフラグメントの操作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)

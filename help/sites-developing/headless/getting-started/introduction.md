@@ -1,0 +1,45 @@
+---
+title: ヘッドレスをはじめる前に
+description: このクイックスタートガイドでは、コンテンツモデル、コンテンツフラグメント、GraphQL API など、AEM 6.5 の強力なヘッドレス機能の基本事項を説明します。
+exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
+source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 75%
+
+---
+
+# ヘッドレスをはじめる前に {#introduction}
+
+ヘッドレス入門ガイドでは、AEMおよびヘッドレステクノロジーに詳しいユーザー向けの 5 つの手順で、AEM 6.5 を使用したエクスペリエンスの作成、管理および配信のためのシンプルな手順を説明します。 各ガイドは前のガイドに基づいているので、じっくり順番に検討することをお勧めします。
+
+1. [設定の作成](create-configuration.md)
+1. [コンテンツフラグメントモデルの作成](create-content-model.md)
+1. [アセットフォルダーの作成](create-assets-folder.md)
+1. [コンテンツフラグメントの作成](create-content-fragment.md)
+1. [コンテンツフラグメントへのアクセスと配信](create-api-request.md)
+
+>[!TIP]
+>
+>この入門ガイドは、AEMとヘッドレステクノロジーの両方に関する知識を前提としています。
+
+<!-- HM-Links
+>
+>If you are new to either AEM or headless, please refer to our [Headless Documentation Journeys](/help/journey-headless/home.md) for an end-to-end introduction to both headless and how AEM supports it.
+-->
+
+## 対象者 {#audience}
+
+ヘッドレス入門ガイドで説明されているタスクは、AEM のヘッドレス機能の基本的な包括的デモに必要です。テスト用 AEM インスタンスへの管理者アクセス権を持つユーザーは誰でも、これらのガイドに従って AEM でのヘッドレスな配信を理解できますが、開発者の経験を持つユーザーが最適です。
+
+ただし、実稼働状況では、これらのタスクは様々なペルソナによって実行され、実行回数も様々です。次に例を示します。
+
+* **管理者**：コンテンツの初期設定とフォルダー構造を、通常は 1 回のみまたは散発的にセットアップする必要があります。
+* **情報アーキテクト**：通常、組織のニーズの変化に応じて新しいモデルを追加します。
+* **コンテンツ作成者**：アーキテクトが定義したモデルに基づいて、新しいコンテンツをコンテンツフラグメントとして継続的に作成します。
+
+このヘッドレス入門ガイドでは、上記のタスクを一般に誰がどのような頻度で実行するかを説明します。
+
+## 次のステップ {#next-step}
+
+詳細に入る準備ができましたか？それでは、まず、ヘッドレス入門ガイドの第 1 部[設定の作成](create-configuration.md)に目を通しましょう。
