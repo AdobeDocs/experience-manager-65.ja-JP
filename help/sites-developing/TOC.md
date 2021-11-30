@@ -8,9 +8,9 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: ba6b910add6770753efeb576d9df1db42d5720b8
+source-git-commit: cf7e9061bac9004c7efd2f045b4900e4a92d67e9
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1085'
 ht-degree: 77%
 
 ---
@@ -96,6 +96,7 @@ ht-degree: 77%
       + [ウィジェットの使用および拡張（クラシック UI）](widgets.md)
       + [xtype の使用（クラシック UI）](xtypes.md)
       + [フォームの作成（クラシック UI）](developing-forms.md)
++ [AEM におけるヘッドフルとヘッドレス](headful-headless.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスと AEM](headless/introduction.md)
    + 「はじめる前に」ガイド {#getting-started}
