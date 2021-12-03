@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2021
 description: AEM Content and Commerce リリースノート 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 7261a71769dfb968c768e0cb4835d7d4cca97b1a
+source-git-commit: 98ba3edb3b9e93fa13a0f0418f1b17323d5a7233
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 31%
+source-wordcount: '1311'
+ht-degree: 33%
 
 ---
 
@@ -15,19 +15,29 @@ ht-degree: 31%
 
 現在使用している CIF バージョン、または将来使用する予定の CIF バージョンについて、以下の表に示す最小必要システム構成を確認します。
 
-**4 月のリリースでは、GitHub の CIF コネクタを CIF アドオンに置き換えました。** これは、 [Adobeソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). アドオンに切り替えると、プロジェクトに大きなメリットがもたらされます。
-
-* 新機能のほとんどは、AEM 6.5 ですぐに使用可能になります（機能側ポートを待つ必要はありません）。
-* 新しいアドオンバージョンへの簡単なアップグレード
-* Cloud Service準備完了
-
-古いAEM CIF コネクタはメンテナンスモードに入ります。これを使用しないでください。 CIF コネクタを新しい CIF アドオンに置き換えてください。 ほとんどのプロジェクトでは、単にパッケージを置き換えることが可能です。
-
 | コンポーネント | システム要件 |
 |:-------|:-----:|
 | CIF アドオン | 最小：AEM 6.5.7、Magento2.3.5 GraphQL スキーマ |
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## リリース日：2021 年 11 月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIF アドオン | 2021.11.18.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2021.11.18.00.zip) |
+| CIF コアコンポーネント | 2.4.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.4.2) |
+| CIF Venia 参照サイト | 2021.12.01 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.12.01) |
+
+### 新機能 {#what-is-new-november}
+
+* コマースの拡張可能な Peregrine コンポーネントに基づく myAccount コンポーネントの拡張
+
+![拡張された myAccount コンポーネント](/help/assets/CIF/extended-myAccount-components.png)
+
+* 作成者は、追加のレコメンデーションタイプを使用してアドホックコマース製品Recommendationsを作成できます
+
+* AEM Storefront でのギフトカードのサポート
 
 ## リリース日：2021 年 10 月
 
