@@ -4,9 +4,9 @@ description: 固有のリリースノート [!DNL Adobe Experience Manager] 6.5 
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 35260325b583bd047f22ffa88afb9469b2023e60
+source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
 workflow-type: tm+mt
-source-wordcount: '3367'
+source-wordcount: '3674'
 ht-degree: 4%
 
 ---
@@ -320,91 +320,58 @@ Need to verify with Engineering, the status is currently showing as Resolved
 >* [!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
 
 
-<!--
+**アダプティブフォーム**
 
-[!DNL AEM 6.5.10.0 Forms] includes the following bug fixes:
+* アクセシビリティ — `Wizard` アダプティブフォームのパネルのレイアウトで、ナビゲーションボタンに Aria のラベルと役割がない (NPR-37613)。
 
-* When you install [!DNL AEM 6.5 Forms], the following third-party libraries are installed automatically (CQDOC-18373):
-  * [!DNL Microsoft Visual C++ 2008 Service Pack 1 (x86)]
-  * [!DNL Microsoft Visual C++ 2010 Service Pack 1 (x86)]
+* アダプティブフォームの日付フィールドでの検証が、期待どおりに動作しない (NPR-37556)。
 
-**Adaptive Forms**
+* チェックボックスコンポーネントとラジオボタンコンポーネントのラベルテキストが長い場合、テキストが適切に収まらない (NPR-37294)。
 
-* If the validations performed on the field values in an adaptive form are successful, [!DNL AEM Forms] fails to invoke the Form Data Model (CQ-4325491).
+* AEM Formsコンテナコンポーネントの「ありがとうございます」メッセージにスタイル設定の変更を適用した場合、その変更がソースアダプティブフォームに複製されない (NPR-37284)。
 
-* When you add a language dictionary to a translation project and then open the project, [!DNL AEM Forms] displays an error message (CQ-4324933):
+* の値の違い `Switch` ユーザーインターフェイスおよびバックエンドのコンポーネント (NPR-37268)。
 
-   ```TXT
-   Uncaught TypeError: Cannot read property 'PROJECT_LISTING_PATH' of undefined
-   at openButtonClickHandler (clientlibs.js:245)
-   at HTMLButtonElement.onclick (clientlibs.js:258)
+* キーボードキーを使用して `Submit` オプションを選択し、 `Enter` キーを押すと、アダプティブフォームを複数回送信できます (CQ-4333993)。
 
-   ```
+* 添付ファイルコンポーネントの削除操作が期待どおりに動作しない (NPR-37376)。
 
-* Performance issues after installing [!DNL AEM Forms] Service Pack 7 (CQ-4326828).
+* 各種言語に変換されるアダプティブフォームで、フィールドのラベルが 1,000 文字を超えると、辞書はラベルの翻訳を取得できません (CQ-4329290)。
 
-* When you submit a form containing a standard HTML upload field from an Apple iOS device, sometimes, the content of the file is not sent and a 0-byte file is received at the other end. Apple iOS 15.1 provides a fix for the issue (CQ-4325361).
+**ドキュメントサービス**
 
-**Correspondence Management**
-
-* Delay in the display of characters in the [!UICONTROL Data] tab as well as in the HTML letter preview (NPR-37020).
-
-* When you are editing a text document fragment, the new words display as HTML tags after saving the fragment (NPR-36837).
-
-* Unable to view the letters that are saved as drafts (NPR-36816).
-
-* When you edit a text document fragment and then preview the letter, AEM Forms displays the expression language in the HTML letter preview (CQ-4322331).
-
-* Issues while rendering data with a self-service letter template (NPR-37161).
-
-
-**Interactive Communications**
-
-* A tab character duplicates between two words each time you print preview an Interactive Communication after editing a text document fragment (NPR-37021).
-
-* [!DNL AEM Forms] displays an error when you save a text document fragment that exceeds the maximum size limit (NPR-36874).
-
-* When you add an image to an Interactive Communication, an additional empty block displays after the image (NPR-36659).
-
-* When you select all text in an editor, you cannot change the font text to Arial (NPR-36646).
-
-* When you create a URL in an editor and preview the changes, a black background displays instead of the URL text (NPR-36640).
-
-* When you copy and paste text to an editor, there are issues while changing the font to Arial for bullets available in the document (NPR-36628). 
-
-* Indentation issues for bullets in the text editor (NPR-36513).
-
-**Designer**
-
-* Screen Reader fails to read floating field data placed inside text label on the Master page or on Subform pages in a dynamic PDF (CQ-4321587).
-
-**Document Services**
-
-* When you convert XDP files to PDF files and then assemble the resultant PDF, the PDF generations fails and displays the following error message:
+* Assembler サービスの使用中にエラーが表示される (NPR-37606)。
 
    ```TXT
-   Caused by: com.adobe.fd.assembler.client.AssemblerException$ClientException: Document is in a disposed state!
+     500 Internal Server Error
    ```
 
-**Forms Workflow**
+* ドキュメントの添付ファイルが Assembler サービスに渡されると、次の例外が表示される (NPR-37582)。
 
-* Unable to submit a form to a Workbench process after upgrading to AEM Forms Service Pack 8 (CQ-4325846).
+   ```TXT
+     com.adobe.livecycle.assembler.client.ProcessingException: ⁪: Failed to execute the DDX
+   ```
 
-**HTML5 Forms**
+* PDFドキュメントをPDFA/1BPDFドキュメントに変換した後、データから閉じ丸括弧が欠落する (NPR-37608)。
 
-* When you set the value for the `mfAllowAttachments` property as `True` in the CRX DE repository, the `dataXml` gets corrupted on submitting the HTML5 form (NPR-37035).
+**HTML5 のフォーム**
 
-* When you render an XDP as HTML using `dataXml`, [!DNL AEM Forms] displays a `Page Unresponsive` error (NPR-36631).
+* AEM 6.5.10.0をインストールすると、XDP フォームのHTMLプレビューが機能しない (NPR-37503、CQ-4331926)。
 
-### Commerce {#commerce-65110}
+* 様々な言語でPDF formsをHTML5 フォームに移行する際に、テキストが重なる問題が発生する (NPR-37173)。
 
-* The value in the **[!UICONTROL Published By]** field displayed is incorrect in the Column view (NPR-36902).
-* When a Catalog is rolled out, new products are incorrectly marked as modified products (NPR-36666).
-* When you recreate a deleted product, the product page is not recreated (NPR-36665).
-* Modified pages are updated but the corresponding linked products are not updated on Catalog rollout (CQ-4321409, NPR-36422).
-* The **[!UICONTROL Publish later]** and **[!UICONTROL Unpublish later]** workflows do not work (CQ-4327679).
+**レター**
 
--->
+* レターを送信し、HTMLビューで再度開くと、テキストドキュメントフラグメントの位置が変わる (NPR-37307)。
+
+**Forms のワークフロー**
+
+* 埋め込みコンテナワークフローの場合、 `Notify on Complete of Container Workflow` オプション (NPR-37280)。
+
+**Foundation JEE**
+
+* AEM 6.5 Forms Service Pack 9 のインストール後、CRX リポジトリの URL は使用できなくなります (NPR-37592)。
+
 
 セキュリティ更新について詳しくは、 [[!DNL Experience Manager] セキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html).
 
