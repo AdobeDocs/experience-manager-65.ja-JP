@@ -9,7 +9,7 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: null
-source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
+source-git-commit: 1b853936760daf7ee8d16ba926e612dadec40788
 workflow-type: tm+mt
 source-wordcount: '2470'
 ht-degree: 34%
@@ -31,7 +31,7 @@ Dynamic Mediaの一般設定は、経験豊富な Web サイト開発者やプ�
 
 Dynamic Mediaの公開設定ページでは、AdobeDynamic Mediaサーバーから Web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。 設定が指定されていない場合、AdobeDynamic Mediaサーバーは、Dynamic Media公開設定ページで設定されたデフォルト設定に従ってアセットを配信します。
 
-関連トピック [オプション — Dynamic Mediaのセットアップと設定 — Scene7モードの設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) fpr 追加のオプション設定タスク
+関連トピック [オプション — Dynamic Mediaのセットアップと設定 — Scene7モードの設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings) を参照してください。
 
 >[!NOTE]
 >
