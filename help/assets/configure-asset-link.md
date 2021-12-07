@@ -4,8 +4,7 @@ description: Experience Manager Assetsを設定アプリケーション用のAdo
 contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
-exl-id: null
-source-git-commit: 67b9e55693d8f3cb5ef2c4d6a60e31059ed85cd5
+source-git-commit: e91fa04d87c7ecacf3ad8a148227948eafe15b1e
 workflow-type: tm+mt
 source-wordcount: '3149'
 ht-degree: 5%
