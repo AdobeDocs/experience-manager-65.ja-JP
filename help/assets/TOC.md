@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 71c91d0284508463ea7746b6fe0ba82372005c81
+source-git-commit: a98ee0c090c299bc86bf027f69b2e191b716707a
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 57%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 57%
 
 # Assets ガイド {#assets}
 
-+ [[!DNL Assets] ユーザーガイド](home.md)
++ [[!DNL Assets] user guide](home.md)
 + [[!DNL Experience Manager] 6.5 Assets リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/assets.html)
-+ [DAM について](assets.md)
++ [About DAM](assets.md)
 + [アセットのベストプラクティス](best-practices-for-assets.md)
 + [ [!DNL Assets] でのアクセシビリティ](accessibility.md)
 + Experience Manager Assetsを使用 {#using}
@@ -27,22 +27,22 @@ ht-degree: 57%
    + [アセットメタデータの操作](metadata.md)
    + [多言語のアセット](multilingual-assets.md)
    + [用途 [!DNL Adobe Stock] アセット内のアセット](aem-assets-adobe-stock.md)
-   + [3D アセットのプレビュー](previewing-3d-assets.md)
+   + [Preview 3D assets](previewing-3d-assets.md)
    + [フォルダーのアセットとコレクションのレビュー](bulk-approval.md)
    + [拡張スマートタグ](enhanced-smart-tags.md)
    + [タイムラインのアクティビティストリーム](activity-stream.md)
    + [アセットを処理](assets-workflow.md)
    + [画像マップを追加](image-maps.md)
    + [MSM を使用したアセットの再利用](reuse-assets-using-msm.md)
-   + [Connected Assets と [!DNL Sites]](use-assets-across-connected-assets-instances.md)
+   + [Connected Assets with [!DNL Sites]](use-assets-across-connected-assets-instances.md)
 + Dynamic Media{#dynamic}
-   + [Experience League別ニュースレターアーカイブ](dynamic-media-newsletter.md)
+   + [Newsletter archive by Experience League](dynamic-media-newsletter.md)
    + [Dynamic Media をセットアップする](administering-dynamic-media.md)
    + [Dynamic Media を使用する](dynamic-media.md)
    + [Dynamic Media を構成する - Scene7モード](config-dms7.md)
    + [オプション — Dynamic Mediaの設定 — Scene7モード、一般設定](dm-general-settings.md)
    + [オプション — Dynamic Mediaの設定 — Scene7モード、公開設定](dm-publish-settings.md)
-   + [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)
+   + [Configure Dynamic Media - Hybrid mode](config-dynamic.md)
    + [Dynamic Media - Scene7モードのトラブルシューティング](troubleshoot-dms7.md)
    + [Dynamic Media のアクセシビリティ](accessibility-dm.md)
    + [Dynamic Media — ハイブリッドモードからDynamic Media - S7 モードへの移行](migrate-from-hybrid-to-dms7.md)
@@ -96,7 +96,7 @@ ht-degree: 57%
    + [コンテンツフラグメント用 GraphQL API](content-fragments/graphql-api-content-fragments.md)
    + [コンテンツフラグメントに対するリモート GraphQL クエリの認証](content-fragments/graphql-authentication-content-fragments.md)
    + [GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](/help/assets/content-fragments/content-fragments-graphql-samples.md)
-   + [[!DNL Assets] プロキシ開発](proxy.md)
+   + [[!DNL Assets] proxy development](proxy.md)
 + アセットの管理 {#administer}
    + [サポートされているファイル形式](assets-formats.md)
    + [検索ファセット](search-facets.md)
@@ -109,8 +109,8 @@ ht-degree: 57%
    + [タグ付け用のスマートコンテンツサービスの設定](config-smart-tagging.md)
    + [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md)
    + [アセットエディターページの作成と設定](assets-finder-editor.md)
-   + [Assets サイズ設定ガイド](assets-sizing-guide.md)
-   + [アセットの翻訳のベストプラクティス](best-practices-for-translating-assets-efficiently.md)
+   + [Assets sizing guide](assets-sizing-guide.md)
+   + [Best practices to translate assets](best-practices-for-translating-assets-efficiently.md)
    + [[!DNL Assets] パフォーマンスチューニングガイド](performance-tuning-guidelines.md)
    + [[!DNL Assets] 移行ガイド](assets-migration-guide.md)
    + [[!DNL Assets] ネットワークに関する考慮事項](assets-network-considerations.md)
@@ -121,11 +121,12 @@ ht-degree: 57%
    + [ [!DNL InDesign Server] との統合](indesign.md)
    + [Digital Rights Management](drm.md)
    + [アセットのインサイトにデモパッケージを使用](use-demo-package-for-asset-insights.md)
+   + [Adobeアセットリンクの設定](configure-asset-link.md)
    + [Adobe InDesign 用の FPO レンディションを生成する](configure-fpo-renditions.md)
    + [Assets のファイル形式に関するベストプラクティス](assets-file-format-best-practices.md)
    + [アセットを監視するためのベストプラクティス](assets-monitoring-best-practices.md)
    + [Camera Raw サポート](camera-raw.md)
-   + [Apache Tika を使用したアセットの MIME タイプの検出](detect-asset-mime-type-with-tika.md)
+   + [Detect MIME type of assets using Apache Tika](detect-asset-mime-type-with-tika.md)
    + [画像トランスコーディングライブラリ](imaging-transcoding-library.md)
    + [コレクション、スニペット、スニペットテンプレートのマルチテナント機能](multi-tenancy.md)
    + [アセットの透かしの設定](watermarking.md)
@@ -133,7 +134,7 @@ ht-degree: 57%
 + Brand Portal {#brandportal}
    + [ [!DNL Assets]  での [!DNL Brand Portal]の設定](configure-aem-assets-with-brand-portal.md)
    + [ [!DNL Brand Portal] へのアセットの公開](brand-portal-publish-assets.md)
-   + [へのフォルダーの公開 [!DNL Brand Portal]](brand-portal-publish-folder.md)
+   + [Publish folders to [!DNL Brand Portal]](brand-portal-publish-folder.md)
    + [コレクションの公開先 [!DNL Brand Portal]](brand-portal-publish-collection.md)
 + コンテンツフラグメント {#content-fragments}
    + [コンテンツフラグメントの操作](content-fragments/content-fragments.md)
@@ -157,19 +158,19 @@ ht-degree: 57%
    + [ビデオアセットの管理](managing-video-assets.md)
    + [翻訳プロジェクトの作成](translation-projects.md)
    + [翻訳するアセットの準備](preparing-assets-for-translation.md)
-   + [Experience Managerからのアセットのダウンロード](download-assets-from-aem.md)
+   + [Download assets from Experience Manager](download-assets-from-aem.md)
    + [Lightbox](light-box.md)
    + [アセットインサイト](asset-insights.md)
    + [DTM を通じてアセットインサイトを有効にする](use-dtm-for-asset-insights.md)
    + [アセットインサイトの設定](configure-asset-insights.md)
    + [アセットのチェックインとチェックアウト](check-out-and-submit-assets.md)
    + [フォルダーへの翻訳クラウドサービスの適用](transition-cloud-services.md)
-   + [Web ページでのページトラッカーと埋め込みコードの使用](use-page-tracker.md)
+   + [Use page tracker and embed code in web pages](use-page-tracker.md)
    + [複合アセットの管理](managing-linked-subassets.md)
    + [関連アセット](related-assets.md)
    + [プライベートフォルダーの共有](private-folder.md)
    + [ビデオレンディション](video-renditions.md)
 + 他のソリューションとの統合 {#integrations}
    + [との統合 [!DNL Adobe Workfront]](workfront-integrations.md)
-   + [インストール [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-install.md)
+   + [Install [!DNL enhanced connector] for [!DNL Workfront]](workfront-connector-install.md)
    + [設定 [!DNL enhanced connector] 対象 [!DNL Workfront]](workfront-connector-configure.md)
