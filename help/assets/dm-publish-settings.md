@@ -8,8 +8,7 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
-exl-id: null
-source-git-commit: b7762a44d7b572d784dda2220530b21f9c46e7ab
+source-git-commit: 1a410c7b71f0e329b327a7f7f05137fcd220fb6a
 workflow-type: tm+mt
 source-wordcount: '3459'
 ht-degree: 5%
