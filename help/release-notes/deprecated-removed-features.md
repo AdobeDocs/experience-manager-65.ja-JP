@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: c9db5a1764d98bb049c08a0e6962b7ed5e1bfe5c
+source-git-commit: 6ec25e3c59a841a6734f1d0e9d4347557d89e79a
 workflow-type: tm+mt
-source-wordcount: '1753'
+source-wordcount: '1761'
 ht-degree: 42%
 
 ---
@@ -28,6 +28,7 @@ AEM機能の差し迫った削除または置き換えを伝達するために�
 
 | 領域 | 機能 | 代替手段 | バージョン (SP) |
 |---|---|---|---|
+| [!DNL Sites] | のエクスペリエンスフラグメントプロパティ **ソーシャルメディアのステータス**. |  | 6.5.11.0 |
 | [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | [モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md) 今すぐ。 | 6.5.11.0 |
 | Creative Cloud統合 | AEMからCreative Cloudフォルダーへの共有は、クリエイティブユーザーがAEMのアセットにアクセスできるようにする方法としてAEM 6.2 で導入され、 [!DNL Creative Cloud] アプリケーションを起動し、新しいファイルをアップロードしたり、変更をAEMに保存したりします。 Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。この機能は AEM に含まれてはいますが、代替ソリューションを使用することを強くお勧めします。 | AdobeAsset Link やAEMデスクトップCreative Cloudなど、新しいアプリケーション統合機能に切り替えることをお勧めします。 |  |
 | Assets | `AssetDownloadServlet` は、パブリッシュインスタンスに対してデフォルトで無効になっています。詳しくは、](/help/sites-administering/security-checklist.md)AEM セキュリティチェックリスト[を参照してください。 | 設定について詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 |  |
