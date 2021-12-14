@@ -4,9 +4,9 @@ description: 固有のリリースノート [!DNL Adobe Experience Manager] 6.5 
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: c7fdfeae785ad044437d065a8da6bdcbaf00d4c4
+source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
 workflow-type: tm+mt
-source-wordcount: '3674'
+source-wordcount: '3728'
 ht-degree: 4%
 
 ---
@@ -512,6 +512,16 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * ショッパブルバナービューアでアセットをプレビューすると、Dynamic Mediaのインタラクティブ画像のホットスポットが表示されない。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録の変更が完了するのを待機中のタイムアウトが未登録になりました。
+
+* コンテンツフラグメントまたは Sites/Pages のいずれかを移動/削除/公開しようとすると、バックグラウンドクエリが失敗するので、コンテンツフラグメント参照が取得される際に問題が発生する。つまり、機能は動作しません。
+正しい操作を行うには、次のプロパティをインデックス定義ノードに追加する必要があります `/oak:index/damAssetLucene` （インデックスの再作成は不要） :
+
+   ```xml
+   "tags": [
+       "visualSimilaritySearch"
+     ]
+   "refresh": true
+   ```
 
 ## OSGi バンドルとコンテンツパッケージが含まれています {#osgi-bundles-and-content-packages-included}
 
