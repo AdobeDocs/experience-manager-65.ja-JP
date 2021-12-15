@@ -1,15 +1,15 @@
 ---
 title: サポートされているファイル形式と MIME タイプ
-description: でサポートされているファイル形式と MIME タイプ [!DNL Assets] and [!DNL Dynamic Media] および各形式でサポートされる機能。
+description: でサポートされているファイル形式と MIME タイプ [!DNL Assets] および [!DNL Dynamic Media] および各形式でサポートされる機能。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 12a8b26a402ce68ee8f61e1035b7f44531cd2825
+source-git-commit: eb7051582a51d983851c876025770668b258bff5
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 60%
+source-wordcount: '1568'
+ht-degree: 59%
 
 ---
 
@@ -215,10 +215,12 @@ Adobe PDF Rasterizer ライブラリは、大きくコンテンツを大量に�
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV（DV25）、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
 | MP4 | MPEG-4 | H264/AVC（すべてのプロファイル） | - |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | - |
-| MXF | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
+| MXF ‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | - |
 | OGV、OGG | Ogg | Theora、VP3、Dirac | - |
 | WebM | WebM | Google VP8 | - |
 | WMV | Windows Media 9 | WMV3（v9）、WMV2（v8）、WMV1（v7）、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft® Screen (MSS2)、Microsoft® Photo Story (WVP2) |
+
+‡このビデオ形式は、Dynamic Mediaのインタラクティブビデオでの使用や、Experience Manager Assetsの Annotation での使用には、まだサポートされていません。
 
 ## サポートされるアーカイブ形式 {#supported-archive-formats}
 

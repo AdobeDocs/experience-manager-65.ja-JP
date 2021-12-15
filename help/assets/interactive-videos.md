@@ -8,52 +8,52 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 04be55f2-c7d8-45ef-89e5-58856b971de5
 docset: aem65
-feature: インタラクティブビデオ
+feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
-source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
+source-git-commit: eb7051582a51d983851c876025770668b258bff5
 workflow-type: tm+mt
-source-wordcount: '6008'
-ht-degree: 63%
+source-wordcount: '6036'
+ht-degree: 80%
 
 ---
 
 # インタラクティブビデオ{#interactive-videos}
 
-インタラクティブビデオ（ショッパブルビデオとも呼ばれます）を簡単に作成して、ビデオから直接コンバージョンを促すことができます。 ビデオに対する顧客エンゲージメントは、ビデオプレーヤーの隣のパネルで行われ、関連するサービス、情報または製品のサムネールが、ビデオの特集に基づいてスクロール表示されます。顧客は、サムネールを選択してサービスに直接リンクしたり、買い物かごに品目を追加して即時に購入したり、Webページにリンクして詳細を確認したりできます。
+インタラクティブビデオ（ショッパブルビデオとも呼ばれます）を簡単に作成して、ビデオから直接コンバージョンを促すことができます。 ビデオに対する顧客エンゲージメントは、ビデオプレーヤーの隣のパネルで行われ、関連するサービス、情報または製品のサムネールが、ビデオの特集に基づいてスクロール表示されます。顧客はサムネールを選択して、サービスを直接参照したり、買い物かごに商品を追加して即時に購入したり、Web ページを参照して詳細を確認したりできます。
 
-ビデオが終了すると、すべての製品の視覚的な概要が表示され、コールトゥアクションが実行されます。 お客様は、必要な品目を選択する別の機会があります。 こうしたすぐに行動に移すことができる具体的なエクスペリエンスが顧客のエンゲージメントとコンバージョンを高めます。
+ビデオが終了すると、コールトゥアクションを促すために、すべての商品の概要が視覚に訴えて表示されます。顧客は、ここで欲しい商品を選択することもできます。こうしたすぐに行動に移すことができる具体的なエクスペリエンスが顧客のエンゲージメントとコンバージョンを高めます。
 
 [インタラクティブ画像](/help/assets/interactive-images.md)も参照してください。
 
 ## インタラクティブビデオの使用例 {#interactive-video-in-action}
 
-インタラクティブでショッパブルなビデオを実際に確認するには、「[ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)」を選択し、ページ上の「**[!UICONTROL ショッパブルメディア]**」見出しまでスクロールして、ショッパブルビデオを選択します。
+インタラクティブでショッパブルなビデオを実際に表示するには、 [ライブデモ](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)、にスクロールします。 **[!UICONTROL ショッパブルメディア]** 見出しを使用して、ショッパブルビデオを選択します。
 
 * 再生中にビデオ内で製品が使用されると、同じ製品のサムネール画像が右側に表示されます。
 
-* ビデオを一時停止する場合はサムネールを選択し、製品のクイックビューを開きます。 例えば、ビデオ内でKitchenAidのサムネール画像を選択して、ミキサーの360度のスピンビューを表示したり、ズームインしてミキサーの詳細を表示したりできます。
+* ビデオを一時停止する場合は、サムネールを選択し、製品のクイックビューを開きます。 例えば、ビデオ内の KitchenAid のサムネール画像を選択すると、このミキサーの 360 度のスピンビューを見たり、細部を拡大表示したりすることができます。
 
 <!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
-![インタラクティブでショッパブルなビデオからのフレ](assets/chlimage_1-126.png) *ームインタラクティブでショッパブルなビデオからのビデオフレームキャプチャ。*
+![インタラクティブでショッパブルなビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブでショッパブルなビデオからのビデオフレームキャプチャ。*
 
 >[!NOTE]
 >
->ユーザーがサムネール画像を選択したときにWebページを起動するインタラクティブビデオを作成する場合、一部のデバイスでは、ポップアップWebページが開かないようにブロックされます。 そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。例えば、Apple iPhone 6で、**[!UICONTROL 設定]** / **Safari** / **ポップアップのブロック**&#x200B;に移動し、コントロールを&#x200B;**[!UICONTROL オフ]**&#x200B;にスライドします。 これで、インタラクティブビデオを再生してサムネールを選択すると、ポップアップを開くかどうかを確認するプロンプトが表示されます。 同意すると Web ページが開きます。
+>ユーザーがサムネール画像を選択すると Web ページが開くようにインタラクティブビデオを作成した場合、一部のデバイスでは、ポップアップ Web ページがブロックされて開きません。そのようなケースでは、デバイスのポップアップブロック機能の設定を変更する必要があります。例えば、Apple iPhone 6 で、 **[!UICONTROL 設定]** > **Safari** > **ポップアップのブロック**&#x200B;をクリックし、次の場所にコントロールをスライドさせます。 **[!UICONTROL オフ]**. こうすると、インタラクティブビデオを再生してサムネールを選択したときに、ポップアップを開くかどうかを確認するメッセージが表示されます。同意すると Web ページが開きます。
 
 ### インタラクティブビデオの作成方法を見る {#watch-how-interactive-videos-are-created}
 
-[インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo)（7分30秒）の説明を再生します。
-このビデオガイドの対象はAssets on Demandですが、原則や手順はAdobe Experience Manager Assetsのインタラクティブビデオにも適用されます。
+のウォークスルーを再生する [インタラクティブビデオの作成方法](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo) （7 分 30 秒）
+このビデオガイドの対象は Assets on Demand ですが、原則や手順はAdobe Experience Manager Assets のインタラクティブビデオにも対応しています。
 
 ### アドビカスタマーサクセスウェビナー {#adobe-customer-success-webinar}
 
-「Experience Managerアセットでのインタラクティブビデオ、リンク共有、YouTube共有の使用」ウェビナーでは、インタラクティブビデオやその他の機能を使用して、コンバージョンに基づくイベントをビデオマーケティングコンテンツに関連付ける方法について説明します。
+「Experience Manager Assetsでのインタラクティブビデオ、リンク共有、YouTube共有の使用」ウェビナーでは、インタラクティブビデオとその他の機能を使用して、コンバージョンに基づくイベントをビデオマーケティングコンテンツに関連付ける方法について説明します。
 
 >[!NOTE]
 >
->[インタラクティブビデオ、リンク共有、YouTube共有をExperience Managerアセットで使用する](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/)。
+>[Experience Manager Assetsでのインタラクティブビデオ、リンク共有、YouTube共有の使用](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/).
 
 ## クイックスタート：インタラクティブビデオ {#quick-start-interactive-videos}
 
@@ -61,43 +61,44 @@ ht-degree: 63%
 
 一部のクイックスタートタスク内には「**例**」という見出しがあります。これには、まだインタラクティビティが追加されて&#x200B;*いない*&#x200B;次の開始デモ Web ページに基づく、簡単なチュートリアルが含まれています。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=ja)
 
 「**例**」では、Web サイトにインタラクティブビデオを統合する手順が説明されています。
 
 最後の「例」節のチュートリアルを完了すると、完全に統合されたインタラクティブビデオを含む最終的なデモ Web ページは、次のようになります。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=ja)
 
 インタラクティブビデオの手順：
 
-1. **（オプション）クイックビュー変数の特定**  — まず、既存のクイックビュー実装で使用される動的変数を特定します。これらの変数を使用して、インタラクティブビデオを作成するときに、製品のサムネールを対応する製品のクイックビューにマッピングします。[（オプション）クイックビュー変数の識別](#optional-identifying-quickview-variables)を参照してください。
-   *この手順は、次のすべてに該当する場合にのみ必要です*。・クイックビューにトリガーして、ビデオにインタラクティビティを追加したい。・ eコマースソリューション(IBM® WebSphere® Commerce、Elastic Path、Hybris、Intershopなど)からExperience Managerに製品データを取り出すために、Experience Managerの実装がeコマース統合フレームワークを使用&#x200B;*していない*。 [Experience Managerアセットのeコマースの概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
+1. **（オプション）クイックビュー変数の特定** - まず、既存のクイックビュー実装で使用される動的変数を特定します。これらの変数を使用して、インタラクティブビデオを作成するときに、製品のサムネールを対応する製品のクイックビューにマッピングします。詳しくは、 [（オプション）クイックビュー変数の特定](#optional-identifying-quickview-variables).
+   *この手順は、次のすべてに当てはまる場合にのみ必要です*:・クイックビューにトリガーして、ビデオにインタラクティブ機能を追加したい。
+・Experience Managerの実装では *not* e コマース統合フレームワークを使用して、IBM® WebSphere® Commerce、Elastic Path、Hybris、Intershop などの e コマースソリューションからExperience Managerに製品データを取り出します。 詳しくは、 [Experience Manager Assetsの e コマースの概念](/help/commerce/cif-classic/administering/concepts.md).
 
-1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。独自のインタラクティブビデオビューアプリセットの作成は、標準提供のインタラクティブビデオビューアプリセット（`Shoppable_Video_Light` または `Shoppable_Video_Dark`）を使用する場合には必要ありません。[ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（オプション）および[インタラクティブビューアプリセットの作成に関する考慮事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。
+1. **（オプション）インタラクティブビデオのビューアプリセットの作成** - プレーヤーを構成する様々なコンポーネント（ビデオスクラバーやインタラクティブサムネールなど）の外観と動作をカスタマイズします。独自のインタラクティブビデオビューアプリセットの作成は、標準提供のインタラクティブビデオビューアプリセット（`Shoppable_Video_Light` または `Shoppable_Video_Dark`）を使用する場合には必要ありません。[ビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)（オプション）と[インタラクティブビューアプリセットの作成に関する注意事項](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset)を参照してください。
 
-1. **ビデオおよび関連する画像アセットのアップロード** - インタラクティブにするビデオと関連する画像をアップロードします。[ビデオとそれに関連するサムネールアセットのアップロード](#uploading-a-video-and-its-associated-thumbnail-assets)を参照してください。
+1. **ビデオおよび関連する画像アセットのアップロード** - インタラクティブにするビデオと関連する画像をアップロードします。[ビデオおよび関連するサムネールアセットのアップロード](#uploading-a-video-and-its-associated-thumbnail-assets)を参照してください。
 
-1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます（インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。インタラクティブビデオアセットを公開して作業は完了です。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL をコピーして、Web サイトのランディングページに適用します。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。
-[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+   >[!NOTE]
+   >
+   >MXF ビデオ形式は、Dynamic Mediaのインタラクティブビデオでの使用に対しては、まだサポートされていません。
 
-1. **WebサイトまたはExperience Manager内のWebサイトにインタラクティブビデオを追加します**  -Experience Managerサイトまたはeコマース（またはその両方）を使用する場合、Webページにインタラクティブビデオを追加できます。インタラクティブメディアコンポーネントをページのExperience Managerにドラッグします。 [ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
-埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオのWebサイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
-サードパーティのWCM(Web Content Manager)を使用している場合は、新しいインタラクティブビデオを、Webサイトで使用されている既存のクイックビュー実装に統合する必要があります。 [インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
-   [ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
+1. **ビデオへのインタラクティビティの追加** - ビデオに 1 つ以上の時間セグメントを追加します。次に、それらの時間セグメント内で画像サムネールを関連付けます。各画像サムネールを、ハイパーリンク、クイックビュー、エクスペリエンスフラグメントなどのアクションに割り当てます（インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません）。インタラクティブビデオアセットを公開して作業は完了です。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL をコピーして、Web サイトのランディングページに適用します。[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)を参照してください。[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
 
-## （オプション）クイックビュー変数の識別 {#optional-identifying-quickview-variables}
+1. **Experience Managerで Web サイトまたは Web サイトにインタラクティブビデオを追加する** - Experience Manager Sites、e コマース、またはその両方を使用している場合、インタラクティブビデオを Web ページに追加できます。 インタラクティブメディアコンポーネントをページのExperience Managerにドラッグします。 [ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。埋め込みコードまたは URL を使用して、インタラクティブビデオを Web サイトエクスペリエンスに統合します。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。サードパーティの WCM（Web Content Manager）を使用している場合は、新しいインタラクティブビデオを、Web サイトで使用されている既存のクイックビュー実装に統合する必要があります。[インタラクティブビデオの既存のクイックビューへの統合](#integrating-an-interactive-video-with-an-existing-quickview)を参照してください。
+   [ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
+
+## （オプション）クイックビュー変数の特定 {#optional-identifying-quickview-variables}
 
 >[!NOTE]
 >
 >このタスクが必要になるのは次に該当する場合のみです。
 >
 >* クイックビューをトリガーして、ビデオにインタラクティビティを追加する。
->* eコマースソリューション(IBM® WebSphere® Commerce、Elastic Path、Hybris、Intershopなど)からExperience Managerに製品データを取り出すために、Experience Managerの実装がeコマース統合フレームワークを使用&#x200B;*して*&#x200B;いません。 [Experience Managerアセットのeコマースの概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
+>* Experience Managerの実装では *not* e コマース統合フレームワークを使用して、IBM® WebSphere® Commerce、Elastic Path、Hybris、Intershop などの e コマースソリューションからExperience Managerに製品データを取り出します。 詳しくは、 [Experience Manager Assetsの e コマースの概念](/help/commerce/cif-classic/administering/concepts.md).
 
 >
->
-Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
+>Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
 最初に、インタラクティブビデオの作成プロセス中に製品サムネールを対応する製品クイックビューにマッピングできるように、既存のクイックビューの実装で使用している動的変数を特定します。
 
@@ -105,9 +106,9 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 製品クイックビューを一意にトリガーするために必要な変数を適切に特定することが重要です。
 
-既存のクイックビュー実装を担当するIT担当者に相談するだけで十分な場合があります。 システム内のクイックビューを識別するための最小限のデータセットを把握している可能性が高くなります。 ただし、フロントエンドコードの既存の動作を分析するだけでもかまいません。
+既存のクイックビュー実装を担当している IT 担当者に問い合わせれば済む場合もあります。システム内のクイックビューを識別するための最小データセットを把握している可能性が高くなります。 ただし、フロントエンドコードの既存の動作を分析するだけでもかまいません。
 
-ほとんどのクイックビュー実装では、次のパラダイムを使用します。
+ほとんどのクイックビュー実装では、次のような枠組みが使用されています。
 
 * ユーザーは Web サイト上の特定のユーザーインターフェイス要素をアクティベートします。例えば、「クイックビュー」ボタンを選択します。
 * Web サイトでは、必要に応じて、クイックビューのデータまたはコンテンツを読み込むための Ajax リクエストをバックエンドに送信します。
@@ -118,7 +119,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 通常、専門のデバッグツールを使用する必要はありません。最新の Web ブラウザーには、十分なタスクを実行できる Web インスペクターが備わっています。Web インスペクターが搭載されている Web ブラウザーの例を次に示します。
 
-* Google Chromeで、送信されるすべてのHTTPリクエストを表示するには、**F12**(Windows)または&#x200B;**Command+Options+I**(Mac)を押してデベロッパーツールパネルを開き、**Network**&#x200B;タブを選択します。
+* Google Chrome で、送信されるすべての HTTP リクエストを表示するには、 **F12** (Windows) または **Command+Options+I** (Mac) をクリックしてデベロッパーツールパネルを開き、 **ネットワーク** タブをクリックします。
 
 * Firefox では、**F12** キー（Windows）または **Command + Option + I** キー（Mac）を押して Firebug プラグインを有効にして「**`[Net]`**」タブを使用するか、組み込みの Inspector ツールとその「Network」タブを使用します。
 
@@ -126,13 +127,13 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
 
-次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。通常、クイックビューをトリガーすると、サーバーに送信されるリクエストが多数あります。 クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
+次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。通常、クイックビューをトリガーすると、サーバーに送信される多数のリクエストが存在します。 クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
-このプロセスの実行中は、製品カテゴリや製品タイプが異なる、Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビューURLには、特定のWebサイトカテゴリに共通するが、Webサイトの別の領域にアクセスした場合にのみ変化する部分を含めることができるからです。
+このプロセスの実行中は、製品カテゴリや製品タイプが異なる、Web サイトの様々な領域にアクセスすることが重要です。なぜなら、クイックビュー URL には、特定の Web サイトカテゴリに共通するが、Web サイトの別の領域にアクセスした場合にのみ変更される部分を含めることができるからです。
 
 単純なケースでは、クイックビュー URL 内で変化する唯一の部分が製品 SKU となります。この場合、Adobe Experience Manager でサムネールをインタラクティブビデオの時間セグメントに追加するのに必要なデータは製品の SKU 値のみです。
 
-ただし、複雑なケースでは、クイックビューURLに製品SKU以外の様々な要素が含まれます（カテゴリID、カラーコード、サイズコードなど）。 その場合は、それぞれの要素が Adobe Experience Manager のサムネールデータ定義で個別の変数になります。
+ただし、複雑なケースでは、クイックビュー URL に製品 SKU 以外の様々な要素が含まれます（カテゴリ ID、カラーコード、サイズコードなど）。 その場合は、それぞれの要素が Adobe Experience Manager のサムネールデータ定義で個別の変数になります。
 
 次のクイックビュー URL の例と、その結果となるサムネールの変数について見てみましょう。
 
@@ -146,7 +147,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
       <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>この URL で変化する唯一の部分は <code>productId=</code> というクエリ文字列パラメーターの値であり、これが SKU 値であることは明白です。したがって、サムネールでは、<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong>などの値が設定されたSKUフィールドのみが必要になります。</p> </td>
+    </ul> <p>この URL で変化する唯一の部分は <code>productId=</code> というクエリ文字列パラメーターの値であり、これが SKU 値であることは明白です。したがって、サムネールでは、 <strong><code>866558</code></strong>, <strong><code>1196184</code></strong>, <strong><code>1081492</code></strong>, <strong><code>1898294</code></strong>.</p> </td>
   </tr>
   <tr>
     <td><p>単一の SKU（URL パス内）</p> </td>
@@ -178,9 +179,9 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 前述の方法をサンプルの Web サイトに適用すると、いくつの製品サムネールが含まれる Web ページが生成され、「SEE MORE」ボタンが表示されます。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
-ページで使用可能なすべての製品クイックビューをアクティベートすると、バックエンドに対して次のリストのクイックビューリクエストが実行されます。
+ページで使用可能なすべての製品クイックビューをアクティベートした後、バックエンドに対しておこなわれたクイックビューリクエストの次のリストが取得されます。
 
 * datafeed/candles-233396346.json
 * datafeed/candles-233978050.json
@@ -226,28 +227,31 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 オプションで、インタラクティブビデオの独自のカスタムビューアプリセットを作成することもできます。特に、ビデオプレーヤーのスタイル設定、インタラクティブサムネールおよびビデオの最後に表示されるサムネールのグリッドビューを決定できます。
 
-インタラクティブビデオのビューアプリセットにより、ビデオとユーザーが追加したすべてのセグメントが正しくレンダリングされます。また、プレビューモードで製品サムネールを選択した場合は、デフォルトのクイックビューの例が使用されるので、公開前にインタラクティビティをテストできます。
+インタラクティブビデオのビューアプリセットにより、ビデオとユーザーが追加したすべてのセグメントが正しくレンダリングされます。また、プレビューモードで製品のサムネールを選択すると、デフォルトのサンプルクイックビューが使用されるので、公開前にインタラクティビティをテストできます。
 
 ビューアプリセットを保存すると、ビューアプリセットページでそのプリセットのステータスが自動的に&#x200B;**オン**&#x200B;に設定されます。このステータスは、そのプリセットが Dynamic Media コンポーネントに表示され、ビデオのプレビュー時に必ず使用されることを意味します。また、新しいビューアプリセットも忘れずに手動で公開してください。
 
-[新しいビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)を参照して、独自のインタラクティブビデオのビューアプリセットを作成します。
+詳しくは、 [新しいビューアプリセットの作成](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) ：独自のインタラクティブビデオのビューアプリセットを作成します。
 
 ## ビデオおよび関連するサムネールアセットのアップロード {#uploading-a-video-and-its-associated-thumbnail-assets}
 
-ビデオとサムネールアセットを既にアップロードしている場合は、[ビデオへのインタラクティビティの追加](#adding-interactivity-to-your-video)に進んでください。
+ビデオとサムネールアセットを既にアップロードしている場合は、[ビデオへのインタラクティブ機能の追加](#adding-interactivity-to-your-video)に進んでください。
 
-間違ったビデオや画像をアップロードした場合、または不要になったアップロード済みビデオや画像を削除する場合は、[アセットの削除](/help/assets/manage-assets.md#deleting-assets)を参照してください。
+>[!NOTE]
+>
+>MXF ビデオ形式は、Dynamic Mediaのインタラクティブビデオでの使用は、まだサポートされていません。
+
+間違ったビデオや画像をアップロードした場合、またはアップロードしたビデオや不要になった画像を削除する場合は、「 [アセットの削除](/help/assets/manage-assets.md#deleting-assets).
 
 ビデオおよび関連するサムネールアセットをアップロードするには：
 
 1. 目的の 1 つ以上のフォルダーにビデオおよび関連するサムネールアセットをアップロードします。
 
-   [アセットのアップロード](/help/assets/manage-assets.md)を参照してください。
-[FTPジョブスケジューリングを使用したアセットのアップロード](/help/assets/manage-assets.md)を参照してください。
+   [アセットのアップロード](/help/assets/manage-assets.md)を参照してください。[FTP ジョブスケジューリングを使用したアセットのアップロード](/help/assets/manage-assets.md)を参照してください。
 
    これで、ビデオにインタラクティブ機能を追加できます。
 
-## ビデオへのインタラクティビティの追加 {#adding-interactivity-to-your-video}
+## ビデオへのインタラクティブ機能の追加 {#adding-interactivity-to-your-video}
 
 「インタラクティブビデオを作成」ページで、インプレース Visual Editor を使用してビデオにタイムラインセグメントを追加します。
 
@@ -272,23 +276,23 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 1. Assets ビューで、インタラクティブにするアップロード済みのビデオに移動します。
 1. 次のいずれかの操作を行います。
 
-   * 画像の上にマウスポインターを置き、「**[!UICONTROL 選択]**」（チェックマークアイコン）を選択します。 ツールバーの「**[!UICONTROL 編集]**」を選択します。
+   * 画像の上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）を選択します。ツールバーの「**[!UICONTROL 編集]**」を選択します。
 
-   * 画像の上にマウスポインターを置き、「**[!UICONTROL その他のアクション]**（3つのドットのアイコン）**[!UICONTROL 編集]**」を選択します。
+   * 画像の上にマウスポインターを置き、**[!UICONTROL その他のアクション]**（3 つのドットのアイコン）／**[!UICONTROL 編集]**&#x200B;を選択します。
 
    * 画像を選択して、詳細ビューページで開くことができます。 ツールバーの「**[!UICONTROL 編集]**」を選択します。
 
 1. インタラクティブビデオを作成ページで、次のいずれかの操作を行います。
 
-   * ビデオの再生を開始するには、**[!UICONTROL 再生]**&#x200B;ボタンを選択します。 ハイライト表示する特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」を選択します。 ビデオの最後に達するまで繰り返します。
+   * ビデオの再生を開始するには、「**[!UICONTROL 再生]**」ボタンを選択します。取り上げたい特定の製品、サービスまたは詳細が表示されたら、ツールバーの「**[!UICONTROL セグメントを追加]**」を選択します。ビデオの最後に達するまで繰り返します。
 
-      追加した各時間セグメントに1つ以上のサムネール画像を割り当て、それらのサムネールをクイックビュー製品ページにリンクして、顧客が購入するか、詳細を確認するWebページにリンクします。
+      追加した各時間セグメントに 1 つ以上のサムネール画像を割り当て、それらのサムネールを、顧客が購入するクイックビュー製品ページや詳細情報の Web ページにリンクします。
 
-   * ビデオの再生を開始するには、**[!UICONTROL 再生]**&#x200B;ボタンを選択します。 ハイライト表示する特定の製品、サービスまたは詳細が表示されたら、「**[!UICONTROL 一時停止]**」を選択します。 「**[!UICONTROL セグメントを追加]**」を選択します。
+   * ビデオの再生を開始するには、「**[!UICONTROL 再生]**」ボタンを選択します。取り上げたい特定の製品、サービスまたは詳細が表示されたら、「**[!UICONTROL 一時停止]**」を選択します。「**[!UICONTROL セグメントを追加]**」を選択します。
 
       ビデオの最後に達するまで、セグメントを追加するタイムラインのポイントで、ビデオの再生と停止を続けます。
 
-1. （オプション） **[!UICONTROL タイムラインスケールスライダー]**&#x200B;のバーを左にドラッグしてズームインするか、右にドラッグしてズームアウトし、追加したセグメントの表示レベルを制御します。
+1. （オプション）バーを **[!UICONTROL タイムラインスケールスライダ]** 左にズームインするか右にズームアウトして、追加したセグメントの表示レベルを制御します。
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -349,13 +353,13 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    * セグメントの開始時刻と終了時刻を調整します。
 
-        セグメントを選択し、先頭または末尾の青い楕円形をドラッグして、開始時刻または終了時刻をそれぞれ調整します。表示されるビデオフレームは、調整に応じて、ビデオ内の対応する時刻に移動します。タイムラインセグメントの移動は、タイムライン内の隣接するセグメントに基づいて制限されます。調整できる最小セグメント時間は 1 秒です。
+      セグメントを選択し、先頭または末尾の青い楕円形をドラッグして、開始時刻または終了時刻をそれぞれ調整します。表示されるビデオフレームは、調整に応じて、ビデオ内の対応する時刻に移動します。タイムラインセグメントの移動は、タイムライン内の隣接するセグメントに基づいて制限されます。調整できる最小セグメント時間は 1 秒です。
 
-        次のナビゲーションショートカットを使用すると、ビデオのセグメントを簡単にチェックして微調整することができます。
+      次のナビゲーションショートカットを使用すると、ビデオのセグメントを簡単にチェックして微調整することができます。
 
-      * そのセグメントの先頭に直接ビデオをシークするには、先頭の青い楕円形を選択します。
-      * そのセグメントの最後まで直接ビデオをシークするには、末尾の青い楕円形を選択します。
-      * そのセグメントの最初にビデオ再生を戻すには、セグメント全体を選択します。
+      * そのセグメントの先頭に直接移動するには、先頭の青い楕円を選択します。
+      * そのセグメントの末尾に直接移動するには、末尾の青い楕円を選択します。
+      * そのセグメントの先頭からビデオを再生するには、セグメント全体を選択します。
 
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
@@ -363,14 +367,14 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    * セグメントを削除するには
 
-      タイムライン上にある最後のセグメントを選択し、ツールバーで「**[!UICONTROL セグメントを削除]**」を選択します。 2 つ以上のセグメントを選択した場合、「セグメントを削除」機能は使えません。
+      タイムライン上にある最後のセグメントを選択し、ツールバーの「**[!UICONTROL セグメントを削除]**」を選択します。2 つ以上のセグメントを選択した場合、「セグメントを削除」機能は使えません。
 
-      削除できるのは最後のセグメントのみです。例えば、タイムライン上のすべてのセグメントを削除する場合、常に最後のセグメントを選択してから、「**[!UICONTROL セグメントを削除]**」を選択する必要があります。
+      削除できるのは最後のセグメントのみです。例えば、タイムライン上のすべてのセグメントを削除したい場合、常に最後のセグメントを選択して「**[!UICONTROL セグメントを削除]**」を選択します。
 
 
 1. 1 つまたは複数のサムネール画像を関連付ける時間セグメントを選択します。
 1. ビデオの右側にある「**[!UICONTROL コンテンツ]**」タブを選択します。
-1. 「コンテンツ」タブで、「**[!UICONTROL アセット]**」を選択し、ビデオで使用するすべての画像アセットを参照して選択します。 選択したアセットは「コンテンツ」タブのアセットセレクターパネルに追加されます。
+1. 「コンテンツ」タブの下で「**[!UICONTROL アセットを選択]**」を選択し、ビデオで使用するすべての画像アセットを参照して選択します。選択したアセットは「コンテンツ」タブのアセットセレクターパネルに追加されます。
 
 1. 「コンテンツ」タブの下にあるアセットセレクターで、次のいずれかの操作を行います。
 
@@ -384,8 +388,8 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
         <td>選択したタイムラインセグメントからサムネールを削除するには</td>
         <td><p>次のいずれかの操作を行います。</p>
           <ul>
-          <li>アセットセレクターパネルで、チェックマークの付いた画像を選択解除します。 画像アセットがタイムラインセグメントから削除されます。<br /> </li>
-          <li>選択したタイムラインセグメントで画像を選択し、ツールバーで「<strong>製品を削除</strong>」を選択します。</li>
+          <li>アセットセレクターパネルで、チェックマークの付いている画像を選択して選択を解除します。画像アセットがタイムラインセグメントから削除されます。<br /> </li>
+          <li>選択したタイムラインセグメントで画像を選択し、ツールバーの「<strong>製品を削除</strong>」を選択します。</li>
           </ul> </td>
         </tr>
       </tbody>
@@ -393,45 +397,45 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    ![アセットピッカー](assets/chlimage_1-133.png)
 
-   アセットセレクターパネルで画像を選択すると、選択したタイムラインセグメントに画像が追加されます。
+   アセットセレクターパネルで画像を選択すると、選択したタイムラインセグメントにその画像が追加されます。
 
-1. いずれかのタイムラインセグメント内のサムネール画像を1つ選択し、「**[!UICONTROL アクション]**」タブを選択します。
-1. 次のいずれかの操作をおこないます。
+1. 1 つのタイムラインセグメント内のサムネール画像を 1 つ選択し、「**[!UICONTROL アクション]**」タブを選択します。
+1. 次のいずれかの操作を行います。
    <table> 
     <tbody> 
       <tr> 
       <td>選択したサムネール画像をクイックビューに関連付けるには</td> 
-      <td><p>「アクションタイプ」で、「<strong>クイックビュー</strong>」を選択します。</p> <p>Adobe Experience Manager Sites または eCommerce のユーザーである場合：</p> 
+      <td><p>「アクションタイプ」の下で「<strong>クイックビュー</strong>」を選択します。</p> <p>Adobe Experience Manager Sites または eCommerce のユーザーである場合：</p> 
        <ul> 
-       <li>「SKU 値」テキストフィールドには、選択した製品の SKU（Stock Keeping Unit）が既に設定されています。SKU は、提供している製品またはサービスごとの一意の識別子です。この値は、画像が製品コマース内の製品に関連付けられている場合に、自動的にExperience Managerされます。</li> 
-       <li>事前に設定されたSKUが正しくない場合は、製品ピッカーアイコン（虫眼鏡）を選択して、製品を選択ページを開きます。 使用する製品を選択し、ページの右上隅にあるチェックマークを選択して、インタラクティブビデオエディターに戻ります。</li> 
+       <li>「SKU 値」テキストフィールドには、選択した製品の SKU（Stock Keeping Unit）が既に設定されています。SKU は、提供している製品またはサービスごとの一意の識別子です。この値は、画像が商品コマース内の商品に関連付けられたときに、自動的にExperience Managerされます。</li> 
+       <li>設定済みの SKU が正しくない場合は、製品ピッカーアイコン（虫眼鏡）を選択して製品を選択ページを開きます。使用する製品を選択し、ページの右上隅にあるチェックマークを選択して、インタラクティブビデオエディターに戻ることができます。</li> 
        </ul> <p> Adobe Experience Manager Sites または eCommerce のユーザーで<em>ない</em>場合は、次のようにします。</p> 
        <ul> 
        <li><a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">ホットスポットの変数の識別</a>を参照してください。変数を定義する必要があります。  </li> 
-       <li>デフォルトでは、この SKU フィールドでは画像アセットのファイル名を拡張子を付けずに使用します。SKUに基づくファイルの標準的な命名規則に従う場合、通常、このファイル名に追加の編集は必要ありません。 </li> 
-       <li>それ以外の場合は、デフォルト値を編集して、正しい SKU 値を入力します。「SKU 値」テキストフィールドに、製品の SKU（Stock Keeping Unit）を入力します。SKU は、提供している製品またはサービスごとの一意の識別子です。入力したSKU値によってクイックビューテンプレートの変数部分が自動的に入力され、選択した画像が特定のSKUのクイックビューに関連付けられます。</li> 
-       </ul> <p>（オプション）クイックビュー内で製品をさらに識別するために使用する必要がある他の変数がある場合は、「<strong>汎用変数を追加</strong>」を選択します。 テキストフィールドに追加の変数を指定します。例えば、追加の変数として <code>category=Womens</code> などと指定します。</p> <p> </p> </td> 
+       <li>デフォルトでは、この SKU フィールドでは画像アセットのファイル名を拡張子を付けずに使用します。SKU に基づくファイルの標準的な命名規則に従っている場合、通常、このファイル名では追加の編集は必要ありません。 </li> 
+       <li>それ以外の場合は、デフォルト値を編集して、正しい SKU 値を入力します。「SKU 値」テキストフィールドに、製品の SKU（Stock Keeping Unit）を入力します。SKU は、提供している製品またはサービスごとの一意の識別子です。入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、選択された画像が特定の SKU のクイックビューに関連付けられます。</li> 
+       </ul> <p>（オプション）クイックビュー内で製品をさらに識別するために必要な他の変数がある場合は、「<strong>汎用変数を追加</strong>」を選択します。テキストフィールドに追加の変数を指定します。例えば、追加の変数として <code>category=Womens</code> などと指定します。</p> <p> </p> </td> 
       </tr> 
       <tr> 
       <td>選択したサムネール画像をハイパーリンクに関連付けるには</td> 
-      <td><p>「アクションタイプ」で、「<strong>ハイパーリンク</strong>」を選択し、次のいずれかの操作を行います。</p> 
+      <td><p>「アクションタイプ」の下の「<strong>ハイパーリンク</strong>」を選択して、次のいずれかを実行します。</p> 
        <ul> 
-       <li>Sitesのユーザーである場合は、Experience Managerセレクターアイコン（フォルダー）を選択してWebページに移動します。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。</li> 
+       <li>Adobe Experience Manager Sites のユーザーである場合は、サイトセレクターアイコン（フォルダー）を選択して Web ページに移動します。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。</li> 
        <li>スタンドアロンの Dynamic Media ユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。</li> 
        </ul> <p>このリンクを新しいブラウザータブで開くか現在のタブで開くかを指定してください。</p> </td> 
       </tr> 
       <tr> 
       <td>選択したサムネール画像をエクスペリエンスフラグメントに関連付けるには</td> 
-      <td><p>「アクションタイプ」で、「<strong>エクスペリエンスフラグメント</strong>」を選択し、次の操作を行います。<p> 
+      <td><p>「アクションタイプ」の下の「<strong>エクスペリエンスフラグメント</strong>」を選択し、次のいずれかを実行します。<p> 
        <ul> 
-       <li>Sitesのユーザーである場合は、検索アイコン（虫眼鏡）を選択してExperience Managerフラグメントページを開きます。 使用するエクスペリエンスフラグメントを選択し、ページの右上隅にある「<strong></strong>」を選択して、前のページのアクションパネルに戻れるようにします。<br /><a href="/help/sites-authoring/experience-fragments.md">エクスペリエンスフラグメント</a>を参照してください。</li> 
+       <li>Adobe Experience Manager Sites のユーザーである場合は、検索アイコン（虫眼鏡）を選択してエクスペリエンスフラグメントページを開きます。使用するエクスペリエンスフラグメントを選択し、「 」を選択します。 <strong>選択 </strong>前のページのアクションパネルに戻れるように、ページの右上隅。<br /><a href="/help/sites-authoring/experience-fragments.md">エクスペリエンスフラグメント</a>を参照してください。</li> 
       </ul> 
        <ul> 
        <li>エクスペリエンスフラグメントをビデオに表示する際の幅と高さを指定します。</li>
        </ul><strong>注意</strong>：インタラクティブビデオのソーシャルメディア共有ツールは、エクスペリエンスフラグメントにビューアを埋め込む場合はサポートされません。この問題を回避するには、ソーシャルメディアでの共有ツールを持たないビューアプリセットを使用または作成します。このようなビューアプリセットを使用すると、ビューアをエクスペリエンスフラグメントに正常に埋め込むことができます。</p></tr>&lt; 
       <tr> 
       <td>既にサムネール画像に割り当てられているアクションを編集するには</td> 
-      <td>タイムラインセグメント内で、テキストラベルの右側にチェーンリンクがあるサムネール画像を選択します。 チェーンリンクは、アクションが割り当てられていることを示します。「<strong>アクション</strong>」タブを選択して、変更を加えることができます。</td> 
+      <td>タイムラインセグメント内で、テキストラベルの右側にチェーンリンクが表示されているサムネール画像を選択します。チェーンリンクは、アクションが割り当てられていることを示します。を選択します。 <strong>アクション</strong> 」タブをクリックして、変更を加えることができます。</td> 
       </tr> 
       <tr> 
       <td>サムネール画像のテキストラベルを変更するには</td> 
@@ -439,7 +443,7 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
       </tr> 
       <tr> 
       <td>変更を元に戻すには：：</td> 
-      <td>ページの右上隅付近にある「<strong>元に戻す</strong>」または「<strong>やり直し</strong>」を選択します。</td> 
+      <td>ページの右上隅にある「<strong>取り消し</strong>」または「<strong>元に戻す</strong>」を選択します。</td> 
       </tr> 
     </tbody> 
    </table>
@@ -457,27 +461,27 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
    * **[!UICONTROL セグメントを統合]** ‐ 2 つの隣接したセグメントを（製品サムネールが割り当てられているものも割り当てられていないものも）1 つのセグメントに統合できます。
 
-      タイムラインで、1つに結合する2つ以上の連続したセグメントを選択します。 下のスクリーンショットでは、選択した2つのセグメントに青い楕円形のドラッグハンドルが表示されません。
+      タイムライン上で、1 つのセグメントに統合する 2 つ以上の連続したセグメントを選択します。以下のスクリーンショットでは、選択した 2 つのセグメントに青い楕円形のドラッグハンドルが表示されていません。
 
-      ツールバーの「**[!UICONTROL セグメントを結合]**」を選択します。
+      ツールバーの「**[!UICONTROL セグメントを統合]**」を選択します。
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
    選択した 5 秒のセグメント 2 つを 10 秒のセグメント 1 つに統合。
 
    * **[!UICONTROL セグメントを分割]** ‐ 1 つのセグメントを 2 つの均等な長さのセグメントに分割できます。セグメントに製品サムネールが割り当てられている場合、サムネールは左のセグメントに組み込まれます。
 
-      タイムラインで、半分に分割するセグメントを選択し、ツールバーの「**[!UICONTROL セグメントを分割]**」を選択します。
+      タイムラインで、半分に分割したいセグメントを選択し、ツールバーで「**[!UICONTROL セグメントを分割]**」を選択します。
 
       2 つ以上のセグメントを選択すると、「**[!UICONTROL セグメントを分割]**」オプションは無効になります。
    ![chlimage_1-135](assets/chlimage_1-135.png)
 
    選択した 10 秒のセグメントを 5 秒ずつのセグメント 2 つに分割。
 
-1. **[!UICONTROL インタラクティブビデオを作成]**&#x200B;ページの右上隅付近に、現在選択されてビデオで使用されているビューアプリセットの名前が表示されます。別のビューアプリセットを選択する場合は、名前を選択します。
+1. **[!UICONTROL インタラクティブビデオを作成]**&#x200B;ページの右上隅付近に、現在選択されてビデオで使用されているビューアプリセットの名前が表示されます。別のビューアプリセットを選択する場合は、この名前を選択します。
 
-   例えば、`Shoppable_Video_light` ビューアプリセットでは、ビデオが再生されるときに横に白い表示領域が現れます。表示領域では、再生中に選択可能なサムネール画像が表示されます。 `Shoppable_Video_dark` ビューアプリセットでは、ビデオが再生されるときに横に黒い表示領域が現れます。
+   例えば、`Shoppable_Video_light` ビューアプリセットでは、ビデオが再生されるときに横に白い表示領域が現れます。この表示領域には、選択可能なサムネール画像が再生中に表示されます。`Shoppable_Video_dark` ビューアプリセットでは、ビデオが再生されるときに横に黒い表示領域が現れます。
 
-   独自のインタラクティブビデオビューアプリセットを作成した場合は、そのプリセットがリストに表示され、そこから選択できます。
+   インタラクティブビデオの独自のビューアプリセットを作成した場合は、そのプリセットがリストに表示され、そこから選択できます。
 
    完了したら、「**[!UICONTROL 保存]**」を選択します。
 
@@ -487,31 +491,29 @@ Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使�
 
 1. インタラクティブビデオを公開します。公開によって埋め込みコードまたは URL が生成されます。最終的には、このコードまたは URL を Web サイトのエクスペリエンスにコピー＆ペーストします。
 
-   クイックビューでインタラクティビティを追加した場合は、埋め込みコードのみを使用します。ハイパーリンクされたwebページとのインタラクティビティを追加した場合は、公開済みURLも使用できます。 ただし、インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+   クイックビューでインタラクティビティを追加した場合は、埋め込みコードのみを使用します。ハイパーリンクされた web ページとのインタラクティビティを追加した場合は、公開済み URL も使用できます。 ただし、インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
 
    [アセットの公開](publishing-dynamicmedia-assets.md)を参照してください。
 
    >[!NOTE]
    >
-   >クイックビューを使用してショッパブルビデオを公開するには、ビデオに関連する各画像アセットをコマース領域から個別に公開する必要があります。
+   >クイックビューを使用してショッパブルビデオを公開するには、ビデオの関連する各画像アセットもコマース領域から別々に公開してください。
 
-   タイムラインセグメントを追加し、インタラクティブビデオを公開したので、既存の Web サイトのランディングページにビデオを追加する準備が整いました。[インタラクティブビデオのWebサイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
+   タイムラインセグメントを追加し、インタラクティブビデオを公開したので、既存の Web サイトのランディングページにビデオを追加する準備が整いました。[インタラクティブビデオの Web サイトへの統合](#integrating-an-interactive-video-with-your-website)を参照してください。
 
 ## インタラクティブビデオアセットの公開 {#publishing-interactive-video-assets}
 
-インタラクティブビデオアセットの公開方法について詳しくは、[アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+詳しくは、 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md) インタラクティブビデオアセットの公開方法について詳しくは、こちらを参照してください。
 
-## インタラクティブビデオのWebサイトへの統合 {#integrating-an-interactive-video-with-your-website}
+## インタラクティブビデオの Web サイトへの統合 {#integrating-an-interactive-video-with-your-website}
 
 ビデオをアップロードし、タイムラインセグメントを追加して、インタラクティブビデオを公開したら、既存の Web サイトにビデオを追加する準備は完了です。
 
-Adobe Experience Manager Sites のユーザーである場合は、インタラクティブメディアコンポーネントをページにドラッグしてインタラクティブビデオを追加できます。[ページへのDynamic Mediaアセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+Adobe Experience Manager Sites のユーザーである場合は、インタラクティブメディアコンポーネントをページにドラッグしてインタラクティブビデオを追加できます。詳しくは、 [ページへのDynamic Mediaアセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md).
 
 スタンドアロンの Adobe Experience Manager Assets のユーザーである場合は、この節で説明するようにインタラクティブビデオを手動で Web サイトに追加できます。
 
-1. 公開済みのインタラクティブビデオの埋め込みコードまたはURLをコピーします。
-[Webページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
-クイックビューでインタラクティビティを追加した場合は、埋め込みコードのみを使用します。ハイパーリンクされたwebページとのインタラクティビティを追加した場合は、公開済みURLも使用できます。 ただし、インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+1. 公開済みのインタラクティブビデオの埋め込みコードまたは URL をコピーします。[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。クイックビューでインタラクティビティを追加した場合は、埋め込みコードのみを使用します。ハイパーリンクされた web ページとのインタラクティビティを追加した場合は、公開済み URL も使用できます。 ただし、インタラクティブコンテンツに相対 URL のリンク（特に Adobe Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
 
 1. ターゲットの Web ページのコードで、静的なビデオの場所を特定します。
 1. 静的なビデオを削除し、Adobe Experience Manager Assets からコピーした埋め込みコードまたは URL でそのままコードを置き換えます。コピーされた埋め込みコードはレスポンシブ環境向けに設定されているので、静的なビデオが配置されていた領域に自動的に適合します。
@@ -520,13 +522,13 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 >
 >そのため、ハイパーリンクされた Web ページのみを使用したインタラクティビティを追加した場合は、これで完了です。
 >
->ただし、クイックビューのトリガーにインタラクティビティを追加した場合、インタラクティブビデオの横に表示されるサムネールは表示専用です。既存のクイックビューとはまだ統合されていません。 その場合は、インタラクティブビデオをWebサイト上の既存のクイックビューに統合する必要があります。
+>ただし、クイックビューのトリガーにインタラクティビティを追加した場合、インタラクティブビデオの横のサムネールは表示専用です。既存のクイックビューとまだ統合されていません。 その場合は、インタラクティブビデオを Web サイト上の既存のクイックビューに統合する必要があります。
 
 **例**
 
 次のデモ Web サイトを例として使用します。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
 埋め込みコードは標準です。
 
@@ -555,9 +557,9 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 </script>
 ```
 
-統合は、ビデオ埋め込みコードを削除して、Adobe Experience Manager のインタラクティブビデオ埋め込みコードで置き換えるだけで簡単にできます。次の URL で結果を確認できます。ページに存在するインタラクティブビデオが表示されますが、既存のクイックビューにはまだ統合されていません。
+統合は、ビデオ埋め込みコードを削除して、Adobe Experience Manager のインタラクティブビデオ埋め込みコードで置き換えるだけで簡単にできます。次の URL で結果を確認できます。ページにインタラクティブビデオが表示されますが、既存のクイックビューとはまだ統合されていません。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-1.html?lang=ja)
 
 ## インタラクティブビデオの既存のクイックビューへの統合 {#integrating-an-interactive-video-with-an-existing-quickview}
 
@@ -579,15 +581,15 @@ Adobe Experience Manager Sites のユーザーである場合は、インタラ�
 
 これらの呼び出しは、必ずしもそれぞれ独立した、Web ページのロジックから任意の手順で呼び出すことができるパブリックな API 呼び出しを表すわけではありません。むしろ、次の手順が前の手順の最後のフェーズ（コールバック）に隠されているような連鎖的な呼び出しになっています。
 
-インタラクティブビデオがステップ1とステップ2の一部を置き換えるのと同時に、ユーザがインタラクティブビデオ内のサムネールを選択すると、そのようなユーザ操作がビューアによって処理されます。 ビューアは、Adobe Experience Manager に以前に追加されたすべてのサムネールデータを含む Web ページに、イベントを返します。
+インタラクティブビデオがステップ 1 と部分的なステップ 2 を置き換えるのと同時に、ユーザがインタラクティブビデオ内のサムネールを選択すると、そのようなユーザ操作がビューアによって処理されます。 ビューアは、Adobe Experience Manager に以前に追加されたすべてのサムネールデータを含む Web ページに、イベントを返します。
 
-このようなイベントハンドラーでは、フロントエンドコードは次の処理を行います。
+このようなイベントハンドラーでは、フロントエンドコードは次の処理を実行します。
 
 * インタラクティブビデオから送出されるイベントをリッスンします。
 * サムネールデータに基づいてクイックビュー URL を作成します。
 * バックエンドからクイックビューを読み込み、画面上の表示用にレンダリングするプロセスを起動します。
 
-また、インタラクティブビデオビューアでは、全画面操作モードもサポートされます。エンドユーザーは、トリガー全画面を開いたままサムネールを選択してクイックビューを表示できます。 この機能を実現するためには、クイックビューモーダルダイアログボックスがビューアのコンテナにアタッチされるようにフロントエンドコードを変更します。ドキュメントの Body またはその他の Web ページ要素（ビューアが全画面モードになっているときに使用できない）を追加しないでください。このジョブを実行するコードは、ページに読み込まれたビューアの後に送信される1つ以上のビューアコールバックをリッスンする必要があります。
+また、インタラクティブビデオビューアでは、全画面操作モードもサポートされます。エンドユーザーは、トリガー全体を表示せずにサムネールを選択することでクイックビューを表示します。 この機能を実現するためには、クイックビューモーダルダイアログボックスがビューアのコンテナにアタッチされるようにフロントエンドコードを変更します。ドキュメントの Body またはその他の Web ページ要素（ビューアが全画面モードになっているときに使用できない）を追加しないでください。このジョブを実行するコードは、ページに読み込まれたビューアの後に送信される 1 つ以上のビューアコールバックをリッスンする必要があります。
 
 Adobe Experience Manager によって返される埋め込みコードには、そのまま使用可能なイベントハンドラーが既に含まれています。次のハイライトされたコードスニペットのように、コメントアウトされています。
 
@@ -638,9 +640,9 @@ Adobe Experience Manager によって返される埋め込みコードには、�
 
 そのため、必要な処理は、このハイライトされたコードスニペットのコメントアウトを解除し、ダミーのハンドラー本体を、特定の Web ページ専用のコードに置き換えることだけです。
 
-標準の埋め込みコードには、2 つのデフォルトコールバックハンドラー、`quickViewActivate` と `initComplete` が含まれています。`quickViewActivate`ハンドラーは、ビューアでサムネールが選択されたときにトリガーします。 これを使用して、ビューアをクイックビューのアクティベートロジックに統合します。`initComplete` ハンドラーは、ビューアがページに読み込まれるときに 1 回だけトリガーされます。このハンドラーは、Web ページ DOM でのクイックビューダイアログボックスの位置を調整するために使用されます。
+標準の埋め込みコードには、2 つのデフォルトコールバックハンドラー、`quickViewActivate` と `initComplete` が含まれています。`quickViewActivate` ハンドラーがトリガーされるのは、ビューアでサムネールが選択されるときです。これを使用して、ビューアをクイックビューのアクティベートロジックに統合します。`initComplete` ハンドラーは、ビューアがページに読み込まれるときに 1 回だけトリガーされます。このハンドラーは、Web ページ DOM でのクイックビューダイアログボックスの位置を調整するために使用されます。
 
-クイックビュー URL の作成プロセスは、このトピックで既に説明したサムネールの変数を識別するためのプロセスと逆になります。前に識別したクイックビューURLの例を使用して、クイックビューURLの各ケースでの構築方法を確認できます。
+クイックビュー URL の作成プロセスは、このトピックで既に説明したサムネールの変数を識別するためのプロセスと逆になります。前に特定したクイックビュー URL の例を使用して、クイックビュー URL の各ケースでの作成方法を確認できます。
 
 <table>
   <tbody>
@@ -704,7 +706,7 @@ var inner_container = document.getElementById(sdkContainerId);
 
 実際にモーダルダイアログボックス要素を探して前述のコンテナにアタッチする手順は、ケースごとに異なります。ここでも、必要なクイックビュー実装に詳しいフロントエンド開発者の助けを借りることをお勧めします。
 
-サンプルWebサイトを使用する場合、クイックビューモーダルダイアログボックスは`DIV`として実装され、クイックビューモーダルIDがドキュメント`BODY`に直接アタッチされます。 このため、このダイアログをビューアのコンテナに移動するコードは、次のとおり単純です。
+サンプル Web サイトを使用する場合、クイックビューモーダルダイアログボックスは `DIV` クイックビューモーダル ID をドキュメントに直接アタッチした状態で `BODY`. このため、このダイアログをビューアのコンテナに移動するコードは、次のとおり単純です。
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
@@ -757,8 +759,8 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 インタラクティブビデオが完全に統合された最終的なデモ Web サイトは次のようになります。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-3.html)
 
-## クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
+## クイックビューを使用してカスタムポップアップを作成する {#using-quickviews-to-create-custom-pop-ups}
 
-[クイックビューを使用したカスタムポップアップの作成](/help/assets/custom-pop-ups.md)を参照してください。
+詳しくは、 [クイックビューを使用したカスタムポップアップの作成](/help/assets/custom-pop-ups.md).
