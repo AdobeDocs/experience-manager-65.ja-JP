@@ -2,10 +2,10 @@
 title: ヘッドレスをはじめる前に
 description: このクイックスタートガイドでは、コンテンツモデル、コンテンツフラグメント、GraphQL API など、AEM 6.5 の強力なヘッドレス機能の基本事項を説明します。
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
-source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
+source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 75%
+source-wordcount: '301'
+ht-degree: 68%
 
 ---
 
@@ -22,11 +22,8 @@ ht-degree: 75%
 >[!TIP]
 >
 >この入門ガイドは、AEMとヘッドレステクノロジーの両方に関する知識を前提としています。
-
-<!-- HM-Links
 >
->If you are new to either AEM or headless, please refer to our [Headless Documentation Journeys](/help/journey-headless/home.md) for an end-to-end introduction to both headless and how AEM supports it.
--->
+>AEMまたはヘッドレスを初めて使用する場合は、 [ヘッドレスドキュメントジャーニー](/help/journey-headless/home.md) ヘッドレスとAEMによるそのサポート方法の両方に関するエンドツーエンドの紹介。
 
 ## 対象者 {#audience}
 

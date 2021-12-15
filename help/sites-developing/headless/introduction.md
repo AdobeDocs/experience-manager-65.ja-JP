@@ -1,10 +1,10 @@
 ---
 title: 'AEM 6.5 Sites 向けヘッドレス開発 '
 description: コンテンツモデル、コンテンツフラグメント、GraphQL API などAEM 6.5 の強力なヘッドレス機能を連携させて、エクスペリエンスを一元管理し、複数のチャネルで提供する方法を説明します。
-source-git-commit: 03285545d8cc04d97513fb5fee3b3c616551ccdc
+source-git-commit: 2f400d209148278f0695f7b9523b58bba6845cfb
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 72%
+source-wordcount: '493'
+ht-degree: 64%
 
 ---
 
@@ -25,11 +25,9 @@ ht-degree: 72%
 
 このドキュメントでは、AEM の完全なヘッドレス実装モデルを重点的に説明します。ただし、AEM でヘッドフルとヘッドレスは二者択一である必要はありません。ヘッドレス機能を使用すると、コンテンツを管理し様々なエンドポイントに配信できると同時に、コンテンツ作成者が単一ページアプリケーションを編集できるようになります。すべてが AEM にあります。
 
-<!-- HM-Links
 >[!TIP]
 >
->See the document [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md) for more information.
--->
+>詳しくは、[AEM におけるヘッドフルとヘッドレス](/help/sites-developing/headful-headless.md)を参照してください。
 
 ## AEM 6.5 およびヘッドレス {#aem-headless}
 
@@ -54,12 +52,6 @@ AEM ヘッドレス機能を使い始めるためのリソースは多数用意�
 
 | リソース | 説明 | タイプ | 対象者 | 予測時刻 |
 |---|---|---|---|---|
+| [ヘッドレスデベロッパージャーニー](/help/journey-headless/developer/overview.md) | **AEMを初めて使用するユーザーとヘッドレスユーザー** テクノロジーについては、まず、最初のヘッドレスプロジェクトでの運用を開始することによるヘッドレス理論から、AEMとそのヘッドレス機能に関する包括的な紹介をご覧ください。 | ガイド | デベロッパー向け **AEMとヘッドレスを初めて使用する** | 1 時間 |
+| [ヘッドレスをはじめる前に](/help/sites-developing/headless/getting-started/introduction.md) | **経験豊富なAEMユーザー向け** AEMの主要なヘッドレス機能の概要が必要なユーザーは、このクイックスタートの概要を確認してください。 | クイックスタート | デベロッパー、管理者 **AEMエクスペリエンス** | 20 分 |
 | [AEM ヘッドレスをはじめる前に：実践チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=ja) | **実践的なアプローチを好み、AEMに精通している場合**&#x200B;このチュートリアルでは、シンプルなヘッドレスプロジェクトの作成に直接取り組みます。 | チュートリアル | デベロッパー向け | 2 時間 |
-
-<!-- HM-Links
-|Resource|Description|Type|Audience|Est. Time|
-|---|---|---|---|---|
-|[Headless Developer Journey](/help/journey-headless/developer/overview.md)|**For users new to AEM and headless** technologies, start here for a comprehensive introduction to AEM and its headless features from the theory of headless through going live with your first headless project.|Guide|Developers **new to AEM and headless**|1 hour|
-|[Headless Getting Started Guide](/help/implementing/developing/headless/getting-started/introduction.md)|**For experienced AEM users** who need a short summary of the key AEM headless features, check out this quick start overview.|Quick Start|Developers, Administrators **with AEM experience**|20 minutes|
-|[Getting Started with AEM Headless hands-on tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)|**If you prefer a hands-on approach and are familiar with AEM**, this tutorial dives directly into creating a simple headless project.|Tutorial|Developers|2 hours|
--->
