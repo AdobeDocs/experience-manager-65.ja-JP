@@ -1,7 +1,7 @@
 ---
 title: AEM ヘッドレスの概要
 description: ここでは、AEM ヘッドレスデベロッパージャーニーのこの部分では、AEM ヘッドレスの前提条件について説明します。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 77%
@@ -273,11 +273,6 @@ AEM を使用した[一般的なヘッドレス実装](#level-1)の場合、デ�
 ## その他のリソース {#additional-resources}
 
 「[AEM ヘッドレス機能を使用した初めてのエクスペリエンスへの道筋](path-to-first-experience.md)」のドキュメントを確認して、ヘッドレス開発の次のステップに進むことをお勧めします。以下は、このドキュメントで取り上げたいくつかの概念をより深く掘り下げる追加のオプションリソースですが、ヘッドレスジャーニーの継続には必要ありません。
-
-<!-- HM-Links
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - This documentation journey gives you a broad understanding of headless technology, how AEM serves headless content, and how you can translate it.
-* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Understand AEM as a Cloud Service's structure
--->
 
 * [AEMヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md)  — このドキュメントのジャーニーでは、ヘッドレステクノロジー、AEMによるヘッドレスコンテンツの提供方法、翻訳方法について幅広く理解できます。
 * [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法と、適切なオプションを選択する方法を調べます。

@@ -1,10 +1,10 @@
 ---
 title: AEM ヘッドレスデベロッパージャーニー
 description: AEMヘッドレス CMS のドキュメント。 AEM の強力で柔軟なヘッドレス機能とその能力、および初めての開発プロジェクトでの活用方法を示すガイド付きのジャーニーをここから始めてください。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 52%
+source-wordcount: '1212'
+ht-degree: 53%
 
 ---
 
@@ -65,12 +65,8 @@ AEMでヘッドレスなビジネスケースを解決する方法をAdobeが推
 | 5 | [AEM Delivery APIを使用してコンテンツにアクセスする方法](access-your-content.md) | GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスする方法を説明します。 |
 | 6 | [AEM Assets API を使用したコンテンツの更新方法](update-your-content.md) | REST API を使用してコンテンツフラグメントのコンテンツにアクセスし、アップデートする方法を説明します。 |
 | 7 | [すべてをまとめる方法 - アプリとコンテンツを AEM ヘッドレスに配置する方法](put-it-all-together.md) | AEM ヘッドレス SDK を使用して AEM プロジェクトを運用する準備をする方法について説明します。 |
-| 8 | [オプション - AEM を使用して単一ページアプリケーション（SPA）を作成する方法](create-spa.md) | AEM のヘッドレス機能を理解したら、ヘッドフル配信とヘッドレス配信を組み合わせ、AEM SPA エディターフレームワークを使用して編集可能な SPA を作成する方法を学びます。 |
-
-<!-- HM-Links
-|8|[How to go live with your headless application](go-live.md)|Learn how to deploy application live and take your local code in Git and move it to Cloud Manager Git for CI/CD pipeline.|
-|9|[Optional - How to create single page applications (SPAs) with AEM](create-spa.md)|Once you understand AEM's headless features, explore how to combine headful and headless delivery and learn how you can create editable SPAs using AEM's SPA Editor framework.|
--->
+| 8 | [ヘッドレスアプリケーションを運用する方法](go-live.md) | アプリケーションをライブデプロイし、ローカルコードを Git に取り込んで、CI/CD パイプライン用に Cloud Manager Git に移動する方法を説明します。 |
+| 9 | [オプション - AEM を使用して単一ページアプリケーション（SPA）を作成する方法](create-spa.md) | AEM のヘッドレス機能を理解したら、ヘッドフル配信とヘッドレス配信を組み合わせ、AEM SPA エディターフレームワークを使用して編集可能な SPA を作成する方法を学びます。 |
 
 ## 次の手順 {#what-is-next}
 

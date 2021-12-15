@@ -1,7 +1,7 @@
 ---
 title: CMS ヘッドレス開発について
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレステクノロジーと、それを使用する理由について説明します。
-source-git-commit: 0458a811b5bd062abbe8a42ec141bc786491e19e
+source-git-commit: 919cef01470dd930884e97b15f2d40a38872c0d0
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 96%
@@ -124,9 +124,5 @@ AEM ヘッドレスジャーニーを開始していただきありがとうご�
 ## その他のリソース {#additional-resources}
 
 ドキュメントを確認して、ヘッドレス開発ジャーニーの次の部分に進むことをお勧めします [AEMヘッドレスの概要](getting-started.md)以下に、このドキュメントで取り上げるいくつかの概念について詳しく説明する、その他のオプションのリソースを示します。ただし、ヘッドレスジャーニーを続行する必要はありません。
-
-<!-- HM-Links
-* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Understand AEM as a Cloud Service's structure
--->
 
 * [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法と、適切なオプションを選択する方法を調べます。
