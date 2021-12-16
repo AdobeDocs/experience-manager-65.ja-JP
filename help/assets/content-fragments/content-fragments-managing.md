@@ -3,10 +3,11 @@ title: コンテンツフラグメントの管理
 description: ヘッドレスコンテンツの基礎となる AEM コンテンツフラグメントを Assets コンソールを使用して管理する方法について説明します。
 feature: Content Fragments
 role: User
-source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
+exl-id: 25c91a85-06ff-4666-a809-46778a689e25
+source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 99%
+source-wordcount: '1727'
+ht-degree: 100%
 
 ---
 
@@ -146,19 +147,15 @@ ht-degree: 99%
 
    ![フラグメントエディター](assets/cfm-managing-03.png)
 
-1. 変更を加えた後、**「保存して閉じる」**&#x200B;を使用します。
-
-<!-- 
-1. After making changes, use **Save**, **Save & close** or **Close** as required.
+1. 変更を加えた後、必要に応じて「**保存**」、「**保存して閉じる**」、「**閉じる**」のいずれかを使用します。
 
    >[!NOTE]
    >
-   >**Save & close** is available via the **Save** dropdown.
+   >「**保存して閉じる**」は、**保存**&#x200B;ドロップダウンからアクセスできます。
 
    >[!NOTE]
    >
-   >Both **Save & Close** and **Close** will exit the editor - see [Save, Close and Versions](#save-close-and-versions) for full information on how the various options operate for content fragments.
--->
+   >「**保存して閉じる**」と「**閉じる**」のどちらをクリックした場合も、エディターが終了します。様々なオプションがコンテンツフラグメントにどのように動作するかについて詳しくは、[保存、閉じる、バージョン](#save-close-and-versions)を参照してください。
 
 ## コンテンツフラグメントエディターのモードとアクション {#modes-actions-content-fragment-editor}
 
@@ -182,9 +179,7 @@ ht-degree: 99%
 
 上部のツールバーには、複数のモードから使用できる機能があります。
 
-<!-- screenshot changed from original text see commented out below -->
-
-![モード](assets/cfm-managing-03.png)
+![モード](assets/cfm-managing-top-toolbar.png)
 
 * フラグメントがコンテンツページで既に参照されている場合は、メッセージが表示されます。このメッセージは&#x200B;**閉じる**&#x200B;ことができます。
 
@@ -196,21 +191,15 @@ ht-degree: 99%
 
 * 例えば、フラグメントの作成、変更、公開の日時については、フラグメントのステータスを参照してください。
 
-* **保存して閉じる**
+* 「**保存**」から、「**保存して閉じる**」オプションにアクセスできます。
+
+* 3 つのドット（**...**）ドロップダウンから、以下の追加アクションにアクセスできます。
+   * **ページ参照を更新**
+      * すべてのページ参照が更新されます。
+   * **[クイック公開](#publishing-and-referencing-a-fragment)**
+   * **[公開を管理](#publishing-and-referencing-a-fragment)**
 
 <!--
-Some features in the top toolbar are available from multiple modes:
-
-![modes](assets/cfm-managing-top-toolbar.png)
-
-* A message will be shown when the fragment is already referenced on a content page. You can **Close** the message.
-
-* The side panel can be hidden/shown using the **Toggle Side Panel** icon.
-
-* Underneath the fragment name you can see the name of the [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md) used for creating the current fragment:
-
-  * The name is also a link that will open the model editor.
-
 * See the status of the fragment; for example, information about when it was created, modified or published. The status is also color-coded:
 
   * **New**: grey
@@ -218,70 +207,61 @@ Some features in the top toolbar are available from multiple modes:
   * **Published**: green
   * **Modified**: orange
   * **Deactivated**: red
-
-* **Save** provides access to the **Save & close** option.
-  
-* The three dots (**...**) drop-down provides access to additional actions:
-  * **Update page references**
-    * This updates any page references. 
-  * **[Quick publish](#publishing-and-referencing-a-fragment)**
-  * **[Manage Publication](#publishing-and-referencing-a-fragment)**
 -->
 
 <!--
-This updates any page references and ensures that the Dispatcher is flushed as required. -->
+This updates any page references and ensures that the Dispatcher is flushed as required. 
+-->
 
-<!--
-## Save, Close and Versions {#save-close-and-versions}
+## 保存、閉じる、バージョン {#save-close-and-versions}
 
 >[!NOTE]
 >
->Versions can also be [created, compared and reverted from the Timeline](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
+>バージョン[を作成／比較したり元に戻したりする操作は、タイムラインから](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)も行えます。
 
-The editor has various options:
+エディターには、次のような様々なオプションがあります。
 
-* **Save** and **Save & close**
+* 「**保存**」と「**保存して閉じる**」
 
-  * **Save** will save the latest changes and remain in the editor.
-  * **Save & close** will save the latest changes and exit the editor.
+   * 「**保存**」を選択すると、最新の変更が保存され、その後もエディターは開いたままです。
+   * 「**保存して閉じる**」を選択すると、最新の変更が保存された後、エディターが終了します。
 
-  >[!CAUTION]
-  >
-  >To edit a content fragment you need [the appropriate permissions](/help/sites-developing/customizing-content-fragments.md#asset-permissions). Please contact your system administrator if you are experiencing issues. 
-
-  >[!NOTE]
-  >
-  >It is possible to remain in the editor, making a series of changes, before saving.
-
-  >[!CAUTION]
-  >
-  >In addition to simply saving your changes, the actions also update any references and ensures that the Dispatcher is flushed as required. These changes can take time to process. Due to this, there can be a performance impact on a large/complex/heavily-loaded system.
-  >
-  >Please bear this in mind when using **Save & close** and then quickly re-entering the fragment editor to make and save further changes.
-
-* **Close**
-
-  Will exit the editor without saving the latest changes (i.e made since the last **Save**).
-
-While editing your content fragment AEM automatically creates versions to ensure that prior content can be restored if you cancel your changes (using **Close** without saving):
-
-1. When a content fragment is opened for editing AEM checks for the existence of the cookie-based token that indicates whether an *editing session* exists:
-
-   1. If the token is found, the fragment is considered to be part of the existing editing session.
-   2. If the token is *not* available and the user starts editing content, a version is created and a token for this new editing session is sent to the client, where it is saved in a cookie.
-
-2. While there is an *active* editing session, the content being edited is automatically saved every 600 seconds (default).
+   >[!CAUTION]
+   >
+   >コンテンツフラグメントを編集するには、[適切な権限](/help/sites-developing/customizing-content-fragments.md#asset-permissions)が必要になります。問題が発生している場合は、システム管理者にお問い合わせください。
 
    >[!NOTE]
    >
-   >The auto save interval is configurable using the `/conf` mechanism.
-   >
-   >Default value, see:
-   >&nbsp;&nbsp;`/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
+   >エディターを開いたまま、一連の変更を加えてから保存することもできます。
 
-3. If the user cancels the edit, the version created at the start of the editing session is restored and the token is removed to end the editing session.
-4. If the user selects to **Save** the edits, the updated elements/variations are persisted and the token is removed to end the editing session.
--->
+   >[!CAUTION]
+   >
+   >これらの操作では、変更を保存するだけでなく、参照もすべて更新し、Dispatcher が必要に応じてフラッシュされます。これらの変更が処理されるまでに時間がかかることがあります。このため、大きなシステムや複雑なシステム、高負荷のシステムのパフォーマンスに影響することがあります。
+   >
+   >「**保存して閉じる**」を使用する際はこの点に留意し、フラグメントエディターをすぐに開いて、さらに変更を加え保存してください。
+
+* **閉じる**
+
+   最新の変更（前回の「**保存**」操作以降に行った変更）を保存せずにエディターを終了します。
+
+コンテンツフラグメントを編集するとき、AEM によって自動的にバージョンが作成されます。これにより、（保存せずに「**閉じる**」を使用して）変更内容を取り消した場合でも、以前のコンテンツを復元できるようになります。
+
+1. コンテンツフラグメントを開いて編集しようとすると、AEM は&#x200B;*編集セッション*&#x200B;が存在しているかどうかを示す cookie ベースのトークンの存在を確認します。
+
+   1. トークンが見つかると、そのフラグメントは既存の編集セッションの一部であると見なされます。
+   2. トークンがないときにユーザーが編集を開始すると、バージョンが作成され、この新しい編集セッションのトークンがクライアントに送られ、cookie に保存されます&#x200B;*。*
+
+2. アクティブな編集セッションがあるとき、編集中のコンテンツは自動的に 600 秒ごとに保存されます（デフォルト）*。*
+
+   >[!NOTE]
+   >
+   >自動保存間隔は `/conf` メカニズムを使用して設定できます。
+   >
+   >デフォルト値については、以下を参照してください。
+   >  `/libs/settings/dam/cfm/jcr:content/autoSaveInterval`
+
+3. ユーザーが編集をキャンセルした場合は、編集セッションの開始時に作成されたバージョンが復元され、トークンが削除されて編集セッションが終了します。
+4. ユーザーが編集内容の「**保存**」を選択すると、更新された要素とバリエーションが保存され、トークンが削除されて編集セッションが終了します。
 
 ## フラグメントのコンテンツの編集 {#editing-the-content-of-your-fragment}
 
@@ -319,20 +299,14 @@ While editing your content fragment AEM automatically creates versions to ensure
    * **削除**
 
 >[!NOTE]
->
->コメントは次のとおりです。
->
->* すべてのアセットの標準機能
->* タイムラインで追加
->* フラグメントアセットに関連付けられる
+コメントは次のとおりです。
+* すべてのアセットの標準機能
+* タイムラインで追加
+* フラグメントアセットに関連付けられる
 
->
->注釈（コンテンツフラグメント用）は次のとおりです。
->
->* フラグメントエディターで入力
->* フラグメント内の選択されたテキストセグメントに固有
-
->
+注釈（コンテンツフラグメント用）は次のとおりです。
+* フラグメントエディターで入力
+* フラグメント内の選択されたテキストセグメントに固有
 
 
 次に例を示します。
@@ -362,8 +336,7 @@ While editing your content fragment AEM automatically creates versions to ensure
 * 「**完了**」を選択すると、コンソールに戻ります
 
 >[!NOTE]
->
->フラグメントの比較中にフラグメントコンテンツを編集することはできません。
+フラグメントの比較中にフラグメントコンテンツを編集することはできません。
 
 ![比較](assets/cfm-managing-06.png)
 
@@ -380,10 +353,8 @@ While editing your content fragment AEM automatically creates versions to ensure
 ## フラグメントの公開と参照 {#publishing-and-referencing-a-fragment}
 
 >[!CAUTION]
->
->フラグメントがモデルに基づいている場合、その[モデルが公開されている](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model)ことを確認してください。
->
->まだ公開されていないモデルのコンテンツフラグメントを公開すると、選択リストにそのことが示され、モデルがフラグメントと共に公開されます。
+フラグメントがモデルに基づいている場合、その[モデルが公開されている](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model)ことを確認してください。
+まだ公開されていないモデルのコンテンツフラグメントを公開すると、選択リストにそのことが示され、モデルがフラグメントと共に公開されます。
 
 コンテンツフラグメントをパブリッシュ環境で使用するには、公開する必要があります。次の方法で公開できます。
 
@@ -392,8 +363,7 @@ While editing your content fragment AEM automatically creates versions to ensure
 * [フラグメントを使用するページを公開](/help/sites-authoring/content-fragments.md#publishing)するとき。フラグメントはページ参照にリスト表示されます。
 
 >[!CAUTION]
->
->フラグメントが公開または参照（あるいは両方）された後に、作成者がフラグメントを開いて編集しようとすると警告が表示され、フラグメントを変更すると、参照されているページにも影響が及ぶことが警告されます。
+フラグメントが公開または参照（あるいは両方）された後に、作成者がフラグメントを開いて編集しようとすると警告が表示され、フラグメントを変更すると、参照されているページにも影響が及ぶことが警告されます。
 
 ## フラグメントの削除 {#deleting-a-fragment}
 
@@ -403,12 +373,10 @@ While editing your content fragment AEM automatically creates versions to ensure
 2. フラグメントを選択します。
 
    >[!NOTE]
-   >
-   >**削除**&#x200B;アクションはクイックアクションとして実行できません。
+   **削除**&#x200B;アクションはクイックアクションとして実行できません。
 
 3. ツールバーから「**削除**」を選択します。
 4. 「**削除**」アクションを確認します。
 
    >[!CAUTION]
-   >
-   >フラグメントが既にページで参照されている場合は、警告メッセージが表示されます。「**削除を強制**」を選択して続行を確認する必要があります。フラグメントはコンテンツフラグメントコンポーネントと一緒に、すべてのコンテンツページから削除されます。
+   フラグメントが既にページで参照されている場合は、警告メッセージが表示されます。「**削除を強制**」を選択して続行を確認する必要があります。フラグメントはコンテンツフラグメントコンポーネントと一緒に、すべてのコンテンツページから削除されます。
