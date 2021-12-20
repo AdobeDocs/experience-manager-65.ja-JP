@@ -4,9 +4,9 @@ description: 固有のリリースノート [!DNL Adobe Experience Manager] 6.5 
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: f2ccc77393e7fc1f53f9976076ec3c66c3f74189
+source-git-commit: 5b62efe65be44416335c6dbbde23ee6a7e5a8fd7
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3822'
 ht-degree: 4%
 
 ---
@@ -371,6 +371,17 @@ Need to verify with Engineering, the status is currently showing as Resolved
 **Foundation JEE**
 
 * AEM 6.5 Forms Service Pack 9 のインストール後、CRX リポジトリの URL は使用できなくなります (NPR-37592)。
+
+**AEM Forms 6.5.11.1で修正された問題**
+
+>[!NOTE]
+>
+>AEM 6.5.11.0 Formsにアップグレードしていない場合は、AEM Forms 6.5.11.1アドオンパッケージを直接インストールします。 AEM 6.5.11.0 Formsをインストール済みの場合、AdobeはAEM 6.5.11.1 Formsにアップグレードすることをお勧めします。
+
+* 送信アクション、「電子メールの送信」および「AEMワークフローを起動」は、Forms 6.5.11.0アドオンパッケージのインストール後、機能しなくなります。
+* Forms 6.5.11.0アドオンパッケージをインストールした後、CreatePDF 操作でMicrosoft Word ドキュメントのPDFドキュメントへの変換が停止しました。
+* （JEE のみ）Apache Log4j2 に対して報告された重大なセキュリティ脆弱性 (CVE-2021-44228および CVE-2021-45046)。
+* （JEE のみ）6.5.11.0パッチの Assembler DSC に、仕様バージョンや impl バージョンなどの誤った metainfo が含まれています。
 
 
 セキュリティ更新について詳しくは、 [[!DNL Experience Manager] セキュリティ速報ページ](https://helpx.adobe.com/security/products/experience-manager.html).
