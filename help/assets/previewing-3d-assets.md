@@ -1,19 +1,19 @@
 ---
 title: 3D アセットのプレビュー
-description: Dynamic Media の 3D アセットのプレビュー方法について
+description: 3D アセットをプレビューする方法について、Experience Managerで説明します。
 contentOwner: Rick Brough
 docset: aem65
-feature: 3D アセット
+feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: 363e5159d290ecfbf4338f6b9793e11b613389a5
+source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 77%
+source-wordcount: '556'
+ht-degree: 94%
 
 ---
 
-# Adobe Experience Managerでの3Dアセットのプレビュー {#previewing-3d-assets-aem}
+# Adobe Experience Manager での 3D アセットのプレビュー {#previewing-3d-assets-aem}
 
 Adobe Experience Manager では、オーサリングプロセスの一環として、3D アセットのアップロード、配信、インタラクティブプレビューをサポートしています。
 
@@ -53,17 +53,17 @@ Experience Manager のアセットの詳細ページから、インタラクテ�
 
 **Experience Manager で 3D アセットをプレビューするには：**
 
-1. 3D アセットが Experience Manager にアップロードされていることを確認します。[3Dプレビューでサポートされる形式](#supported-3d-previewing-assets)および[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
-1. Experience Managerの&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで、**[!UICONTROL アセット]**/**[!UICONTROL ファイル]**&#x200B;を選択します。
+1. 3D アセットが Experience Manager にアップロードされていることを確認します。詳しくは、 [3D プレビューでサポートされる形式](#supported-3d-previewing-assets) および [アセットをアップロード](/help/assets/manage-assets.md#uploading-assets).
+1. Experience Managerから、 **[!UICONTROL ナビゲーション]** ページ、選択 **[!UICONTROL Assets]** > **[!UICONTROL ファイル]**.
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
 
-1. ページの右上隅付近にある「表示」ドロップダウンリストで「**[!UICONTROL カード表示]**」を選択し、プレビューする3Dアセットに移動します。
+1. ページの右上隅付近にある「表示」ドロップダウンリストで「**[!UICONTROL カード表示]**」を選択し、プレビューする 3D アセットに移動します。
 
    ![3D カードの選択](/help/assets/assets-dm/3d-card-select.png)
-   _カード表示で、プレビューする3Dアセットのカードを選択します。_
+   _カード表示で、プレビューする 3D アセットのカードを選択_
 
-1. 3Dアセットのカードを選択します。
+1. 3D アセットのカードを選択します。
 
    ![インタラクティブ 3D プレビュー](/help/assets/assets-dm/3d-preview.png)
    _アセット詳細表示ページでの 3D アセットのインタラクティブプレビュー_
@@ -75,7 +75,7 @@ Experience Manager のアセットの詳細ページから、インタラクテ�
    | **カメラをパン** | ビューを左、右、上、下にパンします。 | 右クリックしながらドラッグします。 | 2 本指で押しながらドラッグします。 |
    | **カメラをズーム** | 3D シーンの領域の内外に移動します。 | ホイールをスクロールします。 | 2 本指でピンチします。 |
    | **カメラを中心に戻す** | カメラを中心の位置に戻し、3D シーンのオブジェクトに合わせます。 | ダブルクリックします。 | ダブルタップします。 |
-   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを3Dアセットの中心に戻します。 リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |  |  |
-   | **全画面表示モード** | 全画面表示モードに入るには、ページの右下隅にある全画面表示アイコンを選択します。 |  |  |
+   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |  |  |
+   | **全画面表示モード** | フルスクリーンモードに入るには、ページの右下隅にあるフルスクリーンアイコンを選択します。 |  |  |
 
 1. 作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。
