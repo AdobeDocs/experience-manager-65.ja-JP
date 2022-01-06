@@ -2,9 +2,9 @@
 title: 買い物かごおよび Dispatcher の設定
 description: 買い物かごおよび Dispatcher の設定
 source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '140'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 91%
 
 >[!VIDEO](https://video.tv.adobe.com/v/29656/?quality=12)
 
-このトピックに関する詳細は、次のリソースを参照してください。
+このトピックの詳細については、次のリソースを参照してください。
 
 - [買い物かご](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/minicart/v1/minicart)
 - [Magento プロキシを使用する AEM Dispatcher](https://github.com/adobe/aem-core-cif-components/tree/master/dispatcher)
