@@ -1,37 +1,38 @@
 ---
-title: AEM Commerce Integration Framework(CIF)アドオンへの移行
-description: 古いバージョンからAEM Commerce Integration Framework(CIF)アドオンに移行する方法
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
-workflow-type: tm+mt
+title: AEM Commerce Integration Framework（CIF）アドオンへの移行
+description: 旧バージョンから AEM Commerce Integration Framework（CIF）アドオンに移行する方法
+exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
+source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Experience Managerアドオンの移行ガイド{#cif-migration}
+# Experience Manager アドオンの移行ガイド {#cif-migration}
 
-このガイドは、Experience Managerアドオン移行のために更新する必要がある領域を特定するのに役立ちます。
+このガイドは、Experience Manager アドオンの移行に向けて更新が必要な領域を特定するのに役立ちます。
 
-## CIFアドオン
+## CIF アドオン
 
-AEM 6.5では、CIFアドオンは[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)を通じて使用できます。 互換性があり、Cloud ServiceとしてのExperience Manager用CIFアドオンと同じ機能を提供します。
+AEM 6.5 用の CIF アドオンは、[ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)を通じて入手できます。このアドオンは Experience Manager as a Cloud Service 向けの CIF アドオンと互換性があり、同じ機能を提供します。
 
-[AEMコンテンツとコマースの使用の手引き](getting-started.md)を参照してください。
+[AEM Content and Commerce 使用の手引き](getting-started.md)を参照してください。
 
-CIFをデプロイするプロジェクトをサポートするために、Adobeは[AEM CIFコアコンポーネント](https://github.com/adobe/aem-core-cif-components)を提供します。
+CIF をデプロイするプロジェクトをサポートするために、アドビでは [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を提供しています。
 
 ## 製品カタログ
 
-製品カタログデータの読み込みは、CIFアドオンではサポートされていません。 CIFアドオンプリンシパルを使用すると、製品およびカタログのリクエストは、外部コマースソリューションへのリアルタイム呼び出しを介してオンデマンドでおこなわれます。 コマースソリューションの統合について詳しくは、「統合」の章を参照してください。
+製品カタログデータのインポートは、CIF アドオンではサポートされていません。 CIF アドオンの原則に従って、製品およびカタログリクエストは、外部コマースソリューションへのリアルタイム呼び出しを通じてオンデマンドで行われます。コマースソリューションの統合について詳しくは、「統合」の章を参照してください。
 
 >[!TIP]
 >
->リアルタイムAPIが使用できない場合は、APIを使用した外部製品キャッシュを統合に使用する必要があります。 例：[Magentoオープンソース](https://magento.com/products/magento-open-source)
+>リアルタイム API を使用できない場合は、API を使用した外部製品キャッシュを統合に使用する必要があります。例：[Magento オープンソース](https://magento.com/products/magento-open-source)
 
-## AEM Renderingを使用した製品カタログエクスペリエンス
+## AEM レンダリングを使用した製品カタログエクスペリエンス
 
-クラシックCIFでカタログブループリントを使用する場合は、製品カタログワークフローを更新する必要があります。 CIFアドオンは、AEMカタログテンプレートを使用して、製品カタログエクスペリエンスをその場でレンダリングするようになりました。 製品データや製品ページのレプリケーションは不要になりました。
+クラシック CIF でカタログブループリントを使用する場合は、製品カタログワークフローを更新する必要があります。CIF アドオンは、AEM カタログテンプレートを使用して、製品カタログエクスペリエンスをその場でレンダリングするようになりました。製品データや製品ページのレプリケーションは不要になりました。
 
-## キャッシュ不可能なデータと買い物とのやり取り
+## キャッシュ不可データとショッピングインタラクション
 
-キャッシュ不能なデータおよびインタラクション（例えば、買い物かごへの追加、検索）に対するクライアント側のリクエストは、CDN/Dispatcherを介して、コマースエンドポイント（コマースソリューションまたは統合レイヤー）に直接送信する必要があります。 AEMがプロキシに過ぎない呼び出しをすべて削除します。
+キャッシュ不可データおよびインタラクションについてのクライアントサイドのリクエスト（例：買い物かごへの追加、検索）は、CDN や Dispatcher を介してコマースエンドポイント（コマースソリューションまたは統合レイヤー）に直接送信する必要があります。AEM がプロキシに過ぎない呼び出しは、すべて削除します。
