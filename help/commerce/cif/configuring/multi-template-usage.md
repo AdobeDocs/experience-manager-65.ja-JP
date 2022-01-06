@@ -5,13 +5,14 @@ sub-product: Commerce
 doc-type: feature-video
 activity: use
 audience: marketer
-feature: コマース統合フレームワーク
+feature: Commerce Integration Framework
 kt: 3455
 thumbnail: 28969.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
-workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 85%
+exl-id: 09e986c4-16b9-4ef5-a0b3-8d65b17a7f2c
+source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+workflow-type: ht
+source-wordcount: '100'
+ht-degree: 100%
 
 ---
 
@@ -21,6 +22,6 @@ ht-degree: 85%
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 
-このトピックに関する詳細は、次のリソースを参照してください。
+このトピックの詳細については、次のリソースを参照してください。
 
 - [AEM CIF コアコンポーネント - マルチカタログページの設定](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)
