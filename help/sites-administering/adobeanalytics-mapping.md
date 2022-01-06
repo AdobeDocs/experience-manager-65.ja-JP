@@ -1,8 +1,8 @@
 ---
 title: コンポーネントデータと Adobe Analytics プロパティとのマッピング
-seo-title: コンポーネントデータと Adobe Analytics プロパティとのマッピング
+seo-title: Mapping Component Data with Adobe Analytics Properties
 description: コンポーネントデータと SiteCatalyst プロパティをマッピングする方法について説明します。
-seo-description: コンポーネントデータと SiteCatalyst プロパティをマッピングする方法について説明します。
+seo-description: Learn how to map component data with SiteCatalyst properties.
 uuid: b08ab37f-ad58-4c04-978f-8e21a3823ae8
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,76 +11,74 @@ content-type: reference
 discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 085e77b7b831d6be626a46d3de215aedb50f6178
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 53%
+source-wordcount: '1457'
+ht-degree: 52%
 
 ---
 
 # コンポーネントデータと Adobe Analytics プロパティとのマッピング{#mapping-component-data-with-adobe-analytics-properties}
 
-Adobe Analytics に送信するデータを収集するフレームワークにコンポーネントを追加します。分析データを収集するために設計されたコンポーネントは、適切な **CQ 変数**&#x200B;にデータを保存します。このようなコンポーネントをフレームワークに追加すると、フレームワークにCQ変数のリストが表示され、適切な&#x200B;**Analytics変数**&#x200B;にそれぞれを追加できます。
+Adobe Analytics に送信するデータを収集するフレームワークにコンポーネントを追加します。分析データを収集するために設計されたコンポーネントは、適切な **CQ 変数**&#x200B;にデータを保存します。このようなコンポーネントをフレームワークに追加すると、フレームワークに CQ 変数のリストが表示され、各変数を適切な **Analytics 変数**.
 
 ![aa-11](assets/aa-11.png)
 
-**AEMビュー**&#x200B;を開くと、Analytics変数がコンテンツファインダーに表示されます。
+次の場合に **AEM表示** を開くと、Analytics 変数がコンテンツファインダーに表示されます。
 
 ![aa-12](assets/aa-12.png)
 
-同じ&#x200B;**CQ変数**&#x200B;に複数のAnalytics変数をマッピングできます。
+同じで複数の Analytics 変数をマッピングできます **CQ 変数**.
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-マッピングされたデータは、ページが読み込まれ、次の条件が満たされると、Adobe Analyticsに送信されます。
+ページが読み込まれ、次の条件が満たされると、マッピングされたデータがAdobe Analyticsに送信されます。
 
 * ページがフレームワークに関連付けられている。
 * ページが、フレームワークに追加されたコンポーネントを使用する。
 
-CQコンポーネント変数をAdobe Analyticsレポートプロパティにマッピングするには、次の手順を実行します。
+CQ コンポーネント変数をAdobe Analyticsレポートプロパティにマッピングするには、次の手順を実行します。
 
-1. **AEMビュー**&#x200B;で、サイドキックからフレームワークにトラッキングコンポーネントをドラッグします。 例えば、**ページ**&#x200B;コンポーネントコンポーネントを&#x200B;**一般**&#x200B;カテゴリからドラッグします。
+1. 内 **AEM表示**&#x200B;をクリックし、サイドキックからフレームワークにトラッキングコンポーネントをドラッグします。 例えば、 **ページ** コンポーネント **一般** カテゴリ。
 
    ![aa-13](assets/aa-13.png)
 
    デフォルトのコンポーネントグループには、「**一般**」、「**コマース**」、「**コミュニティ**」、「**Search&amp;Promote**」および「**その他**」があります。AEM インスタンスは、異なるグループおよびコンポーネントを表示するように設定されていることがあります。
 
-1. Adobe Analytics変数をコンポーネントで定義された変数にマッピングするには、**Analytics変数**&#x200B;をコンテンツファインダーからトラッキングコンポーネントのフィールドにドラッグします。 例えば、`Page Name (pageName)`を`pagedata.title`にドラッグします。
+1. Adobe Analytics変数をコンポーネントで定義された変数にマッピングするには、 **Analytics 変数** コンテンツファインダーからトラッキングコンポーネント上のフィールドに 例えば、 `Page Name (pageName)` から `pagedata.title`.
 
    ![aa-14](assets/aa-14.png)
 
    >[!NOTE]
    >
-   >フレームワーク用に選択されたレポートスイートID(RSID)によって、コンテンツファインダーに表示されるAdobe Analytics変数が決まります。
+   >フレームワーク用に選択されたレポートスイート ID(RSID) によって、コンテンツファインダーに表示されるAdobe Analytics変数が決まります。
 
 1. 他のコンポーネントおよび変数について、前述の 2 つの手順を繰り返します。
 
    >[!NOTE]
    >
-   >複数のAnalytics変数をマッピングできます(例：`props`、`eVars`、`events`)を同じCQ変数(例：`pagedata.title`)
+   >複数の Analytics 変数 ( `props`, `eVars`, `events`) を同じ CQ 変数 ( 例： `pagedata.title`)
 
    >[!CAUTION]
    >
    >次の状態が強く推奨されます。
-   >    
-   >    * `eVars` と `props` は、またはで始まるCQ変数にマッピングさ `pagedata.X` れます  `eventdata.X`
-      >    
-      >    
-   * それに対して、イベントは`eventdata.events.X` で始まる変数にマッピングされる必要があること
+   >
+   >* `eVars` および `props` は、 `pagedata.X` または `eventdata.X`
+   >* それに対して、イベントは`eventdata.events.X` で始まる変数にマッピングされる必要があること
 
 
-1. サイトのパブリッシュインスタンスでフレームワークを使用できるようにするには、サイドキックの「**ページ**」タブを開き、「**フレームワークをアクティベート**」をクリックします。
+1. サイトのパブリッシュインスタンスでフレームワークを使用できるようにするには、 **ページ** サイドキックのタブで、をクリックします。 **フレームワークをアクティベートします。**
 
 ## 製品関連変数のマッピング {#mapping-product-related-variables}
 
-AEMは、Adobe Analytics製品関連のプロパティにマッピングするための製品関連の変数およびイベントの命名に規則を使用します。
+AEMは、Adobe Analytics製品関連のプロパティにマッピングされる製品関連の変数およびイベントの命名に規則を使用します。
 
 | CQ 変数 | Analytics 変数 | 説明 |
-|---|---|---|
-| `product.category` | `product.category` （コンバージョン変数）。 | 製品カテゴリです。 |
-| `product.sku` | `product.sku` （コンバージョン変数）。 | 製品 SKU です。 |
-| `product.quantity` | `product.quantity` （コンバージョン変数）。 | 購入される製品の数です。 |
-| `product.price` | `product.price` （コンバージョン変数）。 | 製品価格です。 |
+|--- |--- |--- |
+| `product.category` | `product.category` （コンバージョン変数） | 製品カテゴリです。 |
+| `product.sku` | `product.sku` （コンバージョン変数） | 製品 SKU です。 |
+| `product.quantity` | `product.quantity` （コンバージョン変数） | 購入される製品の数です。 |
+| `product.price` | `product.price` （コンバージョン変数） | 製品価格です。 |
 | `product.events.<eventName>` | レポートで製品に関連付けるための成功イベントです。 | `product.events` は、*eventName* という名前のイベントのプレフィックスです。 |
 | `product.evars.<eVarName>` | 製品に関連付けるためのコンバージョン変数（`eVar`）です。 | `product.evars` は、*eVarName* という名前の eVar 変数のプレフィックスです。 |
 
@@ -88,36 +86,36 @@ AEMは、Adobe Analytics製品関連のプロパティにマッピングする�
 
 >[!NOTE]
 >
->CQ変数にAdobe Analytics Productsプロパティをマッピングしないでください。 この表で説明している製品関連マッピングの設定は、Products 変数へのマッピングと実質的に同じです。
+>CQ 変数にAdobe Analytics Products プロパティをマッピングしないでください。 この表で説明している製品関連マッピングの設定は、Products 変数へのマッピングと実質的に同じです。
 
 ### Adobe Analytics のレポートのチェック {#checking-reports-on-adobe-analytics}
 
-1. AEMに指定したのと同じ資格情報を使用してAdobe Analytics Webサイトにログインします。
+1. AEMに指定したのと同じ資格情報を使用して、Adobe Analytics Web サイトにログインします。
 1. 選択した RSID が、前の手順で使用したものであることを確認します。
 1. （ページの左側の）**レポート**&#x200B;で、**カスタムコンバージョン**／**カスタムコンバージョン 1～10** を選択して、`eVar7` に対応する変数を選択します。
 
-1. 使用しているAdobe Analyticsのバージョンに応じて、使用されている検索語句でレポートが更新されるまで、平均45分待つ必要があります。例：ナス
+1. 使用しているAdobe Analyticsのバージョンに応じて、使用されている検索語句でレポートが更新されるまで、平均 45 分待つ必要があります。例：茄子
 
 ## Adobe Analytics フレームワークでの Content Finder（cf#）の使用 {#using-the-content-finder-cf-with-adobe-analytics-frameworks}
 
-最初は、Adobe Analyticsフレームワークを開くと、コンテンツファインダーに事前定義済みのAnalytics変数が次の場所に含まれています。
+最初に、Adobe Analyticsフレームワークを開くと、コンテンツファインダーには次の場所に事前定義済みの Analytics 変数が含まれています。
 
 * トラフィック
 * コンバージョン
 * イベント
 
 RSID が選択されている場合、その RSID に属するすべての変数がリストに追加されます。\
-Analytics変数を別のトラッキングコンポーネントに存在するCQ変数にマッピングするには、`cf#`が必要です。 基本トラッキングのためのフレームワークのセットアップを参照してください。
+この `cf#` は、別のトラッキングコンポーネント上に存在する CQ 変数に Analytics 変数をマッピングするために必要です。 基本トラッキングのためのフレームワークのセットアップを参照してください。
 
-フレームワーク用に選択したビューに応じて、コンテンツファインダーは、Analytics変数(AEMビュー)またはCQ変数（Analyticsビュー）のいずれかによって設定されます。
+フレームワーク用に選択したビューに応じて、コンテンツファインダーは、Analytics 変数 (AEMビュー ) または CQ 変数（Analytics ビュー）のいずれかによって入力されます。
 
 リストは、次の方法で操作できます。
 
 1. **AEM ビュー**&#x200B;では、リストは、3 つのフィルターボタンを使用してどの変数の型が選択されているかに応じて、フィルターできます。
 
    * どのボタンも選択されて&#x200B;*いない*&#x200B;場合、完全なリストが表示されます。
-   * 「**トラフィック**」ボタンが選択されている場合、リストには「トラフィック」セクションに属する変数のみが表示されます。
-   * 「**コンバージョン**」ボタンが選択されている場合、リストには「コンバージョン」セクションに属する変数のみが表示されます。
+   * この **トラフィック** ボタンが選択されている場合、リストには、「トラフィック」セクションに属する変数のみが表示されます。
+   * この **コンバージョン** ボタンが選択されている場合、リストには、「コンバージョン」セクションに属する変数のみが表示されます。
    * 「**イベント**」ボタンが選択されている場合、リストには、「イベント」セクションに属する変数のみが表示されます。
 
    >[!NOTE]
@@ -134,31 +132,31 @@ Analytics変数を別のトラッキングコンポーネントに存在するCQ
    1. 複数の RSID がフレームワークで選択されている場合、リストのすべての変数は、選択した RSID 内で使用されたすべてのラベルを使用して表示されます。
 
 
-1. Adobe Analyticsビューでは、コンテンツファインダーは、CQビューにドラッグされたトラッキングコンポーネントに属するすべてのCQ変数を表示します。
+1. Adobe Analyticsビューでは、コンテンツファインダーは、CQ ビューにドラッグされたトラッキングコンポーネントに属するすべての CQ 変数を表示します。
 
-   * 例えば、CQビューで&#x200B;**ダウンロードコンポーネント**&#x200B;が1つだけドラッグ&#x200B;*された場合（2つのマッピング可能な変数* eventdata.downloadLink *と* eventdata.events.startDownload *を含む）、コンテンツファインダーは次のように表示されますAdobe Analyticsビュー：*
+   * 例：場合 **コンポーネントをダウンロード** が *ただひたひたひたひたす* CQ ビュー内（2 つのマッピング可能な変数を持つ） *eventdata.downloadLink* および *eventdata.events.startDownload*&#x200B;など ) の場合、Adobe Analytics表示に切り替えると、コンテンツファインダーは次のように表示されます。
 
    ![aa-22](assets/aa-22.png)
 
-   * 変数は、3つの変数セクション（**Traffic**、**Conversion**&#x200B;および&#x200B;**Events**）のいずれかに属する任意のAdobe Analytics変数にドラッグ&amp;ドロップできます。
+   * 変数は、3 つの変数セクション (**トラフィック**, **コンバージョン** および **イベント**) をクリックします。
 
-   * 新しいトラッキングコンポーネントをCQビューのフレームワークにドラッグすると、コンポーネントに属するCQ変数がAdobe Analyticsビューのコンテンツファインダー(cf#)に自動的に追加されます。
+   * 新しいトラッキングコンポーネントを CQ ビューのフレームワークにドラッグすると、そのコンポーネントに属する CQ 変数がAdobe Analyticsビューのコンテンツファインダー (cf#) に自動的に追加されます。
    >[!NOTE]
    >
-   >1回のAdobe Analytics変数にマッピングできるCQ変数は1つだけです
+   >1 つのAdobe Analytics変数にマッピングできる CQ 変数は、いつでも 1 つだけです。
 
 ## AEM ビューと Analytics ビューの使用 {#using-aem-view-and-analytics-view}
 
-フレームワークページでのAdobe Analyticsマッピングの表示方法は、いつでも2つ切り替えることができます。 2 つのビューは、2 つの異なる見方からのフレームワーク内のマッピングの概要をわかりやすく提供します。
+フレームワークページでのAdobe Analyticsマッピングの表示方法は、いつでも 2 つ切り替えることができます。 2 つのビューは、2 つの異なる見方からのフレームワーク内のマッピングの概要をわかりやすく提供します。
 
-### AEM ビュー  {#aem-view}
+### AEM ビュー {#aem-view}
 
 ![aa-23](assets/aa-23.png)
 
 上記の図を例に挙げると、**AEM ビュー**&#x200B;には次のプロパティがあります。
 
 1. これはフレームワークが開いたときのデフォルトの表示です。
-1. 左側：コンテンツファインダー(cf#)は、選択されたRSIDに基づいて、Adobe Analytics変数によって設定されます。
+1. 左側：コンテンツファインダー (cf#) は、選択された RSID に基づいてAdobe Analytics変数によって設定されます。
 1. タブヘッダー（**AEM ビュー**&#x200B;と **Analytics ビュー**）：2 つのビューを切り替えるのに使用します。
 
 1. **AEM ビュー**:
@@ -180,25 +178,25 @@ Analytics変数を別のトラッキングコンポーネントに存在するCQ
 
 ![aa-24](assets/aa-24.png)
 
-1. このビューにアクセスするには、フレームワークの「**Analyticsビュー**」タブに切り替えます。
+1. このビューには、 **Analytics ビュー** 」タブをクリックします。
 1. 左側：コンテンツファインダー（cf#）は、CQ ビューのフレームワークにドラッグしたコンポーネントに基づく CQ 変数によって入力されます。
 1. タブヘッダー（**AEM ビュー**&#x200B;と **Analytics ビュー**）：2 つのビューを切り替えるのに使用します。
 
-1. 3つのテーブル（トラフィック、コンバージョン、イベント）に、使用可能なAdobe Analytics変数の一覧を示します。 一覧表示されています。ここに示されるマッピングは、AEM ビューのものと同じです。
+1. 3 つの表（トラフィック、コンバージョン、イベント）に、使用可能なすべてのAdobe Analytics変数を示します。 一覧表示されています。ここに示されるマッピングは、AEM ビューのものと同じです。
 
    * **トラフィック**：
 
-      * CQ変数(`prop1`)にマッピングされたトラフィック変数(`eventdata.downloadLink`)
+      * トラフィック変数 ( `prop1`) を CQ 変数 ( `eventdata.downloadLink`)
 
       * コンポーネントの隣に鍵アイコンがある場合、これは、親フレームワークからの継承であり、そのため編集できないことを意味します。
    * **コンバージョン**:
 
-      * CQ変数(`eVar1`)にマッピングされたコンバージョン変数(`pagedata.title`)
+      * コンバージョン変数 ( `eVar1`) を CQ 変数 ( `pagedata.title`)
 
       * CQ 変数フィールドをダブルクリックしてコードを手動で入力することにより、JavaScript 式にマッピングされたコンバージョン変数（`eVar3`）をインラインで追加しました。
    * **イベント**:
 
-      * CQイベント(`event1`)にマッピングされたイベント変数(`eventdata.events.pageView`)
+      * イベント変数 ( `event1`) を CQ イベント ( `eventdata.events.pageView`)
 
 
 
@@ -206,14 +204,9 @@ Analytics変数を別のトラッキングコンポーネントに存在するCQ
 >
 >すべての表の CQ 変数列は、フィールドをダブルクリックしてテキストを追加することで、インラインで入力することもできます。これらのフィールドは、JavaScript を入力として受け取ります。
 >
->* 例えば、&lt;a0/の隣に、`prop3`
->* `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
-   >  *:*（コロン）を使用し、*Adobe*&#x200B;を先頭に`prop3`として付加した、*サイトセクション*&#x200B;で連結されたページの&#x200B;*タイトル*&#x200B;を送信するには
-
->
-
-
+>例えば、次の隣に `prop3` 以下を追加できます。
+>     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
+送信する *タイトル* ページの *sitesection* using *:* （コロン）と「 *Adobe* as `prop3`
 
 >[!CAUTION]
->
->Adobe Analytics変数にマッピングできるCQ変数は、常に1つだけです。
+1 つのAdobe Analytics変数にマッピングできる CQ 変数は、いつでも 1 つだけです。
