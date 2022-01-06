@@ -4,14 +4,15 @@ description: AEM e コマースフレームワークは、特定のブランド�
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
-workflow-type: tm+mt
+exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
+source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+workflow-type: ht
 source-wordcount: '733'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# e コマース{#ecommerce}
+# e コマース {#ecommerce}
 
 * [概念 ](/help/commerce/cif-classic/administering/concepts.md)
 * [管理（汎用）](/help/commerce/cif-classic/administering/generic.md)
@@ -54,7 +55,7 @@ ht-degree: 89%
    <td><p>製品カタログ</p> </td>
    <td>
     <ul>
-     <li>AEMの製品インポーター、エディター、キャッシュ</li>
+     <li>AEM の製品インポーター、エディター、キャッシュ</li>
      <li>AEM またはプロキシページを含む標準のカタログ</li>
     </ul> </td>
    <td>
@@ -68,7 +69,7 @@ ht-degree: 89%
    <td><p>スケーラビリティ</p> </td>
    <td>
     <ul>
-     <li>最大で数百万の製品をサポート可能（使用事例によって異なります）</li>
+     <li>最大で数百万の製品をサポートできます（ユースケースによって異なります）</li>
      <li>Dispatcher でのキャッシュ</li>
     </ul> </td>
    <td>
@@ -119,15 +120,15 @@ AEM e コマースフレームワークは、特定のブランド用に構築�
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[eコマースのデプロイ](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[e コマースのデプロイ](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
 >
->eコマース機能の拡張について詳しくは、[eコマースの開発](/help/commerce/cif-classic/developing/ecommerce.md)を参照してください。
+>e コマース機能の拡張について詳しくは、[e コマースの開発](/help/commerce/cif-classic/developing/ecommerce.md)を参照してください。
 
 ## 主な機能 {#main-features}
 
 AEM e コマースフレームワークは、以下の機能を提供します。
 
-* プロジェクトで何を実現できるかを示すための&#x200B;**標準のAEMコンポーネント**&#x200B;が多数あります。
+* プロジェクトで実現できる機能を示す、以下のような様々な&#x200B;**標準 AEM コンポーネント**&#x200B;があります。
 
    * 商品の表示
    * 買い物かご
@@ -151,7 +152,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    ![](/help/sites-administering/assets/chlimage_1-131.png)
 
-* AEM機能を使用して、複数のチャネル&#x200B;**（完全なブラウザーウィンドウやモバイルデバイスなど）にコンテンツを**&#x200B;表示します。 これにより、訪問者が必要とする形式でコンテンツが提供されます。
+* フルブラウザーウィンドウやモバイルデバイスなど、**複数のチャネルにコンテンツを表示する** AEM 機能を使用します。これにより、訪問者が必要とする形式でコンテンツが提供されます。
 
    ![](/help/sites-administering/assets/chlimage_1-132.png)
 
@@ -191,6 +192,6 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
 ### 使用する理由 {#why}
 
-* カスタマイズされたeコマースサイトを迅速に実現するために必要な基本メカニズムを提供する。
+* カスタマイズされた e コマースサイトを迅速に実現するために必要な基本メカニズムを提供します。
 * 実際の e コマースサイトの開発に必要な柔軟性をもたらします。
 * ベストプラクティスを示します。
