@@ -4,9 +4,9 @@ description: 固有のリリースノート [!DNL Adobe Experience Manager] 6.5 
 docset: aem65
 mini-toc-levels: 1
 exl-id: 28a5ed58-b024-4dde-a849-0b3edc7b8472
-source-git-commit: 5b62efe65be44416335c6dbbde23ee6a7e5a8fd7
+source-git-commit: 282f634e84b7c6c5e281d2b425953853790f225c
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3829'
 ht-degree: 4%
 
 ---
@@ -37,6 +37,8 @@ ht-degree: 4%
 * ユーザーエクスペリエンスが改善され、フォルダー内に存在するアセットの数が表示されます。1 つのフォルダー内のアセットが 1000 個を超える場合、[!DNL Assets] には「1000+」と表示されます。
 
 * カード表示と列表示で並べ替えオプションをレンダリングできるようになりました。
+
+* ビジネスプロファイルはAdobeAsset Link をサポートします。
 
 * これで、 [!DNL Dynamic Media] を設定することで、 [!DNL Dynamic Media Classic] デスクトップアプリケーション。 詳しくは、 [Dynamic Mediaの一般設定](/help/assets/dm-general-settings.md).
 
