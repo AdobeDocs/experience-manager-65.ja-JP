@@ -1,17 +1,17 @@
 ---
 title: 汎用 e コマースの管理
-seo-title: 汎用 e コマースの管理
+seo-title: Administering generic eCommerce
 description: AEM の汎用ソリューションは、リポジトリ内に保持されているコマース情報を管理する手段を提供します。
-seo-description: AEM の汎用ソリューションは、リポジトリ内に保持されているコマース情報を管理する手段を提供します。
+seo-description: The AEM generic solution provides methods of managing the commerce information held within the repository.
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: c29f6213-1df6-45af-91c8-14b255276d82
 source-git-commit: 812d1a43176a75ff22e3a0bc07bc658cb5070a62
-workflow-type: tm+mt
-source-wordcount: '3002'
-ht-degree: 84%
+workflow-type: ht
+source-wordcount: '2984'
+ht-degree: 100%
 
 ---
 
@@ -72,15 +72,15 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
    * **インポーター**
 
-      特定の[コマースプロバイダー](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)のインポーター（デフォルトは`Geometrixx`）。
+      特定の[コマースプロバイダー](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)用のインポーター（デフォルトでは `Geometrixx`）。
 
    * **ソース**
 
-      読み込むファイル。ブラウザーを使用してファイルを選択できます。
+      読み込むファイル（ブラウザーを使用してファイルを選択できます）。
 
    * **増分読み込み**
 
-      （完全ではなく）増分インポートであるかどうかを示します。
+      （完全インポートではなく）増分インポートかどうかを示します。
    >[!NOTE]
    >
    >（サンプル geometrixx-outdoor インポーターの）増分読み込みは、商品レベルで動作します。
@@ -110,21 +110,21 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
    * **ストア名**
 
-      製品は次の場所にインポートされます。
+      製品は以下にインポートされます。
 
       `/etc/commerce/products/<*store name*>/`
 
    * **コマースプロバイダー**
 
-      [コマースプロバイダー](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)のインポーター。デフォルトのGeometrixx。
+      [コマースプロバイダー](/help/commerce/cif-classic/administering/concepts.md#commerce-providers)のインポーター（デフォルトでは Geometrixx）。
 
    * **ソースファイル**
 
-      読み込むファイルのリポジトリ内の場所。
+      インポートするファイルのリポジトリ内の場所。
 
    * **増分読み込み**
 
-      （完全ではなく）増分インポートであるかどうかを示します。
+      （完全インポートではなく）増分インポートかどうかを示します。
 
 1. 「**製品を読み込み**」をクリックします。
 
@@ -132,7 +132,7 @@ AEM の汎用ソリューションは、（外部の e コマースエンジン�
 
 >[!NOTE]
 >
->標準の商品管理は必要最小限です。Geometrixx-Outdoors の商品セットは、基本的なものだからです。複雑さは製品[基礎モード](/help/sites-authoring/scaffolding.md)に基づいているので、独自の製品基礎モードを使用すると、より高度な編集を実現できます。
+>標準の商品管理は必要最小限です。Geometrixx-Outdoors の商品セットは、基本的なものだからです。複雑さは製品の[基礎モード](/help/sites-authoring/scaffolding.md)によるので、独自の製品基礎モードを使用すれば、より高度な編集が可能になります。
 
 #### 商品情報の作成 - タッチ操作向け UI {#creating-product-information-touch-optimized-ui}
 
@@ -224,10 +224,10 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
    `http://localhost:4502/crx/de/index.jsp#/libs/commerce/gui/content/products/aside/items/search/items/searchpanel/facets`
 
-1. 例えば、商品の検索ページに表示するサイズを変更できます。`sizegroup`ノードをクリックします。
-1. `items`ノードをクリックし、`propertypredicate`ノードをクリックします。
-1. `propertyValues`は変更できます。 例えば、XS または XXL を追加したり、サイズを削除したりできます。
-1. 「**すべて保存**」をクリックし、製品検索ページに移動します。 変更内容が表示されます。
+1. 例えば、商品の検索ページに表示するサイズを変更できます。`sizegroup` ノードをクリックします。
+1. `items` ノードをクリックしてから、`propertypredicate` ノードをクリックします。
+1. `propertyValues` を変更できます。例えば、XS または XXL を追加したり、サイズを削除したりできます。
+1. 「**すべて保存**」をクリックして、商品の検索ページに移動します。変更内容が表示されます。
 
 ### 複数アセット {#multiple-assets}
 
@@ -240,7 +240,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 #### 複数アセットの追加 {#adding-multiple-assets}
 
 1. **コマース**&#x200B;から&#x200B;**製品**&#x200B;コンソールに移動します。
-1. **製品**&#x200B;コンソールを使用して、必要な製品に移動します。
+1. **製品**&#x200B;コンソールを使用して、必要な商品に移動します。
 
    >[!NOTE]
    >
@@ -253,7 +253,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
    ![chlimage_1-91](/help/sites-administering/assets/chlimage_1-91.png)
 
 1. 「**追加**」をタップまたはクリックします。新しいアセットのプレースホルダーが表示されます。
-1. 「**変更**」をタップまたはクリックすると、アセットを選択できるダイアログが開きます。
+1. 「**変更**」をタップまたはクリックすると、アセットを選択できるダイアログが表示されます。
 1. 追加するアセットを選択します。
 
    >[!NOTE]
@@ -264,8 +264,8 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 2 つのアセットが製品コンポーネントに保存されました。商品ページに表示するアセットを設定できます。この機能は、カテゴリシステムと連動しています。まず、個々のアセットにカテゴリを追加する必要があります。
 
-1. 「**製品データを表示**」をタップまたはクリックします。
-1. アセットの下に&#x200B;**アセットカテゴリ**&#x200B;を入力します（例：`cat1`と`cat2`）。
+1. 「**商品データを表示**」をタップまたはクリックします。
+1. アセットの下の「**アセットカテゴリ**」に入力します（例：`cat1` および `cat2`）。
 
    >[!NOTE]
    >
@@ -312,7 +312,7 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 #### 製品コンソール {#products-console}
 
-1. **製品**&#x200B;コンソールを使用して、必要な製品に移動します。
+1. **製品**&#x200B;コンソールを使用して、必要な商品に移動します。
 1. 「**製品データを表示**」をタップまたはクリックします。
 1. 「**編集**」をタップまたはクリックします。
 1. **デフォルトのアセットカテゴリ**&#x200B;を入力します。
@@ -325,9 +325,9 @@ CRXDE Lite を使用して、既存のファセットを変更したり、新し
 
 >[!NOTE]
 >
->多くの場合、商品情報は商品を参照するページを通じて公開されます。例えば、製品Yを参照するページXを公開すると、AEMは、製品Yも公開するかどうかを尋ねます。
+>多くの場合、商品情報は商品を参照するページを通じて公開されます。例えば、商品 Y を参照するページ X を公開する際に、AEMは、商品 Y も公開するかどうかを尋ねます。
 >
->特殊なケースでは、AEMは製品データからの直接公開もサポートします。
+>特殊なケースでは、AEM は、商品データからの直接の公開もサポートしています。
 
 1. （**コマース**&#x200B;から）**製品**&#x200B;コンソールを使用して、商品情報に移動します。
 1. 次のいずれかを使用します。
@@ -363,15 +363,15 @@ Search&amp;Promote 統合を使用すると、次のことができます。
 * `com/adobe/cq/commerce/pim/PRODUCT_PAGE_MODIFIED`
 * `com/adobe/cq/commerce/pim/PRODUCT_PAGE_DELETED`
 
-`PRODUCT_*`イベントの場合、パスは`/etc/commerce/products`内の基本製品を指します。 `PRODUCT_PAGE_*`イベントの場合、パスは`cq:Page`ノードを指します。
+`PRODUCT_*` イベントの場合、パスは `/etc/commerce/products` 内の基本商品を指します。`PRODUCT_PAGE_*` イベントの場合、パスは `cq:Page` ノードを指します。
 
-OSGIイベント(`/system/console/events`)のWebコンソールで、次のように確認できます。
+これらは web コンソールで OSGI イベント（`/system/console/events`）に次のように表示されます。
 
 ![](/help/sites-administering/do-not-localize/chlimage_1-20.png)
 
 >[!NOTE]
 >
->AEM](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)でのイベント処理もお読みください。[
+>[AEM でのイベント処理](https://blogs.adobe.com/experiencedelivers/experience-management/event_handling_incq/)も参照してください。
 
 ### カートへ追加リンクを含む画像 {#image-with-add-to-cart-links}
 
@@ -384,7 +384,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 1. [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)からコンポーネントに画像をドラッグ＆ドロップします。
 1. 次のいずれかを実行できます。
 
-   * コンポーネントをクリックし、編集アイコンをクリックします。
+   * コンポーネントをクリックしたあと、編集アイコンをクリックする
    * ゆっくりとダブルクリックする
 
 1. フルスクリーンアイコンをクリックします。
@@ -415,7 +415,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
    ![](/help/sites-administering/do-not-localize/chlimage_1-22.png)
 
 1. [プレビュー](/help/sites-authoring/editing-content.md#previewingpagestouchoptimizedui)モードに切り替えます。
-1. 「+」ホットスポットをクリックします。**パス**&#x200B;に入力した製品のサイズと数量を選択できるダイアログが開きます。
+1. 「+」ホットスポットをクリックします。「**パス**」に入力した商品のサイズと数量を選択できるダイアログが表示されます。
 
    ![chlimage_1-95](/help/sites-administering/assets/chlimage_1-95.png)
 
@@ -459,7 +459,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
    ![create-icon](/help/sites-administering/do-not-localize/chlimage_1-23.png)
 
-1. リストから「**カタログを作成**」を選択すると、カタログを作成ウィザードが開きます。
+1. リストから「**カタログを作成**」を選択すると、カタログを作成ウィザードが表示されます。
 
    ![chlimage_1-99](/help/sites-administering/assets/chlimage_1-99.png)
 
@@ -469,14 +469,14 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
    ![chlimage_1-100](/help/sites-administering/assets/chlimage_1-100.png)
 
-1. **タイトル**&#x200B;と&#x200B;**名前**&#x200B;を入力します。
+1. 「**タイトル**」と「**名前**」を入力します。
 1. 「**作成**」ボタンをタップまたはクリックします。カタログが作成され、ダイアログが表示されます。
 
    ![chlimage_1-101](/help/sites-administering/assets/chlimage_1-101.png)
 
 1. 「**完了**」ボタンをタップまたはクリックすると、サイトコンソールに戻り、カタログを表示することができます。
 
-   「**カタログを開く**」ボタンをタップまたはクリックすると、カタログが開きます（例：`http://localhost:4502/editor.html/content/test-catalog.html`）。
+   「**カタログを開く**」ボタンをタップまたはクリックすると、カタログ（例：`http://localhost:4502/editor.html/content/test-catalog.html`）が開きます。
 
 #### カタログの生成 - クラシック UI {#generating-a-catalog-classic-ui}
 
@@ -494,7 +494,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
    （例：`Swimwear`）。
 
-1. 新しい`Swimwear`ページを開き、「**ブループリントを編集**」をクリックして&#x200B;**プロパティ**&#x200B;ダイアログを開き、**製品**&#x200B;の選択を設定できます。
+1. 新しい `Swimwear` ページを開いて「**ブループリントを編集**」をクリックすると、**プロパティ**&#x200B;ダイアログが表示されるので、**製品**&#x200B;の選択をセットアップできます。
 
    例えば、「**タグ／キーワード**」フィールドを開いてアクティビティを選択し、Geometrixx-Outdoors セクションから「Swimming」を選択します。
 
@@ -514,7 +514,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 カタログをロールアウトするには：
 
-1. **コマース**&#x200B;を使用して、**カタログ**&#x200B;コンソールに移動します。
+1. **Commerce** を介して&#x200B;**カタログ**&#x200B;コンソールに移動します。
 1. ロールアウトするカタログに移動します。
 1. 次のいずれかを使用します。
 
@@ -525,14 +525,14 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
    ![ロールアウト](/help/sites-administering/do-not-localize/chlimage_1-24.png)
 
-1. ウィザードで、必要に応じてロールアウトを設定し、「**ロールアウトの変更**」をタップまたはクリックします。
-1. ダイアログが表示されます。プロセスが終了したら、「**完了**」をタップまたはクリックします。
+1. ウィザードで、必要に応じてロールアウトを設定してから、「**ロールアウトの変更**」をタップまたはクリックします。
+1. ダイアログが表示されます。処理が終了したら、「**完了**」をタップまたはクリックします。
 
 #### カタログのロールアウト - クラシック UI {#rolling-out-a-catalog-classic-ui}
 
 カタログをロールアウトするには：
 
-1. ロールアウトするカタログに移動します。 次に例を示します。
+1. ロールアウトするカタログに移動します。次に例を示します。
 
    `http://localhost:4502/cf#/content/catalogs/geometrixx-outdoors/base-catalog.html`
 
@@ -544,7 +544,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 #### ブループリントインポーター - タッチ操作向け UI {#blueprint-importer-touch-optimized-ui}
 
-1. **コマース**&#x200B;を使用して、**カタログ**&#x200B;コンソールに移動します。
+1. **Commerce** を介して&#x200B;**カタログ**&#x200B;コンソールに移動します。
 1. カタログのブループリントを読み込む場所に移動します。
 1. **ブループリントを読み込み**&#x200B;アイコンをタップまたはクリックします。
 
@@ -558,7 +558,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 #### ブループリントインポーター - クラシック UI {#blueprint-importer-classic-ui}
 
-1. **ツール**&#x200B;コンソールを使用して、**コマース**&#x200B;に移動します。
+1. **ツール**&#x200B;コンソールを使用して、**Commerce** に移動します。
 
    次に例を示します。
 
@@ -641,9 +641,9 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
 >[!NOTE]
 >
->標準搭載のAEMには、商品の返却、注文ステータスの更新、履行、梱包明細の生成など、注文に関連する標準的な機能に必要なアクションがないことに注意してください。 主な目的は技術のプレビューです。
+>標準の AEM には、商品の返送、注文ステータスの更新、受け渡しの実行、納品書の生成など、注文に関連する標準機能に必要なアクションがないことを思い出してください。主な目的は技術のプレビューです。
 >
->AEMの一般的な注文管理は、基本的に維持されています。ウィザードで使用できるフィールドは、基礎モードによって異なります。
+>AEM の汎用の注文管理は基本的なものにとどまっています。ウィザードで使用可能なフィールドは、次の基礎モードによって異なります。
 >`/etc/scaffolding/geometrixx-outdoors/order/jcr:content/cq:dialog`
 >
 >カスタマイズされた基礎モードを作成する場合は、さらに多くの注文情報を保存できます。
@@ -663,7 +663,7 @@ OSGIイベント(`/system/console/events`)のWebコンソールで、次のよ�
 
    ![](/help/sites-administering/do-not-localize/chlimage_1-14.png)
 
-1. ウィザードが表示されます。「**基本**」、「**コンテンツ**」、「**支払**」、「**履行**」の各タブを使用して、新しい注文に関する[情報を入力します。](/help/commerce/cif-classic/administering/concepts.md#order-information)
+1. ウィザードが表示されます。「**基本**」、「**コンテンツ**」、「**支払い**」および「**受け渡し**」タブを使用して、[新しい注文に関する情報](/help/commerce/cif-classic/administering/concepts.md#order-information)を入力します。
 
 1. 「**作成**」を選択して情報を保存します。
 
