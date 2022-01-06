@@ -1,59 +1,59 @@
 ---
 title: AEM Content and Commerce - はじめに
-description: AEM Content and Commerceプロジェクトをデプロイする方法について説明します。
+description: AEM Content and Commerce プロジェクトをデプロイする方法について説明します。
 topics: Commerce
-feature: コマース統合フレームワーク
-source-git-commit: 1b200ea21709cd9234c92da8a8ef6145d2c2f635
-workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 38%
+feature: Commerce Integration Framework
+exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
+source-wordcount: '718'
+ht-degree: 100%
 
 ---
 
-
 # AEM Content and Commerce - はじめに {#start}
 
-AEMコンテンツとコマースの使用を開始するには、AEM Content and Commerce Add-On for AEM 6.5をインストールする必要があります。
+AEM Content and Commerce の使用を開始するには、AEM Content and Commerce Add-On for AEM 6.5 をインストールする必要があります。
 
 ## 最小ソフトウェア要件
 
-[AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)  7以降が必要です。
+[AEM 6.5 サービスパック](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 以降が必要です。
 
-## オンボーディング {#onboarding}
+## オンボーディング  {#onboarding}
 
-AEMコンテンツとコマースのオンボーディングは、次の2つの手順で構成されます。
+AEM Content and Commerce のオンボードは、次の 2 つの手順で構成されています。
 
-1. AEM 6.5用AEMコンテンツおよびコマースアドオンのインストール
+1. AEM Content and Commerce Add-On for AEM 6.5 をインストールする
 
-2. AEMとコマースソリューションの接続
+2. お使いのコマースソリューションに AEM を接続する
 
-### AEM 6.5用AEMコンテンツおよびコマースアドオンのインストール {#install-add-on}
+### AEM Content and Commerce Add-On for AEM 6.5 をインストールする {#install-add-on}
 
-AEM 6.5用AEM Commerce Add-Onを[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)ポータルからダウンロードしてインストールします。
+[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)ポータルから AEM Commerce Add-On for AEM 6.5 をダウンロードしてインストールします。
 
-必要なAEM 6.5サービスパックを起動してインストールします。 最新の利用可能なサービスパックをインストールすることをお勧めします。
+必要な AEM 6.5 サービスパックをインストールして起動します。 入手可能な最新のサービスパックをインストールすることをお勧めします。
 
 >[!NOTE]
 >
->これは、AEM Managed Serviceのお客様向けに、CSEがおこないます。
+>AEM Managed Service のお客様の場合、これは CSE が行います。
 
-### AEMをコマースシステムに接続する {#connect}
+### お使いのコマースシステムに AEM を接続 {#connect}
 
-AEMは、AEM用のアクセス可能なGraphQLエンドポイントを持つ任意のコマースシステムに接続できます。 これらのエンドポイントは通常、公開されている場合と、個々のプロジェクトの設定に応じて、プライベートVPNまたはローカル接続を介して接続する場合があります。
+AEM は、AEM 用のアクセス可能な GraphQL エンドポイントを持つ任意のコマースシステムに接続できます。 これらのエンドポイントは通常、公開されているか、個々のプロジェクトの設定に応じて、プライベート VPN またはローカル接続を介して接続することができます。
 
-オプションで、認証が必要な追加のCIF機能を使用するために認証ヘッダーを提供できます。
+オプションで、認証が必要な追加の CIF 機能を使用するために認証ヘッダーを指定できます。
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype)で生成されるプロジェクトと、[デフォルト設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)に既に含まれている[AEM Venia参照用ストア](https://github.com/adobe/aem-cif-guides-venia)を調整する必要があります。
+[AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)で生成されたプロジェクトと、 [デフォルト設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)に既に含まれている [AEM Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)は調整が必要です。
 
-`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`の`url`の値を、コマースシステムのGraphQLエンドポイントに置き換えます。 この設定は、OSGiコンソールを使用するか、プロジェクトを介してOSGi設定をデプロイすることでおこなえます。 ステージングシステムと実稼動システムでは、異なるAEM実行モードを使用して異なる設定がサポートされています。
+`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` の `url` の値をコマースシステムの GraphQL エンドポイントに置き換えます。 この設定を行うには、OSGi コンソールを使用するか、プロジェクトを介して OSGi 設定をデプロイします。 ステージングシステムと実稼動システムは、異なる AEM 実行モードを使用して異なる設定にすることができます。
 
-AEM ContentとCommerceアドオンおよびCIFコアコンポーネントは、AEMサーバー側接続とクライアント側接続の両方を使用します。 クライアント側のCIFコアコンポーネントとCIFアドオンオーサリングツールは、デフォルトで`/api/graphql`に接続されます。 これは、必要に応じてCIFCloud Service設定で調整できます（以下を参照）。
+AEM Content and Commerce Add-On および CIF コアコンポーネントでは、AEM サーバーサイド接続とクライアントサイド接続の両方を使用します。 クライアントサイド CIF コアコンポーネントと CIF アドオンオーサリングツールは、デフォルトで `/api/graphql` に接続されます。これは、CIF Cloud Service 設定で必要に応じて調整できます（以下を参照）。
 
-CIFアドオンは、`/api/graphql`にGraphQLプロキシサーブレットを提供します。このサーブレットは、オプションで[ローカル開発](develop.md)に使用できます。 実稼動デプロイメントの場合は、AEM Dispatcherを介する、または他のネットワークレイヤー（CDNなど）でコマースGraphQLエンドポイントへのリバースプロキシを設定することを強くお勧めします。
+CIF アドオンでは、`/api/graphql` に GraphQL プロキシサーブレットが用意されているので、オプションでこれを[ローカル開発](develop.md)に使用できます。実稼動デプロイメントの場合は、AEM Dispatcher を使用して、または他のネットワークレイヤー（CDN など）で、コマース GraphQL エンドポイントへのリバースプロキシを設定することを強くお勧めします。
 
 ## ストアとカタログの設定 {#catalog}
 
-アドオンと[CIFコアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、異なるコマースストア（またはストア表示など）に接続された複数のAEMサイト構造で使用できます。 デフォルトでは、CIFアドオンは、Adobeコマースのデフォルトのストアおよびカタログ(Magento)に接続するデフォルト設定を使用してデプロイされます。
+このアドオンと [CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components) は、異なるコマースストア（またはストア表示など）に接続された複数の AEM サイト構造で使用できます。 デフォルトでは、CIF アドオンは、Adobe Commerce のデフォルトストアとカタログ（Magento）に接続するデフォルト設定でデプロイされます。
 
 この設定は、次の手順に従って、CIF Cloud Service 設定を使用してプロジェクトに合わせて調整できます。
 
@@ -80,9 +80,9 @@ CIFアドオンは、`/api/graphql`にGraphQLプロキシサーブレットを�
 - カタログのルートカテゴリ識別子 - ストアカタログルートの識別子（UID または ID）
    >[!CAUTION]
    >
-   > CIFコアコンポーネントバージョン2.0.0以降、`id`のサポートは削除され、`uid`に置き換えられました。 プロジェクトでCIFコアコンポーネントバージョン2.0.0を使用している場合は、カタログUIDのサポートを有効にし、有効なカテゴリUIDを「カタログルートカテゴリ識別子」として使用する必要があります。
+   > CIF コアコンポーネントバージョン 2.0.0 以降では、`id` のサポートが削除されて `uid` に置き換えられました。プロジェクトで CIF コアコンポーネントバージョン 2.0.0 を使用している場合は、カタログ UID のサポートを有効にし、有効なカテゴリ UID を「カタログルートカテゴリ識別子」として使用する必要があります。
 
-上記の設定は参照用です。プロジェクトは独自の設定を提供する必要があります。
+上記の設定は参照用です。プロジェクトは、独自の設定を行う必要があります。
 
 複数の AEM サイト構造を異なるコマースカタログと組み合わせて使用する、より複雑な設定については、チュートリアル「[コマースマルチストアの設定](configuring/multi-store-setup.md)」を参照してください。
 
