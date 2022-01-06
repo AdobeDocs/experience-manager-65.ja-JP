@@ -1,52 +1,53 @@
 ---
-title: コマース統合フレームワークを使用したAEMとサードパーティのコマース統合
-description: エンタープライズ企業がストアフロントを強化するには、サードパーティのコマースソリューションが追加で必要になる場合があります。 このような統合シナリオでコマース統合フレームワーク(CIF)を使用して、I/O Runtimeを使用してサードパーティのコマースソリューションをAdobe Experience Managerに接続できます。
+title: コマース統合フレームワークを使用した AEM とサードパーティコマースの統合
+description: 大規模企業では、ストアフロントを強化するために、追加のサードパーティ製コマースソリューションが必要になる場合があります。I/O Runtime を使用してサードパーティのコマースソリューションを Adobe Experience Manager に接続するような統合シナリオで、コマース統合フレームワーク（CIF）を使用できます。
 thumbnail: cif-third-party-architecture.jpg
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
-workflow-type: tm+mt
+exl-id: e99899a4-df86-4108-991a-8b30d303a279
+source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+workflow-type: ht
 source-wordcount: '419'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# コマース統合フレームワークを使用したAEMとサードパーティのコマース統合{#aem-third-party}
+# コマース統合フレームワークを使用した AEM とサードパーティコマースの統合 {#aem-third-party}
 
-非Adobeコマースソリューションの統合は、CIFの一般的なシナリオです。 様々なAPIやスキーマを持つサードパーティソリューションは、統合レイヤーを介して接続できます。
+Adobe Commerce 以外のソリューションの統合は、CIF の一般的なシナリオです。様々な API やスキーマを持つサードパーティソリューションは、統合レイヤーを介して接続できます。
 
 ## アーキテクチャ {#architecture}
 
 全体的なアーキテクチャは次のとおりです。
 
-![AEM非Magento/サードパーティアーキテクチャの概要](../assets//AEM_nonMagento_Architecture.png)
+![AEM と Magento 以外またはサードパーティとの統合のアーキテクチャ概要](../assets//AEM_nonMagento_Architecture.png)
 
-この統合レイヤーの目的は、サードパーティのAPIとスキーマを、サポートされるAdobeコマースGraphQL APIとExperience Manager外のスキーマにマッピングすることです。 このカプセル化により、統合のロジックとシステムを、Experience Manager内のコードを変更することなく更新できます。
+この統合レイヤーの目的は、サードパーティの API とスキーマを、サポートされている Adobe Commerce GraphQL API と Experience Manager 外のスキーマにマッピングすることです。このカプセル化により、統合のロジックとシステムを、Experience Manager 内のコードを変更することなくアップデートできます。
 
 ## 統合のソリューション要件
 
-Experience Managerがデータをオンデマンドで取得するので、製品カタログのリアルタイムAPIが必要です。
+Experience Manager はデータをオンデマンドで取得するため、製品カタログのリアルタイム API が必要です。
 
 >[!TIP]
 >
->リアルタイムAPIが使用できない場合は、APIを使用した外部製品キャッシュを統合に使用する必要があります。 例：[Magentoオープンソース](https://magento.com/products/magento-open-source)
+>リアルタイム API が使用できない場合は、API を使用した外部製品キャッシュを統合に対して使用する必要があります。例：[Magento オープンソース](https://magento.com/products/magento-open-source)
 
-完全なGraphQLスキーマを実装する必要はありません。必要なユースケースを有効にするには、スキーマのオブジェクトだけを実装します。
+完全な GraphQL スキーマを実装する必要はありません。必要なユースケースを有効にするには、スキーマのオブジェクトだけを実装します。
 
 ## バックエンドの使用例
 
-CIFは、製品カタログへのリアルタイムアクセスおよびExperience Managerエクスペリエンス管理ツールを使用して製品を拡張します。 このシームレスな統合により、作成者は、必要に応じて、コンテンツのコンテキストを離れることなく、埋め込みUIを使用してコマースデータにアクセスできます。
+CIF は、製品カタログへのリアルタイムのアクセスと製品エクスペリエンス管理ツールで Experience Manager を拡張しています。このシームレスな統合により、作成者は、必要に応じて、コンテンツのコンテキストを離れることなく、組み込み UI を使用してコマースデータにアクセスできます。
 
-これらのユースケースのロックを解除するには、製品カタログAPIの統合が必要です。
+これらのユースケースを可能にするには、製品カタログ API の統合が必要です。
 
-## フロントエンドの使用例
+## フロントエンドのユースケース
 
-[AEM CIFコアコンポーネ](https://github.com/adobe/aem-core-cif-components) ントは、CIFでサポートされているAdobeコマースAPIを使用してデータを取得し、交換します。コンポーネントを再利用するには、それぞれのAPIを実装する必要があります。
+[AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、CIF でサポートされている Adobe Commerce API を使用してデータを取得および交換します。コンポーネントを再利用するには、それぞれの API を実装する必要があります。
 
-パフォーマンスに関する重要なクライアント側コンポーネントの推奨事項は、遅延を避けるために、サードパーティのソリューションと直接通信することです。
+パフォーマンスが重要なクライアントサイドのコンポーネントでは、サードパーティソリューションと直接通信して遅延を回避することが推奨されます。
 
-## 統合の開発{#develop-integration}
+## 統合の開発 {#develop-integration}
 
-統合レイヤーには[Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)を使用することをお勧めします。 サードパーティのCIFアドオンに含まれます。 マイクロサービスに似たアプローチと連携するので、簡単に複数のソリューションを統合するのに適しています。
+統合レイヤーには [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html) を使用することをお勧めします。これは、サードパーティ用の CIF アドオンに含まれています。マイクロサービスに似たアプローチがとられており、簡単に複数のソリューションを統合するのに適しています。
 
-[参照実装](https://github.com/adobe/commerce-cif-graphql-integration-reference)は、コマースソリューションへの統合を構築するための出発点として最適です。 GraphQLをサポートしていますが、RESTなどの他のタイプのAPIと統合することもできます。
+[参照実装](https://github.com/adobe/commerce-cif-graphql-integration-reference)は、コマースソリューションへの統合を構築するための出発点として最適です。GraphQL がサポートされていますが、REST などの他のタイプの API と統合することもできます。
 
-この統合レイヤーは、サードパーティのレイヤー（Mulesoftなど）が使用可能な場合や、統合がサードパーティのソリューションの上に構築される場合には必要ありません。
+この統合レイヤーは、サードパーティのレイヤー（Mulesoft など）が使用可能な場合や、統合がサードパーティのソリューションの上に構築される場合には必要ありません。
