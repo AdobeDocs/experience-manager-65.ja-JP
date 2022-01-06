@@ -1,29 +1,29 @@
 ---
-title: AEM 6.5機能ユーザーガイド
-seo-title: AEM 6.5機能ユーザーガイド
-description: AEM 6.5の基本的な機能の概要
-seo-description: AEM 6.5の基本的な機能の概要
+title: AEM 6.5 機能ユーザーガイド
+seo-title: AEM 6.5 Capabilities User Guide
+description: AEM 6.5 の基本的な機能の概要
+seo-description: An overview of the essential capabilities of AEM 6.5
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
-workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 33%
+workflow-type: ht
+source-wordcount: '145'
+ht-degree: 100%
 
 ---
 
-# AEM 6.5機能ユーザーガイド{#aem-65-capabilities-user-guides}
+# AEM 6.5 機能ユーザーガイド {#aem-65-capabilities-user-guides}
 
 ## AEM の基盤 {#aem-foundation}
 
-[アドビのAdobe Managed Servicesクラウドデプロイメントを含む、Adobe Experience Manager 6.5のインストール、デプロイ、およびアーキテクチャについて詳しく説明します](/help/sites-deploying/home.md)。
+Adobe Managed Services クラウドデプロイメントなど、[Adobe Experience Manager 6.5 のインストール、デプロイ、およびアーキテクチャについて詳しく説明します](/help/sites-deploying/home.md)。
 
-[AEMプロジェクトの管理方法を説明します](/help/managing/home.md)。
+[AEM プロジェクトの管理方法について説明します](/help/managing/home.md)。
 
 ## AEM Sites {#aem-sites}
 
-[AEM ](/help/sites-authoring/home.md)でのコンテンツの作成とオーサリングに関する主要な概念について説明します。
+[AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します](/help/sites-authoring/home.md)。
 
-[AEMの管理について説明します](/help/sites-administering/home.md)。
+[AEM の管理について説明します](/help/sites-administering/home.md)。
 
 ## AEM Assets {#aem-assets}
 
@@ -35,11 +35,11 @@ ht-degree: 33%
 
 ## AEM Screens {#aem-screens}
 
-[動的でインタラクティブなエクスペリエンスを公開するためのデジタルサイネージソリューションについて説明します。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+[動的でインタラクティブなエクスペリエンスを公開するデジタルサイネージソリューションについて説明します](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)。
 
 ## AEM Commerce {#aem-commerce}
 
-[AEM Commerceについて説明します。](/help/commerce/home.md)
+[AEM Commerce について説明します。](/help/commerce/home.md)
 
 ## AEM Communities {#aem-communities}
 
@@ -47,7 +47,7 @@ ht-degree: 33%
 
 ## AEM Livefyre {#aem-livefyre}
 
-[AEM Livefyreとユーザー生成コンテンツを共有します。](https://docs.adobe.com/content/help/en/livefyre/using/home.html)
+[ユーザー作成コンテンツを AEM Livefyre と共有します。](https://docs.adobe.com/content/help/ja/livefyre/using/home.html)
 
 ## AEM Mobile {#aem-mobile}
 
