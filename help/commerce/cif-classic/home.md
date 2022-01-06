@@ -2,9 +2,9 @@
 title: AEM CIF Classic
 description: AEM CIF Classic に関するセルフヘルプリソースおよびドキュメントリンク
 source-git-commit: 491b0398c90d84f38efaa7f0ccd4d4215064753d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 7%
 >
 >CIF Classic はメンテナンスモードです。
 >
->* 新規プロジェクトでは、 [AEM CIF](/help/commerce/home.md).
->* 既存の CIF Classic を使用する [AEM CIF への移行](/help/commerce/cif/migration.md).
+>* 新規プロジェクトでは、 [AEM CIF](/help/commerce/home.md) を使用してください。
+>* 既存の CIF Classic は [AEM CIF に移行](/help/commerce/cif/migration.md)する必要があります。
 
 >
 
