@@ -1,10 +1,7 @@
 ---
 title: コンテンツフラグメントでの参照の使用について説明します
 description: コンテンツフラグメント、その他のフラグメント、およびその他のアセット（メディア）への参照の使用について説明します。 ヘッドレス CMS オーサリング用のネストされたフラグメントの必要性と仕組みを紹介します。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 9661061a98c31fbb74bd0716dbedc7abef298f44
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 10%

@@ -1,10 +1,7 @@
 ---
 title: 翻訳済みコンテンツを公開
 description: 翻訳済みコンテンツを公開し、コンテンツの更新に合わせて翻訳を更新する方法を説明します。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 7cf68868e0963930bde9fcda647822a03914b61d
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 1%

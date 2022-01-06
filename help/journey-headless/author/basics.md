@@ -1,10 +1,7 @@
 ---
 title: オーサリングの基本を学ぶ
 description: コンテンツフラグメントを使用したヘッドレス CMS のコンテンツオーサリングの概念と仕組みについて説明します。
-index: true
-hide: false
-hidefromtoc: false
-source-git-commit: 9661061a98c31fbb74bd0716dbedc7abef298f44
+source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 6%
@@ -43,9 +40,9 @@ AEM インストールは、通常、少なくとも次の 2 つの環境で構�
 
 ### ログイン {#signing-in}
 
-As with most systems you will need to login. 作成者として、次の情報が提供されます。
+ほとんどのシステムと同様に、ログインが必要です。 作成者として、次の情報が提供されます。
 
-* User (account) name
+* ユーザー（アカウント）名
 * パスワード
 * ログイン画面にアクセスするためのリンク
 
@@ -57,7 +54,7 @@ As with most systems you will need to login. 作成者として、次の情報�
 
 その後、ナビゲーションパネルを使用して、AEMの主要な領域にアクセスできます。 コンテンツフラグメントの場合、 **Assets コンソール**.
 
-The Navigation Panel can be opened by selecting Adobe icon at the top left, followed by the small compass icon:
+ナビゲーションパネルを開くには、左上のAdobeアイコンを選択し、次に小さいコンパスアイコンを選択します。
 
 ![ナビゲーションパネル](/help/journey-headless/author/assets/headless-journey-author-navigation-01.png)
 
@@ -148,7 +145,7 @@ The Navigation Panel can be opened by selecting Adobe icon at the top left, foll
 
 を続行した後 **次へ** 詳細を指定できます (**基本** および **詳細**) をフラグメントに追加します。
 
-![Create Content Fragment - provide Name](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
+![コンテンツフラグメントを作成 — 名前を指定](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
 次で確認： **作成** そうすれば **開く** フラグメントをエディターに表示します。
 
@@ -158,7 +155,7 @@ The Navigation Panel can be opened by selecting Adobe icon at the top left, foll
 
 エディターが最初に開くと、次のように表示されます。
 
-* 左側のアイコンのリスト — 様々な機能領域にアクセスできます。 The editor opens in the **Variations** tab, this is where most of the editing happens. You might also be interested in the **Annotations** and **Metadata** tabs.
+* 左側のアイコンのリスト — 様々な機能領域にアクセスできます。 エディターが開き、 **バリエーション** 「 」タブのほとんどの編集作業は、ここでおこないます。 また、 **注釈** および **メタデータ** タブ
 
 * フラグメントに関する情報と様々なアクションへのアクセスを含むヘッダー。
 
@@ -180,7 +177,7 @@ The Navigation Panel can be opened by selecting Adobe icon at the top left, foll
 >
 >一般的な詳細については、コンテンツフラグメントモデル — データタイプとプロパティを参照してください。
 
-Confirm your updates with either **Save** or **Save &amp; close**.
+次のいずれかを使用して更新を確定します。 **保存** または **保存して閉じる**.
 
 >[!NOTE]
 >
@@ -192,8 +189,8 @@ Confirm your updates with either **Save** or **Save &amp; close**.
 
 * **コンテンツフラグメントモデル**
 
-   You will see the name of the Content Fragment Model at the top of the editor - directly under the fragment name. これは、モデルエディターに移動するリンクでもあります。
-Content Fragment Models are actually vital to your Content Fragments as they define the structure that you use. However, creating and editing them is (usually) the responsibility of another persona, the Content Architect.
+   エディターの上部、フラグメント名のすぐ下にコンテンツフラグメントモデルの名前が表示されます。 これは、モデルエディターに移動するリンクでもあります。
+コンテンツフラグメントモデルは、使用する構造を定義するので、コンテンツフラグメントにとっては実際に重要です。 ただし、コンテンツアーキテクトは、他のペルソナ（通常は）の役割を担います。
 
    >[!NOTE]
    >
@@ -266,6 +263,6 @@ Content Fragment Models are actually vital to your Content Fragments as they def
 * 「はじめる前に」ガイド 
    * [アセットフォルダーのヘッドレス作成のクイック開始ガイド](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
-* [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
+* [AEMヘッドレスコンテンツアーキテクトジャーニー](/help/journey-headless/architect/overview.md)
 
 * [AEMヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md)
