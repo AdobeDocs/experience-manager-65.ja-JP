@@ -18,7 +18,6 @@ ht-degree: 100%
 >
 >* 新規プロジェクトでは、 [AEM CIF](/help/commerce/home.md) を使用してください。
 >* 既存の CIF Classic は [AEM CIF に移行](/help/commerce/cif/migration.md)する必要があります。
-
 >
 
 

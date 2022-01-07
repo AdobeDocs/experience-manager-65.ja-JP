@@ -36,7 +36,6 @@ ht-degree: 100%
 >* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 >* [SAP Commerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
-
 >
 
 
@@ -540,7 +539,7 @@ AEM では、
 
 プロモーションは、通常は商品情報マネージャーではなくマーケティングマネージャーが保守します。
 
-* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。``
+* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。&grave;&grave;
 * プロモーションは、次のものを提供します。
 
    * 優先度
