@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 1aad655a141fd2137875ae829d1b698298dfe285
+source-git-commit: 7630a6c4d908144e384b705bfce72779803aea93
 workflow-type: tm+mt
-source-wordcount: '3253'
-ht-degree: 81%
+source-wordcount: '3340'
+ht-degree: 79%
 
 ---
 
@@ -95,18 +95,22 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
   <tr>
    <td><strong>Platform</strong></td>
    <td><strong>サポートレベル</strong></td>
+   <td><strong>リンク</strong></td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64 ビット</td>
    <td>A：サポート対象 [1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24</td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 8 - 64 ビット</td>
    <td>A：サポート対象 [1]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18</td>
   </tr>
   <tr>
    <td>Oracle Java SE 11 JDK - 64 ビット</td>
    <td>A：サポート対象 [2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24<td>
   </tr>
   <tr>
    <td>Oracle Java SE 10 JDK</td>
@@ -119,6 +123,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
   <tr>
    <td>Oracle Java SE 8 JDK - 64 ビット</td>
    <td>A：サポート対象 [2]</td>
+   <td> https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10<td>
   </tr>
   <tr>
    <td>IBM J9 VM - ビルド 2.9、JRE 1.8.0</td>
@@ -131,9 +136,9 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
  </tbody>
 </table>
 
-1. Azul Zulu のサポートと配布 LTS リリースのすべてのメンテナンスアップデートを含む OpenJDK のビルドは、AEM 6.5 SP9 以降の OpenJDK の Azul Zulu Builds を利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 詳しくは、 [Adobe Experience Manager Q&amp;A の Azul Java サポート](assets/adobe-azul-openjdk-license-agreement.pdf) を参照してください。
+1. Azul Zulu のサポートと配布 LTS リリースのすべてのメンテナンスの更新を含む OpenJDK のビルドは、AEM 6.5 SP9 以降の OpenJDK の Azul Zulu ビルドを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 詳しくは、 [Adobe Experience Manager Q&amp;A の Azul Java サポート](assets/adobe-azul-openjdk-license-agreement.pdf) を参照してください。
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は、Oracle別の非 LTS リリースです ( [OracleJava SE サポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDK のサポートと配布（公開アップデートの終了後に LTS リリースのすべてのメンテナンスアップデートを含む）は、OracleJava SE テクノロジーを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします **2022 年 12 月まで**. 詳しくは、 [Adobe Experience Manager Q&amp;A のoracleJava サポート](assets/adobe-oracle-java-license-agreement.pdf) を参照してください。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は、Oracle別の非 LTS リリースです ( [OracleJava SE サポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDK のサポートと配布（公開アップデートの終了後にリリースされる LTS のすべてのメンテナンスアップデートを含む）は、OracleJava SE テクノロジーを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします **2022 年 12 月まで**. 詳しくは、 [Adobe Experience Manager Q&amp;A のoracleJava サポート](assets/adobe-oracle-java-license-agreement.pdf) を参照してください。
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
 
@@ -224,7 +229,7 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux Kernel 2.6、3.x および 4.x には、Red Hat ディストリビューションの派生製品 (Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など ) が含まれます。 AEM Formsアドオン機能は、CentOS 7 および Red Hat Enterprise Linux 7 でのみサポートされています。
+1. Linux Kernel 2.6、3.x および 4.x には、Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など、Red Hat ディストリビューションからの派生製品が含まれます。 AEM Formsのアドオン機能は、CentOS 7 および Red Hat Enterprise Linux 7 でのみサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
 1. Adobe Managed Services でサポートされている Linux ディストリビューション
 1. Microsoft Windows の実稼動デプロイメントは、6.5 にアップグレードするお客様と、実稼動以外の使用に対してサポートされます。 AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
@@ -252,7 +257,7 @@ Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバ
 | Microsoft IIS 10（Internet Information Server） | A：サポート対象 |
 | Microsoft IIS 8.5（Internet Information Server） | Z：サポート対象外 |
 
-1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。不確かな場合は、Adobeに、各サーバ製品に関するサポートレベルの確認を依頼してください。 次の場合：
+1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。疑わしい場合は、Adobeに対し、各サーバ製品に関するサポートレベルの確認を求めます。 次の場合：
 
    1. HTTP サーバーが公式の Apache ソースディストリビューションのみを使用して構築されている。または、
    1. HTTP サーバーが実行中のオペレーティングシステムの一部として配布されている。例：IBM HTTP Server、Oracle HTTP Server
@@ -365,20 +370,20 @@ Adobe Experience Manager のすべての要素（インスタンス、Dispatcher
 
 * IPv4 アドレスの例 `https://123.1.1.4:4502`
 
-* サーバー名。例： `https://www.yourserver.com:4502`
+* サーバー名（例： ） `https://www.yourserver.com:4502`
 
 * デフォルトの `localhost` は、IPv4 と IPv6 の両方のネットワークインストール用に変換されます。
 例：`https://localhost:4502`
 
 ### AEM Dynamic Media アドオンの要件 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM Dynamic Media はデフォルトで無効になっています。こちらから [Dynamic Mediaを有効にする](/help/assets/config-dynamic.md#enabling-dynamic-media).
+AEM Dynamic Media はデフォルトで無効になっています。参照先 [Dynamic Mediaを有効にする](/help/assets/config-dynamic.md#enabling-dynamic-media).
 
 Dynamic Media を有効にする場合は、以下の追加の技術要件が適用されます。
 
 >[!NOTE]
 >
->次のシステム要件 **のみ** Dynamic Media — ハイブリッドモードを使用する場合に適用Dynamic Media — ハイブリッドモードには、特定のオペレーティングシステムでのみ認証される、組み込みの画像サーバーがあります。
+>以下の必要システム構成 **のみ** Dynamic Media — ハイブリッドモードを使用する場合に適用します。Dynamic Media — ハイブリッドモードには、特定のオペレーティングシステムでのみ認定される、埋め込み画像サーバーがあります。
 >
 >Dynamic Media - Scene7 モード（**dynamicmedia_scene7** 実行モード）で Dynamic Media を実行する場合は、追加のシステム要件はありません。AEM と同じシステム要件が適用されます。Dynamic Media - Scene7 モードのアーキテクチャではクラウドベースの画像サービスを使用しており、AEM に組み込まれたサービスを使用していません。
 
@@ -406,7 +411,7 @@ Linux でダイナミックメディアを使用する場合は、次の必要�
 >
 >**SELinux の無効化：**&#x200B;画像サービングは、SELinux が有効の場合は動作しません。このオプションはデフォルトで有効です。この問題を修正するには、**/etc/selinux/config** ファイルを編集し、SELinux 値を次のように変更します。
 >
->`SELINUX=enforcing` **を** `SELINUX=disabled`
+>`SELINUX=enforcing` **から** `SELINUX=disabled`
 
 >[!NOTE]
 >
@@ -418,7 +423,7 @@ Linux でダイナミックメディアを使用する場合は、次の必要�
 
 >[!NOTE]
 >
->**サーバーのホスト名が解決される必要があります：**&#x200B;サーバーのホスト名が IP アドレスに解決可能であることを確認してください。これができない場合は、完全修飾ホスト名と IP アドレスを **/etc/hosts**:
+>**サーバーのホスト名が解決される必要があります：**&#x200B;サーバーのホスト名が IP アドレスに解決可能であることを確認してください。これができない場合は、完全修飾ホスト名と IP アドレスをに追加します。 **/etc/hosts**:
 >
 >`<ip address> <fully qualified hostname>`
 
@@ -480,7 +485,7 @@ Windows x86 の場合：
   </tr>
   <tr>
    <td>OpenOffice 4.1.2</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、画像形式 (BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、PF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、DOC、DOCX、PPT、PPTX、画像形式 (BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、PF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、および TXT</td>
   </tr>
  </tbody>
 </table>
@@ -491,12 +496,12 @@ Windows x86 の場合：
 >
 >さらに、次の点に注意してください。
 >
->* PDFジェネレーターには 32 ビット版のが必要です [Acrobat 2017 クラシックトラックバージョン 17.011.30078以降](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) をクリックして、変換を実行します。
+>* PDFジェネレーターには、32 ビット版のが必要です [Acrobat 2017 classic track バージョン 17.011.30078以降](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) をクリックして変換を実行します。
 >* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
 >* PDF Generator では Microsoft Office 365 をサポートしていません。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 >* 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、AEM Formsの製品説明 ([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+>* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 
@@ -531,4 +536,4 @@ XMP の書き戻しは次のプラットフォームおよびファイル形式�
 
 ### AEM Assetsが Linux でメタデータの多いアセットを処理するための要件 {#assetsonlinux}
 
-XMPFilesProcessor プロセスは、GLIBC_2.14 ライブラリが動作する必要がある。 GLIBC_2.14 を含む Linux カーネルを使用します。例えば、Linux カーネルバージョン 3.1.x です。大量のメタデータを含むアセット（アセットファイルなど）の処理のパフォーマンスが向上します。PSD 以前のバージョンの GLIBC を使用すると、 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
+XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。 GLIBC_2.14 を含む Linux カーネルを使用します。例えば、Linux カーネルバージョン 3.1.x です。PSDファイルなど、大量のメタデータを含むアセットの処理パフォーマンスが向上します。 以前のバージョンの GLIBC を使用すると、 `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
