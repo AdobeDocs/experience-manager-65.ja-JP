@@ -6,7 +6,7 @@ mini-toc-levels: 1
 role: User
 feature: Asset Management,Search
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: eb7051582a51d983851c876025770668b258bff5
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
 source-wordcount: '9878'
 ht-degree: 58%
@@ -338,7 +338,7 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 * 抽出先に同じ名前のフォルダーが存在する場合、ZIP ファイル内のアセットは既存のフォルダーに抽出されます。
 * 抽出をキャンセルしても、既に抽出されたアセットは削除されません。
 * 2 つの ZIP ファイルを同時に選択して抽出することはできません。一度に抽出できる ZIP アーカイブは 1 つだけです。
-* ZIP アーカイブをアップロードする際に、アップロードダイアログに 500 サーバーエラーが表示される場合は、インストール後に再試行してください [最新のサービスパック](/help/release-notes/sp-release-notes.md).
+* ZIP アーカイブをアップロードする際に、アップロードダイアログに 500 サーバーエラーが表示される場合は、インストール後に再試行してください [最新のサービスパック](/help/release-notes/release-notes.md).
 
 ## アセットのプレビュー {#previewing-assets}
 

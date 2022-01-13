@@ -2,42 +2,42 @@
 title: Adobe Experience Managerでコンテンツを作成するためのリッチテキストエディターの設定
 description: Adobe Experience Managerでコンテンツを作成するためのAdobe Experience Managerリッチテキストエディターの設定について説明します。
 contentOwner: AG
-source-git-commit: 430994c8e9951500378e0a4d56c8004e7e81c24f
+exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
+source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
 workflow-type: tm+mt
 source-wordcount: '3022'
 ht-degree: 79%
 
 ---
 
-
 # リッチテキストエディターの設定 {#configure-the-rich-text-editor}
 
 リッチテキストエディター（RTE）には、テキストコンテンツの編集に使用できる幅広い機能が用意されています。アイコン、選択ボックス、ツールバーおよびメニューを使用して、テキストを WYSIWYG で編集できます。
 
-RTE 機能をオーサリングに使用する方法については、[リッチテキストエディターをオーサリングに使用](/help/sites-authoring/rich-text-editor.md)を参照してください。RTE の設定をおこなうことで、オーサリングコンポーネント内で使用可能な機能を有効化、無効化および拡張できます。次のワークフローは、RTE設定タスクを実行する際に推奨される順序を示しています。Experience Manager
+RTE 機能をオーサリングに使用する方法については、[リッチテキストエディターをオーサリングに使用](/help/sites-authoring/rich-text-editor.md)を参照してください。RTE の設定をおこなうことで、オーサリングコンポーネント内で使用可能な機能を有効化、無効化および拡張できます。以下のワークフローは、RTE 設定タスクをExperience Managerする際に推奨される順序を示しています。
 
-![RTEの設定方法を学ぶ手順のシーケンス](assets/rte_workflow_v1.png)
+![RTE の設定方法を学ぶ手順のシーケンス](assets/rte_workflow_v1.png)
 
-*図：RTEの設定方法を学ぶ手順のシーケンス*
+*図：RTE の設定方法を学ぶ手順のシーケンス*
 
 ## タッチ操作 UI とクラシック UI について {#understand-touch-enabled-ui-and-classic-ui}
 
-タッチ操作対応UIは、Experience Manager用の標準的なユーザーインターフェイスです。 Adobeは、オーサリング環境向けに[レスポンシブデザイン](/help/sites-authoring/responsive-layout.md)を備えたタッチ操作対応UIを導入しました。 タッチ操作対応UIは、タッチデバイスとデスクトップデバイス向けに設計されています。 インターフェイスは、元のクラシックUIとは大きく異なります。
+タッチ操作対応 UI は、Experience Managerの標準的なユーザーインターフェイスです。 Adobeに、 [レスポンシブデザイン](/help/sites-authoring/responsive-layout.md) （オーサリング環境用） タッチ操作対応 UI は、タッチデバイスとデスクトップデバイス向けに設計されています。 インターフェイスは、元のクラシック UI とは大きく異なります。
 
-![タッチ操作対応UIのリッチテキストエディターツールバー](assets/chlimage_1-35.png)
+![タッチ操作対応 UI のリッチテキストエディターツールバー](assets/chlimage_1-35.png)
 
-*図：タッチ操作対応UIのリッチテキストエディターツールバー*
+*図：タッチ操作対応 UI のリッチテキストエディターツールバー*
 
 ![クラシック UI のリッチテキストエディターツールバー](assets/rtedefault.png)
 
-*図：クラシックUIのリッチテキストエディターツールバー*
+*図：クラシック UI のリッチテキストエディターツールバー*
 
 >[!MORELIKETHIS]
 >
 >* [UI 推奨事項（英語）](/help/sites-deploying/ui-recommendations.md)
-* クラシックUIの廃止については、[Experience Manager6.5のリリースノート](/help/release-notes/deprecated-removed-features.md)を参照してください。
-* UIの違いについては、 [タッチUIとクラシックUI](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)を参照してください。
-* タッチ操作対応UIについて詳しくは、 [Experience Managerタッチ操作対応UIの概念](/help/sites-developing/touch-ui-concepts.md)を参照してください。
+>* クラシック UI の廃止については、 [Experience Manager6.5 リリースノート](/help/release-notes/deprecated-removed-features.md)
+>* UI の違いについては、 [タッチ操作対応 UI とクラシック UI](https://aemcq5pedia.wordpress.com/2018/01/05/touch-enabled-ui-aem6-3/)
+>* タッチ操作対応 UI について詳しくは、 [タッチ操作対応 UI のExperience Manager](/help/sites-developing/touch-ui-concepts.md)
 
 
 ## 各種編集モード {#editingmodes}
@@ -52,7 +52,8 @@ Experience Manager では、コンポーネントの各種モードを使用し�
 | ダイアログ（フルスクリーン） | フルスクリーンモードと同じ。RTE の横にダイアログのフィールドを含む | 必要なすべての RTE 機能 | ○ | × |
 
 >[!NOTE]
-タッチ操作対応UIのインライン編集モードでは、ソース編集機能を使用できません。 フルスクリーンモードでは画像をドラッグできません。その他の機能はすべて全モードで使用できます。
+>
+>タッチ操作対応 UI のインライン編集モードでは、ソース編集機能を使用できません。 フルスクリーンモードでは画像をドラッグできません。その他の機能はすべて全モードで使用できます。
 
 ### インライン編集 {#inline-editing}
 
@@ -60,19 +61,19 @@ Experience Manager では、コンポーネントの各種モードを使用し�
 
 ![タッチ操作 UI の基本ツールバーを使用したインライン編集](assets/chlimage_1-36.png)
 
-*図：タッチ操作対応UIの基本ツールバーを使用したインライン編集*
+*図：タッチ操作対応 UI の基本ツールバーを使用したインライン編集*
 
 クラシック UI では、コンポーネントをゆっくりダブルクリックするとインライン編集が可能になり、オレンジ色の輪郭でコンテンツが強調表示されます。コンテンツファインダーが開くと、使用可能な RTE フォーマットオプションを備えたツールバーがウィンドウ上部に表示されます。コンテンツファインダーが開かない場合は、フォーマットオプションは表示されず、基本的なテキスト編集のみおこなうことができます。
 
 ### 全画面表示での編集 {#full-screen-editing}
 
-Experience Managerコンポーネントを全画面表示で開くことができます。この表示にした場合は、ページコンテンツが隠され、使用可能な画面が占有されます。 フルスクリーン編集には最も多くの編集オプションがあるので、インライン編集の詳細版と考えてください。フルスクリーン編集を開くには、インライン編集モードの使用中にコンパクトツールバーから ![rte_fullscreen](assets/rte_fullscreen.png) をクリックします。
+Experience Managerコンポーネントをフルスクリーン表示で開くことができます。この表示にした場合は、ページコンテンツが隠され、使用可能なスクリーンが占有されます。 フルスクリーン編集には最も多くの編集オプションがあるので、インライン編集の詳細版と考えてください。フルスクリーン編集を開くには、インライン編集モードの使用中にコンパクトツールバーから ![rte_fullscreen](assets/rte_fullscreen.png) をクリックします。
 
 ダイアログフルスクリーンモードでは、詳細な RTE ツールバーのほかに、ダイアログ内で使用可能なオプションとコンポーネントも提供されます。このモードは、他のコンポーネントと共に RTE を含むダイアログにのみ適用されます。
 
 ![タッチ操作 UI のフルスクリーンモードで編集するときに表示される、詳細な RTE ツールバー](assets/chlimage_1-37.png)
 
-*図：タッチ操作対応UIでフルスクリーンモードで編集する場合の詳細なRTEツールバー*
+*図：タッチ操作対応 UI でフルスクリーンモードで編集する場合の詳細な RTE ツールバー*
 
 ### ダイアログ編集 {#dialog-editing}
 
@@ -80,17 +81,17 @@ Experience Managerコンポーネントを全画面表示で開くことがで�
 
 ![タッチ操作向け UI のダイアログ編集モード](assets/dialog_editing_modetouchui.png)
 
-*図：タッチ操作対応UIのダイアログ編集モード*
+*図：タッチ操作対応 UI のダイアログ編集モード*
 
 ![編集用の詳細なツールバーを含む、クラシック UI のダイアログボックス](assets/chlimage_1-38.png)
 
-*図：編集用の詳細なツールバーを含むクラシックUIのダイアログボックス*
+*図：編集用の詳細ツールバーを含むクラシック UI のダイアログボックス*
 
 ## RTE プラグインと関連機能について {#aboutplugins}
 
 この機能は、一連のプラグインを介して使用可能になります。各プラグインには以下が含まれます。
 
-* `features`プロパティ：
+* A `features` プロパティ：
 
    * プラグインの基本機能をアクティベートまたはアクティベート解除するために使用
    * 標準化された手順を使用して設定可能
@@ -124,7 +125,8 @@ RTE の基本機能は、該当するプラグインのノードにある `featu
 | undo | undo redo | [取り消しおよびやり直し](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory)操作の履歴サイズ。 |
 
 >[!NOTE]
-フルスクリーンプラグインは、ダイアログモードではサポートされません。`dialogFullScreen`設定を使用して、フルスクリーンモード用のツールバーを設定します。
+>
+>フルスクリーンプラグインは、ダイアログモードではサポートされません。の使用 `dialogFullScreen` を設定して、フルスクリーンモード用のツールバーを設定します。
 
 ## 設定パスと設定の場所について {#understand-the-configuration-paths-and-locations}
 
@@ -138,12 +140,14 @@ RTE の基本機能は、該当するプラグインのノードにある `featu
 | フルスクリーンダイアログ | `cq:dialog` | 適用なし |
 
 >[!NOTE]
-`cq:inplaceEditing` の下のノードの名前を `config` にしないでください。`cq:inplaceEditing` ノードで、以下のプロパティを定義します。
-* **名前**：`configPath`
-* **型**：`String`
-* **値**：実際の設定を含むノードのパス
+>
+>`cq:inplaceEditing` の下のノードの名前を `config` にしないでください。`cq:inplaceEditing` ノードで、以下のプロパティを定義します。
+>* **名前**：`configPath`
+>* **型**：`String`
+>* **値**：実際の設定を含むノードのパス
 
-RTE 設定ノードの名前を `config` にしないでください。この名前にすると、RTE 設定が管理者に対してのみ有効になり、グループ `content-author` のユーザーに対して有効になりません。
+>
+>RTE 設定ノードの名前を `config` にしないでください。この名前にすると、RTE 設定が管理者に対してのみ有効になり、グループ `content-author` のユーザーに対して有効になりません。
 
 ダイアログ編集モードで適用される次のプロパティを設定します（タッチ UI のみ）。
 
@@ -159,14 +163,14 @@ RTE 設定ノードの名前を `config` にしないでください。この名
 
 タッチ操作ダイアログで RTE を使用する場合は、問題の発生を避けるために、プロパティ `useFixedInlineToolbar` に true を設定する必要があります。
 
-## インプレース編集のカスタマイズ{#customizing-in-place-editing}
+## インプレース編集のカスタマイズ {#customizing-in-place-editing}
 
-次のプロパティを設定することで、テキストエディターが開始するHTMLセレクターを定義できます。
+次のプロパティを設定することで、テキストHTMLが開始するエディターセレクターを定義できます。
 
-* **`editElementQuery`**  — で定義され `cq:InplaceEditingConfig`る、このプロパティは、テキストコンポーネントのインライン編集を開始するHTML要素のセレクターを指定するために使用されます。指定しなかった場合、インライン編集はテキストコンポーネントのHTMLで直接開始されます。
-* **`textPropertyName`**  — で定義され `cq:InplaceEditingConfig`る、このプロパティは、インライン編集後にテキストコンポーネントのHTML値が保持されるコンテンツノードに保存されるプロパティの名前を指定するために使用されます。
+* **`editElementQuery`**  — 定義日 `cq:InplaceEditingConfig`の場合、このプロパティは、テキストコンポーネントのインライン編集を開始するHTML要素のセレクターを指定するために使用されます。 指定しなかった場合、インライン編集はテキストコンポーネントHTMLで直接開始します。
+* **`textPropertyName`**  — 定義日 `cq:InplaceEditingConfig`このプロパティを使用して、コンテンツノードに保存されるプロパティの名前を指定します。このプロパティでは、テキストコンポーネントのHTML値がインライン編集後に保持されます。
 
-対応するダイアログモードのプロパティは`name`です。
+ダイアログモードに対応するプロパティは、です。 `name`.
 
 ## プラグインのアクティベートによる RTE 機能の有効化 {#enable-rte-functionalities-by-activating-plug-ins}
 
@@ -174,18 +178,23 @@ RTE 設定ノードの名前を `config` にしないでください。この名
 
 RTE プラグインの設定について詳しくは、[RTE プラグインのアクティベートおよび設定方法に関する説明](/help/sites-administering/configure-rich-text-editor-plug-ins.md)を参照してください。
 
-**サンプル**:RTEの設定方 [法を示](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) すサンプル設定をダウンロードしてください。このパッケージではすべての機能が有効になっています。
+**サンプル**:ダウンロード [このサンプル設定](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) これは、RTE の設定方法を示しています。 このパッケージではすべての機能が有効になっています。
 
 >[!NOTE]
-テンプレートエディターで[コアコンポーネントのテキストコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)を利用すると、技術的な設定をおこなうことなく、GUI で多くの RTE プラグインをコンテンツポリシーとして設定できます。コンテンツポリシーは、このドキュメントで説明するように RTE UI 設定と連携させることができます。
-詳しくは、このドキュメントの [RTE UI 設定とコンテンツポリシー](/help/sites-administering/rich-text-editor.md)のセクション、[ページテンプレートの作成](/help/sites-authoring/templates.md)および[コアコンポーネント開発者のドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/developing.html)を参照してください。
+>
+>テンプレートエディターで[コアコンポーネントのテキストコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)を利用すると、技術的な設定をおこなうことなく、GUI で多くの RTE プラグインをコンテンツポリシーとして設定できます。コンテンツポリシーは、このドキュメントで説明するように RTE UI 設定と連携させることができます。
+>
+>詳しくは、このドキュメントの [RTE UI 設定とコンテンツポリシー](/help/sites-administering/rich-text-editor.md)のセクション、[ページテンプレートの作成](/help/sites-authoring/templates.md)および[コアコンポーネント開発者のドキュメント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/developing.html)を参照してください。
 
 >[!NOTE]
-参照用として、デフォルトのテキストコンポーネント（標準インストールの一環として提供）が次の場所に用意されています。
-* `/libs/wcm/foundation/components/text`
-* `/libs/foundation/components/text`
+>
+>参照用として、デフォルトのテキストコンポーネント（標準インストールの一環として提供）が次の場所に用意されています。
+>
+>* `/libs/wcm/foundation/components/text`
+>* `/libs/foundation/components/text`
 
-独自のテキストコンポーネントを作成するには、上記のコンポーネントを直接編集するのではなく、コピーしてください。
+>
+>独自のテキストコンポーネントを作成するには、上記のコンポーネントを直接編集するのではなく、コピーしてください。
 
 ## RTE ツールバーの設定 {#dialogfullscreen}
 
@@ -234,11 +243,11 @@ AEM では、リッチテキストエディターのインターフェイスを�
 
 インラインモードとフルスクリーンモードでは別の UI 設定が使用されます。ツールバープロパティは、ツールバーのボタンの指定に使用します。
 
-例えば、ボタン自体が1つの機能（`Bold`など）である場合は、`PluginName#FeatureName`と指定されます（例：`links#modifylink`）。
+例えば、ボタン自体が 1 つの機能 ( 例： `Bold`)、 `PluginName#FeatureName` ( 例： `links#modifylink`) をクリックします。
 
-ボタンがポップオーバー（プラグインの機能の一部を含む）の場合は、`#PluginName`と指定されます（例：`#format`）。
+ボタンがポップオーバー（プラグインのいくつかの機能を含む）の場合は、 `#PluginName` ( 例： `#format`) をクリックします。
 
-ボタンのグループの間の区切り文字(`|`)は、`-`で指定できます。
+区切り文字 (`|`) を使用して、ボタンのグループを指定できます。 `-`.
 
 インラインまたはフルスクリーンモードのポップアップノードには、使用するポップオーバーのリストが含まれます。「popovers」ノードの下の各子ノードは、プラグインの名前を取って名付けられます（例：format）。プラグインの機能のリストが含まれるプロパティ「items」があります（例：format#bold）。
 
@@ -287,29 +296,32 @@ RTE ツールバーに表示される Coral アイコンと使用可能なコマ
 
 ## CoralUI 2 リッチテキストエディターへの切り替え {#switch-to-coralui-rich-text-editor}
 
-ページに、CoralUI 2 RTE clientlibまたはCoralUI 3 RTE clientlibを含めることができます。 デフォルトでは、リッチテキストエディターには CoralUI 3 RTE clientlib が含まれています。CoralUI 2 RTE に切り替えるには、次の手順を実行します。
+ページで、CoralUI 2 RTE clientlib または CoralUI 3 RTE clientlib を含めることができます。 デフォルトでは、リッチテキストエディターには CoralUI 3 RTE clientlib が含まれています。CoralUI 2 RTE に切り替えるには、次の手順を実行します。
 
 >[!NOTE]
-この方法は、ベストプラクティスとしてお勧めするものではありません。CoralUI 2 RTE への切り替えは最後の手段です。CoralUI 2 RTEのカスタムプラグインは、プラグインがRTEの内部（クラスなど）に依存していない場合、CoralUI 3 RTEで動作します。
-CoralUI RTE のカスタムプラグインを使用する場合は、`rte.coralui3`3 ライブラリを使用してください。
+>
+>この方法は、ベストプラクティスとしてお勧めするものではありません。CoralUI 2 RTE への切り替えは最後の手段です。CoralUI 2 RTE のカスタムプラグインは、プラグインが RTE の内部（クラスなど）に依存していない場合に、CoralUI 3 RTE で動作します。
+>
+>CoralUI RTE のカスタムプラグインを使用する場合は、`rte.coralui3`3 ライブラリを使用してください。
 
 
-1. `/apps`の下のノード`/libs/cq/gui/components/authoring/editors/clientlibs/core`をオーバーレイし、次の操作を行います。
+1. ノードをオーバーレイ `/libs/cq/gui/components/authoring/editors/clientlibs/core` under `/apps`、および次の操作を実行します。
 
-   * dependenciesプロパティの`rte.coralui3`を`rte.coralui2`に置き換えます。
-   * 埋め込みプロパティの`cq.authoring.editor.core.inlineediting.rte.coralui3`を`cq.authoring.editor.core.inlineediting.rte.coralui2`に置き換えます。
-   * 埋め込みプロパティの`cq.authoring.rte.coralui3`を`cq.authoring.rte.coralui2`に置き換えます。
+   * 置換 `rte.coralui3` と `rte.coralui2` に設定します。
+   * 置換 `cq.authoring.editor.core.inlineediting.rte.coralui3` と `cq.authoring.editor.core.inlineediting.rte.coralui2` embed プロパティ用。
+   * 置換 `cq.authoring.rte.coralui3` と `cq.authoring.rte.coralui2` embed プロパティ用。
 
-1. `/apps`の下のノード`/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3`と`/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`をオーバーレイします。
+1. ノードをオーバーレイ `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` および `/libs/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2` under `/apps`.
 
-   `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3`からカテゴリ`cq.authoring.dialog`を削除し、`/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`に追加します。
+   カテゴリを削除 `cq.authoring.dialog` から `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui3` をクリックし、 `/apps/cq/gui/components/authoring/dialog/richtext/clientlibs/rte/coralui2`.
 
-1. ページに含まれている他の依存関係を `rte.coralui3` から `rte.coralui2` に変更します。例えば、`/apps`の下のノード`/libs/mcm/campaign/components/touch-ui/clientlibs/rte`をオーバーレイした後、ノードへの依存関係を`rte.coralui3`から`rte.coralui2`に変更します。
+1. ページに含まれている他の依存関係を `rte.coralui3` から `rte.coralui2` に変更します。例えば、ノードをオーバーレイした後に、 `/libs/mcm/campaign/components/touch-ui/clientlibs/rte` under `/apps`を使用する場合、 `rte.coralui3` から `rte.coralui2`.
 
-1. `/apps`の下のノード`cq/ui/widgets`をオーバーレイします。 ノード`/apps/cq/ui/widgets`の依存関係`cq.rte`を`cq.coralui2.rte`に置き換えます。
+1. ノードをオーバーレイ `cq/ui/widgets` under `/apps`. 依存関係を置き換える `cq.rte` ノードで `/apps/cq/ui/widgets` と `cq.coralui2.rte`.
 
 >[!NOTE]
-CoralUI 2 RTE は、プラグインダイアログのハンドルバーテンプレートを使用します。そのため、CoralUI 2 RTE clientlib は、ハンドルバー clientlib に対して依存関係があります。CoralUI 3 RTE は、ハンドルバーテンプレートを使用しないので、関連する依存関係はありません。カスタムプラグインがハンドルバーテンプレートを使用する場合、Web ページにハンドルバー clientlib を含めます。
+>
+>CoralUI 2 RTE は、プラグインダイアログのハンドルバーテンプレートを使用します。そのため、CoralUI 2 RTE clientlib は、ハンドルバー clientlib に対して依存関係があります。CoralUI 3 RTE は、ハンドルバーテンプレートを使用しないので、関連する依存関係はありません。カスタムプラグインがハンドルバーテンプレートを使用する場合、Web ページにハンドルバー clientlib を含めます。
 
 ## その他の情報 {#further-information}
 
@@ -318,14 +330,14 @@ RTE の設定について詳しくは、[AEM ウィジェット API](https://hel
 特に、使用可能なプラグインおよび関連オプションを確認するには、以下を参照してください。
 
 * [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) コンポーネントは、スタイル設定されたテキスト情報（リッチテキスト）を編集するためのフォームフィールドを提供します。リッチテキストフォームに使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。
-* リッチテキストコンポーネントは、[CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)にリストされているプラグインを使用して、幅広い機能を提供します。プラグインごとに、次の手順を実行します。
+* リッチテキストコンポーネントは、 [CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin).プラグインごとに以下をおこないます。
 
    * 有効化（または無効化）が可能な機能の詳細については「機能」を参照してください。
    * 該当するプラグインの詳細設定に使用可能なすべてのパラメーターについては、「設定オプション」を参照してください。
 
 * リンクの HTML ルールに関する詳細も参照できます。
 
-これらは、独自のRTEを拡張およびカスタマイズするために使用できます。 例えば、リンク作成時にページで使用できるアンカーをリストするために、`LinkPlugin` を独自に実装できます。
+これらを使用して、独自の RTE を拡張およびカスタマイズできます。 例えば、リンク作成時にページで使用できるアンカーをリストするために、`LinkPlugin` を独自に実装できます。
 
 ## 既知の制限事項 {#known-limitations}
 
@@ -333,7 +345,7 @@ AEM RTE 機能には次の制限があります。
 
 * RTE 機能は AEM コンポーネントダイアログでのみサポートされます。RTE は、ウィザードやタッチ操作向け UI の基盤フォーム（[ページプロパティ](/help/sites-developing/page-properties-views.md)や[基礎モード](/help/sites-authoring/scaffolding.md)など）ではサポートされません。
 
-* AEM は[ハイブリッドデバイス](/help/release-notes/known-issues.md)では機能しません。
+* AEM は[ハイブリッドデバイス](/help/release-notes/release-notes.md)では機能しません。
 
 * RTE 設定ノードの名前を `config` にしないでください。この名前にすると、RTE 設定が管理者に対してのみ有効になり、グループ `content-author` のユーザーに対して有効になりません。
 
@@ -345,11 +357,11 @@ AEM RTE 機能には次の制限があります。
 * `Paste` プラグインなど、大きめのポップアップがあるプラグインは、フルスクリーンダイアログモードまたはフルスクリーンモードでのみ有効にします。大きなポップアップがあるプラグインは、優れたオーサリング環境を提供するために、より多くのスクリーンスペースを必要とします。
 * CoralUI RTE のカスタムプラグインを使用する場合は、`rte.coralui3`3 ライブラリを使用してください。
 
-## RTE {#troubleshoot-issues-with-aem-rich-text-editor}のよくある問題のトラブルシューティング
+## RTE に関するよくある問題のトラブルシューティング {#troubleshoot-issues-with-aem-rich-text-editor}
 
 **複数のテーブルセルを選択する方法を教えてください。**
 
-テーブル内の複数のセルを選択するには、`Ctrl`キーまたは`Cmd`キーを押し、テーブルのセルを1つずつクリックします。
+表内の複数のセルを選択するには、 `Ctrl` または `Cmd` キーを押し、テーブルのセルを 1 つずつクリックします。
 
 選択したセルのプロパティを設定するなどして操作を実行します。
 
@@ -369,7 +381,7 @@ XSS が発生しやすい HTML を追加しないでください。RTE ではな
 
 保存されていない場合、HTML は RTE の規則に準拠していなかったため、RTEによって削除されたということです。
 
-CRXDEに保存されても、ページにレンダリングされない場合（レンダリングを確認するには、ページの[プレビュー](/help/sites-authoring/editing-content.md#preview-mode)を参照）、AEM XSSルールによって削除されます。
+CRXDE に保存されているが、ページにレンダリングされていない場合 ( レンダリングを確認するには、ページの [プレビュー](/help/sites-authoring/editing-content.md#preview-mode)に設定されていない場合、AEM XSS ルールによって削除されます。
 
 **マルチフィールドコンポーネントが期待どおりに機能しない**
 
@@ -379,12 +391,13 @@ CRXDEに保存されても、ページにレンダリングされない場合（
 
 **管理者が利用できる設定を、作成者が利用できない**
 
-インターフェイス設定の更新が管理者には反映されているが作成者アカウントには反映されていない場合、設定ノードに `config` という名前が付けられていないか確認してください。[`configPath`プロパティ](/help/sites-developing/components-basics.md#cq-inplaceediting)を使用します。
+インターフェイス設定の更新が管理者には反映されているが作成者アカウントには反映されていない場合、設定ノードに `config` という名前が付けられていないか確認してください。以下を使用： [`configPath` プロパティ](/help/sites-developing/components-basics.md#cq-inplaceediting).
 
 >[!MORELIKETHIS]
-* [RTE プラグインの設定](configure-rich-text-editor-plug-ins.md)
-* [リッチテキストエディターをオーサリングに使用](../sites-authoring/rich-text-editor.md)
-* [RTE をアクセス可能なサイト用に設定](rte-accessible-content.md)
-* [タッチ UI とクラシック UI 機能の類似点](../release-notes/touch-ui-features-status.md)
-* [複合マルチフィールドコンポーネントを作成するためのチュートリアルサンプル](https://experience-aem.blogspot.com/2019/05/aem-65-touchui-composite-multifield-with-coral3-rte-rich-text.html)
+>
+>* [RTE プラグインの設定](configure-rich-text-editor-plug-ins.md)
+>* [リッチテキストエディターをオーサリングに使用](../sites-authoring/rich-text-editor.md)
+>* [RTE をアクセス可能なサイト用に設定](rte-accessible-content.md)
+>* [タッチ UI とクラシック UI 機能の類似点](../release-notes/touch-ui-features-status.md)
+>* [複合マルチフィールドコンポーネントを作成するためのチュートリアルサンプル](https://experience-aem.blogspot.com/2019/05/aem-65-touchui-composite-multifield-with-coral3-rte-rich-text.html)
 
