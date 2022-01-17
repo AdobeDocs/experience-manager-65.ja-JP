@@ -2,10 +2,11 @@
 title: AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ
 description: GraphQL を AEM と共に使用し、サンプルコンテンツとクエリを調べて、コンテンツをヘッドレスに提供する方法を説明します。
 feature: Content Fragments,GraphQL API
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
+exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
+source-git-commit: 1a3d5a6b3b4f7af67d6a62cdaab484daa536cb63
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 100%
+source-wordcount: '1416'
+ht-degree: 98%
 
 ---
 
@@ -37,7 +38,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 >[!NOTE]
 >
->インスタンスによっては、[AEM GraphQL API に付属している Graph *i* QL インターフェイス](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)に直接アクセスして、クエリの送信とテストをおこなうことができます。
+>インスタンスに応じて、 [AEM GraphQL API に含まれる GraphiQL インターフェイス](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) クエリの送信とテストに使用します。
 >
 >例：`http://localhost:4502/content/graphiql.html`
 
@@ -1523,9 +1524,9 @@ query {
 -> [Person](#model-person)
     -> [Award](#model-award)
 
-* [City](#model-city)
+* [City（市区町村）](#model-city)
 
-#### 会社 {#model-company}
+#### Company（会社） {#model-company}
 
 会社を定義する基本フィールドは次のとおりです。
 
@@ -1533,9 +1534,9 @@ query {
 |--- |--- |--- |
 | name（会社名） | 1 行のテキスト |  |
 | ceo（最高経営責任者） | フラグメント参照（1 つ） | [Person](#model-person) |
-| employees（従業員） | フラグメント参照（複数フィールド） | [ユーザー](#model-person) |
+| employees（従業員） | フラグメント参照（複数フィールド） | [人物](#model-person) |
 
-#### Person {#model-person}
+#### Person（人物） {#model-person}
 
 人物（従業員になることも可能）を定義するフィールドは次のとおりです。
 
@@ -1554,7 +1555,7 @@ query {
 | id（賞の ID） | 1 行のテキスト |  |
 | title（タイトル） | 1 行のテキスト |  |
 
-#### 市区町村 {#model-city}
+#### City（市区町村） {#model-city}
 
 都市を定義するフィールドは次のとおりです。
 
@@ -1569,7 +1570,7 @@ query {
 
 適切なモデルでは次のフラグメントが使用されます。
 
-#### 会社 {#fragment-company}
+#### Company（会社） {#fragment-company}
 
 | name | ceo | employees |
 |--- |--- |--- |
@@ -1577,7 +1578,7 @@ query {
 |  Little Pony, Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
 | NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
 
-#### ユーザー {#fragment-person}
+#### Person（人物） {#fragment-person}
 
 | name | firstName | awards |
 |--- |--- |--- |
@@ -1598,7 +1599,7 @@ query {
 |  GS | 配偶星 |
 |  OSC | Oscar |
 
-#### 市区町村 {#fragment-city}
+#### City（市区町村） {#fragment-city}
 
 | name | country | population | categories |
 |--- |--- |--- |--- |
@@ -1606,6 +1607,6 @@ query {
 | Berlin | Germany | 3669491 | city:capital<br>city:emea |
 | Bucharest | Romania | 1821000 |  city:capital<br>city:emea |
 | San Francisco |  USA |  883306 |  city:beach<br>city:na |
-| San Jose |  米国 |  102635 |  city:na |
+| San Jose |  USA |  102635 |  city:na |
 | Stuttgart |  Germany |  634830 |  city:emea |
 |  Zurich |  Switzerland |  415367 |  city:capital<br>city:emea |
