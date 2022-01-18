@@ -2,9 +2,9 @@
 title: リリースノート： [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能情報、インストール方法および詳細な変更リストが記載されています。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 13c76122a38e32783bca248597a16f0512dae44c
+source-git-commit: 1cfa01544ad8bf0adafd55e696a6844a8edf1007
 workflow-type: tm+mt
-source-wordcount: '3906'
+source-wordcount: '3894'
 ht-degree: 5%
 
 ---
@@ -35,8 +35,6 @@ ht-degree: 5%
 * ユーザーエクスペリエンスが改善され、フォルダー内に存在するアセットの数が表示されます。1 つのフォルダー内のアセットが 1000 個を超える場合、[!DNL Assets] には「1000+」と表示されます。
 
    ![フォルダー内のアセット数](/help/assets/assets/browse-folder-number-of-assets.png)
-
-* カード表示と列表示で並べ替えオプションをレンダリングできるようになりました。
 
 * ビジネスプロファイルはAdobeAsset Link をサポートします。
 
@@ -561,7 +559,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 
 * [!DNL Adobe Experience Manager] as a Cloud Service [2021.9.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/2021/release-notes-2021-9-0.html) および [2021.10.0](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html?lang=ja).
 
-* [[!DNL Experience Manager] デスクトップアプリケーション 2.1 (2.1.3.4)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+* [[!DNL Experience Manager] デスクトップアプリケーション 2.1 (2.1.3.4)](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=ja).
 
 * [Experience Manager Screens:機能パック202109](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/release-notes/release-notes-fp-202109.html?lang=ja)
 
