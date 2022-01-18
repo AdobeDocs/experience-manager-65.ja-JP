@@ -1,7 +1,7 @@
 ---
 title: 一般リリースノート： [!DNL Adobe Experience Manager] 6.5
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能情報、インストール方法および詳細な変更リストが記載されています。'
-source-git-commit: 9b15215a68495a800e94a58b523e1b7baa0c0203
+source-git-commit: 37f1df9f9421ff18fff45723b6eb081f0192520a
 workflow-type: tm+mt
 source-wordcount: '4696'
 ht-degree: 57%
@@ -552,9 +552,9 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 1. ファイルを保存し、AEMインスタンスを再起動します。
 
-## Sites {#sites}
+### Sites {#sites}
 
-* **ページバージョンの操作**:ページが移動されている場合は、移動前に行われたバージョンのプレビューを実行できなくなりました。
+* **ページバージョンの操作**: [ページが移動されている場合、移動前に行われたバージョンではプレビューを実行できなくなりました](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
 
 ### Assets {#assets}
 
