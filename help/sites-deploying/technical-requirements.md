@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 610e37571df168bba91f2c2fe5b41e2f70ba748e
+source-git-commit: ab89683610a896e73c219c1fde4dde16dd8fbec6
 workflow-type: tm+mt
-source-wordcount: '3345'
+source-wordcount: '3358'
 ht-degree: 79%
 
 ---
@@ -165,16 +165,18 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 | ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z：実稼動環境ではサポート対象外 |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft Azure Blob Storage | バイナリ | A：サポート対象 |
-| MongoDB Enterprise 4.0 | リポジトリ | A：サポート対象 `[2, 3]` |
+| MongoDB Enterprise 4.2 | リポジトリ | A：サポート対象 `[2, 3, 4]` |
+| MongoDB Enterprise 4.0 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[4]` |
+| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[5]` |
 | Oracleデータベース 12c (12.1.x) | リポジトリおよび Forms データベース | R：制限サポート |
 | Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
 | **Apache Lucene（クイックスタート組み込み）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
 
 1. 「ファイルシステム」には、POSIX 準拠のブロックストレージが含まれます。ブロックストレージには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスが状況に応じて変化し、全体的なパフォーマンスに影響を及ぼす可能性があることに注意してください。ネットワークやリモートファイルシステムと一緒に AEM の負荷テストを行うことを推奨します。
+1. MongoDB Enterprise 4.2 を使用するには、最低でもAEM 6.5 SP9 が必要です。
 1. MongoDB Sharding は AEM ではサポートされていません。
 1. MongoDB Storage Engine WiredTiger のみサポートされています。
 1. AEM Forms アップグレード版のお客様にサポートされています。新規インストールの場合はサポートされていません。
