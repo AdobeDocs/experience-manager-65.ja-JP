@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# e コマース{#ecommerce}
+# e コマース {#ecommerce}
 
 統合フレームワークには、API を備えた統合レイヤーが含まれます。以下を実行できます。
 
@@ -37,7 +37,7 @@ ht-degree: 100%
 >
 >この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[e コマースのデプロイ](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
 >
->e コマースの実装の概念および管理について詳しくは、[e コマースの管理](/help/commerce/cif-classic/administering/ecommerce.md)を参照してください。
+>e コマース実装の概念と管理については、[e コマースの管理](/help/commerce/cif-classic/administering/ecommerce.md)を参照してください。
 
 ## API に関するドキュメント {#api-documentation}
 
