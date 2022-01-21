@@ -15,16 +15,16 @@ ht-degree: 100%
 
 ---
 
-# SAP Commerce Cloud{#sap-commerce-cloud}
+# SAP Commerce Cloud {#sap-commerce-cloud}
 
 インストール後、次のようにしてインスタンスを設定します。
 
 1. [Geometrixx Outdoors 用にファセット検索を設定する](#configure-the-facetted-search-for-geometrixx-outdoors)
-1. [カタログバージョンを設定する](#configure-the-catalog-version)
+1. [カタログバージョンを設定します](#configure-the-catalog-version)。
 1. [読み込み構造を設定する](#configure-the-import-structure)
 1. [読み込む商品属性を設定する](#configure-the-product-attributes-to-load)
 1. [商品データを読み込む](#importing-the-product-data)
-1. [カタログインポーターを設定する](#configure-the-catalog-importer)
+1. [カタログインポーターを設定します](#configure-the-catalog-importer)。
 1. [インポーターを使用して、カタログを AEM 内の特定の場所に読み込む](#catalog-import)
 
 ## Geometrixx Outdoors 用のファセット検索の設定 {#configure-the-facetted-search-for-geometrixx-outdoors}
@@ -33,7 +33,7 @@ ht-degree: 100%
 >
 >この設定は、hybris 5.3.0.1 以降には必要ありません。
 
-1. ブラウザーで次の URL にアクセスし、**hybris 管理コンソール**&#x200B;を表示します。
+1. ブラウザーで次の URL にアクセスし、**Hybris 管理コンソール**&#x200B;に移動します。
 
    [http://localhost:9001/hmc/hybris](http://localhost:9001/hmc/hybris)
 
@@ -264,8 +264,8 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 「**Incremental Import**」チェックボックスを選択します。
-1. 「**Import Catalog**」をクリックして読み込みを開始します。
+1. 「**増分読み込み**」チェックボックスを選択します。
+1. 「**カタログをインポート**」をクリックして読み込みを開始します。
 
    完了したら、AEM で更新されたデータを次の場所で確認できます。
 
@@ -301,7 +301,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
 1. 「**Express Update**」チェックボックスを選択します。
-1. 「**Import Catalog**」をクリックして読み込みを開始します。
+1. 「**カタログをインポート**」をクリックして読み込みを開始します。
 
    完了したら、AEM で更新されたデータを次の場所で確認できます。
 
