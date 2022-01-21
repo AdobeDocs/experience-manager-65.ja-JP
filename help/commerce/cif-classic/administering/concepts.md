@@ -36,6 +36,7 @@ ht-degree: 100%
 >* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
 >* [SAP Commerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
+
 >
 
 
@@ -508,7 +509,7 @@ AEM e コマース実装では、パフォーマンステストを考慮に入�
 
    * 割引券コード（買い物客が買い物かごに入力する）。
    * 割引券ラベル（買い物客が買い物かごに入力した後に表示される）。
-   * プロモーションパス（割引券によって適用されるアクションを定義する）。
+   * プロモーションパス（割引券が適用されるアクションを定義）。
 
 * 外部コマースエンジンも割引券を提供できます。
 
@@ -521,7 +522,7 @@ AEM では、
    * 割引券を管理（追加／削除）するための編集ダイアログ（フォーム）。
    * 割引券を買い物かごに追加／買い物かごから削除するために必要なアクション。
 
-* 割引券には独自の有効／無効日付／回数はありませんが、親キャンペーンのものを使用します。
+* 割引券には、独自の開始日時や終了日時は設定されておらず、親キャンペーンの開始日時や終了日時を使用します。
 
 >[!NOTE]
 >
@@ -539,7 +540,7 @@ AEM では、
 
 プロモーションは、通常は商品情報マネージャーではなくマーケティングマネージャーが保守します。
 
-* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。&grave;&grave;
+* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。``
 * プロモーションは、次のものを提供します。
 
    * 優先度
@@ -578,7 +579,7 @@ AEM では、プロモーションは[キャンペーン管理](/help/sites-auth
 
 >[!NOTE]
 >
->[hybris プロモーション](https://www.hybris.com/modules/promotion)と [hybris 割引券](https://www.hybris.com/en/modules/voucher)は、買い物かごに影響を及ぼし、価格に関連するすべてのものを対象とします。プロモーション固有のマーケティングコンテンツ（バナーなど）は、hybris プロモーションに含まれません。
+>[hybris プロモーション](https://www.hybris.com/modules/promotion)と [hybris 割引券](https://www.hybris.com/ja/modules/voucher)は、買い物かごに影響を及ぼし、価格に関連するすべてのものを対象とします。プロモーション固有のマーケティングコンテンツ（バナーなど）は、hybris プロモーションに含まれません。
 
 ## パーソナライズ機能 {#personalization}
 
