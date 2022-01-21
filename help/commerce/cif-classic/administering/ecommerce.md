@@ -85,8 +85,8 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>入手方法</td>
-   <td><p>はい。SAP Commerce Cloud（拡張機能は AEM 6.4 および Hybris 5（デフォルト）をサポートするように更新され、Hybris 4 との互換性を維持）</p> <p>Salesforce Commerce Cloud（AEM 6.4 をサポートするためにオープンソース化されたコネクタ）</p> </td>
-   <td>あり。GitHub 経由のオープンソース。Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり）</td>
+   <td><p>使用可能。SAP Commerce Cloud（拡張機能は AEM 6.4 および Hybris 5（デフォルト）をサポートするように更新され、Hybris 4 との互換性を維持）</p> <p>Salesforce Commerce Cloud（AEM 6.4 をサポートするためにオープンソース化されたコネクタ）</p> </td>
+   <td>GitHub を通じてオープンソースで使用可能。Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり）。</td>
   </tr>
   <tr>
    <td>用途</td>
