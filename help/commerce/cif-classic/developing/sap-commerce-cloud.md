@@ -50,7 +50,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 
    * エンジンは、`commerceProvider` サービスプロパティによって区別できます。
 
-* AEM では `CommerceService` および `Product` 用に `Resource.adaptTo()` をサポートしています
+* AEM では、`CommerceService` と `Product` に対して `Resource.adaptTo()` をサポートしています。
 
    * `adaptTo` 実装は、リソースの階層内で `cq:commerceProvider` プロパティを探します。
 
@@ -226,6 +226,7 @@ hybris で管理されている製品データを AEM で使用できるよう�
 >1. `size`
 >
 >1. さらにもう 1 つ
+
 >
 >この追加バリアントは、製品リファレンスの `variationAxis` プロパティ（Geometrixx Outdoors の場合、通常は `color`）を使用して選択されます。
 
@@ -343,14 +344,14 @@ public class AxisFilter implements VariantFilter {
 
       * リファレンス。製品データは他の場所に保存されています。
 
-         * 製品リファレンスには `productData` プロパティが含まれています。これは製品データ（一般的には `/etc/commerce/products` の配下にあります）を指します。
+         * 製品リファレンスには、`productData` プロパティが含まれます。このプロパティは、製品データ（一般的には `/etc/commerce/products` の下にあります）を指します。
 
          * 製品データは階層化されています。製品属性は、製品データノードの祖先から継承されます。
 
          * 製品リファレンスには、ローカルプロパティも含めることができます。このようなプロパティは、製品データ内で指定されるプロパティをオーバーライドします。
       * 製品自体
 
-         * `productData` プロパティがありません。
+         * `productData` プロパティはありません。
 
          * すべてのプロパティをローカルに保持している（そして productData プロパティを含まない）製品ノードは、製品属性を自身の祖先から直接継承します。
 
@@ -440,7 +441,7 @@ public class AxisFilter implements VariantFilter {
 * パーソナライズは、常に [ClientContext](/help/sites-administering/client-context.md) から取得する必要があります。
 * 買い物かごの ClientContext `/version/` は、すべてのケースで作成されます。
 
-   * 製品は、`CommerceSession.addCartEntry()` メソッドを使用して追加してください。
+   * 製品は、`CommerceSession.addCartEntry()` メソッドを使用して追加する必要があります。
 
 * 次の図は、ClientContext に格納される買い物かご情報の例を示しています。
 
