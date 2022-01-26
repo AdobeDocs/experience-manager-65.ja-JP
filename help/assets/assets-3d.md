@@ -1,8 +1,6 @@
 ---
 title: Dynamic Media での 3D アセットの操作
-seo-title: Working with 3D assets in Dynamic Media
 description: Dynamic Media で 3D アセットを使用する方法について説明します
-seo-description: Learn how to work with 3D assets in Dynamic Media
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: introduction
@@ -10,10 +8,10 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 9f08d529af0ec37d2bd2a4f479a172c6c950c47d
+source-git-commit: a13d6d10dd10605d2cb83a8622fae3a7e2590c93
 workflow-type: tm+mt
-source-wordcount: '2309'
-ht-degree: 79%
+source-wordcount: '2317'
+ht-degree: 77%
 
 ---
 
@@ -27,7 +25,7 @@ Dynamic Media を使用すると、3D アセットを、没入感のあるエク
 
 Dynamic Mediaで 3D アセットを使用するために追加の設定は必要ありません。
 
-![3D の靴](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png)
+![3D の靴](/help/assets/assets-dm/3d-dimensional-viewer-quickpublish-url-embed2.png) *3 次元の靴の詳細ページ。*
 
 <!-- See also [Dynamic Media 3D Release Notes](/help/release-notes/aem3d-release-notes.md). -->
 
@@ -43,6 +41,10 @@ Dynamic Mediaは、次の 3D 形式をサポートしています。
 | OBJ | WaveFront 3D オブジェクトファイル | application/x-tgif |  |
 | STL | ステレオリソグラフィ | application/vnd.ms-pki.stl |  |
 | USDZ | 汎用シーン記述 Zip アーカイブ | model/vnd.usdz+zip | *取り込みのみサポート。表示やインタラクションは利用不可。* USDZ は独自の 3D 形式で、Safari やiOSデバイスでネイティブに表示できます。 |
+
+<!-- >[!NOTE]
+>
+>The 3D Media WCM component and 3D preview on an asset's Details page is not compatible with the latest version of Chrome (97.x). Instead, to work with 3D assets, use Firefox or Safari, or use an earlier version of Chrome (96.x). -->
 
 ## クイックスタート：Dynamic Media 内の 3D アセット {#quick-start-three-d}
 
@@ -86,7 +88,7 @@ Dynamic Mediaの 3DCloud Servicesを操作する前に、Experience Manager管�
 
 ## 3D アセットの表示とインタラクションについて {#viewing-three-d-assets}
 
-この節では、3D アセットの表示およびインタラクション方法を、アセットの詳細ページ内から、または Sites の 3D メディアコンポーネント内からの 2 通り説明します。
+この節では、次の 2 つの方法で 3D アセットの表示とインタラクションをおこなう方法について説明します。をクリックします。また、Experience Manager Sitesの 3D メディアコンポーネント内からアクセスすることもできます。
 
 このインタラクティブ 3D ビューアには、3D アセットをオービット、ズームおよびパンできる、インタラクティブなカメラコントロールのコレクションが含まれます。
 
