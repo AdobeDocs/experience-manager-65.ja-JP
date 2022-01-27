@@ -6,9 +6,9 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: 290b2af6-257f-42f2-b809-1248227a4795
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
-workflow-type: ht
-source-wordcount: '4524'
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '4514'
 ht-degree: 100%
 
 ---
@@ -33,9 +33,10 @@ ht-degree: 100%
 >
 >e コマースフレームワークは、以下のものと併用できます。
 >
->* [Magento](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/integrations.html#!AdobeDocs/commerce-cif-documentation/master/integrations/02-AEM-Magento.md)
+>* [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
 >* [SAP Commerce Cloud](/help/commerce/cif-classic/administering/sap-commerce-cloud.md)
 >* [Salesforce Commerce Cloud](https://github.com/adobe/commerce-salesforce)
+
 >
 
 
@@ -539,7 +540,7 @@ AEM では、
 
 プロモーションは、通常は商品情報マネージャーではなくマーケティングマネージャーが保守します。
 
-* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。&grave;&grave;
+* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。``
 * プロモーションは、次のものを提供します。
 
    * 優先度

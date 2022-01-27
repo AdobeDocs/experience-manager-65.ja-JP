@@ -3,10 +3,10 @@ sub-product: AEM Content and Commerce
 user-guide-title: AEM Content and Commerce
 breadcrumb-title: コマースガイド
 user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
-source-git-commit: 5678d20fa0a7e8a709b02a2f6cbbeffbd4a26cbd
-workflow-type: ht
-source-wordcount: '109'
-ht-degree: 100%
+source-git-commit: f3e286c7b5404812655f3b257de17be7bfde7487
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 91%
 
 ---
 
@@ -21,6 +21,10 @@ ht-degree: 100%
    + [サードパーティコマースソリューション](cif/integrating/third-party.md)
 + AEM ストアフロント{#storefront}
    + [概要](cif/getting-started.md)
+   + オーサリング {#authoring}
+      + [コマースエクスペリエンス](cif/authoring/authoring-commerce-experiences.md)
+      + [製品コックピット](cif/authoring/product-cockpit.md)
+      + [製品データと関連コンテンツのエンリッチメント](cif/authoring/enrich-product-associated-content.md)
    + 管理 {#administering}
       + [マルチストアの設定](cif/configuring/multi-store-setup.md)
       + [マルチテンプレートの使用](cif/configuring/multi-template-usage.md)

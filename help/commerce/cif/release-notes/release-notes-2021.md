@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2021
 description: AEM Content and Commerce リリースノート 2021
 exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 98ba3edb3b9e93fa13a0f0418f1b17323d5a7233
-workflow-type: ht
-source-wordcount: '1311'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '1314'
+ht-degree: 98%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 | コンポーネント | システム要件 |
 |:-------|:-----:|
-| CIF アドオン | 最小：AEM 6.5.7、Magento 2.3.5 GraphQL スキーマ |
+| CIF アドオン | 最小：AEM 6.5.7、Adobe Commerce 2.3.5 GraphQL スキーマ |
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
@@ -53,7 +53,7 @@ ht-degree: 100%
 
 * 作成者は、リッチテキストエディター（RTE）を使用して、製品ページやカタログページへのリンクをテキストフィールドに追加できます。 RTE ツールバーに追加された CIF アイコンをクリックすると、ピッカーが開いて、コンテキストを離れることなく製品やカテゴリをすばやく検索および選択できるようになりました。
 
-* 既存のポップアップ買い物かごとチェックアウトは、AEM 専用の買い物かごとチェックアウトページに置き換えられました。 これらのページ上のコンポーネントは、Magento の拡張可能な Peregrine コンポーネントを使用して構築されています
+* 既存のポップアップ買い物かごとチェックアウトは、AEM 専用の買い物かごとチェックアウトページに置き換えられました。 これらのページ上のコンポーネントは、Adobe Commerceの拡張可能な Peregrine コンポーネントを使用して構築されます
 
 * マーチャントは、Commerce のバックエンドを使用して、ナビゲーション時に特定の製品カタログカテゴリを非表示にできます。 CIF ナビゲーションのコアコンポーネントは、Commerce のバックエンド設定の「メニューに含める」に従って、ナビゲーション時にカテゴリを表示／非表示にします
 
@@ -73,7 +73,7 @@ ht-degree: 100%
 
    ![関連するコマースコンテンツ](/help/assets/CIF/associated-commerce-content.png)
 
-* 製品ピッカー UI が改善されて、ユーザーエクスペリエンスと効率が向上し、複雑な製品カタログもサポートされるようになりました。
+* 製品ピッカー UI の改善により、ユーザーエクスペリエンス、効率および複雑な製品カタログのサポートが向上しました。
 
    ![新しい製品ピッカー](/help/assets/CIF/product-picker.png)
 
@@ -83,7 +83,7 @@ ht-degree: 100%
 
 * メニューキャッシュのフラッシュが正常に動作しません
 
-* AEM CS のデプロイメント手順中およびクライアントサイドコンポーネントを使用していない場合に JS エラーが発生していました
+* AEM CS デプロイメントステップ中と、クライアント側コンポーネントを使用していないときに、JS エラーが発生していました
 
 * sling:configs ノードを持つフォルダー内に CIF クラウド設定を作成できません
 
@@ -99,7 +99,7 @@ ht-degree: 100%
 
 * 新しいカテゴリピッカー UI により、ユーザーエクスペリエンスと効率が向上し、複雑な製品カタログもサポートされるようになりました
 
-   ![新規カテゴリピッカー](/help/assets/CIF/category-picker.png)
+   ![新しいカテゴリピッカー](/help/assets/CIF/category-picker.png)
 
 * CIF コアコンポーネントの A11Y のサポートが向上しました
 
@@ -195,7 +195,7 @@ ht-degree: 100%
 
 ### 新機能
 
-* Magento 2.4.2 のサポート
+* Adobe Commerce 2.4.2 のサポート
 
 ### 改善点
 

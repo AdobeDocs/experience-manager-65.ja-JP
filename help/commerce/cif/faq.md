@@ -2,10 +2,10 @@
 title: Commerce Integration Framework を使用した AEM と Commerce の統合に関する FAQ
 description: Commerce Integration Framework を使用した AEM と Commerce の統合に関する FAQ
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '946'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '963'
+ht-degree: 80%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 100%
 
 ## 1. CIF GraphQL はコマースのためにのみ使用されますか。それとも、AEM JCR で作成されたコンテンツのクエリに使用できますか。
 
-当社は、Magento の GraphQL API を、すべてのコマース関連データの公式コマース API として採用しています。したがって、AEM は、I/O Runtime を介して Magento および任意のコマースエンジンとコマースデータを交換するために GraphQL を使用します。この GraphQL API は、コンテンツフラグメントにアクセスする AE M GraphQL API とは独立しています。
+Adobeは、Adobe Commerceの GraphQL API を、すべてのコマース関連データの公式コマース API として採用しています。 したがって、AEMは、I/O Runtime を介してAdobe Commerceや任意のコマースエンジンとコマースデータを交換するために GraphQL を使用します。 この GraphQL API は、コンテンツフラグメントにアクセスする AE M GraphQL API とは独立しています。
 
-## 2. 製品アセット（画像）は、Adobe Commerce（Magento）管理者を介して AEM から保存および参照できますか。Dynamic Media のアセットはどのように使用できますか。
+## 2.製品アセット（画像）は、Adobe Commerce管理者を通じてAEMから保存および参照できますか。 Dynamic Media のアセットはどのように使用できますか。
 
-AEM Assets と Magento の統合で、正式に利用できるものはありません。[Marketplace](https://marketplace.magento.com/bounteous-dam.html)で利用できるパートナーコネクタがあります。
+公式のAEM AssetsとAdobe Commerceの統合は利用できません。 [Marketplace](https://marketplace.magento.com/bounteous-dam.html)で利用できるパートナーコネクタがあります。
 
-回避策として、製品アセット（画像）を AEM Assets に格納できますが、アセット URL を手動で Magento に格納する必要があります。Dynamic Media は AEM Assets の一部となったので、同じように機能します。
+回避策として、製品アセット（画像）をAEM Assetsに格納することもできますが、アセット URL をAdobe Commerceに手動で格納する必要があります。 Dynamic Media は AEM Assets の一部となったので、同じように機能します。
 
 ## 3. コマースソリューションをどこにデプロイするかは重要ですか（オンプレミスまたはクラウド内）。
 
@@ -39,7 +39,7 @@ AEM で使用する CIF アドオンでは、コマースソリューション�
 
 ## 7. PIM はこのフレームワークでどのように機能しますか。
 
-PIM データは、GraphQL 要求を介して AEM およびクライアントに公開されます。PIM データをコマースエンジンから取得できるように、PIM をコマースエンジン（Magento など）と統合することをお勧めします。
+PIM データは、GraphQL 要求を介して AEM およびクライアントに公開されます。PIM データをコマースエンジンから取得できるように、PIM をコマースエンジン (Adobe Commerceなど ) と統合することをお勧めします。
 
 ## 8. Dispatcher を使用して、価格や他のデータもキャッシュしますか。キャッシュ無効化の課題が頻繁に発生しませんか。
 
@@ -59,7 +59,7 @@ CIF には、検索バーと検索結果のコンポーネントが用意され�
 
 ## 12. MSM や翻訳で製品データをどのように使用できますか。
 
-通常、製品データは PIM または Magento で既に翻訳されています。AEM-Magento 統合は、複数の Magento ストアおよびストア表示への接続をサポートします。MSM の設定では、通常、1 つの AEM サイトが 1 つの Magento ストア表示にリンクされます。
+通常、製品データは PIM またはAdobe Commerceで既に翻訳されています。 AEM - Adobe Commerce統合は、複数のAdobe Commerceストアおよびストア表示への接続をサポートします。 MSM の設定では、通常、1 つのAEMサイトが 1 つのAdobe Commerceストアビューにリンクされます。
 
 ## 13. 商業文で製品データを充実させる方法はありますか。それはどこでできますか。AEM とコマースソリューションのどちらですか。
 
@@ -67,9 +67,9 @@ AEM でマーケティング関連のデータとコンテンツを管理する�
 
 ## 14. プレゼンテーションレイヤー全体に AEM を使用する場合、PCI への準拠をどのように確保できますか。
 
-抽象化された支払い方法を使用することをお勧めします。 これにより、ブラウザークライアントは支払いゲートウェイプロバイダーと直接通信し、アドビもコマースソリューションもカード所有者データを保持したり受け渡したりしないようになります。このアプローチには レベル 3 の PCI コンプライアンスのみ必要です。しかし、従業員がシステムやデータとやり取りする方法など、完全に PCI に準拠するには考慮されるべき点が他にもあります。Magento PCI への準拠について詳しくは、 を参照してください。<https://magento.com/pci-compliance>
+抽象化された支払い方法を使用することをお勧めします。 これにより、ブラウザークライアントは支払いゲートウェイプロバイダーと直接通信し、アドビもコマースソリューションもカード所有者データを保持したり受け渡したりしないようになります。このアプローチには レベル 3 の PCI コンプライアンスのみ必要です。しかし、従業員がシステムやデータとやり取りする方法など、完全に PCI に準拠するには考慮されるべき点が他にもあります。Adobe Commerce PCI への準拠について詳しくは、 [PCI コンプライアンス](https://business.adobe.com/products/magento/pci-compliance.html)
 
-## 15. AEM バージョンと Magento クラウドバージョンを使用する場合、この共同ソリューションは PCI に準拠していますか。
+## 15. AEMとAdobe Commerceのクラウドバージョンを使用している場合、この共同ソリューションは PCI に準拠していますか。
 
 はい、自己評価アンケート D とコンプライアンス証明がオンリクエストで利用できます。
 

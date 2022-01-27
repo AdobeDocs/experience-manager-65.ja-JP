@@ -1,10 +1,10 @@
 ---
 title: 買い物かごおよび Dispatcher の設定
 description: 買い物かごおよび Dispatcher の設定
-source-git-commit: da538dac17b4c6182b44801b4c79d6cdbf35f640
-workflow-type: ht
-source-wordcount: '140'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 95%
 
 ---
 
@@ -18,5 +18,5 @@ ht-degree: 100%
 このトピックの詳細については、次のリソースを参照してください。
 
 - [買い物かご](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/minicart/v1/minicart)
-- [Magento プロキシを使用する AEM Dispatcher](https://github.com/adobe/aem-core-cif-components/tree/master/dispatcher)
+- [Adobe Commerceプロキシを使用したAEM Dispatcher](https://github.com/adobe/aem-core-cif-components/tree/master/dispatcher)
 - [Docker ハブ](https://hub.docker.com/)

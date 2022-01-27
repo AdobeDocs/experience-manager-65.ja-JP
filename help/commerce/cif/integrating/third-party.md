@@ -3,10 +3,10 @@ title: コマース統合フレームワークを使用した AEM とサード�
 description: 大規模企業では、ストアフロントを強化するために、追加のサードパーティ製コマースソリューションが必要になる場合があります。I/O Runtime を使用してサードパーティのコマースソリューションを Adobe Experience Manager に接続するような統合シナリオで、コマース統合フレームワーク（CIF）を使用できます。
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '419'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '420'
+ht-degree: 98%
 
 ---
 
@@ -28,7 +28,7 @@ Experience Manager はデータをオンデマンドで取得するため、製�
 
 >[!TIP]
 >
->リアルタイム API が使用できない場合は、API を使用した外部製品キャッシュを統合に対して使用する必要があります。例：[Magento オープンソース](https://magento.com/products/magento-open-source)
+>リアルタイム API が使用できない場合は、API を使用した外部製品キャッシュを統合に対して使用する必要があります。例：[Magento オープンソース](https://business.adobe.com/products/magento/open-source.html)
 
 完全な GraphQL スキーマを実装する必要はありません。必要なユースケースを有効にするには、スキーマのオブジェクトだけを実装します。
 

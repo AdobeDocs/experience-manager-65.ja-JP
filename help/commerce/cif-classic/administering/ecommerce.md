@@ -5,10 +5,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 100%
     </ul> </td>
    <td>
     <ul>
-     <li>Magento</li>
+     <li>Adobe Commerce</li>
      <li>Java と Javascript</li>
      <li>コマースデータは JCR リポジトリに保存されない</li>
     </ul> </td>
@@ -81,12 +81,12 @@ ht-degree: 100%
   <tr>
    <td>標準化されたデータモデル</td>
    <td>不可</td>
-   <td>あり。Magento GraphQL スキーマ</td>
+   <td>はい、Adobe Commerce GraphQL スキーマ</td>
   </tr>
   <tr>
    <td>入手方法</td>
    <td><p>使用可能。SAP Commerce Cloud（拡張機能は AEM 6.4 および Hybris 5（デフォルト）をサポートするように更新され、Hybris 4 との互換性を維持）</p> <p>Salesforce Commerce Cloud（AEM 6.4 をサポートするためにオープンソース化されたコネクタ）</p> </td>
-   <td>GitHub を通じてオープンソースで使用可能。Magento Commerce（Magento 2.3.2（デフォルト）をサポート、Magento 2.3.1 と互換性あり）。</td>
+   <td>GitHub を通じてオープンソースで使用可能。Adobe Commerce(2.3.2（デフォルト）をサポートし、2.3.1 との互換性 )。</td>
   </tr>
   <tr>
    <td>用途</td>

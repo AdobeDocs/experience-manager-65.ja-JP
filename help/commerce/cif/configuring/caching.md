@@ -2,10 +2,10 @@
 title: キャッシュとパフォーマンス
 description: GraphQL とコンテンツキャッシュを有効にしてコマース実装のパフォーマンス最適化に利用できる様々な設定について説明します。
 exl-id: ecce64bf-5960-4ddb-b6e3-dad401038c11
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '846'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '849'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ AEM CIF コアコンポーネントの場合、キャッシュはコンポーネ
 
 コンポーネントのキャッシュを設定する場合、キャッシュ名は、プロジェクトで定義する&#x200B;**プロキシ**&#x200B;コンポーネントの名前にする必要があります。
 
-クライアントは、GraphQL リクエストを送信する前に、**全く同じ** GraphQL リクエストが既にキャッシュされているかどうかをチェックし、キャッシュされている応答を返す場合があります。GraphQL リクエストは完全に一致する必要があります。つまり、クエリ、操作名（存在する場合）、変数（存在する場合）はすべてキャッシュされたリクエストと等しく、また、設定されているカスタム HTTP ヘッダーも同じでなければなりません。例えば、Magento `Store` ヘッダーは一致する必要があります。
+クライアントは、GraphQL リクエストを送信する前に、**全く同じ** GraphQL リクエストが既にキャッシュされているかどうかをチェックし、キャッシュされている応答を返す場合があります。GraphQL リクエストは完全に一致する必要があります。つまり、クエリ、操作名（存在する場合）、変数（存在する場合）はすべてキャッシュされたリクエストと等しく、また、設定されているカスタム HTTP ヘッダーも同じでなければなりません。例えば、Adobe Commerce `Store` header は一致する必要があります。
 
 ### 例
 
@@ -49,7 +49,7 @@ venia/components/structure/navigation:true:10:600
 
 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) 内の AEM ページまたはフラグメントのキャッシュは、どの AEM プロジェクトに対してもベストプラクティスです。通常、AEM で変更されたコンテンツの Dispatcher での適切なアップデートは、無効化の手法に依存します。これは、AEM Dispatcher のキャッシュ方法の中心となる機能です。
 
-純粋な AEM で管理されるコンテンツ CIF に加えて、通常、ページには、GraphQL を介して Magento から動的に取り込まれたコマースデータを表示できます。ページ構造自体は変更されない場合がありますが、コマースのコンテンツは変更されることがあります。例えば、Magento で一部の製品データ（名称、価格など）が変更される場合などです。
+純粋なAEMで管理されるコンテンツ CIF に加えて、通常、ページには、GraphQL を介してAdobe Commerceから動的に取得されたコマースデータを表示できます。 ページ構造自体は変更されない場合がありますが、コマースのコンテンツは変更される場合があります。例えば、Adobe Commerceで製品データ（名前や価格など）が変更された場合などです。
 
 AEM Dispatcher で CIF ページを限られた時間だけキャッシュできるようにするため、AEM Dispatcher で CIF ページをキャッシュする場合は、[時間に基づくキャッシュの無効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-time-based-cache-invalidation-enablettl)（TTL ベースのキャッシュとも呼ばれます）を使用することをお勧めします。この機能は、追加の [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) パッケージを使用して AEM で設定できます。
 
@@ -63,4 +63,4 @@ TTL ベースのキャッシュを使用する場合、デベロッパーは通�
 
 - [Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)
 - [GraphQL キャッシュの設定](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
+- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

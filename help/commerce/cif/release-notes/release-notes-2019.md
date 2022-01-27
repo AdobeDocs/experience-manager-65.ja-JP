@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2021
 description: AEM Content and Commerce リリースノート 2021
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '973'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '978'
+ht-degree: 90%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ### 改善点 {#what-is-improved-november}
 
-* カテゴリ／製品ピッカーは、マルチストア設定で指定された Magento ストア表示に従って機能が強化されました。
+* カテゴリ/製品の選択機能が強化され、マルチストア設定での指定されたAdobe Commerceストア表示に合わせて機能が向上しました。
 
 * npm パッケージとして入手可能な React ベースのコンポーネント。 これにより、開発者は、React コンポーネントパッケージを新しい React プロジェクトの依存関係として使用することで、既存のコンポーネントをカスタマイズしたり、新しい React ベースのコンポーネントを開発したりできます。
 
@@ -95,7 +95,7 @@ ht-degree: 100%
 
 * CIF コンポーネントは、「Venia」固有の CSS スタイル設定から切り離されているので、開発者は選択した CSS スタイル設定を適用できます。
 
-* マルチストア／マルチサイト機能により、複数の AEM サイト構造で CIF コアコンポーネントを使用でき、基盤となる GraphQL クライアント実装が様々な Magentoストア／ストア表示に接続できるようになります。
+* マルチストア/サイト機能：複数のAEMサイト構造で CIF コアコンポーネントを使用でき、基盤となる GraphQL クライアント実装が異なるAdobe Commerceストア/ストア表示に接続できるようにします。
 
 * HTTP GET を使用した特定の GraphQL クエリに対して GraphQL キャッシュが有効になり、応答時間が短縮されます。
 
@@ -107,7 +107,7 @@ ht-degree: 100%
 
 ### 改善点 {#what-is-improved-august}
 
-* Magento ストアの設定が OSGi から AEM 製品コンソールに移動され、統合の設定を作成者が容易に行えるようになりました。
+* Adobe Commerceストアの設定をAEM Product Console に移動し、統合の設定を作成者にとってわかりやすいものにしました。
 
 ## リリース日：2019年7月
 
@@ -133,7 +133,7 @@ ht-degree: 100%
 
 ### 改善点 {#what-is-improved-july}
 
-* Magento 2.3.2 がサポートされ、製品コンソールでの製品プロパティ表示に関するバグが修正されました。
+* Adobe Commerce 2.3.2 のサポートと、製品プロパティに関するバグ修正が製品コンソールに表示されます。
 
 ## リリース日：2019年6月
 
@@ -148,7 +148,7 @@ ht-degree: 100%
 
 * CIF コネクタおよびオーサリングツール（製品コンソール、製品ピッカー、カテゴリピッカー）を使用して、作成者がコマースコンテンツを使用して AEM でエクスペリエンスを作成できるようになりました。
 
-* Magento 2.3.1 と互換性のある CIF コアコンポーネントの最初のバージョン：
+* Adobe Commerce 2.3.1 と互換性のある CIF コアコンポーネントの最初のバージョン：
    * 製品の詳細
    * 製品リスト
    * 製品ティーザー

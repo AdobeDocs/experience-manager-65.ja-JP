@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2021
 description: AEM Content and Commerce リリースノート 2021
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '1324'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 96%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 100%
 
 * CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。 アドビクライアントデータレイヤーは、データを収集してデジタル分析およびレポートサーバーに送信するための標準的な手段です。 詳しくは、[Adobe Client データレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を参照してください。
 
-* Magento 管理 UI 内で設定された SEO メタデータ（タイトル、メタ説明、メタキーワードなど）を自動的に入力するように、製品の詳細ページと製品リストページが拡張されました。
+* Adobe Commerce管理 UI 内で設定された SEO メタデータ（タイトル、メタ説明、メタキーワードなど）を自動的に入力するように拡張された、製品の詳細ページと製品リストページ
 
 * コマースティーザーコンポーネントのバグを修正しました。
 
@@ -61,7 +61,7 @@ ht-degree: 100%
 
 ### 新機能 {#what-is-new-september}
 
-* Magento 2.4.0 スキーマのクエリをサポートします。
+* Adobe Commerce 2.4.0 スキーマのクエリをサポートします。
 
 * アカウント情報の機能が追加され、買い物客が個人情報を更新できるようになりました。
 
@@ -165,7 +165,7 @@ ht-degree: 100%
 
 ### 新機能 {#what-is-new-may}
 
-* Magento 2.3.5 スキーマのクエリをサポートします。
+* Adobe Commerce 2.3.5 スキーマのクエリをサポートします。
 
 * ファセット検索のサポートが検索ページと製品リストページに追加され、買い物客が製品ファセットに基づいて検索結果をフィルタリングできるようになりました。
 
@@ -213,7 +213,7 @@ ht-degree: 100%
 
 ### 新機能 {#what-is-new-february}
 
-* Magento 2.3.4 スキーマのクエリをサポートします。
+* Adobe Commerce 2.3.4 スキーマのクエリをサポートします。
 
 * カテゴリピッカーに検索のサポートが追加されました。
 

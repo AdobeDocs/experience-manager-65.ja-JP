@@ -2,10 +2,10 @@
 title: カスタム HTTP ヘッダー
 description: カスタム HTTP ヘッダーの設定
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
-workflow-type: ht
-source-wordcount: '269'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '270'
+ht-degree: 96%
 
 ---
 
@@ -35,5 +35,5 @@ HTTP ヘッダーの値は、プロジェクトのクラウドサービス設定
 
 このサービスでは、標準のヘッダー名を含め、任意のヘッダー名を定義することができますが、設定することはできません。つまり、この機能を使用して標準の HTTP ヘッダーを上書きすることはできません。制限されるヘッダー名のリストは、[こちら](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers)を参照してくださいこれらに加えて、使用できないヘッダーが 2 つあります。
 
-* 「Store」 - CIF で Magento ストアを識別するために使用
+* 「Store」 - CIF でAdobe Commerceストアを識別するために使用されます。
 * 「Preview-Version」 - CIF がステージングされた製品を取得するために使用

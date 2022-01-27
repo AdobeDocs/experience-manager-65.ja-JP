@@ -2,10 +2,10 @@
 title: AEM Commerce Integration Framework（CIF）アドオンへの移行
 description: 旧バージョンから AEM Commerce Integration Framework（CIF）アドオンに移行する方法
 exl-id: c6c0c2fc-6cfa-4c64-b3d8-7e428b2a4b2e
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '264'
-ht-degree: 100%
+source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 98%
 
 ---
 
@@ -27,7 +27,7 @@ CIF をデプロイするプロジェクトをサポートするために、ア�
 
 >[!TIP]
 >
->リアルタイム API を使用できない場合は、API を使用した外部製品キャッシュを統合に使用する必要があります。例：[Magento オープンソース](https://magento.com/products/magento-open-source)
+>リアルタイム API を使用できない場合は、API を使用した外部製品キャッシュを統合に使用する必要があります。例：[Magento オープンソース](https://business.adobe.com/products/magento/open-source.html)
 
 ## AEM レンダリングを使用した製品カタログエクスペリエンス
 
