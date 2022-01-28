@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 3cf3a05afd92f2992312ecfb931ef38278c5436c
+source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '658'
 ht-degree: 57%
 
 ---
@@ -56,7 +56,6 @@ ht-degree: 57%
    + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
    + [ビデオ](s7-video.md)
-   + [ページへのDynamic Media機能の追加](scene7.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットを配信する](delivering-dynamic-media-assets.md)
    + [Dynamic Media でホットリンク保護を有効化する](hotlink-protection.md)
@@ -75,6 +74,7 @@ ht-degree: 57%
    + [レスポンシブサイトに最適化された画像を配信する](responsive-site.md)
    + [Dynamic Media アセットをプレビューする](previewing-assets.md)
    + [ページに Dynamic Media アセットを追加する](adding-dynamic-media-assets-to-pages.md)
+   + [ページへのDynamic Media Classic機能の追加](scene7.md)
    + [Dynamic ビデオビューアまたは画像ビューアを Web ページに埋め込む](embed-code.md)
    + [Web アプリケーションに URL をリンクする](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)
@@ -117,7 +117,7 @@ ht-degree: 57%
    + [[!DNL Assets] と MediaLibrary](medialibrary.md)
    + [PDFラスタライザを使用](aem-pdf-rasterizer.md)
    + [アップロード制限の設定](configuring-asset-upload-restrictions.md)
-   + [[!DNL Experience Manager] and [!DNL Creative Cloud] の統合](aem-cc-integration-best-practices.md)
+   + [[!DNL Experience Manager] および [!DNL Creative Cloud] 統合](aem-cc-integration-best-practices.md)
    + [ [!DNL InDesign Server] との統合](indesign.md)
    + [Digital Rights Management](drm.md)
    + [アセットのインサイトにデモパッケージを使用](use-demo-package-for-asset-insights.md)
