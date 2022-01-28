@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 07fccc7b34a2d74b6e7837ac2f05e2f9d845fba1
+source-git-commit: cda5e0b545903333d928f14e043a931898d87dc3
 workflow-type: tm+mt
-source-wordcount: '3380'
-ht-degree: 78%
+source-wordcount: '3362'
+ht-degree: 79%
 
 ---
 
@@ -242,7 +242,7 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux Kernel 2.6、3.x および 4.x には、Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など、Red Hat ディストリビューションからの派生製品が含まれます。 AEM Formsアドオン機能は、CentOS 7、Red Hat Enterprise Linux 7、および Red Hat Enterprise Linux 8 でのみサポートされています。 AEMは、RHEL8（カーネルバージョン 4.18）を対象とする Linux カーネル 4.x をサポートしています。 AEM Forms OSGi は RHEL8 でもサポートされています。
+1. Linux Kernel 2.6、3.x および 4.x には、Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など、Red Hat ディストリビューションからの派生製品が含まれます。 AEM Formsアドオン機能は、CentOS 7、Red Hat Enterprise Linux 7、および Red Hat Enterprise Linux 8 でのみサポートされています。
 1. AEM Forms は Ubuntu 16.04 LTS でのみサポートされています。
 1. Adobe Managed Services でサポートされている Linux ディストリビューション
 1. Microsoft Windows の実稼動デプロイメントは、6.5 にアップグレードするお客様と、実稼動以外の使用に対してサポートされます。 AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
