@@ -12,7 +12,7 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: e8270ad3f658236184467eda9f25c2ec0e6787ba
+source-git-commit: 128358e17aa6166c81e0979825ee81d029418f22
 workflow-type: tm+mt
 source-wordcount: '11766'
 ht-degree: 77%
@@ -34,12 +34,10 @@ ht-degree: 77%
 >* 詳しくは、 [Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) (Dynamic Media - Scene7モードの場合 ) および [Dynamic Media - Scene7モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md).
 >
 >* 詳しくは、 [Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) (Dynamic Media — ハイブリッドモードの設定 )
-
 >
 >Dynamic Mediaでの現在のビデオ再生の問題 *Experience Manager6.5.9.0 のみ*:
 >
 >* 公開済みのビデオを更新した場合は、配信時に変更を反映するために、再度公開する必要があります。
-
 >
 
 
@@ -56,7 +54,7 @@ ht-degree: 77%
       * 詳しくは、[デジタルアセットの整理](/help/assets/organize-assets.md)を参照してください。
    * フォルダーにプライマリソースビデオをアップロードします。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
-      * Dynamic Mediaは主に、最大長が 30 分で、解像度が 50 x 50 を超える短形式のビデオをサポートします。
+      * Dynamic Mediaは主に、最大長が 30 分で、最小解像度が 25 x 25 を超える短形式のビデオをサポートします。
       * 15 GB までのビデオファイルをアップロードできます。
       * [ビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 詳しくは、[サポートされる入力ファイル形式](/help/assets/assets-formats.md#supported-multimedia-formats)を参照してください。
@@ -87,7 +85,7 @@ ht-degree: 77%
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
          [ビデオレンディションのプロパティを表示](video-renditions.md)
 
-      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
+      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集：
          [ビデオのプロパティを編集](manage-assets.md#editing-properties)
 
       * [デジタルアセットのメタデータの管理](metadata.md)
@@ -300,7 +298,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 ビデオファイルをエンコードするときは、可能な限り最高品質のソースビデオファイルを使用します。以前にエンコードされたビデオファイルの使用は避けてください。そのようなファイルは既に圧縮済みで、さらにエンコードすると標準を下回る品質のビデオが作成されるからです。
 
-* Dynamic Mediaは主に、最大長が 30 分で、解像度が 50 x 50 を超える短形式のビデオをサポートします。
+* Dynamic Mediaは主に、最大長が 30 分で、最小解像度が 25 x 25 を超える短形式のビデオをサポートします。
 * 15 GB までのプライマリソースビデオファイルをアップロードできます。
 
 次の表に、ソースビデオファイルのエンコード前の推奨サイズ、縦横比および最小ビットレートを示します。
