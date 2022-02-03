@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
+source-git-commit: 2706a069bea731da1f84c15e2da02b53a9db4d28
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '665'
 ht-degree: 57%
 
 ---
@@ -43,6 +43,7 @@ ht-degree: 57%
    + [オプション — Dynamic Mediaの設定 — Scene7モード、一般設定](dm-general-settings.md)
    + [オプション — Dynamic Mediaの設定 — Scene7モード、公開設定](dm-publish-settings.md)
    + [Dynamic Media - Scene7モードのトラブルシューティング](troubleshoot-dms7.md)
+   + [Dynamic Media会社エイリアスアカウントの設定](dm-alias-account.md)
    + [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)
    + [Dynamic Media — ハイブリッドモードからDynamic Media - S7 モードへの移行](migrate-from-hybrid-to-dms7.md)
    + [Dynamic Media のアクセシビリティ](accessibility-dm.md)
