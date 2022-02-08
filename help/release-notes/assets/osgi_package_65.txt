@@ -1,4 +1,4 @@
-SUBPACKAGE                                          VERSION                     
+サブパッケージ                                          バージョン                      
 ----------                                          -------                     
 com.adobe.granite.platform.clientlibs               2.3.1-CQ650-B0002           
 com.adobe.granite.security.permissions.ui.content   0.0.24                      

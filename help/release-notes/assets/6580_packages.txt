@@ -1,4 +1,4 @@
-SUBPACKAGE                                          VERSION                 
+サブパッケージ                                          バージョン                  
 ----------                                          -------                 
 aem-bundle-remover-content                          2.0.2                   
 aemfd-expeditor-rulebuilder-pkg                     5.0.76                  

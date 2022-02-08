@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                       BUNDLE NAME                                                    VERSION
+シンボリック名                                          バンドル名                                                        バージョン
 com.adobe.bp.bp-cloudservice                        Adobe Brand Portal Cloudservice configuration                  0.1.0.CQ650-B004
 com.adobe.cq.dam.cq-dam-ui-models                   AEM - DAM Sling Model Bundle                                   1.0.8
 com.adobe.cq.inbox.cq-inbox-api                     AEM - Inbox API                                                1.0.14

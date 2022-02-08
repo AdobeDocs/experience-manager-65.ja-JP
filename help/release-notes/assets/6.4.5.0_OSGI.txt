@@ -1,6 +1,5 @@
-
-SUBPACKAGE                                          VERSION                                                                                                                                                                                                                  
-----------                                          -------                                                                                                                                                                                                                                      
+サブパッケージ                                          バージョン                                   
+----------                                          -------                                   
 aemds-guide-content                                 5.1.14                                    
 com.adobe.granite.platform.clientlibs               2.1.26-CQ640-B0006                        
 com.adobe.granite.platform.content                  1.0.22-CQ640-B0005                        

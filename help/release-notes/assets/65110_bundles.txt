@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                  BUNDLE NAME                                               VERSION
+シンボリック名                                     バンドル名                                                   バージョン
 com.adobe.cq.wcm.com.adobe.aem.wcm.seo         Adobe AEM - SEO                                           1.0.6
 com.adobe.cq.wcm.com.adobe.aem.wcm.seo.impl    Adobe AEM - SEO Implementation                            1.0.6
 com.adobe.granite.jobs.async.ui.commons        Adobe Granite Async Jobs                                  2.0.2

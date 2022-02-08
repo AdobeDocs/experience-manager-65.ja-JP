@@ -1,5 +1,5 @@
-SYMBOLIC NAME                                     BUNDLE NAME                                                  VERSION
-org.apache.commons.commons-codec                  Apache Commons Codec                                         1.14.0    
+シンボリック名                                        バンドル名                                                      バージョン
+org.apache.commons.commons-codec                  Apache Commons Codec                                         1.14.0
 com.adobe.cq.ui.admin                             AEM UI WCM Admin Bundle                                      1.0.0
 org.apache.jackrabbit.oak-jackrabbit-api          Jackrabbit API                                               1.22.3
 com.adobe.cq.cq-experience-fragments              AEM - Experience Fragments                                   1.2.70

@@ -1,7 +1,5 @@
-
-SUBPACKAGE                                          VERSION                                                                                                                                                                                               
+サブパッケージ                                         バージョン                            
 ----------                                          ------- 
-
 aem-bundle-remover-content                          2.0.2               
 aemfd-expeditor-rulebuilder-pkg                     5.0.68                           
 com.adobe.granite.backup.content                    0.0.76                           

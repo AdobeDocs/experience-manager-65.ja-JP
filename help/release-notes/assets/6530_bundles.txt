@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                       BUNDLE NAME                                                  VERSION
+シンボリック名                                          バンドル名                                                      バージョン
 com.adobe.cq.social.cq-social-console               AEM Communities Console - Bundle                             1.4.35
 com.adobe.cq.social.cq-social-reporting-management  AEM Communities Enablement Reporting Management- Bundle      1.1.26
 com.adobe.cq.cq-dam-mac-sync                        Adobe CQ DAM - Adobe Marketing Cloud Synchronisation Bundle  1.3.44

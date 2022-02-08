@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                         BUNDLE NAME                                                    VERSION
+シンボリック名                                            バンドル名                                                        バージョン
 com.day.cq.dam.cq-dam-stock-integration               Adobe CQ DAM Stock Integration                                 1.0.4
 com.adobe.granite.acp.platform                        Adobe Granite ACP Platform                                     0.2.24
 com.adobe.stock.api                                   Adobe Stock Apis SDK                                           1.0.2

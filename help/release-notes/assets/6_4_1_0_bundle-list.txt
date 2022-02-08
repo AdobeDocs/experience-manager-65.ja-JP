@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                     BUNDLE NAME                                                   VERSION
+シンボリック名                                        バンドル名                                                       バージョン
 com.adobe.cq.inbox.cq-inbox-ui                    AEM - Inbox UI                                                1.1.10
 com.adobe.cq.cq-analytics-integration             AEM 6 Analytics Integration Bundle                            1.2.18
 com.adobe.cq.social.cq-social-activitystreams     AEM Communities ActivityStreams - Bundle                      1.5.21

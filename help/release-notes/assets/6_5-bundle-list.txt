@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                      BUNDLE NAME                                                  VERSION
+シンボリック名                                         バンドル名                                                      バージョン
 com.adobe.cq.dam.cq-dam-ui-models                  AEM - DAM Sling Model Bundle                                 1.0.8
 com.adobe.cq.cq-ref-update-processor-util          AEM - Reference Update Processor Utility bundle              1.0.0
 com.day.cq.remote.content.renderer                 Remote Content Renderer                                      2.0.4

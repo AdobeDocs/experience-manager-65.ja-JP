@@ -1,4 +1,4 @@
-SUBPACKAGE                                          VERSION                             
+サブパッケージ                                          バージョン                             
 ----------                                          -------                             
 com.adobe.granite.platform.clientlibs               2.1.26-CQ640-B0004                  
 com.adobe.granite.platform.content                  1.0.22-CQ640-B0002                  

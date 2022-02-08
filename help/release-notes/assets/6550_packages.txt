@@ -1,5 +1,5 @@
-SUBPACKAGE                           VERSION     
-----------                           -------             
+サブパッケージ                           バージョン
+----------                           -------     
 com.adobe.granite.backup.co          0.0.76      
 com.adobe.granite.platform.          2.3.1-CQ650-
 com.adobe.granite.platform.          1.1.26-CQ650

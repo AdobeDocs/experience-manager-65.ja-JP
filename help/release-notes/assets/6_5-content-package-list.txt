@@ -1,4 +1,4 @@
-SUBPACKAGE                                          VERSION                 
+サブパッケージ                                          バージョン                  
 ----------                                          -------                 
 com.adobe.granite.security.permissions.ui.content   0.0.24                  
 com.adobe.granite.ui.content                        0.8.870-CQ651-B0005     

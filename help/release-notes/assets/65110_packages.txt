@@ -1,4 +1,4 @@
-SUBPACKAGE                                          VERSION                 
+サブパッケージ                                          バージョン                 
 ----------                                          -------                 
 adobeims.content                                    1.1.2
 aem-bundle-remover-content                          2.0.2

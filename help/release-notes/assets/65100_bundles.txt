@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                     BUNDLE NAME                                                        VERSION
+シンボリック名                                        バンドル名                                                            バージョン
 cq-dam-cfm-graphql                                Adobe Experience Manager GraphQL for Content Fragments             0.0.1.CQ650-B0006
 com.adobe.aem.graphql.sites-api                   Adobe Experience Manager GraphQL for Sites - API                   0.0.1.CQ650-B0004
 com.adobe.aem.graphql.sites-base                  Adobe Experience Manager GraphQL for Sites - Base Module           0.0.1.CQ650-B0004

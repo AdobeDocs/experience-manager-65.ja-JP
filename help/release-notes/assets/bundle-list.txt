@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                      BUNDLE NAME                                                  VERSION
+シンボリック名                                         バンドル名                                                      バージョン
 com.adobe.cq.cq-experience-fragments               AEM - Experience Fragments                                   1.1.238
 com.adobe.cq.social.cq-social-calendar-api         AEM Communities Calendar - API Bundle                        1.5.9
 com.adobe.cq.social.cq-social-calendar-impl        AEM Communities Calendar - Impl Bundle                       1.5.18

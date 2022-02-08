@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                               BUNDLE NAME                                                        VERSION
+シンボリック名                                                  バンドル名                                                            バージョン
 org.apache.oltu.oauth2.client                               org.apache.oltu.oauth2.client                                      1.0.0
 com.adobe.cq.cq-experience-fragments                        AEM - Experience Fragments                                         1.2.78
 com.adobe.cq.social.cq-social-commons                       AEM Communities Commons - Bundle                                   1.10.82

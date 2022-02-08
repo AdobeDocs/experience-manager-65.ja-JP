@@ -1,4 +1,4 @@
-SYMBOLIC NAME                                           BUNDLE NAME                                                   VERSION
+シンボリック名                                              バンドル名                                                       バージョン
 com.adobe.cq.remotedam.cq-remotedam-api                 Adobe CQ Remote DAM API Bundle                                0.8.8
 com.adobe.cq.remotedam.cq-remotedam-commons             Adobe CQ Remote DAM Commons Bundle                            0.0.8
 org.apache.commons.commons-fileupload                   Apache Commons FileUpload                                     1.4.0
