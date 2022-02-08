@@ -11,9 +11,9 @@ topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
 exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-source-git-commit: 9fbf338b18e73fbd272af061381baf34b694239a
+source-git-commit: bf55553f48c1eddf5dec503fb105cf35ff26677d
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1539'
 ht-degree: 18%
 
 ---
@@ -143,7 +143,7 @@ Adobe I/Oコンソールを開き、AEMが使用するAdobe Targetで I/O プロ
 
 1. に移動します。 **製品** （上部のツールバー）、「 **Adobe Target - &lt;*your-tenant-id*>** （左のパネルから）。
 1. 選択 **製品プロファイル**&#x200B;を選択し、表示されるリストから必要なワークスペースを選択します。 例えば、「デフォルトのワークスペース」などです。
-1. 選択 **統合**&#x200B;を選択し、必要な統合設定を選択します。
+1. 選択 **API 資格情報**&#x200B;を選択し、必要な統合設定を選択します。
 1. 選択 **編集者** を **製品の役割**;の代わりに **監視者**.
 
 ## Adobe I/O統合プロジェクト用に保存された詳細 {#details-stored-for-the-adobe-io-integration-project}
