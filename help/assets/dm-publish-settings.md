@@ -8,13 +8,13 @@ content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
-source-git-commit: 1a410c7b71f0e329b327a7f7f05137fcd220fb6a
+exl-id: c86e79c4-e887-4ee3-bb54-eeffb34a33c2
+source-git-commit: 8561eb8b4b5164188ebf387c8f0344b462b830ec
 workflow-type: tm+mt
-source-wordcount: '3459'
+source-wordcount: '3467'
 ht-degree: 5%
 
 ---
-
 
 # Image Server 用のDynamic Media公開設定の指定
 
@@ -64,6 +64,8 @@ Image Server ページでは、Image Server から画像を配信するための
 ### 「Security」タブ {#security-tab}
 
 **[!UICONTROL クライアントアドレス]** - 1 つ以上の IP アドレスまたは IP アドレスの範囲を指定できます。 指定した場合、登録されていない IP アドレスのクライアントからのこの画像カタログへの要求は拒否されます。 このルールは、画像とレンダリングされた画像の両方の配信に適用されます。
+
+![「セキュリティ」タブ&#x200B;](/help/assets/assets-dm/dm-ipallowlist.png)<br>*IP「許可」フィールドを表示する「セキュリティ」タブ*
 
 ### 「カタログ管理」タブ {#catalog-management-tab}
 
