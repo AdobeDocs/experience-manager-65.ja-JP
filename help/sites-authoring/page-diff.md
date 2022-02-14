@@ -1,8 +1,8 @@
 ---
-title: ページの差分
-seo-title: ページの差分
+title: 'ページの差分 '
+seo-title: Page Diff
 description: ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
-seo-description: ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
+seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.
 uuid: 5af8b466-5922-4fe6-9eae-7bad99be23e0
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '579'
+workflow-type: ht
+source-wordcount: '560'
 ht-degree: 100%
 
 ---
 
-# ページの差分{#page-diff}
+# ページの差分 {#page-diff}
 
 ## はじめに {#introduction}
 
@@ -41,7 +41,7 @@ ht-degree: 100%
 
 それらのコンテキスト内で差分の確認を開始する方法については、それぞれのトピックを参照してください。
 
-### 差分の表示  {#presentation-of-differences}
+### 差分の表示 {#presentation-of-differences}
 
 比較対象のコンテンツにかかわらず、差分の表示は同じです。
 
@@ -70,17 +70,17 @@ ht-degree: 100%
 >
 >言語コピーを比較する場合は、翻訳ですべてが変更され、強調表示をしても意味がないので、強調表示は無効になります。
 
-### 全画面表示および終了  {#fullscreen-and-exiting}
+### 全画面表示および終了 {#fullscreen-and-exiting}
 
-特定のコンテンツに集中するために、並列比較による差分表示のいずれかの「側」の全画面表示アイコンをクリックして、それをフルブラウザーウィンドウに拡大することができます。
+特定のコンテンツに集中するには、並列比較による差分表示のいずれかの「サイド」の全画面表示アイコンをクリックすると、ブラウザーの全画面に拡大することができます。
 
 ![](do-not-localize/chlimage_1-18.png)
 
-選択された側がウィンドウ全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
+選択されたサイドが画面全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
-また全画面表示終了アイコンをクリックして、全画面表示を閉じることができます。
+また全画面表示を終了するアイコンをクリックして、全画面表示を閉じることができます。
 
 ![](do-not-localize/chlimage_1-19.png)
 
