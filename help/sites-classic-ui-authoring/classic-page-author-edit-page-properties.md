@@ -1,8 +1,8 @@
 ---
-title: ページプロパティの編集
-seo-title: ページプロパティの編集
+title: 'ページプロパティの編集 '
+seo-title: Editing Page Properties
 description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
-seo-description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
+seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.
 uuid: 63d37d1b-52da-489d-b02b-e8b3d17571d1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: 23768c73-ac64-4727-8313-160c8c131b05
 exl-id: 1a77e4cd-bbf8-4d05-bb35-fd43c02eaf30
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '763'
+ht-degree: 100%
 
 ---
 
-# ページプロパティの編集{#editing-page-properties}
+# ページプロパティの編集 {#editing-page-properties}
 
 ページに必要なプロパティを定義できます。これらはページの特性に応じて異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 
@@ -81,7 +81,7 @@ ht-degree: 96%
 
    このページのバニティ URL を入力できます。これによって、短くて意味のわかりやすい URL を付けることができます。
 
-   例えば、Webサイトh `ttp://example.com,`のパス/ `v1.0/startpage`で識別されるページに対して、バニティURLがw `elcome`に設定されている場合、h `ttp://example.com/welcome`はh `ttp://example.com/content/v1.0/startpage`のバニティURLになります。
+   例えば、バニティ URL を web サイト h`ttp://example.com,` のパス /`v1.0/startpage` で特定されるページへの w`elcome` に設定した場合、h`ttp://example.com/welcome` は h`ttp://example.com/content/v1.0/startpage` のバニティ URL になります。
 
    >[!CAUTION]
    >
@@ -163,7 +163,7 @@ ht-degree: 96%
 
 * **権限**（タッチ操作向け UI）
 
-   [有効な権限を表示し、新しい権限を追加します](/help/sites-administering/user-group-ac-admin.md)。
+   [有効な権限を表示し、新しい権限を追加](/help/sites-administering/user-group-ac-admin.md)します。
 
 ### ブループリント {#blueprint}
 
@@ -181,7 +181,7 @@ ht-degree: 96%
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
-## ページプロパティの編集 {#editing-page-properties-2}
+## ページプロパティの編集  {#editing-page-properties-2}
 
 ### 特定のページのページプロパティの編集 {#editing-page-properties-for-a-specific-page}
 
