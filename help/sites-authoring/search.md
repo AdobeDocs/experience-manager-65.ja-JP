@@ -1,8 +1,8 @@
 ---
 title: 検索
-seo-title: 検索
+seo-title: Search
 description: 包括的な検索を使用して、よりすばやくコンテンツを見つけます
-seo-description: 包括的な検索を使用して、よりすばやくコンテンツを見つけます
+seo-description: Find your content faster with comprehensive search
 uuid: 21605b96-b467-4d01-9a64-9d0648d539f1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 4ec15013-f7ab-44d6-8053-ed28b14f95e2
 docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '503'
+ht-degree: 100%
 
 ---
 
-# 検索{#searching}
+# 検索 {#searching}
 
 AEM のオーサー環境は、リソースタイプに応じて、コンテンツを検索するための様々なメカニズムを提供します。
 
@@ -61,7 +61,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
    ![screen-shot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
 
-1. さらにドリルダウンするには、レール記号（左上）を選択して&#x200B;**フィルターおよびオプション**&#x200B;サイドパネルを開きます。
+1. さらにドリルダウンするには、レール記号（左上）を選択して&#x200B;**フィルターおよびオプション**&#x200B;のサイドパネルを開きます。
 
    ![](do-not-localize/screen_shot_2018-03-23at101542.png)
 
@@ -72,7 +72,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
    * 保存済みの検索結果
    * 検索ディレクトリ
    * タグ
-   * 検索基準（変更日、公開ステータス、ライブコピーのステータスなど）。
+   * 検索基準（更新日、公開ステータス、LiveCopy ステータスなど）。
 
    >[!NOTE]
    >
@@ -110,7 +110,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
    ![screen-shot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
 
-1. 保存済みの検索結果は、次回検索パネルにアクセスするときにセレクターで選択できます。
+1. 保存済みの検索は、次回検索パネルにアクセスするときにセレクターで選択できます。
 
    ![screen-shot_2019-03-05at102927](assets/screen-shot_2019-03-05at102927.png)
 
