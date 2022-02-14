@@ -1,8 +1,8 @@
 ---
-title: プロジェクトワークフローの操作
-seo-title: プロジェクトワークフローの操作
+title: 'プロジェクトワークフローの操作 '
+seo-title: Working with Project Workflows
 description: すぐに使用可能な様々なプロジェクトワークフローが用意されています。
-seo-description: すぐに使用可能な様々なプロジェクトワークフローが用意されています。
+seo-description: A variety of project workflows are available out of the box.
 uuid: 376922ca-e09e-4ac8-88c8-23dac2b49dbe
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,17 +11,17 @@ content-type: reference
 discoiquuid: 9d2bf30c-5190-4924-82cd-bcdfde24eb39
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '739'
+workflow-type: ht
+source-wordcount: '724'
 ht-degree: 100%
 
 ---
 
-# プロジェクトワークフローの操作{#working-with-project-workflows}
+# プロジェクトワークフローの操作 {#working-with-project-workflows}
 
 すぐに使用可能なプロジェクトワークフローには、次のものがあります。
 
-* **プロジェクト承認ワークフロー** - ユーザーへのコンテンツの割り当て、レビューおよび承認をおこなうことができます。
+* **プロジェクト承認ワークフロー** - ユーザーへのコンテンツの割り当て、レビューおよび承認を行うことができます。
 * **ローンチをリクエスト** - ローンチをリクエストするワークフローです。
 * **ランディングページをリクエスト** - ランディングページをリクエストするワークフローです。
 * **電子メールをリクエスト** - 電子メールをリクエストするワークフローです。
@@ -34,7 +34,7 @@ ht-degree: 100%
 |---|:-:|:-:|:-:|:-:|
 | コピーをリクエスト |  | x |  |  |
 | 撮影した製品写真 |  | x | x |  |
-| 撮影した製品写真 (コマース) |  |  | x |  |
+| 撮影した製品写真（コマース） |  |  | x |  |
 | プロジェクト承認 | x |  |  |  |
 | ローンチをリクエスト | x |  |  |  |
 | ランディングページをリクエスト | x |  |  |  |
@@ -52,13 +52,13 @@ ht-degree: 100%
 
 AEM でのワークフローの操作について詳しくは、以下を参照してください。
 
-* [ワークフローへの参加](/help/sites-authoring/workflows-participating.md)
-* [ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md)
+* [ワークフローへの参加 ](/help/sites-authoring/workflows-participating.md)
+* [ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md)
 * [ワークフローの設定](/help/sites-administering/workflows.md)
 
-このセクションでは、プロジェクトに使用可能なワークフローについて説明します。
+この節では、プロジェクトに使用可能なワークフローについて説明します。
 
-## コピーをリクエストワークフロー  {#request-copy-workflow}
+## コピーをリクエストワークフロー {#request-copy-workflow}
 
 このワークフローでは、ユーザーの原稿をリクエストし、承認することができます。コピーをリクエストワークフローを開始するには：
 
@@ -88,7 +88,7 @@ AEM でのワークフローの操作について詳しくは、以下を参照�
 
    ![chlimage_1-324](assets/chlimage_1-324.png)
 
-## 「ローンチをリクエスト」ワークフロー {#request-launch-workflow}
+## 「ローンチをリクエスト」ワークフロー  {#request-launch-workflow}
 
 このワークフローでは、ローンチをリクエストできます。
 
@@ -103,18 +103,18 @@ AEM でのワークフローの操作について詳しくは、以下を参照�
 
 このワークフローでは、ランディングページをリクエストできます。
 
-1. シンプルなプロジェクトで&#x200B;**ワークフロー**&#x200B;タイルの「**+**」記号を選択し、「ランディングページをリクエストワークフロー」を選択します。
+1. シンプルなプロジェクトで&#x200B;**ワークフロー**&#x200B;タイルの「**+**」記号を選択し、「ランディングページをリクエストするワークフロー」を選択します。
 1. ランディングページのタイトルと親パスを入力します。必要に応じて、ライブ日付を入力するか、ランディングページのファイルを選択します。
 
    ![chlimage_1-326](assets/chlimage_1-326.png)
 
 1. 「**作成**」をクリックします。ワークフローが開始されます。タスクが&#x200B;**タスク**&#x200B;タイルに表示されます。
 
-## 電子メールをリクエストワークフロー  {#request-email-workflow}
+## 電子メールをリクエストワークフロー {#request-email-workflow}
 
 このワークフローでは、電子メールをリクエストできます。これは、**電子メール**&#x200B;タイルに表示されるワークフローと同じです。
 
-1. メディアプロジェクトまたはシンプルなプロジェクトで&#x200B;**ワークフロー**&#x200B;タイルの「**+**」記号を選択し、「**電子メールをリクエストワークフロー**」を選択します。
+1. メディアプロジェクトまたはシンプルなプロジェクトで&#x200B;**ワークフロー**&#x200B;タイルの「**+**」記号を選択し、「**電子メールをリクエストするワークフロー**」を選択します。
 1. 電子メールタイトルと、キャンペーンおよびテンプレートパスを入力します。さらに、名前、説明、ライブ日付を指定できます。
 
    ![chlimage_1-327](assets/chlimage_1-327.png)
@@ -123,6 +123,6 @@ AEM でのワークフローの操作について詳しくは、以下を参照�
 
    ![chlimage_1-328](assets/chlimage_1-328.png)
 
-## アセットの言語コピー作成（および翻訳）ワークフロー {#create-and-translate-language-copy-workflow-for-assets}
+## Assets の言語コピーを作成（および翻訳）するワークフロー {#create-and-translate-language-copy-workflow-for-assets}
 
 **言語コピーを作成**&#x200B;ワークフローおよび&#x200B;**言語コピー作成／翻訳**&#x200B;ワークフローについて詳しくは、[アセットの言語コピーの作成](/help/assets/translation-projects.md)を参照してください。
