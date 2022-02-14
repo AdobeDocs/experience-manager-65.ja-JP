@@ -1,8 +1,8 @@
 ---
-title: ページの公開
-seo-title: ページの公開
+title: 'ページの公開 '
+seo-title: Publishing Pages
 description: オーサー環境でコンテンツを作成およびレビューした後は、公開 Web サイトでのコンテンツの公開が目標となります。
-seo-description: オーサー環境でコンテンツを作成およびレビューした後は、公開 Web サイトでのコンテンツの公開が目標となります。
+seo-description: Once you have created and reviewed your content on the author environment, the goal is to make it available on your public website.
 uuid: ab5ffc59-1c41-46fe-904e-9fc67d7ead04
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,15 +12,15 @@ discoiquuid: 46d6bde0-8645-4cff-b79c-8e1615ba4ed4
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 82%
+workflow-type: ht
+source-wordcount: '1044'
+ht-degree: 100%
 
 ---
 
-# ページの公開{#publishing-pages}
+# ページの公開 {#publishing-pages}
 
-オーサー環境でコンテンツを作成およびレビューした後は、公開 Web サイト（パブリッシュ環境）でコンテンツを利用できるようにすることが目標となります。
+オーサー環境でコンテンツを作成およびレビューした後は、公開 web サイト（パブリッシュ環境）でコンテンツを利用できるようにすることが目標となります。
 
 この操作は、ページの公開と呼ばれます。パブリッシュ環境からページを削除する場合は、ページの非公開と呼ばれます。ページは、公開／非公開を切り替えても、削除するまでは、さらなる変更に備えてオーサー環境で使用できます。
 
@@ -32,16 +32,13 @@ ht-degree: 82%
 >
 >* **公開／非公開**
    >  環境でコンテンツを公開する（または非公開にする）アクションに対して主に使用される用語です。
-   >
-   >
-* **アクティブ化／非アクティブ化**
-   >  公開／非公開と同義です。
-   >
-   >
-* **レプリケート／レプリケーション**
-   >  これらは、ユーザーのコメントを公開またはリバースレプリケートする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
-
+>* **アクティブ化／非アクティブ化**
+   >  公開／非公開と同義です。
+>
+>* **レプリケート／レプリケーション**
+   >  公開やユーザーコメントのリバースレプリケーションの際などに行われる、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
+>
 
 
 >[!NOTE]
@@ -54,12 +51,11 @@ ht-degree: 82%
 >
 
 
-
 ## ページの公開  {#publishing-a-page}
 
 ページをアクティベートするには、以下の 2 つの方法があります。
 
-* [Web サイトコンソールから](#activating-a-page-from-the-websites-console)
+* [web サイトコンソールから](#activating-a-page-from-the-websites-console)
 * [ページ自体のサイドキックから](#activating-a-page-from-sidekick)
 
 >[!NOTE]
@@ -96,7 +92,8 @@ Web サイトコンソールで、ページをアクティベートできます�
 ページを開いてそのコンテンツを変更した後、以下を実行します。
 
 1. サイドキックで、「**ページ**」タブを選択します。
-1. 「**ページをアクティベート**」をクリックします。ウィンドウの右上に、ページがアクティベートされたことを確認するメッセージが表示されます。
+1. 「**ページをアクティベート**」をクリックします。
+ウィンドウの右上に、ページがアクティベートされたことを確認するメッセージが表示されます。
 
 ## ページの非公開 {#unpublishing-a-page}
 
@@ -109,7 +106,7 @@ Web サイトコンソールで、ページをアクティベートできます�
 
    ![screen_shot_2012-02-08at14859pm](assets/screen_shot_2012-02-08at14859pm.png)
 
-1. [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)を更新すると、コンテンツは赤でマークされ、公開されていないことが示されます。
+1. [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)を更新すると、コンテンツが赤でマークされ、公開されていないことが示されます。
 
    ![screen_shot_2012-02-08at15018pm](assets/screen_shot_2012-02-08at15018pm.png)
 
@@ -120,7 +117,7 @@ Web サイトコンソールで、ページをアクティベートできます�
 後でアクティベートするようにスケジュールを設定するには：
 
 1. Web サイトコンソールで、**アクティベート**&#x200B;メニューの「**後でアクティベート**」を選択します。
-1. 開いたダイアログで、アクティベートの日時を指定し、「**OK**」をクリックします。これにより、指定された時刻にアクティベートされるページのバージョンが作成されます。
+1. 開いたダイアログで、アクティベートする日付と時刻を指定して、「**OK**」をクリックします。これにより、指定した時刻にアクティベートされるページのバージョンが作成されます。
 
    ![screen_shot_2012-02-08at14751pm](assets/screen_shot_2012-02-08at14751pm.png)
 
@@ -128,43 +125,43 @@ Web サイトコンソールで、ページをアクティベートできます�
 
 このアクティベートまたはアクティベートの解除をキャンセルする場合は、[ワークフローコンソール](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd)に移動して、対応するワークフローを終了します。
 
-### 後でアクティベートを解除  {#deactivate-later}
+### 後でアクティベートを解除 {#deactivate-later}
 
 後でアクティベートを解除するようにスケジュールを設定するには：
 
-1. Webサイトコンソールで、**非アクティブ化**&#x200B;メニューに移動し、「**後で非アクティブ化**」を選択します。
+1. Web サイトコンソールで、**アクティベートの解除**&#x200B;メニューの「**後でアクティベートを解除**」を選択します。
 
-1. 開いたダイアログで、非アクティブ化の日時を指定し、「**OK**」をクリックします。
+1. 開いたダイアログで、アクティベートを解除する日付と時刻を指定して、「**OK**」をクリックします。
 
    ![screen_shot_2012-02-08at15129pm](assets/screen_shot_2012-02-08at15129pm.png)
 
-「**後でアクティベートを解除**」によって、このページのバージョンを指定した時間にアクティベート解除するワークフローが開始されます。
+「**後でアクティベートを解除**」によって、指定した時間に、このページのバージョンをアクティベート解除するワークフローが開始されます。
 
 このアクティベートの解除をキャンセルする場合は、[ワークフローコンソール](/help/sites-administering/workflows-administering.md#main-pars_title_3-yjqslz-refd)に移動して、対応するワークフローを終了します。
 
-## アクティベート／アクティベート解除のスケジュール設定（オンタイム／オフタイム）  {#scheduled-activation-deactivation-on-off-time}
+## アクティベート／アクティベート解除のスケジュール設定（オンタイム／オフタイム） {#scheduled-activation-deactivation-on-off-time}
 
-ページの公開または非公開をおこなう時間をスケジュール設定することができます。そのためには、**ページプロパティ**&#x200B;で定義できる「**オンタイム**」と「[オフタイム](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)」を使用します。
+ページを公開または非公開にする時間のスケジュールを設定することができます。これを行うには、**ページプロパティ**&#x200B;で「**オンタイム**」と「[オフタイム](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)」を定義します。
 
-### ページパブリケーションステータスの判別 {#determining-page-publication-status-classic-ui}
+### ページ公開ステータスの判別 {#determining-page-publication-status-classic-ui}
 
 [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)からステータスを確認できます。色の違いにより公開ステータスが示されます。
 
-## Web サイトのセクション全体（ツリー）のアクティベート  {#activating-a-complete-section-tree-of-your-website}
+## Web サイトのセクション全体（ツリー）のアクティベート {#activating-a-complete-section-tree-of-your-website}
 
 「**Web サイト**」タブから、個々のページをアクティベートできます。多数のコンテンツページを入力または更新した場合、これらのページがすべて同じルートページの下にあれば、ツリー全体を 1 回の操作で簡単にアクティベートできます。また、ドライランを実行してアクティベートをエミュレートし、アクティベートされたページをハイライト表示することもできます。
 
-1. **ようこそ**&#x200B;ページから&#x200B;**ツール**&#x200B;コンソールを選択して開き、「**レプリケーション**」をダブルクリックしてコンソールを開きます(`https://localhost:4502/etc/replication.html`)。
+1. **ようこそ**&#x200B;ページから&#x200B;**ツール**&#x200B;コンソールを選択して開き、「**レプリケーション**」をダブルクリックして、レプリケーションコンソール（`https://localhost:4502/etc/replication.html`）を開きます。
 
    ![screen_shot_2012-02-08at125033pm](assets/screen_shot_2012-02-08at125033pm.png)
 
 1. **レプリケーション**&#x200B;コンソールで、「**ツリーをアクティベート**」をクリックします。
 
-   次のウィンドウ(`https://localhost:4502/etc/replication/treeactivation.html`)が表示されます。
+   次のウィンドウ（`https://localhost:4502/etc/replication/treeactivation.html`）が表示されます。
 
    ![screen_shot_2012-02-08at125033pm-1](assets/screen_shot_2012-02-08at125033pm-1.png)
 
-1. **開始パス**&#x200B;を入力します。アクティブ化（公開）するセクションのルートへのパスを指定します。 このページとその下のすべてのページがアクティベートの対象と見なされます（「ドライラン」が選択されている場合は、エミュレーションで使用されます）。
+1. **開始パス**&#x200B;を入力して、アクティベート（公開）するセクションのルートのパスを指定します。このページ以下のすべてのページが、アクティベートの対象と見なされます（ドライランが選択されている場合は、エミュレーションの実行対象になります）。
 1. 必要に応じて、次の選択基準のチェックをオンにします。
 
    * **変更済みのみ**：変更されたページのみアクティベートします。
@@ -173,6 +170,6 @@ Web サイトコンソールで、ページをアクティベートできます�
 
 1. 実行するアクションを選択します。
 
-   1. **&#x200B;がアクティブ化されるページを確認する場合は、「**ドライラン**」を選択します。これはエミュレーションのみで、ページはアクティベートされません。
+   1. どのページがアクティベートされるかを&#x200B;*確認*&#x200B;する場合は、「**ドライラン**」を選択します。これはあくまでもエミュレーションとして実行され、ページが実際にアクティベートされることはありません。
 
-   1. ページをアクティベートする場合は、「**アクティブ化**」を選択します。
+   1. ページをアクティベートする場合は、「**アクティベート**」を選択します。
