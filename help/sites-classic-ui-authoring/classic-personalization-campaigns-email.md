@@ -1,8 +1,8 @@
 ---
-title: 電子メールマーケティング
-seo-title: 電子メールマーケティング
+title: '電子メールマーケティング '
+seo-title: E-mail Marketing
 description: 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
-seo-description: 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
+seo-description: E-mail marketing (for example, newsletters) are an important part of any marketing campaign as you use them to push content to your leads. In AEM, you can create newsletters from existing AEM content as well as add new content, specific to the newsletters.
 uuid: 565943bf-fe37-4d5c-98c3-7c629c4ba264
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,17 +12,17 @@ discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1803'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '1758'
+ht-degree: 100%
 
 ---
 
-# 電子メールマーケティング{#e-mail-marketing}
+# 電子メールマーケティング {#e-mail-marketing}
 
 >[!NOTE]
 >
->AEM SMTP サービスが送信した電子メールの開封／バウンス（配信不能）の追跡機能がさらに強化される予定はありません。
+>アドビでは、AEM SMTP サービスが送信した電子メールの開封／バウンス（配信不能）を追跡する機能をさらに強化する計画はありません。
 >[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
 
 電子メールマーケティング（ニュースレターなど）は、どのようなマーケティングキャンペーンにおいても、コンテンツをリードにプッシュするときに重要な部分を占めます。AEM では、既存の AEM コンテンツからニュースレターを作成できるだけでなく、ニュースレターに固有の新しいコンテンツを追加できます。
@@ -37,16 +37,16 @@ ht-degree: 96%
 
 このドキュメントでは、AEM でのニュースレターの作成の基本について説明します。電子メールマーケティングの使用方法について詳しくは、以下のドキュメントを参照してください。
 
-* [効果的なニュースレターのランディングページの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
-* [購読の管理](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-subscriptions.md)
-* [電子メールサービスプロバイダーへの電子メールの公開](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
-* [バウンス（配信不能）電子メールの追跡](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
+* [効果的なニュースレターのランディングページの作成 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
+* [購読の管理 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-subscriptions.md)
+* [メールサービスプロバイダーへのメールの公開](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
+* [バウンスメールの追跡](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
 
 >[!NOTE]
 >
 >電子メールプロバイダーを変更した場合は、ニュースレターが先にパブリッシュインスタンスに公開されていないか、パブリッシュインスタンスが使用できない状態で、フライトテストを実行するか、ニュースレターを送信すると、これらの操作が失敗します。ニュースレターが確実に公開されていることと、パブリッシュインスタンスが稼動していることを確認してください。
 
-## ニュースレターのエクスペリエンスの作成  {#creating-a-newsletter-experience}
+## ニュースレターのエクスペリエンスの作成 {#creating-a-newsletter-experience}
 
 >[!NOTE]
 >
@@ -68,27 +68,33 @@ ht-degree: 96%
 
 1. すぐに新しいダイアログが開きます。ここで、ニュースレターのプロパティを入力できます。
 
-   「**デフォルトの受信者リスト**」は、このニュースレターのタッチポイントを構成するので、必須フィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
+   「**デフォルトの受信者リスト**」は、ニュースレターのタッチポイントを構成するので、必須のフィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
 
-   ![mcm_newnewsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![mcm_newnewnewsletterdialog](assets/mcm_newnewsletterdialog.png)
 
-   * **送信元の名前**&#x200B;ニュースレターの送信者として表示させる名前です。
+   * **送信元の名前**
+ニュースレターの送信者として表示させる名前です。
 
-   * **送信元のアドレス**&#x200B;ニュースレターの送信者として表示させるメールアドレスです。
+   * **送信元のアドレス**
+ニュースレターの送信者として表示させるメールアドレスです。
 
-   * **件名**&#x200B;ニュースレターの件名です。
+   * **件名**
+ニュースレターの件名です。
 
-   * **返信先**&#x200B;送信されたニュースレターへの返信先として使用される電子メールアドレスです。
+   * **返信先**
+送信されたニュースレターへの返信先として使用されるメールアドレスです。
 
    * **説明**
 ニュースレターの説明です。
 
-   * **オンタイム**&#x200B;ニュースレターを送信する日時です。
+   * **日時**
+ニュースレターを送信する日時です。
 
-   * **デフォルトの受信者リスト**&#x200B;ニュースレターを受信するデフォルトのリストです。
+   * **デフォルトの受信者リスト**
+ニュースレターを受信するデフォルトのリストです。
    これらの設定は、後から&#x200B;**プロパティ...** ダイアログで更新できます。
 
-1. 「**OK**」をクリックして、保存します。
+1. 「**OK**」をクリックして保存します。
 
 ## ニュースレターへのコンテンツの追加 {#adding-content-to-newsletters}
 
@@ -129,13 +135,13 @@ ht-degree: 96%
 
    ![mc_newsletter_testvariables](assets/mc_newsletter_testvariables.png)
 
-## 他の電子メールクライアントでのニュースレターのテスト {#testing-newsletters-in-different-e-mail-clients}
+## 様々なメールクライアントでのニュースレターのテスト {#testing-newsletters-in-different-e-mail-clients}
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr` で Day CQ Link Externalizer の OSGi 設定を確認してください。
 >
->デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
+>デフォルトでは、このパラメーターの値は `localhost:4502` です。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
 共通の電子メールクライアントを切り替えて、リードに対してニュースレターがどのように表示されるかを確認します。デフォルトでは、ニュースレターは電子メールクライアントが選択されていない状態で開きます。
 
@@ -156,7 +162,7 @@ ht-degree: 96%
 
    ![chlimage_1-119](assets/chlimage_1-119.png)
 
-1. その他の電子メールクライアントについて確認するには、この手順を繰り返します。
+1. 確認するその他のメールクライアントについて、この手順を繰り返します。
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -214,16 +220,16 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->AEM SMTP サービスが送信した電子メールの開封／バウンス（配信不能）の追跡機能がさらに強化される予定はありません。
+>アドビでは、AEM SMTP サービスが送信したメールの開封やバウンス（配信不能）を追跡する機能をさらに強化する計画はありません。
 >[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
 
 ニュースレターまたはリストからニュースレターを送信できます。両方の手順について説明します。
 
 >[!NOTE]
 >
->ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr`でDay CQ Link ExternalizerのOSGi設定を確認してください。
+>ニュースレターを送信する前に、`https://localhost:4502/system/console/configMgr` で Day CQ Link Externalizer の OSGi 設定を確認してください。
 >
->デフォルトでは、このパラメーターの値は `localhost:4502` となります。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
+>デフォルトでは、このパラメーターの値は `localhost:4502` です。稼動しているインスタンスのポートが変更されている場合は操作を完了できません。
 
 >[!NOTE]
 >
@@ -237,10 +243,10 @@ ht-degree: 96%
 
    >[!NOTE]
    >
-   >送信する前に、[設定をカスタマイズ](#customizing-newsletter-settings)して、ニュースレターの件名と発信元の電子メールアドレスをカスタマイズしてあることを確認します。
+   >送信する前に、ニュースレターの件名と発信元のメールアドレスが、[設定のカスタマイズ](#customizing-newsletter-settings)を使用してカスタマイズされていることを確認します。
    >
    >
-   >送信する前に、ニュースレターの[フライトテスト](#flight-testing-newsletters)をおこなうことをお勧めします。
+   >送信する前に、ニュースレターの[フライトテスト](#flight-testing-newsletters)を行うことをお勧めします。
 
 1. ニュースレターの上部にある「**送信**」をクリックします。ニュースレターの送信ウィザードが開きます。
 
@@ -256,7 +262,7 @@ ht-degree: 96%
    >
    >ニュースレターが受信されたことを確認できるように、自分も受信者の 1 人にします。
 
-### リストからのニュースレターの送信  {#sending-newsletters-from-a-list}
+### リストからのニュースレターの送信 {#sending-newsletters-from-a-list}
 
 リストからニュースレターを送信するには：
 
@@ -264,7 +270,7 @@ ht-degree: 96%
 
    >[!NOTE]
    >
-   >送信する前に、[設定をカスタマイズ](#customizing-newsletter-settings)して、ニュースレターの件名と発信元の電子メールアドレスをカスタマイズしてあることを確認します。リストから送信する場合、ニュースレターはテストできません。ニュースレターから送信する場合は、[フライトテスト](#flight-testing-newsletters)を実行できます。
+   >送信する前に、ニュースレターの件名と発信元のメールアドレスが、[設定のカスタマイズ](#customizing-newsletter-settings)を使用してカスタマイズされていることを確認します。リストから送信する場合、ニュースレターはテストできません。ニュースレターから送信する場合は、[フライトテスト](#flight-testing-newsletters)を実行できます。
 
 1. ニュースレターの送信先であるリードリストの横にあるチェックボックスをオンにします。
 
@@ -286,7 +292,7 @@ ht-degree: 96%
 
 ここでは、ニュースレターを購読する方法について説明します。
 
-### ニュースレターの購読  {#subscribing-to-a-newsletter-1}
+### ニュースレターの購読 {#subscribing-to-a-newsletter-1}
 
 ニュースレターを購読するには（例として Geometrixx Web サイトを使用）：
 
