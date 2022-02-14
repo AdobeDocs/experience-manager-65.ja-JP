@@ -1,8 +1,8 @@
 ---
 title: ベストプラクティス
-seo-title: ベストプラクティス
+seo-title: Best Practices
 description: AEM を可能な限り効率的かつ効果的に使用する方法です
-seo-description: AEM を可能な限り効率的かつ効果的に使用する方法です
+seo-description: How to use AEM in the most efficient and most effective way possible
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 73%
+workflow-type: ht
+source-wordcount: '287'
+ht-degree: 100%
 
 ---
 
-# ベストプラクティス{#best-practices}
+# ベストプラクティス {#best-practices}
 
 オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
 
@@ -25,7 +25,7 @@ ht-degree: 73%
 
 * [Assets](#assets)
 * [Sites](#sites)
-* [フォーム](#forms)
+* [Forms](#forms)
 
 管理、デプロイ、メンテナンスまたは開発のベストプラクティスについては、次のページを参照してください。
 
@@ -37,7 +37,7 @@ ht-degree: 73%
 
 ## Assets {#assets}
 
-Dynamic Media機能やDynamic Media Classicの統合を含む、Assetsに関するベストプラクティスについては、次のトピックで説明します。
+Dynamic Media 機能と Dynamic Media Classic の統合を含む Assets に関するベストプラクティスについて、次のトピックで説明します。
 
 <table>
  <tbody>
@@ -53,8 +53,8 @@ Dynamic Media機能やDynamic Media Classicの統合を含む、Assetsに関す�
   </tr>
   <tr>
    <td>ダイナミックイメージング</td>
-   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">ダイナミックイメージングのベストプラクティス</a></td>
-   <td><p>Dynamic Media機能を使用している場合やDynamic Media Classicとの統合を行っている場合に、最適な結果を得るために画像をシャープにする方法と画質を最適化する最適な方法について説明します。 </p> </td>
+   <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging のベストプラクティス</a></td>
+   <td><p>Dynamic Media 機能を使用している場合や、Dynamic Media Classic と統合している場合に、最良の結果を得るために画像をシャープにする方法と、画像の品質を最適化する方法について説明します。 </p> </td>
   </tr>
   <tr>
    <td>多言語のアセット</td>
@@ -70,10 +70,10 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 |  |  |  |
 |---|---|---|
-| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページの作成に使用するツールの概要を示します。 |
-| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md) | 命名規則を含む、ページの最適な整理方法の概要を示します。 |
+| オーサリングツール | [オーサー環境とツール](/help/sites-authoring/author-environment-tools.md) | ページのオーサリングに使用されるツールの概要を説明します。 |
+| ページの整理 | [ページの作成と整理](/help/sites-authoring/managing-pages.md)。 | 命名規則を含む、ページの最適な整理方法の概要を説明します。 |
 
-## フォーム {#forms}
+## Forms {#forms}
 
 |  |  |  |
 |---|---|---|
