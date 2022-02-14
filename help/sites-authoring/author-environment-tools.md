@@ -1,8 +1,8 @@
 ---
-title: オーサリング - 環境とツール
-seo-title: オーサリング - 環境とツール
+title: 'オーサリング - 環境とツール '
+seo-title: Authoring - the Environment and Tools
 description: AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています
-seo-description: AEM のオーサリング環境は、コンテンツを構造化および編集するための様々なメカニズムを提供しています
+seo-description: The authoring environment of AEM provides various mechanisms for organizing and editing your content
 uuid: 23a8aa93-b3d2-423b-b402-9e5f3f273d9a
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
-workflow-type: tm+mt
-source-wordcount: '2239'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '2220'
+ht-degree: 100%
 
 ---
 
-# オーサリング - 環境とツール{#authoring-the-environment-and-tools}
+# オーサリング - 環境とツール {#authoring-the-environment-and-tools}
 
 AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています。提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
@@ -30,7 +30,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ![ateat-01](assets/ateat-01.png)
 
-## ページのコンテンツの編集 {#editing-page-content}
+## ページコンテンツの編集 {#editing-page-content}
 
 ページはページエディターで編集できます。次に例を示します。
 
@@ -51,7 +51,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 * [**ページ情報**](/help/sites-authoring/editing-page-properties.md#page-properties)&#x200B;セレクター。これにより、（エディターに初めてアクセスしたときに表示される）紹介用のスライドが表示されます。
 * 特定のコンポーネントの[設定](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)ダイアログ（ダイアログツールバーの？アイコンを使用）。これにより、コンテキスト依存のヘルプが表示されます。
 
-その他の[ヘルプ関連リソースは、コンソールから表示できます](/help/sites-authoring/basic-handling.md#accessing-help)。
+それ以外の[ヘルプ関連リソースは、コンソールから表示できます](/help/sites-authoring/basic-handling.md#accessing-help)。
 
 ## コンポーネントブラウザー {#components-browser}
 
@@ -107,13 +107,13 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## アセットブラウザー {#assets-browser}
 
-アセットブラウザーには、現在のページで直接使用可能なすべての[アセット](/help/assets/home.md)が表示されます。
+アセットブラウザーには、現在のページ上で直接使用できるすべての[アセット](/help/assets/home.md)が表示されます。
 
 アセットブラウザーはサイドパネル内のタブであり、[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)と[コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree)も同じ場所にあります。サイドパネルを開く（または閉じる）には、ツールバーの左上にある次のアイコンを使用します。
 
 ![ateat-03-1](assets/ateat-03-1.png)
 
-サイドパネルを開く際、パネルは（左側から）スライドして開きます。必要に応じて「**アセット**」タブを選択します。
+サイドパネルを開く際、パネルは（左側から）スライドして開きます。必要に応じて「**Assets**」タブを選択します。
 
 ![ateat-07](assets/ateat-07.png)
 
@@ -139,8 +139,8 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 * 名前
 * パス
-* アセットタイプ（画像、原稿、ドキュメント、ビデオ、ページ、段落、商品など）
-* 向き（縦、横、四角形）やスタイル（カラー、モノクロ、グレースケール）などのアセットの特性
+* アセットタイプ（画像、原稿、ドキュメント、ビデオ、ページ、段落、製品など）
+* 向き（縦、横、正方形）やスタイル（カラー、モノクロ、グレースケール）などのアセットの特性
 
    * 特定のアセットタイプでのみ使用可能
 
@@ -166,7 +166,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
    ![ateat-10](assets/ateat-10.png)
 
-アセットをすばやく変更する必要がある場合は、アセット名の横にある編集アイコンをクリックして、アセットブラウザーから直接[アセットエディター](/help/assets/manage-assets.md)を開始できます。
+アセットをすぐに変更する必要がある場合は、アセット名の横にある編集アイコンをクリックすると、アセットブラウザーから直接[アセットエディター](/help/assets/manage-assets.md)を開始できます。
 
 ![](do-not-localize/screen_shot_2018-03-22at142448.png)
 
@@ -192,7 +192,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 >[!NOTE]
 >
->ページをモバイルデバイス（ブラウザーの幅が 1,024 px より小さい場合）で編集している場合、コンテンツツリーは表示されません。
+>モバイルデバイス（ブラウザーの幅が 1,024 px より小さい場合）でページを編集している場合、コンテンツツリーは表示されません。
 
 コンポーネントをクリックすると、ページエディターでそのコンポーネントが強調表示されます。使用可能なアクションは、ページの状態によって異なります。
 
@@ -212,7 +212,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
    ![ateat-13](assets/ateat-13.png)
 
-## フラグメント - 関連コンテンツブラウザー {#fragments-associated-content-browser}
+## フラグメント - 関連コンテンツのブラウザー {#fragments-associated-content-browser}
 
 ページにコンテンツフラグメントが含まれている場合、[関連コンテンツのブラウザー](/help/sites-authoring/content-fragments.md#using-associated-content)にもアクセスできます。
 
@@ -226,7 +226,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 * 言語コピー
 * 被リンク
 * 参照コンポーネントの使用：借りたコンテンツと貸したコンテンツ
-* 商品ページへの参照（コマース／商品コンソールから）
+* 製品ページへの参照（コマース／製品コンソールから）
 
 必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**参照**」を開きます。
 
@@ -242,7 +242,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 * **参照**&#x200B;コンポーネントを使用した借りたコンテンツおよび貸したコンテンツのインスタンス（ここから参照元／参照先ページに移動可能）
 
-* [商品ページへの参照](/help/commerce/cif-classic/administering/generic.md#showing-product-references)（コマース／商品コンソールから使用可能）
+* [製品ページへの参照](/help/commerce/cif-classic/administering/generic.md#showing-product-references)（コマース／製品コンソールから使用可能）
 * [ローンチ](/help/sites-authoring/launches.md)（関連するローンチへのアクセスを提供）
 * [ライブコピー](/help/sites-administering/msm.md)（選択したリソースに基づくすべてのライブコピーのパスを表示）
 * [ブループリント](/help/sites-administering/msm-best-practices.md)（詳細と各種アクションを提供）
@@ -285,7 +285,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 例えば、該当する場合、**ページ情報**&#x200B;には次のオプションもあります。
 
 * [ローンチを昇格](/help/sites-authoring/launches-promoting.md)（ページがローンチの場合）
-* [このオプションが管](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page) 理者によって有効にさ [れている場合は、クラシックUIで開く](/help/sites-administering/enable-classic-ui-editor.md)
+* [クラシック UI で開く](/help/sites-authoring/select-ui.md#switching-to-classic-ui-when-editing-a-page)（このオプションが[管理者によって有効にされている](/help/sites-administering/enable-classic-ui-editor.md)場合）
 
 該当する場合、**ページ情報**&#x200B;から分析や推奨を確認することもできます。
 
@@ -302,7 +302,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 * [デザイン](/help/sites-authoring/default-components-designmode.md) - ページで使用するコンポーネントを有効／無効にしたり、コンポーネントのデザインを設定したりできます（ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合）。
 
 * [ターゲット設定](/help/sites-authoring/content-targeting-touch.md) - すべてのチャネルにわたるターゲット設定と測定を通じてコンテンツの関連性を高めます。
-* [アクティビティマップ](/help/sites-authoring/page-analytics-using.md#analyticsvisiblefromthepageeditor) - ページの分析データを表示します。
+* [Activity Map](/help/sites-authoring/page-analytics-using.md#analyticsvisiblefromthepageeditor) - ページの分析データを表示します。
 
 * [タイムワープ](/help/sites-authoring/working-with-page-versions.md#timewarp) - 特定の時点のページの状態を表示できます。
 * [ライブコピーステータス](/help/sites-authoring/editing-content.md#live-copy-status) - ライブコピーのステータスの簡単な概要および継承される（または継承されない）コンポーネントを示します。
@@ -324,7 +324,6 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 >
 
 
-
 ## パスの選択 {#path-selection}
 
 オーサリング時に、別のリソースを選択する必要が生じる場合がよくあります（別のページまたはリソースへのリンクを定義する場合、画像を選択する場合など）。簡単にパスを選択するために、[パスフィールド](/help/sites-authoring/author-environment-tools.md#path-fields)にはオートコンプリート機能があり、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)には強力な選択機能があります。
@@ -335,7 +334,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 パスフィールドには、オートコンプリート機能とルックアヘッド機能があり、リソースを見つけやすくなりました。
 
-パスフィールドで「**選択ダイアログを開く**」ボタンをクリックすると、[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)ダイアログが開き、より詳細な選択オプションが表示されます。
+パスフィールドで「**選択ダイアログを開く**」ボタンをクリックすると、「[パスブラウザー](/help/sites-authoring/author-environment-tools.md#path-browser)」ダイアログが開き、より詳細な選択オプションが表示されます。
 
 ![](do-not-localize/screen_shot_2018-03-22at154427.png)
 
@@ -345,7 +344,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ### パスブラウザー {#path-browser}
 
-パスブラウザーは、Sites コンソールの[列表示](/help/sites-authoring/basic-handling.md#column-view)のように整理されており、リソースをより詳細に選択できます。
+パスブラウザーは、サイトコンソールの[列表示](/help/sites-authoring/basic-handling.md#column-view)のように整理されており、リソースをより詳細に選択できます。
 
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
