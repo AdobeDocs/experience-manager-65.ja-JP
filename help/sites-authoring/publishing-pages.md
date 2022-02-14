@@ -1,7 +1,7 @@
 ---
-title: ページの公開
+title: 'ページの公開 '
 seo-title: Publishing Pages
-description: ページの公開
+description: 'ページの公開 '
 seo-description: null
 uuid: 57795e4a-e528-4e74-ad9c-e13f868daebb
 contentOwner: Chris Bohnert
@@ -12,13 +12,13 @@ discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1661'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# ページの公開 {#publishing-pages}
+# ページの公開  {#publishing-pages}
 
 オーサー環境でコンテンツを作成およびレビューした後は、[公開 Web サイト（パブリッシュ環境）でコンテンツを利用できるようにする](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)ことが目標となります。
 
@@ -37,7 +37,7 @@ ht-degree: 89%
    >  公開／非公開と同義です。
 >
 >* **レプリケート／レプリケーション**
-   >  これらは、ユーザーのコメントを公開または逆複製する場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
+   >  公開やユーザーコメントのリバースレプリケーションの際などに行われる、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
 
 
@@ -52,7 +52,7 @@ ht-degree: 89%
 >
 
 
-## ページの公開 {#publishing-pages-1}
+## ページの公開  {#publishing-pages-1}
 
 場所に応じて、次から公開できます。
 
@@ -92,7 +92,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->エディターで [ エイリアス ](/help/sites-authoring/editing-page-properties.md#advanced) によってアクセスされたページは公開できません。 エディターの「公開」オプションは、実際のパスからアクセスしたページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは公開できません。 エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールからの公開 {#publishing-from-the-console}
 
@@ -144,7 +144,7 @@ ht-degree: 89%
 
    「**次へ**」をクリックして次に進みます。
 
-1. 公開を管理ウィザードの次の手順の **範囲** では、子ページを含めたり、参照を含めたりするなど、公開/非公開の範囲を定義できます。
+1. 公開を管理ウィザードの次の手順の&#x200B;**範囲**&#x200B;では、子ページを含めたり、参照を含めたりするなど、公開／非公開の範囲を定義できます。
 
    ![screen_shot_2018-03-21at153354](assets/screen_shot_2018-03-21at153354.png)
 
@@ -168,7 +168,7 @@ ht-degree: 89%
    * 変更されたページのみを含める。
    * 既に公開済みのページのみを含める。
 
-   「**追加**」をクリックして、選択オプションに基づいて公開または非公開にするページのリストに子ページを追加します。「**キャンセル**」をクリックして選択をキャンセルし、ウィザードに戻ります。
+   「**追加**」をクリックして、選択オプションに基づいて公開または非公開にするページのリストに子ページを追加します。「**キャンセル**」をクリックすると、選択がキャンセルされ、ウィザードに戻ります。
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
@@ -194,7 +194,7 @@ ht-degree: 89%
 
    >[!NOTE]
    >
-   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。公開権限に関する前述の [ を参照してください。詳しくは、[ ワークフローへのアクセスの管理 ](/help/sites-administering/workflows-managing.md) および [ ページへのワークフローの適用 ](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd) を参照してください。](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)
+   >**ワークフロー**&#x200B;手順は、ユーザーの権限に基づいて表示されます。詳しくは、公開権限に関する[このページの前述の注意事項](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd)、[ワークフローへのアクセスの管理](/help/sites-administering/workflows-managing.md)および[ページへのワークフローの適用](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd)を参照してください。
 
    リソースは、トリガーされたワークフローでグループ化され、それぞれに次のオプションがあります。
 
@@ -221,7 +221,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->エディターで [aliases](/help/sites-authoring/editing-page-properties.md#advanced) によってアクセスされたページを非公開にすることはできません。 エディターの「公開」オプションは、実際のパスからアクセスしたページでのみ使用できます。
+>エディターで[エイリアス](/help/sites-authoring/editing-page-properties.md#advanced)を使用してアクセスしたページは、非公開にすることができません。エディターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
 
 ### コンソールから非公開にする {#unpublishing-from-the-console}
 
@@ -265,7 +265,7 @@ ht-degree: 89%
 
    「**公開済みの参照**」オプションを使用して、公開する参照を確認することもできます。
 
-1. [通常どおりに公開を管理ウィザード](#manage-publication) を続行し、ツリーの公開または非公開を完了します。
+1. [通常どおりに公開を管理ウィザードを続行](#manage-publication)して、ツリーの公開または非公開を完了します。
 
 ## 公開ステータスの判別 {#determining-publication-status}
 
@@ -273,7 +273,7 @@ ht-degree: 89%
 
 * [サイトコンソールのリソースの概要情報](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 
-   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
+   ![screen_shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
    公開ステータスは、サイトコンソールの[カード](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)および[リスト](/help/sites-authoring/basic-handling.md#list-view)表示に表示されます。
 
