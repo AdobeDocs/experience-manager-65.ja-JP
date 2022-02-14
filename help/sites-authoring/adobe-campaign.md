@@ -1,8 +1,8 @@
 ---
-title: Adobe Campaign の使用
-seo-title: Adobe Campaign の使用
+title: 'Adobe Campaign の使用 '
+seo-title: Working with Adobe Campaign
 description: Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうための一連のソリューションです
-seo-description: Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうための一連のソリューションです
+seo-description: Adobe Campaign is a set of solutions that lets you personalize and deliver campaigns across all of your online and offline channels
 uuid: 1f7b48e2-9ec2-4ee8-b017-78c9d2cac48e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,13 @@ topic-tags: personalization
 discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
 exl-id: 0954fd5f-cd70-4f2f-85e9-df1c7a3037e1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '152'
+workflow-type: ht
+source-wordcount: '126'
 ht-degree: 100%
 
 ---
 
-# Adobe Campaign の使用{#working-with-adobe-campaign}
+# Adobe Campaign の使用 {#working-with-adobe-campaign}
 
 Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうためのソリューションです。
 
@@ -30,8 +30,8 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 * [Adobe Campaign Classic および Adobe Campaign Standard の使用](/help/sites-authoring/campaign.md)
 * [Adobe Campaign コンポーネント](/help/sites-authoring/adobe-campaign-components.md)
-* [AEM での Adobe Campaign フォームの作成](/help/sites-authoring/adobe-campaign-forms.md)
-* [Adobe Campaign のターゲット設定](/help/sites-authoring/target-adobe-campaign.md)
+* [AEM での Adobe Campaign フォームの作成 ](/help/sites-authoring/adobe-campaign-forms.md)
+* [Adobe Campaign のターゲット設定 ](/help/sites-authoring/target-adobe-campaign.md)
 
 前もって [AEM と Adobe Campaign を統合](/help/sites-administering/campaign.md)している必要があります。
 
