@@ -1,8 +1,8 @@
 ---
-title: 基本操作
-seo-title: 基本操作
-description: AEM オーサー環境を使用する際の基本操作の概要。これはサイトコンソールを基礎として使用します。
-seo-description: AEM オーサー環境を使用する際の基本操作の概要。これはサイトコンソールを基礎として使用します。
+title: '基本操作 '
+seo-title: Basic Handling
+description: AEM オーサー環境を使用する際の基本操作の概要。Sites コンソールを基礎として使用します。
+seo-description: An overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
 uuid: ab488d7c-7b7f-4a23-a80c-99d37ac84246
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,24 +11,22 @@ content-type: reference
 discoiquuid: 9737ead9-e324-43c9-9780-7abd292f4e5b
 exl-id: 2981dc20-b2ba-4ea2-a53b-8b5fe526aa9c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 90%
+workflow-type: ht
+source-wordcount: '1194'
+ht-degree: 100%
 
 ---
 
-# 基本操作{#basic-handling}
+# 基本操作 {#basic-handling}
 
 >[!NOTE]
 >
->* このページには、AEM オーサー環境を使用する際の基本操作の概要をまとめています。これは&#x200B;**サイト**&#x200B;コンソールを基礎として使用します。
-   >
-   >
-* 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する固有情報については、他のページで詳しく取り上げます。
+>* このページには、AEM オーサー環境を使用する際の基本操作の概要をまとめています。これは **Sites** コンソールを基礎として使用します。
+>
+>* 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する固有情報については、他のページで詳しく取り上げます。
 >* AEM 全体で（特に、[コンソールを使用する](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)場合と[ページを編集する](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)場合に）、キーボードショートカットを利用できます。
 
 >
-
 
 
 ## ようこそ画面 {#the-welcome-screen}
@@ -55,14 +53,14 @@ ht-degree: 90%
   </tr>
   <tr>
    <td><strong>デジタルアセット</strong><br /> </td>
-   <td>これらのコンソールでは、画像、ビデオ、ドキュメント、オーディオファイルなどのデジタルアセットを読み込んで、それらの<a href="/help/sites-classic-ui-authoring/classicui-assets.md">デジタルアセットを管理</a>できます。これにより、これらのアセットは、同じ AEM インスタンス上で実行されているすべての Web サイトで使用できます。 </td>
+   <td>これらのコンソールでは、画像、ビデオ、ドキュメント、オーディオファイルなどのデジタルアセットを読み込んで、それらの<a href="/help/sites-classic-ui-authoring/classicui-assets.md">デジタルアセットを管理</a>できます。これにより、これらのアセットは、同じ AEM インスタンス上で実行されているすべての web サイトで使用できます。 </td>
   </tr>
   <tr>
    <td><strong>ローンチ</strong></td>
-   <td>これは、<a href="/help/sites-classic-ui-authoring/classic-launches.md">launches</a>；の管理に役立ちます。これらを使用すると、アクティブ化された1つ以上のwebページの将来のリリース用にコンテンツを開発できます。<br /> <i>注意：タッチ操作対応UIでは、参照レールと共にサイトコンソールでも同じ機能の多くが使用できます。</i> <i>必要に応じて、このコンソールはツールコンソールから使用できます。「操作」、「ローンチ」の順に選択します。</i></td>
+   <td>このコンソールでは、<a href="/help/sites-classic-ui-authoring/classic-launches.md">ローンチ</a>を管理できます。ローンチを使用すると、アクティベートされた 1 つまたは複数の web ページの今後のリリース用にコンテンツを開発できます。<br /> <i>注：タッチ操作対応 UI では、多くの同じ機能が参照レールと共にサイトコンソールで使用できます。</i> <i>必要に応じて、このコンソールはツールコンソール（操作／ローンチの順に選択）から使用できます。</i></td>
   </tr>
   <tr>
-   <td><strong>インボックス </strong></td>
+   <td><strong>インボックス  </strong></td>
    <td>多くの場合、ワークフローのサブタスクには多くの参加者が関わっており、各参加者は、その手順を完了してから次の参加者に作業を引き継ぐ必要があります。インボックスを使用すると、それらのタスクに関連付けられた通知を確認できます。詳しくは、<a href="/help/sites-administering/workflows.md">ワークフローの操作</a>を参照してください。<br /> </td>
   </tr>
   <tr>
@@ -71,14 +69,14 @@ ht-degree: 90%
   </tr>
   <tr>
    <td><strong>ツール</strong></td>
-   <td><a href="/help/sites-administering/tools-consoles.md">ツールコンソール</a>を使用して、Web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールおよびコンソールにアクセスできます。</td>
+   <td><a href="/help/sites-administering/tools-consoles.md">ツールコンソール</a>を使用して、web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールおよびコンソールにアクセスできます。</td>
   </tr>
   <tr>
    <td><strong>ユーザー</strong></td>
    <td>これらのコンソールを使用すると、ユーザーとグループのアクセス権を管理できます。詳しくは、<a href="/help/sites-administering/security.md">ユーザー管理とセキュリティ</a>を参照してください。<br /> </td>
   </tr>
   <tr>
-   <td><strong>Web サイト</strong></td>
+   <td><strong>web サイト</strong></td>
    <td>サイト／Web サイトコンソールでは、AEM インスタンス上で実行される <a href="/help/sites-classic-ui-authoring/classic-page-author.md">Web サイトを作成、参照および管理</a>できます。これらのコンソールを通じて、Web サイトページの作成、コピー、移動および削除や、ワークフローの開始、ページのアクティベート（公開）を行うことができます。また、ページを編集用に開くこともできます。<br /> </td>
   </tr>
   <tr>
@@ -92,13 +90,13 @@ ht-degree: 90%
 
 * 左側のウィンドウ
 
-   Webサイトのツリー構造と、そのWebサイト内のページが表示されます。
+   web サイトおよび web サイト内のページがツリー構造で表示されます。
 
-   また、プロジェクト、ブループリント、アセットなど、AEMのその他の側面に関する情報も表示されます。
+   また、プロジェクト、ブループリント、アセットなど、AEM の他の側面に関する情報も表示されます。
 
 * 右側のウィンドウ
 
-   これにより、（左側のウィンドウで選択した場所に）ページが表示され、アクションを実行するために使用できます。
+   ページ（左側のウィンドウで選択した場所にあるもの）が表示され、アクションを実行するために使用できます。
 
 ここから、ツールバーやコンテキストメニューを使用するか、ページを開いて追加のアクションを実行することで、[ページを管理](/help/sites-authoring/managing-pages.md)できます。
 
@@ -150,11 +148,11 @@ ht-degree: 90%
 
 ## Web サイトコンソールでのページ情報 {#page-information-on-the-websites-console}
 
-**Web サイト**&#x200B;コンソールの右側のパネルでは、ページに関する情報が次のようにリスト表示されます。
+**Web サイト**&#x200B;コンソールの右側のウィンドウでは、ページに関する情報が次のようにリスト表示されます。
 
 ![page-info](assets/page-info.png)
 
-利用可能なフィールドを次に示します。これらのフィールドの一部がデフォルトとして表示されます。
+利用可能なフィールドは次のとおりです。これらのフィールドの一部がデフォルトとして表示されます。
 
 <table>
  <tbody>
