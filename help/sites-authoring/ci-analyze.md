@@ -1,8 +1,8 @@
 ---
-title: ページパフォーマンスの分析
-seo-title: ページパフォーマンスの分析
+title: 'ページパフォーマンスの分析 '
+seo-title: Analyzing Page Performance
 description: コンテンツインサイトページを使用して、作成しているページのパフォーマンスを分析します。
-seo-description: コンテンツインサイトページを使用して、作成しているページのパフォーマンスを分析します。
+seo-description: Use the Content Insight page to analyze the performance of the page that you are authoring
 uuid: 563d3e98-20d9-4cca-a174-bafd6e65c1bb
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,17 +12,17 @@ discoiquuid: 57cd61d5-78f2-4f8c-99ee-75e100c052ef
 docset: aem65
 exl-id: 14484a90-4e44-4c85-9411-b78ed11dc70d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '662'
+ht-degree: 100%
 
 ---
 
-# ページパフォーマンスの分析{#analyzing-page-performance}
+# ページパフォーマンスの分析 {#analyzing-page-performance}
 
 [コンテンツインサイト](/help/sites-authoring/content-insights.md)ページを開き、作成しているページのパフォーマンスを分析しますレポート期間を設定して分析を絞り込みます。
 
-## ページの「分析と推奨表示」を開く  {#opening-analytics-and-recommendations-for-a-page}
+## ページの「分析と推奨表示」を開く {#opening-analytics-and-recommendations-for-a-page}
 
 次の手順を使用して、ページの「分析と推奨表示」を表示します。
 
@@ -62,7 +62,7 @@ ht-degree: 98%
 
 1. レポート期間の終了日を変更するには、影になっている部分の右側に表示される円を目的の終了日にドラッグします。
 
-#### レポート期間の精度の変更  {#changing-the-granularity-of-the-reporting-period}
+#### レポート期間の精度の変更 {#changing-the-granularity-of-the-reporting-period}
 
 レポートの各データポイントの期間の時間数を変更します。例えば、精度に「週次」が選択されている場合、表示レポートの各データポイントは 1 週のビュー数を表します。
 
@@ -76,17 +76,17 @@ ht-degree: 98%
 
 1. 目的の精度をクリックまたはタップします。選択すると、レポートが自動的に更新され、精度が反映されます。
 
-### SEO の推奨のためのタスクの割り当て  {#assigning-tasks-for-seo-recommendations}
+### SEO の推奨のためのタスクの割り当て {#assigning-tasks-for-seo-recommendations}
 
 SEO の推奨レポートを使用して、検索エンジンでのページの視認性を向上させるタスクを作成します。チェックマークが付いていないレポートの各推奨について、必要な作業を実行するようにユーザーに割り当てるタスクを作成できます。
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-SEO の推奨のステータスは、まだ完了していないタスクがいつ作成されたかを示します。
+SEO の推奨のステータスは、タスクが作成されたものの、まだ完了していないことを示します。
 
 ![chlimage_1-130](assets/chlimage_1-130.png)
 
-作成されると、タスクがユーザーのタスクリストに表示されます。タスクについて詳しくは、[タスクの操作](/help/sites-authoring/task-content.md)を参照してください。
+作成されると、タスクがユーザーのタスクリストに表示されます。タスクについては、[タスクの使用](/help/sites-authoring/task-content.md)を参照してください。
 
 次の手順を使用して、SEO の推奨のタスクを作成します。
 
