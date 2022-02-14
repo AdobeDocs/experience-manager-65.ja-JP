@@ -1,8 +1,8 @@
 ---
-title: ページへのワークフローの適用
-seo-title: ページへのワークフローの適用
+title: 'ページへのワークフローの適用 '
+seo-title: Applying Workflows to Pages
 description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
-seo-description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
+seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..
 uuid: 652d9a23-907d-43ad-9eef-7ab1d07918cd
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,19 +12,20 @@ discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: '648'
+ht-degree: 100%
 
 ---
 
-# ページへのワークフローの適用{#applying-workflows-to-pages}
+# ページへのワークフローの適用 {#applying-workflows-to-pages}
 
 オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
 
 ワークフローを適用する際には、次の情報を指定します。
 
-* 適用されるワークフロー。 （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
+* 適用されるワークフロー。
+（AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
 * オプションで、ユーザーのインボックス内のワークフローインスタンスの特定に役立つタイトル。
 * ワークフローペイロード。これは 1 つ以上のページにできます。
 
@@ -38,17 +39,16 @@ ht-degree: 99%
 >関連トピック：
 >
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
->* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)
+>* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)。
 
 >
-
 
 
 >[!NOTE]
 >
 >AEM 管理者は[他のいくつかの方法を使用してワークフローを開始できます](/help/sites-administering/workflows-starting.md)。
 
-## サイトコンソールからのワークフローの開始 {#starting-a-workflow-from-the-sites-console}
+## Sites コンソールからのワークフローの開始 {#starting-a-workflow-from-the-sites-console}
 
 ワークフローは以下のいずれかから開始できます。
 
@@ -59,7 +59,7 @@ ht-degree: 99%
 
 * [ワークフローの作成ウィザードでワークフロー詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)
 
-### サイトツールバーからのワークフローの開始 {#starting-a-workflow-from-the-sites-toolbar}
+### Sites ツールバーからのワークフローの開始 {#starting-a-workflow-from-the-sites-toolbar}
 
 **サイト**&#x200B;コンソールのツールバーからワークフローを開始できます。
 
@@ -71,7 +71,7 @@ ht-degree: 99%
 
 1. **ワークフローの作成**&#x200B;ウィザードは、[ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)するために役立ちます。
 
-### タイムラインからのワークフローの開始  {#starting-a-workflow-from-the-timeline}
+### タイムラインからのワークフローの開始 {#starting-a-workflow-from-the-timeline}
 
 **タイムライン**&#x200B;から、選択したリソースに適用されるワークフローを開始できます。
 
@@ -82,7 +82,7 @@ ht-degree: 99%
 
 1. **ワークフローの作成**&#x200B;ウィザードは、[ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)するために役立ちます。
 
-### ワークフローの作成ウィザードでのワークフローの詳細の指定  {#specifying-workflow-details-in-the-create-workflow-wizard}
+### ワークフローの作成ウィザードでのワークフローの詳細の指定 {#specifying-workflow-details-in-the-create-workflow-wizard}
 
 **ワークフローの作成**&#x200B;ウィザードは、ワークフローを選択し、必要な詳細を指定するために役立ちます。
 
@@ -108,7 +108,7 @@ ht-degree: 99%
       * 識別を容易にするために、パッケージのタイトルを指定できます。
    >[!NOTE]
    >
-   >ワークフローがマルチリソースサポートのために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。[](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)
+   >ワークフローが[マルチリソースサポート](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)のために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。
 
    完了したら、「**次へ**」を使用して続行します。
 
