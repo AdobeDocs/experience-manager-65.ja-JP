@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: da0a5644-2e1d-4394-a6aa-11bb41406ba6
 exl-id: 05586b17-35d4-496e-8f0e-293c755eb066
 source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '294'
 ht-degree: 100%
 
 ---
 
-# オーサリング時の AEM のトラブルシューティング{#troubleshooting-aem-when-authoring}
+# オーサリング時の AEM のトラブルシューティング {#troubleshooting-aem-when-authoring}
 
 ここでは、AEM の使用時に発生する可能性のあるいくつかの問題を取り上げます。また、それらのトラブルシューティング方法に関する推奨事項についても説明します。
 
@@ -33,7 +33,7 @@ ht-degree: 100%
 
 * **問題**：
 
-   * ページに変更を加えてそのページを公開サイトにレプリケートしましたが、公開サイトでは古い&#x200B;**&#x200B;バージョンのページが依然として表示されます。
+   * ページに変更を加えてそのページを公開サイトにレプリケートしましたが、公開サイトでは古いバージョンのページが依然として表示されます&#x200B;*。*
 
 * **理由**:
 
