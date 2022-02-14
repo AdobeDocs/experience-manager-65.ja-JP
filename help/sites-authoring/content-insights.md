@@ -1,8 +1,8 @@
 ---
 title: コンテンツインサイト
-seo-title: コンテンツインサイト
+seo-title: Content Insight
 description: コンテンツインサイトWeb 分析や SEO の推奨を活用してページパフォーマンスに関する情報を提供します。
-seo-description: コンテンツインサイトは、Web分析とSEOの推奨を使用して、ページのパフォーマンスに関する情報を提供します
+seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 60f980fd-049e-43c1-8b5d-60a8279b357a
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '521'
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->コンテンツインサイトのレポートを使用するには、管理者が AEM と SiteCatalyst、Target および BrightEdge を連携させる必要があります。[SightCatalystとの統合](/help/sites-administering/adobeanalytics.md)、[Adobe Targetとの統合](/help/sites-administering/target.md)、[BrightEdgeとの統合](/help/sites-administering/brightedge.md)を参照してください。
+>コンテンツインサイトのレポートを使用するには、管理者が AEM と SiteCatalyst、Target および BrightEdge を統合する必要があります。[SightCatalyst との統合](/help/sites-administering/adobeanalytics.md)、[Adobe Target との統合](/help/sites-administering/target.md)および [BrightEdge との統合](/help/sites-administering/brightedge.md)を参照してください。
 
 ## 表示レポート {#the-views-report}
 
@@ -87,7 +87,7 @@ ht-degree: 92%
 
 ## キャンペーンアクティビティレポート {#the-campaign-activity-report}
 
-アクティブなページの各キャンペーンについて、*キャンペーン名*&#x200B;アクティビティという名前のレポートが表示されます。このレポートには、オファーが提供される各セグメントのページインプレッション数およびコンバージョン数が表示されます。
+アクティブなページの各キャンペーンについて、*キャンペーン名*&#x200B;アクティビティという名前のレポートが表示されます。このレポートは、オファーが提供されている各セグメントのページインプレッション数とコンバージョン数を示します。
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
