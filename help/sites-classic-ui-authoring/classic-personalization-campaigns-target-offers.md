@@ -1,8 +1,8 @@
 ---
 title: Target オファー
-seo-title: Target オファー
+seo-title: Target offers
 description: Target オファーの作成
-seo-description: Target オファーの作成
+seo-description: Create target offers
 uuid: 88206181-9708-454a-a22a-05e3fc0247c2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: e26bf608-c57c-4346-88fb-32a82cfa82d2
 exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 71%
+workflow-type: ht
+source-wordcount: '91'
+ht-degree: 100%
 
 ---
 
-# Target オファー{#target-offers}
+# Target オファー {#target-offers}
 
 ## Test&amp;Target オファーのエクスペリエンスの作成 {#creating-a-test-target-offer-experience}
 
@@ -27,7 +27,7 @@ ht-degree: 71%
    ![](do-not-localize/chlimage_1-11.png)
 
 1. 「**新規...**」をクリックします。
-1. **タイトル**、**名前**&#x200B;および作成するエクスペリエンスのタイプを指定できます。この場合、Test&amp;Targetオファーです。
+1. 「**タイトル**」、「**名前**」および作成するエクスペリエンスのタイプ（この例では、「Test&amp;Target のオファー」）を指定できます。
 
    ![chlimage_1-139](assets/chlimage_1-139.png)
 
@@ -35,8 +35,8 @@ ht-degree: 71%
 
    >[!NOTE]
    >
-   >Test&amp;Target のエクスペリエンスは、この時点で MCM のリストに表示されていません。「キャンペーン」の下の **Web サイト**&#x200B;コンソールからアクセスできます。
+   >Test&amp;Target のエクスペリエンスは、この時点で MCM のリストに表示されていません。「キャンペーン」の下の **web サイト**&#x200B;コンソールからアクセスできます。
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-詳しくは、[Adobeとの統合](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md)を参照してください。
+詳しくは、[Adobe](/help/sites-administering/target.md) [Target](/help/sites-administering/target.md) との統合を参照してください。
