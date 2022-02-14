@@ -1,8 +1,8 @@
 ---
-title: キャンペーンの管理
-seo-title: キャンペーンの管理
+title: 'キャンペーンの管理 '
+seo-title: Campaign Management
 description: キャンペーン管理では、デジタルマーケティング担当者は、パーソナライズされたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成できます。これにより、Web、電子メールおよびモバイルサービス内のマーケティングキャンペーンを統合し、訪問者との関係を深めることができます。
-seo-description: キャンペーン管理では、デジタルマーケティング担当者は、パーソナライズされたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成できます。これにより、Web、電子メールおよびモバイルサービス内のマーケティングキャンペーンを統合し、訪問者との関係を深めることができます。
+seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.
 uuid: 202d614b-a607-45de-8c24-1ee66b230315
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: e8b70971-4f23-45f8-8c23-e147413243c2
 exl-id: d1741525-a475-4a76-bd16-55318023495e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 88%
+workflow-type: ht
+source-wordcount: '628'
+ht-degree: 100%
 
 ---
 
-# キャンペーンの管理{#campaign-management}
+# キャンペーンの管理 {#campaign-management}
 
 キャンペーン管理では、デジタルマーケティング担当者は、パーソナライズされたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成できます。
 
@@ -25,30 +25,30 @@ ht-degree: 88%
 
 このドキュメントでは、キャンペーンを構成する様々な要素について説明します。詳細な情報は、次のドキュメントを参照してください。
 
-* [ティーザーと戦略](/help/sites-classic-ui-authoring/classic-personalization-campaigns-teasers-strategy.md)
-* [電子メールマーケティング](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email.md)
+* [ティーザーと戦略 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-teasers-strategy.md)
+* [メールマーケティング](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email.md)
 * [ランディングページ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 * [Target オファー](/help/sites-classic-ui-authoring/classic-personalization-campaigns-target-offers.md)
-* [Marketing Campaign Manager の使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns-mktg-manager.md)
-* [セグメント化について](/help/sites-classic-ui-authoring/classic-personalization-campaigns-segmentation.md)
-* [キャンペーンの設定](/help/sites-classic-ui-authoring/classic-personalization-campaigns-setting-up-your.md)
+* [Marketing Campaign Manager の使用 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-mktg-manager.md)
+* [セグメント化について ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-segmentation.md)
+* [キャンペーンの設定 ](/help/sites-classic-ui-authoring/classic-personalization-campaigns-setting-up-your.md)
 
 キャンペーン管理は、次の様々な要素から構成されています。
 
 * **ブランド**
-AEMでは、ブランドは最上位の単位で、 
-**キャンペーン**.
+AEM では、ブランドは最上位の単位であり、 
+**キャンペーン**&#x200B;のコレクションを形成します。
 
-* ****
-キャンペーンキャンペーンは、個々の 
-**エクスペリエンス**.
+* **Campaigns**
+キャンペーンは個別の 
+**エクスペリエンス**&#x200B;のコレクションです。
 
-* ****
-エクスペリエンスフォーカスされたコンテンツは、様々なエクスペリエンスを形成し、訪問者に対して次の場所に表示されます。 
-**タッチポイント**. 次のような様々なタイプのエクスペリエンスが使用できます。
+* **エクスペリエンス**
+様々なエクスペリエンスを形成するフォーカスされたコンテンツです。 
+それぞれの&#x200B;**タッチポイント**&#x200B;で訪問者に表示されます。次のような様々なタイプのエクスペリエンスが使用できます。
 
    * **Teaser**
-      [ティーザーページ/段落](#teasers) は、特定の訪問者セグメントを、その **** 訪問者の関心に焦点を当てたコンテンツに誘導するために使用します。
+      [ティーザーページ／段落](#teasers)を使用して、特定の訪問者&#x200B;**セグメント**&#x200B;を、その訪問者の関心に基づきフォーカスされたコンテンツに誘導します。
 
       Teaser ページでは、次のようなことができます。
 
@@ -59,11 +59,11 @@ AEMでは、ブランドは最上位の単位で、
 
    * **ニュースレター**
 
-      [電子メール通信は、](#emailmarketing) ユーザーを惹きつけ、Webサイトを訪問するよう促すために使用されます。通常はニュースレターの形式で&#x200B;**リード**（通常は&#x200B;**リスト**&#x200B;にグループ化されます）に送信されます。**注意：**&#x200B;この機能がさらに強化される予定はありません。[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+      [メール通信](#emailmarketing)を使用してユーザーとの関係を深め、web サイトを訪問するよう促します。通常はニュースレターの形式で&#x200B;**リード**（通常は&#x200B;**リスト**&#x200B;にグループ化されます）に送信されます。**注意：**&#x200B;この機能がさらに強化される予定はありません。[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
 
    * **Adobe Target**
 
-       Adobe Target （旧称 Test&amp;Target）と統合します。これにより、マーケティング担当者はコンバージョン Web サイト最適化ツールを使用できるようになります。このツールには、オンラインコンテンツおよびオファーと顧客との関連性を継続的に高め、より多くのコンバージョンを生み出すために必要な機能があります。Adobe Target の直感的なインターフェイスにより、テストのデザインと実行、オーディエンスセグメントの作成、およびコンテンツのターゲット設定ができます。これらの機能はすべて 1 つのアプリケーションから提供されます。
+       Adobe Target （旧称 Test&amp;Target）と統合します。これにより、マーケティング担当者はコンバージョン web サイト最適化ツールを使用できるようになります。このツールには、オンラインコンテンツおよびオファーと顧客との関連性を継続的に高め、より多くのコンバージョンを生み出すために必要な機能があります。Adobe Target の直感的なインターフェイスにより、テストのデザインと実行、オーディエンスセグメントの作成、およびコンテンツのターゲット設定ができます。これらの機能はすべて 1 つのアプリケーションから提供されます。
 
 
 * **タッチポイント**
@@ -82,7 +82,7 @@ AEMでは、ブランドは最上位の単位で、
 
    リードは通常、リストにグループ分けされ、これらのリード全体に対してアクションを実行することができます。**注意：**&#x200B;この機能がさらに強化される予定はありません。
 
-   Adobe Campaignの活用とAEMへの統合を[お勧めします。](/help/sites-administering/campaign.md)
+   [Adobe Campaign の利用や AEM との統合環境の利用](/help/sites-administering/campaign.md)をお勧めします。
 
 * **セグメント**
 
