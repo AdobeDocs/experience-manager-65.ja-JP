@@ -1,8 +1,8 @@
 ---
-title: ページのコンテンツの編集
-seo-title: ページのコンテンツの編集
+title: 'ページのコンテンツの編集 '
+seo-title: Editing Page Content
 description: ページを作成したら、必要な変更をおこなうためにコンテンツを編集できます
-seo-description: ページを作成したら、必要な変更をおこなうためにコンテンツを編集できます
+seo-description: Once your page is created you can edit the content to make the updates you require
 uuid: 5b4f0a8f-5196-42ea-8413-203783a0b77b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '3064'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '3045'
+ht-degree: 100%
 
 ---
 
@@ -106,9 +106,9 @@ ht-degree: 94%
 
 通知には、ページに対して実行されているワークフローが一覧表示されます。ユーザーが現在のワークフローステップに関係している場合は、[ワークフローのステータスに影響する](/help/sites-authoring/workflows-participating.md)オプションや、ワークフローの詳細を取得するオプションを使用できます。例えば、次のようなものがあります。
 
-* **完了**  — 作業項目を完了ダイアログ **を** 開きます
+* **完了** - 「**作業項目を完了**」ダイアログが開きます
 
-* **委任**  — 作業項目を完了ダイアログ **を** 開きます
+* **委任** - 「**作業項目を完了**」ダイアログが開きます
 
 * **詳細を表示** - ワークフローの&#x200B;**詳細**&#x200B;ウィンドウを開きます
 
@@ -165,7 +165,7 @@ ht-degree: 94%
 
 1. 選択したコンポーネントがページの下部に追加されます。必要に応じてコンポーネントを[編集](#editmovecopypastedelete)します。
 
-### アセットブラウザーを使用したコンポーネントの挿入  {#inserting-a-component-using-the-assets-browser}
+### アセットブラウザーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-assets-browser}
 
 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、適切なタイプの新しいコンポーネント（アセットが格納される）が自動的に作成されます。
 
@@ -304,14 +304,14 @@ ht-degree: 94%
 
    ![](do-not-localize/screen_shot_2018-03-22at113033.png)
 
-## 編集（コンテンツ）{#edit-content}
+## 編集（コンテンツ） {#edit-content}
 
 コンポーネント内のコンテンツを追加または編集するには、次の 2 つの方法があります。
 
 * [編集用のコンポーネントのダイアログ](#component-edit-dialog)を開きます。
 * アセットブラウザーから[アセットをドラッグ＆ドロップ](#draganddropintocomponent)して、コンテンツを直接追加します。
 
-### コンポーネントの編集ダイアログ  {#component-edit-dialog}
+### コンポーネントの編集ダイアログ {#component-edit-dialog}
 
 [コンポーネントツールバーの編集（鉛筆）アイコン](#edit-configure-copy-cut-delete-paste)を使用して、コンポーネントを開いてコンテンツを編集できます。
 
@@ -338,7 +338,7 @@ ht-degree: 94%
 
    ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
-* [基盤コンポーネントのテキストと画像](/help/sites-authoring/default-components-foundation.md#text-image)など、複数の基本コンポーネントから構成されるコンポーネントでは、最初に編集オプションが確認されます。
+* [テキストと画像の基盤コンポーネント](/help/sites-authoring/default-components-foundation.md#text-image)など、複数の基本コンポーネントから構成されるコンポーネントでは、最初に編集オプションが確認されます。
 
    ![chlimage_1-123](assets/chlimage_1-123.png)
 
@@ -354,7 +354,7 @@ ht-degree: 94%
 | ビデオ | Flash |
 | コンテンツフラグメント | コンテンツフラグメント |
 
-## フルスクリーンモードで（コンテンツを）編集  {#edit-content-full-screen-mode}
+## フルスクリーンモードで（コンテンツを）編集 {#edit-content-full-screen-mode}
 
 次のアイコンを使用して、すべてのコンポーネントで全画面表示モードにアクセス（または終了）できます。
 
@@ -411,7 +411,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->レイアウトアクションは、選択したコンポーネントの範囲に限定されます。例えば、あるコンポーネントのレイアウトを編集し、別のコンポーネントをクリックすると、新しく選択したコンポーネントの標準の編集ツールバー（レイアウトツールバーではなく）が表示され、エミュレーターツールバーも表示されなくなります。
+>レイアウトアクションは、選択したコンポーネントの範囲に限定されます。例えば、あるコンポーネントのレイアウトを編集してから別のコンポーネントをクリックすると、新しく選択したコンポーネントに（レイアウトツールバーではなく）標準の編集ツールバーが表示され、サイズ変更ハンドルとエミュレーターツールバーが表示されなくなります。
 >
 >複数のコンポーネントに影響するページの全体のレイアウトを編集する必要がある場合は、[レイアウトモード](/help/sites-authoring/responsive-layout.md)に切り替えます。
 
@@ -453,7 +453,7 @@ ht-degree: 94%
 
 ページが[編集可能なテンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、[ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information)の&#x200B;**編集テンプレート**&#x200B;を選択することによって、[テンプレートエディター](/help/sites-authoring/templates.md#editing-templates-template-authors)に簡単に切り替えることができます。
 
-ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、ツールバーの[ページモードセレクター](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して[デザインモード](/help/sites-authoring/default-components-designmode.md)に切り替え、ページで使用するコンポーネントを有効/無効にできます。
+ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、ツールバーの[ページモードセレクター](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して[デザインモード](/help/sites-authoring/default-components-designmode.md)に切り替え、ページで使用するコンポーネントを有効／無効にすることができます。
 
 [列表示](/help/sites-authoring/basic-handling.md#column-view)または[リスト表示](/help/sites-authoring/basic-handling.md#list-view)でページを選択するときに、ページが基にしているテンプレートを簡単に確認できます。
 
@@ -472,7 +472,7 @@ ht-degree: 94%
 
 [注釈](/help/sites-authoring/annotations.md)を使用すると、レビュー担当者や他の作成者がコンテンツに関するフィードバックを提供できます。注釈は、レビューや検証の目的でよく使用されます。
 
-## ページのプレビュー  {#previewing-pages}
+## ページのプレビュー {#previewing-pages}
 
 ページをプレビューするには、以下の 2 つの方法があります。
 
@@ -487,7 +487,6 @@ ht-degree: 94%
 >* プレビューと最後に選択したモードを切り替えるには、[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` を使用します。
 
 >
-
 
 
 >[!NOTE]
@@ -554,15 +553,15 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 ## ページ編集の取り消しとやり直し {#undoing-and-redoing-page-edits}
 
-次のアイコンを使用して、アクションの取り消しまたはやり直しをおこなうことができます。これらのアイコンは、ツールバーに適宜表示されます。
+次のアイコンを使用して、アクションの取り消しまたはやり直しを行うことができます。これらのアイコンは、ツールバーに適宜表示されます。
 
 ![](do-not-localize/screen_shot_2018-03-23at093614.png)
 
 >[!NOTE]
 >
->[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z`を使用して、ページの編集操作を元に戻すこともできます。
+>[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) `Ctrl-Z` を使用して、ページの編集アクションを取り消すこともできます。
 >
->キーボードショートカット`Ctrl-Y`を使用して、ページの編集操作をやり直すこともできます。
+>キーボードショートカット `Ctrl-Y` を使用して、ページの編集アクションをやり直すこともできます。
 
 >[!NOTE]
 >
@@ -572,7 +571,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 >[!NOTE]
 >
->システム管理者は、インスタンスの要件に従って[取り消しおよびやり直し機能の様々な面を設定できます](/help/sites-administering/config-undo.md)。
+>システム管理者は、インスタンスの要件に従って[取り消しおよびやり直し機能の様々な面を設定](/help/sites-administering/config-undo.md)できます。
 
 AEM では、ユーザーが実行するアクションの履歴と、それらのアクションを実行した順序が保存されます。そのため、複数のアクションの取り消しは、ユーザーが実行した順序でおこなうことができます。その後、必要に応じて、やり直しを使用して 1 つ以上のアクションを再適用することもできます。
 
@@ -589,7 +588,6 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >* 様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を利用して取り消しとやり直しをおこなうこともできます。
 
 >
-
 
 
 取り消しおよびやり直しは、次のようなページの変更に対して使用できます。
