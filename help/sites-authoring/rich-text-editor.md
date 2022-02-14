@@ -1,8 +1,8 @@
 ---
 title: リッチテキストエディターを使用したコンテンツのオーサリング
-seo-title: リッチテキストエディターを使用したコンテンツのオーサリング
+seo-title: Using the Rich Text Editor to Author Content
 description: リッチテキストエディターを使用したコンテンツのオーサリング
-seo-description: リッチテキストエディターを使用したコンテンツのオーサリング
+seo-description: Using the Rich Text Editor to Author Content
 uuid: 70f4d4b2-cbc6-4fef-9262-1696804008d8
 contentOwner: AG
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,23 +10,23 @@ discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 70%
+workflow-type: ht
+source-wordcount: '260'
+ht-degree: 100%
 
 ---
 
 # リッチテキストエディターを使用したコンテンツのオーサリング {#use-rich-text-editor-to-author-content}
 
-リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。様々なコンポーネントの基礎となります。を含む：
+リッチテキストエディター（RTE）は、AEM にテキストコンテンツを入力するための基本的な構成要素です。様々なコンポーネントの基礎となります。例えば、次のコンポーネントです。
 
 * テキスト
-* テキスト 画像
+* テキスト画像
 * テーブル
 
 ## インプレース編集 {#in-place-editing}
 
-シングルタップまたはクリックでテキストベースのコンポーネントを選択すると、あらゆるコンポーネントと同様に、[コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
+シングルタップまたはクリックでテキストベースのコンポーネントを選択すると、他のコンポーネントと同様に、[コンポーネントツールバー](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)が表示されます。
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
@@ -44,11 +44,11 @@ ht-degree: 70%
 * **閉じる**
 * **保存**
 
-## フルスクリーン編集  {#full-screen-editing}
+## フルスクリーン編集 {#full-screen-editing}
 
 テキストベースのコンポーネントの場合は、ツールバー![](do-not-localize/screen_shot_2018-03-21at163236.png)からフルスクリーンモードをタップすると、リッチテキストエディターが開き、残りのページコンテンツが非表示になります。
 
-全画面表示モードでは、オーサリングに使用できる設定済みのオプションがすべて表示されます。 使用可能なオプションは、設定](/help/sites-administering/rich-text-editor.md)によって異なります。[
+フルスクリーンモードでは、オーサリングに使用できる設定済みオプションがすべて表示されます。使用できるオプションは、[設定によって異なります](/help/sites-administering/rich-text-editor.md)。
 
 ![screen_shot_2018-03-21at163248](assets/screen_shot_2018-03-21at163248.png)
 
@@ -65,4 +65,4 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->ネストされたリストをMicrosoft WordからRTEにコピーすると、結果に一貫性がなく、RTEにテキストを貼り付けた後に手動で調整する必要が生じる場合があります。
+>ネストされたリストを Microsoft Word から RTE にコピーすると、データの整合性が失われ、RTE にテキストを貼り付けた後で手動調整が必要になる可能性があります。
