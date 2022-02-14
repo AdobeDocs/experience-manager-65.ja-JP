@@ -1,8 +1,8 @@
 ---
-title: プロジェクトの管理
-seo-title: プロジェクトの管理
-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化し、プロジェクトコンソールでアクセスして管理できるようにし、プロジェクトを整理できます
-seo-description: プロジェクトを使用すると、リソースを1つのエンティティにグループ化し、プロジェクトコンソールでアクセスして管理できるようにし、プロジェクトを整理できます
+title: 'プロジェクトの管理 '
+seo-title: Managing Projects
+description: プロジェクトコンソールでアクセスして管理できる 1 つのエンティティにリソースをグループ化することで、プロジェクトを整理できます。
+seo-description: Projects lets you organize your project by grouping resources into one entity which can be acessed and managed intheProjects console
 uuid: ac937582-181f-429b-9404-3c71d1241495
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: fb354c72-debb-4fb6-9ccf-56ff5785c3ae
 exl-id: 62586c8e-dab4-4be9-a44a-2c072effe3c0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 88%
+workflow-type: ht
+source-wordcount: '1035'
+ht-degree: 100%
 
 ---
 
-# プロジェクトの管理{#managing-projects}
+# プロジェクトの管理 {#managing-projects}
 
 プロジェクトを使用すると、リソースを 1 つのエンティティにグループ化して整理できます。
 
@@ -37,7 +37,7 @@ ht-degree: 88%
 
 >[!CAUTION]
 >
->プロジェクトのユーザーが、プロジェクトの作成、タスク/ワークフローの作成、チームの表示と管理など、プロジェクト機能を使用して他のユーザー/グループを表示するには、**/home/users**&#x200B;と&#x200B;**/home/groups**&#x200B;に対する読み取りアクセス権が必要です。 これを実装する最も簡単な方法は、**projects-users**&#x200B;グループに&#x200B;**/home/users**&#x200B;および&#x200B;**/home/groups**&#x200B;への読み取りアクセス権を付与することです。
+>プロジェクト内のユーザーが、プロジェクトの作成、タスクまたはワークフローの作成、チームの表示と管理などのプロジェクト機能を使用中に他のユーザーまたはグループを表示するには、**/home/users** および **/home/groups** に対する読み取りアクセス権が必要です。これを実現する最も簡単な方法は、**projects-users** グループに **/home/users** および **/home/groups** に対する読み取りアクセス権を付与することです。
 
 ## プロジェクトの作成 {#creating-a-project}
 
@@ -51,7 +51,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 プロジェクトの作成手順は、どのプロジェクトでも同じです。プロジェクトのタイプによって異なるものとしては、使用可能な[ユーザーの役割](/help/sites-authoring/projects.md)と[ワークフロー](/help/sites-authoring/projects-with-workflows.md)があります。新しいプロジェクトを作成するには、次の手順を実行します。
 
 1. **プロジェクト**&#x200B;で「**作成**」をタップまたはクリックして「**プロジェクトを作成**」ウィザードを開きます。
-1. テンプレートを選択します。初期設定で、シンプルなプロジェクト、メディアプロジェクト、[翻訳プロジェクト](/help/sites-administering/tc-manage.md)、[撮影した製品写真製品](/help/sites-authoring/managing-product-information.md)を使用でき、**次へ**&#x200B;をクリックします。
+1. テンプレートを選択します。シンプルなプロジェクト、メディアプロジェクト、[翻訳プロジェクト](/help/sites-administering/tc-manage.md)および[撮影した製品写真プロジェクト](/help/sites-authoring/managing-product-information.md)がすぐに使用可能です。「**次へ**」をクリックします。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
@@ -61,7 +61,7 @@ AEM には次の既製のテンプレートが用意されていて、プロジ�
 
 1. 「**作成**」をタップまたはクリックします。新しいプロジェクトを開くか、コンソールに戻るかを確認するメッセージが表示されます。
 
-### リソースとプロジェクトの関連付け  {#associating-resources-with-your-project}
+### リソースとプロジェクトの関連付け {#associating-resources-with-your-project}
 
 プロジェクトではリソースを 1 つのエンティティにグループ化できるので、リソースをプロジェクトに関連付けできます。これらのリソースは「**タイル**」と呼ばれます。追加できるリソースのタイプについては、[プロジェクトタイル](/help/sites-authoring/projects.md#project-tiles)で説明します。
 
