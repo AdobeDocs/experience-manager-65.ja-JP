@@ -1,8 +1,8 @@
 ---
-title: ページオーサリングのクイックガイド
-seo-title: ページのオーサリングのクイックガイド
+title: ページのオーサリングのクイックガイド
+seo-title: Quick Guide to Authoring Pages
 description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
-seo-description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
+seo-description: A quick, high-level guide to the key actions of authoring page content
 uuid: ef7ab691-f80d-4eeb-9f4a-afbf1bc83669
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1590'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '1573'
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 97%
 
 AEM によるオーサリングについて詳しくは、以下を参照してください。
 
-* [作成者がおこなう最初の手順](/help/sites-authoring/first-steps.md)
+* [作成者が行う最初の手順](/help/sites-authoring/first-steps.md)
 * [ページのオーサリング](/help/sites-authoring/page-authoring.md)
 
 ## クイックヒント {#a-few-quick-hints}
@@ -40,11 +40,11 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **作成**
 
-   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するので、シナリオによって変わることがあります。
+   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
 
 * フォルダー内のページの並べ替え
 
-   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)でおこなえます。変更内容は他の表示にも反映されます。
+   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)で実行できます。変更内容が適用され、別の形式で表示できます。
 
 #### ページオーサリング {#page-authoring}
 
@@ -62,8 +62,9 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 >オーサリング作業をより簡単にできる多くのキーボードショートカットがあります。
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+>* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
+>
 
 
 ### ページの検索 {#finding-your-page}
@@ -95,7 +96,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 1. [新しいページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)に必要な情報を収集するためのウィザードが開きます。画面に表示される手順に従ってください。
 
-### その他のアクションを実行するページの選択  {#selecting-your-page-for-further-action}
+### その他のアクションを実行するページの選択 {#selecting-your-page-for-further-action}
 
 アクションを実行するページを選択できます。ページを選択するとツールバーが自動的に更新され、そのリソースに関連するアクションが表示されます。
 
@@ -120,7 +121,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * ページが選択されていることを示すために、カードにチェックマークが付けられます。
    >[!NOTE]
-   選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
+   >
+   >選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
 
 ### クイックアクション（カード表示／デスクトップのみ） {#quick-actions-card-view-desktop-only}
 
@@ -175,7 +177,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**コピー**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
    >[!NOTE]
-   同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
+   >
+   >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
 
    * コンポーネントを[削除します。](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 
@@ -192,9 +195,10 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * 「**編集**」ドロップダウンセレクターを使用して、編集モードに戻ります（またはその他のモードを選択します）。
 
    >[!NOTE]
-   コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
+   >
+   >コンテンツのリンクを使用して移動するには、[プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を使用する必要があります。
 
-### ページプロパティの編集  {#editing-the-page-properties}
+### ページプロパティの編集 {#editing-the-page-properties}
 
 [ページプロパティを編集する](/help/sites-authoring/editing-page-properties.md)には、（主に）以下の 2 つの方法があります。
 
@@ -239,7 +243,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
-* コンソールからページを非公開にする場合は、「**公開を管理**」オプションからのみおこなうことができます。このオプションは、ツールバーでのみ使用できます（クイックアクションからは使用できません）。
+* コンソールからページを非公開にする場合は、「**公開を管理**」オプションからのみ行うことができます。このオプションは、ツールバーでのみ使用できます（クイックアクションからは使用できません）。
 
    「**ページを非公開にする**」オプションは、エディターの&#x200B;**ページ情報**&#x200B;メニューから引き続き使用できます。
 
@@ -247,7 +251,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    詳しくは、[ページの公開](/help/sites-authoring/publishing-pages.md#unpublishing-pages)を参照してください。
 
-### ページの移動、コピー、貼り付けまたは削除  {#move-copy-and-paste-or-delete-your-page}
+### ページの移動、コピー、貼り付けまたは削除 {#move-copy-and-paste-or-delete-your-page}
 
 これらのアクションはすべて次の操作で実行できます。
 
@@ -269,7 +273,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
       * この操作の確認が求められます。
    >[!NOTE]
-   削除は、クイックアクションでは使用できません。
+   >
+   >削除は、クイックアクションでは使用できません。
 
 ### ページのロック（およびロック解除） {#locking-your-page-then-unlocking}
 
@@ -297,7 +302,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 1. 詳細を表示して適宜その他のアクションを実行するには、必要なタイプの参照をタップまたはクリックします。
 
-### ページのバージョンの作成  {#creating-a-version-of-your-page}
+### ページのバージョンの作成 {#creating-a-version-of-your-page}
 
 ページの[バージョン](/help/sites-authoring/working-with-page-versions.md)を作成するには：
 
@@ -309,7 +314,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
-1. 「**保存するバージョン**」を選択し、「**作成**」を選択します。
+1. 「**バージョンとして保存**」を選択し、「**作成**」を選択します。
 
 ### ページのバージョンの復元と比較 {#restoring-comparing-a-version-of-your-page}
 
