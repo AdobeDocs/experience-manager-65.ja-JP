@@ -1,8 +1,8 @@
 ---
 title: コンポーネントコンソール
-seo-title: コンポーネントコンソール
+seo-title: Components Console
 description: コンポーネントコンソール
-seo-description: 'null'
+seo-description: null
 uuid: a4e34d81-7875-4e26-8b48-4473e2905c37
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: b657f95d-7be3-4409-a31b-d47fb2bfa550
 docset: aem65
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '262'
+ht-degree: 100%
 
 ---
 
-# コンポーネントコンソール{#components-console}
+# コンポーネントコンソール {#components-console}
 
 コンポーネントコンソールを使用すると、インスタンスに定義されたすべてのコンポーネントを参照し、各コンポーネントの主な情報を確認できます。
 
@@ -32,7 +32,7 @@ ht-degree: 97%
 
 ## 検索 {#searching}
 
-**コンテンツのみ**&#x200B;アイコン（左上）を使用して&#x200B;**検索**&#x200B;パネルを開き、コンポーネントを検索およびフィルタリングできます。
+「**コンテンツのみ**」アイコン（左上）を使用して「**検索**」パネルを開き、コンポーネントの検索やフィルタリングを行うことができます。
 
 ![screen-shot_2019-03-05at113251](assets/screen-shot_2019-03-05at113251.png)
 
