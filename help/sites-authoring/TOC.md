@@ -6,12 +6,12 @@ audience: end-user
 user-guide-title: AEM 6.5 オーサリングユーザーガイド
 breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
-feature: オーサリング
+feature: Authoring
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 87%
+workflow-type: ht
+source-wordcount: '298'
+ht-degree: 100%
 
 ---
 
@@ -19,26 +19,26 @@ ht-degree: 87%
 # AEM 6.5 オーサリングユーザーガイド {#authoring}
 
 + [オーサリングユーザーガイドの概要](home.md)
-+ AEM Authoringの基本的なタスク、ツール、概念{#essentials}
++ AEM オーサリングの基本的なタスク、ツールおよび概念 {#essentials}
    + [作成者がおこなう最初の手順](first-steps.md)
    + [ページオーサリング](page-authoring.md)
-   + [ページのオーサリングのクイックガイド](qg-page-authoring.md)
+   + [ページオーサリングのクイックガイド](qg-page-authoring.md)
    + [オーサリングの概念](author.md)
-   + [基本操作](basic-handling.md)
+   + [基本操作 ](basic-handling.md)
    + [検索](search.md)
-   + [アカウント環境の設定](user-properties.md)
-   + [インボックス](inbox.md)
-   + [キーボードショートカット コンソールの場合](keyboard-shortcuts.md)
-   + [UI の選択](select-ui.md)
+   + [アカウント環境の設定 ](user-properties.md)
+   + [インボックス ](inbox.md)
+   + [キーボードショートカットコンソールの場合](keyboard-shortcuts.md)
+   + [UI の選択 ](select-ui.md)
 + オーサリング {#authoring}
    + [オーサリング環境とツール](author-environment-tools.md)
-   + [ページ編集時の注釈](annotations.md)
-   + [ページの作成と整理](managing-pages.md)
-   + [ページのコンテンツの編集](editing-content.md)
+   + [ページ編集時の注釈 ](annotations.md)
+   + [ページの作成と整理 ](managing-pages.md)
+   + [ページのコンテンツの編集 ](editing-content.md)
    + [リッチテキストエディターを使用したコンテンツのオーサリング](rich-text-editor.md)
-   + [ページプロパティの編集](editing-page-properties.md)
-   + [ページの公開](publishing-pages.md)
-   + [コンテンツフラグメントを使用したページのオーサリング](content-fragments.md)
+   + [ページプロパティの編集 ](editing-page-properties.md)
+   + [ページの公開 ](publishing-pages.md)
+   + [コンテンツフラグメントを使用したページのオーサリング ](content-fragments.md)
    + [エクスペリエンスフラグメント](experience-fragments.md)
    + [CSV ファイルへの書き出し](csv-export.md)
    + [コンポーネント](default-components.md)
@@ -46,26 +46,26 @@ ht-degree: 87%
    + [オーサリング時の AEM のトラブルシューティング](troubleshooting.md)
    + [ページ編集時のキーボードショートカット](page-authoring-keyboard-shortcuts.md)
    + [ベストプラクティス](best-practices.md)
-+ サイトおよびページ機能 {#siteandpage}
-   + [タグの使用](tags.md)
++ サイトとページの機能 {#siteandpage}
+   + [タグの使用 ](tags.md)
    + [ページテンプレートの作成](templates.md)
-   + [スタイルシステム](style-system.md)
-   + [ページバージョンの処理](working-with-page-versions.md)
-   + [ページの差分](page-diff.md)
+   + [スタイルシステム ](style-system.md)
+   + [ページバージョンの処理 ](working-with-page-versions.md)
+   + [ページの差分 ](page-diff.md)
    + [コンポーネントコンソール](default-components-console.md)
    + [レスポンシブレイアウト](responsive-layout.md)
    + [コンテンツインサイト](content-insights.md)
    + [アクセシブルなコンテンツ（WCAG 2.1 適合）の作成](creating-accessible-content.md)
-   + [デザインモードでのコンポーネントの設定](default-components-designmode.md)
+   + [デザインモードでのコンポーネントの設定 ](default-components-designmode.md)
    + [基盤コンポーネント](default-components-foundation.md)
    + [基礎モード](scaffolding.md)
-   + [ページ分析データの表示](page-analytics-using.md)
+   + [ページ分析データの表示 ](page-analytics-using.md)
 + プロジェクト {#projects}
    + [プロジェクト](projects.md)
-   + [プロジェクトの管理](touch-ui-managing-projects.md)
+   + [プロジェクトの管理 ](touch-ui-managing-projects.md)
    + [タスクの操作](task-content.md)
-   + [クリエイティブプロジェクトと PIM 統合](managing-product-information.md)
-   + [プロジェクトワークフローの操作](projects-with-workflows.md)
+   + [クリエイティブプロジェクトと PIM の統合](managing-product-information.md)
+   + [プロジェクトワークフローの操作 ](projects-with-workflows.md)
 + ローンチ {#launches}
    + [ローンチ](launches.md)
    + [ローンチの作成](launches-creating.md)
@@ -73,27 +73,27 @@ ht-degree: 87%
    + [ローンチの昇格](launches-promoting.md)
 + ワークフロー {#workflows}
    + [ワークフローの操作](workflows.md)
-   + [ページへのワークフローの適用](workflows-applying.md)
-   + [ワークフローへの参加](workflows-participating.md)
-   + [プロジェクトワークフローの操作](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html)
-+ ページパフォーマンス{#page-performance}
-   + [コンテンツインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/content-insights.html)
-   + [ページパフォーマンスの分析](ci-analyze.md)
-   + [ページ分析データの表示](pa-using.md)
-   + [ページへの Search&amp;Promote 機能の追加](search-and-promote.md)
+   + [ページへのワークフローの適用 ](workflows-applying.md)
+   + [ワークフローへの参加 ](workflows-participating.md)
+   + [プロジェクトワークフローの操作](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/projects-with-workflows.html?lang=ja)
++ ページパフォーマンス {#page-performance}
+   + [コンテンツインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/content-insights.html?lang=ja)
+   + [ページパフォーマンスの分析 ](ci-analyze.md)
+   + [ページ分析データの表示 ](pa-using.md)
+   + [ページへの Search&amp;Promote 機能の追加 ](search-and-promote.md)
 + パーソナライズ機能 {#personalization}
    + [パーソナライズ機能](personalization.md)
    + [ContextHub データを使用したページのプレビュー](ch-previewing.md)
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
    + [ターゲットコンテンツ用マルチサイト管理の構造](technical-multisite-targeted.md)
-   + [アクティビティの管理](activitylib.md)
-   + [オーディエンスの管理](managing-audiences.md)
-   + [オファーの作成と管理](offerlib.md)
-   + [セグメント化について](segmentation-overview.md)
-+ AEMとAdobe Campaign{#aem-adobe-campaign}
+   + [アクティビティの管理 ](activitylib.md)
+   + [オーディエンスの管理 ](managing-audiences.md)
+   + [オファーの作成と管理 ](offerlib.md)
+   + [セグメント化について ](segmentation-overview.md)
++ AEM と Adobe Campaign {#aem-adobe-campaign}
    + [Adobe Campaign の使用](adobe-campaign.md)
    + [Adobe Campaign Classic および Adobe Campaign Standard の使用](campaign.md)
-   + [Adobe Campaign のターゲット設定](target-adobe-campaign.md)
-   + [AEM での Adobe Campaign フォームの作成](adobe-campaign-forms.md)
+   + [Adobe Campaign のターゲット設定 ](target-adobe-campaign.md)
+   + [AEM での Adobe Campaign フォームの作成 ](adobe-campaign-forms.md)
    + [Adobe Campaign コンポーネント](adobe-campaign-components.md)
