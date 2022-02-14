@@ -1,8 +1,8 @@
 ---
 title: ローンチの作成
-seo-title: ローンチの作成
+seo-title: Creating Launches
 description: 今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるように、ローンチを作成できます。
-seo-description: 今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるように、ローンチを作成できます。
+seo-description: You can create a launch to enable the updating of a new version of existing web pages for future activation.
 uuid: c1a32710-8189-4a2e-bf2f-428ab30d48c8
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '986'
+ht-degree: 100%
 
 ---
 
-# ローンチの作成{#creating-launches}
+# ローンチの作成 {#creating-launches}
 
 ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
 
@@ -84,11 +84,11 @@ ht-degree: 98%
    * **ローンチタイトル**：ローンチの名前。作成者にとって意味のある名前にしてください。
    * **既存のコンテンツを使用**：元のコンテンツを使用してローンチを作成します。
    * **新しいテンプレートを使用してページを置き換える**：詳しくは、[新しいテンプレートでのローンチの作成](#create-launch-with-new-template)を参照してください。
-   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、ローンチを[ライブコピー](/help/sites-administering/msm.md)にすることでこれを実現します。
+   * **ソースページのライブデータを継承**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。このオプションは、ローンチを[ライブコピー](/help/sites-administering/msm.md)にすることでこれを達成します。
 
       デフォルトでは、このオプションが選択されています。
 
-   * **ローンチ日**：ローンチコピーがアクティベートされる日付と時間（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
+   * **ローンチ日**：ローンチコピーがアクティベートされる日時（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
 
    ![chlimage_1-227](assets/chlimage_1-227.png)
 
@@ -97,7 +97,7 @@ ht-degree: 98%
    （「**完了**」を使用して）コンソールを戻す場合、次のいずれかからローンチを確認（およびアクセス）できます。
 
    * [**ローンチ**&#x200B;コンソール](/help/sites-authoring/launches.md#the-launches-console)
-   * [**サイト**&#x200B;コンソールの「**参照**」](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * **Sites** コンソールの&#x200B;[**参照**](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 
 ### 新しいテンプレートでのローンチの作成 {#create-launch-with-new-template}
 
@@ -111,10 +111,10 @@ ht-degree: 98%
 
 ![chlimage_1-228](assets/chlimage_1-228.png)
 
-これを選択すると、次の処理がおこなわれます。
+これを選択すると、次の処理が行われます。
 
-* 使用可能なその他のオプションが更新されます。
-* 必要なテンプレートを選択できる、新しいステップを含みます。
+* 使用可能なその他のオプションを更新します。
+* 必須のテンプレートを選択できる新しいステップを含みます。
 
 ![chlimage_1-229](assets/chlimage_1-229.png)
 
@@ -124,7 +124,7 @@ ht-degree: 98%
 >
 >このメカニズムを使用して、[既存のページ](/help/sites-authoring/managing-pages.md#creating-a-new-page)のテンプレートを変更できます。ただし、コンテンツが失われることは考慮する必要があります。
 
-### ネストされたローンチの作成  {#creating-a-nested-launch}
+### ネストされたローンチの作成 {#creating-a-nested-launch}
 
 ネストされたローンチを作成（ローンチをローンチ内に作成）して、既存のローンチからローンチを作成できます。これにより、作成者は各ローンチで同じ変更を複数回加えることなく、既に加えられた変更を活用できます。
 
