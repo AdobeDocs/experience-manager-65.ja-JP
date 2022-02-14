@@ -8,9 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: 48abd410e293a193abc34a1bd4f038a121e58490
+source-git-commit: 7af09e73f40c2d947c9ccce000174155ef67137f
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '631'
 ht-degree: 92%
 
 ---
@@ -143,6 +143,7 @@ ht-degree: 92%
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
    + [Adobe I/O を使用した Adobe Target との統合](integration-ims-adobe-io.md)
+   + [Adobe I/O を使用した Adobe Target との統合](integration-target-ims-adobe-io.md)
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)

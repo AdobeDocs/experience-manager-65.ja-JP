@@ -10,9 +10,6 @@ content-type: reference
 topic-tags: integration
 discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
 docset: aem65
-exl-id: ba7abc53-7db8-41b1-a0fa-4e4dbbeca402
-hide: true
-hidefromtoc: true
 source-git-commit: e6f4f3cf31c39853b45450e0c925694fc45f7aec
 workflow-type: tm+mt
 source-wordcount: '1539'
