@@ -1,5 +1,5 @@
 ---
-title: ページプロパティの編集
+title: 'ページプロパティの編集 '
 seo-title: Editing Page Properties
 description: ページに必要なプロパティを定義します
 seo-description: Define the required properties for a page
@@ -12,13 +12,13 @@ discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
 source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1898'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# ページプロパティの編集{#editing-page-properties}
+# ページプロパティの編集 {#editing-page-properties}
 
 ページに必要なプロパティを定義できます。これらはページの特性に応じて異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 
@@ -92,7 +92,7 @@ ht-degree: 87%
 
    このページのバニティ URL を入力でき、短くより表現力のある URL にすることができます。
 
-   例えば、Web サイト `http://example.com,` のパス `/v1.0/startpage` で識別されるページに対して、バニティ URL が `welcome` に設定されている場合、`http://example.com/welcome` は `http://example.com/content/v1.0/startpage` のバニティ URL になります。
+   例えば、web サイト `http://example.com,` のパス `/v1.0/startpage` で特定されるページに対して、バニティー URL が `welcome` に設定されている場合、`http://example.com/content/v1.0/startpage` のバニティー URL は `http://example.com/welcome` となります。
 
    >[!CAUTION]
    >
@@ -103,7 +103,7 @@ ht-degree: 87%
    >* 既存のページには設定しないでください。
 
 
-   また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。 詳しくは、[ バニティー URL へのアクセスの有効化 ](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
+   また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。詳しくは、 [バニティー URL へのアクセスの有効化](https://docs.adobe.com/content/help/jp/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
 
 * **バニティ URL をリダイレクト**
 
@@ -131,10 +131,10 @@ ht-degree: 87%
 
    このページで使用されるエイリアスを指定します。
 
-   * 例えば、ページ `/content/wknd/us/en/magazine/members-only` に `private` というエイリアスを定義した場合、このページは `/content/wknd/us/en/magazine/private` を介してもアクセスできます
-   * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定され、リソースにのみ影響を与えます。リポジトリパスには影響を与えません。
-   * エディターでエイリアスによってアクセスされたページは公開できません。 [エディ](/help/sites-authoring/publishing-pages.md) ターの「公開」オプションは、実際のパスからアクセスするページでのみ使用できます。
-   * 詳しくは、[SEO と URL 管理のベストプラクティス ](/help/managing/seo-and-url-management.md#localized-page-names) のページ名のローカライズを参照してください。
+   * 例えば、ページ `/content/wknd/us/en/magazine/members-only` に `private` というエイリアスを定義した場合、このページには `/content/wknd/us/en/magazine/private` を介してもアクセスできます。
+   * エイリアスを作成すると、ページノードに `sling:alias` プロパティが設定されます。これは、リポジトリパスではなく、リソースにのみ影響を与えます。
+   * エディターでエイリアスによってアクセスされたページは公開できません。エディターの[「公開」オプション](/help/sites-authoring/publishing-pages.md)は、実際のパスを介してアクセスしたページでのみ使用できます。
+   * 詳しくは、[「SEO と URL 管理のベストプラクティス」の「ページ名のローカライズ」](/help/managing/seo-and-url-management.md#localized-page-names)を参照してください。
 
 * **&lt;*path*> から継承**
 
@@ -158,7 +158,7 @@ ht-degree: 87%
 
    >[!CAUTION]
    >
-   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 `cq:cugEnabled` プロパティの存在に基づいて、非推奨の CUG 設定を使用してページ権限が設定されている場合は、**認証要件** の下に警告メッセージが表示され、オプションは編集できず、[ 権限 ](/help/sites-authoring/editing-page-properties.md#permissions) も編集できません。
+   >「**[権限](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)**」タブでは、`granite:AuthenticationRequired` mixin が存在することにより、CUG 設定を編集できます。`cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが&#x200B;**認証要件**&#x200B;の下に表示されます。オプションおよび[権限](/help/sites-authoring/editing-page-properties.md#permissions)は編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
@@ -195,16 +195,16 @@ ht-degree: 87%
 
 * **ソーシャルメディア共有**
 
-   ページで使用可能な共有オプションを定義します。使用可能なオプションを[コアコンポーネントの共有](https://helpx.adobe.com/experience-manager/core-components/using/sharing.html)に公開します。
+   ページで使用可能な共有オプションを定義します。使用可能なオプションを[コアコンポーネントの共有](https://helpx.adobe.com/jp/experience-manager/core-components/using/sharing.html)に公開します。
 
    * **Facebook に対してユーザー共有を有効にする**
    * **Pinterest に対してユーザー共有を有効にする**
    * **優先 XF バリエーション**
 ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
 
-### Cloud Services {#cloud-services}
+### クラウドサービス {#cloud-services}
 
-* **Cloud Services**
+* **クラウドサービス**
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 
@@ -233,14 +233,14 @@ ht-degree: 87%
    * [有効な権限](/help/sites-administering/user-group-ac-admin.md)を表示
    >[!CAUTION]
    >
-   >「**権限**」タブでは、`granite:AuthenticationRequired` mixin の存在に基づいて CUG 設定を編集できます。 `cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
+   >「**権限**」タブでは、`granite:AuthenticationRequired` mixin が存在することにより、CUG 設定を編集できます。`cq:cugEnabled` プロパティが存在することにより、廃止された CUG 設定を使用してページの権限が設定された場合、警告メッセージが表示され、CUG 権限は編集できず、「[詳細](/help/sites-authoring/editing-page-properties.md#advanced)」タブの認証要件も編集できません。
    >
    >
    >そのような場合は、CUG 権限を[クラシック UI](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) で編集する必要があります。
 
    >[!NOTE]
    >
-   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ ユーザー、グループ、アクセス権の管理 ](/help/sites-administering/user-group-ac-admin.md) を参照してください。
+   >「権限」タブでは、空の CUG グループの作成が許可されないので、すべてのユーザーによるアクセスを拒否する際に、簡単な方法として使用できます。これをおこなうには、CRX Explorer を使用する必要があります。詳しくは、[ユーザー、グループおよびアクセス権限の管理](/help/sites-administering/user-group-ac-admin.md)のドキュメントを参照してください。
 
 ### ブループリント {#blueprint}
 
@@ -258,7 +258,7 @@ ht-degree: 87%
 
 * **サインアップページ**、**オフラインページ**&#x200B;など、サイト全体にわたる機能を提供するページへのリンクを指定します。
 
-## ページプロパティの編集 {#editing-page-properties-1}
+## ページプロパティの編集  {#editing-page-properties-1}
 
 次の方法でページプロパティを定義できます。
 
@@ -302,7 +302,7 @@ ht-degree: 87%
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. 「**プロパティを開く**」を選択すると、プロパティを編集するためのダイアログが開きます。プロパティは適切なタブに分類されています。 ツールバーの右側にある次のボタンも使用できます。
+1. 「**プロパティを開く**」を選択すると、プロパティを編集するためのダイアログが開きます。プロパティは適切なタブに分類されています。ツールバーの右側にある次のボタンも使用できます。
 
    * **キャンセル**
    * **保存して閉じる**
