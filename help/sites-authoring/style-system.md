@@ -1,8 +1,8 @@
 ---
-title: スタイルシステム
-seo-title: スタイルシステム
+title: 'スタイルシステム '
+seo-title: Style System
 description: スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
-seo-description: スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
+seo-description: The Style System allows a template author to define style classes in the content policy of a component so that a content author is able to select them when editing the component on a page. These styles can be alternative visual variations of a component, making it more flexible.
 uuid: 0d857650-8738-49e6-b431-f69c088be74f
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,19 +10,19 @@ topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '1314'
+ht-degree: 100%
 
 ---
 
-# スタイルシステム{#style-system}
+# スタイルシステム {#style-system}
 
 スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
 
 このため、スタイルごとにカスタムコンポーネントを開発したり、スタイル機能を有効化するためにコンポーネントのダイアログをカスタマイズする必要がなくなりました。これにより、AEM のバックエンド開発をしなくてもそのまま再利用可能な、コンテンツ作成者のニーズにすばやく簡単に応えることができるコンポーネントの数が増加します。
 
-## 使用例  {#use-case}
+## ユースケース {#use-case}
 
 テンプレート作成者には、コンテンツ作成者がコンポーネントを操作するときの動作を設定する能力だけでなく、1 つのコンポーネントに複数の別の視覚的バリエーションを設定するための能力も必要です。
 
@@ -37,7 +37,7 @@ ht-degree: 98%
 
 ## 概要 {#overview}
 
-スタイルシステムの使用は通常、次のようにおこなわれます。
+スタイルシステムの使用は通常、次のように行われます。
 
 1. Web デザイナーは 1 つのコンポーネントに対し様々な視覚的バリエーションを作成します。
 
@@ -53,7 +53,7 @@ ht-degree: 98%
 
 1. 次に AEM ページ作成者は、ページエディターでコンポーネントのツールバーのスタイルメニューからデザイン済みのスタイルを選択できます。
 
-最後の 3 つの手順のみが AEM で実際に実行されます。つまり、必要な CSS と Javascript のすべての開発は AEM なしでおこなうことができます。
+最後の 3 つの手順のみが AEM で実際に実行されます。つまり、必要な CSS と Javascript のすべての開発は AEM なしで行うことができます。
 
 実際にスタイルの実装で必要となるのは、AEM へのデプロイメント、および必要なテンプレートのコンポーネント内で選択することのみです。
 
@@ -63,7 +63,7 @@ ht-degree: 98%
 
 ## 使用方法 {#use}
 
-この機能のデモをおこなうために、コアコンポーネントの[タイトルコンポーネント](https://www.adobe.com/go/aem_cmp_title_v2_jp)の [WKND](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) による実装を例として使用します。
+この機能のデモを行うために、コアコンポーネントの[タイトルコンポーネント](https://www.adobe.com/go/aem_cmp_title_v2_jp)の [WKND](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) による実装を例として使用します。
 
 次の[コンテンツ作成者として](#as-a-content-author)節と[テンプレート作成者として](#as-a-template-author)節では、WKND のスタイルシステムを使用してスタイルシステムの機能をテストする方法について説明します。
 
@@ -73,7 +73,7 @@ ht-degree: 98%
 1. [テンプレート作成者として](#as-a-template-author)の節の説明に従って、コンテンツ作成者が使用できるようにする CSS クラスを設定します。
 1. この後、コンテンツ作成者は[コンテンツ作成者として](#as-a-content-author)の節の説明に従ってスタイルを使用できます。
 
-### コンテンツ作成者として  {#as-a-content-author}
+### コンテンツ作成者として {#as-a-content-author}
 
 1. WKND プロジェクトをインストールした後、WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）に移動し、ページを編集します。
 1. ページの下方の&#x200B;**タイトル**&#x200B;コンポーネントを選択します。
@@ -88,7 +88,7 @@ ht-degree: 98%
    >
    >この例では、**カラー**&#x200B;スタイル（**黒**、**白**、**グレー**）は相互排他的ですが、**スタイル**&#x200B;オプション（**アンダーライン**、**右揃え**、**最小間隔**）は組み合わせることができます。これは、[テンプレート作成者としてテンプレートで設定可能](#as-a-template-author)です。
 
-### テンプレート作成者として  {#as-a-template-author}
+### テンプレート作成者として {#as-a-template-author}
 
 1. WKND の英語のマスターホームページ（`http://<host>:<port>/sites.html/content/wknd/language-masters/en`）の編集時に、**ページ情報／テンプレートの編集**&#x200B;でページのテンプレートを編集します。
 
@@ -126,11 +126,11 @@ ht-degree: 98%
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
-コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが自動的に挿入されます。この他にコンポーネント自体でおこなう必要があることはありません。
+コンポーネントが設定されると、すべての編集可能なコンポーネントを自動的にラップする装飾要素に、ページ作成者が設定したスタイルが自動的に挿入されます。この他にコンポーネント自体で行う必要があることはありません。
 
 ### 編集ダイアログの「スタイル」タブを有効にする {#enable-styles-tab-edit}
 
-AEMバージョン6.5.3.0以降では、編集ダイアログのオプションの「スタイル」タブが使用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
+AEM バージョン 6.5.3.0 で、編集ダイアログのオプションとして「スタイル」タブが利用できるようになりました。 「デザインダイアログ」タブとは異なり、編集ダイアログのタブは、スタイルシステムが機能するのに必須ではなく、コンテンツ作成者がスタイルを設定するためのオプションの代替インターフェイスです。
 
 編集ダイアログのタブは、デザインダイアログのタブと同様の方法で組み込むことができます。
 
@@ -158,7 +158,6 @@ AEMバージョン6.5.3.0以降では、編集ダイアログのオプション�
 >1. 最後に、コンポーネントの `cq:htmlTag` または `cq:tagName` がフォールバック値と見なされます。
 
 >
-
 
 
 スタイル名を定義するこの機能は、レイアウトコンテナやコンテンツフラグメントコンポーネントなどの非常に一般的なコンポーネントに意味を追加できます。
