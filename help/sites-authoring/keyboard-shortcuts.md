@@ -1,8 +1,8 @@
 ---
 title: コンソールのキーボードショートカット
-seo-title: コンソールのキーボードショートカット
+seo-title: Keyboard Shortcuts for Consoles
 description: これらのキーボードショートカットを使用することで、オーサリング時の時間を節約できます
-seo-description: これらのキーボードショートカットを使用することで、オーサリング時の時間を節約できます
+seo-description: Save time when authoring by using these keyboard shortcuts
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '378'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->AEM キーボードショートカットに必要な[修飾子キー](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)は、オペレーティングシステムによって異なります。
+>AEM キーボードショートカットに必要な[修飾キー](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)は、オペレーティングシステムによって異なります。
 
 ## キーボードショートカット {#keyboard-shortcuts}
 
@@ -41,7 +41,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 | コンソール | `?` | キーボードショートカットヘルプ |
 |  | `/` | [検索](/help/sites-authoring/search.md)を呼び出す |
 |  | `Alt+`&lt;`Number`> | 表示する[レールセレクター](/help/sites-authoring/basic-handling.md#rail-selector)オプションを切り替える |
-|  | &grave; | レールを非表示 |
+|  | ` | レールを非表示 |
 |  | `e` | 編集 |
 |  | `p` | プロパティ |
 |  | `m` | 移動 |
