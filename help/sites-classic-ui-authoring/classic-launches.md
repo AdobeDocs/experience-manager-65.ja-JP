@@ -1,8 +1,8 @@
 ---
 title: ローンチ
-seo-title: ローンチ
-description: ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
-seo-description: ローンチを作成し、今後のアクティベートのために既存の Web ページの新しいバージョンを更新できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
+seo-title: Launches
+description: ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチを作成するとき、タイトルとソースページを指定します。
+seo-description: Create a launch to enable the updating of a new version of existing web pages for future activation. When you create a Launch, you specify a title and the source page.
 uuid: b1952b6c-fc44-4e39-80ba-9380a6c66b8c
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: 4f62078d-b5b0-4eb9-bd9b-7647a093dec2
 exl-id: e64a66cb-d56a-4504-8883-609143d0daf8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 74%
+workflow-type: ht
+source-wordcount: '183'
+ht-degree: 100%
 
 ---
 
@@ -21,16 +21,16 @@ ht-degree: 74%
 
 ローンチを使用すると、今後のリリース用にコンテンツを効率的に開発できます。
 
-ローンチを作成すると、（現在のページを維持しながら）今後のパブリケーションに合わせて変更を加えることができます。ローンチページを編集して更新した後、それらを昇格させてソースに戻し、ソースページ（トップレベル）をアクティベートできます。昇格により、ローンチコンテンツを複製してソースページに戻します。これは、手動または自動でおこなうことができます（ローンチを作成および編集するときに設定されるフィールドに依存します）。
+ローンチを作成すると、（現在のページを維持しながら）今後のパブリケーションに合わせて変更を加えることができます。ローンチページを編集して更新した後、それらを昇格させてソースに戻し、ソースページ（トップレベル）をアクティベートできます。昇格により、ローンチコンテンツを複製してソースページに戻します。これは、手動または自動で行うことができます（ローンチを作成および編集するときに設定されるフィールドに依存します）。
 
 >[!NOTE]
 >
->ローンチの背後にある理論については、標準のオーサリングドキュメントの[Launches](/help/sites-authoring/launches.md)で詳しく説明しています。
+>ローンチの背後にある考え方について詳しくは、標準のオーサリングドキュメントの[ローンチ](/help/sites-authoring/launches.md)を参照してください。
 >
->クラシックUIでのローンチの使用に関する情報は、[ローンチの作成](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[ローンチの編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、[ローンチの昇格](/help/sites-classic-ui-authoring/classic-launches-promoting.md)と共に次のドキュメントに記載されています。
+>クラシック UI でのローンチの使用に関する具体的な情報については、[ローンチの作成](/help/sites-classic-ui-authoring/classic-launches-creating.md)、[ローンチの編集](/help/sites-classic-ui-authoring/classic-launches-editing.md)、および[ローンチの昇格](/help/sites-classic-ui-authoring/classic-launches-promoting.md)と共に、以下のドキュメントに記載されています。
 
 >[!CAUTION]
 >
->クラシック UI では、1 つのローンチに対して複数のソースブランチを持つことはできません。
+>クラシック UI では、1 つのローンチに複数のソース分岐を使用するとはできません。
 
-ローンチコンソールには、[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html)を使用して直接アクセスできます。
+ローンチコンソールには、[http://localhost:4502/libs/launches/content/admin.html](http://localhost:4502/libs/launches/content/admin.html) から直接アクセスできます。
