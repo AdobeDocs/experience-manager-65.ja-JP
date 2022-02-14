@@ -1,8 +1,8 @@
 ---
-title: キャンペーンの設定
-seo-title: キャンペーンの設定
+title: 'キャンペーンの設定 '
+seo-title: Setting up your campaign
 description: 新しいキャンペーンを設定するには、キャンペーンを保持するブランドを作成し、エクスペリエンスを保持するキャンペーンを作成して、最後に新しいキャンペーンのプロパティを定義する必要があります。
-seo-description: 新しいキャンペーンを設定するには、キャンペーンを保持するブランドを作成し、エクスペリエンスを保持するキャンペーンを作成して、最後に新しいキャンペーンのプロパティを定義する必要があります。
+seo-description: Setting up a new campaign requires creating a brand to hold your campaigns, creating a campaign to hold experiences, and finally defining the properties for your new campaign.
 uuid: 244a150e-7b5e-4eff-bd15-e3b04be6a3e9
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 19ad4751-1d5d-49de-b76b-3501b3e98e62
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2289'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '2257'
+ht-degree: 100%
 
 ---
 
-# キャンペーンの設定{#setting-up-your-campaign}
+# キャンペーンの設定 {#setting-up-your-campaign}
 
 新しいキャンペーンを設定するには、次の（一般的な）手順を実行します。
 
@@ -64,7 +64,7 @@ ht-degree: 98%
 
 1. 「**作成**」をクリックします。新しいブランドが（デフォルトのアイコンで）MCM に表示されます。
 
-### 新しいブランドのプロパティの定義  {#defining-the-properties-for-your-new-brand}
+### 新しいブランドのプロパティの定義 {#defining-the-properties-for-your-new-brand}
 
 1. 左側のペインが「**キャンペーン**」で、右側のペインにある新しいブランドのアイコンを選択し、「**プロパティ...**」をクリックします。
 
@@ -72,9 +72,9 @@ ht-degree: 98%
 
    ![chlimage_1-18](assets/chlimage_1-18.png)
 
-1. 「**OK**」をクリックして、保存します。
+1. 「**OK**」をクリックして保存します。
 
-### 新しいキャンペーンの作成  {#creating-a-new-campaign}
+### 新しいキャンペーンの作成 {#creating-a-new-campaign}
 
 新しいキャンペーンを作成するには：
 
@@ -88,11 +88,11 @@ ht-degree: 98%
 
 1. 「**作成**」をクリックします。新しいキャンペーンが MCM に表示されます。
 
-### 新しいキャンペーンのプロパティの定義  {#defining-the-properties-for-your-new-campaign}
+### 新しいキャンペーンのプロパティの定義 {#defining-the-properties-for-your-new-campaign}
 
 動作を制御するキャンペーンのプロパティを設定します。
 
-* **優先度：**&#x200B;他のキャンペーンと比較した場合の、このキャンペーンの優先度です。複数のキャンペーンが同時にオンの場合、優先順位の最も高いキャンペーンが訪問者エクスペリエンスを制御します。
+* **優先度：**&#x200B;他のキャンペーンと比較した場合の、このキャンペーンの優先度です。複数のキャンペーンが同時に実施されている場合は、最も優先度が高いキャンペーンが訪問者エクスペリエンスを制御します。
 * **オン／オフタイム：**&#x200B;これらのプロパティは、キャンペーンが訪問者エクスペリエンスを制御する期間を制御します。オンタイムプロパティは、キャンペーンがエクスペリエンスの制御を開始する時間を制御します。オフタイムプロパティは、キャンペーンがエクスペリエンスの制御をいつ停止するかを制御します。
 * **画像：** AEM でキャンペーンを示す画像
 * **クラウドサービス：**&#x200B;キャンペーンを統合するクラウドサービスの設定です（[Adobe Marketing Cloud との統合](/help/sites-administering/marketing-cloud.md)を参照してください）。
@@ -101,19 +101,19 @@ ht-degree: 98%
 
 1. 「**キャンペーン**」からブランドを選択します。右側のウィンドウでキャンペーンを選択し、「**プロパティ**」をクリックします。
 
-   **タイトル**、**説明**、**クラウドサービス**（使用する場合）など、様々なプロパティを入力できます。
+   **タイトル**、**説明**、**Cloud Services**（使用する場合）など、様々なプロパティを入力できます。
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. 「**OK**」をクリックして、保存します。
+1. 「**OK**」をクリックして保存します。
 
-### 新しいエクスペリエンスの作成  {#creating-a-new-experience}
+### 新しいエクスペリエンスの作成 {#creating-a-new-experience}
 
 新しいエクスペリエンスを作成する手順は、エクスペリエンスのタイプによって異なります。
 
 * [ティーザーの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaser)
 * [ニュースレターの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletter)
-* [Adobe Target オファーエクスペリエンスの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetoffer)
+* [Adobe Target オファーの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetoffer)
 
 >[!NOTE]
 >
@@ -121,11 +121,11 @@ ht-degree: 98%
 >
 >現在のリリースでは、エクスペリエンスの作成に MCM を使用することをお勧めします。
 
-### 新しいエクスペリエンスの設定  {#configuring-your-new-experience}
+### 新しいエクスペリエンスの設定 {#configuring-your-new-experience}
 
 エクスペリエンスの基本スケルトンを作成したら、エクスペリエンスのタイプに応じて、引き続き、次の作業をおこなうことが必要です。
 
-* [ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers):
+* [ティーザー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)：
 
    * [ティーザーページを訪問者セグメントに接続します。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
    * [ティーザーのタッチポイントを作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser)します（コンテンツページにティーザーを追加します）。
@@ -139,7 +139,7 @@ ht-degree: 98%
 
 * [Adobe Target オファー](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
-   * [Adobe Target と統合します。](/help/sites-administering/target.md)
+   * [Adobe Target との統合](/help/sites-administering/target.md)
 
 ### 新しいタッチポイントの追加 {#adding-a-new-touchpoint}
 
@@ -172,9 +172,9 @@ AEM MCM では、リードの構成および追加を実行できます。これ
 >
 >ユーザーのアバターを追加または変更するには、クリックストリームのクラウドを開き（Ctrl + Alt + c キー）、プロファイルを読み込んで、「**編集**」をクリックします。
 
-### 新しいリードの作成  {#creating-new-leads}
+### 新しいリードの作成 {#creating-new-leads}
 
-新しいリードを作成したら、必ず[それらのリードをアクティベート](#activating-or-deactivating-leads)します。これにより、パブリッシュインスタンスでのリードの行動を追跡し、リードの体験を個別化することができます。
+新しいリードを作成したら、必ず[それらのリードをアクティベート](#activating-or-deactivating-leads)します。これにより、パブリッシュインスタンスにおけるリードの行動を追跡し、リードのエクスペリエンスを個別化できるようになります。
 
 新しいリードを手動で作成するには：
 
@@ -205,7 +205,7 @@ AEM MCM では、リードの構成および追加を実行できます。これ
 
    ![screen_shot_2012-02-21at120620pm](assets/screen_shot_2012-02-21at120620pm.png)
 
-   AEM ページの場合と同様に、「**公開済み**」列に公開ステータスが示されます。
+   AEM ページの場合と同様、「**公開済み**」列に公開ステータスが示されます。
 
    ![screen_shot_2012-02-21at122901pm](assets/screen_shot_2012-02-21at122901pm.png)
 
@@ -224,12 +224,11 @@ AEM MCM では、リードの構成および追加を実行できます。これ
    >
    >
    >    * ダッシュボードで、**リスト**&#x200B;ウィンドウの「**リードを読み込む**」をクリックします。
-      >
-      >    
-   * 「**リスト**」をクリックし、**ツール**&#x200B;メニューの「**リードを読み込む**」を選択します。
+   >
+   >    * 「**リスト**」をクリックし、**ツール**&#x200B;メニューの「**リードを読み込む**」を選択します。
 
 
-1. **ツール**&#x200B;メニューの「**リードを読み込む**」を選択します。****
+1. **ツール**&#x200B;メニューの「**リードを読み込む**」を選択します&#x200B;**。**
 
 1. 「サンプルデータ」の説明に従って、情報を入力します。読み込むことができるフィールドは、email、familyName、givenName、gender、aboutMe、city、country、phoneNumber、postalCode、region、streetAddress です。
 
@@ -238,7 +237,7 @@ AEM MCM では、リードの構成および追加を実行できます。これ
    >CSV リストの最初の行は事前定義されたラベルで、次の例のとおりに記述する必要があります。
    >
    >
-   >`email,givenName,familyName`  — 例えば、と書き込ま `givenname`れた場合、システムはそれを認識しません。
+   >`email,givenName,familyName` - 例えば `givenname` と記述すると、システムでは認識されません。
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
@@ -252,7 +251,7 @@ AEM MCM では、リードの構成および追加を実行できます。これ
 
    新しいリードが、リードウィンドウに表示されます。エントリをクリックすると、入力したすべての情報が右のウィンドウに表示されます。リードを作成したら、リストにリードを追加できます。
 
-### リストへのリードの追加  {#adding-leads-to-lists}
+### リストへのリードの追加 {#adding-leads-to-lists}
 
 既存のリストにリードを追加するには：
 
@@ -268,7 +267,7 @@ AEM MCM では、リードの構成および追加を実行できます。これ
 
 1. リードを追加するリストを選択して、「**OK**」をクリックします。リードが適切なリストに追加されます。
 
-### リード情報の表示  {#viewing-lead-information}
+### リード情報の表示 {#viewing-lead-information}
 
 リードの情報を表示するには、MCM で、リードの横にあるチェックボックスをクリックします。右のウィンドウが開き、リードのすべての情報が表示されます。リードが含まれるリストについても表示されます。
 
@@ -296,7 +295,7 @@ AEM MCM では、リードの構成および追加を実行できます。これ
    >
    >リードのアバターを変更するには、ユーザーのプロファイルに移動します。Ctrl + Alt + c キーを押し、「**Load**」をクリックしてからプロファイルを選択することで、クリックストリームのクラウドにプロファイルを読み込むことができます。
 
-### 既存のリードの削除  {#deleting-existing-leads}
+### 既存のリードの削除 {#deleting-existing-leads}
 
 MCM の既存のリードを削除するには、リードの横のチェックボックスをオンにして「**削除**」をクリックします。リードのリストおよび関連するすべてのリストからリードが削除されます。
 
@@ -304,12 +303,12 @@ MCM の既存のリードを削除するには、リードの横のチェック�
 >
 >削除する前に、既存のリードの削除を確認するメッセージが表示されます。削除すると、そのリードは検索できなくなります。
 
-## リストの使用  {#working-with-lists}
+## リストの使用 {#working-with-lists}
 
 >[!NOTE]
 >
 >この機能（リストの管理）がさらに強化される予定はありません。
->[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+>[Adobe Campaign の利用や AEM との統合環境の利用](/help/sites-administering/campaign.md)をお勧めします。
 
 リストによって、リードをグループにまとめることができます。リストを使用すると、マーケティングキャンペーンの対象を、選択したリードのグループに設定できます。例えば、対象を設定したニュースレターをリストに送信することができます。MCM では、リストはダッシュボードに表示されます。または、「**リスト**」をクリックすると表示されます。どちらの場合も、リストの名前とメンバーの数が示されます。
 
@@ -347,7 +346,7 @@ MCM の既存のリードを削除するには、リードの横のチェック�
 
 1. 必要に応じて編集を行い、「**保存**」をクリックして変更を保存します。
 
-### 既存のリストの削除  {#deleting-existing-lists}
+### 既存のリストの削除 {#deleting-existing-lists}
 
 既存のリストを削除するには、MCM で、リストの横にあるチェックボックスを選択し、「**削除**」をクリックします。リストが削除されます。リストに含まれているリードは削除されません。リストとの関係のみが取り消されます。
 
@@ -355,7 +354,7 @@ MCM の既存のリードを削除するには、リードの横のチェック�
 >
 >削除する前に、既存のリストの削除を確認するメッセージが表示されます。削除すると、そのリストは検索できなくなります。
 
-### リストの統合  {#merging-lists}
+### リストの統合 {#merging-lists}
 
 既存のリストを他のリストに統合できます。これをおこなうと、統合するリストが他のリストのメンバーになります。統合するリストは個別のエンティティとして引き続き存在し、削除はされません。
 
@@ -387,7 +386,7 @@ MCM の既存のリードを削除するには、リードの横のチェック�
 >
 >統合したリストをメンバーシップから削除する方法は、リストからリードを削除する方法と同じです。**リスト**&#x200B;タブを開き、統合されたリストを含んでいるリストを選択し、リストの横にある赤い円をクリックしてメンバーシップを削除します。
 
-### リスト内のリードの表示  {#viewing-leads-in-lists}
+### リスト内のリードの表示 {#viewing-leads-in-lists}
 
 メンバーを参照または検索することで、特定のリストにどのリードが属しているかをいつでも確認できます。
 
