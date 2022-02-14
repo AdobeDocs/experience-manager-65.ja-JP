@@ -1,8 +1,8 @@
 ---
-title: デザインモードでのコンポーネントの設定
-seo-title: デザインモードでのコンポーネントの設定
+title: 'デザインモードでのコンポーネントの設定 '
+seo-title: Configuring Components in Design Mode
 description: AEM インスタンスが標準インストールされている場合、コンポーネントの選択はサイドキックですぐに使用できます。これらに加えて、その他の様々なコンポーネントも使用できます。このようなコンポーネントを有効または無効にするには、デザインモードを使用します。
-seo-description: AEM インスタンスが標準インストールされている場合、コンポーネントの選択はサイドキックですぐに使用できます。これらに加えて、その他の様々なコンポーネントも使用できます。このようなコンポーネントを有効または無効にするには、デザインモードを使用します。
+seo-description: When AEM instance is installed out-of-the-box, a selection of components are immediately available in the sidekick. In addition to these, various other components are also available. You can use Design mode to Enable/disable such components.
 uuid: 2cd5dad0-2f9c-4f34-aae8-1638d1445eb3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,23 +12,23 @@ discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '500'
+ht-degree: 100%
 
 ---
 
-# デザインモードでのコンポーネントの設定{#configuring-components-in-design-mode}
+# デザインモードでのコンポーネントの設定 {#configuring-components-in-design-mode}
 
 AEM インスタンスが標準インストールされている場合、コンポーネントの選択はサイドキックですぐに使用できます。
 
-これらに加えて、その他の様々なコンポーネントも使用できます。このような[コンポーネントを有効または無効にする](#enabledisablecomponentsusingdesignmode)には、デザインモードを使用します。コンポーネントを有効にしてページに配置したら、デザインモードを使用して属性パラメーターを編集することで[コンポーネントデザインの様々な要素を設定](#configuringcomponentsusingdesignmode)できます。
+これらに加えて、その他の様々なコンポーネントも使用できます。このような[コンポーネントを有効または無効にする](#enabledisablecomponentsusingdesignmode)には、デザインモードを使用します。コンポーネントを有効にしてページに配置したら、デザインモードを使用して属性パラメーターを編集することで[コンポーネントデザインのさまざまな要素を設定](#configuringcomponentsusingdesignmode)できます。
 
 >[!NOTE]
 >
->これらのコンポーネントを編集する際は慎重に行う必要があります。デザインの設定は、通常、Web サイト全体のデザインで重要な部分なので、適切な権限（と十分な経験）のあるユーザー（通常は管理者または開発者）のみが変更を行う必要があります。詳しくは、[コンポーネントの開発](/help/sites-developing/components.md)を参照してください。
+>これらのコンポーネントを編集する際は慎重に行ってください。デザインの設定は、通常、web サイト全体のデザインで重要な部分なので、適切な権限（および十分な経験）のあるユーザー（通常は、管理者または開発者）のみが変更を行う必要があります。詳しくは、[コンポーネントの開発](/help/sites-developing/components.md)を参照してください。
 
-実際には、ページの段落システムで許可されているコンポーネントの追加または削除が含まれます。 段落システム（`parsys`）は、他のすべての段落コンポーネントを含む複合コンポーネントです。段落システムを使用すると、他のすべての段落コンポーネントを含んでいるので、作成者は、様々なタイプのコンポーネントをページに追加できます。それぞれの段落タイプはコンポーネントとして表されます。
+具体的には、ページの段落システムで許可された構成要素を追加したり、削除したりすることです。段落システム（`parsys`）は、他のすべての段落コンポーネントを含む複合コンポーネントです。段落システムを使用すると、他のすべての段落コンポーネントを含んでいるので、作成者は、様々なタイプのコンポーネントをページに追加できます。それぞれの段落タイプはコンポーネントとして表されます。
 
 例えば、商品ページのコンテンツに次の項目を保持する段落システムを含めることができます。
 
@@ -49,7 +49,7 @@ AEM インスタンスが標準インストールされている場合、コン�
 
    ![](do-not-localize/chlimage_1.png)
 
-1. 段落システム(**Design of par**)の「**編集**」をクリックします。
+1. 段落システムの「**編集**」（**段落のデザイン**）をクリックします。
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
@@ -63,7 +63,7 @@ AEM インスタンスが標準インストールされている場合、コン�
 
    ![](do-not-localize/sidekick-collapsed.png)
 
-## コンポーネントのデザインの設定  {#configuring-the-design-of-a-component}
+## コンポーネントのデザインの設定 {#configuring-the-design-of-a-component}
 
 デザインモードでは、個々のコンポーネントの属性も設定できます。コンポーネントにはそれぞれ独自のパラメーターがあります。次に、**画像**&#x200B;コンポーネントの例を示します。
 
@@ -73,7 +73,7 @@ AEM インスタンスが標準インストールされている場合、コン�
 
 1. コンポーネントのデザインを設定できます。
 
-   例えば、画像コンポーネント（**画像のデザイン**）の「**編集**」をクリックすると、コンポーネント固有のパラメーターを設定できます。
+   たとえば、画像コンポーネントの「**編集**」（**画像のデザイン**）をクリックすると、そのコンポーネント特有のパラメーターを設定できます。
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
