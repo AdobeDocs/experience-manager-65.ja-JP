@@ -1,8 +1,8 @@
 ---
-title: オーサリング - 環境とツール
-seo-title: オーサリング - 環境とツール
+title: 'オーサリング - 環境とツール '
+seo-title: Authoring - the Environment and Tools
 description: Web サイトコンソールを使用すると、Web サイトを管理したり、Web サイト内を移動したりできます。2 つのペインを使用して、Web サイトの構造を展開したり、必要な要素に対するアクションを実行できます。
-seo-description: Web サイトコンソールを使用すると、Web サイトを管理したり、Web サイト内を移動したりできます。2 つのペインを使用して、Web サイトの構造を展開したり、必要な要素に対するアクションを実行できます。
+seo-description: The Websites console allows you to manage and navigate your website. Using two panes, the structure of your website can be expanded and actions taken on the required elements.
 uuid: 0a9ce725-042a-4697-81fe-ac86cbab0398
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
-workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 88%
+workflow-type: ht
+source-wordcount: '899'
+ht-degree: 100%
 
 ---
 
-# オーサリング - 環境とツール {#authoring-the-environment-and-tools}
+# オーサリング - 環境とツール  {#authoring-the-environment-and-tools}
 
 AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています。提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
@@ -61,12 +61,12 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 * [画像](#finding-images)
 * [ドキュメント](#finding-documents)
 * [ムービー](#finding-movies)
-* [Dynamic Mediaブラウザー](/help/sites-administering/scene7.md#scene7contentbrowser)
+* [Dynamic Media ブラウザー](/help/sites-administering/scene7.md#scene7contentbrowser)
 * [ページ](#finding-pages)
 
 * [段落](#referencing-paragraphs-from-other-pages)
 * [製品](#products)
-* または、[リポジトリ構造から Web サイトを参照](#the-content-finder)できます
+* または、[リポジトリ構造から web サイトを参照](#the-content-finder)できます
 
 すべてのオプションについて、[特定の項目を検索](#the-content-finder)できます。
 
@@ -102,7 +102,7 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 ### ページの検索 {#finding-pages}
 
-このタブには、すべてのページが表示されます。任意のページをダブルクリックして、編集用に開きます。
+このタブには、すべてのページが表示されます。任意のページをダブルクリックし、編集用に開きます。
 
 ![chlimage_1-115](assets/chlimage_1-115.png)
 
@@ -126,30 +126,32 @@ AEM から様々な&#x200B;**ヘルプ**&#x200B;リソースに直接アクセ�
 
 検索にワイルドカードを使用することもできます。サポートされているワイルドカードは、次のとおりです。
 
-* `*`0 個または 1 個以上の連続した文字に一致します。
+* `*`
+0 個以上の連続した文字に一致します。
 
-* `?`1 個の文字に一致します。
+* `?`
+1 個の文字に一致します。
 
 >[!NOTE]
 >
 >ワイルドカード検索を実行するには、擬似プロパティの「name」を使用する必要があります。
 
-例えば、という名前の画像がある場合、
+例えば、次の名前でアクセス可能な画像があるとします。
 
 `ad-nmvtis.jpg`
 
-以下の検索パターンで、この画像（およびこのパターンに一致するその他の画像）が見つかります。
+以下の検索パターンで、この画像（およびこのパターンに一致するそれ以外の画像）が見つかります。
 
 * `name:*nmv*`
 * `name:AD*`
-文字のマッチングでは、大文字と小文 ** 字は区別されません。
+文字の一致では、大文字と小文字は区別され*ません*。
 
 * `name:ad?nm??is.*`
-1つのクエリで任意の数のワイルドカードを使用できます。
+1 つのクエリ内で任意の数のワイルドカードを使用できます。
 
 >[!NOTE]
 >
->[SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)検索も使用できます。
+>[SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) 検索を使用することもできます。
 
 ## 参照の表示 {#showing-references}
 
@@ -161,7 +163,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. **参照を表示を選択します。** AEMは参照ウィンドウを開き、選択したページを参照するページとそのパスを表示します。
+1. AEM で「**参照を表示**」を選択すると、参照ウィンドウが開き、選択したページを参照するページとそのパスが表示されます。
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -182,7 +184,7 @@ AEM では、現在作業しているページにリンクしているページ�
 
 ## ページ情報 {#page-information}
 
-また、Webサイトコンソール[は、ページ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)の現在のステータスに関する情報（パブリッシュ、変更、ロック、ライブコピーなど）も提供します。
+Web サイトコンソールには、[ページの現在のステータスに関する情報も表示されます](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)（公開、変更、ロック、ライブコピーなど）。
 
 ## ページモード {#page-modes}
 
@@ -193,22 +195,22 @@ AEM では、現在作業しているページにリンクしているページ�
 サイドキックの下部に並ぶ 1 行のアイコンは、ページを操作するモードの切り替えに使用します。
 
 * [編集](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
-デフォルトのモードであり、ページの編集、コンポーネントの追加または削除、およびその他の変更をおこなうことができます。
+デフォルトのモードであり、ページの編集、コンポーネントの追加または削除、およびそれ以外の変更を行うことができます。
 
 * [プレビュー](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
-このモードを使用すると、ページが Web サイトで最終的にどのように表示されるかをプレビューできます。
+このモードを使用すると、ページが web サイトで最終的にどのように表示されるかをプレビューできます。
 
 * [デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
 このモードでは、アクセス可能なコンポーネントを設定して、ページのデザインを編集できます。
 
 >[!NOTE]
 >
->その他に次のオプションも利用できます。
+>それ以外に次のオプションも利用できます。
 >
 >* [基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md)
-* [ClientContext](/help/sites-administering/client-context.md)
-* Web サイト - Webサイトコンソールを開きます。
-* 再読み込み - ページを更新します。
+>* [ClientContext](/help/sites-administering/client-context.md)
+>* Web サイト - Web サイトコンソールを開きます。
+>* 再読み込み - ページを更新します。
 
 
 ## キーボードショートカット {#keyboard-shortcuts}
