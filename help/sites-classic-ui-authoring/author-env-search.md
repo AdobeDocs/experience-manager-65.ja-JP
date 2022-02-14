@@ -1,8 +1,8 @@
 ---
-title: 検索
-seo-title: 検索
+title: '検索 '
+seo-title: Search
 description: AEM のオーサー環境は、リソースタイプに応じて、コンテンツを検索するための様々なメカニズムを提供します。
-seo-description: AEM のオーサー環境は、リソースタイプに応じて、コンテンツを検索するための様々なメカニズムを提供します。
+seo-description: The author environment of AEM provides various mechanisms for searching for content, dependent on the resource type.
 uuid: 6dd3df4d-6040-4230-8373-fc028687b675
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 87%
+workflow-type: ht
+source-wordcount: '470'
+ht-degree: 100%
 
 ---
 
-# 検索{#searching}
+# 検索 {#searching}
 
 AEM のオーサー環境は、リソースタイプに応じて、コンテンツを検索するための様々なメカニズムを提供します。
 
@@ -32,7 +32,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ![chlimage_1-101](assets/chlimage_1-101.png)
 
-検索パネルを使用すると、Webサイトのすべてのページで検索できます。次のフィールドとウィジェットが含まれます。
+検索パネルを使用すると、すべての web サイトページにわたって検索できます。次のフィールドとウィジェットが含まれます。
 
 * **フルテキスト**：指定したテキストを検索します。
 * **前後に変更**：特定の日付の期間に変更されたページのみを検索します。
@@ -45,15 +45,12 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 >
 >* [ワイルドカード](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Wildcard_Searches)
 >* [ブール演算子](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boolean_operators)
-
-   >
-   >
-* [正規表現](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
+>
+>* [正規表現](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Regexp_Searches)
 >* [フィールドグループ](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Field_Grouping)
 >* [ブースト](https://lucene.apache.org/core/5_3_1/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Boosting_a_Term)
 
 >
-
 
 
 検索を実行するには、ペイン下部にある「**検索**」をクリックします。検索基準を消去するには、「**リセット**」をクリックします。
@@ -81,7 +78,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
    * 検索で大文字と小文字を区別するかどうかを指定します。
    * 完全に一致する語句のみを検索するかどうかを指定します（指定しなければ、サブ文字列も検索されます）。
 
-   「**プレビュー**」をクリックすると、キーワードが検出された場所が表示されます。置き換える特定のインスタンスを選択またはクリアできます。
+   「**プレビュー**」リストをクリックすると、語句が見つかった場所が表示されます。特定のインスタンスを選択／選択解除して置換できます。
 
    ![screen_shot_2012-02-15at120719pm](assets/screen_shot_2012-02-15at120719pm.png)
 
@@ -94,7 +91,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 * `jcr:text`
 * `text`
 
-スコープは、Apache Felix Web Management Console（例えば、`https://localhost:4502/system/console/configMgr`）を使用して変更できます。 `CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)`を選択し、必要に応じて範囲を設定します。
+このスコープは、Apache Felix Web Management Console（例：`https://localhost:4502/system/console/configMgr`）を使用して変更できます。`CQ WCM Find Replace Servlet (com.day.cq.wcm.core.impl.servlets.FindReplaceServlet)` を選択し、必要に応じてスコープを設定します。
 
 >[!NOTE]
 >
