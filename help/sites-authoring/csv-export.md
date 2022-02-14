@@ -1,8 +1,8 @@
 ---
 title: CSV ファイルへの書き出し
-seo-title: CSV ファイルへの書き出し
+seo-title: Export to CSV
 description: ページの情報をローカルシステムの CSV ファイルに書き出します
-seo-description: ページの情報をローカルシステムの CSV ファイルに書き出します
+seo-description: Export information about your pages to a CSV file on your local system
 uuid: 6eee607b-3510-4f6a-ba82-b27480a4fbe1
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 7be506fb-f5c4-48dd-bec2-a3ea3ea19397
 docset: aem65
 exl-id: 18910143-f2f2-4cfe-88b9-651df90d9cb9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 86%
+workflow-type: ht
+source-wordcount: '191'
+ht-degree: 100%
 
 ---
 
-# CSV ファイルへの書き出し{#export-to-csv}
+# CSV ファイルへの書き出し {#export-to-csv}
 
 **CSV レポートの作成**&#x200B;では、ページの情報をローカルシステムの CSV ファイルに書き出すことができます。
 
@@ -55,7 +55,7 @@ ht-degree: 86%
 
 ![etc-01](assets/etc-01.png)
 
-**CSVレポート**&#x200B;を作成オプションは、（リスト表示で）**サイト**&#x200B;コンソールを参照する際に使用できます。これは、**作成**&#x200B;ドロップダウンメニューのオプションです。
+「**CSV レポート**&#x200B;の作成」オプションは、**Sites** コンソールをリストビューで参照するときに使用できる、**作成**&#x200B;ドロップダウンメニューのオプションです。
 
 ![etc-02](assets/etc-02.png)
 
