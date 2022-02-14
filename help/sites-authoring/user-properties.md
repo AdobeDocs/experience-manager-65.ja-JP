@@ -1,8 +1,8 @@
 ---
-title: アカウント環境の設定
-seo-title: アカウント環境の設定
+title: 'アカウント環境の設定 '
+seo-title: Configuring Your Account Environment
 description: AEM では、アカウントおよびオーサー環境の特定項目を設定できます
-seo-description: AEM では、アカウントおよびオーサー環境の特定項目を設定できます
+seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment
 uuid: ef31be29-5c18-4dc9-ad51-fb001588b31e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: b610e19c-f8d9-4ae2-b056-9fd5cf541261
 docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: '517'
+ht-degree: 100%
 
 ---
 
-# アカウント環境の設定{#configuring-your-account-environment}
+# アカウント環境の設定 {#configuring-your-account-environment}
 
 AEM では、アカウントおよびオーサー環境の特定項目を設定できます。
 
