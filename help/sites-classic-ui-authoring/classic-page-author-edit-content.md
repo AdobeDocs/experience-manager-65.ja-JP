@@ -1,8 +1,8 @@
 ---
-title: ページのコンテンツの編集
-seo-title: ページのコンテンツの編集
+title: 'ページのコンテンツの編集 '
+seo-title: Editing Page Content
 description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
-seo-description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
+seo-description: Content is added using components that can be dragged onto the page. These can then be edited in place, moved, or deleted.
 uuid: e7b65ceb-263c-46f2-91e3-11dec3a016fa
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: '1755'
+ht-degree: 100%
 
 ---
 
@@ -58,11 +58,11 @@ ht-degree: 99%
 
 * ページの[公開](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#publishing-a-page)、[非公開](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)
 
-* [ページプロパティの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)
+* [ページプロパティの編集 ](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)
 
-* [基礎](/help/sites-authoring/scaffolding.md)
+* [基礎モード](/help/sites-authoring/scaffolding.md)
 
-* [ClientContext](/help/sites-administering/client-context.md)
+* [クライアントコンテキスト](/help/sites-administering/client-context.md)
 
 ## コンポーネントの挿入 {#inserting-a-component}
 
@@ -87,7 +87,7 @@ ht-degree: 99%
 
 1. ページに必要なコンポーネントを挿入します。次に、段落をダブルクリックすると、段落を設定しコンテンツを追加するためのウィンドウが開きます。
 
-### コンテンツファインダーを使用したコンポーネントの挿入  {#inserting-a-component-using-the-content-finder}
+### コンテンツファインダーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-content-finder}
 
 [コンテンツファインダー](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#the-content-finder)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、アセットが格納される適切なタイプの新しいコンポーネントが自動的に作成されます。
 
@@ -102,7 +102,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->この動作は使用しているインストール環境で設定できます。詳しくは、[アセットをドラッグするとコンポーネントインスタンスが作成されるように段落システムを設定](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance)を参照してください。
+>この動作は使用しているインストール環境に応じて設定できます。詳しくは、[アセットをドラッグするとコンポーネントインスタンスが作成されるように段落システムを設定](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance)を参照してください。
 
 前述のいずれかのアセットタイプをドラッグしてコンポーネントを作成するには：
 
@@ -114,7 +114,7 @@ ht-degree: 99%
 
 1. 必要に応じて、コンポーネントを[編集](#editmovecopypastedelete)します。
 
-## コンポーネント（コンテンツとプロパティ）の編集  {#editing-a-component-content-and-properties}
+## コンポーネント（コンテンツとプロパティ）の編集 {#editing-a-component-content-and-properties}
 
 既存の段落を編集するには、次のいずれかの操作を実行します。
 
@@ -160,7 +160,7 @@ ht-degree: 99%
 
 ## コンポーネントの切り取り／コピー／貼り付け {#cut-copy-paste-a-component}
 
-[コンポーネントの削除](#deleting-a-component)と同様に、コンテキストメニューを使用してコンポーネントのコピー、切り取り、貼り付けをおこなうことができます。
+[コンポーネントを削除](#deleting-a-component)するときと同様に、コンテキストメニューを使用してコンポーネントのコピー、切り取り、貼り付けを行うことができます。
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ ht-degree: 99%
 
 継承されたコンポーネントは、次のような様々なシナリオによって生成されます。
 
-* [マルチサイト管理](/help/sites-administering/msm.md);また、[scaffolding](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用することもできます。
+* [マルチサイト管理](/help/sites-administering/msm.md)また、[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて。
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
 * 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
@@ -205,7 +205,7 @@ ht-degree: 99%
 
 [注釈](/help/sites-classic-ui-authoring/classic-page-author-annotations.md)を使用すると、他の作成者がコンテンツに関するフィードバックを提供できます。注釈は、レビューや検証の目的でよく使用されます。
 
-## ページのプレビュー  {#previewing-pages}
+## ページのプレビュー {#previewing-pages}
 
 ページのプレビューに重要な 2 つのアイコンがサイドキックの下部にあります。
 
@@ -243,7 +243,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
    ![screen_shot_2012-02-08at15750pm](assets/screen_shot_2012-02-08at15750pm.png)
 
-   他のユーザーに対して、ページがロックされているというメッセージが表示されます。さらに、**Web サイト**&#x200B;コンソールの右側のパネルで、このページがロック済みとして表示され、ページをロックしたユーザーが示されます。
+   他のユーザーに対して、ページがロックされているというメッセージが表示されます。さらに、**web サイト**&#x200B;のコンソールの右側のパネルで、このページがロック済みとして表示され、ページをロックしたユーザーが示されます。
 
    ![screen_shot_2012-02-08at20657pm](assets/screen_shot_2012-02-08at20657pm.png)
 
@@ -262,17 +262,17 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 * 取り消し：Ctrl + Z（Windows）または Cmd + Z（Mac）
 * やり直し：Ctrl + Y（Windows）または Cmd + Y（Mac）
 
-1 つ以上の段落の削除、追加、再配置の取り消しまたはやり直しを実行すると、影響される段落は点滅表示されます（デフォルトの動作）。
+1 つまたは複数の段落の削除、追加、再配置の取り消しまたはやり直しを実行すると、影響を受ける段落が点滅します（デフォルトの動作）。
 
 >[!NOTE]
 >
->ページ編集の取り消しとやり直しによって実行可能なことについて詳しくは、[ページ編集の取り消しとやり直し - 理論](#undoing-and-redoing-page-edits-the-theory)を参照してください。
+>ページ編集の取り消しとやり直しで実行できることについて詳しくは、[ページ編集の取り消しとやり直し - 理論](#undoing-and-redoing-page-edits-the-theory)を参照してください。
 
 ## ページ編集の取り消しとやり直し - 理論 {#undoing-and-redoing-page-edits-the-theory}
 
 >[!NOTE]
 >
->システム管理者は、インスタンスの要件に従って[取り消しおよびやり直し機能の様々な面を設定できます](/help/sites-administering/config-undo.md)。
+>システム管理者は、インスタンスの要件に応じて、[取り消しとやり直し機能の様々な側面を設定](/help/sites-administering/config-undo.md)できます。
 
 AEM では、ユーザーが実行するアクションの履歴と、それらのアクションを実行した順序が保存されます。そのため、複数のアクションの取り消しは、ユーザーが実行した順序でおこなわれます。その後、やり直しを使用して、1 つ以上のアクションを再適用できます。
 
@@ -291,13 +291,12 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >
 
 
-
 取り消しおよびやり直しは、次のようなページの変更に対して使用できます。
 
 * 段落の追加、編集、削除および移動
 * 段落コンテンツのインプレース編集
 * ページ内部での項目のコピー、カットおよび貼り付け
-* ページ間での項目のコピー、切り取り、貼り付け
+* ページ間での項目のコピー、カットおよび貼り付け
 * ファイルおよび画像の追加、削除および変更
 * 注釈およびスケッチの追加、削除および変更
 * 基礎モードに対する変更
@@ -308,4 +307,4 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 
 >[!NOTE]
 >
->ファイルと画像に対する変更の取り消しおよびやり直しには、特別な権限が必要になります。また、ファイルと画像に対する変更の取り消し履歴は、少なくとも数時間保管されます。この時間を経過すると、変更の取り消しは保証されません。管理者が、権限の付与および 10 時間というデフォルト時間の変更をおこなうことができます。
+>ファイルと画像に対する変更の取り消しとやり直しには、特別な権限が必要になります。また、ファイルと画像に対する変更の取り消し履歴は、少なくとも数時間保管されます。この時間を経過すると、変更の取り消しは保証されません。管理者は、権限を付与したり、デフォルトの 10 時間を変更したりすることができます。
