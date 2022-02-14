@@ -1,8 +1,8 @@
 ---
 title: ローンチの編集
-seo-title: ローンチの編集
+seo-title: Editing Launches
 description: ページ（またはページのセット）にローンチが作成されている場合、ページのローンチコピーのコンテンツを編集できます。
-seo-description: ページ（またはページのセット）にローンチが作成されている場合、ページのローンチコピーのコンテンツを編集できます。
+seo-description: When a launch has been created for a page (or set of pages) you can edit the content in the launch copy of the page(s).
 uuid: 3a310eeb-553d-4d2b-98b5-c5bc523b2aca
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 666b967a-e94b-4f94-a676-00adf150580f
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: 21776f42-cd81-459d-b4b9-1d92e0aec164
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '319'
+workflow-type: ht
+source-wordcount: '291'
 ht-degree: 100%
 
 ---
 
-# ローンチの編集{#editing-launches}
+# ローンチの編集 {#editing-launches}
 
 ## ローンチページの編集 {#editing-launch-pages}
 
@@ -47,7 +47,7 @@ ht-degree: 100%
    * 「**一般**」タブで、次の情報を編集できます。
 
       * **タイトル**
-      * **ライブ日付**：ローンチ日と同じ
+      * **開始日**：ローンチ日と同じ
       * **実稼動準備完了**
 
       これらのフィールドの目的とインタラクションについて詳しくは、[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください。
@@ -57,7 +57,7 @@ ht-degree: 100%
 
 1. 「**保存**」をクリックします。
 
-## ページのローンチステータスの確認  {#discovering-the-launch-status-of-a-page}
+## ページのローンチステータスの確認 {#discovering-the-launch-status-of-a-page}
 
 ページのローンチの編集時、ローンチについての情報がサイドキックの「**バージョン管理**」タブの下部に表示されます。
 
