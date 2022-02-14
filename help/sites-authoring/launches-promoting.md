@@ -1,8 +1,8 @@
 ---
 title: ローンチの昇格
-seo-title: ローンチの昇格
+seo-title: Promoting Launches
 description: 'コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 '
-seo-description: 'コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 '
+seo-description: You need to promote launch pages to move the content back into the source (production) before publishing.
 uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,13 +13,13 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: '756'
+ht-degree: 100%
 
 ---
 
-# ローンチの昇格{#promoting-launches}
+# ローンチのプロモーション{#promoting-launches}
 
 コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページが昇格されると、ソースページの対応するページが、昇格済みのページのコンテンツに置き換わります。ローンチページを昇格させるときには、次のオプションを使用できます。
 
@@ -52,10 +52,9 @@ ht-degree: 99%
 >
 
 
-
 ローンチは、**サイト**&#x200B;コンソールまたは&#x200B;**ローンチ**&#x200B;コンソールを使用して昇格させることができます。
 
-1. 次のファイルを開きます。
+1. 次を開きます。
 
    * **サイト**&#x200B;コンソールの場合：
 
@@ -97,7 +96,7 @@ ht-degree: 99%
 
 1. 「**昇格**」を選択します。
 
-## 編集中のローンチページの昇格  {#promoting-launch-pages-when-editing}
+## 編集中のローンチページの昇格 {#promoting-launch-pages-when-editing}
 
 ローンチページの編集中、**ローンチを昇格**&#x200B;アクションは「**ページ情報**」からも実行できます。これによりウィザードが開き、必要な情報が収集されます。
 
@@ -107,7 +106,7 @@ ht-degree: 99%
 >
 >これは単一および[ネストされたローンチ](#promoting-a-nested-launch)で使用できます。
 
-## ネストされたローンチの昇格  {#promoting-a-nested-launch}
+## ネストされたローンチの昇格 {#promoting-a-nested-launch}
 
 ネストされたローンチを作成後、任意のソース（ルートソース（実稼動）を含む）に戻して昇格させることができます。
 
@@ -120,10 +119,13 @@ ht-degree: 99%
 
    * **ターゲット**
 
-      * **昇格対象**&#x200B;任意のソースに昇格させることができます。
+      * **昇格対象**
+任意のソースに昇格させることができます。
 
-      * **昇格後にローンチを削除**&#x200B;昇格後に、選択したローンチとと、その中にネストされているすべてのローンチが削除されます。
-   * **範囲** ここでは、すべてのローンチを昇格させるか、実際に編集したページのみを昇格させるかを選択できます。後者の場合、サブページを含めるか除外するかを選択できます。デフォルトの設定では、現在のページのページの変更のみを昇格させます。
+      * **昇格後にローンチを削除**
+昇格後に、選択したローンチと、その中にネストされているすべてのローンチが削除されます。
+   * **範囲**
+ここでは、すべてのローンチを昇格させるか、実際に編集したページのみを昇格させるかを選択できます。後者の場合、サブページを含めるか除外するかを選択できます。デフォルトの設定では、現在のページのページの変更のみを昇格させます。
 
       * **すべてのローンチを昇格**
       * **変更したページを昇格**
