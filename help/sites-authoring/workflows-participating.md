@@ -1,8 +1,8 @@
 ---
-title: ワークフローへの参加
-seo-title: ワークフローへの参加
+title: 'ワークフローへの参加 '
+seo-title: Participating in Workflows
 description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。
-seo-description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。
+seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset.
 uuid: 15d56bcc-1e84-4cc0-8b71-7fb906cd7ff7
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1545'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '1525'
+ht-degree: 100%
 
 ---
 
-# ワークフローへの参加{#participating-in-workflows}
+# ワークフローへの参加 {#participating-in-workflows}
 
 ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。ワークフローでアクティビティを実行するユーザーまたはグループを選択し、その人物やグループに作業項目を割り当てます。ユーザーは通知を受け取り、次の適切なアクションを取ることができます。
 
@@ -61,7 +61,7 @@ ht-degree: 98%
 
 * **タイムライン**&#x200B;をリソースのために開くとき、ワークフローステップが表示されます。アラートバナーをクリック／タップすると、使用可能なアクションも表示されます。
 
-   ![screen-shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+   ![screen_shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### 参加者ステップの完了 {#completing-a-participant-step}
 
@@ -74,7 +74,7 @@ ht-degree: 98%
 
 次のいずれかで参加者ステップを完了できます。
 
-* [インボックス](#completing-a-participant-step-inbox)
+* [インボックス ](#completing-a-participant-step-inbox)
 * [ページエディター](#completing-a-participant-step-page-editor)
 * [タイムライン](#completing-a-participant-step-timeline)
 * [詳細を表示するためにワークフロー項目を開く](#opening-a-workflow-item-to-view-details-and-take-actions)とき
@@ -114,7 +114,7 @@ ht-degree: 98%
 
    ![screen-shot_2019-03-05at120905](assets/screen-shot_2019-03-05at120905.png)
 
-1. 「**次へ**」を選択してアクションを確定します。
+1. 「**次へ**」を選択して、アクションを確定します。
 
 ### 参加者ステップの委任 {#delegating-a-participant-step}
 
@@ -133,7 +133,7 @@ ht-degree: 98%
 
 参加者ステップは次のいずれかから委任できます。
 
-* [インボックス](#delegating-a-participant-step-inbox)
+* [インボックス ](#delegating-a-participant-step-inbox)
 * [ページエディター](#delegating-a-participant-step-page-editor)
 * [タイムライン](#delegating-a-participant-step-timeline)
 * [詳細を表示するためにワークフロー項目を開く](#opening-a-workflow-item-to-view-details-and-take-actions)とき
@@ -166,7 +166,7 @@ ht-degree: 98%
 
    ![screen-shot_2019-03-05at120453-2](assets/screen-shot_2019-03-05at120453-2.png)
 
-1. 新しい担当者を指定します。
+1. 新しい割り当て先を指定します。
 
    ![screen-shot_2019-03-05at121025](assets/screen-shot_2019-03-05at121025.png)
 
@@ -183,7 +183,7 @@ ht-degree: 98%
 
 以下のいずれかから参加者ステップで前のステップを実行することができます。
 
-* [インボックス](#performing-step-back-on-a-participant-step-inbox)
+* [インボックス ](#performing-step-back-on-a-participant-step-inbox)
 * [ページエディター](#performing-step-back-on-a-participant-step-page-editor)
 * [タイムライン](#performing-step-back-on-a-participant-step-timeline)
 * [詳細を表示するためにワークフロー項目を開く](#opening-a-workflow-item-to-view-details-and-take-actions)とき
@@ -233,21 +233,21 @@ ht-degree: 98%
 
    ![wf-72](assets/wf-72.png)
 
-* 「**ワークフロー情報**」タブ
+* 「**ワークフロー情報**」タブ：
 
    ![wf-73](assets/wf-73.png)
 
-   [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)がモデルのために設定されている場合は、これらに従って進捗を表示できます。
+   [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)がモデルに設定されている場合は、これらに従って進行状況を表示できます。
 
    ![wf-107](assets/wf-107.png)
 
-* 「**コメント**」タブ
+* 「**コメント**」タブ：
 
    ![wf-75](assets/wf-75.png)
 
 以下のいずれかから作業項目の詳細を開くことができます。
 
-* [インボックス](#performing-step-back-on-a-participant-step-inbox)
+* [インボックス ](#performing-step-back-on-a-participant-step-inbox)
 * [ページエディター](#performing-step-back-on-a-participant-step-page-editor)
 
 #### ワークフロー詳細を開く - インボックス {#opening-workflow-details-inbox}
@@ -271,7 +271,7 @@ ht-degree: 98%
 1. 必要に応じて、適切なアクションを選択し、詳細を入力して「**OK**」（または「**キャンセル**」）で確認します。
 1. 「**保存**」または「**キャンセル**」を使用して終了します。
 
-### ワークフローペイロード（複数リソース）の表示 {#viewing-the-workflow-payload-multiple-resources}
+### ワークフローペイロード（複数リソース）の表示  {#viewing-the-workflow-payload-multiple-resources}
 
 ワークフローインスタンスに関連付けられたペイロードの詳細を表示できます。最初にパッケージの中のリソースが表示されるので、ドリルダウンして、個別のページを表示できます。
 
@@ -281,7 +281,7 @@ ht-degree: 98%
 1. アクションを実行するワークフロー項目を選択します（サムネールをタップまたはクリック）。
 1. ツールバーの「**ペイロードを表示**」を選択して、ダイアログを開きます。
 
-   ワークフローパッケージは単にリポジトリ内のパスへのポインターのコレクションなので、ここでエントリを追加／削除／変更して、ワークフローパッケージから参照されるものを調整できます。**リソース定義**&#x200B;を使用して新しいエントリを追加します。
+   ワークフローパッケージは単にリポジトリー内のパスへのポインターのコレクションなので、ここでエントリを追加／削除／変更して、ワークフローパッケージから参照されるものを調整できます。**リソース定義**&#x200B;を使用して新しいエントリを追加します。
 
    ![wf-78](assets/wf-78.png)
 
