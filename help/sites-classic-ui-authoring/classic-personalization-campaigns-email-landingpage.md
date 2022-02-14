@@ -1,8 +1,8 @@
 ---
-title: 効果的なニュースレターのランディングページの作成
-seo-title: 効果的なニュースレターのランディングページの作成
+title: '効果的なニュースレターのランディングページの作成 '
+seo-title: Creating an Effective Newsletter Landing Page
 description: 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）に新規登録するユーザーを増やすことができます。ニュースレターの新規登録で収集する情報は、見込み客の獲得に利用できます。
-seo-description: 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）に新規登録するユーザーを増やすことができます。ニュースレターの新規登録で収集する情報は、見込み客の獲得に利用できます。
+seo-description: An effective newsletter landing page helps you get as many people as possible to sign up for your newsletter (or other email marketing campaign). You can use the information you gather from your newsletter sign ups to get leads.
 uuid: 0799b954-076b-4e95-8724-3661ae8fddb6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: b41de64a-7d27-4633-a8d5-ac91d47eb1bb
 docset: aem65
 exl-id: c2fbf858-8815-426e-a2e5-f92bcf909ad0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '613'
+ht-degree: 100%
 
 ---
 
-# 効果的なニュースレターのランディングページの作成{#creating-an-effective-newsletter-landing-page}
+# 効果的なニュースレターのランディングページの作成 {#creating-an-effective-newsletter-landing-page}
 
 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）に新規登録するユーザーを増やすことができます。ニュースレターの新規登録で収集する情報は、見込み客の獲得に利用できます。
 
@@ -32,13 +32,13 @@ ht-degree: 95%
 >[!NOTE]
 >
 >この機能（リードおよびリストの管理）がさらに強化される予定はありません。
->[Adobe Campaign や AEM との統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
+>[Adobe Campaign と AEM への統合を利用](/help/sites-administering/campaign.md)することをお勧めします。
 
 ## ニュースレター用リストの作成 {#creating-a-list-for-the-newsletter}
 
 リストを作成します（例えば、MCM で、ユーザーが購読する必要のあるニュースレター用の **Geometrixx Newsletter** など）。リストの作成については、[リストの作成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingnewlists)を参照してください。
 
-リストの例を以下に示します。
+リストの例は次のとおりです。
 
 ![mcm_listcreate](assets/mcm_listcreate.png)
 
@@ -48,15 +48,15 @@ ht-degree: 95%
 
 独自のニュースレターフォームを作成するには、[Forms ドキュメント](/help/sites-authoring/default-components.md#form)のフォーム作成に関する情報を参照してください。ニュースレターでは、タグライブラリのタグを使用します。タグを追加するには、[タグ管理](/help/sites-authoring/tags.md#tagadministration)を参照してください。
 
-以下の例の非表示フィールドには、必要最小限の情報（電子メール）が示されます。また、後でフィールドを追加することもできますが、その場合は変換速度に影響があります。
+次の例の非表示フィールドには、必要最小限の情報（電子メール）が示されます。また、後でフィールドを追加することもできますが、その場合は変換速度に影響があります。
 
-次の例は、https://localhost:4502/cf#/content/geometrixx/en/toolbar/newsletter.htmlに作成されたフォームです。
+https://localhost:4502/cf#/content/geometrixx/en/toolbar/newsletter.html で作成するフォームの例は次にとおりです。
 
 1. フォームを作成します。
 
    ![mcm_newsletterpage](assets/mcm_newsletterpage.png)
 
-1. フォームコンポーネントの「**編集**」をクリックして、ありがとうページに移動するようにフォームを設定します（「[ありがとうページの作成](#creating-a-thank-you-page)」を参照）。
+1. フォームコンポーネントの「**編集**」をクリックして、ありがとうページに移動するようにフォームを設定します（「[ありがとうページの作成](#creating-a-thank-you-page)」を参照してください）。
 
    ![dc_formstart_thankyou](assets/dc_formstart_thankyou.png)
 
@@ -88,7 +88,7 @@ Teaser を追加して効果的なニュースレターのランディングペ�
 
 1. 2 つの Teaser があるキャンペーンを作成します。1 つには business タグを付け、もう 1 つにはタグを付けません。
 
-### 購読者へのコンテンツのプッシュ  {#pushing-content-to-subscribers}
+### 購読者へのコンテンツのプッシュ {#pushing-content-to-subscribers}
 
 MCM のニュースレター機能を使用して、すべての変更をページにプッシュします。次に、更新したコンテンツを購読者にプッシュします。
 
