@@ -1,8 +1,8 @@
 ---
 title: ページ編集時のキーボードショートカット
-seo-title: ページ編集時のキーボードショートカット
+seo-title: Keyboard Shortcuts when Editing Pages
 description: AEM 全体で様々なキーボードショートカットを利用できます。キーボードショートカットは、ページの編集時や、コンソールの使用に適用されます。
-seo-description: AEM 全体で様々なキーボードショートカットを利用できます。キーボードショートカットは、ページの編集時や、コンソールの使用に適用されます。
+seo-description: Various keyboard shortcuts are available throughout AEM. Some apply when editing pages, others to the use of consoles.
 uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '313'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 >[!NOTE]
 >
->次の表では、**ショートカット**&#x200B;列のキーの組み合わせに対して、CtrlキーとCommandキーの両方がmacOSで機能します。
+>以下の表の&#x200B;**ショートカット**&#x200B;列のキーの組み合わせは、macOS では Ctrl キーと Cmd キーの両方で動作します。
 
 >[!NOTE]
 >
@@ -33,7 +33,6 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >* Mac：Cmd キーを押しながら必要なコンポーネントをクリックします。
 
 >
-
 
 
 ## キーボードショートカットの編集 {#editing-keyboard-shortcuts}
@@ -48,22 +47,22 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td>編集モード</td>
    <td><code>Ctrl-z</code></td>
-   <td>最後におこなった変更操作を取り消す.</td>
+   <td>最後の変更を取り消します。</td>
   </tr>
   <tr>
    <td> </td>
    <td><code>Ctrl-y</code></td>
-   <td>最後におこなった変更操作をやり直す.</td>
+   <td>最後の変更をやり直します。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Shift-Click</code></strong></td>
-   <td>複数の段落を選択する.</td>
+   <td>複数の段落を選択します。</td>
   </tr>
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Click</code></strong></td>
-   <td>複数の段落を選択する.</td>
+   <td>複数の段落を選択します。</td>
   </tr>
   <tr>
    <td> </td>
@@ -73,7 +72,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-X</code></strong></td>
-   <td>選択した段落をカットします。<strong><br />注意：</strong>カットされた段落は、新しい位置に貼り付けられるまでは非表示になります。</td>
+   <td>選択した段落をカットします。<strong><br />注：</strong>カットされた段落は、新しい位置に貼り付けられるまでは非表示になります。</td>
   </tr>
   <tr>
    <td> </td>
@@ -98,8 +97,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td> </td>
    <td><strong><code>Alt-right-click</code></strong></td>
-   <td>デフォルト（ブラウザー）のコンテキストメニューを強制的に表示します。<br />
-<strong>注意：</strong>AEM のコンテキストメニューはクラシック UI にのみ表示されます。</td>
+   <td>デフォルト（ブラウザー）のコンテキストメニューを強制的に表示します。<br /><strong>注意：</strong>AEM のコンテキストメニューはクラシック UI にのみ表示されます。</td>
   </tr>
   <tr>
    <td> </td>
@@ -156,7 +154,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 [コンソール](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)の使用時には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
-## 開発用のキーボードショートカット  {#keyboard-shortcuts-for-development}
+## 開発用のキーボードショートカット {#keyboard-shortcuts-for-development}
 
 ページエディターの使用時には、デスクトップ開発者向けの追加のキーボードショートカットを利用できます。
 
@@ -169,7 +167,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr>
   <tr>
    <td>編集モード</td>
-   <td>URLに次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br />次を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
+   <td>URL に次のサフィックスを設定します。<br /> <code>?debugClientLibs=true</code><br /> 次に、以下を使用します。<br /> <strong><code>Ctrl-Shift-U</code></strong></td>
    <td>ページ読み込みのタイミングの統計を確認します。</td>
   </tr>
  </tbody>
