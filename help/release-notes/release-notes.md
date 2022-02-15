@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 1cfa01544ad8bf0adafd55e696a6844a8edf1007
+source-git-commit: 1ca3032063a148293f67c69a941b83b6aa5d48f1
 workflow-type: tm+mt
-source-wordcount: '3894'
-ht-degree: 100%
+source-wordcount: '3884'
+ht-degree: 99%
 
 ---
 
@@ -52,14 +52,17 @@ ht-degree: 100%
 
 ### [!DNL Sites] {#sites-65110}
 
-GraphQL でコンテンツフラグメントを使用してヘッドレスコンテンツ配信にアクセスし、拡張されたコンテンツフラグメントモデルとエディター機能を使用するには、[インデックス定義パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.0.0.zip)をインストールし、次の非同期 AEM インデックス定義のインデックスを再作成します。
+>[!WARNING]
+>
+>このパッケージの新しいバージョンが開発中です。 リンクは、使用可能になるとすぐに公開されます。
 
-* /oak:index/assetPrefixNodename
+GraphQL でコンテンツフラグメントを使用してヘッドレスコンテンツ配信にアクセスし、拡張されたコンテンツフラグメントモデルとエディター機能を使用するには、インデックス定義パッケージをインストールし、次の非同期 AEM インデックス定義のインデックスを再作成します。
 
-* /oak:index/fragments
+* `/oak:index/assetPrefixNodename`
 
-* /oak:index/graphqlConfig
+* `/oak:index/fragments`
 
+* `/oak:index/graphqlConfig`
 
 次の問題は [!DNL Sites] で修正されています。
 
