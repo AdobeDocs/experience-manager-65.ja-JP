@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています。'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 1ca3032063a148293f67c69a941b83b6aa5d48f1
+source-git-commit: b36b7b0dafbce3aa75afff60fae3cc714b6ac902
 workflow-type: tm+mt
-source-wordcount: '3884'
+source-wordcount: '3887'
 ht-degree: 99%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 99%
 
 >[!WARNING]
 >
->このパッケージの新しいバージョンが開発中です。 リンクは、使用可能になるとすぐに公開されます。
+>「インデックス定義」パッケージの新しいバージョンが開発中です。 以下のリンクは、利用可能になるとすぐに公開されます。
 
 GraphQL でコンテンツフラグメントを使用してヘッドレスコンテンツ配信にアクセスし、拡張されたコンテンツフラグメントモデルとエディター機能を使用するには、インデックス定義パッケージをインストールし、次の非同期 AEM インデックス定義のインデックスを再作成します。
 
