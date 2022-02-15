@@ -8,9 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: 7af09e73f40c2d947c9ccce000174155ef67137f
+source-git-commit: d4f5cebc76ed9348a17efc07443cd82317f24368
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '623'
 ht-degree: 92%
 
 ---
@@ -142,7 +142,6 @@ ht-degree: 92%
    + [Adobe Marketing Cloud との統合](marketing-cloud.md)
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
-   + [Adobe I/O を使用した Adobe Target との統合](integration-ims-adobe-io.md)
    + [Adobe I/O を使用した Adobe Target との統合](integration-target-ims-adobe-io.md)
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
@@ -151,7 +150,7 @@ ht-degree: 92%
    + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
    + [Livefyre との統合](livefyre.md)
 + ベストプラクティス {#bestpractices}
-   + [ベストプラクティス](administer-best-practices.md)
+   + [ベストプラクティス ](administer-best-practices.md)
    + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
    + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
