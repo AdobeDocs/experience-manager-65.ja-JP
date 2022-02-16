@@ -64,7 +64,6 @@ Adobe Experience Manager を WCM として使用している場合は、Dynamic 
 >
 >* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
 >* 画像は Pyramid TIFF ファイルです。ダイナミックメディアを有効にする前に読み込まれた画像には、Pyramid TIFF ファイルはありません。
-
 >
 
 

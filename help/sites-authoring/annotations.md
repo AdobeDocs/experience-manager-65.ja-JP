@@ -53,7 +53,6 @@ Web サイトのページにコンテンツを追加すると、実際に公開�
 >
 >* [アセットへの注釈の追加](/help/assets/manage-assets.md#annotating)
 >* [ビデオアセットへの注釈の追加](/help/assets/managing-video-assets.md#annotate-video-assets)
-
 >
 
 

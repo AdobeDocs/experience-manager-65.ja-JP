@@ -331,9 +331,9 @@ Dynamic Media Classic（Scene7）コンテンツブラウザーを使用する�
 >* [セキュアプレビューが有効](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)なときは、Dynamic Media Classic（Scene7）の公開アセットと非公開アセットの両方が、Dynamic Media Classic（Scene7）コンテンツブラウザーに表示されます。
 >* **[!UICONTROL Dynamic Media Classic（Scene7）]**&#x200B;または「**[!UICONTROL S7]**」アイコンがオプションとしてコンテンツブラウザーに表示されない場合は、 [Experience Manager と連携するように Dynamic Media Classic（Scene7）を設定する](/help/sites-administering/scene7.md)必要があります。
 >* ビデオの場合、Dynamic Media Classic（Scene7）コンテンツブラウザーは次の項目をサポートしています。
-   >   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
-   >   * 単一の MP4 ビデオ
-   >   * 単一の F4V ビデオ
+>   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+>   * 単一の MP4 ビデオ
+>   * 単一の F4V ビデオ
 
 
 ### コンテンツの参照 {#browsing-content-in-the-classic-ui}
@@ -355,7 +355,6 @@ Dynamic Media Classic（Scene7）コンテンツブラウザーを使用する�
 >* アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
 >* 単一の MP4 ビデオ
 >* 単一の F4V ビデオ
-
 >
 
 
@@ -396,7 +395,7 @@ Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager �
 >* クラシック UI では、**Flash** と **FXG** も検索できます。タッチ操作向け UI では、これら 2 つの語句のフィルタリングはサポートされていません。
 >
 >* ビデオを検索するときは、単一のレンディションが検索されています。結果では、元のレンディション（*.mp4 のみ）と、エンコードされたレンディションが返されます。
-* アダプティブビデオセットの検索では、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
+>* アダプティブビデオセットの検索では、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
 
 
 **公開ステータス** - 公開ステータス（非公開または公開済み）に基づいてアセットをフィルタリングできます。公開ステータスを選択しない場合、Experience Manager ではデフォルトですべての公開ステータスが検索されます。

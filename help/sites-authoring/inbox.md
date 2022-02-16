@@ -48,7 +48,6 @@ AEM の様々な領域から通知を受け取ることができます。例え�
 >* [プロジェクト - タスクの操作](/help/sites-authoring/task-content.md)
 >* [ワークフロー](/help/sites-authoring/workflows.md)
 >* [フォーム](/help/forms/home.md)
-
 >
 
 
@@ -266,6 +265,7 @@ AEM 通知インボックスを開くには：
    * **アドバンス**
 
       * **名前**
+
    >[!NOTE]
    >
    >詳しくは、[プロジェクトの作成](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project)を参照してください。

@@ -40,7 +40,6 @@ ht-degree: 100%
 >
 >* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
 >* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)。
-
 >
 
 
@@ -106,6 +105,7 @@ ht-degree: 100%
    * **パッケージタイトル**
 
       * 識別を容易にするために、パッケージのタイトルを指定できます。
+
    >[!NOTE]
    >
    >ワークフローが[マルチリソースサポート](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)のために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。

@@ -26,7 +26,6 @@ ht-degree: 100%
 >
 >* 一部の機能はすべてのコンソールでは使用できず、一部のコンソールにしかない機能もあります。個別のコンソールや関連する機能に関する具体的な情報については、他のページで詳しく取り上げます。
 >* AEM 全体で（特に、[コンソールを使用する](/help/sites-authoring/keyboard-shortcuts.md)場合と[ページを編集する](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)場合に）、キーボードショートカットを利用できます。
-
 >
 
 
