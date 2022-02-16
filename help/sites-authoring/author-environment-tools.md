@@ -12,7 +12,7 @@ discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2220'
 ht-degree: 100%
 
@@ -206,7 +206,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
    ![](do-not-localize/screen_shot_2018-03-22at142725.png)
 
-* または、](/help/sites-administering/msm.md)ライブコピー[の一部を構成するページが開かれます。ここではコンポーネントが別のページから継承されます。次のページの例を示します。[* または、](/help/sites-administering/msm.md)ライブコピー[の一部を構成するページが開かれます。ここではコンポーネントが別のページから継承されます。次のページの例を示します。
+* または、[ライブコピー](/help/sites-administering/msm.md)の一部を構成するページが開かれます。ここではコンポーネントが別のページから継承されます。次のページの例を示します。
 
    `https://localhost:4502/editor.html/content/we-retail/us/en/equipment.html`
 
@@ -291,7 +291,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## ページモード {#page-modes}
 
-ページの編集時には様々なモードがあり、異なるアクションをおこなうことができます。
+ページの編集時には様々なモードがあり、異なるアクションを行うことができます。
 
 * [編集](/help/sites-authoring/editing-content.md) - ページコンテンツの編集時に使用するモード。
 * [レイアウト](/help/sites-authoring/responsive-layout.md) - デバイスに応じたレスポンシブレイアウトを作成および編集できます（ページがレイアウトコンテナに基づいている場合）
@@ -308,7 +308,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 * [ライブコピーステータス](/help/sites-authoring/editing-content.md#live-copy-status) - ライブコピーのステータスの簡単な概要および継承される（または継承されない）コンポーネントを示します。
 * [プレビュー](/help/sites-authoring/editing-content.md#previewing-pages) - パブリッシュ環境とまったく同じ形式でページを表示する、またはコンテンツ内のリンクを使用して移動するために使用します。
 
-* [注釈](/help/sites-authoring/annotations.md) - ページで注釈の追加または表示をおこなう場合に使用するモード。
+* [注釈](/help/sites-authoring/annotations.md) - ページで注釈の追加または表示を行う場合に使用するモード。
 
 これらのモードには右上のアイコンを使用してアクセスできます。実際のアイコンは、現在利用中のモードに合わせて変化します。
 
