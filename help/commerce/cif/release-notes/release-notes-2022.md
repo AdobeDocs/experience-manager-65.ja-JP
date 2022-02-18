@@ -1,8 +1,7 @@
 ---
 title: AEM Content and Commerce リリースノート 2022
 description: AEM Content and Commerce リリースノート 2022
-exl-id: ec47c5f8-d4dd-469f-94df-5ee28f25d696
-source-git-commit: 26df21270e8c586ba21b9bf3e9fc5003facbaade
+source-git-commit: 84ac40a5cd18b1a5c8bb7a93af4106be6bda7631
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 67%
