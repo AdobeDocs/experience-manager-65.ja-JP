@@ -1,8 +1,8 @@
 ---
 title: ワークフローインスタンスの管理
-seo-title: ワークフローインスタンスの管理
+seo-title: Administering Workflow Instances
 description: ワークフローインスタンスの管理方法について説明します。
-seo-description: ワークフローインスタンスの管理方法について説明します。
+seo-description: Lear how to administer Workflow Instances.
 uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 8b4459c69b73159ce5afd819dfb772df5c51cd16
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 95%
+source-wordcount: '1136'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->[JMXコンソール](/help/sites-administering/jmx-console.md#workflow-maintenance)は、追加のワークフローメンテナンス操作を提供します。
+>この [JMX コンソール](/help/sites-administering/jmx-console.md#workflow-maintenance) には、その他のワークフローメンテナンス操作が用意されています。
 
 ワークフローの管理用に、次の各種コンソールが用意されています。[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)を使用して&#x200B;**ツール**&#x200B;パネルを開き、その後「**ワークフロー**」を選択します。
 
@@ -32,6 +32,7 @@ ht-degree: 95%
 * **ランチャー**：ワークフローの起動方法を確認します
 * **アーカイブ**：正常に完了したワークフローの履歴を表示します
 * **エラー**：エラーで終了したワークフローの履歴を表示します
+* **自動割り当て**：テンプレートへの自動割り当てワークフローを設定します
 
 ## ワークフローインスタンスのステータスの監視 {#monitoring-the-status-of-workflow-instances}
 
@@ -40,9 +41,26 @@ ht-degree: 95%
 
    ![wf-96](assets/wf-96.png)
 
-1. 特定の項目を選択し、「**履歴を開く**」で詳細を確認します。
 
-   ![wf-97](assets/wf-97.png)
+## ワークフローインスタンスの検索 {#search-workflow-instances}
+
+1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
+1. 「**インスタンス**」を選択して現在進行中のワークフローインスタンスのリストを表示します。上部のパネルの左隅で、「**フィルター**」を選択します。または、alt+1 キーを押します。次のダイアログが開きます。
+
+   ![wf-99-1](assets/wf-99-1.png)
+
+1. フィルターダイアログで、ワークフローの検索条件を選択します。次の入力に基づいて検索できます。
+
+   * ペイロードパス：特定のパスの選択
+   * ワークフローモデル：ワークフローモデルの選択
+   * 担当者：ワークフローの担当者の選択
+   * タイプ：タスク、ワークフロー項目、またはワークフローの失敗
+   * タスクステータス：アクティブ、完了、または終了
+   * 役割：所有者および担当者、所有者のみ、担当者のみ
+   * 開始日：指定した日付の前または後の開始日
+   * 終了日：指定した日付の前または後の終了日
+   * 期日：指定した日付の前または後の期日
+   * 更新日：指定した日付の前または後の更新日
 
 ## ワークフローインスタンスの休止、再開および終了 {#suspending-resuming-and-terminating-a-workflow-instance}
 
@@ -149,9 +167,9 @@ ht-degree: 95%
  </tbody>
 </table>
 
-## インボックスの最大サイズの設定  {#setting-the-maximum-size-of-the-inbox}
+## インボックスの最大サイズの設定 {#setting-the-maximum-size-of-the-inbox}
 
-インボックスの最大サイズを設定するには、**AdobeGranite Workflow Service**&#x200B;を[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用してリポジトリにOSGi設定を追加します](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)。 次の表では、どちらの方法でも設定するプロパティについて説明しています。
+インボックスの最大サイズは、 **AdobeGranite Workflow Service**、 [Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) または [リポジトリに OSGi 設定を追加します。](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository). 次の表では、どちらの方法でも設定するプロパティについて説明しています。
 
 >[!NOTE]
 >
@@ -162,3 +180,77 @@ ht-degree: 95%
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 |
 |---|---|
 | Max Inbox Query Size | granite.workflow.inboxQuerySize |
+
+## 顧客所有のデータストアに対するワークフロー変数の使用 {#using-workflow-variables-customer-datastore}
+
+ワークフローで処理されたデータは、アドビ提供のストレージ（JCR）に保存されます。このデータは、本来、機密性が高い可能性があります。ユーザー定義のメタデータ／データをすべて、アドビ提供のストレージではなく、ユーザー管理のストレージに保存することができます。以下の節では、これらの変数を外部ストレージに設定する方法について説明します。
+
+### メタデータの外部ストレージを使用するようにモデルの設定 {#set-model-for-external-storage}
+
+ワークフローモデルのレベルでは、モデル（およびそのランタイムインスタンス）にメタデータの外部ストレージが含まれていることを示すフラグが用意されています。外部ストレージ用にマークされたモデルのワークフローインスタンスに対するワークフロー変数は JCR に保持されません。
+
+*userMetadataPersistenceEnabled* プロパティがワークフローモデルの *jcr:content* ノードに格納されます。このフラグは、ワークフローメタデータに *cq:userMetaDataCustomPersistenceEnabled* として保持されます。
+
+以下の図は、ワークフローにフラグを設定する方法を示しています。
+
+![workflow-externalize-config](assets/workflow-externalize-config.png)
+
+### 外部ストレージ内のメタデータの API {#apis-for-metadata-external-storage}
+
+変数を外部に保存するには、ワークフローで公開している API を実装する必要があります。
+
+UserMetaDataPersistenceContext
+
+次のサンプルは、API の使用方法を示しています。
+
+```
+@ProviderType
+public interface UserMetaDataPersistenceContext {
+ 
+    /**
+     * Gets the workflow for persistence
+     * @return workflow
+     */
+    Workflow getWorkflow();
+ 
+    /**
+     * Gets the workflow id for persistence
+     * @return workflowId
+     */
+    String getWorkflowId();
+ 
+    /**
+     * Gets the user metadata persistence id
+     * @return userDataId
+     */
+    String getUserDataId();
+}
+```
+
+UserMetaDataPersistenceProvider
+
+```
+/**
+ * This provider can be implemented to store the user defined workflow-data metadata in a custom storage location
+ */
+@ConsumerType
+public interface UserMetaDataPersistenceProvider {
+ 
+   /**
+    * Retrieves the metadata using a unique identifier
+    * @param userMetaDataPersistenceContext
+    * @param metaDataMap of user defined workflow data metaData
+    * @throws WorkflowException
+    */
+   void get(UserMetaDataPersistenceContext userMetaDataPersistenceContext, MetaDataMap metaDataMap) throws WorkflowException;
+ 
+   /**
+    * Stores the given metadata to the custom storage location
+    * @param userMetaDataPersistenceContext
+    * @param metaDataMap metadata map
+    * @return the unique identifier that can be used to retrieve metadata. If null is returned, then workflowId is used.
+    * @throws WorkflowException
+    */
+   String put(UserMetaDataPersistenceContext userMetaDataPersistenceContext, MetaDataMap metaDataMap) throws WorkflowException;
+} 
+```
