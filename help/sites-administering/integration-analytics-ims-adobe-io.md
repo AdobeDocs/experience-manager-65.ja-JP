@@ -1,9 +1,9 @@
 ---
 title: Adobe I/Oを使用したAdobe Analyticsとの統合
 description: Adobe I/Oを使用したAEMとAdobe Analyticsの統合について説明します
-source-git-commit: c2c7c3f745a5f1edc1a8d2a73922f86f0b952ff7
+source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1052'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ AEMが使用するAdobe I/Oプロジェクト（統合）をAdobe Analyticsで�
 
 ### プロジェクトの作成 {#creating-the-project}
 
-Adobe I/Oコンソールを開き、AEMが使用するAdobe Targetで I/O プロジェクトを作成します。
+Adobe I/Oコンソールを開き、AEMが使用するAdobe Analyticsで I/O プロジェクトを作成します。
 
 <!--
 >[!NOTE]
@@ -112,23 +112,9 @@ Adobe I/Oコンソールを開き、AEMが使用するAdobe Targetで I/O プロ
 
 1. 必要な製品プロファイルを選択し、次に進みます。 **設定済み API を保存**:
 
-   >[!NOTE]
-   >
-   >と共に表示される製品プロファイルは、次の条件によって異なります。
-   >
-   >* Adobe Target Standard — のみ **デフォルトのワークスペース** 使用可能な
-   >* Adobe Target Premium — 使用可能なすべてのワークスペースが、次に示すようにリストされます
-
-
    ![必要な製品プロファイルを選択](assets/integration-analytics-io-16.png)
 
 1. 設定が確認されます。
-
-<!--
-1. The creation will be confirmed, you can now **Continue to integration details**; these are needed for [Completing the IMS Configuration in AEM](#completing-the-ims-configuration-in-aem).
-
-   ![](assets/integrate-target-io-07.png)
--->
 
 ### 統合への権限の割り当て {#assigning-privileges-to-the-integration}
 
@@ -164,7 +150,7 @@ Adobe I/Oプロジェクトコンソールから、すべての統合プロジ�
 
 ## AEMでの IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 
-AEMに戻ると、Target のAdobe I/O統合から必要な値を追加することで、IMS 設定を完了できます。
+AEMに戻ると、Analytics のAdobe I/O統合から必要な値を追加して、IMS 設定を完了できます。
 
 1. に戻る [AEMで IMS 設定を開く](#configuring-an-ims-configuration-generating-a-public-key).
 1. 「**次へ**」を選択します。
@@ -181,7 +167,7 @@ AEMに戻ると、Target のAdobe I/O統合から必要な値を追加するこ�
 
 1. 「**作成**」で確定します。
 
-1. Adobe Targetの設定がAEMコンソールに表示されます。
+1. Adobe Analyticsの設定がAEMコンソールに表示されます。
 
    ![IMS 設定](assets/integrate-analytics-io-11.png)
 
@@ -204,10 +190,6 @@ AEMに戻ると、Target のAdobe I/O統合から必要な値を追加するこ�
    ![IMS 設定 — ヘルスチェック](assets/integrate-analytics-io-12.png)
 
 1. 成功した場合は、確認メッセージが表示されます。
-
-   <!--
-   ![](assets/integrate-target-io-13.png)
-   -->
 
 ## Adobe Analytics Cloudサービスの設定 {#configuring-the-adobe-analytics-cloud-service}
 
@@ -232,7 +214,7 @@ Analytics Standard API を使用するCloud Service向けに、次の設定を�
 
    * **IMS 設定**:IMS 設定の名前を選択します。
 
-1. クリック **Analytics に接続** :Adobe Targetとの接続を初期化します。
+1. クリック **Analytics に接続** :Adobe Analyticsとの接続を初期化します。
 
    接続に成功すると、「**接続に成功しました**」というメッセージが表示されます。
 
