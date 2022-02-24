@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b4c3f4c393d9b34acaadc375d20738ead42e481d
+source-git-commit: 72b39fd0263347c5bfe98fe2fdaf8999d7d40a96
 workflow-type: tm+mt
-source-wordcount: '2979'
-ht-degree: 94%
+source-wordcount: '3215'
+ht-degree: 87%
 
 ---
 
@@ -196,6 +196,22 @@ Web サイト作成者は、コンテンツファインダーを使用して DAM
 1. ユーザーはアセットを移動または削除できます。アセットを移動または削除すると、選択したすべてのアセット／フォルダーの参照の合計数が警告ダイアログに表示されます。参照がまだ表示されていないアセットを削除すると、警告ダイアログが表示されます。
 
    ![強制削除警告](assets/delete-referenced-asset.png)
+
+### リモート DAM でアセットの更新を管理 {#manage-updates-in-remote-dam}
+
+後 [接続の設定](#configure-a-connection-between-sites-and-assets-deployments) リモート DAM と [!DNL Sites] デプロイメントの場合、リモート DAM 上のアセットは [!DNL Sites] デプロイメント。 その後、リモート DAM のアセットまたはフォルダーに対して、更新、削除、名前変更および移動の操作を実行できます。 更新は、しばらくの間、 [!DNL Sites] デプロイメント。 さらに、リモート DAM 上のアセットがローカル DAM で使用されている場合 [!DNL Experience Manager Sites] ページの場合、リモート DAM 上のアセットの更新が [!DNL Sites] ページ。
+
+アセットを別の場所に移動する際に、次の点を確認します。 [参照を調整](/help/assets/manage-assets.md) アセットが [!DNL Sites] ページ。 ローカルからアクセスできない場所にアセットを移動する場合 [!DNL Sites] デプロイメント時に、Sites デプロイメントにアセットが表示されません。
+
+また、リモート DAM 上のアセットのメタデータプロパティを更新し、変更内容をローカル DAM で利用することもできます [!DNL Sites] デプロイメント。
+
+[!DNL Sites] 作成者は、 [!DNL Sites] 変更をデプロイして再公開し、で利用できるようにします。 [!DNL Experience Manager] パブリッシュインスタンス。
+
+[!DNL Experience Manager] に、 `Remote Assets Content Finder` サイト作成者が [!DNL Sites] ページ。 期限切れのステータスを持つアセットを [!DNL Sites] ページで、アセットが [!DNL Experience Manager] パブリッシュインスタンス。
+
+>[!NOTE]
+>
+>リモート DAM 内のアセットに対する更新は、 [!DNL Sites] リモート DAM および [!DNL Sites] デプロイメントは次の場所にあります。 [!DNL Experience Manager].
 
 ## 制限事項とベストプラクティス {#tip-and-limitations}
 

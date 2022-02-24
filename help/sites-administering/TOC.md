@@ -8,10 +8,10 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: d4f5cebc76ed9348a17efc07443cd82317f24368
+source-git-commit: 206df4237e0e6959389dd0128c79c8f64bc4a0e4
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 92%
+source-wordcount: '631'
+ht-degree: 91%
 
 ---
 
@@ -117,6 +117,7 @@ ht-degree: 92%
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
    + [コンポーネントデータと Adobe Analytics プロパティとのマッピング](adobeanalytics-mapping.md)
    + [Adobe Analytics のビデオトラッキングの設定](adobeanalytics-video.md)
+   + [Adobe I/Oを使用したAdobe Analyticsとの統合](integration-analytics-ims-adobe-io.md)
    + [コンテンツの HTTP/2 配信の FAQ](scene7-http2faq.md)
    + [Adobe Campaign 統合に関するトラブルシューティング](troubleshooting-campaignintegration.md)
    + [SharePoint Connector のライセンス、著作権情報および免責事項](sharepoint-connector-licenses.md)
