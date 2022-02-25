@@ -1,8 +1,8 @@
 ---
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
-description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています。'
+description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: b3a3ba8f990d91e003ff862239094ee330b7429a
+source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
 workflow-type: tm+mt
 source-wordcount: '2630'
 ht-degree: 45%
