@@ -3,10 +3,10 @@ title: コマース統合フレームワークを使用した AEM とサード�
 description: 大規模企業では、ストアフロントを強化するために、追加のサードパーティ製コマースソリューションが必要になる場合があります。I/O Runtime を使用してサードパーティのコマースソリューションを Adobe Experience Manager に接続するような統合シナリオで、コマース統合フレームワーク（CIF）を使用できます。
 thumbnail: cif-third-party-architecture.jpg
 exl-id: e99899a4-df86-4108-991a-8b30d303a279
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 885d0763fca9ad4eab499081adca9b83875b27e1
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 98%
+source-wordcount: '521'
+ht-degree: 79%
 
 ---
 
@@ -51,3 +51,14 @@ CIF は、製品カタログへのリアルタイムのアクセスと製品エ�
 [参照実装](https://github.com/adobe/commerce-cif-graphql-integration-reference)は、コマースソリューションへの統合を構築するための出発点として最適です。GraphQL がサポートされていますが、REST などの他のタイプの API と統合することもできます。
 
 この統合レイヤーは、サードパーティのレイヤー（Mulesoft など）が使用可能な場合や、統合がサードパーティのソリューションの上に構築される場合には必要ありません。
+
+## 事前定義済みコネクタ {#connectors}
+
+コネクタは、プロジェクトを開始するのに適しています。 これには、コマースソリューション固有の接続とデフォルトの API マッピングが付属しています。 これらのコネクタは、サードパーティによって構築され、Adobeによって管理されるわけではありません。 詳しくは、それぞれのパートナーにお問い合わせください。
+
+* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris), Diconium によって作成
+* [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool), Diconium によって作成
+
+>[!TIP]
+>
+>コネクタは、コマース統合を高速化するプロジェクトを支援しますが、プラグイン再生ではありません。 エンタープライズコマースソリューションは通常、大幅にカスタマイズされており、カスタム統合が必要です。 コマースプラットフォーム、Adobe Commerce GraphQL スキーマ、Adobe I/O Runtimeに関する十分な知識が必要です。
