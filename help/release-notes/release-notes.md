@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
+source-git-commit: 498e00ab7838de675771224204726a51e68d4a57
 workflow-type: tm+mt
-source-wordcount: '2630'
-ht-degree: 45%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -323,9 +323,21 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 ## 既知の問題 {#known-issues}
 
-* AEM 6.5 Service Pack 11 をインストールし、ステータス ZIP ファイルをダウンロードしようとすると、Experience Manager は破損したファイルをダウンロードします。問題を解決するには、ZIP ファイルをダウンロードする前に、[AEM Sites SEO インデックスパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/sites-seo-index-content-1.0.0.zip)を AEM インスタンスにダウンロードしてインストールしてください。
+* AEM 6.5 Service Pack 12 をインストールし、ステータス ZIP ファイルをダウンロードしようとすると、Experience Manager は破損したファイルをダウンロードします。
 
-* [!DNL Microsoft Windows Server 2019] は [!DNL MySQL 5.7] と [!DNL JBoss EAP 7.1] をサポートしていないので、[!DNL Microsoft Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] のターンキーインストールには対応していません。
+   >[!CAUTION]
+   >
+   >「インデックス定義」パッケージの新しいバージョンが開発中です。 以下のリンクは、利用可能になるとすぐに公開されます。
+   >
+   >それまでは、ホットフィックスについては、カスタマーケアにお問い合わせください。
+
+   <!--
+  Download and install [AEM Sites SEO Index Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/sites-seo-index-content-1.0.0.zip) on your AEM instance before downloading the ZIP file to resolve the issue.
+  -->
+
+   問題を解決するには、ZIP ファイルをダウンロードする前に、AEM Sites SEO インデックスパッケージを AEM インスタンスにダウンロードしてインストールしてください。
+
+* [!DNL Microsoft Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss EAP 7.1] をサポートしていないので、[!DNL Microsoft Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
 * [!DNL Experience Manager] インスタンスを 6.5 から 6.5.10.0 バージョンにアップグレードする場合は、`error.log` ファイルで `RRD4JReporter` の例外を表示できます。この問題を解決するには、インスタンスを再起動します。
 
