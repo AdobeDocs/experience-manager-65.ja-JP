@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: a33d46bcfcf901fb774b742c0fc972265401a56e
+source-git-commit: 079b7b1e386ac2d02026ee2d8db411e517168b00
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 46%
@@ -37,7 +37,7 @@ ht-degree: 46%
    >   * クラウド設定で指定された名前付きワークスペース。
    >   * **注意：** 特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
 >
->* AEMは [Adobe I/Oを使用してAdobe Targetと統合](/help/sites-administering/integration-target-ims-adobe-io.md).
+>* AEMは [Adobe I/Oを使用してAdobe Targetと統合](/help/sites-administering/integration-target-ims.md).
 >
 >AEM 6.5.0.0 および 6.5.1.0:
 >
@@ -53,7 +53,7 @@ ht-degree: 46%
 * JSON:ヘッドレスコンテンツ配信のサポート
 * HTML と JSON
 
-AEMエクスペリエンスフラグメントは、Adobe Targetのデフォルトのワークスペースに書き出したり、Adobe Targetのユーザー定義のワークスペースに書き出したりできます。 これはAdobe I/Oを介しておこなわれ、AEMは [Adobe I/Oを使用してAdobe Targetと統合](/help/sites-administering/integration-target-ims-adobe-io.md).
+AEMエクスペリエンスフラグメントは、Adobe Targetのデフォルトのワークスペースに書き出したり、Adobe Targetのユーザー定義のワークスペースに書き出したりできます。 これはAdobe I/Oを介しておこなわれ、AEMは [Adobe I/Oを使用してAdobe Targetと統合](/help/sites-administering/integration-target-ims.md).
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ AEMエクスペリエンスフラグメントは、Adobe Targetのデフォル�
 
 様々なアクションが必要です。
 
-1. 必要な操作 [Adobe I/Oを使用したAEMとAdobe Targetの統合](/help/sites-administering/integration-target-ims-adobe-io.md).
+1. 必要な操作 [Adobe I/Oを使用したAEMとAdobe Targetの統合](/help/sites-administering/integration-target-ims.md).
 2. エクスペリエンスフラグメントはAEMオーサーインスタンスから書き出されるので、次の操作を行う必要があります。 [AEM Link Externalizer を設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) オーサーインスタンスを使用して、エクスペリエンスフラグメント内の参照が Web 配信用に外部化されていることを確認します。
 
    >[!NOTE]

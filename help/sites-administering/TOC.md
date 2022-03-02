@@ -8,10 +8,10 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: 206df4237e0e6959389dd0128c79c8f64bc4a0e4
+source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 91%
+source-wordcount: '627'
+ht-degree: 90%
 
 ---
 
@@ -117,7 +117,7 @@ ht-degree: 91%
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
    + [コンポーネントデータと Adobe Analytics プロパティとのマッピング](adobeanalytics-mapping.md)
    + [Adobe Analytics のビデオトラッキングの設定](adobeanalytics-video.md)
-   + [Adobe I/Oを使用したAdobe Analyticsとの統合](integration-analytics-ims-adobe-io.md)
+   + [IMS を使用したAdobe Analyticsとの統合](integration-analytics-ims.md)
    + [コンテンツの HTTP/2 配信の FAQ](scene7-http2faq.md)
    + [Adobe Campaign 統合に関するトラブルシューティング](troubleshooting-campaignintegration.md)
    + [SharePoint Connector のライセンス、著作権情報および免責事項](sharepoint-connector-licenses.md)
@@ -143,7 +143,7 @@ ht-degree: 91%
    + [Adobe Marketing Cloud との統合](marketing-cloud.md)
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
-   + [Adobe I/O を使用した Adobe Target との統合](integration-target-ims-adobe-io.md)
+   + [IMS を使用したAdobe Targetとの統合](integration-target-ims.md)
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
