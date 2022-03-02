@@ -1,16 +1,16 @@
 ---
-title: Adobe I/Oを使用したAdobe Analyticsとの統合
-description: Adobe I/Oを使用したAEMとAdobe Analyticsの統合について説明します
-source-git-commit: 5a253147baf64bf1b12b3ea6387f4b377e5d421f
+title: IMS を使用したAdobe Analyticsとの統合
+description: IMS を使用したAEMとAdobe Analyticsの統合について説明します
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
-# Adobe I/Oを使用したAdobe Analyticsとの統合 {#integration-with-adobe-analytics-using-adobe-i-o}
+# IMS を使用したAdobe Analyticsとの統合 {#integration-with-adobe-analytics-using-ims}
 
-Analytics Standard API を使用してAEMとAdobe Analyticsを統合するには、Adobe IMS(Identity Management System) とAdobe I/Oの設定が必要です。
+Analytics Standard API を使用してAEMとAdobe Analyticsを統合するには、Adobe IMS開発者コンソールを使用してAdobe(Identity Management System) を設定する必要があります。
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ Analytics Standard API を使用してAEMとAdobe Analyticsを統合するには
 * [Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) は次のアカウントをプロビジョニングする必要があります。
 
    * Adobeコンソール
-   * Adobe I/O
+   * Adobe開発者コンソール
    * Adobe Analyticsと
    * Adobe IMS(Identity Management System)
 
 * 組織のシステム管理者は、Admin Consoleを使用して、組織内の必要なデベロッパーを関連する製品プロファイルに追加する必要があります。
 
-   * これにより、特定の開発者に、開発内で統合を有効にする権限をAdobe I/Oできます。
+   * これにより、特定の開発者に、開発者コンソール内で統合を有効にする権限をAdobeに与えます。
    * 詳しくは、 [開発者の管理](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -52,7 +52,7 @@ Analytics Standard API を使用してAEMとAdobe Analyticsを統合するには
 
    ![](assets/integrate-analytics-io-01.png)
 
-1. 選択 **ダウンロード** ( または **公開鍵をダウンロード**) をクリックして、ファイルをローカルドライブにダウンロードし、 [Adobe AnalyticsとAEMの統合のためのAdobe I/Oの設定](#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem).
+1. 選択 **ダウンロード** ( または **公開鍵をダウンロード**) をクリックして、ファイルをローカルドライブにダウンロードし、 [AEMとのAdobe Analytics統合用の IMS の設定](#configuring-ims-for-adobe-analytics-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -60,23 +60,17 @@ Analytics Standard API を使用してAEMとAdobe Analyticsを統合するには
 
    ![](assets/integrate-analytics-io-02.png)
 
-## Adobe AnalyticsとAEMの統合用のAdobe I/Oの設定 {#configuring-adobe-i-o-for-adobe-analytics-integration-with-aem}
+## AEMとのAdobe Analytics統合用の IMS の設定 {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-AEMが使用するAdobe I/Oプロジェクト（統合）をAdobe Analyticsで作成し、必要な権限を割り当てる必要があります。
+Adobe開発者コンソールを使用して、Adobe Analyticsでプロジェクト（統合）を作成し (AEMで使用するために )、必要な権限を割り当てる必要があります。
 
 ### プロジェクトの作成 {#creating-the-project}
 
-Adobe I/Oコンソールを開き、AEMが使用するAdobe Analyticsで I/O プロジェクトを作成します。
+Adobe開発者コンソールを開き、AEMが使用するAdobe Analyticsでプロジェクトを作成します。
 
-<!--
->[!NOTE]
->
->See also the [Adobe I/O tutorials](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
--->
+1. プロジェクト用のAdobe開発者コンソールを開きます。
 
-1. プロジェクトのAdobe I/Oコンソールを開きます。
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. 既に作成したプロジェクトが表示されます。 選択 **新規プロジェクトを作成**  — 場所と使用方法は、次のものに依存します。
 
@@ -129,11 +123,11 @@ Adobe I/Oコンソールを開き、AEMが使用するAdobe Analyticsで I/O プ
 1. 選択 **API 資格情報**&#x200B;を選択し、必要な統合設定を選択します。
 1. 選択 **編集者** を **製品の役割**;の代わりに **監視者**.
 
-## Adobe I/O統合プロジェクト用に保存された詳細 {#details-stored-for-the-adobe-io-integration-project}
+## 開発者コンソール統合プロジェクト用にAdobeされた詳細 {#details-stored-for-the-ims-integration-project}
 
-Adobe I/Oプロジェクトコンソールから、すべての統合プロジェクトのリストを表示できます。
+Adobe開発者プロジェクトコンソールから、すべての統合プロジェクトのリストを表示できます。
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 特定のプロジェクトエントリを選択して、設定の詳細を表示します。 次の機能が含まれます。
 
@@ -146,22 +140,22 @@ Adobe I/Oプロジェクトコンソールから、すべての統合プロジ�
 * API
    * 例： Adobe Analytics
 
-これらの一部は、AEMのAdobe AnalyticsでAdobe I/Oの統合を完了する必要があります。
+これらの一部は、AEMのAdobe Analyticsとの統合を完了する必要があります。
 
 ## AEMでの IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 
-AEMに戻ると、Analytics のAdobe I/O統合から必要な値を追加して、IMS 設定を完了できます。
+AEMに戻ると、Analytics の統合プロジェクトから必要な値を追加することで、IMS 設定を完了できます。
 
 1. に戻る [AEMで IMS 設定を開く](#configuring-an-ims-configuration-generating-a-public-key).
 1. 「**次へ**」を選択します。
 
-1. ここで、 [Adobe I/Oのプロジェクト設定からの詳細](#details-stored-for-the-adobe-io-integration-project):
+1. ここで、 [開発者コンソール統合プロジェクト用にAdobeされた詳細](#details-stored-for-the-ims-integration-project):
 
    * **タイトル**:テキスト。
    * **認証サーバー**:次の場所からコピー&amp;ペースト `aud` 行 **ペイロード** の下のセクション、例： `https://ims-na1.adobelogin.com` 以下の例では
-   * **API キー**:これを **資格情報** セクション [プロジェクトの概要](#details-stored-for-the-adobe-io-integration-project)
-   * **クライアント秘密鍵**:これを [「サービスアカウント (JWT) 」セクションの「クライアントの秘密鍵」タブ](#details-stored-for-the-adobe-io-integration-project)、および
-   * **ペイロード**:これを [「サービスアカウント (JWT) 」セクションの「 JWT 」タブを生成](#details-stored-for-the-adobe-io-integration-project)
+   * **API キー**:これを **資格情報** セクション [プロジェクトの概要](#details-stored-for-the-ims-integration-project)
+   * **クライアント秘密鍵**:これを [「サービスアカウント (JWT) 」セクションの「クライアントの秘密鍵」タブ](#details-stored-for-the-ims-integration-project)、および
+   * **ペイロード**:これを [「サービスアカウント (JWT) 」セクションの「 JWT 」タブを生成](#details-stored-for-the-ims-integration-project)
 
    ![AEM IMS 設定の詳細](assets/integrate-analytics-io-10.png)
 

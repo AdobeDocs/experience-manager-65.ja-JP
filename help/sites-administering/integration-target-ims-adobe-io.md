@@ -1,25 +1,17 @@
 ---
-title: Adobe I/O を使用した Adobe Target との統合
-seo-title: Integration with Adobe Target using Adobe I/O
-description: Adobe I/Oを使用したAEMとAdobe Targetの統合について説明します
-seo-description: Learn about integrating AEM with Adobe Target using Adobe I/O
-uuid: dd4ed638-e182-4d7e-9c98-282431812467
-contentOwner: aheimoz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: integration
-discoiquuid: 3b9285db-8fba-4d12-8f52-41daa50a5403
-docset: aem65
-source-git-commit: e6f4f3cf31c39853b45450e0c925694fc45f7aec
+title: IMS を使用したAdobe Targetとの統合
+description: IMS を使用したAEMとAdobe Targetの統合について説明します
+exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
+source-git-commit: e3f99c250934f796be404d947503d9367f2c510d
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1500'
 ht-degree: 18%
 
 ---
 
-# Adobe I/O を使用した Adobe Target との統合{#integration-with-adobe-target-using-adobe-i-o}
+# IMS を使用したAdobe Targetとの統合{#integration-with-adobe-target-using-ims}
 
-Target Standard API を使用してAEMとAdobe Targetを統合するには、Adobe IMS(Identity Management System) とAdobe I/Oの設定が必要です。
+Target Standard API を使用してAEMとAdobe Targetを統合するには、Adobe IMS開発者コンソールを使用してAdobe(Identity Management System) を設定する必要があります。
 
 >[!NOTE]
 >
@@ -37,13 +29,13 @@ Target Standard API を使用してAEMとAdobe Targetを統合するには、Ado
 * [Adobeサポート](https://helpx.adobe.com/jp/contact/enterprise-support.ec.html) は次のアカウントをプロビジョニングする必要があります。
 
    * Adobeコンソール
-   * Adobe I/O
+   * Adobe開発者コンソール
    * Adobe Targetと
    * Adobe IMS(Identity Management System)
 
 * 組織のシステム管理者は、Admin Consoleを使用して、組織内の必要なデベロッパーを関連する製品プロファイルに追加する必要があります。
 
-   * これにより、特定の開発者に、開発内で統合を有効にする権限をAdobe I/Oできます。
+   * これにより、特定の開発者に、開発者コンソール内で統合を有効にする権限をAdobeに与えます。
    * 詳しくは、 [開発者の管理](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 
@@ -60,7 +52,7 @@ Target Standard API を使用してAEMとAdobe Targetを統合するには、Ado
 
    ![](assets/integrate-target-io-01.png)
 
-1. 選択 **ダウンロード** ( または **公開鍵をダウンロード**) をクリックして、ファイルをローカルドライブにダウンロードし、 [Adobe TargetとAEMの統合のためのAdobe I/Oの設定](#configuring-adobe-i-o-for-adobe-target-integration-with-aem).
+1. 選択 **ダウンロード** ( または **公開鍵をダウンロード**) をクリックして、ファイルをローカルドライブにダウンロードし、 [AEMとのAdobe Target統合用の IMS の設定](#configuring-ims-for-adobe-target-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -68,21 +60,17 @@ Target Standard API を使用してAEMとAdobe Targetを統合するには、Ado
 
    ![](assets/integrate-target-io-02.png)
 
-## Adobe TargetとAEMの統合用のAdobe I/Oの設定 {#configuring-adobe-i-o-for-adobe-target-integration-with-aem}
+## AEMとのAdobe Target統合用の IMS の設定 {#configuring-ims-for-adobe-target-integration-with-aem}
 
-AEMが使用するAdobe I/Oプロジェクト（統合）をAdobe Targetで作成し、必要な権限を割り当てる必要があります。
+Adobe開発者コンソールを使用して、AEMが使用するAdobe Targetとのプロジェクト（統合）を作成し、必要な権限を割り当てる必要があります。
 
 ### プロジェクトの作成 {#creating-the-project}
 
-Adobe I/Oコンソールを開き、AEMが使用するAdobe Targetで I/O プロジェクトを作成します。
+Adobe開発者コンソールを開き、AEMが使用するAdobe Targetでプロジェクトを作成します。
 
->[!NOTE]
->
->関連トピック [Adobe I/Oチュートリアル](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html).
+1. プロジェクト用のAdobe開発者コンソールを開きます。
 
-1. プロジェクトのAdobe I/Oコンソールを開きます。
-
-   [https://console.adobe.io/projects](https://console.adobe.io/projects)
+   [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. 既に作成したプロジェクトが表示されます。 選択 **新規プロジェクトを作成**  — 場所と使用方法は、次のものに依存します。
 
@@ -145,11 +133,11 @@ Adobe I/Oコンソールを開き、AEMが使用するAdobe Targetで I/O プロ
 1. 選択 **API 資格情報**&#x200B;を選択し、必要な統合設定を選択します。
 1. 選択 **編集者** を **製品の役割**;の代わりに **監視者**.
 
-## Adobe I/O統合プロジェクト用に保存された詳細 {#details-stored-for-the-adobe-io-integration-project}
+## 開発者コンソール統合プロジェクト用にAdobeされた詳細 {#details-stored-for-the-ims-integration-project}
 
-Adobe I/Oプロジェクトコンソールから、すべての統合プロジェクトのリストを表示できます。
+Adobe開発者コンソール — プロジェクトで、すべての統合プロジェクトのリストを表示できます。
 
-* [https://console.adobe.io/projects](https://console.adobe.io/projects)
+* [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 選択 **表示** （特定のプロジェクトエントリの右側）をクリックして、設定に関する詳細を表示します。 次の機能が含まれます。
 
@@ -162,22 +150,22 @@ Adobe I/Oプロジェクトコンソールから、すべての統合プロジ�
 * API
    * 例： Adobe Target
 
-これらの一部は、AEMで Target のAdobe I/O統合を完了する必要があります。
+これらの一部は、IMS に基づいてAEMでAdobe Targetの統合を完了する必要があります。
 
 ## AEMでの IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 
-AEMに戻ると、Target のAdobe I/O統合から必要な値を追加することで、IMS 設定を完了できます。
+AEMに戻ると、Target 用の開発者コンソール統合から必要な値を追加することで、IMSAdobeを完了できます。
 
 1. に戻る [AEMで IMS 設定を開く](#configuring-an-ims-configuration-generating-a-public-key).
 1. 「**次へ**」を選択します。
 
-1. ここで、 [Adobe I/Oの詳細](#details-stored-for-the-adobe-io-integration-project):
+1. ここで、 [開発者コンソールでのプロジェクト設定のAdobeの詳細](#details-stored-for-the-ims-integration-project):
 
    * **タイトル**:テキスト。
    * **認証サーバー**:次の場所からコピー&amp;ペースト `aud` 行 **ペイロード** の下のセクション、例： `https://ims-na1.adobelogin.com` 以下の例では
-   * **API キー**:これを [概要](#details-stored-for-the-adobe-io-integration-project) Target のAdobe I/O統合の節
-   * **クライアント秘密鍵**:これを [概要](#details-stored-for-the-adobe-io-integration-project) Target のAdobe I/O統合のセクション、
-   * **ペイロード**:これを [JWT を生成](#details-stored-for-the-adobe-io-integration-project) Target のAdobe I/O統合の節
+   * **API キー**:これを [概要](#details-stored-for-the-ims-integration-project) セクション
+   * **クライアント秘密鍵**:これを [概要](#details-stored-for-the-ims-integration-project) セクションとコピー
+   * **ペイロード**:これを [JWT を生成](#details-stored-for-the-ims-integration-project) セクション
 
    ![](assets/integrate-target-io-10.png)
 
@@ -191,7 +179,7 @@ AEMに戻ると、Target のAdobe I/O統合から必要な値を追加するこ�
 
 設定が期待どおりに動作していることを確認するには：
 
-1. 次を開きます：:
+1. 次を開きます。
 
    * `https://localhost<port>/libs/cq/adobeims-configuration/content/configurations.html`
 
