@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 37e7f2552ae712bc23eb3ce1af1b41808f4d1810
+source-git-commit: b02ec58b94e37e0d9902078bbd2387c7b75a208b
 workflow-type: tm+mt
-source-wordcount: '2644'
-ht-degree: 42%
+source-wordcount: '3071'
+ht-degree: 37%
 
 ---
 
@@ -134,75 +134,44 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 >[!NOTE]
 >
->* [!DNL Experience Manager Forms] では、[!DNL Experience Manager] サービスパックのリリース予定日の 1 週間後にアドオンパッケージをリリースします。
+>* [!DNL Experience Manager Forms] では、予定されている [!DNL Experience Manager] サービスパックリリース日の 1 週間後にアドオンパッケージをリリースします。
 
 
-<!--
+**アダプティブフォーム**
 
-**Adaptive Forms**
+* アダプティブフォーム内のテキストコンポーネントにテーブルが含まれている場合、そのコンポーネントにコンテンツを貼り付けると、エディター内のテーブルが消去される (NPR-38078)。
 
-* Accessibility – When you set the `Wizard` layout for a panel in an adaptive form, the navigation buttons do not have Aria labels and role (NPR-37613).
+* フォームは、保存されたフォームを開いた場合にのみツールバーを表示する (NPR-38060)。
 
-* Validations on a date field in an adaptive form does not work, as expected (NPR-37556).
+* 取り消し操作がルールエディターに対して正しく動作しない (NPR-37973)。
 
-* When the label text for the Checkbox and Radio Button components is long, the text does not fit appropriately (NPR-37294).
+* `getAemFormContainer` AEM Forms 6.5.10.0のインストール後に null ポインタを返す (NPR-37881)。
 
-* When you apply styling changes to the Thank You message of the AEM Forms Container component, the changes do not replicate in the source adaptive form (NPR-37284).
+* アクセシビリティ — スクリーンリーダーは、フィールドをクリックした場合にのみ通知するのではなく、タブフォーカスがフィールドに移るとすぐに、テキストボックスの長い説明を通知する。(NPR-37855)
 
-* Differences in the value of the `Switch` component on the user interface and in the backend (NPR-37268).
+* テキストボックスに対して「リッチテキストを許可」プロパティを有効にすると、許可されている文字の長さの上限に問題が生じます (NPR-37825)。
 
-* When you use the keyboard keys to navigate to the `Submit` option and press the `Enter` key, you can submit the adaptive form multiple times (CQ-4333993).
+* アダプティブフォーム内の任意のコンポーネントをコピーする際に CSS が発生する (NPR-37812)。
 
-* The Remove operation for the File Attachment component does not work, as expected (NPR-37376).
+**インタラクティブコミュニケーション**
 
-* When a label for a field exceeds 1000 characters in an adaptive form that translates to various languages, the dictionary fails to retrieve the translation of the label (CQ-4329290).
+* 「参照」タブに、インタラクティブ通信内の参照が一覧表示されない (NPR-37995)。
 
 **Document Services**
 
-* An error displays while using the Assembler service (NPR-37606):
+* Assembler が、期待どおりにフォントを埋め込まない (NPR-38056)。
 
-  ```TXT
-    500 Internal Server Error
-  ```
+* ワークベンチを使用してPDFを PDFA に変換できない (NPR-37879)。
 
-* When the document attachments are passed to the Assembler service, the following exception displays (NPR-37582):
+**Document Security**
 
-  ```TXT
-    com.adobe.livecycle.assembler.client.ProcessingException: ⁪: Failed to execute the DDX
-  ```
-
-* Missing closing parenthesis from data after converting a PDF document to a PDF-A/1B PDF document (NPR-37608).
-
-**HTML5 Forms**
-
-* When you install AEM 6.5.10.0, the HTML preview for an XDP form does not work (NPR-37503, CQ-4331926).
-
-* Text overlapping issues while migrating the PDF forms to HTML 5 forms in various languages (NPR-37173).
-
-**Letters**
-
-* When you submit a letter and reopen it in HTML view, the position of text document fragments does not remain the same (NPR-37307).
-
-**Forms Workflow**
-
-* In case of embedded container workflow, you get multiple workflow completion emails even after selecting the `Notify on Complete of Container Workflow` option (NPR-37280).
+* PDFの暗号化は、java バージョン 1.8.0_281 にアップグレードした後は機能しません (NPR-37716)。
 
 **Foundation JEE**
 
-* After installing AEM 6.5 Forms Service Pack 9, the CRX repository URLs are no longer available (NPR-37592).
+* AEM Forms 6.5.7.0 のランダムな時間の経過後に、マルチスレッドPDFジェネレーターサービスのデッドロックが発生する (NPR-38053)。
 
-**Issues fixed in AEM Forms 6.5.11.1**
-
->[!NOTE]
->
->If you have not upgraded to AEM 6.5.11.0 Forms, install the AEM Forms 6.5.11.1 add-on package directly. If you have installed AEM 6.5.11.0 Forms, Adobe recommends to upgrade to AEM 6.5.11.1 Forms.
-
-* Submit actions, Send Email and Invoke an AEM Workflow stop working after installing the Forms 6.5.11.0 add-on package.
-* CreatePDF operation stops converting Microsoft Word documents to PDF documents after installing the Forms 6.5.11.0 add-on package.
-* (JEE Only) Critical security vulnerabilities (CVE-2021-44228 and CVE-2021-45046) reported for Apache Log4j2.
-* (JEE only) Assembler DSC in 6.5.11.0 patch contains incorrect metainfo like specification version and impl version.
-
--->
+* AEM Workbench バージョン 6.5.0.20210518.1.338459では、電子メールのスタートポイントを使用し、ユーザー名とパスワードを編集した場合、設定は保存されません (NPR-37967)。
 
 
 セキュリティ更新について詳しくは、[[!DNL Experience Manager] セキュリティ情報ページ](https://helpx.adobe.com/jp/security/products/experience-manager.html)を参照してください。
@@ -261,35 +230,31 @@ B. [パッケージマネージャーの HTTP API](/help/sites-administering/pac
 
 このリリースでの動作が認定されたプラットフォームについては、 [技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-<!-- 
-
-### Install Adobe Experience Manager Forms add-on package {#install-aem-forms-add-on-package}
+### Adobe Experience Manager Formsアドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->Skip if you are not using Experience Manager Forms. Fixes in Experience Manager Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>Experience Manager Formsを使用していない場合はスキップします。 Experience Manager Formsでの修正は、スケジュールされた週の後に、個別のアドオンパッケージを通じて配信されます [!DNL Experience Manager] Service Pack リリース。
 
-1. Ensure that you have installed the Adobe Experience Manager Service Pack.
-1. Download the corresponding Forms add-on package listed at [AEM Forms releases](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates) for your operating system.
-1. Install the Forms add-on package as described in [Installing AEM Forms add-on packages](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->Experience Manager 6.5.10.0 includes a new version of [AEM Forms Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). If you are using an older version of AEM Forms Compatibility Package and updating to Experience Manager 6.5.10.0, install the latest version of the package post installation of Forms Add-On Package.
-
-### Install Adobe Experience Manager Forms on JEE {#install-aem-forms-jee-installer}
+1. Adobe Experience Manager Service Pack がインストールされていることを確認します。
+1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
+1. Formsアドオンパッケージをインストールします。詳しくは、 [AEM Formsアドオンパッケージのインストール](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
 
 >[!NOTE]
 >
->Skip if you are not using AEM Forms on JEE. Fixes in Adobe Experience Manager Forms on JEE are delivered through a separate installer.
+>Experience Manager6.5.12.0には、 [AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). 古いバージョンのAEM Forms互換性パッケージを使用していて、Experience Manager6.5.10.0にアップデートする場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
-For information about installing the cumulative installer for Experience Manager Forms on JEE and post-deployment configuration, see the [release notes](jee-patch-installer-65.md).
+### JEE でのAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
 
 >[!NOTE]
 >
->After installing the cumulative installer for Experience Manager Forms on JEE, install the latest Forms add-on package, delete the Forms add-on package from the `crx-repository\install` folder, and restart the server.
+>JEE で AEM Forms を使用していない場合はスキップします。JEE 上のAdobe Experience Manager Formsの修正は、別のインストーラーを通じて提供されます。
 
--->
+JEE 上のExperience Manager Formsの累積インストーラーのインストールとデプロイ後の設定について詳しくは、 [リリースノート](jee-patch-installer-65.md).
+
+>[!NOTE]
+>
+>JEE 上のExperience Manager Formsの累積インストーラーをインストールした後、最新のFormsアドオンパッケージをインストールし、次の場所からFormsアドオンパッケージを削除します。 `crx-repository\install` フォルダーを開き、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
 
