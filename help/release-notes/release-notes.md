@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6a89cb79ccfbcec7385832d5682bf61895253718
+source-git-commit: b1e38323fbbb268de76067eb85596119b44221c2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 44%
+source-wordcount: '2662'
+ht-degree: 43%
 
 ---
 
@@ -325,17 +325,11 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * AEM 6.5 Service Pack 12 をインストールし、ステータス ZIP ファイルをダウンロードしようとすると、Experience Manager は破損したファイルをダウンロードします。
 
-   >[!CAUTION]
-   >
-   >「インデックス定義」パッケージの新しいバージョンが開発中です。 以下のリンクは、利用可能になるとすぐに公開されます。
-   >
-   >それまでは、ホットフィックスについてカスタマーケアにお問い合わせください。
+   この問題を回避するには、次の 2 つの項目をAEMインスタンスにダウンロードしてインストールします **前** ステータス ZIP ファイルをダウンロードする：
 
-   <!--
-  Download and install [AEM Sites SEO Index Package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/sites-seo-index-content-1.0.0.zip) on your AEM instance before downloading the ZIP file to resolve the issue.
-  -->
+   * 以下 [hotfix](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   問題を解決するには、ZIP ファイルをダウンロードする前に、AEM Sites SEO インデックスパッケージを AEM インスタンスにダウンロードしてインストールしてください。
+   * の [AEM Sites SEO インデックスパッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
 
 * [!DNL Microsoft Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss EAP 7.1] をサポートしていないので、[!DNL Microsoft Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
