@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: b02ec58b94e37e0d9902078bbd2387c7b75a208b
+source-git-commit: 7649b9a36fbf47ec92bd4c33cd7590d9934aa169
 workflow-type: tm+mt
-source-wordcount: '3071'
-ht-degree: 37%
+source-wordcount: '3204'
+ht-degree: 36%
 
 ---
 
@@ -153,6 +153,10 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * アダプティブフォーム内の任意のコンポーネントをコピーする際に CSS が発生する (NPR-37812)。
 
+**フォームデータモデル**
+
+* フォームデータモデルに接続されたアダプティブフォームの添付ファイルをデータベースに保存する際に問題が発生します (CQ-4338561)。
+
 **インタラクティブコミュニケーション**
 
 * 「参照」タブに、インタラクティブ通信内の参照が一覧表示されない (NPR-37995)。
@@ -163,15 +167,38 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * ワークベンチを使用してPDFを PDFA に変換できない (NPR-37879)。
 
+* AEM 6.5.7.0 FormsからAEM 6.5.10.0 Formsにアップグレードした後の、PDFジェネレーターサービスの使用中に Office ドキュメントに関する問題 (NPR-37758)。
+
 **Document Security**
 
 * PDFの暗号化は、java バージョン 1.8.0_281 にアップグレードした後は機能しません (NPR-37716)。
 
 **Foundation JEE**
 
-* AEM Forms 6.5.7.0 のランダムな時間の経過後に、マルチスレッドPDFジェネレーターサービスのデッドロックが発生する (NPR-38053)。
+* AEM 6.5.7.0 Formsのランダムな時間の経過後に、マルチスレッドPDFジェネレーターサービスのデッドロックが発生する (NPR-38053)。
 
-* AEM Workbench バージョン 6.5.0.20210518.1.338459では、電子メールのスタートポイントを使用し、ユーザー名とパスワードを編集した場合、設定は保存されません (NPR-37967)。
+* AEM Workbench バージョン 6.5.0.20210518.1.338459では、電子メールのスタートポイントを使用し、ユーザー名とパスワードを編集した場合、設定は保存されません (NPR-37967、CQ-4336081)。
+
+* ログを保存すると、CPU 使用率が高くなり、サーバーの再起動が必要になる (NPR-37868)。
+
+* `Gemfire.log` は `temp\adobejb_server1\Caching` AEM Forms-6.5.0-0038 のインストール後のフォルダー (CQ-4340237)。
+
+* 次のエラーは、 `ConfigurationManager.sh` コマンド (CQ-4338323):
+
+   ```TXT
+     [root@localhost bin]# ./ConfigurationManager.sh 
+     bash: ./ConfigurationManagerCLI.sh: /bin/sh^M: bad interpreter: No such file or directory
+   ```
+
+* RHEL8 上のAEM 6.5 Formsは、JBOSS EAP 7.3 および MySQL8(CQ-4331770) をサポートしていません。
+
+**ワークフロー**
+
+* AEM 6.5.10.0 Formsパブリッシュインスタンスのワークフローの一部として UTF-8 特殊文字を保存する際の問題 (NPR-37673)。
+
+* ArrayList タイプと JSON サブタイプの変数を作成する際に問題が発生する (NPR-37600)。
+
+* AEM 6.5.9.0 FormsおよびAEM 6.5.10.0 Formsのワークフローの「変数を設定」手順での XPath/Dot 表記ブラウザーの問題 (CQ-4336582)。
 
 
 セキュリティ更新について詳しくは、[[!DNL Experience Manager] セキュリティ情報ページ](https://helpx.adobe.com/jp/security/products/experience-manager.html)を参照してください。
@@ -292,7 +319,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
    * [AEM 6.5.12 Sites HotFix-NPR-38144](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
 
-   * [GraphQL インデックスパッケージ 1.0.4 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.4.zip)
+   * [GraphQL インデックスパッケージ 1.0.3 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
 
 * [!DNL Microsoft Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss EAP 7.1] をサポートしていないので、[!DNL Microsoft Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
