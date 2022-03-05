@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 Forms へのアップグレード
-seo-title: AEM 6.5 Forms へのアップグレード
+seo-title: Upgrade to AEM 6.5 Forms
 description: AEM 6.1 Forms、AEM 6.2 Forms、LiveCycle ES4 SP1 を、AEM 6.3 Forms に直接アップグレードすることができます。
-seo-description: AEM 6.1 Forms、AEM 6.2 Forms、LiveCycle ES4 SP1 を、AEM 6.3 Forms に直接アップグレードすることができます。
+seo-description: You can perform a direct upgrade from AEM 6.1 Forms, AEM 6.2 Forms, and LiveCycle ES4 SP1 to AEM 6.3 Forms.
 uuid: 1435246a-9215-4d88-b52c-59a5c329bb77
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -11,24 +11,34 @@ geptopics: SG_AEMFORMS/categories/jee
 discoiquuid: e745033f-8015-4fae-9d82-99d35802c0a6
 role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 71%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# JEE上のAEM 6.5 Formsへのアップグレード {#upgrade-to-aem-forms-jee}
+# JEE 上のAEM 6.5 Formsへのアップグレード {#upgrade-to-aem-forms-jee}
 
-JEE 上の AEM 6.3 Forms または JEE 上の AEM 6.4 Forms を JEE 上の AEM 6.5 Forms にアップグレードするには、以下の手順を実行します。
+AEM 6.5.12.0 Forms on JEE には、次の 2 種類のインストーラーが用意されています。完全なインストーラーとパッチインストーラー。
 
-1. JEE 上の AEM 6.5 Forms のインストーラーを、[アドビライセンス Web サイト（LWS）](https://licensing.adobe.com/)からダウンロードします。インストーラーをダウンロードするには、有効なメンテナンス＆サポートの契約が必要です。
-1. [アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemfroms_upgrade_checklist_65)を参照して、アップグレードを正常に実行するために実行するチェックについて確認してください。
-1. [AEM Formsへのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65)を参照して、サーバーのダウンタイムを最小限に抑えながらアップグレードを正しく実行するためのタスクを確認し、実行してください。
+**完全インストーラ**:以下を使用して、 [JEE 上のAEM 6.5.12.0フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) 新しいAEM Formsインスタンスを設定したり、JEE 上のAEM 6.3 Forms、JEE 上のAEM 6.4、および JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.12.0 Formsへのアウトオブプレースアップグレードを実行したりする場合。
+
+**パッチインストーラー**: [JEE 上のAEM 6.5.12.0パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) は、既にAEM 6.5.x.x バージョンを使用しているお客様向けです。 パッチインストーラーを使用して、AEM Formsの最新バージョンにアップグレードできます。
+
+次の表は、フルインストーラーとパッチインストーラーを使用する際のシナリオを示しています。
+
+![](assets/full-and-patch-installer.png)
+
+既存の JEE 上のAEM 6.3 Formsまたは JEE 上のAEM 6.4 Formsを JEE 上のAEM 6.5.12.0 Formsにアップグレードするには、次の手順を実行します。
+
+1. JEE 上のAEM 6.5 Formsインストーラーをからダウンロードします。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). インストーラーを使用するには、有効なメンテナンス&amp;サポート契約が必要です。
+1. 詳しくは、 [アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65) を参照して、アップグレードを正常に実行するための確認を行ってください。
+1. 詳しくは、 [AEM Formsへのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65) を参照して、サーバーのダウンタイムを最小限に抑えながらアップグレードを正しく実行するタスクを確認し、実行します。
 1. 現在の環境とアプリケーションサーバーに応じて、以下に示すいずれかのドキュメントに記載されている手順を実行します。
 
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（JBoss Turnkey 版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
 
-LiveCycleES2、LiveCycleES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Formsから6.5 Formsへの直接アップグレードは使用できまAEMせん。 LiveCycle または AEM Forms のバージョンを 1 つ以上中間アップグレードした後に、AEM 6.5 Forms からアップグレードすることができます。中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
+LiveCycleES2、LiveCycleES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Formsから 6.5 Formsへの直接アップグレードは使用できませAEMん。 1 つ以上のバージョンのLiveCycleまたはAEM Formsに対して中間アップグレードを実行し、AEM 6.5 Formsにアップグレードできます。 中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。

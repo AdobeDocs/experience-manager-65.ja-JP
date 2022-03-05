@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 Forms へのアップグレード
-seo-title: AEM 6.5 Forms へのアップグレード
+seo-title: Upgrade to AEM 6.5 Forms
 description: AEM 6.3 Forms および AEM 6.4 Forms から AEM 6.5 Forms に直接アップグレードすることができます。
-seo-description: AEM 6.3 Forms および AEM 6.4 Forms から AEM 6.5 Forms に直接アップグレードすることができます。
+seo-description: You can perform a direct upgrade from AEM 6.3 Forms and AEM 6.4 Forms to AEM 6.5 Forms.
 uuid: 7a38cd72-2d01-4af7-b6a3-00dc34c4f02b
 content-type: reference
 topic-tags: installing
@@ -11,10 +11,10 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -47,6 +47,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 * JEE 上の AEM 6.3 Forms
 * JEE 上の AEM 6.4 Forms
+* JEE 上のAEM 6.5.x.x
 
 以下の場合は、マルチホップアップグレードを実行することができます。
 
@@ -56,6 +57,16 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * JEE 上の AEM 6.0 Forms
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
+
+AEM 6.5.12.0 Forms on JEE には、次の 2 種類のインストーラーが用意されています。完全なインストーラーとパッチインストーラー。
+
+**完全インストーラ**:フルインストーラーを使用して、新しいAEM Formsインスタンスを設定したり、JEE 上のAEM 6.3 Forms、JEE 上のAEM 6.4 からアップグレードしたり、JEE 上のAEM 6.5.x.x から JEE 上のAEM 6.5.12.0 Formsにアウトオブプレースアップグレードしたりできます。
+
+**パッチインストーラー**:パッチインストーラーは、AEM 6.5.x.x バージョンを既に使用しているお客様向けです。 パッチインストーラーを使用して、AEM Formsの最新バージョンにアップグレードできます。
+
+以下の画像は、フルインストーラーとパッチインストーラーを使用する際のシナリオを示しています。
+
+![](assets/full-and-patch-installer.png)
 
 <!--
 [Work in Progress]
