@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 7649b9a36fbf47ec92bd4c33cd7590d9934aa169
+source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
 workflow-type: tm+mt
-source-wordcount: '3204'
-ht-degree: 36%
+source-wordcount: '3154'
+ht-degree: 37%
 
 ---
 
@@ -111,7 +111,6 @@ The following accessibility enhancements are available in [!DNL Assets]:
    * 親フィールドの最後の選択のみが、依存する編集不可フィールドに対して保存される (NPR-37858)。
    * 依存するドロップダウン（複数値フィールド）は、選択した親ドロップダウンのデフォルト値を断続的に反映します (NPR-37791)。
 
-
 ### [!DNL Dynamic Media] {#dynamic-media-65120}
 
 [!DNL Dynamic Media] で、以下の問題を修正しました。
@@ -128,9 +127,7 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * インボックス項目にフィルターを適用した場合、スクロールが期待どおりに機能しません (CQ-4333594)。
 
-
 ### [!DNL Forms] {#forms-65120}
-
 
 >[!NOTE]
 >
@@ -200,7 +197,6 @@ The following accessibility enhancements are available in [!DNL Assets]:
 
 * AEM 6.5.9.0 FormsおよびAEM 6.5.10.0 Formsのワークフローの「変数を設定」手順での XPath/Dot 表記ブラウザーの問題 (CQ-4336582)。
 
-
 セキュリティ更新について詳しくは、[[!DNL Experience Manager] セキュリティ情報ページ](https://helpx.adobe.com/jp/security/products/experience-manager.html)を参照してください。
 
 ## 6.5.12.0 のインストール {#install}
@@ -266,10 +262,6 @@ B. [パッケージマネージャーの HTTP API](/help/sites-administering/pac
 1. Adobe Experience Manager Service Pack がインストールされていることを確認します。
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. Formsアドオンパッケージをインストールします。詳しくは、 [AEM Formsアドオンパッケージのインストール](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package).
-
->[!NOTE]
->
->Experience Manager6.5.12.0には、 [AEM Forms互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#aem-65-forms-releases). 古いバージョンのAEM Forms互換性パッケージを使用していて、Experience Manager6.5.10.0にアップデートする場合は、Formsアドオンパッケージのインストール後に、最新バージョンのパッケージをインストールします。
 
 ### JEE でのAdobe Experience Manager Formsのインストール {#install-aem-forms-jee-installer}
 
