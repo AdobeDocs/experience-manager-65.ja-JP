@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 23b5f83e598210f14ee20e8fa5fb01434b93faae
+source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
 workflow-type: tm+mt
-source-wordcount: '3154'
-ht-degree: 37%
+source-wordcount: '3180'
+ht-degree: 36%
 
 ---
 
@@ -84,6 +84,7 @@ ht-degree: 37%
 * [コミュニティ] グループメンバー用のテーブル内のコンテンツをクリックできません (CQ-4334404)。
 * [Oak] コールドスタンバイ同期プロセスが機能せず、エラーをログに記録しています (CQ-4333868)。
 * [Platform Foundation UI] [!DNL Experience Manager] ユーザーが選択すると、開始ページが再び表示されます [!DNL Adobe Experience Manager] アイコンが既に開始ページに表示されています (CQ-4317409)。
+* （レプリケーション権限を持たない）ユーザーが（ページがアクティベートされていない場合でも）ページを削除または移動する場合、 `Page Subtree Activation Check` 設定で `Page Manager Factory` を有効にする必要がある (NPR-37936)。
 
 ### [!DNL Assets] {#assets-65120}
 
