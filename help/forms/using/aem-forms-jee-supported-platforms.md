@@ -11,9 +11,9 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 45a26c34ba879e1948ace785e861d38cce71e3a6
+source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '3515'
 ht-degree: 79%
 
 ---
@@ -115,7 +115,13 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>A：サポート対象</td>
    <td>マイナーリリースとアップデート</td>
   </tr>
- </tbody>
+  <tr>
+   <td> IBM JAVA1.8.0_291（ビルド 8.0.6.30）<br /> </td>
+   <td>A：サポート対象</td>
+   <td>マイナーリリースとアップデート</td>
+  </tr>
+
+</tbody>
 </table>
 
 >[!NOTE]
@@ -159,7 +165,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サポート対象</td>
   </tr>
   <tr>
-   <td><p>Microsoft SQL Server 2016</p> </td>
+   <td><p>Microsoft SQL Server 2016 （廃止）</p> </td>
    <td><p>リポジトリ Microkernel</p> </td>
    <td><p>サポート対象</p> </td>
   </tr>
@@ -244,7 +250,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td>IBM® WebSphere® Application Server 9.0 <sup>[1] [4]</sup><br /> </td>
+   <td>IBM® WebSphere® Application Server 9.0.0.10 <sup>[1] [4]</sup><br /> </td>
    <td>A：サポート対象</td>
    <td>サービスパックと重要なアップデート</td>
   </tr>
@@ -751,7 +757,7 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 ## Platform の更新 {#platform-updates}
 
-2022 年 2 月 3 日のAEM Forms 6.5.12.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
+2022 年 3 月 3 日のAEM Forms 6.5.12.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
 
 - MongoDB Enterprise 4.0
 - IBM DB2 11.1
@@ -761,6 +767,7 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 - JBoss® Enterprise Application Platform (EAP) 7.1.4
 - IBM Content Manager Server 8.5 Fix pack 2
 - IBM Content Manager Client 8.5
+- Microsoft SQL Server 2016
 
 2021 年 9 月 8 日のAEM Forms 6.5.10.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
 
@@ -776,11 +783,11 @@ JEE 上の AEM Forms のサードパーティリファレンスプラットフ�
 
 ## リビジョン履歴 {#revision-history}
 
-- 2022年2月03日（PT）
+- 2022 年 3 月 03 日
 
    - 次のサポートを削除しました。
       - IBM® J9 Virtual Machine（ビルド 2.8、JRE 1.8.0）
-      - Oracleデータベース 12c リリース 2
+      - Oracleデータベース 12c リリース 1
       - Oracle Database 18c
       - Oracle Unified Directory（OUD）11g リリース 2
       - IBM Lotus Domino 9.0
