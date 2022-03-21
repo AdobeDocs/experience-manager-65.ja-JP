@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cda5e0b545903333d928f14e043a931898d87dc3
+source-git-commit: 077540ed65f31f1bb4f0063fb6ac8bddb76595da
 workflow-type: tm+mt
-source-wordcount: '3362'
-ht-degree: 79%
+source-wordcount: '3314'
+ht-degree: 81%
 
 ---
 
@@ -41,7 +41,6 @@ Adobe Experience Managerを実行するための最小要件：
 >
 >* デジタルアセットを使用する場合は、より多くの基本メモリが必要になります。詳しくは、[デプロイおよびメンテナンス](/help/sites-deploying/deploy.md#default-local-install)を参照してください。
 >* [AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)には 15 GB の一時領域が必要です。
-
 >
 
 
@@ -138,8 +137,8 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 
 | **プラットフォーム** | **サポートレベル** | **リンク** |
 |---|---|---|
-| Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24) |
-| Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Azul*+Zulu*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=18) |
+| Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[1]` |  |
+| Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[1]` |  |
 | Oracle Java SE 11 JDK - 64 ビット | A：サポート対象 `[2]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | Oracle Java SE 10 JDK | Z：サポート対象外 `[2]` |
 | Oracle Java SE 9 JDK | Z：サポート対象外 `[2]` |
@@ -149,7 +148,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 
 1. Azul Zulu のサポートと配布 LTS リリースのすべてのメンテナンスの更新を含む OpenJDK のビルドは、AEM 6.5 SP9 以降の OpenJDK の Azul Zulu ビルドを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします。 詳しくは、 [Adobe Experience Manager Q&amp;A の Azul Java サポート](assets/adobe-azul-openjdk-license-agreement.pdf) を参照してください。
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は、Oracle別の非 LTS リリースです ( [OracleJava SE サポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDK のサポートと配布（公開アップデートの終了後にリリースされる LTS のすべてのメンテナンスアップデートを含む）は、OracleJava SE テクノロジーを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします **2022 年 12 月まで**. 詳しくは、 [Adobe Experience Manager Q&amp;A のoracleJava サポート](assets/adobe-oracle-java-license-agreement.pdf) を参照してください。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は、Oracle別の非 LTS リリースです ( [OracleJava SE サポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、 [Adobe Experience Manager Q&amp;A のoracleJava サポート](assets/adobe-oracle-java-license-agreement.pdf) を参照してください。
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
 
@@ -425,7 +424,7 @@ Linux でダイナミックメディアを使用する場合は、次の必要�
 >
 >**SELinux の無効化：**&#x200B;画像サービングは、SELinux が有効の場合は動作しません。このオプションはデフォルトで有効です。この問題を修正するには、**/etc/selinux/config** ファイルを編集し、SELinux 値を次のように変更します。
 >
->`SELINUX=enforcing` **から** `SELINUX=disabled`
+>`SELINUX=enforcing`**コピー先：**`SELINUX=disabled`
 
 >[!NOTE]
 >
@@ -518,7 +517,6 @@ Windows x86 の場合：
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
-
 >
 
 
