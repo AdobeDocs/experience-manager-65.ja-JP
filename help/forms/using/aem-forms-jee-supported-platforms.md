@@ -11,7 +11,7 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
+source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
 workflow-type: tm+mt
 source-wordcount: '3515'
 ht-degree: 79%
@@ -116,12 +116,11 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>マイナーリリースとアップデート</td>
   </tr>
   <tr>
-   <td> IBM JAVA1.8.0_291（ビルド 8.0.6.30）<br /> </td>
+   <td>IBM JAVA1.8.0_291（ビルド 8.0.6.30）<br /> </td>
    <td>A：サポート対象</td>
    <td>マイナーリリースとアップデート</td>
   </tr>
-
-</tbody>
+ </tbody>
 </table>
 
 >[!NOTE]
@@ -649,7 +648,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
    <td>すべてのアップデート</td>
   </tr>
   <tr>
-   <td>Microsoft Firefox ESR</td>
+   <td>Mozilla Firefox ESR</td>
    <td>E：動作する見込み</td>
    <td> すべてのアップデート</td>
   </tr>
