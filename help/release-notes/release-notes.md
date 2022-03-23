@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 2a6b92ecd40ae108aee019bcba939a470b66d1b5
+source-git-commit: b654785af72bbe124f7296ae0f8ecb94e7815234
 workflow-type: tm+mt
-source-wordcount: '3318'
+source-wordcount: '3329'
 ht-degree: 35%
 
 ---
@@ -316,7 +316,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 
 * コンテンツフラグメントと GraphQL を使用している場合は、6.5.12.0の上に次のパッケージをインストールすることをお勧めします。
 
-   * [AEM 6.5.12 Sites HotFix-NPR-38144](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip)
+   * [AEM 6.5.12 Sites HotFix-NPR-38144](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Faem-service-pkg-6.5.12.0-NPR-38144-B0002.zip) （これは SP12 に代わるものですが、SP12 の上にインストールできます）
 
    * [GraphQL インデックスパッケージ 1.0.3 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
 
