@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 7962d076135bcbac821ff85fd1831ee2c444ff00
+source-git-commit: 290ae422e1136ea28ab21c3031ab66fb5405f1d3
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3775'
 ht-degree: 71%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 71%
 + リリースノート {#release-notes-new-features}
    + [リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
    + [新機能の概要](using/whats-new.md)
-   + [非推奨（廃止予定）の機能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html)
+   + [廃止される機能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/deprecated-removed-features.html?lang=ja)
 + はじめに {#getting-started}
    + [AEM Forms の概要](using/introduction-aem-forms.md)
    + [アダプティブフォームのオーサリングの概要](using/introduction-forms-authoring.md)
@@ -173,7 +173,6 @@ ht-degree: 71%
    + [アダプティブフォームでの SOM 式の使用](using/using-som-expressions-adaptive-forms.md)
    + [ユーザーデータからフォーム送信メタデータへの情報の追加](using/form-submission-metadata.md)
    + [XDP ベースのアダプティブフォームにおける XFA のサポート](using/xfa-api-supported-in-adaptive-form.md)
-   + [Designer での Page Zero コンテンツの変更](using/changing-page-zero-content-designer.md)
    + [選択したユーザーグループにルールエディターへのアクセスを許可する](using/rule-editor-access-user-groups.md)
    + [AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
    + [アダプティブフォームのテスト自動化](using/calvin.md)
@@ -373,6 +372,7 @@ ht-degree: 71%
    + [Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [別のユーザーの代わりにドキュメントを保護する](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
+   + [Forms Designer ヘルプ](using/forms-designer-help.md)
    + [Designer の使用](http://www.adobe.com/go/learn_aemforms_designer_65)
    + [Designer クイックスタートチュートリアル](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)
    + [Designer サンプル](http://www.adobe.com/go/learn_aemforms_designer_samples_65_jp)
@@ -380,6 +380,7 @@ ht-degree: 71%
    + [Designer スクリプティングリファレンス](http://www.adobe.com/go/learn_aemforms_scriptingReference_65)
    + [Designer FormCalc リファレンス](http://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [HTML5 フォームでの手書き署名の使用](using/scribble-signature.md)
+   + [Designer での Page Zero コンテンツの変更](using/changing-page-zero-content-designer.md)
 + AEM Forms のカスタマイズ {#customize-aem-forms}
    + [アダプティブフォームおよび HTML5 フォームの外観フレームワーク](using/introduction-widgets.md)
    + [カスタムアダプティブフォームのテンプレートの作成](using/custom-adaptive-forms-templates.md)
@@ -686,4 +687,3 @@ ht-degree: 71%
          + [JEE 上のAEM Formsサーバークラスターの設定とトラブルシューティング](developing/configure-server-cluster.md)
          + [動的PDF formsでのハッシュの生成と操作](developing/hashing-forms.md)
          + [WS-Security ヘッダーを使用して資格情報を渡す](developing/passing-credentials.md)
-
