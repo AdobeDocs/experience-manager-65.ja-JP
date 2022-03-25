@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cffec7ce415d00ab483b31d763ff2cdaa1eb16de
+source-git-commit: 80298613370c7187288b33e5a665a074ccb5cd3e
 workflow-type: tm+mt
-source-wordcount: '3294'
-ht-degree: 80%
+source-wordcount: '3292'
+ht-degree: 82%
 
 ---
 
@@ -100,7 +100,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 | Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` |  |
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` |  |
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は、Oracle別の非 LTS リリースです ( [OracleJava SE サポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。oracleJava SE JDK のサポートと配布（公開アップデートの終了後にリリースされる LTS のすべてのメンテナンスアップデートを含む）は、OracleJava SE テクノロジーを利用しているすべてのAEMのお客様に対して、Adobeが直接サポートします **2022 年 12 月まで**. 詳しくは、 [Adobe Experience Managerの Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) を参照してください。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は、Oracle別の非 LTS リリースです ( [OracleJava SE サポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、 [Adobe Experience Managerの Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) を参照してください。
 
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
