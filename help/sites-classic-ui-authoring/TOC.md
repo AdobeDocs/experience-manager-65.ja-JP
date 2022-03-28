@@ -1,14 +1,14 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 クラシック UI オーサリングユーザーガイド
 user-guide-description: このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。
 feature: Authoring
 role: User
-source-git-commit: 5192a284c38eb10c214c67a8727de0f7dd4d1ee2
-workflow-type: ht
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ ht-degree: 100%
    + [UI の選択 ](author-env-select-ui.md)
    + [検索](author-env-search.md)
    + [インボックス ](author-env-inbox.md)
-   + [キーボードショートカットコンソールの場合](author-env-keyboard-shortcuts.md)
+   + [コンソールのキーボードショートカット](author-env-keyboard-shortcuts.md)
 + オーサリング {#authoring}
    + [ページのオーサリング](classic-page-author.md)
    + [オーサリング - 環境とツール ](classic-page-author-env-tools.md)

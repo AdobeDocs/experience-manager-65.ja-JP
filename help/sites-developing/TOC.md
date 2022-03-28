@@ -1,17 +1,17 @@
 ---
 cloud: Experience Cloud
 product: adobe experience manager
-solution: Experience Manager, Experience Manager Sites, Experience Manager 6.5
+solution: Experience Manager, Experience Manager Sites
 audience: end-user
 user-guide-title: AEM 6.5 開発ユーザーガイド
 breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: b924dc186497b6dfa4c2d2bb675f5029f8fc3617
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '1299'
-ht-degree: 70%
+ht-degree: 82%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 70%
    + [Bulk Editor の開発](dev-bulk-editor.md)
    + [レポートの開発](dev-reports.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+   + [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
    + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
@@ -101,21 +101,21 @@ ht-degree: 70%
    + [ヘッドレスと AEM](headless/introduction.md)
    + ヘッドレスジャーニー {#journeys}
       + ヘッドレスデベロッパージャーニー {#developer}
-         + [AEM のヘッドレスについて](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html)
-         + [CMS ヘッドレス開発について](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html)
-         + [AEM Headless as a Cloud Service - はじめに](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html)
-         + [AEM ヘッドレス機能を使用した初めてのエクスペリエンスへの道筋](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html)
-         + [コンテンツを AEM コンテンツモデルとしてモデル化する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html)
-         + [AEM Delivery APIを使用してコンテンツにアクセスする方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html)
-         + [AEM Assets API を使用したコンテンツの更新方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html)
-         + [アプリとコンテンツをすべて AEM ヘッドレスにまとめる方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html)
-         + [ヘッドレスアプリケーションを運用する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html)
-         + [オプション - AEM で単一ページアプリケーション（SPA）を作成する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html)
+         + [AEM のヘッドレスについて](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/overview.html?lang=ja)
+         + [CMS ヘッドレス開発について](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/learn-about.html?lang=ja)
+         + [AEM Headless as a Cloud Service の使用を開始する](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/getting-started.html?lang=ja)
+         + [AEM ヘッドレス機能を初めて使用する際の手順](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/path-to-first-experience.html?lang=ja)
+         + [コンテンツを AEM コンテンツモデルとしてモデル化する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/model-your-content.html?lang=ja)
+         + [AEM Delivery API を使用してコンテンツにアクセスする方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/access-your-content.html?lang=ja)
+         + [AEM Assets API を使用してコンテンツを更新する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/update-your-content.html?lang=ja)
+         + [すべてをまとめる方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/put-it-all-together.html?lang=ja)
+         + [ヘッドレスアプリケーションを運用する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/go-live.html?lang=ja)
+         + [オプション - AEM で単一ページアプリケーション（SPA）を作成する方法](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/developer/create-spa.html?lang=ja)
       + ヘッドレスコンテンツアーキテクトジャーニー {#architect}
-         + [AEMヘッドレスコンテンツアーキテクトジャーニーの概要](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html)
-         + [AEMを使用したヘッドレス向けのコンテンツモデリング — はじめに](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html)
-         + [AEMを使用したヘッドレス向けコンテンツモデリングの基本について説明します。](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html)
-         + [AEMでのコンテンツフラグメントモデルの作成について説明します。](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html)
+         + [AEM ヘッドレスコンテンツアーキテクトジャーニーの概要](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/overview.html?lang=ja)
+         + [AEM を使用したヘッドレスのコンテンツモデリング - はじめに](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/introduction.html?lang=ja)
+         + [AEM を使用したヘッドレス向けコンテンツモデリングの基本について](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html?lang=ja)
+         + [AEM でのコンテンツフラグメントモデルの作成について学ぶ](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html?lang=ja)
    + 「はじめる前に」ガイド {#getting-started}
       + [はじめに](headless/getting-started/introduction.md)
       + [設定の作成](headless/getting-started/create-configuration.md)
@@ -191,7 +191,7 @@ ht-degree: 70%
       + [ClientContext の詳細](client-context.md)
       + [ClientContext JavaScript API](ccjsapi.md)
 + AEM の拡張{#extending-aem}
-   + [Extending AEM using Extending Adobe Developer App Builder](app-builder.md)
+   + [Adobe Developer App Builder を使用した AEM の拡張](app-builder.md)
    + [ページオーサリングのカスタマイズ](customizing-page-authoring-touch.md)
    + [コンソールのカスタマイズ](customizing-consoles-touch.md)
    + [ページプロパティのビューのカスタマイズ](page-properties-views.md)
@@ -217,7 +217,7 @@ ht-degree: 70%
    + Cloud Services {#extending-cloud-services}
       + [クラウドサービス設定](extending-cloud-config.md)
       + [カスタムクラウドサービスの作成](extending-cloud-config-custom-cloud.md)
-   + [カスタム拡張の作成](extending-campaign-extensions.md)
+   + [カスタム拡張機能の作成](extending-campaign-extensions.md)
    + Forms{#extending-forms}
       + [カスタムフォームマッピングの作成](extending-campaign-form-mapping.md)
       + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](extending-campaign-custom-template.md)
