@@ -4,7 +4,7 @@ description: インストール [!DNL Workfront for Experience Manager enhanced 
 role: Admin
 feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
-source-git-commit: a589836c77fd919838dce60a1eaf676683c165c0
+source-git-commit: 679ad8f1fec1abe97dfc90b6318c3f3c4ab85b7f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 45%
@@ -28,11 +28,8 @@ ht-degree: 45%
 コネクタをインストールするには、次の手順に従います。
 
 1. コネクタのダウンロード元 [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
-
 1. [ファイアウォールの設定](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html?lang=ja)。
-
 1. Dispatcher で、`authorization`、`username` および `apikey` という名前の HTTP ヘッダーを許可します。`GET`、`POST` および `PUT` リクエストを `/bin/workfront-tools` に許可します。
-
 1. 次のパスが [!DNL Experience Manager] リポジトリに存在しないことを確認します。
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`
@@ -42,7 +39,6 @@ ht-degree: 45%
    * `/apps/settings/dam/cfm/models/formbuilderconfig`
 
 1. 次を使用してパッケージをインストール [!UICONTROL パッケージマネージャー]. パッケージのインストール方法については、 [パッケージマネージャーのドキュメント](/help/sites-administering/package-manager.md).
-
 1. 作成 `wf-workfront-users` in [!DNL Experience Manager] ユーザーグループと権限の割り当て `jcr:all` から `/content/dam`.
 
 システムユーザー `workfront-tools` が自動的に作成され、必要な権限が自動的に管理されます。からのすべてのユーザー [!DNL Workfront] コネクタを使用するユーザーは、このグループの一部として自動的に追加されます。
@@ -68,7 +64,4 @@ Experience Manager Assetsでは、 [!DNL Workfront for Experience Manager enhanc
 次の手順で [!DNL Workfront for Experience Manager enhanced connector] を最新バージョンに変更するには：
 
 1. 拡張コネクタの最新バージョンをからダウンロードします。 [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
-
 1. 次を使用してパッケージをインストール [!UICONTROL パッケージマネージャー]. パッケージのインストール方法については、 [パッケージマネージャーのドキュメント](/help/sites-administering/package-manager.md).
-
-
