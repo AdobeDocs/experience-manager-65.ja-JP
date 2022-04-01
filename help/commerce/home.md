@@ -1,17 +1,17 @@
 ---
 title: AEM Content and Commerce
-description: AEM Content and Commerce に関するセルフヘルプリソースおよびドキュメントリンク
+description: Understand how to use and administer AEM Content and Commerce, with our helpful articles on integrations and how to get started using AEM Storefront.
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
-source-wordcount: '337'
-ht-degree: 100%
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+workflow-type: tm+mt
+source-wordcount: '367'
+ht-degree: 86%
 
 ---
 
 # AEM Content and Commerce {#commerce-guide}
 
-ここでは、AEM Commerce に関するセルフヘルプリソースの一覧を示します。
+Understand how to use and administer AEM Content and Commerce, with our helpful articles on integrations and how to get started using AEM Storefront.
 
 >[!NOTE]
 >
@@ -48,5 +48,5 @@ ht-degree: 100%
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)

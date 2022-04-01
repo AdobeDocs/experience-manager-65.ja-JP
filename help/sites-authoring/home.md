@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 オーサリングユーザーガイド
 seo-title: AEM 6.5 Authoring User Guide
-description: 'このガイドでは、AEM でのオーサリングの概念を説明します。 '
+description: Explore the key concepts of creating content and authoring in AEM 6.5. You will also find information around using tags, templates and other page features.
 seo-description: Explains the concepts of authoring in AEM.
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
-workflow-type: ht
-source-wordcount: '343'
-ht-degree: 100%
+exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
+source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+workflow-type: tm+mt
+source-wordcount: '373'
+ht-degree: 87%
 
 ---
 
-
 # AEM 6.5 オーサリングユーザーガイド
 
-このガイドでは、AEM でのオーサリングの概念を説明します。
+Explore the key concepts of creating content and authoring in AEM 6.5. You will also find information around using tags, templates, and other page features.
 
 ## 主な AEM 記事
 
@@ -49,5 +49,5 @@ ht-degree: 100%
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
