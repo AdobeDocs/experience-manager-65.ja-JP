@@ -10,9 +10,9 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: 0b0478f837b63d0a04c83283024c155329e368db
+source-git-commit: c92b5b5dd70e7a4e696d8d75282edbc88a13ba51
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2010'
 ht-degree: 57%
 
 ---
@@ -190,7 +190,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
 >[!NOTE]
 >
-> フォームデータモデルがサポートする [OData バージョン 4.0](https://www.odata.org/documentation/) 後で。
+> フォームデータモデルがサポートする [OData バージョン 4](https://www.odata.org/documentation/).
 >オンライン環境またはオンプレミス環境で Microsoft Dynamics 365 を設定する詳しい手順については、「[Microsoft Dynamics OData 設定](/help/forms/using/ms-dynamics-odata-configuration.md)」を参照してください。
 
 1. **[!UICONTROL ツール／Cloud Services／データソース]**&#x200B;に移動します。クラウド設定の作成対象となるフォルダーをタップして選択します。
