@@ -10,8 +10,8 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: ad8f98d22c2f2095ee92741331170be996103d95
+workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%
 
@@ -41,7 +41,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 | コンソール | `?` | キーボードショートカットヘルプ |
 |  | `/` | [検索](/help/sites-authoring/search.md)を呼び出す |
 |  | `Alt+`&lt;`Number`> | 表示する[レールセレクター](/help/sites-authoring/basic-handling.md#rail-selector)オプションを切り替える |
-|  | &grave; | レールを非表示 |
+|  | ``` ` ``` | レールを非表示 |
 |  | `e` | 編集 |
 |  | `p` | プロパティ |
 |  | `m` | 移動 |
@@ -52,7 +52,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 Windows の[修飾子キー](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys)を使用したキーの組み合わせがリストされています。
 
-[ページエディター](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を使用してページのオーサリングをおこなう際には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
+[ページエディター](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を使用してページのオーサリングを行う際には、デスクトップユーザー向けの様々なキーボードショートカットも利用できます。
 
 ## OS 特有の修飾子キー {#os-specific-modifier-keys}
 
