@@ -8,9 +8,9 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '632'
 ht-degree: 90%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 90%
    + [ライブコピーの同期の設定](msm-sync.md)
    + [ライブコピーの作成と同期](msm-livecopy.md)
    + [MSM ロールアウトの競合](msm-rollout-conflicts.md)
+   + [MSM の問題のトラブルシューティングと FAQ](troubleshoot-msm.md)
    + [MSM のベストプラクティス](msm-best-practices.md)
    + [多言語サイトのコンテンツの翻訳](translation.md)
    + [翻訳プロジェクトの管理](tc-manage.md)
@@ -151,7 +152,7 @@ ht-degree: 90%
    + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
    + [Livefyre との統合](livefyre.md)
 + ベストプラクティス {#bestpractices}
-   + [ベストプラクティス ](administer-best-practices.md)
+   + [ベストプラクティス](administer-best-practices.md)
    + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
    + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
