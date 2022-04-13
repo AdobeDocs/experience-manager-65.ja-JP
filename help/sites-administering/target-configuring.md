@@ -10,7 +10,7 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
-source-git-commit: 6930d3f6449c8ebd18214c96ddec0bcb61b998c8
+source-git-commit: 813441a61baa560c9d317a5519b9e0c0d1da7a6e
 workflow-type: tm+mt
 source-wordcount: '2209'
 ht-degree: 77%
@@ -23,11 +23,11 @@ ht-degree: 77%
 
 ## オプトインウィザードの設定の変更 {#modifying-the-opt-in-wizard-configurations}
 
-[オプトインウィザード](/help/sites-administering/opt-in.md)([AEMとAdobe Target](/help/sites-administering/target.md)を統合)により、「プロビジョニング済みTarget設定」という名前のTargetクラウド設定が自動的に作成されます。 また、ウィザードではプロビジョニングされた Target フレームワークという名前のクラウド設定の Target フレームワークも作成されます。クラウド設定とフレームワークのプロパティは、必要に応じて変更できます。
+この [オプトインウィザード](/help/sites-administering/opt-in.md) その [AEMとAdobe Targetの統合](/help/sites-administering/target.md) 「プロビジョニング済みの Target 設定」という名前の Target クラウド設定が自動的に作成されます。 また、ウィザードではプロビジョニングされた Target フレームワークという名前のクラウド設定の Target フレームワークも作成されます。クラウド設定とフレームワークのプロパティは、必要に応じて変更できます。
 
 また、コンテンツをターゲット化するときに、A4T Analytics クラウド設定を変更して、Adobe Analytics をレポートソースとして使用するように Adobe Target を設定できます。
 
-クラウド設定とフレームワークを探すには、**Cloud Services** / **デプロイ** / **クラウド**&#x200B;に移動します。 ****（[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)） Adobe Target の下で、「**設定を表示**」をクリックまたはタップします。
+クラウド設定とフレームワークを探すには、に移動します。 **Cloud Services** 経由 **ツール** > **導入** > **クラウド**. （[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)） Adobe Target の下で、「**設定を表示**」をクリックまたはタップします。
 
 ### プロビジョニングされた Target 設定のプロパティ {#provisioned-target-configuration-properties}
 
@@ -37,17 +37,17 @@ ht-degree: 77%
 * **電子メール：**&#x200B;オプトインウィザードに入力されている通りです。
 * **パスワード：**&#x200B;オプトインウィザードに入力されている通りです。
 * **API のタイプ：** REST
-* **Adobe Targetからセグメントを同期：** オン。
+* **Adobe Targetからセグメントを同期：** 選択済み
 
-* **クライアントライブラリ：** mbox.js。
-* **DTMを使用してクライアントライブラリを配信：** 未選択。DTM](/help/sites-administering/dtm.md)や他のタグ管理システムを使用してmbox.jsまたはAT.jsファイルをホストする場合は、このオプションを選択します。 [ライブラリの配信には AEM ではなく DTM を使用することをお勧めします。
+* **クライアントライブラリ：** mbox.js.
+* **DTM を使用してクライアントライブラリを提供：** 未選択。 次の場合は、このオプションを選択します。 [DTM を使用](/help/sites-administering/dtm.md) または、mbox.js または AT.js ファイルをホストする別のタグ管理システムを使用します。 ライブラリの配信には AEM ではなく DTM を使用することをお勧めします。
 
 * **カスタム mbox.js**：何も指定されておらず、デフォルトの mbox.js ファイルが使用されます。必要に応じて、使用するカスタム mbox.js を指定します。mbox.js を選択した場合にのみ表示されます。
-* **カスタムのAT.js:** 何も指定されておらず、デフォルトのAT.jsファイルが使用されます。必要に応じて、使用するカスタム AT.js を指定します。AT.js を選択した場合にのみ表示されます。
+* **カスタムの AT.js:** 何も指定しない場合は、デフォルトの AT.js ファイルが使用されます。 必要に応じて、使用するカスタム AT.js を指定します。AT.js を選択した場合にのみ表示されます。
 
 >[!NOTE]
 >
->AEM 6.3では、ターゲットライブラリファイル[AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)を選択できます。これは、Adobe Targetの新しい実装ライブラリで、一般的なWeb実装とシングルページアプリケーションの両方に対応するように設計されています。
+>AEM 6.3 では、Target ライブラリファイルを選択できます。 [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html):Adobe Targetの新しい実装ライブラリで、一般的な Web 実装とシングルページアプリケーションの両方のために設計されています。
 >
 >AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 >
@@ -71,12 +71,12 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->ユーザー資格情報認証（レガシー）は、A4T（TargetとAnalyticsの両方）では機能しません。 そのため、ユーザー資格情報認証の代わりにIMS認証を使用する必要があります。
+>ユーザー資格情報認証（レガシー）は、A4T（Target と Analytics の両方）では機能しません。 そのため、ユーザー資格情報認証の代わりに IMS 認証を使用する必要があります。
 
 これをおこなうには、Adobe Target クラウド設定を接続する A4T クラウド設定を指定する必要があります。
 
-1. **AEM logo** / **ツール** / **デプロイ** / **Cloud Services**&#x200B;から&#x200B;**Cloud Servicesに移動します。**
-1. 「**Adobe Target**」セクションで、「**今すぐ設定**」をクリックします。
+1. に移動します。 **Cloud Services** 経由 **AEMロゴ** > **ツール** > **導入** > **Cloud Services**.
+1. 内 **Adobe Target** セクションで、 **今すぐ設定**.
 1. Adobe Target 設定に再接続します。
 1. **A4T Analytics クラウド設定**&#x200B;ドロップダウンメニューで、フレームワークを選択します。
 
@@ -86,19 +86,19 @@ ht-degree: 77%
    >
    >AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
    >
-   >1. **ツール** > **一般** > **CRXDE Lite**&#x200B;に移動します。
-   1. [A4T Analytics設定ダイアログ](#a4t-analytics-config-dialog)に移動します（以下を参照）。
-   1. プロパティ&#x200B;**disable**&#x200B;を&#x200B;**false**&#x200B;に設定します。
+   >1. に移動します。 **ツール** > **一般** > **CRXDE Lite**.
+   1. 次に移動： [A4T Analytics 設定ダイアログ](#a4t-analytics-config-dialog) （以下を参照）
+   1. プロパティを設定します。 **無効** から **false**.
    1. 「**すべて保存**」をタップまたはクリックします。
 
 
-#### A4T Analytics設定ダイアログ {#a4t-analytics-config-dialog}
+#### A4T Analytics 設定ダイアログ {#a4t-analytics-config-dialog}
 
 ```xml
 /libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig
 ```
 
-![chlimage_1-159](assets/chlimage_1-159.png)
+![AdobeTargetSettings](assets/adobe-target-settings.jpg)
 
 「**OK**」をクリックします。Adobe Target でコンテンツをターゲット化すると、[レポートソースを選択](/help/sites-authoring/content-targeting-touch.md)できるようになります。
 
@@ -107,12 +107,13 @@ ht-degree: 77%
 オプトインウィザードを使用せずに手動で Adobe Target と統合します。
 
 >[!NOTE]
-Targetライブラリファイル[AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)は、Adobe Targetの新しい実装ライブラリで、一般的なWeb実装とシングルページアプリケーションの両方のために設計されています。 mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
+ターゲットライブラリファイル [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html)は、一般的な Web 実装とシングルページアプリケーションの両方のために設計された、Adobe Targetの新しい実装ライブラリです。 mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
 AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 * Web 実装のページ読み込み時間が改善されています。
 * セキュリティが改善されています。
 * 単一ページアプリケーションの実装オプションが改善されています。
 * target.js に含まれていたコンポーネントが AT.js にも含まれているので、target.js への呼び出しがなくなりました。
+>
 **クライアントライブラリ**&#x200B;ドロップダウンメニューでは、AT.js または mbox.js を選択できます。
 
 ### Target クラウド設定の作成 {#creating-a-target-cloud-configuration}
@@ -125,26 +126,26 @@ Adobe Target からセグメントを同期するように、クラウド設定�
 
 次の手順を実行して、AEM に Target クラウド設定を作成します。
 
-1. **AEM logo** / **ツール** / **デプロイ** / **Cloud Services**&#x200B;から&#x200B;**Cloud Servicesに移動します。**（[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）。
+1. に移動します。 **Cloud Services** 経由 **AEMロゴ** > **ツール** > **導入** > **Cloud Services**. （[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）。
 
-   **Adobe Marketing Cloud**&#x200B;の概要ページが開きます。
+   この **Adobe Marketing Cloud** 概要ページが開きます。
 
-1. 「**Adobe Target**」セクションで、「**今すぐ設定**」をクリックします。
-1. **設定を作成**&#x200B;ダイアログで、次の操作を実行します。
+1. 内 **Adobe Target** セクションで、 **今すぐ設定**.
+1. 内 **設定を作成** ダイアログ：
 
-   1. 設定に&#x200B;**タイトル**&#x200B;を指定します。
-   1. **Adobe Target設定**&#x200B;テンプレートを選択します。
+   1. 設定に **タイトル**.
+   1. を選択します。 **Adobe Target Configuration** テンプレート。
    1. 「**作成**」をクリックします。
 
    編集ダイアログが開きます。
 
-   ![chlimage_1-160](assets/chlimage_1-160.png)
+   ![AdobeTargetSettings](assets/adobe-target-settings.jpg)
 
    >[!NOTE]
    AEM で A4T を設定する際には、「設定の参照が欠落しています」というエントリが表示される場合があります。分析フレームワークを選択できるようにするには、次の操作をおこないます。
-   1. **ツール** > **一般** > **CRXDE Lite**&#x200B;に移動します。
-   1. **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**&#x200B;に移動します。
-   1. プロパティ&#x200B;**disable**&#x200B;を&#x200B;**false**&#x200B;に設定します。
+   1. に移動します。 **ツール** > **一般** > **CRXDE Lite**.
+   1. に移動します。 **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
+   1. プロパティを設定します。 **無効** から **false**.
    1. 「**すべて保存**」をタップまたはクリックします。
 
 
@@ -154,12 +155,12 @@ Adobe Target からセグメントを同期するように、クラウド設定�
    * **電子メール**：Target アカウントの電子メール
    * **パスワード**：Target アカウントのパスワード
    * **API のタイプ：** REST または XML
-   * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、[A4T Analytics Cloud設定の設定](#configuring-a-t-analytics-cloud-configuration)の注意を参照してください。
+   * **A4T Analytics クラウド設定**：ターゲットアクティビティの目標と指標に使用する Analytics クラウド設定。これは、コンテンツをターゲット化するときに、Adobe Analytics をレポートソースとして使用している場合に必要です。クラウド設定が表示されない場合は、 [A4T Analytics Cloud設定の指定](#configuring-a-t-analytics-cloud-configuration).
 
    * **正確なターゲット設定を使用**：デフォルトでは、このチェックボックスはオンになっています。オンにすると、クラウドサービス設定はコンテンツが読み込まれるまでコンテキストの読み込みを待機します。続きのメモを確認してください。
-   * **Adobe Targetからのセグメントの同期：** Targetで定義されたセグメントをダウンロードしてAEMで使用するには、このオプションを選択します。「API のタイプ」プロパティが REST のときは、インラインのセグメントがサポートされておらず、常に Target からセグメントを使用する必要があるので、このオプションをオンにする必要があります（AEM の用語「セグメント」は、Target の「オーディエンス」と同じです）。
-   * **クライアントライブラリ：** mbox.jsとAT.jsのどちらのクライアントライブラリを使用するかを選択します。
-   * **DTMを使用してクライアントライブラリを配信**  - DTMまたは他のタグ管理システムからAT.jsまたはmbox.jsを使用する場合は、このオプションを選択します。このオプションを使用するには、[DTM統合](/help/sites-administering/dtm.md)を設定する必要があります。 ライブラリの配信には AEM ではなく DTM を使用することをお勧めします。
+   * **Adobe Targetからセグメントを同期：** このオプションを選択すると、Target で定義されたセグメントをダウンロードしてAEMで使用することができます。 「API のタイプ」プロパティが REST のときは、インラインのセグメントがサポートされておらず、常に Target からセグメントを使用する必要があるので、このオプションをオンにする必要があります（AEM の用語「セグメント」は、Target の「オーディエンス」と同じです）。
+   * **クライアントライブラリ：** mbox.js と AT.js のどちらのクライアントライブラリを使用するかを選択します。
+   * **DTM を使用してクライアントライブラリを提供** - DTM または他のタグ管理システムの AT.js または mbox.js を使用する場合は、このオプションを選択します。 必ず [DTM 統合の設定](/help/sites-administering/dtm.md) をクリックして、このオプションを使用します。 ライブラリの配信には AEM ではなく DTM を使用することをお勧めします。
    * **カスタム mbox.js**：DTM ボックスをオンにした場合またはデフォルトの mbox.js を使用する場合は空にします。それ以外の場合は、カスタム mbox.js をアップロードします。mbox.js を選択した場合にのみ表示されます。
    * **カスタムの AT.js**：DTM ボックスをオンにした場合またはデフォルトの AT.js を使用する場合は空にします。それ以外の場合は、カスタム AT.js をアップロードします。AT.js を選択した場合にのみ表示されます。
 
@@ -179,12 +180,12 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
 ひとつの Target 設定に対して複数のフレームワークを作成できます。複数のフレームワークは、Web サイトの異なるセクション向けの異なるセットのパラメーターを Target に送信する必要があるときに便利です。送信する必要があるパラメーターのセットごとにフレームワークを作成します。Web サイトの各セクションに該当するフレームワークを関連付けます。1 つの Web ページは一度に 1 つのフレームワークしか使用できません。
 
-1. Target設定ページで、「使用可能なフレームワーク」の横の&#x200B;**+**（プラス記号）をクリックします。
-1. フレームワークを作成ダイアログで、「**タイトル**」を指定し、「**Adobe Targetフレームワーク**」を選択して、「**作成**」をクリックします。
+1. Target 設定ページで、 **+** （プラス記号）をクリックします。
+1. フレームワークを作成ダイアログで、 **タイトル**&#x200B;を選択し、 **Adobe Target Framework**&#x200B;をクリックし、 **作成**.
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 
-   フレームワークページが表示されます。サイドキックは、マッピング可能な[ClientContext](/help/sites-administering/client-context.md)または[ContextHub](/help/sites-developing/ch-configuring.md)からの情報を表すコンポーネントを提供します。
+   フレームワークページが表示されます。サイドキックは、 [ClientContext](/help/sites-administering/client-context.md) または [ContextHub](/help/sites-developing/ch-configuring.md) 地図を作れる
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
@@ -193,7 +194,7 @@ Target クラウド設定を設定したら、Target フレームワークを追
    >[!NOTE]
    マッピングするときに、パラメーターは単純な文字列を介して mbox に渡されます。ContextHub から配列をマッピングすることはできません。
 
-   例えば、サイト訪問者に関する&#x200B;**プロファイルデータ**&#x200B;を使用してTargetキャンペーンを制御するには、**プロファイルデータ**&#x200B;コンポーネントをページにドラッグします。 Target パラメーターへのマッピングに使用できるプロファイルデータ変数が表示されます。
+   例えば、 **プロファイルデータ** Target キャンペーンを制御するためのサイト訪問者について、 **プロファイルデータ** コンポーネントをページに追加します。 Target パラメーターへのマッピングに使用できるプロファイルデータ変数が表示されます。
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
@@ -208,12 +209,13 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
 ### アクティビティと Target クラウド設定の関連付け  {#associating-activities-with-the-target-cloud-configuration}
 
-[AEMアクティビティ](/help/sites-authoring/activitylib.md)をTargetクラウド設定に関連付け、[Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html)のアクティビティをミラーリングできるようにします。
+を [AEMアクティビティ](/help/sites-authoring/activitylib.md) を Target クラウド設定に変更して、 [Adobe Target](https://docs.adobe.com/content/help/en/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 使用可能なアクティビティの種類は、次のオプションによって決まります。
 * Adobe Target の接続に AEM 側で使用される Adobe Target テナント（clientcode）で **xt_only** オプションがオンになっている場合は、XT アクティビティ&#x200B;**のみ**&#x200B;を AEM で作成できます。
 * Adobe Target テナント（clientcode）で **xt_only** オプションが&#x200B;**オフ**&#x200B;になっている場合は、XT アクティビティと A/B アクティビティの&#x200B;**両方**&#x200B;を AEM で作成できます。
+>
 **追加のメモ：** **xt_only** オプションは特定の Target テナント（clientcode）に適用される設定で、Adobe Target でのみ直接編集できます。このオプションは AEM で有効および無効にすることはできません。
 
 ### Target フレームワークとサイトの関連付け {#associating-the-target-framework-with-your-site}
@@ -222,8 +224,8 @@ AEM に Target フレームワークを作成したら、Web ページとフレ�
 
 ページをフレームワークに関連付けると、子ページが関連付けを継承します。
 
-1. **サイト**&#x200B;コンソールで、設定するサイトに移動します。
-1. [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)または[選択モード](/help/sites-authoring/basic-handling.md)を使用して、「**プロパティを表示**」を選択します。
+1. 内 **サイト** コンソールで、設定するサイトに移動します。
+1. 次のいずれかを使用 [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions) または [選択モード](/help/sites-authoring/basic-handling.md)を選択します。 **プロパティを表示します。**
 1. 「**クラウドサービス**」タブを選択します。
 1. 「**編集**」をタップまたはクリックします。
 1. 「**クラウドサービス設定**」で「**設定を追加**」をタップまたはクリックして「**Adobe Target**」を選択します。
