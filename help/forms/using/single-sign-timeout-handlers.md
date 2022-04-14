@@ -1,8 +1,8 @@
 ---
 title: シングルサインオンとタイムアウトハンドラー
-seo-title: シングルサインオンとタイムアウトハンドラー
+seo-title: Single Sign On and timeout handlers
 description: AEM Forms Workspace のセッションのタイムアウト値を設定する方法。
-seo-description: AEM Forms Workspace のセッションのタイムアウト値を設定する方法。
+seo-description: How-to set the session timeout value for AEM Forms workspace.
 uuid: 17583fd5-6453-41d3-bb63-a639983fbea9
 contentOwner: robhagat
 content-type: reference
@@ -11,25 +11,25 @@ topic-tags: forms-workspace
 discoiquuid: 698990a2-dd3f-480f-9d15-d87563860297
 exl-id: 4f824d80-f3f8-4010-9583-5a9ab1151a7b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 55%
+workflow-type: ht
+source-wordcount: '189'
+ht-degree: 100%
 
 ---
 
 # シングルサインオンとタイムアウトハンドラー {#single-sign-on-and-timeout-handlers}
 
-AEM Forms Workspace は SSO 対応です。ユーザーがForms ManagerやPDF GeneratorなどのAEM Formsアプリケーションにログインし、同じブラウザーセッションでAEM Forms Workspaceにアクセスした場合、ユーザーはAEM Forms Workspaceにログインし、その逆も同様です。
+AEM Forms Workspace は SSO 対応です。ユーザーが Forms Manager、PDF Generator ユーザーインターフェイスなどの AEM Forms アプリケーションにログインして同じブラウザーセッションの AEM Forms Workspace にアクセスした場合、ユーザーは AEM Forms Workspace にもログインしたことになります。その逆の場合も同じです。
 
 ## AEM Forms Workspace でのサーバータイムアウトの処理 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
 
 ユーザーに対するセッションタイムアウトは、 管理コンソールで設定できます。
 
-タイムアウトを設定するには、`https://'[server]:[port]'/adminui`にログインし、**設定/User Management/設定/詳細なシステム属性を設定**&#x200B;に移動して、必要な設定を行います。
+タイムアウトを設定するには、`https://'[server]:[port]'/adminui` にログインし、**設定／User Management／設定／詳細なシステム属性の設定**&#x200B;に移動して必要な設定を行います。
 
-AEM Forms Workspaceのタイムアウトは、次のように処理されます。
+AEM Forms Workspace で、タイムアウトは次のように処理されます。
 
-* ユーザーのセッション時間長は、ユーザーセッションを初期設定する `initialize` コールに応答して得られます。
+* ユーザーのセッション時間は、ユーザーセッションを初期設定する `initialize` コールに応答して得られます。
 * ポップアップダイアログが表示され、セッションが期限切れになる 15 秒前に、そのことがユーザーに通知されます。
 
 このポップアップダイアログで、以下のようにします。
@@ -39,4 +39,4 @@ AEM Forms Workspaceのタイムアウトは、次のように処理されます�
 
 >[!NOTE]
 >
->何も実行されなかった場合、ユーザーはセッションの有効期限が切れる3秒前に、AEM Forms Workspaceから自動的にログアウトされます。
+>何もしなかった場合は、セッション期限切れの 3 秒前に、ユーザーは AEM Forms Workspace から自動的にログアウトされます。
