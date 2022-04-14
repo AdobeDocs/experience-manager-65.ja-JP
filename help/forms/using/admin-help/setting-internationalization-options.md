@@ -1,8 +1,8 @@
 ---
 title: 国際化対応オプションの設定
-seo-title: 国際化対応オプションの設定
+seo-title: Setting internationalization options
 description: フォームのレンダリングに使用するロケールの指定方法と、出力ストリームのエンコードに使用する文字セットの指定方法について説明します。
-seo-description: フォームのレンダリングに使用するロケールの指定方法と、出力ストリームのエンコードに使用する文字セットの指定方法について説明します。
+seo-description: Learn how to specify the locale used to render forms and how to specify the character set used to encode the output stream.
 uuid: bb77f5f3-634f-4285-9b10-c4dd40085e69
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e845d13f-bef2-442d-af9a-4f92d7616a46
 exl-id: 6cf82c2b-29f0-49d5-a138-99d7801d5a28
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '248'
+workflow-type: ht
+source-wordcount: '222'
 ht-degree: 100%
 
 ---
@@ -27,7 +27,7 @@ PDF フォームをレンダリングする際に使用するロケールを指�
 1. 「国際化対応」の「言語」リストで、フォームのレンダリングに使用するロケールを選択します。デフォルト値は「英語（米国）」です。
 1. 「保存」をクリックします。
 
-## 出力ストリームのエンコードに使用する文字セットの指定  {#specify-the-character-set-used-to-encode-the-output-stream}
+## 出力ストリームのエンコードに使用する文字セットの指定 {#specify-the-character-set-used-to-encode-the-output-stream}
 
 1. 「国際化対応」の「文字セット」リストで、文字セットを選択します。この設定は、使用する API（renderHTMLForm または renderPDFForm）によって異なります。リストにない文字セットを指定するには、「カスタム」を選択し、表示されたボックスでエンコーディング値を指定します。
 
