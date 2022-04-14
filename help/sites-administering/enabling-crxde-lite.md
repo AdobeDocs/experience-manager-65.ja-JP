@@ -1,8 +1,8 @@
 ---
 title: AEM での CRXDE Lite の有効化
-seo-title: AEM での CRXDE Lite の有効化
+seo-title: Enabling CRXDE Lite in AEM
 description: AEM で CRXDE Lite を有効にする方法について説明します。
-seo-description: AEM で CRXDE Lite を有効にする方法について説明します。
+seo-description: Learn how to enable CRXDE Lite in AEM.
 uuid: d7a3db67-6384-463b-9aa9-f08ecc6c99c6
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 87%
+workflow-type: ht
+source-wordcount: '212'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 
 ただし、CRXDE Lite が正しく機能するには `org.apache.sling.jcr.davex` バンドルに依存するので、WebDAV を無効にすると CRXDE Lite も無効になります。
 
-これが発生すると、`https://serveraddress:4502/crx/de/index.jsp`を参照すると空のルートノードが表示され、CRXDE Liteリソースに対するすべてのHTTP要求が失敗します。
+これが発生すると、`https://serveraddress:4502/crx/de/index.jsp` にアクセスするときに空のルートノードが表示され、CRXDE Lite のリソースへのすべての HTTP リクエストが失敗します。
 
 ```xml
 404 Resource at '/crx/server/crx.default/jcr:root/.1.json' not found: No resource found
@@ -33,19 +33,19 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 
 無効にした場合、CRXDE Lite をオンにするには次の手順を実行します。
 
-1. `http://localhost:4502/system/console/components`のOSGiコンポーネントコンソールに移動します。
+1. OSGi コンポーネントコンソール（`http://localhost:4502/system/console/components`）に移動します。
 1. 次のコンポーネントを検索します。
 
    * `org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`
 
-1. その設定オプションを確認するには、その横にあるレンチアイコンをクリックします。
+1. その設定オプションを確認するには、その横にあるレンチのアイコンをクリックします。
 
    ![chlimage_1-80](assets/chlimage_1-80a.png)
 
 1. 次の設定を作成します。
 
-   * **ルートパス:** `/crx/server`
-   * 下の「**絶対 URI を使用**」ボックスにチェックマークを入れます。
+   * **ルートパス：** `/crx/server`
+   * 「**絶対 URI を使用**」ボックスにチェックマークを入れます。
 
 1. CRXDE Lite の使用が終わったら、再度 WebDAV を無効にしてください。
 
@@ -55,7 +55,7 @@ CRXDE Lite は、次のコマンドを実行して、cURL を使用して有効�
 curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
 ```
 
-## その他のリソース  {#other-resources}
+## その他のリソース {#other-resources}
 
 AEM 6 のセキュリティ機能について詳しくは、次のページを参照してください。
 
