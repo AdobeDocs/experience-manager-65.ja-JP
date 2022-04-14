@@ -1,8 +1,8 @@
 ---
-title: Formsのレンダリング
-seo-title: Formsのレンダリング
-description: Formsサービスを使用して、通常はDesignerで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成します。 フォーム作成者は、Formsサービスが様々なブラウザー環境でPDF、SWFまたはHTMLでレンダリングする単一のフォームデザインを開発できます。
-seo-description: Formsサービスを使用して、通常はDesignerで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成します。 フォーム作成者は、Formsサービスが様々なブラウザー環境でPDF、SWFまたはHTMLでレンダリングする単一のフォームデザインを開発できます。
+title: Forms のレンダリング
+seo-title: Rendering Forms
+description: Forms サービスを使用すると、通常は Designer で作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。フォーム作成者は、Forms サービスが様々なブラウザー環境で PDF、SWF または HTML でレンダリングする、単一のフォームデザインを開発できます。
+seo-description: Use the Forms service to create interactive data capture client applications that validate, process, transform, and deliver forms typically created in Designer. Form authors can develop a single form design that the Forms service renders in PDF, SWF, or HTML in various browser environments.
 uuid: 68d7b7bc-7730-4a83-b7b9-ebe2a29d6c51
 contentOwner: admin
 content-type: reference
@@ -12,51 +12,49 @@ topic-tags: operations
 discoiquuid: f8749793-e53f-4812-a093-8278f480e6a8
 role: Developer
 exl-id: ec9ccf04-7cec-493a-91ab-0e399a905338
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 0%
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+workflow-type: ht
+source-wordcount: '571'
+ht-degree: 100%
 
 ---
 
-# Forms {#rendering-forms}のレンダリング
+# Forms のレンダリング {#rendering-forms}
 
-**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
+**このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-**Formsサービスについて**
+**Forms サービスについて**
 
-Formsサービスを使用すると、通常はDesignerで作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。 フォーム作成者は、Formsサービスが様々なブラウザー環境でPDF、SWFまたはHTMLでレンダリングする単一のフォームデザインを開発できます。
+Forms サービスを使用すると、通常は Designer で作成されるフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャクライアントアプリケーションを作成できます。フォーム作成者は、Forms サービスが様々なブラウザー環境で PDF、SWF または HTML でレンダリングする、単一のフォームデザインを開発できます。
 
-エンドユーザーがフォームを要求すると、クライアントアプリケーションがFormsサービスに要求を送信し、そのサービスが適切な形式でフォームを返します。 Formsサービスは、要求を受け取るとすぐに、データをフォームデザインと結合し、目的の形式でフォームを配信します。 Formサービスの出力は、インタラクティブなフォーム（通常はPDFドキュメント）です。 インタラクティブフォームを使用すると、ユーザーはフォーム上のフィールドに入力できます。
+エンドユーザーがフォームを要求すると、クライアントアプリケーションが Forms サービスに要求を送信し、このサービスが適切な形式でフォームを返します。Forms サービスは、要求を受け取るとすぐにデータをフォームデザインと結合し、目的の形式でフォームを配信します。フォームサービスの出力は、インタラクティブなフォーム（通常は PDF ドキュメント）です。インタラクティブフォームを使用すると、ユーザーはフォーム上のフィールドに入力できます。
 
-クライアントアプリケーションのタイプに応じて、フォームをクライアントWebブラウザーに書き込むか、フォームをPDFファイルとして保存できます。 Webベースのアプリケーションは、フォームをWebブラウザーに書き込むことができます。 デスクトップアプリケーションは、フォームをPDFファイルとして保存できます。 WebブラウザーとPDFファイルに書き出す方法を示すために、*「Formsのレンダリング*」セクションにあるクイックスタートは、次のように構成されています。
+クライアントアプリケーションの種類に応じて、フォームをクライアント ｗeb ブラウザーに書き込んだり、フォームを PDF ファイルとして保存したりできます。Web ベースのアプリケーションは、web ブラウザーにフォームを書き込むことができます。デスクトップアプリケーションは、フォームを PDF ファイルとして保存できます。Web ブラウザーと PDF ファイルに書き出す方法を示すために、*Forms のレンダリング* セクションにあるクイックスタートは、次のように整理されます。
 
-* Java APIで厳密に型指定された（SOAPモード）の例は、Javaサーブレットです。
-* Webサービス(Java Base64)の例は、Javaサーブレットです。
-* Webサービス(MTOM)の例は、コンソールアプリケーションです（すべてのクイックスタートにMTOMの例があるわけではありません）。
+* Java API で厳密に型指定された（SOAP モード）の例は Java サーブレットです。
+* Web サービス (Java Base64) の例は Java サーブレットです。
+* Web サービス（MTOM）の例は、コンソールアプリケーションです（すべてのクイックスタートに MTOM の例があるわけではありません）。
 
 >[!NOTE]
 >
->Javaサーブレットを使用してFormsサービスを呼び出すWebアプリケーションの作成について詳しくは、「 [Forms](/help/forms/developing/creating-web-applications-renders-forms.md)をレンダリングするWebアプリケーションの作成」を参照してください。
+>Java サーブレットを使用して Forms サービスを呼び出す web アプリケーションの作成について詳しくは、[Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)を参照してください。
 
-フォームデザイン（XDPファイル）またはPDFドキュメントをFormsサービスに渡す方法は、次の2つの方法のいずれかです。
+次の 2 つの方法のいずれかを使用して、フォームデザイン（XDP ファイル）または PDF ドキュメントを Forms サービスに渡すことができます。
 
-* URL値を使用してフォームデザインを参照できます。 この方法では、`URLSpec`オブジェクトを使用します。 コンテンツルートは、`URLSpec`オブジェクトの`setContentRootURI`メソッドを使用してFormsサービスに渡されます。 フォームデザインの名前(`formQuery`)は、別のパラメーターとして渡されます。 2つの値が連結され、フォームデザインへの絶対参照が取得されます。 (ほとんどのクイックスタートは、「*Forms*&#x200B;のレンダリング」セクションにあり、この方法を使用します)。
-* フォームデザインを含む`com.adobe.idp.Document`をFormsサービスに渡すことができます。 `renderPDFForm2`および`renderHTMLForm2`という2つの新しいメソッドは、フォームデザインを含む`com.adobe.idp.Document`オブジェクトを受け取ります。 ([Formsサービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)を参照)。
+* URL 値を使用してフォームデザインを参照できます。このアプローチでは、`URLSpec` オブジェクトを使用します。コンテンツルートは、`URLSpec` オブジェクトの `setContentRootURI` メソッドを使用して Forms サービスに渡されます。フォームデザイン名（`formQuery`）は別のパラメーターとして渡されます。2 つの値が連結され、フォームデザインへの絶対参照が取得されます。（ほとんどのクイックスタートは、*Forms のレンダリング*&#x200B;セクションでは、この方法を使用します）。
+* フォームデザインを含む `com.adobe.idp.Document` を Forms サービスに渡すことができます。`renderPDFForm2` および `renderHTMLForm2` という名前の 2 つの新しいメソッドは、フォームデザインを含む `com.adobe.idp.Document` オブジェクトを受け入れます（[Forms サービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)を参照）。
 
-Formsサービスを使用して、次のタスクを実行できます。
+Forms サービスを使用して、次のタスクを実行できます。
 
-* インタラクティブPDF formsのレンダリング ([インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照)。
-* クライアントでフォームをレンダリングします。 ([クライアントでのFormsのレンダリング](/help/forms/developing/rendering-forms-client.md)を参照)。
-* フラグメントに基づいてフォームをレンダリングする。([フラグメントに基づくFormsのレンダリング](/help/forms/developing/rendering-forms-based-fragments.md)を参照)。
-* 権限が有効なフォームをレンダリングします。 ([権限が有効なForms](/help/forms/developing/rendering-rights-enabled-forms.md)のレンダリングを参照)。
-* フォームをHTMLとしてレンダリングする。 ([FormsをHTMLとしてレンダリングする](/help/forms/developing/rendering-forms-html.md)を参照)。
-* カスタムCSSファイル([カスタムCSSファイルを使用したHTML Formsのレンダリング](/help/forms/developing/rendering-html-forms-using-custom.md))
-* 送信済みのフォームを処理します。 ([送信されたForms](/help/forms/developing/handling-submitted-forms.md)の処理を参照)。
-* 送信済みXMLデータを使用してPDFドキュメントを作成します。 （[送信されたXMLデータを使用したPDFドキュメントの作成](/help/forms/developing/creating-pdf-documents-submitted-xml.md)を参照）。
-* フォームの事前入力 ([編集可能なレイアウトを使用したFormsの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照)。
-* ドキュメントを渡す。 ([Formsサービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)を参照)。
-* フォームデータを計算します。 （[フォームデータの計算](/help/forms/developing/calculating-form-data.md)を参照）。
-* アプリケーションを最適化する。 (「[Formsサービスのパフォーマンスの最適化](/help/forms/developing/optimizing-performance-forms-service.md)」を参照)。
-
-   ***ヒント&#x200B;**:Adobe開発者のWebサイトには、Formsサービスを呼び出してフォームをレンダリングするASP.NETアプリケーションの作成方法を説明する次の記事が含まれています。[ASP.NETアプリケーションをレンダリングするフォームの作成](https://www.adobe.com/devnet/livecycle/articles/asp_net.html).*を参照してください。
+* インタラクティブ PDF Forms のレンダリング（[インタラクティブ PDF Forms のレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照）。
+* クライアントでの Forms のレンダリング（[クライアントでの Forms のレンダリング](/help/forms/developing/rendering-forms-client.md)を参照）。
+* フラグメントに基づいた Forms のレンダリング（[フラグメントに基づいた Forms のレンダリング](/help/forms/developing/rendering-forms-based-fragments.md)を参照）。
+* 権限が有効な Forms のレンダリング（[レンダリング権限が有効な Forms ](/help/forms/developing/rendering-rights-enabled-forms.md)を参照）。
+* Forms を HTML としてレンダリング（[Forms を HTML としてレンダリング](/help/forms/developing/rendering-forms-html.md)を参照）。
+* カスタム CSS ファイルを使用した HTML フォームのレンダリング（[カスタム CSS ファイルを使用した HTML フォームのレンダリング](/help/forms/developing/rendering-html-forms-using-custom.md)）
+* 送信された Forms の処理（[送信された Forms の処理](/help/forms/developing/handling-submitted-forms.md)を参照）。
+* 送信された XML データを使用した PDF ドキュメントの作成（[送信された XML データでの PDF ドキュメントの作成](/help/forms/developing/creating-pdf-documents-submitted-xml.md)を参照）。
+* フォームの事前入力（[編集可能なレイアウトを使用した Forms の事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照）。
+* ドキュメントを渡す（[Forms サービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)を参照）。
+* フォームデータの計算（[フォームデータの計算](/help/forms/developing/calculating-form-data.md)を参照）。
+* アプリケーションの最適化（[Forms サービスのパフォーマンスの最適化](/help/forms/developing/optimizing-performance-forms-service.md)を参照。）
