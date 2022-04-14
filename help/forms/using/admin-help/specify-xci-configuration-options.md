@@ -1,8 +1,8 @@
 ---
 title: XCI 設定オプションの指定
-seo-title: XCI 設定オプションの指定
+seo-title: Specify XCI configuration options
 description: XCI 設定オプションの指定方法について説明します。
-seo-description: XCI 設定オプションの指定方法について説明します。
+seo-description: Learn how to specify XCI configuration options.
 uuid: cf9e544d-63cd-4fad-8f89-bdb46eeef409
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f38ebd69-8d1c-49b6-824f-4bf0ec8a8953
 exl-id: 8fbff12a-4923-4151-a758-c1e44dee9160
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '140'
+workflow-type: ht
+source-wordcount: '129'
 ht-degree: 100%
 
 ---
@@ -30,4 +30,4 @@ Output では、レンダリングに使用するカスタム XCI ファイル�
 
 1. 管理コンソールで、サービス／Output をクリックします。
 1. 「システムデフォルトの XCI オプションを使用」チェックボックスをオンまたはオフにします。このオプションを選択すると、Output では、パケット、作成者、プロデューサーおよび compressObjectStream の設定にデフォルト値が使用されます。このオプションを選択しない場合、Output では、カスタム XCI ファイルで指定された値が使用されます。
-1. 「保存」をクリックします。
+1. 「保存」をクリックしてください。
