@@ -3,16 +3,16 @@ title: ' [!DNL Assets] 内ファイルのチェックインとチェックアウ
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
 role: User
-feature: アセット管理
+feature: Asset Management
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
 source-git-commit: 19dd081674b4954498d6aa62335f6b5a9f2a4146
-workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '425'
+ht-degree: 100%
 
 ---
 
-# [!DNL Experience Manager]DAM 内ファイルのチェックイン、チェックアウト {#check-in-and-check-out-files-in-assets}
+# [!DNL Experience Manager] DAM 内ファイルのチェックイン、チェックアウト  {#check-in-and-check-out-files-in-assets}
 
 [!DNL Adobe Experience Manager Assets] では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。アセットをチェックアウトした後は、その人だけがアセットを編集、注釈、公開、移動、削除できるようになります。アセットのチェックアウトでアセットにロックがかかることになります。アセットが [!DNL Assets] にチェックインされるまで、他のユーザーはそのアセットではどんな作業も行えません。ただし、ロックされたアセットのメタデータは変更することができます。
 
@@ -24,7 +24,7 @@ ht-degree: 95%
 
 1. [!DNL Assets] ユーザーインターフェイスでチェックアウトするアセットを選択します。チェックアウトしたいアセットは複数選択することもできます。
 1. ツールバーの「**[!UICONTROL チェックアウト]**」をクリックします。「**[!UICONTROL チェックアウト]**」オプションが「**[!UICONTROL チェックイン]**」に変わります。
-チェックアウトしたアセットを他のユーザーが編集できるかを確認するには、別のユーザーとしてログインします。チェックアウトしたアセットのサムネールにロック記号が表示されます。
+チェックアウトしたアセットを他のユーザーが編集できるかを確認するには、別のユーザーとしてログインします。チェックアウトしたアセットのサムネールには、鍵のアイコンが表示されます。
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
 
@@ -63,6 +63,6 @@ ht-degree: 95%
 
 >[!MORELIKETHIS]
 >
->* [ [!DNL Experience Manager] デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#how-app-works2)でのチェックインとチェックアウトについて
->* [チェックインとチェックアウトについて説明するビデオチュートリアル [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
+>* [ [!DNL Experience Manager] デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#how-app-works2)でのチェックインとチェックアウトについて
+>* [チェックインとチェックアウトについて説明するビデオチュートリアル [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html?lang=ja)
 
