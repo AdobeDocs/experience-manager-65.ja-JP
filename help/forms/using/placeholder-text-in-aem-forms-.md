@@ -1,18 +1,18 @@
 ---
 title: 'AEM Forms のプレースホルダーテキスト '
-seo-title: 'AEM Forms のプレースホルダーテキスト '
+seo-title: Placeholder text in AEM Forms
 description: プレースホルダーテキストは、コントロールに値がない場合に、ユーザーのデータ入力を支援するためのものです。これはサンプルの値にすることも、使用する形式に関する簡単な説明にすることもできます。
-seo-description: プレースホルダーテキストは、コントロールに値がない場合に、ユーザーのデータ入力を支援するためのものです。これはサンプルの値にすることも、使用する形式に関する簡単な説明にすることもできます。
+seo-description: Placeholder text is intended to aid the user with data entry when the control has no value. It could be a sample value or a brief description of the expected format.
 uuid: 69f80722-93db-4932-9016-4b530e183d4e
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: f9ff2cc5-3f0a-4b2f-a206-2fe0985646ea
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 6b6e27b5-8b4e-489c-9e72-4d256692c1ca
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '253'
+workflow-type: ht
+source-wordcount: '215'
 ht-degree: 100%
 
 ---
