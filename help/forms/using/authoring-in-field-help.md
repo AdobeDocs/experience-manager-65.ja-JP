@@ -1,23 +1,23 @@
 ---
 title: フォームのフィールドのための文脈依存ヘルプの作成
-seo-title: フォームのフィールドのための文脈依存ヘルプの作成
+seo-title: Authoring in-context help for form fields
 description: AEM Forms では、文脈依存ヘルプをテキストまたはビデオなどのリッチメディアの形でアダプティブフォームフィールドやパネルに追加することができます。
-seo-description: AEM Forms では、文脈依存ヘルプをテキストまたはビデオなどのリッチメディアの形でアダプティブフォームフィールドやパネルに追加することができます。
+seo-description: AEM Forms allows you to add in-context help to adaptive form fields and panels, as text or rich media, including videos.
 uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 6569bfba-9af5-4060-8640-e51d7af46614
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '395'
+workflow-type: ht
+source-wordcount: '366'
 ht-degree: 100%
 
 ---
 
-# フォームのフィールドのための文脈依存ヘルプの作成{#authoring-in-context-help-for-form-fields}
+# フォームフィールド用の文脈依存ヘルプの作成{#authoring-in-context-help-for-form-fields}
 
 ## はじめに {#introduction}
 
@@ -25,7 +25,7 @@ ht-degree: 100%
 
 この記事では、アダプティブフォームの作成中に文脈依存ヘルプを追加する方法を説明します。
 
-## 文脈依存ヘルプの追加  {#add-in-context-help}
+## 文脈依存ヘルプの追加 {#add-in-context-help}
 
 文脈依存ヘルプは、サイドバーにある「プロパティ」タブの「ヘルプコンテンツ」セクションで、次のオプションを利用して指定できます。
 
@@ -38,7 +38,7 @@ ht-degree: 100%
 >
 >詳細な説明は簡単な説明をオーバーライドします。両方を指定した場合は、詳細な説明のみが表示されます。
 
-### 簡単な説明  {#short-description}
+### 簡単な説明 {#short-description}
 
 簡単な説明フィールドは、フォームフィールドの記入に関する短く簡単なヒントを提供するためにあります。簡単な説明内で指定されたテキストは、フィールドの上にカーソルを移動させると、ツールヒントとして表示されます。
 
