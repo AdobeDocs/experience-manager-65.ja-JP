@@ -1,6 +1,6 @@
 ---
-title: Dynamic Mediaアセットの配信
-description: Dynamic Media Assetsの配信方法を説明します
+title: Dynamic Media アセットの配信
+description: Dynamic Media アセットの配信方法について説明します。
 uuid: 23eddf83-34f5-4aae-8b81-d1cd7a098a7e
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,15 +10,15 @@ discoiquuid: e3b44330-d476-49c6-b7ba-079d0d60e500
 docset: aem65
 role: User, Admin
 exl-id: 274af114-845a-46bd-b091-802cf589687a
-feature: アセット管理、レンディション
+feature: Asset Management,Renditions
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 75%
+workflow-type: ht
+source-wordcount: '310'
+ht-degree: 100%
 
 ---
 
-# Dynamic Mediaアセットの配信{#delivering-dynamic-media-assets}
+# Dynamic Media アセットの配信{#delivering-dynamic-media-assets}
 
 ビデオでも画像でも、Dynamic Media アセットの配信方法は、Web サイトの実装方法によって異なります。
 
@@ -37,18 +37,18 @@ Dynamic Media を使用する場合、次の複数のオプションがありま
 
 詳しくは、次のトピックを参照してください。
 
-* [WebページへのDynamic Mediaアセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
-* [Webページにビデオビューアまたは画像ビューアを埋め込む](/help/assets/embed-code.md)
-* [Dynamic Mediaでのホットリンク保護の有効化](/help/assets/hotlink-protection.md)
-* [WebアプリケーションへのURLのリンク](/help/assets/linking-urls-to-yourwebapplication.md)
+* [Web ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)
+* [ビデオまたは画像ビューアを web ページに埋め込む](/help/assets/embed-code.md)
+* [Dynamic Media でホットリンク保護を有効化する](/help/assets/hotlink-protection.md)
+* [Web アプリケーションに URL をリンクする](/help/assets/linking-urls-to-yourwebapplication.md)
 * [レスポンシブサイト用に最適化された画像の配信](/help/assets/responsive-site.md)
 * [コンテンツの HTTP/2 配信](/help/assets/http2.md)
-* [Dynamic Media Classicを使用したCDNキャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)
-* [ルールセットを使用したURLの変換](/help/assets/using-rulesets-to-transform-urls.md)
+* [Dynamic Media Classic を使用して CDN キャッシュを無効にします](/help/assets/invalidate-cdn-cache-dm-classic.md)
+* [ルールセットを使用して URL を変換する](/help/assets/using-rulesets-to-transform-urls.md)
 
 
 ## Dynamic Media アセットの HTTP/2 配信 {#http-delivery-of-dynamic-media-assets}
 
 Experience Manager では、HTTP/2 上でのすべての Dynamic Media コンテンツ（画像とビデオ）の配信をサポートするようになりました。つまり、画像やビデオの公開済み URL や埋め込みコードは、ホストされるアセットを受け取るアプリケーションとの統合に使用できます。その公開済みアセットは、その後、HTTP/2 プロトコルで配信されます。この配信方法により、ブラウザーとサーバーの通信が向上し、すべての Dynamic Media アセットの応答時間と読み込み時間が短くなります。
 
-詳しくは、[HTTP/2配信のコンテンツに関するよくある質問](/help/sites-administering/scene7-http2faq.md)を参照してください。
+詳しくは、[HTTP/2 配信のコンテンツに関するよくある質問](/help/sites-administering/scene7-http2faq.md)を参照してください。
