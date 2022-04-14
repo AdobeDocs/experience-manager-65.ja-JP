@@ -1,20 +1,20 @@
 ---
 title: 翻訳するコンテンツの準備
-seo-title: 翻訳するコンテンツの準備
+seo-title: Preparing Content for Translation
 description: 翻訳するコンテンツを準備する方法について説明します。
-seo-description: 翻訳するコンテンツを準備する方法について説明します。
+seo-description: Learn how to prepare content for translation.
 uuid: 369630a8-2ed7-48db-973e-bd8213231d49
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 8bd67d71-bcb7-4ca0-9751-3ff3ee054011
-feature: 言語コピー
+feature: Language Copy
 exl-id: 81978733-89a6-4436-bcf1-4bde962ed54f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '681'
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 97%
 
 * `<language-code>`サポートされている言語コードは、ISO-639-1 で定義されている 2 文字のコード（例：`en`）です。
 
-* `<language-code>_<country-code>` また `<language-code>-<country-code>`は、ISO 3166で定義されている小文字または大文字の2文字コード(例： `en_US`、 `en_us`、 `en_GB`、 `en-gb`)がサポートされています。
+* `<language-code>_<country-code>` または `<language-code>-<country-code>` サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです（例：`en_US`、`en_us`、`en_GB`、`en-gb`）。
 
 グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。「名前」プロパティは、リポジトリ内の page ノードの名前として使用されます。そのため、このプロパティによってページのパスが指定されます（http://localhost:4502/content/geometrixx/fr.html）。
 
@@ -76,9 +76,9 @@ ht-degree: 97%
 
    ![chlimage_1-22](assets/chlimage_1-22a.png)
 
-1. 「作成」をクリックまたはタップします。確認のダイアログボックスで、「**完了**」をクリックまたはタップしてサイトコンソールに戻ります。または「**開く**」をクリックまたはタップして言語コピーを開きます。
+1. 「作成」をクリックまたはタップします。確認のダイアログボックスで、「**完了**」をクリックまたはタップして Sites コンソールに戻ります。または「**開く**」をクリックまたはタップして言語コピーを開きます。
 
-## 言語ルートのステータスの確認  {#seeing-the-status-of-language-roots}
+## 言語ルートのステータスの確認 {#seeing-the-status-of-language-roots}
 
 タッチ操作向け UI には参照パネルがあります。このパネルには、作成された言語ルートのリストが表示されます。
 
