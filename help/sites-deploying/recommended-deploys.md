@@ -1,8 +1,8 @@
 ---
 title: 推奨されるデプロイメント
-seo-title: 推奨されるデプロイメント
+seo-title: Recommended Deployments
 description: この記事では、AEM の推奨されるトポロジについて説明します。
-seo-description: この記事では、AEM の推奨されるトポロジについて説明します。
+seo-description: This article describes the recommended topologies for AEM.
 uuid: bc638121-c531-43eb-9ec6-3283a33519f8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 66d351e1-87f1-4006-bf8a-3cbbd33db9ed
 docset: aem65
 exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1802'
-ht-degree: 90%
+workflow-type: ht
+source-wordcount: '1792'
+ht-degree: 100%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 90%
 >
 >このページでは、AEM の推奨されるトポロジについて説明します。クラスター化機能およびその設定方法について詳しくは、[Apache Sling Discovery API のドキュメント](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)を参照してください。
 
-MicroKernelは、AEM 6.2以降の永続性マネージャーとして機能します。ニーズに合わせて1つを選択するかは、インスタンスの目的と考慮するデプロイメントタイプによって異なります。
+AEM 6.2 以降、MicroKernels は永続性マネージャーとして機能します。ニーズに合わせた MicroKernel の選択は、インスタンスの目的と検討しているデプロイメントタイプによって決まります。
 
 以下の例は、最も一般的な AEM 設定で推奨される使用法を示しています。
 
-## デプロイメントのシナリオ  {#deployment-scenarios}
+## デプロイメントのシナリオ {#deployment-scenarios}
 
 ### 単一の TarMK インスタンス {#single-tarmk-instance}
 
@@ -76,7 +76,7 @@ MicroKernelは、AEM 6.2以降の永続性マネージャーとして機能し�
 
 >[!NOTE]
 >
->この TarMK の例のコールドスタンバイデプロイメントでは、フェイルオーバーサーバーに定期的にレプリケートされるので、プライマリインスタンスとスタンバイインスタンスの両方が個別にライセンスされている必要があります。ライセンスの詳細については、[Adobeの一般ライセンス条項](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html)を参照してください。
+>この TarMK の例のコールドスタンバイデプロイメントでは、フェイルオーバーサーバーに定期的にレプリケートされるので、プライマリインスタンスとスタンバイインスタンスの両方が別々にライセンスされている必要があります。ライセンスについて詳しくは、[アドビの一般ライセンス条件](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html)を参照してください。
 
 ### TarMK ファーム {#tarmk-farm}
 
@@ -84,7 +84,7 @@ MicroKernelは、AEM 6.2以降の永続性マネージャーとして機能し�
 
 オーサーサーバーが各ファームメンバーに同じコンテンツを公開することによって、リポジトリの同期が維持されます。詳しくは、[レプリケーション](/help/sites-deploying/replication.md)を参照してください。
 
-AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプリケーションされません。TarMKファームでUGCをサポートする方法については、AEM Communities](#considerations-for-aem-communities)の考慮事項[を参照してください。
+AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプリケーションされません。TarMK ファームでの UGC のサポートについて詳しくは、「[AEM Communities に関する考慮事項](#considerations-for-aem-communities)」を参照してください。
 
 **これは、パブリッシュ環境のデフォルトのデプロイメントです。**
 
@@ -96,9 +96,9 @@ AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプ�
 * 読み取りアクセスに対するスケーラビリティ
 * フェイルオーバー
 
-### 単一のデータセンターで高可用性を確保するための MongoMK フェイルオーバーを備えた Oak クラスター  {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
+### 単一のデータセンターで高可用性を確保するための MongoMK フェイルオーバーを備えた Oak クラスター {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
 
-このアプローチでは、複数の Oak インスタンスが単一のデータセンター内の MongoDB レプリカセットにアクセスでき、事実上、AEM オーサー環境のアクティブ-アクティブ構成のクラスターになります。MongoDB のレプリカセットは、ハードウェアまたはネットワークに障害が発生した場合に高可用性と冗長性を提供するために使用されます。
+このアプローチでは、複数の Oak インスタンスが単一のデータセンター内の MongoDB レプリカセットにアクセスでき、事実上、AEM オーサー環境のアクティブ-アクティブ構成のクラスターになります。MongoDB のレプリカセットを使用すると、ハードウェアまたはネットワークに障害が発生した場合に高可用性と冗長性を確保することができます。
 
 ![chlimage_1-18](assets/chlimage_1-18.png)
 
@@ -124,11 +124,11 @@ AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプ�
 
 >[!NOTE]
 >
->上の図では、AEM Server 3とAEM Server 4に、データセンター2のAEMサーバーとデータセンター1のMongoDBプライマリノードの間のネットワーク遅延が、[ここ](/help/sites-deploying/aem-with-mongodb.md#checklists)に記載されている要件を超えると仮定して、非アクティブなステータスが表示されます。 例えば、可用性ゾーンの使用などにより、最大遅延が要件に反しない場合は、データセンター 2 の AEM サーバーもアクティブになることができ、結果として、複数のデータセンターにまたがるアクティブ-アクティブ構成の AEM クラスターとなります。
+>上の図では、データセンター 2 の AEM サーバーとデータセンター 1 の MongoDB プライマリノードとのネットワーク遅延が、[ここ](/help/sites-deploying/aem-with-mongodb.md#checklists)に記載されている要件よりも大きいと仮定して、AEM サーバー 3 と AEM サーバー 4 のステータスが非アクティブになっています。例えば、可用性ゾーンの使用などにより、最大遅延が要件に反しない場合は、データセンター 2 の AEM サーバーもアクティブになることができ、結果として、複数のデータセンターにまたがるアクティブ-アクティブ構成の AEM クラスターとなります。
 
 >[!NOTE]
 >
->この節で説明するMongoDBアーキテクチャの概念について詳しくは、[MongoDBのレプリケーション](https://docs.mongodb.org/manual/replication/)を参照してください。
+>この節で説明した MongoDB アーキテクチャの概念について詳しくは、[MongoDB の レプリケーションに関するドキュメント](https://docs.mongodb.org/manual/replication/)を参照してください。
 
 ## MicroKernel：どちらを使用すべきか {#microkernels-which-one-to-use}
 
@@ -138,14 +138,14 @@ AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプ�
 
 アドビでは、すべてのデプロイメントのシナリオ（AEM のオーサーインスタンスとパブリッシュインスタンスの両方）で顧客が使用するデフォルトの永続性テクノロジーとして、TarMK を強くお勧めします。ただし、次に示す事例を除きます。
 
-### オーサーインスタンスで TarMK ではなく AEM MongoMK を例外的に選択する場合  {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-author-instances}
+### オーサーインスタンスで TarMK ではなく AEM MongoMK を例外的に選択する場合 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-author-instances}
 
 永続性バックエンドとして TarMK ではなく MongoMK を選択する主な理由は、水平方向へのインスタンスの拡張です。つまり、2 つ以上のアクティブなオーサーインスタンスを常に実行し、MongoDB を永続性ストレージシステムとして使用します。複数のオーサーインスタンスを実行する必要があるのは、通常、1 台のサーバーの CPU とメモリの処理能力では同時に実行されるすべてのオーサリングアクティビティをサポートできなくなっているためです。
 
 新しいサイトの運用開始後の正確な同時実行モデルを予測するのはほぼ不可能です。そのため、アドビでは、MongoMK と 2 つ以上のオーサーアクティブノードを使用するかどうかを評価する際に次の条件を考慮することをお勧めします。
 
-1. 1 日に接続する名前付きユーザーの数（数千人以上）
-1. 同時ユーザーの数（数百人以上）
+1. 1 日に接続する名前付きユーザー数（数千人以上）
+1. 同時ユーザー数（数百人以上）
 1. 1 日あたりのアセット収集のボリューム（数十万件以上）
 1. 1 日あたりのページ編集のボリューム（数十万件以上）（Multi Site Manager やニュースフィードの収集などによる自動化された更新を含む）
 1. 1 日あたりの検索のボリューム（数万件以上）
@@ -165,17 +165,17 @@ AEM Communities の場合、ユーザー生成コンテンツ（UGC）はレプ�
 
 デプロイメントの最初の 18 ヶ月間に前述の条件を満たすことができないと思われる場合は、最初に TarMK を使用して AEM をデプロイし、後から（前述の条件を適用する際に）設定を再評価して、TarMK をそのまま使用するか、MongoMK に移行するかを最終的に判断することをお勧めします。
 
-### パブリッシュインスタンスに TarMK ではなく AEM MongoMK を選択する例外的な場合  {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
+### パブリッシュインスタンスに TarMK ではなく AEM MongoMK を選択する例外的な場合 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-publish-instances}
 
 パブリッシュインスタンス用に MongoMK をデプロイすることはお勧めしません。ほとんどの場合、デプロイメントのパブリッシュ層は、TarMK を実行する、完全に独立したパブリッシュインスタンスのファームとしてデプロイされます。このパブリッシュインスタンスの同期は、オーサーインスタンスからコンテンツをレプリケーションすることで維持されます。この「何も共有しない」アーキテクチャは、パブリッシュインスタンスに適しており、パブリッシュ層のデプロイメントを水平方向に直線的に拡張できます。また、ファームのトポロジによっても、アップデートやアップグレードをパブリッシュインスタンスに周期的に適用するというメリットがもたらされるので、パブリッシュ層に対する変更の際にダウンタイムが発生しません。
 
-これは、複数のパブリッシャーがある場合は常にパブリッシュ層で MongoMK クラスターを使用する AEM Communities には該当しません。JSRP（[コミュニティコンテンツストレージ](/help/communities/working-with-srp.md)を参照）を選択した場合、MongoMKクラスターは、MongoDBやRDBなど、選択したMKに関係なく、どのパブリッシュ側クラスターにも適しています。
+これは、複数のパブリッシャーがある場合は常にパブリッシュ層で MongoMK クラスターを使用する AEM Communities には該当しません。JSRP を選択する場合は（[コミュニティコンテンツのストレージ](/help/communities/working-with-srp.md)を参照）、選択した MK（MongoDB や RDB など）に関係なく任意のパブリッシュ側クラスターが適切であるように、MongoMK クラスターが適切です。
 
 ### MongoMK を使用して AEM をデプロイする際の前提条件と推奨事項 {#prerequisites-and-recommendations-when-deploying-aem-with-mongomk}
 
-AEM 用の MongoMK デプロイメントを検討する場合の一連の前提条件と推奨事項があります。
+AEM 用の MongoMK デプロイメントを検討する場合、一連の前提条件と推奨事項があります。
 
-**MongoDBデプロイメントの必須の前提条件：**
+**MongoDB デプロイメントの必須の前提条件：**
 
 1. AEM を熟知したアドビのコンサルタントまたは MongoDB のアーキテクトの支援のもとで、MongoDB デプロイメントのアーキテクチャとサイジングをプロジェクトの実装に含める必要があります。
 1. 既存の、または新しい MongoDB 環境を適切に維持および保守できるように、MongoDB の専門知識をパートナーまたはカスタマーチーム内で共有しておく必要があります。
@@ -183,23 +183,23 @@ AEM 用の MongoMK デプロイメントを検討する場合の一連の前提�
 1. AEM と MongoDB の全体的なアーキテクチャおよびインフラストラクチャについて明確に定義し、アドビの AEM アーキテクトによる検証を済ませておく必要があります。
 1. MongoDB を含む AEM デプロイメントのサポートモデルについて確認しておく必要があります。
 
-**MongoDBデプロイメントに関する強い推奨事項：**
+**MongoDB デプロイメントの重要な推奨事項：**
 
 * MongoDB for Adobe Experience Manager に関する[記事](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)を参照してください。
-* MongoDB の本番[チェックリスト](https://docs.mongodb.org/manual/administration/production-checklist/)を確認してください。
-* [このページ](https://university.mongodb.com/)から、MongoDB の認定クラスにオンラインで参加できます。
+* MongoDB の実稼働[チェックリスト](https://docs.mongodb.org/manual/administration/production-checklist/)を確認してください。
+* [こちら](https://university.mongodb.com/)から、MongoDB の認定クラスにオンラインで参加できます。
 
 >[!NOTE]
 >
 >前述のガイドライン、前提条件および推奨事項に関するその他のご質問については、[アドビのカスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)までお問い合わせください。
 
-### AEM Communities に関する考慮事項  {#considerations-for-aem-communities}
+### AEM Communities に関する考慮事項 {#considerations-for-aem-communities}
 
 [AEM Communities](/help/communities/overview.md) のデプロイを計画しているサイトでは、パブリッシュ環境から Communities メンバーが投稿した UGC を処理するために最適化された[デプロイメントを選択](/help/communities/working-with-srp.md#characteristicsofstorageoptions)することをお勧めします。
 
 [共通のストア](/help/communities/working-with-srp.md)を使用すると、UGC の一貫した表示を確保するために、オーサーインスタンスとその他のパブリッシュインスタンスとの間で UGC をレプリケートする必要がありません。
 
-デプロイメントに最適な永続性のタイプを選択する際に役立つ、一連の意思決定のフローチャートを次に示します。
+デプロイメントに最適な永続性のタイプを選択する際に役立つ、一連の意思決定のマトリクスを次に示します。
 
 #### オーサーインスタンス用のデプロイメントタイプの選択 {#choosing-the-deployment-type-for-author-instances}
 
