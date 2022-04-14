@@ -1,21 +1,21 @@
 ---
-title: アダプティブフォームのフィールドにルールを適用する
-seo-title: アダプティブフォームのフィールドにルールを適用する
-description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加する方法について説明します。
-seo-description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジック、スマート検証機能をアダプティブフォームに追加する方法について説明します。
+title: アダプティブフォームフィールドへのルールの適用
+seo-title: Apply rules to adaptive form fields
+description: このチュートリアルでは、ルールを作成して、インタラクティブ機能、ビジネスロジックおよびスマート検証機能をアダプティブフォームに追加する方法について説明します。
+seo-description: Create rules to add interactivity, business logic, and smart validations to an adaptive form.
 page-status-flag: de-activated
 uuid: 60f142aa-81ca-4333-8614-85a01e23e917
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
 source-git-commit: 63bc43bba88a42d62fb574bc8ce42470ac61d693
-workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 65%
+workflow-type: ht
+source-wordcount: '1124'
+ht-degree: 100%
 
 ---
 
-# チュートリアル：アダプティブフォームのフィールドにルールを適用する {#tutorial-apply-rules-to-adaptive-form-fields}
+# チュートリアル：アダプティブフォームフィールドへのルールの適用 {#tutorial-apply-rules-to-adaptive-form-fields}
 
 ![06-apply-rules-to-adaptive-form_main](assets/06-apply-rules-to-adaptive-form_main.png)
 
@@ -48,23 +48,23 @@ ht-degree: 65%
 1. 「**[!UICONTROL 顧客 ID]**」フィールドをタップし、「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
 1. 「**[!UICONTROL + 作成]**」アイコンをタップしてルールを追加します。ビジュアルエディターが表示されます。
 
-   ビジュアルエディターでは、**[!UICONTROL WHEN]**&#x200B;ステートメントがデフォルトで選択されています。 また、ルールエディターの起動元となるフォームオブジェクト（この場合は&#x200B;**[!UICONTROL 顧客ID]**）は、 **[!UICONTROL WHEN]**&#x200B;ステートメントで指定されます。
+   ビジュアルエディターでは、「**[!UICONTROL 条件]**」ステートメントがデフォルトで選択されています。また、ルールエディターの起動元となったフォームオブジェクト（この場合は「**[!UICONTROL 顧客 ID]**」）が、「**[!UICONTROL 条件]**」ステートメントで指定されています。
 
-1. 「**[!UICONTROL 状態を選択]**」ドロップダウンをタップし、「**[!UICONTROL 変更済み]**」を選択します。
+1. 「**[!UICONTROL 状態の選択]**」ドロップダウンをタップして「**[!UICONTROL 変更済み]**」を選択します。
 
-   ![when customidischanged](assets/whencustomeridischanged.png)
+   ![whencustomeridischanged](assets/whencustomeridischanged.png)
 
 1. 「**[!UICONTROL THEN]**」ステートメントの「**[!UICONTROL アクションの選択]**」ドロップダウンで「**[!UICONTROL サービスの呼び出し]**」を選択します。
 1. 「**[!UICONTROL 選択]**」ドロップダウンで「**[!UICONTROL 発送先住所を取得]**」サービスを選択します。
-1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客ID]**」フィールドを「**[!UICONTROL オブジェクトをドロップするか、**[!UICONTROL  INPUT ]**」ボックスの「]**」フィールドを選択します。
+1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「**[!UICONTROL オブジェクトをドロップまたは次から選択]**」フィールドにドロップします。
 
    ![dropobjectstoinputfield-retrievedata](assets/dropobjectstoinputfield-retrievedata.png)
 
-1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客ID、名前、配送先住所、都道府県、郵便番号]**」フィールドを「**[!UICONTROL OUTPUT]**」ボックスの「**[!UICONTROL オブジェクトをドロップするか、「]**」フィールドを選択します。
+1. 「フォームオブジェクト」タブの各フィールド（**[!UICONTROL 顧客 ID、名前、発送先住所、都道府県、郵便番号]**）をドラッグし、「**[!UICONTROL 出力]**」ボックスの「**[!UICONTROL オブジェクトをドロップまたは次から選択]**」フィールドにドロップします。
 
-   ![dropobjectstoutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
+   ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
-   「**[!UICONTROL 完了]**」をクリックして、ルールを保存します。ルールエディターウィンドウで、「**[!UICONTROL 閉じる]**」をタップします。
+   「**[!UICONTROL 完了]**」をクリックして、ルールを保存します。ルールエディターウィンドウで「**[!UICONTROL 閉じる]**」をタップします。
 
 1. アダプティブフォームのプレビューを表示します。「**[!UICONTROL 顧客 ID]**」フィールドに ID を入力します。これで、データベース内の顧客情報をフォームに取り込むことができます。
 
@@ -75,11 +75,11 @@ ht-degree: 65%
 データタベースから顧客情報を取得したら、出荷先住所、都道府県、郵便番号を変更します。ここでは、フォームデータモデルサービスを呼び出し、顧客情報を変更してデータベースに保存する手順について説明します。
 
 1. 「**[!UICONTROL 送信]**」フィールドを選択して「**[!UICONTROL ルールを編集]**」アイコンをタップします。ルールエディターウィンドウが表示されます。
-1. **[!UICONTROL 送信 — クリック]**&#x200B;ルールを選択し、**[!UICONTROL 編集]**&#x200B;アイコンをタップします。 送信ルールを編集するオプションが表示されます。
+1. **[!UICONTROL 送信]** - クリックルールを選択して「**[!UICONTROL 編集]**」アイコンをタップします。送信ルールを編集するためのオプションが表示されます。
 
    ![submit-rule](assets/submit-rule.png)
 
-   「WHEN」オプションでは、「**[!UICONTROL 送信]**」と「**[!UICONTROL 」がクリックされた場合に、「]**」のオプションが既に選択されています。
+   「条件」オプションの「**[!UICONTROL 送信]**」オプションと「**[!UICONTROL クリックされた]**」オプションが既に選択されています。
 
    ![submit-is-clicked](assets/submit-is-clicked.png)
 
@@ -90,14 +90,14 @@ ht-degree: 65%
 
    ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-1. **[!UICONTROL 配送先住所、都道府県、郵便番号]**&#x200B;フィールドを[!UICONTROL フォームオブジェクト]タブから&#x200B;**[!UICONTROL Dropオブジェクトの対応する.property（customerdetails .shippingAddressなど）にドラッグ&amp;ドロップするか、**[!UICONTROL  INPUT&lt;a7の&#x200B;]**フィールドを選択します。/>ボックスに置き換えます。]** tablenameのプレフィックスが付いたすべてのフィールド（この使用例ではcustomerdetailsなど）が、更新サービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
+1. 「[!UICONTROL フォームオブジェクト]」タブの各フィールド（**[!UICONTROL 発送先住所、都道府県、郵便番号]**）をドラッグして、「**[!UICONTROL 入力]**」ボックスの「**[!UICONTROL オブジェクトをドロップまたは次から選択]**」フィールドの対応する [テーブル名].[プロパティ]（例：customerdetails.shippingAddress）にドロップします。先頭にテーブル名（このユースケースでは customerdetails）が付いたすべてのフィールドは、更新サービスの入力データとして機能します。 これらのフィールドで指定された値は、すべてデータソース内で更新されます。
 
    >[!NOTE]
    >
-   >**[!UICONTROL 名前]**&#x200B;および&#x200B;**[!UICONTROL 顧客ID]**&#x200B;フィールドを対応するtablename.property（例えば、customerdetails.name）にドラッグ&amp;ドロップしないでください。 これにより、誤って顧客の名前とIDを更新するのを防ぐことができます。
+   >「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL 顧客 ID]**」フィールドは、対応する [テーブル名].[プロパティ] 形式のフィールド（例：customerdetails.name）にドラッグ＆ドロップしないでください。顧客名と顧客 ID が誤って変更されるのを避けるためです。
 
-1. 「フォームオブジェクト」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「id」フィールドにドロップします。tablenameが付いていないフィールド（この使用例ではcustomerdetailsなど）は、更新サービスの検索パラメーターとして機能します。 この使用例の&#x200B;**[!UICONTROL id]**&#x200B;フィールドは、**customerdetails**&#x200B;テーブル内のレコードを一意に識別します。
-1. 「**[!UICONTROL 完了]**」をクリックして、ルールを保存します。ルールエディターウィンドウで、「**[!UICONTROL 閉じる]**」をタップします。
+1. 「[!UICONTROL フォームオブジェクト]」タブの「**[!UICONTROL 顧客 ID]**」フィールドをドラッグし、「**[!UICONTROL 入力]**」ボックスの「ID」フィールドにドロップします。先頭にテーブル名（このユースケースでは customerdetails）が付いていないフィールドは、更新サービスの検索パラメーターとして機能します。 このユースケースでは、「**[!UICONTROL ID]**」フィールドにより、**顧客詳細**&#x200B;テーブルのレコードを一意に特定することができます。
+1. 「**[!UICONTROL 完了]**」をクリックして、ルールを保存します。ルールエディターウィンドウで「**[!UICONTROL 閉じる]**」をタップします。
 1. アダプティブフォームのプレビューを表示します。顧客の詳細情報を取得し、発送先住所を変更してフォームを送信します。同じ顧客の詳細情報をもう一度取得すると、更新された発送先住所が表示されます。
 
 ## 手順 3：（オプション）コードエディターを使用して検証処理を実行し、エラーメッセージを表示する {#step-bonus-section-use-the-code-editor-to-run-validations-and-display-error-messages}
@@ -106,24 +106,24 @@ ht-degree: 65%
 
 アダプティブフォームには、検証機能が組み込まれたコンポーネントがいくつか用意されています（共通のユースケースで使用できる電子メールや数値フィールドなど）。高度なユースケース（データベースからレコードが 1 件も返されなかった場合にエラーメッセージを表示するなど）の場合は、ルールエディターを使用します。
 
-次の手順は、フォームに入力した顧客IDがデータベースに存在しない場合にエラーメッセージを表示するルールを作成する方法を示しています。 また、このルールは、フォーカスを移し、**[!UICONTROL 顧客ID]**&#x200B;フィールドをリセットします。 このルールでは、フォームデータモデルサービス](/help/forms/using/invoke-form-data-model-services.md)のdataIntegrationUtils APIを使用して、データベースに顧客IDが存在するかどうかを確認します。[
+次の手順では、データベース内に存在しない顧客 ID がフォームに入力された場合にエラーメッセージを表示するためのルールを作成する方法を示します。このルールによってフォーカスが「**[!UICONTROL 顧客 ID]**」フィールドに移動し、このフィールドがリセットされます。このルールでは、データモデルサービスの [dataIntegrationUtils API](/help/forms/using/invoke-form-data-model-services.md) を使用して、フォームに入力された顧客 ID がデータベース内に存在するかどうかが確認されます。
 
-1. 「**[!UICONTROL 顧客ID]**」フィールドをタップし、「`Edit Rules`」アイコンをタップします。 [!UICONTROL ルールエディター]ウィンドウが開きます。
+1. 「**[!UICONTROL 顧客 ID]**」フィールドをタップし、`Edit Rules` アイコンをタップします。[!UICONTROL ルールエディター]ウィンドウが表示されます。
 1. 「**[!UICONTROL + 作成]**」アイコンをタップしてルールを追加します。ビジュアルエディターが表示されます。
 
-   ビジュアルエディターでは、**[!UICONTROL WHEN]**&#x200B;ステートメントがデフォルトで選択されています。 また、ルールエディターの起動元となるフォームオブジェクト（この場合は&#x200B;**[!UICONTROL 顧客ID]**）は、 **[!UICONTROL WHEN]**&#x200B;ステートメントで指定されます。
+   ビジュアルエディターでは、「**[!UICONTROL 条件]**」ステートメントがデフォルトで選択されています。また、ルールエディターの起動元となったフォームオブジェクト（この場合は「**[!UICONTROL 顧客 ID]**」）が、「**[!UICONTROL 条件]**」ステートメントで指定されています。
 
-1. 「**[!UICONTROL 状態を選択]**」ドロップダウンをタップし、「**[!UICONTROL 変更済み]**」を選択します。
+1. 「**[!UICONTROL ステートの選択]**」ドロップダウンをタップして「**[!UICONTROL 変更されたとき]**」を選択します。
 
-   ![when customidischanged](assets/whencustomeridischanged.png)
+   ![whencustomidischanged](assets/whencustomeridischanged.png)
 
    「**[!UICONTROL THEN]**」ステートメントの「**[!UICONTROL アクションの選択]**」ドロップダウンで「**[!UICONTROL サービスの呼び出し]**」を選択します。
 
 1. **[!UICONTROL ビジュアルエディター]**&#x200B;から&#x200B;**[!UICONTROL コードエディター]**&#x200B;に切り替えます。切り替え用コントロールは、ウィンドウの右側にあります。コードエディターが開き、以下のようなコードが表示されます。
 
-   ![コードエディター](assets/code-editor.png)
+   ![code-editor](assets/code-editor.png)
 
-1. 「input」変数セクションのコードを以下のように変更します。
+1. 「入力変数」セクションのコードを以下のように置換します。
 
    ```javascript
    var inputs = {
@@ -131,7 +131,7 @@ ht-degree: 65%
    };
    ```
 
-1. `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)`セクションを次のコードに置き換えます。
+1. `guidelib.dataIntegrationUtils.executeOperation (operationInfo, inputs, outputs)` 部分を次のコードに置き換えます。
 
    ```javascript
    guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, function (result) {
