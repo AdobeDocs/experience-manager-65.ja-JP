@@ -1,8 +1,8 @@
 ---
 title: SharePoint Connector のライセンス、著作権情報および免責事項
-seo-title: SharePoint Connector のライセンス、著作権情報および免責事項
+seo-title: SharePoint Connector Licenses, Copyright Notices, and Disclaimers
 description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
-seo-description: SharePoint Connector のライセンス、著作権情報および免責事項について説明します。
+seo-description: Learn about SharePoint Connector Licenses, Copyright Notices and Disclaimers.
 uuid: 182c8f0f-dcca-461a-9d8f-f05b376ad0cb
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 75%
+workflow-type: ht
+source-wordcount: '362'
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 75%
 
 この節では、Day JCR Connector for MS SharePoint に関して明示的に記載する必要があるすべてのライセンス、著作権情報および免責事項について説明します。
 
-## Connector のサードパーティのライブラリの概要  {#overview-of-connector-rd-party-libraries}
+## Connector のサードパーティのライブラリの概要 {#overview-of-connector-rd-party-libraries}
 
 以下の表に、SharePoint Connector のコアライブラリ内で使用されるサードパーティのライブラリ、およびそれらに適用されるライセンス、著作権情報または免責事項を示します。
 
@@ -30,7 +30,7 @@ ht-degree: 75%
 |---|---|
 | annogen | [Apache](#apache) |
 | axiom-api | [Apache](#apache) |
-| 公理界 | [Apache](#apache) |
+| axiom-dom | [Apache](#apache) |
 | axiom-impl | [Apache](#apache) |
 | axis2-adb | [Apache](#apache) |
 | axis2-kernel | [Apache](#apache) |
@@ -41,7 +41,7 @@ ht-degree: 75%
 | commons-httpclient | [Apache](#apache) |
 | commons-io | [Apache](#apache) |
 | commons-lang | [Apache](#apache) |
-| 同時 | [同時](#concurrent) （パブリックドメイン） |
+| Concurrent | [Concurrent](#concurrent)（パブリックドメイン） |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -52,7 +52,7 @@ ht-degree: 75%
 | jaxen | BSD |
 | log4j | [Apache](#apache) |
 | lucene-core | [Apache](#apache) |
-| nethi | [Apache](#apache) |
+| neethi | [Apache](#apache) |
 | slf4j-api | [SLF4J.ORG](#slf-j-org) |
 | slf4j-jdk14 | [SLF4J.ORG](#slf-j-org) |
 | stax-api | [Apache](#apache) |
@@ -60,7 +60,7 @@ ht-degree: 75%
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache) （パブリックドメインおよびW3Cソフトウェアライセンスの対象となる部分を含む） |
+| xml-apis | [Apache](#apache)（パブリックドメインおよび W3C ソフトウェアライセンスの対象となる部分が含まれます） |
 | XmlSchema | [Apache](#apache) |
 
 ## CRX のサードパーティのライブラリの概要 {#overview-of-crx-rd-party-libraries}
@@ -74,7 +74,7 @@ ht-degree: 75%
  </colgroup>
  <tbody>
   <tr>
-   <td>ファイル名</td>
+   <td>Filename</td>
    <td>
     <code>
       License
@@ -98,7 +98,7 @@ ht-degree: 75%
   </tr>
   <tr>
    <td>concurrent-1.3.4.jar</td>
-   <td><a href="#concurrent">同時</a></td>
+   <td><a href="#concurrent">Concurrent</a></td>
   </tr>
   <tr>
    <td>derby-10.1.2.1.jar</td>
@@ -195,7 +195,7 @@ ht-degree: 75%
   </tr>
   <tr>
    <td>portlet-api-1.0.jar</td>
-   <td><a href="#apache">Sun ポートレット</a></td>
+   <td><a href="#apache">Sun Portlet</a></td>
   </tr>
   <tr>
    <td>servletapi-2.3.jar</td>
@@ -426,7 +426,7 @@ ht-degree: 75%
      limitations under the License.
 ```
 
-## 同時 {#concurrent}
+## Concurrent {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any
@@ -438,7 +438,7 @@ ht-degree: 75%
      <a href="https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf" TARGET="_blank" >https://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/sun-u.c.license.pdf</a>
 ```
 
-## Day JCR  {#day-jcr}
+## Day JCR {#day-jcr}
 
 ```xml
      Day Management AG ("Licensor") is willing to license this
@@ -744,7 +744,7 @@ ht-degree: 75%
      2000-05-05
 ```
 
-## SLF4J.ORG  {#slf-j-org}
+## SLF4J.ORG {#slf-j-org}
 
 ```xml
      Copyright (c) 2004-2007 QOS.ch
