@@ -1,8 +1,8 @@
 ---
-title: しおりを使用したPDFドキュメントのアセンブリ
-seo-title: しおりを使用したPDFドキュメントのアセンブリ
-description: Assemblerサービスを使用して、ブックマークを含むPDFドキュメントを変更し、Java APIとWebサービスAPIを使用してブックマークを含めます。
-seo-description: Assemblerサービスを使用して、ブックマークを含むPDFドキュメントを変更し、Java APIとWebサービスAPIを使用してブックマークを含めます。
+title: ブックマークを含む PDF ドキュメントのアセンブリ
+seo-title: Assembling PDF Documents with Bookmarks
+description: Assembler サービスを使用して、ブックマークを含む PDF ドキュメントを変更し、Java API と Web Service API を使用してブックマークを含めます。
+seo-description: Use the Assembler service to modify a PDF document that does contain bookmarks to include bookmarks using the Java API and the Web Service API.
 uuid: a306d2a6-0b12-4eb3-bff4-968a33417486
 contentOwner: admin
 content-type: reference
@@ -13,24 +13,24 @@ discoiquuid: 9f4711a8-033c-4051-ab41-65a26838899b
 role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2588'
-ht-degree: 2%
+workflow-type: ht
+source-wordcount: '2558'
+ht-degree: 100%
 
 ---
 
-# しおり{#assembling-pdf-documents-with-bookmarks}によるPDFドキュメントのアセンブリ
+# ブックマークを含む PDF ドキュメントのアセンブリ {#assembling-pdf-documents-with-bookmarks}
 
-**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
+**このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-しおりを含むPDFドキュメントをアセンブリできます。 例えば、しおりを含まないPDFドキュメントがあり、しおりを指定して変更するとします。 Assemblerサービスを使用すると、しおりを含まないPDFドキュメントにそのドキュメントを渡し、しおりを含むPDFドキュメントに戻すことができます。
+ブックマークを含む PDF ドキュメントをアセンブリできます。 例えば、ブックマークが含まれていない PDF ドキュメントにブックマークを追加したいとします。 Assembler サービスを使用すると、ブックマークを含まない PDF ドキュメントを渡し、ブックマークを含む PDF ドキュメントを受け取ることができます。
 
 ブックマークには、次のプロパティが含まれます。
 
 * 画面にテキストとして表示されるタイトル。
-* ユーザーがブックマークをクリックした場合の動作を指定するアクション。 ブックマークの一般的なアクションは、現在のドキュメント内の別の場所に移動するか、別のPDFドキュメントを開くことですが、他のアクションを指定することもできます。
+* ユーザーがブックマークをクリックしたときの動作を指定するアクション。 ブックマークの一般的なアクションは、現在のドキュメント内の別の場所に移動するか、別の PDF ドキュメントを開くことですが、他のアクションを指定することもできます。
 
-この説明では、次のDDXドキュメントが使用されているとします。
+この説明では、次の DDX ドキュメントが使用されていると仮定します。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -43,11 +43,11 @@ ht-degree: 2%
  </DDX>
 ```
 
-このDDXドキュメント内で、ソース属性に値`Loan.pdf`が割り当てられていることに注意してください。 このDDXドキュメントは、単一のPDFドキュメントがAssemblerサービスに渡されるように指定します。 しおりを含むPDFドキュメントをアセンブリする場合は、結果ドキュメント内のしおりを説明するしおりXMLドキュメントを指定する必要があります。 ブックマークXMLドキュメントを指定するには、DDXドキュメントで`Bookmarks`要素が指定されていることを確認します。
+この DDX ドキュメント内では、 source 属性に値 `Loan.pdf` が割り当てられています。この DDX ドキュメントは、1 つの PDF ドキュメントを Assembler サービスに渡すように指定します。 ブックマークを含む PDF ドキュメントをアセンブリする場合は、結果ドキュメント内のブックマークを説明するブックマーク XML ドキュメントを指定する必要があります。 ブックマーク XML ドキュメントを指定するには、`Bookmarks` 要素を DDX ドキュメント内で指定してください。
 
-この例のDDXドキュメントでは、 `Bookmarks`要素で`doc2`を値として指定しています。 この値は、Assemblerサービスに渡される入力マップに`doc2`という名前のキーが含まれていることを示します。 `doc2`キーの値は、ブックマークXMLドキュメントを表す`com.adobe.idp.Document`値です。 （『[AssemblerサービスとDDXリファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)』の「ブックマーク言語」を参照）。
+この DDX ドキュメントの例では、 `Bookmarks` 要素が値として `doc2` を指定しています。 この値は、Assembler サービスに渡される入力マップに `doc2` という名前のキーが含まれていることを示します。`doc2` キーの値はブックマーク XML ドキュメントを表す `com.adobe.idp.Document` 値です（詳しくは、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)の「ブックマーク言語」を参照）。
 
-このトピックでは、次のXMLしおり言語を使用して、しおりを含むPDFドキュメントを構成します。
+このトピックでは、次の XML ブックマーク言語を使用して、ブックマークを含む PDF ドキュメントをアセンブリします。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -71,69 +71,69 @@ ht-degree: 2%
  </Bookmarks>
 ```
 
-このブックマークXMLドキュメント内に、ユーザーがブックマークをクリックしたときに実行されるアクションを定義するAction要素があることに注意してください。 Action要素の下には、NotePadなどのアプリケーションを起動し、PDFファイルなどのファイルを開くLaunch要素があります。 PDFファイルを開くには、開くファイルを指定するFile要素を使用する必要があります。 例えば、この節で指定するブックマークXMLファイルでは、開くファイルの名前はLoanDetails.pdfです。
+このブックマーク XML ドキュメント内には、ユーザーがブックマークをクリックしたときに実行されるアクションを定義する Action 要素があります。 Action 要素の下には、NotePad などのアプリケーションを起動し、アプリケーションファイルなどのファイルを開く Launch 要素があります。 PDF ファイルを開くには、開くファイルを指定する File 要素を使用する必要があります。 例えば、このセクションで指定したブックマーク XML ファイルでは、開くファイルの名前は LoanDetails.pdf です。
 
 >[!NOTE]
 >
->サポートされるアクションについて詳しくは、『[AssemblerサービスとDDXリファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)』の「`Action`要素」を参照してください。
+>サポートされるアクションの詳細については、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)の「`Action` 要素」 を参照してください。
 
-この節で指定したDDXドキュメントと、XMLファイルを入力としてブックマークすると、Assemblerサービスは、次のブックマークを含むPDFドキュメントをアセンブリします。
+ここで指定した DDX ドキュメントとブックマーク XML ファイルを入力として指定した場合、Assembler サービスは、次のブックマークを含む PDF ドキュメントをアセンブルします。
 
 ![aw_aw_bmark](assets/aw_aw_bmark.png)
 
-ユーザーが&#x200B;*Open the Loan Details*&#x200B;ブックマークをクリックすると、LoanDetails.pdfが開きます。 同様に、ユーザーが&#x200B;*NotePad*&#x200B;のブックマークをクリックすると、NotePadが起動します。
+ユーザーが&#x200B;*ローンの詳細を開く*&#x200B;ブックマークをクリックすると、LoanDetails.pdf が開きます。 同様に、ユーザーが *NotePad を起動*&#x200B;ブックマークをクリックすると、NotePad が起動します。
 
 >[!NOTE]
 >
->この節を読む前に、Assemblerサービスを使用したPDFドキュメントのアセンブリについて理解しておくことをお勧めします。 この節では、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません。 （[PDFドキュメントのプログラムによるアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
+>このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。 このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
 
 >[!NOTE]
 >
->Assemblerサービスについて詳しくは、『AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)向けサービスリファレンス』を参照してください。[
+>Assembler サービスについて詳しくは、[AEM Formsサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 >[!NOTE]
 >
->DDXドキュメントについて詳しくは、『[AssemblerサービスとDDXリファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)』を参照してください。
+>DDX ドキュメントについて詳しくは、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)を参照してください。
 
-## 手順の概要{#summary-of-steps}
+## 手順の概要 {#summary-of-steps}
 
-しおりを含むPDFドキュメントをアセンブリするには、次のタスクを実行します。
+ブックマークを含む PDF ドキュメントをアセンブリするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
-1. PDFアセンブラークライアントを作成します。
-1. 既存のDDXドキュメントの参照
-1. しおりを追加するPDFドキュメントを参照します。
-1. ブックマークXMLドキュメントを参照します。
-1. PDFドキュメントとブックマークXMLドキュメントをMapコレクションに追加します。
+1. PDF Assembler クライアントを作成します。
+1. 既存の DDX ドキュメントを参照します。
+1. ブックマークを追加する PDF ドキュメントを参照します。
+1. ブックマーク XML ドキュメントを参照します。
+1. Map コレクションに PDF ドキュメントとブックマーク XML ドキュメントを追加します。
 1. 実行時オプションを設定します。
-1. PDFドキュメントをアセンブリします。
-1. しおりを含むPDFドキュメントを保存します。
+1. PDF ドキュメントをアセンブリします。
+1. ブックマークを含む PDF ドキュメントを保存します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-次のJARファイルをプロジェクトのクラスパスに追加する必要があります。
+次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(AEM FormsをJBossにデプロイする場合に必要)
-* jbossall-client.jar(AEM FormsをJBossにデプロイする場合に必要)
+* adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
+* jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM FormsがJBoss以外のサポート対象のJ2EEアプリケーションサーバーにデプロイされている場合は、adobe-utilities.jarファイルとjbossall-client.jarファイルを、AEM FormsがデプロイされているJ2EEアプリケーションサーバーに固有のJARファイルに置き換える必要があります。 すべてのAEM Forms JARファイルの場所について詳しくは、「[AEM Forms Javaライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)」を参照してください。
+AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
-**PDFアセンブラークライアントの作成**
+**PDF Assembler クライアントの作成**
 
-プログラムでAssembler操作を実行する前に、Assemblerサービスクライアントを作成する必要があります。
+Assembler 操作をプログラムで実行する前に、Assembler サービスクライアントを作成する必要があります。
 
-**既存のDDXドキュメントの参照**
+**既存の DDX ドキュメントの参照**
 
-PDFドキュメントをアセンブリするには、DDXドキュメントを参照する必要があります。 このDDXドキュメントには`Bookmarks`要素が必要です。この要素は、ブックマークを含むPDFをアセンブルするようにAssemblerサービスに指示します。 （この節で前述したDDXドキュメントの例を参照）。
+DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 この DDX ドキュメントには `Bookmarks` 要素を含める必要があります。これは、ブックマークを含む PDF をアセンブルするよう Assembler サービスに指示します（このセクションで前述した DDX ドキュメントの例を参照）。
 
-**しおりを追加するPDFドキュメントの参照**
+**ブックマークを追加する PDF ドキュメントの参照**
 
-しおりを追加するPDFドキュメントを参照します。 参照先のPDFドキュメントに既にしおりが含まれているかどうかは関係ありません。 `Bookmarks`要素がPDFソース要素の子の場合、PDFソースに既に存在するしおりがしおりに置き換えられます。 ただし、既存のしおりを保持する場合は、 `Bookmarks`がPDFソース要素の兄弟であることを確認してください。 例えば、次の例を考えてみましょう。
+ブックマークを追加する PDF ドキュメントを参照します。 参照先のブックマークドキュメントに既に PDF が含まれているかどうかは関係ありません。 `Bookmarks` 要素が PDF ソース要素の子である場合、ブックマークは PDF ソースに既に存在する要素を置き換えます。 ただし、既存のブックマークを保持する場合は、 `Bookmarks` を PDF ソース要素の兄弟にしてください。例えば、次のようなシナリオを考えます。
 
 ```xml
  <PDF result="foo">
@@ -142,29 +142,29 @@ PDFドキュメントをアセンブリするには、DDXドキュメントを�
  </PDF>
 ```
 
-**ブックマークXMLドキュメントの参照**
+**ブックマーク XML ドキュメントの参照**
 
-新しいしおりを含むPDFをアセンブリするには、しおりXMLドキュメントを参照する必要があります。 ブックマークXMLドキュメントは、Mapコレクションオブジェクト内のAssemblerサービスに渡されます。 （例については、この節で前述したブックマークXMLドキュメントを参照してください）。
+新しいブックマークを含む PDF をアセンブリするには、ブックマーク XML ドキュメントを参照する必要があります。ブックマーク XML ドキュメントは、Map コレクションオブジェクト内の Assembler サービスに渡されます。（このセクションで前述したブックマーク XML ドキュメントを参照してください）。
 
 >[!NOTE]
 >
->『[AssemblerサービスとDDXリファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)』の「ブックマーク言語」を参照してください。
+>詳しくは、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)にある「ブックマーク言語」を参照してください。
 
-**PDFドキュメントとブックマークXMLドキュメントをMapコレクションに追加します**
+**PDF ドキュメントとブックマーク XML ドキュメントを Map コレクションに追加する**
 
-ブックマークを追加するPDFドキュメントとブックマークXMLドキュメントの両方をMapコレクションに追加する必要があります。 したがって、 Mapコレクションオブジェクトには次の2つの要素が含まれます。PDFドキュメントとブックマークXMLドキュメント。
+ブックマークを追加する PDF ドキュメントと、ブックマーク XML ドキュメントの両方を Map コレクションに追加する必要があります。したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
 
 **実行時オプションの設定**
 
-ジョブの実行中にAssemblerサービスの動作を制御する実行時オプションを設定できます。 例えば、エラーが発生した場合にジョブの処理を続行するようAssemblerサービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、『[AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)』の`AssemblerOptionSpec`クラス参照を参照してください。
+ジョブを実行する際の Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)にある `AssemblerOptionSpec` クラスリファレンスを参照してください。
 
-**PDFドキュメントのアセンブリ**
+**PDF ドキュメントのアセンブリ**
 
-新しいブックマークを含むPDFドキュメントをアセンブリするには、Assemblerサービスの`invokeDDX`操作を使用します。 `invokeOneDocument`などの他のAssemblerサービス操作とは異なり、`invokeDDX`操作を使用する必要があるのは、Assemblerサービスには、Mapコレクションオブジェクト内で渡されるブックマークXMLドキュメントが必要だからです。 このオブジェクトは、`invokeDDX`操作のパラメーターです。
+新しいブックマークを含む PDF ドキュメントをアセンブリするには、Assembler サービスの `invokeDDX` 操作を使用します。`invokeOneDocument` などといった Assembler サービスの他の操作ではなく `invokeDDX` 操作を使用する必要がある理由は、Assembler サービスでは、Map コレクションオブジェクト内に渡されるブックマーク XML ドキュメントが必要だからです。このオブジェクトは、`invokeDDX` 操作のパラメーターです。
 
-**しおりを含むPDFドキュメントを保存します**
+**ブックマークを含む PDF ドキュメントの保存**
 
-返されたマップオブジェクトから結果を抽出し、対応するPDFドキュメントを保存する必要があります。 （[PDFドキュメントのプログラムによるアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)の「結果の抽出」を参照）。
+返された Map オブジェクトから結果を抽出し、対応する PDF ドキュメントを保存する必要があります。（[プログラムによる PDF ドキュメントのアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)にある「結果の抽出」を参照してください）。
 
 **関連トピック**
 
@@ -172,160 +172,160 @@ PDFドキュメントをアセンブリするには、DDXドキュメントを�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[PDFドキュメントのプログラムによるアセンブリ](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[PDF ドキュメントをプログラムで組み立てる](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## Java API {#assemble-pdf-documents-with-bookmarks-using-the-java-api}を使用して、しおりを使用してPDFドキュメントをアセンブリします。
+## Java API を使用してブックマークとともに PDF ドキュメントをアセンブリする {#assemble-pdf-documents-with-bookmarks-using-the-java-api}
 
-AssemblerサービスAPI(Java)を使用して、ブックマークを含むPDFドキュメントをアセンブリします。
+Assembler サービス API（Java）を使用して、ブックマークとともに PDF ドキュメントをアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   Javaプロジェクトのクラスパスに、adobe-assembler-client.jarなどのクライアントJARファイルを含めます。
+   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
-1. PDFアセンブラークライアントを作成します。
+1. PDF Assembler クライアントを作成します。
 
-   * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-   * コンストラクターを使用して`AssemblerServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください）。
+   * コンストラクタを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`AssemblerServiceClient` オブジェクトを作成します。
 
-1. 既存のDDXドキュメントの参照
+1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクターを使用し、DDXファイルの場所を指定する文字列値を渡して、DDXドキュメントを表す`java.io.FileInputStream`オブジェクトを作成します。
-   * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクタを使用し、DDX ファイルの場所を指定する文字列値を渡すことによって、その DDX ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
 
-1. しおりを追加するPDFドキュメントを参照します。
+1. ブックマークを追加する PDF ドキュメントを参照します。
 
-   * コンストラクターを使用してPDFドキュメントの場所を渡し、`java.io.FileInputStream`オブジェクトを作成します。
-   * コンストラクターを使用して`com.adobe.idp.Document`オブジェクトを作成し、PDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。
+   * コンストラクタを使用し、PDF ドキュメントの場所を渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクタを使用し、PDF ドキュメントを含む `java.io.FileInputStream` オブジェクトを渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
 
-1. ブックマークXMLドキュメントを参照します。
+1. ブックマーク XML ドキュメントを参照します。
 
-   * コンストラクターを使用して、ブックマークXMLドキュメントを表すXMLファイルの場所を渡し、`java.io.FileInputStream`オブジェクトを作成します。
-   * `com.adobe.idp.Document`オブジェクトを作成し、PDFドキュメントを含む`java.io.FileInputStream`オブジェクトを渡します。
+   * コンストラクタを使用し、ブックマーク XML ドキュメントを表す XML ファイルの場所を渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトを作成し、PDF ドキュメントを含む `java.io.FileInputStream` オブジェクトを渡します。
 
-1. PDFドキュメントとブックマークXMLドキュメントをMapコレクションに追加します。
+1. Map コレクションに PDF ドキュメントとブックマーク XML ドキュメントを追加します。
 
-   * 入力PDFドキュメントとブックマークXMLドキュメントの両方を保存するための`java.util.Map`オブジェクトを作成します。
-   * `java.util.Map`オブジェクトの`put`メソッドを呼び出し、次の引数を渡して、入力PDFドキュメントを追加します。
+   * 入力 PDF ドキュメントとブックマーク XML ドキュメントの両方を格納するのに使用する `java.util.Map` オブジェクトを作成します。
+   * `java.util.Map` オブジェクトの `put` メソッドを呼び出し、次の引数を渡すことによって、入力 PDF ドキュメントを追加します。
 
-      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。
-      * 入力PDFドキュメントを含む`com.adobe.idp.Document`オブジェクト。
-   * `java.util.Map`オブジェクトの`put`メソッドを呼び出し、次の引数を渡して、ブックマークXMLドキュメントを追加します。
+      * キー名を表す文字列値。この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致している必要があります。
+      * 入力 PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
+   * `java.util.Map` オブジェクトの `put` メソッドを呼び出し、次の引数を渡すことによって、ブックマーク XML ドキュメントを追加します。
 
-      * キー名を表すstring値です。 この値は、DDXドキュメントで指定されているBookmarks source要素の値と一致する必要があります。
-      * ブックマークXMLドキュメントを含む`com.adobe.idp.Document`オブジェクト。
+      * キー名を表す文字列値。この値は、DDX ドキュメントで指定されているブックマークソース要素の値と一致する必要があります。
+      * ブックマーク XML ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
-   * `AssemblerOptionSpec`オブジェクトに属するメソッドを呼び出して、ビジネス要件に合った実行時オプションを設定します。 例えば、エラーが発生したときにジョブの処理を続行するようにAssemblerサービスに指示するには、`AssemblerOptionSpec`オブジェクトの`setFailOnError`メソッドを呼び出し、`false`を渡します。
+   * コンストラクタを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
+   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生してもジョブの処理を続行するよう Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
 
-1. PDFドキュメントをアセンブリします。
+1. PDF ドキュメントをアセンブリします。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の必須値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出し、以下の必須の値を渡します。
 
-   * 使用するDDXドキュメントを表す`com.adobe.idp.Document`オブジェクト
-   * 入力PDFドキュメントとブックマークXMLドキュメントの両方を含む`java.util.Map`オブジェクト。
-   * デフォルトのフォントやジョブのログレベルを含む、実行時のオプションを指定する`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`オブジェクト
+   * 使用する DDX ドキュメントを表す `com.adobe.idp.Document` オブジェクト
+   * 入力 PDF ドキュメントとブックマーク XML ドキュメントの両方を含む `java.util.Map` オブジェクト。
+   * デフォルトのフォントやジョブログレベルを含む、実行時のオプションを指定する `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` オブジェクト
 
-   `invokeDDX`メソッドは、ジョブの結果と発生した例外を含む`com.adobe.livecycle.assembler.client.AssemblerResult`オブジェクトを返します。
+   `invokeDDX` メソッドは、ジョブの結果と例外（発生した場合）を含む `com.adobe.livecycle.assembler.client.AssemblerResult` オブジェクトを返します。
 
-1. しおりを含むPDFドキュメントを保存します。
+1. ブックマークを含む PDF ドキュメントを保存します。
 
-   新しく作成したPDFドキュメントを取得するには、次の操作を実行します。
+   新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `AssemblerResult`オブジェクトの`getDocuments`メソッドを呼び出します。 `java.util.Map`オブジェクトを返します。
-   * `java.util.Map`オブジェクトを繰り返し処理して、結果の`com.adobe.idp.Document`オブジェクトを見つけます。 （DDXドキュメントで指定されたPDF結果要素を使用して、ドキュメントを取得できます）。
-   * `com.adobe.idp.Document`オブジェクトの`copyToFile`メソッドを呼び出して、PDFドキュメントを抽出します。
+   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。 これにより、`java.util.Map` オブジェクトが返されます。
+   * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで `java.util.Map` オブジェクトを反復処理します（DDX ドキュメントで指定された PDF 結果要素を使用して、ドキュメントを取得できます）。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、PDF ドキュメントを抽出します。
 
 **関連トピック**
 
-[クイックスタート（SOAPモード）:Java APIを使用したしおりを使用したPDFドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した、ブックマークを含む PDF ドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#assemble-pdf-documents-with-bookmarks-using-the-web-service-api}を使用して、PDFドキュメントをブックマークと組み合わせます。
+## Web サービス API を使用した、ブックマークを含む PDF ドキュメントのアセンブリ {#assemble-pdf-documents-with-bookmarks-using-the-web-service-api}
 
-AssemblerサービスAPI（Webサービス）を使用して、ブックマークを含むPDFドキュメントをアセンブリします。
+Assembler Service API（web サービス）を使用して、ブックマークを含む PDF ドキュメントをアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   MTOMを使用するMicrosoft .NETプロジェクトを作成します。 次のWSDL定義を使用していることを確認します。`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`.
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用していることを確認します：`http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1`。
 
    >[!NOTE]
    >
-   >`localhost`を、AEM FormsをホストするサーバーのIPアドレスに置き換えます。
+   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置換します。
 
-1. PDFアセンブラークライアントを作成します。
+1. PDF Assembler クライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して`AssemblerServiceClient`オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して`AssemblerServiceClient.Endpoint.Address`オブジェクトを作成します。 AEM FormsサービスにWSDLを指定するstring値を渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。 `lc_version`属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。
-   * `AssemblerServiceClient.Endpoint.Binding`フィールドの値を取得して`System.ServiceModel.BasicHttpBinding`オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding`オブジェクトの`MessageEncoding`フィールドを`WSMessageEncoding.Mtom`に設定します。 この値は、MTOMが使用されるようにします。
-   * 次のタスクを実行して、基本的なHTTP認証を有効にします。
+   * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
+   * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド`AssemblerServiceClient.ClientCredentials.UserName.UserName`にAEM formsユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド`AssemblerServiceClient.ClientCredentials.UserName.Password`に割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Transport.ClientCredentialType`に定数値`HttpClientCredentialType.Basic`を割り当てます。
-      * フィールド`BasicHttpBindingSecurity.Security.Mode`に定数値`BasicHttpSecurityMode.TransportCredentialOnly`を割り当てます。
+      * フィールド `AssemblerServiceClient.ClientCredentials.UserName.UserName` に AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値をフィールド `AssemblerServiceClient.ClientCredentials.UserName.Password` に割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
-1. 既存のDDXドキュメントの参照
+1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、DDXドキュメントの格納に使用されます。
-   * コンストラクターを呼び出し、DDXドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、DDX ドキュメントを格納するために使用されます。
+   * コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することによって決定します。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み取り対象のバイト配列、開始位置、ストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
-1. しおりを追加するPDFドキュメントを参照します。
+1. ブックマークを追加する PDF ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、入力PDFを保存するために使用されます。
-   * コンストラクターを呼び出し、入力PDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF を格納するために使用されます。
+   * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得して決定します。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み取り対象のバイト配列、開始位置、ストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `MTOM` フィールドにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを設定します。
 
-1. ブックマークXMLドキュメントを参照します。
+1. ブックマーク XML ドキュメントを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、ブックマークXMLドキュメントの保存に使用されます。
-   * コンストラクターを呼び出し、入力PDFドキュメントのファイルの場所とファイルを開くモードを表すstring値を渡して、`System.IO.FileStream`オブジェクトを作成します。
-   * `System.IO.FileStream`オブジェクトの内容を格納するバイト配列を作成します。 `System.IO.FileStream`オブジェクトの`Length`プロパティを取得することで、バイト配列のサイズを判断できます。
-   * `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出し、読み取るバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
-   * `BLOB`オブジェクトの`MTOM`フィールドにバイト配列の内容を割り当てて、オブジェクトを設定します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、ブックマーク XML ドキュメントを格納するために使用されます。
+   * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   *  `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得して決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み取り対象のバイト配列、開始位置、ストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
+   * `MTOM` フィールドにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
-1. PDFドキュメントとブックマークXMLドキュメントをMapコレクションに追加します。
+1. Map コレクションに PDF ドキュメントとブックマーク XML ドキュメントを追加します。
 
-   * `MyMapOf_xsd_string_To_xsd_anyType`オブジェクトを作成します。 このコレクションオブジェクトは、入力PDFドキュメントとブックマークXMLドキュメントを保存するために使用します。
-   * 入力PDFドキュメントとブックマークXMLドキュメントごとに、 `MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトを作成します。
-   * `MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトの`key`フィールドに、キー名を表すstring値を割り当てます。 この値は、DDXドキュメントで指定されたPDFソース要素の値と一致する必要があります。
-   * PDFドキュメントを格納する`BLOB`オブジェクトを`MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトの`value`フィールドに割り当てます。
-   * `MyMapOf_xsd_string_To_xsd_anyType_Item`オブジェクトを`MyMapOf_xsd_string_To_xsd_anyType`オブジェクトに追加します。 `MyMapOf_xsd_string_To_xsd_anyType`オブジェクトの`Add`メソッドを呼び出して、`MyMapOf_xsd_string_To_xsd_anyType`オブジェクトを渡します。 （このタスクは、入力PDFドキュメントとブックマークXMLドキュメントごとに実行します）。
+   * `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを作成します。このコレクションオブジェクトは、入力された PDF ドキュメントとブックマーク XML ドキュメントを保存するために使用されます。
+   * 各入力 PDF ドキュメントとブックマーク XML ドキュメントに対して、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
+   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに、キー名を表す文字列値を割り当てます。この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致している必要があります。
+   * PDF ドキュメントを格納する `BLOB` オブジェクトを `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` フィールドに入力します。
+   * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトに追加します。`MyMapOf_xsd_string_To_xsd_anyType` オブジェクトの `Add` メソッドを呼び出し、`MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを渡します（このタスクは、入力した PDF ドキュメントとブックマーク XML ドキュメントそれぞれについておこないます）。
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時オプションを格納する`AssemblerOptionSpec`オブジェクトを作成します。
-   * `AssemblerOptionSpec`オブジェクトに属するデータメンバーに値を割り当てて、ビジネス要件に合った実行時オプションを設定します。 例えば、エラーが発生したときにジョブの処理を続行するようにAssemblerサービスに指示するには、`false`を`AssemblerOptionSpec`オブジェクトの`failOnError`データメンバーに割り当てます。
+   * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生したときに Assembler サービスにジョブの処理を継続するように指示するには、`AssemblerOptionSpec` オブジェクトの `failOnError` データメンバーに `false` を入力します。
 
-1. PDFドキュメントをアセンブリします。
+1. PDF ドキュメントをアセンブリします。
 
-   `AssemblerServiceClient`オブジェクトの`invokeDDX`メソッドを呼び出し、次の値を渡します。
+   `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出し、次の値を渡します。
 
-   * DDXドキュメントを表す`BLOB`オブジェクト
-   * 入力ドキュメントを含む`MyMapOf_xsd_string_To_xsd_anyType`配列
-   * 実行時オプションを指定する`AssemblerOptionSpec`オブジェクト
+   * DDX ドキュメントを表す `BLOB` オブジェクト
+   * 入力ドキュメントを格納する `MyMapOf_xsd_string_To_xsd_anyType` 配列
+   * ランタイムオプションを指定する `AssemblerOptionSpec` オブジェクト
 
-   `invokeDDX`メソッドは、ジョブの結果と発生した可能性のある例外を含む`AssemblerResult`オブジェクトを返します。
+   `invokeDDX` メソッドは、ジョブの結果や発生した例外を含む `AssemblerResult` オブジェクトを返します。
 
-1. しおりを含むPDFドキュメントを保存します。
+1. ブックマークを含む PDF ドキュメントを保存します。
 
-   新しく作成したPDFドキュメントを取得するには、次の操作を実行します。
+   新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `AssemblerResult`オブジェクトの`documents`フィールド（結果のPDFドキュメントを含む`Map`オブジェクト）にアクセスします。
-   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map`オブジェクトを繰り返し処理します。 次に、配列メンバの`value`を`BLOB`にキャストします。
-   * `BLOB`オブジェクトの`MTOM`フィールドにアクセスして、PDFドキュメントを表すバイナリデータを抽出します。 PDFファイルに書き出すことができるバイトの配列を返します。
+   * `AssemblerResult` オブジェクトの `documents` フィールドにアクセスし、結果の PDF ドキュメントを含む `Map` オブジェクトにアクセスします。
+   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し実行します。そして、その配列メンバーの `value` を `BLOB` にキャストします。
+   * PDF ドキュメントの `BLOB` オブジェクトの `MTOM` フィールドにアクセスして、そのドキュメントを表すバイナリデータを抽出します。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
 
 **関連トピック**
 
-[MTOMを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
+[MTOM を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)
