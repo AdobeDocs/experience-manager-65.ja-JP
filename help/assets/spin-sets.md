@@ -12,9 +12,9 @@ feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
 source-git-commit: 7b29fc96768dc2238ebf9596b136ec10fa71aca9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1866'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Assets ユーザーインターフェイスについて詳しくは、 [アセットの管理](/help/assets/manage-assets.md).
+>Assets ユーザーインターフェイスについて詳しくは、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
 ## クイックスタート：スピンセット {#quick-start-spin-sets}
 
@@ -40,7 +40,7 @@ ht-degree: 90%
 
    1 次元スピンセットを使用するには、少なくとも 8～12 枚の写真が必要です。2 次元スピンセットの場合は少なくとも 16～24 枚必要になります。アイテムが回転したり反転したりしているように見せるには、一定の間隔でアイテムを撮影する必要があります。例えば、1 次元スピンセットに 12 個の写真を含める場合、アイテムを 30 度ずつ（360/12）回転させながら写真を撮影します。
 
-   詳しくは、 [Dynamic Media — サポートされるラスターイメージ形式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) ：スピンセットでサポートされる形式のリスト
+   スピンセットでサポートされている形式のリストについては、[Dynamic Media - サポートされているラスター画像形式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media)を参照してください。
 
 1. [スピンセットを作成します](#creating-spin-sets)。
 
@@ -56,11 +56,11 @@ ht-degree: 90%
 
    管理者は、スピンセットビューアプリセットを作成または編集できます。スピンセットを特定のビューアプリセットで表示するには、スピンセットを選択し、左パネルのドロップダウンメニューで「**ビューア**」を選択します。
 
-   詳しくは、 **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL ビューアプリセット]** ビューアプリセットを作成または編集する場合。
+   **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL ビューアプリセット]**&#x200B;を選択して、ビューアプリセットを作成または編集します。
 
    詳しくは、[ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
 
-1. [スピンセットを表示](#viewing-spin-sets).
+1. [スピンセットを表示します](#viewing-spin-sets)。
 
    バッチセットプリセットを使用して作成したセットを表示したり、それらのセットにアクセスしたりするには、3 つの方法があります（バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*）。
 
@@ -72,7 +72,7 @@ ht-degree: 90%
 
    スピンセットを公開すると、URL と埋め込み文字列がアクティベートされます。また、[ビューアプリセットを公開](/help/assets/managing-viewer-presets.md)する必要があります。
 
-1. [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md) または [ビデオビューアまたは画像ビューアを埋め込む](/help/assets/embed-code.md).
+1. [URL を web アプリケーションにリンクする](/help/assets/linking-urls-to-yourwebapplication.md)か、[ビデオビューアまたは画像ビューアを埋め込みます](/help/assets/embed-code.md)。
 
    スピンセットの URL 呼び出しが作成され、スピンセットの公開後にそれらの URL 呼び出しがアクティベートされます。アセットをプレビューする際に、これらの URL をコピーできます。または、URL を Web サイトに埋め込むこともできます。
 
@@ -88,7 +88,7 @@ ht-degree: 90%
 
 スピンセット用の画像のアップロードは、[Experience Manager Assets での他のアセットのアップロード](/help/assets/manage-assets.md)と同様に実行できます。
 
-詳しくは、 [Dynamic Media — サポートされるラスターイメージ形式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media) ：スピンセットでサポートされる形式のリスト
+スピンセットでサポートされている形式のリストについては、[Dynamic Media - サポートされているラスター画像形式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media)を参照してください。
 
 ### スピンセット用の画像のキャプチャに関するガイドライン {#guidelines-for-shooting-spin-set-images}
 
@@ -102,21 +102,21 @@ ht-degree: 90%
 
 ## スピンセットの作成 {#creating-spin-sets}
 
-この節では、スピンセットを作成する方法についてExperience Managerします。
+このセクションでは、Experience Manager でスピンセットを作成する方法について説明します。
 
 >[!NOTE]
 >
 >[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用してスピンセットを自動的に作成することもできます。**重要：**&#x200B;バッチセットは IPS（Image Production System）によってアセット取り込みの一環として作成され、Dynamic Media - Scene7 モードでのみ使用できます。
 >
->詳しくは、「画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成」( [Dynamic Media - Scene7モードの設定](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets).
+>[Dynamic Media - Scene7 モードの設定](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)の「画像セットおよびスピンセットを自動生成するためのバッチセットプリセットの作成」を参照してください。
 
 >[!NOTE]
 >
->スピンセット内での画像の表示順は重要です。スピンがスムーズな 360°の表示になるように、必ず順序を変更してください。
+>スピンセット内での画像の表示順は重要です。スピンがスムーズに 360 度のビューを描くように画像を並べ替えてください。
 
 **スピンセットを作成するには：**
 
-1. Assets で、スピンセットを作成する場所に移動し、「 」を選択します。 **[!UICONTROL 作成]**&#x200B;を選択し、 **[!UICONTROL スピンセット]**. アセットを格納しているフォルダー内からセットを作成することもできます。スピンセットエディターが表示されます。
+1. アセットで、スピンセットを作成する場所に移動し、「**[!UICONTROL 作成]**」、「**[!UICONTROL スピンセット]**」の順に選択します。アセットを格納しているフォルダー内からセットを作成することもできます。スピンセットエディターが表示されます。
 
    ![6_5_spinset-createpulldownmenu](assets/6_5_spinset-createpulldownmenu.png)
 
@@ -167,7 +167,7 @@ ht-degree: 90%
 
 **スピンセットを表示するには：**
 
-1. 個々のアセットのプロパティを開きます。（「**[!UICONTROL セットのメンバー]**」の下に）選択したアセットがメンバーとして含まれるセットが表示されます。セットの名前を選択して、セット全体を表示します。
+1. 個々のアセットのプロパティを開きます。（「**[!UICONTROL セットのメンバー]**」の下に）選択したアセットがメンバーとして含まれるセットが表示されます。セットの名前を選択すると、セット全体が表示されます。
 
    ![chlimage_1-156](assets/chlimage_1-384.png)
 
@@ -198,7 +198,7 @@ ht-degree: 90%
    * スピンセットアセット上にマウスポインターを置き、**[!UICONTROL 編集]**（鉛筆アイコン）を選択します。
    * スピンセットアセット上にマウスポインターを置き、**[!UICONTROL 選択]**（チェックマークアイコン）を選択した後、ツールバーの「**[!UICONTROL 編集]**」を選択します。
 
-   * スピンセットアセットを選択し、「 」を選択します。 **[!UICONTROL 編集]** （鉛筆アイコン）を使用して、
+   * スピンセットアセットを選択してから、ツールバーの&#x200B;**[!UICONTROL 編集]**（鉛筆アイコン）を選択します。
 
 1. スピンセットを編集するには、次のいずれかの操作を行います。
 
