@@ -5,12 +5,12 @@ audience: end-user
 user-guide-title: AEM 6.5 Mobile ユーザーガイド
 breadcrumb-title: モバイルガイド
 user-guide-description: モバイルアプリ用のコンテンツを作成および管理します。
-feature: モバイル
+feature: Mobile
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '331'
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 95%
 
 + [モバイルユーザーガイドの概要](home.md)
 + AEM Mobile の概要 {#introduction}
-   + [AEM Mobile 使用の手引き](getting-started-aem-mobile.md)
+   + [AEM Mobile の概要](getting-started-aem-mobile.md)
    + [AEM Mobile On-Demand](getting-started-aem-mobile-on-demand.md)
    + [モバイルアプリ](mobile-apps.md)
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
@@ -29,7 +29,7 @@ ht-degree: 95%
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [コンテンツ管理](mobile-apps-ondemand-manage-content-ondemand.md)
    + [コンテンツの公開／非公開](mobile-on-demand-publishing-unpublishing.md)
-   + [AEM Mobile アプリケーションダッシュボード](mobile-apps-ondemand-application-dashboard.md)
+   + [AEM Mobile アプリケーションのダッシュボード](mobile-apps-ondemand-application-dashboard.md)
    + [アプリケーションの作成および設定アクション](mobile-apps-ondemand-application-create-configure-action.md)
    + [記事の管理](mobile-on-demand-managing-articles.md)
    + [共有リソースのアップロード](mobile-on-demand-shared-resources.md)
@@ -39,13 +39,13 @@ ht-degree: 95%
    + [AEM Mobile On-Demand](aem-mobile-on-demand.md)
    + [アプリのテンプレートとコンポーネント](app-templates-and-components1.md)
    + [コンテンツのプロパティとノード](content-properties.md)
-   + [共有リソースの書き出し設定の作成](creating-shared-resources-export-configuration.md)
+   + [共有リソースのエクスポート設定の作成](creating-shared-resources-export-configuration.md)
    + [テンプレートとコンポーネントの作成および追加](mobile-ondemand-app-templates.md)
    + [ベストプラクティス](best-practices-aem-mobile.md)
-   + [記事の書き出し設定の作成](creating-article-export-configuration.md)
+   + [記事のエクスポート設定の作成](creating-article-export-configuration.md)
    + [モバイルとコンテンツ同期](mobile-ondemand-contentsync.md)
    + [モバイルアプリのページテンプレート](apps-architecture.md)
-   + [コンテンツのプロパティを使用したコンテンツの書き出し](on-demand-content-properties-exporting.md)
+   + [コンテンツのプロパティを使用したコンテンツのエクスポート](on-demand-content-properties-exporting.md)
    + [レンダリングと配信](rendering-and-delivery.md)
    + [コンテンツサービス](developing-content-services.md)
    + [コンテンツ配信](develop-content-as-a-service.md)
@@ -71,27 +71,27 @@ ht-degree: 95%
    + [PhoneGap](developing-in-phonegap.md)
    + [モバイルアプリケーションのビルド](building-app-mobile-phonegap.md)
    + [プッシュ通知](phonegap-push-notifications.md)
-   + [AEM でのモバイルアプリの開発](developing-mobile-applications.md)
+   + [AEM でのモバイルアプリケーションの開発](developing-mobile-applications.md)
    + [モバイルとコンテンツ同期](phonegap-contentsync.md)
    + [アプリの詳細な構造](phonegap-apps-arch.md)
    + [PhoneGap CLI によるアプリの開発](phonegap-apps-pg-cli.md)
    + [既製のアプリハンドラー](contentsync-app-handlers.md)
    + [アプリコンソールを使用したアプリの作成および編集](phonegap-apps-console.md)
    + [ハイブリッドアプリの AEM Mobile 対応](phonegap-adding-content-to-imported-app.md)
-   + [デバイスの機能へのアクセス](phonegap-access-device-features.md)
+   + [デバイス機能へのアクセス](phonegap-access-device-features.md)
    + [モバイルアプリケーションへの Adobe Analytics の追加](phonegap-add-analytics-to-apps.md)
    + [モバイルアプリのページテンプレート](phonegap-apps-arch-page-templates.md)
-   + [Adobe Target クラウドサービスの設定](aem-mobile-configuring-cloud-service.md)
+   + [Adobe Target Cloud Service の設定](aem-mobile-configuring-cloud-service.md)
    + [単一ページアプリケーション](phonegap-single-page-applications.md)
-   + [リポジトリ内のモデル](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/administering/administer-mobile-apps.html)
+   + [リポジトリ内のモデル](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/administering/administer-mobile-apps.html?lang=ja)
    + [AEM PhoneGap の起動](starting-aem-phonegap-app.md)
    + [モバイルアプリのテスト](develop-mobile-apps-testing.md)
    + [アプリの構造](phonegap-structure-an-app.md)
    + [Adobe Mobile Analytics によるアプリパフォーマンスのトラッキング](phonegap-intro-to-app-analytics.md)
 + Adobe PhoneGap Enterprise の管理 {#administering-phonegap}
    + [モバイルクイックスタート](phonegap-mobile-quickstart.md)
-   + [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](administer-phonegap.md)
-   + [Adobe PhoneGap Build クラウドサービスの設定](configure-phonegap-build-cloud.md)
-   + [リファラーフィルターを「空の値を許可」に設定](setting-referrer-filter-empty.md)
-   + [Adobe Mobile Services クラウドサービスの設定](configure-adobe-mobile-cloud-service.md)
+   + [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](administer-phonegap.md)
+   + [Adobe PhoneGap Build の設定](configure-phonegap-build-cloud.md)
+   + [リファラーフィルターの「空の値を許可」への設定](setting-referrer-filter-empty.md)
+   + [Adobe Mobile Services Cloud Service の設定](configure-adobe-mobile-cloud-service.md)
    + [ユーザーとユーザーグループの設定](configure-users-groups.md)
