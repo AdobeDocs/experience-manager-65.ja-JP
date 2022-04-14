@@ -1,42 +1,42 @@
 ---
 title: 検索機能の拡張
-description: ' [!DNL Adobe Experience Manager Assets] の検索機能をデフォルト値を超えて拡張します。'
+description: ' [!DNL Adobe Experience Manager Assets]  の検索機能をデフォルトを超えて拡張します。'
 contentOwner: AG
 role: Developer
-feature: 検索
+feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
 source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
-workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 74%
+workflow-type: ht
+source-wordcount: '838'
+ht-degree: 100%
 
 ---
 
 # Assets の検索機能の拡張 {#extending-assets-search}
 
-[!DNL Adobe Experience Manager Assets]検索機能を拡張できます。 デフォルトでは、[!DNL Experience Manager Assets]は文字列でアセットを検索します。
+[!DNL Adobe Experience Manager Assets] 検索機能は拡張することができます。[!DNL Experience Manager Assets] は、デフォルトの設定では、文字列でアセットを検索します。
 
 検索は QueryBuilder インターフェイスを介して実行されるので、複数の述語を使用して検索をカスタマイズできます。`/apps/dam/content/search/searchpanel/facets` ディレクトリにあるデフォルトの述語セットをオーバーレイできます。
 
-[!DNL Assets]管理パネルにタブを追加することもできます。
+また、[!DNL Assets] 管理パネルにタブを追加することもできます。
 
 >[!CAUTION]
 >
->[!DNL Experience Manager] 6.4以降、クラシックUIは非推奨（廃止予定）となりました。 お知らせについては、[非推奨（廃止予定）の機能と削除された機能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)を参照してください。 Adobeは、タッチ操作対応UIの使用をお勧めします。 カスタマイズについては、[検索ファセット](/help/assets/search-facets.md)を参照してください。
+>[!DNL Experience Manager] 6.4 以降、クラシック UI は廃止されます。お知らせについては、[廃止される機能および削除された機能](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=ja)を参照してください。アドビでは、タッチ操作対応 UI の使用をお勧めします。カスタマイズについては、[検索ファセット](/help/assets/search-facets.md)を参照してください。
 
 ## オーバーレイ {#overlaying}
 
-事前設定済みの述語をオーバーレイするには、`facets`ノードを`/libs/dam/content/search/searchpanel`から`/apps/dam/content/search/searchpanel/`にコピーするか、`searchpanel`設定で別の`facetURL`プロパティを指定します（デフォルトは`/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`です）。
+事前設定済みの述語をオーバーレイするには、`facets` ノードを `/libs/dam/content/search/searchpanel` から `/apps/dam/content/search/searchpanel/` にコピーするか、`searchpanel` 設定に別の `facetURL` プロパティを指定します（デフォルトでは `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json` になります）。
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
 >[!NOTE]
 >
->デフォルトでは、`/apps`の下のディレクトリ構造は存在しないので、作成します。 ノードのタイプが、`/libs` 配下のノードのタイプと一致するようにしてください。
+>デフォルトでは、ディレクトリ構造は `/apps` に存在しないので、作成します。ノードのタイプが、`/libs` 配下のノードのタイプと一致するようにしてください。
 
 ## タブの追加 {#adding-tabs}
 
-[!DNL Assets]管理インターフェイスで追加の検索タブを設定することで、追加の検索タブを追加できます。 追加のタブは以下の手順で作成します。
+[!DNL Assets] 管理者インターフェイスで追加の「検索」タブを設定することで、タブを追加できます。追加のタブは以下の手順で作成します。
 
 1. フォルダー構造 `/apps/wcm/core/content/damadmin/tabs,` がまだ存在しない場合は作成し、`tabs` ノードを `/libs/wcm/core/content/damadmin` からコピーして貼り付けます。
 1. 必要に応じて、2 つ目のタブを作成し設定します。
@@ -47,9 +47,9 @@ ht-degree: 74%
 
 ## カスタム述語の作成 {#creating-custom-predicates}
 
-[!DNL Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明します。
+[!DNL Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みの一連の述語が付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-[!DNL Experience Manager]開発者は、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md)を使用して独自の述語を作成することもできます。
+[!DNL Experience Manager] デベロッパーは、既存の述語を使用するだけでなく、[Query Builder API](/help/sites-developing/querybuilder-api.md) を使用して独自の述語を作成することもできます。
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
@@ -59,8 +59,8 @@ ht-degree: 74%
 
 プロパティ述語の作成手順
 
-1. プロジェクトディレクトリにコンポーネントフォルダーを作成します（例： **/apps/weretail/components/titlepredicate**）。
-1. 次の **content.xml** を追加します。
+1. プロジェクトディレクトリ（**/apps//weretail/components/titlepredicate** など）にコンポーネントフォルダーを作成します。
+1. **content.xml** を追加します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -152,7 +152,7 @@ ht-degree: 74%
 
 グループ述語の作成手順
 
-1. プロジェクトディレクトリにコンポーネントフォルダーを作成します（例： **/apps/weretail/components/picspredicate**）。
+1. プロジェクトディレクトリ（ **/apps/weretail/components/picspredicate** など）にコンポーネントフォルダーを作成します。
 1. 次の **content.xml** を追加します。
 
    ```xml
@@ -249,54 +249,54 @@ ht-degree: 74%
 
 ## インストール済みの述語ウィジェット {#installed-predicate-widgets}
 
-次の述語は、事前設定済みのExtJSウィジェットとして利用できます。
+事前設定済みの ExtJS ウィジェットでは次の述語が使用可能です。
 
 ### FulltextPredicate {#fulltextpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルトは `fulltext` |
-| searchCallback | Function | イベント`keyup`で検索を呼び出すコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Function | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルトは `property` |
-| propertyName | 文字列 | JCR プロパティの名前。デフォルトは `jcr:title` |
-| defaultValue | 文字列 | 事前入力されたデフォルト値。 |
+| predicateName | String | 述語の名前。デフォルトは `property` |
+| propertyName | String | JCR プロパティの名前。デフォルトは `jcr:title` |
+| defaultValue | String | 事前入力のデフォルト値。 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルトは `path` |
-| rootPath | 文字列 | 述語のルートパス。デフォルトは `/content/dam` |
-| pathFieldPredicateName | 文字列 | デフォルトは `folder` |
-| showFlatOption | Boolean | チェックボックス`search in subfolders`を表示するフラグ。 デフォルトは true です |
+| predicateName | String | 述語の名前。デフォルトは `path` |
+| rootPath | String | 述語のルートパス。デフォルトは `/content/dam` |
+| pathFieldPredicateName | String | デフォルトは `folder` |
+| showFlatOption | Boolean | チェックボックス `search in subfolders` を表示するフラグ。デフォルトは true です |
 
 ### DatePredicate {#datepredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
-| defaultValue | 文字列 | 事前入力済みのデフォルト値 |
+| predicateName | String | 述語の名前。デフォルトは `daterange` |
+| propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
+| defaultValue | String | 事前入力のデフォルト値 |
 
 ### OptionsPredicate {#optionspredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| title | 文字列 | 最上部のタイトルを追加します |
-| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
-| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
-| collapse | 文字列 | 折りたたみのレベル。デフォルトは `level1` |
+| title | String | 最上部のタイトルを追加します |
+| predicateName | String | 述語の名前。デフォルトは `daterange` |
+| propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
+| collapse | String | 折りたたみのレベル。デフォルトは `level1` |
 | triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
-| searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Function | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 
 アセット共有ページでの検索結果の表示方法は、選択したレンズによって制御されます。[!DNL Experience Manager Assets] には、アセット共有ページのカスタマイズに使用できる、事前定義済みのレンズのセットが付属しています。この方法でアセット共有をカスタマイズする方法については、[アセット共有ページの作成と設定](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page)で説明しています。
 
-[!DNL Experience Manager]開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。
+[!DNL Experience Manager] 開発者は、既存のレンズを使用するだけでなく、独自のレンズを作成することもできます。
