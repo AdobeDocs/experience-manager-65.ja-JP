@@ -1,8 +1,8 @@
 ---
 title: エミュレーター
-seo-title: エミュレーター
+seo-title: Emulators
 description: AEM では、作成者がエミュレーターでページを確認できます。エミュレーターは、エンドユーザーがページを表示する環境をシミュレートします
-seo-description: AEM では、作成者がエミュレーターでページを確認できます。エミュレーターは、エンドユーザーがページを表示する環境をシミュレートします
+seo-description: AEM enables authors to view a page in an emulator that simulates the environment in which an end-user will view the page
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 64%
+workflow-type: ht
+source-wordcount: '631'
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 * 外観は CSS によって制御されます。
 * プラグイン（例：モバイルデバイスの回転プラグイン）をサポートします。
 * オーサーインスタンスでのみアクティブになります。
-* 基本コンポーネントは`/libs/wcm/emulator/components/base`です。
+* 基本コンポーネントは `/libs/wcm/emulator/components/base` にあります。
 
 ### エミュレーターによるコンテンツの変換方法 {#how-the-emulator-transforms-the-content}
 
@@ -108,27 +108,27 @@ AEM エミュレーターフレームワークの機能を次に示します。
 既存のモバイルエミュレーターの特徴は次のとおりです。
 
 * /libs/wcm/mobile/components/emulators にあります。
-* JSONサーブレットを介して次の場所で使用できます。
+* 次の場所にある JSON サーブレットを通じて使用できます。
 
    http://localhost:4502/bin/wcm/mobile/emulators.json
 
-ページコンポーネントがモバイルページコンポーネント(`/libs/wcm/mobile/components/page`)に依存する場合、エミュレーター機能は次のメカニズムを通じてページに自動的に統合されます。
+ページコンポーネントでモバイルページコンポーネント（`/libs/wcm/mobile/components/page`）を使用する場合は、次のメカニズムによって、エミュレーターの機能が自動的にページに統合されます。
 
 * モバイルページコンポーネント `head.jsp` は、次のメソッドを使用して、デバイスグループの関連するエミュレーターの init コンポーネント（オーサーモードの場合のみ）とデバイスグループのレンダリング CSS をインクルードします。
 
 
    `deviceGroup.drawHead(pageContext);`
 
-* メソッド`DeviceGroup.drawHead(pageContext)`には、エミュレーターのinitコンポーネントが含まれます。つまり、エミュレーターコンポーネントの`init.html.jsp`を呼び出します。 エミュレーターコンポーネントに独自の`init.html.jsp`がなく、モバイルベースエミュレーター(`wcm/mobile/components/emulators/base)`)に依存する場合は、モバイルベースエミュレーターのinitスクリプトが呼び出されます(`/libs/wcm/mobile/components/emulators/base/init.html.jsp`)。
+* メソッド `DeviceGroup.drawHead(pageContext)` には、エミュレーターの init コンポーネントを含まれています。つまり、エミュレーターコンポーネントの `init.html.jsp` を呼び出します。エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
 
-* モバイルベースエミュレーターのinitスクリプトは、JavaScriptを使用して定義します。
+* モバイルベースエミュレーターの init スクリプトは JavaScript を使用して次の定義を行います。
 
    * ページ用に定義されるすべてのエミュレーターの設定（emulatorConfigs）
-   * 次の方法でページ内のエミュレーターの機能を統合するエミュレーターマネージャー
+   * 次のメソッドを使用してエミュレーターの機能をページに統合するエミュレーターマネージャー。
 
       `emulatorMgr.launch(config)`
 
-      エミュレーターマネージャーは次の方法で定義します。
+      エミュレーターマネージャーは次のように定義されます。
 
       `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
@@ -136,21 +136,21 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 カスタムモバイルエミュレーターを作成するには：
 
-1. `/apps/myapp/components/emulators`の下に、コンポーネント`myemulator`を作成します(ノードタイプ：`cq:Component`)です。
+1. `/apps/myapp/components/emulators` の下に、コンポーネント `myemulator`（ノードタイプ：`cq:Component`）を作成します。
 
-1. `sling:resourceSuperType`プロパティを`/libs/wcm/mobile/components/emulators/base`に設定します。
+1. `sling:resourceSuperType` プロパティを `/libs/wcm/mobile/components/emulators/base` に設定
 
-1. エミュレーターの外観用に、カテゴリ`cq.wcm.mobile.emulator`を持つCSSクライアントライブラリを定義します。name = `css`、node type = `cq:ClientLibrary`
+1. エミュレーターの外観のカテゴリ `cq.wcm.mobile.emulator` を使用して CSS クライアントライブラリを定義します：名前 = `css`、ノードタイプ = `cq:ClientLibrary`
 
-   例えば、`/libs/wcm/mobile/components/emulators/iPhone/css`ノードを参照できます。
+   例として、ノード `/libs/wcm/mobile/components/emulators/iPhone/css` を参照できます。
 
-1. 必要に応じて、JSクライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、次のようにします。name = js, node type = cq:ClientLibrary
+1. 必要に応じて、JS クライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、名前 = js、ノードタイプ = cq:ClientLibrary にします。
 
-   例えば、`/libs/wcm/mobile/components/emulators/base/js`ノードを参照できます。
+   例として、ノード `/libs/wcm/mobile/components/emulators/base/js` を参照できます。
 
-1. エミュレーターがプラグインで定義された特定の機能（タッチスクロールなど）をサポートする場合は、エミュレーターの下に設定ノードを作成します。name = `cq:emulatorConfig`、node type = `nt:unstructured`を追加し、プラグインを定義するプロパティを追加します。
+1. エミュレーターがプラグインで定義された特定の機能（タッチスクロールなど）をサポートする場合は、エミュレーターの下に、次のように設定ノードを作成します。名前 = `cq:emulatorConfig`、ノードタイプ = `nt:unstructured`。そして、プラグインを定義するプロパティを追加します。
 
-   * 名前= `canRotate`、タイプ= `Boolean`、値= `true`:をクリックして回転機能を含めます。
+   * 名前 = `canRotate`、タイプ = `Boolean`、値 = `true`：回転機能を含みます。
 
-   * 名前= `touchScrolling`、タイプ= `Boolean`、値= `true`:タッチスクロール機能を含める。
+   * 名前 = `touchScrolling`、タイプ = `Boolean`、値 = `true`：タッチスクロール機能を含みます。
    独自のプラグインを定義することで、さらに多くの機能を追加できます。
