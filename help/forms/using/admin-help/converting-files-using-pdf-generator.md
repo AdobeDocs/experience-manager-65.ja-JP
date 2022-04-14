@@ -1,8 +1,8 @@
 ---
 title: PDF Generator を使用したファイルの変換
-seo-title: PDF Generator を使用したファイルの変換
+seo-title: Converting files using PDF Generator
 description: PDF Generator を使用してファイルを変換する方法について説明します。
-seo-description: PDF Generator を使用してファイルを変換する方法について説明します。
+seo-description: Learn how to convert files using PDF Generator.
 uuid: 295afb8f-130a-44f5-b0ab-e4c93c0c9e52
 contentOwner: admin
 content-type: reference
@@ -12,9 +12,9 @@ discoiquuid: 999ae2be-56ba-48c1-861b-8d4c991a0206
 feature: PDF Generator
 exl-id: 0e2c12b5-24c8-4aca-8826-cb661051ce4f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '1167'
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 91%
 
 PDF Generator Web ページを使用して、ファイルを変換できます。
 
-## PDF ファイルの作成  {#create-a-pdf-file}
+## PDF ファイルの作成 {#create-a-pdf-file}
 
 1. 管理コンソールで、サービス／PDF Generator／PDF の作成をクリックします。
 1. 「参照」をクリックし、ファイルを見つけて選択します。
@@ -43,17 +43,17 @@ PDF Generator Web ページを使用して、ファイルを変換できます�
 1. 「作成」をクリックします。ファイルが作成されると、そのファイルへのリンクが表示されます。変換中にエラーが発生すると、警告が表示されます。PostScript ファイルを作成している場合、警告にはログファイルへのリンクも含まれます。
 1. PDF ファイルのリンクをクリックします。Acrobat でファイルが開きます。
 
-### XMP ファイルについて  {#about-xmp-files}
+### XMP ファイルについて {#about-xmp-files}
 
 PDF Generator により Acrobat 5.0 またはそれ以降で作成される PDF ドキュメントには、XML 形式のドキュメントのメタデータが含まれます。*メタデータ*&#x200B;には、作成者の名前、キーワードおよび著作権情報などドキュメントとそのコンテンツに関する情報が含まれており、この情報は検索ユーティリティで使用できます。
 
 ドキュメントのメタデータには、Acrobat のドキュメントのプロパティダイアログボックスの「説明」タブで表示される情報も含まれます（ただし、その情報だけではありません）。「説明」タブで行われた変更は、ドキュメントのメタデータに反映されます。ドキュメントのメタデータは、サードパーティの製品を使用して拡張したり、変更したりできます。
 
-Adobe Extensible Metadata Platform（XMP）は、パブリッシングワークフロー間でのドキュメントのメタデータの作成、処理および交換を標準化する共通の XML フレームワークを Adobe アプリケーションに提供します。ドキュメントのメタデータの XML ソースコードは XMP 形式で保存および読み込むことができるので、様々なドキュメント間でメタデータを簡単に共有できるようになります。XMP ファイルについて詳しくは、「[Extensible Metadata Platform（XMP）](https://www.adobe.com/products/xmp/)」および「[Adobe XMP Developer Center](https://www.adobe.com/devnet/xmp.html)」を参照してください。
+Adobe Extensible Metadata Platform（XMP）は、パブリッシングワークフロー間でのドキュメントのメタデータの作成、処理および交換を標準化する共通の XML フレームワークを Adobe アプリケーションに提供します。ドキュメントのメタデータの XML ソースコードは XMP 形式で保存および読み込むことができるので、様々なドキュメント間でメタデータを簡単に共有できるようになります。XMP ファイルについて詳しくは、「[Extensible Metadata Platform（XMP）](https://www.adobe.com/jp/products/dimension.html/)」および「[Adobe XMP Developer Center](https://www.adobe.com/devnet/xmp.html)」を参照してください。
 
 Acrobat では、XMP ファイルを作成できます。
 
-## HTML ファイルまたは ZIP ファイルから PDF への変換  {#convert-an-html-file-or-zip-file-to-pdf}
+## HTML ファイルまたは ZIP ファイルから PDF への変換 {#convert-an-html-file-or-zip-file-to-pdf}
 
 PDF Generator を使用して、次の種類のファイルを Adobe PDF に変換できます。
 
@@ -65,23 +65,19 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 >[!NOTE]
 >
 >* HTML から PDF への変換機能を使用する場合、システムフォントディレクトリに特定のフォントが含まれている必要があります。Linux、Solaris および AIX システムでは、システムフォントディレクトリに Courier フォントが含まれている必要があります。Windows システムでは、システムフォントディレクトリに Times New Roman が含まれている必要があります。
-   >
-   >
-* （UNIXベースのシステムのみ）日本語フォントを含むWebページをPDFドキュメントに変換するには、AEM Formsサーバーで次の日本語フォントの1つを使用できる必要があります。
-   >
-   >  
-* 「サザナミゴシック」
+>
+>* （UNIX ベースのシステムのみ）日本語フォントを使用した web ページを PDFドキュメントに変換するには、AEM Forms サーバーで以下の日本語フォントが使用可能である必要があります。
+>
+>  * &quot;Sazanami Gothic&quot;
 >  * &quot;Kozuka Gothic Pro-VI&quot;
 >  * &quot;Kozuka Mincho Pro-VI&quot;
->  * 「サザナミゴシック」
+>  * &quot;Sazanami Gothic&quot;
 >  * &quot;Kozuka Mincho Pr6N&quot;
->  * 『サザナミ民帳』
->  * 「AdobeハイティStd」
+>  * &quot;Sazanami Mincho&quot;
+>  * &quot;Adobe Heiti Std&quot;
 >  * &quot;Adobe Song Std&quot;
-
-   >
-   >
-* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
+>
+>* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
 
 
 1. 管理コンソールで、サービス／PDF Generator／HTML から PDF をクリックします。
@@ -108,7 +104,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 1. 「作成」をクリックします。ファイルが作成されると、その PDF ファイルへのリンクが表示されます。
 1. PDF ドキュメントを Acrobat で表示するには、そのリンクをクリックします。
 
-## 別のファイル形式への PDF ファイルの書き出し（Windows のみ）  {#export-a-pdf-file-to-another-file-format-windows-only}
+## 別のファイル形式への PDF ファイルの書き出し（Windows のみ） {#export-a-pdf-file-to-another-file-format-windows-only}
 
 『[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)』の「Generate PDF サービス」の章で説明したように、PDF ファイルは様々なファイル形式に書き出すことができます。
 
@@ -117,13 +113,13 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 1. 「PDF ファイルの書き出し先」リストで、PDF ファイルの書き出し先の形式を選択します。
 1. 「タイムアウト時間の指定」ボックスに、アプリケーションがタイムアウトになるまでの待機時間を入力します。デフォルト値は 270 秒です。
 
-   ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻. 「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
+   ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻。「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. （オプション）「**カスタムプリフライトプロファイルを指定**」オプションで、「参照」をクリックし、[カスタムプリフライトプロファイル](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)を選択します。 プリフライトプロファイルは、ドキュメントをPDFアーカイブ(PDF/A)形式に変換する場合にのみ使用されます。
+1. （オプション）**カスタム Preflight プロファイルを指定する**&#x200B;オプションで「参照」をクリックし、[カスタム Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を選択します。Preflight プロファイルは、ドキュメントを PDF アーカイブ（PDF/A）形式に変換する際にのみ使用されます。  
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
-## PDF の最適化 （Windowsのみ） {#optimize-a-pdf}
+## PDF の最適化（Windows のみ） {#optimize-a-pdf}
 
 PDF Generator では、PDF ファイルのサイズを低減することができます。
 
