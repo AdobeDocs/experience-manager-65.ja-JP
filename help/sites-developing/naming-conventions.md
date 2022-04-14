@@ -1,8 +1,8 @@
 ---
 title: 命名規則
-seo-title: 命名規則
-description: リポジトリのノードは、Java コンテンツリポジトリの命名規則の対象です
-seo-description: リポジトリのノードは、Java コンテンツリポジトリの命名規則の対象です
+seo-title: Naming Conventions
+description: リポジトリのノードは、Java コンテンツリポジトリーの命名規則の対象です
+seo-description: Nodes in the repository are subject to naming conventions of the Java Content Repository
 uuid: 0515c5c5-3e93-4710-983f-c08c146467fc
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 198098c0-432b-4a93-a94e-2552337435dd
 exl-id: 01c6bb29-1d2d-4a45-b291-0e8d97c01a08
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: '301'
+ht-degree: 100%
 
 ---
 
@@ -74,4 +74,4 @@ ht-degree: 99%
    * A～Z
    * 0～9
    * _（アンダースコア）
-   * `-` （ダッシュ/マイナス）
+   * `-`（ダッシュ／マイナス）
