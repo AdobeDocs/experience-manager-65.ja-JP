@@ -3,8 +3,9 @@ title: コンテンツフラグメント - 設定ブラウザー
 description: AEM の強力なヘッドレス配信機能を活用するために、設定ブラウザーで特定のコンテンツフラグメント機能を有効にする方法を説明します。
 feature: Content Fragments
 role: User
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
-workflow-type: tm+mt
+exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '286'
 ht-degree: 100%
 
@@ -48,7 +49,7 @@ AEM の強力なヘッドレス配信機能を活用するために、設定ブ�
 
 1. **ツール**／**一般**&#x200B;に移動し、**設定ブラウザー**&#x200B;を開きます。
 
-1. 「**作成**」を使用してダイアログを開き、次の操作をおこないます。
+1. 「**作成**」を使用してダイアログを開き、次の操作を行います。
 
    1. 「**タイトル**」を指定します。
    1. 使用できるようにするには、以下を選択します。
