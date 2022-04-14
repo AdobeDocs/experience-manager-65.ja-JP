@@ -1,6 +1,6 @@
 ---
-title: 一括アセット移行用の機能パック18912のインストール
-description: 機能パック18912では、FTP を使用してアセットを一括で取り込むか、Dynamic Media ClassicからAdobe Experience ManagerのDynamic Mediaにアセットを移行できます。 このオプションの機能パックは、アドビサポートから入手できます。
+title: 一括アセット移行用の機能パック 18912 をインストールする
+description: 機能パック 18912 では、FTP 経由でアセットを一括取り込みするか、Dynamic Media Classic から Adobe Experience Manager 上の Dynamic Media にアセットを移行できます。このオプションの機能パックは、アドビサポートから入手できます。
 uuid: 45c2f5f8-4368-4d7b-a43e-fe96cfb272fd
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -12,38 +12,38 @@ feature: Asset Management
 role: User, Admin
 exl-id: 53ea2cf7-d633-4ab9-a869-ce76eb1c01e5
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '409'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# 一括アセット移行用の機能パック18912のインストール{#installing-feature-pack-for-bulk-asset-migration}
+# 一括アセット移行用の機能パック 18912 をインストールする{#installing-feature-pack-for-bulk-asset-migration}
 
-機能パック18912のインストールは *オプション* です。
+機能パック 18912 のインストールは&#x200B;*オプション*&#x200B;です。
 
-機能パック18912では、FTP を使用して、Dynamic Media - Scene7モードのAdobe Experience Managerに直接アセットを一括取り込むことができます。 また、Experience Manager時に、Dynamic Media ClassicからDynamic Media - Scene7モードにアセットを移行することもできます。 この機能パックは [Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html) から入手できます。
+機能パック 18912 を使用すると、FTP 経由で、Adobe Experience Manager 上の Dynamic Media - Scene7 モードに直接アセットを一括取り込みできます。また、Experience Manager 上で Dynamic Media Classic から Dynamic Media の Scene7 モードにアセットを移行することもできます。機能パックは、[Adobe プロフェッショナルサービス](https://business.adobe.com/customers/consulting-services/main.html) から入手できます。
 
 >[!IMPORTANT]
 >
->機能パックを使用して、Dynamic Media ClassicからDynamic Media - Scene7モードにExperience Managerして、自分でアセットを一括移行できます。 また、Dynamic Media Classicの FTP 機能を使用して、アセットを一括移行することもできます。 ただし、Adobeでは *使用しない* これらの方法は、複雑さが原因で使用することをお勧めします。
+>機能パックを使用して、Experience Manager で Dynamic Media Classic から Dynamic Media の Scene7 モードに、自身でアセットを一括移行できます。Dynamic Media Classic の FTP 機能を使用して、アセットを一括移行することもできます。ただし、複雑さが伴うため、アドビはこれらの方法のいずれかの使用はお勧め&#x200B;*しません*。
 >
->そのため、この移行機能パックは、[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html) を介して行われた場合、移行プロジェクトの一部として *のみ* サポートされます。
+>そのため、この移行機能パックは、[Adobe プロフェッショナルサービス](https://business.adobe.com/customers/consulting-services/main.html)を通して行われる移行プロジェクトの一部として&#x200B;*のみ*&#x200B;サポートされます。
 
-機能パックをインストールする前に、サービスユーザーを作成し、その情報をAdobe・サポートに提供します。
+機能パックをインストールする前に、サービスユーザーを作成し、その情報をアドビサポートに提供します。
 
-[Dynamic Media - Scene7モードの設定 ](/help/assets/config-dms7.md) も参照してください。
+[Dynamic Media の Scene7 モードを設定](/help/assets/config-dms7.md)も参照してください。
 
-**一括アセット移行用の機能パック18912をインストールするには：**
+**一括アセット移行用の機能パック 18912 をインストールするには：**
 
-1. Experience Managerインスタンスで、**[!UICONTROL ツール]** / **[!UICONTROL セキュリティ]** / **[!UICONTROL ユーザー]** に移動し、「**[!UICONTROL ユーザーを作成]**」を選択します。 このサービスユーザーは、*読み取り/書き込み* 権限を `/content/dam.` に付与する必要があります
-1. 「**[!UICONTROL ID]**」および「**[!UICONTROL パスワード]**」フィールドで、ユーザー名およびパスワードを入力します（例：**FTP User**）。この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。アセットが FTP からアップロードされると、FTP サーバーにアップロードされたアセットが作成されたと見なされ、Experience Managerにプッシュされます。
-1. [Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support) のAdobeカスタマーサポートに連絡して、機能パック18912へのアクセス権をリクエストしてダウンロードしてください。 サポートに問い合わせる際には、次の情報が必要になる場合があります。
+1. Experience Manager インスタンスで、**[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;に移動して、「**[!UICONTROL ユーザーを作成]**」を選択します。このサービスのユーザーは、`/content/dam.` に対する&#x200B;*読み取り／書き込み*&#x200B;権限を持っている必要があります。
+1. 「**[!UICONTROL ID]**」および「**[!UICONTROL パスワード]**」フィールドで、ユーザー名およびパスワードを入力します（例：**FTP User**）。この名前は、アセットを作成したユーザーとしてタイムラインに表示されます。アセットが FTP からアップロードされると、アセットは、FTP サーバーにアップロードされたと見なされ、Experience Manager にプッシュされます。
+1. [Experience Manager のアドビカスタマーサポート](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)に連絡して、機能パック 18912 のダウンロードのためのアクセス権をリクエストしてください。サポートに連絡する際には、次の情報が必要になる場合があります。
 
-   * オーサーインスタンスのサーバー IP アドレス（ポート番号を含む）（デフォルトでは、ポート番号は 4502）。
-   * Experience Manager・サービスのユーザー名とパスワードは、前の手順で作成しました。
+   * オーサーインスタンスのサーバー IP アドレスとポート番号（デフォルトのポート番号は 4502）。
+   * 前の手順の Experience Manager サービスユーザーのユーザー名とパスワード。
 
-1. AdobeカスタマーサポートのExperience Managerでは、FTP の資格情報と機能パック18912へのアクセス権が提供されます。
-1. 機能パック18912を受け取ったら、インストールします。
+1. Experience Manager のアドビカスタマーサポートは、FTP 資格情報と機能パック 18912 へのアクセス権を提供します。
+1. 機能パック 18912 を受け取ったら、インストールします。
 
-   Experience Managerでのソフトウェア配布とパッケージの使用について詳しくは、[ パッケージの使い方 ](/help/sites-administering/package-manager.md) を参照してください。
+   ソフトウエア配布と Experience Manager のパッケージの使用について詳しくは、[パッケージの操作方法](/help/sites-administering/package-manager.md)を参照してください。
