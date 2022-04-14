@@ -1,8 +1,8 @@
 ---
 title: PDF Generator 設定ファイルの読み込みおよび書き出し
-seo-title: PDF Generator 設定ファイルの読み込みおよび書き出し
+seo-title: Importing and exporting PDF Generator configuration files
 description: PDF Generator 設定ファイルの読み込みおよび書き出し方法について説明します。
-seo-description: PDF Generator 設定ファイルの読み込みおよび書き出し方法について説明します。
+seo-description: Learn how to import and export PDF Generator configuration files.
 uuid: 3367253b-d222-4c5f-9455-a1810d96112e
 contentOwner: admin
 content-type: reference
@@ -12,9 +12,9 @@ discoiquuid: e25c1b35-73eb-4353-8e39-a2d4cdccd101
 feature: PDF Generator
 exl-id: b363b23a-29bb-4ea4-a8f2-5ba9fe3c7b27
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '378'
+ht-degree: 100%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->カスタムの native2pdfconfig.xml ファイルを読み込むことによって PDF Generator のタイムアウト設定を変更することはできません。このファイルのタイムアウト設定は情報提供のみを目的としており、PDF Generator の現在の設定が表示されます。タイムアウト設定を変更するには、『[AEM forms のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_63)』の「PDF Generator のパフォーマンスパラメーターの設定」を参照してください。
+>カスタムの native2pdfconfig.xml ファイルを読み込むことによって PDF Generator のタイムアウト設定を変更することはできません。このファイルのタイムアウト設定は情報提供のみを目的としており、PDF Generator の現在の設定が表示されます。タイムアウト設定を変更するには、『[AEM forms のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_63_jp)』の「PDF Generator のパフォーマンスパラメーターの設定」を参照してください。
 
-## 現在の設定ファイルの書き出し  {#export-your-current-configuration-file}
+## 現在の設定ファイルの書き出し {#export-your-current-configuration-file}
 
 1. 管理コンソールで、サービス／PDF Generator／設定ファイル／設定を書き出すをクリックします。
 1. 設定を書き出すには、適切なオプションを選択します。
@@ -38,7 +38,7 @@ ht-degree: 98%
 
 1. 「ダウンロード」をクリックし、XML ファイルを適切な場所に保存します。
 
-## 設定ファイルの読み込み  {#import-a-configuration-file}
+## 設定ファイルの読み込み {#import-a-configuration-file}
 
 >[!NOTE]
 >
@@ -48,19 +48,19 @@ ht-degree: 98%
 1. 「既存の設定ファイルの読み込み」を選択します。
 1. 「設定ファイル」ボックスでファイルの場所を指定するには、「参照」をクリックしてファイルを探して選択し、「**読み込み**」をクリックします。
 
-## AutoCAD ファイル内のすべてのレイヤーの変換  {#convert-all-layers-within-autocad-files}
+## AutoCAD ファイル内のすべてのレイヤーの変換 {#convert-all-layers-within-autocad-files}
 
 デフォルトで、PDF Generator は、AutoCAD ファイル内のすべてのレイヤーではなく、デフォルトレイヤーだけを PDF に変換します。すべてのレイヤーを変換するには、以下の手順に従います。
 
 1. 管理コンソールで、サービス／PDF Generator／設定ファイル／設定を書き出すをクリックします。
 1. 「設定全体のダウンロード」を選択して「ダウンロード」をクリックします。
-1. テキストエディターで、ダウンロードしたファイルを開き、`AutoCAD` タグ内の `PDFMaker` タグの下にテキスト `convertAllPages="true"` &quot; を追加します。
+1. テキストエディターで、ダウンロードしたファイルを開き、`PDFMaker` タグ内の `AutoCAD` タグの下にテキスト `convertAllPages="true"` を追加します。
 1. 管理コンソールで、サービス／PDF Generator／設定ファイル／設定の読み込みをクリックします。
 1. 「既存の設定ファイルの読み込み」を選択し、更新したファイルを指定して、「読み込み」をクリックします。
 
    修正された設定ファイルを使用して変換された任意の AutoCAD ファイルでは、すべてのレイヤーが変換されます。
 
-## PDF Generator でインストールした元の設定へのリセット  {#reset-your-configuration-to-the-original-settings-installed-with-pdf-generator}
+## PDF Generator でインストールした元の設定へのリセット {#reset-your-configuration-to-the-original-settings-installed-with-pdf-generator}
 
 1. 管理コンソールで、サービス／PDF Generator／設定ファイル／設定の読み込みをクリックします。
 1. 「設定をデフォルトにリセット」を選択して、「読み込み」をクリックします。
