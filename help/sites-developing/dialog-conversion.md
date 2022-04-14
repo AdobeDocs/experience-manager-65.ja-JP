@@ -1,8 +1,8 @@
 ---
 title: ダイアログ変換ツール
-seo-title: ダイアログ変換ツール
+seo-title: Dialog Conversion Tool
 description: ダイアログ変換ツールは、クラシック UI 用のダイアログが 1 つしか定義されていない既存のコンポーネントを拡張する場合に役立ちます
-seo-description: ダイアログ変換ツールは、クラシック UI 用のダイアログが 1 つしか定義されていない既存のコンポーネントを拡張する場合に役立ちます
+seo-description: The dialog conversion tool is provided to help you extend existing components that only have a dialog defined for the classic UI
 uuid: 999aeef5-3351-48e3-a02e-c960fa58f775
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: dafe26ae-b2c5-4070-b8b1-cc1da147b464
 exl-id: e255145e-9e86-41ea-b048-ff46fdbff205
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 84%
+workflow-type: ht
+source-wordcount: '101'
+ht-degree: 100%
 
 ---
 
