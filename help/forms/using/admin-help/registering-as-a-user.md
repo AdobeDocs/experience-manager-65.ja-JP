@@ -1,8 +1,8 @@
 ---
 title: ユーザーの登録
-seo-title: ユーザーの登録
+seo-title: Registering as a User
 description: ポリシーで保護されたドキュメントを Document Security ユーザーから受け取ったときに、そのユーザーの組織に属していなくてもドキュメントを使用できるようにする方法について説明します。
-seo-description: ポリシーで保護されたドキュメントを Document Security ユーザーから受け取ったときに、そのユーザーの組織に属していなくてもドキュメントを使用できるようにする方法について説明します。
+seo-description: Learn how you can use policy-protected documents that you receive from an document security user, even if you are external to the user’s organization.
 uuid: 4648b358-f545-434f-a3b2-2937e961dc64
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 content-type: reference
@@ -11,8 +11,8 @@ discoiquuid: 26e11ef4-9f8f-4b0b-b035-a498fd7d65ef
 feature: Document Security
 exl-id: 320d8fa4-e200-4993-b018-a9718cddc5c1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '730'
+workflow-type: ht
+source-wordcount: '700'
 ht-degree: 100%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 100%
 >
 >ポリシーで保護されたドキュメントを受け取っただけで、登録用の招待電子メールを受け取っていない場合は、ドキュメントの送信者に問い合わせてください。
 
-## 招待ユーザーとしての登録  {#register-as-an-invited-user}
+## 招待ユーザーとしての登録 {#register-as-an-invited-user}
 
 招待され、登録の電子メールメッセージを Document Security から受け取った場合は、メッセージに指定された URL を使用し、オンライン登録ページを開くことで登録の手続きができます。登録後、アカウントのアクティベートに関する通知を受信します。
 
@@ -45,7 +45,7 @@ ht-degree: 100%
 1. 各ボックスに名前、電話番号、住所、所属先およびパスワードを入力し、「パスワードの確認」ボックスにパスワードを再入力します。パスワードには、任意の 8 文字のテキストを使用できます。
 1. 「保存」をクリックします。歓迎のメッセージが表示され、アクティベート用の電子メールメッセージがユーザーに送信されたことが通知されます。次に、アカウントをアクティベートして登録手続きを完了する必要があります。
 
-## 招待されたユーザーアカウントのアクティベート  {#activate-your-invited-user-account}
+## 招待されたユーザーアカウントのアクティベート {#activate-your-invited-user-account}
 
 登録後、Document Security からアクティベート用の電子メールが送信されます。メッセージで指定された URL を使用してアカウントをアクティベートする必要があります。その後、Document Security にログインすると、アクセスが許可された、ポリシーで保護されたドキュメントを使用できます。管理者が外部ユーザーに対して有効にした機能に応じて、ポリシーを作成したり、ポリシーをドキュメントに適用したり、他の外部ユーザーをポリシーに追加したりできます。
 
@@ -57,7 +57,7 @@ ht-degree: 100%
 1. 「ユーザー名」ボックスに、Document Security で登録した電子メールアドレスを入力します。この電子メールアドレスは、デフォルトの Document Security ユーザー名です。
 1. 「パスワード」ボックスに、登録時に作成したパスワードを入力し、「ログイン」をクリックします。
 
-## パスワードのリセット  {#reset-your-password}
+## パスワードのリセット {#reset-your-password}
 
 パスワードを忘れた場合は、ポリシーの管理者にアカウントのリセットを依頼できます。パスワードをリセットすると、一時パスワードを使用してログインするように招待する電子メールが送信されます。ログイン後に、新しいパスワードを作成できます。
 
