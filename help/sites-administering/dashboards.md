@@ -1,8 +1,8 @@
 ---
 title: ダッシュボード
-seo-title: ダッシュボード
+seo-title: Dashboards
 description: 新しい AEM ダッシュボードを作成、設定および開発する方法について説明します。
-seo-description: 新しい AEM ダッシュボードを作成、設定および開発する方法について説明します。
+seo-description: Learn how to create, configure and develop new AEM dashboards.
 uuid: 3eadbba2-0ce1-41be-a9f8-e6cafa109893
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 40560e06-2508-45a4-a648-39629ed54f28
 exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 69%
+workflow-type: ht
+source-wordcount: '835'
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ AEM の使用時、ページやアセットなど様々なタイプの多数の�
 1. **タイトル**（「My Dashboard」など）と&#x200B;**名前**&#x200B;を入力します。
 1. 「**作成**」をクリックします。
 
-### ダッシュボードのクローン作成  {#cloning-a-dashboard}
+### ダッシュボードのクローン作成 {#cloning-a-dashboard}
 
 複数のダッシュボードを作成して、コンテンツについての情報を様々な表示からすばやく確認することができます。新しいダッシュボードを作成しやすくするために、AEM ではクローン機能が提供されています。この機能を使用して既存のダッシュボードを複製できます。ダッシュボードのクローンを作成するには、次の手順を実行します。
 
@@ -54,7 +54,7 @@ AEM の使用時、ページやアセットなど様々なタイプの多数の�
 
 1. 新しいダッシュボードの&#x200B;**名前**&#x200B;を入力します。
 
-### ダッシュボードの削除  {#removing-a-dashboard}
+### ダッシュボードの削除 {#removing-a-dashboard}
 
 1. 「**ツール**」セクションで、「**設定コンソール**」をクリックします。
 
@@ -65,7 +65,7 @@ AEM の使用時、ページやアセットなど様々なタイプの多数の�
 
 1. 「**はい**」をクリックして実行を確認します。
 
-## ダッシュボードコンポーネント  {#dashboard-components}
+## ダッシュボードコンポーネント {#dashboard-components}
 
 ### 概要 {#overview}
 
@@ -88,13 +88,13 @@ AEM には、[SiteCatalyst](/help/sites-administering/adobeanalytics.md) デー�
 
 「**基本**」タブから次の設定エントリにアクセスできます。
 
-**** タイトル：ダッシュボードに表示されるタイトル。
+**タイトル**：ダッシュボードに表示するタイトル。
 
-**リクエ** ストタイプデータのリクエスト方法。
+**リクエストタイプ**：データをリクエストする方法。
 
-**SiteCatalyst設定（オプション）** SiteCatalystへの接続に使用する設定。指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
+**SiteCatalyst 設定（オプション）**：SiteCatalyst との接続に使用する設定。指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
 
-**レポートスイートID（オプション）** グラフの生成に使用するSiteCatalystレポートスイート。
+**レポートスイート ID （オプション）**：グラフの生成に使用する SiteCatalyst レポートスイート。
 
 #### レポート設定 {#report-configuration}
 
@@ -104,39 +104,39 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 >
 >日付範囲を広く設定すると、ダッシュボードの応答性が低下する場合があります。
 
-**Date From絶対** 日付またはデータの取得元の相対日付。
+**開始日**：データの取得を開始する絶対日付または相対日付。
 
-**Date** ToAbsoluteまたはデータの取得日の相対値。
+**終了日**：データの取得を終了する絶対日付または相対日付。
 
 各コンポーネントで、固有の設定も定義されます。
 
-#### オーバータイムレポート  {#overtime-report}
+#### オーバータイムレポート {#overtime-report}
 
 ![chlimage_1-26](assets/chlimage_1-26a.png)
 
-**X軸** の日付精度Time単位（日、時間など）。
+**日付の粗さ**：X 軸の単位時間（日、時間など）。
 
-**** 指標：表示するイベントのリスト。
+**メトリクス**：表示するイベントのリスト。
 
-**** 要素：グラフ内の指標データを分類する要素のリスト。
+**要素**：グラフ内のメトリクスデータを細分化する要素のリスト。
 
 #### ランクリストレポート {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
-**** 要素：グラフ内の指標データを分類する要素。
+**要素**：グラフ内のメトリクスデータを細分化する要素。
 
-**** 指標：表示するイベント。
+**メトリクス**：表示するイベント。
 
-**いいえ。最上位項目の数**&#x200B;レポートに表示される項目の数。
+**不可. 上位項目の数**：レポートで表示する項目の数。
 
 #### ランクレポート {#ranked-report}
 
 ![chlimage_1-28](assets/chlimage_1-28a.png)
 
-**** 指標：表示するイベント。
+**メトリクス**：表示するイベント。
 
-**** 要素：グラフ内の指標データを分類する要素。
+**要素**：グラフ内のメトリクスデータを細分化する要素。
 
 #### トップサイトセクションレポート {#top-site-section-report}
 
@@ -144,17 +144,17 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ![chlimage_1-29](assets/chlimage_1-29a.png)
 
-**いいえ。の上位項目数**&#x200B;レポートに表示されるセクションの数。
+**不可. 上位項目の数**：レポートで一度に表示するセクションの数。
 
 #### トレンドレポート {#trended-report}
 
 ![chlimage_1-30](assets/chlimage_1-30a.png)
 
-**X軸** の日付精度Time単位（日、時間など）。
+**日付の粗さ**：X 軸の単位時間（日、時間など）。
 
-**** 指標：表示するイベント。
+**メトリクス**：表示するイベント。
 
-**** 要素：グラフ内の指標データを分類する要素。
+**要素**：グラフ内のメトリクスデータを細分化する要素。
 
 ## ダッシュボードの拡張 {#extending-dashboard}
 
@@ -162,25 +162,25 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ダッシュボードは通常のページ（`cq:Page`）なので、あらゆるコンポーネントを使用してダッシュボードを構成できます。
 
-分析レポートコンポーネントを含むデフォルトのコンポーネントグループ`Dashboard`がテンプレートでデフォルトで有効になっています。
+デフォルトのコンポーネントグループ `Dashboard` には分析レポート用コンポーネントが含まれていて、これらのコンポーネントはテンプレート上でデフォルトで有効になっています。
 
-### Creating A Dashboard Template {#creating-a-dashboard-template}
+### ダッシュボードテンプレートの作成 {#creating-a-dashboard-template}
 
 テンプレートは、新しいダッシュボードのデフォルトのコンテンツを定義するものです。様々なタイプのダッシュボードを作成するために、複数のテンプレートを使用できます。
 
-ダッシュボードテンプレートは、他のページテンプレートと同じように作成されますが、`/libs/cq/dashboards/templates/`に保存される点が異なります。[コンテンツページテンプレートの作成](/help/sites-developing/website.md#creating-the-contentpage-template)の節を参照してください。
+ダッシュボードテンプレートはその他のページテンプレートと同様に作成されますが、`/libs/cq/dashboards/templates/` に保存される点が異なります。[contentpage テンプレートの作成](/help/sites-developing/website.md#creating-the-contentpage-template)の節を参照してください。
 
 >[!NOTE]
 >
 >ダッシュボードテンプレートはユーザー間で共有されます。
 
-### ダッシュボードコンポーネントの開発  {#developing-a-dashboard-component}
+### ダッシュボードコンポーネントの開発 {#developing-a-dashboard-component}
 
 ダッシュボードコンポーネントの開発は、通常の AEM コンポーネントの作成から成り立っています。ここでは、作成者の上位 10 人を表示するコンポーネントを例に説明します。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
-上位のオーサーコンポーネントは、リポジトリの`/apps/geometrixx-outdoors/components/reporting`に保存され、次の要素で構成されます。
+上位作成者コンポーネントは、`/apps/geometrixx-outdoors/components/reporting` のリポジトリに格納され、構成内容は次のとおりです。
 
 1. jcr データを読み取り、`jsp` プレースホルダーを定義する `html` ファイル。
 
@@ -190,7 +190,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 次の JavaScript ファイルは、`geout.reporting.topauthors`[ のクライアントライブラリ](/help/sites-developing/clientlibs.md)でコンポーネントの子として定義されます。
 
-[QueryBuilder](/help/sites-developing/querybuilder-api.md)は、`cq:AuditEvent`ノードを読み取るためにリポジトリに対してクエリを実行する際に使用します。 クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
+[QueryBuilder](/help/sites-developing/querybuilder-api.md) を使用してリポジトリに対してクエリを実行し、`cq:AuditEvent` ノードを読み取ります。クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
 
 #### top_authors.js {#top-authors-js}
 
@@ -237,7 +237,7 @@ $.ajax({
 });
 ```
 
-`JSP`には、`global.jsp`と`clientlib`の両方が含まれます。
+`JSP` には、`global.jsp` と `clientlib` の両方が含まれます。
 
 #### top_authors.jsp {#top-authors-jsp}
 
