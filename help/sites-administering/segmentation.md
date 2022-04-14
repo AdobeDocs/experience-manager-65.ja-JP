@@ -1,8 +1,8 @@
 ---
 title: ContextHub でのセグメント化の設定
-seo-title: ContextHub でのセグメント化の設定
+seo-title: Configuring Segmentation with ContextHub
 description: ContextHub でのセグメント化の設定方法について説明します。
-seo-description: ContextHub でのセグメント化の設定方法について説明します。
+seo-description: Learn how to configure segmentation with Context Hub.
 uuid: 196cfb18-317c-443d-b6f1-f559e4221baa
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,24 +11,23 @@ content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '1767'
+ht-degree: 100%
 
 ---
 
-# ContextHub でのセグメント化の設定 {#configuring-segmentation-with-contexthub}
+# ContextHub でのセグメント化の設定{#configuring-segmentation-with-contexthub}
 
 >[!NOTE]
 >
 >この節では、ContextHub を使用したセグメント化の設定について説明します。ClientContext 機能を使用する場合は、[ClientContext のセグメント化の設定](/help/sites-administering/campaign-segmentation.md)に関するドキュメントを参照してください。
 
-
 キャンペーンを作成する場合、セグメント化を考えることが重要になります。セグメント化の仕組みと主な用語について詳しくは、[オーディエンスの管理](/help/sites-authoring/managing-audiences.md)を参照してください。
 
 サイト訪問者についてこれまでに収集した情報と、達成する目標に応じて、ターゲットコンテンツに必要なセグメントと戦略を定義する必要があります。
 
-このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、Webサイトの[パーソナライゼーション](/help/sites-authoring/personalization.md)セクションで管理されます。 ここで定義された[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加できます。また、専用のコンテンツを適用できる訪問者セグメントを定義できます。
+このようなセグメントを使用して、訪問者に特定のターゲットコンテンツを提供します。このコンテンツは、web サイトの「[パーソナライズ機能](/help/sites-authoring/personalization.md)」セクションで管理されます。ここで定義した[アクティビティ](/help/sites-authoring/activitylib.md)は、任意のページに追加でき、専用のコンテンツを適用できる訪問者セグメントを指定できます。
 
 AEM では、ユーザーエクスペリエンスを簡単にパーソナライズできます。また、セグメント定義の結果を検証することもできます。
 
@@ -36,7 +35,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 [オーディエンス](/help/sites-authoring/managing-audiences.md)コンソールは、ContextHub または ClientContext のセグメントを管理したり、Adobe Target アカウントのオーディエンスを管理したりする目的で使用します。このドキュメントでは、ContextHub のセグメントの管理について取り上げます。[ClientContext セグメント](/help/sites-administering/campaign-segmentation.md)および Adobe Target セグメントについては、それぞれ関連するドキュメントを参照してください。
 
-セグメントにアクセスするには、グローバルナビゲーションで&#x200B;**ナビゲーション／パーソナライズ機能／オーディエンス**&#x200B;を選択します。
+セグメントにアクセスするには、グローバルナビゲーションで「**ナビゲーション／パーソナライズ機能／オーディエンス**」を選択します。
 
 ![chlimage_1-310](assets/chlimage_1-310.png)
 
@@ -48,7 +47,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 コンポーネントブラウザーを使用すると、**AND** および **OR** コンテナを追加してセグメントロジックを定義してから、別のコンポーネントを追加してプロパティや値を比較できます。また、スクリプトやその他のセグメントを参照して選択条件を定義する（[新しいセグメントの作成](#creating-a-new-segment)を参照）ことによって、セグメントの選択シナリオを正確に定義できます。
 
-ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数について詳しくは、[新しいセグメントの作成](#creating-a-new-segment)を参照してください。](/help/sites-administering/campaign-segmentation.md#boost-factor)
+ステートメント全体が true と評価されると、セグメントは解決されます。複数のセグメントを適用可能な場合、**ブースト**&#x200B;係数も使用されます。[ブースト係数](/help/sites-administering/campaign-segmentation.md#boost-factor)について詳しくは、「[新しいセグメントの作成](#creating-a-new-segment)」を参照してください。
 
 >[!CAUTION]
 >
@@ -62,11 +61,11 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
  <tbody>
   <tr>
    <td>コンテナ AND<br /> </td>
-   <td>AND ブール演算値<br /> </td>
+   <td>AND ブール演算子<br /> </td>
   </tr>
   <tr>
    <td>コンテナ OR<br /> </td>
-   <td>OR ブール演算値</td>
+   <td>OR ブール演算子</td>
   </tr>
  </tbody>
 </table>
@@ -133,7 +132,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 1. [セグメントへのアクセス](/help/sites-administering/segmentation.md#accessing-segments)後、セグメントを作成する[フォルダーに移動](#organizing-segments)するか、ルートのままにしておきます。
 
-1. 「作成」ボタンをクリックまたはタップし、「**ContextHubセグメントを作成**」を選択します。
+1. 「作成」ボタンをタップまたはクリックし、「**ContextHub セグメントを作成**」を選択します。
 
    ![chlimage_1-311](assets/chlimage_1-311.png)
 
@@ -156,7 +155,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 1. 「**OK**」をクリックして定義を保存します。
 1. 必要に応じてその他のコンポーネントを追加します。AND 比較および OR 比較のコンテナコンポーネントを使用して、ブール式を作成できます（後述の [AND コンテナと OR コンテナの使用](/help/sites-administering/segmentation.md#using-and-and-or-containers)を参照）。セグメントエディターでは、不要になったコンポーネントを削除したり、コンポーネントをステートメント内の別の場所へドラッグしたりすることができます。
 
-### AND コンテナと OR コンテナの使用     {#using-and-and-or-containers}
+### AND コンテナと OR コンテナの使用 {#using-and-and-or-containers}
 
 AND および OR コンテナコンポーネントを使用すると、AEM で複雑なセグメントを作成できます。この際、次の基本事項に留意してください。
 
@@ -167,11 +166,11 @@ AND および OR コンテナコンポーネントを使用すると、AEM で�
 
 30 才～ 59 才の男性
 
-または
+OR
 
 30 才～ 59 才の女性
 
-最初に、OR コンテナコンポーネントをデフォルトの AND コンテナ内に配置します。ORコンテナ内に2つのANDコンテナを追加し、その両方にプロパティまたは参照コンポーネントを追加できます。
+最初に、OR コンテナコンポーネントをデフォルトの AND コンテナ内に配置します。OR コンテナ内に 2 つの AND コンテナを追加し、それらの両方にプロパティまたは参照コンポーネントを追加できます。
 
 ![screen_shot_2012-02-02at105145am](assets/screen_shot_2012-02-02at105145ama.png)
 
@@ -179,7 +178,7 @@ AND および OR コンテナコンポーネントを使用すると、AEM で�
 
 スクリプト参照コンポーネントを使用すると、セグメントプロパティの評価を外部スクリプトに委任できます。適切に設定したスクリプトは、セグメント条件の他のコンポーネントと同じように使用できます。
 
-#### 参照するスクリプトの定義  {#defining-a-script-to-reference}
+#### 参照するスクリプトの定義 {#defining-a-script-to-reference}
 
 1. `contexthub.segment-engine.scripts` クライアントライブラリにファイルを追加します。
 1. 値を返す関数を実装します。次に例を示します。
