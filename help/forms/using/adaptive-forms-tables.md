@@ -1,23 +1,23 @@
 ---
 title: アダプティブフォームにおける表
-seo-title: アダプティブフォームにおける表
+seo-title: Tables in adaptive forms
 description: AEM Forms の表コンポーネントでは、モバイルレイアウトにレスポンシブなアダプティブフォームで表を作成することができ、XDP 表コンポーネントも使用することができます。
-seo-description: AEM Forms の表コンポーネントでは、モバイルレイアウトにレスポンシブなアダプティブフォームで表を作成することができ、XDP 表コンポーネントも使用することができます。
+seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
 uuid: 03436c81-42f0-430f-9e52-14a4ab0e877d
 topic-tags: author
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fc418da9-496f-4a2b-bfe4-2add3ac4f468
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
-workflow-type: tm+mt
-source-wordcount: '2430'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '2398'
+ht-degree: 100%
 
 ---
 
-# アダプティブフォームにおける表{#tables-in-adaptive-forms}
+# アダプティブフォームのテーブル{#tables-in-adaptive-forms}
 
 複雑なデータであっても、テーブルを使用することで、効果的かつシンプルにまとめて提示できます。情報をわかりやすく配置し、行と列に分けて規則正しく配列することで、ユーザーも入力しやすくなります。金融サービスや政府機関が提供するフォームの大部分は、数字を入力して計算を実行できる大規模なデータテーブルを必要とします。
 
@@ -39,7 +39,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 ![AEM サイドバーのテーブルコンポーネント](assets/sidebar-tables.png)
 
-### ヘッダーとボディセルについて {#about-header-and-body-cells}
+### ヘッダーと本文セルについて {#about-header-and-body-cells}
 
 ヘッダーセルは、テキストフィールドです。ヘッダーのラベルを変更するには、ヘッダーセルを右クリックし、「**編集**」をクリックします。編集ダイアログの「**値**」フィールドのラベルを編集して、「**OK**」をクリックします。
 
@@ -79,7 +79,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 ### テーブルの列の並べ替え {#sortcolumnstable}
 
-アダプティブフォーム内の表内の任意の列に基づいてデータを並べ替えることができます。 列の値は、昇順または降順で並べ替えることができます。
+アダプティブフォームでは、テーブルの任意の列を基準にデータを並べ替えることができます。列の値は、昇順または降順で並べ替えることができます。
 
 並べ替えは、以下の項目を含むテーブルの列に適用できます。
 
@@ -108,13 +108,13 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
    また、**プレビュー**&#x200B;モードでテーブルを変更し、列見出しをもう一度クリックして、列の値を並べ替えることもできます。
 
-## 表の列幅の設定 {#set-column-width}
+## テーブルの列幅の設定 {#set-column-width}
 
 テーブルの列幅を設定するには、次の手順を実行します。
 
-1. 「**[!UICONTROL コンテンツ]**」タブで、**[!UICONTROL テーブル]**&#x200B;コンポーネントをタップし、設定（![設定](assets/configure-icon.svg)）アイコンをタップします。
+1. 「**[!UICONTROL コンテンツ]**」タブで、 **[!UICONTROL テーブル]**&#x200B;コンポーネントをタップし、設定（![設定](assets/configure-icon.svg)）アイコンをタップします。
 
-1. 「**[!UICONTROL 列の幅]**」フィールドに値のコンマ区切りリストを入力して、テーブル内の各列の幅を比例して指定します。 例えば、3列のテーブルで、「**[!UICONTROL 列の幅]**」フィールドの値に2,4,6を指定すると、列の幅が1列目に2/12、2列目に4/12、3列目に6/12と設定されます。 2/12は、最初の列の幅が、テーブルの幅の6分の1を表します。 同様に、4/12は2番目の列幅を表の幅の3分の1に設定し、6/12は3番目の列幅を表の幅の半分に設定します。
+1. 「**[!UICONTROL 列幅]**」フィールドに値のコンマ区切りリストを入力して、テーブルの各列の比例する幅を指定します。例えば、3 つの列を含むテーブルの場合、「**[!UICONTROL 列幅]**」フィールドの値で 2、4、6 を指定すると、1 列目の幅は 2/12、2 列目は 4/12、3 列目は 6/12 に設定されます。最初の列の幅である 2/12 は、テーブル幅の 6 分の 1 を表します。同様に、4/12 は 2 番目の列の幅をテーブル幅の 3 分の 1 に設定し、6/12 は 3 番目の列の幅をテーブル幅の半分に設定します。
 
 ## テーブルのスタイルの設定 {#configure}
 
@@ -130,7 +130,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 >
 >ヘッダーおよびボディ行のカラーテーマは、LESS 変数の値を変更することで変更できます。詳しくは、「[AEM Forms のテーマ](/help/forms/using/themes.md)」を参照してください。
 
-## 行の動的な追加または削除 {#add-or-delete-a-row-dynamically}
+## 動的に行を追加または削除する {#add-or-delete-a-row-dynamically}
 
 テーブルには、実行時の動的な行の追加および削除のサポートがあらかじめ含まれています。
 
@@ -166,7 +166,7 @@ AEM Forms を使用すると、サイドバーにあるコンポーネントブ�
 
 テーブルまたは行の表示の式は、対応する編集コンポーネントダイアログの「パネルプロパティ」タブで定義できます。セルの式は、編集コンポーネントダイアログの「スクリプト」タブで定義できます。
 
-アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
+アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
 
 ## モバイルレイアウト {#mobile-layouts}
 
@@ -280,7 +280,7 @@ XML ファイルのデータを使用して入力する、以下の銀行取引�
 
 サンプル XML では、行のデータは、テーブルの行の要素名である `<Row1>` タグによって定義されています。`<Row1>` タグ内では、各セルのデータは、タグ内の `<tableItem1>`、`<tableItem2>`、`<tableItem3>`、`<type>` などの要素名で定義されています。
 
-このデータを実行時に表と統合するには、wcmmode を無効にした状態で、XML の絶対位置を表を含むアダプティブフォームに示す必要があります。例えば、アダプティブフォームが&#x200B;*https://localhost:4502/myForms/bankTransaction.html*&#x200B;にあり、データXMLファイルが&#x200B;*C:/myTransactions/bankSummary.xml*&#x200B;に保存されている場合、次のURLにあるデータを含むテーブルを表示できます。
+このデータを実行時にテーブルと統合するには、wcmmode を無効にした状態で、XML の絶対位置をテーブルを含むアダプティブフォームに示す必要があります。例えば、アダプティブフォームが *https://localhost:4502/myForms/bankTransaction.html* にあり、データ XML ファイルが *C:/myTransactions/bankSummary.xml* に保存されている場合、データが入ったテーブルは次の URL で確認することができます。
 
 *https://localhost:4502/myForms/bankTransaction.html?dataRef=file:/// C:/myTransactions/bankSummary.xml&amp;wcmmode=disabled*
 
