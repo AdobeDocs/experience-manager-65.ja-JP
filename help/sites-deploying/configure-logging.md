@@ -1,20 +1,20 @@
 ---
 title: ログ
-seo-title: ログ
+seo-title: Logging
 description: 一元的なログサービスのグローバルパラメーターの設定、個々のサービスに特有の設定、またはデータのログ記録の要求をおこなう方法を学習します。
-seo-description: 一元的なログサービスのグローバルパラメーターの設定、個々のサービスに特有の設定、またはデータのログ記録の要求をおこなう方法を学習します。
+seo-description: Learn how to configure global parameters for the central logging service, specific settings for the individual services or how to request data logging.
 uuid: 8c9e3628-2f2c-445d-9706-5c7725b85fe2
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
 discoiquuid: 5aa69b10-2cd0-4d34-8104-8c3b88405926
-feature: 設定
+feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 83%
+workflow-type: ht
+source-wordcount: '664'
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ AEM では、次の設定が可能です。
 
 * 中央のログサービスのグローバルパラメーター
 * 要求データのログ（要求情報用の特殊なログ設定）
-* 個々のサービス固有の設定;例えば、個々のログファイルとログメッセージの形式などです
+* 個々のサービス固有の設定例えば、個々のログファイルとログメッセージの形式などです。
 
 これらはすべて、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)です。
 
@@ -44,7 +44,7 @@ AEM では、次の設定が可能です。
 
 >[!NOTE]
 >
->この[ナレッジベースの記事](https://helpx.adobe.com/experience-manager/kb/HowToRotateRequestAndAccessLog.html)では、request.log ファイルと access.log ファイルのローテーション方法について説明します。
+>この[ナレッジベースの記事](https://helpx.adobe.com/jp/experience-manager/kb/HowToRotateRequestAndAccessLog.html)では、request.log ファイルと access.log ファイルのローテーション方法について説明します。
 
 ## 個々のサービス用のロガーとライター {#loggers-and-writers-for-individual-services}
 
@@ -71,17 +71,17 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
    メッセージを生成するサービスを定義します。
 
-* **ログファイル(Logging Logger)**
+* **Log File（Logging Logger）**
 
    ログメッセージを保存する物理ファイルを定義します。
 
-   これは、Logging LoggerをLogging Writerとリンクするために使用します。 接続を行うには、値がLogging Writer設定の同じパラメーターと同じである必要があります。
+   これは、Logging Logger を Logging Writer とリンクするために使用します。接続を確立するには、Logging Writer 設定の同じパラメーターと値が同じである必要があります。
 
-* **ログファイル(Logging Writer)**
+* **Log File（Logging Writer）**
 
    ログメッセージの書き込み先の物理ファイルを定義します。
 
-   これは、Logging Writer設定の同じパラメーターと同じである必要があります。同じでない場合、一致はおこなわれません。 一致するものがない場合は、デフォルト設定（毎日のログローテーション）で暗黙のライターが作成されます。
+   これは Logging Writer 設定の同じパラメーターと同一でなければなりません。そうでない場合、照合は行われません。一致がない場合は、暗黙のライターがデフォルトの設定で作成されます（毎日のログローテーション）。
 
 ### 標準のロガーおよびライター {#standard-loggers-and-writers}
 
