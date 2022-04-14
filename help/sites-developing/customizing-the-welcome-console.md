@@ -1,8 +1,8 @@
 ---
 title: ようこそコンソールのカスタマイズ（クラシック UI）
-seo-title: ようこそコンソールのカスタマイズ（クラシック UI）
+seo-title: Customizing the Welcome Console (Classic UI)
 description: ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます
-seo-description: ようこそコンソールには、AEM 内の各種コンソールおよび機能へのリンクのリストが表示されます
+seo-description: The Welcome console provides a list of links to the various consoles and functionality within AEM
 uuid: 4ef20cef-2d7a-417d-b36b-ed4fa56cd511
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 2e408acb-3802-4837-8619-688cfc3abfa7
 exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '464'
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 79%
 * [メインコンソール](#links-in-main-console-left-pane) - メインコンソール（左パネル）のリンク
 * [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane) - サイドバー（右パネル）のリンク
 
-## メインコンソール（左パネル）のリンク  {#links-in-main-console-left-pane}
+## メインコンソール（左パネル）のリンク {#links-in-main-console-left-pane}
 
 AEM のメインコンソールが一覧表示されます。
 
@@ -62,17 +62,17 @@ AEM のメインコンソールが一覧表示されます。
 
 次に例を示します。
 
-* **ツール**&#x200B;へのアクセスを制限するには、から読み取りアクセスを削除します。
+* **ツール**&#x200B;へのアクセスを制限するには、読み取りアクセス権を次の場所から削除します。
 
    `/libs/wcm/core/content/misc`
 
 目的の権限の設定方法について詳しくは、[セキュリティ](/help/sites-administering/security.md)の節を参照してください。
 
-### サイドバー（右パネル）のリンク  {#links-in-sidebar-right-pane}
+### サイドバー（右パネル）のリンク {#links-in-sidebar-right-pane}
 
 ![cq_welcomescreensidebar](assets/cq_welcomescreensidebar.png)
 
-このリンクは、次のパスの下にノードが存在し、読み取りアクセス権があるかどうかに基づいています。**
+このリンクは、次のパスの下にノードが存在し、読み取りアクセス権があるかどうかに基づいています&#x200B;*。*
 
 `/libs/cq/core/content/welcome`
 
@@ -85,7 +85,7 @@ AEM のメインコンソールが一覧表示されます。
    <td> </td>
   </tr>
   <tr>
-   <td> Cloud Services </td>
+   <td> Cloud Services</td>
    <td><code>/libs/cq/core/content/welcome/resources/cloudservices</code></td>
   </tr>
   <tr>
@@ -163,35 +163,35 @@ AEM のメインコンソールが一覧表示されます。
 
 リンクを表すノードへの読み取りアクセス権を削除することによって、特定のユーザーまたはグループからリンクを非表示にできます。
 
-* リソース — 次へのアクセスを削除します。
+* リソース - 次の場所へのアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/resources/<link-target>`
 
-* ドキュメント — 次へのアクセスを削除：
+* ドキュメント - 次の場所へのアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/docs/<link-target>`
 
-* 機能 — 次へのアクセスを削除：
+* 機能 - 次の場所へのアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/features/<link-target>`
 
 次に例を示します。
 
-* **Reports**&#x200B;へのリンクを削除するには、から読み取りアクセス権を削除します。
+* **レポート**&#x200B;へのリンクを削除するには、次の場所から読み取りアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/resources/reports`
 
-* **パッケージ**&#x200B;へのリンクを削除するには、から読み取りアクセス権を削除します。
+* **パッケージ**&#x200B;へのリンクを削除するには、次の場所から読み取りアクセス権を削除します。
 
    `/libs/cq/core/content/welcome/features/packages`
 
 目的の権限の設定方法について詳しくは、[セキュリティ](/help/sites-administering/security.md)の節を参照してください。
 
-### リンク選択の仕組み  {#link-selection-mechanism}
+### リンク選択の仕組み {#link-selection-mechanism}
 
-`/libs/cq/core/components/welcome/welcome.jsp`では、[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)を使用します。このConsoleUtilは、次のプロパティを持つノードに対してクエリを実行します。
+`/libs/cq/core/components/welcome/welcome.jsp` では、次のプロパティを持つノードに対してクエリを実行する [ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html) を使用します。
 
-* `jcr:mixinTypes` 値は次のとおりです。  `cq:Console`
+* `jcr:mixinTypes`（値：`cq:Console`）
 
 >[!NOTE]
 >
@@ -202,13 +202,12 @@ AEM のメインコンソールが一覧表示されます。
 >
 
 
-
 ユーザーまたはグループが Mixin `cq:Console` を持つノードに対して読み取り権限を持たない場合、そのノードは `ConsoleUtil` 検索で取得されないので、コンソールに表示されません。
 
 ### カスタム項目の追加 {#adding-a-custom-item}
 
 [リンク選択メカニズム](#link-selection-mechanism)を使用して、独自のカスタム項目をリンクのリストに追加できます。
 
-`cq:Console` mixinをウィジェットまたはリソースに追加して、カスタム項目をリストに追加します。 次のプロパティを定義することによって、追加をおこないます。
+`cq:Console` Mixin をウィジェットまたはリソースに追加することで、カスタム項目をリストに追加できます。次のプロパティを定義することによって、追加をおこないます。
 
-* `jcr:mixinTypes` 値は次のとおりです。  `cq:Console`
+* `jcr:mixinTypes`（値：`cq:Console`）
