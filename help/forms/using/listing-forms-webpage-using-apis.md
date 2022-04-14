@@ -1,28 +1,28 @@
 ---
 title: API を使用した Web ページ上のフォームの一覧表示
-seo-title: API を使用した Web ページ上のフォームの一覧表示
+seo-title: Listing forms on a web page using APIs
 description: プログラムから Forms Manager にクエリを 実行し、フィルターが適用されたフォームを取得して、自分の Web ページに表示します。
-seo-description: プログラムから Forms Manager にクエリを 実行し、フィルターが適用されたフォームを取得して、自分の Web ページに表示します。
+seo-description: Programmatically query Forms Manager to retrieve a filtered list of forms and display on your own web pages.
 uuid: e51cb2d4-816f-4e6d-a081-51e4999b00ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
-workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 84%
+workflow-type: ht
+source-wordcount: '693'
+ht-degree: 100%
 
 ---
 
 
-# API を使用した Web ページ上のフォームの一覧表示  {#listing-forms-on-a-web-page-using-apis}
+# API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
 
 AEM Forms では REST ベースの検索 API を備えており、これにより Web 開発者はクエリーを実行し、検索条件に合う一連のフォームを取得できます。API を使用することで、様々なフィルターに基づいてフォームを検索できます。応答オブジェクトには、フォームの属性、プロパティ、フォームのレンダリングエンドポイントなどがあります。
 
-REST APIを使用してフォームを検索するには、サーバーの`https://'[server]:[port]'/libs/fd/fm/content/manage.json`にGETリクエストと以下に説明するクエリパラメーターを送信します。
+REST API を使用してフォームを検索するには、以下に説明するクエリパラメーターを使用して、`https://'[server]:[port]'/libs/fd/fm/content/manage.json` にあるサーバーに GET リクエストを送信します。
 
-## クエリーパラメーター {#query-parameters}
+## クエリパラメーター {#query-parameters}
 
 <table>
  <tbody>
@@ -34,18 +34,18 @@ REST APIを使用してフォームを検索するには、サーバーの`https
    <td>func<br /> </td>
    <td><p>呼び出す関数を指定します。フォームを検索するには、<code>func </code> 属性の値を <code>searchForms</code> に設定します。</p> <p>例： <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
-       entityBuilder.add("func", "searchForms");</code></p> <p><strong>注意：</strong><em>このパラメーターは必須です。</em><br /> </p> </td>
+       entityBuilder.add("func", "searchForms");</code></p> <p><strong>メモ：</strong><em>このパラメーターは必須です。</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
-   <td><p>フォームを検索するアプリケーションパスを指定します。デフォルトでは、appPath 属性はルートノードレベルで使用可能なすべてのアプリケーションを検索します。<br /> </p> <p>1 つの検索クエリーで複数のアプリケーションパスを指定できます。複数のパスを区切る場合はパイプ（|）文字を使用します。 </p> </td>
+   <td><p>フォームを検索するアプリケーションパスを指定します。デフォルトでは、appPath 属性はルートノードレベルで使用可能なすべてのアプリケーションを検索します。<br /> </p> <p>1 つの検索クエリーで複数のアプリケーションパスを指定できます。複数のパスは、パイプ（|）文字を使用して区切ります。 </p> </td>
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定する場合はパイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>注意</strong>： </p>
+   <td><p>アセットと一緒に取得するプロパティを指定します。アスタリスク（*）を使用するとすべてのプロパティを一度に取得できます。複数のプロパティを指定するには、パイプ（|）演算子を使用します。 </p> <p>例： <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>メモ</strong>： </p>
     <ul>
-     <li><em>ID、パス、名前などのプロパティは、常に取得されます。 </em></li>
-     <li><em>アセットごとにプロパティのセットが異なります。formUrl、pdfUrl、guideUrl などのプロパティは cutPoints 属性に依存しません。これらのプロパティはアセットタイプに依存し、アセットタイプに応じて取得されます。 </em></li>
+     <li><em>プロパティ（ID、パス、名前など）は、常に取得されます。 </em></li>
+     <li><em>すべてのアセットには、異なるプロパティのセットがあります。formUrl、pdfUrl、guideUrl などのプロパティは、cutPoints 属性に依存しません。これらのプロパティは、アセットタイプに依存し、それに応じて取得されます。 </em></li>
     </ul> </td>
   </tr>
   <tr>
@@ -67,7 +67,7 @@ REST APIを使用してフォームを検索するには、サーバーの`https
   </tr>
   <tr>
    <td>returnCount</td>
-   <td>指定した条件に一致する検索結果を返すかどうかを指定します。 </td>
+   <td>提示された条件に合う検索結果を返すかどうかを指定します。 </td>
   </tr>
   <tr>
    <td>statements</td>
@@ -75,13 +75,13 @@ REST APIを使用してフォームを検索するには、サーバーの`https
        JSONObject statement=new JSONObject();
        statement.put("name", "title");
        statement.put("value", "SimpleSurveyAF");
-       statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>上記の例では、 </p>
+       statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>上記の例では、次のようにします。 </p>
     <ul>
      <li><strong>name</strong>：検索するプロパティの名前を指定します。</li>
      <li><strong>value</strong>：検索するプロパティの値を指定します。</li>
      <li><strong>operator</strong>：検索時に適用する演算子を指定します。次の演算子がサポートされています。
       <ul>
-       <li>EQ — 次と等しい </li>
+       <li>EQ - 次と等しい </li>
        <li>NEQ - 次と等しくない</li>
        <li>GT - 次の値より大きい</li>
        <li>LT - 次の値より小さい</li>
@@ -93,7 +93,7 @@ REST APIを使用してフォームを検索するには、サーバーの`https
        <li>ENDSWITH - B が A の最後の部分である場合、A は B で終わる</li>
        <li>LIKE - LIKE 演算子を実装する</li>
        <li>AND - 複数の文を組み合わせる</li>
-      </ul> <p><strong>注意：</strong><em>GT、LT、GTEQ、LTEQ 演算子は、LONG、DOUBLE、DATE などの線形型のプロパティに適用されます。</em></p> </li>
+      </ul> <p><strong>注意：</strong> <em>GT、LT、GTEQ、LTEQ 演算子は、LONG、DOUBLE、DATE などの線形型のプロパティに適用されます。</em></p> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -106,16 +106,16 @@ REST APIを使用してフォームを検索するには、サーバーの`https
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
      <li><strong>name</strong>：検索結果の並べ替えに使用するプロパティの名前を指定します。</li>
-     <li><strong>criteria</strong>：結果の順序を指定します。order属性には次の値を指定できます。
+     <li><strong>criteria</strong>：結果の順序を指定します。順序属性には次の値を使用できます。
       <ul>
        <li>ASC - ASC を使用すると、結果を昇順に並べ替えます。<br /> </li>
-       <li>DES - DESを使用して、結果を降順に並べ替えます。</li>
+       <li>DES - DES を使用すると、結果を降順に並べ替えます。</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code>属性は、タイプ<code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code>のアセットに適用できます。</td>
+   <td>バイナリコンテンツを取得するかどうかを指定します。<code>includeXdp</code> 属性は、タイプ <code>FORM</code>、<code>PDFFORM</code>、<code>PRINTFORM</code> のアセットに適用されます。</td>
   </tr>
   <tr>
    <td>assetType</td>
@@ -172,9 +172,9 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
-* [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [API を使用した web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
-* [ドラフトおよび送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
+* [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
-* [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [フォームポータルコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)
