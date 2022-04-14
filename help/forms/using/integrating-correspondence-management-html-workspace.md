@@ -1,8 +1,8 @@
 ---
 title: AEM Forms Workspace でのサードパーティアプリケーションの統合
-seo-title: AEM Forms Workspace でのサードパーティアプリケーションの統合
-description: AEM Forms WorkspaceでCorrespondence Managementなどのサードパーティアプリケーションを統合します。
-seo-description: AEM Forms Workspace で Correspondence Management のようなサードパーティアプリケーションを統合する方法。
+seo-title: Integrating third-party applications in AEM Forms workspace
+description: AEM Forms Workspace で Correspondence Management などのサードパーティアプリケーションを統合します。
+seo-description: How-to integrate third-party apps like Correspondence Management in AEM Forms workspace.
 uuid: 7654cf86-b896-4db2-8f5d-6c1b2e6c229f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -10,9 +10,9 @@ discoiquuid: f70f21e3-3bec-490d-889e-faf496fb738b
 docset: aem65
 exl-id: 39a3f7db-549f-47f3-8d4f-42d583a4532d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 82%
+workflow-type: ht
+source-wordcount: '632'
+ht-degree: 100%
 
 ---
 
@@ -26,13 +26,13 @@ AEM Forms Workspace では、フォームおよびドキュメントでタスク
 
 ## Correspondence Management アセットの作成 {#create-correspondence-management-assets}
 
-まず、AEM Forms WorkspaceでレンダリングされるサンプルのCorrespondence Managementテンプレートを作成します。 詳しくは、「[レターテンプレートの作成](../../forms/using/create-letter.md)」を参照してください。
+まず、AEM Forms Workspace にレンダリングされたサンプル Correspondence Management テンプレートを作成します。詳しくは、[レターテンプレートを作成](../../forms/using/create-letter.md)を参照してください。
 
-URLでCorrespondence Managementテンプレートにアクセスして、Correspondence Managementテンプレートが正常にレンダリングできるかどうかを確認します。 URLは`https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`のようなパターンを持ちます
+Correspondence Management テンプレートにその URL でアクセスして Correspondence Management テンプレートが正常にレンダリングすることができるかどうか確認します。URL は `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;` のようなパターンを持っています。
 
 ここで、`encodedLetterId` は URL エンコードされたレター ID です。Workbench で Workspace タスクにレンダリングプロセスを定義する場合は、同じレター ID を指定します。
 
-## AEM Workspace でレターをレンダリングして送信するタスクを作成する  {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## AEM Workspace でレターをレンダリングして送信するタスクを作成する {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 これらの手順を実行する前に、次のグループのメンバーであることを確認してください。
 
@@ -45,7 +45,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
 1. Workbench を起動します。ローカルホストに管理者としてログインします。
 1. 「ファイル／新規／アプリケーション」をクリックします。アプリケーション名フィールドで、`CMDemoSample` を入力して「終了」をクリックします。
-1. `CMDemoSample/1.0`を選択し、`NewProcess`を右クリックします。 名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
+1. 「`CMDemoSample/1.0`」を選択して、「`NewProcess`」を右クリックします。名前フィールドで、`CMRenderer` を入力して「終了」をクリックします。
 1. 開始ポイントアクティビティピッカーをドラッグして設定します。
 
    1. プレゼンテーションデータで、「CRX アセットの使用」を選択します。
@@ -56,7 +56,7 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
 
       ![「レター」タブ](assets/letter_tab_new.png)
 
-   1. 適切な文字を選択し、「**OK**」をクリックします。
+   1. 適切なレターを選択して、「**OK**」をクリックします。
 
 1. 「アクションプロファイルの管理」をクリックします。アクションプロファイルの管理ダイアログが表示されます。レンダリングプロセスと送信プロセスが正しく選択されていることを確認します。
 1. データ XML ファイルを使用してレターを開くために、データの準備プロセスで適切なデータファイルを参照して選択します。
@@ -101,18 +101,18 @@ AEM Workspace でレターをレンダリングして送信するタスクを作
    }
    ```
 
-   [FileDownload DSC](assets/dscsample.zip)
-を取得：サンプルのDSCは、上記に添付されているDSCSample.zipファイルにあります。DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSCサービスの設定](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
+   [ファイルを入手](assets/dscsample.zip)
+DSC をダウンロード：DSC のサンプルは上記に添付されている DSCSample.zip ファイルの中にあります。DSCSample.zip ファイルをダウンロードして展開します。DSC サービスを使用する前に、設定する必要があります。詳しくは、[DSC サービスを設定](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)を参照してください。
 
    Define Activity ダイアログで、getLetterInstanceInfo などの適切なアクティビティを選択し、「**OK**」をクリックします。
 
 1. アプリケーションをデプロイします。指示があったら、アセットをチェックインして保存します。
-1. https://&#39;[server]:[port]&#39;/lc/content/wsでAEM formsワークスペースにログインします。
+1. https://&#39;[server]:[port]&#39;/lc/content/ws の AEM Forms Workspace にログインします。
 1. 追加したタスク CMRenderer を開きます。Correspondence Management レターが表示されます。
 
    ![cminworkspace](assets/cminworkspace.png)
 
-1. 必要なデータを入力してレターを送信します。ウィンドウが閉じます。 このプロセスでは、ステップ 9 で、ワークフローに指定されているユーザーにタスクが割り当てられます。
+1. 必要なデータを入力してレターを送信します。ウィンドウが閉じます。このプロセスでは、ステップ 9 で、ワークフローに指定されているユーザーにタスクが割り当てられます。
 
    >[!NOTE]
    >
