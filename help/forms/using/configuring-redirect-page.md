@@ -1,19 +1,19 @@
 ---
 title: リダイレクトページの設定
-seo-title: リダイレクトページの設定
+seo-title: Configuring redirect page
 description: アダプティブフォーム入力後、フォーム作成時にフォーム作成者が設定可能な Web ページへ、ユーザーをリダイレクトさせることができます。
-seo-description: アダプティブフォーム入力後、フォーム作成時にフォーム作成者が設定可能な Web ページへ、ユーザーをリダイレクトさせることができます。
+seo-description: After filling an adaptive form, users can be redirected to a webpage that form authors can configure while creating the form.
 uuid: f9d304b4-920d-4e50-a674-40eca48c530c
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 0ffbb4d3-9371-4705-8496-f98e22d9c4a6
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: be1a774f-5681-443f-b195-28e89a020547
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 81%
+workflow-type: ht
+source-wordcount: '237'
+ht-degree: 100%
 
 ---
 
@@ -32,11 +32,11 @@ ht-degree: 81%
 
 リダイレクトページ設定
 
-フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、`status`パラメーターと`owner`パラメーターが渡されます。 これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
+フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、`status` と `owner` のパラメーターが渡されます。これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
-* **コンテンツ保存アクション** （非推奨） : `contentPath` — 送信されたデータが保存されるリポジトリ内のノードのパス。
+* **コンテンツを格納アクション**（非推奨）：送信されたデータが格納されるリポジトリのノードのパス `contentPath` が渡されます。
 
-* **PDFの保存アクション** （非推奨） : `contentPath` — 送信されたデータのパスと、リポジトリ内にPDFファイルを保存しているノードのパスが渡されます。
+* **PDF の保存アクション**（非推奨）：送信されたデータと、リポジトリで PDF ファイルを保存しているノードのパス `contentPath` が渡されます。
 
 * **フォームワークフローへの送信**：フォームワークフローから返される出力パラメーターが渡されます。
 
