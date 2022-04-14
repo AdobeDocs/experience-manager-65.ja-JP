@@ -1,18 +1,18 @@
 ---
 title: メタデータ機能の設定と管理。
-description: の設定と管理 [!DNL Experience Manager Assets] メタデータの追加と管理に関連する機能。
+description: メタデータの追加と管理に関連した  [!DNL Experience Manager Assets]  機能の設定と管理。
 contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 source-git-commit: f854960dbb35cfb0f88d209a711f623099960edc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1977'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
-# でのメタデータ機能の設定と管理 [!DNL Assets] {#config-metadata}
+# [!DNL Assets] でのメタデータ機能の設定と管理  {#config-metadata}
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -20,72 +20,72 @@ ht-degree: 52%
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
 -->
 
-[!DNL Adobe Experience Manager Assets] では、あらゆるアセットのメタデータを保持します。したがって、アセットの分類と編成が容易にでき、特定のアセットを検索しやすくなります。アセットの任意のメタデータを保持して管理する機能によって、メタデータに基づいてアセットを自動的に編成および処理できます。[!DNL Adobe Experience Manager Assets] 管理者は、メタデータ機能を設定およびカスタマイズして、デフォルトのAdobe機能を変更できます。
+[!DNL Adobe Experience Manager Assets] では、あらゆるアセットのメタデータを保持します。したがって、アセットの分類と編成が容易にでき、特定のアセットを検索しやすくなります。メタデータをアセットと共に保持して管理する機能により、メタデータに基づいてアセットを自動的に整理および処理できます。[!DNL Adobe Experience Manager Assets] を使用すると、管理者は、メタデータ機能を設定およびカスタマイズして、デフォルトのアドビ製品／サービスを変更できます。
 
-## メタデータスキーマを編集 {#metadata-schema}
+## メタデータスキーマの編集 {#metadata-schema}
 
-詳しくは、 [メタデータスキーマフォームの編集](metadata-schemas.md#edit-metadata-schema-forms).
+詳しくは、[メタデータスキーマフォームの編集](metadata-schemas.md#edit-metadata-schema-forms)を参照してください。
 
-## 内でのカスタム名前空間の登録 [!DNL Experience Manager] {#registering-a-custom-namespace-within-aem}
+## [!DNL Experience Manager] 内でのカスタム名前空間の登録 {#registering-a-custom-namespace-within-aem}
 
-内に独自の名前空間を追加できます [!DNL Experience Manager]. 次のような事前定義済みの名前空間があるのと同様に、 `cq`, `jcr`、および `sling`を使用すると、リポジトリのメタデータと XML 処理用の名前空間を設定できます。
+[!DNL Experience Manager] 内で独自の名前空間を追加できます。`cq`、`jcr`、`sling` などの事前定義された名前空間があるのと同じように、リポジトリメタデータおよび XML 処理用の名前空間を設定できます。
 
-1. ノードタイプ管理ページへのアクセス `https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`.
-1. 名前空間管理ページにアクセスするには、 **[!UICONTROL 名前空間]** をクリックします。
-1. 名前空間を追加するには、 **[!UICONTROL 新規]** をクリックします。
-1. XML 名前空間規則でカスタム名前空間を指定します。URI 形式の ID と、その ID に関連付けられているプレフィックスを指定します。 「**[!UICONTROL 保存]**」をクリックします。
+1. ノードタイプ管理ページ（`https://[aem_server]:[port]/crx/explorer/nodetypes/index.jsp`）にアクセスします。
+1. 名前空間管理ページにアクセスするには、ページ上部の「**[!UICONTROL 名前空間]**」をクリックします。
+1. 名前空間を追加するには、ページ下部の「**[!UICONTROL 新規]**」をクリックします。
+1. XML 名前空間規則に従って、カスタム名前空間を指定します。URI およびその ID に関連付けられたプレフィックスの形式で ID を指定します。「**[!UICONTROL 保存]**」をクリックします。
 
-## 一括メタデータ更新の制限を設定する {#bulk-metadata-update-limit}
+## バルクメタデータ更新の制限の設定 {#bulk-metadata-update-limit}
 
-サービス拒否 (DOS) を防ぐには、 [!DNL Enterprise Manager] は、Sling 要求でサポートされるパラメーターの数を制限します。 一度に多くのアセットのメタデータを更新すると、上限に到達する可能性があり、それ以上のアセットでメタデータが更新されなくなります。Enterprise Manager では、ログに次の警告が生成されます。
+サービス拒否（DoS）などの状況を防ぐために、[!DNL Enterprise Manager] では、Sling リクエストでサポートされるパラメーターの数を制限しています。一度に多くのアセットのメタデータを更新すると、上限に到達する可能性があり、それ以上のアセットでメタデータが更新されなくなります。Enterprise Manager は、ログに次の警告を生成します。
 
 `org.apache.sling.engine.impl.parameters.Util Too many name/value pairs, stopped processing after 10000 entries`
 
-制限を変更するには、 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]** をクリックし、 **[!UICONTROL 最大POSTパラメータ]** in **[!UICONTROL Apache Sling 要求パラメーターの処理]** OSGi 設定。
+制限を変更するには、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスし、**[!UICONTROL Apache Sling Request Parameter Handling]** OSGi 設定で **[!UICONTROL Maximum POST Parameters]** の値を変更します。
 
 ## メタデータプロファイル {#metadata-profiles}
 
-メタデータプロファイルを使用すると、フォルダー内のアセットにデフォルトのメタデータを適用できます。メタデータプロファイルを作成し、フォルダーに適用します。 後でフォルダーにアップロードするアセットは、メタデータプロファイルで設定したデフォルトのメタデータを継承します。
+メタデータプロファイルを使用すると、フォルダー内のアセットにデフォルトのメタデータを適用できます。メタデータプロファイルを作成し、フォルダーに適用します。それ以降にそのフォルダーにアップロードするすべてのアセットには、メタデータプロファイルで設定したデフォルトのメタデータが継承されます。
 
 ### メタデータプロファイルの追加 {#adding-a-metadata-profile}
 
-1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL メタデータプロファイル]** をクリックし、 **[!UICONTROL 作成]**.
-1. プロファイルのタイトルを入力します（例： ）。 `Sample Metadata`をクリックし、 **[!UICONTROL 作成]**. この [!UICONTROL フォームを編集] メタデータプロファイルのが表示されます。
+1. **[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL メタデータプロファイル]**&#x200B;に移動し、「**[!UICONTROL 作成]**」をクリックします。
+1. プロファイルのタイトル（例：`Sample Metadata`）を入力して、「**[!UICONTROL 作成]**」をクリックします。メタデータプロファイルの「[!UICONTROL フォームを編集]」が表示されます。
 
    ![メタデータフォームの編集](assets/metadata-edit-form.png)
 
-1. コンポーネントをクリックし、「**[!UICONTROL 設定]**」タブでプロパティを設定します。例えば、**[!UICONTROL 説明]**&#x200B;コンポーネントをクリックして、そのプロパティを編集します。
+1. コンポーネントをクリックして、「**[!UICONTROL 設定]**」タブでプロパティを設定します。例えば、**[!UICONTROL 説明]**&#x200B;コンポーネントをクリックして、そのプロパティを編集します。
 
    ![メタデータプロファイルでのコンポーネントの設定](assets/metadata-profile-component-setting.png)
 
    **[!UICONTROL 説明]**&#x200B;コンポーネントについて、次のプロパティを編集します。
 
-   * **[!UICONTROL フィールドラベル]**:メタデータプロパティの表示名。 ユーザーの参照用のみで使用します。
+   * **[!UICONTROL フィールドラベル]**：メタデータプロパティの表示名。ユーザーの参照用です。
 
-   * **[!UICONTROL プロパティにマッピング]**:このプロパティの値は、リポジトリー内の保存先のアセットノードへの相対パスまたは名前を提供します。 値は常に次の値で始まる必要があります： `./` これは、パスがアセットノードの下にあることを示しているからです。
+   * **[!UICONTROL プロパティにマッピング]**：このプロパティの値は、リポジトリに保存されているアセットノードへの相対パスまたは名前を提供します。この値は、パスがアセットのノードの下にあることを示すので、常に「`./`」から開始する必要があります。
 
-   ![メタデータプロファイルのプロパティ設定にマッピング](assets/metadata-profile-setting-map-property.png)
+   ![メタデータプロファイルのプロパティ設定へのマッピング](assets/metadata-profile-setting-map-property.png)
 
-   「**[!UICONTROL プロパティにマッピング]**」に指定した値は、アセットの metadata ノードの下のプロパティとして保存されます。例えば、 `./jcr:content/metadata/dc:desc` 名前として **[!UICONTROL プロパティにマッピング]**, [!DNL Assets] 値を保存 `dc:desc` アセットのメタデータノードに配置します。 Adobeでは、1 つのフィールドのみをメタデータスキーマの特定のプロパティにマッピングすることをお勧めします。 それ以外の場合は、プロパティにマッピングされた最新の追加フィールドがシステムによって選択されます。
+   「**[!UICONTROL プロパティにマッピング]**」に指定する値は、アセットのメタデータノードの下のプロパティとして格納されます。例えば、「**[!UICONTROL プロパティにマッピング]**」の名前として `./jcr:content/metadata/dc:desc` を指定すると、[!DNL Assets] は、アセットのメタデータノードに値 `dc:desc` を格納します。メタデータスキーマの特定のプロパティに 1 つのフィールドのみをマッピングすることをお勧めします。それ以外の場合は、プロパティにマッピングされた、最後に追加されたフィールドが、システムによって選択されます。
 
-   * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。例えば、「My description」と指定すると、この値がアセットのメタデータノードの `dc:desc` プロパティに割り当てられます。
+   * **[!UICONTROL デフォルト値]**：メタデータコンポーネントのデフォルト値を追加するには、このプロパティを使用します。例えば、「My description」と指定すると、この値がアセットのメタデータノードにあるプロパティ `dc:desc` に割り当てられます。
 
-   ![メタデータプロファイルにデフォルトの説明を設定](assets/metadata-profile-setting-default-value.png)
+   ![メタデータプロファイルへのデフォルトの説明の設定](assets/metadata-profile-setting-default-value.png)
 
    >[!NOTE]
    >
-   >（次の場所に存在しない）新しいメタデータプロパティにデフォルト値を追加する `/jcr:content/metadata` ノード ) は、アセットの [!UICONTROL プロパティ] デフォルトでは、ページに配置されます。 アセットの新しいプロパティを表示するには [!UICONTROL プロパティ] ページで、対応するスキーマフォームを変更します。
+   >（`/jcr:content/metadata` ノードに存在していない）新しいメタデータプロパティにデフォルト値を追加しても、プロパティとその値は、アセットの[!UICONTROL プロパティ]ページにデフォルトでは表示されません。アセットの[!UICONTROL プロパティ]ページに新しいプロパティを表示するには、対応するスキーマフォームを変更します。
 
-1. （オプション） **[!UICONTROL フォームを作成]** タブ、その他のコンポーネントの追加先 [!UICONTROL フォームを編集]を設定し、 **[!UICONTROL 設定]** タブをクリックします。 以下のプロパティが **[!UICONTROL フォームを作成]** タブ：
+1. （オプション）「**[!UICONTROL フォームを作成]**」タブで、その他のコンポーネントを[!UICONTROL フォームを編集]に追加して、「**[!UICONTROL 設定]**」タブでそのプロパティを設定します。「**[!UICONTROL フォームを作成]**」タブでは、次のプロパティを使用できます。
 
 | コンポーネント | プロパティ |
 | ----------------------------- | ----------------------------------------------------------------------- |
-| [!UICONTROL セクションヘッダー] | フィールドラベル <br> 説明 |
-| [!UICONTROL 1 行のテキスト] | フィールドラベル <br> プロパティにマッピング <br> デフォルト値 |
-| [!UICONTROL 複数値テキスト] | フィールドラベル <br> プロパティにマッピング <br> デフォルト値 |
-| [!UICONTROL 数値] | フィールドラベル <br> プロパティにマッピング <br> デフォルト値 |
-| [!UICONTROL 日付] | フィールドラベル <br> プロパティにマッピング <br> デフォルト値 |
-| [!UICONTROL 標準タグ] | フィールドラベル <br> プロパティにマッピング <br> デフォルト値 <br> 説明 |
+| [!UICONTROL セクションヘッダー] | フィールドラベル、<br> 説明 |
+| [!UICONTROL 1 行のテキスト] | フィールドラベル、<br> プロパティにマッピング、<br> デフォルト値 |
+| [!UICONTROL 複数値テキスト] | フィールドラベル、<br> プロパティにマッピング、<br> デフォルト値 |
+| [!UICONTROL 数値] | フィールドラベル、<br> プロパティにマッピング、<br> デフォルト値 |
+| [!UICONTROL 日付] | フィールドラベル、<br> プロパティにマッピング、<br> デフォルト値 |
+| [!UICONTROL 標準タグ] | フィールドラベル、<br> プロパティにマッピング、<br> デフォルト値、<br> 説明 |
 
 1. 「**[!UICONTROL 完了]**」をクリックします。メタデータプロファイルが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに追加されます。<br>
 
@@ -93,7 +93,7 @@ ht-degree: 52%
 
 ### メタデータプロファイルのコピー {#copying-a-metadata-profile}
 
-1. 次の **[!UICONTROL メタデータプロファイル]** ページで、コピーを作成するメタデータプロファイルを選択します。
+1. **[!UICONTROL メタデータプロファイル]**&#x200B;ページで、コピーを作成するメタデータプロファイルを選択します。
 
    ![メタデータプロファイルのコピー](assets/metadata-profile-edit-copy-option.png)
 
@@ -138,9 +138,9 @@ To apply a metadata profile globally, follow these steps:
 
 フォルダーメタデータスキーマフォームエディターを使用して、フォルダーのメタデータスキーマを作成および編集します。
 
-1. In [!DNL Experience Manager] インターフェイス、に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL フォルダーメタデータスキーマ]**.
-1. の [!UICONTROL フォルダーメタデータスキーマForms] ページ、クリック **[!UICONTROL 作成]**.
-1. フォームの名前を指定し、 **[!UICONTROL 作成]**. 新しいスキーマフォームは、 [!UICONTROL スキーマForms] ページ。
+1. [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーメタデータスキーマ]**&#x200B;に移動します。
+1. [!UICONTROL フォルダーメタデータスキーマフォーム]ページの「**[!UICONTROL 作成]**」をクリックします。
+1. フォームの名前を指定し、「**[!UICONTROL 作成]**」をクリックします。新しいスキーマフォームが[!UICONTROL スキーマフォーム]ページにリストされます。
 
 ### フォルダーメタデータスキーマフォームの編集 {#edit-folder-metadata-schema-forms}
 
@@ -151,26 +151,26 @@ To apply a metadata profile globally, follow these steps:
 
 これらのフォーム項目を CRX リポジトリーのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
 
-1. スキーマFormsページで、作成したフォームを選択し、 **[!UICONTROL 編集]** 」オプションを使用します。
-1. フォルダーメタデータスキーマエディターページで、 `+` をクリックして、フォームにタブを追加します。 タブの名前を変更するには、デフォルト名をクリックし、以下に新しい名前を指定します。 **[!UICONTROL 設定]**.
+1. スキーマフォームページで、作成したフォームを選択し、ツールバーの「**[!UICONTROL 編集]**」オプションを選択します。
+1. フォルダーメタデータスキーマエディターページで、`+` をクリックしてフォームにタブを追加します。タブの名前を変更するには、デフォルト名をクリックし、「**[!UICONTROL 設定]**」に新しい名前を指定します。
 
    ![custom_tab](assets/custom_tab.png)
 
-   タブを追加するには、 `+`. 削除するには、 `X` 」をクリックします。
+   タブを追加するには、`+` をクリックします。削除するには、タブの `X` をクリックします。
 
 1. アクティブになっているタブで、「**[!UICONTROL フォームを作成]**」タブから 1 つ以上のコンポーネントを追加します。
 
    ![adding_components](assets/adding_components.png)
 
-   複数のタブを作成する場合は、特定のタブをクリックしてコンポーネントを追加します。
+   複数のタブを作成する場合は、コンポーネントを追加する特定のタブをクリックします。
 
 1. コンポーネントを設定するには、コンポーネントを選択して、「**[!UICONTROL 設定]**」タブでそのプロパティを変更します。
 
-   必要に応じて、 **[!UICONTROL 設定]** タブをクリックします。
+   必要に応じて、「**[!UICONTROL 設定]**」タブからコンポーネントを削除します。
 
    ![configure_properties](assets/configure_properties.png)
 
-1. 変更を保存するには、 **[!UICONTROL 保存]** をクリックします。
+1. 変更を保存するには、ツールバーから「**[!UICONTROL 保存]**」を選択します。
 
 #### フォームを作成するコンポーネント {#components-to-build-forms}
 
@@ -189,7 +189,7 @@ To apply a metadata profile globally, follow these steps:
 
 #### フォーム項目の編集 {#editing-form-items}
 
-フォーム項目のプロパティを編集するには、コンポーネントをクリックし、 **[!UICONTROL 設定]** タブをクリックします。
+フォーム項目のプロパティを編集するには、コンポーネントをクリックし、**[!UICONTROL 設定]**&#x200B;タブで次のプロパティのすべてまたはサブセットを編集してください。
 
 **[!UICONTROL フィールドラベル]**：フォルダーのプロパティページに表示されるメタデータプロパティの名前。
 
@@ -215,7 +215,7 @@ To apply a metadata profile globally, follow these steps:
 
 ### フォルダーメタデータスキーマフォームの削除 {#delete-folder-metadata-schema-forms}
 
-フォルダーメタデータスキーマフォームページから、フォルダーメタデータスキーマフォームを削除できます。フォームを削除するには、フォームを選択し、ツールバーの「削除」オプションをクリックします。
+フォルダーメタデータスキーマフォームページから、フォルダーメタデータスキーマフォームを削除できます。フォームを削除するには、フォームを選択してから、ツールバーの「削除」オプションをクリックしてください。
 
 ![delete_form](assets/delete_form.png)
 
@@ -223,20 +223,20 @@ To apply a metadata profile globally, follow these steps:
 
 フォルダーメタデータスキーマフォームページから、またはフォルダーの作成時に、フォルダーにフォルダーメタデータスキーマを割り当てることができます。
 
-フォルダーのメタデータスキーマを設定すると、スキーマフォームのパスは `folderMetadataSchema` の下のフォルダーノードのプロパティ `./jcr:content`.
+フォルダーのメタデータスキーマを設定すると、スキーマフォームのパスは、`./jcr:content` の下のフォルダーノードの `folderMetadataSchema` プロパティに格納されます。
 
 #### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. In [!DNL Experience Manager] インターフェイス、に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Assets]** > **[!UICONTROL フォルダーメタデータスキーマ]**.
+1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーのメタデータスキーマ]**&#x200B;に移動します。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
-1. ツールバーで、 **[!UICONTROL フォルダーに適用]**.
+1. ツールバーの&#x200B;**[!UICONTROL フォルダーに適用]**&#x200B;をクリックします。
 
-1. スキーマを適用するフォルダーを選択し、「 **[!UICONTROL 適用]**. 既にフォルダーにメタデータスキーマが適用されている場合は、既存のメタデータスキーマを上書きするかどうかを確認する警告メッセージが表示されます。「**[!UICONTROL 上書き]**」をクリックします。
+1. スキーマを適用するフォルダーを選択し、「**[!UICONTROL 適用]**」をクリックします。既にフォルダーにメタデータスキーマが適用されている場合は、既存のメタデータスキーマを上書きするかどうかを確認する警告メッセージが表示されます。「**[!UICONTROL 上書き]**」をクリックします。
 1. メタデータスキーマを適用したフォルダーのメタデータプロパティを開きます。
 
    ![folder_properties](assets/folder_properties.png)
 
-   フォルダーメタデータフィールドを表示するには、 **[!UICONTROL フォルダーメタデータ]** タブをクリックします。
+   フォルダーメタデータフィールドを表示するには、「**[!UICONTROL フォルダーメタデータ]**」タブをクリックします。
 
    ![folder_metadata_properties](assets/folder_metadata_properties.png)
 
@@ -244,35 +244,35 @@ To apply a metadata profile globally, follow these steps:
 
 フォルダーを作成するときに、フォルダーメタデータスキーマを割り当てることができます。システムに 1 つ以上のフォルダーメタデータスキーマが存在する場合は、**[!UICONTROL フォルダーを作成]**&#x200B;ダイアログに追加リストが表示されます。希望のスキーマを選択できます。デフォルトではスキーマは選択されていません。
 
-1. 次の [!DNL Experience Manager Assets] ユーザインタフェース： **[!UICONTROL 作成]** をクリックします。
+1. [!DNL Experience Manager Assets] ユーザーインターフェイスで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 1. フォルダーのタイトルと名前を指定します。
-1. フォルダーメタデータスキーマリストから希望のスキーマを選択します。次に、「 **[!UICONTROL 作成]**.
+1. フォルダーメタデータスキーマリストから希望のスキーマを選択します。次に、「**[!UICONTROL 作成]**」をクリックします。
 
    ![select_schema](assets/select_schema.png)
 
 1. メタデータスキーマを適用したフォルダーのメタデータプロパティを開きます。
-1. フォルダーメタデータフィールドを表示するには、 **[!UICONTROL フォルダーメタデータ]** タブをクリックします。
+1. フォルダーメタデータフィールドを表示するには、「**[!UICONTROL フォルダーメタデータ]**」タブをクリックします。
 
 ### フォルダーメタデータスキーマの使用 {#use-the-folder-metadata-schema}
 
-フォルダーメタデータスキーマが設定されたフォルダーのプロパティを開きます。A **[!UICONTROL フォルダーメタデータ]** 」タブがフォルダーに表示されます。 [!UICONTROL プロパティ] ページ。 フォルダーメタデータスキーマフォームを表示するには、このタブを選択します。
+フォルダーメタデータスキーマが設定されたフォルダーのプロパティを開きます。フォルダー[!UICONTROL プロパティ]ページに「**[!UICONTROL フォルダーメタデータ]**」タブが表示されます。フォルダーメタデータスキーマフォームを表示するには、このタブを選択します。
 
-各種フィールドにメタデータ値を入力し、「 **[!UICONTROL 保存]** を使用して値を保存します。 指定した値は、CRX リポジトリ内のフォルダーノードに保存されます。
+各種フィールドにメタデータ値を入力し、「**[!UICONTROL 保存]**」をクリックして値を保存してください。指定した値は、CRX リポジトリ内のフォルダーノードに保存されます。
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 
 ## ヒントと制限事項 {#best-practices-limitations}
 
 * カスタム名前空間にメタデータを読み込むには、まず、その名前空間を登録します。
-* プロパティピッカーは、スキーマエディターおよび検索フォームで使用されるプロパティを表示します。 プロパティピッカーがアセットからメタデータプロパティを選択しない。
-* にアップグレードする前に、既存のメタデータプロファイルが存在する場合があります [!DNL Experience Manager] 6.5.アップグレード後に、このようなプロファイルをフォルダーに適用する場合 [!UICONTROL プロパティ] in [!UICONTROL メタデータプロファイル] 」タブに値を入力しない場合、メタデータフォームフィールドは表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームのフィールドは表示されますが、期待どおりに使用できません。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
+* プロパティピッカーは、スキーマエディターおよび検索フォームで使用されるプロパティを表示します。 プロパティピッカーはアセットからメタデータプロパティを選択しません。
+* [!DNL Experience Manager] 6.5 にアップグレードする前から、既存のメタデータプロファイルが存在している可能性があります。アップグレード後、「[!UICONTROL メタデータプロファイル]」タブのフォルダー[!UICONTROL プロパティ]にそのようなプロファイルを適用すると、メタデータフォームフィールドは表示されません。ただし、新しく作成したメタデータプロファイルを適用すると、フォームのフィールドは表示されますが、期待どおりに使用できません。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
 
 >[!MORELIKETHIS]
 >
->* [メタデータの概念と理解](metadata-concepts.md).
->* [複数コレクションのメタデータプロパティの編集](manage-collections.md#editing-collection-metadata-in-bulk).
->* [Experience Manager Assetsでのメタデータの読み込みと書き出し](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html).
->* [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md).
->* [処理プロファイルを使用するためのデジタルアセットの整理のベストプラクティス](/help/assets/organize-assets.md).
->* [XMP の書き戻し](/help/assets/xmp-writeback.md).
+>* [メタデータの概念と理解](metadata-concepts.md)。
+>* [複数コレクションのメタデータプロパティの編集](manage-collections.md#editing-collection-metadata-in-bulk)。
+>* [Experience Manager Assetsでのメタデータの読み込みと書き出し](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html?lang=ja)。
+>* [メタデータ、画像およびビデオを処理するためのプロファイル](processing-profiles.md)。
+>* [プロファイルを使用するためのデジタルアセットの整理のベストプラクティス](/help/assets/organize-assets.md)。
+>* [XMP の書き戻し](/help/assets/xmp-writeback.md)。
 
