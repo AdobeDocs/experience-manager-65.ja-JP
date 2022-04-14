@@ -1,8 +1,8 @@
 ---
 title: 発行済みフォームへのアクセスと入力
-seo-title: 発行済みフォームへのアクセスと入力
+seo-title: Accessing and filling published forms
 description: フォームポータルでは、Web開発者にAdobe Experience Manager (AEM)を使用して作成されたWebサイトでフォームポータルを作成してカスタマイズするためのコンポーネントが支給されます。
-seo-description: フォームポータルでは、Web開発者にAdobe Experience Manager (AEM)を使用して作成されたWebサイトでフォームポータルを作成してカスタマイズするためのコンポーネントが支給されます。
+seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
 uuid: 44731604-5d97-46fa-baa9-0c020c634fa7
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: 88dc8ef2-95ce-4906-ac28-eecc3a32a64e
 docset: aem65
 exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '935'
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 95%
 
 ## フォームポータルの概要 {#getting-started-with-forms-portal}
 
-発行済みのフォームポータルページに移動します。フォームポータルページの作成について詳しくは、「[フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)」を参照してください。
+発行済みのフォームポータルページに移動します。フォームポータルページの作成について詳しくは、[フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)を参照してください。
 
 フォームポータルの Search &amp; Lister コンポーネントは、AEM サーバーの公開インスタンス上で利用可能なフォームを表示します。このリストには、すべてのフォームまたはフォームポータルページの作成時のフィルターで定義されたフォームが含まれています。次の画像が示すように、フォームポータルページは似ています。
 
@@ -64,7 +64,7 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 リスターは、検索パラメーターに基づいたフォームを表示します。検索結果内の各フォームは、関連フォームへのハイパーリンク付きのアイコンで表示されます。アイコンをクリックして開き、関連フォームを使用します。
 
-### フォームへの入力  {#filling-a-form}
+### フォームへの入力 {#filling-a-form}
 
 ![アダプティブフォームのサンプル](assets/filling_a_form.png)
 
@@ -74,7 +74,7 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 各フォームには、ユーザーがフォームに入力できるようにするヘルプ情報が含まれています。
 
-#### ドラフト &amp; 送信  {#drafts-and-submission}
+#### ドラフト &amp; 送信 {#drafts-and-submission}
 
 ユーザーは、オプションとして保存ボタンをクリックすることでフォームのドラフトを保存することができます。これによって、ユーザーは、フォームを送信するまでの一定期間、フォームで作業することができます。
 
@@ -84,7 +84,7 @@ Search &amp; Lister コンポーネントでは、次の機能をフォームポ
 
 >[!NOTE]
 >
->送信済みのフォームは、アダプティブフォームの送信アクションがFormsポータル送信アクションとして設定されている場合にのみ、「送信済みのForms 」タブに表示されます。 送信アクションについて詳しくは、「[送信アクションの設定](../../forms/using/configuring-submit-actions.md)」を参照してください。
+>送信済みのフォームは、アダプティブフォームの送信アクションが、フォームポータル送信アクションとして設定されている場合にのみ、送信済みフォームのタブに表示されます。送信アクションについて詳しくは、「[送信アクションの設定](../../forms/using/configuring-submit-actions.md)」を参照してください。
 
 ![ドラフト&amp;送信コンポーネント:](assets/draft-submission.png)
 
