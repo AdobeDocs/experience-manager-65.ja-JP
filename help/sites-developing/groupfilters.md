@@ -1,8 +1,8 @@
 ---
 title: デバイスグループフィルターの作成
-seo-title: デバイスグループフィルターの作成
+seo-title: Creating Device Group Filters
 description: デバイスグループフィルターを作成して、一連のデバイスの機能の要件を定義します
-seo-description: デバイスグループフィルターを作成して、一連のデバイスの機能の要件を定義します
+seo-description: Create a device group filter to define a set of device capability requirements
 uuid: 30c0699d-2388-41b5-a062-f5ea9d6f08bc
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/groupfilters
 exl-id: 419d2e19-1198-4ab5-9aa0-02ad18fe171d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 83%
+workflow-type: ht
+source-wordcount: '799'
+ht-degree: 100%
 
 ---
 
@@ -31,11 +31,11 @@ ht-degree: 83%
 
 作成したフィルターは[グループ設定](/help/sites-developing/mobile.md#creating-a-device-group)で使用できます。
 
-## フィルターの Java クラス  {#the-filter-java-class}
+## フィルターの Java クラス {#the-filter-java-class}
 
 デバイスグループフィルターは、[com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) インターフェイスを実装する OSGi コンポーネントです。この実装クラスをデプロイすると、デバイスグループ設定に使用可能なフィルターサービスが提供されます。
 
-この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。したがって、この例のJavaクラスでは`@Component`注釈と`@Service`注釈を使用しています。 このクラスの構造は次のとおりです。
+この記事に示すソリューションでは、Apache Felix Maven SCR Plugin を使用して、コンポーネントとサービスの開発を容易にします。そのため、サンプルの Java クラスでは `@Component` と `@Service` のアノテーションを使用します。このクラスの構造は次のとおりです。
 
 ```java
 package com.adobe.example.myapp;
@@ -69,13 +69,13 @@ public class myDeviceGroupFilter implements DeviceGroupFilter {
 
 次のメソッドのコードを指定する必要があります。
 
-* `getDescription`:フィルターの説明を返します。この説明はデバイスグループ設定ダイアログに表示されます。
+* `getDescription`：フィルターの説明を返します。この説明はデバイスグループ設定ダイアログに表示されます。
 * `getTitle`：フィルターの名前を返します。この名前は、デバイスグループ用のフィルターを選択した場合に表示されます。
 * `matches`：デバイスに必要な機能が搭載されているかどうかを判断します。
 
 ### フィルターの名前と説明の指定 {#providing-the-filter-name-and-description}
 
-`getTitle` メソッドと `getDescription` メソッドは、それぞれフィルターの名前と説明を返します。次のコードは、最も単純な実装を示しています。
+`getTitle` メソッドと `getDescription` メソッドは、それぞれフィルター名と説明を返します。次のコードは、最も単純な実装を示しています。
 
 ```java
 public String getDescription() {
@@ -89,7 +89,7 @@ public String getTitle() {
 
 1 言語のオーサリング環境の場合、名前と説明のテキストをハードコードするだけで十分です。複数言語を使用する場合や、ソースコードを再コンパイルせずに文字列の変更を有効にする場合は、文字列をエクスターナライズすることを検討してください。
 
-### フィルター条件に対する評価  {#evaluating-against-filter-criteria}
+### フィルター条件に対する評価 {#evaluating-against-filter-criteria}
 
 デバイスの機能がすべてのフィルター条件を満たす場合、`matches` 関数は `true` を返します。デバイスがグループに属しているかどうかを判断するには、メソッドの引数に指定された情報を評価します。次の値が引数として指定されます。
 
@@ -106,17 +106,17 @@ boolean cssSupport = true;
 cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML_SUPPORT_LEVEL)) > 1;
 ```
 
-`org.apache.commons.lang.math`パッケージは`NumberUtils`クラスを提供します。
+`org.apache.commons.lang.math` パッケージは `NumberUtils` クラスを提供します。
 
 >[!NOTE]
 >
->AEM にデプロイされる WURFL™ データベースには、フィルター条件として使用する機能が含まれます（[デバイスの検出に関するページ](/help/sites-developing/mobile.md#server-side-device-detection)を参照）。
+>AEM にデプロイされる WURFL™ データベースには、フィルター条件として使用する機能が含まれます（[デバイスの検出](/help/sites-developing/mobile.md#server-side-device-detection)を参照）。
 
 ### 画面サイズ用のサンプルフィルター {#example-filter-for-screen-size}
 
 以下に示すサンプルの DeviceGroupFilter 実装では、デバイスの物理サイズが最小要件を満たしているかどうかを判断します。このフィルターは、タッチデバイスグループに精度を追加します。アプリケーション UI のボタンのサイズは、画面の物理サイズに関係なく同じにしてください。他の項目（テキストなど）のサイズは変更できます。フィルターを使用すると、UI 要素のサイズを制御する特定の CSS を動的に選択できます。
 
-このフィルターは、 `physical_screen_height`および`physical_screen_width` WURFL™のプロパティ名にサイズ条件を適用します。
+このフィルターは、`physical_screen_height` と `physical_screen_width` の WURFL™ プロパティ名に対してサイズ基準を適用します。
 
 ```java
 package com.adobe.example.myapp;
@@ -165,11 +165,11 @@ public class ScreenSizeLarge implements DeviceGroupFilter {
 }
 ```
 
-getTitle メソッドが返す値 String は、デバイスグループのプロパティのドロップダウンリストに表示されます。
+getTitle メソッドが返す文字列値は、デバイスグループのプロパティのドロップダウンリストに表示されます。
 
 ![filteraddtogroup](assets/filteraddtogroup.png)
 
-getTitle メソッドと getDescription メソッドが返す値 String は、デバイスグループの概要ページの下部に表示されます。
+getTitle メソッドと getDescription メソッドが返す文字列値は、デバイスグループの概要ページの下部に表示されます。
 
 ![filterdescription](assets/filterdescription.png)
 
@@ -183,15 +183,15 @@ getTitle メソッドと getDescription メソッドが返す値 String は、�
 * Apache Felix Maven Bundle Plugin：バンドルとマニフェストを作成します。
 * Apache Felix Maven SCR Plugin：コンポーネント記述子ファイルを作成し、service-component マニフェストヘッダーを設定します。
 
-**依存関係:**
+**依存関係：**
 
-* `cq-wcm-mobile-api-5.5.2.jar`:DeviceGroupおよびDeviceGroupFilterインターフェイスを提供します。
+* `cq-wcm-mobile-api-5.5.2.jar`：DeviceGroup インターフェイスと DeviceGroupFilter インターフェイスを提供します。
 
 * `org.apache.felix.scr.annotations.jar`：Component アノテーションと Service アノテーションを提供します。
 
-DeviceGroupおよびDeviceGroupFilterインターフェイスは、Day Communique 5 WCM Mobile APIバンドルに含まれています。Felix注釈は、Apache Felix Declarative Servicesバンドルに含まれています。このJARファイルは、パブリック・リポジトリからAdobeできます。
+DeviceGroup インターフェイスと DeviceGroupFilter インターフェイスは Day Communique 5 WCM Mobile API バンドルに含まれています。Felix アノテーションは Apache Felix Declarative Services バンドルに含まれています。この JAR ファイルはアドビの公開リポジトリから入手できます。
 
-この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。AdobeWebコンソール([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles))を使用して、これが環境にデプロイされるバンドルのバージョンであることを確認します。
+この記事の作成時点では、最新リリースの AEM に含まれている WCM Mobile API バンドルのバージョンは 5.5.2 です。このバージョンが環境にデプロイされているバンドルのバージョンであることを確認するには、アドビの web コンソール（[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)）を使用してください。
 
 **POM：**（ユーザーの POM では別の groupId と version が使用されます。）
 
@@ -258,4 +258,4 @@ DeviceGroupおよびDeviceGroupFilterインターフェイスは、Day Communiqu
 </project>
 ```
 
-アドビの公開リポジトリを使用するには、[Content Package Maven Plugin の入手](/help/sites-developing/vlt-mavenplugin.md)の節に記載されているプロファイルを maven 設定ファイルに追加してください。
+アドビの公開リポジトリを使用するには、[Content Package Maven Plugin の入手](/help/sites-developing/vlt-mavenplugin.md)の節で指定されているプロファイルを Maven 設定ファイルに追加してください。
