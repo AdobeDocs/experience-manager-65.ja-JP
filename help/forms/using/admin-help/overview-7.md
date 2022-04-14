@@ -1,8 +1,8 @@
 ---
 title: Forms 設定の基本事項
-seo-title: Forms 設定の基本事項
+seo-title: Basics of configuring forms
 description: インタラクティブなデータキャプチャアプリケーションの作成に役立つ、様々な Forms サービスについて説明します。
-seo-description: インタラクティブなデータキャプチャアプリケーションの作成に役立つ、様々な Forms サービスについて説明します。
+seo-description: Learn about the various forms services that help you create interactive data capture applications.
 uuid: f495c170-2d17-45b0-b09d-22cce101131e
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e87c7379-28ed-4fda-aef1-970d2b54f30d
 exl-id: 169f3d94-ac00-41c7-853e-ecf0dbee559f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '201'
+ht-degree: 100%
 
 ---
 
