@@ -3,15 +3,15 @@ title: WCAG 2.1 クイックガイド
 description: WCAG 2.1 クイックガイド
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1770'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # WCAG 2.1 クイックガイド{#quick-guide-to-wcag}
 
-Adobe Experience Manager(AEM)は、Webコンテンツのアクセシビリティガイドラインへの準拠を最大限に高めるように開発されました。
+Adobe Experience Manager（AEM）は、web コンテンツのアクセシビリティガイドラインへの準拠を最大限に高めるように開発されました。
 
 [Web Content Accessibility Guidelines （WCAG）バージョン 2.1 ](https://www.w3.org/TR/WCAG/)は、[World Wide Web Consortium（W3C）](https://www.w3.org/)が [Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)の下で開発した一連のガイドラインであり、国際的に認知されています。
 
@@ -112,9 +112,9 @@ WCAG 2.1 の各種テクニックを「[Techniques for WCAG 2.1](https://www.w3.
 
 テクニックは、「十分」（Sufficient）、「参考」（Advisory）、または「失敗」（Failure）に分類されます。
 
-* 十分なテクニック&#x200B;**&#x200B;は、従うと、特定の達成基準を十分に満たすことができます。
-* 参考テクニック&#x200B;**&#x200B;は、従うと、アクセシビリティにプラスの影響を与えますが、それだけでは特定の達成基準を満たすのに十分ではない可能性があります。
-* 失敗テクニック&#x200B;**&#x200B;は、達成基準を満たすことができない特定の例を示すものです。
+* *十分なテクニック*&#x200B;は、従うと、特定の達成基準を十分に満たすことができます。
+* *参考テクニック*&#x200B;は、従うと、アクセシビリティにプラスの影響を与えますが、それだけでは特定の達成基準を満たすのに十分ではない可能性があります。
+* *失敗テクニック*&#x200B;は、達成基準を満たすことができない特定の例を示すものです。
 
 テクニックの詳細には、説明、適用可能性、例、さらに具体的な情報を示すリソース、テクニックを正しく適用できているかをテストする方法の詳細が含まれています。
 
