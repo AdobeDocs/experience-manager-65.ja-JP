@@ -8,20 +8,20 @@ user-guide-description: フォーラム、ユーザーグループ、学習リ�
 feature: Communities
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '501'
+ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Manager 6.5 Communitiesガイド {#communities}
+# Adobe Experience Manager 6.5 Communities ガイド {#communities}
 
 + [Communities ガイド](home.md)
 + AEM Communities の概要 {#introduction}
    + [コミュニティサイト](administer-landing.md)
    + [AEM Communities の概要](overview.md)
-   + [AEM Communities リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/communities-release-notes.html)
+   + [AEM Communities リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/sp-release-notes.html?lang=ja)
    + [AEM Communities 使用の手引き](getting-started.md)
    + [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
    + [初期セットアップ](setup.md)
@@ -31,7 +31,7 @@ ht-degree: 94%
    + [イネーブルメントのための初期設定](enablement-setup.md)
    + [イネーブルメントのための新しいコミュニティサイトの作成](enablement-create-site.md)
    + [イネーブルメントリソースの作成と割り当て](resource.md)
-   + [公開済みイネーブルメントサイトを体験する](enablement-published-site.md)
+   + [公開したイネーブルメントサイトを使ってみる](enablement-published-site.md)
 + デプロイ {#deploy}
    + [Communities のデプロイ](deploy-communities.md)
    + [AEM 6.5 Communities へのアップグレード](upgrade.md)
@@ -39,7 +39,7 @@ ht-degree: 94%
    + [Communities 用の Dispatcher の設定](dispatcher.md)
 + 管理 {#administer}
    + [AEM Communities のユーザーおよび UGC 管理サービス](user-ugc-management-service.md)
-   + [コミュニティサイト](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html)
+   + [コミュニティサイト](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html?lang=ja)
    + [コミュニティコンソール](consoles.md)
    + [コミュニティ機能のための Analytics の設定](analytics.md)
    + [イネーブルメント機能の設定](enablement.md)
@@ -166,4 +166,4 @@ ht-degree: 94%
    + [アクティビティのトレンド](trends.md)
    + [Social タグクラウドの使用](tagcloud.md)
    + [投票の使用](voting.md)
-   + [サンプルページの作成](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html)
+   + [サンプルページの作成](https://experienceleague.adobe.com/docs/experience-manager-65/communities/develop/create-sample-page.html?lang=ja)
