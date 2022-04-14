@@ -1,8 +1,8 @@
 ---
 title: コマンドラインによる起動と停止
-seo-title: コマンドラインによる起動と停止
+seo-title: Command Line Start and Stop
 description: コマンドラインから AEM の起動と停止をおこなう方法を学習します。
-seo-description: コマンドラインから AEM の起動と停止をおこなう方法を学習します。
+seo-description: Learn how to start and stop AEM from the command line.
 uuid: 585f071c-2286-4a2c-af07-404bf298cba8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: 9333ff84-f624-4cfa-a9e4-c5e3882171ff
 exl-id: 21041b55-240c-487d-9d79-c54c877f4e1e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 78%
+workflow-type: ht
+source-wordcount: '366'
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 78%
 
 ## コマンドラインからの Adobe Experience Manager の起動 {#starting-adobe-experience-manager-from-the-command-line}
 
-`start`スクリプトは、*&lt;cq-installation>/bin*&#x200B;ディレクトリにあります。 Unix版とWindows版の両方が用意されています。 スクリプトは、*&lt;cq-installation>*&#x200B;ディレクトリにインストールされたインスタンスを起動します。
+`start` スクリプトは、*&lt;cq-installation>/bin* ディレクトリの下で使用できます。Unix 版と Windows 版の両方が用意されています。スクリプトは、*&lt;cq-installation>* ディレクトリにインストールされているインスタンスを開始します。
 
-これらの2つのバージョンは、AEMインスタンスの開始と調整に使用できる環境変数のリストをサポートしています。
+これら 2 つのバージョンは、AEM インスタンスの開始や調整に使用できる、以下の環境変数をサポートしています。
 
 <table>
  <tbody>
@@ -101,7 +101,7 @@ AEM を停止するには、次のいずれかを実行します。
 
 ## コマンドラインからの Adobe Experience Manager の停止 {#stopping-adobe-experience-manager-from-the-command-line}
 
-`stop`スクリプトは、*&lt;cq-installation>/bin*&#x200B;ディレクトリにあります。 Unix版とWindows版の両方が用意されています。 スクリプトは、*&lt;cq-installation>*&#x200B;ディレクトリにインストールされた実行中のインスタンスを停止します。
+`stop` スクリプトは、*&lt;cq-installation>/bin* ディレクトリの下で使用できます。Unix 版と Windows 版の両方が用意されています。スクリプトは、*&lt;cq-installation>* ディレクトリにインストールされている実行中のインスタンスを停止します。
 
 ### Unix プラットフォームの stop スクリプトの例 {#unix-platform-stop-script-example}
 
@@ -117,10 +117,10 @@ AEM を停止するには、次のいずれかを実行します。
 
 リポジトリを事前設定するだけ（場所の変更なし）の場合に必要なのは次の手順だけです。
 
-* 必要な場所に`repository.xml`を抽出します。
+* `repository.xml` を目的の場所に抽出する
 
-* 必要に応じて`repository.xml`を更新
+* 必要に応じて `repository.xml` を更新する
 
-* `bootstrap.properties`を作成し、`repository.config`を定義します。
+* `bootstrap.properties` を作成し `repository.config` を定義する
 
 これも、実際のインストールを開始する前におこないます。
