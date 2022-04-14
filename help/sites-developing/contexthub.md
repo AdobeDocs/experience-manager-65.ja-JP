@@ -2,7 +2,7 @@
 title: ContextHub
 seo-title: ContextHub
 description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。
-seo-description: ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。
+seo-description: ContextHub is a framework for storing, manipulating, and presenting context data
 uuid: 14e6ff4f-ffbe-454a-b2ec-a35333526e27
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,15 +11,15 @@ content-type: reference
 discoiquuid: acf5c17a-95b7-43ba-9734-241e20f4f374
 exl-id: 3fd50655-7461-4900-a3b8-c01b04c7ba7a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 86%
+workflow-type: ht
+source-wordcount: '286'
+ht-degree: 100%
 
 ---
 
 # ContextHub{#contexthub}
 
-ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。：クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
+ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。クライアントサイド JavaScript API を使用してデータにアクセスし、コンテンツをパーソナライズします。
 
 >[!NOTE]
 >
@@ -27,9 +27,9 @@ ContextHub は、コンテキストデータを保存、操作および表示す
 
 >[!CAUTION]
 >
->[We.Retail参照実装](/help/sites-developing/we-retail.md)(`/libs/settings/cloudsettings/legacy`)で使用されるサンプルのContextHub設定を含むパスは、独自の設定を作成するための参照としてのみ使用する必要があります。
+>[We.Retail 参照実装](/help/sites-developing/we-retail.md)で使用される ContextHub 設定のサンプルを含むパス（`/libs/settings/cloudsettings/legacy`）は、独自の設定を作成する際の参考としてご利用ください。
 >
->プロジェクト内では、独自のContextHub設定として使用しないでください。
+>独自の ContextHub 設定としてプロジェクトで使用しないでください。
 
 ## 永続性 {#persistence}
 
