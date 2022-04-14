@@ -1,91 +1,91 @@
 ---
-title: コンテンツフラグメントでの参照の使用について説明します
-description: コンテンツフラグメント、その他のフラグメント、およびその他のアセット（メディア）への参照の使用について説明します。 ヘッドレス CMS オーサリング用のネストされたフラグメントの必要性と仕組みを紹介します。
+title: コンテンツフラグメントでの参照の使用について
+description: コンテンツ、他のフラグメントおよび他のアセット（メディア）への参照をコンテンツフラグメントで使用する方法について説明します。ヘッドレス CMS オーサリング用のネストされたフラグメントの必要性と仕組みを紹介します。
 source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '731'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# コンテンツフラグメントでの参照の使用について説明します {#author-headless-references}
+# コンテンツフラグメントでの参照の使用について {#author-headless-references}
 
-## 今までの話 {#story-so-far}
+## これまでの説明内容 {#story-so-far}
 
-の最初 [AEMヘッドレスコンテンツ作成者ジャーニー](overview.md) の [はじめに](introduction.md) ヘッドレス向けのオーサリングに関連する基本概念と用語について説明しました。
+[AEM ヘッドレスコンテンツ作成者ジャーニー](overview.md)の冒頭の[はじめに](introduction.md)で、ヘッドレスのオーサリングに関連する基本概念と用語について説明しました。
 
-ヘッドレス CMS のオーサリングの基本、AEMaaCS でのオーサリングの概要、特にコンテンツフラグメントのオーサリングについて学びました。
+ヘッドレス CMS オーサリングの基本と、AEMaaCS でのオーサリング、特にコンテンツフラグメントのオーサリングの基本を学びました。
 
-この記事はこれらを基に構築され、AEMヘッドレスプロジェクトで独自のコンテンツを作成するための参照の使用方法を理解できます。
+この記事では、これらに基づいて、AEM ヘッドレスプロジェクトで独自のコンテンツをオーサリングするための参照の使用方法を説明します。
 
 ## 目的 {#objective}
 
 * **オーディエンス**：経験者
-* **目的**:ヘッドレス CMS オーサリングの参照を紹介します。 使用可能な参照の種類と目的は何ですか。
+* **目的**：ヘッドレス CMS オーサリングでの参照の使用方法を紹介します。使用可能な参照の種類と用途は次のとおりです。
 
    * コンテンツ参照
-   * アセット/メディア参照
+   * アセット／メディア参照
    * フラグメント参照
    * テキストブロック内からのアドホック参照
 
 ## 参照とは {#what-are-references}
 
-参照は、他のコンテンツ、アセット（画像など）、その他のフラグメントなど、リソースを接続するための単なるメカニズムです。 非常に似ていますが、いくつかの違いがあります。
+参照は、他のコンテンツ、アセット（画像など）、他のフラグメントなどのリソースを接続するためのメカニズムです。それぞれよく似ていますが、いくつかの違いがあります。
 
-一部の参照には専用のデータ型（コンテンツ参照やフラグメント参照など）があり、それ以外の参照は、テキストブロック内の参照として追加されるだけです（アセット参照やアドホック参照など）。
+参照には、専用のデータタイプを持つもの（コンテンツ参照やフラグメント参照など）もあれば、テキストブロック内の参照として追加されるもの（アセット参照やアドホック参照など）もあります。
 
-![コンテンツフラグメント — 参照](/help/journey-headless/author/assets/headless-journey-author-references-01.png)
+![コンテンツフラグメント - 参照](/help/journey-headless/author/assets/headless-journey-author-references-01.png)
 
 ## コンテンツ参照 {#content-references}
 
-コンテンツ参照はそのような役割を果たし、他のコンテンツを参照できます。 これにより、コンテンツ項目を選択できるブラウザーが開きます。
+コンテンツ参照の役割は、他のコンテンツを参照できるようにすることです。この参照によって、ブラウザーが開き、コンテンツ項目を選択できます。
 
-## アセット/メディア参照 {#assets-media-references}
+## アセット／メディア参照 {#assets-media-references}
 
-アセット（画像やメディアなど）は、 **アセットを挿入** オプション。 これにより、アセットを選択できるブラウザーが開きます。
+アセット（画像やメディアなど）は、「**アセットを挿入**」オプションを使用して、テキストブロック内で参照することができます。この参照によって、ブラウザーが開き、アセットを選択できます。
 
-![コンテンツフラグメント — アセットを挿入](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
+![コンテンツフラグメント - アセットを挿入](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
 ## フラグメント参照 {#fragment-references}
 
-再びフラグメント参照でも同じ操作が行われます。この場合、別のフラグメントを参照できます。 これが重要な理由は、もう少し説明を必要とする。
+フラグメント参照の役割も同様です。つまり、別のフラグメントを参照できるようにします。これが重要な理由については、もう少し説明が必要です。
 
-例えば、次のコンテンツフラグメントモデルを定義するとします。
+例えば、次のコンテンツフラグメントモデルが定義されているとします。
 
-* City
-* 会社
-* Person
-* awards（受賞歴）
+* City（市区町村）
+* Company（会社）
+* Person（人物）
+* Awards（受賞歴）
 
-簡単に見えますが、もちろん会社には CEO と従業員の両方がいます….これらはすべて人物で、それぞれが人物として定義されます。
+とても簡単に見えますが、もちろん Company には CEO も Employees（従業員）もいます。これらはすべて人物で、それぞれが Person として定義されます。
 
-また、1 人の人に賞（または 2 つ）を与えることもできます。
+また、Person は Award（1 つまたは複数）を持っている可能性があります。
 
-* 会社 — 会社
-   * CEO — 担当者
-   * 従業員 — 担当者
-      * 個人賞 — 賞
+* 私の会社 - Company
+   * CEO - Person
+   * 従業員 - Person
+      * 個人賞 - Award
 
-それはスターター向けです 複雑さに応じて、賞は会社固有のものもあれば、会社が特定の都市に本社を置くこともあります。
+しかし、これはほんの一例です。複雑さに応じて、Award が Company 固有のものであったり、Company が特定の City に本社を置いていたりすることがあります。
 
-これらの相互関係は、作成者とヘッドレスアプリケーションの両方が理解しているように、フラグメント参照を使用して実現できます。
+こうした相互関係は、作成者とヘッドレスアプリケーションの双方が理解できるように、フラグメント参照を使用して表すことができます。
 
-作成者は、これらの関係の定義（コンテンツフラグメントモデルの作成時にコンテンツアーキテクトがおこなう）は担当しませんが、参照を認識し編集する方法を理解しておく必要があります。
+作成者は、これらの関係を定義するわけではありません（コンテンツフラグメントモデルの作成時にコンテンツアーキテクトが行います）が、参照を把握して編集する方法を理解しておく必要があります。
 
-### ネストされたフラグメントの作成方法 {#author-nested-fragment}
+### ネストされたフラグメントのオーサリング方法 {#author-nested-fragment}
 
-フラグメント参照のオーサリングは非常に簡単です ( 通常、フィールドは **フラグメント参照**) をクリックします。 参照を直接入力するか、（可能性が高い）フォルダーアイコンを選択してブラウザーを開き、必要なフラグメントに移動して選択できます。
+フラグメント参照のオーサリングはどても簡単です（ただし、通常、フィールドには&#x200B;**フラグメント参照**&#x200B;というラベルは付きません）。参照を直接入力するか、フォルダーアイコンを選択してブラウザーを開き、必要なフラグメントを探して選択します（こちらの方が一般的です）。
 
-![コンテンツフラグメント — 参照](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
+![コンテンツフラグメント - 参照](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
-コンテンツフラグメントモデルの定義は、次のように制御します。
+コンテンツフラグメントモデルの定義で以下が決まります。
 
-* 複数の参照を追加できるかどうかを選択します。
-* 選択できるコンテンツフラグメントのモデルタイプ。コンテンツフラグメントモデルは、参照に使用できるフラグメントモデルを定義するので、AEMは、それらのモデルに基づくフラグメントのみを表示します。
+* 複数の参照を選択して追加できるかどうか
+* 選択できるコンテンツフラグメントモデルのタイプ。参照に使用できるフラグメントモデルはコンテンツフラグメントモデルで定義されるので、AEM は、そのモデルに基づくフラグメントのみを表示します。
 
-### ネストされたフラグメントのナビゲート方法 {#navigate-nested-fragment}
+### ネストされたフラグメントのナビゲーション方法 {#navigate-nested-fragment}
 
-の使用 **構造ツリー** コンテンツフラグメントエディターの「 」タブでは、フラグメントで参照されているフラグメント間を移動した後、それらに含まれている参照間を移動できます。 参照を選択すると、そのフラグメントが編集用に開きます。
+コンテンツフラグメントエディターの「**構造ツリー**」タブを使用すると、フラグメントで参照されているフラグメント間を移動し、さらに、それらのフラグメントに含まれている参照間を移動できます。参照を選択すると、そのフラグメントが編集用に開きます。
 
 >[!NOTE]
 >
@@ -97,11 +97,11 @@ ht-degree: 10%
 
 アドホック参照は、テキストブロック内に単純なリンクとして追加できます。
 
-![コンテンツフラグメント — アドホック参照](/help/journey-headless/author/assets/headless-journey-author-references-04.png)
+![コンテンツフラグメント - アドホック参照](/help/journey-headless/author/assets/headless-journey-author-references-04.png)
 
 ## 次の手順 {#whats-next}
 
-これで、コンテンツフラグメントの参照と構造について学習したので、次の手順は次のとおりです。 [メタデータとタグ付けについて説明します](metadata-tagging.md). コンテンツフラグメントのメタデータとタグを定義する方法を紹介し、説明します。
+これで、コンテンツフラグメントにおける参照と構造について説明したので、次のステップは、[コンテンツフラグメントのメタデータとタグの定義について](metadata-tagging.md)です。このステップでは、コンテンツフラグメントのメタデータとタグを定義する方法を説明します。
 
 ## その他のリソース {#additional-resources}
 
@@ -112,18 +112,18 @@ ht-degree: 10%
       * [アセットフォルダーへの設定の適用](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [コンテンツフラグメントの作成](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
-   * [バリエーション — コンテンツフラグメントのオーサリング](/help/assets/content-fragments/content-fragments-variations.md)
+   * [バリエーション - コンテンツフラグメントのオーサリング](/help/assets/content-fragments/content-fragments-variations.md)
 
    * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
 
-      * [コンテンツフラグメントモデル — データタイプ](/help/assets/content-fragments/content-fragments-models.md#data-types)
+      * [コンテンツフラグメントモデル - データタイプ](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-      * [コンテンツフラグメントモデル — プロパティ](/help/assets/content-fragments/content-fragments-models.md#properties)
+      * [コンテンツフラグメントモデル - プロパティ](/help/assets/content-fragments/content-fragments-models.md#properties)
 
 
-* 「はじめる前に」ガイド 
-   * [アセットフォルダーのヘッドレス作成のクイック開始ガイド](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+* はじめる前に
+   * [アセットフォルダーのヘッドレス作成のクイックスタートガイド](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
-* [AEMヘッドレスコンテンツアーキテクトジャーニー](/help/journey-headless/architect/overview.md)
+* [AEM ヘッドレスコンテンツアーキテクトジャーニー](/help/journey-headless/architect/overview.md)
 
-* [AEMヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md)
+* [AEM ヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md)
