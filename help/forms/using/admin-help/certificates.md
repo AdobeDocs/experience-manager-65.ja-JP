@@ -1,8 +1,8 @@
 ---
 title: 証明書の管理
-seo-title: 証明書の管理
+seo-title: Managing certificates
 description: 証明書の取り込みおよび書き出し方法とその信頼設定を編集する方法について説明します。
-seo-description: 証明書の取り込みおよび書き出し方法とその信頼設定を編集する方法について説明します。
+seo-description: Learn how to import and export a certificate and edit its trust settings.
 uuid: 46b1dbe5-517c-4294-bb52-cc6700a768e8
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9fd531c0-5206-4be0-a450-13e0dc806068
 exl-id: 1fe0e7b4-6109-4f7a-8858-8237a1c5c93b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 83%
+workflow-type: ht
+source-wordcount: '641'
+ht-degree: 100%
 
 ---
 
@@ -30,16 +30,16 @@ Trust Store の管理では、電子署名の検証および証明書認証の�
 
 署名の検証を完了するために必要となる証明書は、同じストア（HSM またはデータベース）にある必要があります。
 
-Trust Manager API を使用して証明書の読み込みおよび削除を行うこともできます。詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」の「Trust Manager API を使用した証明書の読み込み」および「Trust Manager API を使用した証明書の削除」を参照してください。
+Trust Manager API を使用して証明書の読み込みおよび削除を行うこともできます。詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)」の「Trust Manager API を使用した証明書の読み込み」および「Trust Manager API を使用した証明書の削除」を参照してください。
 
-## 証明書の読み込み  {#import-a-certificate}
+## 証明書の読み込み {#import-a-certificate}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
-1. 「読み込み」をクリックし、「Trust Store の種類」で次のいずれかのオプションを選択します。
+1. 管理コンソールで、**[!UICONTROL 設定／Trust Store の管理／証明書]**&#x200B;をクリックします。
+1. 「インポート」をクリックし、「Trust Store の種類」で次のいずれかのオプションを選択します。
 
    * **SSL 接続で信頼：** SSL 経由で外部システムに接続するために AEM Forms で証明書を使用できることを指定します。
-   * **署名の認証で信頼：**&#x200B;作成者の電子署名の認証のために、ドキュメントの署名処理で証明書を信頼することを指定します。
-   * **署名で信頼：**&#x200B;作成者以外の電子署名について、ドキュメントの署名処理で証明書を信頼することを指定します。
+   * **署名の認証で信頼：**&#x200B;作成者のデジタル署名の認証のために、ドキュメントの署名処理で証明書を信頼することを指定します。
+   * **署名で信頼：**&#x200B;作成者以外のデジタル署名について、ドキュメントの署名処理で証明書を信頼することを指定します。
    * **証明書認証で信頼：**&#x200B;証明書またはスマートカードによるユーザー認証を行うために、AEM Forms で証明書を使用することを指定します。
    * **OCSP サーバーで信頼：**&#x200B;外部の OCSP レスポンダーに接続するために AEM Forms で証明書を使用できることを指定します。
    * **ID で信頼：**&#x200B;上記の種類以外の情報を信頼するために証明書を使用できることを指定します。
@@ -51,22 +51,22 @@ Trust Manager API を使用して証明書の読み込みおよび削除を行�
 1. 「エイリアス」ボックスに、この証明書の ID を入力します。
 1. 「**[!UICONTROL 参照]**」をクリックして証明書を探し、「**[!UICONTROL OK]**」をクリックします。
 
-## 証明書の書き出し {#export-a-certificate}
+## 証明書のエクスポート {#export-a-certificate}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
-1. 書き出す証明書のエイリアス名をクリックします。**[!UICONTROL 証明書の詳細]**&#x200B;ページが表示されます。
-1. 「**[!UICONTROL 書き出し]**」をクリックし、指示に従って証明書を書き出し、「**[!UICONTROL OK]**」をクリックします。
+1. 管理コンソールで、**[!UICONTROL 設定／Trust Store の管理／証明書]**&#x200B;をクリックします。
+1. エクスポートする証明書のエイリアス名をクリックします。**[!UICONTROL 証明書の詳細]**&#x200B;ページが表示されます。
+1. 「**[!UICONTROL エクスポート]**」をクリックし、指示に従って証明書をエクスポートして、「**[!UICONTROL OK]**」をクリックします。
 
 ## 証明書の信頼設定と Trust Store の種類の編集 {#edit-a-certificate-s-trust-settings-and-trust-store-type}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
+1. 管理コンソールで、**[!UICONTROL 設定／Trust Store の管理／証明書]**&#x200B;をクリックします。
 1. 編集する証明書のエイリアス名をクリックします。
 1. 「**[!UICONTROL 証明書を更新]**」をクリックします。
 1. 証明書のエイリアス名を変更するには、「エイリアス」ボックスに新しい名前を入力します。
 1. 証明書の Trust Store の種類を更新するには、適切な Trust Store の種類を選択します。
-1. ポリシー制限を更新するには、「証明書ポリシー」ボックスにポリシー情報を入力し、「**[!UICONTROL OK]**」をクリックします。
+1. ポリシーに関する制限を更新するには、「証明書のポリシー」ボックスにポリシー情報を入力し、「**[!UICONTROL OK]**」をクリックします。
 
 ## 証明書の削除 {#delete-a-certificate}
 
-1. 管理コンソールで、**[!UICONTROL 設定/Trust Storeの管理/証明書]**&#x200B;をクリックします。
-1. 削除する証明書のチェックボックスをオンにして、「**[!UICONTROL 削除]**」をクリックし、「**[!UICONTROL OK]**」をクリックします。
+1. 管理コンソールで、**[!UICONTROL 設定／Trust Store の管理／証明書]**&#x200B;をクリックします。
+1. 削除する証明書のチェックボックスを選択して「**[!UICONTROL 削除]**」をクリックし、「**[!UICONTROL OK]**」をクリックします。
