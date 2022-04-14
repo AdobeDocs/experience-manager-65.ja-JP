@@ -1,25 +1,25 @@
 ---
 title: 手書き署名を使用したフォームへの電子署名の適用
-seo-title: 手書き署名を使用したフォームへの電子署名の適用
+seo-title: Apply electronic signatures to a form using scribble signatures
 description: 手書きでのフォームへの署名
-seo-description: 手書きでのフォームへの署名
+seo-description: Signing forms using scribble
 uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 87%
+workflow-type: ht
+source-wordcount: '497'
+ht-degree: 100%
 
 ---
 
 # 手書き署名を使用したフォームへの電子署名の適用{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
-**手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームのPDF バージョンが表示されます。署名ステップコンポーネントを使用するには、「レコードのドキュメント」オプションが有効になっているか、フォームテンプレートベースのアダプティブフォームが必要です。
+**手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームの PDF バージョンが表示されます。署名ステップコンポーネントを使用するには、レコードのドキュメントオプションが有効になっているか、フォームテンプレートに基づくアダプティブフォームが必要です。
 
 両方のコンポーネントでは、フォームに署名するために、以下のようなウィンドウが表示されます。また、位置情報アイコン ![aem_6_3_geolocation](assets/aem_6_3_geolocation.png) をクリックすることで、署名に位置情報を追加することもできます。
 
@@ -27,10 +27,10 @@ ht-degree: 87%
 
 ## アダプティブフォームでの手書き署名使用の設定 {#configure-an-adaptive-form-to-use-scribble-signature}
 
-1. レコードのドキュメントオプションが有効になっている、またはフォームテンプレートベースのアダプティブフォームを作成します。詳細な手順については、「[アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)」を参照してください。
-1. **手書き署名**&#x200B;コンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ&amp;ドロップします。
+1. レコードのドキュメントオプションが有効になっているか、フォームテンプレートに基づくアダプティブフォームを作成します。詳しい手順については、「[アダプティブフォームの作成](../../forms/using/creating-adaptive-form.md)」を参照してください。
+1. **手書き署名**&#x200B;コンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ＆ドロップします。
 1. **設定**（![設定](assets/configure.png)）アイコンをタップします。この操作により、手書き署名コンポーネントのプロパティを表示するプロパティブラウザーが開きます。手書き署名コンポーネントのプロパティを設定します。
-1. 署名ステップコンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ&amp;ドロップします。
+1. 署名ステップコンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ＆ドロップします。
 
    >[!NOTE]
    >
@@ -54,7 +54,7 @@ ht-degree: 87%
 
    完了（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）アイコンをタップして、変更を保存します。署名が正常に設定されます。
 
-   これで、フォームを記入する際に、PDF バージョンのアダプティブフォームが表示され、PDF ドキュメントの署名オプションが提供されます。詳しくは、「[手書き署名を使用したアダプティブフォームへの署名](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature)」を参照してください。
+   これで、フォームを記入する際に、PDF バージョンのアダプティブフォームが表示され、PDF ドキュメントの署名オプションが提供されます。詳しくは、「[手書き署名を使用したアダプティブフォームの署名](../../forms/using/signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature)」を参照してください。
 
 ## 手書き署名を使用したアダプティブフォームの署名 {#sign-an-adaptive-form-using-scribble-signature}
 
