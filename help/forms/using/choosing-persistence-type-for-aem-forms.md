@@ -1,8 +1,8 @@
 ---
 title: AEM Forms のインストールに永続性タイプを選択する
-seo-title: AEM Forms のインストールに永続性タイプを選択する
+seo-title: Choosing a persistence type for an AEM Forms installation
 description: 永続性タイプを選択することをお勧めします。これにより、効率的で拡張性の高い AEM Forms 環境を構築することができます。
-seo-description: 永続性タイプを選択することをお勧めします。これにより、効率的で拡張性の高い AEM Forms 環境を構築することができます。
+seo-description: Choose a persistence type wisely. It helps you build an efficient and scale able AEM Forms environment.
 uuid: 1c692502-5039-4757-9358-1772772b3904
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ discoiquuid: a972fb35-38a7-4b83-99bd-6a6dddf8043b
 role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '372'
+ht-degree: 100%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 93%
 >
 >LiveCycle ES4 SP1 では TarPM 永続性を使用してコンテンツを格納します。
 
-次の表に、サポートされるすべての永続性タイプと、環境の永続性タイプを選択する際に役立つ様々なパラメーターを示します。
+次の表は、サポートしているすべての永続性タイプと各種のパラメーターを示しています。現在の環境に合わせて永続性タイプを選択する際に、この表を参照してください。
 
 <table>
  <tbody>
   <tr>
-   <th><strong>インストールの種類 / コスト</strong></th>
+   <th><strong>インストールのタイプ／コスト</strong></th>
    <th><strong>TarMK</strong></th>
    <th><strong>MongoMk</strong></th>
    <th><strong>RDBMK</strong></th>
@@ -52,7 +52,7 @@ ht-degree: 93%
   </tr>
   <tr>
    <th><strong>ライセンスコスト</strong></th>
-   <td>AEMに含まれる </td>
+   <td>AEM に含まれる </td>
    <td>別途ライセンスが必要</td>
    <td>別途ライセンスが必要</td>
   </tr>
