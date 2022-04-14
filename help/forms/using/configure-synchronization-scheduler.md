@@ -1,8 +1,8 @@
 ---
 title: 同期スケジューラの設定
-seo-title: 同期スケジューラの設定
+seo-title: Configuring the synchronization scheduler
 description: アセットを移行し同期する方法や、同期スケジューラーの設定、およびフォルダーを使用してアセットを整理する方法を学びます。
-seo-description: アセットを移行し同期する方法や、同期スケジューラーの設定、およびフォルダーを使用してアセットを整理する方法を学びます。
+seo-description: Learn how to migrate and sync assets, configure sync scheduler, and use folders to arrange assets.
 uuid: b2c89feb-2947-418a-b343-4c01e453602b
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ docset: aem65
 role: Admin
 exl-id: 34db1f76-ee40-4612-85da-22041e7560fb
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '286'
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 79%
 
 次の手順を実行して、同期スケジューラーの間隔を変更します。
 
-1. AEM Configuration Manager にログインします。Configuration ManagerのURLは`https://'[server]:[port]'/lc/system/console/configMgr`です。
+1. AEM Configuration Manager にログインします。Configuration Manager の URL ：`https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. **FormsManagerConfiguration** バンドルを探して開きます。 
 
@@ -42,9 +42,9 @@ ht-degree: 79%
 
    ![AEM Forms ユーザーインターフェイス](assets/aem_forms_ui.png)
 
-   **図：** *AEM Formsユーザーインターフェイス*
+   **図：** *AEM Forms ユーザーインターフェイス*
 
-1. ツールバーの![aem6forms_sync](assets/aem6forms_sync.png)アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
+1. ツールバーの ![aem6forms_sync](assets/aem6forms_sync.png) アイコンをクリックします。 最後に設定したパスにアセットが存在しない場合は、下の図に示すダイアログボックスが表示されます。「**開始**」をクリックして同期を開始します。
 
    ![同期ダイアログボックス](assets/migrate-and-syncronize.png)
 
@@ -54,10 +54,10 @@ ht-degree: 79%
 
 ワークフローデザイナー（LiveCycle Workbench）で新しいアプリケーションを作成できます。
 
-新しく作成したアプリケーションと/content/dam/formsanddocumentsのフォルダーの名前が同じである場合、エラー「*このアプリケーションと同じ名前のアセットが既にルートレベルに存在します。*」がログに記録されます。
+新しく作成したアプリケーションと /content/dam/formsanddocuments にあるフォルダーの名前が同一の場合、エラー「*このアプリケーションと同じ名前のアセットがすでにルートレベルで存在します。*」がログに記録されます。
 
 競合を解決するには、アプリケーションの名前を変更し、アセットを手動で同期します。
 
 ![アセット同期の競合ダイアログボックス](assets/sync-conflict.png)
 
-**図：** *アセット同期の競合ダイアログボックス*
+**図：** *アセット同期ダイアログボックスの競合*
