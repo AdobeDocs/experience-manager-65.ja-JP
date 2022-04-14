@@ -3,10 +3,11 @@ title: プレビュー - JSON 表現
 description: AEM ヘッドレスソリューションの実装時にコンテンツフラグメントの JSON 表現を簡単にプレビューする方法を説明します。
 feature: Content Fragments
 role: User
-source-git-commit: 251bf0ac672d516dd6b2018fc9cc804822f48e4c
-workflow-type: tm+mt
+exl-id: c58a3cfd-6348-4a2e-996a-5fdb96415adb
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '128'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -22,4 +23,4 @@ AEM ヘッドレス実装の一環としてコンテンツフラグメントの�
 
 ![コンテンツフラグメントエディター - フラグメントのプレビュー](assets/cfm-preview-02.png)
 
-**「URLをコ** ピー」を使用すると、オーサーまたはパブリッシュ用にURLをクリップボードにコピーできます。
+**URL をコピー**&#x200B;を使用すると、オーサーまたはパブリッシュ用に URL をクリップボードにコピーできます。
