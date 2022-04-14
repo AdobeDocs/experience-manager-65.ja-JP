@@ -1,8 +1,8 @@
 ---
 title: サマリー URL でのタスク変数の取得
-seo-title: サマリー URL でのタスク変数の取得
+seo-title: Getting Task Variables in Summary URL
 description: タスクについての情報を再利用し、サマリー URL を生成してタスクを要約および説明する方法。
-seo-description: タスクについての情報を再利用し、サマリー URL を生成してタスクを要約および説明する方法。
+seo-description: How-to reuse the information about a task and generate a Summary URL to summarize or describe a task.
 uuid: 9eab3a6a-a99a-40ae-b483-33ec7d21c5b6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,13 +10,13 @@ topic-tags: forms-workspace
 discoiquuid: 6dc31bec-b02d-47db-a4f4-be8c14c5619e
 exl-id: b5e27b54-d141-48dd-a4ed-dd0a691319a5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '432'
+ht-degree: 100%
 
 ---
 
-# サマリー URL でのタスク変数の取得  {#getting-task-variables-in-summary-url}
+# サマリー URL でのタスク変数の取得 {#getting-task-variables-in-summary-url}
 
 要約ページには、タスクに関連する情報が表示されます。この記事では、要約ページでタスクに関連する情報を再利用する方法について説明します。
 
@@ -33,7 +33,7 @@ ht-degree: 95%
 
    >[!NOTE]
    >
-   >このレンダラーは概要ページのテンプレートです。
+   >このレンダラーはサマリーページのテンプレートです。
 
    このレンダラーの以下のサンプルコードは、
 
@@ -61,9 +61,9 @@ ht-degree: 95%
 1. オーケストレーションを変更して送信されたフォームデータから 4 つのプロパティを抽出します。その後、プロパティを入力してタイプ **Employees/PtoApplication** の CRX にノードを作成します。
 
    1. プロセス **create PTO summary** を作成し、これをオーケストレーションで **Assign Task** 操作の前のサブプロセスとして使用します。
-   1. **employeeName**、**employeeID**、**ptoReason**、**totalDays**、および **nodeName**&#x200B;を新しいプロセスで入力変数として定義します。これらの変数は送信されたフォームデータとして渡されます。
+   1. **employeeName**、**employeeID**、**ptoReason**、**totalDays** および **nodeName** を新しいプロセスで入力変数として定義します。これらの変数は送信されたフォームデータとして渡されます。
 
-      サマリー URL を設定する際に使用される出力変数 **ptoNodePath**&#x200B;も指定します。
+      また、サマリー URL を設定する際に使用される出力変数 **ptoNodePath** を定義します。
 
    1. **create PTO summary** プロセスで、**set value** コンポーネントを使用して **nodeProperty**（**nodeProps**）マップに入力詳細を設定します。
 
@@ -76,14 +76,14 @@ ht-degree: 95%
       これには 3 つの入力変数が必要です。
 
       * **フォルダパス**：新しい CRX ノードが作成されるパスです。パスを **/content** に設定します。
-      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。一意のノード名文字列です。
-      * **ノードタイプ**:タイプを **nt:unstructured**&#x200B;と定義します。このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
+      * **ノード名**：入力変数 nodeName をこのフィールドに割り当てます。これは固有のノード名文字列です。
+      * **ノードタイプ**：タイプを **nt:unstructured** として定義します。このプロセスの出力は nodePath です。nodePath は、新しく作成されたノードの CRX パスです。ndoePath は、**create PTO** 要約プロセスの最後の出力になります。
    1. 送信されたフォームデータ（**employeeName**、**employeeID**、**ptoReason**、および **totalDays**）を新しいプロセス **create PTO summary** への入力として渡します。**ptoSummaryNodePath** として出力を取得します。
 
 
 1. サマリー URL を **ptoSummaryNodePath** と共にサーバー詳細が含まれた XPath 式として定義します。
 
-   XPath: `concat('https://[*server*]:[*port*]/lc',/process_data/@ptoSummaryNodePath,'.html')`.
+   XPath：`concat('https://[*server*]:[*port*]/lc',/process_data/@ptoSummaryNodePath,'.html')`。
 
 AEM Forms Workspace で、タスクを開くと、サマリー URL は CRX ノードにアクセスし、HTML レンダラーはサマリーを表示します。
 
