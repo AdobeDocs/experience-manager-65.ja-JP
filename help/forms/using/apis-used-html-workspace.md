@@ -1,8 +1,8 @@
 ---
 title: AEM Forms ワークスペースで使用する各種 API
-seo-title: AEM Forms ワークスペースで使用する各種 API
+seo-title: APIs used in AEM Forms workspace
 description: Public Java API、JavaScript API、および LiveCycle AEM Forms ワークスペースのメソッド、カスタマイズとオートメーションのために開示。
-seo-description: Public Java API、JavaScript API、および LiveCycle AEM Forms ワークスペースのメソッド、カスタマイズとオートメーションのために開示。
+seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,13 +10,13 @@ topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1020'
+workflow-type: ht
+source-wordcount: '997'
 ht-degree: 100%
 
 ---
 
-# AEM Forms ワークスペースで使用する 各種 API  {#apis-used-in-aem-forms-workspace}
+# AEM Forms ワークスペースで使用する 各種 API {#apis-used-in-aem-forms-workspace}
 
 AEM Forms ワークスペースでは次の API が使用されています。
 
@@ -107,9 +107,9 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>TaskManager の送信 API を使用してタスクに関連付けられたフォームデータ（文字列として渡された）を送信します。TaskManager の送信 API を呼び出さないフレックスフォームに使用されます。</td>
   </tr>
   <tr>
-   <td>保存</td>
+   <td>save</td>
    <td>ProcessManagementTaskService</td>
-   <td>保存</td>
+   <td>save</td>
    <td>タスクをサーバーに保存します。</td>
   </tr>
   <tr>
@@ -131,9 +131,9 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>タスクのすべての添付ファイルおよびメモを取得します。</td>
   </tr>
   <tr>
-   <td>共有</td>
+   <td>share</td>
    <td>ProcessManagementTaskService</td>
-   <td>共有</td>
+   <td>share</td>
    <td>別のユーザーとタスクを共有します。別のユーザーはタスクを要求してタスクの所有者になることができます。</td>
   </tr>
   <tr>
@@ -151,7 +151,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>claim</td>
    <td>ProcessManagementTaskService</td>
-   <td>請求</td>
+   <td>claim</td>
    <td>共有キューで使用可能なタスクを要求します。</td>
   </tr>
   <tr>
@@ -163,19 +163,19 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>lock</td>
    <td>ProcessManagementTaskService</td>
-   <td>ロック</td>
+   <td>lock</td>
    <td>タスクをロックします。これにより、共有されている場合は別のユーザーが要求できなくなります。</td>
   </tr>
   <tr>
-   <td>拒否</td>
+   <td>reject</td>
    <td>ProcessManagementTaskService</td>
-   <td>拒否</td>
+   <td>reject</td>
    <td>タスクを前の所有者に返します。</td>
   </tr>
   <tr>
    <td>abandon</td>
    <td>ProcessManagementTaskService</td>
-   <td>aband</td>
+   <td>abandon</td>
    <td>タスクを削除します。</td>
   </tr>
   <tr>
@@ -259,7 +259,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getParticipatedProcesses</td>
    <td>ProcessManagementProcessService</td>
-   <td>getRentifedProcesses</td>
+   <td>getParticipatedProcesses</td>
    <td>ログインユーザーが参加したすべてのプロセス名のリストを返します。</td>
   </tr>
   <tr>
@@ -355,7 +355,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>removeProperty</td>
    <td>WorkspacePropertyService</td>
-   <td>次を削除します。</td>
+   <td>delete</td>
    <td>ユーザーのワークスペースプロパティを削除します。</td>
   </tr>
   <tr>
