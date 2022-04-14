@@ -1,8 +1,8 @@
 ---
 title: ジェスチャーのカスタマイズ
-seo-title: ジェスチャーのカスタマイズ
+seo-title: Gesture customization
 description: AEM Forms アプリケーションでジェスチャーをカスタマイズ
-seo-description: AEM Forms アプリケーションでジェスチャーをカスタマイズ
+seo-description: Customize the gestures on your AEM Forms app
 uuid: 117e0e21-66bd-42f1-879c-6c1443991974
 contentOwner: robhagat
 content-type: reference
@@ -11,62 +11,62 @@ topic-tags: forms-app
 discoiquuid: 747d13d3-e7cc-4aa1-bcc8-4b57157e71ed
 exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 39%
+workflow-type: ht
+source-wordcount: '296'
+ht-degree: 100%
 
 ---
 
 # ジェスチャーのカスタマイズ {#gesture-customization}
 
-AEM Formsアプリのジェスチャーをカスタマイズして、アプリを操作するための独自の方法を提供できます。 例えば、タスクやStartpointを開く、または閉じるための新しいジェスチャーを追加できます。
+AEM Forms アプリケーションのジェスチャーをカスタマイズして、アプリケーションを操作するための独自の方法を提供できます。例えば、タスクまたはスタートポイントを開いたり閉じたりするジェスチャーを新たに追加できます。
 
 ## AEM Forms アプリケーションのジェスチャーをカスタマイズするには {#to-customize-gestures-in-aem-forms-app}
 
-AEM Forms アプリケーションで、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。次の例は、AEM Formsアプリで右スワイプジェスチャーを実行したときに新しいタスクまたはStartpointを開く手順を示しています。
+AEM Forms アプリケーションで、左スワイプは新しいタスクまたは Startpoint を開き、右スワイプは何もしません。次の例では、AEM Forms アプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはスタートポイントを開くための手順を示しています。
 
 1. プロジェクトを開きます。
 
-   * iOSの場合は、Xcodeで`Capture.xcodeproj`を開きます。
+   * iOS の場合、Xcode で `Capture.xcodeproj` を開きます。
    * Android の場合、Eclipse で Android プロジェクトを開きます。
-   * Windowsの場合は、Visual Studioで`MWSWindows.sln`を開きます。
+   * Windows の場合、Visual Studio で `MWSWindows.sln` を開きます。
 
-1. viewsフォルダーに移動し、編集用に`task.js`ファイルを開きます。
+1. views フォルダーに移動し、`task.js` ファイルを編集用に開きます。
 
-   * Xcodeで、 **Capture > www > wsmobile > js > runtime > views**&#x200B;フォルダーに移動します。
-   * Eclipseで、 **assets > www > wsmobile > js > runtime > views**&#x200B;フォルダーに移動します。
-   * Visual Studioで、 **MWSWindows > www > wsmobile > js > runtime > views**&#x200B;フォルダーに移動します。
+   * Xcode では、**Capture／www／wsmobile／js／runtime／views** フォルダーに移動します。
+   * Eclipse では、**assets／www／wsmobile／js／runtime／views** フォルダーに移動します。
+   * Visual Studio では、**MWSWindows／www／wsmobile／js／runtime／views** フォルダーに移動します。
 
    >[!NOTE]
    >
    >task.js ファイルには、タスクリストまたは Startpoint リストに表示されている各タスクまたは Startpoint に関連付けられた Backbone ビューが含まれています。
 
-1. `task.js`ファイルで、ビューのeventsプロパティを検索します。
+1. `task.js` ファイルで、ビューのイベントプロパティを検索します。
 
-   eventsプロパティは、次の形式の各エントリとマップされます。
+   イベントプロパティは、各エントリが次の形式で指定されたマップです。
 
    `"EventName Selector": "Function"`
 
-   `Selector`で指定されたHTML要素に`EventName`という名前のJavaScriptイベントをトリガーすると、`Function`が呼び出されます。
+   `Selector` で指定された HTML 要素で `EventName` という名前の Javascript イベントをトリガーすると、`Function` が呼び出されます。
 
 1. 検索
 
-   * 「tap .taskContentArea」:&quot;onTaskClick&quot;,
+   * &quot;tap .taskContentArea&quot; : &quot;onTaskClick&quot;、
 
-      「tap .taskOpenArea」:&quot;onTaskClick&quot;,
+      &quot;tap .taskOpenArea&quot; : &quot;onTaskClick&quot;、
 
-      「tap .task-content」:&quot;onTaskClick&quot;,
+      &quot;tap .task-content&quot; : &quot;onTaskClick&quot;、
 
-      &quot;tap .last_empty_div&quot; :&quot;onTaskClick&quot;,
+      &quot;tap .last_empty_div&quot; : &quot;onTaskClick&quot;、
    これを
 
-   * &quot;swipe .taskContentArea&quot; :&quot;onTaskClick&quot;,
+   * &quot;swipe .taskContentArea&quot; : &quot;onTaskClick&quot;、
 
-      &quot;swipe .taskOpenArea&quot; :&quot;onTaskClick&quot;,
+      &quot;swipe .taskOpenArea&quot; : &quot;onTaskClick&quot;、
 
-      &quot;swipe .task-content&quot; :&quot;onTaskClick&quot;,
+      &quot;swipe .task-content&quot; : &quot;onTaskClick&quot;、
 
-      &quot;swipe .last_empty_div&quot; :&quot;onTaskClick&quot;,
+      &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;、
 
 
 1. `task.js` ファイルを保存して閉じます。
