@@ -1,8 +1,8 @@
 ---
 title: クラウドサービス設定
-seo-title: クラウドサービス設定
+seo-title: Cloud Service Configurations
 description: 既存のインスタンスを拡張して、独自の設定を作成できます
-seo-description: 既存のインスタンスを拡張して、独自の設定を作成できます
+seo-description: You can extend the existing instances to create your own configurations
 uuid: 9d20c3a4-2a12-4d3c-80c3-fcac3137a675
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d25c03bf-6eaa-45f4-ab60-298865935a62
 exl-id: 20a19ee5-7113-4aca-934a-a42c415a8d93
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 73%
+workflow-type: ht
+source-wordcount: '566'
+ht-degree: 100%
 
 ---
 
@@ -31,8 +31,8 @@ ht-degree: 73%
 * 設定（プロパティや段落など）は、親から継承される。
 * パスによって、分析ノードから参照される。
 * 簡単に拡張できる。
-* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)など、より複雑な設定に対応する柔軟性があります。
-* 依存関係のサポート(例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)プラグインには[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics)設定が必要です)。
+* [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) など、より複雑な設定に対応できる柔軟性がある。
+* 依存関係のサポート（例：[Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) プラグインには [Adobe Analytics](/help/sites-administering/marketing-cloud.md#integrating-with-adobe-analytics) 設定）。
 
 ## 構造 {#structure}
 
@@ -42,9 +42,9 @@ ht-degree: 73%
 
 設定のタイプごとに、テンプレートとコンポーネントが提供されます。これによって、カスタマイズしてから大部分のニーズを満たせる設定テンプレートを作成できます。
 
-新しいサービスの設定を行うには、次の操作が必要です。
+新しいサービス用の設定を行うには：
 
-* ～にサービスページを作る
+* 次の場所にサービスページを作成します。
 
    `/etc/cloudservices`
 
@@ -110,7 +110,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 
 ### コンテンツモデル {#content-model}
 
-コンテンツモデルは、次の場所に`cq:Page`として保存されます。
+コンテンツモデルは、次の場所の下に `cq:Page` として保存されます。
 
 `/etc/cloudservices/<service-name>(/*)`
 
@@ -121,7 +121,7 @@ sling:resourceType = cq/analytics/components/generictrackerpage
 /etc/cloudservices/service-name/config/inherited-config
 ```
 
-設定はサブノード`jcr:content`の下に保存されます。
+設定は、サブノード `jcr:content` の下に保存されます。
 
 * ダイアログで定義される固定プロパティは、`jcr:node` に直接保存する必要があります。
 * （`parsys` または `iparsys` を使用する）動的要素は、サブノードを使用してコンポーネントデータを保存します。
@@ -141,7 +141,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 ### AEM の統合 {#aem-integration}
 
-使用可能なサービスは、**ページのプロパティ**&#x200B;ダイアログの「**Cloud Services**」タブ（`foundation/components/page`または`wcm/mobile/components/page`から継承するページの）に表示されます。
+使用可能なサービスが、（`foundation/components/page` または `wcm/mobile/components/page` から継承されたいずれかのページの）**ページのプロパティ**&#x200B;ダイアログの「**クラウドサービス**」タブに一覧表示されます。
 
 このタブでは以下についても表示されます。
 
@@ -152,7 +152,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 サービスのユーザー資格情報を保存する際は、すべてのパスワードを暗号化する必要があります。
 
-非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドのプロパティ名には注釈`@Encrypted`が必要です。例えば、`password`フィールドの場合、名前は次のようになります。
+非表示のフォームフィールドを追加することによって、パスワードを暗号化できます。このフィールドでは、プロパティ名にアノテーション `@Encrypted` が必要です。すなわち、`password` フィールドの場合、名前は次のようになります。
 
 `password@Encrypted`
 
@@ -164,7 +164,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
 
 >[!NOTE]
 >
->デフォルトでは、`EcryptionPostProcessor`は`/etc/cloudservices`に対して行われた`POST`リクエストのみを暗号化します。
+>デフォルトでは、`EcryptionPostProcessor` は、`/etc/cloudservices` に対する `POST` リクエストのみを暗号化します。
 
 #### サービスページの jcr:content ノード用の追加プロパティ {#additional-properties-for-service-page-jcr-content-nodes}
 
@@ -176,7 +176,7 @@ API に関する参考ドキュメントは、[com.day.cq.wcm.webservicesupport]
   </tr>
   <tr>
    <td>componentReference</td>
-   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> これには、が含まれるページ上のコン<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> ポーネントが含まれます(通常はタグの前 <code>body</code> にあります)。<br /> AnalyticsとTargetの場合は、これを使用して、訪問者の行動を追跡するJavaScript呼び出しなどの追加機能を含めます。</td>
+   <td>コンポーネントへの参照パスをページに自動的に含めます。<br />追加機能および JS インクルージョンに使用されます。<br /> このプロパティには、<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br /> が（通常は <code>body</code> タグの前に）含まれるページ上のコンポーネントが含まれます。<br /> Analytics および Target の場合、このプロパティを使用して、訪問者の行動を追跡する JavaScript 呼び出しなどの追加機能を含めます。</td>
   </tr>
   <tr>
    <td>description</td>
