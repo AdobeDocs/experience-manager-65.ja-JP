@@ -1,8 +1,8 @@
 ---
 title: oak-run.jar でのインデックス作成の使用例
-seo-title: oak-run.jar でのインデックス作成の使用例
+seo-title: Oak-run.jar Indexing Use Cases
 description: Oak-run ツールを使用してインデックスを作成する様々な使用例について説明します。
-seo-description: Oak-run ツールを使用してインデックスを作成する様々な使用例について説明します。
+seo-description: Learn about the various user cases for performing indexing with the Oak-run tool.
 uuid: 3c50080d-1e0d-4886-8d37-269f06881eb4
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -11,9 +11,9 @@ discoiquuid: 084075b8-826d-4f27-9342-35f33368f24f
 noindex: true
 exl-id: d25e3070-080a-4594-8fdb-9f09164135fc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 88%
+workflow-type: ht
+source-wordcount: '1375'
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 88%
 
 Oak-run は、コマンドラインで以下のようなインデックスに関する使用例をサポートします。AEM の JMX コンソールを使用する必要はありません。
 
-Oakインデックスを管理するためのoak-run.jar indexコマンドアプローチを使用する主な利点は次のとおりです。
+oak-run.jar インデックスコマンドを使用して Oak インデックスを管理する全般的なメリットとして、以下のものがあります。
 
-1. Oak-run indexコマンドは、AEM 6.4用の新しいインデックス作成ツールセットを提供します。
+1. Oak-run index コマンドは、AEM 6.4 用の新しいインデックス作成ツールセットを提供します。
 1. Oak-run を使用すると、インデックス再作成の時間を短縮でき、大規模なリポジトリでのインデックス再作成時間を削減できます。
 1. Oak-run を使用すると、インデックス再作成中の AEM でのリソース消費を低減できるので、システム全体のパフォーマンスが向上します。
 1. Oak-run は out-of-band のインデックス再作成機能を備えています。実稼動環境を利用したままインデックスを再作成する必要があり、インデックス再作成中のメンテナンスやダウンタイムが許容されない場合に使用できます。
@@ -38,13 +38,13 @@ Oakインデックスを管理するためのoak-run.jar indexコマンドアプ
 1. このツールは、AEM にアクセスできない場合でも使用可能です。
 1. このツールは簡単に使用できます。
 
-破損したインデックスのチェックは、`--index-consistency-check`操作を使用して実行できます。
+破損しているインデックスのチェックは、`--index-consistency-check` 操作を使用して実行できます。
 
 ```shell
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-consistency-check
 ```
 
-これにより、`indexing-result/index-consistency-check-report.txt`にレポートが生成されます。 サンプルレポートについては、以下を参照してください。
+これにより、`indexing-result/index-consistency-check-report.txt` にレポートが生成されます。サンプルレポートについては、以下を参照してください。
 
 ```
 Valid indexes :
@@ -86,11 +86,11 @@ Valid indexes :
 
 前述の操作は、次の操作用の index コマンドを使用して実行できるようになりました。
 
-* `--index-info`  — インデックスに関連する様々な統計を収集し、ダンプします
+* `--index-info` - インデックスに関連するさまざまな統計を収集してダンプします。
 
-* `--index-definitions`  — インデックス定義を収集し、ダンプします
+* `--index-definitions` - インデックス定義を収集してダンプします。
 
-* `--index-dump`  — インデックスコンテンツをダンプします
+* `--index-dump` - インデックスコンテンツをダンプします。
 
 コマンドが実際にどのように機能するかについての例は、次を参照してください。
 
@@ -98,7 +98,7 @@ Valid indexes :
 java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstore/ --index-info --index-definitions --index-dump
 ```
 
-レポートは`indexing-result/index-info.txt`と`indexing-result/index-definitions.json`に生成されます。
+これらのレポートは、`indexing-result/index-info.txt` および `indexing-result/index-definitions.json` に生成されます。
 
 また、同じ詳細が Web コンソール経由でも提供され、設定のダンプ zip にも含まれます。この詳細には、次の場所からアクセスできます。
 
@@ -110,11 +110,11 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 
 ## 使用例 3 - インデックス再作成 {#usecase3reindexing}
 
-[シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)によっては、インデックス再作成の実行が必要な場合があります。現在、インデックス再作成は、CRXDEまたはインデックスマネージャーユーザーインターフェイスを使用して、インデックス定義ノードの`reindex`フラグを`true`に設定することでおこなわれます。 このフラグが設定されると、インデックス再作成が非同期的におこなわれます。
+[シナリオ](https://jackrabbit.apache.org/oak/docs/query/indexing.html#reindexing)によっては、インデックス再作成の実行が必要な場合があります。現在、インデックス再作成を行うには、CRXDE またはインデックスマネージャのユーザーインターフェイスを使用して、インデックス定義ノードで `reindex` フラグを `true` に設定します。このフラグが設定されると、インデックス再作成が非同期的におこなわれます。
 
 次に、インデックス再作成に関するいくつかの注意点を示します。
 
-* インデックス再作成を `DocumentNodeStore` 設定でおこなう場合は、すべてのコンテンツがローカルである `SegmentNodeStore` 設定でおこなう場合より、時間がかなり長くかかります。
+* インデックス再作成を `DocumentNodeStore` 設定で行うと、すべてのコンテンツがローカルにある `SegmentNodeStore` 設定で行う場合より、大幅に時間がかかります。
 
 * 現在の設計では、インデックス再作成中に非同期インデクサーがブロックされます。他のすべての非同期インデックスが古くなり、インデックス作成中に更新が取得されません。このため、システムが使用中の場合は、最新の結果が表示されないことがあります。
 * インデックス再作成には、リポジトリ全体のトラバーサルが伴います。これは、AEM 設定に大きな負荷がかかる可能性があり、エンドユーザーエクスペリエンスに影響する可能性があります。
@@ -126,7 +126,7 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 
 * **out-of-band のインデックス再作成** - oak-run のインデックス再作成は、実行中の AEM 設定とは別に実行できるので、使用中の AEM インスタンスへの影響が最小限に抑えられます。
 
-* **out-of-lane のインデックス再作成** - このインデックス再作成は、インデックス作成操作に影響を与えずにおこなわれます。つまり、非同期インデクサーは他のインデックス作成を続行できます。
+* **out-of-lane のインデックス再作成** - このインデックス再作成は、インデックス作成操作に影響を与えずに行なわれます。つまり、非同期インデクサーは他のインデックス作成を続行できます。
 
 * **インストールでの簡略化されたインデックス再作成** - `DocumentNodeStore`DocumentNodeStore インストールでは、インデックス再作成が単一のコマンドで実行できます。これにより、インデックス再作成が確実に最適な方法で実行されます。
 
@@ -134,7 +134,7 @@ java -jar oak-run*.jar index --fds-path=/path/to/datastore  /path/to/segmentstor
 
 ### インデックス再作成 - DocumentNodeStore {#reindexdocumentnodestore}
 
-`DocumentNodeStore` インストールでは、単一の oak-run コマンドを使用してインデックス再作成をおこなうことができます。
+`DocumentNodeStore` インストールでは、単一の oak-run コマンドを使用してインデックス再作成を行うことができます。
 
 ```shell
 java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-write --fds-path=/path/to/datastore mongodb://server:port/aem
@@ -143,15 +143,15 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 これには次のメリットがあります。
 
 * 実行中の AEM インスタンスへの影響が少ない。ほとんどの読み取りはセカンダリサーバーから実行できます。実行中の AEM のキャッシュは、インデックス再作成に必要とされるトラバーサルをすべて考慮しても、悪影響は受けません。
-* `--index-definitions-file`オプションを使用して、新しいインデックスや更新されたインデックスのJSONを提供することもできます。
+* ユーザーは、`--index-definitions-file` オプションを使用して新しいインデックスまたは更新されたインデックスの JSON を提供することもできます。
 
 ### インデックス再作成 - SegmentNodeStore {#reindexsegmentnodestore}
 
-`SegmentNodeStore` インストールでは、次のいずれかの方法でインデックス再作成をおこなうことができます。
+`SegmentNodeStore` インストールでは、次のいずれかの方法でインデックス再作成を行うことができます。
 
 #### オンラインのインデックス再作成 - SegmentNodeStore {#onlinereindexsegmentnodestore}
 
-既定の方法に従い、`reindex` フラグを設定してインデックス再作成をおこないます。
+既定の方法に従い、`reindex` フラグを設定してインデックス再作成を行います。
 
 #### オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンス実行中 {#onlinereindexsegmentnodestoretheaeminstanceisrunning}
 
@@ -172,7 +172,7 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 #### オンラインのインデックス再作成 - SegmentNodeStore - AEM インスタンスのシャットダウン {#onlinereindexsegmentnodestoreaeminstanceisdown}
 
-`SegmentNodeStore` インストールでは、単一の oak-run コマンドを使用してインデックス再作成をおこなうことができます。ただし、AEM インスタンスをシャットダウンする必要があります。
+`SegmentNodeStore` インストールでは、単一の oak-run コマンドを使用してインデックス再作成を行うことができます。ただし、AEM インスタンスをシャットダウンする必要があります。
 
 次のコマンドを使用して、インデックス再作成を開始できます。
 
@@ -186,15 +186,15 @@ java -jar oak-run*.jar index --reindex --index-paths=/oak:index/lucene --read-wr
 
 この使用例では、クローン作成された設定でインデックスを再作成して、実行中の AEM インスタンスへの影響を最小限に抑えることができます。
 
-1. JMX 操作でチェックポイントを作成します。これをおこなうには、[JMX コンソール](/help/sites-administering/jmx-console.md)に移動して、`CheckpointManager` を検索します。次に、秒単位の有効期限に高い値を使用して&#x200B;**createCheckpoint(long p1)**&#x200B;操作をクリックします(例：**2592000**)。
-1. `crx-quickstart`フォルダーを新しいマシンにコピーします。
+1. JMX 操作でチェックポイントを作成します。これを行うには、[JMX コンソール](/help/sites-administering/jmx-console.md)に移動して、`CheckpointManager` を検索します。次に、**createCheckpoint(long p1)** 操作をクリックして、秒単位の有効期限に大きい値（**2592000** など）を使用します。
+1. 新しいマシンに `crx-quickstart` フォルダーをコピーします。
 1. oak-run の index コマンドを使用してインデックスを再作成します。
 
 1. 生成されたインデックスファイルを AEM サーバーにコピーします。
 
-1. JMX を使用してインデックスファイルを読み込みます。
+1. JMX を使用してインデックスファイルをインポートします。
 
-この使用例では、別のインスタンスのデータストアにアクセスできることを前提としています。`FileDataStore` が EBS などのクラウドベースのストレージソリューションに配置されている場合は、このデータストアにアクセスできないことがあります。これにより、`FileDataStore`のクローンも作成されるシナリオが除外されます。 インデックス定義でフルテキストのインデックス作成が実行されない場合は、`DataStore` へのアクセスは必要ありません。
+このユースケースでは、別のインスタンスのデータストアにアクセスできることを前提としていますが、`FileDataStore` が EBS などのクラウドベースのストレージソリューションに配置されている場合は、このデータストアにアクセスできないことがあります。この場合、`FileDataStore` のクローンも作成されるシナリオは除外されます。インデックス定義でフルテキストのインデックス作成が実行されない場合は、`DataStore` へのアクセスは必要ありません。
 
 ## 使用例 4 - インデックス定義の更新 {#usecase4updatingindexdefinitions}
 
@@ -206,8 +206,8 @@ oak-run では、インデックス定義を JSON 形式で提供したり、out
 
 この使用例を検討する必要があるプロセスは次のとおりです。
 
-1. 開発者は、ローカルインスタンス上のインデックス定義を更新し、`--index-definitions`オプションを使用してインデックス定義JSONファイルを生成します
+1. 開発者がローカルインスタンスでインデックス定義を更新し、インデックス定義の JSON ファイルを `--index-definitions` オプションを使用して生成します。
 
 1. 更新された JSON がシステム管理者に提供されます。
-1. システム管理者は out-of-band 方式に従って、別のインストールでインデックスを準備します。
+1. システム管理者は Out of Band 方式に従って、別のインストールでインデックスを準備します。
 1. これが完了すると、生成されたインデックスファイルが、実行中の AEM インストールに読み込まれます。
