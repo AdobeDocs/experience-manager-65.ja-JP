@@ -1,8 +1,8 @@
 ---
 title: 秘密鍵証明書の使用に関する情報の確認
-seo-title: 秘密鍵証明書の使用に関する情報の確認
+seo-title: Review credential use information
 description: 秘密鍵証明書の使用に関する情報の確認方法について説明します。
-seo-description: 秘密鍵証明書の使用に関する情報の確認方法について説明します。
+seo-description: Learn how to review credential use information.
 uuid: 02af75f9-c235-470d-a98b-a2102aa31381
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: cdf61cff-768b-49f7-9926-400bc96b0708
 exl-id: a8e16cf8-f3c8-48ce-87da-2f0de0b10a6e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '180'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 93%
 
 1. Web ブラウザーを開き、次の URL を入力します。
 
-   http://localhost:port/ReaderExtensions （ここで、*port*&#x200B;はアプリケーションサーバーのポート番号です）
+   http://localhost:[port]/ReaderExtensions （*port* は、アプリケーションサーバーのポート番号です）
 
 1. 次のデフォルトのユーザー名とパスワードを使用してログインします。
 
