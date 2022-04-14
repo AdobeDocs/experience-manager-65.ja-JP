@@ -1,8 +1,8 @@
 ---
 title: 不在設定の指定
-seo-title: 不在設定の指定
+seo-title: Configuring Out of Office Settings
 description: 不在機能を使用して、ユーザーが不在となり、AEM Forms によって割り当てられるタスクを実行できない日時を指定できます。
-seo-description: 不在機能を使用して、ユーザーが不在となり、AEM Forms によって割り当てられるタスクを実行できない日時を指定できます。
+seo-description: The Out of Office feature enables you to specify when a user will be out of the office and unable to complete tasks assigned by AEM forms.
 uuid: 0d01df0a-aa6a-40e5-bf24-423ed1c932cc
 contentOwner: admin
 content-type: reference
@@ -11,19 +11,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 30312159-58a5-4781-b554-29dcbce696cb
 exl-id: 1c8ad09b-d44a-4d90-86d5-d4c66cf5c57c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '659'
+ht-degree: 100%
 
 ---
 
 # 不在設定の指定 {#configuring-out-of-office-settings}
 
-ユーザーまたは管理者は不在機能を使用して、ユーザーが不在となり、AEM Forms によって割り当てられるタスクを実行できない日時を指定できます。あるユーザーが「不在」に設定されている場合、そのユーザーのタスクは 1 人以上の指定されたユーザーに割り当てられます。ユーザーがWorkspaceで「不在」設定を変更したり、管理者がFormsワークフローでユーザーに代わって設定を変更したりできます。
+ユーザーまたは管理者は不在機能を使用して、ユーザーが不在となり、AEM Forms によって割り当てられるタスクを実行できない日時を指定できます。あるユーザーが「不在」に設定されている場合、そのユーザーのタスクは 1 人以上の指定されたユーザーに割り当てられます。ユーザーは Workspace で「不在」設定を変更できます。ユーザーの代わりに、管理者が Forms ワークフローで設定を変更することもできます。
 
 Workbench ユーザーは、プロセスの作成時に、不在設定が設定されている場合にタスクをリダイレクトするかどうかを指定できます。
 
-## ユーザーの不在情報の表示  {#view-a-user-s-out-of-office-information}
+## ユーザーの不在情報の表示 {#view-a-user-s-out-of-office-information}
 
 1. 管理コンソールで、サービス／forms ワークフロー／不在をクリックします。
 1. 不在ページの上部付近にあるボックスで、次のいずれかを実行できます。
@@ -38,14 +38,14 @@ Workbench ユーザーは、プロセスの作成時に、不在設定が設定�
 
 1. ユーザー名をクリックすると、そのユーザーの不在情報がユーザーリストの下に表示されます。
 
-## ユーザーの不在ステータスの変更  {#change-a-user-s-out-of-office-status}
+## ユーザーの不在ステータスの変更 {#change-a-user-s-out-of-office-status}
 
 1. 「[ユーザーの不在情報の表示](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)」の説明に従って、ユーザーを検索します。
 1. 変更するユーザーの名前をクリックします。
 1. 「*ユーザー名*」の「現在の状態」リストから、「在席中」または「不在」のいずれかを選択します。
 1. 「保存」をクリックします。
 
-## ユーザー不在の日付範囲の追加  {#add-an-out-of-office-date-range-for-a-user}
+## ユーザー不在の日付範囲の追加 {#add-an-out-of-office-date-range-for-a-user}
 
 1. 「[ユーザーの不在情報の表示](configuring-out-office-settings.md#view-a-user-s-out-of-office-information)」の説明に従って、ユーザーを検索します。
 1. 変更するユーザーの名前をクリックします。
@@ -53,7 +53,7 @@ Workbench ユーザーは、プロセスの作成時に、不在設定が設定�
 1. 「開始時刻」と「終了時刻」に入力します。カレンダーアイコンをクリックすると、日付を選択することができます。終了時刻を指定しない場合、ユーザーは無期限に不在であると設定されます。
 1. 「保存」をクリックします。
 
-## ユーザーへの不在タスクの割り当て  {#assign-a-user-for-out-of-office-tasks}
+## ユーザーへの不在タスクの割り当て {#assign-a-user-for-out-of-office-tasks}
 
 ユーザーが不在の間に、不在のユーザーに代わって新規タスクを実行する 1 人以上のユーザーを割り当てることができます。以下の設定を行うことができます。
 
