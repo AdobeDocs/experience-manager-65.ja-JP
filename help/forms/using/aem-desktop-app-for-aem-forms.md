@@ -1,7 +1,7 @@
 ---
-title: AEM Forms用AEMデスクトップアプリケーション
-seo-title: AEM Forms用AEMデスクトップアプリケーション
-description: AEM Forms用AEMデスクトップアプリケーション
+title: AEM Forms の AEM デスクトップアプリケーション
+seo-title: AEM desktop app for AEM Forms
+description: AEM Forms の AEM デスクトップアプリケーション
 uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,19 +11,19 @@ noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 57%
+workflow-type: ht
+source-wordcount: '419'
+ht-degree: 100%
 
 ---
 
-# AEM Forms用AEMデスクトップアプリケーション {#aem-desktop-app-for-aem-forms}
+# AEM Forms の AEM デスクトップアプリケーション {#aem-desktop-app-for-aem-forms}
 
-AEMデスクトップアプリケーションを使用すると、Adobe Experience Manager(AEM)AssetsリポジトリーとAEM Formsバイナリファイルを、システム上のネットワークディレクトリにマッピングできます。 同期されたアセットとバイナリファイルをファイルエクスプローラーで表示し、各種のアプリケーションを使用してファイルを編集することができます。ファイルを表示するだけでなく、バイナリファイルの作成、アップロード、削除を行うこともできます。また、ソフトウェアから、ファイルのオープン、編集、保存を直接実行することもできます。例えば、Designer で直接 XDP ファイルを開いて編集することができます。アセットに対してローカルで行った変更内容は、AEM アセットリポジトリと AEM Forms の UI に反映されます。
+AEM デスクトップアプリケーションにより、Adobe Experience Manager（AEM）のアセットリポジトリと AEM Forms のバイナリファイルを、システム上のネットワークディレクトリにマップすることができます。同期されたアセットとバイナリファイルをファイルエクスプローラーで表示し、各種のアプリケーションを使用してファイルを編集することができます。ファイルを表示するだけでなく、バイナリファイルの作成、アップロード、削除を行うこともできます。また、ソフトウェアから、ファイルのオープン、編集、保存を直接実行することもできます。例えば、Designer で直接 XDP ファイルを開いて編集することができます。アセットに対してローカルで行った変更内容は、AEM アセットリポジトリと AEM Forms の UI に反映されます。
 
-AEM デスクトップアプリケーションは、AEM インスタンスからダウンロードすることができます。デスクトップアプリケーションのダウンロードについて詳しくは、「[AEMデスクトップアプリケーションリリースノート](https://helpx.adobe.com/experience-manager/desktop-app/release-notes.html)」を参照してください。
+AEM デスクトップアプリケーションは、AEM インスタンスからダウンロードすることができます。AEM デスクトップアプリケーションの詳しいダウンロード方法については、[AEM デスクトップアプリケーションのリリースノート](https://helpx.adobe.com/jp/experience-manager/desktop-app/release-notes.html)を参照してください。
 
-## AEMデスクトップアプリケーションでサポートされるAEM Formsアセット {#aem-forms-assets-supported-in-aem-desktop-app}
+## AEM デスクトップアプリケーションでサポートされる AEM Forms のアセット {#aem-forms-assets-supported-in-aem-desktop-app}
 
 AEM デスクトップアプリケーションを使用して、フォームテンプレートタイプ（.xdp）、PDF フォームタイプ（.pdf）、ドキュメントタイプ（.pdf）、画像タイプ、XML スキーマタイプ（.xsd）、スタイルシートタイプ（.xfs）の AEM Forms バイナリファイルを同期することができます。AEM デスクトップアプリケーションでは、他のすべてのファイル（サポートされていないファイル）は 0 バイトファイルとして表示されます。サポートされていないファイルを 0 バイトファイルとして表示することにより、他の使用可能なアセットが AEM Forms サーバー上に存在することをユーザーに認識させることができます。
 
@@ -31,15 +31,15 @@ AEM デスクトップアプリケーションを使用して、フォームテ�
 >
 >ファイル名には、英数字、ハイフン、下線のみを含めることができます。
 
-## AEMデスクトップアプリケーションでのAEM Formsの有効化 {#enable-aem-forms-for-aem-desktop-app}
+## AEM デスクトップアプリケーションに対して AEM Forms を有効にする {#enable-aem-forms-for-aem-desktop-app}
 
-AEM Desktop Appは、Microsoft WindowsではWebDAVプロトコルを使用し、Mac OS XではSMB1を使用してAEM Formsサーバーに接続します。 WebDAVまたはSMBクライアントとバイナリファイルおよび他のアセットを同期する機能は、AEM Formsサーバーでは初期設定では有効になっていません。 次の手順を実行して、AEM Forms for AEM desktop Appを有効にします。
+AEM デスクトップアプリケーションは、Microsoft Windows で WebDAV プロトコル、Mac OS X で SMB1 をそれぞれ使用して、AEM Forms サーバーに接続します。初期状態の AEM Forms サーバーは、バイナリファイルと他のアセットを WebDAV クライアントまたは SMB クライアントと同期するようには設定されていません。AEM デスクトップアプリケーションに対して AEM Forms を有効にするには、以下の手順を実行します。
 
 1. 管理者として AEM Forms にログインします。
-1. オーサーインスタンスで、![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager/ツール]** ![ハンマー](assets/hammer.png) **[!UICONTROL 導入/操作/Webコンソール]**&#x200B;をクリックします。 新しいウィンドウに Web コンソールが表示されます。
-1. Web コンソールウィンドウで、「**[!UICONTROL FormsManager アドオン設定]**」オプションを探して選択します。
-1. FormsManager アドオン設定ダイアログで「**[!UICONTROL 非同期リソース]**」チェックボックスの選択を解除して「**[!UICONTROL 保存]**」をクリックします。
-1. AEM Forms サーバーを再起動します。再起動後、AEM FormsサーバーはAEMデスクトップアプリケーションでコンテンツの受け入れと共有を有効にします。
-1. AEM デスクトップアプリケーションを起動し、AEM Forms サーバーに接続します。
+1. オーサーインスタンスで、「![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager／Tools]** ![ハンマー](assets/hammer.png) **[!UICONTROL ／Deployment／Operations／Web Console]**」をクリックしてください。新しいウィンドウに web コンソールが表示されます。
+1. Web コンソールウィンドウで、**[!UICONTROL FormsManager アドオン設定]**&#x200B;オプションを探して選択してください。
+1. FormsManager アドオン設定ダイアログで&#x200B;**[!UICONTROL 非同期リソース]**&#x200B;チェックボックスの選択を解除して、**[!UICONTROL 保存]**&#x200B;をクリックしてください。
+1. AEM Forms サーバーを再起動します。再起動が完了すると、AEM Forms サーバーでコンテンツを取得し、そのコンテンツを AEM デスクトップアプリケーションと共有できるようになります。
+1. AEM デスクトップアプリケーションを開き、AEM Forms サーバーに接続してください。
 
-   接続に成功すると、アプリケーションは`content/dam`フォルダーと`content/dam/formsanddocuments`フォルダーにデータを取り込みます。 上記のフォルダーとローカルフォルダーとの間でファイルを移動するだけでなく、AEM デスクトップアプリケーションを使用して、自動的にデータが取り込まれたフォルダー間でコンテンツを移動することができます。
+   接続に成功すると、アプリケーションは `content/dam` と `content/dam/formsanddocuments` のフォルダーを作成します。上記のフォルダーとローカルフォルダーとの間でファイルを移動するだけでなく、AEM デスクトップアプリケーションを使用して、自動的に作成されたフォルダー間でコンテンツを移動することができます。
