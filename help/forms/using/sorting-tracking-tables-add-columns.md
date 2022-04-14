@@ -1,8 +1,8 @@
 ---
 title: 追跡テーブルのカスタマイズ
-seo-title: 追跡テーブルのカスタマイズ
+seo-title: Customize tracking tables
 description: AEM Forms Workspace の「追跡」タブに表示されるタスクテーブルのユーザープロセスの詳細表示をカスタマイズする方法。
-seo-description: AEM Forms Workspace の「追跡」タブに表示されるタスクテーブルのユーザープロセスの詳細表示をカスタマイズする方法。
+seo-description: How-to customize the display of the details of user processes in the task table displayed in the tracking tab of AEM Forms workspace.
 uuid: 13d6ebf2-99d5-434f-85f9-b0cba5f5751a
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,25 +10,25 @@ topic-tags: forms-workspace
 discoiquuid: bb7a6e9f-4f28-4d97-8a0c-949259fd6857
 exl-id: 9ab657cc-fa8e-4168-8a68-e38ac5c51b29
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '330'
+ht-degree: 100%
 
 ---
 
 # 追跡テーブルのカスタマイズ{#customize-tracking-tables}
 
-AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与するプロセスインスタンスの詳細を表示するために使用されます。 追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
+AEM Forms Workspace の「追跡」タブを使用すると、ログインしたユーザーが関係するプロセスインスタンスの詳細を表示できます。追跡テーブルを表示するには、最初に左ペインでプロセス名を選択して中央ペインでインスタンスのリストを表示します。プロセスインスタンスを選択すると、このインスタンスによって生成されたタスクのテーブルが右ペインに表示されます。デフォルトで、テーブル列に以下のタスク属性が表示されます（タスクモデルの対応する属性は括弧内に表示）。
 
-* ID ( `taskId`)
-* 名前 ( `stepName`)
-* 説明 ( `instructions`)
-* 選択されたアクション ( `selectedRoute`)
-* 作成時刻(`createTime`)
-* 完了時間(`completeTime`)
-* 所有者 ( `currentAssignment.queueOwner`)
+* ID（`taskId`）
+* 名前（`stepName`）
+* 説明（`instructions`）
+* 選択されたアクション（`selectedRoute`）
+* 作成時刻（`createTime`）
+* 完了時刻（`completeTime`）
+* 所有者（`currentAssignment.queueOwner`）
 
-タスクテーブルに表示できるタスクモデルの残りの属性を以下に示します。
+タスクテーブルに表示できるタスクモデルの残りの属性は次のとおりです。
 
 <table>
  <tbody>
@@ -115,7 +115,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
  </tbody>
 </table>
 
-以下のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDKを使用してセマンティックの変更をおこない、変更されたソースから縮小パッケージを構築する方法については、「 [AEM Forms workspaceのカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md) 」を参照してください。
+次のタスクテーブルのカスタマイズの場合は、ソースコードでセマンティックの変更を行う必要があります。Workspace SDK を使用してセマンティックの変更を行い、変更されたソースから縮小パッケージを構築する方法については、「[AEM Forms Workspace のカスタマイズの概要](/help/forms/using/introduction-customizing-html-workspace.md)」を参照してください。
 
 ## テーブル列と順序の変更 {#changing-table-columns-and-their-order}
 
@@ -153,11 +153,11 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
    </table>
    ```
 
-## 追跡テーブルの並べ替え  {#sorting-a-tracking-table}
+## 追跡テーブルの並べ替え {#sorting-a-tracking-table}
 
 列の見出しをクリックするときにタスクリストテーブルを並べ替えるには：
 
-1. ファイル`js/runtime/views/processinstancehistory.js`に`.fixedTaskTableHeader th`のクリックハンドラを登録します。
+1. ファイル `js/runtime/views/processinstancehistory.js` の `.fixedTaskTableHeader th` にクリックハンドラーを登録します。
 
    ```javascript
    events: {
@@ -167,7 +167,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
    }
    ```
 
-   ハンドラーで、`js/runtime/util/history.js`の`onTaskTableHeaderClick`関数を呼び出します。
+   ハンドラーで、`js/runtime/util/history.js` の `onTaskTableHeaderClick` 関数を呼び出します。
 
    ```javascript
    onTaskTableHeaderClick: function (event) {
@@ -175,7 +175,7 @@ AEM Forms Workspaceの「追跡」タブは、ログインユーザーが関与�
    }
    ```
 
-1. `TaskTableHeaderClick`メソッドを`js/runtime/util/history.js`に公開します。
+1. `TaskTableHeaderClick` メソッドを `js/runtime/util/history.js` で公開します。
 
    メソッドはクリックイベントからタスク属性を検索し、その属性のタスクリストを並べ替えて、並べ替えられたタスクリストでタスクテーブルをレンダリングします。
 
