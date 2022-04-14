@@ -1,8 +1,8 @@
 ---
 title: プロキシサーバーツール（proxy.jar）
-seo-title: プロキシサーバーツール（proxy.jar）
+seo-title: Proxy Server Tool (proxy.jar)
 description: AEM でのプロキシサーバーツールについて説明します。
-seo-description: AEM でのプロキシサーバーツールについて説明します。
+seo-description: Learn about the Proxy Server Tool in AEM.
 uuid: 2fc1df24-8d5a-4be7-83fa-238ae65591b0
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '1161'
+ht-degree: 100%
 
 ---
 
@@ -36,9 +36,9 @@ ht-degree: 92%
 
 例えば、TCP/IP ネットワーク経由で通信する任意の 2 つのアプリケーション（Web ブラウザーと AEM など）間にプロキシサーバーを配置できます。これにより、AEM ページの要求時の状況を正確に監視できます。
 
-## プロキシサーバーツールの起動  {#starting-the-proxy-server-tool}
+## プロキシサーバーツールの起動 {#starting-the-proxy-server-tool}
 
-このツールは、AEMインストール環境の/opt/helpersフォルダーにあります。 このツールを起動するには、次のように入力します。
+このツールは、AEM インストール環境の /opt/helpers フォルダーにあります。このツールを起動するには、次のように入力します。
 
 ```xml
 java -jar proxy.jar <host> <remoteport> <localport> [options]
@@ -52,7 +52,7 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 * **logfile &lt;filename>（ログファイルへの書き込み）**：クライアントとサーバーのやり取りをログファイルに書き込みます。このパラメーターは静止モードでも使用できます。
 * **i &lt;numIndentions>（インデントの追加）**：アクティブな各接続には、読みやすさを考慮してインデントが指定されます。デフォルト値は 16 レベルです（proxy.jar バージョン 1.16 の新機能）。
 
-## プロキシサーバーツールの使用  {#uses-of-the-proxy-server-tool}
+## プロキシサーバーツールの使用 {#uses-of-the-proxy-server-tool}
 
 次のシナリオは、プロキシサーバーツールの用途の一部を示しています。
 
@@ -101,7 +101,7 @@ S-7-#000107 -> [Content-Length: 124 ]
 1. 待機するか、エントリごとにタイムスタンプを付けて、アクセスログをファイルに書き込みます。
 1. 要求がハングし始めたら、開いた接続の数および問題の原因となった要求を確認できます。
 
-## ログメッセージの形式  {#the-format-of-log-messages}
+## ログメッセージの形式 {#the-format-of-log-messages}
 
 proxy.jar が生成するログエントリはすべて次の形式になります。
 
@@ -117,8 +117,8 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
-* # 00000バイトストリーム内のオフセット。これは最初のエントリなので、オフセットは0です。
-* [GET &lt;?>] は、リクエストの内容です。この例では、HTTPヘッダー(url)の1つを示します。
+* # #00000 はバイトストリームのオフセットです。これは最初のエントリなので、オフセットは 0 です。
+* [GET &lt;?>] は、サンプルの HTTP ヘッダー（URL）におけるリクエストのコンテンツです。
 
 接続を閉じると、次の情報がログに記録されます。
 
@@ -129,7 +129,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 
 これは、6 番目の接続において平均速度でクライアントとサーバー間で渡されたバイト数を示します。
 
-## ログ出力の例  {#an-example-of-log-output}
+## ログ出力の例 {#an-example-of-log-output}
 
 ここでは、要求時に次のコードを生成する単純なテンプレートについて検討します。
 
@@ -151,7 +151,7 @@ AEM が localhost:4303 で実行されている場合は、プロキシサーバ
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
 ```
 
-プロキシサーバーを使用せずにサーバー(`localhost:4303`)にアクセスできますが、`localhost:4444`を使用してサーバーにアクセスすると、プロキシサーバーは通信をログに記録します。 ブラウザーを開き、上記のテンプレートで作成されたページにアクセスします。 その後、ログファイルを確認します。
+プロキシサーバーなしでサーバー（`localhost:4303`）にアクセスできますが、`localhost:4444` 経由でアクセスすると、プロキシサーバーは通信をログに記録します。ブラウザーを開き、上記のテンプレートを使用して作成されたページにアクセスしてください。その後、ログファイルを確認します。
 
 >[!NOTE]
 >
