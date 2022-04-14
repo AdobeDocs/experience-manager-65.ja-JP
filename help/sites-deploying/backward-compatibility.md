@@ -13,9 +13,9 @@ docset: aem65
 feature: Upgrading
 exl-id: c432a014-2dab-4c49-a25b-e4f461d13f9b
 source-git-commit: 50a11e30ccd720065962e8dd03cbcc71ec9f715a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '500'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 ほとんどの場合、AEM 6.3 を実行しているお客様は、アップグレードの際にコードやカスタマイズの修正をおこなう必要はありません。AEM 6.1 および 6.2 のお客様の場合、6.3 にアップグレードする際よりも大きい変更はありません。
 
-機能に後方互換性を維持できない例外については、6.4 用の互換性パッケージをインストールすることで、バンドルとコンテンツの後方非互換性の問題を軽減できます（ダウンロード先の詳細については、以下の設定方法を参照してください）。 この互換パッケージは、AEM 6.4 に準拠しているほとんどの場合に、互換性を復元するのに役立ちます。
+例外的に機能の後方互換性を維持できない場合は、6.4 の互換パッケージをインストールすることで、バンドルおよびコンテンツの後方非互換性の問題を軽減できます（ダウンロード場所について詳しくは、以下の「設定方法」を参照してください）。この互換パッケージは、AEM 6.4 に準拠したアプリケーションのほとんどの場合で、互換性を回復するのに役立ちます。
 
 互換パッケージを使用すると、AEM を互換モードで実行でき、新しい AEM 機能に対するカスタム開発を先送りできます。
 
@@ -59,14 +59,14 @@ AEM 6.5 では、すべての機能が後方互換性を念頭に置いて開発
 
 レガシーモードは、互換パッケージで移行された AEM のレガシーコードまたは廃止されたコードに基づくカスタムインターフェイスを持つお客様用です。
 
-![サペット](assets/sapte.png)
+![sapte](assets/sapte.png)
 
 ## 設定方法 {#how-to-set-up}
 
-この **6.5 用AEM 6.4 互換性パック** は、パッケージマネージャーを使用してパッケージとしてインストールできます。 次をダウンロード： [ソフトウェア配布版のAEM 6.4 互換性パック 6.5](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64) サイト。
+**6.5 用 AEM 6.4 互換性パック**&#x200B;は、パッケージマネージャーを使用してパッケージとしてインストールできます。[6.5 用 AEM 6.4 互換性パックは、ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64)サイトからダウンロードできます。
 
 互換パッケージがインストールされると、次に示すように、OSGI 設定のスイッチを使用して、ルーティングを有効または無効にできます。
 
-![コンパットスイッチ](assets/compat-switches.png)
+![互換スイッチ](assets/compat-switches.png)
 
 互換パッケージがインストールされて設定されると、各機能は選択された互換モードに基づいて使用されるようになります。
