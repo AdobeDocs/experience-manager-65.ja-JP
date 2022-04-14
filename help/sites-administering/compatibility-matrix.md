@@ -1,21 +1,21 @@
 ---
 title: AEM Screens Player の互換表
-seo-title: AEM Screens Player の互換表
+seo-title: Compatibility Matrix for AEM Screens Player
 description: ここでは、AEM Screens Player と AEM Screens のバージョン間の対応関係を示します。
-seo-description: ここでは、AEM Screens Player と AEM Screens のバージョン間の対応関係を示します。
+seo-description: This page lists the AEM Screens Players with their respective AEM Screens version.
 page-status-flag: never-activated
 uuid: d5bf1eee-d22a-4962-8289-fd56a54d85ae
 contentOwner: jsyal
 discoiquuid: dbc16a51-74c4-43bb-9501-081de1eb2f7d
 source-git-commit: 5120bbdefea528ad6d07a9c99df565555b6a8444
-workflow-type: tm+mt
-source-wordcount: '285'
+workflow-type: ht
+source-wordcount: '266'
 ht-degree: 100%
 
 ---
 
 
-# AEM Screens Player の互換表 {#compatibility-matrix-for-aem-screens-player}
+# AEM Screens Player の互換表{#compatibility-matrix-for-aem-screens-player}
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ aem-screens-player-android-3.3.0.apk.zip
   </tr>
   <tr>
    <td><strong>AEM 6.4</strong></td> 
-   <td><p><strong>3.3.0</strong>  -  <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Apple Store で公開予定</p> </td> 
+   <td><p><strong>3.3.0</strong> - <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Apple Store で公開予定</p> </td> 
    <td><p><strong>1.0.48 -</strong><br /> </p> <p><a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> </td> 
    <td><p><strong>1.0.42 - </strong></p> <p>Chrome ウェブストアで公開予定</p> </td> 
    <td><strong>3.3.0</strong> - <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></td> 
