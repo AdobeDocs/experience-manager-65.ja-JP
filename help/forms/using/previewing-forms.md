@@ -1,17 +1,17 @@
 ---
 title: フォームのプレビュー
-seo-title: フォームのプレビュー
+seo-title: Previewing a form
 description: 発行またはアクティベートする前にフォームをプレビューして、期待通りになっていることを確認します。プレビューのオプションは、サポートされているフォームタイプにより異なる場合があります。
-seo-description: 発行またはアクティベートする前にフォームをプレビューして、期待通りになっていることを確認します。プレビューのオプションは、サポートされているフォームタイプにより異なる場合があります。
+seo-description: You can preview your forms before publishing or activating to ensure it meets the expectations. Preview options may vary across the supported form types.
 uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: aed5703e-4fe6-4839-9657-c660ac48521e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '394'
+workflow-type: ht
+source-wordcount: '365'
 ht-degree: 100%
 
 ---
@@ -67,7 +67,7 @@ AEM Forms では、リポジトリ内にあるフォームやドキュメント�
    * データを使用したプレビュー
    * PDF としてプレビュー（フォームテンプレートから選択可能）
 
-## データを使用したプレビュー {#preview-with-data}
+## データを使用してプレビュー {#preview-with-data}
 
 「**データを使用したプレビュー**」を選択すると、実際のデータが入力された状態でフォームの様子を見ることができます。データを使用したプレビューオプションでは、サンプルユーザーデータを含めた XML をアップロードできます。サンプルユーザーデータを使用して、選択したフォーマットでプレビューフォームに自動入力します。
 
