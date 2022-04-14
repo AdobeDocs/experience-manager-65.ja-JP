@@ -9,9 +9,9 @@ role: User, Admin
 exl-id: 85fa0414-354e-4530-81f9-a5659bb7f2fd
 feature: Configuration
 source-git-commit: 8353e6fcc76dd63a0816babbe593f474abbc4508
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
-ht-degree: 53%
+ht-degree: 100%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->このドキュメントでは、Adobe Experience Managerに直接統合されるDynamic Mediaの機能について説明します。 Dynamic Media ClassicをExperience Managerに統合して使用している場合は、 [Dynamic Media Classic統合ドキュメント](/help/sites-administering/scene7.md).
+>このドキュメントでは、Dynamic Media を Adobe Experience Manager に直接統合して使用する際の機能について説明します。Dynamic Media Classic を Experience Manager に統合して使用する場合は、[Dynamic Media Classic 統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 >
->詳しくは、 [二重使用シナリオ](/help/sites-administering/scene7.md#dual-use-scenario) Dynamic Media Classicと統合されたExperience ManagerをDynamic Mediaと共に使用する場合に役立ちます。
+>Experience Manager を Dynamic Media Classic と Dynamic Media の両方に統合して使用する場合は、[両方を利用するシナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
 
 Dynamic Media の管理者には、次のトピックが参考になります。
 
-* [Dynamic Media - Scene7モードの設定](config-dms7.md)  — 新規のDynamic Mediaユーザーの場合は、この設定を使用します。
-* [Dynamic Media — ハイブリッドモードの設定](config-dynamic.md)  — 既存のDynamic MediaユーザーアップグレードExperience Managerの場合は、この設定を使用します。
+* [Dynamic Media - Scene7 モードの設定](config-dms7.md) - 新規に Dynamic Media を使用する場合は、この設定を使用します。
+* [Dynamic Media - ハイブリッドモードの設定](config-dynamic.md) - 既に Dynamic Media を使用していて Experience Manager をアップグレードする場合は、この設定を使用します。
 * [画像プリセットの管理](managing-image-presets.md)
 * [ビューアプリセットの管理](managing-viewer-presets.md)
-* [Dynamic Media - Scene7モードのトラブルシューティング](troubleshoot-dms7.md)
+* [Dynamic Media のトラブルシューティング - Scene7 モード](troubleshoot-dms7.md)
 
 次のトピックも参照してください。
 
@@ -42,7 +42,7 @@ Dynamic Media の管理者には、次のトピックが参考になります。
 >
 >**アップグレードする場合：**
 >
->* Experience Manager を実行状態にした後にアップロードしたすべてのアセットで、Dynamic Media が自動的に有効になります（システム管理者によって明示的に無効にされた場合を除く）。アップグレードされたExperience ManagerインスタンスでDynamic Mediaを初めて使用する場合、アセットをDynamic Media対応にするには、アセットを再処理する必要があります。
+>* Experience Manager を実行状態にした後にアップロードしたすべてのアセットで、Dynamic Media が自動的に有効になります（システム管理者によって明示的に無効にされた場合を除く）。アップグレードされた Experience Manager インスタンスで Dynamic Media を新たに使用する場合、Dynamic Media を使用できるようアセットを再処理する必要があります。
 
 
 
