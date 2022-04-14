@@ -1,8 +1,8 @@
 ---
 title: AEM Forms Workspace のカスタマイズの概要
-seo-title: AEM Forms Workspace のカスタマイズの概要
+seo-title: Introduction to Customizing AEM form workspace
 description: LiveCycle AEM Forms Workspace をカスタマイズしてプロセス管理を行う方法の概念と技術情報を簡単に紹介します。
-seo-description: LiveCycle AEM Forms Workspace をカスタマイズしてプロセス管理を行う方法の概念と技術情報を簡単に紹介します。
+seo-description: A quick introduction, with conceptual and technical information, to customize LiveCycle AEM Forms workspace for process management.
 uuid: 38759071-e6b8-4976-8b06-909ad7a786cd
 contentOwner: robhagat
 content-type: reference
@@ -12,21 +12,21 @@ discoiquuid: 021c6606-8cd3-472c-a80b-b1bcace7e87f
 docset: aem65
 exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1786'
-ht-degree: 81%
+workflow-type: ht
+source-wordcount: '1763'
+ht-degree: 100%
 
 ---
 
 # AEM Forms Workspace のカスタマイズの概要{#introduction-to-customizing-aem-form-workspace}
 
-AEM form workspaceは、プレゼンテーションセマンティクスとそのインターフェイスの機能を変更する機能を提供します。 スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
+AEM Forms Workspace では、プレゼンテーションセマンティックおよびインターフェイスの機能を変更することが可能です。スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
 
 ![cu_customized_workspace_example](assets/cu_customized_workspace_example.png)
 
 カスタマイズされた Workspace の例
 
-## カスタマイズの種類  {#types-of-customizations}
+## カスタマイズの種類 {#types-of-customizations}
 
 AEM Forms Workspace では、幅広く様々なカスタマイズをサポートしてユーザーインターフェイスのレイアウト、その表示方法、機能などを更新します。カスタマイズでは以下のうちの 1 つ以上を更新します。
 
@@ -38,9 +38,9 @@ AEM Forms Workspace では、幅広く様々なカスタマイズをサポート
 
 AEM Forms Workspace の表示方法、レイアウト、およびその他のプレゼンテーションセマンティックを変更できます。CSS、HTML テンプレートおよび JavaScript™ ファイルをカスタマイズすることによって、Workspace を変更します。すべてのデフォルトファイルはデフォルトのインストレーションで提供されます。
 
-最も一般的な手順については、「[AEM Forms Workspaceのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)」を参照してください。 詳細な手順を含む、カスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+最も一般的な手順については、[AEM Forms Workspace カスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)を参照してください。詳細な手順を含む、カスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
-#### スタイルシートの理解  {#understanding-the-style-sheet}
+#### スタイルシートの理解 {#understanding-the-style-sheet}
 
 Workspace をカスタマイズする前に、/libs/ws/css/style.css にある AEM Forms 付属のデフォルトスタイルシートを理解しておいてください。
 
@@ -54,7 +54,7 @@ Workspace をカスタマイズするには、/libs/ws/css フォルダー内に
   </tr>
   <tr>
    <td><p>#ヘッダー</p> </td>
-   <td><p>AEM Forms Workspaceのヘッダー</p> </td>
+   <td><p>AEM Forms Workspace のヘッダー</p> </td>
   </tr>
   <tr>
    <td><p>.categoryList</p> </td>
@@ -121,19 +121,19 @@ Workspace をカスタマイズするには、/libs/ws/css フォルダー内に
 
 #### CSS {#css}
 
-AEM Forms Workspaceの外観は、CSSから見えます。 CSS をカスタマイズすることにより、フォント、色、ブランド、レイアウトなどの Workspace のプレゼンテーションセマンティックを変更することができます。
+AEM Forms Workspace の表示方法は、CSS の表示方法を使用しています。CSS をカスタマイズすることにより、フォント、色、ブランド、レイアウトなどの Workspace のプレゼンテーションセマンティックを変更することができます。
 
 CSS カスタマイズのためのトップレベルの手順を以下に示します。
 
 * CSS ファイルを作成します。
 * この CSS にスタイルアイテムを追加します。詳細については、「CSS スタイルについて」を参照してください。
-* `html.jsp`内の参照を更新します。
+* `html.jsp` の参照を更新します。
 
-これらのカスタマイズを行う正確な手順については、[AEM Forms Workspaceのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)を参照してください。 AEM Forms Workspaceに付属しているCSSファイルは、/libs/ws/css/にあります。 CSS 関連のカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+これらのカスタマイズを行うための正確な手順については、[AEM Forms Workspace カスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)を参照してください。AEM Forms Workspace に付属している CSS ファイルは、/libs/ws/css/ にあります。CSS 関連のカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。CSS 関連のカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
 #### 画像 {#image}
 
-AEM Forms Workspaceをカスタマイズして、ユーザーのアバターを追加したり、組織のロゴを追加したりできます。 これらのカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。
+AEM Forms Workspace をカスタマイズしてユーザーのアバターを追加したり、組織のロゴを追加することができます。これらのカスタマイズの場合は、[出荷パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を使用します。
 
 画像をカスタマイズするためのトップレベルの手順を以下に示します。
 
@@ -142,11 +142,11 @@ AEM Forms Workspaceをカスタマイズして、ユーザーのアバターを�
 * 追加した画像に対応する新しいスタイルを追加します。
 * `html.jsp` ファイル内の新しい CSS ファイルにリンクします。
 
-AEM Forms Workspaceの画像のカスタマイズを開始するには、[AEM Forms Workspaceのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従います。 画像に関係するカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
+AEM Forms Workspace の画像のカスタマイズを開始するには、[AEM Forms Workspace カスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従います。画像に関係するカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。
 
 #### HTML テンプレート {#html-template}
 
-HTMLテンプレートは、Workspaceユーザーインターフェイスの外観とレイアウトを定義するのに役立ちます。 デフォルトの HTML テンプレートを更新することによって、デフォルトのユーザーインターフェイスのレイアウトをカスタマイズできます。
+HTML テンプレートは、Workspace ユーザーインターフェイスの表示方法とレイアウトを定義するのに役立ちます。デフォルトの HTML テンプレートを更新することによって、デフォルトのユーザーインターフェイスのレイアウトをカスタマイズできます。
 
 HTML テンプレートをカスタマイズするためのトップレベルの手順を以下に示します。
 
@@ -156,11 +156,11 @@ HTML テンプレートをカスタマイズするためのトップレベルの
 
 このようなカスタマイズの特殊な例については、この記事の最後にある関連項目を参照してください。カスタマイズするテンプレートに応じて、[Ship パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)または [Dev パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)のいずれかを選択します。
 
-### セマンティックの変更  {#semantic-changes}
+### セマンティックの変更 {#semantic-changes}
 
-AEM Forms Workspace機能を変更するには、JavaScriptのソースコードを変更します。 コア機能の変更は、セマンティックの変更としてラベル付けされます。AEM Forms Workspace のソースコードの一部として、モデル、ビュー、およびテンプレートを変更します。
+AEM Forms Workspace の機能を変更するには、JavaScript ソースコードを変更します。コア機能の変更は、セマンティックの変更としてラベル付けされます。AEM Forms Workspace のソースコードの一部として、モデル、ビュー、およびテンプレートを変更します。
 
-セマンティックの変更をおこなってAEM Forms Workspaceの機能を変更するための主な手順は次のとおりです。
+セマンティックの変更を行って AEM Forms Workspace の機能を変更するためのトップレベルの手順を次に示します。
 
 * ユーザーが作成したフォルダーで、該当するデフォルトのファイルのコピーを作成します。
 * ユーザー定義フォルダーに新しいモデルおよびビューを追加します。
@@ -169,24 +169,24 @@ AEM Forms Workspace機能を変更するには、JavaScriptのソースコード
 
 ソースコードの一部であるコンポーネントに関する概念的詳細については、「[再利用可能なコンポーネントの詳細](/help/forms/using/description-reusable-components.md)」を参照してください。これらのカスタマイズの場合は、Dev パッケージを使用します。
 
-### 再利用可能なコンポーネント  {#reusable-components}
+### 再利用可能なコンポーネント {#reusable-components}
 
-AEM Forms Workspaceはコンポーネントベースのソフトウェアなので、簡単にカスタマイズして再利用できます。 Workspace コンポーネントを Web アプリケーションで容易に統合できます。
+AEM Forms Workspace は容易にカスタマイズや再利用が可能なコンポーネントベースのソフトウェアです。Workspace コンポーネントを Web アプリケーションで容易に統合できます。
 
-概念的な詳細については、「[再利用可能なコンポーネントの説明](/help/forms/using/description-reusable-components.md)」を参照し、コンポーネントの使用手順については、「[WebアプリケーションでのAEM Forms Workspaceコンポーネントの統合](/help/forms/using/description-reusable-components.md)」を参照してください。
+概念的な情報について詳しくは、[再利用可能なコンポーネントの詳細](/help/forms/using/description-reusable-components.md)を参照してください。コンポーネントを使用する手順について詳しくは、[Web アプリケーションでの AEM Forms Workspace コンポーネントの統合](/help/forms/using/description-reusable-components.md)を参照してください。
 
 ## AEM Forms Workspace コードの構築 {#building-html-workspace-code}
 
 ### SDK パッケージ {#sdk-package}
 
-パッケージには AEM Forms Workspace のソースコードが含まれます。パッケージは`[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`から入手できます。
+パッケージには AEM Forms Workspace のソースコードが含まれます。パッケージは、`[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip` に格納されています。
 
 これは主としてカスタマイズ向けで、
 
 * Ship、Debug、および Dev プロファイルの CRX パッケージ（下記の [CRX パッケージ](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)に記載しています）
 * カスタマイズされたコードの縮小バージョン（セマンティックの変更用）
 
-#### WS コンテンツ  {#ws-content}
+#### WS コンテンツ {#ws-content}
 
 * client-pkg:
 
@@ -195,7 +195,7 @@ AEM Forms Workspaceはコンポーネントベースのソフトウェアなの�
 
 * client-html:
 
-   * assembly - AEM Forms Workspace SDKを作成するスクリプトで使用されるzip.xmlを含みます。
+   * assembly - AEM Forms Workspace SDK を作成するスクリプトが使用する zip.xml を含みます。
    * src/main/webapp -
 
       * css - AEM Forms Workspace のスタイルシートを含みます。
@@ -204,21 +204,21 @@ AEM Forms Workspaceはコンポーネントベースのソフトウェアなの�
 
          * libs - AEM Forms Workspace で使用されているすべてのサードパーティライブラリを含みます。
          * licenses - HTML および JS ファイルのライセンス、およびこれらのライセンスをそれぞれのソースファイルの前に置くコードを含みます。
-         * minifier — カスタマイズされたJavaScriptコードの組み合わせ、縮小、および醜怪化に使用されます。
-         * resourcejs_optimizer - JavaScriptソースの組み合わせ、縮小、および醜怪化に使用されます。
+         * minifier - カスタマイズされた JavaScript コードの結合、縮小および醜怪化に使用されます。
+         * resourcejs_optimizer - JavaScript ソースの結合、縮小および醜怪化に使用されます。
          * resource_generator - register.js および modelcontrollerpath.js の生成に使用されます。
          * runtime:
 
             * initializer - AEM Forms Workspace で使用するバックボーンビューやモデルを初期化するために使用する initializer.js を含みます。
             * models - AEM Forms Workspace にあるすべてのコンポーネントのバックボーンモデルを含みます。
-            * routes - AEM Forms Workspaceに開始プロセス、TODO、追跡、および環境設定を読み込むJavaScriptファイルとHTMLファイルを含みます。
+            * routes - AEM Forms Workspace に開始プロセス、todo、トラッキングおよび環境設定を読み込む JavaScript ファイルと HTML ファイルを含みます。
             * services - AEM Forms Workspace 内で使用されている service.js を含みます。すべてのサーバー呼び出しは service.js を介して行われます。
             * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのビューの HTML ファイルを含みます。
             * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（javascrip）を含みます。
             * views - AEM Forms Workspace 内のすべてのコンポーネントのバックボーンビューを含みます。
          * main.js
          * router.js
-      * libs/ws:pdf.htmlとpluginPing.pdfはAEM Forms WorkspaceでPDF formsを読み込むために使用され、WSNextAdapter.swfはAEM Forms WorkspaceでSWFフォームとガイドを読み込むために使用されます。
+      * libs/ws：pdf.html および pluginPing.pdf は、PDF フォームを AEM Forms Workspace に読み込むのに使用されます。WSNextAdapter.swf は、SWF フォームおよび Guide を AEM Forms Workspace に読み込むのに使用されます。
       * locales:
 
          * de-DE - ドイツ語の translation.json を含みます。
@@ -232,9 +232,9 @@ AEM Forms Workspaceはコンポーネントベースのソフトウェアなの�
 
 
 
-### CRX パッケージ  {#crx-package}
+### CRX パッケージ {#crx-package}
 
-CRX パッケージは CRX™ リポジトリにデプロイすることができます。`[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`から入手できます。
+CRX パッケージは CRX™ リポジトリにデプロイすることができます。これは、`[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip` に格納されています。
 
 このパッケージは、以下の 3 つのプロフィルを使用して構築することができます。
 
@@ -244,12 +244,12 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 | Debug プロファイル | このプロファイルは、適度に効率的な CRX パッケージを作成します。このパッケージのサイズは、Ship プロファイルを使用して作成したパッケージよりも若干大きくなります。このパッケージにはほとんどの JavaScript ファイルが単一の JS ファイルに結合されています。 | このプロファイルはデバッグに使用します。 |
 | Dev プロファイル | このプロファイルは、最も大きなサイズの CRX パッケージを作成します。すべての JavaScript ファイルは SDK パッケージ内にあるため、別々に入手することができます。 | セマンティックの変更を組み込む場合はこのプロファイルを使用します。 |
 
-#### Ship プロファイル  {#ship-profile}
+#### Ship プロファイル {#ship-profile}
 
 #### コマンド {#command}
 
 * クライアントに出荷される Source パッケージの client-pkg フォルダーへの mvn clean -P Ship install
-* Shipプロファイルコマンドの実行は、64ビットJVMでのみ機能します。
+* Ship プロファイルコマンド実行は 64 ビット JVM でのみ 動作します。
 
 #### WS コンテンツ {#ws-content-1}
 
@@ -291,7 +291,7 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 
 #### Debug プロファイル {#debug-profile}
 
-#### Command {#command-1}
+#### コマンド {#command-1}
 
 * client-pkg への mvn clean -P Debug install
 * Debug プロファイルコマンド実行は 64 ビット JVM でのみ機能します。
@@ -336,11 +336,11 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 
 #### Dev プロファイル {#dev-profile}
 
-#### コマンド{#command-2}
+#### コマンド {#command-2}
 
 client-pkg への mvn clean -P Dev install
 
-#### WS コンテンツ  {#ws-content-3}
+#### WS コンテンツ {#ws-content-3}
 
 * css - style.css、ie.css および jqueri-ui.css を含みます。
 * images - すべての画像を含みます。
@@ -353,7 +353,7 @@ client-pkg への mvn clean -P Dev install
 
       * initializer - initializer.js と modelcontrollerpath.js を含みます。
       * models - AEM Forms Workspace 内のすべてのコンポーネントのモデルを含みます。
-      * routes - AEM Forms Workspaceに開始プロセス、TODO、追跡、および環境設定を読み込むJavaScriptファイルとHTMLファイルを含みます。
+      * routes - AEM Forms Workspace に開始プロセス、todo、トラッキングおよび環境設定を読み込む JavaScript ファイルと HTML ファイルを含みます。
       * services - AEM Forms Workspace 内で使用されている service.js を含みます。
       * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
       * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（javascrip）を含みます。
