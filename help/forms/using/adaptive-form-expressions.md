@@ -1,19 +1,19 @@
 ---
 title: アダプティブフォームの式
-seo-title: アダプティブフォームの式
+seo-title: Adaptive Form Expressions
 description: アダプティブフォームの数式を使って自動検証や演算を追加したり、セクションの可視性をオン/オフに切り替えたりします。
-seo-description: アダプティブフォームの数式を使って自動検証や演算を追加したり、セクションの可視性をオン/オフに切り替えたりします。
+seo-description: Use adaptive forms expressions to add automatic validation, calculation, and turn visibility of a section on or off.
 uuid: c274dce5-8b87-472f-bff5-53b246fa6584
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '2746'
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 96%
 
 アダプティブフォームは、ダイナミックなスクリプト機能によってエンドユーザーのフォームへの入力作業を最適化および簡素化します。式を記述することで、フィールドやパネルのダイナミックな表示／非表示など、様々な動作を追加できます。また、レポートを作成する計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。動的動作は、ユーザー入力や事前入力データに基づいています。
 
-アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
+アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。これらの式は、特定のタイプの値を返します。アダプティブフォームクラス、イベント、オブジェクト、パブリック API の完全なリストについては、「[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)」を参照してください。
 
 ## 式を記述するためのベストプラクティス {#best-practices-for-writing-expressions}
 
@@ -29,7 +29,7 @@ ht-degree: 96%
 * フォームをまたぐフィールド名およびパネル名には、一意の名前を使用します。式を記述する際に使用したフィールド名と競合する可能性を回避できます。
 * 複数行にわたる式を記述する場合、セミコロンを使用してステートメントを終了します。
 
-## 繰り返しパネルを含む式のベストプラクティス  {#best-practices-for-expressions-involving-repeating-panel}
+## 繰り返しパネルを含む式のベストプラクティス {#best-practices-for-expressions-involving-repeating-panel}
 
 繰り返しパネルは、スクリプト API または事前入力済みデータを使用した、動的に追加または削除されたパネルのインスタンスです。繰り返しパネルの使用に関して詳しくは、[繰り返し可能なセクションでのフォーム作成](/help/forms/using/creating-forms-repeatable-sections.md)を参照してください。
 
@@ -46,7 +46,7 @@ ht-degree: 96%
 
 ## 式のタイプ {#expression-types}
 
-アダプティブフォームでは、式を記述して、動的なフィールドやパネルの表示/非表示などの動作を追加できます。 また、式を記述することで、計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。アダプティブフォームは次の数式をサポートします:
+アダプティブフォームでは、フィールドやパネルを動的に表示または非表示にするなどの動作を追加する式を記述できます。また、式を記述することで、計算指標フィールドを追加したり、フィールドを読み取り専用にしたり、検証ロジックを追加したりすることもできます。アダプティブフォームは次の式をサポートします:
 
 * **[アクセス式](#access-expression-enablement-expression)**：フィールドを有効／無効にします。
 * **[式の計算](#calculate-expression)**：フィールドの値を自動計算します。
@@ -59,7 +59,7 @@ ht-degree: 96%
 * **[表示式](#visibility-expression)**：フィールドおよびパネルの表示をコントロールします。
 * **[ステップ完了の式](#step-completion-expression)**：ユーザーがウィザードの次のステップへ進むのを防ぎます。
 
-### アクセス式（イネーブルメント式）{#access-expression-enablement-expression}
+### アクセス式（イネーブルメント式） {#access-expression-enablement-expression}
 
 アクセス式を使用してフィールドを有効／無効にできます。式でフィールドの値が使用されている場合、フィールドの値が変更されると常に式がトリガーされます。
 
@@ -69,7 +69,7 @@ ht-degree: 96%
 
 **例**：**field1** の値が **X** に設定されている場合にのみフィールドを有効にするためのアクセス式は、`field1.value == "X"` です。
 
-### 式の計算 {#calculate-expression}
+### 計算式 {#calculate-expression}
 
 式の計算は、式を使用してフィールドの値を自動計算するのに使用されます。通常、この式には、他のフィールドの value プロパティを使用します。例えば、`field2.value + field3.value` のようになります。`field2` または `field3` の値が変わるたびに、式が再トリガーされ、値が再計算されます。
 
@@ -91,10 +91,10 @@ ht-degree: 96%
 
 ### 初期化スクリプト {#initialization-script}
 
-アダプティブフォームの初期化時に、初期化スクリプトがトリガーされます。 シナリオによっては、初期化スクリプトは以下のような方法で動作します。
+アダプティブフォームを初期化すると、初期化スクリプトがトリガーされます。シナリオに応じて、初期化スクリプトは以下のように動作します。
 
-* アダプティブフォームが、データの事前入力なしでレンダリングされた場合、初期化スクリプトは、フォームが初期化された後で実行されます。
-* アダプティブフォームがデータの事前入力と共にレンダリングされる場合、スクリプトは事前入力操作が完了した後で実行されます。
+* アダプティブフォームがデータの事前入力なしでレンダリングされた場合、初期化スクリプトはフォームが初期化された後で実行されます。
+* アダプティブフォームがデータの事前入力ありでレンダリングされると、スクリプトは事前入力操作が完了した後で実行されます。
 * アダプティブフォームのサーバー側の再検証がトリガされた場合、初期化スクリプトが実行されます。
 
 **適用先**：フィールドおよびパネル
@@ -162,7 +162,7 @@ ht-degree: 96%
 >
 >フィールドの値がプログラムによって変更された場合、値コミットスクリプトの実行を無効にできます。無効にするには、https://&#39;[server]:[port]&#39;/system/console/configMgr に移動して、**互換性のある Adaptive Forms のバージョン**&#x200B;を **AEM Forms 6.1** に変更します。以降、値コミットスクリプトは、ユーザーがフィールドの値を UI から変更した場合にのみ実行されます。
 
-### 表示式  {#visibility-expression}
+### 表示式 {#visibility-expression}
 
 表示式は、フィールド／パネルの表示を制御するのに使用されます。通常、表示式にはフィールドの value プロパティが使用され、値が変更されるたびに再トリガーされます。
 
@@ -172,7 +172,7 @@ ht-degree: 96%
 
 **例**：**field1** の値が&#x200B;**男性**&#x200B;に設定されている場合にのみ表示されるパネルの表示式を以下に示します。`field1.value == "Male"`
 
-### ステップ完了の式 {#step-completion-expression}
+### 手順完了式 {#step-completion-expression}
 
 ステップ完了の式は、ユーザーがウィザードの次のステップへ進むのを防ぎます。これらの式は、パネルにウィザードのレイアウト（1 度に 1 ステップずつ表示するマルチステップフォーム）がある場合に使用されます。ユーザーは、現在のセクションで必要なすべての値が入力されて有効である場合にのみ、次のステップ、パネルまたはサブセクションに移動できます。
 
@@ -206,7 +206,7 @@ ht-degree: 96%
 
 表示形式は、異なる形式でデータを表示するのに使用できます。例えば、ハイフンを使用した電話番号、郵便番号または日付選択を表示するための表示形式を使用できます。表示形式は、コンポーネントの編集ダイアログにある「**パターン**」セクションから選択できます。前述の検証パターンに類似したカスタム表示パターンを記述することもできます。
 
-### GuideBridge - API とイベント  {#guidebridge-apis-and-events}
+### GuideBridge - API とイベント {#guidebridge-apis-and-events}
 
 GuideBridgeは、ブラウザのメモリーモデルにおいてアダプティブフォームを操作するのに使うAPIが集まったものです。Guide Bridge API、クラスメソッド、公開されたイベントに関する詳細の紹介は、[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/)を参照してください。
 
@@ -214,17 +214,17 @@ GuideBridgeは、ブラウザのメモリーモデルにおいてアダプティ
 >
 >式に GuideBridge イベントリスナーを使用しないことをお勧めします。
 
-#### 様々な式での GuideBridge の使用方法  {#guidebridge-usage-in-various-expressions}
+#### 様々な式での GuideBridge の使用方法 {#guidebridge-usage-in-various-expressions}
 
 * フォームフィールドをリセットするには、ボタンのクリック式で `guideBridge.reset()` API をトリガーします。同様に、クリック式として呼び出すことができる送信 API `guideBridge.submit()`**があります。**
 
 * `setFocus()` API を使用して、様々なフィールドまたはパネル間でフォーカスを設定できます（パネルの場合、フォーカスは自動的に最初のフィールドに設定されます）。`setFocus()` には、パネル間ナビゲーション、前／次のトラバーサル、特定のフィールドへのフォーカスの設定など、幅広いオプションが用意されています。例えば、次のパネルに移動するには、`guideBridge.setFocus(this.panel.somExpression, 'nextItem').` を使用します。
 
-* アダプティブフォームまたはその特定のパネルを検証するには、`guideBridge.validate(errorList, somExpression).`を使用します。
+* アダプティブフォームやその特定のパネルを検証するには、`guideBridge.validate(errorList, somExpression).` を使用します。
 
-#### 式外での GuideBridge の使用 {#using-guidebridge-outside-expressions-nbsp}
+#### 式外での GuideBridge の使用  {#using-guidebridge-outside-expressions-nbsp}
 
-GuideBridge API を式の外で使用することもできます。例えば、アダプティブフォームをホストしているページHTMLとフォームモデル間の通信を設定するのにGuideBridge APIを使用することができます。また、フォームをホストしている Iframe の親から取得した値を設定することもできます。
+GuideBridge API を式の外で使用することもできます。例えば、GuideBridge APIを使用して、アダプティブフォームをホストするページ HTML とフォームモデル間の通信を設定できます。また、フォームをホストしている Iframe の親から取得した値を設定することもできます。
 
 前述の例で GuideBridge API を使用するには、GuideBridge のインスタンスを取得します。インスタンスを取得するには、`window` オブジェクトの `bridgeInitializeStart` イベントをリッスンします。
 
@@ -254,7 +254,7 @@ window.addEventListener("bridgeInitializeStart", function(evnt) {
 
 #### GuideBridge イベント {#guidebridge-events}
 
-また、GuideBridge は、ホスティングページ上の外部スクリプト用に特定のイベントを提供します。外部スクリプトは、これらのイベントをリッスンして様々な操作を実行できます。例えば、フォームのユーザー名が変更される場合は、ページのヘッダーに表示される名前も常に変更されます。このようなイベントに関する詳細は、[アダプティブフォームのJavaScriptライブラリAPIリファレンス](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)を参照してください。
+また、GuideBridge は、ホスティングページ上の外部スクリプト用に特定のイベントを提供します。外部スクリプトは、これらのイベントをリッスンして様々な操作を実行できます。例えば、フォームのユーザー名が変更される場合は、ページのヘッダーに表示される名前も常に変更されます。これらのイベントについて詳しくは、[アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/jp/aem-forms/6/javascript-api/GuideBridge.html)を参照してください。
 
 以下のコードを使用してハンドラーを登録します。
 
@@ -266,9 +266,9 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 });
 ```
 
-### フィールドのカスタムパターンの作成  {#creating-custom-patterns-for-a-field}
+### フィールドのカスタムパターンの作成 {#creating-custom-patterns-for-a-field}
 
-前述のように、アダプティブフォームでは、作成者が検証または表示形式のパターンを提供することができます。デフォルトパターンの使用に加えて、アダプティブフォームコンポーネントに再利用可能なカスタムパターンを設定することも可能です。例えば、テキストフィールドや数値フィールドを定義できます。定義したら、指定したタイプのコンポーネントのすべてのフォームでこれらのパターンを使用できます。例えば、テキストフィールドのカスタムパターンを作成し、アダプティブフォームのテキストフィールドで使用することができます。 コンポーネントの編集ダイアログでパターンセクションにアクセスすることで、カスタムパターンを選択できます。パターン設定またはフォーマットに関する詳細は、「[HTML5 のパターン形式文字列サポート](/help/forms/using/picture-clause-support.md)」を参照してください。
+前述のように、アダプティブフォームでは、作成者が検証または表示形式のパターンを提供することができます。デフォルトパターンの使用に加えて、アダプティブフォームコンポーネントに再利用可能なカスタムパターンを設定することも可能です。例えば、テキストフィールドや数値フィールドを定義できます。定義したら、指定したタイプのコンポーネントのすべてのフォームでこれらのパターンを使用できます。例えば、テキストフィールドのカスタムパターンを作成して、アダプティブフォームのテキストフィールドで使用することができます。コンポーネントの編集ダイアログでパターンセクションにアクセスすることで、カスタムパターンを選択できます。パターン設定またはフォーマットに関する詳細は、「[HTML5 のパターン形式文字列サポート](/help/forms/using/picture-clause-support.md)」を参照してください。
 
 特定のフィールドタイプのカスタムパターンを作成して、同じタイプの他のフィールドに再利用するには、以下の手順を実行します。
 
