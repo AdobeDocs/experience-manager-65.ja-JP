@@ -1,8 +1,8 @@
 ---
 title: レンダリングコンポーネントのコンテンツフラグメントの設定
-seo-title: レンダリングコンポーネントのコンテンツフラグメントの設定
+seo-title: Content Fragments Configuring Components for Rendering
 description: レンダリングコンポーネントのコンテンツフラグメントの設定
-seo-description: レンダリングコンポーネントのコンテンツフラグメントの設定
+seo-description: Content Fragments Configuring Components for Rendering
 uuid: 3f5aaf36-e6a7-4a3c-b305-e35ebcc98d0d
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -11,9 +11,9 @@ discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 86%
+workflow-type: ht
+source-wordcount: '455'
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 86%
 >
 >アドバンスドサービスを使用することなく、コンテンツフラグメント API のみを使用するコンポーネントを新規に作成できます。ただし、この場合は、適切な処理をおこなうようにコンポーネントを開発する必要がありますので、
 >
->したがって、コアコンポーネントを使用することをお勧めします。
+>そのため、コアコンポーネントを使用することをお勧めします。
 
 ## 設定が必要なアドバンスドサービスの定義 {#definition-of-advanced-services-that-need-configuration}
 
@@ -48,7 +48,7 @@ ht-degree: 86%
 * Dispatcher は、参照されるフラグメントをフラッシュします（フラグメントを含むページが再度公開される場合）。
 * 段落ベースのレンダリングの使用
 
-これらの機能を1つ以上使用する必要がある場合は（通常）、標準搭載の機能を使用する方が、一から開発するよりも簡単です。
+これらの機能を 1 つまたは複数必要とする場合、（通常は）標準搭載の機能を使用するほうが一から開発するよりも簡単です。
 
 ## OSGi サービス - コンテンツフラグメントコンポーネントの設定 {#osgi-service-content-fragment-component-configuration}
 
@@ -58,7 +58,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->詳しくは、 [OSGi](/help/sites-deploying/configuring-osgi.md)の設定を参照してください。
+>詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 次に例を示します。
 
@@ -129,7 +129,7 @@ OSGi の設定は次のとおりです。
 
 >[!CAUTION]
 >
->これは、6.5以降のマイルストーンで変更される可能性があります。
+>これは、6.5 以降のマイルストーンで変更される可能性があります。
 
 ## 例 {#example}
 
