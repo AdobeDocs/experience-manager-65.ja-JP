@@ -1,20 +1,20 @@
 ---
 title: HTML5 フォームのスクリプティングのサポート
-seo-title: HTML5 フォームのスクリプティングのサポート
+seo-title: Scripting support for HTML5 forms
 description: JavaScript と FormCalc プロパティ、および HTML5 フォームでサポートされているメソッド。
-seo-description: JavaScript と FormCalc プロパティ、および HTML5 フォームでサポートされているメソッド。
+seo-description: JavaScript, FormCalc properties, and other methods that are supported in HTML5 Forms.
 uuid: 697d5ec4-c818-41e4-b813-883c01b7ff3a
 contentOwner: robhagat
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '3911'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '3892'
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 97%
    <td>ユーザーの操作に応じて変更される前のフィールドのコンテンツを指定します。この値は「元に戻す」と同様に、再び呼び出すことができます。</td>
    <td><p>ドロップダウンリストとリストボックスでは機能しません。次の場合、<code>PrevText </code> は正常に機能しません。</p>
     <ul>
-     <li>iPadの数値フィールドに一部の特殊文字キー(たとえば、$、(、)、&amp;、@など)を入力すると、 </li>
+     <li>iPad の数値フィールド上で一部の特殊文字キー（たとえば、$、（,）、&amp;、@ など）を入力した場合、および </li>
      <li>日付フィールド（カレンダーをとおして日付が入力される場合）<br /> </li>
     </ul> <p>スクリプトによる値の設定はサポートされていません。</p> </td>
   </tr>
@@ -48,7 +48,7 @@ ht-degree: 97%
   <tr>
    <td><code>newtext</code></td>
    <td>ユーザーの操作に応じて変更された後のフィールドのコンテンツを指定します。</td>
-   <td><p>次の場合、 <code>newText</code>プロパティは正しく機能しません。</p>
+   <td><p><code>newText</code> プロパティは、次の場合は正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -63,7 +63,7 @@ ht-degree: 97%
   <tr>
    <td>change</td>
    <td>ユーザーがフィールドに入力したり貼り付けたりした直後の値を表します。 </td>
-   <td><p>次の場合、changeプロパティは正しく機能しません。</p>
+   <td><p>change プロパティは、次の場合は正しく機能しません。</p>
     <ul>
      <li>テキストを選択置換するとき。</li>
      <li>テキストの削除、コピー、およびペーストするとき。</li>
@@ -85,7 +85,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-### $ホスト {#host}
+### $host {#host}
 
 <table>
  <tbody>
@@ -97,12 +97,12 @@ ht-degree: 97%
   <tr>
    <td><code>apptype</code></td>
    <td>ホストのアプリケーションタイプを返します。クライアントアプリケーションのみで使用できます。</td>
-   <td>戻り値 <code>HTML 5</code>.</td>
+   <td><code>HTML 5</code> を返します。</td>
   </tr>
   <tr>
    <td><code>name</code></td>
    <td>現在のアプリケーションの名前を返します。</td>
-   <td>ブラウザー名とそのバージョンを返します。例えば、Chromeブラウザーでは、返される値は <code>Chrome &lt;version&gt;.</code></td>
+   <td>ブラウザー名とそのバージョンを返します。たとえば、Chrome ブラウザーでは、返される値は次の通りです。 <code>Chrome &lt;version&gt;.</code></td>
   </tr>
   <tr>
    <td><code>numPages</code></td>
@@ -218,8 +218,8 @@ ht-degree: 97%
   </tr>
   <tr>
    <td><code>fillcolor</code></td>
-   <td>このフィールドの背景色の値を指定します。別々にborder.fill.presenceプロパティをvisibleに設定する必要があります。</td>
-   <td>それはフィールドのデフォルトの色を正しく返しません。</td>
+   <td>このフィールドの背景色の値を指定します。別途、border.fill.presence プロパティを visible に設定する必要があります。</td>
+   <td>フィールドのデフォルトの色を正しく返しません。</td>
   </tr>
   <tr>
    <td><code>border</code></td>
@@ -238,8 +238,8 @@ ht-degree: 97%
   </tr>
   <tr>
    <td><code>borderColor</code></td>
-   <td>このフィールドの境界線の色の値を指定します。別々にborder.edge.presenceプロパティをvisibleに設定する必要があります。</td>
-   <td>それはフィールドのデフォルトの境界線の色を正しく返しません。</td>
+   <td>このフィールドの境界線の色の値を指定します。別途、border.edge.presence プロパティを visible に設定する必要があります。</td>
+   <td>フィールドのデフォルトの境界線の色を正しく返しません。</td>
   </tr>
   <tr>
    <td><code>length</code></td>
@@ -425,13 +425,13 @@ ht-degree: 97%
    <td>なし</td>
   </tr>
   <tr>
-   <td>境界線</td>
+   <td>border</td>
    <td>border オブジェクトは、オブジェクトを囲む境界線を表します。</td>
    <td>なし</td>
   </tr>
   <tr>
    <td>borderColor</td>
-   <td>このフィールドの境界線の色の値を指定します。別々にborder.edge.presenceプロパティをvisibleに設定する必要があります。</td>
+   <td>このフィールドの境界線の色の値を指定します。別途、border.edge.presence プロパティを visible に設定する必要があります。</td>
    <td>なし</td>
   </tr>
   <tr>
@@ -507,7 +507,7 @@ ht-degree: 97%
    <td>現在のオブジェクトのすべての子オブジェクトのリストを返します。</td>
    <td>
     <ul>
-     <li>xfa.nodes, descに対してはサポートされていません。</li>
+     <li>xfa.nodes、desc ではサポートされていません。</li>
      <li>PDF と HTML に対してレポートされるノード数は異なります。 </li>
     </ul> </td>
   </tr>
@@ -725,7 +725,7 @@ ht-degree: 97%
    <td> </td>
   </tr>
   <tr>
-   <td>存在</td>
+   <td>presence</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
@@ -773,7 +773,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>境界線</td>
+   <td>border</td>
    <td>border オブジェクトは、checkButton オブジェクトを囲む境界線を表します。 </td>
    <td>変更はモデルに反映され、スクリプティングに使用できますが、HTML 要素には同期されません。したがって、変更は UI には反映されません。<br /> </td>
   </tr>
@@ -790,7 +790,7 @@ ht-degree: 97%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>境界線</td>
+   <td>border</td>
    <td>border オブジェクトは、choiceList オブジェクトを囲む境界線を表します。</td>
    <td> </td>
   </tr>
@@ -801,7 +801,7 @@ ht-degree: 97%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 境界線 | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
+| border | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## 画像 {#image}
 
@@ -829,13 +829,13 @@ ht-degree: 97%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 境界線 | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
+| border | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## numericEdit {#numericedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 境界線 | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
+| border | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
 
 ## object {#object}
 
@@ -903,7 +903,7 @@ ht-degree: 97%
    <td>なし</td>
   </tr>
   <tr>
-   <td>境界線</td>
+   <td>border</td>
    <td>このフィールドを囲む境界線を指定します。</td>
    <td>なし</td>
   </tr>
@@ -949,7 +949,7 @@ ht-degree: 97%
   </tr>
   <tr>
    <td>caption</td>
-   <td>  captionオブジェクトは、フォームデザインオブジェクトに関連付けられた説明ラベルを表します。<br /> </td>
+   <td> <br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -963,12 +963,12 @@ ht-degree: 97%
    <td>なし</td>
   </tr>
   <tr>
-   <td>存在</td>
+   <td>presence</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>アクセス</td>
+   <td>access</td>
    <td>コンテナのコンテンツへのユーザーアクセスを制御します。オブジェクト、例えばサブフォーム。</td>
    <td>exclgrp 内の個々の項目については、常にオープンを返します。 </td>
   </tr>
@@ -1017,7 +1017,7 @@ ht-degree: 97%
  </tbody>
 </table>
 
-## 境界線 {#border}
+## border {#border}
 
 <table>
  <tbody>
@@ -1109,13 +1109,13 @@ ht-degree: 97%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 存在 | オブジェクトの可視性を指定します。 | なし |
+| presence | オブジェクトの可視性を指定します。 | なし |
 
 ## FormCalc {#formcalc}
 
 FormCalc は e フォーム中心のロジックと計算のルートを作成するための XFA 固有の言語です。FormCalculation は強力なビルド関数のセットを提供します。
 
-### FormCalc によってサポートされている関数  {#formcalc-supported-functions}
+### FormCalc によってサポートされている関数 {#formcalc-supported-functions}
 
 ### FormCalc 式のサポート {#formcalc-expression-support}
 
@@ -1151,7 +1151,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    <td>if (a&gt;b) then 2 endif</td>
   </tr>
   <tr>
-   <td>「</td>
+   <td>while</td>
    <td><br type="_moz" /> </td>
    <td>while (i lt 5) do i = i + 1 endwhile</td>
   </tr>
@@ -1163,7 +1163,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>for each</td>
    <td><br type="_moz" /> </td>
-   <td>for each i in (1, 2, 3)  <br /> do s = s + i endfor</td>
+   <td>for each i in (1, 2, 3) <br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>関数の宣言</td>
@@ -1173,14 +1173,14 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
  </tbody>
 </table>
 
-### Acrobat API のサポート  {#acrobat-api-support}
+### Acrobat API のサポート {#acrobat-api-support}
 
 1. **演算関数**
 
    1. Abs()
    1. Avg()
    1. Ceil()
-   1. 回数()
+   1. Count()
    1. Floor()
    1. Max()
    1. Min()
@@ -1216,7 +1216,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    1. Ppmt()
    1. Pv()
    1. Rate()
-   1. 用語()
+   1. Term()
 
 1. **論理関数**
 
@@ -1233,7 +1233,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
    1. Len()
    1. Lower()
    1. Ltrim()
-   1. 置換()
+   1. Replace()
    1. Right()
    1. Rtrim()
    1. Space()
@@ -1244,7 +1244,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
 
 1. **日付と時間**
 
-   1. 日付()
+   1. Date()
    1. num2date()
    1. DateFmt()
 
@@ -1257,12 +1257,12 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   </tr>
   <tr>
    <td>console.println()</td>
-   <td>このAcrobat APIは、JavaScriptコンソールに出力をダンプします。</td>
+   <td>この Acrobat API は、出力された toJavaScript コンソールをダンプします。</td>
    <td> </td>
   </tr>
   <tr>
    <td>app.alert()</td>
-   <td>このAcrobat APIは、JavaScriptポップアップを通じて警告メッセージを送信します。</td>
+   <td>この Acrobat API は、アラートメッセージ throughJavaScript のポップアップを送信します。</td>
    <td> </td>
   </tr>
   <tr>
@@ -1328,7 +1328,7 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>app.formsVersion</td>
    <td>ビューアフォームソフトウェアのバージョン番号。スクリプトで下位互換性を保つ場合、このプロパティを確認して、ソフトウェアの新しいバージョンにあるオブジェクト、プロパティ、またはメソッドが使用できるかどうかを特定します。</td>
-   <td>11.001は常に。</td>
+   <td>常に 11.001。</td>
   </tr>
   <tr>
    <td>app.language</td>
@@ -1338,19 +1338,19 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
  </tbody>
 </table>
 
-## サポートされる XFA イベント  {#supported-xfa-events}
+## サポートされる XFA イベント {#supported-xfa-events}
 
 次のクライアント側の XFA イベントがサポートされていません。
 
 * Initialize
 * Validate
 * Calculate
-* クリック
+* Click
 * Enter
 * Exit
-* 変更点
+* Change
 * ValidationState
 
 >[!NOTE]
 >
->HTML5 フォームはクライアント側（ブラウザー）でレンダリングされます。サーバー側のスクリプトではなく、クライアント側の **validate** スクリプトおよび **calculate** スクリプトの使用をお勧めします。
+>HTML5 フォームはクライアントサイド（ブラウザー）でレンダリングされます。サーバーサイドのスクリプトではなく、クライアントサイドの **validate** スクリプトと **calculate** スクリプトを使用することをお勧めします。
