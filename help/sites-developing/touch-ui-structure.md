@@ -1,8 +1,8 @@
 ---
 title: AEM タッチ操作対応 UI の構造
-seo-title: AEM タッチ操作対応 UI の構造
+seo-title: Structure of the AEM Touch-Enabled UI
 description: AEM に実装されているタッチ操作対応 UI には、基盤となる原則があり、いくつかの主要な要素で構成されています
-seo-description: AEM に実装されているタッチ操作対応 UI には、基盤となる原則があり、いくつかの主要な要素で構成されています
+seo-description: The touch-optimized UI, as implemented in AEM, has several underlying principles and is made up of several key elements
 uuid: 9a255238-1adc-4a40-9c37-30cb53ffb26c
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 55dba890-4847-4986-b272-33480bc1d573
 exl-id: e562b289-5d8b-4fa8-ad1c-fff5f807a45e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '861'
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 ヘッダーバーにはグローバル要素が表示されます。
 
-* ロゴと、現在使用している特定の製品/ソリューションAEMの場合も、グローバルナビゲーションへのリンクを形成します。
+* ロゴおよび現在使用している特定の製品またはソリューション（AEM の場合は、グローバルナビゲーションへのリンクにもなります）
 * 検索
 * ヘルプリソースにアクセスするためのアイコン
 * その他のソリューションにアクセスするためのアイコン
@@ -90,7 +90,7 @@ UI はモバイルデバイスとデスクトップデバイスの両方に対�
 
 エディターフレームによって編集機能が実現されます。
 
-エディターフレームは、すべてのページオーサリング要素のためのコンテナ（抽象）です。**&#x200B;コンテンツフレームの上にあり、以下が含まれます。
+エディターフレームは、すべてのページオーサリング要素のためのコンテナ（抽象）です。コンテンツフレームの上にあり、以下が含まれます&#x200B;*。*
 
 * 上部のツールバー
 * サイドパネル
@@ -148,7 +148,7 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 >
 >レイヤーは強力な概念であり、ページコンテンツのユーザーのビューや、ページコンテンツとのインタラクションに影響します。独自のレイヤーを開発するときは、終了時にレイヤーがクリーンアップされることを確認する必要があります。
 
-### レイヤースイッチャー  {#layer-switcher}
+### レイヤースイッチャー {#layer-switcher}
 
 レイヤースイッチャーを使用すると、使用するレイヤーを選択できます。閉じると、現在使用中のレイヤーが示されます。
 
@@ -166,6 +166,6 @@ AEM には、編集、プレビュー、注釈など、ページオーサリン�
 
 ## その他の情報 {#further-information}
 
-タッチ操作対応UIに関する概念の詳細については、「 [AEMタッチ操作対応UIの概念](/help/sites-developing/touch-ui-concepts.md) 」の記事を参照してください。
+タッチ操作対応 UI に関する概念について詳しくは、[AEM タッチ操作対応 UI の概念](/help/sites-developing/touch-ui-concepts.md)の記事を参照してください。
 
-技術情報について詳しくは、タッチ操作対応ページエディターの[JSドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
+技術情報について詳しくは、タッチ操作対応ページエディター用の [JS ドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)を参照してください。
