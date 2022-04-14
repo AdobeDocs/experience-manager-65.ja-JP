@@ -1,20 +1,20 @@
 ---
 title: HTML5 forms サービスプロキシ
-seo-title: HTML5 forms サービスプロキシ
+seo-title: HTML5 forms service proxy
 description: HTML5 forms サービスプロキシは、送信サービスのためのプロキシを登録する設定です。サービスプロキシを設定するには、リクエストパラメーター submissionServiceProxy を使って送信サービスの URL を指定します。
-seo-description: HTML5 forms サービスプロキシは、送信サービスのためのプロキシを登録する設定です。サービスプロキシを設定するには、リクエストパラメーター submissionServiceProxy を使って送信サービスの URL を指定します。
+seo-description: HTML5 forms Service Proxy is a configuration to register a proxy for the submission service. To configure Service Proxy, specify the URL of submission service through request parameter submissionServiceProxy.
 uuid: 42d6c1da-3945-469d-b429-c33e563ed70c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 081f7c17-4e5d-4c7e-a5c3-5541a29b9d55
 docset: aem65
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: 8f9b10ae-1600-49c2-a061-153a2a89c67e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '697'
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ HTML5 forms サービスプロキシは、送信サービスのためのプロ�
 
 ## サービスプロキシの利点 {#benefits-of-service-proxy-br}
 
-サービスプロキシを使用すると、次のことがなくなります。
+サービスプロキシは次の問題点を解消します。
 
 * HTML5 forms ワークフローでは、HTML5 forms ユーザーに対して送信サービス「/content/xfaforms/submission/default」を開く必要があります。これにより、AEM サーバーは意図しない多くの閲覧者にさらされてしまいます。
 * サービス URL は、フォームのランタイムモデルに埋め込まれます。サービス URL パスを変更することは不可能です。
@@ -44,9 +44,9 @@ HTML5 forms サービスプロキシのトポロジー
 
 HTML5 forms は AEM サーバーに接続して、サービス側スクリプト、Web サービス、および送信を実行します。HTML5 forms の XFA ランタイムは、AEM サーバーに接続するためのさまざまなパラメーターを付けて、「/bin/xfaforms/submitaction」エンドポイントで Ajax コールを使用します。HTML5 forms は AEM サーバーに接続して、次の操作を実行します。
 
-#### サーバー側スクリプトと Web サービスの実行  {#execute-server-sided-scripts-and-web-services}
+#### サーバー側スクリプトと Web サービスの実行 {#execute-server-sided-scripts-and-web-services}
 
-サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。次の表に、サーバー側スクリプトとWebサービスで使用されるすべてのパラメーターを示します。
+サーバー上で実行するようにマークされているスクリプトは「サーバー側スクリプト」といいます。サーバーサイドスクリプトと web サービスで使用されるすべてのパラメーターを下表に示します。
 
 <table>
  <tbody>
@@ -89,7 +89,7 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
  </tbody>
 </table>
 
-#### データの送信  {#submit-data}
+#### データの送信 {#submit-data}
 
 送信ボタンをクリックすると、HTML5 forms はデータをサーバーに送信します。HTML5 forms がサーバーに送信するすべてのパラメーターを下表に示します。
 
@@ -126,13 +126,13 @@ HTML5 forms は AEM サーバーに接続して、サービス側スクリプト
  </tbody>
 </table>
 
-#### 送信プロキシはどのように機能しますか？  {#how-nbsp-the-nbsp-submit-proxy-works}
+#### 送信プロキシはどのように機能しますか？ {#how-nbsp-the-nbsp-submit-proxy-works}
 
 送信サービスプロキシは、submiturl がリクエストパラメーター内には存在しないようにパスとして機能します。これはパススルーとして機能します。これはリクエストを /bin/xfaforms/submitaction エンドポイントに送信し、応答を XFA ランタイムに送信します。
 
 送信サービスプロキシは、submiturl がリクエストパラメーター内に存在する場合は、トポロジーを選択します。
 
 * AEM サーバーがデータを投稿する場合、プロキシサーバーはパススルーとして機能します。これはリクエストを /bin/xfaforms/submitaction エンドポイントに送信し、応答を XFA ランタイムに送信します。
-* プロキシがデータを投稿する場合、プロキシサービスはsubmitUrlを除くすべてのパラメーターを&#x200B;*/bin/xfaforms/submitaction*&#x200B;エンドポイントに渡し、応答ストリームでxmlバイトを受け取ります。 次に、プロキシサービスはデータ xml バイトを submitUrl に投稿して処理します。
+* プロキシがデータを送信すると、プロキシサービスは、submitUrl を除くすべてのパラメーターを */bin/xfaforms/submitaction* エンドポイントに渡し、応答ストリームで xml バイトを受け取ります。次に、プロキシサービスはデータ xml バイトを submitUrl に投稿して処理します。
 
-* データ（POST リクエスト）をサーバーに送信する前に、HTML5 forms はサーバーに接続していて使用できることを確認します。接続と可用性を確認するために、HTML forms は空のヘッドリクエストをサーバーに送信します。サーバーが使用できる場合は、HTML5 forms はデータ（POST リクエスト）をサーバーに送信します。サーバーが使用できない場合は、エラーメッセージ「*Could not connect to the server,*」が表示されます。 この事前の検出により、ユーザーがフォームに再記入するなどの問題を回避できます。プロキシサーブレットはヘッドリクエストを処理し、例外をスローしません。
+* データ（POST リクエスト）をサーバーに送信する前に、HTML5 forms はサーバーに接続していて使用できることを確認します。接続と可用性を確認するために、HTML forms は空のヘッドリクエストをサーバーに送信します。サーバーが使用できる場合は、HTML5 forms はデータ（POST リクエスト）をサーバーに送信します。サーバーが使用できない場合は、エラーメッセージ「*サーバーに接続できませんでした*」が表示されます。この事前の検出により、ユーザーがフォームに再記入するなどの問題を回避できます。プロキシサーブレットがヘッドリクエストを処理し、例外をスローしません。
