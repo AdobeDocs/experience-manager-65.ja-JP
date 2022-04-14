@@ -1,8 +1,8 @@
 ---
 title: PDF ドキュメントでの有効な証明書と期限切れ証明書の認識
-seo-title: PDF ドキュメントでの有効な証明書と期限切れ証明書の認識
+seo-title: Recognizing valid and expired certificates in PDF documents
 description: PDF ドキュメントで有効な証明書と期限切れ証明書を認識する方法について説明します。
-seo-description: PDF ドキュメントで有効な証明書と期限切れ証明書を認識する方法について説明します。
+seo-description: Learn how to recognize valid and expired certificates in PDF documents.
 uuid: ceeff57a-586f-4f7b-852f-2a637f003d7e
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4559218a-65ba-4577-ad26-7721e28971bc
 exl-id: dfe2823a-3a0d-4e45-8765-f618529e22dd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '217'
+workflow-type: ht
+source-wordcount: '198'
 ht-degree: 100%
 
 ---
