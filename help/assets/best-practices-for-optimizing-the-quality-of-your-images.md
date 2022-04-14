@@ -1,5 +1,5 @@
 ---
-title: 画質最適化のベストプラクティス Dynamic Media
+title: 画質最適化のベストプラクティス（Dynamic Media 内）
 description: Dynamic Media の画質を最適化するベストプラクティスについて説明します。
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
@@ -7,17 +7,17 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 12baf001-dfc9-410a-9821-a3bae1324392
-feature: アセット管理
+feature: Asset Management
 role: User, Admin
 exl-id: 7a568cae-e505-4b3a-abc5-8aae723460c3
 source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
-workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 88%
+workflow-type: ht
+source-wordcount: '1449'
+ht-degree: 100%
 
 ---
 
-# Dynamic Mediaでの画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
+# Dynamic Media の画質最適化のベストプラクティス {#best-practices-for-optimizing-the-quality-of-your-images}
 
 許容できる結果のレンダリングには多くの要因が関係するので、画質の最適化には時間がかかることがあります。画質に対する個人の感覚は異なるので、結果は一部主観的なものです。構造化された実験をおこなうことが重要になります。
 
@@ -27,7 +27,7 @@ Adobe Experience Manager には、画像をチューニングおよび最適化�
 
 * JPG または PNG は、管理しやすいサイズと重さで良い画質の画像を配信するための最適な選択肢です。
 * URL に format コマンドが含まれていない場合、Dynamic Media 画像配信のデフォルトは JPG の配信になります。
-* JPG は 10:1 の比率で圧縮をおこない、通常は比較的小さい画像ファイルサイズになります。PNGは約2:1の比率で圧縮されますが、画像に白の背景が含まれる場合などは例外です。 ただし、通常は PNG ファイルのサイズは JPG ファイルよりも大きくなります。
+* JPG は 10:1 の比率で圧縮をおこない、通常は比較的小さい画像ファイルサイズになります。PNG は、画像に白い背景が含まれている場合などを除いて、約 2 : 1 の比率で圧縮されます。ただし、通常は PNG ファイルのサイズは JPG ファイルよりも大きくなります。
 * JPG では非可逆圧縮が使用されます。非可逆圧縮では、圧縮中に画素（ピクセル）が失われます。これに対して、PNG では可逆圧縮が使用されます。
 * JPG では多くの場合、写真画像が、エッジやコントラストがシャープな合成画像よりも高い忠実度で圧縮されます。
 * 画像に透明部が含まれている場合は PNG を使用します。JPG では透明化がサポートされていません。
@@ -47,12 +47,12 @@ Adobe Experience Manager には、画像をチューニングおよび最適化�
 
 画像のシャープ処理は、Web サイト上の画像を制御する際の最も複雑な側面で、多くのミスが生じます。次の役立つリソースを参照し、Experience Manager でのシャープおよびアンシャープマスクの仕組みについて詳しく学んでください。
 
-ベストプラクティスに関するホワイトペーパー[Dynamic Media Classic](/help/assets/assets/sharpening_images.pdf)Adobeの画像をシャープにします。Experience Managerにも適用されます。
+ベストプラクティスに関するホワイトペーパー [Adobe Dynamic Media Classic で画像をシャープにする](/help/assets/assets/sharpening_images.pdf)は、Experience Manager にも適用されます。
 
 <!-- To be reviewed and updated: Broken link.
 See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
 
-Experience Manager を使用すれば、取得時、配信時またはその両方で画像をシャープにすることができます。ただし、通常は、1つの方法のみを使用して画像をシャープにします。両方は使用しません。 一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
+Experience Manager を使用すれば、取得時、配信時またはその両方で画像をシャープにすることができます。ただし、通常は、両方のメソッドではなく、どちらか一方のメソッドのみを使用して画像をシャープにします。一般に、配信時に URL 上で画像をシャープにすることで、最適な結果が得られます。
 
 画像のシャープニングでは、次の 2 つの方法を使用できます。
 
@@ -72,25 +72,25 @@ Experience Manager を使用すれば、取得時、配信時またはその両�
          
          フィルターを使用したベストプラクティスを含む、これら 3 つのパラメーターの設定方法について詳しくは、次のリソースを参照してください。
 
-         Experience Managerのヘルプトピックの画像のシャープニング。
+         画像のシャープニングに関する Experience Manager ヘルプトピック
 
-         ベストプラクティスに関するホワイトペーパー[Dynamic Media ClassicのAdobeで画像をシャープにする](/help/assets/assets/sharpening_images.pdf)。
+         ベストプラクティスに関するホワイトペーパー [Adobe Dynamic Media Classic での画像のシャープニング](/help/assets/assets/sharpening_images.pdf)
 
       * Experience Manager では第 4 パラメーターの monochrome (0,1) も制御できます。このパラメーターでは、アンシャープマスクをそれぞれの色成分に個別に適用するか（値が 0 の場合）、または画像の明るさ／明度に対して適用するか（値が 1 の場合）を指定します。
 
 
 ベストプラクティスとして、まずはアンシャープマスクの radius パラメーターを使用します。手始めに使用できる radius 設定は次のとおりです。
 
-* **[!UICONTROL Webサイト]**  - 0.2～0.3ピクセル
-* **[!UICONTROL 写真印刷(250～300 ppi)]**  - 0.3～0.5ピクセル
-* **[!UICONTROL オフセット印刷(266～300 ppi)]**  - 0.7～1.0ピクセル
-* **[!UICONTROL キャンバス印刷(150 ppi)]** ～ 1.5～2.0ピクセル
+* **[!UICONTROL Web サイト]** - 0.2 ～ 0.3 ピクセル
+* **[!UICONTROL 写真印刷（250 ～ 300 ppi）]**- 0.3 ～ 0.5 ピクセル
+* **[!UICONTROL オフセット印刷（266 ～ 300 ppi）]**- 0.7 ～ 1.0 ピクセル
+* **[!UICONTROL キャンバス印刷（150 ppi）]**- 1.5 ～ 2.0 ピクセル
 
 amount を 1.75 から 4 まで少しずつ増やします。シャープニングの結果に満足できない場合は、radius を小数点以下の単位で増やして、再度 amount を 1.75 から 4 の範囲で実行します。必要に応じてこの手順を繰り返します。
 
 monochrome パラメーター設定は 0 のままにします。
 
-### JPEG圧縮(`&qlt=`){#best-practices-for-jpeg-compression-qlt}のベストプラクティス
+### JPEG 圧縮（`&qlt=`）のベストプラクティス{#best-practices-for-jpeg-compression-qlt}
 
 * このパラメーターでは、JPG エンコーディング品質を制御します。値が大きいほど高画質になりますがファイルサイズも大きくなります。逆に、値が小さいほど低画質になりますがファイルサイズは小さくなります。このパラメーターの範囲は 0～100 です。
 * 画質を最適化するには、このパラメーターの値を 100 に設定しないでください。90 や 95 の設定と 100 の設定では、画質の差はほとんど感じられませんが、100 に設定することで画像ファイルのサイズが不必要に増加します。したがって、画質を最適化しながら画像ファイルが大きくなりすぎないようにするために、`qlt= value` を 90 または 95 に設定します。
@@ -108,7 +108,7 @@ JPG 圧縮のベストプラクティスとしては、`&qlt=85,0` を使用し�
 jpegSize は、メモリ容量が限られているデバイスに配信される画像が特定のサイズを超えないようにしたい場合に便利なパラメーターです。
 
 * このパラメーターはキロバイト単位で設定します（`jpegSize=&lt;size_in_kilobytes&gt;`）。画像配信で許可される最大サイズを定義します。
-* `&jpegSize=` は、JPG 圧縮パラメーターである `&qlt=` と相互に作用します。指定されたJPG圧縮パラメーター(`&qlt=`)でのJPG応答がjpegSizeの値を超えない場合、画像は定義どおり`&qlt=`で返されます。 jpegSize の値を上回る場合は、`&qlt=` が少しずつ減らされ、画像のサイズが最大許容サイズ内に収められるか、またはシステムによってそのサイズ内に収まらないと判断された場合はエラーが返されます。
+* `&jpegSize=` は、JPG 圧縮パラメーターである `&qlt=` と相互に作用します。指定された JPG 圧縮パラメーター（`&qlt=`）を持つ JPG 応答が jpegSize の値を上回らない場合、画像は定義されたとおりに `&qlt=` とともに返されます。jpegSize の値を上回る場合は、`&qlt=` が少しずつ減らされ、画像のサイズが最大許容サイズ内に収められるか、またはシステムによってそのサイズ内に収まらないと判断された場合はエラーが返されます。
 
 ベストプラクティスとしては、`&jpegSize=` を設定し、メモリ容量が限られているデバイスに JPG 画像を配信する場合は `&qlt=` パラメーターを追加します。
 
@@ -124,8 +124,8 @@ jpegSize は、メモリ容量が限られているデバイスに配信され�
 
 シャープニングの結果でも満足できない場合は、radius の小数点以下を増やします。小数点以下を増やすごとに、amount を 1.75 からやり直し、4 まで少しずつ増やします。求めている結果になるまで、このプロセスを繰り返します。これらの値は、制作スタジオで実際に検証した手法ではありますが、初期値として別の値を使用し、他の戦略に従っても問題ありません。結果が満足できるものであるかは主観的な問題ですので、構造化された実験をおこなうことが重要です。
 
-実験を行う際に、ワークフローをさらに最適化するには、次の一般的な推奨事項が役立ちます。
+実験する際には、次の一般的な推奨事項をワークフローの最適化に役立ててください。
 
 * 様々なパラメーターを直接 URL 上でリアルタイムにテストします。
 * ベストプラクティスとしては、Dynamic Media 画像サービングコマンドを画像プリセット内にまとめることができます。画像プリセットは基本的に、`$thumb_low$` や `&product_high$` といったカスタムプリセット名が付けられた URL コマンドマクロです。URL パス内にカスタムプリセット名を指定すると、これらのプリセットが呼び出されます。この機能によって、Web サイトでの様々な画像使用パターンに応じたコマンドと画質設定を管理でき、URL の全体的な長さを短縮することができます。
-* Adobe Experience Manager では、取り込み時に画像のシャープニングを適用するなど、高度な画質調整機能も提供しています。レンダリング結果を調整および最適化するオプションがある高度な使用例では、[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)がカスタマイズされた見識やベストプラクティスに役立ちます。
+* Adobe Experience Manager では、取り込み時に画像のシャープニングを適用するなど、高度な画質調整機能も提供しています。レンダリング結果を調整および最適化するオプションがある高度なユースケースについては、[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html) を参照してカスタマイズされたインサイトやベストプラクティスに役立ててください。
