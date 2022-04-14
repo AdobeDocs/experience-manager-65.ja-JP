@@ -1,8 +1,8 @@
 ---
 title: Cookie の使用法の設定
-seo-title: Cookie の使用法の設定
+seo-title: Configuring Cookie Usage
 description: AEM では、Web ページでの Cookie の使用方法を設定および制御できるサービスを提供しています
-seo-description: AEM では、Web ページでの Cookie の使用方法を設定および制御できるサービスを提供しています
+seo-description: AEM provides a service that enables you to configure and control how cookies are used with your web pages
 uuid: 10d95176-0a56-41f1-9d36-01dbdac757d4
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,26 +11,26 @@ content-type: reference
 discoiquuid: 5773ec1a-f15b-462d-8f9f-54ee1d7ead44
 exl-id: 42e8d804-6b6a-432e-a651-940b9f45db4e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '554'
+ht-degree: 100%
 
 ---
 
 # Cookie の使用法の設定{#configuring-cookie-usage}
 
-AEM では、Web ページでの Cookie の使用方法を設定および制御できるサービスを提供しています:
+AEM では、Web ページでの Cookie の使用方法を設定および制御できるサービスを提供しています：
 
 * 設定可能なサーバー側のサービスによって、使用可能な Cookie のリストを管理します。
 * JavaScript API によって、Cookie が使用可能であることを検証する JavaScript コードを作成できます。
 
 この機能を使用して、ページが Cookie の使用方法に関するユーザーの同意に従って動作するようにします。
 
-## 許可された Cookie の設定  {#configuring-allowed-cookies}
+## 許可された Cookie の設定 {#configuring-allowed-cookies}
 
 Adobe Granite Opt-Out Service の設定によって、Web ページでの Cookie の使用方法を指定します。次の表に、設定可能なプロパティについて説明します。
 
-サービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[を使用して、リポジトリ](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)にOSGi設定を追加します。次の表に、どちらの方法でも必要なプロパティを示します。OSGi設定の場合、サービスPIDは`com.adobe.granite.optout`です。
+このサービスの設定には、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用するか、[リポジトリーに OSGi 設定を追加](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)します。次の表では、どちらの方法でも必要になるプロパティについて説明しています。OSGi 設定の場合、サービス PID は `com.adobe.granite.optout` です。
 
 | プロパティ名（Web コンソール） | OSGi のプロパティ名 | 説明 |
 |---|---|---|
@@ -38,7 +38,7 @@ Adobe Granite Opt-Out Service の設定によって、Web ページでの Cookie
 | Opt-Out HTTP Headers | optout.headers | 存在する場合、ユーザーが Cookie の使用に同意していないことを示す HTTP ヘッダーの名前。 |
 | White-List Cookies | optout.whitelist.cookies | Web サイトの正常動作にとって不可欠であり、ユーザーの同意なしに使用可能な Cookie のリスト。 |
 
-## Cookie の使用に関する検証  {#validating-cookie-usage}
+## Cookie の使用に関する検証 {#validating-cookie-usage}
 
 クライアント側の JavaScript を使用して Adobe Granite Opt-Out Service を呼び出し、Cookie を使用できることを確認します。次のタスクを実行するには、Granite.OptOutUtil という JavaScript オブジェクトを使用します。
 
@@ -64,41 +64,41 @@ function writeCookie(value){
 }
 ```
 
-## Granite.OptOutUtil JavaScript オブジェクト  {#the-granite-optoututil-javascript-object}
+## Granite.OptOutUtil JavaScript オブジェクト {#the-granite-optoututil-javascript-object}
 
 Granite.OptOutUtil を使用して、Cookie の使用が許可されているかを判断できます。
 
-### getCookieNames() 関数  {#getcookienames-function}
+### getCookieNames() 関数 {#getcookienames-function}
 
 存在する場合に、ユーザーが Cookie の使用に同意していないことを示す Cookie の名前を返します。
 
 **パラメーター**
 
-なし.
+なし。
 
 **戻り値**
 
 Cookie 名の配列。
 
-#### getWhitelistCookieNames() 関数  {#getwhitelistcookienames-function}
+#### getWhitelistCookieNames() 関数 {#getwhitelistcookienames-function}
 
 ユーザーの同意に関係なく使用可能な Cookie の名前を返します。
 
 **パラメーター**
 
-なし.
+なし。
 
 **戻り値**
 
 Cookie 名の配列。
 
-#### isOptedOut() 関数  {#isoptedout-function}
+#### isOptedOut() 関数 {#isoptedout-function}
 
 Cookie の使用の同意が得られていないことを示す Cookie がユーザーのブラウザーに保存されていないかを判断します。
 
 **パラメーター**
 
-なし.
+なし。
 
 **戻り値**
 
@@ -110,8 +110,8 @@ Cookie の使用の同意が得られていないことを示す Cookie がユ�
 
 **パラメーター**
 
-* cookieName:文字列。 Cookieの名前。
+* cookieName：文字列。 Cookie の名前。
 
 **戻り値**
 
-`cookieName`を使用できる場合は`true`、`cookieName`を使用できない場合は`false`のboolean値。
+`cookieName` を使用できる場合はブール値 `true`、`cookieName` が使用できない場合は値 `false`。
