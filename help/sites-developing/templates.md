@@ -1,8 +1,8 @@
 ---
 title: テンプレート
-seo-title: テンプレート
+seo-title: Templates
 description: テンプレートは、新しいページのベースとして使用するページを作成する際に使用します
-seo-description: テンプレートは、新しいページのベースとして使用するページを作成する際に使用します
+seo-description: Templates are used when creating a page which will be used as the base for the new page
 uuid: 6fa3dafc-dfa1-42d8-b296-d4be57449411
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 7c723773-7c23-43d7-85dc-53e54556b648
 legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 exl-id: 59f01bb1-4ff1-42b6-afc9-56d448b1f803
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '982'
-ht-degree: 90%
+workflow-type: ht
+source-wordcount: '963'
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 90%
 
 ### 編集可能なテンプレート {#editable-templates}
 
-編集可能なテンプレートは、AEMを使用した開発のベストプラクティスと見なされるようになりました。
+AEM で開発を行う場合は、編集可能テンプレートを使用することをお勧めします。
 
 編集可能テンプレートのメリットは次のとおりです。
 
@@ -57,30 +57,30 @@ ht-degree: 90%
 
 * 新しいページの作成後も、そのページとテンプレートの間に動的接続が維持されます。つまり、テンプレートの構造に対する変更は、そのテンプレートを使用して作成されるすべてのページに反映されます（初期コンテンツに対する変更は反映されません）。
 * デザインプロパティを保持するには、テンプレートエディターから編集できるコンテンツポリシーを使用します（ページエディター内のデザインモードは使用しません）。
-* `/conf`の下に格納されます。
+* `/conf` に保存されます。
 * 詳しくは、[編集可能テンプレート](/help/sites-developing/page-templates-editable.md)を参照してください。
 
 >[!NOTE]
 >
->編集可能なテンプレートを使用してExperience Managerサイトを開発する方法については、 AEMコミュニティの記事を参照してください。 [編集可能なテンプレートを使用したAdobe Experience Manager 6.5 Webサイトの作成](https://helpx.adobe.com/jp/experience-manager/using/first_aem64_website.html)を参照してください。
+>AEM コミュニティの記事の[編集可能テンプレートを使用した Adobe Experience Manager 6.5 の web サイトの作成](https://helpx.adobe.com/experience-manager/using/first_aem64_website.html)では、編集可能テンプレートを使用して Experience Manager サイトを開発する方法を説明しています。
 
 ### 静的テンプレート {#static-templates}
 
-静的テンプレート:
+静的テンプレート：
 
 * 開発者が定義および設定する必要があります。
-* これはAEMの元のテンプレートシステムで、多くのバージョンで使用できました。
+* これは AEM のオリジナルのテンプレートシステムで、多くのバージョンで使用されています。
 * 作成されるページと同じ構造のノード階層を含んでいますが、実際のコンテンツはありません。
 * 新しいページはテンプレートをコピーして作成されるので、動的接続は存在しません。
 * デザインプロパティを保持するには、[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用します。
-* `/apps`の下に格納されます。
+* `/apps` に保存されます
 * 詳しくは、[静的テンプレート](/help/sites-developing/page-templates-static.md)を参照してください。
 
 >[!NOTE]
 >
->AEM 6.5以降では、静的テンプレートの使用はベストプラクティスと見なされません。 その代わりに編集可能テンプレートを使用してください。
+>AEM 6.5 以降では、静的テンプレートの使用はベストプラクティスとは見なされていません。その代わりに編集可能テンプレートを使用してください。
 >
->[AEM Modernizationtoolsは、静](modernization-tools.md) 的テンプレートから編集可能なテンプレートへの移行に役立ちます。
+>[AEM 最新化](modernization-tools.md)ツールは、静的テンプレートから編集可能テンプレートへの移行に役立ちます。
 
 ### 使用可能なテンプレート {#template-availability}
 
@@ -91,12 +91,11 @@ ht-degree: 90%
 >したがって、アドビでは、次の項目を定義して、単純に開始することをお勧めします。
 >
 >* プロパティは `cq:allowedTemplates` のみ
-   >
-   >
-* サイトのルートにのみ
 >
+>* サイトのルートにのみ
+
 >
-例については、 We.Retailを参照してください。`/content/we-retail/jcr:content`
+>例えば、We.Retail `/content/we-retail/jcr:content` を参照してください。
 >
 >プロパティ `allowedPaths`、`allowedParents`、`allowedChildren` をテンプレートに配置して、より高度なルールを定義することもできます。ただし、可能な場合、許可されるテンプレートをさらに制限する必要がある場合は、サイトのサブセクションでさらに `cq:allowedTemplates` プロパティを定義する方が&#x200B;*はるかに*&#x200B;簡単です。
 >
@@ -114,7 +113,7 @@ ht-degree: 90%
 
 * `P` のテンプレートの `allowedChildren` プロパティ。
 
-評価は次のようにおこなわれます。
+評価は次のように行われます。
 
 * `P` で始まるページ階層を昇順にしているときに見つかった、最初の空でない `cq:allowedTemplates` プロパティは、`T` のパスと一致します。一致する値がない場合、`T` は拒否されます。
 
