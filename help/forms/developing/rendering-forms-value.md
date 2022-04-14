@@ -1,8 +1,8 @@
 ---
-title: 値によるFormsのレンダリング
-seo-title: 値によるFormsのレンダリング
-description: Forms API(Java)を使用して、Java APIとWebサービスAPIを使用して値でフォームをレンダリングします。
-seo-description: Forms API(Java)を使用して、Java APIとWebサービスAPIを使用して値でフォームをレンダリングします。
+title: 値別に Forms をレンダリング
+seo-title: Rendering Forms By Value
+description: Forms API（Java）を使用して、Java API および web サービス API を使用して値でフォームをレンダリングします。
+seo-description: Use the Forms API (Java) to render a form by value using the Java API and Web Service API.
 uuid: b932cc54-662f-40ae-94e0-20ac82845f3b
 contentOwner: admin
 content-type: reference
@@ -12,195 +12,195 @@ topic-tags: operations
 discoiquuid: ddbb2b82-4c57-4845-a5be-2435902d312b
 role: Developer
 exl-id: a3a6a06d-ec90-4147-a5f0-e776a086ee12
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 3%
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+workflow-type: ht
+source-wordcount: '1835'
+ht-degree: 100%
 
 ---
 
-# 値{#rendering-forms-by-value}によるFormsのレンダリング
+# 値別に Forms をレンダリング {#rendering-forms-by-value}
 
-**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
+**このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-通常、Designerで作成されたフォームデザインは、Formsサービスへの参照によって渡されます。 フォームデザインは大きくなる可能性があり、その結果、フォームデザインのバイトを値でマーシャリングする必要がなく、参照で渡す方が効率的になります。 また、Formsサービスは、フォームデザインをキャッシュして、キャッシュ時にフォームデザインを継続的に読み取る必要がないようにすることもできます。
+通常、Designer で作成されたフォームデザインは、参照によって Forms サービスに渡されます。 フォームデザインは大きくなる可能性があり、その結果、フォームデザインのバイトを値でマーシャリングする必要がなくなるよう、参照で渡す方がより効率的です。 また、Forms サービスは、キャッシュ時にフォームデザインを継続的に読み取る必要がないように、フォームデザインをキャッシュすることもできます。
 
-フォームデザインにUUID属性が含まれている場合は、その属性がキャッシュされます。 UUID値は、すべてのフォームデザインで一意で、フォームを一意に識別するために使用されます。 値でフォームをレンダリングする場合は、繰り返し使用する場合にのみフォームをキャッシュする必要があります。 ただし、フォームを繰り返し使用せずに一意にする必要がある場合は、AEM Forms APIを使用して設定されたキャッシュオプションを使用して、フォームをキャッシュするのを避けることができます。
+フォームデザインに UUID 属性が含まれている場合は、キャッシュされます。 UUID 値は、すべてのフォームデザインで一意であり、フォームを一意に識別するために使用されます。 値でフォームをレンダリングする場合、繰り返し使用する場合にのみフォームをキャッシュする必要があります。 ただし、フォームを繰り返し使用せず、一意にする必要がある場合は、AEM Forms API で設定されたキャッシュオプションを使用して、フォームをキャッシュするのを避けることができます。
 
-Formsサービスは、フォームデザイン内のリンクされたコンテンツの場所を解決することもできます。 例えば、フォームデザイン内から参照されるリンク画像は、相対URLです。 リンクされたコンテンツは、常にフォームデザインの場所に対する相対コンテンツと見なされます。 したがって、リンクされたコンテンツを解決するには、フォームデザインの絶対位置に相対パスを適用して、場所を決定する必要があります。
+Forms サービスは、フォームデザイン内のリンクされたコンテンツの場所を解決することもできます。 例えば、フォームデザイン内で参照されるリンク画像は、相対 URL です。 リンクされたコンテンツは、常にフォームデザインの場所を基準とした相対コンテンツと見なされます。 したがって、リンクされたコンテンツを解決するには、フォームデザインの絶対パスを適用して、その場所を決定する必要があります。
 
-参照によってフォームデザインを渡す代わりに、値でフォームデザインを渡すことができます。 フォームデザインを動的に作成する場合は、フォームデザインを値で渡すと効率的です。つまり、クライアントアプリケーションが実行時にフォームデザインを作成するXMLを生成する場合です。 この場合、フォームデザインはメモリに保存されるので、物理リポジトリに保存されません。 実行時に動的にフォームデザインを作成し、値を渡す場合は、フォームをキャッシュして、Formsサービスのパフォーマンスを向上させることができます。
+参照によってフォームデザインを渡す代わりに、値でフォームデザインを渡すことができます。 フォームデザインを動的に作成する場合、値でフォームデザインを渡すと効率的です。つまり、クライアントアプリケーションが実行時にフォームデザインを作成する XML を生成する場合です。 この場合、フォームデザインはメモリに保存されるので、物理リポジトリに保存されません。 実行時に動的にフォームデザインを作成し、値で渡す場合は、フォームをキャッシュして、Forms サービスのパフォーマンスを向上させることができます。
 
-**フォームを値で渡す際の制限**
+**値によるフォームの受け渡しの制限**
 
 フォームデザインが値で渡される場合は、次の制限が適用されます。
 
-* フォームデザイン内には、相対的にリンクされたコンテンツを含めることはできません。 すべての画像とフラグメントは、フォームデザイン内に埋め込むか、絶対に参照する必要があります。
-* フォームのレンダリング後にサーバー側の計算を実行することはできません。 フォームがFormsサービスに送り返されると、データが抽出され、サーバー側の計算なしで返されます。
-* HTMLでは、実行時にのみリンクされた画像を使用できるので、埋め込まれた画像を含むHTMLを生成することはできません。 これは、Formsサービスが参照先のフォームデザインから画像を取得することで、HTMLを含んだ埋め込み画像をサポートするためです。 値で渡されるフォームデザインには参照先の場所がないので、HTMLページを表示する際に埋め込み画像を抽出することはできません。 したがって、画像参照は、HTMLでレンダリングされる絶対パスにする必要があります。
+* フォームデザイン内に相対的にリンクされたコンテンツを含めることはできません。 すべての画像とフラグメントは、フォームデザイン内に埋め込むか、絶対に参照する必要があります。
+* フォームのレンダリング後は、サーバーサイドの計算を実行できません。 フォームが Forms サービスに送り返されると、データが抽出され、サーバーサイドの計算なしで返されます。
+* HTML は実行時にのみリンク画像を使用できるので、埋め込まれた画像を使用して HTML を生成することはできません。 これは、Forms サービスが参照先のフォームデザインから画像を取得することで、HTML での埋め込み画像をサポートしているためです。 値で渡されたフォームデザインには参照先がないので、HTML ページが表示されているときに埋め込み画像を抽出することはできません。 したがって、画像参照は、HTML でレンダリングする絶対パスにする必要があります。
 
 >[!NOTE]
 >
->値ごとに異なる種類のフォームをレンダリングできますが（例えば、HTMLフォームや使用権限を含むフォームなど）、この節ではインタラクティブPDF formsのレンダリングについて説明します。
+>異なる種類のフォームを値でレンダリングすることもできます（例えば、HTML フォームや、使用権限を含むフォーム）がありますが、このセクションでは、インタラクティブ PDF forms のレンダリングについて説明します。
 
 >[!NOTE]
 >
->Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+>AEM Forms サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
-## 手順の概要{#summary-of-steps}
+## 手順の概要 {#summary-of-steps}
 
 値でフォームをレンダリングするには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
-1. Forms Client APIオブジェクトを作成します。
-1. フォームデザインを参照します。
+1. Forms Client API オブジェクトを作成します。
+1. フォームデザインを保存します。
 1. 値でフォームをレンダリングします。
-1. フォームデータストリームをクライアントWebブラウザーに書き込みます。
+1. フォームデータストリームをクライアントの Web ブラウザーに書き込みます。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めるようにします。
 
-**Forms Client APIオブジェクトの作成**
+**Forms Client API オブジェクトの作成**
 
-プログラムによってデータをPDFフォームのクライアントAPIに読み込む前に、データ統合サービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスを呼び出すために必要な接続設定を定義します。
+プログラムによってデータを PDF form クライアント API に読み込む前に、Data Integration Service クライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスを呼び出すために必要な接続設定を定義します。
 
 **フォームデザインの参照**
 
-値でフォームをレンダリングする場合は、レンダリングするフォームデザインを格納する`com.adobe.idp.Document`オブジェクトを作成する必要があります。 既存のXDPファイルを参照することも、実行時に動的にフォームデザインを作成して、`com.adobe.idp.Document`にそのデータを入力することもできます。
+値でフォームをレンダリングする場合は、レンダリングするフォームデザインを含む `com.adobe.idp.Document` オブジェクトを作成する必要があります。既存の XDP ファイルを参照することも、実行時にフォームデザインを動的に作成してそのデータを `com.adobe.idp.Document` に入力することもできます。
 
 >[!NOTE]
 >
->このセクションと対応するクイックスタートは、既存のXDPファイルを参照します。
+>このセクションと対応するクイックスタートでは、既存の XDP ファイルを参照します。
 
-**値によるフォームのレンダリング**
+**値でフォームをレンダリング**
 
-フォームを値でレンダリングするには、フォームデザインを含む`com.adobe.idp.Document`インスタンスをレンダリングメソッドの`inDataDoc`パラメーターに渡します（`renderPDFForm`、`(Deprecated) renderHTMLForm`など、`FormsServiceClient`オブジェクトのレンダリングメソッドのいずれかを指定できます）。 このパラメーター値は、通常、フォームとマージされるデータ用に予約されます。 同様に、空の文字列値を`formQuery`パラメーターに渡します。 通常、このパラメーターにはフォームデザインの名前を指定する文字列値が必要です。
+値でフォームをレンダリングするには、フォームデザインを含む `com.adobe.idp.Document` インスタンスをレンダリングメソッドの `inDataDoc` パラメーターに渡します（`renderPDFForm`、`(Deprecated) renderHTMLForm` など、`FormsServiceClient` オブジェクトのレンダリングメソッドのいずれでもかまいません）。このパラメーター値は、通常、フォームと結合されるデータ用に予約されます。同様に、空の文字列値を `formQuery` パラメーターに渡します。通常、このパラメーターにはフォームデザインの名前を指定する文字列値が必要です。
 
 >[!NOTE]
 >
->フォーム内にデータを表示する場合は、`xfa:datasets`要素内でデータを指定する必要があります。 XFAアーキテクチャについて詳しくは、[https://partners.adobe.com/public/developer/xml/index_arch.html](https://partners.adobe.com/public/developer/xml/index_arch.html)を参照してください。
+>フォーム内にデータを表示する場合は、データは `xfa:datasets` 要素内で指定する必要があります。XFA アーキテクチャについて詳しくは、[https://www.pdfa.org/norm-refs/XFA-3_3.pdf](https://www.pdfa.org/norm-refs/XFA-3_3.pdf)を参照してください。
 
-**フォームデータストリームをクライアントWebブラウザーに書き込む**
+**フォームデータストリームをクライアントの web ブラウザーに書き込む**
 
-Formsサービスは、値でフォームをレンダリングする場合、フォームデータストリームを返します。このストリームは、クライアントのWebブラウザーに書き込む必要があります。 クライアントのWebブラウザーに書き込まれると、フォームはユーザーに表示されます。
+Forms サービスがフォームを値でレンダリングすると、クライアントの web ブラウザーに書き込む必要のあるフォームデータストリームが返されます。クライアント Web ブラウザーに書き込まれると、フォームはユーザーに対して表示されます。
 
 **関連トピック**
 
-[Java APIを使用した値によるフォームのレンダリング](#render-a-form-by-value-using-the-java-api)
+[Java API を使用して値でフォームをレンダリング](#render-a-form-by-value-using-the-java-api)
 
-[WebサービスAPIを使用して値でフォームをレンダリングする](#render-a-form-by-value-using-the-web-service-api)
+[Web サービス API を使用して値でフォームをレンダリング](#render-a-form-by-value-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms サービス API のクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[Formsサービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)
+[Forms サービスにドキュメントを渡す](/help/forms/developing/passing-documents-forms-service.md)
 
-[Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## Java API {#render-a-form-by-value-using-the-java-api}を使用して値でフォームをレンダリングする
+## Java API を使用して値でフォームをレンダリング {#render-a-form-by-value-using-the-java-api}
 
-Forms API(Java)を使用して値でフォームをレンダリングする：
+Forms API（Java）を使用して値でフォームをレンダリング：
 
 1. プロジェクトファイルを含める
 
-   Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
+   adobe-forms-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
-1. Forms Client APIオブジェクトの作成
+1. Forms Client API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`FormsServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡し、`FormsServiceClient` オブジェクトを作成します。
 
 1. フォームデザインの参照
 
-   * レンダリングするフォームデザインを表す`java.io.FileInputStream`オブジェクトを作成します。そのためには、コンストラクターを使用し、XDPファイルの場所を指定する文字列値を渡します。
-   * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用して、XDP ファイルの場所を指定する文字列の値を渡すことにより、レンダリングするフォームデザインを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを渡すことにり、`com.adobe.idp.Document` オブジェクトを作成します。
 
-1. 値によるフォームのレンダリング
+1. 値でフォームをレンダリング
 
-   `FormsServiceClient`オブジェクトの`renderPDFForm`メソッドを呼び出し、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `renderPDFForm` メソッドを呼び出して、次の値を渡します。
 
-   * 空の文字列値。 （通常、このパラメーターにはフォームデザインの名前を指定する文字列値が必要です）。
-   * フォームデザインを含む`com.adobe.idp.Document`オブジェクト。 通常、このパラメーター値はフォームとマージされるデータ用に予約されます。
-   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 これはオプションのパラメーターで、実行時オプションを指定しない場合は`null`を指定できます。
-   * Formsサービスに必要なURI値を含む`URLSpec`オブジェクト。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合は`null`を指定できます。
+   * 空の文字列の値（通常、このパラメーターにはフォームデザインの名前を指定する文字列の値が必要です）。
+   * フォームデザインを含む `com.adobe.idp.Document` オブジェクト。通常、このパラメーター値はフォームにマージするデータ用に予約されています。
+   * 実行時オプションを保存する `PDFFormRenderSpec` オブジェクト。このパラメーターはオプションであり、実行時のオプションを指定しない場合、`null` を指定できます。
+   * Forms サービスで必要とされる URI 値を格納する `URLSpec` オブジェクト。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクト。このパラメーターはオプションであり、フォームにファイルを添付しない場合、`null` を指定できます。
 
-   `renderPDFForm`メソッドは、クライアントのWebブラウザーに書き込み可能なフォームデータストリームを含む`FormsResult`オブジェクトを返します。
+   `renderPDFForm` メソッドは、クライアントの web ブラウザーに書き込まれるフォームデータストリームを格納する `FormsResult` オブジェクトを返します。
 
-1. フォームデータストリームをクライアントWebブラウザーに書き込む
+1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
-   * バイト配列を作成し、`InputStream`オブジェクトのサイズを割り当てます。 `InputStream`オブジェクトの`available`メソッドを呼び出して、`InputStream`オブジェクトのサイズを取得します。
-   * `InputStream`オブジェクトの`read`メソッドを呼び出し、バイト配列を引数として渡すことで、フォームデータストリームをバイト配列に入力します。
-   * `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことにより、`com.adobe.idp.Document` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出すことにより、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
+   * `setContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプ 渡すことにより、`javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出すことにより、クライアントの web ブラウザーにフォームデータストリームを書き込むために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことにより、`java.io.InputStream` オブジェクトを作成します。
+   * バイト配列を作成し、`InputStream` オブジェクトのサイズを割り当てます。`InputStream` オブジェクトの `available` メソッドを呼び出して、`InputStream` オブジェクトのサイズを取得します。
+   * `InputStream` オブジェクトの `read` メソッドを呼び出して、バイト配列を引数として渡すことにより、バイト配列にフォームデータストリームを格納します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
-**関連トピック**
+**関連項目**
 
-[値によるFormsのレンダリング](/help/forms/developing/rendering-forms.md)
+[値別に Forms をレンダリング](/help/forms/developing/rendering-forms.md)
 
-[クイックスタート（SOAPモード）:Java APIを使用した値によるレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した値によるレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#render-a-form-by-value-using-the-web-service-api}を使用して値でフォームをレンダリングする
+## Web サービス API を使用して値でフォームをレンダリング {#render-a-form-by-value-using-the-web-service-api}
 
-Forms API（Webサービス）を使用して値でフォームをレンダリングする：
+Forms API（web サービス）を使用して値でフォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
-   * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
-   * Javaプロキシクラスをクラスパスに含めます。
+   * Forms Service WSDL を使用する Java プロキシクラスを作成します。
+   * Java プロキシクラスをクラスパスに含めます。
 
-1. Forms Client APIオブジェクトの作成
+1. Forms Client API オブジェクトの作成
 
-   `FormsService`オブジェクトを作成し、認証値を設定します。
+   `FormsService` オブジェクトを作成し、認証情報を設定します。
 
 1. フォームデザインの参照
 
-   * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを作成します。XDPファイルの場所を指定するstring値を渡します。
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB`オブジェクトは、パスワードで暗号化されたPDFドキュメントを保存するために使用します。
-   * `java.io.FileInputStream`オブジェクトの内容を格納するバイト配列を作成します。 `available`メソッドを使用して`java.io.FileInputStream`オブジェクトのサイズを取得することで、バイト配列のサイズを決定できます。
-   * `java.io.FileInputStream`オブジェクトの`read`メソッドを呼び出し、バイト配列を渡すことにより、ストリームデータをバイト配列に入力します。
-   * `setBinaryData`メソッドを呼び出し、バイト配列を渡すことで、`BLOB`オブジェクトを設定します。
+   * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを作成します。XDP ファイルの場所を指定する文字列の値を渡します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、パスワードで暗号化された PDF ドキュメントを保存するために使用されます。
+   * `java.io.FileInputStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`available` メソッドを使用して `java.io.FileInputStream` オブジェクトのサイズを取得することにより、バイト配列のサイズを指定できます。
+   * `java.io.FileInputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を渡すことにより、バイト配列にストリームデータを格納します。
+   * `setBinaryData` メソッドを呼び出してバイト配列を渡すことにより、`BLOB` オブジェクトに入力します。
 
-1. 値によるフォームのレンダリング
+1. 値でフォームをレンダリング
 
-   `FormsService`オブジェクトの`renderPDFForm`メソッドを呼び出し、次の値を渡します。
+   `FormsService` オブジェクトの `renderPDFForm` メソッドを呼び出して、次の値を渡します。
 
-   * 空の文字列値。 （通常、このパラメーターにはフォームデザインの名前を指定する文字列値が必要です）。
-   * フォームデザインを含む`BLOB`オブジェクト。 通常、このパラメーター値はフォームとマージされるデータ用に予約されます。
-   * 実行時オプションを格納する`PDFFormRenderSpec`オブジェクト。 これはオプションのパラメーターで、実行時オプションを指定しない場合は`null`を指定できます。
-   * Formsサービスに必要なURI値を含む`URLSpec`オブジェクト。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合は`null`を指定できます。
-   * メソッドで設定される空の`com.adobe.idp.services.holders.BLOBHolder`オブジェクト。 これは、レンダリングされたPDFフォームを保存するために使用されます。
-   * メソッドで設定される空の`javax.xml.rpc.holders.LongHolder`オブジェクト。 （この引数は、フォームのページ数を格納します）。
-   * メソッドで設定される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。 （この引数はロケール値を格納します。）
-   * この操作の結果を格納する空の`com.adobe.idp.services.holders.FormsResultHolder`オブジェクト。
+   * 空の文字列の値（通常、このパラメーターにはフォームデザインの名前を指定する文字列の値が必要です）。
+   * フォームデザインを含む `BLOB` オブジェクト。通常、このパラメーター値はフォームにマージするデータ用に予約されています。
+   * 実行時オプションを保存する `PDFFormRenderSpec` オブジェクト。これはオプションのパラメーターであり、実行時オプションを指定したくない場合は `null` を指定できます。
+   * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクト。
+   * 添付ファイルを格納する `java.util.HashMap` オブジェクト。これはオプションのパラメーターであり、フォームにファイルを添付しない場合は `null` を指定できます。
+   * メソッドによって設定される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。これは、レンダリングされた PDF フォームを保存するために使用されます。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.LongHolder` オブジェクト。（この引数は、フォームのページ数を保存します）。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。（この引数はロケール値を格納します。）
+   * この操作の結果を格納する 空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 
-   `renderPDFForm`メソッドは、最後の引数値として渡される`com.adobe.idp.services.holders.FormsResultHolder`オブジェクトに、クライアントWebブラウザーに書き込む必要のあるフォームデータストリームを設定します。
+   `renderPDFForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
-1. フォームデータストリームをクライアントWebブラウザーに書き込む
+1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `com.adobe.idp.services.holders.FormsResultHolder`オブジェクトの`value`データメンバーの値を取得して、`FormResult`オブジェクトを作成します。
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、フォームデータを含む`BLOB`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`BLOB`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`BLOB`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB`オブジェクトの`getBinaryData`メソッドを呼び出してそれを設定します。 このタスクは、`FormsResult`オブジェクトの内容をバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して、`FormResult` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
+   * `BLOB` オブジェクトの `getContentType` メソッドを呼び出して、コンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、その `setContentType` メソッドを呼び出して `BLOB` オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して設定します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
-**関連トピック**
+**関連項目**
 
-[値によるFormsのレンダリング](#rendering-forms-by-value)
+[値別に Forms をレンダリング](#rendering-forms-by-value)
 
-[Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
