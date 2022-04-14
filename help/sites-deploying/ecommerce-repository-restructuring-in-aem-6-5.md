@@ -1,29 +1,29 @@
 ---
 title: AEM 6.5 における e コマースリポジトリの再構築
-seo-title: AEM 6.5 における e コマースリポジトリの再構築
-description: AEM 6.5 e コマースの新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: AEM 6.5 e コマースの新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
+seo-title: E-Commerce Repository Restructuring in AEM 6.5
+description: AEM 6.5 e コマースの新しいリポジトリ構造に移行するために必要な変更方法について説明します。
+seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 for E-Commerce.
 uuid: 1fff1a4b-c8d0-4016-92fb-e2ea26e3a302
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 28c92e7d-2106-4333-afa6-c5528a00d7b4
-feature: アップグレード
+feature: Upgrading
 exl-id: 78b7c497-c474-4308-bfab-8f424b5f7268
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 77%
+workflow-type: ht
+source-wordcount: '202'
+ht-degree: 100%
 
 ---
 
 # AEM 6.5 における e コマースリポジトリの再構築{#e-commerce-repository-restructuring-in-aem}
 
-AEM 6.5の親[リポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、AEM 6.5にアップグレードする場合は、このページを使用して、AEM E-Commerce Solutionに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更では、AEM 6.5のアップグレードプロセス中に作業が必要ですが、それ以外の変更では、将来のアップグレードまで延期することもできます。
+[AEM 6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)の親ページで説明しているように、AEM 6.5 にアップグレードする場合は、このページを参考に、AEM の e コマースソリューションに影響を及ぼすリポジトリ変更に伴う作業量を評価する必要があります。一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
-### 商品、注文、コレクション、分類、発送方法、支払い方法のデータ {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
+### 製品、注文、コレクション、分類、発送方法、支払い方法のデータ {#product-order-collections-classifications-shipping-methods-and-payment-methods-data}
 
 <table>
  <tbody>
