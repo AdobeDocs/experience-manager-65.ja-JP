@@ -3,10 +3,11 @@ title: コンテンツフラグメント - 削除に関する考慮事項
 description: AEM でコンテンツフラグメント削除ポリシーを定義する前に、以下の重要な考慮事項を確認してください。コンテンツフラグメントはヘッドレスコンテンツを配信する強力なツールです。削除する際は、影響を慎重に考慮する必要があります。
 feature: Content Fragments
 role: User
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
-workflow-type: tm+mt
+exl-id: 6212457e-a171-4c33-8d19-54c26516e981
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '509'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -84,6 +85,6 @@ AEM でコンテンツフラグメント削除ポリシーを定義する前に�
 
 `add` および `modify` 権限も、CRXDE Lite で管理することができます。また、ユーザー管理コンソールを使用して管理することもできます。
 
-例えば、`remove` グループの `content-authors-no-delete` 権限の定義は次のようになります。
+例えば、`remove` グループの権限 `content-authors-no-delete` の定義は次のようになります。
 
 ![cf-delete-03](assets/cf-delete-03.png)
