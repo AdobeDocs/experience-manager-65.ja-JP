@@ -1,8 +1,8 @@
 ---
 title: キャンペーン
-seo-title: キャンペーン
+seo-title: Campaigns
 description: AEM キャンペーンの基本について説明します。
-seo-description: AEM キャンペーンの基本について説明します。
+seo-description: Learn the basics of using AEM Campaigns.
 uuid: f4be814f-8b0f-4089-88bb-0141227bce02
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: 4a3a2ad7-40b0-4f19-a012-167453f58bc2
 exl-id: c7a6ab46-111f-42f0-bf09-7a300486672a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '150'
+workflow-type: ht
+source-wordcount: '142'
 ht-degree: 100%
 
 ---
