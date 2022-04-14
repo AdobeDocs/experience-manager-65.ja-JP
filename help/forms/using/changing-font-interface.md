@@ -1,8 +1,8 @@
 ---
 title: インターフェイスのフォントの変更
-seo-title: インターフェイスのフォントの変更
+seo-title: Changing the font on the interface
 description: ユーザーインタフェイス上でフォントを選択して変更する方法。
-seo-description: ユーザーインタフェイス上でフォントを選択して変更する方法。
+seo-description: How to change the fonts on the user interface selectively.
 uuid: 421fdd24-441a-4092-8c52-f3ed3d5d5671
 contentOwner: robhagat
 content-type: reference
@@ -12,9 +12,9 @@ discoiquuid: 9fcb80b4-cbc2-48a5-afd1-4f3bc50bc503
 docset: aem65
 exl-id: 226f70f0-8eb4-4724-b496-5801dc6b436f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '276'
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 79%
 
 AEM Forms Workspace に表示されているフォントを変更することができます。ユーザーインターフェイスの特定のセクションで使用されているフォントは、スタイルシートの対応するセクションに定義されています。フォントは選択的にユーザーインタフェイス上で変更することができます。
 
-[AEM Forms Workspaceのカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従い、要件に応じて、CSS、HTMLまたはその両方をカスタマイズする手順に従います。
+[AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)に従います。要件に応じて、CSS、HTML、またはその両方をカスタマイズするための手順に従います。
 
 1. 既存のスタイルのフォントファミリを変更または追加します。
 1. HTML 要素でフォントファミリインラインを変更または追加します。
@@ -30,8 +30,8 @@ AEM Forms Workspace に表示されているフォントを変更することが
 
 例えば、トップナビゲーションバーのアンカーテキストのフォントを「Courier New」に変更するには、次の手順に従います。
 
-1. `https://'[server]:[port]'/lc/crx/de/index.jsp`にアクセスしてCRXDE Liteにログインします。
-1. 以下のいずれかの操作を行います。
+1. `https://'[server]:[port]'/lc/crx/de/index.jsp` にアクセスして CRXDE Lite にログインします。
+1. 次のいずれかの操作を行います。
 
    1. 既存のスタイルでフォントファミリーを変更するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
@@ -41,7 +41,7 @@ AEM Forms Workspace に表示されているフォントを変更することが
       }
       ```
 
-   1. フォントファミリインラインをHTML要素に追加するには、`/libs/ws/js/runtime/templates/appnavigation.html`ファイルを`/apps/ws/js/runtime/templates/appnavigation.html`にコピーします。
+   1. フォントファミリインラインを HTML 要素に追加するには、`/libs/ws/js/runtime/templates/appnavigation.html` ファイルを `/apps/ws/js/runtime/templates/appnavigation.html` にコピーします。
 
       /apps/ws/js/runtime/templates/appnavigation.html ファイルを次のようにして更新します。
 
@@ -52,7 +52,7 @@ AEM Forms Workspace に表示されているフォントを変更することが
       <li class="preference"><a href="#/preferences" title="<%= $.t('index.header.topnav.preferences.detail')%>" style="font-family:Courier New;" ><%= $.t('index.header.topnav.preferences.name')%></a></li>
       ```
 
-      /apps/ws/js/registry.jsファイルを編集用に開き、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html`を`text!/lc/apps/ws/js/runtime/templates/appnavigation.html`に置き換えます。
+      編集のため /apps/ws/js/registry.js ファイルを開き、`text!/lc/libs/ws/js/runtime/templates/appnavigation.html` を `text!/lc/apps/ws/js/runtime/templates/appnavigation.html` に置き換えます。
 
    1. フォントファミリを定義するスタイルを追加するには、/apps/ws/css にある newStyle.css ファイルに以下を追加します。
 
