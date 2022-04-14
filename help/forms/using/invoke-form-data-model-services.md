@@ -1,18 +1,18 @@
 ---
 title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
-seo-title: アダプティブフォームからフォームデータモデルサービスを呼び出すための API
+seo-title: API to invoke form data model service from adaptive forms
 description: アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。
-seo-description: アダプティブフォームフィールド内から WSDL で記述された、Web サービスを呼び出す API について説明します。
+seo-description: Explains the invokeWebServices API that you can use to invoke web services written in WSDL from within an adaptive form field.
 uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: cf037174-3153-486f-85b1-c974cd5a1ace
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '482'
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ API 構造は、サービス操作の以下の詳細を指定します。
   </tr>
   <tr>
    <td><code>formDataModelId</code></td>
-   <td>名前を含むフォームデータモデルへのリポジトリパスを指定します</td>
+   <td>フォームデータモデルへのリポジトリパスをその名前も含めて指定します</td>
   </tr>
   <tr>
    <td><code>operationName</code></td>
@@ -113,7 +113,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 
 ## コールバック関数での API の使用 {#using-the-api-callback}
 
-また、コールバック関数で`guidelib.dataIntegrationUtils.executeOperation` APIを使用してフォームデータモデルサービスを呼び出すこともできます。 API 構文は以下のとおりです。
+コールバック関数で `guidelib.dataIntegrationUtils.executeOperation` API を使用してフォームデータモデルサービスを呼び出すこともできます。API 構文は以下のとおりです。
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
