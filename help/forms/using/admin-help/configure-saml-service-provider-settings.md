@@ -1,8 +1,8 @@
 ---
 title: SAML サービスプロバイダーの設定
-seo-title: SAML サービスプロバイダーの設定
+seo-title: Configure SAML service provider settings
 description: ユーザーが指定したサードパーティの ID プロバイダー（IDP）経由で AEM Forms にログインして認証できるように、SAML を認証プロバイダーとして設定できます。
-seo-description: ユーザーが指定したサードパーティの ID プロバイダー（IDP）経由で AEM Forms にログインして認証できるように、SAML を認証プロバイダーとして設定できます。
+seo-description: You can configure SAML service provider settings to allow users to login and authenticate to AEM forms via a specified third-party identity provider (IDP).
 uuid: 14c706ad-8b1c-4c03-9cd4-97424f2162bc
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1169d0d1-cbfb-486b-acca-9b9de3d410dc
 exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '599'
+ht-degree: 100%
 
 ---
 
@@ -24,8 +24,8 @@ Security Assertion Markup Language（SAML）は、エンタープライズドメ
 SAML について詳しくは、[ Security Assertion Markup Language （SAML） V2.0 Technical Overview](https://www.oasis-open.org/committees/download.php/20645/sstc-saml-tech-overview-2%200-draft-10.pdf) を参照してください。
 
 1. 管理コンソールで、設定／User Management／設定／SAML サービスプロバイダーの設定をクリックします。
-1. 「サービスプロバイダーのエンティティ ID」ボックスに、AEM Forms サービスプロバイダー実装の識別子として使用する固有 ID を入力します。また、この固有 ID は、IDP（例えば、`um.lc.com`）を設定するときにも指定します。AEM Forms にアクセスする URL も使用できます（例えば、`https://AEMformsserver`）。
-1. 「サービスプロバイダーの Base URL」ボックスに、forms サーバーのベース URL を入力します（例えば、`https://AEMformsserver:8080`）。
+1. 「サービスプロバイダーのエンティティ ID」ボックスに、AEM Forms サービスプロバイダー実装の識別子として使用する固有 ID を入力します。また、この一意の ID は、IDP（例えば `um.lc.com`）を設定するときにも指定します。AEM Forms にアクセスする URL も使用できます（例えば `https://AEMformsserver`）。
+1. 「サービスプロバイダーの Base URL」ボックスに、Forms サーバーのベース URL を入力します（例えば `https://AEMformsserver:8080`）。
 1. （オプション）AEM forms で署名付き認証要求を IDP に送信する機能を有効にするには、以下のタスクを実行します。
 
    * Trust Manager を使用して、「Trust Store の種類」に「ドキュメント署名証明書」を選択した PKCS #12 形式の証明書を読み込みます。（[ローカル秘密鍵証明書の管理](/help/forms/using/admin-help/local-credentials.md#managing-local-credentials)を参照）。
@@ -61,4 +61,4 @@ SAML について詳しくは、[ Security Assertion Markup Language （SAML） 
 
    `saml.sp.discovery.url=/custom/custom.jsp`
 
-1. 「保存」をクリックします。
+1. 保存をクリックします。
