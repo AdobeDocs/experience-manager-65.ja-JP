@@ -1,8 +1,8 @@
 ---
 title: ソリューション統合
-seo-title: ソリューション統合
+seo-title: Solutions Integration
 description: AEM でのソリューション統合について説明します。
-seo-description: AEM でのソリューション統合について説明します。
+seo-description: Learn more about Solutions Integration in AEM.
 uuid: 3bf56b1b-284d-4f14-8974-0a595ece5028
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: b5ff918d-08ab-4307-a807-693468fc083b
 exl-id: ee5e8ebb-773f-4aa6-9c3e-2cc3bf4a3bbd
 source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
-workflow-type: tm+mt
-source-wordcount: '121'
+workflow-type: ht
+source-wordcount: '112'
 ht-degree: 100%
 
 ---
@@ -34,5 +34,4 @@ AEM と他のアドビサービスまたはサードパーティのサービス�
 >* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
 >
-
 
