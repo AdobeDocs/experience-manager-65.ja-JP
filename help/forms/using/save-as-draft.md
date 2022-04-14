@@ -1,8 +1,8 @@
 ---
 title: タスクまたはフォームをドラフトとして保存する
-seo-title: タスクまたはフォームをドラフトとして保存する
+seo-title: Saving a task or form as a draft
 description: AEM Forms アプリケーションでタスクまたはフォームのドラフトコピーを保存する手順
-seo-description: AEM Forms アプリケーションでタスクまたはフォームのドラフトコピーを保存する手順
+seo-description: Steps to save a draft copy of a task or a form in the AEM Forms app
 uuid: 1192d2c2-05a4-4a96-9015-e56111aa2646
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,28 +10,28 @@ topic-tags: forms-app
 discoiquuid: 9950288c-b5a2-4945-afad-be9ce2abc8e9
 exl-id: b4a23b2e-ab18-402c-8dfa-2533ee692912
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 80%
+workflow-type: ht
+source-wordcount: '492'
+ht-degree: 100%
 
 ---
 
-# タスクまたはフォームをドラフトとして保存する  {#saving-a-task-or-form-as-a-draft}
+# タスクまたはフォームをドラフトとして保存する {#saving-a-task-or-form-as-a-draft}
 
 「ドラフトとして保存」オプションでは、関連フォームに記入済みのデータとともに、タスクまたはフォームのスナップショットが保存されます。テンプレートからドラフトを作成することもできます。ドラフトはモバイルデバイスに保存され、今後取得できるように Adobe Experience Manager Forms サーバーと同期されます。
 
-[フォーム](/help/forms/using/working-with-form.md)を更新し、[写真や手書きメモを使用して](/help/forms/using/add-attachments.md)に注釈を付けることができます。 フォームの更新を続ける際は、ドラフトとして保存することをお勧めします。記入したフォームを後で送信する場合は、ドラフトとして保存しておくと便利です。
+[フォームの更新](/help/forms/using/working-with-form.md)や、写真および手書きメモを使用した[フォームの注釈付け](/help/forms/using/add-attachments.md)を行うことができます。フォームの更新を続ける際は、ドラフトとして保存することをお勧めします。記入したフォームを後で送信する場合は、ドラフトとして保存しておくと便利です。
 
-フォームポータルに保存したフォームに対して「ドラフトとして保存」機能を有効にするには、「[HTML5フォームをドラフトとして保存する](/help/forms/using/saving-html5-form-draft.md) 」を参照してください。
-アダプティブフォームの送信を設定するには、「[ドラフトと送信コンポーネント](/help/forms/using/draft-submission-component.md)」を参照してください。 (AEM Forms JEEサーバーと同期されたフォームに対しては無効です)。
+フォームポータルで保存したフォームの「ドラフトとして保存」機能を有効にするには、[HTML5 フォームのドラフトでの保存](/help/forms/using/saving-html5-form-draft.md)を参照してください。
+アダプティブフォームの送信を設定するには、[ドラフトと送信コンポーネント](/help/forms/using/draft-submission-component.md)を参照してください。（AEM Forms JEE サーバーと同期しているフォームでは無効になります。）
 
-ドラフトを作成するには、フォームを開き、「**ドラフトとして保存**![ドラフトとして保存](assets/save-as-draft.png)」をタップします。 ドラフトの名前を入力して、「**保存**」をタップします。ドラフトは Drafts フォルダーに保存され、サーバーと同期されます。アプリケーションがオフラインの場合は、Outbox フォルダーに保存されます。
+ドラフトを作成するには、フォームを開いて「**ドラフトとして保存** ![save-as-draft](assets/save-as-draft.png)」をタップします。ドラフトの名前を入力して、「**保存**」をタップします。ドラフトは Drafts フォルダーに保存され、サーバーと同期されます。アプリケーションがオフラインの場合は、Outbox フォルダーに保存されます。
 
 対応するフォームを後で更新した場合、変更内容はすぐに反映されます。AEM Forms アプリケーションを AEM Forms サーバーと同期すると、ドラフトが AEM Forms サーバーにアップロードされます。さらに、ドラフトは Outbox フォルダーから Tasks フォルダーか Drafts フォルダーに移動されます。その横には編集アイコンが表示されます。
 
 複数のタスクやスタートポイントを使用しているときにタスクやスタートポイントを保存すると、ドラフトが保存されます。アプリケーションが AEM Forms サーバーと同期されるたびに、ドラフトがサーバー上に保存されます。これにより、最後に保存した日付と時刻のドラフトをいつでも回復できます。例えば、アプリケーションを再インストールするか、モバイルデバイスを変更する場合は、サーバーからドラフトをダウンロードできます。
 
-## ドラフトの削除  {#delete-a-draft}
+## ドラフトの削除 {#delete-a-draft}
 
 Drafts フォルダーにはすべてのドラフトが一覧表示されます。「ドラフトを削除」オプションを使用すると、ドラフトをモバイルデバイスとサーバーから完全に削除できます。
 
@@ -41,7 +41,7 @@ Drafts フォルダーにはすべてのドラフトが一覧表示されます�
 
 以下の手順を実行し、ドラフトを削除します。
 
-1. AEM Formsアプリで、**Forms.**&#x200B;に移動します。
-1. 「検索」の横のドロップダウンから「**ドラフト**」を選択します。
-1. 編集アイコン![edit-draft-app](assets/edit-draft-app.png)を持つフォームは、ドラフトを表します。 ドラフトの横にある水平省略記号をタップします。
+1. AEM Forms アプリケーションで、「**Forms**」に移動します。
+1. 「検索」の隣にあるドロップダウンから「**ドラフト**」を選択します。
+1. フォームについている編集アイコン ![edit-draft-app](assets/edit-draft-app.png) は、そのフォームがドラフトであることを意味しています。ドラフトの横にある「...」をタップします。
 1. 水平省略記号をタップして表示されたオプションの一覧から、「**ドラフトを削除**」をタップします。
