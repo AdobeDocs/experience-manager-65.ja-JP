@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2116'
-ht-degree: 36%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ AEM は、次のようなユーザーに電子メール通知を送信します�
 前提条件：
 
 * ユーザーのプロファイルで有効な電子メールアドレスが定義されている必要があります。
-* 10. **Day CQ Mail Service** を適切に設定する必要があります。
+* **Day CQ Mail Service** が適切に設定されている必要があります。
 
 ユーザーへの通知は、各自がプロファイルで定義している言語の電子メールで送信されます。言語ごとに、独自のカスタマイズ可能なテンプレートがあります。新しい言語用には新しい電子メールテンプレートを追加できます。
 
@@ -45,7 +45,7 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
 * **SMTP サーバーポート**&#x200B;は 25 以上にする必要があります。
 
-* 10. **SMTP サーバーのホスト名** を空白にすることはできません。
+* **SMTP サーバーホスト名**&#x200B;は空白にできません。
 * **「送信元」アドレス**&#x200B;は空白にしてはなりません。
 
 **Day CQ Mail Service** の問題をデバッグしやすくするために、サービスのログを監視できます。
@@ -60,20 +60,20 @@ AEM で電子メールを送信できるようにするために、**Day CQ Mail
 
 ページまたはフォーラムのイベント通知を購読するとき、送信元の電子メールアドレスは、デフォルトで `no-reply@acme.com` に設定されます。この値は、Web コンソールで **Notification Email Channel** サービスを設定することで変更できます。
 
-差出人の電子メールアドレスを設定するには、 `sling:OsgiConfig` ノードをリポジトリに追加します。 次の手順を実行して、ノードを直接追加します。CRXDE Lite:
+送信元のメールアドレスを設定するには、`sling:OsgiConfig` ノードをリポジトリに追加します。以下の手順で、CRXDE Lite を使用してノードを直接追加します。
 
 1. CRXDE Lite で、`config` という名前のノードを、アプリケーションフォルダーの下に追加します。
-1. config フォルダーに、次の名前のノードを追加します。
+1. config フォルダーに、以下の名前のノードを追加します。
 
    `com.day.cq.wcm.notification.email.impl.EmailChannel`リソースのタイプは次のとおりとします。`sling:OsgiConfig`
 
-1. の `String` プロパティを `email.from`. 値には、使用する電子メールアドレスを指定します。
+1.  `String` プロパティを `email.from` という名前のノードに追加します。値には、使用するメールアドレスを指定します。
 
 1. 「**すべて保存**」をクリックします。
 
 次の手順を使用して、コンテンツパッケージソースフォルダーでノードを定義します。
 
-1. を `jcr_root/apps/*app_name*/config folder`、という名前のファイルを作成します。 `com.day.cq.wcm.notification.email.impl.EmailChannel.xml`
+1.  `jcr_root/apps/*app_name*/config folder` に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml` という名前のファイルを作成します。
 
 1. このノードを表現する次の XML を追加します。
 
@@ -139,16 +139,16 @@ This is an automatically generated message. Please do not reply.
 
 * `${time}`、イベントの日時。
 
-* `${userFullName}`：イベントをトリガーしたユーザーの完全名。
+* `${userFullName}`、イベントを実行したユーザーのフルネーム。
 
-* `${userId}`：イベントをトリガーしたユーザーの ID。
-* `${modifications}`は、ページイベントのタイプとページパスを次の形式で示します。
+* `${userId}`、イベントを実行したユーザーの ID。
+* `${modifications}`、ページイベントのタイプとページパスを次の形式で表します。
 
-   &lt;page event=&quot;&quot; type=&quot;&quot;> => &lt;page path=&quot;&quot;>
+   &lt;page event type> => &lt;page path>
 
-   例えば、次の操作が可能です。
+   次に例を示します。
 
-   PageModified => /content/geometrixx/en/products
+   PageModified => /content/geometrixx/ja/products
 
 ### フォーラム通知用の電子メールテンプレート {#email-templates-for-forum-notification}
 
@@ -193,13 +193,13 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-ここで、 `<text_x>` には、静的テキストと動的文字列変数を組み合わせることができます。
+`<text_x>` には、静的なテキストと動的な文字列変数を混在させることができます。
 
 フォーラム通知用の電子メールテンプレート内では次の変数を使用できます。
 
 * `${time}`、イベントの日時。
 
-* `${forum.path}`：フォーラムページへのパス。
+* `${forum.path}`、フォーラムページのパス。
 
 ### ワークフロー通知用の電子メールテンプレート {#email-templates-for-workflow-notification}
 
@@ -250,58 +250,58 @@ subject=<text_1>
 
 >[!NOTE]
 >
->ここで、 `<text_x>` には、静的テキストと動的文字列変数を組み合わせることができます。 各行の `<text_x>` 項目はバックスラッシュ ( `\`) を使用します。ただし、最後のインスタンスを除き、バックスラッシュがない場合は `<text_x>` 文字列変数。
+>`<text_x>` には、静的なテキストと動的な文字列変数を混在させることができます。`<text_x>` 項目の各行の末尾には、最後のインスタンスを除き、バックスラッシュ（`\`）を付加する必要があります。バックスラッシュがないと、`<text_x>` 文字列変数の終了と見なされます。
 >
 >テンプレート形式について詳しくは、[Properties.load() メソッドの javadocs](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-) を参照してください。
 
-メソッド `${payload.path.open}` 作業項目のペイロードへのパスを表示します。 例えば、 Sites のページの場合は、 `payload.path.open` 次のようになります。 `/bin/wcmcommand?cmd=open&path=…`.;サーバー名が付いていないので、テンプレートの先頭には `${host.prefix}`.
+メソッド `${payload.path.open}` を使用すると、作業項目のペイロードのパスが表示されます。例えば、Sites のページの場合、`payload.path.open` は `/bin/wcmcommand?cmd=open&path=…` と同じようなものです。これにサーバー名が抜けているのは、テンプレートによってプレフィックスとして `${host.prefix}` が付加されるためです。
 
 電子メールテンプレート内では以下の変数を使用できます。
 
-* `${event.EventType}`、イベントのタイプ
-* `${event.TimeStamp}`、イベントの日時
-* `${event.User}`：イベントをトリガーしたユーザー
-* `${initiator.home}`、イニシエータ・ノード・パス
+* `${event.EventType}`、イベントのタイプ。
+* `${event.TimeStamp}`、イベントの日時。
+* `${event.User}`、イベントをトリガーしたユーザー。
+* `${initiator.home}`、イニシエーターノードのパス。
 
-* `${initiator.name}`、イニシエータ名
+* `${initiator.name}`、イニシエーター名。
 
-* `${initiator.email}`（イニシエーターの E メールアドレス）
-* `${item.id}`（作業項目の id）
-* `${item.node.id}`（この作業項目に関連付けられたワークフローモデル内のノードの id）
-* `${item.node.title}`（作業項目のタイトル）
-* `${participant.email}`、参加者の電子メールアドレス
-* `${participant.name}`、参加者の名前
-* `${participant.familyName}`（参加者の姓）
-* `${participant.id}`，参加者の id
+* `${initiator.email}`、イニシエーターのメールアドレス。
+* `${item.id}`、作業項目の ID。
+* `${item.node.id}`、この作業項目に関連付けられているワークフローモデル内のノードの ID。
+* `${item.node.title}`、作業項目のタイトル
+* `${participant.email}`、参加者のメールアドレス
+* `${participant.name}`、参加者の名前。
+* `${participant.familyName}`、参加者の姓
+* `${participant.id}`、参加者の ID
 * `${participant.language}`、参加者の言語
-* `${instance.id}`、ワークフロー id
+* `${instance.id}`、ワークフローの ID
 * `${instance.state}`、ワークフローの状態
-* `${model.title}`（ワークフローモデルのタイトル）
-* `${model.id}`（ワークフローモデルの id）
+* `${model.title}`、ワークフローモデルのタイトル
+* `${model.id}`、ワークフローモデルの ID
 
-* `${model.version}`（ワークフローモデルのバージョン）
+* `${model.version}`、ワークフローモデルのバージョン
 * `${payload.data}`、ペイロード
 
-* `${payload.type}`、ペイロードタイプ
+* `${payload.type}`、ペイロードのタイプ
 * `${payload.path}`、ペイロードのパス
-* `${host.prefix}`、ホストプレフィックス。例：http://localhost:4502
+* `${host.prefix}`、ホストのプレフィックス（例：http://localhost:4502）
 
 ### 新しい言語用の電子メールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
 新しい言語用のテンプレートを追加するには：
 
-1. CRXDE で、ファイルを追加します。 `<language-code>.txt` 以下：
+1. CRXDE で、ファイル `<language-code>.txt` を以下に追加します。
 
-   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page` :ページ通知の場合
-   * `/etc/notification/email/default/com.day.cq.collab.forum` :フォーラム通知の場合
-   * `/libs/settings/workflow/notification/email/default` :ワークフロー通知の場合
+   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page`：ページ通知用
+   * `/etc/notification/email/default/com.day.cq.collab.forum`：フォーラム通知用
+   * `/libs/settings/workflow/notification/email/default`：ワークフロー通知用
 
 1. 言語に合わせてファイルを調整します。
 1. 変更内容を保存します。
 
 >[!NOTE]
 >
->10. `<language-code>` 電子メールテンプレートのファイル名として使用する場合は、AEMで認識される 2 文字の小文字の言語コードを使用する必要があります。 言語コードについては、AEM は ISO-639-1 に依存しています。
+>メールテンプレートのファイル名として使用される `<language-code>` は、AEM で認識できる小文字 2 文字の言語コードにする必要があります。言語コードについては、AEM は ISO-639-1 に依存しています。
 
 ## AEM Assets の電子メール通知の設定 {#assetsconfig}
 
@@ -313,157 +313,157 @@ AEM Assets のコレクションが共有されている場合も共有されて
 
 ## OAuth の設定 {#setting-up-oauth}
 
-AEMは、組織が安全な電子メール要件に準拠できるように、OAuth2 の統合メーラーサービスをサポートしています。
+AEM は、組織が安全なメール要件に準拠できるように、Oauth2 の統合メーラーサービスをサポートしています。
 
-以下に示すように、複数の E メールプロバイダーに対して OAuth を設定できます。
+以下に示すように、複数のメールプロバイダーに対して OAuth を設定できます。
 
 >[!NOTE]
 >
->この手順は、パブリッシュインスタンスの例です。 オーサーインスタンスで電子メール通知を有効にする場合は、オーサーインスタンスで同じ手順を実行する必要があります。
+>この手順は、公開インスタンスの例です。オーサーインスタンスでメール通知を有効にするには、オーサー上で同じ手順を実行する必要があります。
 
 ### Gmail {#gmail}
 
-1. でプロジェクトを作成する `https://console.developers.google.com/projectcreate`
-1. プロジェクトを選択し、に移動します。 **API とサービス** - **ダッシュボード — 資格情報**
+1. `https://console.developers.google.com/projectcreate` でプロジェクトを作成 
+1. プロジェクトを選択し、**API とサービス**／**ダッシュボード - 資格情報**&#x200B;に移動します。
 1. 必要に応じて OAuth 同意画面を設定する
-1. 次の [ 更新 ] 画面で、次の 2 つのスコープを追加します。
+1. 次の更新画面で、これらの 2 つの範囲を追加します。
    * `https://mail.google.com/`
    * `https://www.googleapis.com//auth/gmail.send`
-1. スコープを追加したら、に戻ります。 **資格情報** 左側のメニューで、 **資格情報の作成** - **OAuth Client ID** - **デスクトップアプリ**
-1. 新しいウィンドウが開き、クライアント ID とクライアントの秘密鍵が表示されます。
+1. 範囲を追加したら、左側のメニューで&#x200B;**資格情報**&#x200B;に戻り、 **資格情報を作成**／**OAuth クライアント ID**／**デスクトップアプリ**&#x200B;に移動します。
+1. 新しいウィンドウが開き、クライアント ID とクライアント秘密鍵が表示されます。
 1. これらの資格情報を保存します。
 
-**AEM側の設定**
+**AEM 側の設定**
 
 >[!NOTE]
 >
->Adobe管理サービスのお客様は、カスタマーサービスエンジニアと協力して、これらの変更を実稼動環境に加えることができます。
+>Adobe Managed Service をご利用のお客様は、顧客サービスエンジニアと協力して、これらの変更を本番環境に加えることができます。
 
 まず、メールサービスを設定します。
 
-1. に移動して、AEM Web コンソールを開きます。 `http://serveraddress:serverport/system/console/configMgr`
-1. を探して、「 **Day CQ Mail Service**
+1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます
+1. **Day CQ Mail Service** を探して、クリックします。
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.gmail.com`
-   * SMTP サーバーポート： `25` または `587`（要件に応じて）
-   * 次のチェックボックスをオンにします。 **SMPT で StarTLS を使用** および **SMTP には StarTLS が必要**
-   * チェック **OAuth フロー** をクリックします。 **保存**.
+   * SMTP サーバーポート：`25` または `587`（要件に応じて）
+   * 「**SMPT で StarTLS を使用**」および「**SMTP には StarTLS が必要**」のチェックボックスをオンにします。
+   * **OAuth フロー** をチェックし、「**保存**」をクリックします。
 
-次に、以下の手順に従って SMTP OAuth プロバイダーを設定します。
+次に、以下の手順に従って、SMTP OAuth プロバイダーを設定します。
 
-1. に移動して、AEM Web コンソールを開きます。 `http://serveraddress:serverport/system/console/configMgr`
-1. を探して、「 **CQ Mailer SMTP OAuth2 Provider**
-1. 必要な情報を次のように入力します。
-   * 認証 URL: `https://accounts.google.com/o/oauth2/auth`
-   * トークン URL: `https://accounts.google.com/o/oauth2/token`
-   * スコープ： `https://www.googleapis.com/auth/gmail.send` および `https://mail.google.com/`. 複数の範囲を追加するには、 **+** ボタンをクリックします。
-   * クライアント ID とクライアントの秘密鍵：上記の段落で説明したように取得した値を使用して、これらのフィールドを設定します。
+1. `http://serveraddress:serverport/system/console/configMgr` に移動して、AEM web コンソールを開きます。
+1. **CQ Mailer SMTP OAuth2 Provider** を探して、クリックします。
+1. 必要な情報を以下のとおり入力します。
+   * 認証 URL：`https://accounts.google.com/o/oauth2/auth`
+   * トークン URL：`https://accounts.google.com/o/oauth2/token`
+   * 範囲：`https://www.googleapis.com/auth/gmail.send` および `https://mail.google.com/`。複数の範囲を追加するには、設定された各範囲の右側にある「**+**」ボタンをクリックします。
+   * クライアント ID とクライアント秘密鍵：上記の段落で取得した値を使用して、これらのフィールドを設定します。
    * 更新トークン URL: `https://accounts.google.com/o/oauth2/token`
-   * 更新トークンの有効期限：never
+   * 更新トークンの有効期限：なし
 1. 「**保存**」をクリックします。
 
 <!-- clarify refresh token expiry, currrently not present in the UI -->
 
 設定が完了すると、設定は次のようになります。
 
-![oauth smtp プロバイダー](assets/oauth-smtpprov2.png)
+![OAuth SMTP プロバイダー](assets/oauth-smtpprov2.png)
 
-次に、OAuth コンポーネントをアクティブ化します。 手順は次のとおりです。
+次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
 
-1. 次の URL にアクセスして、コンポーネントコンソールに移動します。 `http://serveraddress:serverport/system/console/components`
-1. 次のコンポーネントを探します。
+1. URL：`http://serveraddress:serverport/system/console/components` にアクセスして、コンポーネントコンソールに移動します。
+1. 以下のコンポーネントを探します
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
-1. コンポーネントの左側にある再生アイコンを押します。
+1. コンポーネントの左側にある「再生」アイコンを押します。
 
-   ![コンポーネント](assets/oauth-components-play.png)
+   ![components](assets/oauth-components-play.png)
 
-最後に、次の手順で設定を確認します。
+最後に、以下により設定を確認します。
 
-1. パブリッシュインスタンスのアドレスに移動し、管理者としてログインします。
-1. ブラウザーで新しいタブを開き、に移動します。 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. これにより、SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
-1. ログインと、必要な権限の付与に対する同意
-1. 同意すると、トークンはリポジトリに保存されます。 これには、以下でアクセスできます。 `accessToken` パブリッシュインスタンスでこの URL に直接アクセスして、次の操作をおこないます。 `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
-1. 各パブリッシュインスタンスに対して上記を繰り返します。
+1. 公開インスタンスのアドレスに移動し、管理者としてログインします。
+1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
+1. ログインして、必要な権限を与えることに同意する
+1. 同意すると、トークンがリポジトリに格納されます。公開インスタンス：`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth` でこの URL に直接アクセスすると、`accessToken` でトークンにアクセスできます。
+1. 公開インスタンスごとに上記の手順を繰り返します。
 
 <!-- clarify if the ip/server address in the last procedure is that of the publish instance -->
 
 ### Microsoft Outlook {#microsoft-outlook}
 
-1. に移動します。 [https://portal.azure.com/](https://portal.azure.com/) をクリックし、ログインします。
-1. を検索 **Azure Active Directory** 検索バーで、結果をクリックします。 または、 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
-1. をクリックします。 **アプリの登録** - **新規登録**
+1. [https://portal.azure.com/](https://portal.azure.com/)に移動し、ログインします。
+1. 検索バーで **Azure Active Directory** を検索し、結果をクリックします。または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
+1. **アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
    ![](assets/oauth-outlook1.png)
 
-1. 必要に応じて情報を入力し、「 **登録**
-1. 新しく作成したアプリに移動し、「 」を選択します。 **API 権限**
-1. に移動します。 **権限を追加** - **グラフ権限** - **委任された権限**
-1. アプリに対する以下の権限を選択し、「 **権限を追加**:
+1. 必要に応じて情報を入力し、**登録**&#x200B;をクリックします。
+1. 新しく作成されたアプリに移動し、**API 権限**&#x200B;を選択します。
+1. **権限を追加**／**グラフ権限**／**委任権限**&#x200B;に移動します。
+1. アプリに対して以下の権限を選択し、「**権限を追加**」をクリックします。
    * `SMTP.Send`
    * `Mail.Read`
    * `Mail.Send`
    * `openid`
    * `offline_access`
-1. に移動します。 **認証** - **プラットフォームの追加** - **Web**、および **リダイレクト Url** 「 」セクションで、OAuth コードをリダイレクトするための次の URL を追加し、 **設定**:
+1. **認証**／**プラットフォームの追加**／**web** に移動し、「**リダイレクト URL**」セクションで、OAuth コードをリダイレクトする URL を次のように追加してから「**設定**」を押します。
    * `http://localhost:4503/services/mailer/oauth2/token`
-1. 各パブリッシュインスタンスに対して上記を繰り返します。
-1. 要件に従って設定を行います
-1. 次に、に移動します。 **証明書と秘密**&#x200B;をクリックし、 **新しいクライアント秘密鍵** および画面の手順に従って、秘密鍵を作成します。 後で使用するために、この秘密を必ずメモしておきます
-1. 押す **概要** 左側のウィンドウで、 **アプリケーション（クライアント） ID** および **ディレクトリ（テナント） ID** 後で使用する
+1. 公開インスタンスごとに上記の手順を繰り返します。
+1. 要件に応じて設定を指定します
+1. 次に、「**証明書とシークレット**」に移動し、「**新しいクライアントシークレット**」をクリックし、画面の手順に従ってシークレットを作成します。このシークレットは後で使用するため、必ずメモしてください
+1. 左側のウィンドウで「**概要**」を押し、後で使用するために、「**アプリケーション（クライアント）ID**」および「**ディレクトリ（テナント）ID**」の値をコピーします。
 
-要約すると、AEM側で Mailer サービスの OAuth2 を設定するには、次の情報が必要です。
+まとめると、以下の情報を使用して、AEM 側の Mailer サービスの Oauth2 を設定する必要があります。
 
-* 認証 URL。テナント ID を使用して構築されます。 次の形式になります。 `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
-* トークン URL。テナント ID を使用して構築されます。 次の形式になります。 `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 更新 URL。テナント ID を使用して構築されます。 次の形式になります。 `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 認証 URLはテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* トークン URL はテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 更新 URL はテナント ID を使用して構築されます。次の形式になります。`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * クライアント ID
 * クライアント秘密鍵
 
-**AEM側の設定**
+**AEM 側の設定**
 
-次に、OAuth2 設定をAEMと統合します。
+次に、OAuth2 の設定を AEM と統合します。
 
-1. を参照して、ローカルインスタンスの Web コンソールに移動します。 `http://serveraddress:serverport/system/console/configMgr`
-1. を探してクリックします。 **Day CQ Mail Service**
+1. `http://serveraddress:serverport/system/console/configMgr` をブラウジングすることで、ローカルインスタンスの web コンソールに移動します。
+1.  **Day CQ Mail Service** を探してクリックします。
 1. 次の設定を追加します。
    * SMTP サーバーのホスト名: `smtp.office365.com`
-   * SMTP ユーザー：電子メール形式のユーザー名
-   * &quot;差出人&quot;のアドレス：メーラーから送信されるメッセージの「送信者：」フィールドで使用する電子メールアドレス
-   * SMTP サーバーポート： `25` または `587` 要件に応じて
-   * 次のチェックボックスをオンにします。 **SMPT で StarTLS を使用** および **SMTP には StarTLS が必要**
-   * チェック **OAuth フロー** をクリックします。 **保存**.
-1. を探して、「 **CQ Mailer SMTP OAuth2 Provider**
-1. 必要な情報を次のように入力します。
-   * 「認証 URL」、「トークン URL」および「更新トークン URL」を入力します。それらの URL は、 [この手順の終わり](#microsoft-outlook)
-   * クライアント ID とクライアントの秘密鍵：これらのフィールドに、前述のように取得した値を設定します。
-   * 次のスコープを構成に追加します。
+   * SMTP ユーザー：電子メール形式のユーザ名
+   * 「From」アドレス：メーラーが送信するメッセージの「From」フィールドで使用するメールアドレス
+   * SMTP サーバーポート：要件に応じて `25` または `587`
+   * 「**SMPT は StarTLS を使用**」と「**SMTP には StarTLS が必要**」のチェックボックスをオンにします。
+   * **OAuth フロー**&#x200B;を確認して「**保存**」をクリックします。
+1.  **CQ メーラー SMTP OAuth2 プロバイダー** を探して、それをクリックします。
+1. 必要な情報を以下のとおり入力します。
+   * 「認証 URL」、「トークン URL」、「更新トークン URL」を、[この手順の最後](#microsoft-outlook)に説明した方法で作成し、入力します。
+   * クライアント ID とクライアント秘密鍵：これらのフィールドに、前述のように取得した値を設定します。
+   * 次のスコープを設定に追加します。
       * openid
       * offline_access
       * `https://outlook.office365.com/Mail.Send`
       * `https://outlook.office365.com/Mail.Read`
       * `https://outlook.office365.com/SMTP.Send`
-   * AuthCode リダイレクト Url: `http://localhost:4503/services/mailer/oauth2/token`
-   * 更新トークン URL:これは、上記のトークン URL と同じ値にする必要があります
+   * AuthCode リダイレクト URL：`http://localhost:4503/services/mailer/oauth2/token`
+   * 更新トークン URL：これは、上記のトークン URL と同じ値である必要があります
 1. 「**保存**」をクリックします。
 
 設定が完了すると、設定は次のようになります。
 
 ![](assets/oauth-outlook-smptconfig.png)
 
-次に、OAuth コンポーネントをアクティブ化します。 手順は次のとおりです。
+次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
 
-1. 次の URL にアクセスして、コンポーネントコンソールに移動します。 `http://serveraddress:serverport/system/console/components`
-1. 次のコンポーネントを探します。
+1. URL：`http://serveraddress:serverport/system/console/components` にアクセスして、コンポーネントコンソールに移動します。
+1. 以下のコンポーネントを探します
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeGenerateServlet`
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
-1. コンポーネントの左側にある再生アイコンを押します。
+1. コンポーネントの左側にある「再生」アイコンを押します。
 
 ![components2](assets/oauth-components-play.png)
 
-最後に、次の手順で設定を確認します。
+最後に、以下により設定を確認します。
 
-1. パブリッシュインスタンスのアドレスに移動し、管理者としてログインします。
-1. ブラウザーで新しいタブを開き、に移動します。 `http://serveraddress:serverport/services/mailer/oauth2/authorize`. これにより、SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
-1. ログインと、必要な権限の付与に対する同意
-1. 同意すると、トークンはリポジトリに保存されます。 これには、以下でアクセスできます。 `accessToken` パブリッシュインスタンスでこの URL に直接アクセスして、次の操作をおこないます。 `http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
+1. 公開インスタンスのアドレスに移動し、管理者としてログインします。
+1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize`に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
+1. ログインして、必要な権限を与えることに同意する
+1. 同意すると、トークンがリポジトリに格納されます。ご利用の公開インスタンスで次の URL に直接アクセスすることで、`accessToken` のトークンにアクセスできます。`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
