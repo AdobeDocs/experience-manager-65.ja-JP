@@ -1,8 +1,8 @@
 ---
 title: AEM Forms アプリの配布
-seo-title: AEM Forms アプリの配布
+seo-title: Distribute AEM Forms app
 description: Mobile Device Management（MDM）を使用すると、モバイルデバイスでアプリケーションの大規模なデプロイメントを実行できます。
-seo-description: Mobile Device Management（MDM）を使用すると、モバイルデバイスでアプリケーションの大規模なデプロイメントを実行できます。
+seo-description: Use Mobile Device Management (MDM) for the large-scale deployment of apps on mobile devices.
 uuid: 8a2ce42b-5e9b-42c1-a945-c069f6152f6e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,13 +10,13 @@ topic-tags: forms-app
 discoiquuid: 5756cb52-dd47-4277-981c-fd0af9a20638
 exl-id: 375cfa95-ac6f-44c4-a736-f5dd55d24195
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '243'
+ht-degree: 100%
 
 ---
 
-# AEM Forms アプリの配布  {#distribute-aem-forms-app}
+# AEM Forms アプリの配布 {#distribute-aem-forms-app}
 
 Mobile Device Management（MDM）により、モバイルデバイスでアプリケーションの大規模なデプロイメントを実行できます。
 
@@ -24,7 +24,7 @@ Mobile Device Management（MDM）により、モバイルデバイスでアプ�
 >
 >今回の公開は、iOS および Android デバイスのみ該当します。
 
-## MDM ソリューションによって一般的に提供される主な機能：  {#main-features-generally-provided-by-mdm-solutions}
+## MDM ソリューションによって一般的に提供される主な機能： {#main-features-generally-provided-by-mdm-solutions}
 
 * エンタープライズ環境でのデバイス登録の有効化
 * デバイス設定の設定と更新の許可
@@ -37,7 +37,7 @@ MDM 管理者は ipa ファイルと apk ファイルの両方を MDM サーバ�
 
 ## AEM Forms アプリケーションに影響するプロファイル設定 {#profile-settings-affecting-the-aem-forms-app-br}
 
-デバイスでの次のプロファイル設定は、デバイスのAEM Formsアプリの機能に影響します。
+デバイスにおける次のプロファイル設定は、お使いのデバイスの AEM Forms アプリケーションの機能に影響を与えます。
 
 * 「**Device functionality**」セクションの「**Allow use of camera**」
 
