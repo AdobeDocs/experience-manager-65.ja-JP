@@ -3,9 +3,9 @@ title: コンテンツフラグメントへのアクセスとヘッドレス配�
 description: AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
 source-git-commit: 6c75af3957c319c38177cd62c90e781a982ba91b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '532'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -13,12 +13,12 @@ ht-degree: 88%
 
 AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
 
-## GraphQL API と Assets REST API とは何ですか  {#what-are-the-apis}
+## GraphQL API と Assets REST API とは {#what-are-the-apis}
 
 [コンテンツフラグメントはいくつか作成したので、AEM API](create-content-fragment.md) を使用してそれらをヘッドレスで配信できます。
 
 * [GraphQL](/help/assets/content-fragments/graphql-api-content-fragments.md) API を使用すると、コンテンツフラグメントにアクセスして配信するリクエストを作成できます。
-   * これを使用するには、 [エンドポイントは、AEMで定義して有効にする必要があります](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)、および必要に応じて [GraphiQL インターフェイスがインストールされています](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface).
+   * これを使用するには、[AEM でエンドポイントを定義して有効にする必要があり](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)、必要に応じて [GraphiQL インターフェイスをインストールする必要があります](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)。
 * [アセット REST API](/help/assets/assets-api-content-fragments.md) を使用すると、コンテンツフラグメント（およびその他のアセット）を作成および変更できます。
 
 このガイドの残りの部分では、GraphQL へのアクセスとコンテンツフラグメントの配信について説明します。
@@ -27,7 +27,7 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 
 情報アーキテクトは、コンテンツを配信するために、チャネルエンドポイント用のクエリを設計する必要があります。一般に、これらのクエリは、モデルやエンドポイントごとに 1 回だけ作成する必要があります。この「はじめる前に」ガイドの目的上、1 つだけ作成します。
 
-1. AEMにログインし、GraphiQL インターフェイスにアクセスします。
+1. AEM にログインし、GraphiQL インターフェイスにアクセスします。
    * 例：`https://<host>:<port>/content/graphiql.html`
 
 1. GraphiQL は、GraphQL のブラウザー内のクエリエディターです。クエリを構築して、コンテンツフラグメントを取得し、それらを JSON としてヘッドレスに配信できます。
@@ -58,9 +58,9 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 1. 「**クエリを実行**」ボタンをクリックするか `Ctrl-Enter` ホットキーを使用すると、結果が JSON として右側のパネルに表示されます。
    ![GraphiQL の結果](../assets/graphiql-results.png)
 
-1. クリック:
-   * **ドキュメント** ページの右上にコンテキスト内ドキュメントが表示され、独自のモデルに適応するクエリを作成するのに役立ちます。
-   * **履歴** をクリックして前のクエリを表示します。
+1. 以下をクリックします。
+   * ページの右上にある&#x200B;**ドキュメント**。文脈依存ドキュメントが表示され、独自のモデルに適合するクエリの構築に役立ちます。
+   * 上部のツールバーにある&#x200B;**履歴**。以前のクエリが表示されます。
       ![GraphiQL ドキュメント](../assets/graphiql-documentation.png)
 
 GraphQL を使用すると、特定のデータセットや個々のデータオブジェクトだけでなく、オブジェクトの特定の要素、ネストされた結果、クエリ変数のオファーサポートなどをターゲットできる構造化クエリが可能です。
