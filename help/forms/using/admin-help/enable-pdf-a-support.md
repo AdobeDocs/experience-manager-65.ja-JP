@@ -1,8 +1,8 @@
 ---
 title: PDF/A サポートの有効化
-seo-title: PDF/A サポートの有効化
+seo-title: Enable PDF/A support
 description: PDF/A サポートを有効化する方法について説明します。PDF/A 準拠ファイルは、Microsoft Excel、Microsoft PowerPoint および Microsoft Word ファイルから作成できます。
-seo-description: PDF/A サポートを有効化する方法について説明します。PDF/A 準拠ファイルは、Microsoft Excel、Microsoft PowerPoint および Microsoft Word ファイルから作成できます。
+seo-description: Learn how to enable PDF/A support. PDF/A-compliant files can be created from Microsoft Excel, Microsoft PowerPoint, and Microsoft Word files.
 uuid: 663bc89d-9d8b-4178-9a88-6d2d5daac477
 contentOwner: admin
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 17a6397b-0089-4fd1-b44a-686fdf60d7a9
 feature: PDF Generator
 exl-id: 0e83a208-aa8f-4ff1-b981-244d22a157f2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '136'
+workflow-type: ht
+source-wordcount: '108'
 ht-degree: 100%
 
 ---
