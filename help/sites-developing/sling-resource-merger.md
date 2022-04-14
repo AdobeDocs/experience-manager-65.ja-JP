@@ -1,7 +1,7 @@
 ---
 title: AEM での Sling Resource Merger の使用
 seo-title: Using the Sling Resource Merger in AEM
-description: Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します
+description: Sling Resource Merger は、リソースにアクセスおよびマージするためのサービスを提供します
 seo-description: The Sling Resource Merger provides services to access and merge resources
 uuid: 0a28fdc9-caea-490b-8f07-7c4a6b802e09
 contentOwner: Guillaume Carlino
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
 source-git-commit: c07fa148054b69b0da7bb402ef96a50d0895abfa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1254'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 96%
 
 ## 目的 {#purpose}
 
-Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します.Sling Resource Merger は、次の両方に対して差分メカニズムを提供します。
+Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します. Sling Resource Merger は、次の両方に対して差分メカニズムを提供します。
 
 * [設定済みの検索パス](/help/sites-developing/overlays.md#configuring-the-search-paths)を使用するリソースの&#x200B;**[オーバーレイ](/help/sites-developing/overlays.md)**。
 
@@ -35,7 +35,7 @@ Sling Resource Merger を使用すると、リソースやプロパティのオ�
 
 >[!CAUTION]
 >
->Sling Resource Merger および関連する手法は、[Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) に対してのみ使用できます。これはまた、標準のタッチ操作対応 UI にのみ適していることを意味します。特に、この方法で定義された上書きは、コンポーネントのタッチ操作対応ダイアログにのみ適用できます。
+>Sling Resource Merger および関連する手法は、[Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) に対してのみ使用できます。これはつまり、標準のタッチ操作対応 UI でのみ使用できるという意味です。特に、この方法で定義された特定のオーバーライドは、コンポーネントのタッチ操作対応ダイアログに対してのみ適用できます。
 >
 >その他の領域（タッチ操作対応コンポーネントやクラシック UI の他の側面を含む）のオーバーレイ／オーバーライドでは、適切なノードと構造を元の場所からカスタマイズの定義先にコピーします。
 
@@ -62,9 +62,9 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目 ( `/libs`) `/apps`
+>1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
 >
->1. `/apps` 内で変更作業をおこないます。
+>1. `/apps` 内で変更作業を行います。
 
 >
 
@@ -176,7 +176,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 
 * **ノードおよびその子の再定義**
 
-   `/libs` 内に定義されているノードとその子について、`/apps` オーバーレイ／オーバーライドで新しい設定が必要な場合は、再定義をおこないます。
+   `/libs` 内に定義されているノードとその子について、`/apps` オーバーレイ／オーバーライドで新しい設定が必要な場合は、再定義を行います。
 
    1. 次のアクションを両方実行します。
 
