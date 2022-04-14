@@ -1,8 +1,8 @@
 ---
 title: テキストエディターのカスタマイズ
-seo-title: テキストエディターのカスタマイズ
+seo-title: Customize text editor
 description: テキストエディターのカスタマイズ方法について説明します。
-seo-description: テキストエディターのカスタマイズ方法について説明します。
+seo-description: Learn how to customize text editor.
 uuid: 598246fe-8f15-49b6-b6d3-9154bebcd27e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ docset: aem65
 feature: Correspondence Management
 exl-id: 1dd3f55c-24f7-4331-a9a3-c9223e613fec
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 63%
+workflow-type: ht
+source-wordcount: '605'
+ht-degree: 100%
 
 ---
 
@@ -40,10 +40,10 @@ ht-degree: 63%
 
 フォントをカスタマイズするには、次のファイルを編集します。 tbxeditor-config.xml file。次の手順を実行します。
 
-1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
-1. 次の手順を使用して、appsフォルダーに、configフォルダー（libs/fd/cm/configにある）と同じパス/構造を持つconfigという名前のフォルダーを作成します。
+1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
+1. apps フォルダーに、libs/fd/cm/config の config フォルダーに類似したパスまたはフォルダー構造を持つ config という名前のフォルダーを次の手順で作成します。
 
-   1. 次のパスにあるitemsフォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
+   1. 以下のパスにある items フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。
 
       `/libs/fd/cm/config`
 
@@ -51,11 +51,11 @@ ht-degree: 63%
 
    1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
 
-      **パス：** /libs/fd/cm/config
+      **パス：** /libs/fd/cm/config
 
-      **場所：** /apps/
+      **場所：** /apps/
 
-      **ノードタイプを一致させる：** 選択
+      **ノードタイプを一致させる：**&#x200B;選択済み
 
       ![ノードをオーバーレイ](assets/2.png)
 
@@ -70,11 +70,11 @@ ht-degree: 63%
 
       `apps/fd/cm/config`
 
-   1. 貼り付けたファイルの名前は、デフォルトでは`copy of tbxeditor-config.xml.`ファイル名を`tbxeditor-config.xml`に変更し、「**すべて保存**」をクリックします。
+   1. 貼り付けたファイルの名前は、デフォルトでは `copy of tbxeditor-config.xml.` です。ファイル名を `tbxeditor-config.xml` に変更し、「**すべて保存**」をクリックします。
 
-1. apps/fd/cm/configにあるtbxeditor-config.xmlファイルを開き、必要な変更を行います。
+1. apps/fd/cm/config の tbxeditor-config.xml ファイルを開き、必要な変更を加えます。
 
-   1. apps/fd/cm/configにあるtbxeditor-config.xmlファイルをダブルクリックします。 ファイルが開きます。
+   1. apps/fd/cm/config にある tbxeditor-config.xml ファイルをダブルクリックします。ファイルが開きます。
 
       ```xml
       <editorConfig>
@@ -161,16 +161,16 @@ ht-degree: 63%
       </editorConfig>
       ```
 
-   1. 必要な変更をファイルに加えて、以下のフォント設定を変更します。
+   1. 必要となる変更をファイルに加え、フォント設定で以下を変更します。
 
       * フォントファミリーとサイズの追加または削除
       * 高さ、文字間隔などのプロパティ
       * フォントファミリーとサイズ、高さ、文字間隔、日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XMLファイル：`<font>Sazanami Mincho Medium</font>`. また、このフォントを、フォントのカスタマイズにアクセスして操作するクライアントマシンにインストールする必要があります。 詳しくは、「[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)」を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには XML ファイル：`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
 
-      また、テキストの様々な側面のデフォルトを変更したり、エントリを削除して、テキストエディターからフォントを削除したりすることもできます。
+      また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 
    1. 「**すべて保存**」をクリックします。
 
@@ -181,16 +181,16 @@ Correspondence Management テキストエディターに格納されたフォン
 
 フォントのインストールについて詳しくは、次を参照してください。
 
-* [フォントをインストールまたはアンインストールする](https://windows.microsoft.com/en-us/windows-vista/install-or-uninstall-fonts)
+* [Windows でフォントをインストールまたはアンインストールする](https://windows.microsoft.com/ja-jp/windows-vista/install-or-uninstall-fonts)
 * [Mac ハンドブック：Font Book](https://support.apple.com/ja-jp/HT201749)
 
 ## カスタマイズしたフォントへのアクセス {#access-font-customizations}
 
-CRXのtbxeditor-config.xmlファイルのフォントに変更を加え、AEM Formsにアクセスするクライアントマシンに必要なフォントをインストールすると、変更がテキストエディターに表示されます。
+CRX の tbxeditor-config.xml ファイルのフォントに変更を加え、さらに AEM Forms へのアクセスに使用するクライアントマシンに必要なフォントをインストールすると、テキストエディターに変更が反映されます。
 
-例えば、 [CRX](#customizefonts)のtbxeditor-config.xmlファイルを編集してフォントをカスタマイズすると、Sazanami Mincho MediumフォントがテキストエディターのUIに次のように表示されます。
+例えば、[CRX の tbxeditor-config.xml ファイルを編集してフォントをカスタマイズする](#customizefonts)手順で Sazanami Mincho Medium フォントを追加した場合、テキストエディターの UI で以下のように表示されます。
 
-![sazanaminchointext](assets/sazanamiminchointext.png)
+![sazanamiminchointext](assets/sazanamiminchointext.png)
 
 >[!NOTE]
 >
