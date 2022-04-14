@@ -1,8 +1,8 @@
 ---
-title: AEMワークフローからDocument Services APIを開始
-seo-title: AEM ワークフローからの Document Services API の開始
+title: AEM ワークフローからの Document Services API の開始
+seo-title: Initiate Document Services APIs from AEM Workflow
 description: DDX または指定された入力で AEM Document Services を呼び出す方法について説明します。PDF を PDF/A に変換する方法も参照してください。
-seo-description: DDX または指定された入力で AEM Document Services を呼び出す方法について説明します。PDF を PDF/A に変換する方法も参照してください。
+seo-description: Learn how to invoke AEM Document services on DDX or supplied inputs. Also see hwo to convert PDF to PDF/A
 uuid: aacec2df-1ad6-4ff2-a99d-ef206efcdc09
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,9 +10,9 @@ topic-tags: document_services
 discoiquuid: 8b85bdc7-3864-49c9-81b0-cf15b8e986d9
 exl-id: 123087a2-9d09-4579-9185-2ccd7d25bf8d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 87%
+workflow-type: ht
+source-wordcount: '1171'
+ht-degree: 100%
 
 ---
 
@@ -20,14 +20,14 @@ ht-degree: 87%
 
 ## Assembler {#assembler}
 
-AEM Formsは、次のAssemblerサービスAPIを呼び出すカスタムワークフローを提供します。
+AEM Forms は、カスタムワークフローを提供し、以下の Assembler サービス API を呼び出します。
 
 * **呼び出し**：提供されたインプット上の入力DDXで指定された操作を呼び出します。
 * **toPDFA**：入力PDFドキュメントをPDF/Aドキュメントに変換します。
 
 ### Invoke DDX ワークフロー {#invoke-ddx-workflow}
 
-**DDX**&#x200B;を呼び出しワークフローは、`Invoke` AssemblerサービスAPIを呼び出します。このAPIを使用して、ドキュメントのアセンブリまたはディスアセンブリ、PDFへの透かしの追加などを行うことができます。
+**DDX を呼び出し**&#x200B;ワークフローは、`Invoke` Assembler サービス API を呼び出します。この API を使用して、ドキュメントの作成や分解、PDF への透かしの追加などを行うことができます。
 
 1. Sidekickの中のフォームのワークフローの下で、**[!UICONTROL Invoke DDX]**&#x200B;ワークフローステップをドラッグします。
 1. 追加されたワークフローステップをダブルクリックしてコンポーネントを編集します。
@@ -39,13 +39,13 @@ Invoke DDXワークフローには以下の入力ドキュメントが必要で�
 
 * **DDX**：Invoke DDXワークフローステップの必須入力項目で、以下のDDXオプションのうち一つを選択することで指定することができます。
 
-   * *ペイロードとの関連*:DDX入力ファイルは、ワークフロー項目のペイロードフォルダーに対する相対パスです。
+   * *ペイロードとの関連*：DDX 入力ファイルは、ワークフロー項目のペイロードフォルダーに関連しています。
    * *ペイロードの使用*：ワークフロー項目のペイロードはDDXドキュメントとして使用されます。
    * *絶対パス*：CRXリポジトリの中のDDXドキュメントへの絶対パスです。
 
-* **PayLoadからマップを作成**:選択すると、ペイロードフォルダーの下のすべてのドキュメントが、AssemblerのAPIの入力ドキュメントマップに `invoke` 追加されます。各ドキュメントのノード名は、マップのキーとして使用されます。
+* **ペイロードからマップを作成**：選択すると、ペイロードフォルダーの下のすべてのドキュメントが、Assembler の `invoke` API 用に入力ドキュメントマップに追加されます。各ドキュメントのノード名は、マップのキーとして使用されます。
 
-* **入力ドキュメントマップ**:入力ドキュメントのマップを指定します。各エントリがマップのキーおよびドキュメントのソースのエントリを指定するすべてのエントリ数を追加することができます。
+* **入力ドキュメントマップ**：入力ドキュメントマップを指定します。各エントリがマップのキーおよびドキュメントのソースのエントリを指定するすべてのエントリ数を追加することができます。
 
 #### 環境オプション {#environment-options}
 
@@ -60,7 +60,7 @@ Invoke DDXワークフローには以下の入力ドキュメントが必要で�
 
 入力DDXに応じて、呼び出しAPIは複数の出力ドキュメントを生成することができます。出力ドキュメントタブは、出力ドキュメントの保存場所の選択を可能にします。
 
-1. *ペイロードでの出力の保存*:ペイロードフォルダーの下に出力ドキュメントを保存するか、ペイロードがファイルの場合はペイロードを上書きします。
+1. *ペイロードでの出力ドキュメント保存*：ペイロードフォルダーの下で出力ドキュメントを保存したり、ペイロードがファイルの場合はペイロードを上書きしたりします。
 1. *出力ドキュメントのマップ*：出力ドキュメント毎に１つのエントリを追加することによって、各出力ドキュメントの保存場所をを明確に指定します。各エントリは、ドキュメントと保存場所を指定します。出力ドキュメントは、ペイロードに上書きしたり、ペイロードフォルダーの下で保存したりできます。複数の出力ドキュメントがあると役に立ちます。
 
 1. *ジョブログ*：トラブルシューティングエラーが出た時に役立つように、ジョブログを保存する場所を指定します。
@@ -69,7 +69,7 @@ Invoke DDXワークフローには以下の入力ドキュメントが必要で�
 
 PDF/Aワークフローステップへの変換は、「 Assembler Service API」を呼び出します。`toPDFA`PDF/Aに準拠した文書をPDFに変換するのに使用します。
 
-1. Sidekickのフォームワークフロータブの下にある&#x200B;**** ConvertToPDFAワークフローステップをドラッグします。
+1. Sidekickのフォームワークフロータブの下にある&#x200B;**[!UICONTROL ConvertToPDFA]**&#x200B;ワークフローステップをドラッグします。
 
 1. 追加されたワークフローステップをダブルクリックしてコンポーネントを編集します。
 1. 編集コンポーネントダイアログで、入力ドキュメント、変換オプションおよび出力ドキュメントを設定して&#x200B;**[!UICONTROL OK]**&#x200B;をクリックします。
@@ -80,7 +80,7 @@ PDF/Aワークフローステップへの変換は、「 Assembler Service API�
 
 * ペイロードとの関連&#x200B;*：入力ドキュメントは、ワークフロー項目のペイロードフォルダーに関連しています。*
 * *ペイロードの使用*：ワークフロー項目のペイロードは入力ドキュメントとして使用します。
-* **&#x200B;絶対パス：CRXリポジトリの中の入力ドキュメントへの絶対パスです。
+* *絶対パス*：CRXリポジトリの中の入力ドキュメントへの絶対パスです。
 
 #### 変換オプション {#conversion-options}
 
@@ -90,8 +90,8 @@ PDF/Aワークフローステップへの変換は、「 Assembler Service API�
 * *結果レベル*：PDF/A変換ログに使用するログレベルを指定します。
 * *署名*：入力ドキュメントの署名が、変換中にどのように処理されなければならないかを指定します。
 * *カラースペース*：事前に定義された出力PDF/Aドキュメントに使用されるカラースペースを指定します。
-* ** VerifyConversion:変換後のPDF/AドキュメントがPDF/Aに準拠しているかどうかを指定します。
-* **&#x200B;ジョブのログレベル：処理ログのログレベルを指定します。
+* 変換の&#x200B;*検証*：変換された PDF/A ドキュメントが変換後に PDF/A に準拠しているかどうかを明記します。
+* *ジョブのログレベル*：処理ログのログレベルを指定します。
 
 * *Metadata Extension Schema*：PDF文書のメタデータのXMPプロパティに使用するMetadata extension schemaを指定します。
 
@@ -100,9 +100,9 @@ PDF/Aワークフローステップへの変換は、「 Assembler Service API�
 出力ドキュメントタブは、出力ドキュメントの出力先を指定することができます。
 
 * *PDFA文書*：変換されたPDF/A文書を保存されている場所を明確にします。ペイロード文書に上書きするか、ペイロードフォルダーの下で保存できます。
-* *変換ログ*：変換ログが保存されている場所を明確にします。ペイロードドキュメントを上書きするか、ペイロードフォルダーの下に保存できます。
+* *変換ログ*：変換ログが保存されている場所を明確にします。ペイロード文書に上書きするか、ペイロードフォルダーに保存できます。
 
-## フォーム {#forms}
+## Forms {#forms}
 
 Render PDF Formワークフローは、`renderPDFForm`Forms service APIの周りのラッパーで、XDPテンプレートおよびデータxmlを使用してPDFフォームを作成します。
 
@@ -110,7 +110,7 @@ Render PDF Formワークフローは、`renderPDFForm`Forms service APIの周り
 
 1. Sidekickのフォームワークフロータブの下にあるRender PDF Formワークフローステップをドラッグします。
 1. 追加されたワークフローステップをダブルクリックしてコンポーネントを編集します。
-1. 編集コンポーネントダイアログでは、入力ドキュメント、出力ドキュメントおよびその他のパラメーターを設定して、OKをクリックします。****
+1. 編集コンポーネントダイアログでは、入力ドキュメント、出力ドキュメントおよびその他のパラメーターを設定して、**[!UICONTROL OK]** をクリックします。
 
 #### 入力ドキュメント {#input-documents-2}
 
@@ -122,7 +122,7 @@ Render PDF Formワークフローは、`renderPDFForm`Forms service APIの周り
 
 * *出力ドキュメント*：生成したPDFフォームの名前を指定します。
 
-#### その他のパラメーター  {#additional-parameters}
+#### その他のパラメーター {#additional-parameters}
 
 * *Content Root*：入力XDPテンプレートに使用されているフラグメントまたは画像が保存されているリポジトリ内のフォルダーへのパスを指定します。
 * 送信 Url *：生成されたPDFフォームのデフォルト送信URLを指定します。*
@@ -133,13 +133,13 @@ Render PDF Formワークフローは、`renderPDFForm`Forms service APIの周り
 
 ## 出力 {#output}
 
-Generate Non Interactive PDFワークフローは、`generatePDFOutput`OutputサービスAPIの周りのラッパーです。XDPテンプレートとデータxmlから非インタラクティブPDFドキュメントを生成するために使用されます。
+Generate Non Interactive PDFワークフローは、`generatePDFOutput`OutputサービスAPIの周りのラッパーです。XDP テンプレートおよびデータ xml から非インタラクティブ PDF ドキュメントを生成するのに使用されます。
 
-### NonInteractive PDFOutputワークフローの生成{#generate-non-interactive-pdf-output-workflow-nbsp}
+### NonInteractive PDFOutputワークフローの生成 {#generate-non-interactive-pdf-output-workflow-nbsp}
 
 1. Sidekickのフォームワークフロータブの下にあるGenerate Non Interactive PDF Outputワークフローをドラッグします。
 1. 追加されたワークフローステップをダブルクリックしてコンポーネントを編集します。
-1. 編集コンポーネントダイアログでは、入力ドキュメント、出力ドキュメントおよびその他のパラメーターを設定して、OKをクリックします。****
+1. 編集コンポーネントダイアログでは、入力ドキュメント、出力ドキュメントおよびその他のパラメーターを設定して、**[!UICONTROL OK]** をクリックします。
 
 #### 入力ドキュメント {#input-documents-3}
 
@@ -151,7 +151,7 @@ Generate Non Interactive PDFワークフローは、`generatePDFOutput`Outputサ
 
 *出力ドキュメント*：生成されたPDFフォームの名前を指定します。
 
-#### その他のパラメーター  {#additional-parameters-1}
+#### その他のパラメーター {#additional-parameters-1}
 
 * *Content Root*：入力XDPテンプレートに使用されているフラグメントまたは画像が保存されているリポジトリ内のフォルダーへのパスを指定します。
 * ロケール&#x200B;*：生成されたPDFフォームのデフォルトロケールを指定します。*
