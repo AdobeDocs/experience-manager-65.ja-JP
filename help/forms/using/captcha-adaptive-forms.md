@@ -1,19 +1,19 @@
 ---
 title: アダプティブフォームの CAPTCHA の使用
-seo-title: アダプティブフォームの CAPTCHA の使用
+seo-title: Using CAPTCHA in adaptive forms
 description: アダプティブフォームで AEM CAPTCHA または Google reCAPTCHA サービスを設定する方法を説明します。
-seo-description: アダプティブフォームで AEM CAPTCHA または Google reCAPTCHA サービスを設定する方法を説明します。
+seo-description: Learn how to configure AEM CAPTCHA or Google reCAPTCHA service in adaptive forms.
 uuid: 0e11e98a-12ac-484c-b77f-88ebdf0f40e5
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1291'
+workflow-type: ht
+source-wordcount: '1271'
 ht-degree: 100%
 
 ---
@@ -28,8 +28,8 @@ AEM によるアダプティブフォームの CAPTCHA のサポートGoogle が
 >
 >* AEM Forms は reCaptcha v2 のみをサポートします。その他のバージョンはサポートされません。
 >* アダプティブフォームの CAPTCHA は、AEM Forms アプリケーションのオフラインモードではサポートされていません。
->
 
+>
 
 
 ## Google が提供する reCAPTCHA サービスの設定 {#google-recaptcha}
@@ -65,7 +65,7 @@ AEM Forms で reCAPTCHAを実装するには、以下の手順を実行します
 
    reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。詳しくは、「[アダプティブフォームの CAPTCHA の使用](#using-captcha)」を参照してください。
 
-## アダプティブフォームで CAPTCHA を使用する  {#using-captcha}
+## アダプティブフォームで CAPTCHA を使用する {#using-captcha}
 
 アダプティブフォームで CAPTCHA を使用するには：
 
@@ -119,7 +119,7 @@ AEM Forms で reCAPTCHAを実装するには、以下の手順を実行します
 1. 「**[!UICONTROL CAPTCHA を検証]**」セクションで、「**[!UICONTROL フォーム送信時に CAPTCHA を検証]**」を選択します。
 1. 「![完了](assets/save_icon.svg)」をタップして、コンポーネントプロパティを保存します。
 
-#### ユーザーの操作と条件に対する CAPTCHA の検証{#validate-captcha-user-action}
+#### ユーザーの操作と条件に対する CAPTCHA の検証 {#validate-captcha-user-action}
 
 条件とユーザー操作に基づいて CAPTCHA を検証するには、以下の手順を実行します。
 
@@ -147,7 +147,7 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
 
 **オプション 1：[!DNL Experience Manager Forms] ValidateCAPTCHA API を使用して、カスタム送信アクションを使用して CAPTCHA を検証する**
 
-`ValidateCAPTCHA` APIを使用してカスタム送信アクションを使用して CAPTCHA を検証するには、以下の手順を実行します。
+`ValidateCAPTCHA` API を使用してカスタム送信アクションを使用して CAPTCHA を検証するには、以下の手順を実行します。
 
 1. `ValidateCAPTCHA` API を含むスクリプトをカスタム送信アクションに追加します。カスタム送信アクションについて詳しくは、「[アダプティブフォーム用のカスタム送信アクションの作成](custom-submit-action-form.md)」を参照してください。
 1. アダプティブフォームの&#x200B;**[!UICONTROL 送信]**&#x200B;プロパティの&#x200B;**[!UICONTROL 送信アクション]**&#x200B;ドロップダウンリストから、カスタム送信アクションの名前を選択します。
@@ -155,13 +155,13 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
 
 **オプション 2：フォームを送信する前に、[!DNL Experience Manager Forms] ValidateCAPTCHA API を使用してユーザーアクションに対する CAPTCHA の検証を行う**
 
-また、アダプティブフォーム内のコンポーネントにルールを適用することで、`ValidateCAPTCHA` APIを呼び出すこともできます。
+また、アダプティブフォーム内のコンポーネントにルールを適用することで、`ValidateCAPTCHA` API を呼び出すこともできます。
 
 例えば、アダプティブフォームに「**[!UICONTROL CAPTCHA を検証]**」ボタンを追加し、ボタンをクリックするとサービスを呼び出すルールを作成します。
 
 以下の図は、「**[!UICONTROL CAPTCHA を検証]**」ボタンをクリックしてサービスを呼び出す方法を示しています。
 
-![CAPTCHA を検証](assets/captcha-validation1.gif)
+![CAPTCHA の検証](assets/captcha-validation1.gif)
 
 `ValidateCAPTCHA` API を含むカスタムサーブレットをルールエディターを使用して呼び出し、検証結果に基づいてアダプティブフォームの送信ボタンを有効または無効にできます。
 
