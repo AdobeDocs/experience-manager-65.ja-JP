@@ -1,7 +1,7 @@
 ---
-title: Barcoded Forms Service Java APIQuick Start(SOAP)
+title: Barcoded Forms サービス Java API クイックスタート（SOAP）
 seo-title: Barcoded Forms Service Java APIQuick Start(SOAP)
-description: Barcoded Forms Service Java APIQuick Start(SOAP)
+description: Barcoded Forms サービス Java API クイックスタート（SOAP）
 uuid: a6739695-ee0b-4480-8cef-0f91a72deaad
 contentOwner: admin
 content-type: reference
@@ -11,27 +11,27 @@ discoiquuid: 245b9cc4-5837-4a22-b5f4-a1d4c5d66918
 role: Developer
 exl-id: 907c12be-dab4-48b5-9da1-a76b711f49f2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '216'
+ht-degree: 100%
 
 ---
 
-# Barcoded Forms Service Java APIクイックスタート(SOAP) {#barcoded-forms-service-java-apiquick-start-soap}
+# Barcoded Forms サービス Java API クイックスタート（SOAP） {#barcoded-forms-service-java-apiquick-start-soap}
 
-Java API Quick Start(SOAP)は、Barcoded Formsサービスで使用できます。
+Java API クイックスタート（SOAP）は、Barcoded Forms サービスで使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したバーコードされたフォームデータのデコード](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用してバーコードフォームデータをデコード](barcoded-forms-service-java-api.md#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM Formsによるプログラミング」にあるクイックスタートは、JBoss Application ServerとMicrosoft WindowsオペレーティングシステムにデプロイされるForms Serverに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>「AEM Forms によるプログラミング」のクイックスタートは、JBoss Application Server と Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}を使用したバーコードされたフォームデータのデコード
+## クイックスタート（SOAP モード）：Java API を使用してバーコードフォームデータをデコード {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-次のJavaコードは、Loan.pdfとして保存されたPDFフォーム内のフォームデータをデコードします。 デコードされたデータは、extractedData.xmlという名前のXMLファイルとして保存されます。 このコードの例では、`org.w3c.dom.Document`オブジェクトを`com.adobe.idp.Document`オブジェクトに変換します。 （「[Barcoded Form Data](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)のデコード」を参照）。
+次の Java コードは、Loan.pdf として保存された PDF フォームにあるフォームデータをデコードします。 デコードされたデータは、extractedData.xml という名前の XML ファイルとして保存されます。 このコードの例では、`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。 （[バーコードフォームデータのデコード](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)を参照してください）
 
 ```java
  /*
@@ -220,4 +220,4 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
 
 >[!NOTE]
 >
->同じアプリケーションロジックで`org.w3c.dom.Document`オブジェクトと`com.adobe.idp.Document`オブジェクトの両方を使用する場合は、両方のオブジェクトを完全に修飾することをお勧めします。
+>`org.w3c.dom.Document` オブジェクトと `com.adobe.idp.Document` オブジェクトの両方を同じアプリケーションロジックで使用する場合は、両方のオブジェクトを完全に修飾することをお勧めします。
