@@ -1,8 +1,8 @@
 ---
-title: Acrobat Reader DC Extensions ServiceJava APIクイックスタート(SOAP)
-seo-title: Acrobat Reader DC Extensions ServiceJava APIクイックスタート(SOAP)
-description: Acrobat Reader DC Extensionsサービスを使用して、PDFドキュメントに使用権限を適用し、PDFドキュメントから使用権限を削除し、LoanUsageRights.pdfという名前の権限を付与されたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得します。
-seo-description: Acrobat Reader DC Extensionsサービスを使用して、PDFドキュメントに使用権限を適用し、PDFドキュメントから使用権限を削除し、LoanUsageRights.pdfという名前の権限を付与されたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得します。
+title: Acrobat Reader DC Extensions ServiceJava API クイックスタート (SOAP)
+seo-title: Acrobat Reader DC extensions ServiceJava API Quick Start(SOAP)
+description: Acrobat Reader DC Extensions サービスを使用して、PDF ドキュメントに使用権限を適用したり、PDF ドキュメントから使用権限を削除したり、LoanUsageRights.pdf という名前の権限を持つ PDF ドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得したりしてください。
+seo-description: Use the  Acrobat Reader DC Extensions service to apply usage rights to a PDF document, remove usage rights from PDF documents, and retrieve  information about the credential that is used to apply usage-rights to a rights-enabled PDF document named LoanUsageRights.pdf.
 uuid: 8e72ca94-a8c1-43aa-9845-a0da597051c5
 contentOwner: admin
 content-type: reference
@@ -11,31 +11,31 @@ discoiquuid: 31a9bfc6-462d-4535-888f-31026b8fa674
 role: Developer
 exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '311'
+ht-degree: 100%
 
 ---
 
-# Acrobat Reader DC Extensions ServiceJava APIクイックスタート(SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
+# Acrobat Reader DC Extensions ServiceJava API クイックスタート (SOAP) {#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap}
 
-Acrobat Reader DC Extensionsサービスでは、次のクイックスタートを使用できます。
+Acrobat Reader DC Extensions サービスでは、次のクイックスタートを使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した使用権限の適用](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
-[PDFドキュメントからの使用権限の削除](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[PDF ドキュメントから使用権限を削除](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した秘密鍵証明書情報の取得](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM Formsによるプログラミング」にあるクイックスタートは、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>『AEM Forms によるプログラミング』にあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAPモード）:Java APIを使用した使用権限の適用{#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-次のJavaコードの例では、*Loan.pdf*&#x200B;という名前のPDFドキュメントに使用権限を適用しています。 権限を付与されたPDFドキュメントは、*LoanUsageRights.pdf*&#x200B;という名前のPDFファイルとして保存されます。 このPDFドキュメントには、次の使用権限が適用されます。`enabledComments`、`enabledFormFillIn`、および`enabledDigitalSignatures`。 （[PDFドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md)を参照）。
+次の Java コードの例では、 使用権限を *Loan.pdf* という名前の PDF ドキュメントに適用します。権限を持つ PDF ドキュメントは、*LoanUsageRights.pdf* という名前の PDF ファイルとして保存されます。 この PDF ドキュメントには、`enabledComments`、`enabledFormFillIn`、および `enabledDigitalSignatures` の使用権限が適用されます。（[PDF ドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md)）。
 
 
 ```java
@@ -145,9 +145,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
   
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}を使用したPDFドキュメントからの使用権限の削除
+## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例では、*LoanUsageRights.pdf*&#x200B;という名前の権限を付与されたPDFドキュメントから使用権限を削除します。 （[PDFドキュメントからの使用権限の削除](/help/forms/developing/assigning-usage-rights.md)を参照）。
+次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を持つ PDF ドキュメントから使用権限を削除します。 （[PDF ドキュメントから使用権限の削除](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
 
 ```java
  /* 
@@ -245,9 +245,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}を使用した秘密鍵証明書情報の取得
+## クイックスタート（SOAP モード）：Java API を使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-次のJavaコードの例では、*LoanUsageRights.pdf*&#x200B;という名前の権限を付与されたPDFドキュメントに使用権限を適用するために使用される秘密鍵証明書に関する情報を取得します。 （[秘密鍵証明書情報の取得](/help/forms/developing/assigning-usage-rights.md)を参照）。
+次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を与えられた PDF ドキュメントに使用権原を適用するために使用される秘密鍵証明書に関する情報を取得します。 （[認証情報の取得](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
 
 ```java
  /* 
