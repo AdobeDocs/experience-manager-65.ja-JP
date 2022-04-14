@@ -1,8 +1,8 @@
 ---
 title: インターフェイスのカラースキーム変更
-seo-title: インターフェイスのカラースキーム変更
+seo-title: Changing the color scheme of the interface
 description: AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを選択して変更する方法。
-seo-description: AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを選択して変更する方法。
+seo-description: How to modify the color scheme of AEM Forms workspace user interface portions selectively.
 uuid: 32c32f7a-8271-4d2c-8a1f-ad5ab3c90b83
 contentOwner: robhagat
 content-type: reference
@@ -11,15 +11,15 @@ topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
 exl-id: e0a261a2-518b-4984-a5b5-24f0b9222e24
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 70%
+workflow-type: ht
+source-wordcount: '229'
+ht-degree: 100%
 
 ---
 
-# インターフェイスのカラースキーム変更  {#changing-the-color-scheme-of-the-interface}
+# インターフェイスのカラースキーム変更 {#changing-the-color-scheme-of-the-interface}
 
-AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事で説明する手順に加えて、[AEM Forms Workspaceのカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)を参照してください。
+AEM Forms Workspace ユーザーインターフェイス部分のカラースキームを必要に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事の手順に加えて、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
 
 ## トップナビゲーションバー {#top-navigation-bar}
 
@@ -32,7 +32,7 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
 
    >[!NOTE]
    >
-   >WebDAVアクセスの詳細については、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/en/crx/current/how_to/webdav_access.html)を参照してください。
+   >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/jp/crx/current/how_to/webdav_access.html) を参照してください。
 
 1. 次のスタイルを追加することによって、/apps/ws/css/newStyle.css にある新しい背景画像を参照します。
 
@@ -42,7 +42,7 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
    }
    ```
 
-### CSS におけるカラープロパティの使用  {#using-color-property-in-css}
+### CSS におけるカラープロパティの使用 {#using-color-property-in-css}
 
 1. /apps/ws/css にある newStyle.css に次のスタイルを追加します。
 
@@ -53,10 +53,10 @@ AEM Forms Workspace 上部のナビゲーションバーを更新するには：
    }
    ```
 
-## カテゴリコンポーネント  {#category-component}
+## カテゴリコンポーネント {#category-component}
 
-カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 色を変更するには、CSSファイルの`.category`要素で背景色を定義します。
+カテゴリコンポーネントは、左パネルでタスクのさまざまなカテゴリを表示します。 この色を変更するには、CSS ファイルの`.category`要素で、背景色を定義します。
 
 ## タスクコンポーネント {#task-component}
 
-タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。色を変更するには、スタイルシートの.taskセレクターに関連付けられているスタイルを変更します。
+タスクは、TaskList コンポーネントと呼ばれる中央のパネルに表示されます。 色を変更するには、スタイルシートにある .task セレクターに関連付けられたスタイルを変更します。
