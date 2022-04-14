@@ -1,8 +1,8 @@
 ---
 title: プロセスインスタンスの検索
-seo-title: プロセスインスタンスの検索
+seo-title: Searching for process instances
 description: プロセスの検索ページを使用して、プロセスインスタンスを見つけるための検索条件を入力できます。
-seo-description: プロセスの検索ページを使用して、プロセスインスタンスを見つけるための検索条件を入力できます。
+seo-description: Use the Process Search page to enter search criteria for finding a process instance.
 uuid: 4a9c5b05-add5-4278-9c6f-d1928b6860d2
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 88b634bb-8f6c-4830-ad01-821668609615
 exl-id: 35f9acbf-7a82-43b1-9e17-9be4de666212
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '449'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 基本条件に基づく一般検索、特定の属性に基づく詳細検索、または基本条件と特定の属性の組み合わせによる複合検索を実行できます。
 
-## 一般検索の実行  {#perform-a-general-search}
+## 一般検索の実行 {#perform-a-general-search}
 
 プロセスの一般検索は、プロセスインスタンスのプロセス ID がわかっている場合、関連するプロセスインスタンスのグループを見つける場合または実行中のプロセスインスタンス数が少ない場合に、最も適しています。
 
@@ -39,7 +39,7 @@ ht-degree: 98%
 
 1. 「検索」をクリックします。プロセスインスタンスページが表示され、見つかったインスタンスが表示されます。
 
-## プロセスの詳細検索の実行  {#perform-a-detailed-search-for-a-process}
+## プロセスの詳細検索の実行 {#perform-a-detailed-search-for-a-process}
 
 特定の属性を入力して、詳細検索を実行できます。詳細検索は、実行中のプロセスインスタンス数が多く、特定の条件で候補を絞る必要がある場合に、最も適しています。
 
@@ -51,7 +51,7 @@ ht-degree: 98%
    * 「値」ボックスに、選択した属性に適した値を入力します。
 
 1. 行を追加するには、「フィルターを増やす」を選択します。別のセットの「属性」リスト、「フィルター」リストおよび「値」リストと、「条件」リストが表示されます。
-1. 「条件」で、「AND」または「OR」を選択します。必要に応じて手順1 ～ 3を繰り返し、検索をさらに絞り込みます。
+1. 「条件」で、「AND」または「OR」を選択します。必要に応じてステップ 1 ～ 3 を繰り返して、検索を絞ります。
 1. 行を追加または削除するには「フィルターを増やす」または「フィルターを減らす」をクリックします。1～4 行まで指定できます。
 1. 「検索」をクリックします。プロセスインスタンスページが表示され、見つかったインスタンスが表示されます。
 
