@@ -1,8 +1,8 @@
 ---
 title: 証明書ベースの認証の設定
-seo-title: 証明書ベースの認証の設定
+seo-title: Configuring certificate-based authentication
 description: 証明書ベースの認証のために、認証局（CA）証明書を Trust Store に読み込み、証明書のマッピングを作成します。
-seo-description: 証明書ベースの認証のために、認証局（CA）証明書を Trust Store に読み込み、証明書のマッピングを作成します。
+seo-description: Import a Certificate Authority (CA) certificate into the Trust Store and create a certificate mapping for certificate-based authentication.
 uuid: 9802a969-6d29-4b80-a4ed-06eb6e66e046
 contentOwner: admin
 content-type: reference
@@ -11,23 +11,23 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
 exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '726'
+ht-degree: 100%
 
 ---
 
 # 証明書ベースの認証の設定 {#configuring-certificate-based-authentication}
 
-User Management は、通常、ユーザー名とパスワードを使用して認証を実行します。User Management では、証明書ベースの認証もサポートされています。この認証方式は、Acrobat 経由でのユーザーの認証、またはプログラムによるユーザーの認証に使用できます。プログラムによるユーザーの認証について詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」を参照してください。
+User Management は、通常、ユーザー名とパスワードを使用して認証を実行します。User Management では、証明書ベースの認証もサポートされています。この認証方式は、Acrobat 経由でのユーザーの認証、またはプログラムによるユーザーの認証に使用できます。プログラムによるユーザーの認証について詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)」を参照してください。
 
 証明書ベースの認証を使用するには、信頼する認証局（CA）証明書を Trust Store に読み込み、証明書のマッピングを作成します。
 
-## CA 証明書の読み込み  {#import-the-ca-certificate}
+## CA 証明書の読み込み {#import-the-ca-certificate}
 
 証明書を読み込むときに、「証明書認証で信頼」と「ID で信頼」のオプションと共に、必要な他のオプションを選択します。証明書の読み込みについて詳しくは、[証明書の管理](/help/forms/using/admin-help/certificates.md#managing-certificates)を参照してください。
 
-## 証明書のマッピングの設定  {#configuring-certificate-mapping}
+## 証明書のマッピングの設定 {#configuring-certificate-mapping}
 
 ユーザーに対して証明書ベースの認証を有効にするには、証明書のマッピングを作成します。「*証明書のマッピング*」では、証明書の属性とドメイン内のユーザーの属性の間のマップが定義されます。複数の証明書を同じドメインにマップすることができます。
 
@@ -50,14 +50,14 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    証明書の属性の内容が User Management データベース内のユーザーの属性の内容と異なる場合、Java の正規表現（regex）を使用して、2 つの属性をマッチさせることができます。例えば、証明書の共通名が「*Alex Pink (Authentication)*」や「*Alex Pink (Signing)*」などで、User Management データベースの共通名が「*Alex Pink*」である場合、regex を使用して、証明書の属性の必要な部分（この例では「*Alex Pink*」）を抽出できます。指定する正規表現は、Java regex 仕様に準拠している必要があります。
 
-   「カスタムオーダー」ボックスでグループの順序を指定すると、正規表現を変換できます。カスタム順序は`java.util.regex.Matcher.replaceAll()`メソッドで使用されます。 結果の動作はこのメソッドの動作に対応するため、それに従って入力文字列（カスタムオーダー）を指定する必要があります。
+   「カスタムオーダー」ボックスでグループの順序を指定すると、正規表現を変換できます。カスタムオーダーは、`java.util.regex.Matcher.replaceAll()` メソッドで使用します。結果の動作はこのメソッドの動作に対応するため、それに従って入力文字列（カスタムオーダー）を指定する必要があります。
 
    regex をテストするには、「テストパラメーター」ボックスに値を入力して、「テスト」をクリックします。
 
    regex では、以下の文字を使用できます。
 
-   * ：（任意の文字）
-   * &amp;ast;（0回以上）
+   * 。（任意の文字）
+   * &amp;ast;（0 回または何回かの出現）
    * () （グループを括弧で囲んで指定）
    * ¥ （regex 文字を正規文字にエスケープするために使用）
    * $n （n 番目のグループを表すために使用）
@@ -66,15 +66,15 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    * 「Alex Pink (Authentication)」から「Alex Pink」を抽出するには
 
-      **Regex:** (.&amp;ast;) \（認証\）
+      **Regex:** (.&amp;ast;) \(認証\)
 
    * 「Alex (Authentication) Pink」から「Alex Pink」を抽出するには
 
-      **正規表現：** (.&amp;ast;)\（認証\） (.&amp;ast;)
+      **Regex:** (.&amp;ast;)\(認証\) (.&amp;ast;)
 
    * 「Alex (Authentication) Pink」から「Pink Alex」を抽出するには
 
-      **正規表現：** (.&amp;ast;)\（認証\） (.&amp;ast;)
+      **Regex:** (.&amp;ast;)\(認証\) (.&amp;ast;)
 
       カスタムオーダー：$2 $1（2 番目のグループを返し、最初のグループに連結、空白スペース文字で取得）
 
