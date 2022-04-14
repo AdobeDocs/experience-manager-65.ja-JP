@@ -1,8 +1,8 @@
 ---
 title: ライブコピーの同期の設定
-seo-title: ライブコピーの同期の設定
+seo-title: Configuring Live Copy Synchronization
 description: ライブコピーの同期の設定について説明します。
-seo-description: ライブコピーの同期の設定について説明します。
+seo-description: Learn about configuring Live Copy Synchronization.
 uuid: a5db0bee-a761-4cff-81dc-31b374525f47
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,12 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: 6bcf0fcc-481a-4283-b30d-80b517701280
 docset: aem65
-feature: マルチサイトマネージャー
+feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2710'
-ht-degree: 84%
+workflow-type: ht
+source-wordcount: '2697'
+ht-degree: 100%
 
 ---
 
@@ -28,17 +28,17 @@ ht-degree: 84%
 
 ## インストールされるロールアウト設定とカスタムロールアウト設定 {#installed-and-custom-rollout-configurations}
 
-ここでは、インストールされるロールアウト設定、それらの設定で使用する同期アクションおよびカスタム設定の作成方法（必要な場合）に関する情報を示します。
+この節では、インストールしたロールアウト設定、それらの設定で使用する同期アクション、カスタム設定を作成する方法（必要な場合）について説明します。
 
 >[!CAUTION]
 >
->初期設定の（インストール済みの）ロールアウト設定を更新または変更することは、**お勧めしません**。 カスタムライブアクションの要件がある場合は、カスタムロールアウト設定に追加してください。
+>インストール済みの標準のロールアウト設定を、更新したり変更したりすることは **推奨しません**。カスタムのライブアクションが必要な場合は、カスタムロールアウトの設定で追加してください。
 
 ### ロールアウトトリガー {#rollout-triggers}
 
 各ロールアウト設定では、ロールアウトトリガーを使用してロールアウトを発生させます。ロールアウト設定では、以下のいずれかのトリガーを使用できます。
 
-* **ロールアウト時**：**ロールアウト**&#x200B;コマンドがブループリントページで使用されます。または&#x200B;**同期**&#x200B;コマンドがライブコピーページで使用されます。
+* **ロールアウト時**：**ロールアウト**&#x200B;コマンドをブループリントページで使用します。または、**同期**&#x200B;コマンドをライブコピーページで使用します。
 
 * **変更時**：ソースページが変更されます。
 
@@ -50,7 +50,7 @@ ht-degree: 84%
 >
 >変更時トリガーを使用すると、パフォーマンスに影響を及ぼす可能性があります。詳しくは、[MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md#onmodify)を参照してください。
 
-### インストールされるロールアウト設定  {#installed-rollout-configurations}
+### インストールされるロールアウト設定 {#installed-rollout-configurations}
 
 次の表に、AEM と共にインストールされるロールアウト設定のリストを示します。表には各ロールアウト設定のトリガーと同期アクションが含まれます。インストールされるロールアウト設定のアクションが要件を満たさない場合は、[新しいロールアウト設定を作成](#creating-a-rollout-configuration)できます。
 
@@ -60,7 +60,7 @@ ht-degree: 84%
    <th>名前</th>
    <th>説明</th>
    <th>トリガー</th>
-   <th>同期アクション<br /> <br /> <a href="#installed-synchronization-actions">インストール済みの同期アクション</a>も参照</th>
+   <th>同期アクション<br /> <br /> 関連情報 <a href="#installed-synchronization-actions">インストール済みの同期アクション</a></th>
   </tr>
   <tr>
    <td>標準のロールアウト設定</td>
@@ -127,7 +127,7 @@ ht-degree: 84%
 
 ### インストールされる同期アクション {#installed-synchronization-actions}
 
-次の表に、AEM と共にインストールされる同期アクションのリストを示します。インストール済みのアクションが要件を満たさない場合は、[新しい同期アクション](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)を作成できます。
+次のテーブルに、AEM と共にインストールされる同期アクションのリストを示します。インストールされているアクションが要件を満たさない場合は、[新しい同期アクションを作成](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)できます。
 
 <table>
  <tbody>
@@ -138,25 +138,25 @@ ht-degree: 84%
   </tr>
   <tr>
    <td>contentCopy</td>
-   <td>ソースのノードがライブコピーに存在しない場合は、ライブコピーにノードをコピーします。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Copy Actionサービスを設定し</a> て、除外するノードタイプ、段落項目およびページプロパティを指定します。  <br /> </td>
+   <td>ソースのノードがライブコピーに存在しない場合は、ライブコピーにノードをコピーします。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Copy Action サービスを設定</a>して、除外するノードタイプ、段落項目、ページプロパティを指定してください。<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td>contentDelete</td>
-   <td><p>ソースに存在しないライブコピーのノードを削除します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Delete Actionサービス</a>を設定して、除外するノードタイプ、段落項目およびページプロパティを指定します。 </p> </td>
+   <td><p>ソースに存在しないライブコピーのノードを削除します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Delete Action サービスを設定</a>して、除外するノードタイプ、段落項目およびページプロパティを指定してください。 </p> </td>
    <td> </td>
   </tr>
   <tr>
    <td>contentUpdate</td>
-   <td>ソースからの変更を使用してライブコピーのコンテンツを更新します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Update Actionサービスを設定し</a> て、除外するノードタイプ、段落項目およびページプロパティを指定します。  <br /> </td>
+   <td>ソースからの変更を使用してライブコピーのコンテンツを更新します。<a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM Content Update Action サービスを設定</a>して、除外するノードタイプ、段落項目、ページプロパティを指定してください。<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td>editProperties</td>
-   <td><p>ライブコピーのプロパティを編集します。編集するプロパティとその値は editMap プロパティで指定します。editMap プロパティの値は次の形式にしてください。</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br /> ... ,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p><code>current_value</code>項目と<code>new_value</code>項目は正規表現です。<br /> </p> <p>例えば、editMap の次の値を検討してください。</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage,<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>この値は、ライブコピーのノードのプロパティを次のように編集します。</p>
+   <td><p>ライブコピーのプロパティを編集します。編集するプロパティとその値は editMap プロパティで指定します。editMap プロパティの値は次の形式にしてください。</p> <p><code>[property_name_1]#[current_value]#</code>[new_value],<br /> <code>[property_name_2]#[current_value]#</code>[new_value],<br /> ... ,<br /> <code>[property_name_n]#[current_value]#</code>[new_value]</p> <p><code>current_value</code> と <code>new_value</code> の項目は正規表現です。<br /> </p> <p>例えば、editMap の次の値を検討してください。</p> <p><code>sling:resourceType#/</code>(contentpage|homepage)#/<br /> mobilecontentpage,<br /> cq:template#/contentpage#/mobilecontentpage</p> <p>この値は、ライブコピーのノードのプロパティを次のように編集します。</p>
     <ul>
-     <li><code>sling:resourceType</code>プロパティは、<code>contentpage</code>または<code>homepage</code>に設定されます。 <code>mobilecontentpage.</code></li>
-     <li><code>contentpage</code>に設定された<code>cq:template</code>プロパティは、 <code>mobilecontentpage.</code></li>
+     <li><code>contentpage</code> または <code>homepage</code> のどちらかに設定されている <code>sling:resourceType</code> プロパティは次のように設定されます。 <code>mobilecontentpage.</code></li>
+     <li><code>contentpage</code> に設定されている <code>cq:template</code> プロパティは次のように設定されます。 <code>mobilecontentpage.</code></li>
     </ul> </td>
    <td><p> </p> <p>editMap：（文字列）プロパティ、現在の値および新しい値を識別します。説明を参照してください。<br /> </p> </td>
   </tr>
@@ -204,7 +204,7 @@ ht-degree: 84%
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
     </ul> <p>このアクションはページにのみ使用してください。</p> </td>
-   <td>ターゲット：(String)権限を設定するグループのID。<br /> </td>
+   <td>target：（文字列）権限を設定するグループの ID。<br /> </td>
   </tr>
   <tr>
    <td>mandatoryContent</td>
@@ -213,12 +213,12 @@ ht-degree: 84%
      <li>ActionSet.ACTION_NAME_SET_PROPERTY</li>
      <li>ActionSet.ACTION_NAME_ACL_MODIFY</li>
     </ul> <p>このアクションはページにのみ使用してください。</p> </td>
-   <td>target：（String）権限を設定するグループの ID。 </td>
+   <td>target：（文字列）権限を設定するグループの ID。 </td>
   </tr>
   <tr>
    <td>mandatoryStructure</td>
-   <td>ライブコピーページ上のActionSet.ACTION_NAME_REMOVE ACLの権限を、特定のユーザーグループに対して読み取り専用に設定します。このアクションはページに対してのみ使用します。</td>
-   <td>target：（String）権限を設定するグループの ID。 </td>
+   <td>ライブコピーページ上の ActionSet.ACTION_NAME_REMOVE ACL の権限を、特定のユーザーグループについて読み取り専用に設定します。このアクションはページにのみ使用してください。</td>
+   <td>target：（文字列）権限を設定するグループの ID。 </td>
   </tr>
   <tr>
    <td>VersionCopyAction</td>
@@ -268,7 +268,7 @@ ht-degree: 84%
 
 ### プロパティとノードタイプの同期からの除外 {#excluding-properties-and-node-types-from-synchronization}
 
-対応する同期アクションをサポートする複数のOSGiサービスを設定して、特定のノードタイプやプロパティに影響を与えないようにすることができます。例えば、AEMの内部機能に関連する多くのプロパティやサブノードを、ライブコピーに含めないでください。ページのユーザーに関連するコンテンツのみをコピーする必要があります。
+対応する同期アクションをサポートする複数の OSGi サービスを設定して、特定のノードタイプやプロパティに影響を与えないようにすることができます。例えば、AEM の内部機能に関連する多くのプロパティとサブノードをライブコピーに含めることはできません。コピーする必要があるのは、ページのユーザーに関連するコンテンツだけです。
 
 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
@@ -292,19 +292,19 @@ AEM を操作しているときは、このようなサービスの設定を管�
   </tr>
   <tr>
    <td><p>Excluded Nodetypes</p> <p>cq.wcm.msm.action.excludednodetypes</p> </td>
-   <td>同期アクションから除外するノードタイプに一致する正規表現.</td>
+   <td>同期アクションから除外するノードタイプに一致する正規表現。</td>
   </tr>
   <tr>
    <td><p>Excluded Paragraph Items</p> <p>cq.wcm.msm.action.excludedparagraphitems</p> </td>
-   <td>同期アクションから除外する段落項目に一致する正規表現.</td>
+   <td>同期アクションから除外する段落項目に一致する正規表現。</td>
   </tr>
   <tr>
    <td><p>Excluded Page Properties</p> <p>cq.wcm.msm.action.excludedprops</p> </td>
-   <td>同期アクションから除外するページプロパティに一致する正規表現.</td>
+   <td>同期アクションから除外するページプロパティに一致する正規表現。</td>
   </tr>
   <tr>
    <td><p>Ignored Mixin NodeTypes</p> <p>cq.wcm.msm.action.ignoredMixin</p> </td>
-   <td>CQ MSM Content Update Actionでのみ使用できます。同期アクションから除外するmixinノードタイプの名前に一致する正規表現。</td>
+   <td>CQ MSM Content Update Action でのみ使用できます。同期アクションから除外する mixin ノードタイプの名前に一致する正規表現です。</td>
   </tr>
  </tbody>
 </table>
@@ -335,7 +335,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 参照の更新に関連する、対応する同期アクションをサポートする複数の OSGi サービスを設定できます。
 
-AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+AEM を操作する際は、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 次の表は、参照の更新を指定できる同期アクションを示します。この表には、Web コンソールを使用して設定する場合のサービスの名前とリポジトリーノードを使用して設定する場合の PID が示されています。
 
@@ -347,11 +347,11 @@ AEM を操作しているときは、このようなサービスの設定を管�
   </tr>
   <tr>
    <td><p>Update Reference across nested LiveCopies</p> <p>cq.wcm.msm.impl.action.referencesupdate.prop_updateNested</p> </td>
-   <td>CQ MSM References Update Action でのみ使用できます。このオプション（Webコンソール）を選択するか、このブール値プロパティをtrue（リポジトリ設定）に設定して、最上位のライブコピーのブランチ内にあるリソースをターゲットとする参照を置き換えます。</td>
+   <td>CQ MSM References Update Action でのみ使用できます。最上位のライブコピーのブランチ内にあるリソースをターゲットとする参照を置き換えるには、このオプションを選択する（Web コンソール）か、この boolean プロパティを true に設定します（リポジトリ設定）。</td>
   </tr>
   <tr>
    <td><p>Update Referencing Pages</p> <p>cq.wcm.msm.impl.actions.pagemove.prop_referenceUpdate</p> </td>
-   <td>CQ MSM Page Move Actionでのみ使用できます。 元のページを使用する参照を更新してライブコピーページを参照するには、このオプション（Webコンソール）を選択するか、このブール値プロパティを<code>true</code>（リポジトリ設定）に設定します。</td>
+   <td>CQ MSM Page Move Action でのみ使用できます。元のページを使用する参照を、ライブコピーページを参照するように更新するには、このオプションを選択する（Web コンソール）か、この boolean プロパティを <code>true</code> に設定します（リポジトリ設定）。</td>
   </tr>
  </tbody>
 </table>
@@ -364,14 +364,14 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 
 * **[ライブコピーページのプロパティ](/help/sites-administering/msm-sync.md#setting-the-rollout-configurations-for-a-live-copy-page)：** 1 つ以上のロールアウト設定を使用するようにライブコピーページが設定される場合、MSM ではそれらのロールアウト設定を使用します。
 * **[ブループリントページのプロパティ](/help/sites-administering/msm-sync.md#setting-the-rollout-configuration-for-a-blueprint-page)：**&#x200B;ライブコピーがブループリントに基づいており、ライブコピーページがロールアウト設定を使用して設定されない場合は、ブループリントのソースページに関連付けられているロールアウト設定が使用されます。
-* **ライブコピーの親ページのプロパティ：** ライブコピーページもブループリントソースページもロールアウト設定で設定されていない場合は、ライブコピーページの親ページに適用されるロールアウト設定が使用されます。
-* **[システムのデフォルト](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration):** ライブコピーの親ページのロールアウト設定を判断できない場合は、システムのデフォルトのロールアウト設定が使用されます。
+* **ライブコピーの親ページプロパティ：**&#x200B;ライブコピーページもブループリントのソースページもロールアウト設定を使用して設定されない場合は、ライブコピーページの親ページに適用されるロールアウト設定が使用されます。
+* **[システムのデフォルト](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration)：**&#x200B;ライブコピーの親ページのロールアウト設定を特定できない場合は、システムのデフォルトのロールアウト設定が使用されます。
 
 例えば、ブループリントが We.Retail 参照サイトをソースコンテンツとして使用するとします。サイトはブループリントから作成されます。次のリスト内の各項目は、ロールアウト設定の使用に関する様々なシナリオを示しています。
 
-* どのブループリントページまたはライブコピーページもロールアウト設定を使用するように設定されていない。この場合、MSM では、システムのデフォルトのロールアウト設定をすべてのライブコピーページに使用します。
+* どのブループリントページまたはライブコピーページもロールアウト設定を使用するように設定されていない場合、MSM では、システムのデフォルトのロールアウト設定をすべてのライブコピーページに使用します。
 * We.Retail 参照サイトのルートページが複数のロールアウト設定を使用して設定されている。この場合、MSM では、これらのロールアウト設定をすべてのライブコピーページに使用します。
-* We.Retail参照サイトのルートページは複数のロールアウト設定で設定され、ライブコピーサイトのルートページは異なるロールアウト設定で設定されます。 この場合、MSM では、ライブコピーサイトのルートページで設定されたロールアウト設定を使用します。
+* We.Retail 参照サイトのルートページが複数のロールアウト設定を使用して設定されており、ライブコピーサイトのルートページが別のロールアウト設定のセットを使用して設定されている。この場合、MSM では、ライブコピーサイトのルートページで設定されたロールアウト設定を使用します。
 
 ### ライブコピーページ用のロールアウト設定の指定 {#setting-the-rollout-configurations-for-a-live-copy-page}
 
@@ -379,7 +379,7 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 
 [ライブコピーの作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)時に、ライブコピーページ用のロールアウト設定を指定することもできます。
 
-1. **サイト**&#x200B;コンソールを使用してライブコピーページを選択します
+1. **Sites** コンソールを使用してライブコピーページを選択します。
 1. ツールバーの「**プロパティ**」を選択します。
 1. 「**ライブコピー**」タブを開きます。
 
@@ -413,7 +413,8 @@ MSM を使用すると、通常使用するロールアウト設定のセット�
 
 システムのデフォルトとして使用するロールアウト設定を指定します。デフォルトを指定するには、OSGi サービスを次のように設定します。
 
-* **Day CQ WCM Live Relationship Manager**  サービス PID は 
+* **Day CQ WCM Live Relationship Manager**
+サービス PID は 
 `com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 このサービスを設定するには、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用します。
