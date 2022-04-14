@@ -1,8 +1,8 @@
 ---
 title: Connector for EMC Documentum の設定
-seo-title: Connector for EMC Documentum の設定
+seo-title: Configuring Connector for EMC Documentum
 description: Connector for EMC Documentum を AEM Forms と EMC Documentum 間の通信を実現するように設定する方法について説明します。
-seo-description: Connector for EMC Documentum を AEM Forms と EMC Documentum 間の通信を実現するように設定する方法について説明します。
+seo-description: Learn how to configure the Connector for EMC Documentum to enable communication between AEM forms and EMC Documentum.
 uuid: fc96900a-ec8a-4efd-ad8e-25e9967e649b
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e62370a7-9d9e-43a3-8014-8e53800c870d
 exl-id: a31a496f-87b9-43c0-a98c-5f6ca5d11690
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '1024'
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 >
 >以前のリリースでは、ECM リポジトリにアセットを格納できました。最新のリリースでは、アセットが AEM Forms ネイティブリポジトリに格納され、Repository Provider サービスは推奨されなくなりました。ECM リポジトリから AEM Forms リポジトリへのアセットの移行は、AEM Forms への更新を実行するときに行われます。詳しくは、使用しているアプリケーションサーバー版の AEM Forms アップグレードガイドを参照してください。
 
-## サーバー接続の設定  {#configuring-the-server-connection}
+## サーバー接続の設定 {#configuring-the-server-connection}
 
 ここでは、環境設定ページで実行できる Connector for EMC Documentum のタスクについて説明します。
 
@@ -35,7 +35,7 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 >
 >すべての設定を同時に行う場合は、「保存」をクリックする必要があるのは一度だけです。
 
-### サーバーの設定  {#configure-the-server}
+### サーバーの設定 {#configure-the-server}
 
 接続ブローカーサーバー情報を設定する必要があります。この情報は、Documentum コンテンツリポジトリに接続し、Connector for EMC Documentum を起動するために必要です。
 
@@ -43,7 +43,7 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 1. 「Documentum の設定情報」領域で、ホスト名または IP アドレスおよび接続ブローカーのポート番号を入力します。ポート番号は、正の整数（例えば、1489）である必要があります。
 1. 「保存」をクリックします。
 
-### プリンシパル秘密鍵証明書の設定  {#configure-principal-credentials}
+### プリンシパル秘密鍵証明書の設定 {#configure-principal-credentials}
 
 プリンシパル秘密鍵証明書の設定時に指定するリポジトリ名は、明示的なリポジトリ名がログイン時に示されるかどうかによって異なります。
 
@@ -57,29 +57,29 @@ Connector for EMC Documentum の設定には、サーバー接続とリポジト
 1. ログイン時に明示的なリポジトリ名が示されない場合は、秘密鍵証明書が関連付けられているリポジトリ名を入力します。
 1. 「保存」をクリックします。
 
-### リポジトリサービスプロバイダーの変更  {#change-the-repository-service-provider}
+### リポジトリサービスプロバイダーの変更 {#change-the-repository-service-provider}
 
 Documentum と共に使用するリポジトリサービスプロバイダーを設定できます。リポジトリサービスの呼び出しは、設定したプロバイダーに対して委任されます。以下のオプションが利用できます。
 
-**Current Repository Service Provider Name:** 現在のリポジトリサービスプロバイダーの名前
+**現在のリポジトリサービスプロバイダー名：**&#x200B;現在のリポジトリサービスプロバイダーの名前
 
-**ECM Documentumリポジトリプロバイダ：** Documentumリポジトリプロバイダをリポジトリのプロバイダにします。このオプションは非推奨です。
+**ECM Documentum リポジトリプロバイダー：** Documentum リポジトリプロバイダーをリポジトリのプロバイダーにします。このオプションは非推奨です。
 
-**repository provider:** ネイティブリポジトリプロバイダーをリポジトリのプロバイダーにします。
+**リポジトリプロバイダー**：ネイティブのリポジトリプロバイダーをリポジトリのプロバイダーにします
 
 >[!NOTE]
 >
->リストに表示された以外のリポジトリサービスプロバイダーを選択するには、アプリケーションおよびサービス/サービスの管理でRepositoryServiceを設定します。<!-- Fix broken link (See Managing Services) -->.
+>リストに表示された以外のリポジトリサービスプロバイダーを選択するには、アプリケーションおよびサービス／サービスの管理でリポジトリサービスを設定します。<!-- Fix broken link (See Managing Services) -->
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 「リポジトリサービスプロバイダー」領域で、代替リポジトリサービスプロバイダーを選択します。
 1. 「保存」をクリックします。
 
-## リポジトリ証明書の設定  {#configuring-repository-credentials}
+## リポジトリ証明書の設定 {#configuring-repository-credentials}
 
 Documentum 秘密鍵証明書情報は、AEM Forms のシステムコンテキストで使用されます。リポジトリ証明書は、Documentum の特定のリポジトリに固有のものです。任意の数のリポジトリに対して秘密鍵証明書を提供することができますが、各リポジトリに指定できる秘密鍵証明書のセットは 1 つだけです。
 
-### リポジトリ証明書の追加  {#add-a-repository-credential}
+### リポジトリ証明書の追加 {#add-a-repository-credential}
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／リポジトリ証明書の設定をクリックします。
 1. 「追加」をクリックします。Documentum システム秘密鍵証明書に関する情報ページが表示されます。
@@ -89,12 +89,12 @@ Documentum 秘密鍵証明書情報は、AEM Forms のシステムコンテキ�
 
 Content Repository Connector for EMC Documentum サービスや Repository Service for EMC Documentum が実行されている場合、秘密鍵証明書情報は、データベースに保存される前に、指定したリポジトリに対して検証されます。秘密鍵証明書が無効な場合または既に存在している場合は、エラーメッセージが表示されます。
 
-### リポジトリ証明書の削除  {#remove-a-repository-credential}
+### リポジトリ証明書の削除 {#remove-a-repository-credential}
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 証明書を削除するリポジトリ横のチェックボックスをオンにし、「削除」をクリックします。選択したリポジトリに対する秘密鍵証明書がデータベースから削除されます。
 
-### リポジトリ証明書のユーザー名とパスワードの変更  {#change-the-user-name-and-password-for-a-repository-credential}
+### リポジトリ証明書のユーザー名とパスワードの変更 {#change-the-user-name-and-password-for-a-repository-credential}
 
 1. 管理コンソールで、サービス／Connector for EMC Documentum／環境設定をクリックします。
 1. 証明書を編集するリポジトリの名前をクリックします。
@@ -103,7 +103,7 @@ Content Repository Connector for EMC Documentum サービスや Repository Servi
 
 Content Repository Connector for EMC Documentum サービスや Repository Service for EMC Documentum が実行されている場合、秘密鍵証明書情報は、データベースに保存される前に、指定したリポジトリに対して検証されます。秘密鍵証明書が無効な場合または既に存在している場合は、エラーメッセージが表示されます。
 
-## Workspace のタスクキュー共有の要求の有効化  {#enable-the-request-for-sharing-of-workspace-task-queues}
+## Workspace のタスクキュー共有の要求の有効化 {#enable-the-request-for-sharing-of-workspace-task-queues}
 
 Workspace のタスクキュー共有の要求機能が Connector for EMC Documentum で正常に機能するように、いくつかの手順を手動で行う必要があります。
 
