@@ -1,14 +1,14 @@
 ---
-title: アセットの使用および共有に関するレポート
+title: アセットの使用と共有に関するレポート
 description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
 contentOwner: AG
 role: User, Admin
-feature: アセットレポート、アセット管理
+feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '1139'
+ht-degree: 100%
 
 ---
 
@@ -26,12 +26,12 @@ ht-degree: 89%
 
 ## 前提条件 {#prerequisite-for-reporting}
 
-レポートを生成するには、次の操作を行います。
+レポートを生成するには、次の手順を実行します。
 
-* **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL Webコンソール]**&#x200B;から[!UICONTROL Day CQ DAM Event Recorder]サービスを有効にします。
-* レポートの対象となるアクティビティまたはイベントを選択します。 例えば、ダウンロードされたアセットに関するレポートを生成するには、「[!UICONTROL ダウンロードされたアセット(DOWNLOADED)]」を選択します。
+* **[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;から [!UICONTROL Day CQ DAM Event Recorder] サービスを有効にします。
+* レポートの対象となるアクティビティまたはイベントを選択します。例えば、ダウンロードしたアセットに関するレポートを生成するには、「 [!UICONTROL ダウンロードされたアセット（ダウンロード済み）]」を選択します。
 
-![Webコンソールでのアセットレポートの有効化](assets/reports-config-day-cq-dam-event-recorder.png)
+![Web コンソールでアセットレポートを有効にします](assets/reports-config-day-cq-dam-event-recorder.png)
 
 ## レポートの生成 {#generate-reports}
 
@@ -100,11 +100,11 @@ ht-degree: 89%
 
 1. **[!UICONTROL 列を構成]**&#x200B;ページでは、いくつかの列がデフォルトでレポートに表示されるように選択されています。追加の列を選択できます。列の選択をキャンセルすると、その列はレポートから除外されます。
 
-   ![レポート列の選択を選択またはキャンセルする](assets/configure_columns.png)
+   ![レポート列の選択または選択のキャンセル](assets/configure_columns.png)
 
    カスタムの列名やプロパティパスを表示するには、CRX のノード下のアセットバイナリのプロパティを設定します。`jcr:content`または、プロパティパスピッカーを使用してパスを追加します。
 
-   ![レポート列の選択を選択またはキャンセルする](assets/custom_columns.png)
+   ![レポート列の選択または選択のキャンセル](assets/custom_columns.png)
 
 1. ツールバーから「**[!UICONTROL 作成]**」をクリックします。レポートの生成が開始されたことを通知するメッセージが表示されます。
 1. [!UICONTROL アセットレポート]ページのレポート生成ステータスはジョブの現在の状態（「[!UICONTROL 成功]」「[!UICONTROL 失敗]」「[!UICONTROL キューに追加済み]」、「[!UICONTROL スケジュール済み]」など）に基づきます。通知インボックスにも同じステータスが表示されます。レポートページを表示するには、レポートのリンクをクリックします。または、レポートを選択し、ツールバーの「**[!UICONTROL 表示]**」をクリックします。
@@ -156,8 +156,8 @@ ht-degree: 89%
 
 ## トラブルシューティング情報、ヒント、制限事項 {#best-practices-and-limitations}
 
-* レポート内の一部のレポートまたは数値が利用できない場合や期待どおりに表示されない場合は、[!UICONTROL Day CQ DAM Event Recorder]サービスが有効になっていることを確認してください。
+* 一部のレポートまたはレポート内の番号が利用できない場合、または期待どおりでない場合は、[!UICONTROL  Day CQ DAM Event Recorder] サービスが有効になっていることを確認してください。
 
-* 不要になったレポートを削除します。 DAM Report Purgeサービスの設定オプションを使用して、レポートをパージする条件を設定します。
+* 不要になったレポートを削除します。 DAM Report Purge サービスの設定オプションを使用して、レポートをパージする条件を設定します。
 
 * [!DNL Dynamic Media] を使用していて、ディスク使用量レポートが生成されない場合は、すべてのアセットが正しく処理されていることを確認します。問題を解決するには、アセットを再処理してから、レポートを再度生成します。
