@@ -13,9 +13,9 @@ discoiquuid: d8c9c2db-6709-409a-93d0-11b802763ada
 docset: aem65
 exl-id: 8d8a7237-8e87-4730-be90-2a18144fc65a
 source-git-commit: d6c875e85d553b8ef557b811c9fa43f46824f297
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '263'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -28,9 +28,9 @@ Adobe Experience Manager（AEM）では、アプリケーション開発およ�
 * [Coral UI ガイド](https://www.adobe.io/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 * [ウィジェット API（クラシック UI）ドキュメント](https://www.adobe.io/experience-manager/reference-materials/6-5/widgets-api/index.html)
 * [UI テストフレームワーク JavaScript API リファレンス](https://www.adobe.io/experience-manager/reference-materials/6-5/test-api/index.html)
-* [Editor core JavaScript API リファレンス](https://www.adobe.io/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)
+* [Editor Core JavaScript API リファレンス](https://www.adobe.io/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)
 
-AEM シングルページアプリケーション（SPA）エディター SDK フレームワーク JavaScript API リファレンス：
+AEM シングルページアプリケーション（SPA）Editor SDK Framework JavaScript API リファレンス：
 
 * [コンポーネントのマッピング](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [ページモデルマネージャー](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)
@@ -42,8 +42,8 @@ AEM 配信およびコンテンツ管理 API
 * コアコンポーネント（JSON）
 
    * [JSON エクスポーター](/help/sites-developing/json-exporter.md)
-   * [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
-   * 詳しくは、[開発ユーザーガイド』の「コンポーネント」セクション](/help/sites-developing/home.md)を参照してください。
+   * [コンポーネントの JSON エクスポートの有効化](/help/sites-developing/json-exporter-components.md)
+   * 詳しくは、[『開発ユーザーガイド』の「コンポーネント」節](/help/sites-developing/home.md)を参照してください。
 
 * **Assets**：Assets HTTP API を使用すると、バイナリ、メタデータ、レンディション、コメントなどのアセットに対して作成、読み出し、更新、削除（CRUD）操作を実行できます。[AEM Assets HTTP API](/help/assets/mac-api-assets.md) を参照してください。
 
