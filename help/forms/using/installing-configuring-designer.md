@@ -13,9 +13,9 @@ docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 source-git-commit: a3cf926bde4a4b3a0810058e84ac01012a4a3a57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 47%
+ht-degree: 100%
 
 ---
 
@@ -23,15 +23,15 @@ ht-degree: 47%
 
 ## 前提条件 {#pre-requisites}
 
-AEM Forms Designer インストーラーを使用するには、32 ビット版の [Visual C++再配布可能ランタイムパッケージ 2012](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) および [Visual C++再配布可能ランタイムパッケージ 2013](https://support.microsoft.com/ja-jp/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package). インストールを開始する前に、前述の再配布可能なランタイムパッケージがインストールされていることを確認してください。
+AEM Forms Designer インストーラーを実行するには、32 ビット版の [Visual C++ 再頒布可能ランタイムパッケージ 2012](https://support.microsoft.com/ja-jp/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) と [Visual C++ 再頒布可能ランタイムパッケージ 2013](https://support.microsoft.com/ja-jp/help/3179560/update-for-visual-c-2013-and-visual-c-redistributable-package) が必要です。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
 
 Designer をインストールまたはアンインストールするには、管理者権限が必要です。
 
 ## Designer のインストール {#install-designer}
 
-WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designer のスタンドアロンインストーラーを使用する場合は、次の手順を実行します。
+WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
 
-1. Adobeから Designer をダウンロード [ライセンス Web サイト](https://licensing.adobe.com/).
+1. アドビ[ライセンス web サイト](https://licensing.adobe.com/)から Designer をダウンロード してください。
 
    >[!NOTE]
    >
@@ -46,7 +46,7 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
 
 または、コマンドラインからパッシブモードまたはサイレントモードを使用して Designer をインストールすることもできます。
 
-* パッシブコマンドラインインストール：インストーラに進行状況バーが表示され、インストールが進行中であるが、プロンプトやエラーメッセージは表示されません。 起動後は、インストールをキャンセルできません。
+* パッシブコマンドラインインストール：インストーラーにインストールが進行中であることを示す進行状況バーが表示されますが、プロンプトやエラーメッセージは表示されません。 起動後は、インストールをキャンセルできません。
 
 ```shell
 msiexec /i "<absolute path>\Designer.msi" /passive SERIALNUMBER=****-****-****-****-****-****
