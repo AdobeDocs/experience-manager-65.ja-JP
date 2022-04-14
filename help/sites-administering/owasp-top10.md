@@ -12,13 +12,13 @@ discoiquuid: e5323ae8-bc37-4bc6-bca6-9763e18c8e76
 exl-id: 8b2a2f1d-8286-4ba5-8fe2-627509c72a45
 feature: Security
 source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '496'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# OWASP トップ 10{#owasp-top}
+# OWASP Top 10{#owasp-top}
 
 [Open Web Application Security Project](https://www.owasp.org)（OWASP）は、[Top 10 Web Application Security Risks](https://www.owasp.org/index.php/OWASP_Top_Ten_Project)（Web アプリケーションに関する上位 10 件のセキュリティリスク）のリストを保持しています。
 
@@ -46,15 +46,15 @@ AEM では、[Apache Jackrabbit](https://jackrabbit.apache.org/) と [Apache Sli
 
 ## 5. クロスサイトリクエストフォージェリ（CSRF） {#cross-site-request-forgery-csrf}
 
-クロスサイトリクエストフォージェリ (CSRF) は、すべてのフォームに暗号化トークンを自動的に挿入し、各POSTに対してサーバー上でこのトークンを検証することで軽減されます。
+クロスサイトリクエストフォージェリ（CSRF）は、暗号トークンをあらゆる形式および AJAX リクエストに自動的に注入し、すべての POST についてこのトークンをサーバー上で検証することで軽減されます。
 
-また、AEMにはリファラーヘッダーベースのフィルターが付属しています。このフィルターは、特定のホスト（リストで定義）からのPOSTリクエストを *のみ* に許可するように設定できます。
+さらに、AEM に搭載されているリファラーヘッダーベースのフィルターを設定して、特定のホスト（リストで定義）からの POST リクエスト&#x200B;*のみ*&#x200B;を許可することができます。
 
 ## 6. セキュリティ設定のミス {#security-misconfiguration}
 
 すべてのソフトウェアを常に正しく設定した状態にしておくことは不可能です。しかし、アドビでは、できるだけ多くのガイダンスを提供し、設定をできるだけシンプルにするよう努めています。さらに、AEM に搭載されている[セキュリティヘルスチェック機能](/help/sites-administering/operations-dashboard.md)により、一目でセキュリティ設定を監視できます。
 
-詳しくは、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。セキュリティ強化の手順を段階的に説明します。
+詳しくは、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。セキュリティ強化の手順を段階的に説明しています。
 
 ## 7. 安全でない暗号化データの保管 {#insecure-cryptographic-storage}
 
