@@ -1,19 +1,19 @@
 ---
 title: XDP ベースのアダプティブフォームにおける XFA のサポート
-seo-title: XDP ベースのアダプティブフォームにおける XFA のサポート
+seo-title: XFA support in XDP-based adaptive forms
 description: アダプティブフォームでサポートされる XFA イベント、プロパティ、スクリプト、検証を一覧表示します。
-seo-description: アダプティブフォームでサポートされる XFA イベント、プロパティ、スクリプト、検証を一覧表示します。
+seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
 uuid: 75d3c292-cfed-438f-afdb-4071d95a08b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '683'
+ht-degree: 100%
 
 ---
 
@@ -118,15 +118,15 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>presence </p> </td>
-   <td><p>アダプティブフォームのvisibleプロパティにマッピング済み。 表示式を使用して上書きできます。</p> </td>
+   <td><p>アダプティブフォームの Visible プロパティにマッピング済みです。表示式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
    <td><p>access </p> </td>
-   <td><p>アダプティブフォームのenabledプロパティにマッピング済み。 アクセス式を使用して上書きできます。</p> </td>
+   <td><p>アダプティブフォームの Enabled プロパティにマッピング済みです。アクセス式を使用して上書きできます。</p> </td>
   </tr>
   <tr>
    <td><p>Accessibility: role </p> </td>
-   <td><p>アダプティブフォームのroleプロパティにマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの Role プロパティにマッピング済みです。</p> </td>
   </tr>
   <tr>
    <td><p>Accessibility: speakPriority </p> </td>
@@ -138,11 +138,11 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>Accessibility: toolTip </p> </td>
-   <td><p>アダプティブフォームのshort descriptionプロパティにマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの Short Description プロパティにマッピング済みです。</p> </td>
   </tr>
   <tr>
    <td><p>caption<em>（すべてのフィールドの種類）</em></p> </td>
-   <td><p>アダプティブフォームのTitleプロパティにマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの Title プロパティにマッピング済みです。</p> </td>
   </tr>
   <tr>
    <td><p>displayFormat<em>（すべてのフィールドの種類）</em></p> </td>
