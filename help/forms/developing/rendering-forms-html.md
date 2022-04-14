@@ -1,8 +1,8 @@
 ---
-title: FormsをHTMLとしてレンダリング
-seo-title: FormsをHTMLとしてレンダリング
-description: Formsサービスを使用して、WebブラウザーからのHTTP要求に応答してフォームをHTMLとしてレンダリングします。 Java APIおよびWebサービスAPIを使用して、フォームをHTMLとしてレンダリングできます。
-seo-description: Formsサービスを使用して、WebブラウザーからのHTTP要求に応答してフォームをHTMLとしてレンダリングします。 Java APIおよびWebサービスAPIを使用して、フォームをHTMLとしてレンダリングできます。
+title: Forms を HTML としてレンダリング
+seo-title: Rendering Forms as HTML
+description: Forms サービスを使用し、web ブラウザーからの HTTP リクエストに応じてフォームを HTML としてレンダリングします。 Java API および Web Service API を使用し、フォームを HTML としてレンダリングできます。
+seo-description: Use the Forms service to render forms as HTML in response to an HTTP request from a web browser. You can use the Java API and Web Service API to render forms as HTML.
 uuid: bd8edb6f-333b-4ceb-9877-618f5377f56f
 contentOwner: admin
 content-type: reference
@@ -13,31 +13,31 @@ discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '4188'
-ht-degree: 1%
+workflow-type: ht
+source-wordcount: '4150'
+ht-degree: 100%
 
 ---
 
-# FormsをHTMLとしてレンダリング{#rendering-forms-as-html}
+# Forms を HTML としてレンダリング {#rendering-forms-as-html}
 
-**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
+**このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-Formsサービスは、WebブラウザーからのHTTP要求に応じて、フォームをHTMLとしてレンダリングします。 フォームをHTMLとしてレンダリングする利点は、クライアントWebブラウザーが配置されているコンピューターにAdobe Reader、Acrobat、またはFlash Player(フォームガイド（非推奨）用)が不要であることです。
+Forms サービスは、web ブラウザーからの HTTP リクエストに応じて、フォームを HTML としてレンダリングします。 フォームを HTML としてレンダリングする利点の 1 つは、クライアント web ブラウザーが格納されているコンピューターに Adobe Reader、Acrobat、Flash Player（フォームガイド（非推奨）用）が必要ないことです。
 
-フォームをHTMLとしてレンダリングするには、フォームデザインをXDPファイルとして保存する必要があります。 PDFファイルとして保存されたフォームデザインは、HTMLとしてレンダリングできません。 HTMLとしてレンダリングされるDesignerのフォームデザインを開発する際には、次の条件を考慮してください。
+フォームを HTML としてレンダリングするには、フォームデザインを XDP ファイルとして保存する必要があります。PDF ファイルとして保存されたフォームデザインは、HTML としてレンダリングできません。 Designer でフォームデザインを開発し、HTML としてレンダリングする場合は、以下の条件を考慮してください。
 
 * フォームに線、ボックス、グリッドを描画するときに、オブジェクトの境界線プロパティを使用しないでください。ブラウザーによっては、 のプレビューで表示されるとおりに境界線が表示されないことがあります。また、オブジェクトが重なって表示されたり、他のオブジェクトを本来の位置から押しのけたりする場合があります。
-* 線、長方形および円を使用して、背景を定義できます。
-* テキストを収容するために必要と思われるサイズよりも少し大きく描画します。 一部のWebブラウザーでは、読みやすくテキストが表示されません。
+* 線、長方形、円を使用して、背景を定義できます。
+* テキストが収まるよう、必要と思われるサイズより少し大きめにテキストを描画します。一部の web ブラウザーでは、テキストが読みやすく表示されません。
 
 >[!NOTE]
 >
->`FormServiceClient`オブジェクトの`(Deprecated) renderHTMLForm`および`renderHTMLForm2`メソッドを使用してTIFF画像を含むフォームをレンダリングすると、Internet ExplorerまたはMozilla Firefoxブラウザーに表示されるレンダリングされたHTMLフォームにTIFF画像が表示されません。 これらのブラウザーは、TIFF画像をネイティブでサポートしません。
+>`FormServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` および `renderHTMLForm2` メソッドを使用して TIFF 画像を含むフォームをレンダリングする場合、Internet Explorer または Mozilla Firefox ブラウザーで表示されるレンダリングされたHTML フォームには TIFF 画像が表示されません。これらのブラウザーでは、TIFF 画像のネイティブサポートは提供されていません。
 
-## HTMLページ{#html-pages}
+## HTML ページ {#html-pages}
 
-フォームデザインがHTMLフォームとしてレンダリングされる場合、各第2レベルサブフォームはHTMLページ（パネル）としてレンダリングされます。 Designerでサブフォームの階層を表示できます。 ルートサブフォームに属する子サブフォーム（ルートサブフォームのデフォルト名はform1）はパネルのサブフォームです。 次に、フォームデザインのサブフォームの例を示します。
+フォームデザインが HTML フォームとしてレンダリングされる場合、各第 2 レベルサブフォームはHTML ページ（パネル）としてレンダリングされます。サブフォームの階層は Designer で表示できます。 ルートサブフォームに属する子サブフォーム（ルートサブフォームのデフォルト名は form1 です）は、パネルのサブフォームです。次に、フォームデザインのサブフォームの例を示します。
 
 ```java
      form1
@@ -53,56 +53,56 @@ Formsサービスは、WebブラウザーからのHTTP要求に応じて、フ�
              TextEdit1
 ```
 
-フォームデザインをHTMLフォームとしてレンダリングする場合、パネルは特定のページサイズに制限されません。 ダイナミックサブフォームがある場合は、パネルサブフォーム内に階層化する必要があります。 動的サブフォームは、無限数のHTMLページまで拡張できます。
+フォームデザインが HTML フォームとしてレンダリングされる場合、パネルは特定のページサイズに制限されません。ダイナミックサブフォームがある場合は、パネルサブフォーム内にネストする必要があります。ダイナミックサブフォームは、無限数の HTML ページに拡張できます。
 
-フォームをHTMLフォームとしてレンダリングする場合、ページサイズ（PDFとしてレンダリングされるフォームのページ番号付けに必要）は意味を持ちません。 編集可能なレイアウトを含むフォームは、無限数のHTMLページまで拡大できるので、マスターページのフッターを避けることが重要です。 マスターページのコンテンツ領域の下にあるフッターでは、フローがページ境界を超えるHTMLコンテンツを上書きする場合があります。
+フォームを HTML フォームとしてレンダリングする場合、ページサイズ （PDF としてレンダリングされるフォームのページ番号付けで必須）は意味を持ちません。 編集可能なレイアウトを含むフォームは HTML ページを無限数まで拡張できるので、マスターページではフッターの使用を避けることが重要です。 マスターページのコンテンツ領域の下にフッターを配置すると、ページ境界を越えてフローする HTML コンテンツが上書きされる場合があります。
 
-`xfa.host.pageUp`メソッドと`xfa.host.pageDown`メソッドを使用して、パネル間を明示的に移動する必要があります。 ページを変更するには、フォームをFormsサービスに送信し、Formsサービスでフォームをレンダリングしてクライアントデバイス（通常はWebブラウザー）に戻します。
-
->[!NOTE]
->
->Formsサービスにフォームを送信し、Formsサービスでフォームをレンダリングしてクライアントデバイスに戻すプロセスは、「ラウンドトリッピングデータ」と呼ばれます。
+`xfa.host.pageUp` および `xfa.host.pageDown` メソッドを使用して、パネル間を明示的に移動する必要があります。ページを変更するには、フォームを Forms サービスに送信し、Forms サービスでフォームをレンダリングしてクライアントデバイス（通常は web ブラウザー）に戻す必要があります。
 
 >[!NOTE]
 >
->HTMLフォーム上のHTML電子署名ボタンの外観をカスタマイズする場合は、 fscdigsig.cssファイル（ adobe-forms-ds.ear / adobe-forms-ds.warファイル内）で次のプロパティを変更する必要があります。
-
-**.fsc-ds-ssb**:このスタイルシートは、空白の記号フィールドの場合に適用されます。
-
-**.fsc-ds-ssv**:このスタイルシートは、有効な記号フィールドの場合に適用されます。
-
-**.fsc-ds-ssc**:このスタイルシートは、有効な記号フィールドが適用されるが、データが変更された場合に適用されます。
-
-**.fsc-ds-ssi**:このスタイルシートは、無効な記号フィールドの場合に適用されます。
-
-**.fsc-ds-popup-bg**:このスタイルシートのプロパティは使用されていません。
-
-**.fsc-ds-popup-btn**:このスタイルシートのプロパティは使用されていません。
-
-## スクリプト{#running-scripts}の実行
-
-フォーム作成者は、スクリプトをサーバー上で実行するかクライアント上で実行するかを指定します。 Formsサービスは、`runAt`属性を使用してクライアントとサーバーの間で配布できる、フォームインテリジェンスを実行するための分散型イベント処理環境を作成します。 この属性やフォームデザイン内でのスクリプトの作成について詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
-
-Formsサービスは、フォームのレンダリング中にスクリプトを実行できます。 その結果、クライアント上で使用できないデータベースやWebサービスに接続することで、フォームにデータを事前入力できます。 また、サーバー上で実行するボタンの`Click`イベントを設定し、クライアントがサーバーにトリップデータをラウンドトリップするようにすることもできます。 これにより、ユーザーがフォームを操作している間に、エンタープライズデータベースなどのサーバーリソースを必要とする可能性のあるスクリプトをクライアントが実行できます。 HTMLフォームの場合、formcalcスクリプトはサーバー上でのみ実行できます。 その結果、`server`または`both`で実行するように、これらのスクリプトにマークを付ける必要があります。
-
-`xfa.host.pageUp`メソッドと`xfa.host.pageDown`メソッドを呼び出すことで、ページ（パネル）間を移動するフォームをデザインできます。 このスクリプトは、ボタンの`Click`イベントに配置され、`runAt`属性は`Both`に設定されます。 `Both`を選択する理由は、Adobe ReaderまたはAcrobat（PDFとしてレンダリングされるフォームの場合）がサーバーに移動せずにページを変更でき、HTMLフォームがサーバーにデータを丸めてページを変更できるようにするためです。 つまり、フォームがFormsサービスに送信され、フォームがHTMLとしてレンダリングされ、新しいページが表示されます。
-
-スクリプト変数とフォームフィールドには、itemなどの同じ名前を付けないことをお勧めします。 Internet Explorerなどの一部のWebブラウザーでは、フォームフィールドと同じ名前の変数が初期化されず、スクリプトエラーが発生する場合があります。 フォームフィールドとスクリプト変数には、それぞれ異なる名前を付けることをお勧めします。
-
-ページナビゲーション機能とフォームスクリプトの両方を含むHTMLフォームをレンダリングする場合（例えば、フォームがレンダリングされるたびにスクリプトがデータベースからフィールドデータを取得するとします）、フォームスクリプトがform:readyeventの代わりにform:calculateイベントに配置されます。
-
-form:readyイベントにあるフォームスクリプトは、フォームの最初のレンダリング時に1回だけ実行され、以降のページ取得では実行されません。 これに対し、 form:calculateイベントは、フォームがレンダリングされるページナビゲーションごとに実行されます。
+>フォームを Forms サービスに送信し、Forms サービスでフォームをレンダリングしてクライアントデバイスに戻すプロセスは、サーバーへのラウンドトリッピングデータと呼ばれます。
 
 >[!NOTE]
-複数ページフォームでは、JavaScriptによってページに加えられた変更は、別のページに移動しても保持されません。
+>
+>HTML フォーム上の HTML のデジタル署名ボタンの外観をカスタマイズする場合は、fscdigsig.css ファイル（adobe-forms-ds.ear/adobe-forms-ds.war ファイル内）で次のプロパティを変更する必要があります。
 
-フォームを送信する前に、カスタムスクリプトを呼び出すことができます。 この機能は、利用可能なすべてのブラウザーで動作します。 ただし、`Output Type`プロパティが`Form Body`に設定されたHTMLフォームをレンダリングする場合にのみ使用できます。 `Output Type`が`Full HTML`の場合は機能しません。 この機能を設定する手順については、管理ヘルプの「フォームの設定」を参照してください。
+**.fsc-ds-ssb**：このスタイルシートは、空白の記号フィールドの場合に適用されます。
 
-フォームを送信する前に呼び出すコールバック関数を定義する必要があります。関数の名前は`_user_onsubmit`です。 この関数は例外をスローしないと想定され、例外がスローされる場合は無視されます。 JavaScript関数は、htmlのheadセクションに配置することをお勧めします。ただし、`xfasubset.js`を含むスクリプトタグの終わりより前の任意の場所で宣言できます。
+**.fsc-ds-ssv**：このスタイルシートは、「有効な記号」フィールドの場合に適用されます。
 
-formserverがコンボボックスを含むXDPをレンダリングすると、コンボボックスの作成に加えて、2つの非表示テキストフィールドも作成されます。 これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。 したがって、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。 毎回それほど多くのデータを送信したくない場合は、カスタムスクリプトを記述してそれを無効にできます。 例：ドロップダウンリストの名前は`drpOrderedByStateProv`で、サブフォームヘッダーに含まれます。 HTML入力要素の名前は`header[0].drpOrderedByStateProv[0]`になります。 ドロップダウンのデータを保存して送信する非表示フィールドの名前は、次の名前になります。`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]`
+**.fsc-ds-ssc**：このスタイルシートは、有効な記号フィールドでデータが変更された場合に適用されます。
 
-データを投稿しない場合は、次の方法でこれらの入力要素を無効にできます。`var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
+**.fsc-ds-ssi**：このスタイルシートは、無効な記号フィールドの場合に適用されます。
+
+**.fsc-ds-popup-bg**：このスタイルシートプロパティは使用されていません。
+
+**.fsc-ds-popup-btn**：このスタイルシートプロパティは使用されていません。
+
+## スクリプトの実行 {#running-scripts}
+
+フォームの作成者は、スクリプトをサーバー上で実行するかクライアント上で実行するかを指定します。Forms サービスは、`runAt` 属性を使用してクライアントとサーバー間で分散できるフォームインテリジェンスを実行するための分散イベント処理環境を作成します。この属性やフォームデザイン内でのスクリプトの作成について詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
+
+Forms サービスは、フォームのレンダリング中にスクリプトを実行できます。 その結果、データベースに接続するか、クライアント上で使用できない web サービスに接続することで、フォームにデータを事前入力できます。また、ボタンの `Click` イベントをサーバーで実行するように設定して、クライアントがデータをサーバーにラウンドトリップするようにすることもできます。これにより、ユーザーがフォームを操作している間に、エンタープライズデータベースなどのサーバーリソースを必要とする可能性のあるスクリプトをクライアントが実行できます。HTML フォームの場合、formcalc スクリプトはサーバー上でのみ実行できます。その結果、これらのスクリプトを `server` または `both` で実行するように指定する必要があります。
+
+ページ（パネル）間を移動するフォームは、`xfa.host.pageUp` および `xfa.host.pageDown` メソッドを呼び出すことによって設計できます。このスクリプトはボタンの `Click` イベントに配置され、`runAt` 属性は `Both` に設定されます。`Both` を選択する理由は、（PDF としてレンダリングされるフォームの場合）Adobe Reader や Acrobat がサーバーに移動せずにページを変更でき、HTML フォームがサーバーにデータをラウンドトリップさせずにページを変更できるようにするためです。つまり、あるフォームは Forms サービスに送信され、あるフォームは新しいページを表示する HTML としてレンダリングされます。
+
+スクリプト変数やフォームフィールドには、同じ名前（item など）を付けないことをお勧めします。 Internet Explorer などの一部の web ブラウザーでは、フォームフィールドと同じ名前の変数が初期化されず、スクリプトエラーが発生する場合があります。 フォームフィールドとスクリプト変数に異なる名前を付けることをお勧めします。
+
+ページナビゲーション機能とフォームスクリプトの両方を含む HTML フォームをレンダリングする場合（例えば、フォームがレンダリングされるたびにスクリプトがデータベースからフィールドデータを取得するような場合）、フォームスクリプトが form:ready イベントではなく form:calculate イベント内に配置する必要があります。
+
+form:ready イベントにあるフォームスクリプトは、フォームの最初のレンダリング時に 1 回だけ実行され、以降のページ取得時には実行されません。これに対し、 form:calculate イベントは、フォームがレンダリングされるページナビゲーションごとに実行されます。
+
+>[!NOTE]
+複数ページフォームでは、JavaScript によってページに加えられた変更は、別のページに移動しても保持されません。
+
+フォームを送信する前にカスタムスクリプトを呼び出すことができます。この機能は、使用可能なすべてのブラウザーで機能します。ただし、`Output Type` プロパティが `Form Body` に設定されている HTML フォームをレンダリングする場合にのみ使用できます。`Output Type` が `Full HTML` の場合には機能しません。この機能を設定する手順については、管理ヘルプの「フォームの設定」を参照してください。
+
+フォームを送信する前に、呼び出すコールバック関数を定義する必要があります。ここで、関数の名前は `_user_onsubmit` です。この関数は例外をスローしないと想定されます。例外がスローされても無視されます。JavaScript 関数は HTML の HEAD セクションに配置することをお勧めしますが、`xfasubset.js` を含むスクリプトタグが終わる前であれば任意の場所で宣言できます。
+
+フォームサーバーがドロップダウンリストを含む XDP をレンダリングすると、ドロップダウンリストの作成に加えて、2 つの非表示のテキストフィールドも作成されます。これらのテキストフィールドには、ドロップダウンリストのデータが格納されます（一方にはオプションの表示名が格納され、もう一方にはオプションの値が格納されます）。そのため、ユーザーがフォームを送信するたびに、ドロップダウンリストのデータ全体が送信されます。毎回それほど多くのデータを送信したくない場合は、それを無効にするカスタムスクリプトを作成できます。例：ドロップダウンリストの名前は `drpOrderedByStateProv` で、サブフォームヘッダーの下にラップされます。HTML 入力要素の名前は `header[0].drpOrderedByStateProv[0]` になります。ドロップダウンのデータを格納して送信する非表示フィールドの名前には、`header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]` という名前が付けられます。
+
+データをポストしない場合は、次の方法でこれらの入力要素を無効にできます。`var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature function _user_onsubmit() { var elems = document.getElementsByName("header[0].drpOrderedByStateProv_DISPLAYITEMS_[0]"); elems[0].disabled = true; elems = document.getElementsByName("header[0].drpOrderedByStateProv_VALUEITEMS_[0]"); elems[0].disabled = true; }`
 
 ```java
 header[0].drpOrderedByStateProv_DISPLAYITEMS_[0] header[0].drpOrderedByStateProv_VALUEITEMS_[0]
@@ -118,46 +118,46 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
     }
 ```
 
-## XFAサブセット{#xfa-subsets}
+## XFA サブセット {#xfa-subsets}
 
-HTMLとしてレンダリングするフォームデザインを作成する場合は、JavaScript言語のスクリプトのXFAサブセットにスクリプティングを制限する必要があります。
+HTML としてレンダリングするフォームデザインを作成する場合は、JavaScript 言語のスクリプトの XFA サブセットにスクリプティングを制限する必要があります。
 
-クライアント上で実行されるスクリプト、またはクライアントとサーバーの両方で実行されるスクリプトは、XFAサブセット内で記述する必要があります。 サーバー上で実行されるスクリプトは、完全なXFAスクリプティングモデルを使用し、FormCalcも使用できます。 JavaScriptの使用について詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+クライアント上で実行される、またはクライアントとサーバーの両方で実行されるスクリプトは、XFA サブセット内で記述する必要があります。サーバー上で実行されるスクリプトは、完全な XFA スクリプティングモデルを使用でき、FormCalc も使用できます。JavaScript の使用について詳しくは、 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp)を参照してください。
 
-クライアントでスクリプトを実行する場合、表示中の現在のパネルのみスクリプトを使用できます。例えば、パネルBが表示されている場合に、パネルAにあるフィールドに対してスクリプトを作成することはできません。 サーバーでスクリプトを実行する場合、すべてのパネルにアクセスできます。
+クライアントでスクリプトを実行する場合、表示されている現在のパネルだけがスクリプトを使用できます。例えば、パネル B が表示されているときに、パネル A にあるフィールドに対するスクリプトを記述することはできません。サーバーでスクリプトを実行すると、すべてのパネルにアクセスできます。
 
-また、クライアントで実行するスクリプト内でスクリプティングオブジェクトモデル(SOM)式を使用する場合は、注意が必要です。 クライアント上で実行されるスクリプトでは、SOM式の簡略化されたサブセットのみがサポートされます。
+また、クライアントで実行するスクリプト内で Scripting Object Model（SOM）式を使用する場合は注意が必要です。クライアントで実行するスクリプトでは、簡単化された SOM 式のサブセットのみをサポートしています。
 
-## イベントのタイミング{#event-timing}
+## イベントのタイミング {#event-timing}
 
-XFAサブセットは、HTMLイベントにマッピングされるXFAイベントを定義します。 イベントの計算と検証のタイミングでの動作には、若干の違いがあります。 Webブラウザーでは、フィールドを終了すると、完全なcalculateイベントが実行されます。 「計算」イベントは、フィールド値を変更した場合には自動的には実行されません。 `xfa.form.execCalculate`メソッドを呼び出すことで、強制的にcalculateイベントを呼び出すことができます。
+XFA サブセットは、HTML イベントにマップされる XFA イベントを定義します。イベントの計算と検証のタイミングには、動作にわずかな違いがあります。Web ブラウザーでは、フィールドを終了すると、完全な calculate イベントが実行されます。フィールド値を変更した場合、calculate イベントは自動的には実行されません。calculate イベントを強制的に実行するには、`xfa.form.execCalculate` メソッドを呼び出します。
 
-Webブラウザーでは、検証イベントは、フィールドを終了するかフォームを送信する場合にのみ実行されます。 `xfa.form.execValidate`メソッドを使用して、validateイベントを強制できます。
+Web ブラウザーでは、validate イベントは、フィールドを終了するかフォームを送信する場合にのみ実行されます。validate イベントを強制的に実行するには `xfa.form.execValidate` メソッドを呼び出します。
 
-(Adobe ReaderやAcrobatとは対照的に)Webブラウザーに表示されるFormsは、必須フィールドのXFA nullテスト（エラーまたは警告）に準拠しています。
+Web ブラウザー（Adobe Reader や Acrobat とは異なり）に表示されるフォームは、必須フィールドの XFA null テスト（エラーまたは警告）に準拠しています。
 
-* nullテストでエラーが発生し、値を指定せずにフィールドを終了すると、メッセージボックスが表示され、「OK」をクリックした後にそのフィールドに再配置されます。
-* nullテストで警告が生成され、値を指定せずにフィールドを終了した場合は、「 OK 」または「キャンセル」をクリックするよう求められ、値を指定せずに続行するか、値を入力するフィールドに戻るかを選択できます。
+* null テストでエラーが発生し、値を指定せずにフィールドを終了した場合は、メッセージボックスが表示され、「OK」をクリックした後にそのフィールドに再配置されます。
+* null テストで警告が生成され、値を指定せずにフィールドを終了した場合、「OK」または「キャンセル」をクリックするように促されます。「OK」は値を指定せずに続行し、「キャンセル」は値を入力するフィールドに戻ります。
 
-nullテストについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+null テストについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
 
-## フォームボタン{#form-buttons}
+## フォームボタン {#form-buttons}
 
-送信ボタンをクリックすると、フォームデータがFormsサービスに送信され、フォーム処理の終了を表します。 `preSubmit`イベントは、クライアントまたはサーバー上で実行するように設定できます。 `preSubmit`イベントは、フォームがクライアント上で実行するように設定されている場合、フォーム送信の前に実行されます。 それ以外の場合は、フォームの送信中に`preSubmit`イベントがサーバーで実行されます。 `preSubmit`イベントについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+「送信」ボタンをクリックすると、フォームデータが Forms サービスに送信され、フォームの処理を終了します。`preSubmit` イベントは、クライアントまたはサーバーで実行するように設定できます。`preSubmit` イベントは、フォーム送信の前に実行されます（クライアント上で実行するように設定されている場合）。それ以外の場合は、`preSubmit` イベントは、フォームの送信中にサーバーで実行されます。`preSubmit` イベントについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
 
-ボタンにクライアント側スクリプトが関連付けられていない場合、データがサーバーに送信され、サーバーで計算が実行され、HTMLフォームが再生成されます。 ボタンにクライアント側スクリプトが含まれている場合、データはサーバーに送信されず、クライアント側スクリプトがWebブラウザーで実行されます。
+ボタンにクライアントサイドのスクリプトが関連付けられていない場合、データがサーバーに送信され、サーバー上で計算が実行されて HTML フォームが再生成されます。ボタンにクライアントサイドのスクリプトが含まれている場合、データはサーバーに送信されず、クライアント側のスクリプトが web ブラウザーで実行されます。
 
-## HTML 4.0 Webブラウザー{#html-4-0-web-browser}
+## HTML 4.0 web ブラウザー {#html-4-0-web-browser}
 
-HTML 4.0のみをサポートするWebブラウザーは、XFAサブセットのクライアント側スクリプティングモデルをサポートできません。 HTML 4.0とMSDHTMLまたはCSS2HTMLの両方で動作するフォームデザインを作成する場合、クライアントで実行するようにマークされたスクリプトは、実際にサーバー上で実行されます。 例えば、HTML 4.0 Webブラウザーに表示されているフォーム上のボタンをユーザーがクリックするとします。 この場合、クライアント側スクリプトが実行されるサーバーにフォームデータが送信されます。
+HTML 4.0 のみをサポートする web ブラウザーは、XFA サブセットのクライアントサイドスクリプティングモデルをサポートできません。 HTML 4.0 と MSDHTML または CSS2 HTML の両方で動作するフォームデザインを作成する場合、クライアントで実行するようにマークされたスクリプトは、サーバー上で実際に実行されます。 例えば、HTML 4.0 web ブラウザーで表示されているフォーム上のボタンをユーザーがクリックしたとします。 この場合、フォームデータはクライアントサイドスクリプトが実行されるサーバーに送信されます。
 
-フォームロジックは、HTML 4.0のサーバーと、MSDHTMLまたはCSS2HTMLのクライアントで実行されるcalculateイベントに配置することをお勧めします。
+HTML 4.0 のサーバーと、MSDHTML または CSS2HTML 用のクライアントで実行する calculate イベントに、フォームロジックを配置することをお勧めします。
 
-## プレゼンテーションの変更の管理{#maintaining-presentation-changes}
+## プレゼンテーションの変更の維持 {#maintaining-presentation-changes}
 
-HTMLページ（パネル）間を移動すると、データの状態のみが維持されます。 背景色や必須フィールド設定などの設定は維持されません（初期設定と異なる場合）。 プレゼンテーションの状態を維持するには、フィールドのプレゼンテーション状態を表すフィールド（通常は非表示）を作成する必要があります。 非表示のフィールドの値に基づいてプレゼンテーションを変更するスクリプトをフィールドの`Calculate`イベントに追加すると、HTMLページ（パネル）間を行ったり来たりする際に、プレゼンテーションの状態を保持できます。
+HTML ページ（パネル）間を移動すると、データの状態のみが保持されます。 背景色や必須フィールド設定などの設定は維持されません（初期設定と異なる場合）。 プレゼンテーションの状態を維持するには、フィールドのプレゼンテーションの状態を表すフィールド（通常は非表示）を作成する必要があります。 非表示のフィールド値に基づいて、プレゼンテーションを変更するフィールドの `Calculate` イベントにスクリプトを追加すると、 HTML ページ（パネル）間を移動するときにプレゼンテーションの状態を維持できます。
 
-次のスクリプトは、`hiddenField`の値に基づいてフィールドの`fillColor`を維持します。 このスクリプトがフィールドの`Calculate`イベント内にあるとします。
+次のスクリプトは、`hiddenField` の値に基づいてフィールドの `fillColor` を維持します。このスクリプトがフィールドの `Calculate` イベントにあるとします。
 
 ```java
      If (hiddenField.rawValue == 1)
@@ -167,208 +167,208 @@ HTMLページ（パネル）間を移動すると、データの状態のみが�
 ```
 
 >[!NOTE]
-テーブルのセル内にネストされている場合、スタティックオブジェクトはレンダリングされたHTMLフォームに表示されません。 例えば、テーブルのセル内にネストされた円や長方形は、レンダリングHTMLフォーム内に表示されません。 ただし、テーブルの外側に配置されている場合は、同じスタティックオブジェクトが正しく表示されます。
+テーブルのセル内にネストされている場合、スタティックオブジェクトはレンダリングされた HTML フォームには表示されません。 例えば、テーブルのセル内にネストされた円や長方形は、レンダリングされた HTML フォーム内には表示されません。 ただし、テーブルの外側に配置されている場合は、同じスタティックオブジェクトが正しく表示されます。
 
-## HTMLフォームのデジタル署名{#digitally-signing-html-forms}
+## デジタル署名用 HTML フォーム {#digitally-signing-html-forms}
 
-フォームが以下のHTML変換のいずれかとしてレンダリングされる場合、電子署名フィールドを含むHTMLフォームに署名することはできません。
+フォームが以下の HTML 変換のいずれかとしてレンダリングされている場合、デジタル署名フィールドを含む HTML 署名フォームには署名できません。
 
 * AHTML
 * HTML4
 * StaticHTML
 * NoScriptXHTML
 
-ドキュメントのデジタル署名については、[Digital Signing and Certifying Documents](/help/forms/developing/digitally-signing-certifying-documents.md)を参照してください。
+ドキュメントのデジタル署名については、 [ドキュメントのデジタル署名と認証](/help/forms/developing/digitally-signing-certifying-documents.md)を参照してください。
 
-## アクセシビリティガイドラインに準拠したXHTMLフォーム{#rendering-an-accessibility-guidelines-compliant-xhtml-form}のレンダリング
+## アクセシビリティガイドラインに準拠した XHTML フォームのレンダリング {#rendering-an-accessibility-guidelines-compliant-xhtml-form}
 
-アクセシビリティガイドラインに準拠した完全なHTMLフォームをレンダリングできます。 つまり、フォームは完全なHTMLページではなくbodyタグ内でレンダリングされるのに対して、完全なHTMLタグ内でレンダリングされます。
+アクセシビリティガイドラインに準拠する完全な HTML フォームをレンダリングできます。 つまり、本文タグ内でレンダリングされる HTML フォームとは異なり、フォームは完全な HTML タグ内でレンダリングされます（完全な HTML ページではありません）。
 
-## フォームデータの検証{#validating-form-data}
+## フォームデータの検証 {#validating-form-data}
 
-フォームをHTMLフォームとしてレンダリングする場合、フォームフィールドに対する検証ルールの使用を制限することをお勧めします。 一部の検証ルールは、HTMLフォームでサポートされない場合があります。 例えば、HTMLフォームとしてレンダリングされるフォームデザインの`Date/Time`フィールドにMM-DD-YYYYの検証パターンを適用すると、日付が正しく入力されていても、正しく機能しません。 ただし、この検証パターンは、PDFとしてレンダリングされるフォームに対して適切に機能します。
+フォームを HTML フォームとしてレンダリングする場合、フォームフィールドに対する検証ルールの使用を制限することをお勧めします。 一部の検証ルールは、HTML フォームでサポートされていない可能性があります。 例えば、MM-DD-YYYY という検証パターンを HTMLフォームとしてレンダリングされているフォームデザインの `Date/Time` フィールドに適用する場合、日付が正しく入力されていても、適切に機能しません。 ただし、この検証パターンは、PDF としてレンダリングされているフォームに対しては適切に機能します。
 
 >[!NOTE]
-Formsサービスについて詳しくは、『 AEM Formsのサービスリファレンス[ 』を参照してください。](https://www.adobe.com/go/learn_aemforms_services_63)
+Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
-## 手順の概要{#summary-of-steps}
+## 手順の概要 {#summary-of-steps}
 
 HTMLフォームをレンダリングするには、次の手順を実行します。
 
 1. プロジェクトファイルを含めます。
-1. Forms Client APIオブジェクトを作成します。
-1. HTML実行時オプションを設定します。
-1. HTMLフォームをレンダリングします。
-1. フォームデータストリームをクライアントWebブラウザーに書き込みます。
+1. Forms Client API オブジェクトを作成します。
+1. HTML の実行時オプションを設定します。
+1. HTML フォームをレンダリングします。
+1. フォームデータストリームをクライアントの Web ブラウザーに書き込みます。
 
-**プロジェクトファイルを含める**
+**プロジェクトファイルの組み込み**
 
-必要なファイルを開発プロジェクトに含めます。 Javaを使用してクライアントアプリケーションを作成する場合は、必要なJARファイルを含めます。 Webサービスを使用する場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**Forms Client APIオブジェクトの作成**
+**Forms Client API オブジェクトを作成**
 
-プログラムによってデータをPDF formClient APIに読み込む前に、Form Data Integrationサービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスを呼び出すために必要な接続設定を定義します。
+データをプログラムによって PDF formClient API に読み込む前に、Form Data Integration サービスクライアントを作成する必要があります。 サービスクライアントを作成する場合、サービスを呼び出すために必要な接続設定を定義します。
 
-**HTML実行時オプションの設定**
+**HTML 実行時オプションを設定**
 
-HTMLフォームのレンダリング時にHTML実行時オプションを設定します。 例えば、HTMLフォームにツールバーを追加して、クライアントコンピューター上の添付ファイルをユーザーが選択したり、HTMLフォームと共にレンダリングされる添付ファイルを取得したりできます。 デフォルトでは、HTMLツールバーは無効になっています。 HTMLフォームにツールバーを追加するには、実行時オプションをプログラムで設定する必要があります。 デフォルトでは、HTMLツールバーは次のボタンで構成されます。
+HTML フォームのレンダリング時に、HTML 実行時オプションを設定します。 例えば、HTML フォームにツールバーを追加すると、クライアントコンピューター上の添付ファイルを選択したり、HTML フォームでレンダリングされた添付ファイルを取得したりできます。 デフォルトでは、HTML ツールバーは無効になっています。 ツールバーを HTML フォームに追加するには、実行時オプションをプログラムによって設定する必要があります。 デフォルトでは、HTML ツールバーは次のボタンで構成されています。
 
-* `Home`:アプリケーションのWebルートへのリンクを提供します。
-* `Upload`:現在のフォームに添付するファイルを選択するためのユーザーインターフェイスを提供します。
-* `Download`:添付ファイルを表示するユーザインタフェースを提供します。
+* `Home`：アプリケーションの web ルートへのリンクを提供します。
+* `Upload`：現在のフォームに添付するファイルを選択するためのユーザーインターフェイスを提供します。
+* `Download`：添付ファイルを表示するユーザインタフェースを提供します。
 
-HTMLフォームにHTMLツールバーが表示される場合、ユーザーは最大10個のファイルを選択して、フォームデータと共に送信できます。 ファイルが送信されると、Formsサービスはファイルを取得できます。
+HTML フォーム上に HTML ツールバーが表示されている場合、ユーザーは最大 10 個のファイルを選択して、フォームデータと共に送信することができます。 ファイルが送信されると、Forms サービスはファイルを取得することができます。
 
-フォームをHTMLとしてレンダリングする場合、ユーザーエージェント値を指定できます。 ユーザーエージェント値は、ブラウザーとシステムの情報を提供します。 これはオプションの値で、空の文字列値を渡すことができます。 Java APIを使用したHTMLフォームのレンダリングクイックスタートでは、ユーザーエージェントの値を取得し、それを使用してフォームをHTMLとしてレンダリングする方法を示します。
+フォームを HTML としてレンダリングする際に、ユーザーエージェント値を指定することができます。ユーザーエージェント値は、ブラウザーとシステムの情報を提供します。 これはオプションの値で、空の文字列値を渡すことができます。Java API クイックスタートを使用した HTML フォームのレンダリングでは、ユーザーエージェント値を取得する方法、それを使用してフォームを HTML としてレンダリングする方法を示しています。
 
-FormsサービスクライアントAPIを使用してターゲットURLを設定することで、またはXDPフォームデザインに含まれる「送信」ボタンで、フォームデータが投稿されるHTTP URLを指定できます。 ターゲットURLがフォームデザインで指定されている場合は、FormsサービスクライアントAPIを使用して値を設定しないでください。
-
->[!NOTE]
-ツールバーを使用したHTMLフォームのレンダリングはオプションです。
+フォームデータの投稿先となる HTTP URL は、Forms サービスクライアント API を使用してターゲット URL を設定することで指定するか、XDP フォームデザインに含まれる「送信」ボタンで指定することもできます。ターゲット URL がフォームデザインで指定されている場合は、Forms サービスクライアント API を使用して値を設定しないでください。
 
 >[!NOTE]
-AHTMLフォームをレンダリングする場合は、ツールバーをフォームに追加しないことをお勧めします。
+ツールバーを含む HTML フォームのレンダリングはオプションです。
 
-**HTMLフォームのレンダリング**
+>[!NOTE]
+AHTML フォームをレンダリングする場合は、ツールバーをフォームに追加しないことをお勧めします。
 
-HTMLフォームをレンダリングするには、Designerで作成し、XDPファイルとして保存するフォームデザインを指定する必要があります。 また、HTML変換タイプを選択する必要があります。 例えば、Internet Explorer 5.0以降用の動的HTMLをレンダリングするHTML変換タイプを指定できます。
+**HTML フォームをレンダリング**
 
-HTMLフォームのレンダリングには、他のフォームタイプのレンダリングに必要なURI値などの値も必要です。
+HTML フォームをレンダリングするには、Designer で作成され、XDP ファイルとして保存されたフォームデザインを指定する必要があります。HTML 変換タイプも選択する必要があります。たとえば、Internet Explorer 5.0 以降のダイナミック HTML をレンダリングする HTML 変換タイプを指定できます。
 
-**フォームデータストリームをクライアントWebブラウザーに書き込む**
+HTML フォームのレンダリングには、他のフォームタイプのレンダリングに必要な URI 値などの値も必要です。
 
-Formsサービスは、HTMLフォームをレンダリングする際に、クライアントのWebブラウザーに書き込む必要があるフォームデータストリームを返します。 クライアントのWebブラウザーに書き込まれると、HTMLフォームがユーザーに表示されます。
+**フォームデータストリームをクライアント web ブラウザーに書き込む**
+
+Forms サービスが HTML フォームをレンダリングすると、クライアント web ブラウザーに書き込む必要があるフォームデータストリームが返されます。クライアント web ブラウザーに書き込まれると、HTML フォームがユーザーに対して表示されます。
 
 **関連トピック**
 
-[Java APIを使用してフォームをHTMLとしてレンダリングする](#render-a-form-as-html-using-the-java-api)
+[Java API を使用してフォームを HTML としてレンダリングする](#render-a-form-as-html-using-the-java-api)
 
-[WebサービスAPIを使用してフォームをHTMLとしてレンダリングする](#render-a-form-as-html-using-the-web-service-api)
+[Web サービス API を使用してフォームを HTML としてレンダリングする](#render-a-form-as-html-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[FormsサービスAPIのクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[Forms サービス API のクイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[インタラクティブ PDF Forms のレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[カスタムツールバーを使用したHTML Formsのレンダリング](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
+[カスタムツールバーを持つ HTML Forms のレンダリング](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
 
-[Forms](/help/forms/developing/creating-web-applications-renders-forms.md)
+[Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## Java API {#render-a-form-as-html-using-the-java-api}を使用してフォームをHTMLとしてレンダリングする
+## Java API を使用してフォームを HTML としてレンダリングする {#render-a-form-as-html-using-the-java-api}
 
-Forms API(Java)を使用してHTMLフォームをレンダリングします。
+Forms API (Java) を使用して HTML フォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
-   Javaプロジェクトのクラスパスに、adobe-forms-client.jarなどのクライアントJARファイルを含めます。
+   adobe-forms-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
-1. Forms Client APIオブジェクトの作成
+1. Forms Client API オブジェクトの作成
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して`FormsServiceClient`オブジェクトを渡し、`ServiceClientFactory`オブジェクトを作成します。
+   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`FormsServiceClient` オブジェクトを作成します。
 
-1. HTML実行時オプションの設定
+1. HTML 実行時オプションを設定
 
-   * `HTMLRenderSpec`オブジェクトを作成するには、コンストラクタを使用します。
-   * ツールバーでHTMLフォームをレンダリングするには、`HTMLRenderSpec`オブジェクトの`setHTMLToolbar`メソッドを呼び出して、`HTMLToolbar`列挙値を渡します。 例えば、垂直方向のHTMLツールバーを表示するには、`HTMLToolbar.Vertical`を渡します。
-   * HTMLフォームのロケール値を設定するには、`HTMLRenderSpec`オブジェクトの`setLocale`メソッドを呼び出し、ロケール値を指定する文字列値を渡します。 （これはオプションの設定です）。
-   * 完全なHTMLタグ内でHTMLフォームをレンダリングするには、`HTMLRenderSpec`オブジェクトの`setOutputType`メソッドを呼び出して`OutputType.FullHTMLTags`を渡します。 （これはオプションの設定です）。
+   * コンストラクターを使用して `HTMLRenderSpec` オブジェクトを作成します。
+   * ツールバーを使用して HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して、`HTMLToolbar` enum 値を渡します。例えば、HTML ツールバーを垂直位置に表示するには、`HTMLToolbar.Vertical` を渡します。
+   * HTML フォームのロケール値を設定するには、`HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出して、ロケール値を指定する文字列値を渡します。（これはオプション設定です）。
+   * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して、`OutputType.FullHTMLTags` を渡します。（これはオプション設定です）。
 
    >[!NOTE]
-   `StandAlone`オプションが`true`で、`ApplicationWebRoot`がAEM FormsをホストするJ2EEアプリケーションサーバー以外のサーバーを参照する場合（`ApplicationWebRoot`値は`FormsServiceClient`オブジェクトの`(Deprecated) renderHTMLForm`メソッドに渡される`URLSpec`オブジェクトを使用して指定）、FormsはHTMLで正常にレンダリングされません。 `ApplicationWebRoot`が、AEM Formsをホストするサーバーの別のサーバーである場合は、管理コンソールのWebルートURIの値をフォームのWebアプリケーションURI値として設定する必要があります。 これは、管理コンソールにログインして、サービス/Formsをクリックし、「 WebルートURI 」をhttps://server-name:port/FormServerに設定することで実行できます。 次に、設定を保存します。
+   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外を参照している場合、Forms は正常にレンダリングされません（`ApplicationWebRoot` の値は、`FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定します）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
-1. HTMLフォームのレンダリング
+1. HTML フォームのレンダリング
 
-   `FormsServiceClient`オブジェクトの`(Deprecated) renderHTMLForm`メソッドを呼び出し、次の値を渡します。
+   `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを呼び出して、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`のように完全なパスを指定してください。
-   * HTML環境設定タイプを指定する`TransformTo`列挙値。 例えば、Internet Explorer 5.0以降の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、`TransformTo.MSDHTML`と指定します。
-   * フォームとマージするデータを含む`com.adobe.idp.Document`オブジェクト。 データを結合しない場合は、空の`com.adobe.idp.Document`オブジェクトを渡します。
-   * HTML実行時オプションを格納する`HTMLRenderSpec`オブジェクト。
-   * `HTTP_USER_AGENT`ヘッダー値を指定するstring値。例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`
-   * HTMLフォームをレンダリングするために必要なURI値を格納する`URLSpec`オブジェクト。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合は`null`を指定できます。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
+   * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
+   * HTML の実行時オプションが保存する `HTMLRenderSpec` オブジェクト。
+   * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値。例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`
+   * HTML フォームのレンダリングに必要な URI 値を保存する `URLSpec` オブジェクト。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクト。これはオプションのパラメーターで、フォームにファイルを添付しない場合に `null` を指定できます。
 
-   `(Deprecated) renderHTMLForm`メソッドは、クライアントのWebブラウザーに書き込み可能なフォームデータストリームを含む`FormsResult`オブジェクトを返します。
+   `(Deprecated) renderHTMLForm` メソッドは、クライアント web ブラウザーに書き込むことができるフォームデータストリームを含む `FormsResult` オブジェクトを返します。
 
-1. フォームデータストリームをクライアントWebブラウザーに書き込む
+1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`com.adobe.idp.Document`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * `com.adobe.idp.Document`オブジェクトの`getInputStream`メソッドを呼び出して、`java.io.InputStream`オブジェクトを作成します。
-   * `InputStream`オブジェクトの`read`メソッドを呼び出し、バイト配列を引数として渡すことで、バイト配列を作成し、フォームデータストリームに入力します。
-   * `javax.servlet.ServletOutputStream`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって `java.io.InputStream` オブジェクトを作成します。
+   * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
-[FormsをHTMLとしてレンダリング](#rendering-forms-as-html)
+[Forms を HTML としてレンダリング](#rendering-forms-as-html)
 
-[クイックスタート（SOAPモード）:Java APIを使用したHTMLフォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した HTML フォームのレンダリング](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## WebサービスAPI {#render-a-form-as-html-using-the-web-service-api}を使用してフォームをHTMLとしてレンダリングする
+## Web サービス API を使用してフォームを HTML としてレンダリングする {#render-a-form-as-html-using-the-web-service-api}
 
-Forms API（Webサービス）を使用してHTMLフォームをレンダリングします。
+Forms API（web サービス）を使用して HTML フォームをレンダリングします。
 
 1. プロジェクトファイルを含める
 
-   * FormsサービスのWSDLを使用するJavaプロキシクラスを作成します。
-   * Javaプロキシクラスをクラスパスに含めます。
+   * Forms Service WSDL を使用する Java プロキシクラスを作成します。
+   * Java プロキシクラスをクラスパスに含めます。
 
-1. Forms Client APIオブジェクトの作成
+1. Forms Client API オブジェクトの作成
 
-   `FormsService`オブジェクトを作成し、認証値を設定します。
+   `FormsService` オブジェクトを作成し、認証値を設定します。
 
-1. HTML実行時オプションの設定
+1. HTML 実行時オプションを設定
 
-   * `HTMLRenderSpec`オブジェクトを作成するには、コンストラクタを使用します。
-   * ツールバーでHTMLフォームをレンダリングするには、`HTMLRenderSpec`オブジェクトの`setHTMLToolbar`メソッドを呼び出して、`HTMLToolbar`列挙値を渡します。 例えば、垂直方向のHTMLツールバーを表示するには、`HTMLToolbar.Vertical`を渡します。
-   * HTMLフォームのロケール値を設定するには、`HTMLRenderSpec`オブジェクトの`setLocale`メソッドを呼び出し、ロケール値を指定する文字列値を渡します。 詳しくは、「[AEM Forms APIリファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
-   * 完全なHTMLタグ内でHTMLフォームをレンダリングするには、`HTMLRenderSpec`オブジェクトの`setOutputType`メソッドを呼び出して`OutputType.FullHTMLTags`を渡します。
+   * コンストラクターを使用して `HTMLRenderSpec` オブジェクトを作成します。
+   * ツールバーを持つ HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して `HTMLToolbar` 列挙値を渡します。例えば、縦の HTML ツールバーを表示するには、`HTMLToolbar.Vertical` を渡します。
+   * HTML フォームのロケール値を設定するには、`HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出し、ロケール値を指定する文字列値を渡します。詳しくは、[AEM Forms API レファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
+   * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して `OutputType.FullHTMLTags` を渡します。
 
    >[!NOTE]
-   `StandAlone`オプションが`true`で、`ApplicationWebRoot`がAEM FormsをホストするJ2EEアプリケーションサーバー以外のサーバーを参照する場合（`ApplicationWebRoot`値は`FormsServiceClient`オブジェクトの`(Deprecated) renderHTMLForm`メソッドに渡される`URLSpec`オブジェクトを使用して指定）、FormsはHTMLで正常にレンダリングされません。 `ApplicationWebRoot`が、AEM Formsをホストするサーバーの別のサーバーである場合は、管理コンソールのWebルートURIの値をフォームのWebアプリケーションURI値として設定する必要があります。 これは、管理コンソールにログインして、サービス/Formsをクリックし、「 WebルートURI 」をhttps://server-name:port/FormServerに設定することで実行できます。 次に、設定を保存します。
+   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外のサーバーを参照している場合、フォームは HTML で正常にレンダリングされません（`ApplicationWebRoot` 値は `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定されます）。`ApplicationWebRoot` が AEM Forms をホストしているサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値をフォームの web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
-1. HTMLフォームのレンダリング
+1. HTML フォームのレンダリング
 
-   `FormsService`オブジェクトの`(Deprecated) renderHTMLForm`メソッドを呼び出し、次の値を渡します。
+   `FormsService` オブジェクトの `(Deprecated) renderHTMLForm` メソッドを呼び出して、次の値を渡します。
 
-   * ファイル名拡張子を含むフォームデザイン名を指定するstring値。 Formsアプリケーションの一部であるフォームデザインを参照する場合は、必ず`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`のように完全なパスを指定してください。
-   * HTML環境設定タイプを指定する`TransformTo`列挙値。 例えば、Internet Explorer 5.0以降の動的HTMLと互換性のあるHTMLフォームをレンダリングするには、`TransformTo.MSDHTML`と指定します。
-   * フォームとマージするデータを含む`BLOB`オブジェクト。 データを結合しない場合は、`null`を渡します。 ([編集可能なレイアウトを使用したFormsの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts)を参照)。
-   * HTML実行時オプションを格納する`HTMLRenderSpec`オブジェクト。
-   * `HTTP_USER_AGENT`ヘッダー値を指定するstring値。例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` この値を設定しない場合は、空の文字列を渡すことができます。
-   * HTMLフォームをレンダリングするために必要なURI値を格納する`URLSpec`オブジェクト。 （[URI値の指定](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照）。
-   * 添付ファイルを格納する`java.util.HashMap`オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合は`null`を指定できます。 （[フォームへのファイルの添付](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照）。
-   * メソッドで設定される空の`com.adobe.idp.services.holders.BLOBHolder`オブジェクト。 このパラメーター値は、レンダリングされたフォームを保存します。
-   * メソッドで設定される空の`com.adobe.idp.services.holders.BLOBHolder`オブジェクト。 このパラメーターは、出力XMLデータを格納します。
-   * メソッドで設定される空の`javax.xml.rpc.holders.LongHolder`オブジェクト。 この引数は、フォームのページ数を保存します。
-   * メソッドで設定される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。 この引数はロケール値を格納します。
-   * メソッドで設定される空の`javax.xml.rpc.holders.StringHolder`オブジェクト。 この引数は、使用されるHTMLレンダリング値を格納します。
-   * この操作の結果を格納する空の`com.adobe.idp.services.holders.FormsResultHolder`オブジェクト。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のような完全パスを指定してください。
+   * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
+   * フォームに結合するデータを含む `BLOB` オブジェクト。データを結合しない場合は、`null` を渡します。（[編集可能なレイアウトを使用した Forms の事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts)を参照してください）。
+   * HTML の実行時オプションを格納する `HTMLRenderSpec` オブジェクト。
+   * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。この値を設定しない場合は、空の文字列を渡します。
+   * HTML フォームのレンダリングに必要な URI 値を格納する `URLSpec` オブジェクト。（[URI 値の指定](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照してください）。
+   * 添付ファイルを格納する `java.util.HashMap` オブジェクト。これはオプションのパラメーターで、フォームにファイルを添付しない場合は `null` を指定できます。（[フォームにファイルを添付する](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照してください）。
+   * メソッドによって設定される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。このパラメーター値には、レンダリングされたフォームが格納されます。
+   * メソッドによって設定される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。このパラメーターは出力 XML データを格納します。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.LongHolder` オブジェクト。この引数は、フォームのページ数を保存します。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数はロケール値を格納します。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数は、使用される HTML レンダリング値を格納します。
+   * この操作の結果を格納する空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 
-   `(Deprecated) renderHTMLForm`メソッドは、最後の引数値として渡される`com.adobe.idp.services.holders.FormsResultHolder`オブジェクトに、クライアントWebブラウザーに書き込む必要のあるフォームデータストリームを設定します。
+   `(Deprecated) renderHTMLForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
-1. フォームデータストリームをクライアントWebブラウザーに書き込む
+1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `com.adobe.idp.services.holders.FormsResultHolder`オブジェクトの`value`データメンバーの値を取得して、`FormResult`オブジェクトを作成します。
-   * `FormsResult`オブジェクトの`getOutputContent`メソッドを呼び出して、フォームデータを含む`BLOB`オブジェクトを作成します。
-   * `getContentType`メソッドを呼び出して、`BLOB`オブジェクトのコンテンツタイプを取得します。
-   * `setContentType`メソッドを呼び出し、`BLOB`オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse`オブジェクトのコンテンツタイプを設定します。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`getOutputStream`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに書き込むための`javax.servlet.ServletOutputStream`オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB`オブジェクトの`getBinaryData`メソッドを呼び出してそれを設定します。 このタスクは、`FormsResult`オブジェクトの内容をバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse`オブジェクトの`write`メソッドを呼び出して、フォームデータストリームをクライアントWebブラウザーに送信します。 `write`メソッドにバイト配列を渡します。
+   * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して、`FormResult` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
+   * `setContentType` メソッドを呼び出して `BLOB` オブジェクトのコンテンツタイプを渡すことによって、`javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
-[FormsをHTMLとしてレンダリング](#rendering-forms-as-html)
+[Forms を HTML としてレンダリング](#rendering-forms-as-html)
 
-[Base64エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
+[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
