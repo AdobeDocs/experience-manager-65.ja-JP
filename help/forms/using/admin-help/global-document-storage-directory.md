@@ -1,8 +1,8 @@
 ---
 title: グローバルドキュメントストレージディレクトリ
-seo-title: グローバルドキュメントストレージディレクトリ
+seo-title: Global document storage directory
 description: グローバルドキュメントストレージ（GDS）ディレクトリは、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。
-seo-description: グローバルドキュメントストレージ（GDS）ディレクトリは、プロセス内で使用される長期間有効なファイルの保存に使用されるディレクトリです。
+seo-description: The global document storage (GDS) directory is a directory used to store long-lived files that are used within a process.
 uuid: 7681672c-a0dc-4445-8004-1b1e2ed3d301
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a33b8834-6e39-47eb-a53b-0982d32e80ad
 exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '676'
+ht-degree: 100%
 
 ---
 
@@ -38,44 +38,44 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
  <tbody>
   <tr>
    <td><p>アプリケーションデータ（ユーザー、ロール、プロセス、ポリシー、エンドポイント、イベントなど）</p></td>
-   <td><p>はい</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>可</p></td>
+   <td><p>不可</p></td>
   </tr>
   <tr>
    <td><p>デプロイされたサービスコンテナ</p></td>
-   <td><p>はい</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>可</p></td>
+   <td><p>不可</p></td>
   </tr>
   <tr>
    <td><p>Document Manager </p></td>
    <td><p>不可</p></td>
-   <td><p>対応</p></td>
+   <td><p>可</p></td>
   </tr>
   <tr>
    <td><p>Forms リポジトリ</p></td>
-   <td><p>はい</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>可</p></td>
+   <td><p>No</p></td>
   </tr>
   <tr>
    <td><p>システム設定</p></td>
-   <td><p>はい</p></td>
-   <td><p>いいえ</p></td>
+   <td><p>可</p></td>
+   <td><p>不可</p></td>
   </tr>
   <tr>
    <td><p>監視フォルダー</p></td>
    <td><p>不可</p></td>
-   <td><p>はい</p></td>
+   <td><p>可</p></td>
   </tr>
  </tbody>
 </table>
 
-## GDS ディレクトリの設定  {#configuring-the-gds-directory}
+## GDS ディレクトリの設定 {#configuring-the-gds-directory}
 
 GDS ディレクトリの場所は、AEM Forms のインストール時に手動で設定できます。インストール時に場所を指定しないと、次に示すアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
 
-* (JBoss) `[appserver root]/server/[type]/svcnative/DocumentStorage`
-* (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
-* (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage`
+* （JBoss）`[appserver root]/server/[type]/svcnative/DocumentStorage`
+* （WebLogic）`[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
+* （WebSphere）`[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 ## GDS のデフォルトの場所の変更 {#change-the-default-gds-location}
 
@@ -91,14 +91,14 @@ AEM Forms のインストールが完了した後、管理コンソールで GDS
 1. 内部のディレクトリ構造はそのままにして、すべてのファイルを古い GDS ディレクトリから新しい場所に移動します。
 1. アプリケーションサーバーを再起動します。
 
-## デプロイメントファイルについて  {#about-deployment-files}
+## デプロイメントファイルについて {#about-deployment-files}
 
 AEM Forms は、サービスコンテナおよび Java 2 Platform Enterprise Edition（J2EE）EAR ファイルという 2 種類のデプロイメントファイルで構成されています。EAR ファイルは標準の J2EE アプリケーションバンドルで構成されています。これらのアプリケーションバンドルには AEM Forms のコア機能が含まれています。アプリケーションサーバー固有の EAR ファイルを次に示します。
 
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、*[appserver home]*\server\all\deploy directoryフォルダーにファイルをコピーします。
+AEM Forms の実装では、アセンブリされた複数の EAR ファイルといくつかの補助ファイルを、AEM Forms ソリューションを実行する予定のアプリケーションサーバーにデプロイします。複数のモジュールを設定およびアセンブリした場合は、デプロイ可能なモジュールがデプロイ可能な EAR ファイル内にパッケージ化されています。これらのファイルをデプロイするには、ファイルを *[appserver home]*\server\all\deploy ディレクトリにコピーします。
 
 また、モジュールおよび AEM Forms アーカイブファイルは、JAR ファイルにパッケージングされています。これらのファイルの種類は J2EE ではないので、アプリケーションサーバーにはデプロイされず、GDS ディレクトリにコピーされ、それらの場所への参照が AEM Forms データベースに格納されます。このため、GDS ディレクトリをクラスターのすべてのノードで共有する必要があります。すべてのノードが DSC の中央ストレージディレクトリにアクセスできることが必要です。
 
