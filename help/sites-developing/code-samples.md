@@ -1,8 +1,8 @@
 ---
 title: コードサンプル
-seo-title: コードサンプル
+seo-title: Code Samples
 description: アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました
-seo-description: アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました
+seo-description: The Adobe Consulting Services Team has generated a series of AEM code samples
 uuid: 16f23fa6-5a3c-4697-87de-86db37b3ec1b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,17 +11,17 @@ topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
 exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 75%
+workflow-type: ht
+source-wordcount: '223'
+ht-degree: 100%
 
 ---
 
 # コードサンプル{#code-samples}
 
-アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。これらのサンプルは、適切なコメントを含むコードの断片であり、AEM 開発者が AEM の主要な構築ブロックを理解するのに役立ちます。サンプルは以下から入手できます。[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/).
+アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。これらのサンプルは、適切なコメントを含むコードの断片であり、AEM 開発者が AEM の主要な構築ブロックを理解するのに役立ちます。サンプルは、[https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/) から利用できます。
 
-AEMを初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルで、プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアントライブラリ、コンポーネントの開発などの基本トピックを取り上げます。[AEM Sites使用の手引き — WKNDチュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+[AEM Sites 使用の手引き - WKND チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)は、AEM を初めて使用する開発者向けに設計された、複数のパートから成るチュートリアルです。このチュートリアルでは、プロジェクトの設定、コアコンポーネント、編集可能なテンプレート、クライアントライブラリおよびコンポーネント開発などの、基本的なトピックについて説明しています。
 
 Adobe AEM コミュニティチームが、開発者向けのハウツー記事を作成しています。記事については、[こちら](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)を参照してください。
 
