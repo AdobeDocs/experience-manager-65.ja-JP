@@ -1,8 +1,8 @@
 ---
 title: 使用するテンプレートに基づいたコンポーネントの表示
-seo-title: 使用するテンプレートに基づいたコンポーネントの表示
+seo-title: Displaying components based on the template used
 description: フォームの作成時に、選択したテンプレートに基づいて、サイドバーのコンポーネントを有効にする方法について説明します。
-seo-description: フォームの作成時に、選択したテンプレートに基づいて、サイドバーのコンポーネントを有効にする方法について説明します。
+seo-description: When you create a form, learn how you can enable components in the sidebar based on the template selected.
 uuid: 790d201b-318d-4d02-9bc5-9d6bc41d057a
 contentOwner: sashanka
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ discoiquuid: f658da57-0134-4458-9ef9-a99787b66742
 docset: aem65
 exl-id: 1fc56829-db81-4450-b1d8-b4a31110199e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 65%
+workflow-type: ht
+source-wordcount: '352'
+ht-degree: 100%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 65%
 
 フォーム作成者は、[テンプレート](../../forms/using/template-editor.md)を使用してアダプティブフォームを作成する際、テンプレートポリシーに基づいて、特定のコンポーネントを表示して使用できます。テンプレートコンテンツポリシーを指定することにより、フォームの作成中にフォーム作成者に表示されるコンポーネントのグループを選択できます。
 
-## テンプレートのコンテンツポリシーの変更  {#changing-the-content-policy-of-a-template}
+## テンプレートのコンテンツポリシーの変更 {#changing-the-content-policy-of-a-template}
 
-テンプレートを作成すると、コンテンツリポジトリの`/conf`の下に作成されます。 `/conf`ディレクトリに作成したフォルダーに基づいて、テンプレートのパスは次のようになります。`/conf/<your-folder>/settings/wcm/templates/<your-template>`.
+作成したテンプレートは、コンテンツリポジトリの `/conf` に保存されます。テンプレートのパスは、`/conf` ディレクトリに作成したフォルダーに基づいて、`/conf/<your-folder>/settings/wcm/templates/<your-template>` になります。
 
 テンプレートのコンテンツポリシーに基づいてサイドバーにコンポーネントを表示するには、次の手順を実行します。
 
@@ -34,29 +34,29 @@ ht-degree: 65%
 
    例：`/conf/<your-folder>/`
 
-1. CRXDEで、次の場所に移動します。`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/`
+1. CRXDE で、`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/` に移動します。
 
    コンポーネントのグループを選択するためには、新しいコンテンツポリシーが必要です。新しいポリシーを作成するには、デフォルトのポリシーをコピーして貼り付け、名前を変更します。
 
-   デフォルトのコンテンツポリシーのパスは次のとおりです。`/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
+   デフォルトコンテンツポリシーのパス： `/conf/<your-folder>/settings/wcm/policies/fd/af/layouts/gridFluidLayout/default`
 
    `gridFluidLayout` フォルダーで、デフォルトのポリシーをコピーして貼り付け、名前を変更します。（例：`myPolicy`）。
 
    ![デフォルトのポリシーをコピー](assets/crx-default1.png)
 
-1. 作成する新しいポリシーを選択し、タイプ`string[]`の右側のパネルで&#x200B;**components**&#x200B;プロパティを選択します。
+1. 作成した新しいポリシーを選択し、右側のパネルにあるタイプが `string[]` の **components** プロパティを選択します。
 
-   components プロパティを選択して開くと、components を編集ダイアログが表示されます。components を編集ダイアログでは、「**+**」および「**-**」ボタンを使用して、コンポーネントグループを追加または削除できます。作成者が使用するコンポーネントを含むコンポーネントグループを追加できます。
+   components プロパティを選択して開くと、components を編集ダイアログが表示されます。components を編集ダイアログでは、「**+**」および「**-**」ボタンを使用して、コンポーネントグループを追加または削除できます。作成者が使用するコンポーネントのフォームを含むコンポーネントグループを追加できます。
 
    ![ポリシーのコンポーネントを追加または削除](assets/add-components-list1.png)
 
-   コンポーネントグループを追加したら、「**OK**」をクリックしてリストを更新し、CRXDEアドレスバーの上にある「**すべて保存**」をクリックして更新します。
+   コンポーネントグループを追加した後、「**OK**」をクリックしてリストを更新し、CRXDE アドレスバーの上にある「**すべて保存**」をクリックして更新します。
 
-1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。（この例では`myPolicy`です）。
+1. テンプレートで、コンテンツポリシーをデフォルトから、作成した新しいポリシーに変更します。（この例では `myPolicy` です。）
 
-   ポリシーを変更するには、CRXDEで`/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items`に移動します。
+   ポリシーを変更するには、CRXDE で `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/guideContainer/rootPanel/items` に移動します。
 
-   `cq:policy`プロパティで、`default`を新しいポリシー名(`myPolicy`)に変更します。
+   `cq:policy` プロパティで、`default` を新しいポリシー名（`myPolicy`）に変更します。
 
    ![更新されたテンプレートコンテンツポリシー](assets/updated-policy.png)
 
