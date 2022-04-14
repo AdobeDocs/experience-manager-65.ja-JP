@@ -7,13 +7,13 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 5edcc765-c374-4368-a0d9-e02a713a24f2
-feature: アセット管理
+feature: Asset Management
 role: User, Admin
 exl-id: 753d806f-5f44-4d73-a3a3-a2a0fc3e154b
 source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
-workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 72%
+workflow-type: ht
+source-wordcount: '334'
+ht-degree: 100%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 72%
 
 この機能は、Web サイトがサードパーティの WCM で稼動する場合に有効です。ただし、Web サイトが Adobe Experience Manager で稼動する場合は、オフサイトの画像サーバーが画像をレンダリングして Web ページに提供します。
 
-[Webページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
+[Web ページへのビデオビューアの埋め込み](embed-code.md)も参照してください。
 
-[WebアプリケーションへのURLのリンク](linking-urls-to-yourwebapplication.md)も参照してください。
+[Web アプリケーションへの URL のリンク](linking-urls-to-yourwebapplication.md)も参照してください。
 
 **レスポンシブサイトに最適化された画像を配信するには：**
 
-1. レスポンシブコードを提供する画像の場所に移動し、ドロップダウンメニューで「**[!UICONTROL レンディション]**」を選択します。
+1. レスポンシブコードを提供する画像の場所に移動して、ドロップダウンメニューで「**[!UICONTROL レンディション]**」を選択します。
 
    ![chlimage_1-408](assets/chlimage_1-408.png)
 
@@ -41,17 +41,17 @@ ht-degree: 72%
    >
    >「**[!UICONTROL URL]**」ボタンまたは「**[!UICONTROL RESS]**」ボタンを使用可能にするには、選択したアセット&#x200B;*と*&#x200B;選択した画像プリセットまたはビューアプリセットを公開する必要があります。
    >
-   >Dynamic Media — ハイブリッドモードでは、画像プリセットを公開する必要があります。Dynamic Media - Scene7モードでは、画像プリセットが自動的に公開されます。
+   >Dynamic Media - ハイブリッドモードでは、画像プリセットを手動で公開する必要があります。Dynamic Media - Scene7 モードでは、画像プリセットが自動的に公開されます。
 
-1. **[!UICONTROL RESS]**&#x200B;を選択します。
+1. 「**[!UICONTROL RESS]**」を選択します。
 
    ![chlimage_1-410](assets/chlimage_1-410.png)
 
 1. **[!UICONTROL レスポンシブ画像を埋め込み]**&#x200B;ダイアログボックスで、レスポンシブコードテキストを選択してコピーし Web サイトに貼り付けて、レスポンシブアセットにアクセスします。
-1. 埋め込みコード内のデフォルトのブレークポイントを編集し、レスポンシブWebサイトのブレークポイントと一致させます。 また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
+1. 埋め込みコード内でデフォルトのブレークポイントを編集して、コード内で直接、レスポンシブ web サイトのブレークポイントに合わせます。また、異なるページのブレークポイントで、異なる解像度の画像が配信されることをテストします。
 
-## HTTP/2を使用したDynamic Mediaアセットの配信 {#using-http-to-delivery-your-dynamic-media-assets}
+## HTTP/2 を使用して Dynamic Media アセットを配信する {#using-http-to-delivery-your-dynamic-media-assets}
 
-HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。Dynamic Media アセットの配信は HTTP/2 を使用しておこなうことができ、応答時間と読み込み時間を短縮できます。
+HTTP/2 は、ブラウザーとサーバーの交信を強化する、新しく更新された Web プロトコルです。このプロトコルを使用すれば、情報の伝送を高速化し、必要な処理能力を抑えることができます。Dynamic Media アセットの配信は HTTP/2 を使用して行うことができ、応答時間と読み込み時間を短縮できます。
 
 Dynamic Media アカウントでの HTTP/2 の使用方法について詳しくは、[コンテンツの HTTP/2 配信](http2.md)を参照してください。
