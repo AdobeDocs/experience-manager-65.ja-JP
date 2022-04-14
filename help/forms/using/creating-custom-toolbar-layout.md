@@ -1,8 +1,8 @@
 ---
 title: カスタムツールバーレイアウトの作成
-seo-title: カスタムツールバーレイアウトの作成
+seo-title: Creating custom toolbar layout
 description: フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
-seo-description: フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
+seo-description: You can specify a toolbar layout for the form. The toolbar layout defines the commands and the layout of the toolbar on the form.
 uuid: 389a715a-4c91-4a63-895d-bb2d0f1054eb
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: 0d817a7e-2758-4308-abda-6194716c2d97
 docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 86%
+workflow-type: ht
+source-wordcount: '524'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 86%
 
 アダプティブフォームの作成時に、フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
 
-ツールバーレイアウトは、複雑な JavaScript と CSS コードによるクライアントサイドのプロセッシングに大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。この問題への対処に役立つように、AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのコードカテゴリをクライアントに保存するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。詳細については、「[AEM におけるクライアントサイドライブラリの機能](/help/sites-developing/clientlibs.md)」を参照してください。
+ツールバーレイアウトは、複雑な JavaScript と CSS コードによるクライアントサイドのプロセッシングに大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。この問題への対処に役立つように、AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのコードカテゴリをクライアントに保存するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。詳細については、[AEM におけるクライアントサイドライブラリの機能](/help/sites-developing/clientlibs.md)を参照してください。
 
 ![ツールバーのサンプルレイアウト](assets/default_toolbar_layout.png)
 
@@ -31,7 +31,7 @@ ht-degree: 86%
 
 アダプティブフォームには、購入してすぐに使える一連のレイアウトが含まれています。
 
-![直ぐに使用できるツールバーレイアウト ](assets/toolbar1.png)
+![標準搭載のツールバーレイアウト ](assets/toolbar1.png)
 
 直ぐに使用できるツールバーレイアウト
 
@@ -39,12 +39,12 @@ ht-degree: 86%
 
 次の手順では、カスタムツールバーを作成する手順を示します。ここでは、3 つのアクションがツールバーに表示され、その他のアクションはツールバーのドロップダウンリストに表示されます。
 
-付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールしたら、`/content/forms/af/CustomLayoutDemo.html`を開いてカスタムツールバーレイアウトのデモを表示します。
+付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールしたら、`/content/forms/af/CustomLayoutDemo.html` を開いてカスタムツールバーレイアウトのデモをご覧ください。
 
 CustomToolbarLayoutDemo.zip
 
-[FileDemoカス](assets/customtoolbarlayoutdemo.zip)
-タムツールバーレイアウトの取得
+[ファイルの取得](assets/customtoolbarlayoutdemo.zip)
+デモカスタムツールバーレイアウト
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
@@ -56,15 +56,15 @@ CustomToolbarLayoutDemo.zip
 
    `/libs/fd/af/layouts/toolbar`
 
-   例えば、`mobileFixedToolbarLayout`ノードを`/libs/fd/af/layouts/toolbar`フォルダーから`/apps/customlayout/toolbar`フォルダーにコピーします。
+   例えば、`mobileFixedToolbarLayout` ノードを `/libs/fd/af/layouts/toolbar` フォルダーから `/apps/customlayout/toolbar` フォルダーにコピーします。
 
-   また、toolbarCommon.jspを`/apps/customlayout/toolbar`フォルダーにコピーします。
+   toolbarCommon.jsp も `/apps/customlayout/toolbar` フォルダーにコピーします。
 
    >[!NOTE]
    >
-   >カスタムレイアウトを維持するために作成するフォルダは、`apps`フォルダで作成されます。
+   >カスタムレイアウトを保存するために作成したフォルダーは、`apps` フォルダーで作成されたものでなければなりません。
 
-1. コピーしたノード`mobileFixedToolbarLayout`の名前を`customToolbarLayout.`に変更します。
+1. コピーしたノード `mobileFixedToolbarLayout` の名前を `customToolbarLayout.` に変更します。
 
    また、ノードのための適切な説明も与えます。例えば、ノードの jcr:description を&#x200B;**ツールバーのカスタムレイアウト** に変更します。
 
@@ -86,13 +86,13 @@ CustomToolbarLayoutDemo.zip
 
 1. このカスタムツールバーレイアウトを選択し、「OK」をクリックします。
 
-   clientlib（javascriptとcss）を`/etc/customlayout`ノードに追加し、clientlibの参照を`customToolbarLayout.jsp`に含めます。
+   clientlib（javascript と css）を `/etc/customlayout` ノードに追加し、clientlib の参照を `customToolbarLayout.jsp` に含めます。
 
    ![customToolbarLayout.css ファイルのパス](assets/toolbar_3.png)
 
    customToolbarLayout.css ファイルのパス
 
-   サンプル `customToolbarLayout.jsp`:
+   サンプル `customToolbarLayout.jsp`：
 
    ```jsp
    <%@include file="/libs/fd/af/components/guidesglobal.jsp" %>
@@ -110,7 +110,7 @@ CustomToolbarLayoutDemo.zip
    >
    >レイアウトの guidetoolbar クラスを追加します。ツールバー用の直ちに使用可能なスタイリングは、guidetoolbar クラスに関して定義されます。
 
-   サンプル `toolBarCommon.jsp`:
+   サンプル `toolBarCommon.jsp`：
 
    ```jsp
    <%@taglib prefix="fn" uri="https://java.sun.com/jsp/jstl/functions"%>
