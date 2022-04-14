@@ -1,8 +1,8 @@
 ---
 title: SPA ブループリント
-seo-title: SPA ブループリント
+seo-title: SPA Blueprint
 description: このドキュメントでは、AEM 内に編集可能な SPA コンポーネントを実装するために SPA フレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
-seo-description: このドキュメントでは、AEM 内に編集可能な SPA コンポーネントを実装するために SPA フレームワークが満たす必要がある、フレームワークに依存しない一般的な契約について説明します。
+seo-description: This document describes the general, framework-independent contract that any SPA framework should fulfill in order to implement editable SPA components within AEM.
 uuid: 48f2d415-ec34-49dc-a8e1-6feb5a8a5bbe
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -11,19 +11,19 @@ discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2112'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '2088'
+ht-degree: 100%
 
 ---
 
 # SPA ブループリント{#spa-blueprint}
 
-作成者がAEM SPA Editorを使用してSPAのコンテンツを編集できるようにするには、SPAが満たす必要がある要件があります。これについては、このドキュメントで説明します。
+作成者が AEM SPA エディターを使用して SPA のコンテンツを編集できるようにするには、SPA が一定の要件を満たしている必要があります。このドキュメントではそれらの要件について説明します。
 
 >[!NOTE]
 >
->SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
 
 ## はじめに {#introduction}
 
@@ -47,7 +47,7 @@ ht-degree: 92%
 
 SPA に代わり、実際のコンテンツ構造を表す JSON 構造の取得および管理を抽象化します。SPA との同期も処理し、コンポーネントの再レンダリングが必要なタイミングを通知します。
 
-NPMパッケージ[@adobe/aem-spa-page-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager)を参照してください。
+NPM パッケージ [@adobe/aem-spa-model-manager](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager) を参照
 
 `PageModelManager` を初期化するとき、ライブラリは最初に、指定されたアプリケーションのルートモデルを読み込みます（パラメーター、メタプロパティまたは現在の URL を使用）。ライブラリが、現在のページのモデルが取得するルートモデルの一部でないことを識別した場合、ライブラリはそれを子ページのモデルとして取得して含めます。
 
@@ -108,7 +108,7 @@ npm モジュール：[@adobe/aem-react-editable-components](https://www.npmjs.c
 
 #### Angular {#angular}
 
-npmモジュール：近々
+npm モジュール：近日公開予定
 
 ## メインサービスとコンポーネント {#main-services-and-components}
 
@@ -154,7 +154,7 @@ npmモジュール：近々
 
 ### ページ {#page}
 
-`Page` コンポーネントは `Container` コンポーネントを拡張します。コンテナは、子ページを含めた子コンポーネントを内包してレンダリングするためのコンポーネントです。これをおこなうには、コンテナはモデルの `:itemsOrder`、`:items`、および `:children` プロパティを反復します。`Page`コンポーネントは、[ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)ライブラリのストアから子コンポーネントを動的に取得します。 子コンポーネントのインスタンス化は、`Page` が担当します。
+`Page` コンポーネントは `Container` コンポーネントを拡張します。コンテナは、子ページを含めた子コンポーネントを内包してレンダリングするためのコンポーネントです。これをおこなうには、コンテナはモデルの `:itemsOrder`、`:items`、および `:children` プロパティを反復します。`Page` コンポーネントは、[ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping) ライブラリのストアから、動的に子コンポーネントを取得します。子コンポーネントのインスタンス化は、`Page` が担当します。
 
 ### レスポンシブグリッド {#responsive-grid}
 
@@ -167,9 +167,9 @@ npmモジュール：近々
 * `gridClassNames:` レスポンシブグリッドに提供されたクラス名
 * `columnClassNames:` レスポンシブ列に提供されたクラス名
 
-npmリソース[@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx)も参照してください。
+npm リソース [@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx](https://www.npmjs.com/package/@adobe/aem-react-editable-components#srccomponentsresponsivegridjsx) も参照
 
-#### レポンシブグリッドのプレースホルダー{#placeholder-of-the-reponsive-grid}
+#### レスポンシブグリッドのプレースホルダー {#placeholder-of-the-reponsive-grid}
 
 SPA コンポーネントは、レスポンシブグリッドなどのグラフィックコンテナにマッピングされるので、コンテンツのオーサリング時に仮想子プレースホルダーを追加する必要があります。ページエディターによって SPA のコンテンツのオーサリングがおこなわれると、該当のコンテンツが iframe によってエディターに埋め込まれ、`data-cq-editor` 属性がそのコンテンツのドキュメントノードに追加されます。`data-cq-editor` 属性が存在する場合、ページに新しいコンポーネントを挿入する際に作成者が操作する領域を表す HTMLElement をコンテナに含める必要があります。
 
@@ -187,7 +187,6 @@ SPA コンポーネントは、レスポンシブグリッドなどのグラフ�
 >* `"aem-Grid-newComponent"`：レイアウトのオーサリング用にコンポーネントを正規化します
 
 >
-
 
 
 #### コンポーネントのマッピング {#component-mapping}
@@ -256,7 +255,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 * レスポンシブグリッド要素には、`aem-Grid--` というプレフィックスが付いたクラス名が含まれます
 * レスポンシブ列要素には、`aem-GridColumn--` というプレフィックスが付いたクラス名が含まれます
 * 親グリッドの列でもあるレスポンシブグリッドは前述の 2 つのプレフィックスが同一の要素上に表示されないようにラップされます
-* 編集可能リソースに対応する要素には、`data-cq-data-path` プロパティが含まれます。このドキュメントの[ページエディターとの契約](#contract-wtih-the-page-editor)の節を参照してください。
+* 編集可能リソースに対応する要素には、`data-cq-data-path` プロパティが含まれます。このドキュメントの [ページエディターとの契約](#contract-wtih-the-page-editor) の節を参照してください。
 
 ```
 <div data-cq-data-path="/content/page">
@@ -276,9 +275,9 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 アプリはルーティングを所有しています。フロントエンド開発者は、まず、ナビゲーションコンポーネント（AEM ナビゲーションコンポーネントにマッピング）を実装する必要があります。このコンポーネントは、コンテンツのフラグメントを表示または非表示にする一連のルートと組み合わせて使用する URL リンクをレンダリングします。
 
-基になる [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその ` [ModelRouter](/help/sites-developing/spa-routing.md)` モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチおよびアクセスを提供する役割を持ちます。
+基になる [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその ` [ModelRouter](/help/sites-developing/spa-routing.md)` モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチおよびアクセスを提供する役割を持ちます。
 
-2つのエンティティはルーティングの概念に関連していますが、` [ModelRouter](/help/sites-developing/spa-routing.md)`は、現在のアプリケーションの状態と同期して構成されたデータモデルで` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)`を読み込む役割のみ担当します。
+2 つのエンティティはルーティングの概念に関連していますが、` [ModelRouter](/help/sites-developing/spa-routing.md)` は、現在のアプリケーションのステートと同期して構成されたデータモデルを使用して、` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` を読み込む役割のみ担当します。
 
 詳しくは、[SPA モデルのルーティング](/help/sites-developing/spa-routing.md)を参照してください。
 
