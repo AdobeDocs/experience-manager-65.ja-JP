@@ -1,19 +1,19 @@
 ---
 title: 送信レビュー担当者のフォームへの関連付け
-seo-title: 送信レビュー担当者のフォームへの関連付け
+seo-title: Associating submission reviewers with a form
 description: AEM Forms のフォームへ送信レビュー担当者を関連付ける方法を説明します。関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
-seo-description: AEM Forms のフォームへ送信レビュー担当者を関連付ける方法を説明します。関連付けられたレビュー担当者は、送信されたフォームをフォームポータル経由でレビューします。
+seo-description: Learn how to associate submission reviewers with a form in AEM Forms. Associated reviewers review a form submitted via forms portal.
 uuid: 58c8c8fb-9262-4c37-b9b2-e46fe21b77d9
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 71d1aa10-d191-49bc-a50f-1098324f1cfe
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 46e7b858-44d1-41c8-9f44-4e959e593dc1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '493'
+ht-degree: 100%
 
 ---
 
@@ -25,9 +25,9 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 フォームに割り当てられたレビュー担当者グループは指定されたフォームのみをレビューできます。
 
-## 必要条件 {#prerequisite}
+## 前提条件 {#prerequisite}
 
-### メタデータスキーマエディターを使用してアダプティブフォームで送信レビュー担当者グループのプロパティを有効化  {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
+### メタデータスキーマエディターを使用してアダプティブフォームで送信レビュー担当者グループのプロパティを有効化 {#enabling-submission-reviewer-groups-property-for-adaptive-forms-using-metadata-schema-editor}
 
 レビュー担当者グループをフォームに関連付けるには、アダプティブフォームのメタデータスキーマを編集します。デフォルトでは、送信されたフォームにレビュー担当者グループを追加できません。
 
