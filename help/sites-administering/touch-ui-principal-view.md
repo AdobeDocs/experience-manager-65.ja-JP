@@ -12,9 +12,9 @@ discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
 source-git-commit: 4ea49fe6745b23f01f46edfe07ff3dd8c8299729
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '699'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 83%
 
 ## 概要 {#overview}
 
-AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能は、従来の UI と同じですが、より使いやすく、効率的です。
+AEM 6.5 では、ユーザーとグループに対する権限管理が導入されました。主な機能は従来の UI と同じですが、よりユーザーフレンドリーで効率的です。
 
 ## 使用方法 {#how-to-use}
 
@@ -66,7 +66,7 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 ![](assets/sase-1.png)
 
-パスを選択すると、ワークフローはこの画面に戻り、ユーザーは使用可能な名前空間 ( `jcr`, `rep` または `crx`) を次のように表示します。
+パスが選択された後、ワークフローはこの画面に戻るので、以下に示すように、利用可能な名前空間（`jcr`、`rep`、`crx` など）から 1 つ以上の権限を選択します。
 
 テキストフィールドを使用して検索し、リストから選択することで権限を追加できます。
 
@@ -88,13 +88,13 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 >[!NOTE]
 >
->各制限の意味について詳しくは、 [Jackrabbit Oak ドキュメント](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
+>各制限の意味について詳しくは、 [Jackrabbit Oak ドキュメント](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)を参照してください。
 
 以下に示すように、制限タイプを選択し、値を入力して **+** アイコンを押すと、制限を追加できます。
 
 ![](assets/sapte-1.png) ![](assets/opt-1.png)
 
-新しい ACE がアクセス制御リストに反映されます。注意： `jcr:write` は、 `jcr:removeNode` 上記に追加したが、以下の `jcr:write`.
+新しい ACE がアクセス制御リストに反映されます。`jcr:write` は、上で追加された `jcr:removeNode` を含む集計権限ですが、`jcr:write` でカバーされているので、下に表示されません。
 
 ### ACE の編集 {#editing-aces}
 
@@ -102,17 +102,17 @@ CRXDE に移動する必要がなくなります。同じビューに統合さ�
 
 例えば、ここでは **dam-users** の以下のエントリを、右側の鉛筆アイコンをクリックして編集できます。
 
-![制限の追加](assets/image2019-3-21_0-35-39.png)
+![制限を追加](assets/image2019-3-21_0-35-39.png)
 
 編集画面には事前に選択された設定済み ACE が表示されます。これらは ACE の横にある × アイコンをクリックすると削除できます。また、下に示すように、指定したパスに新しい権限を追加できます。
 
-![エントリの編集](assets/noua-1.png)
+![エントリを編集](assets/noua-1.png)
 
 ここでは、与えられたパス上の `addChildNodes`dam-users **に** の権限を追加しています。
 
 ![](assets/image2019-3-21_0-45-35.png)
 
-変更を保存するには、 **保存** 」ボタンをクリックすると、変更が**dam-users**の新しい権限に反映されます（下図を参照）。
+右上の「**保存**」ボタンをクリックして変更を保存します。以下のように、変更内容が **dam-users **の新しい権限に反映されます。
 
 ![](assets/zece-1.png)
 
