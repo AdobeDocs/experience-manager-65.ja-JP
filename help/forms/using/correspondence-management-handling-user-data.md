@@ -1,6 +1,6 @@
 ---
 title: Correspondence Management | ユーザーデータの処理
-seo-title: Correspondence Management | ユーザーデータの処理
+seo-title: Correspondence Management | Handling user data
 description: Correspondence Management | ユーザーデータの処理
 uuid: d5bb190b-d668-4da3-95da-b7705ad302d9
 topic-tags: grdp
@@ -9,21 +9,21 @@ discoiquuid: 764d8e0d-604d-4c7b-89cd-7686ce5f03ff
 role: Admin
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 81%
+workflow-type: ht
+source-wordcount: '540'
+ht-degree: 100%
 
 ---
 
 # Correspondence Management | ユーザーデータの処理 {#correspondence-management-handling-user-data}
 
-AEM Forms Correspondence Management を使用すると、顧客向けに安全でパーソナル化された通信を作成して管理し、効率性を向上できます。ビジネスユーザー向けに直感的なユーザーインターフェイスを提供し、事前に承認されたコンテンツブロックとメディア要素を使用して通信を作成できるようにします。通信の作成について詳しくは、「[通信の作成](/help/forms/using/create-correspondence.md)」を参照してください。
+AEM Forms Correspondence Management を使用すると、顧客向けに安全でパーソナル化された通信を作成して管理し、効率性を向上できます。ビジネスユーザー向けに直感的なユーザーインターフェイスを提供し、事前に承認されたコンテンツブロックとメディア要素を使用して通信を作成できるようにします。通信の作成について詳しくは、[通信の作成](/help/forms/using/create-correspondence.md)を参照してください。
 
 ビジネスユーザーまたはエージェントが通信をドラフトとして格納したり送信したりする場合、レターインスタンスが AEM リポジトリに格納されます。レターインスタンスには、通信データとメタデータが含まれます。
 
 >[!NOTE]
 >
->AEM 6.5 Forms では、通信の管理は初期状態では使用できません。以前のバージョンの AEM Forms からアップグレードする場合は、互換パッケージをインストールして Correspondence Management のアセットを移行し、AEM 6.5 Forms で引き続き使用できるようにします。詳しくは、「[互換パッケージ](/help/forms/using/compatibility-package.md)」を参照してください。
+>AEM 6.5 Forms では、通信の管理は初期状態では使用できません。以前のバージョンの AEM Forms からアップグレードする場合は、互換性パッケージをインストールして Correspondence Management のアセットを移行し、AEM 6.5 Forms で引き続き使用できるようにします。詳しくは、「[互換パッケージ](/help/forms/using/compatibility-package.md)」を参照してください。
 
 ## ユーザーデータとデータストア {#data}
 
@@ -53,11 +53,11 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 
 上記の AEM リポジトリの場所で：
 
-* `[yyyy]/[mm]/[dd]` は、レターインスタンスが作成された日付に基づくノード構造です
-* `[node-id]` は、レターが含まれるフォルダーに割り当てられるIDです
-* `[letter-instance-name]` は、レターを保存または送信する際に指定された名前です
+* `[yyyy]/[mm]/[dd]` は、レターインスタンスが作成された日付にもとづいたノード構成を示します。
+* `[node-id]` は、レターを含むフォルダーに割り当てられた ID を示します。
+* `[letter-instance-name]` は、レターを保存または送信したときに指定された名前を示します。
 
-[letter-instance-name]ノードの下に、次のノード構造が作成され、各レターインスタンスのデータがAEMリポジトリに格納されます。
+[letter-instance-name] ノードでは以下のノード構造が作成され、各レターインスタンスのデータが AEM リポジトリに格納されます。
 
 | ノード | 説明 |
 |---|---|
@@ -72,7 +72,7 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 
 ### ユーザーデータへのアクセス {#access-user-data}
 
-Correspondence Management には、ドラフトおよび送信済みレターインスタンスを検索してアクセスするために使用できる API が用意されています。API を使用すると、レターインスタンス ID または通信を保存または送信したユーザーを使用して、レターインスタンスを検索して開くことができます。詳しくは、[レターインスタンスにアクセスするためのAPI](/help/forms/using/cm-apis-to-access-letter-instances.md)を参照してください。
+Correspondence Management には、ドラフトおよび送信済みレターインスタンスを検索してアクセスするために使用できる API が用意されています。API を使用すると、レターインスタンス ID または通信を保存または送信したユーザーを使用して、レターインスタンスを検索して開くことができます。詳しくは、[レターインスタンスにアクセスするための API](/help/forms/using/cm-apis-to-access-letter-instances.md) を参照してください。
 
 または、CRX DELite を使用して AEM リポジトリのレターインスタンスに移動することもできます。格納されたデータおよびリポジトリの場所について詳しくは、「[ユーザーデータとデータストア](/help/forms/using/correspondence-management-handling-user-data.md#data)」を参照してください。
 
@@ -81,6 +81,6 @@ Correspondence Management には、ドラフトおよび送信済みレターイ
 特定ユーザーのデータを含むレターインスタンスを検索するには、次の操作を実行します。
 
 * レターインスタンス名、ドラフトを保存したユーザー、または通信を送信したユーザーが分かっている場合は、Correspondence Management の API を使用します
-* 電子メールIDや名前などの個人を特定できる情報を使用してAEMリポジトリの検索を使用し、情報が保存されるノードを見つけます
+* メール ID や名前など、個人を特定できる情報を使用して AEM リポジトリを検索し、情報が格納されているノードを探します
 
 AEM システムでドラフトおよび送信済み通信に含まれるユーザーデータを完全に削除するには、適用可能なすべての AEM インスタンスからレターインスタンスノードを手動で削除する必要があります。
