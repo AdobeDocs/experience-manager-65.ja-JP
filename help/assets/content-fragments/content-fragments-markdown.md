@@ -3,10 +3,11 @@ title: Markdown
 description: コンテンツフラグメントエディターで Markdown 構文を使用してヘッドレスコンテンツを簡単に作成する方法を説明します。
 feature: Content Fragments
 role: User
-source-git-commit: 94145c6428f61e31f6784a3d6ea67aa8d81cedd6
-workflow-type: tm+mt
+exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '522'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -164,7 +165,7 @@ ht-degree: 97%
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-コードの範囲を示すには、逆引用符(&amp;grave;)で囲みます。 事前に書式設定されたコードブロックとは異なり、コード範囲は通常の段落内のコードを示します。
+コードの範囲を示すには、バッククォート（&amp;grave;）で囲みます。事前に書式設定されたコードブロックとは異なり、コード範囲は通常の段落内のコードを示します。
 
 次に例を示します。
 
