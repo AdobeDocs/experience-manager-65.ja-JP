@@ -1,8 +1,8 @@
 ---
 title: プロセスレポートの概要
-seo-title: プロセスレポートの概要
-description: JEE上のAEM Forms Process Reportingの概要と主な機能
-seo-description: JEE上のAEM Forms Process Reportingの概要と主な機能
+seo-title: Introduction to Process Reporting
+description: JEE 上の AEM Forms Process Reporting の概要と主な機能
+seo-description: Introduction and key capabilities of AEM Forms on JEE Process Reporting
 uuid: a7f2455b-1b09-41a7-817b-e2e7a1ff9936
 content-type: reference
 topic-tags: process-reporting
@@ -11,41 +11,41 @@ discoiquuid: 4e83ed7b-3f48-4bf6-be4c-89f79949c1df
 docset: aem65
 exl-id: 674d28dc-7353-49de-9e12-b1998e1509c7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '294'
+ht-degree: 100%
 
 ---
 
 # プロセスレポートの概要{#introduction-to-process-reporting}
 
-![プロセスレポート](assets/process-reporting.png)
+![process-reporting](assets/process-reporting.png)
 
-プロセスレポートは、AEM Formsのプロセスとタスクに関するレポートを作成および表示するために使用する、ブラウザーベースのツールです。
+プロセスレポートは、AEM Forms のプロセスとタスクに関するレポートを作成および表示するために使用する、ブラウザーベースのツールです。
 
-Process Reportingは、長時間実行されるプロセス、プロセス期間、ワークフローの量に関する情報をフィルター、表示できる、あらかじめ用意された一連のレポートを提供します。
+Process Reporting は、標準の一連のレポートを提供し、長時間実行中のプロセス、プロセス期間、ワークフローの量に関する情報のフィルタリングと表示をおこないます。
 
 さらに、プロセスレポートには、アドホッククエリを実行し、カスタムレポートビューをプロセスレポートユーザーインターフェイスに統合するためのインターフェイスが用意されています。
 
-サポートされているブラウザーの一覧については、「[AEM Formsでサポートされているプラットフォーム](/help/forms/using/aem-forms-jee-supported-platforms.md)」を参照してください。
+サポートされているブラウザーの一覧については、 [AEM Forms サポートプラットフォーム](/help/forms/using/aem-forms-jee-supported-platforms.md)を参照してください。
 
-Process Reportingは、次のモジュールに基づいて構築されています。
+プロセスレポートは、以下のモジュールにもとづいて構築されています。
 
-* AEM Forms Databaseからのプロセスデータの読み取り
-* 埋め込みのProcess Reportingリポジトリへのプロセスデータの公開
-* レポートを表示するためのブラウザーベースのユーザーインターフェイスを提供します
+* AEM Forms Database からプロセスデータを読み取る
+* 埋め込みプロセスレポートリポジトリーにプロセスデータを公開
+* レポートを表示するためのブラウザーベースのユーザーインターフェイスを提供
 
-## 主な機能{#key-capabilities}
+## 主な機能 {#key-capabilities}
 
-### 常時稼動するレポート{#always-on-reporting}
+### 常時稼動のレポート {#always-on-reporting}
 
 ![site-management](assets/site-management.png)
 
-長時間実行されているプロセスのリスト、プロセス期間グラフの表示、フィルターを使用したカスタムクエリの実行を行います。
+長時間実行されているプロセスのリスト、期間グラフの処理、およびフィルターを使用したカスタムクエリの実行を表示します。
 
-プロセスレポートには、レポートおよびクエリデータをCSV形式で書き出すオプションも用意されています。
+また、レポートおよびクエリデータを CSV 形式でエクスポートするオプションも提供されます。
 
-### アドホックレポート{#adhoc-reports}
+### アドホックレポート {#adhoc-reports}
 
 ![print-&amp;-color](assets/print-&-colour.png)
 
@@ -57,16 +57,16 @@ ID、期間、開始日と終了日、プロセス開始者などで、プロセ
 
 その後、後で実行するようにレポートフィルターを保存できます。
 
-### プロセス/タスクの履歴{#process-task-history}
+### プロセス／タスクの履歴 {#process-task-history}
 
-![ファイル管理](assets/file-management.png)
+![file-management](assets/file-management.png)
 
-AEM Formsサーバーは、多数のプロセスを並行して実行します。 これらのプロセスは、ある状態から別の状態への移行を継続します。 Formsのデータを一定の間隔でProcess Reportingリポジトリに公開すると、Process ReportingはAEM Formsで実行されているプロセスに関する移行情報を保持します。
+AEM Forms サーバーは、多数のプロセスを並行して実行します。これらのプロセスは、ある状態から別の状態への移行を続けます。 Forms のデータを一定の間隔でプロセスレポートリポジトリーに公開すると、プロセスレポートには、AEM Forms で実行中のプロセスに関する移行情報が保持されます。
 
 ### アクセス制御 {#access-control-br}
 
 ![名称未設定](assets/untitled.png)
 
-Process Reportingは、ユーザーインターフェイスに対する権限ベースのアクセスを提供します。
+プロセスレポートは、ユーザーインターフェイスへの権限ベースのアクセスを提供します。
 
-つまり、レポート権限を持つユーザーのみがProcess Reportingユーザーインターフェイスにアクセスできます。
+つまり、レポート権限を持つユーザーのみがプロセスレポートのユーザーインターフェイスにアクセスできます。
