@@ -1,8 +1,8 @@
 ---
-title: トランザクションレポート請求可能なAPI
-seo-title: トランザクションレポート請求可能なAPI
-description: トランザクションとして計上されるすべてのAPIのリスト
-seo-description: トランザクションとして計上されるすべてのAPIのリスト
+title: トランザクションレポート請求可能 API
+seo-title: Transaction Reports Billable APIs
+description: トランザクションとして計上されるすべての API のリスト
+seo-description: List of all the APIs that are accounted as transactions
 uuid: d2f38ae4-75df-426f-af34-52ae6fb324f3
 topic-tags: forms-manager
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,38 +10,38 @@ discoiquuid: 929a298d-7f22-487f-bf7d-8ab2556d0d81
 docset: aem65
 exl-id: 1bc99f3b-3f28-4e74-b259-6ebddc11ffc5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1963'
-ht-degree: 9%
+workflow-type: ht
+source-wordcount: '1949'
+ht-degree: 100%
 
 ---
 
-# トランザクションレポート請求可能なAPI{#transaction-reports-billable-apis}
+# トランザクションレポート請求可能 API{#transaction-reports-billable-apis}
 
-AEM Formsは、フォームの送信、ドキュメントの処理、ドキュメントのレンダリングを行うためのAPIを複数提供します。 一部のAPIはトランザクションとして計上され、他のAPIは自由に使用できます。 このドキュメントでは、トランザクションレポートでトランザクションとして計上されるすべてのAPIのリストを示します。 課金対象のAPIが使用される一般的なシナリオを以下に示します。
+AEM Forms には、フォームの送信、ドキュメントの処理、ドキュメントのレンダリングをおこなうための API がいくつか用意されています。 一部の API はトランザクションとして計上され、それ以外は自由に使用できます。 このドキュメントでは、トランザクションレポートでトランザクションとして計上されるすべての API のリストを示します。 課金対象の API が使用される一般的なシナリオを次に示します。
 
-* アダプティブフォーム、HTML5フォーム、フォームセットの送信
-* インタラクティブ通信の印刷版またはWeb版のレンダリング
-* ドキュメントを別の形式に変換する
-* ダイナミックPDFドキュメントのフラット化
+* アダプティブフォーム、HTML5 フォーム、フォームセットの送信
+* インタラクティブ通信の印刷バージョンまたは Web バージョンのレンダリング
+* ある形式から別の形式へのドキュメントの変換
+* ダイナミック PDF ドキュメントの統合
 * レコードのドキュメントの生成
-* インタラクティブPDFドキュメントと別のPDFドキュメントの結合
-* AEM Workflowsのタスク割り当て手順とドキュメントサービス手順の使用
+* インタラクティブ PDF ドキュメントと別の PDF ドキュメントの結合
+* AEM Workflows のタスク割り当て手順とドキュメントサービス手順の使用
 * アダプティブフォーム内でのアダプティブフォームの使用
 
-請求APIは、ページ数、ドキュメントまたはフォームの長さ、レンダリングされたドキュメントの最終形式を考慮しません。 トランザクション・レポートでは、トランザクションを次の2つのカテゴリに分けます。レンダリングされたドキュメントとFormsが送信されました。
+請求 API は、ページ数、ドキュメントまたはフォームの長さ、レンダリング済みドキュメントの最終的な形式を考慮しません。 トランザクションレポートは、トランザクションを、レンダリングされたドキュメントと送信されたフォームの 2 つのカテゴリに分類します。
 
-* **Forms Submitted:** AEM Formsで作成された任意のタイプのフォームからデータが送信され、そのデータが任意のデータストレージリポジトリまたはデータベースに送信されると、フォームの送信と見なされます。例えば、アダプティブフォーム、HTML5フォーム、PDF forms、フォームセットを送信すると、フォームが送信済みと見なされます。 フォームセット内の各フォームは送信と見なされます。 例えば、フォームセットに5つのフォームが含まれている場合、フォームセットが送信されると、トランザクションレポートサービスはそのフォームセットを5件の送信としてカウントします。
+* **送信済みフォーム：** AEM Forms で作成された任意のタイプのフォームからデータが送信され、そのデータが任意のデータストレージリポジトリーまたはデータベースに送信された場合、そのデータはフォーム送信と見なされます。 例えば、アダプティブフォーム、HTML5 フォーム、PDF Forms、フォームセットは、送信済みフォームとして計上されます。 フォームセット内の各フォームは、送信と見なされます。 例えば、フォームセットに 5 つのフォームが含まれている場合、フォームセットが送信されると、トランザクションレポートサービスはそのフォームセットを 5 件の送信としてカウントします。
 
-* **レンダリングされたドキュメント：** テンプレートとデータを組み合わせ、ドキュメントのデジタル署名または認証、ドキュメントサービスの請求可能なドキュメントサービスAPIを使用したドキュメントの生成、またはドキュメントの形式間の変換をレンダリングしたドキュメントとして計上します。
+* **レンダリング済みドキュメント：** テンプレートとデータを組み合わせたドキュメントの生成、ドキュメントの電子署名または認証、ドキュメントサービスの課金可能なドキュメントサービス API の使用、ある形式から別の形式へのドキュメントの変換は、レンダリング済みドキュメントとして計上されます。
 
 >[!NOTE]
 >
->トランザクションレポートUIには、次の3つのカテゴリが表示されます。Forms送信済み、レンダリングされたドキュメント、処理されたドキュメント。 「レンダリングされたドキュメント」と「処理されたドキュメント」の両方が「レンダリングされたドキュメント」として計上されます。
+>トランザクションレポート UI には、送信済み Forms、レンダリング済みドキュメント、処理済みドキュメントの 3 つのカテゴリが表示されます。レンダリング済みドキュメントと処理済みドキュメントの両方が、レンダリング済みドキュメントとして計上されます。
 
-## 課金対象のドキュメントサービスAPI {#billable-document-services-apis}
+## 課金対象のドキュメントサービス API {#billable-document-services-apis}
 
-### Generate PDFサービス{#generate-pdf-service}
+### PDF 生成サービス {#generate-pdf-service}
 
 <table>
  <tbody>
@@ -53,62 +53,62 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a></td>
-   <td>サポートされているファイルタイプからAdobe PDFを作成します。</td>
+   <td>サポートされているファイルタイプから Adobe PDF を作成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
-   <td>サポートされているファイルタイプからAdobe PDFを作成します。</td>
+   <td>サポートされているファイルタイプから Adobe PDF を作成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF</a></td>
-   <td>Adobe PDFをサポートされているファイルタイプに変換します。 </td>
+   <td>Adobe PDF をサポートされるファイルタイプに変換します。 </td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF2</a></td>
-   <td>Adobe PDFをサポートされているファイルタイプに変換します。 </td>
+   <td>Adobe PDF をサポートされるファイルタイプに変換します。 </td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#exportPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">exportPDF3</a></td>
-   <td>Adobe PDFをサポートされているファイルタイプに変換します。 </td>
+   <td>Adobe PDF をサポートされるファイルタイプに変換します。 </td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlFileToPdf-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-">htmlFileToPdf</a></td>
-   <td><p>HTMLページからPDFを作成します。</p> </td>
+   <td><p>HTML ページから PDF を作成します。</p> </td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf</a></td>
-   <td>HTMLページを指すURLからPDFを作成します。</td>
+   <td>HTML ページを指す URL から PDF を作成します。</td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#htmlToPdf2-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">htmlToPdf2</a></td>
-   <td>HTMLページを指すURLからPDFを作成します。</td>
+   <td>HTML ページを指す URL から PDF を作成します。</td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/GeneratePDFService.html#optimizePDF-com.adobe.aemfd.docmanager.Document-java.lang.String-com.adobe.aemfd.docmanager.Document-" target="_blank">optimizePDF</a></td>
-   <td>画質に影響を与えることなく不要なメタデータを削除し、PDFを最適化してファイルサイズを縮小します。</td>
+   <td>品質に影響を与えることなく不要なメタデータを削除することによって、ファイルサイズを縮小できるように PDF を最適化します。</td>
    <td>処理済みドキュメント<br /> </td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### Distillerサービス{#distiller-service}
+### Distiller サービス {#distiller-service}
 
 <table>
  <tbody>
@@ -120,20 +120,20 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF</a><br /> </td>
-   <td>サポートされているファイルタイプからAdobe PDFを作成します。</td>
+   <td>サポートされているファイルタイプから Adobe PDF を作成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/pdfg/service/api/DistillerService.html#createPDF2-com.adobe.aemfd.docmanager.Document-java.lang.String-java.lang.String-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-" target="_blank">createPDF2</a></td>
-   <td>サポートされているファイルタイプからAdobe PDFを作成します。</td>
+   <td>サポートされているファイルタイプから Adobe PDF を作成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### レコードのドキュメントサービス（DoRサービス） {#document-of-record-service-dor-service}
+### レコードのドキュメントサービス（DoR サービス） {#document-of-record-service-dor-service}
 
 <table>
  <tbody>
@@ -145,7 +145,7 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/addon/dor/DoRService.html#render-com.adobe.aemds.guide.addon.dor.DoROptions-" target="_blank">render</a></td>
-   <td>指定されたレンダリングメソッドを呼び出して、指定されたパラメーターを使用してレコードのドキュメントを生成します。</td>
+   <td>指定されたレンダリングメソッドを呼び出して、設定されたパラメーターを使用してレコードのドキュメントを生成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -164,39 +164,39 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
-   <td>データとテンプレートをマージしてPDFドキュメントを作成します。</td>
+   <td>データとテンプレートを結合して、PDF ドキュメントを作成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-" target="_blank">generatePDFOutput</a></td>
-   <td>データとテンプレートをマージしてPDFドキュメントを作成します。</td>
+   <td>データとテンプレートを結合して、PDF ドキュメントを作成します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
-   <td>データとテンプレートをマージして、PDFドキュメントのセットを作成します。</td>
+   <td>データとテンプレートを結合して、一連の PDF ドキュメントを作成します。</td>
    <td>処理済みドキュメント</td>
-   <td> generatePDFOutputBatch APIは、フォームテンプレートとレコードを組み合わせてPDFを生成します。 レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別のPDFレンディションとしてカウントします。 <br> getGenerateManyFilesフラグを使用する <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--"></a> と、複数のレンディションを単一のPDFファイルに組み合わせることができます。フラグのステータスに関係なく、サービスは各レコードを個別のPDFレンディションとしてカウントします。 </td>
+   <td> generatePDFOutputBatch API は、フォームテンプレートとレコードを組み合わせ、PDF を生成します。 レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別の PDF レンディションとしてカウントします。 <br> <a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> フラグを使用して、複数のレンディションを単一の PDF ファイルに結合します。フラグのステータスに関係なく、サービスは各レコードを個別の PDF レンディションとしてカウントします。 </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
-   <td>XDPおよびPDFドキュメントをPostScript(PS)、Printer Command Language(PCL)およびZPLファイル形式に変換します。 </td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
+   <td>XDP および PDF ドキュメントを PostScript（PS）、Printer Command Language（PCL）および ZPL ファイル形式に変換します。 </td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
-   <td>XDPおよびPDFドキュメントをPostScript(PS)、Printer Command Language(PCL)およびZPLファイル形式に変換します。 </td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
+   <td>XDP および PDF ドキュメントを PostScript（PS）、Printer Command Language（PCL）および ZPL ファイル形式に変換します。 </td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
-   <td>XDPおよびPDFドキュメントのセットを、PostScript(PS)、Printer Command Language(PCL)およびZPLの各ファイル形式に変換します。 </td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
+   <td>XDP および PDF ドキュメントのセットを、PostScript（PS）、Printer Command Language（PCL）および ZPL の各ファイル形式に変換します。 </td>
    <td>処理済みドキュメント</td>
-   <td> generatePDFOutputBatch APIは、フォームテンプレートとレコードを組み合わせてPDFを生成します。 レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別のPDFレンディションとしてカウントします。 <br> getGenerateManyFilesフラグを使用する <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--"></a> と、複数のレンディションを単一のPDFファイルに組み合わせることができます。フラグのステータスに関係なく、サービスは各レコードを個別のPDFレンディションとしてカウントします。 </td>
+   <td> generatePDFOutputBatch API は、フォームテンプレートとレコードを組み合わせ、PDF を生成します。 レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別の PDF レンディションとしてカウントします。 <br> <a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> フラグを使用して、複数のレンディションを単一の PDF ファイルに結合します。 フラグのステータスに関係なく、サービスは各レコードを個別の PDF レンディションとしてカウントします。 </td>
   </tr>
  </tbody>
 </table>
@@ -212,21 +212,21 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
    <td>追加情報</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">｢renderPDFForm｣操作</a></td>
-   <td>XDPテンプレートからPDFフォームをレンダリングします。 XPテンプレートは、Forms Designerで作成されます。</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">renderPDFForm</a></td>
+   <td>PDF フォームを XDP テンプレートからレンダリングします。 XP テンプレートは、Forms Designer で作成されます。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#exportData-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.DataFormat-" target="_blank">exportData</a></td>
-   <td>PDFフォームまたはXDPテンプレートからデータを抽出します</td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#exportData-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.DataFormat-" target="_blank">exportData</a></td>
+   <td>PDF フォームまたは XDP からデータを書き出し</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-### Convert PDFサービス{#convert-pdf-service}
+### Convert PDF サービス {#convert-pdf-service}
 
 <table>
  <tbody>
@@ -237,14 +237,14 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
    <td>追加情報</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
-   <td>PDFドキュメントを画像ドキュメントのリストに変換します。 サポートされる画像形式は、JPEG、JPEG2K、PNGおよびTIFFです。</td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
+   <td>PDF ドキュメントを画像ドキュメントのリストに変換します。 サポートされる画像形式は、JPEG、JPEG2K、PNG、TIFF です。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toPS</a></td>
-   <td>オプション仕様で指定されたオプションを使用して、フラットPDFファイルをPostScript形式に変換します。</td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toPS</a></td>
+   <td>オプション仕様で指定した PDF を使用して、フラットオプションファイルを PostScript 形式に変換します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -262,8 +262,8 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
    <td>追加情報</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">decode</a></td>
-   <td>Documentオブジェクト内のすべてのバーコードをデコードし、バーコードから取得されたデータを含むorg.w3c.dom.Documentオブジェクトを返します。</td>
+   <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/bcf/api/BarcodedFormsService.html#decode-com.adobe.aemfd.docmanager.Document-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-java.lang.Boolean-com.adobe.fd.bcf.api.CharSet-" target="_blank">Decode</a></td>
+   <td>Document オブジェクト内のすべてのバーコードをデコードし、バーコードから取得されたデータを含む org.w3c.dom.Document オブジェクトを返します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -282,23 +282,23 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-">呼び出し</a></td>
-   <td>指定したDDXドキュメントを実行し、結果のドキュメントを含む<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>オブジェクトを返します。 </td>
+   <td>指定した DDX ドキュメントを実行し、結果のドキュメントを含む <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja">AssemblerResult</a> オブジェクトを返します。 </td>
    <td>処理済みドキュメント</td>
    <td>次の操作はトランザクションとして計上されません。
     <ul>
      <li>パッケージまたはポートフォリオの作成</li>
-     <li>複数のXDPのステッチ </li>
+     <li>複数の XDP のステッチ </li>
     </ul> </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#invoke-com.adobe.aemfd.docmanager.Document-java.util.Map-com.adobe.fd.assembler.client.AssemblerOptionSpec-" target="_blank">呼び出し</a></td>
-   <td>指定したDDXドキュメントを実行し、結果のドキュメントを含む<a href="https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/assembler/client/AssemblerResult.html">AssemblerResult</a>オブジェクトを返します。 </td>
+   <td>指定した DDX ドキュメントを実行し、結果のドキュメントを含む <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja">AssemblerResult</a> オブジェクトを返します。 </td>
    <td>処理済みドキュメント</td>
-   <td>PDF Generator、Forms、およびOutputサービスでサポートされるすべての入力ファイル形式、Assemblerサービスでは、出力ファイル形式としてこれらすべての形式がサポートされます。 </td>
+   <td>Assembler サービスは、PDFGenerator、Forms、Output サービスがサポートするすべての入力ファイル形式を、出力ファイル形式としてサポートします。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html#toPDFA-com.adobe.aemfd.docmanager.Document-com.adobe.fd.assembler.client.PDFAConversionOptionSpec-">toPDFA</a></td>
-   <td>指定したオプションを使用して、指定したドキュメントをPDF/Aに変換します。</td>
+   <td>指定したオプションを使用して、指定したドキュメントを PDF/A に変換します。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -307,14 +307,13 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
 
 >[!NOTE]
 >
->* Assemblerサービスのinvoke APIは、入力に応じて、別のサービスの課金対象APIを内部的に呼び出すことができます。 したがって、呼び出しAPIは、なし、単一または複数のトランザクションとして計上できます。 カウントされるトランザクションの数は、入力と呼び出された内部APIによって異なります。
->* Assemblerサービスを使用して生成された単一のPDFドキュメントは、なし、単一または複数のトランザクションと見なすことができます。 カウントされるトランザクションの数は、指定されたDDXコードによって異なります。
+>* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。 したがって、呼び出し API は、０、単一、複数のトランザクションのいずれかとして計上される可能性があります。カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
+>* Assembler サービスを使用して生成された単一の PDF ドキュメントは、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。 カウントされるトランザクションの数は、指定された DDX コードによって異なります。
 
 >
 
 
-
-### PDFユーティリティサービス{#pdf-utility-service}
+### PDF ユーティリティサービス  {#pdf-utility-service}
 
 <table>
  <tbody>
@@ -326,23 +325,23 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/pdfutility/services/PDFUtilityService.html#convertPDFtoXDP-com.adobe.aemfd.docmanager.Document-" target="_blank">convertPDFtoXDP</a></td>
-   <td>PDFドキュメントをXDPファイルに変換します。 PDFドキュメントをXDPファイルに正常に変換するには、PDFドキュメントにAcroFormsディクショナリ内にXFAストリームが含まれている必要があります。</td>
+   <td>PDF ドキュメントを画像ファイルに変換します。PDF ドキュメントを XDP ファイルに正常に変換するには、辞書内の XFA ストリームが PDF ドキュメントに含まれている必要があります。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-## 課金対象のデータキャプチャAPI {#billable-data-capture-apis}
+## 課金対象のデータキャプチャ API {#billable-data-capture-apis}
 
-アダプティブフォーム、HTML5 Forms、フォームセットの送信イベントはすべてトランザクションとして計上されます。 デフォルトでは、PDFフォームの送信はトランザクションとして考慮されません。 提供された[トランザクションレコーダーAPI](record-transaction-custom-implementation.md)を使用して、PDF formsの送信をトランザクションとして記録します。
+アダプティブフォーム、HTML5 Forms、フォームセットのすべての送信イベントは、トランザクションとして計上されます。 デフォルトでは、トランザクションフォームの PDF はトランザクションとして計上されません。 提供した[トランザクションレコーダー API](record-transaction-custom-implementation.md) を使用して、PDF フォームの送信をトランザクションとして記録します。
 
 ### アダプティブフォーム {#adaptive-forms}
 
 <table>
  <tbody>
   <tr>
-   <td><p>使用例</p> </td>
+   <td><p>ユースケース</p> </td>
    <td>説明</td>
    <td>トランザクションレポートカテゴリ</td>
    <td>追加情報</td>
@@ -353,8 +352,8 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
    <td>送信済みフォーム</td>
    <td>
     <ul>
-     <li>送信が成功した場合、1つまたは2つのトランザクションが考慮されます。 カウントされるトランザクションの数は、送信に使用する送信アクションのタイプによって異なります。 例えば、電子メール送信アクションを使用してPDFを送信すると、2つのトランザクション数が計算されます。 フォーム送信用のトランザクションと、レコードのドキュメント(DOR)サービスを使用して生成されたPDF用のトランザクションです。 </li>
-     <li>アダプティブフォーム（アダプティブフォームフォームセット）内でアダプティブフォームを使用すると、1回のトランザクションのみが考慮されます。 アダプティブフォーム内には、任意の数のアダプティブフォームを含めることができます。</li>
+     <li>送信が成功した場合、1 回または 2 回のトランザクションが発生します。 カウントされるトランザクションの数は、送信に使用する送信アクションのタイプによって異なります。 例えば、電子メール送信アクションを使用した PDF の送信は、2 回のトランザクションが発生します。 フォーム送信するトランザクション 1 回と、レコードのドキュメント（DOR）サービスを使用して PDF が生成されるトランザクション 1 回です。 </li>
+     <li>アダプティブフォーム（アダプティブフォームフォームセット）内でアダプティブフォームを使用すると、1 回のトランザクションのみがカウントされます。アダプティブフォーム内には、任意の数のアダプティブフォームを含めることができます。</li>
     </ul> </td>
   </tr>
  </tbody>
@@ -365,14 +364,14 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
 <table>
  <tbody>
   <tr>
-   <td><p>使用例</p> </td>
+   <td><p>ユースケース</p> </td>
    <td>説明 </td>
    <td>トランザクションレポートカテゴリ</td>
    <td>追加情報</td>
   </tr>
   <tr>
-   <td>HTML5フォームの送信</td>
-   <td>HTML5フォームを送信して、フォームに設定されたURLを送信します。</td>
+   <td>HTML5 フォームの送信</td>
+   <td>フォームで設定された URL を送信するために HTML5 フォームを送信します。</td>
    <td>送信済みフォーム</td>
    <td> </td>
   </tr>
@@ -390,21 +389,21 @@ AEM Formsは、フォームの送信、ドキュメントの処理、ドキュ�
    <td>追加情報</td>
   </tr>
   <tr>
-   <td>フォームセットの送信</td>
-   <td>フォームセットをフォームセット内で設定された送信URLに送信します。</td>
+   <td>フォームセットの管理</td>
+   <td>フォームセットを、フォームセットで設定された送信 URL に送信します。</td>
    <td>送信済みフォーム</td>
    <td>
     <ul>
-     <li>アダプティブフォーム（アダプティブフォームフォームセット）内でアダプティブフォームを使用すると、1回のトランザクションのみが考慮されます。 アダプティブフォーム内には、任意の数のアダプティブフォームを含めることができます。</li>
-     <li>HTML5 Formsフォームセット内の各フォームは、個別のトランザクションとして考慮されます。 </li>
+     <li>アダプティブフォーム（アダプティブフォームフォームセット）内でアダプティブフォームを使用すると、1 回のトランザクションのみがカウントされます。アダプティブフォーム内には、任意の数のアダプティブフォームを含めることができます。</li>
+     <li>HTML5 Forms フォームセット内の各フォームは、別々のトランザクションとしてカウントされます。 </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-## OSGi API上の請求可能なインタラクティブ通信とフォーム中心のAEMワークフロー{#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
+## OSGi API 上の課金対象のインタラクティブ通信とフォーム中心の AEM ワークフロー {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
 
-OSGi上のフォーム中心のAEM Workflowsのタスクとドキュメントサービスのステップと、インタラクティブ通信のすべてのレンディションを割り当てます。このステップはトランザクションとして考慮されます。 オーサーインスタンス上でインタラクティブ通信をプレビューし、エージェントUIを使用してパブリッシュインスタンス上でプレビューすることは、トランザクションとして考慮されません。 ワークフローステップでトランザクションが考慮され、ワークフローの完了に失敗した場合、トランザクション数は元に戻されません。
+OSGi 上の Form 中心の AEM Workflows のタスクとドキュメントサービスのステップと、インタラクティブ通信のすべてのレンディションを割り当てます。これらはトランザクションとしてカウントされます。 オーサーインスタンス上でインタラクティブ通信をプレビューし、エージェント UI を使用してパブリッシュインスタンス上でプレビューすることは、トランザクションとしては考慮されません。 ワークフローステップがトランザクションとして考慮され、ワークフローの完了に失敗した場合、トランザクション数は元に戻されません。
 
 ### インタラクティブ通信 - Web チャネル {#interactive-communication-web-channel}
 
@@ -417,9 +416,9 @@ OSGi上のフォーム中心のAEM Workflowsのタスクとドキュメントサ
    <td>追加情報</td>
   </tr>
   <tr>
-   <td>Webチャネルのレンダリング</td>
-   <td>インタラクティブ通信のWebバージョンを開きます。</td>
-   <td>レタリング済みドキュメント</td>
+   <td>Web チャネルのレンダリング</td>
+   <td>インタラクティブ通信の web バージョンを開きます。</td>
+   <td>レンダリング済みドキュメント</td>
    <td>
     <div>
     </div> </td>
@@ -427,7 +426,7 @@ OSGi上のフォーム中心のAEM Workflowsのタスクとドキュメントサ
  </tbody>
 </table>
 
-### インタラクティブ通信 — 印刷チャネル{#interactive-communication-print-channel}
+### インタラクティブ通信 - 印刷チャンネル {#interactive-communication-print-channel}
 
 <table>
  <tbody>
@@ -438,9 +437,9 @@ OSGi上のフォーム中心のAEM Workflowsのタスクとドキュメントサ
    <td>追加情報</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">render</a> （PDFに変換）</td>
-   <td>インタラクティブ通信のPDFバージョンを生成します。</td>
-   <td>レタリング済みドキュメント</td>
+   <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">レンダー</a>（PDF に変換）</td>
+   <td>インタラクティブ PDF の通信バージョンを生成します。</td>
+   <td>レンダリングされたドキュメント</td>
    <td>
     <div>
     </div> </td>
@@ -458,7 +457,7 @@ OSGi上のフォーム中心のAEM Workflowsのタスクとドキュメントサ
    <td>追加情報</td>
   </tr>
   <tr>
-   <td>タスクの割り当て手順の送信</td>
+   <td>割り当てタスクの送信手順</td>
    <td>送信済みフォーム</td>
    <td>
     <div>
@@ -470,19 +469,19 @@ OSGi上のフォーム中心のAEM Workflowsのタスクとドキュメントサ
    <td> </td>
   </tr>
   <tr>
-   <td>エージェントUIからワークフローへのインタラクティブ通信（印刷チャネル）の送信</td>
-   <td>レタリング済みドキュメント</td>
+   <td>エージェント UI からワークフローへのインタラクティブ通信（印刷チャネル）の送信</td>
+   <td>レンダリングされたドキュメント</td>
    <td> </td>
   </tr>
  </tbody>
 </table>
 
-## 請求可能なAPIをカスタムコード{#recording-billable-apis-as-transactions-for-custom-code}のトランザクションとして記録する
+## カスタムコードのトランザクションとしての課金対象 API の記録 {#recording-billable-apis-as-transactions-for-custom-code}
 
-PDFフォームの送信、エージェントUIを使用したインタラクティブ通信のプレビュー、非標準のフォーム送信、カスタム実装の処理は、トランザクションとして考慮されません。 AEM Formsは、トランザクションなどのアクションを記録するAPIを提供します。 カスタム実装からAPIを呼び出して、[トランザクション](/help/forms/using/record-transaction-custom-implementation.md)を記録できます。
+PDF フォームの送信、エージェント UI を使用したインタラクティブな通信のプレビュー、非標準のフォーム送信の使用、カスタム実装などのアクションは、トランザクションとして考慮されません。AEM Forms は、トランザクションなどのアクションを記録する API を提供します。 カスタム実装から API を呼び出して、[トランザクションを記録](/help/forms/using/record-transaction-custom-implementation.md)することができます。
 
 ## 関連記事 {#related-articles}
 
 * [トランザクションレポートの概要](../../forms/using/transaction-reports-overview.md)
-* [トランザクション・レポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
+* [トランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
 * [カスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)
