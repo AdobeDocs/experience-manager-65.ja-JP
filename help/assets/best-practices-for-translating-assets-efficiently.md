@@ -3,18 +3,18 @@ title: アセットの翻訳のベストプラクティス
 description: 翻訳された各バージョンを同期し、翻訳ワークフローを合理化するための、アセットの効率的な管理に関するベストプラクティス。
 contentOwner: AG
 role: Admin
-feature: アセット管理
+feature: Asset Management
 exl-id: e632dcdb-b2b9-45bc-89e7-337b44b6fc61
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 82%
+workflow-type: ht
+source-wordcount: '416'
+ht-degree: 100%
 
 ---
 
 # アセットの翻訳のベストプラクティス {#best-practices-for-translating-assets-efficiently}
 
-[!DNL Adobe Experience Manager Assets] は、デジタルアセットのバイナリ、メタデータ、タグを複数のロケールに翻訳し、翻訳済みアセットを管理するための多言語ワークフローをサポートしています。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
+[!DNL Adobe Experience Manager Assets] の多言語ワークフローで、デジタルアセットのバイナリ、メタデータおよびタグを複数のロケール用に翻訳し、翻訳されたアセットを管理します。詳しくは、[多言語のアセット](multilingual-assets.md)を参照してください。
 
 アセットの管理を効率化して、翻訳された各バージョンが確実に同期されるようにするには、翻訳ワークフローを実行する前にアセットの[言語コピー](preparing-assets-for-translation.md)を作成します。
 
@@ -43,9 +43,9 @@ ht-degree: 82%
    >Disabling the [!UICONTROL DAM MetaData Writeback] workflow turns off XMP metadata write-back on asset binaries. Consequently, future metadata changes are no longer be saved within the assets. Evaluate the consequences before disabling this workflow.
 -->
 
-1. 「最終変更日を設定」ワークフローを有効化します。
+1. 「[!UICONTROL 最終変更日を設定]」ワークフローを有効化します。
 
-   アセットの最終変更日は、「DAM メタデータの書き戻し」ワークフローが設定します。手順2でこのワークフローを無効にしたので、[!DNL Assets]では、アセットの最終変更日を最新の状態に保つことができなくなります。 このため、「最終変更日を設定」**&#x200B;ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
+   アセットの最終変更日は、「[!UICONTROL DAM メタデータの書き戻し]」ワークフローが設定します。このワークフローは手順 2 で無効にするので、[!DNL Assets] は今後アセットの最終変更日を最新の状態に保つことができなくなります。このため、「*最終変更日を設定*」ワークフローを有効化して、アセットの最終変更日が最新の状態に保たれるようにします。最終変更日が最新でないアセットはエラーの原因となる場合があります。
 
-1. アセットのバイナリを翻訳しないように、[翻訳統合フレームワークを設定](/help/sites-administering/tc-tic.md)します。「[!UICONTROL アセット]」タブの「**[!UICONTROL アセットを翻訳]**」オプションの選択を解除して、アセットバイナリの翻訳を停止します。
-1. [多言語のアセットワークフロー](multilingual-assets.md)を使用して、アセットのメタデータ/タグを翻訳します。
+1. アセットのバイナリを翻訳しないように、[翻訳統合フレームワークを設定](/help/sites-administering/tc-tic.md)します。「[!UICONTROL アセット]」タブの「**[!UICONTROL アセットを翻訳]**」オプションの選択を解除して、アセットのバイナリの翻訳を停止します。
+1. [多言語アセットのワークフロー](multilingual-assets.md)を使用して、アセットのメタデータやタグを翻訳します。
