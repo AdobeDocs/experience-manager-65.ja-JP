@@ -1,8 +1,8 @@
 ---
 title: ツールコンソール
-seo-title: ツールコンソール
+seo-title: Tools Consoles
 description: AEM の様々なツールコンソールについて説明します。
-seo-description: AEM の様々なツールコンソールについて説明します。
+seo-description: Learn about the different tools consoles throughout AEM.
 uuid: 44439f8e-7c47-4ea9-afe1-a9a23489a20e
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,15 +12,15 @@ discoiquuid: 6732ef1f-0bfd-44e6-b24d-e22fe427d8b4
 docset: aem65
 exl-id: c9f55ec9-83ea-4115-97c2-59b5c179e90f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 99%
+workflow-type: ht
+source-wordcount: '609'
+ht-degree: 100%
 
 ---
 
 # ツールコンソール{#tools-consoles}
 
-**ツール**&#x200B;コンソールを使用して、Web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現時点では、お使いの UI に応じて 2 種類の&#x200B;**ツール**&#x200B;コンソールを選択できます。
+**ツール** コンソールを使用して、web サイト、デジタルアセット、およびコンテンツリポジトリのその他の要素の管理に役立つ、数多くの専用ツールにアクセスできます。現時点では、お使いの UI に応じて 2 種類の&#x200B;**ツール**&#x200B;コンソールを選択できます。
 
 * [ツール - タッチ操作向け UI](#tools-touch-optimized-ui)
 * [ツール - クラシック UI](#tools-classic-ui)
@@ -350,7 +350,7 @@ ht-degree: 99%
    <td>コミュニティバッジ</td>
   </tr>
   <tr>
-   <td>コマース</td>
+   <td>Commerce</td>
    <td> </td>
   </tr>
   <tr>
@@ -381,7 +381,7 @@ ht-degree: 99%
    <td>ClientContext はユーザーデータを動的にまとめたコレクションを表します。デフォルトの Marketing Cloud 設定はここに保持されます。<br /> </td>
   </tr>
   <tr>
-   <td>クラウドサービスの設定<br /> </td>
+   <td>クラウドサービス設定<br /> </td>
    <td>Adobe Marketing Cloud との統合に関連する設定を保持します。</td>
   </tr>
   <tr>
@@ -389,7 +389,7 @@ ht-degree: 99%
    <td>設定マネージャーの設定</td>
   </tr>
   <tr>
-   <td>コマース</td>
+   <td>Commerce</td>
    <td>インポーターと様々な製品データにアクセスできます。</td>
   </tr>
   <tr>
