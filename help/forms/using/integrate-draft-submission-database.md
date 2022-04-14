@@ -1,8 +1,8 @@
 ---
 title: ドラフトと送信コンポーネントとデータベースの統合のサンプル
-seo-title: ドラフトと送信コンポーネントとデータベースの統合のサンプル
+seo-title: Sample for integrating drafts & submissions component with database
 description: ドラフトと送信コンポーネントをデータベースに統合するためのカスタマイズされたデータサービスおよびメタデータサービスのリファレンス実装
-seo-description: ドラフトと送信コンポーネントをデータベースに統合するためのカスタマイズされたデータサービスおよびメタデータサービスのリファレンス実装
+seo-description: Reference implementation of customized data and metadata services to integrate drafts and submissions component with a database.
 uuid: ccdb900e-2c2e-4ed3-8a88-5c97aa0092a1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,15 +10,15 @@ topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 88%
+workflow-type: ht
+source-wordcount: '1467'
+ht-degree: 100%
 
 ---
 
 # ドラフトと送信コンポーネントとデータベースの統合のサンプル {#sample-for-integrating-drafts-submissions-component-with-database}
 
-## サンプルｎ概要 {#sample-overview}
+## サンプルの概要 {#sample-overview}
 
 AEM Forms ポータルのドラフトと送信コンポーネントにより、フォームをドラフトとして保存し、任意のデバイスから後で送信することができます。また、ポータルにて送信済みのフォームを表示することもできます。この機能を有効にするため、AEM Forms では、ユーザーによってフォームに入力されたデータおよびドラフトおよび送信済みフォームに関連するメタデータを保存する、データおよびメタデータサービスを提供しています。このデータは、デフォルトで CRX レポジトリに格納されます。ただし、ユーザーが AEM のパブリッシュインスタンスを通じてフォームとやり取りを行うのは通常企業のファイアウォールの外側であるため、組織によっては、よりセキュアで信頼性のあるデータストレージが必要となる場合もあります。
 
@@ -28,7 +28,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 >
 >* このドキュメントで説明されている例および設定は、MySQL 5.6.24 に基づいているため、お使いのデータベースシステムに合わせてそれらを適切に置き換える必要があります。
 >* 最新バージョンの AEM Forms のアドオンパッケージをインストールしていることを確認してください。使用可能なパッケージのリストについては、[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事を参照してください。
->* サンプルパッケージは、アダプティブForms送信アクションでのみ機能します。
+>* サンプルパッケージは、アダプティブフォーム送信アクションでのみ機能します。
 
 
 ## サンプルのセットアップおよび設定 {#set-up-and-configure-the-sample}
@@ -41,13 +41,13 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 [ファイルを入手](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. https://[*host*]:[*port*]/crx/packmgr/でAEMパッケージマネージャーに移動します。
+1. AEM パッケージマネージャー（https://[*host*]:[*port*]/crx/packmgr/）に移動します。
 1. 「**[!UICONTROL パッケージをアップロード]**」をクリックします。
 
 1. パッケージ **aem-fp-db-integration-sample-pkg-6.1.2.zip** を参照して選択し、「**[!UICONTROL OK]**」をクリックします。
 1. パッケージの隣にある「**[!UICONTROL インストール]**」をクリックし、パッケージをインストールします。
-1. **[!UICONTROL AEM Web Console Configuration]**に移動します。
-ページ(https://[*host*]:[*port*]/system/console/configMgr)にあります。
+1. **[!UICONTROL AEM web コンソール設定]**
+ページ（https://[*host*]:[*port*]/system/console/configMgr）に移動します。
 1. **[!UICONTROL Forms Portal Draft and Submission Configuration]** をクリックし、編集モードで開きます。
 
 1. 次の表の説明に従って、プロパティの値を指定します。
@@ -83,11 +83,11 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
    * Web コンソール設定で、「Forms Portal Data Service Sample Implementation」を見つけてクリックします。データソースおよびデータテーブル名の値は変更できます。
    >[!NOTE]
    >
-   >テーブル名を変更する場合は、フォームポータルの設定で名前を指定します。
+   >テーブル名を変更する場合は、テーブル名をフォームポータル設定に入力してください。
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
 
-1. データベース接続は、Apache Sling Connection Pooled Data Sourceを介して実行できます。
+1. データベース接続は、Apache Sling Connection Pooled Data Source 経由で実行できます。
 1. Apache Sling 接続の場合は、Web コンソール設定で「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」を見つけてクリックし、編集モードで開きます。次の表の説明に従って、プロパティの値を指定します。
 
 <table>
@@ -106,7 +106,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
   </tr>
   <tr>
    <td>JDBC 接続 URI<br /> </td>
-   <td>jdbc:mysql://[<em>ホスト</em>]:[<em>ポート</em>]/[<em>スキーマ名</em>]</td>
+   <td>jdbc:mysql://[<em>host</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>ユーザー名</td>
@@ -165,7 +165,6 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 > * オーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用するよう指定します。JDBC 接続の URI フィールドの値は、すべてのオーサーインスタンスとパブリッシュインスタンスで同じである必要があります。
 
 >
-
 
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。
@@ -316,7 +315,7 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 1. `https://'[server]:[port]'/system/console/bundles` に移動して「**[!UICONTROL Install/Update]**」をクリックします。
 1. 「**[!UICONTROL ファイルを選択]**」をクリックし、mysql-connector-java-5.1.39-bin.jar を探して選択します。また、「**[!UICONTROL Start Bundle]**」チェックボックスと「**[!UICONTROL Refresh Packages]**」チェックボックスを選択します。
 1. 「**[!UICONTROL Install」または「Update]**」をクリックします。完了したら、サーバーを再起動します。
-1. （*Windowsのみ*）オペレーティングシステムのシステムファイアウォールをオフにします。
+1. （*Windows のみ*）オペレーティングシステムのシステムファイアウォールをオフにします。
 
 ## フォームポータルデータおよびメタデータサービスのサンプルコード {#sample-code-for-forms-portal-data-and-metadata-service}
 
@@ -342,11 +341,11 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
     util.js
    ```
 
-   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。`util`フォルダーと`util.js`ファイルは、以下の手順で作成されます。
+   上記コードの場合、`util` はフォルダーの名前で、`util.js` フォルダーにあるファイルの `util` 名です。`util` フォルダーと `util.js` ファイルはこの後に続く手順で作成されます。
 
-1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。`util`という名前のフォルダーを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。`util.js`という名前のファイルを作成します。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. 手順 2 で作成した `cq:ClientLibraryFolder` ノードを右クリックし、「作成／フォルダーの作成」を選択します。`util` という名前のフォルダーを作成します。「**[!UICONTROL すべて保存]**」をクリックします。`util` フォルダーを右クリックし、「作成／ファイルを作成」を選択します。`util.js` という名前のファイルを作成します。「**[!UICONTROL すべて保存]**」をクリックします。
 
-1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。ファイル名の長さを検証するコード。
+1. util.js ファイルに次のコードを追加して、「**[!UICONTROL すべて保存]**」をクリックします。このコードでファイル名の長さを検証します。
 
    ```javascript
    /*
@@ -413,12 +412,12 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
    * **[!UICONTROL マルチオプション：]** Enabled
 
-1. `/libs/fd/af/runtime/clientlibs/guideRuntime`に移動し、 embedプロパティに`fp.validation`値を追加します。
+1. `/libs/fd/af/runtime/clientlibs/guideRuntime` に移動し、`fp.validation` 値を embed プロパティに追加します。
 
-1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFAに移動し、 embedプロパティに`fp.validation`値を追加します。
+1. /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA に移動し、`fp.validation` 値を embed プロパティに追加します。
 
    >[!NOTE]
    >
-   >guideRuntimeおよびguideRuntimeWithXfaクライアントライブラリの代わりにカスタムクライアントライブラリを使用する場合は、カテゴリ名を使用して、この手順で作成したクライアントライブラリを、実行時に読み込むカスタムライブラリに埋め込みます。
+   >guideRuntime および guideRuntimeWithXfa クライアントライブラリの代わりにカスタムクライアントライブラリを使用している場合、カテゴリ名を使用してこの手順で作成したクライアントライブラリを、実行時にロードしたカスタムライブラリに埋め込みます。
 
-1. 「**[!UICONTROL すべて保存」をクリックします。]** 現在は、ファイル名が150文字（拡張子を含む）を超える場合に、メッセージが表示されます。
+1. 「**[!UICONTROL すべて保存」をクリックします。]** ここで、ファイル名が拡張子を含めて 150 文字を超えるとメッセージが表示されます。
