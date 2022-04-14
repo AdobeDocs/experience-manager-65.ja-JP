@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 へのアップグレード
-seo-title: AEM 6.5 へのアップグレード
+seo-title: Upgrading to AEM 6.5
 description: 古い AEM のインストールを AEM 6.5 にアップグレードするための基礎について説明します。
-seo-description: 古い AEM のインストールを AEM 6.5 にアップグレードするための基礎について説明します。
+seo-description: Learn about the basics of upgrading an older AEM installation to AEM 6.5.
 uuid: 45368056-273c-4f1a-9da6-e7ba5c2bbc0d
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
-feature: アップグレード
+feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
 source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
-workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 73%
+workflow-type: ht
+source-wordcount: '705'
+ht-degree: 100%
 
 ---
 
-# AEM 6.5 へのアップグレード  {#upgrading-to-aem}
+# AEM 6.5 へのアップグレード {#upgrading-to-aem}
 
 この節では、AEM 6.5 への AEM インストール環境のアップグレードについて説明します。
 
@@ -40,24 +40,24 @@ ht-degree: 73%
 
 この手順に出てくる AEM インスタンスをわかりやすく区別するために、以下のように呼ぶことにします。
 
-* アップグレード元の AEM インスタンスを「ソース」インスタンスと呼びます。**
-* アップグレード先のインスタンスを「ターゲット」インスタンスと呼びます。**
+* アップグレード元の AEM インスタンスを「ソース」インスタンスと呼びます&#x200B;*。*
+* アップグレード先のインスタンスを「ターゲット」インスタンスと呼びます&#x200B;*。*
 
 >[!NOTE]
 >
 >アップグレードの信頼性を向上させるための取り組みの一環として、AEM は包括的なリポジトリの再構築を実施しました。新しい構造体に合わせる方法の詳細は、[AEM におけるリポジトリ再構成](/help/sites-deploying/repository-restructuring.md)を参照してください。
 
-## 変更点{#what-has-changed}
+## 変更点 {#what-has-changed}
 
 以下に、AEM の最近のいくつかのリリースでの注目すべき主な変更点を示します。
 
 AEM 6.0 で、新しい Jackrabbit Oak リポジトリが導入されました。Persistence Manager は、[マイクロカーネル](/help/sites-deploying/platform.md#contentbody_title_4)で置き換えられました。バージョン 6.1 から CRX2 がサポートされなくなりました。5.6.1 のインスタンスから CRX2 リポジトリを移行するには、crx2oak という移行ツールを実行する必要があります。詳しくは、[CRX2OAK 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。
 
-Assets Insightsを使用し、AEM 6.2より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Beanを使用してIDを生成する必要があります。 アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
+アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
 
-6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3より前のバージョンからアップグレードする場合は、アップグレードの一環として、システムのダウンタイムが伴うリポジトリの移行が必要です。
+6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3 よりも古いバージョンからアップグレードする場合は、アップグレードの一環としてリポジトリの移行が必要になり、システムのダウンタイムが発生します。
 
-アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ありません。 また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
+アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
 
 **AEM 6.3 から AEM 6.5 へのアップグレード時には、この移行は必要ありません。**
 
@@ -86,10 +86,10 @@ AEM のアップグレードには複数の段階があり、場合によって�
 
 ## アップグレードフロー {#upgrade-overview-1}
 
-以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、パターン検出から始める必要があります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。生成されたレポートのパターンに基づいて、AEM 6.4との互換性を保つためにとるパスを決定できます。
+以下の図は、アップグレードの方法を示す、全体的なアップグレード推奨フローです。導入された新機能も示されています。アップグレードは、まずパターン検出から始まります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。ここで生成されたレポートのパターンに基づき、AEM 6.4 との互換性を確保するためにどのパスを使用するかを決定できます。
 
-6.5では、すべての新機能の後方互換性を維持する重点が大きくなりましたが、後方互換性の問題が引き続き発生する場合は、開発を一時的に遅らせて、カスタムコードを6.5に準拠させることができます。[](/help/sites-deploying/backward-compatibility.md)
+6.5 では、すべての新機能において後方互換性を保つことが非常に重視されています。ただし、後方互換性の問題が生じる場合は、互換モードを使用することで、カスタムコードを 6.5 準拠にする開発作業を一時的に先送りできます。この方法を使用することで、アップグレード後すぐに開発をおこなう必要がなくなります（[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)を参照）。
 
-最後に、6.5の開発サイクルで、「持続可能なアップグレード」（「[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)」を参照）で導入された機能は、今後のアップグレードをより効率的かつシームレスにするためのベストプラクティスに従うのに役立ちます。
+6.5 の開発サイクルでは、持続可能なアップグレード（[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)を参照）の下で導入された機能により、今後のアップグレードをより効率的かつシームレスにするためのベストプラクティスに従いやすくなります。
 
 ![6_4_upgrade_overviewflowchart-newpage3](assets/6_4_upgrade_overviewflowchart-newpage3.png)
