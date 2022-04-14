@@ -1,8 +1,8 @@
 ---
 title: '"Microsoft SQL Server データベース：設定の最適なチューニング"'
-seo-title: '"Microsoft SQL Server データベース：設定の最適なチューニング"'
+seo-title: 'Microsoft SQL Server database: Fine-tuning the configuration'
 description: Microsoft SQL Server データベースの設定の最適なチューニング方法について説明します。
-seo-description: Microsoft SQL Server データベースの設定の最適なチューニング方法について説明します。
+seo-description: Learn how you can fine tune the configuration of your Microsoft SQL Server database.
 uuid: 2d618aab-3c67-4edb-a28f-a20904689e6f
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS, SG_AEMFORMS
 discoiquuid: 70559a94-42ea-411a-a32f-5f38bc17ff96
 exl-id: 9c570827-86e2-47d5-b8ae-66c0767bff2e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '315'
+workflow-type: ht
+source-wordcount: '294'
 ht-degree: 100%
 
 ---
@@ -29,7 +29,7 @@ Microsoft SQL Server を使用する場合、デフォルトの設定を変更�
 
 プロセッサー設定を変更し、これは最も重要なことですが、「SQL Server の優先度を上げる」チェックボックスを選択して、サーバーが可能な限り多くのサイクルを使用できるようにします。「Use NT fibers」設定はあまり重要ではありませんが、これを選択する場合もあります。
 
-## データベース設定  {#database-settings}
+## データベース設定 {#database-settings}
 
 データベース設定を変更します。最も重要な設定は、「復旧間隔」です。クラッシュが発生した後に復旧を待機するまでの最大時間を指定します。デフォルトの設定は 1 分です。大きい値（5～15 分）を使用すると、サーバーがデータベースログからデータベースファイルに変更を書き込むための時間が増加し、パフォーマンスが向上します。
 
