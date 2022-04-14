@@ -1,8 +1,8 @@
 ---
 title: We.Retail のコンテンツフラグメントの使用
-seo-title: We.Retail のコンテンツフラグメントの使用
+seo-title: Trying out Content Fragments in We.Retail
 description: We.Retail のコンテンツフラグメントの使用
-seo-description: 'null'
+seo-description: null
 uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,27 +11,27 @@ topic-tags: best-practices
 discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '452'
+ht-degree: 100%
 
 ---
 
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** (AEMの標準インスタンスで使用可能)は、フラグメント **Arctic Surfing in Lofotenasを基本的なサンプ** ルとして提供します。このフラグメントは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。（AEM の標準のインスタンスで使用できる）**We.Retail** には、基本のサンプルとして **Arctic Surfing in Lofoten** フラグメントが用意されています。このフラグメントは、次のことを示しています。
 
 * Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。
 
-   * [We.Retailでのコンテンツフラグメントアセットの検索場所](#where-to-find-content-fragments-in-we-retail)を参照してください。
+   * [We.Retail でのコンテンツフラグメントアセットの場所](#where-to-find-content-fragments-in-we-retail)を参照してください。
 
 * その後、コンテンツページを[オーサリングする際に、これらのフラグメントとそれらのバリエーションを使用](/help/sites-authoring/content-fragments.md)できます。
 
-   * [We.Retailでのコンテンツフラグメントの使用場所](#where-content-fragments-are-used-in-we-retail)を参照してください。
+   * [We.Retail でコンテンツフラグメントが使用される場所](#where-content-fragments-are-used-in-we-retail)を参照してください。
 
 コンテンツフラグメントの作成、管理、使用および開発に関する完全なドキュメントについて：
 
-* [詳細](#further-information)を参照
+* [その他の情報](#further-information)を参照してください。
 
 >[!NOTE]
 >
@@ -41,16 +41,15 @@ ht-degree: 79%
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、Web ページのフラグメントです。
 
 >
->
-エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
+>エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 
 ## We.Retail でのコンテンツフラグメントの場所 {#where-to-find-content-fragments-in-we-retail}
 
-We.Retailには、いくつかのサンプルコンテンツフラグメントがあります。**アセット**、**ファイル**、**We.Retail**、**英語**、**エクスペリエンス**&#x200B;を使用して移動します。
+We.Retail には、様々なコンテンツフラグメントのサンプルがあり、**Assets**／**ファイル**／**We.Retail**／**英語**／**エクスペリエンス**&#x200B;からアクセスできます。
 
 これには、関連するビジュアルアセットと組み合わせられたフラグメントである **Arctic Surfing in Lofoten** などがあります。
 
-* **アセット**、**ファイル**、**We.Retail**、**英語**、**エクスペリエンス**、**Artic In Lofoten**:
+* **Assets**／**ファイル**／**We.Retail**／**英語**／**エクスペリエンス**／**Artic Surfing in Lofoten** の順に移動します。
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
 
@@ -76,9 +75,9 @@ We.Retailには、いくつかのサンプルコンテンツフラグメント�
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 
-例えば、**Arctic Surfing in Lofoten**&#x200B;のコンテンツフラグメントがサイトページで参照されているとします。
+例えば、**Arctic Surfing in Lofoten** のコンテンツフラグメントは、次の手順に沿って Sites ページで参照できます。
 
-* **サイト**、**We.Retail**、**言語マスター**、**英語**、**エクスペリエンス**&#x200B;を使用して移動します。 その後、**Arctic Surfing in Lofoten** を開いて編集をおこないます。
+* **Sites**／**We.Retail**／**言語マスター**／**英語**／**エクスペリエンス**&#x200B;の順に移動します。その後、**Arctic Surfing in Lofoten** を開いて編集をおこないます。
 
    * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 
