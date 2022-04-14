@@ -1,23 +1,23 @@
 ---
-title: Adobe Experience Manager 6.5でのDynamic Mediaリポジトリの再構築
-description: Dynamic Media向けExperience Manager6.5の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
+title: Adobe Experience Manager 6.5 における Dynamic Media リポジトリの再構築
+description: Experience Manager 6.5 の Dynamic Media の新しいリポジトリ構造に移行するために、必要な変更を行う方法について説明します。
 uuid: e26d61a4-47b6-493a-9ba2-4c58b200ddd9
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 61cd5751-0dc8-48e0-873e-3a64899489bb
-feature: アップグレード
+feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 33%
+workflow-type: ht
+source-wordcount: '413'
+ht-degree: 100%
 
 ---
 
-# Adobe Experience Manager 6.5でのDynamic Mediaリポジトリの再構築 {#dynamic-media-repository-restructuring-in-aem}
+# Adobe Experience Manager 6.5 における Dynamic Media リポジトリの再構築 {#dynamic-media-repository-restructuring-in-aem}
 
-親の[Adobe Experience Manager 6.5のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)ページで説明したように、Experience Manager6.5にアップグレードする場合は、このページを使用して、Dynamic Mediaに影響を与えるリポジトリ変更に伴う作業量を評価する必要があります。 一部の変更では、Experience Manager6.5のアップグレードプロセス中に作業作業が必要ですが、それ以外の変更では、将来のアップグレードまで延期することもできます。
+親ページの [Adobe Experience Manage 6.5 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、Experience Manager 6.5 にアップグレードするユーザーは、このページを使用して、Dynamic Media に影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。一部の変更は Experience Manager 6.5 アップグレードプロセス中に作業する必要がありますが、それ以外は将来のアップグレードまで延期できます。
 
 **今後のアップグレードの前に**
 
@@ -29,7 +29,7 @@ ht-degree: 33%
 
 ## 今後のアップグレードの前に {#prior-to-upgrade}
 
-### カスタムアダプティブビデオエンコーディング設定  {#custom-adaptive-video-encoding-configurations}
+### カスタムアダプティブビデオのエンコーディング設定  {#custom-adaptive-video-encoding-configurations}
 
 <table>
  <tbody>
@@ -43,7 +43,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>次の移行スクリプトを使用して、新しい場所に移行できます：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、設定をExperience ManagerUIで編集し、変更内容を新しい場所に保存することもできます。</p> </td>
+   <td><p>次の移行スクリプトを使用して、新しい場所に移行できます：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、Experience Manager UI で設定を編集すると、変更内容が新しい場所に保存されます。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
@@ -52,7 +52,7 @@ ht-degree: 33%
  </tbody>
 </table>
 
-### Dynamic Media(DMS7)クラウド設定 {#dynamic-media-dms-cloud-configuration}
+### Dynamic Media（DMS7）クラウド設定 {#dynamic-media-dms-cloud-configuration}
 
 <table>
  <tbody>
@@ -79,7 +79,7 @@ ht-degree: 33%
  </tbody>
 </table>
 
-### Dynamic Media（DMハイブリッド）Cloud Serviceの設定 {#cloudserviceconfiguration}
+### Dynamic Media（DM ハイブリッド）クラウドサービス設定 {#cloudserviceconfiguration}
 
 <table>
  <tbody>
@@ -102,7 +102,7 @@ ht-degree: 33%
  </tbody>
 </table>
 
-### Dynamic Media - YouTubeCloud Service設定  {#youtubecloudserviceconfiguration}
+### Dynamic Media - YouTube クラウドサービス設定  {#youtubecloudserviceconfiguration}
 
 <table>
  <tbody>
@@ -116,7 +116,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.古い場所<br /> 3からすべてのチャネルをコピーするなど、新しいTouchUI（<code>/conf</code>の）を使用してYouTube設定を作成します。 すべての動画を YouTube に公開しなおします。</p> <p>このワークフローは、新しいYouTube URLを生成します。 TouchUI YouTube設定を作成する前に非公開にしない場合、再作成されたチャネルが再度公開される可能性がある場合は、「プロパティ」の下に複数のYouTube URLが表示されます。 この機能は、「プロパティ」の下に役に立たないURLが表示されることを意味します。</p> </td>
+   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.古い場所からすべてのチャネルをコピーするなど、新規のタッチ UI を使用して（<code>/conf</code> から） YouTube 設定を作成します。<br /> 3.すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しい YouTube URL が生成されます。新規のタッチ UI YouTube 設定を作成する前に URL を非公開にしなければ、プロパティの下に複数の YouTube URL が表示されます。これは、再作成されたチャネルは機会があれば再度公開されるためです。つまり、プロパティの下に不要な URL が表示されていることになります。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
@@ -139,7 +139,7 @@ ht-degree: 33%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>ユーザーは以下の移行スクリプトを実行できます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、設定をExperience ManagerUIで編集し、変更内容を新しい場所に保存することもできます。</p> </td>
+   <td><p>ユーザーは以下の移行スクリプトを実行できます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、Experience Manager UI で設定を編集すると、変更内容が新しい場所に保存されます。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
