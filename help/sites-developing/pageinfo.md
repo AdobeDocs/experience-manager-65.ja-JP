@@ -1,8 +1,8 @@
 ---
 title: JSON 形式のページ情報の取得
-seo-title: JSON 形式のページ情報の取得
+seo-title: Obtaining Page Information in JSON Format
 description: ページ情報を取得するには、JSON 形式のページメタデータを取得するための要求を PageInfo サーブレットに送信します
-seo-description: ページ情報を取得するには、JSON 形式のページメタデータを取得するための要求を PageInfo サーブレットに送信します
+seo-description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
 uuid: fb4f56b9-55e2-4622-a0d1-a86d6f2cce86
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 505bf3e3-ce3c-40aa-9619-e1b9f6634deb
 exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 81%
+workflow-type: ht
+source-wordcount: '943'
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 81%
 
 ページ情報を取得するには、JSON 形式のページメタデータを取得するための要求を PageInfo サーブレットに送信します。
 
-PageInfoサーブレットは、リポジトリ内のリソースに関する情報を返します。 このサーブレットはURL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json`にバインドされ、 `path`パラメーターを使用してリソースを識別します。 次の例のURLは、`/content/we-retail/us/en`ノードに関する情報を返します。
+PageInfo サーブレットは、リポジトリ内のリソースに関する情報を返します。このサーブレットは、URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` にバインドされており、`path` パラメーターを使用してリソースを識別します。例えば、次の URL は、`/content/we-retail/us/en` ノードに関する情報を返します。
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -36,12 +36,11 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* AEM の外部の他のチャネルおよびタッチポイント
 
 >
->
-その場合は、[コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)のドキュメントを参照してください。
+>[コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)のドキュメントを参照してください。
 
 ## ページ情報プロバイダー {#page-information-providers}
 
-ページコンポーネントは、ページメタデータを生成する 1 つ以上の `com.day.cq.wcm.api.PageInfoProvider` サービスに関連付けることができます。PageInfo サーブレットは、各 PageInfoProvider サービスを呼び出して、メタデータを集約します。
+ページコンポーネントは、ページメタデータを生成する 1 つまたは複数の `com.day.cq.wcm.api.PageInfoProvider` サービスに関連付けることができます。PageInfo サーブレットは、各 PageInfoProvider サービスを呼び出して、メタデータを集約します。
 
 1. HTTP クライアントは、ページの URL を含む要求を PageInfo サーブレットに送信します。
 1. PageInfo サーブレットは、ページをレンダリングするコンポーネントを検出します。
@@ -54,19 +53,19 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >
 >JSON 形式の情報のリストを更新するには、PageInfoProvider と同様に ListInfoProvider を使用してください。（[Web サイト管理コンソールのカスタマイズ](/help/sites-developing/customizing-siteadmin.md)を参照。）
 
-## デフォルトのページ情報プロバイダー  {#default-page-information-providers}
+## デフォルトのページ情報プロバイダー {#default-page-information-providers}
 
-`/libs/foundation/components/page`コンポーネントは、次のPageInfoProviderサービスに関連付けられています。
+次の PageInfoProvider サービスには、`/libs/foundation/components/page` コンポーネントが関連付けられています。
 
 * **デフォルトのページステータスプロバイダー：**&#x200B;ページステータスに関する情報。例えば、ページのロックの有無、ページがアクティブワークフローのペイロードであるかどうか、ページで使用できるワークフローなど。
 * **ライブ関係情報プロバイダー：**&#x200B;マルチサイト管理（MSM）に関する情報。例えば、ページがブループリントの一部であるかどうか、ページがライブコピーであるかどうかなど。
-* **コンテンツ言語サーブレット：**&#x200B;現在のページの言語と、ページが表示される際の各言語に関する情報。
-* **ワークフローステータスプロバイダー：**&#x200B;ペイロードとしてのページを持つ実行中のワークフローに関するステータス情報。
-* **ワークフローパッケージ情報プロバイダー：**&#x200B;リポジトリに保存される各ワークフローパッケージに関する情報と、各パッケージに現在のリソースが含まれているかどうか。
+* **コンテンツ言語サーブレット：**&#x200B;現在のページの言語と、そのページで使用できる各言語に関する情報。
+* **ワークフローステータスプロバイダー：**&#x200B;このページをペイロードとして持つ実行中のワークフローに関するステータス情報。
+* **ワークフローパッケージ情報プロバイダー：**&#x200B;リポジトリに格納された各ワークフローパッケージに関する情報と、各パッケージに現在のリソースが含まれているかどうかについての情報。
 * **エミュレーター情報プロバイダー：**&#x200B;このリソースで使用可能なモバイルデバイスエミュレーターに関する情報。ページコンポーネントがモバイルページをレンダリングしない場合、エミュレーターは使用できません。
 * **注釈情報プロバイダー：**&#x200B;ページ上の注釈に関する情報。
 
-例えば、PageInfoサーブレットは、`/content/we-retail/us/en`ノードに対して次のJSON応答を返します。
+例えば、PageInfo サーブレットは、`/content/we-retail/us/en` ノードに関して次の JSON 応答を返します。
 
 ```
 {
@@ -473,14 +472,13 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 ## ワークフローパッケージ情報のフィルター処理 {#filtering-workflow-package-information}
 
-Day CQ WCM Workflow Package Info Providerサービスを設定して、目的のワークフローパッケージに関する情報のみを返すようにします。 デフォルトでは、Workflow Package Info Providerサービスは、リポジトリ内のすべてのワークフローパッケージに関する情報を返します。 ワークフローパッケージのサブセットを反復すると、使用されるサーバーリソースが減少します。
+関心のあるワークフローパッケージに関する情報のみを返すように、Day CQ WCM ワークフローパッケージ情報プロバイダーのサービスを設定します。デフォルトでは、ワークフローパッケージ情報プロバイダーのサービスは、リポジトリ内のすべてのワークフローパッケージに関する情報を返します。ワークフローパッケージのサブセットを反復すると、使用できるサーバーリソースが減少します。
 
 >[!NOTE]
 >
 >サイドキックの「ワークフロー」タブでは、PageInfo サーブレットを使用して、ワークフローパッケージのリストが取得されます。このリストから、現在のページを追加するパッケージを選択できます。このリストは、ユーザーが作成したフィルターの影響を受けます。
 
-
-サービスのIDは`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`です。 フィルターを作成するには、`workflowpackageinfoprovider.filter` プロパティの値を指定します。
+サービスの ID は、`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider` です。フィルターを作成するには、`workflowpackageinfoprovider.filter` プロパティの値を指定します。
 
 プロパティの値の前には、+ または - の文字があり、その後にパッケージのパスが続きます。
 
@@ -519,7 +517,7 @@ Day CQ WCM Workflow Package Info Providerサービスを設定して、目的の
 
 1. プロジェクトソースで AEM アプリケーションの config フォルダーを探すか、作成します。
 
-   例えば、コンテンツパッケージMavenプラグインのマルチモジュールアーキタイプを使用してプロジェクトを作成した場合、フォルダーパスは`<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config`になります。
+   例えば、マルチモジュールアーキタイプのコンテンツパッケージ Maven プラグインを使用してプロジェクトを作成した場合、フォルダーのパスは、`<projectroot>/content/src/ for example content/src/main/content/jcr_root/apps/<appname>/config` になります。
 1. config フォルダー内に com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider.xml という名前のテキストファイルを作成します。
 1. このファイルに次のテキストをコピーします。
 
@@ -531,26 +529,26 @@ Day CQ WCM Workflow Package Info Providerサービスを設定して、目的の
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. `workflowpackageinfoprovider.filter`プロパティを囲む角括弧(`[]`)内に、次の例のようなフィルター値のコンマ区切りリストを入力します。
+1. `workflowpackageinfoprovider.filter` プロパティを囲む角かっこ（`[]`）内に、次の例のように、フィルター値をコンマで区切ったリストを入力します。
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
 1. ファイルを保存します。
 
-## ページ情報プロバイダーの作成  {#creating-a-page-information-provider}
+## ページ情報プロバイダーの作成 {#creating-a-page-information-provider}
 
 アプリケーションが簡単に取得可能なページメタデータを追加するためにカスタムページ情報プロバイダーサービスを作成します。
 
 1. `com.day.cq.wcm.api.PageInfoProvider` インターフェイスを実装します。
 1. クラスをバンドルし、OSGi サービスとしてデプロイします。
-1. アプリケーションのページコンポーネントを作成します。`sling:resourceSuperType`プロパティの値として`foundation/components/page`を使用します。
+1. アプリケーションのページコンポーネントを作成します。`foundation/components/page` を `sling:resourceSuperType` プロパティの値として使用します。
 
-1. `cq:infoProviders`という名前のコンポーネントノードの下にノードを追加します。
-1. `cq:infoProviders` ノードの下に、PageInfoProvider サービスのノードを追加します。ノードには、任意の名前を指定できます。
+1. `cq:infoProviders` という名前のコンポーネントノードにノードを追加します。
+1. `cq:infoProviders` ノードに、PageInfoProvider サービスのノードを追加します。ノードには、任意の名前を指定できます。
 1. PageInfoProvider ノードに次のプロパティを追加します。
 
    * 名前：className
-   * タイプ：String
+   * タイプ：文字列
    * 値：PageInfoProvider サービスの PID
 
 アプリケーションページコンポーネントを `sling:resourceType` として使用するリソースの場合、PageInfo サーブレットは、デフォルトの PageInfoProvider メタデータに加えて、カスタム PageInfoProvider メタデータも返します。
@@ -608,7 +606,7 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
-PageUrlInfoProviderサービスは、`/content/we-retail/us/en`ノードに関する次のデータを返します。
+PageUrlInfoProvider サービスは、`/content/we-retail/us/en` ノードの以下のデータを返します。
 
 ```xml
 "URLs": {
