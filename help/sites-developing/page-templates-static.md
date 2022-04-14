@@ -1,8 +1,8 @@
 ---
 title: ページテンプレート - 静的
-seo-title: ページテンプレート - 静的
+seo-title: Page Templates - Static
 description: テンプレートはページの作成に使用され、選択した範囲内でどのコンポーネントが使用可能かを定義します
-seo-description: テンプレートはページの作成に使用され、選択した範囲内でどのコンポーネントが使用可能かを定義します
+seo-description: A Template is used to create a Page and defines which components can be used within the selected scope
 uuid: 7a473c19-9565-476e-9e54-ab179da04d71
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: cfd90e8f-9b9b-4d0b-be31-828469b961de
 docset: aem65
 exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 67%
+workflow-type: ht
+source-wordcount: '1626'
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->[編集可能](/help/sites-developing/page-templates-editable.md) なテンプレートも使用でき、最も柔軟性が高く、最新の機能を利用するために推奨されるタイプのテンプレートです。
+>[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md) も使用できますが、これは最も柔軟性が高く、最新の機能を実現するために推奨されるタイプのテンプレートです。
 
 ## テンプレートのプロパティおよび子ノード {#properties-and-child-nodes-of-a-template}
 
@@ -43,9 +43,9 @@ ht-degree: 67%
    <td><strong>説明 <br /> </strong></td>
   </tr>
   <tr>
-   <td>.<br /> </td>
+   <td>. <br /> </td>
    <td> cq:Template</td>
-   <td>現在のテンプレート。 テンプレートのノードタイプは cq:Template です。<br /> </td>
+   <td>現在のテンプレートです。 テンプレートのノードタイプは cq:Template です。<br /> </td>
   </tr>
   <tr>
    <td> allowedChildren </td>
@@ -55,7 +55,7 @@ ht-degree: 67%
   <tr>
    <td> allowedParents</td>
    <td> String[]</td>
-   <td>このテンプレートの親として許可されているテンプレートのパス。<br /> </td>
+   <td>このテンプレートの親となることが許可されているテンプレートのパス。<br /> </td>
   </tr>
   <tr>
    <td> allowedPaths</td>
@@ -80,7 +80,7 @@ ht-degree: 67%
   <tr>
    <td> ranking</td>
    <td> Long</td>
-   <td>テンプレートのランク。 ユーザーインターフェイスにテンプレートを表示する際に使用します。<br /> </td>
+   <td>テンプレートのランクです。ユーザーインターフェイスにテンプレートを表示する際に使用します。<br /> </td>
   </tr>
   <tr>
    <td> jcr:content</td>
@@ -102,18 +102,18 @@ ht-degree: 67%
 
 テンプレートはページの基礎です。
 
-ページを作成するには、テンプレート(node-tree `/apps/<myapp>/template/<mytemplate>`)をサイトツリー内の対応する位置にコピーする必要があります。これは、**「Webサイト」**&#x200B;タブを使用してページを作成した場合に発生することです。
+ページを作成するには、テンプレート（ノードツリー `/apps/<myapp>/template/<mytemplate>`）をサイトツリーの対応する位置にコピーする必要があります。「**Web サイト**」タブを使用してページを作成する場合も、この処理がおこなわれています。
 
 このコピー処理により、ページには、初期コンテンツ（通常はトップレベルコンテンツのみ）と sling:resourceType プロパティ、ページのレンダリングに使用するページコンポーネントのパス（子ノード jcr:content に含まれるすべてのもの）が与えられます。
 
-## テンプレートの構造  {#how-templates-are-structured}
+## テンプレートの構造 {#how-templates-are-structured}
 
 以下の 2 つの側面について考慮する必要があります。
 
 * テンプレート自体の構造
 * テンプレート使用時に作成されるコンテンツの構造
 
-### テンプレートの構造  {#the-structure-of-a-template}
+### テンプレートの構造 {#the-structure-of-a-template}
 
 テンプレートは **cq:Template** タイプのノードの下に作成されます。
 
@@ -134,11 +134,11 @@ ht-degree: 67%
 
 ### テンプレートによって作成されるコンテンツ {#the-content-produced-by-a-template}
 
-テンプレートは、`cq:Page`型のページを作成するために使用されます（前述のように、ページは特別なタイプのコンポーネントです）。 各AEMページには、構造化されたノード`jcr:content`があります。 このスケーリングは：
+テンプレートは、`cq:Page` タイプのページを作成するのに使用します（前述のように、ページは特別なタイプのコンポーネントです）。各 AEM ページには構造化ノード `jcr:content` があります。この特徴は次のとおりです。
 
 * タイプが cq:PageContent である。
 * 定義済みのコンテンツ定義を保持する構造化ノードタイプである。
-* には、コンテンツのレンダリングに使用されるslingスクリプトを保持するコンポーネントを参照するプロパティ`sling:resourceType`があります
+* コンテンツのレンダリングに使用する Sling スクリプトを保持するコンポーネントを参照するための `sling:resourceType` プロパティを持つ。
 
 ### デフォルトテンプレート {#default-templates}
 
@@ -151,7 +151,7 @@ AEM にはそのまま使用できるデフォルトのテンプレートが多�
 | ホームページ | homepage | geometrixx | Geometrixx ホームページテンプレート。 |
 | コンテンツページ | contentpage | geometrixx | Geometrixx コンテンツページテンプレート。 |
 
-#### デフォルトテンプレートの表示  {#displaying-default-templates}
+#### デフォルトテンプレートの表示 {#displaying-default-templates}
 
 リポジトリ内のすべてのテンプレートのリストを確認するには、以下の手順を実行します。
 
@@ -160,58 +160,58 @@ AEM にはそのまま使用できるデフォルトのテンプレートが多�
 1. 「クエリ」タブで、
 1. 「**タイプ**」で、「**XPath**」を選択します。
 
-1. **クエリ**入力フィールドに、次の文字列を入力します。
+1. 「**クエリ**」入力フィールドに次の文字列を入力します。
 //element(*, cq:Template)
 
 1. 「**実行**」をクリックします。結果ボックスにリストが表示されます。
 
 多くの場合、既存のテンプレートを使用して、各自の用途に合わせて新しいテンプレートを開発します。詳しくは、[ページテンプレートの開発](#developing-page-templates)を参照してください。
 
-Webサイトの既存のテンプレートを有効にし、**Webサイト**&#x200B;コンソールから&#x200B;**Webサイト**&#x200B;のすぐ下にページを作成する際に、**ページを作成**&#x200B;ダイアログに表示するには、テンプレートノードのallowedPathsプロパティを次のように設定します。**/content(/.*)?**
+既存のテンプレートを各自の web サイト用に有効にし、**web サイト**&#x200B;コンソールから「**Web サイト**」のすぐ下にページを作成するときに&#x200B;**ページを作成**&#x200B;ダイアログにそのテンプレートを表示する場合は、テンプレートノードの allowedPaths プロパティを次のように設定します。**/content(/.*)?**
 
-## テンプレートデザインの適用方法{#how-template-designs-are-applied}
+## テンプレートデザインの適用方法 {#how-template-designs-are-applied}
 
-UIで[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用してスタイルを定義すると、そのスタイルが定義されているコンテンツノードの正確なパスでデザインが保持されます。
+UI でスタイルが[デザインモード](/help/sites-authoring/default-components-designmode.md)を使用して定義されている場合、デザインは、スタイルが定義されているコンテンツノードの正確なパスに保持されます。
 
 >[!CAUTION]
 >
->Adobeは、[デザインモード](/help/sites-authoring/default-components-designmode.md)を介してのみデザインを適用することをお勧めします。
+>Adobeでは、[デザインモード](/help/sites-authoring/default-components-designmode.md) を介してのみデザインを適用することをお勧めします。
 >
->例えば、CRX DE でデザインを変更することはベストプラクティスではなく、そのようなデザインのアプリケーションは、意図した動作とは異なることがあります。
+>例えば、CRX DE でデザインを変更することはベストプラクティスではなく、そのようなデザインの適用は、意図したビヘイビアーとは異なることがあります。
 
-デザインがデザインモードを使用してのみ適用される場合、次の節（[デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)、[デシジョンツリー](/help/sites-developing/page-templates-static.md#decision-tree)、[例](/help/sites-developing/page-templates-static.md#example)）は適用されません。
+デザインがデザインモードを使用してのみ適用される場合、次のセクションは、 [デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)、[デシジョンツリー](/help/sites-developing/page-templates-static.md#decision-tree)、および[例](/help/sites-developing/page-templates-static.md#example)は適用されません。
 
-### 設計パスの解像度{#design-path-resolution}
+### デザインパスの解像度 {#design-path-resolution}
 
-静的テンプレートに基づいてコンテンツをレンダリングする場合、AEMは、コンテンツ階層のトラバーサルに基づいて、最も関連性の高いデザインとスタイルをコンテンツに適用しようとします。
+静的テンプレートに基づいてコンテンツをレンダリングする場合、AEM は コンテンツ階層のトラバーサルに基づいて、最も関連性の高いデザインとスタイルをコンテンツに適用しようとします。
 
-AEMは、次の順序でコンテンツノードに最も関連するスタイルを決定します。
+AEM は次の順序で、コンテンツノードに最も関連性の高いスタイルを決定します。
 
-* （デザインモードでデザインを定義する場合と同様に）コンテンツノードの完全で正確なパスのデザインがある場合は、そのデザインを使用します。
-* 親のコンテンツノードのデザインがある場合は、そのデザインを使用します。
-* コンテンツノードのパス上にノードのデザインがある場合は、そのデザインを使用します。
+* （デザインモードでデザインが定義されている場合と同様に）コンテンツノードのフルパスと正確なパスのデザインがある場合には、そのデザインを使用します。
+* 親のコンテンツノードにデザインがある場合は、そのデザインを使用します。
+* コンテンツノードのパス上に任意のノードのデザインがある場合は、そのデザインを使用します。
 
-最後の2つのケースで、適用可能なデザインが複数ある場合は、コンテンツノードに最も近いものを使用します。
+最後の 2 つのケースで、適用可能なデザインが複数ある場合は、コンテンツノードに最も近いものを使用します。
 
 ### デシジョンツリー {#decision-tree}
 
-これは、[デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)ロジックをグラフィカルに表したものです。
+これは[デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)を図で表現したものです。
 
 ![design_path_resolution](assets/design_path_resolution.png)
 
 ### 例 {#example}
 
-デザインを任意のノードに適用できる、シンプルなコンテンツ構造を次のように考えます。
+デザインを任意のノードに適用できる場合、シンプルなコンテンツ構造を次のように考えてみます。
 
 `/root/branch/leaf`
 
-次の表に、AEMによるデザインの選択方法を示します。
+次の表に、AEM がデザインを選択する方法を示します。
 
 <table>
  <tbody>
   <tr>
    <td><strong>デザインの検索<br /> </strong></td>
-   <td><strong>デザインは<br /> </strong></td>
+   <td><strong>存在するデザイン<br /> </strong></td>
    <td><strong>選択したデザイン<br /> </strong></td>
    <td><strong>コメント</strong></td>
   </tr>
@@ -220,19 +220,19 @@ AEMは、次の順序でコンテンツノードに最も関連するスタイ�
       </code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> <p><code>leaf</code></p> </td>
    <td><code>leaf</code></td>
-   <td>最も正確な一致は常に取られます。<br /> </td>
+   <td>最も正確に一致するものが常に取得されます。<br /> </td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
    <td><p><code>root</code></p> <p><code>branch</code></p> </td>
    <td><code>branch</code></td>
-   <td>ツリー内の最も近いマッチの下部に戻ります。</td>
+   <td>ツリー下部の最も近いマッチにフォールバックします。</td>
   </tr>
   <tr>
    <td><code>leaf</code></td>
    <td><code>root</code></td>
    <td><code>root</code></td>
-   <td>他のすべてが失敗した場合は、残りの値を取ります。<br /> </td>
+   <td>他のすべてが失敗した場合は、残りのものを取得します。<br /> </td>
   </tr>
   <tr>
    <td><code>branch</code></td>
@@ -259,7 +259,7 @@ AEMは、次の順序でコンテンツノードに最も関連するスタイ�
    <td><p><code>root</code></p> <p><code class="code">leaf
        </code></p> </td>
    <td><code>root</code></td>
-   <td><p>完全一致がない場合は、ツリーの下の方を選択します。</p> <p>これは常に当てはまるが、ツリーの上には特定しすぎる可能性があると仮定します。<br /> </p> </td>
+   <td><p>完全に一致しない場合は、ツリーの 1 つ下のものを選択します。</p> <p>これは常に適用できるが、ツリーの上の方は具体的すぎる可能性があると仮定します。<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -268,7 +268,7 @@ AEMは、次の順序でコンテンツノードに最も関連するスタイ�
 
 AEM ページのテンプレートは、新しいページを作成する際に使用する単なるモデルです。初期コンテンツは必要に応じて増減できます。テンプレートの役割は、編集やレンダリングが可能なように必要なプロパティ（主に sling:resourceType）が設定された、正しい初期ノード構造を作成することです。
 
-### 新しいテンプレートの作成（既存のテンプレートを使用）  {#creating-a-new-template-based-on-an-existing-template}
+### 新しいテンプレートの作成（既存のテンプレートを使用） {#creating-a-new-template-based-on-an-existing-template}
 
 言うまでもなく、新しいテンプレートは完全にゼロから作成することもできますが、多くの場合は、既存のテンプレートをコピーして更新したほうが、時間と労力を節約できます。例えば、Geometrixx 内のテンプレートを使用して作業を開始できます。
 
@@ -286,7 +286,7 @@ AEM ページのテンプレートは、新しいページを作成する際に�
 
    >[!NOTE]
    >
-   >**Webサイト**&#x200B;コンソールから&#x200B;**Webサイト**&#x200B;のすぐ下にページを作成する際に、**ページを作成**&#x200B;ダイアログにテンプレートを表示する場合は、テンプレートノードの`allowedPaths`プロパティを次のように設定します。`/content(/.*)?`
+   >**Web サイト** コンソールから **Web サイト** のすぐ下にページを作成するときに **ページを作成** ダイアログにテンプレートを表示する場合は、 `allowedPaths`テンプレートノードのプロパティを、`/content(/.*)?`に設定します。
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
@@ -313,9 +313,9 @@ AEM ページのテンプレートは、新しいページを作成する際に�
 
 ## 既存のテンプレートを使用可能にする {#making-an-existing-template-available}
 
-この例では、特定のコンテンツパスにテンプレートを使用できるようにする方法を示しています。新しいページを作成する際にページ作成者が使用できるテンプレートは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)で定義されたロジックによって決まります。
+この例では、特定のコンテンツパスにテンプレートを使用できるようにする方法を示しています。ページ作成者が新しいページの作成時に使用できるテンプレートは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)で定義されたロジックによって決まります。
 
-1. CRXDE Lite で、ページに使用するテンプレート（Newsletter テンプレートなど）に移動します。
-1. `allowedPaths`プロパティと、[テンプレートの使用可能性](/help/sites-developing/templates.md#template-availability)に使用する他のプロパティを変更します。 例： `allowedPaths`:`/content/geometrixx-outdoors/[^/]+(/.*)?`は、このテンプレートが`/content/geometrixx-outdoors`以下の任意のパスで許可されることを意味します。
+1. CRXDE Lite で、ページに使用するテンプレート（ニュースレターテンプレートなど）に移動します。
+1. `allowedPaths` プロパティおよび[テンプレートの可用性](/help/sites-developing/templates.md#template-availability)に使用する他のプロパティを変更します。例えば `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` は、このテンプレートが `/content/geometrixx-outdoors` 以下の任意のパスで許可されることを意味します。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
