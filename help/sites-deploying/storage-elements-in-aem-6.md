@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 のストレージ要素
-seo-title: AEM 6.5 のストレージ要素
+seo-title: Storage Elements in AEM 6.5
 description: AEM 6.5 で使用できるノードストレージ実装およびリポジトリのメンテナンス方法について説明します。
-seo-description: AEM 6.5 で使用できるノードストレージ実装およびリポジトリのメンテナンス方法について説明します。
+seo-description: Learn about the node storage implementations available in AEM 6.5 and how to maintain the repository.
 uuid: 3b018830-c42e-48e0-9b6f-cd230b02d914
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 0aa2c22f-32bb-4e50-8328-63ed73c0f19e
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/microkernels-in-aem-6-0
 exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 80%
+workflow-type: ht
+source-wordcount: '714'
+ht-degree: 100%
 
 ---
 
@@ -31,13 +31,13 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
 現在、AEM6 には Tar ストレージと MongoDB ストレージという 2 つのノードストレージ実装があります。
 
-### Tar ストレージ  {#tar-storage}
+### Tar ストレージ {#tar-storage}
 
 #### 新規にインストールした AEM インスタンスと Tar ストレージの実行 {#running-a-freshly-installed-aem-instance-with-tar-storage}
 
 >[!CAUTION]
 >
->セグメントノードストアのPIDがorg.apache.jackrabbit.oakから変更されました。**AEM 6の以前のバージョンのAEM 6.3では、plugins**.segment.SegmentNodeStoreServiceからorg.apache.jackrabbit.oak.segment.SegmentNodeStoreServiceへと変更を加えます。この変更を反映するには、必要な設定を調整してください。
+>セグメントノードストアの PID は、以前のバージョンの AEM 6 の org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreService から、AEM 6.3 では org.apache.jackrabbit.oak.segment.SegmentNodeStoreService に変更されました。この変更が反映されるように、必要な設定を調整してください。
 
 デフォルトでは、AEM 6 は Tar ストレージを使用して、デフォルトの設定オプションによって、ノードおよびバイナリを保存します。ストレージ設定を手動でおこなうには、次の手順に従ってください。
 
@@ -46,7 +46,7 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
 
    `java -jar cq-quickstart-6.jar -unpack`
 
-1. インストールディレクトリに`crx-quickstart\install`という名前のフォルダーを作成します。
+1. インストールディレクトリ内に `crx-quickstart\install` というフォルダーを作成します。
 
 1. 新しく作成したフォルダー内に `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` というファイルを作成します。
 
@@ -69,10 +69,10 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
    `java -jar cq-quickstart-6.jar -unpack`
 
 1. MongoDB がインストールされていること、および `mongod` のインスタンスが実行されていることを確認します。詳しくは、[MongoDB のインストール](https://docs.mongodb.org/manual/installation/)を参照してください。
-1. インストールディレクトリに`crx-quickstart\install`という名前のフォルダーを作成します。
+1. インストールディレクトリ内に `crx-quickstart\install` というフォルダーを作成します。
 1. ノードストアを設定します。使用する設定の名前を持つ設定ファイルを `crx-quickstart\install` ディレクトリに作成します。
 
-   ドキュメントノードストア(AEM MongoDBストレージ実装の基盤)では、`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`というファイルを使用します。
+   ドキュメントノードストア（AEM の MongoDB ストレージ実装の基盤）では、`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg` というファイルを使用します。
 
 1. ファイルを編集し、設定オプションを設定します。以下のオプションが利用できます。
 
@@ -90,14 +90,14 @@ AEM 6 における最も重要な変更点の 1 つは、リポジトリレベ�
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   **`-r`**&#x200B;はバックエンドの実行モードです。 この例では、MongoDB サポートを指定して起動します。
+   **`-r`** はバックエンドの実行モードです。この例では、MongoDB サポートを指定して起動します。
 
 #### Transparent Huge Pages の無効化 {#disabling-transparent-huge-pages}
 
 Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ管理アルゴリズムが使用されます。AEM はきめ細かい読み取りと書き込みを実行しますが、THP は大規模な操作に最適化されています。この理由から、Tar と Mongo の両方のストレージで THP を無効にすることをお勧めします。アルゴリズムを無効にするには、次の手順に従います。
 
-1. 任意のテキストエディターで`/etc/grub.conf`ファイルを開きます。
-1. **grub.conf**&#x200B;ファイルに次の行を追加します。
+1. `/etc/grub.conf` ファイルを任意のテキストエディターで開きます。
+1. **grub.conf** ファイルに次の行を追加します。
 
    ```
    transparent_hugepage=never
@@ -119,13 +119,12 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >
 >さらに、次の資料も参考にできます。
 >
->* Red Hat Linux上のTransparent Huge Pagesに関する詳細は、[記事](https://access.redhat.com/solutions/46111)を参照してください。
->* Linuxのチューニングのヒントについては、[記事](https://helpx.adobe.com/jp/experience-manager/kb/performance-tuning-tips.html)を参照してください。
+>* Red Hat Linux 上の Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
+>* Linux のチューニングのヒントについては、こちらの[記事](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)を参照してください。
 
 >
 
 
-
 ## リポジトリのメンテナンス {#maintaining-the-repository}
 
-リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。 リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンクリーンアップメカニズムは、古いデータをリポジトリから削除してディスク領域を再利用します。 リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。
+リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。リビジョンクリーンアップのメカニズムによって、ディスク領域を再利用するために、リポジトリから古いデータが削除されます。リビジョンクリーンアップについて詳しくは、[リビジョンクリーンアップのページ](/help/sites-deploying/revision-cleanup.md)を参照してください。
