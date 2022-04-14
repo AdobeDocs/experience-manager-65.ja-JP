@@ -1,8 +1,8 @@
 ---
 title: タスクを開く
-seo-title: タスクを開く
+seo-title: Opening a task
 description: AEM Forms アプリケーションでタスクを開く手順。
-seo-description: AEM Forms アプリケーションでタスクを開く手順。
+seo-description: Steps to open a task on your AEM Forms app.
 uuid: 3f543391-a62b-40ef-aa28-59b7f99554f1
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,13 +10,13 @@ topic-tags: forms-app
 discoiquuid: cdce7a6a-2bbf-492f-bf91-5b8f07d02207
 exl-id: 08e267f3-7f90-4e75-aea0-2128e8eb7b30
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '292'
+workflow-type: ht
+source-wordcount: '279'
 ht-degree: 100%
 
 ---
 
-# タスクを開く  {#opening-a-task}
+# タスクを開く {#opening-a-task}
 
 AEM Forms アプリケーションが AEM Forms サーバーと同期されている場合は、自分に割り当てられているタスクを操作することができます。タスクとは、ワークベンチまたは AEM ワークフローエディターで定義されるワークフロー内の手順のことです。
 
@@ -37,7 +37,7 @@ AEM Forms アプリケーションが AEM Forms サーバーと同期されて�
 
 **アプリケーションを開くには**
 
-1. 「**フォーム**」タブの「**アプリケーション**」をタップします。
+1. 「**Forms**」タブの「**アプリケーション**」をタップします。
 
    アプリケーションを選択すると、そのアプリケーションの説明が、アプリケーション名の下に表示されます。説明の後に、そのアプリケーションに関連付けられているユーザーアクションが表示されます。
 
