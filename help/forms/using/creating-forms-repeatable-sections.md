@@ -1,22 +1,22 @@
 ---
 title: 繰り返し可能なセクションを使用したフォームの作成
-seo-title: 繰り返し可能なセクションを使用したフォームの作成
+seo-title: Creating forms with repeatable sections
 description: 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
-seo-description: 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
+seo-description: Repeatable sections are panels that can be dynamically added or removed to a form.
 uuid: c3fa2aa4-a6b4-458e-8534-138e075290b1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: f2abae0a-f7fd-4a39-bd8c-03492ce06fe9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1119'
+ht-degree: 100%
 
 ---
 
-# 繰り返し可能なセクションを使用したフォームの作成  {#creating-forms-with-repeatable-sections}
+# 繰り返し可能なセクションを使用したフォームの作成 {#creating-forms-with-repeatable-sections}
 
 繰り返し可能なセクションとは、フォームに動的に追加または削除できるパネルのことです。
 
@@ -24,17 +24,17 @@ ht-degree: 95%
 
 以下に挙げる方法のいずれかによって、繰り返し可能なパネルを作成できます。
 
-## スクリプトを介したインスタンスマネージャーの使用  {#using-instance-manager-via-scripts-nbsp}
+## スクリプトを介したインスタンスマネージャーの使用 {#using-instance-manager-via-scripts-nbsp}
 
-1. 編集モードで、パネルを選択し、それから ![cmppr](assets/cmppr.png) をタップします。サイドバーのプロパティで「**パネルを繰り返し可能にする**」を有効にします。「**[!UICONTROL 最大値]**」および「**[!UICONTROL 最小値]**」フィールドの値を指定します。
+1. 編集モードで、パネルを選択し、![cmppr](assets/cmppr.png) をタップします。サイドバーのプロパティで「**パネルを繰り返し可能にする**」を有効にします。「**[!UICONTROL 最大値]**」および「**[!UICONTROL 最小値]**」フィールドの値を指定します。
 
-   「最大値」フィールドでは、パネルがそのページ上に表示できる最大の回数を指定します。パネルの表示回数を制限しないように設定するには、「最大値」フイールドに「-1」を指定します。
+   「最大値」フィールドでは、パネルがそのページに表示される最大の回数を指定します。パネルの表示回数を制限しないように設定するには、「最大値」フィールドに「-1」を指定します。
 
-   「最小値」フィールドでは、パネルがそのフォーム上に表示される最小の回数を指定します。最小値フィールドを「0」に設定すると、後で、レンダリング完了後にスクリプトを使用してすべてのインスタンスを削除できます。
+   「最小値」フィールドでは、パネルがそのフォームに表示される最小の回数を指定します。「最小値」フィールドを「0」に設定すると、後で、レンダリング完了後にスクリプトを使用してすべてのインスタンスを削除できます。
 
    >[!NOTE]
    >
-   >繰り返しを許可しないパネルを作成するには、最大値フィールドと最小値フィールドの値を 1 に設定します。アコーディオンレイアウトでは、「最大値」フィールドに「-1」を指定することはできません。この場合、任意の高い数値を入力することで、最大値を制限しない設定と同様の動作を実現します。
+   >繰り返しを許可しないパネルを作成するには、「最大値」フィールドと「最小値」フィールドの値を 1 に設定します。アコーディオンレイアウトでは、「最大値」フィールドに「-1」を指定することはできません。この場合、任意の高い数値を入力することで、最大値を制限しない設定と同様の動作を実現します。
 
 1. パネルの親要素に繰り返しを許可する場合は、繰り返し可能なパネルのインスタンスを管理するために、追加ボタンおよび削除ボタンが親要素に含まれている必要があります。親要素にボタンを挿入し、ボタン上のスクリプトを有効にするには、以下の手順を実行します。
 
@@ -46,8 +46,8 @@ ht-degree: 95%
       1. ルール領域の WHEN で、**クリックされた**&#x200B;ステートを選択します。
       1. THEN で、以下の操作を行います。
 
-         * 「パネルを追加」ボタンを作成するには、「**インスタンスを追加**」を選択し、![toggle-side-panel](assets/toggle-side-panel.png) を使用してパネルをドラッグ＆ドロップするか、「**オブジェクトをドロップまたは次から選択**」を使用して選択します。
-         * 「パネルを削除」ボタンを作成するには、「**インスタンスを削除**」を選択し、![toggle-side-panel](assets/toggle-side-panel.png) を使用してパネルをドラッグ＆ドロップするか、「**オブジェクトをドロップまたは次から選択**」を使用して選択します。
+         * 「パネルを追加」ボタンを作成するには、「**インスタンスを追加**」を選択し、![toggle-side-panel](assets/toggle-side-panel.png) を使用してパネルをドラッグ＆ドロップするか、「**オブジェクトをドロップまたは次から選択**」を使用してパネル選択します。
+         * 「パネルを削除」ボタンを作成するには、「**インスタンスを削除**」を選択し、![toggle-side-panel](assets/toggle-side-panel.png) を使用してパネルをドラッグ＆ドロップするか、「**オブジェクトをドロップまたは次から選択**」を使用してパネル選択します。
 
       フォームオブジェクトと関数の行で、「**コードエディター**」を選択します。「**ルールを編集**」をクリックして、コード領域で以下の操作を行います。
 
@@ -88,27 +88,15 @@ ht-degree: 95%
       >`Panel1.instanceManager.instances[1].textbox.value`
       >
       >
-      >詳しくは、[AEM Forms Java API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63)の「Class: InstanceManager#instances」を参照してください。
+      >詳しくは、[AEM Forms Java API リファレンス](https://adobe.com/go/learn_aemforms_documentation_63_jp)の「Class: InstanceManager#instances」を参照してください。
 
       >[!NOTE]
       >
-      >パネルのすべてのインスタンスがアダプティブフォームから削除された場合、削除されたパネルのインスタンスを追加するには、 _panelName構文を使用してパネルのインスタンスマネージャーを取り込み、削除されたインスタンスを追加するにはインスタンスマネージャーのaddInstance APIを使用します。 例えば、_panelName.addInstance() です。削除されたパネルのインスタンスを 1 つ追加します。
+      >パネルのすべてのインスタンスがアダプティブフォームから削除されているとき、削除されたパネルのインスタンスを 1 つ追加するには、_panelName 構文を使用してパネルのインスタンスマネージャをキャプチャし、インスタンスマネージャの addInstance API を使用して、削除されたインスタンスを追加します。例えば、_panelName.addInstance() です。削除されたパネルのインスタンスを 1 つ追加します。
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-## 親パネルに対するアコーディオンレイアウトの使用 {#using-the-accordion-layout-for-the-parent-panel-nbsp}
+## 親パネルに対するアコーディオンレイアウトの使用  {#using-the-accordion-layout-for-the-parent-panel-nbsp}
 
 パネルには、様々なレイアウトオプションがあります。アコーディオンデザインオプションのレイアウトでは、繰り返し可能なパネルをすぐに使用できます。アコーディオンデザインオプションのレイアウトで繰り返し可能なパネルを使用するには、以下の手順を実行します。
 
@@ -117,7 +105,7 @@ ht-degree: 95%
 
    これで、プラス（+）ボタンと削除（![delete-panel](assets/delete-panel.png)）ボタンを使用して、パネルの追加と削除を行うことができるようになりました。
 
-## フォームテンプレート（XDP／XSD）からのサブフォームの繰り返しの使用 {#using-repeating-subforms-from-form-template-xdp-xsd}
+## フォームテンプレート（XDP／XSD）からのサブフォームの繰り返しの使用  {#using-repeating-subforms-from-form-template-xdp-xsd}
 
 繰り返し可能なサブフォームは、アダプティブフォームの繰り返し可能なパネルに似ています。AEM Forms Designer で繰り返しのサブフォームを作成するには、以下の手順を実行します。
 
@@ -137,11 +125,11 @@ ht-degree: 95%
 
 [ファイルを入手](assets/samplerepeatablesubform.zip)
 
-## XML Schema（XSD）の繰り返し設定の使用 {#using-repeat-settings-of-an-xml-schema-xsd-br}
+## XML スキーマ（XSD）の繰り返し設定の使用  {#using-repeat-settings-of-an-xml-schema-xsd-br}
 
-XML スキーマから、および任意の複合タイプ要素の minOccours および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。「[XML Schema をフォームモデルとして使用する場合のアダプティブフォームの作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)」を参照してください。
+XML スキーマ、または任意の複合タイプエレメントの minOccurs および maxOccurs プロパティから、繰り返し可能なパネルを作成できます。「[XML Schema をフォームモデルとして使用する場合のアダプティブフォームの作成](/help/forms/using/adaptive-form-xml-schema-form-model.md)」を参照してください。
 
-以下のコードでは、`SampleType` パネルで minOccours および maxOccurs プロパティが使用されています。
+以下のコードでは、`SampleType` パネルで minOccurs および maxOccurs プロパティが使用されています。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -185,4 +173,4 @@ XML スキーマから、および任意の複合タイプ要素の minOccours �
 
 >[!NOTE]
 >
->アコーディオンデザインではないレイアウトの場合は、インスタンスの追加と削除を行うには、アダプティブフォームのボタンコンポーネントを使用します。
+>アコーディオンデザインではないレイアウトの場合、インスタンスの追加と削除を行うには、アダプティブフォームのボタンコンポーネントを使用してください。
