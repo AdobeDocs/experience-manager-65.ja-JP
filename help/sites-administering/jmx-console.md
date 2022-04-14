@@ -1,8 +1,8 @@
 ---
 title: JMX コンソールを使用したサーバーリソースの監視
-seo-title: JMX コンソールを使用したサーバーリソースの監視
+seo-title: Monitoring Server Resources Using the JMX Console
 description: JMX コンソールを使用してサーバーリソースを監視する方法について説明します。
-seo-description: JMX コンソールを使用してサーバーリソースを監視する方法について説明します。
+seo-description: Learn how to monitor server resources using the JMX console.
 uuid: 0a28aafe-61b2-472b-8f8f-2cd6540cbfee
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,23 +12,23 @@ discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '4974'
-ht-degree: 48%
+workflow-type: ht
+source-wordcount: '4957'
+ht-degree: 100%
 
 ---
 
 # JMX コンソールを使用したサーバーリソースの監視{#monitoring-server-resources-using-the-jmx-console}
 
-JMXコンソールを使用すると、CRXサーバー上のサービスを監視および管理できます。以降の節では、JMXフレームワークを通じて公開される属性と操作について要約します。
+JMX コンソールを使用すると、CRX サーバー上のサービスを監視および管理できます。以下の節では、JMX フレームワークによって明らかになる属性および操作についてまとめます。
 
-コンソールコントロールの使用方法について詳しくは、[JMXコンソールの使用](#using-the-jmx-console)を参照してください。JMXに関する背景情報については、OracleのWebサイトの[Java Management Extensions(JMX)Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html)のページを参照してください。
+コンソール制御の使用方法について詳しくは、[JMX コンソールの使用](#using-the-jmx-console)を参照してください。JMX の背景情報については、Oracle web サイトの [Java Management Extensions (JMX) Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) ページを参照してください。
 
 JMX コンソールを使用して、MBean を作成し、サービスを管理する方法について詳しくは、[サービスと JMX コンソールの統合](/help/sites-developing/jmx-integration.md)を参照してください。
 
 ## ワークフローのメンテナンス {#workflow-maintenance}
 
-実行中、完了済み、古い、失敗したワークフローインスタンスを管理するための操作。
+実行中、完了済み、期限切れ、または失敗したワークフローインスタンスを管理するための操作です。
 
 * ドメイン：com.adobe.granite.workflow
 * タイプ：メンテナンス
@@ -39,17 +39,17 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 ### 運用 {#operations}
 
-**** listRunningWorkflowsPerModelWorkflowsPerModelWorkflowModelごとに実行中のワークフローインスタンスの数をリストします。
+**listRunningWorkflowsPerModel** ワークフローモデルごとに、実行されているワークフローインスタンスの数をリストします。
 
 * 引数：なし
 * 戻り値：数およびモデル ID の列を含む表形式のデータ
 
-**** listCompletedWorkflowsPerModel各ワークフローモデルに対して完了したワークフローインスタンスの数をリストします。
+**listCompletedWorkflowsPerModel** ワークフローモデルごとに、完了したワークフローインスタンスの数をリストします。
 
 * 引数：なし
 * 戻り値：数およびモデル ID の列を含む表形式のデータ
 
-**** returnWorkflowQueueInfoLists：処理済みで、処理用のキューに格納されているワークフロー項目に関する情報を表示します。
+**returnWorkflowQueueInfo** 処理済み、および処理に向けて待機中のワークフロー項目に関する情報をリストします。
 
 * 引数：なし
 * 戻り値：以下の列を含む表形式のデータ：
@@ -65,7 +65,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * 処理済みのジョブ
    * 待機中のジョブ
 
-**** returnWorkflowJobTopicInfoListsワークフロージョブの処理情報を、トピック別に整理して表示します。
+**returnWorkflowJobTopicInfo** ワークフロージョブの処理情報を、トピックごとにまとめてリストします。
 
 * 引数：なし
 * 戻り値：以下の列を含む表形式のデータ：
@@ -78,28 +78,28 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * 完了したジョブ
    * 処理済みのジョブ
 
-**** returnFailedWorkflowCount失敗したワークフローインスタンスの数を示します。ワークフローモデルを指定して、すべてのワークフローモデルに関する情報を照会または取得できます。
+**returnFailedWorkflowCount** 失敗したワークフローインスタンスの数を表示します。 クエリ対象のワークフローモデルを指定したり、すべてのワークフローモデルの情報を取得したりできます。
 
 * 引数：
 
-   * モデル：問い合わせるモデルの ID。すべてのワークフローモデルについて失敗したワークフローインスタンスの数を確認するには、値を指定しません。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：問い合わせるモデルの ID。すべてのワークフローモデルについて失敗したワークフローインスタンスの数を確認するには、値を指定しません。ID は model ノードのパスで、例は次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：失敗したワークフローインスタンスの数。
 
-**** returnFailedWorkflowCountPerModel各ワークフローモデルで失敗したワークフローインスタンスの数を示します。
+**returnFailedWorkflowCountPerModel** ワークフローモデルごとに、失敗したワークフローインスタンスの数を表示します。
 
 * 引数：なし
 * 戻り値：数およびモデル ID の列を含む表形式のデータ
 
-**** terminateFailedInstancesTerminateワークフローインスタンスが失敗しました。失敗したインスタンスをすべて終了するか、特定のモデルの失敗したインスタンスのみを終了することができます。 オプションで、インスタンスを終了した後で再起動できます。 実際に操作を実行せずに、操作をテストして結果を確認することもできます。
+**terminateFailedInstances** 失敗したワークフローインスタンスを終了します。 失敗したインスタンスをすべて終了するか、特定のモデルの失敗したインスタンスのみを終了するかを指定できます。オプションで、終了後にインスタンスを再開できます。また、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * インスタンスを再起動します。（オプション）インスタンスが終了した後に再開する場合は、値`true`を指定します。 デフォルト値の`false`を指定すると、終了したワークフローインスタンスが再起動されません。
-   * ドライ作動：（オプション）実際に操作を実行せずに操作の結果を表示する場合は、値`true`を指定します。 デフォルト値の`false`を指定すると、操作が実行されます。
-   * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの失敗したインスタンスに操作を適用するには、モデルを指定しないでください。IDはモデルノードへのパスです。次に例を示します。
+   * インスタンスを再開：（オプション） `true` 値を指定して、インスタンスを終了後に再開します。 デフォルト値 `false` では、終了したワークフローインスタンスは再開されません。
+   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
+   * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの失敗したインスタンスに操作を適用するには、モデルを指定しないでください。ID は model ノードのパスで、例は次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -112,12 +112,12 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * 開始コメント
    * ワークフロータイトル
 
-**** retryFailedWorkItemsEttems失敗した作業項目のステップを実行しようとします。失敗したすべての作業項目を再試行するか、特定のワークフローモデルの失敗した作業項目のみを再試行できます。 オプションで、操作をテストし、実際に操作を実行せずに結果を確認できます。
+**retryFailedWorkItems** 失敗した作業項目のステップの実行を試みます。失敗した作業項目をすべて再試行するか、特定のワークフローモデルの失敗した作業項目のみを再試行するかを指定できます。オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * ドライ作動：（オプション）実際に操作を実行せずに操作の結果を表示する場合は、値`true`を指定します。 デフォルト値の`false`を指定すると、操作が実行されます。
-   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルの失敗した作業項目に操作を適用するモデルを指定しない。IDはモデルノードへのパスです。次に例を示します。
+   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
+   * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルの失敗した作業項目に対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
@@ -130,15 +130,15 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * 開始コメント
    * ワークフロータイトル
 
-**** PurgeActiveRemove特定のページのアクティブなワークフローインスタンスを削除します。すべてのモデルのアクティブなインスタンス、または特定のモデルのインスタンスのみをパージできます。 オプションで、操作をテストして、実際に操作を実行せずに結果を確認できます。
+**PurgeActive** 特定の時間が経過したアクティブなワークフローインスタンスを削除します。すべてのモデルのアクティブなインスタンスをパージするか、特定のモデルのインスタンスのみをパージするかを指定できます。オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しない。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルのワークフローインスタンスに対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ワークフローが開始してからの日数：パージするワークフローインスタンスの有効期間（日数）。
-   * ドライ作動：（オプション）実際に操作を実行せずに操作の結果を表示する場合は、値`true`を指定します。 デフォルト値の`false`を指定すると、操作が実行されます。
+   * ドライラン：（オプション） `true` の値を指定して、 実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：以下の列を含む、パージされたアクティブなワークフローインスタンスに関する表形式のデータ：
 
@@ -149,61 +149,61 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * 開始コメント
    * ワークフロータイトル
 
-**** countStaleWorkflowsStaleの古いワークフローインスタンスの数を返します。すべてのワークフローモデルまたは特定のモデルの古いインスタンスの数を取得できます。
+**countStaleWorkflows** 古くなったワークフローインスタンスの数を返します。古くなったインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しない。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルのワークフローインスタンスに対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：古くなったワークフローインスタンスの数。
 
-**** restartStaleWorkflowsRestarts古いワークフローインスタンス。特定のモデルの古いインスタンスをすべて再起動するか、古いインスタンスのみを再起動できます。 実際に操作を実行せずに、操作をテストして結果を確認することもできます。
+**restartStaleWorkflows** 古くなったワークフローインスタンスを再開します古くなったインスタンスをすべて再開するか、特定のモデルの古くなったインスタンスのみを再開するかを指定できます。また、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの古くなったインスタンスに操作を適用するには、モデルを指定しないでください。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの古くなったインスタンスに操作を適用するには、モデルを指定しないでください。ID は model ノードのパスで、例は次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * ドライ作動：（オプション）実際に操作を実行せずに操作の結果を表示する場合は、値`true`を指定します。 デフォルト値の`false`を指定すると、操作が実行されます。
+   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：再開されたワークフローインスタンスのリスト。
 
-**** fetchModelListListすべてのワークフローモデルを一覧表示します。
+**fetchModelList** すべてのワークフローモデルのリストを表示します。
 
 * 引数：なし
 * 戻り値：モデル ID 列とモデル名列を含む、ワークフローモデルを識別する表形式のデータ。
 
-**** countRunningWorkflowsRunning中のワークフローインスタンスの数を返します。すべてのワークフローモデルまたは特定のモデルに対して実行中のインスタンスの数を取得できます。
+**countRunningWorkflows** 実行中のワークフローインスタンスの数を返します。実行中のインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
 * 引数：
 
-   * モデル：（オプション）実行中のインスタンス数が返されるモデルのID。すべてのワークフローモデルの実行中のインスタンス数を返すには、モデルを指定しないでください。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：（オプション）実行中のインスタンスの数を返すモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルの実行中のインスタンスの数が返されます。ID は model ノードのパスで、例えば、次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：実行中のワークフローインスタンスの数。
 
-**** countCompletedWorkflows完了したワークフローインスタンスの数を返します。すべてのワークフローモデルまたは特定のモデルに対して完了したインスタンスの数を取得できます。
+**countCompletedWorkflows** 完了したワークフローインスタンスの数を返します。 完了したインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
 * 引数：
 
-   * モデル：（オプション）完了したインスタンスの数が返されるモデルのID。すべてのワークフローモデルの完了したインスタンスの数を返すには、モデルを指定しないでください。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：（オプション）完了したインスタンスの数を返すモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルの完了したインスタンスの数が返されます。ID は model ノードのパスで、例えば、次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：完了したワークフローインスタンスの数。
 
-**** purgeCompletedRemovesed特定の期間の完了したワークフローのレコードをリポジトリから削除します。ワークフローを大量に使用する場合は、この操作を定期的に使用して、リポジトリのサイズを最小限に抑えます。 すべてのモデルに対して完了したインスタンスをパージするか、特定のモデルに対してインスタンスのみをパージできます。 オプションで、操作をテストして、実際に操作を実行せずに結果を確認できます。
+**purgeCompleted** 特定の期間が経過した完了済みワークフローの記録をリポジトリから削除します。この操作を定期的に使用すると、ワークフローを多用するときにリポジトリのサイズを最小限に抑えることができます。すべてのモデルの完了したインスタンスをパージするか、特定のモデルのインスタンスのみをパージするかを指定できます。オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルのID。すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しない。IDはモデルノードへのパスです。次に例を示します。
+   * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルのワークフローインスタンスに対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
       `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ワークフローが完了してからの日数：ワークフローインスタンスが完了状態になっている日数。
-   * ドライ作動：（オプション）実際に操作を実行せずに操作の結果を表示する場合は、値`true`を指定します。 デフォルト値の`false`を指定すると、操作が実行されます。
+   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：以下の列を含む、パージされた完了済みのワークフローインスタンスに関する表形式のデータ：
 
@@ -223,23 +223,23 @@ CRX リポジトリに関する情報
 
 ### 属性 {#attributes}
 
-**** 名前：JCRリポジトリ実装の名前。読み取り専用。
+**名前** JCR リポジトリ実装の名前。読み取り専用。
 
-**** バージョンリポジトリ実装のバージョン。読み取り専用。
+**バージョン** リポジトリの実装バージョン。 読み取り専用。
 
-**** HomeDirリポジトリが配置されるディレクトリ。デフォルトの場所は&lt;QuickStart_Jar_Location>/crx-quickstart/repositoryです。 読み取り専用。
+**HomeDir** リポジトリが配置されているディレクトリ。 デフォルトの場所は、＜QuickStart_Jar_Location＞／crx-quickstart／repository です。読み取り専用。
 
-**** CustomerNameソフトウェアライセンスが発行される顧客の名前。読み取り専用。
+**CustomerName** ソフトウェアライセンスの発行対象である顧客の名前。読み取り専用。
 
-**** LicenseKeyリポジトリのこのインストールに使用する一意のライセンスキー。読み取り専用。
+**LicenseKey** リポジトリのこのインストールの一意なライセンスキー。読み取り専用。
 
-**** AvailableDiskSpaceリポジトリのこのインスタンスで使用可能なディスク領域(MB)。読み取り専用。
+**AvailableDiskSpace** リポジトリのこのインスタンスで使用可能なディスク容量（メガバイト単位）。読み取り専用。
 
-**** MaximumNumberOfOpenFiles一度に開くことができるファイルの数。読み取り専用。
+**MaximumNumberOfOpenFiles** 一度に開くことのできるファイルの数。読み取り専用。
 
-**** SessionTrackerCrx.debug.sessionsシステム変数の値。trueは、デバッグセッションを示します。 falseは、通常のセッションを示します。 読み取り/書き込み。
+**SessionTracker** crx.debug.sessions システム変数の値。 true は、デバッグセッションを示します。 false は通常のセッションを示します。 読み取り／書き込み。
 
-**** 記述子：リポジトリプロパティを表すキーと値のペアのセット。すべてのプロパティは読み取り専用です。
+**Descriptors** リポジトリのプロパティを表すキーと値のペア。すべてのプロパティは読み取り専用です。
 
 <table>
  <tbody>
@@ -295,7 +295,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>query.jcrscore</td>
-   <td><p>trueは、フルテキスト検索を実行するjcrfn:contains（XPath内）関数またはCONTAINS（SQL内）関数を含むXPathおよびSQLクエリで、jcr:score疑似プロパティが使用可能であることを示します。</p> </td>
+   <td><p>true は、フルテキスト検索を実行するために jcrfn:contains 関数（XPath の場合）または CONTAINS 関数（SQL の場合）を含む XPath クエリおよび SQL クエリで jcr:score 疑似プロパティが使用できることを示します。</p> </td>
   </tr>
   <tr>
    <td>option.simple.versioning.supported</td>
@@ -371,7 +371,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>ノードタイプの継承に関するリポジトリサポートのレベルを示します。以下の値が指定可能です。</p> <p>node.type.management.inheritance.minimal：プライマリノードタイプの登録は、nt:base のみをスーパータイプとして持つものに限られます。mixin ノードタイプの登録は、スーパータイプがないものに限られます。</p> <p>node.type.management.inheritance.single:プライマリノードタイプの登録は、スーパータイプが1つのものに限られます。mixinノードタイプの登録は、スーパータイプが1つ以上のものに限られます。</p> <p><br /> node.type.management.inheritance.multiple:プライマリノードタイプは、1つ以上のスーパータイプに登録できます。Mixinノードタイプは、0個以上のスーパータイプで登録できます。</p> </td>
+   <td><p>ノードタイプの継承に関するリポジトリサポートのレベルを示します。以下の値が指定可能です。</p> <p>node.type.management.inheritance.minimal：プライマリノードタイプの登録は、nt:base のみをスーパータイプとして持つものに限られます。mixin ノードタイプの登録は、スーパータイプがないものに限られます。</p> <p>node.type.management.inheritance.single：プライマリノードタイプの登録は、スーパータイプが 1 つのものに限られます。mixin ノードタイプの登録は、スーパータイプが 1 つ以下のものに限られます。</p> <p><br /> node.type.management.inheritance.multiple：プライマリノードタイプは、1 つ以上のスーパータイプに登録できます。mixin ノードタイプは、0 個以上のスーパータイプに登録できます。</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
@@ -391,7 +391,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.property.types</td>
-   <td>登録済みのノードタイプが指定できるプロパティタイプを表すjavax.jcr.PropertyType定数の配列。長さ0の配列は、登録されたノードタイプがプロパティ定義を指定できないことを示します。プロパティの型は、STRING、URI、BOOLEAN、LONG、DOUBLE、DECIMAL、BINARY、DATE、NAME、PATH、WEAKREFERENCE、REFERENCE、UNDEFINED（サポートされている場合）です。</td>
+   <td>登録済みのノードタイプが指定可能なプロパティタイプを表す javax.jcr.PropertyType 定数の配列。長さがゼロの配列は、登録済みのノードタイプがプロパティ定義を指定できないことを示します。プロパティタイプは、STRING、URI、BOOLEAN、LONG、DOUBLE、DECIMAL、BINARY、DATE、NAME、PATH、WEAKREFERENCE、REFERENCE および UNDEFINED（サポートされている場合）です。</td>
   </tr>
   <tr>
    <td>node.type.management.orderable.child.nodes.supported</td>
@@ -472,7 +472,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.activities.supported</td>
-   <td>trueは、リポジトリがアクティビティをサポートしていることを示します。アクティビティは、別のワークスペースに結合されるワークスペースで実行される一連の変更です。</td>
+   <td>true は、リポジトリがアクティビティをサポートしていることを示します。アクティビティとは、別のワークスペースに統合されるワークスペースで実行される一連の変更のことです。</td>
   </tr>
   <tr>
    <td>node.type.management.multivalued.properties.supported</td>
@@ -489,21 +489,21 @@ CRX リポジトリに関する情報
  </tbody>
 </table>
 
-**** WorkspaceNamesリポジトリ内のワークスペースの名前。読み取り専用。
+**WorkspaceNames** リポジトリ内のワークスペースの名前。読み取り専用。
 
-**** DataStoreGarbageCollectionDelay10ノードごとにガベージコレクションがスリープする時間（ミリ秒）。読み取り/書き込み。
+**DataStoreGarbageCollectionDelay** 10 番目のノードごとにスキャンした後、ガベージコレクションがスリープする時間をミリ秒で指定します。読み取り／書き込み。
 
-**** BackupDelayバックアッププロセスが、バックアップの各ステップの間にスリープ状態になる時間（ミリ秒）。読み取り/書き込み。
+**BackupDelay** バックアップの各ステップ間でバックアッププロセスがスリープする時間（ミリ秒）です。読み取り／書き込み。
 
-**** BackupInProgressA値がtrueの場合、バックアッププロセスが実行されています。読み取り専用。
+**BackupInProgress** true の値がバックアップ処理が実行されていることを示します 。読み取り専用。
 
-**** BackupProgress現在のバックアップに対して、バックアップされたすべてのファイルの割合。読み取り専用。
+**BackupProgress** 現在のバックアップについて、全ファイルのバックアップが完了した割合。読み取り専用。
 
-**** CurrentBackupTarget現在のバックアップの場合は、バックアップファイルが格納されるZIPファイル。バックアップが進行中でない場合は、値は表示されません。 読み取り専用。
+**CurrentBackupTarget** 現在のバックアップの場合、バックアップファイルが保存されている ZIP ファイルです。バックアップが進行中でない場合は、値は表示されません。読み取り専用。
 
-**** BackupWasSuccessfulA値がtrueの場合、現在のバックアップ中にエラーが発生していないか、進行中のバックアップがありません。falseは、現在のバックアップ中にエラーが発生したことを示します。 読み取り専用。
+**BackupWasSuccessful** 値が true の場合、現在のバックアップ中にエラーが発生していないか、処理中のバックアップがありません。false は、現在のバックアップ中にエラーが発生したことを示します。 読み取り専用。
 
-**** BackupResult現在のバックアップのステータス。次の値を指定できます。
+**BackupResult** 現在のバックアップのステータス。 次の値を指定できます。
 
 * バックアップ中：バックアップが現在実行中です。
 * バックアップキャンセル：バックアップがキャンセルされました。
@@ -513,23 +513,23 @@ CRX リポジトリに関する情報
 
 読み取り専用。
 
-**** TarOptimizationRunningSince現在のTARファイル最適化プロセスが開始された時刻。読み取り専用。
+**TarOptimizationRunningSince** 現在の TAR ファイル最適化プロセスの開始時刻。読み取り専用。
 
-**** TarOptimizationDelay TAR最適化プロセスがプロセスの各ステップ間でスリープ状態になる時間（ミリ秒）。読み取り/書き込み。
+**TarOptimizationDelay** TAR 最適化プロセスの各ステップの合間にプロセスがスリープ状態になる時間（ミリ秒単位）。読み取り／書き込み。
 
-**** ClusterPropertiesクラスターのプロパティと値を表すキーと値のペアのセット。表の各行は、クラスターのプロパティを表します。 読み取り専用。
+**ClusterProperties** クラスターのプロパティと値を表すキーと値のペアのセット。テーブル内の各行にクラスタープロパティが 1 つずつ表示されます。読み取り専用。
 
-**** ClusterNodesリポジトリクラスターのメンバー。
+**ClusterNodes** リポジトリクラスターのメンバー。
 
-**** ClusterId：このリポジトリクラスターの識別子。読み取り専用。
+**ClusterId** このリポジトリクラスターの識別子。読み取り専用。
 
-**** ClusterMasterIdこのリポジトリクラスターのマスターノードの識別子。読み取り専用。
+**ClusterMasterId** このリポジトリクラスターのマスターノードの識別子。読み取り専用。
 
-**** ClusterNodeIdリポジトリクラスターのこのノードの識別子。読み取り専用。
+**ClusterNodeId** リポジトリクラスターのこのノードの識別子。読み取り専用。
 
-### 運用 {#operations-1}
+### 操作 {#operations-1}
 
-**** createWorkspaceこのリポジトリにワークスペースを作成します。
+**createWorkspace** このリポジトリにワークスペースを作成します。
 
 * 引数：
 
@@ -537,92 +537,92 @@ CRX リポジトリに関する情報
 
 * 戻り値：なし
 
-**** runDataStoreGarbageCollectionリポジトリノードでガベージコレクションを実行します。
+**runDataStoreGarbageCollection**&#x200B;リポジトリノードでガベージコレクションを実行します。
 
 * 引数：
 
-   * 削除：未使用のリポジトリ項目を削除するかどうかを示すBoolean値です。値がtrueの場合、未使用のノードおよびプロパティを削除します。値がfalseの場合、すべてのノードがスキャンされますが、削除されません。
+   * delete：未使用のリポジトリ項目を削除するかどうかを示す Boolean 値。true の値を指定すると、未使用のノードおよびプロパティが削除されます。false の値を指定すると、すべてのノードがスキャンされますが、何も削除されません。
 
 * 戻り値：なし
 
-**** stopDataStoreGarbageCollection実行中のデータストアのガベージコレクションを停止します。
+**stopDataStoreGarbageCollection** 実行中のデータストアのガベージコレクションを停止します。
 
 * 引数：なし
 * 戻り値：現在のステータスの文字列表現
 
-**** startBackupBackupsは、リポジトリデータをZIPファイルに格納します。
+**startBackup** リポジトリデータを ZIP ファイルにバックアップします。
 
 * 引数：
 
-   * `target`:（オプション） `String` リポジトリデータをアーカイブするZIPファイルまたはディレクトリの名前を表す値。ZIPファイルを使用するには、ファイル名拡張子ZIPを含めます。 ディレクトリを使用するには、ファイル名拡張子を含めません。
+   * `target`：（任意）リポジトリデータをアーカイブする ZIP ファイルまたはディレクトリの名前を表す `String` 値。ZIP ファイルを使用するには、ZIP ファイル名の拡張子を含めます。ディレクトリを使用する場合は、ファイル名の拡張子を含めません。
 
       増分バックアップを実行するには、以前にバックアップに使用したディレクトリを指定します。
 
-      絶対パスまたは相対パスを指定できます。 相対パスは、crx-quickstartディレクトリの親に対する相対パスです。
+      絶対パスまたは相対パスを指定できます。 相対パスは、crx-quickstart ディレクトリの親を基準とした相対パスです。
 
-      値を指定しない場合は、デフォルト値の`backup-currentdate.zip`が使用されます。`currentdate`は`yyyyMMdd-HHmm`の形式です。
+      値を指定しない場合、デフォルト値は `backup-currentdate.zip` が使用され、`currentdate` の形式は `yyyyMMdd-HHmm` となります。
 
 * 戻り値：なし
 
-**** cancelBackupStops現在のバックアッププロセスを停止し、データのアーカイブ用にプロセスが作成した一時アーカイブを削除します。
+**cancelBackup** 現在のバックアッププロセスを停止して、データのアーカイブ用にプロセスによって作成された一時アーカイブを削除します。
 
 * 引数：なし
 * 戻り値：なし
 
-**** blockRepositoryWritesBlocksはリポジトリデータに変更を加えます。すべてのリポジトリバックアップリスナーにブロックの通知が送信されます。
+**blockRepositoryWrites**&#x200B;リポジトリデータに対する変更をブロックします。 すべてのリポジトリバックアップリスナーに、ブロックが通知されます。
 
 * 引数：なし
 * 戻り値：なし
 
-**** unblockRepositoryWritesRemoveブロックをリポジトリから削除します。すべてのリポジトリバックアップリスナーに、ブロックの削除が通知されます。
+**unblockRepositoryWrites**&#x200B;リポジトリからブロックを削除します。 すべてのリポジトリバックアップリスナーに、ブロックの削除が通知されます。
 
 * 引数：なし
 * 戻り値：なし
 
-**** startTarOptimizationTarOptimizationDelayのデフォルト値を使用してTARファイル最適化プロセスを開始します。
+**startTarOptimization** tarOptimizationDelay のデフォルト値を使用して、TAR ファイルの最適化プロセスを開始します。
 
 * 引数：なし
 * 戻り値：なし
 
-**** stopTarOptimizationTarファイルの最適化を停止します。
+**stopTarOptimization** TAR ファイルの最適化を停止します。
 
 * 引数：なし
 * 戻り値：なし
 
-**** tarIndexMergeMergeすべてのTARセットの上位のインデックスファイルを結合します。上位のインデックスファイルは、異なるメジャーバージョンのファイルです。 例えば、次のファイルがindex_3_1.tarファイルにマージされます。index_1_1.tar、index_2_0.tar、index_3_0.tar。 結合されたファイルが削除されます（前の例では、index_1_1.tar、index_2_0.tar、index_3_0.tarが削除されます）。
+**tarIndexMerge** すべての TAR セットにおける上位のインデックスファイルを結合します。上位のインデックスファイルは、複数のメジャーバージョンのファイルです。例えば、index_1_1.tar ファイル、index_2_0.tar ファイル、index_3_0.tar ファイルは、index_3_1.tar ファイルに結合されます。結合されたファイルは削除されます（前の例では、index_1_1.tar、index_2_0.tar、index_3_0.tar が削除されます）。
 
 * 引数：
 
-   * `background`:実行中にWebコンソールを使用できるように、操作をバックグラウンドで実行するかどうかを示すBoolean値。値trueは、操作をバックグラウンドで実行します。
+   * `background`：実行中に web コンソールを使用できるように、操作をバックグラウンドで実行するかどうかを示す Boolean 値です。値が true の場合、操作をバックグラウンドで実行します。
 
 * 戻り値：なし
 
-**** becomeClusterMasterSetsこのリポジトリノードをクラスターのマスターノードとして設定します。マスターがまだない場合、このコマンドは現在のマスターインスタンスのリスナーを停止し、現在のノードでマスターリスナーを開始します。 その後、このノードがマスターノードとして設定され、再起動され、クラスター内の他のすべてのノード（マスターによって制御されるノード）がこのインスタンスに接続されます。
+**becomeClusterMaster** このリポジトリノードをクラスターのプライマリノードとして設定します。プライマリに設定されていない場合、このコマンドは現在のプライマリインスタンスのリスナーを停止し、現在のノードのプライマリリスナーを開始します。その後、このノードがプライマリノードとして設定され、再起動されると、クラスター内の他のすべてのノード（プライマリによって制御されるノード）がこのインスタンスに接続します。
 
 * 引数：なし
 * 戻り値：なし
 
-**** joinClusterこのリポジトリを、クラスターマスターによって制御されるノードとしてクラスターに追加します。認証を行うには、ユーザー名とパスワードを指定する必要があります。 接続では、基本認証を使用します。 セキュリティ資格情報は、サーバーに送信される前にbase-64エンコードされます。
+**joinCluster** このリポジトリを、クラスターのプライマリによって制御されるノードとしてクラスターに追加します。認証のためにユーザー名とパスワードを指定する必要があります。接続では基本認証を使用します。セキュリティ認証情報は、サーバーに送信される前に base-64 エンコードされます。
 
 * 引数：
 
-   * `master`：マスターリポジトリノードを実行するコンピューターの IP アドレスまたはコンピューター名を表す文字列値。
+   * `master`：プライマリリポジトリノードを実行するコンピューターの IP アドレスまたはコンピューター名を表す文字列値。
    * `username`：クラスターでの認証に使用する名前。
    * `password`：認証に使用するパスワード。
 
 * 戻り値：なし
 
-**** traversalCheckTraversesを実行し、必要に応じて、特定のノードで始まるサブツリー内の不整合を修正します。これについては、永続性マネージャーに関するドキュメントで詳しく説明します。
+**traversalCheck** 特定のノードで始まるサブツリー内の不整合をトラバースし、オプションで修正します。 これについては、永続性マネージャーに関するドキュメントで詳しく説明します。
 
-**** consistencyCheckChecksを実行し、必要に応じてデータストアの整合性を修正します。詳しくは、データストアのドキュメントを参照してください。
+**consistencyCheck** データストアの整合性を確認し、オプションで修正します。 これについては、データストアに関するドキュメントで詳しく説明します。
 
-## リポジトリ統計(TimeSeries) {#repository-statistics-timeseries}
+## リポジトリ統計（TimeSeries） {#repository-statistics-timeseries}
 
 `org.apache.jackrabbit.api.stats.RepositoryStatistics` で定義される、各統計タイプの TimeSeries フィールドの値。
 
-* ドメイン: `com.adobe.granite`
+* ドメイン：`com.adobe.granite`
 * 型：`TimeSeries`
-* 名前：`org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enumクラスの次の値の1つ：
+* 名前：`org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum クラスの、以下のいずれかの値。
 
    * BUNDLE_CACHE_ACCESS_COUNTER
    * BUNDLE_CACHE_MISS_AVERAGE
@@ -653,8 +653,8 @@ CRX リポジトリに関する情報
 
 * ValuePerSecond：過去 1 分間の、1 秒あたりの測定値。読み取り専用。
 * ValuePerMinute：過去 1 時間の、1 分あたりの測定値。読み取り専用。
-* ValuePerHour:先週の1時間あたりの測定値。読み取り専用。
-* ValuePerWeek:過去3年間の週あたりの測定値。読み取り専用。
+* ValuePerHour：過去 1 週間の、1 時間あたりの測定値。読み取り専用。
+* ValuePerWeek：過去 3 年間の、1 週あたりの測定値。読み取り専用。
 
 ## リポジトリクエリ統計 {#repository-query-stats}
 
@@ -665,22 +665,22 @@ CRX リポジトリに関する情報
 
 ### 属性 {#attributes-2}
 
-**** SlowQueriesFormation：完了に最も時間がかかったリポジトリクエリに関する情報。読み取り専用。
+**SlowQueries** 完了までの所要時間が最長だったリポジトリクエリに関する情報。読み取り専用。
 
-**** SlowQueriesQueueSize SlowQuerysリストに含めるクエリの最大数。読み取り／書き込み。
+**SlowQueriesQueueSize** SlowQueries リストに含めるクエリの最大数。読み取り／書き込み。
 
-**** PopularQueries最も多く発生したリポジトリクエリに関する情報。読み取り専用。
+**PopularQueries** 最も多く発生したリポジトリクエリに関する情報。読み取り専用。
 
-**** PopularQueriesQueueSize PopularQueriesリスト内のクエリの最大数。読み取り／書き込み。
+**PopularQueriesQueueSize** Popular Queries リスト内のクエリの最大数。読み取り／書き込み。
 
-### 運用 {#operations-2}
+### 操作 {#operations-2}
 
-**** clearSlowQueriesQueueSlowQuerysリストからすべてのクエリを削除します。
+**clearSlowQueriesQueue** SlowQueries リストからすべてのクエリを削除します。
 
 * 引数：なし
 * 戻り値：なし
 
-**** clearPopularQueriesQueuePopularQueriesリストからすべてのクエリを削除します。
+**clearPopularQueriesQueue** PopularQueries リストからすべてのクエリを削除します。
 
 * 引数：なし
 * 戻り値：なし
@@ -690,58 +690,58 @@ CRX リポジトリに関する情報
 レプリケーションエージェントごとにサービスを監視します。レプリケーションエージェントを作成すると、JMX コンソールにサービスが自動的に表示されます。
 
 * **ドメイン：** com.adobe.granite.replication
-* **型：** agent
-* **名前：** 値なし
-* **プロパティ：** {id=&quot;*名前*&quot;}。Nameはエージェ ** ント名プロパティの値です。
+* **タイプ：**&#x200B;エージェント
+* **名前：**&#x200B;値なし
+* **プロパティ：** {id=&quot;*Name*&quot;}。*Name* は、エージェントの名前プロパティの値です。
 
 ### 属性 {#attributes-3}
 
-**** Idレプリケーションエージェント設定の識別子を表すString値。複数のエージェントが同じ設定を使用できます。 読み取り専用。
+**ID** レプリケーションエージェント設定の識別情報を表す String 値。複数のエージェントが同じ設定を使用できます。 読み取り専用。
 
-**** Valid：エージェントが正しく設定されているかどうかを示すboolean値。
+**Valid** エージェントが正しく設定されているかどうかを示すブール値。
 
-* `true`:有効な設定。
-* `false` :設定にエラーが含まれています。
+* `true`：有効な設定です。
+* `false`：設定にエラーが含まれます。
 
 読み取り専用。
 
-**** Enabled：エージェントが有効かどうかを示すboolean値。
+**Enabled** エージェントが有効かどうかを示すブール値。
 
-* `true`: Enabled.
-* `false`: 無効.
+* `true`：有効。
+* `false`：無効。
 
-**** QueueBlockedAキューが存在し、ブロックされているかどうかを示すboolean値：
+**QueueBlocked** キューが存在し、ブロックされているかどうかを示すブール値。
 
-* `true`: ブロック. 自動再試行は保留中です。
+* `true`：ブロック。自動再試行は保留中です。
 * `false`：ブロックされていないか、存在しません。
 
 読み取り専用。
 
-**** QueuePausedジョブキューが一時停止されているかどうかを示すboolean値。
+**QueuePaused** ジョブキューが一時停止しているかどうかを示すブール値。
 
-* `true`:一時停止（休止）
+* `true`：一時停止（休止）しています。
 * `false`：一時停止していないか、存在しません。
 
 読み取り／書き込み。
 
-**** QueueNumEntriesAnエージェントキュー内のジョブ数を表すint値。読み取り専用。
+**QueueNumEntries** エージェントキュー内のジョブ数を表す整数値。読み取り専用。
 
-**** QueueStatusTimeA表示されたステータス値を取得したサーバー上の時間を示すDate値。値は、ページが読み込まれた時間に対応します。 読み取り専用。
+**QueueStatusTime** 表示されているステータス値が取得されたサーバー上の時間を示す Date 値。この値は、ページが読み込まれた時刻と一致します。読み取り専用。
 
-**** QueueNextRetryTimeForブロックされたキュー：次回の自動再試行がいつおこなわれるかを示すDate値です。時間が表示されない場合、キューはブロックされません。 読み取り専用。
+**QueueNextRetryTime** ブロックされたキューについて、次回の自動再試行日を示す Date 値。時間が表示されない場合、キューはブロックされません。 読み取り専用。
 
-**** QueueProcessingSinceA現在のジョブの処理が開始された日時を示すDate値。時間が表示されない場合、キューはブロックされているか、アイドル状態です。 読み取り専用。
+**QueueProcessingSince** 現在のジョブの処理を開始した日を示す Date 値。時間が表示されない場合、キューはブロックされるか、アイドル状態となります。読み取り専用。
 
-**** QueueLastProcessTimeA前のジョブが完了した日時を示すDate値。読み取り専用。
+**QueueLastProcessTime** 前回のジョブの完了日を示す Date 値。読み取り専用。
 
-### 運用 {#operations-3}
+### 操作 {#operations-3}
 
-**** queueForceRetryForブロックされたキューに対して、再試行コマンドをキューに発行します。
+**queueForceRetry** ブロックされているキューに対して、再試行コマンドを発行します。
 
 * 引数：なし
 * 戻り値：なし
 
-**** queueClearRemovesすべてのジョブをキューから削除します。
+**queueClear** キューからすべてのジョブを削除します。
 
 * 引数：なし
 * 戻り値：なし
@@ -756,35 +756,35 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 ### 属性 {#attributes-4}
 
-**** RequestsCount統計が最後にリセットされて以降に発生した要求の数。
+**RequestsCount** 統計が最後にリセットされた以降に発生した要求の数。
 
-**** MinRequestDurationMsec統計が最後にリセットされてから、要求の処理に要した最短時間（ミリ秒）。
+**MinRequestDurationMsec** 統計が最後にリセットされた以降に要求の処理に要した最短時間（ミリ秒単位）。
 
-**** MaxRequestDurationMsec統計が最後にリセットされてから、要求の処理に要した最長時間（ミリ秒）。
+**MaxRequestDuratioMsec** 統計が最後にリセットされた以降に要求の処理に要した最長時間（ミリ秒単位）。
 
-**** StandardDeviationDurationMsecリクエストの処理に必要な時間の標準偏差。標準偏差は、統計が最後にリセットされてからのすべてのリクエストを使用して計算されます。
+**StandardDeviationDurationMsec** 要求の処理に要した時間の標準偏差。標準偏差は、統計が最後にリセットされた以降のすべての要求を使用して計算されます。
 
-**** MeanRequestDurationMsecリクエストの処理に必要な平均時間。平均は、統計が最後にリセットされてからのすべてのリクエストを使用して計算されます
+**MeanRequestDurationMsec** 1 つの要求の処理に要した平均時間。平均は、統計が最後にリセットされて以降のすべての要求を使用して計算されます。
 
 ### 運用 {#operations-4}
 
-**** resetStatisticsSetsすべての統計を0に設定します。特定の期間中にリクエスト処理のパフォーマンスを分析する必要がある場合に、統計をリセットします。
+**resetStatistics** すべての統計をゼロに設定します。 特定の期間の要求処理のパフォーマンスを分析する必要があるときに統計をリセットします。
 
 * 引数：なし
 * 戻り値：なし
 
-**** id：パッケージIDのString表現。
+**id** パッケージ ID の文字列表現。
 
-**** installedA packageがインストールされているかどうかを示すboolean値。
+**installed** パッケージがインストールされているかどうかを示す boolean 値。
 
-* `true`:インストール済み。
-* `false`:インストールされていません。
+* `true`：インストールされています。
+* `false`：インストールされていません。
 
-**** installedByThe packageを最後にインストールしたユーザーのID。
+**installedBy** パッケージを最後にインストールしたユーザーの ID。
 
-**** installedDateパッケージが最後にインストールされた日付。
+**installedDate** パッケージが最後にインストールされた日付。
 
-**** size：パッケージのサイズをバイト単位で格納するlong値。
+**size** パッケージのサイズ（バイト数）を保持する long 値。
 
 
 ## クイックスタートランチャー {#quickstart-launcher}
@@ -802,7 +802,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 引数：
 
-* p1:表示するメッセージを表す`String`値。
+* p1： 表示するメッセージを表す `String` 値。
 * 戻り値：なし
 
 **startupFinished**
@@ -820,7 +820,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
    * p1：起動プロセスがどの程度完了したかを割合で表す浮動小数値。値の範囲はゼロから 1 です。例えば、0.3 は 30% 完了を示します。
 * 戻り値：なし。
 
-## サードパーティのサービス  {#third-party-services}
+## サードパーティのサービス {#third-party-services}
 
 いくつかのサードパーティのサーバーリソースでは、MBean がインストールされ、これによって属性および操作が JMX コンソールに提供されます。次の表では、サードパーティのリソースをリストし、詳細のリンクを提供します。
 
@@ -855,7 +855,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
      <li>Runtime</li>
      <li>Threading</li>
     </ul> </td>
-   <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.</a> managementpackage</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a> パッケージ</td>
   </tr>
   <tr>
    <td>java.util.logging</td>
@@ -871,12 +871,12 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
      <li>packageState</li>
      <li>serviceState</li>
     </ul> </td>
-   <td><a href="https://osgi.org/specification/osgi.enterprise/7.0.0/service.jmx.html#d0e42567">org.osgi.jmx.</a> frameworkpackage</td>
+   <td><a href="https://osgi.org/specification/osgi.enterprise/7.0.0/service.jmx.html#d0e42567">org.osgi.jmx.framework</a> パッケージ</td>
   </tr>
  </tbody>
 </table>
 
-## Using the JMX Console {#using-the-jmx-console}
+## JMX コンソールの使用 {#using-the-jmx-console}
 
 JMX コンソールには、サーバー上で実行されているいくつかのサービスに関する情報が表示されます。
 
@@ -892,11 +892,11 @@ JMX コンソールのメインページには、サービスの表が含まれ�
 3. 属性値を変更するには、値をクリックし、表示されるダイアログボックスで値を指定して、「保存」をクリックします。
 4. サービスの操作を呼び出すには、操作名をクリックし、表示されるダイアログボックスで引数値を指定して、「呼び出し」をクリックします。
 
-## 監視のための外部 JMX アプリケーションの使用  {#using-external-jmx-applications-for-monitoring}
+## 監視のための外部 JMX アプリケーションの使用 {#using-external-jmx-applications-for-monitoring}
 
 CRX を使用すると、外部アプリケーションと Managed Bean（MBean）が [Java Management Extensions（JMX）](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)経由でやり取りできます。[JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) のような汎用コンソールやドメイン専用の監視アプリケーションを使用すると、CRX の設定やプロパティを取得および設定したり、パフォーマンスやリソース使用状況を監視したりできます。
 
-### JConsole を使用した CRX への接続  {#using-jconsole-to-connect-to-crx}
+### JConsole を使用した CRX への接続 {#using-jconsole-to-connect-to-crx}
 
 JConsole を使用して CRX に接続するには、次の手順に従います。
 
@@ -915,15 +915,15 @@ JConsole には、ローカルの Java 仮想マシンプロセスのリスト�
 
 ### リモートの CRX プロセスへの接続 {#connecting-to-a-remote-crx-process}
 
-リモートCRXプロセスに接続するには、リモートCRXプロセスをホストするJVMでリモートJMX接続を受け入れる必要があります。
+リモート CRX プロセスに接続するには、リモート CRX プロセスをホストする JVM で、リモート JMX 接続を受け入れるように有効にする必要があります。
 
-リモートJMX接続を有効にするには、JVMの起動時に次のシステムプロパティを設定する必要があります。
+リモート JMX 接続を有効にするには、JVM の起動時に以下のシステムプロパティを設定する必要があります。
 
 `com.sun.management.jmxremote.port=portNum`
 
-上記のプロパティで、`portNum`はJMX RMI接続を有効にするポート番号です。 未使用のポート番号を必ず指定してください。 ローカルアクセス用のRMIコネクタを公開する以外に、このプロパティを設定すると、既知の名前「jmxrmi」を使用して、指定されたポートのプライベート読み取り専用レジストリに追加のRMIコネクタが公開されます。
+上記のプロパティで、`portNum` は、JMX RMI 接続を有効にするポート番号です。未使用のポート番号を必ず指定してください。ローカルアクセス用の RMI コネクターを公開する以外に、このプロパティを設定すると、既知の名前「jmxrmi」を使用して、指定したポートのプライベート読み取り専用レジストリに追加の RMI コネクターが公開されます。
 
-デフォルトでは、リモート監視用に JMX エージェントを有効にすると、Java VM 起動時に以下のシステムプロパティを使用して指定する必要のあるパスワードファイルに基づいたパスワード認証が使用されます。
+デフォルトでは、リモート監視用に JMX エージェントを有効にすると、パスワードファイルに基づいたパスワード認証が使用されます。パスワードファイルは、Java VM 起動時に以下のシステムプロパティを使用して指定する必要があります。
 
 `com.sun.management.jmxremote.password.file=pwFilePath`
 
