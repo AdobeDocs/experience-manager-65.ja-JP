@@ -1,8 +1,8 @@
 ---
 title: クラシック UI へのアクセスの有効化
-seo-title: クラシック UI へのアクセスの有効化
+seo-title: Enabling Access to Classic UI
 description: クラシック UI へのアクセスを有効にする方法について学習します。
-seo-description: クラシック UI へのアクセスを有効にする方法について学習します。
+seo-description: Lear how to enable access to Classic UI.
 uuid: 08698023-6e0d-4160-8c4d-d282e74182bc
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: f3683696-663d-4de5-a388-1709f44d58c1
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '99'
+workflow-type: ht
+source-wordcount: '86'
 ht-degree: 100%
 
 ---
