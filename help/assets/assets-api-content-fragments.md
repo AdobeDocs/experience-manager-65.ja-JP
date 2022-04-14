@@ -1,11 +1,12 @@
 ---
-title: Assets HTTP APIでのAdobe Experience Managerコンテンツフラグメントのサポート
-description: AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API でのコンテンツフラグメントのサポートについて説明します。
+title: Assets HTTP API での Adobe Experience Manager コンテンツフラグメントのサポート
+description: AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API でのコンテンツフラグメントのサポートについて学びます。
 feature: Content Fragments,Assets HTTP API
-source-git-commit: 2f647fc640d3809dc684bce397831ab37fb94b07
-workflow-type: tm+mt
+exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '1934'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -25,9 +26,9 @@ AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API で
 >
 >現在の Assets HTTP API の実装は、[REST](https://en.wikipedia.org/wiki/Representational_state_transfer) アーキテクチャスタイルに基づいています。
 
-[Assets REST API](/help/assets/mac-api-assets.md) を使用すると、Adobe Experience Manager のデベロッパーは、HTTP API 経由で CRUD 操作（作成、読み取り、更新、削除）を介して、（AEM に保存された）コンテンツに直接アクセスできます。
+[Assets REST API](/help/assets/mac-api-assets.md) を使用すると、Adobe Experience Manager のデベロッパーは、HTTP API 経由で CRUD 操作（作成、読み取り、アップデート、削除）を介して、（AEM に格納された）コンテンツにアクセスできます。
 
-このAPIを使用すると、JavaScriptフロントエンドアプリケーションにContent Servicesを提供することで、Adobe Experience ManagerをヘッドレスCMS(Content Management System)として操作できます。 または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。
+この API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、 Adobe Experience Manager をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。
 
 例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、HTTP API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 
@@ -113,7 +114,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
   </tr>
   <tr>
    <td>アクセス</td>
-   <td><p>直接アクセスできます。</p> <p><code>/api/assets </code> エンドポイントを使用し、（リポジトリ内の）<code>/content/dam</code>にマッピングします。</p> 
+   <td><p>直接アクセスできます。</p> <p><code>/api/assets </code> エンドポイントを使用し、（リポジトリー内の）<code>/content/dam</code>にマッピングします。</p> 
    <p>パスの例を次に示します。 <code>/api/assets/wknd/en/adventures/cycling-tuscany.json</code></p>
    </td>
     <td><p>AEM ページ上の AEM コンポーネントを通じて参照する必要があります。</p> <p><code>.model</code> セレクターを使用して JSON 表現を作成します。</p> <p>パスの例を次に示します。<br/> <code>/content/wknd/language-masters/en/adventures/cycling-tuscany.model.json</code></p> 
@@ -146,7 +147,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 >詳しくは、次のセクションを参照してください。
 >
 >* [CORS／AEM の説明](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
->* [ビデオ - AEM を使用した CORS 向け開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
+>* [ビデオ - AEM を使用した CORS 向け開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=ja)
 
 >
 
@@ -197,7 +198,7 @@ Assets REST API では、URL パラメーターを介して（GET リクエス�
 
 ### フォルダー {#folders}
 
-フォルダーは、アセットやその他のフォルダーのコンテナとして機能します。AEM コンテンツリポジトリの構造を反映しています。
+フォルダーは、アセットやその他のフォルダーのコンテナとして機能します。AEM コンテンツリポジトリーの構造を反映しています。
 
 Assets REST API は、フォルダーのプロパティ（名前、タイトルなど）へのアクセスを公開します。アセットは、フォルダーの子エンティティ、およびサブフォルダーとして公開されます。
 
@@ -232,7 +233,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 現在、コンテンツフラグメントの構造を定義するモデルは、HTTP API では公開されません。そのため、*コンシューマー*&#x200B;は（最低でも）フラグメントのモデルについて理解する必要があります。ただし、ほとんどの情報はペイロードから推測することができます。データタイプなどは定義の一部だからです。
 
-新しいコンテンツフラグメントを作成するには、（内部リポジトリ）モデルのパスを指定する必要があります。
+新しいコンテンツフラグメントを作成するには、（内部リポジトリー）モデルのパスを指定する必要があります。
 
 #### 関連コンテンツ {#associated-content}
 
@@ -251,7 +252,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 >[!CAUTION]
 >
->AEMインスタンス上のDispatcher設定によって、`/api`へのアクセスがブロックされる場合があります。
+>AEM インスタンス上の Dispatcher 設定により、`/api` へのアクセスがブロックされる場合があります。
 
 >[!NOTE]
 >
@@ -376,7 +377,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 詳細な API リファレンスについては、こちらを参照してください。
 
-* [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
    * [使用可能な機能](/help/assets/mac-api-assets.md#assets)
