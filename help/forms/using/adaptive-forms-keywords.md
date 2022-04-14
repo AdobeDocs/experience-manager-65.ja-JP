@@ -1,17 +1,17 @@
 ---
 title: アダプティブフォームのキーワード
-seo-title: アダプティブフォームのキーワード
+seo-title: Adaptive forms keywords
 description: アダプティブフォームでは、以下の予約語を識別子として使用することはできません。
-seo-description: アダプティブフォームでは、以下の予約語を識別子として使用することはできません。
+seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '225'
+workflow-type: ht
+source-wordcount: '208'
 ht-degree: 100%
 
 ---
@@ -240,4 +240,4 @@ ht-degree: 100%
  </tbody>
 </table>
 
-上にリストしたキーワード以外にも、[アダプティブフォームの各種 JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63) に似た名前の使用は避けてください。
+上にリストしたキーワード以外にも、[アダプティブフォームの各種 JavaScript API](https://adobe.com/go/learn_aemforms_javascript_api_63_jp) に似た名前の使用は避けてください。
