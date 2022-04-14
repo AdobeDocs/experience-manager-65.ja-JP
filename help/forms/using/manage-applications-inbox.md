@@ -1,8 +1,8 @@
 ---
 title: AEM インボックスでの Forms アプリケーションとタスクの管理
-seo-title: AEM インボックスでの Forms アプリケーションとタスクの管理
+seo-title: Manage Forms applications and tasks in AEM Inbox
 description: AEM インボックスを使用することで、アプリケーションの送信やタスクの管理を通じて Forms 中心のワークフローを起動できます。
-seo-description: AEM インボックスを使用することで、アプリケーションの送信やタスクの管理を通じて Forms 中心のワークフローを起動できます。
+seo-description: AEM Inbox allows you to launch Forms-centric workflows through submitting applications and manage tasks.
 uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
@@ -11,13 +11,13 @@ discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1111'
+ht-degree: 100%
 
 ---
 
-# AEM インボックスでの Forms アプリケーションとタスクの管理{#manage-forms-applications-and-tasks-in-aem-inbox}
+# AEM インボックスでの Forms アプリケーションとタスクの管理 {#manage-forms-applications-and-tasks-in-aem-inbox}
 
 Forms 中心のワークフローを起動またはトリガーする多くの方法の 1 つに、AEM インボックスのアプリケーションから行う方法があります。Forms ワークフローを使用できるようにするためのワークフローアプリケーションを、インボックス内のアプリケーションとして作成する必要があります。ワークフローアプリケーションおよび Forms ワークフローを起動するためのその他の方法について詳しくは、「[OSGi 上での Forms 中心のワークフローの起動](../../forms/using/aem-forms-workflow.md#launch)」を参照してください。
 
@@ -35,13 +35,13 @@ Forms 中心のワークフローを起動またはトリガーする多くの�
 
 1. AEM インボックス（https://&#39;[server]:[port]&#39;/aem/inbox）に移動します。
 1. インボックスの UI で、**[!UICONTROL 作成／アプリケーション]**&#x200B;をタップします。アプリケーションを選択ページが表示されます。
-1. アプリケーションを選択してから、「**[!UICONTROL 作成]**」をクリックします。アプリケーションに関連付けられたアダプティブフォームが開きます。 アダプティブフォームの情報を入力し、「**[!UICONTROL 送信]**」をタップします。 関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
+1. アプリケーションを選択してから、「**[!UICONTROL 作成]**」をクリックします。アプリケーションに関連するアダプティブフォームが開きます。アダプティブフォームの情報を入力し、「**[!UICONTROL 送信]**」をタップします。関連するワークフローが起動し、担当者のインボックスにタスクが作成されます。
 
-## タスクの管理  {#manage-tasks}
+## タスクの管理 {#manage-tasks}
 
 Forms ワークフローがトリガーされ、自分が担当者であるまたは担当者グループの一部である場合には、インボックスにタスクが表示されます。インボックス内のタスクについて、タスクの詳細を表示し、使用可能なアクションを実行できます。
 
-### タスクの要求または委任  {#claim-or-delegate-tasks}
+### タスクの要求または委任 {#claim-or-delegate-tasks}
 
 グループに割り当てられたタスクは、グループのメンバー全員のインボックスに表示されます。グループのメンバーなら誰でも、タスクを要求したり他のグループメンバーに委任したりできます。この作業を行うには、以下の手順を実行します。
 
@@ -101,7 +101,7 @@ Forms ワークフローがトリガーされ、自分が担当者であるま�
 
 タスクに対してアクションを実行すると、ワークフローの次の段階に進みます。
 
-### 完了したタスクの表示  {#view-completed-tasks}
+### 完了したタスクの表示 {#view-completed-tasks}
 
 AEM インボックスでは、アクティブなタスクのみが表示されます。完了したタスクはリストには表示されません。ただし、インボックスフィルターを使用して、いくつかのパラメーター（タスクのタイプ、状態、開始日と終了日など）に基づいてタスクをフィルターできます。完了したタスクを表示するには、以下の手順を実行します。
 
@@ -112,7 +112,7 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
 
 1. タップしてタスクを選択し、「**[!UICONTROL 開く]**」をクリックします。
 
-タスクが開き、タスクに関連するドキュメントまたはアダプティブフォームが表示されます。アダプティブフォームの場合、タスクは、[タスクの割り当てワークフローステップ](/help/sites-developing/workflows-step-ref.md)の「フォーム/ドキュメント」タブで設定した読み取り専用のアダプティブフォームまたはレコードのPDFドキュメントを表示します。
+タスクが開き、タスクに関連するドキュメントまたはアダプティブフォームが表示されます。アダプティブフォームの場合、タスクは、[タスクを割り当てワークフローステップ](/help/sites-developing/workflows-step-ref.md)の「フォーム／ドキュメント」タブで設定された読み取り専用のアダプティブフォームまたはその PDF ドキュメントを表示します。
 
 「タスクの詳細」セクションでは、実行済みアクション、タスクのステータス、開始日、終了日が表示されます。
 
@@ -126,7 +126,7 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
 
 ### AEM インボックスで AEM ワークフローに関連する項目を表示できない {#unable-to-see-aem-worklow-items}
 
-ワークフローモデルの所有者は、AEM インボックスの AEM ワークフローに関連する項目を表示できません。この問題を解決するには、以下にリストされているインデックスを AEM リポジトリに追加し、インデックスを再構築します。
+ワークフローモデルの所有者は、AEM インボックスの AEM ワークフローに関連する項目を表示できません。この問題を解決するには、以下にリストされているインデックスを AEM リポジトリーに追加し、インデックスを再構築します。
 
 1. インデックスを追加するには、以下のいずれかの方法を使用します。
 
@@ -135,8 +135,8 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
       | ノード | プロパティ | タイプ |
       |---|---|---|
       | sharedWith | sharedWith | 文字列 |
-      | locked | ロック | ブール値 |
-      | returned | 戻り値 | ブール値 |
+      | locked | locked | ブール値 |
+      | returned | returned | ブール値 |
       | allowInboxSharing | allowInboxSharing | ブール値 |
       | allowExplicitSharing | allowExplicitSharing | ブール値 |
 
@@ -151,8 +151,8 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [プロパティインデックスを作成し、true に設定します](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index)。
+1. [プロパティインデックスを作成し、true に設定します](https://docs.adobe.com/content/help/ja/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index)。
 
-1. CRX DE でインデックスを設定するか、パッケージを介してデプロイした後、[リポジトリのインデックスを再作成します](https://helpx.adobe.com/jp/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
+1. CRX DE でインデックスを設定するか、パッケージを介してデプロイした後、[リポジトリーのインデックスを再作成します](https://helpx.adobe.com/jp/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
 
 https://docs.adobe.com/content/help/ja/experience-manager-65/deploying/deploying/queries-and-indexing.html
