@@ -1,8 +1,8 @@
 ---
 title: SSL 対応の LDAP サーバーを対象とした User Management の設定
-seo-title: SSL 対応の LDAP サーバーを対象とした User Management の設定
+seo-title: Configure User Management for an SSL-enabled LDAP server
 description: SSL 対応の LDAP サーバーを対象として User Management を設定し、同期を有効にして LDAPS 経由で正しく動作させる方法について説明します。
-seo-description: SSL 対応の LDAP サーバーを対象として User Management を設定し、同期を有効にして LDAPS 経由で正しく動作させる方法について説明します。
+seo-description: Learn how  to configure User Management for an SSL-enabled LDAP server to enable synchronization to work properly over LDAPS.
 uuid: 4b3f8ac7-fa38-4adf-a851-82d55fe431fe
 contentOwner: admin
 content-type: reference
@@ -11,15 +11,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e6e7e2fa-579d-4b36-8598-6ced469a94b1
 exl-id: 606e84f2-6728-47a9-a439-dbe2e55100ad
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '278'
+ht-degree: 100%
 
 ---
 
 # SSL 対応の LDAP サーバーを対象とした User Management の設定 {#configure-user-management-for-an-ssl-enabled-ldap-server}
 
-同期が LDAPS を介して正しく動作するには、認証局（CA）によって発行された LDAP 証明書をアプリケーションサーバーの Java ランタイム環境（JRE）に配置する必要があります。証明書をアプリケーションサーバーのJRE cacertsファイルに読み込みます。通常は、*[JAVA_HOME]*/jre/lib/security/cacertsディレクトリにあります。
+同期が LDAPS を介して正しく動作するには、認証局（CA）によって発行された LDAP 証明書をアプリケーションサーバーの Java ランタイム環境（JRE）に配置する必要があります。証明書をアプリケーションサーバーの JRE cacerts ファイルに読み込みます。通常、このファイルは *[JAVA_HOME]*/jre/lib/security/cacerts ディレクトリにあります。
 
 1. ディレクトリサーバーで SSL を有効にします。詳しくは、ディレクトリのベンダーによって提供されたマニュアルを参照してください。
 1. ディレクトリサーバーからクライアント証明書を書き出します。
