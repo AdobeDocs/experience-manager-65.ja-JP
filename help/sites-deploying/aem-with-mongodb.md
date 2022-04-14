@@ -1,8 +1,8 @@
 ---
 title: MongoDB を備えた AEM
-seo-title: MongoDB を備えた AEM
+seo-title: AEM with MongoDB
 description: MongoDB を備えた AEM を正常にデプロイするために必要なタスクと考慮事項について学習します。
-seo-description: MongoDB を備えた AEM を正常にデプロイするために必要なタスクと考慮事項について学習します。
+seo-description: Learn about the tasks and considerations needed for a successful AEM with MongoDB deployment.
 uuid: 8028832d-10de-4811-a769-fab699c162ec
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '6513'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '6496'
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 91%
 
 デプロイメントについて詳しくは、このドキュメントの[デプロイとメンテナンス](/help/sites-deploying/deploy.md)の節を参照してください。
 
-## AEM で MongoDB を使用する状況  {#when-to-use-mongodb-with-aem}
+## AEM で MongoDB を使用する状況 {#when-to-use-mongodb-with-aem}
 
 MongoDB は通常、次のいずれかの条件を満たす AEM オーサーのデプロイメントをサポートする場合に使用します。
 
@@ -41,19 +41,19 @@ MongoDB は通常、次のいずれかの条件を満たす AEM オーサーの�
 >
 >オーサーインスタンスのサイジングと同時ユーザーの定義について詳しくは、[ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel)を参照してください。
 
-### AEM における MongoDB の最小デプロイメント  {#minimal-mongodb-deployment-for-aem}
+### AEM における MongoDB の最小デプロイメント {#minimal-mongodb-deployment-for-aem}
 
-MongoDB での AEM の最小デプロイメントは次のとおりです。簡潔にするために、SSL ターミネーションおよび HTTP プロキシコンポーネントは一般化されています。1つのMongoDBレプリカセットと1つのプライマリと2つのセカンダリで構成されます。
+MongoDB での AEM の最小デプロイメントは次のとおりです。簡潔にするために、SSL ターミネーションおよび HTTP プロキシコンポーネントは一般化されています。これは、1 つのプライマリと 2 つのセカンダリを含む単一の MongoDB レプリカセットで構成されています。
 
 ![chlimage_1-4](assets/chlimage_1-4.png)
 
-最小デプロイメントには、レプリカセットとして設定された 3 つの `mongod` インスタンスが必要です。1 つのインスタンスはプライマリとして選択され、その他のインスタンスはセカンダリとして選択されます。この選択は、`mongod` によって管理されます。各インスタンスにローカルディスクが接続されています。クラスタが負荷をサポートするためには、最低でも12 MB/秒のスループット(1秒あたりのI/O操作数が3,000を超える(IOPS)ことをお勧めします。
+最小デプロイメントには、レプリカセットとして設定された 3 つの `mongod` インスタンスが必要です。1 つのインスタンスはプライマリとして選択され、その他のインスタンスはセカンダリとして選択されます。この選択は、`mongod` によって管理されます。各インスタンスにローカルディスクが接続されています。クラスターでこの負荷に対応するには、1 秒あたりの I/O 操作（IOPS）が 3,000 回を超える、12 MB/秒以上のスループットが推奨されます。
 
 AEM オーサーは `mongod` インスタンスに接続されます。各 AEM オーサーは 3 つの `mongod` インスタンスすべてに接続します。書き込みはプライマリに送信され、読み取りはいずれのインスタンスからもおこなうことができます。トラフィックは、Dispatcher によって、負荷に基づいてアクティブな AEM オーサーインスタンスのいずれかに分散されます。OAK データストアは `FileDataStore` であり、MongoDB の監視は、デプロイメントの場所に応じて、MMS または MongoDB Ops Manager によって提供されます。オペレーティングシステムレベルの監視とログの監視は、Splunk や Ganglia のようなサードパーティソリューションによって提供されます。
 
 このデプロイメントでは、実装が正常に機能するには、すべてのコンポーネントが必要です。いずれかのコンポーネントが不足していると、実装は機能しません。
 
-### オペレーティングシステム  {#operating-systems}
+### オペレーティングシステム {#operating-systems}
 
 AEM 6 でサポートされているオペレーティングシステムのリストについては、[技術要件のページ](/help/sites-deploying/technical-requirements.md)を参照してください。
 
@@ -90,11 +90,11 @@ MongoDB 3.0 の WiredTiger ストレージエンジンにも同じ制限が適�
 >
 >MongoDB 3.0 を使用する AEM 6.1 のデプロイメントには、WiredTiger ストレージエンジンを使用することをお勧めします。
 
-### データストア  {#data-store}
+### データストア {#data-store}
 
-MongoDB の作業セットに関する制限により、データストアを MongoDB から独立して保持することを強くお勧めします。ほとんどの環境では、すべての AEM インスタンスに対して使用可能な NAS を使用する `FileDataStore` を使用してください。Amazon Webサービスを使用する場合は、`S3 DataStore`も存在します。 何らかの理由でデータストアを MongoDB 内に保持する場合は、データストアのサイズをデータベースの合計サイズに加算し、作業セットの計算を適切に調整する必要があります。これは、ページフォールトを発生させずにパフォーマンスを維持するには、はるかに多くの RAM をプロビジョニングすることを意味する場合があります。
+MongoDB の作業セットに関する制限により、データストアを MongoDB から独立して保持することを強くお勧めします。ほとんどの環境では、すべての AEM インスタンスに対して使用可能な NAS を使用する `FileDataStore` を使用してください。Amazon Web Services を使用する場合は、`S3 DataStore` もあります。何らかの理由でデータストアを MongoDB 内に保持する場合は、データストアのサイズをデータベースの合計サイズに加算し、作業セットの計算を適切に調整する必要があります。これは、ページフォールトを発生させずにパフォーマンスを維持するには、はるかに多くの RAM をプロビジョニングすることを意味する場合があります。
 
-## 監視 {#monitoring}
+## モニタリング {#monitoring}
 
 プロジェクトを正常に実装するには監視が不可欠です。十分な知識があれば、監視なしでも MongoDB 上で AEM を実行することは可能ですが、その知識を持っているのは通常、デプロイメントの各セクションを専門とするエンジニアです。
 
@@ -108,7 +108,7 @@ MongoDB の作業セットに関する制限により、データストアを Mo
 
 MongoDB Cloud Manager は、MongoDB インスタンスを監視および管理できる、MongoDB で提供される無料のサービスです。これにより、MongoDB クラスターのパフォーマンスとヘルスをリアルタイムで把握できます。また、インスタンスが Cloud Manager 監視サーバーにアクセスできる場合は、クラウドでホストされているインスタンスとプライベートにホストされているインスタンスの両方を管理できます。
 
-監視サーバーに接続するMongoDBインスタンスにエージェントがインストールされている必要があります。 エージェントには次の 3 つのレベルがあります。
+このサービスを使用するには、監視サーバーに接続する MongoDB インスタンスにエージェントがインストールされている必要があります。エージェントには次の 3 つのレベルがあります。
 
 * MongoDB サーバー上のすべてのものを完全に自動化できる自動化エージェント
 * `mongod` インスタンスを監視できる監視エージェント
@@ -122,13 +122,13 @@ MongoDB Cloud Manager について詳しくは、[MongoDB のドキュメント]
 
 MongoDB Ops Manager は、MongoDB Cloud Manager と同じソフトウェアです。登録すると、Ops Manager をダウンロードして、プライベートデータセンターまたは他のラップトップマシンやデスクトップマシンにローカルにインストールできます。このソフトウェアは、ローカルの MongoDB データベースを使用してデータを格納し、Cloud Manager とまったく同様に管理対象サーバーと通信します。セキュリティポリシーで監視エージェントを禁止している場合は、MongoDB Ops Manager を使用してください。
 
-### オペレーティングシステムの監視  {#operating-system-monitoring}
+### オペレーティングシステムの監視 {#operating-system-monitoring}
 
 AEM MongoDB クラスターを実行するには、オペレーティングシステムレベルの監視が必要です。
 
 そのようなシステムの良い例として Ganglia があります。Ganglia では、対象範囲の概要情報が提供され、CPU、負荷平均、空きディスク領域のようなヘルスに関する基本的な指標にとどまらず、必要な情報の詳細を表示できます。問題を診断するには、エントロピープールレベル、CPU I/O 待機、FIN_WAIT2 状態のソケットなど、下位レベルの情報が必要です。
 
-### ログの集約  {#log-aggregation}
+### ログの集約 {#log-aggregation}
 
 複数のサーバーで構成されるクラスターの場合、実稼動システムにはログの一元的な集約が必要となります。Splunk のようなソフトウェアではログの集約がサポートされており、チームは、ログを手動で収集しなくても、アプリケーションの動作のパターンを分析できます。
 
@@ -149,7 +149,7 @@ AEM MongoDB クラスターを実行するには、オペレーティングシ�
 1. 任意のコアサーバー（MongoDB、AEM または任意の組み合わせ）間のルーターは OSI レベル 3 以下です。
 1. VLAN トランキングまたは何らかの形のネットワークトンネリングを使用している場合、パケット遅延チェックに適合している必要があります。
 
-### AEM の設定  {#aem-configuration}
+### AEM の設定 {#aem-configuration}
 
 #### ノードストアの設定 {#node-store-configuration}
 
@@ -176,21 +176,24 @@ blobCacheSize=1024
 
 ここで、
 
-* `mongodburi` これは、AEM が接続する必要がある MongoDB サーバーです。接続は、デフォルトレプリカセットの既知のメンバーすべてに対して確立されます。MongoDB Cloud Manager を使用する場合は、サーバーセキュリティが有効になります。そのため、適切なユーザー名とパスワードが接続文字列に含まれている必要があります。エンタープライズ以外のバージョンの MongoDB では、ユーザー名およびパスワード認証のみがサポートされます。接続文字列の構文について詳しくは、こちらの[ドキュメント](https://docs.mongodb.org/manual/reference/connection-string/)を参照してください。
+* `mongodburi`
+これは、AEM が接続する必要がある MongoDB サーバーです。接続は、デフォルトレプリカセットの既知のメンバーすべてに対して確立されます。MongoDB Cloud Manager を使用する場合は、サーバーセキュリティが有効になります。そのため、適切なユーザー名とパスワードが接続文字列に含まれている必要があります。エンタープライズ以外のバージョンの MongoDB では、ユーザー名およびパスワード認証のみがサポートされます。接続文字列の構文について詳しくは、こちらの[ドキュメント](https://docs.mongodb.org/manual/reference/connection-string/)を参照してください。
 
-* `db`データベースの名前。AEMのデフォルトは 
-`aem-author`
+* `db`データベースの名前。AEM のデフォルトは  
+`aem-author` です。
 
-* `customBlobStore` デプロイメントでバイナリがデータベースに格納される場合、バイナリは作業セットの一部になります。そのため、MongoDB内にバイナリを格納しないように、 
-`FileSystem` NAS上のデータストア
+* `customBlobStore`
+デプロイメントでバイナリがデータベースに格納される場合、バイナリは作業セットの一部になります。そのため、バイナリを MongoDB 内に格納せず、できれば、NAS 上の 
+NAS 上の `FileSystem` データストア。
 
 * `cache`
-キャッシュサイズ(MB)。これは、 
-`DocumentNodeStore`」を選択します。デフォルト値は 256 MB です。ただし、キャッシュが大きいほうが Oak の読み取りパフォーマンスは向上します。
+キャッシュサイズ（メガバイト単位）です。これは 
+`DocumentNodeStore` で使用される様々なキャッシュに配分されます。デフォルト値は 256 MB です。ただし、キャッシュが大きいほうが Oak の読み取りパフォーマンスは向上します。
 
-* `blobCacheSize` 頻繁に使用される Blob は、データストアから再取得しなくて済むように、AEM にキャッシュできます。これは、Blob を MongoDB データベースに格納する場合は特に、パフォーマンスへの影響が大きくなります。オペレーティングシステムレベルのディスクキャッシュは、ファイルシステムベースのすべてのデータストアに効果的です。
+* `blobCacheSize`
+頻繁に使用される Blob は、データストアから再取得しなくて済むように、AEM にキャッシュできます。これは、Blob を MongoDB データベースに格納する場合は特に、パフォーマンスへの影響が大きくなります。オペレーティングシステムレベルのディスクキャッシュは、ファイルシステムベースのすべてのデータストアに効果的です。
 
-#### データストアの設定  {#data-store-configuration}
+#### データストアの設定 {#data-store-configuration}
 
 データストアは、しきい値よりも大きいサイズのファイルを格納するために使用されます。そのしきい値以下のファイルは、ドキュメントノードストア内にプロパティとして格納されます。`MongoBlobStore` を使用する場合、Blob を格納するための専用のコレクションが MongoDB に作成されます。このコレクションは `mongod` インスタンスの作業セットに含まれ、パフォーマンスの問題を回避するには、より大きな RAM が `mongod` に必要になります。そのため、実稼動デプロイメントでは `MongoBlobStore` を使用せず、すべての AEM インスタンス間で共有される、NAS によって提供される `FileDataStore` を使用する設定をお勧めします。ファイルの管理にはオペレーティングシステムレベルのキャッシュが効率的なので、ディスク上のファイルの最小サイズをディスクのブロックサイズに近い値に設定して、ファイルシステムが効率的に使用され、`mongod` インスタンスの作業セットに多数の小さいドキュメントが過剰に含まれないようにします。
 
@@ -208,20 +211,23 @@ cacheSizeInMB=128
 ここで、
 
 * `minRecordLength`
-サイズ（バイト単位）。このサイズ以下のバイナリは、ドキュメントノードストアに格納されます。Blob の ID を格納するのではなく、バイナリの内容が格納されます。このサイズを超えるバイナリの場合、バイナリのIDはDocumentのプロパティとしてnodesコレクションに格納され、バイナリの本文は 
-`FileDataStore` ディスク上一般的なファイルシステムのブロックサイズは 4,096 バイトです。
+サイズ（バイト単位）。このサイズ以下のバイナリは、ドキュメントノードストアに格納されます。Blob の ID を格納するのではなく、バイナリの内容が格納されます。このサイズを超えるバイナリについては、バイナリの ID がドキュメントのプロパティとしてノードのコレクションに格納され、バイナリの本文はディスク上の 
+ディスク上の `FileDataStore` に。一般的なファイルシステムのブロックサイズは 4,096 バイトです。
 
-* `path` データストアのルートのパスです。MongoMK デプロイメントの場合、これはすべての AEM インスタンスで使用可能な共有ファイルシステムである必要があります。通常は、ネットワーク接続ストレージ（NAS）サーバーを使用します。Amazon Webサービスなどのクラウドデプロイメントの場合、 
-`S3DataFileStore` も使用できます。
+* `path`
+データストアのルートのパスです。MongoMK デプロイメントの場合、これはすべての AEM インスタンスで使用可能な共有ファイルシステムである必要があります。通常は、ネットワーク接続ストレージ（NAS）サーバーを使用します。Amazon Web Services などのクラウドデプロイメントの場合、 
+`S3DataFileStore` も利用できます。
 
-* `cacheSizeInMB` バイナリキャッシュの合計サイズ（メガバイト単位）です。これは、 
-`maxCacheBinarySize` 設定。
+* `cacheSizeInMB`
+バイナリキャッシュの合計サイズ（メガバイト単位）です。これは、以下のものより小さいバイナリをキャッシュするために使用されます： 
+`maxCacheBinarySize` の設定値。
 
-* `maxCachedBinarySize` バイナリキャッシュにキャッシュされるバイナリの最大サイズ（バイト単位）です。ファイルシステムベースのデータストアを使用する場合、バイナリはオペレーティングシステムによって既にキャッシュされているので、データストアのキャッシュに大きい値を使用することはお勧めしません。
+* `maxCachedBinarySize`
+バイナリキャッシュにキャッシュされるバイナリの最大サイズ（バイト単位）です。ファイルシステムベースのデータストアを使用する場合、バイナリはオペレーティングシステムによって既にキャッシュされているので、データストアのキャッシュに大きい値を使用することはお勧めしません。
 
-#### クエリヒントの無効化  {#disabling-the-query-hint}
+#### クエリヒントの無効化 {#disabling-the-query-hint}
 
-プロパティを追加して、すべてのクエリと共に送信されるクエリヒントを無効にすることをお勧めします
+すべてのクエリと共に送信されるクエリヒントを無効にすることをお勧めします。
 
 `-Doak.mongo.disableIndexHint=true`
 
@@ -229,11 +235,11 @@ cacheSizeInMB=128
 
 クエリヒントが無効でない場合は、インデックスのパフォーマンスをチューニングしても AEM のパフォーマンスには影響しません。
 
-#### MongoMK の永続キャッシュの有効化  {#enable-persistent-cache-for-mongomk}
+#### MongoMK の永続キャッシュの有効化 {#enable-persistent-cache-for-mongomk}
 
 I/O の読み取りパフォーマンスを高くして環境での処理速度を最大化するには、MongoDB デプロイメントで永続キャッシュ設定を有効にすることをお勧めします。詳しくは、[Jackrabbit Oak のドキュメント](https://jackrabbit.apache.org/oak/docs/nodestore/persistent-cache.html)を参照してください。
 
-## MongoDB オペレーティングシステムの最適化  {#mongodb-operating-system-optimizations}
+## MongoDB オペレーティングシステムの最適化 {#mongodb-operating-system-optimizations}
 
 ### オペレーティングシステムのサポート {#operating-system-support}
 
@@ -277,7 +283,7 @@ MongoDB は、Linux の幅広いフレーバー、Windows、Mac OS を含む、�
 
 MongoDB 3.2 以降、MongoDB のデフォルトのストレージエンジンは WiredTiger ストレージエンジンとなっています。このエンジンは、数多くの堅牢で拡張性のある機能を備えており、あらゆる一般的なデータベースワークロードに適したものとなっています。以下では、これらの機能について説明します。
 
-#### ドキュメントレベルの同時実行性  {#document-level-concurrency}
+#### ドキュメントレベルの同時実行性 {#document-level-concurrency}
 
 WiredTiger では、書き込み操作に対して、ドキュメントレベルでの同時実行制御を使用しています。そのため、複数のクライアントが特定のコレクションの異なるドキュメントを同時に変更することができます。
 
@@ -285,7 +291,7 @@ WiredTiger では、書き込み操作に対して、ドキュメントレベル
 
 コレクションの削除などのその他の一部の操作では、引き続き排他的データベースロックが必要です。
 
-#### スナップショットとチェックポイント  {#snapshots-and-checkpoints}
+#### スナップショットとチェックポイント {#snapshots-and-checkpoints}
 
 WiredTiger はマルチバージョン同時実行制御（MVCC）を使用しています。WiredTiger は、操作の開始時にトランザクションに対してデータの特定の時点のスナップショットを提供します。スナップショットは、インメモリデータの整合性のあるビューです。
 
@@ -307,7 +313,7 @@ WiredTiger ジャーナルにより、チェックポイント間におこなわ
 
 WiredTiger のジャーナルは、[snappy](https://docs.mongodb.com/manual/core/journaling/#journal-process) 圧縮ライブラリを使用して圧縮されます。別の圧縮アルゴリズムを指定する場合、または圧縮しない場合は、[storage.wiredTiger.engineConfig.journalCompressor](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.engineConfig.journalCompressor) 設定を使用します。
 
-詳しくは、以下を参照してください。[WiredTiger](https://docs.mongodb.com/manual/core/journaling/#journaling-wiredtiger)とジャーナリングを行います。
+詳しくは、[ジャーナル処理と WiredTiger](https://docs.mongodb.com/manual/core/journaling/#journaling-wiredtiger)を参照してください。
 
 >[!NOTE]
 >
@@ -325,7 +331,7 @@ WiredTiger を使用する場合、MongoDB では、すべてのコレクショ�
 
 コレクションでは、[zlib](https://docs.mongodb.com/manual/reference/glossary/#term-zlib) によるブロック圧縮も利用できます。別の圧縮アルゴリズムを指定する場合、または圧縮しない場合は、[storage.wiredTiger.collectionConfig.blockCompressor](https://docs.mongodb.com/manual/reference/glossary/#term-zlib) 設定を使用します。
 
-インデックスで[プレフィックス圧縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression)を無効にするには、[storage.wiredTiger.indexConfig.prefixCompression](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.indexConfig.prefixCompression) 設定を使用します。
+インデックスで[プレフィックス圧縮](https://docs.mongodb.com/manual/reference/glossary/#term-prefix-compression)を無効にするには、[storage.wiredTiger.indexConfig.prefixCompression](https://docs.mongodb.com/manual/reference/configuration-options/#storage.wiredTiger.indexConfig.prefixCompression)設定を使用します。
 
 圧縮設定は、コレクションおよびインデックスの作成時に、コレクションごと、およびインデックスごとに設定することもできます。[Specify Storage Engine Options（ストレージエンジンのオプションの指定）](https://docs.mongodb.com/manual/reference/method/db.createCollection/#create-collection-storage-engine-options)および [db.collection.createIndex() の storageEngine オプション](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/#createindex-options)を参照してください。
 
@@ -364,7 +370,7 @@ Non Uniform Memory Access（NUMA）を使用すると、プロセッサーコア
 
 基本的に、NUMA アーキテクチャでは、メモリは複数の CPU に接続され、複数の CPU はバスに接続されます。SMP または UMA アーキテクチャでは、メモリはバスに接続され、複数の CPU によって共有されます。スレッドが NUMA CPU のメモリを割り当てる際には、ポリシーに従って割り当てられます。デフォルトでは、スレッドのローカル CPU に接続されたメモリが割り当てられます。空きがない場合は、よりコストの高い空いている CPU のメモリが使用されます。一度割り当てられたメモリは CPU 間で移動しません。割り当ては、親スレッド（つまり、プロセスを開始したスレッド）から継承されたポリシーによって実行されます。
 
-マシンをマルチコアの均一なメモリアーキテクチャと見なす多くのデータベースでは、これにより、最初の CPU が最初にいっぱいになり、次の CPU がその後にいっぱいになります。中核となるスレッドがメモリバッファを割り当てる場合は特にそうなります。これを解決するには、`mongod` プロセスを開始するために使用されるメインスレッドの NUMA ポリシーを変更します。
+マシンをマルチコアの均一なメモリアーキテクチャと見なす多くのデータベースでは、これにより、最初の CPU が最初にいっぱいになり、次の CPU がその後にいっぱいになります。中核となるスレッドがメモリバッファを割り当てる場合は特にそうなります。これを解決するには、`mongod`プロセスを開始するために使用されるメインスレッドの NUMA ポリシーを変更します。
 
 そのためには、次のコマンドを実行します。
 
@@ -376,7 +382,7 @@ numactl --interleaved=all <mongod> -f config
 
 ### NUMA に関する問題 {#numa-issues}
 
-`mongod`プロセスが`/etc/init.d`フォルダー以外の場所から開始された場合は、正しいNUMAポリシーでは開始されない可能性があります。 デフォルトポリシーによっては、問題が発生することがあります。これは、MongoDB用の様々なLinuxパッケージマネージャーインストーラーが、上記の手順を実行する`/etc/init.d`にある設定ファイルを含むサービスもインストールするからです。 アーカイブ(`.tar.gz`)から直接MongoDBをインストールして実行する場合は、`numactl`プロセスの下でmongodを手動で実行する必要があります。
+`/etc/init.d` フォルダー以外の場所から `mongod` プロセスが開始された場合、適切な NUMA ポリシーで開始されない可能性があります。デフォルトポリシーによっては、問題が発生することがあります。これは、MongoDB 用の様々な Linux パッケージマネージャーインストーラーが、`/etc/init.d` に設定ファイルとともにサービスをインストールし、それにより上記の手順が実行されるからです。アーカイブ（`.tar.gz`）から直接 MongoDB をインストールして実行する場合は、mongod を `numactl` プロセスで手動で実行する必要があります。
 
 >[!NOTE]
 >
@@ -389,19 +395,19 @@ MongoDB プロセスの動作は、個々の割り当てポリシーによって
 ```
 
 * `-membind=<nodes>`
-リストされたノードにのみ割り当てます。mongod では、リストされているノードのメモリが割り当てられず、使用可能なメモリの一部が使用されない可能性があります。
+リストされているノードのみで割り当てをおこないます。mongod では、リストされているノードのメモリが割り当てられず、使用可能なメモリの一部が使用されない可能性があります。
 
 * `-cpunodebind=<nodes>`
-ノードでのみ実行します。mongod は、指定されたノードのみで実行され、それらのノードで使用可能なメモリのみを使用します。
+ノードのみで実行します。mongod は、指定されたノードのみで実行され、それらのノードで使用可能なメモリのみを使用します。
 
 * `-physcpubind=<nodes>`
-リストされたCPU（コア）でのみ実行します。mongod は、リストされている CPU のみで実行され、それらの CPU で使用可能なメモリのみを使用します。
+リストされている CPU（コア）のみで実行します。mongod は、リストされている CPU のみで実行され、それらの CPU で使用可能なメモリのみを使用します。
 
 * `--localalloc`
-常に現在のノードにメモリを割り当てますが、スレッドが実行するすべてのノードを使用します。1 つのスレッドで割り当てが実行されている場合は、その CPU で使用可能なメモリのみが使用されます。
+常に現在のノードのメモリを割り当てますが、スレッドを実行しているすべてのノードを使用します。1 つのスレッドで割り当てが実行されている場合は、その CPU で使用可能なメモリのみが使用されます。
 
 * `--preferred=<node>`
-ノードへの割り当てを優先しますが、優先ノードがいっぱいの場合は他のノードにフォールバックします。ノードを定義するための相対注釈を使用できます。また、スレッドはすべてのノードで実行されます。
+指定されたノードへの割り当てを優先しますが、優先されるノードがいっぱいである場合は他のノードにフォールバックします。ノードを定義するための相対注釈を使用できます。また、スレッドはすべてのノードで実行されます。
 
 一部のポリシーでは、`mongod` プロセスに割り当てられるメモリが、使用可能なすべての RAM よりも少ない場合があります。MySQL とは異なり、MongoDB はオペレーティングシステムレベルのページングを積極的に回避します。その結果、使用可能であると思われるメモリよりも少ない量のメモリが `mongod` プロセスに割り当てられることがあります。
 
@@ -411,19 +417,19 @@ MongoDB プロセスの動作は、個々の割り当てポリシーによって
 
 #### リモートファイルシステム {#remote-filesystems}
 
-MongoDBの内部データファイル（mongodプロセスデータベースファイル）には、遅延が多すぎるので、NFSなどのリモートファイルシステムはお勧めしません。 Oak Blob の格納に必要な共有ファイルシステム（FileDataStore）と混同しないでください。この場合は、NFS が推奨されます。
+NFS などのリモートファイルシステムでは、非常に多くの遅延が発生します。そのため、MongoDB の内部データファイル（mongod プロセスデータベースファイル）にはお勧めしません。Oak Blob の格納に必要な共有ファイルシステム（FileDataStore）の場合は、NFS が推奨されます。
 
 #### 先読み {#read-ahead}
 
-ランダム読み取りを使用してページをページ化する際に、不要なブロックがディスクから読み取られないように、読み取り先を調整し、I/O帯域幅が不要に消費されるようにする必要があります。
+ランダム読み取りを使用してページがページインされる際に、不要なブロックがディスクから読み取られ、I/O 帯域幅が不必要に使用されることがないように、先読みを調整する必要があります。
 
 ### Linux に関する要件 {#linux-requirements}
 
 #### カーネルの最小バージョン {#minimum-kernel-versions}
 
-* **2.6.23(ファイルシス** テム `ext4` 用)
+* `ext4` ファイルシステムの場合 **2.6.23**
 
-* **2.6.25(ファイルシス** テムの `xfs` 場合)
+* `xfs` ファイルシステムの場合 **2.6.25**
 
 #### データベースディスクの推奨設定 {#recommended-settings-for-database-disks}
 
@@ -457,7 +463,7 @@ MongoDB データベースが実行されるディスクでは、値を 32 に�
 sudo blockdev --setra <value> <device>
 ```
 
-#### NTP の有効化  {#enable-ntp}
+#### NTP の有効化 {#enable-ntp}
 
 MongoDB データベースをホストしているマシンに NTP がインストールされ、実行されていることを確認します。例えば、CentOS マシンで yum パッケージマネージャーを使用してインストールできます。
 
@@ -467,13 +473,13 @@ sudo yum install ntp
 
 NTP デーモンがインストールされ、正常に起動したら、ドリフトファイルでサーバーの時刻のずれを確認できます。
 
-#### Transparent Huge Pages の無効化  {#disable-transparent-huge-pages}
+#### Transparent Huge Pages の無効化 {#disable-transparent-huge-pages}
 
 Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ管理アルゴリズムが使用されます。このオペレーティングシステムをデータベースワークロードに使用している場合は、これを無効にすることをお勧めします。
 
 無効にするには、次の手順に従います。
 
-1. 任意のテキストエディターで`/etc/grub.conf`ファイルを開きます。
+1. `/etc/grub.conf` ファイルを任意のテキストエディターで開きます。
 1. grub.conf ファイルに次の行を追加します。
 
    ```xml
@@ -498,15 +504,15 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 
 #### NUMA の無効化 {#disable-numa}
 
-NUMAが有効になっているほとんどのインストールでは、`/etc/init.d`フォルダーからサービスとして実行される場合、MongoDBデーモンは自動的に無効にします。
+NUMA が有効なほとんどのインストール環境では、NUMA が `/etc/init.d` フォルダーからサービスとして実行される場合、MongoDB デーモンによって自動的に無効化されます。
 
-これに該当しない場合は、各プロセスレベルで NUMA を無効にすることができます。無効にするには、次のコマンドを実行します。
+そうでない場合は、各プロセスレベルで NUMA を無効にすることができます。無効にするには、次のコマンドを実行します。
 
 ```shell
 numactl --interleave=all <path_to_process>
 ```
 
-`<path_to_process>`はmongodプロセスへのパスです。
+`<path_to_process>` は、mongod プロセスへのパスです。
 
 続いて、次のコマンドを実行してゾーンの再利用を無効にします。
 
@@ -514,23 +520,23 @@ numactl --interleave=all <path_to_process>
 echo 0 > /proc/sys/vm/zone_reclaim_mode
 ```
 
-#### mongod プロセスの ulimit 設定の調整 {#tweak-the-ulimit-settings-for-the-mongod-process}
+#### mongod プロセスの ulimit 設定の微調整 {#tweak-the-ulimit-settings-for-the-mongod-process}
 
-Linux では、`ulimit` コマンドによるリソースの割り当てを設定で制御できます。これは、ユーザーごとにおこなうことも、プロセスごとにおこなうこともできます。
+Linux では、`ulimit` コマンドによるリソースの割り当てを設定で制御できます。これは、ユーザーごとに行うことも、プロセスごとに行うこともできます。
 
 [MongoDB における ulimit の推奨設定](https://docs.mongodb.org/manual/reference/ulimit/#recommended-ulimit-settings)に従って、mongod プロセスの ulimit を設定することをお勧めします。
 
-#### MongoDB の I/O パフォーマンスのテスト  {#test-mongodb-i-o-performance}
+#### MongoDB の I/O パフォーマンスのテスト {#test-mongodb-i-o-performance}
 
 MongoDB には、I/O パフォーマンスのテストを目的とした `mongoperf` というツールが用意されています。このツールを使用して、インフラストラクチャを構成しているすべての MongoDB インスタンスのパフォーマンスをテストすることをお勧めします。
 
-`mongoperf` の使用方法については、[MongoDB のドキュメント](https://docs.mongodb.org/manual/reference/program/mongoperf/)を参照してください。
+`mongoperf` の使用方法について詳しくは、[MongoDB のドキュメント](https://docs.mongodb.org/manual/reference/program/mongoperf/)を参照してください。
 
 >[!NOTE]
 >
->`mongoperf` は、MongoDB が実行されているプラットフォームにおける MongoDB のパフォーマンスの指標となるように設計されています。そのため、実稼動システムでのパフォーマンスを保証するものとして結果を捉えないでください。
+> `mongoperf` は、MongoDB が実行されているプラットフォームにおける MongoDB のパフォーマンスの指標となるように設計されています。これによって、実稼動システムでのパフォーマンスを保証するものとして結果を捉えないでください。
 >
->より正確なパフォーマンス結果を得るために、`fio` Linux ツールを使用して補完テストを実行できます。
+>より正確なパフォーマンス結果を得るには、`fio` Linux ツールを使用して補完テストを実行できます。
 
 **デプロイメントを構成している仮想マシンでの読み取りパフォーマンスのテスト**
 
@@ -540,21 +546,21 @@ MongoDB には、I/O パフォーマンスのテストを目的とした `mongop
 echo "{nThreads:32,fileSizeMB:1000,r:true}" | mongoperf
 ```
 
-この出力がすべての MongoDB インスタンスの 32 のスレッドで最大 1 秒あたり 2 ギガバイト（2 GB/秒）、および 500,000 IOPS に達しているのが望ましい結果です。
+すべての MongoDB インスタンスで、最大 1 秒あたり 2 ギガバイト（2 GB/秒）および 500,000 IOPS を 32 スレッドで実行しているのが望ましい結果です。
 
-`mmf:true` パラメーターを設定して、2 回目のテストを実行します。今回はメモリマップファイルを使用します。
+2 回目のテストを実行します。今回は `mmf:true` パラメーターを設定して、メモリマップファイルを使用します。
 
 ```shell
 echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
 ```
 
-2 回目のテストの出力は最初のテストよりもかなり高くなり、メモリ転送のパフォーマンスが良くなったことを示します。
+2 回目のテストの結果は最初のテストよりもかなり高くなり、メモリ転送のパフォーマンスが良くなったことを示しています。
 
 >[!NOTE]
 >
->テストの実行時には、オペレーティングシステムの監視システムで対象の仮想マシンの I/O 使用率統計を確認してください。I/O 読み取りが 100 パーセント未満の値を示している場合は、仮想マシンに問題がある可能性があります。
+>テストを実施するときは、オペレーティングシステムのモニタリングシステムで対象の仮想マシンの I/O 使用率の状況を確認してください。I/O 読み取りが 100 パーセントに満たない値を示している場合は、仮想マシンに問題がある可能性があります。
 
-**プライマリ MongoDB インスタンスの書き込みパフォーマンスのテスト**
+**プライマリ MongoDB インスタンスの書き込みパフォーマンステスト**
 
 次に、同じ設定で MongoDB データベースディレクトリから `mongoperf` を実行して、プライマリ MongoDB インスタンスの I/O 書き込みパフォーマンスを確認します。
 
@@ -564,30 +570,30 @@ echo "{nThreads:32,fileSizeMB:1000,w:true}" | mongoperf
 
 この出力が 1 秒あたり 12 メガバイトで、約 3,000 IOPS に達していて、スレッド数による変動がほとんどないのが望ましい結果です。
 
-## 仮想化環境に関する手順  {#steps-for-virtualised-environments}
+## 仮想化環境に関する手順 {#steps-for-virtualised-environments}
 
 ### VMWare {#vmware}
 
-VMWare ESX を使用して仮想化環境を管理およびデプロイする場合は必ず、MongoDB の操作に対応するように、ESX コンソールで次の設定を実行してください。
+VMWare ESX を使用して仮想化環境を管理およびデプロイしている場合、MongoDB の動作に対応するために、ESX コンソールで次の設定を行ってください。
 
-1. メモリバルーニングを無効にします。
+1. メモリバルーンを無効にします。
 1. MongoDB データベースをホストする仮想マシンのメモリを事前に割り当てて確保します。
 1. Storage I/O Control を使用して、十分な I/O を `mongod` プロセスに割り当てます。
 1. [CPU 予約](https://pubs.vmware.com/vsphere-4-esx-vcenter/index.jsp?topic=/com.vmware.vsphere.vmadmin.doc_41/vsp_vm_guide/configuring_virtual_machines/t_allocate_cpu_resources.html)を設定して、MongoDB をホストするマシンの CPU リソースを確保します。
 
-1. 準仮想化 I/O ドライバーの使用を検討します。この方法の詳細については、[ナレッジベースの記事](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1010398)を参照してください。
+1. 準仮想化 I/O ドライバーの使用を検討します。その方法について詳しくは、こちらの[ナレッジベースの記事](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1010398)を参照してください。
 
 ### Amazon Web Services {#amazon-web-services}
 
-Amazon Web Services に MongoDB をセットアップする方法については、MongoDB Web サイトの [AWS 統合の設定](https://docs.cloud.mongodb.com/tutorial/configure-aws-settings/)に関する記事を参照してください。
+Amazon Web Services に MongoDB をセットアップする方法については、MongoDB web サイトの [AWS 統合の設定](https://docs.cloud.mongodb.com/tutorial/configure-aws-settings/)に関する記事を参照してください。
 
-## デプロイメントの前に MongoDB をセキュリティ保護する {#securing-mongodb-before-deployment}
+## デプロイ前に MongoDB をセキュリティで保護する {#securing-mongodb-before-deployment}
 
 デプロイメント前にデータベースの設定を保護する方法についてのアドバイスは、[MongoDB の安全なデプロイ](https://blogs.adobe.com/security/2015/07/securely-deploying-mongodb-3-0.html)に関する投稿を参照してください。
 
 ## Dispatcher {#dispatcher}
 
-### Dispatcher のオペレーティングシステムの選択  {#choosing-the-operating-system-for-the-dispatcher}
+### Dispatcher のオペレーティングシステムの選択 {#choosing-the-operating-system-for-the-dispatcher}
 
 MongoDB デプロイメントが適切に機能するには、Dispatcher をホストするオペレーティングシステムが **Apache httpd** **バージョン 2.4 以降**&#x200B;を実行している必要があります。
 
@@ -599,9 +605,9 @@ MongoDB デプロイメントが適切に機能するには、Dispatcher をホ�
 
 Dispatcher は概してステートレスなので、水平方向に簡単にスケーリングできます。一部のデプロイメントでは、作成者が特定のリソースにアクセスできないように制限する必要があります。こうした理由から、オーサーインスタンスで Dispatcher を使用することを強くお勧めします。
 
-Dispatcher を使用せずに AEM を実行するには、SSL ターミネーションとロードバランシングを別のアプリケーションで実行する必要があります。これが必要なのは、セッションには、セッションが作成された AEM インスタンスに対する親和性が必要であるからです。この概念は、スティッキー接続と呼ばれます。この目的は、コンテンツの更新が最小限の遅延でおこなわれるようにすることです。
+Dispatcher を使用せずに AEM を実行するには、SSL ターミネーションとロードバランシングを別のアプリケーションで実行する必要があります。これが必要なのは、セッションには、セッションが作成された AEM インスタンスに対する親和性が必要であるからです。この概念は、スティッキー接続と呼ばれます。これは、コンテンツの更新にかかる遅延を最小限に抑えるためです。
 
-設定方法について詳しくは、[Dispatcher のドキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)を参照してください。
+設定方法について詳しくは、[Dispatcher のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)を参照してください。
 
 ### その他の設定 {#additional-configuration}
 
@@ -611,7 +617,7 @@ Dispatcher を使用せずに AEM を実行するには、SSL ターミネーシ
 
 AEM インスタンスに要求をルーティングするすべての内部レイヤーでスティッキー接続を有効にして、後続の要求が同じ AEM インスタンスに到達するようにすることをお勧めします。他の方法では、インスタンス間でコンテンツが更新される際に顕著な遅延が発生しますが、スティッキー接続を使用すると、遅延を最小限に抑えることができます。
 
-#### 長い有効期限  {#long-expires}
+#### 長い有効期限 {#long-expires}
 
 デフォルトでは、AEM Dispatcher から送信されたコンテンツには Last-Modified および Etag ヘッダーが含まれていますが、コンテンツの有効期限を示すものはありません。これにより、ユーザーインターフェイスは常にリソースの最新バージョンを取得しますが、リソースが変更されているかどうかを確認するためにブラウザーで GET 操作が実行されることも意味します。その結果、ページの読み込みに応じて、複数の要求に対して 304（Not Modified）の HTTP 応答が返されることがあります。有効期限がないことがわかっているリソースについては、Expires ヘッダーを設定して Last-Modified および ETag ヘッダーを削除すると、コンテンツがキャッシュされ、Expires ヘッダーの日付になるまで、それ以上の更新要求はおこなわれなくなります。
 
@@ -619,7 +625,7 @@ AEM インスタンスに要求をルーティングするすべての内部レ�
 
 これらの URL が変更されることはありません。URL に含まれているリソースの本文が変更された場合、変更内容が URL に自動的に反映され、ブラウザーから適切なバージョンのリソースが要求されます。
 
-デフォルト設定では、HtmlClientLibraryManager にセレクターが追加されます。セレクターがある場合、セレクターはそのままの状態でリソースが Dispatcher にキャッシュされます。さらに、このセレクターを使用して、有効期限の動作が適切になるようにすることもできます。デフォルトのセレクターは、`lc-.*?-lc`パターンに従います。 次の Apache httpd 設定のディレクティブでは、このパターンと一致するすべての要求が、適切な有効期限を使用して処理されます。
+デフォルト設定では、HtmlClientLibraryManager にセレクターが追加されます。セレクターがある場合、セレクターはそのままの状態でリソースが Dispatcher にキャッシュされます。さらに、このセレクターを使用して、有効期限の動作が適切になるようにすることもできます。デフォルトのセレクターでは、`lc-.*?-lc` というパターンが使用されます。次の Apache httpd 設定のディレクティブでは、このパターンと一致するすべての要求が、適切な有効期限を使用して処理されます。
 
 ```xml
 Header set Expires "Tue, 20 Jan 2037 04:20:42 GMT" "expr=(%{REQUEST_STATUS} -eq 200) && (%{REQUEST_URI} =~ /.*lc-.*?-lc.*/)"
@@ -653,7 +659,7 @@ Header set X-Content-Type-Options "nosniff"  env=jsonp_request
 Header setifempty Content-Type application/javascript env=jsonp_request
 ```
 
-#### コンテンツセキュリティポリシー  {#content-security-policy}
+#### コンテンツセキュリティポリシー {#content-security-policy}
 
 Dispatcher のデフォルト設定では、オープンなコンテンツセキュリティポリシー（CSP）が許可されます。これにより、ブラウザーサンドボックスのデフォルトポリシーが適用されるすべてのドメインからページにリソースを読み込むことができます。
 
@@ -669,22 +675,22 @@ CSP では、ポリシーを微調整できます。ただし、複雑なアプ�
 
 サイジングについて詳しくは、[ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)を参照してください。
 
-### MongoDB のパフォーマンスの最適化  {#mongodb-performance-optimization}
+### MongoDB のパフォーマンスの最適化 {#mongodb-performance-optimization}
 
 MongoDB のパフォーマンスについての一般的な情報は、[MongoDB のパフォーマンスの分析](https://docs.mongodb.org/manual/administration/analyzing-mongodb-performance/)に関するページを参照してください。
 
-## 既知の制限事項  {#known-limitations}
+## 既知の制限事項 {#known-limitations}
 
-### 同時インストール{#concurrent-installations}
+### 同時インストール {#concurrent-installations}
 
 MongoMK では、1 つのデータベースで複数の AEM インスタンスを同時に使用することがサポートされていますが、同時インストールはサポートされていません。
 
 この制限を回避するには、まず 1 つのメンバーでインストールを実行し、最初のインストールが完了した後で、他のメンバーを追加します。
 
-### ページ名の長さ{#page-name-length}
+### ページ名の長さ {#page-name-length}
 
-AEMがMongoMK永続性マネージャーデプロイメントで実行されている場合、[ページ名は150文字に制限されます。](/help/sites-authoring/managing-pages.md)
+AEM が MongoMK 永続性マネージャーのデプロイメントで実行されている場合、[ページ名は 150 文字に制限されます。](/help/sites-authoring/managing-pages.md)
 
 >[!NOTE]
 >
->[MongoDB自体の既知の制限](https://docs.mongodb.com/manual/reference/limits/) としきい値についても詳しくは、 MongoDBのドキュメントを参照してください。
+>MongoDB 自体の既知の制限やしきい値についても理解しておくために、[MongoDB のドキュメントを参照してください](https://docs.mongodb.com/manual/reference/limits/)。
