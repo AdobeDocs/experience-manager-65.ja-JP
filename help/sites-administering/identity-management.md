@@ -1,8 +1,8 @@
 ---
 title: ID 管理
-seo-title: ID 管理
+seo-title: Identity Management
 description: AEM での ID 管理について説明します。
-seo-description: AEM での ID 管理について説明します。
+seo-description: Learn about identity management in AEM.
 uuid: d9b83cd7-c47a-41a5-baa4-bbf385d13bfd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 80%
+workflow-type: ht
+source-wordcount: '1222'
+ht-degree: 100%
 
 ---
 
@@ -25,23 +25,23 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 * [AEM Communities](/help/communities/overview.md) サイト訪問者がコミュニティにコンテンツを投稿するにはログインする必要があります。
 * [閉じられたユーザーグループ](/help/sites-administering/cug.md)
 
-   場合によっては、Webサイト（またはWebサイトのセクション）へのアクセスを特定の訪問者に制限する必要があります。
+   Web サイト（または Web サイト内のセクション）へのアクセスを特定の訪問者に制限することが必要な場合があります。
 
-* [](/help/sites-administering/personalization.md) パーソナライゼーション訪問者がWebサイトへのアクセス方法に関する特定の側面を設定できるようにします。
+* [パーソナライズ機能](/help/sites-administering/personalization.md) 訪問者が web サイトへのアクセス方法に関する特定の要素を設定できるようにします。
 
 ログイン（およびログアウト）機能は、[**プロファイル**](#profiles-and-user-accounts)&#x200B;付きのアカウントによって指定されます。プロファイルには、登録済みの訪問者（ユーザー）に関する追加情報が保持されます。実際の登録および承認のプロセスは状況によって異なります。
 
-* Webサイトからの自己登録
+* Web サイトでの自己登録
 
-   [コミュニティサイト](/help/communities/sites-console.md)は、訪問者がFacebookまたはTwitterアカウントで自己登録またはサインインできるように設定できます。
+   [コミュニティサイト](/help/communities/sites-console.md)は、訪問者が自身の Facebook や Twitter のアカウントから自動登録またはログインすることを許可するように設定できます。
 
-* 当サイトからの登録請求
+* Web サイトからの登録のリクエスト
 
-   閉じられたユーザーグループの場合、訪問者は登録のリクエストを許可し、ワークフローによって承認を実施できます。
+   閉じられたユーザーグループでは、訪問者が登録をリクエストできるようにし、ワークフローによる承認を強制的に行います。
 
 * オーサー環境からの各アカウントの登録
 
-   認証が必要なプロファイルが少数の場合は、それぞれを直接登録することもできます。
+   認証が必要なプロファイルの数が少ない場合は、各プロファイルを直接登録することもできます。
 
 訪問者による登録を許可するには、一連のコンポーネントとフォームを使用して、必要な ID 情報、追加の（多くの場合、オプションです）プロファイル情報の順に収集できます。また、登録の完了後に、訪問者が送信した詳細の確認と更新をおこなえるようにする必要があります。
 
@@ -54,18 +54,18 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 >
 >プロファイルに指定した情報を使用し、[セグメント](/help/sites-administering/campaign-segmentation.md)と[キャンペーン](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md)を通じて、ターゲットとなるコンテンツをユーザーに提供することもできます。
 
-## 登録フォーム  {#registration-forms}
+## 登録フォーム {#registration-forms}
 
 [フォーム](/help/sites-authoring/default-components.md#form-component)を使用すると、登録情報を収集して新しいアカウントとプロファイルを生成できます。
 
-例えば、ユーザーは、「Geometrixx」ページを使用して新しいプロファイルを要求できます
+例えば、ユーザーは次の Geometrixx ページを使用して新しいプロファイルをリクエストできます。
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
 ![registerform](assets/registerform.png)
 
 要求を送信すると、プロファイルページが開きます。ユーザーはこのページに個人の詳細情報を指定できます。
 
-![前照度](assets/profilepage.png)
+![profilepage](assets/profilepage.png)
 
 新しいアカウントは[ユーザーコンソール](/help/sites-administering/security.md)にも表示されます。
 
@@ -85,20 +85,20 @@ Web サイトの個々の訪問者を識別できるのは、その訪問者に�
 
 ログインメカニズムと共にログアウトメカニズムも必要です。ログアウトの際は、Geometrixx の「**Sign Out**」オプションを使用します。
 
-## プロファイルの確認と更新  {#viewing-and-updating-a-profile}
+## プロファイルの確認と更新 {#viewing-and-updating-a-profile}
 
-登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。これは、同様のフォームを使用しておこなうことができます。例：Geometrixx:
+登録フォームによっては、訪問者の情報が自身のプロファイルに登録されます。訪問者が以降のステージでこの情報を確認および更新できるようにする必要があります。そのためには、同様のフォームを用意します。例えば、Geometrixx では次を使用します。
 
 ```
 http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 ```
 
-プロファイルの詳細を確認するには、ページの右上隅にある「**My Profile**」をクリックします。例えば、`admin`アカウントの場合は次のようになります。
+プロファイルの詳細を確認するには、ページの右上隅にある「**マイプロファイル**」をクリックします。例えば、`admin` アカウントを使用する場合のプロファイルは次のとおりです。
 `http://localhost:4502/home/users/a/admin/profile.form.html/content/geometrixx-outdoors/en/user/profile.html.`
 
 オーサー環境の [ClientContext](/help/sites-administering/client-context.md) を使用すると、別のプロファイルを確認できます（十分な権限がある場合）。
 
-1. ページを開きます。例：Geometrixxページ
+1. ページを開きます（例：Geometrixx ページ）。
 
    `http://localhost:4502/cf#/content/geometrixx/en.html`
 
@@ -116,9 +116,9 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 1. 「**プロファイルを編集**」または「**パスワードを変更**」を使用して詳細を更新できます。
 
-## プロファイル定義へのフィールドの追加  {#adding-fields-to-the-profile-definition}
+## プロファイル定義へのフィールドの追加 {#adding-fields-to-the-profile-definition}
 
-プロファイル定義にフィールドを追加できます。例えば、Geometrixx プロファイルに「Favorite Color」（好きな色）フィールドを追加します。
+プロファイル定義にフィールドを追加できます。例えば、Geometrixx プロファイルに「Favorite Color」（好きな色）フィールドを追加するには、次の手順を実行します。
 
 1. Web サイトコンソールから Geometrixx Outdoors Site／英語／ユーザー／マイプロファイルに移動します。
 1. **マイプロファイル**&#x200B;ページをダブルクリックして編集用に開きます。
@@ -132,19 +132,19 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    「**OK**」をクリックして保存します。
 
-1. ページを閉じて **Web サイト**&#x200B;コンソールに戻り、マイプロファイルページをアクティベートします。
+1. ページを閉じて **web サイト**&#x200B;コンソールに戻り、マイプロファイルページをアクティベートします。
 
    次回プロファイルを確認する際に、好きな色を選択できます。
 
-   ![aparkefavcolor](assets/aparkerfavcolour.png)
+   ![aparkerfavcolour](assets/aparkerfavcolour.png)
 
    このフィールドは、関連するユーザーアカウントの **profile** セクションに保存されます。
 
-   ![aparkerxdelite](assets/aparkercrxdelite.png)
+   ![aparkercrxdelite](assets/aparkercrxdelite.png)
 
 ## プロファイルの状態 {#profile-states}
 
-ユーザー（またはユーザーのプロファイル）が特定の状態かどうかを確認しなければならない場合があります。**
+ユーザー（またはユーザーのプロファイル）が&#x200B;*特定の状態*&#x200B;かどうかを確認しなければならない場合があります。
 
 そのためには、次に示す方法で、ユーザープロファイルに適切なプロパティを定義する必要があります。
 
@@ -156,18 +156,18 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 * [状態プロバイダー](#state-providers)
 
-   特定のプロパティの2つの状態と、その2つの間の遷移を管理する。
+   特定のプロパティの 2 つの状態とその間の遷移を管理します。
 
 * [ワークフロー](#workflows)
 
-   状態に関連するアクションを管理する。
+   状態に関連するアクションを管理します。
 
-複数の状態を定義できます。例えば、Geometrixx では次の定義をおこなうことができます。
+複数の状態を定義できます。例えば、Geometrixx では次の定義を行うことができます。
 
 * ニュースレターまたはコメントスレッドの通知を購読／購読解除
 * 友人とのつながりを追加／削除
 
-### State Providers {#state-providers}
+### 状態プロバイダー {#state-providers}
 
 状態プロバイダーは、対象となるプロパティの現在の状態を、取りうる 2 つの状態のトランジションと共に管理します。
 
@@ -180,13 +180,13 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 状態プロバイダーは、プロファイルのプロパティとその状態を管理します。
 
-ワークフローは、状態に関連するアクションを実装する必要があります。例えば、通知を購読する場合、ワークフローは実際の購読アクションを処理します。通知の購読を解除する場合、ワークフローは購読リストからのユーザーの削除を処理します。
+ワークフローは、状態に関連するアクションを実装するのに必要です。例えば、通知を購読する場合、ワークフローは実際の購読アクションを処理します。通知の購読を解除する場合、ワークフローは購読リストからのユーザーの削除を処理します。
 
-## Profiles and User Accounts {#profiles-and-user-accounts}
+## プロファイルとユーザーアカウント {#profiles-and-user-accounts}
 
-プロファイルは、[ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md)の一部としてコンテンツリポジトリに保存されます。
+プロファイルは、[ユーザーアカウント](/help/sites-administering/user-group-ac-admin.md)の一部としてコンテンツリポジトリに格納されます。
 
-プロファイルは`/home/users/geometrixx`の下にあります。
+プロファイルは `/home/users/geometrixx` にあります。
 
 ![chlimage_1-138](assets/chlimage_1-138.png)
 
@@ -203,7 +203,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 このようなアクセスがインストール環境に適していない場合は、デフォルト設定を変更できます。
 
-これは、「**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**」タブを使用しておこなえます。
+これを行うには「**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**」タブを使用します。
 
 ![aclmanager](assets/aclmanager.png)
 
