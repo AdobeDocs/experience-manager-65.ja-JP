@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 のカスタムユーザグループマッピング
-seo-title: AEM 6.5 のカスタムユーザグループマッピング
+seo-title: Custom User Group Mapping in AEM 6.5
 description: AEM でカスタムユーザーグループマッピングがどのように機能するか説明します。
-seo-description: AEM でカスタムユーザーグループマッピングがどのように機能するか説明します。
+seo-description: Lear how Custom User Group Mapping works in AEM.
 uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: 13085dd3-d283-4354-874b-cd837a9db9f9
 docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
-feature: セキュリティ
+feature: Security
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
-workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 74%
+workflow-type: ht
+source-wordcount: '489'
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 74%
   <tr>
    <td><p>プロパティ：cq:cugEnabled</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td><p>認証：</p> <p>ノード：rep:cugPolicyのノードタイプ rep:CugPolicy</p> <p>ノードタイプの宣言：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 認証:</p> <p>Mixin タイプ：granite:AuthenticationRequired</p> </td>
-   <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>メモ：ポリシーは、設定されているサポート対象パスにのみ適用できます。</p> <p>rep:cugPolicy および rep:CugPolicy という名前のノードは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードに認証要件を適用するには、mixinタイプgranite:AuthenticationRequiredを追加するだけで十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
+   <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>メモ：ポリシーは、設定されているサポート対象パスにのみ適用できます。</p> <p>rep:cugPolicy および rep:CugPolicy という名前のノードは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードに認証要件を適用するには、Mixin タイプ granite:AuthenticationRequired を追加することで十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
    <td><p>プロパティ：cq:cugPrincipals</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
@@ -43,7 +43,7 @@ ht-degree: 74%
   <tr>
    <td><p>プロパティ：cq:cugLoginPage</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td><p>プロパティ：granite:loginPath（オプション）</p> <p>ノードタイプの宣言：granite:AuthenticationRequired</p> </td>
-   <td><p>mixinタイプgranite:AuthenticationRequiredが定義されたJCRノードは、オプションで別のログインパスを定義できます。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
+   <td><p>Mixin タイプ granite:AuthenticationRequired が定義されている JCR ノードは、オプションで代替ログインパスを定義できます。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
    <td><p>プロパティ：cq:cugRealm</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
@@ -53,7 +53,7 @@ ht-degree: 74%
  </tbody>
 </table>
 
-## OSGi サービスの比較  {#comparison-of-osgi-services}
+## OSGi サービスの比較 {#comparison-of-osgi-services}
 
 **古い AEM バージョン**
 
@@ -84,18 +84,18 @@ ht-degree: 74%
 
 **コメント**
 
-* CUG 認証の設定および評価の有効化/無効化CUG認証の影響を受けないプリンシパルの除外リストを設定するサービス。
+* CUG 認証の設定および評価の有効化/無効化CUG 認証によって影響を受けるべきではないプリンシパルの除外リストを設定するサービス。
 
    >[!NOTE]
    > 
-   >`CugExcludeImpl`が設定されていない場合、`CugConfiguration`はデフォルトに戻ります。
+   >`CugExcludeImpl` が設定されていない場合、`CugConfiguration` がデフォルトに戻ります。
 
    特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
 
 * LoginSelectorHandler に一致するログインパスを公開する LoginPathProvider を実装する OSGi コンポーネント。これは、granite:AuthenticationRequired mixin タイプによって、コンテンツに格納されている変更された認証要件を監視するオブザーバを登録するために使用される RequirementHandler への必須参照を持っています。
-* RequirementHandlerを実装するOSGiコンポーネント。SlingAuthenticatorに対し、認証要件の変更を通知します。
+* authRequirements の変更について SlingAuthenticator に通知する RequirementHandler を実装する OSGi コンポーネント。
 
-   このコンポーネントの構成ポリシーはREQUIREなので、サポートされているパスのセットが指定されている場合にのみ有効化されます。
+   このコンポーネントの設定ポリシーは REQUIRE なことから、サポートされているパスのセットが指定されている場合にのみ有効になります。
 
    サービスを有効にすると RequirementService が起動します。
 
