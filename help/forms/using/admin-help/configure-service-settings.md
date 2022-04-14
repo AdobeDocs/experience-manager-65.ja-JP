@@ -1,8 +1,8 @@
 ---
 title: サービス設定の指定
-seo-title: サービス設定の指定
+seo-title: Configure service settings
 description: サービス設定の指定方法について説明します。
-seo-description: サービス設定の指定方法について説明します。
+seo-description: Learn how to configure service settings.
 uuid: e95425a4-62f6-473e-b21b-d081c432e02d
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '10710'
-ht-degree: 63%
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+workflow-type: ht
+source-wordcount: '10683'
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 63%
 
    >[!NOTE]
    >
-   >サービスの管理ページに表示されるすべてのサービスに「設定」タブがあるわけではありません。作成したプロセスについて、Workbench でプロセスに設定パラメーターを追加した場合にのみ「設定」タブが表示されます（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)の「設定パラメーター」を参照）。
+   >サービスの管理ページに表示されるすべてのサービスに「設定」タブがあるわけではありません。作成したプロセスについて、Workbench でプロセスに設定パラメーターを追加した場合にのみ「設定」タブが表示されます（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)の「設定パラメーター」を参照）。
 
 
 1. 「セキュリティ」タブをクリックして、サービスのセキュリティ設定を指定します。[サービスのセキュリティ設定の変更](configure-service-settings.md#modifying-security-settings-for-a-service)を参照してください。
@@ -37,49 +37,49 @@ ht-degree: 63%
 1. 「保存」をクリックして変更を保存するか、「キャンセル」をクリックして変更を破棄します。
 1. サービス名の横にあるチェックボックスを選択し、「開始」をクリックしてサービスを再起動します。
 
-## Audit Workflow サービスの設定  {#audit-workflow-service-settings}
+## Audit Workflow サービスの設定 {#audit-workflow-service-settings}
 
-Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能が用意されています（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照）。forms サーバーのファイルシステム上のスペースを確保するために、保存するプロセス記録データの量を制限できます。Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
+Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能が用意されています（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照）。forms サーバーのファイルシステム上のスペースを確保するために、保存するプロセス記録データの量を制限できます。Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
 
-**maxNumberOfRecordingInstances:** 保存される記録の最大数。保存の最大数に達すると、新しいレコードが作成されるときに最も古いレコードがファイルシステムから削除されます。このプロパティは、多数のレコードを作成する可能性が高いので、古いレコードを自動的に削除する場合に便利です。デフォルト値は 50 です。
+**maxNumberOfRecordingInstances：**&#x200B;格納する記録の最大数です。保存の最大数に達すると、新しいレコードが作成されるときに最も古いレコードがファイルシステムから削除されます。このプロパティは、多数のレコードを作成する可能性が高いので、古いレコードを自動的に削除する場合に便利です。デフォルト値は 50 です。
 
-**MaxNumberOfRecordingEntries:** 各記録に保存できるデータエントリの最大数。データエントリはプロセスの操作に関する情報です。一部のエントリは操作の実行ごとに保存されます。例えば、操作が開始されたかどうか、操作が完了したかどうか、操作を発生させるルートが完了したかどうか、などです。このプロパティは、プロセスに操作の実行が多数含まれる場合（例えば、永久ループが発生した場合など）に便利です。デフォルト値は 50 です。
+**MaxNumberOfRecordingEntries：**&#x200B;各レコードに格納できるデータエントリの最大数です。データエントリはプロセスの操作に関する情報です。一部のエントリは操作の実行ごとに保存されます。例えば、操作が開始されたかどうか、操作が完了したかどうか、操作を発生させるルートが完了したかどうか、などです。このプロパティは、プロセスに操作の実行が多数含まれる場合（例えば、永久ループが発生した場合など）に便利です。デフォルト値は 50 です。
 
-## Barcoded Forms サービスの設定  {#barcoded-forms-service-settings}
+## Barcoded Forms サービスの設定 {#barcoded-forms-service-settings}
 
-バーコードフォームサービス`(BarcodedFormsService)`は、スキャンされた画像からバーコードデータを抽出します。 このサービスは、バーコードフォーム（TIFF または PDF）を入力として受け取り、バーコードでエンコードされたデータのマシン表現を抽出します。
+Barcoded Forms サービス `(BarcodedFormsService)` は、スキャンされた画像からバーコードデータを抽出します。このサービスは、バーコードフォーム（TIFF または PDF）を入力として受け取り、バーコードでエンコードされたデータのマシン表現を抽出します。
 
 Barcoded Forms サービスでは、以下の設定を使用できます。
 
-**左に読み取り：** 選択すると、バーコード画像が右から左に水平にスキャンされます。
+**左方向に読み込み：**&#x200B;選択すると、バーコード画像が右から左に横方向にスキャンされます。
 
-**右に読み取り：** 選択すると、バーコード画像が左から右に水平にスキャンされます。
+**右方向に読み取り：**&#x200B;選択すると、バーコード画像が左から右に横方向にスキャンされます。
 
-**読み上げ：** 選択すると、バーコード画像が下から上に垂直にスキャンされます。
+**上方向に読み取り：**&#x200B;選択すると、バーコード画像が下から上に縦方向にスキャンされます。
 
-**下へ読み取り：** 選択すると、バーコード画像が上から下に垂直にスキャンされます。
+**下方向に読み取り：**&#x200B;選択すると、バーコード画像が上から下に縦方向にスキャンされます。
 
 >[!NOTE]
 >
 >デフォルトでは、すべてのオプションが選択されています。フォームで適用されていないことが確実なバーコードの表示方法のみ、オプションを選択解除します。
 
-**ベースファイルパス：** 「Run XML File Job」操作と「Run Flat File Job」操作のバッチ入力および出力ファイルパラメーターが解決される相対パス。クラスター構成では、基本ファイルパスは、すべてのクラスターノードが読み取り/書き込みアクセス権を持つ共有ファイルシステムの場所である必要があります。
+**ベースファイルパス：** 「XML ファイルジョブの実行」操作と「フラットファイルジョブの実行」操作のバッチ入力および出力ファイルパラメータが解決される相対ファイルパス。クラスタ構成では、ベースファイルパスは、すべてのクラスタノードが読み取り／書き込みアクセスを持つ共有ファイルシステムの場所にする必要があります。
 
-**データソース名：** バッチ処理ジョブの状態と履歴の情報を管理するために使用されるデータソースの名前。指定したデータソースは、グローバル(XA)トランザクションをサポートする必要があります。
+**データソース名：**&#x200B;バッチ処理ジョブの状態および履歴情報の維持に使用するデータソースの名前です。指定したデータソースはグローバル（XA）トランザクションをサポートする必要があります。
 
 ## Central Migration Bridge サービス（非推奨）の設定 {#central-migration-bridge-service-settings}
 
 Central Migration Bridge サービス（`CentralMigrationBridge`）は Adobe Central Pro Output Server（Central）機能の一部を呼び出します（JFMERGE、JFTRANS、XMLIMPORT コマンドなど）。Central Migration Bridge サービスの操作により、AEM forms では以下の Central アセットを再使用できます。
 
-* テンプレートデザイン(&amp;ast;.ifd)
-* 出力テンプレート(&amp;ast;.mdf)
-* データファイル(&amp;ast;.dat)
-* プリアンブルファイル（&amp;ast;.preファイル）
-* データ定義ファイル(&amp;ast;.tdf)
+* テンプレートデザイン（&amp;ast;.ifd）
+* 出力テンプレート（&amp;ast;.mdf）
+* データファイル（&amp;ast;.dat ファイル）
+* プリアンブルファイル（&amp;ast;.pre ファイル）
+* データ定義ファイル（&amp;ast;.tdf）
 
 Central Migration Bridge サービスでは、以下の設定を使用できます。
 
-**Central Install Directory:** Central 5.7がインストールされているAdobe。
+**中央インストールディレクトリ：** Adobe Central 5.7 がインストールされているディレクトリです。
 
 ## Content Repository Connector for EMC Documentum サービスの設定 {#content-repository-connector-for-emc-documentum-service-settings}
 
@@ -87,13 +87,13 @@ Content Repository Connector for EMC Documentum サービス（`EMCDocumentumCon
 
 Content Repository Connector for EMC Documentum サービスでは、以下の設定を使用できます。
 
-**アセットリンクオブジェクトのデフォルトパス：** Documentumリポジトリ内の、アセットリンクオブジェクトを保存するためのパスのデフォルト部分。実際のパスは、デフォルトパスと、AEM forms リポジトリのフォームテンプレートの位置で構成されます。
+**アセットリンクオブジェクトのデフォルトパス：** Documentum リポジトリ内にアセットリンクオブジェクトを格納するパスのデフォルト部分です。実際のパスは、デフォルトパスと、AEM forms リポジトリのフォームテンプレートの位置で構成されます。
 
-例えば、デフォルトパスが`/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`に設定され、フォームテンプレートがフォルダー`/Docbase/forms/`に保存されている場合、アセットリンクオブジェクトは次の場所に保存されます。
+例えば、デフォルトパスが `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects` に設定され、フォームテンプレートがフォルダー `/Docbase/forms/` に格納されている場合、アセットリンクオブジェクトは次の場所に格納されます。
 
 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects/Docbase/forms/`
 
-この設定のデフォルト値は`/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`です。
+この設定のデフォルト値は `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects` です。
 
 ## Content Repository Connector for IBM FileNet サービスの設定 {#content-repository-connector-for-ibm-filenet-service-settings}
 
@@ -101,13 +101,13 @@ Content Repository Connector for IBM FileNet を使用すると、IBM FileNet �
 
 Content Repository Connector for IBM FileNet サービスでは、以下の設定を使用できます。
 
-**アセットリンクオブジェクトのデフォルトパス：** IBM FileNetリポジトリ内の、アセットリンクオブジェクトを保存するためのパスのデフォルト部分。実際のパスは、デフォルトパスと、AEM forms リポジトリのフォームテンプレートの位置で構成されます。
+**アセットリンクオブジェクトのデフォルトパス：** IBM FileNet リポジトリ内にアセットリンクオブジェクトを格納するパスのデフォルト部分です。実際のパスは、デフォルトパスと、AEM forms リポジトリのフォームテンプレートの位置で構成されます。
 
-例えば、デフォルトパスが`/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`に設定され、フォームテンプレートがフォルダー`/Docbase/forms/`に保存されている場合、アセットリンクオブジェクトは次の場所に保存されます。
+例えば、デフォルトパスが `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects` に設定され、フォームテンプレートがフォルダー `/Docbase/forms/` に格納されている場合、アセットリンクオブジェクトは次の場所に格納されます。
 
 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects/Docbase/forms/`
 
-この設定のデフォルト値は`/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`です。
+この設定のデフォルト値は `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects` です。
 
 ## Convert PDF サービスの設定 {#convert-pdf-service-settings}
 
@@ -115,21 +115,21 @@ Convert PDF サービス（`ConvertPdfService`）は、PDF ドキュメントを
 
 Convert PDF サービスでは、以下の設定を使用できます。
 
-**トランザクションタイプ：** トランザクションコンテキストを操作に渡す方法を指定します。
+**トランザクションのタイプ：**&#x200B;トランザクションコンテキストの操作への適用方法を指定します。
 
-**必須：** トランザクションコンテキストが存在する場合にそのコンテキストをサポートします。それ以外の場合は、新しいトランザクションコンテキストが作成されます。これがデフォルト値です。
+**必須：**&#x200B;既存のトランザクションコンテキストがサポートされます。トランザクションコンテキストが存在しない場合は、新しいトランザクションコンテキストが作成されます。これがデフォルト値です。
 
-**新規作成が必要：** 常に新しいトランザクションコンテキストを作成します。アクティブなトランザクションコンテキストが存在する場合は、休止されます。
+**新規必須：**&#x200B;常にトランザクションコンテキストが作成されます。アクティブなトランザクションコンテキストが存在する場合は、休止されます。
 
-**トランザクションタイムアウト（秒）:** この操作をラップしているトランザクションがロールバックされるまで、基になるトランザクションプロバイダーが待機する秒数。既存のトランザクションコンテキストが適用されている場合、この値は無視されます。デフォルト値は 180 です。
+**トランザクションタイムアウト（秒単位）：**&#x200B;操作をラップしているトランザクションがロールバックされるまで、基になるトランザクションプロバイダーが待機する秒数です。既存のトランザクションコンテキストが適用されている場合、この値は無視されます。デフォルト値は 180 です。
 
-**スムージングのしきい値の解像度(dpi):** テキスト、ラインアートおよび画像にスムージング（アンチエイリアス）を適用する際に、それらの要素に対して「スムージングを適用」オプションを選択した場合に適用される画像の解像度です。
+**スムージングのしきい値解像度（dpi）**&#x200B;テキスト、ラインアートおよび画像に対して「スムージングを適用」オプションを選択している場合に、これらの要素にスムージング（アンチエイリアス）を適用する画像解像度です。
 
-**テキストにスムージングを適用：** テキストのアンチエイリアスを制御します。テキストのスムージングを無効にしてテキストをよりシャープにし、画面の拡大時に読みやすくするには、このチェックボックスをオフにします。
+**スムージングをテキストに適用：**&#x200B;テキストのアンチエイリアシングを制御します。 テキストのスムージングを無効にしてテキストをよりシャープにし、画面の拡大時に読みやすくするには、このチェックボックスをオフにします。
 
-**ラインアートにスムージングを適用：** 線の急な角度を削除するスムージングを適用します。
+**スムージングをラインアートに適用：**&#x200B;スムージングを適用して、直線の急な角度を削除します。
 
-**画像にスムージングを適用：** 画像の急激な変化を最小限に抑えるためにスムージングを適用します。
+**スムージングを画像に適用：**&#x200B;スムージングを適用して、画像の急激な変化を最小限に抑えます。
 
 ## Distiller サービスの設定 {#distiller-service-settings}
 
@@ -137,7 +137,7 @@ Distiller サービス（`DistillerService`）は、ネットワークを介し�
 
 Distiller サービスでは、以下の設定を使用できます。
 
-**Adobe PDF設定：** 生成されるPDFには、次の事前設定が適用されます。
+**Adobe PDF 設定：**&#x200B;生成された PDF には、次の指定済みの設定が適用されます。
 
 * 高品質印刷
 * オーバーサイズページ
@@ -151,25 +151,25 @@ Distiller サービスでは、以下の設定を使用できます。
 
 新しい設定を作成するには、PDF Generator ユーザーインターフェイスを使用します。
 
-**セキュリティ設定：** 生成されたPDFドキュメントに適用される事前設定済みのセキュリティ設定。デフォルト値は「セキュリティなし」です。PDF Generator を使用してセキュリティ設定を作成してから、ここに設定を入力する必要があります。
+**セキュリティ設定：**&#x200B;生成された PDF ドキュメントに適用される設定済みのセキュリティ設定です。デフォルト値は「セキュリティなし」です。PDF Generator を使用してセキュリティ設定を作成してから、ここに設定を入力する必要があります。
 
-**Pool Size:** プールの初期サイズ。Distiller サービスがデプロイされると、サービス実装インスタンスが何個作成され、呼び出し要求を待機している空きプールに割り当てられるかが、この数値を使用して特定されます。そうすると、サービスコンテナでは、サービスインスタンスを初期化する必要なく、呼び出し要求に直ちに応答できます。
+**プールサイズ：**&#x200B;プールの初期サイズです。 Distiller サービスがデプロイされると、サービス実装インスタンスが何個作成され、呼び出し要求を待機している空きプールに割り当てられるかが、この数値を使用して特定されます。そうすると、サービスコンテナでは、サービスインスタンスを初期化する必要なく、呼び出し要求に直ちに応答できます。
 
-## Document Management サービスの設定  {#document-management-service-settings}
+## Document Management サービスの設定 {#document-management-service-settings}
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。Content Services（非推奨）の設定について詳しくは、『[Content Services の管理](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)』を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
 Document Management サービス（`DocumentManagementService`）を使用すると、プロセスで Content Services（非推奨）のコンテンツ管理機能を使用できます。Document Management 操作には、コンテンツ管理システムのスペースとコンテンツを保守するために必要な基本的なタスクがあります。例えば、コンテンツのコピー、削除、移動、取得、および保存、スペースと関連付けの作成、コンテンツ属性の取得および設定などのタスクです。
 
 Document Management サービスでは、以下の設定を使用できます。
 
-**ストアスキーム：** コンテンツが配置されるストアのスキームです。デフォルト値はワークスペースです。
+**ストアスキーム：**&#x200B;コンテンツが格納されているストアのスキームです。デフォルト値はワークスペースです。
 
-**HTTPポート：** Content Services（非推奨）へのアクセスに使用するポート。デフォルト値は 8080 です。
+**HTTP ポート：** コンテンツサービスへのアクセスに使用するポートです（非推奨）。デフォルト値は 8080 です。
 
-## Email サービスの設定  {#email-service-settings}
+## Email サービスの設定 {#email-service-settings}
 
 電子メールは通常、自動化されたプロセスの一部として、コンテンツの配布やステータス情報の提供に使用されます。Email サービス（`EmailService`）によって、プロセスでは電子メールメッセージを POP3 または IMAP サーバーから受信したり、SMTP サーバーに送信したりすることができます。
 
@@ -177,33 +177,33 @@ Document Management サービスでは、以下の設定を使用できます。
 
 Email サービスでは、以下の設定を使用できます。
 
-**SMTP Host:** 電子メールの送信に使用するSMTPサーバーのIPアドレスまたはURL。
+**SMTP ホスト：**&#x200B;メールの送信に使用する SMTP サーバーの IP アドレスまたは URL です。
 
-**SMTP Port Number:** SMTPサーバーへの接続に使用するポート。
+**SMTP ポート番号：** SMTP サーバーへの接続に使用するポートです。
 
-**SMTP Authenticate:** SMTPサーバーへの接続にユーザー認証が必要な場合に選択します。
+**SMTP 認証：** SMTP サーバー接続にユーザー認証が必要な場合に選択します。
 
-**SMTP User:** SMTPサーバーへのログインに使用するユーザーアカウントのユーザー名です。
+**SMTP ユーザー：** SMTP サーバーへのログインに使用するユーザーアカウントのユーザー名です。
 
-**SMTP Password:** SMTPユーザーアカウントに関連付けられているパスワードです。
+**SMTP パスワード：** SMTP ユーザーアカウントと関連付けられているパスワードです。
 
-**SMTP Transport Security:** SMTPサーバーへの接続に使用するセキュリティプロトコルです。
+**SMTP トランスポートセキュリティ：** SMTP サーバーへの接続に使用するセキュリティプロトコルです。
 
 * プロトコルを使用しない場合は「None」を選択します（データはクリアテキストで送信されます）
 * Secure Sockets Layer プロトコルを使用する場合は「SSL」を選択します。
 * Transport Layer Security を使用する場合は「TLS」を選択します。
 
-**POP3/IMAP Host:** 電子メールの送信に使用するPOP3またはIMAPサーバーのIPアドレスまたはURL。
+**POP3/IMAP ホスト：** メールの送信に使用する POP3 または IMAP サーバーの IP アドレスまたは URL です。
 
-**POP3/IMAP Username:** POP3またはIMAPサーバーへのログインに使用するユーザーアカウントのユーザー名。
+**POP3/IMAP ユーザー名：** POP3 または IMAP サーバーへのログインに使用するユーザーアカウントのユーザー名です。
 
-**POP3/IMAP Password:** POP3またはIMAPユーザーアカウントに関連付けられているパスワード。
+**POP3/IMAP パスワード：** POP3 または IMAP ユーザーアカウントと関連付けられているパスワードです。
 
-**POP3/IMAP Port Number:** POP3またはIMAPサーバーへの接続に使用するポート。
+**POP3/IMAP ポート番号：** POP3 または IMAP サーバーへの接続に使用するポートです。
 
-**POP3/IMAP:** 電子メールの送受信に使用するプロトコル。
+**POP3/IMAP：**&#x200B;メールの送受信に使用するプロトコルです。
 
-**Receive Transport Security:** SMTPサーバーへの接続に使用するセキュリティプロトコルです。
+**Receive Transport Security：** SMTP サーバーへの接続に使用するセキュリティプロトコルです。
 
 * プロトコルを使用しない場合は「None」を選択します（データはクリアテキストで送信されます）。
 * Secure Sockets Layer プロトコルを使用する場合は「SSL」を選択します。
@@ -215,19 +215,19 @@ Encryption サービス（`EncryptionService`）は、ドキュメントの暗�
 
 Encryption サービスでは、以下の設定を使用できます。
 
-**接続先のデフォルトLDAPサーバー：** ドキュメント暗号化用の証明書を取得するために使用されるLDAPサーバーのホスト名。
+**Default LDAP Server to connect to：**&#x200B;ドキュメント暗号化用の証明書の取得に使用する LDAP サーバーのホスト名です。
 
-**接続先のデフォルトLDAPポート：** LDAPサーバーのポート番号。
+**Default LDAP Port to connect to：** LDAP サーバーのポート番号です。
 
-**デフォルトのLDAPユーザー名：** LDAPサーバーで認証が必要な場合は、LDAPサーバーへの接続に使用するユーザー名を指定します。
+**Default LDAP User Name：** LDAP サーバーで認証が必要な場合は、LDAP サーバーへの接続に使用するユーザー名を指定します。
 
-**デフォルトのLDAPパスワード：** LDAPサーバーで認証が必要な場合は、LDAPサーバーへの接続に使用するユーザー名に対応するパスワードを指定します。
+**Default LDAP Password：** LDAP サーバーで認証が必要な場合は、LDAP サーバーへの接続に使用されるユーザー名に対応するパスワードを指定します。
 
 >[!NOTE]
 >
 >接続が SSL（LDAPS を使用）で保護されている場合は、単純な認証（ユーザー名とパスワード）のみを使用します。
 
-**互換モード：**
+**Compatibility Mode：**
 
 ## FTP サービスの設定 {#ftp-service-settings}
 
@@ -235,13 +235,13 @@ Encryption サービスでは、以下の設定を使用できます。
 
 FTP サービスでは、以下の設定を使用できます。
 
-**デフォルトホスト：** FTPサーバーのIPアドレスまたはURL。
+**Default host：** FTP サーバーの IP アドレスまたは URL です。
 
-**デフォルトポート：** FTPサーバーへの接続に使用するポート。デフォルト値は 21 です。
+**Default port：** FTP サーバーへの接続に使用するポートです。デフォルト値は 21 です。
 
-**デフォルトのユーザー名：** FTPサーバーへのアクセスに使用できるユーザーアカウントの名前。このサービスで要求される FTP 操作を実行するには、ユーザーアカウントに十分な権限が備わっている必要があります。
+**Default username：** FTP サーバーへのアクセスに使用できるユーザーアカウント名です。このサービスで要求される FTP 操作を実行するには、ユーザーアカウントに十分な権限が備わっている必要があります。
 
-**デフォルトのパスワード：** FTPサーバーでの認証用に指定したユーザー名で使用するパスワード。
+**Default password：** FTP サーバーでの認証用として指定されたユーザー名と共に使用するパスワードです。
 
 ## GeneratePDF サービスの設定 {#generate-pdf-service-settings}
 
@@ -249,29 +249,29 @@ Generate PDF サービス（`GeneratePDFService`）は、様々な種類の形�
 
 Generate PDF サービスでは、以下の設定を使用できます。
 
-**Adobe PDF Settings:** 変換ジョブに適用する、事前設定済みのAdobe PDF設定の名前（これらの設定がAPI呼び出しパラメーターの一部として指定されていない場合）。Adobe PDF 設定は、管理コンソールで、サービス／PDF Generator／Adobe PDF 設定をクリックして指定します。これらの設定は、PDFMaker ベースの変換の場合にのみ適用可能です。
+**Adobe PDF Settings：** 変換ジョブに適用するために事前設定された Adobe PDF 設定（この設定が API 起動パラメーターの一部として指定されていない場合に使用する）の名前です。Adobe PDF 設定は、管理コンソールで、サービス／PDF Generator／Adobe PDF 設定をクリックして指定します。これらの設定は、PDFMaker ベースの変換の場合にのみ適用可能です。
 
-**セキュリティ設定：** 変換ジョブに適用する事前設定済みのセキュリティ設定の名前（これらの設定がAPI呼び出しパラメーターの一部として指定されていない場合）。セキュリティ設定は、管理コンソールで、サービス／PDF Generator／セキュリティ設定をクリックして指定します。
+**Security Settings：** 変換ジョブに適用するために事前設定されたセキュリティ設定（この設定が API 起動パラメーターの一部として指定されていない場合に使用する）の名前です。セキュリティ設定は、管理コンソールで、サービス／PDF Generator／セキュリティ設定をクリックして指定します。
 
-**ファイルタイプ設定：** 変換ジョブに適用する、事前設定済みのファイルタイプ設定の名前（これらの設定がAPI呼び出しパラメーターの一部として指定されていない場合）。ファイルタイプの設定は、管理コンソールで、サービス／PDF Generator／ファイルタイプごとの設定をクリックして指定します。
+**File type Settings：** 変換ジョブに適用するために事前設定されたファイルタイプ設定（この設定が API 起動パラメーターの一部として指定されていない場合に使用する）の名前です。ファイルタイプの設定は、管理コンソールで、サービス／PDF Generator／ファイルタイプごとの設定をクリックして指定します。
 
-**Acrobat WebCaptureを使用（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat X Proを使用して、すべてのHTMLからPDFへの変換を実行します。これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
+**Use Acrobat WebCapture（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、HTML から PDF への変換すべてに Acrobat X Pro を適用します。これにより、HTML から生成される PDF ファイルの品質は改善されますが、パフォーマンスはやや低下します。デフォルト値は false です。
 
-**Acrobat画像変換を使用する（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat X Proを使用して、すべての画像からPDFへの変換を実行します。この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
+**Use Acrobat Image Conversion（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、画像から PDF への変換すべてに Acrobat X Pro を適用します。この設定は、デフォルトの Pure Java 変換メカニズムで入力画像の大部分を正常に変換できない場合にのみ有用です。デフォルト値は false です。
 
-**AcrobatベースのAutoCAD変換を有効にする（Windowsのみ）:** この設定がtrueの場合、Generate PDFサービスはAcrobat X Proを使用して、すべてのDWGからPDFへの変換を実行します。この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
+**Enable Acrobat-based AutoCAD Conversions（Windows のみ）：** この設定が true の場合、Generate PDF サービスは、DWG から PDF への変換すべてに Acrobat X Pro を適用します。この設定が有用であるのは、AutoCAD がサーバーにインストールされていない場合や、AutoCAD 変換メカニズムではファイルを正常に変換できない場合のみです。
 
-**Export PDF名の禁止されている特殊文字を見つけるための正規表現（Windowsのみ）:** ユーザー名に使用される際に、Optimize PDFやユーザー操作を妨げる文字を指定します。
+**Regular Expressions For Finding Out Prohibited Special Characters In User Name（Windows のみ）：** ユーザー名に該当する文字が含まれている場合に、PDF の書き出しや PDF の最適化の操作で妨げになる文字を指定します。
 
-**ImageToPDF Pool Size:** Generate PDFサービスのデフォルト（純粋なJava）の画像 —PDFコンバーターのプールサイズ。この設定により、Generate PDF サービスで実行できる画像から PDF への最大同時変換が制御されます。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。
+**ImageToPDF Pool Size：** Generate PDF サービスで使用するデフォルトの Image to PDF Converter（Pure Java）のプールサイズです。この設定により、Generate PDF サービスで実行できる画像から PDF への最大同時変換が制御されます。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。
 
-**HTML to PDF Pool Size:** Generate PDFサービスのHTML-to-PDFコンバーターのプールサイズ。この設定により、Generate PDF サービスで実行できる HTML から PDF への最大同時変換が制御されます。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。
+**HTML to PDF Pool Size：** Generate PDF サービスの、HTML から PDF へのコンバーターのプールサイズです。この設定により、Generate PDF サービスで実行できる HTML から PDF への最大同時変換が制御されます。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。
 
-**OCR Pool Size:** PDF GeneratorがOCRに使用するPaperCaptureServiceのプールサイズ。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。この設定は Windows システムでのみ有効です。
+**OCR Pool Size：** PDF Generator が OCR に使用する PaperCaptureService のプールサイズです。この設定のデフォルト値（シングルプロセッサーシステムの場合に推奨）は 3 です。マルチプロセッサーシステムでは、この値を増やすことができます。この設定は Windows システムでのみ有効です。
 
-**HTMLからPDFへの変換のためのフォルバックフォントファミリ：** 元のHTMLで使用されていたフォントがAEM formsサーバーで使用できない場合にPDFドキュメントで使用するフォントファミリの名前。変換対象の HTML ページで使用されているフォントが使用不可能なフォントである場合、ここでフォントファミリーを指定します。例えば、特定の地域の言語で作成されたページには、利用不可能なフォントが使用されていることがあります。
+**Fallback Font Family For HTML To PDF Conversions：** 元の HTML で使用されているフォントが AEM Forms サーバーで使用できない場合に PDF ドキュメントで使用されるフォントファミリーの名前です。変換対象の HTML ページで使用されているフォントが使用不可能なフォントである場合、ここでフォントファミリーを指定します。例えば、特定の地域の言語で作成されたページには、利用不可能なフォントが使用されていることがあります。
 
-**ネイティブ変換の再試行ロジ** ック：最初の変換に失敗した場合にPDF生成の再試行が制御されます。
+**Retry Logic for Native Conversions：** 最初の変換に失敗した場合、PDF 生成の再試行が次のように制御されます。
 
 **No retry**
 
@@ -285,7 +285,7 @@ Generate PDF サービスでは、以下の設定を使用できます。
 
 最初の変換に費やした時間が指定したタイムアウト時間より短かった場合に、PDF 変換を再試行します。例えば、タイムアウト時間が 270 秒で最初の変換に 200 秒を費やした場合、PDF Generator は変換を再試行します。最初の変換自体が 270 秒を費やした場合、変換は再試行されません。
 
-## Guides ES4 Utilities サービスの設定  {#guides-es4-utilities-service-settings}
+## Guides ES4 Utilities サービスの設定 {#guides-es4-utilities-service-settings}
 
 ガイドを作成すると、一部のリソース（ガイドの定義など）がガイドに埋め込まれます。リソースは、ローカルまたは AEM Forms サーバーに保存されているアプリケーションアセットへの参照として存在する場合もあります。ガイドにデータは含まれません。また、送信場所および入力の値は、すべての外部環境に適していません。
 
@@ -304,29 +304,29 @@ Guide Utilities 操作を使用すると、以下のガイドレンダリング�
 
 Guide Utilities サービスのデフォルト値はほとんどの使用例をサポートしています。ただし、必要に応じて以下の値を変更できます。
 
-**publicPaths:** このオプションは非推奨（廃止予定）となりました。AEM Forms ではこのオプションを使用しないでください。
+**publicPaths：**&#x200B;このオプションは非推奨です。AEM Forms ではこのオプションを使用しないでください。
 
-**pathInfoExpiryInSeconds:** クライアントからのパス情報のリクエストの有効期限が切れる間隔です。初期設定は 1 です。
+**pathInfoExpiryInSeconds：**&#x200B;クライアントからのパス情報の要求が期限切れになるまでの間隔です。初期設定は 1 です。
 
-**collateralExpiryInSeconds:** クライアントからのコラテラルの要求の有効期限が切れるまでの間隔。初期設定は 315576000 です。
+**collateralExpiryInSeconds：**&#x200B;クライアントからのコラテラルの要求が期限切れになるまでの間隔です。初期設定は 315576000 です。
 
-**mismatchExpiryInSeconds:** eTag（エンティティタグ）が一致しない場合に、クライアントからのコラテラルの要求が期限切れになるまでの間隔です。（eTag は HTTP 応答ヘッダーです）。初期設定は 1 です。
+**mismatchExpiryInSeconds：** eTag（エンティティタグ）が一致しない場合に、クライアントからのコラテラルの要求が期限切れになるまでの間隔です。（eTag は HTTP 応答ヘッダーです）。初期設定は 1 です。
 
-**guideContext:** Guides Webアプリケーションのコンテキストルート。ガイド Web アプリケーションを使用して値セットとマッチングします。デフォルトは /Guides/ です。
+**guideContext：** ガイド web アプリケーションのコンテキストルートです。ガイド Web アプリケーションを使用して値セットとマッチングします。デフォルトは /Guides/ です。
 
-**secureRandomAlgorithm:** キーと識別子を生成する際に使用するアルゴリズム。この値は、SecureRandom Java クラスの getInstance メソッドに渡されます。デフォルトは SHA1PRNG です。
+**secureRandomAlgorithm：** キーと識別子を生成するときに使用するアルゴリズムです。この値は、SecureRandom Java クラスの getInstance メソッドに渡されます。デフォルトは SHA1PRNG です。
 
-**idBytes:** キー識別子に使用するランダムバイト数。初期設定は 6 です。
+**idBytes：** キー識別子に使用するランダムバイト数です。初期設定は 6 です。
 
-**macAlgorithm:** 販促物URLの検証に使用するMAC（メッセージ認証コード）アルゴリズム。このメソッドは、Mac クラスの getInstance メソッドに渡されます。デフォルトは HmacSHA1 です。
+**macAlgorithm：** コラテラル URL の検証に使用する MAC（メッセージ認証コード）アルゴリズムです。このメソッドは、Mac クラスの getInstance メソッドに渡されます。デフォルトは HmacSHA1 です。
 
-**macRefreshIntervalInMinutes:** キーがアクティブになる時間。キーがアクティブになってこの時間が経過すると、新しいキーが生成されます。新しいキーがアクティブキーになります。以前のアクティブキーは、10% の更新間隔で保持されます。この動作によって、古いキーを使用して生成された URL は、キーが切り替わっても引き続き機能します。初期設定は 144000 です。
+**macRefreshIntervalInMinutes：** キーがアクティブである時間の合計です。キーがアクティブになってこの時間が経過すると、新しいキーが生成されます。新しいキーがアクティブキーになります。以前のアクティブキーは、10% の更新間隔で保持されます。この動作によって、古いキーを使用して生成された URL は、キーが切り替わっても引き続き機能します。初期設定は 144000 です。
 
-**macOverlapIntervalInMinutes:** 新しいキーが生成された後、前のキーが有効である期間。デフォルトは 1440 分（1 日）です。
+**macOverlapIntervalInMinutes：** 新しいキーが生成された後、以前のキーが有効である期間の長さです。デフォルトは 1440 分（1 日）です。
 
-**macKeySeed:** セキュアURLを生成するためのシード値。これがオプションの場合は、キーは更新されません。異なるサーバーに同じシードを設定すると、これらのサーバーは互換性のある保護された URL を生成します。この値は、ロードバランサーの背後で複数の forms サーバーを使用している場合に便利です。文字と数字をランダムに組み合わせた文字列をシードとして入力してください。
+**macKeySeed：** 保護された URL の生成時のシード値です。これがオプションの場合は、キーは更新されません。異なるサーバーに同じシードを設定すると、これらのサーバーは互換性のある保護された URL を生成します。この値は、ロードバランサーの背後で複数の forms サーバーを使用している場合に便利です。文字と数字をランダムに組み合わせた文字列をシードとして入力してください。
 
-### サーバークラスターでの Guides の使用  {#using-guides-in-a-server-cluster}
+### サーバークラスターでの Guides の使用 {#using-guides-in-a-server-cluster}
 
 スティッキーセッションを使用しないサーバークラスターでのガイドのレンダリングは、NullPointerException が発生して失敗します。Guides 要求では、デフォルトで、要求を生成するサーバーに固有の保護された URL が利用されます。スティッキーセッションを使用するクラスターでは、要求がクラスター内のノードに届いた後、そのセッションまたはユーザー向けの後続するすべての要求がそのサーバーだけにルーティングされるので、順調に処理が進みます。スティッキーセッションを使用しないクラスターでは、後続する要求がクラスター内のどのサーバーにも届く可能性があります。要求が届いたサーバーが元のサーバーと異なる場合、保護された URL を解決できません。
 
@@ -338,15 +338,15 @@ macKeySeed 値は、保護された URL の生成に使用される乱数ジェ�
 
 macSeedValue が読み取られるのはシステム起動時だけなので、クラスターを再起動する必要があります。すべてのノードを再起動して、この値を読み取らせる必要があります。シード値を使用して内部的な乱数を初期化するために、各ノードがそれぞれ独立してこの値を使用するからです。
 
-## JDBC サービスの設定  {#jdbc-service-settings}
+## JDBC サービスの設定 {#jdbc-service-settings}
 
 JDBC サービス（`JdbcService`）を使用すると、プロセスにおいてデータベースとインタラクティブにやり取りを行えます。
 
 JDBC サービスでは、以下の設定を使用できます。
 
-**datasourceName:** データベースサーバーへの接続に使用するデータソースのJNDI名を表すstring値。データソースは、forms サーバーをホストするアプリケーションサーバー上に定義する必要があります。デフォルト値は AEM forms データベース用のデータソースの JNDI 名です。
+**datasourceName：** データベースサーバーへの接続に使用するデータソースの JNDI 名を表す文字列値です。データソースは、forms サーバーをホストするアプリケーションサーバー上に定義する必要があります。デフォルト値は AEM forms データベース用のデータソースの JNDI 名です。
 
-## JMS サービスの設定  {#jms-service-settings}
+## JMS サービスの設定 {#jms-service-settings}
 
  サービス（`JMS`JMS）を使用すると、ポイントツーポイントメッセージングとパブリッシュ／サブスクライブメッセージングの両方を実装する Java Messaging System（JMS）プロバイダーをインタラクティブに操作できます。
 
@@ -354,7 +354,7 @@ JDBC サービスでは、以下の設定を使用できます。
 
 JMS サービスでは、以下の設定を使用できます。
 
-**Provider URL:** JNDIサービスプロバイダーのURL。デフォルト値は、JBoss Application Server に基づいています。以下の URL は、AEM Forms によってサポートされるアプリケーションサーバーのデフォルト値です。
+**Provider URL：** JNDI サービスプロバイダーの URL。デフォルト値は、JBoss Application Server に基づいています。以下の URL は、AEM Forms によってサポートされるアプリケーションサーバーのデフォルト値です。
 
 **JBoss:** `<server name>:1099`
 
@@ -362,11 +362,11 @@ JMS サービスでは、以下の設定を使用できます。
 
 **WebSphere:** `<server name>:2809`
 
-**JNDI Username:** キュー名とトピック名の検索に使用されるJNDIサービスプロバイダーでの認証に使用するアカウントのユーザー名。デフォルト値は「guest」です。
+**JNDI Username：** キュー名およびトピック名の検索に使用する JNDI サービスプロバイダー認証用のアカウントのユーザー名です。デフォルト値は「guest」です。
 
-**JNDI Password:** JNDI Usernameに指定されたユーザー名に関連付けられたパスワード。デフォルト値は「guest」です。
+**JNDI Password：** JNDI ユーザー名に指定されたユーザー名に関連付けられたパスワードです。デフォルト値は「guest」です。
 
-**Initial Context Factory:** 初期コンテキストファクトリとして使用するJavaクラス。JMS サービスではこのクラスが使用され、初期コンテキストが作成されます。初期コンテキストはトピックおよびキューの名前の解決の開始点になります。デフォルト値は、JBoss の JMS サービスの初期コンテキストファクトリです。以下のクラスは、AEM Forms によってサポートされるアプリケーションサーバーの初期コンテキストファクトリです。
+**Initial Context Factory：** 初期コンテキストファクトリとして使用する Java クラスです。JMS サービスではこのクラスが使用され、初期コンテキストが作成されます。初期コンテキストはトピックおよびキューの名前の解決の開始点になります。デフォルト値は、JBoss の JMS サービスの初期コンテキストファクトリです。以下のクラスは、AEM Forms によってサポートされるアプリケーションサーバーの初期コンテキストファクトリです。
 
 **JBoss:** org.jnp.interfaces.NamingContextFactory
 
@@ -374,13 +374,13 @@ JMS サービスでは、以下の設定を使用できます。
 
 **WebSphere:** com.ibm.websphere.naming.WsnInitialContextFactory
 
-**Connection Username:** 「Connection Username」に指定したユーザー名に関連付けられたパスワード。デフォルト値は「guest」です。
+**Connection Username：** 接続ユーザー名に指定されたユーザー名に関連付けられたパスワードです。デフォルト値は「guest」です。
 
-**Connection Password:** 「Connection Username」に指定したユーザー名に関連付けられているパスワード。デフォルト値は「guest」です。
+**Connection Password：** 接続ユーザー名に指定されたユーザー名に関連付けられたパスワードです。デフォルト値は「guest」です。
 
-**その他のプロパティ：** JNDIサービスプロバイダーに渡すことができるプロパティ名と値のペア。これらのプロパティは、使用しているプロバイダーの実装と設定によって異なります。
+**Other Properties：** JNDI サービスプロバイダーに渡すことのできるプロパティ名と値のペアです。これらのプロパティは、使用しているプロバイダーの実装と設定によって異なります。
 
-プロパティ名と値のペアはセミコロン&#x200B;**;**&#x200B;で区切られます。 例えば、以下のテキストでは、name1 と name2 という 2 つのプロパティ名にそれぞれ value1 と value2 の値が割り当てられています。
+プロパティ名と値のペアはセミコロン **;** によって区切られています。例えば、以下のテキストでは、name1 と name2 という 2 つのプロパティ名にそれぞれ value1 と value2 の値が割り当てられています。
 
 `name1=value1;name2=value2`
 
@@ -390,70 +390,70 @@ LDAP サービス（`LDAPService`）では、LDAP ディレクトリに対して
 
 LDAP サービスでは、以下の設定を使用できます。
 
-**Initial Context Factory:** コンテキストファクトリとして使用するJavaクラス。このクラスは、LDAP サーバーへの接続の作成に使用されます。デフォルト値は、ほとんどの LDAP サーバーに適切な「com.sun.jndi.ldap.LdapCtxFactory」です。
+**Initial Context Factory：** コンテキストファクトリとして使用する Java クラス。 このクラスは、LDAP サーバーへの接続の作成に使用されます。デフォルト値は、ほとんどの LDAP サーバーに適切な「com.sun.jndi.ldap.LdapCtxFactory」です。
 
-**Provider URL:** LDAPサービスへの接続に使用するURL。値の形式は`ldap://server name:port`です。
+**Provider URL：** LDAP サービスへの接続に使用する URL です。値の形式は `ldap://server name:port` です。
 
 *server name* は、LDAP サーバーをホストするコンピューターの名前です。
 
 *port* は、LDAP サービスによって使用される通信ポートです。デフォルト値は、LDAP 接続に使用される標準ポートの 389 です。
 
-**User Name:** LDAPサーバーへのログインに使用するユーザーアカウントのユーザー名。ユーザーアカウントには、サーバーに接続して LDAP ディレクトリの情報を読み取るための権限が必要です。
+**User Name：** LDAP サーバーへのログインに使用するユーザーアカウントのユーザー名です。ユーザーアカウントには、サーバーに接続して LDAP ディレクトリの情報を読み取るための権限が必要です。
 
-LDAPサーバーに応じて、ユーザー名は`myname`などの単純なユーザー名か、`cn=myname,cn=users,dc=myorg`などのDNになります。
+LDAP サーバーに応じて、ユーザー名は、`myname` などの単純なユーザー名にするか、`cn=myname,cn=users,dc=myorg` などの DN にすることができます。
 
-**Password:** Username設定に指定したユーザー名に対応するパスワード。
+**Password：**&#x200B;ユーザー名の設定で指定したユーザー名に対応するパスワードです。
 
-**その他のプロパティ：** LDAPサーバーに指定できる他のプロパティと対応する値を表すstring値。値は次の形式で入力します。
+**Other Properties：** LDAP サーバーに指定できるその他のプロパティと対応する値を表す文字列値です。値は次の形式で入力します。
 
 `property=value;property=value;...`
 
 ## Microsoft SharePoint Configuration サービスの設定 {#microsoft-sharepoint-configuration-service-settings}
 
-Microsoft SharePoint Configurationサービス`(MSSharePointConfigService)`を使用して、他のユーザーとしての権限（他のユーザーとしての権限）を持つAEM formsユーザーに対して秘密鍵証明書を指定できます。 他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。
+Microsoft SharePoint 構成サービス `(MSSharePointConfigService)` を使用して、偽装権限を持つ AEM Forms ユーザーの資格情報を指定できます。他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。
 
 Microsoft SharePoint Configuration サービスでは、以下の設定を使用できます。
 
 * 仮装権限を持つユーザーのユーザー名
 * 上記ユーザーのパスワード
 
-**SSL(HTTPS)を有効にする：**
+**SSL を有効にする（HTTPS）：**
 
-**有効期間：** このプロビジョニングプロファイルが有効でクライアント上でキャッシュされる時間（秒）。デフォルトは86400（24時間）です。 クライアントアプリケーションがサーバーと同期し、指定された時間が経過すると、クライアントアプリケーションはサーバーから新しいプロビジョニングプロファイルを要求します。
+**存続期間：**&#x200B;このプロビジョニングプロファイルが有効で、クライアント上でキャッシュされる時間（秒）。 デフォルトは 86400（24 時間）です。 クライアントアプリケーションがサーバーと同期し、指定した時間が経過すると、クライアントアプリケーションはサーバーから新しいプロビジョニングプロファイルをリクエストします。
 
-**Encryption:** モバイルデバイスに保存されるデータを暗号化するかどうかを指定します。
+**暗号化：** モバイルデバイスに保存されたデータを暗号化するかどうかを指定します。
 
-**Forms Application:** モバイルクライアントアプリケーションでForms機能を有効にします。このオプションを選択すると、ユーザーはフォームを開いて、モバイルデバイスからプロセスを開始できます。
+**Forms アプリケーション：** モバイルクライアントアプリケーションで Forms 機能を有効にします。このオプションを選択すると、ユーザーはフォームを開き、モバイルデバイスからプロセスを開始することができます。
 
-**タスクアプリケーション：** モバイルクライアントアプリケーションでタスク機能を有効にします。このオプションを選択すると、ユーザーは自分のタスクリストにアクセスし、モバイルデバイスからタスクを完了できます。
+**タスクアプリケーション：** モバイルクライアントアプリケーションでタスク機能を有効にします。 このオプションを選択すると、ユーザーはタスクリストにアクセスし、モバイルデバイスからタスクを完了できます。
 
-**コンテンツサービスアプリケーション：** モバイルクライアントアプリケーションでコンテンツサービス機能を有効にします。この機能はiOSでのみ使用できます。 このオプションを選択すると、iPhoneおよびiPadユーザーは、組織のWebDAVサーバーに保存されているファイルにアクセスできます。
+**コンテンツサービスアプリケーション：** モバイルクライアントアプリケーションでコンテンツサービス機能を有効にします。 この機能は、iOS に対してのみ使用できます。このオプションを選択すると、iPhone と iPad のユーザーは組織の WebDAV サーバーに保存されているファイルにアクセスできます。
 
-**オフラインサポート：** サーバーに接続していない場合（セルの範囲外や機内モードなど）でも、モバイルクライアントアプリケーションを引き続き使用できます。また、ユーザーは、モバイルデバイスでオフラインサポート設定を有効にする必要があります。 この機能は、AndroidおよびiOSデバイスで使用できます。 デフォルトでは、この機能はオフになっています。
+**オフラインサポート：** サーバーに接続していない場合（例えば、携帯電話の範囲外や機内モードの場合）でも、モバイルクライアントアプリケーションを引き続き使用できます。 また、ユーザーは、モバイルデバイスでオフラインサポート設定を有効にする必要があります。 この機能は、Android および iOS デバイスで使用できます。デフォルトでは、この機能はオフになっています。
 
 >[!NOTE]
 >
->オフラインサポートが有効になっていて、無効にした場合、ユーザーのプロビジョニングプロファイルは即座に、またはオンラインになるとすぐに更新されます。 ユーザーがオフラインで作業している場合、保留中のタスクはすべてタスクリストに戻され、保留中のフォーム、タスク、検証エラーが含まれるフォームを含むキュー内のすべての項目がキューから削除されます。
+>オフラインサポートが有効になっていて、無効にした場合、ユーザーのプロビジョニングプロファイルは直ちに、またはオンラインになるとすぐに更新されます。 ユーザーがオフラインで作業している場合、保留中のタスクはすべて [ タスク ] リストに戻され、保留中のフォーム、タスク、検証エラーが含まれるフォームを含むキュー内のすべての項目がキューから削除されます。
 
-**Android:** Androidデバイスからサーバーに接続できるようにします。
+**Android：** Android デバイスがサーバーに接続できるようにします。
 
-**Apple iOS:** iPhoneおよびiPadからサーバーに接続できるようにします。
+**Apple iOS：** iPhone と iPad がサーバーに接続できるようにします。
 
-**AIR:** Adobe AIR®をベースとするアプリを実行するデバイスからサーバーに接続できます。
+**AIR：** Adobe AIR® に基づくアプリを実行するデバイスからサーバーに接続できるようにします。
 
-**BlackBerry:** BlackBerryデバイスがサーバーに接続できるようにします。
+**BlackBerry：** BlackBerry デバイスがサーバーに接続できるようにします。
 
-**Android Microsoft Exchange ActiveSyncが必要：** Microsoft Exchange ActiveSyncポリシーマネージャー(EA)をAndroidデバイスにインストールしてアクティブにする必要があるかどうかを指定します。このオプションを選択した場合、EAをAndroidデバイスに適用する必要があります。 このオプションを選択しない場合、他の要件も引き続き適用されますが、チェックは実行されません。
+**Android Microsoft Exchange ActiveSync Required：** Microsoft Exchange ActiveSync Policy Manager（EAS）を Android デバイスにインストールしてアクティブにする必要があるかどうかを指定します。このオプションを選択した場合、Android デバイスで EAS を適用する必要があります。このオプションを選択しない場合、他の要件も引き続き適用されますが、チェックは実行されません。
 
-**Androidの最小PIN長：** Androidデバイスには、PINまたはパスワードがこの長さ以上になるように強制するグローバル設定が必要です。PINが指定された長さになるだけでは不十分です。 後でPINを削除または短縮できないように、PINの長さをシステムで適用する必要があります。 デフォルト値は 4 です。
+**Android における PIN の長さの最小値：** Android デバイスには、PIN またはパスワードがこの長さ以上になるように強制するグローバル設定が必要です。 指定した長さの PIN だけでは不十分です。 ユーザーがあとで PIN を削除または短縮できないように、PIN の長さをシステムで強制する必要があります。 デフォルト値は 4 です。
 
-**Androidのワイプ前のパスワード再試行の最大回数：** Androidデバイスには、無効なパスワードの試行回数を指定した回数後にシステムをワイプするグローバル設定があります。このグローバル設定は有効で、ここで指定した値と等しいかそれ以下です。 デフォルト値は 5 です。
+**Android におけるワイプ前のパスワード再入力回数の最大値：** Android デバイスには、指定した回数の無効なパスワード試行の後にシステムを消去するグローバル設定があります。 このグローバル設定は有効で、ここで指定した値と同等かそれ以下です。デフォルト値は 5 です。
 
-**Androidの削除時のワイプ：** Androidデバイスでポリシー違反が発生した場合の処理を指定します。このオプションを選択すると、アカウントが削除されます。 このオプションを選択しないと、保存されたアカウントのパスワードとキャッシュされたデータが削除されます。 ユーザーがポリシー違反を修正するまで、同期は試行されません。
+**Android における削除時のワイプ：** Android デバイスでポリシー違反が発生した場合の処理を指定します。 このオプションを選択すると、アカウントが削除されます。 このオプションを選択しない場合、保存されたアカウントのパスワードとキャッシュされたデータが削除されます。ユーザーがポリシー違反を修正するまで、同期は試行されません。
 
 ## Output サービスの設定 {#output-service-settings}
 
-Outputサービス`(OutputService)`を使用すると、XMLフォームデータをAEM forms Designerで作成されたフォームデザインとマージして、次のいずれかの形式のドキュメント出力ストリームを作成できます。
+Output サービス（`(OutputService)`）では、XML フォームデータを AEM Forms Designer で作成したフォームデザインにマージして、ドキュメント出力ストリームを以下のいずれかの形式で作成できます。
 
 * PDF または PDF/A ドキュメント出力ストリーム
 * Adobe PostScript 出力ストリーム
@@ -464,13 +464,13 @@ Outputサービス`(OutputService)`を使用すると、XMLフォームデータ
 
 Output サービスでは、以下の設定を使用できます。
 
-**トランザクションタイプ：** トランザクションコンテキストを操作に渡す方法を指定します。
+**Transaction Type：** トランザクションコンテキストの操作への適用方法を指定します。
 
-**必須：** は、トランザクションコンテキストが既に存在する場合にそのコンテキストをサポートします。それ以外の場合は、新しいトランザクションコンテキストが作成されます。これがデフォルト値です。
+**Required：** 既存のトランザクションコンテキストがサポートされます。トランザクションコンテキストが存在しない場合は、新しいトランザクションコンテキストが作成されます。これがデフォルト値です。
 
-**新規作成が必要：** 常に新しいトランザクションコンテキストを作成します。アクティブなトランザクションコンテキストが存在する場合は、休止されます。
+**Requires New**：常にトランザクションコンテキストが作成されます。アクティブなトランザクションコンテキストが存在する場合は、休止されます。
 
-**トランザクションタイムアウト（秒）:** この操作をラップしているトランザクションがロールバックされるまでに基になるトランザクションプロバイダーが待機する秒数。既存のトランザクションコンテキストが適用されている場合、この値は無視されます。
+**Transaction Time Out (in sec)：** 操作をラップしているトランザクションがロールバックされるまで、基になるトランザクションプロバイダーが待機する秒数です。既存のトランザクションコンテキストが適用されている場合、この値は無視されます。
 
 大型のデータファイルを処理する場合、またはビジー状態のサーバー上で操作する場合、状況によっては Output のサービスタイムアウトを長くする必要があります。タイムアウト値を変更するには、ハードウェアサーバーに十分なメモリがあり、Java Application Server ヒープがそのメモリを使用できることを確認します。デフォルト値は `180` です。
 
@@ -478,25 +478,25 @@ Output サービスでは、以下の設定を使用できます。
 
 PDFG Config サービス（`PDFGConfigService`）では、以下の設定を使用できます。
 
-**User Job Options Directory:**  cサービスがAcrobat Pro Extendedにアクセス可能なジョブオプションファイルを書き込むファイルシステムフォルダーのパス。デフォルト値は[user.home]/Application Data/Adobe/Adobe PDF/Settingsです。
+**User Job Options Directory：** このサービスで、Acrobat Pro Extended にアクセスできるジョブオプションファイルが書き込まれるファイルシステムフォルダーのパスです。デフォルト値は「[user.home]/Application Data/Adobe/Adobe PDF/Settings」です。
 
-**PS Startup Directory:** Adobe Acrobat Distillerに必要な起動ファイルが保存されるファイルシステムフォルダーのパス。デフォルト値は[user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startupです。
+**PS Startup Directory：** Adobe Acrobat Distiller で必要な起動ファイルが保存されているファイルシステムフォルダーのパスです。デフォルト値は「[user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup」です。
 
-**PS Startup File:** Adobe Acrobat Distillerで必要な起動ファイルの名前。デフォルト値は「example.ps」です。
+**PS Startup File：** Adobe Acrobat Distiller で必要な起動ファイルの名前です。デフォルト値は「example.ps」です。
 
-**Server Conversion Timeout:** Generate PDFサービスとDistillerサービスの最大ジョブ変換タイムアウト（秒）。この設定により、config.xml ファイルおよび PDF Generator の管理コンソールページで指定できる最大変換タイムアウトが制限されます。デフォルト値は 270 です。
+**Server Conversion Timeout：** Generate PDF サービスと Distiller サービスの最大ジョブ変換タイムアウト（秒単位）です。この設定により、config.xml ファイルおよび PDF Generator の管理コンソールページで指定できる最大変換タイムアウトが制限されます。デフォルト値は 270 です。
 
-**サーバーのグローバルタイムアウト：** PDF変換の実行中、formsサーバーはタイムアウトの制限を考慮します。この問題を解決するには、タイムアウトの値を設定します。
+**Server Global Timeout：** PDF の変換中、forms サーバーはタイムアウトの制限を考慮します。この問題を解決するには、タイムアウトの値を設定します。
 
-**Job Options Prefix:** Acrobat Distillerで一時的に使用するために作成されるジョブオプションファイルの前に短い文字列を付けるために、Generate PDFサービスで使用されるプレフィックス。デフォルト値は「pdfg」です。
+**Job Options Prefix：** ジョブオプションファイルに短い文字列を追加するために Generate PDF サービスで使用されるプレフィックスです。Acrobat Distiller でこれらのジョブオプションファイルを一時的に使用するために作成されます。デフォルト値は「pdfg」です。
 
-**非Unicodeアプリ：** Unicodeに対応していないことがわかっているアプリケーション名のコンマ区切りリスト。このリストには複数のアプリケーションの名前が事前に入力されており、それらのアプリケーションのサポートが PDF Generator で事前設定されています。Unicode に対応していない他のサードパーティアプリケーションでの PDF 変換へのサポートを追加する場合は、それらをこのリストに追加する必要があります。デフォルト値は「Autocad,Excel,PowerPoint,Project,Publisher,Visio,Word,WordPerfect」です。
+**Non Unicode Apps：** Unicode に対応していないことがわかっているアプリケーション名のコンマ区切りリストです。このリストには複数のアプリケーションの名前が事前に入力されており、それらのアプリケーションのサポートが PDF Generator で事前設定されています。Unicode に対応していない他のサードパーティアプリケーションでの PDF 変換へのサポートを追加する場合は、それらをこのリストに追加する必要があります。デフォルト値は「Autocad,Excel,PowerPoint,Project,Publisher,Visio,Word,WordPerfect」です。
 
-**Server Threadpool Count:** スパイダリング（メインページからアクセス可能なリンクページの変換）を伴うHTMLからPDFへの変換要求を処理するためにGenerate PDFサービスが内部的に使用するスレッドプールのサイズを制御します。デフォルト値は 20 です。
+**Server Threadpool Count：** スパイダリング（メインページからアクセスできるリンクページの変換）を含む HTML から PDF への変換要求を処理するために、Generate PDF サービスで内部使用されるスレッドプールのサイズを制御します。デフォルト値は 20 です。
 
-**PDFG Cleanup Scan Seconds:** 詳しくは、ジョブの有効期限の秒の節を参照してください。
+**PDFG Cleanup Scan Seconds：** 詳細に関しては、ジョブの有効期限（秒）の節を参照してください。
 
-**Job Expiration Seconds:** Generate PDFサービスは、入力ファイルが変換されるとすぐに削除します。「PDFG Cleanup Scan Seconds」および「Job Expiration Seconds」によって決まる期間、出力ファイルを一時的に保存します。
+**Job Expiration Seconds：** 入力ファイルが変換されると、入力ファイルは Generate PDF サービスによって直ちに削除されます。「PDFG Cleanup Scan Seconds」および「Job Expiration Seconds」によって決まる期間、出力ファイルを一時的に保存します。
 
 「Job Expiration Seconds」設定では、どのくらい古いファイルまたは空のフォルダーを削除できるかを指定します。「PDFG Cleanup Scan Seconds」設定では、削除できるファイルの一時フォルダーをクリーンアップスレッドによってスキャンする頻度を指定します。
 
@@ -504,9 +504,9 @@ PDFG Config サービス（`PDFGConfigService`）では、以下の設定を使�
 
 「PDFG Cleanup Scan Seconds」のデフォルト値は `43200`（12 時間）です。「Job Expiration Seconds」のデフォルト値は `86400`（24 時間）です。
 
-**Default Locale:** Generate PDFサービスがデプロイされているサーバーのデフォルトロケール（国+言語）を上書きするために使用します。このパラメーターを指定しない場合、デフォルトのロケールは、サービスがデプロイされているオペレーティングシステムから判別されます。このパラメーターでは、API に返されるエラーメッセージの言語が制御されます。
+**デフォルトロケール：** Generate PDF サービスがデプロイされたサーバーのデフォルトのロケール（国 + 言語）を上書きするために使用されます。このパラメーターを指定しない場合、デフォルトのロケールは、サービスがデプロイされているオペレーティングシステムから判別されます。このパラメーターでは、API に返されるエラーメッセージの言語が制御されます。
 
-## forms ワークフロー Data Services サービスの設定  {#forms-workflow-data-services-service-settings}
+## forms ワークフロー Data Services サービスの設定 {#forms-workflow-data-services-service-settings}
 
 以下のサービスは Data Services を拡張し、Workspace でサーバーとの通信に使用されるアセンブラを公開します。アドビサポートからの指示がない限り、これらのサービスの設定オプションは変更しないでください。これらのサービスは、直接的なアクセスでの使用は意図されていません。
 
@@ -516,15 +516,15 @@ PDFG Config サービス（`PDFGConfigService`）では、以下の設定を使�
 
 ## Remoting サービスの設定 {#remoting-service-settings}
 
-ほとんどのサービスは、AEM Forms Remoting（AEM Forms では廃止されています）でアクセスできるように設定されています。AEM Forms Remoting について詳しくは、「[AEM Forms によるプログラミング](https://adobe.com/go/learn_aemforms_programming_63)」を参照してください。
+ほとんどのサービスは、AEM Forms Remoting（AEM Forms では廃止されています）でアクセスできるように設定されています。AEM Forms Remoting について詳しくは、「[AEM Forms によるプログラミング](https://adobe.com/go/learn_aemforms_programming_63_jp)」を参照してください。
 
 Remoting サービスでは、以下の設定を使用できます。
 
-**Flex Client Authentication Method:** 呼び出されたサービスのセキュリティが有効になっていて、呼び出された操作で匿名の呼び出しがサポートされず、クライアントが無効または無効な資格情報を渡す場合に、サーバーがクライアントに返す応答のタイプを決定します。「カスタム」または「基本」から選択します。デフォルト値は「基本」です。
+**Flex のクライアント認証方法：** 呼び出されたサービスでセキュリティが有効になっており、呼び出された操作で匿名の呼び出しがサポートされていないとき、クライアントから秘密鍵証明書が渡されないか無効な場合に、サーバーがクライアントに送り返す応答の種類を特定します。「カスタム」または「基本」から選択します。デフォルト値は「基本」です。
 
-**Allow Serialization Of Non-Serializable Classes:** ほとんどのAEMフォームエンドポイントでは、呼び出しにSerializableクラスのみを使用できます。それより前のバージョンでは、Remoting エンドポイントで Flex ベースのクライアントからの呼び出しに Serializable 以外のクラスを使用できました。APS11-15 で説明されているセキュリティ脆弱性を防止するため、この変更が行われました。Flex の Remoting エンドポイントで Serializable 以外のクラスを引き続き使用する場合は、このチェックボックスをオンにします。
+**Allow Serialization Of Non-Serializable Classes：** ほとんどの AEM forms エンドポイントでは、呼び出しに serializable クラスのみを使用できます。 それより前のバージョンでは、Remoting エンドポイントで Flex ベースのクライアントからの呼び出しに Serializable 以外のクラスを使用できました。APS11-15 で説明されているセキュリティ脆弱性を防止するため、この変更が行われました。Flex の Remoting エンドポイントで Serializable 以外のクラスを引き続き使用する場合は、このチェックボックスをオンにします。
 
-## Repository サービスの設定  {#repository-service-settings}
+## Repository サービスの設定 {#repository-service-settings}
 
 Repository サービス（`RepositoryService`）は、リソースを保存および管理するためのサービスを AEM Forms に提供します。アプリケーションを作成するときは、アセットをファイルシステムではなくリポジトリにデプロイできます。アセットには、XML 形式、PDF 形式（Acrobat 形式を含む）、フォームのフラグメント、画像、プロファイル、ポリシー、SWF ファイル、DDX ファイル、XML スキーマ、WSDL ファイルおよびテストデータなど、任意のタイプのコラテラルが含まれます。
 
@@ -534,7 +534,7 @@ Repository Provider サービスは、プロバイダーサービスへのイン
 
 Repository サービスでは、以下の設定を使用できます。
 
-**Provider Service:** ストレージプロバイダーとして使用されるサービスの名前。デフォルト値は「RepositoryProviderService」です。
+**プロバイダーサービス：** ストレージプロバイダーとして使用するサービスの名前です。デフォルト値は「RepositoryProviderService」です。
 
 ## Signature サービスの設定 {#signature-service-settings}
 
@@ -542,161 +542,165 @@ Signature サービス（`SignatureService`）を使用して、組織は配布�
 
 Signature サービスでは、以下の設定を使用できます。
 
-**Name Of The Remote HSM SPI Service:** このオプションは、HSMがリモートコンピューターにインストールされている場合に使用します。AEM Forms が 64 ビット Windows にインストールされていて、署名に HSM デバイスを使用する場合は、このオプションを指定します。
+**リモート HSM SPI サービスの名前：** このオプションは、HSM がリモートコンピューターにインストールされている場合に使用します。 AEM Forms が 64 ビット Windows にインストールされていて、署名に HSM デバイスを使用する場合は、このオプションを指定します。
 
-**「URL Of The Remote HSM Web Service」:** AEM formsが64ビットWindowsにインストールされ、署名にHSMデバイスを使用している場合は、このオプションを指定します。
+**リモート HSM web サービスの URL：** このオプションは、AEM forms が 64 ビット Windows にインストールされ、署名に HSM デバイスを使用する場合に指定します。
 
-**フォーム読み込みの変更を含めるための証明書：** このオプションを選択すると、XFAテンプレートに加えて、XFAフォーム状態も認証されます。このオプションを有効にすると、パフォーマンスに悪影響を及ぼす可能性があります。デフォルト値は true です。
+**Certification To Include Form Load Changes：** このオプションを選択すると、XFA テンプレートに加えて XFA フォーム状態も認証されます。 このオプションを有効にすると、パフォーマンスに悪影響を及ぼす可能性があります。デフォルト値は true です。
 
-**Execute Document JavaScript scripts:** 署名操作中にDocument JavaScriptスクリプトを実行するかどうかを指定します。デフォルト値は false です。
+**Execute Document JavaScript scripts：** 署名操作中に Document JavaScript スクリプトを実行するかどうかを指定します。 デフォルト値は false です。
 
-**Acrobat 9互換のドキュメントを処理：** Acrobat 9互換を有効にするかどうかを指定します。例えば、このオプションを選択すると、「Visible Certification in Dynamic PDFs」が有効になります。デフォルト値は false です。
+**Process documents with Acrobat 9 compatibility：** Acrobat 9 の互換性を有効にするかどうかを指定します。 例えば、このオプションを選択すると、「Visible Certification in Dynamic PDFs」が有効になります。デフォルト値は false です。
 
-**Embed Revocation Info While Signing:** PDFドキュメントの署名時に失効情報を埋め込むかどうかを指定します。デフォルト値は false です。
+**Embed Revocation Info While Signing：** PDF ドキュメントの署名中に、失効情報を埋め込むかどうかを指定します。 デフォルト値は false です。
 
-**Embed Revocation Info While Certifying:** PDFドキュメントの認証中に失効情報を埋め込むかどうかを指定します。デフォルト値は false です。
+**Embed Revocation Info While Certifying：** PDF ドキュメントの認証中に、失効情報を埋め込むかどうかを指定します。 デフォルト値は false です。
 
-**Enforce Embedding of Revocation Info For All Certificates During Signing/Certification:** すべての証明書に有効な失効情報が埋め込まれていない場合に、署名または証明書操作が失敗するかどうかを指定します。証明書に CRL または OCSP 情報が含まれていない場合、失効情報が取得されなくても、証明書は有効と見なされることにご留意ください。デフォルト値は false です。
+**nforce Embedding of Revocation Info For All Certificates
+During Signing/Certification：** すべての証明書に有効な失効情報が埋め込まれていない場合に、署名操作または証明書操作が失敗するかどうかを指定します。 証明書に CRL または OCSP 情報が含まれていない場合、失効情報が取得されなくても、証明書は有効と見なされることにご留意ください。デフォルト値は false です。
 
-**Revocation Check Order:** 証明書失効リスト(CRL)とオンライン証明書ステータスプロトコル(OCSP)の両方のメカニズムを使用して確認可能な場合に、失効確認の順序を指定します。デフォルト値は「OCSPFirst」です。
+**Revocation Check Order：** 証明書失効リスト（CRL）とオンライン証明書ステータスプロトコル（OCSP）の両方のメカニズムを使用して確認できる場合に、失効確認の順序を指定します。デフォルト値は「OCSPFirst」です。
 
-**Maximum Size Of Revocation Archival Info:** 失効アーカイブ情報の最大サイズ（キロバイト単位）。AEM Forms では、制限を超えない範囲で、できるだけ多くの失効情報が格納されます。デフォルト値は 10 KB です。
+**Maximum Size Of Revocation Archival Info：** 失効アーカイブ情報の最大サイズ (KB) です。 AEM Forms では、制限を超えない範囲で、できるだけ多くの失効情報が格納されます。デフォルト値は 10 KB です。
 
-**Adobe製品のプレリリースビルドから作成された署名をサポート：** このオプションを選択すると、Adobe製品のプレリリースバージョンを使用して作成された署名が正しく検証されます。デフォルト値は false です。
+**Support Signatures Created From PreRelease Builds Of
+Adobe Products：** このオプションを選択すると、リリース前のバージョンのアドビ製品を使用して作成された署名が正しく検証されます。 デフォルト値は false です。
 
-**Verification Time Option:** 署名者の証明書の検証時間を指定します。デフォルト値は Secure Time Else Current Time です。
+**Verification Time Option：** 署名者の証明書の検証時間を指定します。 デフォルト値は Secure Time Else Current Time です。
 
-**検証中に署名内にアーカイブされた失効情報を使用：** 署名と共にアーカイブされた失効情報を失効確認に使用するかどうかを指定します。デフォルト値は true です。
+**Use Revocation Information Archived in Signature during
+Validation：** 署名でアーカイブされた失効情報を失効確認に使用するかどうかを指定します。 デフォルト値は true です。
 
-**Use Validation Information Stored In The Document For Validation Of Signatures:** このオプションを選択すると、ドキュメントに埋め込まれている検証情報（失効情報とタイムスタンプ情報を含む）が署名の検証に使用されます。デフォルト値は true です。
+**Use Validation Information Stored In The Document For
+Validation Of Signatures：** このオプションを選択すると、ドキュメントに埋め込まれている検証情報（失効情報とタイムスタンプ情報を含む）が署名の検証に使用されます。 デフォルト値は true です。
 
-**Maximum Nested Verification Sessions Allowed:** ネスト可能な検証セッションの最大数。AEM Forms では、この値を使用して、OCSP または CRL の証明書が正確に設定されていない状態で OCSP または CRL 署名者の証明書を検証する際に無限ループが発生しないようにします。デフォルト値は 10 です。
+**Maximum Nested Verification Sessions Allowed：** ネストされた検証セッションの許容最大数です。 AEM Forms では、この値を使用して、OCSP または CRL の証明書が正確に設定されていない状態で OCSP または CRL 署名者の証明書を検証する際に無限ループが発生しないようにします。デフォルト値は 10 です。
 
-**検証のMaximum Clock Skew:** 署名時間が検証時間より後になる最大時間（分単位）です。Clock Skew がこの値より大きい場合、署名は無効になります。デフォルト値は 65 分です。
+**Maximum Clock Skew for Verification：** 検証時間の後に署名時間を設定できる最大時間（分単位）です。 Clock Skew がこの値より大きい場合、署名は無効になります。デフォルト値は 65 分です。
 
-**証明書のライフタイムキャッシュ：** オンラインまたは他の方法で取得した証明書がキャッシュに存続する期間。デフォルト値は「1」日です。
+**Certificate Lifetime Cache：** オンラインまたはその他の方法で取得した証明書が、キャッシュに存続する時間です。デフォルト値は「1」日です。
 
 ### トランスポートオプション {#transport-options}
 
-**Proxy Host:** プロキシホストのURL。値が有効な場合のみ使用されます。デフォルト値はありません。
+**Proxy Host：** プロキシホストの URLです。 値が有効な場合のみ使用されます。デフォルト値はありません。
 
-**Proxy Port:** プロキシポート。0～65535 の範囲で有効なポート番号を入力します。デフォルト値は 80 です。
+**Proxy Port：** プロキシのポートです。 0～65535 の範囲で有効なポート番号を入力します。デフォルト値は 80 です。
 
-**Proxy Login Username:** プロキシのログインユーザー名。プロキシホストとプロキシポートの値が有効な場合のみ使用されます。デフォルト値はありません。
+**Proxy Login Username：** プロキシのログインユーザー名です。 プロキシホストとプロキシポートの値が有効な場合のみ使用されます。デフォルト値はありません。
 
-**Proxy Login Password:** プロキシのログインパスワード。プロキシホスト、プロキシポート、プロキシのログインユーザー名の値が有効な場合のみ使用されます。デフォルト値はありません。
+**Proxy Login Password：** プロキシのログインパスワードです。 プロキシホスト、プロキシポート、プロキシのログインユーザー名の値が有効な場合のみ使用されます。デフォルト値はありません。
 
-**Maximum Download Limit:** 接続ごとに受信できるデータの最大量（MB単位）。最小値は 1 MB、最大値は 1024 MB です。デフォルト値は 16 MB です。
+**Maximum Download Limit：** 1 回の接続で受信可能なデータの最大量を MB 単位で指定します。最小値は 1 MB、最大値は 1024 MB です。デフォルト値は 16 MB です。
 
-**接続タイムアウト：** 新しい接続が確立されるまでの最大待機時間（秒）。最小値は「1」、最大値は「300」です。デフォルト値は 5 です。
+**Connection Time Out：** 新しい接続が確立されるまで待機する時間の最大値（秒単位）を指定します。最小値は「1」、最大値は「300」です。デフォルト値は 5 です。
 
-**ソケットタイムアウト：** データ転送の待機中にソケットがタイムアウトするまでの最大待機時間（秒）。最小値は「1」、最大値は「3600」です。デフォルト値は 30 です。
+**Socket Time Out：** データの転送を待っているソケットがタイムアウトになるまでの待機時間の最大値（秒単位）を指定します。最小値は「1」、最大値は「3600」です。デフォルト値は 30 です。
 
 ### パス検証オプション {#path-validation-options}
 
-**明示的なポリシーを要求：** 署名者の証明書のトラストアンカーに関連付けられている証明書ポリシーの少なくとも1つに対して、パスが有効である必要があるかどうかを指定します。デフォルト値は false です。
+**Require Explicit Policy：** 署名者の証明書のトラストアンカーに関連する少なくとも 1 つの証明書ポリシーについてパスが有効である必要があるかどうかを指定します。デフォルト値は false です。
 
-**Inhibit ANY Policy:** ポリシーオブジェクト識別子(OID)が証明書に含まれている場合に、その識別子を処理するかどうかを指定します。デフォルト値は false です。
+**Inhibit ANY Policy：** ポリシーオブジェクト識別子（OID）が証明書に含まれる場合にそれを処理するかどうかを指定します。デフォルト値は false です。
 
-**Inhibit Policy Mapping:** 証明書パスでポリシーマッピングを許可するかどうかを指定します。デフォルト値は false です。
+**Inhibit Policy Mapping：** 証明書パスでポリシーマッピングを許可するかどうかを指定します。デフォルト値は false です。
 
-**Check All Paths:** すべてのパスを検証するか、最初の有効なパスが見つかった後に検証を停止するかを指定します。「true」または「false」を選択します。デフォルト値は false です。
+**Check All Paths：** すべてのパスを検証するか、最初の有効なパスが見つかったら検証を停止するかどうかを指定します。「true」または「false」を選択します。デフォルト値は false です。
 
-**LDAP Server:** パス検証用の証明書の検索に使用されるLDAPサーバー。デフォルト値はありません。
+**LDAP Server：** パス検証用の証明書の検索に使用する LDAP サーバーです。デフォルト値はありません。
 
-**証明書AIAのURIをたどる：** 証明書AIAのURIを、パス検出中に処理するかどうかを指定します。デフォルト値は false です。
+**Follow URIs in Certificate AIA：** 証明書 AIA の Uniform Resource Identifier（URI）を、パス検出中に処理するかどうかを指定します。 デフォルト値は false です。
 
-**Basic Constraints Extension required in CA Certificates:** CA証明書に認証局(CA)基本制約証明書拡張が必要かどうかを指定します。初期のドイツ語のルート証明書の一部（7 以前）は、RFC 3280 に準拠していないので、基本制約拡張が含まれていません。該当するドイツ語ルートに連結した EE 証明書を持つユーザーが存在することがわかっている場合は、このチェックボックスの選択を解除します。デフォルト値は true です。
+**Basic Constraints Extension required in CA Certificates：** 証明機関（CA）の基本制約証明書拡張が CA の証明書に必要かどうかを指定します。 初期のドイツ語のルート証明書の一部（7 以前）は、RFC 3280 に準拠していないので、基本制約拡張が含まれていません。該当するドイツ語ルートに連結した EE 証明書を持つユーザーが存在することがわかっている場合は、このチェックボックスの選択を解除します。デフォルト値は true です。
 
-**チェーン構築中に有効な証明書の署名を要求：** チェーン構築時に使用する証明書に有効な署名をチェーンビルダーで必要とするかどうかを指定します。このチェックボックスを選択すると、証明書に無効な RSA 署名が含まれている場合、チェーンビルダーではチェーンが構築されません。チェーン CA > ICA > EE で、ICA 上の CA の署名が無効な場合について考えます。この設定が「true」の場合、チェーン構築は ICA で停止し、CA はチェーンに含まれません。この設定が「false」の場合は、完全な 3 つの証明書のチェーンが生成されます。この設定は、DSA 署名には影響しません。デフォルト値は false です。
+**Require Valid Certificate Signature During Chain Building：** チェーンビルダーがチェーンの構築に使用する証明書に有効な署名を必要とするかどうかを指定します。 このチェックボックスを選択すると、証明書に無効な RSA 署名が含まれている場合、チェーンビルダーではチェーンが構築されません。チェーン CA > ICA > EE で、ICA 上の CA の署名が無効な場合について考えます。この設定が「true」の場合、チェーン構築は ICA で停止し、CA はチェーンに含まれません。この設定が「false」の場合は、完全な 3 つの証明書のチェーンが生成されます。この設定は、DSA 署名には影響しません。デフォルト値は false です。
 
-### タイムスタンププロバイダーのオプション  {#timestamp-provider-options}
+### タイムスタンププロバイダーのオプション {#timestamp-provider-options}
 
-**TSP Server URL:** デフォルトのタイムスタンププロバイダーのURL。値が有効な場合のみ使用されます。デフォルト値はありません。
+**TSP Server URL：**&#x200B;デフォルトのタイムスタンププロバイダーの URL です。値が有効な場合のみ使用されます。デフォルト値はありません。
 
-**TSP Server Username:** タイムスタンププロバイダーに必要な場合のユーザー名。URL 値が有効な場合のみ使用されます。デフォルト値はありません。
+**TSP Server Username：**&#x200B;タイムスタンププロバイダーで必要な場合のユーザー名です。URL 値が有効な場合のみ使用されます。デフォルト値はありません。
 
-**TSP Server Password:** タイムスタンププロバイダーで必要とされる場合の、上記のユーザー名のパスワード。URL およびユーザー名の値が有効な場合のみ使用されます。デフォルト値はありません。
+**TSP Server Password：**&#x200B;タイムスタンププロバイダーで必要とされる場合に前述のユーザー名のパスワードを指定します。URL およびユーザー名の値が有効な場合のみ使用されます。デフォルト値はありません。
 
-**Request Hash Algorithm:** タイムスタンププロバイダーの要求の作成時に使用するハッシュアルゴリズムを指定します。デフォルト値は SHA1 です。
+**Request Hash Algorithm：**&#x200B;タイムスタンププロバイダーへの要求を作成するときに使用されるハッシュアルゴリズムを指定します。デフォルト値は SHA1 です。
 
-**失効確認スタイル：** 監視失効ステータスからタイムスタンププロバイダーの証明書の信頼ステータスを判断するために使用する失効確認スタイルを指定します。デフォルト値は BestEffort です。
+**Revocation Check Style：**&#x200B;監視失効ステータスからタイムスタンププロバイダーの証明書の信頼ステータスを判断するために使用する失効確認スタイルを指定します。デフォルト値は BestEffort です。
 
-**Send Nonce:** タイムスタンププロバイダーのリクエストと共にnonceを送信するかどうかを指定します。nonce には、タイムスタンプまたは Web ページ訪問カウンターを使用することも、ファイルの不正な再生または複製を制限または防止するための特別なマーカーを使用することもできます。デフォルト値は true です。
+**Send Nonce：**&#x200B;タイムスタンププロバイダー要求で nonce を送信するかどうかを指定します。nonce には、タイムスタンプまたは Web ページ訪問カウンターを使用することも、ファイルの不正な再生または複製を制限または防止するための特別なマーカーを使用することもできます。デフォルト値は true です。
 
-**検証中に期限切れのタイムスタンプを使用：** このオプションを選択すると、署名の検証時間を取得するために期限切れのタイムスタンプを使用できます。デフォルト値は true です。
+**Use Expired Timestamps During Validation：**&#x200B;このオプションを選択すると、署名の検証回数の取得に期限切れのタイムスタンプを使用できます。デフォルト値は true です。
 
-**TSP応答サイズ：** TSP応答の推定サイズ（バイト単位）です。この値は、設定済みのタイムスタンププロバイダーから返されるタイムスタンプの最大サイズに一致する必要があります。確信がない限り、この値を変更しないでください。最小値は「60B」、最大値は「10240B」です。デフォルト値は 4096 バイトです。
+**TSP Response Size：** TSP 応答の推定サイズ（バイト単位）です。この値は、設定済みのタイムスタンププロバイダーから返されるタイムスタンプの最大サイズに一致する必要があります。確信がない限り、この値を変更しないでください。最小値は「60B」、最大値は「10240B」です。デフォルト値は 4096 バイトです。
 
 **タイムスタンプのサーバーエクステンションを無視**: **タイムスタンプのサーバーエクステンションを無視**&#x200B;オプションを選択し、AEM Forms サーバーが特定のタイムスタンプサーバーに接続することを阻止します。このオプションを選択することで、AEM Forms とタイムスタンプサーバー間のコネクションタイムアウトによるプロセスの失敗を防ぐことができます。
 
-### 証明書失効リストのオプション  {#certificate-revocation-list-options}
+### 証明書失効リストのオプション {#certificate-revocation-list-options}
 
-**Consult Local URI First:** 失効確認のために、「Local URI」または「CRL Lookup」で指定されたCRLの場所を、証明書内で指定された場所よりも優先するかどうかを指定します。デフォルト値は false です。
+**Consult Local URI First：**「Local URI for CRL Lookup」で指定した CRL の場所を、証明書内で失効確認のために指定した場所より優先するかどうかを指定します。デフォルト値は false です。
 
-**Local URI for CRL Lookup:** ローカルCRLプロバイダーのURL。「ローカル URI を最初に参照」設定が「true」に設定されている場合にこの値が参照されます。デフォルト値はありません。
+**Local URI for CRL Lookup：**&#x200B;ローカル CRL プロバイダーの URL です。「ローカル URI を最初に参照」設定が「true」に設定されている場合にこの値が参照されます。デフォルト値はありません。
 
-**Revocation Check Style:** 監視失効ステータスからCRLプロバイダーの証明書の信頼ステータスを判断するために使用する失効確認スタイルを指定します。デフォルト値は BestEffort です。
+**Revocation Check Style：**&#x200B;監視失効ステータスから CRL プロバイダーの証明書の信頼ステータスを判断するために使用する失効確認スタイルを指定します。デフォルト値は BestEffort です。
 
-**LDAP Server for CRL Lookup:** CRLの取得に使用するLDAPサーバー(www.ldap.com)。CRL に対する DN ベースのクエリーはすべてこのサーバーに送信されます。デフォルト値はありません。
+**LDAP Server for CRL Lookup：** CRL の取得に使用する LDAP サーバー（www.ldap.com）などです。CRL に対する DN ベースのクエリーはすべてこのサーバーに送信されます。デフォルト値はありません。
 
-**Go Online:** CRLを取得するためにオンラインにするかどうかを指定します。「false」の場合、キャッシュされている CRL（ローカルディスク上または署名と共に埋め込まれているもの）のみが対象になります。デフォルト値は true です。
+**Go Online：** CRL を取得するためにオンラインにするかどうかを指定します。「false」の場合、キャッシュされている CRL（ローカルディスク上または署名と共に埋め込まれているもの）のみが対象になります。デフォルト値は true です。
 
-**有効期限を無視：** 応答のthisUpdateおよびnextUpdateの時間を無視するかどうかを指定します。これにより、これらの時間が応答の有効性に悪影響を与えるのを防ぎます。デフォルト値は false です。
+**Ignore Validity Dates：**&#x200B;応答の thisUpdate および nextUpdate の時間を無視するかどうかを指定します。これらの時間によって応答の有効性に悪影響が出るのを防ぐことができます。デフォルト値は false です。
 
-**Require AKI extension in CRL:** Authority Key Identifier拡張をCRLに含める必要があるかどうかを指定します。デフォルト値は false です。
+**Require AKI extension in CRL：**&#x200B;認証機関キー識別子の拡張を CRL に含める必要があるかどうかを指定します。 デフォルト値は false です。
 
-### オンライン証明書ステータスプロトコルのオプション  {#online-certificate-status-protocol-options}
+### オンライン証明書ステータスプロトコルのオプション {#online-certificate-status-protocol-options}
 
-**OCSP Server URL:** デフォルトのOCSPサーバーのURL。この URL で指定された OCSP サーバーを使用するかどうかは、「参照 URL オプション」の設定によって決まります。デフォルト値はありません。
+**OCSP Server URL：**&#x200B;デフォルトの OCSP サーバーの URL です。この URL で指定された OCSP サーバーを使用するかどうかは、「参照 URL オプション」の設定によって決まります。デフォルト値はありません。
 
-**URL To Consult Option:** ステータスチェックの実行に使用されるOCSPサーバーのリストと順序を制御します。デフォルト値は UseAIAInCert です。
+**URL To Consult Option：**&#x200B;ステータスチェックの実行に使用する OCSP サーバーのリストおよび順序を制御します。デフォルト値は UseAIAInCert です。
 
-**Revocation Check Style:** OCSPサーバーの証明書の検証時に使用する失効確認スタイルを指定します。デフォルト値は CheckIfAvailable です。
+**Revolution Check Style：** OCSP サーバーの証明書の検証時に使用する失効確認スタイルを指定します。デフォルト値は CheckIfAvailable です。
 
-**Send Nonce:** OCSPリクエストでnonceを送信するかどうかを指定します。nonce には、タイムスタンプまたは Web ページ訪問カウンターを使用することも、ファイルの不正な再生または複製を制限または防止するための特別なマーカーを使用することもできます。デフォルト値は true です。
+**Send Nonce：** OCSP 要求で nonce を送信するかどうかを指定します。nonce には、タイムスタンプまたは Web ページ訪問カウンターを使用することも、ファイルの不正な再生または複製を制限または防止するための特別なマーカーを使用することもできます。デフォルト値は true です。
 
-**Max Clock Skew Time:** 応答時間とローカル時間の間の最大許容Skew（分単位）。最小値は「0」、最大値は「2147483647m」です。デフォルト値は「5m」です。
+**Max Clock Skew Time：**&#x200B;応答時間とローカル時間の間の最大許容スキュー（分単位）です。 最小値は「0」、最大値は「2147483647m」です。デフォルト値は「5m」です。
 
-**Response Freshness Time:** 事前に生成されたOCSP応答が有効と見なされる最大時間（分単位）。最小値は「1m」、最大値は「2147483647」です。デフォルト値は 525600（1 年）です。
+**Response Freshness Time：**&#x200B;事前に生成された OCSP 応答が有効であると見なされる最大時間（分単位）です。最小値は「1m」、最大値は「2147483647」です。デフォルト値は 525600（1 年）です。
 
-**Sign OCSP Request:** OCSP要求に署名を必要とするかどうかを指定します。デフォルト値は false です。
+**Sign OCSP Request：** OCSP 要求に署名する必要があるかどうかを指定します。デフォルト値は false です。
 
-**Request Signer Credential Alias:** 署名が有効な場合にOCSP要求の署名に使用する秘密鍵証明書エイリアスを指定します。OCSP 要求の署名が有効な場合にのみ使用されます。デフォルト値はありません。
+**Request Signer Credential Alias：**&#x200B;署名が有効な場合に OCSP 要求への署名に使用する秘密鍵証明書のエイリアスを指定します。OCSP 要求の署名が有効な場合にのみ使用されます。デフォルト値はありません。
 
-**Go Online:** 失効確認を行うためにオンラインにするかどうかを指定します。デフォルト値は true です。
+**Go Online：**&#x200B;失効確認を行うためにオンラインにするかどうかを指定します。デフォルト値は true です。
 
-**応答のthisUpdateおよびnextUpdateの時間を無視：** 応答のthisUpdateおよびnextUpdateの時間を無視するかどうかを指定します。これにより、これらの時間が応答の有効性に悪影響を与えるのを防ぎます。デフォルト値は false です。
+**Ignore the response’s thisUpdate and nextUpdate times：**&#x200B;応答の thisUpdate および nextUpdate の時間を無視するかどうかを指定します。これにより、応答の有効性に悪影響が出るのを防ぐことができます。デフォルト値は false です。
 
-**Allow OCSPNoCheck extension:** 応答署名証明書でOCSPNoCheck拡張を許可するかどうかを指定します。デフォルト値は true です。
+**Allow OCSPNoCheck extension：**&#x200B;応答署名証明書で OCSPNoCheck 拡張が許可されるかどうかを指定します。デフォルト値は true です。
 
-**Require OCSP ISIS-MTT CertHash Extension:** 証明書の公開鍵ハッシュ拡張をOCSP応答に含める必要があるかどうかを指定します。デフォルト値は false です。
+**Require OCSP ISIS-MTT CertHash Extension：**&#x200B;証明書の公開鍵ハッシュ拡張を OCSP 応答に含める必要があるかどうかを指定します。 デフォルト値は false です。
 
-### デバッグ用のエラー処理オプション  {#error-handling-options-for-debugging}
+### デバッグ用のエラー処理オプション {#error-handling-options-for-debugging}
 
-**次のAPI呼び出し時に証明書キャッシュをパージ：** 次のSignatureサービス操作が呼び出されたときに証明書キャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
+**Purge Certificate Cache on next API call：**&#x200B;次の Signature サービス操作が呼び出されたときに、証明書キャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
 
-**Purge CRL Cache on next API call:** 次のSignatureサービス操作が呼び出されたときにCRLキャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
+**Purge Certificate Cache on next API call：**&#x200B;次の Signature サービス操作が呼び出されたときに、CRL キャッシュをパージするかどうかを指定します。 次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
 
-**Purge OCSP Cache on next API呼び出し：** 次のSignature Service操作が呼び出されたときにOCSPキャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
+**Purge OCSP Cache on next API call：**&#x200B;次の Signature サービス操作が呼び出されたときに、OCSP キャッシュをパージするかどうかを指定します。次の Signature サービス操作が呼び出されると、このオプションは「false」に戻ります。デフォルト値は false です。
 
-## Watched Folder サービスの設定  {#watched-folder-service-settings}
+## Watched Folder サービスの設定 {#watched-folder-service-settings}
 
 Watched Folder サービス（`WatchedFolder`）では、すべての監視フォルダーエンドポイントに共通する属性を設定します。また、監視フォルダーエンドポイントのデフォルト値も指定します（[監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)を参照）。このサービスは、外部クライアントアプリケーションによって呼び出されることも、Workbench で作成されたプロセスで使用されることもありません。
 
 Watched Folder サービスでは、以下の設定を使用できます。
 
-**Cron式：** Cron式。入力ディレクトリのポーリングをスケジュールするためにQuartzで使用されます。
+**Cron Expression：**&#x200B;入力ディレクトリのポーリングをスケジュールするために Quartz が使用する Cron 式。
 
-**繰り返し回数：** 入力ディレクトリがポーリングされた回数。エンドポイントの設定でこの値を指定しない場合は、デフォルトの繰り返し回数が使用されます。-1 を指定すると、ディレクトリは無限にスキャンされます。デフォルト値は -1 です。
+**Repeat Count：**&#x200B;入力ディレクトリのポーリング回数。エンドポイントの設定でこの値を指定しない場合は、デフォルトの繰り返し回数が使用されます。-1 を指定すると、ディレクトリは無限にスキャンされます。デフォルト値は -1 です。
 
-**繰り返し間隔：** 各ポールの間隔を示すデフォルトの秒数。監視フォルダーエンドポイント設定にデフォルト値が指定されていない場合、繰り返し間隔としてこの値が使用されます。デフォルト値は 5 です。詳しくは、「バッチサイズ」設定の説明を参照してください。
+**Repeat Interval：**&#x200B;各ポーリング間のデフォルトの秒数。監視フォルダーエンドポイント設定にデフォルト値が指定されていない場合、繰り返し間隔としてこの値が使用されます。デフォルト値は 5 です。詳しくは、「バッチサイズ」設定の説明を参照してください。
 
-**Asynchronous:** 呼び出しの種類を非同期型にするか同期型にするかを指定します。一過性および同期型のプロセスは、同期型でのみ呼び出すことができます。デフォルト値は「asynchronous」です。
+**Asynchronous：**&#x200B;呼び出しタイプを非同期または同期として識別します。一過性および同期型のプロセスは、同期型でのみ呼び出すことができます。デフォルト値は「asynchronous」です。
 
-**Wait Time:** ファイルが入力フォルダーから取得されるまでの時間のデフォルト値（秒）。待機時間に指定されている時間より古いファイルまたはフォルダーが、処理対象として取得されます。デフォルト値は 0 です。
+**Wait Time：**&#x200B;入力フォルダーからファイルを取得するまでの時間のデフォルト値（秒単位）。待機時間に指定されている時間より古いファイルまたはフォルダーが、処理対象として取得されます。デフォルト値は 0 です。
 
-**バッチサイズ：** 1回のスキャンで処理されるファイルまたはフォルダーの数のデフォルト値。デフォルト値は 2 です。
+**Batch Size：** 1 回のスキャンで処理するファイルまたはフォルダーの数のデフォルト値。デフォルト値は 2 です。
 
 「繰り返し間隔」設定と「バッチサイズ」設定では、監視フォルダーがスキャンごとに何個のファイルを取得するかを指定します。監視フォルダーは、Quartz スレッドプールを使用して入力フォルダーをスキャンします。スレッドプールは他のサービスと共有されます。スキャンの間隔が小さいと、スレッドによって入力フォルダーが頻繁にスキャンされます。ファイルが頻繁に監視フォルダーに配置される場合は、スキャンの間隔を小さくします。ファイルが頻繁には配置されない場合は、他のサービスがスレッドを使用できるように、スキャンの間隔を大きくします。
 
@@ -706,13 +710,13 @@ Watched Folder サービスでは、以下の設定を使用できます。
 
 クラスターの設定では、監視フォルダーエンドポイントのバッチサイズが複数のクラスターノードに対して調整されません。例えば、 ノードクラスターに対してバッチサイズが `2`2 に設定され、「ジョブ数を制限」オプションが選択されている場合、各ノードで 2 つのファイルが同時に処理されるのではなく、両方のノードでまとめて 2 つのバッチによりファイルが処理されます。
 
-**Overwrite Duplicate Filenames:** 監視フォルダーが重複する結果ファイル名を上書きするかどうか、および同じ名前の保存されたドキュメントを上書きするかどうかを指定するブール型文字列。
+**Overwrite Duplicate Filenames：**&#x200B;監視フォルダーで結果ファイルが同じ名前の既存のファイルを上書きするかどうか、および保持されていた同じ名前のドキュメントを上書きするかどうかを指定する Boolean 文字列。
 
-**Preserve Folder:** 保存フォルダーのデフォルト値。このフォルダーは、入力が正常に処理された場合にソースファイルをコピーするために使用されます。何も指定しないか、結果フォルダー設定で説明されているファイルパターンを使用して相対パスまたは絶対パスを指定できます。
+**Preserve Folder：**&#x200B;保存用フォルダーのデフォルト値。このフォルダーは、入力が正常に処理された場合にソースファイルをコピーするために使用されます。何も指定しないか、結果フォルダー設定で説明されているファイルパターンを使用して相対パスまたは絶対パスを指定できます。
 
-**失敗フォルダー：** 失敗ファイルがコピーされるフォルダーの名前。何も指定しないか、結果フォルダー設定で説明されているファイルパターンを使用して相対パスまたは絶対パスを指定できます。
+**Failure Folder：**&#x200B;失敗ファイルをコピーするフォルダー名。何も指定しないか、結果フォルダー設定で説明されているファイルパターンを使用して相対パスまたは絶対パスを指定できます。
 
-**結果フォルダー：** 結果フォルダーのデフォルト名。このフォルダーに結果ファイルがコピーされます。何も指定しないか、相対パスまたは絶対パスを次のファイルパターンを使用して指定できます。
+**Result Folder：**&#x200B;結果フォルダーのデフォルト名。このフォルダーに結果ファイルがコピーされます。何も指定しないか、相対パスまたは絶対パスを次のファイルパターンを使用して指定できます。
 
 * %F = ファイル名プレフィックス
 * %E = ファイル拡張子
@@ -729,7 +733,7 @@ Watched Folder サービスでは、以下の設定を使用できます。
 * %R = 乱数（0～9）
 * %P = プロセス ID またはジョブ ID
 
-例えば、2009年7月17日の午後8時に`C:/Test/WF0/failure/%Y/%M/%D/%H/`と指定した場合、結果フォルダーは`C:/Test/WF0/failure/2009/07/17/20`になります。
+例えば、2009年7月17日午後 8:00 に `C:/Test/WF0/failure/%Y/%M/%D/%H/` を指定した場合、結果フォルダーは `C:/Test/WF0/failure/2009/07/17/20` になります。
 
 絶対パスではなく相対パスを指定すると、監視フォルダーの中に作成されます。ファイルパターンについて詳しくは、[ファイルパターンについて](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns)を参照してください。
 
@@ -737,13 +741,13 @@ Watched Folder サービスでは、以下の設定を使用できます。
 >
 >結果フォルダーのサイズを小さくすればするほど、監視フォルダーのパフォーマンスが向上します。例えば、監視フォルダーの推定負荷が 1 時間に 1000 個のファイルである場合、1 時間ごとに新しいサブフォルダーが作成されるように `result/%Y%M%D%H` のようなパターンを使用します。これよりも負荷が小さい場合（例えば、1 日に 1000 個のファイル）、`result/%Y%M%D` のようなパターンを使用することもできます。
 
-**ステージフォルダー：** 監視フォルダー内のステージフォルダーのデフォルト名です。
+**Stage Folder：**&#x200B;監視フォルダー内のステージフォルダーのデフォルト名。
 
-**Input Folder:** 監視フォルダー内の入力フォルダーのデフォルト名。
+**Input Folder：**&#x200B;監視フォルダー内の入力フォルダーのデフォルト名。
 
-**失敗時に保存：** trueの場合、失敗時に元のファイルが失敗フォルダーに保存されます。
+**Preserve On Failure：** true の場合、元のファイルは失敗時に失敗フォルダーに保存されます。
 
-**スロットル：** このオプションを選択すると、AEM formsで同時に処理できる監視フォルダーのジョブ数が制限されます。「バッチサイズ」の値によって、ジョブの最大数が決まります（ジョブ数の制限についてを参照）。
+**Throttle：**&#x200B;このオプションを選択すると、AEM Forms で同時に処理できる監視フォルダーのジョブ数が制限されます。「バッチサイズ」の値によって、ジョブの最大数が決まります（ジョブ数の制限についてを参照）。
 
 ## Web Service サービスの設定 {#web-service-service-settings}
 
@@ -755,43 +759,43 @@ Web Service サービスは、SOAP メッセージを送受信して Web サー�
 
 Web Service サービスでは、以下の設定を使用できます。
 
-**Key Store:** 認証に使用する秘密鍵が格納されているキーストアファイルの完全パス。forms サーバーからこのファイルにアクセスできる必要があります。
+**Key Store：**&#x200B;認証に使用する秘密鍵を含むキーストアファイルのフルパス。forms サーバーからこのファイルにアクセスできる必要があります。
 
-**Key Store Password:** キーストアファイルのパスワード。
+**Key Store Password：**&#x200B;キーストアファイルのパスワード。
 
-**Key Store Type:** キーストアのタイプ。forms サーバーを実行する JVM に設定されているデフォルトのキーストアの種類を使用する場合は、値を指定しません。それ以外の場合、以下のいずれかの値を指定します。
-
-* jks
-* pkcs12
-* cms
-* jceks
-
-**Trust Store:** Webサービスサーバーの公開鍵を含むTrust Storeファイルの完全パス。
-
-**Trust Storeのパスワード：** Truststoreファイルのパスワードです。
-
-**Trust Store Type:** トラストストアの種類。forms サーバーを実行する JVM に設定されているデフォルトのキーストアの種類を使用する場合は、値を指定しません。それ以外の場合、以下のいずれかの値を指定します。
+**Key Store Type：**&#x200B;キーストアのタイプ。forms サーバーを実行する JVM に設定されているデフォルトのキーストアの種類を使用する場合は、値を指定しません。それ以外の場合、以下のいずれかの値を指定します。
 
 * jks
 * pkcs12
 * cms
 * jceks
 
-## XSLT Transformation サービスの設定  {#xslt-transformation-service-settings}
+**Trust Store：** Web サービスサーバーの公開鍵を含むトラストストアファイルのフルパス。
+
+**Trust Store Password：**&#x200B;トラストストアファイルのパスワード。
+
+**Trust Store Type：**&#x200B;トラストストアのタイプ。 forms サーバーを実行する JVM に設定されているデフォルトのキーストアの種類を使用する場合は、値を指定しません。それ以外の場合、以下のいずれかの値を指定します。
+
+* jks
+* pkcs12
+* cms
+* jceks
+
+## XSLT Transformation サービスの設定 {#xslt-transformation-service-settings}
 
 XSLT Transformation サービス（`XSLTService`）を使用すると、プロセスで XSLT（Extensible Stylesheet Language Transformations）を XML ドキュメントに適用できます。
 
 XSLT Transformation サービスでは以下の設定を使用できます。
 
-**ファクトリ名：** XSLT変換の実行に使用するJavaクラスの完全修飾名。値を指定しない場合は、forms サーバーを稼働する Java 仮想マシンに設定されたデフォルトのファクトリが使用されます。
+**Factory Name：** XSLT 変換の実行に使用する Java クラスの完全修飾名。値を指定しない場合は、forms サーバーを稼働する Java 仮想マシンに設定されたデフォルトのファクトリが使用されます。
 
-## サービスのセキュリティ設定の変更  {#modifying-security-settings-for-a-service}
+## サービスのセキュリティ設定の変更 {#modifying-security-settings-for-a-service}
 
 forms サーバーでは、各サービスのセキュリティ設定を指定できます。これにより、サービスごとにアクセス制御を細かく設定できます。
 
 デフォルトのセキュリティプロファイルがインストールされ、このプロファイルはその後、システムの必要性に応じて設定できます。セキュリティプロファイルは、ユーザーレベルまたはグループレベルで作成され、ドメインに関連付けられます。
 
-### サービスのセキュリティ設定の変更  {#modify-security-settings-for-a-service}
+### サービスのセキュリティ設定の変更 {#modify-security-settings-for-a-service}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、設定するサービスをクリックします。
@@ -838,16 +842,16 @@ forms サーバーでは、各サービスのセキュリティ設定を指定�
 
 1. 「追加」をクリックします。
 
-### セキュリティプロファイルからのプリンシパルの削除  {#remove-the-principal-from-a-security-profile}
+### セキュリティプロファイルからのプリンシパルの削除 {#remove-the-principal-from-a-security-profile}
 
 1. サービスの管理ページで、設定するサービスを選択します。
 1. 「**セキュリティ**」タブをクリックし、削除するセキュリティプロファイルを選択して、「**削除**」をクリックします。
 
-## サービスのプーリングの設定  {#configuring-pooling-for-a-service}
+## サービスのプーリングの設定 {#configuring-pooling-for-a-service}
 
 各サービスでは、プーリング機能を利用して、受信する呼び出し要求を処理できます。サービスプールを使用すると、サービスインスタンスは一度に 1 つのスレッドで呼び出され、複数の呼び出し要求で再利用できるので、パフォーマンスが向上する場合があります。また、プーリングを使用して「非同期サービスインスタンスの最大数」オプションを指定することもでき、同時に処理される要求の数を制限することができます。
 
-### プーリングの有効化  {#enable-pooling}
+### プーリングの有効化 {#enable-pooling}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、設定するサービスをクリックします。
@@ -859,15 +863,15 @@ forms サーバーでは、各サービスのセキュリティ設定を指定�
 1. 「呼び出し待機のタイムアウト」ボックスに、サービスが呼び出し要求に対応可能になるまでの待機時間をミリ秒単位で入力します。この設定の値を指定しない場合、デフォルトは 0 で、待機時間はゼロです。
 1. 「保存」をクリックします。
 
-### プーリングの削除  {#remove-pooling}
+### プーリングの削除 {#remove-pooling}
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスの管理ページで、設定するサービスをクリックします。
 1. 「プーリング」タブをクリックします。
 1. 「要求処理方法」リストで「各要求の新しいインスタンス」または「すべての要求の単一インスタンス」のいずれかを選択します。
 
-   **すべてのリクエストの単一インスタンス：** 最初のリクエストがコンテナに格納されると、サービスインスタンスが作成およびキャッシュされます。その要求以降の要求はすべて、同じサービスインタンスを使用して処理されます。
+   **Single Instance for All Requests：**&#x200B;最初のリクエストがコンテナに送られると、サービスインスタンスが作成され、キャッシュされます。 その要求以降の要求はすべて、同じサービスインタンスを使用して処理されます。
 
-   **各要求の新しいインスタンス：** 呼び出しを受け取るたびに、新しいサービスインスタンスが作成されます。
+   **New Instance for Each Request：**&#x200B;呼び出しを受信するたびに、新しいサービスインスタンスが作成されます。
 
 1. 「保存」をクリックします。
