@@ -1,8 +1,8 @@
 ---
 title: 互換性パッケージ
-seo-title: 互換性パッケージ
-description: 互換性パッケージをAEM Forms 6.5にインストールすると、AEM Forms 6.4以前のバージョンと非推奨のアダプティブフォームテンプレートおよびページのCorrespondence Managementアセットを使用できます
-seo-description: 互換性パッケージを AEM Forms 6.4 にインストールすると、AEM Forms 6.4 および非推奨になったアダプティブォームテンプレートとページから Correspondence Management アセットを使用できます
+seo-title: Compatibility Package
+description: AEM Forms 6.5 に互換性パッケージをインストールすると、AEM Forms 6.4 以前のバージョンの Correspondence Management アセットと、非推奨のアダプティブフォームテンプレートおよびページが使用できるようになります
+seo-description: Installing the Compatibility package on AEM Forms 6.4 allows you to use the Correspondence Management assets from AEM Forms 6.4 and deprecated adaptive forms templates and pages
 uuid: b49633d6-2cb3-422c-a314-25f3b8a37b7f
 contentOwner: gtalwar
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -13,9 +13,9 @@ docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 59%
+workflow-type: ht
+source-wordcount: '316'
+ht-degree: 100%
 
 ---
 
@@ -23,24 +23,24 @@ ht-degree: 59%
 
 ## 概要 {#overview}
 
-AEM Forms 6.5では、顧客とのやり取りを作成するデフォルトの推奨アプローチはインタラクティブ通信です。AEM Forms 6.5でレターを引き続き使用するには、最新の[AEMFD互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールする必要があります。
+インタラクティブ通信は、AEM Forms 6.5 で顧客コミュニケーションを作成するためのデフォルトの推奨アプローチです。AEM Forms 6.5 で引き続きレターを使用するには、最新の [AEMFD 互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールする必要があります。
 
-AEMFD互換性パッケージを使用すると、AEM Forms 6.5上のAEM Forms 6.4、6.3、6.2の次のアセットを[使用することもできます。](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、次の AEM Forms 6.4、6.3、6.2 のアセットも使用できます。](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
 * ドキュメントフラグメント
 * レター
 * データディクショナリ
 * アダプティブフォームの非推奨になったテンプレートおよびページ
 
-詳しくは、[互換性パッケージ](../../forms/using/compatibility-package.md#assetsmadecompatible)をインストールして、AEM Forms 6.5と互換性を持たせたアセットを参照してください。
+詳細については、[互換性パッケージをインストールすることにより AEM Forms 6.5 と互換性を持つようになったアセット](../../forms/using/compatibility-package.md#assetsmadecompatible)を参照してください。
 
-## AEM Forms 6.5でAEM Forms 6.4、6.3および6.2のアセットのサポートを追加 {#add-support-for-aem-forms-and-assets-in-aem-forms}
+## AEM Forms 6.5 で AEM Forms 6.4、6.3 および 6.2 のアセットのサポートを追加 {#add-support-for-aem-forms-and-assets-in-aem-forms}
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.5 との互換性を持たせるには、以下を実行します。
 
-[AEM互換性パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)が事前にインストールされていることを確認します。
+[AEM 互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)が事前にインストールされていることを確認します。
 
-1. 最新の6.5 [互換性パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)をインストールします。
+1. 最新の 6.5 [互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールします。
 
    パッケージのアップロードおよびインストールについて詳しくは、「[パッケージの作業方法](/help/sites-administering/package-manager.md)」を参照してください。
 
@@ -51,7 +51,7 @@ AEMFD互換性パッケージを使用すると、AEM Forms 6.5上のAEM Forms 6
 
 ## 互換性パッケージをインストールすることにより AEM Forms 6.5 と互換性を持つようになったアセット {#assetsmadecompatible}
 
-互換性パッケージをインストールすると、次のアセットとテンプレートをAEM Forms 6.5と互換性を持たせることができます。
+互換性パッケージをインストールすると、以下のアセットとテンプレートに AEM Forms 6.5 との互換性を保持できます。
 
 * AEM 6.4 以前の Correspondence Management アセット:
 
