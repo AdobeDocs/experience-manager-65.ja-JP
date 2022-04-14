@@ -1,8 +1,8 @@
 ---
 title: 証明書を Acrobat Reader DC Extensions で使用するための設定
-seo-title: 証明書を Acrobat Reader DC Extensions で使用するための設定
+seo-title: Configuring credentials for use with Acrobat Reader DC extensions
 description: 証明書を Acrobat Reader DC Extensions で使用するための設定方法について説明します。
-seo-description: 証明書を Acrobat Reader DC Extensions で使用するための設定方法について説明します。
+seo-description: Learn how to configure credentials for use with Acrobat Reader DC extensions.
 uuid: 9210e6c9-6f5c-402d-b355-b104cdffd5eb
 contentOwner: admin
 content-type: reference
@@ -11,19 +11,19 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5bb32fb1-4b6e-412f-aa16-f60db9dcaba1
 exl-id: e8015d59-7587-46dc-a672-e0f1108102ad
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '555'
+ht-degree: 100%
 
 ---
 
 # 証明書を Acrobat Reader DC Extensions で使用するための設定{#configuring-credentials-for-use-with-acrobat-reader-dc-extensions}
 
-PDF ドキュメントに使用権限を適用するには、Acrobat Reader DC Extensions 用の有効な証明書を使用して AEM Forms を設定します。証明書は、AEM Forms をインストールするときに設定されている場合があります。Configuration Manager の実行中に Acrobat Reader DC Extensions の証明書を設定しなかった場合や、新しい証明書を読み込む、または証明書を置き換える必要がある場合は、Trust Store の管理ページを使用して行うことができます。
+PDF ドキュメントに使用権限を適用するには、Acrobat Reader DC Extensions 用の有効な証明書を使用して AEM forms を設定します。証明書は、AEM Forms をインストールするときに設定されている場合があります。Configuration Manager の実行中に Acrobat Reader DC Extensions の証明書を設定しなかった場合や、新しい証明書を読み込む、または証明書を置き換える必要がある場合は、Trust Store の管理ページを使用して行うことができます。
 
 評価用の証明書を使用している場合は、実稼働環境に移行するときに実稼働環境用の証明書に置き換えます。期限切れの証明書または評価用の証明書を更新するには、最初に、古くなった Acrobat Reader DC Extensions 証明書を削除します。
 
-証明書の取得について詳しくは、「[AEM Forms のインストールの準備（シングルサーバー）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)」を参照してください。
+証明書の取得について詳しくは、「[AEM Forms のインストールの準備（シングルサーバー）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)」を参照してください。
 
 Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれることがあります。これらの証明書の 1 つを、デフォルトの Reader Extensions 証明書として指定する必要があります。デフォルトの証明書は、Workbench ユーザーがプロセス作成時に、どの証明書を使用するかを判断できない場合に使用されます。デフォルトの証明書には以下の規則が適用されます。
 
@@ -34,9 +34,9 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
 
 >[!NOTE]
 >
->プログラムによって証明書を読み込んだり、削除したりすることもできます（「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63)」を参照してください。）
+>プログラムによって証明書を読み込んだり、削除したりすることもできます（「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)」を参照してください。）
 
-## Acrobat Reader DC Extensions 証明書の読み込み  {#import-a-acrobat-reader-dc-extensions-credential}
+## Acrobat Reader DC Extensions 証明書の読み込み {#import-a-acrobat-reader-dc-extensions-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 「読み込み」をクリックし、「Trust Store の種類」で「Acrobat Reader DC Extensions 証明書」を選択します。
@@ -51,12 +51,12 @@ Trust Store には複数の Acrobat Reader DC Extensions 証明書が含まれ�
 
    「形式が正しくないか、パスワードが正しくないため、証明書を読み込めませんでした」というエラーメッセージが表示される場合は、パスワードが有効であることを確認してください。
 
-## Acrobat Reader DC Extensions 証明書の削除  {#remove-a-acrobat-reader-dc-extensions-credential}
+## Acrobat Reader DC Extensions 証明書の削除 {#remove-a-acrobat-reader-dc-extensions-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 証明書を選択し、「削除」をクリックします。
 
-## Acrobat Reader DC Extensions 証明書の置換  {#replace-a-acrobat-reader-dc-extensions-credential}
+## Acrobat Reader DC Extensions 証明書の置換 {#replace-a-acrobat-reader-dc-extensions-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 既存の証明書のエイリアスをメモしておきます。このエイリアスを選択して「削除」をクリックします。
