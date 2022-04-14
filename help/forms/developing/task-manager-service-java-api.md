@@ -1,8 +1,8 @@
 ---
-title: タスクマネージャーサービスJava API QuickStart(SOAP)
-seo-title: タスクマネージャーサービスJava API QuickStart(SOAP)
-description: Task Managerサービスを使用して、タスクの割り当て、タスクのロック、ユーザーに割り当てられたタスクの取得、タスクからのフォームデータの取得、フォームデータの変更、添付ファイルの取得、およびタスク情報の取得を行います。
-seo-description: Task Managerサービスを使用して、タスクの割り当て、タスクのロック、ユーザーに割り当てられたタスクの取得、タスクからのフォームデータの取得、フォームデータの変更、添付ファイルの取得、およびタスク情報の取得を行います。
+title: Task Manager サービス Java API クイックスタート（SOAP）
+seo-title: Task Manager Service Java API QuickStart(SOAP)
+description: Task Manager サービスを使用して、タスクの割り当て、タスクのロック、ユーザーに割り当てられたタスクの取得、タスクからのフォームデータの取得、フォームデータの修正、添付ファイルの取得、タスク情報の取得を行います。
+seo-description: Use the Task Manager service to assign tasks, lock tasks, retrieve tasks assigned to users, retrieve form data from tasks, modify form data, retrieve file attachments, and retrieve task information.
 uuid: fd6fceb1-865e-47a7-83fc-a63dcc2c21de
 contentOwner: admin
 content-type: reference
@@ -12,43 +12,43 @@ discoiquuid: 532e607d-5bc5-4ccc-92c6-30efe1081872
 role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '524'
+ht-degree: 100%
 
 ---
 
-# タスクマネージャーサービスJava APIクイックスタート(SOAP) {#task-manager-service-java-api-quickstart-soap}
+# Task Manager サービス Java API クイックスタート（SOAP） {#task-manager-service-java-api-quickstart-soap}
 
-Task Managerサービスでは、次のクイックスタートを使用できます。
+Task Manager サービスでは、以下のクイックスタートが使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクの割り当て](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、タスクを割り当てる](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクのロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、タスクをロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用してユーザーに割り当てられたタスクを取得する](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、ユーザーに割り当てられたタスクを取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクからのフォームデータの取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、タスクからフォームデータを取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したフォームデータの変更](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、フォームデータを変更](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスクから添付ファイルを取得する](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、タスクから添付ファイルを取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したタスク情報の取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、タスク情報を取得](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
-
->[!NOTE]
->
->WebサービスAPIを使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを実行するために必要なメソッド呼び出しである`taskList`メソッドを呼び出せないからです。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM Formsによるプログラミング」にあるクイックスタートは、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>Web サービス API を使用して、ユーザーに割り当てられたタスクを検索することはできません。 このタスクを行うために必要なメソッド呼び出しである `taskList` メソッドを呼び出すことができないからです。
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}を使用したタスクの割り当て
+>[!NOTE]
+>
+>AEM Forms によるプログラミングにあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
-次のJavaコードの例では、Tony Blueという名前のユーザーにタスクを割り当てます。
+## クイックスタート（SOAP モード）：Java API を使用して、タスクを割り当てる {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+
+次の Java コードの例では、Tony Blue という名前のユーザーにタスクを割り当てます。
 
 ```java
  /*
@@ -179,9 +179,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-locking-tasks-using-the-java-api}を使用したタスクのロック
+## クイックスタート（SOAP モード）：Java API を使用して、タスクをロック {#quick-start-soap-mode-locking-tasks-using-the-java-api}
 
-次のJavaコードの例では、タスク識別子の値2に対応するタスクをロックします。
+次の Java コードの例では、タスク識別情報の値 2 に対応するタスクをロックします。
 
 ```java
  /*
@@ -268,9 +268,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}を使用してユーザーに割り当てられたタスクを取得する
+## クイックスタート（SOAP モード）：Java API を使用して、ユーザーに割り当てられたタスクを取得 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-次のJavaコードの例では、*tony blue*&#x200B;という名前のユーザーに割り当てられているすべてのタスクを取得します。 このユーザーは、接続プロパティで指定されています。 識別子の値や説明など、返されるタスクに関する情報が表示されます。
+次の Java コードの例では、*Tony Blue* という名前のユーザーに割り当てられているすべてのタスクを取得します。このユーザーは、接続プロパティで指定されていることにご注意ください。 識別情報の値や説明など、返されるタスクに関する情報が表示されます。
 
 ```java
  /*
@@ -394,9 +394,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}を使用してタスクからフォームデータを取得する
+## クイックスタート（SOAP モード）：Java API を使用して、タスクからフォームデータを取得 {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-次のJavaコードの例は、識別子の値が304であるタスクからフォームデータを取得します。 フォームデータは、C:\Adobeにある&#x200B;*FormData.xml*&#x200B;というXMLファイルに書き込まれます。
+次の Java コードの例では、識別情報の値が 304 のタスクからフォームデータを取得します。 フォームデータは、C:\Adobeに置かれた *FormData.xml* という名前の XML ファイルに記述されています。
 
 ```java
  /*
@@ -500,9 +500,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}を使用したフォームデータの変更
+## クイックスタート（SOAP モード）：Java API を使用して、フォームデータを変更 {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-次のJavaコードの例では、*FormData.xml*&#x200B;ファイル内のデータでフォームを更新します。
+次の Java コードの例では、 *FormData.xml* ファイルにあるデータでフォームをアップデートしています。
 
 ```java
  /*
@@ -610,9 +610,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}を使用してタスクから添付ファイルを取得する
+## クイックスタート（SOAP モード）：Java API を使用して、タスクから添付ファイルを取得 {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
-次のJavaコードの例は、添付ファイルを取得します。 各添付ファイルはTXTファイルとして保存されます。
+次の Java コードの例では、添付ファイルを取得します。 各添付ファイルは、TXT ファイルとして保存されます。
 
 ```java
  /*
@@ -714,9 +714,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}を使用したタスク情報の取得
+## クイックスタート（SOAP モード）：Java API を使用して、タスク情報を取得 {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-次のJavaコードの例では、*MortgageLoan - Prebuild*&#x200B;という名前のプロセスに基づくすべてのタスクを取得します。 返される各タスクのステータスは、完了したタスクであることを確認するためにチェックされます。 タスクを完了したユーザーの名前やタスクが完了した日付などの情報が取得され、表示されます。
+次の Java コードの例では、 *住宅ローン - ビルド済み* という名前のプロセスに基づくすべてのタスクを取得します。. 返される各タスクのステータスが、完了したタスクであることを確認するためにチェックされます。 タスクを完了したユーザーの名前やタスクが完了した日付などの情報が取得され、表示されます。
 
 ```java
  /*
