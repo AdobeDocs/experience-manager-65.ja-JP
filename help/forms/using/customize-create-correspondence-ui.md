@@ -1,8 +1,8 @@
 ---
 title: 通信作成用 UI のカスタマイズ
-seo-title: 通信作成用 UI のカスタマイズ
+seo-title: Customize create correspondence UI
 description: 通信作成用 UI をカスタマイズする方法について説明します。
-seo-description: 通信作成用 UI をカスタマイズする方法について説明します。
+seo-description: Learn how to customize create correspondence UI.
 uuid: 9dee9b6f-4129-4560-9bf8-db48110b76f7
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,13 +12,13 @@ docset: aem65
 feature: Correspondence Management
 exl-id: 9593ca2a-7f9e-4487-a1a5-ca44114bff17
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 74%
+workflow-type: ht
+source-wordcount: '1088'
+ht-degree: 100%
 
 ---
 
-# 通信作成用 UI のカスタマイズ{#customize-create-correspondence-ui}
+# 通信作成 UI のカスタマイズ{#customize-create-correspondence-ui}
 
 ## 概要 {#overview}
 
@@ -26,19 +26,19 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 通信作成用 UI に表示されるロゴは、組織のロゴと入れ替えることもできます。
 
-![通信作成用 UI に表示されたカスタムアイコン](assets/0_1_introscreenshot.png)
+![通信作成 UI のカスタムアイコン](assets/0_1_introscreenshot.png)
 
 通信作成用 UI に表示されたカスタムアイコン
 
-### 通信作成用 UI に表示されるカスタムアイコンを変更する  {#changing-the-logo-in-the-create-correspondence-ui}
+### 通信作成用 UI に表示されるカスタムアイコンを変更する {#changing-the-logo-in-the-create-correspondence-ui}
 
 カスタムロゴ画像を使用するには、次の手順を実行します。
 
-1. 適切な[フォルダー構造をCRX](#creatingfolderstructure)に作成します。
-1. [CRXで作成したフォルダー](#uploadlogo) に、新しいロゴファイルをアップロードします。
+1. [CRX 内で適切なフォルダー構造](#creatingfolderstructure)を作成します。
+1. CRX で作成したフォルダーに、[新しいロゴファイルをアップロード](#uploadlogo)します。
 
-1. [CRXでCSSを設](#createcss) 定して、新しいロゴを参照します。
-1. ブラウザー履歴をクリアし、「通信を作成」UIを](#refreshccrui)更新します。[
+1. CRX 上に [CSS をセットアップ](#createcss)し、新しいロゴを参照します。
+1. ブラウザーの履歴を消去し、[通信作成 UI を更新](#refreshccrui)します。
 
 ## 必要なフォルダ構造を作成する {#creatingfolderstructure}
 
@@ -46,36 +46,36 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 何らかのカスタマイズを加える場合は、以下に説明するように、/apps ブランチに並列フォルダ構造を作成します。
 
-/appsブランチ（フォルダー構造）:
+/apps 分岐（フォルダー構造）により：
 
-* システムの更新時にそれらのファイルが消えても問題がないことを確認します。アップグレード、機能パック、ホットフィックスの場合は、/libsブランチが更新され、/libsブランチで変更をホストすると、上書きされます。
+* システムの更新時にそれらのファイルを安全に保ちます。アップグレード、機能パック、ホットフィックスを適用すると、/libs 分岐が更新されます。/libs 分岐に変更内容をホストしていると上書きされてしまいます。
 * これは、現在の system/branch を保護するための機能です。このフォルダは、カスタムファイルのデフォルトの保存場所をそのまま使用した場合に、誤ってかき乱すおそれもあります。
-* AEM がリソースを必要としている場合は、優先度が高くなるようリソースを調整してください。AEMは、最初に/appsブランチを検索し、次に/libsブランチを検索してリソースを検索するように設定されます。 このメカニズムにより、システムではユーザーのオーバーレイ（および、そこに定義されたカスタマイズ内容）を使用します。
+* AEM がリソースを必要としている場合は、優先度が高くなるようリソースを調整してください。AEM では、リソースを検索する場合、最初に /apps 分岐を検索し、次に /libs 分岐を検索するように設定されています。このメカニズムにより、システムはオーバーレイ（および、そこに定義されたカスタマイズ内容）を使用します。
 
-次の手順を実行して、必要なフォルダ構造を /apps ブランチに作成します。
+次の手順を実行して、必要なフォルダー構造を /apps 分岐に作成します。
 
-1. `https://'[server]:[port]'/[ContextPath]/crx/de`に移動し、管理者としてログインします。
-1. apps フォルダーにある defaultApp フォルダーを開き、名前「`css`」のフォルダを作成します。ここでのパスや構造は、ccrui フォルダ内の css フォルダーと類似しています。
+1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
+1. apps フォルダー内に、ccrui フォルダーにある css フォルダーと同様のパスと構造を持つ、`css` というフォルダーを作成します。
 
-   CSSフォルダーの作成手順：
+   css フォルダーの作成手順：
 
-   1. 次のパスにある&#x200B;**css**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
+   1. 次のパスにある **css** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css`
 
       ![ノードをオーバーレイ](assets/1_overlaynode_css.png)
 
-   1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
+   1. 「ノードをオーバーレイ」ダイアログに次の値が表示されていることを確認します。
 
-      **パス：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
+      **パス：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css
 
-      **オーバーレイの場所：** /apps/
+      **オーバーレイの場所：**/apps/
 
-      **ノードタイプを一致させる：** オン
+      **ノードタイプを一致させる：**&#x200B;オン
 
       ![オーバーレイノードのパス](assets/0_1_5ioverlaynodedialog.png)
 
       >[!NOTE]
       >
-      >/libsブランチでは変更を加えないでください。 次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
+      >/libs 分岐は変更しないでください。次の操作を行った場合はこのブランチが変更されるため、各自で加えた変更はすべて失われます。
       >
       >    
       >    
@@ -86,18 +86,16 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
    1. 「**OK**」をクリックします。指定されたパスに、css フォルダが作成されます。
 
+1. apps フォルダー内に、ccrui フォルダーにある imgs フォルダーと同様のパスと構造を持つ、`imgs` というフォルダーを作成します。
 
+   1. 次のパスにある **imgs** フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
+   1. 「ノードをオーバーレイ」ダイアログに次の値が表示されていることを確認します。
 
-1. appsフォルダーに、（ccruiフォルダー内の）imgsフォルダーに類似したパス/構造で`imgs`という名前のフォルダーを作成します。
+      **パス：**/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
 
-   1. 次のパスにある&#x200B;**imgs**&#x200B;フォルダーを右クリックし、「**ノードをオーバーレイ**」を選択します。`/libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs`
-   1. ノードをオーバーレイダイアログに次の値が表示されていることを確認します。
+      **オーバーレイの場所：**/apps/
 
-      **パス：** /libs/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/imgs
-
-      **オーバーレイの場所：** /apps/
-
-      **ノードタイプを一致させる：** オン
+      **ノードタイプを一致させる：**&#x200B;オン
 
    1. 「**OK**」をクリックします。
 
@@ -109,7 +107,7 @@ Correspondence Management を使用すると、ソリューションテンプレ
 
 ## CRX に新しいロゴをアップロードする {#uploadlogo}
 
-CRX にカスタムロゴファイルをアップロードします。ロゴの描画には、標準的なHTML規則が適用されます。サポートされる画像ファイル形式は、AEM Formsにアクセスするために使用しているブラウザーに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
+CRX にカスタムロゴファイルをアップロードします。ロゴの描画には、標準的な HTML 規則が適用されます。サポートしている画像ファイル形式は、AEM Forms へのアクセスに使用しているブラウザーによって異なります。ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
 
 * ロゴ画像のデフォルトの大きさは 48×48 ピクセルです。画像はこのサイズに近いか、または 48×48 ピクセルよりも大きいことを確認してください。
 * ロゴ画像の高さよりが 50 ピクセルを超えている場合、「通信作成用」のユーザーインターフェイスでは、ヘッダの高さである 50 ピクセルに合わせて画像を縮小表示します。画像を縮小表示する際も、「通信作成用」のユーザーインターフェイスでは画像の縦横比が維持されます。
@@ -138,15 +136,15 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
 
    ![jcrcontentproperties](assets/jcrcontentproperties.png)
 
-1. **jcr:data**&#x200B;プロパティをダブルクリックします。
+1. **jcr:data** プロパティをダブルクリックします。
 
    「Edit jcr:data」のダイアログが表示されます。
 
-   newlogo.pngフォルダーをクリックし、 jcr:content (dim option)をダブルクリックして、タイプnt:resourceを設定します。 プロパティが表示されていない場合は、まず、名前が「jcr:content」のプロパティを作成します。
+   次に、newlogo.png フォルダーをクリックし、jcr:content（dim オプション）をダブルクリックし、タイプを nt:resource に設定します。プロパティが表示されていない場合は、まず、名前が「jcr:content」のプロパティを作成します。
 
 1. 「jcr:data の編集」ダイアログで「**参照**」をクリックし、ロゴとして使用する画像ファイルを選択します（ここでは、「CustomLogo.png」）。
 
-   サポートされる画像ファイル形式は、AEM Formsにアクセスするために使用しているブラウザーに応じて異なります。 ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
+   サポートしている画像ファイル形式は、AEM Forms へのアクセスに使用しているブラウザーによって異なります。ただし、JPEG、GIF、および PNG は、すべてのブラウザでサポートされています。ブラウザでサポートされている画像形式の詳細は、ブラウザ固有のドキュメントを参照してください。
 
    ![カスタムロゴファイルのサンプル](assets/geometrixx-outdoors.png)
 
@@ -161,14 +159,14 @@ CRX にカスタムロゴファイルをアップロードします。ロゴの�
 ロゴの描画用スタイルシートを設定する手順は、以下のとおりです。
 
 1. `https://'[server]:[port]'/[contextpath]/crx/de` にアクセスします。必要に応じて、管理者としてログインします。
-1. 次の場所に、 customcss.cssという名前のファイルを作成します（別のファイル名を使用することはできません）。
+1. 次の場所に、customcss.css というファイルを作成します。異なるファイル名は使用できません。
 
    `/apps/fd/cm/ccr/gui/components/admin/clientlibs/ccrui/css/`
 
    customcss.css ファイルの作成手順：
 
    1. 「**css**」フォルダーを右クリックし、「**作成」／「フォルダの作成**」を選択します。
-   1. 「新規ファイル」ダイアログで、CSSの名前を`customcss.css`と指定し（別のファイル名は使用できません）、「**OK**」をクリックします。
+   1. 新規ファイルダイアログボックスで、CSS の名前を「`customcss.css`」として指定し、「**OK**」をクリックします。異なるファイル名は使用できません。
    1. 次のコードを、新しく作成した css ファイルに追加します。コード内の content:url にて、CRXDE の imgs フォルダにアップロードした画像の名前を指定します。
 
       ```css
