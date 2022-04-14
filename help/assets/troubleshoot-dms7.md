@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media - Scene7モードのトラブルシューティング
-description: Dynamic MediaがScene7モードで実行されている場合のトラブルシューティング。
+title: Dynamic Media のトラブルシューティング - Scene7 モード
+description: Dynamic Media を Scene7 モードで実行している場合のトラブルシューティング。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,15 +10,15 @@ discoiquuid: 0d48c031-d3ee-4143-b739-a79ba28fd63a
 docset: aem65
 role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
-feature: トラブルシューティング
+feature: Troubleshooting
 source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
-workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 83%
+workflow-type: ht
+source-wordcount: '1285'
+ht-degree: 100%
 
 ---
 
-# Dynamic Media - Scene7モードのトラブルシューティング{#troubleshooting-dynamic-media-scene-mode}
+# Dynamic Media のトラブルシューティング - Scene7 モード{#troubleshooting-dynamic-media-scene-mode}
 
 以下のドキュメントでは、**dynamicmedia_scene7** 実行モードで実行している Dynamic Media のトラブルシューティングについて説明します。
 
@@ -26,14 +26,14 @@ ht-degree: 83%
 
 以下の手順で、Dynamic Media が適切に設定されていることを確認します。
 
-* 起動コマンドには、実行モード引数`-r dynamicmedia_scene7`が含まれます。
-* Adobe Experience Manager 6.4累積修正パック(CFP)は、Dynamic Media機能パックの&#x200B;*前に*&#x200B;インストールされました。
+* 開始コマンドに `-r dynamicmedia_scene7` 実行モード引数を含めます。
+* 使用可能な Dynamic Media 機能パックの&#x200B;*前に*、最初にすべての Adobe Experience Manager 6.4 累積修正パック（CFP）がインストールされていることを確認します。
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTPサポート用、またはDynamic Media ClassicからDynamic Mediaにアセットを移行する場合に使用します。
+   このオプションの機能パックは、FTP サポートが必要な場合や、Dynamic Media Classic から Dynamic Media にアセットを移行する場合に使用します。
 
 * クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
-* `Dynamic Media Asset Activation (scene7)`レプリケーションエージェントが有効になっていることを確認します。
+* `Dynamic Media Asset Activation (scene7)` レプリケーションエージェントが有効になっていることを確認します。
 
    このレプリケーションエージェントは、「作成者のエージェント」にあります。
 
@@ -62,7 +62,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 * 画像やビデオの移動、コピーまたは削除操作の前に `<object_node>/jcr:content/metadata/dam:scene7ID` の値が存在することを確認します。
 * 画像やビューアプリセットの移動、コピーまたは削除操作の前に `https://<server>/crx/de/index.jsp#/etc/dam/presets/viewer/testpreset/jcr%3Acontent/metadata` の値が存在することを確認します。
-* 上記のメタデータ値がない場合は、移動、コピーまたは削除操作の前にアセットを再アップロードする必要があります。
+* 上記のメタデータ値がない場合、移動、コピーまたは削除処理の前に、アセットを再アップロードする必要があります。
 
 ### バージョン管理 {#version-control}
 
@@ -107,7 +107,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
   <tr>
    <td>セットの編集でアセットを選択した後、<strong>選択</strong>ボタンが有効にならない</td>
    <td><p> </p> <p>6.4 で解決予定の既知の問題です。</p> <p> </p> </td>
-   <td><p>最初にアセットセレクターで別のフォルダーを選択し、再度アセットを選択します。</p> </td>
+   <td><p>アセットセレクターで別のフォルダーを選択してから、アセットの選択に戻ります。</p> </td>
   </tr>
   <tr>
    <td>スライドを切り替えた後、カルーセルホットスポットが移動する</td>
@@ -161,7 +161,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
      <li>ビデオプロファイルをフォルダーに割り当てます。</li>
      <li>エンコーディングプリセットを 2 つ以上含むよう、ビデオプロファイルを編集します。</li>
      <li>ビデオの処理が終わるのを待ちます。</li>
-     <li>ビデオを再読み込みし、 Dynamic Media Encode Videoワークフローが実行されていないことを確認してください。<br /> </li>
+     <li>ビデオを再読み込みする前に、Dynamic Media エンコーディングビデオワークフローが実行されていないことを確認します。<br /> </li>
      <li>ビデオを再度アップロードします。</li>
     </ol> </td>
   </tr>
@@ -169,14 +169,14 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
    <td>ビデオがエンコードされていない</td>
    <td>
     <ul>
-     <li>実行モードが<code>dynamicmedia_scene7</code>であることを確認します。</li>
+     <li>実行モードが <code>dynamicmedia_scene7</code> であることを確認します。</li>
      <li>Dynamic Media クラウドサービスが設定されていることを確認します。</li>
      <li>ビデオプロファイルがアップロードフォルダーに関連付けられていることを確認します。</li>
     </ul> </td>
    <td>
     <ol>
-     <li>Experience Managerインスタンスを <code>-r dynamicmedia_scene7</code></li>
-     <li>「Cloud Services」の下の「Dynamic Media設定」が正しく設定されていることを確認します。</li>
+     <li>次を使用して Experience Manager インスタンスを確認します。 <code>-r dynamicmedia_scene7</code></li>
+     <li>クラウドサービスページで Dynamic Media 設定が正しくセットアップされていることを確認します。</li>
      <li>フォルダーにビデオプロファイルがあることを確認します。そのビデオプロファイルも確認します。</li>
     </ol> </td>
   </tr>
@@ -218,12 +218,12 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
   </tr>
   <tr>
    <td>ビューアプリセットが公開されていない</td>
-   <td><p>次のサンプルマネージャー診断ページに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>計算された値を確認します。正しく動作すると、次のようになります。</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>：Dynamic Media クラウドの設定後、ビューアアセットが同期するまで 10 分ほどかかることがあります。</p> <p>アクティブでないアセットが残る場合は、「<strong>アクティブでないすべてのアセットをリスト</strong>」ボタンを選択して詳細を確認します。</p> </td>
+   <td><p>次のサンプルマネージャー診断ページに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>計算された値を確認します。正しく動作すると、次のように表示されます。</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
+       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>：Dynamic Media クラウドの設定後、ビューアアセットが同期するまで 10 分ほどかかることがあります。</p> <p>アクティブでないアセットが残る場合は、「<strong>アクティブでないアセットをすべて表示</strong>」ボタンのどちらかを選択して詳細を確認してください。</p> </td>
    <td>
     <ol>
      <li>管理ツールのビューアプリセットリストに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>すべてのビューアプリセットを選択し、「<strong>公開</strong>」を選択します。</li>
+     <li>すべてのビューアプリセットを選択したあと、「<strong>公開</strong>」を選択します。</li>
      <li>サンプルマネージャーに戻り、アクティブでないアセット数がゼロになったことを確認します。</li>
     </ol> </td>
   </tr>
@@ -249,14 +249,14 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
       <ul>
        <li><code>&lt;sync-folder&gt;/_CSS/_OOTB</code> を削除します。</li>
       </ul> </li>
-     <li>CRXパッケージマネージャーに移動します。<code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>
+     <li>CRX パッケージマネージャー（<code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>）に移動します。
       <ol>
        <li>リストでビューアパッケージを検索します（<code>cq-dam-scene7-viewers-content</code> で始まります）。</li>
        <li>「<strong>再インストール</strong>」を選択します。</li>
       </ol> </li>
      <li>クラウドサービスページで、Dynamic Media 設定ページに移動した後、Dynamic Media - Scene7 設定の設定ダイアログボックスを開きます。
       <ul>
-       <li>変更を加えないで、「<strong>保存</strong>」を選択します。 このアクションでは、サンプルアセット、ビューアプリセットCSSおよびアートワークを作成および同期するロジックを再度トリガーします。<br />  </li>
+       <li>何も変更せず、「<strong>保存</strong>」をクリックします。これで、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが、再度トリガーされます。<br />  </li>
       </ul> </li>
     </ol> </td>
   </tr>
