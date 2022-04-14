@@ -1,19 +1,19 @@
 ---
 title: AEM Forms の概要
-seo-title: AEM Forms の概要
+seo-title: Introduction to AEM Forms
 description: Adobe Experience Manager Forms を使用することにより、ビジネスユーザーは、魅力的でレスポンシブなアダプティブフォームを Web サイトやモバイルサイトに統合することができます。これは、デジタル登録プロセスを簡素化し、顧客のコンバージョン率を増加させるのに役立ちます。
-seo-description: Adobe Experience Manager Forms を使用することにより、ビジネスユーザーは、魅力的でレスポンシブなアダプティブフォームを Web サイトやモバイルサイトに統合することができます。これは、デジタル登録プロセスを簡素化し、顧客のコンバージョン率を増加させるのに役立ちます。
+seo-description: With Adobe Experience Manager Forms, business users can integrate engaging, responsive, and adaptive forms into web and mobile sites, simplifying the digital enrollment process and increasing customer conversion rates.
 uuid: a6564997-4227-4d5d-b27d-47a55a386238
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: introduction
 discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '926'
+workflow-type: ht
+source-wordcount: '891'
 ht-degree: 100%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 100%
 
 AEM Forms における新機能や改良点に関しては、「[AEM Forms における新機能](../../forms/using/whats-new.md)」を参照してください。
 
-## AEM Forms について  {#about-aem-forms}
+## AEM Forms について {#about-aem-forms}
 
 Adobe Experience Manager（AEM）は、複雑なデジタルフォームの作成、管理、公開、および更新に特化した、使いやすいソリューションです。また、バックエンドプロセス、ビジネスルール、およびデータとの統合も実現されています。
 
-AEM Forms では、通信管理機能、ドキュメントセキュリティ、統合された分析とともに、フォームのオーサリング、管理、公開を組み合わせて、魅力的なエンドツーエンドのエクスペリエンスを作成できます。AEM Forms は、すべての Web チャネルやモバイルチャネルで動作するように設計されており、ビジネスプロセスに効率的に統合することができます。これにより、効率を向上させながらも、文書業務やエラーを削減することができます。
+AEM Forms では、通信管理機能、ドキュメントセキュリティ、統合された分析とともに、フォームのオーサリング、管理、公開を組み合わせて、魅力的なエンドツーエンドのエクスペリエンスを作成します。AEM Forms は、すべての Web チャネルやモバイルチャネルで動作するように設計されており、ビジネスプロセスに効率的に統合することができます。これにより、効率を向上させながらも、文書業務やエラーを削減することができます。
 
 大企業では、一度フォームを作成し、その後はコンテンツ管理システムにコピーして再利用されることも多くあります。フォームの大規模なデータベースを最新状態に維持し、検索可能な状態に保つことは非常に頭の痛い課題となることもあります。AEM はカスタマイズ可能な「フォームポータル」を提供することにより、Web チャネルおよびモバイルチャネルの双方から必要なフォームを見つけ、アクセスできる状態に保ちます。
 
@@ -46,7 +46,7 @@ AEM Forms は、アダプティブフォームだけでなく、XFA フォーム
 * Adobe Document Cloud eSign サービスや Scribble との統合により、機密情報を含むドキュメントへの電子署名に対応
 * 自動化されたフォーム公開機能と、パーソナライズされたコミュニケーションを複数のチャネルを通じてタイムリーに届ける能力
 
-## AEM フォームの種類  {#aem-form-types}
+## AEM フォームの種類 {#aem-form-types}
 
 AEM Forms では、新規および既存のフォームを拡張することで、
 
@@ -100,7 +100,7 @@ AEM Forms では、モバイルアプリケーションとして Forms Workspace
 
 ## パーソナライズされた通信 {#personalized-communication}
 
-効率的なデジタルセルフサービス体験を実現する上で重要な要素は、パーソナライズされた情報をタイムリーにやり取りすること、そしてどのようなデバイスからでも場所を問わずにアクセスできることです。パーソナライズされたタイムリーなコミュニケーションにより、ユーザーのコンバージョン率と満足度の両方を向上させることができます。
+効率的なデジタルセルフサービス体験を実現する上で重要な要素は、パーソナライズされた情報をタイムリーにやり取りすること、そしてどのようなデバイスからでも場所を問わずにアクセスできることです。パーソナライズされたタイムリーな通信により、ユーザーのコンバージョン率と満足度の両方を向上させることができます。
 
 AEM Forms を使用するビジネスユーザーは、ドキュメントテンプレートをカスタマイズし、バックエンドプロセスからの情報を取り入れ、インタラクティブなコンポーネントを組み込むことにより、パーソナライズされた魅力的なユーザーエクスペリエンスを提供することができます。直感的なユーザーインターフェイスにより、技術的なスキルを持たないユーザーでもビジネスルールを開発し、問い合わせに基づいてコミュニケーションを生成するタイミングや、ユーザーが生成した応答を開始するタイミングを決めることができます。
 
