@@ -1,23 +1,23 @@
 ---
 title: 外部 Web ページへのアダプティブフォームの埋め込み
-seo-title: 外部 Web ページへのアダプティブフォームの埋め込み
+seo-title: Embed adaptive form in external web page
 description: 外部 Web ページにアダプティブフォームを埋め込む方法について学びましょう
-seo-description: 外部 HTML Web ページにアダプティブフォームを埋め込む方法について学びましょう
+seo-description: Learn how to embed an adaptive form in an external HTML web page
 uuid: d81032dd-af80-4f4b-a717-ee1b89fd3d3d
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 discoiquuid: d739c6da-3b41-4452-8728-d7cd1a3ae20b
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '992'
-ht-degree: 64%
+workflow-type: ht
+source-wordcount: '970'
+ht-degree: 100%
 
 ---
 
-# 外部 Web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
+# 外部 web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
 
 AEM の外側にホストされた Web ページか [AEM サイトページに、アダプティブフォームをシームレスに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができます。埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページのその他のエレメントから離れることなく、同時にフォームの操作を行うことができます。。
 
@@ -25,17 +25,17 @@ AEM の外側にホストされた Web ページか [AEM サイトページに�
 
 外部 Web サイトにアダプティブフォームを埋め込む前に次の手順を実行します。
 
-* AEM Forms サーバーのパブリッシュインスタンスに埋め込むアダプティブフォームを発行します。
-* Web サイト上で、アダプティブフォームをホストする Web ページを決定するか、新規に作成します。WebページでCDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js)からjQueryファイルを[読み取れるか、jQueryのローカルコピーが埋め込まれていることを確認します。 アダプティブフォームをレンダリングするには、jQueryが必要です。
-* AEMサーバーとWebページが異なるドメインにある場合は、[AEM Formsがクロスドメインサイトに対してアダプティブフォームを提供できるようにする](#cross-site)の節に示す手順を実行します。
+* AEM Forms サーバーのパブリッシュインスタンスに埋め込むアダプティブフォームを公開します。
+* Web サイト上で、アダプティブフォームをホストする Web ページを作成するか、特定してください。その Web ページが [CDN から送信される jQuery ファイルを読み取ることができること](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js)、または web ページに jQuery のローカルコピーが埋め込まれていることを確認してください。jQuery は、アダプティブフォームのレンダリングに必要です。
+* AEM サーバーと web ページが異なるドメイン上に存在する場合、[AEM Forms がクロスドメインサイトに対してアダプティブフォームをサーブできるようにする](#cross-site)節に記載された手順を実行してください。
 
 ## アダプティブフォームの埋め込み {#embed-adaptive-form}
 
-Webページに数行のJavaScriptを挿入することで、アダプティブフォームを埋め込むことができます。 コードの API は AEM サーバーにアダプティブフォームのリソースを求める HTTP リクエストを送信し、指定したフォームコンテナにアダプティブフォームを挿入します。
+Web ページに数行の JavaScript を挿入することで、アダプティブフォームを埋め込むことができます。コードの API は AEM サーバーにアダプティブフォームのリソースを求める HTTP リクエストを送信し、指定したフォームコンテナにアダプティブフォームを挿入します。
 
-アダプティブフォームを埋め込むには：
+アダプティブフォームを埋め込むには、以下のようにします。
 
-1. 次のコードを使用して、Webサイト上にWebページを作成します。
+1. 次のコードを使用して、web サイト上に web ページを作成します。
 
    ```html
    <!doctype html>
@@ -96,12 +96,12 @@ Webページに数行のJavaScriptを挿入することで、アダプティブ�
    </html>
    ```
 
-1. 埋め込まれたコードで：
+1. 埋め込まれたコードで、
 
-   * *options.path*&#x200B;変数の値を、アダプティブフォームのパブリッシュURLのパスに変更します。 AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。拡張機能を含むアダプティブフォームの完全な名前を必ず指定してください。   例えば、上記のコードとアダプティブフォームは同じAEM formsサーバー上にあるので、この例ではアダプティブフォーム/content/forms/af/locbasic.htmlのコンテキストパスを使用します。
-   * *options.dataRef* を URL を渡す属性と置き換えます。dataref変数を使用して、アダプティブフォーム](/help/forms/using/prepopulate-adaptive-form-fields.md)に事前に[入力することができます。
+   * *options.path* 変数の値をアダプティブフォームのパブリッシュ URL のパスに変更します。AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。アダプティブフォームの拡張子を含む完全な名前を必ず指定してください。   例えば、上記のコードはアダプティブフォームと同一の AEM Forms サーバー上に存在するため、この例ではアダプティブフォームのコンテキストパスである /content/forms/af/locbasic.html が使用されています。
+   * *options.dataRef* を URL と一緒に渡す属性に置き換えます。dataRef 変数を使用して、[アダプティブフォームに事前にデータを取り込む](/help/forms/using/prepopulate-adaptive-form-fields.md)ことができます。  
    * *options.themePath* をアダプティブフォームで設定されたテーマ以外のテーマへのパスと置き換えます。また、リクエストの属性を使用してテーマのパスを指定することができます。
-   * CSS_Selector は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、上の例では、 .customafsection cssクラスがCSSセレクターです。
+   * CSS_Selector は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、上の例では、.customafsection CSS クラスが CSS セレクターです。
 
 アダプティブフォームが Web ページに埋め込まれました。埋め込まれたアダプティブフォームで次を確認します。
 
@@ -116,7 +116,7 @@ Webページに数行のJavaScriptを挿入することで、アダプティブ�
 
 アダプティブフォームを埋め込む外部 Web ページは、プライベートネットワークのファイアウォールの中にある AEM サーバーにリクエストを送信します。リクエストを安全に AEM サーバーに向けるようにするには、リバースプロキシサーバーを設定することをお勧めします。
 
-ディスパッチャーなしで Apache 2.4 リバースプロキシサーバーをセットアップする方法について説明します。この例では、`/forms`コンテキストパスでAEMサーバーをホストし、リバースプロキシ用に`/forms`をマッピングします。 これにより、Apacheサーバー上の`/forms`に対する要求がAEMインスタンスに送信されます。 このトポロジは、`/forms`プレフィックスが付いたすべてのリクエストがAEMサーバーにルートされるので、Dispatcherレイヤーのルール数を減らすのに役立ちます。
+ディスパッチャーなしで Apache 2.4 リバースプロキシサーバーをセットアップする方法について説明します。この例では、AEM サーバーを `/forms` コンテキストパスでホストし、リバースプロキシの `/forms` をマッピングします。これで、Apache サーバーの `/forms` へのすべてのリクエストは、AEM インスタンスにダイレクトされます。このトポロジにより、前に `/forms` の付いたすべてのリクエストが AEM サーバー経由になるため、ディスパッチャーレイヤーのルールの数を低減することができます。
 
 1. `httpd.conf` 設定ファイルを開き、次のコードの行をコメント解除します。または、これらのコードの行をファイルに追加することができます。
 
@@ -125,16 +125,16 @@ Webページに数行のJavaScriptを挿入することで、アダプティブ�
    LoadModule proxy_http_module modules/mod_proxy_http.so
    ```
 
-1. 次のコードを`httpd-proxy.conf`設定ファイルに追加して、プロキシルールを設定します。
+1. 次のコードの行を `httpd-proxy.conf` 設定ファイルに追加して、プロキシルールをセットアップします。
 
    ```text
    ProxyPass /forms https://[AEM_Instance]/forms
    ProxyPassReverse /forms https://[AEM_Instance]/forms
    ```
 
-   `[AEM_Instance]`を、ルール内のAEMサーバーパブリッシュURLに置き換えます。
+   `[AEM_Instance]` を、ルールの AEM サーバーパブリッシュ URL で置き換えます。
 
-コンテキストパスにAEMサーバーをマウントしない場合、Apacheレイヤーのプロキシルールは次のようになります。
+コンテキストパスに AEM サーバーをマウントしない場合、Apache レイヤーのプロキシルールは次のようになります。
 
 ```text
 ProxyPass /content https://<AEM_Instance>/content
@@ -151,7 +151,7 @@ ProxyPassReverse /content https://<AEM_Instance>/content
 
 >[!NOTE]
 >
->その他のトポロジを設定する場合は、送信、事前入力およびその他のURLをDispatcherレイヤーの許可リストに追加します。
+>その他のトポロジーをセットアップする場合は、ディスパッチャーレイヤーの送信、事前入力、およびその他の URL を必ず許可リストに登録してください。
 
 ## ベストプラクティス {#best-practices}
 
@@ -159,12 +159,12 @@ Web ページにアダプティブフォームを埋め込む場合、次のベ�
 
 * Web ページの CSS に定義されたスタイルルールが、フォームオブジェクト CSS と衝突しないようにしてください。衝突を避けるため、アダプティブフォームテーマの Web ページ CSS を AEM クライアントライブラリを使用して再利用できます。アダプティブフォームテーマのクライアントライブラリの使用について詳しくは、「[AEM Forms のテーマ](../../forms/using/themes.md)」を参照してください。
 * Web ページのフォームコンテナがウィンドウの幅全体を使用するようにしてください。これにより、モバイルデバイスに設定された CSS ルールが確実に変更なしで動作するようになります。フォームコンテナがウィンドウの幅全体に表示されない場合は、さまざまなモバイルデバイスに適合するようにカスタムの CSS を記述する必要があります。
-* `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` APIを使用して、クライアントでフォームデータのXMLまたはJSON表現を取得します。
-* `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` APIを使用して、HTML DOMからアダプティブフォームをアンロードします。
-* AEMサーバーから応答を送信する際に、access-control-originヘッダーを設定します。
+* `[getData](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API を使用して、クライアントのフォームデータの XML または JSON 表現を取得してください。
+* `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html)` API を使用して、HTML DOM からアダプティブフォームをアンロードします。
+* AEM サーバーから応答を送信するときは、access-control-origin ヘッダーを設定してください。
 
 ## AEM Forms がクロスドメインサイトに対してアダプティブフォームをサーブできるようにする {#cross-site}
 
-1. AEMパブリッシュインスタンスで、AEM Web Console Configuration Manager(`https://'[server]:[port]'/system/console/configMgr`)に移動します。
+1. AEM パブリッシュインスタンスで、AEM Web Console Configuration Manager（`https://'[server]:[port]'/system/console/configMgr`）に移動します。
 1. **Apache Sling Referrer Filter** 構成を探して開きます。
-1. 「許可済みホスト」フィールドで、Web ページが存在するドメインを指定します。これにより、ホストは AEM サーバーに POST リクエストをできるようになります。また、正規表現を使用して、一連の外部アプリケーションドメインを指定することもできます。
+1. 「許可済みホスト」フィールドで、web ページが存在するドメインを指定します。これにより、ホストは AEM サーバーに POST リクエストをできるようになります。また、正規表現を使用して、一連の外部アプリケーションドメインを指定することもできます。
