@@ -1,8 +1,8 @@
 ---
 title: ベストプラクティス
-seo-title: ベストプラクティス
+seo-title: Best Practices
 description: アドビのエンジニアリングチームとコンサルティングチームが管理者のために作成したベストプラクティスです。
-seo-description: アドビのエンジニアリングチームとコンサルティングチームが管理者のために作成したベストプラクティスです。
+seo-description: Find best practices compiled by Adobe engineering and consulting teams to help administrators get up and running.
 uuid: 862d4fcf-ca61-4228-9344-b95a49b59b32
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f6468a0-7721-454f-9334-c449968b8fe7
 exl-id: 576d87c8-cc96-45a0-b3cf-defb440babbb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '524'
+ht-degree: 100%
 
 ---
 
@@ -36,14 +36,14 @@ ht-degree: 91%
 
 ## Assets {#assets}
 
-Dynamic Media機能やDynamic Media Classic統合を含む、Assetsに関するベストプラクティスについては、次のトピックで説明します。
+Dynamic Media 機能や Dynamic Media Classic 統合などの、Assets のベストプラクティスについては、次のトピックで説明されています。
 
 <table>
  <tbody>
   <tr>
-   <td>負荷時のシステムの安定性とパフォーマンスを向上させるための、Assetsの様々な領域でのベストプラクティス</td>
+   <td>負荷時のシステムの安定性とパフォーマンスを向上を実現するための Assets における様々な領域でのベストプラクティス</td>
    <td><a href="/help/assets/best-practices-for-assets.md">Assets のベストプラクティス</a></td>
-   <td>Assetsに関する様々な領域のベストプラクティスガイドへのリンクが含まれています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td>
+   <td>Assets に関する様々な領域でのベストプラクティスガイドへのリンクが記載されています。 これらのガイドを確認すると、エンタープライズアセット管理システムを構築および管理する知識を習得し、そのツールを利用できるようになります。</td>
   </tr>
   <tr>
    <td>コンテンツの整理方法（フォルダー階層）</td>
