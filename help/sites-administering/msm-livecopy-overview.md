@@ -1,19 +1,19 @@
 ---
 title: ライブコピーの概要コンソール
-seo-title: ライブコピーの概要コンソール
+seo-title: Live Copy Overview Console
 description: ライブコピーの概要コンソールの基本について説明します。
-seo-description: ライブコピーの概要コンソールの基本について説明します。
+seo-description: Learn about the basics of the Live Copy Overview Console.
 uuid: 6b1841ec-950e-455b-9b30-b5f5050a67b8
 contentOwner: Alison Heimoz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
-feature: マルチサイトマネージャー
+feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '551'
+workflow-type: ht
+source-wordcount: '534'
 ht-degree: 100%
 
 ---
@@ -51,9 +51,9 @@ ht-degree: 100%
    >先に参照を開いてからブループリントを選択することもできます。
 
 1. 「**ライブコピーの概要**」を選択して、選択したブループリントに関連するすべてのライブコピーの概要を表示および使用します。
-1. 「**閉じる**」を使用して終了し、**サイト**&#x200B;コンソールに戻ります。
+1. 「**閉じる**」を使用して終了し、**Sites** コンソールに戻ります。
 
-### ライブコピーの概要を開く - ブループリントページのプロパティ  {#opening-live-copy-overview-properties-of-a-blueprint-page}
+### ライブコピーの概要を開く - ブループリントページのプロパティ {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
 **ライブコピーの概要**&#x200B;は、ブループリントページのプロパティを表示しているときに開くことができます。
 
@@ -68,9 +68,9 @@ ht-degree: 100%
    >
    >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
 
-1. 「**閉じる**」を使用して終了し、**サイト**&#x200B;コンソールに戻ります。
+1. 「**閉じる**」を使用して終了し、**Sites** コンソールに戻ります。
 
-## ライブコピーの概要の使用  {#using-the-live-copy-overview}
+## ライブコピーの概要の使用 {#using-the-live-copy-overview}
 
 **ライブコピーの概要**&#x200B;を使用して、ライブコピーに対するアクションを実行することもできます。
 
@@ -107,7 +107,7 @@ ht-degree: 100%
 
 * [同期](/help/sites-administering/msm.md#rollout-and-synchronize)
 
-   * ライブコピーを同期して、ソースからライブコピーに変更をプルします。
+   * ライブコピーを同期して、ソースからライブコピーに変更内容をプルします。
 
 * [リセット](/help/sites-administering/msm-livecopy.md#resetting-a-live-copy-page)
 
