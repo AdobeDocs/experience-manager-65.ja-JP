@@ -1,8 +1,8 @@
 ---
 title: 停止した操作および停止したブランチの使用
-seo-title: 停止した操作および停止したブランチの使用
+seo-title: Working with stalled operations and branches
 description: 停止した操作ページおよび停止したブランチページには、停止したプロセスが表示されます。
-seo-description: 停止した操作ページおよび停止したブランチページには、停止したプロセスが表示されます。
+seo-description: The Stalled Operations page and the Stalled Branches page show the processes that have stalled.
 uuid: 5f6202b0-79c2-4c3c-847a-236c0366e60b
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8c2567f3-7220-436a-b9f2-2824a98c1ccc
 exl-id: c96faae0-2b0f-4334-b61c-f13b2d1ec179
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '728'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '707'
+ht-degree: 100%
 
 ---
 
@@ -28,24 +28,24 @@ ht-degree: 89%
 
 停止したアイテムごとに、リストには、以下の情報が表示されます。
 
-**操作名またはブランチ名：** 操作またはブランチの名前。
+**操作名またはブランチ名：**&#x200B;操作またはブランチの名前。
 
-**ステータス：** 停止した項目の場合は常に停止。
+**ステータス：**&#x200B;停止した項目の場合は常に「停止」です。
 
-**エラー：** 問題の簡単な説明。
+**エラー：**&#x200B;問題に関する短い説明。
 
-**プロセスID:** プロセスがインスタンス化される（つまり、ユーザーまたは自動ステップがプロセスを開始する）際に、formsワークフローによって割り当てられる正の整数。この ID を使用して、プロセスインスタンスをライフサイクル全体にわたって追跡できます。
+**プロセス ID：**&#x200B;プロセスがインスタンス化される（つまり、ユーザーまたは自動ステップによってプロセスが開始される）ときに、forms ワークフローによって割り当てられる正の整数。この ID を使用して、プロセスインスタンスをライフサイクル全体にわたって追跡できます。
 
-**プロセス名 — バージョン：** Workbenchで割り当てられたプロセスの名前。
+**プロセス名 - バージョン：** Workbench で割り当てられたプロセスの名前。
 
-**停止日：** 操作またはブランチが停止した日時。
+**停止日：**&#x200B;操作またはブランチが停止した日時。
 
 停止した操作ページまたは停止したブランチページで、次のタスクを実行できます。
 
 * エラーを選択して、その詳細情報を表示します。エラーを選択すると、エラーの詳細ページが表示されます。
 * 停止した操作を終了または再試行するか、停止したブランチを再試行します。
 
-## 停止した操作またはブランチの終了または再試行  {#terminating-or-retrying-stalled-operations-or-branches}
+## 停止した操作またはブランチの終了または再試行 {#terminating-or-retrying-stalled-operations-or-branches}
 
 停止した操作ページでは、表示されているプロセスインスタンスを終了できます。
 
@@ -55,17 +55,17 @@ ht-degree: 89%
 
 操作を再試行すると、操作を再起動する要求が Forms ワークフローに送られます。プロセスの停止を引き起こしたエラーが修正され、再試行要求が正常に行われると、プロセスの実行は停止した時点から再開され、そのステータスが「実行中」に変わります。操作を再起動できない場合、ステータスは「停止」のままとなり、管理者による終了が必要になります。
 
-### 停止した操作の終了  {#terminate-a-stalled-operation}
+### 停止した操作の終了 {#terminate-a-stalled-operation}
 
 1. 管理コンソールで、サービス／forms ワークフロー／停止した操作のエラーをクリックします。
 1. 停止した操作ページで、終了するアイテムを選択し、「終了」をクリックします。
 
-### 停止した操作またはブランチの再試行  {#retry-a-stalled-operation-or-branch}
+### 停止した操作またはブランチの再試行 {#retry-a-stalled-operation-or-branch}
 
 1. 管理コンソールで、サービス／forms ワークフローをクリックし、「停止した操作のエラー」または「停止したブランチのエラー」をクリックします。
 1. 停止した操作ページまたは停止したブランチページで、再試行するアイテムを選択し、「再試行」をクリックします。
 
-## 停止した操作またはブランチのエラーの詳細の表示  {#viewing-error-details-about-stalled-operations-or-branches}
+## 停止した操作またはブランチのエラーの詳細の表示 {#viewing-error-details-about-stalled-operations-or-branches}
 
 停止した操作ページまたは停止したブランチページで、停止したアイテムのリストからエラーを選択すると、エラーの詳細ページが表示され、問題のトラブルシューティングに役立つ、エラーに関する詳細情報が表示されます。
 
@@ -73,7 +73,7 @@ ht-degree: 89%
 
 エラーの詳細ページから、停止した操作の終了または再試行、および停止したブランチの再試行を行うこともできます。
 
-## エスカレーションユーザーが存在しない場合にプロセスが停止しない  {#process-does-not-stall-when-escalation-user-does-not-exist}
+## エスカレーションユーザーが存在しない場合にプロセスが停止しない {#process-does-not-stall-when-escalation-user-does-not-exist}
 
 AEM Forms User サービスの Assign Task 操作が、特定の期間後に別のユーザーにタスクをエスカレーションするように設定されており、Assign Task 操作の終了後、エスカレーションが発生する前にエスカレーションユーザーが削除された場合、エラーが発生します。
 
