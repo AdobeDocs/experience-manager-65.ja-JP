@@ -1,22 +1,22 @@
 ---
-title: Webページでのページトラッカーと埋め込みコードの使用
-description: ページトラッカーコードと埋め込み JavaScript コードを Web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
+title: Web ページでのページトラッカーと埋め込みコードの使用
+description: ページトラッカーコードと埋め込み JavaScript コードを web サイトコードに組み込んで、Adobe Analytics でアセットの使用状況データを収集できるようにする方法について説明します。
 contentOwner: AG
 role: Architect, Admin
-feature: アセットレポート
+feature: Asset Reports
 exl-id: 14d02015-df00-4566-a098-de76eaf42605
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 70%
+workflow-type: ht
+source-wordcount: '176'
+ht-degree: 100%
 
 ---
 
-# Webページでのページトラッカーと埋め込みコードの使用 {#using-page-tracker-and-embed-code-in-web-pages}
+# Web ページでのページトラッカーと埋め込みコードの使用 {#using-page-tracker-and-embed-code-in-web-pages}
 
-ページトラッカーは、Adobe AnalyticsがこれらのWebサイト上の[!DNL Adobe Experience Manager Assets]に関する使用状況データを取り込めるように、サードパーティのWebサイトのコードに組み込むJavaScriptコードです。
+ページトラッカーは、サードパーティの web サイトコードに組み込む JavaScript コードです。このコードを使用して、Adobe Analytics がそれらの web サイトでの [!DNL Adobe Experience Manager Assets] の使用状況データを取得できます。
 
-アセット固有のイベント（クリックなど）を取得するには、サードパーティの Web サイトコードに埋め込みコードも含めます。
+アセット固有のイベント（クリックなど）を取得するには、サードパーティの web サイトコードに埋め込みコードも含めます。
 
 次のサンプルコードは、ページトラッカーコードと埋め込みコードの両方を含む Web ページです。
 
@@ -62,7 +62,7 @@ ht-degree: 70%
 
 ## ページトラッカーコードの追加 {#adding-page-tracker-code}
 
-ページトラッカーコードは Web サイトコードのヘッダーセクションに追加します。次のコードスニペットは、サンプル Web ページに組み込まれたページトラッカーコードです。
+ページトラッカーコードは Web サイトコードのヘッダーセクションに追加します。次のコードスニペットは、サンプル web ページに組み込まれたページトラッカーコードです。
 
 ```xml
  <head>
