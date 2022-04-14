@@ -1,8 +1,8 @@
 ---
 title: AEM Forms アプリケーションへのログイン
-seo-title: AEM Forms アプリケーションへのログイン
+seo-title: Logging in to AEM Forms app
 description: AEM Forms アプリケーションへのログインの手順
-seo-description: AEM Forms アプリケーションへのログインの手順
+seo-description: Steps to log into the AEM Forms app.
 uuid: da8cb0b2-6333-4ead-95f2-fb753149dc5e
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: fb2b7ff6-6b29-425b-a86e-d1f80faab9e0
 docset: aem65
 exl-id: d19cba33-0646-40d4-b4a3-b28d6db4a1f3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '150'
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 93%
 
 AEM Forms アプリケーションを起動するときは、最初にログイン情報と AEM Forms サーバー URL を指定する必要があります。
 
-## アプリケーションを起動するには  {#to-start-the-app}
+## アプリケーションを起動するには {#to-start-the-app}
 
-1. モバイルデバイスでAEM Formsアプリアイコンをタップします。
+1. モバイルデバイス上の AEM Forms アプリケーションのアイコンをタップします。
 1. アプリケーションにログインするには、ユーザー名、パスワード、AEM Forms サーバー URL を入力します。
 
    >[!NOTE]
