@@ -13,9 +13,9 @@ docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
 source-git-commit: 4db9279f2d15f2e08939ba453ae8ddbbc3c3d69f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1883'
-ht-degree: 53%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 53%
 * タグは、` [cq:Tag](#tags-cq-tag-node-type)` タイプのノードとして、[分類のルートノード](#taxonomy-root-node)の下に存在する必要があります。
 
 * タグ付けされたコンテンツノードのノードタイプには、[`cq:Taggable`](#taggable-content-cq-taggable-mixin) mixin が含まれている必要があります。
-* この [タグ ID](#tagid) がコンテンツノードの [ `cq:tags`](#tagged-content-cq-tags-property) プロパティを持ち、型のノードに解決されます。 ` [cq:Tag](#tags-cq-tag-node-type)`
+* [タグ ID](#tagid) がコンテンツノードの [ `cq:tags`](#tagged-content-cq-tags-property) プロパティに追加され、` [cq:Tag](#tags-cq-tag-node-type)` タイプのノードに解決されます。
 
 ## タグ：cq:Tag ノードタイプ  {#tags-cq-tag-node-type}
 
@@ -36,19 +36,19 @@ ht-degree: 53%
 
 タグは一意のタグ ID によって識別されます。
 
-タグには、タイトル、ローカライズされたタイトル、説明など、任意のメタ情報があります。タイトルは、TagID が存在する場合は、TagID ではなく、ユーザーインターフェイスに表示されます。
+タグには、タイトル、ローカライズされたタイトル、説明など、任意のメタ情報があります。ユーザーインターフェイスには、タグ ID ではなくタイトル（存在する場合）が表示されます。
 
 タグ付けフレームワークでは、作成者やサイト訪問者に、特定の事前定義されたタグだけを使用するよう制限を設けることもできます。
 
 ### タグの特徴 {#tag-characteristics}
 
-* ノードタイプは `cq:Tag`
-* ノード名は、 ` [TagID](#tagid)`
-* の ` [TagID](#tagid)` 常にを含む [名前空間](#tag-namespace)
+* ノードタイプは `cq:Tag`
+* ノード名は ` [TagID](#tagid)` のコンポーネント
+* ` [TagID](#tagid)` には常に[名前空間](#tag-namespace)が含まれている
 
-* オプション `jcr:title` プロパティ（UI に表示するタイトル）
+* オプションの `jcr:title` プロパティ（UI に表示されるタイトル）
 
-* オプション `jcr:description` プロパティ
+* `jcr:description` プロパティ（オプション）
 
 * 子ノードが含まれている場合、[コンテナタグ](#container-tags)と呼ばれます。
 * [分類のルートノード](#taxonomy-root-node)と呼ばれる基本パスの下のリポジトリに保存されます。
@@ -57,11 +57,11 @@ ht-degree: 53%
 
 タグ ID は、リポジトリ内のタグノードに解決されるパスを識別します。
 
-通常、タグ ID は名前空間で始まる短縮形のタグ ID です。または、 [分類のルートノード](#taxonomy-root-node).
+通常、タグ ID は名前空間で始まる短縮形のタグ ID ですが、[分類のルートノード](#taxonomy-root-node)から始まる絶対タグ ID にすることもできます。
 
-コンテンツにタグ付けするときに、コンテンツがまだ存在しない場合は、` [cq:tags](#tagged-content-cq-tags-property)` プロパティがコンテンツノードに追加され、タグ ID がこのプロパティの String 配列値に追加されます。
+コンテンツにタグ付けするときに、コンテンツがまだ存在しない場合は、` [cq:tags](#tagged-content-cq-tags-property)` プロパティがコンテンツノードに追加され、タグ ID がこのプロパティの文字列配列値に追加されます。
 
-タグ ID は、[名前空間](#tag-namespace)とそれに続くローカルタグ ID で構成されます。[コンテナタグ](#container-tags)にはサブタグがあり、これは分類における階層順序を表します。サブタグは、任意のローカルタグ ID と同じタグを参照するために使用できます。 例えば、「fruit/apple」や「fruit/banana」などのサブタグを含むコンテナタグであっても、「fruit」を使用したコンテンツのタグ付けは許可されます。
+タグ ID は、[名前空間](#tag-namespace)とそれに続くローカルタグ ID で構成されます。[コンテナタグ](#container-tags)にはサブタグがあり、これは分類における階層順序を表します。サブタグは、任意のローカルタグ ID と同じタグを参照するのに使用できます。 例えば、「fruit」というタグが「fruit/apple」、「fruit/banana」などのサブタグを含むコンテナタグであっても、コンテンツにこのタグを付けることができます。
 
 ### 分類のルートノード {#taxonomy-root-node}
 
@@ -71,11 +71,11 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 
 ### タグの名前空間 {#tag-namespace}
 
-名前空間を使用するとグループ化を行うことができます。最も一般的な使用例は、(Web) サイトごと（公開、内部、ポータルなど）または大規模なアプリケーションごと（WCM、Assets、コミュニティなど）に名前空間を設定しますが、他の様々なニーズに対しては名前空間を使用できます。 名前空間は、現在のコンテンツに適用できるタグのサブセット（特定の名前空間のタグなど）のみを表示するために、ユーザーインターフェイスで使用されます。
+名前空間を使用するとグループ化を行うことができます。（Web）サイトごと（例：公開、社内またはポータル）や大規模なアプリケーションごと（例：WCM、アセット、Communities）に名前空間を設けることが最も典型的なユースケースですが、その他の様々なニーズに名前空間を使用できます。 名前空間は、現在のコンテンツに適用されるタグのサブセット（つまり特定の名前空間のタグ）のみを表示するためにユーザーインターフェイスで使用されます。
 
-タグの名前空間は、分類サブツリーの最初のレベルです。これは、[分類のルートノード](#taxonomy-root-node)の直下のノードです。の直下のノードです。名前空間は `cq:Tag` タイプのノードで、その親は `cq:Tag` ノードタイプではありません。
+タグの名前空間は、分類サブツリーの最初のレベルです。これは、[分類のルートノード](#taxonomy-root-node)の直下のノードです。名前空間は `cq:Tag` タイプのノードで、その親は `cq:Tag` ノードタイプではありません。
 
-すべてのタグには名前空間があります。名前空間が指定されていない場合、タグはデフォルトの名前空間 (TagID) に割り当てられます `default` ( タイトルは `Standard Tags),`は `/content/cq:tags/default.`
+すべてのタグには名前空間があります。名前空間を指定しない場合、タグはデフォルトの名前空間であるタグ ID `default` に割り当てられます（タイトルは`Standard Tags),`つまり`/content/cq:tags/default.`
 
 ### コンテナタグ {#container-tags}
 
@@ -87,9 +87,9 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 
 タグ ID にコロン「:」が含まれている場合、そのコロンによってタグやサブ分類から名前空間が区別され、その後、タグやサブ分類は通常のスラッシュ「/」で区別されます。タグ ID にコロンが含まれていない場合は、デフォルトの名前空間が暗示されます。
 
-タグの標準の場所は/content/cq:tags の下のみです。
+タグの標準の場所は /content/cq:tags の下のみです。
 
-存在しないパスまたは cq:Tag ノードを指すパスを参照するタグは、無効と見なされ、無視されます。
+存在しないパスまたは cq:Tag ノードを示していないパスを参照するタグは、無効と見なされて無視されます。
 
 次の表に、タグ ID の例とその要素、リポジトリでそのタグ ID がどのように絶対パスに解決されるかを示します。
 
@@ -103,30 +103,30 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
    <td><strong>ローカル ID</strong></td>
    <td><strong>コンテナタグ</strong></td>
    <td><strong>リーフタグ</strong></td>
-   <td><strong>リポジトリ<br /> 絶対タグパス</strong></td>
+   <td><strong>リポジトリ <br /> 絶対タグパス</strong></td>
   </tr>
   <tr>
    <td>dam:fruit/apple/braeburn</td>
-   <td>dam</td>
+   <td>DAM</td>
    <td>fruit/apple/braeburn</td>
-   <td>果物，リンゴ</td>
-   <td>脳炎</td>
+   <td>fruit、apple</td>
+   <td>braeburn</td>
    <td>/content/cq:tags/dam/fruit/apple/braeburn</td>
   </tr>
   <tr>
-   <td>色/赤</td>
+   <td>color/red</td>
    <td>default</td>
-   <td>色/赤</td>
-   <td>カラー</td>
-   <td>赤</td>
+   <td>color/red</td>
+   <td>color</td>
+   <td>red</td>
    <td>/content/cq:tags/default/color/red</td>
   </tr>
   <tr>
-   <td>空</td>
-   <td>デフォルト</td>
-   <td>空</td>
+   <td>sky</td>
+   <td>default</td>
+   <td>sky</td>
    <td>（なし）</td>
-   <td>空</td>
+   <td>sky</td>
    <td>/content/cq:tags/default/sky</td>
   </tr>
   <tr>
@@ -139,10 +139,10 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
   </tr>
   <tr>
    <td>/content/cq:tags/category/car</td>
-   <td>カテゴリ</td>
-   <td>車</td>
-   <td>車</td>
-   <td>車</td>
+   <td>category</td>
+   <td>car</td>
+   <td>car</td>
+   <td>car</td>
    <td>/content/cq:tags/category/car</td>
   </tr>
  </tbody>
@@ -150,7 +150,7 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 
 ### タグタイトルのローカリゼーション {#localization-of-tag-title}
 
-タグにオプションのタイトル文字列 ( `jcr:title`を参照 ) プロパティを追加することで、表示するタイトルをローカライズすることができます。 `jcr:title.<locale>`.
+タグにオプションのタイトル文字列（`jcr:title`）が含まれている場合は、プロパティ `jcr:title.<locale>` を追加することにより、表示するタイトルをローカライズすることができます。
 
 詳しくは、以下を参照してください。
 
@@ -159,7 +159,7 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 
 ### アクセス制御 {#access-control}
 
-タグは、リポジトリ内で[分類のルートノード](#taxonomy-root-node)の下にノードとして存在します。作成者やサイト訪問者が特定の名前空間でタグを作成するのを許可または拒否するには、リポジトリで適切な ACL を設定します。
+タグは、リポジトリ内で[分類のルートノード](#taxonomy-root-node)の下にノードとして存在します。作成者やサイト訪問者に対し、特定の名前空間内でのタグの作成を許可または禁止するには、リポジトリに適切な ACL を設定してください。
 
 また、特定のタグまたは名前空間に対する読み取り権限を拒否することで、特定のコンテンツへのタグの適用を制御できます。
 
@@ -168,7 +168,7 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 * すべての名前空間への書き込みアクセス（`/content/cq:tags` 下への add／modify）を`tag-administrators` グループ／役割に許可する。このグループは、追加設定なしで使用できる AEM に付属しています。
 
 * 読み取り可能にする必要があるすべての名前空間への読み取りアクセスをユーザー／作成者に許可する。
-* ユーザー/作成者が、タグをユーザー/作成者が自由に定義できる名前空間への書き込みアクセスを許可する (add_node の下の `/content/cq:tags/some_namespace`)
+* ユーザー／作成者がタグを自由に定義できる名前空間への書き込みアクセス（`/content/cq:tags/some_namespace` の下の add_node）をユーザー／作成者に許可する
 
 ## タグ付け可能なコンテンツ：cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
@@ -180,16 +180,16 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 >
 >集約されたコンテンツアイテムの最上位ノード（またはその jcr:content ノード）では、タグの有効化だけをおこなうことをお勧めします。以下に例を示します。
 >
->* ページ ( `cq:Page`) で、 `jcr:content`ノードのタイプは `cq:PageContent` これには `cq:Taggable` mixin.
+>* `jcr:content` ノードのタイプが `cq:PageContent` であるページ（`cq:Page`）。`cq:Taggable` Mixin が含まれています。
 >
->* アセット ( `cq:Asset`) で、 `jcr:content/metadata` ノードは常に `cq:Taggable` mixin.
+>* `jcr:content/metadata` ノードに常に `cq:Taggable` Mixin を持つアセット（`cq:Asset`）。
 
 >
 
 
 ### ノードタイプの表記（CND） {#node-type-notation-cnd}
 
-ノードタイプの定義は、リポジトリー内に CND ファイルとして存在します。CND 表記は JCR ドキュメントの一部として定義されます [ここ](https://jackrabbit.apache.org/node-type-notation.html).
+ノードタイプの定義は、リポジトリー内に CND ファイルとして存在します。CND 表記は、[こちら](https://jackrabbit.apache.org/node-type-notation.html)の JCR ドキュメントの一部として定義されています。
 
 AEM に含まれるノードタイプの基本的な定義は、次のようになります。
 
@@ -220,38 +220,41 @@ AEM に含まれるノードタイプの基本的な定義は、次のように�
 
 次に、[タグ付けコンソール](/help/sites-administering/tags.md)を使用してタグの移動または統合を実行した場合のリポジトリ内での影響について説明します。
 
-* タグ A がの下のタグ B に移動または結合されたとき `/content/cq:tags`:
+* タグ A を `/content/cq:tags` の下のタグ B に移動または統合した場合：
 
-   * タグ A は削除されず、 `cq:movedTo` プロパティ。
-   * タグ B が作成され（移動の場合）、 `cq:backlinks` プロパティ。
+   * タグ A は削除されず、`cq:movedTo` プロパティを取得します。
+   * タグ B が作成され（移動の場合）、`cq:backlinks` プロパティを取得します。
 
-* `cq:movedTo` がタグ B を指しています。このプロパティは、タグ A がタグ B に移動または結合されたことを意味します。タグ B を移動すると、それに応じてこのプロパティが更新されます。 タグ A は非表示になり、タグ A を示すコンテンツノード内のタグ ID を解決するリポジトリに保持されるだけになります。タグガベージコレクターは、タグ A のように、コンテンツノードで指定されなくなったタグを削除します。の特別な値 `cq:movedTo` プロパティは `nirvana`:タグが削除された場合に適用されますが、リポジトリからは削除できません。これは、 `cq:movedTo` それは守るべきだ
-
-   >[!NOTE]
-   >
-   >`cq:movedTo` プロパティは、次のいずれかの条件を満たす場合にのみ、移動または結合されたタグに追加されます。
-   > 1. タグがコンテンツ（参照を含む）で使用されている OR
-   > 1. タグには、既に移動された子が含まれています。
-
-
-* `cq:backlinks` は他の方向への参照を保持します。つまり、タグ B に移動または結合されたすべてのタグのリストを保持します。これは、主に保持するために必要です `cq:movedTo`タグ B が移動、結合、削除されたとき、またはタグ B がアクティブになったときに、それまでのプロパティ。この場合、すべての逆リンクタグもアクティブにする必要があります。
+* `cq:movedTo` はタグ B を指します。
+このプロパティは、タグ A がタグ B に移動または統合されたことを示します。タグ B を移動すると、このプロパティはそれに応じて更新されます。タグ A は非表示になり、タグ A を示すコンテンツノード内のタグ ID を解決するリポジトリに保持されるだけになります。タグガベージコレクターは、タグ A のように、コンテンツノードで指定されなくなったタグを削除します。
+`cq:movedTo` プロパティの特殊な値に `nirvana` があります。この値は、タグが削除されたにもかかわらず、保持する必要のある `cq:movedTo` が含まれるサブタブが存在することが原因でそのタグをリポジトリから削除できない場合に適用されます。
 
    >[!NOTE]
    >
-   >`cq:backlinks` プロパティは、次のいずれかの条件を満たす場合にのみ、移動または結合されたタグに追加されます。
+   >`cq:movedTo` プロパティは、次のいずれかの条件を満たす場合にのみ、移動または統合されたタグに追加されます。
+   > 1. タグがコンテンツで使用されている（参照があることを意味します）または
+   > 1. タグが、既に移動した子を持っています。
+
+
+* `cq:backlinks` は他の方向への参照を保持します。つまり、タグ B に移動または統合されたすべてのタグのリストを保持します。これは主に、タグ B が移動、統合、削除された場合や、タグ B がアクティブになった場合に、`cq:movedTo` プロパティを最新の状態で保持するために必要です。この場合、すべてのバックリンクタグもアクティブにする必要があります。
+
+   >[!NOTE]
    >
-   > 1. タグがコンテンツで使用されている（参照が含まれている）か、>
-   > 1. タグには、既に移動された子が含まれています。
+   >`cq:backlinks` プロパティは、次のいずれかの条件を満たす場合にのみ、移動または統合されたタグに追加されます。
+   >
+   > 1. タグがコンテンツで使用されている（参照があることを意味します）または >
+   > 1. タグが、既に移動した子を持っています。
 
 
 * コンテンツノードの `cq:tags` プロパティを読み取ると、以下のように解決されます。
 
    1. `/content/cq:tags` 下で一致するものが見つからない場合、タグは返されません。
-   1. タグに `cq:movedTo` プロパティが設定されている場合は、参照先のタグ ID が使用されます。これは、その次のタグに `cq:movedTo` プロパティがある限り繰り返されます。
+   1. タグに `cq:movedTo` プロパティが設定されている場合は、参照先のタグ ID が使用されます。
+これは、その次のタグに `cq:movedTo` プロパティがある限り繰り返されます。
 
    1. 次のタグに `cq:movedTo` プロパティがない場合は、そのタグが読み取られます。
 
-* タグが移動またはマージされたときにその変更を発行するには、`cq:Tag` ノードとそのすべてのバックリンクを複製する必要があります。この処理は、タグ管理コンソールでタグがアクティベートされたときに自動的に実行されます。
+* タグが移動または統合されたときにその変更を発行するには、`cq:Tag` ノードとそのすべてのバックリンクを複製する必要があります。この処理は、タグ管理コンソールでタグがアクティベートされたときに自動的に実行されます。
 
 * 後でページの `cq:tags` プロパティに対して更新がおこなわれると、「以前の」参照が自動的にクリーンアップされます。移動したタグを API で解決すると移動先のタグが戻され、移動先のタグ ID が提供されることから、この処理がトリガーされます。
 
@@ -261,23 +264,23 @@ AEM に含まれるノードタイプの基本的な定義は、次のように�
 
 ## タグの移行 {#tags-migration}
 
-Experience Manager6.4 以降のタグは、 `/content/cq:tags`は、以前にに保存されていました。 `/etc/tags`. ただし、Adobe Experience Managerが以前のバージョンからアップグレードされた場合、タグは古い場所に引き続き存在します `/etc/tags`. アップグレードされたシステムでは、タグを以下に移行する必要があります。 `/content/cq:tags`.
+Experience Manager 6.4 以降のタグは `/content/cq:tags` に格納されますが、以前は `/etc/tags` に格納されていました。ただし、Adobe Experience Manager が以前のバージョンからアップグレードされたシナリオでは、タグは古い場所 `/etc/tags` に引き続き存在します。アップグレードされたシステムでは、タグを `/content/cq:tags` の下に移行する必要があります。
 
 >[!NOTE]
 >
->タグのページプロパティページでは、タグ ID(`geometrixx-outdoors:activity/biking`) の代わりに、タグの基本パス ( 例えば、 `/etc/tags/geometrixx-outdoors/activity/biking`) をクリックします。
+>タグページのページプロパティでは、タグのベースパス（例えば `/etc/tags/geometrixx-outdoors/activity/biking`）をハードコーディングする代わりに、タグ ID（`geometrixx-outdoors:activity/biking`）を使用することをお勧めします。
 >
->タグをリストするには、 `com.day.cq.tagging.servlets.TagListServlet` を使用できます。
+>タグを一覧表示するには、`com.day.cq.tagging.servlets.TagListServlet` を使用できます。
 
 >[!NOTE]
 >
 >タグマネージャー API をリソースとして使用することをお勧めします。
 
-### アップグレードされたAEMインスタンスが TagManager API をサポートしている場合 {#upgraded-instance-support-tagmanager-api}
+### アップグレードされた AEM インスタンスが TagManager API をサポートしている場合 {#upgraded-instance-support-tagmanager-api}
 
-1. コンポーネントの開始時に、TagManager API は、コンポーネントがアップグレードされたAEMインスタンスであるかどうかを検出します。 アップグレードされたシステムでは、タグは次の場所に保存されます。 `/etc/tags`.
+1. コンポーネントの開始時に、TagManager API はアップグレードされた AEM インスタンスであるかどうかを検出します。アップグレードされたシステムでは、タグは `/etc/tags` 下に格納されます。
 
-1. その後、TagManager API は下位互換性モードで実行されます。つまり、API は `/etc/tags` をベースパスとして使用します。 そうでない場合は、新しい場所が使用されます `/content/cq:tags`.
+1. その後、TagManager API は後方互換モードで動作します。つまり、API はベースパスとして `/etc/tags` を使用します。そうでない場合は、新しい場所 `/content/cq:tags` を使用します。
 
 1. タグの場所を更新します。
 
@@ -333,16 +336,16 @@ session.save();
 println "---------------------------------Success-------------------------------------"
 ```
 
-スクリプトは、 `/etc/tags` ～の価値で `cq:movedTo/cq:backLinks` プロパティ。 その後、取得された結果セットを反復し、 `cq:movedTo` および `cq:backlinks` プロパティ値 `/content/cq:tags` パス ( `/etc/tags` が値で検出されました )。
+スクリプトは、`cq:movedTo/cq:backLinks` プロパティの値に `/etc/tags` が含まれているタグをすべて取得します。その後、取得した結果セットを反復し、 `cq:movedTo` および `cq:backlinks` プロパティ値を `/content/cq:tags` パスに解決します（値に `/etc/tags` が検出された場合 ）。
 
-### アップグレードされたAEMインスタンスがクラシック UI で動作する場合 {#upgraded-instance-runs-classic-ui}
+### アップグレードされた AEM インスタンスがクラシック UI で動作する場合 {#upgraded-instance-runs-classic-ui}
 
 >[!NOTE]
 >
->クラシック UI は、ダウンタイムなしに準拠しておらず、新しいタグのベースパスをサポートしていません。 クラシック UI を使用する場合は、 `/etc/tags` を作成し、その後に `cq-tagging` コンポーネントを再起動します。
+>クラシック UI は、ダウンタイムなしに準拠しておらず、新しいタグのベースパスをサポートしていません。クラシック UI を使用する場合は、`/etc/tags` を作成し、その後に `cq-tagging` コンポーネントを再起動する必要があります。
 
-TagManager API でサポートされ、クラシック UI で実行されているアップグレード済みAEMインスタンスの場合：
+TagManager API でサポートされ、クラシック UI で実行されているアップグレードされた AEM インスタンスの場合：
 
-1. 古いタグの基本パスへの参照が 1 回 `/etc/tags` は、tagId または新しいタグの場所を使用して置き換えられます。 `/content/cq:tags`、新しい場所にタグを移行できます `/content/cq:tags` CRX の後にコンポーネントを再起動します。
+1. 古いタグのベースパス `/etc/tags` への参照が、タグ ID または新しいタグの場所 `/content/cq:tags` を使用して置き換えられると、CRX で新しい場所 `/content/cq:tags` にタグを移行し、その後にコンポーネントを再起動できます。
 
 1. 新しい場所にタグを移行した後、上記のスクリプトを実行します。
