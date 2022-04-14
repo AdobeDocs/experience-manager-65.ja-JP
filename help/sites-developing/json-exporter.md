@@ -1,8 +1,8 @@
 ---
 title: コンテンツサービス用の JSON エクスポーター
-seo-title: コンテンツサービス用の JSON エクスポーター
+seo-title: JSON Exporter for Content Services
 description: AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。
-seo-description: AEM コンテンツサービスは、Web ページだけに焦点を置かずに AEM のコンテンツの記述と配信を一般化するように設計されています。AEM コンテンツサービスにより、あらゆるクライアントで使用できる標準化された方法で、従来の AEM Web ページとは異なるチャネルにコンテンツを配信できます。
+seo-description: AEM Content Services are designed to generalize the description and delivery of content in/from AEM beyond a focus on web pages. They provide the delivery of content to channels that are not traditional AEM web pages, using standardized methods that can be consumed by any client.
 uuid: be6457b1-fa9c-4f3b-b219-01a4afc239e7
 contentOwner: User
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 4c7e33ea-f2d3-4d69-b676-aeb50c610d70
 exl-id: 647395c0-f392-427d-a998-e9ddf722b9f9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '443'
+ht-degree: 100%
 
 ---
 
@@ -27,11 +27,11 @@ AEM コンテンツサービスにより、あらゆるクライアントで使�
 * ネイティブモバイルアプリケーション
 * AEM の外部の他のチャネルおよびタッチポイント
 
-構造化コンテンツを使用するコンテンツフラグメントでは、JSON エクスポーターを使用して、任意の AEM ページのコンテンツを JSON データモデル形式で配信することで、コンテンツサービスを提供できます。その後、コンテンツを独自のアプリケーションで使用することができます。
+構造化コンテンツを使用するコンテンツフラグメントでは、JSON エクスポーターを使用して、任意の AEM ページのコンテンツを JSON データモデル形式で配信することで、コンテンツサービスを提供できます。その後、独自のアプリケーションでコンテンツを使用できるようになります。
 
 >[!NOTE]
 >
->ここで説明する機能は、コアコンポーネント](https://docs.adobe.com/content/docs/en/core-components/v1.html)の[リリース1.1.0以降のすべてのコアコンポーネントで使用できます。
+>ここで説明する機能は、[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/?lang=ja) 以降のすべてのコンポーネントで使用できます。
 
 ## JSON エクスポーターとコンテンツフラグメントコアコンポーネント {#json-exporter-with-content-fragment-core-components}
 
@@ -91,16 +91,16 @@ AEM 内では、セレクター `model` と `.json` 拡張機能を使用して�
 
 * AEM と JSON：
 
-   * [JSON 形式のページ情報の取得](/help/sites-developing/pageinfo.md)
+   * [JSON 形式でページ情報を取得](/help/sites-developing/pageinfo.md)
 
 ## 関連ドキュメント {#related-documentation}
 
 詳しくは、以下を参照してください。
 
-* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://experienceleague.adobe.com/docs/experience-manager-64/assets/home.html?lang=ja)
 
 * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
-* [コンポーネントの JSON 書き出しの有効化](/help/sites-developing/json-exporter-components.md)
+* [コンポーネントの JSON エクスポートを有効化](/help/sites-developing/json-exporter-components.md)
 
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)
