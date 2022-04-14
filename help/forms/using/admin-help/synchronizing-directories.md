@@ -1,8 +1,8 @@
 ---
 title: ディレクトリの同期
-seo-title: ディレクトリの同期
+seo-title: Synchronizing directories
 description: 手動またはスケジュール設定による同期を使用して User Management データベースをソースディレクトリサーバーに対する変更と同期する方法について説明します。
-seo-description: 手動またはスケジュール設定による同期を使用して User Management データベースをソースディレクトリサーバーに対する変更と同期する方法について説明します。
+seo-description: Learn how to synchronize the User Management database with changes to the source directory servers using manual or scheduled synchronization.
 uuid: 71cbc04d-6172-49b7-a490-ff3233c1b2bb
 contentOwner: admin
 content-type: reference
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7ec0698a-9e6e-48d4-bba2-5a6eee313900
 exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 97%
+source-git-commit: 2a2f8538b6554540b546f4d345c0b3c0d3e706f3
+workflow-type: ht
+source-wordcount: '1000'
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。Content Services（非推奨）の設定について詳しくは、『[Content Services の管理](https://help.adobe.com/en_US/livecycle/9.0/admin_contentservices.pdf)』を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html?lang=ja)を参照してください。
 
-## 差分ディレクトリ同期の有効化  {#enable-delta-directory-synchronization}
+## 差分ディレクトリ同期の有効化 {#enable-delta-directory-synchronization}
 
 差分ディレクトリ同期によってディレクトリ同期の効率が向上します。差分ディレクトリ同期を有効にすると、User Management では最後の同期以降に追加または更新されたユーザーおよびグループのみが同期されます。
 
@@ -55,23 +55,23 @@ ht-degree: 97%
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「Delta の同期」の下にあるチェックボックスを選択し、「保存」をクリックします。
-1. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページの「タイムスタンプを変更」設定に、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
+1. 差分ディレクトリ同期機能を使用するエンタープライズドメインごとに、ディレクトリ設定を編集します。ユーザー設定ページとグループ設定ページで、「タイムスタンプを変更」設定を見つけ、値として `modify TimeStamp` を入力します。エンタープライズドメインの編集について詳しくは、[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照してください。
 
-## 同期中の詳細なログの有効化または無効化  {#enable-or-disable-detailed-logging-during-synchronization}
+## 同期中の詳細なログの有効化または無効化 {#enable-or-disable-detailed-logging-during-synchronization}
 
 デフォルトで、User Management では、同期処理中に詳細な統計情報がログに記録されます。
 
 1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「同期統計ログ」の指定にあるチェックボックスの選択を解除して詳細なログを無効にするか、選択してログを有効にしてから、「保存」をクリックします。
 
-## ディレクトリ同期の再試行オプションの設定  {#configure-the-directory-synchronization-retry-option}
+## ディレクトリ同期の再試行オプションの設定 {#configure-the-directory-synchronization-retry-option}
 
 User Management を設定して、失敗したディレクトリ同期処理を定期的にチェックすることができます。この設定にすると、失敗した同期の完了が User Management で試行されます。
 
 1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
 1. 「同期完了の Cron 形式」に、失敗した同期を User Management で再試行する間隔を表す Cron 形式を入力します。Cron 形式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます
 
-   デフォルトは0 0/13 &amp;ast；です。? &amp;ast;：チェックは13分ごとに実行されます。
+   デフォルトは 0 0/13 &amp;ast; ?&amp;ast;、この設定ではチェックが 13 分ごとに実行されます。
 
 ## 手動によるディレクトリの同期 {#manually-synchronize-directories}
 
@@ -81,7 +81,7 @@ User Management を設定して、失敗したディレクトリ同期処理を�
 
    複数のドメインを選択した場合は、すべてのドメインに対してドメイン同期を同時に実行できます。一方、ドメインを個別に選択した場合、一度に実行できるドメイン同期は 1 つだけです。
 
-## ディレクトリの同期スケジュールの設定  {#schedule-directory-synchronization}
+## ディレクトリの同期スケジュールの設定 {#schedule-directory-synchronization}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 同期をスケジュールするには：
@@ -95,7 +95,7 @@ Cron 形式の使用方法は、Quartz オープンソースジョブスケジ�
 * （オプション）ユーザー情報およびグループ情報を Content Services（非推奨）に挿入するには、「このオプションを選択すると、ユーザーとグループが、登録済みの外部プリンシパルストレージプロバイダーに挿入されます」オプションを選択します。このオプションは、ユーザーとグループページから新しいユーザーとグループを追加する場合にも適用されます。
 * 「保存」をクリックします。
 
-## 進行中のディレクトリ同期すべての停止  {#stop-all-directory-synchronizations-currently-in-progress}
+## 進行中のディレクトリ同期すべての停止 {#stop-all-directory-synchronizations-currently-in-progress}
 
 1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
 1. 「中止」をクリックします。ディレクトリ同期が進行中の場合にのみ、このボタンは表示されます。
