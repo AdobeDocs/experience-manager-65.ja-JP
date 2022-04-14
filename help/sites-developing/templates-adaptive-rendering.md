@@ -1,8 +1,8 @@
 ---
 title: アダプティブテンプレートレンダリング
-seo-title: アダプティブテンプレートレンダリング
+seo-title: Adaptive Template Rendering
 description: アダプティブテンプレートレンダリング
-seo-description: 'null'
+seo-description: null
 uuid: 97226ae1-e42a-40ae-a5e0-886cd77559d8
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f5cb0e98-0d6e-4f14-9b94-df1a9d8cbe5b
 exl-id: 58cac3b1-b7cd-44b2-b89b-f5ee8811c198
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 83%
+workflow-type: ht
+source-wordcount: '486'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 83%
 
 ## 概要 {#overview}
 
-テンプレートは一般にレスポンシブグリッドを中心に構築されます。これらのテンプレートをベースに作成されたページは完全にレスポンシブとなり、クライアントデバイスのビューポートに合わせて自動的に調整されます。作成者は、ページエディターのエミュレーターツールバーを使用して、特定のデバイスに対してレイアウトをターゲット設定できます。
+テンプレートは一般にレスポンシブグリッドを中心に構築されます。これらのテンプレートをベースに作成されたページは完全にレスポンシブとなり、クライアントデバイスのビューポートに合わせて自動的に調整されます。作成者は、ページエディターのエミュレーターツールバーを使用して、レイアウトを特定のデバイスに設定できます。
 
 また、アダプティブレンダリングに対応するようテンプレートを設定することもできます。デバイスグループが正しく設定されている場合、エミュレーターモードでデバイスを選択すると、URL に別のセレクターを使用してページがレンダリングされます。セレクターを使用すると、特定のページレンダリングを、URL を使用して直接呼び出すことができます。
 
@@ -44,7 +44,7 @@ ht-degree: 83%
 
 この例では、We.Retail 内に&#x200B;**エクスペリエンスページ**&#x200B;テンプレートの一部としてアダプティブレンダリングセレクターが含まれるように、既存のデバイスグループである&#x200B;**スマートフォン**&#x200B;を設定します。
 
-1. `http://localhost:4502/miscadmin#/etc/mobile/groups`で、アダプティブセレクターが必要なデバイスグループを編集します。
+1. `http://localhost:4502/miscadmin#/etc/mobile/groups` で、アダプティブセレクターを必要とするデバイスグループを編集します。
 
    「**エミュレーターを無効にする**」オプションを設定して保存します。
 
@@ -64,11 +64,11 @@ ht-degree: 83%
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. CRXDE Liteを使用して、サイトの構造上の複数値文字列プロパティ`cq:deviceGroups`にデバイスグループを追加し、サイトでデバイスグループを使用できるようにします。
+1. CRXDE Lite を使用し、サイトの構造で複数値文字列プロパティ `cq:deviceGroups` にデバイスグループを追加します。これにより、サイトでデバイスグループを使用できるようになります。
 
    `/content/<your-site>/jcr:content`
 
-   例えば、**スマートフォン**&#x200B;デバイスグループを使用できるようにする場合は、次のようになります。
+   例えば、**スマートフォン**&#x200B;デバイスグループを使用できるようにする場合は、以下のようになります。
 
    `/content/we-retail/jcr:content`
 
@@ -76,7 +76,7 @@ ht-degree: 83%
 
 これで、ページエディターで[エミュレーター](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints)を使用する際（[レイアウトを変更する](/help/sites-authoring/responsive-layout.md)場合など）、設定済みのデバイスグループのデバイスを選択すると、URL の一部としてセレクターを持つページがレンダリングされるようになります。
 
-この例では、**エクスペリエンスページ**&#x200B;テンプレートに基づいてページを編集し、エミュレーターでiPhone 4を選択すると、`arctic-surfing-in-lofoten.html`ではなく`arctic-surfing-in-lofoten.smart.html`としてセレクターを含むページがレンダリングされます
+この例では、**エクスペリエンスページ**&#x200B;テンプレートをベースとするページを編集するときに、エミュレーターで iPhone 4 を選択すると、ページにセレクターが含められ、`arctic-surfing-in-lofoten.html` の代わりに `arctic-surfing-in-lofoten.smart.html` としてレンダリングされます。
 
 このセレクターを使用してページを直接呼び出すこともできます。
 
