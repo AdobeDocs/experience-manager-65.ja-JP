@@ -1,19 +1,19 @@
 ---
 title: アクセス可能な複雑なテーブルを HTML5 フォームで作成する
-seo-title: アクセス可能な複雑なテーブルを HTML5 フォームで作成する
+seo-title: Create accessible complex tables in HTML5 forms
 description: アクセス可能なテーブルを HTML5 フォームで作成する方法について説明します。
-seo-description: アクセス可能なテーブルを HTML5 フォームで作成する方法について説明します。
+seo-description: Learn how to create accessible tables in HTML5 forms.
 uuid: e52562d2-4dc3-4359-9dbb-c18614921808
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: 3504afe1-abf5-4fbf-a0d2-e093361764bd
-feature: 'モバイルフォーム '
+feature: Mobile Forms
 exl-id: 3b8e3323-9ac4-4f5c-8c52-e2186e9169ea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '273'
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 79%
 
 HTML5 フォームでのテーブルのデフォルト実装では、テーブルのレンダリングに HTML DIV 要素が使用されます。さらに、アクセシビリティ要件を満たす目的で ARIA ロールも使用されます。
 
-データテーブルで使用されるARIAロールを完全にサポートしていないスクリーンリーダーのアクセシビリティの問題を回避するため、HTML5 Formsではテーブル用の代替レンディションを提供しています。 これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
+ARIA ロールとデータテーブルの組み合わせを完全にはサポートしていないスクリーンリーダーでアクセシビリティの問題が発生するのを防ぐには、HTML5 フォームでテーブル用の代替レンディションを使用します。これらのテーブルは、Designer で導入された新しいテーブル形式に基づいており、次の項目もサポートしています。
 
 * 行ヘッダー
 * 行幅
@@ -34,17 +34,17 @@ HTML5 フォームで新しい形式を使用するには、テーブルを複�
  </extras>
 ```
 
-*complexTable*&#x200B;とマークされたテーブルは、ネイティブのHTMLレンディションに従い、特定のスクリーンリーダーに対してより優れたアクセシビリティサポートを提供します。  行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
+*complexTable* としてマークされたテーブルはネイティブの HTML レンディションに従うため、特定のスクリーンリーダーのアクセシビリティの範囲が拡大します。行幅を作成するには、テーブル内の 1 つの列で連続する複数のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL セルの結合]**」をクリックします。
 
 >[!NOTE]
 >
->行幅の作成は、一番左のセルに対してのみ機能します。
+>行幅の作成は一番左のセルでのみ機能します。
 
 行を行ヘッダーとしてマークするには、その行のすべてのセルを選択し、選択範囲を右クリックして、「**[!UICONTROL ヘッダーをマーク]**」をクリックします。
 
 セルを列ヘッダーとしてマークするには、その列内の任意のセルを選択し、選択範囲を右クリックして、「**[!UICONTROL ヘッダーをマーク]**」をクリックします。
 
-新しい&#x200B;*AccessibleTable*&#x200B;形式の制限：
+新しい *AccessibleTable* 形式には次の制限事項があります。
 
 * テーブルに行幅を設定する場合は、拡大可能なフィールドを使用できない
 * ネストされたテーブル（テーブルのセルに含まれている別のテーブル）は使用できない
