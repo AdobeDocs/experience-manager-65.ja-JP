@@ -1,8 +1,8 @@
 ---
 title: コンソールのカスタマイズ
-seo-title: コンソールのカスタマイズ
+seo-title: Customizing the Consoles
 description: AEM には、オーサリングインスタンスのコンソールをカスタマイズできる様々な仕組みが用意されています
-seo-description: AEM には、オーサリングインスタンスのコンソールをカスタマイズできる様々な仕組みが用意されています
+seo-description: AEM provides various mechanisms to enable you to customize the consoles of your authoring instance
 uuid: 8ecce9ff-5907-41e1-af3b-a8646352d633
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,13 +12,13 @@ discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 78%
+workflow-type: ht
+source-wordcount: '699'
+ht-degree: 100%
 
 ---
 
-# コンソールのカスタマイズ  {#customizing-the-consoles}
+# コンソールのカスタマイズ {#customizing-the-consoles}
 
 >[!CAUTION]
 >
@@ -26,10 +26,10 @@ ht-degree: 78%
 
 AEM には、オーサーインスタンスのコンソール（および[ページオーサリング機能](/help/sites-developing/customizing-page-authoring-touch.md)）をカスタマイズできる様々な仕組みが用意されています。
 
-* クライアントライブラリクライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズする際に、`/apps.`の下に独自のクライアントライブラリを作成できます。例えば、カスタムコンポーネントに必要なコードを保持できます。
+* クライアントライブラリクライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズするときに、独自の clientlib を `/apps.` に作成して、カスタムコンポーネントに必要なコードを保持するといった操作が可能です。
 
 * オーバーレイ
-オーバーレイはノード定義に基づいており、（`/libs`の）標準的な機能を（`/apps`の）カスタマイズした独自の機能に重ねることができます。 Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+オーバーレイはノード定義にもとづいており、標準の機能（`/libs`）にカスタマイズした独自機能（`/apps`）をオーバーレイすることができます。Sling Resource Merger は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。一部については、以降で（大まかに）説明します。
 
@@ -42,8 +42,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 
 >
->
-このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html) でも説明しています。
+>このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/jp/gems/user-interface-customization-for-aem-6.html) でも説明しています。
 
 >[!CAUTION]
 >
@@ -53,16 +52,14 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
-   >
-   >
-1. `/apps` 内で変更作業をおこないます。
+>1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
+>
+>1. `/apps` 内で変更作業をおこないます。
 
 >
 
 
-
-例えば、`/libs`構造内の次の場所をオーバーレイできます。
+例えば、`/libs` 構造内の以下の場所をオーバーレイできます。
 
 * コンソール（Granite UI ページに基づくすべてのコンソール）。次に例を示します。
 
@@ -82,7 +79,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
    先頭のエントリがデフォルトになります。
 
-   使用可能なノードは、使用可能な表示オプションと関連があります。
+   使用可能なノードは、使用可能な表示オプションに関連付けられます。
 
    * `column`
    * `card`
@@ -132,19 +129,19 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
    `jcr:content/body/content/header/items/default/items/create/items/createsite/rendercondition`
 
-   このノードのプロパティを使用して、特定のアクションの実行を許可する`groups`を定義できます。例： `administrators`
+   このノードのプロパティを使用して、特定のアクションを実行できる `groups`（`administrators` など）を定義できます。
 
 ### リスト表示で列のカスタマイズ {#customizing-columns-in-the-list-view}
 
 >[!NOTE]
 >
->この機能は、テキストフィールドの列用に最適化されています。他のデータ型の場合は、`/apps`内の`cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer`をオーバーレイできます。
+>この機能は、テキストフィールドの列に対して最適化されています。その他のデータタイプに対しては、`/apps` の `cq/gui/components/siteadmin/admin/listview/columns/analyticscolumnrenderer` をオーバーレイできます。
 
 リスト表示で列をカスタマイズするには、次の手順を実行します。
 
 1. 使用可能な列のリストをオーバーレイします。
 
-   * ノード上：
+   * ノードの場合：
 
       ```
              /apps/wcm/core/content/common/availablecolumns
@@ -155,14 +152,14 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 1. 省略可能：
 
-   * 追加データをプラグインする場合は、[PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)を
+   * 追加データを挿入する場合は、以下を持つ [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) を記述する必要があります。
       `pageInfoProviderType` property.
 
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。
 
 1. これで、リスト表示の列コンフィギュレーターで列を選択できるようになります。
 
-### リソースのフィルタリング  {#filtering-resources}
+### リソースのフィルタリング {#filtering-resources}
 
 コンソールを使用する際の一般的な使用例は、ユーザーがリソース（ページ、コンポーネント、アセットなど）から選択する必要がある場合です。これは、例えば、作成者が項目を選択する必要があるリストの形式で表示されます。
 
