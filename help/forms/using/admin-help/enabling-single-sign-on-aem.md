@@ -1,8 +1,8 @@
 ---
 title: AEM forms でのシングルサインオンの有効化
-seo-title: AEM forms でのシングルサインオンの有効化
+seo-title: Enabling single sign-on in AEM forms
 description: HTTP ヘッダーと SPNEGO を使用してシングルサインオン（SSO）を有効化する方法について説明します。
-seo-description: HTTP ヘッダーと SPNEGO を使用してシングルサインオン（SSO）を有効化する方法について説明します。
+seo-description: Learn how to enable single sign-on (SSO) using HTTP headers and SPNEGO.
 uuid: 2bc08b4f-dcbe-4a16-9025-32fc14605e13
 contentOwner: admin
 content-type: reference
@@ -11,21 +11,21 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ee54d9d4-190d-4665-925a-9740ac65fbd5
 exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1520'
+ht-degree: 100%
 
 ---
 
 # AEM forms でのシングルサインオンの有効化{#enabling-single-sign-on-in-aem-forms}
 
-AEM formsでは、シングルサインオン(SSO)を有効にする方法が2つあります。HTTPヘッダーとSPNEGOです。
+AEM Forms でシングルサインオン（SSO）を有効化するには、HTTP ヘッダーと SPNEGO の 2 つの方法があります。
 
 SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM Forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
 AEM Forms で前述のいずれの方法を使用してもユーザーが認証されない場合、ユーザーはログインページにリダイレクトされます。
 
-## HTTP ヘッダーの使用による SSO の有効化  {#enable-sso-using-http-headers}
+## HTTP ヘッダーの使用による SSO の有効化 {#enable-sso-using-http-headers}
 
 ポータル設定ページを使用して、 アプリケーションと、HTTP ヘッダーを介した ID の送信をサポートするアプリケーションとの間でシングルサインオン（SSO）を有効化できます。SSO を使用すると、ユーザーが会社のポータルで既に認証されている場合、AEM forms ユーザーのログインページは不要になり、ログインページは表示されません。
 
@@ -38,8 +38,8 @@ AEM Forms で前述のいずれの方法を使用してもユーザーが認証�
    * **SSO の種類：**（必須）HTTP ヘッダーを使用して SSO を有効化するには HTTP ヘッダーを選択します。
    * **ユーザーの識別子の HTTP ヘッダー：**（必須）ログインしたユーザーの固有な識別子を値に含むヘッダーの名前です。User Management は、この値を使用して User Management データベースからユーザーを検索します。このヘッダーから取得される値は、LDAP ディレクトリから同期されるユーザーの固有な識別子と一致する必要があります（[ユーザー設定](/help/forms/using/admin-help/adding-configuring-users.md#user-settings)を参照）。
    * **ユーザー固有の識別子ではなく、ユーザー ID に対して識別子の値をマップします：**&#x200B;ユーザー固有の識別子の値をユーザー ID にマップします。このオプションを選択するのは、ユーザー固有の識別子が、HTTP ヘッダーで簡単に伝播できないバイナリ値の場合です（例えば、Active Directory からユーザーを同期する場合は objectGUID）。
-   * **ドメインの HTTP ヘッダー：**（非必須）ドメイン名を値に含むヘッダー名です。この設定は、ユーザーを一意に識別する単一の HTTP ヘッダーが存在しない場合にのみ使用します。この設定は、複数のドメインが存在し、固有な識別子がそのドメイン内でのみ一意である場合に使用します。この場合、このテキストボックスでヘッダー名を指定し、「ドメインマッピング」ボックスに複数のドメインのドメインマッピングを指定します（[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照)。
-   * **ドメインマッピング：**（必須）複数のドメインのマッピングは、「header value=domain name」**&#x200B;の形式で指定します。
+   * **ドメインの HTTP ヘッダー：**（非必須）ドメイン名を値に含むヘッダー名です。この設定は、ユーザーを一意に識別する単一の HTTP ヘッダーが存在しない場合にのみ使用します。この設定は、複数のドメインが存在し、固有な識別子がそのドメイン内でのみ一意である場合に使用します。この場合、このテキストボックスでヘッダー名を指定し、「ドメインマッピング」ボックスに複数のドメインのドメインマッピングを指定します（[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照）。
+   * **ドメインマッピング：**（必須）複数のドメインのマッピングは、「*header value=domain name*」の形式で指定します。
 
       例えば、ドメインの HTTP ヘッダーが domainName で、その値に domain1、domain2 または domain3 を使用できる状況を考えます。この場合は、ドメインマッピングを使用して domainName の値を User Management のドメイン名にマップします。各マッピングは、異なる行で指定する必要があります。
 
@@ -49,11 +49,11 @@ AEM Forms で前述のいずれの方法を使用してもユーザーが認証�
 
       domain3=UMdomain3
 
-### 許可されているリファラーの設定  {#configure-allowed-referers}
+### 許可されているリファラーの設定 {#configure-allowed-referers}
 
 これらの設定の設定方法について詳しくは[許可されているリファラーの設定](/help/forms/using/admin-help/preventing-csrf-attacks.md#configure-allowed-referers)を参照してください。
 
-## SPNEGO を使用した SSO の有効化  {#enable-sso-using-spnego}
+## SPNEGO を使用した SSO の有効化 {#enable-sso-using-spnego}
 
 Windows 環境で LDAP サーバーに Active Directory を使用している場合は、Simple and Protected GSSAPI Negotiation Mechanism（SPNEGO）を使用してシングルサインオン（SSO）を有効化することができます。SSO が有効になっている場合、AEM forms のユーザーログインページは必要とされず、表示されません。
 
@@ -81,9 +81,9 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
       * **サービスパスワード：**&#x200B;サービスユーザーのパスワード。前に挙げた例では、サービスパスワードは `password` です。
       * **SPNEGO を有効にする：**&#x200B;シングルサインオン（SSO）で SPNEGO を使用できるようにします。このオプションを選択します。
 
-1. SPNEGO クライアントブラウザー設定を設定します([SPNEGO クライアントブラウザー設定の設定](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)を参照）。
+1. SPNEGO クライアントブラウザー設定を設定します（[SPNEGO クライアントブラウザー設定の設定](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)を参照）。
 
-### ユーザーアカウントの作成  {#create-a-user-account}
+### ユーザーアカウントの作成 {#create-a-user-account}
 
 1. SPNEGO の場合、AEM Forms となるドメインコントローラー上にある Active Directory 内のユーザーとしてサービスを登録します。そのドメインコントローラーで、スタートメニュー／管理ツール／Active Directory ユーザーとコンピューターに移動します。「管理ツール」がスタートメニューにない場合は、コントロールパネルを使用します。
 1. Users フォルダーをクリックして、ユーザーのリストを表示します。
@@ -93,15 +93,15 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
    * **名**：umspnego
    * **ユーザーログオン名**：spnegodemo
 
-1. パスワードを入力します。例えば、「password」**&#x200B;というパスワードを設定します。「パスワードを無期限にする」を選択し、それ以外のオプションは選択しません。
+1. パスワードを入力します。例えば、「*password*」というパスワードを設定します。「パスワードを無期限にする」を選択し、それ以外のオプションは選択しません。
 1. 「次へ」をクリックし、「完了」をクリックします。
 
-### サービスプリンシパル名（SPN）のマッピング  {#map-a-service-principal-name-spn}
+### サービスプリンシパル名（SPN）のマッピング {#map-a-service-principal-name-spn}
 
 1. KtPass ユーティリティを入手します。このユーティリティは、SPN を REALM にマップする場合に使用します。KtPass ユーティリティは、Windows Server ツールパックまたはリソースキットの一部として入手できます（「[Windows Server 2003 Service Pack 1 のサポートツール](https://support.microsoft.com/kb/892777)」を参照）。
 1. コマンドプロンプトで、次の引数を指定して `ktpass` を実行します。
 
-   `ktpass -princ HTTP/`** `@`** `-mapuser`*hostREALMuser*
+   `ktpass -princ HTTP/`*host* `@`*REALM* `-mapuser`*user*
 
    例えば、次のようにテキストを入力します。
 
@@ -131,7 +131,7 @@ ktpass:failed getting target domain for specified user.
 ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 ```
 
-### Kerberos 整合性チェックの失敗の回避  {#prevent-kerberos-integrity-check-failures}
+### Kerberos 整合性チェックの失敗の回避 {#prevent-kerberos-integrity-check-failures}
 
 1. そのドメインコントローラーで、スタートメニュー／管理ツール／Active Directory ユーザーとコンピューターに移動します。「管理ツール」がスタートメニューにない場合は、コントロールパネルを使用します。
 1. Users フォルダーをクリックして、ユーザーのリストを表示します。
@@ -140,30 +140,30 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 1. 以前に入力したものと同じパスワードを入力し、確認します。この例では、`password` に設定されています。
 1. 「ユーザーは次回ログオン時にパスワード変更が必要」を選択解除し、「OK」をクリックします。
 
-### SPNEGO クライアントブラウザー設定の構成  {#configuring-spnego-client-browser-settings}
+### SPNEGO クライアントブラウザー設定の構成 {#configuring-spnego-client-browser-settings}
 
 SPNEGO ベースの認証を機能させるには、ユーザーアカウントを作成しているドメインにクライアントコンピューターが含まれている必要があります。また、SPNEGO ベースの認証を許可するようにクライアントブラウザーを設定する必要があります。さらに、SPNEGO ベースの認証を必要とするサイトを、信頼できるサイトにする必要があります。
 
-https://lcserver:8080などのコンピューター名を使用してサーバーにアクセスする場合、Internet Explorerの設定は不要です。 入力した URL にドット（「.」）が含まれていない場合は、Internet Explorer はそのサイトをローカルなイントラネットサイトとして扱います。サイトに完全修飾名を使用している場合は、サイトを信頼できるサイトとして追加する必要があります。
+https://lcserver:8080 などのコンピューター名を使用してサーバーにアクセスする場合、Internet Explorer での設定は不要です。入力した URL にドット（「.」）が含まれていない場合は、Internet Explorer はそのサイトをローカルなイントラネットサイトとして扱います。サイトに完全修飾名を使用している場合は、サイトを信頼できるサイトとして追加する必要があります。
 
 **Internet Explorer 6.x の設定**
 
 1. ツール／インターネットオプションに移動し、「セキュリティ」タブをクリックします。
 1. イントラネットのアイコンをクリックし、「サイト」をクリックします。
-1. 「詳細設定」をクリックし、「次の Web サイトをゾーンに追加する」ボックスに、forms サーバーの URL を入力します。例えば、「`https://lcserver.um.lc.com`
+1. 「詳細設定」をクリックし、「次の Web サイトをゾーンに追加する」ボックスに、forms サーバーの URL を入力します。例えば、`https://lcserver.um.lc.com`
 1. ダイアログボックスがすべて閉じるまで、各ダイアログボックスで「OK」をクリックします。
-1. AEM Forms サーバーの URL にアクセスして、設定をテストします。例えば、「ブラウザーのURL」ボックスに、「`https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true`」と入力します。
+1. AEM Forms サーバーの URL にアクセスして、設定をテストします。例えば、ブラウザーの URL ボックスに `https://lcserver.um.lc.com:8080/um/login?um_no_redirect=true` と入力します。
 
 **Mozilla Firefox の設定**
 
-1. 「ブラウザーのURL」ボックスに、「`about:config`」と入力します。
+1. ブラウザーの URL ボックスに `about:config` と入力します。
 
    about:config - Mozilla Firefox ダイアログボックスが表示されます。
 
 1. 「フィルター」ボックスに、`negotiate`
 1. 表示されたリストで、network.negotiate-auth.trusted-uri をダブルクリックし、環境に応じて、次のいずれかのコマンドを入力します。
 
-   `.um.lc.com`- um.lc.comで終わるURLに対してSPNEGOを許可するようにFirefoxが設定されます。先頭に必ずドット（「.」）を含めてください。
+   `.um.lc.com` - 末尾が um.lc.com のすべての URL を SPNEGO に対して許可するよう Firefox を設定します。先頭に必ずドット（「.」）を含めてください。
 
    `lcserver.um.lc.com` - 特定のサーバーだけに SPNEGO を許可するように Firefox が設定されます。ドット（「.」）から始めないでください。
 
