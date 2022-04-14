@@ -1,8 +1,8 @@
 ---
 title: AEM JCR へのプログラムからのアクセス方法
-seo-title: AEM JCR へのプログラムからのアクセス方法
+seo-title: How to programmatically access the AEM JCR
 description: Adobe Marketing Cloud の構成要素の AEM リポジトリ内にあるノードおよびプロパティをプログラムで変更できます
-seo-description: Adobe Marketing Cloud の構成要素の AEM リポジトリ内にあるノードおよびプロパティをプログラムで変更できます
+seo-description: You can programmatically modify nodes and properties located within the AEM repository, which is part of the Adobe Marketing Cloud
 uuid: 2051d03f-430a-4cae-8f6d-e5bc727d733f
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,33 +11,33 @@ content-type: reference
 discoiquuid: 69f62a38-7991-4009-8db7-ee8fd35dc535
 exl-id: fe946b9a-b29e-4aa5-b973-e2a652417a55
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 43%
+workflow-type: ht
+source-wordcount: '591'
+ht-degree: 100%
 
 ---
 
 # AEM JCR へのプログラムからのアクセス方法{#how-to-programmatically-access-the-aem-jcr}
 
-Adobe Marketing Cloud に搭載されている Adobe CQ リポジトリ内にあるノードとプロパティを、プログラムから変更できます。CQ リポジトリにアクセスするには、Java Content Repository（JCR）API を使用します。Java JCR API を使用すれば、Adobe CQ リポジトリ内にあるコンテンツに対して、作成、置換、更新および削除（CRUD）の操作を実行できます。Java JCR APIについて詳しくは、[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html)を参照してください。
+Adobe Marketing Cloud に搭載されている Adobe CQ リポジトリ内にあるノードとプロパティを、プログラムから変更できます。CQ リポジトリにアクセスするには、Java Content Repository（JCR）API を使用します。Java JCR API を使用すれば、Adobe CQ リポジトリ内にあるコンテンツに対して、作成、置換、更新および削除（CRUD）の操作を実行できます。Java JCR API について詳しくは、[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html) を参照してください。
 
 >[!NOTE]
 >
->この開発向けの記事では、外部 Java アプリケーションから Adobe CQ JCR を変更します。これに対して、OSGi バンドル内から JCR API を使用して JCR を変更することもできます。詳しくは、[JavaコンテンツリポジトリへのCQデータの永続化](https://helpx.adobe.com/experience-manager/using/persisting-cq-data-java-content1.html)を参照してください。
+>この開発向けの記事では、外部 Java アプリケーションから Adobe CQ JCR を変更します。これに対して、OSGi バンドル内から JCR API を使用して JCR を変更することもできます。詳しくは、[Java コンテンツリポジトリへの CQ データの永続化](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
->JCR APIを使用するには、Javaアプリケーションのクラスパスに`jackrabbit-standalone-2.4.0.jar`ファイルを追加します。 このJARファイルは、Java JCR API Webページ([https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html))から取得できます。
+>JCR API を使用するには、Java アプリケーションのクラスパスに `jackrabbit-standalone-2.4.0.jar` ファイルを追加します。この JAR ファイルは Java JCR API eb ページ（[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html)）から取得できます。
 
 >[!NOTE]
 >
->JCR Query API を使用して Adobe CQ JCR へのクエリーを実行する方法については、[JCR API を使用した Adobe Experience Manager データのクエリー](https://helpx.adobe.com/experience-manager/using/querying-experience-manager-data-using1.html)を参照してください。
+>JCR Query API を使用して Adobe CQ JCR へのクエリーを実行する方法については、[JCR API を使用した Adobe Experience Manager データのクエリー](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=ja)を参照してください。
 
-## Repository インスタンスの作成  {#create-a-repository-instance}
+## Repository インスタンスの作成 {#create-a-repository-instance}
 
 リポジトリに接続して接続を確立するには様々な方法がありますが、この開発向け記事では、`org.apache.jackrabbit.commons.JcrUtils` クラスに属する静的メソッドを使用します。このメソッドの名前は `getRepository` です。このメソッドは、Adobe CQ サーバーの URL を表す文字列パラメーターを受け取ります。例えば、`http://localhost:4503/crx/server` のように指定します。
 
-`getRepository`   メソッドは、`Repository`   インスタンスを返します。次に、このコード例に示します。
+`getRepository` メソッドは、`Repository` インスタンスを返します。次に、このコード例に示します。
 
 ```java
 //Create a connection to the AEM JCR repository running on local host
@@ -46,30 +46,30 @@ Repository repository = JcrUtils.getRepository("http://localhost:4503/crx/server
 
 ## Session インスタンスの作成 {#create-a-session-instance}
 
-`Repository`インスタンスはCRXリポジトリを表します。 `Repository`インスタンスを使用して、リポジトリとのセッションを確立します。 セッションを作成するには、`Repository`インスタンスの`login`メソッドを呼び出して、`javax.jcr.SimpleCredentials`オブジェクトを渡します。 `login`メソッドは、`javax.jcr.Session`インスタンスを返します。
+`Repository` インスタンスは CRX リポジトリを表します。`Repository` インスタンスを使用して、リポジトリとのセッションを確立します。セッションを作成するには、`Repository` インスタンスの `login` メソッドを呼び出して `javax.jcr.SimpleCredentials` オブジェクトを渡します。`login` メソッドは、`javax.jcr.Session` インスタンスを返します。
 
-`SimpleCredentials`オブジェクトを作成するには、コンストラクターを使用し、次の文字列値を渡します。
+`SimpleCredentials` オブジェクトを作成するには、コンストラクターを使用して、以下の文字列値を渡します。
 
 * ユーザー名
 * 対応するパスワード
 
-2番目のパラメーターを渡す際に、Stringオブジェクトの`toCharArray`メソッドを呼び出します。 次のコードは、`javax.jcr.Sessioninstance`を返す`login`メソッドを呼び出す方法を示しています。
+2 番目のパラメーターを渡す場合は、String オブジェクトの `toCharArray` メソッドを呼び出します。以下のコードは、`javax.jcr.Sessioninstance` を返す `login` メソッドを呼び出す方法を示しています。
 
 ```java
 //Create a Session instance
 javax.jcr.Session session = repository.login( new SimpleCredentials("admin", "admin".toCharArray()));
 ```
 
-## Node インスタンスの作成 {#create-a-node-instance}
+## ノードインスタンスの作成 {#create-a-node-instance}
 
-`Session`インスタンスを使用して、`javax.jcr.Node`インスタンスを作成します。 `Node`インスタンスを使用して、ノード操作を実行できます。 例えば、新しいノードを作成できます。 ルートノードを表すノードを作成するには、次のコード行に示すように、`Session`インスタンスの`getRootNode`メソッドを呼び出します。
+`Session` インスタンスを使用して `javax.jcr.Node` インスタンスを作成します。`Node` インスタンスを使用すると、ノード操作を実行できます。例えば、新しいノードを作成できます。ルートノードを表すノードを作成するには、以下のコード行のように、`Session` インスタンスの `getRootNode` メソッドを呼び出します。
 
 ```java
 //Create a Node
 Node root = session.getRootNode();
 ```
 
-`Node`インスタンスを作成したら、別のノードを作成し、そのノードに値を追加するなどのタスクを実行できます。 例えば、次のコードは2つのノードを作成し、2番目のノードに値を追加します。
+`Node` インスタンスを作成すると、別のノードを作成してそのノードに値を追加するなどのタスクを実行できます。例えば、以下のコードでは、2 つのノードを作成し、2 番目のノードに値を追加します。
 
 ```java
 // Store content
@@ -79,7 +79,7 @@ day.setProperty("message", "Adobe CQ is part of the Adobe Digital Marketing Suit
 
 ## ノードの値の取得 {#retrieve-node-values}
 
-ノードとその値を取得するには、`Node`インスタンスの`getNode`メソッドを呼び出して、ノードへの完全修飾パスを表す文字列値を渡します。 前のコードの例で作成したノード構造について考えてみましょう。 dayノードを取得するには、次のコードに示すように、 adobe/dayを指定します。
+ノードとその値を取得するには、`Node` インスタンスの `getNode` メソッドを呼び出して、ノードの完全修飾パスを表す文字列値を渡します。前のコードの例で作成したノードの構造について考えてみましょう。以下のコードに示すように、「day」ノードを取得するには、「adobe/day」を指定します。
 
 ```java
 // Retrieve content
@@ -90,7 +90,7 @@ System.out.println(node.getProperty("message").getString());
 
 ## Adobe CQ リポジトリ内でのノードの作成 {#create-nodes-in-the-adobe-cq-repository}
 
-次のJavaコードの例は、Adobe CQに接続し、`Session`インスタンスを作成して新しいノードを追加するJavaクラスを表しています。 ノードにデータ値が割り当てられ、ノードの値とそのパスがコンソールに書き出されます。 セッションが完了したら、必ずログアウトしてください。
+以下の Java コードの例は、Adobe CQ に接続し、`Session` インスタンスを作成して、新しいノードを追加する Java クラスを表しています。ノードにデータ値が割り当てられ、ノードの値とそのパスがコンソールに書き出されます。セッションが完了したら、必ずログアウトしてください。
 
 ```java
 /*
@@ -142,6 +142,6 @@ try {
 }
 ```
 
-完全なコード例を実行してCRXDE Liteを作成したら、次の図に示すように、**[!UICONTROL ノード]**&#x200B;に新しいノードを表示できます。
+このコード例全体を実行してノードを作成した後、以下の図に示すように、**[!UICONTROL CRXDE Lite]** で新しいノードを確認できます。
 
 ![chlimage_1-68](assets/chlimage_1-68a.png)
