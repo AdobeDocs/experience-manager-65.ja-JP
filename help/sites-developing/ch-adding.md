@@ -3,7 +3,7 @@ title: ページへの ContextHub の追加とストアへのアクセス
 description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します
 exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '927'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリ�
 
 ContextHub ツールバーをプレビューモードで表示するかどうかも設定する必要があります。[ContextHub UI の表示／非表示](ch-configuring.md#showing-and-hiding-the-contexthub-ui)を参照してください。
 
-## ContextHub ストアについて  {#about-contexthub-stores}
+## ContextHub ストアについて {#about-contexthub-stores}
 
 コンテキストデータを保持するには、ContextHub ストアを使用します。ContextHub には、すべてのストアタイプの基礎となる次のタイプのストアが用意されています。
 
@@ -36,7 +36,7 @@ ContextHub ツールバーをプレビューモードで表示するかどうか
 
 すべてのストアタイプは、[`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) クラスの拡張です。新しいストアタイプの作成については、[カスタムストアの作成](ch-extend.md#creating-custom-store-candidates)を参照してください。ストアタイプのサンプルについては、[ContextHub ストア候補のサンプル](ch-samplestores.md)を参照してください。
 
-### 永続モード  {#persistence-modes}
+### 永続モード {#persistence-modes}
 
 ContextHub ストアは、次のいずれかの永続モードを使用します。
 
