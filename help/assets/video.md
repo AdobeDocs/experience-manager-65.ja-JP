@@ -1,6 +1,6 @@
 ---
-title: Dynamic Mediaのビデオ
-description: ビデオのエンコーディング、YouTubeへのビデオの公開、ビデオレポートの表示に関するベストプラクティスなど、Dynamic Mediaでビデオを操作する方法について説明します。 また、ビデオにクローズドキャプション、サブタイトル、チャプターマーカーを追加する方法についても説明します。
+title: Dynamic Media のビデオ
+description: Dynamic Media でのビデオの操作方法（ビデオのエンコーディング、YouTube でのビデオの公開、ビデオレポートの表示のベストプラクティスなど）を説明します。また、ビデオにクローズドキャプション、字幕、チャプターマーカーを追加する方法についても説明します。
 mini-toc-levels: 3
 uuid: 97f311a3-a227-479a-91bf-fb54ecd1a55d
 contentOwner: Rick Brough
@@ -15,35 +15,35 @@ exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 source-git-commit: 128358e17aa6166c81e0979825ee81d029418f22
 workflow-type: tm+mt
 source-wordcount: '11766'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
-# Dynamic Mediaのビデオ {#video}
+# Dynamic Media のビデオ {#video}
 
 ここでは、Dynamic Media でのビデオの操作方法について説明します。
 
 ## クイックスタート：ビデオ {#quick-start-videos}
 
-次のワークフローの手順説明は、Dynamic Media 内のアダプティブビデオセットをすぐに使い始めることを目的としたものです。各手順の後に、トピックの見出しへの相互参照があり、詳細を確認できます。
+次のワークフローの手順説明は、Dynamic Media でアダプティブビデオセットをすぐに使い始めることを目的としたものです。各手順に続いて、詳しい説明のあるトピックの見出しへのリンクが記載されています。
 
 >[!IMPORTANT]
 >
->Dynamic Mediaのビデオを操作する前に、Adobe Experience Manager管理者がDynamic Media - Scene7モードまたはDynamic Media — ハイブリッドモードでDynamic MediaCloud Servicesを既に有効にして設定していることを確認してください。
+>Dynamic Media のビデオを操作する前に、Adobe Experience Manager 管理者が Dynamic Media - Scene7 モードまたは Dynamic Media - ハイブリッドモードの Dynamic Media クラウドサービスを既に有効にして設定を完了していることを確認してください。
 >
->* 詳しくは、 [Dynamic MediaCloud Services](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) (Dynamic Media - Scene7モードの場合 ) および [Dynamic Media - Scene7モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md).
+>* 「Dynamic Media - Scene7 モードの設定」の [Dynamic Media クラウドサービスの設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)および [Dynamic Media - Scene7 モードのトラブルシューティング](/help/assets/troubleshoot-dms7.md)を参照してください。
 >
->* 詳しくは、 [Dynamic MediaCloud Services](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services) (Dynamic Media — ハイブリッドモードの設定 )
+>* 「Dynamic Media - ハイブリッドモードの設定」の [Dynamic Media クラウドサービスの設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。
 >
->Dynamic Mediaでの現在のビデオ再生の問題 *Experience Manager6.5.9.0 のみ*:
+>Dynamic Media での既知のビデオ再生の問題（*Experience Manager 6.5.9.0 のみ*）：
 >
->* 公開済みのビデオを更新した場合は、配信時に変更を反映するために、再度公開する必要があります。
+>* 公開済みのビデオを更新する場合は、ビデオを再度公開して配信に変更を反映させる必要があります。
 >
 
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
 
-   * 独自のビデオエンコーディングプロファイルを作成します。または、Dynamic Media に付属している事前定義済みの&#x200B;_アダプティブビデオエンコーディング_（AVE）プロファイルを使用してもかまいません。
+   * 独自のビデオエンコーディングプロファイルを作成します。または、Dynamic Media に付属している事前定義済みの _アダプティブビデオエンコーディング_ （AVE）プロファイルを使用してもかまいません。
 
       * [ビデオエンコーディングプロファイルを作成します](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
       * 詳しくは、[ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)を参照してください。
@@ -54,7 +54,7 @@ ht-degree: 77%
       * 詳しくは、[デジタルアセットの整理](/help/assets/organize-assets.md)を参照してください。
    * フォルダーにプライマリソースビデオをアップロードします。フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
-      * Dynamic Mediaは主に、最大長が 30 分で、最小解像度が 25 x 25 を超える短形式のビデオをサポートします。
+      * Dynamic Media では、最大長 30 分、最小解像度が 25 x 25 を超える短い形式のビデオが主にサポートされています。
       * 15 GB までのビデオファイルをアップロードできます。
       * [ビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
       * 詳しくは、[サポートされる入力ファイル形式](/help/assets/assets-formats.md#supported-multimedia-formats)を参照してください。
@@ -70,7 +70,7 @@ ht-degree: 77%
       * [デジタルアセットの整理](/help/assets/organize-assets.md)。
 詳しくは、[処理プロファイルを使用するためのデジタルアセットの整理におけるベストプラクティス](organize-assets.md)を参照してください。
 
-      * [ビデオアセットの検索](search-assets.md#custompredicates) または [アセットの検索](/help/assets/search-assets.md)
+      * [ビデオアセットを検索](search-assets.md#custompredicates)するか[アセットを検索](/help/assets/search-assets.md)します。
    * ビデオアセットをプレビューして公開します。
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
@@ -79,23 +79,23 @@ ht-degree: 77%
          [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
 
       * [ビューアプリセットの管理](managing-viewer-presets.md)
-      * [アセットの公開](publishing-dynamicmedia-assets.md)
+      * [アセットを公開します。](publishing-dynamicmedia-assets.md)
    * ビデオのメタデータを操作します。
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
          [ビデオレンディションのプロパティを表示](video-renditions.md)
 
-      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集：
-         [ビデオのプロパティを編集](manage-assets.md#editing-properties)
+      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
+         [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
 
       * [デジタルアセットのメタデータの管理](metadata.md)
       * [メタデータスキーマ](metadata-schemas.md)
    * ビデオをレビューおよび承認し、注釈を付け、完全なバージョン管理を維持します。
 
-      * [ビデオに注釈を付ける](managing-video-assets.md#annotate-video-assets) または [アセットに注釈を付ける](manage-assets.md#annotating)
+      * [ビデオの注釈](managing-video-assets.md#annotate-video-assets)または[アセットの注釈](manage-assets.md#annotating)
 
-      * [バージョンを作成](manage-assets.md#asset-versioning)
-      * [アセットへのワークフローの適用](assets-workflow.md) または、 [アセットでのワークフローの開始](manage-assets.md#starting-a-workflow-on-an-asset)
+      * [バージョンを作成します。](manage-assets.md#asset-versioning)
+      * [アセットにワークフローを適用](assets-workflow.md)または[アセットでワークフローを開始](manage-assets.md#starting-a-workflow-on-an-asset)を参照
 
       * [フォルダーのアセットのレビュー](bulk-approval.md)
       * [プロジェクト](../sites-authoring/projects.md)
@@ -103,9 +103,9 @@ ht-degree: 77%
 
 
 
-1. 次のいずれかの操作を行って、**Dynamic Media ビデオを公開します。**
+1. 次のいずれかの操作を行って、**Dynamic Media ビデオを公開します**。
 
-   * Adobe Experience Managerを Web コンテンツ管理システムとして使用している場合、Web ページに直接ビデオを追加できます。
+   * Adobe Experience Manager を web コンテンツ管理システムとして使用する場合、web ページにビデオを直接追加できます。
 
       * [Web ページにビデオを追加します](adding-dynamic-media-assets-to-pages.md)。
    * サードパーティの Web コンテンツ管理システムを使用している場合、Web ページにビデオをリンクするか、ビデオを埋め込むことができます。
@@ -124,7 +124,7 @@ ht-degree: 77%
 
 ## Dynamic Media でのビデオの操作 {#working-with-video-in-dynamic-media}
 
-Dynamic Mediaのビデオは、デスクトップ、iOS、Android™、BlackBerry®、Windows モバイルデバイスなど、複数の画面にストリーミング用の高品質なアダプティブビデオを簡単に公開できるエンドツーエンドのソリューションです。アダプティブビデオセットは、同じビデオの、異なるビットレート（400 kbps、800 kbps、1000 kbps など）でエンコードされたバージョンをグループ化します。デスクトップコンピューターまたはモバイルデバイスが、使用可能な帯域幅を検出します。
+Dynamic Media のビデオは、高品質のアダプティブビデオを簡単に公開して、デスクトップ、iOS、Android™、BlackBerry®、Windows などのモバイルデバイスを含む複数の画面にストリーミングするためのエンドツーエンドのソリューションです。アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップコンピューターまたはモバイルデバイスによって、利用可能な帯域幅が検出されます。
 
 例えば、iOS モバイルデバイスでは、3G、4G、Wi-Fi などの帯域幅が検出されます。次に、アダプティブビデオセット内の様々なビデオのビットレートの中から、適切なエンコード済みビデオが自動的に選択されます。そのビデオが、デスクトップ、モバイルデバイスまたはタブレットにストリーミングされます。
 
@@ -149,13 +149,13 @@ Dynamic Mediaのビデオは、デスクトップ、iOS、Android™、BlackBerr
 
 * すべての HTML5 ビデオビューアでのビデオキャプション。
 * 効率的なビデオアセット管理のための、メタデータが完全にサポートされたビデオの整理、参照および検索。
-* Web およびデスクトップおよびモバイルデバイス (iPhone、iPad、Android™、BlackBerry®、Windows Phone など ) にアダプティブビデオセットを配信します。
+* Web やデスクトップおよびモバイルデバイス（iPhone、iPad、Android™、BlackBerry®、Windows Phone など）に対してアダプティブビデオセットを配信します。
 
 アダプティブビデオのストリーミングは、各種 iOS プラットフォームでサポートされています。詳しくは、[Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html?lang=ja#video)を参照してください。
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする BlackBerry® デバイスについては、[BlackBerry® でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
-このビデオ形式をサポートする Windows デバイスは、次の場所にあります。 [Windows Phone 8 でサポートされるメディアコーデック](https://docs.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs)
+このビデオ形式をサポートする Windows デバイスについては、[Windows Phone 8 でサポートされているメディアコーデック](https://docs.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs)のページで確認できます。
 
 * Dynamic Media ビデオビューアプリセットを使用してビデオを再生します。このビューアプリセットには、次のビューアが含まれます。
 
@@ -167,25 +167,25 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
-関連トピック [Experience Manager AssetsとDynamic Media Classicのビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=ja#viewers-aem-assets-dmc) および [Experience Managerアセットのみのビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=ja#viewers-for-aem-assets-only).
+[Experience Manager Assets 用のビューアおよび Dynamic Media Classic 用のビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=ja#viewers-aem-assets-dmc)と [Experience Manager Assets 専用のビューア](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=ja#viewers-for-aem-assets-only)を参照してください。
 
 ## ベストプラクティス：HTML5 ビデオビューアの使用 {#best-practice-using-the-html-video-viewer}
 
-Dynamic MediaHTML5 ビデオビューアプリセットは堅牢なビデオプレーヤーです。これらを使用して、HTML5 ビデオ再生に関連する多くの一般的な問題を回避できます。また、アダプティブストリーミング配信の不足やデスクトップブラウザーへのリーチ制限など、モバイルデバイスに関連する問題についても説明します。
+Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデオプレーヤーです。このプリセットを使用すれば、HTML5 ビデオ再生でよくある問題や、モバイルデバイスに関する問題（アダプティブストリーミング配信機能がない、デスクトップブラウザーの対応状況が限定的であるなど）の多くを回避することができます。
 
 プレーヤーの設計面では、ビデオプレーヤーの機能を標準の Web 開発ツールで設計できます。例えば、HTML5 と CSS を使用して、ボタン、コントロールおよびカスタムのポスター画像背景をデザインして、カスタマイズした表示によって顧客に対応することができます。
 
 ビューアの再生側から見れば、ビューアによってブラウザーのビデオ機能が自動的に検出されます。その後、HLS（HTTP ライブストリーミング）を使用してビデオが配信されます。HLS はアダプティブビデオストリーミングとも呼ばれます。または、これらの配信方法が使用できない場合は、HTML5 プログレッシブが代わりに使用されます。
 
-を組み合わせて 1 つのプレーヤーにすると、次の操作が可能になります。
+単一のプレーヤーにまとめることで、次のようなことができるようになりました。
 
-* HTML5 と CSS を使用して再生コンポーネントを設計する機能
-* 埋め込み再生がある
-* ブラウザーの機能に応じて、アダプティブストリーミングとプログレッシブストリーミングを使用する
+* HTML5 と CSS を使って再生コンポーネントをデザインする機能
+* 埋め込み再生する機能
+* ブラウザーの機能に応じて、アダプティブストリーミングとプログレッシブストリーミングを使い分ける
 
-リッチメディアコンテンツのリーチをデスクトップユーザーとモバイルユーザーの両方に拡大し、ビデオエクスペリエンスを合理化します。
+リッチメディアコンテンツの配信範囲をデスクトップユーザーとモバイルユーザーの両方に拡大し、ビデオエクスペリエンスを確実に効率化することができます。
 
-関連トピック [HTML5 ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only).
+[HTML5 ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)も参照してください。
 
 ### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -202,7 +202,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
 
 プログレッシブビデオは、ユーザーのデスクトップシステムやモバイルデバイスにダウンロードしてローカルに保存することで配信されます。
 
-デバイス、ブラウザー、およびデスクトップコンピューターやモバイルデバイスでの Dynamic Media ビデオビューアによるビデオの再生方法を次の表に示します。
+デバイス、ブラウザーおよびデスクトップコンピューターやモバイルデバイスでの Dynamic Media ビデオビューアによるビデオの再生方法を次の表に示します。
 
 <table>
  <tbody>
@@ -298,7 +298,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 ビデオファイルをエンコードするときは、可能な限り最高品質のソースビデオファイルを使用します。以前にエンコードされたビデオファイルの使用は避けてください。そのようなファイルは既に圧縮済みで、さらにエンコードすると標準を下回る品質のビデオが作成されるからです。
 
-* Dynamic Mediaは主に、最大長が 30 分で、最小解像度が 25 x 25 を超える短形式のビデオをサポートします。
+* Dynamic Media では、最大長 30 分、最小解像度が 25 x 25 を超える短い形式のビデオが主にサポートされています。
 * 15 GB までのプライマリソースビデオファイルをアップロードできます。
 
 次の表に、ソースビデオファイルのエンコード前の推奨サイズ、縦横比および最小ビットレートを示します。
@@ -346,13 +346,13 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 ビットレートエンコーディングは 2 種類あり、そのどちらかを選択できます。
 
-* **[!UICONTROL 固定ビットレートエンコーディング]**（CBR）- CBR エンコーディングでは、ビットレートまたは 1 秒あたりのビット数が、エンコーディングプロセス全体で同じ数値に維持されます。CBR エンコーディングでは、設定されているデータレートが、ビデオ全体での設定値として使用されます。また、CBR エンコーディングでは、メディアファイルの品質は最適化されませんが、その分、空き容量の節約になります。ビデオ全体に同じようなモーションレベルが含まれている場合は、CBR を使用します。CBR は、ビデオコンテンツのストリーミングに最も一般的に使用されています。[カスタムで追加するビデオエンコーディングパラメーターの使用](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters)も参照してください。
+* **[!UICONTROL 固定ビットレートエンコーディング]**（CBR）- CBR エンコーディングでは、ビットレートまたは 1 秒あたりのビット数が、エンコーディングプロセス全体で同じ数値に維持されます。CBR エンコーディングでは、設定されているデータレートが、ビデオ全体での設定値として使用されます。また、CBR エンコーディングでは、メディアファイルの品質は最適化されませんが、その分、空き容量の節約になります。ビデオ全体に同じようなモーションレベルが含まれている場合は、CBR を使用します。CBR は、ビデオコンテンツのストリーミングに最も一般的に使用されています。[カスタムで追加するビデオエンコーディングパラメーターの使用](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters) も参照してください。
 
 * **[!UICONTROL 可変ビットレートエンコーディング]**（VBR）- VBR エンコーディングでは、圧縮形式で必要となるデータに基づいて、データのレートが設定した下限から上限の範囲内で調整されます。つまり、VBR エンコーディングプロセスでは、メディアファイルのビットレートが、そのニーズに応じて動的に増減します。VBR は、CBR よりエンコードに時間がかかりますが、生成されるメディアファイルは最高品質となります。VBR は、ビデオコンテンツの HTTP プログレッシブ配信に最も一般的に使用されます。
 
 VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選択すべきかと言えば、ほとんどの場合、メディアファイルには VBR を使用することをお勧めします。VBR は、優位性のあるビットレートで CBR より高品質のファイルを生成します。VBR を使用するときは、2 パスエンコーディングを使用し、最大ビットレートをターゲットビデオのビットレートの 1.5 倍に設定してください。
 
-ビデオエンコーディングプリセットを選択する際には、ターゲットエンドユーザーの接続速度を記憶します。 その速度の 80% のデータレートを持つプリセットを選択してください。例えば、ターゲットエンドユーザーの接続速度が 1,000 Kbps の場合、ビデオデータレートが 800 Kbps のプリセットが最適です。
+ビデオエンコーディングプリセットを選択するときには、ターゲットエンドユーザーの接続速度を念頭に置いてください。その速度の 80% のデータレートを持つプリセットを選択してください。例えば、ターゲットエンドユーザーの接続速度が 1,000 Kbps の場合、ビデオデータレートが 800 Kbps のプリセットが最適です。
 
 次の表に、一般的な接続速度のデータレートを示します。
 
@@ -376,7 +376,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 640 x 480 のファイルのフレームあたりピクセル数は 4 倍あります。これら 2 つの解像度例で同じデータレートを達成するには、640 x 480 のファイルに対して 4 倍の圧縮率を適用します。その結果、ビデオの品質が低下する可能性があります。つまり、250 Kbps のビデオデータレートの場合、320 x 240 の解像度では高品質の表示が可能ですが、640 x 480 の解像度では高品質の表示は期待できません。
 
-一般に、使用するデータレートが高いほど、ビデオの外観が良くなり、使用する解像度が高いほど、（解像度が低い場合と比べて）表示品質を維持する必要があるデータレートが高くなります。
+一般に、高いデータレートを使用するほど、ビデオの画質は良くなり、高い解像度を使用するほど、その画質を維持するために必要になるデータレートも（解像度が低い場合と比較して）増加します。
 
 解像度とデータレートには関連があるので、ビデオをエンコードする際には次の 2 つの方法から選択できます。
 
@@ -423,20 +423,20 @@ Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセッ�
 
 ## YouTube へのビデオの公開 {#publishing-videos-to-youtube}
 
-オンプレミスのExperience Managerビデオアセットを、以前に作成したYouTubeチャネルに直接公開できます。
+以前作成した YouTube チャンネルに、オンプレミス Experience Manager ビデオアセットを直接公開できます。
 
 ビデオアセットを YouTube に公開するには、タグを使用して Experience Manager Assets をセットアップします。これらのタグを YouTube チャンネルに関連付けます。ビデオアセットのタグが YouTube チャンネルのタグと一致する場合、ビデオが YouTube に公開されます。YouTube への公開は、関連するタグが使用されている限り、ビデオの通常公開と一緒に行われます。
 
 YouTube は独自のエンコーディングを行います。そのため、Experience Manager にアップロードされた元のビデオファイルは、Dynamic Media のエンコードで作成されたビデオレンディションではなく YouTube に公開されます。Dynamic Media を使用してビデオを処理する必要はありませんが、再生にビューアプリセットが必要な場合は、それが行われます。
 
-ビデオ処理プロファイルをスキップして YouTube に直接公開すると、Experience Manager Assets のビデオアセットに対して、表示可能なサムネールが作成されません。また、 `dynamicmedia` または `dynamicmedia_scene7` 実行モード、エンコードされていないビデオは、Dynamic Mediaのアセットタイプのいずれでも機能しません。
+ビデオ処理プロファイルをスキップして YouTube に直接公開すると、Experience Manager Assets のビデオアセットに対して、表示可能なサムネールが作成されません。また、 `dynamicmedia` または `dynamicmedia_scene7` 実行モードで実行する場合、エンコードされていないビデオは、どの Dynamic Media アセットタイプとも機能しません。
 
-ビデオアセットの YouTube サーバーへの公開において、YouTube との安全でセキュアなサーバー間認証をおこなうには、次のタスクを実行する必要があります。
+ビデオアセットの YouTube サーバーへの公開において、YouTube との安全でセキュアなサーバー間認証を行うには、次のタスクを実行する必要があります。
 
 1. [Google Cloud の設定](#configuring-google-cloud-settings)
 1. [YouTube チャンネルの作成](#creating-a-youtube-channel)
 1. [公開用タグの追加](#adding-tags-for-publishing)
-1. [YouTube Publish レプリケーションエージェントの有効化](#enabling-the-youtube-publish-replication-agent)
+1. [YouTube への公開のレプリケーションエージェントを有効にする](#enabling-the-youtube-publish-replication-agent)
 1. [Experience Manager での YouTube のセットアップ](#setting-up-youtube-in-aem)
 1. [（オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
 1. [YouTube チャンネルへのビデオの公開](#publishing-videos-to-your-youtube-channel)
@@ -476,7 +476,7 @@ Google Cloud を設定するには：
 
 1. 新しいプロジェクトダイアログボックスで、「プロジェクト名」フィールドに新しいプロジェクトの名前を入力します。
 
-   プロジェクト ID は、プロジェクト名に基づいて付けられます。そのため、プロジェクト名は慎重に選んでください。プロジェクト名を後で変更することはできません。また、後でYouTubeをExperience Managerに設定する際には、同じプロジェクト ID を再度入力する必要があります。書き留めることを考えてみて下さい
+   プロジェクト ID は、プロジェクト名に基づいて付けられます。そのため、プロジェクト名は慎重に選んでください。プロジェクト名を後で変更することはできません。また、このプロジェクト ID は、後で Experience Manager で YouTube をセットアップする際にも入力する必要があるため、記録しておくことをお勧めします。
 
 1. 「**[!UICONTROL 作成]**」をクリックします。
 
@@ -501,7 +501,7 @@ Google Cloud を設定するには：
 
    * 「**[!UICONTROL 使用する API]**」ドロップダウンリストから、「**[!UICONTROL YouTube Data API v3]**」を選択します。
 
-   * 「**[!UICONTROL API を呼び出す場所]** ドロップダウンリストで、「 **[!UICONTROL Web サーバー（node.js、Tomcat など）]**
+   * 「**[!UICONTROL API を呼び出す場所]**」ドロップダウンリストから、「**[!UICONTROL web サーバー（node.js、Tomcat など）]**」を選択します。
 
    * 「**[!UICONTROL アクセスするデータの種類]**」ドロップダウンリストから、「**[!UICONTROL ユーザーデータ]**」を選択します。
 
@@ -515,7 +515,7 @@ Google Cloud を設定するには：
 
    例：`https://1a2b3c.mycompany.com:4321`
 
-   **注意**:上記のパスの例は、デモ目的でのみ使用されています。
+   **注意**：上記のパスはデモ用の例です。
 
    ![6_5_googleaccount-apis-createcredentials-oauth](assets/6_5_googleaccount-apis-createcredentials-oauth.png)
 
@@ -525,7 +525,7 @@ Google Cloud を設定するには：
 
    例：`https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   **注意**:上記のパスの例は、デモ目的でのみ使用されています。
+   **注意**：上記のパスはデモ用の例です。
 
 1. 「**[!UICONTROL OAuth クライアント ID の作成]**」をクリックします。
 1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 3 で、「**[!UICONTROL OAuth 2.0 同意画面を設定する]**」の下で、現在使用している Gmail 電子メールアドレスを選択します。
@@ -534,7 +534,7 @@ Google Cloud を設定するには：
 
 1. 「**[!UICONTROL ユーザーに表示される製品名]**」の下のテキストフィールドに、同意画面に表示する内容を入力します。
 
-   同意画面は、ユーザーがYouTubeに対して認証を行うと、Experience Manager管理者に対して表示されます。Experience ManagerがYouTubeにアクセスして権限を取得します。
+   同意画面は、Experience Manager 管理者が YouTube の認証をおこなう際に表示され、Experience Manager は YouTube に権限を要求します。
 
 1. 「**[!UICONTROL 続行]**」をクリックします。
 1. プロジェクトへの認証情報の追加ページの手順 4 で、「**[!UICONTROL 認証情報をダウンロードする]**」の下の「**[!UICONTROL ダウンロード]**」をタップします。
@@ -555,39 +555,39 @@ YouTube にビデオを公開するには、1 つ以上のチャンネルが必�
 
 >[!WARNING]
 >
->*Experience Manager* の「YouTube 設定」にチャンネルを追加する前に、YouTube のチャンネルを 1 つ以上セットアップ済みであることを確認してください（以下の [Experience Manager での YouTube のセットアップ](#setting-up-youtube-in-aem)を参照してください）。1 つ以上のチャネルを設定しなかった場合、存在しないチャネルに関する警告は表示されません。 ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
+>*Experience Manager* の「YouTube 設定」にチャンネルを追加する前に、YouTube のチャンネルを 1 つ以上セットアップ済みであることを確認してください（以下の [Experience Manager での YouTube のセットアップ](#setting-up-youtube-in-aem)を参照してください）。1 つ以上のチャネルのセットアップに失敗しても、存在しないチャネルに関する警告は表示されません。ただし、それでも、チャネルを追加する際に Google 認証がおこなわれますが、ビデオの送信先となるチャネルを選択するオプションがありません。
 
 **YouTube チャンネルを作成するには：**
 
 1. [https://www.youtube.com](https://www.youtube.com/) にアクセスし、Google アカウントの資格情報を使用してログインします。
-1. YouTubeページの右上隅で、プロフィール画像（内側に文字として表示される、べた塗りの円が付いている場合はその円）をクリックし、 **[!UICONTROL YouTube設定]** （丸い歯車アイコン）。
-1. 概要ページの「その他の機能」の下で、 **[!UICONTROL すべてのチャネルを表示するか、チャネルを作成します]**.
+1. YouTube ページの右上隅にあるプロフィール写真（内側に文字が表示された、べた塗りの円が表示されている場合はその円）をクリックし、「**[!UICONTROL YouTube 設定]**」（丸い歯車アイコン）をクリックします。
+1. 概要ページの「その他の機能」見出しで、「**[!UICONTROL チャンネルをすべて表示するか、新しいチャンネルを作成する]**」をクリックします。
 1. チャネルページで、「**[!UICONTROL 新しいチャネルを作成]**」をクリックします。
 1. ブランドアカウントページで、「ブランドアカウント名」フィールドに、ビジネス名や、ビデオアセットの公開先となる他のチャネル名を入力し、「**[!UICONTROL 作成]**」をクリックします。
 
-   ここに入力した名前は、Experience ManagerでYouTubeを設定する際に再度入力する必要があるので、覚えておいてください。
+   ここで入力する名前は、Experience Manager で YouTube をセットアップするときに再度入力する必要があるので、覚えておいてください。
 
 1. （オプション）必要に応じて、さらにチャンネルを追加します。
 
-   次に、公開用のタグを追加します。
+   次は、公開用タグを追加します。
 
 ### 公開用タグの追加 {#adding-tags-for-publishing}
 
-Experience Manager で、YouTube にビデオを公開するには、1 つ以上の YouTube チャンネルにタグを関連付けます。公開用のタグを追加するには、 [タグの管理](/help/sites-administering/tags.md).
+Experience Manager で、YouTube にビデオを公開するには、1 つ以上の YouTube チャンネルにタグを関連付けます。公開用タグの追加については、[タグを管理](/help/sites-administering/tags.md)を参照してください。
 
-また、Experience Managerでデフォルトのタグを使用する場合は、このタスクをスキップして、 [YouTube Publish レプリケーションエージェントの有効化](#enabling-the-youtube-publish-replication-agent).
+また、Experience Manager のデフォルトのタグを使用する場合は、このタスクをスキップして、次の [YouTube への公開のレプリケーションエージェントを有効にする](#enabling-the-youtube-publish-replication-agent)に進んでください。
 
-### YouTube Publish レプリケーションエージェントの有効化 {#enabling-the-youtube-publish-replication-agent}
+### YouTube への公開のレプリケーションエージェントを有効にする {#enabling-the-youtube-publish-replication-agent}
 
-YouTube への公開のレプリケーションエージェントを有効化した後、Google Cloud アカウントへの接続をテストする場合は、「**[!UICONTROL 接続をテスト]**」をタップします。ブラウザーのタブに接続結果が表示されます。YouTubeチャネルを追加した場合は、その一覧がテストの一部として表示されます。
+YouTube への公開のレプリケーションエージェントを有効化した後、Google Cloud アカウントへの接続をテストする場合は、「**[!UICONTROL 接続をテスト]**」をタップします。ブラウザーのタブに接続結果が表示されます。YouTube チャンネルを追加した場合は、それらの一覧がテストの一部として表示されます。
 
-1. Experience Managerの左上隅にあるExperience Managerロゴをクリックし、左側のレールで「 **[!UICONTROL ツール]** > **[!UICONTROL 導入]** > **[!UICONTROL レプリケーション]** > **[!UICONTROL 作成者のエージェント]**.
-1. 作成者のエージェントページで、 **[!UICONTROL YouTube Publish]**.
+1. Experience Manager の左上隅にある Experience Manager ロゴをクリックし、左側のレールで&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL デプロイメント]**／**[!UICONTROL レプリケーション]**／**[!UICONTROL 作成者のエージェント]**&#x200B;をクリックします。
+1. 作成者のエージェントページで、「**[!UICONTROL YouTube の公開]**」をクリックします。
 1. ツールバーで、「設定」の右側にある「**[!UICONTROL 編集]**」をクリックします。
-1. を選択します。 **[!UICONTROL 有効]** チェックボックスをオンにして、レプリケーションエージェントをオンにできます。
+1. 「**[!UICONTROL 有効]**」チェックボックスをオンにして、レプリケーションエージェントを有効にします。
 1. 「**[!UICONTROL OK]**」をクリックします。
 
-   次に、Experience ManagerでYouTubeを設定します。
+   次に、Experience Manager で YouTube チャンネルをセットアップします。
 
 ### Experience Manager での YouTube のセットアップ {#setting-up-youtube-in-aem}
 
@@ -599,13 +599,13 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 #### Experience Manager 6.4 以降での YouTube のセットアップ {#setting-up-youtube-in-aem-and-later}
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
-1. 左上隅のExperience Managerロゴをタップし、左側のレールでをタップします。 **[!UICONTROL ツール]**（ハンマーのアイコン） > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]**.
+1. 左上隅にある Experience Manager ロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL Cloud Services]**／**[!UICONTROL YouTube 公開設定]**&#x200B;をタップします。
 1. 「**[!UICONTROL グローバル]**」をタップします（選択しないでください）。
 
 1. グローバルページの右上隅にある「**[!UICONTROL 作成]**」をタップします。
 1. YouTube 設定を作成ページの「Google Cloud Platform 設定」で、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
-   このプロジェクト ID は、先ほど Google Cloud 設定を行ったときに指定したものです。「 YouTube設定を作成」ページを開いたままにします。すぐに戻ってきます
+   このプロジェクト ID は、先ほど Google Cloud 設定を行ったときに指定したものです。YouTube 設定を作成ページを開いたままにしておきます。このページには後で戻ります。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -633,8 +633,8 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    次に、タグを公開用にセットアップします。
 
 1. **[!UICONTROL 公開用タグの設定]** - Cloud Services／YouTube ページで、鉛筆アイコンをタップして、使用するタグのリストを編集します。
-1. ドロップダウンリストアイコン（上下逆のキャレット）をタップすると、使用可能なタグのリストをExperience Managerで表示できます。
-1. 1 つ以上のタグをタップして追加できます。
+1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、Experience Manager で利用可能なタグのリストを表示します。
+1. 1 つ以上のタグをタップして追加します。
 
    追加したタグを削除するには、そのタグを選択して、「**[!UICONTROL X]**」をタップします。
 
@@ -646,13 +646,13 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 1. Dynamic Media のインスタンスに管理者としてログインしてください。
 
-1. 左上隅のExperience Managerロゴをタップし、左側のレールでをタップします。 **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL 導入]** > **[!UICONTROL Cloud Services]**.
+1. 左上隅にある Experience Manager ロゴをタップし、左のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL デプロイメント]**／**[!UICONTROL クラウドサービス]**&#x200B;をタップします。
 1. 「サードパーティのサービス」ヘッダーの下の「YouTube」で、「**[!UICONTROL 今すぐ設定]**」をタップします。
 1. 設定を作成ダイアログボックスで、タイトル（必須）と名前（オプション）をそれぞれのフィールドに入力します。
 1. 「**[!UICONTROL 作成]**」をタップします。
 1. YouTube アカウント設定ダイアログボックスで、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
-   このプロジェクト ID は、先ほど [Google Cloud 設定を行った](/help/assets/video.md#configuring-google-cloud-settings)ときに指定したものです。[ YouTube Account Setting ] ダイアログ・ボックスを開いたままにします。すぐに戻ってきます
+   このプロジェクト ID は、先ほど [Google Cloud 設定を行った](/help/assets/video.md#configuring-google-cloud-settings)ときに指定したものです。YouTube アカウント設定ダイアログボックスを開いたままにしておきます。このダイアログボックスには後で戻ります。
 
 1. 任意のテキストエディターを使用して、「Google Cloud 設定」のタスクでダウンロードして保存しておいた JSON ファイルを開きます。
 1. この JSON テキスト全体を選択してコピーします。
@@ -678,8 +678,8 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    次に、タグを公開用にセットアップします。
 
 1. **[!UICONTROL 公開用タグの設定]** - Cloud Services／YouTube ページで、鉛筆アイコンをタップして、使用するタグのリストを編集します。
-1. ドロップダウンリストアイコン（上下逆のキャレット）をタップすると、使用可能なタグのリストをExperience Managerで表示できます。
-1. 1 つ以上のタグをタップして追加できます。
+1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、Experience Manager で利用可能なタグのリストを表示します。
+1. 1 つ以上のタグをタップして追加します。
 
    追加したタグを削除するには、そのタグを選択して、「**X**」をタップします。
 
@@ -689,16 +689,16 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 ### （オプション）アップロードしたビデオのデフォルト YouTube プロパティ設定の自動化 {#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos}
 
-オプションで、Experience Managerでメタデータ処理プロファイルを作成することで、ビデオのアップロード時にYouTubeプロパティを自動設定できます。
+ビデオのアップロード時に YouTube プロパティの設定を自動化することもできます。それには、Experience Manager でメタデータ処理プロファイルを作成します。
 
 メタデータ処理プロファイルを作成するには、まず「**[!UICONTROL フィールドラベル]**」、「**[!UICONTROL プロパティにマッピング]**」、「**[!UICONTROL 選択肢]**」の各フィールドの値をコピーします。これらはすべてビデオのメタデータスキーマで見つかります。次に、これらの値を追加して、YouTube ビデオメタデータ処理プロファイルを作成します。
 
 アップロードしたビデオのデフォルト YouTube プロパティの設定を自動化するには：
 
-1. 左上隅のExperience Managerロゴをタップし、左側のレールで **[!UICONTROL ツール]** （ハンマーのアイコン） > **[!UICONTROL Assets]** > **[!UICONTROL メタデータスキーマ]**.
+1. 左上隅にある Experience Manager ロゴをタップし、左のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL メタデータスキーマ]**&#x200B;をクリックします。
 1. 「**[!UICONTROL デフォルト値]**」をクリックします（「デフォルト値」の左側にある選択ボックスにチェックマークを追加しないでください）。
-1. の **[!UICONTROL デフォルト]** ページで、 **[!UICONTROL ビデオ]**&#x200B;次に、 **[!UICONTROL 編集]**.
-1. メタデータスキーマエディターページで、 **[!UICONTROL 詳細]** タブをクリックします。
+1. **[!UICONTROL デフォルト値]**&#x200B;ページで、「**[!UICONTROL ビデオ]**」の左側にあるボックスをオンにし、「**[!UICONTROL 編集]**」をタップします。
+1. メタデータスキーマエディターページで、「**[!UICONTROL 詳細]**」タブをタップします。
 1. 「YouTube への公開」の下で、「**[!UICONTROL YouTube カテゴリ]**」をクリックします。
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
@@ -706,7 +706,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
    * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値（「人とブログ」または「科学と技術」など）を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
 
-1. 「YouTubeパブリッシング」の見出しの下で、をタップします。 **[!UICONTROL YouTube Privacy]**.
+1. 「YouTube への公開」の見出し下にある「**[!UICONTROL YouTube のプライバシー]**」をタップします。
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。コピーした値を、開いているテキストエディターに貼り付けます。後でメタデータ処理プロファイルを作成するときにこの値が必要になります。テキストエディターは開いたままにしておきます。
@@ -727,7 +727,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    * （オプション）ページの右側にある「設定」タブで、「フィールドラベル」テキストフィールドに「`YouTube Publishing`」と入力します。
    * 「**[!UICONTROL フォームを作成]**」タブをクリックし、「**[!UICONTROL 複数値テキスト]**」というラベルのコンポーネントをドラッグして、作成した「**[!UICONTROL YouTube への公開]**」の下にドロップします。
 
-   * クリック **[!UICONTROL フィールドラベル]** コンポーネントが選択されます。
+   * **[!UICONTROL フィールドラベル]**&#x200B;をクリックし、コンポーネントを選択します。
    * ページの右側にある「設定」タブで、先ほどコピーした「YouTube への公開」の値（フィールドラベル値と、プロパティにマッピング値）をフォームのそれぞれのフィールドに貼り付けます。選択肢値を「デフォルト値」フィールドに貼り付けます。
 
 1. 次の手順を実行して、コピーした「YouTube のプライバシー」の値を、プロファイルに追加します。
@@ -738,7 +738,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
    * （オプション）ページの右側にある「設定」タブで、「フィールドラベル」テキストフィールドに「`YouTube Privacy`」と入力します。
    * 「**[!UICONTROL フォームを作成]**」タブをクリックし、「**[!UICONTROL 複数値テキスト]**」というラベルのコンポーネントをドラッグして、作成した「**[!UICONTROL YouTube のプライバシー]**」の下にドロップします。
 
-   * クリック **[!UICONTROL フィールドラベル]** コンポーネントが選択されます。
+   * **[!UICONTROL フィールドラベル]**&#x200B;をクリックし、コンポーネントを選択します。
    * ページの右側にある「設定」タブで、先ほどコピーした「YouTube への公開」の値（フィールドラベル値と、プロパティにマッピング値）をフォームのそれぞれのフィールドに貼り付けます。選択肢値を「デフォルト値」フィールドに貼り付けます。
 
 1. ページの右上隅にある「**[!UICONTROL 保存]**」をクリックします。
@@ -752,7 +752,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 >[!NOTE]
 >
->Dynamic Media - Scene7モードで実行している場合、即座に公開しても、YouTubeに自動的に公開されません。 Dynamic Media - Scene7 モードが設定されている場合は、**[!UICONTROL 即時]**&#x200B;と&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;の 2 つの公開オプションがあります。 
+>Dynamic Media - Scene7 モードで実行する場合は、即時公開しても YouTube に自動的には公開されません。Dynamic Media - Scene7 モードが設定されている場合は、**[!UICONTROL 即時]**&#x200B;と&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;の 2 つの公開オプションがあります。 
 >
 >**[!UICONTROL 即時公開する]**&#x200B;の場合、アップロードされたアセットは、IPS と同期された後、配信システムに自動的に公開されます。これは Dynamic Media には当てはまりますが、YouTube には当てはまりません。YouTube に公開するには、Experience Manager オーサーを介して公開する必要があります。
 
@@ -778,7 +778,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 1. ビデオのプロパティページの右上隅にある「**[!UICONTROL 保存して閉じる]**」をクリックします。
 1. ツールバーの「**[!UICONTROL クイック公開]**」をクリックします。
 
-   [Experience Manager Sites での公開管理の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)も参照してください。
+   [Experience Manager Sites での公開管理の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html?lang=ja)も参照してください。
 
    オプションで、YouTube チャンネルで公開済みビデオを確認できます。
 
@@ -790,9 +790,9 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 公開にかかる時間は、プライマリソースビデオの形式、ファイルサイズ、アップロードトラフィックなどの多数の要因により左右されます。公開プロセスにかかる時間は、数分から数時間までの幅があります。また、高解像度の形式の方が、レンダリングの時間が長くなります。例えば、720p や 1080p の場合、表示されるまでの時間が 480p よりも長くなります。
 
-8 時間後に、 **[!UICONTROL アップロード済み（処理中、お待ちください）]**&#x200B;で、ビデオをAdobeのサイトから削除して、もう一度アップロードしてみてください。
+8 時間経っても「**[!UICONTROL アップロード済み（処理しています、お待ちください）]**」というステータスメッセージが表示される場合は、アドビのサイトからビデオを削除して再度アップロードしてみてください。
 
-### YouTube URL を Web アプリケーションにリンクする {#linking-youtube-urls-to-your-web-application}
+### Web アプリケーションへの YouTube URL のリンク {#linking-youtube-urls-to-your-web-application}
 
 ビデオの公開後、Dynamic Media によって生成された YouTube URL 文字列を取得できます。YouTube URL をコピーしたらクリップボードに配置されるので、必要に応じて Web サイトのページまたはアプリケーションに貼り付けることができます。
 
@@ -802,7 +802,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 **Web アプリケーションに YouTube URL をリンクするには：**
 
-1. URL のコピー先となる、*YouTube への公開済み*&#x200B;ビデオアセットの場所に移動して選択します。
+1. URL のコピー先となる、 *YouTube への公開済み* ビデオアセットの場所に移動して選択します。
 
    YouTube URL をコピーするには、*その前に*&#x200B;ビデオアセットを YouTube に&#x200B;*公開しておく*&#x200B;必要があります。
 
@@ -828,14 +828,14 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 1. YouTube チャンネルで非公開にするビデオアセットの場所に移動します。
 1. アセット選択モードで、1 つ以上の公開済みビデオアセットを選択します。
-1. ツールバーで「**[!UICONTROL 公開を管理]**」をクリックします。3 つのドットのアイコン (..) ツールバー上で **[!UICONTROL 公開を管理]** が開きます。
+1. ツールバーで「**[!UICONTROL 公開を管理]**」をクリックします。3 点ドット（...）アイコンをタップします。ツールバーにあるので、**[!UICONTROL パブリケーションの管理]**&#x200B;が開きます。
 1. 公開を管理ページで、「**[!UICONTROL 非公開]**」をタップします。
 1. ページの右上隅にある「**[!UICONTROL 次へ]**」をタップします。
 1. ページの右上隅にある「**[!UICONTROL 非公開]**」をタップします。
 
-## ビデオエンコーディングと YouTube への公開の進行状況の監視 {#monitoring-video-encoding-and-youtube-publishing-progress}
+## ビデオエンコーディングと YouTube への公開の進行状況を監視 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-ビデオエンコーディングが適用されているフォルダーに新しいビデオをアップロードする場合、またはYouTubeにビデオを公開する場合、ビデオエンコーディング/YouTube への公開の進行状況を監視できます。 YouTube への公開の実際の進行状況は、ログでのみ確認できます。ただし、失敗または成功は、次の手順で説明するその他の方法で表示されます。 さらに、YouTube の公開ワークフローやビデオエンコーディングが完了するか中断されると、そのことを知らせる電子メール通知も受け取ります。
+ビデオエンコーディングが適用されたフォルダーに新しいビデオをアップロードしたり、YouTube にビデオを公開したりする場合は、ビデオエンコーディング／YouTube への公開の進行状況を監視できます。YouTube への公開の実際の進行状況は、ログによってのみ確認できます。ただし、その失敗または成功は、次の手順で説明する追加の方法で一覧表示されます。さらに、YouTube の公開ワークフローやビデオエンコーディングが完了するか中断されると、そのことを知らせる電子メール通知を受け取ります。
 
 ### 進行状況の監視 {#monitoring-progress}
 
@@ -857,7 +857,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    ![chlimage_1-432](assets/chlimage_1-432.png)
 
-   エンコーディングなどのワークフロー情報がタイムラインに表示されます。 YouTube の公開の場合、ワークフロータイムラインには、YouTube チャンネルの名前と YouTube ビデオの URL も含まれます。さらに、パブリッシュが完了すると、ワークフロータイムラインには、エラー通知も表示されます。
+   エンコーディングなどのワークフロー情報がタイムラインに表示されます。YouTube の公開の場合、ワークフロータイムラインには、YouTube チャンネルの名前と YouTube ビデオの URL も含まれます。さらに、パブリッシュが完了すると、ワークフロータイムラインには、エラー通知も表示されます。
 
    >[!NOTE]
    >
@@ -878,7 +878,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    ![chlimage_1-433](assets/chlimage_1-433.png)
 
-   インスタンスを選択し、 **[!UICONTROL 履歴を開く]**.
+   インスタンスを選択し、「**[!UICONTROL 履歴を開く]**」をタップします。
 
    ![chlimage_1-434](assets/chlimage_1-434.png)
 
@@ -916,7 +916,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 1. 中止またはエラーが発生したワークフロージョブに関する電子メール通知を受け取ります。これらの電子メール通知は、管理者が設定できます。詳しくは、[電子メール通知の設定](#configuring-e-mail-notifications)を参照してください。
 
-#### 電子メール通知を設定する {#configuring-e-mail-notifications}
+#### 電子メール通知の設定 {#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
@@ -924,18 +924,18 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 通知の設定方法は、エンコーディングジョブに関する通知と、YouTube への公開ジョブに関する通知のどちらを希望しているかによって異なります。
 
-* エンコーディングジョブの場合は、で、すべてのExperience Managerワークフローの電子メール通知の設定ページにアクセスできます。 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL Web コンソール]** そして、次を検索して **[!UICONTROL Day CQ Workflow Email Notification Service]**. 詳しくは、 [電子メール通知をExperience Manager](/help/sites-administering/notification.md). 次の項目のチェックボックスをオンまたはオフにできます。 **[!UICONTROL 中止時に通知]** または **[!UICONTROL 完了時に通知]** 従って
+* エンコーディングジョブの場合、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL web コンソール]**&#x200B;を選択して、**[!UICONTROL Day CQ Workflow Email Notification Service]** を検索することで、すべての Experience Manager ワークフロー電子メール通知の設定ページにアクセスできます。[Experience Manager で電子メール通知を設定](/help/sites-administering/notification.md)を参照してください。「**[!UICONTROL Notify on Abort]**」または「**[!UICONTROL Notify on Complete]**」のチェックボックスをオン／オフにできます。
 
 * YouTube への公開ジョブの場合、次の手順に従います。
 
-1. Experience Managerで、 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**.
+1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;をタップします。
 1. ワークフローモデルページで、「]**YouTube に公開**[!UICONTROL 」を選択して、ツールバーの「]**編集**[!UICONTROL 」をタップします。
 1. YouTube に公開ワークフローページの右上隅にある「**[!UICONTROL 編集]**」をタップします。
 1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回タップしてインラインツールバーを表示します。
 
    ![6_5_publishtoyoutubeworkflow](assets/6_5_publishtoyoutubeworkflow.png)
 
-1. インラインツールバーで、設定アイコン（レンチ）をタップします。次をクリック： **[!UICONTROL 引数]** タブをクリックします。
+1. インラインツールバーで、設定アイコン（レンチ）をタップします。「**[!UICONTROL 引数]**」タブをクリックします。
 
    ![6_5_publishtoyoutubeworkflow-configurationicon](assets/6_5_publishtoyoutubeworkflow-configurationicon.png)
 
@@ -949,13 +949,13 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    * 公開の失敗
    * 公開の完了（チャネルと URL に関する情報を含む）
 
-   チェックボックスをオフにした場合、指定した電子メール通知がYouTubeパブリッシュワークフローから受け取られないことを意味します。
+   チェックボックスをオフにすると、YouTube の公開ワークフローから指定された電子メール通知は届きません。
 
    >[!NOTE]
    >
-   >これらの電子メールは YouTube に固有で、かつ一般的なワークフロー電子メール通知です。その結果、2 組の電子メール通知を受け取ることができます。この通知は、 **[!UICONTROL Day CQ Workflow Email Notification Service]** およびYouTube固有のものは、設定に応じて異なります。
+   >これらの電子メールは YouTube に固有で、かつ一般的なワークフロー電子メール通知です。結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つの電子メール通知セットを受け取ることができます。
 
-1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;]**完了**[!UICONTROL &#x200B;アイコン（チェックマーク）をタップします。
+1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;**[!UICONTROL 完了]**&#x200B;アイコン（チェックマーク）をタップします。
 1. YouTube に公開ワークフローページで、右上隅にある「**[!UICONTROL 同期]**」をタップします。
 
 ## ビデオレポートの表示 {#viewing-video-reports}
@@ -964,7 +964,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 >
 >ビデオレポートを使用できるのは、Dynamic Media - ハイブリッドモードを実行している場合のみです。
 
-ビデオレポートには、指定した時間に複数の集計指標が表示され、公開された個々のビデオと集計ビデオのパフォーマンスが期待どおりであるかを監視するのに役立ちます。 次の上位指標データは、Web サイト全体で公開されているすべてのビデオについて集計されます。
+ビデオレポートは、指定した時間にわたるいくつかの集計指標を表示し、*公開された*個別および集計ビデオが期待通りに実行されていることを監視するのに役立ちます。次の上位指標データは、Web サイト全体で公開されているすべてのビデオについて集計されます。
 
 * ビデオ開始
 * 完了率
@@ -978,7 +978,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 ビデオが Adobe Experience Manager Dynamic Media 以外でエンコードされた場合、オーディエンス保持（ドロップオフ）グラフおよび表内の再生率データは利用できません。
 
-関連トピック [Dynamic MediaCloud Services](/help/assets/config-dynamic.md).
+[Dynamic Media クラウドサービスの設定](/help/assets/config-dynamic.md)も参照してください。
 
 >[!NOTE]
 >
@@ -986,29 +986,29 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 デフォルトでは、ビデオレポートを最初に開いたときに、今月初めから今月の今日の日付までのビデオデータが表示されます。ただし、このデフォルトの日付範囲を上書きして、独自の日付範囲を指定することができます。次回ビデオレポートを開くと、指定した日付範囲が使用されます。
 
-ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、この機能を使用するには、パブリッシュサーバーが既に設定されている必要があります。 パブリッシュサーバーがセットアップされていない場合でも、公開してビデオレポートを確認することはできます。ただし、その際には Dynamic Media クラウド設定に戻って「**[!UICONTROL OK]**」をタップする必要があります。
+ビデオレポートの正常動作のために、Dynamic Media Cloud Services の設定時に、レポートスイート ID が自動的に作成されます。そのときに、そのレポートスイート ID がパブリッシュサーバーにプッシュされ、アセットのプレビューの際に URL のコピー機能で使用できるようになります。ただし、この機能を使用するには、公開サーバーが既に設定されている必要があります。パブリッシュサーバーがセットアップされていない場合でも、公開してビデオレポートを確認することはできます。ただし、その際には Dynamic Media クラウド設定に戻って「**[!UICONTROL OK]**」をタップする必要があります。
 
 **ビデオレポートを表示するには：**
 
 1. Experience Manager の左上隅にある Experience Manager ロゴをタップし、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL ビデオレポート]**&#x200B;をタップします。
 1. ビデオレポートページで、次のいずれかの操作を行います。
 
-   * 右上付近にある&#x200B;**ビデオレポートを更新**&#x200B;アイコンをタップします。「更新」は、レポートの終了日が現在の日付の場合にのみ使用します。 これにより、前回のレポート実行以降に発生したビデオトラッキングを確認できます。
+   * 右上付近にある&#x200B;**ビデオレポートを更新**&#x200B;アイコンをタップします。「更新」を使用するのは、レポートの終了日が今日の日付である場合のみです。これにより、前回のレポート実行以降に発生したビデオトラッキングを確認できます。
 
    * 右上付近にある&#x200B;**日付選択**アイコンをタップします。
 ビデオデータを表示する開始日と終了日の範囲を指定し、「**[!UICONTROL レポートを実行]**」をタップします。
 
-   「トップの指標」グループボックスに、サイト全体にわたるすべての公開済みビデオに関する様々な集計値が表示されます。**
+   「トップの指標」グループボックスに、サイト全体にわたるすべての&#x200B;*公開済み*&#x200B;ビデオに関する様々な集計値が表示されます。
 
 1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
 
-### Dynamic Media Viewer5 Viewer SDK を使用して作成したビデオビューアに基づいて、ビデオレポートをHTMLします。 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
+### Dynamic Media HTML5 ビューア SDK を使用して作成したビデオビューアに基づいたビデオレポートの表示 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
-Dynamic Mediaが提供する標準提供のビデオビューアを使用している場合、または標準提供のビデオビューアに基づいてカスタムビューアプリセットを作成した場合、ビデオレポートを表示するための追加手順は必要ありません。 ただし、HTML5 Viewer SDK API をベースにして独自のビデオビューアを作成した場合は、次の手順を実行して、ビデオビューアがDynamic Mediaビデオレポートにトラッキングイベントを送信していることを確認します。
+Dynamic Media で標準提供されているビデオビューアを使用している場合、または標準提供のビデオビューアからカスタムのビューアプリセットを作成した場合は、ビデオレポートを表示するために必要な追加手順はありません。ただし、HTML5 ビューア SDK API から独自のビデオビューアを作成した場合は、次の手順を実行して、ビデオビューアが Dynamic Media のビデオレポートにトラッキングイベントを確実に送信するようにしてください。
 
-以下を使用： [AdobeDynamic Mediaビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja) そして [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) をクリックして、独自のビデオビューアを作成します。
+独自のビデオビューアを作成するには、[Adobe Dynamic Media ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)および [HTML5 ビューア SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) を参照します。
 
-**Dynamic Media Viewer5 Viewer SDK を使用して作成したビデオビューアに基づくビデオレポートを表示するには、次の手順を実行します。**
+**Dynamic Media HTML5 ビューア SDK を使用して作成したビデオビューアに基づいてビデオレポートを表示するには：**
 
 1. 公開済みビデオアセットの場所に移動します。
 1. アセットのページの左上隅付近にある、ドロップダウンリストで「**[!UICONTROL ビューア]**」を選択します。
@@ -1025,8 +1025,7 @@ Dynamic Mediaが提供する標準提供のビデオビューアを使用して�
 
    * 最初に、`&preset` パラメーターが必要かどうかを判断します。
 
-
-      この `config2` パラメータは `companypreset`、 *not* 必要 `&preset=parameter`.
+      `config2` パラメーターが `companypreset` の場合、`&preset=parameter` は&#x200B;*不要*&#x200B;です。
 
       `config2` がその他の場合は、プリセットパラメーターを `config2` パラメーターと同じに設定します。例えば、`config2=companypreset-2` の場合、`&param2=companypreset-2` を AppMeasurmentBridge.jsp の URL に追加します。
 
@@ -1036,19 +1035,19 @@ Dynamic Mediaが提供する標準提供のビデオビューアを使用して�
 
 1. 次の操作をおこなって、TrackingManager コンポーネントを作成します。
 
-   * 通話後 `s7sdk.Util.init();`、次の行を追加して、イベントを追跡する TrackingManager インスタンスを作成します。
+   * `s7sdk.Util.init();` を呼び出した後で、次のコードを追加して、イベントを追跡する TrackingManager インスタンスを作成します。
 
       `var trackingManager = new s7sdk.TrackingManager();`
 
-   * 次の手順を実行して、コンポーネントを TrackingManager に接続します。
+   * 以下を行って、TrackingManager にコンポーネントを接続します。
 
-      内 `s7sdk.Event.SDK_READY` イベントハンドラーを使用して、追跡するコンポーネントを TrackingManager にアタッチします。
+      `s7sdk.Event.SDK_READY` イベントハンドラーで、追跡するコンポーネントを TrackingManager に関連付けます。
 
       例えば、コンポーネントが `videoPlayer` の場合、
 
       `trackingManager.attach(videoPlayer);`
 
-       を追加して、コンポーネントを trackingManager にアタッチします。ページ上の複数のビューアを追跡するには、複数のトラッキングマネージャーコンポーネントを使用します。
+      追加して、コンポーネントを trackingManager に関連付けます。ページ上の複数のビューアを追跡するには、複数のトラッキングマネージャーコンポーネントを使用します。
 
    * 次のコードを追加して、AppMeasurementBridge オブジェクトを作成します。
 
@@ -1066,21 +1065,21 @@ Dynamic Mediaが提供する標準提供のビデオビューアを使用して�
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-## ビデオへのクローズドキャプションまたはサブタイトルの追加 {#adding-captions-to-video}
+## ビデオへのキャプションまたはサブタイトルの追加 {#adding-captions-to-video}
 
-クローズドキャプションを単一のビデオまたはアダプティブビデオセットに追加することで、ビデオのリーチをグローバル市場に拡大できます。 クローズドキャプションを追加することで、オーディオのダビングが不要になったり、ネイティブスピーカーを使用して異なる言語ごとにオーディオを再録音する必要がなくなります。 ビデオは録画された言語で再生されます。外国語のサブタイトルが表示されるので、違う言語の視聴者も音声部分を理解できます。
+クローズドキャプションを 1 つのビデオまたはアダプティブビデオセットに追加することにより、ビデオの配信先をグローバルマーケットまで拡大できます。クローズドキャプションを追加すると、音声を吹き替る必要がなくなり、また異なる言語ごとにネイティブスピーカーの音声を使って再録音する必要もなくなります。ビデオは録画された言語で再生されます。外国語のサブタイトルが表示されるので、違う言語の視聴者も音声部分を理解できます。
 
-クローズドキャプションを使用すると、耳が聞こえない人や聞きにくい人によるアクセシビリティを向上できます。
+クローズドキャプションは、耳の不自由な方にもご利用いただけるため、アクセシビリティの向上にもつながります。
 
 >[!NOTE]
 >
 >使用するビデオプレーヤーがキャプションの表示に対応する必要があります。
 
-関連トピック [Dynamic Mediaのアクセシビリティ](/help/assets/accessibility-dm.md).
+[Dynamic Media のアクセシビリティ](/help/assets/accessibility-dm.md)も参照してください。
 
-Dynamic Mediaはキャプションファイルを JSON(JavaScript Object Notation) 形式に変換します。 このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
+Dynamic Media では、キャプションファイルを JSON（JavaScript Object Notation）形式に変換します。このように変換できるので、JSON テキストを、ビデオの完全なトランスクリプトとして表示せずに Web ページに埋め込むことができます。この後、検索エンジンがコンテンツをクロールしてインデックスを作成できます。これにより、ビデオを検索しやすくなり、ビデオコンテンツの詳細がユーザーに提供されます。
 
-詳しくは、 [静的（画像以外の）コンテンツを提供する](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api) 内 *Dynamic Mediaの画像サービングおよびレンダリング API のヘルプ* を参照してください。
+URL で JSON 機能を使用する方法について詳しくは、*Dynamic Media 画像サービングおよびレンダリング API ヘルプ*&#x200B;の[静的コンテンツ（画像以外）の提供](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html?lang=ja#image-serving-api)を参照してください。
 
 **ビデオにキャプションまたはサブタイトルを追加するには:**
 
@@ -1098,13 +1097,13 @@ Dynamic Mediaはキャプションファイルを JSON(JavaScript Object Notatio
 
    ツールの「**[!UICONTROL ビデオファイルの URL を入力]**」フィールドにビデオファイルの URL をコピーして貼り付け、「**[!UICONTROL 読み込み]**」をクリックします。[アセットの URL の取得](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照して、ビデオファイルそのものの URL を取得し、それを「**[!UICONTROL ビデオファイルの URL を入力]**」フィールドに貼り付けてください。その後、Internet Explorer、Chrome、または Safari で、ビデオを再生できます。
 
-   ここで、サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。完了したら、キャプションファイルの内容をコピーしてプレーンテキストエディターに貼り付け、 `.vtt` ファイル名の拡張子。
+   ここで、サイトの画面に表示される指示に従って、WebVTT ファイルを作成して保存します。完了したら、キャプションファイルの内容をコピーしてプレーンテキストエディターに貼り付け、`.vtt` のファイル拡張子で保存します。
 
    >[!NOTE]
    >
    >複数言語のビデオサブタイトルを用意してグローバル対応する場合、WebVTT 標準の規定により、サポート対象の言語ごとに個別の .vtt ファイルを作成して呼び出す必要があります。
 
-   通常、キャプション VTT ファイルにはビデオファイルと同じ名前を付け、-EN、-FR、-DE などの言語ロケールを付けます。 そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
+   一般に、キャプションの VTT ファイルにはビデオファイルと同じ名前を付け、名前の末尾に言語ロケール（-EN、-FR、-DE、-JA など）を追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 
 1. Experience Manager で、WebVTT キャプションファイルを DAM にアップロードします。
 1. アップロードしたキャプションファイルを関連付ける、*公開済み*&#x200B;ビデオアセットに移動します。
@@ -1119,27 +1118,27 @@ Dynamic Mediaはキャプションファイルを JSON(JavaScript Object Notatio
 
       `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
-      キャプションパスの末尾にある `,1` に注意します。次の `.vtt` パスのファイル名拡張子では、をに設定して、ビデオプレーヤーバーのクローズドキャプションボタンの有効（オン）と無効（オフ）を切り替えることができます。 `,1` または `,0`、それぞれ。
+      キャプションパスの末尾にある `,1` に注意します。パスの `.vtt` ファイル名拡張子の直後で、ビデオプレーヤーバーのクローズドキャプションボタンの有効（オン）と無効（オフ）を任意に切り替えることができます。それには、それぞれ `,1` または `,0` を設定します。
 
    * 埋め込みビデオビューアエクスペリエンスの場合、「**[!UICONTROL 埋め込みコード]**」をタップします。埋め込みコードダイアログボックスで、埋め込みコードを選択してクリップボードにコピーし、そのコードを単純なテキストエディターに貼り付けます。コピーした埋め込みコードを次の構文で追加します。
 
       `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
-      キャプションパスの末尾にある `,1` に注意します。次の `.vtt` パスのファイル名拡張子では、をに設定して、ビデオプレーヤーバーのクローズドキャプションボタンの有効（オン）と無効（オフ）を切り替えることができます。 `,1` または `,0`、それぞれ。
+      キャプションパスの末尾にある `,1` に注意します。パスの `.vtt` ファイル名拡張子の直後で、ビデオプレーヤーバーのクローズドキャプションボタンの有効（オン）と無効（オフ）を任意に切り替えることができます。それには、それぞれ `,1` または `,0` を設定します。
 
 ## ビデオへのチャプターマーカーの追加 {#adding-chapter-markers-to-video}
 
-1 つのビデオまたはアダプティブビデオセットにチャプターマーカーを追加すると、長編ビデオの視聴と操作が簡単になります。ユーザーがビデオを再生する際に、ビデオタイムライン（ビデオスクラバーとも呼ばれます）のチャプターマーカーをクリックすると、目標地点に簡単に移動できます。 または、新しいコンテンツ、デモ、チュートリアルにすぐにアクセスすることもできます。
+1 つのビデオまたはアダプティブビデオセットにチャプターマーカーを追加すると、長編ビデオの視聴と操作が簡単になります。ユーザーがビデオを再生する際、ビデオタイムライン（別名：ビデオスクラバー）のチャプターマーカーをクリックすると、関心のあるシーンに簡単に移動できます。または、新しいコンテンツ、デモおよびチュートリアルに即座にジャンプすることができます。
 
 >[!NOTE]
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーをサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自のHTML5 ビューアを作成する手順については、AdobeHTML5 Viewer SDK API で、クラスの「Customizing Behavior Using Modifiers」という見出しを参照してください。 `s7sdk.video.VideoPlayer` および `s7sdk.video.VideoScrubber`. 詳しくは、 [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) ドキュメント。
+必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアの作成方法については、『Adobe HTML5 Viewer SDK API』の「Customizing Behavior Using Modifiers」で `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber` クラスの説明を参照してください。[HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) ドキュメントを参照してください。
 
 <!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
-ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、このファイルは、同時に使用する WebVTT キャプションファイルとは別のファイルにする必要があります。キャプションとチャプターを 1 つの WebVTT ファイルに組み合わせることはできません。
+ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、WebVTT キャプションファイルも使用する場合は、このファイルを WebVTT ファイルと分けておく必要があります。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
 チャプターナビゲーション機能を備えた WebVTT ファイルを作成する際に使用するフォーマットの例として、次のサンプルを使用できます。
 
@@ -1161,15 +1160,15 @@ Chapter 4
 Cost-efficient access to rapidly evolving technology.
 ```
 
-上記の例では、`Chapter 1` はキュー識別子で、オプションです。`00:00:000 --> 01:04:364` のキュー時間は、チャプターの開始時間と終了時間を、`00:00:000` という形式で指定しています。最後の 3 桁はミリ秒で、`000` のまま残しておくこともできます。チャプタータイトルの `The bicycle store behind it all` は、チャプターの内容を示す実際の説明です。ユーザーがビデオのタイムラインのビジュアルキューポイントにマウスポインターを置くと、キュー識別子、開始キュー時間およびチャプタータイトルが、ビデオプレーヤーポップアップに表示されます。
+上記の例では、`Chapter 1` はキュー識別子で、オプションです。`00:00:000 --> 01:04:364` のキュー時間は、チャプターの開始時間と終了時間を、`00:00:000` という形式で指定しています。最後の 3 桁はミリ秒で、`000` のまま残しておくこともできます。チャプタータイトルの `The bicycle store behind it all` は、チャプターの内容を示す実際の説明です。ユーザーが、ビデオのタイムラインのビジュアルキューポイントにマウスポインターを置くと、キュー識別子、開始キュー時刻およびチャプタータイトルが、ビデオプレーヤーポップアップに表示されます。
 
-HTML5 ビデオビューアを使用するので、作成するチャプターファイルが WebVTT（Web Video Text Tracks）標準に準拠していることを確認してください。チャプターファイル名の拡張子はです。 `.vtt`. WebVTT キャプション標準をよく確認してください。
+HTML5 ビデオビューアを使用するので、作成するチャプターファイルが WebVTT（Web Video Text Tracks）標準に準拠していることを確認してください。チャプターファイルの拡張子は `.vtt` です。WebVTT キャプション標準をよく確認してください。
 
  詳しくは、[WebVTT: The Web Video Text Tracks Format](https://w3c.github.io/webvtt/) を参照してください。
 
 **ビデオチャプターナビゲーションを追加するには：**
 
-1. 保存する `.vtt` ファイルを UTF8 エンコードで指定し、チャプタータイトルテキストの文字レンディションに関する問題を回避します。
+1. この `.vtt` ファイルを UTF8 エンコーディングで保存して、チャプタータイトルテキストの文字レンディションに関する問題を回避します。
 
    一般に、チャプター VTT ファイルの名前には、ビデオファイルと同じ名前を付けて、名前の末尾にチャプターを追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 1. Experience Manager で、WebVTT チャプターファイルをアップロードします。
@@ -1207,13 +1206,13 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
      </tbody>
    </table>
 
-## Dynamic Media - Scene7モードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-scene-mode}
+## Dynamic Media - Scene7 モードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオをクリックするのを促す役に立ちます。
+ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオをクリックする気になるようなものにします。
 
-Experience Manager内のすべてのビデオには、関連するサムネールが必要です。置き換えずにサムネールを削除することはできません。 デフォルトでは、ビデオをExperience Managerにアップロードする場合、最初のフレームがサムネールとして使用されます。 例えば、ブランド設定やビジュアル検索用にサムネールをカスタマイズできます。ビデオのサムネールをカスタマイズする際に、使用するフレームでビデオを再生し、一時停止することができます。 または、既にアップロード済みで、 *公開済み* (digital asset manager) を使用します。
+Experience Manager 内のすべてのビデオには、サムネールを関連付ける必要があります。サムネールを置き換えずに削除することはできません。デフォルトでは、Experience Manager にビデオをアップロードすると、最初のフレームがサムネールとして使用されます。例えば、ブランド設定やビジュアル検索用にサムネールをカスタマイズできます。ビデオのサムネールをカスタマイズするには、ビデオを再生して、使用するフレームで一時停止します。あるいは、Digital Asset Manager に既にアップロードして&#x200B;*公開*&#x200B;している画像アセットを選択できます。
 
-ビデオから選択したカスタムビデオサムネール画像は、抽出されず、別個のアセットとして DAM に保存されません。 ただし、既存の画像アセットから選択したカスタムビデオサムネールは JCR に保存されます。次のサンプルパスのように、選択したアセットのパスがビデオアセットのノードの下に保存されます。
+ビデオから選択したカスタムビデオサムネール画像は抽出されず、別個のアセットとして DAM に保存されます。ただし、既存の画像アセットから選択したカスタムビデオサムネールは JCR に保存されます。次のサンプルパスのように、選択したアセットのパスがビデオアセットのノードの下に保存されます。
 
 `/content/dam/*<folder_name*>/<*video_name*>/jcr:content/manualThumbnail`
 
@@ -1221,7 +1220,7 @@ Experience Manager内のすべてのビデオには、関連するサムネー�
 
 また、[Dynamic Media - ハイブリッドモードのビデオサムネールについて](#about-video-thumbnails-in-dynamic-media-hybrid-mode)も参照してください。
 
-### カスタムビデオサムネールを追加 {#adding-a-custom-video-thumbnail}
+### カスタムビデオサムネールの追加 {#adding-a-custom-video-thumbnail}
 
 これらの手順は、「Dynamicmedia_Scene7」モードで動作している Dynamic Media にのみ適用されます。
 
@@ -1230,7 +1229,7 @@ Experience Manager内のすべてのビデオには、関連するサムネー�
 1. 次の操作を既に完了していることを確認します。
 
    * ビデオアセットのフォルダーを作成。
-   * [フォルダーへのビデオプロファイルの適用](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).
+   * [ビデオプロファイルをフォルダーに適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders).。
 
    * [フォルダーにビデオをアップロード](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
@@ -1248,7 +1247,7 @@ Experience Manager内のすべてのビデオには、関連するサムネー�
 
       * ツールバーで、「]**アセットからサムネールを選択**[!UICONTROL 」をタップします。
       * 「**[!UICONTROL サムネールを選択]**」をタップします。
-      * 既にアップロードして公開した画像アセットのうち、使用するものを選択します。アセットはビデオのサムネール画像として使用するように自動的にサイズ変更されます。
+      * 既にアップロードして公開した画像アセットのうち、使用するものを選択します。アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
       * 画像アセットを選択し、「**[!UICONTROL 選択]**」をタップします。
 
 
@@ -1257,77 +1256,77 @@ Experience Manager内のすべてのビデオには、関連するサムネー�
 
 ## Dynamic Media - ハイブリッドモードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
-Dynamic Media によって自動的に生成される 10 個のサムネール画像の中から、ビデオに追加する画像を 1 つ選択できます。ビデオプレーヤーは、Experience Manager Sites、Experience ManagerモバイルまたはExperience Manager Screensのオーサリング環境で、ビデオアセットがDynamic Mediaコンポーネントで使用された場合に、選択したサムネールを表示します。 このサムネールは、ビデオの内容を最も適切に表し、かつユーザーが再生ボタンをクリックしたくなるような静的画像として提供されます。
+Dynamic Media によって自動的に生成される 10 個のサムネール画像の中から、ビデオに追加する画像を 1 つ選択できます。選択したサムネールは、Experience Manager Sites、Experience Manager Mobile または Experience Manager Screens のオーサリング環境で Dynamic Media コンポーネントとともにビデオアセットを使用するときに、ビデオプレーヤーに表示されます。このサムネールは、ビデオの内容を最も適切に表し、かつユーザーが再生ボタンをクリックしたくなるような静的画像として提供されます。
 
-ビデオの合計時間に基づいて、Dynamic Mediaは 10 枚（デフォルト）のサムネール画像をキャプチャします。 画像は 1%、11%、21%、31%、41%、51%、61%、71%、81%、91%でビデオに取り込まれます。 10 個のサムネールは維持されます。つまり、後で別のサムネールを選択することになっても、一連のサムネールを再生成する必要はありません。10 個のサムネール画像をプレビューした後、ビデオで使用する画像を選択します。デフォルトに変更する場合は、CRXDE Liteを使用して、サムネール画像の生成時間間隔を設定できます。 例えば、等間隔の 4 つのサムネール画像をビデオから生成するだけの場合は、間隔時間を 24％、49％、74％および 99％に設定できます。
+Dynamic Media では、ビデオの合計時間に基づいて 10 個（デフォルト）のサムネール画像がキャプチャされます。画像は、1%、11%、21%、31%、41%、51%、61%、71%、81% および 91% でビデオにキャプチャされます。10 個のサムネールは維持されます。つまり、後で別のサムネールを選択することになっても、一連のサムネールを再生成する必要はありません。10 個のサムネール画像をプレビューした後、ビデオで使用する画像を選択します。デフォルトに変更する場合は、CRXDE Lite を使用して、サムネール画像が生成される時間間隔を設定できます。例えば、等間隔の 4 つのサムネール画像をビデオから生成するだけの場合は、間隔時間を 24％、49％、74％および 99％に設定できます。
 
 理論上、ビデオをアップロードしてから Web サイトで公開するまでの間は、ビデオサムネールをいつでも追加できます。
 
-必要であれば、Dynamic Media によって生成されるサムネールを使用するのではなく、カスタムサムネールをアップロードしてビデオを表すことも可能です。例えば、ビデオのタイトル、目を引く開封画像、ビデオから取り込んだ特定の画像を持つカスタムサムネール画像を作成できます。 アップロードするカスタムビデオサムネール画像の最大解像度は 1280 x 720 ピクセル（最小幅は 640 ピクセル）で、2 MB 以下である必要があります。
+必要であれば、Dynamic Media によって生成されるサムネールを使用するのではなく、カスタムサムネールをアップロードしてビデオを表すことも可能です。例えば、ビデオのタイトル、人目を引くオープニング画像、またはビデオからキャプチャした特定の画像を含むカスタムサムネール画像を作成できます。アップロードするカスタムビデオサムネール画像は、最大解像度が 1280 x 720 ピクセル（最小幅 640 ピクセル）で、2 MB を超えないようにしてください。
 
 また、[Dynamic Media - Scene7 モードのビデオサムネールについて](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-scene-mode)も参照してください。
 
-### ビデオサムネールを追加 {#adding-a-video-thumbnail}
+### ビデオサムネールの追加 {#adding-a-video-thumbnail}
 
 これらの手順は、ハイブリッドモードで動作している Dynamic Media にのみ適用されます。
 
 **ビデオサムネールを追加するには：**
 
-1. ビデオサムネールを追加するアップロード済みビデオアセットに移動します。
+1. ビデオサムネールを追加する、アップロード済みビデオアセットに移動します。
 1. リスト表示またはカード表示のアセット選択モードで、ビデオアセットをタップします。
 1. ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
 1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」をタップします。
 1. サムネールを変更ページで、ツールバーの「**[!UICONTROL フレームを選択]**」をタップします。
 
-   Dynamic Mediaは、カスタマイズしたデフォルトの時間間隔または時間間隔に基づいて、ビデオから一連のサムネール画像を生成します。
+   デフォルトの時間間隔またはカスタマイズした時間間隔に基づき、Dynamic Media によって一連のサムネール画像がビデオから生成されます。
 
 1. 生成されたサムネール画像をプレビューした後、ビデオに追加する画像を選択します。
 1. 「**[!UICONTROL 変更を保存]**」をタップします。
 
    ビデオのサムネール画像が更新され、選択したサムネールが使用されます。後で、サムネール画像を変更する場合は、**[!UICONTROL サムネールを変更]**&#x200B;ページに戻って、新しい画像を選択できます。
 
-   新しいデフォルトの時間間隔を設定した場合、または新しいビデオをアップロードして既存のビデオを置き換えた場合、Dynamic Mediaによってサムネールが再生成されます。
+   新しいデフォルトの時間間隔を設定した場合、または新しいビデオをアップロードして既存のビデオを置き換えた場合は、Dynamic Media によってサムネールを再生成します。
 
-   詳しくは、 [ビデオサムネールが生成されるデフォルトの時間間隔を設定](#configuring-the-default-time-interval-that-video-thumbnails-are-generated).
+   詳しくは、[ビデオサムネールが生成されるデフォルトの時間間隔の設定](#configuring-the-default-time-interval-that-video-thumbnails-are-generated)を参照してください。
 
-#### ビデオサムネールが生成されるデフォルトの時間間隔を設定 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
+#### ビデオサムネールが生成されるデフォルトの時間間隔の設定 {#configuring-the-default-time-interval-that-video-thumbnails-are-generated}
 
 新しいデフォルトの時間間隔を設定して保存すると、この変更は、今後アップロードするビデオに対してのみ自動的に反映されます。以前にアップロードしたビデオには、新しいデフォルトは自動的に適用されません。既存のビデオについては、サムネールを再生成する必要があります。
 
-詳しくは、 [ビデオサムネールを追加](#adding-a-video-thumbnail).
+詳しくは、[ビデオサムネールの追加](#adding-a-video-thumbnail)を参照してください。
 
 **ビデオサムネールが生成されるデフォルトの時間間隔を設定するには：**
 
-1. Experience Managerで、 **[!UICONTROL ツール]** > **[!UICONTROL 一般]** > **[!UICONTROL CRXDE Lite]**.
+1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** をタップします。
 
-1. CRXDE Liteページの左側のディレクトリパネルで、に移動します。 `o etc/dam/imageserver/configuration/jcr:content/settings.`
+1. CRXDE Lite ページの左側にあるディレクトリパネルで、`o etc/dam/imageserver/configuration/jcr:content/settings.` に移動します。
 
-   ディレクトリパネルが表示されない場合は、「ホーム」タブの左側にある「>>」アイコンをタップします。
+   このディレクトリパネルが表示されない場合は、「ホーム」タブの左側にある >> アイコンをタップします。
 
 1. 右下のパネルにある「プロパティ」タブで、「`thumbnailtime`」をダブルタップします。
-1. 内 **[!UICONTROL thumbnailtime を編集]** ダイアログボックスで、間隔の値をパーセンテージで入力するには、テキストフィールドを使用します。
+1. **[!UICONTROL thumbnailtime を編集]**&#x200B;ダイアログボックスで、テキストフィールドに間隔値を割合で入力します。
 
-   * 1 つまたは複数の間隔値フィールドを追加する場合は、プラス記号 (+) アイコンをタップします。 必要に応じて、ダイアログボックスの下部までスクロールしてアイコンを表示します。
-   * リストから期間値を削除する場合は、期間値フィールドの右側にあるマイナス記号 (-) アイコンをタップします。
-   * 間隔の値を並べ替える場合は、上向き矢印アイコンと下向き矢印アイコンをタップします。
+   * 1 つ以上の間隔値フィールドを追加するには、プラス記号（+）アイコンをタップします。このアイコンは、ダイアログボックスの下部までスクロールしないと表示されない場合があります。
+   * リストから間隔値フィールドを削除するには、そのフィールドの右側にあるマイナス記号（-）アイコンをタップします。
+   * 間隔値の順序を変更するには、上向き矢印アイコンと下向き矢印アイコンをタップします。
 
-1. タップ **[!UICONTROL OK]** 「プロパティ」タブに戻ります。
-1. CRXDE Liteページの左上隅付近にあるをタップします。 **[!UICONTROL すべて保存]**&#x200B;をクリックし、左上隅のホームに戻るアイコンをタップして、Experience Managerに戻ります。
+1. 「**[!UICONTROL OK]**」をタップして、「プロパティ」タブに戻ります。
+1. CRXDE Lite ページの左上隅にある「**[!UICONTROL すべて保存]**」をタップした後、左上隅の「ホームに戻る」アイコンをタップして Experience Manager に戻ります。
 
-   詳しくは、 [ビデオサムネールを追加](#adding-a-video-thumbnail).
+   詳しくは、[ビデオサムネールの追加](#adding-a-video-thumbnail)を参照してください。
 
-### カスタムビデオサムネールを追加 {#adding-a-custom-video-thumbnail-1}
+### カスタムビデオサムネールの追加 {#adding-a-custom-video-thumbnail-1}
 
 これらの手順は、ハイブリッドモードで動作している Dynamic Media にのみ適用されます。
 
 **カスタムビデオサムネールを追加するには：**
 
-1. カスタムビデオサムネールを追加する、アップロードされたビデオアセットに移動します。
+1. カスタムビデオサムネールを追加するアップロード済みビデオアセットに移動します。
 1. リスト表示またはカード表示のアセット選択モードで、ビデオアセットをタップします。
 1. ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
 1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」をタップします。
 1. サムネールを変更ページで、ツールバーの「**[!UICONTROL 新しいサムネールをアップロード]**」をタップします。
-1. 使用するサムネール画像に移動して選択し、をタップします。 **[!UICONTROL 開く]** をクリックして、画像のExperience Managerへのアップロードを開始します。 アップロード後に、必ず画像を公開してください。
+1. 使用するサムネール画像に移動して、その画像を選択します。次に「**[!UICONTROL 開く]**」をタップして、Experience Manager への画像のアップロードを開始します。アップロード後に、必ず画像を公開してください。
 1. 画像をアップロードして公開したら、サムネールを変更ページで、「]**変更を保存**[!UICONTROL 」をタップします。
 
    カスタムサムネールがビデオに追加されます。

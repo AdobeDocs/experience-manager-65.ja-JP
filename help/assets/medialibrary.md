@@ -8,7 +8,7 @@ exl-id: e10d632d-1d90-4f28-8617-95ee41602997
 source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
 workflow-type: tm+mt
 source-wordcount: '551'
-ht-degree: 93%
+ht-degree: 98%
 
 ---
 
@@ -35,9 +35,9 @@ Experience Manager Assets は、エンタープライズグレードの DAM 機�
 
 ## Media Library の使用 {#use-media-library}
 
-Media Libraryには、次の使用例に対して基本的な DAM 機能が用意されています。
+Media Library には、次の使用例に対する基本的な DAM 機能が用意されています。
 
-* を使用して作成された Web ページ [!DNL Adobe Experience Manager Sites].
+* [!DNL Adobe Experience Manager Sites] を使用して作成された web ページ。
 * [!DNL Adobe Experience Manager Forms] を使用して作成されたアダプティブフォームと通信
 * [!DNL Adobe Experience Manager Screens] を使用して作成されたデジタルスクリーンエクスペリエンス
 * ヘッドレス操作用の [!DNL Assets] HTTP REST API
@@ -79,7 +79,7 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 
 >[!IMPORTANT]
 >
->DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。質問がある場合は、アドビカスタマーサポートまでお問い合わせください。
+>DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。質問がある場合は、アドビカスタマーサポートまで問い合わせください。
 
 なお、[!DNL Assets] ライセンスがなければ、スマートタグ、[!DNL Asset] リンク、[!DNL Asset] セレクター、一括タグ付け、アセットワークフローの変更、Media Library にアクセスするための標準 [!DNL Adobe Experience Manager] ユーザーインターフェイスは使用できません。
 
@@ -88,6 +88,6 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 >[!MORELIKETHIS]
 >
 >* [ [!DNL Experience Manager Assets] の DAM 機能](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=ja)
->* [[!DNL Experience Manager] 6.5 Managed Services製品説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)
->* [[!DNL Experience Manager] 6.5 オンプレミス製品の説明](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)
+>* [[!DNL Experience Manager] 6.5 Managed Services 製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)
+>* [[!DNL Experience Manager] 6.5 オンプレミス製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)
 

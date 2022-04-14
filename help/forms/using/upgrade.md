@@ -11,10 +11,10 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
+source-git-commit: 879855af80ffdaa9c5f40e43f8b1543ed9305c13
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '329'
+ht-degree: 70%
 
 ---
 
@@ -47,7 +47,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 * JEE 上の AEM 6.3 Forms
 * JEE 上の AEM 6.4 Forms
-* JEE 上のAEM 6.5.x.x
+* JEE 上のAEM 6.5.x.x Forms
 
 以下の場合は、マルチホップアップグレードを実行することができます。
 
@@ -58,9 +58,9 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 * JEE 上の AEM 6.1 Forms
 * JEE 上の AEM 6.2 Forms
 
-AEM 6.5.12.0 Forms on JEE には、次の 2 種類のインストーラーが用意されています。完全なインストーラーとパッチインストーラー。
+AEM 6.5.12.0 Forms on JEE には、次の 2 種類のインストーラーが用意されています。 [完全インストーラ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) および [パッチインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en).
 
-**完全インストーラ**:フルインストーラーを使用して、新しいAEM Formsインスタンスを設定したり、JEE 上のAEM 6.3 Forms、JEE 上のAEM 6.4 からアップグレードしたり、JEE 上のAEM 6.5.x.x から JEE 上のAEM 6.5.12.0 Formsにアウトオブプレースアップグレードしたりできます。
+**完全インストーラ**:完全なインストーラーを使用して、新しいAEM Formsインスタンスを設定したり、JEE 上のAEM 6.3 Forms、JEE 上のAEM 6.4 からアップグレードしたり、JEE 上のAEM 6.5.x.x Formsから JEE 上のAEM 6.5.12.0 Formsへのアウトオブプレースアップグレードを実行したりできます。
 
 **パッチインストーラー**:パッチインストーラーは、AEM 6.5.x.x バージョンを既に使用しているお客様向けです。 パッチインストーラーを使用して、AEM Formsの最新バージョンにアップグレードできます。
 

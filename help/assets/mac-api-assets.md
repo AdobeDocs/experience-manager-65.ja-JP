@@ -8,7 +8,7 @@ exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
 workflow-type: tm+mt
 source-wordcount: '1723'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 >[!CAUTION]
 >
->[HTTP API がメタデータのプロパティを更新します](#update-asset-metadata) 内 `jcr` 名前空間。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間。
+>`jcr` 名前空間内で [ HTTP API がメタデータのプロパティを更新します](#update-asset-metadata)。ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間のメタデータプロパティを更新します。
 
 ## コンテンツフラグメント {#content-fragments}
 
@@ -41,7 +41,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 [!DNL Assets] HTTP API は、フォルダーとアセット（標準アセット用）という 2 つの主要要素を公開します。
 
-さらに、コンテンツフラグメント内の構造化コンテンツを記述するカスタムデータモデルに対する詳細な要素が公開されます。詳しくは、[コンテンツフラグメントのデータモデル](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
+さらに、コンテンツフラグメント内の構造化コンテンツを記述するカスタムデータモデルの詳細な要素が公開されます。詳しくは、[コンテンツフラグメントのデータモデル](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
 
 ### フォルダー {#folders}
 
@@ -66,10 +66,10 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 ### Assets {#assets}
 
-Experience Managerでは、アセットには次の要素が含まれています。
+Experience Manager では、アセットに次の要素が含まれています。
 
 * アセットのプロパティとメタデータ
-* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加のレンディションは、異なるサイズの画像、異なるビデオエンコーディング、またはPDFまたは [!DNL Adobe InDesign] ファイル。
+* オリジナルのレンディション（最初にアップロードされたアセット）、サムネール、その他の各種レンディションなど複数のレンディション。追加レンディションは、サイズやビデオエンコーディングの異なる画像や、PDF ファイルまたは [!DNL Adobe InDesign] ファイルから抽出されたページの場合があります。
 * コメント（オプション）
 
 コンテンツフラグメントの要素については、[AEM Assets HTTP API でのコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md#content-fragments)を参照してください。
@@ -84,8 +84,8 @@ Experience Managerでは、アセットには次の要素が含まれていま�
 
 * [フォルダーリストの取得](#retrieve-a-folder-listing)。
 * [フォルダーの作成](#create-a-folder)。
-* [アセットの作成](#create-an-asset).
-* [アセットバイナリの更新](#update-asset-binary).
+* [アセットを作成します](#create-an-asset)。
+* [アセットバイナリを更新します](#update-asset-binary)。
 * [アセットメタデータの更新](#update-asset-metadata)。
 * [アセットレンディションの作成](#create-an-asset-rendition)。
 * [アセットレンディションの更新](#update-an-asset-rendition)。
@@ -101,8 +101,8 @@ Experience Managerでは、アセットには次の要素が含まれていま�
 **前提条件**
 
 * `https://[aem_server]:[port]/system/console/configMgr` にアクセスします。
-* に移動します。 **[!UICONTROL AdobeGranite CSRF フィルタ]**.
-* プロパティを確認します。 **[!UICONTROL フィルターメソッド]** 次を含む： `POST`, `PUT`, `DELETE`.
+* **[!UICONTROL Adobe Granite CSRF フィルター]**&#x200B;に移動します。
+* プロパティの&#x200B;**[!UICONTROL フィルターメソッド]**&#x200B;に `POST`、`PUT`、`DELETE` が含まれることを確認します。
 
 ## フォルダーのリストの取得 {#retrieve-a-folder-listing}
 
@@ -140,9 +140,9 @@ Experience Managerでは、アセットには次の要素が含まれていま�
 
 ## アセットの作成 {#create-an-asset}
 
-指定されたファイルを指定されたパスに配置して、DAM リポジトリー内にアセットを作成します。 次の場合、 `*` ノード名の代わりにが指定され、サーブレットパラメーター名またはファイル名がノード名として使用されます。
+指定されたファイルを指定されたパスに配置して、DAM リポジトリ内にアセットを作成します。ノード名の代わりに「`*`」が指定されている場合、サーブレットはパラメーター名またはファイル名をノード名として使用します。
 
-**パラメーター**:パラメーターは次のとおりです。 `name` （アセット名）と `file` を参照してください。
+**パラメーター**：パラメーターは `name` （アセット名）と `file`（ファイルの参照）です。
 
 **リクエスト**
 
@@ -151,14 +151,14 @@ Experience Managerでは、アセットには次の要素が含まれていま�
 
 **応答コード**：応答コードは次のとおりです。
 
-* 201 - CREATED（アセットが正常に作成された場合）
+* 201 - CREATED（コメントが正常に作成された場合）
 * 409 - CONFLICT（アセットが既に存在する場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
 ## アセットバイナリの更新 {#update-asset-binary}
 
-アセットのバイナリ（元の名前のレンディション）を更新します。 「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
+アセットバイナリ（オリジナル名のレンディション）を更新します。「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
 
@@ -171,7 +171,7 @@ Experience Managerでは、アセットには次の要素が含まれていま�
 
 ## アセットメタデータの更新 {#update-asset-metadata}
 
-アセットメタデータのプロパティを更新します。 `dc:` 名前空間内のプロパティを更新すると、API は `jcr` 名前空間内の同じプロパティをアップデートします。API は 2 つの名前空間内のプロパティを同期させません。
+アセットメタデータのプロパティを更新します。`dc:` 名前空間内のプロパティを更新すると、API は `jcr` 名前空間内の同じプロパティをアップデートします。API は 2 つの名前空間内のプロパティを同期させません。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"jcr:title":"My Asset"}}'`
 
@@ -182,9 +182,9 @@ Experience Managerでは、アセットには次の要素が含まれていま�
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
-### メタデータの更新を次の間で同期 `dc` および `jcr` 名前空間 {#sync-metadata-between-namespaces}
+### メタデータの更新を `dc` と `jcr` 名前空間の間で同期する {#sync-metadata-between-namespaces}
 
-API メソッドは、 `jcr` 名前空間。 ユーザーインターフェイスを使用して行った更新により、 `dc` 名前空間。 次の間でメタデータ値を同期するには： `dc` および `jcr` 名前空間では、アセットの編集時にExperience Managerを実行するようにワークフローを作成し、ワークフローを設定することができます。 ECMA スクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、 `dc:title` および `jcr:title`.
+API メソッドは、`jcr` 名前空間のメタデータプロパティを更新します。ユーザーインターフェイスを使用しておこなった更新により、 `dc` 名前空間のメタデータプロパティが変更されます。  `dc` と `jcr` 名前空間の間でメタデータ値を同期するには、アセットの編集時に Experience Manager を実行するようにワークフローを作成してワークフローを設定できます。 ECMA スクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、 `dc:title` と `jcr:title` 間でタイトル文字列を同期します。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();
@@ -280,7 +280,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 **リクエスト**：`MOVE /api/assets/myFolder -H"X-Destination: /api/assets/myFolder-moved"`
 
-使用しない `/content/dam` 」と入力します。 アセットを移動して既存のアセットを上書きするコマンドの例を次に示します。
+URL で `/content/dam` を使用しないでください。次に、アセットを移動して既存のアセットを上書きするコマンドの例を示します。
 
 ```shell
 curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.png -H "X-Destination: http://[aem_server]:[port]/api/assets/destination/file.png" -H "X-Overwrite: T"
@@ -311,6 +311,6 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 ## ヒントと制限事項 {#tips-best-practices-limitations}
 
-* [HTTP API がメタデータのプロパティを更新します](#update-asset-metadata) 内 `jcr` 名前空間。 ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間。
+*  `jcr` 名前空間では [HTTP API がメタデータのプロパティを更新します](#update-asset-metadata)。ただし、Experience Manager ユーザーインターフェイスは、 `dc` 名前空間のメタデータプロパティを更新します。
 
 * Assets HTTP API は完全なメタデータを返しません。名前空間はハードコードされ、これらの名前空間のみが返されます。完全なメタデータについては、アセットパス `/jcr_content/metadata.json` を参照してください。

@@ -1,32 +1,32 @@
 ---
 title: AEM 6.5 管理ユーザーガイド
 seo-title: AEM 6.5 Managing User Guide
-description: 'Discover how to manage an AEM project successfully, with support from key resources and a comprehensive collection of AEM 6.5 user guides. '
+description: 'AEMプロジェクトの管理方法を理解し、主要リソースとAEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。 '
 seo-description: Covers how to manage an AEM project successfully
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '367'
-ht-degree: 82%
+ht-degree: 88%
 
 ---
 
 # AEM 6.5 管理ユーザーガイド
 
-Discover how to manage an AEM project successfully, with support from key resources and a comprehensive collection of AEM 6.5 user guides.
+AEMプロジェクトの管理方法を理解し、主要リソースとAEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。
 
 ## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントのアップデート](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
+* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 ユーザーガイド
 
 | ユーザーガイド | 説明 |
 |--- |---|
-| [リリースノート](/help/release-notes/home.md) | Provides important information about the latest release of AEM, including what&#39;s new, supported platforms, deprecated and removed features, and known issues |
+| [リリースノート](/help/release-notes/home.md) | AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
 | [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |

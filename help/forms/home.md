@@ -1,32 +1,32 @@
 ---
 title: Adobe Experience Manager 6.5 Forms ガイド
 seo-title: AEM 6.5 Forms Guide
-description: Use this AEM 6.5 guide to create, manage, publish, and update digital forms. Find help on installing, upgrading, and configuring them, and learn about authoring adaptive forms.
+description: このAEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開、および更新します。 アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、およびアダプティブフォームのオーサリングに関する詳細を確認します。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 80%
+ht-degree: 86%
 
 ---
 
 # Adobe Experience Manager 6.5 Forms ガイド
 
-Use this AEM 6.5 guide to create, manage, publish, and update digital forms. Find help on installing, upgrading, and configuring them, and learn about authoring adaptive forms.
+このAEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開、および更新します。 アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、およびアダプティブフォームのオーサリングに関する詳細を確認します。
 
 ## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントのアップデート](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
+* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
-## AEM 6.5 guides
+## AEM 6.5 ガイド
 
 | ユーザーガイド | 説明 |
 |--- |---|
-| [リリースノート](/help/release-notes/home.md) | Provides important information about the latest release of AEM, including what&#39;s new, supported platforms, deprecated and removed features, and known issues |
+| [リリースノート](/help/release-notes/home.md) | AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
 | [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |

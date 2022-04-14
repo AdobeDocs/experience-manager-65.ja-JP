@@ -11,12 +11,12 @@ role: Architect
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
-# AEM 6.5 デプロイユーザーガイド {#deploying}
+# AEM 6.5 の導入ユーザーガイド {#deploying}
 
 + [デプロイユーザーガイド](home.md)
 + AEM プラットフォームの概要 {#introduction}
@@ -56,7 +56,7 @@ ht-degree: 92%
    + [ジョブのオフロード](offloading.md)
    + [シングルサインオン](single-sign-on.md)
    + [リソースマッピング](resource-mapping.md)
-   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html)
+   + [HTTP over SSL の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ssl-by-default.html?lang=ja)
    + [整合性チェックとトラバーサルチェック](consistency-check.md)
    + [パフォーマンスガイドライン](performance-guidelines.md)
    + [パフォーマンスの最適化](configuring-performance.md)

@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
 source-wordcount: '632'
-ht-degree: 90%
+ht-degree: 98%
 
 ---
 
@@ -99,10 +99,10 @@ ht-degree: 90%
    + [権限管理のプリンシパルビュー](touch-ui-principal-view.md)
    + [Content Disposition フィルター](content-disposition-filter.md)
    + [AEM 6.5 のカスタムユーザグループマッピング](/help/sites-administering/cug-mapping.md)
-   + [同じサイト cookie のサポート](same-site-cookie-support.md)
+   + [同じサイト cookie サポート](same-site-cookie-support.md)
 + パーソナライズ機能 {#personalization}
    + [パーソナライズ機能](personalization.md)
-   + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html)
+   + [ContextHub の設定](https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/ch-configuring.html?lang=ja)
    + [ClientContext](client-context.md)
    + [キャンペーン](campaigns.md)
    + [ContextHub でのセグメント化の設定](segmentation.md)
@@ -148,15 +148,15 @@ ht-degree: 90%
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)
-   + [エクスペリエンスフラグメントのAdobe Targetへの書き出し](experience-fragments-target.md)
+   + [Adobe Target へのエクスペリエンスフラグメントの書き出し](experience-fragments-target.md)
    + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
    + [Livefyre との統合](livefyre.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)
-   + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html)
-   + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html)
+   + [翻訳のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-bp.html?lang=ja)
+   + [MSM のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/msm-best-practices.html?lang=ja)
    + [AEM Sites - GDPR 対応](gdpr-compliance-sites.md)
-   + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html)
+   + [AEM の基盤での GDPR 要求の処理](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/handling-gdpr-requests-for-aem-platform.html?lang=ja)
    + [AEM Commerce - GDPR 対応](gdpr-compliance-commerce.md)
 + コンテンツ管理 {#contentmanagement}
    + [パッケージマネージャー](package-manager.md)

@@ -11,7 +11,7 @@ role: Developer
 source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '1299'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -19,17 +19,17 @@ ht-degree: 82%
 # AEM 6.5 開発ユーザーガイド {#developing}
 
 + [開発ユーザーガイドの概要](home.md)
-+ 開発者向けの概要{#introduction}
-   + [AEM Sites の開発の手引き - WKND チュートリアル ](getting-started.md)
++ デベロッパー向けの概要{#introduction}
+   + [AEM Sites の開発の手引き - WKND チュートリアル](getting-started.md)
    + [AEM の中心概念](the-basics.md)
    + [AEM タッチ操作対応 UI の構造](touch-ui-structure.md)
    + [AEM タッチ操作対応 UI の概念](touch-ui-concepts.md)
    + [AEM の開発 - ガイドラインとベストプラクティス](dev-guidelines-bestpractices.md)
    + [クライアントサイドライブラリの使用](clientlibs.md)
    + [開発とページの差分](pagediff.md)
-   + [エディターの制限事項](editor-limitations.md)
+   + [編集者の制限事項](editor-limitations.md)
    + [CSRF 対策フレームワーク](csrf-protection.md)
-   + [データのモデル化 - David Nuescheler のモデル](model-data.md)
+   + [データモデリング - David Nuescheler のモデル](model-data.md)
    + [AEM への貢献](contributing-to-cq.md)
    + [セキュリティ](security.md)
    + [参照資料](reference-materials.md)
@@ -57,7 +57,7 @@ ht-degree: 82%
    + タグ付け{#tagging}
       + [タグ付け](tags.md)
       + [AEM タグ付けフレームワーク](framework.md)
-      + [AEM アプリケーションへのタグの作成](building.md)
+      + [AEM アプリケーションへのタグ付けの構築](building.md)
    + [エラーハンドラーによって表示されるページのカスタマイズ](customizing-errorhandler-pages.md)
    + [カスタムノードタイプ](custom-nodetypes.md)
    + [グラフィックレンダリング用のフォントの追加](adding-fonts.md)
@@ -70,8 +70,8 @@ ht-degree: 82%
    + [Bulk Editor の開発](dev-bulk-editor.md)
    + [レポートの開発](dev-reports.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
-   + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html)
+   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+   + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)
    + [AEM コンポーネントの開発](developing-components.md)
@@ -86,7 +86,7 @@ ht-degree: 82%
    + [UI のテスト](hobbes.md)
    + [コンテンツフラグメント用コンポーネント](components-content-fragments.md)
    + [JSON 形式のページ情報の取得](pageinfo.md)
-   + インターナショナライゼーション{#internationalization}
+   + 国際化{#internationalization}
       + [コンポーネントの国際化](i18n.md)
       + [UI 文字列の国際化](i18n-dev.md)
       + [トランスレーターを使用した辞書の管理](i18n-translator.md)
@@ -95,7 +95,7 @@ ht-degree: 82%
       + [AEM コンポーネントの開発（クラシック UI）](developing-components-classic.md)
       + [ウィジェットの使用および拡張（クラシック UI）](widgets.md)
       + [xtype の使用（クラシック UI）](xtypes.md)
-      + [フォームの作成（クラシック UI）](developing-forms.md)
+      + [Forms の開発（クラシック UI）](developing-forms.md)
 + [AEM におけるヘッドフルとヘッドレス](headful-headless.md)
 + ヘッドレスエクスペリエンス管理{#headless}
    + [ヘッドレスと AEM](headless/introduction.md)
@@ -124,24 +124,24 @@ ht-degree: 82%
       + [コンテンツフラグメントの作成](headless/getting-started/create-content-fragment.md)
       + [コンテンツフラグメントへのアクセスと配信](headless/getting-started/create-api-request.md)
    + コンテンツフラグメント{#content-fragments}
-      + [コンテンツフラグメントと GraphQL のヘッドレス配信](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html)
-      + [コンテンツフラグメントの操作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html)
-      + [インスタンスに対するコンテンツフラグメント機能の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html)
-      + [コンテンツフラグメントモデル](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html)
-      + [コンテンツフラグメントの管理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html)
-      + [バリエーション - フラグメントコンテンツのオーサリング](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html)
-      + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-markdown.html)
-      + [関連コンテンツの使用](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-assoc-content.html)
-      + [メタデータ - フラグメントのプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html)
-      + [構造ツリー](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html)
-      + [プレビュー - JSON 表現](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html)
+      + [コンテンツフラグメントと GraphQL のヘッドレス配信](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html?lang=ja)
+      + [コンテンツフラグメントの操作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html?lang=ja)
+      + [インスタンスに対するコンテンツフラグメント機能の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html?lang=ja)
+      + [コンテンツフラグメントモデル](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html?lang=ja)
+      + [コンテンツフラグメントの管理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html?lang=ja)
+      + [バリエーション - フラグメントコンテンツのオーサリング](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html?lang=ja)
+      + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-markdown.html?lang=ja)
+      + [関連コンテンツの使用](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-assoc-content.html?lang=ja)
+      + [メタデータ - フラグメントのプロパティ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-metadata.html?lang=ja)
+      + [構造ツリー](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-structure-tree.html?lang=ja)
+      + [プレビュー - JSON 表現](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-json-preview.html?lang=ja)
    + 配信 API{#delivery-api}
-      + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html)
-      + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html)
-      + [コンテンツフラグメント GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html)
-      + [AEM GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html)
-      + [コンテンツフラグメントに対するリモート AEM GraphQL クエリの認証](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html)
-+ AEM 対応のハイブリッドおよび SPA 開発{#spas}
+      + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=ja)
+      + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja)
+      + [コンテンツフラグメント GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html?lang=ja)
+      + [AEM GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html?lang=ja)
+      + [コンテンツフラグメントに対するリモート AEM GraphQL クエリの認証](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html?lang=ja)
++ ハイブリッドおよび SPA の AEM 開発{#spas}
    + [AEM でのハイブリッドと SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA の概要およびガイド](spa-walkthrough.md)
    + [SPA WKND チュートリアル](spa-wknd.md)
@@ -153,18 +153,18 @@ ht-degree: 82%
    + [SPA エディターの概要](spa-overview.md)
    + [SPA ブループリント](spa-blueprint.md)
    + [SPA ページコンポーネント](spa-page-component.md)
-   + [コンポーネントマッピングの動的モデル (SPAの場合 )](spa-dynamic-model-to-component-mapping.md)
+   + [コンポーネントマッピングの動的モデルSPA の場合](spa-dynamic-model-to-component-mapping.md)
    + [SPA モデルルーティング](spa-routing.md)
    + [RemotePage コンポーネント](spa-remote-page.md)
    + [AEM 内での外部 SPA の編集](spa-edit-external.md)
    + [SPA の複合コンポーネント](spa-composite-component.md)
    + [SPA およびサーバーサイドレンダリング](spa-ssr.md)
-   + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html)
+   + [コンポーネントの JSON 書き出しの有効化](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=ja)
    + [ローンチの統合](spa-launch.md)
    + [SPA 参照資料](spa-reference-materials.md)
 + 開発ツール{#devtools}
    + [開発ツール](dev-tools.md)
-   + [AEM Modernization Tools](modernization-tools.md)
+   + [AEM モダナイゼーションツール](modernization-tools.md)
    + [ダイアログエディター](dialog-editor.md)
    + [ダイアログ変換ツール](dialog-conversion.md)
    + [CRXDE Lite による開発](developing-with-crxde-lite.md)
@@ -174,8 +174,8 @@ ht-degree: 82%
    + [IntelliJ IDEA を使用して AEM プロジェクトを開発する方法](ht-intellij.md)
    + [VLT ツールを使用する方法](ht-vlttool.md)
    + [プロキシサーバーツールを使用する方法](ht-proxy-server.md)
-   + [AEM Brackets Extension](aem-brackets.md)
-   + [AEM Developer Tools for Eclipse ](aem-eclipse.md)
+   + [AEM Brackets 拡張](aem-brackets.md)
+   + [Eclipse 用 AEM 開発者ツール ](aem-eclipse.md)
    + [AEM Repo ツール](aem-repo-tool.md)
 + パーソナライズ機能{#personlization}
    + [ContextHub](contexthub.md)
@@ -185,7 +185,7 @@ ht-degree: 82%
    + [ContextHub ストア候補のサンプル](ch-samplestores.md)
    + [ContextHub UI モジュールタイプのサンプル](ch-samplemodules.md)
    + [ContextHub の診断](ch-diagnostics.md)
-   + [ターゲットコンテンツの作成](target.md)
+   + [ターゲットコンテンツの開発](target.md)
    + [ContextHub JavaScript API リファレンス](contexthub-api.md)
    + ClientContext{#client-context}
       + [ClientContext の詳細](client-context.md)
@@ -200,34 +200,34 @@ ht-degree: 82%
    + [レンダリングコンポーネントのコンテンツフラグメントの設定](content-fragments-config-components-rendering.md)
    + [エクスペリエンスフラグメント](experience-fragments.md)
    + ワークフローの拡張{#extending-workflows}
-      + [ワークフローの作成と拡張](workflows.md)
+      + [ワークフローの開発と拡張](workflows.md)
       + [ワークフローモデルの作成](workflows-models.md)
       + [ワークフロー機能の拡張](workflows-customizing-extending.md)
       + [プログラムによるワークフローとのやり取り](workflows-program-interaction.md)
       + [ワークフローステップのリファレンス](workflows-step-ref.md)
       + [ワークフローのベストプラクティス](workflows-best-practices.md)
       + [ワークフロープロセスのリファレンス](workflows-process-ref.md)
-      + [AEMワークフローの変数](/help/sites-developing/using-variables-in-aem-workflows.md)
+      + [AEM ワークフローの変数](/help/sites-developing/using-variables-in-aem-workflows.md)
    + [Multi Site Manager の拡張](extending-msm.md)
    + トラッキングと分析{#extending-analytics}
       + [イベント追跡の拡張](extending-analytics.md)
-      + [コンポーネントへのAdobe Analyticsトラッキングの追加](extending-analytics-components.md)
+      + [コンポーネントへの Adobe Analyticsトラッキングの追加](extending-analytics-components.md)
       + [Adobe Analytics Framework のカスタマイズ](extending-analytics-framework.md)
-      + [Analytics 用のサーバー側ページネーミングの実装](extending-analytics-pa-naming.md)
+      + [Analytics 用のサーバーサイドのページネーミングの実装](extending-analytics-pa-naming.md)
    + Cloud Services {#extending-cloud-services}
-      + [クラウドサービス設定](extending-cloud-config.md)
+      + [クラウドサービスの設定](extending-cloud-config.md)
       + [カスタムクラウドサービスの作成](extending-cloud-config-custom-cloud.md)
-   + [カスタム拡張機能の作成](extending-campaign-extensions.md)
+   + [カスタムエクステンションの作成](extending-campaign-extensions.md)
    + Forms{#extending-forms}
       + [カスタムフォームマッピングの作成](extending-campaign-form-mapping.md)
       + [Adobe Campaign フォームコンポーネントを使用したカスタム AEM ページテンプレートの作成](extending-campaign-custom-template.md)
       + [リクエスト分析スクリプト](analyze-request.md)
-   + [JMX コンソールを使用したサービスの統合](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html)
-   + [Bulk Editor の開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html)
+   + [JMX コンソールを使用したサービスの統合](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/jmx-integration.html?lang=ja)
+   + [Bulk Editor の開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-bulk-editor.html?lang=ja)
    + クラシック UI の拡張{#extending-classic-ui}
       + [Web サイトコンソールのカスタマイズ（クラシック UI）](customizing-siteadmin.md)
       + [ようこそコンソールのカスタマイズ（クラシック UI）](customizing-the-welcome-console.md)
-      + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html)
+      + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html?lang=ja)
 + テスト{#testing}
    + [計画](planning.md)
    + [必要になるテスト環境の種類](test-environments.md)
@@ -240,10 +240,10 @@ ht-degree: 82%
    + [次期リリース](the-next-release.md)
    + [チェックリスト](checklists.md)
    + [Tough Day](tough-day.md)
-   + [UI のテスト](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html)
+   + [UI のテスト](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/hobbes.html?lang=ja)
 + ベストプラクティス{#bestpractices}
    + [ベストプラクティスの概要](best-practices.md)
-   + [AEM開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html?lang=ja)
+   + [AEM の開発ガイドラインとベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/dev-guidelines-bestpractices.html?lang=ja)
    + [開発のベストプラクティス](development-practices.md)
    + [コンテンツのアーキテクチャ](content-architecture.md)
    + [ソフトウェアのアーキテクチャ](software-architecture.md)
@@ -254,15 +254,15 @@ ht-degree: 82%
       + [We.Retail の編集可能テンプレートの使用](we-retail-editable-templates.md)
       + [We.Retail のレスポンシブレイアウトの使用](we-retail-responsive-layout.md)
       + [We.Retail のグローバル化されたサイト構造の使用](we-retail-globalized-site-structure.md)
-      + [We.Retail でのエクスペリエンスフラグメントの試行](we-retail-experience-fragments.md)
+      + [We.Retail のコンテンツフラグメントの使用](we-retail-experience-fragments.md)
    + [コーディングのヒント](coding-tips.md)
    + [コードの落とし穴](code-pitfalls.md)
    + [OSGi バンドル](osgi-bundles.md)
    + [JCR 統合](jcr-integration.md)
    + [コードサンプル](code-samples.md)
    + [処理に時間のかかるクエリのトラブルシューティング](troubleshooting-slow-queries.md)
-+ モバイル Web{#mobileweb}
-   + [モバイル Web](mobile-web.md)
++ モバイル web{#mobileweb}
+   + [モバイル web](mobile-web.md)
    + [デバイスグループフィルターの作成](groupfilters.md)
    + [Web ページのレスポンシブデザイン](responsive.md)
    + [モバイルデバイス用サイトの作成](mobile.md)

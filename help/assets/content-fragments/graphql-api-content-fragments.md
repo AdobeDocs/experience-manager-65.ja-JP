@@ -1,18 +1,18 @@
 ---
 title: コンテンツフラグメントと共に使用する AEM GraphQL API
-description: Adobe Experience Manager(AEM) のコンテンツフラグメントを、AEM GraphQL API と共にヘッドレスコンテンツ配信に使用する方法を説明します。
+description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: e7a2a4ad89a58e5fad0acb521adb100cf0bcd1d8
 workflow-type: tm+mt
 source-wordcount: '3942'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 # コンテンツフラグメントと共に使用する AEM GraphQL API {#graphql-api-for-use-with-content-fragments}
 
-Adobe Experience Manager(AEM) のコンテンツフラグメントを、AEM GraphQL API と共にヘッドレスコンテンツ配信に使用する方法を説明します。
+Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 
 コンテンツフラグメントと共に使用する AEM GraphQL API は、オープンソースの標準 GraphQL API に大きく依存しています。
 
@@ -24,7 +24,7 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 
 >[!NOTE]
 >
->GraphQL は、現在、Adobe Experience Manager(AEM) の 2 つの（個別の）シナリオで使用されています。
+>GraphQL は現在 Adobe Experience Manager (AEM) の 2 つの（別々の）シナリオで使用されています。
 >
 >* [AEM Commerce が、GraphQL 経由でコマースプラットフォームのデータを使用する](/help/commerce/cif/integrating/magento.md)。
 >* AEM コンテンツフラグメントが、AEM GraphQL API（標準の GraphQL に基づくカスタム実装）と連携して、アプリケーションで使用するための構造化コンテンツを配信する。
@@ -157,11 +157,11 @@ GraphQL エンドポイントを有効にするには、まず適切な設定が
 
 対応するエンドポイントを有効にするには、以下を行います。
 
-1. **ツール**／**Assets**&#x200B;に移動し、「**GraphQL**」を選択します。
+1. **ツール**／**Assets** に移動し、「**GraphQL**」を選択します。
 1. 「**作成**」を選択します。
-1. **新しい GraphQL エンドポイントを作成**&#x200B;ダイアログが開きます。以下を指定します。
+1. **新しい GraphQL エンドポイントを作成** ダイアログが開きます。以下を指定します。
    * **名前**：エンドポイントの名前。任意のテキストを入力できます。
-   * **使用する GraphQL スキーマの提供元**：ドロップダウンを使用して、必要なサイト／プロジェクトを選択します。
+   * **使用する GraphQL スキーマの提供元**： ドロップダウンを使用して、必要なサイト／プロジェクトを選択します。
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ GraphQL エンドポイントを有効にするには、まず適切な設定が
 
 このインターフェイスを使用すると、クエリを直接入力しテストできます。
 
-例えば、次のようなものです。
+次に例を示します。
 
 * `http://localhost:4502/content/graphiql.html`
 
@@ -215,19 +215,19 @@ GraphiQL ユーザーインターフェイスは、専用のパッケージ（[G
 
 >[!NOTE]
 >
->使用可能なパッケージは、AEM 6.5.10.0およびAEM as a Cloud Serviceと完全に互換性があります。
+>使用可能なパッケージは、AEM 6.5.10.0 および AEM as a Cloud Service と完全に互換性があります。
 
 ## オーサー環境とパブリッシュ環境の使用例 {#use-cases-author-publish-environments}
 
-使用例は、AEM環境のタイプに応じて異なる場合があります。
+使用例は、AEM 環境のタイプによって異なる場合があります。
 
 * パブリッシュ環境の使用目的：
    * JS アプリケーションのデータのクエリ（標準の使用例）
 
 * オーサー環境の使用目的：
    * 「コンテンツ管理用」のデータのクエリ：
-      * AEMの GraphQL は、現在、読み取り専用の API です。
-      * CR（U）D 操作には REST API を使用できます。
+      * AEM の GraphQL は現在読み取り専用の API です。
+      * REST API は、CR(U)D の操作に使用できます。
 
 ## 権限 {#permission}
 
@@ -319,7 +319,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | 1 行のテキスト | String、[String] |  作成者名、場所名などの単純な文字列に使用します。 |
 | 複数行テキスト | 文字列 |  記事の本文などのテキストを出力するために使用します |
 | 数値 |  Float、[Float] | 浮動小数点数と整数を表示するために使用します |
-| ブール型 |  Boolean |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
+| ブール値 |  Boolean |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
 | 日時 | Calendar |  日時を ISO 8086 形式で表示するために使用します。選択したタイプに応じて、AEM GraphQL で使用できるフレーバーは、`onlyDate`、`onlyTime`、`dateTime` の 3 つです。 |
 | 列挙 |  String |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  [String] |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
@@ -439,7 +439,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 
 ## GraphQL 変数 {#graphql-variables}
 
-GraphQL では、クエリに変数を含めることができます。詳しくは、[GraphQL の変数に関するドキュメント](https://graphql.org/learn/queries/#variables)を参照してください。
+GraphQL では、クエリに変数を含めることができます。詳しくは、 [GraphQL の変数に関するドキュメント](https://graphql.org/learn/queries/#variables) を参照してください。
 
 例えば、特定のバリエーションを持つ `Article` タイプのコンテンツフラグメントをすべて取得するには、次のように、GraphiQL で変数 `variation` を指定します。
 

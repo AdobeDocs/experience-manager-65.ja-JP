@@ -1,32 +1,32 @@
 ---
 title: AEM 6.5 Mobile ユーザーガイド
 seo-title: AEM 6.5 Mobile User Guide
-description: Benefit from AEM support to create and manage content for mobile apps. Get an introduction to and learn how to author, develop, and administer on the On-Demand Services App and Adobe PhoneGap Enterprise.
+description: モバイルアプリ用のコンテンツを作成および管理するAEMのサポートのメリット。 On-Demand Services App とAdobe PhoneGap Enterprise での作成、開発、管理方法について説明します。
 seo-description: Describes how to create and manage content for mobile applications.
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 77%
+ht-degree: 83%
 
 ---
 
 # AEM 6.5 Mobile ユーザーガイド
 
-Benefit from AEM support to create and manage content for mobile apps. Get an introduction to and learn how to author, develop, and administer on the On-Demand Services App and Adobe PhoneGap Enterprise.
+モバイルアプリ用のコンテンツを作成および管理するAEMのサポートのメリット。 On-Demand Services App とAdobe PhoneGap Enterprise での作成、開発、管理方法について説明します。
 
 ## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントのアップデート](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
+* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 ユーザーガイド
 
 | ユーザーガイド | 説明 |
 |--- |---|
-| [リリースノート](/help/release-notes/home.md) | Provides important information about the latest release of AEM, including what&#39;s new, supported platforms, deprecated and removed features, and known issues |
+| [リリースノート](/help/release-notes/home.md) | AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています |
 | [Assets ユーザーガイド](/help/assets/home.md) | デジタルアセットを作成、管理、配信および最適化する方法について説明します。 |
 | [Forms ユーザーガイド](/help/forms/home.md) | このガイドでは、デジタルフォームの作成、管理、公開、更新の方法について説明します。 |
 | [Communities ユーザーガイド](/help/communities/home.md) | フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。 |

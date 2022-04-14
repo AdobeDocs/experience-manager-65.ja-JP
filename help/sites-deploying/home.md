@@ -1,24 +1,24 @@
 ---
-title: AEM 6.5 Deploying User Guide
+title: AEM 6.5 の導入ユーザーガイド
 seo-title: AEM 6.5 Deploying User Guide
-description: Learn about installing and deploying Adobe Experience Manager 6.5 and about its architecture, including our Adobe Managed Services cloud deployment.
+description: Adobe Experience Manager 6.5 のインストールとデプロイ、および Adobe Managed Services クラウドデプロイメントを含むアーキテクチャについて説明します。
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 87%
+ht-degree: 95%
 
 ---
 
-# AEM 6.5 Deploying User Guide
+# AEM 6.5 の導入ユーザーガイド
 
-This guide covers all AEM Deploying tasks, such as installing and deploying AEM.
+このガイドでは、AEM のインストールや導入など、AEM のすべての導入タスクについて説明します。
 
 ## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントのアップデート](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
+* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 ユーザーガイド
@@ -53,6 +53,6 @@ This guide covers all AEM Deploying tasks, such as installing and deploying AEM.
 
 ## 著作権、ライセンス、免責事項 {#copyright-licenses-and-disclaimers}
 
-詳しくは、[https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html) を参照してください。
+詳しくは、 [https://www.adobe.com/jp/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html) を参照してください。
 
-[](https://www.adobe.com/jp/products/eula/third_party/)
+サードパーティライセンスの告知：[https://www.adobe.com/products/eula/third_party/](https://www.adobe.com/jp/products/eula/third_party/)

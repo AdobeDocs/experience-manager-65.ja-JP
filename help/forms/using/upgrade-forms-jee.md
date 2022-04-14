@@ -13,12 +13,12 @@ role: Admin
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
 source-git-commit: 2e6d688818e9cc337444bcda2a49485e9167a113
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '375'
+ht-degree: 54%
 
 ---
 
-# JEE 上のAEM 6.5 Formsへのアップグレード {#upgrade-to-aem-forms-jee}
+# JEE 上の AEM 6.5 Forms へのアップグレード {#upgrade-to-aem-forms-jee}
 
 AEM 6.5.12.0 Forms on JEE には、次の 2 種類のインストーラーが用意されています。完全なインストーラーとパッチインストーラー。
 
@@ -33,12 +33,12 @@ AEM 6.5.12.0 Forms on JEE には、次の 2 種類のインストーラーが用
 既存の JEE 上のAEM 6.3 Formsまたは JEE 上のAEM 6.4 Formsを JEE 上のAEM 6.5.12.0 Formsにアップグレードするには、次の手順を実行します。
 
 1. JEE 上のAEM 6.5 Formsインストーラーをからダウンロードします。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). インストーラーを使用するには、有効なメンテナンス&amp;サポート契約が必要です。
-1. 詳しくは、 [アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65) を参照して、アップグレードを正常に実行するための確認を行ってください。
-1. 詳しくは、 [AEM Formsへのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65) を参照して、サーバーのダウンタイムを最小限に抑えながらアップグレードを正しく実行するタスクを確認し、実行します。
+1. [アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)で、アップグレードを正しく実行するためのチェック項目を確認します。
+1. [AEM Forms へのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65_jp)で、サーバーのダウンタイムを最小限に抑えながらアップグレードを正しく行うためのタスクを確認し、これらのタスクを実行します。
 1. 現在の環境とアプリケーションサーバーに応じて、以下に示すいずれかのドキュメントに記載されている手順を実行します。
 
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
    * [AEM 6.3 Forms または AEM 6.4 Forms から AEM 6.5 Forms へのアップグレード（JBoss Turnkey 版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
 
-LiveCycleES2、LiveCycleES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Formsから 6.5 Formsへの直接アップグレードは使用できませAEMん。 1 つ以上のバージョンのLiveCycleまたはAEM Formsに対して中間アップグレードを実行し、AEM 6.5 Formsにアップグレードできます。 中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
+LiveCycle ES2、LiveCycle ES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms を AEM 6.5 Forms に直接アップグレードすることはできません。1 つ以上のバージョンのLiveCycleまたはAEM Formsに対して中間アップグレードを実行し、AEM 6.5 Formsにアップグレードできます。 中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
