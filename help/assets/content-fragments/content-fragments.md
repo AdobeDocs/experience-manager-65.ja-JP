@@ -1,19 +1,19 @@
 ---
 title: コンテンツフラグメントの操作
-description: Adobe Experience Manager(AEM)のコンテンツフラグメントを使用すると、ヘッドレス配信に最適な、ページに依存しないコンテンツの設計、作成、キュレーション、使用が可能になります。
+description: Adobe Experience Manager（AEM） のコンテンツフラグメントで、ヘッドレス配信に最適で、ページに依存しないコンテンツをデザイン、作成、キュレーションおよび使用する方法を学びます。
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1989'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 # コンテンツフラグメントの操作 {#working-with-content-fragments}
 
-Adobe Experience Manager(AEM)では、コンテンツフラグメントを使用すると、ページに依存しないコンテンツを設計、作成、キュレーションおよび[公開できます。複数のチャネルで使用できるコンテンツを、ヘッドレス配信に最適です。](/help/sites-authoring/content-fragments.md)
+Adobe Experience Manager（AEM）でコンテンツフラグメントを使用すると、[ページに依存しないコンテンツ](/help/sites-authoring/content-fragments.md)をデザイン、作成、キュレーションおよび公開できます。複数の場所や複数のチャネルでの使用に対応した、ヘッドレス配信に最適なコンテンツを準備できます。
 
 コンテンツフラグメントには、構造化されたコンテンツが含まれます。
 
@@ -83,11 +83,11 @@ Adobe Experience Manager(AEM)では、コンテンツフラグメントを使用
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
 >
->詳細については、](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments)AEM のコンテンツフラグメントおよびエクスペリエンスフラグメントについて[も参照してください。
+>詳細については、](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=ja#content-fragments)AEM のコンテンツフラグメントおよびエクスペリエンスフラグメントについて[も参照してください。
 
 >[!NOTE]
 >
->AEM 6.3より前のコンテンツフラグメントは、モデルの代わりにテンプレートを使用して作成されていました。 新しいフラグメントを作成する際に、テンプレートは使用できなくなりましたが、そのようなテンプレートで作成されたフラグメントは引き続きサポートされます。
+>AEM 6.3 以前は、モデルの代わりにテンプレートを使用して、コンテンツフラグメントを作成していました。 新しいフラグメントを作成する際に、テンプレートは使用できなくなりましたが、そのようなテンプレートで作成されたフラグメントは引き続きサポートされます。
 
 ## コンテンツフラグメントとコンテンツサービス {#content-fragments-and-content-services}
 
