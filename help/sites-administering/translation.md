@@ -1,8 +1,8 @@
 ---
 title: 多言語サイトのコンテンツの翻訳
-seo-title: 多言語サイトのコンテンツの翻訳
+seo-title: Translating Content for Multilingual Sites
 description: 多言語サイトのコンテンツの翻訳方法について説明します。
-seo-description: 多言語サイトのコンテンツの翻訳方法について説明します。
+seo-description: Learn how to translate content for multilingual sites.
 uuid: 69b3e3a9-6773-4759-8178-aaa612e4c170
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: 1e0a68c5-1583-4103-9dbb-7a53faa03c06
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/administer/integration/third-party-services/machine-translation
-feature: 言語コピー
+feature: Language Copy
 exl-id: 6ccfe612-8cfd-4ca2-ad01-8e4af36d44fa
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '269'
+workflow-type: ht
+source-wordcount: '254'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 ページコンテンツ、アセットおよびユーザー生成コンテンツの翻訳を自動化して、多言語の Web サイトを作成および管理します。翻訳ワークフローを自動化するには、翻訳サービスプロバイダーと AEM とを統合して、コンテンツを複数の言語に翻訳するためのプロジェクトを作成します。AEM では人間による翻訳と機械翻訳のワークフローがサポートされます。
 
-* 人間による翻訳：コンテンツが翻訳プロバイダーに送信され、専門の翻訳者によって翻訳されます。翻訳が完了すると、翻訳済みコンテンツが返されて、AEM に読み込まれます。翻訳プロバイダーが AEM と統合されると、AEM と翻訳プロバイダーとの間でコンテンツが自動的に送信されます。
+* 人間による翻訳：コンテンツが翻訳プロバイダーに送信され、専門の翻訳者によって翻訳されます。翻訳が完了すると、翻訳済みコンテンツが返されて、AEM に読み込まれます。翻訳プロバイダーが AEM に統合されると、コンテンツは AEM と翻訳プロバイダーの間で自動的に送信されます。
 * 機械翻訳：機械翻訳サービスでは、コンテンツがすぐに翻訳されます。
 
 コンテンツの翻訳には次の手順が含まれます。
