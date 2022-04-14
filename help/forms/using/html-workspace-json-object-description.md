@@ -1,8 +1,8 @@
 ---
 title: AEM Forms Workspace JSON オブジェクトの詳細
-seo-title: AEM Forms Workspace JSON オブジェクトの詳細
+seo-title: AEM Forms workspace JSON object description
 description: LiveCycle AEM Forms Workspace でカスタマイズ、拡張、変更、再利用のために使用された JSON JavaScript オブジェクトについての概念情報。
-seo-description: LiveCycle AEM Forms Workspace でカスタマイズ、拡張、変更、再利用のために使用された JSON JavaScript オブジェクトについての概念情報。
+seo-description: Conceptual information about the JSON JavaScript objects used in LiveCycle AEM Forms workspace for customization, extension, modification, and reuse.
 uuid: 91c923c8-144a-4453-ba91-6a5193f1c4c4
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,13 +10,13 @@ topic-tags: forms-workspace
 discoiquuid: 61b7246d-ed28-4470-a0a2-a4aaf1a061a4
 exl-id: f837a2b3-4650-4261-84c6-291bb2a46dc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2134'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '2109'
+ht-degree: 100%
 
 ---
 
-# AEM Forms Workspace JSON オブジェクトの詳細  {#aem-forms-workspace-json-object-description}
+# AEM Forms Workspace JSON オブジェクトの詳細 {#aem-forms-workspace-json-object-description}
 
 AEM Forms Workspace で使用される JSON オブジェクトについて以下に説明します。
 
@@ -77,7 +77,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
    | categoryId | F | スタートポイントが属するカテゴリの ID が含まれます。 |
    | description | F | スタートポイントの説明が含まれます。 |
    | name | F | スタートポイントの名前が含まれます。 |
-   | serializedImageTicket | F | スタートポイントに対応するイメージチケットが含まれます。このイメージチケットは、サーバーからスタートポイントのイメージを取得するために、スタートポイントのimageUrlフィールドで使用されます。 |
+   | serializedImageTicket | F | スタートポイントに対応するイメージチケットが含まれます。このイメージチケットは、サーバーからスタートポイントのイメージを取得するために、スタートポイントの imageUrl フィールドで使用されます。 |
    | serviceName | F | スタートポイントのサービスの名前が含まれます。 |
    | startpointId | F | スタートポイントの ID が含まれます。 |
    | isFavorite | T | スタートポイントがお気に入りであるかどうかを示します。スタートポイントがお気に入りである場合は true、そうでない場合は false です。 |
@@ -442,7 +442,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>dateRanges<br type="_moz" /> </td>
    <td>F</td>
-   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトで、 startDateフィールドにはスケジュールの開始日が含まれ、 endDateフィールドにはスケジュールの終了日が含まれます。 スケジュールのendDateがnullの場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td>
+   <td>ユーザーの不在スケジュールの配列オブジェクトが含まれます。各スケジュールオブジェクトには、startDate フィールドにスケジュールの開始日、endDate フィールドにスケジュールの終了日が含まれます。スケジュールの endDate が null の場合は、ユーザーが不在スケジュールの終了日をスケジュールしていないことを意味します。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>isNoPrimaryDesignate<br type="_moz" /> </td>
@@ -462,7 +462,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processSpecificDesignates<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定オブジェクトでは、processNameにプロセスの名前が含まれ、対応するプロセスにユーザーが割り当てられていない場合はisNotDesignatedがtrueになり、対応するプロセスに割り当てられたユーザーの詳細がuserDesignatedになります。<br type="_moz" /> </td>
+   <td>プロセス固有の不在時の連絡先のオブジェクトの配列が含まれます。各プロセス固有の指定のオブジェクトには、processName （プロセスの名前）、 isNotDesignated （ユーザーが対応するプロセスに割り当てられていない場合は true）、および userDesignated （ユーザーが割り当てられていない場合はヌルで、割り当てられている場合は対応するプロセスに割り当てられたユーザーの詳細）が含まれます。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>processes<br type="_moz" /> </td>
@@ -541,7 +541,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>processVariables<br type="_moz" /> </td>
    <td>F</td>
-   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトには、プロセス変数の名前、プロセス変数の値、プロセス変数の型の名前が含まれます。<br type="_moz" /> </td>
+   <td>プロセス変数のオブジェクトの配列。各プロセス変数オブジェクトは、name（プロセス変数の名前）、value（プロセス変数の値）、type（プロセス変数のタイプ）を含みます。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>tasklist<br type="_moz" /> </td>
@@ -730,7 +730,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>権限<br type="_moz" /> </td>
    <td>F</td>
-   <td>添付ファイルに関連付けられた権限。allowReadフィールドは読み取り権限用、 allowWriteは書き込み権限用、 allowDeleteは削除権限用です。<br type="_moz" /> </td>
+   <td>添付ファイルに関連付けられた権限。allowRead フィールドは読み取り権限、allowWrite は書き込み権限、allowDelete は削除権限用です。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>サイズ<br type="_moz" /> </td>
@@ -745,7 +745,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>type<br type="_moz" /> </td>
    <td>F</td>
-   <td>タイプはファイルの添付ファイルで、タイプはメモのメモです。<br type="_moz" /> </td>
+   <td>タイプは、ファイルの場合は attachment で、メモの場合は note です。<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>formattedCreationDate<br type="_moz" /> </td>
