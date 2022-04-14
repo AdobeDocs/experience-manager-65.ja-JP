@@ -1,8 +1,8 @@
 ---
 title: AEM でのユーザー管理操作を監査する方法
-seo-title: AEM でのユーザー管理操作を監査する方法
+seo-title: How to Audit User Management Operations in AEM
 description: AEM でのユーザー管理操作を監査する方法について説明します。
-seo-description: AEM でのユーザー管理操作を監査する方法について説明します。
+seo-description: Learn how to audit User Management Operations in AEM.
 uuid: 9d177afb-172c-4858-a678-254c97cfa472
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,11 +11,11 @@ content-type: reference
 discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
-feature: 運用
+feature: Operations
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
-workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '308'
+ht-degree: 100%
 
 ---
 
@@ -33,11 +33,11 @@ ht-degree: 95%
 
 デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。ログエントリを別のログファイルにリダイレクトすると、監視が容易になります。このリダイレクト方法について詳しくは、次の説明を参照してください。
 
-## 別のログファイルへの出力のリダイレクト  {#redirecting-the-output-to-a-separate-log-file}
+## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
 
 別のログファイルにログ出力をリダイレクトするには、新しい **Apache Sling Logging Logger** 設定を作成する必要があります。次の例では、別のファイルの名前として、`useraudit.log` を使用します。
 
-1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照してWebコンソールに移動します。
+1. Web コンソールに移動します（*https://serveraddress:serverport/system/console/configMgr*）。
 1. **Apache Sling Logging Logger Configuration** を検索します。次に、エントリの右側にある「+」を押して、新しいファクトリ設定を作成します。
 1. 次の設定を作成します。
 
@@ -82,7 +82,7 @@ ht-degree: 95%
 19.05.2017 15:44:10.405 *INFO* [0:0:0:0:0:0:0:1 [1495197850401] POST /home/users/3/35XVpVtLRx4a5J9gKrVG.rw.userprops.html HTTP/1.1] com.adobe.granite.security.user.internal.audit.AuditAuthorizableAction Password for User 'john' was changed
 ```
 
-## クラシック UI  {#classic-ui}
+## クラシック UI {#classic-ui}
 
 クラシック UI では、ユーザーの追加と削除に関連して監査ログに記録される CRUD 操作に関する情報は、影響を受けるユーザーの ID と、変更の発生日時のみになります。
 
