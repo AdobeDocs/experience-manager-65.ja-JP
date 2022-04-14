@@ -1,8 +1,8 @@
 ---
 title: AEM の開発 - ガイドラインとベストプラクティス
-seo-title: AEM の開発 - ガイドラインとベストプラクティス
+seo-title: AEM Development - Guidelines and Best Practices
 description: AEM での開発に関するガイドラインとベストプラクティス
-seo-description: AEM での開発に関するガイドラインとベストプラクティス
+seo-description: Guidelines and best practices for developing on AEM
 uuid: a67de085-4441-4a1d-bec3-2f27892a67ff
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: b4cf0ffc-973a-473b-80c8-7f530d111435
 exl-id: 8eef7e4d-a6f2-4b87-a995-0761447283c6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 85%
+workflow-type: ht
+source-wordcount: '1091'
+ht-degree: 100%
 
 ---
 
@@ -48,11 +48,11 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 * カスタムコンポーネントに必要な柔軟性および設定機能を備えること。
 * AEM 段落システム（parsys コンポーネントと iparsys コンポーネント）の能力と柔軟性を最大限に利用すること。
 
-### コンポーネントおよびその他の要素のカスタマイズ  {#customizing-components-and-other-elements}
+### コンポーネントおよびその他の要素のカスタマイズ {#customizing-components-and-other-elements}
 
 独自のコンポーネントを作成したり、既存のコンポーネントをカスタマイズしたりするとき、多くの場合は、既存の定義を再利用する方法が最も簡単（かつ安全）です。同じ原則が、エラーハンドラーなど、AEM 内の他の要素にも当てはまります。
 
-これは、既存の定義をコピーしてオーバーレイすることで実行できます。 つまり、`/libs`から`/apps/<your-project>`に定義をコピーします。 `/apps`のこの新しい定義は、必要に応じて更新できます。
+これは、既存の定義をコピーしてオーバーレイすることで実行することができます。 つまり、`/libs` から `/apps/<your-project>` に定義をコピーします。この新しい定義は `/apps` で、必要に応じて更新できます。
 
 >[!NOTE]
 >
@@ -60,20 +60,20 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
 次に例を示します。
 
-* [コンポーネントのカスタマイズ](/help/sites-developing/components.md)
+* [コンポーネントをカスタマイズ](/help/sites-developing/components.md)
 
    これには、コンポーネント定義のオーバーレイが含まれます。
 
-   * 既存のコンポーネントをコピーして、`/apps/<website-name>/components/<MyComponent>`に新しいコンポーネントフォルダーを作成します。
+   * 既存のコンポーネントをコピーすることにより、`/apps/<website-name>/components/<MyComponent>` に新しいコンポーネントフォルダーを作成してください。
 
       * 例えば、テキストコンポーネントをカスタマイズするには、次のようにコピーします。
 
          * コピー元：`/libs/foundation/components/text`
          * コピー先：`/apps/myProject/components/text`
 
-* [エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
+* [エラーハンドラーによって表示されるページをカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
-   この場合、サーブレットをオーバーレイします。
+   この場合、サーブレットのオーバーレイを含みます。
 
    * リポジトリー内で、デフォルトスクリプトを次のようにコピーします。
 
@@ -82,14 +82,14 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 
 >[!CAUTION]
 >
->**パス内の設定は**`/libs`一切変更しないでください。
+>`/libs` パス内の設定は&#x200B;**一切**&#x200B;変更しないでください。
 >
 >`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
 >
 >設定およびその他の変更の手順は以下のとおりです。
 >
->1. `/libs`の項目を`/apps`にコピーします。
->1. `/apps`内で変更を加える
+>1. `/libs` 内の項目を `/apps` にコピー
+>1. `/apps` 内での変更
 
 
 ## JCR クエリを使用する場合と使用しない場合 {#when-to-use-jcr-queries-and-when-not-to-use-them}
@@ -97,9 +97,9 @@ AEM のコンポーネントとテンプレートは非常に強力なツール�
 JCR クエリは、正しく採用すれば強力なツールとなります。以下の場合に適しています。
 
 * コンテンツのフルテキスト検索など、実際のエンドユーザークエリ。
-* 構造化されたコンテンツがリポジトリ全体で見つかる必要がある場合。
+* 構造化されたコンテンツをリポジトリ全体で見つける必要がある場合。
 
-   このような場合は、クエリは必ず必要な場合にのみ実行してください(例：コンポーネントのアクティベーションやキャッシュの無効化(例：コンテンツの変更やフィルターをトリガーするワークフローステップ、イベントハンドラー))。
+   このような場合、クエリは、コンポーネントアクティベーションやキャッシュ無効化など、絶対に必要な場合にのみ実行してください（ワークフローステップ、コンテンツ変更時にトリガーされるイベントハンドラー、フィルターなどとは対照的）。
 
 JCR クエリは、純粋なレンダリング要求には決して使用しないでください。JCR クエリが不適切な場合の例は以下のとおりです。
 
@@ -113,12 +113,11 @@ JCR クエリは、純粋なレンダリング要求には決して使用しな�
 >
 >[Query Builder](/help/sites-developing/querybuilder-api.md) を使用する場合は、JCR クエリを使用します。Query Builder では、内部で JCR クエリが生成されるからです。
 
-
-## セキュリティに関する考慮事項  {#security-considerations}
+## セキュリティに関する考慮事項 {#security-considerations}
 
 >[!NOTE]
 >
->また、[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照することもお勧めします。
+>[セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照することもお勧めします。
 
 ### JCR（リポジトリ）セッション {#jcr-repository-sessions}
 
@@ -128,13 +127,13 @@ JCR クエリは、純粋なレンダリング要求には決して使用しな�
 slingRequest.getResourceResolver().adaptTo(Session.class);
 ```
 
-### クロスサイトスクリプティング（XSS）に対する保護  {#protect-against-cross-site-scripting-xss}
+### クロスサイトスクリプティング（XSS）に対する保護 {#protect-against-cross-site-scripting-xss}
 
 クロスサイトスクリプティング（XSS）を利用することにより、攻撃者は他のユーザーが表示する Web ページにコードを埋め込むことができます。このセキュリティ脆弱性が悪意のある Web ユーザーに悪用され、アクセス制御が擦り抜けられる可能性があります。
 
 AEM では、ユーザーが提供するコンテンツをすべて出力時にフィルタリングする原則を適用しています。XSS を回避することは、開発時にもテスト時にも第一優先となります。
 
-さらに、Apache](https://modsecurity.org)の[mod_securityなどのWebアプリケーションファイアウォールは、デプロイメント環境のセキュリティを確実かつ一元的に管理し、以前に検出されなかったクロスサイトスクリプティング攻撃から保護できます。
+また、[Apache 対応の mod_security](https://modsecurity.org) などの web アプリケーションファイアウォールを使用すると、デプロイメント環境のセキュリティを高い信頼性で一元的に制御でき、以前は検出されなかったクロスサイトスクリプティング攻撃に対する保護も可能です。
 
 >[!CAUTION]
 >
@@ -155,7 +154,7 @@ XSSAPI チートシート
 
 これは、システムに対して機密の情報（設定や管理アクセスなど）とユーザーに対して機密の情報（個人情報の詳細など）の両方に該当します。
 
-## 個別の開発タスク  {#distinct-development-tasks}
+## 個別の開発タスク {#distinct-development-tasks}
 
 ### エラーページのカスタマイズ {#customizing-error-pages}
 
@@ -163,7 +162,7 @@ XSSAPI チートシート
 
 詳しくは、[エラーハンドラーによって表示されるページのカスタマイズ](/help/sites-developing/customizing-errorhandler-pages.md)を参照してください。
 
-### Java プロセス内の開いているファイル  {#open-files-in-the-java-process}
+### Java プロセス内の開いているファイル {#open-files-in-the-java-process}
 
 AEM は多数のファイルにアクセスできるので、[Java プロセス用に開いているファイル](/help/sites-deploying/configuring.md#open-files-in-the-java-process)の数を AEM 用に明示的に設定することをお勧めします。
 
