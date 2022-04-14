@@ -1,8 +1,8 @@
 ---
 title: ワークフローへのアクセスの管理
-seo-title: ワークフローへのアクセスの管理
+seo-title: Managing Access to Workflows
 description: ワークフローへのアクセスの管理方法について説明します。
-seo-description: ワークフローへのアクセスの管理方法について説明します。
+seo-description: Learn how to manage access to Workflows.
 uuid: 58f79b89-fe56-4565-a869-8179c1ac68de
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5150867a-02a9-45c9-b2fd-e536b60ffa8c
 exl-id: cc54d637-d66c-49d2-99ee-00d96f1a74e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '562'
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 95%
 >
 >これらのバージョンは最小要件です。具体的なステップを実行するには、アカウントが割り当て済みの参加者または割り当て済みのグループのメンバーである必要があります。
 
-## ワークフローへのアクセスの設定  {#configuring-access-to-workflows}
+## ワークフローへのアクセスの設定 {#configuring-access-to-workflows}
 
 ワークフローモデルは、ユーザーがワークフローを操作する方法を制御するためのデフォルトのアクセス制御リスト（ACL）を継承します。ユーザーアクセスをワークフロー用にカスタマイズするには、リポジトリでワークフローモデルノードを含むフォルダーのアクセス制御リスト（ACL）を変更します。
 
@@ -51,9 +51,9 @@ ht-degree: 95%
 >
 >CRXDE Lite を使用して ACL を設定する方法については、[アクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)を参照してください。
 
-### 特定のワークフローモデル用の ACL の /var/workflow/models への適用  {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
+### 特定のワークフローモデル用の ACL の /var/workflow/models への適用 {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
 
-ワークフローモデルが`/var/workflow/models`内に保存されている場合は、フォルダーに、そのワークフローにのみ関連する特定のACLを割り当てることができます。
+ワークフローモデルが `/var/workflow/models` 内に保存されている場合、（そのワークフローにのみ関連する）特定の ACL をフォルダーに割り当てることができます。
 
 1. Web ブラウザーで CRXDE Lite を開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
 1. ノードツリーで、次のワークフローモデルフォルダーのノードを選択します。
@@ -64,9 +64,9 @@ ht-degree: 95%
 1. 「**ローカルアクセス制御ポリシー**」（**アクセス制御リスト**）のテーブルで、プラスアイコンをクリックして&#x200B;**エントリを追加**&#x200B;します。
 1. **新しいエントリを追加**&#x200B;ダイアログで、次のプロパティを含む新しい ACE を追加します。
 
-   * **プリンシパル**:  `content-authors`
+   * **プリンシパル**：`content-authors`
    * **型**：`Deny`
-   * **権限**:  `jcr:read`
+   * **権限**：`jcr:read`
    * **rep:glob**： 特定のワークフローへの参照
 
    ![wf-108](assets/wf-108.png)
@@ -79,7 +79,7 @@ ht-degree: 95%
 
    `prototype-wfm-01` グループのメンバーが `content-authors` ワークフローを使用できなくなります。
 
-### /var/workflow/models へのサブフォルダーの作成と、それに対する ACL の適用{#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
+### /var/workflow/models へのサブフォルダーの作成と、それに対する ACL の適用 {#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
 
 [開発チームは、次のフォルダーのサブフォルダーにワークフローを作成できます](/help/sites-developing/workflows-models.md#creating-a-new-workflow)。
 
@@ -101,20 +101,20 @@ ht-degree: 95%
 1. 「**ローカルアクセス制御ポリシー**」（**アクセス制御リスト**）のテーブルで、プラスアイコンをクリックして&#x200B;**エントリを追加**&#x200B;します。
 1. **新しいエントリを追加**&#x200B;ダイアログで、次のプロパティを含む新しい ACE を追加します。
 
-   * **プリンシパル**:  `content-authors`
+   * **プリンシパル**：`content-authors`
    * **型**：`Deny`
-   * **権限**:  `jcr:read`
+   * **権限**：`jcr:read`
 
    >[!NOTE]
    >
-   >[特定のワークフローモデル用の ACL の /var/workflow/models への適用](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)の場合のように、rep:glob を含めて、特定のワークフローに対するアクセスを制限できます。
+   >[特定のワークフローモデル用の ACL の /var/workflow/models への適用](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)にあるように、rep:glob を指定して、特定のワークフローに対するアクセスを制限できます。
 
    ![wf-110](assets/wf-110.png)
 
-   **アクセス制御リスト**&#x200B;テーブルには、`content-authors` フォルダーに対する `prototypes` の制限が含まれるようになりました。
+   **アクセス制御リスト**&#x200B;テーブルに、`prototypes` フォルダーに対する `content-authors` の制限が含まれるようになりました。
 
    ![wf-111](assets/wf-111.png)
 
 1. 「**すべて保存**」をクリックします。
 
-   `prototypes` グループのメンバーが `content-authors` フォルダーのモデルを使用できなくなります。
+   `content-authors` グループのメンバーが `prototypes` フォルダーのモデルを使用できなくなります。
