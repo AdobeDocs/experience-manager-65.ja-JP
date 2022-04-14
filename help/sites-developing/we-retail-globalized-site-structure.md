@@ -1,8 +1,8 @@
 ---
 title: We.Retail のグローバル化されたサイト構造の使用
-seo-title: We.Retail のグローバル化されたサイト構造の使用
+seo-title: Trying out the Globalized Site Structure in We.Retail
 description: We.Retail のグローバル化されたサイト構造の使用
-seo-description: 'null'
+seo-description: null
 uuid: 5e5a809d-578f-4171-8226-cb65aa995754
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: d674458c-d5f3-4dee-a673-b0777c02ad30
 exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '421'
+ht-degree: 100%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 92%
 
 We.Retail は、国固有の Web サイトにライブコピーできる言語マスターを提供するグローバル化されたサイト構造を使用して構築されています。この構造と組み込みの翻訳機能を試すことができるように、すべてが最初から設定されています。
 
-## 試してみる  {#trying-it-out}
+## 試してみる {#trying-it-out}
 
 1. **グローバルナビゲーション／サイト**&#x200B;からサイトコンソールを開きます。
-1. 列表示（まだアクティブでない場合）に切り替え、We.Retail を選択します。例えば、スイス、米国、フランスなどの国の構造を、言語マスターの横に並べて表示します。
+1. 列表示（まだアクティブでない場合）に切り替え、We.Retail を選択します。サンプルの国の構造には、言語マスターに加えてスイス、アメリカ、フランスなどが含まれています。
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
 
@@ -72,4 +72,4 @@ We.Retail は、国固有の Web サイトにライブコピーできる言語�
 
 ## その他の情報 {#further-information}
 
-技術的な詳細については、オーサリングドキュメント[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
+技術的な詳細については、オーサリングドキュメントの [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
