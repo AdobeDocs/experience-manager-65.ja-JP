@@ -1,20 +1,20 @@
 ---
 title: AEM Forms のデータ統合機能
-seo-title: AEM Forms のデータ統合機能
+seo-title: AEM Forms Data Integration
 description: データ統合機能により、AEM Forms を各種のデータソースに統合し、フォームデータモデルを作成することができます。これにより、アダプティブフォームとインタラクティブを作成して操作することができます。
-seo-description: データ統合機能により、AEM Forms を各種のデータソースに統合し、フォームデータモデルを作成することができます。これにより、アダプティブフォームとインタラクティブを作成して操作することができます。
+seo-description: Data Integration lets you integrate AEM Forms with disparate data sources and create form data model to create and work with adaptive forms and interactive communications.
 uuid: 01df045e-1b26-437c-9674-fd223ecd5097
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: integration
 discoiquuid: e397c6ce-d73f-4183-8445-1897a8906960
 docset: aem65
-feature: フォームデータモデル
+feature: Form Data Model
 exl-id: dd1146e4-952d-4dfa-8084-46c6096c4177
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '521'
+ht-degree: 100%
 
 ---
 
@@ -24,11 +24,11 @@ ht-degree: 98%
 
 企業のインフラストラクチャは、データベース、Web サービス、REST サービス、OData サービス、CRM ソリューションなど、各種のバックエンドシステムやデータソースから構成されています。これらを統合することにより、データをエンタープライズアプリケーションに渡して日常業務を実行する情報システムを構築することができます。一方、各アプリケーションは、データを取得してシステムに返します。これにより、データソースが更新されます。
 
-[!DNL AEM Forms]アダプティブフォームやインタラクティブ通信などの アプリケーションを使用するには、これらのアプリケーションをデータソースに統合し、フォームのレンダリング時やインタラクティブ通信の作成時に顧客データを取得する必要があります。アダプティブフォーム内のユーザー入力に基づいてデータが取得されるユースケースがあります。また、送信されたアダプティブフォームをもう一度書き込んで、各データソースを更新することもできます。
+アダプティブフォームやインタラクティブ通信などの [!DNL AEM Forms] アプリケーションを使用するには、これらのアプリケーションをデータソースに統合し、フォームのレンダリング時やインタラクティブ通信の作成時に顧客データを取得する必要があります。アダプティブフォーム内のユーザー入力に基づいてデータが取得されるユースケースがあります。また、送信されたアダプティブフォームをもう一度書き込んで、各データソースを更新することもできます。
 
 モジュール形式の分散システムには独自のメリットもありますが、複数のデータソースを統合してデータの関連付けを作成することが課題になります。企業のインフラストラクチャを効率的に運用するには、ビジネスデータを交換できるように、データを統合して複数の異なるデータソースをアプリケーションに関連付けることが重要になります。
 
-## データ統合機能の概要  {#data-integration-overview}
+## データ統合機能の概要 {#data-integration-overview}
 
 ![aem-forms-data-integration](assets/aem-forms-data-integeration.png)
 
@@ -42,7 +42,7 @@ ht-degree: 98%
 フォームデータモデルを作成したら、アダプティブフォームとインタラクティブ通信の各種ワークフローで、そのフォームデータモデルを使用することができます。以下に例を示します。
 
 * フォームデータモデルに基づいて、アダプティブフォームとインタラクティブ通信を作成する。
-* 設定済みのデータソースからアダプティブフォームとインタラクティブ通信に事前入力する
+* 設定済みのデータソースから、アダプティブフォームとインタラクティブ通信に事前にデータを取り込む。
 * アダプティブフォームのルールを使用して、データソースのサービスや操作を呼び出す。
 * 送信されたアダプティブフォームのデータをデータソースに書き込む。
 
