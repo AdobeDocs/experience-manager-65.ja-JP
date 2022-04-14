@@ -1,38 +1,39 @@
 ---
-title: WS-securityヘッダーを使用して資格情報を渡す方法を教えてください。
-description: WS-securityヘッダーを使用して資格情報を渡す方法を説明します
-source-git-commit: 730ae7cd6cd04eb6377b37eafe29db597e93cce3
-workflow-type: tm+mt
+title: WS-security ヘッダーを使用して認証情報を渡す方法は？
+description: WS-security ヘッダーを使用して認証情報を渡す方法を学ぶ
+exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '473'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# JEE上のAEM Forms Custom DSCを使用したファイルの圧縮と解凍 {#compressing-decompressing-files}
+# AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍 {#compressing-decompressing-files}
 
 ## 必要な知識 {#prerequisites}
 
-JEE上のAEM Forms Process Management、基本的なJavaプログラミング、およびカスタムコンポーネントの作成の経験。
+AEM Forms on JEE のプロセス管理、基本的な Java プログラミング、カスタムコンポーネントの作成の経験。
 
 **その他の必要な製品**
 
-[Eclipse](https://www.eclipse.org/)や[Netbeans IDE](https://netbeans.apache.org/)などのJavaエディタ
+[Eclipse](https://www.eclipse.org/) や [Netbeans IDE](https://netbeans.apache.org/) などの Java エディター
 
 ## ユーザーレベル {#user-level}
 
 中級者
 
-JEE上のAEM Formsでは、カスタムDSC（ドキュメントサービスコンテナ）を作成して、追加設定なしで強化された機能を作成できます。 このようなコンポーネントの作成は、JEE上のAEM Formsランタイム環境にプラグ可能で、意図した目的を果たします。 この記事では、カスタムZIPサービスを作成する方法を説明します。このサービスを使用して、ファイルのリストを.zipファイルに圧縮し、.zipをドキュメントのリストに解凍します。
+AEM Forms on JEE を使用すると、開発者はカスタム DSC（ドキュメントサービスコンテナ）を作成して、強化された、すぐに使える機能を作成できます。このようなコンポーネントを作成すると、AEM Forms on JEE ランタイム環境にプラグインでき、意図する目的に活用できます。この記事では、カスタム ZIP サービスを作成する方法を説明します。このサービスを使用して、ファイルのリストを .zip ファイルに圧縮し、.zip をドキュメントのリストに解凍します。
 
-## カスタムDSCコンポーネントの作成 {#create-custom-dsc-component}
+## カスタム DSC コンポーネントの作成 {#create-custom-dsc-component}
 
-2つのサービス操作を持つカスタムDSCコンポーネントを作成し、ドキュメントのリストを圧縮および解凍します。 このコンポーネントは、圧縮と解凍にjava.util.zipパッケージを使用します。 次の手順に従って、カスタムコンポーネントを作成します。
+2 つのサービス操作でドキュメントのリストの圧縮および解凍するためのカスタム DSC コンポーネントを作成します。このコンポーネントは、圧縮と解凍に java.util.zip パッケージを使用します。カスタムコンポーネントを作成するには、次の手順に従います。
 
-1. adobe-livecycle-client.jarファイルをライブラリに追加します。
-1. 必要なアイコンの追加
-1. パブリッククラスの作成
-1. UnzipDocumentおよびZipDocumentsという2つのパブリックメソッドを作成します。
-1. 圧縮と解凍のロジックを記述します。
+1. adobe-livecycle-client.jar ファイルをライブラリに追加
+1. 必要なアイコンを追加
+1. パブリッククラスを作成
+1. UnzipDocument と ZipDocuments という名前の 2 つのパブリックメソッドを作成
+1. 圧縮と解凍のロジックを記述
 
 コードは次の場所にあります。
 
@@ -119,11 +120,11 @@ public class ZIPService {
 }
 ```
 
-## Component.XMLファイルの作成 {#create-component-xml-file}
+## Component.XML ファイルの作成 {#create-component-xml-file}
 
-component.xmlファイルは、サービス操作とそのパラメーターを定義したパッケージのルートフォルダー内に作成する必要があります。
+component.xml ファイルは、サービス操作とそのパラメーターを定義したパッケージのルートフォルダー内に作成する必要があります。
 
-component.xmlファイルは次のように表示されます。
+component.xml ファイルは、次のように表示されます。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -186,39 +187,36 @@ component.xmlファイルは次のように表示されます。
 
 ## コンポーネントのパッケージ化とデプロイ {#packaging-deploying-component}
 
-1. Javaプロジェクトをコンパイルし、.JARファイルを作成します。
-1. Workbenchを使用して、JEE上のAEM Formsランタイムにコンポーネント（.JARファイル）をデプロイします。
-1. Workbenchからサービスを開始します（下図を参照）。
+1. Java プロジェクトをコンパイルし、.JAR ファイルを作成します。
+1. Workbench から、AEM Forms on JEE ランタイムにコンポーネント（.JAR ファイル）をデプロイします。
+1. Workbench からサービスを開始します（下図を参照）。
 
 ![プロセスデザイン](assets/process-design.jpg)
 
-## ワークフローでのZIPサービスの使用 {#using-zip-service-in-workflows}
+## ワークフローでの ZIP サービスの使用 {#using-zip-service-in-workflows}
 
-カスタムサービスのUnzipDocument操作で、ドキュメント変数を入力として受け取り、ドキュメント変数のリストを出力として返すことができるようになりました。
+カスタムサービスの UnzipDocument 操作で、ドキュメント変数を入力として受け取り、ドキュメント変数のリストを出力として返すことができるようになりました。
 
 ![ドキュメントを解凍](assets/unzip-doc.jpg)
 
-同様に、カスタムコンポーネントのZipDocuments操作では、ドキュメントのリストを入力として受け付け、それらをzipファイルとして圧縮して、圧縮ドキュメントを返すことができます。
+同じように、カスタムコンポーネントの ZipDocuments 操作で、ドキュメントのリストを入力として受け取り、それらのドキュメントを zip ファイルとして圧縮し、圧縮されたドキュメントを返すことができます。
 
-![Zipドキュメント](assets/zip-doc.jpg)
+![Zip ドキュメント](assets/zip-doc.jpg)
 
-次のワークフローオーケストレーションは、指定されたZIPファイルを解凍し、圧縮して別のZIPファイルに戻し、出力を返す方法を示します（下図を参照）。
+次のワークフローオーケストレーションでは、指定された ZIP ファイルを解凍し、別の ZIP ファイルに圧縮し直して、出力を返す方法を示します（下図を参照）。
 
-![Zipを解凍ワークフロー](assets/unzip-zip-process.jpg)
+![Zip を解凍するワークフロー](assets/unzip-zip-process.jpg)
 
-## 一部のビジネスユースケース {#business-use-cases}
+## ビジネスユースケース {#business-use-cases}
 
-このZIPサービスは、次の使用例で使用できます。
+この ZIP サービスは、次のユースケースで使用できます。
 
-* 指定したフォルダー内のすべてのファイルを検索し、圧縮ドキュメントとして返します。
+* 指定したフォルダー内のすべてのファイルを検索し、ファイルを圧縮ドキュメントとして返す。
 
-* PDFドキュメントを解凍した後にReader用に拡張できるPDFドキュメントを多数含むZIPファイルを指定します。 これには、JEE上のAEM FormsReader拡張モジュールが必要です。
+* 解凍した後に読者が展開できる多数の PDF ドキュメントを含んだ ZIP ファイルを提供する。これには、AEM Forms on JEE の Reader Extensions モジュールが必要です。
 
-* Generate PDFサービスを使用して圧縮解除およびPDFドキュメントに変換できる、異種のドキュメントを含むZIPファイルを指定します。
+* Generate PDF サービスを使用して解凍し、PDF ドキュメントに変換できる、異なるタイプのドキュメントを含んだ ZIP ファイルを提供する。
 
-* ポリシーでドキュメントのリストを保護し、ZIPファイルとして返します。
+* ポリシーでドキュメントのリストを保護し、ZIP ファイルとして返します。
 
-* ユーザーがプロセスインスタンスのすべての添付ファイルを1つのZIPファイルとしてダウンロードできるようにします。
-
-
-
+* ユーザーがプロセスインスタンスのすべての添付ファイルを単一の ZIP ファイルとしてダウンロードできるようにする。
