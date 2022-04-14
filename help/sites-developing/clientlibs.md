@@ -1,8 +1,8 @@
 ---
 title: クライアントサイドライブラリの使用
-seo-title: クライアントサイドライブラリの使用
+seo-title: Using Client-Side Libraries
 description: AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義できます。
-seo-description: AEM では、クライアント側ライブラリフォルダーが提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義できます。
+seo-description: AEM provides Client-side Library Folders, which allow you to store your client-side code in the repository, organize it into categories, and define when and how each category of code is to be served to the client
 uuid: f12b13cc-6651-4c9a-9c52-19a22bb82b28
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2889'
-ht-degree: 73%
+workflow-type: ht
+source-wordcount: '2850'
+ht-degree: 100%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 73%
 
 この問題への対処に役立つように、AEM では、**クライアント側ライブラリフォルダー**&#x200B;が提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのコードカテゴリをクライアントに保存するタイミングと方法を定義することができます。その後、クライアント側ライブラリシステムにより、最終的な Web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
-## AEM でのクライアント側ライブラリの機能  {#how-client-side-libraries-work-in-aem}
+## AEM でのクライアント側ライブラリの機能 {#how-client-side-libraries-work-in-aem}
 
-クライアント側ライブラリ（JSまたはCSSファイル）をページのHTMLに含める標準的な方法は、そのページのJSPに`<script>`タグまたは`<link>`タグを含め、該当するファイルへのパスを含めることです。 例：
+クライアントサイドライブラリ（JS ファイルまたは CSS ファイル）をページの HTML に含めるための標準的な方法は、`<script>` タグまたは `<link>` タグを使用して、そのページの JSP に該当するファイルのパスを含めることです。例：
 
 ```xml
 ...
@@ -38,9 +38,9 @@ ht-degree: 73%
 ...
 ```
 
-この方法は AEM で機能しますが、ページやそれに含まれるコンポーネントが複雑になると、問題につながる可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的な HTML 出力に含まれる危険性があります。これを回避してクライアント側ライブラリを論理的に整理するために、AEM では&#x200B;**クライアント側ライブラリフォルダー**&#x200B;を使用します。
+この方法は AEM で機能しますが、ページやそれに含まれるコンポーネントが複雑になると、問題につながる可能性があります。そのような場合、同じ JS ライブラリの複数のコピーが最終的な HTML 出力に含まれる危険性があります。これを回避してクライアントサイドライブラリを論理的に整理するために、AEM では&#x200B;**クライアントサイドライブラリフォルダー**&#x200B;を使用します。
 
-クライアント側ライブラリフォルダーは、タイプが `cq:ClientLibraryFolder` のリポジトリノードです。[CND 注釈](https://jackrabbit.apache.org/node-type-notation.html)での定義は次のとおりです。
+クライアントサイドライブラリフォルダーは、タイプが `cq:ClientLibraryFolder` のリポジトリノードです。[CND 注釈](https://jackrabbit.apache.org/node-type-notation.html)での定義は次のとおりです。
 
 ```shell
 [cq:ClientLibraryFolder] > sling:Folder
@@ -50,43 +50,43 @@ ht-degree: 73%
   - channels (string) multiple
 ```
 
-デフォルトでは、`cq:ClientLibraryFolder`ノードは、リポジトリの`/apps`、`/libs`および`/etc`サブツリー内の任意の場所に配置できます(これらのデフォルトと、[System Console](https://localhost:4502/system/console/configMgr)の&#x200B;**AdobeGranite HTML Library Manager**&#x200B;パネルでその他の設定を制御できます)。
+デフォルトでは、`cq:ClientLibraryFolder` ノードは、リポジトリのサブツリーである `/apps`、`/libs` および `/etc` 内であればどこにでも配置できます（これらのデフォルト、およびその他の設定は、[システムコンソール](https://localhost:4502/system/console/configMgr)の **Adobe Granite HTML ライブラリマネージャー**&#x200B;パネルで制御できます）。
 
-各 `cq:ClientLibraryFolder` には、JS ファイルや CSS ファイルのセットと、いくつかのサポートファイルが入力されます（以下を参照）。`cq:ClientLibraryFolder`のプロパティは次のように設定します。
+各 `cq:ClientLibraryFolder` には、JS ファイルや CSS ファイルのセットと、いくつかのサポートファイルが入力されます（以下を参照）。`cq:ClientLibraryFolder` の重要なプロパティは、次のように設定されます。
 
-* `categories`：`cq:ClientLibraryFolder` に含まれる JS ファイルや CSS ファイルのセットのカテゴリを特定します。`categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリーの一部にすることができます（これがどのように役立つかについては以下を参照）。
+* `categories`：`cq:ClientLibraryFolder` に含まれる JS ファイルや CSS ファイルのセットのカテゴリを特定します。`categories` プロパティは複数の値を取るため、ライブラリフォルダーを複数のカテゴリの一部にすることができます（これがどのように役立つかについては以下を参照）。
 
 * `dependencies`：これは、このライブラリカテゴリが依存する他のクライアントライブラリフォルダーのリストです。例えば、`F` と `G` の 2 つの `cq:ClientLibraryFolder` ノードを指定し、`F` のファイルが正しく機能するために別の `G` のファイルを必要とする場合、`G` の中の少なくとも 1 つの `categories` は、`F` の `dependencies` でなければなりません。
 
-* `embed`：他のライブラリからコードを埋め込むために使用します。ノードFがノードG,Hを埋め込むと、結果のHTMLはノードG,Hからのコンテンツの集合となる。
-* `allowProxy`:クライアントライブラリがの下にある場合、このプ `/apps`ロパティを使用すると、プロキシサーブレットを介してそのライブラリにアクセスできます。後述の「[クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)」を参照してください。
+* `embed`：他のライブラリからコードを埋め込むために使用します。ノード F がノード G および H を埋め込むと、結果として得られる HTML は、ノード G および H からのコンテンツの合成になります。
+* `allowProxy`：クライアントライブラリが `/apps` の下にある場合、このプロパティを使用すると、プロキシサーブレット経由でクライアントライブラリにアクセスできます。後述の[クライアントライブラリのフォルダーの配置とプロキシクライアントライブラリのサーブレットの使用](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)を参照してください。
 
 ## クライアント側ライブラリの参照 {#referencing-client-side-libraries}
 
 HTL は、AEM のサイト開発での推奨テクノロジーなので、HTL を使用して AEM にクライアント側ライブラリを含める必要があります。ただし、JSP を使用しておこなうこともできます。
 
-### HTL の使用  {#using-htl}
+### HTL の使用 {#using-htl}
 
-HTL では、クライアントライブラリは AEM 提供のヘルパーテンプレートを介して読み込まれます。テンプレートには [`data-sly-use`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#use) を使用してアクセスできます。このファイルには 3 つのテンプレートが含まれ、[`data-sly-call`](https://helpx.adobe.com/experience-manager/htl/using/block-statements.html#template-call) で呼び出すことができます。
+HTL では、クライアントライブラリは AEM 提供のヘルパーテンプレートを介して読み込まれます。テンプレートには [`data-sly-use`](https://helpx.adobe.com/jp/experience-manager/htl/using/block-statements.html#use) を使用してアクセスできます。このファイルには 3 つのテンプレートが含まれ、[`data-sly-call`](https://helpx.adobe.com/jp/experience-manager/htl/using/block-statements.html#template-call) で呼び出すことができます。
 
-* **css**  — 参照されるクライアントライブラリのCSSファイルのみを読み込みます。
-* **js**  — 参照されるクライアントライブラリのJavaScriptファイルのみを読み込みます。
-* **all**  — 参照されるクライアントライブラリのすべてのファイル（CSSとJavaScriptの両方）を読み込みます。
+* **css** - 参照されるクライアントライブラリの CSS ファイルのみを読み込みます。
+* **js** - 参照されるクライアントライブラリの JavaScript ファイルのみを読み込みます.
+* **all** - 参照されるクライアントライブラリのすべてのファイル（CSS と JavaScript の両方）を読み込みます。
 
 各ヘルパーテンプレートには、必要なクライアントライブラリを参照するための `categories` オプションを指定できます。このオプションには、文字列値の配列またはコンマ区切り値のリストを含む文字列を指定できます。
 
-詳細と使用例については、[HTMLテンプレート言語使用の手引き](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries)を参照してください。
+詳細および使用例については、[HTML テンプレート言語の使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html?lang=ja#loading-client-libraries)ドキュメントを参照してください。
 
 ### JSP の使用 {#using-jsp}
 
-JSPコードに`ui:includeClientLib`タグを追加して、生成されるHTMLページのクライアントライブラリへのリンクを追加します。 ライブラリを参照するには、`ui:includeClientLib`ノードの`categories`プロパティの値を使用します。
+`ui:includeClientLib` タグを JSP コードに追加して、生成した HTML ページにクライアントライブラリへのリンクを追加します。ライブラリを参照するには、`ui:includeClientLib` ノードの `categories` プロパティの値を使用します。
 
 ```
 <%@taglib prefix="ui" uri="https://www.adobe.com/taglibs/granite/ui/1.0" %>
 <ui:includeClientLib categories="<%= categories %>" />
 ```
 
-例えば、`/etc/clientlibs/foundation/jquery`ノードのタイプは`cq:ClientLibraryFolder`で、categoriesプロパティは値`cq.jquery`です。 JSPファイル内の次のコードは、ライブラリを参照します。
+例えば、 `/etc/clientlibs/foundation/jquery` ノードのタイプは、`cq.jquery` 値の categories プロパティを持つ `cq:ClientLibraryFolder` です。JSP ファイル内の以下のコードは、ライブラリを参照します。
 
 ```xml
 <ui:includeClientLib categories="cq.jquery"/>
@@ -102,43 +102,43 @@ JS、CSS またはテーマライブラリをフィルタリングするため�
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`は、以前はクライアントライブラリを含めるために一般的に使用されていたもので、AEM 5.6以降は非推奨（廃止予定）となっていま [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) す。この代わりに、上記の説明に従ってを使用する必要があります。
+>`<cq:includeClientLib>` は、以前はクライアントライブラリを含めるために一般的に使用されていましたが、AEM 5.6 から非推奨（廃止予定）となりました。したがって、上記のとおり [ `<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib) を代わりに使用する必要があります。
 
 ## クライアントライブラリフォルダーの作成 {#creating-client-library-folders}
 
-`cq:ClientLibraryFolder`ノードを作成して、JavaScriptおよびカスケーディングスタイルシートライブラリを定義し、HTMLページで使用できるようにします。 ノードの `categories` プロパティを使用して、ノードが属するライブラリカテゴリを特定します。
+`cq:ClientLibraryFolder` ノードを作成して、JavaScript およびカスケードスタイルシートライブラリを定義し、それらを HTML ページで使用できるようにします。ノードの `categories` プロパティを使用して、ノードが属するライブラリカテゴリを特定します。
 
-ノードには、実行時に単一のJSファイルやCSSファイルに結合される1つ以上のソースファイルが含まれます。 生成されるファイルの名前はノード名で、ファイル名の拡張子は `.js` または `.css` です。例えば、`cq.jquery` という名前のライブラリノードからは、 `cq.jquery.js` または `cq.jquery.css` という名前のファイルが生成されます。
+ノードには、実行時に単一の JS ファイルや CSS ファイルに結合される 1 つ以上のソースファイルが含まれます。生成されるファイルの名前はノード名で、ファイル名の拡張子は `.js` または `.css` です。例えば、`cq.jquery` という名前のライブラリノードからは、 `cq.jquery.js` または `cq.jquery.css` という名前のファイルが生成されます。
 
 クライアントライブラリフォルダーには次の項目が含まれます。
 
-* JS／CSS ソースファイル（いずれかまたは両方） をマージします。
+* JS／CSS ソースファイル（いずれかまたは両方） を結合します。
 * 画像ファイルなど、CSS スタイルをサポートするリソース。
 
-   **注意：**&#x200B;サブフォルダーを使用してソースファイルを整理できます。
-* 生成される JS／CSS ファイルに統合するソースファイルを識別する 1 つの `js.txt` ファイルと 1 つの `css.txt` ファイル（いずれかまたは両方）。
+   **メモ：**&#x200B;サブフォルダーを使用してソースファイルを整理できます。
+* 生成される JS／CSS ファイルに統合するソースファイルを識別する、1 つの `js.txt` ファイルと 1 つの `css.txt` ファイル（いずれかまたは両方）。
 
 ![clientlibarch](assets/clientlibarch.png)
 
 ウィジェット用のクライアントライブラリ特有の要件について詳しくは、[ウィジェットの使用および拡張](/help/sites-developing/widgets.md)を参照してください。
 
-Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセスする権限が必要です。 また、リポジトリの保護された領域からライブラリを公開することもできます（後述の「他のライブラリからのコードの埋め込み」を参照）。
+Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセスする許可が必要です。また、リポジトリの保護された領域からライブラリを公開することもできます（以下の「他のライブラリからのコードの埋め込み」を参照）。
 
-### /lib でのライブラリの上書き{#overriding-libraries-in-lib}
+### /lib でのライブラリの上書き {#overriding-libraries-in-lib}
 
-`/apps`の下にあるクライアントライブラリフォルダーは、`/libs`内にある同じ名前のフォルダーよりも優先されます。 例えば、`/apps/cq/ui/widgets`が`/libs/cq/ui/widgets`よりも優先されます。 これらのライブラリが同じカテゴリに属する場合は、`/apps`の下のライブラリが使用されます。
+`/apps` にあるクライアントライブラリフォルダーは、`/libs` にある同じ名前のフォルダーよりも優先されます。例えば、`/apps/cq/ui/widgets` は `/libs/cq/ui/widgets` よりも優先されます。これらのライブラリが同じカテゴリに属する場合、`/apps` の下にあるライブラリが使用されます。
 
 ### クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用 {#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet}
 
-以前のバージョンでは、クライアントライブラリフォルダーはリポジトリの`/etc/clientlibs`の下にありました。 これは引き続きサポートされますが、クライアントライブラリは`/apps`の下に配置することをお勧めします。 これは、他のスクリプトの近くにクライアントライブラリを配置するためのものです。通常は、`/apps`と`/libs`の下にあります。
+以前のバージョンでは、クライアントライブラリフォルダーは、リポジトリの `/etc/clientlibs` の下にありました。これは引き続きサポートされますが、クライアントライブラリを `/apps` の下に配置することをお勧めします。これは、クライアントライブラリを他のスクリプトの近くに配置するためです。他のスクリプトは、通常、`/apps` と `/libs` の下にあります。
 
 >[!NOTE]
 >
->クライアントライブラリフォルダーの下の静的リソースは、*resources*&#x200B;というフォルダーに存在する必要があります。 フォルダー&#x200B;*resources*&#x200B;の下に画像などの静的リソースがない場合、パブリッシュインスタンスで参照できません。 次に例を示します。https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
+>クライアントライブラリフォルダーの下にある静的リソースは、*resources* というフォルダーに配置する必要があります。*resources* フォルダーの下に画像などの静的リソースがない場合、公開インスタンスで参照することはできません。以下に例を示します。https://localhost:4503/etc.clientlibs/geometrixx/components/clientlibs/resources/example.gif
 
 >[!NOTE]
 >
->コードをコンテンツと設定からより詳細に分離するには、`/apps`の下にクライアントライブラリを配置し、`allowProxy`プロパティを利用して`/etc.clientlibs`を介して公開することをお勧めします。
+>コードをコンテンツおよび設定から適切に分離するために、`/apps` の下にクライアントライブラリを配置し、`allowProxy` プロパティを活用して `/etc.clientlibs` を介して公開することをお勧めします。
 
 `/apps` にあるクライアントライブラリにアクセスできるようにするために、プロキシサーブレットが使用されます。ACL は依然としてクライアントライブラリフォルダーで適用されますが、サーブレットを使用すると、`/etc.clientlibs/` プロパティが `allowProxy` に設定されている場合、`true` を介してコンテンツを読み取ることができます。
 
@@ -149,22 +149,22 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 * clientlib は `/apps/myproject/clientlibs/foo` にあります。
 * 静的画像は `/apps/myprojects/clientlibs/foo/resources/icon.png` にあります。
 
-次に、`foo`の`allowProxy`プロパティをtrueに設定します。
+次に、`foo` の `allowProxy` プロパティを true に設定します。
 
-* 次に、`/etc.clientlibs/myprojects/clientlibs/foo.js`をリクエストできます。
-* 次に、`/etc.clientlibs/myprojects/clientlibs/foo/resources/icon.png`を使用して画像を参照できます。
-
->[!CAUTION]
->
->プロキシ化されたクライアントライブラリを使用する場合、AEM Dispatcher設定で、拡張機能clientlibsを持つURIが許可されるように更新が必要になる場合があります。
+* `/etc.clientlibs/myprojects/clientlibs/foo.js` をリクエストできます
+* `/etc.clientlibs/myprojects/clientlibs/foo/resources/icon.png` から画像を参照できます
 
 >[!CAUTION]
 >
->Adobeは、`/apps`の下にクライアントライブラリを配置し、プロキシサーブレットを使用して使用できるようにすることをお勧めします。 ただし、ベストプラクティスとしては、`/apps`パスまたは`/libs`パスを介して直接提供されるものをパブリックサイトに含めないことが必要です。
+>プロキシを使用したクライアントライブラリを使用している場合、拡張子 clientlibs を含む URI を許可するように AEM Dispatcher 設定を更新する必要が生じる場合があります。
+
+>[!CAUTION]
+>
+>アドビでは、クライアントライブラリを `/apps` の下に配置し、プロキシサーブレットを使用して利用できるようにすることをお勧めします。ただし、ベストプラクティスとしては、依然として、`/apps` または `/libs` パスから直接提供されたものを何も含まない公開サイトが必要です。
 
 ### クライアントライブラリフォルダーの作成 {#create-a-client-library-folder}
 
-1. CRXDE LiteをWebブラウザーで開きます([https://localhost:4502/crx/de](https://localhost:4502/crx/de))。
+1. Web ブラウザーで CRXDE Lite を開きます（[https://localhost:4502/crx/de](https://localhost:4502/crx/de)）。
 1. クライアントライブラリフォルダーの配置先のフォルダーを選択して、**作成／ノードを作成**&#x200B;をクリックします。
 1. ライブラリファイルの名前を入力し、タイプリストで `cq:ClientLibraryFolder` を選択します。「**OK**」をクリックし、「**すべて保存**」をクリックします。
 1. ライブラリが所属するカテゴリ（1 つまたは複数）を指定するには、`cq:ClientLibraryFolder` ノードを選択し、次のプロパティを追加して、「**すべて保存**」をクリックします。
@@ -176,7 +176,7 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 
 1. 何らかの方法で、ソースファイルをライブラリフォルダーに追加します。例えば、WebDav クライアントを使用してファイルをコピーする、ファイルを作成してコンテンツを手動で作成する、などの方法があります。
 
-   **注意：**&#x200B;必要に応じて、サブフォルダーを使用してソースファイルを整理できます。
+   **メモ：**&#x200B;必要に応じて、サブフォルダーを使用してソースファイルを整理できます。
 
 1. クライアントライブラリフォルダーを選択して、**作成／ファイルを作成**&#x200B;をクリックします。
 1. ファイル名ボックスに、次のいずれかのファイル名を入力して、「OK」をクリックします。
@@ -188,7 +188,7 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 
    `#base=*[root]*`
 
-   * `[root]`*を、ソースファイルを含むフォルダーのTXTファイルに対する相対パスに置き換えます。 例えば、ソースファイルが TXT ファイルと同じフォルダーにある場合は、次のテキストを使用します。
+   *`[root]`* を、ソースファイルが格納されているフォルダーの TXT ファイルに対する相対パスに置き換えます。例えば、ソースファイルが TXT ファイルと同じフォルダーにある場合は、次のテキストを使用します。
 
    `#base=.`
 
@@ -209,7 +209,7 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 * **タイプ：** String[]
 * **値：**&#x200B;現在のライブラリフォルダーの依存先である cq:ClientLibraryFolder ノードの categories プロパティの値。
 
-例えば、 / `etc/clientlibs/myclientlibs/publicmain`は`cq.jquery`ライブラリに依存しています。 メインのクライアントライブラリを参照するJSPは、次のコードを含むHTMLを生成します。
+例えば、/ `etc/clientlibs/myclientlibs/publicmain` は `cq.jquery` ライブラリに依存しています。メインのクライアントライブラリを参照する JSP は、以下のコードを含む HTML を生成します。
 
 ```xml
 <script src="/etc/clientlibs/foundation/cq.jquery.js" type="text/javascript">
@@ -220,9 +220,9 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 
 あるクライアントライブラリから別のクライアントライブラリに、コードを埋め込むことができます。実行時に、埋め込み元のライブラリで生成される JS ファイルおよび CSS ファイルには、埋め込み先のライブラリのコードが含まれます。
 
-コードの埋め込みは、リポジトリのセキュリティ保護された領域に格納されているライブラリへのアクセスを提供する際に便利です。
+コードの埋め込みは、リポジトリーのセキュリティ保護された領域に格納されているライブラリへのアクセスを提供する際に便利です。
 
-#### アプリケーション専用のクライアントライブラリフォルダー  {#app-specific-client-library-folders}
+#### アプリケーション専用のクライアントライブラリフォルダー {#app-specific-client-library-folders}
 
 アプリケーション関連のすべてのファイルは、`/app` 内のアプリケーションフォルダーに格納することをお勧めします。Web サイト訪問者の `/app` フォルダーに対するアクセスを拒否することもお勧めします。両方のベストプラクティスを満たすには、`/etc` にクライアントライブラリフォルダーを作成して、 `/app` 内のクライアントライブラリを埋め込みます。
 
@@ -234,7 +234,7 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 
 #### 埋め込みを使用したリクエストの最小化 {#using-embedding-to-minimize-requests}
 
-場合によっては、パブリッシュインスタンスによって一般的なページ用に生成される最終的なHTMLに、比較的多くの`<script>`要素が含まれていることがあります。特に、サイトで分析やターゲティングにClientContext情報を使用している場合は、 例えば、最適化されていないプロジェクトでは、ページのHTMLに次の一連の`<script>`要素が表示されます。
+場合によっては（特にサイトでの分析およびターゲティングのために ClientContext 情報を使用している場合）、通常のページ用に公開インスタンスで生成した最終 HTML に、比較的多くの `<script>` 要素が含まれている場合があります。例えば、最適化されていないプロジェクトで、ページの HTML に以下の一連の `<script>` 要素がある可能性があります。
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
@@ -245,7 +245,7 @@ Webクライアントには、`cq:ClientLibraryFolder`ノードにアクセス�
 <script type="text/javascript" src="/etc/clientlibs/foundation/personalization/kernel.js"></script>
 ```
 
-このような場合、必要なすべてのクライアントライブラリコードを 1 つのファイルに組み合わせて、ページ読み込み時のリクエストの行き来の数を減らすと便利です。これをおこなうには、`cq:ClientLibraryFolder` ノードの embed プロパティを使用して、必要なライブラリをアプリ固有のクライアントライブラリに `embed` します。
+このような場合、必要なすべてのクライアントライブラリコードを 1 つのファイルに組み合わせて、ページ読み込み時のリクエストの行き来の数を減らすと便利です。これを行うには、`cq:ClientLibraryFolder` ノードの embed プロパティを使用して、必要なライブラリをアプリ固有のクライアントライブラリに `embed` します。
 
 次のクライアントライブラリカテゴリが AEM に含まれています。特定のサイトを機能させるために必要なもののみを埋め込んでください。ただし、**このリストの順序は保持する必要があります**。
 
@@ -298,15 +298,15 @@ body {
 
 ### 特定のモバイルグループ用のライブラリの使用 {#using-a-library-for-specific-mobile-groups}
 
-クライアントライブラリフォルダーの`channels`プロパティを使用して、ライブラリを使用するモバイルグループを特定します。 `channels`プロパティは、同じカテゴリのライブラリが異なるデバイス機能用に設計されている場合に役立ちます。
+クライアントライブラリフォルダーの `channels` プロパティを使用して、ライブラリを使用するモバイルグループを識別します。`channels` プロパティは、同じカテゴリのライブラリが異なるデバイス機能向けに設計されている場合に役立ちます。
 
-クライアントライブラリフォルダーをデバイスグループに関連付けるには、次の属性を持つプロパティを`cq:ClientLibraryFolder`ノードに追加します。
+デバイスグループにクライアントライブラリフォルダーを関連付けるには、以下の属性を伴うプロパティを `cq:ClientLibraryFolder` ノードに追加します。
 
-* **名前：** channels
-* **タイプ：** String[]
-* **値：** モバイルグループの名前。グループからライブラリフォルダーを除外するには、名前の前に感嘆符(「!」)を付けます。
+* **名前：**&#x200B;チャネル
+* **タイプ：**&#x200B;文字列[]
+* **値：**&#x200B;モバイルグループの名前。ライブラリフォルダーをグループから除外するには、名前の先頭に感嘆符（「!」）を付けます。
 
-例えば、次の表は、`channels` カテゴリの各クライアントライブラリフォルダーの `cq.widgets` プロパティの値を示しています。
+例えば、次の表は、`cq.widgets` カテゴリの各クライアントライブラリフォルダーの `channels` プロパティの値を示しています。
 
 | クライアントライブラリフォルダー | channels プロパティの値 |
 |---|---|
@@ -389,11 +389,11 @@ compilationLevel (defaults to "simple") (can be "whitespace", "simple", "advance
 
 GCC オプションについて詳しくは、[GCC ドキュメント](https://developers.google.com/closure/compiler/docs/compilation_levels)を参照してください。
 
-### システムのデフォルト縮小ツールの設定  {#set-system-default-minifier}
+### システムのデフォルト縮小ツールの設定 {#set-system-default-minifier}
 
 YUI は、AEM のデフォルト縮小ツールとして設定されています。これを GCC に変更するには、次の手順に従います。
 
-1. Apache Felix Config Manager([https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr))に移動します。
+1. Apache Felix Config Manager（[https://localhost:4502/system/console/configMgrr](https://localhost:4502/system/console/configMgr)）に移動します。
 1. **Adobe Granite HTML ライブラリマネージャー**&#x200B;を検索して編集します。
 1. 「**Minify**」オプションを有効にします（まだ有効でない場合）。
 1. **JS Processor Default Configs** の値を `min:gcc` に設定します。
@@ -406,7 +406,7 @@ YUI は、AEM のデフォルト縮小ツールとして設定されています
 
 AEM には、クライアントライブラリフォルダーをデバッグおよびテストするためのツールが用意されています。
 
-### 埋め込みファイルの確認  {#see-embedded-files}
+### 埋め込みファイルの確認 {#see-embedded-files}
 
 埋め込みコードの元をトレースする、または埋め込みクライアントライブラリが期待どおりの結果を得られるようにするには、実行時に埋め込まれているファイルの名前を確認できます。ファイル名を確認するには、Web ページの URL に `debugClientLibs=true` パラメーターを追加します。生成されるライブラリには、埋め込みコードの代わりに `@import` ステートメントが含まれています。
 
@@ -452,9 +452,9 @@ AEM には、クライアントライブラリフォルダーをデバッグお�
 
 1. 特定のカテゴリの出力を確認するには、クライアントライブラリの `categories` プロパティの値を入力して、「**クエリを送信**」をクリックします。
 
-## 開発および本番用のライブラリ処理の設定 {#configuring-library-handling-for-development-and-production}
+## 開発および実稼働用のライブラリ処理の設定 {#configuring-library-handling-for-development-and-production}
 
-HTML ライブラリマネージャーサービスは、実行時に `cq:ClientLibraryFolder` タグを処理し、ライブラリを生成します。環境、開発または本番のタイプが、サービスの設定方法を決定します。
+HTML ライブラリマネージャーサービスは、実行時に `cq:ClientLibraryFolder` タグを処理してライブラリを生成します。環境、開発または本番のタイプが、サービスの設定方法を決定します。
 
 * セキュリティを強化：デバッグを無効化
 * パフォーマンスを向上：空白を削除してライブラリを圧縮
