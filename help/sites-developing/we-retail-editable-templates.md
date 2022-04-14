@@ -1,8 +1,8 @@
 ---
 title: We.Retail の編集可能テンプレートの使用
-seo-title: We.Retail の編集可能テンプレートの使用
+seo-title: Trying out Editable Templates in We.Retail
 description: We.Retail の編集可能テンプレートの使用
-seo-description: 'null'
+seo-description: null
 uuid: 0d4b97cb-efcc-4312-a783-eae3ecd6f889
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,19 +11,19 @@ topic-tags: best-practices
 discoiquuid: 3cc8ac23-98ff-449f-bd76-1203c7cbbed7
 exl-id: efebe66d-3d30-4033-9c4c-ae347e134f2f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 86%
+workflow-type: ht
+source-wordcount: '483'
+ht-degree: 100%
 
 ---
 
 # We.Retail の編集可能テンプレートの使用{#trying-out-editable-templates-in-we-retail}
 
-編集可能テンプレートでテンプレートを作成して管理することは、開発者のみのタスクではなくなりました。テンプレート作成者と呼ばれる一種の上級ユーザーは、テンプレートを作成できるようになりました。環境の設定、クライアントライブラリの作成、使用されるコンポーネントの作成は今でも開発者がおこなう必要がありますが、これら基本となる部分が一度配置されると、テンプレート作成者が開発プロジェクトなしにテンプレートを作成して構成できるようになります。
+編集可能テンプレートでテンプレートを作成して管理することは、開発者のみのタスクではなくなりました。テンプレート作成者と呼ばれる一種の上級ユーザーは、テンプレートを作成できるようになりました。環境の設定、クライアントライブラリの作成、使用されるコンポーネントの作成は今でも開発者が行う必要がありますが、これら基本となる部分が一度整ってしまえば、テンプレート作成者は開発プロジェクトなしにテンプレートを作成、設定できる柔軟性を持つようになります。
 
 We.Retail のページはすべて編集可能テンプレートに基づいており、開発者以外のユーザーがテンプレートを変更したり、カスタマイズしたりできます。
 
-## 試してみる  {#trying-it-out}
+## 試してみる {#trying-it-out}
 
 1. 言語マスターブランチの装備ページを編集します。
 
@@ -71,8 +71,8 @@ We.Retail のページはすべて編集可能テンプレートに基づいて�
 
    テンプレートのレイアウトを定義するには、通常のページと同様に、**レイアウト**&#x200B;モードを使用できます。
 
-## 詳細情報  {#more-information}
+## 詳細情報 {#more-information}
 
-詳しくは、オーサリングドキュメント[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者ドキュメントのページ[テンプレート — 編集可能](/help/sites-developing/page-templates-editable.md)を参照して、編集可能なテンプレートの技術的詳細を確認してください。
+詳しくは、オーサリングドキュメントの[ページテンプレートの作成](/help/sites-authoring/templates.md)を参照してください。また、編集可能テンプレートの技術的な詳細については、開発者用ドキュメントページの[テンプレート - 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。
 
-また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。コアコンポーネントの機能の概要については、オーサリングドキュメント[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を、技術概要については、開発者ドキュメント[コアコンポーネントの開発](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を参照してください。
+また、[コアコンポーネント](/help/sites-developing/we-retail-core-components.md)についても調べることをお勧めします。コアコンポーネントの機能の概要については、オーサリングドキュメントの[コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)を参照してください。技術的な概要については、開発者用ドキュメントの[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を参照してください。
