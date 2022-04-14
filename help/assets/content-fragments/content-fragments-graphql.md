@@ -3,16 +3,17 @@ title: GraphQL のコンテンツフラグメントを使用したヘッドレ�
 description: ヘッドレスコンテンツ配信に AEM コンテンツフラグメントを GraphQL と共に使用する方法を説明します。
 feature: Content Fragments
 role: User
-source-git-commit: 819df6d6123575b378676dda200064725de47b84
-workflow-type: tm+mt
+exl-id: 2debd678-2d73-41f2-b33c-c29d661f6a6b
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+workflow-type: ht
 source-wordcount: '687'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 # GraphQL のコンテンツフラグメントを使用したヘッドレスコンテンツ配信 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-Adobe Experience Manager(AEM)では、コンテンツフラグメントをAEM GraphQL API（標準のGraphQLに基づくカスタマイズされた実装）と共に使用して、アプリケーションで使用するための構造化コンテンツをヘッドレスに配信できます。 単一の API クエリをカスタマイズする機能により、レンダリングする特定のコンテンツを（単一の API クエリに対する応答として）取得して配信できます。
+Adobe Experience Manager (AEM) を使用すると、AEM GraphQL API（標準 GraphQL に基づいてカスタマイズされた実装）と共にコンテンツフラグメントを使用して、ご利用のアプリケーションで使用する構造化されたコンテンツをヘッドレスで配信できます。単一の API クエリをカスタマイズする機能により、レンダリングする特定のコンテンツを（単一の API クエリに対する応答として）取得して配信できます。
 
 <!--
 >[!NOTE]
@@ -22,7 +23,7 @@ Adobe Experience Manager(AEM)では、コンテンツフラグメントをAEM Gr
 
 >[!NOTE]
 >
->GraphQLは、現在、Adobe Experience Manager(AEM)の2つの（個別の）シナリオで使用されています。
+>GraphQL は現在 Adobe Experience Manager (AEM) の 2 つの（別々の）シナリオで使用されています。
 >
 >* [AEM コマースは、GraphQL 経由でコマースプラットフォームのデータを使用します](/help/commerce/cif/integrating/magento.md)。
 >* [AEM コンテンツフラグメントは、AEM GraphQL API（標準の GraphQL に基づいてカスタマイズされた実装）と連携して、アプリケーションで使用する構造化コンテンツを配信します](/help/assets/content-fragments/graphql-api-content-fragments.md)。
@@ -54,7 +55,7 @@ GraphQL とは次のことを意味します。
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-Adobe Experienceのために、標準のGraphQL APIのカスタマイズされた実装が開発されました。 詳しくは、「[コンテンツフラグメントと共に使用する AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)」を参照してください。
+Adobe Experience では、標準 GraphQL API をカスタマイズした実装を開発しています。詳しくは、「[コンテンツフラグメントと共に使用する AEM GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md)」を参照してください。
 
 AEM GraphQL API の実装は、[GraphQL Java ライブラリ](https://graphql.org/code/#java)に基づいています。
 
