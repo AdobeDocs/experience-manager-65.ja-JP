@@ -1,8 +1,8 @@
 ---
 title: チェックリスト
-seo-title: チェックリスト
+seo-title: The Checklist
 description: プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。
-seo-description: プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。プロジェクトのライフサイクルの全フェーズを案内し、現在のステータスを全体的に監視します。
+seo-description: The Project Checklists are intended as a set of best practices for project delivery. They guide you through all phases of the project life cycle and provide high level monitoring of your current status.
 uuid: e8ab9042-4d54-445d-b104-23d5d38f58b6
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 917b4fec-d5fe-4402-b69c-3c9645e6f934
 exl-id: 16851d65-df55-471a-8848-c73c28db8ac0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 82%
+workflow-type: ht
+source-wordcount: '316'
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 82%
 
 ## ダウンロード {#download}
 
-AEM Project Best Practices Checklist v2
+AEM プロジェクトのベストプラクティスチェックリスト v2
 
 [ファイルを入手](assets/aem_project_bp_checklistv2-65.xlsx)
 
@@ -39,16 +39,16 @@ AEM Project Best Practices Checklist v2
 * **[役割別のスタータス](/help/managing/best-practices.md#status-by-role)**
 * [ペルソナ](/help/managing/best-practices.md#persona)、[フェーズおよびマイルストーン](/help/managing/best-practices.md#phases-and-milestones)に応じた一連のチェックリスト
 * **用語集**
-   * 用語集には、プロジェクトチェックリストのすべての成果物ドキュメントの詳細が一覧表示されます。
+   * 用語集には、プロジェクトチェックリストのすべての成果物ドキュメントの詳細が記載されています。
    * [用語集](/help/managing/best-practices-glossary.md)は、ドキュメントの一部としても入手できます。
 * **[ペルソナの定義](/help/managing/best-practices.md#persona)**
 
-## チェックリストの使用  {#using-the-checklists}
+## チェックリストの使用 {#using-the-checklists}
 
 高品質のプロジェクトの提供を成功させるには、チェックリスト内のすべての項目を、可能な限り順番どおりに完了する必要があります。
 
-1. チェックリストは、関係する&#x200B;**[ペルソナ](/help/managing/best-practices.md#persona)**（ロール）に従って定義されます。 各担当者は、プロジェクトでの役割に合ったチェックリストを使用する必要があります。
-1. チェックリストは、各マイルストーンの&#x200B;**[必須ドキュメント](/help/managing/best-practices.md#required-documents)**&#x200B;と&#x200B;**[成果物](/help/managing/best-practices.md#deliverables)**&#x200B;をカバーしています。関連するペルソナは、ステータスと品質のフィールドを適切に設定する必要があります。
+1. チェックリストは、関与する&#x200B;**[ペルソナ](/help/managing/best-practices.md#persona)**（役割）に応じて定義されます。各自が、プロジェクトでの自分の役割に応じたチェックリストを使用する必要があります。
+1. チェックリストは、各マイルストーンの&#x200B;**[必須ドキュメント](/help/managing/best-practices.md#required-documents)**&#x200B;と&#x200B;**[成果物](/help/managing/best-practices.md#deliverables)**&#x200B;をカバーしています。関連するペルソナが、ステータスフィールドと品質フィールドを適切に設定する必要があります。
 
    >[!NOTE]
    >
