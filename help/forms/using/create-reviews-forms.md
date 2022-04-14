@@ -1,24 +1,24 @@
 ---
-title: フォームのアセットのレビューの作成と管理
-seo-title: フォームのアセットのレビューの作成と管理
+title: フォームのアセットに対するレビューの作成と管理
+seo-title: Creating and managing reviews for assets in forms
 description: 'レビューとは、フォーム内のアセットに対し、1 人または複数のレビュー担当者にコメントを許可するメカニズムです。 '
-seo-description: 'レビューとは、フォーム内のアセットに対し、1 人または複数のレビュー担当者にコメントを許可するメカニズムです。 '
+seo-description: A Review is a mechanism that allows one or more reviewers to comment on an asset that is available in a form.
 uuid: 45c7ff56-3fa8-4a0f-8597-05404e547282
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: d8c1c507-a6c4-44f5-be01-ee902bc28410
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 9ca4fcd6-3eb0-4fc1-a09c-e4ad532bbed0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '687'
+workflow-type: ht
+source-wordcount: '655'
 ht-degree: 100%
 
 ---
 
-# フォームのアセットのレビューの作成と管理{#creating-and-managing-reviews-for-assets-in-forms}
+# フォームのアセットに対するレビューの作成と管理{#creating-and-managing-reviews-for-assets-in-forms}
 
 ## レビュー {#review}
 
@@ -37,7 +37,7 @@ ht-degree: 100%
 
 1. 残りの詳細情報を入力し、「開始」をクリックします。
 
-### レビューが設定されると発生するアクション  {#actions-that-occur-when-a-review-is-set-up}
+### レビューが設定されると発生するアクション {#actions-that-occur-when-a-review-is-set-up}
 
 本セクションでは、レビューが作成・設定された場合に起こるアクションを説明します。
 
@@ -82,7 +82,7 @@ ht-degree: 100%
 
 1. レビューを終了するには、「終了」をクリックします。
 
-### レビューが修正されると発生するアクション  {#actions-that-occur-when-a-review-is-modified}
+### レビューが修正されると発生するアクション {#actions-that-occur-when-a-review-is-modified}
 
 本セクションでは、レビューが終了・修正された場合に起こるアクションを説明します。
 
