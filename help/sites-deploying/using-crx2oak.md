@@ -1,20 +1,20 @@
 ---
 title: CRX2Oak 移行ツールの使用
-seo-title: CRX2Oak 移行ツールの使用
+seo-title: Using the CRX2Oak Migration Tool
 description: CRX2Oak 移行ツールの使用方法を説明します。
-seo-description: CRX2Oak 移行ツールの使用方法を説明します。
+seo-description: Learn how to use the CRX2Oak migration tool.
 uuid: 9b788981-4ef0-446e-81f0-c327cdd3214b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
 content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
-feature: アップグレード
+feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 66%
+workflow-type: ht
+source-wordcount: '1252'
+ht-degree: 100%
 
 ---
 
@@ -28,13 +28,13 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 最新バージョンの crx2oak は、次の場所で公開されているアドビリポジトリからダウンロードできます。[ https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak/)
 
-最新バージョンの変更点と修正点の一覧は、[CRX2Oak のリリースノート](https://docs.adobe.com/content/help/en/experience-manager-64/release-notes/crx2oak.html)にあります。
+最新バージョンの変更点と修正点の一覧は、[CRX2Oak のリリースノート](https://docs.adobe.com/content/help/ja/experience-manager-64/release-notes/crx2oak.html)にあります。
 
 >[!NOTE]
 >
 >Apache Oak と AEM の永続性の主要な概念について詳しくは、[AEM プラットフォームの紹介](/help/sites-deploying/platform.md)を参照してください。
 
-## 移行のユースケース  {#migration-use-cases}
+## 移行のユースケース {#migration-use-cases}
 
 このツールでは以下のことが可能です。
 
@@ -44,7 +44,7 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 外部の BLOB ストア（一般的にはデータストアとして知られる）を使用したリポジトリ移行のサポートは、様々な組み合わせで提供されています。考えられる移行パスの 1 つは、外部 `FileDataStore` を使用する CRX2 リポジトリから `S3DataStore` を使用する Oak リポジトリへの移行です。
 
-下の図は、CRX2Oak がサポートしているすべての移行の組み合わせを示したものです。
+下の図に、CRX2Oak がサポートしているすべての移行の組み合わせを示します。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -56,7 +56,7 @@ CRX2Oak は AEM のアップグレード中に呼び出され、このとき、�
 
 また、スタンドアロンモードのデフォルト設定では、ノードストアのみが移行され、新しいリポジトリは古いバイナリストレージを再使用することにも注意してください。
 
-### 自動クイックスタートモード  {#automated-quickstart-mode}
+### 自動クイックスタートモード {#automated-quickstart-mode}
 
 AEM 6.3 以降、CRX2Oak はユーザー定義の移行プロファイルを処理できるようになりました。このプロファイルには、既に使用可能なすべての移行オプションを設定できます。これにより、柔軟性が向上すると同時に、AEM の設定を自動化できます。スタンドアロンモードでこのツールを使用している場合は、このような機能は使用できません。
 
@@ -68,7 +68,7 @@ CRX2Oak をクイックスタートモードに切り替えるには、次のオ
 export SLING_HOME="/path/to/crx-quickstart"
 ```
 
-**Windows の場合**
+**Windows の場合：**
 
 ```shell
 SET "SLING_HOME=/path/to/crx-quickstart"
@@ -78,9 +78,9 @@ SET "SLING_HOME=/path/to/crx-quickstart"
 
 移行はいつでも中断でき、後で再開することができます。
 
-#### カスタマイズ可能なアップグレードロジック  {#customizable-upgrade-logic}
+#### カスタマイズ可能なアップグレードロジック {#customizable-upgrade-logic}
 
-カスタムJavaロジックも`CommitHooks`を使用して実装できます。 カスタム `RepositoryInitializer` クラスを実装して、カスタム値でリポジトリを初期化できます。
+`CommitHooks`を使用して、カスタム Java ロジックも実装できます。カスタム `RepositoryInitializer` クラスを実装して、カスタム値でリポジトリを初期化できます。
 
 #### メモリマップ操作のサポート {#support-for-memory-mapped-operations}
 
@@ -88,17 +88,17 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 >[!CAUTION]
 >
->ただし、メモリマップ操作は Windows プラットフォームではサポートされないことに注意してください。したがって、Windowsで移行を実行する際には、 **—disable-mmap**&#x200B;パラメーターを追加することをお勧めします。
+>ただし、メモリマップ操作は Windows プラットフォームではサポートされないことに注意してください。そのため、Windows で移行を実行するときには、**--disable-mmap** パラメーターを追加することが推奨されます。
 
 #### コンテンツの選択的移行 {#selective-migration-of-content}
 
-デフォルトでは、このツールは`"/"`パスの下のリポジトリ全体を移行します。 しかし、どのコンテンツを移行するかは完全に制御できます。
+デフォルトでは、このツールは`"/"`パスの下にあるリポジトリ全体を移行します。しかし、どのコンテンツを移行するかは完全に制御できます。
 
-新しいインスタンスで不要な部分がコンテンツに含まれている場合は、`--exclude-path`パラメーターを使用してコンテンツを除外し、アップグレード手順を最適化できます。
+新しいインスタンスに不要な部分がコンテンツにある場合は、 `--exclude-path` パラメーターを使用してそのコンテンツを除外し、アップグレード手順を最適化できます。
 
 #### パスの結合 {#path-merging}
 
-2つのリポジトリ間でデータをコピーする必要があり、両方のインスタンスで異なるコンテンツパスがある場合は、 `--merge-path`パラメーターで定義できます。 定義すると、CRX2Oak は新しいノードのみをコピー先リポジトリにコピーし、古いノードは元の場所に保持します。
+2 つのリポジトリ間でデータをコピーする必要があり、両方のインスタンス上でコンテンツパスが異なる場合は、`--merge-path` パラメーターでコンテンツパスを定義できます。定義すると、CRX2Oak は新しいノードのみをコピー先リポジトリにコピーし、古いノードは元の場所に保持します。
 
 ![chlimage_1-152](assets/chlimage_1-152.png)
 
@@ -108,9 +108,9 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ただし、元のページが削除されても、これらのバージョンはパージされません。長時間使用されているリポジトリを扱う場合は、孤立したバージョンによって生じた多数の冗長なデータを移行で処理しなければならないことがあります。
 
-このような状況で役立つ機能は、`--copy-versions`パラメーターの追加です。 リポジトリの移行またはコピー中にバージョンノードをスキップする場合に使用できます。
+このような状況に役立つ機能は、`--copy-versions` パラメーターを付加することです。このパラメーターを使用すると、リポジトリの移行またはコピー中に、バージョンノードをスキップできます。
 
-`--copy-orphaned-versions=true`を追加して、孤立したバージョンをコピーするかどうかを選択することもできます。
+`--copy-orphaned-versions=true` を付加して、孤立したバージョンをコピーするかどうかを選択することもできます。
 
 特定の日付までのバージョンをコピーする場合、どちらのパラメーターも日付形式 `YYYY-MM-DD` をサポートしています。
 
@@ -128,62 +128,62 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
 
 ## パラメーター {#parameters}
 
-### ノードストアオプション  {#node-store-options}
+### ノードストアオプション {#node-store-options}
 
-* `--cache`:キャッシュサイズ（MB単位）(デフォルトは `256`)
+* `--cache`：MB 単位でのキャッシュサイズ（デフォルトは `256`）
 
-* `--mmap`:セグメントストアのメモリマップファイルアクセスを有効にする
-* `--src-password:` ソースRDBデータベースのパスワード
+* `--mmap`：セグメントストア用のメモリマップファイルアクセスを有効化します
+* `--src-password:`：ソース RDB データベースのパスワード
 
-* `--src-user:` ソースRDBのユーザー
+* `--src-user:`：ソース RDB のユーザー
 
-* `--user`:ターゲットRDBのユーザー
+* `--user`：ターゲット RDB のユーザー
 
-* `--password`:ターゲットRDBのパスワード。
+* `--password`：ターゲット RDB のパスワード
 
 ### 移行オプション {#migration-options}
 
-* `--early-shutdown`:ノードのコピー後、コミットフックの適用前に、ソースJCR2リポジトリをシャットダウンします。
-* `--fail-on-error`:ソースリポジトリからノードを読み取れない場合、強制的に移行が失敗します。
-* `--ldap`:LDAPユーザーをCQ 5.xインスタンスからOakベースのインスタンスに移行します。この機能を有効にするには、Oak 設定内の ID プロバイダーを ldap という名前にする必要があります。詳しくは、[LDAP に関するドキュメント](/help/sites-administering/ldap-config.md)を参照してください。
+* `--early-shutdown`：ノードのコピー後、コミットフックの適用前に、ソース JCR2 リポジトリをシャットダウンします
+* `--fail-on-error`：ソースリポジトリからノードを読み取れない場合、強制的に移行を失敗させます。
+* `--ldap`：LDAP ユーザーを CQ 5.x インスタンスから Oak ベースのインスタンスに移行します。この機能を有効にするには、Oak 設定内の ID プロバイダーを ldap という名前にする必要があります。詳しくは、[LDAP に関するドキュメント](/help/sites-administering/ldap-config.md)を参照してください。
 
-* `--ldap-config:` これは、複数のLDAPサーバーを認証に使 `--ldap` 用したCQ 5.xリポジトリのパラメーターと組み合わせて使用します。CQ 5.xの`ldap_login.conf`または`jaas.conf`設定ファイルを指すのに使用できます。 形式は`--ldapconfig=path/to/ldap_login.conf`です。
+* `--ldap-config:`：認証に複数の サーバーを使用していた CQ 5.x リポジトリに対しては、このパラメーターと `--ldap` パラメーターを併用します。このパラメーターを使用して、CQ 5.x の `ldap_login.conf` または `jaas.conf` 設定ファイルを指すことができます。形式は、`--ldapconfig=path/to/ldap_login.conf` です。
 
 ### バージョンストアオプション {#version-store-options}
 
-* `--copy-orphaned-versions`:孤立したバージョンのコピーをスキップします。次のパラメーターがサポートされています。`true`、`false`および`yyyy-mm-dd`。 デフォルトは `true`.
+* `--copy-orphaned-versions`：孤立したバージョンのコピーをスキップします。サポートされているパラメーターは、`true`、`false`、`yyyy-mm-dd` です。デフォルトは `true` です。
 
-* `--copy-versions:` バージョンストレージをコピーします。パラメーター: `true`, `false`, `yyyy-mm-dd`. デフォルトは `true`.
+* `--copy-versions:`：バージョンストレージをコピーします。サポートされているパラメーターは、`true`、`false`、`yyyy-mm-dd` です。デフォルトは `true` です。
 
 #### パスオプション {#path-options}
 
-* `--include-paths:` コピー時に含めるパスのコンマ区切りリスト
-* `--merge-paths`:コピー時に結合するパスのコンマ区切りリスト
-* `--exclude-paths:` コピー時に除外するパスのコンマ区切りリスト。
+* `--include-paths:`：コピー時に含めるパスのコンマ区切りのリスト
+* `--merge-paths`：コピー時に結合するパスのコンマ区切りのリスト
+* `--exclude-paths:`：コピー時に除外するパスのコンマ区切りのリスト
 
 ### コピー元 BLOB ストアオプション {#source-blob-store-options}
 
-* `--src-datastore:` ソースとして使用するデータストアディレクトリ  `FileDataStore`
+* `--src-datastore:`：ソース `FileDataStore` として使用するデータストアディレクトリ
 
-* `--src-fileblobstore`:ソースとして使用するデータストアディレクトリ  `FileBlobStore`
+* `--src-fileblobstore`：ソース `FileBlobStore` として使用するデータストアディレクトリ
 
-* `--src-s3datastore`:ソースに使用するデータストアディレクトリ  `S3DataStore`
+* `--src-s3datastore`：ソース `S3DataStore` として使用するデータストアディレクトリ
 
-* `--src-s3config`:ソースの設定ファイ `S3DataStore`ル。
+* `--src-s3config`：ソース `S3DataStore` の設定ファイル
 
-### コピー先 BLOB ストアオプション {#destination-blobstore-options}
+### コピー先 BlobStore オプション {#destination-blobstore-options}
 
-* `--datastore:` ターゲットとして使用するデータストアディレクトリ  `FileDataStore`
+* `--datastore:`：ターゲット `FileDataStore` として使用するデータストアディレクトリ
 
-* `--fileblobstore:` ターゲットとして使用するデータストアディレクトリ  `FileBlobStore`
+* `--fileblobstore:`：ターゲット `FileBlobStore` として使用するデータストアディレクトリ
 
-* `--s3datastore`:ターゲットに使用するデータストアディレクトリ  `S3DataStore`
+* `--s3datastore`：ターゲット `S3DataStore` として使用するデータストアディレクトリ
 
-* `--s3config`:ターゲットの設定ファイ `S3DataStore`ル。
+* `--s3config`：ターゲット `S3DataStore` の設定ファイル
 
 ### ヘルプオプション {#help-options}
 
-* `-?, -h, --help:` ヘルプ情報を表示します。
+* `-?, -h, --help:`：ヘルプ情報を表示します。
 
 ## デバッグ {#debugging}
 
@@ -193,15 +193,15 @@ CRX2Oak はデフォルトで、メモリマップ操作もサポートしてい
  <tbody>
   <tr>
    <td><strong>CRX2Oak モード</strong></td>
-   <td><strong>動作</strong></td>
+   <td><strong>アクション</strong></td>
   </tr>
   <tr>
    <td>クイックスタートモード</td>
-   <td>CRX2Oakの実行時に、<strong>—log-levelTRACE</strong>または<strong>—log-level DEBUG </strong>オプションをコマンドラインに追加できます。 このモードでは、ログは自動的に<strong>upgrade.logファイル</strong>にリダイレクトされます。</td>
+   <td>CRX2Oak を実行するときに、コマンドラインに「<strong>--log-level TRACE</strong>」オプションまたは「<strong>--log-level DEBUG </strong>」オプションを追加できます。このモードでは、ログは自動的に <strong>upgrade.log ファイル</strong>にリダイレクトされます。</td>
   </tr>
   <tr>
    <td>スタンドアロンモード</td>
-   <td><p><strong>—trace</strong>オプションをCRX2Oakコマンドラインに追加して、標準出力でTRACEイベントを表示します（リダイレクト文字を使用してログを自分でリダイレクトする必要があります）。後で検査するための'&gt;'または'tee'コマンド)。</p> </td>
+   <td><p>「<strong>--trace</strong>」オプションを CRX2Oak コマンドラインに追加して、標準出力に TRACE イベントを表示します（後で検査するには、リダイレクト文字：「&gt;」または「tee」コマンドを使用してログを自分でリダイレクトする必要があります）。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -218,4 +218,4 @@ java -Xmx4092m -XX:MaxPermSize=1024m -jar crx2oak.jar crx-quickstart/repository/
 
 >[!NOTE]
 >
->詳しくは、MongoDB の接続文字列に関するドキュメントで[書き込み確認](https://docs.mongodb.org/manual/reference/connection-string/#write-concern-options)について参照してください。
+>詳しくは、MongoDB の接続文字列に関するドキュメントで[書き込み上の懸念](https://docs.mongodb.org/manual/reference/connection-string/#write-concern-options)について参照してください。
