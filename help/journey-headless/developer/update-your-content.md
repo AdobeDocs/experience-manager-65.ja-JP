@@ -2,9 +2,9 @@
 title: AEM Assets API を使用してコンテンツをアップデートする方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、REST API を使用してコンテンツフラグメントのコンテンツにアクセスし、アップデートする方法について説明します。
 source-git-commit: 7f43d9d6b631b26f7b9293aa109498d0c8040436
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1040'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Assets HTTP API には次の API が含まれます。
 
 現在の Assets HTTP API の実装は、**REST** アーキテクチャスタイルに基づいており、**CRUD** 操作（作成、読み取り、アップデート、削除）を使用して（AEM に保存された）コンテンツにアクセスできます。
 
-この操作を使用すると、API は、JavaScript フロントエンドアプリケーションにコンテンツサービスを提供することで、Adobe Experience Managerをヘッドレス CMS(Content Management System) として操作できます。 または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
+これらの操作で、API では、コンテンツサービスを JavaScript フロントエンドアプリケーションに提供することで、Adobe Experience Manager をヘッドレス CMS（コンテンツ管理システム）として動作させることができます。または、HTTP リクエストを実行して JSON 応答を処理できる他のどのようなアプリケーションにもすることができます。例えば、単一ページアプリケーション（SPA）では、フレームワークベースかカスタムかを問わず、API 経由で提供されるコンテンツ（多くの場合 JSON 形式）が必要です。
 
 <!--
 >[!NOTE]
@@ -250,7 +250,7 @@ Assets REST API は `/api/assets` エンドポイントを使用しており、�
 
 >[!CAUTION]
 >
->AEMインスタンス上の Dispatcher 設定により、へのアクセスがブロックされる場合があります。 `/api`.
+>AEM インスタンス上の Dispatcher 設定により、`/api` へのアクセスがブロックされる場合があります。
 
 >[!NOTE]
 >
@@ -302,7 +302,7 @@ AEM Assets REST API の使用の詳細については、次を参照してくだ
 * Adobe Experience Manager Assets HTTP API（その他のリソース）
 * AEM Assets HTTP API でのコンテンツフラグメントのサポート（その他のリソース）
 
-## 次の手順 {#whats-next}
+## 次のステップ {#whats-next}
 
 これで、ここでの AEM ヘッドレスデベロッパージャーニーは完了です。次ができるようになったはずです。
 
