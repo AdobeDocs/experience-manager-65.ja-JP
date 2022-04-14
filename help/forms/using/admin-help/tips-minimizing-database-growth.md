@@ -1,8 +1,8 @@
 ---
 title: データベースの増大を最小にするためのヒント
-seo-title: データベースの増大を最小にするためのヒント
+seo-title: Tips for minimizing database growth
 description: 長期間有効なプロセスは、プロセスデータを AEM Forms データベースに格納します。AEM Forms データベースの増大は、いくつかの簡単なプロセスデザインと製品設定方法を使用して最小限に抑えることができます。
-seo-description: 長期間有効なプロセスは、プロセスデータを AEM Forms データベースに格納します。AEM Forms データベースの増大は、いくつかの簡単なプロセスデザインと製品設定方法を使用して最小限に抑えることができます。
+seo-description: Long-lived processes store process data in the AEM forms database. The growth of the AEM forms database can be minimized using a few easy process design and product configuration strategies.
 uuid: 13f99d4f-848e-451e-90d9-55e202dc0bdb
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89441336-babc-4d1f-9053-d1566cd42d22
 exl-id: f64efb06-815a-4608-ba1c-39e22f344ebb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '443'
+workflow-type: ht
+source-wordcount: '408'
 ht-degree: 100%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 長期間有効なプロセスは、プロセスデータを AEM Forms データベースに格納します。AEM Forms データベースの増大は、いくつかの簡単なプロセスデザインと製品設定方法を使用して最小限に抑えることができます。
 
-## プロセスデザインのヒント  {#process-design-tips}
+## プロセスデザインのヒント {#process-design-tips}
 
 できる限り、短時間のみ有効なプロセスを使用してください。短時間のみ有効なプロセスは、プロセスデータをデータベースに格納しません。短時間のみ有効なプロセスを使用する場合の短所は、そのステータスと状態が管理コンソールで追跡されず、プロセスの履歴がないことです。
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 単純な変数タイプ（string や int など）を使用し、できる限り複雑な変数タイプの使用は避けてください。値が含まれていない場合でも、変数にはデータベース領域が割り当てられます。複雑な変数には、通常、単純な変数より多くの領域が必要になります。
 
-## 製品管理のヒント  {#product-administration-tips}
+## 製品管理のヒント {#product-administration-tips}
 
 グローバルドキュメントストレージ（GDS）を、効率的に使用してください。Forms サーバー上の GDS ディレクトリは、特にプロセス内の AEM Formsに属するサービスに渡されるファイルを格納するために使用されます。パフォーマンス向上のために、小さなドキュメントは代わりにメモリ内に保持されデータベースに格納されます。
 
