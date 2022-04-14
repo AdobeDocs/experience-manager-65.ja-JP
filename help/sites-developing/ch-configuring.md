@@ -1,8 +1,8 @@
 ---
 title: ContextHub の設定
-seo-title: ContextHub の設定
+seo-title: Configuring ContextHub
 description: Context Hub の設定方法について説明します。
-seo-description: Context Hub の設定方法について説明します。
+seo-description: Learn how to configure Context Hub.
 uuid: f2988bb9-6878-42a2-bb51-c3f8683248c5
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ topic-tags: personalization
 content-type: reference
 exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1850'
-ht-degree: 90%
+workflow-type: ht
+source-wordcount: '1842'
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ ContextHub は、AEM のインストールで、デフォルトで有効にな�
 
 >[!NOTE]
 >
->[AEM 6.4でのリポジトリの再構築に伴い、](/help/sites-deploying/repository-restructuring.md) ContextHub設定の場所がからに変更され `/etc/cloudsettings` ました。
+>[AEM 6.4 でのリポジトリの再構築に伴い](/help/sites-deploying/repository-restructuring.md)、ContextHub 構成の場所が `/etc/cloudsettings` から次のように変更されました。
 >
 > * `/libs/settings/cloudsettings`
 > * `/conf/global/settings/cloudsettings`
@@ -50,14 +50,14 @@ ContextHub は、AEM のインストールで、デフォルトで有効にな�
 
 Adobe Granite ContextHub OSGi サービスを設定して、ページで [ContextHub UI](/help/sites-authoring/ch-previewing.md) を表示または非表示にします。このサービスの PID は、`com.adobe.granite.contexthub.impl.ContextHubImpl.` です。
 
-このサービスを設定するには、[Webコンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内のJCRノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用します。
+このサービスは、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)または[リポジトリ内の JCR ノード](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を使用して設定できます。
 
 * **Web コンソール：** UI を表示するには、Show UI プロパティを選択します。UI を非表示にするには、Hide UI プロパティを消去します。
 * **JCR ノード：** UI を表示するには、`com.adobe.granite.contexthub.show_ui` ブール値プロパティを `true` に設定します。UI を非表示にするには、プロパティを `false` に設定します。
 
 ContextHub UI を表示に設定すると、AEM オーサーインスタンスのページにのみ表示されます。UI はパブリッシュインスタンスのページには表示されません。
 
-## ContextHub UI モードとモジュールの追加  {#adding-contexthub-ui-modes-and-modules}
+## ContextHub UI モードとモジュールの追加 {#adding-contexthub-ui-modes-and-modules}
 
 ContextHub ツールバーに表示される UI のモードとモジュールをプレビューモードで設定します。
 
@@ -70,7 +70,7 @@ UI モードはツールバーの左側に一連のアイコンとして表示�
 
 アイコンは、[Coral UI ライブラリ](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)からの参照です。
 
-### UI モードの追加  {#adding-a-ui-mode}
+### UI モードの追加 {#adding-a-ui-mode}
 
 UI モードをグループ関連の ContextHub モジュールに追加します。UI モードを作成する際に、ContextHub ツールバーに表示されるタイトルとアイコンを指定します。
 
@@ -84,12 +84,12 @@ UI モードをグループ関連の ContextHub モジュールに追加しま�
 1. 次のプロパティの値を指定します。
 
    * UI モードのタイトル：UI モードを識別するタイトル。
-   * モードアイコン：使用する [Coral UI アイコン](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)のセレクター（例：`coral-Icon--user`）。
+   * モードアイコン：使用する [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons)のセレクター（例：`coral-Icon--user`）。
    * 有効：オンにすると ContextHub ツールバーに UI モードが表示されます。
 
 1. 「保存」をクリックまたはタップします。
 
-### UI モジュールの追加  {#adding-a-ui-module}
+### UI モジュールの追加 {#adding-a-ui-module}
 
 ContextHub UI モジュールを UI モードに追加し、それを ContextHub ツールバーに表示して、ページコンテンツをプレビューできるようにします。UI モジュールを追加するときは、ContextHub に登録されるモジュールタイプのインスタンスを作成します。UI モジュールを追加するには、関連するモジュールタイプの名前が必要です。
 
@@ -102,9 +102,9 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
 | [contexthub.base](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) | 汎用の UI モジュールタイプ | UI モジュールのプロパティで設定されます |
 | [contexthub.browserinfo](/help/sites-developing/ch-samplemodules.md#contexthub-browserinfo-ui-module-type) | ブラウザーに関する情報が表示されます | surferinfo |
 | [contexthub.datetime](/help/sites-developing/ch-samplemodules.md#contexthub-datetime-ui-module-type) | 日付と時間の情報が表示されます | datetime |
-| [contexthub.device](/help/sites-developing/ch-samplemodules.md#contexthub-device-ui-module-type) | クライアントデバイスの表示 | emulators |
+| [contexthub.device](/help/sites-developing/ch-samplemodules.md#contexthub-device-ui-module-type) | クライアントデバイスが表示されます。 | emulators |
 | [contexthub.location](/help/sites-developing/ch-samplemodules.md#contexthub-location-ui-module-type) | クライアントの緯度と経度、およびマップ上の位置が表示されます。位置は変更できます。 | geolocation |
-| [contexthub.screen-orientation](/help/sites-developing/ch-samplemodules.md#contexthub-screen-orientation-ui-module-type) | デバイスの画面の向きが表示されます（横置きまたは縦置き） | エミュレーター |
+| [contexthub.screen-orientation](/help/sites-developing/ch-samplemodules.md#contexthub-screen-orientation-ui-module-type) | デバイスの画面の向きが表示されます（横置きまたは縦置き） | emulators |
 | [contexthub.tagcloud](/help/sites-developing/ch-samplemodules.md#contexthub-tagcloud-ui-module-type) | ページのタグに関する統計が表示されます | tagcloud |
 | [granite.profile](/help/sites-developing/ch-samplemodules.md#granite-profile-ui-module-type) | authorizableID、displayName、familyName など、現在のユーザーのプロファイル情報が表示されます。displayName と familyName の値は変更できます。 | プロファイル |
 
@@ -125,11 +125,11 @@ UI モジュールのプロパティには、モジュール固有のプロパ�
 1. （オプション）デフォルトのストアの設定をオーバーライドするには、UI モジュールを設定する JSON オブジェクトを入力します。
 1. 「保存」をクリックまたはタップします。
 
-## ContextHub ストアの作成  {#creating-a-contexthub-store}
+## ContextHub ストアの作成 {#creating-a-contexthub-store}
 
 ContextHub ストアを作成してユーザーデータを保持し、必要に応じてそのデータにアクセスします。ContextHub ストアは、登録済みのストア候補に基づきます。ストアを作成する際には、ストア候補が登録された storeType の値が必要です（[カスタムストア候補の作成](/help/sites-developing/ch-extend.md#creating-custom-store-candidates)を参照してください）。
 
-### ストアの詳細設定  {#detailed-store-configuration}
+### ストアの詳細設定 {#detailed-store-configuration}
 
 ストアを設定すると、詳細設定プロパティによりストア固有のプロパティの値を指定できます。値は、ストアの `config` 関数の `init` パラメーターに基づきます。このため、この値を指定する必要があるかどうかと、指定する値の形式はストアによって変わります。
 
@@ -142,14 +142,14 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 | ストアの種類 | 説明 |
 |---|---|
 | [aem.segmentation](/help/sites-developing/ch-samplestores.md#aem-segmentation-sample-store-candidate) | 解決済みおよび未解決の ContextHub セグメントを格納します。ContextHub SegmentManager からセグメントを自動的に取得します |
-| [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManagerサービスをリッスンして、ストアを自動的に更新します |
+| [aem.resolvedsegments](/help/sites-developing/ch-samplestores.md#aem-resolvedsegments-sample-store-candidate) | 現在までに解決済みのセグメントを格納します。ContextHub SegmentManager サービスをリッスンしてストアを自動的に更新します。 |
 | [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) | ブラウザーの場所の緯度と経度を格納します。 |
-| [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | ブラウザーの場所の現在の日付、時刻、季節を格納します |
+| [contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) | ブラウザーの場所の日付、時間、季節を格納します。 |
 | [granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) | 多数のデバイスのプロパティと機能を定義し、現在のクライアントデバイスを検出します |
-| [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | JSONPサービスからデータを取得して保存します |
+| [contexthub.generic-jsonp](/help/sites-developing/ch-samplestores.md#contexthub-generic-jsonp-sample-store-candidate) | JSONP サービスからデータを取得して格納します。 |
 | [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) | 現在のユーザーのプロファイルデータを格納します |
 | [contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) | デバイス情報、ブラウザーの種類、画面の向きなど、クライアントに関する情報を格納します |
-| [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | ページタグとタグ数を格納します |
+| [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) | ページのタグとタグの数を格納します。 |
 
 1. Experience Manager レールで、ツール／サイト／ContextHub をクリックまたはタップします。
 1. デフォルトの設定コンテナをクリックまたはタップします。
@@ -168,7 +168,7 @@ AEM には、ストアのベースにできる次のサンプルのストア候�
 1. （オプション）デフォルトのストアの設定をオーバーライドするには、「詳細設定（JSON）」ボックスに JSON オブジェクトを入力します。
 1. 「保存」をクリックまたはタップします。
 
-## JSONP サービスの使用例         {#example-using-a-jsonp-service}
+## JSONP サービスの使用例  {#example-using-a-jsonp-service}
 
 この例は、ストアを設定して UI モジュールにデータを表示する方法を示します。この例では、ストアのデータソースとして jsontest.com サイトの MD5 サービスが使用されています。サービスが指定の文字列の MD5 ハッシュコードを JSON 形式で返します。
 
@@ -181,7 +181,7 @@ contexthub.generic-jsonp ストアがサービスコール `https://md5.jsontest
 }
 ```
 
-### contexthub.generic-jsonp ストアの作成  {#creating-a-contexthub-generic-jsonp-store}
+### contexthub.generic-jsonp ストアの作成 {#creating-a-contexthub-generic-jsonp-store}
 
 contexthub.generic-jsonp のサンプルのストア候補を使用すると、JSON データを返す JSONP サービスや Web サービスからデータを取得できます。このストア候補では、そのストア設定を使用して、使用する JSONP サービスに関する詳細を指定します。
 
@@ -217,7 +217,7 @@ ContextHub ツールバーに UI モジュールを追加して、サンプル�
 
 ![chlimage_1-323](assets/chlimage_1-323.png)
 
-[UIモジュール](#adding-a-ui-module)の追加手順を使用して、サンプルのペロナUIモードなど、既存のUIモードにUIモジュールを追加します。 UI モジュールには、次のプロパティ値を使用します。
+[UI モジュールの追加](#adding-a-ui-module)手順に従って、サンプルのペルソナ UI モードなどの既存の UI モードに UI モジュールを追加します。UI モジュールには、次のプロパティ値を使用します。
 
 * **UI モジュールのタイトル：** MD5
 * **モジュールの種類：** contexthub.base
@@ -237,7 +237,7 @@ ContextHub ツールバーに UI モジュールを追加して、サンプル�
 
 ContextHub のデバッグモードを有効にして、トラブルシューティングに対応できます。デバッグモードは、ContextHub 設定または CRXDE のいずれかを利用して有効にできます。
 
-### 設定による有効化  {#via-the-configuration}
+### 設定による有効化 {#via-the-configuration}
 
 ContextHub の設定を編集し、「**デバッグ**」オプションをオンにします。
 
@@ -255,7 +255,7 @@ CRXDE Lite を使用して、`debug` プロパティを **true** に設定しま
 
 >[!NOTE]
 >
->ContextHub設定が従来のパスの下にまだ存在する場合、`debug property`を設定する場所は`/libs/settings/cloudsettings/legacy/contexthub`です。
+>ContextHub 設定が従来のパスの下に残っている場合は、 `debug property` を設定する場所は `/libs/settings/cloudsettings/legacy/contexthub` になります。
 
 ### サイレントモード {#silent-mode}
 
@@ -268,22 +268,22 @@ CRXDE Lite を使用して、`debug` プロパティを **true** に設定しま
 1. 設定「**Adobe Granite ContextHub**」をクリックして、そのプロパティを編集します。
 1. 「**サイレントモード**」チェックボックスをオンにし、「**保存**」をクリックします。
 
-## アップグレード後の ContextHub の設定の復元  {#recovering-contexthub-configurations-after-upgrading}
+## アップグレード後の ContextHub の設定の復元 {#recovering-contexthub-configurations-after-upgrading}
 
 [AEM へのアップグレード](/help/sites-deploying/upgrade.md)が実行されると、ContextHub の設定がバックアップされて安全な場所に格納されます。アップグレード中、デフォルトの ContextHub の設定がインストールされ、既存の設定が置換されます。加えられた変更や追加を保持するにはバックアップが必要です。
 
-ContextHub設定は、次のノードの下の`contexthub`フォルダーに保存されます。
+ContextHub 構成は、次のノードの下の `contexthub` という名前のフォルダーに保存されます。
 
 * `/conf/global/settings/cloudsettings`
 * `/conf/<tenant>/settings/cloudsettings`
 
-アップグレード後、バックアップは、次の名前のノードの下の`contexthub`フォルダーに保存されます。
+アップグレード後、バックアップは、次の名前のノードの下にある `contexthub` という名前のフォルダーに保存されます。
 
 `/conf/global/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` か `/conf/<tenant>/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` のどちらかにする必要があります。
 
-ノード名の`yyyymmdd`部分は、アップグレードが実行された日付です。
+ノード名の `yyyymmdd` の部分は、アップグレードが実行された日付になります。
 
-ContextHub設定を復元するには、CRXDE Liteを使用して、ストア、UIモード、UIモジュールを表すノードを`default-pre-upgrade_yyyymmdd_xxxxxx`ノードの下から下にコピーします。
+ContextHub の設定を復元するには、CRXDE Lite を使用してストア、UI モード、UI モジュールを表すノードを `default-pre-upgrade_yyyymmdd_xxxxxx` ノードの下から次の下にコピーします。
 
 * `/conf/global/settings/cloudsettings` または
 * `/conf/<tenant>/settings/cloudsettings`
