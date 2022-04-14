@@ -1,8 +1,8 @@
 ---
 title: AEM でのシリアル化の問題の軽減
-seo-title: AEM でのシリアル化の問題の軽減
+seo-title: Mitigating serialization issues in AEM
 description: AEM でのシリアル化の問題を軽減する方法について説明します。
-seo-description: AEM でのシリアル化の問題を軽減する方法について説明します。
+seo-description: Learn how to mitigate serialization issues in AEM.
 uuid: c3989dc6-c728-40fd-bc47-f8427ed71a49
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: f3781d9a-421a-446e-8b49-40744b9ef58e
 exl-id: 01e9ab67-15e2-4bc4-9b8f-0c84bcd56862
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 87%
+workflow-type: ht
+source-wordcount: '956'
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 87%
 
 ## 概要 {#overview}
 
- アドビの AEM チームは、オープンソースプロジェクト [NotSoSerial](https://github.com/kantega/notsoserial) と緊密に連携して **CVE-2015-7501** に記載されている脆弱性の軽減に努めています。NotSoSerial は [Apache 2 ライセンス](https://www.apache.org/licenses/LICENSE-2.0)でライセンスが付与され、[BSD に似た独自のライセンス](https://asm.ow2.org/license.html)でライセンスが付与される ASM コードが含まれます。
+アドビの AEM チームは、オープンソースプロジェクト [NotSoSerial](https://github.com/kantega/notsoserial) と緊密に連携して **CVE-2015-7501** に記載されている脆弱性の軽減に努めています。NotSoSerial は [Apache 2 ライセンス](https://www.apache.org/licenses/LICENSE-2.0)でライセンスが付与され、[BSD に似た独自のライセンス](https://asm.ow2.org/license.html)でライセンスが付与される ASM コードが含まれます。
 
 このパッケージに含まれるエージェント JAR は、アドビが変更を加えて配布する NotSoSerial です。
 
-  NotSoSerial は Java レベルの問題を解決する Java レベルのソリューションであり、AEM に固有のものではありません。これはオブジェクトのシリアル化を解除するときに、プリフライトのチェックを追加します。このチェックでは、ファイアウォールスタイルの許可リストおよびブロックリストと照合してクラス名をテストします。デフォルトのブロックリストのクラス数は限られているので、システムやコードに影響が及ぶことはありません。
+NotSoSerial は Java レベルの問題を解決する Java レベルのソリューションであり、AEM に固有のものではありません。これはオブジェクトのシリアル化を解除するときに、プリフライトのチェックを追加します。このチェックでは、ファイアウォールスタイルの許可リストおよびブロックリストと照合してクラス名をテストします。デフォルトのブロックリストのクラス数は限られているので、システムやコードに影響が及ぶことはありません。
 
 デフォルトでは、エージェントは現在の既知の脆弱なクラスに対してブロックリストチェックをおこないます。このブロックリストの目的は、現在リストに掲載されている、この種類の脆弱性を利用する攻撃からユーザーを保護することです。
 
@@ -33,7 +33,7 @@ ht-degree: 87%
 
 エージェントの目的は、最新の既知のクラスの脆弱性を軽減することです。プロジェクトで信頼されないデータのシリアル化を解除している場合でも、サービス拒否攻撃、メモリ不足攻撃および未知のシリアル化解除による攻撃に対しては脆弱なままであることがあります。
 
-  アドビは Java 6、7 および 8 を正式にサポートしていますが、NotSoSerial は Java 5 もサポートしています。
+アドビは Java 6、7 および 8 を正式にサポートしていますが、NotSoSerial は Java 5 もサポートしています。
 
 ## エージェントのインストール {#installing-the-agent}
 
@@ -43,12 +43,12 @@ ht-degree: 87%
 
 1. **com.adobe.cq.cq-serialization-tester** バンドルをインストールします。
 
-1. `https://server:port/system/console/bundles`のバンドルWebコンソールに移動します。
+1. Web コンソール（`https://server:port/system/console/bundles`）にアクセスします。
 1. シリアル化のバンドルを探して開始します。これにより、NotSoSerial エージェントが動的にオートロードされます。
 
-## アプリケーションサーバーへのエージェントのインストール  {#installing-the-agent-on-application-servers}
+## アプリケーションサーバーへのエージェントのインストール {#installing-the-agent-on-application-servers}
 
-NotSoSerialエージェントは、アプリケーションサーバー用のAEMの標準ディストリビューションには含まれていません。 ただし、それを AEM JAR 配布版から抽出して、アプリケーションサーバーの設定に使用できます。
+NotSoSerial エージェントは、アプリケーションサーバーの AEM の標準配布版には含まれていません。ただし、それを AEM JAR 配布版から抽出して、アプリケーションサーバーの設定に使用できます。
 
 1. まず、AEM クイックスタートファイルをダウンロードして展開します。
 
@@ -56,9 +56,9 @@ NotSoSerialエージェントは、アプリケーションサーバー用のAEM
    java -jar aem-quickstart-6.2.0.jar -unpack
    ```
 
-1. 新しく解凍されたAEM quickstartの場所に移動し、`crx-quickstart/opt/notsoserial/`フォルダーをAEMアプリケーションサーバーインストールの`crx-quickstart`フォルダーにコピーします。
+1. AEM クイックスタートを展開した場所に移動し、`crx-quickstart/opt/notsoserial/` フォルダーを AEM アプリケーションサーバーのインストールの `crx-quickstart` フォルダーにコピーします。
 
-1. `/opt`の所有権を、サーバーを実行しているユーザーに変更します。
+1. `/opt` の所有者を、サーバーを実行しているユーザーに変更します。
 
    ```shell
    chown -R opt <user running the server>
@@ -66,13 +66,13 @@ NotSoSerialエージェントは、アプリケーションサーバー用のAEM
 
 1. この記事の続きの節に示すようにエージェントを設定し、エージェントが正しくアクティベートされていることを確認してください。
 
-## エージェントの設定  {#configuring-the-agent}
+## エージェントの設定 {#configuring-the-agent}
 
-ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、既知のリモート実行の脆弱なクラスのブロックリストと、信頼されたデータのシリアル化解除が比較的安全である必要があるパッケージの許可リストが含まれます。
+ほとんどのインストールにおいて、デフォルトの設定で十分機能します。これには、リモート実行の既知の脆弱性があるクラスのブロックリストや、信頼できるデータのシリアル化解除が比較的安全なパッケージの許可リストが含まれます。
 
-   ファイアウォールの設定は動的であり、次の手順でいつでも変更できます。
+ファイアウォールの設定は動的であり、次の手順でいつでも変更できます。
 
-1. Webコンソール(`https://server:port/system/console/configMgr`)に移動します。
+1. Web コンソール（`https://server:port/system/console/configMgr`）にアクセスします。
 1. 「**Deserialization Firewall Configuration**」を探してクリックします
 
    >[!NOTE]
@@ -88,17 +88,17 @@ NotSoSerialエージェントは、アプリケーションサーバー用のAEM
 
 許可リストセクションには、シリアル化解除が許可されるクラスやパッケージ接頭辞が表示されます。独自のクラスのシリアル化解除をおこなう場合は、この許可リストにクラスまたはパッケージのいずれかを追加する必要があります。
 
-**ブロックリスト**
+**Block Listing**
 
- ブロックリストセクションには、シリアル化解除が許可されないクラスが表示されます。これらのクラスの初期セットは、リモート実行の攻撃に脆弱であると見なされるクラスに限定されています。ブロックリストは、許可リストに登録されたエントリの前に適用されます。
+ブロックリストセクションには、シリアル化解除が許可されないクラスが表示されます。これらのクラスの初期セットは、リモート実行の攻撃に脆弱であると見なされるクラスに限定されています。ブロックリストは、許可リストに登録されているエントリの前に適用されます。
 
-**診断ログ**
+**Diagnostinc Logging**
 
  診断ログのセクションでは、シリアル化解除の実行中にログに記録される内容を、複数のオプションから選択できます。これらは最初の使用時にログに記録され、後続の使用では記録されません。
 
-  デフォルトの **class-name-only** は、シリアル化が解除されるクラスを示します。
+デフォルトの **class-name-only** は、シリアル化が解除されるクラスを示します。
 
-**full-stack** オプションを選択すると、最初にシリアル化の解除が試行されたときの Java スタックがログに記録され、シリアル化の解除がおこなわれている場所を示します。これは、自身の環境からシリアル化が解除されたクラスを探して削除するときに便利です。
+**full-stack** オプションを選択すると、最初にシリアル化の解除が試行されたときの Java スタックがログに記録され、シリアル化の解除が実行されている場所を示します。これは、自身の環境からシリアル化が解除されたクラスを探して削除するときに便利です。
 
 ## エージェントのアクティベートの検証 {#verifying-the-agent-s-activation}
 
@@ -132,12 +132,12 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 
    >[!NOTE]
    >
-   >NotSoSerialエージェントJARのAdobe配布は、AEMインストールの`crx-quickstart/opt/notsoserial/`フォルダーにあります。
+   >Adobe 配布版の NotSoSerial エージェント JAR は、AEM インストールの `crx-quickstart/opt/notsoserial/` フォルダーにあります。
 
 1. JVM を停止して再開します。
 
 1. 前述の[エージェントのアクティベートの検証](/help/sites-administering/mitigating-serialization-issues.md#verifying-the-agent-s-activation)のステップに従って、エージェントのアクティベートをもう一度検証します。
 
-## その他の考慮事項  {#other-considerations}
+## その他の考慮事項 {#other-considerations}
 
 IBM JVM 上で実行している場合は、[こちら](https://www.ibm.com/support/knowledgecenter/SSSTCZ_2.0.0/com.ibm.rt.doc.20/user/attachapi.html)の Java Attach API のサポートに関するドキュメントを参照してください。
