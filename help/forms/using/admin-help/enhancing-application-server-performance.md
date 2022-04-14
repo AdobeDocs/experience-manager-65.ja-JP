@@ -1,8 +1,8 @@
 ---
 title: アプリケーションサーバーのパフォーマンスの強化
-seo-title: アプリケーションサーバーのパフォーマンスの強化
+seo-title: Enhancing application server performance
 description: このドキュメントでは、AEM Forms アプリケーションサーバーのパフォーマンスを向上させるために設定できるオプション設定について説明します。
-seo-description: このドキュメントでは、AEM Forms アプリケーションサーバーのパフォーマンスを向上させるために設定できるオプション設定について説明します。
+seo-description: This document describes optional settings that you can configure to improve the performance of your AEM forms application server.
 uuid: 88d2f96a-3b59-410d-8160-20581d27acad
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1886'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1863'
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 95%
 
 ここでは、AEM Forms アプリケーションサーバーのパフォーマンスを向上させるために設定できるオプション設定について説明します。
 
-## アプリケーションサーバーのデータソースの設定  {#configuring-application-server-data-sources}
+## アプリケーションサーバーのデータソースの設定 {#configuring-application-server-data-sources}
 
 AEM Forms は、AEM Forms リポジトリをデータソースとして使用します。AEM Forms リポジトリにはアプリケーションアセットが格納されます。また実行時に、サービスは、自動化されたビジネスプロセスの実行の一環として、リポジトリからアセットを取得できます。
 
-実行中の AEM Forms モジュールの数や、アプリケーションにアクセスしている同時ユーザーの数によっては、これらのデータソースへのアクセス負荷が大きくなる場合があります。データソースへのアクセスは、接続プールを使用して最適化できます。「接続プール」**&#x200B;は、アプリケーションやサーバーオブジェクトがデータベースへのアクセスを必要とするたびに生じる、新しいデータベース接続の作成に伴うオーバーヘッドを回避するために使用される技術です。通常、接続プールは Web ベースのアプリケーションおよびエンタープライズアプリケーションで使用されます。また、アプリケーションサーバーによって処理されるのが一般的ですが、必ずしもそれだけに限定されません。
+実行中の AEM Forms モジュールの数や、アプリケーションにアクセスしている同時ユーザーの数によっては、これらのデータソースへのアクセス負荷が大きくなる場合があります。データソースへのアクセスは、接続プールを使用して最適化できます。「*接続プール*」は、アプリケーションやサーバーオブジェクトがデータベースへのアクセスを必要とするたびに生じる、新しいデータベース接続の作成に伴うオーバーヘッドを回避するために使用される技術です。通常、接続プールは Web ベースのアプリケーションおよびエンタープライズアプリケーションで使用されます。また、アプリケーションサーバーによって処理されるのが一般的ですが、必ずしもそれだけに限定されません。
 
 接続を使い切らないように接続プールのパラメーターを適切に設定することが重要です。接続が足りなくなった場合、アプリケーションのパフォーマンスが低下する可能性があります。
 
@@ -35,7 +35,7 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
 
 アプリケーションサーバー管理者は、適切な接続プールの設定を決める際に、それらの情報をデータベース管理者に伝えてください。データベース管理者がこの情報を必要とするのは、データベース接続の数はデータソース用の接続プール内の接続数に等しくなるためです。そして、以下に示すアプリケーションサーバーおよびデータソースの種類に応じて、接続プールを設定する手順を実行してください。
 
-### Oracle および MySQL に対する WebLogic の接続プールの設定  {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}
+### Oracle および MySQL に対する WebLogic の接続プールの設定 {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}
 
 1. 「Domain Structure」で、Services／JDBC／Data Sources をクリックし、右側のウィンドウの「IDP_DS」をクリックします。
 1. 次の画面で、「Configuration」タブ／Connection Pool をクリックして、以下のボックスに値を入力します。
@@ -48,7 +48,7 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
 1. 「Save」をクリックし、「Activate Changes」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
-### SQLServer に対する WebLogic の接続プールの設定  {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
+### SQLServer に対する WebLogic の接続プールの設定 {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
 
 1. 「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Services／JDBC／Data Sources をクリックし、右側のウィンドウの「EDC_DS」をクリックします。
@@ -62,28 +62,28 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
 1. 「Save」をクリックし、「Activate Changes」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
-### DB2 に対する WebSphere の接続プールの設定  {#configure-connection-pool-settings-for-websphere-for-db2}
+### DB2 に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-db2}
 
 1. ナビゲーションツリーで、Resources／JDBC／JDBC Providers をクリックします。右側のウィンドウで、作成したデータソース（DB2 Universal JDBC Driver Provider または LiveCycle - db2 - IDP_DS）を選択します。
 1. 「Additional Properties」で「Data Sources」をクリックし、「IDP_DS」を選択します。
 1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum connections」ボックスと「Minimum Connections」ボックスに値を入力します。
 1. 「OK」または「Apply」をクリックし、「Save Directly To Master Configuration」をクリックします。
 
-### Oracle に対する WebSphere の接続プールの設定  {#configure-connection-pool-settings-for-websphere-for-oracle}
+### Oracle に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-oracle}
 
 1. ナビゲーションツリーで、Resources／JDBC／JDBC Providers をクリックします。右側のウィンドウで、作成した Oracle JDBC Driver データソースをクリックします。
 1. 「Additional Properties」で「Data Sources」をクリックし、「IDP_DS」を選択します。
 1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum connections」ボックスと「Minimum Connections」ボックスに値を入力します。
 1. 「OK」または「Apply」をクリックし、「Save Directly To Master Configuration」をクリックします。
 
-### SQL Server に対する WebSphere の接続プールの設定  {#configure-connection-pool-settings-for-websphere-for-sqlserver}
+### SQL Server に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-sqlserver}
 
 1. ナビゲーションツリーで、Resources／JDBC／JDBC Providers をクリックし、右側のウィンドウで、作成した User-Defined JDBC Driver データソースをクリックします。
 1. 「Additional Properties」で「Data Sources」をクリックし、「IDP_DS」を選択します。
 1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum Connections」ボックスと「Minimum Connections」ボックスに値を入力します。
 1. 「OK」または「Apply」をクリックし、「Save Directly To Master Configuration」をクリックします。
 
-## インラインドキュメントの最適化と JVM メモリに対する影響  {#optimizing-inline-documents-and-impact-on-jvm-memory}
+## インラインドキュメントの最適化と JVM メモリに対する影響 {#optimizing-inline-documents-and-impact-on-jvm-memory}
 
 比較的小さいサイズのドキュメントを処理することが多い場合は、ドキュメント転送速度と記憶領域に関するパフォーマンスを向上させることができます。それには、AEM Forms 製品に対して以下の設定を適用します。
 
@@ -92,7 +92,7 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
 
 最大インラインサイズとストレージディレクトリ（AEM Forms の一時ファイルディレクトリと GDS ディレクトリ）は、管理コンソールで設定します。
 
-### ドキュメントサイズと最大インラインサイズ  {#document-size-and-maximum-inline-size}
+### ドキュメントサイズと最大インラインサイズ {#document-size-and-maximum-inline-size}
 
 AEM Forms に送信して処理するドキュメントのサイズがデフォルトのドキュメント最大インラインサイズ以下の場合、ドキュメントはサーバーにインラインで保存され、Adobe Document オブジェクトとしてシリアライズされます。ドキュメントをインラインで格納することで、パフォーマンスを大幅に向上させることができます。ただし、forms ワークフローを使用している場合は、管理のためにコンテンツもデータベースに保存されることがあります。このため、最大インラインサイズを増やすと、データベースサイズに影響する場合があります。
 
@@ -107,7 +107,7 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 
    >[!NOTE]
    >
-   >JEE環境上のAEM Formsと、OSGiバンドル上のAEM FormsがJEE環境に含まれているAEM Formsについて、Document Maxインラインサイズプロパティの値を同じにする必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
+   >ドキュメント最大インラインサイズプロパティの値は、JEE 環境上の AEM Forms と、JEE 環境上の OSGi バンドルを含む AEM Forms 上の AEM Forms と同一である必要があります。この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新していません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
@@ -121,7 +121,7 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 >
 >デフォルトの最大インラインサイズは 65536 バイトです。
 
-### JVM 最大ヒープサイズ  {#jvm-maximum-heap-size}
+### JVM 最大ヒープサイズ {#jvm-maximum-heap-size}
 
 最大インラインサイズを増やすと、シリアライズされたドキュメントを保存するために多くのメモリが必要になります。このため、通常は JVM 最大ヒープサイズも増やす必要があります。
 
@@ -149,22 +149,22 @@ JVM 最大ヒープサイズは、50 MB 単位で増やす必要があり、合�
 
 ヒープフラグメンテーションに対応するには、インラインドキュメントのサイズを合計ヒープサイズの 0.1 ％以下に設定する必要があります。例えば、JVM 最大ヒープサイズが 512 MB の場合は、最大インラインサイズを 512 KB（512 MB x 0.001 = 0.512 MB）に設定できます。
 
-## WebSphere Application Server の強化  {#websphere-application-server-enhancements}
+## WebSphere Application Server の強化 {#websphere-application-server-enhancements}
 
 ここでは、WebSphere Application Server 環境に固有の設定について説明します。
 
-### JVM に割り当てられる最大メモリサイズの増加  {#increasing-the-maximum-memory-allocated-to-the-jvm}
+### JVM に割り当てられる最大メモリサイズの増加 {#increasing-the-maximum-memory-allocated-to-the-jvm}
 
 Configuration Manager を実行しているとき、またはコマンドラインユーティリティ *ejbdeploy* を使用して Enterprise JavaBeans（EJB）デプロイコードを生成しようとしているときに、OutOfMemory エラーが発生した場合は、JVM に割り当てるメモリを増やします。
 
-1. *[appserver root]*/deploytool/itp/ディレクトリのejbdeployスクリプトを編集します。
+1. *[appserver root]*/deploytool/itp/ ディレクトリの ejbdeploy スクリプトを編集します。
 
-   * (Windows) `ejbdeploy.bat`
-   * （LinuxおよびUNIX） `ejbdeploy.sh`
+   * Windows：`ejbdeploy.bat`
+   * Linux および UNIX：`ejbdeploy.sh`
 
-1. `-Xmx256M`パラメーターを探し、`-Xmx1024M`のように大きい値に変更します。
-1.  ファイルを保存します。
-1. `ejbdeploy` コマンドを実行するか、または Configuration Manager を使用して再デプロイします。
+1. `-Xmx256M` パラメーターを検索して、値を現在のものより高い値に変更します（`-Xmx1024M` など）。
+1. ファイルを保存します。
+1. `ejbdeploy` コマンドを実行するか、Configuration Manager を使用して再デプロイします。
 
 ## LDAP を使用した Windows Server 2003 のパフォーマンスの向上 {#improving-windows-server-2003-performance-with-ldap}
 
@@ -172,16 +172,16 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 
 検索のための接続で接続プールを使用すると、必要なポート数を 50 ％減らすことができます。これは、接続で常に特定のドメインの同じ証明書が使用され、コンテキストと関連オブジェクトが明示的に閉じられるためです。
 
-### 接続プールを使用するための Windows Server の設定  {#configure-your-windows-server-for-connection-pooling}
+### 接続プールを使用するための Windows Server の設定 {#configure-your-windows-server-for-connection-pooling}
 
 1. スタート／ファイル名を指定して実行をクリックし、「名前」ボックスに `regedit` と入力して「OK」をクリックし、レジストリエディターを起動します。
-1. レジストリキー`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`に移動します。
+1. レジストリキー `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters` に移動します。
 1. レジストリエディターの右側のウィンドウで、TcpTimedWaitDelay という値の名前を探します。値の名前が表示されない場合は、メニューバーから編集／新規／DWORD 値を選択して名前を追加します。
-1. 「名前」ボックスにフラグメント名として「`TcpTimedWaitDelay`
+1. 「名前」ボックスに `TcpTimedWaitDelay` と入力します。
 
    >[!NOTE]
    >
-   >点滅するカーソルとボックスの内側に`New Value #`が表示されない場合は、右側のパネル内を右クリックし、「名前の変更」を選択して、「名前」ボックスに&#x200B;`TcpTimedWaitDelay`*.*&#x200B;と入力します。
+   >点滅するカーソルと `New Value #` がボックス内に表示されない場合は、右側のパネル内を右クリックし、「名前の変更」を選択して、「名前」ボックスに `TcpTimedWaitDelay`*と入力します。*
 
 1. MaxUserPort、MaxHashTableSize および MaxFreeTcbs の値について、手順 4 を繰り返します。
 1. 右側のウィンドウ内をダブルクリックし、TcpTimedWaitDelay 値を設定します。「表記」で「10 進」を選択し、「値のデータ」ボックスに `30` と入力します。
