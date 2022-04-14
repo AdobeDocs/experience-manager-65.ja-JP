@@ -1,8 +1,8 @@
 ---
 title: AEM 6 での LDAP の設定
-seo-title: AEM 6 での LDAP の設定
+seo-title: Configuring LDAP with AEM 6
 description: AEM で LDAP を設定する方法について説明します。
-seo-description: AEM で LDAP を設定する方法について説明します。
+seo-description: Learn how to configure LDAP with AEM.
 uuid: 0007def4-86f0-401d-aa37-c8d49d5acea1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 5faf6ee5-9242-48f4-87a8-ada887a3be1e
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1661'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '1648'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ LDAP（**L** ightweight **D** irectory **A** ccess **P** rotocol）は、統合�
 
 リポジトリに保存されている LDAP アカウントの詳細を使用して、LDAP サーバーとリポジトリの間でユーザーアカウントを同期できます。これにより、アカウントをリポジトリグループに割り当てて、必要な権限や特別な権限を付与することができます。
 
-リポジトリでは LDAP 認証を使用してこれらのユーザーを認証します。認証の際は、検証用に LDAP サーバーに渡される資格情報が使用されます。この認証は、リポジトリへのアクセスを許可する前におこなう必要があります。パフォーマンスを向上させるために、検証が成功した資格情報をリポジトリでキャッシュできます。有効期限のタイムアウトを使用すると、適切な期間が経過した後に再検証がおこなわれます。
+リポジトリでは、LDAP 認証を使用してこれらのユーザーを認証します。認証の際は、検証用に LDAP サーバーに渡される認証情報が使用されます。この認証は、リポジトリへのアクセスを許可する前に行う必要があります。パフォーマンスを向上させるために、検証が成功した認証情報をリポジトリでキャッシュできます。有効期限のタイムアウトを使用すると、適切な期間が経過した後に再検証が実行されます。
 
 LDAP サーバーからアカウントが削除されると、検証はおこなわれないので、リポジトリへのアクセスは拒否されます。リポジトリに保存された LDAP アカウントの詳細をパージすることもできます。
 
@@ -31,10 +31,10 @@ LDAP サーバーからアカウントが削除されると、検証はおこな
 
 AEM 6 の LDAP のサポートには、以前のバージョンとは異なるタイプの設定が必要な新しい実装が付属します。
 
-すべてのLDAP設定をOSGi設定として使用できるようになりました。これらは、Web管理コンソールを使用して次の場所で設定できます。
+すべての LDAP 設定を OSGi 設定として使用できるようになりました。これらは、以下の web 管理コンソールを使用して設定できます。
 `https://serveraddress:4502/system/console/configMgr`
 
-LDAP と AEM を連携させるには、次の 3 つの OSGi 設定を作成する必要があります。
+LDAP と AEM を連携させるには、以下の 3 つの OSGi 設定を作成する必要があります。
 
 1. LDAP Identity Provider（IDP）
 1. Sync Handler
@@ -42,9 +42,9 @@ LDAP と AEM を連携させるには、次の 3 つの OSGi 設定を作成す�
 
 >[!NOTE]
 >
->External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://docs.adobe.com/content/ddc/en/gems/oak-s-external-login-module---authenticating-with-ldap-and-beyon.html#)をご覧ください。
+>External Login Module について詳しくは、[Oak の External Login Module - LDAP との認証および詳細（英語）](https://docs.adobe.com/content/ddc/en/gems/customizing-dialog-fields-in-touch-ui.html#)をご覧ください。
 >
->Apache DS を使用した Experience Manager の設定例については、[Apache Directory Serviceを使用するための Adobe Experience Manager 6.5 の設定](https://helpx.adobe.com/jp/experience-manager/using/configuring-aem64-apache-directory-service.html)を参照してください。
+>Apache DS を使用した Experience Manager の設定例については、[Apache Directory Service を使用するための Adobe Experience Manager 6.5 の設定](https://helpx.adobe.com/experience-manager/using/configuring-aem64-apache-directory-service.html)を参照してください。
 
 ## LDAP Identity Provider の設定 {#configuring-the-ldap-identity-provider}
 
@@ -52,7 +52,7 @@ LDAP Identity Provider は、LDAP サーバーからのユーザーの取得方�
 
 このプロバイダーは、管理コンソールの **Apache Jackrabbit Oak LDAP Identity Provider** という名前の下にあります。
 
-LDAP Identity Provider では次の設定オプションを使用できます。
+LDAP Identity Provider では、以下の設定オプションを使用できます。
 
 <table>
  <tbody>
@@ -94,11 +94,11 @@ LDAP Identity Provider では次の設定オプションを使用できます。
   </tr>
   <tr>
    <td><strong>Admin pool max active</strong></td>
-   <td>管理接続プールの最大アクティブサイズ。</td>
+   <td>管理接続プールの最大アクティブサイズ</td>
   </tr>
   <tr>
    <td><strong>User pool max active</strong></td>
-   <td>ユーザー接続プールの最大アクティブサイズ。</td>
+   <td>ユーザー接続プールの最大アクティブサイズ</td>
   </tr>
   <tr>
    <td><strong>User base DN</strong></td>
@@ -147,13 +147,13 @@ LDAP Identity Provider では次の設定オプションを使用できます。
  </tbody>
 </table>
 
-## Sync Handler の設定  {#configuring-the-synchronization-handler}
+## Sync Handler の設定 {#configuring-the-synchronization-handler}
 
 Sync Handler は、Indentity Provider のユーザーとグループをリポジトリと同期する方法を定義します。
 
 このハンドラーは、管理コンソールの **Apache Jackrabbit Oak Default Sync Handler** という名前の下にあります。
 
-Sync Handler では次の設定オプションを使用できます。
+Sync Handler では、以下の設定オプションを使用できます。
 
 <table>
  <tbody>
@@ -204,7 +204,7 @@ Sync Handler では次の設定オプションを使用できます。
  </tbody>
 </table>
 
-## External Login Module  {#the-external-login-module}
+## External Login Module {#the-external-login-module}
 
 External Login Module は、管理コンソールの **Apache Jackrabbit Oak External Login Module** の下にあります。
 
@@ -239,15 +239,15 @@ External Login Module は、管理コンソールの **Apache Jackrabbit Oak Ext
 
 1. LDAP サーバーへの接続をテストします。
 
-### SSL 証明書の作成  {#creating-ssl-certificates}
+### SSL 証明書の作成 {#creating-ssl-certificates}
 
 SSL 経由で LDAP を使用して認証をおこなうように AEM を設定する場合は、自己署名証明書を使用できます。AEM で使用する証明書の生成手順の例を次に示します。
 
 1. SSL ライブラリがインストールされ、機能していることを確認します。この手順では、例として OpenSSL を使用します。
 
-1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーし、カスタマイズすることで実行できます。 UNIXシステムでは、通常、`/usr/lib/ssl/openssl.cnf`に配置されます。
+1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。これは、デフォルトの**openssl.cnf **設定ファイルをコピーし、カスタマイズすることで実行できます。UNIX システムでは、通常このファイルは `/usr/lib/ssl/openssl.cnf` にあります。
 
-1. ターミナルで次のコマンドを実行して CA ルートキーを作成します。
+1. ターミナルで以下のコマンドを実行して CA ルートキーを作成します。
 
    ```
    openssl genpkey -algorithm [public key algorithm] -out certificatefile.key -pkeyopt [public key algorithm option]
@@ -270,7 +270,7 @@ SSL 経由で LDAP を使用して認証をおこなうように AEM を設定�
 
 1. 最後に、Java キーストアに証明書を追加します。
 
-## デバッグログの有効化  {#enabling-debug-logging}
+## デバッグログの有効化 {#enabling-debug-logging}
 
 LDAP Identity Provider と External Login Module の両方に対してデバッグログを有効にして、接続の問題のトラブルシューティングをおこなうことができます。
 
@@ -281,12 +281,12 @@ LDAP Identity Provider と External Login Module の両方に対してデバッ�
 
 * Log level：Debug
 * Log File：logs/ldap.log
-* メッセージパターン：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
+* メッセージパターン： {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * Log level：Debug
 * Log File：logs/external.log
-* メッセージパターン：{0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast;{2} {3} {5}
+* メッセージパターン： {0,date,dd.MM.yyyy HH:mm:ss.SSS} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## グループへの関連付けに関する注意事項 {#a-word-on-group-affiliation}
