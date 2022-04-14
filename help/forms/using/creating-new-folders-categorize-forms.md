@@ -1,8 +1,8 @@
 ---
 title: フォームを分類するための新しいフォルダーの作成
-seo-title: フォームを分類するための新しいフォルダーの作成
+seo-title: Create new folders to categorize forms
 description: フォルダーを使用して、フォームテンプレート、PDF、リソース、およびアダプティブフォームを整理します。
-seo-description: フォルダーを使用して、フォームテンプレート、PDF、リソース、およびアダプティブフォームを整理します。
+seo-description: Use folders to organize your form templates, PDFs, resources, and adaptive forms.
 uuid: 63fcb807-c9cf-49ae-ad69-6b1187543470
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: 2a8f4380-8d0f-4354-b2da-4e0c02a545e3
 role: Admin
 exl-id: f8af1ac3-6a95-4f91-8979-6b41a7e02ca4
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '393'
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 
 1. `https://<server>:<port>/aem/forms.html` で、AEM Forms ユーザーインターフェイスにログインします。
 1. フォルダーを作成する場所に移動します。
-1. ツールバーの![aem6forms_add](assets/aem6forms_add.png)アイコンをクリックし、「**[!UICONTROL フォルダーを作成]**」を選択します。
+1. ツールバーの ![aem6forms_add](assets/aem6forms_add.png) アイコンをクリックし、「**[!UICONTROL フォルダーを作成]**」を選択します。
 
 1. 以下の詳細を入力します。
 
@@ -53,6 +53,6 @@ AEM Forms では、フォルダーのタイトルを変更できます。タイ�
 ### フォルダータイトルの編集 {#edit-the-folder-title-br}
 
 1. タイトルを編集するフォルダーを選択します。
-1. ツールバーの![aem6forms_edit](assets/aem6forms_edit.png)を編集アイコンをクリックします。
+1. ツールバーで、編集 ![aem6forms_edit](assets/aem6forms_edit.png) アイコンをクリックします。
 1. 新しいタイトルを入力します。テキストフィールドは、フォルダータイトルの現在の値で自動入力されます。それを新しい値に変更できます。
 1. 「**[!UICONTROL 送信]」をクリックします。**
