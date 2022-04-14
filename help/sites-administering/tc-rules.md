@@ -1,20 +1,20 @@
 ---
 title: 翻訳するコンテンツの特定
-seo-title: 翻訳するコンテンツの特定
+seo-title: Identifying Content to Translate
 description: 翻訳が必要なコンテンツを特定する方法について説明します。
-seo-description: 翻訳が必要なコンテンツを特定する方法について説明します。
+seo-description: Learn how to identify content that needs translating.
 uuid: 81b9575c-1c7a-4955-b03f-3f26cbd4f956
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: eedff940-4a46-4c24-894e-a5aa1080d23d
-feature: 言語コピー
+feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 82%
+workflow-type: ht
+source-wordcount: '1150'
+ht-degree: 100%
 
 ---
 
@@ -34,14 +34,14 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->6.4 にアップグレードした後は、/etcからファイルを移動することをお勧めします。詳しくは、 AEM 6.5の](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)における[一般的なリポジトリ再構築を参照してください。
+>6.4 にアップグレードした後は、/etcからファイルを移動することをお勧めします。詳しくは、[AEM 6.5 における共通リポジトリの再構築](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-rules)を参照してください。
 
 ルールには以下の情報が含まれます。
 
 * ルールが適用されるノードのパス. ノードの子ノードにもルールが適用されます。
-* 翻訳するコンテンツを含んだノードプロパティの名前：このプロパティは、特定のリソースタイプに固有のものでも、すべてのリソースタイプに固有のものでもかまいません。
+* 翻訳するコンテンツを含んだノードプロパティの名前。このプロパティは、特定のリソースタイプに固有のものでも、すべてのリソースタイプに固有のものでもかまいません。
 
-例えば、作成者がページ上のすべてのAEM基盤テキストコンポーネントに追加するコンテンツを翻訳するルールを作成できます。 このルールでは、`/content` ノードと `foundation/components/text` コンポーネントの `text` プロパティを識別できます。
+例えば、ページ上のすべての AEM 基盤テキストコンポーネントに作成者が追加するコンテンツを翻訳するルールを作成できます。このルールでは、`/content` ノードと `foundation/components/text` コンポーネントの `text` プロパティを識別できます。
 
 翻訳ルールの設定用に追加された[コンソール](#translation-rules-ui)があります。UI での定義の内容がファイルに自動的に入力されます。
 
@@ -77,7 +77,7 @@ AEM のコンテンツ翻訳機能の概要については、[多言語サイト
    * `resourceType` 属性には、リソースタイプを実装するコンポーネントに解決されるパスが格納されます。
    * `property` 子要素は、翻訳するノードプロパティを特定します。このノードは、ノードルールの `property` 子要素と同じ方法で使用します。
 
-以下のルール例を適用すると、`/content` ノード下のすべてのページについて、すべての `text` プロパティのコンテンツが翻訳されます。このルールは、基盤テキストコンポーネントや基盤画像コンポーネントなど、`text`プロパティにコンテンツを格納するコンポーネントに対して有効です。
+以下のルール例を適用すると、`/content` ノード下のすべてのページについて、すべての `text` プロパティのコンテンツが翻訳されます。このルールは、基盤テキストコンポーネントや基盤画像コンポーネントなど、`text` プロパティでコンテンツを格納しているすべてのコンポーネントに対して有効です。
 
 ```xml
 <node path="/content">
@@ -98,7 +98,7 @@ AEM のコンテンツ翻訳機能の概要については、[多言語サイト
 </node>
 ```
 
-## ページからアセットを抽出するルールの構文   {#rule-syntax-for-extracting-assets-from-pages}
+## ページからアセットを抽出するルールの構文  {#rule-syntax-for-extracting-assets-from-pages}
 
 次に示すルールの構文を使用して、コンポーネントに埋め込むアセットまたはコンポーネントから参照するアセットを追加します。
 
@@ -119,7 +119,7 @@ AEM のコンテンツ翻訳機能の概要については、[多言語サイト
 
 ## ルールの上書き {#overriding-rules}
 
-translation_rules.xmlファイルは、複数の子`node`要素を持つ`nodelist`要素で構成されます。 AEM は、このノードリストを上から下に読み取ります。複数のルールが同じノードをターゲットにする場合は、ファイル内で下方にあるルールが使用されます。例えば、以下のルールを適用すると、ページの `/content/mysite/en` ブランチを除く、`text` プロパティのすべてのコンテンツが翻訳されます。
+translation_rules.xml ファイルは、複数の `node` 子要素を持つ `nodelist` 要素で構成されます。AEM は、このノードリストを上から下に読み取ります。複数のルールが同じノードをターゲットにする場合は、ファイル内で下方にあるルールが使用されます。例えば、以下のルールを適用すると、ページの `/content/mysite/en` ブランチを除く、`text` プロパティのすべてのコンテンツが翻訳されます。
 
 ```xml
 <nodelist>
@@ -163,7 +163,7 @@ translation_rules.xmlファイルは、複数の子`node`要素を持つ`nodelis
 
    ![chlimage_1-56](assets/chlimage_1-56.jpeg)
 
-ここから、**コンテキスト**&#x200B;を追加できます。 これにより、パスを追加できます。
+ここから、**コンテキストを追加**&#x200B;できます。これにより、パスを追加できます。
 
 ![chlimage_1-57](assets/chlimage_1-57.jpeg)
 
@@ -171,13 +171,13 @@ translation_rules.xmlファイルは、複数の子`node`要素を持つ`nodelis
 
 ![chlimage_1-58](assets/chlimage_1-58.jpeg)
 
-UIを使用して変更できる属性は4つあります。`isDeep`、`inherit`、`translate`および`updateDestinationLanguage`です。
+この UI では、4 つの属性（`isDeep`、`inherit`、`translate` および `updateDestinationLanguage`）を変更できます。
 
-**** isDeepThis属性は、ノードフィルターに適用でき、デフォルトではtrueです。ノード（またはその上位ノード）に、フィルターで指定されたプロパティ値を持つそのプロパティが含まれているかどうかをチェックします。false の場合は、現在のノードのみでチェックします。
+**isDeep**：この属性はノードフィルターで適用できます。デフォルトでは true です。ノード（またはその上位ノード）に、フィルターで指定されたプロパティ値を持つそのプロパティが含まれているかどうかをチェックします。false の場合は、現在のノードのみでチェックします。
 
-例えば、ドラフトコンテンツにフラグを付けるために、親ノードのプロパティ`draftOnly`がtrueに設定されている場合でも、子ノードが翻訳ジョブに追加されます。 ここで、`isDeep` が機能し、親ノードの `draftOnly` プロパティが true であるかどうかをチェックして、それらの子ノードを除外します。
+例えば、親ノードの `draftOnly` プロパティが true に設定され、ドラフトコンテンツであることを示している場合でも、子ノードは翻訳ジョブに追加されます。ここで、`isDeep` が機能し、親ノードの `draftOnly` プロパティが true であるかどうかをチェックして、それらの子ノードを除外します。
 
-エディターの「**フィルター**」タブで、「**深い**」をオンまたはオフにできます。
+エディターでは、「**フィルター**」タブで「**サブ項目の有無**」をチェックまたはチェック解除できます。
 
 ![chlimage_1-59](assets/chlimage_1-59.jpeg)
 
@@ -189,19 +189,19 @@ UIを使用して変更できる属性は4つあります。`isDeep`、`inherit`
 </filter>
 ```
 
-**** inheritThisはプロパティに適用されます。デフォルトではすべてのプロパティが継承されますが、一部のプロパティが子で継承されないようにする場合は、その特定のノードのみで適用されるように、そのプロパティを false に指定できます。
+**inherit**：プロパティに対して適用できます。デフォルトではすべてのプロパティが継承されますが、一部のプロパティが子で継承されないようにする場合は、その特定のノードのみで適用されるように、そのプロパティを false に指定できます。
 
 UI では、「**プロパティ**」タブで「**継承**」をチェックまたはチェック解除できます。
 
 ![chlimage_1-60](assets/chlimage_1-60.jpeg)
 
-**** translateTranslate属性は、プロパティを翻訳するかどうかを指定する目的でのみ使用されます。
+**translate**：translate 属性は、単純にプロパティを翻訳するかどうかを指定するために使用されます。
 
 UI では、「**プロパティ**」タブで「**翻訳**」をチェックまたはチェック解除できます。
 
-**** updateDestinationLanguageこの属性は、テキストを持たないが言語コード（例：jcr:language）を持つプロパティに使用されます。ユーザーはテキストを翻訳していませんが、ソースから宛先への言語ロケールを設定します。そのようなプロパティは、翻訳用に送信されません。
+**updateDestinationLanguage**：この属性は、テキストを持たず、言語コード（jcr:language など）を持つプロパティに対して使用されます。ユーザーはテキストを翻訳していませんが、ソースから宛先への言語ロケールを設定します。そのようなプロパティは、翻訳用に送信されません。
 
-UIでは、言語コードを値として持つ特定のプロパティに対して、**「プロパティ」**&#x200B;タブで「**翻訳**」をオンまたはオフにできます。
+UI では、言語コードを値として持つ特定のプロパティについてのみ、「**プロパティ**」タブで「**翻訳**」をチェックまたはチェック解除できます。
 
 `updateDestinationLanguage` と `translate` の違いを明確にするために、ルールが 2 つのみのコンテキストの単純な例を次に示します。
 
@@ -214,7 +214,7 @@ xml での結果は、次のようになります。
 <property inherit="true" name="jcr:language" translate="false" updateDestinationLanguage="true"/>
 ```
 
-## ルールファイルの手動編集  {#editing-the-rules-file-manually}
+## ルールファイルの手動編集 {#editing-the-rules-file-manually}
 
 AEM と共にインストールされる translation_rules.xml ファイルには、デフォルトの翻訳ルールセットが格納されています。翻訳プロジェクトの要件をサポートするようにこのファイルを編集できます。例えば、カスタムコンポーネントのコンテンツが翻訳されるようなルールを追加できます。
 
@@ -224,7 +224,7 @@ translation_rules.xml ファイルを編集する場合は、コンテンツパ�
 >
 >コンテンツパッケージを作成した後は、ファイルを編集するたびにパッケージを再ビルドしてください。
 
-## 翻訳ルールファイルのサンプル  {#example-translation-rules-file}
+## 翻訳ルールファイルのサンプル {#example-translation-rules-file}
 
 ```xml
 <nodelist>
