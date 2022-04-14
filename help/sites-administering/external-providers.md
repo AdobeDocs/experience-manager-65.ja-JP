@@ -1,8 +1,8 @@
 ---
 title: Analytics と外部プロバイダー
-seo-title: Analytics と外部プロバイダー
+seo-title: Analytics with External Providers
 description: Analytics と外部プロバイダーについて説明します。
-seo-description: Analytics と外部プロバイダーについて説明します。
+seo-description: Learn about Analytics with External Providers.
 uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 79%
+workflow-type: ht
+source-wordcount: '432'
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 79%
 
 Analytics は、Web サイトがどのように使用されているかに関する、重要で興味深い情報を提供できます。
 
-次のような、様々な標準設定を、適切なサービスとの統合に使用できます。
+様々な標準提供の設定が、次のような適切なサービスとの統合で利用できます。
 
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
@@ -56,9 +56,9 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->Geometrixxアウトドアデモサイトは、ページプロパティで指定した属性が、対応する`js`スクリプトのHTMLソースコード（`</html>`終了タグのすぐ上）に追加されるように設定されます。
+>Geometrixx-Outdoors デモサイトは、ページプロパティで提供した属性が、対応する `js` スクリプトの HTML ソースコード（`</html>` 終了タグのすぐ上）に追加されます。
 >
->独自の`/apps`がデフォルトのページコンポーネント(`/libs/foundation/components/page`)から継承されない場合は、`cq/cloudserviceconfigs/components/servicescomponents`を含めるか、同様のメカニズムを使用して、対応する`js`スクリプトが必ず含まれるようにする必要があります。
+>独自の `/apps` がデフォルトページコンポーネント（`/libs/foundation/components/page`）から継承しない場合、ユーザー（またはその開発者）が対応する `js` スクリプトが含まれていること（例えば、`cq/cloudserviceconfigs/components/servicescomponents` が含まれているか、同様のメカニズムが使用されているか）を確認する必要があります。
 >
 >これをしないと、どのサービス（汎用、Analytics、Target など）も機能しません。
 
@@ -93,7 +93,7 @@ _gaq.push(['_trackPageview']);
    ![](assets/analytics_selectservice.png)
 
 1. 「**OK**」をクリックして保存します。
-1. 「**クラウドサービス**」タブに戻されます。**汎用分析スニペット**&#x200B;がメッセージ`Configuration reference missing`と共に表示されます。 ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
+1. 「**クラウドサービス**」タブに戻されます。**汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
 
    ![](assets/analytics_selectspecificservice.png)
 
