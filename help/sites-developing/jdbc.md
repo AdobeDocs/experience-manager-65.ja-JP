@@ -1,8 +1,8 @@
 ---
 title: SQL データベースへの接続
-seo-title: SQL データベースへの接続
+seo-title: Connecting to SQL Databases
 description: 次の手順で外部 SQL データベースにアクセスして、AEM アプリケーションがデータを操作できるようにします
-seo-description: 次の手順で外部 SQL データベースにアクセスして、AEM アプリケーションがデータを操作できるようにします
+seo-description: Access an external SQL database to so that your AEM applications can interact with the data
 uuid: 0af0ed08-9487-4c37-87ce-049c9b4c1ea2
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '968'
-ht-degree: 58%
+workflow-type: ht
+source-wordcount: '948'
+ht-degree: 100%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 58%
 1. [JDBC データソースプールプロバイダーを設定します](#configuring-the-jdbc-connection-pool-service)。
 1. [データソースオブジェクトを取得し、コード内で接続を作成します](#connecting-to-the-database)。
 
-## JDBC データベースドライバーのバンドル  {#bundling-the-jdbc-database-driver}
+## JDBC データベースドライバーのバンドル {#bundling-the-jdbc-database-driver}
 
-一部のデータベースベンダーは、OSGiバンドルでJDBCドライバを提供しています（例：[MySQL](https://www.mysql.com/downloads/connector/j/)）。データベースのJDBCドライバーがOSGiバンドルとして使用できない場合は、ドライバーJARを取得し、OSGiバンドルに含めます。バンドルは、データベースサーバーとの対話に必要なパッケージを書き出す必要があります。バンドルは、参照するパッケージもインポートする必要があります。
+一部のデータベースベンダー（[MySQL](https://www.mysql.com/downloads/connector/j/) など）は、JDBC ドライバーを OSGi バンドル内で提供しています。お使いのデータベース用の JDBC ドライバーが OSGi バンドルとして提供されていない場合は、ドライバーの JAR を取得して、それを OSGi バンドル内にラップします。このバンドルは、データベースサーバーとのやり取りに必要なパッケージを書き出す必要があり、バンドルは参照先のパッケージも読み込む必要もあります。
 
 次の例では、[Bundle plugin for Maven](https://felix.apache.org/site/apache-felix-maven-bundle-plugin-bnd.html) を使用して、HSQLDB ドライバーを OSGi バンドル内にラップします。POM では、このプラグインに対して、hsqldb.jar ファイルを埋め込み、そのファイルを依存関係として識別するように指示します。すべての org.hsqldb パッケージがエクスポートされます。
 
@@ -40,7 +40,7 @@ ht-degree: 58%
 
 ソースコードを知ることで、どちらの解決策を使用すべきかを判断できます。また、いずれかの解決策を試してテストを実行し、解決策の妥当性を検証することもできます。
 
-### hsqldb.jar をバンドルする POM  {#pom-that-bundles-hsqldb-jar}
+### hsqldb.jar をバンドルする POM {#pom-that-bundles-hsqldb-jar}
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0"
@@ -86,52 +86,52 @@ ht-degree: 58%
 
 次のリンクより、一般的なデータベース製品のダウンロードページを開くことができます。
 
-* [Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&amp;id=11774)
+* [Microsoft SQL Server](https://www.microsoft.com/ja-jp/download/details.aspx?displaylang=ja&amp;id=11774)
 * [Oracle](https://www.oracle.com/technetwork/database/features/jdbc/index-091264.html)
 * [IBM DB2](https://www-01.ibm.com/support/docview.wss?uid=swg27007053)
 
-### JDBC Connection Pool サービスの設定  {#configuring-the-jdbc-connection-pool-service}
+### JDBC Connection Pool サービスの設定 {#configuring-the-jdbc-connection-pool-service}
 
-JDBCドライバーを使用してデータソースオブジェクトを作成するJDBC Connections Poolサービスの設定を追加します。アプリケーションコードは、このサービスを使用してオブジェクトを取得し、データベースに接続します。
+JDBC ドライバーを使用してデータソースオブジェクトを作成する JDBC Connections Pool サービスの設定を追加します。アプリケーションコードではこのサービスを使用してデータソースオブジェクトを取得し、データベースに接続します。
 
-JDBC Connections Pool（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。異なるプロパティ（読み取り専用アクセスと読み取り／書き込みアクセスなど）を使用する接続が必要な場合は、複数の設定を作成します。
+JDBC 接続プール（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。異なるプロパティ（読み取り専用アクセスと読み取り／書き込みアクセスなど）を使用する接続が必要な場合は、複数の設定を作成します。
 
 CQ と連携する場合は、いくつかの方法でサービスの設定を管理できます。[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-プール化された接続サービスを設定するには、次のプロパティを使用できます。プロパティ名は、Web コンソールに表示されるとおりに示しています。`sling:OsgiConfig` ノードに対応する名前を括弧内に示しています。値の例は、エイリアスが `mydb` である HSQLDB サーバーおよびデータベースのものを示しています。
+プール化された接続サービスを設定するには、次のプロパティを使用できます。プロパティ名は、Web コンソールに表示されるとおりに示しています。`sling:OsgiConfig` ノードに対応する名前を括弧内に示しています。エイリアスが `mydb` である HSQLDB サーバーおよびデータベースの値の例を示しています。
 
-* JDBCドライバクラス(`jdbc.driver.class`):java.sql.Driverインターフェイスを実装するために使用するJavaクラス（例：`org.hsqldb.jdbc.JDBCDriver`）。 データタイプは`String`です。
+* JDBC ドライバークラス（`jdbc.driver.class`）：java.sql.Driver インターフェイスを実装するために使用する Java クラス。例：`org.hsqldb.jdbc.JDBCDriver`。データタイプは `String` です。
 
-* JDBC接続URI(`jdbc.connection.uri`):接続の作成に使用するデータベースのURL（例：`jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`）。 URLの形式は、java.sql.DriverManagerクラスのgetConnectionメソッドで使用する場合に有効である必要があります。 データタイプは`String`です。
+* JDBC 接続 URI（`jdbc.connection.uri`）：接続の作成に使用するデータベースの URL。例：`jdbc:hsqldb:hsql//10.36.79.223:9001/mydb`。URL の形式は、java.sql.DriverManager クラスの getConnection メソッドで使用する場合に有効である必要があります。データタイプは `String` です。
 
-* ユーザー名(`jdbc.username`):データベース・サーバの認証に使用するユーザー名。 データタイプは`String`です。
+* ユーザー名（`jdbc.username`）：データベースサーバーでの認証に使用するユーザー名。データタイプは `String` です。
 
-* パスワード(`jdbc.password`):ユーザーの認証に使用するパスワード。 データタイプは`String`です。
+* Password（`jdbc.password`）：ユーザーの認証に使用するパスワード。データタイプは `String` です。
 
-* 検証クエリ(`jdbc.validation.query`):接続が成功したことを検証するために使用するSQL文（例：`select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`）。 データタイプは`String`です。
+* 検証クエリ（`jdbc.validation.query`）：接続が成功したことを検証するために使用する SQL 文（例：`select 1 from INFORMATION_SCHEMA.SYSTEM_USERS`）。データタイプは `String` です。
 
-* Readonly By Default（default.readonly）： この接続を読み取り専用アクセスにする場合に、このオプションを選択します。データタイプは `Boolean` です。
-* デフォルトの自動コミット(`default.autocommit`):データベースに送信されるSQLコマンドごとに個別のトランザクションを作成し、各トランザクションを自動的にコミットする場合は、このオプションを選択します。 コード内でトランザクションを明示的にコミットする場合は、このオプションを選択しないでください。 データタイプは`Boolean`です。
+* デフォルトで読み取り専用（default.readonly）：この接続を読み取り専用アクセスにする場合に、このオプションを選択します。データタイプは `Boolean` です。
+* デフォルトで自動コミット（`default.autocommit`）：データベースに送信される SQL コマンドごとに個別のトランザクションを作成し、各トランザクションを自動的にコミットする場合は、このオプションを選択します。コード内でトランザクションを明示的にコミットする場合は、このオプションを選択しないでください。データタイプは `Boolean` です。
 
-* プールサイズ(`pool.size`):データベースで使用可能にする同時接続の数。 データタイプは`Long`です。
+* プールサイズ（`pool.size`）：データベースに対して使用可能にする同時接続の数です。データタイプは `Long` です。
 
-* プール待機(`pool.max.wait.msec`):接続リクエストがタイムアウトするまでの時間。 データタイプは`Long`です。
+* プール待機時間（`pool.max.wait.msec`）：接続リクエストがタイムアウトするまでの時間です。データタイプは `Long` です。
 
-* データソース名(`datasource.name`):このデータソースの名前。 データタイプは`String`です。
+* データソース名（`datasource.name`）：このデータソースの名前です。データタイプは `String` です。
 
-* 追加のサービスプロパティ(`datasource.svc.properties`):接続URLに追加する名前と値のペアのセット。 データタイプは`String[]`です。
+* 追加のサービスプロパティ（`datasource.svc.properties`）：接続 URL に追加する名前と値のペアのセットです。データタイプは `String[]` です。
 
-JDBC Connections Poolサービスはファクトリです。 したがって、`sling:OsgiConfig`ノードを使用して接続サービスを設定する場合は、ノードの名前にファクトリサービスPIDの後に&#x200B;*`-alias`*&#x200B;が続く必要があります。 使用するエイリアスは、そのPIDのすべての設定ノードで一意である必要があります。 ノード名の例は`com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool`です。
+JDBC 接続プールサービスはファクトリです。そのため、`sling:OsgiConfig` ノードを使用して接続サービスを設定する場合、ノード名には、ファクトリサービス PID に *`-alias`* が続く名前を含める必要があります。使用するエイリアスは、その PID のすべての設定ノードで一意である必要があります。ノード名は、例えば `com.day.commons.datasource.jdbcpool.JdbcPoolService-myhsqldbpool` のような形式になります。
 
 ![chlimage_1-7](assets/chlimage_1-7a.png)
 
 ### データベースへの接続 {#connecting-to-the-database}
 
-Java コードでは、DataSourcePool サービスを使用して、作成した設定に対応する `javax.sql.DataSource` オブジェクトを取得する必要があります。DataSourcePool サービスには `getDataSource` メソッドがあり、このメソッドは指定したデータソース名の `DataSource` オブジェクトを返します。メソッド引数として、JDBC Connections Pool 設定で指定した Datasource Name（または `datasource.name`）プロパティの値を使用します。
+Java コードでは、DataSourcePool サービスを使用して、作成した設定に対応する `javax.sql.DataSource` オブジェクトを取得する必要があります。DataSourcePool サービスには `getDataSource` メソッドがあり、このメソッドは指定したデータソース名の `DataSource` オブジェクトを返します。メソッド引数として、JDBC 接続プール設定で指定した データソース名（または `datasource.name`）プロパティの値を使用します。
 
 次の JSP コード例では、hsqldbds データソースのインスタンスを取得し、単純な SQL クエリを実行し、返された結果の個数を表示します。
 
-#### データベースのルックアップを実行する JSP  {#jsp-that-performs-a-database-lookup}
+#### データベースのルックアップを実行する JSP {#jsp-that-performs-a-database-lookup}
 
 ```java
 <%@include file="/libs/foundation/global.jsp"%><%
@@ -171,7 +171,6 @@ Java コードでは、DataSourcePool サービスを使用して、作成した
 >
 >getDataSource メソッドが、データソースが見つからないことによる例外をスローした場合は、Connections Pool サービスが正しく設定されているかを確認してください。プロパティ名、値およびデータタイプを確認してください。
 
-
 >[!NOTE]
 >
->DataSourcePool を OSGi バンドルにインジェクションする方法については、[Adobe Experience Manager OSGi バンドルへの DataSourcePool サービスのインジェクション](https://helpx.adobe.com/experience-manager/using/datasourcepool.html)を参照してください。
+>DataSourcePool を OSGi バンドルにインジェクションする方法については、[Adobe Experience Manager OSGi バンドルへの DataSourcePool サービスのインジェクション](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja&amp;CID=RedirectAEMCommunityKautuk)を参照してください。
