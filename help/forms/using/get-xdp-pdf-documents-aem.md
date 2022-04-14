@@ -1,8 +1,8 @@
 ---
 title: AEM Forms での XDP および PDF ドキュメントの取得
-seo-title: AEM Forms での XDP および PDF ドキュメントの取得
+seo-title: Getting XDP and PDF documents in AEM Forms
 description: AEM Forms では、フォームやサポートされているアセットをアップロードし、アダプティブフォームで使用できます。複数のフォームや関連リソースを一括して ZIP としてアップロードすることもできます。
-seo-description: AEM Forms では、フォームやサポートされているアセットをアップロードし、アダプティブフォームで使用できます。複数のフォームや関連リソースを一括して ZIP としてアップロードすることもできます。
+seo-description: AEM Forms allows you to upload forms and supported assets to use with adaptive forms. You can also bulk upload forms and related resources as a ZIP.
 uuid: cd49b4a8-c282-4059-95a0-c98f6c92ab14
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,9 +12,9 @@ docset: aem65
 role: Admin
 exl-id: 9ecdc50a-31e3-46ae-948a-d1f6e6085734
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '673'
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 * PDF のフォーム
 * ドキュメント（非インタラクティブ PDF ドキュメント）
 
-サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。`Resource`タイプのアセットは、XFAフォームと一緒にZIPアーカイブでのみアップロードできます。
+サポートされているアセットタイプを個別にまたは ZIP アーカイブとしてアップロードできます。`Resource` タイプのアセットは、XFA フォームと一緒に ZIP アーカイブでのみアップロードできます。
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ AEM Forms でアップロードすることで、ローカルファイルシス�
 
 ## フォームのアップロード {#uploading-forms}
 
-1. `https://'[server]:[port]'/aem/forms.html`にアクセスしてAEM Formsユーザーインターフェイスにログインします。
+1. `https://'[server]:[port]'/aem/forms.html` にアクセスして AEM Forms ユーザーインターフェイスにログインします。
 1. フォームまたはフォームを含むフォルダーをアップロードしたいフォルダーに移動します。
 1. アクションツールバーで、**作成／ファイルのアップロード**&#x200B;をタップします。
 
@@ -68,9 +68,9 @@ AEM Forms サーバーを使用することで、JavaScript コードを実行�
 
 保護モードは、デフォルトではオンになっています。必要に応じて、保護モードを無効にすることができます。
 
-1. AEM Web コンソールに管理者としてログインします。URLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
+1. AEM Web コンソールに管理者としてログインします。URL は https://&#39;[server]:[port]&#39;/system/console/configMgr
 1. Mobile Forms の設定を編集用に開きます。
-1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードは無効です。
+1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードが無効になります。
 
 ## 参照先 XFA フォームの更新 {#updating-referenced-xfa-forms}
 
@@ -85,6 +85,6 @@ XFA を参照しているアダプティブフォームは、そのフィール�
 
 ![関連 XFA の更新後の非同期のアダプティブフォームの警告](assets/dirtyaf.png)
 
-アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。ダーティなアダプティブフォームの場合のみ、メタデータプロパティ`Model Refresh`に`Recommended`値が表示されます。
+アダプティブフォームが dirty かどうかを示すフラグが保持されます。この情報は、フォームのメタデータと一緒にフォームプロパティページにあります。dirty アダプティブフォームの場合のみ、メタデータプロパティ `Model Refresh` は `Recommended` 値を表示します。
 
 ![アダプティブフォームが XFA モデルと非同期であることを示す](assets/model-refresh.png)
