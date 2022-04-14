@@ -1,37 +1,37 @@
 ---
 title: クイックビューを使用したカスタムポップアップの作成
-seo-title: クイックビューを使用したカスタムポップアップの作成
-description: e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。このようなポップアップにカスタムコンテンツが表示されるように設定できます。
-seo-description: e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。このようなポップアップにカスタムコンテンツが表示されるように設定できます。
+seo-title: Use Quickview to create custom pop-ups
+description: e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。ポップアップにカスタムコンテンツを表示することもできます。
+seo-description: The default Quickview is used in ecommerce experiences whereby a pop-up is displayed with product information to drive a purchase. You can trigger custom content to display in the pop-ups.
 uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
 content-type: reference
 discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
-feature: ビューア
+feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 66%
+workflow-type: ht
+source-wordcount: '1051'
+ht-degree: 100%
 
 ---
 
-# クイックビューを使用したカスタムポップアップの作成 {#using-quickviews-to-create-custom-pop-ups}
+# クイックビューを使用してカスタムポップアップを作成する {#using-quickviews-to-create-custom-pop-ups}
 
-e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。ただし、このようなポップアップにカスタムコンテンツが表示されるように設定できます。ビューアに応じて、この機能を使用して、ホットスポット、サムネール画像、画像マップを選択し、情報や関連コンテンツを表示できます。
+e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。ただし、このようなポップアップにカスタムコンテンツが表示されるように設定できます。ビューアによりますが、この機能を使用すると、ホットスポットやサムネール画像、画像マップをクリックして、情報や関連コンテンツを表示できるようになります。
 
-クイックビューは、Dynamic Mediaの次のビューアでサポートされています。
+クイックビューをサポートしている Dynamic Media のビューアは、次のとおりです。
 
 * インタラクティブ画像（クリック可能なホットスポット）
 * インタラクティブビデオ（ビデオの再生中にクリック可能なサムネール画像）
 * カルーセルバナー（クリック可能なホットスポットまたは画像マップ）
 
-各ビューアの機能は異なりますが、サポートされる 3 つすべてのビューアでクイックビューの作成手順は同じです。
+ビューアによって機能は異なりますが、クイックビューの作成手順はサポートする 3 つのビューアで同じです。
 
-**クイックビューを使用してカスタムポップアップを作成するには：**
+**クイックビューを使用してカスタムポップアップを作成する**
 
 1. アップロードしたアセット用にクイックビューを作成します。
 
@@ -41,7 +41,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
     <tbody>
     <tr>
     <td><strong>使用しているビューア</strong></td>
-    <td><strong>クイックビューを作成する場合は、次の手順を実行します</strong></td>
+    <td><strong>クイックビューを作成するには、次の手順を実行します</strong></td>
     </tr>
     <tr>
     <td>インタラクティブ画像</td>
@@ -64,7 +64,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
     <tbody>
     <tr>
     <td><strong>使用しているビューア</strong><br /> </td>
-    <td><strong>ビューアをWebサイトに統合する場合は、次の手順を実行します</strong></td>
+    <td><strong>ビューアを web サイトに統合するには、次の手順を実行します</strong></td>
     </tr>
     <tr>
     <td>インタラクティブ画像</td>
@@ -81,12 +81,12 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
     </tbody>
    </table>
 
-1. 現在使用しているビューアは、クイックビューの使用方法を認識している必要があります。
+1. 使用しているビューアがクイックビューの使用方法を認識できる必要があります。
 
    ビューアは `QuickViewActive` というハンドラーを使用します。
 
-   ****
-例Webページでインタラクティブ画像用に以下のサンプル埋め込みコードを使用するとします。
+   **例**
+Web ページで、インタラクティブ画像用に次の埋め込みコードのサンプルを使用するとします。
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
@@ -94,7 +94,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
-   **上記のサンプル埋め込みコードの例を使用すると、次のコードが表示されます。**
+   **上記の埋め込みコードの例を使用すると、次のようなコードになります。**
 
    ```xml
    s7interactiveimageviewer.setHandlers({
@@ -109,12 +109,12 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `setHandlers()` メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
-   * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
+   * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=ja)
+   * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=ja)
 
-1. 次に、`quickViewActivate`ハンドラーを設定する必要があります。
+1. ここで、 `quickViewActivate` ハンドラーを設定する必要があります。
 
-   `quickViewActivate`ハンドラーは、ビューアのクイックビューを制御します。 このハンドラーには、クイックビューで使用する変数のリストと関数呼び出しが含まれています。埋め込みコードは、クイックビューのSKU変数セットとサンプルの`loadQuickView`関数呼び出しのマッピングを提供します。
+   `quickViewActivate` ハンドラーはビューアのクイックビューを制御します。このハンドラーには、クイックビューで使用する変数のリストと関数呼び出しが含まれています。埋め込みコードは、クイックビューに設定された SKU 変数と `loadQuickView` 関数呼び出しのサンプルにマッピングを提供します。
 
    **変数マッピング** Web ページで使用する変数を SKU 値とクイックビューに含まれる一般変数にマッピングします。
 
@@ -139,9 +139,9 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `quickViewActivate` メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=ja)
-   * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=ja)
-   * インタラクティブビデオビューアでのインタラクティブデータのサポート：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html?lang=ja)
+   * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=ja)
+   * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=ja)
+   * インタラクティブビデオビューアでのインタラクティブデータのサポート：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html?lang=ja)
 
 1. 以下の操作を実行してください。
 
@@ -180,7 +180,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
 1. HTML ページのボディにポップアップの `DIV` を配置します。
 
-   要素の1つに、ユーザーがクイックビューを起動したときにSKU値で更新されるIDが設定されます。 この例にはこれに加え、ポップアップを表示後に再び隠すための単純なボタンも含まれています。
+   要素の 1 つは、ユーザーがクイックビューを起動すると SKU 値で更新される ID に設定されます。この例には、ポップアップを表示後に再び隠すための簡単なボタンも含まれています。
 
    ```xml
    <div id="quickview_div" >
@@ -191,7 +191,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    </div>
    ```
 
-1. ポップアップのSKU値を更新できる関数を追加します。手順5で作成したシンプルな関数を置き換えて、ポップアップを表示します。 ポップアップを表示させます。
+1. ポップアップで SKU の値を更新できるように関数を追加します。手順 5 で作成した簡単な関数を次のように置き換えて、ポップアップを表示させます。
 
    ```xml
    <script type="text/javascript">
@@ -202,12 +202,12 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    </script>
    ```
 
-1. Web サーバーにテスト HTML ページをアップロードし、開きます。ユーザーがクイックビューを起動すると、ビューアにポップアップの `DIV` が表示されます。
+1. Web サーバーにテスト用の HTML ページをアップロードして開きます。ユーザーがクイックビューを起動すると、ビューアにポップアップの `DIV` が表示されます。
 1. **全画面表示モードでカスタムポップアップを表示する方法**
 
    インタラクティブビデオビューアなどの一部のビューアでは、全画面表示モードでの表示をサポートしています。ただし、前の手順で説明したポップアップを使用すると、全画面表示モード中はビューアの背後に表示されるようになります。
 
-   標準モードと全画面表示モードの両方でポップアップを表示させるには、ビューアのコンテナにポップアップをアタッチします。2つ目のハンドラメソッド`initComplete`を使用します。
+   標準モードと全画面表示モードの両方でポップアップを表示させるには、ビューアのコンテナにポップアップをアタッチします。2 つ目のハンドラーメソッドである `initComplete` を使用します。
 
    `initComplete` ハンドラーは、ビューアの初期化後に呼び出されます。
 
@@ -217,10 +217,10 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `init()` メソッドについて詳しくは、以下を参照してください。
 
-   * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=ja)
-   * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=ja)
+   * インタラクティブ画像ビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=ja)
+   * インタラクティブビデオビューア：[https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=ja](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=ja)
 
-1. 前の手順で説明したポップアップをビューアにアタッチするには、次のコードを使用します。
+1. 前の手順で説明したようにポップアップをビューアにアタッチするには、次のコードを使用します。
 
    ```xml
    "initComplete":function() {
@@ -232,14 +232,14 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
    }
    ```
 
-   上記のコードでは、次の処理が行われました。
+   上記のコードでは、次の処理を実行しました。
 
-   * カスタムポップアップを識別しました。
+   * カスタムポップアップを特定しました。
    * DOM からの削除
    * ビューアコンテナの指定
    * ビューアコンテナへのポップアップのアタッチ
 
-1. setHandlersコード全体は、次のようになります（インタラクティブビデオビューアを使用）。
+1. setHandlers コード全体は次に似たものになります（インタラクティブビデオビューアを使用しています）。
 
    ```xml
    s7interactivevideoviewer.setHandlers({
@@ -262,9 +262,9 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
    `*viewerInstance.*init()`
 
-   ****
-例：この例では、インタラクティブ画像ビューアを使用します。
+   **例**
+この例では、インタラクティブ画像ビューアを使用しています。
 
    `s7interactiveimageviewer.init()`
 
-   ホストページにビューアを埋め込んだ後で、`init()` を使用してビューアを起動する前に、ビューアインスタンスが作成され、ハンドラーが読み込まれていることを確認してください。
+   ホストページにビューアを埋め込んだら、`init()` でビューアを呼び出す前に、ビューアインスタンスが作成され、ハンドラーが読み込まれていることを確認してください。
