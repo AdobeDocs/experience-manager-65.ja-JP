@@ -1,8 +1,8 @@
 ---
 title: TODO リストでの追加のデータの表示
-seo-title: TODO リストでの追加のデータの表示
+seo-title: Displaying additional data in ToDo list
 description: LiveCycle AEM Forms Workspace の TODO リストの表示をカスタマイズして、デフォルト以外の情報を表示する方法。
-seo-description: LiveCycle AEM Forms Workspace の TODO リストの表示をカスタマイズして、デフォルト以外の情報を表示する方法。
+seo-description: How-to customize the display of the To-do list of LiveCycle AEM Forms workspace to show more information besides the default.
 uuid: 9467c655-dce2-43ce-8e8f-54542fe81279
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: fed3b562-bcc2-4fb7-8fd2-35b1ac621e16
 docset: aem65
 exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 90%
+workflow-type: ht
+source-wordcount: '282'
+ht-degree: 100%
 
 ---
 
@@ -25,18 +25,18 @@ ht-degree: 90%
 
 この記事では、TODO リストの各タスクに情報を追加する手順について説明します。
 
-## 追加できる情報  {#what-can-be-added}
+## 追加できる情報 {#what-can-be-added}
 
 サーバーによって送信された `task.json` にある情報を追加することができます。情報は、平文テキストとして追加することも、スタイルを使用して情報をフォーマットすることもできます。
 
 JSON オブジェクトの説明についての詳細は、[この](/help/forms/using/html-workspace-json-object-description.md)記事を参照してください。
 
-## タスクでの情報の表示  {#displaying-information-on-a-task}
+## タスクでの情報の表示 {#displaying-information-on-a-task}
 
 1. 「[AEM Forms Workspace のカスタマイズの一般的な手順](../../forms/using/generic-steps-html-workspace-customization.md)」に従います。
 1. タスクに追加の情報を表示するには、対応するキーと値のペアを `translation.json` のタスクブロック内に追加する必要があります。
 
-   例えば、英語の場合は`/apps/ws/locales/en-US/translation.json`を次のように変更します。
+   例えば、`/apps/ws/locales/en-US/translation.json` （英語）に変更します。
 
    ```json
    "task" : {
@@ -121,9 +121,9 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    }
    ```
 
-## 新規プロパティでの CSS の定義  {#defining-css-for-the-new-property}
+## 新規プロパティでの CSS の定義 {#defining-css-for-the-new-property}
 
-1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これをおこなうには、`/apps/ws/css/newStyle.css`に追加された新しいプロパティのスタイル情報を追加する必要があります。
+1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これを行うには、`/apps/ws/css/newStyle.css` に追加された新規プロパティにスタイル情報を追加する必要があります。
 
    たとえば、以下を追加します。
 
@@ -135,18 +135,18 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
    }
    ```
 
-## HTML テンプレートへのエントリの追加  {#adding-entry-in-the-html-template}
+## HTML テンプレートへのエントリの追加 {#adding-entry-in-the-html-template}
 
 最後に、タスクに追加する各プロパティの開発パッケージにエントリを含める必要があります。作成する方法については、「AEM Forms Workspace コードの構築」を参照してください。
 
-1. コピー `task.html`:
+1. `task.html` をコピーします：
 
-   * 追加の: `/libs/ws/js/runtime/templates/`
-   * を: `/apps/ws/js/runtime/templates/`
+   * コピー元：`/libs/ws/js/runtime/templates/`
+   * コピー先：`/apps/ws/js/runtime/templates/`
 
-1. `/apps/ws/js/runtime/templates/task.html`に新しい情報を追加します。
+1. 新しい情報を `/apps/ws/js/runtime/templates/task.html` に追加します。
 
-   例えば、`div class="taskProperties"`の下に次を追加します。
+   例えば、`div class="taskProperties"` の下に追加します。
 
    ```jsp
    <span class="stepname" alt="<%= $.t('task.stepname.value')%>" title = '<%= $.t("task.stepname.tooltip",{stepName:stepName})%>'/>
