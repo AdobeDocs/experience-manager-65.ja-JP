@@ -1,8 +1,8 @@
 ---
 title: アプリケーションの同期
-seo-title: アプリケーションの同期
+seo-title: Synchronizing the app
 description: モバイルデバイス上の AEM Forms アプリケーションを AEM Forms サーバーと同期します。
-seo-description: モバイルデバイス上の AEM Forms アプリケーションを AEM Forms サーバーと同期します。
+seo-description: Synchronize the AEM Forms app on your mobile device with the AEM Forms server.
 uuid: 3a6fb2d5-2ec4-4f78-a42a-fc921b66238e
 contentOwner: robhagat
 content-type: reference
@@ -12,9 +12,9 @@ discoiquuid: 393e4332-a2cc-42c8-a18f-3035addbcfaa
 docset: aem65
 exl-id: 6bb1d6df-b322-4112-bc25-6300877ee146
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '369'
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ AEM Forms サーバーがオンラインのときは、デフォルトでは、1
 
 **アプリケーションを手動で同期するには**
 
-ホーム画面の右下隅にある「同期」ボタン![sync-app](assets/sync-app.png)をタップします。
+ホーム画面の右下にある「同期」ボタン ![sync-app](assets/sync-app.png) をタップしてください。
 
 **同期頻度を変更するには**
 
@@ -42,7 +42,7 @@ AEM Forms サーバーがオンラインのときは、デフォルトでは、1
 1. 「同期の頻度」オプションで、「同期の頻度」の右側の値をタップします。
 1. ドロップダウンリストで、新しい同期頻度を選択します。
 
-### 技術仕様  {#technical-specifications}
+### 技術仕様 {#technical-specifications}
 
 * AEM Forms サーバーへのオフラインアプリケーションデータの送信のメインロジックは runtime/offline/util/offline.js に含まれます。
 * .js で、processOfflineSubmittedSavedTasks(...) 関数への呼び出しによって、保存済み／送信済みタスクをサーバーに送信します。 同期処理でのエラーや競合も処理されます。 タスクの送信に失敗すると、アプリケーションのタスクは失敗としてマークされます。 さらに、タスクは Outbox に残ります。
