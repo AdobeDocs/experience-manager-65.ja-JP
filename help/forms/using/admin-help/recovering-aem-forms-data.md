@@ -1,8 +1,8 @@
 ---
 title: AEM Forms データの回復
-seo-title: AEM Forms データの回復
+seo-title: Recovering the AEM forms data
 description: ここでは、AEM Forms データの回復に必要な手順について説明します。
-seo-description: ここでは、AEM Forms データの回復に必要な手順について説明します。
+seo-description: This document describes the steps required to recover the AEM forms data.
 uuid: b5735196-5a8d-4358-884f-e9b8d8f4f682
 contentOwner: admin
 content-type: reference
@@ -11,15 +11,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1157'
+ht-degree: 100%
 
 ---
 
-# AEM Forms データの回復 {#recovering-the-aem-forms-data}
+# AEM forms データの回復 {#recovering-the-aem-forms-data}
 
-ここでは、AEM Forms データの回復に必要な手順について説明します。[バックアップと回復に関する考慮事項](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery)も参照してください。
+ここでは、AEM forms データの回復に必要な手順について説明します。[バックアップと回復に関する考慮事項](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery)も参照してください。
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ AEM Forms は、以下の障害から安全な方法で回復します。
 
 複数ノードで構成されるクラスターのいずれかのノードで障害が発生し、クラスターのその他のノードが適切に稼働している場合は、クラスターのシングルノード回復手順を実行します。
 
-## AEM Forms データを回復する  {#recover-the-aem-forms-data}
+## AEM Forms データを回復する {#recover-the-aem-forms-data}
 
 1. AEM Forms サービスとアプリケーションサーバーが実行中の場合は停止します。
 1. 必要に応じて、システムイメージから物理システムを再作成します。例えば、回復の理由が障害のあるデータベースサーバーである場合、この手順は必要ありません。
@@ -69,17 +69,17 @@ AEM Forms は、以下の障害から安全な方法で回復します。
    >
    >/restore ディレクトリが既に存在する場合、それをバックアップし、最新データを含む /backup ディレクトリを名前変更する前に削除します。
 
-   * (JBoss)`[appserver root]/server/'server'/svcnative/DocumentStorage/backup`の名前を次のように変更します。
+   * （JBoss）`[appserver root]/server/'server'/svcnative/DocumentStorage/backup` を次に変更：
 
       `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`
 
-   * (WebLogic) `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup`の名前を次のように変更します。
+   * （WebLogic）`[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
-      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
+      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`
 
-   * (WebSphere) `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup`の名前を次のように変更します。
+   * （WebSphere）`[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` を次に変更：
 
-      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
+      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`
 
 1. コンテンツ保存場所のルートディレクトリを回復します。そのためには、最初に AEM Forms の既存のインストール環境にあるコンテンツ保存場所のルートディレクトリの内容を削除し、スタンドアロン環境またはクラスター環境のいずれかのタスクに従って、このルートディレクトリの内容を回復します。
 
@@ -108,11 +108,11 @@ AEM Forms は、以下の障害から安全な方法で回復します。
       クラスター環境での復元については、[クラスター環境でのバックアップと復元の方策](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment)を参照してください。
 
 1. java.io.temp ディレクトリまたは Adobe temp ディレクトリに作成された AEM forms の一時ファイルをすべて削除します。
-1. AEM formsを起動します（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照）。<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->
+1. AEM Forms を起動します（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照）<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->。
 
 ## 回復中の GDS の場所の変更 {#changing-the-gds-location-during-recovery}
 
-GDS を元の場所とは異なる場所に復元する場合は、LCSetGDS スクリプトを実行して GDS を新しい場所に設定します。スクリプトは`[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline`フォルダーにあります。 このスクリプトは、`defaultGDS`と`newGDS`の2つのパラメーターを取ります。 スクリプトの実行方法については、同フォルダー内の `ReadMe.txt` ファイルを参照してください。
+GDS を元の場所とは異なる場所に復元する場合は、LCSetGDS スクリプトを実行して GDS を新しい場所に設定します。スクリプトは `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` フォルダーにあります。このスクリプトでは `defaultGDS` と `newGDS` の 2 つのパラメーターを使用します。スクリプトの実行方法については、同フォルダー内の `ReadMe.txt` ファイルを参照してください。
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ GDS を元の場所とは異なる場所に復元する場合は、LCSetGDS ス�
 >
 >GDS ディレクトリがドライブのルート（D:\ など）にある場合、Windows でのコンポーネントのデプロイメントは失敗します。GDS の場合、ディレクトリがドライブのルートではなく、サブディレクトリに配置されていることを確認する必要があります。例えば、ディレクトリは単に D:\ ではなく D:\GDS にする必要があります。
 
-## クラスター環境への GDS の回復  {#recovering-the-gds-to-a-clustered-environment}
+## クラスター環境への GDS の回復 {#recovering-the-gds-to-a-clustered-environment}
 
 クラスター環境における GDS の場所を変更するには、クラスター全体をシャットダウンし、クラスター内の 1 つのノードで LCSetGDS スクリプトを実行します（[回復中の GDS の場所の変更](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照）。そのノードのみを起動します。ノードが完全に起動したら、クラスター内の他のノードも安全に起動できるので、新規 GDS が正しく指定されます。
 
