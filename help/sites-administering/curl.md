@@ -1,8 +1,8 @@
 ---
 title: AEM での cURL の使用
-seo-title: AEM での cURL の使用
+seo-title: Using cURL with AEM
 description: AEM で cURL を使用する方法について説明します。
-seo-description: AEM で cURL を使用する方法について説明します。
+seo-description: Learn how to use cURL with AEM.
 uuid: 771b9acc-ff3a-41c9-9fee-7e5d2183f311
 contentOwner: Silviu Raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 78%
+workflow-type: ht
+source-wordcount: '878'
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 78%
 
 管理者は、多くの場合、システムの一般的なタスクを自動化またはシンプル化する必要があります。例えば、AEM では、ユーザーの管理、パッケージのインストールおよび OSGi バンドルの管理は、一般におこなう必要のあるタスクです。
 
-AEMが構築されるSlingフレームワークのRESTfulな特性により、ほとんどのタスクはURL呼び出しを使用して実行できます。 cURL は、そのような URL 呼び出しの実行に使用でき、AEM 管理者にとって便利なツールです。
+AEM が構築されている Sling フレームワークの RESTful 特性により、ほとんどのタスクは URL 呼び出しで実行できます。cURL は、そのような URL 呼び出しの実行に使用でき、AEM 管理者にとって便利なツールです。
 
-## cURL とは  {#what-is-curl}
+## cURL とは {#what-is-curl}
 
-cURL は、URL 操作を実行するために使用される、オープンソールのコマンドラインツールです。HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP、RTSPなど、様々なインターネットプロトコルをサポートしています。
+cURL は、URL 操作を実行するために使用される、オープンソールのコマンドラインツールです。HTTP、HTTPS、FTP、FTPS、SCP、SFTP、TFTP、LDAP、DAP、DICT、TELNET、FILE、IMAP、POP3、SMTP および RTSP など、様々なインターネットプロトコルをサポートします。
 
 cURL は、URL 構文を使用してデータを取得または送信するための、広く使用される安定したツールで、最初にリリースされたのは 1997 年です。cURL という名前の元々の意味は、「see URL」でした。
 
@@ -35,9 +35,9 @@ AEM が構築されている Sling フレームワークの RESTful 特性によ
 >
 >cURL を使用して実行された AEM コマンドは、AEM の任意のユーザーのように承認される必要があります。cURL を使用して AEM コマンドを実行する場合、すべての ACL およびアクセス権が適用されます。
 
-## cURL のダウンロード  {#downloading-curl}
+## cURL のダウンロード {#downloading-curl}
 
-cURL は、macOS および一部の Linux ディストリビューションに標準で備わっています。実質的にほぼすべてのオペレーティングシステムで使用できます。最新のダウンロードは、[https://curl.haxx.se/download.html](https://curl.haxx.se/download.html)で確認できます。
+cURL は、macOS および一部の Linux ディストリビューションに標準で備わっています。実質的にほぼすべてのオペレーティングシステムで使用できます。最新のダウンロードは、[https://curl.haxx.se/download.html](https://curl.haxx.se/download.html) にあります。
 
 cURL のソースリポジトリは、GitHub にもあります。
 
@@ -49,7 +49,7 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 
 次に、例として Chrome ブラウザー内で新しいページを作成してこれをおこなう方法の手順を説明します。
 
-1. AEM 内で呼び出したいアクションを準備します。この場合、**ページを作成**&#x200B;ウィザードの最後まで進みましたが、まだ「**作成**」をクリックしていません。
+1. AEM 内で呼び出したいアクションを準備します。この例では、**ページを作成**&#x200B;ウィザードの最後まで進みましたが、まだ「**作成**」はクリックしていません。
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
@@ -62,7 +62,7 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. cURLコマンドをテキストエディターにコピーし、`-H`で始まるコマンドからすべてのヘッダーを削除し（下の画像では青でハイライト表示）、`-u <user>:<password>`などの適切な認証パラメーターを追加します。
+1. cURL コマンドをテキストエディターにコピーして、コマンドから `-H` で始まるすべてのヘッダー（下図の青い部分）を削除し、`-u <user>:<password>` などの適切な認証パラメーターを追加します。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -78,9 +78,9 @@ cURL コマンドは、ワークフローのトリガー、OSGi 設定の確認�
 >
 >次の例では、AEM が `localhost` のポート `4502` で実行され、ユーザー `admin`（パスワード `admin`）を使用していると仮定します。追加のコマンドのプレースホルダーは、山括弧で囲まれています。
 
-### パッケージ管理  {#package-management}
+### パッケージ管理 {#package-management}
 
-#### インストールされているすべてのパッケージの一覧
+#### インストールされているすべてのパッケージを一覧表示
 
 ```shell
 curl -u <user>:<password> http://<host>:<port>/crx/packmgr/service.jsp?cmd=ls
@@ -216,11 +216,11 @@ curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/group
 
 ### バックアップ {#backup}
 
-詳しくは、[バックアップと復元](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup)を参照してください。
+詳しくは、[バックアップとリストア](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup)を参照してください。
 
 ### OSGi {#osgi}
 
-#### バンドルの開始  {#starting-a-bundle}
+#### バンドルの開始 {#starting-a-bundle}
 
 ```shell
 curl -u <user>:<password> -Faction=start http://localhost:4502/system/console/bundles/<bundle-name>
@@ -234,7 +234,7 @@ curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bun
 
 ### Dispatcher {#dispatcher}
 
-#### キャッシュの無効化  {#invalidate-the-cache}
+#### キャッシュの無効化 {#invalidate-the-cache}
 
 ```shell
 curl -H "CQ-Action: Activate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path: /content/test-site/" -H "Content-Length: 0" -H "Content-Type: application/octet-stream" http://localhost:4502/dispatcher/invalidate.cache
@@ -281,21 +281,21 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 ### Communities {#communities}
 
-#### バッジの割り当てと取り消し  {#assign-and-revoke-badges}
+#### バッジの割り当てと取り消し {#assign-and-revoke-badges}
 
 詳しくは、[コミュニティのスコアとバッジ](/help/communities/implementing-scoring.md#assign-and-revoke-badges)を参照してください。
 
-詳しくは、[スコアとバッジの基本事項](/help/communities/configure-scoring.md#example-setup)を参照してください。
+詳しくは、[スコアおよびバッジの基本事項](/help/communities/configure-scoring.md#example-setup)を参照してください。
 
 #### MSRP インデックス再作成 {#msrp-reindexing}
 
-詳しくは、[MSRP - MongoDBストレージリソースプロバイダー](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command)を参照してください。
+詳しくは、[MSRP - MongoDB ストレージリソースプロバイダー](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command)を参照してください。
 
 ### セキュリティ {#security}
 
-#### CRX DE Lite の有効化および無効化  {#enabling-and-disabling-crx-de-lite}
+#### CRX DE Lite の有効化および無効化 {#enabling-and-disabling-crx-de-lite}
 
-詳しくは、 AEM](/help/sites-administering/enabling-crxde-lite.md)でのCRXDE Liteの有効化を参照してください。[
+詳しくは、[AEM で CRXDE Lite を有効にする](/help/sites-administering/enabling-crxde-lite.md)を参照してください。
 
 ### データストアのガベージコレクション {#data-store-garbage-collection}
 
@@ -303,7 +303,7 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 ### Analytics と Target の統合 {#analytics-and-target-integration}
 
-詳しくは、[Adobe AnalyticsとAdobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script)のオプトインを参照してください。
+詳しくは、[Adobe Analytics および Adobe Target との統合のオプトイン](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script)を参照してください。
 
 ### シングルサインオン {#single-sign-on}
 
@@ -359,7 +359,7 @@ curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination
 
 ### ワークフロー {#workflows}
 
-詳しくは、[プログラムによるワークフローの操作](/help/sites-developing/workflows-program-interaction.md)を参照してください。
+詳しくは、[プログラムによるワークフローとのやり取り](/help/sites-developing/workflows-program-interaction.md)を参照してください。
 
 ### Sling コンテンツ {#sling-content}
 
@@ -407,4 +407,4 @@ curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localho
 
 ### アセットの操作 {#asset-manipulation}
 
-詳しくは、[Assets HTTP API](/help/assets/mac-api-assets.md)を参照してください。
+詳しくは、[Assets HTTP API](/help/assets/mac-api-assets.md) を参照してください。
