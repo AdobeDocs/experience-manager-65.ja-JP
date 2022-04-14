@@ -1,8 +1,8 @@
 ---
 title: HTML5 フォームでの手書き署名の使用
-seo-title: HTML5 フォームでの手書き署名の使用
+seo-title: Using Scribble Signature in HTML5 forms
 description: タッチデバイスでの使用が増加する HTML5 フォームの一般的な要件として、署名のサポートがあります。モバイルデバイスでのドキュメントの署名は、モバイルデバイスにおけるフォームの署名に関して受け入れられる方法になってきています。
-seo-description: タッチデバイスでの使用が増加する HTML5 フォームの一般的な要件として、署名のサポートがあります。モバイルデバイスでのドキュメントの署名は、モバイルデバイスにおけるフォームの署名に関して受け入れられる方法になってきています。
+seo-description: HTML5 forms are increasingly used on touch devices, and one common requirement is to support signatures. Signing documents on mobile devices is becoming an accepted way of signing forms on mobile devices.
 uuid: 163dd55a-971a-4dd4-93a7-a14e80184d9b
 contentOwner: robhagat
 content-type: reference
@@ -10,12 +10,12 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: designer
 discoiquuid: ecd7f538-9c24-48e7-8450-596851e99cff
 docset: aem65
-feature: デザイナー
+feature: Designer
 exl-id: 2025182f-195b-40d0-aee7-67669f55b964
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '658'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 89%
 
 タッチデバイスでの使用が増加する HTML5 フォームの一般的な要件として、署名のサポートがあります。スタイラスまたは指を使った手書きは、モバイルデバイスでフォームに署名する方法として受け入れられつつあります。HTML5 フォームおよび Forms Designer では、フォームに手書き署名フィールドを挿入するオプションが可能になりました。フォームがブラウザーでレンダリングされるときに、スタイラス、マウス、または指を使用してこれらのフィールド上に署名することができます。
 
-## 手書き署名フィールドの使用によるフォームのデザイン  {#how-to-design-a-form-using-scribble-signature-field}
+## 手書き署名フィールドの使用によるフォームのデザイン {#how-to-design-a-form-using-scribble-signature-field}
 
 1. Forms Designer でフォームを開きます。
 1. ページ上に手書き署名フィールドをドラッグ＆ドロップします。
@@ -32,20 +32,20 @@ ht-degree: 89%
 
    >[!NOTE]
    >
-   >Forms Designerで選択したフィールドのDimensionは、フィールドがレンダリングされる際に反映されます。 ただし、レンダリングされた署名ボックスの寸法は、Forms Designer で指定された寸法ではなく、フィールドの縦横比に基づいて計算されます。
+   >Forms Designer で選択されたフィールドの寸法は、フィールドがレンダリングされる際に反映されます。ただし、レンダリングされた署名ボックスの寸法は、Forms Designer で指定された寸法ではなく、フィールドの縦横比に基づいて計算されます。
 
 1. 手書き署名フィールドを設定します。
 
    iPad の署名プロセス中、手書き署名フィールドは、デフォルトで、位置情報を必須としてマークします（他のデバイスではオプションです）。このデフォルトの動作は `geoLocMandatoryOnIpad` プロパティの値を変更することでオーバーライドできます。このプロパティは手書き署名フィールドのエキストラとして公開されています。それを変更するための手順は：
 
    1. フォームで、手書き署名フィールドを選択します。
-   1. 「**XMLソース**」タブを選択します。
+   1. 「**XML Source**」タブを選択します。
 
       >[!NOTE]
       >
-      >「XMLソース」タブを開くには、**表示** /**XMLソース**&#x200B;をクリックします。
+      >「XML Source」タブを開くには、**表示**／**XML Source** をクリックします。
 
-   1. `<field>`タグ内で`<ui>`タグを探し、次のようにソースコードを変更します。
+   1. `<field>` タグ内にある `<ui>` タグを見つけて、ソースコードを次のようになるように変更します。
 
       ```xml
       <extras name="x-scribble-add-on">
@@ -66,7 +66,7 @@ ht-degree: 89%
 
 ![geolocation](assets/geolocation.png)
 
-**A.** Brush  **B.** 消しゴム **C.** 位置情 **報D.** 位置情報
+**A.** ブラシ **B.** 消しゴム **C.** 位置 **D.** 位置情報
 
 ### ジオタグ付け {#geo-tagging}
 
@@ -82,11 +82,11 @@ iPad では、この設定はフィールドの初期化パラメーターで `g
 * 位置情報が必須の場合、減少した描画領域が提供されます。位置情報のテキストは、ユーザーが残る領域で「**OK**」をクリックすると追加されます。
 * その他の場合では、全体が描画可能な領域が提供されます。ユーザーが位置情報を埋め込むことを選択すると、この領域は位置情報のテキストに適合するようにサイズが変更されます。
 
-### 署名の消去  {#clearing-a-signature}
+### 署名の消去 {#clearing-a-signature}
 
-この機能を使用する際に、ユーザーは&#x200B;**消しゴム**&#x200B;アイコンをクリックしてフィールドを消去し、再び開始できます。 位置情報が追加された場合、それも消去されます。
+この機能を使用するときに、ユーザーは&#x200B;**消しゴム**&#x200B;アイコンをクリックしてフィールドを消去し、始めからやり直すことができます。位置情報が追加された場合、それも消去されます。
 
-### 署名の保存  {#saving-a-signature}
+### 署名の保存 {#saving-a-signature}
 
 「**OK**」アイコンをクリックすると、手書きはフィールドの画像として保存されます。画像と値はさらに処理するためにサーバーに送信できます。ユーザーが「**OK**」クリックしたら、手書きフィールドはロックされます。手書きウィジェットを使用して署名を再び編集することはできません。
 
@@ -98,7 +98,7 @@ iPad では、この設定はフィールドの初期化パラメーターで `g
 
 「**Brushes**」アイコンをクリックして、使用可能なペンサイズのリストを表示します。ペンサイズをクリックまたはタップして、その対応するペンを使用します。
 
-### フォームからの署名の削除  {#delete-signatures-from-the-form}
+### フォームからの署名の削除 {#delete-signatures-from-the-form}
 
 フォームから署名を削除するには、以下を実行します。
 
