@@ -1,8 +1,8 @@
 ---
 title: Connector for IBM Content Manager の設定
-seo-title: Connector for IBM Content Manager の設定
+seo-title: Configuring Connector for IBM Content Manager
 description: Connector for IBM Content Manager を、AEM Forms と IBM Content Manager 間の通信を可能にするように設定します。
-seo-description: Connector for IBM Content Manager を、AEM Forms と IBM Content Manager 間の通信を可能にするように設定します。
+seo-description: Configure the Connector for IBM Content Manager to enable communication between AEM forms and IBM Content Manager.
 uuid: 3d55169d-93e3-4d4e-b18b-2a3394e1de3b
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 3094b178-3b1a-46b3-8fbd-c20388afa3a7
 exl-id: 50f0c963-8007-4e2a-aa73-d99b97d9a1aa
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '277'
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 98%
 
 Connector for IBM Content Manager は、AEM Forms と IBM Content Manager 間の通信を可能にします。関連する参考情報については、「[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)」の「Connectors for ECM」を参照してください。
 
-## IBM Content Manager 接続の設定  {#configure-the-ibm-content-manager-connection}
+## IBM Content Manager 接続の設定 {#configure-the-ibm-content-manager-connection}
 
 1. 管理コンソールで、サービス／Connector for IBM Content Manager をクリックします。
 1. 「データストア名」ボックスに、接続先の IBM Content Manager データストアの名前を入力します。データベースがローカルの場合は、データベース名を入力します。データベースがリモートの場合は、データベースのエイリアス名を入力します。
@@ -30,7 +30,7 @@ Connector for IBM Content Manager は、AEM Forms と IBM Content Manager 間の
 1. （オプション）「接続文字列のエイリアス」ボックスで、追加接続の引数を入力します。ほとんどの場合、このボックスは空になっています。関連情報については、IBM のドキュメントを参照してください。
 1. 「保存」をクリックします。
 
-## サービス設定の検証  {#validation-of-service-settings}
+## サービス設定の検証 {#validation-of-service-settings}
 
 誤ったデータストアのエイリアス、ユーザー名またはパスワードを入力すると、Content Repository Connector for IBM Content Manager サービスが実行中かどうかに応じて、次の結果になります。
 
