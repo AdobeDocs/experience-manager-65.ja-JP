@@ -1,19 +1,19 @@
 ---
 title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
-seo-title: AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ
+seo-title: Using AEM translation workflow to localize adaptive forms and document of record
 description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
-seo-description: AEM 翻訳ワークフローを使用してアダプティブフォームとレコードのドキュメントをローカライズする方法について説明します。
+seo-description: Learn to use AEM translation workflows to localize adaptive forms and document of record.
 uuid: 6c87a283-0203-4cf7-989a-3770ddbbbd6e
 content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: ebec03a3-67a0-4ecd-84bb-8580388e048a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 92%
+workflow-type: ht
+source-wordcount: '753'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 92%
 
 この記事では、アダプティブフォームおよびレコードのドキュメントに対する AEM 翻訳ワークフローの使用手順を説明します。
 
-## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ  {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
+## 機械翻訳によるアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
 機械翻訳サービスを使用すると、アダプティブフォームおよびレコードのドキュメントを即座に翻訳することができます。AEM Forms では、機械翻訳に Microsoft Translator の体験版を使用することが事前に定義されています。アダプティブフォームおよびレコードのドキュメントの機械翻訳を有効にするには、次の手順を実行します。
 
@@ -40,7 +40,7 @@ ht-degree: 92%
    >[!NOTE]
    >
    >* ブラウザーウィンドウでローカライズバージョンのフォームを開く前に、ブラウザーのロケールがフォームと同じロケールに設定されていることを確認してください。例えば、フォームがドイツ語（de）に翻訳されているときは、ブラウザーのロケールをドイツ語（de）に設定します。
-   >* アダプティブフォームのコンポーネントは、右から左(RTL)言語をサポートしていません。 （例：ヘブライ語）。
+   >* アダプティブフォームコンポーネントは、右から左に筆記する言語（RTL）をサポートしていません。例：ヘブライ語
 
 
    アダプティブフォームと共に、自動生成されるレコードのドキュメントもローカライズされます。
@@ -52,11 +52,11 @@ ht-degree: 92%
 [レコードのドキュメントの設定](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
 
 1. [レコードのドキュメントのブランディング情報をカスタマイズ](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)し、ブラウザーのロケールを、機械語を使用してアダプティブフォームをローカライズしたのと同じ言語に設定します。ブラウザーのロケールは、レコードのドキュメントにあるブランディング情報のローカライズに役立ちます。
-1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのドキュメントのPDFが生成され、ブラウザーの新しいタブで開きます。
+1. ローカライズされたレコードのドキュメントを表示するには、「プレビューを生成」をタップします。レコードのドキュメントの PDF が生成され、ブラウザーの新しいタブに表示されます。
 
 ## 人による翻訳を使用したアダプティブフォームおよびレコードのドキュメントのローカライズ {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}
 
-人による翻訳を使用すると、コンテンツは翻訳プロバイダーに送信され専門の翻訳者によって翻訳が行われます。完了すると、翻訳コンテンツが返されて、AEM に読み込まれます。翻訳プロバイダーが AEM と統合されると、AEM と翻訳プロバイダーとの間でコンテンツが自動的に送信されます。
+人による翻訳を使用すると、コンテンツは翻訳プロバイダーに送信され専門の翻訳者によって翻訳が行われます。完了すると、翻訳コンテンツが返され、AEM に読み込まれます。翻訳プロバイダーが AEM と統合されると、AEM と翻訳プロバイダーとの間でコンテンツが自動的に送信されます。
 
 翻訳の際には、専門の翻訳者各自の間で XLIFF 形式のファイルが含まれている辞書が共有されます。この辞書には、各ロケールに対して個別の XLIFF ファイルが含まれます。各 XLIFF には、エンドユーザーに表示されるテキストと、対応するローカライズ済みのテキストのプレースホルダ―が含まれます。
 
@@ -66,18 +66,16 @@ ht-degree: 92%
 
 1. 翻訳サービスとフレームワークの設定に[言語マスターのページを関連付け](/help/sites-administering/tc-tic.md)ます。
 
-1. [翻訳するコンテンツのタ](/help/sites-administering/tc-rules.md) イプを指定します。
+1. 翻訳する[コンテンツのタイプを特定](/help/sites-administering/tc-rules.md)します。
 
 1. [翻訳するコンテンツを準備](/help/sites-administering/tc-prep.md)します。そのためには、言語マスターをオーサリングして、言語コピーのルートページを作成します。
 
-1. [翻訳プロジェ](/help/sites-administering/tc-manage.md) クトを作成して、翻訳するコンテンツを収集し、翻訳プロセスを準備します。
+1. [翻訳プロジェクトを作成](/help/sites-administering/tc-manage.md)して、翻訳するコンテンツを収集し、翻訳プロセスを準備します。
 
 1. 翻訳プロジェクトを使用して、[コンテンツの翻訳プロセスを管理](/help/sites-administering/tc-manage.md)します。
 
 >[!NOTE]
 >
->* アダプティブフォームのコンポーネントは、右から左(RTL)言語をサポートしていません。 （例：ヘブライ語）。
-
+>* アダプティブフォームコンポーネントは、右から左に筆記する言語（RTL）をサポートしていません。例：ヘブライ語。
 >
-
 
