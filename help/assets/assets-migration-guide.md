@@ -1,28 +1,28 @@
 ---
-title: アセットの一括移行
-description: アセットを [!DNL Adobe Experience Manager]に取り込み、メタデータを適用、レンディションを生成、パブリッシュインスタンスに対してアクティブ化する方法について説明します。
+title: アセットを一括で移行する
+description: ' [!DNL Adobe Experience Manager] へのアセットの移行、メタデータの適用、レンディションの生成、パブリッシュインスタンスでのアクティベートをそれぞれ行う方法について説明します。'
 contentOwner: AG
 role: Architect, Admin
-feature: 移行，レンディション，アセット管理
+feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: tm+mt
-source-wordcount: '1803'
-ht-degree: 67%
+workflow-type: ht
+source-wordcount: '1799'
+ht-degree: 100%
 
 ---
 
 # アセットを一括で移行する方法 {#assets-migration-guide}
 
-アセットを[!DNL Adobe Experience Manager]に移行する際には、いくつかの手順を考慮する必要があります。 実装によって大きく異なるので、現在のホームからアセットとメタデータを抽出する方法は、このドキュメントの範囲外ですが、このドキュメントでは、これらのアセットを[!DNL Experience Manager]に取り込み、メタデータを適用し、レンディションを生成し、インスタンスを公開する方法について説明します。
+アセットを [!DNL Adobe Experience Manager] に移行する際には、いくつかの手順を考慮する必要があります。現在のホームからアセットやメタデータを抽出する方法は、実装環境により方法が大きく異なるのでこのドキュメントでは説明しません。本書では、抽出したアセットを [!DNL Experience Manager] に移行してメタデータを適用し、レンディションを生成してそれらをパブリッシュインスタンスでアクティベートする方法について説明します。
 
 ## 前提条件 {#prerequisites}
 
-この方法の手順を実際に実行する前に、[Assetsパフォーマンスチューニングのヒント](performance-tuning-guidelines.md)のガイダンスを確認し、実装してください。 ここで紹介する手順の多くは、同時に実行可能なジョブの最大数の設定など、負荷時のサーバーの安定性とパフォーマンスを大幅に改善します。システムにアセットが読み込まれた後だと、その他の手順（ファイルデータストアの設定など）を実行するのがより困難になります。
+この方法に従って実際に手順を実行する前に、[Assets パフォーマンスチューニングに関するヒント](performance-tuning-guidelines.md)のガイダンスを確認して実践してください。ここで紹介する手順の多くは、同時に実行可能なジョブの最大数の設定など、負荷時のサーバーの安定性とパフォーマンスを大幅に改善します。システムにアセットが読み込まれた後だと、その他の手順（ファイルデータストアの設定など）を実行するのがより困難になります。
 
 >[!NOTE]
 >
->次のアセット移行ツールは、[!DNL Experience Manager]に含まれておらず、Adobeではサポートされていません。
+>次のアセット移行ツールは [!DNL Experience Manager] の一部ではないので、Adobe ではサポートしていません。
 >
 >* ACS AEM ツールの Tag Maker
 >* ACS AEM ツールの CSV Asset Importer
@@ -31,12 +31,11 @@ ht-degree: 67%
 >* 合成ワークフロー
 
 >
->
-このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ACS AEM ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ACS AEM Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
+>このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ACS AEM ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ACS AEM Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
 
-## [!DNL Experience Manager]に移行 {#migrating-to-aem}
+## [!DNL Experience Manager] への移行 {#migrating-to-aem}
 
-[!DNL Experience Manager]へのアセットの移行にはいくつかの手順が必要で、段階的なプロセスと見なす必要があります。 移行のフェーズは次のとおりです。
+[!DNL Experience Manager] にアセットを移行するにはいくつかの手順を経る必要があるので、フェーズ別に処理することをお勧めします。移行のフェーズは次のとおりです。
 
 1. ワークフローを無効化する。
 1. タグを読み込む。
@@ -49,11 +48,11 @@ ht-degree: 67%
 
 ### ワークフローの無効化 {#disabling-workflows}
 
-移行を開始する前に、[!UICONTROL DAMアセットの更新]ワークフローのランチャーを無効にします。 すべてのアセットを取り込んでからワークフローをバッチで実行する方法が最適です。移行が実行されるときに既にライブである場合は、これらのアクティビティを営業時間外に実行するようにスケジュールを設定できます。
+移行を開始する前に、[!UICONTROL DAM アセットの更新]ワークフローのランチャーを無効化します。すべてのアセットを取り込んでからワークフローをバッチで実行する方法が最適です。移行が実行されるときに既にライブである場合は、これらのアクティビティを営業時間外に実行するようにスケジュールを設定できます。
 
 ### タグの読み込み {#loading-tags}
 
-画像に適用するタグ分類は既に用意されていることがあります。CSVアセットインポーターやメタデータプロファイルの[!DNL Experience Manager]サポートなどのツールは、アセットにタグを適用するプロセスを自動化できますが、タグはシステムに読み込む必要があります。 [ACS AEM ツールの Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 機能を使用すると、システムに読み込まれた Microsoft Excel のスプレッドシートを使用してタグを入力できます。
+画像に適用するタグ分類は既に用意されていることがあります。CSV Asset Importer などのツールや [!DNL Experience Manager] のメタデータプロファイルのサポートにより、タグをアセットに適用する処理は自動化できますが、タグをシステムに読み込む必要があります。[ACS AEM ツールの Tag Maker](https://adobe-consulting-services.github.io/acs-aem-tools/features/tag-maker/index.html) 機能を使用すると、システムに読み込まれた Microsoft Excel のスプレッドシートを使用してタグを入力できます。
 
 ### アセットの取り込み {#ingesting-assets}
 
@@ -61,9 +60,9 @@ ht-degree: 67%
 
 システムにアセットを読み込むには、HTTP を使用したプッシュベースのアプローチと JCR の API を使用したプルベースのアプローチがあります。
 
-#### HTTP経由で送信 {#pushing-through-http}
+#### HTTP 経由で送信 {#pushing-through-http}
 
-アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Gluttonは、[!DNL Experience Manager]デプロイメント上の1つのディレクトリから別のディレクトリにすべてのアセットを読み込む、小さなJavaアプリケーションです。 Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
+アドビの Managed Services チームは Glutton というツールを使用してお客様の環境にデータを読み込みます。Glutton は小さな Java アプリケーションであり、[!DNL Experience Manager] のデプロイメントでディレクトリから別のディレクトリにすべてのアセットを読み込みます。Glutton の代わりに、Perl スクリプトなどのツールを使用してアセットをリポジトリに投稿することもできます。
 
 HTTPS を通じたプッシュのアプローチには、主に次の 2 つの欠点があります。
 
@@ -72,28 +71,28 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 
 アセットを取り込むもう一方のアプローチでは、ローカルファイルシステムからアセットを引っ張ってきます。ただし、プルベースのアプローチを実行する外部ドライブやネットワーク共有がサーバーにマウントされていない場合は、HTTP を通じたアセットの投稿が最適なオプションです。
 
-#### ローカルファイルシステムから取得 {#pulling-from-the-local-filesystem}
+#### ローカルファイルシステムからの取得 {#pulling-from-the-local-filesystem}
 
-[ACS AEM ツールの CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) は、アセットをファイルシステムから、アセットメタデータをアセット読み込みの CSV ファイルから、それぞれ取り込みます。Experience ManagerAsset Manager APIは、アセットをシステムに読み込み、設定済みのメタデータプロパティを適用するために使用します。 アセットはネットワークファイルマウントまたは外部ドライブを介してサーバーにマウントされているのが理想です。
+[ACS AEM ツールの CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) は、アセットをファイルシステムから、アセットメタデータをアセット読み込み用の CSV ファイルから、それぞれ取り込みます。Experience Manager の Asset Manager API を使用して、アセットをシステムに取り込み、設定したメタデータプロパティを適用します。アセットはネットワークファイルマウントまたは外部ドライブを介してサーバーにマウントされているのが理想です。
 
 アセットをネットワーク上で送信する必要がないので、全体的なパフォーマンスが劇的に向上します。このため、一般的にはこの方法がアセットをリポジトリに読み込む最も効率的な方法と見なされています。さらに、ツールがメタデータの取り込みをサポートし、すべてのアセットとメタデータを 1 つの手順で取り込むことができるので、別のツールを使用してメタデータを適用する 2 つ目の手順が不要になります。
 
 ### レンディションの処理 {#processing-renditions}
 
-アセットをシステムに読み込んだ後、[!UICONTROL DAMアセットの更新]ワークフローを通じてアセットを処理し、メタデータを抽出してレンディションを生成する必要があります。 この手順を実行する前に、必要に応じて[!UICONTROL DAMアセットの更新]ワークフローを複製および変更する必要があります。 標準のワークフローには、Dynamic Media PTIFFの生成や[!DNL InDesign Server]統合など、ユーザーにとって不要な手順が多数含まれています。
+アセットをシステムに読み込んだ後、メタデータを抽出してレンディションを生成するには、[!UICONTROL DAM アセットの更新]ワークフローを通じてアセットを処理する必要があります。この手順を実行する前に、[!UICONTROL DAM アセットの更新]ワークフローをニーズに合わせて複製および変更する必要があります。既製のワークフローには、Dynamic Media PTIFF の生成や [!DNL InDesign Server] の統合など、ユーザーによっては必要でない手順が多く含まれています。
 
 ニーズに合わせてワークフローを設定したら、次の 2 つの方法のいずれかで実行できます。
 
 1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。バッチサイズを設定するオプションも用意されています。
-1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、サーバーリソースの使用を最適化しながら、[!DNL Experience Manager]ワークフローエンジンのオーバーヘッドを削除できます。 さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
+1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。このアプローチはより複雑ですが、[!DNL Experience Manager] ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### アセットのアクティベート {#activating-assets}
 
-パブリッシュ層のあるデプロイメントでは、アセットをパブリッシュファームにアクティベートする必要があります。アドビは 1 つ以上のパブリッシュインスタンスを実行することを推奨していますが、すべてのアセットを 1 つのパブリッシュインスタンスにレプリケートして、そのインスタンスをクローンする方法が最も効率的です。多数のアセットをアクティベートするときは、ツリーのアクティベートを実行した後に、干渉する必要が生じる場合があります。理由は次のとおりです。アクティベーションを実行すると、項目がSlingジョブ/イベントキューに追加されます。 このキューのサイズがだいたい 40,000 項目を超えると、処理速度が劇的に低下します。このキューのサイズが 100,000 項目を超えると、システムの安定性に影響を及ぼします。
+パブリッシュ層のあるデプロイメントでは、アセットをパブリッシュファームにアクティベートする必要があります。アドビは 1 つ以上のパブリッシュインスタンスを実行することを推奨していますが、すべてのアセットを 1 つのパブリッシュインスタンスにレプリケートして、そのインスタンスをクローンする方法が最も効率的です。多数のアセットをアクティベートするときは、ツリーのアクティベートを実行した後に、干渉する必要が生じる場合があります。理由は、アクティベートをトリガーするときに、Sling のジョブやイベントキューに項目が追加されるからです。このキューのサイズがだいたい 40,000 項目を超えると、処理速度が劇的に低下します。このキューのサイズが 100,000 項目を超えると、システムの安定性に影響を及ぼします。
 
 この問題を回避するには、[Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) を使用してアセットのレプリケートを管理します。これは Sling キューを使用することなく動作し、オーバーヘッドを減らすほか、ワークロードをスロットルしてサーバーのオーバーロードを防ぎます。レプリケーションの管理に FAM を使用する例は、この機能のドキュメントページに記載しています。
 
-アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。[Grabbit](https://github.com/TWCable/grabbit)と呼ばれる、[!DNL Experience Manager]インフラストラクチャのオープンソースツールを使用する方法もあります。vitよりも高いパフォーマンスを発揮すると言われています。
+アセットをパブリッシュファームに移行するその他のオプションは、[vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) または [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run) を使用する方法です。これらは Jackrabbit の一部のツールとして提供されます。[!DNL Experience Manager] インフラストラクチャにオープンソースツール [Grabbit](https://github.com/TWCable/grabbit) を使用する方法もあります。vlt よりも高いパフォーマンスを発揮すると言われています。
 
 これらのアプローチで注意すべき点は、オーサーインスタンス上でアセットがアクティベートされていると表示されないことです。アセットのアクティベート状態を正しくフラグ設定するには、アセットをアクティベート済みとマークする別のスクリプトも実行する必要があります。
 
@@ -101,7 +100,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 >
 >アドビは Grabbit を管理およびサポートしません。
 
-### 公開のクローン {#cloning-publish}
+### パブリッシュをクローン化する {#cloning-publish}
 
 アセットがアクティベートされたら、パブリッシュインスタンスをクローンしてデプロイメントに必要なコピーを必要な分だけ作成できます。サーバーのクローンは比較的簡単ですが、いくつか重要な手順があります。パブリッシュをクローンするには：
 
@@ -113,27 +112,27 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 1. 環境を開始します。
 1. オーサー環境にあるすべてのレプリケーションエージェントが正しいパブリッシュインスタンスを指す、または新しいインスタンスの Dispatcher のフラッシュエージェントが新しい環境の正しい Dispatcher を参照するように設定を更新します。
 
-### ワークフローの有効化 {#enabling-workflows}
+### ワークフローを有効化する {#enabling-workflows}
 
-移行が完了したら、レンディションの生成とメタデータの抽出をサポートして継続的なシステム使用を実現するために、[!UICONTROL DAMアセットの更新]ワークフローのランチャーを再度有効にする必要があります。
+移行が完了したら、レンディションの生成とメタデータの抽出をサポートするために [!UICONTROL DAM の更新アセット]ワークフローのランチャーを再度有効化し、稼働中のシステムが日常的に使用できるようにします。
 
-## [!DNL Experience Manager]デプロイメント間の移行 {#migrating-between-aem-instances}
+## [!DNL Experience Manager] デプロイメントを超えた移行 {#migrating-between-aem-instances}
 
-ごく一般的ではありませんが、場合によっては、[!DNL Experience Manager]デプロイメント間で大量のデータを移行する必要があります。例えば、[!DNL Experience Manager]アップグレードを実行する場合、ハードウェアをアップグレードする場合、またはAMS移行を使用する場合など、新しいデータセンターに移行する場合などです。
+それほど一般的ではないものの、ある [!DNL Experience Manager] デプロイメントから別のデプロイメントに大量のデータを移行する必要があります。例えば、[!DNL Experience Manager] のアップグレードを実行したり、ハードウェアをアップグレードをしたり、新しいデータセンターへの移行（AMS の移行）を実行する場合です。
 
-このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。[!DNL Experience Manager]デプロイメント間で移行する場合は、次の手順を実行します。
+このケースでは、移行するアセットには既にメタデータが入力されており、レンディションは既に生成されています。インスタンス間の移動に集中することができます。[!DNL Experience Manager] デプロイメント間で移行を行うには、次の手順を実行します。
 
-1. ワークフローを無効にする：アセットと共にレンディションを移行するので、[!UICONTROL DAMアセットの更新]ワークフローのワークフローランチャーを無効にする必要があります。
+1. ワークフローランチャーを無効化する：他のアセットとともに共にレンディションを移行するするため、[!UICONTROL DAM の更新アセット]ワークフローのランチャーを無効にする必要があります。
 
-1. タグの移行：ソース[!DNL Experience Manager]デプロイメントには既にタグが読み込まれているので、それらをコンテンツパッケージにビルドして、ターゲットインスタンスにパッケージをインストールできます。
+1. タグを移行する：タグは既にソースの [!DNL Experience Manager] デプロイメントに読み込まれているため、コンテンツパッケージでタグをビルドした後、パッケージ自体をターゲットデプロイメントにインストールできます。
 
-1. アセットの移行：ある[!DNL Experience Manager]デプロイメントから別のデプロイメントにアセットを移動する場合に推奨されるツールは2つあります。
+1. アセット移行する：[!DNL Experience Manager]デプロイメントから別のデプロイメントにアセットを移行する場合に推奨されるツールは次の 2 つです。
 
-   * **Vaultリモートコ** ピーまたはvlt rcpを使用すると、ネットワークを介してvltを使用できます。移動元と移動先のディレクトリを指定すると、vit がすべてのリポジトリデータを一方のインスタンスからダウンロードし、もう一方に読み込みます。vt rcp については、[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html) に記載されています。
-   * **Grabbit**[!DNL Experience Manager]。Time Warner Cable が の実装のために開発した、オープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
+   * **Vault Remote Copy**（vlt rcp）：ネットワーク全体で vlt が使用できるようになります。移動元と移動先のディレクトリを指定すると、vit がすべてのリポジトリデータを一方のインスタンスからダウンロードし、もう一方に読み込みます。vt rcp については、[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html) に記載されています。
+   * **Grabbit**：Time Warner Cable が自社の [!DNL Experience Manager] 実装のために開発したオープンソースのコンテンツ同期ツールです。継続的なデータストリームを使用するので、vlt rcp と比較して待ち時間が少なく、vlt rcp の 2 倍から 10 倍高速であると言われています。また、Grabbit はデルタコンテンツのみの同期をサポートし、最初の移行パスが完了した後に加えられた変更を同期できます。
 
-1. アセットのアクティベート：[!DNL Experience Manager]への最初の移行については、[アセット](#activating-assets)のアクティベートの手順に従って進めてください。
+1. アセットを有効にする：[アセットの有効化](#activating-assets)については、[!DNL Experience Manager] に初めて移行する際の手順について記載された説明に従ってください。
 
-1. 公開のクローン：新しい移行と同様に、1つのパブリッシュインスタンスを読み込み、クローンを作成する方が、両方のノードでコンテンツをアクティブ化するよりも効率的です。 [パブリッシュインスタンスのクローン](#cloning-publish)を参照してください。
+1. パブリッシュをクローン化する：新規の移行の場合と同様に、1 つのパブリッシュインスタンスを読み込んでクローン化する方が、両方のノードでコンテンツを有効にするよりも効率的です。[パブリッシュインスタンスのクローン](#cloning-publish)を参照してください。
 
-1. ワークフローの有効化：移行が完了したら、 [!UICONTROL DAMアセットの更新]ワークフローのランチャーを再度有効にして、レンディションの生成とメタデータの抽出をサポートし、稼動中のシステムで日常的に使用できるようにします。
+1. ワークフローを有効にする：移行が完了したら、[!UICONTROL DAM の更新アセット]ワークフローのランチャーを再び有効にして、レンディションの生成とメタデータの抽出をサポートし、日常的なシステムの利用を継続できるようにします。
