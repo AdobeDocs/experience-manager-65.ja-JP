@@ -1,8 +1,8 @@
 ---
 title: デフォルトの SSL
-seo-title: デフォルトの SSL
+seo-title: SSL By Default
 description: AEM でデフォルトの SSL を使用する方法について説明します。
-seo-description: AEM でデフォルトの SSL を使用する方法について説明します。
+seo-description: Learn how to use SSL by Default in AEM.
 uuid: 2fbfd020-1d33-4b22-b963-c698e62f5bf6
 contentOwner: User
 content-type: reference
@@ -12,17 +12,17 @@ discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 74%
+workflow-type: ht
+source-wordcount: '788'
+ht-degree: 100%
 
 ---
 
 # デフォルトの SSL{#ssl-by-default}
 
-AEMのセキュリティを継続的に改善するために、AdobeではデフォルトでSSLと呼ばれる機能が導入されました。 AEM インスタンスへの接続で HTTPS の使用を促すことがその目的です。
+AEM のセキュリティを継続的に向上させる取り組みの中で、Adobe は SSL という機能をデフォルトで導入しました。AEM インスタンスへの接続で HTTPS の使用を促すことがその目的です。
 
-## デフォルトの SSL の有効化  {#enabling-ssl-by-default}
+## デフォルトの SSL の有効化 {#enabling-ssl-by-default}
 
 AEM ホーム画面から該当するインボックスメッセージをクリックすることによって、デフォルトの SSL の設定を開始できます。インボックスを表示するには、画面の右上隅にあるベルのアイコンを押します。次に、「**すべて表示**」をクリックします。すべてのアラートのリストが順序付けられてリストビューで表示されます。
 
@@ -32,11 +32,11 @@ AEM ホーム画面から該当するインボックスメッセージをクリ�
 
 >[!NOTE]
 >
->**HTTPSを設定**&#x200B;アラートがインボックスにない場合は、*<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*&#x200B;に移動して、HTTPSウィザードに直接移動できます
+>**HTTPS を設定**&#x200B;アラートがインボックスに表示されていない場合は、*<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>* にアクセスして、直接 HTTPS ウィザードに移動できます。
 
-**ssl-service** というサービスユーザーが、この機能のために作成されています。アラートを開くと、次の設定ウィザードに従います。
+**ssl-service** というサービスユーザーが、この機能のために作成されています。このアラートを開くと、以下の設定ウィザードに進みます。
 
-1. 最初に、「ストア資格情報」を設定します。これらは、HTTPSリスナーの秘密鍵とTrust Storeを格納する&#x200B;**ssl-service**&#x200B;システムユーザーのキーストアの資格情報です。
+1. 最初に、「ストア資格情報」を設定します。これらは、HTTPS リスナーの秘密鍵とトラストストアが格納される、**ssl-service** システムユーザーのキーストアの資格情報です。
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
@@ -56,7 +56,7 @@ AEM ホーム画面から該当するインボックスメッセージをクリ�
 
 デフォルトの SSL の自動化には 3 つの方法があります。
 
-### HTTP POST の使用  {#via-http-post}
+### HTTP POST の使用 {#via-http-post}
 
 最初の方法には、設定ウィザードで使用される SSLSetup サーバーへの送信が含まれます。
 
@@ -97,7 +97,7 @@ Content-Disposition: form-data; name="httpsPort"
 
 成功の応答とエラーの応答の両方の例を次に示します。
 
-**成功の例** （ステータス= 200）:
+**成功の例**（ステータス = 200）：
 
 ```xml
 <!DOCTYPE html>
@@ -128,7 +128,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 </html>
 ```
 
-**エラーの例** （ステータス= 500）:
+**エラーの例**（ステータス = 500）：
 
 ```xml
 <!DOCTYPE html>
@@ -155,11 +155,11 @@ it for any subsequent updating of the private key or certificate.</dd>
 または、以下の必要な項目が既に含まれているパッケージをアップロードすることにより、SSL 設定を自動化できます。
 
 * ssl-service ユーザーのキーストア。これは、リポジトリの */home/users/system/security/ssl-service/keystore* にあります。
-* `GraniteSslConnectorFactory`設定
+* `GraniteSslConnectorFactory` 設定
 
 ### ウィザードで使用する秘密鍵／証明書ペアの生成 {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
-以下は、SSL ウィザードで使用できる DER 形式の自己署名証明書を作成する例です。オペレーティングシステムに基づいてOpenSSLをインストールし、OpenSSLコマンドプロンプトを開き、秘密鍵/証明書を生成するフォルダーにディレクトリを変更します。
+以下は、SSL ウィザードで使用できる DER 形式の自己署名証明書を作成する例です。オペレーティングシステムに応じた OpenSSL をインストールして OpenSSL コマンドプロンプトを開き、秘密鍵と証明書を生成するフォルダーにディレクトリを変更します。
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ it for any subsequent updating of the private key or certificate.</dd>
    openssl rsa -in localhostprivate.key -out localhostprivate.key
    ```
 
-1. 次に、秘密鍵を使用して証明書署名要求(CSR)を生成します。
+1. 次に、秘密鍵を使用して証明書署名要求（CSR）を生成します。
 
    ```shell
    openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
@@ -192,11 +192,11 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out loca
 
 最後に、このページで最初に説明したグラフィカルな SSL ウィザードの手順 2 で、**localhostprivate.der** を秘密鍵としてアップロードし、**localhost.crt** を SSL 証明書としてアップロードします。
 
-### cURL での SSL 設定の更新  {#updating-the-ssl-configuration-via-curl}
+### cURL での SSL 設定の更新 {#updating-the-ssl-configuration-via-curl}
 
 >[!NOTE]
 >
->AEMで役立つcURLコマンドの一元化されたリストについては、[AEMでのcURLの使用](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html)を参照してください。
+>AEM で利用できる cURL コマンドをまとめたリストについては、[AEM での cURL の使用](https://helpx.adobe.com/jp/experience-manager/6-4/sites/administering/using/curl.html)を参照してください。
 
 cURL ツールを使用して SSL 設定を自動化することもできます。そのためには、設定パラメーターを次の URL に送信します。
 
@@ -204,26 +204,26 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 
 以下は、設定ウィザードの様々な設定を変更するために使用できるパラメーターです。
 
-* `-F "keystorePassword=password"`  — キーストアのパスワード。
+* `-F "keystorePassword=password"` - キーストアのパスワード。
 
-* `-F "keystorePasswordConfirm=password"`  — キーストアのパスワードを確認します。
+* `-F "keystorePasswordConfirm=password"` - キーストアのパスワードを確認します。
 
-* `-F "truststorePassword=password"` - truststoreのパスワード
+* `-F "truststorePassword=password"` - トラストストアのパスワード。
 
-* `-F "truststorePasswordConfirm=password"` - truststoreのパスワードを確認します。
+* `-F "truststorePasswordConfirm=password"` - トラストストアのパスワードを確認します。
 
-* `-F "privatekeyFile=@localhostprivate.der"`  — 秘密鍵を指定します。
+* `-F "privatekeyFile=@localhostprivate.der"` - 秘密鍵を指定します。
 
-* `-F "certificateFile=@localhost.crt"`  — 証明書を指定します。
+* `-F "certificateFile=@localhost.crt"` - 証明書を指定します。
 
-* `-F "httpsHostname=host.example.com"` — ホスト名を指定します。
-* `-F "httpsPort=8443"` - HTTPSリスナーが動作するポート。
+* `-F "httpsHostname=host.example.com"` - ホスト名を指定します。
+* `-F "httpsPort=8443"` - HTTPS リスナーが動作するポート。
 
 >[!NOTE]
 >
 >SSL 設定を自動化するための cURL は、DER および CRT ファイルが存在するフォルダーから実行すると最も速く実行されます。または、`privatekeyFile` および certificateFile 引数でフルパスを指定できます。
 >
->また、更新を実行するには認証が必要なので、cURLコマンドに`-u user:passeword`パラメーターを必ず追加してください。
+>また、更新の実行には認証が必要なため、cURL コマンドに `-u user:passeword` パラメーターを付加します。
 >
 >正しい cURL POST コマンドは、次のようになります。
 
@@ -231,7 +231,7 @@ cURL ツールを使用して SSL 設定を自動化することもできます�
 curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm=password" -F "truststorePassword=password" -F "truststorePasswordConfirm=password" -F "privatekeyFile=@localhostprivate.der" -F "certificateFile=@localhost.crt" -F "httpsHostname=host.example.com" -F "httpsPort=8443" https://host:port/libs/granite/security/post/sslSetup.html
 ```
 
-#### cURL を使用した複数の証明書  {#multiple-certificates-using-curl}
+#### cURL を使用した複数の証明書 {#multiple-certificates-using-curl}
 
 次のように certificateFile パラメーターを繰り返すことで、サーブレットに一連の証明書を送信できます。
 
