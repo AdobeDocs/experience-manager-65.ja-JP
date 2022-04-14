@@ -3,12 +3,12 @@ title: アセットエディターの拡張
 description: カスタムコンポーネントを使用したアセットエディターの機能の拡張方法を説明します。
 contentOwner: AG
 role: User, Admin
-feature: 開発者ツール
+feature: Developer Tools
 exl-id: de1c63c1-a0e5-470b-8d83-b594513a5dbd
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '688'
+ht-degree: 100%
 
 ---
 
@@ -18,21 +18,21 @@ ht-degree: 89%
 
 事前設定済みの編集コンポーネントを使用してエディターを設定する方法については、[アセットエディターページの作成および設定](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page)を参照してください。
 
-[!DNL Adobe Experience Manager]開発者は、既存のエディターコンポーネントを使用するだけでなく、独自のコンポーネントを作成することもできます。
+既存のエディターコンポーネントを使用するだけでなく、[!DNL Adobe Experience Manager] デベロッパーは、独自のコンポーネントを作成することもできます。
 
 ## アセットエディターテンプレートの作成 {#creating-an-asset-editor-template}
 
-次のサンプルページがGeometrixxに含まれています。
+Geometrixx には次のサンプルページがあります。
 
 * Geometrixx サンプルページ：`/content/geometrixx/en/press/asseteditor.html`
 * サンプルテンプレート：`/apps/geometrixx/templates/asseteditor`
 * サンプルページコンポーネント：`/apps/geometrixx/components/asseteditor`
 
-### clientlibの設定 {#configuring-clientlib}
+### Clientlib の設定 {#configuring-clientlib}
 
-[!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` で読み込まれます。
+[!DNL Assets] コンポーネントでは、WCM 編集クライアントライブラリの拡張機能が使用されています。クライアントライブラリは通常、`init.jsp` に読み込まれます。
 
-（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、 テンプレートは次の条件を満たす必要があります。[!DNL Assets]
+（コアの `init.jsp` での）デフォルトクライアントライブラリの読み込みとは異なり、[!DNL Assets] テンプレートは次の条件を満たす必要があります。
 
 * テンプレートでは、（`cq.wcm.edit` ではなく）`cq.dam.edit` クライアントライブラリを組み込む必要があります。
 
@@ -40,19 +40,19 @@ ht-degree: 89%
 
 通常は、既存のサンプル `init.jsp`（`/apps/geometrixx/components/asseteditor/init.jsp`）をコピーすればこの要件を満たします。
 
-### JSアクションの設定 {#configuring-js-actions}
+### JS アクションの設定 {#configuring-js-actions}
 
-一部の[!DNL Assets]コンポーネントには、`component.js`で定義されたJS関数が必要です。 このファイルをコンポーネントディレクトリにコピーしてリンクします。
+一部の [!DNL Assets] コンポーネントでは `component.js` で定義されている JS 関数が必要です。このファイルをコンポーネントディレクトリにコピーしてリンクします。
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
 ```
 
-このサンプルでは、このJavaScriptソースを`head.jsp`(`/apps/geometrixx/components/asseteditor/head.jsp`)に読み込んでいます。
+このサンプルでは、この JavaScript ソースを `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）で読み込んでいます。
 
 ### 追加のスタイルシート {#additional-style-sheets}
 
-一部の[!DNL Assets]コンポーネントはウィジェットライブラリを使用します。 コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
+一部の [!DNL Assets] コンポーネントでは、 ウィジェットライブラリが使用されます。コンテンツコンテキストで正常にレンダリングするには、追加のスタイルシートを読み込む必要があります。タグアクションコンポーネントでは、さらにもう 1 つのスタイルシートが必要です。
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
@@ -69,7 +69,7 @@ ht-degree: 89%
 次に例を示します。
 
 * プレーンフォームページ：[http://localhost:4502/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/geometrixx/jp/press/asseteditor.html)
-* フォームページに読み込まれるアセット：[](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html
+* フォームページに読み込まれるアセット：[http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html](http://localhost:4502/content/dam/geometrixx/icons/diamond.png.form.html/content/geometrixx/jp/press/asseteditor.html)
 
 `head.jsp`（`/apps/geometrixx/components/asseteditor/head.jsp`）のサンプルハンドルは、次の処理をおこないます。
 
@@ -202,7 +202,7 @@ HTML 部分で、先頭のタイトルセット（アセットまたはページ
 
 1. **編集**&#x200B;モードで、新しいコンポーネント（**Sample Metadata** など）がサイドキック（**アセットエディター**&#x200B;グループ内）で使用できます。コンポーネントを挿入します。メタデータを保存するには、メタデータフォームに追加する必要があります。
 
-## メタデータオプションの変更 {#modifying-metadata-options}
+## メタデータオプションを変更 {#modifying-metadata-options}
 
 [メタデータフォーム](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component)で利用可能な名前空間を変更できます。
 
