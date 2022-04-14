@@ -8,19 +8,19 @@ topic-tags: dynamic-media
 content-type: reference
 discoiquuid: aac3c850-ae84-4bff-80de-d370e150f675
 docset: aem65
-feature: 360 VR ビデオ
+feature: 360 VR Video
 role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
 source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
-workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 63%
+workflow-type: ht
+source-wordcount: '1052'
+ht-degree: 100%
 
 ---
 
 # 360/VR ビデオ {#vr-video}
 
-360 度ビデオでは、すべての方向のビューが同時に記録されます。このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生中、ユーザは視野角を制御する。モバイルデバイスでの再生は、通常、組み込みのジャイロスコープ制御を使用します。
+360 度ビデオでは、すべての方向のビューが同時に記録されます。このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイス組み込みのジャイロスコープ制御を使用します。
 
 Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネイティブサポートが含まれています。デフォルトでは、表示または再生するための追加設定は不要です。360 ビデオは、.mp4、.mkv、.mov といった標準のビデオ拡張子を使用して配信されます。最も一般的なコーデックは H.264 です。
 
@@ -32,7 +32,7 @@ Dynamic Media - Scene7 モードには、360 ビデオアセット配信のネ�
 
 ## 360 ビデオの視聴 {#video-in-action}
 
-[Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)を選択して、ブラウザーウィンドウを開き、360度ビデオを視聴します。 ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
+「[Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」を選択して、ブラウザーウィンドウを開き、360 度ビデオを視聴します。ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
 ![360 ビデオのサンプル](assets/6_5_360videoiss_simplified.png)
 *Space Station 360（国際宇宙ステーションの 360 度ビデオ）のビデオフレーム*
@@ -43,14 +43,14 @@ Adobe Premier Pro を使用すれば、360/VR シーンを表示および編集�
 
 [360/VR ビデオの編集](https://helpx.adobe.com/jp/premiere-pro/how-to/edit-360-vr-video.html)を参照してください。
 
-## 360ビデオビューアで使用するアセットのアップロード {#uploading-assets-for-use-with-the-video-viewer}
+## 360 ビデオビューアで使用するアセットのアップロード {#uploading-assets-for-use-with-the-video-viewer}
 
-Adobe Experience Managerにアップロードされた360ビデオアセットには、通常のビデオアセットと同様に、アセットページで「**マルチメディア**」というラベルが付けられます。
+Adobe Experience Manager にアップロードされた 360 ビデオアセットには、通常のビデオアセットの場合と同じく、アセットページで&#x200B;**マルチメディア**&#x200B;というラベルが付けられます。
 
 ![6_5_360video-selecttopreview](assets/6_5_360video-selecttopreview.png)
 *アップロードされた 360 ビデオアセット（カード表示）。アセットには「マルチメディア」というラベルが付けられます。*
 
-**360ビデオビューアで使用するアセットをアップロードします。**
+**360 ビデオビューアで使用するアセットをアップロードするには：**
 
 1. 360 ビデオアセット専用のフォルダーを作成します。
 1. [フォルダーにアダプティブビデオプロファイルを適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
@@ -59,11 +59,11 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
    Dynamic Media に付属している、既製のアダプティブビデオプロファイルを使用してもかまいません。ただしその場合、同じ設定でエンコードされた非 360 ビデオを非 360 ビデオビューアでレンダリングする場合と比べ、360 ビデオの品質のほうが低く感じられます。したがって、高品質の 360 ビデオが必要な場合は、以下の操作を行ってください。
 
-   * 理想的には、元の360ビデオコンテンツは、次のいずれかの解像度に最適です。
+   * できれば、元の 360 ビデオコンテンツの解像度は次のいずれかにしてください。
 
       * 1080p - 1920 x 1080：フル HD または FHD 解像度と呼ばれます。
-      * 2160p - 3840 x 2160(4k、UHD、またはUltraのHD解像度と呼ばれます)。 この大きなディスプレイ解像度は、ハイエンドのテレビやコンピューターモニターでよく見られます。2160pの解像度は、幅が4,000ピクセルに近いので、「4k」と呼ばれることが多いです。 つまり、そのピクセル数は 1080p の 4 倍になります。
-   * より高品質のレンディションを含む[カスタムアダプティブビデオプロファイルを作成](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)します。例えば、次の3つの設定を含むアダプティブビデオプロファイルを作成します。
+      * 2160p - 3840 x 2160：4K、UHD または Ultra HD 解像度と呼ばれます。この大きなディスプレイ解像度は、ハイエンドのテレビやコンピューターモニターでよく見られます。2160p 解像度がよく「4K」と呼ばれるのは、その幅が 4000 ピクセルに近いからです。つまり、そのピクセル数は 1080p の 4 倍になります。
+   * より高品質のレンディションを含む[カスタムアダプティブビデオプロファイルを作成](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)します。例えば、次の 3 つの設定を含むアダプティブビデオプロファイルを作成します。
 
       * width=auto; height=720; bitrate=2500 kbps
       * width=auto; height=1080; bitrate=5000 kbps
@@ -74,16 +74,16 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
 1. [フォルダーにビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
-## 360ビデオのデフォルトの縦横比を上書き  {#overriding-the-default-aspect-ratio-of-videos}
+## 360 ビデオのデフォルト縦横比のオーバーライド  {#overriding-the-default-aspect-ratio-of-videos}
 
 アップロードしたアセットを、360 ビデオビューアで使用する 360 ビデオにするには、アセットの縦横比が 2 である必要があります。
 
-デフォルトでは、Experience Managerはビデオの縦横比（幅/高さ）が2.0の場合、「360」としてビデオを検出します。管理者は、次のCRXDE Liteでオプションの`s7video360AR`プロパティを設定して、デフォルトの縦横比の設定(2)を上書きできます。
+Experience Manager ではデフォルトで、縦横比（幅／高さ）が 2.0 のビデオを「360」として検出します。管理者であれば、CRXDE Lite でオプションの `s7video360AR` プロパティを次のように設定して、縦横比のデフォルト設定である「2」を上書きできます。
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **プロパティタイプ**  — 倍精度浮動小数点数
-   * **値**  — 縦横比（デフォルトは2.0）。
+   * **プロパティタイプ**：Double
+   * **値**：縦横比を表す浮動小数点（デフォルトは 2.0）。
 
 このプロパティの設定が完了すると、既存のビデオと新しくアップロードされたビデオの両方で、すぐに設定が有効になります。
 
@@ -91,7 +91,7 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
 まず、360 ビデオをアップロードします。
 
-## 360ビデオのプレビュー {#previewing-video}
+## 360 ビデオのプレビュー {#previewing-video}
 
 プレビューを使用すれば、360 ビデオがお客様にどのように表示されるかを確認し、ビデオが期待どおりに動作していることを確認できます。
 
@@ -99,40 +99,39 @@ Adobe Experience Managerにアップロードされた360ビデオアセット�
 
 360 ビデオの設定が完了したら、このビデオを公開できます。
 
-[Webページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
-[WebアプリケーションへのURLのリンク](/help/assets/linking-urls-to-yourwebapplication.md)を参照してください。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)を参照してください。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 
-**360ビデオをプレビューするには：**
+**360 ビデオをプレビューするには：**
 
-1. **[!UICONTROL Assets]** で、作成した既存の 360 ビデオに移動します。360ビデオアセットを選択して、プレビューモードで開くことができます。
+1. **[!UICONTROL Assets]** で、作成した既存の 360 ビデオに移動します。360 ビデオアセットを選択すると、プレビューモードで開くことができます。
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
-   360ビデオアセットを選択して、ビデオをプレビューします。
+   360 ビデオアセットを選択すると、ビデオをプレビューできます。
 
-1. プレビューページの左上隅付近にあるドロップダウンリストを選択し、「**[!UICONTROL ビューア]**」を選択します。
+1. プレビューページで、ページの左上隅付近にあるドロップダウンリストを選択し、「**[!UICONTROL ビューア]**」を選択します。
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
-   「ビューア」リストから「**[!UICONTROL Video360_social]**」を選択し、次のいずれかの操作を行います。
+   「ビューア」リストから **[!UICONTROL Video360_social]** を選択した後、次のいずれかの操作を行います。
 
-   * 静的なシーンの表示角度を変更する場合は、ビデオ上でマウスポインタをドラッグします。
-   * 再生を開始する場合は、ビデオの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンを選択します。 ビデオが再生される際に、ビデオ上でマウスポインターをドラッグして、表示角度を変更します。
+   * 静的なシーンの視野角を変更するには、ビデオの上でマウスポインターをドラッグします。
+   * 再生を開始するには、ビデオの「**[!UICONTROL 再生]**」ボタンを選択します。ビデオの再生中にビデオ上でマウスポインターをドラッグすると、視野角を変更できます。
 
    ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*360 ビデオのスクリーンショット*
 
-   * 「ビューア」リストから「**[!UICONTROL Video360VR]**」を選択します。
+   * 「ビューア」リストから **[!UICONTROL Video360VR]** を選択します。
 
       バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットで視聴する、没入感のあるビデオコンテンツです。通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
-1. プレビューページの右上付近にある「**[!UICONTROL 閉じる]**」を選択します。
+1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。
 
 ## 360 ビデオの公開 {#publishing-video}
 
-360ビデオを公開して使用できるようにします。 360 ビデオを公開すると、URL と埋め込みコードがアクティベートされます。また、スケーラブルで効率の良い配信のために CDN と統合された Dynamic Media クラウドにも、360 ビデオが公開されます。
+360 ビデオを公開して使用できるようにします。360 ビデオを公開すると、URL と埋め込みコードがアクティベートされます。また、スケーラブルで効率の良い配信のために CDN と統合された Dynamic Media クラウドにも、360 ビデオが公開されます。
 
-360ビデオの公開方法について詳しくは、[Dynamic Mediaアセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
-[Webページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)も参照してください。
-[WebアプリケーションへのURLのリンク](/help/assets/linking-urls-to-yourwebapplication.md)も参照してください。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへのDynamic Mediaアセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)も参照してください。
+360 ビデオの公開方法について詳しくは、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
+[Web ページへの ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)も参照してください。
+[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)も参照してください。インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)も参照してください。
