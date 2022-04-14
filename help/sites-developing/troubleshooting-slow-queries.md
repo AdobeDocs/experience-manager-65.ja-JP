@@ -1,8 +1,8 @@
 ---
 title: 処理に時間のかかるクエリのトラブルシューティング
-seo-title: 処理に時間のかかるクエリのトラブルシューティング
+seo-title: Troubleshooting Slow Queries
 description: 処理に時間のかかるクエリのトラブルシューティング
-seo-description: 'null'
+seo-description: null
 uuid: ad09546a-c049-44b2-99a3-cb74ee68f040
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2269'
-ht-degree: 69%
+workflow-type: ht
+source-wordcount: '2265'
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ AEM で処理に時間のかかるクエリは、主に 3 つに分類されま�
 
    * 非常に多くの結果を返すクエリ
 
-最初の2つのクエリの分類（インデックスがなく、制限が不十分）は、Oakクエリエンジンに対して、**可能性のある**&#x200B;結果（コンテンツノードまたはインデックスエントリ）を強制的に検査し、**実際の**&#x200B;結果セットに属するクエリを識別させるので、遅くなります。
+最初の 2 つの分類のクエリ（インデックスのないクエリと制限が不十分なクエリ）の処理に時間がかかるのは、Oak クエリエンジンが強制的に結果&#x200B;**候補**（コンテンツノードやインデックスエントリ）それぞれを調査し、どれが&#x200B;**実際の**&#x200B;結果セットに属しているかを特定するからです。
 
 各結果候補を調査する動作をトラバースと呼びます。
 
@@ -43,13 +43,13 @@ AEM で処理に時間のかかるクエリは、主に 3 つに分類されま�
 
 クエリの制限を追加し、インデックスを調整すると、結果を迅速に取得できるように最適化された形式でインデックスデータを格納できます。また、結果候補セットを順次調査する必要性が低減するかなくなります。
 
-AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達すると、クエリが失敗し、例外がスローされます。この制限は、AEM 6.3より前のAEMバージョンにはデフォルトで存在しませんが、Apache Jackrabbit Query Engine Settings OSGi設定およびQueryEngineSettings JMX bean（LimitReadsプロパティ）で設定できます。
+AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達すると、クエリが失敗し、例外がスローされます。この制限は、AEM 6.3 より前のバージョンの AEM ではデフォルトで存在しません。ただし、Apache Jackrabbit クエリエンジン設定の OSGi 設定および QueryEngineSettings JMX bean（LimitReads プロパティ）で設定できます。
 
 ### インデックスのないクエリの検出 {#detecting-index-less-queries}
 
 #### 開発時 {#during-development}
 
-**すべての**&#x200B;クエリの説明を実行し、そのクエリプランに&#x200B;**/&amp;ast；が含まれていないことを確認します。traverse**&#x200B;の説明を入力します。 クエリプランのトラバースの例：
+**すべての**&#x200B;クエリの説明を実行し、それらのクエリプランに **/&amp;ast; traverse** が含まれていないことを確認します。トラバースするクエリプランの例は次のとおりです。
 
 * **プラン：** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
 
@@ -60,7 +60,7 @@ AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達
    * `*INFO* org.apache.jackrabbit.oak.query.QueryImpl Traversal query (query without index) ... ; consider creating and index`
    * このメッセージがログに記録されるのは、使用できるインデックスがない場合とクエリが多数のノードをトラバースする可能性がある場合のみです。インデックスが使用可能な場合、メッセージはログに記録されませんが、トラバースの量が少ないので処理にかかる時間は短くなります。
 
-* AEMの[クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)操作コンソールと[低速なクエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)を参照して、トラバーサルを探すか、インデックスクエリの説明を探します。
+* AEM の[クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)操作コンソールに移動し、処理に時間がかかるクエリの[説明](/help/sites-administering/operations-dashboard.md#explain-query)を実行して、トラバーサルまたはインデックスのないクエリの説明を探します。
 
 ### 制限が不十分なクエリの検出 {#detecting-poorly-restricted-queries}
 
@@ -71,7 +71,7 @@ AEM 6.3 では、デフォルトでトラバースの回数が 100,000 回に達
 * 理想的なクエリプランの範囲では、すべてのプロパティ制限、および少なくともクエリで最も厳密なプロパティ制限に `indexRules` を持ちます。
 * 結果を並べ替えるクエリは、Lucene プロパティインデックスに解決される必要があります。このインデックスには、`orderable=true.` を設定するプロパティによる並べ替えに関するインデックスルールがあります。
 
-#### 例えば、デフォルトの`cqPageLucene`には`jcr:content/cq:tags` {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}のインデックス規則はありません
+#### 例えば、デフォルトの `cqPageLucene` には `jcr:content/cq:tags` に対するインデックスルールがありません。 {#for-example-the-default-cqpagelucene-does-not-have-an-index-rule-for-jcr-content-cq-tags}
 
 cq:tags インデックスルールを追加する前
 
@@ -115,25 +115,25 @@ cq:tags インデックスルールを追加した後
 
    `[cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) jcr:content/cq:tags:my:tag where [a].[jcr:content/cq:tags] = 'my:tag' */`
 
-`cqPageLucene`インデックスに`jcr:content/cq:tags`のindexRuleを追加すると、`cq:tags`データを最適化された方法で保存できます。
+`cqPageLucene` インデックスに `jcr:content/cq:tags` のインデックスルールを追加したので、`cq:tags` のデータは最適な方法で格納することができます。
 
-`jcr:content/cq:tags`制限を持つクエリを実行すると、インデックスは値で結果を検索できます。 つまり、100 個の `cq:Page` ノードに値として `myTagNamespace:myTag` が設定されている場合は、この 100 件の結果だけが返され、他の 999,000 件は制限チェックから除外されるので、パフォーマンスは 10,000 倍向上します。
+`jcr:content/cq:tags` 制限を持つクエリを実行すると、インデックスは値に従って結果を検索できます。つまり、100 個の `cq:Page` ノードに値として `myTagNamespace:myTag` が設定されている場合は、この 100 件の結果だけが返され、他の 999,000 件は制限チェックから除外されるので、パフォーマンスは 10,000 倍向上します。
 
-  当然ながら、さらにクエリを制限すると、対象となる結果セットが少なくなり、クエリはさらに最適化されます。
+当然ながら、さらにクエリを制限すると、対象となる結果セットが少なくなり、クエリはさらに最適化されます。
 
-同様に、`cq:tags`プロパティに追加のインデックスルールがない場合、`cq:tags`に制限があるフルテキストクエリでも、インデックスの結果はすべてのフルテキスト一致を返すので、パフォーマンスが低下します。 cq:tagsに対する制限は、その後にフィルターされます。
+同様に、`cq:tags` プロパティのインデックスルールを追加しない場合は、`cq:tags` に対する制限を持つフルテキストクエリであっても、インデックスからの結果ではフルテキスト一致がすべて返されるので、パフォーマンスは低下します。その後、cq:tags の制限がフィルタリングされます。
 
 インデックス後にフィルタリングされるもう 1 つの原因は、開発中に見落とされることがよくあるアクセス制御リストです。ユーザーがアクセスできない可能性のあるパスがクエリによって返されていないかどうかを確認してみます。これをおこなうには、通常、コンテキスト構造を改良すると共に、クエリに適切なパス制限を指定します。
 
-Luceneインデックスが非常に小さなサブセットを返す多数の結果を返すかどうかを識別するのに便利な方法は、`org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex`のDEBUGログを有効にし、インデックスから読み込まれているドキュメントの数を確認することです。 最終結果の数と読み込まれたドキュメントの数を比較すると釣り合うはずです。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
+クエリの結果として非常に小さなサブセットが返されるように Lucene インデックスが多数の結果を返しているかどうかを特定するには、`org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex` のデバッグログを有効にし、インデックスから読み込まれるドキュメントの数を確認する方法が役立ちます。最終結果の数と読み込まれたドキュメントの数を比較すると釣り合うはずです。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 
 #### デプロイメント後 {#post-deployment-1}
 
-* トラバーサルクエリについて`error.log`を監視します。
+* トラバーサルクエリについて、`error.log` を監視します。
 
    * `*WARN* org.apache.jackrabbit.oak.spi.query.Cursors$TraversingCursor Traversed ### nodes ... consider creating an index or changing the query`
 
-* AEMの[クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)操作コンソールと[低速なクエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)を参照して、クエリプロパティの制限をインデックスプロパティルールに解決しないクエリプランを探します。
+* AEM の[クエリパフォーマンス](/help/sites-administering/operations-dashboard.md#query-performance)操作コンソールに移動し、処理に時間がかかるクエリの[説明](/help/sites-administering/operations-dashboard.md#explain-query)を実行して、クエリプロパティ制限がインデックスプロパティルールに解決されないクエリプランを探します。
 
 ### 結果セットが大きいクエリの検出 {#detecting-large-result-set-queries}
 
@@ -143,9 +143,9 @@ oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し�
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは、大量の IO が発生し、アプリケーション全体のパフォーマンスに悪影響を及ぼします。このため、上述の制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
-#### デプロイメント後  {#post-deployment-2}
+#### デプロイメント後 {#post-deployment-2}
 
-* ログを監視して、ノードの大量のトラバーサルやヒープメモリの大量消費を引き起こすクエリを探します。&quot;
+* ログを監視して、大規模なノードの走査やヒープメモリの大量使用を引き起こしているクエリがないかどうかを調べます。
 
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
    * クエリを最適化して、走査するノードの数を減らします。
@@ -155,14 +155,14 @@ oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し�
    * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
    * クエリを最適化して、ヒープメモリの使用量を減らします。
 
-AEM 6.0 ～ 6.2バージョンの場合は、AEM開始スクリプトのJVMパラメーターを使用してノードトラバーサルのしきい値を調整し、大きなクエリが環境をオーバーロードしないようにすることができます。 推奨される値は次のとおりです。
+AEM 6.0 ～ 6.2 では、AEM 起動スクリプトで JVM パラメーターを使用してノードの走査のしきい値を調整することで、大規模なクエリによって環境に過度の負荷がかかるのを防ぐことができます。推奨される値は次のとおりです。
 
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
 AEM 6.3 では、デフォルトで上述の 2 つのパラメーターが事前設定されており、OSGi QueryEngineSettings を使用して変更できます。
 
-詳しくは、以下を参照してください。[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
+詳しくは、[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits) を参照してください。
 
 ## クエリパフォーマンスのチューニング {#query-performance-tuning}
 
@@ -172,7 +172,7 @@ AEM におけるクエリパフォーマンス最適化のモットーは次の�
 
 以下に、クエリのパフォーマンスを確保するために推奨される調整の概要を示します。まずクエリ、次にあまり目立たないアクティビティ、その後必要に応じてインデックス定義をチューニングします。
 
-### クエリステートメントの調整  {#adjusting-the-query-statement}
+### クエリステートメントの調整 {#adjusting-the-query-statement}
 
 AEM では、以下のクエリ言語がサポートされています。
 
@@ -201,7 +201,7 @@ AEM では、以下のクエリ言語がサポートされています。
 
    ノードタイプの制限がないクエリにより、AEM では `nt:base` ノードタイプが想定されます。これは、AEM のすべてのノードのサブタイプなので、実質上ノードタイプの制限は存在しません。
 
-   `type=cq:Page`を設定すると、このクエリは`cq:Page`ノードに制限され、クエリはAEM cqPageLuceneに解決され、結果はAEMのノードのサブセット（`cq:Page`ノードのみ）に制限されます。
+   `type=cq:Page` を設定すると、このクエリは `cq:Page` ノードのみに限定され、AEM の cqPageLucene に解決されます。これにより、結果は AEM のノードのサブセット（ `cq:Page`ノードのみ）に限定されます。
 
 1. クエリが既存の Lucene プロパティインデックスに解決されるようにクエリのノードタイプの制限を調整します。
 
@@ -221,10 +221,10 @@ AEM では、以下のクエリ言語がサポートされています。
    property.value=article-page
    ```
 
-   `nt:hierarchyNode` はの親ノードタイプ `cq:Page`で、がカスタムア `jcr:content/contentType=article-page` プリケーションを介し `cq:Page` てのノードにのみ適用されると仮定した場合、このクエリはが `cq:Page` あるノードのみを返 `jcr:content/contentType=article-page`します。ただしこれは、以下の理由から、次善策としての制限となります。
+   `nt:hierarchyNode` は、`cq:Page` の親ノードタイプです。カスタムアプリケーションを通じて `jcr:content/contentType=article-page` が `cq:Page` ノードのみに適用されるとすると、このクエリは、`jcr:content/contentType=article-page` である `cq:Page` ノードのみを返します。ただしこれは、以下の理由から、次善策としての制限となります。
 
-   * 他のノードは`nt:hierarchyNode`から継承(例： `dam:Asset`)を追加すると、一連の結果に不必要に追加されます。
-   * `nt:hierarchyNode`に対してAEMが提供するインデックスは存在しませんが、`cq:Page`に対して指定されたインデックスが存在します。
+   * `nt:hierarchyNode` から継承された他のノード（例：`dam:Asset`）が、結果候補のセットに不必要に追加されます。
+   * AEM で提供される、`nt:hierarchyNode` 用のインデックスは存在しませんが、`cq:Page` 用に提供されているインデックスはあります。
    `type=cq:Page` を設定すると、このクエリは `cq:Page` ノードのみに限定され、AEM の cqPageLucene に解決されます。これにより、結果は AEM のノードのサブセット（cq:Page ノードのみ）に限定されます。
 
 1. または、クエリが既存のプロパティインデックスに解決されるようにプロパティの制限を調整します。
@@ -243,11 +243,11 @@ AEM では、以下のクエリ言語がサポートされています。
    property.value=my-site/components/structure/article-page
    ```
 
-   プロパティの制限を`jcr:content/contentType`（カスタム値）から既知のプロパティ`sling:resourceType`に変更すると、クエリは、`sling:resourceType`によってすべてのコンテンツをインデックス化するプロパティインデックス`slingResourceType`に解決されます。
+   プロパティの制限を `jcr:content/contentType`（カスタム値）から既知のプロパティ `sling:resourceType` に変更すると、クエリはプロパティインデックス `slingResourceType` に解決されます。これは、`sling:resourceType` によってすべてのコンテンツにインデックスを作成します。
 
    （Lucene プロパティインデックスではなく）プロパティインデックスの使用が最も適しているのは、クエリがノードタイプを認識せず、単一のプロパティ制限によって結果セットが決まる場合です。
 
-1. クエリに可能な限り厳密なパス制限を追加します。例えば、`/content/my-site`より`/content/my-site/us/en`を、`/`より`/content/dam`を好みます。
+1. クエリに可能な限り厳密なパス制限を追加します。例：`/content/my-site`より`/content/my-site/us/en`が推奨され、また`/`より`/content/dam`が推奨されます。
 
 * **最適化されていないクエリ**
 
@@ -267,9 +267,9 @@ AEM では、以下のクエリ言語がサポートされています。
    property.value=article-page
    ```
 
-   パス制限を`path=/content`から`path=/content/my-site/us/en`にスコープすると、インデックスを使用して、検査する必要のあるインデックスエントリの数を減らすことができます。 クエリが`/content`や`/content/dam`以外にパスを十分に制限できる場合は、インデックスに`evaluatePathRestrictions=true`が含まれていることを確認します。
+   パス制限の範囲を `path=/content` から `path=/content/my-site/us/en` に指定すると、調査する必要があるインデックスエントリの数を減らすことができます。単に `/content` や `/content/dam` ではなく、クエリでパスを効果的に制限できる場合は、インデックスに `evaluatePathRestrictions=true` があることを確認します。
 
-   `evaluatePathRestrictions`を使用すると、インデックスのサイズが大きくなります。
+   `evaluatePathRestrictions` を使用すると、インデックスのサイズが大きくなります。
 
 1. 可能な場合は、`LIKE` や `fn:XXXX` などのクエリの関数や操作を避けます。これらのコストは、制限に基づいた結果の数に伴って増減するからです。
 
@@ -290,11 +290,11 @@ AEM では、以下のクエリ言語がサポートされています。
    fulltext.relPath=jcr:content/contentType
    ```
 
-   テキストがワイルドカード(「%...」)で始まる場合は、インデックスを使用できないので、LIKE条件の評価は遅くなります。 jcr:contains 条件は、フルテキストのインデックスの使用を可能にするので、推奨されています。これには、解決されたLuceneプロパティインデックスに`jcr:content/contentType`のindexRuleが`analayzed=true`に設定されている必要があります。
+   LIKE 条件の評価には時間がかかります。これは、テキストがワイルドカードで始まる場合（「%...」）はインデックスを使用できないからです。jcr:contains 条件は、フルテキストのインデックスの使用を可能にするので、推奨されています。これには、解決された Lucene プロパティインデックスに、`analayzed=true` に設定された `jcr:content/contentType` のインデックスルールが必要です。
 
-   `fn:lowercase(..)`のようなクエリ関数を使用すると、より複雑で目立つインデックスアナライザの構成以外の、より高速な同等のものが存在しないので、最適化が難しい場合があります。 他の範囲制限を指定し、クエリ全体のパフォーマンスを向上させることをお勧めします。これには、関数の操作対象となる結果候補のセットをできるだけ小さくする必要があります。
+   `fn:lowercase(..)` などのクエリ関数の使用を最適化するのは、（より複雑で目立つインデックス分析設定の外部に）より高速な同等の手段がないので困難です。他の範囲制限を指定し、クエリ全体のパフォーマンスを向上させることをお勧めします。これには、関数の操作対象となる結果候補のセットをできるだけ小さくする必要があります。
 
-1. この調整は、Query Builder 固有であり、JCR-SQL2 または XPath には当てはまりません。******
+1. この調整は、Query Builder 固有であり、JCR-SQL2 または XPath には当てはまりません&#x200B;***。***
 
    完全な結果セットがすぐに必要で&#x200B;**ない**&#x200B;場合は、[Query Builder の guessTotal](/help/sites-developing/querybuilder-api.md#using-p-guesstotal-to-return-the-results) を使用します。
 
@@ -312,14 +312,14 @@ AEM では、以下のクエリ言語がサポートされています。
       path=/content
       p.guessTotal=100
       ```
-   クエリの実行が高速で結果数が多い場合は、p.`guessTotal`は、Query Builderクエリの重要な最適化です。
+   クエリの実行時間が短くても結果の数が多い場合、p.`guessTotal` は、Query Builder のクエリにとって必要不可欠な最適化です。
 
    `p.guessTotal=100` を指定すると、Query Builder は最初の 100 件の結果だけを収集し、さらに 1 つ以上の結果が存在するかどうかを示すブール値フラグを設定します（ただしカウントすると処理に時間がかかるので、残りの数は示されません）。この最適化は、ページネーションまたは無限ロードの使用例よりも優れており、結果のサブセットだけが増分的に表示されます。
 
-## 既存のインデックスのチューニング  {#existing-index-tuning}
+## 既存のインデックスのチューニング {#existing-index-tuning}
 
 1. 最適なクエリがプロパティインデックスに解決される場合、プロパティインデックスで可能なチューニングは最小限なので、できることはありません。
-1. それ以外の場合は、クエリはLuceneプロパティインデックスに解決する必要があります。 解決できるインデックスがない場合は、「新しいインデックスの作成」に進んでください。
+1. できることがある場合、クエリは Lucene プロパティインデックスに解決される必要があります。解決できるインデックスがない場合は、「新しいインデックスの作成」に進んでください。
 1. 必要に応じて、クエリを XPath または JCR-SQL2 に変換します。
 
    * **Query Builder クエリ**
@@ -360,13 +360,13 @@ AEM では、以下のクエリ言語がサポートされています。
                - name = "jcr:content/publishDate"
    ```
 
-1. 生成された定義を既存のLuceneプロパティインデックスに追加的に手動でマージします。 その他のクエリを満たすために使用される可能性があるので、既存の設定を削除しないよう注意してください。
+1. 生成された定義を、追加する形で既存の Lucene プロパティインデックスに手動で結合します。その他のクエリを満たすために使用される可能性があるので、既存の設定を削除しないよう注意してください。
 
-   1. cq:Page を対象とする既存の Lucene プロパティインデックスを探します（インデックスマネージャーを使用）。この場合、`/oak:index/cqPageLucene`です。
+   1. cq:Page を対象とする既存の Lucene プロパティインデックスを探します（インデックスマネージャーを使用）。この場合は、`/oak:index/cqPageLucene`です。
    1. 最適化したインデックス定義（手順 4）と既存のインデックス（/oak:index/cqPageLucene）の設定の差分を特定し、欠けている設定を最適化したインデックスから既存のインデックス定義に追加します。
    1. AEM のインデックス再作成のベストプラクティスにより、このインデックス設定の変更が既存コンテンツに影響するかどうかに基づいて、更新または再インデックス付けのいずれかが必要になります。
 
-## 新しいインデックスの作成{#create-a-new-index}
+## 新しいインデックスの作成 {#create-a-new-index}
 
 1. クエリが既存の Lucene プロパティインデックスに解決されないことを確認します。解決される場合は、前述の既存インデックスのチューニングに関する節を参照してください。
 1. 必要に応じて、クエリを XPath または JCR-SQL2 に変換します。
@@ -410,11 +410,11 @@ AEM では、以下のクエリ言語がサポートされています。
 
    このインデックスを初めてデプロイしたときに、AEM によってインデックスに必要なデータが追加されます。
 
-## インデックスレスクエリとトラバーサルクエリが正常な場合{#when-index-less-and-traversal-queries-are-ok}
+## インデックスがないクエリおよびトラバーサルクエリに問題がない場合 {#when-index-less-and-traversal-queries-are-ok}
 
 AEM のコンテンツアーキテクチャは柔軟です。そのため、コンテンツ構造のトラバーサルが時間の経過と共に受け入れられないほど大きくならないことを予測したり保証したりすることは困難です。
 
-したがって、パス制限とノードタイプ制限の組み合わせによって、**が20個未満のノードがトラバースされることが保証される場合を除き、インデックスがクエリを満たすようにします。**
+こうした理由から、パス制限とノードタイプ制限の組み合わせによって&#x200B;**トラバースされるノードが 20 個未満**&#x200B;であることが保証される場合を除いて、インデックスがクエリを確実に満たすようにします。
 
 ## クエリ開発ツール {#query-development-tools}
 
@@ -422,13 +422,13 @@ AEM のコンテンツアーキテクチャは柔軟です。そのため、コ�
 
 * **Query Builder Debugger**
 
-   * Query Builder クエリを実行するための Web UI。対応する XPath（クエリの説明を実行または Oak Index Definition Generator で使用）を生成します。
-   * AEM([/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html))にあります。
+   * Query Builder クエリを実行するための web UI。対応する XPath（クエリの説明を実行または Oak Index Definition Generator で使用）を生成します。
+   * AEM の [/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html) にあります。
 
 * **CRXDE Lite - クエリツール**
 
    * XPath および JCR-SQL2 クエリを実行するための Web UI。
-   * AEMの[/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) /ツール/クエリにあります。
+   * AEM の [/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)／ツール／クエリにあります。
 
 * **[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#explain-query)**
 
@@ -455,12 +455,12 @@ AEM のコンテンツアーキテクチャは柔軟です。そのため、コ�
 * **Apache Jackrabbit クエリエンジンの OSGi 設定**
 
    * トラバースクエリの失敗動作を設定する OSGi 設定。
-   * AEMの[/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService)にあります。
+   * AEM の [/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService](http://localhost:4502/system/console/configMgr#org.apache.jackrabbit.oak.query.QueryEngineSettingsService) にあります。
 
 * **NodeCounter JMX Mbean**
 
    * AEM のコンテンツツリーのノード数を推定するのに使用する JMX MBean。
-   * AEMの[/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter)にあります。
+   * AEM の [/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DnodeCounter%2Ctype%3DNodeCounter) にあります。
 
 ### コミュニティによるサポート {#community-supported}
 
@@ -470,5 +470,5 @@ AEM のコンテンツアーキテクチャは柔軟です。そのため、コ�
 
 * **[AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=ja-JP)**
 
-   * Google Chrome Web ブラウザーの拡張機能で、実行されたクエリとそのクエリプランなど、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開します。
+   * Google Chrome web ブラウザーの拡張機能で、実行されたクエリとそのクエリプランなど、リクエストごとのログデータをブラウザーの開発ツールコンソールに公開します。
    * [Sling Log Tracer 1.0.2 以上](https://sling.apache.org/downloads.cgi)がインストールされ、AEM で有効になっている必要があります。
