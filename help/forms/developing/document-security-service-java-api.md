@@ -1,7 +1,7 @@
 ---
-title: ドキュメントセキュリティサービスJavaAPIクイックスタート(SOAP)
-seo-title: ドキュメントセキュリティサービスJavaAPIクイックスタート(SOAP)
-description: ドキュメントセキュリティサービスJavaAPIクイックスタート(SOAP)
+title: Document Security Service JavaAPI Quick Start(SOAP)
+seo-title: Document Security Service JavaAPI Quick Start(SOAP)
+description: Document Security Service JavaAPI Quick Start(SOAP)
 uuid: f3823a95-c8c2-42c8-8edc-3ab8ab4311dc
 contentOwner: admin
 content-type: reference
@@ -11,49 +11,49 @@ discoiquuid: b89293c4-ea2e-4fa4-9e5e-ef4f548e9608
 role: Developer
 exl-id: 76d855cf-ebfa-487a-b1c8-755e7e45dd73
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1069'
+ht-degree: 100%
 
 ---
 
-# Document Security Service Java APIクイックスタート(SOAP) {#document-security-service-javaapi-quick-start-soap}
+# Document Security Service Java API Quick Start (SOAP) {#document-security-service-javaapi-quick-start-soap}
 
-Java APIクイックスタート(SOAP)は、Rights Managementサービスで使用できます。
+Java API Quick Start(SOAP) は、次のRights Managementサービスで使用できます。
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したポリシーの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-policy-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーの変更](#quick-start-soap-mode-modifying-a-policy-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したポリシーの変更](#quick-start-soap-mode-modifying-a-policy-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-deleting-a-policy-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-deleting-a-policy-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントへのポリシーの適用](#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへのポリシーの適用](#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したPDFドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したドキュメントの失効](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したドキュメントの取り消し](document-security-service-java-api.md#quick-start-soap-mode-revoking-a-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した、取り消されたドキュメントへのアクセス権の回復](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して失効したドキュメントへのアクセス権の回復](document-security-service-java-api.md#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したポリシーで保護されたPDFドキュメントの検査](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した PDF 保護ポリシードキュメントの検査](document-security-service-java-api.md#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した透かしの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した透かしの作成](document-security-service-java-api.md#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用した透かしの変更](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した透かしの変更](document-security-service-java-api.md#quick-start-soap-mode-modifying-a-watermark-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したイベントの検索](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したイベントの検索](document-security-service-java-api.md#quick-start-soap-mode-searching-for-events-using-the-java-api)
 
-[クイックスタート（SOAPモード）:Java APIを使用したWordドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した Word ドキュメントからのポリシーの削除](document-security-service-java-api.md#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api)
 
-AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用して実行できます。接続モードはSOAPに設定する必要があります。
+AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「 AEM Formsによるプログラミング」にあるクイックスタートは、Formsサーバーのオペレーティングシステムに基づいています。 ただし、UNIXなどの別のオペレーティングシステムを使用している場合は、Windows固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別のJ2EEアプリケーションサーバーを使用する場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティ](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)の設定を参照してください。
+>AEM Forms によるプログラミングにあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-creating-a-policy-using-the-java-api}を使用したポリシーの作成
+## クイックスタート（SOAP モード）：Java API を使用したポリシーの作成 {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
-次のJavaコードの例では、*Allow Copy*&#x200B;という名前の新しいポリシーを作成します。 ポリシーが追加されるポリシーセットの名前は、*グローバルポリシーセット*&#x200B;です。 このポリシーセットはデフォルトで存在します。 （[ポリシーの作成](/help/forms/developing/protecting-documents-policies.md#creating-policies)を参照）。
+次の Java コードの例では、*コピーを許可*&#x200B;という名前の新しいポリシーを作成します。 ポリシーを追加するポリシーセットの名前は&#x200B;*グローバルポリシーセット*&#x200B;です。このポリシーセットはデフォルトで存在します。 （[ポリシーの作成](/help/forms/developing/protecting-documents-policies.md#creating-policies)を参照してください）。
 
 ```java
  /*
@@ -180,9 +180,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}を使用したポリシーの変更
+## クイックスタート（SOAP モード）：Java API を使用したポリシーの変更 {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
 
-次のJavaコードの例では、オフラインリース期間を40日に設定して、*Allow Copy*&#x200B;という名前のポリシーを変更しています。 （[ポリシーの変更](/help/forms/developing/protecting-documents-policies.md#modifying-policies)を参照）。
+次の Java コードの例では、オフラインリース期間を 40 日に設定して、*コピーを許可*&#x200B;という名前のポリシーを変更します。（[ポリシーの変更](/help/forms/developing/protecting-documents-policies.md#modifying-policies)を参照してください）。
 
 ```java
  /*
@@ -281,9 +281,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java APIを使用したポリシーの削除{#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用したポリシーの削除 {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
 
-次のJavaコードの例では、*Allow Copy*&#x200B;という名前のポリシーを削除します。 （[ポリシーの削除](/help/forms/developing/protecting-documents-policies.md#deleting-policies)を参照）。
+次の Java コードの例では、*コピーを許可*&#x200B;という名前のポリシーを削除します。 （[ポリシーの削除](/help/forms/developing/protecting-documents-policies.md#deleting-policies)を参照してください）。
 
 ```java
  /*
@@ -373,9 +373,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}を使用したPDFドキュメントへのポリシーの適用
+## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへのポリシーの適用 {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
 
-次のJavaコードの例では、*Allow Copy*&#x200B;という名前のポリシーを&#x200B;*Loan.pdf*&#x200B;という名前のPDFドキュメントに適用します。 ポリシーが追加されるポリシーセットの名前は、*グローバルポリシーセット*&#x200B;です。 ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.pdfという名前のPDFファイルとして保存されます。 *（[PDFドキュメントへのポリシーの適用](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents)を参照）。
+次の Java コードの例では、*コピーを許可*&#x200B;という名前のポリシーを *Loan.pdf* という名前の PDF ドキュメントに適用しています。ポリシーを追加するポリシーセットの名前は&#x200B;*グローバルポリシーセット*&#x200B;です。ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.pdf という名前の PDF ファイルとして保存されます。 *（[ポリシーを PDF ドキュメントに適用](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -479,9 +479,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}を使用したPDFドキュメントからのポリシーの削除
+## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントからのポリシーの削除 {#quick-start-soap-mode-removing-a-policy-from-a-pdf-document-using-the-java-api}
 
-次のコードの例では、*PolicyProtectedLoanDoc.pdf*&#x200B;という名前のPDFドキュメントからポリシーを削除します。 保護されていないPDFドキュメントは、*unProtectedLoan.pdf*&#x200B;として保存されます。 （[PDFドキュメントからのポリシーの削除](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents)を参照）。
+次のコードの例では、*PolicyProtectedLoanDoc.pdf* という名前の PDF ドキュメントからポリシーを削除します。 保護されていない PDF ドキュメントは *unProtectedLoan.pdf* として保存されます。（[PDF ドキュメントからポリシーの削除](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -586,9 +586,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-revoking-a-document-using-the-java-api}を使用したドキュメントの取り消し
+## クイックスタート（SOAP モード）：Java API を使用したドキュメントの取り消し {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
 
-次のJavaコードの例では、*PolicyProtectedLoanDoc.pdf*&#x200B;という名前のポリシーで保護されたドキュメントが取り消されます。 改訂版のPDFドキュメントは、次のURLの場所`https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`にあります。 （「[ドキュメントへのアクセスの取り消し](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents)」を参照）。
+次の Java コードの例では、*PolicyProtectedLoanDoc.pdf* という名前のポリシーで保護されたドキュメントを失効させます。改訂された PDF ドキュメントは、次の URL の場所 `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf` にあります。 （[ドキュメントへのアクセスの取り消し](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents)を参照してください）。
 
 ```java
  /*
@@ -700,9 +700,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}を使用したポリシーで保護されたPDFドキュメントの検査
+## クイックスタート（SOAP モード）：Java API を使用した PDF 保護ポリシードキュメントの検査 {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-次のJavaコードの例は、*PolicyProtectedLoanDoc.pd* fという名前のポリシーで保護されたPDFドキュメントを調べます。（[ポリシーで保護されたPDFドキュメントの検査](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)を参照）。
+次の Java コードの例では、*PolicyProtectedLoanDoc.pdf*&#x200B;という名前のポリシーで保護された PDF ドキュメントを調べます。（[ポリシーで保護された PDF ドキュメントを調べる](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents)を参照してください。
 
 ```java
  /*
@@ -818,9 +818,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}を使用した、取り消されたドキュメントへのアクセス権の回復
+## クイックスタート（SOAP モード）：Java API を使用して失効したドキュメントへのアクセス権の回復 {#quick-start-soap-mode-reinstating-access-to-a-revoked-document-using-the-java-api}
 
-次のJavaコードの例は、*PolicyProtectedLoanDoc.pdf*&#x200B;という名前の失効したPDFドキュメントへのアクセス権を回復します。 （[取り消されたドキュメントへのアクセス権の回復](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents)を参照）。
+次の Java コードの例では、*PolicyProtectedLoanDoc.pdf* という名前の失効した PDF ドキュメントへのアクセスを復元します。 （[失効されたドキュメントへのアクセスの回復](/help/forms/developing/protecting-documents-policies.md#reinstating-access-to-revoked-documents)を参照してください。
 
 ```java
  /*
@@ -924,9 +924,9 @@ AEM Formsの操作は、AEM Formsの厳密に型指定されたAPIを使用し�
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}を使用したPDF透かしの作成
+## クイックスタート（SOAP モード）：Java API を使用した PDF 透かしの作成 {#quick-start-soap-mode-creating-a-pdf-watermark-using-the-java-api}
 
-次のJavaコードの例では、「Sample PDF Watermark」という名前の新しいPDF透かしを作成します。 この透かしには、1つの要素が含まれます（[透かしの作成](/help/forms/developing/protecting-documents-policies.md#creating-watermarks)を参照）。
+次の Java コードの例では、「Sample PDF Watermark」という名前の新しい PDF 透かしを作成します。 この透かしには、1 つの要素が含まれます（[透かしの作成](/help/forms/developing/protecting-documents-policies.md#creating-watermarks)を参照してください）。
 
 ```java
 /*
@@ -1057,9 +1057,9 @@ public class PDFWatermarksSOAPMode {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}を使用したテキスト透かしの作成
+## クイックスタート（SOAP モード）：Java API を使用したテキストの透かしの作成 {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
 
-次のJavaコードの例では、*Sample Text Watermark*&#x200B;という名前の新しいテキスト透かしを作成します。 この透かしには、1つの要素が含まれます。
+次の Java コードの例では、*テキストの透かしサンプル*&#x200B;という名前の新しいテキストの透かしを作成します。この透かしは、1 つの要素を含んでいます。
 
 ```java
 /*
@@ -1206,9 +1206,9 @@ public class TextWatermarks {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}を使用したテキスト透かしの変更
+## クイックスタート（SOAP モード）：Java API を使用したテキスト透かしの変更 {#quick-start-soap-mode-modifying-a-text-watermark-using-the-java-api}
 
-次のJavaコードの例では、「Sample Text Watermark」という名前の透かしを変更し、最初の要素の不透明度を100に設定しています。
+次の Java コードの例では、「Sample Text Watermark」という名前の透かしを変更し、最初の要素の不透明度を 100 に設定します。
 
 ```java
 /*
@@ -1318,9 +1318,9 @@ public class ModifyWatermarks {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}を使用した透かしの変更
+## クイックスタート（SOAP モード）：Java API を使用した透かしの変更 {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
 
-次のJavaコードの例では、`opacity`属性の値を80に変更して、*Confidential*&#x200B;という名前の透かしを変更しています。
+次の Java コード例は、`opacity`属性の値を 80 に変更することで、*機密*&#x200B;という名前の透かしを変更しています。
 
 ```java
  /*
@@ -1416,9 +1416,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-searching-for-events-using-the-java-api}を使用したイベントの検索
+## クイックスタート（SOAP モード）：Java API を使用したイベントの検索 {#quick-start-soap-mode-searching-for-events-using-the-java-api}
 
-次のJavaコードの例では、ポリシー作成イベントを検索しています。
+次の Java コードの例では、作成ポリシーイベントを検索しています。
 
 ```java
  /*
@@ -1529,9 +1529,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート(SOAP):Java API {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}を使用したWordドキュメントへのポリシーの適用
+## クイックスタート（SOAP）：Java API を使用した Word ドキュメントへのポリシーの適用 {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
 
-次のJavaコードの例では、*Allow Copy*&#x200B;という名前のポリシーを&#x200B;*Loan.doc*&#x200B;という名前のWordドキュメントに適用します。 ポリシーが追加されるポリシーセットの名前は、*グローバルポリシーセット*&#x200B;です。 ポリシーで保護されたドキュメントは、 *PolicyProtectedLoanDoc.docという名前のDOCファイルとして保存されます。 *（[PDFドキュメントへのポリシーの適用](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents)を参照）。
+次の Java コード例では、*コピーを許可*&#x200B;というポリシーを *Loan.doc* という名前の Word ドキュメントに適用します。ポリシーを追加するポリシーセットの名前は、*グローバルポリシーセット*&#x200B;です。ポリシーで保護されたドキュメントは、*PolicyProtectedLoanDoc.doc という名前の DOC ファイルとして保存されます。*（[PDF ドキュメントへのポリシーの適用](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -1644,9 +1644,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}を使用してWordドキュメントからポリシーを削除する
+## クイックスタート（SOAP モード）：Java API を使用した Word ドキュメントからのポリシーの削除 {#quick-start-soap-mode-removing-a-policy-from-a-word-document-using-the-java-api}
 
-次のコードの例では、*PolicyProtectedLoanDoc.doc*&#x200B;という名前のWordドキュメントからポリシーを削除します。 保護されていないWordドキュメントは、*unProtectedLoan.doc*&#x200B;として保存されます。 （[Wordドキュメントからポリシーを削除する](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents)を参照）。
+次のコードの使用例は、*PolicyProtectedLoanDoc.doc* という名前の Word ドキュメントからポリシーを削除します。保護されていない Word ドキュメントは、*unProtectedLoan.doc* として保存されます。（[Word ドキュメントからポリシーを削除する](/help/forms/developing/protecting-documents-policies.md#removing-policies-from-word-documents)を参照してください）。
 
 ```java
  /*
@@ -1752,9 +1752,9 @@ public class ModifyWatermarks {
  
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}を使用した抽象ポリシーの作成
+## クイックスタート（SOAP モード）：Java API を使用した抽象ポリシーの作成 {#quick-start-soap-mode-creating-an-abstract-policy-using-the-java-api}
 
-次のJavaコードの例では、AllowCopyという名前の新しい抽象ポリシーを作成します。 ポリシーを追加するポリシーセットには、「グローバルポリシーセット」という名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
+次の Java コードの例では、AllowCopy という名前の新しい抽象ポリシーを作成します。ポリシーを追加するポリシーセットには、グローバルポリシーセットという名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照してください）。
 
 ```java
 /*
@@ -1869,9 +1869,9 @@ public class CreateAbstractPolicySoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}を使用した抽象ポリシーの変更
+## クイックスタート（SOAP モード）：Java API を使用した抽象ポリシーの変更 {#quick-start-soap-mode-modifying-an-abstract-policy-using-the-java-api}
 
-次のJavaコードの例では、AllowCopyという名前の抽象ポリシーを変更しています。 ポリシーが変更されるポリシーセットは、「グローバルポリシーセット」という名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
+次の Java コードの例では、AllowCopy という名前の抽象ポリシーを変更しています。 ポリシーが変更されるポリシーセットは、グローバルポリシーセットという名前になります。このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照してください）。
 
 ```java
 /*
@@ -1968,9 +1968,9 @@ public class ModifyingAbstractPolicySoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}を使用した抽象ポリシーの削除
+## クイックスタート（SOAP モード）：Java API を使用した抽象ポリシーの削除 {#quick-start-soap-mode-deleting-an-abstract-policy-using-the-java-api}
 
-次のJavaコードの例では、AllowCopyという名前の抽象ポリシーを削除します。 ポリシーの削除元のポリシーセットは、「グローバルポリシーセット」という名前が付けられます。 このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照）。
+次の Java コードの例では、AllowCopy という名前の抽象ポリシーを削除します。ポリシーを削除したポリシーセットは、グローバルポリシーセットという名前になります。このポリシーセットはデフォルトで存在します。 （ポリシーの作成を参照してください）。
 
 ```java
 /*
@@ -2055,9 +2055,9 @@ public class DeleteAbstractPolicySoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}を使用した既存ユーザーの文ワークフロー内のPDFのProtect
+## クイックスタート（SOAP モード）：Java API を使用した、既存ユーザーのためのステートメントワークフローにおける PDF の保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-an-existing-user-using-the-java-api}
 
-次のJavaコードの例は、既存のユーザーに対して、文書ワークフロー内のドキュメントを保護する方法を示しています。
+次の Java コードの例は、既存のユーザーに対して、ステートメントワークフロー内のドキュメントを保護するメソッドを示しています。
 
 ```java
 /*
@@ -2163,12 +2163,12 @@ public class protectStatementWorkFlowExistingUserSoap {
 }
 ```
 
-## クイックスタート（SOAPモード）:Java API {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}を使用した、新しいユーザー向けの文ワークフローでのPDFの作成
+## クイックスタート（SOAP モード）：Java API を使用した、新規ユーザーのためのステートメントワークフローにおける PDF の保護 {#quick-start-soap-mode-protect-a-pdf-in-statement-workflow-for-a-new-user-using-the-java-api}
 
-次のJavaコードの例は、文ワークフローで文書を保護する方法を示しています。 これは、次の2つの手順で構成されるプロセスです。
+次の Java コード例は、ステートメントワークフローでドキュメントを保護する方法を示しています。これは 2 段階のプロセスです。
 
 * 新しいユーザー、ライセンス、ポリシーが作成されます。
-* ユーザーはライセンスとポリシーに関連付けられ、ドキュメントは保護されています。
+* ユーザーはライセンスとポリシーに関連付けられ、ドキュメントは保護されます。
 
 ```java
 /*
