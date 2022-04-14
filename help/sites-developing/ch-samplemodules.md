@@ -1,17 +1,17 @@
 ---
 title: ContextHub UI モジュールタイプのサンプル
-seo-title: ContextHub UI モジュールタイプのサンプル
+seo-title: Sample ContextHub UI Module Types
 description: ContextHub には、ソリューションで利用できる UI モジュールのサンプルが用意されています
-seo-description: ContextHub には、ソリューションで利用できる UI モジュールのサンプルが用意されています
+seo-description: ContextHub provides several sample UI modules that you can use in your solutions
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '1176'
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ContextHub には、ソリューションで利用できる UI モジュール�
 
 UI モジュールの ContextHub への追加については、[UI モジュールの追加](ch-configuring.md#adding-a-ui-module)を参照してください。UI モジュールの作成については、[ContextHub UI モジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)を参照してください。
 
-## contexthub.base UI モジュールタイプ  {#contexthub-base-ui-module-type}
+## contexthub.base UI モジュールタイプ {#contexthub-base-ui-module-type}
 
 contexthub.base UI モジュールタイプは、その他すべての UI モジュールタイプのベースタイプです。したがって、ストアデータをレンダリングするための汎用的な機能を提供します。
 
@@ -37,14 +37,14 @@ contexthub.base UI モジュールタイプは、その他すべての UI モジ
 * **ポップオーバーのコンテンツ：** UI モジュールをクリックまたはタップするとポップオーバーに表示されるコンテンツを指定します。
 * **全画面モード：**&#x200B;全画面モードを許可するかどうかを制御します。
 
-ソースコードは/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.jsにあります。
+ソースコードは、/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。
 
 ### 設定 {#configuration}
 
 contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェクトを使用して設定します。UI モジュールの機能を設定するには、次のいずれかのプロパティを含めます。
 
 * **image：**&#x200B;アイコンとして表示する画像への URL。
-* **icon：**[Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)クラスの名前。icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
+* **icon：** [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)クラスの名前。icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
 
 * **title：** UI モジュールのタイトル。タイトルは、ポインターを UI モジュールアイコンに合わせると表示されます。
 * **fullscreen：** UI モジュールが全画面モードをサポートするかどうかを示すブール値。全画面をサポートする場合は `true`、全画面モードを許可しない場合は `false` を使用します。
@@ -90,7 +90,7 @@ contexthub.browserinfo UI モジュールは、クライアント Web ブラウ�
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
-このUIモジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfoにあります。 contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
+この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
 
 ### 設定 {#configuration-1}
 
@@ -105,7 +105,7 @@ contexthub.browserinfo UI モジュールのインスタンスには、詳細設
 }
 ```
 
-## contexthub.datetime UI モジュールタイプ  {#contexthub-datetime-ui-module-type}
+## contexthub.datetime UI モジュールタイプ {#contexthub-datetime-ui-module-type}
 
 contexthub.datetime UI モジュールは、[contexthub.datetime](/help/sites-developing/ch-samplestores.md#contexthub-datetime-sample-store-candidate) ストア候補をベースとする、datetime という名前のストアに格納されている日時を表示します。
 
@@ -113,7 +113,7 @@ contexthub.datetime UI モジュールは、[contexthub.datetime](/help/sites-de
 
 このモジュールは、ストア内の日時を変更できるポップオーバーフォームを提供します。
 
-contexthub.datetime UIモジュールのソースは、/libs/granite/contexthub/components/modules/datetimeにあります。
+contexthub.datetime UI モジュールのソースは、/libs/granite/contexthub/components/modules/datetime にあります。
 
 ### 設定 {#configuration-2}
 
@@ -136,7 +136,7 @@ contexthub.location UI モジュールは、クライアントの緯度と経度
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
-このUIモジュールのソースは、/etc/cloudsettings/default/contexthub/geolocationにあります。
+この UI モジュールのソースは、/etc/cloudsettings/default/contexthub/geolocation にあります。
 
 ### 設定 {#configuration-4}
 
@@ -173,13 +173,13 @@ contexthub.location UI モジュールのインスタンスには、詳細設定
 }
 ```
 
-## contexthub.screen-orientation UI モジュールタイプ  {#contexthub-screen-orientation-ui-module-type}
+## contexthub.screen-orientation UI モジュールタイプ {#contexthub-screen-orientation-ui-module-type}
 
 contexthub.screen-orientation UI モジュールは、クライアントの現在の画面の向きを表示します。デフォルトでは無効になっていますが、このモジュールは向きを選択できるポップオーバーを提供します。このモジュールは、[granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) ストア候補をベースとする、emulators という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
-このUIモジュールのソースは、/libs/granite/contexthub/components/modules/screen-orientationにあります。
+この UI モジュールのソースは、/libs/granite/contexthub/components/modules/screen-orientation にあります。
 
 ### 設定 {#configuration-5}
 
@@ -203,7 +203,7 @@ contexthub.tagcloud UI モジュールは、タグに関する情報を表示し
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
-このUIモジュールのソースは、/libs/granite/contexthub/components/modules/tagcloudにあります。
+この UI モジュールのソースは、/libs/granite/contexthub/components/modules/tagcloud にあります。
 
 ### 設定 {#configuration-6}
 
@@ -221,13 +221,13 @@ contexthub.tagcloud UI モジュールのインスタンスには、詳細設定
 }
 ```
 
-## granite.profile UI モジュールタイプ  {#granite-profile-ui-module-type}
+## granite.profile UI モジュールタイプ {#granite-profile-ui-module-type}
 
 granite.profile ContextHub UI モジュールは、現在のユーザーの表示名を表示します。ポップアップにはユーザーのログイン名が表示され、表示名の値を変更できます。この UI モジュールは、[granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア候補をベースとする、profile という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
-このUIモジュールのソースは、/libs/granite/contexthub/components/modules/profileにあります。
+この UI モジュールのソースは、/libs/granite/contexthub/components/modules/profile にあります。
 
 ### 設定 {#configuration-7}
 
