@@ -1,8 +1,8 @@
 ---
 title: ローカル秘密鍵証明書の管理
-seo-title: ローカル秘密鍵証明書の管理
+seo-title: Managing local credentials
 description: ローカル秘密鍵証明書を管理する方法について説明します。
-seo-description: ローカル秘密鍵証明書を管理する方法について説明します。
+seo-description: Learn how to manage local credentials.
 uuid: 3c4358e0-aaff-4e94-a6b2-04b463fca260
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 598a9a03-3773-4620-8867-1f754d8ca031
 exl-id: c5905272-7d09-47e4-8b35-4cc25a148477
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '501'
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEM Forms は、標準の PKCS12 形式（.pfx ファイルおよび .p12 ファ
 
 Acrobat Reader DC Extensions に関連する情報および手順については、[証明書を Acrobat Reader DC Extensions で使用するための設定](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)を参照してください。
 
-## 秘密鍵証明書の読み込み  {#import-a-credential}
+## 秘密鍵証明書の読み込み {#import-a-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 「読み込み」をクリックし、「Trust Store の種類」で次のいずれかのオプションを選択します。
@@ -36,7 +36,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
    * **Acrobat Reader DC Extensions 証明書：** Acrobat Reader DC Extensions に固有の電子証明書です。これにより、生成された PDF ドキュメントで Adobe Reader の使用権限をアクティブにすることができます。
    * **デフォルト：** Acrobat Reader DC Extensions で使用するデフォルトの証明書であることを示します。
 
-   証明書の取得について詳しくは、「[AEM Forms のインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)」を参照してください。
+   証明書の取得について詳しくは、「[AEM Forms のインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)」を参照してください。
 
 1. 「エイリアス」ボックスに、秘密鍵証明書の ID を入力します。この ID は、Acrobat Reader DC Extensions および Signature サービスで証明書の表示名として使用されます。このエイリアスは、AEM Forms SDK を使用してプログラムから秘密鍵証明書にアクセスするときにも使用されます。
 
@@ -48,7 +48,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 
    「形式が正しくないか、パスワードが正しくないため、秘密鍵証明書を読み込めませんでした」というエラーメッセージが表示される場合は、パスワードが有効であることを確認してください。
 
-## 秘密鍵証明書の書き出し  {#export-a-credential}
+## 秘密鍵証明書の書き出し {#export-a-credential}
 
 秘密鍵証明書は、PKCS#12 形式で P12 ファイルとして書き出されます。
 
@@ -57,7 +57,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 1. 「パスワード」ボックスにパスワードを入力します。このパスワードは新規で、書き出した秘密鍵証明書の暗号化に使用します。
 1. 「書き出し」をクリックし、指示に従って秘密鍵証明書を書き出して、「OK」をクリックします。
 
-## 秘密鍵証明書のエイリアスまたは Trust Store の種類の編集  {#edit-a-credential-s-alias-or-trust-store-type}
+## 秘密鍵証明書のエイリアスまたは Trust Store の種類の編集 {#edit-a-credential-s-alias-or-trust-store-type}
 
 秘密鍵証明書が読み込まれたら、エイリアス名および Trust Store の種類を編集できます。
 
@@ -66,7 +66,7 @@ Acrobat Reader DC Extensions に関連する情報および手順については
 1. 「秘密鍵証明書を更新」をクリックします。
 1. 必要に応じて、エイリアス名と Trust Store の種類を編集し、「OK」をクリックします。
 
-## 秘密鍵証明書の削除  {#delete-a-credential}
+## 秘密鍵証明書の削除 {#delete-a-credential}
 
 1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
 1. 削除する秘密鍵証明書のチェックボックスを選択します。
