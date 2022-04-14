@@ -1,8 +1,8 @@
 ---
 title: AEM Forms の分析レポートの確認方法と詳細
-seo-title: AEM Forms の分析レポートの確認方法と詳細
+seo-title: View and understand AEM Forms analytics reports
 description: AEM Forms は、Adobe Analytics と統合されているため、発行済みのアダプティブフォームの概要と詳細分析を利用できます。
-seo-description: AEM Forms は、Adobe Analytics と統合されているため、発行済みのアダプティブフォームの概要と詳細分析を利用できます。
+seo-description: AEM Forms integrates with Adobe Analytics and provides you summary and detailed analytics about your published adaptive forms.
 uuid: b15ba5f3-aea7-40f5-893e-aaf3834cbc33
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,25 +11,25 @@ discoiquuid: 3690fa80-6332-4df8-afea-77b5490fe0d1
 docset: aem65
 exl-id: c5a4e6f6-f331-41e9-a0a9-51a30df6e2cd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 82%
+workflow-type: ht
+source-wordcount: '1050'
+ht-degree: 100%
 
 ---
 
-# AEM Forms の分析レポートの確認方法と詳細  {#view-and-understand-aem-forms-analytics-reports}
+# AEM Forms の分析レポートの確認方法と詳細 {#view-and-understand-aem-forms-analytics-reports}
 
 Adobe Experience Manager Forms は、Adobe Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
 
-## 分析の設定  {#setting-up-analytics}
+## 分析の設定 {#setting-up-analytics}
 
 AEM Forms のアドオンパッケージの一部として、AEM Forms の分析の機能を使用できます。アドオンパッケージのインストールについて詳しくは、「[AEM Forms のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。
 
-アドオンパッケージの他に Adobe Analytics のアカウントが必要になります。解決方法について詳しくは、「[Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html)」を参照してください。
+アドオンパッケージの他に Adobe Analytics のアカウントが必要になります。解決方法について詳しくは、「[Adobe Analytics](https://www.adobe.com/jp/solutions/digital-analytics.html)」を参照してください。
 
 AEM Forms のアドオンパッケージと Adobe Analytics のアカウントを入手したら、「[分析とレポートの設定](../../forms/using/configure-analytics-forms-documents.md)」の記事を参考に、Adobe Analytics のアカウントを AEM Forms に統合し、ご使用のフォームやドキュメントの追跡を有効にします。
 
-### ユーザーインタラクション情報の記録方法  {#how-user-interaction-information-is-recorded}
+### ユーザーインタラクション情報の記録方法 {#how-user-interaction-information-is-recorded}
 
 ユーザーがフォームと対話するとき、インタラクションが記録されて Analytics サーバーに送信されます。次のリストは、各種のユーザーアクティビティのためのサーバー呼び出しを示します。
 
@@ -51,20 +51,20 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 分析レポートを表示するには、次の手順を実行します。
 
-1. `https://[hostname]:'port'`でAEMポータルにログインします。
+1. `https://[hostname]:'port'` から AEM ポータルにログインします。
 1. **フォーム／フォームとドキュメント**&#x200B;をクリックします。
 1. 分析レポートを表示するためのフォームを選択します。
 1. **詳細／分析レポート**&#x200B;を選択します。
 
 ![analyticsreport](assets/analyticsreport.png)
 
-**A.Analyticsレポ** ートコマンド
+**A.** 分析レポートコマンド
 
 以下のように、フォームおよびフォームに含まれる各パネルの分析レポートが AEM Forms によって表示されます。
 
 ![アダプティブフォームの概要レポート](assets/analyticsdashboard_callout.png)
 
-**A.** コンバージョ **ンB.** フォームレベルの概要 **C.** パネルレベルの概要 **D.** 訪問者のブラウザー — 訪問者のOSをフィルター **E.**  — 訪問者の言語をフィルター **F.**  — フィルター
+**A.** コンバージョン **B.** フォームレベルの概要 **C.** パネルレベルの概要 **D.** 訪問者のブラウザー - フィルター **E.** 訪問者の OS - フィルター **F.** 訪問者の言語 - フィルター
 
 デフォルトで、直近 7 日間の分析レポートが表示されます。ここでは、直近の 15 日間や 1 か月間のレポートなどを表示したり、レポートの日付範囲を指定したりすることができます。
 
@@ -88,12 +88,12 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 フォームレベルの概要セクションでは、次の KPI（キーパフォーマンスインジケーター）項目別に、ご使用のフォームの評価情報を確認できます。
 
-* **平均記入時間**：フォームの記入にかかった平均時間。 ユーザーがフォームに時間を費やしても送信しない場合、その時間はこの計算に含まれません。
+* **平均記入時間**：フォームの記入にかかった平均時間。 ユーザーがフォームに滞在しても送信しなかった場合、滞在時間はこの計算に含まれません。
 * **レンディション**：フォームがレンダリングされた、または開かれた回数
 * **ドラフト**：フォームがドラフトとして保存された回数
 * **送信**：フォームが送信された回数
 * **中止**：フォームの記入が開始されたが完了されずに中止された回数
-* **個別訪問者数**:個別訪問者がフォームをレンダリングした回数。個別訪問者について詳しくは、「[個別訪問者、表示ページ、顧客の行動](https://helpx.adobe.com/jp/analytics/kb/unique-visitors-visitor-behavior.html)」を参照してください。
+* **ユニーク訪問者**：ユニーク訪問者によってフォーム i ``s がレンダリングされた回数。ユニーク訪問者について詳しくは、「[ユニーク訪問者、表示ページ、顧客の行動](https://helpx.adobe.com/jp/analytics/kb/unique-visitors-visitor-behavior.html)」を参照してください。
 
 ![フォームレベルの概要分析レポートの拡張](assets/analytics-report.png)
 
@@ -102,8 +102,8 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 パネルレベルの概要セクションでは、フォーム内の各パネルに関して次の情報が提供されます。
 
 * **平均記入時間**：フォームが送信されたかどうかを問わず、ユーザーがパネルに滞在した平均時間
-* **エラーの発生回数**：ユーザーがパネルのフィールド上で直面したエラーの平均回数「発生したエラー」は、フィールド内のエラーの総数をフォームのレンディション数で割って算出します。
-* **ヘルプのアクセス回数**：パネル内のフィールドでユーザーが文脈依存ヘルプにアクセスした平均回数。ヘルプのアクセス回数は、フィールドのヘルプにアクセスした合計回数を、フォームのレンディション数で割って算出します。
+* **エラーの発生回数**：ユーザーがパネルのフィールド上で直面したエラーの平均回数エラーの発生回数は、フィールド上で発生したエラーの合計数を、フォームのレンディション回数で除算して計算します。
+* **ヘルプのアクセス回数**：パネル内のフィールドでユーザーが文脈依存ヘルプにアクセスした平均回数。ヘルプのアクセス回数は、フィールドのヘルプにアクセスした合計回数を、フォームのレンディション回数で除算して計算します。
 
 #### パネルの詳細レポート {#detailed-panel-report}
 
@@ -115,8 +115,8 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 パネルレポートには 3 つのタブがあります。
 
-* **時間レポート**（デフォルト）:パネル内の各フィールドの記入に費やした時間を秒数で表示します
-* **エラーレポート**:フィールドの入力中にユーザーが発生したエラーの数を表示します
+* **時間レポート**（デフォルト）：パネル内の各フィールドの記入にかかった時間を秒単位で表示します
+* **エラーレポート**：フィールドの記入中にユーザーが直面したエラーの回数を表示します
 * **ヘルプレポート**：特定のフィールドのヘルプがアクセスされた回数
 
 複数のパネルを使用できる場合は、パネル間を移動できます。
@@ -131,7 +131,7 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 フィルターを適用した後にパネルレポートを表示すると、パネルレポートのデータも適用したフィルターに従って表示されます。
 
-  フィルターを適用した場合の動作は次のとおりです。
+フィルターを適用した場合の動作は次のとおりです。
 
 * 配布テーブルは読み取り専用になります。一度に適用できるフィルターは 1 つのみであるためです。
 * 適用したフィルターのテーブルは非表示になります。
@@ -141,6 +141,6 @@ AEM Forms のアドオンパッケージと Adobe Analytics のアカウント�
 
 ### A/B テスト {#a-b-testing}
 
-A/B テストを有効にしてフォームに設定した場合、レポートページのドロップダウンを使用して A/B テストレポートを表示できます。A/Bテストレポートには、設定したとおりに、2つのバージョンのフォームの比較パフォーマンスが表示されます。
+A/B テストを有効にしてフォームに設定した場合、レポートページのドロップダウンを使用して A/B テストレポートを表示できます。 A/B テストレポートは、設定したとおりにフォームの 2 つのバージョンの比較パフォーマンス情報を表示します。
 
-A/Bテストの詳細については、「[アダプティブフォームのA/Bテストの作成と管理](../../forms/using/ab-testing-adaptive-forms.md)」を参照してください。
+A/B テストについて詳しくは、[アダプティブフォームの A/B テストの作成と管理](../../forms/using/ab-testing-adaptive-forms.md)を参照してください。
