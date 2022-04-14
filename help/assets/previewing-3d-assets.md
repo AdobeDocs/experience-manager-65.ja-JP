@@ -1,15 +1,15 @@
 ---
 title: 3D アセットのプレビュー
-description: 3D アセットをプレビューする方法について、Experience Managerで説明します。
+description: Experience Manager で 3D アセットをプレビューする方法を学習します。
 contentOwner: Rick Brough
 docset: aem65
 feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '556'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -53,8 +53,8 @@ Experience Manager のアセットの詳細ページから、インタラクテ�
 
 **Experience Manager で 3D アセットをプレビューするには：**
 
-1. 3D アセットが Experience Manager にアップロードされていることを確認します。詳しくは、 [3D プレビューでサポートされる形式](#supported-3d-previewing-assets) および [アセットをアップロード](/help/assets/manage-assets.md#uploading-assets).
-1. Experience Managerから、 **[!UICONTROL ナビゲーション]** ページ、選択 **[!UICONTROL Assets]** > **[!UICONTROL ファイル]**.
+1. 3D アセットが Experience Manager にアップロードされていることを確認します。詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
+1. Experience Manager の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**&#x200B;を選択します。
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
 
