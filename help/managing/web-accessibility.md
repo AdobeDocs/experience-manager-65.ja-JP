@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Manager (AEM)とWebアクセシビリティのガイドライン
-description: Adobe Experience Manager(AEM)とWebアクセシビリティのガイドラインの概要
+title: Adobe Experience Manager（AEM）と web アクセシビリティのガイドライン
+description: Adobe Experience Manager（AEM）と web アクセシビリティのガイドラインの概要
 exl-id: db8785b9-09eb-444a-addc-74c520e710a9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '415'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
 # AEM と Web アクセシビリティのガイドライン{#aem-and-the-web-accessibility-guidelines}
 
-様々な社会的、経済的、法的動機により、Web コンテンツを設計する際には、身体的障碍や制限の有無に関係なく、対象とするオーディエンスができるだけアクセスしやすくことが求められます。したがって、Adobe Experience Manager(AEM)によるWebアクセシビリティは、優れたWebデザインの重要な側面となっています。
+ウェブコンテンツを、障害や制限の有無にかかわらず、対象オーディエンスにとって可能な限りアクセシブルであるよう設計することには、多くの社会的、経済的、法的動機があります。このため Adobe Experience Manager（AEM）による web アクセシビリティは、優れた web デザインの重要な側面となっています。
 
-アクセシブルなWebサイトおよびAEMを使用したコンテンツの作成は、次のような影響を及ぼします。
+AEM を使用して、アクセスしやすい web サイトおよびコンテンツを作成する場合、次のような影響があります。
 
 * 管理者は、アクセシビリティ機能が正しく有効化されるように AEM を設定する必要があります。
 
@@ -23,11 +23,11 @@ ht-degree: 84%
 
 * テンプレート開発者も同様に、Web サイトデザインを実装する際に、こうした問題を認識する必要があります。
 
-Adobe Experience Managerは、[World Wide Web Consortium](#world-wide-web-consortium)が提供する[ガイドライン](#wcag-accessibility-guidelines)と連携します。
+Adobe Experience Manager は、[World Wide Web Consortium](#world-wide-web-consortium) が提供する [ガイドライン](#wcag-accessibility-guidelines)と連携しています。
 
 >[!NOTE]
 >
->詳しくは、[Accessibility conformance reports for Adobe solutions](https://www.adobe.com/accessibility/compliance.html)（アドビソリューションのアクセシビリティ準拠レポート）を参照してください。
+>詳細に関しては、[アドビソリューションのアクセシビリティ準拠レポート](https://www.adobe.com/accessibility/compliance.html) を参照してください。
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
@@ -39,7 +39,7 @@ Web デザイナーや開発者がアクセシブルな Web サイトを作成�
 
 WCAG 2.1 では、[アクセシビリティレベルとそれらの準拠方法に関するガイドライン（および関連する成功基準）を提供](https://www.w3.org/TR/WCAG/#conformance)しています。
 
-## WCAG 2.1とAEM {#wcag-aem}
+## WCAG 2.1 および AEM {#wcag-aem}
 
 Adobe Experience Manager を使用すると、コンテンツ作成者や Web サイトの所有者は、WCAG 2.1 レベル A およびレベル AA の達成基準を満たす Web コンテンツを作成できます。
 
@@ -47,13 +47,15 @@ Adobe Experience Manager を使用すると、コンテンツ作成者や Web �
 
 * AEM との関係について詳しくは、[アクセシブルなコンテンツの作成](/help/sites-authoring/creating-accessible-content.md)を参照してください。
 
-* [アクセスしやすいサイトを作成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md) アクセスしやすいコンテンツを作成する際の AEM の設定方法を示す管理者向けのガイドラインです。
+* [アクセスしやすいサイトを作成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
+アクセスしやすいコンテンツを作成するための AEM の設定方法を示す、管理者向けのガイドラインです。
 
-* [アクセスしやすいアダプティブフォームの作成](/help/forms/using/creating-accessible-adaptive-forms.md) Adobe Experience Manager（AEM）には、ユーザーの様々な能力に合わせてアダプティブフォームの使いやすさを向上させる機能が多数含まれています。このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
+* [アクセスしやすいアダプティブフォームの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
+Adobe Experience Manager（AEM）には、ユーザーの様々な能力に合わせてアダプティブフォームの使いやすさを向上させる機能が、多数含まれています。このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
 
 >[!NOTE]
 >
->サイトを作成する際は、サイトの全体的なレベルを特定する必要があります。
+>サイトを作成する際は、サイトが準拠する全体的なレベルを決めておく必要があります。
 
 ## Adobe におけるアクセシビリティ {#accessibility-at-adobe}
 
