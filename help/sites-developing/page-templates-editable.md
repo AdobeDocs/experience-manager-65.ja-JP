@@ -1,8 +1,8 @@
 ---
 title: ページテンプレート - 編集可能
-seo-title: ページテンプレート - 編集可能
+seo-title: Page Templates - Editable
 description: 編集可能テンプレートが導入された目的は、開発者以外のユーザーがテンプレートを作成および編集できるようにすること、テンプレートとそこから作成されたすべてのページとの間に動的接続が維持されるようにすること、ページコンポーネントの汎用性を高めることです
-seo-description: 編集可能テンプレートが導入された目的は、開発者以外のユーザーがテンプレートを作成および編集できるようにすること、テンプレートとそこから作成されたすべてのページとの間に動的接続が維持されるようにすること、ページコンポーネントの汎用性を高めることです
+seo-description: Editable templates have been introduced to, allow non-developers to create and edit templates, provide templates that retain a dynamic connection to any pages created from them, and make the page component more generic
 uuid: 61791960-fdef-4e49-878a-11fdf1d4f0ab
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '3285'
-ht-degree: 90%
+workflow-type: ht
+source-wordcount: '3249'
+ht-degree: 100%
 
 ---
 
@@ -49,12 +49,12 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->次のチュートリアルも、新しいプロジェクトで編集可能なページテンプレートを設定する際に役立ちます。
->[AEM Sitesの概要パート2 — ベースページとテンプレートの作成](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part2.html)
+>次のチュートリアルは、新しいプロジェクトで編集可能なページテンプレートを設定する場合にも役立つ場合があります。
+>[AEM Sites の概要（パート 2）- ベースページとテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/pages-templates.html?lang=ja)
 
 ## 新しいテンプレートの作成 {#creating-a-new-template}
 
-編集可能テンプレートの作成は、主にテンプレート作成者が、[テンプレートコンソールおよびテンプレートエディター](/help/sites-authoring/templates.md)を使用しておこないます。ここでは、そのプロセスの概要を示し、技術的なレベルでどのような処理がおこなわれるかを説明します。
+編集可能テンプレートの作成は、主にテンプレート作成者が、[テンプレートコンソールおよびテンプレートエディター](/help/sites-authoring/templates.md)を使用しておこないます。ここでは、そのプロセスの概要を示し、技術的なレベルでどのような処理が行われるかを説明します。
 
 AEM プロジェクトで編集可能テンプレートを使用する方法について詳しくは、[Lazybones を使用した AEM プロジェクトの作成](https://helpx.adobe.com/jp/experience-manager/using/aem_lazybones.html)を参照してください。
 
@@ -74,7 +74,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    * 構造では、テンプレートのコンポーネントとコンテンツを定義できます。
    * テンプレート構造で定義されたコンポーネントは、結果ページに移動することも、結果ページから削除することもできません。
 
-      * We.Retail サンプルコンテンツ外のカスタムフォルダーにテンプレートを作成する場合は、基盤コンポーネントを選択するか、[コアコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)を使用することができます。
+      * We.Retail サンプルコンテンツ外のカスタムフォルダーにテンプレートを作成する場合は、基盤コンポーネントを選択するか、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)を使用することができます。
    * ページ作成者がコンポーネントを追加または削除するには、テンプレートに段落システムを追加する必要があります。
    * コンポーネントのロックを解除（再度ロックできます）して、初期コンテンツを定義できます。
 
@@ -131,7 +131,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 >[!TIP]
 >
->国際化する必要がある情報は、テンプレートに含めないでください。内部化のために、コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=ja)の[ローカライゼーション機能をお勧めします。
+>国際化する必要がある情報は、テンプレートに含めないでください。内部化のためには、[コアコンポーネントのローカライゼーション機能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=ja)の利用をお勧めします。
 
 >[!NOTE]
 >
@@ -152,7 +152,8 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 以下のフォルダーを使用してテンプレートを整理できます。
 
 * **global**
-* サイト固有テンプレートを整理するためのサイト固有のフォルダーは、管理者権限を保持しているアカウントによって作成されます。
+* サイト固有
+テンプレートを整理するためのサイト固有のフォルダーは、管理者権限を保持しているアカウントによって作成されます。
 
 >[!NOTE]
 >
@@ -171,7 +172,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 テンプレートのタイプやポリシーは、次の優先順位に従ってすべてのフォルダーに継承されます。
 
 1. 現在のフォルダー。
-1. 現在のフォルダーの親.
+1. 現在のフォルダーの親
 1. `/conf/global`
 1. `/apps`
 1. `/libs`
@@ -208,17 +209,17 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
    * 値：**テンプレート**&#x200B;コンソールに表示される（フォルダーの）タイトルです。
 
-1. 作成者が新しいフォルダーにテンプレートを作成できるようにするには、標準のオーサリング権限（*など）に加え*`content-authors`、グループを割り当てて作成者に必要なアクセス権限（ACL）を定義する必要があります。
+1. 作成者が新しいフォルダーにテンプレートを作成できるようにするには、標準のオーサリング権限（`content-authors` など）に&#x200B;*加え*、グループを割り当てて作成者に必要なアクセス権限（ACL）を定義する必要があります。
 
    割り当てる必要があるデフォルトのグループは、`template-authors` グループです。詳しくは、次の節[ACL とグループ](/help/sites-developing/page-templates-editable.md#acls-and-groups)を参照してください。
 
-   アクセス権の管理と割り当てについて詳しくは、[アクセス権の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)を参照してください。
+   アクセス権限の管理および割り当てについて詳しくは、[アクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)を参照してください。
 
 ### 設定ブラウザーの使用 {#using-the-configuration-browser}
 
 1. **グローバルナビゲーション**／**ツール**／**設定ブラウザー**&#x200B;に移動します。
 
-   **global**&#x200B;フォルダーを含む既存のフォルダーは左側に表示されます。
+   **グローバル**&#x200B;フォルダーを含めた既存のフォルダーは左側に一覧表示されます。
 
 1. 「**作成**」をクリックします。
 1. **設定を作成**&#x200B;ダイアログで、以下のフィールドを設定する必要があります。
@@ -246,9 +247,9 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 >[!CAUTION]
 >
->`template-authors` グループは、新しいテンプレートを作成する必要があるユーザー専用です。**
+>`template-authors` グループは、新しいテンプレートを作成する必要があるユーザー&#x200B;*専用*&#x200B;です。
 >
->テンプレートの編集は非常に強力なので、正しくおこなわないと既存のテンプレートが壊れる場合があります。そのため、この役割には注意深く、ふさわしいユーザーだけを含めてください。
+>テンプレートの編集は非常に強力なので、正しく行わないと既存のテンプレートが壊れる場合があります。そのため、このロールには注意深く、ふさわしいユーザーだけを含めてください。
 
 次の表に、テンプレートの編集に必要な権限の詳細を示します。
 
@@ -256,7 +257,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
  <tbody>
   <tr>
    <th>パス</th>
-   <th>役割／グループ</th>
+   <th>ロール／グループ</th>
    <th>権限<br /> </th>
    <th>説明</th>
   </tr>
@@ -308,23 +309,23 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 デフォルトの `template-authors` グループは、プロジェクト設定のみに対応しています。この場合、`template-authors` のすべてのメンバーは、すべてのテンプレートへのアクセスとそれらの作成が許可されています。より複雑な設定では、テンプレートに個別にアクセスするためにテンプレート作成者グループが複数必要になるので、さらに多くのカスタムテンプレート作成者グループを作成する必要があります。ただし、テンプレート作成者グループの権限は変わりません。
 
-#### /conf/global の下の従来のテンプレート  {#legacy-templates-under-conf-global}
+#### /conf/global の下の従来のテンプレート {#legacy-templates-under-conf-global}
 
-テンプレートは`/conf/global`に保存されなくなりましたが、一部のレガシーインストールでは、この場所にテンプレートが引き続き存在する可能性があります。 このようなレガシー状況でのみ、次の`/conf/global`パスを明示的に設定する必要があります。
+テンプレートは `/conf/global` に格納されなくなりましたが、従来のインストールでは、まだこの場所にテンプレートが存在する場合があります。このような従来の場合のみ、次の `/conf/global` パスを明示的に設定する必要があります。
 
 <table>
  <tbody>
   <tr>
    <th>パス</th>
-   <th>役割／グループ</th>
+   <th>ロール／グループ</th>
    <th>権限<br /> </th>
    <th>説明</th>
   </tr>
   <tr>
    <td rowspan="3"><code>/conf/global/settings/wcm/templates</code></td>
    <td>テンプレート作成者</td>
-   <td>読み取り、書き込み、複製</td>
-   <td>でテンプレートを作成、読み取り、更新、削除およびレプリケートするテンプレート作成者 <code>/conf/global</code></td>
+   <td>読み込み、書き込み、レプリケート</td>
+   <td>テンプレート作成者は、以下の場所でテンプレートを作成、読み取り、更新、削除、および複製します <code>/conf/global</code></td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -339,8 +340,8 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
   <tr>
    <td rowspan="3"><code>/conf/global/settings/wcm/policies</code></td>
    <td><code>Template Author</code></td>
-   <td>読み取り、書き込み、複製</td>
-   <td>でテンプレートを作成、読み取り、更新、削除およびレプリケートするテンプレート作成者 <code>/conf/global</code></td>
+   <td>読み込み、書き込み、レプリケート</td>
+   <td>テンプレート作成者は、以下の場所でテンプレートを作成、読み取り、更新、削除、および複製します <code>/conf/global</code></td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -356,7 +357,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    <td rowspan="2"><code>/conf/global/settings/wcm/template-types</code></td>
    <td>テンプレート作成者</td>
    <td>読み取り</td>
-   <td>テンプレート作成者は、事前定義済みのテンプレートタイプの1つに基づいて新しいテンプレートを作成します</td>
+   <td>テンプレート作成者は、定義済みのテンプレートタイプの 1 つに基づいて新しいテンプレートを作成します</td>
   </tr>
   <tr>
    <td>匿名 Web ユーザー</td>
@@ -381,7 +382,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
    * ルートノードのポリシー。テンプレートエディターで許可されるコンポーネントを定義します。
    * そのテンプレートタイプで、モバイルエミュレーターのレスポンシブグリッドと設定のブレークポイントを定義することをお勧めします。設定は個々のテンプレートで定義することもできるので（[テンプレートタイプとモバイルデバイスグループ](/help/sites-developing/page-templates-editable.md#p-template-type-and-mobile-device-groups-br-p)を参照）、これはオプションです。
 
-* AEM には、既製のテンプレートタイプがいくつか用意されています（HTML5 ページ、アダプティブフォームページなど）。
+* AEM には、既製のテンプレートタイプがいくつか用意されています（HTML 5 ページ、アダプティブフォームページなど）。
 
    * その他の例は、[We.Retail](/help/sites-developing/we-retail.md) サンプルコンテンツの一部として提供されています。
 
@@ -393,7 +394,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 >[!CAUTION]
 >
->`/libs` パス内のものは一切変更しないでください。これは、`/libs`のコンテンツが次回インスタンスをアップグレードすると（ホットフィックスまたは機能パックを適用すると上書きされる場合がある）ときに上書きされるからです。
+>`/libs` パス内のものは一切変更しないでください。`/libs` のコンテンツが、インスタンスを次回アップグレードする際に（場合によってはホットフィックスまたは機能パックを適用したとき）上書きされるからです。
 
 サイト固有のテンプレートタイプは、以下に相当する場所に保存してください。
 
@@ -420,7 +421,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 >[!CAUTION]
 >
->`cq:deviceGroups`の値は、`/etc/mobile/groups/responsive`のような絶対パスではなく、`mobile/groups/responsive`のような相対パスとして設定する必要があります。
+>`cq:deviceGroups` の値は、`/etc/mobile/groups/responsive` などの絶対パスとしてではなく、`mobile/groups/responsive` などの相対パスとして設定する必要があります。
 
 >[!NOTE]
 >
@@ -432,7 +433,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 
 他のテンプレートの基盤となるテンプレートを作成した場合、このテンプレートをテンプレートタイプとしてコピーできます。
 
-1. ここで説明する[編集可能なテンプレートと同じようにテンプレートを作成します。これは、テンプレートタイプの基礎となります。](/help/sites-authoring/templates.md#creating-a-new-template-template-author)
+1. [こちらのドキュメントで説明されているように](/help/sites-authoring/templates.md#creating-a-new-template-template-author)編集可能テンプレートと同じようにテンプレートを作成します。これは、テンプレートタイプの基盤となります。
 1. CRXDE Lite を使用している場合は、新しく作成したテンプレートを `templates` ノードから`template-types`テンプレートフォルダー[の下の ](/help/sites-developing/page-templates-editable.md#template-folders) ノードにコピーします。
 1. このテンプレートを[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md#template-folders)の下の `templates` ノードから削除します。
 1. `template-types` ノードの下にあるテンプレートのコピーで、`cq:template` および `cq:templateType` `jcr:content` プロパティをすべて削除します。
@@ -535,7 +536,7 @@ GitHub のコード
 
 ### レイアウト {#layout}
 
-[テンプレートの編集時に、レイアウト](/help/sites-authoring/templates.md)を定義できます。これは、[標準のレスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)を使用し、[設定](/help/sites-administering/configuring-responsive-layout.md)も可能です。
+[テンプレートの編集時にレイアウトを定義できます](/help/sites-authoring/templates.md)。レイアウトは[標準のレスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)を使用し、必要に応じて[設定](/help/sites-administering/configuring-responsive-layout.md)することもできます。
 
 ### コンテンツポリシー {#content-policies}
 
@@ -558,7 +559,7 @@ GitHub のコード
 >
 >編集可能テンプレートから作成されたページの場合は、ページエディターでデザインモードが提供されません。
 >
->編集可能テンプレートの`policies`ツリーは、次の場所にある静的テンプレートのデザインモード設定と同じ階層を持ちます。
+>編集可能テンプレートの `policies` ツリーは、次の場所にある静的テンプレートのデザインモード設定と同じ階層を持ちます。
 >
 >`/etc/designs/<my-site>/jcr:content/<component-name>`
 >
@@ -568,7 +569,7 @@ GitHub のコード
 
 ページポリシーを使用して、テンプレートまたは作成されるページで、ページ（メインの parsys）の[コンテンツポリシー](#content-policies)を定義できます。
 
-### 使用するテンプレートの有効化と許可  {#enabling-and-allowing-a-template-for-use}
+### 使用するテンプレートの有効化と許可 {#enabling-and-allowing-a-template-for-use}
 
 1. **テンプレートの有効化**
 
@@ -604,9 +605,10 @@ GitHub のコード
 
 * テンプレートの `structure` と `initial` を統合したサブツリーを使用して作成されます。
 
-* テンプレートおよびテンプレートタイプに保持されている情報への参照を保持します。これは、次のプロパティを持つ `jcr:content` ノードを使用しておこないます。
+* テンプレートおよびテンプレートタイプに保持されている情報への参照を保持します。これは、次のプロパティを持つ `jcr:content` ノードを使用して行います。
 
-   * `cq:template`実際のテンプレートへの動的参照を提供します。テンプレートへの変更を実際のページに反映させることができます。
+   * `cq:template`
+実際のテンプレートへの動的参照を提供します。テンプレートへの変更を実際のページに反映させることができます。
 
    * `cq:templateType`
 テンプレートタイプへの参照を提供します。
@@ -615,15 +617,16 @@ GitHub のコード
 
 上の図は、テンプレート、コンテンツおよびコンポーネントの相関関係を示したものです。
 
-* コントローラ — `/content/<my-site>/<my-page>`
-テンプレートを参照して作成されるページです。 コンテンツがプロセス全体を制御します。定義に従って、適切なテンプレートとコンポーネントにアクセスします。
+* コントローラー - `/content/<my-site>/<my-page>`
+テンプレートを参照した結果のページ。コンテンツがプロセス全体を制御します。定義に従って、適切なテンプレートとコンポーネントにアクセスします。
 
-* 構成 — `/conf/<my-folder>/settings/wcm/templates/<my-template>`
-[テンプレートおよび関連するコンテンツポリシー](#template-definitions)は、ページ設定を定義します。
+* 設定 - `/conf/<my-folder>/settings/wcm/templates/<my-template>`
+[テンプレートおよび関連するコンテンツポリシー](#template-definitions)がページ設定を定義します。
 
-* モデル - OSGi バンドル[OSGi バンドル](/help/sites-deploying/osgi-configuration-settings.md)が機能を実装します。
+* モデル - OSGi バンドル
+[OSGi バンドル](/help/sites-deploying/osgi-configuration-settings.md)が機能を実装します。
 
-* 表示 — `/apps/<my-site>/components`
+* 表示 - `/apps/<my-site>/components`
 オーサー環境とパブリッシュ環境の両方で、コンテンツが[コンポーネント](/help/sites-developing/components.md)によってレンダリングされます。
 
 ページのレンダリング時
