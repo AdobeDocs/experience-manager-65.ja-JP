@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
 source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '486'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 71%
 
 ![](do-not-localize/correspondence-management.png)
 
-Interactive Communications は、ビジネス通信、ドキュメント、声明書、特典通知、マーケティングメール、請求書、ウェルカムキットなど、安全でパーソナライズされたインタラクティブな通信の作成、アセンブリ、配信を一元化および管理します。
+インタラクティブ通信を使用すると、業務上の書簡、ドキュメント、取引明細書、給付金通知、マーケティング用メール、請求書、ウェルカムキットなど、様々な通信記録の作成と配信を、カスタマイズされた安全な方法で一元的に管理できます。
 
 ## 主な機能 {#key-capabilities}
 
@@ -33,7 +33,7 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
 - 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから Web チャネルを自動的に生成することができます。
 - 印刷チャネルと Web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
 - ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
-- エージェントのユーザーインターフェイスに、インタラクティブ通信の印刷と Web プレビューが表示されます
+- エージェント UI で、インタラクティブ通信の印刷プレビューと web プレビューを表示できます。
 - ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
 
 ## インタラクティブ通信の作成 {#interactive-communication-creation}
@@ -42,17 +42,17 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
 
 ### ワークフロー {#workflow}
 
-インタラクティブ通信を作成するには、 [構築ブロック](#buildingblocks) インタラクティブ通信の準備ができたら、次の手順を実行します。
+インタラクティブ通信を作成するには、インタラクティブ通信の[構築ブロック](#buildingblocks)を準備してから、以下の手順を実行する必要があります。
 
-1. 選択して [インタラクティブ通信の作成](/help/forms/using/create-interactive-communication.md).
+1. 「[インタラクティブ通信の作成](/help/forms/using/create-interactive-communication.md)」を選択します。
 
-1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。印刷チャネルから Web チャネルを生成することもできます。
+1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。プリントチャンネルから web チャンネルを生成することもできます。
 
-1. の使用 [ドラッグ&amp;ドロップインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)必要に応じて、ドキュメントフラグメント、画像、コンポーネントをインタラクティブ通信の印刷チャネルと Web チャネルに追加します。
+1. 必要に応じて[ドラッグ＆ドロップ方式のインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)を使用して、ドキュメントフラグメント、画像、コンポーネントを、インタラクティブ通信のプリントチャンネルと web チャンネルに追加します。
 1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
 
    1. [画像](/help/forms/using/create-interactive-communication.md#step2)
-   1. [テーブル](/help/forms/using/create-interactive-communication.md#tables) （レイアウトフラグメントを含む）
+   1. [テーブル](/help/forms/using/create-interactive-communication.md#tables)（レイアウトフラグメントを含む）
    1. [グラフ](/help/forms/using/chart-component-interactive-communications.md)
    1. [ドキュメントフラグメント](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
@@ -67,11 +67,11 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
 - [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
 - [ドキュメントフラグメント](/help/forms/using/document-fragments.md)
 - 画像
-- [テーマ](/help/forms/using/themes.md) （Web チャネル用）
+- Web チャンネル用の[テーマ](/help/forms/using/themes.md)
 
 ## インタラクティブ通信と Correspondence Management の比較 {#interactive-communications-vs-correspondence-management}
 
-インタラクティブ通信は、顧客とのコミュニケーションを作成するためのデフォルトの推奨される方法です。 AEM 6.3 Forms または AEM 6.2 Forms で作成したレターを引き続き使用する場合は、[互換性パッケージをインストールする必要があります](/help/forms/using/compatibility-package.md)。次に、インタラクティブ通信とレターの機能の比較を示します。
+インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。顧客通信を作成する場合は、インタラクティブ通信を使用することをお勧めします。AEM 6.3 Forms または AEM 6.2 Forms で作成したレターを引き続き使用する場合は、[互換性パッケージをインストールする必要があります](/help/forms/using/compatibility-package.md)。以下の表に、インタラクティブ通信の機能とレターの機能の違いを示します。
 
 <table>
  <tbody>
@@ -107,7 +107,7 @@ Interactive Communications は、ビジネス通信、ドキュメント、声�
   <tr>
    <td>オーサリング</td>
    <td>ドラッグアンドドロップ方式のインターフェイスを使用して、印刷チャネルと Web チャネルを作成できる</td>
-   <td>ドラッグ&amp;ドロップメカニズムがない </td>
+   <td>ドラッグ＆ドロップ機能はない </td>
   </tr>
   <tr>
    <td>グラフ</td>
