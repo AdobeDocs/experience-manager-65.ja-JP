@@ -1,8 +1,8 @@
 ---
 title: カスタムツールバーアクションの作成
-seo-title: カスタムツールバーアクションの作成
+seo-title: Creating a custom toolbar action
 description: フォーム開発者は、AEM Forms のアダプティブフォーム用にカスタムツールバーアクションを作成できます。カスタムアクションフォームを使用して、作成者はより多くのワークフローとオプションをエンドユーザーに提供できます。
-seo-description: フォーム開発者は、AEM Forms のアダプティブフォーム用にカスタムツールバーアクションを作成できます。カスタムアクションフォームを使用して、作成者はより多くのワークフローとオプションをエンドユーザーに提供できます。
+seo-description: Form developers can create custom toolbar actions for adaptive forms in AEM Forms. Using custom actions form authors can provide more workflows and options to their end users.
 uuid: cd785cfb-e1bb-4158-be9b-d99e04eccc02
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ discoiquuid: 4beca23f-dbb0-4e56-8047-93e4f1775418
 docset: aem65
 exl-id: 17f7f0e1-09d8-45cd-a4f6-0846bdb079b6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 84%
+workflow-type: ht
+source-wordcount: '496'
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 84%
 
 ## アクションとは {#what-is-an-action-br}
 
-アダプティブフォームは、フォーム作成者がオプションの組み合わせを設定できるツールバーを提供します。これらのオプションは、アダプティブフォームのアクションとして定義されます。ツールバーの編集ボタンをクリックして、アダプティブフォームでサポートするアクションを設定するパネルを開きます。
+アダプティブフォームは、フォーム作成者がオプションの組み合わせを設定できるツールバーを提供します。これらのオプションは、アダプティブフォームのアクションとして定義されます。パネルのツールバーの「編集」ボタンをクリックして、アダプティブフォームがサポートするアクションを設定します。
 
 ![デフォルトのツールバーアクション](assets/default_toolbar_actions.png)
 
@@ -33,26 +33,26 @@ ht-degree: 84%
 
 ## アダプティブフォームでカスタムアクションを作成する手順 {#steps}
 
-カスタムツールバーアクションを作成するには、次の手順を実行して、記入の済んだフォームを送信する前にアダプティブフォームのすべてのフィールドをエンドユーザーがレビューするためのボタンを作成します。
+カスタムのツールバーアクションを作成するには、次の手順を実行して、記入の済んだフォームを送信する前にアダプティブフォームのすべてのフィールドをエンドユーザーがレビューするためのボタンを作成します。
 
-1. アダプティブフォームでサポートされるデフォルトのアクションはすべて`/libs/fd/af/components/actions`フォルダーに存在します。 CRXDEで、`fileattachmentlisting`ノードを`/libs/fd/af/components/actions/fileattachmentlisting`から`/apps/customaction`にコピーします。
+1. アダプティブフォームでサポートされているデフォルトのアクションは、すべて `/libs/fd/af/components/actions` フォルダーにあります。CRXDE で、`fileattachmentlisting` ノードを `/libs/fd/af/components/actions/fileattachmentlisting` から `/apps/customaction` にコピーします。
 
-1. ノードを`apps/customaction`フォルダーにコピーした後、ノード名を`reviewbeforesubmit`に変更します。 また、ノードの`jcr:title`および`jcr:description`プロパティを変更します。
+1. `apps/customaction` フォルダーにノードをコピーしたら、ノードの名前を `reviewbeforesubmit` に変更します。このノードの `jcr:title` と `jcr:description` のプロパティも変更します。
 
-   `jcr:title` のプロパティには、ツールバーダイアログに表示されるアクションの名前が含まれます。`jcr:description` のプロパティには、アクションにマウスオーバーしたときに表示される詳細情報が含まれます。
+   `jcr:title` プロパティには、ツールバーダイアログに表示されるアクションの名前が含まれています。`jcr:description` プロパティには、アクションにマウスオーバーしたときに表示される詳細情報が含まれます。
 
    ![ツールバーのカスタマイズに使用するノードの階層](assets/action3.png)
 
-1. `reviewbeforesubmit`ノードで`cq:template`ノードを選択します。 `guideNodeClass`プロパティの値が`guideButton`であることを確認し、それに応じて`jcr:title`プロパティを変更します。
-1. `cq:Template`ノードのtypeプロパティを変更します。 この例では、タイプのプロパティをボタンに変更します。
+1. `reviewbeforesubmit` ノード内の `cq:template` ノードを選択します。`guideNodeClass` プロパティの値が `guideButton` となっていることを確認し、それに合わせて `jcr:title` プロパティを変更します。
+1. `cq:Template` ノードの type プロパティを変更します。この例では、タイプのプロパティをボタンに変更します。
 
-   このコンポーネントで、生成された HTML に type の値が CSS クラスとして追加されます。ユーザーはこの CSS クラスを使用して、アクションのスタイルを設定できますボタン、送信、リセット、およびタイプの値を保存する際のスタイルが、モバイルとデスクトップデバイスの両方にデフォルトで用意されています。
+   このコンポーネントで、生成された HTML に type の値が CSS クラスとして追加されます。ユーザーはこの CSS クラスを使用して、アクションのスタイルを設定できますボタン、送信、リセット、保存の各 type 値には、モバイルデバイスとデスクトップデバイスの両方に対応するデフォルトのスタイルが用意されています。
 
-1. アダプティブフォームの編集のツールバーダイアログからカスタムアクションを選択します。パネルのツールバーにレビューボタンが表示されます。
+1. アダプティブフォームを編集するツールバーのダイアログから、カスタムアクションを選択します。パネルのツールバーに「レビュー」ボタンが表示されます。
 
-   ![カスタムアクションは、toolbarで使用できま](assets/custom_action_available_in_toolbar.png) ![す。カスタムで作成したツールバーアクションを表示します](assets/action7.png)
+   ![カスタムアクションはツールバーで使用できます](assets/custom_action_available_in_toolbar.png) ![カスタムで作成したツールバーアクションの表示](assets/action7.png)
 
-1. レビューボタンに機能を持たせるには、`reviewbeforesubmit` ノードにある init.jsp ファイルに JavaScript コード、CSS コード、およびサーバー側コードを追加します。
+1. 「レビュー」ボタンに機能を持たせるには、`reviewbeforesubmit` ノードにある init.jsp ファイルに JavaScript、CSS コード、およびサーバーサイドのコードを追加します。
 
    `init.jsp` に次のコードを追加します。
 
@@ -176,7 +176,7 @@ ht-degree: 84%
    }
    ```
 
-1. カスタムアクションの機能を検証するには、プレビューモードでアダプティブフォームを開いて、ツールバーのレビューボタンをクリックします。
+1. カスタムアクションの機能を検証するには、プレビューモードでアダプティブフォームを開いて、ツールバーの「レビュー」ボタンをクリックします。
 
    >[!NOTE]
    >
@@ -188,4 +188,4 @@ ht-degree: 84%
 
 コンテンツパッケージは次のアーカイブにあります。このパッケージには、上記のカスタムツールバーアクションのデモに関連するアダプティブフォームが含まれています。
 
-[ファイルを入手](assets/customtoolbaractiondemo.zip)
+[ファイルを取得](assets/customtoolbaractiondemo.zip)
