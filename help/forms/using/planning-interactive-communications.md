@@ -1,18 +1,18 @@
 ---
-title: '"チュートリアル：インタラクティブ通信の計画"'
-seo-title: インタラクティブ通信の計画
+title: 「チュートリアル：インタラクティブ通信の計画」
+seo-title: Plan your Interactive Communication
 description: インタラクティブ通信用の分析の計画
-seo-description: インタラクティブ通信用の分析の計画
+seo-description: Plan the anatomy for your Interactive Communication
 uuid: 1c2b5c5b-c655-4559-8748-3e0b343779c2
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
-feature: インタラクティブコミュニケーション
+feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '654'
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 89%
 
 ![02-create-adaptive-form-main-image](assets/02-create-adaptive-form-main-image.png)
 
-このチュートリアルは、[最初のインタラクティブ通信](/help/forms/using/create-your-first-interactive-communication.md)シリーズの手順です。 チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+これは、「[最初のインタラクティブ通信の作成](/help/forms/using/create-your-first-interactive-communication.md)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
 インタラクティブ通信の計画の第一歩は、インタラクティブ通信の内容を確定することです。法務部門、経理部門、サポート部門、マーケティング部門などのサブジェクトマターエキスパート（SME）は、その内容を確定するのに役に立ちます。内容が確定したら、内容を分析してインタラクティブ通信の作成に必要な各種アセットタイプを特定する必要があります。
 
@@ -34,13 +34,13 @@ ht-degree: 89%
 * **バックエンドシステムが作成元のデータ（フォームデータモデル）**&#x200B;は、顧客固有で、インタラクティブ通信と動的にマージされます。例えば、ポリシー番号や住所はフォームデータモデルを使用することができます。
 * 印刷および Web 版のインタラクティブ通信用の&#x200B;**レイアウトまたはテンプレート**。
 * インタラクティブ通信に配置する多様なテキスト段落の&#x200B;**順序**。
-* **送信前に通信をカスタマイズする最前線の従業員（エージェントUI）** が入力したデータ。例えば、支払期日です。
+* 送信する前に通信をカスタマイズする&#x200B;**現場の社員が入力したデータ（エージェント UI）**。例えば、支払期日です。
 
-* **条件付きデータ**&#x200B;は、事前定義された条件に基づいて作成されます。例えば、インタラクティブ通信が生成された日付などです。
+* **条件付きデータ**&#x200B;は、事前定義された条件に基づいて作成されます。例えば、インタラクティブ通信が生成された際の日付です。
 * ロゴや署名画像など&#x200B;**リポジトリに保存された画像**。会社ロゴなどの画像は、ほとんど、またはすべての通信に表示されます。
 * **グラフやテーブル**&#x200B;は、インタラクティブ通信の複雑なデータ表示を簡略化する必要があります。
 
-## インタラクティブ通信の分析  {#anatomy-of-the-interactive-communication}
+## インタラクティブ通信の分析 {#anatomy-of-the-interactive-communication}
 
 インタラクティブ通信の作成に使用する内容および要素が確定したら、インタラクティブ通信の分析を作成することができます。分析には、「[計画の考慮事項](/help/forms/using/planning-interactive-communications.md#planning-considerations)」セクションに記載されている詳細が必要です。ユースケースに基づいて、通信会社が顧客に送る毎月の請求書の分析事例は次のとおりです。
 
@@ -52,7 +52,7 @@ ht-degree: 89%
 * 条件付きデータ
 * 画像
 
-各セクションの太字のテキストはスタティックテキストを表します。データベースには、顧客、請求および通話テーブルが含まれます。 フォームデータモデルは、これらのテーブルのいずれかのデータを受信することができます。詳しくは、「[フォームデータモデルの作成](/help/forms/using/create-form-data-model0.md)」を参照してください。
+各セクションの太字のテキストは静的テキストを表します。データベースには、顧客、請求書、通話テーブルが含まれます。フォームデータモデルは、これらのテーブルのいずれかのデータを受信することができます。詳しくは、[フォームデータモデルの作成](/help/forms/using/create-form-data-model0.md)を参照してください。
 
 次のテーブルに、インタラクティブ通信の分析内の各フィールドのデータソースを示します。
 
@@ -75,7 +75,7 @@ ht-degree: 89%
      <li>請求日</li>
      <li>請求期間</li>
     </ul> <p> </p> </td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>顧客情報</td>
@@ -94,12 +94,12 @@ ht-degree: 89%
      <li>都道府県コード</li>
      <li>接続数</li>
     </ul> </td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>請求内容</td>
    <td><p>繰越請求額</p> <p>支払い</p> <p>調整</p> <p>現在の請求期間の料金</p> <p>請求額</p> <p>期限</p> </td>
-   <td><p><strong>現在の請求期間</strong>フィールドの料金</p> <p>テーブル - 請求</p> </td>
+   <td><p>「<strong>現在の請求期間の料金</strong>」フィールドの値</p> <p>テーブル - 請求</p> </td>
    <td><p>次のフィールドに値を入力します。</p>
     <ul>
      <li>繰越請求額</li>
@@ -108,11 +108,11 @@ ht-degree: 89%
      <li>請求額</li>
      <li>期限</li>
     </ul> </td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>請求概要</td>
-   <td><p>通話料金</p> <p>会議通話料金</p> <p>SMS 料金 </p> <p>携帯インターネット料金</p> <p>国内ローミング料金</p> <p>国際ローミング料金</p> <p>付加価値サービス料金</p> <p>合計請求金額</p> <p>合計支払金額</p> <p>「付加価値サービス料金」フィールドの条件</p> </td>
+   <td><p>通話料金</p> <p>会議通話料金</p> <p>SMS 料金 </p> <p>携帯インターネット料金</p> <p>国内ローミング料金</p> <p>国際ローミング料金</p> <p>付加価値サービス料金</p> <p>合計請求金額</p> <p>合計支払金額</p> <p>付加価値サービス料金フィールドの条件</p> </td>
    <td><p>次のフィールドに値を入力します。</p>
     <ul>
      <li>通話料金</li>
@@ -123,10 +123,10 @@ ht-degree: 89%
      <li>国際ローミング料金</li>
      <li>付加価値サービス料金</li>
      <li>合計請求金額（usagecharges 計算フィールド）</li>
-     <li>TOTAL PAYABLE （usagecharges計算済みフィールド）</li>
+     <li>合計支払金額（usagecharges 計算フィールド）</li>
     </ul> <p>テーブル - 請求</p> </td>
    <td>フィールドなし</td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>通話明細 - 発信</td>
@@ -134,26 +134,26 @@ ht-degree: 89%
     <ul>
      <li>日付</li>
      <li>時刻</li>
-     <li>数値</li>
-     <li>デュレーション</li>
+     <li>番号</li>
+     <li>期間</li>
      <li>料金</li>
     </ul> </td>
    <td><p>すべての値</p> <p>テーブル - 通話</p> </td>
    <td>フィールドなし</td>
-   <td>—</td>
+   <td>--</td>
   </tr>
   <tr>
    <td>Pay Now</td>
-   <td>—</td>
-   <td>—</td>
-   <td>—</td>
+   <td>--</td>
+   <td>--</td>
+   <td>--</td>
    <td>PayNow</td>
   </tr>
   <tr>
    <td>付加価値サービス</td>
-   <td>—</td>
-   <td>—</td>
-   <td>—</td>
+   <td>--</td>
+   <td>--</td>
+   <td>--</td>
    <td>ValueAddedServices</td>
   </tr>
  </tbody>
