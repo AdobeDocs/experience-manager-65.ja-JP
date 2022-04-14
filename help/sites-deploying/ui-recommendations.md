@@ -1,8 +1,8 @@
 ---
 title: 顧客向けのユーザーインターフェイスの推奨事項
-seo-title: 顧客向けのユーザーインターフェイスの推奨事項
+seo-title: User Interface Recommendations for Customers
 description: クラシックユーザーインターフェイスおよびタッチ操作向けユーザーインターフェイスに関連する推奨事項のリスト。
-seo-description: クラシックユーザーインターフェイスおよびタッチ操作向けユーザーインターフェイスに関連する推奨事項のリスト。
+seo-description: A list of recommendations related to the classic and touch-optimized user interfaces.
 uuid: 9ec2c9de-a79e-4f2c-a90f-b38ba9553e07
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '798'
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
     </ol> <p>次に第 2 段階として、</p>
     <ol>
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeは、<a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a>を使用してコンポーネントを更新することをお勧めします。</li>
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。アドビは、コンポーネントの更新に<a href="/help/sites-developing/modernization-tools.md">AEM 最新化ツール</a>を使用することをお勧めします。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -87,7 +87,7 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
      <li>クラシック UI のページエディターを表示するよう「ページを編集」のアクションを設定します。<a href="#selecting-your-ui">UI の選択</a>を参照してください。</li>
     </ol> <p>次に第 2 段階として、</p>
     <ol>
-     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。Adobeは、<a href="/help/sites-developing/modernization-tools.md">AEM Modernization Tools</a>を使用してコンポーネントを更新することをお勧めします。</li>
+     <li>Coral 3 ダイアログ形式を使用するようにコンポーネントダイアログを更新します。アドビは、コンポーネントの更新に <a href="/help/sites-developing/modernization-tools.md">AEM 最新化ツール</a>を使用することをお勧めします。</li>
      <li>ContextHub（ClientContext の後継）を設定し、ContextHub を使用するようページテンプレートを更新します。ContextHub には、カスタムの ClientContext のストアを読み込むことができる互換モードがあります。</li>
     </ol> </td>
   </tr>
@@ -100,9 +100,9 @@ Adobe Experience Manager 6.5 に関する製品管理からの推奨事項を以
 
 ### FAQ {#faq}
 
-詳しくは、ナレッジベースの記事 [Touch UI Authoring FAQ](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html) を参照してください。クラシック UI の廃止予定に関する情報も提供しています。
+詳しくは、ナレッジベースの記事 [Touch UI Authoring FAQ](https://helpx.adobe.com/jp/experience-manager/kb/index/touchui_faq.html) を参照してください。クラシック UI の廃止予定に関する情報も提供しています。
 
-### UI の選択  {#selecting-your-ui}
+### UI の選択 {#selecting-your-ui}
 
 システムを必要に応じて設定する方法について詳しくは、[UI の選択](/help/sites-authoring/select-ui.md)を参照してください。
 
@@ -121,7 +121,7 @@ AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは�
 開発情報について詳しくは、以下を参照してください。
 
 * [タッチ操作対応 UI のアーキテクチャ](/help/sites-developing/touch-ui-concepts.md)。
-* [AEM Modernization Tools](/help/sites-developing/modernization-tools.md)を使用して、コンポーネントの編集ダイアログをクラシックUIからタッチ操作対応UIに変換します。
+* [AEM 最新化ツール](/help/sites-developing/modernization-tools.md)を使用して、コンポーネントの編集ダイアログを、クラシック UI からタッチ操作対応 UI に変換します。
 
 * [タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)
 
@@ -129,5 +129,5 @@ AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは�
 
 * [タッチ操作対応 UI のページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md)（サンプルコードを含む）。
 
-* [タッチ操作対応カスタマイズでの AEM Gem セッション](https://docs.adobe.com/content/ddc/en/gems/user-interface-customization-for-aem-6.html)。
+* [タッチ操作対応カスタマイズでの AEM Gem セッション](https://docs.adobe.com/content/ddc/jp/gems/user-interface-customization-for-aem-6.html)。
 * [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)。
