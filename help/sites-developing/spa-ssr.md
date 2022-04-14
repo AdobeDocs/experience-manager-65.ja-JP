@@ -1,8 +1,8 @@
 ---
 title: SPA およびサーバーサイドレンダリング
-seo-title: SPA およびサーバーサイドレンダリング
+seo-title: SPA and Server-Side Rendering
 description: '"SPA およびサーバーサイドレンダリング"'
-seo-description: 'null'
+seo-description: null
 uuid: 27e26e3f-65d4-4069-b570-58b8b9e2a1ae
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,21 +12,21 @@ discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
 source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
-workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 81%
+workflow-type: ht
+source-wordcount: '1756'
+ht-degree: 100%
 
 ---
 
-# SPA およびサーバーサイドレンダリング {#spa-and-server-side-rendering}
+# SPA およびサーバーサイドレンダリング{#spa-and-server-side-rendering}
 
 >[!NOTE]
 >
->SPA Editorは、SPAフレームワークベースのクライアントサイドレンダリング(ReactやAngularなど)が必要なプロジェクトで推奨されるソリューションです。
+>SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
 
 >[!NOTE]
 >
->このドキュメントで説明するSPAサーバー側レンダリング機能を使用するには、AEM 6.5.1.0以降が必要です。
+>このドキュメントで説明する SPA サーバー側のレンダリング機能を使用するには、AEM 6.5.1.0 以降が必要です。
 
 ## 概要 {#overview}
 
@@ -38,7 +38,7 @@ ht-degree: 81%
 
 SSR が必要なのは一部のプロジェクトだけです。AEM は SPA 向けに JS SSR を完全にサポートしていますが、すべてのプロジェクトに対して体系的に JS SSR を実装することは推奨していません。
 
-SSR を実装することに決めたら、長期的なメンテナンスを含め、SSRを追加することがプロジェクトにとって現実的にどのような複雑さ、労力、コストをもたらすかをまず評価する必要があります。SSR アーキテクチャは、付加価値が予測コストを明確に上回る場合にのみ選択する必要があります。
+SSR を実装することに決めたら、長期的なメンテナンスを含め、SSR を追加することがプロジェクトにとって現実的にどのような複雑さ、労力、コストをもたらすかをまず評価する必要があります。SSR アーキテクチャは、付加価値が予測コストを明確に上回る場合にのみ選択する必要があります。
 
 次の質問のいずれかへの答えが明確に「はい」である場合、通常、SSR には価値があります。
 
@@ -63,7 +63,7 @@ Adobe I/O Runtime について詳しくは、以下を参照してください�
 
 >[!NOTE]
 >
->Adobeでは、環境（ステージング、実稼動、テストなど）ごとに個別のAdobe I/O Runtimeワークスペースを使用することをお勧めします。 これにより、異なる環境にデプロイされた単一アプリケーションの異なるバージョンを使用する、一般的なシステム開発ライフサイクル(SDLC)パターンを使用できます。 詳しくは、[CI/CD for Project Firefly Applications](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md)のドキュメントを参照してください。
+>アドビでは、環境（ステージング、実稼動、テストなど）ごとに個別の Adobe I/O Runtime ワークスペースを使用することをお勧めします。これにより、異なる環境にデプロイされた単一アプリケーションの異なるバージョンを使用する、一般的なシステム開発ライフサイクル（SDLC）パターンを使用できます。詳しくは、「[プロジェクト Firefly アプリケーションの CI／CD](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md)」ドキュメントを参照してください。
 >
 >インスタンスタイプごとのランタイム実装に違いがない限り、インスタンス（オーサー、パブリッシュ）ごとに個別のワークスペースは必要ありません。
 
@@ -88,7 +88,7 @@ AEM は、リモートレンダリングされたコンテンツをどこで取�
 >
 >[AEM 駆動の通信フロー](#aem-driven-communication-flow)と [Adobe I/O Runtime 駆動のフロー](#adobe-i-o-runtime-driven-communication-flow)のどちらを実装するかに関係なく、リモートコンテンツレンダラー設定を定義する必要があります。
 >
->また、[カスタムNode.jsサーバーを使用する場合も、この設定を定義する必要があります。](#using-node-js)
+>また、[カスタムの Node.js サーバーを使用する](#using-node-js)場合にも、この設定を定義する必要があります。
 
 >[!NOTE]
 >
@@ -169,32 +169,32 @@ AEM の SPA 向け SSR では、Adobe I/O Runtime が必要です。これは、
 
 AEM が標準で Angular および React SPA フレームワークをサポートするのと同様に、Angular および React アプリケーションでもサーバーサイドレンダリングがサポートされます。詳しくは、両方のフレームワークの NPM ドキュメントを参照してください。
 
-* React:[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
-* Angular:[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* React：[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
+* Angular：[https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
-簡単な例については、[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)を参照してください。 アプリケーションサーバー側全体をレンダリングします。 これは実際の例ではありませんが、SSRの実装に何が必要かを示しています。
+単純な例については、[We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)を参照してください。アプリケーションサーバー側全体をレンダリングします。これは実際の例ではありませんが、SSR の実装に必要な事項を示しています。
 
 >[!CAUTION]
 >
->[We.Retailジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)はデモ目的でのみ使用され、推奨されるAdobe I/O Runtimeの代わりにNode.jsを単純な例として使用します。 この例は、どのプロジェクト作業にも使用しないでください。
+>[We.Retail ジャーナルアプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)はデモの目的でのみ使用され、推奨される Adobe I/O Runtime の代わりに、Node.js を単純な例として使用します。この例は、どのプロジェクト作業にも使用しないでください。
 
 >[!NOTE]
 >
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
-## Node.jsの使用{#using-node-js}
+## Node.js の使用 {#using-node-js}
 
-Adobe I/O Runtimeは、AEMでSPA用のSSRを実装する場合に推奨されるソリューションです。
+Adobe I/O Runtime は、AEM にSPA 用の SSR を実装する場合に推奨されるソリューションです。
 
-オンプレミスのAEMインスタンスの場合は、上記と同じ方法で、カスタムのNode.jsインスタンスを使用してSSRを実装することもできます。 これはAdobeでサポートされていますが、お勧めしません。
-
->[!NOTE]
->
->Node.jsは、AdobeがホストするAEMインスタンスに対してはサポートされていません。
+オンプレミスの AEM インスタンスの場合は、上記と同じ方法で、カスタム Node.js インスタンスを使用して SSR を実装することもできます。 これはアドビでサポートされていますが、お勧めしません。
 
 >[!NOTE]
 >
->SSRをNode.jsを使用して実装する必要がある場合は、AEM環境（オーサー、パブリッシュ、ステージなど）ごとに個別のNode.jsインスタンスを作成することをAdobeにお勧めします。
+>Node.js は、アドビがホストする AEM インスタンスではサポートされていません。
+
+>[!NOTE]
+>
+>SSR を Node.js 経由で実装する必要がある場合、アドビでは AEM 環境（オーサー、パブリッシュ、ステージなど）ごとに個別の Node.js インスタンスを使用することをお勧めします。
 
 ## リモートコンテンツレンダラー {#remote-content-renderer}
 
