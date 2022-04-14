@@ -1,8 +1,8 @@
 ---
 title: 検証メッセージの設定
-seo-title: 検証メッセージの設定
+seo-title: Configuring validation messages
 description: Web ブラウザに返すフォームを基準に検証メッセージの表示方法と位置を指定する方法について説明します。
-seo-description: Web ブラウザに返すフォームを基準に検証メッセージの表示方法と位置を指定する方法について説明します。
+seo-description: Learn how to specify how validation messages are displayed and their location relative to the form returned in the web browser.
 uuid: f6bff4fa-f90f-4135-ae40-7ab3d3613122
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f2f8129-e45e-4f3f-ae30-c09330d0e152
 exl-id: 14314383-5228-4904-98c1-586f48a1142c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '374'
+workflow-type: ht
+source-wordcount: '350'
 ht-degree: 100%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 HTML としてレンダリングされるフォームの場合、発生したフォーム検証エラーがユーザーに対して表示されます。検証メッセージの表示方法をカスタマイズできます。検証メッセージを表示する場所に応じて、フォーム内のメッセージの位置とフレーム境界線のサイズも制御できます。
 
-## 検証メッセージの表示方法の指定  {#specify-how-validation-messages-are-displayed}
+## 検証メッセージの表示方法の指定 {#specify-how-validation-messages-are-displayed}
 
 1. 管理コンソールで、サービス／Forms をクリックします。
 1. 「検証結果」の「レポート」リストで次のいずれかのオプションを選択します。
@@ -40,7 +40,7 @@ HTML としてレンダリングされるフォームの場合、発生したフ
 
 1. 「保存」をクリックします。
 
-## Web ブラウザーに返すフォームを基準にした検証メッセージの位置の指定  {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
+## Web ブラウザーに返すフォームを基準にした検証メッセージの位置の指定 {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
 
 「レポート」を「フレーム」または「フレームなし」に設定するとき、検証メッセージの位置を指定できます。
 
@@ -56,7 +56,7 @@ HTML としてレンダリングされるフォームの場合、発生したフ
 
 1. 「保存」をクリックします。
 
-## フレーム境界線のサイズの指定  {#specify-the-frame-border-size}
+## フレーム境界線のサイズの指定 {#specify-the-frame-border-size}
 
 「レポート」を「フレーム」に設定するとき、フレーム境界線のサイズを指定できます。
 
