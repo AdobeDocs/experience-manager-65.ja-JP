@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
 source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1383'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -27,14 +27,14 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 
 * Clientlibs
 
-   clientlibsを使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする場合、`/apps.`の下に独自のクライアントライブラリを作成できます。新しいクライアントライブラリは次の条件を満たす必要があります。
+   クライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズする際に、独自のクライアントライブラリを `/apps.` に作成できます。新しいクライアントライブラリには次の条件があります。
 
    * オーサリングクライアントライブラリ `cq.authoring.editor.sites.page` を使用する必要があります。
    * 適切な `cq.authoring.editor.sites.page.hook` カテゴリに含める必要があります。
 
 * オーバーレイ
 
-   オーバーレイはノード定義に基づいており、（`/libs`の）標準的な機能を（`/apps`の）カスタマイズした独自の機能に重ねることができます。 [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
+   オーバーレイオーバーレイはノード定義に基づいており、（`/libs`にある）標準の機能に、（`/apps`にある）カスタマイズした独自機能を重ねることができます。[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) は継承を許可しているので、オーバーレイを作成するときに、オリジナルの 1 対 1 のコピーは必要ありません。
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 
 >
->このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
+>このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
 
 >[!CAUTION]
 >
@@ -62,7 +62,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. `/apps`の下で、必要な項目（`/libs`に存在）を再作成します。
+>1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >1. `/apps` 内で変更作業をおこないます。
 
 
@@ -74,7 +74,7 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 
 標準 AEM インスタンスは、MSM レイヤーを提供します。これは、[マルチサイト管理](/help/sites-administering/msm.md)に関連するデータにアクセスし、レイヤーでハイライトします。
 
-動作を確認するには、任意の[We.Retail言語コピー](/help/sites-developing/we-retail-globalized-site-structure.md)ページ（または他のライブコピーページ）を編集し、**ライブコピーステータス**&#x200B;モードを選択します。
+実行中に確認するには、任意の [We.Retail 言語コピー](/help/sites-developing/we-retail-globalized-site-structure.md)ページ（または他のライブコピーページ）を編集して、**ライブコピーステータス**&#x200B;モードを選択します。
 
 MSM レイヤーの定義（参照用）は、次のファイルにあります。
 
@@ -88,7 +88,7 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-authoring-new-layer-modeプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
+* [GitHub の aem-authoring-new-layer-mode プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)としてダウンロードします
 
 ## 新しい選択カテゴリをアセットブラウザーに追加 {#add-new-selection-category-to-asset-browser}
@@ -103,17 +103,17 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-authoring-extension-assetfinder-flickrプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
+* [GitHub の aem-authoring-extension-assetfinder-flickr プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)としてダウンロードします
 
 ## リソースのフィルタリング {#filtering-resources}
 
 ページをオーサリングする際、ユーザーは頻繁にリソース（ページ、コンポーネント、アセットなど）から選択する必要があります。これは、例えば、作成者が項目を選択する必要があるリストの形式で表示されます。
 
-特定の用途に関連する内容を持つ妥当なサイズのリストにするには、カスタム述語の形式でフィルターを実装できます。例えば、 [`pathbrowser`](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)コンポーネントを使用してユーザーが特定のリソースへのパスを選択できる場合、表示されるパスを次の方法でフィルタリングできます。
+特定の用途に関連する内容を持つ妥当なサイズのリストにするには、カスタム述語の形式でフィルターを実装できます。例えば、[`pathbrowser`](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) コンポーネントを使用してユーザーが特定のリソースへのパスを選択できるようにするには、表示されるパスを次のようにフィルタリングできます。
 
 * [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
-* 述語の名前を指定し、`pathbrowser`を使用する際にその名前を参照します。
+* 述語の名前を指定し、`pathbrowser`を使用するときにその名前を参照します。
 
 カスタム述語の作成について詳しくは、[この記事](/help/sites-developing/implementing-custom-predicate-evaluator.md)を参照してください。
 
@@ -121,7 +121,7 @@ GitHub のコード
 >
 >`com.day.cq.commons.predicate.AbstractNodePredicate` インターフェイスの実装によるカスタム述語の実装は、クラシック UI でも機能します。
 >
->クラシック UI でカスタム述語を実装する例については、[このナレッジベースの記事](https://helpx.adobe.com/jp/experience-manager/using/creating-custom-cq-tree.html)を参照してください。
+>クラシック UI でカスタム述語を実装する例については、[このナレッジベースの記事](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
 
 ## 新しいアクションをコンポーネントツールバーに追加 {#add-new-action-to-a-component-toolbar}
 
@@ -129,13 +129,13 @@ GitHub のコード
 
 ### コードサンプル {#code-sample-2}
 
-`aem-authoring-extension-toolbar-screenshot` は、コンポーネントをレンダリングするカスタムツールバーアクションの作成方法を示すサンプルパッケージです。
+`aem-authoring-extension-toolbar-screenshot`は、コンポーネントをレンダリングするカスタムツールバーアクションを作成する方法を示すサンプルパッケージです。
 
 GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-authoring-extension-toolbar-screenshotプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
+* [GitHub の aem-authoring-extension-toolbar-screenshot プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)としてダウンロードします
 
 ## 新しいインプレースエディターの追加 {#add-new-in-place-editor}
@@ -157,9 +157,9 @@ GitHub のコード
       * `/libs/foundation/components/text/cq:editConfig`
       * `/libs/foundation/components/image/cq:editConfig`
 
-         * property: `editorType`
+         * プロパティ：`editorType`
 
-            そのコンポーネントに対してインプレース編集が呼び出されたときに使用されるインラインエディターのタイプを定義します。例：`text`、`textimage`、`image`、`title`。
+            そのコンポーネントに対してインプレース編集が呼び出された場合に使用されるインラインエディターのタイプを定義します（例：`text`、`textimage`、`image`、`title`）。
 
 1. エディターの追加の設定の詳細は、設定が含まれている `config` ノード、および必要なプラグイン設定の詳細が含まれている `plugin` ノードをさらに使用して設定できます。
 
@@ -195,7 +195,7 @@ GitHub のコード
 
 >[!NOTE]
 >
->例：
+>例として、次を参照してください。
 >`/libs/cq/gui/components/authoring/editors/clientlibs/core/js/editors/editorExample.js`
 
 1. 実装方法：
@@ -203,7 +203,7 @@ GitHub のコード
    * `setUp`
    * `tearDown`
 
-1. エディター（コンストラクターを含む）の登録：
+1. エディター（コンストラクタを含む）の登録：
 
    * `editor.register`
 
@@ -211,18 +211,18 @@ GitHub のコード
 
 #### 新しいインプレースエディターを作成するためのコードサンプル {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` は、AEMで新しいインプレースエディターを作成する方法を示すサンプルパッケージです。
+`aem-authoring-extension-inplace-editor` は、AEM で新しいインプレースエディターを作成する方法を示すサンプルパッケージです。
 
 GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-authoring-extension-inplace-editorプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
+* [GitHub の aem-authoring-extension-inplace-editor プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor/archive/master.zip)としてダウンロードします
 
 #### 複数のインプレースエディターの設定 {#configuring-multiple-in-place-editors}
 
-コンポーネントに複数のインプレースエディターを含めることができます。複数のインプレースエディターを設定すると、適切なコンテンツを選択して、適切なエディターを開くことができます。詳しくは、 [複数のインプレースエディターの設定](/help/sites-developing/multiple-inplace-editors.md)のドキュメントを参照してください。
+コンポーネントに複数のインプレースエディターを含めることができます。複数のインプレースエディターを設定すると、適切なコンテンツを選択して、適切なエディターを開くことができます。詳しくは、[複数のインプレースエディターの設定](/help/sites-developing/multiple-inplace-editors.md)ドキュメントを参照してください。
 
 ## 新しいページアクションの追加 {#add-a-new-page-action}
 
@@ -236,20 +236,20 @@ GitHub のコード
 
 このページのコードは GitHub にあります
 
-* [GitHubのaem-authoring-extension-header-backtositesプロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
+* [GitHub の aem-authoring-extension-header-backtosites プロジェクトを開きます](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
 * プロジェクトを [ZIP ファイル](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)としてダウンロードします
 
 ## アクティベーションをリクエストワークフローのカスタマイズ {#customizing-the-request-for-activation-workflow}
 
-既製のワークフローである&#x200B;**Request for Activation**:
+標準のワークフロー、**アクティベーションのリクエスト**：
 
-* 適切なレプリケーション権限を&#x200B;**コンテンツ作成者**&#x200B;に持たず、**DAM-Usersと作成者のメンバーシップを**&#x200B;持たない場合、適切なメニューに自動的に表示されます。
+* コンテンツ作成者が適切なレプリケーション権限&#x200B;**を持っていない**&#x200B;が DAM-Users および作成者のメンバーシップ&#x200B;**を持っている**&#x200B;場合、適切なメニューに自動的に表示されます 。
 
 * それ以外の場合は、レプリケーション権限が削除されているので、何も表示されません。
 
-このようなアクティベーションの動作をカスタマイズするには、**アクティベーションのリクエスト**&#x200B;ワークフローをオーバーレイします。
+そのようなアクティベーションに対する動作をカスタマイズするために、**アクティベーションをリクエスト**&#x200B;ワークフローをオーバーレイできます。
 
-1. `/apps`で、**サイト**&#x200B;ウィザードをオーバーレイします。
+1.  `/apps`で **Sites** ウィザードをオーバーレイします。
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 
@@ -259,5 +259,5 @@ GitHub のコード
    >
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
-1. 必要に応じて、[ワークフローモデル](/help/sites-developing/workflows-models.md)と関連する設定/スクリプトを更新します。
-1. [ `replicate`アクション](/help/sites-administering/security.md#actions)に対する権限を、関連するすべてのページのすべての適切なユーザーから削除します。：任意のユーザーがページを公開（またはレプリケート）しようとしたときに、このワークフローをデフォルトのアクションとしてトリガーする場合。
+1. 必要に応じて、[ワークフローモデル](/help/sites-developing/workflows-models.md)および関連設定／スクリプトを更新します。
+1. ユーザーがページを公開（またはレプリケート）しようとする際にこのワークフローをデフォルトのアクションとしてトリガーさせるには、すべての関連するページのすべての適切なユーザーから[ `replicate` アクション](/help/sites-administering/security.md#actions)の権限を削除します。
