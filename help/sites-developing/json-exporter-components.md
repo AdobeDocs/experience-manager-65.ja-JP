@@ -1,8 +1,8 @@
 ---
 title: コンポーネントの JSON 書き出しの有効化
-seo-title: コンポーネントの JSON 書き出しの有効化
+seo-title: Enabling JSON Export for a Component
 description: モデラーフレームワークに基づいてコンテンツの JSON 書き出しを生成するように、コンポーネントを適応させることができます。
-seo-description: モデラーフレームワークに基づいてコンテンツの JSON 書き出しを生成するように、コンポーネントを適応させることができます。
+seo-description: Components can be adapted to generate JSON export of their content based on a modeler framework.
 uuid: d7cc3347-2adb-4ea5-94a4-a847a2e66d28
 contentOwner: User
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 98%
+workflow-type: ht
+source-wordcount: '540'
+ht-degree: 100%
 
 ---
 
@@ -30,13 +30,13 @@ JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bund
 * [コンポーネントに Sling Model を定義する](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Sling Model インターフェイスに注釈を付ける](#annotate-the-sling-model-interface)
 
-## コンポーネントに Sling Model を定義する     {#define-a-sling-model-for-the-component}
+## コンポーネントに Sling Model を定義する {#define-a-sling-model-for-the-component}
 
 まず、コンポーネントに Sling Model を定義する必要があります。
 
 >[!NOTE]
 >
->Sling Model の使用例については、[AEM での Sling Model Exporter の開発](https://helpx.adobe.com/jp/experience-manager/kt/platform-repository/using/sling-model-exporter-tutorial-develop.html)の記事を参照してください。
+>Sling Model の使用例については、[AEM での Sling Model Exporter の開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)の記事を参照してください。
 
 Sling Model の実装クラスに次のような注釈を付ける必要があります。
 
@@ -72,7 +72,7 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに `ComponentExporter` インターフェイス（またはコンテナコンポーネントの場合は `ContainerExporter`）を実装する必要があります。
 
-対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）がおこなわれるかが定義されます。
+対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
 Model インターフェイスには、シリアル化されるメソッドを定義するために適切に注釈を付ける必要があります。デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名からそのまま派生されます。これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 
@@ -93,9 +93,9 @@ GitHub のコード
 
 詳しくは、以下を参照してください。
 
-* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
+* [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/jp/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 
 * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://helpx.adobe.com/experience-manager/core-components/using/content-fragment-component.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)
