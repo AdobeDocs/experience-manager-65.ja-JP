@@ -1,33 +1,33 @@
 ---
 title: アダプティブフォームのスタイル構成
-seo-title: アダプティブフォームのスタイル構成
+seo-title: Styling constructs for adaptive forms
 description: LESS フレームワークを使用して、アダプティブフォームの外観をカスタマイズすることができます。
-seo-description: LESS フレームワークを使用して、アダプティブフォームの外観をカスタマイズすることができます。
+seo-description: Use LESS framework to customize appearance of adaptive forms.
 uuid: d2e45ad9-7322-43ce-a1dd-ad97e2eea742
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
-feature: アダプティブフォーム
+feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '2324'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '2308'
+ht-degree: 100%
 
 ---
 
-# アダプティブフォームのスタイル構成{#styling-constructs-for-adaptive-forms}
+# アダプティブフォームのスタイル設定構成{#styling-constructs-for-adaptive-forms}
 
 ## 前提条件 {#prerequisites}
 
 CSS と LESS フレームワークに関する知識が必要になります。
 
-## カスタマイズの対象  {#what-can-be-customized}
+## カスタマイズの対象 {#what-can-be-customized}
 
-この記事では、公開されているアダプティブフォームの CSS クラスについて説明します。これらのクラスを活用して、アダプティブフォームの様々なコンポーネントのスタイルを設定することができます。 警告を表示するダイアログやステータスバーなど、オーサリングコンポーネントのスタイル設定については、ここでは説明しません。[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を使用してコンポーネントのスタイル設定ができない場合にのみ、これらのスタイル構造を使用してスタイル（CSS または Less）を作成してください。
+この記事では、公開されているアダプティブフォームの CSS クラスについて説明します。これらのクラスを使用して、アダプティブフォームの様々なコンポーネントのスタイルを設定することができます。警告を表示するダイアログやステータスバーなど、オーサリングコンポーネントのスタイル設定については、ここでは説明しません。[テーマエディター](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/themes.html)を使用してコンポーネントのスタイル設定ができない場合にのみ、これらのスタイル構造を使用してスタイル（CSS または Less）を作成してください。
 
-## アダプティブフォームでのスタイルのカスタマイズ {#customizing-styles-in-adaptive-forms}
+## アダプティブフォームのスタイルのカスタマイズ {#customizing-styles-in-adaptive-forms}
 
 LESS フレームワークにより、アダプティブフォームでのスタイルのカスタマイズを簡単に行うことができます。フレームワークでは、変数や関数のセット（Mixin）を使用したスタイルの定義が可能です。LESS フレームワークにより、バンドルされているコードのサイズを減らし、コードの再利用率を高めることができます。
 
@@ -36,11 +36,11 @@ LESS フレームワークにより、アダプティブフォームでのスタ
 * テーマを変更する
 * コンポーネントのスタイルを変更する
 
-## テーマを変更する  {#changing-theme}
+## テーマを変更する {#changing-theme}
 
-アダプティブフォームのテーマを変更すると、アダプティブフォームが埋め込まれているWebページと外観が一致するようにすることができます。
+アダプティブフォームのテーマは、アダプティブフォームが埋め込まれている web ページと外観が一致するように変更することができます。
 
-テーマの変更は通常、アダプティブフォームの全体的な外観をCSS プロパティを使用して変更することにより行われます。コンポーネントのレイアウトや配置の変更など、アダプティブフォームのログ「OK」の操作性に対する大きな変更は、テーマの変更とは見なされません。
+テーマの変更は通常、アダプティブフォームの全体的な外観をCSS プロパティを使用して変更することにより行われます。コンポーネントのレイアウトや配置の変更など、アダプティブフォームのルック＆フィールへの大幅な変更は、テーマの変更とは見なされません。
 
 Web ページのテーマは、ブートストラップに基づき、以下の CSS プロパティによって定義されます。
 
@@ -284,7 +284,7 @@ Web ページのテーマは、ブートストラップに基づき、以下の 
  </tbody>
 </table>
 
-### ウィジェットのスタイル設定における制限事項  {#limitations-in-widget-styling}
+### ウィジェットのスタイル設定における制限事項 {#limitations-in-widget-styling}
 
 変数を使用したフォーカス時、必須、無効フィールドのスタイル設定には制限があります。ただし、スタイルをオーバーライドすることにより変更することができます。変数の使用における制限は、主に変数の数を抑えるために設けられています。制限は、フィールドの外観が大きく変更され、前述の状態のいずれかにある場合に緩和できます。
 
@@ -533,7 +533,7 @@ Web ページのテーマは、ブートストラップに基づき、以下の 
  </tbody>
 </table>
 
-## 添付ファイル {#file-attachment}
+## ファイル添付 {#file-attachment}
 
 アダプティブフォームの添付ファイルウィジェットでは、ファイルをアップロードすることができます。変数を使用してウィジェットをカスタマイズすることもできます。
 
@@ -570,7 +570,7 @@ Web ページのテーマは、ブートストラップに基づき、以下の 
  </tbody>
 </table>
 
-## ナビゲーターのスタイル  {#navigator-styles}
+## ナビゲーターのスタイル {#navigator-styles}
 
 ナビゲータータブには 4 種類あります。これらに’は、左側および上部のタブ、ウィザード、アコーディオンが含まれています。各ナビゲーターには、異なるクラスが割当られています。
 
@@ -982,7 +982,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
  </tbody>
 </table>
 
-## スクロールインジケーター  {#scroll-indicator}
+## スクロールインジケーター {#scroll-indicator}
 
 これらの変数は、スクロールインジケーターに影響します。スクロールインジケーターとは、モバイルデバイスまたは画面の小さいデバイスに表示されるオレンジの矢印のことです。スクロールインジケーターは、画面で表示されている部分以外にコンテンツがあることを示しています。下方向にスクロールすると表示されます。矢印は、コンテンツの一番下に到達すると消えます。
 
@@ -1020,7 +1020,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
  </tbody>
 </table>
 
-## モバイル固定ツールバーのレイアウト固有の変数  {#mobile-fixed-toolbar-layout-specific-variables}
+## モバイル固定ツールバーのレイアウト固有の変数 {#mobile-fixed-toolbar-layout-specific-variables}
 
 以下の表に示すこれらの変数は、モバイル固定ツールバーのレイアウトに影響します。
 
@@ -1074,7 +1074,7 @@ guideNavIcon クラスで、タブナビゲーター（左側と上部の両方�
  </tbody>
 </table>
 
-## テーマ固有の変数  {#theme-specific-variable}
+## テーマ固有の変数 {#theme-specific-variable}
 
 /etc/clientlibs/fd/af/guidetheme/simpleEnrollment の&#x200B;**シンプルな登録**&#x200B;のテーマおよびカテゴリ `guide.theme.simpleEnrollment` でも、いくつかの変数が導入されています。シンプルな登録を強化するテーマを作成したい場合は、以下の追加変数を利用できます。
 
