@@ -1,8 +1,8 @@
 ---
 title: PDF ドキュメントのアセンブリ
-seo-title: PDF ドキュメントのアセンブリ
-description: Assemblerサービスを使用して、複数のPDFドキュメントを1つのPDFドキュメントにアセンブリしたり、1つのPDFドキュメントを複数のPDFドキュメントにディスアセンブリしたりします。
-seo-description: Assemblerサービスを使用して、複数のPDFドキュメントを1つのPDFドキュメントにアセンブリしたり、1つのPDFドキュメントを複数のPDFドキュメントにディスアセンブリしたりします。
+seo-title: Assembling PDF Documents
+description: Assembler サービスを使用して、複数の PDF ドキュメントを 1 つの PDF ドキュメントに組み立てたり、1 つの PDF ドキュメントを複数の PDF ドキュメントに分解したりします。
+seo-description: Use the Assembler service to assemble multiple PDF documents into one PDF document or disassemble one PDF document into multiple PDF documents.
 uuid: 0789feea-1bbc-4acd-9ad7-ddf4d05e1c68
 contentOwner: admin
 content-type: reference
@@ -13,22 +13,22 @@ discoiquuid: 3dd2b0d3-6023-490a-9b17-e29cc21c1b9d
 role: Developer
 exl-id: 991f5a4e-4752-4c0d-9926-de7e4855ecd1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 5%
+workflow-type: ht
+source-wordcount: '148'
+ht-degree: 100%
 
 ---
 
 # PDF ドキュメントのアセンブリ {#assembling-pdf-documents}
 
-**このドキュメントのサンプルと例は、JEE上のAEM Forms環境に限られています。**
+**このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-**Assemblerサービスについて**
+**Assembler サービスについて**
 
-Assemblerサービスは、複数のPDFドキュメントを1つのPDFドキュメントにアセンブリしたり、1つのPDFドキュメントを複数のPDFドキュメントにディスアセンブリしたりできます。 Assemblerサービスでは、ページサイズの変更やコンテンツの回転など、様々な方法でドキュメントを操作できます。 ヘッダー、フッター、目次などの追加のコンテンツを挿入したり、注釈、添付ファイル、しおりなどの既存のコンテンツを保持、読み込み、書き出ししたりできます。
+Assembler サービスでは、複数の PDF ドキュメントを 1 つの PDF ドキュメントに組み立てたり、1 つの PDF ドキュメントを複数の PDF ドキュメントに分解したりできます。Assembler サービスでは、ページサイズの変更やコンテンツの回転など、様々な方法でドキュメントを操作できます。ヘッダー、フッター、目次などの追加のコンテンツを挿入したり、注釈、添付ファイル、ブックマークなどの既存のコンテンツを保持、インポート、エクスポートしたりできます。
 
-LiveCycleES 8.0以降では、AssemblerサービスでPDFパッケージのサポートが利用可能になりました。
+LiveCycleES 8.0 以降では、Assembler サービスで PDF パッケージのサポートが利用できます。
 
 >[!NOTE]
 >
->Assemblerサービスについて詳しくは、『AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63)向けサービスリファレンス』を参照してください。[
+>Assembler サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
