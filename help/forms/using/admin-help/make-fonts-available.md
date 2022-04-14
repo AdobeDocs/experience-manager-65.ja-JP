@@ -1,8 +1,8 @@
 ---
 title: フォントを使用可能にする
-seo-title: フォントを使用可能にする
+seo-title: Make fonts available
 description: フォーム内で使用されているフォントが、AEM Forms をホストする J2EE アプリケーションサーバーで使用できることを確認します。
-seo-description: フォーム内で使用されているフォントが、AEM Forms をホストする J2EE アプリケーションサーバーで使用できることを確認します。
+seo-description: Ensure that the fonts used within a form are available for use on the J2EE application server hosting AEM forms.
 uuid: 6588b4b6-f866-4253-91c8-3aa174340e8c
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f58a6c4-3190-49d4-800c-4a55dca7c296
 exl-id: e9eae896-b1e4-4caa-b466-ac8c9e7416a4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '219'
+ht-degree: 100%
 
 ---
 
@@ -26,8 +26,8 @@ ht-degree: 96%
 **カスタマーフォントディレクトリの場所の指定**
 
 1. 管理コンソールで、設定／コアシステム設定／設定をクリックします。
-1. 「システムフォントディレクトリの場所」ボックスにカスタマーフォントディレクトリのパスを入力します。複数のディレクトリを追加する場合は、セミコロン&#x200B;**;**&#x200B;で区切ります。
-1. 「OK」をクリックします。
+1. 「システムフォントディレクトリの場所」ボックスにカスタマーフォントディレクトリのパスを入力します。複数のディレクトリを追加する場合は、セミコロン **;** で区切って指定します。
+1. 「OK」をクリックしてください。
 1. AEM Forms がインストールされているシステムを再起動します。
 
 >[!NOTE]
