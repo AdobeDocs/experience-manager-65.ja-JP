@@ -1,16 +1,16 @@
 ---
 title: ヘッドレスアプリケーションの運用開始方法
-description: AEMヘッドレス開発者ジャーニーのこの部分では、ヘッドレスアプリケーションをライブにデプロイする方法について説明します。
+description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法について説明します。
 source-git-commit: 20d46a7c37663dac36e6af9582d569a7f782eab7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1903'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # ヘッドレスアプリケーションの運用開始方法 {#go-live}
 
-この部分では、 [AEMヘッドレス開発者ジャーニー](overview.md)ヘッドレスアプリケーションをライブにデプロイする方法を説明します。
+[AEM ヘッドレスデベロッパージャーニー](overview.md)のこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法を説明します。
 
 ## これまでの説明内容 {#story-so-far}
 
@@ -55,7 +55,7 @@ AEM は Java アプリケーションなので、AEM as a Cloud Service の開�
 
 AEM Maven プロジェクトアーキタイプから生成されたプロジェクトをビルドするために、AEM では Apache Maven を使用します。主要な IDE はすべて Maven との統合をサポートしています。
 
-Node.js は、AEM プロジェクトの `ui.frontend` サブプロジェクトのフロントエンドアセットを操作するために使用される JavaScript ランタイム環境です。Node.js は、事実上の Node.js パッケージマネージャーである npm と共に配布され、JavaScript の依存関係の管理に使用されます。
+Node.js は、AEM プロジェクトの `ui.frontend` サブプロジェクトのフロントエンドアセットを操作するために使用される JavaScript ランタイム環境です。Node.js は npm と一緒に配布され、JavaScript の依存関係の管理に使用される事実上の Node.js パッケージマネージャーとなっています。
 
 ## AEM システムのコンポーネントの概要 {#components-of-an-aem-system-at-a-glance}
 
@@ -65,7 +65,7 @@ Node.js は、AEM プロジェクトの `ui.frontend` サブプロジェクト�
 
 * **オーサーサービス**&#x200B;では、内部ユーザーがコンテンツの作成、管理、プレビューを行います。
 
-* **パブリッシュサービス**&#x200B;は「ライブ」環境と考えられ、通常はエンドユーザーがやり取りする相手になります。コンテンツは、Author サービスで編集および承認された後、パブリッシュサービスに配布（レプリケート）されます。 AEM ヘッドレスアプリケーションで最も一般的なデプロイメントパターンは、実稼動版のアプリケーションを AEM パブリッシュサービスに接続させることです。
+* **パブリッシュサービス**&#x200B;は「ライブ」環境と考えられ、通常はエンドユーザーがやり取りする相手になります。コンテンツは、オーサーサービスで編集および承認された後、パブリッシュサービスに配信（レプリケート）されます。AEM ヘッドレスアプリケーションで最も一般的なデプロイメントパターンは、実稼動版のアプリケーションを AEM パブリッシュサービスに接続させることです。
 
 * **ディスパッチャー**&#x200B;は、AEM Dispatcher モジュールで拡張された静的 Web サーバーです。パブリッシュインスタンスで生成された Web ページをキャッシュしてパフォーマンスを向上します。
 
@@ -101,9 +101,9 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 それではいよいよ、以下に示すベストプラクティスに従って、AEM ヘッドレスアプリケーションのローンチの準備を行います。
 
-### 起動前にヘッドレスアプリケーションを保護する {#secure-and-scale-before-launch}
+### ローンチ前にヘッドレスアプリケーションのセキュリティを確保 {#secure-and-scale-before-launch}
 
-1. 準備 [認証](/help/assets/content-fragments/graphql-authentication-content-fragments.md) GraphQL リクエストの
+1. GraphQL リクエストの[認証](/help/assets/content-fragments/graphql-authentication-content-fragments.md)を準備
 
 ### モデル構造と GraphQL 出力 {#structure-vs-output}
 
@@ -122,7 +122,7 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 >[!NOTE]
 >
->詳しくは、 [その他のリソース](#additional-resources) を参照してください。
+>CDN とキャッシングについて詳しくは、[その他のリソース](#additional-resources)を参照してください。
 
 ### ヘッドレスコンテンツのダウンロード時間の短縮 {#improve-download-time}
 
@@ -136,15 +136,15 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 ## 実稼動へのデプロイ {#deploy-to-production}
 
-実稼動環境へのデプロイは、 *伝統的な* Maven を使用してデプロイされる、または Adobe Managed Services(AMS) 上にある、したがって Cloud Manager を使用してデプロイされるAEMインスタンス。
+実稼動環境へのデプロイは、Maven を使用してデプロイする&#x200B;*従来の* AEM インスタンスがあるか、または Adobe Managed Services（AMS）上にあり、つまり Cloud Manager を使用しているかどうかによって異なります。
 
 ## Maven を使用した実稼動環境へのデプロイ {#deploy-to-production-maven}
 
-の *伝統的な* Maven を使用したデプロイメント（AMS 以外）では、 [WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en#build) を参照してください。
+Maven を使用した&#x200B;*従来の*&#x200B;デプロイメント（AMS 以外）の概要については、[WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=ja#build)を参照してください。
 
 ## Cloud Manager を使用した実稼動環境へのデプロイ {#deploy-to-production-cloud-manager}
 
-Cloud Manager を使用して AMS をお使いの場合は、すべてがテスト済みで正常に動作していることを確認したら、コードの更新を [Cloud Manager での一元化された Git リポジトリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=ja).
+Cloud Manager を使用して AMS をお使いの場合は、すべてがテスト済みで正常に機能していることを確認したら、コードの更新を [Cloud Manager の一元化された Git リポジトリ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=ja)にプッシュできます。
 
 アップデートが Cloud Manager にアップロードされたら、[Cloud Managerの CI／CD パイプライン](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=ja#how-to-use)を使用して、アップデートを AEM にデプロイできます。
 
@@ -213,14 +213,14 @@ AEM ヘッドレスアプリケーションの使用時に最高のユーザー�
 
 ## その他のリソース {#additional-resources}
 
-* [AEM Developing Guide](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html?lang=en)
+* [AEM 開発ガイド](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html?lang=ja)
 
 * [WKND チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)
 
-* [AEM用 Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
+* [AEM 用の Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=ja)
 
 * CDN キャッシュ
 
-   * [CDN キャッシュの制御](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
+   * [CDN キャッシュの制御](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#controlling-a-cdn-cache)
 
-   * の設定 [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*CDN Rewriter を検索します。*)
+   * [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=ja) の設定（*CDN Rewriter の検索*）
