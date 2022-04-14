@@ -3,15 +3,15 @@ title: RemotePage コンポーネント
 description: RemotePage コンポーネントは、AEM 内のリモート React SPA を編集するためのカスタムページコンポーネントです。
 exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 source-git-commit: a92358d187aa78e05dd9b5a7bd4ae14bf0972f62
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '354'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
 # RemotePage コンポーネント {#remote-page-component}
 
-外部 SPA と AEM の間でどのレベルの統合をおこなうかを決める際に、AEM 内で SPA を表示して編集できる必要があることはよくあります。RemotePage コンポーネントは、この目的のためのカスタムページコンポーネントです。
+外部 SPA と AEM の間でどのレベルの統合を行うかを決める際に、AEM 内で SPA を表示して編集できる必要があることは、多くの場合、明らかです。RemotePage コンポーネントは、この目的のためのカスタムページコンポーネントです。
 
 ## 概要 {#overview}
 
@@ -28,19 +28,19 @@ AEM の編集可能な外部 SPA の詳細については、](spa-edit-external.
 * 開発での CORS の有効化
 * ページプロパティでのリモート URL の設定
 * AEM での SPA のレンダリング
-* Webアプリケーションは、次のいずれかのバンドラーアセットマニフェストを使用し、読み込まれるすべてのCSSおよびJSファイルをentrypointsプロパティにリストするドメインルートにasset-manifest.jsonファイルを公開する必要があります。
+* Web アプリケーションは、次のようなバンドラーアセットマニフェストを使用して、読み込まれるすべての CSS ファイルおよび JS ファイルをエントリポイントプロパティにリストする asset-manifest.json ファイルをドメインルートに公開する必要があります。
    * https://github.com/shellscape/webpack-manifest-plugin
    * https://github.com/webdeveric/webpack-assets-manifest
    * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
 
-   ![入口](assets/asset-manifest-entrypoints.png)
+   ![エントリポイント](assets/asset-manifest-entrypoints.png)
 
-* アプリケーションは、body要素の下の`<div id="root"></div>`で初期化できる必要があります。 アプリケーションが異なるマークアップをインスタンス化する必要がある場合は、`sling:resourceSuperType="spa-project-core/components/remotepage`を持つプロキシコンポーネントのHTLスクリプトで適宜調整する必要があります。
+* アプリケーションは、body 要素の下の `<div id="root"></div>` で初期化できる必要があります。アプリケーションで異なるマークアップをインスタンス化する必要がある場合は、`sling:resourceSuperType="spa-project-core/components/remotepage` を持つプロキシコンポーネントの HTL スクリプトで適宜調整する必要があります。
 
 ## 制限事項 {#limitations}
 
 * 現在の RemotePage コンポーネントの実装では、リモートの React アプリケーションのみがサポートされています。
-* AEM でリモートレンダリングをおこなう場合、アプリケーションのルート HTML ファイルに定義された内部 CSS と、ルート DOM ノードのインライン CSS は使用できません。
+* AEM でリモートレンダリングを行う場合、アプリケーションのルート HTML ファイルに定義された内部 CSS と、ルート DOM ノードのインライン CSS は使用できません。
 
 ## 技術的詳細 {#technical-details}
 
