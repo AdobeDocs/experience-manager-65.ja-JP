@@ -1,8 +1,8 @@
 ---
 title: Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする
-seo-title: Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする
+seo-title: Enabling online commenting for Adobe Reader web browser plug-in
 description: Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする方法について説明します。
-seo-description: Adobe Reader Web ブラウザープラグインのオンライン注釈を有効にする方法について説明します。
+seo-description: Learn how to enable online commenting for Adobe Reader web browser plug-in.
 uuid: 3ac5270f-2b8a-47b1-b0ca-a5607476923f
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9c4f8e1e-c2f7-4648-9a2a-104bd540a47a
 exl-id: 6db1e998-f810-4715-b0b7-981e8d807cf8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '134'
+workflow-type: ht
+source-wordcount: '113'
 ht-degree: 100%
 
 ---
