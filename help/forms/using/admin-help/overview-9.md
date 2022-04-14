@@ -1,8 +1,8 @@
 ---
 title: Forms ワークフローの概要
-seo-title: Forms ワークフローの概要
+seo-title: Overview of Forms workflow
 description: Forms ワークフローでは、ユーザーは人間中心のプロセスを設計、管理および最適化することができます。Forms ワークフローを使用すると、システムとユーザーをつなぐ、自動ビジネスプロセスアプリケーションを管理することもできます。
-seo-description: Forms ワークフローでは、ユーザーは人間中心のプロセスを設計、管理および最適化することができます。Forms ワークフローを使用すると、システムとユーザーをつなぐ、自動ビジネスプロセスアプリケーションを管理することもできます。
+seo-description: Forms workflow lets users design, manage, and optimize human-centric processes. Using forms workflow, users can also manage automated business-process applications that connect systems and people.
 uuid: b28ada7c-de75-416a-b2c8-f6494be5330c
 contentOwner: admin
 content-type: reference
@@ -11,8 +11,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 7d2a9de8-13d1-4981-9ba2-9654127556b8
 exl-id: 68a9d95a-d51c-4a97-ae36-d4cb16c6fac0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '283'
+workflow-type: ht
+source-wordcount: '254'
 ht-degree: 100%
 
 ---
@@ -67,7 +67,7 @@ Forms ワークフローでは、ユーザーは人間中心のプロセスを�
     <ul>
      <li><p>ユーザー ID またはタスク ID によるタスクの検索</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">タスクの使用</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">タスクの操作</a></p></td>
   </tr>
   <tr>
    <td><p>停止した操作のエラー</p></td>
@@ -76,7 +76,7 @@ Forms ワークフローでは、ユーザーは人間中心のプロセスを�
      <li><p>停止したすべての操作とそのエラーの表示</p></li>
      <li><p>停止した操作の再試行または終了</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作および停止したブランチの使用</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作やブランチの扱い</a></p></td>
   </tr>
   <tr>
    <td><p>停止したブランチのエラー</p></td>
@@ -85,7 +85,7 @@ Forms ワークフローでは、ユーザーは人間中心のプロセスを�
      <li><p>停止したすべてのブランチとそのエラーの表示</p></li>
      <li><p>停止したブランチの再試行</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作および停止したブランチの使用</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">停止した操作やブランチの扱い</a></p></td>
   </tr>
   <tr>
    <td><p>不在</p></td>
