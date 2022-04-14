@@ -1,8 +1,8 @@
 ---
 title: インタラクティブ通信をインストールして設定する
-seo-title: インタラクティブ通信をインストールして設定する
+seo-title: Install and configure Interactive Communications
 description: AEM Forms インタラクティブ通信をインストールして設定し、業務上の書簡、ドキュメント、取引明細書、給与金通知、マーケティング用メール、請求書、ウェルカムキットを作成します。
-seo-description: AEM Forms インタラクティブ通信をインストールして設定し、業務上の書簡、ドキュメント、取引明細書、給与金通知、マーケティング用メール、請求書、ウェルカムキットを作成します。
+seo-description: Install and configure AEM Forms Interactive Communications to create business correspondences, documents, statements, benefit notices, marketing mails, bills, and welcome kits.
 uuid: 8acb7f68-0b52-4acd-97e2-af31c9408e8d
 topic-tags: installing
 discoiquuid: 225f2bc1-6842-4c79-a66d-8024a29325c0
@@ -10,9 +10,9 @@ docset: aem65
 role: Admin
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 71%
+workflow-type: ht
+source-wordcount: '1385'
+ht-degree: 100%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 71%
 
 ## はじめに {#introduction}
 
-AEM Formは、ビジネス通信、ドキュメント、声明書、便益通知、マーケティングメール、請求書、ウェルカムキットなど、安全でインタラクティブなドキュメントの作成、アセンブリ、管理、配信を一元管理する機能を備えています。 この機能は、インタラクティブ通信として知られています。これは、AEM Forms のアドオンパッケージに含まれる機能で、アドオンパッケージは、AEM のオーサーインスタンスまたはパブリッシュインスタンスに展開されます。
+AEM Forms を使用すると、業務上の通信、ドキュメント、取引明細書、給付金通知、マーケティング用メール、請求書、ウェルカムキットなど、安全でインタラクティブなドキュメントの作成、組み立て、管理、配信を集中管理できます。この機能は、インタラクティブ通信として知られています。これは、AEM Forms のアドオンパッケージに含まれる機能で、アドオンパッケージは、AEM のオーサーインスタンスまたはパブリッシュインスタンスに展開されます。
 
 インタラクティブ通信機能を使用して、複数形式で通信を作成できます。例えば、Web や PDF です。インタラクティブ通信を AEM ワークフローと統合して、アセンブリした通信を処理し、選択したチャネルの顧客に配信することができます。例えば、電子メールを介してエンドユーザーに通信を送信します。
 
-以前のバージョンからアップグレードし、既にCorrespondence Managementに投資している場合は、[互換性パッケージ](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package)をインストールして、引き続きCorrespondence Managementを使用できます。 インタラクティブ通信と Correspondence management の違いについて詳しくは、「[インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management)」を参照してください。
+以前のバージョンからアップグレードして、既に Correspondence Management を使用している場合は、[互換性パッケージ](../../forms/using/installing-configuring-intreactive-communication-correspondence-management.md#install-compatibility-package)をインストールすると引き続き Correspondence Management を使用できます。インタラクティブ通信と Correspondence management の違いについて詳しくは、「[インタラクティブ通信の概要](/help/forms/using/interactive-communications-overview.md#interactive-communications-vs-correspondence-management)」を参照してください。
 
 AEM Forms は強力なエンタープライズクラスのプラットフォームです。インタラクティブ通信は、AEM Forms のみが持つ機能の 1 つです。機能の完全な一覧については、「[AEM Forms の概要](../../forms/using/introduction-aem-forms.md)」を参照してください。
 
@@ -38,15 +38,15 @@ AEM Forms のインタラクティブ通信は、AEM Forms のオーサーイン
 
 ## システム要件 {#system-requirements}
 
-AEM Formsのインタラクティブ通信およびCorrespondence Management機能のインストールと設定を開始する前に、次の点を確認してください。
+AEM Forms のインタラクティブ通信および通信の管理機能をインストールして設定する前に、次のことを確認してください。
 
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。サポート対象のハードウェアおよびソフトウェアの詳細な一覧については、「[技術的要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
-* AEM インスタンスが稼働していること。AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。AEM Formsのインタラクティブ通信およびCorrespondence Management機能を実行するには、少なくとも1つのAEMインスタンス（オーサーインスタンスまたは処理インスタンス）が必要です。
+* AEM インスタンスが稼働していること。AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。AEM Forms のインタラクティブ通信および通信管理機能を実行するには、少なくとも 1 つの AEM インスタンス（作成者または処理）を必要とします。
 
    * **作成者：**&#x200B;コンテンツを作成、アップロード、編集し、Web サイトを管理する AEM インスタンス。公開する準備ができたコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。オーサーインスタンスを設定し、インストールの実行後に強化することができます。
+   * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。  
 
    * **パブリッシュ**：発行されたコンテンツをインターネットまたは社内ネットワークを通じて公開する AEM インスタンス。
 
@@ -88,20 +88,20 @@ AEM Formsのインタラクティブ通信およびCorrespondence Management機�
 
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
-AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Formsのインタラクティブ通信、Correspondence Management、その他の機能が含まれています。 次の手順を実行してアドオンパッケージをインストールします。
+AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms インタラクティブ通信、通信管理およびその他の機能が含まれています。次の手順を実行してアドオンパッケージをインストールします。
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。 **[!UICONTROL ダウンロードの検索]**&#x200B;オプションを使用して、結果をフィルターすることもできます。
-1. お使いのオペレーティングシステムに適したパッケージ名をタップし、「**[!UICONTROL EULA利用条件]**&#x200B;に同意し、**[!UICONTROL ダウンロード]**」をタップします。
+   2. パッケージのバージョンとタイプを選択します。 「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルタリングすることもできます。
+1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用条件に同意する]**」を選択して「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
-1. パッケージを選択し、「**[!UICONTROL インストール]**」をクリックします。
+1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
 
-   [AEM Formsリリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
+   「[AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)」記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Formsサーバーを停止する前に、ServiceEvent REGISTEREDメッセージとServiceEvent UNREGISTEREDメッセージが [AEM-Installation-Directory] /crx-quickstart/logs/error.logファイルに表示されなくなり、ログが安定するまで待ちます。
+1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**すぐにはサーバーを再起動しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが [AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルに表示されなくなり、このログファイルが安定した状態になるまで待ってください。
 1. 手順 1 から 7 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
 ## インストール後の設定 {#post-installation-configurations}
@@ -112,12 +112,12 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### RSA ライブラリと BouncyCastle ライブラリの設定  {#configure-rsa-and-bouncycastle-libraries}
 
-すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行し、ライブラリの委任を起動します。
+これらのライブラリを起動するには、すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行します。  
 
 1. 基になる AEM インスタンスを停止します。
-1. [AEMインストールディレクトリ]\crx-quickstart\conf\sling.propertiesファイルを開いて編集します。
+1. 編集用に [AEM インストールディレクトリ]\crx-quickstart\conf\sling.properties ファイルを開きます。
 
-   [AEMインストールディレクトリ]\crx-quickstart\bin\start.batを使用してAEMを起動した場合は、[AEM_root]\crx-quickstart\にあるsling.propertiesを編集します。
+   [AEM インストールディレクトリ]\crx-quickstart\bin\start.bat を使用して AEM を起動する場合は、[AEM_root]\crx-quickstart\ にある sling.properties を編集します。
 
 1. 以下のプロパティを sling.properties ファイルに追加します。
 
@@ -130,11 +130,11 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 #### シリアル化エージェントの設定 {#configure-the-serialization-agent}
 
-すべてのオーサーインスタンスとパブリッシュインスタンスで次の手順を実行し、パッケージをに追加許可リストします。
+このパッケージを許可リストに加えるには、オーサーインスタンスとパブリッシュインスタンスの両方で以下の手順を実行します。
 
-1. ブラウザーウィンドウで、AEM Configuration Manager を開きます。デフォルトのURLはhttps://&#39;[server]:[port]&#39;/system/console/configMgrです。
+1. ブラウザーウィンドウで、AEM Configuration Manager を開きます。デフォルトの URL は https://&#39;[server]:[port]&#39;/system/console/configMgr です。
 1. **デシリアライゼーションファイアウォール設定**&#x200B;を検索して開きます。
-1. **sun.util.calendar**&#x200B;パッケージを&#x200B;**許可リスト**&#x200B;フィールドに追加します。 「保存」をクリックします。
+1. **sun.util.calendar** パッケージを&#x200B;**許可リスト**&#x200B;フィールドに追加します。「保存」をクリックします。
 1. 手順 1 から 3 を、すべてのオーサーインスタンスとパブリッシュインスタンスで繰り返します。
 
 ### インストール後のオプションの設定 {#optional-post-installation-configurations}
@@ -143,7 +143,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 インタラクティブ通信は、顧客通信を作成するためのデフォルトの方法です。AEM 6.5 Forms で顧客通信を作成する場合は、インタラクティブ通信を使用することを推奨します。以前のバージョンからアップグレードまたは移行を行って、引き続きレター（Correspondence Management）を使用する予定の場合は、[AEMFD 互換性パッケージ](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/fd/AEM-FORMS-6.4-COMPAT)をインストールします。
 
-AEMFD互換性パッケージを使用すると、AEM 6.5 Forms上のAEM 6.4 Forms、AEM 6.3 FormsおよびAEM 6.2 Formsの次のアセットを使用できます。
+AEMFD 互換性パッケージを使用すると、AEM 6.5 Forms で AEM 6.2 Forms、AEM 6.3 Forms および AEM 6.4 Forms の次のアセットを使用できます。
 
 * ドキュメントフラグメント
 * レター
@@ -152,7 +152,7 @@ AEMFD互換性パッケージを使用すると、AEM 6.5 Forms上のAEM 6.4 For
 
 #### Dispatcher の設定 {#configure-dispatcher}
 
-Dispatcherは、Adobe Experience Managerのキャッシュやロードバランシングを行うツールで、エンタープライズクラスのWebサーバーと組み合わせて使用できます。 [Dispatcher](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)を使用する場合は、AEM Formsに対して次の設定を実行します。
+Dispatcher は、Adobe Experience Manager のキャッシュやロードバランシングツールで、企業向けの Web サーバーと組み合わせて使用できます。 [Dispatcher](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用する場合は、AEM Forms の次の設定を実行してください。
 
 1. AEM Forms のアクセスの設定:
 
@@ -160,27 +160,27 @@ Dispatcherは、Adobe Experience Managerのキャッシュやロードバラン�
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)」を参照してください。
+   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html)」を参照してください。
 
 1. リファラーフィルターサービスの設定：
 
-   管理者として Apache Felix Configuration Manager にログインします。Configuration ManagerのデフォルトURLは、https://&#39;server&#39;:[port_number]/system/console/configMgrです。 **Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。エントリの形式はhttps://&#39;[server]:[port]&#39;です。
+   管理者として Apache Felix Configuration Manager にログインします。Configuration Manager のデフォルト URL は https://&#39;server&#39;:[port_number]/system/console/configMgr です。**Configurations**&#x200B;メニューで「**Apache Sling Referrer Filter**」を選択します。「Allow Hosts」フィールドで、ディスパッチャーのホスト名を入力してそれをリファラーとして許可し、「**保存**」をクリックします。入力の形式は https://&#39;[server]:[port]&#39; です。
 
 #### Adobe Target の統合 {#integrate-adobe-target}
 
 顧客は、対話型コミュニケーションのエクスペリエンスに魅力がない場合、これを放棄してしまいます。また、フォームが顧客にとって使いにくい場合は、サポート量が増加し組織のコストが膨らむことになります。コンバージョン率を向上させる顧客体験を正しく認識して提供することは非常に重要であり、難題でもあります。この問題を解決するキーは AEM Forms にあります。
 
-AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target と統合することで、個々の顧客に対応した魅力的な顧客体験を、複数のデジタルチャネルにわたって提供します。Adobe Targetを使用してインタラクティブ通信をパーソナライズするには、[Adobe TargetをAEM Forms](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)と統合します。
+AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target と統合することで、個々の顧客に対応した魅力的な顧客体験を、複数のデジタルチャネルにわたって提供します。Adobe Target を使用してインタラクティブ通信をパーソナライズするには、[Adobe Target を AEM Forms に統合する](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)を参照してください。
 
 #### フォームデータモデルに SSL 通信を設定する  {#configure-ssl-communcation-for-form-data-model}
 
-フォームデータモデル用の SSL 通信を有効にすることができます。フォームデータモデル用の SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行して、証明書を追加できます。
+フォームデータモデル用の SSL 通信を有効にすることができます。フォームデータモデル用の SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行すると証明書を追加できます。
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 
 ## 次の手順 {#next-steps}
 
-インタラクティブ通信およびCorrespondence Management機能を使用する環境を設定しました。 この機能を使用するための手順は、次のとおりです。
+インタラクティブ通信および通信管理機能を使用するための環境を設定しました。この機能を使用するための手順は、次のとおりです。
 
 * [Correspondence Management の概要](/help/forms/using/interactive-communications-overview.md)
 
