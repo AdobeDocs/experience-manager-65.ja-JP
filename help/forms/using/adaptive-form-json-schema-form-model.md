@@ -1,14 +1,14 @@
 ---
-title: JSONスキーマを使用してアダプティブFormsを作成する方法
-description: JSONスキーマをフォームモデルとして使用してアダプティブフォームを作成する方法を説明します。 既存のJSONスキーマを使用してアダプティブフォームを作成することができます。 JSONスキーマのサンプルを使用して、より深く掘り下げ、JSONスキーマ定義のフィールドを事前設定し、アダプティブフォームコンポーネントの有効な値を制限し、サポートされていない構成要素を学びます。
-feature: アダプティブフォーム
+title: JSON スキーマを使用してアダプティブフォームを作成する方法。
+description: JSON スキーマをフォームモデルとして使用してアダプティブフォームを作成する方法を説明します。アダプティブフォームの作成には、既存の JSON スキーマを使用できます。JSON スキーマのサンプルをさらに詳しく調べ、JSON スキーマ定義のフィールドを事前設定し、アダプティブフォームコンポーネントの許容値を制限し、サポートされていない構成を学習します。
+feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: tm+mt
-source-wordcount: '1450'
-ht-degree: 73%
+workflow-type: ht
+source-wordcount: '1448'
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 73%
 
 ## 前提条件 {#prerequisites}
 
-JSONスキーマをフォームモデルとして使用してアダプティブフォームを作成する場合は、JSONスキーマの基本を理解しておく必要があります。 この記事を読む前に、以下のコンテンツを読んでおくことをお勧めします。
+フォームモデルとして JSON スキーマを使用してアダプティブフォームをオーサリングする場合、JSON スキーマの基本を理解している必要があります。この記事を読む前に、以下のコンテンツを読んでおくことをお勧めします。
 
 * [アダプティブフォームの作成](creating-adaptive-form.md)
 * [JSON スキーマ](https://json-schema.org/)
@@ -25,7 +25,7 @@ JSONスキーマをフォームモデルとして使用してアダプティブ�
 
 [!DNL Adobe Experience Manager Forms] では、既存の JSON スキーマをフォームモデルとして使用したアダプティブフォームの作成がサポートされています。JSON スキーマは、組織内のバックエンドシステムによってデータが作成または使用される構造を表します。使用する JSON スキーマは、[v4 仕様](https://json-schema.org/draft-04/schema)に準拠している必要があります。
 
-JSON スキーマの使用の主な特長を以下に示します。
+JSON スキーマの使用上の主な特長を以下に示します。
 
 * JSON の構造は、アダプティブフォームのオーサリングモードの「コンテンツファインダー」タブでツリーとして表示されます。JSON 階層からアダプティブフォームに要素をドラッグして追加できます。
 * 関連付けられたスキーマに準拠する JSON を使用して、フォームに事前入力できます。
@@ -61,7 +61,7 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
    <th><strong>アダプティブフォームコンポーネント</strong></th>
   </tr>
   <tr>
-   <td><p>enum および enumNames 制約を含む string プロパティ。</p> <p>構文、</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
+   <td><p>enum および enumNames 制約を含む string プロパティ。</p> <p>構文</p> <p> <code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"enum" : ["M", "F"]</code></p> <p><code>"enumNames" : ["Male", "Female"]</code></p> <p><code>}</code></p> <p> </p> </td>
    <td><p>ドロップダウンコンポーネント：</p>
     <ul>
      <li>enumNames にリストされた値はドロップボックスに表示されます。</li>
@@ -69,7 +69,7 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
     </ul> </td>
   </tr>
   <tr>
-   <td><p>format 制約を含む string プロパティ。例えば、電子メール、日付など。</p> <p>構文、</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td>
+   <td><p>format 制約を含む string プロパティ。例えば、電子メール、日付など。</p> <p>構文</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td>
    <td>
     <ul>
      <li>type が string で format が email の場合、電子メールコンポーネントがマップされます。</li>
@@ -107,16 +107,16 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
 
 アダプティブフォームは JSON スキーマで使用可能な情報を使用して、生成された各フィールドをマッピングします。具体的には、以下のようになります。
 
-* `title`プロパティは、アダプティブフォームコンポーネントのラベルとして機能します。
-* `description`プロパティは、アダプティブフォームコンポーネントの詳細な説明として設定されます。
-* `default`プロパティは、アダプティブフォームフィールドの初期値として機能します。
+* `title` プロパティは、アダプティブフォームコンポーネントのラベルとして機能します。
+* `description` プロパティは、アダプティブフォームコンポーネントの詳細な説明として設定されます。
+* `default` プロパティは、アダプティブフォームフィールドの初期値として機能します。
 * `maxLength` プロパティは、テキストフィールドコンポーネントの `maxlength` 属性として設定されます。
 * `minimum`、`maximum`、`exclusiveMinimum` および `exclusiveMaximum` プロパティは、数値ボックスコンポーネントに使用されます。
 * `DatePicker component` の範囲をサポートするために、追加の JSON スキーマプロパティ `minDate` および `maxDate` が用意されています。
 * `minItems` および `maxItems` プロパティは、パネルコンポーネントに追加または削除される可能性のある項目／フィールドの数を制限するために使用されます。
-* `readOnly`プロパティは、アダプティブフォームコンポーネントの`readonly`属性を設定します。
-* `required`プロパティはアダプティブフォームフィールドを必須としてマークします。一方、パネル（タイプはオブジェクト）では、最終的に送信されたJSONデータは、そのオブジェクトに対応する値が空のフィールドを持ちます。
-* `pattern`プロパティは、アダプティブフォームの検証パターン（正規表現）として設定されます。
+* `readOnly` プロパティは、アダプティブフォームコンポーネントの `readonly` 属性を設定します。
+* `required` プロパティは、アダプティブフォームフィールドを必須としてマークします。一方、パネル（タイプがオブジェクト）の場合、最終的に送信された JSON データには、そのオブジェクトに対応する空の値を持つフィールドがあります。
+* `pattern` プロパティは、アダプティブフォームで検証パターン（正規表現）として設定されます。
 * JSON スキーマファイルの拡張子は、.schema.json を維持する必要があります。例えば、&lt;filename>.schema.json のように指定します。
 
 ## JSON スキーマのサンプル {#sample-json-schema}
@@ -334,7 +334,7 @@ JSON スキーマの例を示します。
 
 ## JSON スキーマ定義でのフィールドの事前設定 {#pre-configuring-fields-in-json-schema-definition}
 
-**aem:afProperties**&#x200B;プロパティを使用して、JSONスキーマフィールドを事前設定し、カスタムのアダプティブフォームコンポーネントにマッピングすることができます。 以下に例を示します。
+**aem:afProperties** プロパティを使用して JSON スキーマのフィールドを事前構成し、カスタムのアダプティブフォームコンポーネントにマップできます。以下に例を示します。
 
 ```json
 {
@@ -356,9 +356,9 @@ JSON スキーマの例を示します。
 
 ## フォームオブジェクトのスクリプトまたは式の設定  {#configure-scripts-or-expressions-for-form-objects}
 
-アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。フォームイベントで式](adaptive-form-expressions.md)を評価するように、フォームオブジェクトを事前に設定することができます。[
+アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。フォームオブジェクトを事前設定して、フォームイベントの[式を評価](adaptive-form-expressions.md)できます。
 
-アダプティブフォームの数式やスクリプトをアダプティブフォームのコンポーネント用に事前設定するには、 aem:afpropertiesプロパティを使用します。 例えば、 initializeイベントがトリガーされると、次のコードは電話フィールドの値を設定し、ログに値を出力します。
+アダプティブフォームの式やスクリプトをアダプティブフォームのコンポーネント用に事前設定するには、aem:afproperties プロパティを使用します。例えば、initialize イベントがトリガーされると、次のコードは電話フィールドの値を設定し、値をログに出力します。
 
 ```json
 "telephone": {
@@ -376,12 +376,12 @@ JSON スキーマの例を示します。
 }
 ```
 
-フォームオブジェクトのスクリプトや式を設定するには、[forms-power-userグループ](forms-groups-privileges-tasks.md)のメンバーである必要があります。 次の表に、アダプティブフォームコンポーネントでサポートされるすべてのスクリプトイベントを示します。
+フォームオブジェクトのスクリプトや式を構成するには、[forms-power-user グループ](forms-groups-privileges-tasks.md)のメンバーである必要があります。次の表に、アダプティブフォームコンポーネントでサポートされるすべてのスクリプトイベントを示します。
 
 <table>
  <tbody>
   <tr>
-   <th><strong></strong>Component \ Event</th>
+   <th><strong></strong>コンポーネント \ イベント</th>
    <th>initialize <br /> </th>
    <td>Calculate</td>
    <td>視認性</td>
@@ -581,11 +581,11 @@ JSON スキーマの例を示します。
  </tbody>
 </table>
 
-JSONでのイベントの使用例としては、initializeイベントのフィールドを非表示にし、値コミットイベントの別のフィールドの値を設定する例があります。 スクリプトイベントの式を作成する方法について詳しくは、「[アダプティブフォームの式](adaptive-form-expressions.md)」を参照してください。
+JSON でのイベントの使用例としては、initialize イベントでフィールドを非表示にし、値コミットイベントで別のフィールドの値を設定する例があります。スクリプトイベントの式の作成について詳しくは、[アダプティブフォームの式](adaptive-form-expressions.md)を参照してください。
 
-前述の例のサンプルJSONコードを以下に示します。
+前述の例のサンプル JSON コードを以下に示します。
 
-### initializeイベントでのフィールドの非表示 {#hiding-a-field-on-initialize-event}
+### initialize イベントでのフィールドの非表示 {#hiding-a-field-on-initialize-event}
 
 ```json
 "name": {
@@ -598,7 +598,7 @@ JSONでのイベントの使用例としては、initializeイベントのフィ
 }
 ```
 
-#### 値コミットイベントで別のフィールドの値を設定する {#configure-value-of-another-field-on-value-commit-event}
+#### 値コミットイベントでの別のフィールドの値の設定 {#configure-value-of-another-field-on-value-commit-event}
 
 ```json
 "Income": {
@@ -624,7 +624,7 @@ JSONでのイベントの使用例としては、initializeイベントのフィ
 
 ## アダプティブフォームコンポーネントで許容される値の制限 {#limit-acceptable-values-for-an-adaptive-form-component}
 
-JSONスキーマの要素に次の制限を追加して、アダプティブフォームコンポーネントで許容される値を制限することができます。
+JSON スキーマの要素に次の制限を追加して、アダプティブフォームコンポーネントで許容される値を制限できます。
 
 <table>
  <tbody>
@@ -702,7 +702,7 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
    <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td>
    <td>
     <ul>
-     <li>XSDスキーマにマッピングされているすべてのアダプティブフォームコンポーネント </li>
+     <li>XSD スキーマにマップされるすべてのアダプティブフォームコンポーネント </li>
     </ul> </td>
   </tr>
   <tr>
@@ -720,9 +720,9 @@ JSONスキーマの要素に次の制限を追加して、アダプティブフ�
  </tbody>
 </table>
 
-## サポート対象外の構成   {#non-supported-constructs}
+## サポート対象外の構成  {#non-supported-constructs}
 
-アダプティブフォームは、次のJSONスキーマ構成をサポートしていません。
+アダプティブフォームは次の JSON スキーマ構成をサポートしていません。
 
 * Null タイプ
 * any などの Union タイプ
