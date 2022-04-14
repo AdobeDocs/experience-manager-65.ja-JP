@@ -1,8 +1,8 @@
 ---
 title: パターン検出を使用したアップグレードの複雑性の評価
-seo-title: パターン検出を使用したアップグレードの複雑性の評価
+seo-title: Assessing the Upgrade Complexity with the Pattern Detector
 description: パターン検出を使用してアップグレードの複雑性を評価する方法について説明します。
-seo-description: パターン検出を使用してアップグレードの複雑性を評価する方法について説明します。
+seo-description: Learn how to use the Pattern Detector to assess the complexity of your upgrade.
 uuid: 84d0add9-3123-4188-9877-758911b1899f
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,12 +10,12 @@ topic-tags: upgrading
 content-type: reference
 discoiquuid: b5607343-a13b-4520-a771-f1a555bfcc7b
 docset: aem65
-feature: アップグレード
+feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 89%
+workflow-type: ht
+source-wordcount: '522'
+ht-degree: 100%
 
 ---
 
@@ -44,20 +44,19 @@ ht-degree: 89%
 >* ビジネスにとって重大なインスタンスの減速を避ける
 
 >
->
-ユーザーアプリケーション、コンテンツ、設定の分野において、実稼働環境にできるだけ近い&#x200B;**ステージング環境で**&#x200B;実行することをお勧めします。
+>ユーザーアプリケーション、コンテンツ、設定の分野において、実稼働環境にできるだけ近い&#x200B;**ステージング環境で**&#x200B;実行することをお勧めします。
 
 いくつかの方法を使用して、パターン検出の出力をチェックできます。
 
-* **Felix Inventory コンソールを使用：** 
+* **Felix Inventory コンソールを使用：**
 
-1. *https://serveraddress:serverport/system/console/configMgr*&#x200B;を参照してAEM Webコンソールに移動します。
+1. AEM web コンソールに移動します（*https://serveraddress:serverport/system/console/configMgr*）。
 1. 次の図に示すように、**ステータス - パターン検出**&#x200B;を選択します。
 
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
-* **反応性の高いJSON行インターフェイスを使用**、各行に個別のJSONドキュメントを生成します。
+* **事後対応 JSON Lines インターフェイスを使用し、**各行に個別の JSON ドキュメントを生成します。
 
 これらの方法の詳細を次に示します。
 
@@ -70,7 +69,7 @@ ht-degree: 89%
 1. プレーンテキストインターフェイス
 1. JSON インターフェイス
 
-## プレーンテキストインターフェイスの処理  {#handling-the-plain-text-interface}
+## プレーンテキストインターフェイスの処理 {#handling-the-plain-text-interface}
 
 出力の情報は、一連のイベントエントリとして書式設定されます。違反を公開するためのチャネルと、現在の進行状況を公開するためのチャネルがあります。
 
@@ -100,7 +99,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 2018-02-13T14:19:35.685+01:00 [PROGRESS] Finished in period=PT13.782
 ```
 
-## JSON インターフェイスの処理  {#handling-the-json-interface}
+## JSON インターフェイスの処理 {#handling-the-json-interface}
 
 同様に、[jq ツール](https://stedolan.github.io/jq/)を使用すると、公開された JSON をすぐに処理できます。
 
@@ -220,7 +219,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 * OSGi バンドルのエクスポートとインポートの不一致
 * Sling リソースタイプとスーパータイプ（検索パスのコンテンツオーバーレイを含む）の過剰使用
-* Oakインデックスの定義（互換性）
+* Oak インデックスの定義（互換性）
 * VLT パッケージ（過剰使用）
 * rep：ユーザーノードの互換性（OAuth 設定のコンテキストで）
 
