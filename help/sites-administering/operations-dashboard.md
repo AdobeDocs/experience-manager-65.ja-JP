@@ -13,9 +13,9 @@ docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 source-git-commit: 891cb5bb8cc9b7114d23617c9164fd428718b302
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6200'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 75%
 
 ## はじめに {#introduction}
 
-AEM 6 の操作ダッシュボードは、システムオペレーターが AEM のシステムヘルスを一目で監視するために役立ちます。また、AEMの関連性に関する自動生成診断情報を提供し、自己完結型メンテナンスの自動化を設定および実行して、プロジェクトの運用とサポートケースを大幅に削減できます。 操作ダッシュボードは、カスタムのヘルスチェックおよびメンテナンスタスクによって拡張できます。さらに、外部監視ツールから JMX を使用して操作ダッシュボードのデータにアクセスできます。
+AEM 6 の操作ダッシュボードは、システムオペレーターが AEM のシステムヘルスを一目で監視するために役立ちます。また、AEM が関連する側面に関して自動生成された診断情報も提供され、自己完結型のメンテナンス自動化を設定および実行して、プロジェクト操作とサポートケースを大幅に削減できます。操作ダッシュボードは、カスタムのヘルスチェックおよびメンテナンスタスクによって拡張できます。さらに、外部監視ツールから JMX を使用して操作ダッシュボードのデータにアクセスできます。
 
 **操作ダッシュボードの特徴は次のとおりです。**
 
@@ -32,7 +32,7 @@ AEM 6 の操作ダッシュボードは、システムオペレーターが AEM 
 * 問題の発見、分析および修正にかかる時間を短縮します。
 * 自己完結型のメンテナンス自動化により、プロジェクトの運用コストを大幅に削減します。
 
-アクセスするには、 **ツール** - **運用** AEMのようこそ画面から
+AEM のようこそ画面から&#x200B;**ツール**／**操作**&#x200B;に移動してアクセスできます。
 
 >[!NOTE]
 >
@@ -48,13 +48,13 @@ AEM 6 の操作ダッシュボードは、システムオペレーターが AEM 
 
 **ヘルスレポート**&#x200B;は、特定の製品領域に関するヘルスの良好または不良を示すカードのシステムです。これらのカードは、Sling ヘルスチェックのビジュアライゼーションで、JMX および他のソースからデータを集計し、処理した情報を MBean として再公開します。これらの MBean は、**org.apache.sling.healthcheck** ドメイン以下にある [JMX Web コンソール](/help/sites-administering/jmx-console.md)で検査できます。
 
-ヘルスレポートインターフェイスには、 **ツール** - **運用** - **ヘルスレポート** メニューを開くか、次の URL を使用して直接アクセスできます。
+ヘルスレポートインターフェイスには、AEM のようこそ画面の&#x200B;**ツール**／**運用**／**ヘルスレポート**&#x200B;メニューからアクセスするか、次の URL から直接アクセスできます。
 
 `https://<serveraddress>:port/libs/granite/operations/content/healthreports/healthreportlist.html`
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-カードシステムが表示する状態は、**OK**、**警告**&#x200B;および&#x200B;**重要**&#x200B;の 3 つです。この状態は、ルールおよびしきい値の結果です。ルールおよびしきい値は、カードの上にマウスポインターを置いてアクションバーのギアアイコンをクリックすることで設定できます。
+カードシステムが表示する状態は、**OK**、**警告**、**重要**&#x200B;の 3 つです。この状態は、ルールおよびしきい値の結果です。ルールおよびしきい値は、カードの上にマウスポインターを置いてアクションバーのギアアイコンをクリックすることで設定できます。
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -79,9 +79,9 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 個別ヘルスチェックは、2 段階の手順で作成します。Sling ヘルスチェックを実装し、ヘルスチェックのエントリをダッシュボードの設定ノードに追加します。
 
-1. Sling ヘルスチェックを作成するには、Sling ヘルスチェックインターフェイスを実装する OSGI コンポーネントを作成する必要があります。このコンポーネントをバンドル内に追加します。コンポーネントのプロパティにより、ヘルスチェックが完全に特定されます。コンポーネントがインストールされると、ヘルスチェック用の JMX MBean が自動的に作成されます。詳しくは、[Sling ヘルスチェックドキュメント](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html)を参照してください。
+1. Sling ヘルスチェックを作成するには、Sling ヘルスチェックインターフェイスを実装する OSGI コンポーネントを作成する必要があります。このコンポーネントをバンドル内に追加します。コンポーネントのプロパティにより、ヘルスチェックが完全に特定されます。コンポーネントがインストールされると、ヘルスチェック用の JMX MBean が自動的に作成されます。詳しくは、[Sling ヘルスチェックドキュメント](https://sling.apache.org/documentation/bundles/sling-health-check-tool.html?lang=ja)を参照してください。
 
-    OSGI サービスコンポーネントの注釈を含む、Sling ヘルスチェックコンポーネントの例：
+   OSGI サービスコンポーネントの注釈を含む、Sling ヘルスチェックコンポーネントの例：
 
    ```java
    @Component(service = HealthCheck.class,
@@ -103,22 +103,22 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    >
    >`MBEAN_NAME` プロパティは、このヘルスチェック用に生成される Mbean の名前を定義します。
 
-1. ヘルスチェックの作成後、操作ダッシュボードインターフェイスでアクセスできるようにするために、新しい設定ノードを作成する必要があります。この手順では、ヘルスチェックの JMX MBean 名を知っておく必要があります（`MBEAN_NAME` プロパティ）。ヘルスチェックの設定を作成するには、CRXDE を開き、新しいノード（タイプ）を追加します **nt:unstructured**) を次のパスの下に置きます。 `/apps/settings/granite/operations/hc`
+1. ヘルスチェックの作成後、操作ダッシュボードインターフェイスでアクセスできるように、新しい設定ノードを作成する必要があります。この手順では、ヘルスチェックの JMX MBean 名を確認しておく必要があります（`MBEAN_NAME` プロパティ）。ヘルスチェックの設定を作成するには、CRXDE を開いて新しいノード（タイプ **nt:unstructured**）を `/apps/settings/granite/operations/hc` の下に追加します。
 
    新しいノードに次のプロパティを設定する必要があります。
 
-   * **名前:** `sling:resourceType`
+   * **名前：** `sling:resourceType`
 
-      * **タイプ:** `String`
-      * **値:** `granite/operations/components/mbean`
-   * **名前:** `resource`
+      * **タイプ：** `String`
+      * **値：** `granite/operations/components/mbean`
+   * **名前：** `resource`
 
-      * **タイプ:** `String`
-      * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+      * **タイプ：** `String`
+      * **値：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
    >
-   >上記のリソースパスは、次のように作成されます。ヘルスチェックの mbean 名が「test」の場合は、パスの末尾に「test」を追加します。 `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck`
+   >上記のリソースパスを作成するには、ヘルスチェックの MBean 名が「test」の場合、パス `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck` の末尾に「test」を追加します。
    >
    >最終的なパスは次のようになります。
    >
@@ -126,7 +126,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    >[!NOTE]
    >
-   >必ず `/apps/settings/granite/operations/hc` path のプロパティは true に設定されています。
+   >`/apps/settings/granite/operations/hc` パスに、true に設定された次のプロパティがあることを確認します。
    >
    >
    >`sling:configCollectionInherit`
@@ -134,14 +134,14 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    >`sling:configPropertyInherit`
    >
    >
-   >これにより、設定マネージャーは新しい設定を既存の設定と結合するように指示されます。 `/libs`.
+   >これにより、設定マネージャーで新しい設定が `/libs` の既存の設定と結合されます。
 
 ### 複合ヘルスチェックの作成 {#creating-a-composite-health-check}
 
 複合ヘルスチェックの役割は、一般的な機能のセットを共有する個別ヘルスチェックの数を集計することです。例えば、セキュリティ複合ヘルスチェックは、セキュリティ関連の検証を実行するすべての個別ヘルスチェックをグループ化します。複合チェックを作成するには、まず、新しい OSGI 設定を追加します。操作ダッシュボードに表示するために、シンプルなチェックでおこなったのと同じように、新しい設定ノードを追加する必要があります。
 
-1. OSGI コンソールで Web Configuration Manager に移動します。これをおこなうには、 `https://serveraddress:port/system/console/configMgr`
-1. **Apache Sling Composite Health Check** というエントリを検索します。見つかったら、システムチェック用とセキュリティチェック用の 2 つの設定が既に使用可能なことを確認します。
+1. OSGI コンソールで web 設定マネージャーに移動します。これを行うには、`https://serveraddress:port/system/console/configMgr` にアクセスします。
+1. **Apache Sling Composite Health Check** というエントリを検索します。見つかったら、システムチェック用とセキュリティチェック用の 2 つの設定が既に使用可能であることを確認します。
 1. 設定の右側にある「+」ボタンを押して新しい設定を作成します。以下のような新しいウィンドウが表示されます。
 
    ![chlimage_1-23](assets/chlimage_1-23.jpeg)
@@ -153,30 +153,30 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    * **Name（hc.name）：**&#x200B;複合ヘルスチェックの名前。意味のある名前を推奨します。
    * **Tags（hc.tags）：**&#x200B;このヘルスチェックのタグ。この複合ヘルスチェックを別の複合ヘルスチェックの一部とする場合（ヘルスチェックの階層内など）は、この複合が関連付けられているタグを追加します。
    * **MBean Name（hc.mbean.name）：**&#x200B;この複合ヘルスチェックの JMX MBean に付けられる Mbean の名前。
-   * **Filter Tags（filter.tags）：**&#x200B;これは複合ヘルスチェック専用のプロパティです。複合が集約するタグを指定します。複合ヘルスチェックは、そのグループの下に、この複合のいずれかのフィルタータグに一致するタグを持つすべてのヘルスチェックを集約します。例えば、**test** および **check** というフィルタータグを持つ複合ヘルスチェックは、タグプロパティ（**）に** test **タグと** check`hc.tags` タグのいずれかが含まれているすべての個別および複合ヘルスチェックを集約します。
+   * **Filter Tags（filter.tags）：**&#x200B;これは複合ヘルスチェック専用のプロパティです。複合が集約するタグを指定します。複合ヘルスチェックは、そのグループの下に、この複合のいずれかのフィルタータグに一致するタグを持つすべてのヘルスチェックを集約します。例えば、**test** および **check** というフィルタータグを持つ複合ヘルスチェックは、タグプロパティ（`hc.tags`）に **test** タグと **check** タグのいずれかが含まれている個別および複合のすべてのヘルスチェックを集約します。
 
    >[!NOTE]
    >
    >Apache Sling 複合ヘルスチェックの新しい設定ごとに、新しい JMX Mbean が 1 つずつ作成されます。**
 
-1. 最後に、作成した複合ヘルスチェックのエントリを操作ダッシュボードの構成ノードに追加する必要があります。この手順は、個々のヘルスチェックの場合と同じです。タイプのノード **nt:unstructured** 次の場所に作成する必要があります： `/apps/settings/granite/operations/hc`.ノードのリソースプロパティは、 **hc.mean.name** （OSGi 設定内）
+1. 最後に、上記で作成した複合ヘルスチェックのエントリを、操作ダッシュボードの設定ノードに追加する必要があります。この手順は、個別ヘルスチェックの場合と同じです。タイプが **nt:unstructured** のノードを、`/apps/settings/granite/operations/hc` の下に作成する必要があります。ノードのリソースプロパティは、OSGI 設定の **hc.mean.name** の値によって定義されます。
 
    例えば、設定を作成して **hc.mbean.name** 値を **diskusage** に設定した場合、設定ノードは次のようになります。
 
-   * **名前:** `Composite Health Check`
+   * **名前：** `Composite Health Check`
 
-      * **タイプ:** `nt:unstructured`
+      * **タイプ：** `nt:unstructured`
 
-   次のようにプロパティを定義します。
+   次のプロパティを使用します。
 
-   * **名前:** `sling:resourceType`
+   * **名前：** `sling:resourceType`
 
-      * **タイプ:** `String`
-      * **値:** `granite/operations/components/mbean`
-   * **名前:** `resource`
+      * **タイプ：** `String`
+      * **値：** `granite/operations/components/mbean`
+   * **名前：** `resource`
 
-      * **タイプ:** `String`
-      * **値:** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+      * **タイプ：** `String`
+      * **値：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
    >
@@ -194,24 +194,24 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
   </tr>
   <tr>
    <td>クエリパフォーマンス</td>
-   <td><p>このヘルスチェックは <strong>AEM 6.4</strong> で簡素化され、最近リファクタリングされた <code>Oak QueryStats</code> MBean（具体的には <code>SlowQueries </code> 属性）をチェックするようになりました。処理に時間のかかるクエリが統計に含まれる場合、ヘルスチェックは警告を返します。それ以外の場合は、OK ステータスを返します。<br /> </p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DqueriesStatus%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck</a>.</p> </td>
+   <td><p>このヘルスチェックは <strong>AEM 6.4</strong> で簡素化され、最近リファクタリングされた <code>Oak QueryStats</code> MBean（具体的には <code>SlowQueries </code> 属性）をチェックするようになりました。処理に時間のかかるクエリが統計に含まれる場合、ヘルスチェックは警告を返します。それ以外の場合は、OK ステータスを返します。<br /> </p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DqueriesStatus%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>監視キューの長さ</td>
-   <td><p>監視キューの長さは、すべてのイベントリスナーとバックグラウンドオブザーバーを反復し、それらを比較します <code>queueSize </code>を <code>maxQueueSize</code> および：</p>
+   <td><p>監視キューの長さは、すべてのイベントリスナーとバックグラウンドオブザーバーを繰り返し処理し、それらの <code>queueSize </code> を <code>maxQueueSize</code> と比較します。</p>
     <ul>
-     <li>は、 <code>queueSize</code> 値が <code>maxQueueSize</code> の値（イベントが削除される場合）</li>
-     <li>は、 <code>queueSize</code> 値が <code>maxQueueSize * WARN_THRESHOLD</code> （デフォルト値は 0.75） </li>
-    </ul> <p>各キューの最大長は個別の設定（Oak と AEM）から取得され、このヘルスチェックからは設定できません。このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a>.</p> </td>
+     <li><code>queueSize</code> 値が <code>maxQueueSize</code> 値を超えた場合（つまり、イベントがドロップされた場合）、重要ステータスを返します。</li>
+     <li><code>queueSize</code> 値が <code>maxQueueSize * WARN_THRESHOLD</code> を超えた場合、警告を返します（デフォルト値は 0.75）。 </li>
+    </ul> <p>各キューの最大長は個別の設定（Oak と AEM）から取得され、このヘルスチェックからは設定できません。このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DObservationQueueLengthHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=ObservationQueueLengthHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>クエリトラバーサルの制限</td>
    <td><p>クエリトラバーサルの制限は、<code>QueryEngineSettings</code> MBean（具体的には <code>LimitInMemory</code> 属性と <code>LimitReads</code> 属性）をチェックし、次のステータスを返します。</p>
     <ul>
-     <li>いずれかの制限が   以上の場合、警告ステータスを返します。 <code>Integer.MAX_VALUE</code></li>
+     <li>いずれかの制限が 以上の場合、警告ステータスを返します。 <code>Integer.MAX_VALUE</code></li>
      <li>いずれかの制限が 10,000（Oak の推奨設定）より低い場合、警告ステータスを返します。</li>
      <li><code>QueryEngineSettings</code> またはいずれかの制限を取得できない場合、重要ステータスを返します。</li>
-    </ul> <p>このヘルスチェックの Mbean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DqueryTraversalLimitsBundle%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=queryTraversalLimitsBundle,type=HealthCheck</a>.</p> </td>
+    </ul> <p>このヘルスチェックの Mbean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DqueryTraversalLimitsBundle%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=queryTraversalLimitsBundle,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>同期済みのクロック</td>
@@ -219,35 +219,35 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
     <ul>
      <li>インスタンスクロックが同期しなくなり、事前定義された低しきい値を超えると、警告ステータスを返します。</li>
      <li>インスタンスクロックが同期しなくなり、事前定義された高しきい値を超えると、重要ステータスを返します。</li>
-    </ul> <p>このヘルスチェックの Mbean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingDiscoveryOakSynchronizedClocks%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=slingDiscoveryOakSynchronizedClocks,type=HealthCheck</a>.</p> </td>
+    </ul> <p>このヘルスチェックの Mbean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingDiscoveryOakSynchronizedClocks%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=slingDiscoveryOakSynchronizedClocks,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>非同期インデックス</td>
    <td><p>非同期インデックスチェック：</p>
     <ul>
      <li>少なくとも 1 つのインデックス作成レーンが失敗する場合、重要ステータスを返します。</li>
-     <li>チェック <code>lastIndexedTime</code> すべてのインデックス作成レーンおよび
+     <li>すべてのインデックス作成レーンについて <code>lastIndexedTime</code> をチェックし、次のことを行います。
       <ul>
-       <li>2 時間以上前の場合は、重要ステータスを返します。 </li>
-       <li>2 時間～ 45 分前の場合は警告ステータスを返します </li>
-       <li>45 分前未満の場合は OK ステータスを返します </li>
+       <li>2 時間以上前である場合は、重要ステータスを返します。 </li>
+       <li>2 時間～ 45 分前の場合は、警告ステータスを返します。 </li>
+       <li>45 分前以内の場合は、OK ステータスを返します。 </li>
       </ul> </li>
      <li>いずれの条件も満たさない場合は、OK ステータスを返します。</li>
-    </ul> <p>重要および警告ステータスのしきい値は、どちらも設定可能です。このヘルスチェックの Mbean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a>.</p> <p><strong>注意： </strong>このヘルスチェックは、AEM 6.4 で利用でき、AEM 6.3.0.1 に移植されています。</p> </td>
+    </ul> <p>重要および警告ステータスのしきい値は、どちらも設定可能です。このヘルスチェックの Mbean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DasyncIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=asyncIndexHealthCheck,type=HealthCheck</a> です。</p> <p><strong>注意：</strong>このヘルスチェックは、AEM 6.4 で使用でき、AEM 6.3.0.1 に移植されています。</p> </td>
   </tr>
   <tr>
    <td>大きい Lucene インデックス</td>
-   <td><p>このチェックでは、 <code>Lucene Index Statistics</code> 大きなインデックスを識別して返す MBean:</p>
+   <td><p>このチェックは、<code>Lucene Index Statistics</code> MBean によって公開されたデータを使用して大きいインデックスを識別し、次のステータスを返します。</p>
     <ul>
      <li>10 億を超えるドキュメントを含むインデックスがある場合は、警告ステータス</li>
      <li>15 億を超えるドキュメントを含むインデックスがある場合は、重要ステータス</li>
-    </ul> <p>しきい値は設定可能で、ヘルスチェックの MBean は <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=largeIndexHealthCheck,type=HealthCheck.</a></p> <p><strong>注意：</strong>このチェックは、AEM 6.4 で使用でき、AEM 6.3.2.0 に移植されています。</p> </td>
+    </ul> <p>しきい値は設定可能で、このヘルスチェックの MBean は <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlargeIndexHealthCheck%2Ctype%3DHealthCheck">org.apache.sling.healthcheck:name=largeIndexHealthCheck,type=HealthCheck</a> です。</p> <p><strong>注意：</strong>このチェックは、AEM 6.4 で使用でき、AEM 6.3.2.0 に移植されています。</p> </td>
   </tr>
   <tr>
    <td>システムメンテナンス</td>
    <td><p>システムメンテナンスは複合チェックです。すべてのメンテナンスタスクが設定どおりに実行されている場合に、OK を返します。次の点に注意してください。</p>
     <ul>
-     <li>各メンテナンスタスクには、関連するヘルスチェックが付随します</li>
+     <li>各メンテナンスタスクは、関連するヘルスチェックを伴います。</li>
      <li>タスクがメンテナンスウィンドウに追加されていない場合、そのヘルスチェックは重要ステータスを返します</li>
      <li>監査ログおよびワークフローのパージのメンテナンスタスクを設定するか、メンテナンスウィンドウからこれらのメンテナンスタスクを削除する必要があります。設定しなかった場合、これらのタスクは最初に実行しようとしたときに失敗します。したがって、システムメンテナンスチェックは重要ステータスを返します。</li>
      <li><strong>AEM 6.4 では</strong>、<a href="/help/sites-administering/operations-dashboard.md#automated-maintenance-tasks">Lucene バイナリメンテナンスタスク</a> のチェックもあります。</li>
@@ -256,48 +256,47 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
   </tr>
   <tr>
    <td>レプリケーションキュー</td>
-   <td><p>このチェックは、レプリケーションエージェントに対して繰り返され、そのキューを確認します。キューの上位にある項目について、チェックはエージェントがレプリケーションを試行した回数を確認します。エージェントが <code>numberOfRetriesAllowed</code> パラメーターの値より多くレプリケーションを試行した場合、警告を返します。この <code>numberOfRetriesAllowed</code> パラメータは設定可能です。 </p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DreplicationQueue%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck</a>.</p> </td>
+   <td><p>このチェックは、レプリケーションエージェントに対して繰り返され、そのキューを確認します。キューの上位にある項目について、チェックはエージェントがレプリケーションを試行した回数を確認します。エージェントが <code>numberOfRetriesAllowed</code> パラメーターの値より多くレプリケーションを試行した場合、警告を返します。<code>numberOfRetriesAllowed</code> パラメーターは設定可能です。 </p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DreplicationQueue%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=replicationQueue,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>Sling ジョブ</td>
    <td>
     <div>
-      Sling ジョブは、JobManager でキューに登録されたジョブの数をチェックし、
-     <code>maxNumQueueJobs</code> しきい値と：
+      Sling ジョブは、JobManager でのキューに登録されたジョブ数をチェックし、<code>maxNumQueueJobs</code> しきい値と比較します。
     </div>
     <ul>
-     <li>は、 <code>maxNumQueueJobs</code> はキューに入っています</li>
+     <li>キューに <code>maxNumQueueJobs</code> より多くある場合、重要ステータスを返します</li>
      <li>1 時間より古い長時間のアクティブジョブがある場合、重要ステータスを返します</li>
      <li>キューに登録されたジョブがあり、最後に完了したジョブ時間が 1 時間より古い場合、重要ステータスを返します</li>
-    </ul> <p>キューに登録されたジョブの最大数のパラメーターのみが設定可能で、デフォルト値は 1000 です。</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingJobs%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=slingJobs,type=HealthCheck</a>.</p> </td>
+    </ul> <p>キューに登録されたジョブの最大数のパラメーターのみが設定可能で、デフォルト値は 1000 です。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingJobs%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=slingJobs,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>要求パフォーマンス</td>
-   <td><p>このチェックでは、 <code>granite.request.metrics.timer</code> <a href="http://localhost:4502/system/console/slingmetrics" target="_blank">Sling 指標 </a>および：</p>
+   <td><p>このチェックは、<code>granite.request.metrics.timer</code> <a href="http://localhost:4502/system/console/slingmetrics" target="_blank">Sling 指標</a>を確認します。</p>
     <ul>
      <li>75 パーセンタイルの値が重要ステータスのしきい値を超過した場合（デフォルト値は 500 ミリ秒）は、重要ステータスを返します</li>
      <li>75 パーセンタイルの値が警告ステータスのしきい値を超過した場合（デフォルト値は 200 ミリ秒）は、警告ステータスを返します</li>
-    </ul> <p>このヘルスチェックの MBean は次のとおりです。<em> </em><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DrequestsStatus%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck</a>.</p> </td>
+    </ul> <p>このヘルスチェックの MBean は、<em> </em><a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DrequestsStatus%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=requestsStatus,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>ログエラー</td>
-   <td><p>このチェックは、ログにエラーがある場合、警告ステータスを返します。</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlogErrorHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck</a>.</p> </td>
+   <td><p>このチェックは、ログにエラーがある場合、警告ステータスを返します。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DlogErrorHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=logErrorHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>ディスク容量</td>
-   <td><p>ディスク容量チェックでは、 <code>FileStoreStats</code> MBean は、ノードストアのサイズとノードストアパーティション上の使用可能なディスク領域の量を取得し、以下の操作を行います。</p>
+   <td><p>ディスク容量チェックは、<code>FileStoreStats</code> MBean を確認し、ノードストアのサイズおよびノードストアパーティション上の使用可能なディスク容量を取得します。</p>
     <ul>
      <li>リポジトリサイズに対する使用可能なディスク容量の割合が警告ステータスのしきい値より少ない場合（デフォルト値は 10）、警告ステータスを返します</li>
      <li>リポジトリサイズに対する使用可能なディスク容量の割合が重要ステータスのしきい値より少ない場合（デフォルト値は 2）、重要ステータスを返します</li>
-    </ul> <p>どちらのしきい値も設定可能です。このチェックは、セグメントストアを持つインスタンスでのみ機能します。</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DDiskSpaceHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=DiskSpaceHealthCheck,type=HealthCheck</a>.</p> </td>
+    </ul> <p>どちらのしきい値も設定可能です。このチェックは、セグメントストアを含むインスタンスに対してのみ機能します。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DDiskSpaceHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=DiskSpaceHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>スケジューラーヘルスチェック</td>
-   <td><p>このチェックは、インスタンスが 60 秒を超えて実行している Quartz ジョブを持つ場合、警告を返します。許容される期間のしきい値は、設定可能です。</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingCommonsSchedulerHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=slingCommonsSchedulerHealthCheck,type=HealthCheck</a><em>.</em></p> </td>
+   <td><p>このチェックは、インスタンスが 60 秒を超えて実行している Quartz ジョブを持つ場合、警告を返します。許容される期間のしきい値は、設定可能です。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DslingCommonsSchedulerHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=slingCommonsSchedulerHealthCheck,type=HealthCheck</a><em> です。</em></p> </td>
   </tr>
   <tr>
    <td>セキュリティチェック</td>
-   <td><p>セキュリティチェックは、複数のセキュリティ関連チェックを集計する複合チェックです。これらの個々のヘルスチェックは、 <a href="/help/sites-administering/security-checklist.md">セキュリティチェックリストドキュメントページ。</a> このチェックは、インスタンスの起動時のセキュリティスモークテストとして役立ちます。 </p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=securitychecks,type=HealthCheck</a></p> </td>
+   <td><p>セキュリティチェックは、複数のセキュリティ関連チェックを集計する複合チェックです。これらの個別ヘルスチェックは、<a href="/help/sites-administering/security-checklist.md">セキュリティチェックリストドキュメントページで利用できるセキュリティチェックリストの様々な問題に対処します。</a>このチェックは、インスタンス開始時のセキュリティスモークテストとして役立ちます。 </p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3Dsecuritychecks%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>アクティブなバンドル</td>
@@ -305,7 +304,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
     <ul>
      <li>いずれかのバンドルがアクティブでないか（レイジーアクティベーションで始まる）場合、警告ステータスを返します</li>
      <li>無視リストのバンドルの状態を無視します</li>
-    </ul> <p>無視リストパラメーターは設定可能です。</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DinactiveBundles%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck</a>.</p> </td>
+    </ul> <p>無視リストパラメーターは設定可能です。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DinactiveBundles%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=inactiveBundles,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>コードキャッシュのチェック</td>
@@ -313,13 +312,13 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
     <ul>
      <li>コードキャッシュのフラッシュが有効な Java 7 でインスタンスが実行されている場合、警告ステータスを返します</li>
      <li>Java 7 でインスタンスが実行されていて、予約済みコードキャッシュのサイズが最小しきい値よりも少ない（デフォルト値は 90MB）場合、警告ステータスを返します</li>
-    </ul> <p>この <code>minimum.code.cache.size</code> しきい値は設定可能です。 バグの詳細については、 <a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">check</a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"> このページ</a>.</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
+    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。バグについて詳しくは、<a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">このページ</a>を参照してください。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>リソース検索パスエラー</td>
-   <td><p>パスにリソースがあるかどうかを確認します <code>/apps/foundation/components/primary</code> および：</p>
+   <td><p>パス <code>/apps/foundation/components/primary</code> にリソースがあるかどうかをチェックします。</p>
     <ul>
-     <li>の下に子ノードがある場合、警告を返します。 <code>/apps/foundation/components/primary</code></li>
+     <li>は、次の下に子ノードがある場合、警告ステータスを返します <code>/apps/foundation/components/primary</code></li>
     </ul> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DresourceSearchPathErrorHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=resourceSearchPathErrorHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
  </tbody>
@@ -341,7 +340,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    1. ブラウザーを開いて Nagios サーバーにアクセスします。
    1. トップメニューの「**Configure**」ボタンをクリックします。
    1. 左側のウィンドウで、「**Advanced Configuration**」の下の「**Core Config Manager**」をクリックします。
-   1. を押します。 **ホスト** 下のリンク **監視** 」セクションに入力します。
+   1. 「**Monitoring**」セクションの下の「**Hosts**」リンクをクリックします。
    1. ホスト定義を追加します。
 
    ![chlimage_1-118](assets/chlimage_1-118.png)
@@ -402,9 +401,9 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 * ログメッセージ分析
 * ヒープおよびスレッドダンプにアクセスする機能
-* 要求およびクエリパフォーマンスの分析
+* 要求およびクエリーパフォーマンスの分析
 
-「診断ツール」画面を開くには、AEM のようこそ画面から&#x200B;**ツール／操作／診断**&#x200B;を選択します。次の URL に直接アクセスして、画面にアクセスすることもできます。 `https://serveraddress:port/libs/granite/operations/content/diagnosis.html`
+「診断ツール」画面を開くには、AEM のようこそ画面から&#x200B;**ツール／操作／診断**&#x200B;を選択します。次の URL に直接アクセスして画面にアクセスすることもできます：`https://serveraddress:port/libs/granite/operations/content/diagnosis.html`
 
 ![chlimage_1-120](assets/chlimage_1-120.png)
 
@@ -412,7 +411,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 ログメッセージユーザーインターフェイスには、デフォルトですべてのエラーメッセージが表示されます。表示されるログメッセージを増やす場合は、該当するログレベルでロガーを設定する必要があります。
 
-ログメッセージはメモリログアペンダーを使用するので、ログファイルとは関係ありません。もう 1 つの結果として、この UI でログレベルを変更しても、従来のログファイルに記録される情報は変更されません。この UI でロガーを追加および削除すると、インメモリロガーにのみ影響します。また、ロガー設定の変更は、インメモリロガーの将来に反映されます。既にログに記録され、関連性がなくなったエントリは削除されませんが、同様のエントリは将来ログに記録されなくなります。
+ログメッセージではメモリ内のログ追加機能を使用するので、ログファイルとは関係ありません。また、この UI でログレベルを変更しても、従来のログファイルに記録される情報は変更されません。この UI でのロガーの追加および削除は、メモリ内のロガーのみに影響します。また、ロガーの設定を変更すると、それ以降のメモリ内ロガーに反映されます。既にログに記録されていて該当しなくなったエントリは削除されませんが、同様のエントリは今後は記録されません。
 
 ログに記録する内容を設定するには、UI の左上にあるギアボタンから、ロガーを設定します。そこで、ロガーの設定を追加、削除または更新できます。ロガーの設定は、**ログレベル**（警告／情報／デバッグ）と&#x200B;**フィルター名**&#x200B;で構成されます。**フィルター名**&#x200B;には、記録されるログメッセージのソースをフィルター処理する役割があります。また、指定したレベルのすべてのログメッセージをロガーで取り込む必要がある場合は、フィルター名を「**root**」とします。ロガーのレベルを設定すると、指定したレベル以上のすべてのメッセージの取り込みがトリガーされます。
 
@@ -439,7 +438,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 >[!NOTE]
 >
->**AEM 6.4 を使用**&#x200B;の場合、メンテナンスタスクは、より情報の多い形式で初期設定の状態で INFO レベルでログアウトされます。 これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
+>**AEM 6.4 では**、メンテナンスタスクが、より情報の多い形式の標準のログに情報レベルで記録されるようになりました。これにより、メンテナンスタスクの状態がよりわかりやすくなっています。
 >
 >メンテナンスタスクのアクティビティを監視し、対処するためにサードパーティツール（Splunk など）を使用している場合、次のログステートメントを使用できます。
 
@@ -452,9 +451,9 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 要求パフォーマンスページでは、処理時間が最も長いページ要求を分析できます。このページではコンテンツ要求のみが登録されます。具体的には、以下の要求が取り込まれます。
 
-1. 以下のリソースへのアクセスを要求します。 `/content`
-1. 以下のリソースへのアクセスを要求します。 `/etc/design`
-1. リクエストに `".html"` 拡張
+1. `/content` の下のリソースにアクセスする要求
+1. `/etc/design` の下のリソースにアクセスする要求
+1. `".html"` 拡張子を持つ要求
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 
@@ -466,9 +465,9 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 デフォルトでは、所要時間が長いほうから 20 個のページ要求が取り込まれますが、この制限は設定マネージャーで変更できます。
 
-### クエリパフォーマンス {#query-performance}
+### クエリーパフォーマンス {#query-performance}
 
-「クエリー・パフォーマンス」ページでは、システムで実行される最も遅いクエリーを分析できます。この情報は、JMX Mbean のリポジトリから提供されます。 Jackrabbit では、 `com.adobe.granite.QueryStat` JMX Mbean はこの情報を提供しますが、Oak リポジトリでは、次のように提供されます。 `org.apache.jackrabbit.oak.QueryStats.`
+「クエリーパフォーマンス」ページでは、システムで実行される最も遅いクエリーを分析できます。この情報は、JMX Mbean のリポジトリから提供されます。Jackrabbit では、`com.adobe.granite.QueryStat` JMX Mbean がこの情報を提供し、Oak リポジトリでは、`org.apache.jackrabbit.oak.QueryStats.` が提供します。
 
 このページには以下の項目が表示されます。
 
@@ -490,7 +489,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 * Xpath、JCR-SQL および JCR-SQL2 クエリ言語をサポート
 * 指定したクエリの実際の実行時間をレポート
-* 時間のかかるクエリーを検出し、潜在的に時間のかかる可能性のあるクエリーに関する警告を表示
+* 時間のかかるクエリを検出し、潜在的に時間のかかる可能性のあるクエリに関する警告を表示
 * クエリ実行に使用された Oak インデックスをレポート
 * 実際の Oak クエリエンジンの説明を表示
 * 時間のかかるクエリおよびよく使用されるクエリのリストをクリックで表示
@@ -503,7 +502,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 2 つ目のエントリは実行計画です。
 
-ティック **実行時間を含める** ボックスを開いてからクエリを実行すると、そのクエリが実行された時間も表示されます。 この **ノード数を含める** オプションは、ノード数を報告します。 これらを使用すると、より詳細な情報が得られ、アプリケーションやデプロイメントのインデックスの最適化に使用できます。
+クエリを実行する前に&#x200B;**実行時間を含める**&#x200B;ボックスにチェックを入れると、クエリの実行時間も表示されます。この **ノード数を含める**&#x200B;オプションを選択すると、ノード数が報告されます。 これらを使用すると、より詳細な情報が得られ、アプリケーションやデプロイメントのインデックスの最適化に使用できます。
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
@@ -511,17 +510,17 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 インデックスマネージャの目的は、インデックスのメンテナンスや、ステータスの表示などのインデックス管理を容易にすることです。
 
-このツールにアクセスするには、ようこそ画面から**ツール/運営/診断**を選択し、 **インデックスマネージャ** 」ボタンをクリックします。
+これには、AEM のようこそ画面から**ツール／操作／診断を選択し、「**インデックスマネージャー**」ボタンをクリックしてアクセスできます。
 
-また、次の URL から直接アクセスすることもできます。 `https://serveraddress:port/libs/granite/operations/content/diagnosistools/indexManager.html`
+この URL から直接アクセスすることもできます。`https://serveraddress:port/libs/granite/operations/content/diagnosistools/indexManager.html`
 
-![screen_shot_2019-06-18at154754](assets/screen-shot_2019-06-18at154754.png)
+![screen-shot_2019-06-18at154754](assets/screen-shot_2019-06-18at154754.png)
 
 この UI で、画面左上隅の検索ボックスにフィルター条件を入力して、テーブル内のインデックスにフィルターを適用することができます。
 
 ### ステータス ZIP をダウンロード {#download-status-zip}
 
-これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling 指標および統計が含まれています。これにより、大きなファイルが作成される場合があります。 サイズの大きいステータスファイルの影響を減らすには、 **ステータス ZIP をダウンロード**&#x200B;ウィンドウ このウィンドウには、次の場所からアクセスできます。**AEM /ツール/操作/診断/ステータス ZIP をダウンロードします。**
+これは、システムステータスおよび設定に関する有益な情報を含む zip のダウンロードをトリガーします。アーカイブには、インスタンス設定、バンドルのリスト、OSGI、Sling の指標と統計が含まれるので、ファイルのサイズが大きくなります。サイズの大きいステータスファイルの影響を減らすには、**ステータス ZIP をダウンロード**&#x200B;ウィンドウを使用します。このウィンドウには、**AEM／ツール／操作／診断／ステータス ZIP をダウンロード**&#x200B;からアクセスできます。
 
 このウィンドウでは、エクスポートするもの（ログファイルやスレッドダンプ）および現在の日付を基準にしてダウンロードに含めるログの日数を選択できます。
 
@@ -546,11 +545,11 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 操作ダッシュボードでは、次のタスクを使用できます。
 
 1. **日別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**リビジョンのクリーンアップ**&#x200B;タスク。
-1. この **Lucene バイナリクリーンアップ** タスク ( **日別メンテナンスウィンドウ** メニュー
+1. **日別メンテナンスウィンドウ**&#x200B;メニューの下の **Lucene バイナリクリーンアップ**&#x200B;タスク。
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**ワークフローのパージ**&#x200B;タスク。
-1. この **データストアのガベージコレクション** タスク ( **週別メンテナンスウィンドウ** メニュー
-1. この **監査ログのメンテナンス** タスク ( **週別メンテナンスウィンドウ** メニュー
-1. この **バージョンのパージメンテナンス** タスク ( **週別メンテナンスウィンドウ** メニュー
+1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**データストアのガベージコレクション**&#x200B;タスク。
+1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**監査ログのメンテナンス**&#x200B;タスク。
+1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**バージョンのパージのメンテナンス**&#x200B;タスク。
 
 日別メンテナンスウィンドウのデフォルトのタイミングは、午前 2 時から 5 時までです。週別メンテナンスウィンドウで実行するように設定されているタスクは、土曜日の午前 1 時から 2 時までに実行されます。
 
@@ -568,14 +567,14 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 ### Lucene バイナリクリーンアップ {#lucene-binaries-cleanup}
 
-Lucene バイナリクリーンアップタスクを使用することで、Lucene バイナリをパージして、実行中のデータストアのサイズ要件を減らすことができます。これは、Lucene のバイナリチャーンが、成功に対する以前の依存関係ではなく、毎日再要求されるからです。 [データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md) 実行
+Lucene バイナリクリーンアップタスクを使用することで、Lucene バイナリをパージして、実行中のデータストアのサイズ要件を減らすことができます。これは、以前は[データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md)の正常な実行に依存していましたが、Lucene のバイナリチャーンが毎日再要求されるようになったからです。
 
 メンテナンスタスクは Lucene に関連したリビジョンガベージを減らすために開発されましたが、このタスクを実行すると、次のように全般的に効率が向上します。
 
-* データストアのガベージコレクションタスクの毎週の実行は、より迅速に完了します。
-* また、AEM全体のパフォーマンスが少し向上する場合もあります
+* データストアのガベージコレクションタスクの毎週の実行は、より迅速に完了します
+* AEM の全体的なパフォーマンスがわずかに向上することもあります。
 
-Lucene バイナリクリーンアップタスクには、次の場所からアクセスできます。 **AEM /ツール/操作/メンテナンス/日別メンテナンスウィンドウ/ Lucene バイナリクリーンアップ**.
+Lucene バイナリクリーンアップタスクには、**AEM／ツール／操作／メンテナンス／日別メンテナンスウィンドウ／Lucene バイナリクリーンアップ**&#x200B;からアクセスできます。
 
 ### データストアのガベージコレクション {#data-store-garbage-collection}
 
@@ -594,18 +593,18 @@ Lucene バイナリクリーンアップタスクには、次の場所からア�
 
 ### 監査ログのメンテナンス {#audit-log-maintenance}
 
-監査ログのメンテナンスについて詳しくは、[別個のドキュメントページ](/help/sites-administering/operations-audit-log.md)を参照してください。
+監査ログのメンテナンスについては、[別のドキュメントページ](/help/sites-administering/operations-audit-log.md)を参照してください。
 
 ### バージョンのパージ {#version-purge}
 
-バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。その結果、を使用すると、を手動で使用する必要性を最小限に抑えることができます [バージョンパージツール](/help/sites-deploying/version-purging.md).バージョンのパージタスクをスケジュールおよび設定するには、次にアクセスします **ツール/運営/メンテナンス/週別メンテナンスウィンドウ** 次の手順に従います。
+バージョンのパージメンテナンスタスクをスケジュールして、古いバージョンを自動的に削除できます。これにより、[バージョンのパージツール](/help/sites-deploying/version-purging.md)を手動で実行する必要性を最小限に抑えることができます。バージョンのパージタスクをスケジュールして設定するには、**ツール／操作／メンテナンス／週別メンテナンスウィンドウ**&#x200B;にアクセスし、次の手順に従います。
 
-1. 次をクリック： **追加** 」ボタンをクリックします。
-1. 選択 **バージョンのパージ** を選択します。
+1. 「**追加**」ボタンをクリックします。
+1. ドロップダウンメニューから「**バージョンのパージ**」を選択します。
 
    ![version_purge_maintenancetask](assets/version_purge_maintenancetask.png)
 
-1. バージョンのパージタスクを設定するには、 **歯車** 新しく作成されたバージョンのパージメンテナンスカードのアイコン。
+1. バージョンのパージタスクを設定するには、新しく作成されたバージョンのパージメンテナンスカードの&#x200B;**歯車**&#x200B;アイコンをクリックします。
 
    ![version_purge_taskconfiguration](assets/version_purge_taskconfiguration.png)
 
@@ -648,7 +647,7 @@ Lucene バイナリクリーンアップタスクには、次の場所からア�
   </tr>
   <tr>
    <td>granite.maintenance.name</td>
-   <td>タスクの一意の名前 — タスクを参照するために使用されます。 これは通常、単純な名前です。</td>
+   <td>タスクの一意の名前 - タスクを参照するために使用されます。通常、これは単純な名前です。</td>
    <td>MyMaintenanceTask</td>
    <td>必須</td>
   </tr>
@@ -669,9 +668,9 @@ Apache Sling のジョブ処理では、このトピックからジョブを開�
  </tbody>
 </table>
 
-上記のサービスプロパティとは別に、 `process()` メソッド `JobConsumer` インターフェイスは、メインスタスクに対して実行する必要があるコードを追加して実装する必要があります。 指定された `JobExecutionContext` を使用して、ステータス情報を出力したり、ジョブがユーザーによって停止されたかどうかを確認したり、結果（成功または失敗）を作成したりできます。
+上記のサービスプロパティとは別に、`JobConsumer` インターフェースの `process()` メソッドに、メンテナンスタスクのために実行されるべきコードを追加して実装する必要があります。指定された `JobExecutionContext` を使用して、ステータス情報を出力したり、ジョブがユーザーによって停止されたかどうかを確認したり、結果（成功または失敗）を作成したりできます。
 
-すべてのインストールでメンテナンスタスクを実行しない場合（例えば、パブリッシュインスタンスでのみ実行する場合）は、 `@Component(policy=ConfigurationPolicy.REQUIRE)`.その後、リポジトリ内で、該当する設定を実行モードとしてマークできます。 詳しくは、 [OSGi の設定](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository).
+すべてのインストールでメンテナンスタスクを実行することが適切ではない状況の場合（パブリッシュインスタンスでのみ実行する場合など）は、`@Component(policy=ConfigurationPolicy.REQUIRE)` を追加することにより、サービスをアクティブにするには設定を必要とするように指定できます。その後、該当する設定を、リポジトリ内で実行モードに依存するものとしてマークできます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md#creating-the-configuration-in-the-repository)を参照してください。
 
 以下のカスタムメンテナンスタスクの例では、設定可能な一時ディレクトリから、過去 24 時間以内に変更されたファイルを削除します。
 
@@ -687,15 +686,15 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 [experiencemanager-java-maintenancetask-sample](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-maintenancetask-sample)- [src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.java](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-maintenancetask-sample/blob/master/src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.java)
 
-サービスをデプロイすると、操作ダッシュボード UI に表示されます。 これは、利用可能なメンテナンススケジュールの 1 つに追加できます。
+サービスをデプロイすると、操作ダッシュボード UI に表示されます。 利用可能なメンテナンススケジュールの 1 つに追加できます。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 
-これにより、対応するリソースが/apps/granite/operations/config/maintenance/に追加されます。`schedule`/`taskname`.タスクが実行モードに依存する場合、このメンテナンスタスクでアクティブにする必要がある実行モードの値を使用して、プロパティ granite.operations.conditions.runmode をそのノードに設定する必要があります。
+これにより、対応するリソースが /apps/granite/operations/config/maintenance/`schedule`/`taskname` に追加されます。タスクが実行モードに依存する場合は、granite.operations.conditions.runmode プロパティを該当するノードで設定し、このメンテナンスタスク用にアクティブにする必要のある実行モードの値を指定する必要があります。
 
 ## システム概要 {#system-overview}
 
-この **システム概要ダッシュボード** AEMインスタンスの設定、ハードウェアおよびヘルスの概要を表示します。 つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
+**システム概要ダッシュボード**&#x200B;に、AEM インスタンスの設定、ハードウェアおよびヘルスの概要が表示されます。つまり、システムヘルスのステータスが明白になり、すべての情報が 1 つのダッシュボードに集約されます。
 
 >[!NOTE]
 >
@@ -703,7 +702,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 ### アクセス方法 {#how-to-access}
 
-システム概要ダッシュボードにアクセスするには、に移動します。 **「ツール」>「操作」>「システム概要」**.
+システム概要ダッシュボードにアクセスするには、**ツール／操作／システム概要**&#x200B;に移動します。
 
 ![system_overview_dashboard](assets/system_overview_dashboard.png)
 
@@ -711,7 +710,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 次の表では、システム概要ダッシュボードに表示されるすべての情報について説明します。表示する関連情報がない場合（バックアップが進行中ではない、重要なヘルスチェックはないなど）は、それぞれのセクションに「エントリがありません」というメッセージが表示されます。
 
-また、 `JSON` ファイルをクリックしてダッシュボード情報を要約する **ダウンロード** 」ボタンをクリックします。 `JSON` endpoint is `/libs/granite/operations/content/systemoverview/export.json` また、 `curl` 外部監視用のスクリプト。
+また、ダッシュボードの右上隅の「**ダウンロード**」ボタンをクリックして、ダッシュボード情報を要約した `JSON` ファイルをダウンロードすることもできます。`JSON` のエンドポイントは `/libs/granite/operations/content/systemoverview/export.json` です。これを `curl` スクリプトで使用して、外部監視をおこなうことができます。
 
 <table>
  <tbody>
@@ -766,7 +765,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>オペレーティングシステム（OS）および OS バージョン（Mac OS X など）</li>
      <li>システム負荷平均（<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/OperatingSystemMXBean.html#getSystemLoadAverage--">OperatingSystemMXBeanusable</a> から取得されます）</li>
      <li>ディスク領域（ホームディレクトリがあるパーティション）</li>
-     <li>最大ヒープ（から返される） <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a></li>
+     <li>最大ヒープ（<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a> によって返されます）</li>
     </ul> </td>
    <td>該当なし</td>
    <td>該当なし</td>
@@ -843,11 +842,11 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>ワークフロージョブ：
       <ul>
        <li>失敗したワークフロージョブの数（ある場合）</li>
-       <li>キャンセルされたワークフロージョブの数（存在する場合）</li>
+       <li>キャンセルされたワークフロージョブの数（ある場合）</li>
       </ul> </li>
     </ul>
     <ul>
-     <li>ワークフロー数 — 特定のステータスのワークフローの数（存在する場合）:
+     <li>ワークフロー数 - 特定のステータスのワークフローの数（ある場合）：
       <ul>
        <li>実行中</li>
        <li>失敗</li>
@@ -885,7 +884,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
      <li>タグ</li>
      <li>許可可能</li>
      <li>ノードの合計数<br /> </li>
-    </ul> <p>ノードの合計数は nodeCounterMBean から取得され、残りの統計は IndexInfoService から取得されます。</p> </td>
+    </ul> <p>ノードの合計数は nodeCounterMBean から取得しますが、残りの統計は IndexInfoService から取得します。</p> </td>
    <td>該当なし</td>
    <td>該当なし</td>
   </tr>
@@ -897,7 +896,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
   </tr>
   <tr>
    <td>インデックス作成</td>
-   <td><p>ディスプレイ:</p>
+   <td><p>表示：</p>
     <ul>
      <li>「インデックスを処理中」</li>
      <li>「クエリを処理中」</li>
