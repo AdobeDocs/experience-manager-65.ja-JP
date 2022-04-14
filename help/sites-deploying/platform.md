@@ -1,8 +1,8 @@
 ---
 title: AEM プラットフォームの概要
-seo-title: AEM プラットフォームの概要
+seo-title: Introduction to the AEM Platform
 description: この記事では、AEM プラットフォームの一般的な概要と最も重要なコンポーネントを示します。
-seo-description: この記事では、AEM プラットフォームの一般的な概要と最も重要なコンポーネントを示します。
+seo-description: This article provides a general overview of the AEM platform and its most important components.
 uuid: 214d4c49-1f5c-432c-a2c0-c1fbdceee716
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,9 +12,9 @@ discoiquuid: fccf9a0f-ebab-45ab-8460-84c86b3c4192
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/introduction-to-oak
 exl-id: 8ee5f4ff-648d-45ea-a51e-894cd4385e62
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 94%
+workflow-type: ht
+source-wordcount: '769'
+ht-degree: 100%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 94%
 
 AEM 6 の AEM プラットフォームは、Apache Jackrabbit Oak に基づいています。
 
-Apache Jackrabbit Oak は、昨今の世界規模の Web サイトおよび要求の厳しいその他のコンテンツアプリケーションの基盤として使用する、スケーラビリティとパフォーマンスに優れた階層構造のコンテンツリポジトリを実装するための取り組みです。
+Apache Jackrabbit Oak は、昨今の世界規模の web サイトや、要求の厳しいその他のコンテンツアプリケーションの基盤として使用する、スケーラビリティとパフォーマンスに優れた階層構造のコンテンツリポジトリを実装するための取り組みです。
 
-これはJackrabbit 2の後継であり、AEM 6でそのコンテンツリポジトリCRXのデフォルトバックエンドとして使用されます。
+これは Jackrabbit 2 の後継であり、コンテンツリポジトリである CRX のデフォルトのバックエンドとして AEM 6 で使用しています。
 
 ## 設計の原則と目的 {#design-principles-and-goals}
 
@@ -47,7 +47,7 @@ Oak は [JSR-283](https://www.day.com/day/en/products/jcr/jsr-283.html)（JCR 2.
 * ストレージを接続可能にする
 * クラスター化メカニズムを提供する
 
-### Oak Core  {#oak-core}
+### Oak Core {#oak-core}
 
 Oak Core は、ストレージレイヤーに複数のレイヤーを追加します。
 
@@ -55,20 +55,20 @@ Oak Core は、ストレージレイヤーに複数のレイヤーを追加し�
 * 検索およびインデックス作成
 * 監視
 
-### Oak JCR  {#oak-jcr}
+### Oak JCR {#oak-jcr}
 
 Oak JCR の主な目的は、JCR セマンティクスをツリー操作に変換することです。また、次の役割も果たします。
 
 * JCR API の実装
 * JCR の制約を実装するコミットフックの格納
 
-また、Oak JCR の概念の一部として、Java 以外の実装も可能になりました。
+また、Oak JCR の概念の一環として、Java 以外の実装も可能になりました。
 
 ## ストレージの概要 {#storage-overview}
 
 Oak ストレージレイヤーは、コンテンツの実際のストレージに抽象化レイヤーを提供します。
 
-現在、AEM6では2つのストレージ実装を使用できます。**Tar Storage**&#x200B;と&#x200B;**MongoDB Storage**。
+現在、AEM6 では 2 つのストレージ実装（**Tar ストレージ**&#x200B;と **MongoDB ストレージ**）を使用できます。
 
 ### Tar ストレージ {#tar-storage}
 
@@ -90,7 +90,7 @@ Tar ストレージでは tar ファイルを使用します。このストレ�
 
 I/O コストを削減し、可能な限りキャッシュにコンテンツを収めるように、レコードの形式がサイズに合わせて最適化されます。
 
-### Mongo ストレージ  {#mongo-storage}
+### Mongo ストレージ {#mongo-storage}
 
 MongoDB ストレージは、MongoDB を活用してシャーディングとクラスター化をおこないます。リポジトリツリーは 1 つの MongoDB データベースに保持されます。このデータベースでは、各ノードは個別のドキュメントになります。
 
@@ -120,13 +120,13 @@ MongoDB ストレージを使用した一般的な AEM クラスターのセッ�
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-## Jackrabbit 2との違いは何ですか。{#what-is-different-from-jackrabbit}
+## Jackrabbit 2 との違い {#what-is-different-from-jackrabbit}
 
 Oak は JCR 1.0 標準との下位互換性を確保するように設計されているので、ユーザーレベルでの変更はほとんどありません。ただし、Oak ベースの AEM インストールをセットアップする場合に考慮しなければならない顕著な違いがいくつか存在します。
 
-* Oak ではインデックスが自動作成されません。そのため、必要に応じてカスタムインデックスを作成する必要があります。
+* Oak ではインデックスが自動的に作成されません。そのため、必要に応じてカスタムインデックスを作成する必要があります。
 * セッションが常にリポジトリの最新の状態を反映する Jackrabbit 2 とは異なり、Oak を使用すると、セッションの取得時からのリポジトリの固定の表示が反映されます。これは、Oak が MVCC モデルを基盤としているためです。
-* 同じ名前の兄弟（SNS）は Oak ではサポートされません。
+* 同じ名前の兄弟（SNS）は Oak ではサポートしていません。
 
 ## プラットフォーム関連のその他のドキュメント {#other-platform-related-documentation}
 
