@@ -4,9 +4,9 @@ description: GraphQL を AEM と共に使用し、サンプルコンテンツと
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 source-git-commit: 1a3d5a6b3b4f7af67d6a62cdaab484daa536cb63
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1416'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 >[!NOTE]
 >
->インスタンスに応じて、 [AEM GraphQL API に含まれる GraphiQL インターフェイス](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface) クエリの送信とテストに使用します。
+>インスタンスによっては、[AEM GraphQL API に付属している GraphiQL インターフェイス](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)に直接アクセスして、クエリの送信とテストをおこなうことができます。
 >
 >例：`http://localhost:4502/content/graphiql.html`
 
@@ -484,7 +484,7 @@ query {
 }
 ```
 
-### サンプルクエリ - 「Jobs」または「Smith」という名前を持つすべての人物  {#sample-all-persons-jobs-smith}
+### サンプルクエリ - 「Jobs」または「Smith」という名前を持つすべての人物 {#sample-all-persons-jobs-smith}
 
 `Jobs` または `Smith` という名前を持つすべての `persons` が抜き出されます。
 
@@ -538,7 +538,7 @@ query {
 }
 ```
 
-### サンプルクエリ - 「Jobs」という名前を持たないすべての人物  {#sample-all-persons-not-jobs}
+### サンプルクエリ - 「Jobs」という名前を持たないすべての人物 {#sample-all-persons-not-jobs}
 
 `Jobs` または `Smith` という名前を持つすべての `persons` が抜き出されます。
 
@@ -874,7 +874,7 @@ query {
 }
 ```
 
-### ネストされたコンテンツフラグメントのサンプルクエリ - 「Smith」という名前を持つ従業員が少なくとも 1 人いるすべての会社  {#sample-companies-employee-smith}
+### ネストされたコンテンツフラグメントのサンプルクエリ - 「Smith」という名前を持つ従業員が少なくとも 1 人いるすべての会社 {#sample-companies-employee-smith}
 
 このクエリでは、「Smith」という `name` の `person` をフィルタリングし、ネストされた 2 つのフラグメント（`company` と `employee`）から取得した情報を返します。
 
@@ -1269,7 +1269,7 @@ query {
 }
 ```
 
-### ネストされたコンテンツフラグメントのサンプルクエリ - 複数モデルタイプ {#sample-wknd-nested-fragment-multiple-model}
+### ネストされたコンテンツフラグメントのサンプルクエリ - 複数モデルタイプ{#sample-wknd-nested-fragment-multiple-model}
 
 このクエリでは次のものを検索します。
 
@@ -1299,7 +1299,7 @@ query {
 }
 ```
 
-### 特定モデルのコンテンツフラグメントのうちコンテンツ参照を含んだものを取得するサンプルクエリ {#sample-wknd-fragment-specific-model-content-reference}
+### 特定モデルのコンテンツフラグメントのうちコンテンツ参照を含んだものを取得するサンプルクエリ{#sample-wknd-fragment-specific-model-content-reference}
 
 このクエリには次の 2 種類があります。
 
@@ -1508,7 +1508,7 @@ query {
 }
 ```
 
-## GraphQL で使用するコンテンツフラグメント構造のサンプル  {#content-fragment-structure-graphql}
+## GraphQL で使用するコンテンツフラグメント構造のサンプル {#content-fragment-structure-graphql}
 
 サンプルクエリは次の構造に基づいています。
 
@@ -1534,7 +1534,7 @@ query {
 |--- |--- |--- |
 | name（会社名） | 1 行のテキスト |  |
 | ceo（最高経営責任者） | フラグメント参照（1 つ） | [Person](#model-person) |
-| employees（従業員） | フラグメント参照（複数フィールド） | [人物](#model-person) |
+| employees（従業員） | フラグメント参照（複数フィールド） | [Person](#model-person) |
 
 #### Person（人物） {#model-person}
 
@@ -1546,7 +1546,7 @@ query {
 | firstName（名） | 1 行のテキスト |  |
 | awards（受賞歴） | フラグメント参照（複数フィールド） | [Award](#model-award) |
 
-#### Award {#model-award}
+#### Award（賞） {#model-award}
 
 賞を定義するフィールドは次のとおりです。
 
@@ -1596,10 +1596,10 @@ query {
 | id | title |
 |--- |--- |
 | GB | Gameblitz |
-|  GS | 配偶星 |
+|  GS | Gamestar |
 |  OSC | Oscar |
 
-#### City（市区町村） {#fragment-city}
+#### 都市 {#fragment-city}
 
 | name | country | population | categories |
 |--- |--- |--- |--- |
