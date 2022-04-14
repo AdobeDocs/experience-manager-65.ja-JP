@@ -1,8 +1,8 @@
 ---
 title: AEM Forms データのバックアップ
-seo-title: AEM Forms データのバックアップ
+seo-title: Backing up the AEM forms data
 description: ここでは、AEM Forms データベース、GDS およびコンテンツ保存場所のルートディレクトリのホットバックアップ（オンラインバックアップ）の実行に必要な手順を説明します。
-seo-description: ここでは、AEM Forms データベース、GDS およびコンテンツ保存場所のルートディレクトリのホットバックアップ（オンラインバックアップ）の実行に必要な手順を説明します。
+seo-description: This document describes the steps that are required to complete a hot, or online, backup of the AEM forms database, the GDS, and Content Storage Root directories.
 uuid: ac7856be-e3b7-4b81-b8b9-fc909b5907b4
 contentOwner: admin
 content-type: reference
@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 52187196-b091-4683-85ae-cc7c250dee54
 exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
-source-wordcount: '1573'
-ht-degree: 93%
+workflow-type: ht
+source-wordcount: '1540'
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ GDS の場所をバックアップする頻度は、AEM Forms の使用方法と
 >
 >参照されていないファイルは、回復プロセスの後に GDS ディレクトリ内で維持されます。これは、現在の既知の制限です。
 
-## データベース、GDS、AEM リポジトリ、およびコンテンツ保存場所のルートディレクトリのバックアップ  {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
+## データベース、GDS、AEM リポジトリ、およびコンテンツ保存場所のルートディレクトリのバックアップ {#back-up-the-database-gds-aem-repository-and-content-storage-root-directories}
 
 AEM Forms は、セーフバックアップ（スナップショット）モードまたはローリングバックアップ（継続的な範囲）モードのいずれかにする必要があります。AEM Forms を設定していずれかのバックアップモードを開始する前に、以下のことを確認してください。
 
@@ -48,13 +48,13 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 
 * 使用可能なオペレーティングシステムまたはサードパーティのバックアップユーティリティを使用して GDS ディレクトリをバックアップします（[GDS の場所](/help/forms/using/admin-help/files-back-recover.md#gds-location)を参照）。
 * （オプション）使用可能なオペレーティングシステム、またはサードパーティのバックアップ機能やユーティリティを使用して、コンテンツ保存場所のルートディレクトリをバックアップします（[コンテンツ保存場所のルートディレクトリ（スタンドアロン環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-stand-alone-environment)または[コンテンツ保存場所のルートディレクトリ（クラスター環境）](/help/forms/using/admin-help/files-back-recover.md#content-storage-root-location-clustered-environment)を参照）。
-* オーサーインスタンスと   オーサーインスタンスとパブリッシュインスタンス（ crx -repositoryバックアップ）。
+* オーサーインスタンスとオーサーインスタンスとパブリッシュインスタンス（crx -repository backup）。
 
    Correspondence Management Solution 環境をバックアップするには、[バックアップと復旧](/help/sites-administering/backup-and-restore.md)に説明されているように、オーサーインスタンスとパブリッシュインスタンスに対して手順を実行します。
 
    オーサーインスタンスとパブリッシュインスタンスをバックアップするときには、次の点を考慮してください。
 
-   * オーサーインスタンスと  オーサーインスタンスとパブリッシュインスタンスは同時に開始するように同期されます。バックアップの実行中もオーサーインスタンスとパブリッシュインスタンスを引き続き使用できますが、バックアップ中にアセットを公開しないことをお勧めします。 新しいアセットをパブリッシュする前に、オーサーインスタンスとパブリッシュインスタンスの両方のバックアップが終了するまで待機してください。
+   * オーサーインスタンスとオーサーインスタンスとパブリッシュインスタンスは同期していて、同時に開始します。バックアップの実行中もオーサーインスタンスとパブリッシュインスタンスを継続して使用できますが、キャプチャされない変更が生じないようにするために、バックアップ中はアセットを公開しないことをお勧めします。新しいアセットをパブリッシュする前に、オーサーインスタンスとパブリッシュインスタンスの両方のバックアップが終了するまで待機してください。
    * Author ノードの完全なバックアップには、Forms Manager および AEM Forms ワークスペースデータのバックアップが含まれます。
    * ワークベンチ開発者はそのプロセスに対してローカルで作業を継続できます。ワークベンチ開発者は、バックアップ段階では新しいプロセスをデプロイするべきではありません。
    * 各バックアップセッションの長さについての決定（ローリングバックアップモードの場合）は、AEM forms 内のすべてのデータ（DB、GDS、AEM レポジトリ、その他すべての追加カスタムデータ）をバックアップするための合計時間に基づいて行ってください。
@@ -72,7 +72,7 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 >
 >データベースのバックアップは、GDS のバックアップを開始する前に完了しておく必要があります。データベースのバックアップが完了していない場合、データは同期されません。
 
-### バックアップモードの開始  {#entering-the-backup-modes}
+### バックアップモードの開始 {#entering-the-backup-modes}
 
 バックアップモードを開始および終了するには、管理コンソール、LCBackupMode コマンド、AEM forms インストールで使用可能な API のいずれかを使用します。ローリングバックアップ（継続的な取得）では管理コンソールオプションを使用できないことに注意してください。コマンドラインオプションか API のいずれかを使用する必要があります。<!-- Fix broken link For information about using the API to enter and leave backup modes, see AEM forms API Reference on Help and Tutorials page. -->
 
@@ -93,12 +93,12 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 コマンドラインインターフェイスの `LCBackupMode` スクリプトを使用して、AEM Forms をセーフバックアップモードにすることができます。
 
 1. ADOBE_LIVECYCLE を設定し、アプリケーションサーバーを起動します。
-1. `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline`フォルダーに移動します。
+1. `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline` フォルダーに移動します。
 1. オペレーティングシステムに応じて、`LCBackupMode.cmd` または `LCBackupMode.sh` スクリプトを編集して、システムに適合するデフォルト値を指定します。
 1. コマンドプロンプトで、次のコマンドを 1 行で実行します。
 
-   * (Windows) `LCBackupMode.cmd enter [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `] [-label=`*labelname* `] [-timeout=`*seconds* `]`
-   * (Linux、UNIX) `LCBackupMode.sh enter [-host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `] [-label=`*labelname* `]`
+   * （Windows）`LCBackupMode.cmd enter [-Host=`*ホスト名* `] [-port=`*ポート番号* `] [-user=`*ユーザー名* `] [-password=`*パスワード* `] [-label=`*ラベル名* `] [-timeout=`*秒数* `]`
+   * （Linux、UNIX）`LCBackupMode.sh enter [-host=`*ホスト名* `] [-port=`*ポート番号* `] [-user=`*ユーザー名* `] [-password=`*パスワード* `] [-label=`*ラベル名* `]`
 
    上記のコマンドでは、プレースホルダーは次のように定義されています。
 
@@ -116,7 +116,7 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 
    バックアップモードのコマンドラインインターフェイスについて詳しくは、BackupRestoreCommandline ディレクトリ内にある、お読みくださいファイルを参照してください。
 
-### バックアップモードの終了  {#leaving-backup-modes}
+### バックアップモードの終了 {#leaving-backup-modes}
 
 バックアップモードを終了するには、管理コンソールまたはコマンドラインオプションのいずれかを使用します。
 
@@ -132,17 +132,17 @@ AEM Forms は、セーフバックアップ（スナップショット）モー�
 
 コマンドラインインターフェイスを使用して、AEM Forms のセーフバックアップモード（スナップショットモード）または現在のバックアップモードセッション（ローリングモード）を終了できます。管理コンソールからはローリングバックアップモードを終了できないことに注意してください。ローリングバックアップモードの場合、管理コンソールのバックアップユーティリティのコントロールは無効になります。API 呼び出しを使用するか、LCBackupMode コマンドを使用することが必要です。
 
-1. `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline`フォルダーに移動します。
+1. `*[aem-forms root]*/sdk/misc/Foundation/BackupRestoreCommandline` フォルダーに移動します。
 1. オペレーティングシステムに応じて、`LCBackupMode.cmd` または `LCBackupMode.sh` スクリプトを編集して、システムに適合するデフォルト値を指定します。
 
    >[!NOTE]
    >
-   >「[AEM Forms のインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63)」を参照し、ご使用のアプリケーションに該当する章の説明に従って JAVA_HOME ディレクトリを設定する必要があります。**
+   >「[AEM Forms のインストールの準備](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_63_jp)」を参照し、ご使用のアプリケーションに該当する章の説明に従って JAVA_HOME ディレクトリを設定する必要があります。**
 
 1. 次のコマンドを 1 行で実行します。
 
-   * (Windows) `LCBackupMode.cmd leaveContinuousCoverage [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `]`
-   * (Linux、UNIX) `LCBackupMode.sh leaveContinuousCoverage [-Host=`*hostname* `] [-port=`*portnumber* `] [-user=`*username* `] [-password=`*password* `]`
+   * （Windows）`LCBackupMode.cmd leaveContinuousCoverage [-Host=`*ホスト名* `] [-port=`*ポート番号* `] [-user=`*ユーザー名* `] [-password=`*パスワード* `]`
+   * （Linux、UNIX）`LCBackupMode.sh leaveContinuousCoverage [-Host=`*ホスト名* `] [-port=`*ポート番号* `] [-user=`*ユーザー名* `] [-password=`*パスワード* `]`
 
       上記のコマンドでは、プレースホルダーは次のように定義されています。
 
