@@ -18,7 +18,7 @@ ht-degree: 100%
 
 [!DNL Dynamic Media] では、オーサリングユーザーインターフェイス全体でキーボードコントロールおよび支援テクノロジー（JAWS スクリーンリーダーや NVDA スクリーンリーダーなど）をサポートしています。
 
-##  [!DNL Dynamic Media]でのキーボードアクセシビリティのサポート
+## [!DNL Dynamic Media]でのキーボードアクセシビリティのサポート
 
 [!DNL Dynamic Media]は[!DNL Adobe Experience Manager Assets]のプラグインなので、キーボードコントロールの動作のほとんどは[!DNL Experience Manager Assets]と同じです。例えば、 [!DNL Dynamic Media]の「`Cancel`」ボタンは、[!DNL Experience Manager Assets]と同じフォーカスハイライトを持ち、[!DNL Experience Manager Assets]と同じように`Spacebar`キーに反応します。詳しくは、[Assets のキーボードショートカット](/help/assets/accessibility.md#keyboard-shortcuts)を参照してください。
 
@@ -52,7 +52,7 @@ ht-degree: 100%
 
 詳しくは、『Dynamic Media ビューアリファレンスガイド』の[キーボードのアクセシビリティとナビゲーション](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=ja)を参照してください。
 
-##  [!DNL Dynamic Media]ビューアでの支援テクノロジーのサポート {#assistive-technology-support-for-dm-viewers}
+## [!DNL Dynamic Media]ビューアでの支援テクノロジーのサポート {#assistive-technology-support-for-dm-viewers}
 
 すべての[!DNL Dynamic Media]ビューアコンポーネントでは、ARIA（アクセシブルリッチインターネットアプリケーション）の役割と属性をサポートして、スクリーンリーダーなどの支援テクノロジーとの統合を強化しています。
 詳しくは、『Dynamic Media ビューアリファレンスガイド』の「ビューアのカスタマイズ」のトピックで、**支援テクノロジーのサポート**&#x200B;に関するヘルプトピックを参照してください。例えば、ビデオビューアの[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=ja)や、インタラクティブ画像ビューアの[支援テクノロジーのサポート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=ja#viewers-for-aem-assets-only)を参照してください。
