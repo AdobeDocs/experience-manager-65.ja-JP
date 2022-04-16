@@ -667,7 +667,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 特定の期間内の（例えば 24 時間の監視を何度かおこなって）すべての GET エントリを合計することにより、Web サイトの平均トラフィックを把握できます。
 
-####  request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
+#### request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
 
 パフォーマンス分析は、request.log から始めることをお勧めします。
 
@@ -701,7 +701,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 サイズの小さいスクリプトを使用して、ログファイルから必要な情報を抽出し、必要な統計を取ることができます。これらの統計から、どのページ、またはどんなタイプのページが低速か、全体的なパフォーマンスが十分かどうかを確認できます。
 
-####  request.log での検索応答時間の監視 {#monitoring-search-response-times-with-the-request-log}
+#### request.log での検索応答時間の監視 {#monitoring-search-response-times-with-the-request-log}
 
 検索要求は常にログファイルに登録されます。
 
