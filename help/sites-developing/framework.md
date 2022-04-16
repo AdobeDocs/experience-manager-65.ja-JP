@@ -183,7 +183,6 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
 >* `jcr:content` ノードのタイプが `cq:PageContent` であるページ（`cq:Page`）。`cq:Taggable` Mixin が含まれています。
 >
 >* `jcr:content/metadata` ノードに常に `cq:Taggable` Mixin を持つアセット（`cq:Asset`）。
-
 >
 
 

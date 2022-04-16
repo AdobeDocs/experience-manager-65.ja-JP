@@ -98,7 +98,6 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 >
 >* OpenSSL が既にサーバーにインストールされている場合は、最新バージョンにアップグレードします。
 >* libcurl.so、libcrypto.so、libssl.so シンボリックリンクを作成し、それぞれ libcurl、libcrypto、libssl ライブラリの最新バージョンを指します。
-
 >
 
 
@@ -210,7 +209,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
 #### フォームデータモデルに SSL 通信を設定する {#configure-ssl-communcation-for-form-data-model}
 
-フォームデータモデル用の SSL 通信を有効にすることができます。フォームデータモデル用の SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行して証明書を追加することができます。 ``
+フォームデータモデル用の SSL 通信を有効にすることができます。フォームデータモデル用の SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。次のコマンドを実行して証明書を追加することができます。 &grave;&grave;
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 

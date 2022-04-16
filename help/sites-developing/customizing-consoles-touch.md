@@ -40,7 +40,6 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >* [クライアントライブラリ](/help/sites-developing/clientlibs.md)の使用と作成
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
-
 >
 >このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/jp/gems/user-interface-customization-for-aem-6.html) でも説明しています。
 
@@ -55,7 +54,6 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
 >
 >1. `/apps` 内で変更作業をおこないます。
-
 >
 
 
@@ -148,11 +146,13 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
       ```
 
    * 新しい列を追加、または既存の列を削除します。
+
    詳しくは、[オーバーレイ（および Sling Resource Merger）の使用](/help/sites-developing/overlays.md)を参照してください。
 
 1. 省略可能：
 
    * 追加データを挿入する場合は、以下を持つ [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) を記述する必要があります。
+
       `pageInfoProviderType` property.
 
    例として、（GitHub から）以下に添付するクラス／バンドルを参照してください。

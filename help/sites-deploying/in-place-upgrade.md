@@ -60,7 +60,6 @@ AEM 6.3 からアップグレードする場合、この移行は必要ありま
 >CRX2Oak Quickstart 拡張を使用して TarMK リポジトリのコンテンツ移行を実行する場合は、移行コマンドラインに以下を追加することで **samplecontent** 実行モードを削除できます。
 >
 >* `--promote-runmode nosamplecontent`
-
 >
 
 

@@ -246,14 +246,14 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete``cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete` `cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **ノードタイプ** | **Granite UI のリソースタイプ** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container` `granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI 管理コンポーネント {#granite-ui-administration-components}
@@ -293,14 +293,12 @@ Coral UI（CUI）は、アドビのタッチ対応 UI 用のビジュアルス�
 >* アドビの販促品、広告、プレゼンテーション
 >* Adobe ブランドのアプリケーションの UI（他の用途で簡単に使用できるフォントは不可）
 >* わずかにカスタマイズされている場合
-
 >
 >以下の場合は、Coral UI は使用しないでください。
 >
 >* アドビに関係のないドキュメントその他の項目
 >* コンテンツ作成環境（前述の項目が他人によって生成されるおそれがある場合）
 >* アドビと明確なつながりのないアプリケーション／コンポーネント／web ページ
-
 >
 
 

@@ -33,7 +33,6 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 >
 >* 3.x は [https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
-
 >
 
 

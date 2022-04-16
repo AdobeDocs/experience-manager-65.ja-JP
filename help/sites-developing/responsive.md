@@ -320,7 +320,6 @@ picturefill.js コードが必要とする必須 div 要素を生成するコン
 >
 >* クライアントライブラリフォルダー：`/libs/foundation/components/adaptiveimage/clientlibs`
 >* HTML を生成するスクリプト：`/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
-
 >
 >次節では、このコンポーネントの詳細について説明します。
 

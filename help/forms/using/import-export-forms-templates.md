@@ -25,7 +25,6 @@ ht-degree: 100%
 >[!NOTE]
 >
 >* AEM 6.4 Forms では crx-repository の構造が変更されています。以前のバージョンから AEM 6.4 Forms にアセットをインポートし、フォームが古い構造に依存している場合は、依存関係を手動でエクスポートする必要があります。リポジトリの構造とパスの変更について詳しくは、[AEM でのリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)を参照してください。
-
 >
 
 

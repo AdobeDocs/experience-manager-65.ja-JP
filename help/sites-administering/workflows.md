@@ -41,7 +41,6 @@ ht-degree: 100%
 >* ワークフローの適用とワークフローへの参加：[ワークフローの操作](/help/sites-authoring/workflows.md)。
 >* ワークフローモデルの作成とワークフロー機能の拡張：[ワークフローの開発と拡張](/help/sites-developing/workflows.md)。
 >* 重要なサーバーリソースを使用するワークフローのパフォーマンスの向上：[ワークフローの同時処理](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing)
-
 >
 
 

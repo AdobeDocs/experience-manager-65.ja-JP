@@ -29,7 +29,6 @@ ht-degree: 100%
 >* ACS Commons の Bulk Workflow Manager
 >* ACS Commons の Fast Action Manager
 >* 合成ワークフロー
-
 >
 >このソフトウェアはオープンソースで、[Apache v2 License](https://adobe-consulting-services.github.io/pages/license.html) が適用されます。質問や問題を報告するには、それぞれ [ACS AEM ツール](https://github.com/Adobe-Consulting-Services/acs-aem-commons/issues)と [ACS AEM Commons に関する GitHub の問題](https://github.com/Adobe-Consulting-Services/acs-aem-tools/issues)を利用してください。
 

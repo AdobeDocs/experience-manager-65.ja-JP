@@ -35,7 +35,6 @@ ht-degree: 100%
 >* クラシック UI では使用できません。
 >* ライブコピー内のページでは使用できません。
 >* リソースタイプが同じページでのみ使用できます。
-
 >
 
 
@@ -55,7 +54,6 @@ ht-degree: 100%
 >* `/libs/granite/ui/components/foundation/form/datepicker`
 >* `/libs/granite/ui/components/foundation/form/pathbrowser`
 >* `/libs/granite/ui/components/foundation/form/checkbox`
-
 >
 
 

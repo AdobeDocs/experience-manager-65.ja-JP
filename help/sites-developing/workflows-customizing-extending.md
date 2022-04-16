@@ -121,7 +121,6 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 >* ステップの編集ダイアログが次の場所にタイトルと説明を保存している。>
 >* `./jcr:title`
 >* `./jcr:description` の場所
-
 >
 >  この要件が満たされるのは、ステップの編集ダイアログが、`/libs/cq/flow/components/step/step` コンポーネントが実装する「共通」タブを使用しているときです。
 >
@@ -668,7 +667,6 @@ function getParticipant() {
 >
 >* [`com.day.cq.wcm.workflow.process.ActivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/ActivatePageProcess.html)
 >* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
-
 >
 
 

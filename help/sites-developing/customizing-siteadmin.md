@@ -36,7 +36,6 @@ ht-degree: 100%
 >
 >* デジタルアセットコンソール
 >* コミュニティコンソール
-
 >
 
 
@@ -111,7 +110,6 @@ public class StarredListInfoProvider implements ListInfoProvider {
 >
 >* 指定されたリクエストやリソースに基づいて、情報を JSON オブジェクトに追加すべきかどうかを実装環境に応じて判断する必要があります。
 >* `ListInfoProvider` の実装が、応答オブジェクト内に既に存在するプロパティを定義している場合、そのプロパティの値は、指定した値で上書きされます。
-
 >
 >  [サービスランキング](https://www.osgi.org/javadoc/r2/org/osgi/framework/Constants.html#SERVICE_RANKING)を使用して、複数の `ListInfoProvider` 実装の実行順序を管理できます。
 

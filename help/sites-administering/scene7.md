@@ -26,7 +26,6 @@ Dynamic Media Classic を使用するには、Dynamic Media Classic と Adobe Ex
 >* Dynamic Media Classic の DHTML ビューアプラットフォームは、2014年1月31日に正式にサポート終了となりました。詳しくは、[DHTML ビューアのサポート終了 FAQ](../sites-administering/dhtml-viewer-endoflifefaqs.md) を参照してください。
 >* Experience Manager と連携するよう Dynamic Media Classic を設定する前に、Dynamic Media Classic と Experience Manager を統合するための[ベストプラクティス](#best-practices-for-integrating-scene-with-aem)を参照してください。
 >* カスタムプロキシ設定で Dynamic Media Classic を使用する場合、Experience Manager では 3.x API を使用する機能もあれば 4.x API を使用する機能もあるので、両方の HTTP クライアントプロキシ設定を指定する必要があります。3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定し、4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
-
 >
 
 
@@ -340,7 +339,6 @@ Experience Manager Assets と Dynamic Media Classic 間の同期により、現�
 >
 >* パブリッシュ環境で Dynamic Media Classic に再接続する場合、パブリッシュ環境でパスワードをリセットしないと再接続が正常にできません（オーサーインスタンスの問題ではありません）。
 >* 地域、会社名などの値を変更する場合は、 Dynamic Media Classic に再接続する必要があります。設定オプションを変更後、保存していない場合、Experience Manager では引き続き、設定が有効であると誤って表示されます。必ず再接続するようにします。
-
 >
 
 

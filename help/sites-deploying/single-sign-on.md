@@ -86,21 +86,18 @@ AEM インスタンス用に SSO を設定するには、[SSO Authentication Han
 >
 >* `disp_iis.ini`
 >* IIS
-
 >
 >`disp_iis.ini` で次のように設定します。
 > （詳しくは、[Dispatcher を Microsoft Internet Information Server と共にインストールする方法に関するページ](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-install.html#microsoft-internet-information-server)を参照してください）
 >
 >* `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
-
 >
 >IIS では、次のように設定します。
 >
 >* **匿名アクセス**&#x200B;を無効にする
 >
 >* **統合 Windows 認証**&#x200B;を有効にします。
-
 >
 
 

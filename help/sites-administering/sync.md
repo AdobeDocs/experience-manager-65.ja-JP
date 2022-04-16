@@ -128,7 +128,6 @@ ht-degree: 100%
 >
 >* デフォルトで割り当てられるユーザーは **`admin`** です。
 >* `communities-user-admin user.` を使用しないでください。
-
 >
 
 
@@ -356,9 +355,11 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
    * *sling.id.file* という名前のファイルを検索して削除する
 
       * 例えば、Linux システムの場合、次のようになります。
+
          `rm -i $(find . -type f -name sling.id.file)`
 
       * 例えば、Windows システムの場合、次のようになります。
+
          `use windows explorer and search for *sling.id.file*`
 
 1. パブリッシュインスタンスを開始する

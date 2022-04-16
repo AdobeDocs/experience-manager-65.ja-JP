@@ -31,7 +31,6 @@ ht-degree: 100%
 >
 >* 3.x は [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) のように設定します。
 >* 4.x は [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) のように設定します。
-
 >
 
 
@@ -246,7 +245,6 @@ Dynamic Tag Management ライブラリを手動でダウンロードして、AEM
 >* `companyID`
 >* `propertyID`
 >* `servertype`
-
 >
 
 

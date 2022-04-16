@@ -232,7 +232,6 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 >* クエリが正しいこと
 >* クエリが予期したインデックスに解決されること（[クエリの説明を実行](/help/sites-administering/operations-dashboard.md#diagnosis-tools)を使用）
 >* インデックス作成プロセスが完了していること
-
 >
 
 

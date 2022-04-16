@@ -97,7 +97,6 @@ e コマースソリューション（IBM® WebSphere® Commerce、Elastic Path�
 >
 >* クイックビューをトリガーして、ビデオにインタラクティブ機能を追加する。
 >* e コマースソリューション（IBM® WebSphere® Commerce、Elastic Path、Hybris、Intershop など）から Experience Manager に製品データを取り出すために、Experience Manager の実装が e コマース統合フレームワークを使用して&#x200B;*いない*。[Experience Manager Assets の e コマースの概念](/help/commerce/cif-classic/administering/concepts.md)を参照してください。
-
 >
 >Adobe Experience Manager の実装で Adobe Experience Manager eCommerce を使用している場合は、このタスクをスキップして次のタスクに進みます。
 
@@ -649,27 +648,27 @@ Adobe Experience Manager によって返される埋め込みコードには、�
   <tbody>
   <tr>
     <td><p>単一の SKU（クエリ文字列内）</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
     <td>単一の SKU（URL パス内）</td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/product/" + inData.sku;
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   <tr>
     <td><p>SKU とカテゴリ ID（クエリ文字列内）</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers({
-      "quickViewActivate": function(inData) {
+    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
+      "quickViewActivate": function(inData) &lbrace;
       var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
-      },
-      });</code></td>
+      &rbrace;,
+      &rbrace;);</code></td>
   </tr>
   </tbody>
 </table>

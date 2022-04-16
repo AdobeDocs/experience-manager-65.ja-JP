@@ -53,7 +53,6 @@ AEM を翻訳サービスプロバイダーに接続するためのクラウド�
 >
 >* [AEM 人間翻訳](https://www.adobe.com/go/aem-human-translation-connectors)
 >* [AEM 機械翻訳](https://www.adobe.com/go/aem-machine-translation-connectors)
-
 >
 
 

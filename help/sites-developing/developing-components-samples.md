@@ -35,7 +35,6 @@ ht-degree: 100%
 >
 >* [開発者モード](/help/sites-developing/developer-mode.md)
 >* [Hobbes.js ライブラリをベースとしてテストを自動化するためのフレームワーク](/help/sites-developing/hobbes.md)
-
 >
 
 

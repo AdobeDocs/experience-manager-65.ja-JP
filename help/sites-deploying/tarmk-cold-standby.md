@@ -90,7 +90,6 @@ Tar Micro Kernel のコールドスタンバイ機能では、1 つ以上のス�
 >
 >* org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreService から org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
 >* org.apache.jackrabbit.oak から&#x200B;**plugins**.segment.SegmentNodeStoreService から org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
-
 >
 >この変更が反映されるように、必要に応じて設定を調整してください。
 

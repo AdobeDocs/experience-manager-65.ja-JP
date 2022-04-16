@@ -104,7 +104,6 @@ AEM SPA Editor を活用する SPA が構築されている場合、コンテン
 >
 >* [AEM バージョン 6.4（サービスパック 2 を適用済み）](/help/release-notes/release-notes.md)
 >* [GitHub で入手可能なサンプルの We.Retail Journal アプリをここにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
-
 >
 
 

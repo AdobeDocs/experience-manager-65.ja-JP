@@ -50,7 +50,6 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
-
 >
 >このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
 

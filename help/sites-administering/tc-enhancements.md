@@ -89,7 +89,6 @@ ht-degree: 100%
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
-
 >
 >この `es` 言語コピーは、`en` ノードから 2 レベル離れている（americas/central-america）ので、検出されません。
 

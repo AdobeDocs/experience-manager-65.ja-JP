@@ -22,7 +22,6 @@ AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API で
 >
 >* Assets REST API
 >* コンテンツフラグメントをサポートしています。
-
 >
 >現在の Assets HTTP API の実装は、[REST](https://en.wikipedia.org/wiki/Representational_state_transfer) アーキテクチャスタイルに基づいています。
 
@@ -148,7 +147,6 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 >
 >* [CORS／AEM の説明](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
 >* [ビデオ - AEM を使用した CORS 向け開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=ja)
-
 >
 
 
@@ -156,7 +154,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 
 ## 使用可能な機能 {#available-features}
 
-コンテンツフラグメントは特定のアセットタイプです。](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの操作[を参照してください。
+コンテンツフラグメントは特定のアセットタイプです。[&#128279;](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの操作を参照してください。
 
 API を通じて使用できる機能について詳しくは、以下を参照してください。
 
@@ -256,7 +254,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 >[!NOTE]
 >
->詳細については、『](/help/assets/assets-api-content-fragments.md#api-reference)API リファレンス[』を参照してください。特に、[Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
+>詳細については、『[&#128279;](/help/assets/assets-api-content-fragments.md#api-reference)API リファレンス』を参照してください。特に、[Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
 
 ### 読み取り／配信 {#read-delivery}
 

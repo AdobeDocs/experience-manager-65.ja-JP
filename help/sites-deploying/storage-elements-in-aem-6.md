@@ -121,7 +121,6 @@ Red Hat Linux では、Transparent Huge Pages（THP）と呼ばれるメモリ�
 >
 >* Red Hat Linux 上の Transparent Huge Pages について詳しくは、こちらの[記事](https://access.redhat.com/solutions/46111)を参照してください。
 >* Linux のチューニングのヒントについては、こちらの[記事](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)を参照してください。
-
 >
 
 

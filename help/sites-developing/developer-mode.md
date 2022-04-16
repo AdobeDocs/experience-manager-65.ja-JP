@@ -38,8 +38,8 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
-   >
-   >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
+>
+>   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
 >* `administrators` グループに所属しているユーザーのみ使用できます。
 
 
@@ -51,7 +51,6 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* nosamplecontent 実行モードを使用しているオーサーインスタンス
 >* パブリッシュインスタンス
-
 >
 >使用後は再度無効にする必要があります。
 
@@ -61,7 +60,6 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* ナレッジベースの記事「[Troubleshooting AEM TouchUI issues](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」（有用なヒントとツールに関する記述あり）
 >* [AEM 6.0 の開発者モード](https://docs.adobe.com/content/ddc/en/gems/aem-6-0-developer-mode.html)に関する AEM Gems セッション
-
 >
 
 

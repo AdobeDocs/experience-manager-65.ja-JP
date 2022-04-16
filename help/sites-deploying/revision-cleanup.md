@@ -526,7 +526,6 @@ TarMK GC: no base state available, running full compaction instead
 >* Oak バージョン **1.0.0 ～ 1.0.11**&#x200B;または&#x200B;**1.1.0 ～ 1.1.6**&#x200B;の場合は、Oak-run バージョン** 1.0.11** を使用します。
 >
 >* **上述のものよりも新しい** Oak バージョンについては、AEM インストールの Oak コアと一致するバージョンの oak-run を使用します。
-
 >
 
 

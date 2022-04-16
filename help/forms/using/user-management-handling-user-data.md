@@ -121,7 +121,6 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 >* `EdcPrincipalMappingEntity` を `EdcPrincipalMappingEntit` に置き換えます。
 >
 >* `EdcPrincipalGrpCtmntEntity` を `EdcPrincipalGrpCtmntEnti` に置き換えます。
-
 >
 
 

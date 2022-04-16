@@ -34,7 +34,6 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* 単一ページアプリケーション
 >* ネイティブモバイルアプリケーション
 >* AEM の外部の他のチャネルおよびタッチポイント
-
 >
 >[コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)のドキュメントを参照してください。
 
