@@ -181,7 +181,7 @@ DAM デプロイメントへの直接アクセス権を持たない外部の委�
 * [Asset Share Commons](https://adobe-marketing-cloud.github.io/asset-share-commons/) に基づいた、配布および調達用ポータルのカスタム実装を使用します。
 * [!DNL Experience Manager] に設定されたアクセス制御と必要なネットワークインフラストラクチャ（VPN や IP 許可リストなど）を使用して、DAM 内の専用のコンテンツ領域に外部の関係者がアクセスできるようにします。[!DNL Experience Manager] Web UI を使用してアセットを取得したり、新しいコンテンツを DAM にアップロードしたりできます。
 
-####  [!DNL Experience Manager] からのアセットに対する処理中の作業 {#work-in-progress-on-assets-from-aem}
+#### [!DNL Experience Manager] からのアセットに対する処理中の作業 {#work-in-progress-on-assets-from-aem}
 
 このドキュメントで説明しているように、アセットの大規模な更新（処理中の作業と呼ぶこともあります）を行うときは、ローカルファイルに保存したすべての編集内容を [!DNL Experience Manager] にも変更としてアップロードしないことをお勧めします。これにより、デスクトップユーザーの作業がはかどり、使用されるネットワーク帯域幅が制限され、アセットのタイムラインが適切な状態に保たれ、管理された大規模な更新に集中するようになります。
 
