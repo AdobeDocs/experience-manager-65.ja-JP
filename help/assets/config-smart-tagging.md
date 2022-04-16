@@ -23,7 +23,7 @@ ht-degree: 100%
 
 * 最新の[[!DNL Experience Manager] サービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールします。
 
-##  と Adobe 開発者コンソールの統合  {#integrate-adobe-io}
+## と Adobe 開発者コンソールの統合  {#integrate-adobe-io}
 
 Adobe Developer Console と統合する場合、[!DNL Experience Manager] サーバーはリクエストをスマートコンテンツサービスに転送する前に、Adobe Developer Console ゲートウェイを使用してサービス資格情報を認証します。統合するには、組織の管理者権限と、組織で購入して有効化されたスマートコンテンツサービスライセンスを持つ Adobe ID アカウントが必要です。
 
