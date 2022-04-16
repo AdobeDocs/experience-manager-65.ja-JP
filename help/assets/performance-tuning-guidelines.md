@@ -6,8 +6,8 @@ mini-toc-levels: 1
 role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
-workflow-type: ht
+source-git-commit: 35639a818f58923ae9ad099752d359e7795be60b
+workflow-type: tm+mt
 source-wordcount: '2741'
 ht-degree: 100%
 
@@ -202,7 +202,7 @@ accessKey=<snip>
 </policymap>
 ```
 
-さらに、`configure.xml` ファイルにある ImageMagick の一時フォルダーのパス（または環境変数 `MAGIC_TEMPORARY_PATH`）を、十分な空き領域と IOPS があるディスクパーティションに設定します。
+さらに、`configure.xml` ファイルにある ImageMagick の一時フォルダーのパス（または環境変数 `MAGICK_TEMPORARY_PATH`）を、十分な空き領域と IOPS があるディスクパーティションに設定します。
 
 >[!CAUTION]
 >
@@ -281,7 +281,7 @@ PDF ドキュメント内のテキストを検索するなど、アセットの�
 お客様からのネットワークのパフォーマンスに関するすべての懸念については、次のタスクを実行してください。
 
 * お客様のネットワーク内からネットワークのパフォーマンスをテストする
-* アドビのネットワーク内からネットワークのパフォーマンスをテストするAMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
+* アドビのネットワーク内からネットワークのパフォーマンスをテストする。AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
 * 別のアクセスポイントからネットワークのパフォーマンスをテストする
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
