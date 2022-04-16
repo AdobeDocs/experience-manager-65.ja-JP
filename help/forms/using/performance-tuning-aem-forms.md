@@ -153,7 +153,7 @@ Apache は HTTP プロトコルを使用して CRX と情報をやり取りで�
 
 * アプリケーションサーバーの一時ディレクトリ。デフォルトの場所は以下のとおりです。
 
-   * (Jboss)[AEM インストールディレクトリ]\jboss\standalone\tmp
+   * (Jboss) [AEM インストールディレクトリ]\jboss\standalone\tmp
    * Weblogic - \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
    * Websphere - \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
