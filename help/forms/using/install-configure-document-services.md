@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 8fcbdb4d00a5ddffadf5b4a099454dc795999769
+source-git-commit: 81008366b7d5edaf1d2f83ccd2ba6237c2e96fad
 workflow-type: tm+mt
-source-wordcount: '5100'
+source-wordcount: '5107'
 ht-degree: 71%
 
 ---
@@ -677,13 +677,23 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++
 
-+++HTMLtoPDF
++++HTMLからPDFへの変換に関する問題
 
 * フォントディレクトリがPDFジェネレーターの設定 UI に追加されていることを確認します。
 
-+++
+**Linux および Solaris（PhantomJS 変換ルート）**
 
-+++Linux®および Solaris™（WebKit 変換）
+* Webkit ベースの HTMLToPDF 変換に 32 ビットライブラリ (libicudata.so.42) が使用可能であり、64 ビット (libicudata.so.42) が PhantomJS ベースの HTMLToPDF 変換に使用可能であることを確認します。
+
+* 次のコマンドを実行して、phantomjs の不足しているライブラリをリストします。
+
+   ```
+   ldd phantomjs | grep not
+   ```
+
+* JAVA_HOME_32 環境変数が正しい場所を指していることを確認します。
+
+**Linux®および Solaris™ （WebKit 変換ルート）**
 
 * ディレクトリを確認します。 `/usr/lib/X11/fonts` および `/usr/share/fonts` 存在する。 ディレクトリが存在しない場合は、 `/usr/share/X11/fonts` から `/usr/lib/X11/fonts` そして別のシンボリックリンク `/usr/share/fonts` から `/usr/share/X11/fonts`.
 
@@ -724,27 +734,13 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++
 
-+++Linux®および Solaris(PhantomJS)HTMLtoPDF
-
-* Webkit ベースの HTMLToPDF 変換に 32 ビットライブラリ (libicudata.so.42) が使用可能であり、64 ビット (libicudata.so.42) が PhantomJS ベースの HTMLToPDF 変換に使用可能であることを確認します。
-
-* 次のコマンドを実行して、phantomjs の不足しているライブラリをリストします。
-
-```
-ldd phantomjs | grep not
-```
-
-* JAVA_HOME_32 環境変数が正しい場所を指していることを確認します。
-
-+++
-
 +++ PDFジェネレーター (PDFG) ユーザーを追加できません
 
 * Microsoft® Visual C++ 2008 x86、Microsoft® Visual C++ 2010 x86、Microsoft® Visual C++ 2012 x86、Microsoft® Visual C++ 2013 x86（32 ビット版）を確認します。が Windows にインストールされている。
 
 +++
 
-+++自動化テストが失敗する
++++自動化テストの失敗
 
 * Microsoft® Office および OpenOffice の場合は、（各ユーザーと同様に）1 つ以上の変換を手動で実行し、変換時にダイアログがポップアップ表示されないようにします。 ダイアログが表示された場合は、ダイアログを閉じます。 自動変換時には、このようなダイアログが表示されません。
 
@@ -752,7 +748,7 @@ ldd phantomjs | grep not
 
 +++
 
-+++マルチユーザーコンバージョンの失敗
++++複数のユーザーコンバージョンエラー
 
 * 特定のユーザーが変換に失敗したかどうかを確認するには、サーバーログを確認します。（プロセスエクスプローラは、異なるユーザーの実行中のプロセスを確認するのに役立ちます）
 
