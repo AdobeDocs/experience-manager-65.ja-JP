@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 81008366b7d5edaf1d2f83ccd2ba6237c2e96fad
+source-git-commit: 0f4207564645ef7ba7da9064e971248b59f5a9b3
 workflow-type: tm+mt
-source-wordcount: '5107'
-ht-degree: 71%
+source-wordcount: '5381'
+ht-degree: 68%
 
 ---
 
@@ -199,6 +199,7 @@ PDFジェネレーターサービスを使用してMicrosoft® Word、Microsoft�
 
 >[!NOTE]
 >
+>* AEM Forms Server がオフラインまたはセキュア環境にあり、インターネットを使用してAdobe Acrobatをアクティブ化できない場合は、 [オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) Adobe Acrobatのこのようなインスタンスをアクティブ化する手順については、を参照してください。
 >* Adobe Acrobat、Microsoft® Word、Excel および PowerPoint は、Microsoft® Windows でのみ使用できます。 UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールして、リッチテキストファイルとサポートされているMicrosoft® Office ファイルをPDFドキュメントに変換します。
 >* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティソフトウェアのインストール後に表示されるすべてのダイアログボックスを閉じます。
 >* インストールされているすべてのソフトウェアを少なくとも 1 回起動します。PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを解除します。
@@ -389,10 +390,10 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。 「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. お使いのオペレーティングシステムに適したパッケージの名前をタップし、「**[!UICONTROL EULA 利用規約に同意する]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
-1. [パッケージマネージャー](https://docs.adobe.com/content/help/ja/experience-manager-65/administering/contentmanagement/package-manager.html)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
+1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き、「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して「**[!UICONTROL インストール]**」をクリックします。
 
-   [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
+   [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
 1. パッケージのインストールが完了したら、AEM インスタンスを再起動するよう指示されます。**その際、すぐにサーバーを停止しないでください。** AEM Formsサーバーを停止する前に、 ServiceEvent REGISTERED メッセージと ServiceEvent UNREGISTERED メッセージが `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log ファイルとログは安定しています。
 
@@ -759,6 +760,34 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * Microsoft® Office および OpenOffice の場合は、（各ユーザーと同様に）1 つ以上の変換を手動で実行し、変換時にダイアログがポップアップ表示されないようにします。 ダイアログが表示された場合は、ダイアログを閉じます。 自動変換時には、このようなダイアログが表示されません。
 
 * サンプル変換を実行します。
+
++++
+
++++ AEM Forms Server にインストールされたAdobe Acrobatのライセンスの有効期限
+
+* Adobe Acrobatの既存のライセンスをお持ちで、そのライセンスが期限切れの場合、 [最新バージョンのAdobe Application Managerをダウンロード](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html)、およびシリアル番号の移行。 前 [シリアル番号の移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+
+   * 次のコマンドを使用して、prov.xml を生成し、 [シリアル番号の移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 番号記事。
+
+      * prov.xml を生成
+
+         ```
+         adobe_prtk --tool=VolumeSerialize --generate --serial=<serialnum> [--leid=<LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=<Absolute path to prov.xml>]
+         ```
+
+      * パッケージをシリアル化します（prov.xml ファイルと新しいシリアルを使用して既存のインストールを再シリアル化します）。PRTK インストールフォルダーから次のコマンドを管理者として実行し、クライアントマシンにデプロイされたパッケージをシリアル化してアクティベートします。
+
+         ```
+         adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
+         ```
+
+* 大規模なインストールの場合は、 [AcrobatCustomization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) をクリックして、以前のバージョンのReaderとAcrobatを削除します。 インストーラーをカスタマイズし、組織のすべてのマシンに展開します。
+
++++
+
++++ AEM Formsサーバーはオフラインまたはセキュアな環境にあり、インターネットを使用してAcrobatをアクティブ化できません。
+
+* Adobe製品の初回起動から 7 日以内にオンラインにアクセスして、オンラインでのアクティベーションと登録を完了したり、インターネット対応デバイスと製品のシリアル番号を使用してこのプロセスを完了したりできます。 詳しい手順については、 [オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
 
 +++
 
