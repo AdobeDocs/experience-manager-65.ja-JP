@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a23b3648b2687bcdbb46ea5e0bb42090822e1dd9
+source-git-commit: 4b3327ed46024662813bb538f8338c59e508e10e
 workflow-type: tm+mt
-source-wordcount: '5420'
-ht-degree: 67%
+source-wordcount: '5330'
+ht-degree: 68%
 
 ---
 
@@ -223,11 +223,6 @@ Acrobatをインストールしたら、Microsoft® Word を開きます。 「*
    <td><p><strong>JDK（64 ビット）</strong></p> </td>
    <td><p>JAVA_HOME</p> </td>
    <td><p>C:¥Program Files¥Java¥jdk1.8.0_74</p> </td>
-  </tr>
-  <tr>
-   <td><p><strong>JDK（32 ビット）</strong></p> </td>
-   <td><p>JAVA_HOME_32</p> </td>
-   <td><p>C:¥Program Files (x86)¥Java¥jdk1.8.0_74</p> </td>
   </tr>
   <tr>
    <td><p><strong>Adobe Acrobat</strong></p> </td>
@@ -596,7 +591,20 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
 System Readiness Tool は、System Generator 変換を実行するように装置が正しく設定されているかどうかをPDFします。 ツールは、指定されたパスでレポートを生成します。 ツールを実行するには：
 
-1. System Readiness Tool の設定ファイルを作成します。 例えば、 srt_config.yaml のように指定します。 ファイルの形式は次のとおりです。
+1. コマンドプロンプトを開き、`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` フォルダーに移動します。
+
+1. コマンドプロンプトから次のコマンドを実行します。
+
+   `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
+
+   このコマンドは、レポートを生成し、 srt_config.yaml ファイルも作成します。
+
+   >[!NOTE]
+   >
+   > * System Readiness Tool で pdfgen.api ファイルがAcrobatプラグインフォルダーで使用できないと報告された場合は、 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` ディレクトリの `[Acrobat_root]\Acrobat\plug_ins` ディレクトリ。
+   >
+   > * srt_config.yaml ファイルを使用して、の様々な設定を行うことができます。 ファイルの形式は次のとおりです。
+
 
    ```
       # =================================================================
@@ -623,19 +631,13 @@ System Readiness Tool は、System Generator 変換を実行するように装�
       outputDir:
    ```
 
-1. コマンドプロンプトを開き、`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` フォルダーに移動します。コマンドプロンプトから次のコマンドを実行します。
-
-   `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
-
-   >[!NOTE]
-   >
-   >System Readiness Tool で pdfgen.api ファイルがAcrobatプラグインフォルダーで使用できないと報告された場合は、 `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` ディレクトリの `[Acrobat_root]\Acrobat\plug_ins` ディレクトリ。
-
 1. `[Path_of_reports_folder]` に移動します。SystemReadinessTool.html ファイルを開きます。レポートを検証して前述の問題を修正します。
 
 ## トラブルシューティング
 
 SRT ツールが報告する問題をすべて修正した後でも問題が発生した場合は、次のチェックを実行します。
+
+次のチェックを実行する前に、 [System Readiness Tool](#SRT) ではエラーは報告されません。
 
 +++ Adobe Acrobat
 
@@ -644,9 +646,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * 次を確認します。 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) バッチファイルが管理者権限で実行されました。
 * PDFジェネレーターユーザーが設定 UI に追加されていることをPDFします。
 * 次を確認します。 [プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege) 権限が Generator ユーザー用にPDFされました。
-* （アプリサーバーベースのインストールの場合）アプリケーションサーバーがサービスとして実行されていることを確認します。
-* ユーザーに、PDFジェネレーターの一時およびオペレーティングシステムの一時ディレクトリに対する読み取りおよび書き込み権限があることを確認します。 例： `<crx-quickstart-home>\temp` および `C:\Windows\Temp`
-* Acrobat PDFMaker Office COM Addin がMicrosoft Office アプリケーションで有効になっていることを確認します。 アドインが有効になっていない場合は、Adobe Acrobatの修復を実行し、 [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) ファイルを開き、AEM Forms Server を再起動します。
+* Acrobat PDFMaker Office COM Addin がMicrosoft Office アプリケーションで有効になっていることを確認します。
 
 +++
 
@@ -654,12 +654,9 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Microsoft® Windows**
 
-* 以下を確認します。 [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) の Open Office がインストールされ、すべてのアプリケーションでダイアログを開くことがキャンセルされます。
+* 以下を確認します。 [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Microsoft Office のインストールが完了し、すべてのアプリケーションでダイアログを開く操作がキャンセルされました。
 * PDFジェネレーターユーザーが設定 UI に追加されていることをPDFします。
-* 以下を確認します。 [System Readiness Tool](#SRT) ではエラーは報告されません。
 * Administrator GeneratorPDFが administrators グループのメンバーであり、 [プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege) 権限はユーザーに対して設定されます。
-* 次を確認します。 `\Windows\SysWOW64\config\systemprofile\Deskop` フォルダーが存在します。 フォルダーが存在しない場合は作成します。
-* に対するフルコントロールの付与 `\Windows\SysWOW64\config\systemprofile`, `<crx-quickstart-home>\temp`、および `\Windows\Temp` フォルダーを Folder GeneratorPDFに追加します。
 * ユーザーが User Generator UI で設定されていることを確認し、次のPDFを実行します。
    1. Windows® Windows に、WindowsPDFジェネレーターユーザーでログインします。
    1. Microsoft® Office または Open Office アプリケーションを開き、すべてのダイアログをキャンセルします。
@@ -673,7 +670,6 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 * 以下を確認します。 [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Open Office がインストールされている場合、開くダイアログはすべてのアプリケーションでキャンセルされ、Office アプリケーションが正常に起動します。
 * 環境変数の作成 `OpenOffice_PATH` を設定し、OpenOffice のインストールが [コンソール](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) または dt（デバイスツリー）プロファイル
-* 32 ビット Java™を使用してAEM Forms Server を起動します。
 * OpenOffice のインストールに問題がある場合は、 [32 ビットライブラリ](#extrarequirements) OpenOffice のインストールに必要です。
 
 +++
@@ -709,7 +705,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * 最新バージョンの 32 ビット lib curl、libcrypto、libssl ライブラリがシステムにインストールされていることを確認します。 シンボリックリンクも作成 `/usr/lib/libcurl.so` ( または AIX®の場合は libcurl.a) `/usr/lib/libcrypto.so` ( または AIX®用の libcrypto.a) および `/usr/lib/libssl.so` (AIX®の場合は libssl.a) それぞれのライブラリの最新バージョン（32 ビット）を指している。
 
 * IBM® SSL Socket Provider に対して、次の手順を実行します。
-   1. 次の java.security ファイルをコピーします。 `<WAS_Installed_JAVA>\jre\lib\security` をAEM Forms Server 上の任意の場所にドラッグします。 デフォルトの場所は「デフォルトの場所」は「=」です。 `<WAS_Installed>\Appserver\java_1.7_64\jre\lib\security`.
+   1. 次の java.security ファイルをコピーします。 `<WAS_Installed_JAVA>\jre\lib\security` をAEM Forms Server 上の任意の場所にドラッグします。 デフォルトの場所は「デフォルトの場所」は「=」です。 `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.
 
    1. コピー先の java.security ファイルを編集し、JSSE2 ファクトリを使用してデフォルトの SSL Socket factories を変更します (WebSphere®の代わりに JSSE2 ファクトリを使用します )。
 
@@ -737,7 +733,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++ PDFジェネレーター (PDFG) ユーザーを追加できません
 
-* Microsoft® Visual C++ 2008 x86、Microsoft® Visual C++ 2010 x86、Microsoft® Visual C++ 2012 x86、Microsoft® Visual C++ 2013 x86（32 ビット版）を確認します。が Windows にインストールされている。
+* Microsoft® Visual C++ 2012 x86 およびMicrosoft® Visual C++ 2013 x86（32 ビット）の再頒布可能パッケージが Windows にインストールされていることを確認します。
 
 +++
 
