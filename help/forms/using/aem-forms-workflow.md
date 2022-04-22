@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 73e63493-e821-443f-b50d-10797360f5d1
 docset: aem65
 exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '3015'
-ht-degree: 100%
+source-git-commit: d9608d584e822accc0c198fcf1d1b706d065938e
+workflow-type: tm+mt
+source-wordcount: '3681'
+ht-degree: 83%
 
 ---
 
@@ -34,7 +34,7 @@ OSGi での Forms 中心のワークフローを使用すると、JEE スタッ�
 
 OSGi 上の Forms 中心のワークフローは、[AEM インボックス](/help/sites-authoring/inbox.md)を拡張し、AEM ワークフローエディターに追加のコンポーネント（手順）を提供することで、AEM Forms 中心のワークフローをサポートします。拡張 AEM インボックスは、[AEM Forms ワークスペース](introduction-html-workspace.md)と同様の機能を持ちます。人間中心のワークフロー（承認やレビューなど）とともに AEM ワークフローを使用して、[ドキュメントサービス](/help/sites-developing/workflows-step-ref.md)に関する操作（PDF の生成など）と、Adobe Sign による電子署名処理を自動化することができます。
 
-すべての AEM Forms ワークフロー手順で変数の使用が可能です。変数を使用すると、ワークフロー手順で、実行時に複数の手順にわたってメタデータを保持および渡すことができます。様々なタイプの変数を作成して、様々なタイプのデータを保存できます。変数コレクション（配列）を作成して、関連する同じタイプのデータのインスタンスを複数保存することもできます。一般に、変数または変数のコレクションを使用するのは、変数が保持する値に基づいて決定する必要がある場合、またはプロセスで後で必要になる情報を保存する場合です。これらの Forms 中心のワークフローコンポーネント（手順）で変数を使用する方法について詳しくは、[OSGi での Forms 中心のワークフロー - 手順リファレンス](../../forms/using/aem-forms-workflow-step-reference.md)を参照してください。変数の作成と管理については、[AEM ワークフローの変数](../../forms/using/variable-in-aem-workflows.md)を参照してください。
+すべての AEM Forms ワークフロー手順で変数の使用が可能です。変数を使用すると、ワークフロー手順で、実行時に複数の手順にわたってメタデータを保持および渡すことができます。様々なタイプの変数を作成して、様々なタイプのデータを保存できます。変数コレクション（配列）を作成して、関連する同じタイプのデータのインスタンスを複数保存することもできます。一般に、変数または変数のコレクションを使用するのは、変数が保持する値に基づいて決定する必要がある場合、またはプロセスで後で必要になる情報を保存する場合です。これらの Forms 中心のワークフローコンポーネント（手順）で変数を使用する方法について詳しくは、 [OSGi での Forms 中心のワークフロー - 手順リファレンス](../../forms/using/aem-forms-workflow-step-reference.md) を参照してください。変数の作成と管理については、[AEM ワークフローの変数](../../forms/using/variable-in-aem-workflows.md)を参照してください。
 
 次の図は、OSGi 上の Forms 中心のワークフローを作成、実行、監視するためのエンドツーエンドの手順を示します。
 
@@ -170,7 +170,7 @@ AEM には、提供されているワークフロー手順を使用してワー�
   </tr>
   <tr>
    <td>ワークフローモデル</td>
-   <td>アプリケーションの<a href="../../forms/using/aem-forms-workflow.md#create-a-workflow-model">ワークフローモデル</a>を選択します。ワークフローモデルは、ビジネスプロセスのロジックとフローで構成されます。 </td>
+   <td>アプリケーションの <a href="../../forms/using/aem-forms-workflow.md#create-a-workflow-model">ワークフローモデル</a> を選択します。ワークフローモデルは、ビジネスプロセスのロジックとフローで構成されます。 </td>
   </tr>
   <tr>
    <td>データファイルのパス</td>
@@ -273,4 +273,76 @@ AEM ワークフローの「タスクを割り当て」ステップと「電子�
 
 ### ワークフローインスタンスの削除 {#purge-workflow-instances}
 
-ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。完了したワークフローインスタンスや実行中のワークフローインスタンスはリポジトリーから定期的に削除できます。詳しくは、「[ワークフローインスタンスの定期的なパージ](/help/sites-administering/workflows-administering.md#regular)」ワークフローインスタンスのパージを参照してください
+ワークフローインスタンスの数を最小限に抑えるとワークフローエンジンのパフォーマンスが向上します。完了したワークフローインスタンスや実行中のワークフローインスタンスはリポジトリーから定期的に削除できます。詳しくは、「[ワークフローインスタンスの定期的なパージ](/help/sites-administering/workflows-administering.md#regular)」ワークフローインスタンスのパージを参照してください.
+
+## 機密データをワークフロー変数にパラメーター化し、外部データストアに保存する {#externalize-wf-variables}
+
+アダプティブフォームからに送信されたデータ [!DNL Experience Manager] ワークフローには、ビジネスのエンドユーザーの PII（個人を特定できる情報）または SPD（機密の個人データ）を含めることができます。 ただし、にデータを保存する必要はありません。 [!DNL Adobe Experience Manager] [JCR リポジトリ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html). 情報を次にパラメータ化することで、エンドユーザーデータの管理対象データストレージ（Azure BLOB ストレージなど）への外部化が可能 [ワークフロー変数](/help/forms/using/variable-in-aem-workflows.md).
+
+内 [!DNL Adobe Experience Manager] Formsワークフローでは、データが処理され、ワークフロー変数を介して一連のワークフローステップを通過します。 これらの変数は、名前の付いたプロパティまたはキーと値のペアで、ワークフローインスタンスのメタデータノードに保存されます。例： `/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`. これらのワークフロー変数は、JCR 以外の別のリポジトリに外部化し、で処理できます。 [!DNL Adobe Experience Manager] ワークフロー。 [!DNL Adobe Experience Manager] API を提供 `[!UICONTROL UserMetaDataPersistenceProvider]` を使用して、管理対象の外部ストレージにワークフロー変数を保存します。 の顧客が所有するデータストアに対するワークフロー変数の使用について詳しくは、 [!DNL Adobe Experience Manager]を参照してください。 [外部データストアのワークフロー変数の管理](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
+[!DNL Adobe] には次の情報が含まれます。 [サンプル](https://github.com/adobe/workflow-variable-externalizer) API を使用して、ワークフローメタデータマップから Azure BLOB ストレージに変数を格納する [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md). 同様の行では、サンプルを使用して [UserMetaDataPersistenceProvider] 外部の他のデータストレージにあるワークフロー変数を外部化する API [!DNL Adobe Experience Manager] 同じものを管理します。
+
+>[!NOTE]
+>
+>ワークフロー変数を外部データストレージに格納する場合は、 [外部データストレージのワークフローに関するガイドライン](#guidelines-workflows-external-data-storage).
+
+### ワークフロー API サンプル実装のインストール
+
+管理対象の Azure BLOB ストレージにワークフロー変数を格納するには、次の手順に従います。
+1. のインストール [サンプル](https://github.com/adobe/workflow-variable-externalizer) ワークフロー API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md) 次のように指定します。
+
+   1. プロジェクトのルートディレクトリでを実行します。 `mvn clean install` コマンドに Maven 3.
+
+   1. バンドルとコンテンツパッケージをオーサーにデプロイするには、を実行します。 `mvn clean install -PautoInstallPackage`.
+
+   1. 作成者にバンドルのみをデプロイするには、を実行します。 `mvn clean install -PautoInstallBundle`.
+
+1. の Externalizer OSGi 設定ファイルで、次のプロパティを初期化します。 `ui.config` コンテンツパッケージ：
+
+   ```JQL
+      accountKey=""
+      accountName=""
+      endpointSuffix=""
+      containerName=""
+      protocol=""
+   ```
+
+次に、これらのプロパティの目的（および例）を示します。
+
+* **accountKey** は、アクセスを許可するための秘密鍵です。
+
+* **accountName** は、データを保存する必要がある azure アカウントです。
+
+* **endpointSuffix**&#x200B;例： `core.windows.net`.
+
+* **containerName** は、データの保存が必要なアカウントのコンテナです。 このサンプルでは、コンテナが存在すると仮定しています。
+
+* **protocol**&#x200B;例： `https` または `http`.
+
+1. でのワークフローモデルの設定 [!DNL Adobe Experience Manager]. 外部ストレージのワークフローモデルを設定する方法については、 [ワークフローモデルの設定](#configure-aem-wf-model).
+
+### でのワークフローモデルの設定 [!DNL Adobe Experience Manager] 外部データストレージの場合 {#configure-aem-wf-model}
+
+外部データストレージ用にAEM Workflow モデルを設定するには：
+
+1. **[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;に移動します。
+
+1. モデル名を選択し、 **[!UICONTROL 編集]**.
+
+1. ページ情報アイコンを選択し、「 」を選択します。 **[!UICONTROL プロパティを開く]**.
+
+1. 「**[!UICONTROL ワークフローのデータストレージを具体化]**」を選択します。
+
+1. 選択 **[!UICONTROL 保存して閉じる]** をクリックしてプロパティを保存します。
+
+### AEM ワークフローで外部データストレージを使用する場合のガイドライン {#guidelines-workflows-external-data-storage}
+
+次に、 [!DNL Adobe Experience Manager] ワークフローを作成し、外部データストレージ (Microsoft Azure ストレージサーバーなど ) にデータを保存します。
+
+* ワークフローモデルステップで入出力データファイルと添付ファイルを定義する際は、変数を使用してデータを格納します。「**[!UICONTROL ペイロードを基準とする]**」オプションと「**[!UICONTROL 絶対パスで利用可能]**」オプションを選択しないでください。この **[!UICONTROL ペイロードを基準とする]** および **[!UICONTROL 絶対パスで使用可能]** 以下の操作を行うと、オプションが自動的に表示されなくなります。 [設定 [!DNL Adobe Experience Manager] 外部データストレージのワークフローモデル](#configure-aem-wf-model).
+
+* アダプティブフォームを AEM ワークフローに送信する際は、変数を使用してデータファイルと添付ファイルを格納します。選択しない **[!UICONTROL ペイロードを基準とする]** オプションを使用して [!DNL Adobe Experience Manager] ワークフロー。 この **[!UICONTROL ペイロードを基準とする]** オプションは、 [設定 [!DNL Adobe Experience Manager] 外部データストレージのワークフローモデル](#configure-aem-wf-model).
+
+* カスタム [!DNL Adobe Experience Manager] データを [!UICONTROL CRX DE] リポジトリ。
+
+* 次の場合： [設定 [!DNL Adobe Experience Manager] 外部データストレージのワークフローモデル](#configure-aem-wf-model)、に対してカスタム列を作成しない [!DNL Adobe Experience Manager] [!UICONTROL インボックス] これは、カスタム列の値が、 [!DNL Adobe Experience Manager] [!UICONTROL インボックス] は、外部ストレージ用にマークされたワークフローに属します。

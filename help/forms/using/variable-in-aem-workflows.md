@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '2091'
-ht-degree: 100%
+source-git-commit: 3d0eb55eb35fcf5da1212b8be7c0aeee11307bb6
+workflow-type: tm+mt
+source-wordcount: '2208'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM ワークフローモデルでは、次のことができます。
 
-* 保存する情報タイプに基づいて、データタイプの[変数を作成します](../../forms/using/variable-in-aem-workflows.md#create-a-variable)。
+* 保存する情報タイプに基づいて、データタイプの [変数を作成します](../../forms/using/variable-in-aem-workflows.md#create-a-variable)。
 * [変数の値を設定する](../../forms/using/variable-in-aem-workflows.md#set-a-variable)には、「変数を設定する」ワークフローステップを使用します。
 * すべての AEM Forms Workflow ステップの [変数を使用](../../forms/using/variable-in-aem-workflows.md#use-a-variable) して格納された値を取得し、OR 分岐ステップおよび移動ステップでルーティング式を定義します。
 
@@ -31,7 +31,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
-変数は、既存の [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
+変数は、既存の [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
 
 ## 変数の作成 {#create-a-variable}
 
@@ -97,7 +97,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「ステップ」アイコンをタップします。
 1. 「**変数を設定**」ステップをワークフローエディターにドラッグ&amp;ドロップし、手順をタップして ![configure_icon](assets/configure_icon.png) （設定）を選択します。
-1. 「変数を設定」ダイアログで、**[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]**&#x200B;を選択します。
+1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
 1. より多くの変数をマップして、意味のある式を作成します。「![done_icon](assets/done_icon.png)」をタップして、変更内容を保存します。
 
@@ -188,7 +188,7 @@ OR 分割ステップと同様に、ルール定義、ECMA スクリプト、ま
 
 ### 変数をサポートしないワークフローステップ {#workflow-steps-without-support-for-variables}
 
-[MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
+[MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
 
 #### 変数値の取得 {#retrieve-the-variable-value}
 
@@ -202,7 +202,7 @@ ECMA スクリプトで次の API を使用して、データタイプに基づ�
 | フォームデータモデル | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.google.gson.JsonObject.class); |
 
-ドキュメントおよびフォームデータモデルの変数データタイプには、[AEM Forms アドオンパッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)が必要です。
+ドキュメントおよびフォームデータモデルの変数データタイプには、[AEM Forms アドオンパッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)が必要です。
 
 **例**
 
@@ -234,7 +234,7 @@ API を使用して変数を設定し、それらを渡してワークフロー�
 
 [workflowSession.startWorkflows](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) は、モデル、wfData、metaData を引数として使用します。MetaDataMap を使用して変数の値を設定します。
 
-この API では、**variableName** 変数は metaData.put(variableName, value) を使用して **value** に設定されます。
+この API では、 **variableName** 変数は metaData.put(variableName, value) を使用して **value** に設定されます。
 
 ```javascript
 import com.adobe.granite.workflow.model.WorkflowModel;
@@ -268,6 +268,11 @@ metaData.put("docVar",doc); //Assuming that you have created a variable "docVar"
 WorkflowModel model = workflowSession.getModel(modelId);
 workflowSession.startWorkflow(model, wfData, metaData);
 ```
+
+### ワークフロー変数を使用して、機密性の高いユーザーデータを JCR 外に保存する {#jcr-independent-persistance}
+
+Forms ワークフローを使用して処理されるデータには、個人を特定できる情報や個人情報などの機密性の高いユーザーデータを含めることができます。 企業は、様々なワークフローステップで処理される（およびワークフロー変数を使用して渡される）データを、JCR ストレージから所有および管理する外部データストアに格納することを選択できます。 外部ストレージへのワークフローデータの保持について詳しくは、 [顧客が所有するデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore).
+[!DNL Adobe Experience Manager] ワークフロー API を提供します [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) を使用して、外部の Azure BLOB ストレージにワークフロー変数を保存します。 API の使用について詳しくは、 [ワークフロー変数を使用して、機密データをパラメータ化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables).
 
 ## 変数の編集 {#edit-a-variable}
 
