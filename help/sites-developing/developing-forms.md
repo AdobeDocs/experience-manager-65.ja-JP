@@ -1,5 +1,5 @@
 ---
-title: フォームの作成（クラシック UI）
+title: Forms の開発（クラシック UI）
 seo-title: Developing Forms (Classic UI)
 description: フォームの作成方法について説明します
 seo-description: Learn how to develop forms
@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: 6ee3bd3b-51d1-462f-b12e-3cbe24898b85
 docset: aem65
 exl-id: f43e9491-aa8f-40af-9800-123695142559
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '1943'
-ht-degree: 100%
+source-git-commit: 4df14f837569997c3e4da8161ac2b099c39d89a6
+workflow-type: tm+mt
+source-wordcount: '1942'
+ht-degree: 97%
 
 ---
 
-# フォームの作成（クラシック UI）{#developing-forms-classic-ui}
+# Forms の開発（クラシック UI）{#developing-forms-classic-ui}
 
 フォームの基本的な構造は次のとおりです。
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 * フォームエレメント
 * フォーム終了
 
-これらはすべて、標準の AEM インストールで利用できるデフォルトの一連の[フォームコンポーネント](/help/sites-authoring/default-components.md#form)を使用して実現されます。
+これらはすべて、一連のデフォルトで実現されます [フォームコンポーネント](/help/sites-authoring/default-components.md#form)：標準のAEMインストールで使用できます。
 
 フォームで使用する[新しいコンポーネントを開発する](/help/sites-developing/developing-components-samples.md)ほかに、次のこともできます。
 
@@ -49,6 +49,7 @@ ht-degree: 100%
 読み込み元パスとは、定義済みの値をフォーム上の複数のフィールドに読み込むために使用するノードプロパティのパスです。
 
 これは、リポジトリ内のノードへのパスを指定するオプションのフィールドです。このノードに、フィールド名と一致するプロパティがある場合、フォーム上の適切なフィールドがそのプロパティの値が設定された状態でプリロードされます。一致が存在しない場合、フィールドにはデフォルト値が使用されます。
+
 
 >[!NOTE]
 >
@@ -80,7 +81,7 @@ ht-degree: 100%
 
 * `AL=Alabama`
 * `AK=Alaska`
-* *等*
+* 等。
 
 次のリストが生成されます。
 
@@ -171,8 +172,9 @@ ht-degree: 100%
 1. 再び必要に応じてフォルダーに以下を追加します。
 
    1. フィールドを追加するためのスクリプト。
-スクリプトの名前は `addfields.<extension>` にします（例：`addfields.jsp`）
-addfields スクリプトは、フォーム開始の HTML が書き込まれた直後に呼び出されます。これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
+スクリプトの名前は `addfields.<extension>`例： `addfields.jsp`
+An 
+`addfields` スクリプトは、フォーム開始のHTMLが記述された直後に呼び出されます。 これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
 
    1. 初期化スクリプト。
 スクリプトの名前は `init.<extension>` にします（例：`init.jsp`）
@@ -306,11 +308,9 @@ JavaScript の場合、条件にはエレメント名プロパティの値を使
    >
    >表示／非表示の定義の効果は、以下で確認およびテストできます。
    >
+   >* オーサー環境の&#x200B;**プレビュー**&#x200B;モード（最初にプレビューに切り替えるときに、ページをリロードする必要があります）
    >
-   >
-   >    * オーサー環境の&#x200B;**プレビュー**&#x200B;モード（最初にプレビューに切り替えるときに、ページをリロードする必要があります）
-   >
-   >    * パブリッシュ環境
+   >* パブリッシュ環境
 
 
 #### 壊れたコンポーネント参照の処理 {#handling-broken-component-references}
