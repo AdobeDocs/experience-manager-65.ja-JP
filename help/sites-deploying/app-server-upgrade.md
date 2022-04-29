@@ -1,19 +1,12 @@
 ---
 title: アプリケーションサーバーのインストール環境のアップグレード手順
 description: アプリケーションサーバーからデプロイされる AEM のインスタンスのアップグレード方法について説明します。
-uuid: e4020966-737c-40ea-bfaa-c63ab9a29cee
-contentOwner: sarchiz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: upgrading
-content-type: reference
-discoiquuid: 1876d8d6-bffa-4a1c-99c0-f6001acea825
-docset: aem65
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 69d960da90176058e8bb8b685325529e6cc10a31
-workflow-type: ht
-source-wordcount: '454'
-ht-degree: 100%
+source-git-commit: 5e875e0420540ca209e7d677046e8d010ae4e145
+workflow-type: tm+mt
+source-wordcount: '452'
+ht-degree: 98%
 
 ---
 
@@ -37,7 +30,7 @@ ht-degree: 100%
 
 1. 次に、AEM 6.4 のデプロイを解除します。これは、TomCat App Manager（`http://serveraddress:serverport/manager/html`）から実行できます。
 
-1. 次に、crx2oak 移行ツールを使用してリポジトリを移行してください。これをおこなうには、crx2oak の最新バージョンを [この場所](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/crx2oak) からダウンロードしてください。
+1. 次に、crx2oak 移行ツールを使用してリポジトリを移行してください。これをおこなうには、crx2oak の最新バージョンを [この場所](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/) からダウンロードしてください。
 
    ```shell
    SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds

@@ -1,15 +1,13 @@
 ---
 title: Tough Day
-seo-title: Tough Day
 description: Tough Day テストでは、約 1,000 人の作成者がいる環境で、すべての操作が同時進行しているという最悪の状況を想定して、1 日の負荷をシミュレートします。。
-seo-description: The Tough Day test simulates the daily load of around 1000 authors in a worst-case scenario with all the operations going on at the same time.
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 0b1f28963d9294c7aa9ae45c6b9fc9a9b8b4f6e6
-workflow-type: ht
-source-wordcount: '1879'
-ht-degree: 100%
+source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
+workflow-type: tm+mt
+source-wordcount: '1849'
+ht-degree: 99%
 
 ---
 
@@ -143,7 +141,7 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 カスタマイズの方法には、コマンドラインパラメーターを使用する方法と yaml 設定ファイルを使用する方法の 2 つがあります。**通常、設定ファイルは大規模なカスタムスイートに使用します。設定ファイルは、Tough Day 2 のデフォルトパラメーターよりも優先されます。コマンドラインパラメーターは、設定ファイルとデフォルトパラメーターの両方よりも優先されます。**
 
-テスト設定を保存するには、yaml 形式でコピーする方法しかありません。詳しくは、この [toughday.yaml](https://repo.adobe.com/nexus/service/local/repositories/releases/content/com/adobe/qe/toughday2/0.2.1/toughday2-0.2.1.yaml) 設定と、以降のセクションの yaml 設定の例を参照してください。
+テスト設定を保存するには、yaml 形式でコピーする方法しかありません。
 
 ### 新規テストの追加 {#adding-a-new-test}
 
@@ -347,22 +345,22 @@ Tough Day 2 では、テストの指標とログの両方が出力されます�
 
 ### テスト指標 {#test-metrics}
 
-現在、Tough Day 2 では、ユーザーが評価できる 9 種類のテスト指標が報告されます。*****&#x200B;記号が付いた指標は、実行に成功した後にのみ報告されます。
+現在、Tough Day 2 では、ユーザーが評価できる 9 種類のテスト指標が報告されます。指標と **&#42;** シンボルは、正常に実行された後にのみ報告されます。
 
 | **名前** | **説明** |
 |---|---|
 | Timestamp | 最後に完了したテスト実行のタイムスタンプ。 |
 | 渡された | 成功した実行の数。 |
 | 失敗 | 失敗した実行の数。 |
-| Min* | テスト実行の最短期間。 |
-| Max* | テスト実行の最長期間。 |
-| Median* | すべてのテスト実行の算出された中央値時間。 |
-| 平均* | すべてのテスト実行の算出された平均時間。 |
-| StdDev* | 標準偏差。 |
-| 90p* | 90 パーセンタイル。 |
-| 99p* | 99 パーセンタイル。 |
-| 99.9p* | 99.9 パーセンタイル。 |
-| 実際のスループット* | 実行数を経過した実行時間で割った値。 |
+| Min&#42; | テスト実行の最短期間。 |
+| Max&#42; | テスト実行の最長期間。 |
+| Median&#42; | すべてのテスト実行の算出された中央値時間。 |
+| 平均&#42; | すべてのテスト実行の算出された平均時間。 |
+| StdDev&#42; | 標準偏差。 |
+| 90p&#42; | 90 パーセンタイル。 |
+| 99p&#42; | 99 パーセンタイル。 |
+| 99.9p&#42; | 99.9 パーセンタイル。 |
+| 実際のスループット&#42; | 実行数を経過した実行時間で割った値。 |
 
 これらの指標は、（テストの追加と同様に）`add` パラメーターを使用して追加できる公開者を利用して記述されています。現在、次の 2 つのオプションがあります。
 

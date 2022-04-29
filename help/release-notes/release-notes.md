@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 70280ec60e8bc4cc139a44c379adca7541856997
+source-git-commit: fe31483555cbecffe067f920b5ed6bbf82f1ae58
 workflow-type: tm+mt
-source-wordcount: '3329'
-ht-degree: 35%
+source-wordcount: '3330'
+ht-degree: 36%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 35%
 | バージョン | 6.5.12.0 |
 | タイプ | Service Pack のリリース |
 | 日付 | 2022年2月24日（PT） |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.12.0.zip) |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.12.0.zip) |
 
 ## [!DNL Adobe Experience Manager] 6.5.12.0 の内容 {#what-is-included-in-aem}
 
@@ -26,7 +26,7 @@ ht-degree: 35%
 
 [!DNL Adobe Experience Manager] 6.5.12.0 に導入された主な機能および機能強化は次のとおりです。
 
-* リモート DAM と Sites デプロイメント間の接続を設定すると、リモート DAM 上のアセットが Sites デプロイメントで使用できるようになります。 リモート DAM のアセットまたはフォルダーに対して、更新、削除、名前変更、移動の操作を実行できるようになりました。 更新は、少し遅れて、Sites デプロイメントで自動的に利用可能になる (NPR-37816)。
+* リモート DAM と Sites デプロイメント間の接続を設定すると、リモート DAM 上のアセットが Sites デプロイメントで使用できるようになります。 これで、リモート DAM アセットまたはフォルダーに対して 更新、削除、名前変更、および移動操作 を実行できます。更新は、少し遅れて、Sites デプロイメントで自動的に利用可能になる (NPR-37816)。
 
 * ブループリント設定を必要とせずに、ライブコピーソースを複数のライブコピーにプッシュロールアウトできるようになりました (CQ-4259951)。
 * ユーザーが同じパス上で誤って複数の非同期操作をトリガーするのを防ぐために、進行中の非同期操作のステータスがユーザーインターフェイスに表示されるようになりました (NPR-37611)。
@@ -284,7 +284,7 @@ JEE 上のExperience Manager Formsの累積インストーラーのインスト�
 
 ### UberJar {#uber-jar}
 
-Experience Manager 6.5.12.0 の UberJar は、 [Maven Central リポジトリー](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.12/)で入手できます。
+Experience Manager 6.5.12.0 の UberJar は、 [Maven Central リポジトリー](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.12/)で入手できます。
 
 Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めてください。
 
