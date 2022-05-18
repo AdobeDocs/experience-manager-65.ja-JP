@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: dbdf981f-791b-4ff7-8ca8-039d0bdc9c92
 exl-id: a9de8ec6-6948-4643-89c3-62d9b1f6293a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '1139'
+source-git-commit: cf3b739fd774bc860d9906b9884d22fd532fd5dd
+workflow-type: tm+mt
+source-wordcount: '1075'
 ht-degree: 100%
 
 ---
@@ -96,8 +96,8 @@ AEM には、ワークフローモデルの作成に使用できるプロセス�
 `AbsoluteTimeAutoAdvancer`（絶対時刻自動アドバンサー）プロセスは、**AutoAdvancer** と同じように動作します。ただし、指定された長さの時間が経過した後ではなく、指定された日時にタイムアウトする点が異なります。
 
 * **Java クラス**：`com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
-* **ペイロード**：なし
-* **引数**：なし
+* **ペイロード**：なし.
+* **引数**：なし.
 * **タイムアウト**：設定された日時に達すると、プロセスはタイムアウトします。
 
 ### AutoAdvancer（自動アドバンサー） {#autoadvancer-auto-advancer}
@@ -106,8 +106,8 @@ AEM には、ワークフローモデルの作成に使用できるプロセス�
 
 * **Java クラス**：`com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
 
-* **ペイロード**：なし
-* **引数**：なし
+* **ペイロード**：なし.
+* **引数**：なし.
 * **タイムアウト**：設定された時間が経過すると、プロセスはタイムアウトします。
 
 ### ProcessAssembler（プロセスアセンブラー） {#processassembler-process-assembler}
@@ -194,27 +194,7 @@ com.day.cq.dam.core.process.ExtractMetadataProcess,
 
 * **ペイロード**：なし
 * **引数**：なし
-* **タイムアウト**：無視されます。
-
-### urlcaller {#urlcaller}
-
-これは、指定された URL を呼び出す単純なワークフロープロセスです。 通常、この URL は、単純なタスクを実行する JSP（または他のサーブレットに相当するもの）への参照です。 このプロセスは開発およびデモンストレーションのときにのみ使用し、実稼動環境では使用しないようにする必要があります。引数は、URL、ログイン、パスワードを指定します。
-
-* **ECMAScript パス**：`/libs/workflow/scripts/urlcaller.ecma`
-
-* **ペイロード**：なし
-* **引数**：
-
-```
-        args := url [',' login ',' password]
-        url := /* The URL to be called */
-        login := /* The login to access the URL */
-        password := /* The password to access the URL */
-```
-
-例：`http://localhost:4502/my.jsp, mylogin, mypassword`
-
-* **タイムアウト**：無視されます。
+* **タイムアウト**：無視されます
 
 ### LockProcess {#lockprocess}
 
