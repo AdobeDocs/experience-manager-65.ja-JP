@@ -6,9 +6,9 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: f4e6a1855fad76df8102751b14e9ac6982315937
+source-git-commit: e486e5336edc28137b93d5263faf86c63a790528
 workflow-type: tm+mt
-source-wordcount: '3786'
+source-wordcount: '3779'
 ht-degree: 74%
 
 ---
@@ -46,7 +46,7 @@ Connected Assets の機能は、 [!DNL Experience Manager Sites] および [!DNL
 
 作成者は、コンテンツファインダーで画像や次のタイプのドキュメントを検索し、検索したアセットをページエディターにドラッグします。 ドキュメントが `Download` コンポーネントに追加され、画像が `Image` コンポーネントに追加されます。作成者は、任意のカスタム [!DNL Experience Manager] デフォルトの `Download` または `Image` コンポーネント。 サポートされる形式は以下の通りです。
 
-* **画像形式**：[画像コンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html)がサポートする形式。
+* **画像形式**：[画像コンポーネント](assets-formats.md#supported-raster-image-formats)がサポートする形式。
 * **ドキュメント形式**：詳しくは、[サポートされるドキュメント形式](assets-formats.md#supported-document-formats)を参照してください。
 
 ### 関連するユーザーとグループ {#users-and-groups-involved}
