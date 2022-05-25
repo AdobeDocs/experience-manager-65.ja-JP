@@ -10,8 +10,8 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: 9f7bd996d2ec77d29fbee3ee51ac6469f94e9bd7
-workflow-type: ht
+source-git-commit: c9df4b43083376f0110368afe642ec74290a52f8
+workflow-type: tm+mt
 source-wordcount: '4679'
 ht-degree: 100%
 
@@ -215,7 +215,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 ### JCR クエリチートシート {#jcrquerycheatsheet}
 
-効率的な JCR クエリとインデックス定義を作成できるようにするため、開発時に [JCR クエリチートシート](assets/JCR_query_cheatsheet-v1.0.pdf)をダウンロードして参照用として使用できます。これには QueryBuilder、XPath、SQL-2 のクエリの例が収録されていて、クエリのパフォーマンスの点で異なる動作をする複数のシナリオに対応できます。 また、Oak インデックスの作成またはカスタマイズ方法に関する推奨事項も収録されています。 このチートシートの内容は、AEM 6.5 および AEM as a Cloud Service に適用されます。
+効率的な JCR クエリとインデックス定義を作成できるようにするため、開発時に [JCR クエリチートシート](assets/JCR_query_cheatsheet-v1.1.pdf)をダウンロードして参照用として使用できます。これには QueryBuilder、XPath、SQL-2 のクエリの例が収録されていて、クエリのパフォーマンスの点で異なる動作をする複数のシナリオに対応できます。 また、Oak インデックスの作成またはカスタマイズ方法に関する推奨事項も収録されています。 このチートシートの内容は、AEM 6.5 および AEM as a Cloud Service に適用されます。
 
 ## 再インデックス {#re-indexing}
 
