@@ -2,10 +2,10 @@
 title: AEM 内での外部 SPA の編集
 description: このドキュメントでは、スタンドアロン SPA を AEM インスタンスにアップロードし、編集可能なコンテンツのセクションを追加し、オーサリングを有効にするための推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '2118'
-ht-degree: 100%
+source-git-commit: 237de641ba02705f8171b1526946a4dc1b60b6a3
+workflow-type: tm+mt
+source-wordcount: '2392'
+ht-degree: 88%
 
 ---
 
@@ -257,6 +257,42 @@ mvn clean install -PautoInstallSinglePackage
 * 新しいノードが作成されるノードへのパスは、`itemPath` 経由で提供された場合に有効である必要があります。
    * この例では、新しいノード `text_20` を作成できるように、`root/responsivegrid` が存在する必要があります。
 * リーフコンポーネントの作成のみがサポートされます。仮想コンテナと仮想ページは、今後のバージョンでサポートされる予定です。
+
+### 仮想コンテナ {#virtual-containers}
+
+対応するコンテナがAEMでまだ作成されていない場合でも、コンテナを追加する機能がサポートされています。 概念とアプローチは、 [バーチャルリーフコンポーネント。](#virtual-leaf-components)
+
+フロントエンド開発者は、SPA内の適切な場所にコンテナコンポーネントを追加できます。これらのコンポーネントをAEMのエディターで開くと、プレースホルダーが表示されます。 作成者は、コンポーネントとそのコンテンツをコンテナに追加し、JCR 構造内に必要なノードを作成できます。
+
+例えば、コンテナが既に `/root/responsivegrid` 開発者は、新しい子コンテナを追加します。
+
+![コンテナの場所](assets/container-location.png)
+
+`newContainer` は、まだAEMに存在しません。
+
+このコンポーネントを含むページをAEMで編集すると、コンテナの空のプレースホルダーが表示され、作成者はこのプレースホルダーにコンテンツを追加できます。
+
+![コンテナプレースホルダー](assets/container-placeholder.png)
+
+![JCR 内のコンテナの場所](assets/container-jcr-structure.png)
+
+作成者がコンテナに子コンポーネントを追加すると、JCR 構造内の対応する名前で新しいコンテナノードが作成されます。
+
+![コンテンツを含むコンテナ](assets/container-with-content.png)
+
+![JCR 内のコンテンツを含むコンテナ](assets/container-with-content-jcr.png)
+
+作成者が必要とする場合は、コンポーネントとコンテンツを今すぐコンテナに追加できます。変更内容は保持されます。
+
+#### 要件と制限 {#container-limitations}
+
+仮想コンテナを追加するには、いくつかの要件があります。
+
+* 追加できるコンポーネントを決定するポリシーは、親コンテナから継承されます。
+* 作成するコンテナの直近の親が既にAEMに存在している必要があります。
+   * コンテナ `root/responsivegrid` が既にAEMコンテナに存在する場合は、パスを指定して新しいコンテナを作成できます。 `root/responsivegrid/newContainer`.
+   * ただし、 `root/responsivegrid/newContainer/secondNewContainer` は使用できません。
+* 一度に 1 つの新しいレベルのコンポーネントのみ作成できます。
 
 ## 追加のカスタマイズ {#additional-customizations}
 
