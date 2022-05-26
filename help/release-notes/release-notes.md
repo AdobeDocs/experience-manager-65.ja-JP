@@ -1,11 +1,11 @@
 ---
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
-mini-toc-levels: 4
+mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 3b6671d5ca58aedb43babdd539d182c3a1d06574
+source-git-commit: 6c9e8f1e62fe1a193cb9938e5f789e1e08b8339d
 workflow-type: tm+mt
-source-wordcount: '3547'
+source-wordcount: '3546'
 ht-degree: 27%
 
 ---
@@ -374,7 +374,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->JEE で AEM Forms を使用していない場合はスキップします。の修正点 [!DNL Experience Manager] JEE 上のFormsは、別のインストーラーを通じて提供されます。
+>JEE で AEM Forms を使用していない場合はスキップします。の修正点 [!DNL Experience Manager] JEE 上のFormsは、別のインストーラーを使用して提供されます。
 
 の累積インストーラーのインストールに関する情報 [!DNL Experience Manager] JEE 上のFormsとデプロイメント後の設定については、 [リリースノート](jee-patch-installer-65.md).
 
@@ -384,7 +384,7 @@ ht-degree: 27%
 
 ### UberJar {#uber-jar}
 
-の UberJar [!DNL Experience Manager] 6.5.13.0は、 [Maven 中央リポジトリ](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.13/)(https://)。
+の UberJar [!DNL Experience Manager] 6.5.13.0は、 [Maven 中央リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.13/)(https://)。
 
 Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めてください。
 
