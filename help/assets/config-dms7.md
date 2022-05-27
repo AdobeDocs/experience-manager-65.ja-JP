@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 5c29ac6b87b818e168a746827624b65c6ba3b2f7
+source-git-commit: 684f73722834f1764e8f37ad790d7da4ef57a369
 workflow-type: tm+mt
-source-wordcount: '6049'
-ht-degree: 97%
+source-wordcount: '6090'
+ht-degree: 96%
 
 ---
 
@@ -133,8 +133,8 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. デフォルトでは、Experience Manager作成者はDynamic Mediaコンテンツをプレビューできません。 したがって、Dynamic Mediaコンテンツを公開する前に安全にプレビューするには、Dynamic Mediaに接続する許可リストExperience Managerオーサーインスタンスを接続する必要があります。 また、コンテンツを安全にプレビューするためのアクセスをユーザーに提供する場合は、追加の IP アド許可リストレスをできます。 <!-- CQDOC-19254 UNHIDE ON MAY 26, 2022 To securely preview Dynamic Media content before it gets published, Experience Manager Author uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can allowlist more IPs to provide users access to securely preview content. -->
-このアクションをExperience Managerに設定するには [Image Server 用のDynamic Media公開設定の指定 — 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab).
+1. デフォルトでは、Experience Manager作成者はDynamic Mediaコンテンツをプレビューできません。 したがって、Dynamic Mediaコンテンツを公開する前に安全にプレビューするには、Dynamic Mediaに接続する許可リストExperience Managerオーサーインスタンスを接続する必要があります。 また、コンテンツを安全にプレビューするためのアクセスをユーザーに提供する場合は、追加の IP アド許可リストレスをできます。
+公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 ただし、コンテンツを安全にプレビ許可リストューするためのアクセス権をユーザーに提供するために、さらに IP をすることができます。 このアクションをExperience Managerに設定するには [Image Server 用のDynamic Media公開設定の指定 — 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
