@@ -3,10 +3,10 @@ title: AEM 6.5 の同一サイト cookie サポート
 description: AEM 6.5 の同一サイト cookie サポート
 topic-tags: security
 exl-id: e1616385-0855-4f70-b787-b01701929bbc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '188'
-ht-degree: 100%
+source-git-commit: f7a4907ca6ce8ecaff9ef1fdf99ec0951ff497e0
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 73%
 
 ---
 
@@ -16,9 +16,17 @@ ht-degree: 100%
 
 この設定のデフォルト値（`SameSite=Lax`）により、AEM インスタンスまたはサービス間の認証が機能しないことがあります。これは、これらのサービスのドメインや URL 構造が、この cookie ポリシーの制約に該当しない可能性があるためです。
 
-これを回避するには、ログイントークンの SameSite cookie 属性を `None` に設定する必要があります。
+この問題を回避するには、 `SameSite` cookie 属性を `None` ログイントークン用。
 
-これは、以下の手順に従って実行できます。
+>[!CAUTION]
+>
+>この `SameSite=None` の設定は、プロトコルがセキュア (HTTPS) の場合にのみ適用されます。
+>
+>プロトコルがセキュアでない場合 (HTTP)、設定は無視され、サーバーは次の WARN メッセージを表示します。
+>
+>`WARN com.day.crx.security.token.TokenCookie Skip 'SameSite=None'`
+
+次の手順に従って、設定を追加できます。
 
 1. Web コンソール（`http://serveraddress:serverport/system/console/configMgr`）にアクセスします。
 1. **Adobe Granite Token Authentication Handler** を検索してクリックします。
