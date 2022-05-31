@@ -11,10 +11,11 @@ docset: aem65
 role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
-source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
-workflow-type: ht
-source-wordcount: '1285'
-ht-degree: 100%
+mini-toc-levels: 3
+source-git-commit: d5824078ca3e1ff2b48874446aaebe3fdd60cfdc
+workflow-type: tm+mt
+source-wordcount: '1386'
+ht-degree: 86%
 
 ---
 
@@ -209,56 +210,70 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 ビューアで問題が発生している場合、次のトラブルシューティングガイドに従ってください。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>問題</strong></td>
-   <td><strong>デバッグの方法</strong></td>
-   <td><strong>解決策</strong></td>
-  </tr>
-  <tr>
-   <td>ビューアプリセットが公開されていない</td>
-   <td><p>次のサンプルマネージャー診断ページに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>計算された値を確認します。正しく動作すると、次のように表示されます。</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>注意</strong>：Dynamic Media クラウドの設定後、ビューアアセットが同期するまで 10 分ほどかかることがあります。</p> <p>アクティブでないアセットが残る場合は、「<strong>アクティブでないアセットをすべて表示</strong>」ボタンのどちらかを選択して詳細を確認してください。</p> </td>
-   <td>
-    <ol>
-     <li>管理ツールのビューアプリセットリストに移動します。 <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>すべてのビューアプリセットを選択したあと、「<strong>公開</strong>」を選択します。</li>
-     <li>サンプルマネージャーに戻り、アクティブでないアセット数がゼロになったことを確認します。</li>
-    </ol> </td>
-  </tr>
-  <tr>
-   <td>ビューアプリセットのアートワークが、アセット詳細のプレビューまたは URL／埋め込みコードのコピーで 404 を返す場合</td>
-   <td><p>CRXDE Lite で以下を行います。</p>
-    <ol>
-     <li>Dynamic Media 同期フォルダー内の <code>&lt;sync-folder&gt;/_CSS/_OOTB</code> フォルダー（例えば <code>/content/dam/_CSS/_OOTB</code>）に移動します。</li>
-     <li>問題のあるアセットのメタデータノードを見つけます（例えば <code>&lt;sync-folder&gt;/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/</code>）。</li>
-     <li><code>dam:scene7*</code> プロパティがあることを確認します。アセットの同期と公開に成功した場合は <code>dam:scene7FileStatus</code> が <strong>PublishComplete</strong> に設定されています。</li>
-     <li>次のプロパティと文字列リテラルの値を連結して Dynamic Media に直接アートワークを要求します。
-      <ul>
-       <li><code>dam:scene7Domain</code></li>
-       <li><code>"is/content"</code></li>
-       <li><code>dam:scene7Folder</code></li>
-       <li><code>&lt;asset-name&gt;</code></li>
-       <li>例： <code>https://&lt;server&gt;/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png</code></li>
-      </ul> </li>
-    </ol> </td>
-   <td><p>サンプルアセットまたはビューアプリセットのアートワークが同期されていないか、公開されてない場合は、コピー／同期処理全体をやり直します。</p>
-    <ol>
-     <li>CRXDE Lite に移動します。
-      <ul>
-       <li><code>&lt;sync-folder&gt;/_CSS/_OOTB</code> を削除します。</li>
-      </ul> </li>
-     <li>CRX パッケージマネージャー（<code>https://localhost:4502/crx/packmgr/</code><a href="https://localhost:4502/crx/packmgr/"></a>）に移動します。
-      <ol>
-       <li>リストでビューアパッケージを検索します（<code>cq-dam-scene7-viewers-content</code> で始まります）。</li>
-       <li>「<strong>再インストール</strong>」を選択します。</li>
-      </ol> </li>
-     <li>クラウドサービスページで、Dynamic Media 設定ページに移動した後、Dynamic Media - Scene7 設定の設定ダイアログボックスを開きます。
-      <ul>
-       <li>何も変更せず、「<strong>保存</strong>」をクリックします。これで、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが、再度トリガーされます。<br />  </li>
-      </ul> </li>
-    </ol> </td>
-  </tr>
- </tbody>
-</table>
+### 問題:ビューアプリセットが公開されていない {#viewers-not-published}
+
+**デバッグの方法**
+
+1. 次のサンプルマネージャー診断ページに進みます。 `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`.
+1. 計算された値を確認します。正しく動作すると、次のように表示されます。`_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets` です。
+
+   >[!NOTE]
+   >
+   >ビューアアセットを同期するために、Dynamic Mediaクラウド設定をおこなってから約 10 分かかる場合があります。
+
+1. アクティブでないアセットが残る場合は、「**アクティブでないアセットをすべて表示**」ボタンのどちらかを選択して詳細を確認してください。
+
+**解決策**
+
+1. 管理ツールのビューアプリセットリストに移動します。 `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`
+1. すべてのビューアプリセットを選択したあと、「**公開**」を選択します。
+1. サンプルマネージャーに戻り、アクティブでないアセット数がゼロになったことを確認します。
+
+### 問題：ビューアプリセットのアートワークが、アセットの詳細のプレビューまたは URL/埋め込みコードのコピーで 404 を返す場合 {#viewer-preset-404}
+
+**デバッグの方法**
+
+CRXDE Lite で以下を行います。
+
+1. に移動します。 `<sync-folder>/_CSS/_OOTB` Dynamic Media同期フォルダー内のフォルダー ( 例： `/content/dam/_CSS/_OOTB`) をクリックします。
+1. 問題のあるアセットのメタデータノードを見つけます（例えば `<sync-folder>/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/`）。
+1. `dam:scene7*` プロパティがあることを確認します。アセットの同期と公開に成功した場合は `dam:scene7FileStatus` が **PublishComplete** に設定されています。
+1. 次のプロパティと文字列リテラルの値を連結して、ダイナミックメディアに直接アートワークを要求します。
+
+   * `dam:scene7Domain`
+   * `"is/content"`
+   * `dam:scene7Folder`
+   * `<asset-name>`
+例: 
+`https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+
+**解決策**
+
+サンプルアセットまたはビューアプリセットのアートワークが同期されていないか、公開されてない場合は、コピー／同期処理全体をやり直します。
+
+1. CRXDE Lite に移動します。
+1. `<sync-folder>/_CSS/_OOTB` を削除します。
+1. CRX パッケージマネージャー ( ) に移動します。 `https://localhost:4502/crx/packmgr/`.
+1. リスト内でビューアパッケージを検索します。次で始まる `cq-dam-scene7-viewers-content`.
+1. 「**再インストール**」を選択します。
+1. クラウドサービスページで、Dynamic Media 設定ページに移動した後、Dynamic Media - Scene7 設定の設定ダイアログボックスを開きます。
+1. 何も変更せず、「**保存**」をクリックします。この保存操作をトリガーすると、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが再度作成されます。
+
+### 問題：画像プレビューがビューアプリセットオーサリングで読み込まれない {#image-preview-not-loading}
+
+**解決策**
+
+1. Experience Manager で、Experience Manager ロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** に移動します。
+1. 左側のレールで、次の場所にあるサンプルコンテンツフォルダーに移動します。
+
+   `/content/dam/_DMSAMPLE`
+
+1. を削除します。 `_DMSAMPLE` フォルダー。
+1. 左側のレールで、次の場所にある presets フォルダーに移動します。
+
+   `/conf/global/settings/dam/dm/presets/viewer`
+
+1. を削除します。 `viewer` フォルダー。
+1. CRXDE Lite ページの左上隅付近にある「**[!UICONTROL すべて保存]**」を選択します。
+1. CRXDE Liteページの左上隅で、 **ホームに戻る** アイコン
+1. の再作成 [Cloud ServicesでのDynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
