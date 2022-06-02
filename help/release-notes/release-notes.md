@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: a45d66dc2226dbe2879aa61d95cc5379dce882bb
+source-git-commit: f78d12d6fa1daa1c1b3afdfe22ecb8c183e8e1d0
 workflow-type: tm+mt
-source-wordcount: '3774'
+source-wordcount: '3737'
 ht-degree: 26%
 
 ---
@@ -92,9 +92,9 @@ ht-degree: 26%
 
 ## [!DNL Forms] {#forms-65130}
 
-* 事前入力サービスを使用して、フラグメントを含むアダプティブフォームに入力し、フラグメントにリッチテキストをサポートする「テキスト」ボックスが含まれている場合、フォームは送信に失敗し、次のエラーが発生します。
+<!-- * When you use the prefill service to fill an adaptive form that contains a fragment and the fragment contains a Text box that supports rich text, the form fails to submit, and the following error occurs:
 
-   `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542)
+  `[AF] [AEM-AF-901-004]: Encountered an internal error while submitting the form.` (NPR-38542) -->
 
 * ラジオボタン、チェックボックス、ファイルアップロードの各コンポーネントが、ドイツ語から英語に正しく翻訳されていない問題を修正しました。 (NPR-38527)
 * PDF417 バーコードエンコーディング： [!DNL Experience Manager] Formsはラジオボタングループに対して無効です。 (NPR-38525)
