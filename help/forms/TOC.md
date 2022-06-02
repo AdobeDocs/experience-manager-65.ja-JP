@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
 workflow-type: tm+mt
-source-wordcount: '3775'
+source-wordcount: '3788'
 ht-degree: 99%
 
 ---
@@ -681,9 +681,12 @@ ht-degree: 99%
          + [環境設定ノードをプログラムで管理する](developing/programmatically-preferences-nodes.md)
          + [ポリシーを使用したドキュメントの保護](developing/protecting-documents-policies.md)
          + [Web サービス API を使用した DDX ドキュメントの検証](developing/validate-ddx-document-using-web.md)
-      + レガシードキュメント {#legacy-documentation}
-         + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
-         + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
-         + [JEE サーバークラスター上の AEM Forms の設定とトラブルシューティング](developing/configure-server-cluster.md)
-         + [動的 PDF Forms でのハッシュの生成と操作](developing/hashing-forms.md)
-         + [WS-Security ヘッダーを使用した資格情報の受け渡し](developing/passing-credentials.md)
++ トラブルシューティング {#troubleshooting}
+   + [特定のバージョンのOracleJDK で一部のフォーム機能を使用できない](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
++ レガシードキュメント {#legacy-documentation}
+   + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
+   + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
+   + [JEE サーバークラスター上の AEM Forms の設定とトラブルシューティング](developing/configure-server-cluster.md)
+   + [動的 PDF Forms でのハッシュの生成と操作](developing/hashing-forms.md)
+   + [WS-Security ヘッダーを使用した資格情報の受け渡し](developing/passing-credentials.md)
+

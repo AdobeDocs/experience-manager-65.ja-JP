@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6c9e8f1e62fe1a193cb9938e5f789e1e08b8339d
+source-git-commit: db94e464b130c6ca223314c3c5ffb8893a92a142
 workflow-type: tm+mt
-source-wordcount: '3546'
-ht-degree: 27%
+source-wordcount: '3752'
+ht-degree: 26%
 
 ---
 
@@ -24,6 +24,22 @@ ht-degree: 27%
 ## [!DNL Experience Manager] 6.5.13.0 の内容 {#what-is-included-in-aem}
 
 [!DNL Experience Manager] 6.5.13.0には、2019 年 4 月の 6.5 の初期リリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善が含まれています。 [このサービスパックをインストール](#install) オン [!DNL Experience Manager] 6.5.
+
+[!DNL Adobe Experience Manager] 6.5.13.0 に導入された主な機能および機能強化は次のとおりです。
+
+* アダプティブフォーム内で非表示の CAPTCHA を使用します。不明な CAPTCHA を使用して、疑わしいアクティビティが発生した場合にのみ CAPTCHA チャレンジを表示できるようになりました。 疑わしいアクティビティが見つからない場合、CAPTCHA チャレンジは表示されません。 これにより、チェックボックス要件を持たずに人間がフォームを完成させたかどうかを評価し、カスタマイズ作業を軽減し、エンドユーザーエクスペリエンスを向上させることができます。 (NPR-38500)
+
+* REST エンドポイント用のフォームデータモデル後処理での応答ヘッダーの取得のサポートが追加されました。 (NPR-38275)
+
+* これで、アダプティブフォームの翻訳ファイルを生成する際に、生成される XLIFF ファイルと、対応するアダプティブフォーム内のコンポーネントのシーケンスが同じテキストのシーケンスになります。 (NPR-37700)
+
+* アダプティブフォームをローカライズして、ベース言語のテキストに小さな変更を加えた場合、他のすべての言語で完全な翻訳が見つからなくなります。 この問題は、 [!DNL Experience Manager] 6.5.13.0. (NPR-37189)
+
+* Formsのアクセシビリティの改善：
+
+   * スクリーンリーダーが、テーブルのヘッダーと本文を連続エンティティと接続エンティティとして認識できるようになりました。 スクリーンリーダーでテーブルを適切に移動するのに役立ちます。 (NPR-37139)
+   * ダイアログが開くまでHTMLワークスペース内を移動しないようにするスクリーンリーダーのサポートを追加しました。 (NPR-37134)
+   * Forms Designer で、ハイパーリンクの画面Readerテキストを指定する機能が追加されました。(NPR-36221)
 
 次のバグ修正、主な機能、機能強化が [!DNL Experience Manager] 6.5.13.0:
 
@@ -120,20 +136,6 @@ ht-degree: 27%
 >
 >* [!DNL Experience Manager Forms] では、[!DNL Experience Manager] サービスパックのリリース予定日の 1 週間後にアドオンパッケージをリリースします。
 
-
-<!-- **Adaptive Forms**
-
-**Form Data Model**
-
-**Interactive Communication**
-
-**Document Services**
-
-**Document Security**
-
-**Foundation JEE**
-
-**Workflow** -->
 
 ## Granite {#granite-6513}
 

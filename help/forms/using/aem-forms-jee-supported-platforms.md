@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 73d5b894dfa1bbb3ae3f2973cc4f9db1ace90ef8
+source-git-commit: dab643ffd64217018bf2f5544ae3c417963cea82
 workflow-type: tm+mt
-source-wordcount: '3515'
-ht-degree: 96%
+source-wordcount: '3533'
+ht-degree: 95%
 
 ---
 
@@ -419,8 +419,12 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
    <td>8.5 </td>
   </tr>
   <tr>
-   <td>Microsoft Sharepoint</td>
-   <td>2016<br /> </td>
+   <td>Microsoft Sharepoint </td>
+   <td>2016 年（廃止）<br /> </td>
+  </tr>
+  <tr>
+   <td>Microsoft Sharepoint </td>
+   <td>2019 年<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -755,6 +759,10 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 サードパーティ製パッチのその他の情報については、Adobe Enterprise Support サイトで、ご使用の製品に関するナレッジベース記事を検索することによっても見つけられることがあります。
 
 ## プラットフォームのアップデート {#platform-updates}
+
+2022 年 6 月 2 日のAEM Forms 6.5.13.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
+
+- Microsoft SharePoint 2016
 
 2022 年 3 月 3 日のAEM Forms 6.5.12.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
 
