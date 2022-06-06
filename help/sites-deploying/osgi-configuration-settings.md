@@ -12,10 +12,10 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 9a3f26b6709461a911e833f7e340d11c759c7dae
+source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
 workflow-type: tm+mt
-source-wordcount: '3558'
-ht-degree: 98%
+source-wordcount: '3557'
+ht-degree: 97%
 
 ---
 
@@ -97,7 +97,8 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 **Apache Sling GET Servlet**&#x200B;レンダリングの一部の要素を設定します。
 
 * **Auto Index**：閲覧のためのディレクトリのレンダリングを有効または無効にします。
-* **Enable**（または Disable）：デフォルトのレンディション（**HTML**、**Plain Text**、**JSON**、**XML** など）を有効または無効にします。JSON を無効にしないでください。
+* **有効にする** デフォルトのレンディション ( **HTML**, **プレーンテキスト**, **JSON** または **XML**.
+JSON を無効にしないでください。
 
 >[!NOTE]
 >
@@ -107,7 +108,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 特定の設定がパフォーマンスに影響を及ぼす可能性があります。可能な場合（特に、実稼動インスタンスの場合）は、それらを無効にしてください。
 
-* **Source VM** および **Target VM**：ランタイム JVM として使用する JDK バージョンを定義します。
+* **ソース VM** および **ターゲット VM**：ランタイム JVM として使用する JDK バージョンを定義します。
 
 * 実稼動インスタンスの場合：
 
@@ -319,19 +320,19 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 AEM では次の 2 つの UI を使用できます。
 
 * タッチ操作対応 UI が標準の UI です。
-* 廃止されたクラシック UI も引き続き完全に機能します。
+* 非推奨（廃止予定）のクラシック UI は、引き続き完全に動作します。
 
 AEM ルートマッピングを使用すると、希望する UI を、インスタンスのデフォルトとして設定できます。
 
 * タッチ操作対応 UI をデフォルトの UI にするには、**Target Path** を次のように指定します。
 
-   ```
+   ```shell
       /projects.html
    ```
 
 * クラシック UI をデフォルトの UI とするには、**ターゲットパス**&#x200B;を次のように指定します。
 
-   ```
+   ```shell
       /welcome.html
    ```
 

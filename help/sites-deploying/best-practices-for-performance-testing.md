@@ -1,5 +1,5 @@
 ---
-title: パフォーマンステストに関するベストプラクティス
+title: パフォーマンステストのベストプラクティス
 seo-title: Best Practices for Performance Testing
 description: この記事では、パフォーマンステストに関する全体的な戦略と使用する方法を概説するほか、そのプロセスのために使用できるいくつかのツールを紹介します。
 seo-description: This article outlines the overall strategies and methodologies used for performance testing as well as some of the tools that are available to assist in the process.
@@ -10,14 +10,14 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: b6de561422bc3533eef153b13d2c65b4cb7e0387
-workflow-type: ht
+source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
+workflow-type: tm+mt
 source-wordcount: '1897'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
-# パフォーマンステストに関するベストプラクティス{#best-practices-for-performance-testing}
+# パフォーマンステストのベストプラクティス{#best-practices-for-performance-testing}
 
 ## はじめに {#introduction}
 
@@ -94,7 +94,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 
 ### テストの実行 {#performing-tests}
 
-オーサー環境でパフォーマンステストを実行するには、実稼動環境のオーサーインスタンスのエクスペリエンスをシミュレートしなければなりません。つまり、オーサーインスタンスの環境に、コンポーネント、OSGi バンドル、UI カスタマイズ、カスタムインデックスなど、実稼動環境のオーサーインスタンスに配置される様々な追加要素をすべて含めておく必要があります。
+オーサー環境でパフォーマンステストを実行するには、実稼動作成者のエクスペリエンスをシミュレートする必要があります。 つまり、オーサーインスタンスの環境に、コンポーネント、OSGi バンドル、UI カスタマイズ、カスタムインデックスなど、実稼動環境のオーサーインスタンスに配置される様々な追加要素をすべて含めておく必要があります。
 
 パフォーマンステストや負荷テスト用に設計された自動化フレームワークは数多くあります。これらのツールでカスタムのスクリプトを記録して再生することで、同様のコンテンツの作成とアクティベートアクティビティを同時に実行するピーク時のオーサーインスタンスの数をシミュレートすることが可能です。Tough Day ツールを使用し、数千個のアセットのアップロードや多数のページのアクティベートなどのアクティビティをシミュレートすることを推奨します。
 
