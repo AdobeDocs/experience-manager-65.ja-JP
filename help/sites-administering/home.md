@@ -2,9 +2,9 @@
 title: AEM 6.5 管理ユーザーガイド
 description: AEM 6.5 の管理について説明します。これらのガイドでは、サイトの機能、デプロイメント操作、セキュリティ機能、パーソナライゼーション、統合などについて説明します。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '359'
 ht-degree: 90%
 
 ---
@@ -15,7 +15,7 @@ AEM 6.5 の管理について説明します。これらのガイドでは、サ
 
 ## 主要な記事 
 
-* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
+* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)

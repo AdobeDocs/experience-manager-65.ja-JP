@@ -3,9 +3,9 @@ title: AEM 6.5 の導入ユーザーガイド
 seo-title: AEM 6.5 Deploying User Guide
 description: Adobe Experience Manager 6.5 のインストールとデプロイ、および Adobe Managed Services クラウドデプロイメントを含むアーキテクチャについて説明します。
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 95%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 95%
 
 ## 主な AEM 記事
 
-* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
+* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)

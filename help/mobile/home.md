@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Mobile User Guide
 description: モバイルアプリ用のコンテンツを作成および管理するAEMのサポートのメリット。 On-Demand Services App とAdobe PhoneGap Enterprise での作成、開発、管理方法について説明します。
 seo-description: Describes how to create and manage content for mobile applications.
 exl-id: 3531d8ea-614d-465a-8b4a-e3e3f3461e94
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 83%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 83%
 
 ## 主な AEM 記事
 
-* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/home.html?lang=ja)
+* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)

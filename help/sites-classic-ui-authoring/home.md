@@ -1,15 +1,15 @@
 ---
 title: AEM 6.5 クラシック UI オーサリングユーザーガイド
 seo-title: AEM 6.5 Classic UI Authoring User Guide
-description: 'このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。 '
+description: このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。
 seo-description: Covers the concepts of authoring in AEM in the classic UI.
-source-git-commit: 4dd47341ad1c966e8db6ef7ed1da93bf4e9abb52
-workflow-type: ht
-source-wordcount: '357'
+exl-id: 4ce591f1-a361-473a-b07d-a618f5c57f58
+source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
+workflow-type: tm+mt
+source-wordcount: '358'
 ht-degree: 100%
 
 ---
-
 
 # AEM 6.5 クラシック UI オーサリングユーザーガイド
 
@@ -17,9 +17,9 @@ ht-degree: 100%
 
 ## 主な AEM 記事
 
-* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/home.html?lang=ja)
+* [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja-JP)
+* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 ユーザーガイド
@@ -43,11 +43,11 @@ ht-degree: 100%
 
 ## 主要な AEM リソース
 
-* [AEM チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja)
+* [AEM チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
 * [Dispatcher ユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-dispatcher/using/dispatcher.html)
 * [HTL ユーザーガイド](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
 * [コアコンポーネントユーザーガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
-* [AEM コミュニティフォーラム](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
