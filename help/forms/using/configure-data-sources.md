@@ -10,9 +10,9 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: c92b5b5dd70e7a4e696d8d75282edbc88a13ba51
+source-git-commit: 98854fa3b852f511cf95adc13b945c06b1afff96
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2011'
 ht-degree: 98%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のタイプがサポートされています。これらのタイプは、すぐに使用することができます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
-* リレーショナルデータベース - MySQL、Microsoft SQL Server、IBM DB2、Oracle RDBMS
+* リレーショナルデータベース — MySQL、Microsoft SQL Server、IBM DB2、OracleRDBMS、Sybase
 * AEM ユーザープロファイル
 * RESTful Web サービス
 * SOAP ベース Web サービス
@@ -99,7 +99,7 @@ AEM におけるすべてのクラウドサービス設定は、AEM リポジト
 クラウドサービス設定用のフォルダーを構成するには、以下の手順を実行します。
 
 1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。
-   * 詳しくは、 [設定ブラウザー](/help/sites-administering/configurations.md) のドキュメントを参照してください。
+   * 詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
 1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
    1. **[!UICONTROL 設定ブラウザー]**&#x200B;で、「`global`」フォルダーを選択して「**[!UICONTROL プロパティ]**」をタップします。

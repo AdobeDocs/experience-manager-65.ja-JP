@@ -12,10 +12,10 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '1950'
-ht-degree: 100%
+source-git-commit: 1e301f3991a18a594ac10a6548a0a645327dd4dd
+workflow-type: tm+mt
+source-wordcount: '1995'
+ht-degree: 95%
 
 ---
 
@@ -172,6 +172,10 @@ ht-degree: 100%
 
    回答：HTML5 のフォームは、フローティングフィールドの表示パターンをサポートしていません。
 
+1. HTML5 Formsの「日付」フィールドの形式は何ですか？
+
+回答：「日付」フィールドでは、ISO 形式 (YYYY-MM-DD) を使用できます。 他の形式で日付を指定した場合、ユーザーがタブでフィールドから外に出るまで、日付フィールドは書式設定を受け付けません。
+
 ### スクリプティング {#scripting}
 
 1. HTML フォームの JavaScript 実装に関して制限事項はありますか？
@@ -188,7 +192,7 @@ ht-degree: 100%
 
 1. 推奨される命名規則はありますか？また、避けるべき予約済みのキーワードはありますか？
 
-   * AEM Forms Designer では、オブジェクト（サブフォーム、テキストフィールドなど）の名前を、アンダースコア（_）で始めないようにすることをお勧めします。名前の最初にアンダースコアを使用するには、アンダースコアの後に接頭辞を追加します。例えば、_&lt;prefix>&lt;objectname>のようにします。
+   * AEM Forms Designer では、オブジェクト（サブフォームやテキストフィールドなど）の名前をアンダースコア (_) をクリックします。 名前の先頭にアンダースコアを使用するには、アンダースコアの後にプレフィックスを追加します。_&lt;prefix>&lt;objectname>.
    * すべての HTML5 Forms API は予約済みのキーワードです。カスタムの APIや機能については、[HTML5 Forms API](/help/forms/using/scripting-support.md) と異なる名前を使用します。
 
 1. HTML5 フォームはフローティングフィールドをサポートしていますか？
