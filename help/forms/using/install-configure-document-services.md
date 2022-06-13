@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 57bccab9b95d328591e6cbb1070fd9e59712c016
+source-git-commit: 2d12f1652a3b8ec4e6ca9c737dc844d1f53f7d08
 workflow-type: tm+mt
-source-wordcount: '5364'
+source-wordcount: '5365'
 ht-degree: 67%
 
 ---
@@ -479,7 +479,7 @@ Microsoft® Windows では、PDFジェネレーターサービスは、Adobe Acr
 
    1. 開く [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) をクリックし、 `adobe-aemfd-pdfg-common-pkg-[version].zip` ファイルをパッケージマネージャーから削除します。
    1. ダウンロードした.zip ファイルを解凍します。管理者権限でコマンドプロンプトを開きます。
-   1. `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` ディレクトリに移動します。次のバッチファイルを実行します。
+   1. 次に移動： [extracted-zip-file]`\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\adobe-aemfd-pdfg-common-pkg-[version]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` ディレクトリ。 次のバッチファイルを実行します。
 
       `Acrobat_for_PDFG_Configuration.bat`
 
