@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2022
 description: AEM Content and Commerce リリースノート 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: aacb497b10f46be3157aae86a5973aa277fda967
+source-git-commit: f6a16e5744222600b3a1760efe3c61619160b6cd
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 54%
+source-wordcount: '573'
+ht-degree: 61%
 
 ---
 
@@ -21,6 +21,30 @@ ht-degree: 54%
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## リリース日：2022年5月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIF アドオン | 2022.05.31.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
+| CIF コアコンポーネント | 2.9.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.9.0) |
+| CIF Venia 参照サイト | 2022.05.30 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.05.30) |
+
+### 新機能 {#what-is-new-may}
+
+* より良くシンプルな概要を示す新しい製品コックピットプロパティページ
+
+![製品コクピットのプロパティの概要](/help/assets/CIF/product_cockpit_properties_overview.png)
+
+* I/O Runtime 上のサードパーティコネクタの互換性と堅牢性の向上
+
+* GQL クライアント設定の上書きのサポートを強化（例：カスタムキャッシュ動作の設定）
+
+### バグ修正 {#bug-fixes-may}
+
+* 複数値の製品ピッカーフィールドに、2 番目と追加の製品が無効と表示される
+
+* 製品ピッカーがコンポーネントの背後に隠れている場合があります
+
 ## リリース日：2022年4月
 
 | コンポーネント | バージョン | 詳細 |
@@ -29,7 +53,7 @@ ht-degree: 54%
 | CIF コアコンポーネント | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
 | CIF Venia 参照サイト | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
 
-### 新機能 {#what-is-new}
+### 新機能 {#what-is-new-april}
 
 * 製品コックピットにすばやくアクセス：サイトエディターでワンクリックで詳細な製品情報に簡単にアクセス
 
@@ -65,12 +89,12 @@ ht-degree: 54%
 
 ### 新機能 {#what-is-new-january}
 
-* myAccount コンポーネントの強化
+* myAccount コンポーネントの機能が強化されました
 * 製品レコメンデーションコンポーネントは、追加のページタイプ（ホームページ、買い物かご、注文の確認）をサポートします。
 * **ウィッシュリスト**
-   * ログインした訪問者は、ウィッシュリストに製品を追加できます
+   * ログインした訪問者はウィッシュリストに製品を追加できます
    * ウィッシュリストとその製品の管理は、myAccount を通じて可能です
-   * 「ウィッシュリストに追加」ボタンは、ポリシー（製品ティーザー、製品の詳細など）を介して、コンポーネントレベルで有効/無効にできます
-   * コアコンポーネントおよびAEM Venia ストアフロントで使用できます。
+   * ポリシー（製品ティーザー、製品の詳細など）を通じて、「ウィッシュリストに追加」ボタンをコンポーネントレベルで有効／無効にできます
+   * コアコンポーネントとして AEM Venia ストアフロントで使用できます
 
 ![ウィッシュリスト](/help/assets/CIF/wishlist.png)
