@@ -5,7 +5,7 @@ description: AEM 6.5 の基本的な機能の説明
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
 source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 100%
 
@@ -50,4 +50,4 @@ AEM Livefyre は、まったく新しい Adobe Experience Manager 機能であ�
 
 ## AEM の基盤 {#aem-foundation}
 
-Adobe Experience Manager 6.5 の基盤と Managed Services デプロイメントモデルについて詳しくは、[こちら](/help/sites-deploying/home.md)を参照するか、[このリリースの機能を紹介する新しいビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)をご覧ください。
+Adobe Experience Manager 6.5 の基盤と Managed Services デプロイメントモデルについて詳しくは、[こちら](/help/sites-deploying/home.md)を参照するか、[このリリースの機能を紹介する新しいビデオ](https://helpx.adobe.com/experience-manager/kt/sites/index/aem-6-5-sites.html)をご覧ください。

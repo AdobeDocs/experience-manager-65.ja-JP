@@ -6,7 +6,7 @@ exl-id: e99899a4-df86-4108-991a-8b30d303a279
 source-git-commit: 885d0763fca9ad4eab499081adca9b83875b27e1
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Experience Manager はデータをオンデマンドで取得するため、製�
 
 >[!TIP]
 >
->リアルタイム API が使用できない場合は、API を使用した外部製品キャッシュを統合に対して使用する必要があります。例：[Magento オープンソース](https://business.adobe.com/products/magento/open-source.html)
+>リアルタイム API を使用できない場合は、API を使用した外部製品キャッシュを統合に使用する必要があります。例：[Magento オープンソース](https://business.adobe.com/jp/products/magento/open-source.html)
 
 完全な GraphQL スキーマを実装する必要はありません。必要なユースケースを有効にするには、スキーマのオブジェクトだけを実装します。
 
@@ -54,11 +54,11 @@ CIF は、製品カタログへのリアルタイムのアクセスと製品エ�
 
 ## 事前定義済みコネクタ {#connectors}
 
-コネクタは、プロジェクトを開始するのに適しています。 これには、コマースソリューション固有の接続とデフォルトの API マッピングが付属しています。 これらのコネクタは、サードパーティによって構築され、Adobeによって管理されるわけではありません。 詳しくは、それぞれのパートナーにお問い合わせください。
+コネクタは、プロジェクトの良い出発点となります。これには、コマースソリューション固有の接続とデフォルトの API マッピングが付属しています。これらのコネクタは、サードパーティによって作成されており、アドビで維持管理されているわけではありません。詳しくは、それぞれのパートナーに問い合わせください。
 
-* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris), Diconium によって作成
-* [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool), Diconium によって作成
+* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris)（Diconium が作成）
+* [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool)（Diconium が作成）
 
 >[!TIP]
 >
->コネクタは、コマース統合を高速化するプロジェクトを支援しますが、プラグイン再生ではありません。 エンタープライズコマースソリューションは通常、大幅にカスタマイズされており、カスタム統合が必要です。 コマースプラットフォーム、Adobe Commerce GraphQL スキーマ、Adobe I/O Runtimeに関する十分な知識が必要です。
+>コネクタは、プロジェクトでコマース統合を速めるのに役立ちますが、プラグアンドプレイではありません。エンタープライズコマースソリューションは通常、大幅にカスタマイズされており、カスタム統合が必要になります。コマースプラットフォーム、Adobe Commerce GraphQL スキーマおよび Adobe I/O Runtime に関する十分な知識が必要です。

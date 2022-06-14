@@ -12,7 +12,7 @@ docset: aem65
 feature: Correspondence Management
 exl-id: bc5d6c5b-c833-4849-aace-e07f8a522b32
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1664'
 ht-degree: 100%
 
@@ -68,7 +68,7 @@ AEM Forms では、テキストモジュール内でインライン条件を使�
    ${DD_creditcard_Gender=="Male"}
    ```
 
-   式の作成について詳しくは、[式ビルダー](../../forms/using/expression-builder.md)の「**式ビルダーによる式およびリモート関数の作成**」を参照してください。式に指定する値は、データディクショナリ内の要素でサポートされている必要があります。詳しくは、「[データディクショナリ](../../forms/using/data-dictionary.md)」を参照してください。
+   式の作成について詳しくは、[式ビルダー](../../forms/using/expression-builder.md)の「**式ビルダーによる式およびリモート関数の作成**」を参照してください。式に指定する値は、データディクショナリ内の要素でサポートされている必要があります。詳しくは、[データディクショナリ](../../forms/using/data-dictionary.md)を参照してください。
 
    条件を挿入すると、条件の左側にあるハンドルの上にマウスを移動したときに条件が表示されます。ハンドルをタップすると、条件のポップアップメニューが表示され、条件を編集または削除できます。
 

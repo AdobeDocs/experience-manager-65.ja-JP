@@ -3,7 +3,7 @@ title: 設定と設定ブラウザー
 description: AEM 設定と、AEM でのワークスペース設定の管理方法について理解します。
 exl-id: 1be5849b-748c-48e8-afa8-35a9026c27b3
 source-git-commit: 84b16dd1a60f731b568dd87ef89699875cb86596
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1496'
 ht-degree: 100%
 
@@ -75,7 +75,7 @@ WKND-General を WKND サイトのすべてのコンテンツに関連付ける�
    ![設定の作成](assets/configuration-create.png)
 
    * **タイトル**&#x200B;は内容がわかるように付けます。
-   * **名前**&#x200B;はリポジトリーのノード名になります。
+   * **名前**&#x200B;はリポジトリのノード名になります。
       * タイトルに基づいて自動的に生成され、[AEM の命名規則](/help/sites-developing/naming-conventions.md)に従って調整されます。
       * 必要に応じて調整できます。
 1. 許可する設定のタイプを確認します。

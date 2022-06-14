@@ -12,7 +12,7 @@ docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 100%
 
@@ -180,7 +180,7 @@ JEE 上の AEM Forms がサポートするデータベースのセキュリテ�
    <td><p>7001</p> </td>
   </tr>
   <tr>
-   <td>&gt;<p>SOAP[SOAP]</p> </td>
+   <td>&gt;<p>SOAP</p> </td>
    <td><p>8880</p> </td>
   </tr>
   <tr>

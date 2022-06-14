@@ -12,7 +12,7 @@ discoiquuid: 90bc05c9-e971-4e75-bc07-5e137c6c913e
 docset: aem65
 exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4935'
 ht-degree: 100%
 
@@ -309,7 +309,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで、Products ページを再読み込みします。次のように表示されます。
+1. ブラウザーで製品ページをリロードします。次のようなコンソールが表示されます。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -401,7 +401,7 @@ contentpage.jsp スクリプトにコードを追加してページコンテン�
    ```
 
 1. 変更内容を保存します。
-1. ブラウザーで、Products ページを再読み込みします。次のように表示されます。
+1. ブラウザーで製品ページをリロードします。次のようなコンソールが表示されます。
 
    ![chlimage_1-2](assets/chlimage_1-2.jpeg)
 
@@ -677,7 +677,7 @@ Products ページの下に 2 つのページを作成します。特定の 2 �
    1. 「**プロパティ**」タブで、以下の値を入力します。
 
       * 名前：`jcr:description`
-      * 型：`String`
+      * タイプ：`String`
       * 値：`This is a description of the Product 1!.`
    1. 「**追加**」をクリックします。
    1. 「**プロパティ**」タブで、以下の値を使用してもう 1 つのプロパティを作成します。
@@ -929,9 +929,9 @@ contentpage コンポーネントに listchildren コンポーネントを含め
    |---|---|---|
    | fileNameParameter | 文字列 | 。/imageName |
    | fileReferenceParameter | 文字列 | 。/imageReference |
-   | name | 文字列 | 。/画像 |
-   | title | String | 画像 |
-   | xtype | String | html5smartimage |
+   | 名前 | 文字列 | 。/画像 |
+   | title | 文字列 | 画像 |
+   | xtype | 文字列 | html5smartimage |
 
    ![chlimage_1-47](assets/chlimage_1-47.png)
 
@@ -1022,7 +1022,7 @@ public class img_GET extends AbstractImageServlet {
    <cq:include path="logo" resourceType="mywebsite/components/logo" />
    ```
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 1. ブラウザーで製品ページをリロードします。ロゴは以下のようになりますが、現時点では基になるリンクのみが表示されます。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
@@ -1085,7 +1085,7 @@ public class img_GET extends AbstractImageServlet {
    <cq:include path="title" resourceType="foundation/components/title" />
    ```
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 1. ブラウザーで製品ページをリロードします。タイトルコンポーネントは次のようになります。
 
    ![chlimage_1-51](assets/chlimage_1-51.png)
@@ -1192,7 +1192,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 1. cq:dropTargets ノードの下に、以下のように新しいノードを作成します。
 
    * 名前：image
-   * タイプ：nt:unstructured
+   * 型：nt:unstructured.
 
 1. CRXDE で、プロパティを以下のように設定します。
 
@@ -1200,7 +1200,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
 |---|---|---|
 | 同意 | 文字列 | image/gif | jpeg | png) |
 | グループ | 文字列 | media |
-| propertyName | String | 。/imageReference |
+| propertyName | 文字列 | 。/imageReference |
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
@@ -1258,7 +1258,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を、cont
    * ログイン
    * 検索
 
-1. ブラウザーで、Products ページを再読み込みします。次のように表示されます。
+1. ブラウザーで製品ページをリロードします。次のようなコンソールが表示されます。
 
    ![chlimage_1-55](assets/chlimage_1-55.png)
 
@@ -1530,7 +1530,7 @@ contentpage の左側のセクションに検索入力ボックスを含める�
    <cq:include path="rightpar" resourceType="foundation/components/iparsys" />
    ```
 
-1. 変更内容を保存します。
+1. 変更を保存します。
 1. ブラウザーで製品ページをリロードします。ページ全体は次のようになります。
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)

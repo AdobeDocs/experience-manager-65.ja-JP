@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 1f15f028-aa81-478e-97eb-f83a4dc0418c
 exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
 source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3227'
 ht-degree: 100%
 
@@ -230,7 +230,7 @@ LDAP プロトコルには、要求コントロールを使用したページ分
 
 1. ディレクトリを設定する場合は、ユーザー設定ページとグループの設定ページの両方で「仮想一覧表示（VLV）コントロールを有効にする」を選択します。このチェックボックスを選択する場合は、「フィールドをソート」ボックスでソート名も指定する必要があります。デフォルト値は「uid」です（[ディレクトリまたはカスタム SPI の追加](configuring-directories.md#adding-directories-or-custom-spis)または [ディレクトリの編集](configuring-directories.md#edit-a-directory)を参照）。
 1. ユーザーおよびグループに対して LDAP VLV エントリを作成するには、Sun ONE 管理コンソールまたはコマンドラインスクリプトを使用します。コマンドラインスクリプトでは、ユーザーおよびグループに関するサンプルの LDIF ファイルを使用できます（[VLV 用の Sun ONE Directory Server の設定](configuring-directories.md#configuring-the-sun-one-directory-server-for-vlv)を参照）。
-1. サーバーを停止し、必要なインデックスを作成します（[ディレクトリサーバーでの VLV のインデックスの作成](configuring-directories.md#create-the-directory-server-index-for-vlv)を参照）。
+1. サーバーを停止し、必要なインデックスを作成します（[ディレクトリサーバーでの VLV のインデックスの作成](configuring-directories.md#create-the-directory-server-index-for-vlv)を参照。）
 
 ### VLV 用の Sun ONE Directory Server の設定 {#configuring-the-sun-one-directory-server-for-vlv}
 

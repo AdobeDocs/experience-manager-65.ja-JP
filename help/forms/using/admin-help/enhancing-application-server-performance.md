@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: fad65765-d56d-4a9f-82d5-bcceb1758953
 exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 100%
 
@@ -45,12 +45,12 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
    * 「Capacity Increment」
    * 「Statement Cache Size」
 
-1. 「Save」をクリックし、「Activate Changes」をクリックします。
+1. 「保存」をクリックし、「変更をアクティベート」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
 ### SQLServer に対する WebLogic の接続プールの設定 {#configure-connection-pool-settings-for-weblogic-for-sqlserver}
 
-1. 「Change Center」で、「Lock &amp; Edit」をクリックします。
+1. Change Center で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Services／JDBC／Data Sources をクリックし、右側のウィンドウの「EDC_DS」をクリックします。
 1. 次の画面で、「Configuration」タブ／Connection Pool をクリックして、以下のボックスに値を入力します。
 
@@ -59,7 +59,7 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
    * 「Capacity Increment」
    * 「Statement Cache Size」
 
-1. 「Save」をクリックし、「Activate Changes」をクリックします。
+1. 「保存」をクリックし、「変更をアクティベート」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
 ### DB2 に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-db2}

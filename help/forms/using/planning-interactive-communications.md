@@ -10,7 +10,7 @@ discoiquuid: 75b2d424-91d3-45b4-a5d7-fb49ab558582
 feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 100%
 
@@ -75,7 +75,7 @@ ht-degree: 100%
      <li>請求日</li>
      <li>請求期間</li>
     </ul> <p> </p> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>顧客情報</td>
@@ -94,7 +94,7 @@ ht-degree: 100%
      <li>都道府県コード</li>
      <li>接続数</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>請求内容</td>
@@ -108,7 +108,7 @@ ht-degree: 100%
      <li>請求額</li>
      <li>期限</li>
     </ul> </td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>請求概要</td>
@@ -126,7 +126,7 @@ ht-degree: 100%
      <li>合計支払金額（usagecharges 計算フィールド）</li>
     </ul> <p>テーブル - 請求</p> </td>
    <td>フィールドなし</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>通話明細 - 発信</td>
@@ -140,20 +140,20 @@ ht-degree: 100%
     </ul> </td>
    <td><p>すべての値</p> <p>テーブル - 通話</p> </td>
    <td>フィールドなし</td>
-   <td>--</td>
+   <td>—</td>
   </tr>
   <tr>
    <td>Pay Now</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>PayNow</td>
   </tr>
   <tr>
    <td>付加価値サービス</td>
-   <td>--</td>
-   <td>--</td>
-   <td>--</td>
+   <td>—</td>
+   <td>—</td>
+   <td>—</td>
    <td>ValueAddedServices</td>
   </tr>
  </tbody>

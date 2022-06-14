@@ -8,7 +8,7 @@ topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2234'
 ht-degree: 100%
 
@@ -92,7 +92,7 @@ JSON ファイルに保存されたレコードからインタラクティブ通
       | プロパティ | 型 | 説明 |
       |--- |--- |--- |
       | templatePath | 文字列 | 使用するインタラクティブ通信テンプレートのパスを指定します。例えば、 /content/dam/formsanddocuments/testsample/mediumic のように指定します。 これは必須プロパティです。 |
-      | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPath フィールドの値として設定できます。 例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブ通信の名前になります。デフォルト値はランダムな [random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |
+      | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPath フィールドの値として設定できます。 例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブ通信の名前になります。デフォルト値はランダムな[random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |
       | usePrefillService | Boolean | 値を False に設定します。usePrefillService パラメーターを使用すると、対応するインタラクティブ通信用に設定された事前入力サービスから取得したデータを、インタラクティブ通信に事前入力することができます。usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。デフォルト値は false です。 |
       | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。 デフォルト値は WEB_AND_PRINT です。 |
       | locale | 文字列 | 出力インタラクティブ通信のロケールを指定します。 そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブ通信を生成することができます。 デフォルト値は en_US です。 |
@@ -104,7 +104,7 @@ JSON ファイルに保存されたレコードからインタラクティブ通
    1. 監視フォルダーがファイルを処理するのを待ちます。処理が開始されると、入力ファイルと、そのファイルを含むサブフォルダーがステージングフォルダーに移動します。
    1. 出力フォルダーを開いて出力を表示します。
       * 監視フォルダー設定で PRINT オプションを指定すると、インタラクティブ PDF の通信出力が生成されます。
-      * 監視フォルダー設定で WEB オプションを指定すると、レコードごとに JSON ファイルが生成されます。 JSON ファイルを使用して [Web テンプレートを事前入力](#web-template)できます。
+      * 監視フォルダー設定で WEB オプションを指定すると、レコードごとに JSON ファイルが生成されます。 JSON ファイルを使用して [Web テンプレートに事前入力](#web-template)できます。
       * PRINT オプションと WEB オプションの両方を指定すると、レコードごとに PDF ドキュメントと JSON ファイルの両方が生成されます。
 
 #### 外部データソースに保存され、フォームデータモデルを介してアクセスされる入力データを使用して、インタラクティブ通信を作成する {#use-fdm-as-data-source}
@@ -141,13 +141,13 @@ JSON ファイルに保存されたレコードからインタラクティブ通
 
    1. ファイルを保存して閉じます。
 
-1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html?lang=ja)を作成して、Batch API サービスを使用するように設定します。
+1. [監視フォルダー](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成して、Batch API サービスを使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
    1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」をタップします。
-   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;および物理的 **[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
-   1. **[!UICONTROL 次を使用してファイルを処理]**&#x200B;フィールドで&#x200B;**[!UICONTROL サービス]**&#x200B;オプションを選択します。 
-   1. **[!UICONTROL サービス名]**&#x200B;フィールドで **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** サービスを選択します。
-   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。例：%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-watched-folder-endpoints.html?lang=ja) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけられることを指定します。
+   1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
+   1. **[!UICONTROL 次を使用してファイルを処理]**&#x200B;フィールドで「**[!UICONTROL サービス]**」オプションを選択します。
+   1. **[!UICONTROL サービス名]**&#x200B;フィールドで、**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** サービスを選択します。
+   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。例：%F/ [pattern](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
 1. 以下の手順に従って、詳細設定パラメーターを設定します。
    1. 「**[!UICONTROL 詳細]**」タブを開いて、次のカスタムプロパティを追加します。
 
@@ -155,9 +155,9 @@ JSON ファイルに保存されたレコードからインタラクティブ通
       |--- |--- |--- |
       | templatePath | 文字列 | 使用するインタラクティブ通信テンプレートのパスを指定します。例えば、 /content/dam/formsanddocuments/testsample/mediumic のように指定します。 これは必須プロパティです。 |
       | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。 レコードのフィールドのパスは、recordPath フィールドの値として設定できます。 例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブ通信の名前になります。デフォルト値はランダムな[random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |  |
-      | usePrefillService | Boolean | 値を True に設定します。デフォルト値は false です。値を true に設定すると、Batch API は設定されたフォームデータモデルからデータを読み取り、インタラクティブ通信に入力します。 usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 |
+      | usePrefillService | ブール値 | 値を True に設定します。デフォルト値は false です。値を true に設定すると、Batch API は設定されたフォームデータモデルからデータを読み取り、インタラクティブ通信に入力します。 usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 |
       | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。 デフォルト値は WEB_AND_PRINT です。 |
-      | locale | 文字列 | 出力インタラクティブ通信のロケールを指定します。 そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブ通信を生成することができます。 デフォルト値は en_US です。 |
+      | ロケール | 文字列 | 出力インタラクティブ通信のロケールを指定します。 そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブ通信を生成することができます。 デフォルト値は en_US です。 |
 
    1. 「**[!UICONTROL 作成]**」をタップすると、監視フォルダーが作成されます。
 1. 監視フォルダーを使用してインタラクティブ通信を生成します。

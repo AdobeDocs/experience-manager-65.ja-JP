@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '10683'
 ht-degree: 100%
 
@@ -39,7 +39,7 @@ ht-degree: 100%
 
 ## Audit Workflow サービスの設定 {#audit-workflow-service-settings}
 
-Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能が用意されています（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照）。forms サーバーのファイルシステム上のスペースを確保するために、保存するプロセス記録データの量を制限できます。Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
+Workbench には、実行時に処理されるプロセスインスタンスを記録し、記録を再生してプロセスの動作を観察できる機能が用意されています（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照）。forms サーバーのファイルシステム上のスペースを確保するために、保存するプロセス記録データの量を制限できます。Audit Workflow Service サービス（`AuditWorkflowService`）の次のプロパティを設定できます。
 
 **maxNumberOfRecordingInstances：**&#x200B;格納する記録の最大数です。保存の最大数に達すると、新しいレコードが作成されるときに最も古いレコードがファイルシステムから削除されます。このプロパティは、多数のレコードを作成する可能性が高いので、古いレコードを自動的に削除する場合に便利です。デフォルト値は 50 です。
 
@@ -119,7 +119,7 @@ Convert PDF サービスでは、以下の設定を使用できます。
 
 **必須：**&#x200B;既存のトランザクションコンテキストがサポートされます。トランザクションコンテキストが存在しない場合は、新しいトランザクションコンテキストが作成されます。これがデフォルト値です。
 
-**新規必須：**&#x200B;常にトランザクションコンテキストが作成されます。アクティブなトランザクションコンテキストが存在する場合は、休止されます。
+**Requires New**：常にトランザクションコンテキストが作成されます。アクティブなトランザクションコンテキストが存在する場合は、休止されます。
 
 **トランザクションタイムアウト（秒単位）：**&#x200B;操作をラップしているトランザクションがロールバックされるまで、基になるトランザクションプロバイダーが待機する秒数です。既存のトランザクションコンテキストが適用されている場合、この値は無視されます。デフォルト値は 180 です。
 
@@ -526,7 +526,7 @@ Remoting サービスでは、以下の設定を使用できます。
 
 ## Repository サービスの設定 {#repository-service-settings}
 
-Repository サービス（`RepositoryService`）は、リソースを保存および管理するためのサービスを AEM Forms に提供します。アプリケーションを作成するときは、アセットをファイルシステムではなくリポジトリにデプロイできます。アセットには、XML 形式、PDF 形式（Acrobat 形式を含む）、フォームのフラグメント、画像、プロファイル、ポリシー、SWF ファイル、DDX ファイル、XML スキーマ、WSDL ファイルおよびテストデータなど、任意のタイプのコラテラルが含まれます。
+Repository サービス（`RepositoryService`）は、リソースを保存および管理するためのサービスを AEM Forms に提供します。アプリケーションを作成するときは、アセットをファイルシステムではなくリポジトリにデプロイできます。アセットには、XML フォーム、PDF フォーム（Acrobat フォームを含む）、フォームのフラグメント、画像、プロファイル、ポリシー、SWF ファイル、DDX ファイル、XML スキーマ、WSDL ファイルおよびテストデータなど、任意のタイプの販促物が該当します。
 
 AEM Forms に含まれるデフォルトのリポジトリ、またはサードパーティのリポジトリ（EMC Documentum Content Server、IBM FileNet Content Manager または IBM Content Manager）を使用できます。
 
@@ -735,7 +735,7 @@ Watched Folder サービスでは、以下の設定を使用できます。
 
 例えば、2009年7月17日午後 8:00 に `C:/Test/WF0/failure/%Y/%M/%D/%H/` を指定した場合、結果フォルダーは `C:/Test/WF0/failure/2009/07/17/20` になります。
 
-絶対パスではなく相対パスを指定すると、監視フォルダーの中に作成されます。ファイルパターンについて詳しくは、[ファイルパターンについて](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns)を参照してください。
+絶対パスではなく相対パスを指定すると、監視フォルダーの中に作成されます。ファイルパターンについて詳しくは、「[ファイルパターンについて](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns)」を参照してください。
 
 >[!NOTE]
 >

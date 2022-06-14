@@ -11,7 +11,7 @@ exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
 source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
 workflow-type: tm+mt
 source-wordcount: '2358'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -44,7 +44,7 @@ Dynamic Media は、次の 3D ファイル形式をサポートしています�
 
 >[!NOTE]
 >
->アセットの詳細ページの 3D メディア WCM コンポーネントと 3D プレビューは、最新バージョンの Chrome(97.x) と互換性がありません。 代わりに、3D アセットを操作するには、Firefox または Safari を使用するか、以前のバージョンの Chrome(96.x) を使用します。
+>アセットの詳細ページの 3D メディア WCM コンポーネントと 3D プレビューは、最新バージョンの Chrome（97.x）と互換性がありません。3D アセットを操作するには、代わりに Firefox または Safari を使用するか、以前のバージョンの Chrome（96.x）を使用します。
 
 ## クイックスタート：Dynamic Media 内の 3D アセット {#quick-start-three-d}
 

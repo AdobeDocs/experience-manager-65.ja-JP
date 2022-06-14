@@ -12,7 +12,7 @@ discoiquuid: e02f5484-fbc2-40dc-8d06-ddb53fd9afc2
 docset: aem65
 exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3503'
 ht-degree: 100%
 
@@ -503,7 +503,7 @@ OSGi コンソールから設定可能なプロパティを公開するコンポ
   </tr>
   <tr>
    <td>モバイルランディングページビルダー</td>
-   <td>File Pattern</td>
+   <td>ファイルパターン</td>
    <td>File Pattern で定義した正規表現に一致する HTML ファイルを処理するよう、ランディングページビルダーを設定できます。</td>
   </tr>
   <tr>
@@ -533,7 +533,7 @@ OSGi コンソールから設定可能なプロパティを公開するコンポ
 >`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
 >また、検索パターン内で >`CQ_DESIGN_PATH` を `VIPURL` と置換する必要がある場合、検索パターンは次のようになります。
->`/\* *VIPURL *\*/ *(['"])`
+`/\* *VIPURL *\*/ *(['"])`
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -598,4 +598,4 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
->また、デザイナーはデザインインポーターが **id=cqcanvas** タグ内のコードのみを認識することに注意してください。これを怠ると、デザインが保持されなくなります。
+また、デザイナーはデザインインポーターが **id=cqcanvas** タグ内のコードのみを認識することに注意してください。これを怠ると、デザインが保持されなくなります。

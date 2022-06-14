@@ -10,13 +10,13 @@ topic-tags: publish
 discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
-workflow-type: ht
+exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '1641'
 ht-degree: 100%
 
 ---
-
 
 # フォームポータルページの作成{#creating-a-forms-portal-page}
 

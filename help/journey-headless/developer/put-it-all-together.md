@@ -1,8 +1,9 @@
 ---
 title: すべてをまとめる方法 - AEM ヘッドレスのアプリとコンテンツ
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、コンテンツフラグメント、GraphQL 呼び出し、REST API 呼び出し、アプリケーションを含む AEM プロジェクトを実行し、運用開始に備える方法を説明します。
-source-git-commit: e3b3c3202b718da063392c33739c0f109b619ac7
-workflow-type: ht
+exl-id: 7087a742-732d-41d1-88a5-ac29083cf726
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 100%
 

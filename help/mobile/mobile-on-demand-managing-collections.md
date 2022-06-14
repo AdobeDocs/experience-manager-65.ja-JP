@@ -1,8 +1,8 @@
 ---
 title: コレクションの管理
-seo-title: コレクションの管理
+seo-title: Managing Collections
 description: コレクションは、カバーのテーマに適した記事やバナーなどのコンテンツを集めた、適切に定義されたグループです。このページでは、この機能について詳しく見ていきます。
-seo-description: コレクションは、カバーのテーマに適した記事やバナーなどのコンテンツを集めた、適切に定義されたグループです。このページでは、この機能について詳しく見ていきます。
+seo-description: Collections represent a well defined bucket filled with content such as articles or banners that suits the cover's theme. Follow this page to learn more.
 uuid: 1d2e9769-d2cc-4d43-a428-e962a51eb5d0
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 64c6d198-983f-4a52-9c83-560206363868
 exl-id: 0b4aa1a4-449a-4882-8f7c-3ceea6ac7f83
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 84%
+source-wordcount: '797'
+ht-degree: 83%
 
 ---
 
@@ -21,25 +21,22 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。アプリケーション内のコンテンツに対して以下のアクションを実行します。
 
-## コレクションの概要  {#collections-overview}
+## コレクションの概要 {#collections-overview}
 
-コレクションとは、カバーのテーマに適した記事やバナーなどのコンテンツが入った、適切に定義された&#x200B;*バケット*&#x200B;です。
+コレクションは適切に定義された *バケット* カバーのテーマに合った記事やバナーなどのコンテンツがいっぱいになっています。
 
 >[!NOTE]
 >
 >AEM Mobile アプリの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
 >* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
-   >
-   >
-* [コレクションの管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-collections.html)
-
 >
-
+>* [コレクションの管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-collections.html)
+>
 
 
 ## コレクションの作成 {#creating-a-collection}
@@ -65,39 +62,39 @@ ht-degree: 84%
 
 新しいコレクションを読み込むワークフローは以下のとおりです。
 
-1. 「モバイル」から、カタログからMobile On-Demandアプリを選択します。
+1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. **コレクションを管理**&#x200B;タイルの右上隅にある下矢印をクリックして、「コレクションを読み込む」を選択します。
 1. ダイアログで「**コレクションを読み込む**」をクリックし、「閉じる」をクリックします。
-1. Mobile On-Demandコレクションが&#x200B;**コレクションを管理**&#x200B;タイルに表示されます。
+1. Mobile On-Demand コレクションが **コレクションを管理** タイル。
 
 >[!CAUTION]
 >
 >最初に Mobile On-Demand の接続を関連付ける必要があります。
 
-## コレクションの編集  {#editing-a-collection}
+## コレクションの編集 {#editing-a-collection}
 
 記事を追加または変更するには、組み込みの AEM ドラッグ＆ドロップエディターを使用します。テキストや画像などのコンポーネントを追加したり、削除したりすることができます。DAM アセットの画像を挿入することもできます。
 
 コレクションを編集するワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. **コレクションを管理**&#x200B;タイルからAEMソースの記事を選択します。
+1. 次の場所からAEMソースの記事を選択 **コレクションを管理** タイル。
 1. リスト表示で、ハイライトされたコレクションをクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、コレクションの内容（原稿、画像、テキストなど）をドラッグします。
 
-### コレクション内のメタデータの表示および編集  {#viewing-and-editing-the-metadata-within-a-collection}
+### コレクション内のメタデータの表示および編集 {#viewing-and-editing-the-metadata-within-a-collection}
 
 コレクションには、タイトル、説明、画像など多くのプロパティがあります。このようなプロパティを表示および変更するには、この操作を使用します。オプションで、保存時に Mobile On-Demand に変更内容をアップロードすることもできます。
 
 コレクションを表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. **コレクションを管理**&#x200B;タイルからコレクションを選択します。
+1. 次の場所からコレクションを選択： **コレクションを管理** タイル。
 
 1. アクションバーから「**プロパティ**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. オプションで、変更内容を直ちにMobile On-Demandにアップロードします。
+1. オプションで、変更内容を直ちに Mobile On-Demand にアップロードします。
 
 ## コレクションのアップロード {#uploading-a-collection}
 
@@ -105,15 +102,15 @@ ht-degree: 84%
 
 コレクションをアップロードする一般的なワークフローは以下のとおりです。
 
-1. **Mobile**&#x200B;から、カタログからMobile On-Demandアプリを選択します。
-1. **コレクションを管理**&#x200B;タイルで、Mobile On-Demandにアップロードする記事を選択します。
+1. 送信者 **モバイル**」で、カタログから Mobile On-Demand アプリを選択します。
+1. 内 **コレクションを管理** タイルで、Mobile On-Demand にアップロードする記事を選択します。
 1. 必要に応じて、リスト表示からさらにコレクションを追加します。
 1. アクションバーから「**アップロード**」を選択し、ダイアログで「アップロード」をクリックします。
-1. これで、コレクションがMobile On-Demandにアップロードされます。
+1. コレクションが Mobile On-Demand にアップロードされました。
 
 ## コレクションの削除 {#deleting-a-collection}
 
-この操作では、選択したコレクションがMobile On-Demandから削除され、必要に応じてローカルのAEMインスタンスから削除されます。
+この操作を実行すると、選択したコレクションが Mobile On-Demand から削除され、必要に応じてローカルのAEMインスタンスからも削除されます。
 
 コレクションを削除する一般的なワークフローは以下のとおりです。
 
@@ -125,13 +122,13 @@ ht-degree: 84%
 1. 「**削除**」をクリックします。
 1. コレクションがリストから削除されます。
 
-## コレクションへのコンテンツの追加  {#adding-content-to-collections}
+## コレクションへのコンテンツの追加 {#adding-content-to-collections}
 
 コレクションは基本的に、関連するコンテンツのカテゴリです。コレクションによって、アプリケーションのナビゲーション構造を定義するパッケージに記事やバナーなどのコンテンツが収集されます。コレクションはネスト可能です。
 
 >[!NOTE]
 >
->コンテンツをコレクションに追加する前に、Mobile On-Demandにアップロードする必要があります。
+>コンテンツをコレクションに追加する前に、Mobile On-Demand にアップロードする必要があります。
 
 コレクションは基本的に、関連するコンテンツのカテゴリです。コレクションによって、アプリケーションのナビゲーション構造を定義するパッケージに記事やバナーなどのコンテンツが収集されます。コレクションはネスト可能です。
 

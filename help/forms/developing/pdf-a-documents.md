@@ -12,7 +12,7 @@ discoiquuid: 1e6cc554-aef1-463c-906b-634b80a27917
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 100%
 
@@ -70,7 +70,7 @@ PDF ドキュメントを PDF/A ドキュメントに変換するには、次の
 
 **DocConvert クライアントの作成**
 
-DocConverter の操作をプログラム的に実行する前に、DocConverter クライアントを作成する必要があります。Java API を使用している場合は、`DocConverterServiceClient` ブジェクトを作成してください。DocConverter web サービス API を使用している場合は、 `DocConverterServiceService` オブジェクトを作成してください。
+DocConverter の操作をプログラム的に実行する前に、DocConverter クライアントを作成する必要があります。Java API を使用する場合は、`DocConverterServiceClient` オブジェクトを作成します。DocConverter web サービス API を使用している場合は、 `DocConverterServiceService` オブジェクトを作成してください。
 
 **PDF ドキュメントを参照して PDF/A ドキュメントに変換**
 
@@ -110,7 +110,7 @@ Java API を使用して、PDF ドキュメントを PDF/A ドキュメントに
 
 1. DocConvert クライアントの作成
 
-   * 接続プロパティを含む`ServiceClientFactory`オブジェクトを作成します。
+   * 接続プロパティが格納された `ServiceClientFactory` オブジェクトを作成します。
    * コンストラクターを使用し、`DocConverterServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. PDF ドキュメントを参照して PDF/A ドキュメントに変換
@@ -166,8 +166,8 @@ DocConverter API（web サービス）を使用して、PDF ドキュメント�
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、PDF/A ドキュメントに変換される PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、暗号化する PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定します。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、読み込み対象のバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。 
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `binaryData` プロパティにバイト配列のコンテンツを割り当てることによって `BLOB` オブジェクトを設定します。
 
 1. トラッキング情報を設定
@@ -190,7 +190,7 @@ DocConverter API（web サービス）を使用して、PDF ドキュメント�
    * `PDFAConversionResult` オブジェクトを使用して、返された `BLOB` オブジェクトの内容を格納するバイト配列を作成します。 `BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列に入力します。
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、PDF/A ドキュメントのファイルの場所を表す文字列の値を渡します。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことにより、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。 
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -280,7 +280,7 @@ Java API を使用して PDF/A の準拠を判断します。
 
    * コンストラクターを使用して `PDFAValidationOptionSpec` オブジェクトを作成します。
    * `PDFAValidationOptionSpec` オブジェクトの `setCompliance` メソッドを呼び出し、`PDFAValidationOptionSpec.Compliance.PDFA_1B` を渡して、準拠レベルを設定します。
-   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
+   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `setLogLevel` メソッドを参照してください。
 
 1. PDF ドキュメントに関する情報を取得
 
@@ -312,15 +312,15 @@ Web サービス API を使用して、PDF/A の準拠を判断します。
 
 1. DocConvert クライアントの作成
 
-   * Microsoft .NET クライアントアセンブリを使用し、`DocConverterServiceService` オブジェクトのデフォルトのコンストラクターを呼び出して、このオブジェクトを作成します。
+   * Microsoft .NET クライアントアセンブリを使用して、デフォルトのコンストラクターを呼び出すことによって `DocConverterServiceService` オブジェクトを作成します。
    * `DocConverterServiceService` オブジェクトの `Credentials` データメンバーを、`System.Net.NetworkCredential` ユーザー名とパスワードの値を指定する値を使用して設定します。
 
 1. PDF/A 準拠の判断に使用する PDF ドキュメントを参照
 
-   * `BLOB` オブジェクトのコンストラクタを使用して、このオブジェクトを作成します。この `BLOB` オブジェクトは、PDF/A ドキュメントに変換された PDF ドキュメントを保存するために使用されます。
-   * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズを判断するには、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得します。
-   * `System.IO.FileStream`オ ブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み込むストリーム長を渡して、バイト配列にストリームデータを入力します。
+   * `BLOB` オブジェクトのコンストラクタを使用して、このオブジェクトを作成します。`BLOB` オブジェクトは、PDF/A ドキュメントに変換される PDF ドキュメントを格納するために使用されます。
+   * コンストラクターを呼び出し、暗号化する PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `BLOB` オブジェクトに入力するには、オブジェクトの `binaryData` プロパティに、バイト配列の内容を入力します。
 
 1. 実行時オプションを設定
@@ -331,7 +331,7 @@ Web サービス API を使用して、PDF/A の準拠を判断します。
 
 1. PDF ドキュメントに関する情報を取得
 
-   PDF/A の準拠を判断するには、`DocConverterServiceService` オブジェクトの `isPDFA` メソッドを呼び出して、以下の値を渡します。
+   `DocConverterServiceService` オブジェクトの `isPDFA` メソッドを呼び出し、次の値を渡して、PDF/A 準拠を判断します。
 
    * PDF ドキュメントを含む `BLOB` オブジェクト。
    * 実行時オプションを含む `PDFAValidationOptionSpec` オブジェクト。

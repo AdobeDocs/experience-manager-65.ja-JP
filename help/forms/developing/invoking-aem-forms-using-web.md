@@ -12,7 +12,7 @@ discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '9905'
 ht-degree: 100%
 
@@ -477,7 +477,7 @@ Apache Axis WSDL2Java ツールを使用すると、Forms サービスを Java �
 
 1. Apache Axis 1.4 をクライアントコンピューターにインストールします。[https://ws.apache.org/axis/](https://ws.apache.org/axis/) で入手できます。
 1. Web サービスクライアントで Axis JAR ファイルを使用するクラスパスを設定します。詳しくは、[https://ws.apache.org/axis/java/install.html](https://ws.apache.org/axis/java/install.html) にある Axis インストール手順を参照してください。
-1. Axis で Apache WSDL2Java ツールを使用して、Java プロキシクラスを生成します。このタスクを実行する Ant ビルドスクリプトを作成します。次のスクリプトは、build.xml という名前の Ant ビルドスクリプトの例です。
+1. Axis で Apache WSDL2Java ツールを使用して、Java プロキシクラスを生成します。このタスクを実行する Ant ビルドスクリプトを作成します。次のスクリプトは、build.xml という名前の Ant ビルドスクリプトのサンプルです。
 
    ```java
     <?xml version="1.0"?>
@@ -572,7 +572,7 @@ Base64 エンコーディングを使用して、AEM Forms サービスを呼び
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づくものではありません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づくものではありません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
@@ -636,9 +636,9 @@ Microsoft Visual Studio に付属のツールを使用すると、.NET クライ
 
 新しく作成した .NET クライアントアセンブリを、クライアントアプリケーションを開発するコンピューターに配置します。.NET クライアントアセンブリをディレクトリに配置したら、プロジェクトから参照できるようになります。また、`System.Web.Services`ライブラリをプロジェクトから参照します。このライブラリを参照しない場合、.NET クライアントアセンブリを使用してサービスを呼び出すことはできません。
 
-1. **プロジェクト**&#x200B;メニューで、**参照を追加**&#x200B;を選択します。
+1. **プロジェクト**&#x200B;メニューで、**参照の追加**&#x200B;を選択します。
 1. **.NET**&#x200B;タブをクリックします。
-1. **参照**&#x200B;をクリックして DocumentService.dll ファイルを探します。
+1. **参照**&#x200B;をクリックして、DocumentService.dll ファイルを見つけます。
 1. **選択**&#x200B;をクリックしてから、**OK**&#x200B;をクリックしてください。
 
 **Base64 エンコーディングを使用する .NET クライアントアセンブリを使用したサービスの呼び出し**
@@ -646,13 +646,13 @@ Microsoft Visual Studio に付属のツールを使用すると、.NET クライ
 Base64 エンコーディングを使用する .NET クライアントアセンブリを使用して、Workbench で構築された `MyApplication/EncryptDocument` サービスを呼び出すことができます。`MyApplication/EncryptDocument`サービスを呼び出すには、次の手順を実行します。
 
 1. `MyApplication/EncryptDocument`サービス WSDL を使用する Microsoft .NET クライアントアセンブリを作成します。
-1. クライアントの Microsoft .NET プロジェクトを作成します。クライアントプロジェクトで Microsoft .NET クライアントアセンブリを参照します。`System.Web.Services` も参照してください。
-1. Microsoft .NET クライアントアセンブリを使用して、デフォルトのコンストラクターを呼び出すことにより`MyApplication_EncryptDocumentService`オブジェクトを作成します。
-1. `MyApplication_EncryptDocumentService`オブジェクトの`Credentials`プロパティに`System.Net.NetworkCredential`オブジェクトを設定します。`System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
+1. クライアントの Microsoft .NET プロジェクトを作成します。クライアントプロジェクトで Microsoft .NET クライアントアセンブリを参照します。また、`System.Web.Services`も参照します。
+1. Microsoft .NET クライアントアセンブリを使用し、デフォルトのコンストラクターを呼び出して、`MyApplication_EncryptDocumentService`オブジェクトを作成します。
+1. `System.Net.NetworkCredential` オブジェクトを使用して `MyApplication_EncryptDocumentService` オブジェクトの `Credentials` プロパティを設定します。`System.Net.NetworkCredential`コンストラクター内で、AEM Forms のユーザー名と対応するパスワードを指定します。.NET クライアントアプリケーションが AEM Forms と SOAP メッセージを正常に交換できるように、認証情報を設定します。
 1. コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、`MyApplication/EncryptDocument` プロセスに渡す PDF ドキュメントを保存するために使用されます。
 1. コンストラクターを呼び出して、`System.IO.FileStream`オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
-1. `System.IO.FileStream`オブジェクトの`Read`メソッドを呼び出すことで、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
+1. `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
 1. `binaryData`プロパティにバイト配列の内容を割り当てて、`BLOB`オブジェクトにデータを入力します。
 1. `MyApplication/EncryptDocument`プロセスを呼び出すには、`MyApplication_EncryptDocumentService`オブジェクトの`invoke`メソッドを呼び出し、PDF ドキュメントを含む`BLOB`オブジェクトを渡します。このプロセスは、暗号化された PDF ドキュメントを`BLOB`オブジェクト内に返します。
 1. `System.IO.FileStream`オブジェクトを作成するには、コンストラクタを呼び出し、パスワードで暗号化されたドキュメントのファイルの場所を表す文字列値を渡します。
@@ -724,7 +724,7 @@ Web サービス標準の MTOM を使用して、AEM Forms サービスを呼び
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づくものではありません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づくものではありません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
@@ -809,13 +809,13 @@ Web サービスを使用して AEM Forms サービスを呼び出す Microsoft 
 
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、`MyApplication/EncryptDocument` プロセスに渡す PDF ドキュメントを保存するために使用されます。
 1. コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
-1. `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出すことで、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+1. `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
+1. `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
 1. `BLOB` オブジェクトを入力するには、`MTOM` データメンバーにバイト配列のコンテンツを割り当てます。
 1. `MyApplication/EncryptDocument` プロセスを呼び出すには、`MyApplication_EncryptDocumentClient` オブジェクトの `invoke` メソッドを呼び出します。PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このプロセスは、`BLOB` オブジェクト内で暗号化された PDF ドキュメントを返します。
 1. `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列値を渡します。
-1. `invoke` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 バイト配列を入力するには、`BLOB` オブジェクトの `MTOM` データメンバーの値を取得します。
-1. `System.IO.BinaryWriter` オブジェクトを作成するには、コンストラクタを呼び出して、`System.IO.FileStream` オブジェクトを渡します。
+1. `invoke` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
+1. コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
 1. バイト配列のコンテンツを PDF ファイルに書き込むには、`System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡します。
 
 >[!NOTE]
@@ -838,7 +838,7 @@ SwaRef を使用して AEM Forms サービスを呼び出すことができま�
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
@@ -868,14 +868,14 @@ JAX-WS と SwaRef を使用して作成された Java プロキシファイル�
    >`hiro-xp` を *AEM Forms をホストする J2EE アプリケーションサーバーの IP アドレス*&#x200B;で置き換えます。
 
 1. JAX-WS を使用して作成した Java プロキシクラスを JAR ファイルにパッケージ化します。
-1. 次のパスに Java プロキシ JAR ファイルと JAR ファイルを含めます。
+1. 次のパスに配置された Java プロキシ JAR ファイルと JAR ファイルを含めます。
 
-   &lt;Install Directory>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
+   &lt;インストールディレクトリ>\Adobe\Adobe_Experience_Manager_forms\sdk\client-libs\thirdparty
 
-   以上を Java クライアントプロジェクトのクラスパスに追加します。
+   を Java クライアントプロジェクトのクラスパスに追加します。
 
-1. コンストラクタを使用して `MyApplicationEncryptDocumentService` オブジェクトを作成します。
-1. `MyApplicationEncryptDocumentService`オブジェクトの`getEncryptDocument`メソッドを呼び出して`MyApplicationEncryptDocument`オブジェクトを作成します。
+1. `MyApplicationEncryptDocumentService` オブジェクトを作成するには、それ自身のコンストラクタを使用します。
+1. `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッドを呼び出すことによって、`MyApplicationEncryptDocument` オブジェクトを作成します。
 1. 次のデータメンバーに値を割り当てて、AEM Forms を呼び出すのに必要な接続値を設定します。
 
    * WSDL エンドポイントとエンコーディングのタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。SwaRef エンコーディングを使用する`MyApplication/EncryptDocument`サービスを呼び出すには、次の URL 値を指定します。
@@ -897,7 +897,7 @@ JAX-WS と SwaRef を使用して作成された Java プロキシファイル�
     ((BindingProvider) encryptDocClient).getRequestContext().put(BindingProvider.PASSWORD_PROPERTY, password);
    ```
 
-1. `MyApplication/EncryptDocument`プロセスに送信する PDF ドキュメントを取得するには、コンストラクターを使用して`java.io.File`オブジェクトを作成します。PDF ドキュメントの場所を指定する文字列値を渡します。
+1. `MyApplication/EncryptDocument` プロセスに送信する PDF ドキュメントを取得するには、コンストラクターを使用して `java.io.File` オブジェクトを作成します。PDF ドキュメントの場所を指定する文字列値を渡します。
 1. `FileDataSource`コンストラクターを使用して`javax.activation.DataSource`オブジェクトを作成します。`java.io.File`オブジェクトを渡します。
 1. `javax.activation.DataHandler` オブジェクトを作成するには、コンストラクタを使用して `javax.activation.DataSource` オブジェクトに渡します。
 1. コンストラクタを使用して `BLOB` オブジェクトを作成します。
@@ -923,7 +923,7 @@ Web サービスを使用し、HTTP 経由で BLOB データを渡すことで�
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
@@ -978,17 +978,17 @@ HTTP 経由でデータを使用する .NET クライアントアセンブリを
 
 Java プロキシクラスおよび HTTP 経由での BLOB データを使用して、AEM Forms サービスを呼び出すことができます。Java プロキシクラスを使用して `MyApplication/EncryptDocument` サービスを呼び出すには、次の手順を実行します。
 
-1. `MyApplication/EncryptDocument` サービス WSDL を利用する JAX-WS を使用して、Java プロキシクラスを作成します。次の WSDL エンドポイントを使用します。
+1. `MyApplication/EncryptDocument`サービス WSDL を使用する JAX-WS を使用して、Java プロキシクラスを作成します。 次の WSDL エンドポイントを使用します。
 
    ```java
     https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?WSDL&lc_version=9.0.1
    ```
 
-   詳しくは、[JAX-WS を使用した Java プロキシクラスの作成](#creating-java-proxy-classes-using-jax-ws)を参照してください。
+   詳しくは、 [JAX-WS を使用した Java プロキシクラスの作成](#creating-java-proxy-classes-using-jax-ws)を参照してください。
 
    >[!NOTE]
    >
-   >AEM Forms をホストする J2EE アプリケーションサーバーの IP アドレスで `hiro-xp` *を置換します。*
+   >`hiro-xp` を *AEM Forms をホストする J2EE アプリケーションサーバーの IP アドレス*&#x200B;で置き換えます。
 
 1. JAX-WS を使用して作成した Java プロキシクラスを JAR ファイルにパッケージ化します。
 1. 次のパスに配置された Java プロキシ JAR ファイルと JAR ファイルを含めます。
@@ -997,7 +997,7 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
 
    を Java クライアントプロジェクトのクラスパスに追加します。
 
-1. コンストラクターを使用して `MyApplicationEncryptDocumentService` オブジェクトを作成します。
+1. `MyApplicationEncryptDocumentService` オブジェクトを作成するには、それ自身のコンストラクタを使用します。
 1. `MyApplicationEncryptDocumentService` オブジェクトの `getEncryptDocument` メソッドを呼び出すことによって、`MyApplicationEncryptDocument` オブジェクトを作成します。
 1. 次のデータメンバーに値を割り当てて、AEM Forms を呼び出すのに必要な接続値を設定します。
 
@@ -1037,7 +1037,7 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
 1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
-このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
+このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
 
 >[!NOTE]
 >

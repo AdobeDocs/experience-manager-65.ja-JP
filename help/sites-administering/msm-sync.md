@@ -13,7 +13,7 @@ docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2697'
 ht-degree: 100%
 
@@ -192,7 +192,7 @@ ht-degree: 100%
    <td> </td>
   </tr>
   <tr>
-   <td>workflow</td>
+   <td>ワークフロー</td>
    <td><p>target プロパティで定義されるワークフローを開始し（ページの場合のみ）、ライブコピーをペイロードと見なします。</p> <p>モデルノードのパスがターゲットパスになります。</p> </td>
    <td>target：（文字列）ワークフローモデルのパス。<br /> </td>
   </tr>

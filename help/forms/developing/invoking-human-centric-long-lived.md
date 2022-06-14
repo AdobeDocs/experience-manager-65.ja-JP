@@ -12,7 +12,7 @@ discoiquuid: 18a320b4-dce6-4c50-8864-644b0b2d6644
 role: Developer
 exl-id: c9ebad8b-b631-492d-99a3-094e892b2ddb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3699'
 ht-degree: 100%
 
@@ -164,7 +164,7 @@ Invocation API を使用して `FirstAppSolution/PreLoanProcess` プロセスを
 1. adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 1. HTML ページから送信された名前、電話、金額の値を取得します。これらの値を使用して、`FirstAppSolution/PreLoanProcess` プロセスに送信される XML データソースを動的に作成します。`org.w3c.dom` クラスを使用して XML データソースを作成できます（このアプリケーションロジックを次のコード例に示します）。
 1. 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
-1. コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`ServiceClient` オブジェクトを作成します。`ServiceClient` オブジェクトを使用すると、サービス操作を呼び出すことができます。呼び出し要求の検索、ディスパッチ、ルーティングなどのタスクを処理します。
+1. `ServiceClient` オブジェクトを作成するには、コントラクターを使用して、`ServiceClientFactory` オブジェクトを渡します。`ServiceClient` オブジェクトを使用すると、サービス操作を呼び出すことができます。呼び出し要求の検索、ディスパッチ、ルーティングなどのタスクを処理します。
 1. コンストラクターを使用して `java.util.HashMap` オブジェクトを作成します。
 1. 各入力パラメーターに対して `java.util.HashMap` オブジェクトの `put` メソッドを呼び出して、長期間有効なプロセスに渡します。プロセスの入力パラメーターの名前を必ず指定してください。`FirstAppSolution/PreLoanProcess` プロセスにはタイプ `XML`（`formData` という名前）の 1 つの入力パラメーターが必要なため、`put` メソッドを呼び出す必要があるのは 1 回だけです。
 
@@ -579,7 +579,7 @@ ASP.NET アプリケーションから XML データを必要とするプロセ�
 `FirstAppSolution/PreLoanProcess` プロセスを呼び出す ASP ページを作成するには、`Button1_Click` メソッドで次のタスクを実行します。
 
 1. デフォルトのコンストラクターを使用し `FirstAppSolution_PreLoanProcessClient` オブジェクトを作成します。
-1. `System.ServiceModel.EndpointAddress` コンストラクターを使用し `FirstAppSolution_PreLoanProcessClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスとエンコーディングタイプに渡します。
+1. `System.ServiceModel.EndpointAddress` コンストラクタを使用して `FirstAppSolution_PreLoanProcessClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスとエンコーディングタイプに渡します。
 
    ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?blob=mtom
@@ -597,8 +597,8 @@ ASP.NET アプリケーションから XML データを必要とするプロセ�
 
    * AEM Forms ユーザー名をデータメンバー `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.UserName` に割り当てます。
    * 対応するパスワード値をデータメンバー `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password` に割り当てます。
-   * 定数値 `HttpClientCredentialType.Basic` をデータメンバー `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
-   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をデータメンバー `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+   * 定数値 `HttpClientCredentialType.Basic` をデータメンバーに `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+   * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をデータメンバーに `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
    次のコードの例に、これらのタスクを示します。
 

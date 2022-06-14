@@ -11,7 +11,7 @@ topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2693'
 ht-degree: 100%
 
@@ -468,7 +468,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
  </tbody>
 </table>
 
-### Multi-site Manager のブループリント設定 {#multi-site-manager-blueprint-configurations}
+### マルチサイトマネージャーのブループリント設定 {#multi-site-manager-blueprint-configurations}
 
 <table style="table-layout:auto">
  <tbody>

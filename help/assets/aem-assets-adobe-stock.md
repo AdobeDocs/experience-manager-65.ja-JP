@@ -6,7 +6,7 @@ feature: Search, Adobe Stock
 role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 source-git-commit: bfc4aa92770b001bdf89d89fa149d8e4ceefa6c2
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 100%
 
@@ -251,7 +251,7 @@ IMS アカウントを設定するには：
 1. 左側のパネルでユーザーグループを検索し、Adobe Stock の新規の&#x200B;**[!UICONTROL アクセス制御エントリ（ACE）]**&#x200B;を追加します。
 
    * 次のパスを設定します。 `/conf/global/settings/stock`
-   * 権限：`jcr:read`
+   * 権限： `jcr:read`
    * 権限タイプ：`Allow`
 
    「**[!UICONTROL 追加]**」をクリックします。
@@ -308,9 +308,9 @@ IMS アカウントを設定するには：
 | ユーザー | グループ | 権限 | ユーザーの環境設定で Stock 設定を受け入れる | Assets にアクセス | Adobe Stock にアクセス |
 | --- | --- | --- | --- | --- | --- |
 | admin | 該当なし | すべて | 該当なし | はい | はい |
-| test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | はい | 可 | はい |
+| test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | はい | はい | はい |
 | test-doc1 | DAM ユーザー | /conf/global /settings/stock/cloud-config | 不可 | エラー：データの読み込みに失敗しました | 不可 |
-| test-doc1 | DAM ユーザー | **許可**：/conf/global /settings/stock     **拒否**：/cloud-config | Stock 設定が表示されません | 可 | 不可 |
+| test-doc1 | DAM ユーザー | **許可**：/conf/global /settings/stock     **拒否**：/cloud-config | Stock 設定が表示されません | はい | いいえ |
 
 
 ## [!DNL Adobe Stock] での [!DNL Experience Manager] アセットの使用と管理  {#usemanage}

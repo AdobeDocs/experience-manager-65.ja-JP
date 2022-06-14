@@ -12,7 +12,7 @@ discoiquuid: a975ea2e-5e24-4a96-bd62-63bb98836ff2
 docset: aem65
 exl-id: 1b75721c-b223-41f0-88d9-bd855b529f31
 source-git-commit: a2b1bd5462ae1837470e31cfeb87a95af1c69be5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 100%
 
@@ -56,9 +56,10 @@ ht-degree: 100%
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（`/libs` 内に存在）を `/apps` の下で再作成する
+>1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >
 >1. `/apps` 内で変更作業を行う
+
 >
 
 
@@ -165,7 +166,7 @@ conf
    </tbody>
   </table>
 
-* **エレメント名**
+* **要素名**
 
    <table>
    <tbody>

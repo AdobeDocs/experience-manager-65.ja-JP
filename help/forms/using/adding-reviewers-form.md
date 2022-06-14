@@ -11,13 +11,13 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 46e7b858-44d1-41c8-9f44-4e959e593dc1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 100%
 
 ---
 
-# 送信レビュー担当者のフォームへの関連付け {#associating-submission-reviewers-with-a-form}
+# 送信レビュー担当者とフォームの関連付け {#associating-submission-reviewers-with-a-form}
 
 フォーム作成時に、フォームポータル経由で送信されたフォームのレビューおよびフィードバックを行うユーザーを指定できます。組織はフィードバックを収集し、送信済みフォームに対して再作業を行うことができます。
 
@@ -33,7 +33,7 @@ AEM Forms では、レビュー担当者グループをフォームに関連付�
 
 メタデータスキーマを編集するには、以下の手順に従います。
 
-1. オーサーモードで、Experience Manager の&#x200B;**ツール**／**アセット**／**メタデータスキーマ**&#x200B;をクリックします。
+1. オーサーモードで、Experience Manager の **ツール**／**アセット**／**メタデータスキーマ** をクリックします。
 1. スキーマフォームページで、「**フォーム**／**AEM で作成されたフォーム**」に移動します。
 
    ページの URL は以下のとおりです。

@@ -12,7 +12,7 @@ discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6496'
 ht-degree: 100%
 
@@ -188,7 +188,7 @@ NAS 上の `FileSystem` データストア。
 
 * `cache`
 キャッシュサイズ（メガバイト単位）です。これは 
-`DocumentNodeStore` で使用される様々なキャッシュに配分されます。デフォルト値は 256 MB です。ただし、キャッシュが大きいほうが Oak の読み取りパフォーマンスは向上します。
+`DocumentNodeStore` で使用される様々なキャッシュに配分されます。デフォルトは 256MB です。ただし、キャッシュが大きいほうが Oak の読み取りパフォーマンスは向上します。
 
 * `blobCacheSize`
 頻繁に使用される Blob は、データストアから再取得しなくて済むように、AEM にキャッシュできます。これは、Blob を MongoDB データベースに格納する場合は特に、パフォーマンスへの影響が大きくなります。オペレーティングシステムレベルのディスクキャッシュは、ファイルシステムベースのすべてのデータストアに効果的です。

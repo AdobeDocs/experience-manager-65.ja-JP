@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
 source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3802'
 ht-degree: 100%
 
@@ -184,7 +184,7 @@ AEM では、すべての Web ページが `/content/my-brand/my-content` に保
 
 #### バニティー URL {#vanity-urls}
 
-作成者が、プロモーション目的で別の場所からアクセス可能なページを作成する場合、ページごとに定義される AEM のバニティー URL が役立つことがあります。ページのバニティー URL を追加するには、**Sites** コンソールで該当するページに移動し、ページのプロパティを編集します。「**基本**」タブの下部に、バニティー URL を追加できるセクションが表示されます。複数の URL を使用してページにアクセスできるようにすると、ページの SEO 値が分断されるので、正規 URL タグをページに追加して、この問題を回避する必要があることに留意してください。
+作成者が、プロモーション目的で別の場所からアクセス可能なページを作成する場合、ページごとに定義される AEM のバニティー URL が役立つことがあります。ページのバニティー URL を追加するには、 **Sites** コンソールで該当するページに移動し、ページのプロパティを編集します。「**基本**」タブの下部に、バニティー URL を追加できるセクションが表示されます。複数の URL を使用してページにアクセスできるようにすると、ページの SEO 値が分断されるので、正規 URL タグをページに追加して、この問題を回避する必要があることに留意してください。
 
 #### ページ名のローカライズ {#localized-page-names}
 
@@ -258,7 +258,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 
    * **Apache Sling Resource Resolver Factory**
 
-      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`
+      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
    URL を短縮するために必要なマッピングを正規表現として構築した後、ビルドに含まれている OsgiConfignode の `config.publish` でこれらの設定を定義することをお勧めします。
 
    `/etc/map`マッピングを定義する代わりに、プロパティ **URL Mappings**（`resource.resolver.mapping`）に直接割り当てることができます。

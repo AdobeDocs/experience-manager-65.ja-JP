@@ -12,7 +12,7 @@ discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
 source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 100%
 
@@ -199,12 +199,11 @@ ht-degree: 100%
 
    * **Facebook に対してユーザー共有を有効にする**
    * **Pinterest に対してユーザー共有を有効にする**
-   * **優先 XF バリエーション**
-ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
+   * **優先 XF バリエーション**&#x200B;ページのメタデータの生成に使用されるエクスペリエンスフラグメントのバリエーションを定義します
 
-### クラウドサービス {#cloud-services}
+### Cloud Services {#cloud-services}
 
-* **クラウドサービス**
+* **Cloud Services**
 
    [クラウドサービス](/help/sites-developing/extending-cloud-config.md)用のプロパティを定義します。
 

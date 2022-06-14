@@ -1,8 +1,8 @@
 ---
 title: 割り当ての基本事項
-seo-title: 割り当ての基本事項
+seo-title: Assignments Essentials
 description: イネーブルメントコミュニティの割り当て機能の概要
-seo-description: イネーブルメントコミュニティの割り当て機能の概要
+seo-description: Assignments feature overview for enablement communities
 uuid: e49fce26-1091-4f37-93e8-c4ec85371811
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 75cef5da-4f93-4721-99c0-ad44c8ab76d4
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 49%
+source-wordcount: '214'
+ht-degree: 47%
 
 ---
 
 # 割り当ての基本事項 {#assignments-essentials}
 
-[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)サイトの割り当て機能を使用するための基本情報について説明します。
+の割り当て機能を使用するための重要な情報について説明します。 [実施可能コミュニティ](/help/communities/overview.md#enablement-community) サイト。
 
 割り当て機能を使用すると、イネーブルメントコミュニティのメンバーに実施可能リソースおよびイネーブルメント学習パスを割り当てることができます。
 
@@ -50,7 +50,7 @@ ht-degree: 49%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="/help/communities/assignments.md">割り当て機能</a>を参照</td>
+   <td>詳しくは、 <a href="/help/communities/assignments.md">割り当て機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +85,7 @@ ht-degree: 49%
 
 ### 割り当て機能 {#assignments-function}
 
-[割り当て機能](/help/communities/functions.md#assignments-function)を含むコミュニティサイト構造には、設定済みの` [assignments](/help/communities/assignments.md)`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [割り当て機能](/help/communities/functions.md#assignments-function)（設定済みを含む） ` [assignments](/help/communities/assignments.md)` コンポーネント。
 
 ### リファレンス API {#reference-apis}
 

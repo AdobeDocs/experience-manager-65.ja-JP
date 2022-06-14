@@ -1,8 +1,8 @@
 ---
 title: イネーブルメント機能の設定
-seo-title: イネーブルメント機能の設定
+seo-title: Configuring Enablement Features
 description: Communities でイネーブルメント機能を設定します
-seo-description: Communities でイネーブルメント機能を設定します
+seo-description: Configure enablement features in Communities
 uuid: 27be3128-1a7d-412e-99a9-6e3b3b0aec1c
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ role: Admin
 exl-id: b635e2ed-4637-4b2f-a746-ec8dc7541bab
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '439'
 ht-degree: 53%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 53%
 
 * **コミュニティマネージャー**
 
-   イネーブルメントコミュニティの場合、`Community Enablement Managers`ユーザーグループのメンバーのみが`Community Site Enablement Manager`の役割を割り当てることができます。この役割には、パブリッシュ環境でのコンテンツの作成、割り当て、メンバー管理の権限が含まれます。
+   イネーブルメントコミュニティの場合、 `Community Enablement Managers` ユーザーグループには、 `Community Site Enablement Manager`（権限には、コンテンツの作成、割り当て、パブリッシュ環境でのメンバー管理などが含まれます）
 
 オプションで以下を設定します。
 
@@ -64,26 +64,26 @@ ht-degree: 53%
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[MySQL用のJDBCドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
+1. **[MySQL 用の JDBC ドライバーのインストール](deploy-communities.md#jdbc-driver-for-mysql)**
 
-   Webコンソール（バンドル）を使用します。*http://localhost:4502/system/console/bundles*
+   Web コンソール（バンドル）を使用： *http://localhost:4502/system/console/bundles*
 
-   SCORMパッケージをインストールする&#x200B;*前に*&#x200B;をインストールします。
+   インストール *前* SCORM パッケージのインストール
 
-1. **[SCORMパッケージのインストール](deploy-communities.md#scorm-package)**
+1. **[SCORM パッケージをインストール](deploy-communities.md#scorm-package)**
 
 
-   パッケージマネージャーを使用：*http://localhost:4502/crx/packmgr/*
+   パッケージマネージャを使用： *http://localhost:4502/crx/packmgr/*
 
 **任意のサーバーで、次の手順を実行します。**
 
-1. **[MySQL、MySQL Workbenchのインストール](mysql.md)**
+1. **[MySQL、MySQL Workbench のインストール](mysql.md)**
 
-1. **[MySQLデータベースのインストール](mysql.md#database-setup)**
+1. **[MySQL データベースのインストール](mysql.md#database-setup)**
 
-   オーサーインスタンスからダウンロードしたSQLスクリプトの実行
+   オーサーインスタンスからダウンロードした SQL スクリプトを実行
 
-   MySQL Workbenchの使用
+   MySQL Workbench の使用
 
 **オーサーインスタンスをホストしている同じサーバーで、次の手順を実行します。**
 
@@ -91,37 +91,37 @@ ht-degree: 53%
 
 **すべてのオーサー／パブリッシュインスタンスで、次の手順を実行します。**
 
-1. **[JDBC接続プールの設定](mysql.md#configure-jdbc-connections)**
+1. **[JDBC 接続プールの設定](mysql.md#configure-jdbc-connections)**
 
-   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
+   Web コンソール (configMgr) を使用： *http://localhost:4502/system/console/configMgr*
 
-1. **[SCORMエンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**
+1. **[SCORM エンジンサービスの設定](mysql.md#aem-communities-scormengine-service)**
 
-   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
+   Web コンソール (configMgr) を使用： *http://localhost:4502/system/console/configMgr*
 
-1. **[CSRFフィルターの設定](mysql.md#adobe-granite-csrf-filter)**
+1. **[CSRF フィルターの設定](mysql.md#adobe-granite-csrf-filter)**
 
-   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
+   Web コンソール (configMgr) を使用： *http://localhost:4502/system/console/configMgr*
 
 **オーサーインスタンスで、次の手順を実行します。**
 
-1. （*オプション*） **[Analyticsサービスの設定](analytics.md)**
+1. (*オプション*) **[Analytics サービスを設定する](analytics.md)**
 
-   ツール/デプロイメント/Cloud Servicesコンソールを使用します。*http://localhost:4502/etc/cloudservices/sitecatalyst.html*
+   ツール/デプロイメント/Cloud Servicesコンソールを使用します。 *http://localhost:4502/etc/cloudservices/sitecatalyst.html*
 
-1. **[FFmpegの設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
+1. **[FFmpeg を設定](ffmpeg.md#configure-ffmpeg-transcoding-service)**
 
    ワークフロー/モデルコンソールの使用
 
 1. **[トンネルサービスの有効化](deploy-communities.md#tunnel-service-on-author)**
 
-   Webコンソール(configMgr)を使用：*http://localhost:4502/system/console/configMgr*
+   Web コンソール (configMgr) を使用： *http://localhost:4502/system/console/configMgr*
 
-1. **[コミュニティ管理者の作成](users.md#creating-community-members)**
+1. **[コミュニティ管理者を作成](users.md#creating-community-members)**
 
-   オーサー環境では、クラシックUIセキュリティコンソールを使用します。*http://localhost:4502/useradmin*
+   オーサー環境の場合は、クラシック UI セキュリティコンソールを使用します。 *http://localhost:4502/useradmin*
 
-   パス= /home/users/communityを持つユーザーの作成
+   パス= /home/users/community を持つユーザーを作成
 
    * 次のグループにメンバーを追加します：
 
@@ -130,4 +130,4 @@ ht-degree: 53%
 
 ## Dispatcher {#dispatcher}
 
-デプロイメントに[AEM Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)が含まれている場合、イネーブルメント機能を正しく動作させるには、`clientheader`セクションと`filter`セクションを変更する必要があります。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。
+デプロイメントに次の条件が含まれる場合 [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)イネーブルメント機能を正しく動作させるには、 `clientheader` および `filter` セクションは変更が必要です。 [コミュニティのための Dispatcher の設定](dispatcher.md#enablement)を参照してください。

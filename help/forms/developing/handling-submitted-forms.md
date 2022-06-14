@@ -13,7 +13,7 @@ discoiquuid: 3d838027-6bde-4a71-a428-4d5102f7d799
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2904'
 ht-degree: 100%
 
@@ -84,7 +84,7 @@ Forms サービスを呼び出す web アプリケーションについて考え
 <table>
  <thead>
   <tr>
-   <th><p>手順</p></th>
+   <th><p>ステップ</p></th>
    <th><p>説明</p></th>
   </tr>
  </thead>
@@ -184,7 +184,7 @@ Forms サービスに送信された Forms には、添付ファイルが含ま�
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -291,8 +291,8 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
    * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。 `RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
    * `FormsService` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
-      * フォームデータを格納する `BLOB` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 処理するコンテンツタイプを指定します。 XML データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=text/xml` を指定します。PDF データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=application/pdf` を指定します。
+      * フォームデータを含む `BLOB` オブジェクト。
+      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 処理するコンテンツタイプを指定します。 XML データを処理するには、パラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。PDF データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=application/pdf` を指定します。
       * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
       * 実行時オプションを保存する `RenderOptionsSpec` オブジェクト。
       * メソッドによって設定される空の `BLOBHolder` オブジェクト。
@@ -320,10 +320,10 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
       * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出してバイト配列を作成します。
       * `java.io.ByteArrayInputStream` コンストラクターを呼び出してバイト配列を渡すことにより、`java.io.InputStream` オブジェクトを作成します。
       * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
-      *  `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
-      * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって、`org.w3c.dom.Document` オブジェクトを作成します。
+      * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
+      * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
       * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
-   * データコンテンツタイプが `application/pdf` の場合、アプリケーションロジックを作成して、送信されたPDF データを PDF ファイルとして保存します。
+   * データコンテンツタイプが `application/pdf` の場合、アプリケーションロジックを作成して、送信された PDF データを PDF ファイルとして保存します。
 
       *  `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `BLOB` オブジェクトを作成します。
       * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出してバイト配列を作成します。

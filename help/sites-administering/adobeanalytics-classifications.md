@@ -11,21 +11,21 @@ content-type: reference
 discoiquuid: 6787511a-2ce0-421a-bcfb-90d5f32ad35e
 exl-id: 0e675ce8-ba3b-481d-949e-0c85c97054d2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 100%
 
 ---
 
-# Adobe Classifications{#adobe-classifications}
+# Adobe分類{#adobe-classifications}
 
 Adobe Classifications は、分類データをスケジュールに従って [Adobe Analytics](/help/sites-administering/adobeanalytics.md) にエクスポートします。SAINT Exporter は、**com.adobe.cq.scheduled.exporter.Exporter** の実装です。
 
 これを設定するには：
 
 1. **ナビゲーション**&#x200B;を使用して、**ツール**、**クラウドサービス**&#x200B;を選択し、**従来のクラウドサービス**&#x200B;を選択します。
-1. **Adobe Analytics** までスクロールして、**設定を表示**&#x200B;を選択します。
-1. 「Adobe Analytics 設定」の横にある **[+]** リンクをクリックします。
+1. スクロールして「**Adobe Analytics**」を選択し、「**設定を表示**」を選択します。
+1. Adobe Analytics の設定の横にある **+** リンクをクリックします。
 
 1. **フレームワークを作成**&#x200B;ダイアログで、次の操作を実行します。
 
@@ -45,7 +45,7 @@ Adobe Classifications は、分類データをスケジュールに従って [Ad
 
    | **フィールド** | **説明** |
    |---|---|
-   | 有効 | 「**はい**」を選択すると、Adobe Classifications の設定が有効になります。 |
+   | Enabled | 「**はい**」を選択すると、Adobe Classifications の設定が有効になります。 |
    | 競合時に上書き | 「**はい**」を選択すると、データの競合が上書きされます。デフォルトでは、これは「**いいえ**」に設定されています。 |
    | 削除処理 | 「**はい**」に設定すると、書き出された後に処理したノードが削除されます。デフォルトは、「**False**」です。 |
    | ジョブの書き出しに関する説明 | Adobe Classifications ジョブの説明を入力します。 |

@@ -14,7 +14,7 @@ feature: Brand Portal
 role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 source-git-commit: 39a44c4b706f68d2f4f220811aa9bcc80aec55e4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 100%
 
@@ -44,7 +44,7 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 選択したアセットを Brand Portal に公開するには、次のいずれかを実行します。
 
-* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューで **[!UICONTROL Brand Portal に公開]**&#x200B;を選択します。
+* ツールバーで「**[!UICONTROL クイック公開]**」を選択します。次に、メニューで「**[!UICONTROL Brand Portal に公開]**」を選択します。
 
 * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 

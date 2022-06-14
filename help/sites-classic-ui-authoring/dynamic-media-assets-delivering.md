@@ -7,7 +7,7 @@ topic-tags: authoring
 content-type: reference
 exl-id: 40f41bb0-b3cb-4c16-b5db-ac8ea1a86aa3
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 100%
 

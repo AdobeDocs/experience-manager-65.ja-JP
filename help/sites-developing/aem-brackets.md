@@ -1,7 +1,7 @@
 ---
-title: AEM Brackets Extension
+title: AEM Brackets 拡張
 seo-title: AEM Brackets Extension
-description: AEM Brackets Extension
+description: AEM Brackets 拡張
 seo-description: null
 uuid: 2f0dfa42-eb34-44ae-90eb-b5f321c03b79
 contentOwner: User
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: 8231a30a-dcb7-4156-bb45-c5a23e5b56ef
 exl-id: 829d8256-b415-4a44-a353-455ac16950f3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 100%
 
 ---
 
-# AEM Brackets Extension{#aem-brackets-extension}
+# AEM Brackets 拡張{#aem-brackets-extension}
 
 ## 概要 {#overview}
 

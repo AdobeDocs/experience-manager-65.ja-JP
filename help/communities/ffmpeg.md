@@ -1,8 +1,8 @@
 ---
 title: コミュニティのための FFmpeg
-seo-title: コミュニティのための FFmpeg
+seo-title: FFmpeg for Communities
 description: コミュニティのための FFmpeg をインストールおよび設定する方法
-seo-description: コミュニティのための FFmpeg をインストールおよび設定する方法
+seo-description: How to install and configure FFmpeg for Communities
 uuid: ef2f821c-70e9-4889-a8d7-a93b10a1d428
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: dbe28334-3b38-4362-b4f8-e0630e634503
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 43%
+source-wordcount: '304'
+ht-degree: 41%
 
 ---
 
@@ -30,41 +30,41 @@ FFmpeg は、オーサー環境で、アップロードしたイネーブルメ�
 
 FFmpeg は AEM *オーサー*&#x200B;インスタンスをホストしているサーバーにインストールする必要があります。
 
-1. [https://www.ffmpeg.org](https://www.ffmpeg.org/)に移動します。
-1. お使いの環境（Macintosh、WindowsまたはLinux）向けの最新バージョンのFFmpegをダウンロードします。
+1. に移動します。 [https://www.ffmpeg.org](https://www.ffmpeg.org/).
+1. お使いの環境（Macintosh、Windows または Linux）向けの最新バージョンの FFmpeg をダウンロードします。
 
-   * 古いバージョンのセキュリティの脆弱性により、FFmpegを最新の状態に保つことが重要です。
+   * 古いバージョンのセキュリティ脆弱性により、FFmpeg を最新の状態に保つことが重要です。
 
 1. OS の手順に従って FFmpeg をインストールします。
 
-1. FFmpeg実行可能ファイルがシステムパスに設定されていることを確認します。
+1. FFmpeg 実行可能ファイルがシステムパスに設定されていることを確認します。
 
-   システム内の任意のディレクトリからFFmpegを実行できるはずです。
+   システム内の任意のディレクトリから FFmpeg を実行できるはずです。
 
    * （例：`ffmpeg -version`）。
 
 ## FFmpeg トランスコーディングサービスの設定 {#configure-ffmpeg-transcoding-service}
 
-デフォルトでは、FFmpegがインストールされると、[!UICONTROL DAMアセットの更新]ワークフロー定義に従って複数のレンディションが設定（トランスコーディング）されます。
+デフォルトでは、FFmpeg がインストールされている場合、 [!UICONTROL DAM アセットの更新] ワークフロー定義。
 
 トランスコーディングは CPU を集中的に使用するので、対象レンディションのリストを変更することを推奨します。ほとんどの場合、トランスコードは必要ありません。
 
-[!UICONTROL DAMアセットの更新]ワークフローを変更し、この例でトランスコーディングをオフにするには、次のようにします。
+次の手順で [!UICONTROL DAM アセットの更新] ワークフロー、およびこの例では、トランスコードをオフにするには：
 
 * 管理者権限でオーサーインスタンスにログインします。
-* グローバルナビゲーションから、**[!UICONTROL ツール]** / **[!UICONTROL ワークフロー]** / **[!UICONTROL モデル]**&#x200B;に移動します。
-* **[!UICONTROL DAM Update Asset]**&#x200B;を探します。
-* ダブルクリックして、編集用のワークフローをクラシックUIで開きます。
+* グローバルナビゲーションから、に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**.
+* 場所 **[!UICONTROL DAM アセットの更新]**.
+* ダブルクリックして、編集用のワークフローをクラシック UI で開きます。
 
-   結果の場所：[http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
+   結果の場所： [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* **[!UICONTROL FFmpegトランスコーディング]**&#x200B;の手順をダブルクリックして、ステップのプロパティダイアログにアクセスします。
-* 「**[!UICONTROL プロセス]**」タブで、次の操作を実行します。
+* 次をダブルクリックします。 **[!UICONTROL FFmpeg トランスコード]** ステップ：ステップのプロパティダイアログにアクセスします。
+* 以下 **[!UICONTROL プロセス]** タブ：
 
-   * **[!UICONTROL 引数]**:トランスコーディングを無効にするには、すべてのエントリをクリアします。デフォルト値：  `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL アルグメント]**:すべてのエントリをクリアしてトランスコードを無効にします。デフォルト値： `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
    ![configure-ffmpeg](assets/configure-ffmpeg.png)
 
-* 「**[!UICONTROL OK]**」を選択して、`Step Properties`ダイアログを閉じます。
+* 選択 **[!UICONTROL OK]** 閉じる `Step Properties` ダイアログ。
 
-* 「**[!UICONTROL 保存]**」を選択して、`DAM Update Asset`ワークフローを保存します。
+* 選択 **[!UICONTROL 保存]** 保存する `DAM Update Asset` ワークフロー。

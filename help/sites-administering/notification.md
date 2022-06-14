@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 source-git-commit: ea5abbbe8f928a63b7d3d6f96f3007a3c82706e0
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 100%
 
@@ -464,6 +464,6 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 最後に、以下により設定を確認します。
 
 1. 公開インスタンスのアドレスに移動し、管理者としてログインします。
-1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize`に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
+1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Gmail）のページにリダイレクトされます。
 1. ログインして、必要な権限を与えることに同意する
 1. 同意すると、トークンがリポジトリに格納されます。ご利用の公開インスタンスで次の URL に直接アクセスすることで、`accessToken` のトークンにアクセスできます。`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`

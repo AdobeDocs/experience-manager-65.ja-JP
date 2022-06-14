@@ -1,5 +1,5 @@
 ---
-title: ページのオーサリングのクイックガイド
+title: ページオーサリングのクイックガイド
 seo-title: Quick Guide to Authoring Pages
 description: オーサリングページのコンテンツの主なアクションに関する概要レベルのクイックガイドです
 seo-description: A quick, high-level guide to the key actions of authoring page content
@@ -12,17 +12,17 @@ discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 100%
 
 ---
 
-# ページのオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
+# ページオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
 
 ここでは、AEM でページコンテンツをオーサリングする際の主なアクションについて、概要レベルのクイックガイドとなる手順を示します。
 
-このクイックガイドの特徴は次のとおりです。
+開発者は、次の作業を行います。
 
 * すべての内容を網羅しているわけではありません。
 * 詳細を示すドキュメントへのリンクが用意されています。
@@ -36,7 +36,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 具体的な事例の概要を取り上げる前に、覚えておく価値のある一般的なヒントを紹介します。
 
-### サイトコンソール {#sites-console}
+### Sites コンソール {#sites-console}
 
 * **作成**
 
@@ -119,7 +119,6 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
    * ページが選択されていることを示すために、カードにチェックマークが付けられます。
-
    >[!NOTE]
    >
    >選択モードを開始すると、**選択**&#x200B;アイコン（チェックマーク）が&#x200B;**選択を解除**&#x200B;アイコン（バツマーク）に変わります。
@@ -176,7 +175,6 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * コンポーネントを[コピー（および貼り付け）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)します。
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。必要に応じて、**コピー**&#x200B;アイコン、続いて&#x200B;**貼り付け**&#x200B;アイコンを使用します。
-
    >[!NOTE]
    >
    >同じページ、または別のページにコンポーネントを&#x200B;**貼り付ける**&#x200B;ことができます。切り取り／コピー操作を実行する前に開かれていたページに貼り付けるには、そのページを更新する必要があります。
@@ -273,7 +271,6 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * 削除：
 
       * この操作の確認が求められます。
-
    >[!NOTE]
    >
    >削除は、クイックアクションでは使用できません。

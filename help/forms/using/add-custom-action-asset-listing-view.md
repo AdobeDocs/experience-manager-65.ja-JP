@@ -12,7 +12,7 @@ docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 100%
 
@@ -134,7 +134,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
         </tr>
         <tr>
         <td>title</td>
-        <td>String</td>
+        <td>文字列</td>
         <td>Download a flat PDF of the selected letter（または任意のラベルや代替テキスト）<br /> <br />このタイトルは、カスタムコマンドの上にカーソルを置いたときに Correspondence Management に表示される代替テキストです。</td>
         </tr>
         </tbody>
@@ -354,7 +354,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 1. `https://'[server]:[port]'/[ContextPath]/projects.html` に移動し、ログインします。
 
-1. 「**フォーム／レター**」を選択します。Correspondence Management によってシステムで使用可能なレターが一覧表示されます。
+1. **Forms／レター**&#x200B;を選択します。Correspondence Management によってシステムで使用可能なレターが一覧表示されます。
 1. 「**選択**」をクリックし、選択するレターをクリックします。
 1. **詳細**／**&lt;Download Flat PDF>**（この記事の解説に従って作成したカスタム機能）を選択します。PDF でレターをダウンロードするダイアログが表示されます。
 

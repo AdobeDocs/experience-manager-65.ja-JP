@@ -1,8 +1,8 @@
 ---
 title: 外観の変更（HBS）
-seo-title: 外観の変更
+seo-title: Alter the Appearance
 description: HBS スクリプトの変更
-seo-description: HBS スクリプトの変更
+seo-description: Modify the HBS scripts
 uuid: cff24505-dbb3-4312-9b1b-c1693b8d1c98
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,12 +13,12 @@ docset: aem65
 exl-id: 27e1bff3-385e-4ced-87af-54044b7e8812
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 58%
+source-wordcount: '271'
+ht-degree: 57%
 
 ---
 
-# 外観の変更 (HBS) {#alter-the-appearance-hbs}
+# 外観の変更（HBS） {#alter-the-appearance-hbs}
 
 カスタムコメントシステムのコンポーネントがアプリケーションディレクトリ（/apps）に配置され、デフォルトのコメントシステムおよびカスタムモデル／ビューを参照する resourceSuperType が登録されたので、実装を変更できるようになりました。
 
@@ -26,15 +26,15 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->この拡張機能を使用するには、影響を受けるWebサイト内のコメントシステムのインスタンス(/content)で、そのresourceTypeをカスタムコメントシステムに設定する必要があります。
+>この拡張機能を使用するには、影響を受ける Web サイト内のコメントシステムのインスタンス (/content) で、その resourceType をカスタムコメントシステムに設定する必要があります。
 
 ## HBS スクリプトの変更 {#modify-the-hbs-scripts}
 
 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して、次の手順を実行します。
 
-* [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)を開きます。
+* 開く [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
-   * コメント投稿のアバターを含むタグをコメントアウトします（21行目前後）。
+   * コメント投稿のアバターを含むタグをコメントアウトします（21 行目前後）。
 
       ```
         <!--
@@ -42,9 +42,9 @@ ht-degree: 58%
          -->
       ```
 
-* [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)を開きます。
+* 開く [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
-   * 次のコメントエントリのアバターを含むタグをコメントアウトします（44行目前後）。
+   * 次のコメントエントリのアバターを含むタグをコメントアウトします（44 行目前後）。
 
       ```
         <!--
@@ -58,15 +58,15 @@ ht-degree: 58%
 
 アプリケーションを変更した後で、カスタムコンポーネントを再レプリケートする必要があります。
 
-その方法の1つは次のとおりです。
+その方法の 1 つは次のとおりです。
 
 * メインメニューから
 
-   * **[!UICONTROL ツール]** / **[!UICONTROL 操作]** / **[!UICONTROL レプリケーション]**&#x200B;を選択します。
-   * 「**[!UICONTROL ツリーをアクティブ化]**」を選択します。
-   * `Start Path`を`/apps/custom`に設定します。
-   * 「**[!UICONTROL 変更済み]**&#x200B;のみ」の選択を解除します。
-   * 「**[!UICONTROL アクティブ化]**」ボタンを選択します。
+   * 選択 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL レプリケーション]**.
+   * 選択 **[!UICONTROL ツリーをアクティベート]**.
+   * 設定 `Start Path` から `/apps/custom`.
+   * 選択を解除 **[!UICONTROL 変更済みのみ]**.
+   * 選択 **[!UICONTROL 有効化]** 」ボタンをクリックします。
 
 ### 公開済みサンプルページでの変更されたコメントの表示 {#view-modified-comment-on-published-sample-page}
 

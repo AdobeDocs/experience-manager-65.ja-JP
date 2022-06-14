@@ -6,7 +6,7 @@ role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 100%
 
@@ -120,11 +120,13 @@ Web インターフェイスから [!DNL Adobe InDesign] テンプレートを�
    >
    >* 画像は、基礎となる [!DNL InDesign] テンプレートには埋め込まれません。
    >* 画像がローカルファイルシステムからリンクされています。
+
    >
    >[!DNL Experience Manager] で画像分解できるようにするには、次のようにします。
    >
    >* [!DNL InDesign] テンプレート作成時に画像を埋め込む（[リンクと埋め込み画像について](https://helpx.adobe.com/jp/indesign/using/graphics-links.html)を参照）。
    >* [!DNL Experience Manager] をローカルファイルシステムにマウントし、足りないアイコンを [!DNL Experience Manager] の既存アセットとマッピングします。
+
    >
    >[!DNL InDesign] ドキュメントでの作業の詳細については、「[ Experience ManagerでInDesignドキュメントを使用するためのベストプラクティス](https://helpx.adobe.com/jp/experience-manager/kb/best-practices-idd-docs-aem.html)」を参照してください。
 

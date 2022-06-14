@@ -8,7 +8,7 @@ user-guide-description: モバイルアプリ用のコンテンツを作成お�
 feature: Mobile
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 100%
 

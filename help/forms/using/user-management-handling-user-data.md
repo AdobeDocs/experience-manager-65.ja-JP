@@ -9,7 +9,7 @@ discoiquuid: a88fc933-f1af-4798-b72f-10e7b0d2fd11
 role: Admin
 exl-id: eeeab5d1-073a-4e13-a781-391dfe70bb37
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 100%
 
@@ -168,7 +168,7 @@ Select * from EdcPrincipalEntity where id='<principal_id>';
    Delete from EdcPrincipalEntity where id='<principal_id>';
    ```
 
-1. AEM Forms サーバーを開始します。
+1. AEM Forms サーバーを起動します。
 
 ### AEM リポジトリ {#aem-repository-1}
 

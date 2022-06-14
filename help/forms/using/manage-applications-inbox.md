@@ -11,7 +11,7 @@ discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 100%
 
@@ -43,13 +43,13 @@ Forms ワークフローがトリガーされ、自分が担当者であるま�
 
 ### タスクの要求または委任 {#claim-or-delegate-tasks}
 
-グループに割り当てられたタスクは、グループのメンバー全員のインボックスに表示されます。グループのメンバーなら誰でも、タスクを要求したり他のグループメンバーに委任したりできます。この作業を行うには、以下の手順を実行します。
+グループに割り当てられたタスクは、グループのメンバー全員のインボックスに表示されます。グループのメンバーなら誰でも、タスクを要求したり他のグループメンバーに委任したりできます。そのためには、以下の手順を実行します。
 
 1. タスクのサムネールをタップして選択します。タスクを開く、または委任するオプションが上部に表示されます。
 
    ![select-task](assets/select-task.png)
 
-1. 以下のいずれかの操作を行います。
+1. 次のいずれかの操作を行います。
 
    * タスクを委任するには、「**[!UICONTROL 委任]**」をタップします。項目を委任ダイアログが開きます。ユーザーを選択し、任意でコメントを追加して、「**[!UICONTROL OK]**」をタップします。
 
@@ -135,8 +135,8 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
       | ノード | プロパティ | タイプ |
       |---|---|---|
       | sharedWith | sharedWith | 文字列 |
-      | locked | locked | ブール値 |
-      | returned | returned | ブール値 |
+      | locked | ロック済み | ブール値 |
+      | returned | 返された | ブール値 |
       | allowInboxSharing | allowInboxSharing | ブール値 |
       | allowExplicitSharing | allowExplicitSharing | ブール値 |
 

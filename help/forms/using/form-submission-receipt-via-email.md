@@ -11,7 +11,7 @@ discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
 exl-id: bca4044a-18a9-4b97-92de-eff1e9a840f9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 100%
 
@@ -83,7 +83,7 @@ ht-degree: 100%
 
 また、変数プレースホルダーは、「**[!UICONTROL 件名]**」および「**[!UICONTROL 電子メールテンプレート]**」フィールドにも使用できます。
 
-以下に例を示します。
+次に例を示します。
 
 `Hi ${first_name} ${last_name},`
 

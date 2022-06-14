@@ -6,7 +6,7 @@ feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 source-git-commit: fbb27348df0b9d5f93d186acbce45fcf88197c5e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 100%
 

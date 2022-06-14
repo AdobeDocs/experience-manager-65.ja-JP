@@ -9,7 +9,7 @@ content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
 source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 100%
 
@@ -42,14 +42,14 @@ Dynamic Media Classic ビデオコンポーネントでは次の形式がサポ�
 * F4V H.264
 * MP4 H.264
 
-### ビデオのアップロード先の指定 {#deciding-where-to-upload-your-video}
+### ビデオのアップロード先を指定 {#deciding-where-to-upload-your-video}
 
 ビデオアセットのアップロード先の指定は、次の条件によって決まります。
 
 * ビデオアセットのワークフローが必要かどうか
 * ビデオアセットのバージョン管理が必要かどうか
 
-これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオを Adobe DAM に直接アップロードします。両方の質問に対する回答が「いいえ」の場合は、ビデオを Dynamic Media Classic に直接アップロードします。 次の節では、各シナリオのワークフローについて説明します。
+これらの質問のいずれかまたは両方に対する回答が「はい」の場合は、ビデオを Adobe DAM に直接アップロードします。両方の質問に対する回答が「いいえ」の場合は、ビデオを Dynamic Media Classic に直接アップロードします。次の節では、各シナリオのワークフローについて説明します。
 
 #### ビデオを直接 Adobe Assets にアップロードする場合 {#if-you-are-uploading-your-video-directly-to-adobe-assets}
 
@@ -132,8 +132,8 @@ Dynamic Media Classic ビデオの閲覧には Dynamic Media Classic ビデオ�
 | アプローチ | HTML5 における最優先のアプローチです。Flash は HTML5 以外のフォールバックでのみ使用されます。 | ほとんどのデスクトップでは Flash です。HTML5 はモバイルとタブレットで使用されます。 |
 | 配信 | プログレッシブ | アダプティブストリーミング |
 | 追跡 | はい | はい |
-| 拡張性 | 可 | 不可 |
-| モバイルビデオ | はい | ○ |
+| 拡張性 | はい | いいえ |
+| モバイルビデオ | はい | はい |
 
 ### 設定 {#setting-up}
 

@@ -11,7 +11,7 @@ discoiquuid: 9f1beb89-8eb1-4e37-a5e8-19752b21374a
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 100%
 
@@ -31,9 +31,9 @@ AEM Forms は管理のオーバーヘッドと実稼働の遅延を低減する�
 
 フォームポータルコンポーネントにより、次の機能が追加されます。
 
-* カスタマイズしたレイアウトによってフォームを一覧表示する。リスト表示、カード表示、パネル表示用のレイアウトをすぐに使用できる。独自のカスタムレイアウトを作成する。
+* カスタマイズしたレイアウトでフォームを一覧表示します。リスト表示、カード表示、パネル表示用のレイアウトをすぐに使用できる。独自のカスタムレイアウトを作成できます。
 * 一覧表示からカスタムメタデータおよびカスタムアクションを表示する。
-* フォームポータルコンポーネントを使用しているパブリッシュインスタンス上の AEM Forms UI によって発行されたフォームを一覧表示する。
+* フォームポータルコンポーネントを使用しているパブリッシュインスタンス上の AEM Forms UI が発行したフォームを一覧表示します。
 * HTML 形式および PDF 形式でフォームをレンダリングできるようにします。 
 * カスタム HTML プロファイルを使用してフォームをレンダリングします。
 * 様々な検索条件（フォームプロパティ、メタデータ、タグなど）に基づいたフォームの検索を有効にします。 
@@ -48,7 +48,7 @@ AEM Forms は次の標準ポータルコンポーネントを、**Document Servi
 
 ### 検索とリスター {#search-amp-lister}
 
-Search &amp; Lister コンポーネントは、フォームリポジトリのフォームをポータルページに一覧表示するほか、指定した検索条件に基づいてフォームを一覧表示するオプションを提供します。また、検索条件を指定することにより、ポータルユーザーがフォームの一覧から検索できるようにします。
+Search &amp; Lister コンポーネントは、フォームリポジトリのフォームをポータルページに一覧表示するほか、指定した検索条件に基づいてフォームを一覧表示するオプションを提供します。また、検索条件を指定することにより、ポータルユーザーがフォームのリストから検索できるようにします。
 
 ### ドラフトと送信 {#drafts-amp-submissions}
 
@@ -82,9 +82,9 @@ Link コンポーネントでは、ページ上の任意の場所にあるフォ
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
 * [フォームポータルページの作成](../../forms/using/creating-form-portal-page.md)
-* [API を使用して web ページ上のフォームを一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](../../forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](../../forms/using/draft-submission-component.md#customizing-the-storage)
-* [ドラフトと送信コンポーネントをデータベースと統合するサンプル](integrate-draft-submission-database.md)
-* [フォームポータルコンポーネントのテンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)
-* [ポータル上のフォーム公開の概要](../../forms/using/introduction-publishing-forms.md)
+* [ドラフトと送信コンポーネントとデータベースの統合のサンプル](integrate-draft-submission-database.md)
+* [フォームポータルコンポーネントのテンプレートをカスタマイズする](../../forms/using/customizing-templates-forms-portal-components.md)
+* [ポータル上のフォーム発行の概要](../../forms/using/introduction-publishing-forms.md)

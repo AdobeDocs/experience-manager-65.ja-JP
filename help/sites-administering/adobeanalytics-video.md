@@ -12,7 +12,7 @@ discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1750'
 ht-degree: 100%
 
@@ -142,7 +142,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 
    マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://docs.adobe.com/content/help/ja/media-analytics/using/media-overview.html)ガイドを参照してください。
 
-1. ページに[フレームワークを追加](/help/sites-administering/adobeanalytics.md)します。
+1. ページに [フレームワークを追加](/help/sites-administering/adobeanalytics.md)します。
 1. 設定を&#x200B;**プレビューモード**&#x200B;でテストするには、ビデオを再生して Adobe Analytics 呼び出しをトリガーします。
 
 Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の追跡オフセットを使用したマイルストーントラッキングと、CQ 変数に対する以下のマッピングが適用されます。
@@ -275,7 +275,7 @@ eventdata.events.milestoneXX
 
 1. CQ 変数を Adobe Analytics プロパティにマッピングするには、CQ 変数の横のコンテンツファインダーから Adobe Analytics プロパティをコンポーネント上にドラッグします。
 
-   マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://docs.adobe.com/content/help/ja/media-analytics/using/media-overview.html)ガイドを参照してください。
+   マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)ガイドを参照してください。
 
 1. ページに [フレームワークを追加](/help/sites-administering/adobeanalytics.md)します。
 1. 設定を&#x200B;**プレビューモード**&#x200B;でテストするには、ビデオを再生して Adobe Analytics 呼び出しをトリガーします。
@@ -354,7 +354,7 @@ eventdata.events.milestoneXX
  <tbody>
   <tr>
    <td>eventdata.videoName <br /> </td>
-   <td>DAM で設定されている場合、このプロパティにマッピングされる変数にはビデオの<strong>わかりやすい</strong>名前（<strong>タイトル</strong>）が格納されます。設定されていない場合は、代わりにビデオの<strong>ファイル名</strong>が送信されます。ビデオの再生開始時に一度だけ送信されます。<br /> </td>
+   <td>DAM で設定されている場合、このプロパティにマッピングされる変数にはビデオの<strong>わかりやすい </strong>名前（<strong>タイトル</strong>）が格納されます。設定されていない場合は、代わりにビデオの<strong>ファイル名</strong>が送信されます。ビデオの再生開始時に一度だけ送信されます。<br /> </td>
   </tr>
   <tr>
    <td>eventdata.videoFileName </td>
@@ -369,7 +369,7 @@ eventdata.events.milestoneXX
 
 >[!NOTE]
 >
->編集するビデオを DAM で開き、「**タイトル**」メタデータフィールドを目的の名前に設定することにより、ビデオの&#x200B;**わかりやすい**&#x200B;名前を設定できます。また、終了したら、変更内容を保存する必要があります。
+>編集するビデオを DAM で開き、「**タイトル**」メタデータフィールドを目的の名前に設定することにより、ビデオに&#x200B;**わかりやすい**&#x200B;名前を設定できます。また、終了したら、変更内容を保存する必要があります。
 
 1. これらの変数を prop1、prop2 および prop3 にマッピングします。
 
@@ -383,4 +383,4 @@ eventdata.events.milestoneXX
 
 **このチュートリアルで使用しているリファレンス：**
 
-[0] [https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html](https://docs.adobe.com/content/help/ja/media-analytics/using/media-overview.html)
+[0] [https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)

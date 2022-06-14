@@ -12,7 +12,7 @@ discoiquuid: 2673ea92-1651-4b1b-9aac-f4ba8b36782e
 feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2124'
 ht-degree: 100%
 
@@ -149,7 +149,7 @@ AEM では、次の設定が可能です。
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
-* すべての要求に `/content` というプレフィックスを付けて、web サイトの訪問者に内部構造が表示されないようにする。
+* すべてのリクエストに `/content` というプレフィックスを付けて、web サイトの訪問者に内部構造が表示されないようにする。
 * Web サイトの `/content/en/gateway` ページへの要求がすべて `https://gbiv.com/` にリダイレクトされるように、リダイレクトを定義する。
 
 詳しくは、[リソースマッピング](/help/sites-deploying/resource-mapping.md)を参照してください。
@@ -170,7 +170,7 @@ AEM では、次の設定が可能です。
 
 プロジェクト実装に関連する様々なバンドルのリストについては、[OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください（バンドルに基づいてリストされています）。リストされているすべての設定に調整が必要なわけではなく、一部の設定は AEM の動作を説明する目的で記載されています。
 
-AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 ### LDAP の設定 {#configuring-ldap}
 

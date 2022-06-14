@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
 source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 100%
 
@@ -129,6 +129,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 >
 >1. `size`
 >1. さらにもう 1 つ
+
 >
 >   この追加バリアントは、製品リファレンスの `variationAxis` プロパティ（Geometrixx Outdoors の場合、通常は `color`）を使用して選択されます。
 

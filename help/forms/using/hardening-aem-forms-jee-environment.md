@@ -11,7 +11,7 @@ discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 100%
 
@@ -172,7 +172,7 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
 1. Microsoft 管理コンソール（MMC）で、forms サーバーサービスへのログインに使用するローカルユーザーを作成します。
 
    * 「**ユーザーはパスワードを変更できない**」オプションを選択します。
-   * 「**所属するグループ**」タブに、「**ユーザー**」グループが表示されていることを確認してください。
+   * **所属するグループ**&#x200B;タブに、「ユーザー」グループが表示されていることを確認してください。****
 
    >[!NOTE]
    >
@@ -189,8 +189,8 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を付与します。
-   * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。 インストール時に場所を指定しないと、アプリケーションサーバーの `[JBoss root]/server/[type]/svcnative/DocumentStorage` インストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
-   * **CRX リポジトリディレクトリ**：デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository` です。 
+   * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。 インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
+   * **CRX リポジトリディレクトリ**：デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository` です。
    * **AEM Forms 一時ディレクトリ**：
       * （Windows）環境変数で設定されている TMP または TEMP パス
       * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
@@ -198,9 +198,9 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
       * （AIX）/tmp or /usr/tmp
       * （Solaris）/var/tmp または /usr/tmp
 1. 新しいユーザーアカウントに、次のディレクトリへの書き込み権限を付与します。
-   * [JBoss-directory]\standalone\deployment
-   * [JBoss-directory]\standalone\
-   * [JBoss-directory]\bin\
+   * [JBoss ディレクトリ]\standalone\deployment
+   * [JBoss ディレクトリ]\standalone\
+   * [JBoss ディレクトリ]\bin\
 
    >[!NOTE]
    >
@@ -507,8 +507,8 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/edcws/*</p> </td> 
    <td><p>Rights Management の Web サービス URL</p> </td> 
-   <td><p>不可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>いいえ</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/pdfgui/*</p> </td> 
@@ -531,122 +531,122 @@ JEE 上の AEM Forms のインストールが完了したら、定期的に環�
   <tr> 
    <td><p>/adobe-bootstrapper/*</p> </td> 
    <td><p>JEE 上の AEM Forms をブートストラップするサーブレット</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
    <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/*</p> </td> 
    <td><p>forms サーバー Web サービスの情報ページ</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
    <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/soap/services/*</p> </td> 
    <td><p>すべての forms サーバーサービス用の Web サービス URL</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
    <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/edc/admin/*</p> </td> 
    <td><p>Rights Management 管理 Web アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/adminui/*</p> </td> 
    <td><p>管理コンソールのホームページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/TruststoreComponent/</p> <p>secured/*</p> </td> 
    <td><p>Trust Store Management 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormsIVS/*</p> </td> 
    <td><p>フォームのレンダリングのテストとデバッグを行う Forms IVS アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/OutputIVS/*</p> </td> 
    <td><p>Output サービスのテストとデバッグを行う Output IVS アプリケーション</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rmws/*</p> </td> 
    <td><p>Rights Management のための REST URL</p> </td> 
-   <td><p>不可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>いいえ</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/OutputAdmin/*</p> </td> 
    <td><p>Output 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/*</p> </td> 
    <td><p>Forms Web アプリケーションファイル</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServer/GetImage</p> <p>サーブレット</p> </td> 
    <td><p>HTML 変換時に、JavaScript の取得に使用</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>いいえ</p> </td> 
    <td><p>不可</p> </td> 
   </tr> 
   <tr> 
    <td><p>/FormServerAdmin/*</p> </td> 
    <td><p>Forms 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/repository/*</p> </td> 
    <td><p>WebDAV（デバッグ）アクセス用の URL</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/AACComponent/*</p> </td> 
    <td><p>アプリケーションおよびサービスユーザーインターフェイス</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/WorkspaceAdmin/*</p> </td> 
    <td><p>Workspace 管理ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/rest/*</p> </td> 
    <td><p>残りのサポートページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/CoreSystemConfig/*</p> </td> 
    <td><p>JEE 上の AEM Forms Core 設定ページ</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/</p> </td> 
    <td><p>User Management 認証</p> </td> 
-   <td><p>不可</p> </td> 
-   <td><p>可</p> </td> 
+   <td><p>いいえ</p> </td> 
+   <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/*</p> </td> 
    <td><p>User Management 管理インターフェイス</p> </td> 
-   <td><p>可</p> </td> 
-   <td><p>不可</p> </td> 
+   <td><p>はい</p> </td> 
+   <td><p>いいえ</p> </td> 
   </tr> 
   <tr> 
    <td><p>/DoumentManager/*</p> </td> 
@@ -829,7 +829,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>SOAP[SOAP]</p> </td> 
+   <td><p>SOAP</p> </td> 
    <td> 
     <ul> 
      <li><p>.NET アプリケーションなどの Web サービスクライアントアプリケーション</p> </li> 

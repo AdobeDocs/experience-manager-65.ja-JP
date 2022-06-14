@@ -1,5 +1,5 @@
 ---
-title: 統合の問題のトラブルシューティング
+title: 統合に関する問題のトラブルシューティング
 seo-title: Troubleshooting Integration Issues
 description: 統合の問題をトラブルシューティングする方法を学びます。
 seo-description: Learn how to troubleshoot integration issues.
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: 422ee332-23ae-46bd-8394-a4e0915beaa2
 exl-id: 11b0023e-34bd-4dfe-8173-5466db9fbe34
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1096'
 ht-degree: 100%
 
 ---
 
-# 統合の問題のトラブルシューティング{#troubleshooting-integration-issues}
+# 統合に関する問題のトラブルシューティング{#troubleshooting-integration-issues}
 
 ## トラブルシューティングに関する一般的なヒント {#general-troubleshooting-tips}
 
@@ -85,7 +85,7 @@ sed -n "s/.*(aem-analytics-integration-.*).*target=\(.*\)\/jcr:content.*/\1/p" e
 
 次に、トップページ（階層の上位）のみに Analytics 設定が参照されていることを確認します。
 
-AEM でのカスタムデータインポーターサービスの作成について詳しくは、以下の記事を参照してください。[https://helpx.adobe.com/jp/experience-manager/using/polling.html](https://helpx.adobe.com/jp/experience-manager/using/polling.html)
+AEM でのカスタムデータインポーターサービスの作成について詳しくは、以下の記事を参照してください。[https://helpx.adobe.com/jp/experience-manager/using/polling.html](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 ## DTM（レガシー）の問題 {#dtm-legacy-issues}
 

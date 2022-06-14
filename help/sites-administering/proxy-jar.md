@@ -12,7 +12,7 @@ discoiquuid: ca98dc3c-7056-4cdc-b4d3-23e471da5730
 docset: aem65
 exl-id: 3df50303-5cdd-4df0-abec-80831d2ccef7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 100%
 
@@ -117,7 +117,7 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 
 * C は、このエントリがクライアントからの要求（Web ページの要求）であることを示します。
 * 0 は接続数です（接続カウンターは 0 から開始します）。
-* &#x200B;# #00000 はバイトストリームのオフセットです。これは最初のエントリなので、オフセットは 0 です。
+* # #00000 はバイトストリームのオフセットです。これは最初のエントリなので、オフセットは 0 です。
 * [GET &lt;?>] は、サンプルの HTTP ヘッダー（URL）におけるリクエストのコンテンツです。
 
 接続を閉じると、次の情報がログに記録されます。

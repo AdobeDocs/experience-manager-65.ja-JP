@@ -1,5 +1,5 @@
 ---
-title: 6.4 における AEM Communities のリポジトリ再構築
+title: AEM Communities 6.4 におけるリポジトリの再構築
 seo-title: Repository Restructuring for AEM Communities in 6.4
 description: AEM 6.4 for Communities の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
 seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.4 for Communities.
@@ -11,7 +11,7 @@ discoiquuid: 7383265b-0ed4-4ea7-b741-0a417d187bdd
 feature: Upgrading
 exl-id: 4d2bdd45-a29a-4936-b8da-f7e011d81e83
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 100%
 
@@ -77,7 +77,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。Granite Configuration Manager を使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードのプロパティ <code>mergeList</code> を <code>true</code> に設定し、<code>nt:unstructured</code> 子ノードを追加します。</p> </td>
+   <td><p>「<code>/apps/settings</code>」の下の新しいパスに移動する場合は、手動移行が必要です。Granite 設定マネージャーを使用して、移行を実行できます。</p> <p>移行を実行するには、「<code>/libs/settings/community/subscriptions</code>」ノードのプロパティ <code>mergeList</code> を <code>true</code> に設定し、<code>nt:unstructured</code> 子ノードを追加します。</p> </td>
   </tr>
   <tr>
    <td><strong>備考</strong></td>
@@ -145,7 +145,7 @@ ht-degree: 100%
  </tbody>
 </table>
 
-### 従来のコミュニティコンソールデザイン {#classic-communities-console-designs}
+### 従来の Communities コンソールデザイン {#classic-communities-console-designs}
 
 <table>
  <tbody>

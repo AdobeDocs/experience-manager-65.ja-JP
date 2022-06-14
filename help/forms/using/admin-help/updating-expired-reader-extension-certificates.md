@@ -1,13 +1,13 @@
 ---
 title: 期限切れの Reader Extension サービス証明書を更新しています
-description: 'Reader 用の拡張ドキュメントが機能しません。証明書を更新してください '
-source-git-commit: a26e4fb53458beae9b259e5ee5dc74a95264f9e1
-workflow-type: ht
+description: Reader 用の拡張ドキュメントが機能しません。証明書を更新してください
+exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 100%
 
 ---
-
 
 # 期限切れの Reader Extension サービス証明書を更新しています {#Updating-expired-Reader-Extension-service-certificates}
 

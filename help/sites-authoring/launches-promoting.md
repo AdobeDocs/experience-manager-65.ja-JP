@@ -13,7 +13,7 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 100%
 
@@ -62,7 +62,7 @@ ht-degree: 100%
       1. **ローンチ**（例：ローンチ（1））を選択して特定のローンチのリストを表示します。
       1. 特定のローンチを選択して使用可能なアクションを選択します。
       1. 「**ローンチを昇格**」を選択してウィザードを開きます。
-   * **ローンチ**&#x200B;コンソールの場合：
+   * **ローンチ**&#x200B;コンソール:
 
       1. 対象のローンチを選択（サムネールをタップまたはクリック）します。
       1. 「**昇格**」を選択します。

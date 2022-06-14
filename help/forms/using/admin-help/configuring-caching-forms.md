@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 8a07dddf-1281-45ac-a55e-4333b860a261
 exl-id: 6b57d00e-5ba0-41ee-8497-49ecfec5b9ed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 100%
 
@@ -99,7 +99,7 @@ Forms でキャッシュを使用するように設定を指定できます。�
 
 ### フォームデザインのキャッシュ {#caching-form-designs}
 
-Forms サービスはレンダリング要求を受け取ると、リポジトリからフォームデザインを取得してキャッシュします。このキャッシュにより、以降のレンダリング要求では、Forms サービスはリポジトリではなくキャッシュからフォームデザインを取得するようになるため、パフォーマンスが向上します。
+Forms サービスはレンダリング要求を受け取ると、リポジトリからフォームデザインを取得してキャッシュします。このキャッシュにより、以降のレンダリング要求では、Forms サービスがリポジトリではなくキャッシュからフォームデザインを取得するようになるため、パフォーマンスが向上します。
 
 Forms サービスは、常にディスク上のフォームデザインをキャッシュします。フォームデザインがサーバー上に格納されている場合、これらのファイルはディスクキャッシュと見なされます。また、Forms サービスは、「**メモリ内テンプレートキャッシュ**」領域の設定に従って、メモリ内のフォームデザインもキャッシュします。これらの設定のいずれかを変更する場合、その変更を有効にするには、Forms サービスを再起動します。このサービスを再起動するには、Workbench を使用するか、「[AEM Forms モジュール関連サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)」の説明を参照してください。
 

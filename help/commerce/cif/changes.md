@@ -3,7 +3,7 @@ title: コマース統合フレームワーク（CIF）アドオンの主な変�
 description: 以前のバージョンと比較した、コマース統合フレームワーク（CIF）アドオンの主な変更点です。
 exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32
 source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 100%
 

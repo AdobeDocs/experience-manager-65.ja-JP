@@ -11,7 +11,7 @@ discoiquuid: f2955419-c680-44a7-9913-c594b4577551
 feature: Correspondence Management
 exl-id: c9c007d0-c545-4738-b11b-4c50986342ee
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 100%
 
@@ -155,13 +155,13 @@ Correspondence Management には以下の設定プロパティがあります。
    <td><p>日付の表示形式</p> </td>
    <td><p>データのロケール固有表示を指定します</p> </td>
    <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=truelocale=de_DE; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator=.; numberUseGroupSeparator=truelocale=fr_FR; dateFormat=dd-MM-yyyy; numberDecimalSeparator=,; numberGroupSeparator= ; numberUseGroupSeparator=truelocale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
   </tr>
   <tr>
    <td><p>日付の編集形式</p> </td>
    <td><p>データの編集形式これは、データを文字列として書き込む、または文字列から解析する場合に使用されます</p> </td>
-   <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.; numberGroupSeparator=,; numberUseGroupSeparator=true</p> </td>
-   <td>--<p> </p> </td>
+   <td><p>locale=ja_JP; dateFormat=dd-MM-yyyy; numberDecimalSeparator=.;numberGroupSeparator=,;numberUseGroupSeparator=true</p> </td>
+   <td>—<p> </p> </td>
   </tr>
   <tr>
    <td><p>「発行」でレターインスタンスを管理</p> </td>
@@ -244,7 +244,7 @@ Correspondence Management には以下の設定プロパティがあります。
   <tr>
    <td><p>CM ユーザールート</p> </td>
    <td><p>すべての Correspondence Management ユーザーアセットを含むフォルダーの URL</p> </td>
-   <td><p>--</p> </td>
+   <td><p>—</p> </td>
    <td><p>有効なフォルダーの位置</p> </td>
   </tr>
   <tr>
@@ -255,7 +255,7 @@ Correspondence Management には以下の設定プロパティがあります。
   </tr>
   <tr>
    <td><p>レターキャッシュの有効化</p> </td>
-   <td><p>レターキャッシュを有効化または無効化します。</p> <p>この値を変更すると、 <code>in-memory </code> cache.</p> </td>
+   <td><p>レターキャッシュを有効化または無効化します。</p> <p>この値を変更すると、 <code>in-memory </code> キャッシュ。</p> </td>
    <td><p>true</p> </td>
    <td><p>true ／ false</p> </td>
   </tr>

@@ -12,7 +12,7 @@ discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2778'
 ht-degree: 100%
 
@@ -184,7 +184,7 @@ PDF フォームと有効な XML データソースを参照した後、デー�
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が「.PDF」であることを確認します。
    * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトの内容をファイルにコピーします（`importData` メソッドによって返された `Document` オブジェクトを使用していることを確認します）。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](importing-exporting-data.md#summary-of-steps)
 
@@ -200,30 +200,30 @@ PDF フォームと有効な XML データソースを参照した後、デー�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用していることを確認します：`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストしているサーバーの IP アドレスに置き換えます。
+   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. フォームデータ統合サービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `FormDataIntegrationClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `FormDataIntegrationClient.Endpoint.Address` オブジェクトを作成します。AEM Forms サービスに WSDL を指定する文字列値を渡します（例：`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。ただし、MTOM を使用する場合は `?blob=mtom` を指定します。
-   * `FormDataIntegrationClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `FormDataIntegrationClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。ただし、`?blob=mtom` を指定して MTOM を使用します。
+   * `FormDataIntegrationClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `FormDataIntegrationClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms のユーザー名を割り当てます。
-      * `FormDataIntegrationClient.ClientCredentials.UserName.Password` フィールドに対応するパスワード値を割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `FormDataIntegrationClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `FormDataIntegrationClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF フォームを参照します。
 
-   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDF フォームを格納するために使用されます。
+   * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、PDF フォームを格納するために使用します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。PDF フォームの場所とファイルを開くモードを指定する文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することにより決定できます。
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトに入力します。
 
@@ -231,7 +231,7 @@ PDF フォームと有効な XML データソースを参照した後、デー�
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、フォームにインポートされたデータを格納するために使用されます。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。インポートするデータを含む XML ファイルの場所と、ファイルを開くモードを指定する文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで判断できます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
@@ -240,18 +240,18 @@ PDF フォームと有効な XML データソースを参照した後、デー�
    `FormDataIntegrationClient` オブジェクトの `importData` メソッドを呼び出し、次の値を渡すことによって、PDF フォームにデータをインポートします。
 
    * PDF フォームを格納する `BLOB` オブジェクト。
-   * フォームデータを格納する `BLOB` オブジェクト。
+   * フォームデータが格納された `BLOB` オブジェクト。
 
-   `importData` メソッドは、XML データソースにあるデータを含む PDF フォームを格納する `BLOB` オブジェクトを返します。
+   `importData` メソッドは、XML データソースにあるデータを含む PDF フォームが格納された `BLOB` オブジェクトを返します。
 
 1. PDF フォームを PDF ファイルとして保存します。
 
    * コンストラクターを呼び出し、PDF ファイルの場所を表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `importData` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得して、バイト配列に入力します。
+   * `importData` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得してバイト配列を入力します。
    * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
-**関連トピック**
+**関連トピック：**
 
 [手順の概要](importing-exporting-data.md#summary-of-steps)
 
@@ -344,7 +344,7 @@ PDF フォームからデータを書き出すには、Designer または Acroba
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が XML であることを確認します。
    * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトの内容をファイルにコピーします（`exportData` メソッドで返された `Document` オブジェクトを使用していることを確認します）。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](importing-exporting-data.md#summary-of-steps)
 
@@ -360,29 +360,29 @@ PDF フォームからデータを書き出すには、Designer または Acroba
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用していることを確認します：`http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1` を使用するようにします。
 
    * `localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. フォームデータ統合サービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `FormDataIntegrationClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `FormDataIntegrationClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例： `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。ただし、MTOM を使用する場合は `?blob=mtom` を指定します。
-   * `FormDataIntegrationClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` を設定します。この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `FormDataIntegrationClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。ただし、`?blob=mtom` を指定して MTOM を使用します。
+   * `FormDataIntegrationClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `FormDataIntegrationClient.ClientCredentials.UserName.UserName` に AEM Forms のユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド `FormDataIntegrationClient.ClientCredentials.UserName.Password` に割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `FormDataIntegrationClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `FormDataIntegrationClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF フォームを参照します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、データの書き出し元の PDF フォームを格納するために使用されます。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。PDF フォームの場所とファイルを開くモードを指定する文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、読み取り対象のバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことにより、バイト配列にストリームデータを入力します。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
 1. PDF フォームからデータを書き出します。
@@ -392,7 +392,7 @@ PDF フォームからデータを書き出すには、Designer または Acroba
 1. PDF フォームを PDF ファイルとして保存します。
 
    * コンストラクターを呼び出し、XML ファイルの場所を表す文字列値を渡すことで `System.IO.FileStream` オブジェクトを作成します。
-   * `exportData` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 バイト配列を生成するには、`BLOB` オブジェクトの `MTOM` フィールドの値を取得します。
+   * `exportData` メソッドによって返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `MTOM` フィールドの値を取得してバイト配列を入力します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことによって、バイト配列の内容を XML ファイルに書き込みます。
 

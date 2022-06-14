@@ -13,13 +13,13 @@ docset: aem65
 feature: Mobile Forms
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
 source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 100%
 
 ---
 
-# HTML5フォーム内でのログの有効化{#enable-logging-for-html-forms}
+# HTML5 フォーム内でのログの有効化{#enable-logging-for-html-forms}
 
 ロガーユーティリティを設定することで、HTML5フォームでログの作成を開始することができます。ロガーユーティリティにはいくつかのレベルがあり、要件に応じてレベルを設定することができます。HTML5フォームは、サーバーコンポーネントとクライアントコンポーネントから構成されています。両方のコンポーネントに対してログを設定できます。 
 
@@ -195,7 +195,7 @@ ht-degree: 100%
 
 ログファイルの場所と名前を変更するには、次の操作を実行します。
 
-1. 管理者として「Configuration Manager」にログインします。Configuration Manager のデフォルトの URL は、`https://'[server]:[port]'/system/console/configMgr` です。
+1. 管理者として「 Configuration Manager」にログインします。Configuration Manager のデフォルトの URL は、`https://'[server]:[port]'/system/console/configMgr` です。
 1. **「Apace Sling ロギングロガー設定」**&#x200B;をクリックします。ダイアログボックスが表示されます。
 
    ![logconfig-1](assets/logconfig-1.png)

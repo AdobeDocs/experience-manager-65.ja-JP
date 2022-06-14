@@ -12,7 +12,7 @@ discoiquuid: 7e2b30a3-75ff-4735-8038-5c5391ac36f3
 docset: aem65
 exl-id: 2a0bf59d-8829-4142-9cb4-dcef90f53ae9
 source-git-commit: 429f3ee859477fb38938fd6b9706c8006623eb03
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2806'
 ht-degree: 100%
 
@@ -296,7 +296,7 @@ ht-degree: 100%
 
 ## レポートのタイプ {#report-types}
 
-### コンポーネントのレポート {#component-report}
+### コンポーネントレポート {#component-report}
 
 コンポーネントのレポートは、web サイトでのコンポーネントの使用方法に関する情報を提供します。
 
@@ -354,7 +354,7 @@ ht-degree: 100%
 
    デフォルト：`50`
 
-* **max. リクエスト**
+* **最大 リクエスト**
 
    分析するリクエストの最大数。
 
@@ -408,7 +408,7 @@ ht-degree: 100%
 * ページ
 * リファラー
 * タイプ
-* ユーザー識別子
+* ユーザー 識別子
 
 次のことが可能です。
 

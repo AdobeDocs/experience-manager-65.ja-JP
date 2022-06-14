@@ -7,13 +7,13 @@ feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 source-git-commit: 32e637463a2f68a48b39c5dea9cc3cc4d1596d9b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 100%
 
 ---
 
-# Adobe Experience Manager での 3D アセットのプレビュー {#previewing-3d-assets-aem}
+# Adobe Experience Manager での 3D アセットのプレビュー  {#previewing-3d-assets-aem}
 
 Adobe Experience Manager では、オーサリングプロセスの一環として、3D アセットのアップロード、配信、インタラクティブプレビューをサポートしています。
 

@@ -11,7 +11,7 @@ topic-tags: site-features
 discoiquuid: 42d2195a-1327-45c0-a14c-1cf5ca196cfc
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ ht-degree: 100%
 
 サイトコンソールに表示される分析データのレポート期間を次の中から選択します。
 
-* 過去 30 日間データ
+* 過去 30 日間のデータ
 * 過去 90 日間のデータ
 * 今年のデータ
 

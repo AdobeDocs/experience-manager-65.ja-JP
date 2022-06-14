@@ -13,7 +13,7 @@ docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 source-git-commit: 891cb5bb8cc9b7114d23617c9164fd428718b302
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6200'
 ht-degree: 100%
 

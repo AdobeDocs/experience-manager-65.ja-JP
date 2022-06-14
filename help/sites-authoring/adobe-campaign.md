@@ -11,7 +11,7 @@ topic-tags: personalization
 discoiquuid: 28582d42-ef24-4ca1-98e6-e02248fc9dea
 exl-id: 0954fd5f-cd70-4f2f-85e9-df1c7a3037e1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 100%
 
@@ -37,5 +37,5 @@ Adobe Campaign は、あらゆるオンラインチャネルとオフライン�
 
 さらに、統合をカスタマイズする場合は、次のトピックを参照してください。
 
-* [カスタム拡張の作成](/help/sites-developing/extending-campaign-extensions.md)
+* [カスタム拡張機能の作成](/help/sites-developing/extending-campaign-extensions.md)
 * [カスタムフォームマッピングの作成](/help/sites-developing/extending-campaign-form-mapping.md)

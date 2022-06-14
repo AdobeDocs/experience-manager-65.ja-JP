@@ -12,7 +12,7 @@ discoiquuid: 2e60df86-d8ff-4cf9-b801-9559857b5ff4
 docset: aem65
 exl-id: e50974a7-01ac-4a08-bea2-df9cc975c69e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 100%
 
@@ -113,7 +113,7 @@ AEM Forms は、ユーザーのアクセスをアクセス制御（ACL）を持�
    ```
 
 1.  Workbench を介して DSC をデプロイします。再起動 `ProcessManagementTeamTasksService` サービス。
-1. ブラウザーを更新するか、または再度ユーザーでログアウト / ログインする必要がある場合があります。
+1. ブラウザーを更新するか、ユーザーでログアウトまたはログインをし直す必要があります。
 
 次の画面は、直属の部下のタスクへのアクセスと利用可能なアクションを示しています。
 

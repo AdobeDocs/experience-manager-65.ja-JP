@@ -12,7 +12,7 @@ discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
 source-git-commit: 085e77b7b831d6be626a46d3de215aedb50f6178
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 100%
 
@@ -141,7 +141,6 @@ RSID が選択されている場合、その RSID に属するすべての変数
    * 変数は、3 つの変数セクション（**トラフィック**、**コンバージョン**&#x200B;および&#x200B;**イベント**）のいずれかに属する Adobe Analytics 変数にドラッグ＆ドロップできます。
 
    * 新しいトラッキングコンポーネントを CQ ビューのフレームワークにドラッグすると、コンポーネントに属する CQ 変数は、Adobe Analytics ビューのコンテンツファインダー（cf#）に自動的に追加されます。
-
    >[!NOTE]
    >
    >任意の時点で 1 つの CQ 変数だけを Adobe Analytics 変数にマッピングできます。
@@ -207,7 +206,7 @@ RSID が選択されている場合、その RSID に属するすべての変数
 >
 >例えば、`prop3` の隣に 以下を追加できます。
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
->これで、*:*（コロン）を使用し、`prop3` として *Adobe* を接頭辞として使用して、*サイトセクション*&#x200B;と連結されたページの&#x200B;*タイトル*&#x200B;を送信します
+これで、*:*（コロン）を使用し、`prop3` として *Adobe* を接頭辞として使用して、*サイトセクション*&#x200B;と連結されたページの&#x200B;*タイトル*&#x200B;を送信します
 
 >[!CAUTION]
->任意の時点で 1 つの CQ 変数だけを Adobe Analytics 変数にマッピングできます。
+任意の時点で 1 つの CQ 変数だけを Adobe Analytics 変数にマッピングできます。

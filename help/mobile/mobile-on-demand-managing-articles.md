@@ -1,8 +1,8 @@
 ---
 title: 記事の管理
-seo-title: 記事の管理
+seo-title: Managing Articles
 description: このページでは、記事の作成と管理について説明します。
-seo-description: このページでは、記事の作成と管理について説明します。
+seo-description: Follow this page to learn about creating and managing Articles.
 uuid: 72b86cd7-3016-41b6-a001-9dce4084e9db
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: b46058f9-4691-4fba-a656-0f8507875a79
 exl-id: ea6c8aa3-f86e-4878-8550-fe1662f10696
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '678'
 ht-degree: 89%
 
 ---
@@ -21,28 +21,25 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 コンテンツ管理アクションは、アプリケーション内で記事を作成および管理するのに役立つ構築ブロックです。アプリケーション内の記事に対して、以下のアクションが実行されます。
 
-## 記事の概要  {#articles-overview}
+## 記事の概要 {#articles-overview}
 
-記事は、テキストベースの情報を伝えるアートを表します。
+記事は、テキストベースを表し、情報を伝えるアートを表します。
 
 >[!NOTE]
 >
 >AEM Mobile アプリの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
 >* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
-   >
-   >
-* [記事の管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-articles.html)
-
+>
+>* [記事の管理](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-articles.html)
 >
 
 
-
-## 記事の作成  {#creating-an-article}
+## 記事の作成 {#creating-an-article}
 
 記事を作成する一般的なワークフローは以下のとおりです。
 
@@ -54,7 +51,7 @@ ht-degree: 89%
 1. 準備ができたら、「**作成**」をクリックします。
 1. **記事を管理**&#x200B;タイルに新しい記事が表示されます。
 
-## 新しい記事の読み込み  {#importing-a-new-article}
+## 新しい記事の読み込み {#importing-a-new-article}
 
 既存の Mobile On-Demand コンテンツを Mobile On-Demand から AEM にダウンロードする（読み込む）ことができます。これにより、ローカルのコンテンツを編集および表示できます。
 
@@ -64,10 +61,10 @@ ht-degree: 89%
 
 新しい記事を読み込むワークフローは以下のとおりです。
 
-1. 「モバイル」から、カタログからMobile On-Demandアプリを選択します。
+1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. **記事を管理**&#x200B;タイルの右上隅にある下矢印をクリックし、「記事を読み込む」を選択します。
 1. ダイアログで「**記事を読み込む**」をクリックし、「閉じる」をクリックします。
-1. これで、Mobile On-Demand記事が&#x200B;**記事を管理**&#x200B;タイルに表示されます。
+1. Mobile On-Demand の記事が **記事を管理** タイル。
 
 >[!CAUTION]
 >
@@ -90,19 +87,19 @@ ht-degree: 89%
 1. リスト表示で、ハイライトされた記事をクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、記事の内容（原稿、画像、テキストなど）をドラッグします。
 
-### 記事内のメタデータの表示および編集  {#viewing-and-editing-the-metadata-within-an-article}
+### 記事内のメタデータの表示および編集 {#viewing-and-editing-the-metadata-within-an-article}
 
 記事やバナーのようなコンテンツには、タイトル、説明、画像などの多数のプロパティがあります。このようなプロパティを表示および変更するには、この操作を使用します。オプションで、保存時に Mobile On-Demand に変更内容をアップロードすることもできます。
 
 記事を表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. **記事を管理**&#x200B;タイルから記事を選択します。
+1. 次の中から記事を選択します： **記事を管理** タイル。
 
 1. アクションバーから「**プロパティを表示**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. オプションで、変更内容を直ちにMobile On-Demandにアップロードします。
+1. オプションで、変更内容を直ちに Mobile On-Demand にアップロードします。
 
 ## 記事のアップロード {#uploading-an-article}
 
@@ -110,8 +107,8 @@ ht-degree: 89%
 
 記事をアップロードする一般的なワークフローは以下のとおりです。
 
-1. **Mobile**&#x200B;から、カタログからMobile On-Demandアプリを選択します。
-1. **記事を管理**&#x200B;タイルで、Mobile On-Demandにアップロードする記事を選択します。
+1. 送信者 **モバイル**」で、カタログから Mobile On-Demand アプリを選択します。
+1. 内 **記事を管理** タイルで、Mobile On-Demand にアップロードする記事を選択します。
 1. 必要に応じて、リスト表示からさらに記事を追加します。
 1. アクションバーから「**アップロード**」を選択し、ダイアログで「アップロード」をクリックします。
 1. 記事が Mobile On-Demand にアップロードされます。

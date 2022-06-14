@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 100%
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 * グループに追加されたユーザー
 * 既存のユーザーまたはグループの権限の変更
 
-デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。ログエントリを別のログファイルにリダイレクトすると、監視が容易になります。このリダイレクト方法について詳しくは、次の説明を参照してください。
+デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。このリダイレクト方法について詳しくは、次の説明を参照してください。
 
 ## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
 

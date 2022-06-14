@@ -11,7 +11,7 @@ role: User, Admin
 exl-id: 6d165b0d-e3e7-4115-8f2a-827679754b3b
 feature: Selectors
 source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 100%
 

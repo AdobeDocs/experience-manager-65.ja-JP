@@ -11,7 +11,7 @@ topic-tags: site-features
 discoiquuid: 22712b73-90f2-4329-b32f-dbb7ce802d1d
 exl-id: d8b604c5-a6da-47c4-9422-b519e224c7ca
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 100%
 
@@ -23,8 +23,9 @@ ht-degree: 100%
 
 * 適用されるワークフロー。
 
+
    （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
-* 省略可能：
+* オプション：
 
    * ユーザーがワークフローを開始した理由に関する情報を提供するコメント。
    * ユーザーのインボックス内のワークフローインスタンスの特定に役立つタイトル。
@@ -43,7 +44,7 @@ ht-degree: 100%
 
 ### Web サイトコンソールからのワークフローの開始 {#starting-a-workflow-from-the-websites-console}
 
-1. Web サイトコンソールを開きます。（[http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)）
+1. Web サイトコンソールを開きます。([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin))
 1. Web サイトツリーで、ワークフローを適用するページの親を選択します。
 1. ページリストで、ページを選択して「ワークフロー」をクリックします。
 1. ワークフローを開始ダイアログで、適用するワークフローを選択します。必要に応じて、コメントとタイトルを入力します。その後、「開始」をクリックします。

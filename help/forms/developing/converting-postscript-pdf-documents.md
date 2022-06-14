@@ -12,7 +12,7 @@ discoiquuid: 06ad343a-f74d-41f5-b3c8-b85bb723ceeb
 role: Developer
 exl-id: 744df8b2-0c61-410f-89e9-20b8adddbf45
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 100%
 
@@ -124,8 +124,8 @@ Distiller Service API（Java）を使用して、PostScript ファイルを PDF 
 
    同様に、ログドキュメントを取得するには、次の操作を実行します。
 
-   * `CreatePDFResult` オブジェクトの `getLogDocument` メソッドを呼び出します。これにより、`com.adobe.idp.Document` オブジェクトが返されます。
-   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、ログドキュメントを抽出します。
+   * `CreatePDFResult` オブジェクトの `getLogDocument` メソッドを呼び出します。これは `com.adobe.idp.Document` オブジェクトを返します。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出してログドキュメントを抽出します。
 
 
 **関連トピック**
@@ -144,7 +144,7 @@ Distiller Service API（Web サービス）を使用して、PostScript ファ�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用していることを確認します。 `http://localhost:8080/soap/services/DistillerService?WSDL&lc_version=9.0.1`
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/DistillerService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -153,21 +153,21 @@ Distiller Service API（Web サービス）を使用して、PostScript ファ�
 1. Distiller サービスクライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `DistillerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DistillerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（ 例： `http://localhost:8080/soap/services/DistillerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。ただし、MTOM を使用するには `?blob=mtom` を指定する必要があります。
-   * `DistillerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DistillerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。ただし、`?blob=mtom` を指定して MTOM を使用します。
+   * `DistillerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * AEM forms ユーザー名をフィールド `DistillerServiceClient.ClientCredentials.UserName.UserName` に割り当てます。
-      * 対応するパスワード値をフィールド `DistillerServiceClient.ClientCredentials.UserName.Password` に割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `DistillerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `DistillerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変換するファイルを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトを使用して、PDF ドキュメントに変換するファイルを保存します。
    * コンストラクターを呼び出し、ファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することによって決定できます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    *  `MTOM` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトに入力します。
 
@@ -188,10 +188,10 @@ Distiller Service API（Web サービス）を使用して、PostScript ファ�
 
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。署名済み PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
    * `CreatePDF2` メソッド（出力パラメーター）によって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列に入力します。
-   * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡して、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
+   * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
-**関連トピック**
+**関連トピック：**
 
 [手順の概要](converting-postscript-pdf-documents.md#summary-of-steps)
 

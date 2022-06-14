@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 982eddba-2350-40e7-8a42-db02d28cf133
 exl-id: 0202ca65-21ef-4477-b704-7b52314a7d7b
 source-git-commit: 63bc43bba88a42d62fb574bc8ce42470ac61d693
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 100%
 
@@ -113,7 +113,7 @@ ht-degree: 100%
 
    ビジュアルエディターでは、「**[!UICONTROL 条件]**」ステートメントがデフォルトで選択されています。また、ルールエディターの起動元となったフォームオブジェクト（この場合は「**[!UICONTROL 顧客 ID]**」）が、「**[!UICONTROL 条件]**」ステートメントで指定されています。
 
-1. 「**[!UICONTROL ステートの選択]**」ドロップダウンをタップして「**[!UICONTROL 変更されたとき]**」を選択します。
+1. 「**[!UICONTROL 状態の選択]**」ドロップダウンをタップして「**[!UICONTROL 変更済み]**」を選択します。
 
    ![whencustomidischanged](assets/whencustomeridischanged.png)
 

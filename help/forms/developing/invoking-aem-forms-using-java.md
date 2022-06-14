@@ -12,7 +12,7 @@ discoiquuid: 0e6e7850-6137-42c5-b8e2-d4e352fddae2
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5398'
 ht-degree: 100%
 
@@ -52,12 +52,12 @@ Java API は次の機能をサポートしています。
 
 [人間中心の長期間有効なプロセスを呼び出す Java Web アプリケーションの作成](/help/forms/developing/invoking-human-centric-long-lived.md)
 
-## AEM Forms Java ライブラリファイルを含める {#including-aem-forms-java-library-files}
+## AEM Forms の Java ライブラリファイルを含める {#including-aem-forms-java-library-files}
 
 Java API を使用してプログラムで AEM Forms サービスを呼び出すには、Java プロジェクトのクラスパスに必要なライブラリファイル（JAR ファイル）を含めます。クライアントアプリケーションのクラスパスに含める JAR ファイルは、いくつかの要因によって異なります。
 
 * 呼び出す AEM Forms サービス。クライアントアプリケーションは 1 つ以上のサービスを呼び出すことができます。
-* AEM Forms サービスを呼び出すモード。EJB モードまたは SOAP モードを使用できます。（[接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+* AEM Forms サービスを呼び出すモード。EJB モードまたは SOAP モードを使用できます。（[接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)を参照）
 
 >[!NOTE]
 >
@@ -960,7 +960,7 @@ PDF ドキュメント（または XML データなどの他のデータ型）�
 
 AEM Forms サービス操作は、サービスの強く型付けされた API である Java クライアントライブラリを使用して呼び出すことができます。*Java クライアントライブラリ*&#x200B;は、サービスコンテナにデプロイされたサービスへのアクセスを提供する具象クラスのセットです。呼び出し API を使用して `InvocationRequest` オブジェクトを作成する代わりに、呼び出すサービスを表す Java オブジェクトをインスタンス化します。呼び出し API は、Workbench で作成された長期間有効なプロセスなどのプロセスを呼び出すために使用されます。（[人間中心の長期間有効なプロセスの呼び出し](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)を参照。）
 
-サービス操作を実行するには、Java オブジェクトに属するメソッドを呼び出します。通常、Java クライアントライブラリにはサービス操作に 1 対 1 で対応するメソッドが含まれています。Java クライアントライブラリを使用している場合は、必要な接続プロパティを設定します。（[接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+サービス操作を実行するには、Java オブジェクトに属するメソッドを呼び出します。通常、Java クライアントライブラリにはサービス操作に 1 対 1 で対応するメソッドが含まれています。Java クライアントライブラリを使用している場合は、必要な接続プロパティを設定します。（[接続プロパティの設定](invoking-aem-forms-using-java.md#setting-connection-properties)を参照）
 
 接続プロパティを設定したら、サービスを呼び出すための Java オブジェクトをインスタンス化するために使用される `ServiceClientFactory` オブジェクトを作成します。Java クライアントライブラリを持つ各サービスには、対応するクライアントオブジェクトがあります。たとえば、Repository サービスを呼び出すには、コンストラクタを使用して `ResourceRepositoryClient` オブジェクトを渡すことによって `ServiceClientFactory` オブジェクトを作成します。`ServiceClientFactory` オブジェクトは、AEM Forms サービスを呼び出すために必要な接続設定を維持する役割を果たします。
 
@@ -1018,7 +1018,7 @@ Java 呼び出し API を使用して、短時間のみ有効なプロセスを�
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照。）
+>このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
@@ -1064,7 +1064,7 @@ Java invocation API を使用して短期間有効なプロセスの `MyApplicat
    ```
 
 1. `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-1. `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトの内容をファイルにコピーします。`getOutputParameter` メソッドから返された `com.adobe.idp.Document` オブジェクトを必ず使用してください。
+1. `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツをファイルにコピーします。`getOutputParameter` メソッドから返された `com.adobe.idp.Document` オブジェクトを必ず使用してください。
 
 **関連トピック**
 

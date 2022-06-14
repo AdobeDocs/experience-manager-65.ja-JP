@@ -1,12 +1,12 @@
 ---
-title: 入門と概要
-description: AEM Content and Commerce の入門と概要。Experience ManagerCommerce Integration Framework(CIF) は、Adobe Commerceおよび他のサードパーティのコマースソリューションのコマースサービスをExperience Cloudと統合し、拡張するためのAdobeの推奨パターンです。
+title: 概要
+description: AEM Content and Commerce の入門と概要。Experience Manager Commerce Integration Framework（CIF）は、Adobe Commerce および他のサードパーティ製コマースソリューションのコマースサービスを Experience Cloud と統合および拡張するための推奨パターンです。
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 52dad8f9-1812-42a3-8106-92b23f8517cd
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -70,7 +70,7 @@ CIF は、常に最新のアドオンを使用した継続的なイノベーシ�
 
 CIF は、ベストプラクティスに基づく標準化された統合パターンで顧客をサポートします。顧客の現在の成功に役立つほか、顧客と共に成長し将来の要件にも対応できる柔軟性を備えています。具体的には次のとおりです。
 
-* 製品カタログの統合に関して発生する可能性のある典型的な問題を排除します。例えば、次のような問題です。
+* 製品カタログの統合に関して発生する可能性のある典型的な問題を排除します。例：
    * カタログの量や複雑さの増大に伴ってパフォーマンスが低下
    * ステージング済みデータにアクセスできない
    * リアルタイムの製品データおよびエクスペリエンスが必要

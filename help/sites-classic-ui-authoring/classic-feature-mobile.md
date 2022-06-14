@@ -11,7 +11,7 @@ topic-tags: site-features
 discoiquuid: 430a27b5-f344-404f-8bf8-0d91b49b605e
 exl-id: d5372474-d8aa-4e64-919d-0bd29ba99d99
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ ht-degree: 100%
    * **サイドキック**&#x200B;の「**編集**」ボタンをクリックし、ドロップダウンメニューでデバイスを選択します。
 
 1. **テキストと画像**&#x200B;コンポーネントを、サイドキックの「モバイル」タブからページにドラッグ＆ドロップします。
-1. コンポーネントを編集し、テキストを追加します。「**OK**」をクリックし、変更を保存します。
+1. コンポーネントを編集し、テキストを追加します。「**OK**」をクリックして、変更を保存します。
 
 ページは以下のようになります。
 

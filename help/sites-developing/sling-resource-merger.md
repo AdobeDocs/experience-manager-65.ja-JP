@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ec712ba0-0fd6-4bb8-93d6-07d09127df58
 exl-id: 1eed754e-9a7d-4b65-a929-757fc962614d
 source-git-commit: c07fa148054b69b0da7bb402ef96a50d0895abfa
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1254'
 ht-degree: 100%
 
@@ -62,9 +62,10 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
+>1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >
 >1. `/apps` 内で変更作業を行います。
+
 >
 
 
@@ -147,7 +148,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
    `/libs` 定義に存在しないプロパティが `/apps` オーバーレイ／オーバーライドで必要になった場合に、プロパティを追加できます。
 
    1. `/apps` 内に、対応するノードを作成します。
-   1. このノード&grave;&grave;で新しいプロパティを作成します。
+   1. このノード``で新しいプロパティを作成します。
 
 * **プロパティの再定義（自動作成されたプロパティ以外）**
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 100%
 
@@ -71,11 +71,11 @@ ht-degree: 100%
    >リファレンスとして、以下を参照してください。
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
-   >ただし、`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
-   >`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
-   >設定およびその他の変更に推奨される方法は次のとおりです。
-   >1. 必要な項目（`/libs` 内に存在）を、`/apps` の下で再作成します。
-   >1. `/apps` 内で変更作業をおこないます。
+   ただし、`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
+   `/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
+   設定およびその他の変更に推奨される方法は次のとおりです。
+   1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
+   1. `/apps` 内で変更作業をおこないます。
 
 
 1. `basic` の `path` プロパティに、基本タブのオーバーライドを指すように設定します（次の手順も参照してください）。次に例を示します。
@@ -99,7 +99,7 @@ ht-degree: 100%
    **ページを作成**&#x200B;ウィザードに「**その他のタイトルと説明**」セクションが表示されなくなります。
 
 >[!NOTE]
->ライブコピーと一緒に使用するページプロパティを設定する場合、詳しくは、[ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui)を参照してください。
+ライブコピーと一緒に使用するページプロパティを設定する場合、詳しくは、[ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui)を参照してください。
 
 ## ページプロパティの設定サンプル {#sample-configuration-of-page-properties}
 

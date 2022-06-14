@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 50fafc64-d462-4386-93af-ce360588d294
 exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
 source-git-commit: 071bc0e36ed2d8eb4ce7bd0ba46823adc0e43095
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5238'
 ht-degree: 100%
 
@@ -50,9 +50,9 @@ AEM に用意されている標準レポートの特徴：
 >以下の例と定義で使用している表記は次のとおりです。
 >
 >* 各行では、次のようにノードまたはプロパティを定義しています。
->  `N:<name> [<nodeType>]`：名前が `<*name*>` でノードタイプが `<*nodeType*>`*のノードを表します。*
->  `P:<name> [<propertyType]`：名前が `<*name*>` でプロパティタイプが `<*propertyType*>` のプロパティを表します。
->  `P:<name> = <value>`：プロパティ `<name>` に値 `<value>` を設定する必要があることを表します。
+   >  `N:<name> [<nodeType>]`：名前が `<*name*>` でノードタイプが `<*nodeType*>`*のノードを表します。*
+   >  `P:<name> [<propertyType]`：名前が `<*name*>` でプロパティタイプが `<*propertyType*>` のプロパティを表します。
+   >  `P:<name> = <value>`：プロパティ `<name>` に値 `<value>` を設定する必要があることを表します。
 >
 >* インデントは、ノード間の階層的依存関係を示します。
 >* | で区切られた項目は、タイプや名前など、指定可能な項目のリストを示します。例えば `String|String[]` は、プロパティに String または String[] を指定できることを示します。
@@ -476,7 +476,7 @@ N:charting
 * [列固有のクエリ](#column-specific-query)の設定。
 * [リゾルバーと前処理](#resolvers-and-preprocessing)。
 * [列固有の定義](#column-specific-definitions)（フィルターや集計など。`definitions` の子ノード）。
-* [列のデフォルト値](#column-default-values)。
+* [列のデフォルト値](#column-default-values).
 * サーバーによって返されるデータから、表示する情報を抽出するための[クライアントフィルター](#client-filter)。
 * 以上のほか、必要な[イベントとアクション](#events-and-actions)を定義するために、適切な `cq:editConfig` のインスタンスを列コンポーネントで提供する必要があります。
 * [汎用列](#generic-columns)の設定。
@@ -1304,7 +1304,8 @@ N:apps
    >
    >これは、定義と同じです。
    >
-   >```
+   >
+   ```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
@@ -1375,7 +1376,8 @@ N:apps
    >
    >この例では、グループ化可能な列がないので、グラフは使用できません。グラフを表示するには、`groupable` を `true` に設定します。
    >
-   >```
+   >
+   ```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]

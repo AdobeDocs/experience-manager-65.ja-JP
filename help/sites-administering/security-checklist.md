@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
 source-git-commit: f60d3049b10a8ec500dd0cd4b1b5d4efbe415d84
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2859'
 ht-degree: 100%
 
@@ -232,9 +232,9 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    * （パブリッシュインスタンスのみ）「**WCM モード**」を「無効」に設定
 
-* [Apache Sling Java Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler)：
+* [Apache Sling Java Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
 
-   * 「**Generate Debug Info**」を無効化
+   * 「**デバッグ情報の生成**」を無効化
 
 * [Apache Sling JSP スクリプトハンドラー](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-jsp-script-handler)：
 
@@ -272,7 +272,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 Sling はコンテンツ中心型です&#x200B;*。*&#x200B;つまり、（HTTP）要求がそれぞれ JCR リソース（リポジトリーノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理が行われるということです。
 
-* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
+* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。。
 * 次に、リソースのプロパティを要求の特定の部分（例：セレクター、拡張子など）と組み合わせてレンダラー（スクリプト）が特定されます。
 
 >[!NOTE]

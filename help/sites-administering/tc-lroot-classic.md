@@ -13,7 +13,7 @@ docset: aem65
 feature: Language Copy
 exl-id: 1ae21d80-0683-4ab9-afaa-4d733ff47720
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 次の手順では、クラシック UI を使用してサイトの言語ルートを作成します。詳しくは、[言語ルートの作成](/help/sites-administering/tc-prep.md#creating-a-language-root)を参照してください。
 
-1. Web サイトコンソールの Web サイトツリーで、サイトのルートページを選択します（[http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#)）。
+1. Web サイトコンソールの Web サイトツリーで、サイトのルートページを選択します([http://localhost:4502/siteadmin#](http://localhost:4502/siteadmin#))
 1. サイトの言語バージョンを表す新しい子ページを追加します。
 
    1. 新規／新しいページをクリックします。
@@ -57,5 +57,5 @@ ht-degree: 100%
    | `<language>+` （例：フランス語+） | ページとそのすべての子を対象の言語からコピーします。 |
    | `<language>` （例：フランス語） | 対象の言語からページのみをコピーします。 |
 
-1. 「OK」をクリックしてダイアログを閉じます。
+1. 「OK」をクリックして、ダイアログを閉じます。
 1. 次のダイアログで、「はい」をクリックしてコピーを確定します。

@@ -1,5 +1,5 @@
 ---
-title: Convert PDF サービス
+title: ConvertPDF サービス
 seo-title: ConvertPDF Service
 description: AEM Forms の Convert PDF サービスを使用して、PDF ドキュメントを PostScript ファイルや画像ファイルに変換します。
 seo-description: Use AEM Forms ConvertPDF service to convert PDF documents to PostScript or image files.
@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: 5ec4f0ec-a9fd-4571-9b9a-278f4622c028
 exl-id: 575bab27-d973-47fa-a0da-fa889cec6f27
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 100%
 

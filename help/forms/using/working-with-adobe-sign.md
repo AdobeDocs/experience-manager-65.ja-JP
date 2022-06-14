@@ -12,7 +12,7 @@ docset: aem65
 feature: Adaptive Forms, Adobe Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3826'
 ht-degree: 100%
 
@@ -54,7 +54,7 @@ ht-degree: 100%
 1. [アダプティブフォームのプロパティを Adobe Sign 用に編集する](../../forms/using/working-with-adobe-sign.md#enableadobesign)
 1. [アダプティブフォームに Adobe Sign のフィールドを追加する](../../forms/using/working-with-adobe-sign.md#addadobesignfieldstoanadaptiveform)
 1. [アダプティブフォームで Adobe Sign を有効にする](../../forms/using/working-with-adobe-sign.md#enableadobsignforanadaptiveform)
-1. [アダプティブフォームで Adobe Sign Cloud Service を選択する](../../forms/using/working-with-adobe-sign.md#selectadobesigncloudserviceforanadaptiveform)
+1. [アダプティブフォームに対して Adobe Sign クラウドサービスを選択する](../../forms/using/working-with-adobe-sign.md#selectadobesigncloudserviceforanadaptiveform)
 
 1. [アダプティブフォームに Adobe Sign の署名者を追加する](../../forms/using/working-with-adobe-sign.md#addsignerstoanadaptiveform)
 1. [アダプティブフォームで送信アクションを選択する](../../forms/using/working-with-adobe-sign.md#selectsubmitactionforanadaptiveform)
@@ -132,7 +132,7 @@ ht-degree: 100%
 
 1. 「**[!UICONTROL Adobe Sign] フィールド** ![aem_6_3_adobesign](assets/aem_6_3_adobesign.png)」アイコンをタップします。[!DNL Adobe Sign] フィールドの選択オプションと追加オプションが表示されます。
 
-   **[!UICONTROL タイプ]**&#x200B;ドロップダウンフィールドを展開して [!DNL Adobe Sign] フィールドを選択し、「完了」アイコン（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）をタップして、選択したフィールドを [!DNL Adobe Sign] ブロックに追加します。「**[!UICONTROL タイプ]**」ドロップダウンフィールドには、「署名」タイプ、「署名者の情報」タイプ、「データフィールド」タイプが表示されます。[!DNL Adobe Sign] が AEM に統合されている場合、[!DNL Forms] は「[!UICONTROL タイプ]」ドロップダウンボックスに表示されているフィールドのみサポートします。[!DNL Adobe Sign] フィールドについて詳しくは、[Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/using/field-types.html)を参照してください。
+   **[!UICONTROL タイプ]**&#x200B;ドロップダウンフィールドを展開して [!DNL Adobe Sign] フィールドを選択し、「完了」アイコン（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）をタップして、選択したフィールドを [!DNL Adobe Sign] ブロックに追加します。「**[!UICONTROL タイプ]**」ドロップダウンフィールドには、「署名」タイプ、「署名者の情報」タイプ、「データフィールド」タイプが表示されます。[!DNL Adobe Sign] が AEM に統合されている場合、[!DNL Forms] は「[!UICONTROL タイプ]」ドロップダウンボックスに表示されているフィールドのみサポートします。[!DNL Adobe Sign] フィールドについて詳しくは、 [Adobe Sign のドキュメント](https://helpx.adobe.com/jp/sign/using/field-types.html) を参照してください。
 
    ![adobe-sign-block-fields-options](assets/adobe-sign-block-fields-options.png)
 
@@ -195,7 +195,6 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
    * **[!UICONTROL 署名者の電子メールアドレス]：**&#x200B;署名者の電子メールアドレスを指定します。署名者は、ここで指定した電子メールアドレスで、署名する必要があるドキュメントやフォームを受信します。フォームフィールドで指定した電子メールアドレスを使用することも、ログインユーザーの AEM ユーザープロファイルで指定した電子メールアドレスを使用することも、電子メールアドレスを手動で入力することもできます。このステップは、必ず実行する必要があります。最初の署名者または唯一の署名者（署名者が 1 人の場合）のメールアドレスが、AEM Cloud Service の設定に使用された [!DNL Adobe Sign] アカウントと一致していないことを確認します。
 
    * **[!UICONTROL 署名者の認証方法]：**&#x200B;署名するフォームを開く前にユーザーを認証する方法を指定します。電話による認証、ナレッジベースによる認証、ソーシャル ID に基づく認証のいずれかを選択することができます。
-
    >[!NOTE]
    >
    >    * ソーシャル ID に基づく認証の場合、Facebook、Google、LinkedIn を使用した認証オプションがデフォルトで用意されています。これ以外のソーシャル認証プロバイダーを使用する場合は、[!DNL Adobe Sign] サポートまでお問い合わせください。
@@ -249,7 +248,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
    次を使用して、アダプティブフォームにデジタル署名を適用します。
 
-   * クラウド署名：トラストサービスプロバイダーがホストする[デジタル ID](https://helpx.adobe.com/jp/sign/kb/digital-certificate-providers.html) を使用して署名します。
+   * クラウド署名：トラストサービスプロバイダーがホストする[デジタル ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) を使用して署名します。
    * Adobe Acrobat または Reader：ドキュメントをダウンロードして Adobe Acrobat または Reader で開き、スマートカード、USB トークン、ファイルベースのデジタル ID を使用して署名します。
 
    クラウド署名フィールドをアダプティブフォームに追加した後、次の手順を実行して設定プロセスを完了します。
@@ -299,7 +298,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
    > * **[!UICONTROL 署名者ステップ]**&#x200B;コンポーネントをフォームにドラッグアンドドロップすると、「**[!UICONTROL 署名者とフォーム記入者は同一ですか？]**」オプションが自動的に「**はい**」に設定されます。フォームを正しく機能させるには、このオプションが設定されている必要があります。
    >
    > * 最適なエクスペリエンスを得るには、署名ステップコンポーネントの後に概要ステップコンポーネントを使用します。 署名ステップコンポーネントでフォームに署名する際に入力が完了すると、概要ステップが自動的に送信され、すぐにフォームが送信されます。 概要ステップを使用しない場合、自動送信は、[Adobe Sign Configuration Service](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status) を使用して設定された間隔の後にのみトリガーされます。
-   > 以下に、いくつかのベストプラクティスを示します。
+      > 以下に、いくつかのベストプラクティスを示します。
    > * 署名ステップを含むアダプティブフォームパネルは、常にアダプティブフォームの最後または 2 番目の最後のパネルに表示されます。 2 番目の最後のパネルは、最後のパネルに概要ステップが含まれている場合にのみ使用できます。
    > * 署名または概要ステップコンポーネントを含むパネルに他のコンポーネントを含めることはできません。
    > * 署名ステップを含むアダプティブフォームには送信ボタンを含めることはできません。

@@ -1,5 +1,5 @@
 ---
-title: 作成者がおこなう最初の手順
+title: 作成者が行う最初の手順
 seo-title: First Steps for Authors
 description: AEM でコンテンツのオーサリングを開始する際に使用する主なタスクの概要です
 seo-description: An overview of the main tasks that you will be using when starting to author content with AEM
@@ -12,7 +12,7 @@ discoiquuid: 85ebc05d-ce45-4bbb-b9cc-b21810d0d877
 docset: aem65
 exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 100%
 

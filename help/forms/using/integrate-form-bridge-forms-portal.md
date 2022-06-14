@@ -12,7 +12,7 @@ docset: aem65
 feature: Mobile Forms
 exl-id: 89118bb8-6ec8-4048-b3d6-5c73a9eea33e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 100%
 
@@ -80,8 +80,8 @@ FormBridge API を使用して、HTML ページからフォームフィールド
    >
    >
    >**18 行目**&#x200B;の &lt;div id=&quot;rightdiv&quot;> タグには XFA フォームの HTML スニペットが含まれています。
-   >ページは 2 つのコンテナ、**left** と **right** にスタイル設定されています。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
-   >次のスクリーンショットは、フォームがどのようにブラウザーで表示されるかを示しています。
+   ページは 2 つのコンテナ、**left** と **right** にスタイル設定されています。right コンテナにはフォームがあります。left コンテナには 2 つの入力フィールドと外部 HTML ページの一部があります。
+   次のスクリーンショットは、フォームがどのようにブラウザーで表示されるかを示しています。
 
    ![ポータル](assets/portal.jpg)
 

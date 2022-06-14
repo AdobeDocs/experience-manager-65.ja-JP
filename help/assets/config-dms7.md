@@ -123,7 +123,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    * **[!UICONTROL Dynamic Media 同期モード]**
       * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
-選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」を選択します。「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。完了したら、「**[!UICONTROL 保存]**」を選択します。*注意：以前に「**[!UICONTROL すべてのコンテンツを同期]**」を選択した場合、これら 3 つのオプションは使用できません。*[Dynamic Media のフォルダーレベルでの選択的公開の設定](/help/assets/selective-publishing.md) も参照してください。
+選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」を選択します。「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。完了したら、「**[!UICONTROL 保存]**」を選択します。*注意：以前に「**[!UICONTROL すべてのコンテンツを同期]**」を選択した場合、これら 3 つのオプションは使用できません。*[Dynamic Media のフォルダーレベルでの選択的公開の設定](/help/assets/selective-publishing.md)も参照してください。
          * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つまたはクラウド設定のデフォルトモードから同期値を継承します。継承した場合の詳細なステータスは、ツールチップで表示されます。
          * **[!UICONTROL サブフォルダーに対して有効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期に含めます。フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
          * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
@@ -133,7 +133,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 ただし、コンテンツを安全にプレビ許可リストューするためのアクセス権をユーザーに提供するために、さらに IP をすることができます。 このアクションをExperience Managerに設定するには [Image Server 用のDynamic Media公開設定の指定 — 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab).
+1. 公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 IP を許可リストに登録して、ユーザーがコンテンツを安全にプレビューできるようにすることができます。このアクションをExperience Managerに設定するには [Image Server 用のDynamic Media公開設定の指定 — 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
@@ -260,13 +260,13 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
 Dynamic Media の公開設定ページでは、Adobe Dynamic Media サーバーから web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。
 
-詳しくは、[Image Server 用の Dynamic Media の公開設定](/help/assets/dm-publish-settings.md)を参照してください。
+[Image Server 用の Dynamic Media 公開設定](/help/assets/dm-publish-settings.md)を参照してください。
 
 #### Dynamic Media の一般設定 {#configuring-application-general-settings}
 
-Dynamic Media の&#x200B;**[!UICONTROL 公開サーバー名]**&#x200B;の URL と&#x200B;**[!UICONTROL オリジンサーバー名]**&#x200B;の URL を設定します。また、**[!UICONTROL アプリケーションにアップロード]**&#x200B;設定と&#x200B;**[!UICONTROL デフォルトのアップロードオプション]**&#x200B;はすべて、特定のユースケースに基づいて指定できます。
+Dynamic Media **[!UICONTROL 公開先サーバー名]**&#x200B;の URL と&#x200B;**[!UICONTROL 公開元サーバー名]**&#x200B;の URL を設定します。特定の使用例に基づいて、**[!UICONTROL アプリケーションへのアップロード]**&#x200B;設定と&#x200B;**[!UICONTROL デフォルトのアップロードオプション]**&#x200B;をすべて指定することもできます。
 
-詳しくは、[Dynamic Media の一般設定](/help/assets/dm-general-settings.md)を参照してください。
+[Dynamic Media の一般設定](/help/assets/dm-general-settings.md)を参照してください。
 
 #### カラーマネジメントの設定 {#configuring-color-management}
 
@@ -341,7 +341,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 1. ページの右下隅にある「**[!UICONTROL 保存]**」を選択します。
 
-   この時点で、Adobe Experience Manager Web コンソール設定ページが開いているブラウザータブを閉じることができます。
+   この時点で、Adobe Experience Manager web コンソール設定ページが開いているブラウザータブを閉じることができます。
 
 1. Experience Manager のコンソールを開いているブラウザータブに戻ります。
 1. Experience Manager から、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** に移動します。

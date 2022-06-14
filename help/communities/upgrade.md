@@ -1,8 +1,8 @@
 ---
 title: AEM 6.5 Communities へのアップグレード
-seo-title: AEM 6.5 Communities へのアップグレード
+seo-title: Upgrading to AEM 6.5 Communities
 description: 以前のバージョンから AEM 6.5 Communities へアップグレードする方法
-seo-description: 以前のバージョンから AEM 6.5 Communities へアップグレードする方法
+seo-description: How to upgrade from an earlier version to AEM 6.5 Communities
 uuid: 929c3892-1b3b-46a7-8e70-fa6864125911
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: ea41d35c-967c-4606-b4ec-377e817902e4
 source-git-commit: 07f8a9f629122102d30676926b225d57e542147d
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 59%
+source-wordcount: '663'
+ht-degree: 58%
 
 ---
 
@@ -28,12 +28,11 @@ ht-degree: 59%
 
 ### Solr のインデックス再作成 {#reindex-solr}
 
-MSRPを使用して設定されたデプロイメントに新しいCommunities機能パックをインストールする場合は、次の操作が必要です。
+MSRP で設定されたデプロイメントに新しい Communities 機能パックをインストールする場合は、次の操作が必要になります。
 
-1. [最新の機能パック](/help/communities/deploy-communities.md#latestfeaturepack)をインストールします。
-1. [最新のSolr設定ファイル](/help/communities/msrp.md#upgrading)をインストールします。
-1. MSRPの再インデックス
-[MSRPインデックス再作成ツール](/help/communities/msrp.md#msrp-reindex-tool)の節を参照してください。
+1. のインストール [最新の機能パック](/help/communities/deploy-communities.md#latestfeaturepack).
+1. のインストール [最新の Solr 設定ファイル](/help/communities/msrp.md#upgrading).
+1. MSRP のインデックス再作成の節を参照 [MSRP インデックス再作成ツール](/help/communities/msrp.md#msrp-reindex-tool).
 
 ### Enablement 2.0 {#enablement}
 
@@ -43,30 +42,30 @@ Enablement 1.0 からのコンテンツの移行のサポートについては�
 
 ## AEM 6.0 からのアップグレード {#upgrading-from-aem}
 
-既存のUGCを保持する必要がある場合は、デプロイメントがUGC [オンプレミス](#on-premise-storage)と[Adobeクラウド](#adobe-cloud-storage)のどちらに保存したかによって、保存方法が異なります。
+既存の UGC を保持する必要がある場合は、その方法は、デプロイメントが UGC を保存したかどうかによって異なります [オンプレミス](#on-premise-storage) または [Adobe雲](#adobe-cloud-storage).
 
 ### アドビクラウドストレージ {#adobe-cloud-storage}
 
 アップグレードされたサイトがアドビクラウドストレージを使用するように設定された場合、SRP のメソッドは古い場所にある既存の UGC を見つけることができなくなるので、すべての UGC が失われたかのように（誤って）表示される可能性があります。
 
-したがって、ASRPに`AEM 6.0 compatability-mode`を使用してUGCにアクセスするよう指示する機能があります。
+したがって、ASRP に対して、 `AEM 6.0 compatability-mode` をクリックして UGC にアクセスします。
 
 AEM 6.3 のすべてのオーサーインスタンスとパブリッシュインスタンスについて:
 
 * 管理者権限でサインインします。
-* [ASRP](/help/communities/asrp.md)を設定します。
-* 既存のUGCを表示するには、次の手順に従います。
+* 設定 [ASRP](/help/communities/asrp.md).
+* 既存の UGC を表示するには、次の手順に従います。
 
-   * Webコンソールを参照します。
+   * Web コンソールを参照します。
 
       * 例： [https://&lt;host>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-      * **AEM Communities Utilities**&#x200B;設定を見つけます。
+      * 場所 **AEM Communities Utilities** 設定。
       * 選択して設定パネルを展開します。
 
          * *オフ* `Cloud Storage`
 
-         * 「**保存**」を選択します。
+         * 選択 **保存**
 
       ![utilities](assets/utilities.png)
 
@@ -79,7 +78,7 @@ AEM 6.3 のすべてのオーサーインスタンスとパブリッシュイン
 
 ### Java API {#java-apis}
 
-AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレードするときは、多くの API が異なるパッケージに再編成されていることに注意してください。Communities機能のカスタマイズにIDEを使用する場合は、ほとんどの問題を簡単に解決できます。
+AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレードするときは、多くの API が異なるパッケージに再編成されていることに注意してください。コミュニティ機能のカスタマイズに IDE を使用する場合は、ほとんどを簡単に解決できます。
 
 廃止された SocialUtils パッケージについて詳しくは、[SocialUtils のリファクタリング](/help/communities/socialutils.md)を参照してください。
 
@@ -87,11 +86,11 @@ AEM 6.0 Social Communities から AEM 6.3 Communities にアップグレード�
 
 ### JSP コンポーネントテンプレートの廃止 {#no-jsp-component-templates}
 
-[ソーシャルコンポーネントフレームワーク](/help/communities/scf.md)(SCF)は、AEM 6.0より前に使用されていたJava Server Pages(JSP)の代わりに、[HandlebarsJS](https://handlebarsjs.com/)(HBS)テンプレート言語を使用します。
+この [ソーシャルコンポーネントフレームワーク](/help/communities/scf.md) (SCF) は、 [HandlebarsJS](https://handlebarsjs.com/) AEM 6.0 より前の Java Server Pages(JSP) の代わりに (HBS) テンプレート言語を使用します。
 
 AEM 6.0 では、JSP コンポーネントは新しい HBS フレームワークコンポーネントと同じ場所に残っています（HBS コンポーネントは通常、「hbs」という名前のサブフォルダーに存在します）。
 
-AEM 6.1 以降では JSP コンポーネントは完全に削除されています。コミュニティの場合は、JSPコンポーネントの使用をすべてSCFコンポーネントで置き換えることをお勧めします。
+AEM 6.1 以降では JSP コンポーネントは完全に削除されています。コミュニティの場合は、JSP コンポーネントのすべての使用を SCF コンポーネントに置き換えることをお勧めします。
 
 ## AEM Communities UGC Migration Tool {#aem-communities-ugc-migration-tool}
 
@@ -103,8 +102,8 @@ AEM 6.1 以降では JSP コンポーネントは完全に削除されていま�
 
 概念的に、コミュニティコンポーネントには 3 つの世代があります。
 
-**第1世代**:CQ 5.4からAEM 5.6.0までが、UGCを複数のプラットフォーム間で同期する手段としてレプリケーションを使用してローカルリポジトリに格納するコラブコンポーネントで **** す。その他の違いは、Java Server Pages(JSP)を使用した実装と、オーサー環境でのみオーサリングで構成されるブログ機能です。
+**第 1 世代**:CQ 5.4 からAEM 5.6.0 まで、これらは以下の通りです。 **collab** プラットフォーム間で UGC を同期する手段としてレプリケーションを使用して、ローカルリポジトリに UGC を保存したコンポーネント。 その他の違いとしては、Java Server Pages(JSP) を使用した実装と、オーサー環境でのみオーサリングで構成されるブログ機能があります。
 
-**第2世代**:AEM 5.6.1からAEM 6.1まで、これはカラーバンドのソーシャルコンポーネン **** トの組み **** 合わせです。AEM 6.0では新しい[ソーシャルコンポーネントフレームワーク](/help/communities/scf.md)(SCF)が導入され、AEM 6.2では[共通のUGCストア](/help/communities/working-with-srp.md)が導入されました。このストアでは、[ストレージリソースプロバイダー](/help/communities/srp.md)(SRP)を使用してUGCにアクセスします。
+**第 2 世代**:AEM 5.6.1 からAEM 6.1 まで、これは次の 2 種類の **collab** および **social** コンポーネント。 AEM 6.0 では新しい [ソーシャルコンポーネントフレームワーク](/help/communities/scf.md) (SCF) およびAEM 6.2 では、 [共通 UGC ストア](/help/communities/working-with-srp.md) UGC には、 [ストレージリソースプロバイダー](/help/communities/srp.md) (SRP)。
 
-**第3世代**:AEM 6.2以降では、SCFにHandlebars(HBS)コンポーネントとして実装さ **** れ、UGC用のSRPの選択が必要なソーシャルコンポーネントのみが存在します。
+**第 3 世代**:AEM 6.2 以降では、 **social** SCF で Handlebars(HBS) コンポーネントとして実装され、UGC 用の SRP の選択が必要なコンポーネント。

@@ -1,8 +1,8 @@
 ---
 title: 評価の基本事項
-seo-title: 評価の基本事項
+seo-title: Rating Essentials
 description: 評価コンポーネントの概要
-seo-description: 評価コンポーネントの概要
+seo-description: Rating component overview
 uuid: 48ef61ad-be7a-4a6b-a284-23e5bb4f1671
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,16 +12,16 @@ discoiquuid: 7dc3ef57-05c3-45d4-ace3-bb3ba6ea768b
 exl-id: 49456944-ff0d-4507-b3b8-143c90067573
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '279'
 ht-degree: 47%
 
 ---
 
-# 評価の基本事項  {#rating-essentials}
+# 評価の基本事項 {#rating-essentials}
 
-[集計](tally.md)のサブクラスである評価コンポーネントを使用すると、サインインしたコミュニティメンバーがWebサイト上の機能を評価できます。
+評価コンポーネント、 [集計](tally.md) サブクラスを使用すると、サインインしたコミュニティメンバーが Web サイト上の機能を評価できます。
 
-同じページに投票コンポーネントの複数のインスタンスを配置できます。各インスタンスは、一意の`tally name`プロパティを使用して設定する必要があります。
+同じページに投票コンポーネントの複数のインスタンスを配置することができます。各インスタンスは、一意の `tally name` プロパティ。
 
 匿名での評価投稿はサポートされていません。サイト訪問者が評価に参加するには、登録してサインインする必要があります。 サインインした訪問者（メンバー）は、いつでも評価を変更できます。
 
@@ -51,7 +51,7 @@ ht-degree: 47%
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><p><a href="rating.md">評価の使用</a>を参照</p> </td>
+   <td><p>詳しくは、 <a href="rating.md">評価の使用</a></p> </td>
   </tr>
  </tbody>
 </table>
@@ -66,7 +66,7 @@ ht-degree: 47%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿された評価(UGC)へのアクセス{#accessing-posted-ratings-ugc}
+### 投稿された評価（UGC）へのアクセス {#accessing-posted-ratings-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -74,9 +74,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.

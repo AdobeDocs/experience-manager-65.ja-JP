@@ -12,7 +12,7 @@ discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 100%
 
@@ -38,8 +38,8 @@ AEM でのページの編集には、いくつかの[モード](/help/sites-auth
 >
 >* （ページの編集時に）タッチ操作対応 UI でのみ使用できます。
 >* モバイルデバイスまたはデスクトップ上の小さいウィンドウでは、スペースの制約があるので使用できません。
->
->   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
+   >
+   >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
 >* `administrators` グループに所属しているユーザーのみ使用できます。
 
 

@@ -6,7 +6,7 @@ role: Architect, Admin, Leader
 feature: Collections
 exl-id: f95560c9-f1b9-4e86-94a7-70347d268d8f
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 100%
 

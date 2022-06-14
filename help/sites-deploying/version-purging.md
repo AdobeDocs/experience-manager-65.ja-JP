@@ -13,7 +13,7 @@ docset: aem65
 feature: Configuring
 exl-id: 6f0b1951-bdda-475f-b6c0-bc18de082b7c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 100%
 
@@ -95,7 +95,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 保持するバージョン数の最大数と、保持する最も古いバージョンを組み合わせて定義する場合の例：
 
-* 次のように設定し、
+* 設定:
 
    * `maxNumberVersions` = 7
 
@@ -112,7 +112,7 @@ AEM には、リポジトリの管理に役立つ様々なメカニズムが備�
 
 保持するバージョン数の最大数と最小数、および保持する最も古いバージョンを組み合わせて定義する場合の例：
 
-* 次のように設定し、
+* 設定:
 
    * `maxNumberVersions` = 3
    * `maxAgeDays` = 30

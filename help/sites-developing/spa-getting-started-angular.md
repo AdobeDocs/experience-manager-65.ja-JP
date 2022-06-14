@@ -11,7 +11,7 @@ discoiquuid: 9cdd7648-d67e-414d-aedf-a5687da39326
 docset: aem65
 exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 >[!CAUTION]
 >
->`aem-clientlib-generator` の必要な最小バージョンは 1.4.1 です。
+>必要な `aem-clientlib-generator` の最小バージョンは 1.4.1 です。
 
 `aem-clientlib-generator` は、`clientlib.config.js` ファイルで次のように設定されています。
 
@@ -288,10 +288,10 @@ AEM の SPA の中核概念は、SPA コンポーネントを AEM コンポー�
 
 ## 次の手順 {#next-steps}
 
-独自の SPA を作成する手順については、[AEM SPA Editor 使用の概要 - WKND イベントチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=ja)を参照してください。
+独自の SPA を作成する手順については、[AEM SPA Editor 使用の手引き — WKND イベントチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=ja)を参照してください。
 
-AEM 向け SPA を開発するための組織化の方法について詳しくは、[AEM 向け SPS の開発](/help/sites-developing/spa-architecture.md)を参照してください。
+効率的に AEM 向け SPA を開発する方法について詳しくは、記事 [AEM 向け SPA の開発](/help/sites-developing/spa-architecture.md)を参照してください。
 
-動的モデルからコンポーネントへのマッピングおよび AEM の SPA 内での動作について詳しくは、[SPA の動的モデルからコンポーネントへのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)を参照してください。
+動的モデルからコンポーネントへのマッピング、および　AEM の SPA 内での動作について詳しくは、[SPA の動的モデルからコンポーネントへのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の記事を参照してください。
 
-AEM に React や Angular 以外のフレームワーク用に SPA を実装する場合や、AEM 用SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
+React や Angular 以外のフレームワーク用に AEM の SPA を実装する場合や、AEM 用 SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。

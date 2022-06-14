@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b8f8bddc-0d38-4d5e-b33f-978f04bc16c6
 exl-id: 41042e08-5e14-4809-89b7-16d98a72d1b4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 100%
 
@@ -74,9 +74,9 @@ ht-degree: 100%
 1. Web ブラウザーの URL 行に https://[host name]:&#39;port&#39;/console と入力して、WebLogic 管理コンソールを起動します。
 1. WebLogic Server ドメインに対して作成したユーザー名とパスワードを入力し、「Log In」をクリックします。「Change Center」で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
-1. 次の画面で、「Configuration」タブ／「Server Start」タブをクリックします。
+1. 次の画面で、「設定タブ」、「サーバー起動」タブをクリックします。
 1. 「Arguments」ボックスで、現在の内容の末尾に必要な引数を付加します。例えば、‑ `Dadobe.healthmonitor.enabled=false` を追加すると、ヘルスモニターが無効になります。
-1. 「Save」をクリックし、「Activate Changes」をクリックします。
+1. 「保存」をクリックし、「変更をアクティベート」をクリックします。
 1. WebLogic 管理対象サーバーを再起動します。
 
 ## WebSphere への Java オプションの追加 {#add-java-options-to-websphere}
@@ -89,6 +89,6 @@ ht-degree: 100%
 
 1. 右側のウィンドウで、サーバー名をクリックします。
 1. 「Server Infrastructure」で、Java and forms workflow／Process Definition をクリックします。
-1. 「Additional Properties」で、「Java Virtual Machine」をクリックします。
+1. 「その他のプロパティ」で「Java 仮想マシン」をクリックします。
 1. 「Generic JVM arguments」ボックスに、必要な引数を入力します。
 1. 「OK」または「Apply」をクリックし、「Save directly to the master configuration」をクリックします。

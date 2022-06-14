@@ -1,8 +1,8 @@
 ---
 title: コメントの基本事項
-seo-title: コメントの基本事項
+seo-title: Comments Essentials
 description: コメントコンポーネントの概要
-seo-description: コメントコンポーネントの概要
+seo-description: Comments component overview
 uuid: 58b7bb58-f598-4bcb-93ae-b7795cab51cd
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,16 +12,16 @@ discoiquuid: 18f54a1c-52aa-414d-b494-1f19b5c10345
 exl-id: 8b4034f7-2f97-45ad-96d4-51cfbeae5991
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '344'
 ht-degree: 55%
 
 ---
 
 # コメントの基本事項 {#comments-essentials}
 
-このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本事項と、メンバーがコメントや返信を投稿する際に生成されるユーザー生成コンテンツ(UGC)を管理するためのオプションを提供します。
+このページでは、コメントシステム（コメントコンポーネント）の操作に関する基本事項と、メンバーがコメントや返信を投稿したときに生成されるユーザー生成コンテンツ (UGC) を管理するためのオプションを提供します。
 
-個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。これは、ページに含まれるコメントシステムです。 コメントシステムを呼び出すと、個々のコメントが作成されます。
+個々の投稿がそれぞれ単一のコメントコンポーネントで表されるように、コメントシステムが確立されます。ページに含まれるコメントシステムです。 コメントシステムは、呼び出されると個々のコメントを作成します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -49,7 +49,7 @@ ht-degree: 55%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td> <a href="comments.md">コメントの使用</a>を参照</td>
+   <td> 詳しくは、 <a href="comments.md">コメントの使用</a></td>
   </tr>
  </tbody>
 </table>
@@ -58,7 +58,7 @@ ht-degree: 55%
 
 ### ページごとに 1 つのインスタンス {#one-instance-per-page}
 
-ページネーションをおこなう場合、およびキャッシュやリンクのために URL を使用する場合は、コメントシステムごとに一意の URL を使用する必要があります。したがって、1ページにつき1つのコメントシステムのインスタンスのみを使用できます。
+ページネーションをおこなう場合、およびキャッシュやリンクのために URL を使用する場合は、コメントシステムごとに一意の URL を使用する必要があります。したがって、1 ページにつき 1 つのコメントシステムのインスタンスのみを使用できます。
 
 その他の機能には、コメントシステムが既に含まれています。以下のとおりです。
 
@@ -77,7 +77,7 @@ ht-degree: 55%
 
 これは、コメントシステムのすべての拡張コンポーネントに適用されます。
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [コメント API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
@@ -85,7 +85,7 @@ ht-degree: 55%
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-### 投稿されたコメント(UGC)へのアクセス{#accessing-posted-comments-ugc}
+### 投稿されたコメント（UGC）へのアクセス {#accessing-posted-comments-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -93,9 +93,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md)  — 概要とリポジトリの使用方法の概要。
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
-* [SocialUtilsのリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [ストレージリソースプロバイダの概要](srp.md)  — の概要とリポジトリの使用の概要。
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
+* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。

@@ -12,7 +12,7 @@ discoiquuid: 180cac3f-6378-42bc-9a47-60f9f08a7103
 role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '7850'
 ht-degree: 100%
 
@@ -203,7 +203,7 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義 `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1` を使用していることを確認します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -217,16 +217,16 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` に AEM Forms ユーザー名を割り当てます。
-      * フィールド `GeneratePDFServiceClient.ClientCredentials.UserName.Password` に対応するパスワード値を割り当てます。
-      * フィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に定数値 `HttpClientCredentialType.Basic` を割り当てます。
+      * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * フィールド `BasicHttpBindingSecurity.Security.Mode` に定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を割り当てます。
 
 1. PDF ドキュメントに変換するファイルを取得します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、PDF ドキュメントに変換するファイルを格納するために使用されます。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを作成します。変換するファイルの場所を表す文字列値とファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得してバイト配列のサイズを決定します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    *  `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み込み対象のバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
    * `MTOM` プロパティにバイト配列の内容を割り当て、`BLOB` オブジェクトにデータを入力します。
 
@@ -241,7 +241,7 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
    * 使用するセキュリティ設定を含む文字列オブジェクト。 `No Security` を指定できます。
    * PDF ドキュメントの生成中に適用される設定を含むオプションの `BLOB` オブジェクト。
    * PDF ドキュメントに適用されるメタデータ情報を含むオプションの `BLOB` オブジェクト。
-   * `CreatePDF2` メソッドによって入力されるタイプ `BLOB` の出力パラメーター。`CreatePDF2` メソッドは、このオブジェクトに変換後のドキュメントを入力します。 （このパラメーター値は、web サービスの呼び出しにのみ必要です）。
+   * `CreatePDF2` メソッドによって入力されるタイプ `BLOB` の出力パラメーター。`CreatePDF2` メソッドは、変換されたドキュメントをこのオブジェクトに入力します。（このパラメーター値は、web サービスの呼び出しにのみ必要です）。
    * `CreatePDF2` メソッドによって入力される `BLOB` 型の出力パラメーター。`CreatePDF2` メソッドは、このオブジェクトにログドキュメントを入力します。 （このパラメーター値は、web サービスの呼び出しにのみ必要です）。
 
 1. 結果を取得します。
@@ -249,9 +249,9 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
    * 変換後の PDF ドキュメントを取得するには、`BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。 バイト配列は変換後の PDF ドキュメントを表します。`createPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
    * コンストラクターを呼び出して変換された PDF ドキュメントのファイルの場所を表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列のコンテンツを PDF ファイルに書き込みます。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
-**関連トピック**
+**関連トピック：**
 
 [手順の概要](converting-file-formats-pdf.md#summary-of-steps)
 
@@ -360,23 +360,23 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用していることを確認します：`http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1`。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置き換えます。
+   >`localhost` を AEM Forms をホスティングするサーバーの IP アドレスに置換します。
 
 1. PDF 生成クライアントを作成します。
 
-   * デフォルトのコンストラクタを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例： `http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
-   * `GeneratePDFServiceClient.Endpoint.Binding` フィールドに値を入力し、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` を設定します。この値により、MTOM が確実に使用されます。
+   * デフォルトのコンストラクターを使用して `GeneratePDFServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `GeneratePDFServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
+   * `GeneratePDFServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` に AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド `GeneratePDFServiceClient.ClientCredentials.UserName.Password` に割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. HTML コンテンツを取得して PDF ドキュメントに変換します。
@@ -391,15 +391,15 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
    * 変換処理で使用されるファイルタイプ設定を含む `java.lang.String` オブジェクト。
    * 使用するセキュリティ設定を含む文字列オブジェクト。
    * PDF ドキュメントの生成時に適用される設定を含むオプションの `BLOB` オブジェクト。
-   * PDF ドキュメントに適用するメタデータ情報を含むオプションの `BLOB` オブジェクト。
-   * `CreatePDF2` メソッドにより入力される `BLOB` タイプの出力パラメーター。`CreatePDF2` メソッドは、このオブジェクトに変換後のドキュメントを入力します。（このパラメーター値は、web サービスの呼び出しにのみ必要です）。
+   * PDF ドキュメントに適用されるメタデータ情報を含むオプションの `BLOB` オブジェクト。
+   * `CreatePDF2` メソッドによって入力されるタイプ `BLOB` の出力パラメーター。`CreatePDF2` メソッドは、変換されたドキュメントをこのオブジェクトに入力します。（このパラメーター値は、web サービスの呼び出しにのみ必要です）。
 
 1. 結果を取得します。
 
-   * 変換後の PDF ドキュメントを取得するには、`BLOB` オブジェクトの `MTOM` フィールドをバイト配列に割り当てます。バイト配列は変換後の PDF ドキュメントを表します。必ず `HtmlToPDF2` メソッドの出力パラメーターとして使用されている `BLOB` オブジェクトを使用してください。
-   * コンストラクターを呼び出し、変換された PDF ドキュメントのファイルの場所を表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
-   * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって `System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
+   * 変換後の PDF ドキュメントを取得するには、`BLOB` オブジェクトの `MTOM` フィールドをバイト配列に変換します。 バイト配列は変換後の PDF ドキュメントを表します。`HtmlToPDF2` メソッドの出力パラメーターとして使用される `BLOB` オブジェクトを使用していることを確認してください。
+   * コンストラクターを呼び出して変換された PDF ドキュメントのファイルの場所を表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。
+   * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -431,7 +431,7 @@ PDF ドキュメントをサポートされている任意のタイプに変換�
 
 必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**Generate PDF クライアントを作成**
+**PDF 生成クライアントの作成**
 
 プログラムによって「PDF を生成」操作を実行する前に、PDF 生成サービスクライアントを作成する必要があります。 Java API を使用している場合は、`GeneratePdfServiceClient` オブジェクトを作成します。Web サービス API を使用している場合は、`GeneratePDFServiceService` オブジェクトを作成します。
 
@@ -511,7 +511,7 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1` を使用していることを確認します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/GeneratePDFService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -525,17 +525,17 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` にAEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド `GeneratePDFServiceClient.ClientCredentials.UserName.Password` に割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変換する PDF ドキュメントを取得します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、変換された PDF ドキュメントの保存に使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得して決定します。
-   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   *  `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して読み込み対象のバイト配列、開始位置、ストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
    * `MTOM` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
 
 1. PDF ドキュメントを変換します。

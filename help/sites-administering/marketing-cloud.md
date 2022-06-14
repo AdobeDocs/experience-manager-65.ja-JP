@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
 source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 100%
 
@@ -45,7 +45,7 @@ Adobe Analytics との統合によって、次の操作ができるようにな�
 
 AEM と Analytics の統合について詳しくは、[Adobe Analytics との統合](/help/sites-administering/adobeanalytics.md)を参照してください。
 
-また、[オプトインウィザード](/help/sites-administering/opt-in.md)を使用して簡単に統合を実行できます。
+[オプトインウィザード](/help/sites-administering/opt-in.md)を使用して簡単に統合を行うこともできます。
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 

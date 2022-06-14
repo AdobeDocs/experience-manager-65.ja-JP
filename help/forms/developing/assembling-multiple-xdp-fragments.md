@@ -14,7 +14,7 @@ docset: aem65
 role: Developer
 exl-id: 54d98c69-2b2e-46cb-9f6a-7e9bdbe5c378
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 100%
 
@@ -165,11 +165,11 @@ Assembler Service API（Java）を使用して、複数の XDP フラグメン�
 1. PDF Assembler クライアントを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して、`ServiceClientFactory` オブジェクトを渡すことで、`AssemblerServiceClient` オブジェクトを作成します。
+   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことにより、`AssemblerServiceClient` オブジェクトを作成します。
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクターを使用して、DDX ファイルの場所を指定する文字列値を渡すことで、DDXドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクタを使用し、DDX ファイルの場所を指定する文字列値を渡すことによって、その DDX ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
 
 1. XDP ドキュメントを参照します。
@@ -184,7 +184,7 @@ Assembler Service API（Java）を使用して、複数の XDP フラグメン�
 1. 実行時オプションを設定します。
 
    * コンストラクターを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすように実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
+   * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。例えば、エラーが発生したときにジョブの処理を続行するように Assembler サービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
 
 1. 複数の XDP ドキュメントをアセンブリします。
 
@@ -200,8 +200,8 @@ Assembler Service API（Java）を使用して、複数の XDP フラグメン�
 
    作成された XDP ドキュメントを取得するには、以下の操作を実行します。
 
-   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。 このメソッドは、 `java.util.Map` オブジェクトを返します。
-   * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで `java.util.Map` オブジェクトを反復処理します。
+   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。 このメソッドは、`java.util.Map` オブジェクトを返します。
+   * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで、`java.util.Map` オブジェクトを反復処理します。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、作成された XDP ドキュメントを抽出します。
 
 **関連トピック**
@@ -229,9 +229,9 @@ Assembler Service API（web サービス）を使用して、複数の XDP フ�
 
 1. PDF Assembler クライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
+   * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値（例：`https://localhost:8080/soap/services/AssemblerService?blob=mtom`）を AEM Forms サービスに渡します。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
-   * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
@@ -242,9 +242,9 @@ Assembler Service API（web サービス）を使用して、複数の XDP フ�
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクターを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントを格納するために使用されます。
-   * コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得して決定します。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、DDX ドキュメントを格納するために使用されます。
+   * コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列の内容を割り当てて、`BLOB` オブジェクトに入力します。
 
@@ -252,7 +252,7 @@ Assembler Service API（web サービス）を使用して、複数の XDP フ�
 
    * 入力 XDP ファイルごとに、コンストラクタ―を使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、入力ファイルを格納するために使用されます。
    * コンストラクターを呼び出し、入力ファイルのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   *  `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得して決定します。
+   *  `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てて、`BLOB` オブジェクトにデータを入力します。
    * `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを作成します。このコレクションオブジェクトは、XDP ドキュメントの作成に必要な入力ファイルを格納するために使用されます。
@@ -263,15 +263,15 @@ Assembler Service API（web サービス）を使用して、複数の XDP フ�
 
 1. 実行時オプションを設定します。
 
-   * コンストラクターを使用して、実行時オプションを格納する `AssemblerOptionSpec` オブジェクトを作成します。
-   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てて、ビジネス要件を満たすように実行時オプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` を `AssemblerOptionSpec` オブジェクトの `failOnError` データメンバーに割り当てます。
+   * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
+   * `AssemblerOptionSpec` オブジェクトに属するデータメンバーに値を割り当てることで、ビジネス要件に応じたランタイムオプションを設定します。例えば、エラーが発生した場合にジョブの処理を続行するように Assembler サービスに指示するには、 `false` を `AssemblerOptionSpec` オブジェクトの `failOnError` データメンバーに割り当てます。
 
 1. 複数の XDP ドキュメントをアセンブリします。
 
    `AssemblerServiceClient` オブジェクトの `invokeDDX` メソッドを呼び出して、以下の値を渡します。
 
    * DDX ドキュメントを表す `BLOB` オブジェクト
-   * 必須ファイルを含む `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト
+   * 必要なファイルを含む `MyMapOf_xsd_string_To_xsd_anyType` オブジェクト
    * 実行時オプションを指定する `AssemblerOptionSpec` オブジェクト
 
    `invokeDDX` メソッドは、ジョブの結果と例外（発生した場合）を含む `AssemblerResult` オブジェクトを返します。
@@ -281,7 +281,7 @@ Assembler Service API（web サービス）を使用して、複数の XDP フ�
    新しく作成した XDP ドキュメントを取得するには、次の操作を実行します。
 
    * `AssemblerResult` オブジェクトの `documents` フィールドにアクセスします。これは、結果の PDF ドキュメントを格納する `Map` オブジェクトです。
-   * `Map` オブジェクトを反復処理して各結果ドキュメントを取得します。次に、その配列メンバーの `value` を `BLOB` にキャストします。
+   * `Map` オブジェクトを反復処理して各結果ドキュメントを取得します。次に、その配列メンバーの`value`を`BLOB`にキャストします。
    * `BLOB` オブジェクトの `MTOM` プロパティにアクセスして、PDF ドキュメントを表すバイナリデータを抽出します。XDP ファイルに書き出すことができるバイトの配列を返します。
 
 **関連トピック**

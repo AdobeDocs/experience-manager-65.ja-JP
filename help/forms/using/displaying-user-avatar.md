@@ -11,7 +11,7 @@ topic-tags: forms-workspace
 discoiquuid: aec03ea5-17a6-4775-92cb-2ad361895fdf
 exl-id: ee0708b0-b630-4a2b-84b6-3c0b92dd7777
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 100%
 
@@ -83,5 +83,5 @@ ht-degree: 100%
    </component>
    ```
 
-1. Workbench を介して DSC をデプロイします。`ProcessManagementClientSessionService` サービスを再起動します。
+1. Workbench を介して DSC をデプロイします。再起動 `ProcessManagementClientSessionService` サービス。
 1. ブラウザーを更新するか、ユーザーでログアウトまたはログインをし直す必要があります。

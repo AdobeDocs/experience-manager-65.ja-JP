@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 100%
 
@@ -50,7 +50,7 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [オーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-## Sites {#sites}
+## サイト {#sites}
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
@@ -79,7 +79,7 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
  </tbody>
 </table>
 
-## Communities {#communities}
+## コミュニティ {#communities}
 
 [AEM Communities](/help/communities/overview.md) を使用すると、オンプレミスのコミュニティの作成と管理が容易になります。
 

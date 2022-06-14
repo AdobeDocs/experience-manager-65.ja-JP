@@ -12,7 +12,7 @@ discoiquuid: 8d32960c-47c3-4e92-b02e-ad4d8fea7b2d
 docset: aem65
 exl-id: 1f46a57f-4966-4dd1-8c99-c0740718ae76
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 100%
 
@@ -60,7 +60,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 ![chlimage_1-102](assets/chlimage_1-102.png)
 
-## 検索および置換 {#find-and-replace}
+## 検索と置換 {#find-and-replace}
 
 **Web サイト**&#x200B;コンソールの「**検索と置換**」メニューオプションでは、Web サイトの特定のセクション内で特定の文字列を持つ複数のインスタンスを検索して置換できます。
 
@@ -83,7 +83,7 @@ AEM のオーサー環境は、リソースタイプに応じて、コンテン�
 
 1. 「**置換**」をクリックすると、すべてのインスタンスが置換されます。この操作の確認が求められます。
 
-検索と置換サーブレットのデフォルトのスコープには、以下のプロパティが含まれます。
+検索と置換のサーブレットのデフォルトスコープには、次のプロパティが含まれています。
 
 * `jcr:title`
 * `jcr:description`

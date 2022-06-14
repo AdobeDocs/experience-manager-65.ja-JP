@@ -12,7 +12,7 @@ discoiquuid: f4415aeb-5c1b-4087-b60f-b2ea952c52b5
 role: Developer
 exl-id: dc99dd4d-fce9-4ec5-9b51-661d37a21559
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 100%
 
@@ -445,7 +445,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの作成 {#quick_start_soap_mode_creating_a_pdf_document_using_the_java_api-1}
 
-次の Java コードの例では、*Loan.pdf* という PDF ドキュメントを作成します。この PDF ドキュメントは、*Loan.xdp* という名前のフォームデザインと *Loan.xml* という名前の XML データファイルに基づいて作成されます。この *Loan.pdf* は、クライアントコンピューターではなく、AEM Forms をホストしている J2EE アプリケーションサーバー上の C:\Adobe フォルダーに書き込まれます（[PDF ドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents)を参照してください）。
+次の Java コードの例では、*Loan.pdf* という PDF ドキュメントを作成します。 この PDF ドキュメントは、*Loan.xdp* という名前のフォームデザインと *Loan.xml* という名前の XML データファイルに基づいて作成されます。この *Loan.pdf* は、クライアントコンピューターではなく、AEM Forms をホストしている J2EE アプリケーションサーバー上の C:\Adobe フォルダーに書き込まれます（[PDF ドキュメントの作成](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents)を参照してください）。
 
 ```java
  /*

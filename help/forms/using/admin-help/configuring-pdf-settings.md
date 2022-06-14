@@ -12,7 +12,7 @@ discoiquuid: ab018b6d-0233-4439-bb75-58c5421d769a
 feature: PDF Generator
 exl-id: 1bcb8429-c06e-4bd3-b422-4c512084dd09
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '7265'
 ht-degree: 100%
 
@@ -317,7 +317,7 @@ PDF 設定をローカルコンピューターまたはネットワークの場�
 
 >[!NOTE]
 >
->フォントは Windows システムのフォントのキャッシュから選択されます。キャッシュを更新するにはシステムを再起動する必要があります。カスタマーフォントディレクトリを指定した後、AEM Forms がインストールされているシステムを再起動します。
+>フォントは Windows システムのフォントのキャッシュから選択されます。キャッシュを更新するにはシステムを再起動する必要があります。カスタマーフォントディレクトリを指定した後、AEM Forms をインストールしているシステムを再起動してください。
 
 ## カラーオプション {#color-options}
 
@@ -437,7 +437,7 @@ PDF 設定をローカルコンピューターまたはネットワークの場�
 
 **Resize Page and Center Artwork For EPS Files：** EPS 画像を中央に配置し、画像の周囲にぴったりと収まるようにページのサイズを変更します。このオプションは、1 つの EPS ファイルで構成されるジョブにのみ適用されます。
 
-## 規格への準拠とレポートオプション {#standards-reporting-and-compliance-options}
+## 標準規格のレポートと準拠のオプション {#standards-reporting-and-compliance-options}
 
 PDF Generator では、PostScript ファイル内のドキュメントコンテンツをチェックし、PDF ファイルを作成する前に標準の PDF/X-1a、PDF/X-3 または PDF/A 基準を満たしているかどうかを確認できます。PDF/X 準拠ファイルの場合は、「規格への準拠とレポート」で他のオプションを選択して、PostScript ファイルが追加の基準を満たすことを必須にすることもできます。これらのオプションが使用可能かどうかは、選択した規格に応じて異なります。
 

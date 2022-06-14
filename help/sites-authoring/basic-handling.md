@@ -1,5 +1,5 @@
 ---
-title: '基本操作 '
+title: 基本操作
 seo-title: Basic Handling
 description: AEM のナビゲーションとその基本的な使用方法を習得します
 seo-description: Get comfortable with navigating AEM and its basic usage
@@ -12,7 +12,7 @@ discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2969'
 ht-degree: 100%
 
@@ -249,7 +249,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
    コンソールに最初にアクセスしたときの[製品ナビゲーションの概要](/help/sites-authoring/basic-handling.md#product-navigation)と同様に、この概要をナビゲートします。
 
-   このスライドをもう一度表示するには、[**ページ情報**&#x200B;メニューの「**ヘルプ**](/help/sites-authoring/author-environment-tools.md#accessing-help)」を選択します。
+   このスライドをもう一度表示するには、 [**ページ情報** メニューの「**ヘルプ**](/help/sites-authoring/author-environment-tools.md#accessing-help)」を選択します。
 
 * **ツールコンソール**
 
@@ -266,7 +266,7 @@ Web Experience Management のドキュメントを表示します。
    >
    >すべてのキーボードショートカットの概要については、次のドキュメントを参照してください。
    >
-   >    * [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+   >    * [ページ編集のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    >    * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
 

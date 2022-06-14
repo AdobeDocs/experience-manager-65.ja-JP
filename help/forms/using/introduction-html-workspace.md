@@ -12,7 +12,7 @@ discoiquuid: 4c89d017-0d4b-4fa2-b648-342f3c755350
 docset: aem65
 exl-id: e6759ffd-cf63-4684-a1d7-208fbe55aaed
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ AEM Forms Workspace はより多くのデバイスやフォームファクター
 
 ![html-ws](assets/html-ws.png)
 
-**主な機能**：
+**主な機能**:
 
 * プロセスの参加者はどこにいても動的な PDF フォーム、モバイルインターフェース、 Web アプリケーションで連絡が取れます。
 * Workspace コンポーネントを Web アプリケーションで容易に統合できます。AEM Forms Workspace は容易にカスタマイズや再利用が可能なコンポーネントベースのソフトウェアです。

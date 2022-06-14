@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: cf25c9a8-0555-4c67-8aa5-55984fd8d301
 exl-id: f14cc5fd-aeab-4619-b926-b6f1df7e50e5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 100%
 
@@ -51,7 +51,7 @@ BrightEdge クラウド設定を作成して、AEM で BrightEdge アカウン�
 
 ページを BrightEdge 設定に関連付けて、分析のためにページデータを BrightEdge サービスに送信します。ページを設定に関連付ける場合は、子ページが関連付けを継承します。通常、サイトのホームページを関連付けて、すべてのページからのデータが BrightEdge に送信されるようにします。
 
-1. クラシック Web サイトコンソールを開きます。（[http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content)）
+1. クラシック Web サイトコンソールを開きます。([http://localhost:4502/siteadmin#/content](http://localhost:4502/siteadmin#/content))
 1. Web サイトツリーで、BrightEdge 設定を関連付けたいページを含むフォルダーまたはページを選択します。
 1. ページのリストで、設定するページを右クリックして、「プロパティ」をクリックします。
 1. 「クラウドサービス」タブで、「サービスを追加」ボタンをクリックし、クラウドサービスダイアログで BrightEdge Content Optimizer を選択して、「OK」をクリックします。

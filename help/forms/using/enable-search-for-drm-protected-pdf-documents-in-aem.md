@@ -13,7 +13,7 @@ docset: aem65
 feature: Document Security
 exl-id: 7cf17fb6-021a-473e-bc3b-27c317953002
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 1. **Adobe LiveCycle Client SDK** Bundle を探して開きます。次の各プロパティの値を指定します。
 
    * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
-   * **2way SSL の有効化**：「2way SSL の有効化」を有効にします。
+   * **2way SSL の有効化**：「2way SSL の有効化」オプションを有効にします。
    * **キーストアファイル URL**：キーストアファイルの URL を指定します。
    * **TrustStore ファイル URL**：Truststore ファイルの URL を指定します.
    * **キーストアパスワード**：キーストアファイルのパスワードを指定します。

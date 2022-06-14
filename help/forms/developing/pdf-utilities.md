@@ -12,7 +12,7 @@ discoiquuid: d816bf2e-5236-4084-b7c4-c32b72cdff97
 role: Developer
 exl-id: e4b204ee-7261-42b8-8db8-a92aa9fd0a28
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2579'
 ht-degree: 100%
 
@@ -85,11 +85,11 @@ PDF Utilities API(Java) を使用して、PDF ドキュメントを XDP ドキ�
 
 1. PDFUtilityService クライアントの作成
 
-   コンストラクターを使用して、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
+   コンストラクターを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことにより、`PDFUtilityServiceClient` オブジェクトを作成します。
 
 1. PDF を XDP に変換する操作を呼び出す
 
-   変換を実行するには、`PDFUtilityServiceClient` オブジェクトの `convertPDFtoXDP` メソッドを呼び出して、PDF ファイルを表す `com.adobe.idp.Document` オブジェクトに渡します。このメソッドは、新しく作成された XDP ファイルを表す `com.adobe.idp.Document` オブジェクトを返します。
+   コンバージョンを実行するには、 `PDFUtilityServiceClient` オブジェクトの `convertPDFtoXDP` メソッドを呼び出して PDF ファイルを表す `com.adobe.idp.Document` オブジェクトを渡します。このメソッドは、新しく作成された XDP ファイルを表す `com.adobe.idp.Document` オブジェクトを返します。
 
 **関連情報**
 
@@ -293,7 +293,7 @@ PDF Utilities web サービス API を使用して、PDF ドキュメントの�
 
 1. プロパティ取得操作を呼び出す
 
-   コンバージョンを実行するには、 `PDFUtilityServiceService` オブジェクトの `getPDFProperties` メソッドを使用して、以下を渡します。
+   変換を実行するには、 `PDFUtilityServiceService` オブジェクトの `getPDFProperties` メソッドを使用して、以下を渡します。
 
    * PDF ドキュメントを表す `BLOB` オブジェクト。
    * 評価されるプロパティを含む `PDFPropertiesOptionSpec` オブジェクト。
@@ -425,9 +425,9 @@ PDF Utilities AP（web サービス）を使用して、PDF ドキュメント�
 
 1. スタイル保存操作を呼び出す
 
-   `PDFUtilityServiceService` オブジェクトの `setSaveMode` メソッドを使用して呼び出し、次の値を渡します。
+   `PDFUtilityServiceService` オブジェクトの `setSaveMode` メソッドを呼び出して、次の値を渡します。
 
-   * PDF ドキュメントを表す `BLOB` オブジェクトです。
+   * PDF ドキュメントを表す `BLOB` オブジェクト。
    * 使用する保存スタイルを含む `PDFUtilitySaveMode` オブジェクト。
    * 以前の設定を上書きするかどうかを指定するブール値。
 
@@ -437,7 +437,7 @@ PDF Utilities AP（web サービス）を使用して、PDF ドキュメント�
 
    * 返された `BLOB` オブジェクトを別の AEM Forms 操作に渡します。
 
-**関連項目**
+**関連情報**
 
 [PDF ドキュメントの保存モードを設定する](pdf-utilities.md#setting-pdf-document-save-modes)
 

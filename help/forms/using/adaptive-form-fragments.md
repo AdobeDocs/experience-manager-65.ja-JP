@@ -11,7 +11,7 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 2f276e9d-b3c1-48f7-a94a-bdf7eb15a031
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2055'
 ht-degree: 100%
 
@@ -186,15 +186,15 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
   </tr>
   <tr>
    <td><p>プロパティを表示</p> </td>
-   <td><p>プロパティパネルを開きます。プロパティパネルから、プロパティを表示し編集したり、プレビューを生成したり、選択したフラグメントのサムネイル画像をアップロードしたりできます。詳しくは、「<a href="../../forms/using/manage-form-metadata.md" target="_blank">メタデータの管理</a>」を参照してください。<br /><br /> </p> </td>
+   <td><p>プロパティパネルを開きます。プロパティパネルから、プロパティを表示し編集したり、プレビューを生成したり、選択したフラグメントのサムネイル画像をアップロードしたりできます。詳しくは、「<a href="../../forms/using/manage-form-metadata.md" target="_blank">メタデータの管理</a>」を参照してください。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>コピー</p> </td>
-   <td><p>選択されているフラグメントをコピーします。貼り付けボタンがツールバーに表示されます。<br /><br /> </p> </td>
+   <td><p>選択されているフラグメントをコピーします。貼り付けボタンがツールバーに表示されます。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>ダウンロード</p> </td>
-   <td><p>選択されているフラグメントをダウンロードします。<br /><br /> </p> </td>
+   <td><p>選択されているフラグメントをダウンロードします。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>プレビュー</p> </td>
@@ -210,11 +210,11 @@ AEM Forms UI を使用して、アダプティブフォームフラグメント�
   </tr>
   <tr>
    <td><p>公開／非公開</p> </td>
-   <td><p>選択されているフラグメントを公開／非公開します。<br /><br /> </p> </td>
+   <td><p>選択されているフラグメントを公開／非公開します。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>削除</p> </td>
-   <td><p>選択されているフラグメントを削除します。<br /><br /> </p> </td>
+   <td><p>選択されているフラグメントを削除します。<br /> <br /> </p> </td>
   </tr>
  </tbody>
 </table>

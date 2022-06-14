@@ -12,7 +12,7 @@ discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5317'
 ht-degree: 100%
 
@@ -223,7 +223,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 例えば、Geometrixx Media サイトのルートページは `/content/geometrixx-media` です。`/content/geometrixx-media/jcr:content` ノードには次のプロパティがあります。
 
 * 名前：`cq:deviceGroups`
-* 型：`String[]`
+* タイプ：`String[]`
 * 値：`/etc/mobile/groups/responsive`
 
 [デバイスグループを作成および編集する](/help/sites-developing/groupfilters.md)には、ツールコンソールを使用します。

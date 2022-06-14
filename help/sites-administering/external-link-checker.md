@@ -3,7 +3,7 @@ title: リンクチェッカー
 description: リンクチェッカーは、内部リンクと外部リンクの両方を検証し、リンクの書き換えを許可するのに役立ちます。
 exl-id: 8ec4c399-b192-46fd-be77-3f49b83ce711
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 100%
 
@@ -46,7 +46,7 @@ ht-degree: 100%
 外部リンクは、AEM リポジトリ外のコンテンツへのリンクです。 外部リンクは、RTE を使用するか、カスタムコンポーネントを使用して追加できます。 次に例を示します。
 
 * ページ `/content/wknd/us/en/adventures/ski-touring.html`
-* [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja)内の `https://bunwarmerthermalunderwear.com` へのリンクが含まれます。
+* [テキストコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)内の `https://bunwarmerthermalunderwear.com` へのリンクが含まれます。
 
 外部リンクは、構文や、使用可能かどうかを確認することで検証されます。 このチェックは、設定可能な内部で非同期的に実行されます。 リンクチェッカーで外部リンクが無効であることが検出された場合：
 

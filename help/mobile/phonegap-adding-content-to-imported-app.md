@@ -1,8 +1,8 @@
 ---
 title: ハイブリッドアプリの AEM Mobile 対応
-seo-title: ハイブリッドアプリの AEM Mobile 対応
+seo-title: Is your hybrid app ready for AEM Mobile?
 description: このページでは、ハイブリッドアプリについて説明します。AEM のアプリは一般に 2 つの部分に分かれています。それらは、「シェル」と「コンテンツ」です。このページでは、これらのトピックについて詳しく説明します。
-seo-description: このページでは、ハイブリッドアプリについて説明します。AEM のアプリは一般に 2 つの部分に分かれています。それらは、「シェル」と「コンテンツ」です。このページでは、これらのトピックについて詳しく説明します。
+seo-description: Follow this page to learn about hrybrid apps. An app in AEM is commonly divided into two parts. The 'shell' and 'content' and this page provides more insight on these topics.
 uuid: cbcce3fa-9100-46ea-9f24-931b42666709
 contentOwner: User
 content-type: reference
@@ -13,7 +13,7 @@ pagetitle: Is your hybrid app ready for AEM Mobile?
 exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '741'
 ht-degree: 97%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 ハイブリッド PhoneGap または Cordova アプリを AEM に読み込んだら、次の手順として、オーサリング可能なコンテンツをアプリに追加することができます。このタスクを実行するには、AEM アプリの構造を全般的に理解する必要があります。AEM のアプリは一般に 2 つの部分に分かれています。つまり、「シェル」と「コンテンツ」です。「シェル」は、PhoneGap 設定ファイル、アプリフレームワーク、ナビゲーションコントロールなど、アプリの静的な部分で構成されます。読み込んだアーカイブの内容は、シェルの一部として保存されています。このドキュメントのコンテキストでは、シェルは、アプリ開発者によってビルドされたハイブリッド PhoneGap アプリのコンテンツのうち、AEM 以外で作成されたものすべてです。
 
@@ -34,7 +34,7 @@ ht-degree: 97%
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-この例では、アプリケーションのようこそページを作成します。ソース[https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75)を見てみましょう。 アプリ開発者がようこそページを定義し、アプリでレンダリングされるページのテンプレートを提供していることがわかります。ここで、アプリ開発者と AEM 開発者が連携して作業する必要があります。Hybrid Reference App のようこそページのテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。AEM 開発者は同じパスを使用して AEM リポジトリ内にようこそページを作成するので、このパスは非常に重要です。
+この例では、アプリケーションのようこそページを作成します。ソースを見る [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75). アプリ開発者がようこそページを定義し、アプリでレンダリングされるページのテンプレートを提供していることがわかります。ここで、アプリ開発者と AEM 開発者が連携して作業する必要があります。Hybrid Reference App のようこそページのテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。AEM 開発者は同じパスを使用して AEM リポジトリ内にようこそページを作成するので、このパスは非常に重要です。
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 

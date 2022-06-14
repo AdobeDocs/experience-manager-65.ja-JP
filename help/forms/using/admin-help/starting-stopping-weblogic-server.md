@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/maintaining_the_application_server
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c908d064-6596-473a-b218-22a2496c83f7
 source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 100%
 
@@ -64,7 +64,7 @@ ht-degree: 100%
 
 1. Web ブラウザーの URL 行に `https://[host name]:7001/console` と入力して、WebLogic Server 管理コンソールを起動します。
 1. この WebLogic 設定の作成時に使用したユーザー名とパスワードを入力して、「Log In」をクリックし、ログインします。
-1. 「Change Center」で、「Lock &amp; Edit」をクリックします。
+1. Change Center で、「Lock &amp; Edit」をクリックします。
 1. 「Domain Structure」で、Environment／Servers をクリックします。
 1. 「AdminServer」をクリックして、Settings for AdminServer ウィンドウの「Control」タブをクリックします。
 1. Server Status テーブルで AdminServer が選択されていることを確認して、「Shutdown」をクリックします。

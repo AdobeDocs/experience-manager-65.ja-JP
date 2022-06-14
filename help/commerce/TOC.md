@@ -6,7 +6,7 @@ user-guide-description: AEM コンテンツとコマースの使用方法と管�
 source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 91%
    + オーサリング {#authoring}
       + [コマースエクスペリエンス](cif/authoring/authoring-commerce-experiences.md)
       + [製品コックピット](cif/authoring/product-cockpit.md)
-      + [製品データと関連コンテンツのエンリッチメント](cif/authoring/enrich-product-associated-content.md)
+      + [関連コンテンツで製品データをエンリッチメント](cif/authoring/enrich-product-associated-content.md)
       + [製品のレコメンデーション](cif/authoring/product-recommendations.md)
    + 管理 {#administering}
       + [マルチストアの設定](cif/configuring/multi-store-setup.md)

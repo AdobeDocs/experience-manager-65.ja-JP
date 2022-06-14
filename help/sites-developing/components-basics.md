@@ -12,7 +12,7 @@ discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4952'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ AEM 6.4 で廃止された ExtJS テクノロジーに基づくユーザーイ�
 
 HTL は、AEM 6.0 で導入された HTML テンプレート言語です。
 
-独自コンポーネントの開発時に [HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html) と JSP（Java Server Pages）のどちらを使用すべきかという質問への回答は明快です。現在では、HTL が AEM の推奨スクリプティング言語とされています。
+独自コンポーネントの開発時に [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) と JSP（Java Server Pages）のどちらを使用すべきかという質問への回答は明快です。現在では、HTL が AEM の推奨スクリプティング言語とされています。
 
 HTL と JSP はどちらも、クラシック UI とタッチ操作対応 UI の両方のコンポーネントの開発に使用できます。HTL はタッチ操作対応 UI 専用で JSP はクラシック UI 用だと想定する傾向があるかもしれませんが、これは時期に起因する誤解です。タッチ操作対応 UI と HTL は、ほぼ同時期に AEM に組み込まれました。HTL は現在推奨される言語なので、新しいコンポーネントに使用されており、このため、タッチ操作対応 UI に使用される傾向があります。
 

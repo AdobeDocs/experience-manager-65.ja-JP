@@ -1,8 +1,8 @@
 ---
 title: メッセージングの基本事項
-seo-title: メッセージングの基本事項
+seo-title: Messaging Essentials
 description: メッセージングコンポーネントの概要
-seo-description: メッセージングコンポーネントの概要
+seo-description: Messaging component overview
 uuid: e0dad45e-d84d-4b28-b357-aded1c5d2605
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 34%
+source-wordcount: '389'
+ht-degree: 33%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 34%
 
 このページでは、メッセージングコンポーネントを使用してメッセージング機能を Web サイトに組み込む方法の詳細をまとめています。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 **メッセージを作成**
 
@@ -46,7 +46,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><a href="/help/communities/configure-messaging.md" target="_blank">メッセージングの設定</a>を参照してください。</td>
+   <td>詳しくは、 <a href="/help/communities/configure-messaging.md" target="_blank">メッセージの設定</a></td>
   </tr>
   <tr>
    <td><strong>管理設定</strong></td>
@@ -79,7 +79,7 @@ ht-degree: 34%
   </tr>
   <tr>
    <td><strong>プロパティ</strong></td>
-   <td><a href="/help/communities/configure-messaging.md" target="_blank">メッセージングの設定</a>を参照してください。</td>
+   <td>詳しくは、 <a href="/help/communities/configure-messaging.md" target="_blank">メッセージの設定</a></td>
   </tr>
   <tr>
    <td><strong>管理設定</strong></td>
@@ -90,24 +90,22 @@ ht-degree: 34%
 
 [クライアント側のカスタマイズ](/help/communities/client-customize.md)も参照してください。
 
-## サーバー側の基本事項  {#essentials-for-server-side}
+## サーバー側の基本事項 {#essentials-for-server-side}
 
 * [メッセージングの設定](/help/communities/configure-messaging.md)
-* [SCFコンポーネントの](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) メッセージングクライアントAPI
+* [メッセージングクライアント API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html) （SCF コンポーネント用）
 * [メッセージング API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)（サービス用）
 * [メッセージングエンドポイント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [サーバー側のカスタマイズ](/help/communities/server-customize.md)
 
 >[!CAUTION]
 >
->次のMessageBuilderメソッドの文字列パラメーターは、**&#x200B;ではなく、末尾にスラッシュ「/」を含める必要があります。
+>String パラメーターは必ず指定する必要があります *not* 次の MessageBuilder メソッドの末尾にスラッシュ「/」が含まれている場合：
 >
 >* `setInboxPath`()
 >* `setSentItemsPath`()
-
 >
->
-以下に例を示します。
+>次に例を示します。
 >
 >
 ```
@@ -117,36 +115,36 @@ ht-degree: 34%
 
 ### コミュニティサイト {#community-site}
 
-ウィザードを使用して作成されたコミュニティサイト構造には、選択時にメッセージング機能が含まれます。 [コミュニティサイトコンソール](/help/communities/sites-console.md#user-management)の`User Management`設定を参照してください。
+ウィザードを使用して作成されたコミュニティサイト構造には、選択するとメッセージング機能が含まれます。 詳しくは、 `User Management` 設定 [コミュニティサイトコンソール](/help/communities/sites-console.md#user-management).
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 
-ソーシャルメッセージ機能では、操作に関するイベント（例：`send`、`marking read`、`marking delete`）がスローされます。 これらのイベントは、イベントに含まれるデータに対して実行されるアクションをキャッチできます。
+ソーシャルメッセージ機能では、操作に関するイベント ( 例えば、 `send`, `marking read`, `marking delete`. これらのイベントを取得し、イベントに含まれるデータに対して実行されるアクションを取得できます。
 
-次の例は、`message sent`イベントをリッスンし、`Day CQ Mail Service`を使用してすべてのメッセージ受信者に電子メールを送信するイベントハンドラーです。
+次の例は、 `message sent` イベントを送信し、 `Day CQ Mail Service`.
 
-サーバー側のサンプルスクリプトを試すには、開発環境とOSGiバンドルを構築する機能が必要です。
+サーバー側サンプルスクリプトを試すには、開発環境と OSGi バンドルを構築する機能が必要です。
 
-1. ` [CRXDE|Lite](https://localhost:4502/crx/de)`に管理者としてログインします。
-1. `/apps/engage/install`内に、次のような任意の名前の`bundle node`を作成します。
+1. に管理者としてログインします。 ` [CRXDE|Lite](https://localhost:4502/crx/de)`.
+1. の作成 `bundle node`in `/apps/engage/install` に次のような任意の名前を付けます。
 
-   * 記号名：`com.engage.media.social.messaging.MessagingNotification`
-   * 名前：入門チュートリアルのメッセージ通知
-   * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するサービスの例
+   * 記号名： `com.engage.media.social.messaging.MessagingNotification`
+   * 名前：使用の手引きチュートリアルのメッセージ通知
+   * 説明：ユーザーがメッセージを受信したときに電子メール通知を送信するサンプルサービス
    * パッケージ: `com.engage.media.social.messaging.notification`
 
-1. `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`に移動し、次の操作を行います。
+1. に移動します。 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/src/main/java/com/engage/media/social/messaging/notification`、次に、
 
-   1. 自動的に作成された`Activator.java`クラスを削除します。
-   1. クラス`MessageEventHandler.java`を作成します。
-   1. 以下のコードをコピーして`MessageEventHandler.java`に貼り付けます。
+   1. を削除します。 `Activator.java` クラスが自動的に作成されました。
+   1. クラスを作成 `MessageEventHandler.java`.
+   1. 以下のコードをコピーして、に貼り付けます。 `MessageEventHandler.java`.
 
 1. 「**すべて保存**」をクリックします。
-1. `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`に移動し、`MessageEventHandler.java`コードに記述されているように、すべてのimport文を追加します。
+1. に移動します。 `/apps/engage/install/com.engage.media.social.messaging.MessagingNotification/com.engage.media.social.messaging.MessagingNotification.bnd`をクリックし、 `MessageEventHandler.java` コード。
 1. バンドルをビルドします。
-1. `Day CQ Mail Service`OSGiサービスが設定されていることを確認します。
+1. 確認 `Day CQ Mail Service`OSGi サービスが設定されている。
 1. デモユーザーとしてログインし、別のユーザーに電子メールを送信します。
-1. 受信者に、新しいメッセージに関するEメールが届きます。
+1. 受信者に、新しいメッセージに関する E メールが届きます。
 
 #### MessageEventHandler.java {#messageeventhandler-java}
 

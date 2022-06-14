@@ -12,7 +12,7 @@ discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 100%
 
@@ -116,9 +116,9 @@ SharePoint サーバーの URL および高度なオプションを設定する�
 
 1. OSGi Management コンソール（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
 1. **Day JCR Connector for Microsoft Sharepoint** バンドルを探します。
-1. 設定値を編集します。
+1. 設定値を編集.
 1. 「**Workspaces**」の値として SharePoint サーバーの URL を設定します。
-1. 「**Save**」をタップまたはクリックします。
+1. 「**保存**」をタップまたはクリックします。
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
@@ -163,7 +163,7 @@ SharePoint Assets を AEM と同期するには、次の手順を実行します
 
 1. OSGi Management Console（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
 1. 「Default DAMAssetSynchronization」サービスを探します。
-1. 設定値を編集します。
+1. 設定値を編集.
 1. SharePoint サイトへのアクセス権を持つユーザーのユーザー名とそれに対応するパスワードを設定します。
 1. 「保存」をクリックします。
 
@@ -177,7 +177,7 @@ DAM 同期サービスを有効にします（デフォルトでは無効にな�
 
 1. OSGi Management Console（[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
 1. 「DAY CQ DAM JCR Connector Asset Synchronization Service」を探します。
-1. 設定値を編集します。
+1. 設定値を編集.
 1. 「Synchronization Period」（秒単位）の値を設定します。
 1. 「保存」をクリックします。
 

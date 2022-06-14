@@ -13,7 +13,7 @@ docset: aem65
 role: Admin
 exl-id: bb16017c-a1bf-40d8-a78d-827c05b7ee2e
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 100%
 
@@ -38,9 +38,9 @@ AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、次の A
 
 アップグレードを実行した後、AEMFD 互換性パッケージをインストールしてアセットに 6.5 との互換性を持たせるには、以下を実行します。
 
-[AEM 互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)が事前にインストールされていることを確認します。
+[AEM 互換性パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)が事前にインストールされていることを確認します。
 
-1. 最新の 6.5 [互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をインストールします。
+1. 最新の 6.5 [互換性パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)をインストールします。
 
    パッケージのアップロードおよびインストールについて詳しくは、「[パッケージの作業方法](/help/sites-administering/package-manager.md)」を参照してください。
 
@@ -59,7 +59,7 @@ AEMFD 互換性パッケージを使用すると、[AEM Forms 6.5 で、次の A
    * [データディクショナリ](/help/forms/using/data-dictionary.md)
    * ドキュメントフラグメント
 
-* アダプティブフォームの非推奨になったテンプレート：
+* アダプティブフォームの非推奨になったテンプレート:
 
    * /libs/fd/af/templates/blankTemplate2
    * /libs/fd/af/templates/simpleEnrollmentTemplate

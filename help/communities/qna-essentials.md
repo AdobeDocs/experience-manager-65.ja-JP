@@ -1,8 +1,8 @@
 ---
 title: Q&A の基本事項
-seo-title: Q&A の基本事項
+seo-title: QnA Essentials
 description: フォーラム機能の質問および回答
-seo-description: フォーラム機能の質問および回答
+seo-description: Questions and answers forum feature
 uuid: c718a8e3-b3bd-4db9-8c0f-6dd973d40583
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: ceace3aa-78a5-485e-b519-630479e087d8
 exl-id: a7b295c1-cc9d-4881-8016-804b21fc1098
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 56%
+source-wordcount: '249'
+ht-degree: 57%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 56%
 
 このページでは、Q&amp;A（質問および回答）フォーラム機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -38,7 +38,7 @@ ht-degree: 56%
    <td>cq.ckeditor<br /> cq.social.hbs.voting<br /> cq.social.hbs.qna</td>
   </tr>
   <tr>
-   <td> templates</td>
+   <td> テンプレート</td>
    <td> /libs/social/qna/components/hbs/qnaforum/qnaforum.hbs<br /> /libs/social/qna/components/hbs/qnaforum/activity-title.hbs</td>
   </tr>
   <tr>
@@ -47,7 +47,7 @@ ht-degree: 56%
   </tr>
   <tr>
    <td> properties</td>
-   <td><a href="working-with-qna.md">Q&amp;Aフォーラム機能</a>を参照</td>
+   <td>詳しくは、 <a href="working-with-qna.md">Q&amp;A フォーラム機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -64,9 +64,9 @@ ht-degree: 56%
 
 ### Q&amp;A 機能 {#qna-function}
 
-[Q&amp;A関数](functions.md#qna-function)を含むコミュニティサイト構造には、設定済みの`QnA`コンポーネントと、モデレートとタグ付けに影響する設定が含まれます。 Q&amp;A関数は、[権限を持つメンバーユーザーグループ](users.md#privileged-members-group)の識別をサポートします。
+を含むコミュニティサイト構造 [Q&amp;A 機能](functions.md#qna-function) 設定済み `QnA` コンポーネントを追加し、モデレートとタグ付けに影響する設定を追加しました。 Q&amp;A 機能は、 [権限を持つメンバーユーザーグループ](users.md#privileged-members-group).
 
-### Q&amp;Aフォーラム投稿(UGC)へのアクセス{#accessing-qna-forum-posts-ugc}
+### Q&amp;A フォーラム投稿（UGC）へのアクセス {#accessing-qna-forum-posts-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -74,9 +74,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
 * [ストレージリソースプロバイダーの概要](srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
 * [SocialUtils のリファクタリング](socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.

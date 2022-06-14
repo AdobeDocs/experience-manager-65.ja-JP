@@ -12,7 +12,7 @@ discoiquuid: 6346cd93-1ca3-4510-9c31-a74c41017ddb
 docset: aem65
 exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
 source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 100%
 
@@ -120,7 +120,7 @@ AEM WCM 用の機能を開発する場合は、JCR セッションが開かれ�
 
 1. **AEM web コンソール**&#x200B;を開きます（例：`https://localhost:4502/system/console/`）。
 1. **OSGI** タブの下の&#x200B;**バンドル**&#x200B;を選択します。
-1. 次の項目を確認します。
+1. チェック項目:
 
    * バンドルのステータス。「Inactive」または「Unsatisfied」と表示されているバンドルがある場合は、そのバンドルを停止してから再起動してください。問題が解決しない場合は、他の方法を使用した詳細な調査が必要になる可能性があります。
    * いずれかのバンドルで依存関係が失われていないかどうか。個々のバンドル名（リンク）をクリックすると、詳細を確認できます（問題が発生していない場合の例を次に示します）。

@@ -12,7 +12,7 @@ discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6228'
 ht-degree: 100%
 
@@ -188,18 +188,18 @@ Directory Manager Service API（Java）を使用してユーザーを追加し�
 
 1. ユーザーを AEM Forms に追加します。
 
-   `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出して、次の値を渡します。
+   `DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出して、以下の値を渡します。
 
    * 新しいユーザーを表す `UserImpl` オブジェクト
    * ユーザーのパスワードを表す文字列値
 
-   `createLocalUser` メソッドは、ローカルユーザー識別子の値を指定する文字列値を返します。
+   この `createLocalUser` メソッドは、ローカルユーザー ID の値を指定する文字列値を返します。
 
 1. ユーザーが追加されたことを確認します。
 
    * コンストラクタを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー識別子を表す文字列値を渡します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、`java.util.List` インスタンスを返します。このインスタンスの各要素は `User` オブジェクトです。`java.util.List` インスタンスを繰り返し、ユーザーを特定します。
+   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー ID の値を表す文字列値を渡します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを繰り返し、ユーザーを特定します。
 
 **関連トピック**
 
@@ -225,15 +225,15 @@ Directory Manager サービス API（web サービス）を使用してユーザ
 
 1. DirectoryManagerService クライアントを作成します。
 
-   * デフォルトのコンストラクタを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービス（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）に渡します。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`?blob=mtom` を指定するようにしてください。
+   * デフォルトのコンストラクターを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`?blob=mtom` を指定するようにしてください。
    * `DirectoryManagerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   *  `System.ServiceModel.BasicHttpBinding` オブジェクトの`MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` に AEM Forms ユーザー名を割り当てます。
-      * フィールド `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` に対応するパスワード値を割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. ユーザー情報を定義します。
@@ -355,14 +355,14 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 1. DirectoryManagerService クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（ 例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`blob=mtom.` を指定してください
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`blob=mtom.` を指定してください
    * `DirectoryManagerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドに `WSMessageEncoding.Mtom` を設定します。この値により、MTOM が確実に使用されます。
+   * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` に AEM Forms のユーザー名を割り当てます。
-      * フィールド `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` に対応するパスワード値を割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 削除するユーザーを指定します。
@@ -474,8 +474,8 @@ Directory Manager Service API（Java）を使用してグループを作成し�
 1. グループでアクションを実行します。
 
    * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
-   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー ID の値を設定します。ユーザー ID の値を表す文字列値を渡します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出して、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを反復処理して、ユーザーを特定します。
+   * `PrincipalSearchFilter` オブジェクトの `setUserId` メソッドを呼び出して、ユーザー識別子の値を設定します。ユーザー ID の値を表す文字列値を渡します。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、 `java.util.List` インスタンス（各要素は `User` オブジェクト）を返します。`java.util.List` インスタンスを反復処理して、ユーザーを特定します。
    * `DirectoryManagerServiceClient` オブジェクトの `addPrincipalToLocalGroup` メソッドを呼び出して、グループにユーザーを追加します。`User` オブジェクトの `getOid` メソッドの戻り値を渡します。`Group` オブジェクトの `getOid` メソッドの戻り値を渡します（新しいグループを表す `Group` インスタンスを使用）。
 
 **関連項目**
@@ -561,7 +561,7 @@ Directory Manager サービスの操作をプログラムで実行する前に�
 
 [手順の概要](users.md#summary-of-steps)
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -592,7 +592,7 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
    ローカルユーザーを削除するには、`DirectoryManagerServiceService` オブジェクトの `deleteLocalUser` メソッドを呼び出してユーザーの識別情報を渡します。
 
-   ローカルグループを削除するには、`DirectoryManagerServiceService` オブジェクトの `deleteLocalGroup` メソッドを呼び出してグループの識別情報を渡します。
+   ローカルグループを削除するには、 `DirectoryManagerServiceService` オブジェクトの `deleteLocalGroup` メソッドを呼び出してグループの識別情報を渡します。
 
 **関連項目**
 
@@ -683,7 +683,7 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/AuthorizationManagerService?WSDL&lc_version=9.0.1` を使用していることを確認します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/AuthorizationManagerService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -692,30 +692,30 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
 1. AuthorizationManagerService クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `AuthorizationManagerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `AuthorizationManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例： `http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AuthorizationManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AuthorizationManagerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms のユーザー名を割り当てます。
-      * `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password` フィールドに対応するパスワード値を割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を `BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+      * `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
 
 1. 適切な役割または権限の操作を呼び出します。
 
-   プリンシパルに役割を割り当てるには、`AuthorizationManagerServiceClient` オブジェクトの `assignRole` メソッドを呼び出して、以下の値を渡します。
+   プリンシパルに役割を割り当てるには、`AuthorizationManagerServiceClient` オブジェクトの `assignRole` メソッドを呼び出して、次の値を渡します。
 
    * 役割識別情報を含む `string` オブジェクト
    * プリンシパル識別情報を含む `MyArrayOf_xsd_string` オブジェクト
 
    プリンシパルから役割を削除するには、`AuthorizationManagerServiceService` オブジェクトの `unassignRole` メソッドを呼び出して、以下の値を渡します。
 
-   * 役割識別情報を含む `string` オブジェクト
-   * プリンシパル識別情報を含む `string` オブジェクトの配列
+   * 役割識別情報を含む `string` オブジェクト。
+   * プリンシパル識別情報を含む `string` オブジェクトの配列。
 
 
-**関連トピック**
+**関連項目**
 
 [手順の概要](users.md#summary-of-steps)
 
@@ -791,7 +791,7 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -922,7 +922,7 @@ User Management API を使用して同期操作を実行する前に、ユーザ
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 

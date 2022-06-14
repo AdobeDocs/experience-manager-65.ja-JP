@@ -12,7 +12,7 @@ discoiquuid: fa054d30-c7dc-4b64-acf1-cbcbe8827df5
 feature: Document Security
 exl-id: 5e57451c-1a89-442c-8404-841e95d5ceff
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4718'
 ht-degree: 100%
 
@@ -238,7 +238,7 @@ Document Security に「権限」タブおよび「オプション」タブが�
 
 **ユーザー名とパスワード認証を許可する：**&#x200B;このオプションを選択すると、クライアントアプリケーションがサーバーへの接続時にユーザー名とパスワード認証を使用できるようになります。
 
-**Kerberos 認証を許可する：** このオプションを選択すると、クライアントアプリケーションがサーバーへの接続時に Kerberos 認証を使用できるようになります。
+**Kerberos 認証を許可：**&#x200B;クライアントアプリケーションが、サーバーへの接続時に Kerberos 認証を使用できるようにするときにこのオプションを選択します。
 
 **クライアント証明書認証を許可する：** このオプションを選択すると、クライアントアプリケーションがサーバーへの接続時に証明書認証を使用できるようになります。
 

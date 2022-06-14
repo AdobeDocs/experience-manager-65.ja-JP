@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 100%
 
@@ -108,7 +108,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 10 および 29</strong></td>
    <td>ネットワークレイヤーを調査します</td>
-   <td><p>ネットワークレイヤーで、飽和および遅延の問題がないかどうかを調べます。</p> <p>オーサー層の場合は、遅延が 100 ミリ秒を超えないことが推奨されます。</p> <p>パフォーマンスの最適化に関するヒントについて詳しくは、<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">このページ</a>を参照してください。</p> </td>
+   <td><p>ネットワークレイヤーで、輻輳や遅延の問題がないかどうかを調べます。</p> <p>オーサー層の場合は、遅延が 100 ミリ秒を超えないことが推奨されます。</p> <p>パフォーマンスの最適化に関するヒントについて詳しくは、<a href="https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html">このページ</a>を参照してください。</p> </td>
   </tr>
   <tr>
    <td><strong>手順 11</strong></td>
@@ -293,7 +293,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 49</strong></td>
    <td>ペイロードのサイズを縮小します</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Gzip を有効化</a>して、<a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">画像サイズを縮小します</a>。<br /> </td>
   </tr>
   <tr>
    <td><strong>手順 42 および 43</strong></td>
@@ -325,7 +325,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 50 および 51</strong></td>
    <td>JS コードがブロックされています</td>
-   <td><a href="https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html">https://docs.adobe.com/ddc/ja/gems/aem-web-performance.html</a></td>
+   <td><a href="https://docs.adobe.com/ddc/en/gems/aem-web-performance.html">https://docs.adobe.com/ddc/en/gems/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>

@@ -12,7 +12,7 @@ discoiquuid: 56849775-3ac7-44a2-ab17-a707b001470e
 docset: aem65
 exl-id: b9342330-31f6-49cb-965e-4bab61f98d4c
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 100%
 
@@ -426,7 +426,7 @@ ht-degree: 100%
      limitations under the License.
 ```
 
-## Concurrent {#concurrent}
+## 同時 {#concurrent}
 
 ```xml
      All classes are released to the public domain and may be used for any

@@ -13,7 +13,7 @@ discoiquuid: 08d36e9f-cafc-478e-9781-8fc29ac6262e
 role: Developer
 exl-id: e485980d-f200-46b7-9284-c9996003aa47
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1698'
 ht-degree: 100%
 
@@ -47,9 +47,9 @@ Acrobat や Adobe Reader のクライアントサイドレンダリング機能�
 
 必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
-**Forms Client API オブジェクトを作成**
+**Forms Client API オブジェクトの作成**
 
-Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。 Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成してください。Forms web サービス API を使用している場合は、`FormsService`オブジェクトを作成してください。
+Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。 Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsService`オブジェクトを作成してください。
 
 **クライアントレンダリングの実行時オプションを設定**
 
@@ -117,19 +117,19 @@ Forms API (Java) を使用して、クライアントでフォームをレンダ
    * フォームと統合するデータを含む `com.adobe.idp.Document` オブジェクトです。データを統合しない場合、空の `com.adobe.idp.Document` オブジェクトを渡します。
    * クライアントでフォームをレンダリングするために必要な実行時オプションを格納する `PDFFormRenderSpec` オブジェクトです。
    * フォームを表示するために Forms サービスが必要とする URI の値を含む `URLSpec` オブジェクトです。
-   * 添付ファイルを保存する `java.util.HashMap` オブジェクトです。これはオプションのパラメーターで、フォームにファイルを添付しない場合は `null` を指定します。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクトです。オプションのパラメーターです。フォームにファイルを添付しない場合は `null` を指定できます。
 
-   `renderPDFForm` メソッドは、クライアントの web ブラウザーに書き込まなければならないフォームデータストリームを含む `FormsResult` オブジェクトを返します。
+   `renderPDFForm` メソッドは、クライアントの Web ブラウザーに書き込む必要のあるフォームデータストリームを含む `FormsResult` オブジェクトを返します。
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
    * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
    * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
    * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡します。
-   * クライアント web ブラウザーにフォームデータストリームを書き込むために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成するには、`javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出します。
-   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出して、`java.io.InputStream` オブジェクトを作成します。
-   * バイト配列を作成し、フォームデータストリームを入力するには、`InputStream` オブジェクトの `read` メソッドを呼び出して、バイト配列を因数として渡します。
-   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームのデータストリームをクライアント web ブラウザーに送信します。`write` メソッドにバイト配列を渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって `java.io.InputStream` オブジェクトを作成します。
+   * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
@@ -161,27 +161,27 @@ Forms API（Webサービス）を使用して、クライアントでフォー�
 
    `FormsService` オブジェクトの `renderPDFForm` メソッドを呼び出し、次の値を渡します。
 
-   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のように完全なパスが指定されていることを確認します。
-   * フォームと結合するデータを含む `BLOB` オブジェクトです。データを統合しない場合は、`null` を渡します。（[流動レイアウトによるフォームの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照してください）。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定してください。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * フォームと結合するデータを含む `BLOB` オブジェクトです。データを結合しない場合は、`null` を渡します。（[流動レイアウトによるフォームの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照してください）。
    * クライアントでフォームのレンダリングに必要な実行時オプションを格納する `PDFFormRenderSpec` オブジェクトです。
    * Forms サービスで必要とされる URI 値を含む `URLSpec` オブジェクトです。
-   * 添付ファイルを保存する `java.util.HashMap` オブジェクトです。これはオプションのパラメーターで、フォームにファイルを添付しない場合は `null` を指定します。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターで、 フォームにファイルを添付しない場合に、`null`を指定します。
    * メソッドによって入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクトです。このパラメーターは、レンダリングされた PDF フォームを格納するために使用されます。
    * メソッドによって入力される空の `javax.xml.rpc.holders.LongHolder` オブジェクトです。（この引数は、フォームのページ数を保存します）。
-   * メソッドによって入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。（この引数はロケール値を格納します）。
+   * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。（この引数はロケール値を格納します）。
    * この操作の結果を格納する空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 
-   `renderPDFForm` メソッドは、最後の引数値として渡された `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアントの web ブラウザーに書き込むフォームデータのストリームを入力します。
+   `renderPDFForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
    * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して、`FormResult` オブジェクトを作成します。
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを格納する `BLOB` オブジェクトを作成します。
-   * `BLOB` オブジェクトの `getContentType` メソッドを呼び出して、そのコンテンツタイプを取得します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、オブジェクトの `setContentType` メソッドを呼び出し、`BLOB` オブジェクトのコンテントタイプを渡します。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、クライアントの web ブラウザーにフォームデータストリームを書き込むために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して、バイト配列を入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、クライアントの web ブラウザーにフォームデータのストリームを送信します。`write` メソッドにバイト配列を渡します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定するには、`setContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを渡します。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き込むために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
+   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 

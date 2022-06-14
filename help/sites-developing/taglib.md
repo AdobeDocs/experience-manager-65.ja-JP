@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6678e3c3-fb0f-4300-8838-38f23f14db07
 exl-id: 50e608d5-951f-4a3f-bed4-9e92ff5d7bd4
 source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2483'
 ht-degree: 100%
 
@@ -59,7 +59,7 @@ global では、[Sling ライブラリ](/help/sites-developing/taglib.md#sling-t
 
 次と同じ：`com.adobe.granite.ui.clientlibs.HtmlLibraryManager#writeCssInclude`
 
-**themed** - テーマの設定されたライブラリまたは設定されていないライブラリのみインクルードすることを示すフラグ。省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
+**themed** -テーマの設定されたライブラリまたは設定されていないライブラリのみインクルードすることを示すフラグ。省略すると、どちらのライブラリもインクルードされます。純粋な JS または CSS のインクルードにのみ適用します（カテゴリまたはテーマのインクルードには適用されません）。
 
 `<ui:includeClientLib>` タグは jsp で次のように使用できます。
 
@@ -488,7 +488,7 @@ JSP における `<cq:text>` タグの使用例を次に示します。
 
 このタグの属性を以下に示します。
 
-**name**
+**名前**
 
 * 削除するパラメーターの名前
 
@@ -518,7 +518,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 このタグの属性を以下に示します。
 
-**flush**
+**フラッシュ**
 
 * ターゲットをインクルードする前に出力をフラッシュするかどうかを定義するブール値。
 
@@ -526,7 +526,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 * 現在の要求の処理にインクルードするリソースオブジェクト。resource または path を指定する必要があります。どちらも指定されている場合は、resource が優先されます。
 
-**path**
+**パス**
 
 * 現在の要求の処理にインクルードするリソースオブジェクトのパス。このパスが相対パスの場合は、スクリプトが特定のリソースをインクルードする現在のリソースのパスに追加されます。resource または path を指定する必要があります。どちらも指定されている場合は、resource が優先されます。
 
@@ -599,7 +599,7 @@ Sling タグライブラリには Sling の便利な機能が用意されてい�
 
 * SlingScriptHelper オブジェクト。スクリプト用の便利なメソッドが格納されています。主なメソッドは、他のリソースの応答をこの応答内にインクルードする（例：ヘッダーの html スニペットを埋め込む）ための sling.include(&#39;/some/other/resource&#39;) と、Sling で使用可能な OSGi サービス（スクリプト言語に応じたクラス表記）を取得するための sling.getService(foo.bar.Service.class) です。
 
-**resource**
+**リソース**
 
 * 処理する現在のリソースオブジェクト（要求の URL によって異なります）。slingRequest.getResource() と同じです。
 

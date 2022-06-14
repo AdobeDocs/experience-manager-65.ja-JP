@@ -13,9 +13,9 @@ docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2427'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -168,7 +168,7 @@ ht-degree: 100%
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name` を見つけます
+   * `com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name` を見つけます。
    * 編集する既存の設定を選択します（鉛筆アイコン）
 検証 `property name`：**`socialpubsync-publishUser`**
 
@@ -192,7 +192,7 @@ ht-degree: 100%
    * `Apache Sling Distribution Agent - Queue Agents Factory` を見つけます
 
       * 編集する既存の設定を選択します（鉛筆アイコン）
-検証`Name`：`socialpubsync-reverse`
+検証 `Name`：`socialpubsync-reverse`
 
       * 「`Enabled`」チェックボックスをオンにします
       * 「`Save`」を選択します
@@ -262,7 +262,7 @@ ht-degree: 100%
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-   * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます
+   * `Apache Sling Distribution Agent - Sync Agents Factory` を見つけます。
 
       * 編集する既存の設定を選択します（鉛筆アイコン）
 検証 `Name`：`socialpubsync`
@@ -355,11 +355,9 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
    * *sling.id.file* という名前のファイルを検索して削除する
 
       * 例えば、Linux システムの場合、次のようになります。
-
          `rm -i $(find . -type f -name sling.id.file)`
 
       * 例えば、Windows システムの場合、次のようになります。
-
          `use windows explorer and search for *sling.id.file*`
 
 1. パブリッシュインスタンスを開始する
@@ -516,13 +514,13 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 | **path** | **jcr:all** | **rep:glob** |
 |---|---|---|
-| /home | X | */activities/* |
-| /home/users | X | */activities/* |
-| /home/groups | X | */activities/* |
+| /home | X | &#42;/activities/&#42; |
+| /home/users | X | &#42;/activities/&#42; |
+| /home/groups | X | &#42;/activities/&#42; |
 
 承認済みユーザーは、`administrators` グループのメンバーであるので、すべてのパブリッシュインスタンスに対する次の権限があります。
 
-| **path** | **jcr:all** | **jcr:read** | **rep:write** |
+| **パス** | **jcr:all** | **jcr:read** | **rep:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |

@@ -9,7 +9,7 @@ topic-tags: site-features
 discoiquuid: 50ba6a09-d6cb-4ec0-8a0f-af0da8cc3d2d
 exl-id: a687f725-e006-4db1-81cf-011375303947
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 # ページへの Search&amp;Promote 機能の追加 {#adding-search-promote-features-to-your-page}
 
-Web サイトに Search&amp;Promote 機能を統合するには、Search&amp;Promote コンポーネントを使用してページに次の機能を追加します。
+web サイトに Search&amp;Promote 機能を統合するには、Search&amp;Promote コンポーネントを使用してページに次の機能を追加します。
 
 * キーワード検索
 * 検索結果のページ

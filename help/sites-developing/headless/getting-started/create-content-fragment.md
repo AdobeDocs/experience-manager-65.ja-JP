@@ -3,7 +3,7 @@ title: コンテンツフラグメントのヘッドレス作成のクイック�
 description: AEM のコンテンツフラグメントを使用して、ページに依存しないヘッドレス配信用コンテンツを設計、作成、キュレーションおよび使用する方法を説明します。
 exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
 source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 100%
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 AEM のコンテンツフラグメントを使用して、ページに依存しないヘッドレス配信用コンテンツを設計、作成、キュレーションおよび使用する方法を説明します。
 
-## コンテンツフラグメントとは {#what-are-content-fragments}
+## コンテンツフラグメントとは  {#what-are-content-fragments}
 
 コンテンツフラグメントを保存できる[アセットフォルダーを作成したので](create-assets-folder.md)、フラグメントを作成できます。
 

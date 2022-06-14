@@ -1,8 +1,8 @@
 ---
 title: DSRP 向け MySQL 設定
-seo-title: DSRP 向け MySQL 設定
+seo-title: MySQL Configuration for DSRP
 description: MySQL サーバーに接続し、UGC データベースを設定する方法
-seo-description: MySQL サーバーに接続し、UGC データベースを設定する方法
+seo-description: How to connect to the MySQL server and establish the UGC database
 uuid: c058cc88-7ca2-4aed-9a36-b080e603f886
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: eafb60be-2963-4ac9-8618-50fd9bc6fe6c
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 47%
+source-wordcount: '730'
+ht-degree: 46%
 
 ---
 
@@ -28,11 +28,11 @@ MySQL は、ユーザー生成コンテンツ（UGC）の保存に使用でき�
 
 * [最新のコミュニティ機能パック](deploy-communities.md#latestfeaturepack)
 * [MySQL 用 JDBC ドライバー](deploy-communities.md#jdbc-driver-for-mysql)
-* リレーショナル・データベース：
+* リレーショナルデータベース：
 
-   * [MySQL ](https://dev.mysql.com/downloads/mysql/) serverCommunity Serverバージョン5.6以降
+   * [MySQL サーバー](https://dev.mysql.com/downloads/mysql/) Community Server バージョン 5.6 以降
 
-      * AEMと同じホスト上で実行するか、リモートで実行する
+      * AEMと同じホスト上で実行するか、リモートで実行できます
    * [MySQL Workbench](https://dev.mysql.com/downloads/tools/workbench/)
 
 
@@ -46,8 +46,8 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 
 例えば、Linux OS でテーブル名をすべて小文字に指定するには、
 
-* ファイル`/etc/my.cnf`を編集
-* `[mysqld]`セクションに次の行を追加します。
+* ファイルを編集 `/etc/my.cnf`
+* 内 `[mysqld]` セクションで、次の行を追加します。
 
    `lower_case_table_names = 1`
 
@@ -61,12 +61,12 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 
 以下の操作で MySQL データベースをデフォルトから UTF8 に変更します。
 
-* ファイル`/etc/my.cnf`を編集
-* `[client]`セクションに次の行を追加します。
+* ファイルを編集 `/etc/my.cnf`
+* 内 `[client]` セクションで、次の行を追加します。
 
    `default-character-set=utf8`
 
-* `[mysqld]`セクションに次の行を追加します。
+* 内 `[mysqld]` セクションで、次の行を追加します。
 
    `character-set-server=utf8`
 
@@ -74,7 +74,7 @@ SQL では大文字と小文字が区別されます。大文字と小文字が�
 
 MySQL Workbench には、スキーマと初期データをインストールする SQL スクリプトを実行するための UI が用意されています。
 
-ターゲットOSの手順に従って、MySQL Workbenchをダウンロードし、インストールする必要があります。
+ターゲット OS の手順に従って、MySQL Workbench をダウンロードし、インストールする必要があります。
 
 ## Communities の接続 {#communities-connection}
 
@@ -84,24 +84,24 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 
 ### 新しい接続の設定 {#new-connection-settings}
 
-1. `MySQL Connections`の右側にある`+`アイコンを選択します。
-1. ダイアログ`Setup New Connection`で、使用するプラットフォームに適した値を入力します
+1. を選択します。 `+` 右のアイコン `MySQL Connections`.
+1. ダイアログ内 `Setup New Connection`、使用するプラットフォームに適した値を入力
 
-   デモ用に、オーサーAEMインスタンスとMySQLを同じサーバー上に配置します。
+   デモ用に、オーサーAEMインスタンスと MySQL を同じサーバー上に配置します。
 
    * 接続名: `Communities`
-   * 接続方法：`Standard (TCP/IP)`
+   * 接続方法： `Standard (TCP/IP)`
    * Hostname：`127.0.0.1`
    * ユーザー名: `root`
    * パスワード: `no password by default`
-   * デフォルトのスキーマ：`leave blank`
+   * デフォルトのスキーマ： `leave blank`
 
-1. `Test Connection`を選択して、実行中のMySQLサービスへの接続を確認します
+1. 選択 `Test Connection` 実行中の MySQL サービスへの接続を検証するには、以下を実行します。
 
 **備考**:
 
-* デフォルトのポートは`3306`です。
-* 選択した接続名は、[JDBC OSGi configuration](#configurejdbcconnections)にデータソース名として入力されます。
+* デフォルトのポートは `3306`
+* 選択した接続名が、データソース名としてに入力されます。 [JDBC OSGi 設定](#configurejdbcconnections)
 
 #### 新しい Communities 接続 {#new-communities-connection}
 
@@ -117,25 +117,25 @@ MySQL Workbench を初めて起動したときは（他の目的で既に使用�
 
 SQL スクリプトは、AEM リポジトリから取得されます。
 
-1. CRXDE Lite
+1. 参照してCRXDE Lite
 
    * 例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)
 
-1. /libs/social/config/datastore/dsrp/schemaフォルダーを選択します。
+1. /libs/social/config/datastore/dsrp/schema フォルダーを選択します。
 1. ダウンロード `init-schema.sql`
 
    ![database-schema-crxde](assets/database-schema-crxde.png)
 
-スキーマをダウンロードする方法の1つは次のとおりです。
+スキーマをダウンロードする方法の 1 つは次のとおりです。
 
-* sqlファイルの`jcr:content`ノードを選択します。
-* `jcr:data`プロパティの値はビューリンクです
+* を選択します。 `jcr:content` sql ファイルのノード
+* の値 `jcr:data` プロパティは表示リンクです
 
 * データをローカルファイルに保存するには、表示リンクを選択します
 
 ### DSRP データベースの作成 {#create-the-dsrp-database}
 
-以下の手順に従って、データベースをインストールします。 データベースのデフォルト名は`communities`です。
+以下の手順に従って、データベースをインストールします。 データベースのデフォルト名はです。 `communities`.
 
 スクリプトでデータベース名を変更する場合は、[JDBC 設定](#configurejdbcconnections)でも変更してください。
 
@@ -143,14 +143,14 @@ SQL スクリプトは、AEM リポジトリから取得されます。
 
 MySQL Workbench で、以下の設定をおこないます。
 
-* 「ファイル」プルダウンメニューから、「**[!UICONTROL SQLスクリプトを開く]**」オプションを選択します。
-* ダウンロードした`init_schema.sql`スクリプトを選択します
+* [ ファイル ] プルダウンメニューから、 **[!UICONTROL SQL スクリプトを開く]** オプション
+* ダウンロードした `init_schema.sql` スクリプト
 
 ![select-sql-script](assets/select-sql-script.png)
 
 #### Step 2 : execute SQL Script {#step-execute-sql-script}
 
-手順1で開いたファイルのWorkbenchウィンドウで、スクリプトを実行する`lightening (flash) icon`を選択します。
+手順 1 で開いたファイルの Workbench ウィンドウで、 `lightening (flash) icon` スクリプトを実行します。
 
 以下の画像では、`init_schema.sql` ファイルは実行可能です。
 
@@ -158,7 +158,7 @@ MySQL Workbench で、以下の設定をおこないます。
 
 #### 更新 {#refresh}
 
-スクリプトを実行したら、新しいデータベースを表示するために、`Navigator`の`SCHEMAS`セクションを更新する必要があります。 以下のように、「SCHEMAS」の右側にある更新アイコンを使用します。
+スクリプトを実行した後は、 `SCHEMAS` セクション `Navigator` 新しいデータベースを確認するために。 以下のように、「SCHEMAS」の右側にある更新アイコンを使用します。
 
 ![refresh-schema](assets/refresh-schema.png)
 
@@ -168,16 +168,16 @@ MySQL Workbench で、以下の設定をおこないます。
 
 すべての AEM パブリッシュインスタンスおよびオーサーインスタンスが、同じ MySQL サーバーを指している必要があります。
 
-MySQLをAEMとは別のサーバーで実行する場合は、JDBCコネクタの「localhost」の代わりにサーバーホスト名を指定する必要があります。
+MySQL をAEMとは異なるサーバーで実行する場合は、JDBC コネクタの「localhost」の代わりにサーバーホスト名を指定する必要があります。
 
-* 各オーサーインスタンスとパブリッシュAEMインスタンスで、
-* 管理者権限でサインインしています。
-* [Webコンソール](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
+* 各オーサーおよびパブリッシュAEMインスタンス上。
+* 管理者権限でサインインしました。
+* 次にアクセス： [web コンソール](../../help/sites-deploying/configuring-osgi.md).
 
    * 例： [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)
 
-* `Day Commons JDBC Connections Pool`
-* `+`アイコンを選択して、新しい接続設定を作成します。
+* を `Day Commons JDBC Connections Pool`
+* を選択します。 `+` アイコンをクリックして、新しい接続設定を作成します。
 
    ![configure-jdbc-connection](assets/configure-jdbc-connection.png)
 
@@ -186,18 +186,18 @@ MySQLをAEMとは別のサーバーで実行する場合は、JDBCコネクタ�
    * **[!UICONTROL JDBC ドライバークラス]**: `com.mysql.jdbc.Driver`
    * **[!UICONTROL JDBC 接続 URI]**: `jdbc:mysql://localhost:3306/communities?characterEncoding=UTF-8`
 
-      MySQLサーバーが「this」 AEM server *communities*&#x200B;がデフォルトのデータベース（スキーマ）名と同じでない場合は、localhostの代わりにサーバーを指定します。
+      MySQL サーバーが「this」AEMサーバーと同じでない場合は、localhost の代わりにサーバーを指定します *コミュニティ* はデフォルトのデータベース（スキーマ）名です。
 
    * **[!UICONTROL ユーザー名]**: `root`
 
-      MySQLサーバーの設定済みのユーザー名（「root」でない場合）を入力します。
+      MySQL サーバーに設定されているユーザー名（「root」でない場合）を入力します。
 
    * **[!UICONTROL パスワード]**:
 
-      MySQLのパスワードが設定されていない場合は、このフィールドをクリアします。
+      MySQL のパスワードが設定されていない場合は、このフィールドをクリアします。
 
-      「 」を選択しない場合は、MySQLユーザー名用に設定したパスワードを入力します。
+      または、MySQL ユーザー名用に設定したパスワードを入力します。
 
-   * **[!UICONTROL データソース名]**:MySQL接続用に [入力された名前](#new-connection-settings)（例：「communities」）。
+   * **[!UICONTROL データソース名]**:次に対して入力された名前： [MySQL 接続](#new-connection-settings)例えば、「コミュニティ」などです。
 
-* 「**[!UICONTROL 保存]**」を選択します。
+* 選択 **[!UICONTROL 保存]**

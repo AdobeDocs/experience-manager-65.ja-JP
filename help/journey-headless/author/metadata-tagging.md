@@ -3,7 +3,7 @@ title: コンテンツフラグメントのメタデータとタグの定義に�
 description: コンテンツフラグメントのメタデータとタグの定義について
 exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
 source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%
 
@@ -38,7 +38,7 @@ ht-degree: 100%
 
    * また、これは、Assets コンソールのツールバーにある「**プロパティ**」オプションを使用して、直接アクセスすることもできます。
 
-## 次のステップ {#whats-next}
+## 次の手順 {#whats-next}
 
 これで、これらの知識をすべて活用して、プロジェクト用のコンテンツフラグメントの作成を開始できます。
 

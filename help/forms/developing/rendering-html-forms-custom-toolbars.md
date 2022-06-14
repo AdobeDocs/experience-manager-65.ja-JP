@@ -13,7 +13,7 @@ discoiquuid: 7eb0e8a8-d76a-43f7-a012-c21157b14cd4
 role: Developer
 exl-id: 0b992b1c-3878-447a-bccc-7034aa3e98bc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 100%
 
@@ -225,7 +225,7 @@ Forms Service API（Java）を使用して、カスタムツールバーを含�
 1. カスタム fscmenu XML ファイルの参照
 
    * コンストラクターを使用して `HTMLRenderSpec` オブジェクトを作成します。
-   * ツールバーを含む HTMLフォーム をレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出し、`HTMLToolbar` 列挙値を渡します。例えば、縦の HTML ツールバーを表示するには、`HTMLToolbar.Vertical` を渡します。
+   * ツールバーを使用して HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して、`HTMLToolbar` enum 値を渡します。例えば、縦の HTML ツールバーを表示するには、`HTMLToolbar.Vertical` を渡します。
    * `HTMLRenderSpec` オブジェクトの `setToolbarURI` メソッドを呼び出して XML ファイルの URI の場所を指定する文字列値を渡すことによって、fscmenuXML ファイルの場所を指定します。
    * 該当する場合は、`HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。デフォルト値は英語です。
 
@@ -235,10 +235,10 @@ Forms Service API（Java）を使用して、カスタムツールバーを含�
 
 1. HTML フォームのレンダリング
 
-   `FormsServiceClient` オブジェクトの `renderHTMLForm` メソッドを呼び出して次の値を渡します。
+   `FormsServiceClient` オブジェクトの `renderHTMLForm` メソッドを呼び出して、次の値を渡します。
 
-   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のような完全なパスを指定してください。
-   * HTML の環境設定タイプを指定する `TransformTo` 列挙値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
    * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。データを結合しない場合は、空の `com.adobe.idp.Document` オブジェクトを渡します。
    * HTML の実行時オプションが格納された `HTMLRenderSpec` オブジェクト。
    * `HTTP_USER_AGENT` ヘッダー値（例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）を指定する文字列値。
@@ -249,13 +249,13 @@ Forms Service API（Java）を使用して、カスタムツールバーを含�
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して `com.adobe.idp.Document` オブジェクトを作成します。
-   * `getContentType` メソッドを呼び出して `com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。
+   * `getContentType` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを取得します。
    * `setContentType` メソッドを呼び出し、`com.adobe.idp.Document` オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定します。
    * `javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに書き出すのに使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
    * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出して、`java.io.InputStream` オブジェクトを作成します。
-   * バイト配列を作成したあと、`InputStream` オブジェクトの `read` メソッドを呼び出し、そのバイト配列を引数として渡すことで、バイト配列にフォームデータストリームを入力します。
-   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。 バイト配列を `write` メソッドに渡します。
+   * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**
 
@@ -280,10 +280,10 @@ Forms サービス API（web サービス）を使用して、カスタムツー
 
 1. カスタム fscmenu XML ファイルの参照
 
-   * コンストラクタを使用して `HTMLRenderSpec` オブジェクトを作成します。
-   * ツールバーを持つ HTML フォームをレンダリングするには、 `HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して `HTMLToolbar` 列挙値を渡します。 例えば、縦の HTML ツールバーを表示するには、 `HTMLToolbar.Vertical` を渡します。
-   * `HTMLRenderSpec` オブジェクトの `setToolbarURI` メソッドを呼び出し、XML ファイルの URI の場所を指定する 文字列値を渡すことで、fscmenu XML ファイルの場所を指定します。
-   * 該当する場合は、 `HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出し、ロケール値を指定する文字列値を渡すことで、ロケール値を設定します。 デフォルト値は英語です。
+   * コンストラクターを使用して `HTMLRenderSpec` オブジェクトを作成します。
+   * ツールバーを使用して HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setHTMLToolbar` メソッドを呼び出して、`HTMLToolbar` enum 値を渡します。例えば、縦の HTML ツールバーを表示するには、`HTMLToolbar.Vertical` を渡します。
+   * `HTMLRenderSpec` オブジェクトの `setToolbarURI` メソッドを呼び出して XML ファイルの URI の場所を指定する文字列値を渡すことによって、fscmenuXML ファイルの場所を指定します。
+   * 該当する場合は、`HTMLRenderSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。デフォルト値は英語です。
 
    >[!NOTE]
    >
@@ -293,8 +293,8 @@ Forms サービス API（web サービス）を使用して、カスタムツー
 
    `FormsService` オブジェクトの `renderHTMLForm` メソッドを呼び出して、次の値を渡します。
 
-   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp` のような完全なパスを指定してください。
-   *  HTML の環境設定タイプを指定する `TransformTo` 列挙値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
+   * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
+   * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
    * フォームと結合するデータを含んだ `BLOB` オブジェクト。 データを結合しない場合は、 `null` を渡します。
    * HTML の実行時オプションが格納されている `HTMLRenderSpec` オブジェクト。
    * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`)）。この値を設定しない場合は、空の文字列を渡します。
@@ -307,16 +307,16 @@ Forms サービス API（web サービス）を使用して、カスタムツー
    * `renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数には、使用する HTML レンダリング値が格納されます。
    * この操作の結果を格納する空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 
-   `renderHTMLForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要があるフォームデータストリームを入力します。
+   `renderHTMLForm` メソッドは、最後の引数値として渡される `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトに、クライアント web ブラウザーに書き込む必要のあるフォームデータストリームを入力します。
 
 1. フォームデータストリームをクライアント web ブラウザーに書き込む
 
-   * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得することで、`FormResult` オブジェクトを作成します。
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含んだ `BLOB` オブジェクト を作成します。
+   * `com.adobe.idp.services.holders.FormsResultHolder` オブジェクトの `value` データメンバーの値を取得して、`FormResult` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
    * `getContentType` メソッドを呼び出して、`BLOB` オブジェクトのコンテンツタイプを取得します。
-   * `setContentType` メソッドを呼び出し `BLOB` オブジェクトのコンテンツタイプを渡して、`javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定します。
+   * `setContentType` メソッドを呼び出し、`BLOB` オブジェクトのコンテンツタイプを渡すことで、`javax.servlet.http.HttpServletResponse` オブジェクトのコンテンツタイプを設定します。
    * フォームデータストリームをクライアント web ブラウザーに書き出すのに使用される `javax.servlet.ServletOutputStream` オブジェクトを、`javax.servlet.http.HttpServletResponse` オブジェクトの `getOutputStream` メソッドを呼び出して作成します。
-   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して値を入力します。このタスクは、`FormsResult` オブジェクトの内容をバイト配列に割り当てます。
+   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して値を入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
    * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連トピック**

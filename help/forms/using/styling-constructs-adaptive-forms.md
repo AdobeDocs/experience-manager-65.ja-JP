@@ -11,13 +11,13 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 691608a6-be82-4d81-b876-427de997e5be
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2308'
 ht-degree: 100%
 
 ---
 
-# アダプティブフォームのスタイル設定構成{#styling-constructs-for-adaptive-forms}
+# アダプティブフォームのスタイル構成{#styling-constructs-for-adaptive-forms}
 
 ## 前提条件 {#prerequisites}
 

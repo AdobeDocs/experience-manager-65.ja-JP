@@ -13,7 +13,7 @@ docset: aem65
 feature: Tagging
 exl-id: 53a37449-ef87-4fa6-82de-88fdc24cf988
 source-git-commit: 4db9279f2d15f2e08939ba453ae8ddbbc3c3d69f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 100%
 
@@ -116,17 +116,17 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
   <tr>
    <td>color/red</td>
    <td>default</td>
-   <td>color/red</td>
+   <td>色/赤</td>
    <td>color</td>
    <td>red</td>
    <td>/content/cq:tags/default/color/red</td>
   </tr>
   <tr>
    <td>sky</td>
-   <td>default</td>
-   <td>sky</td>
+   <td>デフォルト</td>
+   <td>空</td>
    <td>（なし）</td>
-   <td>sky</td>
+   <td>空</td>
    <td>/content/cq:tags/default/sky</td>
   </tr>
   <tr>
@@ -141,8 +141,8 @@ AEM の基本パスは `/content/  cq   :tags` であり、ルートノードの
    <td>/content/cq:tags/category/car</td>
    <td>category</td>
    <td>car</td>
-   <td>car</td>
-   <td>car</td>
+   <td>車</td>
+   <td>車</td>
    <td>/content/cq:tags/category/car</td>
   </tr>
  </tbody>

@@ -12,7 +12,7 @@ discoiquuid: 370151df-3b8e-41aa-b586-5c21ecb55ffe
 feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2382'
 ht-degree: 100%
 
@@ -80,7 +80,7 @@ JobManager でジョブが作成されると、オフロードフレームワー
 * インスタンスがどのジョブトピックについてオフロード用に登録されているか
 * インスタンスによって処理されるジョブトピック
 
-1. タッチ UI を使用して、「ツール」タブをクリックします（[http://localhost:4502/tools.html](http://localhost:4502/tools.html)）。
+1. タッチ UI を使用して、「ツール」タブをクリックします([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
 1. Granite の操作エリアで、「オフロードするブラウザー」をクリックします。
 1. ナビゲーションパネルで、「トポロジブラウザー」をクリックします。
 
@@ -99,7 +99,7 @@ Web コンソールを使用してトポロジ情報を表示することもで�
 
 以下の手順を使用して、Web コンソールのトポロジ管理ページを開きます。
 
-1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
+1. ブラウザーで Web コンソールを開きます([http://localhost:4502/system/console](http://localhost:4502/system/console))
 1. Main／Topology Management をクリックします。
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
@@ -164,14 +164,14 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
 以下の手順を使用して、CQ インスタンスをトポロジのルートメンバーに接続します。この手順では、インスタンスがルートトポロジメンバーの Topology Connector URL を指すようにします。この手順をトポロジのすべてのメンバーで実行します。
 
-1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
+1. ブラウザーで Web コンソールを開きます([http://localhost:4502/system/console](http://localhost:4502/system/console))
 1. Main／Topology Management をクリックします。
 1. 「 Configure Discovery Service」をクリックします。
 1. Topology Connector URL プロパティに項目を追加し、ルートトポロジメンバーの Topology Connector サービスの URL を指定します。URL の形式は、https://rootservername:4502/libs/sling/topology/connector です。
 
 トポロジのルートメンバーで以下の手順を実行します。この手順では、ルートメンバーの Discovery Service 許可リストに他のトポロジメンバーの名前を追加します。
 
-1. ブラウザーで Web コンソールを開きます（[http://localhost:4502/system/console](http://localhost:4502/system/console)）。
+1. ブラウザーで Web コンソールを開きます([http://localhost:4502/system/console](http://localhost:4502/system/console))
 1. Main／Topology Management をクリックします。
 1. 「 Configure Discovery Service」をクリックします。
 1. トポロジの各メンバーについて、Topology Connector の許可リストプロパティに項目を追加し、トポロジメンバーのホスト名または IP アドレスを指定します。
@@ -182,7 +182,7 @@ Web コンソールまたは sling:OsgiConfig ノードを使用して、org.apa
 
 ジョブは、ラウンドロビンロジックを使用して、関連するトピックが有効なインスタンス間で配布されます。
 
-1. タッチ UI を使用して、「ツール」タブをクリックします（[http://localhost:4502/tools.html](http://localhost:4502/tools.html)）。
+1. タッチ UI を使用して、「ツール」タブをクリックします([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
 1. Granite の操作エリアで、「オフロードするブラウザー」をクリックします。
 1. ナビゲーションパネルで、「オフロードするブラウザー」をクリックします。
 

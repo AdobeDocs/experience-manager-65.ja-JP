@@ -6,7 +6,7 @@ role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
 source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 100%
 
@@ -140,8 +140,8 @@ INDD ファイルがアップロードされると、`xmpMM:InstanceID` およ�
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager デスクトップアプリケーションの使用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)
->* [Adobe Experience Manager でのデスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#desktopactions-v2)
+>* [Adobe Experience Manager デスクトップアプリケーションの使用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [Adobe Experience Manager でのデスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
 >* [Adobe Photoshop でのリンクされたスマートオブジェクトの作成](https://helpx.adobe.com/jp/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Adobe InDesign へのグラフィックの配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)
 

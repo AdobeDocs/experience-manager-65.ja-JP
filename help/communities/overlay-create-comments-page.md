@@ -1,8 +1,8 @@
 ---
 title: コメントページの作成
-seo-title: コメントページの作成
+seo-title: Create Comments Page
 description: コメントページの表示
-seo-description: コメントページの表示
+seo-description: View Comments page
 uuid: 1f043133-51c6-41e8-bbdb-d9fd7780136b
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,18 +12,18 @@ discoiquuid: b3cb8f12-197e-4f5e-bd7d-70b55e76b0ca
 exl-id: 35b8efac-5716-4ab3-9b8a-ea957023b51f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 61%
+source-wordcount: '57'
+ht-degree: 57%
 
 ---
 
-# コメントページの作成  {#create-comments-page}
+# コメントページの作成 {#create-comments-page}
 
-**[⇐コメントのオーバーレイ](overlay-comments.md) [ComponentCreateノード⇒](overlay-create-nodes.md)**
+**[⇐コメントコンポーネントをオーバーレイ](overlay-comments.md) [ノードの作成⇒](overlay-create-nodes.md)**
 
 ## コメントページ {#comments-page}
 
-[コミュニティコンポーネントガイド](components-guide.md)では、コメントコンポーネントのオーバーレイを簡単に体験できます。
+この [コミュニティコンポーネントガイド](components-guide.md) では、コメントコンポーネントのオーバーレイを簡単に体験できます。
 
 オーサーインスタンスでページを表示します。
 
@@ -31,4 +31,4 @@ ht-degree: 61%
 
 ![コメント](assets/comments.png)
 
-**[⇐コメントのオーバーレイ](overlay-comments.md) [ComponentCreateノード⇒](overlay-create-nodes.md)**
+**[⇐コメントコンポーネントをオーバーレイ](overlay-comments.md) [ノードの作成⇒](overlay-create-nodes.md)**

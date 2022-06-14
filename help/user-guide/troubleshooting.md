@@ -5,7 +5,7 @@ description: AEM のトラブルシューティング
 seo-description: Troubleshooting AEM
 exl-id: f7a220bf-0b0c-4d16-824d-dad7d86c01c9
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 100%
 

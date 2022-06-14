@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a3cbffb7-c1d1-47c2-bcfd-70f1e2d81ac9
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 100%
 
@@ -45,10 +45,10 @@ SOAP および REST エンドポイントで null リファラーを許可して
 
 AEM Forms にはリファラーのフィルタリング機能が用意されており、CSRF 攻撃の防止に役立ちます。以下にリファラーのフィルタリングが機能する仕組みを示します。
 
-1. forms サーバーが、呼び出しに使用される HTTP メソッドを確認します。
+1. Forms サーバーが、呼び出しに使用される HTTP メソッドを確認します。
 
    * POST の場合、forms サーバーはリファラーのヘッダーのチェックを実行します。
-   * GET の場合、forms サーバーはリファラーをチェックしません。ただし、CSRF_CHECK_GETS が true に設定されている場合は除きます。この場合、forms サーバーはリファラーヘッダーを確認します。CSRF_CHECK_GETS は、アプリケーションの web.xml ファイル内で指定されます。（『[堅牢化とセキュリティガイド](https://help.adobe.com/ja_JP/livecycle/11.0/HardeningSecurity/index.html)』の「クロスサイト要求偽造攻撃からの保護」を参照。）
+   * GET の場合、forms サーバーはリファラーをチェックしません。ただし、CSRF_CHECK_GETS が true に設定されている場合は除きます。この場合、forms サーバーはリファラーヘッダーを確認します。CSRF_CHECK_GETS は、アプリケーションの web.xml ファイル内に設定されます。（『[堅牢化とセキュリティガイド](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)』の「クロスサイト要求偽造攻撃からの保護」を参照。）
 
 1. Forms サーバーが、要求された URI が許可リスト登録済みかどうかを確認します。
 

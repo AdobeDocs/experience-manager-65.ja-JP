@@ -12,7 +12,7 @@ discoiquuid: 01d5677f-5c87-4a6e-987b-8eda9acc0b27
 role: Developer
 exl-id: cff65f74-ba95-438e-88a4-5ec7d22aafba
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1405'
 ht-degree: 100%
 
@@ -162,7 +162,7 @@ XMP ユーティリティ API（Java）を使用して XMP メタデータをイ
 
 1. XMPUtilityService クライアントを作成
 
-   コンストラクターを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡して、`XMPUtilityServiceClient` オブジェクトを作成します。
+   `XMPUtilityServiceClient` オブジェクトを作成するには、コンストラクターを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡します。
 
 1. XMP メタデータのインポート操作の呼び出し
 
@@ -199,23 +199,23 @@ XMP ユーティリティ web サービス API を使用してプログラムで
 
 1. XMPUtilityService クライアントを作成
 
-   プロキシクラスのコンストラクターを使用して、`XMPUtilityServiceService` オブジェクトを作成します。
+   プロキシクラスのコンストラクターを使用して `XMPUtilityServiceService` オブジェクトを作成します。
 
 1. XMP メタデータのインポート操作の呼び出し
 
-   XMPメタデータを変更するには、 `XMPUtilityServiceService` オブジェクトの `importMetadata` メソッドまたはその `importXMP` メソッドを呼び出します。
+   XMP メタデータを変更するには、`XMPUtilityServiceService` オブジェクトの `importMetadata` メソッドまたは `importXMP` メソッドを呼び出します。
 
    `importMetadata` メソッドを使用する場合、次の値を渡します。
 
    * PDF ファイルを表す `BLOB` オブジェクト。
-   * 読み込むメタデータを含む `XMPUtilityMetadata` オブジェクト。
+   * インポートするメタデータを含む `XMPUtilityMetadata` オブジェクト。
 
    `importXMP` メソッドを使用する場合、次の値を渡します。
 
    * PDF ファイルを表す `BLOB` オブジェクト。
-   * 読み込むメタデータが含まれる XML ファイルを表す `BLOB` オブジェクト。
+   * インポートするメタデータを含む XML ファイルを表す `BLOB` オブジェクト。
 
-   どちらの場合も、返される値は、新しく読み込まれたメタデータを含む PDF ファイルを表す `BLOB` オブジェクトです。 このオブジェクトをディスクに保存できます。
+   どちらの場合も、返される値は新しくインポートされたメタデータを含む PDF ファイルを表す `BLOB` オブジェクトです。このオブジェクトをディスクに保存できます。
 
 **関連トピック**
 

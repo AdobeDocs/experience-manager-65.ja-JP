@@ -1,8 +1,9 @@
 ---
 title: コンテンツフラグメントでの参照の使用について
 description: コンテンツ、他のフラグメントおよび他のアセット（メディア）への参照をコンテンツフラグメントで使用する方法について説明します。ヘッドレス CMS オーサリング用のネストされたフラグメントの必要性と仕組みを紹介します。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
-workflow-type: ht
+exl-id: d54a0a40-a8af-456a-9bf5-219d84540c97
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 ## これまでの説明内容 {#story-so-far}
 
-[AEM ヘッドレスコンテンツ作成者ジャーニー](overview.md)の冒頭の[はじめに](introduction.md)で、ヘッドレスのオーサリングに関連する基本概念と用語について説明しました。
+[AEM ヘッドレスコンテンツ作成者ジャーニー](overview.md)の冒頭の[はじめに](introduction.md)で、ヘッドレス向けのオーサリングに関連する基本概念と用語について説明しました。
 
 ヘッドレス CMS オーサリングの基本と、AEMaaCS でのオーサリング、特にコンテンツフラグメントのオーサリングの基本を学びました。
 
@@ -54,8 +55,8 @@ ht-degree: 100%
 
 * City（市区町村）
 * Company（会社）
-* Person（人物）
-* Awards（受賞歴）
+* Person（ユーザー）
+* 授賞歴
 
 とても簡単に見えますが、もちろん Company には CEO も Employees（従業員）もいます。これらはすべて人物で、それぞれが Person として定義されます。
 

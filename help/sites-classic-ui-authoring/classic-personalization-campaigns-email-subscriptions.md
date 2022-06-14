@@ -1,7 +1,7 @@
 ---
 title: '購読の管理 '
 seo-title: Managing Subscriptions
-description: AEM Web ページ上で使用されるフォームコンポーネントを利用して、電子メールサービスプロバイダーのメーリングリストを購読するようにユーザーに求めることができます。電子メールサービスのメーリングリストの購読用のサインアップフォームを使用して AEM ページを準備するには、対応するサービス設定を潜在的購読者が訪問する AEM ページに適用する必要があります。
+description: AEM web ページ上で使用するフォームコンポーネントを利用して、電子メールサービスプロバイダーのメーリングリストに登録するようにユーザーに求めることができます。メールサービスのメーリングリストに登録するためのサインアップフォームを AEM ページに準備するには、対応するサービス設定を、登録する可能性のあるユーザーが訪れる AEM ページに適用する必要があります。
 seo-description: Users can be asked to subscribe to Email Service Provider's mailing lists with the help of the Form component used on an AEM web page. To prepare an AEM page with a sign-up form for subscription to your e-mail service mailing lists, you must apply the corresponding service configuration to the AEM page that the potential subscriber will visit.
 uuid: b2578a3d-dba1-4114-b21a-5f34c0cccc5a
 contentOwner: User
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 295cb0a6-29db-42aa-824e-9141b37b5086
 exl-id: add05d22-3a11-49e9-a554-2315962552d5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 100%
 

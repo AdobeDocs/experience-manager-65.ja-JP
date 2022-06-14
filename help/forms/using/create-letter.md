@@ -10,7 +10,7 @@ discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3982'
 ht-degree: 100%
 
@@ -47,7 +47,7 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
 #### Correspondence Management に付属しているレターテンプレートの使用 {#using-letter-templates-provided-with-correspondence-management}
 
-レイアウトテンプレートを最初から作成する代わりに、Correspondence Management に付属しているテンプレートを変更して再利用することができます。Designer を使用すると、組織のニーズに合わせて、テンプレートのブランディングフィールド、データフィールド、コンテンツフィールドをすばやく変更することができます。Correspondence Management のテンプレートについて詳しくは、「[参照レターテンプレート](/help/forms/using/reference-cm-layout-templates.md)」を参照してください。
+レイアウトテンプレートを最初から作成する代わりに、Correspondence Management に付属しているテンプレートを変更して再利用することができます。Designer を使用すると、組織のニーズに合わせて、テンプレートのブランディングフィールド、データフィールド、コンテンツフィールドをすばやく変更することができます。Correspondence Management のテンプレートについて詳しくは、「[レターテンプレートの参照](/help/forms/using/reference-cm-layout-templates.md)」を参照してください。
 
 ### ドキュメントフラグメントの作成 {#document-fragment-creation}
 
@@ -57,7 +57,7 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
 #### テキスト {#text}
 
-テキストアセットは、1 つまたは複数の段落で構成される 1 つのコンテンツです。段落は静的または動的に調整させることができます。動的段落にはデータ要素への参照が含まれます。データ要素の値は実行時に設定されます。
+テキストアセットは、1 つまたは複数の段落で構成される 1 つのコンテンツです。段落は静的または動的にすることができます。動的段落にはデータ要素への参照が含まれます。データ要素の値は実行時に設定されます。
 
 #### リスト {#list}
 
@@ -377,50 +377,50 @@ Correspondence Management でレターテンプレートを作成したら、エ
   </tr> 
   <tr> 
    <td><strong>date</strong></td> 
-   <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>time</strong></td> 
-   <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>datetime</strong></td> 
-   <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>integer</strong></td> 
-   <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td>はい<br /> </td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>float</strong></td> 
-   <td>可</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td>はい</td> 
    <td>はい<br /> </td> 
    <td>該当なし</td> 
    <td>該当なし<br /> </td> 
@@ -430,7 +430,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td>対応</td> 
    <td>テキストのみ</td> 
    <td>はい</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
@@ -440,7 +440,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td>対応</td> 
    <td>テキストのみ</td> 
    <td>はい</td> 
-   <td>可</td> 
+   <td>はい</td> 
    <td>はい</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
@@ -449,19 +449,19 @@ Correspondence Management でレターテンプレートを作成したら、エ
    <td><strong>image</strong></td> 
    <td>不可</td> 
    <td>画像のみ</td> 
-   <td>不可</td> 
-   <td>可</td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
    <td>該当なし</td> 
    <td>該当なし</td> 
   </tr> 
   <tr> 
    <td><strong>signature</strong></td> 
-   <td>不可</td> 
+   <td>いいえ</td> 
    <td>不可</td> 
    <td>不可<br /> </td> 
-   <td>可</td> 
-   <td>不可</td> 
+   <td>はい</td> 
+   <td>いいえ</td> 
    <td>該当なし</td> 
    <td>該当なし<br /> </td> 
   </tr> 
@@ -473,7 +473,7 @@ Correspondence Management でレターテンプレートを作成したら、エ
 既存のレターテンプレートを使用することで、ドキュメントフラグメントやデータ辞書などのプロパティ、コンテンツ、および継承されたアセットを持つレターテンプレートをすばやく作成できます。既存のレターテンプレートを使用するには、レターをコピーして貼り付けます。
 
 1. 「レター」ページで、1 つ以上のレターを選択します。UI に「コピー」アイコンが表示されます。
-1. 「コピー」をタップします。UI に「貼り付け」アイコンが表示されます。レターを貼り付ける前に、フォルダー内に移動することもできます。複数のフォルダーに同じ名前のアセットを保管することができます。フォルダーについて詳しくは、「[フォルダーとアセットの整理](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets)」を参照してください。
+1. 「コピー」をタップします。UI に「貼り付け」アイコンが表示されます。レターを貼り付ける前に、フォルダー内に移動することもできます。複数のフォルダーに同じ名前のアセットを保管することができます。フォルダーについて詳しくは、[フォルダーとアセットの整理](/help/forms/using/import-export-forms-templates.md#folders-and-organizing-assets)を参照してください。
 1. 「貼り付け」をタップします。貼り付けダイアログが表示されます。複数のレターをコピーして同じ場所に貼り付けると、それらのレターの新しいコピーに対して名前とタイトルが自動的に割り当てられますが、その名前とタイトルは編集することができます。
 1. 必要に応じて、保存するレターのタイトルと名前を編集します。
 1. 「貼り付け」をタップします。レターのコピーが作成されます。これで、新しく作成されたレターで必要な変更を行うことができます。

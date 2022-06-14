@@ -13,7 +13,7 @@ docset: aem65
 feature: Configuring
 exl-id: 1e34c5ca-9e08-4b2a-901c-ab28aeb4a807
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 100%
 
@@ -100,8 +100,8 @@ AEM とデータベース永続性レイヤー間の通信のために必要に�
 データソース設定では、使用する必要のあるデータベースタイプに応じて、異なる URL 文字列の形式を使用します。以下に、AEM で現在サポートされているデータベース向けの形式を一覧で示します。
 
 * `jdbc:postgresql:databasename`（PostgreSQL の場合）
-* `jdbc:db2://localhost:port/databasename`（DB2 の場合）
-* `jdbc:oracle:thin:localhost:port:SID`（Oracle DB2 の場合）
+* `jdbc:db2://localhost:port/databasename`（DB2 用の場合）
+* `jdbc:oracle:thin:localhost:port:SID`（Oracle の場合）
 * `jdbc:mysql://localhost:3306/databasename`（MySQL および MariaDB、試行用）
 *  `jdbc:sqlserver://localhost:1453;databaseName=name`（Microsoft SQL Server の場合）（試行用）
 

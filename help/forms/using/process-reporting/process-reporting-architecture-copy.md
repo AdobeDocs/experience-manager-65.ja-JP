@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: process-reporting
 discoiquuid: a1af9920-5d2a-462f-bdee-ccec4c047c5b
 source-git-commit: 56c6cfd437ef185336e81373bd5f758205b96317
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 100%
 
@@ -74,4 +74,4 @@ QueryDataServlet サービスは、Process Reporting ユーザーインターフ
 
 独自のカスタムレポートを作成し、これらのレポートを Process Reporting ユーザーインターフェイスの「カスタムレポート」タブに表示できます。
 
-カスタムレポートを作成する手順については、[処理中のレポートのカスタムレポート](/help/forms/using/process-reporting/process-reporting-custom-reports.md)の記事の「カスタムレポートを作成するには」を参照してください。
+カスタムレポートを作成する手順については、[Process Reporting のカスタムレポート](/help/forms/using/process-reporting/process-reporting-custom-reports.md)記事の「カスタムレポートを作成するには」を参照してください。

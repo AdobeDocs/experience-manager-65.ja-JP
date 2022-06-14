@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 331b9317-87b5-4a96-a1bc-429675ff90c5
 exl-id: 800bffd5-0cdc-4251-bba4-e350f226f019
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
   <tr>
    <td><p>P3</p></td>
    <td><p>Acrobat Reader DC Extensions、実稼働環境</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼動</p></td>
   </tr>
   <tr>
@@ -97,49 +97,49 @@ ARE 2D Barcode Full Production V6.1 P8 0002054
   <tr>
    <td><p>P8</p></td>
    <td><p>Forms、実稼働環境</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼動</p></td>
   </tr>
   <tr>
    <td><p>P9</p></td>
    <td><p>Adobe Acrobat 7.x、実稼働環境</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼動</p></td>
   </tr>
   <tr>
    <td><p>I10</p></td>
    <td><p>Forms、OEM で使用可能</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼働環境および評価</p></td>
   </tr>
   <tr>
    <td><p>I11</p></td>
    <td><p>Forms、OEM で使用可能</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼働環境および評価</p></td>
   </tr>
   <tr>
    <td><p>I12</p></td>
    <td><p>署名のみ、OEM で使用可能</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼働環境および評価</p></td>
   </tr>
   <tr>
    <td><p>I13</p></td>
    <td><p>オフラインコメントのみ、OEM で使用可能</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼働環境および評価</p></td>
   </tr>
   <tr>
    <td><p>I14</p></td>
    <td><p>コメントのみ、OEM で使用可能</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼働環境および評価</p></td>
   </tr>
   <tr>
    <td><p>I15</p></td>
    <td><p>全権限、OEM で使用可能</p></td>
-   <td><p>Max</p></td>
+   <td><p>最大</p></td>
    <td><p>実稼働環境および評価</p></td>
   </tr>
  </tbody>

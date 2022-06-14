@@ -8,13 +8,13 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
-source-git-commit: 1343cc33a1e1ce26c0770a3b49317e82353497ab
-workflow-type: ht
+exl-id: cfca6656-d2db-476d-a734-7a1d1e44894e
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 100%
 
 ---
-
 
 # API を使用した Web ページ上のフォームの一覧表示 {#listing-forms-on-a-web-page-using-apis}
 
@@ -172,9 +172,9 @@ orderings:[{"name" :“lastModifiedDate“:”order”:”ASC”}]
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
-* [API を使用した web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
-* [フォームポータルコンポーネントのテンプレートのカスタマイズ](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
 * [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)

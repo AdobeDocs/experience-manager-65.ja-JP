@@ -1,8 +1,8 @@
 ---
 title: スコアおよびバッジの基本事項
-seo-title: スコアおよびバッジの基本事項
+seo-title: Scoring and Badges Essentials
 description: スコアおよびバッジ機能の概要
-seo-description: スコアおよびバッジ機能の概要
+seo-description: Scoring and Badges feature overview
 uuid: 6e3af071-04e8-4dc1-977a-0da711b72961
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,7 +13,7 @@ docset: aem65
 exl-id: 470a382a-2aa7-449e-bf48-b5a804c5b114
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '956'
 ht-degree: 49%
 
 ---
@@ -28,9 +28,9 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 このページには、次の技術詳細が別途まとめられています。
 
-* バッジ](#displaying-badges)を画像またはテキストとして[表示する方法
-* 広範な[デバッグログ](#debug-log-for-scoring-and-badging)を有効にする方法
-* スコアとバッジに関連するUGC](#ugc-for-scoring-and-badging)に[アクセスする方法
+* 方法 [バッジを表示](#displaying-badges) 画像またはテキストのいずれか
+* 広範な [デバッグログ](#debug-log-for-scoring-and-badging)
+* 方法 [UGC にアクセス](#ugc-for-scoring-and-badging) スコアとバッジに関連する
 
 >[!CAUTION]
 >
@@ -40,7 +40,7 @@ AEM Communities のスコアおよびバッジ機能を使用すると、コミ�
 
 バッジをテキストと画像のいずれで表示するかは、クライアント側の HBS テンプレートを使用して制御します。
 
-例えば、`/libs/social/forum/components/hbs/topic/list-item.hbs`で`this.isAssigned`を検索します。
+例えば、「 `this.isAssigned` in `/libs/social/forum/components/hbs/topic/list-item.hbs`:
 
 ```
 {{#each author.badges}}
@@ -72,7 +72,7 @@ isAssigned が true の場合、役割に対してバッジが割り当てられ
 
 isAssigned が false の場合、獲得されたスコアに対する報奨としてバッジが与えられ、そのバッジは画像として表示されることを示します。
 
-必要に応じて、スクリプトをカスタマイズし、この動作を変更できます（オーバーライドまたはオーバーレイ）。[クライアント側のカスタマイズ](/help/communities/client-customize.md)を参照してください。
+必要に応じて、スクリプトをカスタマイズし、この動作を変更できます（オーバーライドまたはオーバーレイ）。詳しくは、 [クライアント側のカスタマイズ](/help/communities/client-customize.md).
 
 ## スコアおよびバッジのデバッグログ {#debug-log-for-scoring-and-badging}
 
@@ -82,22 +82,22 @@ isAssigned が false の場合、獲得されたスコアに対する報奨と�
 
 slinglog ファイルをすばやく設定するには、次の手順に従います。
 
-1. **Adobe Experience Manager Webコンソールログのサポート**&#x200B;にアクセスします。例：
+1. 次にアクセス： **Adobe Experience Manager Web コンソールログのサポート**&#x200B;例：
 
    * https://localhost:4502/system/console/slinglog
 
-1. 「**新しいロガーを追加**」を選択します。
+1. 選択 **新しいロガーを追加**
 
-   1. **ログレベル**&#x200B;に`DEBUG`を選択します。
+   1. 選択 `DEBUG` 対象 **ログレベル**
 
-   1. **ログファイル**&#x200B;の名前を入力します。例：
+   1. 名前を入力 **ログファイル**&#x200B;例：
 
       * logs/scoring-debug.log
-   1. 2つの&#x200B;**Logger** （クラス）エントリを入力します（`+`アイコンを使用）。
+   1. 2 つを入力 **ロガー** クラスエントリ ( `+` アイコン )
 
       * `com.adobe.cq.social.scoring`
       * `com.adobe.cq.social.badging`
-   1. 「**保存**」を選択します。
+   1. 選択 **保存**
 
 
 
@@ -105,15 +105,15 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 ログエントリを表示するには：
 
-* Webコンソールから
+* Web コンソールから
 
-   * **ステータス**&#x200B;メニューの下
-   * 「**ログファイル**」を選択します。
-   * `scoring-debug`など、ログファイル名を検索します。
+   * 以下 **ステータス** メニュー
+   * 選択 **ログファイル**
+   * ログファイル名を検索します（例： ）。 `scoring-debug`
 
-* サーバのローカル・ディスク上
+* サーバのローカルディスク上
 
-   * ログファイルは、&lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*.logにあります。
+   * ログファイルは &lt;*server-install-dir*>/crx-quickstart/logs/&lt;*log-file-name*>.log
 
    * 例：`.../crx-quickstart/logs/scoring-debug.log`
 
@@ -121,15 +121,15 @@ slinglog ファイルをすばやく設定するには、次の手順に従い�
 
 ## スコアおよびバッジの UGC {#ugc-for-scoring-and-badging}
 
-選択された SRP が ASRP ではなく JSRP または MSRP のいずれかである場合、スコアおよびバッジに関連する UGC を参照できます（これらの用語に詳しくない場合は、[コミュニティコンテンツストレージ](/help/communities/working-with-srp.md)および[ストレージリソースプロバイダーの概要](/help/communities/srp.md)を参照してください）。
+選択された SRP が ASRP ではなく JSRP または MSRP のいずれかである場合、スコアおよびバッジに関連する UGC を参照できます( これらの用語に詳しくない場合は、 [コミュニティコンテンツストレージ](/help/communities/working-with-srp.md) および [ストレージリソースプロバイダの概要](/help/communities/srp.md).)
 
 ここでは、JSRP を例に挙げて、スコアおよびバッジデータにアクセスする方法を説明しています。この場合、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) を使用して UGC に容易にアクセスできます。
 
-**オーサー環境のJSRP**:オーサー環境で実験を行うと、UGCはオーサー環境からのみ表示されます。
+**オーサー環境の JSRP**:オーサー環境で実験を行うと、UGC がオーサー環境からのみ表示されるようになります。
 
-**パブリッシュ環境のJSRP**:同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンスの管理者権限を持つCRXDE Liteにアクセスする必要があります。パブリッシュインスタンスが[実稼動モード](/help/sites-administering/production-ready.md)（nosamplecontent実行モード）で実行されている場合は、[CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)を有効にする必要があります。
+**公開時の JSRP**:同様に、パブリッシュ環境でテストする場合は、パブリッシュインスタンス上の管理者権限を持つCRXDE Liteにアクセスする必要があります。 パブリッシュインスタンスがで実行されている場合 [実稼動モード](/help/sites-administering/production-ready.md) （nosamplecontent 実行モード）の場合、 [有効CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
 
-JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
+JSRP 上の UGC の基本的な場所は次のとおりです。 `/content/usergenerated/asi/jcr/`.
 
 ### スコアおよびバッジの API {#scoring-and-badging-apis}
 
@@ -146,9 +146,9 @@ JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
 
 リポジトリデータのスクリーンショットは、2 つの異なる AEM Sites 上のフォーラムに対してスコアおよびバッジを設定する場合の例です。
 
-1. *が一意のIDを持つAEMサイト*（ウィザードを使用して作成されたコミュニティサイト）:
+1. AEMサイト *と* 一意の id（ウィザードを使用して作成されたコミュニティサイト）:
 
-   * [入門チュートリアル](/help/communities/getting-started.md)で作成した入門チュートリアル(engage)サイトの使用
+   * 使用の手引きのチュートリアル (engage) サイトを使用し、 [はじめにのチュートリアル](/help/communities/getting-started.md)
    * フォーラムページノードを見つけます。
 
       `/content/sites/engage/en/forum/jcr:content`
@@ -174,12 +174,12 @@ JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
 
       `allowBadges = true`
 
-   * ユーザーがサインインし、フォーラムトピックを作成し、ブロンズバッジを受け取る
+   * ユーザーがサインインし、フォーラムトピックを作成し、ブロンズバッジを受け取ります。
 
 
-1. 一意のIDが&#x200B;*ないAEMサイト*:
+1. AEMサイト *なし* 一意の id :
 
-   * [コミュニティコンポーネントガイド](/help/communities/components-guide.md)の使用
+   * の使用 [コミュニティコンポーネントガイド](/help/communities/components-guide.md)
    * フォーラムページノードを見つけます。
 
       `/content/community-components/en/forum/jcr:content`
@@ -199,22 +199,22 @@ JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
    * フォーラムコンポーネントノードを探します。
 
       `/content/community-components/en/forum/jcr:content/content/forum`
-(  `sling:resourceType = social/forum/components/hbs/forum`)
+( `sling:resourceType = social/forum/components/hbs/forum`)
 
    * バッジを表示するプロパティを追加します
 
       `allowBadges = true`
 
-   * ユーザーがサインインし、フォーラムトピックを作成し、ブロンズバッジを受け取る
+   * ユーザーがサインインし、フォーラムトピックを作成し、ブロンズバッジを受け取ります。
 
 
-1. cURLを使用してモデレーターバッジが割り当てられます。
+1. cURL を使用してモデレーターバッジが割り当てられます。
 
    ```shell
    curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=social:assignBadge" -F "badgeContentPath=/libs/settings/community/badging/images/moderator/jcr:content/moderator.png" https://localhost:4503/home/users/community/w271OOup2Z4DjnOQrviv/profile.social.json
    ```
 
-   ユーザーが2つのブロンズバッジを獲得し、モデレーターバッジを受け取ったので、この方法でユーザーがフォーラムエントリと共に表示されます。
+   ユーザーが 2 つのブロンズバッジを獲得し、モデレーターバッジを授与されたので、ユーザーはフォーラムエントリと共にこのように表示されます。
 
    ![モデレーター](assets/moderator.png)
 
@@ -224,8 +224,7 @@ JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
 >
 >* スコアルールの名前はグローバルレベルで一意にする必要があり、末尾を同じ名前にしてはなりません。
 >
->  
-*not*&#x200B;の例を次に示します。
+>  例 *not* 手順：
 >
 >  /libs/settings/community/scoring/rules/site1/forums-scoring
 >  /libs/settings/community/scoring/rules/site2/forums-scoring
@@ -241,9 +240,9 @@ JSRP上のUGCの基本位置は`/content/usergenerated/asi/jcr/`です。
 
 * `/content/usergenerated/asi/jcr/scoring`
 
-`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコアルール名はグローバルに一意であることがベストプラクティスです。
+`scoring` の子ノードがスコアルール名になります。したがって、サーバー上のスコア付けルール名はグローバルに一意になることがベストプラクティスとなります。
 
-Geometrixxのエンゲージメントサイトの場合、ユーザーとそのスコアは、スコアルール名、コミュニティサイトのサイトID( `engage-ba81p` )、一意のID、ユーザーのIDで構成されるパスになります。
+Geometrixxエンゲージサイトの場合、ユーザーとそのスコアは、スコア付けルール名、コミュニティサイトのサイト ID( `engage-ba81p`)、一意の id、およびユーザーの id:
 
 * `.../scoring/forums-scoring/engage-ba81p/6d179715c0e93cb2b20886aa0434ca9b5a540401/riley`
 
@@ -251,7 +250,7 @@ Geometrixxのエンゲージメントサイトの場合、ユーザーとその�
 
 * `.../scoring/forums-scoring/default-site/b27a17cb4910a9b69fe81fb1b492ba672d2c086e/riley`
 
-スコアは、値を直接含むか、atomicCounterを間接的に参照するプロパティ`scoreValue_tl`に格納されます。
+スコアはプロパティに保存されます `scoreValue_tl` この関数は、値のみを直接含む場合も、atomicCounter を間接的に参照する場合もあります。
 
 ![access-scoring-ugc](assets/access-scoring-ugc.png)
 
@@ -267,11 +266,11 @@ Geometrixxのエンゲージメントサイトの場合、ユーザーとその�
 
 * `/home/users/community/w271OOup2Z4DjnOQrviv/profile/badges`
 
-#### 授与されたバッジ{#awarded-badge}
+#### 授与されたバッジ {#awarded-badge}
 
-![授与されたbadging-ugc](assets/access-badging-ugc.png)
+![与えられた badging-ugc](assets/access-badging-ugc.png)
 
-#### 割り当てられたバッジ{#assigned-badge}
+#### 割り当てられたバッジ {#assigned-badge}
 
 ![割り当てられたバッジ](assets/assigned-badge.png)
 
@@ -279,5 +278,5 @@ Geometrixxのエンゲージメントサイトの場合、ユーザーとその�
 
 ポイントに基づいて並べ替えたメンバーリストを表示するには：
 
-* [リーダーボ](/help/communities/functions.md#leaderboard-function) ード機能（コミュニティサイトまたはグループテンプレートに含める）
+* [リーダーボード機能](/help/communities/functions.md#leaderboard-function) コミュニティサイトまたはグループテンプレートに含める。
 * [リーダーボードコンポーネント](/help/communities/enabling-leaderboard.md)：ページオーサリング用のリーダーボード機能の主要コンポーネント

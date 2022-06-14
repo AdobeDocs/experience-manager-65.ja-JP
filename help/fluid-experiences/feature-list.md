@@ -5,7 +5,7 @@ index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 100%
 
@@ -88,4 +88,4 @@ AEM Fluid Experience の機能と、関連するサポートドキュメント�
 * [モバイルアプリの開発](https://docs.adobe.com/content/help/ja/experience-manager-64/mobile/developing/developing-content-services.html)
 * [サードパーティアクセスに関する FAQ](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
 * [どこでも利用できる Fluid Experience](https://helpx.adobe.com/jp/experience-manager/using/using-sling-apis.html)
-* [Sling API の使用](https://helpx.adobe.com/jp/experience-manager/using/using-sling-apis.html)
+* [Sling API の使用](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)

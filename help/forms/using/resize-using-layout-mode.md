@@ -4,7 +4,7 @@ description: 'レイアウトモードで使用できるレスポンシブグリ
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
    コンポーネントをタップした後に表示されるツールバーは、以下のオプションで構成されます。
 
-   * **[!UICONTROL 親]**：コンポーネントの親を選択します。
+   * **[!UICONTROL 親]**： コンポーネントの親を選択します。
    * **[!UICONTROL ブレークポイントのレイアウトを元に戻す]**：すべてのサイズ変更を元に戻し、コンポーネントにデフォルトのレイアウトを適用します。
    * **[!UICONTROL 新しい行にフローティングする]**：同じ行内に複数のコンポーネントがある場合は、コンポーネントを次の行に移動します。
 
@@ -75,13 +75,13 @@ ht-degree: 100%
 
 以下の手順を実行して、パネルの列数を定義します。
 
-1. **[!UICONTROL 編集]**&#x200B;モードで、パネルをタップし、「![設定](assets/configure_icon.png)」を選択します。次に、**[!UICONTROL パネルレイアウト]**&#x200B;ドロップダウンリストから「**[!UICONTROL レスポンシブ - ページ上のすべて（ナビゲーションなし）]**」を選択します。
+1. **[!UICONTROL 編集]** モードで、パネルをタップし、「![設定](assets/configure_icon.png)」を選択します。次に、**[!UICONTROL パネルレイアウト]**&#x200B;ドロップダウンリストから「**[!UICONTROL レスポンシブ - ページ上のすべて（ナビゲーションなし）]**」を選択します。
 
 1. 「![保存](assets/save_icon.svg)」をタップして、プロパティを保存します。
 
-1. **[!UICONTROL レイアウト]**&#x200B;モードで、パネル内の任意のコンポーネントをタップし、「![親を選択](assets/select_parent_icon.svg)」を選択して、パネルを選択します。
+1. **[!UICONTROL レイアウト]** モードで、パネル内の任意のコンポーネントをタップし、「![親を選択](assets/select_parent_icon.svg)」を選択して、パネルを選択します。
 
-1. ![複数列](assets/multi-column.svg)をタップし、ドロップダウンリストから列数を選択します。列数の範囲は 1 ～ 12 です。パネルが複数列のレイアウトに分割されます。
+1. ![複数列](assets/multi-column.svg) をタップし、ドロップダウンリストから列数を選択します。列数の範囲は 1 ～ 12 です。パネルが複数列のレイアウトに分割されます。
 
 ![レイアウトモードでの複数列](assets/multi-column-layout.png)
 

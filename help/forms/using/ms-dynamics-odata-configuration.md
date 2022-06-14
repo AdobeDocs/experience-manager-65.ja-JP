@@ -11,7 +11,7 @@ docset: aem65
 feature: Form Data Model
 exl-id: 90cc9452-e107-4e57-80a3-f44f0bde132e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1206'
 ht-degree: 100%
 
@@ -96,7 +96,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
    `Add-AdfsClient -ClientId “<Client-ID>” -Name "<name>" -RedirectUri "<redirect-uri>" -GenerateClientSecret`
 
-   ここで、
+   各パラメーターの意味は次のとおりです。
 
    * `Client-ID` は、任意の GUID ジェネレーターを使用して生成できるクライアント ID です。
    * `redirect-uri` は、AEM Forms 上の Microsoft Dynamics OData クラウドサービスに対する URL です。AEM Forms パッケージと共にインストールされるデフォルトのクラウドサービスは、次の URL にデプロイされます。
@@ -106,7 +106,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
    `Grant-AdfsApplicationPermission -ClientRoleIdentifier “<Client-ID>” -ServerRoleIdentifier <resource> -ScopeNames openid`
 
-   ここで、
+   各パラメーターの意味は次のとおりです。
 
    * `resource` は、Microsoft Dynamics の組織 URL です。
 

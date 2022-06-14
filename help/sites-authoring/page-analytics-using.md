@@ -13,7 +13,7 @@ docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 100%
 
@@ -50,7 +50,7 @@ ht-degree: 100%
 
 サイトコンソールに表示される分析データのレポート期間を次の中から選択します。
 
-* 過去 30 日間データ
+* 過去 30 日間のデータ
 * 過去 90 日間のデータ
 * 今年のデータ
 

@@ -1,8 +1,8 @@
 ---
 title: コミュニティサイト
-seo-title: コミュニティサイト
+seo-title: Communities Sites
 description: AEM Communities のドキュメントの概要
-seo-description: AEM Communities のドキュメントの概要
+seo-description: Overview of the AEM Communities documentation
 uuid: 9842ce6c-1af8-4b27-b199-07410e797ab2
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 45%
+source-wordcount: '470'
+ht-degree: 44%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 45%
    * [レポート](reports.md)
 
 
-* コミュニティ&#x200B;[*ツール*](tools.md):
+* コミュニティ [*ツール*](tools.md):
 
    * [サイトテンプレート](sites.md)
    * [グループテンプレート](tools-groups.md)
@@ -59,21 +59,21 @@ ht-degree: 45%
 
 AEM Communities の主な機能の 1 つは、サインインしたサイト訪問者（メンバー）によるユーザー生成コンテンツ（UGC）の生成です。UGC の使用について詳しくは、以下を参照してください。
 
-* [共通UGCストア](working-with-srp.md):UGCの共有ストレージ用のSRPの選択
-* [UGCのモデレート](moderate-ugc.md):信頼されているメンバーは、UGCを一括またはコンテキスト内でモデレートできます
-* [UGCのタグ付け](tag-ugc.md):機能は、メンバーがコンテンツにタグを付けるのを許可するように設定できます
-* [UGCの翻訳](translate-ugc.md):機能は、すべてのUGCを翻訳するように設定したり、選択した投稿の翻訳をメンバーに許可したりできます
-* [Analyticsの設定](analytics.md):Adobe Analyticsでのメンバーアクティビティに関する様々な指標のレポートの有効化
+* [共通 UGC ストア](working-with-srp.md):UGC の共有ストレージ用の SRP の選択
+* [UGC のモデレート](moderate-ugc.md):信頼できるメンバーは、UGC を一括またはコンテキスト内でモデレートできます
+* [UGC のタグ付け](tag-ugc.md):機能は、メンバーがコンテンツにタグを付けるのを許可するように設定できます
+* [UGC の翻訳](translate-ugc.md):機能は、すべての UGC を翻訳するように設定したり、メンバーが選択した投稿を翻訳することを許可したりできます
+* [Analytics 設定](analytics.md):Adobe Analyticsでのメンバーアクティビティに関する様々な指標のレポート作成
 
 ### コミュニティメンバー {#community-members}
 
 * [ユーザーとユーザーグループの管理](users.md):権限を持つメンバーを含む、コミュニティメンバーおよびメンバーグループの詳細。
 * [貢献度の制限](limits.md)：新しいメンバーによる投稿を制約する機能.
-* [トンネルサービス](deploy-communities.md#tunnel-service-on-author):オーサー環境からパブリッシュ側のメンバーとメンバーグループにアクセスできます。
-* [メンバーコンソールとグループコンソール](members.md):オーサー環境からパブリッシュ側のメンバーとメンバーグループを作成および管理できます。
-* [ユーザーの同期](sync.md):複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期する場合。
+* [トンネルサービス](deploy-communities.md#tunnel-service-on-author):オーサー環境からパブリッシュ側のメンバーおよびメンバーグループにアクセスできます。
+* [メンバーコンソールとグループコンソール](members.md):パブリッシュ側のメンバーとメンバーグループを、オーサー環境から作成および管理できます。
+* [ユーザーの同期](sync.md):複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期するため。
 * [facebookとTwitterを使用したソーシャルログイン](social-login.md):サイト訪問者が、FacebookまたはTwitterの資格情報を使用してコミュニティメンバーになれる機能。
-* [スコアとバッジ](implementing-scoring.md):メンバーの役割を識別するためにバッジを割り当てたり、メンバーがコミュニティに参加してバッジを獲得する機能。
+* [スコアとバッジ](implementing-scoring.md):メンバーの役割を識別するためにバッジを割り当てたり、メンバーがコミュニティに参加してバッジを獲得するための機能。
 * [通知](notifications.md):メンバーがフォローしているアクティビティを通知する機能。
 * [購読](subscriptions.md)：メンバーが外部の電子メールを使用してコミュニティと対話する機能.
 * [メッセージ](messaging.md):メンバーが内部メッセージを使用してコミュニティとやり取りする機能。
@@ -81,7 +81,7 @@ AEM Communities の主な機能の 1 つは、サインインしたサイト訪�
 ### イネーブルメント機能 {#enablement-features}
 
 * [イネーブルメント設定](enablement.md)：イネーブルメント機能を正しくセットアップするために必要な情報.
-* [Analyticsの設定](analytics.md):コミュニティ機能に対してAdobe Analyticsを有効にするために必要な情報です。
+* [Analytics 設定](analytics.md):Communities 機能に対してAdobe Analyticsを有効にするために必要な情報です。
 * [イネーブルメントリソースのタグ付け](tag-resources.md)：イネーブルメントカタログの作成に必要.
 
 ### デプロイメント {#deployment}
@@ -96,12 +96,12 @@ AEM プラットフォームに最新の Communities リリースをインスト
 
 * [最新の Communities 機能パック](deploy-communities.md#latestfeaturepack)
 
-[アップグレード](upgrade.md)、[Dispatcher](dispatcher.md)、[レプリケーション](deploy-communities.md#replication-agents-on-author)など、その他のCommunities固有の情報については、デプロイメントページを参照してください。
+その他の Communities 固有の情報 ( 例： [アップグレード](upgrade.md), [Dispatcher](dispatcher.md) および [レプリケーション](deploy-communities.md#replication-agents-on-author).
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントについては、[Communitiesのデプロイ](deploy-communities.md)を参照してください。
+* 訪問 [コミュニティのデプロイ](deploy-communities.md) を参照して、推奨されるデプロイメントについて確認してください。
 
-* ソーシャルコンポーネントフレームワーク(SCF)とコミュニティのコンポーネントと機能のカスタマイズについては、 [コミュニティの開発](communities.md)を参照してください。
+* 訪問 [コミュニティの開発](communities.md) ソーシャルコンポーネントフレームワーク (SCF) と、コミュニティのコンポーネントと機能のカスタマイズについて説明します。
 
-* コミュニティコンポーネントを使用してオーサリングおよび設定する方法については、 [コミュニティコンポーネントのオーサリング](author-communities.md)を参照してください。
+* 訪問 [コミュニティコンポーネントのオーサリング](author-communities.md) コミュニティコンポーネントを使用して作成および設定する方法を学ぶには、以下を参照してください。

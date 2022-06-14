@@ -9,13 +9,13 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: ad71b423-02e1-4476-9c7c-f832cea6b0a6
 docset: aem65
-source-git-commit: 23252989bb8649b2f0b96a58972c831257e0c5dc
-workflow-type: ht
+exl-id: f3f013a7-a399-4178-a901-d4a8c65ddbd3
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 100%
 
 ---
-
 
 # ドラフトと送信コンポーネント{#drafts-and-submissions-component}
 
@@ -107,7 +107,7 @@ AEM Forms のドキュメントでは、[ドラフトと送信コンポーネン
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
 * [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
-* [API を使用した web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
+* [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)

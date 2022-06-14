@@ -7,7 +7,7 @@ topic-tags: integration
 content-type: reference
 exl-id: bb87898d-252e-4907-af03-11021d0d57fe
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%
 

@@ -6,7 +6,7 @@ role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
 source-git-commit: 0db95c4e7fc1ca20ce4f2d352c1276aa546dc7c3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 100%
 
@@ -153,7 +153,7 @@ ht-degree: 100%
 グループ述語の作成手順
 
 1. プロジェクトディレクトリ（ **/apps/weretail/components/picspredicate** など）にコンポーネントフォルダーを作成します。
-1. 次の **content.xml** を追加します。
+1. **content.xml** を追加します。
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -256,43 +256,43 @@ ht-degree: 100%
 | プロパティ | 型 | 説明 |
 |---|---|---|
 | predicateName | String | 述語の名前。デフォルトは `fulltext` |
-| searchCallback | Function | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | 関数 | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルトは `property` |
-| propertyName | String | JCR プロパティの名前。デフォルトは `jcr:title` |
-| defaultValue | String | 事前入力のデフォルト値。 |
+| predicateName | 文字列 | 述語の名前。デフォルトは `property` |
+| propertyName | 文字列 | JCR プロパティの名前。デフォルトは `jcr:title` |
+| defaultValue | 文字列 | 事前入力のデフォルト値。 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルトは `path` |
-| rootPath | String | 述語のルートパス。デフォルトは `/content/dam` |
-| pathFieldPredicateName | String | デフォルトは `folder` |
+| predicateName | 文字列 | 述語の名前。デフォルトは `path` |
+| rootPath | 文字列 | 述語のルートパス。デフォルトは `/content/dam` |
+| pathFieldPredicateName | 文字列 | デフォルトは `folder` |
 | showFlatOption | Boolean | チェックボックス `search in subfolders` を表示するフラグ。デフォルトは true です |
 
 ### DatePredicate {#datepredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。デフォルトは `daterange` |
-| propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
-| defaultValue | String | 事前入力のデフォルト値 |
+| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
+| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
+| defaultValue | 文字列 | 事前入力のデフォルト値 |
 
 ### OptionsPredicate {#optionspredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| title | String | 最上部のタイトルを追加します |
-| predicateName | String | 述語の名前。デフォルトは `daterange` |
-| propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
-| collapse | String | 折りたたみのレベル。デフォルトは `level1` |
-| triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
-| searchCallback | Function | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| title | 文字列 | 最上部のタイトルを追加します |
+| predicateName | 文字列 | 述語の名前。デフォルトは `daterange` |
+| propertyname | 文字列 | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
+| collapse | 文字列 | 折りたたみのレベル。デフォルトは `level1` |
+| triggerSearch | ブール値 | チェック時の検索を呼び出すためのフラグ。デフォルトは false です |
+| searchCallback | 関数 | 検索を呼び出すためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 | searchTimeoutTime | Number | タイムアウト。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800ms です |
 
 ## 検索結果のカスタマイズ {#customizing-search-results}

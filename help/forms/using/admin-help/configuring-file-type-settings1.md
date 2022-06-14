@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6171'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ PDF Generator では、サポートされるファイルタイプについてア
 * デフォルトで使用するファイルタイプ設定を指定（[PDF Generator 設定ファイルの読み込みおよび書き出し](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照）
 * [デフォルト設定を変更](/help/forms/using/admin-help/configuring-file-type-settings1.md#change-the-default-settings)
 * [PDF/A サポートの有効化](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
-* [ファイルタイプ設定の削除](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
+* [ファイルタイプ設定の削除](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ PDF Generator では、サポートされるファイルタイプについてア
 
 1. 次のセクションで必要な情報を入力します。
 
-   [PDF Generator 設定ファイルの読み込みおよび書き出し](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
+   [PDF Generator 設定ファイルの読み込みおよび書き出し](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
 
 [Adobe PDF の書き出し設定（Windows のみ）](#adobe-pdf-export-settings-windows-only)
 
@@ -86,7 +86,7 @@ PDF Generator では、サポートされるファイルタイプについてア
 
 様々なファイルタイプのサポートをカスタマイズできます（詳しくは、「[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_lc_programming_11_jp)」の「[追加のネイティブファイル形式に対するサポートの追加](https://help.adobe.com/ja_JP/AEMForms/6.1/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-7756.2.html)」を参照。）
 
-## デフォルト設定の変更 {#change-the-default-settings}
+## デフォルト設定を変更 {#change-the-default-settings}
 
 新しく作成したソースに適用する Adobe PDF 設定、セキュリティ設定およびファイルタイプ設定のデフォルト値を変更できます。デフォルトを変更しても、既存のソースの設定への影響はありません。
 
@@ -441,9 +441,9 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL OpenOffice をフォールバックコンバーターとして試行]**：このオプションを選択している場合に、Microsoft PowerPoint による変換が失敗または指定のタイムアウト制限に達すると、PDF Generator は、OpenOffice を使用した変換を試行します。OpenOffice を使用した変換が失敗または指定のタイムアウト制限に達すると、ログファイルに例外が書き込まれます。
 
-**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは「ppt、pptx」です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
+**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは「ppt、pptx」です。エクステンションの前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
-**[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、件名、作成者、キーワード、管理者、会社名、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
+**[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、サブジェクト、作成者、キーワード、管理者、会社情報、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
 
 **[!UICONTROL Adobe PDF にしおりを追加]**：PowerPoint のタイトルがしおりに変換されます。このオプションはデフォルトで選択されています。
 
@@ -473,9 +473,9 @@ NOTE to WRITER: Unfinished sentence above.
 
 以下に示すように、これらのオプションでは、Microsoft Project ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)を参照してください。
 
-1. **[!UICONTROL ファイル名の拡張子]**：このアプリケーションで許可されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`mpp` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
+1. **[!UICONTROL ファイル名の拡張子]**：このアプリケーションで許可されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`mpp` です。エクステンションの前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
-1. **[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、件名、作成者、キーワード、管理者、会社名、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
+1. **[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、サブジェクト、作成者、キーワード、管理者、会社情報、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
 1. **[!UICONTROL Adobe PDF にソースファイルを添付]**：ソースファイルを添付ファイルとして PDF ファイルに追加します。
 1. **[!UICONTROL PDF/A-1a に準拠するファイルを作成]**：PDF/A-1b:2005 RGB Adobe PDF 設定が強制的に使用されます。
 1. **[!UICONTROL マクロを自動的に実行]**：ドキュメントを変換する前に、Microsoft Project ドキュメントでマクロ（現在の時刻を挿入するマクロなど）を実行します。
@@ -486,9 +486,9 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL OpenOffice をフォールバックコンバーターとして試行]**：このオプションを選択している場合に、Microsoft Word による変換が失敗または指定のタイムアウト制限に達すると、PDF Generator は、OpenOffice を使用した変換を試行します。OpenOffice を使用した変換が失敗または指定のタイムアウト制限に達すると、ログファイルに例外が書き込まれます。
 
-**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`doc,docx,rtf,txt` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
+**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは`doc,docx,rtf,txt` です。エクステンションの前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
-**[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、件名、作成者、キーワード、管理者、会社名、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
+**[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、サブジェクト、作成者、キーワード、管理者、会社情報、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
 
 **[!UICONTROL Adobe PDF にしおりを追加]**：見出しがしおりに変換されます。このオプションはデフォルトで選択されています。
 
@@ -544,15 +544,15 @@ Microsoft Word のスタイル名にコンマ（,）または等号（=）が含
 
 以下に示すように、これらのオプションでは、Microsoft Publisher ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](#create-or-edit-file-type-settings)を参照してください。
 
-**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`pub` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
+**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは`pub` です。エクステンションの前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
 ## AutoCAD の設定（Windows のみ） {#autocad-settings-windows-only}
 
 以下に示すように、これらのオプションでは、AutoCAD ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings)を参照してください。
 
-**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`dwg` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
+**[!UICONTROL ファイル名の拡張子]**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは`dwg` です。エクステンションの前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
-**[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、件名、作成者、キーワード、管理者、会社名、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
+**[!UICONTROL ドキュメント情報を変換]**：ソースファイルのプロパティダイアログボックスから、タイトル、サブジェクト、作成者、キーワード、管理者、会社情報、カテゴリおよびコメントなどのドキュメント情報が追加されます。このオプションはデフォルトで選択されています。
 
 **[!UICONTROL Adobe PDF にしおりを追加]**：見出しがしおりに変換されます。
 
@@ -580,13 +580,13 @@ Microsoft Word のスタイル名にコンマ（,）または等号（=）が含
 
 **[!UICONTROL 変換する AutoCAD レイアウトの一覧]**：AutoCAD 図面には複数のレイアウトが含まれることがあります。このボックスを空にすると、生成される PDF ドキュメントに AutoCAD 図面のすべてのレイアウトが含まれます。レイアウトの一部を選択して変換するには、レイアウト名をコンマで区切ったリストを指定します。
 
-## OpenOffice 設定 {#openoffice-settings}
+## OpenOffice の設定 {#openoffice-settings}
 
 以下に示すように、これらのオプションでは、OpenOffice ファイルを変換する方法を決定します。これらのオプションへのアクセス方法については、[ファイルタイプ設定の作成または編集](/help/forms/using/admin-help/configuring-file-type-settings1.md#create-or-edit-file-type-settings)を参照してください。
 
 **PDFMaker をフォールバックコンバーターとして試行**：このオプションを選択している場合に、OpenOffice による変換が失敗または指定のタイムアウト制限に達すると、PDF Generator は、PDFMaker を使用した変換を試行します。PDFMaker を使用した変換が失敗または指定のタイムアウト制限に達すると、ログファイルに例外が書き込まれます。
 
-**ファイル名の拡張子**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`odt,odp,ods,odg,odf,sxw,sxi,sxd` です。拡張子の前にピリオドを含めたり、間にスペースを入れたりしないでください。
+**ファイル名の拡張子**：このアプリケーションで使用されるファイルタイプのファイル拡張子をコンマで区切って指定します。デフォルトは、`odt,odp,ods,odg,odf,sxw,sxi,sxd` です。エクステンションの前にピリオドを含めたり、間にスペースを入れたりしないでください。
 
 **範囲**：すべてのページを変換するか、特定のページまたはページ範囲を指定します。ページ範囲を指定しない場合、すべてのページが変換されます。ページの範囲を書き出すには、3-6 などの形式で指定します。ページを個別に書き出すには、7;9;11 などの形式で指定します。ページ範囲と個別のページを組み合わせて書き出すには、3-6;8;10;12 などの形式で指定します。
 

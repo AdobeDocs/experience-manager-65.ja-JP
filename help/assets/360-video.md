@@ -12,7 +12,7 @@ feature: 360 VR Video
 role: User, Admin
 exl-id: 0c2077a7-bd16-484b-980f-4d4a1a681491
 source-git-commit: 471f9e99078a1e0af60024d439afd42ae77cba8c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 100%
 

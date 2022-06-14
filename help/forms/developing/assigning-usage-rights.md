@@ -12,7 +12,7 @@ discoiquuid: 9e8db506-9ace-4e1f-8a7b-c4e9b15dde7e
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3926'
 ht-degree: 100%
 
@@ -110,7 +110,7 @@ Acrobat Reader DC エクステンション API（Java）を使用して、PDF �
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
-   * `ReaderExtensionsServiceClient` オブジェクトを作成するには、コンストラクタを使用して、`ServiceClientFactory` オブジェクトを渡します。
+   * コンストラクタを使用して `ReaderExtensionsServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
 
 1. PDF ドキュメントを取得します。
 
@@ -158,7 +158,7 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1` を使用していることを確認します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -167,22 +167,22 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
    * デフォルトのコンストラクタを使用して `ReaderExtensionsServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します。）
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
    * `ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName` に AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password` に割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF ドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、使用権限が適用される PDF ドキュメントを保存するために使用されます。
    * コンストラクターを呼び出し、PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
+   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを入力します。
 
 1. 適用する使用権限を指定します。
@@ -199,17 +199,17 @@ Acrobat Reader DC Extensions API（web サービス）を使用することに�
 
       * 使用権限が適用される PDF ドキュメントを含む `BLOB` オブジェクトです。
       * 使用権限を適用できる証明書のエイリアスを指定する文字列値です。
-      * 対応するパスワード値を指定する文字列値です。（現在、このパラメーターは無視されます。（`null` を渡すことができます）。
+      * 対応するパスワード値を指定する文字列値です。（現在、このパラメーターは無視されます。`null` を渡すことができます。）
    * 実行時オプションを含む `ReaderExtensionsOptionSpec` オブジェクトです。
 
-   `applyUsageRights` メソッドは、権限が付与された PDF ドキュメントを含む `BLOB` オブジェクトを返します。
+   `applyUsageRights` メソッドは、権限が付与された PDF ドキュメントを含む `BLOB` オブジェクト返します。
 
 1. 権限が付与された PDF ドキュメントを保存します。
 
    * コンストラクタを呼び出して `System.IO.FileStream` オブジェクトを作成します。権限が付与された PDF ドキュメントのファイルの場所を表す文字列値を渡します。
-   * `applyUsageRights` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、 `BLOB` オブジェクトの `MTOM` データメンバーの値を取得します。
-   * `System.IO.BinaryWriter` オブジェクトを作成するには、コンストラクタを呼び出して、`System.IO.FileStream` オブジェクトを渡します。
-   * バイト配列のコンテンツを PDF ファイルに書き込むには、`System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡します。
+   * `applyUsageRights` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
+   * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
+   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
 **関連トピック**
 
@@ -313,41 +313,41 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。`http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1` の WSDL 定義を使用していることを確認します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホストしているサーバーの IP アドレスに置換します。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
-   * `ReaderExtensionsServiceClient` オブジェクトを、そのデフォルトコンストラクタを使用して作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定してください）。
-   * `System.ServiceModel.BasicHttpBinding` オブジェクトを作成するには、`ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得します。 戻り値を `BasicHttpBinding` にキャストします。
+   * デフォルトのコンストラクタを使用して `ReaderExtensionsServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
+   * `ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * フィールド `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName` に AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値をフィールド `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password` に割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を `BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+      * `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF ドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、使用権限が削除された権限付き PDF ドキュメントを保存するために使用されます。
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出し、PDF ドキュメントのファイルの場所を表す文字列値とファイルを開くモードを渡します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで決定できます。
-   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、読み込むバイト配列、開始位置、ストリーム長を渡します。
-   * `BLOB` オブジェクトを入力するには、`MTOM` プロパティにバイト配列のコンテンツを割り当てます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
+   * `MTOM` プロパティにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
 1. 使用権限を PDF ドキュメントから削除します。
 
-   使用権限を PDF ドキュメントから削除するには、`ReaderExtensionsServiceClient` オブジェクトの `removeUsageRights` メソッドを呼び出し、権限付き PDF ドキュメントを含む `BLOB` オブジェクトを渡します。このメソッドは、使用権限のない PDF ドキュメントを含む `BLOB` オブジェクトを返します。
+   `ReaderExtensionsServiceClient` オブジェクトの `removeUsageRights` メソッドを呼び出し、権限が付与された PDF ドキュメントを含む `BLOB` オブジェクトを渡すことによって、使用権限を PDF ドキュメントから削除します。このメソッドは、使用権限のない PDF ドキュメントを含む `BLOB` オブジェクトを返します。
 
 1. 使用権限を PDF ドキュメントに適用します。
 
    * `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出し、PDF ファイルの場所を表す文字列値を渡します。
-   * `removeUsageRights` メソッドで返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。バイト配列を生成するには、`BLOB` オブジェクトの `MTOM` データメンバーの値を取得します。
+   * `removeUsageRights` メソッドで返された `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列を生成します。
    * `System.IO.BinaryWriter` オブジェクトを作成するには、コンストラクタを呼び出して、`System.IO.FileStream` オブジェクトを渡します。
 
 **関連トピック**
@@ -379,9 +379,9 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して、権限�
 
 必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めるようにします。
 
-**Acrobat Reader DC エクステンションのクライアントオブジェクトを作成**
+**Acrobat Reader DC Extensions のクライアントオブジェクトを作成**
 
-Acrobat Reader DC エクステンションサービスの操作をプログラムで実行する前に、Acrobat Reader DC エクステンションサービスのクライアントオブジェクトを作成する必要があります。Java API を使用している場合は、`ReaderExtensionsServiceClient` オブジェクトを作成します。Acrobat Reader DC エクステンション web サービス API を使用している場合は、`ReaderExtensionsServiceService` オブジェクトを作成します。
+Acrobat Reader DC エクステンションサービスの操作をプログラムで実行する前に、Acrobat Reader DC エクステンションサービスのクライアントオブジェクトを作成する必要があります。Java API を使用している場合は、`ReaderExtensionsServiceClient` オブジェクトを作成してください。Acrobat Reader DC Extensions web サービス API を使用している場合は、`ReaderExtensionsServiceService` オブジェクトを作成してください。
 
 **権限付き PDF ドキュメントを取得**
 
@@ -419,7 +419,7 @@ Acrobat Reader DC Extensions API（Java）を使用して、秘密鍵証明書�
 
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
-   `ReaderExtensionsServiceClient` オブジェクトを、そのコンストラクタを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡すことによって、作成します。
+   `ReaderExtensionsServiceClient` オブジェクトを作成するには、それ自身のコンストラクタを使用し、接続プロパティを含む `ServiceClientFactory` オブジェクトを渡します。
 
 1. PDF ドキュメントを取得します。
 
@@ -448,31 +448,31 @@ Acrobat Reader DC Extensions API（Web サービス）を使用して秘密鍵�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。`http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1`の WSDL 定義を使用していることを確認します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/ReaderExtensionsService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >`localhost` を AEM Forms をホストするサーバーの IP アドレスを置き換えます。
+   >`localhost` を AEM Forms をホストするサーバーの IP アドレスに置き換えます。
 
 1. Acrobat Reader DC エクステンションのクライアントオブジェクトを作成します。
 
    * デフォルトのコンストラクターを使用して `ReaderExtensionsServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する 文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ReaderExtensionsServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`。必ず `?blob=mtom` を指定します）。
    * `ReaderExtensionsServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * AEM Forms のユーザー名を `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName` フィールドに割り当てます。
+      * `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を `BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF ドキュメントを取得します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、権限を持つ PDF ドキュメントの保存に使用されます。
    * コンストラクターを呼び出し、権限付き PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。バイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで判断できます。
-   * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み込むストリーム長を渡すことによって、バイト配列にストリームデータを入力します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `MTOM` プロパティにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
 1. 使用権限を PDF ドキュメントから削除します。

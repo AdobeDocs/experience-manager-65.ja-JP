@@ -11,9 +11,9 @@ discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 source-git-commit: de58ba638c22b7148e1349417d1f514c26c5887e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3525'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -281,7 +281,7 @@ ht-degree: 100%
 
 1. パッケージ名をクリックして、パッケージリストからパッケージの詳細を開きます。
 
-1. 「**編集**」をクリックして、必要に応じて「**[パッケージ設定](#package-settings)**」を更新します。
+1. 「**編集**」をクリックして、必要に応じて&#x200B;**[パッケージ設定](#package-settings)**&#x200B;を更新します。
 
 1. 「**保存**」をクリックして、保存します。
 

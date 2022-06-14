@@ -267,7 +267,7 @@ AEM communities は、 *ウォッチワード分析装置* ～を評価する過
 
 好感度とウォッチワードを設定するには：
 
-*  オーサーインスタンスに管理者としてログインします。
+*  管理者として、 のオーサーインスタンスにログインします。
 * 開く [Web コンソール](https://localhost:4502/system/console/configMgr).
 * 場所 `sentimentprocess.name`.
 * 編集モードで開く設定を選択します。

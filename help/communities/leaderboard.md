@@ -1,8 +1,8 @@
 ---
 title: リーダーボードの基本事項
-seo-title: リーダーボードの基本事項
+seo-title: Leaderboard Essentials
 description: リーダーボード機能の概要
-seo-description: リーダーボード機能の概要
+seo-description: Leaderboard feature overview
 uuid: 815a6928-b147-496d-9751-13159ad1304d
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,18 +12,18 @@ discoiquuid: 7449f99e-77d7-4c0f-96d5-b67d5e1f124a
 exl-id: fd1b1749-13f9-4079-ae39-348676105852
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 78%
+source-wordcount: '94'
+ht-degree: 77%
 
 ---
 
-# リーダーボードの基本事項  {#leaderboard-essentials}
+# リーダーボードの基本事項 {#leaderboard-essentials}
 
 このページでは、リーダーボード機能の操作に関する基本情報をまとめています。
 
 ページにリーダーボードコンポーネントを含める前に、[コミュニティのスコアとバッジ](implementing-scoring.md)を設定する必要があります。
 
-[スコアとバッジの基本事項](configure-scoring.md)を参照してください。
+詳しくは、 [スコアとバッジの基本事項](configure-scoring.md).
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -51,7 +51,7 @@ ht-degree: 78%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="enabling-leaderboard.md">リーダーボード機能</a>を参照</td>
+   <td>詳しくは、 <a href="enabling-leaderboard.md">リーダーボード機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,4 +60,4 @@ ht-degree: 78%
 
 ### ファイルライブラリ機能 {#file-library-function}
 
-[リーダーボード機能](functions.md#leaderboard-function)を含むコミュニティサイト構造には、設定済みの`leaderboard`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [リーダーボード機能](functions.md#leaderboard-function)（設定済みを含む） `leaderboard` コンポーネント。

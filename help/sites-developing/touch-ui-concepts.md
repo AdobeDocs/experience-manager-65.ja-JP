@@ -12,9 +12,9 @@ discoiquuid: df3aaed1-97b5-4a4a-af74-cb887462475b
 docset: aem65
 exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2176'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -246,14 +246,14 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete` `cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete``cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **ノードタイプ** | **Granite UI のリソースタイプ** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container` `granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI 管理コンポーネント {#granite-ui-administration-components}
@@ -397,7 +397,7 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 * 特定の DOM 要素に関連付けた jQuery プラグイン
 * `data-*` 属性を使用した動作のカスタマイズ
 
-次にマークアップの例の抜粋を示します（data-* 属性として指定されたオプションに注意）。
+サンプルのマークアップを抽出します (data-&#42; 属性 ):
 
 ```xml
 <ul data-column-width="220" data-layout="card" class="cards">

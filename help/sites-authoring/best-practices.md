@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 100%
 
@@ -57,14 +57,14 @@ Dynamic Media 機能と Dynamic Media Classic の統合を含む Assets に関�
    <td><p>Dynamic Media 機能を使用している場合や、Dynamic Media Classic と統合している場合に、最良の結果を得るために画像をシャープにする方法と、画像の品質を最適化する方法について説明します。 </p> </td>
   </tr>
   <tr>
-   <td>多言語のアセット</td>
+   <td>多言語の Assets</td>
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">翻訳のベストプラクティス</a></td>
-   <td>AEM のアセットの効率的な翻訳に関するベストプラクティスを示します。</td>
+   <td>AEM Assets の効率的な翻訳に関するベストプラクティスを説明します。</td>
   </tr>
  </tbody>
 </table>
 
-## Sites {#sites}
+## サイト {#sites}
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 

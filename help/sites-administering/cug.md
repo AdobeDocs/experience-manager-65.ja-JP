@@ -12,7 +12,7 @@ discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 100%
 
@@ -132,7 +132,7 @@ Dispatcher を使用する場合は、次のプロパティを使用して Dispa
 >Dispatcher ファームでセッション管理が有効になっている場合、ファームが処理するすべてのページはキャッシュされません。CUG の外にあるページをキャッシュするには、CUG 以外のページを処理する 2 つ目のファームを dispatcher.any に
 >作成します。
 
-1. `/directory` を定義して [/sessionmanagement](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) を設定します。次に例を示します。
+1. `/directory` を定義して [/sessionmanagement](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement) を設定します。次に例を示します。
 
    ```xml
    /sessionmanagement

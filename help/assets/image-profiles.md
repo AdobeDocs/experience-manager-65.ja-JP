@@ -11,7 +11,7 @@ feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
 source-git-commit: 4b8369de9e6a10b73115d53358ce98729d92ed44
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2788'
 ht-degree: 100%
 
@@ -79,7 +79,7 @@ ht-degree: 100%
 
    目的に沿ったプロファイル名を使用します。例えば、スウォッチのみを生成するプロファイルを作成する（つまり、スマート切り抜きが無効（オフ）になっていて、カラーと画像スウォッチが有効（オン）になっている）場合、「スマートスウォッチ」というプロファイル名を使用できます。
 
-   [スマート切り抜きとスマートスウォッチオプション](#crop-options)および[アンシャープマスク](#unsharp-mask)も参照してください。
+   [スマート切り抜きとスマートスウォッチオプション](#crop-options) および [アンシャープマスク](#unsharp-mask) も参照してください。
 
    ![切り抜き](assets/crop.png)
 
@@ -165,7 +165,7 @@ ht-degree: 100%
 
 必要に応じてスマート切り抜きを再実行して、追加の切り抜きを再度生成することができます。
 
-[複数の画像のスマート切り抜きまたはスマートスウォッチの編集](#editing-the-smart-crop-or-smart-swatch-of-multiple-images)も参照してください。
+[複数の画像のスマート切り抜きまたはスマートスウォッチの編集](#editing-the-smart-crop-or-smart-swatch-of-multiple-images) も参照してください。
 
 **単一の画像のスマート切り抜きまたはスマートスウォッチの編集:**
 

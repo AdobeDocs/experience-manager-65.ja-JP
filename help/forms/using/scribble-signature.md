@@ -13,7 +13,7 @@ docset: aem65
 feature: Designer
 exl-id: 2025182f-195b-40d0-aee7-67669f55b964
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ ht-degree: 100%
 手書き中に位置情報アイコンをクリックすると、フィールドに位置情報と時間の情報が埋め込まれます。
 
 >[!NOTE]
->iPad では、デフォルトで、位置情報の埋め込みは必須です。
+iPad では、デフォルトで、位置情報の埋め込みは必須です。
 
 iPad では、位置情報アイコンはデフォルトで表示されていなくて、位置情報は「**OK**」をクリックする際に自動的に埋め込まれます。
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3757'
 ht-degree: 100%
 
@@ -122,7 +122,7 @@ AEM は、他のアドビ製品やサードパーティのサービスと統合�
 
    * 使用される略語／顧客固有の用語を定義します。
 
-* **仮定**
+* **前提**
 
    * あらゆる想定事項を定義します。
 

@@ -5,7 +5,7 @@ description: AEM を初めて使用するユーザー向けの質問、回答お
 seo-description: Questions, answers, and resources for users new to AEM
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 100%
 
@@ -44,11 +44,11 @@ AEM 6.5 の最新ドキュメントはまさにここです。
 * [AEM 6.1](https://docs.adobe.com/docs/en/aem/6-1.html)**
 * [AEM 6.0](https://docs.adobe.com/docs/en/aem/6-0.html)**
 * [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [AEM 5.6](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [CQ 5.5](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [CQ5.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [CQ5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [CRX 2.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [AEM 5.6](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [CQ 5.5](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [CQ5.4](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [CQ5.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [CRX 2.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
 
 ** アドビで正式にサポートされなくなったバージョンを示します。
 

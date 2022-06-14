@@ -1,8 +1,8 @@
 ---
 title: ブログの基本事項
-seo-title: ブログの基本事項
+seo-title: Blog Essentials
 description: ブログの概要
-seo-description: ブログの概要
+seo-description: Blog overview
 uuid: 714cf70c-76a0-4be6-9163-a31ac6bd1643
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,14 +13,14 @@ docset: aem65
 exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 60%
+source-wordcount: '442'
+ht-degree: 61%
 
 ---
 
 # ブログの基本事項 {#blog-essentials}
 
-AEM 6.1 Communities以降、ブログはコミュニティアクティビティとなっています。 ブログ記事は、パブリッシュ環境から投稿されるようになりました。以前は、オーサー環境でのみブログ記事を作成し、公開できました。
+AEM 6.1 Communities 以降、ブログはコミュニティアクティビティとなります。 ブログ記事は、パブリッシュ環境から投稿されるようになりました。以前は、ブログ記事はオーサー環境でのみ作成し、公開できました。
 
 権限を持つメンバーに制限されない限り、すべてのコミュニティメンバーがブログ記事を作成できるようになりました。
 
@@ -30,7 +30,7 @@ AEM 6.1 Communities以降、ブログはコミュニティアクティビティ�
 >
 >ブログ機能の基礎となるインフラストラクチャはジャーナル機能です。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 ブログ機能は 2 つの主要コンポーネントで構成されます。これらのコンポーネントは、[ブログ機能](/help/communities/functions.md#blog-function)を追加するか、オーサーインスタンスの編集モードでページに追加することによって使用可能になります。
 
@@ -60,7 +60,7 @@ AEM 6.1 Communities以降、ブログはコミュニティアクティビティ�
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="/help/communities/blog-feature.md">ブログ機能</a>を参照</td>
+   <td>参照 <a href="/help/communities/blog-feature.md">ブログ機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -73,7 +73,7 @@ AEM 6.1 Communities以降、ブログはコミュニティアクティビティ�
 | [**clientllibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **プロパティ** | [ブログ機能](/help/communities/blog-feature.md)を参照 |
+| **プロパティ** | 参照 [ブログ機能](/help/communities/blog-feature.md) |
 
 * [クライアント側のカスタマイズ](/help/communities/client-customize.md)
 
@@ -87,9 +87,9 @@ AEM 6.1 Communities以降、ブログはコミュニティアクティビティ�
 
 ### ブログ機能 {#blog-function}
 
-[ブログ機能](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造では、`Blog`および`Blog Sidebar`コンポーネントを設定します。 ブログ機能は、[権限を持つメンバーユーザーグループ](/help/communities/users.md#privileged-members-group)の識別をサポートします。
+を含むコミュニティサイト構造 [ブログ機能](/help/communities/functions.md#blog-function) は設定されます `Blog` および `Blog Sidebar` コンポーネント。 ブログ機能は、 [権限を持つメンバーユーザーグループ](/help/communities/users.md#privileged-members-group).
 
-### ブログエントリ(UGC) {#accessing-blog-entries-ugc}へのアクセス
+### ブログエントリ（UGC）へのアクセス {#accessing-blog-entries-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md)を参照してください。
 
@@ -100,8 +100,8 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](/help/communities/wo
 次のページを参照してください。
 
 * [ストレージリソースプロバイダーの概要](/help/communities/srp.md) - 序論とリポジトリの使用方法の概要.
-* [SRPとUGCの基本事項](/help/communities/srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPによるUGCへのアクセス](/help/communities/accessing-ugc-with-srp.md)  — コーディングのガイドライン
+* [SRP と UGC の基本事項](/help/communities/srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP を使用した UGC へのアクセス](/help/communities/accessing-ugc-with-srp.md)  — コーディングのガイドライン。
 * [SocialUtils のリファクタリング](/help/communities/socialutils.md) - 廃止されたユーティリティメソッドと現在の SRP ユーティリティメソッドの対応関係.
 
 ## プライマリパブリッシャー {#primary-publisher}
@@ -110,14 +110,14 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](/help/communities/wo
 
 詳しくは、[プライマリパブリッシャー](/help/communities/deploy-communities.md#primary-publisher)を参照してください。
 
-## リッチメディアの許可  {#allowing-rich-media}
+## リッチメディアの許可 {#allowing-rich-media}
 
 AEM プラットフォームでは、次に説明するように、XSS 攻撃を防止する目的でその他の Web サイトからのリンクがブロックされます。
 
 * [クロスサイトスクリプティング（XSS）に対する保護](/help/sites-developing/security.md#protect-against-cross-site-scripting-xss)
 
-AEM 6.2以降では、手動で行う必要があった変更は、デフォルトのAntiSamy設定ファイルに含まれています。
+AEM 6.2 以降では、手動で行う必要があった変更がデフォルトの AntiSamy 設定ファイルに含まれています。
 
-`Embed Media from External Sites`アイコンを選択すると、ブログ記事にリッチメディアが埋め込まれます。
+リッチメディアは、 `Embed Media from External Sites` アイコン：
 
 ![media](assets/media-icon.png)

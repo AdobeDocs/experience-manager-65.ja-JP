@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9c55feb9-23d8-4798-a3c5-70ec736df3ad
 exl-id: 8495a3d7-6ac9-41f5-b1f9-31decaba118a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ ht-degree: 100%
 
 **名前：**（必須）エンドポイントを識別します。名前は Workspace のカードビューで表示されます。&lt; は含めないでください。含めると、Workspace に表示される名前の一部が省略されます。エンドポイント名として URL を入力する場合は、RFC1738 で指定された構文規則に準拠していることを確認します。
 
-**説明：**&#x200B;エンドポイントの説明。&lt; は含めないでください。含めると、Workspace に表示される説明の一部が省略されます。
+**説明：** エンドポイントの説明。&lt; は含めないでください。含めると、Workspace に表示される説明の一部が省略されます。
 
 **タスクの手順：**&#x200B;このワークフローを開始するユーザーに対する指示です。
 

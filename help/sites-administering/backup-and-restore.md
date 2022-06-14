@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: eb8bbb85-ca2f-4877-8ee0-bb1ee8b7d8de
 exl-id: dd26dade-b769-483e-bc11-dcfa5ed1f87e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2283'
 ht-degree: 100%
 
@@ -178,7 +178,7 @@ curl コマンドはすぐに終了するので、このディレクトリを監
 
 通常、バックアップファイルまたはディレクトリは、`crx-quickstart` フォルダーを含むフォルダーの親フォルダー内に作成されます。
 
-バックアップ（どちらの種類でも）を別の場所に保存する場合は、`curl` コマンドの `target` パラメーターに絶対パス &grave;&grave;を設定できます。
+バックアップ（どちらの種類でも）を別の場所に保存する場合は、`curl` コマンドの `target` パラメーターに絶対パス ``を設定できます。
 
 例えば、`/Backups/2012` ディレクトリに `backupJune.zip` を生成するには、次のコマンドを実行します。
 

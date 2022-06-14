@@ -13,7 +13,7 @@ discoiquuid: 62490230-a24e-419d-95bb-c0bb04a03f96
 role: Developer
 exl-id: d9d5b94a-9d10-4d90-9e10-5142f30ba4a3
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 100%
 
@@ -78,7 +78,7 @@ Document Management サービス API を使用して、PDF ドキュメントを
 
 **関連項目**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -110,13 +110,13 @@ Forms、Output、Document Management API（Java）を使用して、送信され
 
       `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
-   * Forms サービスがフォームデータの処理を終了したかどうかを確認するには、`FormsResult` オブジェクトの `getAction` メソッドを呼び出します。このメソッドが値 `0` を返した場合、処理するデータの準備が整っています。
+   * `FormsResult` オブジェクトの `getAction` メソッドを呼び出して、Forms サービスがフォームデータの処理を完了したかどうかを判断します。このメソッドが値 `0` を返した場合、処理するデータの準備が整っています。
    * フォームデータを取得するには、`FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、`com.adobe.idp.Document` オブジェクトを作成します。（このオブジェクトには、Output サービスに送信できるフォームデータが含まれています。）
    * `java.io.InputStream` オブジェクトを作成するには、`java.io.DataInputStream` コントラクターを呼び出して、`com.adobe.idp.Document` オブジェクトを渡します。
    * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
-   * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、`org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
-   * `org.w3c.dom.Document` オブジェクトを作成するには、`org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して、`java.io.InputStream` オブジェクトを渡します。
-   * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、2 つのパラメーター（`org.w3c.dom.Document` オブジェクトと値を取得するノードの名前）を受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれます。このメソッドの本文を示します。
+   * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
+   * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
+   * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
 
 
 1. Output サービスを使用して、非インタラクティブ PDF ドキュメントを作成します。
@@ -136,7 +136,7 @@ Forms、Output、Document Management API（Java）を使用して、送信され
 
    コンテンツを追加するには、`DocumentManagementServiceClientImpl` オブジェクトの `storeContent` メソッドを呼び出して、次の値を渡します。
 
-   * コンテンツの追加先となるストアを指定する文字列値です。 デフォルトストアは `SpacesStore` です。この値は必須パラメーターです。
+   * コンテンツの追加先となるストアを指定する文字列値です。 デフォルトのストアは `SpacesStore` です。この値は必須パラメーターです。
    * コンテンツが追加されるスペースの完全修飾パスを指定する文字列値（例えば、`/Company Home/Test Directory`）。この値は必須パラメーターです。
    * 新しいコンテンツを表すノード名（例えば、`MortgageForm.pdf`）。この値は必須パラメーターです。
    * ノードタイプを指定する文字列値です。PDF ファイルなどの新しいコンテンツを追加するには、`{https://www.alfresco.org/model/content/1.0}content` を指定します。この値は必須パラメーターです。
@@ -150,6 +150,6 @@ Forms、Output、Document Management API（Java）を使用して、送信され
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)

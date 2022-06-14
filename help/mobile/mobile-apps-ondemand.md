@@ -2,7 +2,7 @@
 title: Mobile On-Demand
 seo-title: Mobile On-Demand
 description: このページでは、AEM mobile On-Demand Services 作成者の役割と責任について説明します。
-seo-description: このページでは、AEM mobile On-Demand Services 作成者の役割と責任について説明します。
+seo-description: Follow this page to learn about the roles and responsibilities for AEM mobile On-Demand services author.
 uuid: dd0184d8-1220-4f6a-96b2-acdb31caae17
 contentOwner: msm-service
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 2ae7ea8d-fc58-4647-bc83-915d9f4b7dd8
 exl-id: 357e75f8-2c98-4377-afef-016d58505b4d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 62%
+source-wordcount: '271'
+ht-degree: 59%
 
 ---
 
@@ -21,27 +21,27 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 >[!NOTE]
 >
->Adobe Experience Manager(AEM)をコンテンツ管理ソースとして使用していない場合は、[AEM Mobile On-demand Servicesのヘルプ](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html)を参照してください。
+>Adobe Experience Manager(AEM) をコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
 >**前提条件：**
 >
->AEM Mobile On-demand Servicesを使用し、この入門ガイドの手順に従う前に、[AEM](/help/sites-deploying/deploy.md)について理解しておく必要があります。
+>AEM Mobile On-demand Servicesを操作し、この入門ガイドの手順に従う前に、 [AEM](/help/sites-deploying/deploy.md).
 
 ## AEM Mobile 作成者 {#aem-mobile-author}
 
-***AEMオーサー*（または&#x200B;*マーケター*）**は、カスタム開発または標準提供のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAMからのすべてのタイプのメディアの追加をおこないます。 その後、*AEM作成者*はAEMの組み込みコンテンツエディターを使用して、Adobe Marketing Cloudの他の部分との統合を含め、アプリ内でリッチで関連性の高いエクスペリエンスを作成します。
+An ***AEM オーサー* ( または *マーケター*)**は、カスタム開発または標準提供のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこないます。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Marketing Cloudとの統合を含む、豊富で関連性の高いエクスペリエンスを作成します。
 
 AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作成する場合に以下のタスクを担当します。
 
 **AEM Mobile On-demand Services アプリの AEM コンテンツのオーサリング**&#x200B;には、以下のアクションが含まれます。
 
-* [AEM Mobile アプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
+* [AEM Mobile アプリケーションのダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)
 * [アプリケーションの作成および設定アクション](/help/mobile/mobile-apps-ondemand-application-create-configure-action.md)
 * [クラウド設定](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
 * [コンテンツ管理](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)
@@ -53,8 +53,8 @@ AEM 作成者は、AEM Mobile On-Demand Services を使用してアプリを作�
 >AEM のテンプレートやコンポーネントの基礎については、以下のリソースを参照してください。
 >
 >* [テンプレート](/help/sites-developing/templates.md)
-* [コンポーネント](/help/sites-developing/components.md)
-
+>* [コンポーネント](/help/sites-developing/components.md)
+>
 
 
 ## その他のリソース {#additional-resources}

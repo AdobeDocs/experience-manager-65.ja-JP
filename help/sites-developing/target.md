@@ -1,5 +1,5 @@
 ---
-title: ターゲットコンテンツの作成
+title: ターゲットコンテンツの開発
 seo-title: Developing for Targeted Content
 description: コンテンツターゲティングで使用するコンポーネントの作成に関するトピック
 seo-description: Topics about developing components for use with content targeting
@@ -12,13 +12,13 @@ discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
 source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 100%
 
 ---
 
-# ターゲットコンテンツの作成{#developing-for-targeted-content}
+# ターゲットコンテンツの開発{#developing-for-targeted-content}
 
 ここでは、コンテンツターゲティングで使用するコンポーネントの作成に関するトピックを取り上げます。
 

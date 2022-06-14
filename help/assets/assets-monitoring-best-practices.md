@@ -6,7 +6,7 @@ role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1668'
 ht-degree: 100%
 
@@ -164,7 +164,7 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
    * アラーム期間：ステータスが OK ではない場合。
    * アラーム定義：いずれかの指標のステータスが警告または重要となっています。問題を発生させたキューについて詳しくは、ログ属性を確認してください。
 
-* クエリパフォーマンス
+* クエリーパフォーマンス
 
    * MBean：`org.apache.sling.healthcheck:name=queriesStatus,type=HealthCheck`
    * URL：`/system/console/jmx/org.apache.sling.healthcheck:name= queriesStatus,type=HealthCheck`

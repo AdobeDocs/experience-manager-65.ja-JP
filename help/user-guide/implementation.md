@@ -5,7 +5,7 @@ description: AEM 6.5 の実装方法の概要
 seo-description: An overview of how to implement AEM 6.5
 exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 100%
 

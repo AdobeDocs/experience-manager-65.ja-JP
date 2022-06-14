@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: e9ab4796-a050-40de-b073-af7d33cff009
 exl-id: 84a1964c-4121-4763-b946-9eee6093747d
 source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 100%
 
@@ -125,7 +125,7 @@ ht-degree: 100%
 
       * 作成日
       * 変更済み
-      * 削除
+      * 削除済み
    * **ノードタイプ**
 
       ワークフローランチャーが適用されるノードの種類。
@@ -173,7 +173,7 @@ ht-degree: 100%
       このランチャープロパティは、次のような項目のコンマ区切りリストです。
 
       * `property-name` は、指定したプロパティ名に対して実行されたすべての `jcr` イベントを無視します。
-      * `event-user-data:<*someValue*>` は、[ `ObservationManager` API] (https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String) で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。 
+      * `event-user-data:<*someValue*>` は、[ `ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String) で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。 
 
       次に例を示します。
 

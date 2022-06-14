@@ -10,9 +10,9 @@ topic-tags: document_services
 discoiquuid: 32118d3b-54d0-4283-b489-780bdcbfc8d2
 exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6430'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 * DocAssurance サービスの API を使用する前に、[DocAssurance サービスを設定](/help/forms/using/install-configure-document-services.md)してください。
 
-* [AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をダウンロードして AEM maven プロジェクトと併せて設定してください。AEM ドキュメントサービスを使用して Maven プロジェクトを構築するために必要なクライアントクラスは、[AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html) から取得することができます。
+* [AEM Forms Client SDK](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)をダウンロードして AEM maven プロジェクトと併せて設定してください。AEM ドキュメントサービスを使用して Maven プロジェクトを構築するために必要なクライアントクラスは、[AEM Forms Client SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) から取得することができます。
 
 * [Maven を使用したAEM プロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)について学ぶ
 
@@ -76,7 +76,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
 
 ### 非表示署名フィールドの追加 {#adding-an-invisible-signature-field}
 
-署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。署名フィールドは、表示または非表示に設定することができます。署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。どちらの場合においても、PDF ドキュメントに署名できるようにするには、署名フィールドが存在している必要があります。プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。1 つの PDF ドキュメントに、複数の PDF フィールドを追加することができます。ただし、それぞれの署名フィールドには一意の名前を設定する必要があります。
+署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。署名フィールドは、表示または非表示に設定することができます。署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。署名ドキュメントには、複数の署名フィールドをPDFできます。ただし、各署名フィールド名は一意である必要があります。
 
 **構文**：`addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
 
@@ -94,7 +94,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
   </tr>
   <tr>
    <td><code>signatureFieldName</code> </td>
-   <td>署名フィールドの名前ですこのパラメーターは必須であり、null を値として持つことはできません。<br /> </td>
+   <td>署名フィールドの名前です. このパラメーターは必須であり、null を値として持つことはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
@@ -275,7 +275,7 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名フィールドの名前です。このパラメーターは必須であり、null 値を受け付けることはできません。</td>
+   <td>署名フィールドの名前です。このパラメーターは必須であり、Null 値は取れません。</td>
   </tr>
   <tr>
    <td><code>pageNumber</code></td>
@@ -896,7 +896,7 @@ PDF ドキュメント内の署名フィールドを変更できます。署名�
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名フィールドの名前です。このパラメーターは必須であり、null 値を受け付けることはできません。<br /> </td>
+   <td>署名フィールドの名前です. このパラメーターは必須であり、null 値を受け付けることはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>pdfSignatureFieldProperties</code></td>
@@ -1356,13 +1356,13 @@ PDF ドキュメントをパスワードで暗号化する場合、ユーザー�
 
 証明書ベースの暗号化では、公開鍵による暗号化を使用して、特定の受信者用にドキュメントを暗号化できます。
 
-それぞれの受信者に、異なる権限を与えることができます。公開鍵によって、さまざまな暗号化を行うことができます。
+様々な受信者に、ドキュメントに対する異なる権限を与えることができます。公開鍵のテクノロジーによって、暗号化の様々な側面が可能になります。
 
 アルゴリズムによって、大きい数字が 2 つ生成されます。この数字は以下のようなプロパティを持つ鍵として知られています。
 
-* 鍵のうち 1 つは、一連のデータを暗号化するために使用されます。その後、もう片方の鍵のみがデータの復号に使用できます。
-* 1 つの鍵を、もう片方の鍵と区別することは不可能です。
-* 鍵のうち 1 つは、ユーザーの秘密鍵として機能します。そのユーザーのみがこの鍵にアクセスできることが重要です。
+* 鍵のうち 1 つは、1 組のデータを暗号化するために使用されます。その後、もう片方の鍵のみがデータの復号に使用できます。
+* 1 つの鍵を、もう一方の鍵と区別することは不可能です。
+* 鍵のうち 1 つは、ユーザーの秘密鍵として機能します。当該のユーザーのみがこの鍵にアクセスできることが重要です。
 * もう 1 つのキーはユーザーの公開鍵です。これは、他のユーザーと共有できます。
 
 公開鍵証明書には、ユーザーの公開鍵と識別情報が含まれます。証明書の保存には、X.509 形式が使用されます。通常、証明書は認証局（CA）で発行および電子署名されます。CA は、証明書の有効性における信頼度を提供する、承認されたエンティティです。証明書には有効期限があり、この期限を過ぎると無効になります。
@@ -1381,7 +1381,7 @@ Reader Extensions Java クライアント API および Web サービスを使�
 
 **PDF 文書へのデジタル署名**
 
-セキュリティレベルの提供のため、PDF に電子署名を適用することができます。手書き署名のような電子署名は、署名者を識別したり、ドキュメントに関するステートメントを作成する手段として使用できます。
+デジタル署名を PDF ドキュメントに適用して、一定レベルのセキュリティを提供できます。デジタル署名は、手書きの署名と同様に、署名者が自分自身を識別し、ドキュメントに関するステートメントを作成する手段を提供します。
 
 ドキュメントの電子署名に使用されている技術は、署名者と受信者の両方が、何に署名されているのかを明確にし、その署名によりドキュメントに変更がないことを確認するのに役立ちます。
 
@@ -1411,7 +1411,7 @@ PDF ドキュメントの認証後、他の署名フィールドに電子署名�
 
 例えば、フォームへの入力やコメント入力を許可するドキュメントなどがあります。作成者が特定の変更を許可しないように設定を行った場合は、
 
-Acrobat はユーザーのその方法によるドキュメントの変更を制限します。別のアプリケーションを使用するなどしてそのような変更が行われた場合は、認証署名は無効となり、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
+Acrobat はユーザーがその方法でドキュメントを変更することを制限します。別のアプリケーションを使用するなどしてそのような変更が行われた場合は、認証署名は無効となり、Acrobat はユーザーがドキュメントを開いた際に警告を発します。（未認証の署名では、変更を防ぐことはできません。また、通常の編集操作では元の署名は無効になりません。）
 
 署名時に、ドキュメントのコンテンツにあいまいさや誤解をもたらす可能性のある、特定の種類のコンテンツをスキャンします。
 
@@ -2790,7 +2790,7 @@ AEM では、PDF ドキュメントの電子署名を検証することができ
   </tr>
   <tr>
    <td><code>resourceResolver</code></td>
-   <td>Granite trust store に対するリソースリゾルバーです。</td>
+   <td>Granite Trust Store に対するリソースリゾルバーです</td>
   </tr>
  </tbody>
 </table>
@@ -3771,7 +3771,7 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
    <td>入力ファイルのパスと名前を指定します。PDF または XDP のファイル形式に対応しています。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。<br /> </td>
   </tr>
   <tr>
-   <td>data</td>
+   <td>データ</td>
    <td>PDF ドキュメントにマージされるデータを含む XML ファイルです。<br /> </td>
   </tr>
   <tr>
@@ -3881,7 +3881,7 @@ generatePDFOutput API は、フォームデザインとデータをマージし�
    <td>キーのマップと、テンプレートのファイル名を指定します。<br /> </td>
   </tr>
   <tr>
-   <td>data</td>
+   <td>データ</td>
    <td>キーのマップと、データドキュメントを指定します。キーが Null でない場合、データドキュメントは templates マップで指定されたキーに対応するテンプレートでレンダリングされます。 </td>
   </tr>
   <tr>
@@ -3998,7 +3998,7 @@ String outputFolder="C:/Output";
    <td>入力ファイルのパスと名前を指定します。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。PDF または XDP のファイル形式に対応しています。<br /> </td>
   </tr>
   <tr>
-   <td>data</td>
+   <td>データ</td>
    <td>PDF ドキュメントにマージされるデータを含む XML ファイルです。<br /> </td>
   </tr>
   <tr>
@@ -4089,7 +4089,7 @@ Document doc=null;
    <td>入力ファイルのパスと名前を指定します。ファイル名のみが指定されていた場合、このファイルは options で指定された contentRoot に基づいて読み込まれます。XDP のファイル形式に対応しています。 </td>
   </tr>
   <tr>
-   <td>data</td>
+   <td>データ</td>
    <td>PDF ドキュメントにマージされるデータを含む XML ファイルです。<br /> </td>
   </tr>
   <tr>
@@ -4174,7 +4174,7 @@ Document doc=null;
    <td>キーのマップと、テンプレートのファイル名を指定します。<br /> </td>
   </tr>
   <tr>
-   <td>data</td>
+   <td>データ</td>
    <td>キーのマップと、データドキュメントを指定します。キーの値が null 値でなかった場合、データドキュメントはtemplates のマップのキーに対応するテンプレートでレンダリングされます。<br /> </td>
   </tr>
   <tr>
@@ -4466,7 +4466,7 @@ PDF Generator サービスは、ネイティブファイル形式を PDF に変�
 
 GeneratePDFService は、さまざまなファイル形式（.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（廃止）、 .jpg、 .bmp、 .tif、 .png、.html やその他のファイル形式）を PDF に変換する API を提供します。また、PDF をさまざまなファイル形式で書き出したり、PDF を最適化する API も提供しています。このサービスは、以下の API をサポートしています。
 
-* **createPDF**：対応ファイル形式を PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。また、これらのアプリケーションに加えて、サードパーティ製の汎用 PDF 生成アプリケーションタイプも API にプラグインすることができます。
+* **createPDF**：対応ファイル形式を PDF ドキュメントに変換します。Microsoft Word、Microsoft PowerPoint、Microsoft Excel、Microsoft Project などのファイル形式に対応しています。これらのアプリケーションに加えて、サードパーティ製の汎用的な種類の PDF 生成アプリケーションも API にプラグインすることができます。
 * **exportPDF**：PDF ドキュメントを対応ファイル形式に変換します。このメソッドでは、PDF の内容を特定のファイル形式で読み込む（または書き出す）PDF が許可されます。PDF ドキュメントは、次の形式でエクスポートすることができます。Encapsulated PostScript（eps）、HTML 3.2（htm、html）、CSS 1.0 を使用した HTML 4.01（htm、html）、JPEG（jpg、jpeg、jpe）、JPEG2000（jpf、jpx、jp2、j2k、j2c、jpc）、Microsoft Word 文書（doc、 docx） Microsoft Excel ブック（xlsx）、Microsoft PowerPoint プレゼンテーション（pptx）、PNG（png）、PostScript（ps）、リッチテキスト形式（rtf）、テキスト（Accessible）（txt）、テキスト（Plain）（txt）、TIFF（tif、tiff）、XML 1.0（xml）、PDF/A-1a（sRGB）、PDF/A-1b、PDF/A-2a（sRGB）、PDF/A-2b（sRGB）、PDF/A-3a（sRGB）、PDF/A-3b（sRGB）。PDF の出力用として[カスタムの Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を指定することもできます。
 
 * **optimizePDF**：PDF ドキュメントを最適化し、PDF ドキュメントを別の形式に変換します。このメソッドは PDF ドキュメントを入力ファイルとして受け付けます。
@@ -4984,7 +4984,7 @@ Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, Strin
      <li>セキュリティなし</li>
      <li>パスワードによるセキュリティ<br /> </li>
      <li>証明書によるセキュリティ<br /> </li>
-     <li>Adobe Policy Server</li>
+     <li>Adobeポリシーサーバ</li>
     </ul> <p>これはオプションのパラメーターです。</p> </td>
   </tr>
   <tr>

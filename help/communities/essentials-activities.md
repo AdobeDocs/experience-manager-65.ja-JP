@@ -1,8 +1,8 @@
 ---
 title: アクティビティストリームの基本事項
-seo-title: アクティビティストリームの基本事項
+seo-title: Activity Stream Essentials
 description: メンバーが実行した最近のアクティビティのリスト、または単一のコンテンツスレッドの最近のアクティビティのリスト
-seo-description: メンバーが実行した最近のアクティビティのリスト、または単一のコンテンツスレッドの最近のアクティビティのリスト
+seo-description: List of recent activites performed by a member or a list of recent activities on a single thread of content
 uuid: 30c5ac08-0af0-4670-9d81-0beb5c93e00a
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: d98bcbe4-3f80-49ec-b40c-417be0d97350
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 64%
+source-wordcount: '296'
+ht-degree: 62%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 64%
 
 ## 概念  {#concepts}
 
-*アクティビティストリーム*&#x200B;は、フォーラムトピックやブログなどのコンテンツの単一のスレッド上でメンバーが実行した最近のアクティビティのリストまたは最近のアクティビティのリストです。
+An *アクティビティストリーム* は、メンバーが実行した最近のアクティビティのリスト、またはフォーラムトピックやブログなどの単一のコンテンツスレッド上での最近のアクティビティのリストです。
 
 メンバーは、別の個人やコンテンツをフォローすることによって、アクティビティストリームをフォローできます。
 
@@ -36,7 +36,7 @@ ht-degree: 64%
 
 *[ソーシャルグラフ](/help/communities/essentials-socialgraph.md)*&#x200B;とは、メンバー間のフォロー関係を表したものです。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -62,7 +62,7 @@ ht-degree: 64%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="/help/communities/activities.md">アクティビティストリーム機能</a>を参照</td>
+   <td>詳しくは、 <a href="/help/communities/activities.md">アクティビティストリーム機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -79,4 +79,4 @@ ht-degree: 64%
 
 ### アクティビティストリーム機能 {#activity-stream-function}
 
-[アクティビティストリーム機能](/help/communities/functions.md#activity-stream-function)を含むコミュニティサイト構造には、設定済みの`activity streams`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)（設定済みを含む） `activity streams` コンポーネント。

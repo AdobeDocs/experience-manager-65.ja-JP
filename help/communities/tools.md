@@ -1,8 +1,8 @@
 ---
 title: コミュニティツール
-seo-title: コミュニティツール
+seo-title: Communities Tools
 description: コミュニティツールコンソールにアクセスする方法
-seo-description: コミュニティツールコンソールにアクセスする方法
+seo-description: How to access Communities Tools console
 uuid: 3172fe00-7132-4cee-9fd1-b6f96eb43200
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,8 +14,8 @@ role: Admin
 exl-id: ba6c4ad3-c393-42d8-9f1f-d59947c3e7ab
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 16%
+source-wordcount: '104'
+ht-degree: 10%
 
 ---
 
@@ -23,18 +23,18 @@ ht-degree: 16%
 
 コミュニティツールコンソールにアクセスするには、オーサーインスタンスにログインします。
 
-* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**。
+* グローバルナビゲーションから： **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]**.
 
    ![コミュニティ](assets/communities-home.png)
 
-* [サイトテンプレート](sites.md)  — サイトテンプレートの作成と管理のためのコンソール。
+* [サイトテンプレート](sites.md)  — サイトテンプレートの作成と管理を行うコンソール。
 
-* [グループテンプレート](tools-groups.md)  — コンソール（グループテンプレートの作成と管理）。
+* [グループテンプレート](tools-groups.md)  — グループテンプレートの作成と管理のためのコンソール。
 
 * [コミュニティ機能](functions.md)  — コミュニティ機能の作成と管理のためのコンソール。
 
-* [ストレージ設定](srp-config.md)  — コンソールを使用して、デフォルトのSRPを設 [定および選択します](working-with-srp.md)。
+* [ストレージ設定](srp-config.md)  — コンソールを使用して、 [デフォルトの SRP](working-with-srp.md).
 
-* [コンポーネントガイド](components-guide.md)  - SCFコンポーネントの動作とその設定方法やカスタマイズ方法を実験できるインタラクティブなサイトを開きます。
+* [コンポーネントガイド](components-guide.md) - SCF コンポーネントの動作方法と、その設定方法またはカスタマイズ方法を実験できるインタラクティブサイトを開きます。
 
-* [バッジ](badges.md)  — カスタムバッジを追加してスコアルールやバッジルールで使用でき [るコンソール](implementing-scoring.md)
+* [バッジ](badges.md)  — カスタムバッジを追加して [スコアとバッジのルール](implementing-scoring.md)

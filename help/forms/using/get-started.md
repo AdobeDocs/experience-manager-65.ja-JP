@@ -11,7 +11,7 @@ discoiquuid: f276d150-8936-4bfb-8475-7ca36815b233
 feature: Mobile Forms
 exl-id: a3245f05-6ea3-4f90-8981-bfa89d2e7335
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 100%
 

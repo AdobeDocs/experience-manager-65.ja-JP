@@ -1,8 +1,8 @@
 ---
-title: AEM でのモバイルアプリの開発
-seo-title: AEM でのモバイルアプリの開発
+title: AEM でのモバイルアプリケーションの開発
+seo-title: Developing Mobile Applications in AEM
 description: Adobe PhoneGap Enterprise を使用して AEM でモバイルアプリケーションの開発を開始するには、このページの説明に従います。
-seo-description: Adobe PhoneGap Enterprise を使用して AEM でモバイルアプリケーションの開発を開始するには、このページの説明に従います。
+seo-description: Follow this page to start developing mobile application in AEM using Adobe PhoneGap Enterprise.
 uuid: d8442447-ee04-4bb2-a0d7-17dcc8979dba
 contentOwner: User
 content-type: reference
@@ -12,16 +12,16 @@ discoiquuid: fd7bcf17-af7e-4bd6-8137-48401d9743c5
 exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 76%
+source-wordcount: '583'
+ht-degree: 75%
 
 ---
 
-# AEM でのモバイルアプリの開発  {#developing-mobile-applications-in-aem}
+# AEM でのモバイルアプリケーションの開発 {#developing-mobile-applications-in-aem}
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEM では、Adobe PhoneGap および Adobe Publishing Solution を利用することにより、コンテンツが豊富でユーティリティベースの次のようなクロスプラットフォームモバイルアプリケーションを作成し、管理できます。
 
@@ -40,7 +40,7 @@ AEM は、Adobe **[PhoneGap Build サービス](https://build.phonegap.com/)と�
 
 ## アプリの作成 {#creating-apps}
 
-開発者は、[AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit)を[https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps)にある追加リソースと共に使用して、Cordova Webビューを実行する参照用ネイティブアプリを含むAEMアプリをPhoneGapでブートストラップできます。
+開発者は、 [AEM PhoneGap スターターキット](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit) で見つかった追加リソースと共に [https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps) Cordova Webviews を実行する参照用ネイティブアプリを含め、AEMアプリを PhoneGap でブートストラップする場合。
 
 Starter Kit Git リポジトリの readme には、スターターキットを使用するためのチュートリアルが含まれています。
 
@@ -52,14 +52,14 @@ Starter Kit Git リポジトリの readme には、スターターキットを�
 
 >[!NOTE]
 >
->ラボを含む追加の参照実装ソースは、GitHub [ここ](https://github.com/adobe-marketing-cloud-apps)と、「kitchen-sink」のソース[ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink)にあります。
+>ラボを含むその他の参照用実装ソースは、GitHub にあります [ここ](https://github.com/adobe-marketing-cloud-apps) そして、「台所流し台」の源 [ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink).
 
 ## iOS 9 ホストおよび HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
 
-iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。この問題により、安全でないホスト(*http://localhost:4502*&#x200B;など)に対する要求がおこなわれなくなります。 この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
+iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。この問題により、安全でないホスト ( *http://localhost:4502*) をクリックします。 この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
 
-1. 即時の回避策として、問題なくiOS 8シミュレーターを使用できます。
-1. iOS 9を使用する必要がある場合、apps -Info.plist （&lt;app root>/platforms/ios/&lt;app name>/&lt;app name>-Info.plist&quot;の`cordova platform add ios`を実行した後に見つかる）を手動で編集して、次のプロパティを含めることができます。
+1. 即時の回避策として、iOS 8 シミュレーターを問題なく使用できます。
+1. iOS 9 を使用する必要がある場合は、 apps -Info.plist （実行後に見つかります） `cordova platform add ios` 」の&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;) ファイルを手動で編集して、次のプロパティを含めることができます。
 
 ```
 <key>NSAppTransportSecurity</key>
@@ -73,9 +73,9 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 
 >[!NOTE]
 >
->「App Transport Security」について詳しくは、[AppleのiOS9プレリリースドキュメント](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14)の次の節と、この[スタックオーバーフローの説明](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/)を参照してください。
+>「App Transport Security」について詳しくは、 [AppleのiOS9 プレリリースドキュメント](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html#//apple_ref/doc/uid/TP40016198-SW14) そして [スタックオーバーフローの議論](https://stackoverflow.com/questions/30751053/ios9-ats-what-about-html5-based-apps/).
 
-## AEM でのモバイルアプリの開発 {#developing-mobile-applications-in-aem-1}
+## AEM でのモバイルアプリケーションの開発 {#developing-mobile-applications-in-aem-1}
 
 * [AEM PhoneGap の起動](/help/mobile/starting-aem-phonegap-app.md)
 * [モバイルアプリケーションのビルド](/help/mobile/building-app-mobile-phonegap.md)
@@ -83,7 +83,7 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 * [アプリコンソールを使用したアプリの作成および編集](/help/mobile/phonegap-apps-console.md)
 * [単一ページアプリケーション](/help/mobile/phonegap-single-page-applications.md)
 * [PhoneGap CLI によるアプリの開発](/help/mobile/phonegap-apps-pg-cli.md)
-* [デバイスの機能へのアクセス](/help/mobile/phonegap-access-device-features.md)
+* [デバイス機能へのアクセス](/help/mobile/phonegap-access-device-features.md)
 * [Adobe Mobile Analytics によるアプリパフォーマンスのトラッキング](/help/mobile/phonegap-intro-to-app-analytics.md)
 * [モバイルアプリケーションへの Adobe Analytics の追加](/help/mobile/phonegap-add-analytics-to-apps.md)
 * [プッシュ通知](/help/mobile/phonegap-push-notifications.md)
@@ -96,4 +96,4 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [AEM での Adobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

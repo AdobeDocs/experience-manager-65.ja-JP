@@ -12,7 +12,7 @@ discoiquuid: 8bc307d9-fa5c-44c0-bff9-2d68d32a253b
 feature: Configuring
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 100%
 
@@ -80,7 +80,7 @@ Java `keytool` を使用して次の手順を実行し、秘密鍵と資格情�
 
    | オプション | 作成者 | 公開 |
    |---|---|---|
-   | -alias | 作成者 | publish |
+   | -alias | 作成者 | 公開 |
    | -file | author.cer | publish.cer |
    | -keystore | author.keystore | publish.keystore |
 
@@ -134,7 +134,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。そのためには、
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
    | -in | author.cer | publish.cer |
-   | -name | 作成者 | publish |
+   | -name | 作成者 | 公開 |
 
 ## 作成者への秘密鍵と TrustStore のインストール {#install-the-private-key-and-truststore-on-author}
 

@@ -1,8 +1,8 @@
 ---
 title: モデレートコンソール
-seo-title: モデレートコンソール
+seo-title: Moderation Console
 description: モデレートコンソールへのアクセス方法
-seo-description: モデレートコンソールへのアクセス方法
+seo-description: How to access the Moderation console
 uuid: d3b8a160-85b2-43f4-9891-5fafa8c48c5f
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,37 +14,37 @@ role: Admin
 exl-id: 829da16a-4083-43c1-857d-f2666b363bfc
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2042'
 ht-degree: 53%
 
 ---
 
 # モデレートコンソール {#moderation-console}
 
-AEM Communitiesでは、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）が、オーサー環境とパブリッシュ環境の両方でコミュニティコンテンツ[の一括モデレートを実行できます。](/help/communities/moderate-ugc.md)
+AEM Communitiesで一括 [コミュニティコンテンツのモデレート](/help/communities/moderate-ugc.md) は、管理者とコミュニティモデレーター（モデレーターとして割り当てられた信頼できるコミュニティメンバー）によって、オーサー環境とパブリッシュ環境の両方から実行できます。
 
-管理者とコミュニティモデレーターは、パブリッシュ環境で[コンテキスト内モデレート](/help/communities/in-context.md)を実行することもできます。
+管理者とコミュニティモデレーターも、 [コンテキスト内モデレート](/help/communities/in-context.md) （パブリッシュ環境で）
 
-すべての[コミュニティサイト](/help/communities/sites-console.md)の機能は、管理権限を持つログインユーザーが使用できる`Administration`メニュー項目です。 `Administration`リンクをクリックすると、モデレートコンソールにアクセスできます。
+すべての [コミュニティサイト](/help/communities/sites-console.md) は `Administration` 管理者権限を持つログインユーザーが使用できるメニュー項目です。 この `Administration` リンクをクリックすると、モデレートコンソールにアクセスできます。
 
 モデレートコンソールでは、管理者とコミュニティモデレーターが、モデレート権限を持っているすべてのユーザー生成コンテンツ（UGC）にアクセスできます。複数のサイトのモデレートを許可されている場合は、すべてのサイトにわたる投稿を表示したり、選択したコミュニティサイトでフィルターしたりできます。
 
-詳しくは、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+詳しくは、 [ユーザーとユーザーグループの管理](/help/communities/users.md).
 
 モデレートコンソールでは以下の操作を実行できます。
 
-* モデレートタスクを一括で実行します。
-* UGCの検索。
-* UGCの詳細の表示。
-* UGC作成者の詳細の表示
+* モデレートタスクを一括して実行します。
+* UGC を検索しています。
+* UGC の詳細を表示します。
+* UGC 作成者の詳細を表示します。
 
-管理者または` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`を持つメンバーとしてサインインした場合にのみ、モデレートタスクを実行できます。
+管理者または ` [moderator permissions](/help/communities/in-context.md#identifyingtrustedmembers)`（モデレートタスクを実行できます）
 
 ## パブリッシュ環境からのアクセス {#publish-environment-access}
 
 公開済みのコミュニティサイトからモデレートコンソールにアクセスするには、コミュニティモデレーターがサインインしたときに表示される管理リンクからアクセスします。
 
-![publishwerretail](assets/publishweretail.png)
+![publishweretail](assets/publishweretail.png)
 
 管理リンクを選択すると、以下のモデレートコンソールが表示されます。
 
@@ -54,13 +54,13 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 オーサー環境でモデレートコンソールに移動するには、
 
-* グローバルナビゲーションから、**[!UICONTROL コミュニティ]**/**[!UICONTROL モデレート]**&#x200B;を選択します。
+* グローバルナビゲーションから、 **[!UICONTROL コミュニティ]** > **[!UICONTROL モデレート]**.
 
-管理者として、または[モデレーター権限](/help/communities/in-context.md#identifyingtrustedmembers)を持つメンバーとしてサインインしている場合にのみ、モデレートタスクを実行できます。 表示されるコミュニティコンテンツは、サインインしたメンバーがモデレートを許可されているものだけです。
+管理者として、または [モデレーター権限](/help/communities/in-context.md#identifyingtrustedmembers)を使用すると、モデレートタスクを実行できます。 表示されるコミュニティコンテンツは、サインインしたメンバーによるモデレートが許可されているものだけです。
 
 >[!NOTE]
 >
->パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトではストレージはJSRPで、オーサーとパブリッシュに共通するストアではありません。 [コミュニティコンテンツストレージ](/help/communities/working-with-srp.md)を参照してください。
+>パブリッシュ環境の UGC をオーサー環境で表示できるのは、選択した SRP で共通ストアが実装されている場合のみです。例えば、デフォルトではストレージは JSRP です。JSRP は、オーサーとパブリッシュに共通するストアではありません。 [コミュニティコンテンツのストレージ](/help/communities/working-with-srp.md)を参照してください。
 
 ![moderationconsoleauthor](assets/moderationconsoleauthor.png)
 
@@ -74,7 +74,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 ### 上部ナビゲーションバー {#top-navigation-bar}
 
-上部ナビゲーションバーはすべてのコンソールで共通です。詳しくは、[基本操作](/help/sites-authoring/basic-handling.md)を参照してください。
+上部ナビゲーションバーはすべてのコンソールで共通です。詳しくは、 [基本操作](/help/sites-authoring/basic-handling.md).
 
 ### ツールバー {#toolbar}
 
@@ -94,31 +94,31 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 コンテンツ領域には、投稿された UGC に関する以下の情報が表示されます。
 
-* UGCが投稿されました
+* UGC が投稿されました
 * メンバー名
 * メンバーアバター
 * 投稿の場所。
 * 投稿された日時。
 * 投稿への返信数。
-* [](/help/communities/moderate-ugc.md#sentiment) 投稿に関連付けられたセンチメント
-* 承認された場合は、チェックマークが表示されます。
-* 添付ファイルがある場合は、ペーパークリップが表示されます。
+* [好感度](/help/communities/moderate-ugc.md#sentiment) 投稿に関連付けられている
+* 承認されている場合は、チェックマークが表示されます。
+* 添付ファイルがある場合は、クリップが表示されます。
 
 >[!NOTE]
 > 
->コンテンツ領域には&#x200B;*無限スクロール*&#x200B;が備わっています。つまり、コンテンツの最後に達するまでスクロールを続行できます。 ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
+>コンテンツ領域には、 *無限スクロール*&#x200B;を使用すると、コンテンツの最後に達するまでスクロールを続行できます。 ツールバーは、スクロール時もコンテンツ領域の上の位置に固定されて表示されます。
 
 ### フィルターレール {#ootbfilters}
 
 ![open-filterrail](assets/open-filterrail.png)
 
-サイドパネルアイコンをクリックすると、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールには、様々なフィルターが用意されており、それぞれのフィルターは、コンテンツ領域に表示される参照元のUGCに直ちに影響します。
+サイドパネルアイコンをクリックすると、フィルターレールが開きます。 コンテンツ領域の左側に表示されるフィルターレールには、異なるフィルターが用意されており、それぞれのフィルターは、コンテンツ領域に表示される参照 UGC に直ちに影響を与えます。
 
-各カテゴリ内のフィルタは&#x200B;**OR**&#39;dで、異なるカテゴリのフィルタは&#x200B;**AND**&#39;dです。
+各カテゴリ内のフィルターは次のとおりです **または**&#x200B;を一緒に追加し、異なるカテゴリのフィルターを **および**&#x200B;一緒に。
 
-例えば、**質問**&#x200B;と&#x200B;**回答**&#x200B;の両方をチェックすると、**質問** *または*&#x200B;回答&#x200B;**回答**&#x200B;のいずれかのコンテンツが表示されます。
+例えば、 **質問** および **回答**&#x200B;を選択すると、次のいずれかの **質問** *または* an **回答**.
 
-ただし、**質問**&#x200B;と&#x200B;**保留**&#x200B;を選択すると、**質問**&#x200B;で&#x200B;**保留中**&#x200B;のコンテンツのみが表示されます。
+ただし、 **質問** および **保留中**&#x200B;に含まれている場合、 **質問** および **保留中**.
 
 >[!NOTE]
 >
@@ -142,7 +142,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 #### サイト {#site}
 
-サイトは、表示される UGC 参照を、選択したコミュニティサイトへの投稿のみに限定します。サイトがチェックされていない場合は、UGCへの参照がすべて表示されます。
+サイトは、表示される UGC 参照を、選択したコミュニティサイトへの投稿のみに限定します。サイトがチェックされていない場合は、UGC への参照がすべて表示されます。
 
 ![site-panel](assets/site-panel.png)
 
@@ -177,12 +177,12 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 フィルター条件のリソースをさらに追加するには：
 
 * オーサーインスタンスに管理者としてログインします。
-* [Webコンソール](https://localhost:4502/system/console/configMgr)を開きます。
-* `AEM Communities Moderation Dashboard Filters`を探します。
+* 開く [Web コンソール](https://localhost:4502/system/console/configMgr).
+* 場所 `AEM Communities Moderation Dashboard Filters`.
 * 編集モードで開く設定を選択します。
-* フィルター対象のコンポーネントのResourceTypeを入力します。
+* フィルターするコンポーネントの ResourceType を入力します。
 
-   * 例えば、含まれる投票コンポーネントに対してフィルターを設定するには、次のように入力します。
+   * 例えば、含まれる投票コンポーネントに対してフィルタを適用するには、次のように入力します。
 
       `Voting=social/tally/components/hbs/voting`
    ![additional-contenttype](assets/additional-contenttype.png)
@@ -190,7 +190,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 * 「保存」を選択します。
 * コミュニティ — モデレートコンソールを更新します。
 
-その結果、`Content Type`フィルターグループの下の`Voting`に対して選択可能な新しいフィルターが作成されます。
+その結果、次の項目の選択可能な新しいフィルターが作成されます。 `Voting` の下に `Content Type` フィルターグループを使用します。
 
 このフィルターを選択すると、ダッシュボードのコンテンツに、入力した ResourceType に一致する UGC が表示されます。
 
@@ -208,7 +208,7 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 フラグ設定は、表示される UGC 参照を、フラグが付いている投稿または非表示の投稿のみに限定します。
 
-コンテンツにフラグが設定された後は、「**フラグ**」ボタンをもう一度選択して、そのコンテンツのフラグを解除するまで、フラグが設定されたままになります。 フラグには重要やフォローアップなどのレベルがないことに注意してください。
+コンテンツにフラグが設定されると、 **フラグ** ボタンをもう一度クリックします。 フラグには重要やフォローアップなどのレベルがないことに注意してください。
 
 ![フラグ](assets/flagging.png)
 
@@ -226,52 +226,52 @@ AEM Communitiesでは、管理者とコミュニティモデレーター（モ�
 
 #### 好感度 {#sentiment}
 
-[](/help/communities/moderate-ugc.md#sentiment) センチメントは、表示されるUGC参照を、好感度が肯定的、否定的または中立の投稿のみに制限します。
+[好感度](/help/communities/moderate-ugc.md#sentiment) 表示される UGC 参照を、好感度の値が肯定的、否定的、中立の投稿に限定します。
 
 ![sentiment](assets/sentiment.png)
 
 ## カスタムフィルター {#custom-filters}
 
-[フィルターレール](/help/communities/moderation.md#ootbfilters)の既製のフィルターに加えて、メタデータに対するカスタムフィルターをモデレートUIに追加できます。 開発者は、GitHubのサンプルコードを使用して、既存のモデレートUIフィルターを拡張できます。
+の標準フィルターとは別に [フィルターレール](/help/communities/moderation.md#ootbfilters)を使用すると、メタデータに対する追加のカスタムフィルターをモデレート UI に追加できます。 開発者は、GitHub のサンプルコードを使用して、既存のモデレート UI フィルターを拡張できます。
 
 ![custom-tag-filter](assets/custom-tag-filter.png)
 
-Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter)は、タグフィルターを実装し、ユーザー生成コンテンツに特定のタグが適用されているかどうかに基づいてUGCリストをフィルタリングします。 サンプルコードに従って、他の類似のUGCメタデータフィールド用に類似のフィルターを作成できます。
+この [サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/main/aem-communities-moderation-filter) Github にタグフィルターを実装して、ユーザー生成コンテンツに特定のタグが適用されているかどうかに基づいて UGC リストをフィルタリングします。 サンプルコードに従って、他の類似の UGC メタデータフィールドに類似のフィルターを作成できます。
 
 タグフィルターのサンプルをインストールするには：
 
-1. AEMオーサー(`https://[aem-author]:4502/crx/packmgr/index.jsp`)インスタンスとAEMパブリッシュ(`https://[aem-publish]:4503/crx/packmgr/index.jsp`)インスタンスでパッケージマネージャーを開きます。
-1. GitHubコードからパッケージ`com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip`を構築し、インストールして有効にします。
-1. AEMオーサー(`https://[aem-author]:4502/system/console/bundles`)インスタンスとAEMパブリッシュ(`https://[aem-publish]:4503/system/console/bundles`)インスタンスのバンドルコンソールを開きます。
-1. Githubからパッケージ(`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`)をビルドし、インストールして有効にします。
-1. AEMオーサー(`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)およびAEMパブリッシュ(`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`)インスタンスの&#x200B;**/apps/social/moderation/facets**&#x200B;ノードに移動します。
-1. `jcr:read`権限を持つテクニカルユーザー&#x200B;**communities-utility-reader**&#x200B;を追加します。
+1. AEM オーサーでパッケージマネージャーを開きます (`https://[aem-author]:4502/crx/packmgr/index.jsp`) インスタンスと AEM パブリッシュ (`https://[aem-publish]:4503/crx/packmgr/index.jsp`) インスタンスを使用します。
+1. パッケージをビルドします。 `com.adobe.social.sample.moderation.filter.ui.apps-1.0-SNAPSHOT.zip` を GitHub コードからインストールし、同じ設定を有効にします。
+1. AEM オーサーでバンドルコンソールを開きます ( `https://[aem-author]:4502/system/console/bundles`) インスタンスと AEM パブリッシュ ( `https://[aem-publish]:4503/system/console/bundles`) インスタンスを使用します。
+1. パッケージ (`[com](https://sample-moderation-filter.com/).adobe.social.sample.moderation.filter.core-1.0-SNAPSHOT.jar`) を GitHub からインストールし、同じ設定を有効にします。
+1. に移動します。 **/apps/social/moderation/facets** AEM オーサーのノード (`https://[aem-author]:4502/crx/de/index.jsp#/apps/social/moderation/facets`) と AEM パブリッシュ (`https://[aem-publish]:4502/crx/de/index.jsp#/apps/social/moderation/facets`) インスタンスを使用します。
+1. 技術ユーザーの追加 **communities-utility-reader** と `jcr:read` 権限。
 
 既存のコミュニティサイトにカスタムフィルターを公開するには：
 
-1. 既存のモデレートページ`Clientlibs`の`/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`を編集
+1. 編集 `Clientlibs` 既存のモデレートページの `/content/we-retail/us/en/community/moderation/shell3/jcr:content/head/clientlibs.`
 
-   * 新しいカテゴリ`cq.social.hbs.moderation.v2.`を追加します
+   * 新しいカテゴリを追加 `cq.social.hbs.moderation.v2.`
 
 1. `/content/we-retail/us/en/community/moderation/shell3/jcr:content/rails/searchWell/items/filters.` に移動します。
 
-   * 新しいコンポーネント`sling:resourceType = social/moderation/v2/filters.`に設定
+   * 新しいコンポーネントに設定 `sling:resourceType = social/moderation/v2/filters.`
 
 1. `/content/we-retail/us/en/community/moderation/shell3/jcr:content/views/content/items/modcontainer` にアクセスします。
 
-   * 新しいコンポーネント`sling:resourceType = social/moderation/v2/modcontainer`に設定します。
+   * 新しいコンポーネントに設定 `sling:resourceType = social/moderation/v2/modcontainer`.
 
 ## モデレートアクション {#moderation-actions}
 
 [モデレートアクション](/help/communities/moderate-ugc.md#moderation-actions)は、コンテンツ領域で選択された 1 つ以上のコンテンツに対して実行したり、コンテンツの詳細表示時に実行したりできます。
 
-投稿を一括モデレートするには、コンテンツ領域で、投稿の選択(![selecticon](assets/selecticon.png))アイコンをクリックします。投稿の上にマウスを置くと（デスクトップ）、または投稿の上で指を押しながら（モバイル）表示されます。 この操作をおこなうと、複数選択モードに入ります。複数選択モードでは、一括でモデレートする投稿をクリックするだけで選択できます。ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレートアクションを実行します。どのアクションをおこなうときも、必ず確認メッセージが表示されます。
+投稿を一括モデレートするには、コンテンツ領域で、選択 (![selecticon](assets/selecticon.png)) アイコンを投稿に表示します。投稿の上にマウスを置く（デスクトップ）か、投稿の上に指を押しながら（モバイル）表示します。 この操作をおこなうと、複数選択モードに入ります。複数選択モードでは、一括でモデレートする投稿をクリックするだけで選択できます。ツールバーに表示されるボタンを使用して、選択した投稿に対してモデレートアクションを実行します。どのアクションをおこなうときも、必ず確認メッセージが表示されます。
 
 コンテンツ領域内の 1 つの投稿のみをモデレートする場合は、その投稿の上にマウスポインターを置く（デスクトップの場合）か、その投稿を指で長押しして（モバイルの場合）ボタンを表示します。1 つのコンテンツを操作するときは、削除アクションの場合に限り確認メッセージが表示されます。
 
 ### 複数の投稿のモデレート {#moderating-multiple-posts}
 
-投稿の`Select`アイコンをクリックして、一括選択モードに入ります。
+一括選択モードに入るには、 `Select` 投稿のアイコン：
 
 ![select-icon](assets/select-icon.png)
 
@@ -285,7 +285,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 これらのアクションを実行できるアイコンは、複数の投稿を選択したときにのみツールバーに表示されます。
 
-![牛モデレート](assets/bulkmoderate.png)
+![隔壁モデレート](assets/bulkmoderate.png)
 
 ### 1 つの投稿のモデレート {#moderating-a-single-post}
 
@@ -298,15 +298,15 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 * [拒否](#deny)
 * [削除](#delete)
 * [閉じる](#close)
-* [モデレート履歴](#moderation-history)を表示
-* [View Details](#viewdetails)
+* 表示 [モデレート履歴](#moderation-history)
+* [詳細を表示](#viewdetails)
 
-モデレートアクションアイコンの上にあるカード表示には、投稿のテキストが表示され、下には次を示すデータが表示されます。
+モデレートアクションアイコンの上のカード表示には、投稿のテキストが表示され、下のデータは次の内容を示します。
 
 * 返信がある場合は、返信の数が前に付きます。
 * フラグが設定されている場合。
 * 承認されている場合。
-* UGCが投稿された日時。
+* UGC が投稿されたとき。
 
 ![singleselectmode](assets/singleselectmode.png)
 
@@ -314,7 +314,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 ![返信](assets/reply.png)
 
-1つの投稿を操作する場合、UGCタイプが返信をサポートし、返信を許可するように設定されている場合は、返信アイコンが表示されます。
+1 つの投稿を操作する場合、UGC タイプが返信をサポートし、返信を許可するように設定されている場合は、返信アイコンが表示されます。
 
 #### アクセス設定 {#allow}
 
@@ -326,7 +326,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 ![拒否](assets/deny.png)
 
-**拒否**&#x200B;モデレートアクションは、モデレートされているコンテンツに対してのみ使用でき、モデレートされていないコンテンツには表示されません（複数選択モードの場合を除く）。
+この **拒否** モデレート操作は、モデレートされているコンテンツに対してのみ使用でき、モデレートされていないコンテンツには表示されません（複数選択モードの場合を除く）。
 
 モデレート対象でないコンテンツは、必ず承認された状態になります。
 
@@ -336,21 +336,21 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 #### 削除 {#delete}
 
-![次を削除します。](assets/delete.png)
+![delete](assets/delete.png)
 
-単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、それらの項目は直ちにコンテンツ領域から消えます。 **UGCを削除すると、リポジトリから完全に削除され、後で取得することはできません**。
+単一選択モードまたは一括モードで、アイテムを選択して削除できます。削除のアクションを実行すると、確認ダイアログが表示されます。削除すると、それらの項目は直ちにコンテンツ領域から消えます。 **UGC を削除すると、リポジトリから完全に削除され、後で取り出すことはできません**.
 
 #### 閉じる {#close}
 
 ![close](assets/close.png)
 
-1つの投稿を操作する場合、UGCタイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしている場合は、閉じるアイコンが表示されます。
+1 つの投稿を操作する場合、UGC タイプがそのリソースのそれ以上の投稿を防ぐ機能をサポートしている場合は、閉じるアイコンが表示されます。
 
 #### モデレート履歴 {#moderation-history}
 
 ![モデレート](assets/moderation.png)
 
-1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。アイコンを選択すると、UGC投稿に関して実行されたアクションの履歴を含むパネルが表示されます。
+1 つの投稿を操作するときに、投稿にカーソルを合わせると、モデレート履歴アイコンが表示されます。このアイコンを選択すると、UGC 投稿に関して実行されたアクションの履歴を含むパネルが表示されます。
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 
@@ -364,7 +364,7 @@ Githubの[サンプルプロジェクト](https://github.com/Adobe-Marketing-Clo
 
 1 つの投稿を操作するときに、その UGC を詳細モードで開くと、より詳しい情報を表示できます。
 
-そのためには、投稿の上にマウスポインターを置いて`View Detail`アイコンを表示し、選択して投稿の詳細を含むパネルを表示します。
+これをおこなうには、投稿の上にマウスポインターを置いて、 `View Detail` アイコンをクリックして選択し、投稿の詳細を含むパネルを表示します。
 
 複数の UGC 投稿のコンテンツ領域に戻るには、表示詳細ウィンドウの右上隅の X を選択します。
 

@@ -1,7 +1,7 @@
 ---
 title: Adobe Campaign Standard との統合
 seo-title: Integrating with Adobe Campaign Standard
-description: Adobe Campaign Standard との統合。
+description: Adobe Campaign Standard との統合.
 seo-description: Integrating with Adobe Campaign Standard.
 uuid: ef31339e-d925-499c-b8fb-c00ad01e38ad
 contentOwner: User
@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 100%
 
@@ -45,7 +45,7 @@ Adobe Campaign の設定には、次が含まれます。
 
 1. **aemserver** ユーザーの設定。
 1. 専用の外部アカウントの作成。
-1. AEMResourceTypeFilter オプションの検証。
+1. AEMResourceTypeFilter オプションの検証.
 1. 専用の配信テンプレートの作成。
 
 >[!NOTE]
@@ -56,7 +56,7 @@ Adobe Campaign の設定には、次が含まれます。
 
 事前に、次の要素があることを確認してください。
 
-* [AEM オーサリングインスタンス](/help/sites-deploying/deploy.md#getting-started)
+* [AEM 作成者インスタンス](/help/sites-deploying/deploy.md#getting-started)
 * [AEM パブリッシングインスタンス](/help/sites-deploying/deploy.md#author-and-publish-installs)
 * [Adobe Campaign インスタンス](https://docs.adobe.com/content/docs/en/campaign/ACS.html)
 
@@ -98,7 +98,7 @@ AEM 外部アカウントを設定するには：
 
 ### AEMResourceTypeFilter オプションの検証 {#verifying-the-aemresourcetypefilter-option}
 
-「**AEMResourceTypeFilter**」オプションは、Adobe Campaign で使用できる AEM リソースのタイプをフィルタリングするために使用されます。これにより、Adobe Campaign でのみ使用されるように特別に設計された AEM コンテンツを Adobe Campaign で取得できます。
+「**AEMResourceTypeFilter**」オプションを使用すると、Adobe Campaign で使用できる AEM リソースのタイプをフィルタリングできます。これにより、Adobe Campaign でのみ使用されるように特別に設計された AEM コンテンツを Adobe Campaign で取得できます。
 
 このオプションは事前設定済みです。ただし、このオプションを変更すると、統合が機能しなくなる可能性があります。
 
@@ -142,7 +142,7 @@ AEM オーサーインスタンスから作成されたコンテンツは、最�
 >[!NOTE]
 >
 >レプリケーション URL を使用しない代わりに公開 URL を使用したい場合は、OSGi（**ツール**／**Web コンソール**／**OSGi Configuration／AEM Campaign Integration - Configuration**）で次の設定をおこなうことで&#x200B;**パブリック URL** を設定できます。
->**公開 URL：** com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
+**公開 URL：** com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl
 
 また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
 
@@ -153,7 +153,7 @@ AEM インスタンス間のレプリケーションを設定するには：
    ![chlimage_1-126](assets/chlimage_1-126a.png)
 
    >[!NOTE]
-   >パブリッシュおよびオーサーインスタンスが両方とも同じコンピューターにない場合は、Adobe Campaign との統合を設定する際に、localhost（すなわち AEM のローカルコピー）を使用しないでください。
+   パブリッシュおよびオーサーインスタンスが両方とも同じコンピューターにない場合は、Adobe Campaign との統合を設定する際に、localhost（すなわち AEM のローカルコピー）を使用しないでください。
 
 1. 「**編集**」をクリックして、「**トランスポート**」タブを選択します。
 1. **localhost** を IP アドレスまたは AEM パブリッシュインスタンスのアドレスに置き換えることで、URI を設定します。
@@ -181,14 +181,15 @@ AEM と Adobe Campaign を一緒に使用する前に、両方のソリューシ
    ![chlimage_1-129](assets/chlimage_1-129a.png)
 
    >[!NOTE]
-   >[メールを作成して公開](/help/sites-authoring/campaign.md)したら、パブリッシュインスタンスに設定を再公開する必要があります。
+   [メールを作成して公開](/help/sites-authoring/campaign.md)したら、パブリッシュインスタンスに設定を再公開する必要があります。
 
    ![chlimage_1-130](assets/chlimage_1-130a.png)
 
 >[!NOTE]
->接続に失敗する場合は、次を確認してください。
->* Adobe Campaign インスタンスへのセキュリティで保護された接続（https）を使用する際、証明書の問題が発生する可能性があります。Adobe Campaign インスタンス証明書を JDK の cacerts ファイルに追加する必要があります。
->* また、[AEM／Adobe Campaign 統合のトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)も参照してください。
+接続に失敗する場合は、次を確認してください。
+* Adobe Campaign インスタンスへのセキュリティで保護された接続（https）を使用する際、証明書の問題が発生する可能性があります。Adobe Campaign インスタンス証明書を JDK の cacerts ファイルに追加する必要があります。
+* また、[AEM／Adobe Campaign 統合のトラブルシューティング](/help/sites-administering/troubleshooting-campaignintegration.md)も参照してください。
+>
 
 
 ### Externalizer の設定 {#configuring-the-externalizer}

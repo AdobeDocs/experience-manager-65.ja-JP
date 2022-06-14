@@ -10,7 +10,7 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 343e2e0b-d5ef-4f01-b3d6-45f90e2430fd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 100%
 
@@ -48,7 +48,7 @@ AEM [!DNL Forms] は、アダプティブフォームのテストを自動化す
       <td><strong>値</strong></td>
      </tr>
      <tr>
-      <td>categories</td>
+      <td>カテゴリ</td>
       <td>文字列</td>
       <td>Enabled</td>
       <td>
@@ -60,7 +60,7 @@ AEM [!DNL Forms] は、アダプティブフォームのテストを自動化す
      <tr>
       <td>dependencies</td>
       <td>文字列</td>
-      <td>Enabled</td>
+      <td>有効</td>
       <td>
        <ul>
         <li>granite.testing.hobbes.testrunner <br /> </li>
@@ -141,13 +141,13 @@ AEM [!DNL Forms] は、アダプティブフォームのテストを自動化す
      <tr>
       <td><strong>プロパティ</strong></td>
       <td><strong>タイプ</strong></td>
-      <td><strong>Multi</strong></td>
+      <td><strong>マルチ</strong></td>
       <td><strong>値</strong></td>
      </tr>
      <tr>
-      <td>categories</td>
+      <td>カテゴリ</td>
       <td>文字列</td>
-      <td>Enabled</td>
+      <td>有効</td>
       <td>
        <ul>
         <li>granite.testing.hobbes.tests<br /> </li>
@@ -155,9 +155,9 @@ AEM [!DNL Forms] は、アダプティブフォームのテストを自動化す
        </ul> </td>
      </tr>
      <tr>
-      <td>dependencies</td>
+      <td>依存</td>
       <td>文字列</td>
-      <td>Enabled</td>
+      <td>有効</td>
       <td>
        <ul>
         <li>granite.testing.calvin.tests</li>

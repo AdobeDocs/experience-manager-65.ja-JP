@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: bb3fcb53-b8c3-4b1d-9125-4715f34ceb0b
 exl-id: 6327b571-4c7f-4a5e-ba93-45d0a064aa1f
 source-git-commit: e1536c370b37d82d4d7890dcc063af85145730bb
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 100%
 

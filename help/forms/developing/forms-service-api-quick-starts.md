@@ -12,7 +12,7 @@ discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 100%
 
@@ -1536,7 +1536,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 ## クイックスタート（SOAP モード）：Java API を使用して、XML として送信された HTML フォームの処理 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
 
-次のコードの例では、XML データとして送信された HTML フォームが処理されます。`processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/x-www-form-urlencoded` です。`mortgageAmount`、`lastName` および `firstName` という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText` という名前のユーザー定義メソッドを使用します。`org.w3c.dom.Document` インスタンスと、ノード名を指定する文字列値を受け入れます。このメソッドは、ノードの値を表す文字列値を返します。（[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照してください）。
+次のコードの例では、XML データとして送信された HTML フォームが処理されます。`processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/x-www-form-urlencoded` です。`mortgageAmount`、`lastName` および `firstName` という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText` という名前のユーザー定義メソッドを使用します。`org.w3c.dom.Document` インスタンスと、ノード名を指定する文字列の値を受け入れます。このメソッドは、ノードの値を表す文字列値を返します。（[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照してください）。
 
 ```java
  /*
