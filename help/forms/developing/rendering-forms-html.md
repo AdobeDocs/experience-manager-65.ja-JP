@@ -94,7 +94,7 @@ Forms サービスは、フォームのレンダリング中にスクリプト�
 form:ready イベントにあるフォームスクリプトは、フォームの最初のレンダリング時に 1 回だけ実行され、以降のページ取得時には実行されません。これに対し、 form:calculate イベントは、フォームがレンダリングされるページナビゲーションごとに実行されます。
 
 >[!NOTE]
-複数ページフォームでは、JavaScript によってページに加えられた変更は、別のページに移動しても保持されません。
+>複数ページフォームでは、JavaScript によってページに加えられた変更は、別のページに移動しても保持されません。
 
 フォームを送信する前にカスタムスクリプトを呼び出すことができます。この機能は、使用可能なすべてのブラウザーで機能します。ただし、`Output Type` プロパティが `Form Body` に設定されている HTML フォームをレンダリングする場合にのみ使用できます。`Output Type` が `Full HTML` の場合には機能しません。この機能を設定する手順については、管理ヘルプの「フォームの設定」を参照してください。
 
@@ -167,7 +167,7 @@ HTML ページ（パネル）間を移動すると、データの状態のみが
 ```
 
 >[!NOTE]
-テーブルのセル内にネストされている場合、スタティックオブジェクトはレンダリングされた HTML フォームには表示されません。 例えば、テーブルのセル内にネストされた円や長方形は、レンダリングされた HTML フォーム内には表示されません。 ただし、テーブルの外側に配置されている場合は、同じスタティックオブジェクトが正しく表示されます。
+>テーブルのセル内にネストされている場合、スタティックオブジェクトはレンダリングされた HTML フォームには表示されません。 例えば、テーブルのセル内にネストされた円や長方形は、レンダリングされた HTML フォーム内には表示されません。 ただし、テーブルの外側に配置されている場合は、同じスタティックオブジェクトが正しく表示されます。
 
 ## デジタル署名用 HTML フォーム {#digitally-signing-html-forms}
 
@@ -189,7 +189,7 @@ HTML ページ（パネル）間を移動すると、データの状態のみが
 フォームを HTML フォームとしてレンダリングする場合、フォームフィールドに対する検証ルールの使用を制限することをお勧めします。 一部の検証ルールは、HTML フォームでサポートされていない可能性があります。 例えば、MM-DD-YYYY という検証パターンを HTMLフォームとしてレンダリングされているフォームデザインの `Date/Time` フィールドに適用する場合、日付が正しく入力されていても、適切に機能しません。 ただし、この検証パターンは、PDF としてレンダリングされているフォームに対しては適切に機能します。
 
 >[!NOTE]
-Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ## 手順の概要 {#summary-of-steps}
 
@@ -224,10 +224,10 @@ HTML フォーム上に HTML ツールバーが表示されている場合、ユ
 フォームデータの投稿先となる HTTP URL は、Forms サービスクライアント API を使用してターゲット URL を設定することで指定するか、XDP フォームデザインに含まれる「送信」ボタンで指定することもできます。ターゲット URL がフォームデザインで指定されている場合は、Forms サービスクライアント API を使用して値を設定しないでください。
 
 >[!NOTE]
-ツールバーを含む HTML フォームのレンダリングはオプションです。
+>ツールバーを含む HTML フォームのレンダリングはオプションです。
 
 >[!NOTE]
-AHTML フォームをレンダリングする場合は、ツールバーをフォームに追加しないことをお勧めします。
+>AHTML フォームをレンダリングする場合は、ツールバーをフォームに追加しないことをお勧めします。
 
 **HTML フォームをレンダリング**
 
@@ -278,7 +278,7 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
    * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して、`OutputType.FullHTMLTags` を渡します。（これはオプション設定です）。
 
    >[!NOTE]
-   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外を参照している場合、Forms は正常にレンダリングされません（`ApplicationWebRoot` の値は、`FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定します）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
+   >`StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外を参照している場合、Forms は正常にレンダリングされません（`ApplicationWebRoot` の値は、`FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定します）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
 1. HTML フォームのレンダリング
 
@@ -335,7 +335,7 @@ Forms API（web サービス）を使用して HTML フォームをレンダリ�
    * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して `OutputType.FullHTMLTags` を渡します。
 
    >[!NOTE]
-   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外のサーバーを参照している場合、フォームは HTML で正常にレンダリングされません（`ApplicationWebRoot` 値は `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定されます）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
+   >`StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外のサーバーを参照している場合、フォームは HTML で正常にレンダリングされません（`ApplicationWebRoot` 値は `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定されます）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
 1. HTML フォームのレンダリング
 
