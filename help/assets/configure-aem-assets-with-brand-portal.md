@@ -12,14 +12,20 @@ docset: aem65
 feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
-source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
-workflow-type: ht
-source-wordcount: '2053'
-ht-degree: 100%
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+workflow-type: tm+mt
+source-wordcount: '2088'
+ht-degree: 99%
 
 ---
 
 # AEM Assets と Brand Portal の連携の設定 {#configure-integration-65}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=en) |
+| AEM 6.5 | この記事 |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/brandportal/configure-aem-assets-with-brand-portal.html?lang=ja) |
 
 Adobe Experience Manager Assets Brand Portal を設定すると、承認済みのブランドアセットを Adobe Experience Manager Assets インスタンスから Brand Portal に公開し、Brand Portal ユーザーに配信できます。
 
@@ -124,7 +130,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
 1. 「**[!UICONTROL クラウドソリューション]**」ドロップダウンリストで「**[!UICONTROL Adobe Brand Portal]**」を選択します。
 
-1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスをオンにして、公開鍵の&#x200B;**エイリアス**&#x200B;を指定します。ここで入力したエイリアスが、公開鍵になります。
+1. 「**[!UICONTROL 新しい証明書を作成]**」チェックボックスをオンにして、公開鍵の **エイリアス** を指定します。ここで入力したエイリアスが、公開鍵になります。
 
 1. 「**[!UICONTROL 証明書を作成]**」をクリックします。「**[!UICONTROL OK]**」をクリックして公開証明書を生成します。
 
@@ -140,7 +146,7 @@ IMS 設定には、次の 2 つの手順が含まれます。
 
    「**アカウント**」タブで、Adobe IMS アカウントが作成されます。このアカウントには、Adobe 開発者コンソールで生成されるサービスアカウント資格情報が必要です。このページは開いたままにしておきます。
 
-   新しいタブを開き、[Adobe 開発者コンソールでサービスアカウント（JWT）接続を作成](#createnewintegration)して、IMS アカウントを設定するための資格情報と JWT ペイロードを取得します。
+   新しいタブを開き、 [Adobe 開発者コンソールでサービスアカウント（JWT）接続を作成](#createnewintegration) して、IMS アカウントを設定するための資格情報と JWT ペイロードを取得します。
 
 ### サービスアカウント（JWT）接続の作成 {#createnewintegration}
 
@@ -350,7 +356,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 * [Brand Portal へのプリセット、スキーマ、ファセットの公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html?lang=ja)
 * [Brand Portal へのタグの公開](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html?lang=ja)
 
-詳しくは、[Brand Portal ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=ja)を参照してください。
+詳しくは、 [Brand Portal ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=ja) を参照してください。
 
 
 ## 設定のアップグレード {#upgrade-integration-65}

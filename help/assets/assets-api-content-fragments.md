@@ -3,14 +3,20 @@ title: Assets HTTP API での Adobe Experience Manager コンテンツフラグ�
 description: AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API でのコンテンツフラグメントのサポートについて学びます。
 feature: Content Fragments,Assets HTTP API
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
-workflow-type: ht
-source-wordcount: '1934'
-ht-degree: 100%
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+workflow-type: tm+mt
+source-wordcount: '1957'
+ht-degree: 99%
 
 ---
 
 # AEM Assets HTTP API でのコンテンツフラグメントのサポート  {#content-fragments-support-in-aem-assets-http-api}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html?lang=en) |
+| AEM 6.5 | この記事 |
+
 
 ## 概要 {#overview}
 
@@ -43,7 +49,7 @@ AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API で
 
 Assets REST API は、
 
-* [HATEOAS の原則](https://en.wikipedia.org/wiki/HATEOAS)に従っています。
+* [HATEOAS の原則](https://ja.wikipedia.org/wiki/HATEOAS)に従っています。
 
 * [SIREN 形式](https://github.com/kevinswiber/siren)を実装しています。
 
@@ -154,7 +160,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 
 ## 使用可能な機能 {#available-features}
 
-コンテンツフラグメントは特定のアセットタイプです。[&#128279;](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの操作を参照してください。
+コンテンツフラグメントは特定のアセットタイプです。](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの操作[を参照してください。
 
 API を通じて使用できる機能について詳しくは、以下を参照してください。
 
@@ -254,7 +260,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 >[!NOTE]
 >
->詳細については、『[&#128279;](/help/assets/assets-api-content-fragments.md#api-reference)API リファレンス』を参照してください。特に、[Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
+>詳細については、『](/help/assets/assets-api-content-fragments.md#api-reference)API リファレンス[』を参照してください。特に、[Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
 
 ### 読み取り／配信 {#read-delivery}
 
@@ -375,7 +381,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 詳細な API リファレンスについては、こちらを参照してください。
 
-* [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
    * [使用可能な機能](/help/assets/mac-api-assets.md#assets)

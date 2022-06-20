@@ -4,14 +4,20 @@ description: ' [!DNL Workfront for Experience Manager enhanced connector] の設
 role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
-source-git-commit: 00713ea7fe06d4e180232e48a9e3f11b53f4326f
+source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
-source-wordcount: '1714'
-ht-degree: 97%
+source-wordcount: '1749'
+ht-degree: 96%
 
 ---
 
 # [!DNL Workfront for Experience Manager enhanced connector] の設定 {#assets-integration-overview}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=en) |
+| AEM 6.5 | この記事 |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/integrations/workfront-connector-configure.html?lang=en) |
 
 [!DNL Adobe Experience Manager] で管理者アクセス権を持つユーザーは拡張コネクタをインストール後に設定します。 インストール手順については、[コネクタのインストール](/help/assets/workfront-integrations.md)を参照してください。
 

@@ -5,14 +5,20 @@ contentOwner: AG
 role: User
 feature: Asset Management,Search
 exl-id: d6f815b5-e4fc-4f8c-a6c1-9e50035ab9f2
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: ht
-source-wordcount: '780'
-ht-degree: 100%
+source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+workflow-type: tm+mt
+source-wordcount: '815'
+ht-degree: 97%
 
 ---
 
 # デジタルアセットの整理 {#organize-digital-assets}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=en) |
+| AEM 6.5 | この記事 |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/organize-assets.html?lang=en) |
 
 Microsoft Office および PDF ドキュメントのすべてのデジタルアセット、メタデータおよびコンテンツが抽出され、検索可能になります。検索することでアセットの高度なフィルター処理が可能になり、適切な権限をフルに活用できます。メタデータについては、「デジタルアセット管理」の「メタデータ」で詳しく説明されています。
 

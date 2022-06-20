@@ -6,14 +6,20 @@ mini-toc-levels: 1
 role: User
 feature: Asset Management,Search
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: dd1e08bee03a6c7b07b32b0fb929d02dad467744
 workflow-type: tm+mt
-source-wordcount: '9878'
-ht-degree: 100%
+source-wordcount: '9913'
+ht-degree: 99%
 
 ---
 
 # デジタルアセットの管理 {#manage-digital-assets}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-digital-assets.html?lang=en) |
+| AEM 6.5 | この記事 |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/managing-assets-touch-ui.html?lang=en) |
 
 [!DNL Adobe Experience Manager Assets] では、アセットの保存や管理以外の操作を実行できます。[!DNL Experience Manager] は、エンタープライズクラスのアセット管理機能を提供します。アセットの編集と共有、詳細検索の実行、サポートされている多数のファイル形式の複数のレンディションの作成が可能です。また、バージョンやデジタル著作権の管理、アセットの処理の自動化、メタデータの管理と統制、注釈を使用した共同作業などを行うことができます。
 

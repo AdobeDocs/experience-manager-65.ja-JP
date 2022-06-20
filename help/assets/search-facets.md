@@ -5,14 +5,20 @@ contentOwner: AG
 role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
-source-git-commit: b9def70b86d3313a5f6d429ae49ba6ef3947a35a
+source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 100%
+source-wordcount: '2429'
+ht-degree: 99%
 
 ---
 
 # 検索ファセット {#search-facets}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en) |
+| AEM 6.5 | この記事 |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/search-facets.html?lang=en) |
 
 [!DNL Adobe Experience Manager Assets] の企業全体のデプロイメントには、多くのアセットを格納する処理能力があります。[!DNL Experience Manager] の汎用検索の機能だけでは、正しいアセットを見つけることが困難で時間がかかる場合があります。
 
