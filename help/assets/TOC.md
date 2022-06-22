@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 66958dc5328177d27dbdddf0c8983096e38f76b6
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '675'
 ht-degree: 97%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 97%
    + [Dynamic Media アセットを配信する](delivering-dynamic-media-assets.md)
    + [Dynamic Media でホットリンク保護を有効化する](hotlink-protection.md)
    + [3D サポート](/help/assets/assets-3d.md)
+   + [Dynamic Mediaの制限](limitations.md)
    + [画像セット](image-sets.md)
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)

@@ -2,13 +2,13 @@
 title: デジタルアセットの管理
 description: デジタルアセットのアップロード、ダウンロード、編集、検索、削除、注釈、バージョン管理など、アセット管理タスクについて学びます。
 contentOwner: AG
-mini-toc-levels: 1
 role: User
 feature: Asset Management,Search
+mini-toc-levels: 3
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
-source-git-commit: dd1e08bee03a6c7b07b32b0fb929d02dad467744
+source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
-source-wordcount: '9913'
+source-wordcount: '9974'
 ht-degree: 99%
 
 ---
@@ -210,7 +210,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 |  | 画像編集オプション | 画像のクリッピングマスクを保持し、カラープロファイルを選択できます。<br> 詳しくは、[アップロード時の画像編集のオプション設定](#setting-image-editing-options-at-upload)を参照してください。 |
 |  | Postscript オプション | PostScript® ファイルのラスタライズ、ファイルの切り抜き、透明背景の維持、解像度の選択、カラースペースの選択をおこなうことができます。<br>[PostScript および Illustrator のアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
 |  | Photoshop オプション | Adobe® Photoshop® ファイルからのテンプレート作成、レイヤーの維持、レイヤーの命名方法の指定、テキストの抽出、テンプレートへの画像のアンカー方法の指定を行うことができます。<br>テンプレートは [!DNL Experience Manager] ではサポートされていません。<br>[Photoshop アップロードオプションの設定](#setting-photoshop-upload-options)を参照してください。 |
-|  | PDF オプション | ファイルのラスタライズ、検索単語とリンクの抽出、eCatalog の自動生成、解像度の設定、カラースペースの選択をおこなうことができます。<br>eCatalog は [!DNL Experience Manager] ではサポートされていません。<br>[PDF アップロードオプションの設定](#setting-pdf-upload-options)を参照してください。 |
+|  | PDF オプション | ファイルのラスタライズ、検索単語とリンクの抽出、eCatalog の自動生成、解像度の設定、カラースペースの選択をおこなうことができます。<br>eCatalog は [!DNL Experience Manager] ではサポートされていません。<br>[PDF アップロードオプションの設定](#setting-pdf-upload-options)を参照してください。<br>**注意**:新規のアップロードで、PDFの抽出で考慮される最大ページ数は 5,000 ページです。 この制限は 2022 年 12 月 31 日に 100 ページに変更されます。 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md). |
 |  | Illustrator オプション | Adobe Illustrator® ファイルのラスタライズ、透明背景の維持、解像度の選択、カラースペースの選択を行うことができます。<br>[PostScript および Illustrator のアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
 |  | EVideo オプション | ビデオプリセットを選択して、ビデオファイルをトランスコードできます。<br>[eVideo アップロードオプションの設定](#setting-evideo-upload-options)を参照してください。 |
 |  | バッチセットプリセット | アップロードしたファイルから画像セットまたはスピンセットを作成するには、使用したいプリセットの「アクティブ」列をクリックします。複数のプリセットを選択できます。プリセットは、Dynamic Media Classic のアプリケーション設定／バッチセットプリセットページで作成します。<br>バッチセットプリセットの作成について詳しくは、[画像セットとスピンセットの自動生成用のバッチセットプリセットの設定](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を参照してください。<br>[アップロード時のバッチセットプリセットの設定](#setting-batch-set-presets-at-upload)を参照してください。 |
@@ -283,6 +283,8 @@ Photoshop アップロードオプションで、前述した[!UICONTROL 切り�
 #### PDF アップロードオプションの設定 {#setting-pdf-upload-options}
 
 PDF ファイルのアップロード時に、様々な方法でファイルをフォーマットできます。ページの切り抜き、検索単語の抽出、ppi 解像度の入力、カラースペースの選択ができます。PDF ファイルにはトリミング余白、内トンボ、登録マーク、その他のプリンター用マークなどが含まれる場合があります。PDF ファイルのアップロード時に、ページの端からこれらのマークを切り抜くことができます。
+
+新規のアップロードで、PDFの抽出で考慮される最大ページ数は 5,000 ページです。 この制限は 2022 年 12 月 31 日に 100 ページに変更されます。 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
 >[!NOTE]
 >
