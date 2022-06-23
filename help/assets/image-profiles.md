@@ -10,9 +10,9 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '2825'
+source-wordcount: '2831'
 ht-degree: 98%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 98%
 
 画像にスマート切り抜きを実装する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 実装された制限 |
-| --- | --- | --- |
-| 画像あたりのスマート切り抜き数 | 5 | 100 |
+| 制限タイプ | ベストプラクティス | 制限が適用されました | 2022 年 12 月 31 日の制限に変更 |
+| --- | --- | --- | --- |
+| 画像あたりのスマート切り抜き数 | 5 | 100 | 20 |
 
 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 

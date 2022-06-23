@@ -1,16 +1,17 @@
 ---
 title: Dynamic Mediaの制限
-description: '画像セットやスピンセットを作成したり、画像をアップロードしたりする際の、ベストプラクティスと適用される制限について説明します。PDF また、Dynamic Media Viewers でサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせについても説明します。 '
+description: 画像セットやスピンセットを作成したり、画像をアップロードしたりする際の、ベストプラクティスと適用される制限について説明します。PDF また、Dynamic Media Viewers でサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせについても説明します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
 geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
 role: User
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+exl-id: e4d4059e-ac0b-42e7-910c-001310796574
+source-git-commit: 7a800199b0d3a9dce0a8a31d14f07326b56050ba
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 5%
+source-wordcount: '189'
+ht-degree: 7%
 
 ---
 
@@ -28,13 +29,13 @@ ht-degree: 5%
 
 Adobeでは、ページ抽出用にスピンセットや画像セットを作成したり、PDFをアップロードしたりする際に、次のベストプラクティスを推奨し、次の制限を適用します。
 
-| アセット — 制限タイプ | ベストプラクティス | 実装された制限 | 制限の変更 2022 年 12 月 31 日 |
+| アセット — 制限タイプ | ベストプラクティス | 制限が適用されました | 2022 年 12 月 31 日の制限に変更 |
 | --- | --- | --- | --- |
-| **画像**  — 画像あたりのスマート切り抜き数 | 5 | 100 |  |
-| **画像セット**  — セットあたりの重複アセット数 | 重複なし | 100 | 20 |
-| **画像セット** - 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
-| **スピンセット** - 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
-| **PDF**  — 抽出対象となるPDFの最大ページ数 |  | 5000（新しいアップロード用） | 100 |
+| **画像**  — 画像あたりのスマート切り抜き数 | 5 | 100 | 20 |
+| **すべてのセット**  — セットあたりの重複アセット数 | 重複なし | 20 | 適用なし |
+| **すべてのセット**  — セットあたりの最大アセット数 | 1 セットあたり 5～10 個の画像 | 1000 | 適用なし |
+| **スピンセット** - 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 | 適用なし |
+| **PDF**  — 抽出対象となるPDFの最大ページ数 |  | 5000（新しいアップロード用） | 100( すべてのPDF) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 

@@ -11,10 +11,10 @@ docset: aem65
 feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '2194'
-ht-degree: 95%
+source-wordcount: '2184'
+ht-degree: 94%
 
 ---
 
@@ -38,10 +38,10 @@ ht-degree: 95%
 
 画像セットを作成する際、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| アセット — 制限タイプ | ベストプラクティス | 実装された制限 | 制限の変更 2022 年 12 月 31 日 |
-| --- | --- | --- | --- |
-| **画像セット**  — セットあたりの重複アセット数 | 重複なし | 100 | 20 |
-| **画像セット** - 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
+| 制限タイプ | ベストプラクティス | 制限が適用されました |
+| --- | --- | --- |
+| セットあたりの重複アセット数 | 重複なし | 20 |
+| 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
 
 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
@@ -57,7 +57,7 @@ ht-degree: 95%
 
 <!--    Adobe Experience Manager Assets supports many image file formats, but lossless TIFF, PNG, and EPS images are recommended. -->
 
-1. [画像セットを作成します](#creating-image-sets)。
+1. [画像セットの作成](#creating-image-sets).
 
    画像セットで、画像セットビューア内のサムネール画像をクリックします。
 
@@ -78,12 +78,12 @@ ht-degree: 95%
 
    ビューアのプリセットを作成または編集する場合は、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL ビューアプリセット]**&#x200B;に移動してください。
 
-1. （オプション）バッチセットプリセットを使用して作成した[画像セットの表示](/help/assets/image-sets.md#viewing-image-sets)
+1. （オプション） [画像セットの表示](/help/assets/image-sets.md#viewing-image-sets) バッチセットプリセットを使用して作成した
 1. [画像セットをプレビューします](/help/assets/previewing-assets.md)。
 
    画像セットを選択すると、プレビューできます。サムネールアイコンを選択して、選択したビューアでの画像セットの表示を確認できます。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左パネルのドロップダウンメニューにあります。
 
-1. [画像セットを発行します](/help/assets/publishing-dynamicmedia-assets.md)。
+1. [画像セットの公開](/help/assets/publishing-dynamicmedia-assets.md).
 
    画像セットを公開すると、URL と埋め込みコードがアクティベートされます。さらに、作成した[カスタムビューアプリセットを公開する](/help/assets/managing-viewer-presets.md)必要があります。既製のビューアプリセットが既に公開されています。
 
@@ -142,14 +142,14 @@ ht-degree: 95%
 
 画像セットを作成する際、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| アセット — 制限タイプ | ベストプラクティス | 実装された制限 | 制限の変更 2022 年 12 月 31 日 |
-| --- | --- | --- | --- |
-| **画像セット**  — セットあたりの重複アセット数 | 重複なし | 100 | 20 |
-| **画像セット** - 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
+| 制限タイプ | ベストプラクティス | 制限が適用されました |
+| --- | --- | --- |
+| セットあたりの重複アセット数 | 重複なし | 20 |
+| 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
 
 関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
 
-**画像セットを作成するには：**
+**画像セットを作成するには:**
 
 1. Experience Manager で、Experience Manager ロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ナビゲーション]**／**[!UICONTROL アセット]** に移動します。画像セットを作成する場所に移動し、**[!UICONTROL 作成]**／**[!UICONTROL 画像セット]**&#x200B;に移動して、画像セットエディターページを開きます。
 
@@ -231,7 +231,7 @@ ht-degree: 95%
 * ビューアプリセットの適用
 * 画像セットの削除
 
-**画像セットを編集するには:**
+**画像セットを編集するには：**
 
 1. 次のいずれかの操作を行います。
 

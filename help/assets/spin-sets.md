@@ -11,10 +11,10 @@ docset: aem65
 feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
-source-wordcount: '1946'
-ht-degree: 96%
+source-wordcount: '1952'
+ht-degree: 95%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 96%
 
 スピンセットを作成する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 実装された制限 |
+| 制限タイプ | ベストプラクティス | 制限が適用されました |
 | --- | --- | --- |
 | 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
 
@@ -50,7 +50,7 @@ ht-degree: 96%
 
    スピンセットでサポートされている形式のリストについては、[Dynamic Media - サポートされているラスター画像形式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media)を参照してください。
 
-1. [スピンセットを作成します](#creating-spin-sets)。
+1. [スピンセットの作成](#creating-spin-sets).
 
    スピンセットを作成するには、**[!UICONTROL 作成／スピンセット]**&#x200B;を選択し、セットの名前を付け、アセットを選択し、画像の表示順を選択します。
 
@@ -68,15 +68,15 @@ ht-degree: 96%
 
    詳しくは、[ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
 
-1. [スピンセットを表示します](#viewing-spin-sets)。
+1. [スピンセットの表示](#viewing-spin-sets).
 
    バッチセットプリセットを使用して作成したセットを表示したり、それらのセットにアクセスしたりするには、3 つの方法があります（バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*）。
 
-1. [スピンセットをプレビューします](/help/assets/previewing-assets.md)。
+1. [スピンセットのプレビュー](/help/assets/previewing-assets.md).
 
    スピンセットを選択すると、プレビューできます。スピンセットを回転します。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左パネルのドロップダウンメニューにあります。
 
-1. [スピンセットを公開します](/help/assets/publishing-dynamicmedia-assets.md)。
+1. [スピンセットの公開](/help/assets/publishing-dynamicmedia-assets.md).
 
    スピンセットを公開すると、URL と埋め込み文字列がアクティベートされます。また、[ビューアプリセットを公開](/help/assets/managing-viewer-presets.md)する必要があります。
 
@@ -88,9 +88,9 @@ ht-degree: 96%
 
    詳しくは、[Web ページへのスピンセットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)と[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-必要に応じて、[スピンセットを編集](#editing-spin-sets)できます。また、[スピンセットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および変更することもできます。
+必要に応じて、 [スピンセットの編集](#editing-spin-sets). また、[スピンセットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および変更することもできます。
 
-## スピンセット用のアセットのアップロード {#uploading-assets-for-spin-sets}
+## スピンセットのアセットのアップロード {#uploading-assets-for-spin-sets}
 
 1 次元スピンセットを使用するには、少なくとも 8～12 枚の写真が必要です。2 次元スピンセットの場合は少なくとも 16～24 枚必要になります。アイテムが回転したり反転したりしているように見せるには、一定の間隔でアイテムを撮影する必要があります。例えば、1 次元スピンセットに 12 個の写真を含める場合、アイテムを 30 度ずつ（360/12）回転させながら写真を撮影します。
 
@@ -124,7 +124,7 @@ ht-degree: 96%
 
 スピンセットを作成する場合、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 実装された制限 |
+| 制限タイプ | ベストプラクティス | 制限付き |
 | --- | --- | --- |
 | 2D セットあたりの最大行数/列数 | 1 セットあたり 12～18 個の画像 | 1000 |
 
