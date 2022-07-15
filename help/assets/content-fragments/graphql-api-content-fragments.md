@@ -3,10 +3,10 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: e7a2a4ad89a58e5fad0acb521adb100cf0bcd1d8
+source-git-commit: 6f3f88ea0f07c97fa8d7ff3bdd1c89114d12a8a1
 workflow-type: tm+mt
-source-wordcount: '3942'
-ht-degree: 100%
+source-wordcount: '3986'
+ht-degree: 98%
 
 ---
 
@@ -134,7 +134,7 @@ AEM には次の 2 種類のエンドポイントがあります。
 >
 >コンテンツ作成者がこのシナリオを制御する必要があります。例えば、共有コンテンツフラグメントモデルをグローバルサイト設定の下に配置すると便利です。
 
-AEM グローバルエンドポイント用 GraphQL のリポジトリーパスは次のとおりです。
+AEM グローバルエンドポイント用 GraphQL のリポジトリパスは次のとおりです。
 
 `/content/cq:graphql/global/endpoint`
 
@@ -159,7 +159,7 @@ GraphQL エンドポイントを有効にするには、まず適切な設定が
 
 1. **ツール**／**Assets** に移動し、「**GraphQL**」を選択します。
 1. 「**作成**」を選択します。
-1. **新しい GraphQL エンドポイントを作成** ダイアログが開きます。以下を指定します。
+1. **新しい GraphQL エンドポイントを作成**&#x200B;ダイアログが開きます。以下を指定します。
    * **名前**：エンドポイントの名前。任意のテキストを入力できます。
    * **使用する GraphQL スキーマの提供元**： ドロップダウンを使用して、必要なサイト／プロジェクトを選択します。
 
@@ -207,7 +207,7 @@ GraphQL エンドポイントを有効にするには、まず適切な設定が
 
 構文のハイライト表示機能、オートコンプリート、自動候補表示などの機能と共に、履歴およびオンラインドキュメントが提供されています。
 
-![GraphiQL インターフェイス](assets/cfm-graphiql-interface.png "GraphiQL インターフェイス")
+![GraphiQL インターフェイス ](assets/cfm-graphiql-interface.png "GraphiQL インターフェイス")
 
 ### AEM GraphiQL インターフェイスのインストール {#installing-graphiql-interface}
 
@@ -317,11 +317,11 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | コンテンツフラグメントモデル - データ型 | GraphQL の型 | 説明 |
 |--- |--- |--- |
 | 1 行のテキスト | String、[String] |  作成者名、場所名などの単純な文字列に使用します。 |
-| 複数行テキスト | 文字列 |  記事の本文などのテキストを出力するために使用します |
-| 数値 |  Float、[Float] | 浮動小数点数と整数を表示するために使用します |
-| ブール値 |  Boolean |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
+| 複数行テキスト | String |  記事の本文などのテキストを出力するために使用します |
+| Number |  Float、[Float] | 浮動小数点数と整数を表示するために使用します |
+| Boolean |  Boolean |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
 | 日時 | Calendar |  日時を ISO 8086 形式で表示するために使用します。選択したタイプに応じて、AEM GraphQL で使用できるフレーバーは、`onlyDate`、`onlyTime`、`dateTime` の 3 つです。 |
-| 列挙 |  String |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
+| 定義済みリスト |  String |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  [String] |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
 | コンテンツ参照 |  文字列 |  AEM 内の別のアセットへのパスを表示するために使用します |
 | フラグメント参照 |  *モデルタイプ* |  特定のモデルタイプの別のコンテンツフラグメントを参照するために使用します（モデルの作成時に定義されます） |
@@ -332,7 +332,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 
 #### パス {#path}
 
-パスフィールドは、GraphQL で識別子として使用されます。これは、AEM リポジトリー内のコンテンツフラグメントアセットのパスを表します。これをコンテンツフラグメントの識別子として選択した理由は次のとおりです。
+パスフィールドは、GraphQL で識別子として使用されます。これは、AEM リポジトリ内のコンテンツフラグメントアセットのパスを表します。これをコンテンツフラグメントの識別子として選択した理由は次のとおりです。
 
 * AEM 内で一意である
 * 取得しやすい
@@ -411,9 +411,9 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 >[!NOTE]
 >
 >**標準メタデータと配列メタデータの違い**：
->`StringMetadata` と `StringArrayMetadata` はどちらも、リポジトリーに格納されているものについての指定であり、その取得手段についての指定ではありません。
+>`StringMetadata` と `StringArrayMetadata` はどちらも、リポジトリに格納されているものについての指定であり、その取得手段についての指定ではありません。
 >
->例えば、`stringMetadata` フィールドを呼び出すと、リポジトリーに `String` として格納されているすべてのメタデータの配列を受け取ることになります。一方、`stringArrayMetadata` を呼び出すと、リポジトリーに `String[]` として格納されているすべてのメタデータの配列を受け取ります。
+>例えば、`stringMetadata` フィールドを呼び出すと、リポジトリに `String` として格納されているすべてのメタデータの配列を受け取ることになります。一方、`stringArrayMetadata` を呼び出すと、リポジトリに `String[]` として格納されているすべてのメタデータの配列を受け取ります。
 
 詳しくは、[メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)を参照してください。
 
@@ -433,13 +433,17 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 
 詳しくは、[サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)を参照してください。
 
+>[!NOTE]
+>
+>指定されたバリエーションがコンテンツフラグメントに対して存在しない場合、マスターバリエーションが（フォールバック）デフォルトとして返されます。
+
 <!--
 ## Security Considerations {#security-considerations}
 -->
 
 ## GraphQL 変数 {#graphql-variables}
 
-GraphQL では、クエリに変数を含めることができます。詳しくは、 [GraphQL の変数に関するドキュメント](https://graphql.org/learn/queries/#variables) を参照してください。
+GraphQL では、クエリに変数を含めることができます。詳しくは、[GraphQL の変数に関するドキュメント](https://graphql.org/learn/queries/#variables)を参照してください。
 
 例えば、特定のバリエーションを持つ `Article` タイプのコンテンツフラグメントをすべて取得するには、次のように、GraphiQL で変数 `variation` を指定します。
 
@@ -541,38 +545,43 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
 
 * 論理和（OR）を使用する場合：
    * ` _logOp: OR` を使用します
-   * [サンプルクエリ - 「Jobs」または「Smith」という名前を持つすべての人物](#sample-all-persons-jobs-smith)を参照してください
+   * [サンプルクエリ - 「Jobs」または「Smith」という名前を持つすべての人物](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-jobs-smith)を参照してください
 
 * 論理積（AND）も存在しますが、（多くの場合）暗黙的です
 
 * コンテンツフラグメントモデル内のフィールドに対応するフィールド名に対してクエリを実行できます
-   * [サンプルクエリ - ある会社の CEO と従業員の詳細](#sample-full-details-company-ceos-employees)を参照してください
+   * [サンプルクエリ - ある会社の CEO と従業員の詳細](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-full-details-company-ceos-employees)を参照してください
 
 * モデルのフィールドに加えて、次のようなシステム生成フィールドがあります（フィールド名の先頭にアンダースコアが付きます）。
 
    * コンテンツの場合：
 
       * `_locale`：言語を表示します（言語マネージャーに基づく）
-         * [特定ロケールの複数のコンテンツフラグメントのサンプルクエリ](#sample-wknd-multiple-fragments-given-locale)を参照してください
+         * [特定ロケールの複数のコンテンツフラグメントのサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)を参照してください
       * `_metadata`：フラグメントのメタデータを表示します
-         * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](#sample-metadata-awards-gb)を参照してください
+         * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)を参照してください
       * `_model`：コンテンツフラグメントモデル（パスとタイトル）のクエリを許可します
-         * [モデルからのコンテンツフラグメントモデルのサンプルクエリ](#sample-wknd-content-fragment-model-from-model)を参照してください
-      * `_path`：リポジトリー内のコンテンツフラグメントへのパス
-         * [サンプルクエリ - 1 つの特定の都市フラグメント](#sample-single-specific-city-fragment)を参照してください
+         * [モデルからのコンテンツフラグメントモデルのサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-content-fragment-model-from-model)を参照してください
+      * `_path`：リポジトリ内のコンテンツフラグメントへのパス
+         * [サンプルクエリ - 1 つの特定の都市フラグメント](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)を参照してください
       * `_reference`：参照（リッチテキストエディターでのインライン参照など）を表示します
-         * [プリフェッチされた参照を含んだ複数のコンテンツフラグメントのサンプルクエリ](#sample-wknd-multiple-fragments-prefetched-references)を参照してください
+         * [プリフェッチされた参照を含んだ複数のコンテンツフラグメントのサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-prefetched-references)を参照してください
       * `_variation`：コンテンツフラグメント内の特定のバリエーションを表示します
-         * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](#sample-cities-named-variation)を参照してください
+
+         >[!NOTE]
+         >
+         >指定されたバリエーションがコンテンツフラグメントに対して存在しない場合、マスターバリエーションが（フォールバック）デフォルトとして返されます。
+
+         * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)を参照してください
    * 操作の場合：
 
       * `_operator`：特定の演算子（`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`）を適用します
-         * [サンプルクエリ - 「Jobs」という名前を持たないすべての人物](#sample-all-persons-not-jobs)を参照してください
-         * [サンプルクエリ - `_path` が特定のプレフィックスで始まるすべてのアドベンチャーを参照してください](#sample-wknd-all-adventures-cycling-path-filter)
+         * [サンプルクエリ - 「Jobs」という名前を持たないすべての人物](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)を参照してください
+         * [サンプルクエリ - `_path` が特定のプレフィックスで始まるすべてのアドベンチャーを参照してください](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
       * `_apply`：特定の条件（例：`AT_LEAST_ONCE`）を適用します
-         * [サンプルクエリ - 少なくとも 1 回は現れる項目を含んだ配列をフィルタリング](#sample-array-item-occur-at-least-once)を参照してください
+         * [サンプルクエリ - 少なくとも 1 回は現れる項目を含んだ配列をフィルタリング](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)を参照してください
       * `_ignoreCase`：クエリの実行時に大文字と小文字を区別しません
-         * [サンプルクエリ - 名前に SAN が含まれるすべての都市（大文字と小文字を区別しない場合）](#sample-all-cities-san-ignore-case)を参照してください
+         * [サンプルクエリ - 名前に SAN が含まれるすべての都市（大文字と小文字を区別しない場合）](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)を参照してください
 
 
 
@@ -585,7 +594,7 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
 * GraphQL のユニオン型がサポートされています
 
    * `... on` を使用します
-      * [特定モデルのコンテンツフラグメントのうちコンテンツ参照を含んだものを取得するサンプルクエリ](#sample-wknd-fragment-specific-model-content-reference)を参照してください
+      * [特定モデルのコンテンツフラグメントのうちコンテンツ参照を含んだものを取得するサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-specific-model-content-reference)を参照してください
 
 * ネストされたフラグメントに対するクエリ時のフォールバック：
 
@@ -802,13 +811,14 @@ POST リクエストを使用してクエリを準備した後、HTTP キャッ�
    >
    >例えば、永続的クエリを実行するリクエストの場合と同様に、次のようにします。
    >
-   >```xml
+   >
+   ```xml
    >curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    >```
 
 ## 外部 Web サイトからの GraphQL エンドポイントのクエリ {#query-graphql-endpoint-from-external-website}
 
-外部 Web サイトから GraphQL エンドポイントにアクセスするには、次の項目を設定する必要があります。
+外部 web サイトから GraphQL エンドポイントにアクセスするには、次の項目を設定する必要があります。
 
 * [CORS フィルター](#cors-filter)
 * [リファラーフィルター](#referrer-filter)
