@@ -10,9 +10,9 @@ topic-tags: interactive-communications, introduction
 discoiquuid: 954da8da-a30b-477d-bde7-3edd86a5be11
 feature: Interactive Communication
 exl-id: b20bb719-5686-466e-8dde-279b8471bfe3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '1043'
+source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
+workflow-type: tm+mt
+source-wordcount: '981'
 ht-degree: 100%
 
 ---
@@ -142,19 +142,7 @@ Web チャネル用のテンプレートは AEM で作成されます。テン�
 
 [ ](/help/forms/using/create-interactive-communication0.md)
 
-## 手順 6：インタラクティブ通信をテストする {#step-test-your-interactive-communication}
-
-![11-test-your-adaptive-form](assets/11-test-your-adaptive-form.png)
-
-インタラクティブ通信を作成したら、自分がおこなったすべての変更をテストすることが重要です。インタラクティブ通信のすべてのフィールドをテストするのは面倒な作業です。AEM Forms には、Web ブラウザーでのインタラクティブ通信のテストを自動化するための SDK（Calvin SDK）が用意されています。
-
-**ゴール：**
-
-* テストスイートの作成
-* テストケースの作成
-* テストケースの実行
-
-## 手順 7：インタラクティブ通信をパブリッシュする {#step-publish-your-interactive-communication}
+## 手順 6：インタラクティブ通信をパブリッシュする {#step-publish-your-interactive-communication}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 

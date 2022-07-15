@@ -9,9 +9,9 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 64ba9b1082e39552cd27e5616de2a35f7870270b
+source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
 workflow-type: tm+mt
-source-wordcount: '4398'
+source-wordcount: '4322'
 ht-degree: 96%
 
 ---
@@ -134,7 +134,7 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
    * 上記に加えて、以下のフィールドプロパティを使用できます。
 
       * `field.value` でフィールドの値を変更します。
-      * f`ield.enabled` でフィールドを有効／無効にします。
+      * `field.enabled` でフィールドを有効／無効にします。
       * `field.visible` でフィールドの表示／非表示を変更します。
 
 * アダプティブフォームの作成者は、フォーム内のビジネスロジックを構築するために、場合によっては JavaScript コードを作成する必要があります。JavaScript は強力で効果的ですが、セキュリティ上の期待に対して妥協が生じる可能性があります。このため、フォーム作成者が信頼できる人物であることや、フォームを本番稼動させる前に JavaScript コードを見直して承認するプロセスがあることを確認する必要があります。管理者は、各ユーザーの役割や職務に基づいて、ユーザーグループのルールエディターへのアクセスを制限することができます。[選択したユーザーグループにルールエディターへのアクセスを許可する](/help/forms/using/rule-editor-access-user-groups.md)を参照してください。
@@ -228,17 +228,6 @@ Adaptive forms では、ユーザー指定のデータを処理するために�
 * guideBridge API について調査および学習する
 
 詳しくは、[AEM Chrome プラグイン - アダプティブフォーム](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)を参照してください。
-
-Calvin SDK は、アダプティブフォームをテストするためのアダプティブフォーム開発者用のユーティリティ API です。Calvin SDK は [Hobbes.js テストフレームワーク](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/test-api/index.html)上に構築されます。このフレームワークを使用して、次のテストを実行できます。
-
-* アダプティブフォームのレンディション機能
-* アダプティブフォームの事前入力機能
-* アダプティブフォームの送信機能
-* 式のルール
-* 検証
-* 遅延読み込み
-
-詳しくは、「[アダプティブフォームのテスト自動化](/help/forms/using/calvin.md)」を参照してください。
 
 ### AEM サーバー上でのアダプティブフォームの検証 {#validating-adaptive-forms-on-aem-server}
 

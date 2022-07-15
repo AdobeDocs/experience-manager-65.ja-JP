@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 91b012f8024350effc19613bcecfc42dee4130d9
+source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3778'
 ht-degree: 99%
 
 ---
@@ -35,7 +35,6 @@ ht-degree: 99%
       + [チュートリアル：アダプティブフォームのフィールド l にルールを適用する](using/apply-rules-to-adaptive-form-fields.md)
       + [チュートリアル：アダプティブフォームのスタイルを設定](using/style-your-adaptive-form.md)
       + [チュートリアル：アダプティブフォームの公開](/help/forms/using/publish-your-adaptive-form.md)
-      + [チュートリアル：アダプティブフォームのテスト](/help/forms/using/testing-your-adaptive-form.md)
    + チュートリアル：最初のインタラクティブ通信を作成 {#create-first-interactive-communication}
       + [チュートリアル：最初のインタラクティブ通信を作成する](using/create-your-first-interactive-communication.md)
       + [チュートリアル：インタラクティブ通信の計画](using/planning-interactive-communications.md)
@@ -175,7 +174,6 @@ ht-degree: 99%
    + [XDP ベースのアダプティブフォームにおける XFA のサポート](using/xfa-api-supported-in-adaptive-form.md)
    + [選択したユーザーグループにルールエディターへのアクセスを許可する](using/rule-editor-access-user-groups.md)
    + [AEM 翻訳ワークフローを使用したアダプティブフォームとレコードのドキュメントのローカライズ](using/using-aem-translation-workflow-to-localize-adaptive-forms.md)
-   + [アダプティブフォームのテスト自動化](using/calvin.md)
    + [アダプティブフォームのスタイル構成](using/styling-constructs-adaptive-forms.md)
    + [アダプティブフォームと XFA フォームテンプレートとの同期](using/synchronizing-adaptive-forms-xfa.md)
    + [Adobe Sign の AEM Forms への統合](using/adobe-sign-integration-adaptive-forms.md)
