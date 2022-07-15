@@ -62,7 +62,7 @@ ht-degree: 100%
 * フォームコンテンツが記載された電子メールを送信するためのアクションを作成する
 * アダプティブフォームのプレビューと送信を行う
 
-[! [ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
+[![ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
 
 ## 手順 2：フォームデータモデルを作成する {#step-create-form-data-model}
 
@@ -78,7 +78,7 @@ ht-degree: 100%
 * フォームデータモデルの読み取りサービスと書き込みサービスを設定する
 * テストデータを使用して、フォームデータモデルと設定済みサービスをテストする
 
-[! [ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
+[![ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
 
 ## 手順 3：アダプティブフォームのフィールドにルールを適用する {#step-apply-rules-to-adaptive-form-fields}
 
@@ -91,7 +91,7 @@ ht-degree: 100%
 * ルールを作成してアダプティブフォームのフィールドに適用する
 * ルールを使用してフォームデータモデルサービスをトリガーし、データベースのデータを更新する
 
-[! [ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
+[![ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
 ## 手順 4：アダプティブフォームのスタイルを設定する {#step-style-your-adaptive-form}
 
@@ -105,7 +105,7 @@ ht-degree: 100%
 * テーマエディターを使用して、アダプティブフォームのテーマを作成する
 * カスタムテーマに web フォントを使用する
 
-[! [ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
+[![ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
 ## 手順 5：アダプティブフォームをパブリッシュする {#step-publish-your-adaptive-form}
 
@@ -119,4 +119,4 @@ ht-degree: 100%
 * アダプティブフォームを AEM [!DNL Sites] ページに埋め込む
 * アダプティブフォームを外部の web ページ（AEM の外部でホストされる AEM 以外の web ページ）に埋め込む
 
-[! [ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
+[![ガイドを参照](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
