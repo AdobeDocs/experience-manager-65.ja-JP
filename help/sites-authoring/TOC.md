@@ -87,9 +87,9 @@ ht-degree: 100%
    + [ターゲットモードを使用したターゲットコンテンツのオーサリング](content-targeting-touch.md)
    + [マルチサイトでのターゲットコンテンツの操作](multisite-support-targeted-content.md)
    + [ターゲットコンテンツ用マルチサイト管理の構造](technical-multisite-targeted.md)
-   + [アクティビティの管理 ](activitylib.md)
-   + [オーディエンスの管理 ](managing-audiences.md)
-   + [オファーの作成と管理 ](offerlib.md)
+   + [アクティビティの管理](activitylib.md)
+   + [オーディエンスの管理](managing-audiences.md)
+   + [オファーの作成と管理](offerlib.md)
    + [セグメント化について ](segmentation-overview.md)
 + AEM と Adobe Campaign {#aem-adobe-campaign}
    + [Adobe Campaign の使用](adobe-campaign.md)

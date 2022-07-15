@@ -6,7 +6,7 @@ user-guide-description: AEMの強力で柔軟なヘッドレス機能、その�
 feature: Developer Tools
 role: Developer, Architect
 source-git-commit: 2523d9dcdbbfd9107e43ca53e2bb586452be1cb8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
    + [AEM ヘッドレスの概要](developer/getting-started.md)
    + [AEM ヘッドレス機能を使用した初めてのエクスペリエンスへの道筋](developer/path-to-first-experience.md)
    + [コンテンツを AEM コンテンツモデルとしてモデル化する方法](developer/model-your-content.md)
-   + [AEM Delivery APIを使用してコンテンツにアクセスする方法](developer/access-your-content.md)
+   + [AEM Delivery API を使用してコンテンツにアクセスする方法](developer/access-your-content.md)
    + [AEM Assets API を使用してコンテンツを更新する方法](developer/update-your-content.md)
    + [アプリとコンテンツをすべて AEM ヘッドレスにまとめる方法](developer/put-it-all-together.md)
    + [ヘッドレスアプリケーションの運用開始方法](developer/go-live.md)

@@ -8,7 +8,7 @@ user-guide-description: AEM プロジェクトの管理方法について説明�
 feature: Deploying
 role: User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 100%
 
