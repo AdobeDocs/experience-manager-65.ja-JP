@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 6b75c41cf796b28409c263175cf3f3a2044422ff
+source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
 workflow-type: tm+mt
-source-wordcount: '3733'
+source-wordcount: '3742'
 ht-degree: 26%
 
 ---
@@ -298,10 +298,10 @@ ht-degree: 26%
 
 ## ユーザーインターフェイス {#ui-6513}
 
+* 更新先 `favicon.ico` それはExperience Managerで使われる。 （CQ-4315324）
 * 「スタート」ページ/「ツール」セクションで、 [!DNL Experience Manager] アイコン [!DNL Experience Manager] ナビゲーション画面がポップアップ表示されます。 (NPR-38417)
 * ES6 を有効にする対象 `/libs/granite/ui/references/clientlibs/coral/references`. (NPR-38303)
 * ES6 を有効にする対象 `/libs/granite/datavisualization/clientlibs/d3-3.x`. (NPR-38302)
-
 <!-- VULNERABILITY ISSUE - REMOVED AND ADDED TO https://wiki.corp.adobe.com/display/DXContent/Security+and+Vulnerability+issues+for+SP+and+CFP+releases * AEM‑OP‑09 ‑ Persistent cross‑site scripting selecting paths in templates. (NPR-38301) -->
 * タッチ UI の日付選択は、韓国語で表示されます。 (NPR-38079)
 * 複数フィールドを含むオーサリングダイアログで、ラジオボタンの選択値をローズしてフィールドの順序を変更する。 (NPR-38063)
