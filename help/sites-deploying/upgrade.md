@@ -3,20 +3,17 @@ title: AEM 6.5 へのアップグレード
 seo-title: Upgrading to AEM 6.5
 description: 古い AEM のインストールを AEM 6.5 にアップグレードするための基礎について説明します。
 seo-description: Learn about the basics of upgrading an older AEM installation to AEM 6.5.
-uuid: 45368056-273c-4f1a-9da6-e7ba5c2bbc0d
 contentOwner: sarchiz
 topic-tags: upgrading
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
-discoiquuid: ebd99cc4-8762-4c28-a177-d62dac276afe
 docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 68c36d4e3a14567a4d115ee64a4474bcaf9aa386
-workflow-type: ht
-source-wordcount: '705'
-ht-degree: 100%
+source-git-commit: 02fc145d5ec1458d1f71a2f353b56b944a267f3e
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 98%
 
 ---
 
@@ -73,10 +70,8 @@ AEM では最近、アップグレードの計画時に役立つ、アップグ�
 
 最近の AEM バージョンの変更点について詳しくは、完全版のリリースノートを参照してください。
 
-* [https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-2/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-3/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-4/release-notes.html)
-* [https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html)
+* [一般リリースノート（Adobe Experience Manager 6.4）](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html?lang=ja)
+* [Adobe Experience Manager 6.5 最新の Service Pack リリースノート](/help/release-notes/release-notes.md)
 
 ## アップグレードの概要 {#upgrade-overview}
 

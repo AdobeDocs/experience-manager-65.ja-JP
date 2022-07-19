@@ -2,9 +2,9 @@
 title: AEM Content and Commerce リリースノート 2022
 description: AEM Content and Commerce リリースノート 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: f6a16e5744222600b3a1760efe3c61619160b6cd
+source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '660'
 ht-degree: 61%
 
 ---
@@ -20,6 +20,26 @@ ht-degree: 61%
 | CIF アドオン | 最小：AEM 6.5.7、Magento 2.3.5 GraphQL スキーマ |
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
+
+## リリース日：2022年6月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIF アドオン | 2022.06.xx.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF コアコンポーネント | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
+| CIF Venia 参照サイト | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
+
+### 新機能 {#what-is-new-june}
+
+* 製品カタログテンプレートのオーサリング時に、テンプレート名が Sites エディターに表示されるようになりました。
+
+* CIF コアコンポーネントの様々な改善点
+
+### バグ修正 {#bug-fixes-june}
+
+* クライアント側の価格取得にログイントークンを追加
+
+* データレイヤーのページコンポーネントが正しくありません
 
 ## リリース日：2022年5月
 
@@ -63,7 +83,7 @@ ht-degree: 61%
 
    ![製品コックピットへのサイトエディターショートカット](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
-## リリース日：2022年3月
+## リリース日：2022年2月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
