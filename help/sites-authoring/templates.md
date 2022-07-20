@@ -124,7 +124,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
 * **テンプレート**&#x200B;コンソールを使用します。これは、**ツール**&#x200B;コンソールの&#x200B;**一般**&#x200B;セクションにあります。
 
-   * または直接アクセスします：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
+   * または、直接アクセスします（例：[https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](https://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)）。
 
 * 必要に応じて、[テンプレート用のフォルダーを作成](#creating-a-template-folder-admin)できます。
 * [新しいテンプレートを作成します](#creatinganewtemplateauthor)（最初は空の状態です）。
