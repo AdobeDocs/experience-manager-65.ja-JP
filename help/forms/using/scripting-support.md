@@ -522,7 +522,7 @@ ht-degree: 100%
    <td>なし</td>
   </tr>
   <tr>
-   <td>index</td>
+   <td>索引</td>
    <td>類似名、範囲内、子のような関係のノードのコレクションにおける、このノードの位置を返します。</td>
    <td>なし</td>
   </tr>
@@ -1158,12 +1158,12 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
   <tr>
    <td>for</td>
    <td><br type="_moz" /> </td>
-   <td>for i = 100 downto 1 <br /> do s = s + i endfor</td>
+   <td>for i = 100 downto 1<br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>for each</td>
    <td><br type="_moz" /> </td>
-   <td>for each i in (1, 2, 3) <br /> do s = s + i endfor</td>
+   <td>for each i in (1, 2, 3)<br /> do s = s + i endfor</td>
   </tr>
   <tr>
    <td>関数の宣言</td>
