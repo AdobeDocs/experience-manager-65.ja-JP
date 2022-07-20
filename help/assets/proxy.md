@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '844'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ## プロキシ（HTTP アクセス） {#proxy-http-access}
 
-プロキシは、次の場所でのジョブの処理を受け入れるよう設定されている場合に、HTTP Servlet を介して使用できます。 `/libs/dam/cloud/proxy`. このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
+プロキシは、次の場所でのジョブの処理を受け入れるよう設定されている場合に、HTTP Servlet を介して使用できます。`/libs/dam/cloud/proxy`.このサーブレットは、POST されたパラメーターから Sling ジョブを作成します。作成されたジョブはプロキシのジョブキューに追加され、適切なプロキシワーカーに接続されます。
 
 ### サポートされている操作 {#supported-operations}
 
