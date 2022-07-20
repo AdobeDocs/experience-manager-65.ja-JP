@@ -22,7 +22,7 @@ Web サイトから Adobe Search&amp;Promote サービスを呼び出すには�
 
 1. クラウドの URL を指定します。
 1. Search&amp;Promote サービスへの接続を設定します。
-1. Search&amp;Promote コンポーネントをサイドキックに追加します。
+1. Search&amp;Promote コンポーネントをサイドキックに追加します.
 1. コンポーネントを使用して、コンテンツを作成します。（[Web ページへの Search&amp;Promote 機能の追加](/help/sites-authoring/search-and-promote.md)を参照。）
 1. バナーをページに追加します。バナー画像は、Search&amp;Promote データの影響を受けます。
 1. Search&amp;Promote サービスが使用するサイトマップを生成します。
@@ -132,7 +132,7 @@ Search&amp;Promote アカウントがアジアまたはヨーロッパのもの�
 
 >[!NOTE]
 >
->事前にサービス接続を設定しておく必要があります。 （[Search&amp;Promote への接続の設定](#connection)を参照）。
+>事前にサービス接続を設定しておく必要があります。（[Search&amp;Promote への接続の設定](#connection)を参照）。
 
 1. **[!UICONTROL ページプロパティ]**&#x200B;ダイアログボックスを開きます。例えば、** web サイト**ページで、ページを右クリックし、「**[!UICONTROL プロパティ]**」を選択します。
 1. 「**[!UICONTROL Cloud Services]**」タブを選択します。
