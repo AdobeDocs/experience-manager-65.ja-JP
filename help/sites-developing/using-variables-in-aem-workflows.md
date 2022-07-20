@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM ワークフローモデルでは、次のことができます。
 
-* 保存する情報タイプに基づいて、データタイプの[変数を作成します](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable)。
+* 保存する情報タイプに基づいて、データタイプの [変数を作成します](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable)。
 * [変数の値を設定する](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)には、「変数を設定する」ワークフローステップを使用します。
 * OR 分岐および移動 AEMワークフローステップで [変数を使用](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable)して、ルーティングの決定を行う式を定義します。また、すべての AEM Forms ワークフローステップで変数を使用することもできます。
 
@@ -93,7 +93,7 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「ステップ」アイコンをタップします。
 1. 「**変数を設定**」ステップをワークフローエディターにドラッグ＆ドロップし、手順をタップして ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （設定）を選択します。
-1. 「変数を設定」ダイアログで、**[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]**&#x200B;を選択します。
+1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
 1. より多くの変数をマップして、意味のある式を作成します。「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png)」をタップして、変更内容を保存します。
 
@@ -180,11 +180,11 @@ OR 分割ステップと同様に、ルール定義、ECMA スクリプト、ま
 
 #### Forms ワークフロー中心のワークフローステップ {#forms-workflow-centric-workflow-steps}
 
-すべての AEM Forms Workflow ステップは、変数をサポートします。詳しくは、[OSGi での Forms 中心のワークフロー](/help/forms/using/aem-forms-workflow-step-reference.md)を参照してください。
+すべての AEM Forms Workflow ステップは、変数をサポートします。詳しくは、[OSGi での Forms 中心のワークフローを参照してください](/help/forms/using/aem-forms-workflow-step-reference.md)。
 
 ### 変数をサポートしないワークフローステップ {#workflow-steps-without-support-for-variables}
 
-[MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフローステップの変数にアクセスできます。
+[MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
 
 #### 変数値の取得 {#retrieve-the-variable-value}
 
@@ -228,7 +228,7 @@ API を使用して変数を設定し、それらを渡してワークフロー�
 
 [workflowSession.startWorkflows](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) は、モデル、wfData、metaData を引数として使用します。MetaDataMap を使用して変数の値を設定します。
 
-この API では、**variableName** 変数は metaData.put(variableName, value) を使用して **value** に設定されます。
+この API では、 **variableName** 変数は metaData.put(variableName, value) を使用して **value** に設定されます。
 
 ```java
 import com.adobe.granite.workflow.model.WorkflowModel;
