@@ -772,7 +772,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 * **name：**（String）関数をバインドする[イベントの名前](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)。
 
 * **handler：**（Function）イベントにバインドする関数。
-* **セレクター：**（文字列）バインドの一意の ID。`off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
+* **selector：**（文字列）バインドの一意の識別子。`off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
 
 * **triggerForPastEvents：**（Boolean）過去に発生したイベントに対してハンドラーを実行するかどうかを示します。`true` 値は、過去のイベントに対してハンドラーを呼び出します。値 `false` は、未来のイベントに対してハンドラーを呼び出します。デフォルト値は `true` です。
 
