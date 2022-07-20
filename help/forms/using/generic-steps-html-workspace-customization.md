@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# AEM Forms Workspace のカスタマイズの一般的な手順に従います。 {#generic-steps-for-aem-forms-workspace-customization}
+# AEM Forms Workspace のカスタマイズの一般的な手順 {#generic-steps-for-aem-forms-workspace-customization}
 
 カスタマイズを実行するための一般的な手順を以下に示します。
 
