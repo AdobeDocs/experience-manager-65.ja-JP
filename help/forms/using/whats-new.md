@@ -20,7 +20,7 @@ ht-degree: 100%
 
 ## トランザクションレポート {#transaction-reports}
 
-トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できます。これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。 トランザクションの例を次に示します。
+トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できます。これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。トランザクションの例を次に示します。
 
 * アダプティブフォーム、HTML5 フォーム、またはフォームセットの送信
 * インタラクティブ通信の印刷または web バージョンのレンディション
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 **Web チャンネルでの新しいコンポーネントの使用**
 
-Web チャンネルにボタンコンポーネントとセパレーターコンポーネントを追加できるようになりました。 詳しくは、[web チャンネルにボタンコンポーネントを追加](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel)および [web チャンネルのセパレーターコンポーネント](../../forms/using/create-interactive-communication.md#separatorcomponent)を参照してください。
+Web チャンネルにボタンコンポーネントとセパレーターコンポーネントを追加できるようになりました。詳しくは、[web チャンネルにボタンコンポーネントを追加](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel)および [web チャンネルのセパレーターコンポーネント](../../forms/using/create-interactive-communication.md#separatorcomponent)を参照してください。
 
 **レイアウトモードを使用したコンポーネントのサイズの変更**
 
@@ -54,7 +54,7 @@ Web チャンネルにボタンコンポーネントとセパレーターコン�
 
 **ユーザビリティの向上**
 
-インタラクティブ通信の作成者は、様々な使いやすい操作を利用して通信を作成できるようになりました。 次のような操作を利用できます。
+インタラクティブ通信の作成者は、様々な使いやすい操作を利用して通信を作成できるようになりました。次のような操作を利用できます。
 
 * [印刷および web チャンネルでの取り消しおよびやり直し操作の実行](../../forms/using/create-interactive-communication.md#undoredoactions)
 * [@ 記号を使用してドキュメントフラグメントに変数を追加](../../forms/using/texts-interactive-communications.md#searchvariables)
@@ -86,7 +86,7 @@ AEM Forms では、AEM Sites 単一ページアプリケーション（SPA）に
 
 #### アダプティブフォームテンプレートの可用性を特定のパスに制限 {#restrict-the-availability-of-adaptive-forms-templates-to-specific-paths}
 
-アダプティブフォームでは、cq:allowedPaths プロパティのサポートが追加されました。 プロパティは、[アダプティブフォームテンプレートの使用を特定のパスに制限します](creating-adaptive-form.md#adaptive-form-templates)。
+アダプティブフォームでは、cq:allowedPaths プロパティのサポートが追加されました。プロパティは、[アダプティブフォームテンプレートの使用を特定のパスに制限します](creating-adaptive-form.md#adaptive-form-templates)。
 
 #### アダプティブフォームにチェックボックスを動的に追加する {#add-check-boxes-to-the-adaptive-form-dynamically}
 
@@ -96,7 +96,7 @@ AEM Forms では、AEM Sites 単一ページアプリケーション（SPA）に
 
 ### AEM ワークフローでの変数の使用 {#use-variables-in-aem-workflows}
 
-変数を使用すると、ワークフロー手順で、実行時に複数の手順にわたってメタデータを保持および渡すことができます。様々なタイプの変数を作成して、様々なタイプのデータを保存できます。例えば、整数、文字列、ドキュメント、フォームデータモデルインスタンスなどです。 一般に、変数または変数のコレクションを使用するのは、変数が保持する値に基づいて決定する必要がある場合、またはプロセスで後で必要になる情報を保存する場合です。
+変数を使用すると、ワークフロー手順で、実行時に複数の手順にわたってメタデータを保持および渡すことができます。様々なタイプの変数を作成して、様々なタイプのデータを保存できます。例えば、整数、文字列、ドキュメント、フォームデータモデルインスタンスなどです。一般に、変数または変数のコレクションを使用するのは、変数が保持する値に基づいて決定する必要がある場合、またはプロセスで後で必要になる情報を保存する場合です。
 
 変数は、以前のバージョンで使用可能な [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。メタデータ値の取得と更新に使用されるカスタム ECMAScript コードの開発に費やす時間を節約できます。メタデータを操作するには、引き続き MetaDataMap インターフェイスと ECMAScript コードを使用します。MetaDataMap および ECMAScript よりも変数を使用する利点は次のとおりです。
 
@@ -203,7 +203,7 @@ Go To ステップ、OR Split ステップ、およびすべての AEM Forms ワ
  </tbody>
 </table>
 
-* 別のプラットフォームへの移行については、アドビサポートにお問い合わせください
+&#42; 別のプラットフォームへの移行については、アドビサポートにお問い合わせください
 
 #### 新しい HTML5 ベースの UI {#new-html-based-uis}
 
