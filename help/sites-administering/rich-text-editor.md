@@ -22,7 +22,7 @@ RTE 機能をオーサリングに使用する方法については、[リッチ
 
 ## タッチ操作 UI とクラシック UI について {#understand-touch-enabled-ui-and-classic-ui}
 
-タッチ操作対応 UI は、Experience Manager の標準ユーザーインターフェイスです。 アドビは、オーサリング環境向けに、 [レスポンシブデザイン](/help/sites-authoring/responsive-layout.md) を備えたタッチ操作対応 UI を導入しました。タッチ操作対応 UI は、タッチデバイスとデスクトップデバイス向けに設計されています。 インターフェイスは元のクラシック UI とは大きく異なります。
+タッチ操作対応 UI は、Experience Manager の標準ユーザーインターフェイスです。アドビは、オーサリング環境向けに、 [レスポンシブデザイン](/help/sites-authoring/responsive-layout.md) を備えたタッチ操作対応 UI を導入しました。タッチ操作対応 UI は、タッチデバイスとデスクトップデバイス向けに設計されています。インターフェイスは元のクラシック UI とは大きく異なります。
 
 ![タッチ操作対応 UI のリッチテキストエディターツールバー](assets/chlimage_1-35.png)
 
