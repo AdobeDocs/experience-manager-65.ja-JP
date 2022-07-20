@@ -1,9 +1,8 @@
 ---
 source-git-commit: 5f9fb08a59dd7cac5436b9c7836fb45de9cda007
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 # Adobe Experience Manager ドキュメントへの投稿
@@ -59,4 +58,4 @@ AEM ドキュメントを改善するためのあらゆる投稿を歓迎しま�
 
 ## その他の情報
 
-GitHub オーサリングプラットフォームの使用方法の詳細については、[アドビドキュメント寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
+GitHub オーサリングプラットフォームの使用方法の詳細については、[アドビドキュメント寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)を参照してください。
