@@ -74,7 +74,7 @@ Adobe Campaign のニュースレターのターゲット設定をおこなう�
 
 >[!NOTE]
 >
->[電子メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
+>[メールのサンプルは、Geometrixx でのみ使用できます](/help/sites-developing/we-retail.md)。Geometrixx のサンプルコンテンツをパッケージ共有からダウンロードしてください。
 
 ターゲットコンテンツを使用してニュースレターを作成するには：
 
