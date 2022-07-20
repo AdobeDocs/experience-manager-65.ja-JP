@@ -1,20 +1,20 @@
 ---
 title: Assets ガイド
-description: デジタルアセットをExperience Managerで作成、管理、処理および配布します。 これらのガイドでは、ベストプラクティス、アクセシビリティ機能およびAEM 6.5 Assets の使用方法について説明します。
+description: デジタルアセットを Experience Manager で作成、管理、処理および配布します。これらのガイドでは、ベストプラクティス、アクセシビリティ機能および AEM 6.5 Assets の使用方法について説明します。
 user-guide-title: Assets ガイド
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '344'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # Assets ガイド
 
-デジタルアセットをExperience Managerで作成、管理、処理および配布します。 これらのガイドでは、ベストプラクティス、アクセシビリティ機能およびAEM 6.5 Assets の使用方法について説明します。
+デジタルアセットを Experience Manager で作成、管理、処理および配布します。これらのガイドでは、ベストプラクティス、アクセシビリティ機能および AEM 6.5 Assets の使用方法について説明します。
 
 ## [!DNL Experience Manager] に関する主要な記事 
 
@@ -44,7 +44,7 @@ ht-degree: 86%
 
 * [Experience Manager ビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://experienceleague.adobe.com/?mv=other?lang=ja#recommended/solutions/experience-manager)
+* [Experience League](https://experienceleague.adobe.com/?mv=other&amp;lang=ja#recommended/solutions/experience-manager)
 * [Experience Manager Assets コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-assets/ct-p/experience-manager-assets-community?lang=ja)
 * [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
 * [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=ja)
