@@ -280,7 +280,7 @@ CRXDE Lite では、[CND（Compact Namespace and Node Type Definition）表記�
 
 1. テキストボックスに定義の CND 表記を入力します。
 1. 既存の定義を更新する場合は、「**更新を許可**」を選択します。
-1. 「**読み込み**」をクリックします。
+1. **インポート**&#x200B;をクリックします。
 
 ## ログ {#logging}
 
