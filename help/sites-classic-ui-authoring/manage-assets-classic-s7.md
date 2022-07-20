@@ -30,7 +30,7 @@ Dynamic Media Classic（Scene7）で公開された Experience Manager Assets �
 
 デジタルアセットを Experience Manager から Dynamic Media Classic（Scene7）に直接公開したり、Dynamic Media Classic（Scene7）から Experience Manager に公開したりできます。
 
-このドキュメントでは、デジタルアセットを Experience Manager から Dynamic Media Classic（Scene7）に公開する方法と、その逆の方法について説明します。 また、ビューアについても詳しく説明します。Dynamic Media Classic（Scene7）用の Experience Manager の設定について詳しくは、[Dynamic Media Classic（Scene7）と Experience Manager の統合](/help/sites-administering/scene7.md)を参照してください。
+このドキュメントでは、デジタルアセットを Experience Manager から Dynamic Media Classic（Scene7）に公開する方法と、その逆の方法について説明します。また、ビューアについても詳しく説明します。Dynamic Media Classic（Scene7）用の Experience Manager の設定について詳しくは、[Dynamic Media Classic（Scene7）と Experience Manager の統合](/help/sites-administering/scene7.md)を参照してください。
 
 [画像マップの追加](/help/assets/image-maps.md)も参照してください。
 
@@ -112,7 +112,7 @@ Experience Manager でのビデオコンポーネントの使用について詳�
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 1. Web ページで、ページの目的の場所に Dynamic Media Classic（Scene7）コンポーネントを追加します。
-1. コンテンツファインダーから、デジタルアセットをコンポーネントにドラッグします。 **[!UICONTROL Dynamic Media Classic （Scene7） 公開ステータスの確認]**&#x200B;へのリンクが表示されます。
+1. コンテンツファインダーから、デジタルアセットをコンポーネントにドラッグします。**[!UICONTROL Dynamic Media Classic （Scene7） 公開ステータスの確認]**&#x200B;へのリンクが表示されます。
 
    >[!NOTE]
    >
@@ -120,7 +120,7 @@ Experience Manager でのビデオコンポーネントの使用について詳�
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
-1. 「**[!UICONTROL Dynamic Media Classic （Scene7） 公開ステータスの確認]**」を選択します。アセットが公開されていない場合、Experience Manager はアセットを Dynamic Media Classic（Scene7）に公開します。 アップロードされたアセットは、オンデマンドフォルダーに配置されます。デフォルトでは、オンデマンドフォルダーは **[!UICONTROL name_of_the_company/CQ5_adhoc]** にあります。[必要に応じて、オンデマンドフォルダーを設定](#configuringtheadhocfolder)することができます。
+1. 「**[!UICONTROL Dynamic Media Classic （Scene7） 公開ステータスの確認]**」を選択します。アセットが公開されていない場合、Experience Manager はアセットを Dynamic Media Classic（Scene7）に公開します。アップロードされたアセットは、オンデマンドフォルダーに配置されます。デフォルトでは、オンデマンドフォルダーは **[!UICONTROL name_of_the_company/CQ5_adhoc]** にあります。[必要に応じて、オンデマンドフォルダーを設定](#configuringtheadhocfolder)することができます。
 
    >[!NOTE]
    >
@@ -201,7 +201,7 @@ Experience Manager で使用できる Dynamic Media Classic（Scene7）コンポ
 
 ### ズーム {#zoom}
 
-HTML5 ズームコンポーネントでは、+ ボタンをクリックすると画像のサイズが拡大されます。
+HTML5 ズームコンポーネントでは、「+」ボタンをクリックすると画像のサイズが拡大されます。
 
 アセットの下部にはズームツールが用意されています。「**[!UICONTROL +]**」を選択すると、拡大します。「**[!UICONTROL -]**」を選択すると、縮小します。「**[!UICONTROL x]**」またはズームのリセット矢印を選択すると、画像が元の（インポート時の）サイズに戻ります。斜めの矢印を選択すると、全画面表示にすることができます。「**[!UICONTROL 編集]**」を選択すると、コンポーネントを設定できます。このコンポーネントでは、[すべての Dynamic Media Classic（Scene7）コンポーネントに共通する設定](#settings-common-to-all-scene-components)を指定できます。
 
@@ -231,7 +231,7 @@ Dynamic Media Classic（Scene7）画像コンポーネントでは、Dynamic Med
 
 ![chlimage_1-54](assets/chlimage_1-54.png)
 
-**ビューアプリセット** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
+**ビューアプリセット** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示可能に設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
 **Dynamic Media Classic （Scene7） 設定** - SPS からアクティブな画像プリセットを取得するための Dynamic Media Classic（Scene7）設定を選択します。
 
@@ -281,7 +281,7 @@ Dynamic Media Classic（Scene7）画像テンプレートは、Scene7 にイン�
 
 #### テキストへの ClientContext 値の反映 {#changing-text-to-reflect-the-value-of-a-client-context-value}
 
-フィールドを ClientContext 値にリンクするには、「**[!UICONTROL 選択]**」をクリックして ClientContext メニューを開き、ClientContext を選択して「**[!UICONTROL OK]**」をクリックします。この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
+フィールドをクライアントコンテキストの値にリンクするには、「**[!UICONTROL 選択]**」をクリックしてクライアントコンテキストのメニューを開き、クライアントコンテキストを選択して「**[!UICONTROL OK]**」をクリックします。この例では、「名前」フィールドとプロファイル内の書式設定された名前とのリンクに基づいて名前が変わります。
 
 ![chlimage_1-60](assets/chlimage_1-60.png)
 
@@ -331,16 +331,16 @@ Dynamic Media Classic（Scene7）コンテンツブラウザーを使用する�
 >* [セキュアプレビューが有効](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)なときは、Dynamic Media Classic（Scene7）の公開アセットと非公開アセットの両方が、Dynamic Media Classic（Scene7）コンテンツブラウザーに表示されます。
 >* **[!UICONTROL Dynamic Media Classic（Scene7）]**&#x200B;または「**[!UICONTROL S7]**」アイコンがオプションとしてコンテンツブラウザーに表示されない場合は、 [Experience Manager と連携するように Dynamic Media Classic（Scene7）を設定する](/help/sites-administering/scene7.md)必要があります。
 >* ビデオの場合、Dynamic Media Classic（Scene7）コンテンツブラウザーは次の項目をサポートしています。
->   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
->   * 単一の MP4 ビデオ
->   * 単一の F4V ビデオ
+   >   * アダプティブビデオセット：複数の画面でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+   >   * 単一の MP4 ビデオ
+   >   * 単一の F4V ビデオ
 
 
 ### コンテンツの参照 {#browsing-content-in-the-classic-ui}
 
 「**[!UICONTROL S7]**」タブを選択して、Dynamic Media Classic（Scene7）のコンテンツを参照します。
 
-設定を選択することで、現在アクセスしている設定を変更することができます。 フォルダーは、選択する設定に応じて変わります。
+設定を選択することで、現在アクセスしている設定を変更することができます。フォルダーは、選択する設定に応じて変わります。
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
@@ -360,13 +360,13 @@ Dynamic Media Classic（Scene7）コンテンツブラウザーを使用する�
 
 ### コンテンツブラウザーでの Dynamic Media Classic（Scene7）アセットの検索 {#searching-for-scene-assets-with-the-content-browser}
 
-Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager アセットの検索と似ています。 ただし、検索時に、Experience Manager ではアセットを直接インポートするのに対して、Dynamic Media Classic（Scene7）システムでは実際にはアセットのリモートビューが表示されます。
+Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager アセットの検索と似ています。ただし、検索時に、Experience Manager ではアセットを直接インポートするのに対して、Dynamic Media Classic（Scene7）システムでは実際にはアセットのリモートビューが表示されます。
 
 クラシック UI またはタッチ操作向け UI を使用して、アセットを表示および検索できます。インターフェイスによって検索方法は多少異なります。
 
 どちらの UI で検索する場合でも、次の基準でフィルターを適用できます（ここでは、タッチ操作向け UI を示しています）。
 
-**キーワードを入力** - アセットを名前で検索できます。 検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索するには、語句を入力した後に Enter キーを押してください。
+**キーワードを入力** - アセットを名前で検索できます。検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索するには、語句を入力した後に Enter キーを押してください。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
@@ -378,7 +378,7 @@ Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager �
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
-**アセットのタイプ** - Dynamic Media Classic（Scene7）を選択して、Dynamic Media Classic（Scene7）のコンテンツを参照します。 このオプションは、Dynamic Media Classic（Scene7）が設定されている場合にのみ使用できます。
+**アセットのタイプ** - Dynamic Media Classic（Scene7）を選択して、Dynamic Media Classic（Scene7）のコンテンツを参照します。このオプションは、Dynamic Media Classic（Scene7）が設定されている場合にのみ使用できます。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
@@ -394,8 +394,9 @@ Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager �
 >
 >* クラシック UI では、**Flash** と **FXG** も検索できます。タッチ操作向け UI では、これら 2 つの語句のフィルタリングはサポートされていません。
 >
->* ビデオを検索するときは、単一のレンディションが検索されています。結果では、元のレンディション（*.mp4 のみ）と、エンコードされたレンディションが返されます。
+>* ビデオを検索するときは、単一のレンディションが検索されています。結果には、元のレンディション（&#42;.mp4 のみ）と、エンコードされたレンディションが返されます。
 >* アダプティブビデオセットの検索では、フォルダーとすべてのサブフォルダーが検索されます（検索にキーワードを追加した場合のみ）。キーワードを追加しないと、Experience Manager ではサブフォルダーが検索されません。
+>
 
 
 **公開ステータス** - 公開ステータス（非公開または公開済み）に基づいてアセットをフィルタリングできます。公開ステータスを選択しない場合、Experience Manager ではデフォルトですべての公開ステータスが検索されます。
