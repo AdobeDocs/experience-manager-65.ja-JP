@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
 source-git-commit: 813441a61baa560c9d317a5519b9e0c0d1da7a6e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2209'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -108,7 +108,7 @@ Adobe Target の下で、「**設定を表示**」をクリックまたはタッ
 オプトインウィザードを使用せずに手動で Adobe Target と統合します。
 
 >[!NOTE]
-Target ライブラリファイル [AT.JS](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/mbox-implement/mbox-download.html) は、Adobe Target 用の新しい実装ライブラリであり、通常の ｗeb 実装と単一ページアプリケーションの両方に使用できるように設計されています。mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
+Target ライブラリファイル [AT.JS](https://docs.adobe.com/content/help/jp/target/using/implement-target/client-side/mbox-implement/mbox-download.html) は、Adobe Target 用の新しい実装ライブラリであり、通常の ｗeb 実装と単一ページアプリケーションの両方に使用できるように設計されています。mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
 AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 * Web 実装のページ読み込み時間が改善されています。
 * セキュリティが改善されています。
