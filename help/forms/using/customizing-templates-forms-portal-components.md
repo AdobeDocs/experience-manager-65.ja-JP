@@ -10,13 +10,13 @@ topic-tags: customization
 discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
-source-git-commit: 48726639e93696f32fa368fad2630e6fca50640e
+exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: ht
 source-wordcount: '1225'
 ht-degree: 100%
 
 ---
-
 
 # フォームポータルコンポーネントのテンプレートをカスタマイズする{#customizing-templates-for-forms-portal-components}
 
@@ -45,7 +45,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
       * ドラフトセクション：/libs/fd/fp/draftsTemplate
       * 送信セクション：/libs/fd/fp/submissionsTemplate
-   * Link コンポーネント：&quot;/libs/fd/fp/formTemplate&quot;
+   * Link コンポーネント：&quot;/libs/fd/fp/linkTemplate&quot;
 
    レイアウトテンプレートを選択する際に表示したいタイトルを追加します。
 
@@ -150,13 +150,13 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 *注意：*
 
-1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CCS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、対応するドラフトのドラフト ID である値 **${draftID}** を持つ属性 &quot;draftID&quot; を含めます。
+1. ドラフト&amp;送信コンポーネントの下のドラフトセクションにある削除のオプションについては、CSS クラスを &quot;__FP_deleteDraft&quot; と名付けます。さらに、対応するドラフトのドラフト ID である値 **${draftID}** を持つ属性 &quot;draftID&quot; を含めます。
 
 1. ドラフトと提出を開くためのリンクの作成中に、アンカータグの **href** 属性の値として **${path}.htm** を指定することができます。
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
-**A**. コンテナの要素
+**A**.コンテナの要素
 
 **B.** 固定階層のある「path」メタデータで、各フォームに保存されたサムネールを取得します。
 
