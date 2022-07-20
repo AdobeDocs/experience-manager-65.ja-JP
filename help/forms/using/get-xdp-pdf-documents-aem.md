@@ -68,7 +68,7 @@ AEM Forms サーバーを使用することで、JavaScript コードを実行�
 
 保護モードは、デフォルトではオンになっています。必要に応じて、保護モードを無効にすることができます。
 
-1. AEM Web コンソールに管理者としてログインします。URL は https://&#39;[server]:[port]&#39;/system/console/configMgr
+1. 管理者として AEM Web コンソールにログインします。URL は https://&#39;[server]:[port]&#39;/system/console/configMgr
 1. Mobile Forms の設定を編集用に開きます。
 1. 「保護モード」オプションの選択を解除し、「**保存**」をクリックします。保護モードが無効になります。
 
