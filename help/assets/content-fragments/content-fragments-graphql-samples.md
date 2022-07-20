@@ -1532,9 +1532,9 @@ query {
 
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
-| name（会社名） | 1 行のテキスト |  |
-| ceo（最高経営責任者） | フラグメント参照（1 つ） | [Person](#model-person) |
-| employees（従業員） | フラグメント参照（複数フィールド） | [Person](#model-person) |
+| 会社名 | 1 行のテキスト |  |
+| CEO | フラグメント参照（1 つ） | [Person](#model-person) |
+| 従業員数 | フラグメント参照（複数フィールド） | [Person](#model-person) |
 
 #### Person（人物） {#model-person}
 
@@ -1543,8 +1543,8 @@ query {
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
 | name（氏名） | 1 行のテキスト |  |
-| firstName（名） | 1 行のテキスト |  |
-| awards（受賞歴） | フラグメント参照（複数フィールド） | [Award](#model-award) |
+| 名 | 1 行のテキスト |  |
+| 授賞歴 | フラグメント参照（複数フィールド） | [Award](#model-award) |
 
 #### Award（賞） {#model-award}
 
@@ -1552,7 +1552,7 @@ query {
 
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
-| id（賞の ID） | 1 行のテキスト |  |
+| ショートカット／ID | 1 行のテキスト |  |
 | title（タイトル） | 1 行のテキスト |  |
 
 #### City（市区町村） {#model-city}
@@ -1562,9 +1562,9 @@ query {
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
 | name（氏名） | 1 行のテキスト |  |
-| country（国） | 1 行のテキスト |  |
-| population（人口） | 数値 |  |
-| categories（カテゴリ） | タグ |  |
+| 国名 | 1 行のテキスト |  |
+| 人口 | 数値 |  |
+| カテゴリ | タグ |  |
 
 ### サンプルコンテンツフラグメント {#sample-content-fragments}
 
@@ -1572,7 +1572,7 @@ query {
 
 #### Company（会社） {#fragment-company}
 
-| name | ceo | employees |
+| 会社名 | CEO | 従業員数 |
 |--- |--- |--- |
 | Apple Inc. | Steve Jobs | Duke Marsh<br>Max Caulfield |
 |  Little Pony, Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
@@ -1580,7 +1580,7 @@ query {
 
 #### Person（人物） {#fragment-person}
 
-| name | firstName | awards |
+| name | 名 | 授賞歴 |
 |--- |--- |--- |
 | Lincoln |  Abe |  |
 | Smith | Adam |   |
@@ -1593,7 +1593,7 @@ query {
 
 #### 賞 {#fragment-award}
 
-| id | title |
+| ショートカット／ID | title |
 |--- |--- |
 | GB | Gameblitz |
 |  GS | Gamestar |
@@ -1601,7 +1601,7 @@ query {
 
 #### 都市 {#fragment-city}
 
-| name | country | population | categories |
+| name | 国名 | 人口 | カテゴリ |
 |--- |--- |--- |--- |
 | Basel | Switzerland | 172258 | city:emea |
 | Berlin | Germany | 3669491 | city:capital<br>city:emea |
