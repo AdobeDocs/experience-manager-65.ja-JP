@@ -137,7 +137,7 @@ AEM Forms アプリケーションのログインページには、ロゴと背�
   <tr>
    <th><p>説明</p> </th>
    <th><p>サイズ</p> </th>
-   <th><p>ファイル名</p> </th>
+   <th><p>Filename</p> </th>
   </tr>
   <tr>
    <td><p>Logo（ロゴ）</p> </td>
@@ -192,7 +192,7 @@ AEM Forms アプリケーションにログインしてメニューボタンを�
   <tr>
    <th><p>説明</p> </th>
    <th><p>サイズ</p> </th>
-   <th><p>ファイル名</p> </th>
+   <th><p>Filename</p> </th>
   </tr>
   <tr>
    <td><p>Logo（ロゴ）</p> </td>
