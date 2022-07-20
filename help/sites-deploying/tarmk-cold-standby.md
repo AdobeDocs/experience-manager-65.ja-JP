@@ -88,7 +88,7 @@ Tar Micro Kernel のコールドスタンバイ機能では、1 つ以上のス�
 >
 >セグメントノードストアおよびスタンバイストアサービスの PID は、AEM 6.3 では以前のバージョンと比較して次のように変更されました。
 >
->* org.apache.jackrabbit.oak.**plugins**.segment.standby.store.StandbyStoreService から org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
+>* org.apache.jackrabbit.oak から&#x200B;**plugins**.segment.standby.store.StandbyStoreService から org.apache.jackrabbit.oak.segment.standby.store.StandbyStoreService
 >* org.apache.jackrabbit.oak から&#x200B;**plugins**.segment.SegmentNodeStoreService から org.apache.jackrabbit.oak.segment.SegmentNodeStoreService
 >
 >この変更が反映されるように、必要に応じて設定を調整してください。
@@ -317,7 +317,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
    ```
 
 1. ロードバランサーに新しいプライマリを追加します。
-1. 新しいスタンバイインスタンスを作成して起動します。詳しくは、前述の [ AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)を参照してください。
+1. 新しいスタンバイインスタンスを作成して起動します。詳しくは、前述の [AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)を参照してください。
 
 ## コールドスタンバイセットアップへのホットフィックスの適用 {#applying-hotfixes-to-a-cold-standby-setup}
 
@@ -334,7 +334,7 @@ Cold Standby サービスでは次の OSGi 設定を利用できます。
 1. 新しく作成したクローンをコールドスタンバイインスタンスとして機能するように再設定します。詳しくは、[AEM TarMK コールドスタンバイセットアップの作成](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)を参照してください。
 1. プライマリインスタンスとコールドスタンバイインスタンスの両方を起動します。
 
-## 監視 {#monitoring}
+## モニタリング {#monitoring}
 
 この機能は、JMX または MBeans を使用して情報を公開します。これにより、[JMX コンソール](/help/sites-administering/jmx-console.md)を使用して、スタンバイとマスターの現在の状態を検査することができます。この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
 
