@@ -1,5 +1,5 @@
 ---
-title: ワークフローの作成と拡張
+title: 'ワークフローの作成と拡張 '
 seo-title: Developing and Extending Workflows
 description: AEM には、ワークフローモデルを作成し、ワークフローステップを開発し、プログラムによってワークフローとやり取りするためのツールやリソースが用意されています
 seo-description: AEM provides several tools and resources for creating workflow models, developing workflow steps, and for programmatically interacting with workflows
@@ -18,7 +18,7 @@ ht-degree: 100%
 ---
 
 
-# ワークフローの作成と拡張{#developing-and-extending-workflows}
+# ワークフローの作成と拡張 {#developing-and-extending-workflows}
 
 AEM には、ワークフローモデルを作成し、ワークフローステップを開発し、プログラムによってワークフローとやり取りするためのツールやリソースが用意されています。
 
@@ -113,7 +113,7 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
 
 完了または強制終了したインスタンスはアーカイブされます。
 
-### インボックス {#inbox}
+### インボックス  {#inbox}
 
 各ユーザーアカウントは、固有のワークフローインボックスを持ち、そこから割り当てられた `WorkItems` にアクセスできます。
 
@@ -200,11 +200,11 @@ AEM には、ワークフローモデルを作成し、ワークフローステ�
    | **ステップ名** | **ステージ（ステップに割り当て済み）** |
    |---|---|
    | 手順 1 | 作成 |
-   | ステップ 2 | 作成 |
-   | ステップ 3 | レビュー |
-   | ステップ 4 | 承認 |
-   | ステップ 5 | 完了 |
-   | ステップ 6 | 完了 |
+   | 手順 2 | 作成 |
+   | 手順 3 | レビュー |
+   | 手順 4 | 承認 |
+   | 手順 5 | 完了 |
+   | 手順 6 | 完了 |
 
 1. ワークフローが実行されると、ユーザーは進行状況を（ステップ名ではなく）ステージ名に照らして確認できます。ワークフローの進行状況は、[インボックス](/help/sites-authoring/inbox.md)に表示される[作業項目のタスクの詳細ウィンドウにある「ワークフロー情報」タブ](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)に表示されます。
 
