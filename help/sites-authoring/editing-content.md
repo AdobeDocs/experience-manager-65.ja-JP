@@ -140,7 +140,7 @@ ht-degree: 100%
 1. [コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)を開きます。
 1. 必要なコンポーネントを[必要な位置](#component-placeholder)までドラッグします。
 
-1. コンポーネントを[編集](#editmovecopypastedelete)します。
+1. [コンポーネントを編集します。](#editmovecopypastedelete)
 
 >[!NOTE]
 >
@@ -534,7 +534,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 >
 >ページのロックは、[別のユーザーとして実行している](/help/sites-administering/security.md#impersonating-another-user)場合に実行できます。ただし、この方法でロックされたページをロック解除できるのは、別のユーザーとして実行したユーザーか、管理者ユーザーです。
 >
->実際にページのロック作業をおこなったユーザーに成り代わっても、ページをロック解除できません。
+>実際にページのロック作業を行ったユーザーに成り代わっても、ページをロック解除できません。
 
 ## ページのロック解除 {#unlocking-a-page}
 
@@ -548,7 +548,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 >
 >ページのロックは、[別のユーザーとして実行している](/help/sites-administering/security.md#impersonating-another-user)場合に実行できます。ただし、この方法でロックされたページをロック解除できるのは、別のユーザーとして実行したユーザーか、管理者ユーザーです。
 >
->実際にページのロック作業をおこなったユーザーに成り代わっても、ページをロック解除できません。
+>実際にページのロック作業を行ったユーザーに成り代わっても、ページをロック解除できません。
 
 ## ページ編集の取り消しとやり直し {#undoing-and-redoing-page-edits}
 
