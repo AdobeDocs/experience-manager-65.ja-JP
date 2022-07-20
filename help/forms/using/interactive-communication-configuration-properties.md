@@ -113,7 +113,7 @@ ht-degree: 100%
  </tbody> 
 </table>
 
-## アダプティブフォームおよびインタラクティブ通信 Web チャネルの設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
+## アダプティブフォームおよびインタラクティブ通信 web チャネルの設定 {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
 **Adobe Experience Manager web コンソール設定**&#x200B;ページの「**アダプティブフォームおよびインタラクティブ通信 web チャネルの設定**」をタップして、アダプティブフォームおよびインタラクティブ通信 web チャネルの設定プロパティを表示します。次のテーブルに、インタラクティブ通信に関連するプロパティを示します。
 
@@ -123,7 +123,7 @@ ht-degree: 100%
 | 最大キャッシュエントリ数 | キャッシュメモリを使用して取得できるアダプティブフォームおよびインタラクティブ通信の最大数を設定します。 | 100 | 数値 |
 | 一意のファイル名を作成 | チェックボックスを選択して、アダプティブフォームおよびインタラクティブ通信に添付ファイルとして含まれているファイルに一意の名前を付けます。 | 未選択 | 適用なし |
 
-## アダプティブフォームおよびインタラクティブ通信 Web チャネルテーマの設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
+## アダプティブフォームおよびインタラクティブ通信 web チャネルテーマの設定 {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
 **Adobe Experience Manager Web コンソール設定**&#x200B;ページの「**アダプティブフォームおよびインタラクティブ通信 web チャネルテーマの設定**」をタップして、アダプティブフォームおよびインタラクティブ通信 web チャネルテーマの設定プロパティを表示します。
 
