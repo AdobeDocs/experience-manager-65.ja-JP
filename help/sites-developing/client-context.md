@@ -153,7 +153,7 @@ ClientContext に追加または ClientContext から取得する必要がある
 
 #### セッションストアオブジェクトの作成 {#creating-the-session-store-object}
 
-クライアントライブラリフォルダーの JavaScript によってセッションストアを作成し、初期化します。その後、Context Store Manager を使用して、セッションストアを登録する必要があります。 次の例では、[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) オブジェクトを作成して登録します。
+クライアントライブラリフォルダーの JavaScript によってセッションストアを作成し、初期化します。その後、Context Store Manager を使用して、セッションストアを登録する必要があります。次の例では、[CQ_Analytics.SessionStore](/help/sites-developing/ccjsapi.md#cq-analytics-sessionstore) オブジェクトを作成して登録します。
 
 ```
 //Create the session store
