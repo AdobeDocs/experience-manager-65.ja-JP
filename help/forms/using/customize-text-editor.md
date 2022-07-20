@@ -38,7 +38,7 @@ ht-degree: 100%
 
 ## CRX の tbxeditor-config.xml ファイルを編集しフォントをカスタマイズ {#customizefonts}
 
-フォントをカスタマイズするには、次のファイルを編集します。 tbxeditor-config.xml file。次の手順を実行します。
+フォントをカスタマイズするには、次のファイルを編集します。tbxeditor-config.xml file。次の手順を実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
 1. apps フォルダーに、libs/fd/cm/config の config フォルダーに類似したパスまたはフォルダー構造を持つ config という名前のフォルダーを次の手順で作成します。
@@ -168,7 +168,7 @@ ht-degree: 100%
       * フォントファミリーとサイズ、高さ、文字間隔、日付形式のデフォルト値
       * 箇条書きのインデント
 
-      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには XML ファイル：`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
+      例えば、Sazanami Mincho Medium という名前の日本語フォントを追加するには  XML ファイル：`<font>Sazanami Mincho Medium</font>`。アクセスしてフォントのカスタマイズを行うクライアントマシンにも、このフォントをインストールしておく必要があります。詳しくは、[クライアントコンピューターへのカスタムフォントの追加](#addcustomfonts)を参照してください。
 
       また、様々な特性を持つテキストのデフォルト設定を変更したり、エントリを削除してテキストエディターからフォントを削除したりすることもできます。
 
