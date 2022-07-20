@@ -37,7 +37,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html?lang=ja)を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/jp/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
 ## 差分ディレクトリ同期の有効化 {#enable-delta-directory-synchronization}
 
@@ -61,17 +61,17 @@ ht-degree: 100%
 
 デフォルトで、User Management では、同期処理中に詳細な統計情報がログに記録されます。
 
-1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
+1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックしてください。
 1. 「同期統計ログ」の指定にあるチェックボックスの選択を解除して詳細なログを無効にするか、選択してログを有効にしてから、「保存」をクリックします。
 
 ## ディレクトリ同期の再試行オプションの設定 {#configure-the-directory-synchronization-retry-option}
 
 User Management を設定して、失敗したディレクトリ同期処理を定期的にチェックすることができます。この設定にすると、失敗した同期の完了が User Management で試行されます。
 
-1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックします。
+1. 管理コンソールで、設定／User Management／設定／システム属性の詳細設定をクリックしてください。
 1. 「同期完了の Cron 形式」に、失敗した同期を User Management で再試行する間隔を表す Cron 形式を入力します。Cron 形式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます
 
-   デフォルトは 0 0/13 &amp;ast; ?&amp;ast;、この設定ではチェックが 13 分ごとに実行されます。
+   デフォルトは 0 0/13 &amp;ast; ? &amp;ast;、この設定ではチェックが 13 分ごとに実行されます。
 
 ## 手動によるディレクトリの同期 {#manually-synchronize-directories}
 
