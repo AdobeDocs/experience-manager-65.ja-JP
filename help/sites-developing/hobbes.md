@@ -22,7 +22,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->AEM 6.5 以降、hobbes.js UI テストフレームワークは非推奨となります。 アドビははそれ以上の機能拡張を行う予定はなく、Selenium 自動化を使用することをお客様に推奨しています。
+>AEM 6.5 以降、hobbes.js UI テストフレームワークは非推奨となります。アドビははそれ以上の機能拡張を行う予定はなく、Selenium 自動化を使用することをお客様に推奨しています。
 >
 >[廃止される機能および削除された機能](/help/release-notes/deprecated-removed-features.md)を参照してください。
 
