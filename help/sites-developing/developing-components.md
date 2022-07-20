@@ -71,7 +71,7 @@ AEM コンポーネントを使用して、web ページ上で使用できるコ
 
 つまり、ダイアログ全体を（`sling:resourceSuperType` を使用して）再定義するのとは対照的に、再定義する必要があるのは相違点だけです。これは、推奨されるコンポーネントダイアログ拡張方法です。
 
-詳しくは、[Sling Resource Merger ](/help/sites-developing/sling-resource-merger.md) を参照してください。
+詳しくは、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) を参照してください。
 
 ## マークアップの定義 {#defining-the-markup}
 
