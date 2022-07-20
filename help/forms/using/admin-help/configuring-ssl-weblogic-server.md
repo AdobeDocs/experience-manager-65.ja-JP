@@ -191,10 +191,10 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
 
    **Custom Trust Keystore Type**：JKS
 
-   **Custom Trust Keystore Pass Phrase**：*mypassword* （カスタム信頼キーパスワード）
+   **Custom Trust Keystore Pass Phrase**：*mypassword*（カスタム信頼キーパスワード）
 
 1. 「General」の「Configuration」で「**SSL**」を選択します。
-1. デフォルトでは、ID と信頼の場所にキーストアが選択されています。 選択されていない場合、キーストアに変更します。
+1. デフォルトでは、ID と信頼の場所にキーストアが選択されています。選択されていない場合、キーストアに変更します。
 1. 「ID」で、次の値を指定します。
 
    **Private Key Alias**：ads-credentials
