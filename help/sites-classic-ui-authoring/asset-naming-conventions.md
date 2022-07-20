@@ -1,7 +1,7 @@
 ---
 title: アセットの命名規則のテスト
 seo-title: Naming conventions for assets
-description: リポジトリーのノードは、Java コンテンツリポジトリーの命名規則の対象です。ただし、Adobe Experience Manager によってアセットノード名に追加の規則が課せられます。
+description: リポジトリーのノードは、Java コンテンツリポジトリーの命名規則の対象です。ただし、アセットノード名には Adobe Experience Manager によって追加の規則が課せられます。
 seo-description: Nodes in the repository are subject to naming conventions of the Java Content Repository. However, Adobe Experience Manager imposes further conventions for the name of asset nodes.
 uuid: 6b622a60-90e8-461e-9b67-42c11c7038f9
 contentOwner: Chris Bohnert
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# アセットの命名規則テスト{#naming-conventions-for-assets-testing}
+# アセットの命名規則のテスト{#naming-conventions-for-assets-testing}
 
 リポジトリーのノードは、[Java コンテンツリポジトリー](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。ただし、アセットノード名には Adobe Experience Manager によって追加の規則が課せられます。
 
