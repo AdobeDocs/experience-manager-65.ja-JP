@@ -285,4 +285,4 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 動的モデルからコンポーネントへのマッピング、および　AEM の SPA 内での動作について詳しくは、[SPA の動的モデルからコンポーネントへのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)の記事を参照してください。
 
-AEMに React や Angular 以外のフレームワーク用に SPA を実装する場合や、AEM 用 SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
+React や Angular 以外のフレームワーク用に AEM の SPA を実装する場合や、AEM 用 SPA SDK の仕組みを詳しく知りたい場合は、[SPA ブループリント](/help/sites-developing/spa-blueprint.md)の記事を参照してください。
