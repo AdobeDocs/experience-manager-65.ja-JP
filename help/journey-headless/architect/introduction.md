@@ -1,7 +1,8 @@
 ---
 title: AEM ヘッドレスコンテンツアーキテクトジャーニー
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法を紹介します。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: ht
 source-wordcount: '702'
 ht-degree: 100%
@@ -71,7 +72,7 @@ Adobe Experience Manager（AEM）では、AEM GraphQL API を使用して、コ�
 
 つまり、アプリケーションで使用する構造化コンテンツのヘッドレス配信をプロジェクトで実現できることになります。
 
-## 次のステップ {#whats-next}
+## 次の手順 {#whats-next}
 
 これで、概念と用語を説明したので、次のステップは [AEM でのヘッドレス向けコンテンツモデリングの基本について](basics.md)です。
 
