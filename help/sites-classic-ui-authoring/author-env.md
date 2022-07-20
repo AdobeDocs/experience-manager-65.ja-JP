@@ -1,5 +1,5 @@
 ---
-title: オーサー環境の操作
+title: 'オーサー環境の操作 '
 seo-title: Working with the Author Environment
 description: オーサー環境では、オーサリングに関連するタスク（ページオーサリングおよびアセットの管理を含む）と、Web サイトのコンテンツの生成および管理の際に必要な管理タスクを実行できます。
 seo-description: The author environment allows you to perform tasks related to authoring (including page authoring and managing assets) and administering tasks you need when generating and maintaining the content on your website.
@@ -40,7 +40,7 @@ ht-degree: 100%
    * 以下のドキュメントでは、このクラシック UI に焦点を当てています。最新のタッチベースの UI でのオーサリングについて詳しくは、[標準オーサリングのドキュメント](/help/sites-authoring/author.md)を参照してください。
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
-1. タッチ操作向け UI
+1. タッチ操作対応 UI
 
    * これは AEM の最新の標準 UI です。
    * 灰色を基調としており、クリーンでフラットなインターフェイスになっています。
