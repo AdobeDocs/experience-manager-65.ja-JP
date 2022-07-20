@@ -93,13 +93,13 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 
 ## SSL の有効化 (カスタムキーと信頼ストア) {#enable-ssl-custom-key-and-truststore}
 
-信頼ストアとキーストアは ikeyman ユーティリティまたは管理コンソールを使用して作成できます。 ikeyman を正しく機能させるために、WebSphere インストールパスに括弧が入っていないことを確認してください。
+信頼ストアとキーストアは ikeyman ユーティリティまたは管理コンソールを使用して作成できます。ikeyman を正しく機能させるために、WebSphere インストールパスに括弧が入っていないことを確認してください。
 
 1. WebSphere Administrative Console で「**Security／SSL certificate and key management**」を選択します。
 1. 「Related items」で「**Keystores and certificates**」をクリックします。
 1. 「**Key store usages**」ドロップダウンで、「**SSL Keystores**」が選択されていることを確認します。「**新規**」をクリックします。
 1. 論理名と説明を入力します。
-1. キーストアを作成する場所のパスを指定します。 ikeyman を使用してキーストアを既に作成済みの場合、キーストアファイルへのパスを指定します。
+1. キーストアを作成する場所のパスを指定します。ikeyman を使用してキーストアを既に作成済みの場合、キーストアファイルへのパスを指定します。
 1. パスワードを指定して確認します。
 1. キーストアタイプを選択して、「**Apply**」をクリックします。
 1. マスター構成を保存します。
@@ -124,7 +124,7 @@ SSL を有効にするために、WebSphere はローカル OS ユーザーレ�
 1. マスター構成を保存します。
 1. WebSphere プロファイルを再起動します。
 
-   これで、プロファイルは SSl 設定と証明書の上で実行されます。
+   これで、プロファイルは SSL 設定と証明書の上で実行されます。
 
 ## AEM Forms ネイティブのサポートの有効化 {#enabling-support-for-aem-forms-natives}
 
