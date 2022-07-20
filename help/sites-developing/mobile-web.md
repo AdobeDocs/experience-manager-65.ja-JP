@@ -1,5 +1,5 @@
 ---
-title: モバイル Web
+title: モバイル web
 seo-title: Mobile Web
 description: AEM には、モバイルデバイス用のサイトを開発したり、コンテンツをモバイルアプリケーションに統合したりするための複数のツールがあります
 seo-description: AEM provides several tools that enable you to develop sites for mobile devices and to integrate your content into mobile applications
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# モバイル Web{#mobile-web}
+# モバイル web{#mobile-web}
 
 >[!NOTE]
 >
