@@ -128,7 +128,7 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 ## カスタムコンポーネントの Adobe Analytics トラッキングの実装 {#implementing-adobe-analytics-tracking-for-custom-components}
 
-AEM コンポーネントが Adobe Analytics フレームワークとやり取りできるようにします。 次に、 Adobe Analytics がコンポーネントデータを追跡するようにフレームワークを設定します。
+AEM コンポーネントが Adobe Analytics フレームワークとやり取りできるようにします。次に、 Adobe Analytics がコンポーネントデータを追跡するようにフレームワークを設定します。
 
 フレームワークを編集する際に、Adobe Analytics フレームワークとやり取りするコンポーネントがサイドキックに表示されます。このコンポーネントをフレームワークにドラッグすると、コンポーネントのプロパティが表示され、Adobe Analytics のプロパティにマップできるようになります（[基本トラッキングのためのフレームワークのセットアップ](/help/sites-administering/adobeanalytics-connect.md#creating-a-adobe-analytics-framework)を参照してください）。
 
@@ -295,7 +295,7 @@ topnav コンポーネントを設定し、追跡するイベントとデータ�
 
 フレームワークに追加できるように、Adobe Analytics を使用して追跡できるコンポーネントをサイドキックに追加します。
 
-1. Adobe Analytics 設定から Adobe Analytics フレームワークを開きます。（[http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html)）。
+1. Adobe Analytics 設定から Adobe Analytics フレームワークを開きます。([http://localhost:4502/etc/cloudservices/sitecatalyst.html](http://localhost:4502/etc/cloudservices/sitecatalyst.html))
 1. サイドキックでデザインボタンをクリックします。
 
    ![](assets/chlimage_1a.png)
