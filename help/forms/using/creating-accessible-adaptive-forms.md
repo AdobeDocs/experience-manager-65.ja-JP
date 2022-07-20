@@ -44,7 +44,7 @@ ht-degree: 100%
 * キーボードのアクセシビリティと色のコントラストの問題を検出します
 * 標準に準拠し、スクリーンリーダーのコンテンツを明確に識別します
 
-ANDI はすべての主要なインターネットブラウザーで動作します。ツールを設定して使用するための詳細な手順については、[ANDI のドキュメント](https://www.ssa.gov/accessibility/andi/help/install.html)を参照してください。
+ANDI はすべての主要なインターネットブラウザーで動作します。ツールを設定して使用するための詳細な手順については、 [ANDI のドキュメント](https://www.ssa.gov/accessibility/andi/help/install.html) を参照してください。
 
 ### Ultramarine-Accessible テーマをダウンロードしてインストールする
 
@@ -186,5 +186,5 @@ AEM Forms では次のキーボードショートカットが使用できます�
 ANDI（Accessible Name and Description Inspector）は、アクセシビリティコンプライアンスに関連する問題をアダプティブフォームで特定し、修正するのに役立ちます。ANDI ツールを使用してアダプティブフォームでアクセシビリティの問題を見つけるには：
 
 1. アダプティブフォームをプレビューモードで開きます。
-1. ブックマークした ANDI ツールアイコンをクリックします。ANDI ツールがアダプティブフォームを分析し、アクセシビリティの問題を表示します。このツールの使い方について詳しくは、[ANDI のドキュメント](https://www.ssa.gov/accessibility/andi/help/howtouse.html)を参照してください。
+1. ブックマークした ANDI ツールアイコンをクリックします。ANDI ツールがアダプティブフォームを分析し、アクセシビリティの問題を表示します。このツールの使い方について詳しくは、 [ANDI のドキュメント](https://www.ssa.gov/accessibility/andi/help/howtouse.html) を参照してください。
 1. ANDI が報告した問題を確認して、修正します。
