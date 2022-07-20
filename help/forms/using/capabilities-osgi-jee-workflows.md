@@ -5,8 +5,8 @@ contentOwner: khsingh
 exl-id: 505b8988-b2b3-4222-b3cb-9b3c6259fdd2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '929'
-ht-degree: 100%
+source-wordcount: '928'
+ht-degree: 99%
 
 ---
 
@@ -154,8 +154,8 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>電子署名（Adobe Sign）</td>
-   <td>サポート <sup>[1]</sup></td>
-   <td>サポート <sup>[5]</sup></td>
+   <td>サポート対象 <sup>[1]</sup></td>
+   <td>サポート対象 <sup>[5]</sup></td>
   </tr>
   <tr>
    <td>タスクとフォームアプリケーションの管理</td>
@@ -164,13 +164,13 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>ドキュメントサービス</td>
-   <td>サポート <sup>[3]</sup></td>
-   <td>サポート <sup>[3]</sup></td>
+   <td>サポート対象 <sup>[3]</sup></td>
+   <td>サポート対象 <sup>[3]</sup></td>
   </tr>
   <tr>
    <td>完了したタスクをアダプティブフォームまたは PDF ドキュメントとしてレンダリング</td>
    <td>サポート対象</td>
-   <td>サポート対象 [4]</td>
+   <td>サポート対象[4]</td>
   </tr>
   <tr>
    <td>Correspondence Management との統合</td>
@@ -334,7 +334,7 @@ OSGi 上のフォームベース AEM ワークフローと AEM Forms JEE ワー�
   </tr>
   <tr>
    <td>サードパーティアプリケーションとの統合</td>
-   <td>サポートなし <sup>[6]</sup></td>
+   <td>サポート対象外 <sup>[6]</sup></td>
    <td>サポート対象</td>
   </tr>
   <tr>

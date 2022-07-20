@@ -121,7 +121,7 @@ Java API を使用して、PDF ドキュメントを PDF/A ドキュメントに
 1. トラッキング情報を設定
 
    * コンストラクターを使用して `PDFAConversionOptionSpec` オブジェクトを作成します。
-   * `PDFAConversionOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡すことにより、情報のトラッキングレベルを設定します。 例えば、値 `FINE` を渡します。様々な値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
+   * `PDFAConversionOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡すことにより、情報のトラッキングレベルを設定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
 
 1. ドキュメントを変換
 
@@ -134,7 +134,7 @@ Java API を使用して、PDF ドキュメントを PDF/A ドキュメントに
 
 1. PDF/A ドキュメントを保存
 
-   * `PDFAConversionResult` オブジェクトの `getPDFA` メソッドを呼び出して PDF/A ドキュメントを取得します。 このメソッドは、PDF/A ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
+   * `PDFAConversionResult` オブジェクトの `getPDFA` メソッドを呼び出して PDF/A ドキュメントを取得します。このメソッドは、PDF/A ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
    * PDF/A ファイルを表す `java.io.File` オブジェクトを作成します。ファイル名の拡張子が .pdf であることを確認します。
    *  `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して `java.io.File` オブジェクトを渡すことによって、PDF/A データをファイルに入力します。
 
@@ -187,7 +187,7 @@ DocConverter API（web サービス）を使用して、PDF ドキュメント�
 1. PDF/A ドキュメントを保存
 
    * PDF/A ドキュメントを格納する `BLOB` オブジェクトを作成するには、`PDFAConversionResult` オブジェクトの `PDFADocument` データメンバーの値を取得します。
-   * `PDFAConversionResult` オブジェクトを使用して、返された `BLOB` オブジェクトの内容を格納するバイト配列を作成します。 `BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列に入力します。
+   * `PDFAConversionResult` オブジェクトを使用して、返された `BLOB` オブジェクトの内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列に入力します。
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、PDF/A ドキュメントのファイルの場所を表す文字列の値を渡します。
    * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことにより、`System.IO.BinaryWriter` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。

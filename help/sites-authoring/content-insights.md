@@ -1,7 +1,7 @@
 ---
 title: コンテンツインサイト
 seo-title: Content Insight
-description: コンテンツインサイトは、Web 分析を使用したページのパフォーマンスに関する情報と SEO の推奨事項を提供します
+description: コンテンツインサイトは、web 分析や SEO の推奨を活用してページパフォーマンスに関する情報を提供します
 seo-description: Content Insight provides information about page performance using web analytics and SEO recommendation
 uuid: 32f5b37c-2a82-462a-9f0a-c19bed46e198
 contentOwner: Guillaume Carlino
@@ -13,7 +13,7 @@ exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 

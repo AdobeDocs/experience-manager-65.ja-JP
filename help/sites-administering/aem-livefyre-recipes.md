@@ -1,5 +1,5 @@
 ---
-title: AEM Livefyre のレシピ
+title: 'AEM Livefyre のレシピ '
 seo-title: AEM Livefyre Recipes
 description: Adobe Experience Manager Livefyre の一般的なユースケースについての手順の説明。
 seo-description: Step-by-step instructions on common use cases for Adobe Experience Manager Livefyre.
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# AEM Livefyre のレシピ{#aem-livefyre-recipes}
+# AEM Livefyre のレシピ {#aem-livefyre-recipes}
 
 Adobe Experience Manager Livefyre の一般的なユースケースについての手順の説明。
 

@@ -14,7 +14,7 @@ exl-id: f43e9491-aa8f-40af-9800-123695142559
 source-git-commit: 4df14f837569997c3e4da8161ac2b099c39d89a6
 workflow-type: tm+mt
 source-wordcount: '1942'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 97%
 * フォームエレメント
 * フォーム終了
 
-これらはすべて、一連のデフォルトで実現されます [フォームコンポーネント](/help/sites-authoring/default-components.md#form)：標準のAEMインストールで使用できます。
+これらはすべて、標準の AEM インストールで利用できるデフォルトの一連の[フォームコンポーネント](/help/sites-authoring/default-components.md#form)を使用して実現されます。
 
 フォームで使用する[新しいコンポーネントを開発する](/help/sites-developing/developing-components-samples.md)ほかに、次のこともできます。
 
@@ -120,7 +120,7 @@ ht-degree: 97%
 
    * オプション：
 
-      * `jcr:title` - 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。 設定されていない場合は、ノード名が表示されます
+      * `jcr:title` - 選択したタイトルを指定します。これは、ドロップダウン選択リストに表示されます。設定されていない場合は、ノード名が表示されます
 
       * `jcr:description` - 任意の説明を入力します
 
@@ -172,9 +172,9 @@ ht-degree: 97%
 1. 再び必要に応じてフォルダーに以下を追加します。
 
    1. フィールドを追加するためのスクリプト。
-スクリプトの名前は `addfields.<extension>`例： `addfields.jsp`
-An 
-`addfields` スクリプトは、フォーム開始のHTMLが記述された直後に呼び出されます。 これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
+スクリプトの名前は `addfields.<extension>` です（例：`addfields.jsp`）。
+ 
+`addfields` スクリプトは、フォーム開始の HTML が記述された直後に呼び出されます。これにより、カスタム入力フィールドなどの HTML をフォーム内に追加するアクションを実行できます。
 
    1. 初期化スクリプト。
 スクリプトの名前は `init.<extension>` にします（例：`init.jsp`）
@@ -218,18 +218,18 @@ An
 
    * 省略可能：
 
-      * `jcr:title` - 選択したタイトルを指定します。これは選択リストに表示されます。 設定されていない場合は、ノード名が表示されます
+      * `jcr:title` - 選択したタイトルを指定します。これは選択リストに表示されます。設定されていない場合は、ノード名が表示されます
       * `hint` - ユーザーに向けたフィールドの使用方法に関する追加情報
 
 1. このフォルダー内には、少なくとも次のどちらかのスクリプトが必要です。
 
    * クライアント検証スクリプト：
-スクリプトの名前は `clientvalidation.<extension>` です（例： `clientvalidation.jsp`）
-これは、フォームフィールドをレンダリングすると呼び出されます。 このスクリプトを使用すると、クライアントでフィールドを検証するクライアント JavaScript を作成できます。
+スクリプトの名前は `clientvalidation.<extension>` です（例：`clientvalidation.jsp`）
+これは、フォームフィールドをレンダリングすると呼び出されます。このスクリプトを使用すると、クライアントでフィールドを検証するクライアント JavaScript を作成できます。
 
    * サーバー検証スクリプト：
-スクリプトの名前は `servervalidation.<extension>` です（例： `servervalidation.jsp`）
-これは、フォームを送信すると呼び出されます。 このスクリプトを使用すると、フォームの送信後にサーバーでフィールドを検証できます。
+スクリプトの名前は `servervalidation.<extension>` です（例：`servervalidation.jsp`）
+これは、フォームを送信すると呼び出されます。このスクリプトを使用すると、フォームの送信後にサーバーでフィールドを検証できます。
 
 >[!NOTE]
 >
@@ -269,7 +269,7 @@ An
 * 演算子
 * フィールドの値と比較する値
 
-例えば、タイトル `Receive email notifications?`* *を持つラジオグループコンポーネントは `Yes` および `No` ラジオボタンを含みます。 「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」を選択した場合に表示されます。
+例えば、タイトル `Receive email notifications?`* * を持つラジオグループコンポーネントは `Yes` および `No` ラジオボタンを含みます。「`Email Address`」というタイトルのテキストフィールドコンポーネントは、次の条件を使用しているので、「`Yes`」を選択した場合に表示されます。
 
 ![showhidecondition](assets/showhidecondition.png)
 

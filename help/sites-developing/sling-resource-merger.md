@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ## 目的 {#purpose}
 
-Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します. Sling Resource Merger は、次の両方に対して差分メカニズムを提供します。
+Sling Resource Merger は、リソースのアクセスとマージのためのサービスを提供します.Sling Resource Merger は、次の両方に対して差分メカニズムを提供します。
 
 * [設定済みの検索パス](/help/sites-developing/overlays.md#configuring-the-search-paths)を使用するリソースの&#x200B;**[オーバーレイ](/help/sites-developing/overlays.md)**。
 
@@ -65,6 +65,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
 >1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >
 >1. `/apps` 内で変更作業を行います。
+
 >
 
 
@@ -147,7 +148,7 @@ AEM で Sling Resource Merger を使用する目的は、次のとおりです�
    `/libs` 定義に存在しないプロパティが `/apps` オーバーレイ／オーバーライドで必要になった場合に、プロパティを追加できます。
 
    1. `/apps` 内に、対応するノードを作成します。
-   1. このノード&grave;&grave;で新しいプロパティを作成します。
+   1. このノード``で新しいプロパティを作成します。
 
 * **プロパティの再定義（自動作成されたプロパティ以外）**
 

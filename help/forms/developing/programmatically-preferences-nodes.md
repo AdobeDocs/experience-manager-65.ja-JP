@@ -38,8 +38,8 @@ ht-degree: 100%
 
 **PreferencesManagerService クライアントの作成**
 
-User Management PreferencesManagerService 操作をプログラムで実行する前に、PreferencesManagerService クライアントを作成する必要があります。 Java API では、PreferencesManagerServiceClient オブジェクトを作成することで実現されます。
+User Management PreferencesManagerService 操作をプログラムで実行する前に、PreferencesManagerService クライアントを作成する必要があります。Java API では、PreferencesManagerServiceClient オブジェクトを作成することで実現されます。
 
 **適切な役割または権限の操作を呼び出す**
 
-サービスクライアントを作成したら、Preferences Manager 操作を呼び出すことができます。 サービスクライアントを使用すると、権限の読み取りと設定が可能です。
+サービスクライアントを作成したら、Preferences Manager 操作を呼び出すことができます。サービスクライアントを使用すると、権限の読み取りと設定が可能です。

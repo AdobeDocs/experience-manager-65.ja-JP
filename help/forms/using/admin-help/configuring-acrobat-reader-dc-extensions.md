@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM forms インストール環境のユーザーが Content Services（非推奨）のデータ取得機能を使用する場合、このユーザー用に、読み取り専用アクセス権を持つロールを作成することをお勧めします。
 
-***メモ&#x200B;**：Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。*
+***メモ&#x200B;**：Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。Content Services では、ユーザーは人間中心のプロセスを設計、管理、監視および最適化することができます。Content Services（非推奨）のサポートは 2014 年 12 月 31 日をもって終了しています。[アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/jp/support/products/enterprise/eol/eol_matrix.html)を参照してください。*
 
 データを取得するには、SampleReaderExtensionsCredential にアクセスするために、ユーザーロールをアサインする必要があります。標準的な Trust 管理者ロールをアサインすることはできますが、これにより管理者以外の一般的なユーザーに対して、PKI Trust 設定や PKI 秘密鍵証明書の管理を行うことができる、強力な管理者権限を付与することになるので、AEM Forms がインストールされた実稼働環境のセキュリティを危険にさらす可能性があります。AEM Forms システム管理者が、Trust Store への読み取り専用アクセス権のみを含む新規ロールを作成して、データ取得機能を使用する管理者以外のユーザーにこのロールをアサインすることをお勧めします。
 

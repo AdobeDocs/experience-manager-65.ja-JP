@@ -177,7 +177,7 @@ Forms API（web サービス）を使用して、カスタム CSS ファイル�
    * `(Deprecated) renderHTMLForm` メソッドによって設定された空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。このパラメーター値には、レンダリングされたフォームが格納されます。
    * `(Deprecated) renderHTMLForm` メソッドで入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。このパラメーターには、出力 XML データが格納されます。
    * `(Deprecated) renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.LongHolder` オブジェクト。この引数には、フォームのページ数が格納されます。
-   * `(Deprecated) renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。 この引数には、ロケール値が格納されます。
+   * `(Deprecated) renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数には、ロケール値が格納されます。
    * `(Deprecated) renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数には、使用する HTML レンダリング値が格納されます。
    * この操作の結果を格納する空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 

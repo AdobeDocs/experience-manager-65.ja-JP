@@ -22,9 +22,9 @@ ht-degree: 100%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-HTTP トークンを使用してシングルサインオン（SSO）認証を実行する Flash Builder を使用し、クライアントアプリケーションを作成できます。例えば、Flash Builder を使用して web ベースのアプリケーションを作成する場合を考えてみましょう。 次に、アプリケーションに異なるビューが含まれ、各ビューが異なる AEM Forms 操作を呼び出すと仮定します。 各 Forms 操作でユーザーを認証する代わりに、1 回でユーザーを認証できるログインページを作成できます。 認証が完了すると、ユーザーは再度認証を行わなくても複数の操作を呼び出すことができます。 例えば、ユーザーがワークスペース（または別の Forms アプリケーション）にログインした場合、そのユーザーを再認証する必要はありません。
+HTTP トークンを使用してシングルサインオン（SSO）認証を実行する Flash Builder を使用し、クライアントアプリケーションを作成できます。例えば、Flash Builder を使用して web ベースのアプリケーションを作成する場合を考えてみましょう。次に、アプリケーションに異なるビューが含まれ、各ビューが異なる AEM Forms 操作を呼び出すと仮定します。各 Forms 操作でユーザーを認証する代わりに、1 回でユーザーを認証できるログインページを作成できます。認証が完了すると、ユーザーは再度認証を行わなくても複数の操作を呼び出すことができます。例えば、ユーザーがワークスペース（または別の Forms アプリケーション）にログインした場合、そのユーザーを再認証する必要はありません。
 
-クライアントアプリケーションには SSO 認証を実行するために必要なアプリケーションロジックが含まれていますが、AEM Forms User Management は実際のユーザー認証を実行します。HTTP トークンを使用してユーザーを認証するために、クライアントアプリケーションは Authentication Manager サービスの `authenticateWithHTTPToken` 操作を実行します。 User Management は、HTTP トークンを使用してユーザーを認証できます。その後の AEM Forms へのリモートまたは web サービス呼び出しでは、認証用の資格情報を渡す必要はありません。
+クライアントアプリケーションには SSO 認証を実行するために必要なアプリケーションロジックが含まれていますが、AEM Forms User Management は実際のユーザー認証を実行します。HTTP トークンを使用してユーザーを認証するために、クライアントアプリケーションは Authentication Manager サービスの `authenticateWithHTTPToken` 操作を実行します。User Management は、HTTP トークンを使用してユーザーを認証できます。その後の AEM Forms へのリモートまたは web サービス呼び出しでは、認証用の資格情報を渡す必要はありません。
 
 >[!NOTE]
 >
@@ -73,16 +73,16 @@ Flash Builder を使用して構築されたクライアントアプリケーシ
 
 クライアントアプリケーションの起動時に、 `/um/login` セキュリティサーブレットに対して POST リクエストを行うことができます。例えば、`https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true` のようになります。リクエストが User Manager セキュリティサーブレットに到達すると、次の手順が実行されます。
 
-1. `lcAuthToken` という名前の Cookie を検索します。ユーザーが既に別の Forms アプリケーションにログインしている場合、この Cookie が表示されます。 Cookie が見つかった場合は、そのコンテンツは検証されます。
+1. `lcAuthToken` という名前の Cookie を検索します。ユーザーが既に別の Forms アプリケーションにログインしている場合、この Cookie が表示されます。Cookie が見つかった場合は、そのコンテンツは検証されます。
 1. ヘッダーベースの SSO が有効な場合、サーブレットは設定済みのヘッダーを探してユーザーの ID を決定します。
 1. SPNEGO が有効な場合、サーブレットは SPNEGO を開始を試み、ユーザーの ID 決定を試みます。
 
 セキュリティサーブレットがユーザーに一致する有効なトークンを見つけた場合、セキュリティサーブレットはユーザーを続行させ、`authstate=COMPLETE` で応答します。それ以外の場合、セキュリティサーブレットは `authstate=CREDENTIAL_CHALLENGE` で応答します。次のリストで、これらの値を説明します。
 
-* `Case authstate=COMPLETE`：ユーザーが認証され、`assertionid` 値には、ユーザーのアサーション識別子が含まれます。この段階で、クライアントアプリケーションは AEM Forms に接続できます。 この URL 用に設定されたサーブレットは、`AuthenticationManager.authenticate(HttpRequestToken)` メソッドを呼び出して、ユーザーの `AuthResult` を取得できます。`AuthResult` インスタンスは、User Manager コンテキストを作成し、セッションに保存できます。
+* `Case authstate=COMPLETE`：ユーザーが認証され、`assertionid` 値には、ユーザーのアサーション識別子が含まれます。この段階で、クライアントアプリケーションは AEM Forms に接続できます。この URL 用に設定されたサーブレットは、`AuthenticationManager.authenticate(HttpRequestToken)` メソッドを呼び出して、ユーザーの `AuthResult` を取得できます。`AuthResult` インスタンスは、User Manager コンテキストを作成し、セッションに保存できます。
 * `Case authstate=CREDENTIAL_CHALLENGE`：セキュリティサーブレットがユーザーの資格情報を必要とすることを示します。応答として、クライアントアプリケーションはログイン画面をユーザーに表示し、取得した資格情報をセキュリティサーブレットに送信できます（例： `https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true&j_username=administrator&j_password=password)`）。認証に成功した場合、セキュリティサーブレットは `authstate=COMPLETE` で応答します。
 
-それでも認証が成功しない場合、セキュリティサーブレットは`authstate=FAILED`で応答をします。 この値に応答するために、クライアントアプリケーションでメッセージが表示され、資格情報を再度取得します。
+それでも認証が成功しない場合、セキュリティサーブレットは`authstate=FAILED`で応答をします。この値に応答するために、クライアントアプリケーションでメッセージが表示され、資格情報を再度取得します。
 
 >[!NOTE]
 >
@@ -884,7 +884,7 @@ User Manager セキュリティサーブレットは、次の値で応答しま�
 
 `authenticated=false&authstate=CREDENTIAL_CHALLENGE`
 
-この値に対する応答として、`SSOEvent.AUTHENTICATION_REQUIRED` の値がディスパッチされます。 その結果、クライアントアプリケーションはユーザーに対してログイン画面を表示します。資格情報が User Manager セキュリティサーブレットに送り返されます。
+この値に対する応答として、`SSOEvent.AUTHENTICATION_REQUIRED` の値がディスパッチされます。その結果、クライアントアプリケーションはユーザーに対してログイン画面を表示します。資格情報が User Manager セキュリティサーブレットに送り返されます。
 
 `GET /um/login?um%5Fno%5Fredirect=true&j%5Fusername=administrator&j%5Fpassword=password HTTP/1.1`
 

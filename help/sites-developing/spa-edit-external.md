@@ -334,7 +334,7 @@ mvn clean install -PautoInstallSinglePackage
 
 1. AEM のルートとなるレベルを特定します。
 
-   * このサンプルでは、`wknd-spa-react/us/en` を SPA のルートとして使用します。 つまり、そのパスより前のものはすべて AEM のページ／コンテンツのみです。
+   * このサンプルでは、`wknd-spa-react/us/en` を SPA のルートとして使用します。つまり、そのパスより前のものはすべて AEM のページ／コンテンツのみです。
 
 1. 必要なレベルで新しいページを作成します。
 
@@ -369,4 +369,4 @@ AEM のコンテキストで SPA を理解するには、次の参照資料が�
 * [SPA リファレンス資料（API リファレンス）](spa-reference-materials.md)
 * [SPA 青写真と PageModelManager](spa-blueprint.md#pagemodelmanager)
 * [SPA モデルルーティング](spa-routing.md)
-* [SPA およびサーバーサイドレンダリング](spa-ssr.md)
+* [SPA およびサーバーサイドレンダリング ](spa-ssr.md)

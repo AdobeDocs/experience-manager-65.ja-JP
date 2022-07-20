@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 開発ユーザーガイド
 seo-title: AEM 6.5 Developing User Guide
-description: AEM インスタンスを構築する方法を説明します。プラットフォームとコンポーネントの詳細を説明し、開発ツールとパーソナライゼーションに関する情報を見つけます。
+description: AEM インスタンスを構築する方法を説明します。プラットフォームとコンポーネントの詳細を説明し、開発ツールとパーソナライゼーションに関する情報を確認します。
 seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
 source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 # AEM 6.5 開発ユーザーガイド
 
-AEM インスタンスを構築する方法を説明します。プラットフォームとコンポーネントの詳細を説明し、開発ツールとパーソナライゼーションに関する情報を見つけます。
+AEM インスタンスを構築する方法を説明します。プラットフォームとコンポーネントの詳細を説明し、開発ツールとパーソナライゼーションに関する情報を確認します。
 
 ## 主な AEM 記事
 

@@ -1054,7 +1054,7 @@ Java invocation API を使用して短期間有効なプロセスの `MyApplicat
 
    >[!NOTE]
    >
-   >`createInvocationRequest` メソッドの 4 番目のパラメーターとして値 `false` を渡すことによって、長期間有効なプロセスを呼び出すことができます。値 `false`*を渡すと、非同期要求が作成されます。*
+   >`createInvocationRequest` メソッドの 4 番目のパラメーターとして値 `false` を渡すことによって、長期間有効なプロセスを呼び出すことができます。値 `false`**&#x200B;を渡すと、非同期要求が作成されます。
 
 1. プロセスの戻り値を取得するには、`InvocationReponse` オブジェクトの `getOutputParameter` メソッドを呼び出して、出力パラメーターの名前を指定する文字列値を渡します。この場合、`outDoc` を指定します（`outDoc` は `MyApplication/EncryptDocument` プロセスの出力パラメーターの名前です）。以下の例のように、戻り値を `Document` にキャストします。
 

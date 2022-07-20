@@ -924,7 +924,7 @@ AEM 内のコンポーネントは、次の 3 種類の階層で表現されま�
   </tr>
   <tr>
    <td><code>editorType</code></td>
-   <td><p>（<code>String</code>）エディタータイプ。 指定できるタイプを次に示します。</p>
+   <td><p>（<code>String</code>）エディタータイプ。指定できるタイプを次に示します。</p>
     <ul>
      <li>plaintext：コンテンツが HTML 以外の場合に使用します。<br /> </li>
      <li>title：編集を開始する前にグラフィカルなタイトルをプレーンテキストに変換する拡張プレーンテキストエディター。Geometrixx タイトルコンポーネントで使用されます。<br /> </li>

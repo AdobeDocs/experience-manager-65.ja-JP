@@ -22,7 +22,7 @@ ht-degree: 100%
 
 # 複数の XDP フラグメントのアセンブル{#assembling-multiple-xdp-fragments}
 
-複数の XDP フラグメントを単一の XDP ドキュメントにアセンブルできます。例えば、各 XDP ファイルに、ヘルスフォームの作成に使用される 1 つ以上のサブフォームが含まれている XDP フラグメントについて考えてみましょう。 次の図に、アウトラインビューを示します（*複数の XDP フラグメントのアセンブル*&#x200B;クイックスタートで使用される tuc018_template_flowed.xdp ファイルを表わしています）。
+複数の XDP フラグメントを単一の XDP ドキュメントにアセンブルできます。例えば、各 XDP ファイルに、ヘルスフォームの作成に使用される 1 つ以上のサブフォームが含まれている XDP フラグメントについて考えてみましょう。次の図に、アウトラインビューを示します（*複数の XDP フラグメントのアセンブル*&#x200B;クイックスタートで使用される tuc018_template_flowed.xdp ファイルを表わしています）。
 
 ![am_am_forma](assets/am_am_forma.png)
 
@@ -76,7 +76,7 @@ DDX ドキュメントには、結果の名前を指定する XDP `result` タ�
 
 `XDP source` タグは、完全な XDP ドキュメント（XDP フラグメントを追加するためのコンテナとして使用したり、順番に追加される多数のドキュメントの 1 つとして使用したりできる）を表す XDP ファイルを指定します。この場合、XDP ドキュメントはコンテナ（*複数の XDP フラグメントのアセンブル*&#x200B;に示した最初の図）としてのみ使用されます。つまり、他の XDP ファイルは XDP コンテナ内に配置されます。
 
-サブフォームごとに、 `XDPContent` 要素（この要素はオプションです）を追加できます。 上記の例では、`subPatientContact`、`subPatientPhysical`、`subPatientHealth` の 3 つのサブフォームがあることに注意してください。両方の `subPatientPhysical` サブフォームおよび `subPatientHealth` サブフォームは、同じ XDP ファイル（tuc018_patient.xdp）に存在します。 fragment 要素は、Designer で定義されたサブフォームの名前を指定します。
+サブフォームごとに、 `XDPContent` 要素（この要素はオプションです）を追加できます。上記の例では、`subPatientContact`、`subPatientPhysical`、`subPatientHealth` の 3 つのサブフォームがあることに注意してください。両方の `subPatientPhysical` サブフォームおよび `subPatientHealth` サブフォームは、同じ XDP ファイル（tuc018_patient.xdp）に存在します。fragment 要素は、Designer で定義されたサブフォームの名前を指定します。
 
 >[!NOTE]
 >
@@ -120,7 +120,7 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **XDP ドキュメントの参照**
 
-複数の XDP ドキュメントをアセンブルするには、結果の XDP ドキュメントをアセンブルするために使用されるすべての XDP ファイルを参照します。`source` 属性によって参照される XDP ドキュメントに含まれるサブフォームの名前が、`fragment` 属性で指定されていることを確認してください。サブフォームは Designer で定義されます。 例えば、次のような XML を考えてみましょう。
+複数の XDP ドキュメントをアセンブルするには、結果の XDP ドキュメントをアセンブルするために使用されるすべての XDP ファイルを参照します。`source` 属性によって参照される XDP ドキュメントに含まれるサブフォームの名前が、`fragment` 属性で指定されていることを確認してください。サブフォームは Designer で定義されます。例えば、次のような XML を考えてみましょう。
 
 ```xml
  <XDPContent insertionPoint="ddx_fragment" source="tuc018_contact.xdp" fragment="subPatientContact" required="false"/>
@@ -134,7 +134,7 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **複数の XDP ドキュメントのアセンブリ**
 
-複数の XDP ファイルをアセンブリするには、 `invokeDDX` 操作を呼び出します。 Assembler サービスは、コレクションオブジェクト内でアセンブルされた XDP ドキュメントを返します。
+複数の XDP ファイルをアセンブリするには、 `invokeDDX` 操作を呼び出します。Assembler サービスは、コレクションオブジェクト内でアセンブルされた XDP ドキュメントを返します。
 
 **アセンブルされた XDP ドキュメントの取得**
 
@@ -200,7 +200,7 @@ Assembler Service API（Java）を使用して、複数の XDP フラグメン�
 
    作成された XDP ドキュメントを取得するには、以下の操作を実行します。
 
-   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。 このメソッドは、`java.util.Map` オブジェクトを返します。
+   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。このメソッドは、`java.util.Map` オブジェクトを返します。
    * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで、`java.util.Map` オブジェクトを反復処理します。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、作成された XDP ドキュメントを抽出します。
 

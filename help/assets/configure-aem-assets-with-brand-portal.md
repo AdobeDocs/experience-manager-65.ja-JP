@@ -70,7 +70,7 @@ AEM Assets と Brand Portal の連携を設定するには以下が必要です�
 
 ### AEM 6.5 のダウンロードとインストール {#aemquickstart}
 
-AEMオーサーインスタンスを設定するには、AEM 6.5 を使用することをお勧めします。 AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
+AEMオーサーインスタンスを設定するには、AEM 6.5 を使用することをお勧めします。AEM が稼働していない場合は、以下の場所から AEM をダウンロードしてください。
 
 * 既に AEM を使用している場合は、[アドビライセンス Web サイト](https://licensing.adobe.com)から AEM 6.5 をダウンロードしてください。
 
@@ -343,7 +343,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
    >
    >どのレプリケーションエージェントも無効にしないでください。一部のアセットのレプリケーション（キューで実行中）が失敗する可能性があります。
    >
-   >タイムアウトエラーを避けるために、4 つのレプリケーションエージェントすべてが設定されていることを確認します。 [Brand Portal への並列公開における問題のトラブルシューティング](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=ja#connection-timeout)を参照してください。
+   >タイムアウトエラーを避けるために、4 つのレプリケーションエージェントすべてが設定されていることを確認します。[Brand Portal への並列公開における問題のトラブルシューティング](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=ja#connection-timeout)を参照してください。
    >
    >自動生成された設定は変更しないでください。
 
@@ -368,7 +368,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
 ### 実行中のジョブの検証 {#verify-jobs}
 
-変更を加える前に、AEM Assets オーサーインスタンスで公開ジョブが実行されていないことを確認してください。 そのため、4 つのレプリケーションエージェントすべてでアクティブジョブのステータスを確認し、キューがアイドル状態であることを確認できます。
+変更を加える前に、AEM Assets オーサーインスタンスで公開ジョブが実行されていないことを確認してください。そのため、4 つのレプリケーションエージェントすべてでアクティブジョブのステータスを確認し、キューがアイドル状態であることを確認できます。
 
 1. AEM Assets オーサーインスタンスにログインします。
 
@@ -391,7 +391,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 * Brand Portal Cloud Service の削除
 * MAC ユーザーを削除
 
-1. AEM Assets オーサーインスタンスにログインし、管理者として CRX Lite を開きます。 デフォルトの URL は `http://localhost:4502/crx/de/index.jsp` です。
+1. AEM Assets オーサーインスタンスにログインし、管理者として CRX Lite を開きます。デフォルトの URL は `http://localhost:4502/crx/de/index.jsp` です。
 
 1. `/etc/replications/agents.author` に移動して、Brand Portal テナントの 4 つのレプリケーションエージェントをすべて削除します。
 

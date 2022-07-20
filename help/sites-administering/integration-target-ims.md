@@ -1,17 +1,17 @@
 ---
-title: IMS を使用したAdobe Targetとの統合
-description: IMS を使用したAEMとAdobe Targetの統合について説明します
+title: IMS を使用した Adobe Target との統合
+description: IMS を使用した AEM と Adobe Target の統合について説明します
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
 source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
 workflow-type: tm+mt
 source-wordcount: '1500'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# IMS を使用したAdobe Targetとの統合{#integration-with-adobe-target-using-ims}
+# IMS を使用した Adobe Target との統合{#integration-with-adobe-target-using-ims}
 
-Target Standard API を使用してAEMとAdobe Targetを統合するには、Adobe Developerコンソールを使用してAdobe IMS(Identity Managementシステム ) を設定する必要があります。
+Target Standard API を介して AEM と Adobe Target を統合するには、Adobe Developer Console を使用して Adobe IMS（Identity Management System）を設定する必要があります。
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ Target Standard API を使用してAEMとAdobe Targetを統合するには、Ado
 
 * 組織のシステム管理者は、Admin Console を使用して、組織内で必要な開発者を関連する製品プロファイルに追加する必要があります。
 
-   * これにより、特定の開発者に、Adobe Developerコンソール内で統合を有効にする権限を付与できます。
+   * これにより、Adobe Developer Console 内で統合を有効にするための権限が特定の開発者に与えられます。
    * 詳しくは、[開発者の管理](https://helpx.adobe.com/jp/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html)を参照してください。
 
 
@@ -52,7 +52,7 @@ Target Standard API を使用してAEMとAdobe Targetを統合するには、Ado
 
    ![](assets/integrate-target-io-01.png)
 
-1. 選択 **ダウンロード** ( または **公開鍵をダウンロード**) をクリックして、ファイルをローカルドライブにダウンロードし、 [AEMとのAdobe Target統合用の IMS の設定](#configuring-ims-for-adobe-target-integration-with-aem).
+1. **ダウンロード**（または&#x200B;**公開鍵のダウンロード**）を選択してファイルをローカルドライブにダウンロードし、[AEM と Adobe Target 統合のための IMS の設定](#configuring-ims-for-adobe-target-integration-with-aem)時に使用できるようにします。
 
    >[!CAUTION]
    >
@@ -60,19 +60,19 @@ Target Standard API を使用してAEMとAdobe Targetを統合するには、Ado
 
    ![](assets/integrate-target-io-02.png)
 
-## AEMとのAdobe Target統合用の IMS の設定 {#configuring-ims-for-adobe-target-integration-with-aem}
+## AEM と Adobe Target 統合のための IMS 設定 {#configuring-ims-for-adobe-target-integration-with-aem}
 
-Adobe Developerコンソールを使用して、AEMが使用するAdobe Targetとのプロジェクト（統合）を作成し、必要な権限を割り当てる必要があります。
+Adobe Developer Console を使用して、AEM が使用する Adobe Target とのプロジェクト（統合）を作成し、必要な権限を割り当てる必要があります。
 
 ### プロジェクトの作成 {#creating-the-project}
 
-Adobe Developerコンソールを開いて、AEMが使用するAdobe Targetでプロジェクトを作成します。
+Adobe Developer Console を開いて、AEM が使用する Adobe Target でプロジェクトを作成します。
 
 1. Adobe Developer Console を開いて、プロジェクトを表示します。
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-1. 既に作成したプロジェクトが表示されます。 **新規プロジェクトの作成**&#x200B;を選択 - 場所と使用方法は、以下に依存します。
+1. 既に作成したプロジェクトが表示されます。**新規プロジェクトの作成**&#x200B;を選択 - 場所と使用方法は、以下に依存します。
 
    * まだプロジェクトがない場合は、 **新規プロジェクトを作成**が中央の下に表示されます。
       ![新規プロジェクトの作成 - 最初のプロジェクト](assets/integration-target-io-02.png)
@@ -130,16 +130,16 @@ Adobe Developerコンソールを開いて、AEMが使用するAdobe Targetで�
 
 1. **製品** （上部のツールバー）に移動し、**Adobe Target - &lt;*your-tenant-id*>**（左のパネルから）を選択します。
 1. **製品プロファイル**&#x200B;を選択して、表示されるリストから必要なワークスペースを選択します（例：「デフォルトのワークスペース」）。
-1. 選択 **API 資格情報**&#x200B;を選択し、必要な統合設定を選択します。
+1. **API 資格情報**&#x200B;を選択して、必要な統合設定を選択します。
 1. **製品の役割**&#x200B;として、**オブザーバー**&#x200B;の代わりに&#x200B;**編集者**&#x200B;を選択します。
 
-## Adobe Developer Console Integration Project 用に保存される詳細 {#details-stored-for-the-ims-integration-project}
+## Adobe Developer Console 統合プロジェクト用に保存された詳細 {#details-stored-for-the-ims-integration-project}
 
-Adobe Developer Console - Projects から、すべての統合プロジェクトのリストを表示できます。
+Adobe Developer Console - プロジェクトから、すべての統合プロジェクトのリストを表示できます。
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
-**表示**（特定のプロジェクトエントリの右側）を選択して、設定に関する詳細を表示します。 次のものが含まれます。
+**表示**（特定のプロジェクトエントリの右側）を選択して、設定に関する詳細を表示します。次のものが含まれます。
 
 * プロジェクトの概要
 * Insights
@@ -150,22 +150,22 @@ Adobe Developer Console - Projects から、すべての統合プロジェクト
 * API
    * 例：Adobe Target
 
-これらの一部は、IMS に基づいてAEMでAdobe Targetの統合を完了する必要があります。
+これらの一部は、IMS に基づいて AEM で Adobe Target の統合を完了する必要があります。
 
 ## AEM での IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 
-AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要な値を追加することで、IMS 設定を完了できます。
+AEM に戻り、Adobe Developer Console の Target 向け統合から必要な値を追加して、IMS 設定を完了できます。
 
 1. [AEM で IMS 設定を開く](#configuring-an-ims-configuration-generating-a-public-key)に戻ります。
 1. 「**次へ**」を選択します。
 
-1. ここで、 [Adobe Developer Console のプロジェクト設定からの詳細](#details-stored-for-the-ims-integration-project):
+1. ここで、[Adobe Developer Console のプロジェクト設定からの詳細](#details-stored-for-the-ims-integration-project)を使用できます。
 
    * **タイトル**：テキスト。
    * **認証サーバー**：以下の&#x200B;**ペイロード**&#x200B;セクションの `aud` 行からこれをコピーして貼り付けます。例：以下の例では `https://ims-na1.adobelogin.com`　
-   * **API キー**:これを [概要](#details-stored-for-the-ims-integration-project) セクション
-   * **クライアント秘密鍵**:これを [概要](#details-stored-for-the-ims-integration-project) セクションとコピー
-   * **ペイロード**:これを [JWT を生成](#details-stored-for-the-ims-integration-project) セクション
+   * **API キー**：これを「[概要](#details-stored-for-the-ims-integration-project)」セクションからコピーします
+   * **クライアント秘密鍵**：これを「[概要](#details-stored-for-the-ims-integration-project)」セクションで生成してコピーします
+   * **ペイロード**：これを「[JWT を生成](#details-stored-for-the-ims-integration-project)」セクションからコピーします
 
    ![](assets/integrate-target-io-10.png)
 
@@ -257,7 +257,7 @@ AEMに戻ると、Target 用のAdobe Developerコンソール統合から必要�
 
 1. メッセージで **OK** を選択し、ダイアログで **OK** を選択して、設定を確認します。
 
-1. これで、[Target フレームワークの追加](/help/sites-administering/target-configuring.md#adding-a-target-framework)に進んで、Target に送信する ContextHub または ClientContext パラメーターを設定できます。 AEM エクスペリエンスフラグメントを Target に書き出す場合は、この設定が不要な場合があります。
+1. これで、[Target フレームワークの追加](/help/sites-administering/target-configuring.md#adding-a-target-framework)に進んで、Target に送信する ContextHub または ClientContext パラメーターを設定できます。AEM エクスペリエンスフラグメントを Target に書き出す場合は、この設定が不要な場合があります。
 
 ### テナント ID と クライアントコード {#tenant-client}
 

@@ -35,7 +35,7 @@ Workspace ユーザーインターフェイスのようこそページに表示�
 * &lt;textformat> テキスト形式タグ
 * &lt;u> 下線タグ
 
-サポートされているタグについて詳しくは、`htmlText`Flex Language Reference[ の TextField クラスの ](https://flex.apache.org/) プロパティの定義を参照してください。
+サポートされているタグについて詳しくは、[Flex Language Reference](https://flex.apache.org/) の TextField クラスの `htmlText` ロパティの定義を参照してください。
 
 ## 今日のお知らせの設定 {#set-the-message-of-the-day}
 

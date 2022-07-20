@@ -23,12 +23,12 @@ ht-degree: 100%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-ブックマークを含む PDF ドキュメントをアセンブリできます。 例えば、ブックマークが含まれていない PDF ドキュメントにブックマークを追加したいとします。 Assembler サービスを使用すると、ブックマークを含まない PDF ドキュメントを渡し、ブックマークを含む PDF ドキュメントを受け取ることができます。
+ブックマークを含む PDF ドキュメントをアセンブリできます。例えば、ブックマークが含まれていない PDF ドキュメントにブックマークを追加したいとします。Assembler サービスを使用すると、ブックマークを含まない PDF ドキュメントを渡し、ブックマークを含む PDF ドキュメントを受け取ることができます。
 
 ブックマークには、次のプロパティが含まれます。
 
 * 画面にテキストとして表示されるタイトル。
-* ユーザーがブックマークをクリックしたときの動作を指定するアクション。 ブックマークの一般的なアクションは、現在のドキュメント内の別の場所に移動するか、別の PDF ドキュメントを開くことですが、他のアクションを指定することもできます。
+* ユーザーがブックマークをクリックしたときの動作を指定するアクション。ブックマークの一般的なアクションは、現在のドキュメント内の別の場所に移動するか、別の PDF ドキュメントを開くことですが、他のアクションを指定することもできます。
 
 この説明では、次の DDX ドキュメントが使用されていると仮定します。
 
@@ -43,9 +43,9 @@ ht-degree: 100%
  </DDX>
 ```
 
-この DDX ドキュメント内では、 source 属性に値 `Loan.pdf` が割り当てられています。この DDX ドキュメントは、1 つの PDF ドキュメントを Assembler サービスに渡すように指定します。 ブックマークを含む PDF ドキュメントをアセンブリする場合は、結果ドキュメント内のブックマークを説明するブックマーク XML ドキュメントを指定する必要があります。 ブックマーク XML ドキュメントを指定するには、`Bookmarks` 要素を DDX ドキュメント内で指定してください。
+この DDX ドキュメント内では、 source 属性に値 `Loan.pdf` が割り当てられています。この DDX ドキュメントは、1 つの PDF ドキュメントを Assembler サービスに渡すように指定します。ブックマークを含む PDF ドキュメントをアセンブリする場合は、結果ドキュメント内のブックマークを説明するブックマーク XML ドキュメントを指定する必要があります。ブックマーク XML ドキュメントを指定するには、`Bookmarks` 要素を DDX ドキュメント内で指定してください。
 
-この DDX ドキュメントの例では、 `Bookmarks` 要素が値として `doc2` を指定しています。 この値は、Assembler サービスに渡される入力マップに `doc2` という名前のキーが含まれていることを示します。`doc2` キーの値はブックマーク XML ドキュメントを表す `com.adobe.idp.Document` 値です（詳しくは、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)の「ブックマーク言語」を参照）。
+この DDX ドキュメントの例では、 `Bookmarks` 要素が値として `doc2` を指定しています。この値は、Assembler サービスに渡される入力マップに `doc2` という名前のキーが含まれていることを示します。`doc2` キーの値はブックマーク XML ドキュメントを表す `com.adobe.idp.Document` 値です（詳しくは、[Assembler サービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)の「ブックマーク言語」を参照）。
 
 このトピックでは、次の XML ブックマーク言語を使用して、ブックマークを含む PDF ドキュメントをアセンブリします。
 
@@ -71,7 +71,7 @@ ht-degree: 100%
  </Bookmarks>
 ```
 
-このブックマーク XML ドキュメント内には、ユーザーがブックマークをクリックしたときに実行されるアクションを定義する Action 要素があります。 Action 要素の下には、NotePad などのアプリケーションを起動し、アプリケーションファイルなどのファイルを開く Launch 要素があります。 PDF ファイルを開くには、開くファイルを指定する File 要素を使用する必要があります。 例えば、このセクションで指定したブックマーク XML ファイルでは、開くファイルの名前は LoanDetails.pdf です。
+このブックマーク XML ドキュメント内には、ユーザーがブックマークをクリックしたときに実行されるアクションを定義する Action 要素があります。Action 要素の下には、NotePad などのアプリケーションを起動し、アプリケーションファイルなどのファイルを開く Launch 要素があります。PDF ファイルを開くには、開くファイルを指定する File 要素を使用する必要があります。例えば、このセクションで指定したブックマーク XML ファイルでは、開くファイルの名前は LoanDetails.pdf です。
 
 >[!NOTE]
 >
@@ -81,11 +81,11 @@ ht-degree: 100%
 
 ![aw_aw_bmark](assets/aw_aw_bmark.png)
 
-ユーザーが&#x200B;*ローンの詳細を開く*&#x200B;ブックマークをクリックすると、LoanDetails.pdf が開きます。 同様に、ユーザーが *NotePad を起動*&#x200B;ブックマークをクリックすると、NotePad が起動します。
+ユーザーが&#x200B;*ローンの詳細を開く*&#x200B;ブックマークをクリックすると、LoanDetails.pdf が開きます。同様に、ユーザーが *NotePad を起動*&#x200B;ブックマークをクリックすると、NotePad が起動します。
 
 >[!NOTE]
 >
->このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。 このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
+>このセクションを読む前に、Assembler サービスを使用した PDF ドキュメントのアセンブリに関する知識を身に付けておくことをお勧めします。このセクションでは、入力ドキュメントを含むコレクションオブジェクトの作成や、返されたコレクションオブジェクトから結果を抽出する方法の学習など、概念については説明しません（[プログラムによる PDF ドキュメントの作成](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)を参照）。
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ ht-degree: 100%
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **PDF Assembler クライアントの作成**
 
@@ -129,11 +129,11 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **既存の DDX ドキュメントの参照**
 
-DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 この DDX ドキュメントには `Bookmarks` 要素を含める必要があります。これは、ブックマークを含む PDF をアセンブルするよう Assembler サービスに指示します（このセクションで前述した DDX ドキュメントの例を参照）。
+DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。この DDX ドキュメントには `Bookmarks` 要素を含める必要があります。これは、ブックマークを含む PDF をアセンブルするよう Assembler サービスに指示します（このセクションで前述した DDX ドキュメントの例を参照）。
 
 **ブックマークを追加する PDF ドキュメントの参照**
 
-ブックマークを追加する PDF ドキュメントを参照します。 参照先のブックマークドキュメントに既に PDF が含まれているかどうかは関係ありません。 `Bookmarks` 要素が PDF ソース要素の子である場合、ブックマークは PDF ソースに既に存在する要素を置き換えます。 ただし、既存のブックマークを保持する場合は、 `Bookmarks` を PDF ソース要素の兄弟にしてください。例えば、次のようなシナリオを考えます。
+ブックマークを追加する PDF ドキュメントを参照します。参照先のブックマークドキュメントに既に PDF が含まれているかどうかは関係ありません。`Bookmarks` 要素が PDF ソース要素の子である場合、ブックマークは PDF ソースに既に存在する要素を置き換えます。ただし、既存のブックマークを保持する場合は、 `Bookmarks` を PDF ソース要素の兄弟にしてください。例えば、次のようなシナリオを考えます。
 
 ```xml
  <PDF result="foo">
@@ -156,7 +156,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **実行時オプションの設定**
 
-ジョブを実行する際の Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)にある `AssemblerOptionSpec` クラスリファレンスを参照してください。
+ジョブを実行する際の Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)にある `AssemblerOptionSpec` クラスリファレンスを参照してください。
 
 **PDF ドキュメントのアセンブリ**
 

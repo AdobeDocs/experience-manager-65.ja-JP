@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ## ページ上での Adobe Target によるターゲット設定の有効化 {#enabling-targeting-with-adobe-target-on-your-pages}
 
-ページ内のターゲットコンポーネントを使用して Adobe Target とやり取りするには、/head/ 要素に特定のクライアントサイドコードを含めます。
+ページ内のターゲットコンポーネントを使用して Adobe Target とやり取りするには、&lt;head> 要素に特定のクライアントサイドコードを含めます。
 
 ### head セクション {#the-head-section}
 
@@ -80,7 +80,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->製品と共に出荷された `at.js` のバージョンのみがサポートされます。 製品と共に出荷された `at.js` のバージョンは、次の場所の `at.js` ファイルで取得できます。
+>製品と共に出荷された `at.js` のバージョンのみがサポートされます。製品と共に出荷された `at.js` のバージョンは、次の場所の `at.js` ファイルで取得できます。
 >
 >**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**。
 

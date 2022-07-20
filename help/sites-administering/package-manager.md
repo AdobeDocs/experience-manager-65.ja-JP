@@ -13,7 +13,7 @@ exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 source-git-commit: de58ba638c22b7148e1349417d1f514c26c5887e
 workflow-type: tm+mt
 source-wordcount: '3525'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -186,7 +186,7 @@ ht-degree: 99%
 
 ![「依存関係」タブ](assets/dependencies.png)
 
-| フィールド | 説明 | 例/詳細 |
+| フィールド | 説明 | 例／詳細 |
 |---|---|---|
 | テスト環境 | このパッケージのターゲットまたは互換性のある製品名およびバージョン。 | `6.5` |
 | 修正された問題 | このパッケージで修正されたバグの詳細をリストするテキストフィールド。1 行に 1 つのバグが表示されます。 | - |
@@ -197,7 +197,7 @@ ht-degree: 99%
 
 ![「詳細設定」タブ](assets/advanced-settings.png)
 
-| フィールド | 説明 | 例/詳細 |
+| フィールド | 説明 | 例／詳細 |
 |---|---|---|
 | 名前 | パッケージのプロバイダーの名前 | `WKND Media Group` |
 | URL | プロバイダーの URL | `https://wknd.site` |

@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 オーサリングユーザーガイド
 seo-title: AEM 6.5 Authoring User Guide
-description: AEM 6.5 でのコンテンツの作成とオーサリングに関する主要な概念を探索します。また、タグ、テンプレート、その他のページ機能の使用に関する情報も確認できます。
+description: AEM 6.5 でのコンテンツの作成とオーサリングに関する主要な概念について説明します。また、タグ、テンプレート、その他のページ機能の使用に関する情報も提供します。
 seo-description: Explains the concepts of authoring in AEM.
 exl-id: 38f229b4-10b2-4a67-9821-a03718b82215
 source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # AEM 6.5 オーサリングユーザーガイド
 
-AEM 6.5 でのコンテンツの作成とオーサリングに関する主要な概念を確認します。また、タグ、テンプレート、その他のページ機能の使用に関する情報も確認できます。
+AEM 6.5 でのコンテンツの作成とオーサリングに関する主要な概念について説明します。また、タグ、テンプレート、その他のページ機能の使用に関する情報も提供します。
 
 ## 主な AEM 記事
 

@@ -7,7 +7,7 @@ exl-id: 92b964f8-6672-4f76-8a9f-5782c3ceb83f
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ AEM Content and Commerce のオンボードは、次の 2 つの手順で構成�
 
 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)ポータルから AEM Commerce Add-On for AEM 6.5 をダウンロードしてインストールします。
 
-必要な AEM 6.5 サービスパックをインストールして起動します。 入手可能な最新のサービスパックをインストールすることをお勧めします。
+必要な AEM 6.5 サービスパックをインストールして起動します。入手可能な最新のサービスパックをインストールすることをお勧めします。
 
 >[!NOTE]
 >
@@ -39,21 +39,21 @@ AEM Content and Commerce のオンボードは、次の 2 つの手順で構成�
 
 ### お使いのコマースシステムに AEM を接続 {#connect}
 
-AEM は、AEM 用のアクセス可能な GraphQL エンドポイントを持つ任意のコマースシステムに接続できます。 これらのエンドポイントは通常、公開されているか、個々のプロジェクトの設定に応じて、プライベート VPN またはローカル接続を介して接続することができます。
+AEM は、AEM 用のアクセス可能な GraphQL エンドポイントを持つ任意のコマースシステムに接続できます。これらのエンドポイントは通常、公開されているか、個々のプロジェクトの設定に応じて、プライベート VPN またはローカル接続を介して接続することができます。
 
 オプションで、認証が必要な追加の CIF 機能を使用するために認証ヘッダーを指定できます。
 
 [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)で生成されたプロジェクトと、 [デフォルト設定](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)に既に含まれている [AEM Venia 参照用ストア](https://github.com/adobe/aem-cif-guides-venia)は調整が必要です。
 
-`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` の `url` の値をコマースシステムの GraphQL エンドポイントに置き換えます。 この設定を行うには、OSGi コンソールを使用するか、プロジェクトを介して OSGi 設定をデプロイします。 ステージングシステムと実稼動システムは、異なる AEM 実行モードを使用して異なる設定にすることができます。
+`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` の `url` の値をコマースシステムの GraphQL エンドポイントに置き換えます。この設定を行うには、OSGi コンソールを使用するか、プロジェクトを介して OSGi 設定をデプロイします。ステージングシステムと実稼動システムは、異なる AEM 実行モードを使用して異なる設定にすることができます。
 
-AEM Content and Commerce Add-On および CIF コアコンポーネントでは、AEM サーバーサイド接続とクライアントサイド接続の両方を使用します。 クライアントサイド CIF コアコンポーネントと CIF アドオンオーサリングツールは、デフォルトで `/api/graphql` に接続されます。これは、CIF Cloud Service 設定で必要に応じて調整できます（以下を参照）。
+AEM Content and Commerce Add-On および CIF コアコンポーネントでは、AEM サーバーサイド接続とクライアントサイド接続の両方を使用します。クライアントサイド CIF コアコンポーネントと CIF アドオンオーサリングツールは、デフォルトで `/api/graphql` に接続されます。これは、CIF Cloud Service 設定で必要に応じて調整できます（以下を参照）。
 
 CIF アドオンでは、`/api/graphql` に GraphQL プロキシサーブレットが用意されているので、オプションでこれを[ローカル開発](develop.md)に使用できます。実稼動デプロイメントの場合は、AEM Dispatcher を使用して、または他のネットワークレイヤー（CDN など）で、コマース GraphQL エンドポイントへのリバースプロキシを設定することを強くお勧めします。
 
 ## ストアとカタログの設定 {#catalog}
 
-このアドオンと [CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components) は、異なるコマースストア（またはストア表示など）に接続された複数の AEM サイト構造で使用できます。 デフォルトでは、CIF アドオンは、Adobe Commerceのデフォルトのストアおよびカタログに接続するデフォルトの設定でデプロイされます。
+このアドオンと [CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components) は、異なるコマースストア（またはストア表示など）に接続された複数の AEM サイト構造で使用できます。デフォルトでは、CIF アドオンは、Adobe Commerce のデフォルトストアとカタログに接続するデフォルト設定でデプロイされます。
 
 この設定は、次の手順に従って、CIF Cloud Service 設定を使用してプロジェクトに合わせて調整できます。
 

@@ -40,7 +40,7 @@ ht-degree: 100%
 + [Adobe Commerce PWA Studio](cif/pwa-studio/getting-started.md)
 + [移行](cif/migration.md)
 + リリースノート {#release-notes}
-   + [2022 年](cif/release-notes/release-notes-2022.md)
+   + [2022](cif/release-notes/release-notes-2022.md)
    + [2021](cif/release-notes/release-notes-2021.md)
    + [2020](cif/release-notes/release-notes-2020.md)
    + [2019](cif/release-notes/release-notes-2019.md)

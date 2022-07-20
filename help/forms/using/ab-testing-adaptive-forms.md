@@ -1,5 +1,5 @@
 ---
-title: アダプティブフォームの A/B テストの作成と管理
+title: 'アダプティブフォームの A/B テストの作成と管理 '
 seo-title: Create and manage A/B test for adaptive forms
 description: アダプティブフォームで A/B テストを実行する Adobe Target と AEM Forms を統合し、顧客体験を高めてコンバージョン率を向上させることができます。
 seo-description: AEM Forms integrates with Adobe Target that allows running A/B tests for adaptive forms to enhance customer experience and improve conversion rates.
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# アダプティブフォームの A/B テストの作成と管理{#create-and-manage-a-b-test-for-adaptive-forms}
+# アダプティブフォームの A/B テストの作成と管理 {#create-and-manage-a-b-test-for-adaptive-forms}
 
 ## 概要 {#overview-br}
 

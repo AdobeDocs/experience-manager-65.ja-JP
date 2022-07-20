@@ -27,11 +27,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」のクイックスタートは、JBoss Application Server と Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM Forms によるプログラミング」のクイックスタートは、JBoss Application Server と Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用してバーコードフォームデータをデコード {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-次の Java コードは、Loan.pdf として保存された PDF フォームにあるフォームデータをデコードします。 デコードされたデータは、extractedData.xml という名前の XML ファイルとして保存されます。 このコードの例では、`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。 （[バーコードフォームデータのデコード](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)を参照してください）
+次の Java コードは、Loan.pdf として保存された PDF フォームにあるフォームデータをデコードします。デコードされたデータは、extractedData.xml という名前の XML ファイルとして保存されます。このコードの例では、`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。（[バーコードフォームデータのデコード](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data)を参照してください）
 
 ```java
  /*

@@ -7,7 +7,7 @@ exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
 source-wordcount: '501'
-ht-degree: 80%
+ht-degree: 89%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 80%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=en) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=ja) |
 | AEM 6.5 | この記事 |
 | AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/integrations/workfront-connector-install.html?lang=en) |
 
-[!DNL Adobe Experience Manager] の管理者アクセス権を持つユーザーが拡張コネクタをインストールします。 インストールする前に、プラットフォームのサポートとその他の[コネクタの前提条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience)を確認してください。
+[!DNL Adobe Experience Manager] の管理者アクセス権を持つユーザーが拡張コネクタをインストールします。インストールする前に、プラットフォームのサポートとその他の[コネクタの前提条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience)を確認してください。
 
 >[!IMPORTANT]
 >
@@ -36,7 +36,7 @@ ht-degree: 80%
 
 1. [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)からコネクタをダウンロードします。
 1. [ファイアウォールを設定します](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html)。
-1. Dispatcher で、 `authorization`、`username` および `apikey` という HTTP ヘッダーを許可します。 `/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
+1. Dispatcher で、`authorization`、`username` および `apikey` という HTTP ヘッダーを許可します。`/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
 1. [!DNL Experience Manager] リポジトリに次のパスが存在しないことを確認します。
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`
@@ -48,7 +48,7 @@ ht-degree: 80%
 1. [!UICONTROL パッケージマネージャー]を使ってパッケージをインストールします。パッケージのインストール方法については、[パッケージマネージャーのドキュメント](/help/sites-administering/package-manager.md)を参照してください。
 1. [!DNL Experience Manager] ユーザーグループに `wf-workfront-users` を作成し、`jcr:all` 権限を `/content/dam` に割り当てます。
 
-システムユーザー `workfront-tools` が自動的に作成され、必須の権限が自動的に管理されます。 このコネクタを使用するすべての [!DNL Workfront] ユーザーが、このグループの一部として自動的に追加されます。
+システムユーザー `workfront-tools` が自動的に作成され、必須の権限が自動的に管理されます。このコネクタを使用するすべての [!DNL Workfront] ユーザーが、このグループの一部として自動的に追加されます。
 
 ## [!DNL Experience Manager] と [!DNL Workfront] との接続の設定 {#configure-connection}
 
@@ -66,9 +66,9 @@ Workfront との接続を作成するには、次の手順に従います。
 
 ## 更新 [!DNL Workfront for Experience Manager enhanced connector] {#update-enhanced-connector-for-workfront}
 
-Experience Manager Assetsでは、 [!DNL Workfront for Experience Manager enhanced connector] 以前のバージョンから最新のバージョンに移行する場合。
+Experience Manager Assets では、[!DNL Workfront for Experience Manager enhanced connector] を旧バージョンから最新バージョンに更新できます。
 
-次の手順で [!DNL Workfront for Experience Manager enhanced connector] を最新バージョンに変更するには：
+[!DNL Workfront for Experience Manager enhanced connector] を最新バージョンに変更する手順は次のとおりです。
 
-1. 拡張コネクタの最新バージョンをからダウンロードします。 [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
+1. 拡張コネクタの最新バージョンを[[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)からダウンロードします。
 1. [!UICONTROL パッケージマネージャー]を使ってパッケージをインストールします。パッケージのインストール方法については、[パッケージマネージャーのドキュメント](/help/sites-administering/package-manager.md)を参照してください。

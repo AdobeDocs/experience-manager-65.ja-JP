@@ -1,5 +1,5 @@
 ---
-title: エクスペリエンスフラグメント
+title: 'エクスペリエンスフラグメント '
 seo-title: Experience Fragments
 description: エクスペリエンスフラグメントのカスタマイズについて学びます。
 seo-description: Learn about customizing Experience Fragments.
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# エクスペリエンスフラグメント{#experience-fragments}
+# エクスペリエンスフラグメント {#experience-fragments}
 
 ## 基本知識 {#the-basics}
 

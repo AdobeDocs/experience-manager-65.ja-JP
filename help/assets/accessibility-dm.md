@@ -59,7 +59,7 @@ ht-degree: 100%
 
 ## Dynamic Media での字幕サポート {#closed-caption-support}
 
-Dynamic Media では、字幕を使用したビデオおよびアダプティブビデオセットの配信がサポートされています。 キャプションは、ビデオコンテンツの上に表示する必要があります。
+Dynamic Media では、字幕を使用したビデオおよびアダプティブビデオセットの配信がサポートされています。キャプションは、ビデオコンテンツの上に表示する必要があります。
 
 詳しくは、 [Dynamic Media のビデオ — ビデオへの字幕やサブタイトルの追加](/help/assets/video.md#adding-captions-to-video)を参照してください。
 

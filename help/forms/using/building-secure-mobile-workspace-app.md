@@ -18,7 +18,7 @@ ht-degree: 100%
 
 # セキュアな AEM Forms アプリケーション（iOS 用）の構築 {#building-a-secure-aem-forms-app-for-ios}
 
-AEM Forms アプリケーション用 Xcode プロジェクトをアーカイブして、インストーラー（.ipa ファイル）とプロパティリストファイル（.plist ファイル）を構築する必要があります。プロパティリストファイルには、アプリケーションの名前やホストしているロケーションなど、ホストされているインハウスアプリケーションの設定情報が含まれます。 プロパティリストファイルについての詳細は、[About Information Property List Files](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)を参照してください。
+AEM Forms アプリケーション用 Xcode プロジェクトをアーカイブして、インストーラー（.ipa ファイル）とプロパティリストファイル（.plist ファイル）を構築する必要があります。プロパティリストファイルには、アプリケーションの名前やホストしているロケーションなど、ホストされているインハウスアプリケーションの設定情報が含まれます。プロパティリストファイルについての詳細は、[About Information Property List Files](https://developer.apple.com/library/ios/#documentation/general/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) を参照してください。
 
 1. 次の Web サイトにログインします。
 
@@ -26,7 +26,7 @@ AEM Forms アプリケーション用 Xcode プロジェクトをアーカイブ
 
 1. アプリケーション ID を作成します。アプリケーション ID を作成する詳細な手順については、[アプリケーション ID の作成と設定](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html)を参照してください。
 1. アプリケーションのご使用の iOS アプリケーションのためのバンドル識別子を設定するには、**[!UICONTROL アプリケーション ID の設定]**&#x200B;をクリックします。
-1. Web ページの下部にある、**[!UICONTROL Enable for Data Protection]** を選択します。 data protection オプションを指定します。
+1. Web ページの下部にある、**[!UICONTROL Enable for Data Protection]** を選択します。data protection オプションを指定します。
 
    「**[!UICONTROL 完了]**」をクリックします。
 

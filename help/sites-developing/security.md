@@ -39,7 +39,7 @@ AEM が提供する XSS 保護メカニズムは、[OWASP（The Open Web Applica
 
 >[!NOTE]
 >
->[AEM が提供する XSSAPI](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html) を使用して、常に XSS 対策 API にアクセスすることを強くお勧めします。
+>[AEM が提供する XSSAPI](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/xss/XSSAPI.html) を使用して、常に XSS 対策 API にアクセスすることを強くお勧めします。
 
 また、[Apache 対応の mod_security](https://www.modsecurity.org) などの web アプリケーションファイアウォールを使用すると、デプロイメント環境のセキュリティを高い信頼性で一元的に制御でき、以前は検出されなかったクロスサイトスクリプティング攻撃に対する保護も可能になります。
 

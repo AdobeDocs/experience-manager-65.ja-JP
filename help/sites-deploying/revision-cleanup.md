@@ -374,7 +374,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><strong>オンラインでのリビジョンクリーンアップ中に監視する必要があるものは何ですか。</strong></td>
    <td>
     <ul>
-     <li>オンラインでのリビジョンクリーンアップが有効な場合は、ディスクスペースを監視する必要があります。 ディスク領域が不十分な場合、クリーンアップは実行されないか、早期に終了します。</li>
+     <li>オンラインでのリビジョンクリーンアップが有効な場合は、ディスクスペースを監視する必要があります。ディスク領域が不十分な場合、クリーンアップは実行されないか、早期に終了します。</li>
      <li>オンラインでのリビジョンクリーンアップの完了時間をログで確認してください。これは 2 時間以下である必要があります。</li>
      <li>チェックポイントの数。コンパクションの実行時にチェックポイントが 4 つ以上ある場合は、チェックポイントをクリーンアップすることをお勧めします。</li>
     </ul> </td>
@@ -387,7 +387,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>最新のオンラインでのリビジョンクリーンアップの実行に関する統計はどこで確認できますか。</strong></td>
-   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で表示されます。 <code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
+   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で表示されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -400,7 +400,7 @@ TarMK GC: no base state available, running full compaction instead
       </ul> </li>
      <li>リビジョンのクリーンアップで取得したディスクスペース
       <ul>
-       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。 クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み付け／深さは {}／{}（{} バイト／{}）です。</li>
+       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み付け／深さは {}／{}（{} バイト／{}）です。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップ中に問題が発生しました
       <ul>
@@ -419,18 +419,18 @@ TarMK GC: no base state available, running full compaction instead
    <td><p>オンラインでのリビジョンクリーンアップの後は、リポジトリの整合性チェックは必要ありません。 </p> <p>ただし、クリーンアップ後にリポジトリのステータスを確認するには、次の操作を実行できます。</p>
     <ul>
      <li>リポジトリ<a href="/help/sites-deploying/consistency-check.md" target="_blank">トラバーサルチェック</a></li>
-     <li>クリーンアッププロセスが完了したら、oak-run ツールを使用して不整合をチェックします。 この方法について詳しくは、 <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメントを参照してください。</a> ツールを実行するために AEM をシャットダウンする必要はありません。</li>
+     <li>クリーンアッププロセスが完了したら、oak-run ツールを使用して不整合をチェックします。この方法について詳しくは、 <a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache ドキュメントを参照してください。</a> ツールを実行するために AEM をシャットダウンする必要はありません。</li>
     </ul> </td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップが失敗したかどうかを検出する方法と、回復する手順を教えてください。</strong></td>
-   <td>失敗条件は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。 また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
+   <td>失敗条件は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
    <td> </td>
   </tr>
   <tr>
    <td><strong>リビジョンクリーンアップのヘルスチェックではどのような情報が表示されますか。ステータスレベルの色分けとの対応も教えてください。 </strong></td>
-   <td><p>リビジョンのクリーンアップヘルスチェックは、 <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作ダッシュボード</a>の一部です。<br /> </p> <p>オンラインでのリビジョンクリーンアップメンテナンスタスクの最後の実行が正常に完了した場合、ステータスは<strong>緑</strong>になります。</p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクが 1 回キャンセルされた場合、ステータスは<strong>イエロー</strong>になります。<br /> </p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクを 3 回連続でキャンセルした場合は、<strong>赤</strong>になります。 <strong>この場合、手動の操作が必要であるか</strong>、オンラインでのリビジョンクリーンアップが再び失敗する可能性が高くなります。 詳細情報に関しては、以下の<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">トラブルシューティング</a>の節を参照してください。<br /> </p> <p>システムの再起動後に、ヘルスチェックステータスがリセットされることにもご注意ください。そのため、新たに再起動されたインスタンスでは、リビジョンクリーンアップヘルスチェックで緑色のステータスが示されます。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
+   <td><p>リビジョンのクリーンアップヘルスチェックは、 <a href="/help/sites-administering/operations-dashboard.md#health-reports" target="_blank">操作ダッシュボード</a>の一部です。<br /> </p> <p>オンラインでのリビジョンクリーンアップメンテナンスタスクの最後の実行が正常に完了した場合、ステータスは<strong>緑</strong>になります。</p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクが 1 回キャンセルされた場合、ステータスは<strong>イエロー</strong>になります。<br /> </p> <p>オンラインでのリビジョンクリーンアップのメンテナンスタスクを 3 回連続でキャンセルした場合は、<strong>赤</strong>になります。<strong>この場合、手動の操作が必要であるか</strong>、オンラインでのリビジョンクリーンアップが再び失敗する可能性が高くなります。詳細情報に関しては、以下の<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-online-revision-cleanup">トラブルシューティング</a>の節を参照してください。<br /> </p> <p>システムの再起動後に、ヘルスチェックステータスがリセットされることにもご注意ください。そのため、新たに再起動されたインスタンスでは、リビジョンクリーンアップヘルスチェックで緑色のステータスが示されます。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。<a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -511,11 +511,11 @@ TarMK GC: no base state available, running full compaction instead
 |---|---|---|---|
 |  |  |  |  |
 | 見積もり | TarMK GC #2：圧縮が一時停止されたので、見積もりはスキップされました | 設定によってシステムでコンパクションが無効になっている場合は、見積もりフェーズがスキップされます。 | オンラインでのリビジョンクリーンアップの有効化. |
-|  | TarMK GC #2：見積もりが中断されました：${REASON}。 Skipping compaction. | 見積もりフェーズが完了せずに終了しました。見積もりフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。 | 示されている理由によって異なります。 |
+|  | TarMK GC #2：見積もりが中断されました：${REASON}。Skipping compaction. | 見積もりフェーズが完了せずに終了しました。見積もりフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。 | 示されている理由によって異なります。 |
 | コンパクション | TarMK GC #2：コンパクションは一時停止されました | 設定によってコンパクションフェーズが一時停止している限り、見積もりフェーズもコンパクションフェーズも実行されません。 | オンラインでのリビジョンクリーンアップの有効化。 |
 |  | TarMK GC #2：コンパクションがキャンセルされました：${REASON}。 | コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。さらに、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルした場合も、コンパクションがキャンセルされることがあります。 | 示されている理由によって異なります。 |
-|  | TarMK GC #2：5 回のサイクル後、32.902 分 (1974140 ms) でコンパクションに失敗しました | このメッセージは、復旧不可能なエラーがあったのではなく、一定数の試行の後にコンパクションが終了されたことのみを意味します。また、 [ 次の段落](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes) を参照してください。 | 以下の [Oak ドキュメント](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes) および [オンラインでのリビジョンクリーンアップの実行](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) の節の最後の質問をお読みください。 |
-| クリーンアップ | TarMK GC #2：クリーンアップが中断されました | リポジトリーをシャットダウンしてクリーンアップがキャンセルされました。 整合性への影響はありません。また、多くの場合、ディスク領域は完全には再利用されません。残りの領域は、次のリビジョンクリーンアップサイクルで再利用されます。 | リポジトリがシャットダウンされた理由を調査し、今後はメンテナンスウィンドウ中にリポジトリがシャットダウンされないようにします。 |
+|  | TarMK GC #2：5 回のサイクル後、32.902 分 (1974140 ms) でコンパクションに失敗しました | このメッセージは、復旧不可能なエラーがあったのではなく、一定数の試行の後にコンパクションが終了されたことのみを意味します。また、 [次の段落](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes) を参照してください。 | 以下の [Oak ドキュメント](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes) および [オンラインでのリビジョンクリーンアップの実行](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) の節の最後の質問をお読みください。 |
+| クリーンアップ | TarMK GC #2：クリーンアップが中断されました | リポジトリーをシャットダウンしてクリーンアップがキャンセルされました。整合性への影響はありません。また、多くの場合、ディスク領域は完全には再利用されません。残りの領域は、次のリビジョンクリーンアップサイクルで再利用されます。 | リポジトリがシャットダウンされた理由を調査し、今後はメンテナンスウィンドウ中にリポジトリがシャットダウンされないようにします。 |
 
 ## オフラインでのリビジョンクリーンアップの実行方法 {#how-to-run-offline-revision-cleanup}
 
@@ -573,11 +573,11 @@ oak-run ツールには、リビジョンクリーンアッププロセスのパ
 
 * **-Dupdate.limit**。一時トランザクションをディスクにフラッシュするためのしきい値を定義します。デフォルト値は 10000 です。
 
-* **-Dcompress-interval**。現在のマップを圧縮するまで保持するコンパクションマップエントリの数です。デフォルトは 1000000 です。十分なヒープメモリが使用可能な場合は、スループットを高速化するために、この値をさらに大きい数に増やします。**このパラメーターは Oak バージョン 1.6 で削除され、効果はありません。**
+* **-Dcompress-interval**。現在のマップを圧縮するまで保持するコンパクションマップエントリの数です。デフォルトは 1000000 です。十分なヒープメモリが使用可能な場合は、スループットを高速化するために、この値をさらに大きい数に増やします。**このパラメーターは Oak バージョン 1.6 で削除されており、効果はありません。**
 
 * **-Dcompaction-progress-log**。ログに記録される、コンパクションされたノードの数です。デフォルト値は 150000 です。これは、最初の 150000 個のコンパクションされたノードが操作中にログに記録されることを意味します。このパラメーターは、次に示すパラメーターとともに使用します。
 
-* **-Dtar.PersistCompactionMap。**&#x200B;コンパクションマップを保持するためにヒープメモリの代わりにディスク領域を使用するには、このパラメーターを true に設定します。oak-run ツールの&#x200B;**バージョン 1.4** 以上が必要です。詳しくは、[オフラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)の節の質問 3 を参照してください。**このパラメーターは Oak バージョン 1.6 で削除され、効果はありません。**
+* **-Dtar.PersistCompactionMap。**&#x200B;コンパクションマップを保持するためにヒープメモリの代わりにディスク領域を使用するには、このパラメーターを true に設定します。oak-run ツールの&#x200B;**バージョン 1.4** 以上が必要です。詳しくは、[オフラインでのリビジョンクリーンアップに関するよくある質問](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)の節の質問 3 を参照してください。**このパラメーターは Oak バージョン 1.6 で削除されており、効果はありません。**
 
 * **--force.**&#x200B;コンパクションを強制的に実行し、一致しないセグメントストアバージョンは無視されます。
 

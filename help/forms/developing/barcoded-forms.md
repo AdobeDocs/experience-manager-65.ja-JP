@@ -26,13 +26,13 @@ ht-degree: 100%
 
 Barcoded Forms サービスは、印刷および記入用フォームからのデータのキャプチャを自動化し、取り込んだ情報を組織の主要な IT システムに統合します。
 
-Barcoded Forms サービスを使用すると、1 次元および 2 次元のバーコードをインタラクティブ PDF forms に追加できます。 その後、Barcoded Forms を web サイトに公開したり、電子メールまたは CD で配布したりできます。 ユーザーが Adobe Reader、Acrobat Professional またはAcrobat Standard でバーコードフォームに入力すると、バーコードが自動的に更新され、フォームデータがエンコードされます。ユーザーは、フォームを電子メールで送ったり、紙に印刷して、郵送や FAX で送信したり、直接配布したりできます。 後で、自動化されたワークフローの一部として、ユーザーが指定したデータを抽出し、承認プロセスやビジネスシステム間でデータをルーティングできます。
+Barcoded Forms サービスを使用すると、1 次元および 2 次元のバーコードをインタラクティブ PDF forms に追加できます。その後、Barcoded Forms を web サイトに公開したり、電子メールまたは CD で配布したりできます。ユーザーが Adobe Reader、Acrobat Professional またはAcrobat Standard でバーコードフォームに入力すると、バーコードが自動的に更新され、フォームデータがエンコードされます。ユーザーは、フォームを電子メールで送ったり、紙に印刷して、郵送や FAX で送信したり、直接配布したりできます。後で、自動化されたワークフローの一部として、ユーザーが指定したデータを抽出し、承認プロセスやビジネスシステム間でデータをルーティングできます。
 
-Barcoded Forms サービスについて詳しくは、[AME Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+Barcoded Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ## バーコードフォームデータのデコード {#decoding-barcoded-form-data}
 
-Barcoded Forms API を使用して、バーコードを含む PDF フォームまたは画像からデータをデコードできます。 フォームデータのデコードとは、バーコード内のデータを抽出することを意味します。 データを PDF フォーム（または画像）からデコードする前に、フォームにはデータが入力されている必要があります。
+Barcoded Forms API を使用して、バーコードを含む PDF フォームまたは画像からデータをデコードできます。フォームデータのデコードとは、バーコード内のデータを抽出することを意味します。データを PDF フォーム（または画像）からデコードする前に、フォームにはデータが入力されている必要があります。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Barcoded Forms API を使用して、バーコードを含む PDF フォーム�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めるようにします。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めるようにします。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -62,11 +62,11 @@ Barcoded Forms API を使用して、バーコードを含む PDF フォーム�
 * jbossall-client.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * xercesImpl.jar（&lt;install directory>/Adobe/Adobe_Experience_Manager_forms/sdk/client-libs\thirdparty）
 
-AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **Barcoded Forms Client API オブジェクトの作成**
 
-プログラムによる Barcoded Forms サービスの操作を実行する前に、Barcoded Forms サービスクライアントを作成する必要があります。 Java API を使用している場合は、`BarcodedFormsServiceClient` オブジェクトを作成します。Barcoded Forms web サービス API を使用している場合は、`BarcodedFormsServiceService` オブジェクトを作成します。
+プログラムによる Barcoded Forms サービスの操作を実行する前に、Barcoded Forms サービスクライアントを作成する必要があります。Java API を使用している場合は、`BarcodedFormsServiceClient` オブジェクトを作成します。Barcoded Forms web サービス API を使用している場合は、`BarcodedFormsServiceService` オブジェクトを作成します。
 
 **バーコードデータを含む PDF フォームの取得**
 
@@ -74,7 +74,7 @@ AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーショ�
 
 **データを PDF フォームからデコード**
 
-バーコードを含む PDF フォーム（または画像）を取得したら、データをデコードできます。 Barcoded Forms サービスは、次の種類のバーコードをサポートしています。
+バーコードを含む PDF フォーム（または画像）を取得したら、データをデコードできます。Barcoded Forms サービスは、次の種類のバーコードをサポートしています。
 
 * PDF417 バーコード。
 * データマトリックスバーコード。
@@ -85,15 +85,15 @@ AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーショ�
 * EAN-13 バーコード。
 * EAN-8 バーコード。
 
-デコード API で 16 進数の文字セットを入力した場合は、バーコードの内容が 16 進文字列としてエンコードされます。例えば、フォームで文字エンコーディングに UTF-8 を指定し、デコード操作で 16 進数を指定した場合、バーコードの内容はデコードされた出力の &lt; `xb:content`> 要素で 16 進文字列としてエンコードされます。 この 16 進数値を変換して元のコンテンツを取得するには、クライアントアプリケーションでアプリケーションロジックを作成します。
+デコード API で 16 進数の文字セットを入力した場合は、バーコードの内容が 16 進文字列としてエンコードされます。例えば、フォームで文字エンコーディングに UTF-8 を指定し、デコード操作で 16 進数を指定した場合、バーコードの内容はデコードされた出力の &lt; `xb:content`> 要素で 16 進文字列としてエンコードされます。この 16 進数値を変換して元のコンテンツを取得するには、クライアントアプリケーションでアプリケーションロジックを作成します。
 
 **データを XML データソースに変換**
 
-フォームデータをデコードした後、XDP または XFDF データに変換できます。 例えば、別のフォームにデータを読み込むとします。 データを XFA フォームに読み込むには、そのデータを XDP データに変換する必要があります。 詳しくは、[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照してください。
+フォームデータをデコードした後、XDP または XFDF データに変換できます。例えば、別のフォームにデータを読み込むとします。データを XFA フォームに読み込むには、そのデータを XDP データに変換する必要があります。詳しくは、[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照してください。
 
 **デコードされたデータを処理**
 
-変換後のデータを処理して、ビジネス要件を満たすことができます。例えば、データをデコードして変換した後に、ファイルに保存し、エンタープライズデータベースに格納し、別のフォームに入力することができます。 この節では、変換後のデータを XML ファイルとして保存する方法について説明します。
+変換後のデータを処理して、ビジネス要件を満たすことができます。例えば、データをデコードして変換した後に、ファイルに保存し、エンタープライズデータベースに格納し、別のフォームに入力することができます。この節では、変換後のデータを XML ファイルとして保存する方法について説明します。
 
 >[!NOTE]
 >
@@ -148,7 +148,7 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
    `BarcodedFormsServiceClient` オブジェクトの `extractToXML` メソッドを呼び出し、次の値を渡すことにより、デコードされたデータを XDP または XFDF データに変換します。
 
    * デコードされたデータを含む `org.w3c.dom.Document` オブジェクト（`decode` メソッドの戻り値を使用していることを確認してください）。
-   * 行の区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。 `Delimiter.Carriage_Return` を指定することをお勧めします。
+   * 行の区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。`Delimiter.Carriage_Return` を指定することをお勧めします。
    * フィールド区切りを指定する `com.adobe.livecycle.barcodedforms.Delimiter` 定義済みリスト値。例えば、`Delimiter.Tab` を指定します。
    * バーコードデータを XDP または XFDF XML データに変換するかどうかを指定する `com.adobe.livecycle.barcodedforms.XMLFormat` 定義済みリスト値。例えば、データを XDP データに変換するには `XMLFormat.XDP` を指定します。
 
@@ -156,7 +156,7 @@ Barcoded Forms API（Java）を使用してフォームデータをデコード�
    >
    >行区切りパラメーターとフィールド区切りパラメーターに同じ値を指定しないでください。
 
-   `extractToXML` メソッドは、各要素が `org.w3c.dom.Document` オブジェクトである `java.util.List` オブジェクトを返します。フォーム上のバーコードごとに別々の要素があります。 つまり、フォームに 4 つのバーコードがある場合、返された `java.util.List` オブジェクトには 4 つの要素が含まれます。
+   `extractToXML` メソッドは、各要素が `org.w3c.dom.Document` オブジェクトである `java.util.List` オブジェクトを返します。フォーム上のバーコードごとに別々の要素があります。つまり、フォームに 4 つのバーコードがある場合、返された `java.util.List` オブジェクトには 4 つの要素が含まれます。
 
 1. デコードされたデータを処理
 
@@ -178,7 +178,7 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 
 1. プロジェクトファイルを含める
 
-   * Barcoded Forms サービス WSDL を使用する Microsoft .NET クライアントアセンブリを作成します。 詳しくは、 [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください。
+   * Barcoded Forms サービス WSDL を使用する Microsoft .NET クライアントアセンブリを作成します。詳しくは、 [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください。
    * Microsoft .NET クライアントアセンブリを参照します詳しくは、 [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)の「.NET クライアントアセンブリの参照」を参照してください。
 
 1. Barcoded Forms クライアント API オブジェクトの作成
@@ -223,12 +223,12 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
    >
    >行区切りパラメーターとフィールド区切りパラメーターに同じ値を指定しないでください。
 
-   `extractToXML` メソッドは、 各要素が `BLOB` インスタンスである `Object` 配列を返します。フォーム上のバーコードごとに別々の要素があります。 つまり、フォームに 4 つのバーコードがある場合、返される `Object` 配列には 4 つの要素が含まれます。
+   `extractToXML` メソッドは、 各要素が `BLOB` インスタンスである `Object` 配列を返します。フォーム上のバーコードごとに別々の要素があります。つまり、フォームに 4 つのバーコードがある場合、返される `Object` 配列には 4 つの要素が含まれます。
 
 1. デコードされたデータを処理
 
    * コンストラクターを呼び出し、保護された PDF ドキュメントのファイルの場所を表す文字列の値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列を生成します。
+   * `encryptPDFUsingPassword` メソッドが返した `BLOB` オブジェクトのデータコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列を生成します。
    * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 

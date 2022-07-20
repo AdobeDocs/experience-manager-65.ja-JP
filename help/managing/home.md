@@ -1,19 +1,19 @@
 ---
 title: AEM 6.5 管理ユーザーガイド
 seo-title: AEM 6.5 Managing User Guide
-description: 'AEMプロジェクトの管理方法を理解し、主要リソースとAEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。 '
+description: 'AEM プロジェクトの管理方法を理解し、主要リソースと AEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。 '
 seo-description: Covers how to manage an AEM project successfully
 exl-id: 40597a93-b307-47ce-9a9a-c2e12b7dd0e2
 source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
 # AEM 6.5 管理ユーザーガイド
 
-AEMプロジェクトの管理方法を理解し、主要リソースとAEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。
+AEM プロジェクトの管理方法を理解し、主要リソースと AEM 6.5 ユーザーガイドの包括的なコレクションを利用できます。
 
 ## 主な AEM 記事
 

@@ -1,5 +1,5 @@
 ---
-title: ContextHub でのセグメント化の設定
+title: 'ContextHub でのセグメント化の設定 '
 seo-title: Configuring Segmentation with ContextHub
 description: ContextHub でのセグメント化の設定方法について説明します。
 seo-description: Learn how to configure segmentation with Context Hub.
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# ContextHub でのセグメント化の設定{#configuring-segmentation-with-contexthub}
+# ContextHub でのセグメント化の設定 {#configuring-segmentation-with-contexthub}
 
 >[!NOTE]
 >

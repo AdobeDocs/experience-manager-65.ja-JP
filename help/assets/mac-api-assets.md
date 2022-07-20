@@ -35,7 +35,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 >[!CAUTION]
 >
->`jcr` 名前空間内で [ HTTP API がメタデータのプロパティを更新します](#update-asset-metadata)。ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間のメタデータプロパティを更新します。
+>`jcr` 名前空間内で [HTTP API がメタデータのプロパティを更新します](#update-asset-metadata)。ただし、Experience Managerユーザーインターフェイスは、 `dc` 名前空間のメタデータプロパティを更新します。
 
 ## コンテンツフラグメント {#content-fragments}
 
@@ -190,7 +190,7 @@ Experience Manager では、アセットに次の要素が含まれています�
 
 ### メタデータの更新を `dc` と `jcr` 名前空間の間で同期する {#sync-metadata-between-namespaces}
 
-API メソッドは、`jcr` 名前空間のメタデータプロパティを更新します。ユーザーインターフェイスを使用しておこなった更新により、 `dc` 名前空間のメタデータプロパティが変更されます。  `dc` と `jcr` 名前空間の間でメタデータ値を同期するには、アセットの編集時に Experience Manager を実行するようにワークフローを作成してワークフローを設定できます。 ECMA スクリプトを使用して、必要なメタデータプロパティを同期します。 次のサンプルスクリプトは、 `dc:title` と `jcr:title` 間でタイトル文字列を同期します。
+API メソッドは、`jcr` 名前空間のメタデータプロパティを更新します。ユーザーインターフェイスを使用しておこなった更新により、 `dc` 名前空間のメタデータプロパティが変更されます。  `dc` と `jcr` 名前空間の間でメタデータ値を同期するには、アセットの編集時に Experience Manager を実行するようにワークフローを作成してワークフローを設定できます。ECMA スクリプトを使用して、必要なメタデータプロパティを同期します。次のサンプルスクリプトは、 `dc:title` と `jcr:title` 間でタイトル文字列を同期します。
 
 ```javascript
 var workflowData = workItem.getWorkflowData();

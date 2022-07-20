@@ -108,6 +108,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >
    >* カスタムのワークフローモデルをこのフォルダーに配置すること
    >* `/libs` 内の設定を編集すること
+
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
 
@@ -143,6 +144,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >
    >* カスタムのワークフローランチャーをこのフォルダーに配置すること
    >* `/libs` 内の設定を編集すること
+
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
 
@@ -174,6 +176,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >
    >* カスタムのワークフロースクリプトをこのフォルダーに配置すること
    >* `/libs` 内の設定を編集すること
+
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
 
@@ -201,6 +204,7 @@ AEM のメンテナンスタスクについて詳しくは、[操作ダッシュ
    >
    >* カスタムのワークフロー通知の定義をこのフォルダーに配置すること
    >* `/libs` 内の設定を編集すること
+
    >
    >変更内容が、アップグレード時や、ホットフィックス、Cumulative Fix Pack またはサービスパックの適用時に上書きされる場合があるからです。
 
@@ -297,7 +301,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)を定義し、タスク／ステップを特定のワークフローステージに割り当てることができます。
 
-この情報は、[****&#x200B;インボックス&#x200B;**から作業項目の「ワークフロー情報**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)」タブをクリックしたときにワークフローの進行状況を表示するために使用されます。既存のワークフローモデルを編集してステージを追加することができます。
+この情報は&#x200B;[**、**&#x200B;インボックス&#x200B;**から作業項目の「ワークフロー情報**](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)」タブをクリックしたときにワークフローの進行状況を表示するために使用されます。既存のワークフローモデルを編集してステージを追加することができます。
 
 ### ページをアクティベートプロセスステップ {#activate-page-process-step}
 
@@ -347,5 +351,5 @@ Sling ジョブ処理コンソールには次の情報が表示されます。
 
 * [ワークフローの操作](/help/sites-authoring/workflows.md)
 * [ワークフローの管理](/help/sites-administering/workflows.md)
-* [ワークフローの作成と拡張](/help/sites-developing/workflows.md)
+* [ワークフローの作成と拡張 ](/help/sites-developing/workflows.md)
 * [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)

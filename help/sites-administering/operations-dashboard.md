@@ -312,7 +312,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
     <ul>
      <li>コードキャッシュのフラッシュが有効な Java 7 でインスタンスが実行されている場合、警告ステータスを返します</li>
      <li>Java 7 でインスタンスが実行されていて、予約済みコードキャッシュのサイズが最小しきい値よりも少ない（デフォルト値は 90MB）場合、警告ステータスを返します</li>
-    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。バグについて詳しくは、<a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">このページ</a>を参照してください。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
+    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。<a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">バグについて詳しくは、</a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547"></a><a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">このページ</a>を参照してください。</p> <p>このヘルスチェックの MBean は、<a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a> です。</p> </td>
   </tr>
   <tr>
    <td>リソース検索パスエラー</td>
@@ -502,7 +502,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 2 つ目のエントリは実行計画です。
 
-クエリを実行する前に&#x200B;**実行時間を含める**&#x200B;ボックスにチェックを入れると、クエリの実行時間も表示されます。この **ノード数を含める**&#x200B;オプションを選択すると、ノード数が報告されます。 これらを使用すると、より詳細な情報が得られ、アプリケーションやデプロイメントのインデックスの最適化に使用できます。
+クエリを実行する前に&#x200B;**実行時間を含める**&#x200B;ボックスにチェックを入れると、クエリの実行時間も表示されます。この **ノード数を含める**&#x200B;オプションを選択すると、ノード数が報告されます。これらを使用すると、より詳細な情報が得られ、アプリケーションやデプロイメントのインデックスの最適化に使用できます。
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
@@ -686,7 +686,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 [experiencemanager-java-maintenancetask-sample](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-maintenancetask-sample)- [src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.java](https://github.com/Adobe-Marketing-Cloud/experiencemanager-java-maintenancetask-sample/blob/master/src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.java)
 
-サービスをデプロイすると、操作ダッシュボード UI に表示されます。 利用可能なメンテナンススケジュールの 1 つに追加できます。
+サービスをデプロイすると、操作ダッシュボード UI に表示されます。利用可能なメンテナンススケジュールの 1 つに追加できます。
 
 ![chlimage_1-127](assets/chlimage_1-127.png)
 

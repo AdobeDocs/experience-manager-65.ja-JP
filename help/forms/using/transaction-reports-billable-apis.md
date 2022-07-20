@@ -18,7 +18,7 @@ ht-degree: 100%
 
 # トランザクションレポート請求可能 API{#transaction-reports-billable-apis}
 
-AEM Forms には、フォームの送信、ドキュメントの処理、ドキュメントのレンダリングをおこなうための API がいくつか用意されています。 一部の API はトランザクションとして計上され、それ以外は自由に使用できます。 このドキュメントでは、トランザクションレポートでトランザクションとして計上されるすべての API のリストを示します。 課金対象の API が使用される一般的なシナリオを次に示します。
+AEM Forms には、フォームの送信、ドキュメントの処理、ドキュメントのレンダリングをおこなうための API がいくつか用意されています。一部の API はトランザクションとして計上され、それ以外は自由に使用できます。このドキュメントでは、トランザクションレポートでトランザクションとして計上されるすべての API のリストを示します。課金対象の API が使用される一般的なシナリオを次に示します。
 
 * アダプティブフォーム、HTML5 フォーム、フォームセットの送信
 * インタラクティブ通信の印刷バージョンまたは Web バージョンのレンダリング
@@ -29,9 +29,9 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
 * AEM Workflows のタスク割り当て手順とドキュメントサービス手順の使用
 * アダプティブフォーム内でのアダプティブフォームの使用
 
-請求 API は、ページ数、ドキュメントまたはフォームの長さ、レンダリング済みドキュメントの最終的な形式を考慮しません。 トランザクションレポートは、トランザクションを、レンダリングされたドキュメントと送信されたフォームの 2 つのカテゴリに分類します。
+請求 API は、ページ数、ドキュメントまたはフォームの長さ、レンダリング済みドキュメントの最終的な形式を考慮しません。トランザクションレポートは、トランザクションを、レンダリングされたドキュメントと送信されたフォームの 2 つのカテゴリに分類します。
 
-* **送信済みフォーム：** AEM Forms で作成された任意のタイプのフォームからデータが送信され、そのデータが任意のデータストレージリポジトリーまたはデータベースに送信された場合、そのデータはフォーム送信と見なされます。 例えば、アダプティブフォーム、HTML5 フォーム、PDF Forms、フォームセットは、送信済みフォームとして計上されます。 フォームセット内の各フォームは、送信と見なされます。 例えば、フォームセットに 5 つのフォームが含まれている場合、フォームセットが送信されると、トランザクションレポートサービスはそのフォームセットを 5 件の送信としてカウントします。
+* **送信済みフォーム：** AEM Forms で作成された任意のタイプのフォームからデータが送信され、そのデータが任意のデータストレージリポジトリーまたはデータベースに送信された場合、そのデータはフォーム送信と見なされます。例えば、アダプティブフォーム、HTML5 フォーム、PDF Forms、フォームセットは、送信済みフォームとして計上されます。フォームセット内の各フォームは、送信と見なされます。例えば、フォームセットに 5 つのフォームが含まれている場合、フォームセットが送信されると、トランザクションレポートサービスはそのフォームセットを 5 件の送信としてカウントします。
 
 * **レンダリング済みドキュメント：** テンプレートとデータを組み合わせたドキュメントの生成、ドキュメントの電子署名または認証、ドキュメントサービスの課金可能なドキュメントサービス API の使用、ある形式から別の形式へのドキュメントの変換は、レンダリング済みドキュメントとして計上されます。
 
@@ -178,7 +178,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
    <td>データとテンプレートを結合して、一連の PDF ドキュメントを作成します。</td>
    <td>処理済みドキュメント</td>
-   <td> generatePDFOutputBatch API は、フォームテンプレートとレコードを組み合わせ、PDF を生成します。 レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別の PDF レンディションとしてカウントします。 <br> <a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> フラグを使用して、複数のレンディションを単一の PDF ファイルに結合します。フラグのステータスに関係なく、サービスは各レコードを個別の PDF レンディションとしてカウントします。 </td>
+   <td> generatePDFOutputBatch API は、フォームテンプレートとレコードを組み合わせ、PDF を生成します。レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別の PDF レンディションとしてカウントします。<br> <a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> フラグを使用して、複数のレンディションを単一の PDF ファイルに結合します。フラグのステータスに関係なく、サービスは各レコードを個別の PDF レンディションとしてカウントします。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
@@ -196,7 +196,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
    <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
    <td>XDP および PDF ドキュメントのセットを、PostScript（PS）、Printer Command Language（PCL）および ZPL の各ファイル形式に変換します。 </td>
    <td>処理済みドキュメント</td>
-   <td> generatePDFOutputBatch API は、フォームテンプレートとレコードを組み合わせ、PDF を生成します。 レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別の PDF レンディションとしてカウントします。 <br> <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> フラグを使用して、複数のレンディションを単一の PDF ファイルに結合します。フラグのステータスに関係なく、サービスは各レコードを個別の PDF レンディションとしてカウントします。 </td>
+   <td> generatePDFOutputBatch API は、フォームテンプレートとレコードを組み合わせ、PDF を生成します。レコードのバッチを処理する場合、トランザクションレポートサービスは各レコードを個別の PDF レンディションとしてカウントします。<br> <a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a> フラグを使用して、複数のレンディションを単一の PDF ファイルに結合します。フラグのステータスに関係なく、サービスは各レコードを個別の PDF レンディションとしてカウントします。 </td>
   </tr>
  </tbody>
 </table>
@@ -213,7 +213,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html#renderPDFForm-java.lang.String-com.adobe.aemfd.docmanager.Document-com.adobe.fd.forms.api.PDFFormRenderOptions-" target="_blank">renderPDFForm</a></td>
-   <td>PDF フォームを XDP テンプレートからレンダリングします。 XP テンプレートは、Forms Designer で作成されます。</td>
+   <td>PDF フォームを XDP テンプレートからレンダリングします。XP テンプレートは、Forms Designer で作成されます。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -238,7 +238,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/fd/cpdf/api/ConvertPdfService.html#toImage-com.adobe.aemfd.docmanager.Document-com.adobe.fd.cpdf.api.ToImageOptionsSpec-" target="_blank">toImage</a></td>
-   <td>PDF ドキュメントを画像ドキュメントのリストに変換します。 サポートされる画像形式は、JPEG、JPEG2K、PNG、TIFF です。</td>
+   <td>PDF ドキュメントを画像ドキュメントのリストに変換します。サポートされる画像形式は、JPEG、JPEG2K、PNG、TIFF です。</td>
    <td>処理済みドキュメント</td>
    <td> </td>
   </tr>
@@ -307,8 +307,8 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
 
 >[!NOTE]
 >
->* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。 したがって、呼び出し API は、０、単一、複数のトランザクションのいずれかとして計上される可能性があります。カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
->* Assembler サービスを使用して生成された単一の PDF ドキュメントは、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。 カウントされるトランザクションの数は、指定された DDX コードによって異なります。
+>* Assembler サービスの invoke API は、入力に応じて別のサービスの課金対象 API を内部的に呼び出すことができます。したがって、呼び出し API は、０、単一、複数のトランザクションのいずれかとして計上される可能性があります。カウントされるトランザクションの数は、入力と呼び出される内部 API によって異なります。
+>* Assembler サービスを使用して生成された単一の PDF ドキュメントは、0、単一、複数のトランザクションのいずれかとして計上される可能性があります。カウントされるトランザクションの数は、指定された DDX コードによって異なります。
 >
 
 
@@ -333,7 +333,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
 
 ## 課金対象のデータキャプチャ API {#billable-data-capture-apis}
 
-アダプティブフォーム、HTML5 Forms、フォームセットのすべての送信イベントは、トランザクションとして計上されます。 デフォルトでは、トランザクションフォームの PDF はトランザクションとして計上されません。 提供した[トランザクションレコーダー API](record-transaction-custom-implementation.md) を使用して、PDF フォームの送信をトランザクションとして記録します。
+アダプティブフォーム、HTML5 Forms、フォームセットのすべての送信イベントは、トランザクションとして計上されます。デフォルトでは、トランザクションフォームの PDF はトランザクションとして計上されません。提供した[トランザクションレコーダー API](record-transaction-custom-implementation.md) を使用して、PDF フォームの送信をトランザクションとして記録します。
 
 ### アダプティブフォーム {#adaptive-forms}
 
@@ -351,7 +351,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
    <td>送信済みフォーム</td>
    <td>
     <ul>
-     <li>送信が成功した場合、1 回または 2 回のトランザクションが発生します。 カウントされるトランザクションの数は、送信に使用する送信アクションのタイプによって異なります。 例えば、電子メール送信アクションを使用した PDF の送信は、2 回のトランザクションが発生します。 フォーム送信するトランザクション 1 回と、レコードのドキュメント（DOR）サービスを使用して PDF が生成されるトランザクション 1 回です。 </li>
+     <li>送信が成功した場合、1 回または 2 回のトランザクションが発生します。カウントされるトランザクションの数は、送信に使用する送信アクションのタイプによって異なります。例えば、電子メール送信アクションを使用した PDF の送信は、2 回のトランザクションが発生します。フォーム送信するトランザクション 1 回と、レコードのドキュメント（DOR）サービスを使用して PDF が生成されるトランザクション 1 回です。 </li>
      <li>アダプティブフォーム（アダプティブフォームフォームセット）内でアダプティブフォームを使用すると、1 回のトランザクションのみがカウントされます。アダプティブフォーム内には、任意の数のアダプティブフォームを含めることができます。</li>
     </ul> </td>
   </tr>
@@ -402,7 +402,7 @@ AEM Forms には、フォームの送信、ドキュメントの処理、ドキ�
 
 ## OSGi API 上の課金対象のインタラクティブ通信とフォーム中心の AEM ワークフロー {#billable-interactive-communication-and-form-centric-aem-workflows-on-osgi-apis}
 
-OSGi 上の Form 中心の AEM Workflows のタスクとドキュメントサービスのステップと、インタラクティブ通信のすべてのレンディションを割り当てます。これらはトランザクションとしてカウントされます。 オーサーインスタンス上でインタラクティブ通信をプレビューし、エージェント UI を使用してパブリッシュインスタンス上でプレビューすることは、トランザクションとしては考慮されません。 ワークフローステップがトランザクションとして考慮され、ワークフローの完了に失敗した場合、トランザクション数は元に戻されません。
+OSGi 上の Form 中心の AEM Workflows のタスクとドキュメントサービスのステップと、インタラクティブ通信のすべてのレンディションを割り当てます。これらはトランザクションとしてカウントされます。オーサーインスタンス上でインタラクティブ通信をプレビューし、エージェント UI を使用してパブリッシュインスタンス上でプレビューすることは、トランザクションとしては考慮されません。ワークフローステップがトランザクションとして考慮され、ワークフローの完了に失敗した場合、トランザクション数は元に戻されません。
 
 ### インタラクティブ通信 - Web チャネル {#interactive-communication-web-channel}
 
@@ -477,7 +477,7 @@ OSGi 上の Form 中心の AEM Workflows のタスクとドキュメントサー
 
 ## カスタムコードのトランザクションとしての課金対象 API の記録 {#recording-billable-apis-as-transactions-for-custom-code}
 
-PDF フォームの送信、エージェント UI を使用したインタラクティブな通信のプレビュー、非標準のフォーム送信の使用、カスタム実装などのアクションは、トランザクションとして考慮されません。AEM Forms は、トランザクションなどのアクションを記録する API を提供します。 カスタム実装から API を呼び出して、[トランザクションを記録](/help/forms/using/record-transaction-custom-implementation.md)することができます。
+PDF フォームの送信、エージェント UI を使用したインタラクティブな通信のプレビュー、非標準のフォーム送信の使用、カスタム実装などのアクションは、トランザクションとして考慮されません。AEM Forms は、トランザクションなどのアクションを記録する API を提供します。カスタム実装から API を呼び出して、[トランザクションを記録](/help/forms/using/record-transaction-custom-implementation.md)することができます。
 
 ## 関連記事 {#related-articles}
 

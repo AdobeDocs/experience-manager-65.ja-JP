@@ -1,5 +1,5 @@
 ---
-title: ページテンプレート - 編集可能
+title: ページテンプレート- 編集可能
 seo-title: Page Templates - Editable
 description: 編集可能テンプレートが導入された目的は、開発者以外のユーザーがテンプレートを作成および編集できるようにすること、テンプレートとそこから作成されたすべてのページとの間に動的接続が維持されるようにすること、ページコンポーネントの汎用性を高めることです
 seo-description: Editable templates have been introduced to, allow non-developers to create and edit templates, provide templates that retain a dynamic connection to any pages created from them, and make the page component more generic

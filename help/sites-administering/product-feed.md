@@ -19,7 +19,7 @@ ht-degree: 100%
 
 # 製品フィード {#product-feed}
 
-AEM と [Search&amp;Promote](https://www.adobe.com/solutions/testing-targeting/searchandpromote.html) を統合すると、次のことが可能になります。
+AEM と [Search&amp;Promote](https://www.adobe.com/jp/solutions/testing-targeting/searchandpromote.html) を統合すると、次のことが可能になります。
 
 * 基になるリポジトリ構造やコマースプラットフォームと関係なく、e コマース API を使用する。
 * Search&amp;Promote のインデックスコネクタ機能を利用して、XML 形式で製品フィードを提供する。

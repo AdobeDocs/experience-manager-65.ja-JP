@@ -24,27 +24,27 @@ ht-degree: 100%
 
 **User Management について**
 
-User Management API を使用して、役割、権限、プリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成できます。 User Management API は、次の AEM Forms API で構成されています。
+User Management API を使用して、役割、権限、プリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成できます。User Management API は、次の AEM Forms API で構成されています。
 
 * Directory Manager Service API
 * Authentication Manager Service API
 * Authorization Manager Service API
 
-User Management では、役割および権限の割り当て、削除、決定が可能です。 また、ドメイン、ユーザー、グループの割り当て、削除、問い合わせも可能です。 最後に、User Management を使用してユーザーを認証できます。
+User Management では、役割および権限の割り当て、削除、決定が可能です。また、ドメイン、ユーザー、グループの割り当て、削除、問い合わせも可能です。最後に、User Management を使用してユーザーを認証できます。
 
 [ユーザーの追加](users.md#adding-users)では、プログラムによってユーザーを追加する方法を説明します。この節では、Directory Manager Service API を使用します。
 
-[ユーザーの削除](users.md#deleting-users)では、ユーザーをプログラムで削除する方法を説明します。 この節では、Directory Manager Service API を使用します。
+[ユーザーの削除](users.md#deleting-users)では、ユーザーをプログラムで削除する方法を説明します。この節では、Directory Manager Service API を使用します。
 
-[ユーザーとグループの管理](users.md#managing-users-and-groups)では、ローカルユーザーとディレクトリユーザーの違いを理解し、Java および web サービス API を使用してユーザーとグループをプログラムで管理する方法の例を確認できます。 この節では、Directory Manager Service API を使用します。
+[ユーザーとグループの管理](users.md#managing-users-and-groups)では、ローカルユーザーとディレクトリユーザーの違いを理解し、Java および web サービス API を使用してユーザーとグループをプログラムで管理する方法の例を確認できます。この節では、Directory Manager Service API を使用します。
 
-[役割と権限の管理](users.md#managing-roles-and-permissions)では、システムの役割と権限、およびそれらを拡張するためにプログラムで実行できる操作について学び、Java および web サービス API を使用して役割と権限をプログラムで管理する方法の例を確認します。 この節では、Directory Manager Service API と Authorization Manager Service API の両方を使用します。
+[役割と権限の管理](users.md#managing-roles-and-permissions)では、システムの役割と権限、およびそれらを拡張するためにプログラムで実行できる操作について学び、Java および web サービス API を使用して役割と権限をプログラムで管理する方法の例を確認します。この節では、Directory Manager Service API と Authorization Manager Service API の両方を使用します。
 
-[ユーザーの認証](users.md#authenticating-users)では、Java および web サービス API を使用してプログラムによってユーザーを認証する方法の例が表示されます。 この節では、Authorization Manager Service API を使用します。
+[ユーザーの認証](users.md#authenticating-users)では、Java および web サービス API を使用してプログラムによってユーザーを認証する方法の例が表示されます。この節では、Authorization Manager Service API を使用します。
 
 **認証プロセスについて**
 
-User Management には、組み込みの認証機能が用意されており、独自の認証プロバイダーと接続する機能も備えています。 User Management は、認証リクエストを受け取ると（ユーザーがログインを試みるなど）、認証プロバイダーにユーザー情報を渡して認証を行います。 User Management は、ユーザーの認証後に認証プロバイダーから結果を受け取ります。
+User Management には、組み込みの認証機能が用意されており、独自の認証プロバイダーと接続する機能も備えています。User Management は、認証リクエストを受け取ると（ユーザーがログインを試みるなど）、認証プロバイダーにユーザー情報を渡して認証を行います。User Management は、ユーザーの認証後に認証プロバイダーから結果を受け取ります。
 
 次の図は、ログインを試みるエンドユーザー、User Management、および認証プロバイダー間のやり取りを示しています。
 
@@ -62,7 +62,7 @@ User Management には、組み込みの認証機能が用意されており、�
  <tbody>
   <tr>
    <td><p>1</p></td>
-   <td><p>ユーザーが User Management を呼び出すサービスにログインしようとします。 ユーザーはユーザー名とパスワードを指定します。 </p></td>
+   <td><p>ユーザーが User Management を呼び出すサービスにログインしようとします。ユーザーはユーザー名とパスワードを指定します。 </p></td>
   </tr>
   <tr>
    <td><p>2</p></td>
@@ -91,25 +91,25 @@ User Management には、組み込みの認証機能が用意されており、�
 
 **ディレクトリ管理について**
 
-User Management は、LDAP ディレクトリへの接続をサポートするディレクトリサービスプロバイダ (DirectoryManagerService) と併せてパッケージ化されます。 組織で LDAP 以外のリポジトリを使用してユーザーレコードを保存する場合、リポジトリーで使用する独自のディレクトリサービスプロバイダーを作成できます。
+User Management は、LDAP ディレクトリへの接続をサポートするディレクトリサービスプロバイダ (DirectoryManagerService) と併せてパッケージ化されます。組織で LDAP 以外のリポジトリを使用してユーザーレコードを保存する場合、リポジトリーで使用する独自のディレクトリサービスプロバイダーを作成できます。
 
-ディレクトリサービスプロバイダーは、User Management のリクエスト時に、ユーザーストアからレコードを取得します。 User Management は、パフォーマンスを向上させるために、ユーザーおよびグループのレコードをデータベースに定期的にキャッシュします。
+ディレクトリサービスプロバイダーは、User Management のリクエスト時に、ユーザーストアからレコードを取得します。User Management は、パフォーマンスを向上させるために、ユーザーおよびグループのレコードをデータベースに定期的にキャッシュします。
 
-ディレクトリサービスプロバイダーを使用して、User Management データベースとユーザーストアを同期できます。 このステップでは、すべてのユーザーディレクトリ情報と、すべてのユーザーレコードとグループレコードが最新の状態に保たれます。
+ディレクトリサービスプロバイダーを使用して、User Management データベースとユーザーストアを同期できます。このステップでは、すべてのユーザーディレクトリ情報と、すべてのユーザーレコードとグループレコードが最新の状態に保たれます。
 
-また、DirectoryManagerService では、ドメインを作成および管理する機能を提供します。 ドメインは、異なるユーザーベースを定義します。 ドメインの境界は、通常、組織の構造やユーザーストアの設定方法に従って定義されます。 User Management ドメインは、認証プロバイダーおよびディレクトリサービスプロバイダーが使用する設定を提供します。
+また、DirectoryManagerService では、ドメインを作成および管理する機能を提供します。ドメインは、異なるユーザーベースを定義します。ドメインの境界は、通常、組織の構造やユーザーストアの設定方法に従って定義されます。User Management ドメインは、認証プロバイダーおよびディレクトリサービスプロバイダーが使用する設定を提供します。
 
-User Management が書き出す設定 XML で、属性値が `Domains` のルートノードには、User Management 用に定義された各ドメインの XML 要素が含まれます。 これらの各要素には、特定のサービスプロバイダーに関連付けられたドメインの側面を定義する他の要素が含まれます。
+User Management が書き出す設定 XML で、属性値が `Domains` のルートノードには、User Management 用に定義された各ドメインの XML 要素が含まれます。これらの各要素には、特定のサービスプロバイダーに関連付けられたドメインの側面を定義する他の要素が含まれます。
 
 **objectSID の値について**
 
-Active Directory を使用する場合、 `objectSID` の値は、複数のドメインで一意の属性ではありません。 この値は、オブジェクトのセキュリティ識別情報を格納しています。 複数ドメイン環境（ドメインのツリーなど）では、 `objectSID` の値は異なる場合があります。
+Active Directory を使用する場合、 `objectSID` の値は、複数のドメインで一意の属性ではありません。この値は、オブジェクトのセキュリティ識別情報を格納しています。複数ドメイン環境（ドメインのツリーなど）では、 `objectSID` の値は異なる場合があります。
 
-`objectSID` 値は、ある Active Directory ドメインから別のドメインにオブジェクトが移動された場合に変更されます。 オブジェクトによっては、ドメイン内のどこにいても同じ`objectSID`値を持つものがあります。例えば、BUILTIN\Administrators、BUILTIN\Power Users などのグループは、ドメインに関係なく同じ `objectSID` 値を持ちます。これらの `objectSID` 値はよく知られています。
+`objectSID` 値は、ある Active Directory ドメインから別のドメインにオブジェクトが移動された場合に変更されます。オブジェクトによっては、ドメイン内のどこにいても同じ`objectSID`値を持つものがあります。例えば、BUILTIN\Administrators、BUILTIN\Power Users などのグループは、ドメインに関係なく同じ `objectSID` 値を持ちます。これらの `objectSID` 値はよく知られています。
 
 ## ユーザーの追加 {#adding-users}
 
-Directory Manager Service API（Java および web サービス）を使用すると、ユーザーをプログラムで AEM Forms に追加できます。 ユーザーを追加した後、ユーザーを必要とするサービス操作を実行する際に、そのユーザーを使用できます。 例えば、新しいユーザーにタスクを割り当てることができます。
+Directory Manager Service API（Java および web サービス）を使用すると、ユーザーをプログラムで AEM Forms に追加できます。ユーザーを追加した後、ユーザーを必要とするサービス操作を実行する際に、そのユーザーを使用できます。例えば、新しいユーザーにタスクを割り当てることができます。
 
 ### 手順の概要 {#summary-of-steps}
 
@@ -131,7 +131,7 @@ Directory Manager サービスの操作をプログラムで実行する前に�
 
 **ユーザー情報の定義**
 
-Directory Manager Service API を使用して新しいユーザーを追加する場合は、そのユーザーの情報を定義してください。 通常、新しいユーザーを追加する場合、次の値を定義します。
+Directory Manager Service API を使用して新しいユーザーを追加する場合は、そのユーザーの情報を定義してください。通常、新しいユーザーを追加する場合、次の値を定義します。
 
 * **ドメイン名**：ユーザーが属するドメイン（例：`DefaultDom`）。
 * **ユーザー識別情報の値**：ユーザーの識別情報の値（例： `wblue`）。
@@ -142,11 +142,11 @@ Directory Manager Service API を使用して新しいユーザーを追加す�
 
 **AEM Forms へのユーザーの追加**
 
-ユーザー情報を定義した後、そのユーザーを AEM Forms に追加できます。 ユーザーを追加するには、`DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出してください。
+ユーザー情報を定義した後、そのユーザーを AEM Forms に追加できます。ユーザーを追加するには、`DirectoryManagerServiceClient` オブジェクトの `createLocalUser` メソッドを呼び出してください。
 
 **ユーザーが追加されたことを確認**
 
-ユーザーが追加されたことを確認することにより、問題が発生しなかったことを確認できます。 ユーザー識別情報の値を使用して、新しいユーザーを見つけます。
+ユーザーが追加されたことを確認することにより、問題が発生しなかったことを確認できます。ユーザー識別情報の値を使用して、新しいユーザーを見つけます。
 
 **関連トピック**
 
@@ -226,7 +226,7 @@ Directory Manager サービス API（web サービス）を使用してユーザ
 1. DirectoryManagerService クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`?blob=mtom` を指定するようにしてください。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`?blob=mtom` を指定するようにしてください。
    * `DirectoryManagerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -355,7 +355,7 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 1. DirectoryManagerService クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `DirectoryManagerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`blob=mtom.` を指定してください
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して`DirectoryManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を 指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DirectoryManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。`blob=mtom.` を指定してください
    * `DirectoryManagerServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
@@ -369,7 +369,7 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
    * コンストラクターを使用して `PrincipalSearchFilter` オブジェクトを作成します。
    * ユーザー ID の値を設定するには、`PrincipalSearchFilter` オブジェクトの `userId` フィールドに文字列値を入力します。
-   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、`MyArrayOfUser` コレクションオブジェクト（各要素は `User` オブジェクト）を返します。`MyArrayOfUser` コレクションを反復処理して、ユーザーを特定します。 `MyArrayOfUser` コレクションオブジェクトから取得した `User` オブジェクトは、ユーザーの削除に使用されます。
+   * `DirectoryManagerServiceClient` オブジェクトの `findPrincipals` メソッドを呼び出し、`PrincipalSearchFilter` オブジェクトを渡します。このメソッドは、`MyArrayOfUser` コレクションオブジェクト（各要素は `User` オブジェクト）を返します。`MyArrayOfUser` コレクションを反復処理して、ユーザーを特定します。`MyArrayOfUser` コレクションオブジェクトから取得した `User` オブジェクトは、ユーザーの削除に使用されます。
 
 1. AEM Forms からユーザーを削除します。
 
@@ -385,7 +385,7 @@ Directory Manager Service API（web サービス）を使用してユーザー�
 
 ## グループの作成 {#creating-groups}
 
-Directory Manager Service API（Java および web サービス）を使用して、プログラムによって AEM Forms グループを作成できます。 グループを作成したらそのグループを使用して、グループを必要とするサービス操作を実行できます。 例えば、ユーザーを新規グループに割り当てることができます（[ユーザーとグループの管理](users.md#managing-users-and-groups)を参照）。
+Directory Manager Service API（Java および web サービス）を使用して、プログラムによって AEM Forms グループを作成できます。グループを作成したらそのグループを使用して、グループを必要とするサービス操作を実行できます。例えば、ユーザーを新規グループに割り当てることができます（[ユーザーとグループの管理](users.md#managing-users-and-groups)を参照）。
 
 ### 手順の概要 {#summary_of_steps-2}
 
@@ -416,7 +416,7 @@ Directory Manager サービスの操作をプログラムで実行する前に�
 
 **グループが存在するかどうかを判断する**
 
-グループを作成する場合は、そのグループが同じドメインに存在しないことを確認します。 つまり、2 つのグループが同じドメイン内で同じ名前を持つことはできません。 このタスクを実行するには、検索を実行し、2 つの値に基づいて検索結果をフィルタリングします。 プリンシパルタイプを `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` に設定して、グループのみが返されるようにします。 また、ドメイン名を必ず指定してください。
+グループを作成する場合は、そのグループが同じドメインに存在しないことを確認します。つまり、2 つのグループが同じドメイン内で同じ名前を持つことはできません。このタスクを実行するには、検索を実行し、2 つの値に基づいて検索結果をフィルタリングします。プリンシパルタイプを `com.adobe.idp.um.api.infomodel.Principal.PRINCIPALTYPE_GROUP` に設定して、グループのみが返されるようにします。また、ドメイン名を必ず指定してください。
 
 **グループの作成**
 
@@ -428,7 +428,7 @@ Directory Manager サービスの操作をプログラムで実行する前に�
 
 **グループでのアクションの実行**
 
-グループを作成した後、そのグループを使用してアクションを実行できます。 例えば、グループにユーザーを追加できます。グループにユーザーを追加するには、ユーザーとグループの両方で一意の ID 値を取得します。 これらの値を `addPrincipalToLocalGroup` メソッドに渡します。
+グループを作成した後、そのグループを使用してアクションを実行できます。例えば、グループにユーザーを追加できます。グループにユーザーを追加するには、ユーザーとグループの両方で一意の ID 値を取得します。これらの値を `addPrincipalToLocalGroup` メソッドに渡します。
 
 **関連トピック**
 
@@ -692,7 +692,7 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
 1. AuthorizationManagerService クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `AuthorizationManagerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AuthorizationManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AuthorizationManagerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AuthorizationManagerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
    * `AuthorizationManagerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。

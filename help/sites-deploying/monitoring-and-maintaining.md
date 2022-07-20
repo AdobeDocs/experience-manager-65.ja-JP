@@ -15,7 +15,7 @@ exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 source-git-commit: 83383d46a4200eb3d21deee15c71032314694860
 workflow-type: tm+mt
 source-wordcount: '5866'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -153,7 +153,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 さらに、コンソールでは、バージョンに関して次のような有益な情報が提供されます。
 
 * `V 1.0`：バージョン番号。
-* `V 1.0.1`&#42;:星は、バージョンが現在のバージョンであることを示します。
+* `V 1.0.1`&#42;：星マークは、バージョンが最新であることを示します。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`：バージョンの日付。
 
@@ -1071,7 +1071,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 >* [スレッドダンプ](https://helpx.adobe.com/jp/experience-manager/kb/TakeThreadDump.html)
 >* [メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)
 >* [ビルトインプロファイラーによる分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeUsingBuiltInProfiler.html)
->* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+>* [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
 

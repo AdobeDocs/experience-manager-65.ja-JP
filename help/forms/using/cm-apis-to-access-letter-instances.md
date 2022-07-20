@@ -38,7 +38,7 @@ Correspondence Management は API を使用して、LetterInstanceService サー
 >[!NOTE]
 >
 >LetterInstanceService は OSGI サービスであり、そのインスタンスは Java クラスの @Reference を使用して、
->または JSP の sling.getService(LetterInstanceService. クラス）を使用して取得できます。
+>または JSP の sling.getService(LetterInstanceService.クラス）を使用して取得できます。
 
 ### getAllLetterInstances の使用 {#using-nbsp-getallletterinstances}
 

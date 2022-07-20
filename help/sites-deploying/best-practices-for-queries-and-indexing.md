@@ -121,7 +121,7 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 **開発時**
 
-`oak.queryLimitInMemory` の低しきい値（例： 10000）と Oak を設定します。`queryLimitReads`（例：UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
+`oak.queryLimitInMemory` の低しきい値（例：10000）と Oak を設定します。`queryLimitReads`（例：UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは I/O が増加し、アプリケーションの全体的なパフォーマンスに悪影響が生じます。上述のような制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
@@ -215,7 +215,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 ### JCR クエリチートシート {#jcrquerycheatsheet}
 
-効率的な JCR クエリとインデックス定義を作成できるようにするため、開発時に [JCR クエリチートシート](assets/JCR_query_cheatsheet-v1.1.pdf)をダウンロードして参照用として使用できます。これには QueryBuilder、XPath、SQL-2 のクエリの例が収録されていて、クエリのパフォーマンスの点で異なる動作をする複数のシナリオに対応できます。 また、Oak インデックスの作成またはカスタマイズ方法に関する推奨事項も収録されています。 このチートシートの内容は、AEM 6.5 および AEM as a Cloud Service に適用されます。
+効率的な JCR クエリとインデックス定義を作成できるようにするため、開発時に [JCR クエリチートシート](assets/JCR_query_cheatsheet-v1.1.pdf)をダウンロードして参照用として使用できます。これには QueryBuilder、XPath、SQL-2 のクエリの例が収録されていて、クエリのパフォーマンスの点で異なる動作をする複数のシナリオに対応できます。また、Oak インデックスの作成またはカスタマイズ方法に関する推奨事項も収録されています。このチートシートの内容は、AEM 6.5 および AEM as a Cloud Service に適用されます。
 
 ## 再インデックス {#re-indexing}
 
@@ -398,7 +398,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 #### Lucene プロパティインデックスの再インデックス {#re-indexing-lucene-property-indexes}
 
 * Lucene プロパティインデックスの[再インデックスをおこなうには、oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) を使用します。
-* Lucene プロパティインデックスで async-reindex プロパティを true にLucene プロパティインデックス
+* Lucene プロパティインデックスで async-reindex プロパティを true に  Lucene プロパティインデックス
 
    * `[oak:queryIndexDefinition]@reindex-async=true`
 
@@ -472,7 +472,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 2b.（2a）で開始されたプロセスが、CSV で定義されているバイナリノードにデータストアで直接アクセスし、テキストを抽出します。
 
-2c. 抽出されたテキストが、Oak の再インデックスプロセス（3a）で取り込み可能な形式でファイルシステムに格納されます。
+2c.抽出されたテキストが、Oak の再インデックスプロセス（3a）で取り込み可能な形式でファイルシステムに格納されます。
 
 事前抽出されたテキストは、CSV 内でバイナリのフィンガープリントによって識別されます。バイナリファイルが同じである場合、事前抽出された同じテキストを AEM インスタンス間で使用できます。通常、AEM パブリッシュは AEM オーサーのサブセットなので、多くの場合、AEM オーサーから事前抽出されたテキストを使用して、AEM パブリッシュの再インデックスも実行できます（抽出されたテキストファイルに対するファイルシステムアクセス権を AEM パブリッシュが持っていることを前提とします）。
 

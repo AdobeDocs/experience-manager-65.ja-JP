@@ -1,7 +1,7 @@
 ---
 title: Postscript から PDF ドキュメントへの変換
 seo-title: Converting Postscript to PDF Documents
-description: Distiller サービスを使用して、PostScript®、Encapsulated PostScript（EPS）および PRN ファイルを、ネットワーク上でコンパクトで信頼性の高い、より安全な PDF ファイルに変換します。 Distiller サービスは、Java API および web サービス API を使用して、大量の印刷ドキュメントを請求書や明細書などの電子ドキュメントに変換します。
+description: Distiller サービスを使用して、PostScript®、Encapsulated PostScript（EPS）および PRN ファイルを、ネットワーク上でコンパクトで信頼性の高い、より安全な PDF ファイルに変換します。Distiller サービスは、Java API および web サービス API を使用して、大量の印刷ドキュメントを請求書や明細書などの電子ドキュメントに変換します。
 seo-description: Use the Distiller service to convert PostScript®, Encapsulated PostScript (EPS), and PRN files to compact, reliable, and more secure PDF files over a network. The Distiller service converts large volumes of print documents to electronic documents, such as invoices and statements using the Java API and Web Service API.
 uuid: 2143f406-1fdd-4551-a738-1a8388f8d478
 contentOwner: admin
@@ -58,15 +58,15 @@ Distiller® サービスは、PostScript®、Encapsulated PostScript（EPS）お
 
 **Distiller サービスクライアントの作成**
 
-プログラムで Distiller サービス操作を実行する前に、Distiller サービスクライアントを作成する必要があります。 Java API を使用している場合は、`DistillerServiceClient` オブジェクトを作成します。 Web サービス API を使用している場合、`DistillerServiceService` オブジェクトを作成します。
+プログラムで Distiller サービス操作を実行する前に、Distiller サービスクライアントを作成する必要があります。Java API を使用している場合は、`DistillerServiceClient` オブジェクトを作成します。Web サービス API を使用している場合、`DistillerServiceService` オブジェクトを作成します。
 
 **変換するファイルの取得**
 
-変換するファイルを取得する必要があります。 例えば、PS ファイルを PDF ドキュメントに変換するには、PS ファイルを取得する必要があります。
+変換するファイルを取得する必要があります。例えば、PS ファイルを PDF ドキュメントに変換するには、PS ファイルを取得する必要があります。
 
 **PDF 作成操作の呼び出し**
 
-サービスクライアントを作成した後で、PDF 作成の操作を呼び出すことができます。 この操作を行うには、変換するドキュメントに関する情報（変換先のドキュメントのパスを含む）が必要です。
+サービスクライアントを作成した後で、PDF 作成の操作を呼び出すことができます。この操作を行うには、変換するドキュメントに関する情報（変換先のドキュメントのパスを含む）が必要です。
 
 **PDF ドキュメントの保存**
 
@@ -187,7 +187,7 @@ Distiller Service API（Web サービス）を使用して、PostScript ファ�
 1. PDF ドキュメントを保存します。
 
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。署名済み PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `CreatePDF2` メソッド（出力パラメーター）によって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。 `BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列に入力します。
+   * `CreatePDF2` メソッド（出力パラメーター）によって返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` データメンバーの値を取得して、バイト配列に入力します。
    * コンストラクターを使用して `System.IO.BinaryWriter` オブジェクトを渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 

@@ -12,7 +12,7 @@ exl-id: 3567bd28-73aa-401a-8aa9-a62a99d2a613
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -25,18 +25,18 @@ AEM の汎用 e コマースは、標準インストールの一部として提�
 |  | CIF オンプレミス | CIF クラウド |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | サポートされている AEM バージョン | AEM オンプレミスまたは AMS 6.x | AEM AMS 6.4 および 6.5 |
-| バックエンド | - AEM、Java <br> - モノリシック統合、ビルド前のマッピング（テンプレート）<br> - JCR リポジトリ | - Adobe Commerce <br>- Java と JavaScript <br>- JCR リポジトリにコマースデータが保存されていません |
+| バックエンド | - AEM、Java <br> - モノリシック統合、ビルド前のマッピング（テンプレート）<br> - JCR リポジトリ | - Adobe Commerce <br>- Java と JavaScript <br>- JCR リポジトリにはコマースデータは保存されません |
 | フロントエンド | AEM サーバー側によってページをレンダリング | 混在型ページアプリケーション（ハイブリッドレンダリング） |
 | 製品カタログ | - AEMでの製品インポーター、エディター、キャッシュ <br>- AEM またはプロキシページを含む通常のカタログ | - 製品のインポートなし <br>- 汎用テンプレート <br> - コネクタを介したオンデマンドデータ |
 | スケーラビリティ | - 数億個までの製品をサポート可能（ユースケースによって異なる） <br> - Dispatcher でのキャッシュ | - ボリューム制限なし <br>- Dispatcher または CDN でのキャッシュ |
-| 標準化されたデータモデル | 不可 | はい、Adobe Commerce GraphQL スキーマ |
-| 入手方法 | はい：<br> - SAP Commerce Cloud（AEM 6.4 と Hybris 5（デフォルト）をサポートし、Hybris 4 との互換性を維持するように更新された拡張機能）<br>- Salesforce Commerce Cloud（AEM 6.4 をサポートする オープンソースコネクタ） | GitHub を通じてオープンソースで使用可能。<br> Adobe Commerce(2.3.2（デフォルト）をサポートし、2.3.1 との互換性 )。 |
+| 標準化されたデータモデル | 不可 | 可、Adobe Commerce GraphQL スキーマ |
+| 入手方法 | 可：<br> - SAP Commerce Cloud（AEM 6.4 と Hybris 5（デフォルト）をサポートし、Hybris 4 との互換性を維持するように更新された拡張機能）<br>- Salesforce Commerce Cloud（AEM 6.4 をサポートする オープンソースコネクタ） | GitHub を通じてオープンソースで使用可能。<br> Adobe Commerce（2.3.2（デフォルト）をサポート、2.3.1 と互換性あり） |
 | 用途 | 限定的なユースケース：小規模で静的なカタログのインポートが必要なシナリオの場合 | ほとんどの使用例で好ましいソリューション |
 
 
 ## その他の実装のデプロイ {#deploying-other-implementations}
 
-AEMおよびAdobe Commerceの場合は、 [AEMとAdobe Commerceの統合](/help/commerce/cif/integrating/magento.md) の使用 [コマース統合フレームワーク](/help/commerce/cif/introduction.md).
+AEM と Adobe Commerce については、[コマース統合フレームワーク](/help/commerce/cif/integrating/magento.md)を使用した [AEM と Adobe Commerce の統合](/help/commerce/cif/introduction.md)を参照してください。
 
 >[!NOTE]
 >

@@ -24,5 +24,5 @@ AEM コミュニティは、Marketing Cloud と AEM の統合に関する一連�
 公開されている内容のリストを次に示します。
 
 * [Adobe Experience Manager Web ページでのアクティベーションルールの使用](https://helpx.adobe.com/jp/experience-manager/using/dtm.html)
-* [DTM を使用した AEM と Adobe Analytics および Target の統合](https://helpx.adobe.com/jp/experience-manager/using/integrate-digital-marketing-solutions.html)
+* [DTM を使用した AEM と Adobe Analytics および Target の統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)
 * [ニュースレターを作成するための Adobe Experience Manager と Adobe Campaign Standard の統合](https://helpx.adobe.com/jp/experience-manager/using/aem_campaign.html)

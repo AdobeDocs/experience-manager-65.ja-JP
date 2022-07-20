@@ -243,7 +243,7 @@ Forms Service API（Java）を使用して、カスタムツールバーを含�
    * HTML の実行時オプションが格納された `HTMLRenderSpec` オブジェクト。
    * `HTTP_USER_AGENT` ヘッダー値（例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）を指定する文字列値。
    * HTML フォームのレンダリングに必要な URI 値が格納された `URLSpec` オブジェクト。
-   * 添付ファイルを格納する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターで、 フォームにファイルを添付しない場合は `null` を指定できます。
+   * 添付ファイルを格納する `java.util.HashMap` オブジェクト。これはオプションのパラメーターで、 フォームにファイルを添付しない場合は `null` を指定できます。
 
    `renderHTMLForm` メソッドは、 クライアント web ブラウザーに書き込む必要があるフォームデータストリームを含んだ `FormsResult` オブジェクトを返します。
 
@@ -295,7 +295,7 @@ Forms サービス API（web サービス）を使用して、カスタムツー
 
    * フォームデザイン名を指定する文字列値で、ファイル名の拡張子も含まれます。Forms アプリケーションの一部であるフォームデザインを参照する場合は、必ず次のような完全なパスを指定します。`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`
    * HTML の環境設定タイプを指定する `TransformTo` enum 値。例えば、Internet Explorer 5.0 以降の動的 HTML と互換性のある HTML フォームをレンダリングするには、`TransformTo.MSDHTML` を指定します。
-   * フォームと結合するデータを含んだ `BLOB` オブジェクト。 データを結合しない場合は、 `null` を渡します。
+   * フォームと結合するデータを含んだ `BLOB` オブジェクト。データを結合しない場合は、 `null` を渡します。
    * HTML の実行時オプションが格納されている `HTMLRenderSpec` オブジェクト。
    * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例：`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322`)）。この値を設定しない場合は、空の文字列を渡します。
    * HTML フォームのレンダリングに必要な URI 値を格納する `URLSpec` オブジェクト。
@@ -303,7 +303,7 @@ Forms サービス API（web サービス）を使用して、カスタムツー
    * `renderHTMLForm` メソッドでデータが入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。このパラメーター値には、レンダリングされたフォームが格納されます。
    * `renderHTMLForm` メソッドで入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクト。このパラメーターには、出力 XML データが格納されます。
    * `renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.LongHolder` オブジェクト。この引数には、フォームのページ数が格納されます。
-   * `renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。 この引数には、ロケール値が格納されます。
+   * `renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数には、ロケール値が格納されます。
    * `renderHTMLForm` メソッドでデータが入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。この引数には、使用する HTML レンダリング値が格納されます。
    * この操作の結果を格納する空の `com.adobe.idp.services.holders.FormsResultHolder` オブジェクト。
 

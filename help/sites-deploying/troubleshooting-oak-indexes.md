@@ -31,7 +31,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 時間がかかっているインデックス作成を最初に検出するには、`IndexStats` JMX MBean を確認する必要があります。影響を受ける AEM インスタンスで、次の手順を実行します。
 
-1. Web コンソールを開いて「JMX」タブをクリックするか、https://&lt;ホスト>:&lt;ポート>/system/console/jmx（例：[https://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）に移動します。
+1. Web コンソールを開いて「JMX」タブをクリックするか、https://&lt;ホスト>:&lt;ポート>/system/console/jmx（例：[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）に移動します。
 1. `IndexStats` Mbean に移動します。
 1. 「`async`」および「`fulltext-async`」の `IndexStats` MBean を開きます。
 
@@ -60,7 +60,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 1. Apache Sling Scheduler が非同期インデックス作成に使用する、分離された新しいスレッドプールを定義します。
 
-   * 影響を受ける AEM インスタンスで、AEM OSGi web コンソール／OSGi／設定／Apache Sling Scheduler に移動するか、https://&lt;ホスト>:&lt;ポート>/system/console/configMgr（例：[https://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
+   * 影響を受ける AEM インスタンスで、AEM OSGi web コンソール／OSGi／設定／Apache Sling Scheduler に移動するか、https://&lt;ホスト>:&lt;ポート>/system/console/configMgr（例：[http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)）に移動します。
    * 「Allowed Thread Pools」フィールドに「oak」という値でエントリを追加します。
    * 右下の「Save」をクリックして変更内容を保存します。
 
@@ -68,7 +68,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 1. Apache Sling Scheduler の新しいスレッドプールが登録され、Apache Sling Scheduler のステータス web コンソールに表示されていることを確認します。
 
-   * AEM OSGi web コンソール／ステータス／Sling Scheduler に移動するか、https://&lt;ホスト>:&lt;ポート>/system/console/status-slingscheduler（例：[https://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler)）に移動します。
+   * AEM OSGi web コンソール／ステータス／Sling Scheduler に移動するか、https://&lt;ホスト>:&lt;ポート>/system/console/status-slingscheduler（例：[http://localhost:4502/system/console/status-slingscheduler](http://localhost:4502/system/console/status-slingscheduler)）に移動します。
    * 次のプールエントリが存在することを確認します。
 
       * ApacheSlingoak
@@ -80,7 +80,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 リポジトリに非常に多くの変更とコミットが短時間におこなわれた場合、監視キューがいっぱいになることによってインデックス作成が遅延することがあります。まず、監視キューがいっぱいかどうかを確認します。
 
-1. web コンソールに移動して「JMX」タブをクリックするか、https://&lt;ホスト>:&lt;ポート>/system/console/jmx（例：[https://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）に移動します。
+1. web コンソールに移動して「JMX」タブをクリックするか、https://&lt;ホスト>:&lt;ポート>/system/console/jmx（例：[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）に移動します。
 1. Oak リポジトリ統計 MBean を開き、いずれかの `ObservationQueueMaxLength` 値が 10,000 より大きいかどうかを確認します。
 
    * 通常の操作では、この最大値は（特に `per second` セクションでは）最終的に 0 になる必要があるので、`ObservationQueueMaxLength` の秒の指標が 0 であることを確認します。
@@ -142,7 +142,7 @@ AEM の内部インデックス作成プロセスでは、コンテンツを効�
 
 1. 停止する必要があるインデックス再作成レーンを制御する IndexStats MBean を識別します。
 
-   * AEM OSGi web コンソール／メイン／JMX、または https://&lt;ホスト>:&lt;ポート>/system/console/jmx（例：[https://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）に移動して、JMX コンソールから該当する IndexStats MBean に移動します。
+   * AEM OSGi web コンソール／メイン／JMX、または https://&lt;ホスト>:&lt;ポート>/system/console/jmx（例：[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）に移動して、JMX コンソールから該当する IndexStats MBean に移動します。
    * 停止するインデックス再作成レーン（`async`、`async-reindex`、 `fulltext-async`）にもとづいて IndexStats MBean を開きます。
 
       * 該当するレーンを識別し、IndexStats MBean インスタンスを特定するには、Oak インデックスの「async」プロパティを確認します。「async」プロパティにはレーン名が示されています（`async`、`async-reindex`、`fulltext-async` のいずれか）。

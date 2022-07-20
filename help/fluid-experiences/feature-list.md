@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Adobe Experience Manager の Fluid Experiences は、AEM Sites、AEM Dynamic Media、AEM Assets の強力な機能セットに基づいており、ヘッドレスコンテンツ配信のための堅牢なソリューションを提供します。
 
-AEM Fluid Experience は、ヘッドレス配信のユースケースにのみ対処するという点で、従来の AEM とは異なります。 ヘッドフルなコンテンツのオーサリングと配信および AEM のハイブリッドユースケースの強力なサポートは、[AEM Sites、Assets および Dynamic Media のフルソリューション](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/user-guide/home.html)で利用可能です。
+AEM Fluid Experience は、ヘッドレス配信のユースケースにのみ対処するという点で、従来の AEM とは異なります。ヘッドフルなコンテンツのオーサリングと配信および AEM のハイブリッドユースケースの強力なサポートは、[AEM Sites、Assets および Dynamic Media のフルソリューション](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/user-guide/home.html)で利用可能です。
 
 AEM Fluid Experience の機能と、関連するサポートドキュメントへのリンクを次の表に示します。
 
@@ -26,7 +26,7 @@ AEM Fluid Experience の機能と、関連するサポートドキュメント�
 
 >[!NOTE]
 >
->AEM Fluid Experience は AEM 機能のサブセットです。 これらのテーブルでリンクされている機能には、AEM には含まれているものの、AEM Fluid Experience には含まれていない追加の機能が含まれる場合があります。
+>AEM Fluid Experience は AEM 機能のサブセットです。これらのテーブルでリンクされている機能には、AEM には含まれているものの、AEM Fluid Experience には含まれていない追加の機能が含まれる場合があります。
 
 ## リポジトリーの機能 {#repository-features}
 
@@ -49,7 +49,7 @@ AEM Fluid Experience の機能と、関連するサポートドキュメント�
 |---|
 | [HTTP API](/help/assets/mac-api-assets.md) |
 | [構造化コンテンツモデル](/help/assets/content-fragments/content-fragments.md) |
-| [コンテンツサービス](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
+| [コンテンツサービス](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html) |
 | [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md) |
 | 構造化コンテンツ用の HTTP API（読み取り） |
 | 構造化コンテンツ用の HTTP API（CRUD） |
@@ -83,9 +83,9 @@ AEM Fluid Experience の機能と、関連するサポートドキュメント�
 ## 詳しく見る {#learn-more}
 
 * [ヘッドレスユースケース向けの Fluid Experience](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-headless-usecases.html)
-* [AEM コンテンツサービス：概要、理由、方法](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [コンテンツサービスの使用](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
+* [AEM コンテンツサービス：概要、理由、方法](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
+* [コンテンツサービスの使用](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 * [モバイルアプリの開発](https://docs.adobe.com/content/help/ja/experience-manager-64/mobile/developing/developing-content-services.html)
-* [サードパーティアクセスに関する FAQ](https://helpx.adobe.com/jp/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
-* [どこでも利用できる Fluid Experience](https://helpx.adobe.com/jp/experience-manager/using/using-sling-apis.html)
+* [サードパーティアクセスに関する FAQ](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use/part7.html)
+* [どこでも利用できる Fluid Experience](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)
 * [Sling API の使用](https://helpx.adobe.com/experience-manager/using/using-sling-apis.html)

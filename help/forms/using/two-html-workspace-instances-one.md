@@ -26,7 +26,7 @@ AEM Forms 管理者はワークスペースをカスタマイズして、2 つ�
 
 1. AEM Forms ワークスペースの dev パッケージをサーバーにインストールします。作成方法については、[dev パッケージ](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)を参照してください。
 1. `https://'[server]:[port]'/lc/crx/de/index.jsp` にアクセスして、管理者として CRXDE Lite にログインします。
-1. /content の node ws をコピーし、それを /content にペーストします。node の名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。このノードのプロパティで、`sling:resourceType` の値を ws2 に変更します。 「**[!UICONTROL すべて保存]**」をクリックします。
+1. /content の node ws をコピーし、それを /content にペーストします。node の名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。このノードのプロパティで、`sling:resourceType` の値を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
 
 1. /libs にあるフォルダー ws を /apps にペーストします。このフォルダーの名前を ws2 に変更します。「**[!UICONTROL すべて保存]**」をクリックします。
 1. `GET.jsp` にある `/apps/ws2` で、次のコード変更を行います。次を

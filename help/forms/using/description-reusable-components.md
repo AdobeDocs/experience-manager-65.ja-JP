@@ -19,7 +19,7 @@ ht-degree: 100%
 
 # 再利用可能なコンポーネントの説明 {#description-of-reusable-components}
 
-AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-html-ws-components-web.md)コンポーネントで構成されており、これらのコンポーネントは CRX™ 内の固有の[フォルダー構造](/help/forms/using/folder-structure.md)内に整理されています。各コンポーネントには、フォルダー構造内の指定場所にあるモデル、表示、テンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JavaScript オブジェクトがあります。 再利用可能なコンポーネントの完全なリストを、それらの構成ファイル名と依存関係と共に、以下に示します。
+AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-html-ws-components-web.md)コンポーネントで構成されており、これらのコンポーネントは CRX™ 内の固有の[フォルダー構造](/help/forms/using/folder-structure.md)内に整理されています。各コンポーネントには、フォルダー構造内の指定場所にあるモデル、表示、テンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JavaScript オブジェクトがあります。再利用可能なコンポーネントの完全なリストを、それらの構成ファイル名と依存関係と共に、以下に示します。
 
 ## TaskList {#tasklist}
 
@@ -455,7 +455,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。 CategoryList は、どのカテゴリのスタートポイントが表示されるかについての情報にアクセスします。StartPointList を独立して使用するには、CategoryList からのイベントトリガーをシミュレートします。
+>StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。CategoryList は、どのカテゴリのスタートポイントが表示されるかについての情報にアクセスします。StartPointList を独立して使用するには、CategoryList からのイベントトリガーをシミュレートします。
 
 ## StartPoint {#startpoint}
 

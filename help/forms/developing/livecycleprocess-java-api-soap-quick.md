@@ -20,7 +20,7 @@ ht-degree: 100%
 
 # LiveCycleProcess Java API（SOAP）クイックスタート {#livecycleprocess-java-api-soap-quick-start}
 
-プロセスで Java API（SOAP）クイックスタートを使用できます。 *プロセスインスタンス*&#x200B;は、Invocation API などの呼び出しメソッドによって、またはワークスペース内から開始された特定のプロセスのオカレンスです。
+プロセスで Java API（SOAP）クイックスタートを使用できます。*プロセスインスタンス*&#x200B;は、Invocation API などの呼び出しメソッドによって、またはワークスペース内から開始された特定のプロセスのオカレンスです。
 
 [クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 

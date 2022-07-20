@@ -27,13 +27,13 @@ Application Manager サービスで Java API クイックスタート（SOAP）�
 
 >[!NOTE]
 >
->Application Manager API は、AEM Forms LCA ファイルのみをサポートしています。 LiveCycle ES2 および ES4 の LCA ファイルはサポートしていません。
+>Application Manager API は、AEM Forms LCA ファイルのみをサポートしています。LiveCycle ES2 および ES4 の LCA ファイルはサポートしていません。
 
 AEM Forms の操作は、AEM Forms の強く型付けされた API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->AEM Forms のプログラミングにある Java API（SOAP）クイックスタートは Forms に基づいており、Unix などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>AEM Forms のプログラミングにある Java API（SOAP）クイックスタートは Forms に基づいており、Unix などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされるパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用したアプリケーションのデプロイ {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 

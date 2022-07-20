@@ -30,11 +30,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->AEM Forms によるプログラミングにあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされる Forms Server に基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>AEM Forms によるプログラミングにあるクイックスタートは、JBoss Application Server とMicrosoft Windows オペレーティングシステムにデプロイされる Forms Server に基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用したフォームデータの読み込み {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-次の Java コードの例では、データを PDF フォームに読み込みます。 データは、*Loan_data.xml* という名前の XML ファイルにあり、PDF フォームは *ResultLoanForm.pdf* という名前の PDF ファイルとして保存されます（[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
+次の Java コードの例では、データを PDF フォームに読み込みます。データは、*Loan_data.xml* という名前の XML ファイルにあり、PDF フォームは *ResultLoanForm.pdf* という名前の PDF ファイルとして保存されます（[フォームデータの読み込み](/help/forms/developing/importing-exporting-data.md#importing-form-data)を参照）。
 
 ```java
  /*
@@ -136,7 +136,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用したフォームデータの書き出し {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-次の Java コードの例では、データを PDF フォームから書き出します。 フォームデータは、*Loan_data.xml* という名前の XML ファイルとして保存されます（[フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data)を参照）。
+次の Java コードの例では、データを PDF フォームから書き出します。フォームデータは、*Loan_data.xml* という名前の XML ファイルとして保存されます（[フォームデータの書き出し](/help/forms/developing/importing-exporting-data.md#exporting-form-data)を参照）。
 
 ```java
  /*

@@ -7,7 +7,7 @@ exl-id: aef6ef00-993c-4252-b0ad-ddc4917beaf7
 source-git-commit: 6d2b7e341dcdedf3c000b9fb0ecd21722bdf2a27
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -118,7 +118,7 @@ java -Xmx4096m -jar aem-quickstart.jar -v -x crx2oak -xargs -- --load-profile <<
 
 * Java 7 を使用している場合は、`-XX:MaxPermSize=2048m`パラメーターを `-Xmx`パラメーターの直後に追加してください。
 
-crx2oak ツールの使用について詳しくは、[CRX2Oak 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。crx2oak ヘルパーの JAR は、必要に応じて手動でアップグレードできます。そのためには、クイックスタートを展開した後、手動で新しいバージョンに置き換えます。AEM インストールフォルダー内のヘルパー JAR ファイルの場所は次のとおりです。 `<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`。CRX2Oak 移行ツールの最新バージョンは、次の場所にあるAdobeリポジトリからダウンロードできます。 [https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
+crx2oak ツールの使用について詳しくは、[CRX2Oak 移行ツールの使用](/help/sites-deploying/using-crx2oak.md)を参照してください。crx2oak ヘルパーの JAR は、必要に応じて手動でアップグレードできます。そのためには、クイックスタートを展開した後、手動で新しいバージョンに置き換えます。AEM インストールフォルダー内のヘルパー JAR ファイルの場所は次のとおりです。`<aem-install>/crx-quickstart/opt/extensions/crx2oak.jar`。最新バージョンの CRX2Oak 移行ツールは、アドビリポジトリ（[https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)）からダウンロードできます。
 
 移行が正常に完了すると、ツールは終了コード 0 で終了します。さらに、AEM インストールディレクトリの `crx-quickstart/logs` にある `upgrade.log` ファイルで WARN および ERROR メッセージがないかどうかを確認してください。これらのメッセージは、移行中に発生した致命的ではないエラーを示している場合があります。
 
@@ -158,7 +158,7 @@ AEM 6.3 インストールでは新しく `FileDataStore` がデフォルトに�
 
 1. 以前のバージョンの S3 コネクタに関連する、`crx-quickstart/install` 内の jar を削除します。
 
-1. 最新リリースの 1.10.x S3 コネクタをからダウンロードします。 [https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)
+1. [https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) から 1.10.x S3 コネクタの最新リリースをダウンロードします。
 
 1. パッケージを一時フォルダーに抽出し、`jcr_root/libs/system/install` の内容を `crx-quickstart/install` フォルダーにコピーします。
 

@@ -1,19 +1,19 @@
 ---
 title: Adobe Experience Manager 6.5 Forms ガイド
 seo-title: AEM 6.5 Forms Guide
-description: このAEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開、および更新します。 アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、およびアダプティブフォームのオーサリングに関する詳細を確認します。
+description: この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
 source-git-commit: eb00c8004558b8809fb21d6d6e435d8837319b51
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # Adobe Experience Manager 6.5 Forms ガイド
 
-このAEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開、および更新します。 アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、およびアダプティブフォームのオーサリングに関する詳細を確認します。
+この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 
 ## 主な AEM 記事
 
