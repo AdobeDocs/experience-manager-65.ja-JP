@@ -1,5 +1,5 @@
 ---
-title: HTML5 フォームと PDF フォーム の機能の違い
+title: HTML5 フォームと PDF フォームの機能の違い
 seo-title: Feature differentiation between HTML5 forms and PDF forms
 description: HTML5 フォームと PDF フォームでサポートされている機能
 seo-description: Feature supported in HTML5 forms and PDF forms
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 ---
 
-# HTML5 フォームと PDF フォーム の機能の違い {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5 フォームと PDF フォームの機能の違い {#feature-differentiation-between-html-forms-and-pdf-forms}
 
 次の表では、HTML5 フォームと PDF フォームでサポートされている機能について説明します。
 
@@ -57,7 +57,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>ヘッダー／フッター </td>
-   <td>サポート対象 <br /> <br /> HTML5 モバイルフォームは改ページをサポートしていないため、ヘッダーとフッターが表示されるのは 1 度のみになります。ただし、レイアウトを設定することにより、モバイルフォームプレビュー内の複数の場所に表示させることができます。<br /> </td>
+   <td>サポート対象<br /> <br /> HTML5 モバイルフォームは改ページをサポートしていないため、ヘッダーとフッターが表示されるのは 1 度のみになります。ただし、レイアウトを設定することにより、モバイルフォームプレビュー内の複数の場所に表示させることができます。<br /> </td>
    <td>サポート対象</td>
   </tr>
   <tr>
