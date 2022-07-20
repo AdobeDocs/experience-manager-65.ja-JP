@@ -72,7 +72,7 @@ PostScript ファイルに変換する PDF ドキュメントを参照します�
 
 PDF ドキュメントを PostScript ファイルに変換する際に、作成する PostScript タイプを指定する実行時オプションを定義できます。例えば、レベル 3 の PostScript ファイルを定義できます。
 
-通常、生成される PostScript ファイルは、入力 PDF ドキュメントのサイズを反映します。`ShrinkToFit` オプション（ページに合わせて PostScript ファイルの出力を縮小する）を選択した場合、入力 PDF ドキュメントと生成された PostScript ファイルの間に違いはありません。`ShrinkToFit` オプションは、入力 PDF ドキュメントよりも小さいページサイズで出力することを選択した場合にのみ有効になります。 小さいページサイズを選択するには、`PageSize` オプションを定義します。また、`RotateAndCenter`オプションを `true` に設定して、正しい PostScript 出力を取得することをお勧めします。
+通常、生成される PostScript ファイルは、入力 PDF ドキュメントのサイズを反映します。`ShrinkToFit` オプション（ページに合わせて PostScript ファイルの出力を縮小する）を選択した場合、入力 PDF ドキュメントと生成された PostScript ファイルの間に違いはありません。`ShrinkToFit` オプションは、入力 PDF ドキュメントよりも小さいページサイズで出力することを選択した場合にのみ有効になります。小さいページサイズを選択するには、`PageSize` オプションを定義します。また、`RotateAndCenter`オプションを `true` に設定して、正しい PostScript 出力を取得することをお勧めします。
 
 同様に、`ExpandToFit` オプション（ページに合わせて PostScript ファイルの出力を拡張する）を選択した場合、入力 PDF ドキュメントよりも大きいページサイズで出力するように選択した場合にのみ有効になります。大きいページサイズを選択するには、`PageSize` オプションを定義します。また、`RotateAndCenter` オプションを `true` に設定して、正しい PostScript 出力を取得することをお勧めします。
 
@@ -121,7 +121,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 1. 変換の実行時オプションを設定します。
 
    * コンストラクターを呼び出して `ToPSOptionsSpec` オブジェクトを作成します。
-   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。 例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
+   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
 
 1. PDF ドキュメントを PostScript ファイルに変換します。
 
@@ -137,7 +137,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .ps であることを確認します。
    * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、 `Document` オブジェクトの内容をファイルにコピーします（必ず、`toPS2` メソッドから返された `Document` オブジェクトを使用します）。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](converting-pdf-postscript-image-files.md#summary-of-steps)
 
@@ -153,7 +153,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。必ず、WSDL 定義 `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1` を使用します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -162,14 +162,14 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
 1. Convert PDF クライアントを作成します。
 
    * デフォルトのコンストラクターを使用して `ConvertPdfServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress`コンストラクターを使用して `ConvertPdfServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービス（例：`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）に渡します。`lc_version` 属性を使用する必要はありません。 ただし、 `?blob=mtom` を指定ください。
-   *  `ConvertPdfServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `ConvertPdfServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。ただし、`?blob=mtom` を指定します。
+   * `ConvertPdfServiceClient.Endpoint.Binding` フィールドの値を取得して、`System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM forms ユーザー名を割り当てます。
+      * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `ConvertPdfServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PostScript ファイルに変換する PDF ドキュメントを参照します。
@@ -197,7 +197,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
 1. PostScript ファイルを保存します。
 
    * コンストラクターを呼び出して、`System.IO.FileStream` オブジェクトを作成します。PS ファイルの場所を表す文字列値を渡します。
-   * `encryptPDFUsingPassword` メソッドから返された `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得して、バイト配列に入力します。
+   * `encryptPDFUsingPassword` メソッドから返された `BLOB` オブジェクトのデータ内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得してバイト配列を入力します。
    * コンストラクターを呼び出し `System.IO.FileStream` オブジェクトを渡して、`System.IO.BinaryWriter` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出し、バイト配列を渡して、バイト配列の内容を PostScript ファイルに書き込ます。
 
@@ -234,7 +234,7 @@ PDF ドキュメントをサポートされている任意のタイプに変換�
 
 開発プロジェクトに必要なファイルを含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
-**変換 PDF クライアントの作成**
+**Convert PDF クライアントを作成**
 
 プログラムによって Convert PDF サービスの操作を実行する前に、Convert PDF サービスクライアントを作成する必要があります。Java API を使用している場合は、`ConvertPdfServiceClient` オブジェクトを作成します。Web サービス API を使用している場合は、`ConvertPDFServiceService` オブジェクトを作成します。
 
@@ -258,7 +258,7 @@ Convert PDF サービスが返すコレクションオブジェクトから画�
 
 **関連トピック**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -314,7 +314,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF ドキ�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。次の WSDL 定義を使用します。`http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1`
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/ConvertPDFService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
@@ -328,10 +328,10 @@ Convert PDF サービス API（web サービス）を使用して、PDF ドキ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * AEM Forms のユーザー名を `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに割り当てます。
+      * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
       * 対応するパスワード値を `ConvertPdfServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を `BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` を `BasicHttpBindingSecurity.Security.Mode` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変換する PDF ドキュメントを取得します。
 
