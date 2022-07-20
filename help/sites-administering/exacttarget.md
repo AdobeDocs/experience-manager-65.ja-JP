@@ -46,7 +46,7 @@ ExactTarget 設定は、クラウドサービスまたはツールを使用し�
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. ユーザー名とパスワードを入力し、API エンドポイント（例：**https://webservice.exacttarget.com/Service.asmx**）を選択します。
+1. ユーザー名とパスワードを入力し、API エンドポイント（例： **https://webservice.exacttarget.com/Service.asmx**）を選択します。
 1. 「**ExactTarget に接続」をクリックします。**&#x200B;接続に成功したら、成功ダイアログが表示されます。「**OK**」をクリックしてウィンドウを閉じます。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
