@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 2801ef5ec5ed7b01f4eb046baa439f6d5de56b75
+workflow-type: tm+mt
 source-wordcount: '3249'
 ht-degree: 100%
 
@@ -505,7 +505,7 @@ GitHub のコード
 
 * **名前**：`status`
 
-   * ``**型**：`String`
+   * **型**：`String`
 
    * **値**：`draft`、`enabled` または `disabled`
 
