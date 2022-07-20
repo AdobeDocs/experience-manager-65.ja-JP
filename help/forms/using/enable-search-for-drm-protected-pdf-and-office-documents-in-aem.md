@@ -20,7 +20,7 @@ ht-degree: 100%
 
 # Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする{#enable-aem-to-search-document-security-protected-pdf-and-microsoft-office-documents}
 
-Adobe Experience Manager には、AEM に保存された様々なアセットを検索し、その場所を特定するためのユーザーインターフェイスが用意されています。ネイティブ検索機能を使用して AEM アセットを検索し共通して使用されるドキュメント形式（プレーンテキストファイル、Microsoft Office ドキュメント、PDF ドキュメントなど）でテキスト検索を実行することができます。ネイティブ検索を拡張して有効にし、DRM 保護された PDF ドキュメントと Microsoft Office ドキュメントで全テキストの検索を実行できるようにすることも可能です。
+Adobe Experience Manager には、AEM に保存された様々なアセットを検索し、その場所を特定するためのユーザーインターフェイスが用意されています。ネイティブ検索機能を使用して AEM アセットを検索し  共通して使用されるドキュメント形式（プレーンテキストファイル、Microsoft Office ドキュメント、PDF ドキュメントなど）でテキスト検索を実行することができます。ネイティブ検索を拡張して有効にし、DRM 保護された PDF ドキュメントと Microsoft Office ドキュメントで全テキストの検索を実行できるようにすることも可能です。
 
 次の手順を実行し、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にします。
 
@@ -32,12 +32,12 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
 ## AEM Forms Workflow（JEE 上の AEM Forms）内での安全な接続の確立 {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
 
-安全な接続は、JEE 上の AEM Forms と、同じサーバー上で実行している OSGi サービスとの間の情報の流れをシームレスにします。次のいずれかの方法を使用して安全な接続を確立します。
+安全な接続は、JEE 上の AEM Forms と、同じサーバー上で実行している OSGi サービスとの間の情報の流れを  シームレスにします。次のいずれかの方法を使用して安全な接続を確立します。
 
 * JEE 上の AEM Forms の管理者資格情報を使用した AEM Forms Client SDK Bundle の設定
 * 相互認証を使用した AEM Forms Client SDK Bundle の設定
 
-### JEE 上の AEM Forms の管理者資格情報を使用して AEM Forms Client SDK Bundle を設定します {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
+### JEE 上の AEM Forms の管理者資格情報を使用した AEM Forms Client SDK Bundle の設定 {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
 1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトの URL は https://&lt;serverName>:&lt;port>/lc/system/console/configMgr です。
 1. AEM Forms Client SDK Bundle を探して開きます。次の各プロパティの値を指定します。
@@ -49,7 +49,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
    「**保存**」をクリックします。AEM は、Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントの検索が有効になっています。
 
-### 相互認証を使用して AEM Forms Client SDK Bundle を設定します {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
+### 相互認証を使用した AEM Forms Client SDK Bundle の設定 {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
 1. JEE 上の AEM Forms の相互認証を有効にします。詳しくは、「[CAC および相互認証](https://helpx.adobe.com/jp/livecycle/kb/cac-mutual-authentication.html)」を参照してください。
 1. AEM Configuration Manager を開き、管理者としてログインします。デフォルトの URL は https://&lt;serverName>:&lt;port>/lc/system/console/configMgr です。
