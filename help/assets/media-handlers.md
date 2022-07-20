@@ -17,7 +17,7 @@ ht-degree: 100%
 
 [!DNL Adobe Experience Manager Assets] には、アセットの処理に使用するデフォルトのワークフローとメディアハンドラーのセットが付属しています。ワークフローでは、アセットに対して実行する全般的なタスクを定義し、特定のタスクをメディアハンドラーに委任します。例えば、サムネールの生成やメタデータの抽出などです。
 
-特定の MIME タイプのアセットがアップロードされた際に自動的に実行されるように、ワークフローを設定できます。 処理手順は、一連の [!DNL Assets] メディアハンドラーに基づいて定義されます。[!DNL Experience Manager] には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタムで開発](#creating-a-new-media-handler)したり、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義したりできます。
+特定の MIME タイプのアセットがアップロードされた際に自動的に実行されるように、ワークフローを設定できます。処理手順は、一連の [!DNL Assets] メディアハンドラーに基づいて定義されます。[!DNL Experience Manager] には、[組み込みのハンドラー](#default-media-handlers)がいくつか用意されています。さらに、追加のハンドラーを[カスタムで開発](#creating-a-new-media-handler)したり、処理を[コマンドラインツール](#command-line-based-media-handler)に委任して定義したりできます。
 
 メディアハンドラーは、アセットに対して特定のアクションを実行する [!DNL Assets] 内のサービスです。例えば、MP3 オーディオファイルを [!DNL Experience Manager] にアップロードすると、ワークフローは MP3 ハンドラーをトリガーし、MP3 ハンドラーはメタデータを抽出してサムネイルを生成します。通常、メディアハンドラーはワークフローと組み合わせて使用されます。[!DNL Experience Manager] 内では、よく使用される MIME タイプがサポートされています。アセットに対して特定のタスクを実行するには、ワークフローを拡張または作成するか、メディアハンドラーを拡張または作成するか、メディアハンドラーを無効または有効にします。
 
@@ -78,7 +78,7 @@ ht-degree: 100%
 
 メディアハンドラーを有効または無効にするための手順
 
-1. ブラウザーで、`https://<host>:<port>/system/console/components` です。
+1. ブラウザーで、`https://<host>:<port>/system/console/components` に移動します。
 1. メディアハンドラーの名前の横にある「**[!UICONTROL Disable]**」をクリックします。例：`com.day.cq.dam.handler.standard.mp3.Mp3Handler`
 1. ページを更新します。メディアハンドラーの横に、無効であることを示すアイコンが表示されます。
 1. メディアハンドラーを有効にするには、メディアハンドラーの名前の横にある「**[!UICONTROL Enable]**」をクリックします。
