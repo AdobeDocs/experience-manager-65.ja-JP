@@ -1,7 +1,7 @@
 ---
 title: JEE 上の AEM Forms 管理者設定のセキュリティ保護の設定
 seo-title: Configuring Secure Administration Settings for AEM Forms on JEE
-description: 非公開の開発環境では必要ですが、JAEM Forms on JEE の実稼動環境では必要とされないユーザーアカウントやサービスの管理方法を学びます。
+description: 非公開の開発環境では必要ですが、AEM Forms on JEE の実稼動環境では必要とされないユーザーアカウントやサービスの管理方法を学びます。
 seo-description: Learn how to administer user accounts and services that, although required in a private development environment, are not required in a production environment of AEM Forms on JEE.
 uuid: 04e45d06-f57d-406c-8228-15f483199430
 content-type: reference
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 # JEE 上の AEM Forms 管理者設定のセキュリティ保護の設定 {#configuring-secure-administration-settings-for-aem-forms-on-jee}
 
-非公開の開発環境では必要ですが、JAEM Forms on JEE の実稼動環境では必要とされないユーザーアカウントやサービスの管理方法を学びます。
+非公開の開発環境では必要ですが、AEM Forms on JEE の実稼動環境では必要とされないユーザーアカウントやサービスの管理方法を学びます。
 
 通常、開発者は、アプリケーションのビルドとテストに 実稼働環境は使用しません。したがって、プライベートな開発環境には必要でも実稼働環境には必要のないユーザーアカウントとサービスを管理する必要があります。
 
