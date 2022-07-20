@@ -56,13 +56,13 @@ Adobe Experience Manager を WCM として使用している場合は、Dynamic 
 
 ### ダイナミックメディアコンポーネント {#dynamic-media-component}
 
-ダイナミックメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、様々なオプションを使用できます。このコンポーネントは、画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートしています。また、ビューアはレスポンシブです。 つまり、画面の大きさは、スクリーン上のサイズに応じて自動的に変化します。 ビューアはすべて HTML5 ベースのビューアです。
+ダイナミックメディアコンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、様々なオプションを使用できます。このコンポーネントは、画像プリセット、画像ベースのビューア（画像セット、スピンセット、混在メディアセットなど）およびビデオをサポートしています。また、ビューアはレスポンシブです。つまり、画面の大きさは、スクリーン上のサイズに応じて自動的に変化します。ビューアはすべて HTML5 ベースのビューアです。
 
 >[!NOTE]
 >
 >[!UICONTROL ダイナミックメディア]コンポーネントを追加したときに、「**[!UICONTROL ダイナミックメディア設定]**」が空であるかアセットを適切に追加できない場合は、次の点を確認してください。
 >
->* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトで無効になっています。
+>* [Dynamic Media を有効にしている](/help/assets/config-dynamic.md)こと。Dynamic Media はデフォルトでは無効になっています。
 >* 画像は Pyramid TIFF ファイルです。ダイナミックメディアを有効にする前に読み込まれた画像には、Pyramid TIFF ファイルはありません。
 >
 
@@ -135,7 +135,7 @@ Web ページにダイナミックビデオを追加するには、**[!UICONTROL
 
 #### セキュアなビデオ配信 {#how-to-delivery-secure-video}
 
-Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを選択できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆に言うと、web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。通常、このデフォルトの動作で問題ないので、特に設定を変更する必要はありません。ただし、このデフォルトの動作を上書きすることはできます。 `VideoPlayer.ssl=on` を、URL パスの末尾か、埋め込みコードスニペットにある他のビューア設定パラメーターのリストに追加します。どちらのアクションでもセキュアな動画配信を強制できます。
+Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq620/featurepack/cq-6.2.0-featurepack-13480) をインストールする場合、ビデオをセキュア SSL 接続（HTTPS）と非セキュア接続（HTTP）のどちらで配信するかを選択できます。デフォルトでは、ビデオ配信プロトコルは、埋め込み Web ページのプロトコルから自動的に継承されます。Web ページが HTTPS で読み込まれる場合、ビデオも HTTPS で配信されます。逆に言うと、web ページが HTTP で読み込まれる場合、ビデオも HTTP で配信されます。通常、このデフォルトの動作で問題ないので、特に設定を変更する必要はありません。ただし、このデフォルトの動作を上書きすることはできます。`VideoPlayer.ssl=on` を、URL パスの末尾か、埋め込みコードスニペットにある他のビューア設定パラメーターのリストに追加します。どちらのアクションでもセキュアな動画配信を強制できます。
 
 セキュアなビデオ配信、および URL パスの `VideoPlayer.ssl` 設定属性の使用について詳しくは、『ビューアリファレンスガイド』の「[ビデオのセキュア配信](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-viewer-20-securevideodelivery.html?lang=ja)」を参照してください。ビデオビューアのほか、混在メディアビューアおよびインタラクティブビデオビューアでも、セキュアなビデオ配信を使用できます。
 
@@ -143,13 +143,13 @@ Experience Manager 6.2 で [FP-13480](https://experience.adobe.com/#/downloads/c
 
 インタラクティブメディアコンポーネントは、インタラクティビティ（ホットスポットまたは画像マップ）を含むアセット用です。インタラクティブ画像、インタラクティブビデオまたはカルーセルバナーがある場合は、**[!UICONTROL インタラクティブメディア]**&#x200B;コンポーネントを使用します。
 
-[!UICONTROL インタラクティブメディア]コンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、さまざまなオプションを使用できます。また、ビューアはレスポンシブです。 つまり、画面の大きさは、スクリーン上のサイズに応じて自動的に変化します。 ビューアはすべて HTML5 ベースのビューアです。
+[!UICONTROL インタラクティブメディア]コンポーネントはスマートであり、追加しているアセットが画像であるかビデオであるかに応じて、さまざまなオプションを使用できます。また、ビューアはレスポンシブです。つまり、画面の大きさは、スクリーン上のサイズに応じて自動的に変化します。ビューアはすべて HTML5 ベースのビューアです。
 
 ![chlimage_1-75](assets/chlimage_1-75a.png)
 
 コンポーネントの「**[!UICONTROL 編集]**」をクリックして、次の&#x200B;**[!UICONTROL 一般]**&#x200B;設定を編集できます。
 
-**[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示できるように設定する必要があります。ビューアプリセットを使用するには、あらかじめ公開する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
+**[!UICONTROL ビューアプリセット]** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示可能に設定する必要があります。ビューアプリセットを使用するには、あらかじめ公開する必要があります。詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
 **[!UICONTROL タイトル]** - ビデオのタイトルを変更します。
 
