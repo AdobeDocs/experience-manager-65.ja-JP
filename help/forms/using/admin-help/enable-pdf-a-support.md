@@ -22,7 +22,7 @@ ht-degree: 100%
 
 PDF Generator では、Microsoft Excel、Microsoft PowerPoint および Microsoft Word ファイルから PDF/A 準拠ファイルを作成できます。
 
-1. 管理コンソールで、サービス／PDF Generator／ファイルタイプごとの設定をクリックします。
+1. 管理コンソールで、「サービス／PDF Generator／ファイルタイプごとの設定」をクリックします。
 1. 「新規作成」をクリックするか、既存のファイルタイプ設定を選択します。
 1. 「Microsoft Excel」、「Microsoft PowerPoint」または「Microsoft Word」をクリックしてから、「PDF/A-1a に準拠するファイルを作成」を選択して変更を保存します。
 1. ネイティブアプリケーション（Microsoft Word など）で、Adobe PDF／変換設定の変更をクリックし、「PDF/A-1b」を選択します。
