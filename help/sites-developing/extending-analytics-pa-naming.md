@@ -1,5 +1,5 @@
 ---
-title: Analytics 用のサーバー側ページネーミングの実装
+title: Analytics 用のサーバーサイドのページネーミングの実装
 seo-title: Implementing Server-Side Page Naming for Analytics
 description: Adobe Analytics は、s.pageName プロパティを使用してページを一意に識別し、そのページのために収集されたデータを関連付けます
 seo-description: Adobe Analytics uses the s.pageName property to uniquely identify pages and to associate the data that is collected for the pages
