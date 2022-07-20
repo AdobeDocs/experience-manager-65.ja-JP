@@ -48,7 +48,7 @@ Rights Management SPI にはプロジェクトのクラスパスに設定する 
 >
 >この節では、外部ユーザー招待ハンドラーの作成方法を示すだけでなく、AEM Forms API も使用します。
 
-外部ユーザー招待ハンドラーの実装には、`createLocalPrincipalAccount` という名前のユーザー定義メソッドが含まれます。このメソッドは、メールアドレスをパラメーター値として指定する文字列値を受け入れます。 `createLocalPrincipalAccount` メソッドは、 `EDC_EXTERNAL_REGISTERED` と呼ばれるローカルドメインがすでに存在することを前提としています。このドメイン名は任意の名前に設定できます。ただし、本番アプリケーションの場合は、エンタープライズドメインと統合する必要がある場合があります。
+外部ユーザー招待ハンドラーの実装には、`createLocalPrincipalAccount` という名前のユーザー定義メソッドが含まれます。このメソッドは、メールアドレスをパラメーター値として指定する文字列値を受け入れます。`createLocalPrincipalAccount` メソッドは、 `EDC_EXTERNAL_REGISTERED` と呼ばれるローカルドメインがすでに存在することを前提としています。このドメイン名は任意の名前に設定できます。ただし、本番アプリケーションの場合は、エンタープライズドメインと統合する必要がある場合があります。
 
 `createUsers` メソッドは、すべてのメールアドレスを反復処理し、対応するユーザーオブジェクト（`EDC_EXTERNAL_REGISTERED` ドメインのローカルユーザー）を作成します。最後に、`doEmails` メソッドが呼び出されます。このメソッドは、サンプル内でスタブとして意図的に残されています。本番環境の実装では、新しく作成したユーザーに招待用のメールメッセージを送信するアプリケーションロジックが含まれます。実際のアプリケーションのアプリケーションロジックフローを示すために、サンプルに残しておきます。
 
@@ -170,9 +170,9 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 承認ハンドラー用のコンポーネント XML ファイルの定義 {#define-component-xml-authorization-handler}
 
-外部ユーザー招待ハンドラーコンポーネントをデプロイするには、コンポーネント XML ファイルを定義する必要があります。 コンポーネントの XML ファイルは、コンポーネントごとに存在し、コンポーネントに関するメタデータを提供します。
+外部ユーザー招待ハンドラーコンポーネントをデプロイするには、コンポーネント XML ファイルを定義する必要があります。コンポーネントの XML ファイルは、コンポーネントごとに存在し、コンポーネントに関するメタデータを提供します。
 
-以下の `component.xml` ファイルは、外部ユーザー招待ハンドラーに使用されます。 サービス名は `InviteExternalUsersSample` でこのサービスが公開する操作の名前は `invitedUser` です。入力パラメーターは `java.util.List` インスタンスで、出力値は `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` インスタンスの配列です。
+以下の `component.xml` ファイルは、外部ユーザー招待ハンドラーに使用されます。サービス名は `InviteExternalUsersSample` でこのサービスが公開する操作の名前は `invitedUser` です。入力パラメーターは `java.util.List` インスタンスで、出力値は `com.adobe.edc.server.spi.esrp.InvitedUserProviderResult` インスタンスの配列です。
 
 ### 外部ユーザー招待ハンドラー用のコンポーネント XML ファイルの定義 {#component-xml-invite-external-users-handler}
 
@@ -203,7 +203,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ## 外部ユーザー招待ハンドラーのパッケージ化 {#packaging-invite-external-users-handler}
 
-外部ユーザー招待ハンドラーを AEM Forms にデプロイするには、Java プロジェクトを JAR ファイルにパッケージ化する必要があります。外部ユーザー招待ハンドラーのビジネスロジックが依存する外部 JAR ファイル（`edc-server-spi.jar` および `adobe-rightsmanagement-client.jar` ファイル）は、JAR ファイルにも含まれます。 また、コンポーネントの XML ファイルが存在する必要があります。`component.xml` ファイルと外部 JAR ファイルは、JAR ファイルのルートに配置する必要があります。
+外部ユーザー招待ハンドラーを AEM Forms にデプロイするには、Java プロジェクトを JAR ファイルにパッケージ化する必要があります。外部ユーザー招待ハンドラーのビジネスロジックが依存する外部 JAR ファイル（`edc-server-spi.jar` および `adobe-rightsmanagement-client.jar` ファイル）は、JAR ファイルにも含まれます。また、コンポーネントの XML ファイルが存在する必要があります。`component.xml` ファイルと外部 JAR ファイルは、JAR ファイルのルートに配置する必要があります。
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ A.コンポーネントに必要な外部 JAR ファイル B. JAVA ファイル
 1. 管理コンソールホームページで、**[!UICONTROL 設定]**／**[!UICONTROL User Management]**／**[!UICONTROL ドメイン管理]**&#x200B;をクリックします。
 1. 「**[!UICONTROL 新規ローカルドメイン]**」をクリックします。次のページで、名前と識別子の値が `EDC_EXTERNAL_REGISTERED` のドメインを作成します。変更を保存します。
 1. 管理コンソールホームページで、**[!UICONTROL サービス]**／**[!UICONTROL Rights Management]**／**[!UICONTROL 招待ユーザーとローカルユーザー]**&#x200B;をクリックします。**[!UICONTROL 招待ユーザーの追加]**&#x200B;ページが表示されます。
-1. メールアドレスを入力します（現在の外部ユーザー招待ハンドラーは、メールメッセージを実際に送信しないので、アドレスが有効である必要はありません）。 「**[!UICONTROL OK]**」をクリックします。ユーザーがシステムに招待されます。
+1. メールアドレスを入力します（現在の外部ユーザー招待ハンドラーは、メールメッセージを実際に送信しないので、アドレスが有効である必要はありません）。「**[!UICONTROL OK]**」をクリックします。ユーザーがシステムに招待されます。
 1. 管理コンソールホームページで、 **[!UICONTROL 設定]**／**[!UICONTROL User Management]**／**[!UICONTROL ユーザーとグループ]**&#x200B;をクリックします。
 1. 「**[!UICONTROL 検索]**」フィールドに、指定したメールアドレスを入力します。「**[!UICONTROL 検索]**」をクリックします。招待したユーザーは、ローカルの `EDC_EXTERNAL_REGISTERED` ドメインに表示されます。
 
