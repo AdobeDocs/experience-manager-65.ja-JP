@@ -61,7 +61,7 @@ contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェ�
 
 * **listType：**&#x200B;ポップオーバーリスト項目に使用するスタイル。次のいずれかの値を使用します。
 
-   * checkmark
+   * チェックマーク
    * チェックボックス
    * radio
 
