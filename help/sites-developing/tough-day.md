@@ -5,9 +5,9 @@ topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
 source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1849'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -345,7 +345,7 @@ Tough Day 2 では、テストの指標とログの両方が出力されます�
 
 ### テスト指標 {#test-metrics}
 
-現在、Tough Day 2 では、ユーザーが評価できる 9 種類のテスト指標が報告されます。指標と **&#42;** シンボルは、正常に実行された後にのみ報告されます。
+現在、Tough Day 2 では、ユーザーが評価できる 9 種類のテスト指標が報告されます。**&#42;** 記号が付いた指標は、実行に成功した後にのみ報告されます。
 
 | **名前** | **説明** |
 |---|---|
