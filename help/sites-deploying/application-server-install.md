@@ -47,7 +47,7 @@ AEM は、単一の war ファイルとしてデプロイされます。
 デプロイすると、デフォルトで次のようになります。
 
 * 実行モードは `author`
-* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど） は `${user.dir}/crx-quickstart` にインストールされます。`${user.dir}` は現在の作業ディレクトリです。crx-quickstart へのこのパスは `sling.home` と呼ばれます。
+* インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど）は `${user.dir}/crx-quickstart` にインストールされます。`${user.dir}` は現在の作業ディレクトリです。crx-quickstart へのこのパスは `sling.home` と呼ばれます。
 
 * コンテキストルートは war ファイル名（例：`aem-6`） 
 
@@ -193,7 +193,7 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 
       * `bin/catalina.bat`（Unix の場合は `catalina.sh`）に、次の設定を追加します。
       * `set "JAVA_OPTS= -Xmx2048m`
-   * Tomcat では、インストール時に管理者もマネージャもアクセスできません。 そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
+   * Tomcat では、インストール時に管理者もマネージャもアクセスできません。そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
 
       * `tomcat-users.xml` を編集して、管理者およびマネージャーのアクセスを含めます。設定は次の例のようになります。
 
