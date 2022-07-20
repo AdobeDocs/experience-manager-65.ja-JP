@@ -31,8 +31,8 @@ Output サービスについて詳しくは、「[サービスリファレンス
 * URL、URI、XCI およびファイルの場所の絶対パスと相対パスの指定（[Output のファイルの場所の指定](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output)を参照）。
 * キャッシュサイズおよびポリシーの設定（[キャッシュモードの指定](/help/forms/using/admin-help/configuring-caching-output.md#specifying-the-cache-mode)および[キャッシュ設定の指定](/help/forms/using/admin-help/configuring-caching-output.md#configuring-cache-settings)を参照）。
 * アプリケーションサーバーでフォントを使用できるようにします（[フォントを使用可能にする](/help/forms/using/admin-help/make-fonts-available.md#make-fonts-available)を参照）。
-* 埋め込むフォントの指定（[埋め込むフォントの指定](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed)を参照）。
-* XCI 設定オプションの指定（[XCI 設定オプションの指定](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options)を参照）。
-* セキュリティ設定の指定（[セキュリティ設定の指定](/help/forms/using/admin-help/specify-security-settings.md#specify-security-settings)を参照）。
+* 埋め込むフォントの指定.（[埋め込むフォントの指定](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed)を参照）。
+* XCI 設定オプションの指定.（[XCI 設定オプションの指定](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options)を参照）。
+* セキュリティ設定の指定.（[セキュリティ設定の指定](/help/forms/using/admin-help/specify-security-settings.md#specify-security-settings)を参照）。
 
 設定を変更した後、「保存」をクリックして Output に変更を適用します。変更内容はサーバーを再起動しなくても有効になります。ただし、キャッシュ設定を指定した場合は、Output サービスの再起動が必要になる場合があります。
