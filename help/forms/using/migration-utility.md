@@ -1,5 +1,5 @@
 ---
-title: AEM Forms のアセットとドキュメントの移行
+title: 'AEM Forms のアセットとドキュメントの移行 '
 seo-title: Migrate AEM Forms assets and documents
 description: 移行ユーティリティにより、AEM Forms のアセットとドキュメントを AEM 6.3 Forms またはそれ以前のバージョンから AEM 6.4 forms に移行できます。
 seo-description: The Migration utility allows you to Migrate AEM Forms assets and documents from AEM 6.3 Forms or prior versions to AEM 6.4 Forms.
@@ -14,13 +14,13 @@ docset: aem65
 role: Admin
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
 source-git-commit: 547772f7e989ebe2e8c1be73b3dfbfdb85228a3c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1743'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
-# AEM Forms のアセットとドキュメントの移行{#migrate-aem-forms-assets-and-documents}
+# AEM Forms のアセットとドキュメントの移行 {#migrate-aem-forms-assets-and-documents}
 
 移行ユーティリティを実行すると、[アダプティブフォームのアセット](../../forms/using/introduction-forms-authoring.md)、[クラウドの設定](/help/sites-developing/extending-cloud-config.md)、[Correspondence Management のアセット](/help/forms/using/cm-overview.md) が、旧バージョンの AEM Forms で使用されていた形式から、AEM 6.5 Forms で使用される形式に変換されます。移行ユーティリティを実行すると、以下の項目が移行されます。
 
@@ -45,7 +45,7 @@ AEM Forms 6.4、6.3 または 6.2 を、最新バージョンである AEM Forms
 
 **新規インストールを実行した場合**
 
-新規インストールを実行した場合は、アセットやドキュメントを使用する前に、[AEMFD 互換性パッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)（Correspondence Management 互換性パッケージが含まれています）をインストールする必要があります。
+新規インストールを実行した場合は、アセットやドキュメントを使用する前に、[AEMFD 互換性パッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)（Correspondence Management 互換性パッケージが含まれています）をインストールする必要があります。
 
 その後、アセットパッケージ（zip ファイルまたは cmp ファイル）を新しいセットアップ環境にインポートし、[移行ユーティリティ](#runningmigrationutility) を実行してアセットとドキュメントを更新してください。アドビでは、移行ユーティリティを実行した後に、新しい設定で新しいアセットを作成することを推奨しています。
 
@@ -74,7 +74,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
 移行ユーティリティを実行した後で、アセットに変更を加えたり、アセットを作成したりします。移行ユーティリティは、アセットの変更や作成後に実行しないことをお勧めします。移行プロセスの実行中は、Correspondence Management アセットまたはアダプティブフォームアセットのユーザーインターフェイスが開いていないことを確認してください。
 
-初めて移行ユーティリティを実行すると、次のパスと名前でログが作成されます。 `\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log`. それ以降は、移行ユーティリティを実行するたびに、Correspondence Management とアダプティブフォームの移行に関する情報（アセットの移行に関する情報など）がこのログファイルに記録されます。
+移行ユーティリティをはじめて実行する場合、`\[aem-installation-directory]\cq-quickstart\logs\aem-forms-migration.log` というパスと名前でログが作成されます。それ以降は、移行ユーティリティを実行するたびに、Correspondence Management とアダプティブフォームの移行に関する情報（アセットの移行に関する情報など）がこのログファイルに記録されます。
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ Correspondence Management のアセットを移行する場合は、以下の点
 
    >[!NOTE]
    >
-   >移行中、「競合が見つかりました...」のような警告メッセージが表示される場合があります。このようなメッセージは、アダプティブフォームのコンポーネントのいくつかのルールを移行できなかったことを示します。例えば、コンポーネントにルールとスクリプトの両方がある場合、スクリプトの後にルールが発生した場合はそのコンポーネントのルールは移行されません。以下が可能です。 [ルールエディターを開いて、このようなルールを移行する](#migrate-rules) アダプティブフォームのオーサリングで使用します。
+   >移行中、「競合が見つかりました...」のような警告メッセージが表示される場合があります。このようなメッセージは、アダプティブフォームのコンポーネントのいくつかのルールを移行できなかったことを示します。例えば、コンポーネントにルールとスクリプトの両方がある場合、スクリプトの後にルールが発生した場合はそのコンポーネントのルールは移行されません。アダプティブフォームのオーサリングで[ルールエディターを開いて、このようなルールを移行](#migrate-rules)できます。
 
    * アダプティブフォームのカスタムコンポーネントを移行する場合は、「**アダプティブフォームカスタムコンポーネントの移行**」をタップし、カスタムコンポーネントの移行ページで「**移行を開始**」をタップします。次のものが移行されます。
 
@@ -113,27 +113,27 @@ Correspondence Management のアセットを移行する場合は、以下の点
       * コンポーネントのオーバーレイ（存在する場合）
    * アダプティブフォームのテンプレートを移行する場合は、「**アダプティブフォームテンプレートの移行**」をタップし、カスタムコンポーネントの移行ページで「**移行を開始**」をタップします。次のものが移行されます。
 
-      * 下に作成されたアダプティブフォームテンプレート `/apps` または `/conf` AEM Template Editor を使用します。
-   * AEM Forms Cloud Configuration Services を移行して、新しいコンテキスト対応クラウドサービスパラダイムを活用します。これには、タッチ操作対応 UI( `/conf`) をクリックします。 AEM Forms Cloud Configuration Services を移行する場合、 `/etc` 移動先 `/conf`. 従来のパス (`/etc`) の場合は、6.5 にアップグレードした直後に移行ユーティリティを実行し、その後の作業にクラウド設定のタッチ UI を使用することをお勧めします。 既存のクラウドサービスをカスタマイズしている場合は、移行されたパス (`/conf`) をクリックし、移行ユーティリティを実行します。
+      * AEM テンプレートエディターを使用して `/apps` フォルダーまたは `/conf` フォルダー内に作成されたアダプティブフォームテンプレート。
+   * 新しいコンテキスト認識クラウドサービスメカニズムを使用するには、AEM Forms クラウド設定サービスを移行する必要があります。このメカニズムには、タッチ操作が可能な UI が用意されています（`/conf`フォルダーに保管されています）。AEM Forms クラウド設定サービスを移行すると、`/etc` 内のクラウドサービスが `/conf` に移動します。移行前のパス（`/etc`）に依存するクラウドサービスがカスタマイズされていない場合は、バージョン 6.5 にアップグレード後すぐに移行ユーティリティを実行して、クラウド設定のタッチ UI を使用して作業を行うことをお勧めします。既存のクラウドサービスがカスタマイズされている場合は、移行後のパス（`/conf` フォルダー）に合わせてカスタマイズ内容を更新するまでは、アップグレード後のセットアップ環境で既存の UI を使用してください。カスタマイズ内容の更新が完了したら、移行ユーティリティを実行してください。
 
    **AEM Forms クラウドサービス**&#x200B;を移行する場合は、「AEM Forms クラウド設定の移行」（クラウド設定の移行は、AEMFD 互換性パッケージとは独立して実行されます）をタップし、「AEM Forms クラウド設定の移行」をもう一度タップして、設定の移行ページで「**移行を開始**」をタップします。AEM Forms クラウドサービスには、以下の項目が含まれています。
 
    * フォームデータモデルのクラウドサービス
 
-      * ソースパス： `/etc/cloudservices/fdm`
-      * ターゲットパス： `/conf/global/settings/cloudconfigs/fdm`
+      * ソースパス：`/etc/cloudservices/fdm`
+      * ターゲットパス：`/conf/global/settings/cloudconfigs/fdm`
    * reCAPTCHA
 
-      * ソースパス： `/etc/cloudservices/recaptcha`
-      * ターゲットパス： `/conf/global/settings/cloudconfigs/recaptcha`
+      * ソースパス：`/etc/cloudservices/recaptcha`
+      * ターゲットパス：`/conf/global/settings/cloudconfigs/recaptcha`
    * Adobe Sign
 
-      * ソースパス： `/etc/cloudservices/echosign`
-      * ターゲットパス： `/conf/global/settings/cloudconfigs/echosign`
+      * ソースパス：`/etc/cloudservices/echosign`
+      * ターゲットパス：`/conf/global/settings/cloudconfigs/echosign`
    * Typekit クラウドサービス
 
-      * ソースパス： `/etc/cloudservices/typekit`
-      * ターゲットパス： `/conf/global/settings/cloudconfigs/typekit`
+      * ソースパス：`/etc/cloudservices/typekit`
+      * ターゲットパス：`/conf/global/settings/cloudconfigs/typekit`
 
    移行プロセスの実行時は、ブラウザーウィンドウにそれぞれ以下が表示されます。
 
