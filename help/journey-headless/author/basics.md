@@ -1,7 +1,8 @@
 ---
 title: オーサリングの基本
 description: コンテンツフラグメントを使用したヘッドレス CMS のコンテンツオーサリングの概念と仕組みについて説明します。
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: ht
 source-wordcount: '1693'
 ht-degree: 100%
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 ## これまでの説明内容 {#story-so-far}
 
-[AEM ヘッドレスコンテンツ作成者ジャーニー](overview.md)の冒頭の[はじめに](introduction.md)で、ヘッドレスのオーサリングに関連する基本概念と用語について説明しました。
+[AEM ヘッドレスコンテンツ作成者ジャーニー](overview.md)の冒頭の[はじめに](introduction.md)で、ヘッドレス向けのオーサリングに関連する基本概念と用語について説明しました。
 
 この記事では、これらに基づいて、AEM ヘッドレスプロジェクト用に独自のコンテンツをオーサリングする方法を説明します。
 
