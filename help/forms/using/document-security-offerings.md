@@ -51,7 +51,7 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
 * **Document Security SDK：**&#x200B;この SDK は、豊富な機能を持つクライアントです。ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。例えば、カスタムファイル形式を保護する拡張機能を開発したり、SDK とデータ損失防止（DLP）ソリューションを統合することができます。Document Security SDK を使用して開発された拡張機能、アプリケーション、およびプラグインは、指定された AEM Forms サーバーにドキュメントを送信し、ポリシーはサーバー上で適用されます。AEM Forms Document Security クライアント SDK（CSDK）で、ポータブル保護ライブラリ（PPL）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
-   Document Security SDK は Java と C++ の両方で利用することができます。Java SDK は、AEM Forms Document Security に付属しています。JEE 上に AEM Forms をデプロイする際に、Java SDK がインストールされます。C++ SDK を入手する場合は、[AEM サポートチーム](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。C++ SDK は、Microsoft Visual Studio 2013 を使用してコンパイルすることができます。  SDK の機能とその使用方法については、[Document Security API のドキュメント](https://help.adobe.com/ja_JP/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)のサイトを参照してください。 
+   Document Security SDK は Java と C++ の両方で利用することができます。Java SDK は、AEM Forms Document Security に付属しています。JEE 上に AEM Forms をデプロイする際に、Java SDK がインストールされます。C++ SDK を入手する場合は、[AEM サポートチーム](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。C++ SDK は、Microsoft Visual Studio 2013 を使用してコンパイルすることができます。 SDK の機能とその使用方法については、[Document Security API のドキュメント](https://help.adobe.com/ja_JP/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)のサイトを参照してください。 
 
 * **Adobe Acrobat：** Adobe Acrobat を使用して、Microsoft Office、ウェブブラウザー、またはその他の PDF 形式の印刷に対応しているアプリケーションなど、一般的なデスクトップアプリケーションで作成された PDF ドキュメントにセキュリティポリシーを適用することができます。
 
@@ -61,7 +61,7 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
    この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。C++ SDK を入手する場合は、[AEM サポートチーム](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。その後、[Document Security Extension for Microsoft Office](https://helpx.adobe.com/jp/aem-forms/aem-document-security/aem-document-security-extension-help.html)のヘルプを参照することで、インストール方法、設定方法、拡張機能の使用方法を確認できます。
 
-* **ポータブル保護ライブラリ：**&#x200B;ポータブル保護ライブラリ（PLL）は、ドキュメントを AEM Forms サーバーに送ることなく、ローカルにドキュメントを保護します。ネットワークに送信されるのは、セキュリティの証明書とポリシーの詳細のみです。PPL を使用して、ログインしているユーザーに対してのみ、ポリシーへのアクセスとポリシーの取得を許可することができます。AEM にログインしているユーザーについて、ポリシーを取得することができます。
+* **ポータブル保護ライブラリ：**&#x200B;ポータブル保護ライブラリ（PPL）は、ドキュメントを AEM Forms サーバーに送ることなく、ローカルにドキュメントを保護します。ネットワークに送信されるのは、セキュリティの証明書とポリシーの詳細のみです。PPL を使用して、ログインしているユーザーに対してのみ、ポリシーへのアクセスとポリシーの取得を許可することができます。AEM にログインしているユーザーについて、ポリシーを取得することができます。
 
    上記に加えて、ポータブル保護ライブラリには Document Security SDK のすべての機能が搭載されています。ドキュメントセキュリティ SDK を使用して Document Server の機能にアクセスしたり、ポリシーで保護されたドキュメントを開いたり、カスタム拡張機能やプラグイン、またはアプリケーションを開発したりすることができます。ポータブル保護ライブラリ（PPL）で、AEM Forms Document Security クライアント SDK（CSDK）を使用して保護されているドキュメントの保護を解除することはできません（その逆の動作もできません）。
 
@@ -69,7 +69,7 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
 ### 保護されたドキュメントの表示および編集 {#view-or-edit-protected-documents}
 
-* **PDF ドキュメント**&#x200B;の場合、Adobe Acrobat DC、Acrobat Reader、およびモバイル版 Acrobat Reader を使用して保護された PDF ドキュメントを表示することができます。ほとんどのユーザーはすでにデバイスに Acrobat Reader がインストールされているため、保護されたドキュメントを表示するために追加のソフトウェアを入手もしくは使用方法を学習する必要はありません。Acrobat Reader は、[Acrobat Reader ダウンロード Web サイト](https://get.adobe.com/reader/)からダウンロードすることもできます。
+* **PDF ドキュメント**&#x200B;の場合、Adobe Acrobat DC、Acrobat Reader、およびモバイル版 Acrobat Reader を使用して保護された PDF ドキュメントを表示することができます。ほとんどのユーザーはすでにデバイスに Acrobat Reader がインストールされているため、保護されたドキュメントを表示するために追加のソフトウェアを入手もしくは使用方法を学習する必要はありません。Acrobat Reader は、[Acrobat Reader ダウンロード Web サイト](https://get.adobe.com/jp/reader/)からダウンロードすることもできます。
 
 * **Microsoft Office ドキュメント**&#x200B;の場合、Microsoft Office と AEM Forms Document Security extension for Microsoft Office が必要となります。この Document Security の拡張機能は Microsoft Office プラグインととして使用できます。この拡張機能は、アドビ システムズ社の Web サイトからダウンロードすることができます。
 
