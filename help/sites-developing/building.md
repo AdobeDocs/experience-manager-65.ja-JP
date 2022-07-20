@@ -1,5 +1,5 @@
 ---
-title: AEM アプリケーションへのタグの作成
+title: AEM アプリケーションへのタグ付けの構築
 seo-title: Building Tagging into an AEM Application
 description: カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作します
 seo-description: Programmatically work with tags or extending tags within a custom AEM application
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# AEM アプリケーションへのタグの作成{#building-tagging-into-an-aem-application}
+# AEM アプリケーションへのタグ付けの構築{#building-tagging-into-an-aem-application}
 
 カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作するために、このページでは、次の使用方法を説明します。
 
