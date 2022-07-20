@@ -115,7 +115,7 @@ ht-degree: 100%
      <li>デザインを以前の場所から <code>/apps</code> 内の新しい場所にコピーします。</li>
      <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li>
      <li><strong>AEM／DAM 管理／アセット共有ページ／ページのプロパティ／詳細タブ／デザインフィールド</strong>を使用して、<code>cq:designPath</code> プロパティで以前の場所への参照を更新します。</li>
-     <li>以前の場所を参照しているすべてのページを更新して、新しいクライアントライブラリカテゴリを使用するようにします。それには、ページの実装コードを更新する必要があります。</li>
+     <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します。これにはページ実装コードの更新が必要です。</li>
      <li>Dispatcher ルールを更新して、<code>/etc.clientlibs/</code> プロキシサーブレット経由でクライアントライブラリを提供できるようにします。</li>
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されるデザインの場合は、オーサリング可能なデザインを <code>/etc</code> から移動しないでください。</p> </td>
   </tr>
@@ -126,7 +126,7 @@ ht-degree: 100%
  </tbody>
 </table>
 
-### アセットダウンロード電子メール通知テンプレート {#download-asset-e-mail-notification-template}
+### アセットダウンロードのメール通知テンプレート {#download-asset-e-mail-notification-template}
 
 <table>
  <tbody>
@@ -167,7 +167,7 @@ ht-degree: 100%
 | **再構築の手引き** | 該当なし |
 | **備考** | 該当なし |
 
-### リンク共有電子メール通知テンプレート {#link-share-e-mail-notification-template}
+### リンク共有のメール通知テンプレート {#link-share-e-mail-notification-template}
 
 <table>
  <tbody>
