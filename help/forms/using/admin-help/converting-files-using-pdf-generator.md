@@ -68,14 +68,14 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 >
 >* （UNIX ベースのシステムのみ）日本語フォントを使用した web ページを PDFドキュメントに変換するには、AEM Forms サーバーで以下の日本語フォントが使用可能である必要があります。
 >
->  * &quot;Sazanami Gothic&quot;
->  * &quot;Kozuka Gothic Pro-VI&quot;
->  * &quot;Kozuka Mincho Pro-VI&quot;
->  * &quot;Sazanami Gothic&quot;
->  * &quot;Kozuka Mincho Pr6N&quot;
->  * &quot;Sazanami Mincho&quot;
->  * &quot;Adobe Heiti Std&quot;
->  * &quot;Adobe Song Std&quot;
+>  * 「Sazanami Gothic」
+>  * 「Kozuka Gothic Pro-VI」
+>  * 「Kozuka Mincho Pro-VI」
+>  * 「Sazanami Gothic」
+>  * 「Kozuka Mincho Pr6N」
+>  * 「Sazanami Mincho」
+>  * 「Adobe Heiti Std」
+>  * 「Adobe Song Std」
 >
 >* ローカルファイルシステムからファイルをアップロードするには、HTML から PDF ページの「アップロードするファイル」オプションを使用します。
 
@@ -115,7 +115,7 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。時刻。「タイムアウト時間の指定」の値は、ファイルの変換にかかる正確な時間です。
 
-1. （オプション）**カスタム Preflight プロファイルを指定する**&#x200B;オプションで「参照」をクリックし、[カスタム Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を選択します。Preflight プロファイルは、ドキュメントを PDF アーカイブ（PDF/A）形式に変換する際にのみ使用されます。  
+1. （オプション）**カスタム Preflight プロファイルを指定する**&#x200B;オプションで「参照」をクリックし、[カスタム Preflight プロファイル](https://helpx.adobe.com/jp/acrobat/using/overview-pdf-portfolios.html)を選択します。Preflight プロファイルは、ドキュメントを PDF アーカイブ（PDF/A）形式に変換する際にのみ使用されます。 
 1. 「書き出し」をクリックします。変換が終了すると、書き出されたファイルへのリンクが表示されます。
 1. 変換されたファイルを表示するには、そのリンクをクリックします。
 
