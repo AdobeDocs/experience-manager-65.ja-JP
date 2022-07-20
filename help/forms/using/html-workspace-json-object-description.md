@@ -413,7 +413,7 @@ AEM Forms Workspace で使用される JSON オブジェクトについて以下
   <tr>
    <td>type</td>
    <td>F</td>
-   <td>キューのタイプが含まれます。<br />0 - ユーザーキュー<br />1.共有キュー<br />2.グループキュー<br type="_moz" /> </td>
+   <td>キューのタイプが含まれます。<br />0 - ユーザーキュー<br />1.共有キュー.<br />2.グループキュー<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>query</td>
