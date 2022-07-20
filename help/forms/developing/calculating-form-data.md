@@ -44,7 +44,7 @@ Forms サービスでは、ユーザーがフォームに入力した値を計�
 <table>
  <thead>
   <tr>
-   <th><p>手順</p></th>
+   <th><p>ステップ</p></th>
    <th><p>説明</p></th>
   </tr>
  </thead>
@@ -107,11 +107,11 @@ Forms サービスでは、ユーザーがフォームに入力した値を計�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **Forms Client API オブジェクトの作成**
 
-Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。 Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsServiceService` オブジェクトを作成します。
+Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsServiceService` オブジェクトを作成します。
 
 **計算スクリプトを含むフォームの取得**
 
@@ -151,8 +151,8 @@ Forms API（Java）を使用してフォームデータを計算します。
    * 計算スクリプトを含むフォームデータを取得するには、コンストラクターを使用して、コンストラクター内から `javax.servlet.http.HttpServletResponse` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
    *  `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
-      * フォームデータを格納する `com.adobe.idp.Document` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 `CONTENT_TYPE` 環境変数に 1 つまたは複数の値を指定して、処理するコンテンツタイプを指定する必要があります。例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
+      * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
+      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。`CONTENT_TYPE` 環境変数に 1 つまたは複数の値を指定して、処理するコンテンツタイプを指定する必要があります。例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
       * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
       * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
@@ -164,10 +164,10 @@ Forms API（Java）を使用してフォームデータを計算します。
 1. フォームデータストリームをクライアントの web ブラウザーに書き戻します。
 
    * フォームデータストリームをクライアント web ブラウザーに送信するために使用される `javax.servlet.ServletOutputStream` オブジェクトを作成します。
-   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `com.adobe.idp.Document` オブジェクトを作成します。
+   * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
    * `com.adobe.idp.Document` オブジェクトの `getInputStream` メソッドを呼び出すことによって `java.io.InputStream` オブジェクトを作成します。
    * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
-   * フォームデータストリームをクライアントの web ブラウザーに送信するには、`javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出します。バイト配列を `write` メソッドに渡します。
+   * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連項目**
 
@@ -195,8 +195,8 @@ Forms API（web サービス）を使用してフォームデータを計算し�
    * コンストラクターを使用して、`java.io.InputStream` オブジェクトの長さを渡すことにより、`java.io.ByteArrayOutputStream` オブジェクトを作成します。
    * `java.io.InputStream` オブジェクトの内容を `java.io.ByteArrayOutputStream` オブジェクトにコピーします。
    * `java.io.ByteArrayOutputStream` オブジェクトの `toByteArray` メソッドを呼び出してバイト配列を作成します。
-   * `setBinaryData` メソッドを呼び出して、バイト配列を引数として渡し、`BLOB` オブジェクトに入力します。
-   * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。`RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出して、ロケール値を指定する文字列の値を渡すことにより、ロケール値を設定します。
+   *  `setBinaryData` メソッドを呼び出してバイト配列を引数として渡すことによって、`BLOB` オブジェクトに入力します。
+   * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。`RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
    * `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
       * フォームデータを格納する `BLOB` オブジェクト。
@@ -204,24 +204,24 @@ Forms API（web サービス）を使用してフォームデータを計算し�
       * `HTTP_USER_AGENT` ヘッダーの値を指定する文字列の値。例えば、`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` などです。
       * 実行時オプションを保存する `RenderOptionsSpec` オブジェクト。その他の情報。
       * このメソッドで入力される空の `BLOBHolder` オブジェクト。
-      * このメソッドで入力される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。
-      * このメソッドで入力される空の `BLOBHolder` オブジェクト。
-      * このメソッドで入力される空の `BLOBHolder` オブジェクト。
-      * このメソッドで入力される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
-      * このメソッドで入力される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
+      * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。
+      * メソッドによって設定される空の `BLOBHolder` オブジェクト。
+      * メソッドによって設定される空の `BLOBHolder` オブジェクト。
+      * メソッドによって設定される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
+      * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
       * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
 
       `processFormSubmission` メソッドで、フォーム送信の結果を `FormsResultHolder` パラメーターに入力します。`processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
-   * `FormsResult` オブジェクトの `getAction` メソッドを呼び出すことにより、送信されたフォームに関連付けられている処理状態が `1` であることを確認します。このメソッドが値 `1` を返した場合、計算が実行され、クライアントの web ブラウザーにデータを書き戻すことができます。
+   * `FormsResult` オブジェクトの `getAction` メソッドを呼び出すことによって、送信されたフォームに関連付けられている処理状態が `1` であることを確認します。このメソッドが値 `1` を返した場合、計算は実行されており、データをクライアントの web ブラウザーに書き戻すことができます。
 
 
 1. フォームデータストリームをクライアントの web ブラウザーに書き戻します。
 
    * フォームデータストリームをクライアントの web ブラウザーに送信するために使用する `javax.servlet.ServletOutputStream` オブジェクトを作成します。
    * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出して、フォームデータを含む `BLOB` オブジェクトを作成します。
-   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して、入力します。このタスクにより、`FormsResult` オブジェクトの内容がバイト配列に割り当てられます。
-   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアントの web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
+   * バイト配列を作成し、`BLOB` オブジェクトの `getBinaryData` メソッドを呼び出して、入力します。このタスクは、`FormsResult` オブジェクトのコンテンツをバイト配列に割り当てます。
+   * `javax.servlet.http.HttpServletResponse` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
 **関連項目**
 [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
