@@ -38,33 +38,33 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
  <tbody>
   <tr>
    <td><p>アプリケーションデータ（ユーザー、ロール、プロセス、ポリシー、エンドポイント、イベントなど）</p></td>
-   <td><p>可</p></td>
-   <td><p>不可</p></td>
+   <td><p>はい</p></td>
+   <td><p>いいえ</p></td>
   </tr>
   <tr>
    <td><p>デプロイされたサービスコンテナ</p></td>
-   <td><p>可</p></td>
-   <td><p>不可</p></td>
+   <td><p>はい</p></td>
+   <td><p>いいえ</p></td>
   </tr>
   <tr>
    <td><p>Document Manager </p></td>
-   <td><p>不可</p></td>
-   <td><p>可</p></td>
+   <td><p>いいえ</p></td>
+   <td><p>はい</p></td>
   </tr>
   <tr>
    <td><p>Forms リポジトリ</p></td>
-   <td><p>可</p></td>
+   <td><p>はい</p></td>
    <td><p>No</p></td>
   </tr>
   <tr>
    <td><p>システム設定</p></td>
-   <td><p>可</p></td>
-   <td><p>不可</p></td>
+   <td><p>はい</p></td>
+   <td><p>いいえ</p></td>
   </tr>
   <tr>
    <td><p>監視フォルダー</p></td>
-   <td><p>不可</p></td>
-   <td><p>可</p></td>
+   <td><p>いいえ</p></td>
+   <td><p>はい</p></td>
   </tr>
  </tbody>
 </table>
@@ -74,7 +74,7 @@ AEM Forms アプリケーションデータは、GDS ディレクトリおよび
 GDS ディレクトリの場所は、AEM Forms のインストール時に手動で設定できます。インストール時に場所を指定しないと、次に示すアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
 
 * （JBoss）`[appserver root]/server/[type]/svcnative/DocumentStorage`
-* （WebLogic）`[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
+* (WebLogic) `[appserverdomain]/'server'/adobe/DocumentServer/DocumentStorage`
 * （WebSphere）`[appserver root]/installedApps/adobe/'server'/DocumentStorage`
 
 ## GDS のデフォルトの場所の変更 {#change-the-default-gds-location}
