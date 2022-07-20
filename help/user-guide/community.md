@@ -15,7 +15,7 @@ ht-degree: 100%
 
 ## AEM コミュニティとは {#what-is}
 
-AEM コミュニティには世界中の何千ものメンバーが参加しています。 メンバーは、Experience Manager を初めて利用する人から熟練したエキスパート開発者や管理者まで、多岐にわたります。ここでは、AEM 機能に関する質問から開発に関する質問まで対応します。内外のエキスパートユーザーとともに定期的なエキスパートセッションを開催して、サンプル、記事、チュートリアルの作成を支援しています。
+AEM コミュニティには世界中の何千ものメンバーが参加しています。メンバーは、Experience Manager を初めて利用する人から熟練したエキスパート開発者や管理者まで、多岐にわたります。ここでは、AEM 機能に関する質問から開発に関する質問まで対応します。内外のエキスパートユーザーとともに定期的なエキスパートセッションを開催して、サンプル、記事、チュートリアルの作成を支援しています。
 
 [今すぐコミュニティに参加して、優れたコンテンツ、人々および知識にアクセスしてください。](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)AEM に関心のあるすべてのユーザーは誰でも参加できます。今すぐ参加してください。
 
@@ -27,10 +27,10 @@ AEM コミュニティには世界中の何千ものメンバーが参加して�
 
 ## コードサンプルを入手して役立てることはできますか？ {#code-samples}
 
-AEM コミュニティチームは、Experience Manager の開発者やユーザーがソリューションを理解できるように、「ハウツー」ガイドとコードサンプルを継続的に作成しています。 [実用的な記事とコードサンプルの完全なリストを以下に示します。](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)
+AEM コミュニティチームは、Experience Manager の開発者やユーザーがソリューションを理解できるように、「ハウツー」ガイドとコードサンプルを継続的に作成しています。[実用的な記事とコードサンプルの完全なリストを以下に示します。](https://helpx.adobe.com/jp/experience-manager/topics/how-to.html)
 
 ## コミュニティのエキスパートセッションと GEMS への質問 {#gems}
 
 AEM コミュニティは、イベントを定期的に開催しており、テクニックやベストプラクティスをメンバーに伝えています。これらのライブ Web キャストに参加したり、時間のあるときに再生したりできます。エキスパートイベントもあり、概要と新しい録画も特集しています。
 
-[過去の Experience Manager エキスパートセッションの完全なリストについては、こちらを参照してください。](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/ask-the-expert/atace-index.html)
+[過去の Experience Manager エキスパートセッションの完全なリストについては、こちらを参照してください。](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/atace-index.html)
