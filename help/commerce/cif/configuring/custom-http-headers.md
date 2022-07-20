@@ -3,9 +3,9 @@ title: カスタム HTTP ヘッダー
 description: カスタム HTTP ヘッダーの設定
 exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -35,5 +35,5 @@ HTTP ヘッダーの値は、プロジェクトのクラウドサービス設定
 
 このサービスでは、標準のヘッダー名を含め、任意のヘッダー名を定義することができますが、設定することはできません。つまり、この機能を使用して標準の HTTP ヘッダーを上書きすることはできません。制限されるヘッダー名のリストは、[こちら](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers)を参照してくださいこれらに加えて、使用できないヘッダーが 2 つあります。
 
-* 「Store」 - CIF でAdobe Commerceストアを識別するために使用されます。
+* 「Store」 - CIF で Adobe Commerce ストアを識別するために使用
 * 「Preview-Version」 - CIF がステージングされた製品を取得するために使用
