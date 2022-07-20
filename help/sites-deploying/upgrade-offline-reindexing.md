@@ -83,7 +83,7 @@ java -jar oak-run.jar tika --data-file text-extraction/oak-binary-stats.csv --st
 
 ここで、 `oak-index-name` はフルテキストインデックスの名前です（例：「lucene」）。
 
-**3.上記の手順** で除外したバイナリに対して、tika ライブラリを使用してテキスト抽出プロセスを実行します
+**3.上記の手順で除外したバイナリに対して、tika ライブラリを使用してテキスト抽出プロセスを実行します**
 
 ```
 java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --fds-path <datastore path> extract
@@ -99,13 +99,13 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 
 ![offline-reindexing-upgrade-offline-reindexing](assets/offline-reindexing-upgrade-offline-reindexing.png)
 
-アップグレードの前に、Lucene インデックスをオフラインで作成します。 MongoMK を使用する場合、MongoMk ノードの 1 つで直接実行することをお勧めします。これにより、ネットワークのオーバーヘッドが回避されます。
+アップグレードの前に、Lucene インデックスをオフラインで作成します。MongoMK を使用する場合、MongoMk ノードの 1 つで直接実行することをお勧めします。これにより、ネットワークのオーバーヘッドが回避されます。
 
 インデックスをオフラインで作成するには、以下の手順に従います。
 
-**1.ターゲット AEM バージョン** の Oak Lucene インデックス定義を生成します。
+**1.ターゲット AEM バージョンの Oak Lucene インデックス定義を生成します。**
 
-既存のインデックス定義をダンプします。 変更を受けたインデックス定義は、対象の AEM バージョンの Adobe Granite リポジトリーバンドルと oak-run を使用して生成されました。
+既存のインデックス定義をダンプします。変更を受けたインデックス定義は、対象の AEM バージョンの Adobe Granite リポジトリーバンドルと oak-run を使用して生成されました。
 
 インデックス定義を&#x200B;**ソース** AEM インスタンスからダンプするには、このコマンドを実行します。
 
@@ -127,7 +127,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
-> 上記のインデックス定義の作成プロセスは、 `oak-run-1.12.0` バージョン以降のみでサポートされています。 ターゲティングは、Granite リポジトリーバンドル `com.adobe.granite.repository-x.x.xx.jar` を使用して行われます。
+> 上記のインデックス定義の作成プロセスは、 `oak-run-1.12.0` バージョン以降のみでサポートされています。ターゲティングは、Granite リポジトリーバンドル `com.adobe.granite.repository-x.x.xx.jar` を使用して行われます。
 
 上記の手順では、`merge-index-definitions_target.json` という名前の JSON ファイルを作成します。これはインデックス定義です。
 
@@ -135,7 +135,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 実稼動環境用 **source** AEMインスタンスに、有効期間が長いチェックポイントを作成します。これは、リポジトリーのクローンを作成する前に行う必要があります。
 
-`http://serveraddress:serverport/system/console/jmx` にある JMX コンソールを経由して、`CheckpointMBean` に移動し、有効期間が十分に長いチェックポイントを作成します（例：200 日）。 これには、`CheckpointMBean#createCheckpoint` を、有効期間（ミリ秒）の引数としての `17280000000` と併せて呼び出します。
+`http://serveraddress:serverport/system/console/jmx` にある JMX コンソールを経由して、`CheckpointMBean` に移動し、有効期間が十分に長いチェックポイントを作成します（例：200 日）。これには、`CheckpointMBean#createCheckpoint` を、有効期間（ミリ秒）の引数としての `17280000000` と併せて呼び出します。
 
 その後、新しく作成したチェックポイント ID をコピーし、JMX `CheckpointMBean#listCheckpoints` を使用して有効期間を検証します.
 
@@ -147,7 +147,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 **生成されたインデックス定義に対してオフラインでのインデックス作成を実行**
 
-Lucene のインデックス再作成は、oak-run を使用してオフラインで実行できます。 このプロセスは、`indexing-result/indexes` の下のディスクにインデックスデータを作成します。リポジトリへの書き込みは&#x200B;**行われない**&#x200B;ので、実行中の AEM インスタンスを停止する必要はありません。 作成したテキストストアがこのプロセスに入力されます。
+Lucene のインデックス再作成は、oak-run を使用してオフラインで実行できます。このプロセスは、`indexing-result/indexes` の下のディスクにインデックスデータを作成します。リポジトリへの書き込みは&#x200B;**行われない**&#x200B;ので、実行中の AEM インスタンスを停止する必要はありません。作成したテキストストアがこのプロセスに入力されます。
 
 ```
 java -Doak.indexer.memLimitInMB=500 -jar oak-run.jar index <nodestore path> --reindex --doc-traversal-mode --checkpoint <checkpoint> --fds-path <datastore path> --index-definitions-file merge-index-definitions_target.json --pre-extracted-text-dir text-extraction/store
@@ -158,15 +158,15 @@ Sample <checkpoint> looks like r16c85700008-0-8
 merge-index-definitions_target: JSON file having merged definitions for the target AEM instance. indexes in this file will be re-indexed.
 ```
 
-`--doc-traversal-mode` パラメーターの使用方法は、リポジトリコンテンツをローカルフラットファイルにスプールすることにより、再インデックス時間を大幅に改善するので、MongoMK のインストールで便利です。 ただし、リポジトリの 2 倍のサイズのディスク空き容量が必要です。
+`--doc-traversal-mode` パラメーターの使用方法は、リポジトリコンテンツをローカルフラットファイルにスプールすることにより、再インデックス時間を大幅に改善するので、MongoMK のインストールで便利です。ただし、リポジトリの 2 倍のサイズのディスク空き容量が必要です。
 
-MongoMK の場合、MongoDB インスタンスに近いインスタンスでこの手順を実行すると、このプロセスを高速化できます。 同じマシン上で実行すると、ネットワークのオーバーヘッドを回避できます。
+MongoMK の場合、MongoDB インスタンスに近いインスタンスでこの手順を実行すると、このプロセスを高速化できます。同じマシン上で実行すると、ネットワークのオーバーヘッドを回避できます。
 
 技術的な詳細については、[インデックス作成用の oak-run ドキュメント](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)を参照してください。
 
 ### インデックスの読み込み {#importing-indexes}
 
-AEM 6.4 以降のバージョンでは、AEM には、起動シーケンス時にディスクからインデックスを読み込む機能が組み込まれています。 起動時、フォルダー `<repository>/indexing-result/indexes` にインデックスデータが存在するか確認されます。 新しいバージョンの&#x200B;**ターゲット** AEM jarで起動する前の[アップグレード処理](in-place-upgrade.md#performing-the-upgrade)中に、事前に作成したインデックスを上記の場所にコピーすることができます。AEM はそのインデックスをリポジトリに読み込み、対応するチェックポイントをシステムから削除します。 したがって、再インデックスは完全に回避されます。
+AEM 6.4 以降のバージョンでは、AEM には、起動シーケンス時にディスクからインデックスを読み込む機能が組み込まれています。起動時、フォルダー `<repository>/indexing-result/indexes` にインデックスデータが存在するか確認されます。新しいバージョンの&#x200B;**ターゲット** AEM jarで起動する前の[アップグレード処理](in-place-upgrade.md#performing-the-upgrade)中に、事前に作成したインデックスを上記の場所にコピーすることができます。AEM はそのインデックスをリポジトリに読み込み、対応するチェックポイントをシステムから削除します。したがって、再インデックスは完全に回避されます。
 
 ## その他のヒントとトラブルシューティング {#troubleshooting}
 
