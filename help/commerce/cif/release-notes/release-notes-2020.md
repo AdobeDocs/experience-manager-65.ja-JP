@@ -3,9 +3,9 @@ title: AEM Content and Commerce リリースノート 2021
 description: AEM Content and Commerce リリースノート 2021
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1328'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 96%
 
 ### 新機能 {#what-is-new-november}
 
-* 特定のカテゴリページにテンプレート継承が追加されました。 この機能により、特定のトップカテゴリ用に作成されたテンプレートをすべてのサブカテゴリが継承できるので、ビジネスユーザーの効率が向上します。
+* 特定のカテゴリページにテンプレート継承が追加されました。この機能により、特定のトップカテゴリ用に作成されたテンプレートをすべてのサブカテゴリが継承できるので、ビジネスユーザーの効率が向上します。
 
-* Venia 参照用ストアフロントが更新されて、フッターにエクスペリエンスフラグメントを使用できるようになりました。 ビジネスユーザーは、AEM オーサリングツールを使用してページフッターを編集できます。
+* Venia 参照用ストアフロントが更新されて、フッターにエクスペリエンスフラグメントを使用できるようになりました。ビジネスユーザーは、AEM オーサリングツールを使用してページフッターを編集できます。
 
 ### 改善点 {#what-is-improved-november}
 
@@ -45,9 +45,9 @@ ht-degree: 96%
 
 * 新しいカテゴリのカルーセルコンポーネントが追加され、ビジネスユーザーがこのコンポーネントを AEM コンテンツページにドラッグ＆ロップして、コンテンツページをコマースデータで充実させることができるようになりました。 
 
-* CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。 アドビクライアントデータレイヤーは、データを収集してデジタル分析およびレポートサーバーに送信するための標準的な手段です。 詳しくは、[Adobe Client データレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を参照してください。
+* CIF コアコンポーネントが拡張され、コマースデータを送信してアドビクライアントのデータレイヤーを強化できるようになりました。アドビクライアントデータレイヤーは、データを収集してデジタル分析およびレポートサーバーに送信するための標準的な手段です。詳しくは、[Adobe Client データレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を参照してください。
 
-* Adobe Commerce管理 UI 内で設定された SEO メタデータ（タイトル、メタ説明、メタキーワードなど）を自動的に入力するように拡張された、製品の詳細ページと製品リストページ
+* Adobe Commerce 管理 UI 内で設定された SEO メタデータ（タイトル、メタ説明、メタキーワードなど）を自動的に入力するように、製品の詳細ページと製品リストページが拡張されました。
 
 * コマースティーザーコンポーネントのバグを修正しました。
 
@@ -113,7 +113,7 @@ ht-degree: 96%
 
 * CIF Venia 参照サイトが CIF アーキタイプリポジトリーから抽出され、スタンドアロンの GitHub リポジトリーになりました。
 
-* CIF アーキタイプを AEM プロジェクトアーキタイプと統合しました。 新規プロジェクトの場合は、 [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を開始点として使用します。
+* CIF アーキタイプを AEM プロジェクトアーキタイプと統合しました。新規プロジェクトの場合は、 [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を開始点として使用します。
 
 * サインインしたユーザーが自分のアドレスを管理できるように、アドレス帳管理が追加されました。
 
@@ -143,11 +143,11 @@ ht-degree: 96%
 
 * カテゴリフィルタリングの方法を追加し、買い物客がカテゴリに基づいてフィルタリングできるようにしました。
 
-* ACL を直接操作するのではなく、サービスユーザーを介して /conf に確実にアクセスできるように、サービスユーザーマッピングをセキュリティ要件の一環として追加しました。 CIF コアコンポーネントは、設定にアクセスする際に、サービスユーザーを使用しなければならなくなりました。
+* ACL を直接操作するのではなく、サービスユーザーを介して /conf に確実にアクセスできるように、サービスユーザーマッピングをセキュリティ要件の一環として追加しました。CIF コアコンポーネントは、設定にアクセスする際に、サービスユーザーを使用しなければならなくなりました。
 
 ### 改善点 {#what-is-improved-june}
 
-* 製品リストページおよび検索結果ページに、項目の合計数が表示されます。 買い物客がフィルターを適用したときに項目数が更新されます。
+* 製品リストページおよび検索結果ページに、項目の合計数が表示されます。買い物客がフィルターを適用したときに項目数が更新されます。
 
 * カテゴリクエリと製品検索クエリを組み合わせて検索方法を最適化しました。
 
@@ -169,7 +169,7 @@ ht-degree: 96%
 
 * ファセット検索のサポートが検索ページと製品リストページに追加され、買い物客が製品ファセットに基づいて検索結果をフィルタリングできるようになりました。
 
-* 新しい OSGi サービスが追加され、SEO 用の PDP/PLP URL をカスタマイズできるようになりました。 詳しくは、この[ドキュメント](https://github.com/adobe/aem-core-cif-components/wiki/configuration)を参照してください。
+* 新しい OSGi サービスが追加され、SEO 用の PDP/PLP URL をカスタマイズできるようになりました。詳しくは、この[ドキュメント](https://github.com/adobe/aem-core-cif-components/wiki/configuration)を参照してください。
 
 * クラウド設定の作成時に、製品バインディングが自動的に作成されます。
 
@@ -189,7 +189,7 @@ ht-degree: 96%
 
 ### 新機能 {#what-is-new-april}
 
-* CIF コネクタの設定を統合および簡素化しました。 詳しくは、 [はじめに](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) または[新しい AEM CIF プロジェクト設定](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)を参照してください。
+* CIF コネクタの設定を統合および簡素化しました。詳しくは、 [はじめに](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html) または[新しい AEM CIF プロジェクト設定](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html#!AdobeDocs/commerce-cif-documentation/master/getting-started/02-new-cif-project.md)を参照してください。
 
 ### 改善点 {#what-is-improved-april}
 
