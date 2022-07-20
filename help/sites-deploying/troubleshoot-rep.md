@@ -57,7 +57,7 @@ ht-degree: 100%
    1. トップメニューから「ツール」をクリックしてください。
    1. 拡大鏡ボタンをクリックしてください。
    1. 種類として「XPath」を選択します。
-   1. 「Query」ボックスに、次のクエリーを入力します。/jcr:root/var/eventing/jobs//element(*,slingevent:Job) order by @slingevent:created
+   1. 「Query」ボックスに、次のクエリーを入力します。/jcr:root/var/eventing/jobs//element(&#42;、slingevent:Job) order by @slingevent:created
    1. 「検索」をクリックします。
    1. 検索結果の上位の項目が、最新の Sling イベントジョブです。各ジョブをクリックして、キューの一番上に表示されるものと同じ、動きのないレプリケーションを見つけます。
 
