@@ -210,7 +210,7 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
 1. default ノードに次のプロパティを追加します。
 
    * **名前:** `class`
-   * **タイプ:** `String`
+   * **タイプ：** `String`
    * **値:** `org.apache.lucene.analysis.standard.StandardAnalyzer`
 
    この値は、使用するアナライザークラスの名前です。
@@ -218,7 +218,7 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
    また、特定の Lucene バージョンで使用するアナライザーを設定するには、オプションの `luceneMatchVersion` プロパティ（string）を使用することもできます。Lucene 4.7 で使用する場合の有効な構文は次のとおりです。
 
    * **名前:** `luceneMatchVersion`
-   * **タイプ:** `String`
+   * **タイプ：** `String`
    * **値:** `LUCENE_47`
 
    `luceneMatchVersion` が指定されない場合、Oak では出荷時の Lucene のバージョンが使用されます。
@@ -248,8 +248,8 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
          * **プロパティ名:** `name`
 
             * **タイプ:** `String`
-            * **値:** `Standard`
-      * **名前:** `filters`
+            * **値：** `Standard`
+      * **名前：** `filters`
       * **タイプ:** `nt:unstructured`
 
          * **名前:** `LowerCase`
@@ -258,8 +258,8 @@ Oak ではバージョン 1.2.0 以降、Lucene アナライザーをサポー�
             * **プロパティ名:** `words`
 
                * **タイプ:** `String`
-               * **値:** `stop1.txt, stop2.txt`
-            * **名前:** `stop1.txt`
+               * **値：** `stop1.txt, stop2.txt`
+            * **名前：** `stop1.txt`
 
                * **タイプ:** `nt:file`
             * **名前:** `stop2.txt`
