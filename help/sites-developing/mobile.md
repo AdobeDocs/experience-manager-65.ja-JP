@@ -345,9 +345,9 @@ AEM は `wurfl.xml` ファイルを自動的に解析して、`/var/mobile/devic
 ユーザーエージェントを /apps/wcm/mobile/devicespecs/wurfl/regexp に正規表現として追加して、既存の WURFL™ デバイスタイプを指定します。
 
 1. **CRXDE Lite** で、/apps/wcm/mobile/devicespecs/regexp の下にノード（例：apple_ipad_ver1）を作成します。
-1. このノードに次のプロパティを追加します。
+1. ノードに次のプロパティを追加します。
 
-   * **regexp**：ユーザーエージェントを定義する正規表現（例：.*Mozilla.*iPad.*AppleWebKit.*Safari.*）
+   * **regexp**：ユーザーエージェントを定義する正規表現（例：.&#42;Mozilla.&#42;iPad.&#42;AppleWebKit.&#42;Safari）。&#42;
    * **deviceId**：wurfl.xml で定義されるデバイス ID（例：apple_ipad_ver1）
 
 上記の設定によって、ユーザーエージェントが指定の正規表現に一致するデバイスが、WURFL™ デバイス ID である apple_ipad_ver1（存在する場合）にマップされます。
@@ -370,7 +370,7 @@ AEM は `BrowserMap` に基づくデバイスのクライアントサイド検�
 
 ### 代替リンクの設定 {#providing-alternate-links}
 
-`PageVariantsProvider` OSGi サービスは、同じファミリーに属するサイトに対して代替リンクを生成できます。 サービスが考慮するサイトを設定するには、サイトのルートから `jcr:content` ノードに `cq:siteVariant` ノードを追加する必要があります。
+`PageVariantsProvider` OSGi サービスは、同じファミリーに属するサイトに対して代替リンクを生成できます。サービスが考慮するサイトを設定するには、サイトのルートから `jcr:content` ノードに `cq:siteVariant` ノードを追加する必要があります。
 
 `cq:siteVariant` ノードには以下のプロパティが必要です。
 
