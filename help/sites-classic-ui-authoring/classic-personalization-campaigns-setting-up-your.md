@@ -12,9 +12,9 @@ discoiquuid: 19ad4751-1d5d-49de-b76b-3501b3e98e62
 docset: aem65
 exl-id: 1b607a52-f065-4e35-8215-d54df7c8403d
 source-git-commit: a2623df38bcd683a6a43bdaf3483e11e40ac4a68
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2257'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 99%
 
 * **Adobe Target：** Adobe Target と統合するキャンペーンを設定するプロパティです（[Adobe Target との統合](/help/sites-administering/target.md)を参照してください）。
 
-1. 「**キャンペーン**」からブランドを選択します。右側のウィンドウで、キャンペーンを選択し、 **プロパティ**.
+1. 「**キャンペーン**」からブランドを選択します。右側のウィンドウでキャンペーンを選択し、「**プロパティ**」をクリックします。
 
    **タイトル**、**説明**、**Cloud Services**（使用する場合）など、様々なプロパティを入力できます。
 
