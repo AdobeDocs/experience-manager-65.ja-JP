@@ -16,7 +16,7 @@ ht-degree: 100%
 
 ---
 
-# AEM Forms ワークスペースで使用する 各種 API {#apis-used-in-aem-forms-workspace}
+# AEM Forms ワークスペースで使用する各種 API {#apis-used-in-aem-forms-workspace}
 
 AEM Forms ワークスペースでは次の API が使用されています。
 
@@ -331,7 +331,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getTaskOfDirectReport<br /> </td>
    <td>ProcessManagementTeamTasksService</td>
-   <td>getTaskOfDirectReport</td>
+   <td>getDirectReportTask</td>
    <td>ログインしたマネージャーの指定された直接レポートのタスクを返します。</td>
   </tr>
   <tr>
