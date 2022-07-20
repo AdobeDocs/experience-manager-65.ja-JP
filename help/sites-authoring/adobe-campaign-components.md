@@ -24,9 +24,9 @@ Adobe Campaign と統合しているときは、ニュースレター用とフ�
 
 >[!CAUTION]
 >
->AEM メールコンポーネントは非推奨（廃止予定）となりました。 コンテンツとスタイルを結合するメールの性質上、AEM で標準で提供されるメールコンポーネントは、プロジェクトで必要なすべてのコンポーネントにカスタムスタイルを実装する必要があるので、顧客による再利用の機会は限られています。
+>AEM メールコンポーネントは非推奨（廃止予定）となりました。コンテンツとスタイルを結合するメールの性質上、AEM で標準で提供されるメールコンポーネントは、プロジェクトで必要なすべてのコンポーネントにカスタムスタイルを実装する必要があるので、顧客による再利用の機会は限られています。
 >
->メールコンポーネントはプロジェクトレベルで実装できます。その方法は、非推奨の AEM メールコンポーネントを見ればわかります。 ただし、これらの非推奨コンポーネントは、プロジェクトでは使用しないでください。
+>メールコンポーネントはプロジェクトレベルで実装できます。その方法は、非推奨の AEM メールコンポーネントを見ればわかります。ただし、これらの非推奨コンポーネントは、プロジェクトでは使用しないでください。
 
 ## Adobe Campaign ニュースレターコンポーネント {#adobe-campaign-newsletter-components}
 
@@ -274,15 +274,15 @@ Adobe Campaign コンポーネントを使用して、ニュースレターの�
 
 Adobe Campaign と統合するように設定されているフォームを開くと、「**Adobe Campaign**」セクションに以下のコンポーネントが表示されます。
 
-* チェックボックス（Campaign）
+* チェックボックス （Campaign）
 * 日付フィールド（Campaign）と日付フィールド／HTML5（Campaign）
 * 暗号化されたプライマリキー（Campaign）
 * エラー表示（Campaign）
-* 非表示の調整キー（Campaign）
-* 数値フィールド（Campaign）
-* オプションフィールド（Campaign）
+* 非表示の紐付けキー（Campaign）
+* 数値フィールド （Campaign）
+* オプションフィールド （Campaign）
 * 購読チェックリスト（Campaign）
-* テキストフィールド（Campaign）
+* テキストフィールド （Campaign）
 
 コンポーネントは次のように表示されます。
 
@@ -377,7 +377,7 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 
-### チェックボックス（Campaign） {#checkbox-campaign}
+### チェックボックス （Campaign） {#checkbox-campaign}
 
 チェックボックス（Campaign）コンポーネントを使用すると、boolean データタイプの Adobe Campaign プロファイルフィールドをユーザーに変更させることができます。例えば、チェックボックス（Campaign）コンポーネントを使用して、受信者に連絡を希望するかどうかを選択させるオプションを作成できます。
 
@@ -439,7 +439,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-### 数値フィールド（Campaign） {#numeric-field-campaign}
+### 数値フィールド （Campaign） {#numeric-field-campaign}
 
 数値フィールドを使用して、受信者に年齢などの数字を入力させることができます。
 
@@ -455,7 +455,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-### オプションフィールド（Campaign） {#option-field-campaign}
+### オプションフィールド （Campaign） {#option-field-campaign}
 
 このドロップダウンリストを使用して、受信者の性別やステータスなどのオプションを選択できます。
 
@@ -483,7 +483,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-### テキストフィールド（Campaign） {#text-field-campaign}
+### テキストフィールド （Campaign） {#text-field-campaign}
 
 テキストフィールド（Campaign）コンポーネントを使用すると、名、姓、住所、電子メールアドレスなど、文字列タイプのデータを入力できます。
 
