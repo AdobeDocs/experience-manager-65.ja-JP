@@ -112,10 +112,10 @@ AEM の製品範囲に関する規制ドキュメントについては、以下�
 
 ## Adobe Target および Adobe Analytics との AEM 統合 {#aem-integration-with-adobe-target-adobe-analytics}
 
-これらの Adobe Experience Manager 統合は、データ保護およびプライバシー（GDPR や CCPA など）に対応したサービスと共に行われます。 Adobe Target や Adobe Analytics の個人データは、統合に関連して AEM に保存されません。
+これらの Adobe Experience Manager 統合は、データ保護およびプライバシー（GDPR や CCPA など）に対応したサービスと共に行われます。Adobe Target や Adobe Analytics の個人データは、統合に関連して AEM に保存されません。
 詳しくは、次のセクションを参照してください。
 
-* [Adobe Target - プライバシーの概要](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html?lang=ja)
+* [Adobe Target - プライバシーの概要](https://docs.adobe.com/content/help/ja/target/using/implement-target/before-implement/privacy/privacy.html)
 
 * [Adobe Analytics データプライバシーのワークフロー](https://docs.adobe.com/content/help/ja-JP/analytics/admin/data-governance/an-gdpr-workflow.html)
 
