@@ -6,9 +6,9 @@ content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '733'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -81,12 +81,12 @@ ht-degree: 98%
   <tr>
    <td>標準化されたデータモデル</td>
    <td>不可</td>
-   <td>はい、Adobe Commerce GraphQL スキーマ</td>
+   <td>可、Adobe Commerce GraphQL スキーマ</td>
   </tr>
   <tr>
    <td>入手方法</td>
    <td><p>使用可能。SAP Commerce Cloud（拡張機能は AEM 6.4 および Hybris 5（デフォルト）をサポートするように更新され、Hybris 4 との互換性を維持）</p> <p>Salesforce Commerce Cloud（AEM 6.4 をサポートするためにオープンソース化されたコネクタ）</p> </td>
-   <td>GitHub を通じてオープンソースで使用可能。Adobe Commerce(2.3.2（デフォルト）をサポートし、2.3.1 との互換性 )。</td>
+   <td>GitHub を通じてオープンソースで使用可能。Adobe Commerce（2.3.2（デフォルト）をサポート、2.3.1 と互換性あり）</td>
   </tr>
   <tr>
    <td>用途</td>
