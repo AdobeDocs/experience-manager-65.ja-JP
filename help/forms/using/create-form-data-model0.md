@@ -123,7 +123,7 @@ MySQL データベースを設定するには、以下の手順を実行しま�
    1. AEM Forms のオーサーインスタンスに管理者としてログインし、AEM Web コンソールバンドルに移動します。デフォルトの URL は、[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles) です。
    1. **Install/Update** をタップします。「**Upload / Install Bundles**」ダイアログが表示されます。
 
-   1. 「**Choose File**」をタップし、MySQL JDBC ドライバーの OSGi バンドルを探して選択します。**Start Bundle** と **Refresh Packages** を選択して **Install** または **Update** をタップします。Oracle が提供する MySQL の JDBC ドライバーがアクティブになっていることを確認します。このドライバーは、既にインストールされています。
+   1. 「**Choose File**」をタップし、MySQL JDBC ドライバーの OSGi バンドルを探して選択します。**Start Bundle** と **Refresh Packages** を選択して **Install** または **Update** をタップします。Oracle が提供する MySQL の JDBC ドライバーがアクティブになっていることを確認します。ドライバーがインストールされます。
 
 1. 以下の手順により、MySQL データベースをデータソースとして設定します。
 
@@ -144,7 +144,7 @@ MySQL データベースを設定するには、以下の手順を実行しま�
 
       * **Test on Return：** は **Test on Return** オプションを有効にします。
 
-      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、「**select * from customer**」などを指定します。
+      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例：**select &#42; from customer**。
 
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
    上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして **Save** をタップします。
@@ -238,7 +238,7 @@ AEM Forms には、設定済みデータソースを使用して[フォームデ
 
    ![使用料金ルール](assets/usage_charges_rule_all_new.png)
 
-1. 「**完了**」をタップします。 ルールエディター内でルールが作成されます。
+1. 「**完了**」をタップします。ルールエディター内でルールが作成されます。
 1. 「**閉じる**」をタップして、ルールエディターウィンドウを閉じます。
 
 ### データモデルオブジェクト間の関連付けの追加 {#add-associations-between-data-model-objects}
