@@ -80,7 +80,7 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内の�
 1. 「**[!UICONTROL テナント URL]**」フィールドに、AEM Assets の URL を指定します。過去に、URL が `https://<tenant_id>.marketing.adobe.com` として定義された場合は、`https://<tenant_id>.experiencecloud.adobe.com` に変更します。
 
    1. **ツール／クラウドサービス／従来のクラウドサービス**&#x200B;に移動します。Adobe Experience Cloud の下にある「**設定を表示**」をクリックします。
-   1. 編集する既存の設定を選択します。 設定を編集し、`marketing.adobe.com` を `experiencecloud.adobe.com` で置換します。
+   1. 編集する既存の設定を選択します。設定を編集し、`marketing.adobe.com` を `experiencecloud.adobe.com` で置換します。
    1. 設定を保存します。MAC 同期レプリケーションエージェントをテストします。
 
 1. 「**[!UICONTROL クライアント ID]**」フィールドに、[アプリケーションの作成](#create-an-application)手順の最後でコピーしたアプリケーション ID を貼り付けます。
