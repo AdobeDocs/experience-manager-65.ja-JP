@@ -63,7 +63,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 1. 管理コンソールで、ホーム／サービス／forms ワークフロー／サーバー設定／タスク通知をクリックします。
 1. タスクの割り当てテンプレートを開きます。
-1. タスク通知のテンプレートを次のとおりに設定します。 `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
+1. タスク通知のテンプレートを次のとおりに設定します。`https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
    ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@
