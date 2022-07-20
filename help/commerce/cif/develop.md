@@ -16,7 +16,7 @@ ht-degree: 100%
 
 # AEM Commerce の開発 {#develop}
 
-AEM 向けコマース統合フレームワーク（CIF）に基づく AEM Commerce プロジェクトの開発でも、他の AEM プロジェクトと同じルールとベストプラクティスに従います。 最初に以下を確認してください。
+AEM 向けコマース統合フレームワーク（CIF）に基づく AEM Commerce プロジェクトの開発でも、他の AEM プロジェクトと同じルールとベストプラクティスに従います。最初に以下を確認してください。
 
 - [AEM 6.5 開発ユーザーガイド](/help/sites-developing/home.md)
 - [AEM の中心概念](/help/sites-developing/the-basics.md)
@@ -29,9 +29,9 @@ CIF プロジェクトを使用する場合は、ローカル開発環境を使�
 
 >[!NOTE]
 >
->以下の手順は、CIF を使用して AEM Commerce 用のローカル AEM 開発環境を AEM 6.5 用に設定する場合に役立ちます。 AEM as a Cloud Service を使用している場合は、 [AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) ドキュメントを参照してください。
+>以下の手順は、CIF を使用して AEM Commerce 用のローカル AEM 開発環境を AEM 6.5 用に設定する場合に役立ちます。AEM as a Cloud Service を使用している場合は、 [AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=ja) ドキュメントを参照してください。
 
-AEM 6.5 用の AEM Commerce アドオンCIF アドオンは、ローカル開発にも使用でき、AEM パッケージとしても提供されます。 これは、 [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から機能パックとしてダウンロードできます。
+AEM 6.5 用の AEM Commerce アドオンCIF アドオンは、ローカル開発にも使用でき、AEM パッケージとしても提供されます。これは、 [ソフトウェア配布ポータル](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)から機能パックとしてダウンロードできます。
 
 ### 必要なソフトウェア
 
@@ -57,7 +57,7 @@ CIF アドオンは、 [ソフトウェア配布ポータル](https://experience
 
 AEM と CIF アドオンを使用するローカル CIF プロジェクト開発の場合は、次の手順に従います。
 
-1. AEM 6.5 リリースを入手し、AEM 6.5 サービスパックをインストールします。 AEM 6.5 サービスパック 7 が必要ですが、入手可能な最新のサービスパックをインストールすることをお勧めします。
+1. AEM 6.5 リリースを入手し、AEM 6.5 サービスパックをインストールします。AEM 6.5 サービスパック 7 が必要ですが、入手可能な最新のサービスパックをインストールすることをお勧めします。
 
 1. AEM.jar を解凍し、`crx-quickstart` フォルダーを作成します。次を実行します。
 
@@ -156,9 +156,9 @@ Venia 参照用ストアの使用を開始するには、[Git リポジトリー
 
 `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` の `url` の値を、プロジェクトで使用されるコマースシステムの GraphQL エンドポイントに置き換えます。
 
-AEM Commerce アドオンと CIF コアコンポーネントは、AEM サーバーを介して、またはブラウザーを介して直接、コマース GraphQL エンドポイントに接続します。 クライアントサイドの CIF コアコンポーネントと CIF アドオンのオーサリングツールは、デフォルトで `/api/graphql` に接続します。 必要に応じて、 CIF Cloud Service 設定で調整できます（以下を参照）。
+AEM Commerce アドオンと CIF コアコンポーネントは、AEM サーバーを介して、またはブラウザーを介して直接、コマース GraphQL エンドポイントに接続します。クライアントサイドの CIF コアコンポーネントと CIF アドオンのオーサリングツールは、デフォルトで `/api/graphql` に接続します。必要に応じて、 CIF Cloud Service 設定で調整できます（以下を参照）。
 
-CIF アドオンは、`/api/graphql` で GraphQL プロキシサーブレットを提供します。 ローカルの AEM Dispatcher を使用しない場合は、GraphQL プロキシサーブレットも設定することをお勧めします。
+CIF アドオンは、`/api/graphql` で GraphQL プロキシサーブレットを提供します。ローカルの AEM Dispatcher を使用しない場合は、GraphQL プロキシサーブレットも設定することをお勧めします。
 
 http://localhost:4502/system/console/configMgr に移動し、`Adobe CIF GraphQL Proxy Configuration` サービスの OSGI 設定を作成します。上記の GraphQL クライアントで使用したのと同じ GraphQL エンドポイントを、コマースシステムで使用します。
 
