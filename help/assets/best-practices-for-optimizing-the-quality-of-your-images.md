@@ -1,5 +1,5 @@
 ---
-title: 画質最適化のベストプラクティス（Dynamic Media 内）
+title: Dynamic Media の画質最適化のベストプラクティス
 description: Dynamic Media の画質を最適化するベストプラクティスについて説明します。
 uuid: b73f0918-c723-4a0d-a63f-4242223c2d47
 contentOwner: Rick Brough
