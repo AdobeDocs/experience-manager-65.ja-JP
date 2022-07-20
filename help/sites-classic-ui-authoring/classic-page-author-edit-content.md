@@ -44,7 +44,7 @@ ht-degree: 100%
 * モード
 * 基礎モード
 * ClientContext
-* Web サイト
+* web サイト
 
 ![chlimage_1-71](assets/chlimage_1-71.png)
 
@@ -176,7 +176,7 @@ ht-degree: 100%
 
 継承されたコンポーネントは、次のような様々なシナリオによって生成されます。
 
-* [マルチサイト管理](/help/sites-administering/msm.md)また、[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて。
+* [複数サイト管理](/help/sites-administering/msm.md)。[基礎モード](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md#scaffolding-with-msm-inheritance)と組み合わせて使用されます。
 
 * [ローンチ](/help/sites-classic-ui-authoring/classic-launches.md)（ライブコピーをベースとしている場合）
 * 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
