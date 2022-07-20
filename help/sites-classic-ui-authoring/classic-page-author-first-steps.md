@@ -1,5 +1,5 @@
 ---
-title: 作成者がおこなう最初の手順
+title: 作成者が行う最初の手順
 seo-title: First Steps for Authors
 description: ここでは、Adobe Experience Manager（AEM）でコンテンツのオーサリングを開始する際に使用する主なタスクの概要について説明します。
 seo-description: This section gives you an overview of the main tasks that you will be using when starting to author content with Adobe Experience Manager (AEM).
