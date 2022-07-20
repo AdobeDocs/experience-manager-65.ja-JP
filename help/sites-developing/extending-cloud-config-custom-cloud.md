@@ -46,7 +46,7 @@ ht-degree: 100%
    * **タイプ**：`sling:Folder`
 
 
-1. 「`/apps/acs/analytics/components`」を右クリックします。 「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
+1. 「`/apps/acs/analytics/components`」を右クリックします。「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
 
    * **ラベル**：`googleanalyticspage`
    * **タイトル**：`Google Analytics Page`
