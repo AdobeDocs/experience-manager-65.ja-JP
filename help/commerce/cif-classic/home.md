@@ -1,7 +1,8 @@
 ---
 title: AEM CIF Classic
 description: AEM CIF Classic に関するセルフヘルプリソースおよびドキュメントリンク
-source-git-commit: 491b0398c90d84f38efaa7f0ccd4d4215064753d
+exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: ht
 source-wordcount: '52'
 ht-degree: 100%
