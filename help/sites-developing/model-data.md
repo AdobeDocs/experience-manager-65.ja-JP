@@ -1,5 +1,5 @@
 ---
-title: データのモデル化 - David Nuescheler のモデル
+title: データモデリング - David Nuescheler のモデル
 seo-title: Data Modeling - David Nuescheler's Model
 description: David Nuescheler のコンテンツモデル化の推奨事項
 seo-description: David Nuescheler's content modelling recommendations
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# データのモデル化 - David Nuescheler のモデル{#data-modeling-david-nuescheler-s-model}
+# データモデリング - David Nuescheler のモデル{#data-modeling-david-nuescheler-s-model}
 
 ## ソース {#source}
 
@@ -59,7 +59,7 @@ ERD の意味では、宣言されているデータ構造について気にし�
 
 #### 例 {#example-1}
 
-`lastModified` 日付プロパティを使った前述の例は「blog post」ノードの例であり、特別なノードタイプが必要であることを意味しているわけではありません。 私は、少なくとも最初は必ず `nt:unstructured` をブログ投稿ノード用に使います。 私のブログアプリケーションでは、lastModified の日付を表示するだけなので（「order by」の場合もある）、それが Date であるかどうかはほとんど気にしません。私はブログを書くアプリケーションが「Date」を入れてくれることを暗黙的に信じているので、nodetype という形式で `lastModified` 日付の存在を宣言する必要は実際にはありません。
+`lastModified` 日付プロパティを使った前述の例は「blog post」ノードの例であり、特別なノードタイプが必要であることを意味しているわけではありません。私は、少なくとも最初は必ず `nt:unstructured` をブログ投稿ノード用に使います。私のブログアプリケーションでは、lastModified の日付を表示するだけなので（「order by」の場合もある）、それが Date であるかどうかはほとんど気にしません。私はブログを書くアプリケーションが「Date」を入れてくれることを暗黙的に信じているので、nodetype という形式で `lastModified` 日付の存在を宣言する必要は実際にはありません。
 
 ### ルール 2：コンテンツ階層は手動で設計し、成り行き任せにしない。 {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
@@ -182,7 +182,7 @@ XML の読み込みや既存の XML とのインタラクションのために S
 
 私は経験則として、ファイル名と MIME タイプを保存する必要がある場合は、 `nt:file`/ `nt:resource` がとても良いマッチだと思います。複数の「ファイル」がある場合は、nt:folder は格納場所に適しています。
 
-リソースのメタ情報を追加する必要がある場合（例えば、「author」プロパティや「description」プロパティなど）、`nt:file` ではなく、`nt:resource` を拡張します。 nt:file を拡張することはほとんどなく、`nt:resource` を頻繁に拡張します。
+リソースのメタ情報を追加する必要がある場合（例えば、「author」プロパティや「description」プロパティなど）、`nt:file` ではなく、`nt:resource` を拡張します。nt:file を拡張することはほとんどなく、`nt:resource` を頻繁に拡張します。
 
 #### 例 {#example-6}
 
