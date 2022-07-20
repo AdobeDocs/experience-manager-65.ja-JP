@@ -1,5 +1,5 @@
 ---
-title: アダプティブフォームフィールドのカスタム外観の作成
+title: 'アダプティブフォームフィールドのカスタム外観の作成 '
 seo-title: Create custom appearances for adaptive form fields
 description: Adaptive Forms の追加設定不要コンポーネントの外観をカスタマイズします。
 seo-description: Customize appearance of out-of-the-box components in Adaptive Forms.
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# アダプティブフォームフィールドのカスタム外観の作成{#create-custom-appearances-for-adaptive-form-fields}
+# アダプティブフォームフィールドのカスタム外観の作成 {#create-custom-appearances-for-adaptive-form-fields}
 
 ## 概要 {#introduction}
 
