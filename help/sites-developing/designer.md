@@ -37,7 +37,7 @@ Designer は、AEM の[クラシック UI](/help/release-notes/touch-ui-features
 
 ここで、デザインの格納に必要な構造を作成し、必要なカスケーディングスタイルシート（CSS）および画像をアップロードできます。
 
-デザインは、`/apps/<your-project>`の下に格納されます。 Web サイトに使用するデザインへのパスは、ノードの `cq:designPath`プロパティ`jcr:content`で指定します。
+デザインは、`/apps/<your-project>`の下に格納されます。Web サイトに使用するデザインへのパスは、ノードの `cq:designPath`プロパティ`jcr:content`で指定します。
 
 ![chlimage_1-74](assets/chlimage_1-74a.png)
 
