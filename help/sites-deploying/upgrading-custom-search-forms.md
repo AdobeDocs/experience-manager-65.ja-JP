@@ -1,5 +1,5 @@
 ---
-title: カスタム検索フォームのアップグレード
+title: 'カスタム検索フォームのアップグレード '
 seo-title: Upgrading Custom Search Forms
 description: この記事では、カスタム検索フォームを機能させるために、アップグレード後に必要となる調整について説明します。
 seo-description: This article details the adjustments that are required after an upgrade in order for the custom search forms to function.
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# カスタム検索フォームのアップグレード{#upgrading-custom-search-forms}
+# カスタム検索フォームのアップグレード {#upgrading-custom-search-forms}
 
 AEM 6.2 では、カスタマイズされた検索フォームのリポジトリ内の保存場所が変更されました。アップグレード時に、6.1 での保存場所
 
@@ -120,7 +120,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
  <tbody>
   <tr>
    <td>6.1 のデフォルトの検索フォームのノード<br /><br /> </td>
-   <td>tags</td>
+   <td>タグ</td>
   </tr>
   <tr>
    <td><p>6.1 のリソースタイプ</p> </td>
@@ -492,7 +492,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 
 **アクション：**
 
-* `resourceType` プロパティを調整します（上記の 6.2 の場所のように「**/coral**」を付加します）。
+* `resourceType` プロパティを変更します（上記の 6.2 の場所のように「**/coral**」を付加します）。
 
 * 同じノードの `fieldLabel` プロパティと同じ値を持つ `text` プロパティを追加します。
 
