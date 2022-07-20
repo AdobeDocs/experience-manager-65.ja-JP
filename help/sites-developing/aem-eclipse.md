@@ -116,7 +116,7 @@ AEM Developer Tools for Eclipse には、サンプルのマルチモジュール
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-1. 「**Finish**」をクリックします。プロジェクト構造が作成されます。
+1. 「**終了**」をクリックします。プロジェクト構造が作成されます。
 
    >[!NOTE]
    >
