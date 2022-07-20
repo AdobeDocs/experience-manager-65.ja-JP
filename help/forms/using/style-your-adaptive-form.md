@@ -49,7 +49,7 @@ ht-degree: 100%
 
 ## 手順 1：アダプティブフォームへのテーマの適用 {#step-apply-a-theme-to-your-adaptive-form}
 
-アダプティブフォームエディターは多数の初期設定済みテーマを提供します。アダプティブフォームにカスタムスタイルを使用する場合は、初期設定済みテーマを使用してアダプティブフォームを発行することもできます。テーマはアダプティブフォームから独立しています。同一のテーマを複数のアダプティブフォームに適用できます。テーマをアダプティブフォームに適用するには、次の手順を実行します。
+アダプティブフォームエディターは多数の初期設定済みテーマを提供します。アダプティブフォームにカスタムスタイルを使用する場合は、初期設定済みテーマを使用してアダプティブフォームを発行することもできます。テーマはアダプティブフォームから独立しています。同一のテーマを複数のアダプティブフォームに適用できます。テーマをアダプティブフォームに適用するには：
 
 1. アダプティブフォームを編集用に開きます。
 
@@ -77,7 +77,7 @@ ht-degree: 100%
       [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html)
 
    1. [!UICONTROL ヘッダー]コンポーネントでロゴの画像をタップし、![cmppr](assets/cmppr.png) 「**[!UICONTROL プロパティ]**」をタップします。[!UICONTROL 画像]のプロパティで X をタップし、既存のロゴの画像を削除します。
-   1. 「**[!UICONTROL アップロード]**」をタップして、logo.png を選択し、 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) をタップして変更を保存します。 この画像は「[事前準備](/help/forms/using/style-your-adaptive-form.md#before-you-start)」セクションでダウンロードした画像です。
+   1. 「**[!UICONTROL アップロード]**」をタップして、logo.png を選択し、 ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) をタップして変更を保存します。この画像は「[事前準備](/help/forms/using/style-your-adaptive-form.md#before-you-start)」セクションでダウンロードした画像です。
    1. ヘッダーテキスト `We.Retail` をタップしてから、 ![aem_6_3_edit](assets/aem_6_3_edit.png) 「**[!UICONTROL 編集]**」をタップします。ヘッダーテキストを `we retail` に変更します。太字書式を `we retail` の `we` にのみ適用します。
 
       ![we-retail-logo-text](assets/we-retail-logo-text.png)
