@@ -274,6 +274,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
       例：`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
    * 型：`sling:OsgiConfig`
+
    >[!NOTE]
    >
    >技術的に必須ではありませんが、`<identifier>` は一意にすることをお勧めします。
@@ -368,6 +369,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
       Logger の場合のように、`<identifier>` の部分は、インスタンスを識別するフリーテキストに置き換えます（この情報は省略できません）。例：`org.apache.sling.commons.log.LogManager.factory.writer-MINE`
 
    * 型：`sling:OsgiConfig`
+
    >[!NOTE]
    >
    >技術的に必須ではありませんが、`<identifier>` は一意にすることをお勧めします。
@@ -401,13 +403,11 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >* 最大ファイルサイズ
    >* 時刻／日付のスケジュール
-
    >
    >これにより、新しいファイルを作成する（また、名前のパターンに従って既存のファイルを名前変更する）条件を示します。
    >
    >* サイズの制限は数値で指定できます。サイズインジケーターが指定されていない場合、これはバイト数と見なされます。または、サイズインジケーターの 1 つ（`KB`、`MB`、`GB` のいずれか）を追加できます（大文字と小文字は区別されません）。
    >* 日時スケジュールは、`java.util.SimpleDateFormat` パターンとして指定できます。これは、ファイルがローテーションされるまでの期間と、ローテーションされたファイルに追加されるサフィックス（識別用）を定義します。
-
    >
    >デフォルトは「.」です。yyyy-MM-dd（毎日のログローテーションの場合）
    >
@@ -423,8 +423,8 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >メモ：日時を指定する場合：
    > 1. 一重引用符（&#39; &#39;）の範囲内で、リテラルテキストを「エスケープ」する必要があります。
-      >
-      >     これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
+   >
+   >     これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
    >
    >  1. オプションの任意の場所で、有効なファイル名に使用できる文字のみを使用します。
 

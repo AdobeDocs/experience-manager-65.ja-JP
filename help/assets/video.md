@@ -74,6 +74,7 @@ ht-degree: 100%
    * ビデオアセットをプレビューして公開します。
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
+
          [ビデオをプレビュー](managing-video-assets.md#upload-and-preview-video-assets)するか[アセットをプレビュー](previewing-assets.md)します。
          [ビデオレンディションを表示](video-renditions.md)
          [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
@@ -83,9 +84,11 @@ ht-degree: 100%
    * ビデオのメタデータを操作します。
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
+
          [ビデオレンディションのプロパティを表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
+
          [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
 
       * [デジタルアセットのメタデータの管理](metadata.md)
@@ -111,9 +114,11 @@ ht-degree: 100%
    * サードパーティの Web コンテンツ管理システムを使用している場合、Web ページにビデオをリンクするか、ビデオを埋め込むことができます。
 
       * URL を使用したビデオの統合：
+
          [Web アプリケーションに URL をリンクします](linking-urls-to-yourwebapplication.md)。
 
       * Web ページの埋め込みコードを使用したビデオの統合：
+
          [Web ページにビデオビューアを埋め込みます](embed-code.md)。
    * [YouTube にビデオを公開します](#publishing-videos-to-youtube)。
    * [ビデオレポートを生成します](#viewing-video-reports)。
@@ -467,7 +472,7 @@ Google Cloud を設定するには：
 1. [https://cloud.google.com/](https://cloud.google.com/) にアクセスします。
 1. Google Cloud ページの右上隅付近にある、「**[!UICONTROL コンソール]**」をクリックします。
 
-   必要に応じて、Google アカウントの資格情報を使用して&#x200B;**[!UICONTROL ログイン]**&#x200B;し、「]**コンソール**[!UICONTROL 」オプションを確認します。
+   必要に応じて、Google アカウントの資格情報を使用して&#x200B;**[!UICONTROL ログイン]**&#x200B;し、「**コンソール**」オプションを確認します。
 
 1. ダッシュボードページで、**[!UICONTROL Google Cloud Platform]** の右側にある「プロジェクト」ドロップダウンリストをクリックして、プロジェクトの選択ダイアログボックスを開きます。
 1. プロジェクトの選択ダイアログボックスで、「**[!UICONTROL 新しいプロジェクト]**」をタップします。
@@ -866,7 +871,6 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
-
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -901,7 +905,6 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
-
    >
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
@@ -929,7 +932,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 * YouTube への公開ジョブの場合、次の手順に従います。
 
 1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;をタップします。
-1. ワークフローモデルページで、「]**YouTube に公開**[!UICONTROL 」を選択して、ツールバーの「]**編集**[!UICONTROL 」をタップします。
+1. ワークフローモデルページで、「**YouTube に公開**[!UICONTROL 」を選択して、ツールバーの「]**編集**」をタップします。
 1. YouTube に公開ワークフローページの右上隅にある「**[!UICONTROL 編集]**」をタップします。
 1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回タップしてインラインツールバーを表示します。
 
@@ -1061,6 +1064,7 @@ Dynamic Media で標準提供されているビデオビューアを使用して
       trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
+
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
@@ -1241,18 +1245,18 @@ Experience Manager 内のすべてのビデオには、サムネールを関連�
 
    * ビデオのフレームを新しいサムネールとして使用するには：
 
-      * ツールバーで、「]**ビデオからフレームを選択**[!UICONTROL 」をタップします。
+      * ツールバーで、「**ビデオからフレームを選択**」をタップします。
       * 「再生」ボタンをタップし、ビデオの新しいサムネールとしてキャプチャするフレームの「一時停止」ボタンをタップします。
    * 画像アセットを新しいサムネールとして使用するには：
 
-      * ツールバーで、「]**アセットからサムネールを選択**[!UICONTROL 」をタップします。
+      * ツールバーで、「**アセットからサムネールを選択**」をタップします。
       * 「**[!UICONTROL サムネールを選択]**」をタップします。
       * 既にアップロードして公開した画像アセットのうち、使用するものを選択します。アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
       * 画像アセットを選択し、「**[!UICONTROL 選択]**」をタップします。
 
 
-1. サムネールを変更ページで、「]**変更を保存**[!UICONTROL 」をタップします。
-1. ビデオのプロパティページで、右上隅にある「]**保存して閉じる**[!UICONTROL 」をタップします。
+1. サムネールを変更ページで、「**変更を保存**」をタップします。
+1. ビデオのプロパティページで、右上隅にある「**保存して閉じる**」をタップします。
 
 ## Dynamic Media - ハイブリッドモードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1327,6 +1331,6 @@ Dynamic Media では、ビデオの合計時間に基づいて 10 個（デフ�
 1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」をタップします。
 1. サムネールを変更ページで、ツールバーの「**[!UICONTROL 新しいサムネールをアップロード]**」をタップします。
 1. 使用するサムネール画像に移動して、その画像を選択します。次に「**[!UICONTROL 開く]**」をタップして、Experience Manager への画像のアップロードを開始します。アップロード後に、必ず画像を公開してください。
-1. 画像をアップロードして公開したら、サムネールを変更ページで、「]**変更を保存**[!UICONTROL 」をタップします。
+1. 画像をアップロードして公開したら、サムネールを変更ページで、「**変更を保存**」をタップします。
 
    カスタムサムネールがビデオに追加されます。
