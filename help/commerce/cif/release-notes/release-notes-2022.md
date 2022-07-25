@@ -2,9 +2,9 @@
 title: AEM Content and Commerce リリースノート 2022
 description: AEM Content and Commerce リリースノート 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: 600a836ff7ae0be9fde107ff2828bb41e8eed98f
+source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '663'
 ht-degree: 86%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 86%
 
 ### 新機能 {#what-is-new-june}
 
-* 製品カタログテンプレートのオーサリング時に、テンプレート名が Sites エディターに表示されるようになりました。
+* 製品カタログのエンリッチメントでAEMページがサポートされるようになりました。 これにより、作成者はページと製品の関連付けを管理できます。
 
 * CIF コアコンポーネントの様々な改善点
 
