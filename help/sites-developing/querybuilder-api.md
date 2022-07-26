@@ -12,10 +12,10 @@ discoiquuid: 7965b7ef-dec4-441a-a012-daf1d60df0fb
 pagetitle: Query Builder API
 tagskeywords: querybuilder
 exl-id: b2288442-d055-4966-8057-8b7b7b6bff28
-source-git-commit: d1fc2ff44378276522c2ff3208f5b3bdc4484bba
-workflow-type: ht
+source-git-commit: bfb02e79d6895be498e6e40888c6d8d4e3a8fcd4
+workflow-type: tm+mt
 source-wordcount: '2313'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -41,7 +41,7 @@ REST API を使用すると、JSON で送信される応答を使用した HTTP 
 
 >[!NOTE]
 >
->Query Builder の概要について詳しくは、AEM Gem セッションの [AEM QueryBuilder で容易になった Forms の検索](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-search-forms-using-querybuilder.html)を参照してください。
+>Query Builder の概要について詳しくは、AEM Gem セッションの [AEM QueryBuilder で容易になった Forms の検索](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html)を参照してください。
 
 ## サンプルクエリ {#sample-queries}
 
