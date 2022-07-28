@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
-source-wordcount: '552'
-ht-degree: 100%
+source-git-commit: 3de9f3c97b99644297a2f07344f6aebae1c5ae83
+workflow-type: tm+mt
+source-wordcount: '609'
+ht-degree: 90%
 
 ---
 
@@ -73,9 +73,12 @@ ht-degree: 100%
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-   >[!NOTE]
-   >
-   >AEM は、選択された文字列を翻訳管理システムに送り返します。
+AEM は、選択された文字列を翻訳管理システムに送り返します。
+
+* このアクションにより、設定済みの翻訳管理システム (TMS) の翻訳メモリ内の既存の文字列の翻訳が更新されます。
+* 新しい翻訳ジョブは作成されません。
+* 文字列の値のペアとその翻訳を、AEM翻訳 API を介して TMS に返します。
+* この機能を使用するには、AEMで使用する翻訳管理システムが設定されている必要があります。
 
 ## 複数のレベルの言語コピー {#language-copies-on-multiple-levels}
 
