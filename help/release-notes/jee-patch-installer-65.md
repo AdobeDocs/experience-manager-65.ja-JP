@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 3af8a2425596ff6c15fb49fed66e9fbd0e9d391e
+source-git-commit: 2c2277f43fe12c4d4fa655c0666519e3608ba3f9
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 97%
+source-wordcount: '493'
+ht-degree: 98%
 
 ---
 
@@ -71,8 +71,9 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
 1. （JBoss のみ）パッチをインストールしてサーバーを設定した後、JBoss Application Server の tmp および work ディレクトリを削除します。
 
->**注意：** 開始する前に **Configuration Manager**、ダウンロードと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイル。
->
+>[!NOTE]
+>開始する前に **Configuration Manager**、ダウンロードと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイル。
+
 ## デプロイメント後の設定 {#post-deployment-configurations}
 
 ### SAML の設定 {#saml-configurations}
