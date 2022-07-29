@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
-workflow-type: ht
-source-wordcount: '484'
-ht-degree: 100%
+source-git-commit: d28d78e426f1e89caa8bd28b067765d40b95cb8a
+workflow-type: tm+mt
+source-wordcount: '494'
+ht-degree: 97%
 
 ---
 
@@ -70,6 +70,8 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
    * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
 
 1. （JBoss のみ）パッチをインストールしてサーバーを設定した後、JBoss Application Server の tmp および work ディレクトリを削除します。
+
+>**注意：** 開始する前に **Configuration Manager**、ダウンロードと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイル。
 
 ## デプロイメント後の設定 {#post-deployment-configurations}
 
