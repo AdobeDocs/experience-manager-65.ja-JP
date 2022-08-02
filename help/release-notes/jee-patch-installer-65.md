@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 2c2277f43fe12c4d4fa655c0666519e3608ba3f9
+source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 98%
+source-wordcount: '475'
+ht-degree: 93%
 
 ---
 
@@ -52,17 +52,12 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
 1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 
-1. 「Configuration Manager を起動」オプションの選択を解除してから、「完了」をクリックます。**ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe** を使用して Configuration Manager を実行する前に、*&lt;AEMForms_Install_Dir>\configurationManager\bin* ディレクトリに移動し、次の名前変更操作を行って `ConfigurationManager.lax` および `ConfigurationManager_IPv6.lax` ファイルを更新します。
+1. **[Windows のみ]** 次の手順を実行します。
 
-   * `axis.jar`コピー先：`axis-1.4.1.1.jar`
-   * `serializer-2.7.1.jar`コピー先：`serializer-2.7.2.jar`
-   * `xalan-2.7.1.jar`コピー先：`xalan-2.7.2.jar`
-   * `xercesImpl-2.9.1.jar`コピー先：`xercesImpl-2.12.0.jar`
-   * `xml-apis-2.7.1.jar`コピー先：`xml-apis-2.7.2.jar`
-
+   選択を解除する **Configuration Manager を起動します。** 」オプションを選択し、 **[!UICONTROL 完了]**. を使用して Configuration Manager を実行する前に **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 `<AEMForms_Install_Dir>\configurationManager\bin` ディレクトリと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイル。
 1. 「Configuration Manager を起動」チェックボックスは、デフォルトで選択されています。「**[!UICONTROL 完了]**」をクリックして Configuration Manager を実行します。
 
-1. Configuration Manager を後で実行するには、「完了」をクリックする前に、「Configuration Manager を起動」オプションの選択を解除します。`[AEM_forms_root]/configurationManager/bin` ディレクトリにある該当スクリプトを使用して、Configuration Manager を後で起動することができます。
+1. Configuration Manager を後で実行するには、「完了」をクリックする前に、「**[!UICONTROL Configuration Manager を起動]**」オプションの選択を解除します。`[AEM_forms_root]/configurationManager/bin` ディレクトリにある該当スクリプトを使用して、Configuration Manager を後で起動することができます。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
@@ -70,9 +65,6 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
    * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
 
 1. （JBoss のみ）パッチをインストールしてサーバーを設定した後、JBoss Application Server の tmp および work ディレクトリを削除します。
-
->[!NOTE]
->開始する前に **Configuration Manager**、ダウンロードと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイル。
 
 ## デプロイメント後の設定 {#post-deployment-configurations}
 
