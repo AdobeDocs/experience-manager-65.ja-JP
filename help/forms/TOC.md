@@ -350,7 +350,7 @@ ht-degree: 99%
 + Forms ポータル {#use-forms-portal}
    + [フォームポータルコンポーネントのテンプレートをカスタマイズする](using/customizing-templates-forms-portal-components.md)
    + [フォームポータルコンポーネントの有効化](using/enabling-forms-portal-components.md)
-   + [フォームポータルページの作成](using/creating-form-portal-page.md)
+   + [フォームポータルページの作成 ](using/creating-form-portal-page.md)
    + [フォームポータルで送信済みフォームを操作するための API](using/report-submitted-data-forms.md)
    + [ドラフトと送信コンポーネントのカスタムストレージ](using/adding-custom-storage-provider-forms.md)
 + ドキュメントサービス {#use-document-services}

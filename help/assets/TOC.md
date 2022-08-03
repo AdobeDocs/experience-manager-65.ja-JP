@@ -9,7 +9,7 @@ user-guide-description: デジタルアセットを作成、管理、処理お�
 source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
 source-wordcount: '675'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -77,7 +77,7 @@ ht-degree: 97%
    + [レスポンシブサイトに最適化された画像を配信する](responsive-site.md)
    + [Dynamic Media アセットをプレビューする](previewing-assets.md)
    + [ページに Dynamic Media アセットを追加する](adding-dynamic-media-assets-to-pages.md)
-   + [ページへのDynamic Media Classic機能の追加](scene7.md)
+   + [ページに Dynamic Media Classic 機能を追加](scene7.md)
    + [Dynamic ビデオビューアまたは画像ビューアを web ページに埋め込む](embed-code.md)
    + [Web アプリケーションに URL をリンクする](linking-urls-to-yourwebapplication.md)
    + [ルールセットを使用した URL の変換](using-rulesets-to-transform-urls.md)

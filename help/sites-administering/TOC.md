@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
 workflow-type: tm+mt
 source-wordcount: '632'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -118,7 +118,7 @@ ht-degree: 98%
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
    + [コンポーネントデータと Adobe Analytics プロパティとのマッピング](adobeanalytics-mapping.md)
    + [Adobe Analytics のビデオトラッキングの設定](adobeanalytics-video.md)
-   + [IMS を使用したAdobe Analyticsとの統合](integration-analytics-ims.md)
+   + [IMS を使用した Adobe Analytics との統合](integration-analytics-ims.md)
    + [コンテンツの HTTP/2 配信の FAQ](scene7-http2faq.md)
    + [Adobe Campaign 統合に関するトラブルシューティング](troubleshooting-campaignintegration.md)
    + [SharePoint Connector のライセンス、著作権情報および免責事項](sharepoint-connector-licenses.md)
@@ -144,7 +144,7 @@ ht-degree: 98%
    + [Adobe Marketing Cloud との統合](marketing-cloud.md)
    + [手動での Adobe Target との統合の設定](target-configuring.md)
    + [Adobe Target との統合の前提条件](target-requirements.md)
-   + [IMS を使用したAdobe Targetとの統合](integration-target-ims.md)
+   + [IMS を使用した Adobe Target との統合](integration-target-ims.md)
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [Adobe Search&amp;Promote との統合](search-and-promote.md)
    + [ソリューション統合](integration.md)

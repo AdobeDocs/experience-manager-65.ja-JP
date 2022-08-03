@@ -8,7 +8,7 @@ breadcrumb-title: デプロイガイド
 user-guide-description: Adobe Managed Services クラウドデプロイメントなど、Adobe Experience Manager 6.5 のインストール、デプロイ、およびアーキテクチャについて詳しく説明します。
 feature: Deploying
 role: Architect
-source-git-commit: 8ef957d1f4efd00c48395cb5a51024ea63649eea
+source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 100%
