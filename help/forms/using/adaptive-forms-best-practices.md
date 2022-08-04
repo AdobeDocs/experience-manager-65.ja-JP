@@ -9,10 +9,10 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: 0f1724cbb7ef4fec366fb8b63511a981b47b5429
+source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
 workflow-type: tm+mt
-source-wordcount: '4322'
-ht-degree: 96%
+source-wordcount: '4529'
+ht-degree: 92%
 
 ---
 
@@ -95,6 +95,19 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
    * カスタムウィジェットまたはカスタム外観を作成することで、カスタムのインタラクティブ機能を導入できます。デフォルトコンポーネントは変更しないことをお勧めします。詳しくは、「[外観フレームワーク](/help/forms/using/introduction-widgets.md)」を参照してください。
 
 * PII データの取り扱いに関する推奨事項については、[個人を特定できる情報の取り扱い](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p)を参照してください。
+
+### フォームテンプレートの作成
+
+アダプティブフォームは、 **設定ブラウザー**. フォームテンプレートを有効にするには、 [アダプティブフォームテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
+
+フォームテンプレートは、別のオーサーマシンで作成されたアダプティブフォームパッケージからアップロードすることもできます。 フォームテンプレートは、 [aemforms-references-*パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). 推奨されるベストプラクティスの一部を次に示します。
+* この **nosamplecontent** 実行モードは、オーサーに対してのみ推奨され、パブリッシュノードに対しては推奨されません。
+* アダプティブフォーム、テーマ、テンプレート、クラウド設定などのアセットのオーサリングは、設定済みのパブリッシュノードでのみオーサーノード上で実行できます。
+詳しくは、 [フォームとドキュメントの発行と非公開](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
+* Formsのアドオンパッケージは、オーサリングに加えて、ドキュメントサービスの操作をサポートするために公開に必要です。したがって、依存関係と見なすことができます。
+Forms関連のサンプルテンプレート、テーマ、DOR パッケージのみが必要な場合は、次からダウンロードできます。 [aemforms-references-*パッケージ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
+
+詳しくは、 [アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md).
 
 ## アダプティブフォームのオーサリング {#author-adaptive-forms}
 
@@ -309,3 +322,5 @@ AEM 全体のパフォーマンスを改善するために設定するベスト�
 
 * データベースなどの安全な外部ストレージを使用してドラフトおよび送信済みフォームのデータを保存します。[ドラフトおよび送信済みフォームのデータを格納する外部ストレージの設定](/help/forms/using/adaptive-forms-best-practices.md#external-storage)を参照してください。
 * 自動保存を有効にする前に、利用規約フォームを使用してユーザーからの明示的な同意を得ます。この場合、ユーザーが利用規約コンポーネントの条件に合意した場合にのみ自動保存を有効にします。
+
+
