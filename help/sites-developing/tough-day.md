@@ -4,10 +4,10 @@ description: Tough Day テストでは、約 1,000 人の作成者がいる環�
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: ca6d41740dbb24dbba7cf7691c51435cc40d3ead
-workflow-type: ht
+source-git-commit: 1b92b973209fdbd2509b1c644c1064a1e9224a9e
+workflow-type: tm+mt
 source-wordcount: '1849'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 ## Tough Day 2 について {#what-is-tough-day}
 
-「Tough Day 2」は、AEM インスタンスの限界についてストレステストを実行するためのアプリケーションです。Tough Day 2 は、デフォルトのテストスイートを使用してそのまま実行することも、テストのニーズに合わせて設定することも可能です。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-toughday2-stress-testing-benchmarking-tool.html)を参照してください。
+「Tough Day 2」は、AEM インスタンスの限界についてストレステストを実行するためのアプリケーションです。Tough Day 2 は、デフォルトのテストスイートを使用してそのまま実行することも、テストのニーズに合わせて設定することも可能です。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html)を参照してください。
 
 >[!CAUTION]
 >
