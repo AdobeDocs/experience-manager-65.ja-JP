@@ -8,10 +8,10 @@ breadcrumb-title: 管理ガイド
 user-guide-description: AEM の管理について説明します。
 feature: Administering
 role: Admin
-source-git-commit: a1821ab210b3735ca5b59b075659ff30d5872b8e
+source-git-commit: 9a164f92b6d5a927d1cb4ead2f119cc094180713
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 100%
+source-wordcount: '637'
+ht-degree: 99%
 
 ---
 
@@ -113,6 +113,7 @@ ht-degree: 100%
    + [サードパーティのサービスとの統合](third-party-services.md)
    + [Salesforce との統合](salesforce.md)
    + [Adobe Target との統合](target.md)
+   + [Adobeラーニングマネージャーとの統合](adobe-learningmanager.md)
    + [Adobe Analytics との統合](adobeanalytics.md)
    + [Adobe Analytics への接続とフレームワークの作成](adobeanalytics-connect.md)
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
