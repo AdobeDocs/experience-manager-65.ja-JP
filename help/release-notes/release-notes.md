@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 9f957175573eeb2b40d79a5087dc3034c56819cc
+source-git-commit: e51cf7a5b7d14bc4aed053496c7fe6685dd2b0b8
 workflow-type: tm+mt
-source-wordcount: '3742'
+source-wordcount: '3653'
 ht-degree: 94%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 94%
 
 [!DNL Adobe Experience Manager] 6.5.13.0 に導入された主な機能および機能強化は次のとおりです。
 
-* アダプティブフォーム内で非表示の CAPTCHA を使用します。不明な CAPTCHA を使用して、疑わしいアクティビティが発生した場合にのみ CAPTCHA チャレンジを表示できるようになりました。 疑わしいアクティビティが見つからない場合、CAPTCHA チャレンジは表示されません。 これにより、チェックボックス要件を持たずに人間がフォームを完成させたかどうかを評価し、カスタマイズ作業を軽減し、エンドユーザーエクスペリエンスを向上させることができます。 （NPR-38500）
+* アダプティブフォーム内で非表示の CAPTCHA を使用します。不明な CAPTCHA を使用して、疑わしいアクティビティが発生した場合にのみ CAPTCHA チャレンジを表示できるようになりました。 疑わしいアクティビティが見つからない場合、CAPTCHA チャレンジは表示されません。 これにより、チェックボックス要件を使わずに人間がフォームを完成させたかどうかを評価し、カスタマイズ作業を軽減し、エンドユーザーエクスペリエンスを向上させることができます。（NPR-38500）
 
 * REST エンドポイント用のフォームデータモデル後処理での応答ヘッダーの取得のサポートが追加されました。 （NPR-38275）
 
@@ -39,7 +39,12 @@ ht-degree: 94%
 
    * スクリーンリーダーが、テーブルのヘッダーと本文を連続エンティティと接続エンティティとして認識できるようになりました。 スクリーンリーダーでテーブルを適切に移動するのに役立ちます。 （NPR-37139）
    * ダイアログが開くまでHTMLワークスペース内を移動しないようにするスクリーンリーダーのサポートを追加しました。 （NPR-37134）
-   * Forms Designer で、ハイパーリンクの画面Readerテキストを指定する機能が追加されました。（NPR-36221）
+
+   <!-- 
+
+    * Added ability to specify Screen Reader Text for Hyperlinks in Forms Designer.(NPR-36221)
+  
+  -->
 
 次のバグ修正、主な機能、機能強化が [!DNL Experience Manager] 6.5.13.0 に導入されました。
 
@@ -123,11 +128,19 @@ ht-degree: 94%
 * ワークフローの実行中に HTML タグをコメントセクションに追加すると、その HTML タグがレンダリングされます。（NPR-37591）
 * 新しい XDP ファイルを含むレターをインポートして公開すると、レターがパブリッシュインスタンスでプレビューできません。ただし、同じ CMP ファイルを使用してレターをインポートして 2 回目に公開された場合、レターは正常にプレビューされます。（CQ-4343599）
 * データ準備プロセスプロパティが設定されたフォームが、HTML ワークスペースでレンダリングに失敗します。（CQ-4343294）
-* Forms 6.5 Designer で作成された静的 PDF フォームの場合、PDF アクセシビリティが次のエラーで失敗します。`Tab order entry in page with annotations not set to "S"`（CQ-4343117）
+<!--
+For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility fails with error `Tab order entry in page with annotations not set to "S"`. (CQ-4343117) 
+ -->
 * AEM Forms-6.5.0-0038（log4jv2.16）パッチを適用した後、OCR を使用した PDFG サービスで画像を PDF に変換できません。（CQ-4342450）
-* バーコード SSCC-18 に正しくない値が表示されます。Forms サーバーが、バーコードの右側の値を省略します。（CQ-4342400）
+
+<!-- 
+* Incorrect value is displayed for barcode SSCC-18. Forms servers omit the value on the right part of the barcode. (CQ-4342400)
+-->
 * Microsoft® Word ファイルを Forms Designer にインポートできません。次のエラーが発生します。`Word (version XP or onwards) could not be found on the machine`（CQ-4342146）
-* Forms 6.5 Designer で、Forms 6.1 Designer で作成したフォームを開き、テキストボックスを編集すると、段落の間隔が指定したスペースを超えます。スペースに対する以前の設定がすべて削除され、テキストボックスの手動での再フォーマットが必要になります。（CQ-4341899）
+
+<!-- 
+* In Forms 6.5 Designer, when you open a form created with Forms 6.1 Designer and edit a textbox, paragraph spacing exceeds the specified space. All previous settings to the space are removed and manual reformatting of the text box is required. (CQ-4341899) 
+-->
 * ジョブの削除スケジューラーにカスタム時間が設定できません。（CQ-4339192）
 * エンドポイント管理 UI の設定が更新できず、次のエラーが発生します。` Uncaught ReferenceError: updateEndpoint_required is not defined`（CQ-4331523）
 * 無効なタグの場合、エラーメッセージの正常な処理が期待どおりに動作しません。（NPR-38106 および CQ-4337173）
