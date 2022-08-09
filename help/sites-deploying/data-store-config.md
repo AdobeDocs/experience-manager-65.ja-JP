@@ -6,10 +6,10 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 6257b56c61ae14889d9ecefed5030e123a415fd7
-workflow-type: ht
-source-wordcount: '3455'
-ht-degree: 100%
+source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
+workflow-type: tm+mt
+source-wordcount: '3447'
+ht-degree: 99%
 
 ---
 
@@ -207,8 +207,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 次のオプションを指定して設定ファイルを使用できます。
 
 * accessKey：AWS アクセスキーです。
-* secretKey：AWS 秘密アクセスキーです。**注意：** [IAM ロール](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html)を認証に使用することもできます。IAM ロールを使用する場合、`accessKey` と `secretKey` を指定する必要はありません。
-
+* secretKey：AWS 秘密アクセスキーです。**注意：** 次の場合に `accessKey` または `secretKey` が指定されていない場合、 [IAM ロール](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) は認証に使用されます。
 * s3Bucket：バケット名です。
 * s3Region：バケットのリージョンです。
 * path：データストアのパスです。デフォルト値は **&lt;AEM install folder>/repository/datastore** です。
