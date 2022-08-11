@@ -5,10 +5,10 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: c425caa9aadd8bae3c2863f24e73b5265ec0b358
+source-git-commit: 6c6ddaba0e42df4b4701670e8abfdabe5205879c
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 93%
+source-wordcount: '525'
+ht-degree: 69%
 
 ---
 
@@ -47,17 +47,23 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
    インストールの手順を示すインストールウィザードが起動します。
 
 1. 概要パネルで「**[!UICONTROL 次へ]**」をクリックします。
-1. インストールフォルダーを選択画面で、表示されるデフォルトの場所が既存のインストール場所であることを確認するか、または「**[!UICONTROL 参照]**」をクリックして AEM Forms がインストールされている別のフォルダーを選択してから、「**[!UICONTROL 次へ]**」をクリックします。
+1. の **フォルダのインストールを選択** 画面を表示し、表示された既定の場所が既存のインストールに対して正しいことを確認するか、 **[!UICONTROL 参照]** AEM forms がインストールされている別のフォルダーを選択し、 **[!UICONTROL 次へ]**.
 1. Quick Fix パッチの概要の情報を読み、「**[!UICONTROL 次へ]**」をクリックします。
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
 1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 
-1. **[Windows のみ]** 次の手順を実行します。
+1. **[Windows のみ]:** 次のいずれかの手順を実行します。
+   * 選択を解除する **Configuration Manager を起動します。** オプションを使用して、 **[!UICONTROL 完了]**. 実行 **Configuration Manager** を使用して、 **ConfigurationManager.bat** 次の場所にあるファイル： `[aem-forms root]\configurationManager\bin`.
 
-   選択を解除する **Configuration Manager を起動します。** 」オプションを選択し、 **[!UICONTROL 完了]**. を使用して Configuration Manager を実行する前に **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 `<AEMForms_Install_Dir>\configurationManager\bin` ディレクトリと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) ファイル。
-1. 「Configuration Manager を起動」チェックボックスは、デフォルトで選択されています。「**[!UICONTROL 完了]**」をクリックして Configuration Manager を実行します。
+   * 選択を解除する **Configuration Manager を起動します。** オプションを使用して、 **[!UICONTROL 完了]**. 実行前 **Configuration Manager** using **ConfigurationManager.exe** または **ConfigurationManager_IPv6.exe**&#x200B;に移動します。 *`<AEMForms_Install_Dir>\configurationManager\bin`* ディレクトリと置換 [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) および [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) ファイル。
+   >[!NOTE]
+   >使用 **ConfigurationManager.bat** ファイルを使用すると、 .lax ファイルの名前を手動で更新するのを防ぐことができます。
 
-1. Configuration Manager を後で実行するには、「完了」をクリックする前に、「**[!UICONTROL Configuration Manager を起動]**」オプションの選択を解除します。`[AEM_forms_root]/configurationManager/bin` ディレクトリにある該当スクリプトを使用して、Configuration Manager を後で起動することができます。
+1. **[UNIX ベースの場合のみ]:** 次のいずれかの手順を実行します。
+
+   * この **Configuration Manager を起動します。** デフォルトでは、「 」チェックボックスがオンになっています。 クリック **[!UICONTROL 完了]** を使用して、Configuration Manager を即座に実行できます。
+
+   * 実行する **Configuration Manager** 後で、選択を解除します。 **Configuration Manager を起動します。** オプションを使用して、 **[!UICONTROL 完了]**. 以下を開始できます。 **Configuration Manager** 後で `[AEM_forms_root]/configurationManager/bin` ディレクトリ。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
