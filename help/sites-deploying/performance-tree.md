@@ -278,7 +278,7 @@ ht-degree: 100%
   <tr>
    <td><strong>手順 39</strong></td>
    <td>事前接続を使用して接続オーバーヘッドを減らします</td>
-   <td>上記の Gem セッションを参照してください。また、W3c にも preconnect に関する記載があります。<a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect"> https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td>
+   <td>上記の Gem セッションを参照してください。また、W3c にも preconnect に関する記載があります。 <a href="https://www.w3.org/TR/resource-hints/#dfn-preconnect">https://www.w3.org/TR/resource-hints/#dfn-preconnect</a></td>
   </tr>
   <tr>
    <td><strong>手順 40 および 41</strong><br /> </td>

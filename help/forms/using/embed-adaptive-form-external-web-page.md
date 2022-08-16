@@ -19,7 +19,7 @@ ht-degree: 100%
 
 # 外部 web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
 
-AEM の外側にホストされた Web ページか [AEM サイトページに、アダプティブフォームをシームレスに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができます。埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページのその他のエレメントから離れることなく、同時にフォームの操作を行うことができます。。
+AEM の外側にホストされた Web ページか [AEM Sites ページに、アダプティブフォームをシームレスに埋め込む](/help/forms/using/embed-adaptive-form-aem-sites.md)ことができます。埋め込まれたアダプティブフォームではすべての機能を使用できるため、ユーザーは、ページから移動することなくフォームを記入および送信できます。これにより、ユーザーは Web ページのその他のエレメントから離れることなく、同時にフォームの操作を行うことができます。。
 
 ## 前提条件 {#prerequisites}
 
@@ -99,7 +99,7 @@ Web ページに数行の JavaScript を挿入することで、アダプティ�
 1. 埋め込まれたコードで、
 
    * *options.path* 変数の値をアダプティブフォームのパブリッシュ URL のパスに変更します。AEM サーバーがコンテキストパス上で実行されている場合は、その URL にコンテキストパスが含まれるようにします。アダプティブフォームの拡張子を含む完全な名前を必ず指定してください。   例えば、上記のコードはアダプティブフォームと同一の AEM Forms サーバー上に存在するため、この例ではアダプティブフォームのコンテキストパスである /content/forms/af/locbasic.html が使用されています。
-   * *options.dataRef* を URL と一緒に渡す属性に置き換えます。dataRef 変数を使用して、[アダプティブフォームに事前にデータを取り込む](/help/forms/using/prepopulate-adaptive-form-fields.md)ことができます。  
+   * *options.dataRef* を URL と一緒に渡す属性に置き換えます。dataRef 変数を使用して、[アダプティブフォームに事前にデータを取り込む](/help/forms/using/prepopulate-adaptive-form-fields.md)ことができます。 
    * *options.themePath* をアダプティブフォームで設定されたテーマ以外のテーマへのパスと置き換えます。また、リクエストの属性を使用してテーマのパスを指定することができます。
    * CSS_Selector は、アダプティブフォームが埋め込まれているフォームコンテナの CSS セレクターです。例えば、上の例では、.customafsection CSS クラスが CSS セレクターです。
 

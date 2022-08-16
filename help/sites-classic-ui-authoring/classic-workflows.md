@@ -1,7 +1,7 @@
 ---
 title: 'ワークフローの操作 '
 seo-title: Working with Workflows
-description: AEM ワークフローでは、ページまたはアセットで実行される一連の手順を自動化することができます。 例えば、公開時にエディターは、サイトの管理者がページをアクティベートする前にコンテンツをレビューする必要があります。この例を自動化するワークフローでは、必要な作業を実行するときが来たことが各参加者に通知されます。
+description: AEM ワークフローでは、ページまたはアセットで実行される一連の手順を自動化することができます。例えば、公開時にエディターは、サイトの管理者がページをアクティベートする前にコンテンツをレビューする必要があります。この例を自動化するワークフローでは、必要な作業を実行するときが来たことが各参加者に通知されます。
 seo-description: AEM Workflows allows you to automate a series of steps that are performed on a page or asset. For example, when publishing, an editor has to review the content - before a site administrator activates the page. A workflow that automates this example notifies each participant when it is time to perform their required work.
 uuid: 3eb6e790-6589-414a-8e51-33c358f47a73
 contentOwner: Chris Bohnert
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 # ワークフローの操作 {#working-with-workflows}
 
-AEM ワークフローでは、ページまたはアセットで実行される一連の手順を自動化することができます。 例えば、公開時にエディターは、サイトの管理者がページをアクティベートする前にコンテンツをレビューする必要があります。この例を自動化するワークフローでは、必要な作業を実行するときが来たことが各参加者に通知されます。
+AEM ワークフローでは、ページまたはアセットで実行される一連の手順を自動化することができます。例えば、公開時にエディターは、サイトの管理者がページをアクティベートする前にコンテンツをレビューする必要があります。この例を自動化するワークフローでは、必要な作業を実行するときが来たことが各参加者に通知されます。
 
 1. 作成者がワークフローをページに適用します。
 1. エディターは、ページの内容をレビューする必要があることを示す作業項目を受け取ります。これが完了すると、作業項目が完了したことが示されます。

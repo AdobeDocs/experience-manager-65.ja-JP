@@ -35,7 +35,7 @@ AEM Communitiesでは、ユーザープロファイルの管理やユーザー�
 
 これらの API を使用するには、 `/services/social/ugcmanagement` UserUgcManagement サービスをアクティブ化してエンドポイントを作成します。 このサービスをアクティブ化するには、 [サンプルサーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) 次で利用可能： [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 次に、次のような http リクエストを使用して、コミュニティサイトのパブリッシュインスタンスでエンドポイントをヒットします。
 
-`https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`に従っていない場合に発生します。ただし、システム内のユーザープロファイルとユーザー生成コンテンツを管理するための UI（ユーザーインターフェイス）を構築することもできます。
+`https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>` を使用して作成します。ただし、システム内のユーザープロファイルとユーザー生成コンテンツを管理するための UI（ユーザーインターフェイス）を構築することもできます。
 
 これらの API で実行できる機能を以下に示します。
 

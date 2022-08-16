@@ -9,7 +9,7 @@ user-guide-description: デジタルアセットを作成、管理、処理お�
 source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
 source-wordcount: '675'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 98%
    + [Dynamic Media ビデオプロファイル](video-profiles.md)
    + [Dynamic Media 画像プロファイル](image-profiles.md)
    + [スマートイメージング](imaging-faq.md)
-   + [クライアントサイドデバイスのピクセル比によるスマートイメージング](client-side-dpr.md)
+   + [クライアントサイドのデバイスピクセル比（DPR）を使用したスマートイメージング](client-side-dpr.md)
    + [ビデオ](s7-video.md)
    + [コンテンツの HTTP/2 配信](http2.md)
    + [Dynamic Media アセットを配信する](delivering-dynamic-media-assets.md)

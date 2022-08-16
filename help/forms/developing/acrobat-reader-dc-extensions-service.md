@@ -31,11 +31,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->『AEM Forms によるプログラミング』にあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>『AEM Forms によるプログラミング』にあるクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した使用権限の適用 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-次の Java コードの例では、 使用権限を *Loan.pdf* という名前の PDF ドキュメントに適用します。権限を持つ PDF ドキュメントは、*LoanUsageRights.pdf* という名前の PDF ファイルとして保存されます。 この PDF ドキュメントには、`enabledComments`、`enabledFormFillIn`、および `enabledDigitalSignatures` の使用権限が適用されます。（[PDF ドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md)）。
+次の Java コードの例では、 使用権限を *Loan.pdf* という名前の PDF ドキュメントに適用します。権限を持つ PDF ドキュメントは、*LoanUsageRights.pdf* という名前の PDF ファイルとして保存されます。この PDF ドキュメントには、`enabledComments`、`enabledFormFillIn`、および `enabledDigitalSignatures` の使用権限が適用されます。（[PDF ドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md)）。
 
 
 ```java
@@ -147,7 +147,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントからの使用権限の削除 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を持つ PDF ドキュメントから使用権限を削除します。 （[PDF ドキュメントから使用権限の削除](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
+次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を持つ PDF ドキュメントから使用権限を削除します。（[PDF ドキュメントから使用権限の削除](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
 
 ```java
  /* 
@@ -247,7 +247,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した秘密鍵証明書情報の取得 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
-次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を与えられた PDF ドキュメントに使用権原を適用するために使用される秘密鍵証明書に関する情報を取得します。 （[認証情報の取得](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
+次の Java コードの例では、*LoanUsageRights.pdf* という名前の権限を与えられた PDF ドキュメントに使用権原を適用するために使用される秘密鍵証明書に関する情報を取得します。（[認証情報の取得](/help/forms/developing/assigning-usage-rights.md)を参照してください）。
 
 ```java
  /* 

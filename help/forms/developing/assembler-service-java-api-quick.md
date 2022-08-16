@@ -47,7 +47,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->『AEM Forms によるプログラミング』にあるクイックスタートは、JBoss アプリケーションサーバーと Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>『AEM Forms によるプログラミング』にあるクイックスタートは、JBoss アプリケーションサーバーと Microsoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ {#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api}
 
@@ -334,7 +334,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した暗号化された PDF ドキュメントのアセンブリ {#quick-start-soap-mode-assembling-an-encrypted-pdf-document-using-the-java-api}
 
-次の Java コードの例では、パスワードで暗号化されたPDFドキュメントを構築します。 保護されていない PDF ドキュメントの名前は *Loan.pdf* です。DDX ドキュメントの名前は *shell_Encrypt.xml* です。暗号化された PDF ドキュメントの名前は *AssemblerEncryptedPDF.pdf* です。（[暗号化された PDF ドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)を参照してください）
+次の Java コードの例では、パスワードで暗号化されたPDFドキュメントを構築します。保護されていない PDF ドキュメントの名前は *Loan.pdf* です。DDX ドキュメントの名前は *shell_Encrypt.xml* です。暗号化された PDF ドキュメントの名前は *AssemblerEncryptedPDF.pdf* です。（[暗号化された PDF ドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-encrypted-pdf-documents)を参照してください）
 
 ```java
  /*
@@ -457,7 +457,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：ベイツ番号を使用した PDF ドキュメントを、Java API を使用してアセンブリする {#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api}
 
-次の Java コードの例では、一意のページ識別子（ベイツナンバリング）を使用して PDF ドキュメントを構築しています。 DDX ドキュメントの名前は *shell_Bates.xml* です。Assembler サービスから返された PDF ドキュメントは、*AssemblerResultBatesPDF.pdf* という名前の PDF ファイルとして保存されます。（[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)を参照してください）
+次の Java コードの例では、一意のページ識別子（ベイツナンバリング）を使用して PDF ドキュメントを構築しています。DDX ドキュメントの名前は *shell_Bates.xml* です。Assembler サービスから返された PDF ドキュメントは、*AssemblerResultBatesPDF.pdf* という名前の PDF ファイルとして保存されます。（[ベイツナンバリングを使用したドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-documents-using-bates-numbering)を参照してください）
 
 ```java
  /*
@@ -739,7 +739,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用したドキュメントの PDF/A 準拠の確認 {#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
-次の Java コードの例では、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを判断します。 Assembler サービスに渡される入力 PDF ドキュメントには、*Loan.pdf* という名前が付けられます。DDX ドキュメントの名前は shell_PDFA.xml です。 Assembler サービスから返され、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを指定する XML ドキュメントは、result.xml という名前の XML ファイルとして保存されます。このコードの例で使用されている *shell_PDFA.xml* DDX ドキュメントについて詳しくは、[ドキュメントが PDF/A に準拠しているかどうかの検証](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)を参照してください。
+次の Java コードの例では、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを判断します。Assembler サービスに渡される入力 PDF ドキュメントには、*Loan.pdf* という名前が付けられます。DDX ドキュメントの名前は shell_PDFA.xml です。Assembler サービスから返され、入力 PDF ドキュメントが PDF/A に準拠しているかどうかを指定する XML ドキュメントは、result.xml という名前の XML ファイルとして保存されます。このコードの例で使用されている *shell_PDFA.xml* DDX ドキュメントについて詳しくは、[ドキュメントが PDF/A に準拠しているかどうかの検証](/help/forms/developing/assembling-pdf-documents.md#determining-whether-documents-are-pdf-a-compliant)を参照してください。
 
 ```java
  /*
@@ -1016,7 +1016,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した、ブックマークを含む PDF ドキュメントのアセンブリ {#quick-start-soap-mode-assembling-pdf-documents-with-bookmarks-using-the-java-api}
 
-次の Java コードの例では、ブックマークがある PDF ドキュメントを構築します。 DDX ドキュメントの名前は *bookmarkDDX.xml* です。 PDF ドキュメントに追加するブックマークを表すブックマーク XML ドキュメントの名前は bookmarks.xml です。 生成される PDF ドキュメントは、AssemblerResultBookmarks.pdf という名前の PDF ファイルとして保存されます。（[ブックマークを使用した PDF ドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)を参照してください）
+次の Java コードの例では、ブックマークがある PDF ドキュメントを構築します。DDX ドキュメントの名前は *bookmarkDDX.xml* です。PDF ドキュメントに追加するブックマークを表すブックマーク XML ドキュメントの名前は bookmarks.xml です。生成される PDF ドキュメントは、AssemblerResultBookmarks.pdf という名前の PDF ファイルとして保存されます。（[ブックマークを使用した PDF ドキュメントのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-documents-with-bookmarks)を参照してください）
 
 ```java
  /*
@@ -1186,12 +1186,12 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した DDX ドキュメントの動的な作成 {#quick-start-soap-mode-dynamically-creating-a-ddx-document-using-the-java-api}
 
-次の Java コードの例では、PDF ドキュメントを分割する DDX ドキュメントを動的に作成します。新しい PDF ドキュメントは、入力 PDF ドキュメントのレベル 1 のブックマークごとに作成されます。 このコードの例には、次の 2 つのユーザー定義メソッドがあります。
+次の Java コードの例では、PDF ドキュメントを分割する DDX ドキュメントを動的に作成します。新しい PDF ドキュメントは、入力 PDF ドキュメントのレベル 1 のブックマークごとに作成されます。このコードの例には、次の 2 つのユーザー定義メソッドがあります。
 
 * `createDDX`：Assembler サービスに送信される DDX ドキュメントを表す `org.w3c.dom.Document` オブジェクトを作成します。このユーザー定義メソッドは、`org.w3c.dom.Document` オブジェクトを返します。
 * `convertDDX`：`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。このメソッドは、入力パラメーターとして `org.w3c.dom.Document` オブジェクトを受け入れ、`com.adobe.idp.Document` オブジェクトを返します。
 
-   このクイックスタートでは、これらの両方のメソッドが呼び出されます。 （[DDX ドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)を参照。）
+   このクイックスタートでは、これらの両方のメソッドが呼び出されます。（[DDX ドキュメントの動的な作成](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)を参照。）
 ``
 
 ```java
@@ -1383,7 +1383,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ポートフォリオのアセンブリ {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-次の Java コードの例は、PDF ポートフォリオを作成します。 PDF ポートフォリオは、*AssemblerResultPortfolio.pdf* という名前の PDF ファイルとして保存されます。（[PDF ポートフォリオのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios)を参照。）
+次の Java コードの例は、PDF ポートフォリオを作成します。PDF ポートフォリオは、*AssemblerResultPortfolio.pdf* という名前の PDF ファイルとして保存されます。（[PDF ポートフォリオのアセンブリ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios)を参照。）
 
 ```java
  /*
@@ -1534,7 +1534,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## クイックスタート（SOAP モード）：Java API を使用した複数の XDP フラグメントのアセンブリ {#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api}
 
-次の Java コードの例では、XDP ファイル *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp* および* tuc018_patient.xdp* に基づく XDP フラグメントをアセンブルします。 すべてのフラグメントを含むアセンブル済みの XDP ドキュメントは、*AssemblerResultXDP.xdp* という名前の XDP ファイルとして保存されます。（[複数の XDP フラグメントをアセンブル](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)を参照。）
+次の Java コードの例では、XDP ファイル *tuc018_template_flowed.xdp*、 *tuc018_contact.xdp* および* tuc018_patient.xdp* に基づく XDP フラグメントをアセンブルします。すべてのフラグメントを含むアセンブル済みの XDP ドキュメントは、*AssemblerResultXDP.xdp* という名前の XDP ファイルとして保存されます。（[複数の XDP フラグメントをアセンブル](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments)を参照。）
 
 ```java
  /*

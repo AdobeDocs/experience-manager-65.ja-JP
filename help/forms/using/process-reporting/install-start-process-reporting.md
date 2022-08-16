@@ -1,5 +1,5 @@
 ---
-title: プロセスレポートの概要
+title: 'プロセスレポートの概要 '
 seo-title: Getting Started with Process Reporting
 description: ' AEM Forms on JEE のプロセスレポートを使用するために必要な手順'
 seo-description: The steps you need to follow to get started with AEM Forms on JEE Process Reporting
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# プロセスレポートの概要{#getting-started-with-process-reporting}
+# プロセスレポートの概要 {#getting-started-with-process-reporting}
 
 プロセスレポートを使用すると、AEM Forms のユーザーは、AEM Forms 実装で現在定義されている AEM Forms プロセスに関する情報を照会できます。ただし、プロセスレポートは、AEM Forms のリポジトリのデータに直接アクセスしません。まず、スケジュールに従ってプロセスレポートのリポジトリにデータが公開されます（*ProcessDataPublisher サービスおよび ProcessDataStorage サービスによって*&#x200B;行われます）。次に、リポジトリに公開されたプロセスレポートのデータから、プロセスレポートのレポートとクエリが生成されます。プロセスレポートは、Forms Workflow モジュールの一部としてインストールされています。
 

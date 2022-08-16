@@ -44,7 +44,7 @@ AEM 6.1 Communities 以降、ブログはコミュニティアクティビティ
   </tr>
   <tr>
    <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="/help/communities/clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -69,7 +69,7 @@ AEM 6.1 Communities 以降、ブログはコミュニティアクティビティ
 
 | **resourceType** | social/journal/components/hbs/sidebar |
 |---|---|
-| [**インクルード可能**](/help/communities/scf.md#add-or-include-a-communities-component) | 不可 |
+| [**インクルード可能**](/help/communities/scf.md#add-or-include-a-communities-component) | いいえ |
 | [**clientllibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |

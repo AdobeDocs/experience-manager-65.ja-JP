@@ -42,7 +42,7 @@ AEM では、コンテンツから動的に取得したテキストを取り込�
    >
    >リポジトリ内のフォントファイルのサフィックスは、`*.ttf` または `*.TTF` である必要があります。
 
-1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md)の[OSGi 設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォントフォルダーへのパス（`/apps/<your-project>/fonts`）を追加します。
+1. [Day Commons GFX Font Helper](/help/sites-deploying/osgi-configuration-settings.md) の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を更新します。フォントフォルダーへのパス（`/apps/<your-project>/fonts`）を追加します。
 
 1. CRXDE Lite に戻ります。読み込んだフォントの名前を含むフォルダー内に、`.fontlist`ノードが表示されます。
 

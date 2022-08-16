@@ -1,5 +1,5 @@
 ---
-title: Adobe Analytics のビデオトラッキングの設定
+title: 'Adobe Analytics のビデオトラッキングの設定 '
 seo-title: Configuring Video Tracking for Adobe Analytics
 description: SiteCatalyst のビデオトラッキングの設定について説明します。
 seo-description: Learn about configuring video tracking for SiteCatalyst.
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ---
 
-# Adobe Analytics のビデオトラッキングの設定{#configuring-video-tracking-for-adobe-analytics}
+# Adobe Analytics のビデオトラッキングの設定 {#configuring-video-tracking-for-adobe-analytics}
 
 ビデオイベントの追跡には、いくつかの方式を使用できます。そのうち 2 つは古いバージョンの Adobe Analytics 用のレガシーオプションで、レガシーマイルストーンとレガシー秒と呼ばれます。
 

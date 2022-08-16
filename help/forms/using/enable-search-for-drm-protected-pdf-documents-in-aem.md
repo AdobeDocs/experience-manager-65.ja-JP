@@ -59,7 +59,7 @@ AEM 検索では、AEM アセットの検索と場所の特定をすることが
 1. AEM Web コンソールを開きます。URL は https://&#39;[server]:[port]&#39;/system/console/configMgr です。
 1. **Adobe LiveCycle Client SDK Bundle** を探して開きます。次の各フィールドの値を指定します。
 
-   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の Forms のパス> のパラメータで AEM サーバーを再起動します。
+   * **サーバー URL**：JEE サーバー上の AEM Forms の HTTPS URL を指定します。HTTPS 経由の通信を可能にするには、-Djavax.net.ssl.trustStore=&lt;JEE キーストアファイル上の AEM Forms のパス> のパラメータで AEM サーバーを再起動します。
    * **サービス名**：指定されたサービスの一覧に RightsManagementService を追加します。
    * **ユーザー名**：AEM サーバーからの呼び出しの開始に使用される JEE 上の AEM Forms アカウントのユーザー名を指定します。指定したアカウントは、JEE サーバー上の AEM Forms で Document Services を開始することができる権限が付与されている必要があります。
    * **パスワード**：Username フィールドに表示される JEE 上の AEM Forms アカウントのパスワードを指定します。

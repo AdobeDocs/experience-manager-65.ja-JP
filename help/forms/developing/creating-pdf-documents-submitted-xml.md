@@ -58,7 +58,7 @@ ht-degree: 100%
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **Forms、Output、Document Management のオブジェクトを作成する**
 
@@ -116,7 +116,7 @@ Forms、Output、Document Management API（Java）を使用して、送信され
    * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
    * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
    * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
-   * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
+   * XML ドキュメント内の各ノードの値を取得します。このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。このメソッドは、ノードの値を表す文字列値を返します。このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。このメソッドの本文を示します。
 
 
 1. Output サービスを使用して、非インタラクティブ PDF ドキュメントを作成します。
@@ -136,7 +136,7 @@ Forms、Output、Document Management API（Java）を使用して、送信され
 
    コンテンツを追加するには、`DocumentManagementServiceClientImpl` オブジェクトの `storeContent` メソッドを呼び出して、次の値を渡します。
 
-   * コンテンツの追加先となるストアを指定する文字列値です。 デフォルトのストアは `SpacesStore` です。この値は必須パラメーターです。
+   * コンテンツの追加先となるストアを指定する文字列値です。デフォルトのストアは `SpacesStore` です。この値は必須パラメーターです。
    * コンテンツが追加されるスペースの完全修飾パスを指定する文字列値（例えば、`/Company Home/Test Directory`）。この値は必須パラメーターです。
    * 新しいコンテンツを表すノード名（例えば、`MortgageForm.pdf`）。この値は必須パラメーターです。
    * ノードタイプを指定する文字列値です。PDF ファイルなどの新しいコンテンツを追加するには、`{https://www.alfresco.org/model/content/1.0}content` を指定します。この値は必須パラメーターです。

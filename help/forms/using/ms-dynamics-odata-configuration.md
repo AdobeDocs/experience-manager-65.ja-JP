@@ -34,7 +34,7 @@ AEM Forms アドオンパッケージパッケージには、Microsoft Dynamics 
 * MS Dynamics OData Cloud Service（OData サービス）
 * Microsoft Dynamics の各種エンティティとサービスが事前設定されたフォームデータモデル。
 
-フォームデータモデルで事前構成された Microsoft Dynamics エンティティとサービスは、AEM インスタンスの実行モードが `samplecontent`（デフォルト）に設定されている場合にのみ、AEM Forms インスタンスで使用できます。MS Dynamics OData Cloud Service（OData サービス）は、他の実行モードでも使用できます。 AEM インスタンスの実行モードの設定について詳しくは、「[実行モード](/help/sites-deploying/configure-runmodes.md)」を参照してください。
+フォームデータモデルで事前構成された Microsoft Dynamics エンティティとサービスは、AEM インスタンスの実行モードが `samplecontent`（デフォルト）に設定されている場合にのみ、AEM Forms インスタンスで使用できます。MS Dynamics OData Cloud Service（OData サービス）は、他の実行モードでも使用できます。AEM インスタンスの実行モードの設定について詳しくは、「[実行モード](/help/sites-deploying/configure-runmodes.md)」を参照してください。
 
 ## 前提条件 {#prerequisites}
 
@@ -138,7 +138,7 @@ OAuth クライアントを Active Directory Federation Services（AD FS）マ�
 
 ## フォームデータモデルの作成 {#create-form-data-model}
 
-AEM Forms パッケージをインストールすると、フォームデータモデルの&#x200B;** Microsoft Dynamics FDM** が AEM インスタンスにデプロイされます。デフォルトの場合、MS Dynamics OData Cloud Service（OData サービス）で定義された Microsoft Dynamics サービスが、フォームデータモデルのデータソースとして使用されます。  
+AEM Forms パッケージをインストールすると、フォームデータモデルの&#x200B;** Microsoft Dynamics FDM** が AEM インスタンスにデプロイされます。デフォルトの場合、MS Dynamics OData Cloud Service（OData サービス）で定義された Microsoft Dynamics サービスが、フォームデータモデルのデータソースとして使用されます。 
 
 初めてフォームデータモデルを開くと、設定済みの Microsoft Dynamics サービスにフォームデータモデルが接続され、Microsoft Dynamics インスタンスからエンティティが取得されます。Microsoft Dynamics から取得される「連絡先」エンティティと「潜在顧客」エンティティは、フォームデータモデル内に既に追加されています。
 

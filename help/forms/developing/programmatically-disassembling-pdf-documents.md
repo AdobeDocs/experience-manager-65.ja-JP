@@ -26,7 +26,7 @@ Assembler サービスに PDF ドキュメントを渡すことで、ドキュ�
 
 ![pd_pd_pdfsfrombookmarks](assets/pd_pd_pdfsfrombookmarks.png)
 
-PDF ドキュメントを分割するには、`PDFsFromBookmarks` 要素が DDX ドキュメント内にある必要があります。`PDFsFromBookmarks` 要素は結果の要素であり、`DDX` 要素の子要素のみとすることができます。 複数のドキュメントが生成される可能性があるため、`result` 属性はありません。
+PDF ドキュメントを分割するには、`PDFsFromBookmarks` 要素が DDX ドキュメント内にある必要があります。`PDFsFromBookmarks` 要素は結果の要素であり、`DDX` 要素の子要素のみとすることができます。複数のドキュメントが生成される可能性があるため、`result` 属性はありません。
 
 `PDFsFromBookmarks` 要素を使用すると、ソースドキュメントのレベル 1 のブックマークごとに 1 つのドキュメントが生成されます。
 
@@ -162,7 +162,7 @@ Assembler サービス API（Java）を使用して PDF ドキュメントを分
 
    分割された PDF ドキュメントを取得するには、以下のアクションを実行します。
 
-   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。 これにより、`java.util.Map` オブジェクトが返されます。
+   * `AssemblerResult` オブジェクトの `getDocuments` メソッドを呼び出します。これにより、`java.util.Map` オブジェクトが返されます。
    * 結果の `com.adobe.idp.Document` オブジェクトが見つかるまで `java.util.Map` オブジェクトを反復処理します。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、PDF ドキュメントを抽出します。
 
@@ -211,7 +211,7 @@ Assembler サービス API（web サービス）を使用して PDF ドキュメ
 
 1. 分割する PDF ドキュメントを参照します。
 
-   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。 この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
    * コンストラクタを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことによって、`System.IO.FileStream` オブジェクトを作成します。
    * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡すことによって、バイト配列にストリームデータを入力します。

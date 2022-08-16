@@ -5,8 +5,8 @@ breadcrumb-title: コマースガイド
 user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
 source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 100%
 
 ---
 

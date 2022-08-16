@@ -31,7 +31,7 @@ ht-degree: 57%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component">インクルード可能</a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md">clientllibs</a></td>

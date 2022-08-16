@@ -9,8 +9,8 @@ type: Documentation
 index: y
 source-git-commit: ee6e408668a523464632e53a01ba11eddec103f6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '134'
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ metadata.md ファイルには、リポジトリ内にあるユーザーガイ�
 | solution-title | 記事ヘッダーでリンクとして使用されます。 |
 | solution-hub-url | 学習とサポートのハブページを開きます。 |
 | solution-icon | ソリューションタイトルの横にソリューションアイコンを表示します。まだ実装されていません。 |
-| getting-started-url | 「はじめに」ページへのリンクです。 |
+| getting-started-url | 「はじめに」のページへのリンク。 |
 | tutorials-url | ビデオチュートリアルへのリンク。 |
 | mini-toc-levels | 右側のレールに表示される見出しレベルの数を決定します。デフォルト値は 2 です。 |
 | git-repo | 内部使用のメインリポジトリーの場所を指定します。 |

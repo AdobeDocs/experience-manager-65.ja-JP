@@ -76,7 +76,7 @@ PDF ドキュメントが PDF/A に準拠しているかどうかを判断する
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーションサーバーにデプロイされている場合は、adobe-utilities.jar ファイルと jbossall-client.jar ファイルを、AEM Forms がデプロイされている J2EE アプリケーションサーバーに固有の JAR ファイルに置き換える必要があります。すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **PDF Assembler クライアントの作成**
 
@@ -92,7 +92,7 @@ PDFドキュメントが PDF/A に準拠しているかどうかを判断する�
 
 **実行時オプションを設定**
 
-ジョブの実行中に Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。 設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `AssemblerOptionSpec` クラスリファレンスを参照してください。
+ジョブの実行中に Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。設定できる実行時オプションについて詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `AssemblerOptionSpec` クラスリファレンスを参照してください。
 
 **PDF ドキュメントに関する情報の取得**
 
@@ -145,7 +145,7 @@ Assembler サービス API（Java）を使用して、PDF ドキュメントが 
    * `HashMap` コンストラクターを使用して、入力 PDF ドキュメントを格納するために使用される`java.util.Map` オブジェクトを作成します。
    * `java.util.Map` オブジェクトにエントリを追加するには、`put` メソッドを呼び出して、以下の引数を渡します。
 
-      * キー名を表す文字列値。この値は、DDX ドキュメントで指定されたソース要素の値と一致する必要があります。 例えば、この節で紹介する DDX ドキュメント内のソース要素の値は Loan.pdf です。
+      * キー名を表す文字列値。この値は、DDX ドキュメントで指定されたソース要素の値と一致する必要があります。例えば、この節で紹介する DDX ドキュメント内のソース要素の値は Loan.pdf です。
       * 入力 PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
 1. 実行時オプションを設定します。

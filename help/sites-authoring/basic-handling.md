@@ -107,7 +107,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    <td><a href="/help/commerce/cif-classic/administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td>
   </tr>
   <tr>
-   <td>エクスペリエンスフラグメント</td>
+   <td>エクスペリエンスフラグメント </td>
    <td><a href="/help/sites-authoring/experience-fragments.md">エクスペリエンスフラグメント</a>は、チャネル間で再利用でき、バリエーションのあるスタンドアロンエクスペリエンスです。エクスペリエンスやエクスペリエンスの一部を繰り返しコピー＆ペーストする手間を省きます。</td>
   </tr>
   <tr>

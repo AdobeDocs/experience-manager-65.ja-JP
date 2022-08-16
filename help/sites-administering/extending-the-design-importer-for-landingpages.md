@@ -459,7 +459,7 @@ data-cq-component 内のパスは、コンポーネントの resourceType で指
 
 | E > F | F 要素は E 要素の子 | [子結合子](https://www.w3.org/TR/css3-selectors/#child-combinators) |
 |---|---|---|
-| E &amp;gt; F | F 要素の直前に E 要素 | [隣接兄弟結合子](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
+| E + F | F 要素の直前に E 要素 | [隣接兄弟結合子](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
 | E ～ F | F 要素の前に E 要素 | [一般兄弟結合子](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
 | E:root | E 要素はドキュメントのルート | [構造擬似クラス](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 | E:nth-child(n) | E 要素は親の n 番目の子 | [構造擬似クラス](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
@@ -533,7 +533,7 @@ OSGi コンソールから設定可能なプロパティを公開するコンポ
 >`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
 >また、検索パターン内で >`CQ_DESIGN_PATH` を `VIPURL` と置換する必要がある場合、検索パターンは次のようになります。
->`/\* *VIPURL *\*/ *(['"])`
+`/\* *VIPURL *\*/ *(['"])`
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -598,4 +598,4 @@ height="116" /></div>Some Text </p>
 ```
 
 >[!NOTE]
->また、デザイナーはデザインインポーターが **id=cqcanvas** タグ内のコードのみを認識することに注意してください。これを怠ると、デザインが保持されなくなります。
+また、デザイナーはデザインインポーターが **id=cqcanvas** タグ内のコードのみを認識することに注意してください。これを怠ると、デザインが保持されなくなります。

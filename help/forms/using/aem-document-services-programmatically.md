@@ -12,13 +12,13 @@ exl-id: 9bf090db-2c14-439e-ad78-6832678a309d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '6430'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 # AEM Document Services をプログラムとして使用する  {#using-aem-document-services-programmatically}
 
-このドキュメントのサンプルと例は、OSGi 環境の AEM Forms で AEM ドキュメントサービスを理解し、使用する際に役立ちます。 JEE 上の AEM Forms 環境のサンプルと例については、以下を参照してください。
+このドキュメントのサンプルと例は、OSGi 環境の AEM Forms で AEM ドキュメントサービスを理解し、使用する際に役立ちます。JEE 上の AEM Forms 環境のサンプルと例については、以下を参照してください。
 
 * [Signature Service Java API クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=ja#programming-aem-forms-jee)
 
@@ -76,7 +76,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
 
 ### 非表示署名フィールドの追加 {#adding-an-invisible-signature-field}
 
-署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。署名フィールドは、表示または非表示に設定することができます。署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。署名ドキュメントには、複数の署名フィールドをPDFできます。ただし、各署名フィールド名は一意である必要があります。
+署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。署名フィールドは、表示または非表示に設定することができます。署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。PDF ドキュメントに複数の署名フィールドを追加できます。ただし、各署名フィールド名は一意である必要があります。
 
 **構文**：`addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
 
@@ -94,7 +94,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
   </tr>
   <tr>
    <td><code>signatureFieldName</code> </td>
-   <td>署名フィールドの名前です. このパラメーターは必須であり、null を値として持つことはできません。<br /> </td>
+   <td>署名フィールドの名前です。このパラメーターは必須であり、null を値として持つことはできません。<br /> </td>
   </tr>
   <tr>
    <td><code>fieldMDPOptionsSpec</code></td>
@@ -238,7 +238,7 @@ public class AddInvisibleSignatureField {
 }
 ```
 
-ドキュメントの署名には [CAdES ](https://en.wikipedia.org/wiki/CAdES_%28computing%29) 仕様も使用できます。次のサンプルコードを使用して、[CAdES.](https://en.wikipedia.org/wiki/CAdES_%28computing%29)に署名フォーマットを設定できます。
+ドキュメントの署名には [CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29) 仕様も使用できます。次のサンプルコードを使用して、[CAdES.](https://en.wikipedia.org/wiki/CAdES_%28computing%29)に署名フォーマットを設定できます。
 
 ```java
 SigningFormat signingFormat = SigningFormat.CAdES;
@@ -279,7 +279,7 @@ public Document addSignatureField(Document inDoc,
   </tr>
   <tr>
    <td><code>pageNumber</code></td>
-   <td>署名フィールドを追加するページ番号です。有効な値は、1 からドキュメントに含まれているページの数までです。このパラメーターは必須であり、null 値を受け付けることはできません。<br /> </td>
+   <td>署名フィールドを追加するページ番号です。有効な値は、1 からドキュメントに含まれているページの数までです。このパラメーターは必須であり、Null 値は取れません。<br /> </td>
   </tr>
   <tr>
    <td><code>positionRectangle</code></td>
@@ -896,7 +896,7 @@ PDF ドキュメント内の署名フィールドを変更できます。署名�
   </tr>
   <tr>
    <td><code>signatureFieldName</code></td>
-   <td>署名フィールドの名前です. このパラメーターは必須であり、null 値を受け付けることはできません。<br /> </td>
+   <td>署名フィールドの名前です。このパラメーターは必須であり、Null 値は取れません。<br /> </td>
   </tr>
   <tr>
    <td><code>pdfSignatureFieldProperties</code></td>

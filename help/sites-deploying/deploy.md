@@ -103,7 +103,7 @@ AEM の用語では、「インスタンス」は、サーバー上で実行さ�
 
 * **オンプレミス**：AEM はユーザーの企業環境に配置され管理されます。
 
-* **Managed Services - Adobe Experience Manager のクラウドマネージャー**：AEM は、Adobe Managed Services によってデプロイおよび管理されます。
+* **Managed Services - Adobe Experience Manager Cloud Manager**：AEM は、Adobe Managed Services によってデプロイおよび管理されます。
 
 ### オンプレミス {#on-premise}
 

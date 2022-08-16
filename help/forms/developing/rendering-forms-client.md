@@ -45,11 +45,11 @@ Acrobat や Adobe Reader のクライアントサイドレンダリング機能�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **Forms Client API オブジェクトの作成**
 
-Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。 Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsService`オブジェクトを作成してください。
+Forms Service Client API 操作をプログラムで実行する前に、Forms サービスクライアントを作成する必要があります。Java API を使用している場合は、`FormsServiceClient` オブジェクトを作成します。Forms web サービス API を使用している場合は、`FormsService`オブジェクトを作成してください。
 
 **クライアントレンダリングの実行時オプションを設定**
 
@@ -165,7 +165,7 @@ Forms API（Webサービス）を使用して、クライアントでフォー�
    * フォームと結合するデータを含む `BLOB` オブジェクトです。データを結合しない場合は、`null` を渡します。（[流動レイアウトによるフォームの事前入力](/help/forms/developing/prepopulating-forms-flowable-layouts.md)を参照してください）。
    * クライアントでフォームのレンダリングに必要な実行時オプションを格納する `PDFFormRenderSpec` オブジェクトです。
    * Forms サービスで必要とされる URI 値を含む `URLSpec` オブジェクトです。
-   * 添付ファイルを保存する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターで、 フォームにファイルを添付しない場合に、`null`を指定します。
+   * 添付ファイルを保存する `java.util.HashMap` オブジェクト。これはオプションのパラメーターで、 フォームにファイルを添付しない場合に、`null`を指定します。
    * メソッドによって入力される空の `com.adobe.idp.services.holders.BLOBHolder` オブジェクトです。このパラメーターは、レンダリングされた PDF フォームを格納するために使用されます。
    * メソッドによって入力される空の `javax.xml.rpc.holders.LongHolder` オブジェクトです。（この引数は、フォームのページ数を保存します）。
    * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。（この引数はロケール値を格納します）。

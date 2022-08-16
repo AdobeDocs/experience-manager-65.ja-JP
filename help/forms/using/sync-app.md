@@ -45,6 +45,6 @@ AEM Forms サーバーがオンラインのときは、デフォルトでは、1
 ### 技術仕様 {#technical-specifications}
 
 * AEM Forms サーバーへのオフラインアプリケーションデータの送信のメインロジックは runtime/offline/util/offline.js に含まれます。
-* .js で、processOfflineSubmittedSavedTasks(...) 関数への呼び出しによって、保存済み／送信済みタスクをサーバーに送信します。 同期処理でのエラーや競合も処理されます。 タスクの送信に失敗すると、アプリケーションのタスクは失敗としてマークされます。 さらに、タスクは Outbox に残ります。
+* .js で、processOfflineSubmittedSavedTasks(...) 関数への呼び出しによって、保存済み／送信済みタスクをサーバーに送信します。同期処理でのエラーや競合も処理されます。タスクの送信に失敗すると、アプリケーションのタスクは失敗としてマークされます。さらに、タスクは Outbox に残ります。
 * syncSubmittedTask() および syncSavedTask() 関数は、個別のタスクに操作を実行します。
 * ユーザーがサーバーへのオフライン状態の同期またはバックグラウンドスレッドによる自動同期を選択した後、タスクリストコンポーネントによって、processOfflineSubmittedSavedTasks() 関数への呼び出しが開始されます。

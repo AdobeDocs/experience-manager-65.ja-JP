@@ -23,7 +23,7 @@ ht-degree: 100%
 
 これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
 
-アダプティブフォームの準備が整ったら、エンドユーザーが使用できるようフォームを公開することができます。エンドユーザーは、公開されたフォームを任意のデバイスおよびインターネットブラウザーで開くことができます。アダプティブフォームが公開されると、フォームと関連コンテンツが AEM オーサーインスタンスから AEM パブリッシュインスタンスにコピーされます。 このパブリッシュインスタンスを通じて、エンドユーザーはフォームを使用できるようになります。
+アダプティブフォームの準備が整ったら、エンドユーザーが使用できるようフォームを公開することができます。エンドユーザーは、公開されたフォームを任意のデバイスおよびインターネットブラウザーで開くことができます。アダプティブフォームが公開されると、フォームと関連コンテンツが AEM オーサーインスタンスから AEM パブリッシュインスタンスにコピーされます。このパブリッシュインスタンスを通じて、エンドユーザーはフォームを使用できるようになります。
 
 アダプティブフォームを公開するには、次の方法があります。
 
@@ -62,7 +62,7 @@ AEM [!DNL Forms] には AEM [!DNL Forms] コンテナという名前のコンポ
 1. 「**[!UICONTROL レイアウトコンテナ]**」ボックス内をタップしてから、 ![feedmanagement](assets/feedmanagement.png) をタップします。「**[!UICONTROL 許可されたコンポーネント]**」タブで、「**[!UICONTROL 一般]**」アコーディオン展開し、「**[!UICONTROL AEM Form]**」オプションを選択して ![save_icon](assets/save_icon.svg) をタップします。AEM [!DNL Forms] コンテナコンポーネントはそのページに対して有効になっています。
 
 1. 手順 1 で開いた AEM [!DNL Sites] ページを含むブラウザータブを開きます。  「**[!UICONTROL コンポーネントをここにドラッグ]**」ボックスをタップして、 **+ をタップします。** 「**[!UICONTROL 新しいコンポーネントを挿入]**」ボックス内で、「**[!UICONTROL AEM Form]**」をタップします。この「**[!UICONTROL AEM Forms コンテナ]**」コンポーネントがページに追加されます。
-1. **[!UICONTROL AEM Forms コンテナ]**&#x200B;コンポーネントをタップし、 ![configure-icon](assets/configure-icon.svg) をタップしてください。AEM [!DNL Forms] コンテナのプロパティを含むダイアログボックス が表示されます。 **[!UICONTROL アセットパス]**&#x200B;フィールドで「 shipping-address-add-update-form 」アダプティブフォームを参照して選択してください。 ![save_icon](assets/save_icon.svg) をタップします。アダプティブフォームがページに埋め込まれました。
+1. **[!UICONTROL AEM Forms コンテナ]**&#x200B;コンポーネントをタップし、 ![configure-icon](assets/configure-icon.svg) をタップしてください。AEM [!DNL Forms] コンテナのプロパティを含むダイアログボックス が表示されます。**[!UICONTROL アセットパス]**&#x200B;フィールドで「 shipping-address-add-update-form 」アダプティブフォームを参照して選択してください。![save_icon](assets/save_icon.svg) をタップします。アダプティブフォームがページに埋め込まれました。
 1. アダプティブフォームと [!DNL Sites] ページの両方を公開します。次の点について考慮してください。
 
    * 初めて AEM [!DNL Sites] ページを公開する場合で、かつ、フォームが埋め込まれている場合は、[!DNL Sites] ページに加えて、埋め込まれたフォームも公開してください。
@@ -74,4 +74,4 @@ AEM [!DNL Forms] には AEM [!DNL Forms] コンテナという名前のコンポ
 
 ## 外部 web ページへのアダプティブフォームの埋め込み {#embed-the-adaptive-form-in-an-external-webpage}
 
-外部 web ページに数行の JavaScript を挿入することで、アダプティブフォームを外部 web ページ（AEM の外部でホストされる AEM 以外の web ページ ）に埋め込むことができます。 JavaScript コードは、アダプティブフォームおよび関連リソースの HTTP リクエストを AEM [!DNL Forms] サーバーに送信し、アダプティブフォームを web ページに追加します。 手順について詳しくは、[外部 web ページへのアダプティブフォームの埋め込み](/help/forms/using/embed-adaptive-form-external-web-page.md)を参照してください。
+外部 web ページに数行の JavaScript を挿入することで、アダプティブフォームを外部 web ページ（AEM の外部でホストされる AEM 以外の web ページ ）に埋め込むことができます。JavaScript コードは、アダプティブフォームおよび関連リソースの HTTP リクエストを AEM [!DNL Forms] サーバーに送信し、アダプティブフォームを web ページに追加します。手順について詳しくは、[外部 web ページへのアダプティブフォームの埋め込み](/help/forms/using/embed-adaptive-form-external-web-page.md)を参照してください。

@@ -14,7 +14,7 @@ exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2176'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -397,7 +397,7 @@ HTML 要素の多くは、ポップアップメニューの表示／非表示な
 * 特定の DOM 要素に関連付けた jQuery プラグイン
 * `data-*` 属性を使用した動作のカスタマイズ
 
-サンプルのマークアップを抽出します (data-&#42; 属性 ):
+次にマークアップの例の抜粋を示します（data-&#42; 属性として指定されたオプションに注意）。
 
 ```xml
 <ul data-column-width="220" data-layout="card" class="cards">

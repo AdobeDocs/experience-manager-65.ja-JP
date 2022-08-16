@@ -36,7 +36,7 @@ AEM リリースについては、[AEM Sustenance Hub](https://helpx.adobe.com/j
 
 AEM 6.5 の最新ドキュメントはまさにここです。
 
-また、Adobe Experience Manager の古いバージョンに関するドキュメントも用意されています。 任意のページでバージョンコンポーネントを使用して、バージョン間を移動したり、このリストから選択したりできます。
+また、Adobe Experience Manager の古いバージョンに関するドキュメントも用意されています。任意のページでバージョンコンポーネントを使用して、バージョン間を移動したり、このリストから選択したりできます。
 
 * [AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64.html?lang=ja)
 * [AEM 6.3](https://helpx.adobe.com/jp/support/experience-manager/6-3.html)
@@ -46,8 +46,8 @@ AEM 6.5 の最新ドキュメントはまさにここです。
 * [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
 * [AEM 5.6](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
 * [CQ 5.5](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ5.4](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ5.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [CQ 5.4](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [CQ 5.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
 * [CRX 2.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
 
 ** アドビで正式にサポートされなくなったバージョンを示します。

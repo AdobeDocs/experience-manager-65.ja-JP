@@ -113,7 +113,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->AEM Forms を使用したプログラミングにあるクイックスタートは、JBoss アプリケーションサーバーおよび Microsoft Windows オペレーティングシステムにデプロイされている Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>AEM Forms を使用したプログラミングにあるクイックスタートは、JBoss アプリケーションサーバーおよび Microsoft Windows オペレーティングシステムにデプロイされている Forms サーバーに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 ## クイックスタート：呼び出し API を使用した短時間のみ有効なプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-using-the-invocation-api}
 
@@ -761,7 +761,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート：Java プロジェクトで、BLOB データを使用して HTTP 経由でサービスを呼び出す {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
 
-次の Java コード例は、HTTP を経由でデータを使用して `MyApplication/EncryptDocument` という名前のプロセスを呼び出します。（[ HTTP を介する BLOB データを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)を参照してください）。
+次の Java コード例は、HTTP を経由でデータを使用して `MyApplication/EncryptDocument` という名前のプロセスを呼び出します。（[HTTP を介する BLOB データを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)を参照してください）。
 
 *Loan.pdf* という名前の PDF ファイルに基づく保護されていない PDF ドキュメントは、HTTP 経由で SOAP を使用して AEM Forms プロセスに渡されます。PDF ファイルは次の URL にあります：`https://'[server]:[port]'/FormsQS`。このプロセスは、*EncryptedDocument.pdf* という名前の PDF ファイルとして保存される、パスワードで暗号化された PDF ドキュメントを返します。
 

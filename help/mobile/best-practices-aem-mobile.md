@@ -90,4 +90,4 @@ AEM Mobile On-demand Servicesアプリの構築は、Cordova（または PhoneGa
 他の 2 つの役割および責任について詳しくは、以下のリソースを参照してください。
 
 * [管理者](/help/mobile/aem-mobile.md)
-* [作成者](/help/mobile/aem-mobile-on-demand.md)
+* [オーサー](/help/mobile/aem-mobile-on-demand.md)

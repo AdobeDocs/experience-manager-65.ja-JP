@@ -519,7 +519,7 @@ Adobe Experience Manager で使用できる xtype の一覧を以下で確認し
 
    [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem)
 
-   メニューにレンダリングするすべてのアイテムの基本クラス。 BaseItem は、すべてのメニューコンポーネントで共有される、デフォルトのレンダリング、アクティブ化された状態の管理、基本設定オプションを提供します。
+   メニューにレンダリングするすべてのアイテムの基本クラス。BaseItem は、すべてのメニューコンポーネントで共有される、デフォルトのレンダリング、アクティブ化された状態の管理、基本設定オプションを提供します。
 
 * menucheckitem
 

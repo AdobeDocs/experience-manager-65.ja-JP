@@ -1,5 +1,5 @@
 ---
-title: AEM forms でのシングルサインオンの有効化
+title: 'AEM forms でのシングルサインオンの有効化 '
 seo-title: Enabling single sign-on in AEM forms
 description: HTTP ヘッダーと SPNEGO を使用してシングルサインオン（SSO）を有効化する方法について説明します。
 seo-description: Learn how to enable single sign-on (SSO) using HTTP headers and SPNEGO.
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# AEM forms でのシングルサインオンの有効化{#enabling-single-sign-on-in-aem-forms}
+# AEM forms でのシングルサインオンの有効化 {#enabling-single-sign-on-in-aem-forms}
 
 AEM Forms でシングルサインオン（SSO）を有効化するには、HTTP ヘッダーと SPNEGO の 2 つの方法があります。
 
@@ -77,7 +77,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
       * **DNS IP：** AEM Forms を実行しているサーバーの DNS IP アドレス。この IP アドレスは、コマンドラインで `ipconfig/all` を実行して確認できます。
       * **KDC ホスト：**&#x200B;認証に使用する Active Directory サーバーの完全修飾ホスト名または IP アドレス。
       * **サービスユーザー：** KtPass ツールに渡されるサービスプリンシパル名（SPN）。前に挙げた例では、サービスパスワードは `HTTP/lcserver.um.lc.com` です。
-      * **サービス領域：** Active Directory のドメイン名。前に挙げた例では、サービスパスワードは `UM.LC.COM.` . です。
+      * **サービス領域：** Active Directory のドメイン名。前に挙げた例では、サービスパスワードは `UM.LC.COM.` です。
       * **サービスパスワード：**&#x200B;サービスユーザーのパスワード。前に挙げた例では、サービスパスワードは `password` です。
       * **SPNEGO を有効にする：**&#x200B;シングルサインオン（SSO）で SPNEGO を使用できるようにします。このオプションを選択します。
 

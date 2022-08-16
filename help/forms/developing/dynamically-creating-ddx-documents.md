@@ -1,7 +1,7 @@
 ---
 title: DDX ドキュメントの動的な作成
 seo-title: Dynamically Creating DDX Documents
-description: Java API と web サービス API を使用して DDX ドキュメントを動的に作成します。 DDX ドキュメントを動的に作成すると、実行時に取得された DDX ドキュメント内の値を使用できます。
+description: Java API と web サービス API を使用して DDX ドキュメントを動的に作成します。DDX ドキュメントを動的に作成すると、実行時に取得された DDX ドキュメント内の値を使用できます。
 seo-description: Create a DDX document dynamically using the Java API and Web Service API. Dynamically creating a DDX document enables you to use values in the DDX document that are obtained during run-time.
 uuid: b73e8069-6c9f-4517-a0ae-f3d503191d2d
 contentOwner: admin
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-Assembler 操作の実行に使用できる DDX ドキュメントを動的に作成できます。 DDX ドキュメントを動的に作成すると、実行時に取得された DDX ドキュメント内の値を使用できます。 DDX ドキュメントを動的に作成するには、使用しているプログラミング言語に属するクラスを使用します。 例えば、Java を使用してクライアントアプリケーションを開発する場合は、 `org.w3c.dom.*`パッケージに属するクラスを使用します。同様に、Microsoft .NET を使用している場合は、 `System.Xml` 名前空間に属するクラスを使用します。
+Assembler 操作の実行に使用できる DDX ドキュメントを動的に作成できます。DDX ドキュメントを動的に作成すると、実行時に取得された DDX ドキュメント内の値を使用できます。DDX ドキュメントを動的に作成するには、使用しているプログラミング言語に属するクラスを使用します。例えば、Java を使用してクライアントアプリケーションを開発する場合は、 `org.w3c.dom.*`パッケージに属するクラスを使用します。同様に、Microsoft .NET を使用している場合は、 `System.Xml` 名前空間に属するクラスを使用します。
 
 DDX ドキュメントを Assembler サービスに渡す前に、XML を `org.w3c.dom.Document` インスタンスから `com.adobe.idp.Document` インスタンスに変換します。Web サービスを使用している場合は、XML を作成するために使用されたデータタイプから XML を `BLOB` インスタンスに変換します（例： `XmlDocument`）
 
@@ -38,7 +38,7 @@ DDX ドキュメントを Assembler サービスに渡す前に、XML を `org.w
  </DDX>
 ```
 
-この DDX ドキュメントは、PDF ドキュメントをディスアセンブリします。 PDF ドキュメントのディスアセンブリに関する知識を身に付けることをお勧めします。
+この DDX ドキュメントは、PDF ドキュメントをディスアセンブリします。PDF ドキュメントのディスアセンブリに関する知識を身に付けることをお勧めします。
 
 >[!NOTE]
 >
@@ -78,11 +78,11 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **DDX ドキュメントの作成**
 
-使用しているプログラミング言語を使用して DDX ドキュメントを作成します。 PDF ドキュメントをディスアセンブリする DDX ドキュメントを作成するには、ドキュメントに `PDFsFromBookmarks` 要素が含まれていることを確認します。DDX ドキュメントの作成に使用するデータタイプを `com.adobe.idp.Document` インスタンスに変換をします（Java API を使用する場合）。 Web サービスを使用している場合は、データタイプを `BLOB` インスタンスに変換します。
+使用しているプログラミング言語を使用して DDX ドキュメントを作成します。PDF ドキュメントをディスアセンブリする DDX ドキュメントを作成するには、ドキュメントに `PDFsFromBookmarks` 要素が含まれていることを確認します。DDX ドキュメントの作成に使用するデータタイプを `com.adobe.idp.Document` インスタンスに変換をします（Java API を使用する場合）。Web サービスを使用している場合は、データタイプを `BLOB` インスタンスに変換します。
 
 **DDX ドキュメントの変換**
 
-`org.w3c.dom` クラスを使って作成した DDX ドキュメントは、 `com.adobe.idp.Document` オブジェクトに変換する必要があります。Java API を使用する際にこのタスクを実行するには、Java XML 変換クラスを使用します。 Web サービスを使用している場合は、DDX ドキュメントを `BLOB` オブジェクトに変換します。
+`org.w3c.dom` クラスを使って作成した DDX ドキュメントは、 `com.adobe.idp.Document` オブジェクトに変換する必要があります。Java API を使用する際にこのタスクを実行するには、Java XML 変換クラスを使用します。Web サービスを使用している場合は、DDX ドキュメントを `BLOB` オブジェクトに変換します。
 
 **ディスアセンブリする PDF ドキュメントの参照**
 
@@ -90,11 +90,11 @@ PDF ドキュメントを分割するには、分割する PDF ドキュメン�
 
 **実行時オプションを設定**
 
-ジョブを実行する際の Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。 実行時オプションを設定するには、 `AssemblerOptionSpec` オブジェクトを使用します。
+ジョブを実行する際の Assembler サービスの動作を制御する実行時オプションを設定できます。例えば、エラーが発生した場合にジョブの処理を続行するよう Assembler サービスに指示するオプションを設定できます。実行時オプションを設定するには、 `AssemblerOptionSpec` オブジェクトを使用します。
 
 **PDF ドキュメントのディスアセンブリ**
 
-`invokeDDX` 操作を呼び出して、PDF ドキュメントをディスアセンブリします。動的に作成された DDX ドキュメントを渡します。 Assembler サービスは、コレクションオブジェクト内のディスアセンブリされた PDF ドキュメントを返します。
+`invokeDDX` 操作を呼び出して、PDF ドキュメントをディスアセンブリします。動的に作成された DDX ドキュメントを渡します。Assembler サービスは、コレクションオブジェクト内のディスアセンブリされた PDF ドキュメントを返します。
 
 **ディスアセンブリされた PDF ドキュメントを保存**
 
@@ -130,14 +130,14 @@ Assembler サービス API（Java）を使用して、DDX ドキュメントを�
    *  `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java `DocumentBuilderFactory` オブジェクトを作成します。
    * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。 
    * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
-   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、DDX ドキュメントのルート要素を作成します。このメソッドは、 ルート要素を表す `Element` オブジェクトを作成します。 要素の名前を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`setAttribute` メソッド呼び出して、子要素の値を設定します。最後に、Header 要素を要素に追加するには、Header 要素の `appendChild` メソッドを呼び出して、子要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、DDX ドキュメントのルート要素を作成します。このメソッドは、 ルート要素を表す `Element` オブジェクトを作成します。要素の名前を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。次に、`setAttribute` メソッド呼び出して、子要素の値を設定します。最後に、Header 要素を要素に追加するには、Header 要素の `appendChild` メソッドを呼び出して、子要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
       ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
-   * `Document` オブジェクトの `createElement` メソッドを呼び出して、`PDFsFromBookmarks` 要素を作成します。 要素の名前を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。`setAttribute` メソッドを呼び出して、`PDFsFromBookmarks` 要素の値を設定 します。DDX 要素の `appendChild` メソッドを呼び出して、`DDX` 要素に `PDFsFromBookmarks` 要素を追加します。`PDFsFromBookmarks` 要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、`PDFsFromBookmarks` 要素を作成します。要素の名前を表す文字列値を `createElement` メソッドに渡します。戻り値を `Element` にキャストします。`setAttribute` メソッドを呼び出して、`PDFsFromBookmarks` 要素の値を設定 します。DDX 要素の `appendChild` メソッドを呼び出して、`DDX` 要素に `PDFsFromBookmarks` 要素を追加します。`PDFsFromBookmarks` 要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
 
       ` Element PDFsFromBookmarks = (Element)document.createElement("PDFsFromBookmarks");  PDFsFromBookmarks.setAttribute("prefix","stmt");  root.appendChild(PDFsFromBookmarks);`
 
-   * `Document` オブジェクトの `createElement` メソッドを呼び出して、`PDF` 要素を作成します。要素名を表す文字列の値を渡します。戻り値を `Element` にキャストします。`setAttribute` メソッドを呼び出して、`PDF` 要素の値を設定します。`PDFsFromBookmarks` 要素の `appendChild` メソッドを呼び出して、`PDF` 要素を `PDFsFromBookmarks` 要素に追加します。`PDF` 要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、`PDF` 要素を作成します。要素名を表す文字列の値を渡します。戻り値を `Element` にキャストします。`setAttribute` メソッドを呼び出して、`PDF` 要素の値を設定します。`PDFsFromBookmarks` 要素の `appendChild` メソッドを呼び出して、`PDF` 要素を `PDFsFromBookmarks` 要素に追加します。`PDF` 要素オブジェクトを引数として渡します。次のコード行に、このアプリケーションロジックを示します。
 
       ` Element PDF = (Element)document.createElement("PDF");  PDF.setAttribute("source","AssemblerResultPDF.pdf");  PDFsFromBookmarks.appendChild(PDF);`
 
@@ -222,15 +222,15 @@ Assembler サービス API（web サービス）を使用して、DDX ドキュ�
 1. DDX ドキュメントを作成します。
 
    * コンストラクターを使用して `System.Xml.XmlElement` オブジェクトを作成します。
-   * `XmlElement` オブジェクトの `CreateElement` メソッドを呼び出して、DDX ドキュメントのルート要素を作成します。このメソッドは、 ルート要素を表す `Element` オブジェクトを作成します。 要素の名前を表す文字列値を `CreateElement` メソッドに渡します。 `SetAttribute` メソッドを呼び出して、DDX 要素の値を設定します。最後に、 `XmlElement` オブジェクトの `AppendChild` メソッドを呼び出して、DDX ドキュメントに要素を追加します。DDX オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `XmlElement` オブジェクトの `CreateElement` メソッドを呼び出して、DDX ドキュメントのルート要素を作成します。このメソッドは、 ルート要素を表す `Element` オブジェクトを作成します。要素の名前を表す文字列値を `CreateElement` メソッドに渡します。`SetAttribute` メソッドを呼び出して、DDX 要素の値を設定します。最後に、 `XmlElement` オブジェクトの `AppendChild` メソッドを呼び出して、DDX ドキュメントに要素を追加します。DDX オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
 
       ` System.Xml.XmlElement root = ddx.CreateElement("DDX");  root.SetAttribute("xmlns", "https://ns.adobe.com/DDX/1.0/");  ddx.AppendChild(root);`
 
-   * `XmlElement` オブジェクトの `CreateElement` メソッドを呼び出して、DDX ドキュメント `PDFsFromBookmarks` 要素を作成します。 要素の名前を表す文字列値を `CreateElement` メソッドに渡します。 次に、 `SetAttribute` メソッドを呼び出して、要素の値を設定します。`DDX` 要素の `AppendChild` メソッドを呼び出して、`PDFsFromBookmarks` 要素をルート要素に追加します。`PDFsFromBookmarks` 要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
+   * `XmlElement` オブジェクトの `CreateElement` メソッドを呼び出して、DDX ドキュメント `PDFsFromBookmarks` 要素を作成します。要素の名前を表す文字列値を `CreateElement` メソッドに渡します。次に、 `SetAttribute` メソッドを呼び出して、要素の値を設定します。`DDX` 要素の `AppendChild` メソッドを呼び出して、`PDFsFromBookmarks` 要素をルート要素に追加します。`PDFsFromBookmarks` 要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
 
       ` XmlElement PDFsFromBookmarks = ddx.CreateElement("PDFsFromBookmarks");  PDFsFromBookmarks.SetAttribute("prefix", "stmt");  root.AppendChild(PDFsFromBookmarks);`
 
-   * `XmlElement` オブジェクトの `CreateElement` メソッドを呼び出して、DDX ドキュメント `PDF` 要素を作成します。 要素の名前を表す文字列値を `CreateElement` メソッドに渡します。 次に、 `SetAttribute` メソッドを呼び出して、子要素の値を設定します。`PDFsFromBookmarks` 要素の `AppendChild` メソッドを呼び出して、`PDF` 要素を `PDFsFromBookmarks` 要素に追加します。`PDF` 要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `XmlElement` オブジェクトの `CreateElement` メソッドを呼び出して、DDX ドキュメント `PDF` 要素を作成します。要素の名前を表す文字列値を `CreateElement` メソッドに渡します。次に、 `SetAttribute` メソッドを呼び出して、子要素の値を設定します。`PDFsFromBookmarks` 要素の `AppendChild` メソッドを呼び出して、`PDF` 要素を `PDFsFromBookmarks` 要素に追加します。`PDF` 要素オブジェクトを引数として渡します。次のコード行に、このアプリケーションロジックを示します。
 
       ` XmlElement PDF = ddx.CreateElement("PDF");  PDF.SetAttribute("source", "AssemblerResultPDF.pdf");  PDFsFromBookmarks.AppendChild(PDF);`
 
@@ -246,7 +246,7 @@ Assembler サービス API（web サービス）を使用して、DDX ドキュ�
 
 1. 分割する PDF ドキュメントを参照します。
 
-   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。 この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。この `BLOB` オブジェクトは引数として `invokeOneDocument` に渡されます。
    * コンストラクターを呼び出して、`System.IO.FileStream` オブジェクトを作成します。入力 PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
    * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、読み込むバイト配列、開始位置、ストリーム長を渡すことで、バイト配列にストリームデータを入力します。

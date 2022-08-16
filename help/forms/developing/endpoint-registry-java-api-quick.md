@@ -51,7 +51,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート：Java API を使用した EJB エンドポイントの追加 {#quickstart-adding-an-ejb-endpoint-using-the-java-api}
 
-次の Java コードの例では、EJB エンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します。 （[EJB エンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)を参照。）
+次の Java コードの例では、EJB エンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します。（[EJB エンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-ejb-endpoints)を参照。）
 
 ```java
  /*
@@ -150,7 +150,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート：Java API を使用した SOAP エンドポイントの追加 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
-次の Java コードの例では、*MyApplication/EncryptDocument* という名前のサービスに SOAP エンドポイントを追加します。 （[SOAP エンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints)を参照。）
+次の Java コードの例では、*MyApplication/EncryptDocument* という名前のサービスに SOAP エンドポイントを追加します。（[SOAP エンドポイントの追加](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints)を参照。）
 
 ```java
  /*
@@ -250,11 +250,11 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## QuickStart：Java API を使用した監視フォルダーエンドポイントの追加 {#quickstart-adding-a-watched-folder-endpoint-using-the-java-api}
 
-次の Java コードの例では、監視フォルダーエンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します。 （[監視フォルダーエンドポイントの設定](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints)を参照。）
+次の Java コードの例では、監視フォルダーエンドポイントを *MyApplication/EncryptDocument* という名前のサービスに追加します。（[監視フォルダーエンドポイントの設定](/help/forms/developing/programmatically-endpoints.md#adding-watched-folder-endpoints)を参照。）
 
 >[!NOTE]
 >
->次のクイックスタートをコンパイルして実行するには、プロジェクトに WatchedFolderEndpointConfigConstants.java ファイルを含める必要があります。 （[監視フォルダー設定値定数ファイル](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file)を参照。）
+>次のクイックスタートをコンパイルして実行するには、プロジェクトに WatchedFolderEndpointConfigConstants.java ファイルを含める必要があります。（[監視フォルダー設定値定数ファイル](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file)を参照。）
 
 ```java
  /*
@@ -389,7 +389,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->次のクイックスタートをコンパイルして実行するには、プロジェクトに EmailEndpointConfigConstants.java ファイルを含める必要があります。 （[メール設定値の定数ファイル](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file)を参照。）
+>次のクイックスタートをコンパイルして実行するには、プロジェクトに EmailEndpointConfigConstants.java ファイルを含める必要があります。（[メール設定値の定数ファイル](/help/forms/developing/programmatically-endpoints.md#email-configuration-values-constant-file)を参照。）
 
 ```java
  /*
@@ -1011,7 +1011,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
 
 ## クイックスタート：Java API を使用したエンドポイントコネクタ情報の取得 {#quickstart-retrieving-endpoint-connector-information-using-the-java-api}
 
-次の Java コードは、監視フォルダーエンドポイントに関する情報を取得します。 各設定値に関する情報が取得され、表示されます。 このコードリストは、各設定値が必須かオプションかを指定します。 また、各設定値の名前と値が表示されます。 （[外部エンドポイントコネクタ情報の取得](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)を参照。）
+次の Java コードは、監視フォルダーエンドポイントに関する情報を取得します。各設定値に関する情報が取得され、表示されます。このコードリストは、各設定値が必須かオプションかを指定します。また、各設定値の名前と値が表示されます。（[外部エンドポイントコネクタ情報の取得](/help/forms/developing/programmatically-endpoints.md#retrieving-endpoint-connector-information)を参照。）
 
 ```java
  /*

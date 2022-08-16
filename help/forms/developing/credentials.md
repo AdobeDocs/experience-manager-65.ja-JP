@@ -1,7 +1,7 @@
 ---
 title: 資格情報の操作
 seo-title: Working with Credentials
-description: Trust Manager API と Java API を使用して、秘密鍵証明書を AEM Forms に読み込みます。 さらに、Trust Manager API と Java API を使用して秘密鍵証明書を削除する方法についても説明します。
+description: Trust Manager API と Java API を使用して、秘密鍵証明書を AEM Forms に読み込みます。さらに、Trust Manager API と Java API を使用して秘密鍵証明書を削除する方法についても説明します。
 seo-description: Import credentials into AEM Forms using the Trust Manager API and Java API. In addition, learn how to delete credentials using the Trust Manager API and Java API.
 uuid: b794428f-49bf-4a91-bc5f-d855881f4f38
 contentOwner: admin
@@ -29,7 +29,7 @@ ht-degree: 100%
 * Acrobat Reader DC Extensions では、秘密鍵証明書を使用して、PDF ドキュメントで Adobe Reader の使用権限を有効にします。（[PDF ドキュメントへの使用権限の適用](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)を参照。）
 * Signature サービスは、PDF ドキュメントへのデジタル署名などの操作を実行しながら、証明書および秘密鍵証明書にアクセスします。（[PDF ドキュメントへのデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照。）
 
-Trust Manager Java API を使用して、Credential サービスとプログラム経由で対話を行うことができます。 次のタスクを実行できます。
+Trust Manager Java API を使用して、Credential サービスとプログラム経由で対話を行うことができます。次のタスクを実行できます。
 
 * [Trust Manager API を使用した認証情報の読み込み](credentials.md#importing-credentials-by-using-the-trust-manager-api)
 * [Trust Manager API を使用した資格情報の削除](credentials.md#deleting-credentials-by-using-the-trust-manager-api)
@@ -40,9 +40,9 @@ Trust Manager Java API を使用して、Credential サービスとプログラ�
 
 ## Trust Manager API を使用した認証情報の読み込み {#importing-credentials-by-using-the-trust-manager-api}
 
-Trust Manager API を使用して、プログラム経由で秘密鍵証明書を AEM Forms に読み込むことができます。 例えば、PDF ドキュメントへの署名に使用する秘密鍵証明書を読み込むことができます。 （[PDF ドキュメントへのデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照。）
+Trust Manager API を使用して、プログラム経由で秘密鍵証明書を AEM Forms に読み込むことができます。例えば、PDF ドキュメントへの署名に使用する秘密鍵証明書を読み込むことができます。（[PDF ドキュメントへのデジタル署名](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)を参照。）
 
-秘密鍵証明書を読み込む際は、秘密鍵証明書のエイリアスを指定します。 エイリアスは、秘密鍵証明書を必要とする Forms 操作を実行する際に使用されます。 次の図に示すように、読み込んだ秘密鍵証明書は管理コンソールで表示できます。 秘密鍵証明書のエイリアスは「*Secure*」です。
+秘密鍵証明書を読み込む際は、秘密鍵証明書のエイリアスを指定します。エイリアスは、秘密鍵証明書を必要とする Forms 操作を実行する際に使用されます。次の図に示すように、読み込んだ秘密鍵証明書は管理コンソールで表示できます。秘密鍵証明書のエイリアスは「*Secure*」です。
 
 ![ww_ww_truststore](assets/ww_ww_truststore.png)
 
@@ -61,7 +61,7 @@ Trust Manager API を使用して、プログラム経由で秘密鍵証明書�
 
 **プロジェクトファイルのインクルード**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めるようにします。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めるようにします。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -75,15 +75,15 @@ Trust Manager API を使用して、プログラム経由で秘密鍵証明書�
 
 **認証情報サービスクライアントの作成**
 
-プログラム経由で秘密鍵証明書を AEM Forms に読み込む前に、認証情報サービスクライアントを作成します。 詳しくは、[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+プログラム経由で秘密鍵証明書を AEM Forms に読み込む前に、認証情報サービスクライアントを作成します。詳しくは、[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
 
 **秘密鍵証明書の参照**
 
-AEM Forms に読み込む秘密鍵証明書を参照します。 このセクションに関連するクイックスタートは、ファイルシステム内の P12 ファイルを参照します。
+AEM Forms に読み込む秘密鍵証明書を参照します。このセクションに関連するクイックスタートは、ファイルシステム内の P12 ファイルを参照します。
 
 **読み込み操作の実行**
 
-認証情報を参照した後、その認証情報を AEM Forms に読み込みます。 認証情報が正常に読み込まれない場合は、例外がスローされます。 認証情報を読み込む際は、認証情報のエイリアスを指定します。
+認証情報を参照した後、その認証情報を AEM Forms に読み込みます。認証情報が正常に読み込まれない場合は、例外がスローされます。認証情報を読み込む際は、認証情報のエイリアスを指定します。
 
 **関連トピック**
 
@@ -113,7 +113,7 @@ Trust Manager API（Java）を使用して、認証情報を AEM Forms に読み
 1. 認証情報の参照
 
    * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを作成します。認証情報の場所を指定する文字列値を渡します。
-   * `com.adobe.idp.Document` コンストラクターを使用して、認証情報を保存する `com.adobe.idp.Document` オブジェクトを作成します。 コンストラクターの認証情報が格納された `java.io.FileInputStream` オブジェクトを渡します。
+   * `com.adobe.idp.Document` コンストラクターを使用して、認証情報を保存する `com.adobe.idp.Document` オブジェクトを作成します。コンストラクターの認証情報が格納された `java.io.FileInputStream` オブジェクトを渡します。
 
 1. 読み込み操作の実行
 
@@ -153,7 +153,7 @@ Trust Manager API を使用すると、プログラムにより資格情報を�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar

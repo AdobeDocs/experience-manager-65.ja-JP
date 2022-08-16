@@ -438,7 +438,7 @@ AEM Communities のリソースコンソールは、[イネーブルメントマ
 
 ごみ箱アイコンを選択すると、イネーブルメントリソースは次のようになります。 `Deleted` 確認後
 
-### 公開 {#publish}
+### パブリッシュ {#publish}
 
 ![publish-resource](assets/publish-resource1.png)
 

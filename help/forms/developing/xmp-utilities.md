@@ -30,7 +30,7 @@ XMP ユーティリティサービスでは、XMP メタデータを PDF ドキ�
 
 XMP ユーティリティサービスを使用して、次のタスクを実行できます。
 
-* メタデータを PDF ドキュメントにインポートします。 （[メタデータを PDF ドキュメントにインポート](xmp-utilities.md#importing-metadata-into-pdf-documents)を参照。）
+* メタデータを PDF ドキュメントにインポートします。（[メタデータを PDF ドキュメントにインポート](xmp-utilities.md#importing-metadata-into-pdf-documents)を参照。）
 * PDF ドキュメントからメタデータをエクスポート（[PDF ドキュメントからのメタデータのエクスポート](xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照。）
 
 >[!NOTE]
@@ -39,7 +39,7 @@ XMP ユーティリティサービスを使用して、次のタスクを実行�
 
 ## メタデータの PDF ドキュメントへのインポート {#importing-metadata-into-pdf-documents}
 
-XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートできます。 メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDF ドキュメントに関する情報を提供します。メタデータは、次の図に示すように、ドキュメントの「ドキュメントのプロパティ」ダイアログに配置できます。
+XMP ユーティリティ Java および web サービス API を使用して、XMP メタデータをプログラムで PDF ドキュメントにインポートできます。メタデータは、ドキュメントの作成者やドキュメントに関連するキーワードなど、PDF ドキュメントに関する情報を提供します。メタデータは、次の図に示すように、ドキュメントの「ドキュメントのプロパティ」ダイアログに配置できます。
 
 ![ww_ww_metadatadialog](assets/ww_ww_metadatadialog.png)
 
@@ -49,7 +49,7 @@ XMP ユーティリティ Java および web サービス API を使用して、
 >
 >この節では、XML ドキュメントを使用してメタデータを PDF ドキュメントにインポートする方法を説明します。
 
-次の XML コードには、以前のイラストに対応するメタデータ値が含まれています。 例えば、キーワードを指定する太字の項目に注意してください。
+次の XML コードには、以前のイラストに対応するメタデータ値が含まれています。例えば、キーワードを指定する太字の項目に注意してください。
 
 ```xml
  <?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?>
@@ -128,7 +128,7 @@ XMP メタデータを PDF ドキュメントにインポートするには、�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **XMPUtilityService クライアントを作成**
 
@@ -194,7 +194,7 @@ XMP ユーティリティ web サービス API を使用してプログラムで
 
 1. プロジェクトファイルを含める
 
-   * XMP Utilities サービスの WSDL ファイルを使用する Microsoft .NET クライアントアセンブリを作成します。 （[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください）。
+   * XMP Utilities サービスの WSDL ファイルを使用する Microsoft .NET クライアントアセンブリを作成します。（[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください）。
    * Microsoft .NET クライアントアセンブリを参照します（[Base64 エンコーディングを使用する .NET クライアントアセンブリの作成](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)を参照してください）。
 
 1. XMPUtilityService クライアントを作成
@@ -245,7 +245,7 @@ PDF ドキュメントから XMP メタデータをエクスポートするに�
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
+必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、プロキシファイルを必ず含めてください。
 
 **XMPUtilityService クライアントを作成**
 
