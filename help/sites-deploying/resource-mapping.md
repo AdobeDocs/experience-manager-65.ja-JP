@@ -12,7 +12,7 @@ discoiquuid: 3582a4d8-a47b-467a-9e25-cb45f969ec93
 docset: aem65
 feature: Configuring
 exl-id: 3eebdd38-da5b-4c38-868a-22c3c7a97b66
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7c24379c01f247f5ad45e3ecd40f3edef4ac3cfb
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 100%
@@ -121,7 +121,7 @@ https://localhost:4503/ に対するリクエストに `/content` というプ�
       * **値** `localhost.4503/`
    * **名前** `sling:internalRedirect`
 
-      * **型** `String`
+      * **型** `String[]`
 
       * **値** `/content/`
 
@@ -136,4 +136,4 @@ https://localhost:4503/ に対するリクエストに `/content` というプ�
 
 >[!NOTE]
 >
->`/etc/map.publish` を使用して、パブリッシュ環境の設定を保持する。 これらの設定をレプリケートして、パブリッシュ環境の [Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) の「**Mapping Location**」用に新しい場所（`/etc/map.publish`）を設定する必要があります。
+>`/etc/map.publish` を使用して、パブリッシュ環境の設定を保持する。これらの設定をレプリケートして、パブリッシュ環境の [Apache Sling Resource Resolver](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver) の「**Mapping Location**」用に新しい場所（`/etc/map.publish`）を設定する必要があります。
