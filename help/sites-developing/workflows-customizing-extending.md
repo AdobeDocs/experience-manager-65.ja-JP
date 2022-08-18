@@ -10,8 +10,8 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f23408c3-6b37-4047-9cce-0cab97bb6c5c
 exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 13f15bee38b6b4af4cd59376849810a788f0c467
+workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 100%
 
@@ -530,7 +530,7 @@ if (workflowData.getPayloadType() == "JCR_PATH") {
 
 スクリプトを使用するには：
 
-1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の`/apps/myapp/workflow/scripts`の下に保存します。
+1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の`//apps/workflow/scripts/`の下に保存します。
 1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content`ノードに追加します。
 
    | 名前 | タイプ | 値 |
@@ -647,8 +647,8 @@ function getParticipant() {
 }
 ```
 
-1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の `/apps/myapp/workflow/scripts` の下に保存します。
-1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの`jcr:content`ノードに追加します。
+1. （例えば、CRXDE Lite で）スクリプトを作成して、リポジトリ内の `//apps/workflow/scripts` の下に保存します。
+1. **プロセスステップ**&#x200B;の編集ダイアログでスクリプトを識別するタイトルを指定するには、次のプロパティをスクリプトの `jcr:content`ノードに追加します。
 
    | 名前 | タイプ | 値 |
    |---|---|---|
