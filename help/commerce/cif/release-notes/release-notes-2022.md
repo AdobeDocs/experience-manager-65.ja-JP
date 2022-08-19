@@ -2,10 +2,10 @@
 title: AEM Content and Commerce リリースノート 2022
 description: AEM Content and Commerce リリースノート 2022
 exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
-source-git-commit: b493e7bd73d679aa46bf41fad105f13215226dd4
+source-git-commit: 6c5c37c1c365e1f03ea9b5c935adf63a33faba5d
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 86%
+source-wordcount: '715'
+ht-degree: 84%
 
 ---
 
@@ -21,11 +21,22 @@ ht-degree: 86%
 | CIF コアコンポーネント | [システム要件](https://github.com/adobe/aem-core-cif-components/blob/master/VERSIONS.md) |
 | AEM プロジェクトアーキタイプ | [システム要件](https://github.com/adobe/aem-project-archetype/blob/master/VERSIONS.md) |
 
+## リリース日：2022年7月
+
+| コンポーネント | バージョン | 詳細 |
+|:-------|:-----:|---------------------:|
+| CIF アドオン | 2022.08.02.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
+
+### 新機能 {#what-is-new-july}
+
+* AEMページのプロパティを介した製品およびカテゴリへのAEMページの関連付けと、製品コックピットでの概要
+   ![製品コックピットページ協会](/help/assets/CIF/product_cockpit_page_association.png)
+
 ## リリース日：2022年6月
 
 | コンポーネント | バージョン | 詳細 |
 |:-------|:-----:|---------------------:|
-| CIF アドオン | 2022.06.xx.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF アドオン | 2022.07.05.00 | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
 | CIF コアコンポーネント | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
 | CIF Venia 参照サイト | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
 
@@ -77,9 +88,9 @@ ht-degree: 86%
 
 * 製品コックピットへのクイックアクセス：サイトエディターでワンクリックで詳細な製品情報に簡単にアクセス
 
-   ![ウィッシュリストの有効化](/help/assets/CIF/enable-wishlist.png)
+   ![ウィッシュリストを有効にする](/help/assets/CIF/enable-wishlist.png)
 
-* 追加のマーケティングコマースコンポーネントのサポート：コンポーネントは、買い物かごへの追加と、ウィッシュリストへの追加のコールトゥアクションを表示するように設定できます。
+* 追加のマーケティングコマースコンポーネントのサポート：コンポーネントを、買い物かごへの追加と、リストへの追加のコールトゥアクションを表示するように設定できます。
 
    ![製品コックピットへのサイトエディターショートカット](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
@@ -95,7 +106,7 @@ ht-degree: 86%
 
 * ベータ版：AEM CIF Search コアコンポーネントは、Commerce LiveSearch をサポートします。
 * マルチストアシナリオでの SEO 向上：PDP/PLP の URL 形式を、CIF Cloud Config プロパティを介してストアレベルで設定できるようになりました。
-* 製品ピッカーは、UI の新しいフィルターオプションを使用して、ステージングされた製品をサポートします。これにより、コンテンツ担当者は、今後の製品ローンチに備えて製品コンテンツ管理を準備できます
+* 製品ピッカーは、UI の新しいフィルターオプションを使用して、ステージングされた製品をサポートします。これにより、コンテンツ担当者は、今後の製品の発売に備えて製品コンテンツ管理を準備できます
 * 設定プロキシ URL の代わりに CIF Cloud Config 名を使用して、CIF 設定の管理とエラー処理を簡略化しました。
 * 製品リストおよびカルーセルコンポーネントの手動カテゴリ選択。これにより、コンテンツ担当者は、カタログエクスペリエンス以外で、コンテンツページ上でこれらのコンポーネントを使用できます
 
@@ -110,10 +121,10 @@ ht-degree: 86%
 ### 新機能 {#what-is-new-january}
 
 * myAccount コンポーネントの強化機能
-* 製品レコメンデーションコンポーネントは、追加のページタイプ（ホームページ、買い物かご、注文の確認）をサポートします。
+* 「製品のレコメンデーション」コンポーネントで追加のページタイプ（ホームページ、買い物かご、注文確認）がサポートされるようになりました
 * **ウィッシュリスト**
    * ログインした訪問者は、ウィッシュリストに製品を追加できます
-   * ウィッシュリストとその製品の管理は、myAccount を通じて可能です
+   * ウィッシュリストとその製品の管理は、myAccount を使用して行えます
    * 「ウィッシュリストに追加」ボタンは、ポリシー（製品ティーザー、製品詳細など）を介して、コンポーネントレベルで有効／無効にできます
    * コアコンポーネントおよび AEM Venia ストアフロントで使用できます。
 
