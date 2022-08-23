@@ -3,13 +3,13 @@ title: AEM CIF コアコンポーネントのスタイル設定
 description: AEM CIF コアコンポーネントのスタイル設定方法を説明します。このチュートリアルでは、クライアントサイドライブラリ（clientlib）を使用して、Adobe Experience Manager（AEM）Commerce 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。このチュートリアルでは、ui.frontend モジュールと webpack プロジェクトがエンドツーエンドのビルドプロセスに統合される方法についても説明します。
 sub-product: Commerce
 topics: Development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
 workflow-type: tm+mt
 source-wordcount: '2567'
 ht-degree: 100%
@@ -32,7 +32,7 @@ ht-degree: 100%
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。これには、Adobe Commerce インスタンスに設定および接続された AEM の実行インスタンスが含まれます。[AEM を使用したローカル開発をセットアップする](../develop.md)ための要件と手順を確認します。
+このチュートリアルを完了するには、ローカルの開発環境が必要です。これには、Adobe Commerce に設定および接続された AEM の実行インスタンスが含まれます。[AEM を使用したローカル開発をセットアップする](../develop.md)ための要件と手順を確認します。
 
 ## Venia プロジェクトのクローン {#clone-venia-project}
 

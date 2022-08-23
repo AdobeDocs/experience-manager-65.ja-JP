@@ -3,7 +3,7 @@ title: CIF コアコンポーネントのカスタマイズ
 description: AEM CIF コアコンポーネントをカスタマイズする方法を説明します。このチュートリアルでは、ビジネス固有の要件を満たすために、CIF コアコンポーネントを安全に拡張する方法について説明します。GraphQL クエリを拡張してカスタム属性を返し、新しい属性を CIF コアコンポーネントに表示する方法を説明します。
 sub-product: Commerce
 topics: Development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
 workflow-type: tm+mt
 source-wordcount: '2604'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # AEM CIF コアコンポーネントのカスタマイズ {#customize-cif-components}
 
-[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、[製品ティーザー](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)コンポーネントをさらに拡張して、Adobe Commerce のカスタム属性を表示します。また、AEM と Adobe Commerce 間の GraphQL 統合、および CIF コアコンポーネントによって提供される拡張フックについても学習します。
+[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、[製品ティーザー](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser)コンポーネントをさらに拡張して、Adobe Commerce のカスタム属性を表示します。また、AEM と Adobe Commerce 間の GraphQL 統合および CIF コアコンポーネントによって提供される拡張フックについても学習します。
 
 >[!TIP]
 >
@@ -28,13 +28,13 @@ ht-degree: 98%
 
 ## 作成する内容
 
-Venia ブランドは最近、持続可能な資材を使用して一部の製品を製造し始めました。同社は、**エコフレンドリー**&#x200B;バッジを製品ティーザーの一部として表示したいと考えています。製品が&#x200B;**エコフレンドリー**&#x200B;な資材を使用しているかどうかを示す新しいカスタム属性が Adobe Commerce に作成されます。次に、このカスタム属性が GraphQL クエリの一部として追加され、特定の製品の製品ティーザーに表示されます。
+Venia ブランドは最近、持続可能な資材を使用して一部の製品を製造し始めました。同社は、**エコフレンドリー**&#x200B;バッジを製品ティーザーの一部として表示したいと考えています。製品が&#x200B;**エコフレンドリー**&#x200B;な資材を使用しているかどうかを示す新しいカスタム属性が Adobe Commerce で作成されます。次に、このカスタム属性が GraphQL クエリの一部として追加され、特定の製品の製品ティーザーに表示されます。
 
 ![エコフレンドリーバッジの最終実装](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## 前提条件 {#prerequisites}
 
-このチュートリアルを完了するには、ローカルの開発環境が必要です。これには、Adobe Commerce インスタンスに設定および接続された AEM の実行インスタンスが含まれます。[AEM を使用したローカル開発をセットアップする](../develop.md)ための要件と手順を確認します。このチュートリアルを完全に実行するには、[属性を Adobe Commerce 内の製品に追加](https://docs.magento.com/user-guide/catalog/product-attributes-add.html)する権限が必要になります。
+このチュートリアルを完了するには、ローカルの開発環境が必要です。これには、Adobe Commerce に設定および接続された AEM の実行インスタンスが含まれます。[AEM を使用したローカル開発をセットアップする](../develop.md)ための要件と手順を確認します。このチュートリアルを完全に実行するには、[属性を Adobe Commerce 内の製品に追加](https://docs.magento.com/user-guide/catalog/product-attributes-add.html)する権限が必要になります。
 
 また、コード例やチュートリアルを実行するには、[GraphiQL](https://github.com/graphql/graphiql) またはブラウザー拡張機能などの GraphQL IDE が必要です。ブラウザー拡張機能をインストールする場合は、その拡張機能にリクエストヘッダーを設定できることを確認してください。Google Chrome の [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) は、ジョブを実行できる拡張機能の 1 つです。
 
@@ -59,9 +59,9 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
    $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
-1. AEM インスタンスを Adobe Commerce インスタンスに接続するために必要な OSGi 構成を追加するか、新しく作成されたプロジェクトに構成を追加します。
+1. AEM インスタンスを Adobe Commerce に接続するために必要な OSGi 構成を追加するか、新しく作成されたプロジェクトに構成を追加します。
 
-1. この時点で、Adobe Commerceインスタンスに接続されたストアフロントの作業用バージョンが必要です。 `US`／`Home` ページ（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）にアクセスします。
+1. この時点で、Adobe Commerce インスタンスに接続されたストアフロントの作業用のバージョンが必要です。`US`／`Home` ページ（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）にアクセスします。
 
    ストアフロントは現在 Venia テーマを使用しています。ストアフロントのメインメニューを展開すると、様々なカテゴリが表示され、Adobe Commerce への接続が機能していることが示されます。
 
@@ -89,7 +89,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    ![製品ティーザー - デフォルトスタイル](../assets/customize-cif-components/product-teaser-default-style.png)
 
-## Adobe Commerce へのカスタム属性の追加 {#add-custom-attribute}
+## Adobe Commerce でのカスタム属性の追加 {#add-custom-attribute}
 
 AEM に表示された製品と製品データは Adobe Commerce に格納されます。次に、Adobe Commerce UI を使用して設定する製品属性の一部として、新しい&#x200B;**エコフレンドリー**&#x200B;属性を追加します。
 
@@ -124,20 +124,20 @@ AEM に表示された製品と製品データは Adobe Commerce に格納され
 
    >[!TIP]
    >
-   > 製品属性の管理について詳しくは、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html)を参照してください。
+   > 製品属性の管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html)を参照してください。
 
-1. **システム**／**ツール**／**キャッシュ管理**&#x200B;に移動します。データスキーマが更新されたので、Adobe Commerce 内の一部のキャッシュタイプを無効にする必要があります。
+1. **システム**／**ツール**／**キャッシュ管理**&#x200B;に移動します。データスキーマはアップデートされたので、Adobe Commerce 内のキャッシュタイプの一部を無効にする必要があります。
 1. 「**設定**」の横のチェックボックスをオンにして、**更新**&#x200B;用にキャッシュタイプを送信します。
 
    ![構成キャッシュタイプの更新](../assets/customize-cif-components/refresh-configuration-cache-type.png)
 
    >[!TIP]
    >
-   > キャッシュ管理について詳しくは、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/system/cache-management.html)を参照してください。
+   > キャッシュ管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/system/cache-management.html)を参照してください。
 
 ## GraphQL IDE を使用した属性の検証 {#use-graphql-ide}
 
-AEMコードを始める前に、 [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) GraphQL IDE を使用します。 Adobe Commerce と AEM の統合は、主に一連の GraphQL クエリを使用して実行されます。GraphQL クエリを理解し変更することは、CIF コアコンポーネントを拡張するのに重要なことの 1 つです。
+AEM コードを始める前に、GraphQL IDE を使用して [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/) を調べてみると役に立ちます。AEM との Adobe Commerce 統合は、主に一連の GraphQL クエリを介して実行されます。GraphQL クエリを理解し変更することは、CIF コアコンポーネントを拡張するのに重要なことの 1 つです。
 
 次に、GraphQL IDE を使用して、`eco_friendly` 属性が製品属性セットに追加されたことを確認します。このチュートリアルのスクリーンショットは、[Altair GraphQL クライアント](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja)を使用しています。
 
@@ -182,7 +182,7 @@ AEMコードを始める前に、 [Adobe Commerce GraphQL](https://devdocs.magen
 
    >[!TIP]
    >
-   > Adobe Commerce GraphQL について詳しくは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
+   > Adobe Commerce GraphQL に関する詳細なドキュメントは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
 
 ## 製品ティーザーの Sling モデルのアップデート {#updating-sling-model-product-teaser}
 
