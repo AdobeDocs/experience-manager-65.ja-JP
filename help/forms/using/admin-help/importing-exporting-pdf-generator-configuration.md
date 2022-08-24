@@ -11,10 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e25c1b35-73eb-4353-8e39-a2d4cdccd101
 feature: PDF Generator
 exl-id: b363b23a-29bb-4ea4-a8f2-5ba9fe3c7b27
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->カスタムの native2pdfconfig.xml ファイルを読み込むことによって PDF Generator のタイムアウト設定を変更することはできません。このファイルのタイムアウト設定は情報提供のみを目的としており、PDF Generator の現在の設定が表示されます。タイムアウト設定を変更するには、『[AEM forms のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_63_jp)』の「PDF Generator のパフォーマンスパラメーターの設定」を参照してください。
+>カスタムの native2pdfconfig.xml ファイルを読み込むことによって PDF Generator のタイムアウト設定を変更することはできません。このファイルのタイムアウト設定は情報提供のみを目的としており、PDF Generator の現在の設定が表示されます。タイムアウト設定を変更するには、「PDF・ジェネレータのパフォーマンス・パラメータの設定」( [AEM forms のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_63_jp).
 
 ## 現在の設定ファイルの書き出し {#export-your-current-configuration-file}
 

@@ -7,10 +7,10 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3802'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -30,7 +30,7 @@ URL に関して一般的に認められているベストプラクティスが�
 
 AEM プロジェクトで URL を評価するときには、次のことを確認してください。
 
-「ユーザーが URL を目にしたときに、ページのコンテンツを見なくても、そのページの内容を説明できますか。」
+「ユーザーがこの URL を目にしたがって、ページのコンテンツを見なかった場合、そのページの内容を説明できますか？」
 
 答えが「はい」であれば、その URL は検索エンジンに効果があります。
 
@@ -156,7 +156,7 @@ String myParam = req.getParameter("myParam");
 このタイプのサーブレットの SCR 注釈は、次のようになります。
 
 ```
-@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
+@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json", methods="GET")
 ```
 
 この場合、URL によってアドレス指定されるリソース（`myPageType` リソースのインスタンス）にサーブレットで自動的にアクセスできます。アクセスするには、次のメソッドを呼び出します。
@@ -320,7 +320,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 両方について、ページの先頭に次のタグを適用します。
 
 ```xml
-<link rel=”canonical” href=”my-brand/my-page.html”/>
+<link rel="canonical" href="my-brand/my-page.html"/>
 ```
 
 `href` は、相対パスとして指定することも、絶対パスとして指定することもできます。ページの正規 URL を確認し、このタグを出力するには、このコードをページマークアップに挿入する必要があります。
@@ -390,7 +390,7 @@ XML サイトマップを生成するバックグラウンドジョブを有効�
 
 サイトマップ生成ジョブは、オーサー層のインスタンスとパブリッシュ層のインスタンスの両方で実行できます。ほとんどの場合、適切な正規 URL を生成できるのはパブリッシュ層インスタンスだけなので、パブリッシュ層インスタンスで生成を実行することをお勧めします（Sling リソースマッピングルールは一般にパブリッシュ層インスタンスにのみ存在するため）。ただし、[SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html) インターフェイスを実装することにより、正規 URL の生成に使用される外部化メカニズムのカスタム実装をプラグインすることは可能です。カスタム実装により、オーサー層インスタンスでサイトマップの正規 URL を生成できる場合は、`SitemapScheduler` をオーサー実行モードに設定して、XML サイトマップ生成ワークロードをオーサーサービスクラスターのインスタンス全体に分散させることができます。このシナリオでは、未公開のコンテンツ、変更済みのコンテンツ、限られたユーザーグループにのみ表示されるコンテンツの取り扱いには、特に注意が必要です。
 
-AEM Sites には、ページのツリーをトラバースしてサイトマップを生成する `SitemapGenerator` のデフォルトの実装が含まれています。サイトの正規 URL と（使用可能な場合は）代替言語のみを出力するように事前設定されています。また、必要に応じて、ページの最終変更日を含めるように設定することもできます。 その場合は、_Adobe AEM SEO - Page Tree Sitemap Generator_ 設定の「_最終変更日を追加_」オプションを有効にし、「_最終変更ソース_」を選択します。サイトマップがパブリッシュ層で生成される場合は、`cq:lastModified` の日付を使用することをお勧めします。
+AEM Sites には、ページのツリーをトラバースしてサイトマップを生成する `SitemapGenerator` のデフォルトの実装が含まれています。サイトの正規 URL と（使用可能な場合は）代替言語のみを出力するように事前設定されています。また、必要に応じて、ページの最終変更日を含めるように設定することもできます。その場合は、_Adobe AEM SEO - Page Tree Sitemap Generator_ 設定の「_最終変更日を追加_」オプションを有効にし、「_最終変更ソース_」を選択します。サイトマップがパブリッシュ層で生成される場合は、`cq:lastModified` の日付を使用することをお勧めします。
 
 ![Adobe AEM SEO - Page Tree Sitemap Generator 設定](assets/sling-sitemap-pagetreegenerator.png)
 

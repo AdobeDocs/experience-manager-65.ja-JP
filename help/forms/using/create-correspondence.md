@@ -10,10 +10,10 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '3695'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -129,7 +129,7 @@ ht-degree: 100%
 
    * 通貨記号（€、￥、£ など）
    * 数学記号（∑、√、∂、^ など）
-   * 句読記号（‟、” など）
+   * 「 」や「 」などの句読点記号
 
    ![specialcharacters](assets/specialcharacters.png)
 
@@ -353,7 +353,7 @@ HTML5 フォームのスクリプティングのサポートについて詳し�
 
 デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レタープレビューモードは、PDF に変更することができます。ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
 
-レタープレビューとブラウザの互換性について詳しくは、「[NPAPI ブラウザプラグインのサポート終了とその影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)」を参照してください。
+レタープレビューとブラウザの互換性について詳しくは、「[NPAPI ブラウザプラグインのサポート終了とその影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)」を参照してください。
 
 レターのプレビューモードを変更するには、次の手順を完了してください。
 

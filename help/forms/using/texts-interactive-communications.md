@@ -10,10 +10,10 @@ discoiquuid: f04050f8-42de-4ef0-b6ed-145d59bbffce
 docset: aem65
 feature: Interactive Communication
 exl-id: b8e84c5d-2ec8-4575-9eed-6b37b04e5d66
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '2477'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -250,7 +250,7 @@ ht-degree: 100%
 
 * 通貨記号（€、￥、£ など）
 * 数学記号（∑、√、∂、^ など）
-* 句読記号（‟、” など）
+* 「 」や「 」などの句読点記号
 
 ![specialcharacters-2](assets/specialcharacters-2.png)
 

@@ -2,10 +2,10 @@
 title: ダイナミック PDF フォームでハッシュを生成して操作する方法
 description: 動的 PDF Forms でのハッシュの生成と操作
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
-workflow-type: ht
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -118,7 +118,7 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 * [Ronald Rivest 氏](https://ja.wikipedia.org/wiki/ロナルド・リベスト)
 * [NIST](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
-* [ハッシュの競合](https://ja.wikipedia.org/wiki/%E8%A1%9D%E7%AA%81_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6))
-* [レインボーテーブル ](https://ja.wikipedia.org/wiki/レインボーテーブル)
+* [ハッシュの競合](https://en.wikipedia.org/wiki/Hash_collision)
+* [レインボーテーブル ](https://en.wikipedia.org/wiki/Rainbow_table)
 * [JavaScript MD5 プロジェクトのホームページ](http://pajhome.org.uk/crypt/md5/)
 * [jsSHA2 プロジェクトのホームページ](https://anmar.eu.org/projects/jssha2/)

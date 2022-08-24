@@ -2,10 +2,10 @@
 title: ページへの ContextHub の追加とストアへのアクセス
 description: ContextHub 機能を有効にし、ContextHub JavaScript ライブラリにリンクするには、ContextHub をページに追加します
 exl-id: ae745af9-b49f-46b9-ab48-2fd256e9a681
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -107,7 +107,7 @@ ContextHub には、JavaScript オブジェクトを操作するための [`Cont
 
 >[!NOTE]
 >
->ContextHub は、デフォルトでは、パブリッシュサーバーを使用した現在のログインを認識しません。そうしたユーザーは ContextHub では「匿名」と見なされます。
+>ContextHub は、デフォルトでは、パブリッシュサーバーで現在ログインしていることを認識せず、そのようなユーザーは ContextHub では「匿名」と見なされます。
 >
 >プロファイルストアを読み込むことで、ContextHub にログインユーザーを認識させることができます。[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js) でサンプルコードを参照してください。
 

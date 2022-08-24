@@ -9,8 +9,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ window.addEventListener("FormBridgeInitialized",
    * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
       * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数。 この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
+      * **success**：サクセスハンドラー関数. この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
       * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
       * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数検証関数にはエラー文字列の配列が渡されます。
       * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
@@ -198,7 +198,7 @@ window.addEventListener("FormBridgeInitialized",
 ### getFieldValue() API の例 {#example-of-nbsp-getfieldvalue-api}
 
 ```JavaScript
-var a =  formBridge.getFieldValue(“xfa.form.form1.Subform1.TextField”);
+var a =  formBridge.getFieldValue("xfa.form.form1.Subform1.TextField");
 if(a.errors) {
     var err;
      while((err = a.getNextMessage()) != null)

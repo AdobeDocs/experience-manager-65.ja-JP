@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1562'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -205,8 +205,8 @@ Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン
 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
 
 1. OSGI／設定をクリックします。
-1. 「Day JCR Connector for Microsoft Sharepoint」を探します。
-1. 「Edit the configuration values」をクリックします。
+1. 「Day JCR Connector for Microsoft Sharepoint」を検索
+1. 「設定値を編集」をクリックします。
 1. 「Sharepoint Connection Factory」の値として「com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory」を設定します。
 1. 「**保存**」をクリックします。
 

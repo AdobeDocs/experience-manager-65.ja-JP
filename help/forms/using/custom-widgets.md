@@ -12,10 +12,10 @@ discoiquuid: 17a86543-30d3-4e16-a373-67b46d551da9
 docset: aem65
 feature: Mobile Forms
 exl-id: 76bd1e2d-9e65-452c-8cef-123d28886a62
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -95,13 +95,13 @@ window.formBridge.registerConfig("widgetConfig",
 ```
 *{*
 
-*“identifier1” : “customwidgetname”,
-“identifier2” : “customwidgetname2”,
+*"identifier1" : "customwidgetname",
+"identifier2" : "customwidgetname2",
 ..
 }*
 ```
 
-ここで「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを現す jQuery CSS セレクターです。以下には、さまざまなケースでの識別子の値が記載されています。
+ここで、「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを表す jQuery CSS セレクターです。 以下には、さまざまなケースでの識別子の値が記載されています。
 
 | 識別子のタイプ | 識別子 | 説明 |
 |---|---|---|

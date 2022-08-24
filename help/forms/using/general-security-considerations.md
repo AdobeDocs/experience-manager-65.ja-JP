@@ -11,10 +11,10 @@ discoiquuid: 64bc6018-2828-4634-9275-48f1d411452b
 docset: aem65
 role: Admin
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1062'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -136,7 +136,7 @@ JEE 上の AEM Forms がサポートするデータベースのセキュリテ�
   </tr>
   <tr>
    <td><p>Microsoft SQL Server 2016</p> </td>
-   <td>「SQL Server 2016: Security」について web を検索してください。</td>
+   <td>Web で「SQL Server 2016:セキュリティ»</td>
   </tr>
   <tr>
    <td><p>MySQL 5</p> </td>

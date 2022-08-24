@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 312fff5f-39c1-48c1-aa99-40feb72c2f59
-source-git-commit: acc4b78f551e0e0694f41149fff7e24d855f504f
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '2720'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -221,7 +221,8 @@ XMP が提供するデータモデル、ストレージモデルおよびスキ�
 EXIF、ID3、Microsoft Office などの従来のメタデータは、すべて自動的に XMP に解釈され、製品カタログなどの顧客固有のメタデータスキーマをサポートするよう拡張することができます。
 
 XMP のメタデータは、一連のプロパティで構成されます。これらのプロパティは、常に
-リソースとして参照される特定のエンティティに関連付けられます。つまり、プロパティはリソースの「説明」です。XMP の場合、リソースとなるのは常にアセットです。
+
+資源と呼ばれる特定の実体つまり、プロパティはリソースの「説明」です。 XMP の場合、リソースとなるのは常にアセットです。
 
 ### XMP のエコシステム {#xmp-ecosystem}
 

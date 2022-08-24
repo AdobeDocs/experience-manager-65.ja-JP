@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 92971747-1c74-4917-b5a0-7b79b3ae1e68
 exl-id: cd4f3b4c-5488-4ca7-9c1e-b4c819fda8e8
-source-git-commit: 423e17dadf2e506eb68b37851dde5e68ed950866
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -29,7 +29,7 @@ OOTB 動作を拡張するときは、アップグレードを念頭に置いて
 
 ### テンプレートデザイン {#design-template-designs}
 
-ページで各 parsys にどのコンポーネントを含めることができるかを定義することで、サイトの外観と操作性における一貫性を制御できます。ページ上でのデザインへのアクセスを制限することにより、「スーパー作成者」は開発者の介入なしでページごとに許可されたコンポーネントを変更できるようになり、その一方で他の作成者が企業の標準を遵守するようになります。
+ページで各 parsys にどのコンポーネントを含めることができるかを定義することで、サイトの外観と操作性における一貫性を制御できます。ページ上のデザインへのアクセスを制限することで、「スーパー作成者」は、開発者の介入なしに、許可されたコンポーネントをページごとに変更できる一方、他の作成者が企業標準に従っていることを確認できます。
 
 ### SOLID アーキテクチャを開発する {#develop-a-solid-architecture}
 

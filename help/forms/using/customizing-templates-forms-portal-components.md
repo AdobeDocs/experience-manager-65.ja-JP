@@ -11,10 +11,10 @@ discoiquuid: 7566203f-2f80-4ce7-bff9-073d67119f64
 docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '1225'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -129,7 +129,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 * **タイトル：**&#x200B;フォームのタイトル
 * **formUrl**：フォームを HTML としてレンダリングする URL
-* **ターゲット**：リンクのターゲット属性有効な値は、“_blank” および “_self”。
+* **ターゲット**：リンクのターゲット属性有効な値は、「_blank」および「_self」です。
 * **linkText**：リンクキャプション
 
 ### ドラフト&amp;送信コンポーネント： {#drafts-amp-submissions-component}
@@ -178,7 +178,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 ## 関連記事
 
 * [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md)
-* [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)
+* [フォームポータルページの作成 ](/help/forms/using/creating-form-portal-page.md)
 * [API を使用した Web ページ上のフォームの一覧表示](/help/forms/using/listing-forms-webpage-using-apis.md)
 * [ドラフトと送信コンポーネントの使用](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)

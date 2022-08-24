@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 95804bff-9e6f-4807-aae4-790bd9e7cb57
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
 workflow-type: tm+mt
 source-wordcount: '6228'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -833,7 +833,7 @@ Authentication Manager Service API（web サービス）を使用してユーザ
 1. プロジェクトファイルを含めます。
 
    * Authentication Manager WSDL を使用する Microsoft .NET クライアントアセンブリを作成します（[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください）。
-   * Microsoft .NET クライアントアセンブリを参照します（[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)の「.NET クライアントアセンブリのリファレンス」を参照してください）。
+   * Microsoft .NET クライアントアセンブリを参照します( [Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).)
 
 1. AuthenticationManagerService クライアントを作成します。
 

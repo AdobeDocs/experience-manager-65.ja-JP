@@ -8,10 +8,10 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: 1def8ff7bc90e2ab82ce8b50277a97da9709c78c
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '4703'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 100%
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
-   2. パッケージのバージョンとタイプを選択します。 また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
+   2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. **we-gov-forms.pkg.all-&lt;version>.zip** パッケージ名をタップし、「**[!UICONTROL EULA 条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://docs.adobe.com/content/help/jp/experience-manager-65/administering/contentmanagement/package-manager.html)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
@@ -135,18 +135,18 @@ ht-degree: 100%
 1. *https://&lt;aemserver>:&lt;port>/libs/granite/security/content/groupadmin.html* に移動します。
 1. 以下のタスクを実行するには、管理者としてログインします。
 1. ページの末尾まで下にスクロールし、すべてのユーザーグループを読み込みます。
-1. 「**ワークフロー**」を検索します。
-1. 「**workflow-users**」グループを選択して、「プロパティ」をクリックします。
+1. 「**ワークフロー**&quot;.
+1. 「**workflow-users**&quot;グループ化し、&quot;プロパティ&quot;をクリックします。
 1. 「メンバー」タブに移動します。
-1. 「ユーザーまたはグループを選択」フィールドで、**wegov** と入力します。
-1. ドロップダウンから「**We.Gov Forms ユーザー** 」を選択します。
+1. 入力 **wegov** 「ユーザーまたはグループを選択」フィールドで、
+1. ドロップダウンから「 」を選択します。**We.Gov Forms Users**&quot;.
 
    ![ワークフローユーザーのグループ設定の編集](assets/edit_group_settings.jpg)
 
 1. メニューバーの「保存して閉じる」をクリックします。
-1. 手順 2～7 を繰り返し、「**分析**」を検索し、「**Analytics 管理者**」グループを選択し、「**We.Gov Forms Users**」グループをメンバーとして追加します。
-1. 手順 2～7 を繰り返し、「**フォームユーザー**」を検索し、「**forms-power-users**」グループを選択し、「**We.Gov Forms Users**」グループをメンバーとして追加します。
-1. 手順 2～7 を繰り返し、「**forms-users**」を検索し、「**forms-users**」グループを選択し、今回は「**We.Gov Users**」グループをメンバーとして追加します。
+1. 手順 2～7 を繰り返し、「**分析**」をクリックし、「**Analytics 管理者**&quot;グループを作成し、&quot;**We.Gov Forms Users**&quot;グループをメンバーとして使用します。
+1. 手順 2～7 を繰り返し、「**フォームユーザー**」をクリックし、「**forms-power-users**&quot;グループを作成し、&quot;**We.Gov Forms Users**&quot;グループをメンバーとして使用します。
+1. 手順 2～7 を繰り返し、「**forms-users**」をクリックし、「**forms-users**&quot;グループに追加し、今回は&quot;**We.Gov ユーザー**&quot;グループをメンバーとして使用します。
 
 ### メールサーバーの設定 {#email-server-configuration}
 
@@ -162,11 +162,11 @@ ht-degree: 100%
    1. **SMTP サーバーのホスト名**：例（smtp.gmail.com）
    1. **サーバーポート**：SSL を使用した gmail の例：465
    1. **SMTP ユーザー：** demo@ &lt;companyname> .com
-   1. **「差出人」のアドレス**：aemformsdemo@adobe.com
+   1. **「差出人」のアドレス**:aemformsdemo@adobe.com
 
    ![SMTP を設定](assets/configure_smtp.jpg)
 
-1. 「保存」をクリックして、設定を保存します。
+1. 「保存」をクリックして設定を保存します。
 
 ### （オプション）AEM SSL 設定 {#aemsslconfig}
 
@@ -183,7 +183,7 @@ ht-degree: 100%
 
 1. SSL 証明書およびキーの詳細：
 
-   1. 「CN=localhost」に対して発行
+   1. 「CN=localhost」に対して発行された
    1. 10 年の有効性
    1. 「password」のパスワード値
 1. 秘密鍵は *localhostprivate.der*。
@@ -216,7 +216,7 @@ ht-degree: 100%
 1. 「設定」タブに移動します。
 1. OAuth URL を入力します（例： [https://secure.na1.echosign.com/public/oauth](https://secure.na1.echosign.com/public/oauth)）。
 1. 設定した Adobe Sign インスタンスから、設定したクライアント ID とクライアント秘密鍵を指定します。
-1. 「Adobe Sign に接続」をクリックします。
+1. 「Adobe Signに接続」をクリックします。
 1. 接続に成功したら、「保存して閉じる」をクリックして統合を完了します。
 
 ### （オプション） MS Dynamics クラウド設定 {#ms-dynamics-cloud-configuration}
@@ -236,7 +236,7 @@ ht-degree: 100%
 
    1. MS Dynamics アプリケーションの登録で設定したリダイレクト URL と同じ URL を使用してサーバーにアクセスしていることを確認してください。
 
-1. 「Microsoft Dynamics OData クラウドサービス」設定を選択します。
+1. 「Microsoft Dynamics ODataCloud Service」設定を選択します。
 1. 「プロパティ」をクリックします。
 
    ![Microsoft OData クラウドサービスのプロパティ](assets/properties_odata_cloud_service.jpg)
@@ -267,14 +267,14 @@ ht-degree: 100%
 
 1. [https://portal.azure.com/](https://portal.azure.com/) に移動し、ログインします。
 1. 左側のメニューから「すべてのサービス」を選択します。
-1. 「アプリ登録」を検索するか、「アプリ登録」に移動します。
+1. 検索するか、「アプリ登録」に移動します。
 1. 既存のアプリケーション登録を作成するか、選択します。
 1. **アプリケーション ID** を AEM クラウド設定の OAuth として使用される&#x200B;**クライアント ID** にコピーします。
-1. 「設定」または「マニフェスト」をクリックして、**返信 URL** を設定します。
+1. 「設定」または「マニフェスト」をクリックして、 **返信 URL。**
 
    1. この URL は、OData サービスの設定時に AEM サーバーにアクセスするために使用される URL と一致させる必要があります。
 
-1. 設定ビューで「キー」をクリックして、新しいキーの作成を表示します（これは AEM のクライアント秘密鍵として使用されます）。
+1. 設定ビューで、「キー」をクリックして、新しいキーの作成を表示します ( これはAEMのクライアント秘密鍵として使用されます )。
 
    1. 後で Azure や AEM で表示できないため、キーのコピーを保持してください。
 
@@ -311,10 +311,10 @@ ht-degree: 100%
 1. サービスをテストし、設定済みのデータソースに正常に接続できることを確認します。
 
    >[!NOTE]
-   >サービスをテストしたら、**キャンセル**&#x200B;をクリックし、不本意の変更がフォームデータモデルに反映されないようにします。
+   サービスをテストしたら、**キャンセル**&#x200B;をクリックし、不本意の変更がフォームデータモデルに反映されないようにします。
 
    >[!NOTE]
-   >データソースが FDM に正常にバインドされるには、AEM サーバーの再起動が必要であることが報告されています。
+   データソースが FDM に正常にバインドされるには、AEM サーバーの再起動が必要であることが報告されています。
 
 #### フォームデータモデル（Derby）のテスト {#test-fdm-derby}
 
@@ -359,16 +359,16 @@ ht-degree: 100%
 このパッケージは、Adobe Analytics に接続するように事前設定されています。この設定を更新するには、次の手順を実行します。
 
 1. *https://&lt;aemserver>:&lt;port>/libs/cq/core/content/tools/cloudservices.html* に移動します。
-1. Adobe Analytics セクションを探し、「設定を表示」リンクを選択します。
+1. Adobe Analyticsセクションを探し、「設定を表示」リンクを選択します。
 1. 「We.Gov Adobe Analytics (Analytics Configuration)」設定を選択します。
 
    ![Analytics クラウドサービス設定](assets/analytics_config.jpg)
 
-1. 「編集」ボタンをクリックして、Adobe Analytics 設定を更新します（共有暗号鍵を指定する必要があります）。 「Analytics に接続」をクリックして接続し、「OK」をクリックして完了します。
+1. 「編集」ボタンをクリックして、Adobe Analytics設定を更新します（共有暗号鍵を指定する必要があります）。 「Analytics に接続」をクリックして接続し、「OK」をクリックして完了します。
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
-1. フレームワーク設定を更新する場合は、同じページで、「We.Gov Adobe Analytics Framework (Analytics Framework)」をクリックします（オーサリングを有効にするには [AEM オーサリングの有効化](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring)を参照）。
+1. フレームワーク設定を更新する場合は、同じページで、「We.Gov Adobe Analytics Framework (Analytics Framework)」をクリックします ( [AEMオーサリングの有効化](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring) （オーサリングを有効にする）。
 
 #### Adobe Analytics ユーザー資格情報の検索 {#analytics-locating-user-credentials}
 
@@ -418,11 +418,11 @@ Adobe Analytics アカウントのユーザー資格情報を見つけるには�
 #### Adobe Analytics Sites レポートを表示 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
->`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
+`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
 
 1. *https://&lt;aemserver>:&lt;port>/sites.html/content* に移動します。 
 1. 「AEM Forms We.Gov Site」を選択して、サイトのページを表示します。
-1. サイトページの 1 つ（例：ホーム）を選択し、「分析と推奨表示」を選択します。
+1. サイトページの 1 つ（例：ホーム）を選択し、「Analytics &amp; Recommendations」を選択します。
 
    ![分析と推奨表示](assets/analytics_recommendations.jpg)
 
@@ -430,29 +430,29 @@ Adobe Analytics アカウントのユーザー資格情報を見つけるには�
 
    ![AEM Sites 分析](assets/sites_analysis.jpg)
 
-1. ページビューページ（手順 3 でアクセス）に戻ると、「リスト表示」の項目を表示する表示設定を変更することで、ページビュー情報を表示することもできます。
+1. ページビューページに戻る（手順 3.でアクセス）と、「リスト表示」の項目を表示する表示設定を変更することで、ページビュー情報を表示することもできます。
 1. 「表示」ドロップダウンメニューを探し、「リスト表示」を選択します。
 
    ![リスト表示](assets/list_view.jpg)
 
-1. 同じメニューから「設定を表示」を選択し、「分析」セクションから表示する列を選択します。
+1. 同じメニューから「設定を表示」を選択し、「Analytics」セクションから表示する列を選択します。
 
    ![列を構成](assets/configure_columns.jpg)
 
-1. 「アップデート」をクリックして、新しい列を使用可能にします。
+1. 「更新」をクリックして、新しい列を使用可能にします。
 
    ![新しい列の表示](assets/new_columns_display.jpg)
 
 #### Adobe Analytics Forms レポートを表示 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
->`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
+`we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
 
 1. 次に移動します。
 
    *https:///&lt;aemserver>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/adobe-gov-forms*
 
-1. 「Enrollment Application For Health Benefits」アダプティブフォームを選択し、「分析レポート」オプションを選択します。
+1. 「Enrollment Application For Health Benefits」アダプティブフォームを選択し、「Analytics レポート」オプションを選択します。
 
    ![分析レポート](assets/analytics_report.jpg)
 
@@ -492,7 +492,7 @@ Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定を�
 1. 設定の残りの部分を続行しないでください。 [Adobe I/O での統合の作成](#create-integration-adobeio)節を確認してください。
 
 >[!NOTE]
->この節で作成された証明書は、Adobe I/Oで統合サービスを作成するために使用されます。統合サービスで作成すると、Adobe I/O からのその情報を使用して設定を完了することができます。
+この節で作成された証明書は、Adobe I/Oで統合サービスを作成するために使用されます。統合サービスで作成すると、Adobe I/O からのその情報を使用して設定を完了することができます。
 
 #### Adobe I/O での統合の作成 {#create-integration-adobeio}
 
@@ -600,7 +600,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 1. この設定では、2 つのチェックボックス値を空のままにしておきます。
 
-   * これらのオプションについて詳しくは、[クラウドサービスを設定](https://docs.adobe.com/content/help/jp/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service)を参照してください。
+   * これらのオプションについて詳しくは、[クラウドサービスを設定](https://docs.adobe.com/content/help/en/aem-forms-automated-conversion-service/using/configure-service.html#configure-the-cloud-service)を参照してください。
 
 #### フォーム変換のテスト（We.Gov 登録アプリケーション） {#test-forms-conversion}
 
@@ -791,7 +791,7 @@ AEM Forms で **Forms**／**テーマ**／**リファレンステーマ**／**Ul
 1. サービス定義を開き、選択したサービスをワークフロー内で呼び出せるようにしてください。
 
    >[!NOTE]
-   >ユーザーが Configuration Manager ページ内でサービスを有効にしているのと同じ理由で、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
+   ユーザーが Configuration Manager ページ内でサービスを有効にしているのと同じ理由で、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
 
    ![we gov forms パッケージ](assets/aftia-configuration-options.jpg)
 

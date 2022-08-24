@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 6f9a294d-24bd-4e4b-b929-2809f5e6cef9
 exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '2072'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -56,7 +56,7 @@ GDS の場所をデフォルト以外の場所に変更した場合は、新し�
 
 管理コンソールを使用して AEM Forms のデータベースで AEM Forms ドキュメントの保存を有効にすることができます。このオプションを使用してすべての永続ドキュメントをデータベースに保存する場合でも、AEM Forms にはファイルシステムベースの GDS ディレクトリが必要です。その理由は、AEM Forms のセッションと呼び出しに関連する永続ファイル、一時ファイルおよびリソースの保存に GDS ディレクトリが使用されるためです。
 
-管理コンソールの「コアシステム設定」、または Configuration Manager を使用して「データベースへのドキュメントの保存を有効にする」オプションを選択すると、AEM Forms ではスナップショットバックアップモードおよびローリングバックアップモードが許可されません。したがって、AEM Forms を使用してバックアップモードを管理する必要がなくなります。このオプションを使用する場合は、オプションを有効にした後、1 回のみ GDS をバックアップする必要があります。バックアップから AEM Forms を回復する場合、GDS のバックアップディレクトリの名前を変更したり GDS を復元したりする必要はありません。
+管理コンソールのコアシステム設定の「データベースでドキュメントの保存を有効にする」オプションを選択した場合、または Configuration Manager を使用した場合、AEM forms ではスナップショットバックアップモードおよびローリングバックアップモードが許可されません。 したがって、AEM Forms を使用してバックアップモードを管理する必要がなくなります。このオプションを使用する場合は、オプションを有効にした後、1 回のみ GDS をバックアップする必要があります。バックアップから AEM Forms を回復する場合、GDS のバックアップディレクトリの名前を変更したり GDS を復元したりする必要はありません。
 
 ## AEM リポジトリ {#aem-repository}
 
@@ -136,7 +136,7 @@ MySQLAdmin を使用するか Windows で INI ファイルを変更して、MySQ
 
 >[!NOTE]
 >
->MySQL のデフォルトのバイナリログモードは「STATEMENT」です。このモードでは、Content Services（非推奨）で使用されるテーブルとの互換性がありません。このデフォルトのモードでバイナリログを使用すると、Content Services（非推奨）でエラーが発生します。システム内に Content Services（非推奨）が含まれている場合は、「MIXED」ログモードを使用します。「MIXED」ログを有効にするには、my.ini ファイルに次の引数を追加します。`binlog_format=mixed log-bin=logname`
+>MySQL のデフォルトのバイナリログモードは「STATEMENT」です。このモードでは、Content Services（非推奨）で使用されるテーブルとの互換性がありません。このデフォルトのモードでバイナリログを使用すると、Content Services（非推奨）でエラーが発生します。システム内に Content Services（非推奨）が含まれている場合は、「MIXED」ログモードを使用します。「MIXED」ログを有効にするには、my.ini ファイルに次の引数を追加します。 `binlog_format=mixed log-bin=logname`
 
 mysqldump ユーティリティを使用して、完全なデータベースバックアップを取得できます。完全バックアップは必要ですが、その実行が容易ではない場合があります。完全バックアップによって大量のバックアップファイルが生成され、処理に時間がかかります。増分バックアップを実行する場合は、前の節で説明したように `log-bin` オプションを使用してサーバーを起動してください。MySQL サーバーが再起動するたびに、現在のバイナリログへの書き込みが停止し、新しいログが作成され、以降はそのログが現在のバイナリログになります。`FLUSH LOGS SQL` コマンドを使用すると、手動で強制的に切り替えることができます。最初の完全バックアップ後の増分バックアップは、mysqladmin ユーティリティと `flush-logs` コマンドを使用して実行されます。これにより新しいログファイルが作成されます。
 

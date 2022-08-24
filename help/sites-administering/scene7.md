@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '5484'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -293,7 +293,7 @@ Experience Manager Assets と Dynamic Media Classic 間の同期により、現�
 
 >[!CAUTION]
 >
->既存の Dynamic Media Classic 会社アカウントからアセットをインポートすると、Experience Manager に表示されるまでに長い時間がかかる場合があります。Dynamic Media Classic で指定するフォルダーに、多くのアセットを含まないフォルダーを指定していることを確認してください。 例えば、ルートフォルダーのアセットが多すぎる場合があります。
+>既存の Dynamic Media Classic 会社アカウントからアセットをインポートすると、Experience Manager に表示されるまでに長い時間がかかる場合があります。Dynamic Media Classic で指定するフォルダーに、多くのアセットを含まないフォルダーを指定していることを確認してください。例えば、ルートフォルダーのアセットが多すぎる場合があります。
 >
 >統合のテストドライブを実施したい場合、会社全体ではなく、ルートフォルダーがサブフォルダーのみを指すようにしてください。
 
@@ -323,11 +323,11 @@ Experience Manager Assets と Dynamic Media Classic 間の同期により、現�
 
    >[!NOTE]
    >
-   >Dynamic Media Classic のルートパスは、Dynamic Media Classic フォルダー Experience Manager が接続する場所です。 特定のフォルダーに絞り込むことができます。
+   >Dynamic Media Classic のルートパスは、Dynamic Media Classic フォルダー Experience Manager が接続する場所です。特定のフォルダーに絞り込むことができます。
 
    >[!CAUTION]
    >
-   >Dynamic Media Classic フォルダーのサイズによっては、ルートフォルダーの読み込みに時間がかかる可能性があります。また、Dynamic Media Classic のデータが Experience Manager のストレージを超える可能性があります。 正しいフォルダーを読み込んでいることを確認してください。読み込むデータが多すぎると、システムが停止する可能性があります。
+   >Dynamic Media Classic フォルダーのサイズによっては、ルートフォルダーの読み込みに時間がかかる可能性があります。また、Dynamic Media Classic のデータが Experience Manager のストレージを超える可能性があります。正しいフォルダーを読み込んでいることを確認してください。読み込むデータが多すぎると、システムが停止する可能性があります。
 
    ![chlimage_1-298](assets/chlimage_1-298.png)
 
@@ -393,7 +393,7 @@ Experience Manager 6.3.2 以降では、アセットが CQ のターゲットフ
 
    ![screen_shot_2018-03-15at52501pm](assets/screen_shot_2018-03-15at52501pm.jpg)
 
-1. Experience Manager のようこそページに戻り、「**[!UICONTROL ワークフロー]**」を選択します。 **DAM アセットの更新**&#x200B;ワークフローをダブルクリックして開きます。
+1. Experience Manager のようこそページに戻り、「**[!UICONTROL ワークフロー]**」を選択します。**DAM アセットの更新**&#x200B;ワークフローをダブルクリックして開きます。
 1. サイドキックの&#x200B;**[!UICONTROL ワークフロー]**&#x200B;コンポーネントに移動し、「**[!UICONTROL Dynamic Media Classic]**」を選択します。「**[!UICONTROL Dynamic Media Classic]**」をワークフローにドラッグして、「**[!UICONTROL 保存]**」を選択します。ターゲットフォルダーで Experience Manager Assets に追加されたアセットは、自動的に Dynamic Media Classic にアップロードされます。
 
    ![chlimage_1-301](assets/chlimage_1-301.png)
@@ -410,7 +410,7 @@ Experience Manager Assets から Dynamic Media Classic にアセットをプッ�
 
 運用開始前にステージング環境でテストするために、Dynamic Media Classic でアセットをただちに公開しないようにすることが必要となる場合があります。Dynamic Media Classic のセキュアテスト環境で Experience Manager を使用すると、Assets から Dynamic Media Classic に非公開状態で直接アセットをプッシュできます。
 
-Dynamic Media Classic のアセットは、セキュアプレビューで引き続き使用できます。 Experience Manager 内でアセットが公開された場合にのみ、Dynamic Media Classic アセットも実稼動環境で公開されます。
+Dynamic Media Classic のアセットは、セキュアプレビューで引き続き使用できます。Experience Manager 内でアセットが公開された場合にのみ、Dynamic Media Classic アセットも実稼動環境で公開されます。
 
 アセットを Dynamic Media Classic へのプッシュと同時に公開したい場合は、オプションを設定する必要はありません。この機能はデフォルトの動作です。
 
@@ -577,7 +577,7 @@ Digital Asset Manager／Dynamic Media Classic アセットの同期でトリガ�
    >
    >`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
    >
-   >PSD ファイルに「レイヤー」が存在することを確認します。厳密に 1 つの画像またはマスク付きの画像の場合、処理対象のレイヤーが存在しないので、1 つの画像として処理されます。
+   >PSDファイルに「レイヤー」が含まれていることを確認します。 厳密に 1 つの画像またはマスク付きの画像の場合、処理対象のレイヤーが存在しないので、1 つの画像として処理されます。
 
 1. CRXDE Lite ページの左上隅の&#x200B;**[!UICONTROL すべて保存]**&#x200B;を選択します。
 
@@ -607,11 +607,11 @@ Dynamic Media Classic と Experience Manager の統合で問題が発生した�
 * Dynamic Media Classic ターゲットフォルダーのサブフォルダーに画像をアップロードする場合、次のいずれかの操作を行うようにします。
 
    * 場所に関係なく、すべてのアセットの名前が一意であることを確認します。そうしないと、メインターゲットフォルダーのアセットが削除され、サブフォルダーのアセットだけが残ります。
-   * Dynamic Media Classic アカウントの設定領域で、Dynamic Media Classic によるアセットの上書き方法を変更します。 同じ名前のアセットをサブフォルダーで使用する場合、場所に関係なく、アセットを上書きするように Dynamic Media Classic を設定しないでください。
+   * Dynamic Media Classic アカウントの設定領域で、Dynamic Media Classic によるアセットの上書き方法を変更します。同じ名前のアセットをサブフォルダーで使用する場合、場所に関係なく、アセットを上書きするように Dynamic Media Classic を設定しないでください。
 
 **削除したアセットやフォルダーが Dynamic Media Classic と Experience Manager の間で同期されない場合：**
 
-* Experience Manager Assets で削除されたアセットとフォルダーは、Dynamic Media Classic の同期済みフォルダーに引き続き表示されます。 手動で削除します。
+* Experience Manager Assets で削除されたアセットとフォルダーは、Dynamic Media Classic の同期済みフォルダーに引き続き表示されます。手動で削除します。
 
 **ビデオのアップロードに失敗した場合：**
 
@@ -619,6 +619,6 @@ Dynamic Media Classic と Experience Manager の統合で問題が発生した�
 
 >[!CAUTION]
 >
->既存の Dynamic Media Classic 会社アカウントからアセットをインポートすると、Experience Manager に表示されるまでに長い時間がかかる場合があります。Dynamic Media Classic で指定するフォルダーに、多くのアセットを含まないフォルダーを指定していることを確認してください。 例えば、ルートフォルダーのアセットが多すぎる場合があります。
+>既存の Dynamic Media Classic 会社アカウントからアセットをインポートすると、Experience Manager に表示されるまでに長い時間がかかる場合があります。Dynamic Media Classic で指定するフォルダーに、多くのアセットを含まないフォルダーを指定していることを確認してください。例えば、ルートフォルダーのアセットが多すぎる場合があります。
 >
 >統合をテストしたい場合などは、会社全体ではなく、サブフォルダーのみを指すルートフォルダーを用意してもよいでしょう。

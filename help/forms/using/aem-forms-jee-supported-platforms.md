@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: f1dade2cb15f98bb7830f6afb27ec493dc182a37
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3550'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 
@@ -111,7 +111,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>マイナーリリースとアップデート</td>
   </tr>
   <tr>
-   <td>IBM® J9 Virtual Machine (build 2.9, JRE 1.8.0) IBM® JDK SR6-FP26<br /> </td>
+   <td>IBM® J9 Virtual Machine（ビルド 2.9、JRE 1.8.0）IBM® JDK SR6-FP26<br /> </td>
    <td>A：サポート対象</td>
    <td>マイナーリリースとアップデート</td>
   </tr>
@@ -154,7 +154,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td><p>サポート対象</p> </td>
   </tr>
   <tr>
-   <td><p>Oracle Database 12c リリース 2（12.2.0.1.0）（非推奨）</p> </td>
+   <td><p>Oracleデータベース 12c リリース 2(12.2.0.1.0)（非推奨）</p> </td>
    <td><p>リポジトリ Microkernel</p> </td>
    <td><p>サポート対象</p> </td>
   </tr>
@@ -218,7 +218,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
   </tr>
   <tr>
    <td>Microsoft SQL Server<br /> </td>
-   <td><p>Microsoft® SQL Server JDBC ドライバー 6.2.1.0（廃止） <br /> </p> <p>sqljdbc6.jar</p> </td>
+   <td><p>Microsoft® SQL Server JDBC ドライバー 6.2.1.0（非推奨）<br /> </p> <p>sqljdbc6.jar</p> </td>
    <td><p>AEM Forms on JEE のインストールに付属</p> </td>
   </tr>
     <tr>
@@ -259,7 +259,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td><p>JBoss® Enterprise Application Platform (EAP) 7.1.4 <sup>[2] [3] [7]</sup>（非推奨） </p> </td>
+   <td><p>JBoss® Enterprise Application Platform (EAP) 7.1.4 <sup>[2] [3] [7]</sup> （廃止） </p> </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>パッチと累積パッチ（サポート対象の EAP バージョン用）</p> </td>
   </tr>
@@ -307,7 +307,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
   </tr>
   <tr>
-   <td><p>Red Hat Enterprise Linux 7(Kernel 3.x)（64 ビット）（非推奨）</td>
+   <td><p>Red Hat Enterprise Linux 7（Kernel 3.x）（64 ビット版）（非推奨）</td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリース、累積アップデート、および緊急アップデート</p> </td>
   </tr>
@@ -354,13 +354,13 @@ JEE 上の AEM Forms は、物理マシンまたはバーチャル環境で実�
 
 JEE サーバーでの AEM Forms の設置でプラットフォームを選択するときは、次の例外事項を考慮してください。
 
-1. JEE 上のAEM Formsは、IBM® WebSphere®を MySQL でサポートしていません。
-1. JEE 上のAEM Formsは、SUSE Linux Enterprise Server 12 上の JBoss をサポートしていません。 SUSE Linux Enterprise Server 12 上では、IBM WebSphere のみがサポートされています。
+1. AEM Forms on JEE では、MySQL を搭載した IBM® WebSphere® をサポートしていません。
+1. AEM Forms on JEE では、SUSE Linux Enterprise Server 12 上での JBoss をサポートしていません。SUSE Linux Enterprise Server 12 上では、IBM WebSphere のみがサポートされています。
 1. JEE 上の AEM Forms は、JBoss® では Oracle Java™ SE 以外のいかなる JDK もサポートしていません。
 1. JEE 上の AEM Forms は、IBM® WebSphere® では IBM® JDK 以外のいかなる JDK もサポートしていません。
 1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
 1. AEM Forms on JEE は CentOS 上の WebSphere Application Server をサポートしていません。
-1. JEE 上のAEM Formsは、JBoss の役割に基づくアクセス制御 (RBAC) をサポートしていません。
+1. JEE 上の AEM Forms では、JBoss ロールベースのアクセス制御（RBAC）をサポートしていません。
 
 この他に、JEE 上での Adobe AEM Forms の導入のためにソフトウェアを選択する際には、次の項目を考慮してください。
 
@@ -371,7 +371,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 - JEE 上の AEM Forms は TarMK コールドスタンバイをサポートしません。
 - JEE 上の AEM Forms は垂直クラスタリングをサポートしません。
 - JEE 上の AEM Forms では、クラスター環境での MySQL データベースをサポートしていません。
-- 削除または更新されたプラットフォームの一覧は、[AEM 6.5 Forms 新機能の概要](../../forms/using/whats-new.md)のドキュメントを参照ししてください。
+- 削除または更新されたプラットフォームの一覧は、[AEM 6.5 Forms 新機能の概要](../../forms/using/whats-new.md)のドキュメントを参照してください。
 
 ### LDAP サーバー（オプション） {#ldap-servers-optional}
 
@@ -416,7 +416,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
    <td>5.5.2</td>
   </tr>
   <tr>
-   <td>IBM Content Manager Server（非推奨） </td>
+   <td>IBM Content Manager サーバー（非推奨） </td>
    <td>8.5 Fix pack 2</td>
   </tr>
   <tr>
@@ -429,7 +429,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
   </tr>
   <tr>
    <td>Microsoft Sharepoint </td>
-   <td>2019 年<br /> </td>
+   <td>2019年<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -517,7 +517,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 > - PDF Generator では Microsoft Office 365 をサポートしていません。
 > - PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 > - 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
-> - Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
+> - Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 > - PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 
@@ -633,7 +633,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 >[!NOTE]
 >
-> Acrobat DC Product Family では、基本的に別々の製品である Acrobat と Reader のそれぞれに、「クラシック」と「継続」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
+> Acrobat DC Product Family では、基本的に異なる製品であるAcrobatとReaderの両方に 2 つのトラックを導入しています。「クラシック」と「連続」 2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
 
 ### ブラウザー {#browsers}
 
@@ -749,7 +749,7 @@ JEE 上の AEM Forms では、指定されたメジャーおよびマイナー�
 
 ## サードパーティパッチサポートポリシー {#third-party-patch-support-policy}
 
-AEM Forms on JEE でサードパーティ製ソフトウェアを使用するための要件は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
+JEE 上のAEM Formsのサードパーティのソフトウェア要件は、それぞれの製品ドキュメントの「必要システム構成」セクションに記載されています。 すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
 
 AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM Forms on JEE の開発とリリースの時点において最新だったサードパーティ製インフラストラクチャの特定のパッチレベルを、そのバージョンの AEM Forms on JEE でサポートしているインフラストラクチャの最小のパッチまたはサービスパックのレベルから記述しています。
 
@@ -769,7 +769,7 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 
 - Microsoft SharePoint 2016
 
-2022 年 3 月 3 日のAEM Forms 6.5.12.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
+2022年3月3日の AEM Forms 6.5.12.0 リリースでは、以下のプラットフォームは非推奨（廃止予定）となります。
 
 - MongoDB Enterprise 4.0
 - IBM DB2 11.1
@@ -777,8 +777,8 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 - MySQL 5.7.35
 - Microsoft® SQL Server JDBC ドライバー 6.2.1.0
 - JBoss® Enterprise Application Platform (EAP) 7.1.4
-- IBM Content Manager Server 8.5 Fix pack 2
-- IBM Content Manager Client 8.5
+- IBM Content Manager サーバー 8.5 Fix pack 2
+- IBM Content Manager クライアント 8.5
 - Microsoft SQL Server 2016
 
 2021年9月7日の AEM Forms 6.5.10.0 リリースでは、以下のプラットフォームは非推奨（廃止予定）となります。
@@ -791,11 +791,11 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 
 >[!NOTE]
 >
-> プラットフォームは [AEM Forms 6.5.12.0および 6.5.10.0で非推奨（廃止予定）となり、AEM Forms 6.5 Service Pack 18(6.5.18.0) リリースまでは引き続きサポートされます](https://helpx.adobe.com/support/programs/eol-matrix.html).
+> プラットフォームは [AEM Forms 6.5.12.0 および 6.5.10.0 で非推奨となり、AEM Forms 6.5 サービスパック 18（6.5.18.0）リリースまでは引き続きサポートされます](https://helpx.adobe.com/support/programs/eol-matrix.html)。
 
 ## 変更履歴 {#revision-history}
 
-- 2022 年 3 月 03 日
+- 2022 年 3 月 03 日（PT）
 
    - 次のサポートを削除しました。
       - IBM® J9 Virtual Machine（ビルド 2.8、JRE 1.8.0）
@@ -803,7 +803,7 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
       - Oracle Database 18c
       - Oracle Unified Directory（OUD）11g リリース 2
       - IBM Lotus Domino 9.0
-      - IBM Filenet 5.2
+      - IBM FileNet 5.2
       - Adobe Flash Player
 
 - 2021年10月10日

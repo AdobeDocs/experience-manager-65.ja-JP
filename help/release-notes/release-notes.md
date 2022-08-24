@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: 「リリース情報、新機能、インストール方法、詳細な変更リストを見つける [!DNL Adobe Experience Manager] 6.5."
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 3c3efe108b020d9c64e456d409f114c8969f2723
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3652'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
@@ -258,9 +258,9 @@ For static PDF forms that are created with Forms 6.5 Designer, PDF accessibility
 * `cq:editConfig` で inlineEditing 機能や dropTarget 機能を持たないコンポーネントの取り消し機能が向上しました。（NPR-38361）
 
 <!-- version 2 of the description above * When out of the box components that don't have inlineEditing or dropTarget feature in the _cq_editConfig file (navigation, breadcrumb, embed) are deleted > undeleted (by way of Undo), all configurations are lost and empty placeholder reappears. Component must be reconfigured from scratch. (NPR-38361) -->
-* `cq:editConfig` &quot;afteredit:REFRESH_PAGE&quot; を使用するコンポーネントの場合、「スタイルシステム」ドロップダウンが、コンポーネントのコンテキスト内ではなく、ページの先頭に配置される可能性があります。この問題は解決されました。（NPR-38384）
+* を使用するコンポーネントの場合、「スタイルシステム」ドロップダウンが、コンポーネントのコンテキスト内ではなく、ページの先頭に配置されている可能性があります `cq:editConfig` &quot;afteredit:REFRESH_PAGE」と呼ばれます。 この問題は解決されました。（NPR-38384）
 
-<!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig “afteredit: REFRESH_PAGE”. (NPR-38384) -->
+<!-- version 2 of description above* When selecting a style option on a component, the Styles box shifts to the upper left corner of the screen, rather than staying put below the style icon. Happens for components that have  cq:editConfig "afteredit: REFRESH_PAGE". (NPR-38384) -->
 * ネストされたレイアウトコンテナに追加すると、テキストコンポーネントの位置がずれます。（NPR-38193）
 * コンポーネントのスタイルシステム設定がない場合、空の「スタイル」タブが表示されていました。設定が存在しない場合、タブは非表示になります。（NPR-38218）
 <!-- version 2 of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
@@ -453,7 +453,7 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 
 * [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
-   * Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target にエクスポートすると、間違ったオファータイプが作成されます。Target では、「エクスペリエンスフラグメント」/ ソース「Adobe Experience Manager」タイプではなく、「HTML」/ ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
+   * 「Adobe Target統合が [!DNL Experience Manager] Target Standard API（IMS 認証）を使用してエクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」/「Adobe Experience Manager」タイプの代わりに、「HTML」/「Adobe Target Classic」タイプのオファーを複数作成します。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。

@@ -1,7 +1,7 @@
 ---
 title: ページオーサリング用コンポーネント
 seo-title: Components for Page Authoring
-description: コンポーネントは、サイドキックの「コンポーネント」タブと「新規コンポーネントを挿入」セレクター（「コンポーネントまたはアセットをここにドラッグします」領域でダブルクリック）でページを編集するときに使用できます。
+description: コンポーネントは、サイドキックの「コンポーネント」タブと「新規コンポーネントを挿入」セレクターでページを編集するときに（「コンポーネントまたはアセットをここにドラッグ」領域でダブルクリックしたとき）使用できます。
 seo-description: The components are available when editing a page from the Components tab of the sidekick and the Insert New Component selector (when you double-click in the Drag components or assets here area).
 uuid: c353073d-d4d1-4529-b8bd-d0ca302cc9a0
 contentOwner: User
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '6133'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -68,11 +68,11 @@ ht-degree: 100%
 * .jpg
 * .jpeg
 * .png
-* .gif **
+* .gif &#42;&#42;
 
 >[!CAUTION]
 >
->** アダプティブレンディション用のアニメーション .gif ファイルは AEM でサポートされていません。
+>&#42;&#42;アダプティブレンディション用のアニメーション .gif ファイルは AEM でサポートされていません。
 
 #### 画像のサイズと画質 {#images-sizes-and-quality}
 
@@ -195,6 +195,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 
 >[!NOTE]
+>
 >AEM DAM にあるデジタルアセットを表示する Adobe Experience Manager のカスタムカルーセルコンポーネントを作成できます。詳しくは、[Adobe Experience Manager のカスタムカルーセルコンポーネントの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja-JP&amp;CID=RedirectAEMCommunityKautuk)を参照してください。
 
 ### グラフ {#chart}
@@ -203,8 +204,8 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 * **データ**
 
-   * **チャートデータ**
-グラフデータを入力するには、CSV（Comma Separated Values）形式を使用します。CSV 形式では、フィールドの区切り文字としてコンマ（「,」）を使用します。
+   * **グラフデータ**
+CSV 形式でグラフデータを入力します。コンマ区切り値の形式では、フィールド区切り文字としてコンマ (&quot;,&quot;) が使用されます。
 
 * **詳細**
 
@@ -225,12 +226,15 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 ![chlimage_1-6](assets/chlimage_1-6.png) ![dc_chart_use](assets/dc_chart_use.png)
 
 >[!NOTE]
+>
 >AEM JCR にあるデータを表示する AEM チャートコントロールを作成できます。詳しくは、[Adobe Experience Manager データのグラフでの表示](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja-JP&amp;CID=RedirectAEMCommunityKautuk)を参照してください。
 
 ### コンテンツフラグメント {#content-fragment}
 
 >[!CAUTION]
+>
 >コンテンツフラグメント管理は、タッチ操作向け UI でのみすべての機能を使用できます。
+>
 >コンテンツフラグメントコンポーネントは、クラシック UI のサイドキックに表示されますが、機能を使用することはできません。
 
 [コンテンツフラグメント](/help/sites-classic-ui-authoring/classic-page-author-content-fragments.md)は、ページから独立したアセットとして作成および管理されます。その後、コンテンツページをオーサリングする際に、これらのフラグメントとそれらのバリエーションを使用できます。
@@ -282,6 +286,7 @@ Geometrixx でのダウンロードコンポーネントの例は次のとおり
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
 >[!NOTE]
+>
 >使用事例によっては、その他のオプションが外部アプリケーションの統合で有効になります（例：[ポートレットの統合](/help/sites-administering/aem-as-portal.md)）。
 
 ### Flash {#flash}
@@ -335,8 +340,11 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ![dc_image](assets/dc_image.png)
 
 >[!NOTE]
+>
 >Internet Explorer では、アップロードの進行状況を監視できません。
+>
 >Internet Explorer を使用する場合、アップロードした画像ファイルをプレビューに表示して変更（トリミングなど）を実行できるようにするには、画像をアップロードし「**OK**」をクリックしてから画像を再度開く必要があります。
+>
 >AEM で使用される HTML5 の機能について詳しくは、[認定プラットフォーム](/help/release-notes/release-notes.md#certifiedplatforms)を参照してください。
 
 画像を読み込む際は、次の設定が可能です。
@@ -388,6 +396,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### レイアウトコンテナ {#layout-container}
 
 >[!CAUTION]
+>
 >レイアウトコンテナコンポーネントはクラシック UI でも使用できますが、完全な機能を利用できるのはタッチ対応 UI のみです。詳しくは、「[レスポンシブレイアウト](/help/sites-classic-ui-authoring/classic-page-author-responsive-layout.md)」を参照してください。
 
 ### リスト {#list}
@@ -651,7 +660,9 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### テーブル {#table}
 
 >[!NOTE]
+>
 >**テーブル**&#x200B;コンポーネントは、[テキスト](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)コンポーネントと同様に、**[リッチテキストエディター](#text)**&#x200B;をベースとしています。
+>
 >テーブルには&#x200B;**テーブル**&#x200B;コンポーネントを使用することを推奨しますが、**テキスト**&#x200B;コンポーネントでも作成できます。
 
 **テーブル**&#x200B;コンポーネントは、テーブルの作成、入力および書式設定ができるように事前設定されています。ダイアログを使用して、テーブルを設定し、次のいずれかの方法でコンテンツを作成できます。
@@ -687,7 +698,9 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 ### テキスト {#text}
 
 >[!NOTE]
+>
 >**テキスト**&#x200B;コンポーネントは、[テーブル](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)コンポーネントと同様に、**[リッチテキストエディター](#table)**&#x200B;をベースとしています。
+>
 >テーブルには&#x200B;**テーブル**&#x200B;コンポーネントを使用することを推奨しますが、**テキスト**&#x200B;コンポーネントでも作成できます。
 
 テキストコンポーネントでは、[リッチテキストエディター](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)で提供されている機能により、WYSIWYG エディターを使用してテキストブロックを入力できます。各種のアイコンを使用すると、テキストを書式設定できます（フォント特性、整列、リンク、リストおよびインデントを含む）。
@@ -797,10 +810,13 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
       ビデオのネイティブサイズ（ピクセル単位の幅 × 高さ）が「サイズ」の横のボックスに表示されます（上の図を参照してください）。ビデオのネイティブ寸法を上書きする場合は、幅と高さの寸法を手動で入力します。「**OK**」をクリックしてダイアログを閉じます。
 
 >[!NOTE]
+>
 >サポートされている形式は次のとおりです。
+>
 >* `.mp4`
 >* `Ogg`
 >* `FLV` （Flash ビデオ）
+>
 
 
 ## 列 {#columns}
@@ -834,6 +850,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 フォームコンポーネントは、訪問者が入力を送信するフォームを作成するために使用されます。フォームおよびフォームコンポーネントは、ユーザーからのフィードバック（例えばお客様満足度アンケート）やユーザー情報（例えばユーザー登録）などの情報を収集するのに使用できます。
 
 >[!NOTE]
+>
 >AEM Forms について詳しくは、[AEM Forms ヘルプ](/help/forms/home.md)を参照してください。
 
 フォームは次のように多様なコンポーネントから構築されます。
@@ -855,6 +872,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 ![dc_form](assets/dc_form.png)
 
 >[!NOTE]
+>
 >フォームのさらなる開発およびカスタマイズについて詳しくは、[フォームの開発のページ](/help/sites-developing/developing-forms.md)を参照してください。これには、アクションや制約の追加、フィールドのプリロード、スクリプトを使用したサービスのアクション実施の呼び出しなどが含まれます。
 
 ### （多くの）フォームコンポーネントに共通の設定 {#settings-common-to-many-form-components}
@@ -864,6 +882,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 どのフォームコンポーネントを設定する場合も、ダイアログ内の次のタブを使用できます。
 
 * **タイトルとテキスト**
+
 
    このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。適切な場合は、フィールドで複数選択が有効かどうかや、選択肢に使用できる項目など、その他の主要な情報を定義することもできます。
 
@@ -880,13 +899,15 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
    フィールドのサイズとスタイル設定を示します。
 
 >[!NOTE]
+>
 >表示されるフィールドはコンポーネントによって大きく変わります。
 
 これらのタブには必要なパラメーターが表示されます。必要なパラメーターは個々のコンポーネントのタイプによって異なりますが、次のようなものがあります。
 
 * **タイトルとテキスト**
 
-   * **エレメント名**
+
+   * **要素名**
 
       フォーム要素の名前。リポジトリー内でデータが格納される場所を示します。
 これは必須のフィールドであり、次の文字のみを含めることができます。
@@ -901,7 +922,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
       必要な場合、追加の情報をユーザーに示すことができます。この説明はフォーム上のフィールドの下に、タイトルよりも小さいフォントで表示されます。
 
-   * **表示 / 非表示**
+   * **表示／非表示**
 
       フィールドが表示可能な場合に指定します。
 
@@ -993,7 +1014,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
       * **コンテンツをアップロードデータと共に保存**
       * **注文を送信**
-      * **購読者の購読を解除**
+      * **購読者の登録を解除**
       * **注文を更新**
    * **フォーム識別子**
 
@@ -1055,7 +1076,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
          * **このリストにリードが追加されます**
 必要なリードリストを指定します。
-      * **Create and Update Account**
+      * **アカウントの作成と更新**
 
          * **初期グループ**
 
@@ -1074,7 +1095,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
             このボタンをクリックして、バルクエディターのフォームの結果に関する情報にアクセスします。ここから情報を `.tsv`（タブ区切り）ファイルに書き出すことができます（このファイルは Excel スプレッドシートなどで使用することができます）。
       * **メール**
 
-         * **開始日**
+         * **送信元**
 
             電子メールの送信元の電子メールアドレスを入力します。
 
@@ -1165,7 +1186,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 ### アドレス {#address}
 
-次の形式を持つ国際化対応のアドレスフィールドを追加できます。
+次の形式の国際化対応アドレスフィールドを追加できます。
 
 ![dc_form_addressfield](assets/dc_form_addressfield.png)
 
@@ -1188,7 +1209,9 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 タイトル、説明、要素名を含む様々なパラメーターを指定できます。「+」ボタンまたは「-」ボタンを使用して項目の追加または削除をおこないます。また、上向き矢印キーおよび下向き矢印キーを使用して位置を変更します。
 
 >[!NOTE]
+>
 >**項目読み込みパス**&#x200B;を使用して、チェックボックスグループのリストと値をプリロードすることができます。
+>
 >[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
 
 ### クレジットカードの詳細 {#credit-card-details}
@@ -1206,7 +1229,9 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 リストに表示するタイトルと項目を指定できます。「+」または「-」ボタンを使用してリスト項目の追加または削除をおこないます。また、上下の矢印ボタンを使用して位置を変更します。リストから複数の項目を選択できるかどうかや、リストを最初に開いたときに自動的に選択する項目（初期値）を指定できます。
 
 >[!NOTE]
+>
 >**項目読み込みパス**&#x200B;を使用して、ドロップダウンリストと値をプリロードすることができます。
+>
 >[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
 
 ### ファイルのアップロード {#file-upload}
@@ -1216,6 +1241,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 ![dc_form_fileupload](assets/dc_form_fileupload.png)
 
 >[!NOTE]
+>
 >Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/jp/experience-manager/using/uploading-files-aem1.html)を参照してください。
 
 ### 非表示のフィールド {#hidden-field}
@@ -1225,7 +1251,9 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 ![dc_form_hiddenfield](assets/dc_form_hiddenfield.png)
 
 >[!NOTE]
+>
 >フォームをカスタマイズして、フォーム内の他のフィールドの値に基づき特定のファイルコンポーネントを表示または非表示にすることができます。フォームフィールドの表示の変更は、フィールドが特定の条件のみで必要となる場合に便利です。
+>
 >詳しくは、[フォームコンポーネントの表示と非表示](/help/sites-developing/developing-forms.md#showing-and-hiding-form-components)を参照してください。
 
 ### 画像ボタン {#image-button}
@@ -1274,7 +1302,9 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 ![dc_form_radiogroupuse](assets/dc_form_radiogroupuse.png)
 
 >[!NOTE]
+>
 >**項目読み込みパス**&#x200B;を使用して、ラジオグループと値をプリロードすることができます。
+>
 >[フォームフィールドへの複数値のプリロード](/help/sites-developing/developing-forms.md#preloading-form-fields-with-multiple-values)を参照してください。
 
 ### 送信ボタン {#submit-button}
@@ -1305,7 +1335,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
       * **写真を保管**
       * **Geometrixx Media**
       * **標準タグ**
-      * **マーケティング**
+      * **マーケター**
       * **アセットのプロパティ**
    * **ピクセル単位の幅**
    * **ポップアップのサイズ**

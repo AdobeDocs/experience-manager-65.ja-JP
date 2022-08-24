@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: c9df4b43083376f0110368afe642ec74290a52f8
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '4679'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -121,7 +121,7 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 **開発時**
 
-`oak.queryLimitInMemory` の低しきい値（例：10000）と Oak を設定します。`queryLimitReads`（例：UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
+`oak.queryLimitInMemory` の低しきい値（例：10000）と Oak を設定します。`queryLimitReads`（例：5000) で、UnsupportedOperationException を押したときに、「The query read more than x nodes...」というメッセージが表示され、高価なクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは I/O が増加し、アプリケーションの全体的なパフォーマンスに悪影響が生じます。上述のような制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
@@ -458,7 +458,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 *この操作ではノードストアが走査され、システムに大きな負荷がかかる可能性があるので、手順 1（a ～ b）はメンテナンスウィンドウ中やあまり使用されていない時間に実行してください。*
 
-1a.`oak-run.jar --generate` を実行して、テキストを事前抽出するノードのリストを作成します。
+1a. `oak-run.jar --generate` を実行して、テキストを事前抽出するノードのリストを作成します。
 
 1b.ノードのリスト（1a）が CSV ファイルとしてファイルシステムに格納されます。
 
@@ -468,7 +468,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 *手順 2（a ～ c）は、AEM の通常の操作中に実行できます。この手順では、データストアのみとやり取りがおこなわれます。*
 
-2a.`oak-run.jar --tika` を実行して、（1b）で生成した CSV ファイルに列挙されているバイナリノードのテキストを事前抽出します。
+2a. `oak-run.jar --tika` を実行して、（1b）で生成した CSV ファイルに列挙されているバイナリノードのテキストを事前抽出します。
 
 2b.（2a）で開始されたプロセスが、CSV で定義されているバイナリノードにデータストアで直接アクセスし、テキストを抽出します。
 
@@ -482,6 +482,6 @@ Web UI を介したアセットのアップロードやプログラムによる�
 
 *この操作ではノードストアが走査され、システムに大きな負荷がかかる可能性があるので、手順 1（3a ～ b）はメンテナンスウィンドウ中やあまり使用されていない時間に実行してください。*
 
-3a.Lucene インデックスの[再インデックス](#how-to-re-index)が AEM で実行されます。
+3a. Lucene インデックスの[再インデックス](#how-to-re-index)が AEM で実行されます。
 
 3b.Apache Jackrabbit Oak DataStore PreExtractedTextProvider の OSGi 設定（抽出されたテキストをファイルシステムパスで指定します）では、Oak は、抽出されたファイルからフルテキストを取得するよう指示されており、リポジトリに格納されているデータに Oak が直接アクセスして処理することを回避します。

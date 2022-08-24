@@ -4,7 +4,7 @@ description: ' [!DNL Workfront for Experience Manager enhanced connector] の設
 role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1749'
 ht-degree: 96%
@@ -19,7 +19,7 @@ ht-degree: 96%
 | AEM 6.5 | この記事 |
 | AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/integrations/workfront-connector-configure.html?lang=en) |
 
-[!DNL Adobe Experience Manager] で管理者アクセス権を持つユーザーは拡張コネクタをインストール後に設定します。 インストール手順については、[コネクタのインストール](/help/assets/workfront-integrations.md)を参照してください。
+[!DNL Adobe Experience Manager] で管理者アクセス権を持つユーザーは拡張コネクタをインストール後に設定します。インストール手順については、[コネクタのインストール](/help/assets/workfront-integrations.md)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -59,9 +59,9 @@ ht-degree: 96%
 ### リンクされたフォルダー構造の設定 {#linked-folder-structure}
 
 1. クラウドサービスの「プロジェクトにリンクされたフォルダー」タブに移動します。
-1. リンクされたフォルダーの親パス：DAM 内で、リンクされたフォルダーを作成するフォルダーを選択します。 空のままにすると、デフォルトで /content/dam に設定されます。Workfront ツールのメタデータスキーマと Workfront リンクフォルダーのメタデータスキーマが、選択したフォルダーに適用されていることを確認します。
+1. リンクされたフォルダーの親パス：DAM 内で、リンクされたフォルダーを作成するフォルダーを選択します。空のままにすると、デフォルトで /content/dam に設定されます。Workfront ツールのメタデータスキーマと Workfront リンクフォルダーのメタデータスキーマが、選択したフォルダーに適用されていることを確認します。
 1. リンクされたフォルダー構造：コンマ区切り値を入力します。各値は `DE:<some-project-custom-form-field>`、Portfolio、プログラム、年、名前または「リテラル文字列値」（最後の 1 つには引用符がいります）のいずれかです。現在は、Portfolio、プログラム、年、DE:プロジェクトの種類、名前に設定されています。
-1. Workfront のフォルダーのタイトルに構造内のすべてのフォルダーを含める必要がある場合は、「フォルダー構造名を使用して Workfront でリンクされたフォルダーのタイトルを作成」チェックボックスをオンにする必要があります。 それ以外の場合は、最後のフォルダーのタイトルになります。
+1. Workfront のフォルダーのタイトルに構造内のすべてのフォルダーを含める必要がある場合は、「フォルダー構造名を使用して Workfront でリンクされたフォルダーのタイトルを作成」チェックボックスをオンにする必要があります。それ以外の場合は、最後のフォルダーのタイトルになります。
 1. サブフォルダーのマルチフィールドでは、リンクされたフォルダーの子フォルダーとして作成するフォルダーのリストを指定できます。
 1. プロジェクトのステータス：リンクされたフォルダーを作成するためにプロジェクトを設定する必要があるステータスを選択します。
 1. ポートフォリオを使用してプロジェクトにリンクフォルダーを作成：リンクされたフォルダーを作成するためにプロジェクトが属する必要のあるポートフォリオのリスト。この一覧を空のままにして、すべてのプロジェクトポートフォリオのリンクフォルダーを作成します。
@@ -127,17 +127,17 @@ Adobe Workfront ドキュメントとアセット間のメタデータマッピ�
 * `aem-mapped-property` は次になることができます。
 
    * リテラル値。これらは引用符で囲む必要があります。
-   * AEM プロパティ。 この参照は、ワークフローペイロードに対する相対参照にする必要があります。
+   * AEM プロパティ。この参照は、ワークフローペイロードに対する相対参照にする必要があります。
    * 名前付きの値。これらは角括弧で囲む必要があります。
    * 上記の 3 つの項目を連結したもの。`{+}` を使用して指定します。
-   * 値を `{replace(<value>,”old-char”,”new-char”)}` で囲むことによる上記の 3 つの項目の変更。
+   * 値を `{replace(<value>,"old-char","new-char")}` で囲むことによる上記の 3 つの項目の変更。
 
 * 次に例を示します。
 
    * `status="INP"`
    * `DE:Asset Type=jcr:content/metadata/assetType`
    * `DE:Path={path}`
-   * `URL=”https://my-aem-author/assets.html”{+}{path}`
+   * `URL="https://my-aem-author/assets.html"{+}{path}`
 
 ![プロパティをマッピングするための設定](/help/assets/assets/wf-map-property-config.png)
 
@@ -201,6 +201,6 @@ Experience Manager のワークフローエディターで、[!UICONTROL Workfro
 
 ## Workfront ドキュメントのカスタムフォームのアップデート {#subscribe-workfront-doc-custom-form-updates}
 
- [!DNL Workfront] ドキュメントカスタムフォームで変更を購入するには、「**[!UICONTROL 詳細]**」タブで関連オプションを選択します。 これらのアップデートを購入すると、[!DNL Workfront] ドキュメントカスタムフォームの対応するフィールドが変更されたときに、マップされた [!DNL Experience Manager] メタデータフィールドがアップデートされます。
+ [!DNL Workfront] ドキュメントカスタムフォームで変更を購入するには、「**[!UICONTROL 詳細]**」タブで関連オプションを選択します。これらのアップデートを購入すると、[!DNL Workfront] ドキュメントカスタムフォームの対応するフィールドが変更されたときに、マップされた [!DNL Experience Manager] メタデータフィールドがアップデートされます。
 
 ![[!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png) での Workfront ドキュメントカスタムフォームのアップデート設定

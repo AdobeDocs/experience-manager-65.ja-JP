@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: 6b380e92-f90d-4875-b7a2-f3958daf2364
 role: Admin
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '7665'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -108,7 +108,7 @@ JEE 上の AEM Forms のインストール作業や設定作業を実行する�
  </tbody> 
 </table>
 
-オペレーティングシステムのその他のセキュリティ情報については、[オペレーティングシステムのセキュリティ情報](https://helpx.adobe.com/jp/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)を参照してください。
+お使いのオペレーティングシステムのセキュリティ情報について詳しくは、 [オペレーティング・システムのセキュリティ情報](https://helpx.adobe.com/jp/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information).
 
 ## インストール {#installation}
 
@@ -172,7 +172,7 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
 1. Microsoft 管理コンソール（MMC）で、forms サーバーサービスへのログインに使用するローカルユーザーを作成します。
 
    * 「**ユーザーはパスワードを変更できない**」オプションを選択します。
-   * **所属するグループ**&#x200B;タブに、「ユーザー」グループが表示されていることを確認してください。****
+   * **所属するグループ**&#x200B;タブに、「ユーザー」グループが表示されていることを確認してください&#x200B;**。**
 
    >[!NOTE]
    >
@@ -189,11 +189,12 @@ JEE 上の AEM Forms のデプロイ先のアプリケーションサーバー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を付与します。
-   * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。 インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
+   * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
    * **CRX リポジトリディレクトリ**：デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository` です。
    * **AEM Forms 一時ディレクトリ**：
       * （Windows）環境変数で設定されている TMP または TEMP パス
-      * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
+      * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリ
+UNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
       * （Linux）/var/tmp or /usr/tmp
       * （AIX）/tmp or /usr/tmp
       * （Solaris）/var/tmp または /usr/tmp
@@ -408,7 +409,7 @@ AEM Forms データベーススキーマには、システム設定やビジネ�
 * Trust Store HSM PIN 暗号化キー
 * ローカルユーザーパスワードハッシュ
 
-ベンダー固有のツールについて詳しくは、[「データベースのセキュリティ情報」](https://helpx.adobe.com/jp/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)を参照してください。
+ベンダー固有のツールについて詳しくは、 [データベースのセキュリティ情報](https://helpx.adobe.com/jp/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information).
 
 ### LDAP のセキュリティ {#ldap-security}
 
@@ -954,7 +955,7 @@ JEE 上の AEM Forms で必要な WebSphere ポートについて詳しくは、
 
 [JEE 上の AEM Forms の物理アーキテクチャ](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)で取り上げている物理アーキテクチャについては、使用するすべての接続に SSL を設定する必要があります。特に すべての SOAP 接続は、ネットワーク上にユーザー資格情報が漏洩されないように、すべて SSL 経由で行う必要があります。
 
-JBoss、WebLogic および WebSphere 上で SSL を設定する手順については、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_64_jp)の「SSL の設定」を参照してください。
+JBoss、WebLogic、WebSphere で SSL を設定する手順については、 [管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_64_jp).
 
 AEM Forms サーバー用に設定された JVM（Java 仮想マシン）に証明書を読み込む手順については、[AEM Forms Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)の「相互認証」の節を参照してください。 
 
@@ -1009,11 +1010,12 @@ JEE 上の AEM Forms 自動インストールは、デフォルトで、ロー�
    * サービスとしてログオン（通常は既に設定済み）
 
 1. 次のディレクトリの新しいユーザーアカウントに変更権限を付与します。
-   * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。 インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
+   * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
    * **CRX リポジトリディレクトリ**：デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository` です。
    * **AEM Forms 一時ディレクトリ**：
       * （Windows）環境変数で設定されている TMP または TEMP パス
-      * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリUNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
+      * （AIX、Linux または Solaris）ログインユーザーのホームディレクトリ
+UNIX 系のシステムでは、root 以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
       * （Linux）/var/tmp or /usr/tmp
       * （AIX）/tmp or /usr/tmp
       * （Solaris）/var/tmp または /usr/tmp

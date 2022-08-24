@@ -12,10 +12,10 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 128358e17aa6166c81e0979825ee81d029418f22
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '11766'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 100%
 
 1. 次の手順を実行して、**Dynamic Media ビデオをアップロード**&#x200B;します。
 
-   * 独自のビデオエンコーディングプロファイルを作成します。または、Dynamic Media に付属している事前定義済みの _アダプティブビデオエンコーディング_ （AVE）プロファイルを使用してもかまいません。
+   * 独自のビデオエンコーディングプロファイルを作成します。または、Dynamic Media に付属している事前定義済みの&#x200B;_アダプティブビデオエンコーディング_（AVE）プロファイルを使用してもかまいません。
 
       * [ビデオエンコーディングプロファイルを作成します](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
       * 詳しくは、[ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)を参照してください。
@@ -74,7 +74,6 @@ ht-degree: 100%
    * ビデオアセットをプレビューして公開します。
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
-
          [ビデオをプレビュー](managing-video-assets.md#upload-and-preview-video-assets)するか[アセットをプレビュー](previewing-assets.md)します。
          [ビデオレンディションを表示](video-renditions.md)
          [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
@@ -84,11 +83,9 @@ ht-degree: 100%
    * ビデオのメタデータを操作します。
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
-
          [ビデオレンディションのプロパティを表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
-
          [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
 
       * [デジタルアセットのメタデータの管理](metadata.md)
@@ -111,14 +108,12 @@ ht-degree: 100%
    * Adobe Experience Manager を web コンテンツ管理システムとして使用する場合、web ページにビデオを直接追加できます。
 
       * [Web ページにビデオを追加します](adding-dynamic-media-assets-to-pages.md)。
-   * サードパーティの Web コンテンツ管理システムを使用している場合、Web ページにビデオをリンクするか、ビデオを埋め込むことができます。
+   * サードパーティの web コンテンツ管理システムを使用している場合、web ページにビデオをリンクするか、ビデオを埋め込むことができます。
 
       * URL を使用したビデオの統合：
-
          [Web アプリケーションに URL をリンクします](linking-urls-to-yourwebapplication.md)。
 
       * Web ページの埋め込みコードを使用したビデオの統合：
-
          [Web ページにビデオビューアを埋め込みます](embed-code.md)。
    * [YouTube にビデオを公開します](#publishing-videos-to-youtube)。
    * [ビデオレポートを生成します](#viewing-video-reports)。
@@ -168,7 +163,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
    * ビデオコンテンツと画像コンテンツの両方を組み合わせた混在メディアビューア
 
 * 自社ブランドのニーズに合わせてビデオプレーヤーを設定します。
-* 単純な URL か埋め込みコードを使用して、ビデオを Web サイト、モバイルサイトまたはモバイルアプリケーションに統合します。
+* 単純な URL か埋め込みコードを使用して、ビデオを web サイト、モバイルサイトまたはモバイルアプリケーションに統合します。
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
@@ -178,7 +173,7 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデオプレーヤーです。このプリセットを使用すれば、HTML5 ビデオ再生でよくある問題や、モバイルデバイスに関する問題（アダプティブストリーミング配信機能がない、デスクトップブラウザーの対応状況が限定的であるなど）の多くを回避することができます。
 
-プレーヤーの設計面では、ビデオプレーヤーの機能を標準の Web 開発ツールで設計できます。例えば、HTML5 と CSS を使用して、ボタン、コントロールおよびカスタムのポスター画像背景をデザインして、カスタマイズした表示によって顧客に対応することができます。
+プレーヤーの設計面では、ビデオプレーヤーの機能を標準の web 開発ツールで設計できます。例えば、HTML5 と CSS を使用して、ボタン、コントロールおよびカスタムのポスター画像背景をデザインして、カスタマイズした表示によって顧客に対応することができます。
 
 ビューアの再生側から見れば、ビューアによってブラウザーのビデオ機能が自動的に検出されます。その後、HLS（HTTP ライブストリーミング）を使用してビデオが配信されます。HLS はアダプティブビデオストリーミングとも呼ばれます。または、これらの配信方法が使用できない場合は、HTML5 プログレッシブが代わりに使用されます。
 
@@ -190,7 +185,7 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 リッチメディアコンテンツの配信範囲をデスクトップユーザーとモバイルユーザーの両方に拡大し、ビデオエクスペリエンスを確実に効率化することができます。
 
-[HTML5 ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html?lang=ja#viewers-for-aem-assets-only)も参照してください。
+[HTML5 ビューアについて](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only)も参照してください。
 
 ### HTML5 ビデオビューアを使用した、デスクトップコンピューターおよびモバイルデバイス上でのビデオ再生 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -200,10 +195,10 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 一方、Experience Manager 6.3 以降では、DM ゲートウェイサービスの URL が常に HTTPS も使用するので、ビデオは HTTPS でストリーミングされるようになりました（つまり HLS）。このデフォルトの動作はユーザーに影響しません。つまり、ブラウザーでサポートされていない場合を除き、ビデオストリーミングは常に HTTPS 上で行われます（以下の表を参照してください）。したがって、次のようになります。
 
-* HTTPS Web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しています。
-* HTTP Web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しており、Web ブラウザーから混合コンテンツに関する問題は発生しません。
+* HTTPS web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しています。
+* HTTP web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しており、web ブラウザーから混合コンテンツに関する問題は発生しません。
 
-HLS は、アダプティブビデオストリーミングの Apple 標準で、ネットワーク帯域幅のキャパシティに応じて再生を自動的に調整します。また、HLS では、ビデオの残りのダウンロードを待たずに、ビデオ内の任意のポイントを「シーク」できます。
+HLS は、アダプティブビデオストリーミングの Apple 標準で、ネットワーク帯域幅のキャパシティに応じて再生を自動的に調整します。また、ビデオの残りのダウンロードを待たずに、ビデオ内の任意のポイントを「シーク」できます。
 
 プログレッシブビデオは、ユーザーのデスクトップシステムやモバイルデバイスにダウンロードしてローカルに保存することで配信されます。
 
@@ -351,7 +346,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 ビットレートエンコーディングは 2 種類あり、そのどちらかを選択できます。
 
-* **[!UICONTROL 固定ビットレートエンコーディング]**（CBR）- CBR エンコーディングでは、ビットレートまたは 1 秒あたりのビット数が、エンコーディングプロセス全体で同じ数値に維持されます。CBR エンコーディングでは、設定されているデータレートが、ビデオ全体での設定値として使用されます。また、CBR エンコーディングでは、メディアファイルの品質は最適化されませんが、その分、空き容量の節約になります。ビデオ全体に同じようなモーションレベルが含まれている場合は、CBR を使用します。CBR は、ビデオコンテンツのストリーミングに最も一般的に使用されています。[カスタムで追加するビデオエンコーディングパラメーターの使用](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters) も参照してください。
+* **[!UICONTROL 固定ビットレートエンコーディング]**（CBR）- CBR エンコーディングでは、ビットレートまたは 1 秒あたりのビット数が、エンコーディングプロセス全体で同じ数値に維持されます。CBR エンコーディングでは、設定されているデータレートが、ビデオ全体での設定値として使用されます。また、CBR エンコーディングでは、メディアファイルの品質は最適化されませんが、その分、空き容量の節約になります。ビデオ全体に同じようなモーションレベルが含まれている場合は、CBR を使用します。CBR は、ビデオコンテンツのストリーミングに最も一般的に使用されています。[カスタムで追加するビデオエンコーディングパラメーターの使用](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters)も参照してください。
 
 * **[!UICONTROL 可変ビットレートエンコーディング]**（VBR）- VBR エンコーディングでは、圧縮形式で必要となるデータに基づいて、データのレートが設定した下限から上限の範囲内で調整されます。つまり、VBR エンコーディングプロセスでは、メディアファイルのビットレートが、そのニーズに応じて動的に増減します。VBR は、CBR よりエンコードに時間がかかりますが、生成されるメディアファイルは最高品質となります。VBR は、ビデオコンテンツの HTTP プログレッシブ配信に最も一般的に使用されます。
 
@@ -472,7 +467,7 @@ Google Cloud を設定するには：
 1. [https://cloud.google.com/](https://cloud.google.com/) にアクセスします。
 1. Google Cloud ページの右上隅付近にある、「**[!UICONTROL コンソール]**」をクリックします。
 
-   必要に応じて、Google アカウントの資格情報を使用して&#x200B;**[!UICONTROL ログイン]**&#x200B;し、「**コンソール**」オプションを確認します。
+   必要に応じて、Google アカウントの資格情報を使用して&#x200B;**[!UICONTROL ログイン]**&#x200B;し、「**[!UICONTROL コンソール]**」オプションを確認します。
 
 1. ダッシュボードページで、**[!UICONTROL Google Cloud Platform]** の右側にある「プロジェクト」ドロップダウンリストをクリックして、プロジェクトの選択ダイアログボックスを開きます。
 1. プロジェクトの選択ダイアログボックスで、「**[!UICONTROL 新しいプロジェクト]**」をタップします。
@@ -799,7 +794,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 ### Web アプリケーションへの YouTube URL のリンク {#linking-youtube-urls-to-your-web-application}
 
-ビデオの公開後、Dynamic Media によって生成された YouTube URL 文字列を取得できます。YouTube URL をコピーしたらクリップボードに配置されるので、必要に応じて Web サイトのページまたはアプリケーションに貼り付けることができます。
+ビデオの公開後、Dynamic Media によって生成された YouTube URL 文字列を取得できます。YouTube URL をコピーしたらクリップボードに配置されるので、必要に応じて web サイトのページまたはアプリケーションに貼り付けることができます。
 
 >[!NOTE]
 >
@@ -807,13 +802,13 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 **Web アプリケーションに YouTube URL をリンクするには：**
 
-1. URL のコピー先となる、 *YouTube への公開済み* ビデオアセットの場所に移動して選択します。
+1. URL のコピー先となる、*YouTube への公開済み*&#x200B;ビデオアセットの場所に移動して選択します。
 
    YouTube URL をコピーするには、*その前に*&#x200B;ビデオアセットを YouTube に&#x200B;*公開しておく*&#x200B;必要があります。
 
 1. ツールバーの「**[!UICONTROL プロパティ]**」をクリックします。
 1. 「**[!UICONTROL 詳細]**」タブをクリックします。
-1. 「YouTube への公開」の「YouTube URL リスト」で、URL テキストを選択し、Web ブラウザーにコピーしてアセットをプレビューするか、Web コンテンツページに追加します。
+1. 「YouTube への公開」の「YouTube URL リスト」で、URL テキストを選択し、web ブラウザーにコピーしてアセットをプレビューするか、web コンテンツページに追加します。
 
 ### ビデオの非公開による YouTube からの削除 {#unpublishing-videos-to-remove-them-from-youtube}
 
@@ -871,6 +866,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
+
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -903,8 +899,9 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >
    >
    >    * Apache Sling Job Queue Configuration
-   >    * Adobe Granite Workflow External Process Job Handler
-   >    * Granite Workflow Timeout Queue
+   >    * AdobeGranite Workflow External Process Job Handler
+   >    * Granite のワークフロータイムアウトキュー
+
    >
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
@@ -932,7 +929,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 * YouTube への公開ジョブの場合、次の手順に従います。
 
 1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;をタップします。
-1. ワークフローモデルページで、「**YouTube に公開**[!UICONTROL 」を選択して、ツールバーの「]**編集**」をタップします。
+1. ワークフローモデルページで、「**[!UICONTROL YouTube に公開]**」を選択して、ツールバーの「**[!UICONTROL 編集]**」をタップします。
 1. YouTube に公開ワークフローページの右上隅にある「**[!UICONTROL 編集]**」をタップします。
 1. 「YouTube のアップロード」コンポーネントにマウスポインターを置き、1 回タップしてインラインツールバーを表示します。
 
@@ -967,7 +964,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 >
 >ビデオレポートを使用できるのは、Dynamic Media - ハイブリッドモードを実行している場合のみです。
 
-ビデオレポートは、指定した時間にわたるいくつかの集計指標を表示し、*公開された*個別および集計ビデオが期待通りに実行されていることを監視するのに役立ちます。次の上位指標データは、Web サイト全体で公開されているすべてのビデオについて集計されます。
+ビデオレポートは、指定した時間にわたるいくつかの集計指標を表示し、*公開された*個別および集計ビデオが期待通りに実行されていることを監視するのに役立ちます。次の上位指標データは、web サイト全体で公開されているすべてのビデオについて集計されます。
 
 * ビデオ開始
 * 完了率
@@ -975,7 +972,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 * ビデオの合計視聴時間
 * 訪問別ビデオ数
 
-すべての&#x200B;*公開済み*&#x200B;ビデオの表も表示されるので、ビデオ開始数の合計に基づいて、Web サイトで視聴された上位のビデオを追跡できます。
+すべての&#x200B;*公開済み*&#x200B;ビデオの表も表示されるので、ビデオ開始数の合計に基づいて、web サイトで視聴された上位のビデオを追跡できます。
 
 リストのビデオ名をタップすると、ビデオのオーディエンス保持（ドロップオフ）レポートが折れ線グラフの形式で表示されます。このグラフには、ビデオ再生中の特定の瞬間におけるビュー数が表示されます。ビデオを再生すると、プレーヤーの時間インジケーターと同期して縦棒が表示されていきます。この折れ線グラフが急激に下るところは、オーディエンスが関心をなくして再生を終了したところです。
 
@@ -1064,7 +1061,6 @@ Dynamic Media で標準提供されているビデオビューアを使用して
       trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
-
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
@@ -1107,7 +1103,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
    >
    >複数言語のビデオサブタイトルを用意してグローバル対応する場合、WebVTT 標準の規定により、サポート対象の言語ごとに個別の .vtt ファイルを作成して呼び出す必要があります。
 
-   一般に、キャプションの VTT ファイルにはビデオファイルと同じ名前を付け、名前の末尾に言語ロケール（-EN、-FR、-DE、-JA など）を追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
+   一般に、キャプションの VTT ファイルにはビデオファイルと同じ名前を付け、名前の末尾に言語ロケール（-EN、-FR、-DE、-JA など）を追加します。そうしておくと、既存の web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 
 1. Experience Manager で、WebVTT キャプションファイルを DAM にアップロードします。
 1. アップロードしたキャプションファイルを関連付ける、*公開済み*&#x200B;ビデオアセットに移動します。
@@ -1138,9 +1134,9 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 >
 >ビデオプレーヤーが、チャプターマーカーの使用をサポートしている必要があります。Dynamic Media ビデオプレーヤーは、チャプターマーカーをサポートしていますが、サードパーティのビデオプレーヤーは、チャプターマーカーをサポートしているとは限りません。
 
-必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自の HTML5 ビューアの作成方法については、『Adobe HTML5 Viewer SDK API』の「Customizing Behavior Using Modifiers」で `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber` クラスの説明を参照してください。[HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) ドキュメントを参照してください。
+必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。チャプターナビゲーション機能を備えた独自のHTML5 ビューアを作成する手順については、AdobeHTML5 Viewer SDK API で、クラスの「Customizing Behavior Using Modifiers」という見出しを参照してください。 `s7sdk.video.VideoPlayer` および `s7sdk.video.VideoScrubber`. [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) ドキュメントを参照してください。
 
-<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading “Customizing Behavior Using Modifiers” under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。つまり、WebVTT ファイルを作成します。ただし、WebVTT キャプションファイルも使用する場合は、このファイルを WebVTT ファイルと分けておく必要があります。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
@@ -1174,7 +1170,7 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
 
 1. この `.vtt` ファイルを UTF8 エンコーディングで保存して、チャプタータイトルテキストの文字レンディションに関する問題を回避します。
 
-   一般に、チャプター VTT ファイルの名前には、ビデオファイルと同じ名前を付けて、名前の末尾にチャプターを追加します。そうしておくと、既存の Web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
+   一般に、チャプター VTT ファイルの名前には、ビデオファイルと同じ名前を付けて、名前の末尾にチャプターを追加します。そうしておくと、既存の web コンテンツ管理システムを使用してビデオの URL を自動的に生成する際に役立ちます。
 1. Experience Manager で、WebVTT チャプターファイルをアップロードします。
 
    [アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
@@ -1245,18 +1241,18 @@ Experience Manager 内のすべてのビデオには、サムネールを関連�
 
    * ビデオのフレームを新しいサムネールとして使用するには：
 
-      * ツールバーで、「**ビデオからフレームを選択**」をタップします。
+      * ツールバーで、「**[!UICONTROL ビデオからフレームを選択]**」をタップします。
       * 「再生」ボタンをタップし、ビデオの新しいサムネールとしてキャプチャするフレームの「一時停止」ボタンをタップします。
    * 画像アセットを新しいサムネールとして使用するには：
 
-      * ツールバーで、「**アセットからサムネールを選択**」をタップします。
+      * ツールバーで、「**[!UICONTROL アセットからサムネールを選択]**」をタップします。
       * 「**[!UICONTROL サムネールを選択]**」をタップします。
       * 既にアップロードして公開した画像アセットのうち、使用するものを選択します。アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
       * 画像アセットを選択し、「**[!UICONTROL 選択]**」をタップします。
 
 
-1. サムネールを変更ページで、「**変更を保存**」をタップします。
-1. ビデオのプロパティページで、右上隅にある「**保存して閉じる**」をタップします。
+1. サムネールを変更ページで、「**[!UICONTROL 変更を保存]**」をタップします。
+1. ビデオのプロパティページで、右上隅にある「**[!UICONTROL 保存して閉じる]**」をタップします。
 
 ## Dynamic Media - ハイブリッドモードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-hybrid-mode}
 
@@ -1331,6 +1327,6 @@ Dynamic Media では、ビデオの合計時間に基づいて 10 個（デフ�
 1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」をタップします。
 1. サムネールを変更ページで、ツールバーの「**[!UICONTROL 新しいサムネールをアップロード]**」をタップします。
 1. 使用するサムネール画像に移動して、その画像を選択します。次に「**[!UICONTROL 開く]**」をタップして、Experience Manager への画像のアップロードを開始します。アップロード後に、必ず画像を公開してください。
-1. 画像をアップロードして公開したら、サムネールを変更ページで、「**変更を保存**」をタップします。
+1. 画像をアップロードして公開したら、サムネールを変更ページで、「**[!UICONTROL 変更を保存]**」をタップします。
 
    カスタムサムネールがビデオに追加されます。

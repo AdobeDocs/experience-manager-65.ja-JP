@@ -11,10 +11,10 @@ discoiquuid: 9f26565c-a7ba-4e9e-bf77-a95eb8e351f2
 docset: aem65
 feature: Correspondence Management
 exl-id: 3e978c3e-12f2-4dc6-801d-8ab4c5df6700
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
 
 * 通貨記号（€、￥、£ など）
 * 数学記号（∑、√、∂、^ など）
-* 句読点（「、」 など）
+* 句読点記号（「 」と「 」）
 
 レターでは、次の場所で特殊文字を挿入することができます。
 
@@ -98,7 +98,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>カスタマイズした特殊文字を追加する</td>
    <td>
     <ol>
-     <li>必須プロパティを使用して、「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に子ノードを追加します。</li>
+     <li>「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に、必須のプロパティを持つ子ノードを追加します。</li>
      <li>「すべて保存」をクリックします。</li>
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。</li>
     </ol> </td>
@@ -117,7 +117,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>特殊文字を非表示にする</td>
    <td>
     <ol>
-     <li>非表示にするノードを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下にオーバーレイします。</li>
+     <li>「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に非表示にするノードをオーバーレイします。</li>
      <li>非表示にするノード（アプリケーションの下）に、sling:hideResource （ブール値）プロパティを追加します。 </li>
      <li>「すべて保存」をクリックします。 </li>
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。<br /> </li>
@@ -127,7 +127,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>複数の特殊文字を非表示にする</td>
    <td>
     <ol>
-     <li>「sling:hideChildren (String or String[])」プロパティを「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」に追加します。 </li>
+     <li>「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」にプロパティ「sling:hideChildren (String or String[])」を追加します。 </li>
      <li>ノード名（非表示にする特殊文字）を「sling:hideChildren」プロパティの値として追加します。 </li>
      <li>「すべて保存」をクリックします。 </li>
      <li>変更を表示するには、「テキストエディタ\Correspondence UI の作成」ページを更新します。<br /> </li>
@@ -137,7 +137,7 @@ Correspondence Managementhas では210 種類の特殊文字に初期状態か�
    <td>特殊文字の並び替え</td>
    <td>
     <ol>
-     <li>必須プロパティを使用して、「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に子ノードを追加します。 </li>
+     <li>「/apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters」の下に、必須のプロパティを持つ子ノードを追加します。 </li>
      <li>新しく作成された子ノードに sling:orderBefore (String) プロパティを追加します。 </li>
      <li>新たに追加した特殊文字の前に、ノード名を値として追加します。 </li>
      <li>「すべて保存」をクリックします。 </li>

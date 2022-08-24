@@ -1,8 +1,8 @@
 ---
 title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
-description: '"[!DNL Adobe Experience Manager] 6.5 リリース情報、新機能、インストール方法、および詳細な変更リストの概要を説明するノート。」'
+description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '4696'
 ht-degree: 99%
@@ -145,7 +145,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 * 新規プロジェクト用の単一ページアプリ Maven プロジェクトアーキタイプ 1.0.6 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-spa-project-archetype/releases) を参照してください。
 * HTL バージョン 1.4 については、[リリースノートの GitHub](https://github.com/adobe/htl-spec/releases/tag/1.4) を参照してください。
 
-   * 文字列、配列、オブジェクトの「in」演算子
+   * 文字列、配列およびオブジェクトに対する&quot;in&quot;演算子
 
       ```html
       ${'a' in 'abc’}
@@ -203,7 +203,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 * アセットのダウンロードレポートにコンテンツフラグメントが適宜表示されるようになりました。
 * /api.json を通じて、[Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになりました。コンテンツフラグメントの作成、更新、読み取りおよび削除のための API が用意されています。
 
-#### エクスペリエンスフラグメント {#experience-fragments}
+#### エクスペリエンスフラグメント  {#experience-fragments}
 
 * [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)のインデックス作成を改善して、フラグメントの使用ページの検索でコンテンツが見つかるようになりました。
 * 「[Adobe Target に書き出し](/help/sites-administering/experience-fragments-target.md)」オプションで、エクスペリエンスフラグメントを JSON（デフォルトは HTML）またはその両方として送信できるようになりました。
@@ -244,12 +244,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * Adobe Target との連携で Target Standard API を使用できるようになりました。以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。実装を `at.js` 1.x に切り替えることを強くお勧めします。
-* `at.js` バージョン 1.5.0 が含まれるようになりました。 [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html?lang=ja) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
+* `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html?lang=ja) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。 [Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
+* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
@@ -555,7 +555,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 ### Sites {#sites}
 
-* **ページバージョンの操作**: [ページが移動されている場合、移動前に行われたバージョンではプレビューを実行できなくなりました](/help/sites-authoring/working-with-page-versions.md#previewing-a-version).
+* **ページバージョンの処理**：[ページを移動すると、移動前に作成したバージョンのプレビューを実行できなくなります。](/help/sites-authoring/working-with-page-versions.md#previewing-a-version)
 
 ### Assets {#assets}
 

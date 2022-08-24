@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: eb28ac30-265c-4611-8247-1f4bc826f254
 role: Developer
 exl-id: dd32808e-b773-48a2-90e1-7a277d349493
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
 workflow-type: tm+mt
 source-wordcount: '1920'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -179,7 +179,7 @@ Barcoded Forms API（web サービス）を使用したフォームデータの�
 1. プロジェクトファイルを含める
 
    * Barcoded Forms サービス WSDL を使用する Microsoft .NET クライアントアセンブリを作成します。詳しくは、 [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください。
-   * Microsoft .NET クライアントアセンブリを参照します詳しくは、 [Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)の「.NET クライアントアセンブリの参照」を参照してください。
+   * Microsoft .NET クライアントアセンブリを参照します詳しくは、 [Base64 エンコーディングを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding).
 
 1. Barcoded Forms クライアント API オブジェクトの作成
 

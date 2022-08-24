@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: f8707752-2c83-461a-b83d-708754b0f3f6
 role: Developer
 exl-id: 31730c24-46c3-4111-9391-ccd4342740e9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+workflow-type: tm+mt
 source-wordcount: '2809'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ PDF ドキュメントを PostScript ファイルに変換するには、次の�
 
 プログラムによって Convert PDF サービスの操作を実行する前に、Convert PDF サービスクライアントを作成する必要があります。Java API を使用している場合は、`ConvertPdfServiceClient` オブジェクトを作成します。Web サービス API を使用している場合は、`ConvertPDFServiceService` オブジェクトを作成します。
 
-このセクションでは、AEM Forms で導入された web サービス機能を使用します。新しい機能にアクセスするには、`lc_version` 属性を使用してプロキシオブジェクトを構築する必要があります。（[Web サービスを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)の「web サービスを使用した新しい機能へのアクセス」を参照。）
+このセクションでは、AEM Forms で導入された web サービス機能を使用します。新しい機能にアクセスするには、`lc_version` 属性を使用してプロキシオブジェクトを構築する必要があります。(「Web サービスを使用した新しい機能へのアクセス」( [Web サービスを使用したAEM Formsの呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
 
 **PostScript ファイルに変換する PDF ドキュメントを参照**
 
@@ -121,7 +121,7 @@ Convert PDF サービス API（Java）を使用して、PDF ドキュメント�
 1. 変換の実行時オプションを設定します。
 
    * コンストラクターを呼び出して `ToPSOptionsSpec` オブジェクトを作成します。
-   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
+   * `ToPSOptionsSpec` オブジェクトに属する適切なメソッドを呼び出して、実行時オプションを設定します。例えば、作成される PostScript レベルを定義するには、 `ToPSOptionsSpec` オブジェクトの `setPsLevel` メソッドを呼び出して、 PostScript レベルを指定する `PSLevel` 列挙値を渡します。設定できるすべての実行時の値について詳しくは、 [AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `ToPSOptionsSpec` クラスリファレンスを参照してください。
 
 1. PDF ドキュメントを PostScript ファイルに変換します。
 
@@ -244,7 +244,7 @@ PDF ドキュメントをサポートされている任意のタイプに変換�
 
 **実行時オプションを設定**
 
-画像形式や解像度の値など、実行時オプションを設定する必要があります。実行時の値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `ToImageOptionsSpec` のクラス参照を参照してください。
+画像形式や解像度の値など、実行時オプションを設定する必要があります。実行時の値について詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `ToImageOptionsSpec` のクラス参照を参照してください。
 
 **PDF を画像に変換**
 

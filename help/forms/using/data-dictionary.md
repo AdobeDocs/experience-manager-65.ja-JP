@@ -10,10 +10,10 @@ discoiquuid: a1a0ad6b-023a-4822-9cce-0618657c3f9d
 docset: aem65
 feature: Correspondence Management
 exl-id: aaed75e6-8849-46a8-b986-896ad729adda
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '3838'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -488,8 +488,8 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 * すべての DDE の要素タイプを「not null／non null」にする必要があります。
 * どの DDE 参照名もヌルにできません。
 * すべての DDE 参照名は、一意である必要があります。
-* いずれの DDE 参照でも、英数字およびアンダースコア「_」のみ使用できます。
-* すべての DDE 表示名には、英数字およびアンダースコア「_」しか使用できません。
+* すべての DDE 参照には、英数字と「_」のみを使用できます。
+* すべての DDE 表示名には、英数字と「_」のみを使用できます。
 * 複合要素とコレクション要素はリーフレベルでは使用できません。プリミティブ（String、Date、Number、Boolean）要素のみがリーフレベルで使用できます。この検証では、子 DDE なしの複合要素やコレクション要素が存在しないことが確認されます。
 * 親 DDE（複合）には、同じ名前の 2 つの子要素を指定できません。
 * ENUM サブタイプは、String および Number 要素にのみ使用します。
@@ -592,7 +592,7 @@ XSD を書き出すには、固有のデータマッピングが必要になり�
 
 * コレクション要素のすべての子 DDE のバインディングは、親コレクション要素の相対パスである必要があります。
 
-以下の XML スキーマは、名前が Tokens で maxOccurs 属性が「unbounded」の要素を宣言しています。つまり、Tokens はコレクション要素です。
+以下の XML スキーマは、名前が Tokens で maxOccurs 属性が「unbounded」の要素を宣言します。 つまり、Tokens はコレクション要素です。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -2,10 +2,10 @@
 title: 期限切れの Reader Extension サービス証明書を更新しています
 description: Reader 用の拡張ドキュメントが機能しません。証明書を更新してください
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1581'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Reader Extension サービスを使用する資格があります。サービスを使用すると、追加の使用権限を付与して Adobe Reader の機能を拡張することで、組織内でインタラクティブ PDF ドキュメントを簡単に共有できます。このサービスは、PDF ドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Reader DC を使用して PDF ドキュメントを開いた場合には通常使用できない機能をアクティブにします。サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-アドビは PKI（公開鍵インフラストラクチャ）を活用して、ライセンスやイネーブルメント機能に使用する電子証明書を発行します。アドビは、認証機関「Adobe ルート CA」に基づいて証明書を発行しており、2023 年 1 月 7 日に期限が切れる予定です。この認証機関の下で発行されたすべての証明書の有効期限が切れます。証明書の有効期限が切れると、証明書に依存するすべての機能は機能しなくなります。例えば、Adobe Acrobat Reader を使用してコメントを追加できる Reader 用の拡張 PDF ドキュメントは、2023 年 1 月 7 日以降、機能しなくなります。この問題を解決するには、Reader Extension サービスの管理者は、古い証明書を使用して、新しい Adobe Root CA G2 が発行した新しい証明書を取得し、PDF ドキュメントに再適用する必要があります（Reader は、新しい証明書で PDF ドキュメントを拡張します）。
+アドビは PKI（公開鍵インフラストラクチャ）を活用して、ライセンスやイネーブルメント機能に使用する電子証明書を発行します。Adobeは、証明機関「Adobeルート CA」に基づいて証明書を発行しており、2023 年 1 月 7 日に期限が切れる予定です。 この認証機関の下で発行されたすべての証明書の有効期限が切れます。証明書の有効期限が切れると、証明書に依存するすべての機能は機能しなくなります。例えば、Adobe Acrobat Reader を使用してコメントを追加できる Reader 用の拡張 PDF ドキュメントは、2023 年 1 月 7 日以降、機能しなくなります。この問題を解決するには、Reader Extension サービスの管理者は、古い証明書を使用して、新しい Adobe Root CA G2 が発行した新しい証明書を取得し、PDF ドキュメントに再適用する必要があります（Reader は、新しい証明書で PDF ドキュメントを拡張します）。
 
 証明書の有効期限は、JEE 上の AEM Forms と OSGi スタック上の AEM Forms の両方に影響します。両方のスタックには、異なる手順のセットがあります。[前提条件](#Pre-requisites)および[新しい証明書の取得](#obtain-the-certificates)を満たした後、スタックに応じて、次のパスのいずれかを選択します。
 
@@ -81,7 +81,7 @@ Trust Store の管理ページを使用して、新しい資格情報や置き�
 
 最新の資格情報を使用して使用権限を適用する前に、使用権限を付与された既存の PDF ドキュメントから使用権限を削除してください。JEE 上の AEM Forms は、使用権限を削除する API を提供します。詳しい手順については、[PDF ドキュメントから使用権限の削除](../../developing/assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)を参照してください。
 
-Workbench で開発した JEE プロセス上の AEM Forms の使用権限を削除するには、[Workbench ヘルプ](https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf)を参照してください。
+Workbench で開発した JEE プロセス上の AEM Forms の使用権限を削除するには、[Workbench ヘルプ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf)を参照してください。
 
 ### 使用権限を PDF ドキュメントに適用する
 

@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1668'
 ht-degree: 100%
@@ -116,8 +116,8 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
 
 レプリケーションエージェント
 
-* MBean：`com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
-* URL：`/system/console/jmx/com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>"`
+* MBean：`com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
+* URL：`/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
 * インスタンス：1 つのオーサーインスタンスおよびすべてのパブリッシュインスタンス（フラッシュエージェント）
 * アラームしきい値：`QueueBlocked``true` の値が 、または `QueueNumEntries` の値がベースラインの 150％を超えた場合。
 
@@ -193,7 +193,7 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
 監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、[!DNL Experience Manager] デプロイメントでよくある問題を解決できます。
 
 * TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリのメンテナンス](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
-* `OutOfMemoryError` ログを確認します。 詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
+* `OutOfMemoryError` ログを確認します。詳しくは、[メモリの問題の分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeMemoryProblems.html)を参照してください。
 
 * ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリおよびインデックス作成のパフォーマンスを最適化するためのベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
