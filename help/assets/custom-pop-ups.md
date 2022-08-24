@@ -13,7 +13,7 @@ feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 100%
 
@@ -31,7 +31,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
 ビューアによって機能は異なりますが、クイックビューの作成手順はサポートする 3 つのビューアで同じです。
 
-**クイックビューを使用してカスタムポップアップを作成する**
+**クイックビューを使用してカスタムポップアップを作成するには：**
 
 1. アップロードしたアセット用にクイックビューを作成します。
 

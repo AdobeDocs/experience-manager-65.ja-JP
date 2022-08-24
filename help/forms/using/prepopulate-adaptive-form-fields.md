@@ -11,7 +11,7 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 29cbc330-7b3d-457e-ba4a-7ce6091f3836
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2169'
 ht-degree: 100%
 
@@ -242,7 +242,7 @@ JSON スキーマモデルを使用するフィールドの場合、以下の JS
 
 1. データの場所または正規表現を「**データファイルの場所**」に入力します。有効なデータファイルの場所の例は次のとおりです。
 
-   * file:///C:/Users/public/Document/Prefill/*
+   * file:///C:/Users/public/Document/Prefill/&#42;
    * https://localhost:8000/somesamplexmlfile.xml
    >[!NOTE]
    >
@@ -297,8 +297,8 @@ https://localhost:4502/content/forms/af/xml.html?wcmmode=disabled&dataRef=https:
 https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=service://[SERVICE_NAME]/[IDENTIFIER]
 ```
 
-* SERVICE_NAME は OSGI 事前入力サービスの名前を参照します。[事前入力サービスの作成と実行](../../forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service)を参照してください。
-* IDENTIFIER は、事前入力データを取得するために OSGI 事前入力サービスが必要とするメタデータを参照します。ログイン済みユーザーの識別子は、使用できるメタデータの一例です。
+* SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。[事前入力サービスの作成と実行](../../forms/using/prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service)を参照してください。
+* 識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログイン済みユーザーの識別子は、使用できるメタデータの一例です。
 
 >[!NOTE]
 >
@@ -388,4 +388,4 @@ AEM Forms サーバーを設定して、サーバーではなくクライアン�
 
    * 無効にするには、次の cURL コマンドを実行します。
       `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
-   クライアントでのデータの事前入力オプションを最大限に活用するには、事前入力サービスを更新して、[FileAttachmentMap](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) と [CustomContext](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) を返します。
+   クライアントでのデータの事前入力オプションを最大限に活用するには、事前入力サービスを更新して、[FileAttachmentMap](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) と [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) を返します。

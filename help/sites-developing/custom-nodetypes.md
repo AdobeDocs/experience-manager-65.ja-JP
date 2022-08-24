@@ -236,7 +236,7 @@ CQ コンポーネントを定義します。
 * `@prop dialogPath` - プライマリダイアログのパス（dialog の代替）。
 * `@node design_dialog` - デザインダイアログ。
 * `@prop cq:cellName` - デザインセルの名前。
-* `@prop cq:isContainer` - これがコンテナコンポーネントであるかどうかを示します。 これにより、パス名の代わりに子コンポーネントのセル名が強制的に使用されます。例えば、`parsys` は、コンテナコンポーネントです。この値が定義されていない場合、チェックは `cq:childEditConfig` の存在に基づいて行われます。
+* `@prop cq:isContainer` - これがコンテナコンポーネントであるかどうかを示します。これにより、パス名の代わりに子コンポーネントのセル名が強制的に使用されます。例えば、`parsys` は、コンテナコンポーネントです。この値が定義されていない場合、チェックは `cq:childEditConfig` の存在に基づいて行われます。
 * `@prop cq:noDecoration` - true の場合、このコンポーネントをインクルードする際に装飾用の `div` タグは描画されません。
 * `@node cq:editConfig` - 編集バーのパラメーターを定義する設定。
 * `@node cq:childEditConfig` - 子コンポーネントによって継承される編集設定。
@@ -552,7 +552,7 @@ MailerService ノードタイプ。メーラーは、この mixin をメッセ�
 
 **説明**
 
-LiveSyncCancelled mixin を定義します。プライマリソース（制御側）ノードとライブコピー（被制御側）ノードは、LiveRelationship を介して仮想的にリンクできます。
+LiveRelationship mixin を定義します。プライマリソース（制御側）ノードとライブコピー（被制御側）ノードは、LiveRelationship を介して仮想的にリンクできます。
 
 **定義**
 

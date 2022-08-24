@@ -14,7 +14,7 @@ targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2192'
 ht-degree: 100%
 
@@ -49,7 +49,7 @@ ht-degree: 100%
 
 ## コードベースのアップグレード {#upgrade-code-base}
 
-### バージョン管理での 6.5 コード専用のブランチの作成{#create-a-dedicated-branch-for-6.5-code-in-version-control}
+### バージョン管理での 6.5 コード専用のブランチの作成 {#create-a-dedicated-branch-for-6.5-code-in-version-control}
 
 AEM 実装に必要なすべてのコードおよび設定は、何らかの形式のバージョン管理を使用して管理する必要があります。AEM のターゲットバージョンのコードベースに必要な変更を管理するために、バージョン管理に専用ブランチを作成する必要があります。AEM のターゲットバージョンに対するコードベースの繰り返しテストとその後のバグ修正は、このブランチで管理されます。
 

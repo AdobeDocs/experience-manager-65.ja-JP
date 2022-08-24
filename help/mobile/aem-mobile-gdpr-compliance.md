@@ -7,7 +7,7 @@ uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 89%
@@ -85,10 +85,10 @@ Digital Publishing Suite GDPR 要求の入力と結果の出力の例を次に�
 #### 入力： {#inputs}
 
 ```
-dpsc-contractId = "12345-1234-12416234" 
-directEntitlementId = "1234-1234-1234" 
-windowsAppStoreId = "testWinAppStoreId" 
-email = "test@what.com"
+dpsc-contractId = “12345-1234-12416234” 
+directEntitlementId = “1234-1234-1234” 
+windowsAppStoreId = “testWinAppStoreId” 
+email = “test@what.com”
 ```
 
 #### 出力： {#outputs}

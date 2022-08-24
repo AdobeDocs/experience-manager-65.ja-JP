@@ -12,7 +12,7 @@ discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
 source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2826'
 ht-degree: 100%
 
@@ -335,7 +335,8 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 大部分のコンポーネントでは、次の項目を設定できます。
 
-#### タイトルとテキスト {#title-and-text}
+#### タイトルとテキスト
+ {#title-and-text}
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 

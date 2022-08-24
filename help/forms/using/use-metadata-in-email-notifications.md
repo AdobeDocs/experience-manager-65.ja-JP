@@ -8,10 +8,10 @@ topic-tags: publish
 discoiquuid: d48b5137-c866-43cd-925b-7a6a8eac8c0b
 docset: aem65
 exl-id: 18cfc4be-676d-4f08-afc1-4f11bb48dab6
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 9cf4a68a2b3312fe53282e2fd4ec81988f2fd453
 workflow-type: tm+mt
 source-wordcount: '897'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 ![デフォルトの電子メールテンプレート](assets/default_email_template_metadata_new.png)
 
-メタデータは、キーと値のペアで保存されます。電子メールテンプレートでキーを指定すると、そのキーが実行される際（電子メール通知が生成されるとき）、値に置き換えられます。たとえば、下記のコードサンプルでは、「$ {workitem_title}」がキーになります。実行時に「Loan-Request」という値に置き換えられます。
+メタデータは、キーと値のペアで保存されます。電子メールテンプレートでキーを指定すると、そのキーが実行される際（電子メール通知が生成されるとき）、値に置き換えられます。たとえば、下記のコードサンプルでは、「$ {workitem_title}」がキーになります。これは、実行時には「Loan-Request」の値で置き換えられます。
 
 ```html
 subject=Task Assigned - ${workitem_title}

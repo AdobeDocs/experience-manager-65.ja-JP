@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: 55cc7c57-87a0-4bfb-b226-36d01d36849a
 source-git-commit: 9c548dbc0157607adda5ed76cab8ef970588e1e9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2498'
 ht-degree: 100%
 
@@ -20,8 +20,8 @@ ht-degree: 100%
 
 **[!UICONTROL Dynamic Media 一般設定]**&#x200B;は、次の場合にのみおこなうことができます。
 
-* Scene7 モードで Dynamic Media を実行している。 詳しくは、[Scene7 モードでの Dynamic Media の有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)を参照してください。
-* Adobe Experience Manager 6.5.11 以降の&#x200B;*既存の* **[!UICONTROL Dynamic Media 設定]**（**[!UICONTROL クラウドサービス]**&#x200B;内）を使用している。[Cloud Services での Dynamic Media 設定の作成](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)を参照してください。
+* Scene7 モードで Dynamic Media を実行している。 詳しくは、 [Scene7 モードの Dynamic Media の有効化](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)を参照してください。
+* Adobe Experience Manager 6.5.11 以降に、*既存の* **[!UICONTROL Dynamic Media 設定]**（**[!UICONTROL クラウドサービス]**&#x200B;内）がある。[クラウドサービスでの Dynamic Media 設定の作成](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)を参照してください。
 * 自身が管理者権限を持つ Experience Manager システム管理者である。
 
 Dynamic Media の一般設定は、経験豊富な web サイト開発者やプログラマーが使用することを目的としています。 Adobe Dynamic Mediaでは、これらの公開設定を変更するユーザーに、Adobe Experience Manager 上の Dynamic Media と基本的な画像技術に精通することをお勧めします。
@@ -30,7 +30,7 @@ Dynamic Media の一般設定は、経験豊富な web サイト開発者やプ�
 
 Dynamic Media の公開設定ページでは、Adobe Dynamic Media サーバーから web サイトやアプリケーションにアセットを配信する方法を決定するデフォルト設定を指定します。 設定が指定されていない場合、Adobe Dynamic Media サーバーは、Dynamic Media 公開設定ページで設定されたデフォルト設定に従ってアセットを配信します。
 
-オプション設定タスクの詳細については、[オプション - Dynamic Media のセットアップと設定 - Scene7 モードの設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)も参照してください。
+その他のオプションの設定タスクについては、[オプション - Dynamic Media のセットアップと設定 - Scene7 モードの設定](/help/assets/config-dms7.md#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)も参照してください。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ Adobe® Photoshop® ファイルからのテンプレート作成、レイヤー
 | **[!UICONTROL 処理]** | • **[!UICONTROL なし]** - PDF の処理は行われません。<br>• **[!UICONTROL サムネール]** - PDF ファイルの各ページをリッピングし、サムネール画像に変換します。<br> • **[!UICONTROL ラスタライズ]** - PDF ファイルのページをリッピングし、ベクターグラフィックをビットマップイメージに変換します。eCatalog を作成するには、このオプションを選択します。 |
 | **[!UICONTROL 抽出]** | • **[!UICONTROL なし]** - 検索単語やリンクは、PDF から抽出されません。<br>• **[!UICONTROL 検索単語]** - PDF ファイルから単語を抽出し、eCatalog ビューア内でこのファイルをキーワード検索できるようにします。<br>• **[!UICONTROL リンク]** - PDF ファイルからリンクを抽出し、eCatalog ビューアで使用できる画像マップに変換します。<br>• **[!UICONTROL 検索単語とリンク]** - eCatalog ビューアで使用する検索単語とリンクの両方を抽出します。 |
 | **[!UICONTROL 解像度（ピクセル／インチ）]** | 解像度設定を決定します。この設定により、PDF ファイル内の 1 inch あたりに表示するピクセル数を決定します。デフォルトは 150 です。 |
-| **[!UICONTROL カラースペース]** | ・**[!UICONTROL 自動検出]** - PDF ファイルのカラースペースを維持します。<br>・**[!UICONTROL RGB として強制]** - RGB のカラースペースに変換します。<br>・**[!UICONTROL CMYK としてレンダリング]** - CMYK カラースペースに変換します。<br>・**[!UICONTROL グレースケールとして強制]** - グレースケールカラースペースに変換します。 |
+| **[!UICONTROL カラースペース]** | ・**[!UICONTROL 自動検出]** - PDF ファイルのカラースペースを維持します。<br>・**[!UICONTROL RGB として強制]** - RGB のカラースペースに変換します。<br>• **[!UICONTROL CMYK として強制]** - CMYK のカラースペースに変換します。<br>・**[!UICONTROL グレースケールとして強制]** - グレースケールカラースペースに変換します。 |
 
 ### 「Illustrator」タブ {#illustrator-tab}
 
@@ -154,7 +154,7 @@ Illustrator（AI）画像ファイルのアップロード時に、様々な方�
 
 | 「Illustrator」オプション | 説明 |
 | --- | --- |
-| **[!UICONTROL 処理]** | ラスタライズを選択して、ファイル内のベクターグラフィックをビットマップ形式に変換します。 |
-| **[!UICONTROL レンダリング済みの画像で透明背景色を維持]** | ファイルの背景の透明度を維持します。 |
-| **[!UICONTROL 解像度（ピクセル/インチ）]** | 解像度設定を決定します。この設定により、ファイル内の 1 inch あたりに表示するピクセル数を決定します。 |
-| **[!UICONTROL カラースペース]** | ・**[!UICONTROL 自動検出]** - ファイルのカラースペースを保持します。<br>・**[!UICONTROL RGB として強制]** - RGB のカラースペースに変換します。<br>・**[!UICONTROL CMYK として強制]** - CMYK カラースペースに変換します。<br>・**[!UICONTROL グレースケールとして強制]** - グレースケールカラースペースに変換します。 |
+| **[!UICONTROL 処理]** | ラスタライズを選択して、ファイル内のベクターグラフィックスをビットマップ形式に変換します。 |
+| **[!UICONTROL レンダリング済みの画像での透明背景の維持]** | ファイルの背景の透明度を維持します。 |
+| **[!UICONTROL 解像度（ピクセル／インチ）]** | 解像度設定を決定します。この設定により、ファイル内の 1 inch あたりに表示するピクセル数を決定します。 |
+| **[!UICONTROL カラースペース]** | • **[!UICONTROL 自動検出]** - ファイルのカラースペースを保持します。<br>• **[!UICONTROL RGB として強制]** - RGB のカラースペースに変換します。<br>• **[!UICONTROL CMYK として強制]** - CMYK のカラースペースに変換します。<br>・**[!UICONTROL グレースケールとして強制]** - グレースケールカラースペースに変換します。 |

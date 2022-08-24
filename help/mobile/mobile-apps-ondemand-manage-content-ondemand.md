@@ -1,8 +1,8 @@
 ---
 title: コンテンツ管理
-seo-title: コンテンツ管理
+seo-title: Managing Content
 description: コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。このページでは、この機能について詳しく見ていきます。
-seo-description: コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。このページでは、この機能について詳しく見ていきます。
+seo-description: Content Management actions are the building blocks that help to create and manage content within an application. Follow this page to learn more.
 uuid: ab680836-133b-45b9-913c-e721b7e9fc04
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 89fc3701-0472-4629-95d3-da577581a0f0
 exl-id: 4e37e814-ceb6-4dfa-a4d3-754f15ca4edf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 72%
+source-wordcount: '279'
+ht-degree: 70%
 
 ---
 
@@ -21,23 +21,23 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。アプリケーション内のコンテンツに対して以下のアクションを実行します。
 
-## コンテンツ概要  {#content-overview}
+## コンテンツ概要 {#content-overview}
 
-オンライン雑誌を検討する場合、主要なコンテンツは記事、広告およびカバーです。AEM内では、3つの主なタイプのMobile On-Demandコンテンツを作成できます。
+オンライン雑誌を検討する場合、主要なコンテンツは記事、広告およびカバーです。AEM内では、3 つの主なタイプの Mobile On-Demand コンテンツを作成できます。
 
 * **記事**:情報を伝える技術と共に基づくテキスト
-* **バナー：** 通常、グラフィカルなプロモーションリンク
-* **コレクション：** カバーのテーマに適 ** した記事やバナーなどのコンテンツが入った、適切に定義されたグループを表します。
+* **バナー：** 通常はプロモーションリンク
+* **コレクション：** 明確に定義された *バケット* カバーのテーマに合った記事やバナーなどのコンテンツでいっぱいになる
 
-* **共有リソース：** 記事間で共通する部分の再利用または共有を可能にします
+* **共有リソース：** 記事間で共通の部品を再利用または共有できる
 
 >[!NOTE]
 >
->AEM Mobileアプリのデザインに関する考慮事項について詳しくは、オンラインヘルプの[AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)を参照してください。
+>AEM Mobileアプリのデザインに関する考慮事項について詳しくは、 [AEM Mobileアプリのデザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html) 」をオンラインヘルプに追加しました。
 
 ## コンテンツの作成と管理 {#creating-and-managing-content}
 
@@ -51,7 +51,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->通常、コンテンツを公開する前に、プリフライトをおこなう必要があります。詳しくは、[プリフライトによるプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md)を参照してください。
+>通常、コンテンツを公開する前に、プリフライトをおこなう必要があります。詳しくは、 [プリフライトでのプレビュー](/help/mobile/aem-mobile-manage-ondemand-services.md) を参照してください。
 
 ### その他のリソース {#additional-resources}
 

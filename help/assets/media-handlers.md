@@ -7,7 +7,7 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 source-git-commit: acc4b78f551e0e0694f41149fff7e24d855f504f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2164'
 ht-degree: 100%
 

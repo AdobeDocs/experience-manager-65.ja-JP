@@ -67,7 +67,7 @@ ht-degree: 99%
 | 編集 - DAM の外部で作業を進行中 | 対応 - デスクトップに同期しているユーザーの Creative Cloud ストレージアカウントでアセットが入手可能です。 | 対応 |  |
 | 編集 - 変更をアップロードする | 対応 - [チェックインアクション](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)（オプションコメント付き） | 対応 |  |
 | アップロード - 単一ファイル | 対応 - 現在のアクティブなドキュメントをアップロードします | 対応 | [Web インターフェイスを使用してアップロード](manage-assets.md#uploading-assets) |
-| アップロード - 複数ファイル／階層フォルダー構造 | 非対応 | はい | [Web インターフェイスを使用してアップロード](manage-assets.md#uploading-assets) またはカスタムスクリプティングやツールを使用します。 |
+| アップロード - 複数ファイル／階層フォルダー構造 | 非対応 | はい | [Web インターフェイスを使用してアップロード](manage-assets.md#uploading-assets)またはカスタムスクリプティングやツールを使用します。 |
 | その他 - ユーザーとログイン | Creative Cloud デスクトップアプリケーションにログインした Creative Cloud ユーザーが認識されます（SSO） | [!DNL Experience Manager] ユーザーと資格情報 | 両方のソリューションのユーザーが [!DNL Experience Manager] ユーザークォータに対してカウントされます。 |
 | その他 - ネットワークとアクセス | ネットワークを介してユーザーのデスクトップから [!DNL Experience Manager] デプロイメントにアクセスできる必要があります | ネットワークを介してユーザーのデスクトップから [!DNL Experience Manager] デプロイメントにアクセスできる必要があります | [!DNL Adobe Asset Link] はネットワークプロキシ環境を共有しません。 |
 | その他 - 多数のアセットを移行する | いいえ | 不可 | [Assets 移行ガイド](assets-migration-guide.md) |

@@ -6,7 +6,7 @@ user-guide-description: ドキュメントジャーニーは、複雑で異な�
 feature: Developer Tools
 role: Developer, Architect
 source-git-commit: 0b8b517607f305ad82caf6ba766cad5a46021439
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 100%
 
@@ -55,10 +55,10 @@ Please note that all links to other guides need to be absolute references with l
       + [AEM を使用したヘッドレス向けコンテンツモデリングの基本について](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/basics.html?lang=ja)
       + [AEM でのコンテンツフラグメントモデルの作成について学ぶ](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/architect/model-structure.html?lang=ja)
    + ヘッドレス翻訳ジャーニー {#translation}
-      + [AEM でのヘッドレス翻訳の理解](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html?lang=ja)
-      + [AEM ヘッドレス翻訳の概要](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html?lang=ja)
-      + [ヘッドレスコンテンツと AEM での翻訳方法について](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html?lang=ja)
-      + [翻訳コネクタの設定](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html?lang=ja)
-      + [翻訳ルールの設定](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html?lang=ja)
-      + [コンテンツを翻訳](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html?lang=ja)
-      + [翻訳済みコンテンツを公開](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html?lang=ja)
+      + [AEM でのヘッドレス翻訳の理解](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/overview.html)
+      + [AEM ヘッドレス翻訳の概要](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/getting-started.html)
+      + [ヘッドレスコンテンツと AEM での翻訳方法について](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/learn-about.html)
+      + [翻訳コネクタの設定](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/configure-connector.html)
+      + [翻訳ルールの設定](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translation-rules.html)
+      + [コンテンツを翻訳](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/translate-content.html)
+      + [翻訳済みコンテンツを公開](https://experienceleague.adobe.com/docs/experience-manager-65/headless-journey/translation/publish-content.html)

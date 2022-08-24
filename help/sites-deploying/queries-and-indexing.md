@@ -13,7 +13,7 @@ legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
 source-git-commit: 7cd4b6918a8b0de68f9f5c6a79ab3b49e8ef6fc1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2868'
 ht-degree: 100%
 

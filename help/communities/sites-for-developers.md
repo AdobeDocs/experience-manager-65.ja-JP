@@ -1,8 +1,8 @@
 ---
 title: コミュニティサイトの基本事項
-seo-title: コミュニティサイトの基本事項
+seo-title: Community Site Essentials
 description: コミュニティサイトのエクスポートと削除およびカスタムサイトテンプレートの作成
-seo-description: コミュニティサイトのエクスポートと削除およびカスタムサイトテンプレートの作成
+seo-description: Exporting and deleting community sites and creating custom site templates
 uuid: f0ec0e71-64e9-415a-b14a-939a9b1611c1
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,12 +12,12 @@ discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 60%
+source-wordcount: '561'
+ht-degree: 59%
 
 ---
 
-# コミュニティサイトの基本事項  {#community-site-essentials}
+# コミュニティサイトの基本事項 {#community-site-essentials}
 
 ## カスタムサイトテンプレート {#custom-site-template}
 
@@ -28,7 +28,7 @@ ht-degree: 60%
 * カスタムテンプレートを作成します。
 * 既定のサイトテンプレートパスをオーバーレイします。
 * オーバーレイパスにカスタムテンプレートを追加します。
-* `page-template`プロパティを`configuration`ノードに追加して、カスタムテンプレートを指定します。
+* カスタムテンプレートを指定するには、 `page-template` プロパティを `configuration` ノード。
 
 **デフォルトのテンプレート**：
 
@@ -42,7 +42,7 @@ ht-degree: 60%
 
 **種類**：string
 
-**値**: `template-name` （延長なし）
+**値**: `template-name` （拡張子なし）
 
 **設定ノード**：
 
@@ -56,18 +56,18 @@ ht-degree: 60%
 
 >[!CAUTION]
 >
->カスタムテンプレートに&#x200B;*sitepage.hbs*&#x200B;という名前を付けると、すべてのコミュニティサイトがカスタマイズされます。
+>カスタムテンプレートに *sitepage.hbs*&#x200B;に設定すると、すべてのコミュニティサイトがカスタマイズされます。
 
 ### カスタムサイトテンプレートの例 {#custom-site-template-example}
 
-例えば、`vertical-sitepage.hbs`はサイトテンプレートで、メニューリンクをバナーの下に水平方向ではなく、ページの左側に垂直方向に配置します。
+例えば、 `vertical-sitepage.hbs` は、バナーの下に水平方向ではなく、ページの左側から垂直方向にメニューリンクを配置するサイトテンプレートです。
 
-[FilePlaceカス](assets/vertical-sitepage.hbs)
-タムサイトテンプレートをオーバーレイフォルダーに配置します。
+[ダウンロード](assets/vertical-sitepage.hbs)
+オーバーレイフォルダーにカスタムサイトテンプレートを配置します。
 
 `/apps/social/console/components/hbs/sitepage/vertical-sitepage.hbs`
 
-設定ノードに`page-template`プロパティを追加して、カスタムテンプレートを識別します。
+カスタムテンプレートを指定するには、 `page-template` プロパティを設定ノードに設定します。
 
 `/content/sites/sample/en/configuration`
 
@@ -77,7 +77,7 @@ ht-degree: 60%
 
 カスタムコードをレプリケートするには、[パッケージを作成](../../help/sites-administering/package-manager.md#creating-a-new-package)し、すべてのインスタンスにデプロイすることをお勧めします。
 
-## コミュニティサイトの書き出し  {#exporting-a-community-site}
+## コミュニティサイトの書き出し {#exporting-a-community-site}
 
 コミュニティサイトが作成されたら、パッケージマネージャーに保存され、ダウンロードおよびアップロードできる AEM パッケージとしてそのサイトを書き出すことができます。
 
@@ -85,31 +85,31 @@ ht-degree: 60%
 
 UGC とカスタムコードはコミュニティサイトパッケージに含まれていないことに注意してください。
 
-UGCを書き出すには、GitHubで利用可能なオープンソース移行ツールである[AEM Communities UGC Migration Tool](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration)を使用します。
+UGC を書き出すには、 [AEM Communities UGC 移行ツール](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration):GitHub で利用できるオープンソース移行ツールです。
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
-AEM Communities 6.3 Service Pack 1以降、**[!UICONTROL Communities]**/**[!UICONTROL Sites]**&#x200B;コンソールからコミュニティサイトにカーソルを合わせると、「サイトを削除」アイコンが表示されます。 開発中にコミュニティサイトを削除して新規に開始したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
+AEM Communities 6.3 Service Pack 1 以降、次の場所からコミュニティサイトにカーソルを合わせると、「サイトを削除」アイコンが表示されます。 **[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]** コンソール。 開発時にコミュニティサイトを削除して新規に開始したい場合は、この機能を使用できます。 コミュニティサイトを削除すると、そのサイトに関連付けられている次のアイテムが削除されます。
 
 * [UGC](#user-generated-content)
 * [ユーザーグループ](#community-user-groups)
 * [Assets](#enablement-assets)
 * [データベースレコード](#database-records)
 
-### Community Unique Site ID {#community-unique-site-id}
+### コミュニティの一意のサイト ID {#community-unique-site-id}
 
 CRXDE を使用して、コミュニティに関連付けられている一意のサイト ID を識別するには、次の手順に従います。
 
-* `/content/sites/*<site name>*/en/rep:policy`など、サイトの言語ルートに移動します。
+* サイトの言語ルート（例： ）に移動します。 `/content/sites/*<site name>*/en/rep:policy`.
 
-* `rep:principalName`を持つ`allow<#>`ノードを、`rep:principalName = *community-enable-nrh9h-members*`の形式で探します。
+* 次を検索： `allow<#>` ノード `rep:principalName` この形式で `rep:principalName = *community-enable-nrh9h-members*`.
 
-* サイトIDは、`rep:principalName`の3番目のコンポーネントです。
+* サイト ID は、 `rep:principalName`
 
    例えば、`rep:principalName = community-enable-nrh9h-members`
 
    * **サイト名** = *enable*
-   * **サイトID**  =  *nrh9h*
+   * **サイト ID** = *nrh9h*
    * **一意のサイト ID** = *enable-nrh9h*
 
 ### ユーザー生成コンテンツ {#user-generated-content}
@@ -124,14 +124,14 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-この場合、（パブリッシュインスタンスで入力された）ユーザー生成コンテンツのみが削除され、（オーサーインスタンスで入力された）作成コンテンツは削除されません。したがって、[シャドウノード](srp.md#shadownodes)は影響を受けません。
+この場合、（パブリッシュインスタンスで入力された）ユーザー生成コンテンツのみが削除され、（オーサーインスタンスで入力された）作成コンテンツは削除されません。したがって [シャドウノード](srp.md#shadownodes) は影響を受けません。
 
 ### コミュニティユーザーグループ {#community-user-groups}
 
 すべてのオーサーインスタンスおよびパブリッシュインスタンスで、[セキュリティコンソール](../../help/sites-administering/security.md)から、以下に該当する[ユーザーグループ](users.md)を検索して削除します。
 
-* 先頭に`community`が付きます。
-* [一意のサイトID](#community-unique-site-id)が続きます。
+* プレフィックス `community`
+* 続いて [一意のサイト id](#community-unique-site-id)
 
 （例：`community-engage-x0e11-members`）。
 
@@ -139,10 +139,10 @@ Github から communities-srp-tools プロジェクトを取得します。
 
 メインコンソールから、次の手順に従います。
 
-* 「**[!UICONTROL アセット]**」を選択します。
-* **[!UICONTROL 選択]**&#x200B;モードに入ります。
-* [一意のサイトID](#community-unique-site-id)を持つという名前のフォルダーを選択します。
-* 「**[!UICONTROL 削除]**」を選択します（場合によっては、「**[!UICONTROL 詳細…」から選択する必要があります）。]**)です。
+* 選択 **[!UICONTROL Assets]**.
+* 入力 **[!UICONTROL 選択]** モード。
+* 次を使用してという名前のフォルダーを選択します。 [一意のサイト ID](#community-unique-site-id).
+* 選択 **[!UICONTROL 削除]** ( 次の中から選択する必要がある場合があります： **[!UICONTROL さらに詳しく…]**) をクリックします。
 
 ### データベースレコード {#database-records}
 

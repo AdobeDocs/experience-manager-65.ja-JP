@@ -21,7 +21,7 @@ Analytics Standard API を介して AEM と Adobe Analytics を統合するに�
 >
 >API の選択は、AEM／Analytics 統合に使用される認証方法によって決定されます。
 >
->詳細は、[2.0 API への移行](https://developer.adobe.com/analytics-apis/docs/2.0/guides/migration/)でも説明しています。
+>詳しくは、[2.0 API への移行](https://developer.adobe.com/analytics-apis/docs/2.0/guides/migration/)でも参照できます。
 
 ## 前提条件 {#prerequisites}
 
@@ -63,7 +63,7 @@ Analytics Standard API を介して AEM と Adobe Analytics を統合するに�
 
 ## AEM と Adobe Analytics 統合のための IMS 設定 {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
-Adobe Developer Console を使用して、（AEM が使用する）Adobe Analytics のプロジェクト（統合）を作成し、必要な権限を割り当てる必要があります。
+Adobe Developer Console を使用する場合は、Adobe Analytics でプロジェクト（統合）を作成し、AEM で使用するための権限を割り当てる必要があります。
 
 ### プロジェクトの作成 {#creating-the-project}
 
@@ -93,19 +93,19 @@ Adobe Developer Console を開いて、AEM が使用する Adobe Analytics で�
 
    ![API を追加](assets/integration-analytics-io-12.png)
 
-1. 認証のタイプとして&#x200B;**サービスアカウント（JWT）**&#x200B;を選択し、「**次へ**」で続行します。
+1. 認証のタイプとして、「**サービスアカウント（JWT）**」を選択し、「**次へ**」をクリックして進みます。
 
    ![認証のタイプを選択](assets/integration-analytics-io-12a.png)
 
-1. **公開鍵**&#x200B;をアップロードして、完了したら&#x200B;**次へ**&#x200B;に進みます。
+1. **公開鍵**&#x200B;をアップロードして、完了したら&#x200B;**次へ**&#x200B;をクリックして進みます。
 
    ![公開鍵をアップロード](assets/integration-analytics-io-13.png)
 
-1. 資格情報を確認して、**次へ**&#x200B;に進みます。 
+1. 資格情報を確認して、**次へ**&#x200B;をクリックして進みます。
 
    ![資格情報を確認](assets/integration-analytics-io-15.png)
 
-1. 必要な製品プロファイルを選択して、**設定済み API を保存**&#x200B;に進みます。 
+1. 必要な製品プロファイルを選択して、**設定済み API を保存**&#x200B;に進みます。
 
    ![必要な製品プロファイルを選択](assets/integration-analytics-io-16.png)
 
@@ -119,7 +119,7 @@ Adobe Developer Console を開いて、AEM が使用する Adobe Analytics で�
 
    * [https://adminconsole.adobe.com](https://adminconsole.adobe.com/)
 
-1. **製品**&#x200B;に移動し（上部のツールバー）、（左のパネルから）**Adobe Analytics - &lt;*your-tenant-id*>**&#x200B;を選択します。
+1. 上部のツールバーの&#x200B;**製品**&#x200B;に移動し、左のパネルから、**Adobe Analytics - &lt;*your-tenant-id*>**&#x200B;を選択します。
 1. **製品プロファイル**&#x200B;を選択して、表示されるリストから必要なワークスペースを選択します（例：「デフォルトのワークスペース」）。
 1. **API 資格情報**&#x200B;を選択して、必要な統合設定を選択します。
 1. **製品の役割**&#x200B;として、**オブザーバー**&#x200B;の代わりに&#x200B;**編集者**&#x200B;を選択します。
@@ -154,13 +154,13 @@ AEM に戻り、Analytics の統合プロジェクトから必要な値を追加
 
    * **タイトル**：テキスト。
    * **認証サーバー**：以下の&#x200B;**ペイロード**&#x200B;セクションの `aud` 行からこれをコピーして貼り付けます。例：以下の例では `https://ims-na1.adobelogin.com`　
-   * **API キー**：これを[プロジェクトの概要](#details-stored-for-the-ims-integration-project)の「**資格情報**」セクションからコピーします
-   * **クライアント秘密鍵**：これを[「サービスアカウント（JWT）」セクションの「クライアント秘密鍵」タブ](#details-stored-for-the-ims-integration-project)で生成し、コピーします
-   * **ペイロード**：これを[「サービスアカウント（JWT）」セクションの「JWT を生成」タブ](#details-stored-for-the-ims-integration-project)からコピーします
+   * **API キー**：これを[プロジェクトの概要](#details-stored-for-the-ims-integration-project)の「**資格情報**」セクションからコピーします。
+   * **クライアント秘密鍵**：これを[「サービスアカウント（JWT）」セクションの「クライアント秘密鍵」タブ](#details-stored-for-the-ims-integration-project)で生成し、コピーします。
+   * **ペイロード**：これを[「サービスアカウント（JWT）」セクションの「JWT を生成」タブ](#details-stored-for-the-ims-integration-project)からコピーします。
 
-   ![AEM IMS の設定の詳細](assets/integrate-analytics-io-10.png)
+   ![AEM IMS 設定の詳細](assets/integrate-analytics-io-10.png)
 
-1. 「**作成**」で確認します。
+1. 「**作成**」で確定します。
 
 1. Adobe Analytics の設定が AEM コンソールに表示されます。
 
@@ -182,7 +182,7 @@ AEM に戻り、Analytics の統合プロジェクトから必要な値を追加
 1. 設定を選択します。
 1. ツールバーから&#x200B;**ヘルスチェック**&#x200B;を選択し、次に&#x200B;**チェック**&#x200B;を選択します。
 
-   ![IMS の設定 - ヘルスチェック](assets/integrate-analytics-io-12.png)
+   ![IMS 設定 - ヘルスチェック](assets/integrate-analytics-io-12.png)
 
 1. 成功すると、確認メッセージが表示されます。
 

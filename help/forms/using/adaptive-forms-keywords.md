@@ -10,7 +10,7 @@ discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 100%
 
@@ -130,7 +130,7 @@ ht-degree: 100%
   <tr>
    <td><p>width</p> </td>
    <td><p>buttonText</p> </td>
-   <td><p>index</p> </td>
+   <td><p>索引</p> </td>
   </tr>
   <tr>
    <td><p>height</p> </td>

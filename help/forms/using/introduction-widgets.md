@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 exl-id: 3458471a-9815-463e-8044-68631073863c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1170'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -101,19 +101,19 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>このイベントはフィールドがフォーカスされるたびにトリガーされます。これにより、「Enter」スクリプトをフィールドに対して実行できます。 イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>このイベントはフィールドがフォーカスされるたびにトリガーされます。フィールドで「突入」スクリプトの実行を可能にします。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>このイベントはフィールドを離れるたびにトリガーされます。これにより、エンジンはフィールドの値を設定し、その「終了」スクリプトを実行できます。 イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>このイベントはフィールドを離れるたびにトリガーされます。エンジンがフィールドの値を設定し、その「終了」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>このイベントは、フィールドに記述された「変更」スクリプトをエンジンが実行できるようにトリガーされます。 イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>このイベントはフィールドで書かれた「変更」スクリプトの実行を可能にします。イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>このイベントはフィールドがクリックされるたびにトリガーされます。これにより、エンジンはフィールドで記述された「クリック」スクリプトを実行できます。 イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>このイベントはフィールドがクリックされるたびにトリガーされます。それはエンジンがフィールドで書かれた「クリック」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -137,7 +137,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <td>フォーカスをフィールドに移し、XFA_CLICK_EVENT を呼び出します。</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:文字列 </em>エラーを表す<br /> <em>errorType:文字列 ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>erorrMessage: string </em>representing the error<br /> <em>errorType: string (“warning”/”error”)</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
    <td>エラーメッセージとエラータイプをウィジェットに送信します。ウィジェットはエラーを表示します。</td>
   </tr>
   <tr>

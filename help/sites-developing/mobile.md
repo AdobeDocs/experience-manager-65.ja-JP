@@ -13,7 +13,7 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-0/develop/mobile/mobile
 exl-id: 21b2037a-685a-441d-aecd-865884253e03
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3840'
 ht-degree: 100%
 
@@ -107,7 +107,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>mobilelogo</td>
-   <td>hidden</td>
+   <td>非表示</td>
    <td>- logo 基盤コンポーネントに基づく<br />
 - 画像をレンダリングする（デバイスが対応している場合）<br /> </td>
   </tr>
@@ -124,7 +124,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>mobiletopnav</td>
-   <td>hidden</td>
+   <td>非表示</td>
    <td><p>- topnav 基盤コンポーネントに基づく</p> <p>- テキストのみをレンダリングする</p> </td>
   </tr>
  </tbody>

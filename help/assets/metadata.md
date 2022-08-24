@@ -31,13 +31,13 @@ ht-degree: 99%
 
 ## メタデータとその起源 {#how-to-edit-or-add-metadata}
 
-メタデータは、検索可能なアセットに関する追加情報です。アセットおよび [!DNL Experience Manager] に追加され、アセットをアップロードする際に処理されます。 既存のメタデータを編集し、既存のフィールドに新しいメタデータプロパティを追加できます。 各組織では、メタデータの語彙を制御し、信頼性を確保する必要があります。 このため [!DNL Experience Manager Assets] では、新しいメタデータプロパティをオンデマンドで追加できません。 メタデータを保持する新しいプロパティまたはフィールドを追加できるのは、管理者と開発者だけです。 ユーザーは、既存のフィールドにメタデータを入力できます。
+メタデータは、検索可能なアセットに関する追加情報です。アセットおよび [!DNL Experience Manager] に追加され、アセットをアップロードする際に処理されます。既存のメタデータを編集し、既存のフィールドに新しいメタデータプロパティを追加できます。各組織では、メタデータの語彙を制御し、信頼性を確保する必要があります。このため [!DNL Experience Manager Assets] では、新しいメタデータプロパティをオンデマンドで追加できません。メタデータを保持する新しいプロパティまたはフィールドを追加できるのは、管理者と開発者だけです。ユーザーは、既存のフィールドにメタデータを入力できます。
 
 デジタルアセットにメタデータを追加するには、次の方法を使用できます。
 
-* まず、アセットを作成するネイティブアプリケーションがメタデータを追加します。 例えば、[Acrobat がいくつかのメタデータを PDF ファイルに追加](https://helpx.adobe.com/jp/acrobat/using/pdf-properties-metadata.html)する場合や、カメラが写真にいくつかの基本的なメタデータを追加する場合があります。アセットを生成する際に、ネイティブアプリケーション自体にメタデータを追加できます。 例えば、[Adobe Lightroom で IPTC メタデータを追加する](https://helpx.adobe.com/jp/lightroom-classic/help/metadata-basics-actions.html)ことができます。
+* まず、アセットを作成するネイティブアプリケーションがメタデータを追加します。例えば、[Acrobat がいくつかのメタデータを PDF ファイルに追加](https://helpx.adobe.com/jp/acrobat/using/pdf-properties-metadata.html)する場合や、カメラが写真にいくつかの基本的なメタデータを追加する場合があります。アセットを生成する際に、ネイティブアプリケーション自体にメタデータを追加できます。例えば、[Adobe Lightroom で IPTC メタデータを追加する](https://helpx.adobe.com/jp/lightroom-classic/help/metadata-basics-actions.html)ことができます。
 
-* アセットを [!DNL Experience Manager] にアップロードする前に、アセットの作成に使用するネイティブアプリケーションまたは他のメタデータ編集アプリケーションを使用して、メタデータの編集および変更ができます。 アセットを Experience Manager にアップロードすると、メタデータは処理されます。 例えば、 [ [!DNL Adobe Bridge] でのメタデータの操作](https://helpx.adobe.com/jp/bridge/using/metadata-adobe-bridge.html)を参照し、[!DNL Adobe Exchange] での [ [!DNL Adobe Bridge] のタグパネル](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)を参照してください。
+* アセットを [!DNL Experience Manager] にアップロードする前に、アセットの作成に使用するネイティブアプリケーションまたは他のメタデータ編集アプリケーションを使用して、メタデータの編集および変更ができます。アセットを Experience Manager にアップロードすると、メタデータは処理されます。例えば、 [ [!DNL Adobe Bridge] でのメタデータの操作](https://helpx.adobe.com/jp/bridge/using/metadata-adobe-bridge.html)を参照し、[!DNL Adobe Exchange] での [ [!DNL Adobe Bridge] のタグパネル](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html)を参照してください。
 
 * [!DNL Experience Manager Assets] では、[!UICONTROL プロパティ]ページでアセットのメタデータを手動で追加または編集することができます。
 
@@ -65,7 +65,7 @@ ht-degree: 99%
    >
    >テキストフィールドが空の場合、現在設定されているメタデータはありません。フィールドに値を入力して保存すると、そのメタデータプロパティを追加できます。
 
-アセットのメタデータへの変更内容は、XMP データの一部として元のバイナリに書き戻されます。メタデータの書き戻しワークフローは、元のバイナリにメタデータを追加します。 既存のプロパティ（`dc:title` など）への変更は上書きされ、新しいプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
+アセットのメタデータへの変更内容は、XMP データの一部として元のバイナリに書き戻されます。メタデータの書き戻しワークフローは、元のバイナリにメタデータを追加します。既存のプロパティ（`dc:title` など）への変更は上書きされ、新しいプロパティ（`cq:tags` などのカスタムプロパティを含む）はスキーマとともに追加されます。
 
 XMP の書き戻しは、[技術要件](/help/sites-deploying/technical-requirements.md)に示されたプラットフォームおよびファイル形式でサポートされ、有効になります。
 
@@ -234,7 +234,7 @@ For details, see [configuration to apply metadata profile globally](/help/assets
 
 * アセットのメタデータをインポートするための CSV ファイルは、非常に特殊な形式です。労力と時間を節約し、意図しないエラーを避けるために、エクスポートされた CSV ファイルの形式を使用して CSV の作成を開始できます。
 
-* CSV ファイルを使用してメタデータをインポートする場合、必要な日付形式は `YYYY-MM-DDThh:mm:ss.fff-00:00` です。その他の形式を使用する場合、日付値は設定されません。 書き出されたメタデータ CSV ファイルの日付形式は、`YYYY-MM-DDThh:mm:ss-00:00` 形式になります。インポートする場合は、`fff` で示すナノ秒値を追加して、有効な形式に変換します。
+* CSV ファイルを使用してメタデータをインポートする場合、必要な日付形式は `YYYY-MM-DDThh:mm:ss.fff-00:00` です。その他の形式を使用する場合、日付値は設定されません。書き出されたメタデータ CSV ファイルの日付形式は、`YYYY-MM-DDThh:mm:ss-00:00` 形式になります。インポートする場合は、`fff` で示すナノ秒値を追加して、有効な形式に変換します。
 
 >[!MORELIKETHIS]
 >

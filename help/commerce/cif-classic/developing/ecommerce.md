@@ -11,7 +11,7 @@ topic-tags: platform
 docset: aem65
 exl-id: da63c576-34cd-40ce-81de-d7391a331364
 source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 100%
 

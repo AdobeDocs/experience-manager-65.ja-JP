@@ -11,7 +11,7 @@ topic-tags: document_services
 discoiquuid: 83ca522e-d16e-4196-9aa7-84f85de8dee2
 feature: Document Security
 exl-id: fe5d83e8-5e36-4146-a20a-dab2213055e2
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 100%
@@ -125,7 +125,7 @@ while ((read = output.read(bytes)) != -1) {
     outputStream.write(bytes, 0, read);
 }
 
-System.out.println("UsageRights applied successfully to the document. ");
+System.out.println("UsageRights applied successfully to the document. ”);
  outputStream.close();
 inputFileStream.close();
 
@@ -184,7 +184,7 @@ while ((read = fileStream.read(bytes)) != -1) {
 
     outputStream.write(bytes, 0, read);
 }
-System.out.println("RE rights removed successfully from the document.");
+System.out.println("RE rights removed successfully from the document.”);
 outputStream.close();
 inputFileStream.close();
 ```

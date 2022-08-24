@@ -20,9 +20,9 @@ ht-degree: 35%
 
 # コミュニティグループ {#community-groups}
 
-コミュニティグループ機能を使用すると、パブリッシュ環境とオーサー環境から許可されたユーザー（コミュニティメンバーと作成者）がコミュニティサイト内でサブコミュニティを動的に作成できます。
+コミュニティグループ機能を使用すると、パブリッシュ環境とオーサー環境から、許可されたユーザー（コミュニティメンバーと作成者）がコミュニティサイト内でサブコミュニティを動的に作成できます。
 
-この機能は [グループ機能](/help/communities/functions.md#groups-function) が [コミュニティサイト](/help/communities/sites-console.md) 構造。
+この機能は、 [グループ機能](/help/communities/functions.md#groups-function) が [コミュニティサイト](/help/communities/sites-console.md) 構造。
 
 A [コミュニティグループテンプレート](/help/communities/tools-groups.md) コミュニティグループを動的に作成する際のコミュニティグループページのデザインを提供します。
 
@@ -30,11 +30,11 @@ A [コミュニティグループテンプレート](/help/communities/tools-gro
 
 ## 新しいグループの作成 {#creating-a-new-group}
 
-新しいコミュニティグループを作成する機能は、グループ機能を含むコミュニティサイトが存在するかどうかに依存します。このサイトには、 [参照サイトテンプレート](/help/communities/sites.md).
+新しいコミュニティグループを作成する機能は、グループ機能を含むコミュニティサイト ( [参照サイトテンプレート](/help/communities/sites.md).
 
-以下の例では、 `Reference Site Template` 詳しくは、 [AEM Communitiesの概要](/help/communities/getting-started.md) チュートリアル
+以下の例では、 `Reference Site Template` 例えば、 [AEM Communitiesの概要](/help/communities/getting-started.md) チュートリアル
 
-これは、 **グループ** メニュー項目を選択：
+これは、 **グループ** メニュー項目が選択されている：
 
 ![new-group](assets/new-group.png)
 
@@ -58,17 +58,17 @@ A [コミュニティグループテンプレート](/help/communities/tools-gro
 
 * **グループ URL 名**
 
-   URL の一部となるグループページの名前。
+   URL の一部になるグループページの名前。
 
 * **オープングループ**
 
-   選択 `Open Group` 匿名のサイト訪問者がコンテンツを閲覧できる場合は、そのコンテンツの選択を解除します `Member Only Group`.
+   選択 `Open Group` 匿名のサイト訪問者がコンテンツを閲覧できることを示し、その選択を解除します `Member Only Group`.
 
 * **メンバーのみのグループ**
 
    選択 `Member Only Group` グループのメンバーのみがコンテンツを表示でき、選択を解除できることを示します `Open Group`.
 
-の **テンプレート** 「 」タブでは、コミュニティサイトの構造やコミュニティサイトテンプレートにグループ機能を含めたときに指定したコミュニティグループテンプレートのリストから選択できます。
+以下 **テンプレート** 「 」タブでは、コミュニティサイトの構造やコミュニティサイトテンプレートにグループ機能が含まれたときに指定されたコミュニティグループテンプレートのリストから選択できます。
 
 ![group-template](assets/group-template.png)
 
@@ -82,13 +82,13 @@ A [コミュニティグループテンプレート](/help/communities/tools-gro
 
 ![group-page](assets/group-page.png)
 
-の選択 `Focus Group` リンクをクリックすると、ブラウザーでフォーカスグループページが開きます。このページは、選択したテンプレートに基づいて初期の外観を持ち、メインのコミュニティサイトのメニューの下にサブメニューが表示されます。
+の選択 `Focus Group` リンクはブラウザでフォーカスグループページを開きます。このページは、選択したテンプレートに基づいて初期の外観を持ち、メインのコミュニティサイトのメニューの下にサブメニューが含まれています。
 
 ![open-group-page](assets/open-group-page.png)
 
 ### コミュニティグループメンバーのリストコンポーネント {#community-group-member-list-component}
 
-10. `Community Group Member List` コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
+この `Community Group Member List` コンポーネントは、グループテンプレートの開発者が使用することを目的としています。
 
 ### 追加情報 {#additional-information}
 

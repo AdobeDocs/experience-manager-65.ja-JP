@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 761e7909-43ba-4642-bcfc-8d76f139b9a3
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '7163'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -271,7 +271,7 @@ Watched Folder サービスでは、エンドポイントの作成、更新お�
 * %F = ソースファイル名
 * %E = ソースファイル拡張子
 
-出力パラメーターのマッピングパターンが「File.separator」（パスセパレーター）で終わる場合、フォルダーが作成され、内容がそのフォルダーにコピーされます。 パターンが「File.separator」で終わらない場合は、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。 出力パラメーターのマッピングについて詳しくは、[監視フォルダーのヒントとテクニック](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders)を参照してください。
+出力パラメーターのマッピングパターンが「File.separator」（つまり、パスセパレーター）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。出力パラメーターのマッピングについて詳しくは、[監視フォルダーのヒントとテクニック](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders)を参照してください。
 
 ## ジョブ数の制限について {#about-throttling}
 

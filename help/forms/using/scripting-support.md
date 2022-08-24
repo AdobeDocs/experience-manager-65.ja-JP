@@ -12,7 +12,7 @@ discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3892'
 ht-degree: 100%
 
@@ -512,7 +512,7 @@ ht-degree: 100%
     </ul> </td>
   </tr>
   <tr>
-   <td>name</td>
+   <td>名前</td>
    <td>このノードの名前を指定します。</td>
    <td>HTML ではスクリプトの使用による名前の設定は許可されていません。</td>
   </tr>
@@ -593,7 +593,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>カラー</td>
    <td>color プロパティは一意の塗りつぶしカラーを定義します。</td>
    <td>
     <ul>
@@ -614,7 +614,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>カラー</td>
    <td>color プロパティは、フォーム上のリニアグラデーション塗りつぶしのための一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -652,7 +652,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>カラー</td>
    <td>color プロパティは、パターンオブジェクトの一意のカラーを記述します。 </td>
    <td>
     <ul>
@@ -673,7 +673,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>カラー</td>
    <td>color プロパティは、放射状オブジェクトの一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -694,7 +694,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>カラー</td>
    <td>color プロパティは、点描オブジェクトの一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -725,12 +725,12 @@ ht-degree: 100%
    <td> </td>
   </tr>
   <tr>
-   <td>presence</td>
+   <td>存在</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>name</td>
+   <td>名前</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td>
    <td>ランタイムでの値の設定はサポートされていません。</td>
   </tr>
@@ -752,7 +752,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>color</td>
+   <td>カラー</td>
    <td>color プロパティは、コーナーオブジェクトの一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -773,7 +773,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>ボーダー</td>
    <td>border オブジェクトは、checkButton オブジェクトを囲む境界線を表します。 </td>
    <td>変更はモデルに反映され、スクリプティングに使用できますが、HTML 要素には同期されません。したがって、変更は UI には反映されません。<br /> </td>
   </tr>
@@ -790,7 +790,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>ボーダー</td>
    <td>border オブジェクトは、choiceList オブジェクトを囲む境界線を表します。</td>
    <td> </td>
   </tr>
@@ -801,7 +801,7 @@ ht-degree: 100%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| border | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
+| ボーダー | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## 画像 {#image}
 
@@ -829,13 +829,13 @@ ht-degree: 100%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| border | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
+| ボーダー | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## numericEdit {#numericedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| border | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
+| ボーダー | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
 
 ## object {#object}
 
@@ -881,7 +881,7 @@ ht-degree: 100%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>ボーダー</td>
    <td>border オブジェクトは、オブジェクトを囲む境界線を表します。<br /> </td>
    <td>なし</td>
   </tr>
@@ -903,7 +903,7 @@ ht-degree: 100%
    <td>なし</td>
   </tr>
   <tr>
-   <td>border</td>
+   <td>ボーダー</td>
    <td>このフィールドを囲む境界線を指定します。</td>
    <td>なし</td>
   </tr>
@@ -949,7 +949,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td>caption</td>
-   <td> <br /> </td>
+   <td>  caption オブジェクトは、フォームデザインオブジェクトに関連付けられた説明ラベルを表します。<br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -963,17 +963,17 @@ ht-degree: 100%
    <td>なし</td>
   </tr>
   <tr>
-   <td>presence</td>
+   <td>存在</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>access</td>
+   <td>アクセス</td>
    <td>コンテナのコンテンツへのユーザーアクセスを制御します。オブジェクト、例えばサブフォーム。</td>
    <td>exclgrp 内の個々の項目については、常にオープンを返します。 </td>
   </tr>
   <tr>
-   <td>name</td>
+   <td>名前</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td>
    <td>なし</td>
   </tr>
@@ -1017,7 +1017,7 @@ ht-degree: 100%
  </tbody>
 </table>
 
-## border {#border}
+## ボーダー {#border}
 
 <table>
  <tbody>
@@ -1109,7 +1109,7 @@ ht-degree: 100%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| presence | オブジェクトの可視性を指定します。 | なし |
+| 存在 | オブジェクトの可視性を指定します。 | なし |
 
 ## FormCalc {#formcalc}
 

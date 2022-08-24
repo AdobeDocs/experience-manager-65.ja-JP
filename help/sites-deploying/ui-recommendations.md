@@ -12,7 +12,7 @@ discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 100%
 
@@ -116,7 +116,7 @@ AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは�
 
 基本処理の背景情報については、以下を参照してください。
 
-* [ページのオーサリング](/help/sites-authoring/page-authoring.md)。
+* [ページのオーサリング](/help/sites-authoring/page-authoring.md).
 
 開発情報について詳しくは、以下を参照してください。
 

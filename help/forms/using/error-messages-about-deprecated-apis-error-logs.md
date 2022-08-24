@@ -18,7 +18,7 @@ ht-degree: 8%
 ## 問題 {#issue}
 
 * 次のエラーメッセージが error.log ファイルに表示されます。
-   ` *WARN* [default task-36] org.apache.jackrabbit.oak.spi.security.principal.AclGroupDeprecation use of deprecated java.acl.Group-related API - this method is going to be removed in future Oak releases - see OAK-7358 for details` (NPR-38282)
+   ` *WARN* [default task-36] org.apache.jackrabbit.oak.spi.security.principal.AclGroupDeprecation use of deprecated java.acl.Group-related API - this method is going to be removed in future Oak releases - see OAK-7358 for details`（NPR-38282）
 
 ## 解像度 {#workaround}
 

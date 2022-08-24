@@ -9,7 +9,7 @@ discoiquuid: 55c08940-8c25-4938-8e49-25bce20aaf22
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 100%
 
@@ -100,13 +100,13 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
      <tr> 
       <td>必須フィールド</td> 
       <td>Enabled</td> 
-      <td>Enabled</td> 
-      <td>Enabled</td> 
+      <td>有効</td> 
+      <td>有効</td> 
      </tr> 
      <tr> 
       <td>複数行を許可<br /> </td> 
       <td>無効</td> 
-      <td>Enabled</td> 
+      <td>有効</td> 
       <td>無効</td> 
      </tr> 
     </tbody> 
@@ -119,7 +119,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
    | タイトル | 郵便番号 |
    | 要素名 | customer_ZIPCode |
    | 最大桁数 | 6 |
-   | 必須フィールド | Enabled |
+   | 必須フィールド | 有効 |
    | 表示パターンタイプ | パターンなし |
 
 1. **[!UICONTROL 電子メール]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、以下のテーブルに示す値を設定して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
@@ -128,7 +128,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
    |---|---|
    | タイトル | 電子メール |
    | 要素名 | customer_Email |
-   | 必須フィールド | Enabled |
+   | 必須フィールド | 有効 |
 
 1. **[!UICONTROL 添付ファイル]**&#x200B;コンポーネントをフッターコンポーネントの前にドラッグします。コンポーネントのプロパティを開き、以下のテーブルに示す値を設定して「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 
@@ -148,7 +148,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
      </tr> 
      <tr> 
       <td>必須フィールド</td> 
-      <td>Enabled</td> 
+      <td>有効</td> 
      </tr> 
     </tbody> 
    </table>
@@ -175,7 +175,7 @@ AEM [!DNL Forms] には、アダプティブフォーム上で情報を表示す
    | To | `${customer_Email}` |
    | 件名 | Acknowledgement: You have added shipping address on We.Retail website. |
    | 電子メールテンプレート | こんにちは。`${customer_Name}`様のアカウントに次のアドレスが追加されました：<br>`${customer_Name}`, `${customer_Shipping_Address}`, `${customer_State}`, `${customer_ZIPCode}`<br> 今後ともよろしくお願いいたします。We.Retail |
-   | 添付ファイルを含める | Enabled |
+   | 添付ファイルを含める | 有効 |
 
    これでフォームが作成されました。フォームのプレビューを表示して機能をテストすることができます。このチュートリアルに記載されている名前を指定し、AEM [!DNL Forms] サーバーで稼働するマシン上に作成されたフォームにアクセスする場合は、対応するフォームが [http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html](http://localhost:4502/editor.html/content/forms/af/shipping-address-add-update-form.html) に用意されています。
 

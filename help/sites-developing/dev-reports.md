@@ -50,9 +50,9 @@ AEM に用意されている標準レポートの特徴：
 >以下の例と定義で使用している表記は次のとおりです。
 >
 >* 各行では、次のようにノードまたはプロパティを定義しています。
->  `N:<name> [<nodeType>]`：名前が `<*name*>` でノードタイプが `<*nodeType*>`*のノードを表します。*
->  `P:<name> [<propertyType]`：名前が `<*name*>` でプロパティタイプが `<*propertyType*>` のプロパティを表します。
->  `P:<name> = <value>`：プロパティ `<name>` に値 `<value>` を設定する必要があることを表します。
+   >  `N:<name> [<nodeType>]`：名前が `<*name*>` でノードタイプが `<*nodeType*>`*のノードを表します。*
+   >  `P:<name> [<propertyType]`：名前が `<*name*>` でプロパティタイプが `<*propertyType*>` のプロパティを表します。
+   >  `P:<name> = <value>`：プロパティ `<name>` に値 `<value>` を設定する必要があることを表します。
 >
 >* インデントは、ノード間の階層的依存関係を示します。
 >* | で区切られた項目は、タイプや名前など、指定可能な項目のリストを示します。例えば `String|String[]` は、プロパティに String または String[] を指定できることを示します。
@@ -1304,7 +1304,8 @@ N:apps
    >
    >これは、定義と同じです。
    >
-   >```
+   >
+   ```
    >N:data [nt:unstructured]
    >   P:clientFilter [String] = "function(v) { return v; }"
    >```
@@ -1375,7 +1376,8 @@ N:apps
    >
    >この例では、グループ化可能な列がないので、グラフは使用できません。グラフを表示するには、`groupable` を `true` に設定します。
    >
-   >```
+   >
+   ```
    >N:osgireport [sling:Folder]
    > N:bundlecol [cq:Component]
    > N:definitions [nt:unstructured]

@@ -11,7 +11,7 @@ role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
 source-git-commit: 65af6e33ae3897519491952f4d3a6832700f77b2
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 100%
 

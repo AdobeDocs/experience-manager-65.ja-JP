@@ -13,7 +13,7 @@ feature: Configuration,Scene7 Mode
 source-git-commit: b14cbc4cad15b06754db8b8c992a596d4d64c096
 workflow-type: tm+mt
 source-wordcount: '6037'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 97%
 
 ## Scene7 モードの Dynamic Media の有効化 {#enabling-dynamic-media-in-scene-mode}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) はデフォルトで無効になっています。Dynamic Media の機能を活用するには、Dynamic Media を有効にする必要があります。
+[Dynamic Media](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html) はデフォルトで無効になっています。Dynamic Media の機能を活用するには、Dynamic Media を有効にする必要があります。
 
 >[!WARNING]
 >
@@ -102,7 +102,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 1. 接続に成功したら、次のように設定します。アスタリスク（*）を含む見出しが必須です。
 
-   * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。複数の Dynamic Media アカウントがある。 例えば、異なるサブブランド、事業部、ステージングまたは実稼動環境を持つことができます。
+   * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。複数の Dynamic Media アカウントを持つことができます。例えば、異なるサブブランド、事業部、ステージングまたは実稼動環境を持つことができます。
 
    <!-- UNHIDE FEBRUARY 24, 2022 See also [Configure Dynamic Media company alias account](/help/assets/dm-alias-account.md). -->
 
@@ -110,7 +110,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
    * **[!UICONTROL アセットの公開]** - 次の 3 つのオプションから選択できます。
       * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。アセットを公開するためにユーザーが操作する必要はありません。
-      * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。<br><!-- CQDOC-17478, Added March 9, 2021-->Experience Manager 6.5.8 以降では、Experience Manager パブリッシュインスタンスは、**[!UICONTROL アクティベーション時]**&#x200B;公開モードでのみ`dam:scene7Domain`や `dam:scene7FileStatus` などの正確な Dynamic Media メタデータ値を反映します。この機能を有効にするには、Service Pack 8 をインストールしてから、Experience Manager を再起動します。Sling Config Manager に移動します。 `Scene7ActivationJobConsumer Component` の設定を検索または新しく作成します）。「**[!UICONTROL Dynamic Media の公開後にメタデータをレプリケート]**」チェックボックスを選択してから「 **[!UICONTROL 保存]**」を選択します。
+      * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。<br><!-- CQDOC-17478, Added March 9, 2021-->Experience Manager 6.5.8 以降では、Experience Manager パブリッシュインスタンスは、**[!UICONTROL アクティベーション時]**&#x200B;公開モードでのみ`dam:scene7Domain`や `dam:scene7FileStatus` などの正確な Dynamic Media メタデータ値を反映します。この機能を有効にするには、Service Pack 8 をインストールしてから、Experience Manager を再起動します。Sling Config Manager に移動します。`Scene7ActivationJobConsumer Component` の設定を検索または新しく作成します）。「**[!UICONTROL Dynamic Media の公開後にメタデータをレプリケート]**」チェックボックスを選択してから「 **[!UICONTROL 保存]**」を選択します。
 
          ![「 Dynamic Media の公開後にメタデータをレプリケート」チェックボックス](assets-dm/replicate-metadata-setting.png)
 
@@ -133,7 +133,8 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 IP を許可リストに登録して、ユーザーがコンテンツを安全にプレビューできるようにすることができます。このアクションをExperience Managerに設定するには [Image Server 用のDynamic Media公開設定の指定 — 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab).
+1. 公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 IP を許可リストに登録して、ユーザーがコンテンツを安全にプレビューできるようにすることができます。
+このアクションを Experience Manager で設定するには、[Image Server 用の Dynamic Media 公開設定 - 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab)を参照してください。
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
@@ -225,7 +226,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
       `localhost:4502/system/console/configMgr/com.adobe.granite.workflow.core.job.ExternalProcessJobHandler`
 
-   * 上記のパスをコピーして、ブラウザーの URL フィールドに貼り付けます。 `localhost:4502` を独自の Experience Manager インスタンスと置き換えてください。
+   * 上記のパスをコピーして、ブラウザーの URL フィールドに貼り付けます。`localhost:4502` を独自の Experience Manager インスタンスと置き換えてください。
 
 1. **[!UICONTROL Adobe Granite Workflow External Process Job Handler]** ダイアログボックスで、**[!UICONTROL 最大タイムアウト]**&#x200B;フィールドの値を `18000` 分（5 時間）に設定します。デフォルトは 10800 分（3 時間）です。
 
@@ -302,7 +303,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
    * 「**[!UICONTROL 有効]**」フィールドをダブルクリックします。デフォルトでは、すべてのアセットの MIME タイプが有効になって（**[!UICONTROL true]** に設定されて）います。これは、処理に関してアセットが Dynamic Media に同期されることを意味します。このアセットの MIME タイプを処理から除外する場合、この設定を **[!UICONTROL false]** に変更します。
 
-   * **[!UICONTROL jobParam]** をダブルタップして、関連するテキストフィールドを開きます。詳しくは、 [サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types) を参照してください。
+   * **[!UICONTROL jobParam]** をダブルタップして、関連するテキストフィールドを開きます。特定の MIME タイプに使用可能な、許可されている処理パラメーター値のリストについては、[サポートされる MIME タイプ](/help/assets/assets-formats.md#supported-mime-types)を参照してください。
 
 1. 次のいずれかの操作を行います。
 
@@ -313,7 +314,7 @@ Dynamic Media によって処理されるアセットタイプを定義して、
 
 #### サポートされていない形式の MIME タイプの追加 {#adding-mime-types-for-unsupported-formats}
 
-Experience Manager Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Liteに追加した新しいノードがExperience Managerによって削除されないようにするには、MIME タイプを `image_`. また、有効な値が **[!UICONTROL false]** に設定されていることを確認します。
+Experience Manager Assets でサポートされていない形式のカスタム MIME タイプを追加できます。CRXDE Lite に追加した新しいノードが Experience Manager によって削除されないようにするには、MIME タイプを `image_` の前に移動します。また、有効な値が **[!UICONTROL false]** に設定されていることを確認します。
 
 **サポートされていない形式の MIME タイプを追加するには:**
 
@@ -393,7 +394,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
    「**[!UICONTROL コードを表示]**」チェックボックスを選択して、選択した形式と同時に作成される正規表現値を表示できます。フォーム表示により制限を受ける場合、命名規則の要素を定義するために正規表現値を入力または変更できます。値をフォーム表示で解析できない場合は、フォームフィールドは非アクティブになります。
 
    >[!NOTE]
-   非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行の後に、各要素に対して作成する正規表現の結果が表示されます。 完全な正規表現は、ページの一番下に表示されます。
+   非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの一番下に表示されます。
 
 1. 必要に応じて各要素を展開し、使用する命名規則を入力します。
 1. 必要に応じて、次の操作をおこないます。
@@ -410,7 +411,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 Dynamic Media では、バッチセットプリセットを使用して、アセットをビューアで表示するための画像のセット（代替画像、カラーオプション、360 スピン）に整理します。バッチセットプリセットは、Dynamic Media でのアセットアップロード処理と同時に自動的に実行されます。
 
-バッチセットプリセットを作成、編集および管理できます。バッチセットプリセット定義には次の 2 つの形式があります。1 つは、設定可能なデフォルトの命名規則、もう 1 つはその場で作成するカスタムの命名規則です。
+バッチセットプリセットを作成、編集および管理できます。バッチセットプリセット定義には 2 つの形式があります。デフォルトの命名規則を設定するものと、その場で作成するカスタムの命名規則のものです。
 
 バッチセットプリセットを定義するフォームフィールドメソッドとコードメソッドのどちらかを使用できます（正規表現を使用できます）。デフォルトの名前では、「フォームを表示」での定義と同時に「コードを表示」を選択して、正規表現を使用して定義を作成できます。また、どちらかの表示をオフにして、一方の表示のみを使用することもできます。
 
@@ -439,7 +440,7 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 1. 命名規則と作成オプションの設定では、アセットの命名規則で定義したベース名にサフィックスとプレフィックスを指定します。また、Dynamic Media のフォルダー構造内のセットの作成場所を定義します。
 
-   多数のセットを定義する場合は、アセット自体を含むフォルダーとは別にセットを保存してください。 例えば、画像セットフォルダーを作成して、そこに生成されたセットを配置できます。
+   多数のセットを定義する場合は、アセット自体を含むフォルダーとは別にセットを保存してください。例えば、画像セットフォルダーを作成して、そこに生成されたセットを配置できます。
 
 1. 詳細パネルで、「**[!UICONTROL 保存]**」を選択します。
 1. 新しいプリセット名の隣にある「**[!UICONTROL アクティブ]**」を選択します。
@@ -511,7 +512,7 @@ spin-01-01
 
    `\w+-\w+-C(\d+)`
 
-   上記のサンプルは、デモ目的でのみ使用されています。 必要に応じて独自の正規表現を作成できます。
+   上記のサンプルは、デモ目的でのみ使用されています。必要に応じて独自の正規表現を作成できます。
 
    >[!NOTE]
    行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
@@ -520,7 +521,7 @@ spin-01-01
 
    また、Dynamic Media Classic のフォルダー構造内のスピンセットの作成場所を定義します。
 
-   多数のセットを定義する場合は、アセット自体を含むフォルダーとは別にセットを保存してください。 例えば、スピンセットフォルダーを作成して、そこに生成されたセットを配置します。
+   多数のセットを定義する場合は、アセット自体を含むフォルダーとは別にセットを保存してください。例えば、スピンセットフォルダーを作成して、そこに生成されたセットを配置します。
 
 1. 詳細パネルで、「**[!UICONTROL 保存]**」を選択します。
 1. 新しいプリセット名の隣にある「**[!UICONTROL アクティブ]**」を選択します。

@@ -3,7 +3,7 @@ title: ヘッドレス設定の作成に関するクイックスタートガイ�
 description: AEM 6.5 でヘッドレス機能を使い始めるための最初の手順として、設定を作成します。
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
 source-git-commit: 8ab774b8d21dd16e4873cd39ef0175ead3f2da23
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ AEM のヘッドレスなコンテンツ管理に関しては、AEM 内でコン
 
 1. AEM にログインし、メインメニューで&#x200B;**ツール／一般／設定ブラウザー**&#x200B;を選択します。
 1. 設定の&#x200B;**タイトル**&#x200B;を入力します。
-   * 名前は、タイトルにもとづいて自動的に生成され、[AEM の命名規則に従って調整されます。](/help/sites-developing/naming-conventions.md)これは、リポジトリ内のノード名になります。
+   * 名前は、タイトルにもとづいて自動的に生成され、[AEM の命名規則に従って調整されます。](/help/sites-developing/naming-conventions.md) を使用して作成します。これは、リポジトリ内のノード名になります。
 1. 次のオプションを確認します。
    * **コンテンツフラグメントモデル**
    * **GraphQL の永続的なクエリ**

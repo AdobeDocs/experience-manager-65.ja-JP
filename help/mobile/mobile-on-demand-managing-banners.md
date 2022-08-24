@@ -1,8 +1,8 @@
 ---
 title: バナーの管理
-seo-title: バナーの管理
+seo-title: Managing Banners
 description: バナーは、通常、グラフィカルなプロモーションリンクです。このページでは、この機能について詳しく見ていきます。
-seo-description: バナーは、通常、グラフィカルなプロモーションリンクです。このページでは、この機能について詳しく見ていきます。
+seo-description: Banners represent typically graphical promotional links. Follow this page to learn more.
 uuid: 593fe2ef-84df-42e2-8a03-897fb67a896d
 contentOwner: User
 content-type: reference
@@ -12,7 +12,7 @@ discoiquuid: fb1abaa0-9c02-4f20-aa7c-073def067452
 exl-id: c65a24e6-3041-4774-aeed-8e188ea19b78
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '662'
 ht-degree: 85%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 コンテンツ管理アクションは、アプリケーション内でコンテンツを作成および管理するのに役立つ構築ブロックです。アプリケーション内のコンテンツに対して以下のアクションを実行します。
 
-## バナーの概要  {#banners-overview}
+## バナーの概要 {#banners-overview}
 
 バナーは、通常、グラフィカルなプロモーションリンクです。
 
@@ -34,17 +34,14 @@ ht-degree: 85%
 >AEM Mobile アプリの以下のトピックについては、オンラインヘルプの以下のリソースを参照してください。
 >
 >* [デザインに関する考慮事項](https://helpx.adobe.com/jp/digital-publishing-solution/help/design-app.html)
-   >
-   >
-* [バナーの作成](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-banners.html)
-
+>
+>* [バナーの作成](https://helpx.adobe.com/jp/digital-publishing-solution/help/creating-banners.html)
 >
 
 
+## バナーの作成 {#creating-a-banner}
 
-## バナーの作成  {#creating-a-banner}
-
-記事を作成する一般的なワークフローは以下のとおりです。
+バナーを作成する一般的なワークフローは以下のとおりです。
 
 1. サイドレールから「**モバイル**」を選択します。
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
@@ -65,16 +62,16 @@ ht-degree: 85%
 
 新しい記事を読み込むワークフローは以下のとおりです。
 
-1. 「モバイル」から、カタログからMobile On-Demandアプリを選択します。
+1. Mobile から、カタログから Mobile On-Demand アプリを選択します。
 1. **バナーを管理**&#x200B;タイルの右上隅にある下矢印をクリックして、「バナーを読み込む」を選択します。
 1. ダイアログで「**バナーを読み込む**」をクリックし、「閉じる」をクリックします。
-1. これで、**バナーを管理**&#x200B;タイルにMobile On-Demand記事が表示されます。
+1. Mobile On-Demand の記事が **バナーを管理** タイル。
 
 >[!CAUTION]
 >
 >最初に Mobile On-Demand の接続を関連付ける必要があります。
 
-## バナーの編集  {#editing-a-banner}
+## バナーの編集 {#editing-a-banner}
 
 記事を追加または変更するには、組み込みの AEM ドラッグ＆ドロップエディターを使用します。テキストや画像などのコンポーネントを追加したり、削除したりすることができます。DAM アセットの画像を挿入することもできます。
 
@@ -85,23 +82,23 @@ ht-degree: 85%
 バナーを編集するワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. 「**バナーを管理**」タイルで、バナーを管理するAEMソースを選択します。
+1. 「**バナーを管理**」タイルで、バナーを管理するAEMを選択します。
 1. リスト表示で、ハイライトされたバナーをクリックし、コンテンツエディターで開きます。
 1. コンテンツエディターを使用して、バナーの内容（原稿、画像、テキストなど）をドラッグします。
 
-### バナー内のメタデータの表示および編集  {#viewing-and-editing-the-metadata-within-a-banner}
+### バナー内のメタデータの表示および編集 {#viewing-and-editing-the-metadata-within-a-banner}
 
 バナーには、タイトル、説明、画像など多くのプロパティがあります。このようなプロパティを表示および変更するには、この操作を使用します。オプションで、保存時に Mobile On-Demand に変更内容をアップロードすることもできます。
 
 記事を表示／編集する一般的なワークフローは以下のとおりです。
 
 1. モバイルで、カタログから Mobile On-Demand アプリを選択します。
-1. **バナーを管理**&#x200B;タイルからバナーを選択します。
+1. 次からバナーを選択： **バナーを管理** タイル。
 
 1. アクションバーから「**プロパティ**」を選択します。
 1. コレクションの使用可能なすべてのメタデータを確認します。
 1. 必要に応じてメタデータを編集し、終わったら「**保存**」をクリックします。
-1. オプションで、変更内容を直ちにMobile On-Demandにアップロードします。
+1. オプションで、変更内容を直ちに Mobile On-Demand にアップロードします。
 
 ## バナーのアップロード {#uploading-a-banner}
 
@@ -109,17 +106,17 @@ ht-degree: 85%
 
 バナーをアップロードする一般的なワークフローは以下のとおりです。
 
-1. **Mobile**&#x200B;から、カタログからMobile On-Demandアプリを選択します。
-1. **バナーを管理**&#x200B;タイルで、Mobile On-Demandにアップロードするバナーを選択します。
+1. 送信者 **モバイル**」で、カタログから Mobile On-Demand アプリを選択します。
+1. 内 **バナーを管理** タイルで、Mobile On-Demand にアップロードするバナーを選択します。
 1. 必要に応じて、リスト表示からさらにバナーを追加します。
 1. アクションバーから「**アップロード**」を選択し、ダイアログで「アップロード」をクリックします。
-1. バナーがMobile On-Demandにアップロードされました。
+1. バナーが Mobile On-Demand にアップロードされました。
 
 ![chlimage_1-7](assets/chlimage_1-7.gif)
 
 ## バナーの削除 {#deleting-a-banner}
 
-この操作では、選択したバナーがMobile On-Demandから削除され、オプションでローカルのAEMインスタンスから削除されます。
+この操作を実行すると、選択したバナーが Mobile On-Demand から削除され、必要に応じてローカルのAEMインスタンスからも削除されます。
 
 バナーを削除する一般的なワークフローは以下のとおりです。
 

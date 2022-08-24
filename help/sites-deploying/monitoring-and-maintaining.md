@@ -12,10 +12,10 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 83383d46a4200eb3d21deee15c71032314694860
 workflow-type: tm+mt
 source-wordcount: '5866'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -695,7 +695,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 * 応答の行には、以下が含まれます。
 
-   * ステータスコード (200 は「成功」を表し、404 は「ページが見つかりません」を表します。
+   * ステータスコード（200 は「成功」、404 は「ページが見つかりません」）
    * MIME タイプ
    * 応答時間
 

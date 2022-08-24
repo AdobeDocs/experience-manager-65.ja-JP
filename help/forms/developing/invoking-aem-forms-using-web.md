@@ -11,10 +11,10 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
 source-wordcount: '9905'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1072,7 +1072,7 @@ Web 参照を作成した後、2 つのプロキシデータタイプ（`Encrypt
 
 >[!NOTE]
 >
->Forms サービスへの web 参照を作成する前に、プロジェクトで web サービス拡張機能 2.0 を参照していることを確認してください。（「Web Services Enhancements 2.0 のインストール」を参照）。
+>Forms サービスへの web 参照を作成する前に、プロジェクトで web サービス拡張機能 2.0 を参照していることを確認してください。（Web サービス拡張機能 2.0 のインストールを参照してください）。
 
 **WSE ライブラリの参照**
 

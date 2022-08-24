@@ -12,9 +12,9 @@ discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1222'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -194,7 +194,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 これらのアクセス権限は次のワイルドカード ACL によって定義されます。
 
-/home everyone allow jcr:read rep:glob = */profile*
+/home everyone allow jcr:read rep:glob = &#42;/profile&#42;
 
 これにより、次の処理が可能になります。
 

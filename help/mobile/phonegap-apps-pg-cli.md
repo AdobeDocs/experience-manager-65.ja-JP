@@ -1,8 +1,8 @@
 ---
 title: PhoneGap CLI によるアプリの開発
-seo-title: PhoneGap CLI によるアプリの開発
+seo-title: Developing Apps with PhoneGap CLI
 description: このページでは、PhoneGap CLI によるアプリの開発について説明します。
-seo-description: このページでは、PhoneGap CLI によるアプリの開発について説明します。
+seo-description: Follow this page to learn about developing apps with PhoneGap CLI.
 uuid: 9a66171d-19af-40db-9c07-f5dd9561e1b5
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 91%
+source-wordcount: '696'
+ht-degree: 90%
 
 ---
 
@@ -21,27 +21,27 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 開発者は、開発環境を設定しておくと、デバイス上またはエミュレーター内でいつでもアプリを実行できます。
 
 次のサンプルを実行するには、Xcode 搭載の OSx を実行しているシステム（Mac）か、Android SDK がインストールされた Mac／Win／Linux システムが必要です。
 
-## 開発環境のブートストラップ  {#bootstrap-your-development-environment}
+## 開発環境のブートストラップ {#bootstrap-your-development-environment}
 
 [PhoneGap CLI の設定](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
 iOS の場合：iPhone および iPad 向けに開発するには、Apple の Xcode IDE が必要です。
 
-* [こちら](https://developer.apple.com/xcode/downloads/)から無料でダウンロードしてください。
-* [PhoneGap iOSプラットフォームガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
+* 無料でダウンロードできます [ここ](https://developer.apple.com/xcode/downloads/).
+* [PhoneGap iOS platform ガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
 
 Android の場合：Android 向けに開発するには、Google の Android Studio IDE が必要です。
 
-* [こちら](https://developer.android.com/sdk/index.html)から無料でダウンロードしてください。
+* 無料でダウンロードできます [ここ](https://developer.android.com/sdk/index.html).
 * [PhoneGap Android プラットフォームのガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
 
-## ソースのダウンロード  {#download-the-source}
+## ソースのダウンロード {#download-the-source}
 
 開発環境を正常にブートストラップしたら、AEM アプリのビルドタイルからソースをダウンロードします。
 
@@ -63,7 +63,7 @@ Android の場合：Android 向けに開発するには、Google の Android Stu
 * 「ダウンロード」をクリックし、コンピューターに ZIP を保存します。
 * ダウンロードした zip ファイルをワークスペースに抽出します。
 
-## （ソースからの）アプリのビルドおよび読み込み  {#build-and-load-the-app-from-source}
+## （ソースからの）アプリのビルドおよび読み込み {#build-and-load-the-app-from-source}
 
 PhoneGap CLI では、プラットフォームプロジェクトの作成、ソースのコンパイルおよびアプリのデプロイを単一のコマンドで実行できます。
 
@@ -95,14 +95,13 @@ phonegap run ios
 >1. エミュレーターが開いて、新規に作成した PhoneGap アプリが実行されます。ネイティブへの JavaScript ブリッジが動作している場合には、「Device Ready」と表示されます。
 
 >
->
-この場合、PhoneGap CLI 開発環境は正しく稼動していることになります。
+>この場合、PhoneGap CLI 開発環境は正しく稼動していることになります。
 
-## Safari および iOS デバッグでの JavaScript のデバッグ  {#debug-javascripts-with-safari-and-ios-debug}
+## Safari および iOS デバッグでの JavaScript のデバッグ {#debug-javascripts-with-safari-and-ios-debug}
 
 Web アプリケーションの場合と同じように、Safari の開発者向けツールを使用してアプリの JavaScript をデバッグできます。
 
-## Safari 開発者向けツールの使用可能化  {#enable-safari-developer-tools}
+## Safari 開発者向けツールの使用可能化 {#enable-safari-developer-tools}
 
 開発者向けツールを使用可能にするには：
 
@@ -118,7 +117,7 @@ Web アプリケーションの場合と同じように、Safari の開発者向
 * 「メニューバーに開発メニューを表示」をオンにします。
 * 環境設定ウィンドウを閉じます。
 
-## iOS への Safari の接続  {#connect-safari-to-ios}
+## iOS への Safari の接続 {#connect-safari-to-ios}
 
 iOS デバイスまたはエミュレーターに Safari を接続できます。
 

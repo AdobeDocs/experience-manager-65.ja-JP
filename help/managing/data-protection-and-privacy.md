@@ -12,7 +12,7 @@ discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 100%
 
@@ -38,7 +38,7 @@ ht-degree: 100%
 >
 >別のアドビオンデマンドサービスからのデータは、関連するプライバシー要求とともに、そのサービスでの対応が必要となります。
 >
->詳しくは、[アドビのプライバシーセンター](https://www.adobe.com/jp/privacy.html)を参照してください。
+>詳しくは、[アドビのプライバシーセンター](https://www.adobe.com/privacy.html)を参照してください。
 
 ## はじめに {#introduction}
 

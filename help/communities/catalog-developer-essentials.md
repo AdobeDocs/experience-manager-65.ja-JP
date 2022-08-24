@@ -1,8 +1,8 @@
 ---
 title: カタログの基本事項
-seo-title: カタログの基本事項
+seo-title: Catalog Essentials
 description: カタログの概要
-seo-description: カタログの概要
+seo-description: Catalog overview
 uuid: 788512bb-fa38-48fb-a769-1eaae6bb95a1
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 542467ef-3793-4347-8424-c365c5a166f6
 exl-id: 4ca76b50-d56d-4f4d-be92-bf8929c5d754
 source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 46%
+source-wordcount: '358'
+ht-degree: 45%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 46%
 
 コミュニティサイトにカタログ機能が用意されている場合、コミュニティメンバーは、その機能を使用して、カタログに一覧表示された実施可能リソースを参照および選択できます。
 
-[ `enablement catalog`コンポーネント](catalog.md)を使用すると、コミュニティメンバーは[イネーブルメントリソース](resources.md)のカタログにアクセスできます。 AEMタグの使用は、カタログ内のイネーブルメントリソースの外観を管理する上で重要な役割を果たします。
+この [ `enablement catalog` コンポーネント](catalog.md) コミュニティメンバーが [イネーブルメントリソース](resources.md). AEMタグの使用は、カタログ内のイネーブルメントリソースの外観を管理するうえで重要な役割を果たします。
 
 [実施可能リソースのタグ付け](tag-resources.md)を参照してください。
 
@@ -37,7 +37,7 @@ ht-degree: 46%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -53,7 +53,7 @@ ht-degree: 46%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="catalog.md">カタログ機能</a>を参照</td>
+   <td>詳しくは、 <a href="catalog.md">カタログ機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -62,52 +62,52 @@ ht-degree: 46%
 
 ### カタログ機能 {#catalog-function}
 
-[カタログ機能](functions.md#catalog-function)を含むコミュニティサイト構造には、設定済みの`enablement catalog`コンポーネントが含まれます。
+を含むコミュニティサイト構造 [カタログ機能](functions.md#catalog-function)（設定済みを含む） `enablement catalog` コンポーネント。
 
 ### 事前フィルター {#pre-filters}
 
-コミュニティサイトにカタログ機能が追加されている場合、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。これは、サイトのカタログリソースのインスタンスにプロパティを設定することでおこなわれます。
+コミュニティサイトにカタログ機能が追加されている場合、事前フィルターを指定することで、カタログに表示されるイネーブルメントリソースと学習パスを制限できます。これは、サイトのカタログリソースのインスタンスでプロパティを設定することでおこなわれます。
 
-[イネーブルメントチュートリアル](getting-started-enablement.md)の例を使用します。
+例 [イネーブルメントチュートリアル](getting-started-enablement.md):
 
 * 作成者
-* [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)の使用
+* 使用 [CRXDE](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   * 例えば、[https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
+   * 例： [https://&lt;server>:&lt;port>/crx/de](http://localhost:4502/crx/de)
 
-* カタログページでカタログリソースに移動します。
+* カタログページのカタログリソースに移動します。
 
    * 例：`/content/sites/enable/en/catalog/jcr:content/content/primary/catalog`
 
-* 子フィルターノードの追加
+* 子フィルターノードを追加
 
-   * `catalog`ノードを選択します。
-   * 「**[!UICONTROL ノードを作成]**」を選択します。
+   * を選択します。 `catalog`ノード
+   * 選択 **[!UICONTROL ノードを作成]**
 
       * 名前：`filters`
       * 型：`nt:unstructured`
       * 「**[!UICONTROL すべて保存]**」を選択します。
 
-* `se_resource-tags`プロパティを`filters`ノードに追加します。
+* 追加 `se_resource-tags` プロパティを `filters` ノード
 
-   * `filters`ノードを選択します。
-   * 複数プロパティの追加
+   * を選択します。 `filters` ノード
+   * 複数のプロパティを追加する
 
       * 名前：`se_resource-tags`
       * タイプ：String
       * 値：&lt;*TagID[ を入力](#pre-filter-tagids)>*
-         * **[!UICONTROL マルチ]**&#x200B;を選択します。
-         * **[!UICONTROL 追加]**&#x200B;を選択します。
+         * 選択 **[!UICONTROL 複数]**
+         * 選択 **[!UICONTROL 追加]**
 
-            * ポップアップダイアログで、`+`を選択して、プリフィルタータグIDを追加します
+            * ポップアップダイアログで、「 `+` タグ ID を追加するには、以下を実行します。
 
-* コミュニティサイトの再公開
+* コミュニティサイトを再公開
 
 ![configure-catalog](assets/configure-catalog.png)
 
 #### 事前フィルター TagID {#pre-filter-tagids}
 
-プリフィルター[TagID](../../help/sites-developing/framework.md#tagid)は、イネーブルメントリソースに適用されるタグと完全に一致する必要があります。 これらは、サイトの `resources` フォルダーでプロパティ `se_resource-tags` の値として確認できます。
+プリフィルター [タグ ID](../../help/sites-developing/framework.md#tagid) は、イネーブルメントリソースに適用されるタグと完全に一致する必要があります。 これらは、サイトの `resources` フォルダーでプロパティ `se_resource-tags` の値として確認できます。
 
 ![configure-filters](assets/configure-catalog1.png)
 

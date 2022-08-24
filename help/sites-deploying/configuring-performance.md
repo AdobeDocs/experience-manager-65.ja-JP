@@ -12,7 +12,7 @@ discoiquuid: 80118cd1-73e1-4675-bbdf-85d66d150abc
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 source-git-commit: 4fc42469e4b97f2f2c5d7489837012d31c63f86d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6645'
 ht-degree: 100%
 
@@ -129,7 +129,8 @@ JVM および OS レベルの調整は、通常、大幅なパフォーマンス
 
 通常のパフォーマンス最適化では、次の要素を使用します。
 
-* `request.log`
+* ：
+`request.log`
 * コンポーネント別の時間計測
 * Java プロファイラー
 
@@ -537,7 +538,7 @@ Dispatcher バージョン 4.1.11 では、応答ヘッダーをキャッシュ�
 
 #### URL パラメーターの使用回避 {#avoid-url-parameters}
 
-可能な限り、キャッシュするページには URL パラメーターを使用しないでください。例えば、サイトに写真ギャラリーがあるとします。このとき、次の URL はキャッシュされません（Dispatcher が[適切に設定されている](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)場合を除く）。
+可能な限り、キャッシュするページには URL パラメーターを使用しないでください。例えば、サイトに写真ギャラリーがあるとします。このとき、次の URL はキャッシュされません（Dispatcher が[適切に設定されている](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)場合を除く）。
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1

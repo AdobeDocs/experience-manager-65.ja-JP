@@ -12,7 +12,7 @@ discoiquuid: 2418777e-4eb2-4d82-aa9e-8d1b0bf740f3
 docset: aem65
 exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 100%
 
@@ -125,7 +125,7 @@ AEM で利用可能なデモキャンペーンは、これらすべてのベス�
  </tbody>
 </table>
 
-### 汎用 {#generic}
+### 一般 {#generic}
 
 | **ベストプラクティス** | **実装** |
 |---|---|

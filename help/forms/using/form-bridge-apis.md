@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
 discoiquuid: c05c9911-7c49-4342-89de-61b8b9953c83
 exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 100%
@@ -198,7 +198,7 @@ window.addEventListener("FormBridgeInitialized",
 ### getFieldValue() API の例 {#example-of-nbsp-getfieldvalue-api}
 
 ```JavaScript
-var a =  formBridge.getFieldValue("xfa.form.form1.Subform1.TextField");
+var a =  formBridge.getFieldValue(“xfa.form.form1.Subform1.TextField”);
 if(a.errors) {
     var err;
      while((err = a.getNextMessage()) != null)

@@ -11,7 +11,7 @@ discoiquuid: ac9fe461-63e7-442b-bd1c-eb9576ef55aa
 role: Developer
 exl-id: 434ac316-8a01-43a6-844b-1b792f60fa21
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 100%
 
@@ -47,7 +47,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->このプロセスは、既存の AEM Forms プロセスには基づいていません。このプロセスを呼び出す方法を説明するコード例に沿って理解を深めるには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
+>このプロセスは、既存の AEM Forms プロセスには基づいていません。このプロセスを呼び出す方法を説明するコード例に沿って理解を深めるには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
 
 この短時間のみ有効なプロセスを呼び出すと、次のアクションを実行します。
 
@@ -59,7 +59,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >通常、短時間のみ有効なプロセスは 3 つより多くのアクションで構成されます。プロセスを作成する際は、Workbench を使用します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
+   >通常、短時間のみ有効なプロセスは 3 つより多くのアクションで構成されます。プロセスを作成する際は、Workbench を使用します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63)を参照してください）。
 
    *AEM Forms によるプログラミング*&#x200B;では、この短時間のみ有効なプロセスをプログラムで呼び出すことができる次の方法について説明しています。
 

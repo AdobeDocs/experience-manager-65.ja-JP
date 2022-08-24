@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: c01e42ff-e338-46e6-a961-131ef943ea91
 exl-id: 3405cdd3-3d1b-414d-9931-b7d7b63f0a6f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2265'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -139,7 +139,7 @@ cq:tags インデックスルールを追加した後
 
 #### 開発時 {#during-development-2}
 
-oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し（例えば、それぞれ 10000 と 5000）、5000) で、UnsupportedOperationException を押したときに、「The query read more than x nodes...」というメッセージが表示され、高価なクエリを最適化します。
+oak.queryLimitInMemory とoak.queryLimitReads のしきい値を低く設定し（例えば、それぞれ 10000 と 5000）、UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは、大量の IO が発生し、アプリケーション全体のパフォーマンスに悪影響を及ぼします。このため、上述の制限が原因で失敗するクエリは、分析して最適化する必要があります。
 

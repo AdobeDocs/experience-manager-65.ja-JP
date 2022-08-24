@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e80c3f98-baa1-45bc-b713-51a2eb5ec165
 exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -88,7 +88,7 @@ public Boolean assign(User user);
 
 ### ジャストインタイムが有効なドメインの作成 {#create-a-just-in-time-enabled-domain}
 
-1. API を実装する DSC を「ジャストインタイムプロビジョニング用 API」セクションに記述します。
+1. 「ジャストインタイムプロビジョニングの API」にある DSC による API の実装を記述します。
 1. DSC を forms サーバーにデプロイします。
 1. ジャストインタイムが有効なドメインを作成します。
 

@@ -10,7 +10,7 @@ topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 100%
 
@@ -109,13 +109,13 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>save</td>
    <td>ProcessManagementTaskService</td>
-   <td>save</td>
+   <td>保存</td>
    <td>タスクをサーバーに保存します。</td>
   </tr>
   <tr>
    <td>complete</td>
    <td>ProcessManagementTaskService</td>
-   <td>complete</td>
+   <td>完了</td>
    <td>タスクを完了し、タスクはプロセス設計に従って次の手順に渡されます。</td>
   </tr>
   <tr>
@@ -133,13 +133,13 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>share</td>
    <td>ProcessManagementTaskService</td>
-   <td>share</td>
+   <td>共有</td>
    <td>別のユーザーとタスクを共有します。別のユーザーはタスクを要求してタスクの所有者になることができます。</td>
   </tr>
   <tr>
    <td>forward</td>
    <td>ProcessManagementTaskService</td>
-   <td>forward</td>
+   <td>転送</td>
    <td>別のユーザーにタスクを転送します。</td>
   </tr>
   <tr>
@@ -151,31 +151,31 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>claim</td>
    <td>ProcessManagementTaskService</td>
-   <td>claim</td>
+   <td>請求</td>
    <td>共有キューで使用可能なタスクを要求します。</td>
   </tr>
   <tr>
    <td>unlock</td>
    <td>ProcessManagementTaskService</td>
-   <td>unlock</td>
+   <td>ロック解除</td>
    <td>タスクをロック解除します。</td>
   </tr>
   <tr>
    <td>lock</td>
    <td>ProcessManagementTaskService</td>
-   <td>lock</td>
+   <td>ロック</td>
    <td>タスクをロックします。これにより、共有されている場合は別のユーザーが要求できなくなります。</td>
   </tr>
   <tr>
    <td>reject</td>
    <td>ProcessManagementTaskService</td>
-   <td>reject</td>
+   <td>却下する</td>
    <td>タスクを前の所有者に返します。</td>
   </tr>
   <tr>
    <td>abandon</td>
    <td>ProcessManagementTaskService</td>
-   <td>abandon</td>
+   <td>離脱</td>
    <td>タスクを削除します。</td>
   </tr>
   <tr>
@@ -259,7 +259,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>getParticipatedProcesses</td>
    <td>ProcessManagementProcessService</td>
-   <td>getParticipatedProcesses</td>
+   <td>getRenitedProcesses</td>
    <td>ログインユーザーが参加したすべてのプロセス名のリストを返します。</td>
   </tr>
   <tr>
@@ -319,7 +319,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
   <tr>
    <td>initialize</td>
    <td>ProcessManagementClientSessionService</td>
-   <td>initialize</td>
+   <td>初期化</td>
    <td>必要に応じてアサーションを更新します。ユーザーを認証します。サーバー / クライアント情報のセッションパラメータを設定します。ユーザー情報およびポーリング間隔を返します。</td>
   </tr>
   <tr>

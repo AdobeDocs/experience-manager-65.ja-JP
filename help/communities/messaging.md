@@ -1,8 +1,8 @@
 ---
 title: メッセージの設定
-seo-title: メッセージングの設定
+seo-title: Configuring Messaging
 description: Communities のメッセージング
-seo-description: Communities のメッセージング
+seo-description: Communities messaging
 uuid: 159dcf9d-7948-4a3d-9f51-a5b4d03e172b
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,7 +14,7 @@ role: Admin
 exl-id: ee94f093-fd14-49f2-9990-fbe853d924b1
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '822'
 ht-degree: 22%
 
 ---
@@ -27,15 +27,15 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 コミュニティサイトのメッセージングを有効にするには、[コミュニティサイトの作成](/help/communities/sites-console.md)中にチェックボックスをオンにします。
 
-このページには、デフォルト設定と可能な調整に関する情報が含まれています。
+このページには、デフォルト設定に関する情報と、可能な調整が含まれています。
 
-開発者向けの追加情報については、[メッセージングの基本事項](/help/communities/essentials-messaging.md)を参照してください。
+開発者向けの追加情報については、 [メッセージの基本事項](/help/communities/essentials-messaging.md).
 
 ## メッセージング操作サービス {#messaging-operations-service}
 
-設定[AEM Communities Messaging Operations Service](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl)は、メッセージ関連の要求を処理するエンドポイント、メッセージの保存に使用するフォルダー、メッセージに添付ファイルが含まれる場合は許可されるファイルタイプを識別します。
+設定 [AEM Communities Messaging Operations Service](https://localhost:4502/system/console/configMgr/com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl) は、メッセージング関連の要求を処理するエンドポイント、メッセージの保存に使用するフォルダー、添付ファイルが含まれる場合はどのファイルタイプを使用できるかを指定します。
 
-`Communities Sites console`を使用して作成されたコミュニティサイトでは、サービスのインスタンスが既に存在し、インボックスが`/mail/inbox`に設定されています。
+を使用して作成されたコミュニティサイトの場合 `Communities Sites console`、サービスのインスタンスは既に存在し、インボックスはに設定されています `/mail/inbox`.
 
 ### コミュニティのメッセージング操作サービス {#community-messaging-operations-service}
 
@@ -45,63 +45,63 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 ### 新しい設定を追加 {#add-new-configuration}
 
-新しい設定を追加するには、サービス名の横にあるプラス「**+**」アイコンを選択します。
+新しい設定を追加するには、プラス記号「**+**「 」アイコンがサービス名の横に表示されます。
 
-* **メッセージフィールドの許可リスト**
+* **メッセージフィールド許可リスト**
 
-   ユーザーが編集および保持できるメッセージを作成コンポーネントのプロパティを指定します。 新しいフォーム要素を追加する場合、SRPに格納するには、要素IDを追加する必要があります。 デフォルトは2つのエントリです。*subject*&#x200B;と&#x200B;*content*。
+   ユーザーが編集および保持できるメッセージを作成コンポーネントのプロパティを指定します。 新しいフォーム要素を追加する場合、SRP に格納するには、要素 ID を追加する必要があります。 デフォルトでは、次の 2 つのエントリです。 *件名* および *コンテンツ*.
 
 * **メッセージボックスのサイズ制限**
 
-   各ユーザーのメッセージボックスの最大バイト数。 初期設定は&#x200B;*1073741824*(1 GB)です。
+   各ユーザーのメッセージボックスの最大バイト数です。 デフォルトはです。 *1073741824* (1 GB)。
 
 * **メッセージ数の制限**
 
-   ユーザーごとに許可されるメッセージの合計数です。 値を —1に設定した場合、許可されるメッセージ数は無制限で、メッセージボックスのサイズ制限に従います。 初期設定は&#x200B;*10000* (10k)です。
+   ユーザーごとに許可されるメッセージの合計数です。 -1 の値は、許可されるメッセージ数に制限がないことを示し、メッセージボックスのサイズ制限に従います。 デフォルトはです。 *10000* (10k)。
 
-* **配信エラーの通知**
+* **配信エラーを通知**
 
    オンにすると、メッセージの配信が一部の受信者に失敗した場合に送信者に通知します。 初期設定は&#x200B;*オン*&#x200B;です。
 
-* **配信失敗の送信者ID**
+* **配信送信者 ID の失敗**
 
-   配信に失敗したメッセージに表示される送信者の名前。 初期設定は&#x200B;*failureNotifier*&#x200B;です。
+   配信に失敗したメッセージに表示される送信者の名前。 デフォルトはです。 *failureNotifier*.
 
 * **失敗メッセージテンプレートのパス**
 
-   配信に失敗したメッセージテンプレートのルートへの絶対パス。 初期設定は&#x200B;*/etc/notification/messaging/default*&#x200B;です。
+   配信に失敗したメッセージテンプレートのルートへの絶対パス。 デフォルトはです。 */etc/notification/messaging/default*.
 
 * **再試行の回数**
 
    配信に失敗したメッセージの再送を試行する回数です。デフォルトは *3* です。
 
-* **再試行の間隔**
+* **再試行を待つ**
 
-   送信に失敗したメッセージの再送を試行するまでの間隔（秒数）です。初期設定は&#x200B;*100*（秒）です。
+   送信に失敗したメッセージの再送を試行するまでの間隔（秒数）です。デフォルトはです。 *100* （秒）。
 
-* **更新プールのサイズのカウント**
+* **更新プールのサイズをカウント**
 
    カウントの更新に使用する同時スレッドの数。 デフォルトは *10* です。
 
-* **インボックスパス**
+* **インボックスのパス**
 
-   （*必須*）`inbox`フォルダーに使用する、ユーザーのノード(/home/users/*username*)を基準としたパス。 パスの末尾にフォワードスラッシュ「/」を付けることはできません。 初期設定は&#x200B;*/mail/inbox*&#x200B;です。
+   (*必須*) ユーザーのノードを基準としたパス (/home/users/*ユーザー名*)、 `inbox` フォルダー。 パスの末尾にスラッシュ「/」を付けることはできません。 デフォルトはです。 */mail/inbox*.
 
 * **送信済みアイテムのパス**
 
-   （*必須*）`sent items`フォルダーに使用する、ユーザーのノード(/home/users/*username*)を基準としたパス。 パスの末尾にフォワードスラッシュ「/」を付けることはできません。 初期設定は&#x200B;*/mail/sentitems*&#x200B;です。
+   (*必須*) ユーザーのノードを基準としたパス (/home/users/*ユーザー名*)、 `sent items` フォルダー。 パスの末尾にスラッシュ「/」を付けることはできません。 デフォルトはです。 */mail/sentitems* .
 
-* **サポートの添付ファイル**
+* **添付ファイルのサポート**
 
    オンにすると、ユーザーがメッセージに添付ファイルを追加できるようになります。初期設定は&#x200B;*オン*&#x200B;です。
 
-* **グループメッセージの有効化**
+* **グループメッセージを有効にする**
 
-   選択すると、登録ユーザーはメンバーグループに一括メッセージを送信できます。 初期設定は&#x200B;*選択解除*&#x200B;です。
+   選択すると、登録ユーザーはメンバーのグループに一括メッセージを送信できます。 デフォルトはです。 *選択解除*.
 
-* **最大数受信者の合計**
+* **最大数 （合計受信者数）**
 
-   グループメッセージが有効な場合は、一度に送信できるグループメッセージの受信者の最大数を指定します。 デフォルトは *100* です。
+   グループメッセージが有効な場合は、一度に送信できるグループメッセージの最大受信者数を指定します。 デフォルトは *100* です。
 
 * **バッチサイズ**
 
@@ -109,35 +109,35 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 * **合計添付ファイルサイズ**
 
-   「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。初期設定は&#x200B;*104857600*(100 MB)です。
+   「supportAttachments」をオンにすると、この値によりすべての添付ファイルの最大許容合計サイズ（バイト単位）が指定されます。デフォルトはです。 *104857600* (100 MB)。
 
-* **添付ファイルの種類のブロックリスト**
+* **添付ファイルタイプのブロックリスト**
 
-   ファブロックリストイル名拡張子の。先頭に「**」が付きます。**」というプレフィックス付き）のブラックリストです。選択しなブロックリストに加えるい場合、拡張機能は許可されます。 拡張は、「**+**」および「**-**」アイコンを使用して追加または削除できます。
+   ファイルブロックリスト名拡張子の。先頭に「 」が付く&#x200B;**.**」というプレフィックス付き）のブラックリストです。選択しなブロックリストに加えるい場合、拡張機能は許可されます。 拡張機能は、「 」を使用して追加または削除できます&#x200B;**+**&#39;および&#39;**-**&#39;アイコン。
 
-* **許可されている添付ファイルの種類**
+* **許可されている添付ファイルのタイプ**
 
-   **(*アクションが必要*)** フ許可リストァイル拡張子の(拡張子の逆ブロックリスト)。ファイル名の拡張子をすべて許可するにブロックリストに加えるは、「**-**」アイコンを使用して、1つの空のエントリを削除します。
+   **(*アクションが必要です*)** ファイル許可リスト名の拡張子の ( ファイルの逆ブロックリスト)。 ファイル名の拡張子をすべて許可する（ファイル名を除く）にブロックリストに加えるは、「**-**「 」アイコンを使用して、1 つの空のエントリを削除します。
 
 * **サービスセレクター**
 
-   （*必須*）サービスの呼び出しに使用する絶対パス（エンドポイント）（仮想リソース）。 選択するパスのルートは、*OSGi設定[ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)の設定（`/bin/`、`/apps/`、`/services/`など）に含まれているパスである必要があります。*&#x200B;サイトのメッセージング機能に対してこの設定を選択するには、このエンドポイントを`Message List and Compose Message components`の&#x200B;**`Service selector`**&#x200B;値として提供します（[メッセージ機能](/help/communities/configure-messaging.md)を参照）。
+   (*必須*) サービスの呼び出しに使用される絶対パス（エンドポイント）です（仮想リソース）。 選択したパスのルートは、 *実行パス* OSGi 設定の設定 [ `Apache Sling Servlet/Script Resolver and Error Handler`](https://localhost:4502/system/console/configMgr/org.apache.sling.servlets.resolver.SlingServletResolver)例： `/bin/`, `/apps/`、および `/services/`. サイトのメッセージング機能でこの設定を選択するには、このエンドポイントが **`Service selector`** の値 `Message List and Compose Message components` ( [メッセージ機能](/help/communities/configure-messaging.md)) をクリックします。
 
    初期設定は */bin/messaging* です。
 
 * **フィールドの許可リスト**
 
-   **メッセージフィールド許可リスト**&#x200B;を使用します。
+   用途 **メッセージフィールド許可リスト**.
 
 >[!CAUTION]
 >
->`Messaging Operations Service`設定を編集用に開くたびに、`allowedAttachmentTypes.name`が削除された場合は、空のエントリが再追加され、プロパティを設定できるようになります。 1つの空のエントリを指定すると、添付ファイルが無効になります。
+>毎回 a `Messaging Operations Service` 設定を開いて編集する ( `allowedAttachmentTypes.name` が削除された場合、空のエントリが再度追加され、プロパティを設定できるようになりました。 1 つの空のエントリを指定すると、添付ファイルが無効になります。
 >
->ファイル名の拡張子をすべて許可するにブロックリストに加えるは、「**-**」アイコンを使用して（もう一度）1つの空のエントリを削除してから、「**保存**」をクリックします。
+>ファイル名の拡張子をすべて許可する（ファイル名を除く）にブロックリストに加えるは、「**-**「 」アイコンをクリックする前に空のエントリを（再度）1 つ削除します。 **保存**.
 
 ## グループメッセージ {#group-messaging}
 
-登録ユーザーがダイレクトメッセージを一括でユーザーグループに送信できるようにするには、次の2つの&#x200B;**Messaging Operation Services**&#x200B;設定で、**グループメッセージング**&#x200B;を有効にします。
+登録ユーザーがダイレクトメッセージを一括でユーザーグループに送信できるようにするには、 **グループメッセージを有効にする** 次の 2 つの例では **メッセージング操作サービス** 設定：
 
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-console`
 * `com.adobe.cq.social.messaging.client.endpoints.impl.MessagingOperationsServiceImpl~social-messaging`
@@ -152,8 +152,8 @@ AEM Communities のメッセージング機能を使用すると、サインイ�
 
 ## トラブルシューティング {#troubleshooting}
 
-問題をトラブルシューティングする1つの方法は、ログで[メッセージのデバッグを有効にすることです。](/help/sites-administering/troubleshooting.md)
+問題をトラブルシューティングする 1 つの方法は、 [ログにメッセージをデバッグする。](/help/sites-administering/troubleshooting.md)
 
 [個々のサービス用のロガーとライター](/help/sites-deploying/configure-logging.md#loggers-and-writers-for-individual-services)も参照してください。
 
-監視するパッケージは`com.adobe.cq.social.messaging`です。
+監視するパッケージは次のとおりです。 `com.adobe.cq.social.messaging`.

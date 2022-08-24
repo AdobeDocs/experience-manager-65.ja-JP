@@ -12,7 +12,7 @@ discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
 source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 100%
 
@@ -92,8 +92,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * **詳細**
    * **アカウント設定**
 
-      * **ステータス**
-アカウントには 
+      * **ステータス**&#x200B;アカウントには 
 **アクティブ**&#x200B;または **非アクティブ**&#x200B;のフラグを設定できます。
    * **写真**
 

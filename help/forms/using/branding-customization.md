@@ -11,7 +11,7 @@ topic-tags: forms-app
 discoiquuid: f6440a36-719a-4f89-b7db-1af918a3469a
 exl-id: 9333705b-9944-4a74-a30f-7d9ec85fd824
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 100%
 
@@ -192,7 +192,7 @@ AEM Forms アプリケーションにログインしてメニューボタンを�
   <tr>
    <th><p>説明</p> </th>
    <th><p>サイズ</p> </th>
-   <th><p>Filename</p> </th>
+   <th><p>ファイル名</p> </th>
   </tr>
   <tr>
    <td><p>Logo（ロゴ）</p> </td>

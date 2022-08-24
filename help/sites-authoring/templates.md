@@ -12,7 +12,7 @@ discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
 source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4874'
 ht-degree: 100%
 
@@ -63,7 +63,7 @@ ht-degree: 100%
 
 **テンプレートコンソール**&#x200B;および&#x200B;**テンプレートエディター**&#x200B;を使用する新しいテンプレートの作成では、次の役割の間の共同作業が必要です。
 
-* **管理者**：
+* **管理者**:
 
    * `admin` 権限が必要なテンプレートのために新しいフォルダーを作成します。
 
@@ -491,7 +491,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 
    >[!NOTE]
    >
-   >[リッチテキストエディターを実装するコンポーネントのコンテンツポリシー](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)は、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。 [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+   >[リッチテキストエディターを実装するコンポーネントのコンテンツポリシー](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)は、UI 設定を通じて RTE で提供されるオプションに対してのみ定義できます。  [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **ポリシーおよびプロパティ（レイアウトコンテナ）**
 

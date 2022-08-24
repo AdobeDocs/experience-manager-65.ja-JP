@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 docset: aem65
-source-git-commit: 9a164f92b6d5a927d1cb4ead2f119cc094180713
+exl-id: b325fc82-01e3-4122-8a86-ed605b135b01
+source-git-commit: 7d0dd5d96ef0174ce2a99c11be83ce2fbabdcb65
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%

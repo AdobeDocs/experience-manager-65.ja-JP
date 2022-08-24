@@ -11,7 +11,7 @@ discoiquuid: 90e36522-3af1-4a8a-b044-1c828c52974e
 description: カタログ作成機能
 exl-id: 76a46c62-d47d-4970-8a3a-d56015639548
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 100%
 

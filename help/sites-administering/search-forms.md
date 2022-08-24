@@ -7,7 +7,7 @@ topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 100%
 
@@ -179,7 +179,7 @@ ht-degree: 100%
     </ul> </td>
   </tr>
   <tr>
-   <td>非表示フィルター</td>
+   <td>非表示のフィルター</td>
    <td>プロパティおよび値のフィルターで、ユーザーには表示されません。</td>
    <td>
     <ul>
@@ -260,7 +260,7 @@ ht-degree: 100%
     </ul> </td>
   </tr>
   <tr>
-   <td>範囲 オプション </td>
+   <td>範囲オプション </td>
    <td>アセット専用の検索述語であり、共通のスライダーの述語と同じです。下位互換性の問題により、現在も使用可能です。</td>
    <td>
     <ul>
@@ -271,7 +271,7 @@ ht-degree: 100%
     </ul> </td>
   </tr>
   <tr>
-   <td>評価 </td>
+   <td>レーティング </td>
    <td>評価に従ってアセットを検索します。<br /> </td>
    <td>
     <ul>
@@ -329,12 +329,12 @@ ht-degree: 100%
 >[!NOTE]
 >
 >* 一般的な検索用の述語は、次の場所で定義されています。
->  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >
 >* siteadmin（クラシック UI）にのみ関連する検索用の述語は、次の場所にあります。
-> `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
->   * これらは非推奨であり、後方互換性のためにのみ使用できます。
+   > `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+   >   * これらは非推奨であり、後方互換性のためにのみ使用できます。
 >
 >この情報は参照用です。`/libs` には変更を加えないでください。
 

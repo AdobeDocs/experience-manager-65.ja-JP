@@ -1,8 +1,8 @@
 ---
 title: clientlib の追加
-seo-title: clientlib の追加
+seo-title: Add Clientlibs
 description: ClientLibraryFolder の追加
-seo-description: ClientLibraryFolder の追加
+seo-description: Add a ClientLibraryFolder
 uuid: 2944923d-caca-4607-81a4-4122a2ce8e41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,24 +13,24 @@ docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '682'
 ht-degree: 41%
 
 ---
 
-# clientlib の追加  {#add-clientlibs}
+# clientlib の追加 {#add-clientlibs}
 
-## ClientLibraryFolder(clientlibs)を追加します。 {#add-a-clientlibraryfolder-clientlibs}
+## ClientLibraryFolder（clientlibs）の追加 {#add-a-clientlibraryfolder-clientlibs}
 
 `clientlibs` という名前の ClientLibraryFolder を作成し、ここに、サイトのページをレンダリングするために使用される JS および CSS を格納します。
 
 このクライアントライブラリに指定する `categories` プロパティの値は、clientlib をコンテンツページから直接含めたり、その他の clientlib に埋め込んだりする場合に使用される識別子です。
 
-1. **CRXDE Lite**&#x200B;を使用して、`/etc/designs`を展開します。
+1. 使用 **CRXDE Lite**、展開 `/etc/designs`
 
-1. `an-scf-sandbox`を右クリックし、`Create Node`を選択します。
+1. 右クリック `an-scf-sandbox` を選択し、 `Create Node`
 
-   * 名前 : `clientlibs`
+   * 名前：`clientlibs`
    * 型：`cq:ClientLibraryFolder`
 
 1. 「**OK**」をクリックします。
@@ -42,17 +42,17 @@ ht-degree: 41%
 * 名前：**categories**
 * タイプ：**String**
 * 値：**apps.an-scf-sandbox**
-* 「**追加**」をクリックします。
-* 「**すべて保存**」をクリックします。
+* クリック **追加**
+* クリック **すべて保存**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プレースホルダー`js.tx`tと&#x200B;**`css.txt`**&#x200B;ファイルを追加します。 （公式にはcq:ClientLibraryFolderが存在しない場合は除きます）。
+注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プレースホルダーを追加 `js.tx`t および **`css.txt`** ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
 
-1. **`/etc/designs/an-scf-sandbox/clientlibs`**&#x200B;を右クリック
-1. 「**ファイルを作成…」を選択します。**
-1. **名前：** `css.txt`を入力します。
-1. 「**ファイルを作成…」を選択します。**
-1. **名前：** `js.txt`を入力します。
-1. 「**すべて保存**」をクリックします。
+1. 右クリック **`/etc/designs/an-scf-sandbox/clientlibs`**
+1. 選択 **ファイルを作成…**
+1. 入力 **名前：** `css.txt`
+1. 選択 **ファイルを作成…**
+1. 入力 **名前：** `js.txt`
+1. クリック **すべて保存**
 
 ![clientlibs-css](assets/clientlibs-css.png)
 
@@ -65,7 +65,7 @@ css.txt の内容を次のように設定します。
  style.css
 ```
 
-次に、clientlibsの下にstyle.cssという名前のファイルを作成し、次のようにコンテンツを設定します。
+次に、clientlibs の下に style.css という名前のファイルを作成し、コンテンツを
 
 `body {`
 
@@ -75,23 +75,22 @@ css.txt の内容を次のように設定します。
 
 ### SCF clientlib の埋め込み {#embed-scf-clientlibs}
 
-**ノードの「**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **embed** を入力します。これにより、SCFコンポーネント](/help/communities/client-customize.md#clientlibs-for-scf)に必要な[クライアント側ライブラリ(clientlib)が埋め込まれます。 このチュートリアルでは、コミュニティコンポーネントに必要なクライアントライブラリの多くを追加します。
+**ノードの「**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **embed** を入力します。これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要なクライアントライブラリの多くを追加します。
 
 ページごとにダウンロードされる clientlib の利点とサイズ／スピードに関する考慮事項があるので、このアプローチが実稼動サイトでの使用に適している場合もあれば、そうでない場合もある点に&#x200B;**注意してください**。
 
-1つのページで1つの機能のみを使用する場合は、その機能の完全なclientlibをページに直接含めることができます。例：
+1 つのページで 1 つの機能のみを使用する場合は、その機能の完全な clientlib をページに直接含めることができます ( 例：
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-この場合は、すべてを含め、オーサーclientlibであるより基本的なSCF clientlibを推奨します。
+この場合は、すべてを含めるなど、作成者の clientlib であるより基本的な SCF クライアントライブラリをお勧めします。
 
-* 名前 : **`embed`**
+* 名前：**`embed`**
 * 型：**`String`**
-* クリック **`Multi`**
+* Click **`Multi`**
 * 値：**`cq.social.scf`**
 
-   * ダイアログが表示されます。
-各エントリの後に**`+`**&#x200B;をクリックして、次のclientlibカテゴリを追加します。
+   * ダイアログが表示され、 **`+`** 各エントリの後に、次の clientlib カテゴリを追加します。
 
       * **`cq.ckeditor`**
       * **`cq.social.author.hbs.comments`**
@@ -101,17 +100,17 @@ css.txt の内容を次のように設定します。
       * **`cq.social.author.hbs.voting`**
       * 「**OK**」をクリックします。
 
-* 「**すべて保存**」をクリックします。
+* クリック **すべて保存**
 
 ![scf-clientlibs](assets/scf-clientlibs.png)
 
-次に、`/etc/designs/an-scf-sandbox/clientlibs`がリポジトリに表示される方法を示します。
+このように `/etc/designs/an-scf-sandbox/clientlibs` がリポジトリに表示されます。
 
 ![scf-clientlibs-view](assets/scf-clientlibs1.png)
 
 ### playpage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
-`apps.an-scf-sandbox` ClientLibraryFolderカテゴリをページに含めないと、SCFコンポーネントは機能しなくなり、スタイルも設定されません。必要なJavaScriptやスタイルは使用できなくなります。
+を含めずに、 `apps.an-scf-sandbox` 必要な JavaScript とスタイルが使用できないので、ページの ClientLibraryFolder カテゴリ、SCF コンポーネントは機能しないか、スタイル設定されません。
 
 例えば、clientlibs を挿入しなかった場合、SCF コメントコンポーネントは、スタイルが設定されていない状態で表示されます。
 
@@ -121,20 +120,20 @@ apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネ
 
 ![clientlibs-comment-styled](assets/clientlibs-comment1.png)
 
-includeステートメントは、`html`スクリプトの`head`セクションに属しています。 デフォルトの&#x200B;**`foundation head.jsp`**&#x200B;には、オーバーレイ可能なスクリプトが含まれています。**`headlibs.jsp`**.
+include ステートメントは、 `head` セクション `html` スクリプト デフォルト **`foundation head.jsp`** には、オーバーレイ可能なスクリプトが含まれています。 **`headlibs.jsp`**.
 
 **headlibs.jsp をコピーし、clientlibs を含めます。**
 
-1. **CRXDE Lite**&#x200B;を使用して、**`/libs/foundation/components/page/headlibs.jsp`**&#x200B;を選択します。
+1. 使用 **CRXDE Lite**&#x200B;を選択します。 **`/libs/foundation/components/page/headlibs.jsp`**
 
-1. 右クリックし、「**コピー**」を選択します（または、ツールバーの「コピー」を選択します）。
-1.  **`/apps/an-scf-sandbox/components/playpage`**
-1. 右クリックし、「**貼り付け**」を選択します（または、ツールバーの「貼り付け」を選択します）。
-1. **`headlibs.jsp`**&#x200B;をダブルクリックして開きます。
+1. 右クリックして「 」を選択します。 **コピー** （または、ツールバーから「コピー」を選択します）。
+1. 選択 **`/apps/an-scf-sandbox/components/playpage`**
+1. 右クリックして「 」を選択します。 **貼り付け** （または、ツールバーから「貼り付け」を選択します）。
+1. ダブルクリック **`headlibs.jsp`** 開ける
 1. ファイルの末尾に次の行を追加します。
    **`<ui:includeClientLib categories="apps.an-scf-sandbox"/>`**
 
-1. 「**すべて保存**」をクリックします。
+1. クリック **すべて保存**
 
 ```xml
 <%@ page session="false" %><%
@@ -154,36 +153,36 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
 
 ### これまでの作業内容の保存 {#saving-your-work-so-far}
 
-この時点で、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、やり直しを希望する場合は、サーバーをオフにし、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールできます。
+この時点で、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにし、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールできます。
 
 すぐに操作してみたい場合は、[サンプルページの作成](/help/communities/create-sample-page.md)チュートリアルにこのパッケージがあります。
 
 パッケージを作成するには：
 
-* CRXDE Liteで、[パッケージアイコン](https://localhost:4502/crx/packmgr/)をクリックします。
-* 「**パッケージを作成**」をクリックします。
+* CRXDE Liteで、 [パッケージアイコン](https://localhost:4502/crx/packmgr/)
+* クリック **パッケージを作成**
 
    * パッケージ名：an-scf-sandbox-minimal-pkg
    * バージョン：0.1
-   * グループ: `leave as default`
+   * グループ：`leave as default`
    * 「**OK**」をクリックします。
 
 * 「**編集**」をクリックします。
 
-   * 「**フィルター**」タブを選択します。
+   * 選択 **フィルター** タブ
 
-      * 「**フィルターを追加**」をクリックします。
-      * ルートパス：`/apps/an-scf-sandbox`を参照します。
-      * 「**完了**」をクリックします。
-      * 「**フィルターを追加**」をクリックします。
-      * ルートパス：`/etc/designs/an-scf-sandbox`を参照します。
-      * 「**完了**」をクリックします。
-      * 「**フィルターを追加**」をクリックします。
-      * ルートパス：`/content/an-scf-sandbox**`を参照します。
-      * 「**完了**」をクリックします。
+      * クリック **フィルターを追加**
+      * ルートパス：参照先 `/apps/an-scf-sandbox`
+      * クリック **完了**
+      * クリック **フィルターを追加**
+      * ルートパス：参照先 `/etc/designs/an-scf-sandbox`
+      * クリック **完了**
+      * クリック **フィルターを追加**
+      * ルートパス：参照先 `/content/an-scf-sandbox**`
+      * クリック **完了**
    * 「**保存**」をクリックします。
 
 
-* 「**ビルド**」をクリックします。
+* クリック **ビルド**
 
-これで、**ダウンロード**&#x200B;を選択してディスクに保存し、**パッケージ**&#x200B;を別の場所にアップロードし、**詳細>レプリケート**&#x200B;を選択してサンドボックスの領域を拡張できます。
+これで、 **ダウンロード** ディスクに保存し **パッケージをアップロード** 他の場所では、選択 **詳細 > レプリケート** サンドボックスを localhost パブリッシュインスタンスにプッシュしてサンドボックスの領域を拡張するために使用します。

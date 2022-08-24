@@ -1,17 +1,17 @@
 ---
 title: AEM Content and Commerce
-description: AEMコンテンツとコマースの使用と管理の方法を理解します。統合に関する役立つ記事や、AEM Storefront の使用を開始する方法も用意されています。
+description: AEM Content and Commerce の使用と管理の方法を理解します。統合に関する役立つ記事や、AEM ストアフロントの使用を開始する方法も用意されています。
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
 source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
 workflow-type: tm+mt
 source-wordcount: '367'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 # AEM Content and Commerce {#commerce-guide}
 
-AEMコンテンツとコマースの使用と管理の方法を理解します。統合に関する役立つ記事や、AEM Storefront の使用を開始する方法も用意されています。
+AEM Content and Commerce の使用と管理の方法を理解します。統合に関する役立つ記事や、AEM ストアフロントの使用を開始する方法も用意されています。
 
 >[!NOTE]
 >

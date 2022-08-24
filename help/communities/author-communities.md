@@ -1,8 +1,8 @@
 ---
 title: コミュニティコンポーネント
-seo-title: コミュニティコンポーネント
+seo-title: Communities Components
 description: AEM サイトへのコミュニティ機能の追加
-seo-description: AEM サイトへのコミュニティ機能の追加
+seo-description: Adding community features to any AEM site
 uuid: 76824820-81e9-4192-8df3-dff55eaf144e
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ docset: aem65
 exl-id: 4a49d14c-e6f0-4791-904e-8f30e47f7cde
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 73%
+source-wordcount: '286'
+ht-degree: 72%
 
 ---
 
@@ -32,17 +32,17 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->オーサリング環境に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントと、[ページのオーサリングに関するクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
+>オーサリング環境に詳しくない場合は、 [基本操作](/help/sites-authoring/basic-handling.md) および [ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md).
 
 ## 使用可能なコミュニティコンポーネント {#available-communities-components}
 
 以下の表に、コンポーネントブラウザー（サイドキック）で有効なときに作成者に表示されるコミュニティコンポーネントを示します。
 
-インタラクティブな[コミュニティコンポーネントガイド](/help/communities/components-guide.md)も参照してください。
+インタラクティブ [コミュニティコンポーネントガイド](/help/communities/components-guide.md).
 
 >[!NOTE]
 >
->[コミュニティコンポーネントの基本](/help/communities/basics.md)をお読みください。コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれています。
+>読み取り [コミュニティコンポーネントの基本](/help/communities/basics.md) コミュニティコンポーネントを使用したオーサリングに必要な情報が含まれているので、
 
 | **コンポーネントのタイトル** | **機能** |
 |---|---|
@@ -68,7 +68,7 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 | メッセージリスト | [メッセージ](/help/communities/configure-messaging.md) |
 | Q&amp;A | [質問と回答](/help/communities/working-with-qna.md) |
 | クイック検索 | [検索](/help/communities/search.md) |
-| 評価 | [評価](/help/communities/rating.md) |
+| レーティング | [レーティング](/help/communities/rating.md) |
 | 関連する質問 | [質問と回答](/help/communities/working-with-qna.md) |
 | レビュー | [レビュー](/help/communities/reviews.md) |
 | レビューの概要 (表示) | [レビュー](/help/communities/reviews.md) |
@@ -79,12 +79,12 @@ AEM Communities をライセンス認証すると、コミュニティサイト�
 
 >[!NOTE]
 >
->投票コンポーネントは使用できなくなり、Experience Managerコミュニティでサポートされます。
+>投票コンポーネントは使用できなくなり、Experience ManagerCommunities でサポートされます。
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントについては、[Communitiesのデプロイ](/help/communities/deploy-communities.md)を参照してください。
+* 訪問 [コミュニティのデプロイ](/help/communities/deploy-communities.md) を参照して、推奨されるデプロイメントについて確認してください。
 
 * コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](/help/communities/administer-landing.md)を参照してください。
 
-* ソーシャルコンポーネントフレームワーク(SCF)とコミュニティのコンポーネントと機能のカスタマイズについては、 [コミュニティの開発](/help/communities/communities.md)を参照してください。
+* 訪問 [コミュニティの開発](/help/communities/communities.md) ソーシャルコンポーネントフレームワーク (SCF) と、コミュニティのコンポーネントと機能のカスタマイズについて説明します。

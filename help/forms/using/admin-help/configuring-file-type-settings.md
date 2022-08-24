@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: ab19b248-8931-4cf6-b6a5-fb7b067c4a49
 feature: PDF Generator
 exl-id: 1a6640cc-22ef-41d5-a0c6-7a2c2dabcef1
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '6158'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -257,7 +257,7 @@ PDF Generator では、PDF ファイルのサイズを低減することがで�
 
    >[!NOTE]
    >
-   >*ドキュメントにサブセットが埋め込まれているフォントの埋め込みを解除する場合、+ 記号をフォント名のプレフィックスとして指定します。例えば、「+Helvetica」と入力します。*
+   >*ドキュメントにサブセットが埋め込まれているフォントの埋め込みを解除する場合、+ 記号をフォント名のプレフィックスとして指定します。例えば、「+Helvetica」とします。*
 
 1. 埋め込まれたフォントの使用中のサブセットのみを埋め込む場合、「**すべての埋め込まれたフォントをサブセット化**」を選択します。
 
@@ -520,7 +520,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **styleName1=level1[,styleName2=level2...]**
 
-Microsoft Word のスタイル名にコンマ (,) または等号 (=) が含まれる場合、特殊文字の前にエスケープ文字 (&quot;\_) を付けます。 例えば、「Heading, 1」という名前のスタイルを「Heading\, 1」と指定します。
+Microsoft Word のスタイル名にコンマ（,）または等号（=）が含まれる場合、記号の前にエスケープ文字（&quot;\_）を付ける必要があります。例えば、「Heading, 1」というスタイルは Heading\, 1 と指定します。
 
 **Acrobat PDFMaker エンコーディング：** Acrobat PDFMaker に入力されるプレーンテキストファイルのエンコーディングの種類を指定します。例えば、UTF-8 でエンコードされたファイルを使用する場合は、最良の結果を得るために UTF-8 を選択します。 
 
@@ -624,6 +624,6 @@ Microsoft Word のスタイル名にコンマ (,) または等号 (=) が含ま�
 * Adobe FrameMaker：`fm`
 * Adobe Photoshop：`psd`
 
-これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、「追加のネイティブファイル形式のサポートの追加」( [AEM forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62).
+これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、『[AEM Forms のプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62)』の「追加のネイティブファイル形式に対するサポートの追加」を参照してください。
 
 PDFG ネットワークプリンターの設定のヘルプについては、[PDFG ネットワークプリンターの設定（Windows のみ）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)を参照してください。

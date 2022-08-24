@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '3273'
-ht-degree: 58%
+ht-degree: 59%
 
 ---
 
@@ -233,7 +233,7 @@ CRXDE Lite で以下の手順に従います。
 1. に移動します。 */etc/designs/phonegap/&lt;app name=&quot;&quot;>/clientlibsall.*
 1. プロパティペインで「埋め込み」セクションをダブルクリックします。
 1. 表示されるダイアログで、+ ボタンをクリックして新規クライアントライブラリを追加します。
-1. 新しいテキストフィールドに「cq.mobile.push」を追加し、「OK」をクリックします。
+1. 新規テキストフィールドで、「cq.mobile.push」を追加し、「OK」をクリックします。
 1. もう 1 つ「cq.mobile.push.amazon」というエントリを追加し、「OK」をクリックします。
 1. 変更を保存します。
 

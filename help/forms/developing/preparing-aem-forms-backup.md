@@ -12,7 +12,7 @@ discoiquuid: e747147e-e96d-43c7-87b3-55947eef81f5
 role: Developer
 exl-id: aeab003d-ba64-4760-9c56-44638501e9ff
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2520'
 ht-degree: 100%
 
@@ -59,7 +59,7 @@ ht-degree: 100%
 * バックアップ手順が完了するまでの時間。
 * 連続バックアップモードにするかどうかを示すフラグ。ローリングバックアップを実行する場合にのみ役立ちます。
 
-バックアップモードに入るためのアプリケーションを作成する前に、Forms サーバーをバックアップモードにした後のバックアップ手順について理解することをお勧めします。AEM Forms のバックアップを実行する際に考慮すべき事項について詳しくは、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照してください。
+バックアップモードに入るためのアプリケーションを作成する前に、Forms サーバーをバックアップモードにした後のバックアップ手順について理解することをお勧めします。AEM Forms のバックアップを実行する際に考慮すべき事項について詳しくは、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63)を参照してください。
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ ht-degree: 100%
 
 **一意のラベルを決定し、バックアップを実行する時間を決定し、連続バックアップモードにするかどうかを決定**
 
-バックアップモードに入る前に、一意のラベルを決定し、バックアップの実行に割り当てる時間を決定し、Forms サーバーをバックアップモードのままにするかどうかを決定する必要があります。これらの検討事項は、組織が確立したバックアップ手順と統合する際に重要です。 （[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照。）
+バックアップモードに入る前に、一意のラベルを決定し、バックアップの実行に割り当てる時間を決定し、Forms サーバーをバックアップモードのままにするかどうかを決定する必要があります。これらの検討事項は、組織が確立したバックアップ手順と統合する際に重要です。 （[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63)を参照。）
 
 **バックアップモードに移行**
 
@@ -120,7 +120,7 @@ ht-degree: 100%
 
    `ServiceClientFactory` オブジェクトと BackupService クライアント API オブジェクトを一緒に使用します。
 
-   * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+   * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）
    * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`BackupService` オブジェクトを作成します。
 
 1. 固有のラベルを決定し、バックアップを実行する時間を決定し、継続的なバックアップモードにするかどうかを決定
@@ -184,11 +184,11 @@ ht-degree: 100%
 
 バックアップモードを終了して、Forms サーバーで GDS（グローバルドキュメントストレージ）からファイルのパージを再開できるようにします。
 
-終了モードに入るためのアプリケーションを作成する前に、AEM Forms で使用されるバックアップ手順を理解しておくことをお勧めします。AEM Forms のバックアップを実行する際に考慮すべき事項について詳しくは、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照してください。
+終了モードに入るためのアプリケーションを作成する前に、AEM Forms で使用されるバックアップ手順を理解しておくことをお勧めします。AEM Forms のバックアップを実行する際に考慮すべき事項について詳しくは、[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63)を参照してください。
 
 >[!NOTE]
 >
->バックアップと復元のサービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>バックアップおよび復元サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-1}
 
@@ -205,7 +205,7 @@ ht-degree: 100%
 
 これらのファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
-**BackupService Client API オブジェクトの作成**
+**BackupService クライアント API オブジェクトを作成**
 
 プログラムでバックアップモードを終了するには、BackupService クライアントオブジェクトを作成して Backup and Restore Service API を使用します。
 
@@ -233,7 +233,7 @@ Backup and Restore Service API（Java）を使用してバックアップモー�
 
 1. BackupService Client API オブジェクトを作成する
 
-   `ServiceClientFactory` オブジェクトと BackupService Client API オブジェクトを併用します。
+   `ServiceClientFactory` オブジェクトと BackupService クライアント API オブジェクトを一緒に使用します。
 
    * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
    * コンストラクターを使用し、`ServiceClientFactory` オブジェクトをパラメーターとして渡すことによって、`BackupService` オブジェクトを作成します。

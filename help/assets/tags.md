@@ -11,9 +11,9 @@ feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6633'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -133,7 +133,7 @@ Experience Cloud アカウントが Adobe Analytics for Audio and Video を使�
 
 詳しくは、[拡張機能のインストールとセットアップ](#installing-and-setup-of-extensions)を参照してください。
 
-現在、ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html?lang=ja#player-events)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
+現在、ビデオトラッキングのサポートは、[トラッキングの概要](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/track-av-playback/track-core-overview.html#player-events)で説明されているように、「コア再生」トラッキングのみに制限されます。具体的には、QoS、広告、チャプター／セグメント、エラーのトラッキングはサポートされていません。
 
 ## Dynamic Media ビューア拡張機能の使用  {#using-the-dynamic-media-viewers-extension}
 
@@ -689,7 +689,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    ![2019-07-25_12-09-24](assets/2019-07-25_12-09-24.png)
 
-1. 公開鍵ファイル（*.crt）をローカルシステムにダウンロードするには、「**[!UICONTROL 公開鍵のダウンロード]**」を選択します。
+1. 公開鍵ファイル (&#42;.crt) をローカルシステムに追加し、 **[!UICONTROL 公開鍵をダウンロード]**.
 
    >[!NOTE]
    >
@@ -714,7 +714,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    * 「**[!UICONTROL 説明]**」フィールドに、統合の説明を入力します。
 
-   * 「**[!UICONTROL 公開鍵証明書]**」領域に、この手順で以前にダウンロードした公開鍵ファイル（*.crt）をアップロードします。
+   * 内 **[!UICONTROL 公開鍵証明書]** 」領域に、公開鍵ファイル (&#42;.crt) をダウンロードする必要があります。
 
    * 「**[!UICONTROL Experience Platform タグ API 用の役割を選択]**」の見出しの下から「**[!UICONTROL 管理者]**」を選択します。
 

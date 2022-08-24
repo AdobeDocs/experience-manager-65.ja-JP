@@ -11,10 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 85d655bb-1b6b-4b4d-ae39-eca3ef9b7fd7
 feature: PDF Generator
 exl-id: 402c1fd4-c6c8-494e-b452-b56a91c4a397
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '869'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Windows オペレーティングシステムでは、PDF 変換で使用され�
 Windows Server 2008 で OpenOffice、Microsoft Word または Microsoft PowerPoint を実行する場合は、追加する各ユーザーの UAC を無効にします。
 
 1. コントロールパネル／ユーザーアカウント／ユーザーアカウント制御の有効化または無効化をクリックします。
-1. 「ユーザーアカウント制御 (UAC) を使用してコンピューターを保護する」チェックボックスをオフにし、「OK」をクリックします。
+1. 「ユーザーアカウント制御（UAC）を使ってコンピューターの保護に役立たせる」の選択を解除し、「OK」をクリックします。
 1. コンピューターを再起動して設定を有効にします。
 
 ### Linux または Solaris での OpenOffice に必要な追加設定 {#additional-configuration-required-for-openoffice-on-linux-or-solaris}

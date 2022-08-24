@@ -12,7 +12,7 @@ docset: aem65
 feature: Correspondence Management
 exl-id: ba2e145d-51ee-4844-a9e1-9927971d25a1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4443'
 ht-degree: 100%
 
@@ -131,7 +131,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       <td>フィールド／プロパティに与える任意の名前。（ここでは「geographicallocation」）</td>
    </tr>
    <tr>
-      <td>name</td>
+      <td>名前</td>
       <td>文字列</td>
       <td>。/extendedproperties/geographicallocation（値は items ノードで作成したフィールド名と同じにします）</td>
    </tr>
@@ -310,7 +310,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       | **名前** | **種類** | **値** |
       |---|---|---|
       | fieldLabel | 文字列 | Location of recipients（または、フィールドに与える任意の名前。） |
-      | name | 文字列 | 。/extendedproperties/GeographicalLocation |
+      | 名前 | 文字列 | 。/extendedproperties/GeographicalLocation |
       | renderReadOnly | ブール値 | true |
       | sling:resourceType | 文字列 | `/libs/granite/ui/components/coral/foundation/form/textfield` |
 
@@ -505,7 +505,7 @@ Correspondence Management ユーザーインターフェイスをカスタマイ
       | **名前** | **種類** | **値** |
       |---|---|---|
       | fieldLabel | 文字列 | Location of recipients（または、フィールドに与える任意の名前。） |
-      | name | 文字列 | `./extendedproperties/GeoLocation` |
+      | 名前 | 文字列 | `./extendedproperties/GeoLocation` |
       | renderReadOnly | ブール値 | true |
       | sling:resourceType | 文字列 | granite/ui/components/coral/foundation/form/textfield |
 
@@ -652,7 +652,7 @@ Correspondence Management のアセットリスト UI にカスタムプロパ�
 
    次の手順に従って、このフォルダー構造を作成します。
 
-   1. 次のパスにある columns フォルダーを右クリックし、**ノードをオーバーレイ**&#x200B;を選択します。
+   1. 次のパスにある columns フォルダーを右クリックしてから、「**ノードをオーバーレイ**」を選択してください。
 
       `/libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage`
 
@@ -803,7 +803,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
            <td><strong>値</strong></td>
          </tr>
          <tr>
-           <td>path</td>
+           <td>パス</td>
            <td>文字列</td>
            <td>extendedProperties<br /> </td>
          </tr>
@@ -829,7 +829,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
       | **名前** | **種類** | **値** |
       |---|---|---|
       | analyzed | 文字列 | true |
-      | name | 文字列 | extendedProperties/location（または、検索に追加するプロパティの名前） |
+      | 名前 | 文字列 | extendedProperties/location（または、検索に追加するプロパティの名前） |
       | propertyIndex | ブール値 | true |
       | useInSuggest | ブール値 | true |
 
@@ -922,7 +922,7 @@ sling:orderBefore プロパティを追加して列の位置を指定する場�
    <tr>
       <td>sling:orderBefore<br /> </td>
       <td>文字列</td>
-      <td>card</td>
+      <td>カード</td>
    </tr>
    </tbody>
    </table>

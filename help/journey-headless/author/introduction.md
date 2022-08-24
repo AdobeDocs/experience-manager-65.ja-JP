@@ -3,7 +3,7 @@ title: AEM ヘッドレスコンテンツ作成者ジャーニー
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをオーサリングする方法を紹介します。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 100%
 

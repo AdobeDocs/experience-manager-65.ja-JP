@@ -3,7 +3,7 @@ title: オーサリングの基本
 description: コンテンツフラグメントを使用したヘッドレス CMS のコンテンツオーサリングの概念と仕組みについて説明します。
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 100%
 

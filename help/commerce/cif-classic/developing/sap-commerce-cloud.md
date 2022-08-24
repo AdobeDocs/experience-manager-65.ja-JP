@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
 source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2311'
 ht-degree: 100%
 
@@ -226,6 +226,7 @@ hybris で管理されている製品データを AEM で使用できるよう�
 >1. `size`
 >
 >1. さらにもう 1 つ
+
 >
 >この追加バリアントは、製品リファレンスの `variationAxis` プロパティ（Geometrixx Outdoors の場合、通常は `color`）を使用して選択されます。
 
@@ -260,7 +261,7 @@ content
 |     |──shirt-l
 ```
 
-最後に、製品データを使用するための要件はありません。 すべての製品データをカタログ内のリファレンスの配下に配置できますが、実際には、すべての製品データを複製せずに複数のカタログを用意することはできません。
+最後に、製品データを使用するための要件はありません。すべての製品データをカタログ内のリファレンスの配下に配置できますが、実際には、すべての製品データを複製せずに複数のカタログを用意することはできません。
 
 **API**
 

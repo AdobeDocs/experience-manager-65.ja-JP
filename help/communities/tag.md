@@ -1,8 +1,8 @@
 ---
 title: タグの基本事項
-seo-title: タグの基本事項
+seo-title: Tag Essentials
 description: タグの概要
-seo-description: タグの概要
+seo-description: Tag overview
 uuid: a5d52319-f821-4608-b0ab-abc8a1374343
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 61%
+source-wordcount: '263'
+ht-degree: 60%
 
 ---
 
@@ -23,11 +23,11 @@ AEM Communities コンポーネントの設定でタグ付けを有効化する�
 
 パブリッシュ環境で適用されるタグの基礎となるインフラストラクチャは、オーサー環境でコンテンツ（ページやアセットなど）に適用されるタグの場合と同じです。
 
-* タグの作成と管理について詳しくは、[タグの管理](../../help/sites-administering/tags.md)および[ユーザー生成コンテンツのタグ付け](tag-ugc.md)(UGC)を参照してください。
+* 詳しくは、 [タグの管理](../../help/sites-administering/tags.md) および [ユーザー生成コンテンツのタグ付け](tag-ugc.md) (UGC) を参照してください。
 
-* [タグ付けフレームワーク](../../help/sites-developing/framework.md)および[カスタムアプリケーション](../../help/sites-developing/building.md)にタグを追加したりタグを拡張したりする方法については、[Tagging for Developers](../../help/sites-developing/tags.md)を参照してください。
+* 詳しくは、 [開発者向けタグ付け](../../help/sites-developing/tags.md) を参照してください。 [タグ付けフレームワーク](../../help/sites-developing/framework.md) にタグを追加したり、タグを拡張したりする [カスタムアプリケーション](../../help/sites-developing/building.md).
 
-* パブリッシュ環境でUGCに適用されたタグをハイライト表示するために`social tag cloud`コンポーネントをページに追加する方法については、 [Socialタグクラウドの使用](tagcloud.md)を参照してください。
+* 詳しくは、 [Social タグクラウドの使用](tagcloud.md) を参照してください。 `social tag cloud` コンポーネントをページに追加して、パブリッシュ環境で UGC に適用されたタグをハイライトします。
 
 * カタログのリソースをタグ付けする方法については、[イネーブルメントリソースのタグ付け](tag-resources.md)を参照してください。
 
@@ -51,7 +51,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -67,7 +67,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
   </tr>
   <tr>
    <td><strong>properties</strong></td>
-   <td><a href="tagcloud.md">Socialタグクラウドの使用</a>を参照してください。</td>
+   <td>詳しくは、 <a href="tagcloud.md">Social タグクラウドの使用</a></td>
   </tr>
  </tbody>
 </table>

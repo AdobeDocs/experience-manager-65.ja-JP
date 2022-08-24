@@ -12,7 +12,7 @@ discoiquuid: d2c95881-6c02-4e34-85af-84607df54287
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '9117'
 ht-degree: 100%
 
@@ -1091,7 +1091,7 @@ Repository サービス API（Java）を使用してリソースをロックし�
 
 1. リソースのロックの解除
 
-   `ResourceRepositoryClient` オブジェクトの `unlockResource` メソッドを呼び出し、リソースの URI をパラメーターとして渡します。詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
+   `ResourceRepositoryClient` オブジェクトの `unlockResource` メソッドを呼び出し、リソースの URI をパラメーターとして渡します。詳しくは、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)を参照してください。
 
 **関連トピック**
 

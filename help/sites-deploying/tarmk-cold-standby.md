@@ -12,10 +12,10 @@ discoiquuid: 9559e837-a87e-4ee7-8ca6-13b42c74e6bf
 docset: aem65
 feature: Configuring
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 88e4d8b56aa844e9a264615250971d0afdb68137
 workflow-type: tm+mt
 source-wordcount: '2730'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -151,7 +151,7 @@ TarMK コールドスタンバイセットアップを作成するには、ま�
    java -jar quickstart.jar -r primary,crx3,crx3tar
    ```
 
-1. **org.apache.jackrabbit.oak.segment** パッケージに対して、新しい Apache Sling Logging Logger を作成します。ログレベルを「Debug」に設定し、ログ出力を別のログファイルに指定します。例： */logs/tarmk-coldstandby.log*. 詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
+1. **org.apache.jackrabbit.oak.segment** パッケージに対して、新しい Apache Sling Logging Logger を作成します。ログレベルを「デバッグ」に設定し、ログの出力先を個別のログファイル（ */logs/tarmk-coldstandby.log* など）に指定します。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 1. **スタンバイ**&#x200B;インスタンスの場所に移動し、jar を実行して起動します。
 1. プライマリと同じログ設定を作成します。その後、インスタンスを停止します。
 1. 次に、スタンバイインスタンスの準備をおこないます。そのためには、プライマリインスタンスの場合と同様の手順を実行します。

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: b8c7a20a-7694-4a49-b66a-060720f17dad
 exl-id: 1e0821f5-627f-4262-ba76-62303890e112
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2208'
 ht-degree: 100%
 
@@ -45,7 +45,7 @@ AEM は、クラウド内または AEM にホストされている Dynamic Tag M
 * クラウドホスト型：Dynamic Tag Management の JavaScript ライブラリがクラウド内に保存されており、AEM ページはそれを直接参照します。
 * AEM ホスト型：Dynamic Tag Management が JavaScript ライブラリを生成します。AEM はワークフローモデルを使用してライブラリを取得し、インストールします。
 
-AEM が使用するホスティングのタイプによって、実行する設定および実装タスクの一部が決定されます。ホスティングオプションについては、Dynamic Tag Management ヘルプの[ホスティング - 「埋め込み」タブ](https://microsite.omniture.com/t2/help/ja_JP/dtm/#Hosting__Embed_Tab)を参照してください。
+AEM が使用するホスティングのタイプによって、実行する設定および実装タスクの一部が決定されます。ホスティングオプションについては、Dynamic Tag Management ヘルプの[ホスティング - 「埋め込み」タブ](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)を参照してください。
 
 ### ステージングおよび実稼動ライブラリ {#staging-and-production-library}
 

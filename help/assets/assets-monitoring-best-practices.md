@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
 workflow-type: tm+mt
 source-wordcount: '1668'
 ht-degree: 100%
@@ -116,8 +116,8 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
 
 レプリケーションエージェント
 
-* MBean：`com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
-* URL：`/system/console/jmx/com.adobe.granite.replication:type=agent,id="<AGENT_NAME>"`
+* MBean：`com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>”`
+* URL：`/system/console/jmx/com.adobe.granite.replication:type=agent,id=”<AGENT_NAME>"`
 * インスタンス：1 つのオーサーインスタンスおよびすべてのパブリッシュインスタンス（フラッシュエージェント）
 * アラームしきい値：`QueueBlocked``true` の値が 、または `QueueNumEntries` の値がベースラインの 150％を超えた場合。
 

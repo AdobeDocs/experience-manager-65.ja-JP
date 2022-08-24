@@ -3,7 +3,7 @@ title: タッチ操作対応 UI 機能のステータス
 description: ' [!DNL Adobe Experience Manager] タッチ操作対応 UI に固有のリリースノート。'
 exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 100%
 

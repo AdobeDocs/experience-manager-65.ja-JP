@@ -66,7 +66,7 @@ Adobe Developer Console を使用して、AEM が使用する Adobe Target と�
 
 ### プロジェクトの作成 {#creating-the-project}
 
-Adobe Developer Console を開いて、AEM が使用する Adobe Target でプロジェクトを作成します。
+Adobe 開発者コンソールを開いて、AEM で使用する Adobe Target を組み込んだプロジェクトを作成します。
 
 1. Adobe Developer Console を開いて、プロジェクトを表示します。
 
@@ -150,7 +150,7 @@ Adobe Developer Console - プロジェクトから、すべての統合プロジ
 * API
    * 例：Adobe Target
 
-これらの一部は、IMS に基づいて AEM で Adobe Target の統合を完了する必要があります。
+これらの一部は、IMS に基づいて AEM で Adobe Target の統合を完了するために必要になります。
 
 ## AEM での IMS 設定の完了 {#completing-the-ims-configuration-in-aem}
 
@@ -159,7 +159,7 @@ AEM に戻り、Adobe Developer Console の Target 向け統合から必要な�
 1. [AEM で IMS 設定を開く](#configuring-an-ims-configuration-generating-a-public-key)に戻ります。
 1. 「**次へ**」を選択します。
 
-1. ここで、[Adobe Developer Console のプロジェクト設定からの詳細](#details-stored-for-the-ims-integration-project)を使用できます。
+1. ここで、[Adobe Developer Console のプロジェクト設定の詳細](#details-stored-for-the-ims-integration-project)を使用できます。
 
    * **タイトル**：テキスト。
    * **認証サーバー**：以下の&#x200B;**ペイロード**&#x200B;セクションの `aud` 行からこれをコピーして貼り付けます。例：以下の例では `https://ims-na1.adobelogin.com`　

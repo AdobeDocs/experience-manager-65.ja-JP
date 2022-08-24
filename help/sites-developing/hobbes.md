@@ -12,7 +12,7 @@ discoiquuid: 938100ad-94f9-408a-819d-72657dc115f7
 docset: aem65
 exl-id: 2d28cee6-31b0-4288-bad3-4d2ecad7b626
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 100%
 
@@ -119,7 +119,7 @@ AEM テストフレームワークでは、Javascript で記述されたテス�
    | 名前 | タイプ | 値 |
    |---|---|---|
    | `categories` | String[] | `granite.testing.hobbes.tests` |
-   | `dependencies` | String[] | `granite.testing.hobbes.testrunner` |
+   | `dependencies` | 文字列[] | `granite.testing.hobbes.testrunner` |
 
    >[!NOTE]
    >

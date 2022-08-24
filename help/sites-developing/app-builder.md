@@ -1,13 +1,13 @@
 ---
 title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
-source-git-commit: e6153e1a816bb9169f96fa75827593485a6ddbd4
-workflow-type: ht
+exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Developer App Builder を使用した [!DNL Adobe Experience Manager] の拡張 {#extend-using-app-builder}
 
@@ -65,4 +65,4 @@ App Builder には、開発者向けのビデオとドキュメントが用意�
 
 ## サポート {#support}
 
-開発者サポートに類するリクエストについては、開発者が [Experience League フォーラム](https://experienceleaguecommunities.adobe.com/t5/project-firefly/ct-p/project-firefly)を使用することをお勧めします。
+開発者サポートに類するリクエストについては、開発者が [Experience League フォーラム](https://experienceleaguecommunities.adobe.com/t5/app-builder/ct-p/project-firefly?profile.language=ja)を使用することをお勧めします。

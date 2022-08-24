@@ -12,7 +12,7 @@ discoiquuid: 5afe864d-5794-4ffa-99e7-a3233f982aff
 docset: aem65
 exl-id: eeff89c1-41b3-403d-b4bf-c79b09b24d4a
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2534'
 ht-degree: 100%
 
@@ -282,7 +282,8 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 大部分のコンポーネントでは、次の項目を設定できます。
 
-#### タイトルとテキスト {#title-and-text}
+#### タイトルとテキスト
+ {#title-and-text}
 
 * **タイトル**
 要素名以外の名前を使用する場合は、ここに入力します。

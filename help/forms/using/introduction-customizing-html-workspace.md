@@ -12,7 +12,7 @@ discoiquuid: 021c6606-8cd3-472c-a80b-b1bcace7e87f
 docset: aem65
 exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 100%
 
@@ -261,7 +261,7 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 
       * require - require.js を含みます。
       * jqueryui - jquery.ui.datepicker.ja.js を含みます。
-   * runtime:
+   * ランタイム：
 
       * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
    * main.js （combined、minified および uglified）。
@@ -306,7 +306,7 @@ CRX パッケージは CRX™ リポジトリにデプロイすることがで�
 
       * require - require.js を含みます。
       * jqueryui - jquery.ui.datepicker.ja.js を含みます。
-   * runtime:
+   * ランタイム：
 
       * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
    * main.js (組み合わせ)
@@ -349,7 +349,7 @@ client-pkg への mvn clean -P Dev install
    * libs - AEM Forms Workspace で使用されているすべてのライブラリを含みます。
    * require - require.js を含みます。
    * jqueryui - jquery.ui.datepicker.ja.js を含みます。
-   * runtime:
+   * ランタイム：
 
       * initializer - initializer.js と modelcontrollerpath.js を含みます。
       * models - AEM Forms Workspace 内のすべてのコンポーネントのモデルを含みます。

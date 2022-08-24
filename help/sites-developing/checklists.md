@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 8f94c22d-5f08-4a8b-8bb5-5ec757c44bc8
 exl-id: 16c5f9aa-024d-4d8a-ba08-22b073289cfd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 次のチェックリストでは、主な問題の一部を重点的に説明しています。詳しくは、テストに関する他の節を参照してください。
 
-| チェック項目 | 回答 | アクション | 所有者 | 期限 |
+| チェック項目 | 応答 | アクション | 所有者 | 期限 |
 |---|---|---|---|---|
 | 正規のレポート作成手順が明確に設定されていますか。 |  |  |  |  |
 | （テストチームの）主要関係者がステータス会議に参加していますか。 |  |  |  |  |

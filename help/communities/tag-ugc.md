@@ -1,8 +1,8 @@
 ---
 title: ユーザー生成コンテンツのタグ付け
-seo-title: ユーザー生成コンテンツのタグ付け
+seo-title: Tagging User Generated Content
 description: ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です
-seo-description: ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です
+seo-description: Tagging of user generated content (UGC) is how community members can help other members search for content
 uuid: ce125d7c-6fc1-44c7-9f67-eca6f599d8e3
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -13,8 +13,8 @@ role: Admin
 exl-id: 1ecb41e5-c959-4380-a5c7-df9fc3a7703a
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 81%
+source-wordcount: '227'
+ht-degree: 79%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 81%
 
 ユーザー生成コンテンツ（UGC）のタグ付けは、コミュニティメンバーが他のメンバーによるコンテンツの検索を支援するための手段です。
 
-通常、タグは作成者と管理者によってオーサー環境で適用されます。UGCのタグ付けは、UGCタグがパブリッシュ環境のコミュニティメンバーによって適用される点で一意です。
+通常、タグは作成者と管理者によってオーサー環境で適用されます。UGC のタグ付けは、UGC タグがパブリッシュ環境のコミュニティメンバーによって適用される点で一意です。
 
 タグ名前空間と分類は、どちらで適用する場合も同じです。
 
@@ -40,7 +40,7 @@ ht-degree: 81%
 
 ## タグの管理 {#administering-tags}
 
-タグ名前空間と分類の作成と管理については、[タグの管理](../../help/sites-administering/tags.md#tagging-console)を参照してください。
+詳しくは、 [タグの管理](../../help/sites-administering/tags.md#tagging-console) タグ名前空間と分類の作成と管理
 
 開発者向けの情報については、[タグの重要事項](tag.md)を参照してください。
 
@@ -54,6 +54,6 @@ ht-degree: 81%
 
 [タグ権限の設定](../../help/sites-administering/tags.md#setting-tag-permissions)を参照してください。
 
-管理者が`/etc/tag/discussions`グループ`Community Engage Members`に対して読み取り権限を適用すると、CRXDEでは次のように表示されます。
+管理者がに読み取り権限を適用すると、CRXDE では次のように表示されます。 `/etc/tag/discussions` グループの `Community Engage Members`.
 
 ![tag-permissions](assets/tag-permissions.png)

@@ -11,7 +11,7 @@ docset: aem65
 feature: Interactive Communication
 exl-id: aaacee66-6bbe-498b-91b1-3a9545ff1aeb
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2004'
 ht-degree: 100%
 
@@ -95,7 +95,7 @@ ht-degree: 100%
 1. 画像のコンポーネントをタップし、![configure_icon](assets/configure_icon.png)（設定）を選択します。画像のプロパティが左側のペインに表示されます：
 
    1. 「**名前**」フィールドで、**PayNow** を画像の名前として指定します。
-   1. 「**アップロード**」をタップし、ローカルのファイルシステムに保存された画像を選択して「**開く**」をタップします。
+   1. 「**アップロード**」をタップし、ローカルのファイルシステムに保存された   の画像を選択して「**開く**」をタップします。
    1. ![done_icon](assets/done_icon.png) をタップして、画像のプロパティを保存します。
 
 1. 手順 13～14 を繰り返し、**ValueAddedServices** の画像を **ValueAddedServices** のターゲット領域に追加します。
@@ -117,7 +117,7 @@ ht-degree: 100%
 1. 「**タイトル**」と「**名前**」フィールドに **create_first_ic** と入力します。**FDM_Create_First_IC** をフォームデータモデルとして選択し、「**次へ**」をタップします。
 1. **チャンネル**&#x200B;ウィザードで以下を実行します。
 
-   1. **create_first_ic_print_template** をプリントテンプレートとして指定し、「**選択**」をタップします。「**Web チャンネルのマスターとして印刷を使用**」のチェックボックスが選択されていないことを確認してください。
+   1. **create_first_ic_print_template** を印刷テンプレートとして指定し、「**選択**」をタップします。「**Web チャンネルのマスターとして印刷を使用**」のチェックボックスが選択されていないことを確認してください。
 
    1. **Create_First_IC_templates** フォルダー／**Create_First_IC_Web_Template** を Web テンプレートとして指定し、「**選択**」をタップします。
 

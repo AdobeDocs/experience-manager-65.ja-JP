@@ -6,7 +6,7 @@ user-guide-description: AEM Fluid Experience は、AEM Sites、AEM Dynamic Media
 index: n
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%
 

@@ -4,7 +4,7 @@ description: ' [!DNL Workfront for Experience Manager enhanced connector] の設
 role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
 workflow-type: tm+mt
 source-wordcount: '1749'
 ht-degree: 96%
@@ -130,14 +130,14 @@ Adobe Workfront ドキュメントとアセット間のメタデータマッピ�
    * AEM プロパティ。この参照は、ワークフローペイロードに対する相対参照にする必要があります。
    * 名前付きの値。これらは角括弧で囲む必要があります。
    * 上記の 3 つの項目を連結したもの。`{+}` を使用して指定します。
-   * 値を `{replace(<value>,"old-char","new-char")}` で囲むことによる上記の 3 つの項目の変更。
+   * 値を `{replace(<value>,”old-char”,”new-char”)}` で囲むことによる上記の 3 つの項目の変更。
 
 * 次に例を示します。
 
    * `status="INP"`
    * `DE:Asset Type=jcr:content/metadata/assetType`
    * `DE:Path={path}`
-   * `URL="https://my-aem-author/assets.html"{+}{path}`
+   * `URL=”https://my-aem-author/assets.html”{+}{path}`
 
 ![プロパティをマッピングするための設定](/help/assets/assets/wf-map-property-config.png)
 

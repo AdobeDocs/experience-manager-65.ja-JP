@@ -1,8 +1,8 @@
 ---
 title: テンプレートとコンポーネントの作成および追加
-seo-title: テンプレートとコンポーネントの作成および追加
+seo-title: Creating and Adding Templates and Components
 description: このページでは、テンプレートとコンポーネントの作成およびアプリへの追加について説明します。このページでは、サンプルのアプリテンプレートとページテンプレートが Geometrixx Unlimited アプリに含まれているものとして説明を進めます。
-seo-description: このページでは、テンプレートとコンポーネントの作成およびアプリへの追加について説明します。このページでは、サンプルのアプリテンプレートとページテンプレートが Geometrixx Unlimited アプリに含まれているものとして説明を進めます。
+seo-description: Follow this page to learn about creating and adding templates and components to your app. The page uses Geometrixx Unlimited App as the app that contains a sample app template and page templates.
 uuid: 3a93017c-8094-413f-a01c-9b72025a2b20
 contentOwner: User
 content-type: reference
@@ -11,16 +11,16 @@ discoiquuid: ec4ada04-e429-4ad4-a060-2dccac847cf0
 exl-id: 5f050baa-fe10-4acc-ad32-de20793edc13
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1159'
 ht-degree: 80%
 
 ---
 
-# テンプレートとコンポーネントの作成および追加  {#creating-and-adding-templates-and-components}
+# テンプレートとコンポーネントの作成および追加 {#creating-and-adding-templates-and-components}
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 AEM Mobile On-Demand には、完全に設定されたアプリテンプレート、記事テンプレートおよび記事コンポーネントが用意されています。
 
@@ -34,7 +34,7 @@ We.Unlimited アプリは、完全に設定可能で管理が容易な AEM Mobil
 >
 >AEM Mobile アプリコントロールセンターからアプリケーションおよびモバイルアプリコンテンツを管理するには、[AEM Mobile アプリケーションダッシュボード](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
 
-## アプリテンプレートの作成  {#creating-app-templates}
+## アプリテンプレートの作成 {#creating-app-templates}
 
 アプリテンプレートは、新しいアプリの作成時に使用されるもので、アプリのベースラインまたは基盤となるページテンプレートおよびコンポーネントの集まりです。テンプレートは、アプリを適切な方法で導くために、いくつかの基本的なプロパティをスタンプアウトします。 通常、ユーザーがアプリを作成する機会はあまり多くありません。
 
@@ -44,18 +44,18 @@ We.Unlimited アプリは、完全に設定可能で管理が容易な AEM Mobil
 
 アプリテンプレートに基づいて新しいアプリを作成する手順は次のとおりです。
 
-1. AEM Mobileアプリカタログに移動します。*&lt;server-url>/aem/apps.html/content/mobileapps*
+1. AEM Mobileアプリカタログに移動します。 *&lt;server-url>/aem/apps.html/content/mobileapps*
 1. 以下に示すように、**アプリ**／**選択**&#x200B;を選択します。
 
 このテンプレートを使用してアプリを作成すると、記事、バナーおよびコレクションをアプリに追加できます。記事、バナーおよびコレクションの作成に再度アクセスするには、[コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)を参照してください。
 
 >[!NOTE]
 >
->または、サンプルのアプリテンプレート(AEM開発者が提供する&#x200B;**We.Unlimited**&#x200B;アプリなど)を選択することもできます。 アプリにこのサンプルのテンプレートを使用した場合は、サンプルの記事やコレクションが用意されているので、それらを利用できます。テンプレートやコンポーネントは、サンプルをそのまま使用することも、既存のものをカスタマイズすることも、アプリ用に新しいものを作成することもできます。
+>または、サンプルのアプリテンプレート（例： ）を選択することもできます **We.Unlimited** アプリを使用できるようになります。 アプリにこのサンプルのテンプレートを使用した場合は、サンプルの記事やコレクションが用意されているので、それらを利用できます。テンプレートやコンポーネントは、サンプルをそのまま使用することも、既存のものをカスタマイズすることも、アプリ用に新しいものを作成することもできます。
 
 >[!CAUTION]
 >
->***redirectTarget***&#x200B;プロパティを設定しています
+>設定 ***redirectTarget*** プロパティ
 >
 >いずれかのアプリテンプレートを使用するときは、開発者がアプリケーションのコンテンツを定義します。ただし、開発者は、アプリケーションが jcr 内のどこに作成されるかと、***redirectTarget*** プロパティの値に注意する必要があります。
 >
@@ -63,13 +63,12 @@ We.Unlimited アプリは、完全に設定可能で管理が容易な AEM Mobil
 >
 >例えば、アプリテンプレート内で ***redirectTarget*** の値が「*lanugage-masters/en*」と定義されていて、アプリが「*/content/mobileapps/fooApp*」に作成される場合は、アプリ作成後の最終的な redirectTarget の値は「*/content/mobileapps/fooApp/language-masters/en*」になります。
 
-
 ## コンテンツテンプレートの作成 {#creating-content-templates}
 
 各エンティティタイプには、2 種類の既製のテンプレートがあります。以下のとおりです。
 
-* **デフォルトテンプレート：** 適用可能なデフォルトのプロパティ/構造を持つコンテンツの作成に使用
-* **インポートされたテンプレート：** 適切なデフォルトのプロパティ/構造を持つAEM Mobileからコンテンツをインポートするために使用されます。
+* **デフォルトのテンプレート：** 適用可能なデフォルトのプロパティ/構造を持つコンテンツ作成に使用
+* **読み込まれたテンプレート：** 適用可能なデフォルトのプロパティ/構造を持つAEM Mobileからコンテンツを読み込むために使用されます。
 
 ### 記事テンプレート {#article-templates}
 
@@ -77,7 +76,7 @@ Unlimited の記事は、AEM Mobile On-Demand の一般的な記事レイアウ�
 
 1. **記事を管理**&#x200B;の「**+**」をクリックして、新しい記事を作成します。「**Unlimited の記事**」または「**リッチテキスト記事**」を選択できます。以下の図は、これら 2 つの記事テンプレートの選択肢を示しています。
 
-1. 「**次へ**」をクリックして、記事名/タイトル、説明、作成者、要約、部門、サムネール画像、記事アクセスなどの記事のメタデータを定義します。
+1. クリック **次へ** ：記事名/タイトル、説明、作成者、要約、部門、サムネール画像、記事へのアクセスなどの記事のメタデータを定義します。
 1. 「**次へ**」をクリックして、広告プロパティを入力します。
 1. 「**次へ**」をクリックして、「記事の画像」または「ソーシャルメディアの画像」を入力します。
 1. 「**次へ**」をクリックして、この新しい記事へのコレクションリンクを選択します。
@@ -100,7 +99,7 @@ Unlimited の記事は、AEM Mobile On-Demand の一般的な記事レイアウ�
 
 ### 既製のテンプレートの作成 {#creating-out-of-the-box-templates}
 
-既製の記事テンプレートはありませんが、カスタムテンプレートが拡張する必要があるデフォルトのテンプレートがあります。Geometrixx Unlimitedアプリの[記事テンプレートのサンプル](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article)を参照してください。
+既製の記事テンプレートはありませんが、カスタムテンプレートが拡張する必要があるデフォルトのテンプレートがあります。Geometrixx Unlimitedアプリの [記事テンプレートのサンプル](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article).
 
 通常の AEM テンプレートで必要なプロパティ以外の主なプロパティには次のものがあります。
 
@@ -108,36 +107,35 @@ Unlimited の記事は、AEM Mobile On-Demand の一般的な記事レイアウ�
 
 このプロパティは、AEM ページが AEM Mobile をターゲットにした記事ページであると認識されるためのものです。
 
-AEMテンプレートに従って、任意のデフォルトのプロパティまたは子ノードをテンプレートの&#x200B;***jcr:content***&#x200B;に追加できます。
+AEMテンプレートに従って、任意のデフォルトのプロパティまたは子ノードをテンプレートの ***jcr:content***.
 
 ### バナーおよびコレクションテンプレート {#banner-and-collection-templates}
 
 >[!CAUTION]
 >
->バナーとコレクションにはコンテンツがないので、作成ではカスタムテンプレートをサポートしません。
+>バナーとコレクションにはコンテンツがないので、作成時にカスタムテンプレートがサポートされない。
 
 ## コンポーネントの作成および追加 {#creating-and-adding-components}
 
 コンポーネントはウィジェットを使用し、ウィジェットにアクセスできます。ウィジェットはコンテンツのレンダリングに使用されます。
 
-単純なコンポーネントがコードリポジトリに含まれており、そのソースは AEM にあります。その後、ローカルで開くこともできますCRXDE Lite。
+単純なコンポーネントがコードリポジトリに含まれており、そのソースは AEM にあります。その後、ローカルで開くこともできます。CRXDE Lite。
 
 >[!NOTE]
 >
 >現在、AEM Mobile には、既製のコンポーネントは用意されていません。
 
-
 ページにコンポーネントを追加できます。AEM Mobile アプリでは任意のコンポーネントを使用できますが、適用された場合に適切にレンダリングされないことがあります。
 
 ただし、AEM でレンダリングされるカスタムの書き出しコンテンツ同期ハンドラーがないと、カスタムコンポーネントを正しく書き出して AEM Mobile On-Demand Services にアップロードできない場合があります。
 
-コンポーネントをAEMページに既に含めたら、その他のいくつかの構築ブロックコンポーネントと共に、別のコンポーネントをページに追加したり、既存のコンポーネントを編集したりできます。
+コンポーネントを既にAEMページに組み込んだ後、他の構築ブロックコンポーネントと共に、ページに別のコンポーネントを追加したり、既存のコンポーネントを編集したりできます。
 
 **ページに別のコンポーネントを追加するには：**
 
 1. ページを選択し、エディターのヘッダーの右上にあるドロップダウンで、編集モードであることを確認します。
 1. エディターのヘッダーの一番左側にあるアイコンを使用して、サイドパネルを切り替えます。
-1. 「**コンポーネント**」タブを選択します。
+1. を選択します。 **コンポーネント** タブ
 1. 利用可能ないずれかのコンポーネントをページにドラッグ＆ドロップします。
 
 ![chlimage_1-75](assets/chlimage_1-75.png)
@@ -149,7 +147,7 @@ AEMテンプレートに従って、任意のデフォルトのプロパティ�
 
 >[!NOTE]
 >
->AEMでコンポーネントを作成し、[CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md)を使用して同じコンポーネントをカスタマイズできます。 要件に応じて既存のコンポーネントをカスタマイズしたら、上図のように&#x200B;**記事を管理**&#x200B;の「**編集**」オプションを使用して、ページにコンポーネントを追加できます。
+>AEMでコンポーネントを作成し、 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). 要件に応じて既存のコンポーネントをカスタマイズしたら、上図のように&#x200B;**記事を管理**&#x200B;の「**編集**」オプションを使用して、ページにコンポーネントを追加できます。
 
 >[!NOTE]
 >
@@ -157,5 +155,5 @@ AEMテンプレートに従って、任意のデフォルトのプロパティ�
 
 ### 次の手順 {#the-next-steps}
 
-* [コンテンツのプロパティを使用したコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
+* [コンテンツのプロパティを使用したコンテンツのエクスポート](/help/mobile/on-demand-content-properties-exporting.md)
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)

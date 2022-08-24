@@ -12,7 +12,7 @@ discoiquuid: 54903f3a-1e7e-4083-a2c9-b2ea4555d7fc
 docset: aem65
 exl-id: 8540e1f0-22d7-4f48-85d9-7c44eb7185df
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 100%
 
@@ -34,8 +34,8 @@ ht-degree: 100%
 
 1. 「**オーバーレイノード**」オプションを使用してオーバーレイを作成します。次に例を示します。
 
-   * **パス**：`/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
-   * **オーバーレイの場所**：`/apps/`
+   * **パス**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
+   * **オーバーレイの場所**: `/apps/`
    * **ノードタイプを一致させる**：アクティブ（チェックボックスをオン）
 
 1. オーバーレイノードに次の複数値テキストプロパティを追加します。

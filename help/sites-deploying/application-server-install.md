@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: 6fdce35d-2709-41cc-87fb-27a4b867e960
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1163'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -178,7 +178,7 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
    * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します（「概要」を参照）。
    * web.xml ファイルを再圧縮
 
-* AEM war ファイルをアプリケーションとしてデプロイします（他の設定にはデフォルト設定を使用）。
+* AEM war ファイルをデプロイします。 をアプリケーションとして（他の設定ではデフォルト設定を使用）
 * インストールには時間がかかる場合があります。
 * 上記の「概要」で説明した方法で、インストールが完了したことを確認します（error.log を追跡するなど）。
 * コンテキストルートは、WebLogic `/console` の web アプリケーションの「設定」タブで変更できます。

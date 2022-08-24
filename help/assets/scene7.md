@@ -1,6 +1,6 @@
 ---
-title: ページへのDynamic Media Classic機能の追加
-description: Adobe Experience ManagerのページにDynamic Media Classicの機能とコンポーネントを追加する方法。
+title: ページに Dynamic Media Classic 機能を追加
+description: Adobe Experience Manager で Dynamic Media Classic 機能およびコンポーネントをページに追加する方法。
 uuid: aa5a4735-bfec-43b8-aec0-a0c32bff134f
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -14,11 +14,11 @@ exl-id: 815f577d-4774-4830-8baf-0294bd085b83
 source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
 workflow-type: tm+mt
 source-wordcount: '2845'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# ページへのDynamic Media Classic機能の追加 {#adding-scene-features-to-your-page}
+# ページに Dynamic Media Classic 機能を追加 {#adding-scene-features-to-your-page}
 
 [Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=ja) は、リッチメディアアセットを管理および拡張したり、web、モバイル、電子メール、インターネットに接続されたディスプレイやプリンターにリッチメディアアセットを公開および提供したりするためのホスト型ソリューションです。
 
@@ -59,7 +59,7 @@ Experience Manager でのビデオコンポーネントの使用について詳�
 次の Dynamic Media Classic コンポーネントを Experience Manager で使用できます。
 
 * ズーム
-* フライアウト（ズーム）
+* フライアウト (ズーム)
 * 画像テンプレート
 * 画像
 * ビデオ
@@ -257,9 +257,9 @@ Dynamic Media Classic ビデオコンポーネントでアダプティブビデ�
 
 ## Dynamic Media Classic コンテンツブラウザー {#scene-content-browser}
 
-Dynamic Media Classic のコンテンツブラウザーを使用すると、Dynamic Media Classic のコンテンツを直接 Experience Manager で表示できます。 コンテンツブラウザーにアクセスするには、**[!UICONTROL コンテンツファインダー]**&#x200B;で、タッチ操作向けユーザーインターフェイスの「**[!UICONTROL Dynamic Media Classic]**」またはクラシックインターフェイスの&#x200B;**[!UICONTROL S7]**&#x200B;アイコンを選択します。どちらのユーザーインターフェイスを使用しても、機能は同じです。
+Dynamic Media Classic のコンテンツブラウザーを使用すると、Dynamic Media Classic のコンテンツを直接 Experience Manager で表示できます。コンテンツブラウザーにアクセスするには、**[!UICONTROL コンテンツファインダー]**&#x200B;で、タッチ操作向けユーザーインターフェイスの「**[!UICONTROL Dynamic Media Classic]**」またはクラシックインターフェイスの&#x200B;**[!UICONTROL S7]**&#x200B;アイコンを選択します。どちらのユーザーインターフェイスを使用しても、機能は同じです。
 
-設定が複数ある場合、Experience Manager ではデフォルトで[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。 Dynamic Media Classic コンテンツブラウザーのドロップダウンメニューで、別の設定を直接選択できます。
+設定が複数ある場合、Experience Manager ではデフォルトで[デフォルト設定](/help/sites-administering/scene7.md#configuring-a-default-configuration)が表示されます。Dynamic Media Classic コンテンツブラウザーのドロップダウンメニューで、別の設定を直接選択できます。
 
 >[!NOTE]
 >
@@ -279,7 +279,7 @@ Dynamic Media Classic のコンテンツブラウザーを使用すると、Dyna
 
 * Dynamic Media Classic の FXG および Flash のアセットはサポートされていません。
 
-3 番目のドロップダウンメニューから&#x200B;**[!UICONTROL Dynamic Media Classic]**&#x200B;を選択して、 Dynamic Media Classic アセットを参照。 Dynamic Media Classic/Experience Manager の統合を設定していない場合、Dynamic Media Classic はリストに表示されません。
+3 番目のドロップダウンメニューから「**[!UICONTROL Dynamic Media Classic]**」を選択して、Dynamic Media Classic アセットを参照します。Dynamic Media Classic/Experience Manager の統合を設定していない場合、Dynamic Media Classic はリストに表示されません。
 
 >[!NOTE]
 >

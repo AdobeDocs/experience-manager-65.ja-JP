@@ -5,7 +5,7 @@ contentOwner: AG
 role: Admin, Architect
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 source-git-commit: e24316cb9495a552960ae0620e4198f10a08b691
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 100%
 

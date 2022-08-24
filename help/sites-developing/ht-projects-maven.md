@@ -3,7 +3,7 @@ title: Apache Maven を使用して AEM プロジェクトをビルドする方�
 description: このドキュメントでは、Apache Maven に基づく AEM プロジェクトを設定する方法について説明します
 exl-id: 451913bf-bb1e-4444-aee5-968ac30b5c9d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 100%
 

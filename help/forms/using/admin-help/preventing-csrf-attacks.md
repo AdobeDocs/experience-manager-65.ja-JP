@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: a3cbffb7-c1d1-47c2-bcfd-70f1e2d81ac9
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ ht-degree: 95%
 * AEM Forms の SOAP または REST エンドポイントで任意のデスクトップクライアントから HTTP リクエストが送信された場合
 * ブラウザーの新しいウィンドウが開かれ、任意の AEM forms Web アプリケーションログインページの URL が入力された場合
 
-SOAP および REST エンドポイントで null リファラーを許可してください。すべての URI ログインページ（/adminui、/contentspace、それらに対応するマッピングされたリソースなど）でも、null リファラーを許可してください。例えば、/contentspace に対してマップされたサーブレット /contentspace/faces/jsp/login.jsp は、null リファラーの例外とすることが必要です。この例外は、Web アプリケーションで GET フィルタリングを有効にしている場合にのみ必要です。null リファラーを許可するかどうかはアプリケーションで指定できます詳しくは、 [AEM forms の堅牢化とセキュリティ](https://help.adobe.com/ja_JP/livecycle/11.0/HardeningSecurity/index.html).
+SOAP および REST エンドポイントで null リファラーを許可してください。すべての URI ログインページ（/adminui、/contentspace、それらに対応するマッピングされたリソースなど）でも、null リファラーを許可してください。例えば、/contentspace に対してマップされたサーブレット /contentspace/faces/jsp/login.jsp は、null リファラーの例外とすることが必要です。この例外は、Web アプリケーションで GET フィルタリングを有効にしている場合にのみ必要です。null リファラーを許可するかどうかはアプリケーションで指定できます[AEM forms の堅牢化とセキュリティ](https://help.adobe.com/ja_JP/livecycle/11.0/HardeningSecurity/index.html)の「クロスサイトリクエストフォージェリー攻撃からの保護」を参照。
 
-**許可されているリファラーの例外：**&#x200B;許可されているリファラーの例外は、許可されているリファラーリストのサブリストです。このリファラーの例外からのリクエストはブロックされます。許可されているリファラーの例外は、Web アプリケーションに固有のものです。許可されているリファラーの例外のサブセットを、特定の Web アプリケーションの呼び出しに対して許可しない場合は、許可されているリファラーの例外を使用してリファラーをブラックリストに登録できます。許可されているリファラーの例外は、アプリケーションの web.xml ファイル内で指定されます(「ヘルプとTutorials」ページの「AEM forms の堅牢化とセキュリティ」の「クロスサイトリクエストフォージェリ攻撃からの保護」を参照 )。
+**許可されているリファラーの例外：**&#x200B;許可されているリファラーの例外は、許可されているリファラーリストのサブリストです。このリファラーの例外からのリクエストはブロックされます。許可されているリファラーの例外は、Web アプリケーションに固有のものです。許可されているリファラーの例外のサブセットを、特定の Web アプリケーションの呼び出しに対して許可しない場合は、許可されているリファラーの例外を使用してリファラーをブラックリストに登録できます。許可されているリファラーの例外は、アプリケーションの web.xml ファイル内で指定されます（「ヘルプとチュートリアル」ページの「AEM Forms の堅牢化とセキュリティ」内の「クロスサイトリクエストフォージェリ―攻撃からの保護」を参照。）
 
 ## 許可されているリファラーの機能の仕組み {#how-allowed-referers-work}
 
@@ -48,7 +48,7 @@ AEM Forms にはリファラーのフィルタリング機能が用意されて�
 1. Forms サーバーが、呼び出しに使用される HTTP メソッドを確認します。
 
    * POST の場合、forms サーバーはリファラーのヘッダーのチェックを実行します。
-   * GET の場合、forms サーバーはリファラーをチェックしません。ただし、CSRF_CHECK_GETS が true に設定されている場合は除きます。この場合、forms サーバーはリファラーヘッダーを確認します。CSRF_CHECK_GETS は、アプリケーションの web.xml ファイル内に設定されます。( [堅牢化とセキュリティガイド](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).)
+   * GET の場合、forms サーバーはリファラーをチェックしません。ただし、CSRF_CHECK_GETS が true に設定されている場合は除きます。この場合、forms サーバーはリファラーヘッダーを確認します。CSRF_CHECK_GETS は、アプリケーションの web.xml ファイル内に設定されます。（『[堅牢化とセキュリティガイド](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html)』の「クロスサイト要求偽造攻撃からの保護」を参照。）
 
 1. Forms サーバーが、要求された URI が許可リスト登録済みかどうかを確認します。
 

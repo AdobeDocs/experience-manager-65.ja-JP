@@ -13,7 +13,7 @@ discoiquuid: 77e9b895-1313-4a5b-a2d5-cdb65bdc1966
 role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1922'
 ht-degree: 100%
 
@@ -56,7 +56,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Assembler サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>Assembler サービスについて詳しくは、[AEM Formsサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Assembler 操作をプログラムで実行する前に、Assembler サービス
 
 **既存の DDX ドキュメントの参照**
 
-DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 例えば、このセクションで紹介した DDX ドキュメントについて考えてみましょう。 個別ページの ID を含む PDF ドキュメントをアセンブリするには、DDX ドキュメントに `BatesNumber` 要素を含める必要があります。
+DDX ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。例えば、このセクションで紹介した DDX ドキュメントについて考えてみましょう。 個別ページの ID を含む PDF ドキュメントをアセンブリするには、DDX ドキュメントに `BatesNumber` 要素を含める必要があります。
 
 **参照入力 PDF ドキュメント**
 
@@ -118,7 +118,7 @@ Assembler サービスは、ジョブの結果を含むコレクションオブ�
 
 **関連情報**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
+[AEM Forms Java ライブラリファイルの組み込み](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -139,7 +139,7 @@ Assembler サービス API（Java）を使用して、一意のページ ID（�
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクターを使用して、DDX ファイルの場所を指定する文字列値を渡すことにより、DDX ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクタを使用し、DDX ファイルの場所を指定する文字列値を渡すことによって、その DDX ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを渡すことにより、`com.adobe.idp.Document` オブジェクトを作成します。
 
 1. 入力 PDF ドキュメントを参照します。
@@ -189,42 +189,42 @@ Assembler サービス API（web サービス）を使用して、一意のペ�
 
 1. プロジェクトファイルを含めます。
 
-   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義として必ず `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1` を使用します。
+   MTOM を使用する Microsoft .NET プロジェクトを作成します。WSDL 定義 `http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1` を使用するようにします。
 
    >[!NOTE]
    >
-   >`localhost` を、AEM Forms をホスティングするサーバーの IP アドレスに置き換えます。
+   >`localhost` を、AEM Forms をホストするサーバーの IP アドレスに置換します。
 
 1. PDF Assembler クライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `AssemblerServiceClient` オブジェクトを作成します。
-   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して `AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Formsサービス（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）に渡します。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
-   *  `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
+   * デフォルトのコンストラクターを使用して、`AssemblerServiceClient` オブジェクトを作成します。
+   * `System.ServiceModel.EndpointAddress` コンストラクターを使用して、`AssemblerServiceClient.Endpoint.Address` オブジェクトを作成します。WSDL を指定する文字列値を AEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/AssemblerService?blob=mtom`）。`lc_version` 属性を使用する必要はありません。この属性は、サービス参照を作成する際に使用されます。
+   * `AssemblerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms のユーザー名を割り当てます。
-      * 対応するパスワードの値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` をフィールド `BasicHttpBindingSecurity.Transport.ClientCredentialType` に割り当てます。
+      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
       * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 
-   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、DDX ドキュメントを格納するために使用されます。
-   * コンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことで、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。このバイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティの値を取得して決定できます。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。この `BLOB` オブジェクトは、DDX ドキュメントの保存に使用されます。
+   * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、DDX ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` フィールドにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
 
 1. 入力 PDF ドキュメントを参照します。
 
-   * 入力 PDF ドキュメントごとに、コンストラクターを使用して `BLOB` オブジェクトを作成します。 `BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。
+   * 入力 PDF ドキュメントごとに、コンストラクタを使用して、`BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、入力 PDF ドキュメントを格納するために使用します。
    * コンストラクターを呼び出して `System.IO.FileStream` オブジェクトを作成します。入力 PDF ドキュメントのファイルの場所と、ファイルを開くモードを表す文字列値を渡します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。このバイト配列のサイズは、`System.IO.FileStream` オブジェクトの `Length` プロパティの値を取得して決定できます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することでバイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出して、バイト配列にストリームデータを入力します。読み取り対象のバイト配列、開始位置、ストリーム長を渡します。
    * `MTOM` プロパティにバイト配列の内容を割り当てることで、`BLOB` オブジェクトにデータを入力します。
    * `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを作成します。このコレクションオブジェクトは、入力 PDF ドキュメントを格納するために使用されます。
-   * 入力 PDF ドキュメントごとに、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。例えば、2 つの入力 PDF ドキュメントを使用する場合は、2 つの `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
+   * 入力 PDF ドキュメントごとに、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。例えば、2 つの入力 PDF ドキュメントを使用する場合、`MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを作成します。
    * キー名を表す文字列値を `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `key` フィールドに割り当てます。この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります（入力 PDF ドキュメントごとにこのタスクを実行します）。
    * PDF ドキュメントを格納する `BLOB` オブジェクトを `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトの `value` フィールドに割り当てます。（入力 PDF ドキュメントごとにこのタスクを実行します）。
    * `MyMapOf_xsd_string_To_xsd_anyType_Item` オブジェクトを `MyMapOf_xsd_string_To_xsd_anyType` オブジェクトに追加します。`MyMapOf_xsd_string_To_xsd_anyType` オブジェクトの `Add` メソッドを呼び出し、`MyMapOf_xsd_string_To_xsd_anyType` オブジェクトを渡します。（入力 PDF ドキュメントごとにこのタスクを実行します）。
@@ -248,9 +248,9 @@ Assembler サービス API（web サービス）を使用して、一意のペ�
 
    新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `AssemblerResult` オブジェクトの `documents` フィールドにアクセスします。これは、結果 PDF ドキュメントを含む `Map` オブジェクトです。
-   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し処理します。次にその配列メンバーの `value` を `BLOB` にキャストします。
-   * PDF ドキュメントを表すバイナリデータを、その `BLOB` オブジェクトの `MTOM` プロパティにアクセスして抽出します。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
+   * `AssemblerResult` オブジェクトの `documents` フィールドにアクセスし、結果の PDF ドキュメントを含む `Map` オブジェクトにアクセスします。
+   * 結果のドキュメントの名前と一致するキーが見つかるまで、`Map` オブジェクトを繰り返し実行します。次に、その配列メンバーの `value` を `BLOB` にキャストします。
+   * PDF ドキュメントを表すバイナリデータを、`BLOB` オブジェクトの `MTOM` プロパティにアクセスして抽出します 。これにより、PDF ファイルに書き出すことができるバイト配列が返されます。
 
 **関連トピック**
 

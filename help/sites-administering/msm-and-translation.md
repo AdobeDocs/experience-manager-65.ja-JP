@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: fabaa3e8-1657-4ed4-abb2-990117bec39c
 exl-id: 8f11f5de-f5af-4ce7-a448-2b4299de2930
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 100%
 
@@ -61,9 +61,9 @@ Web サイトとページを管理するための以下の管理ツールが用�
 >いずれの使用例の場合も、次のベストプラクティスをお読みになることをお勧めします。
 >
 >* [MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md)（特に次の事項）
->
->   * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
->   * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+   >
+   >   * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
+   >   * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻訳のベストプラクティス](/help/sites-administering/tc-bp.md)
 

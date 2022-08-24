@@ -1,8 +1,8 @@
 ---
-title: Adobe PhoneGap Build クラウドサービスの設定
-seo-title: Adobe PhoneGap Build クラウドサービスの設定
+title: Adobe PhoneGap Build の設定
+seo-title: Configure your Adobe PhoneGap Build Cloud Service
 description: このページでは、クラウドサービスの設定と、PhoneGap Build を使用したアプリケーションのビルドについて説明します。
-seo-description: このページでは、クラウドサービスの設定と、PhoneGap Build を使用したアプリケーションのビルドについて説明します。
+seo-description: Follow this page for configuring the cloud services and building your application with PhoneGap build.
 uuid: 59aa99c3-1425-4cc5-9839-a57a6a545d45
 contentOwner: User
 content-type: reference
@@ -12,20 +12,20 @@ discoiquuid: 3c84f4ec-d89b-4ad4-802e-ee3e2d49d916
 exl-id: d91a00d1-12fa-4c84-a426-49413f61c126
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '676'
 ht-degree: 77%
 
 ---
 
-# Adobe PhoneGap Build クラウドサービスの設定  {#configure-your-adobe-phonegap-build-cloud-service}
+# Adobe PhoneGap Build の設定 {#configure-your-adobe-phonegap-build-cloud-service}
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-アプリケーションダッシュボードの&#x200B;**PhoneGap Buildタイル**&#x200B;を使用すると、Adobe PhoneGap Buildサービスを通じてPhoneGapモバイルアプリケーションを構築し、配布できます。
+この **PhoneGap Buildタイル** 「アプリケーション」ダッシュボードでは、Adobe PhoneGap Build Service を通じて PhoneGap モバイルアプリケーションを構築し、配布する機能を提供します。
 
-**アプリを管理**&#x200B;タイル内で定義されたすべてのサポート対象プラットフォームは、**PhoneGap Build**&#x200B;タイルでリモートビルドをプッシュすると、PhoneGap Buildを使用して構築されます。
+内で定義されたすべてのサポート対象プラットフォーム **アプリを管理** タイルは、 **PhoneGap Build** タイル。
 
 リモートビルドを [https://build.phonegap.com](https://build.phonegap.com) にプッシュしたり、ソースをダウンロードして [PhoneGap CLI](https://docs.phonegap.com/references/phonegap-cli/) でローカルにビルドしたりできます。
 
@@ -35,11 +35,11 @@ ht-degree: 77%
 
 PhoneGap Build を利用するには、PhoneGap Build アカウント情報を使用して AEM PhoneGap Build クラウドサービスを設定する必要があります。
 
-現在アカウントをお持ちでない場合は、[https://build.phonegap.com](https://build.phonegap.com)に移動し、新規登録します。 Adobe Creative Cloudメンバーシップをお持ちの場合、最大25個の非公開アプリ（オープンソース以外のアプリ）をサポートしている可能性があります。
+現在アカウントをお持ちでない場合は、に移動します。 [https://build.phonegap.com](https://build.phonegap.com) 登録してください。 Adobe Creative Cloudメンバーシップをお持ちの場合、最大 25 個のプライベートアプリ（オープンソース以外のアプリ）をサポートしている可能性があります。
 
-PhoneGap Buildアカウントがアクティブであることを確認したら、AEM Cloud Managementコンソール(具体的には[PhoneGap BuildCloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html)(http://localhost:4502/etc/cloudservices/phonegap-build.html)に移動します。
+PhoneGap Buildアカウントがアクティブであることを確認したら、AEM Cloud Management コンソール ( 特に [PhoneGap BuildCloud Service](http://localhost:4502/etc/cloudservices/phonegap-build.html) (http://localhost:4502/etc/cloudservices/phonegap-build.html)。
 
-**Cloud Servicesの管理**&#x200B;タイルを使用して、新しいクラウドサービス設定を構成します。
+以下を使用： **Cloud Services** タイルを使用して、新しいクラウドサービス設定を構成します。
 
 ### クラウドサービスを管理タイルの使用 {#using-manage-cloud-services-tile}
 
@@ -75,7 +75,7 @@ Adobe PhoneGap Build を使用してリモートビルドを呼び出す場合�
 >
 >何らかの理由でビルドが失敗した場合は（下の赤い iOS アイコンはプラットフォームの障害を示しています）、アイコンにマウスポインターを合わせると、エラーメッセージが表示されます。または、タイルの下部にある 3 つのドット「...」（省略記号）をクリックして、https://build.phonegap.com に直接移動し（認証が必要です）、ビルドを直接監視および管理できます。
 
-### PhoneGap CLI によるアプリケーションのビルド  {#building-your-application-with-phonegap-cli}
+### PhoneGap CLI によるアプリケーションのビルド {#building-your-application-with-phonegap-cli}
 
 PhoneGap には、アプリケーションをローカルでビルドするためのコマンドラインインターフェイスが用意されています。
 
@@ -100,9 +100,9 @@ phonegap run ios (or android, ...)
 >
 >接続しているデバイス上で実行しない場合は、この行の末尾に --emulate を追加してください。
 
-上記の動作を確認したら、**PhoneGap Build**&#x200B;タイルを使用して&#x200B;**ソース**&#x200B;をダウンロードします。 ファイルを保存して、ローカルシステム上に解凍します。この作業が完了したら、以下をおこないます。
+上記の機能を確認したら、 **PhoneGap Build** 並べ替え先 **ソースをダウンロード**. ファイルを保存して、ローカルシステム上に解凍します。この作業が完了したら、以下をおこないます。
 
-* 保存したファイル（フォルダー）に移動します。
+* 保存されたファイル（フォルダー）に移動します。
 * 「phonegap run ios」（または android など）を実行します。
 
 ### その他のリソース {#additional-resources}

@@ -6,7 +6,7 @@ role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
 source-git-commit: 67e145e250bbe386168ab2c0f8967f91aa9d8a36
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1591'
 ht-degree: 100%
 
@@ -185,7 +185,7 @@ IDS の並列ジョブ処理を有効にすることができます。[!DNL InDe
 
 IDS 並列ジョブ数を設定するには：
 
-1. Felix Console の「**[!UICONTROL Configurations]**」タブを開きます。次に URL の例を挙げます。`https://[aem_server]:[port]/system/console/configMgr`
+1. Felix Console の「**[!UICONTROL Configurations]**」タブを開きます。次に URL の例を挙げます。`https://[aem_server]:[port]/system/console/configMgr` です。
 
 1. `Apache Sling Job Queue Configuration` で IDS 処理キューを選択します。
 

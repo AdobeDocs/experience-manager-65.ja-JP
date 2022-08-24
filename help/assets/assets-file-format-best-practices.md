@@ -6,7 +6,7 @@ role: Admin
 feature: Asset Management,Developer Tools
 exl-id: da080f12-4cf7-4c26-901b-cd40d9c00bcb
 source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 >[!TIP]
 >
->[!DNL Experience Manager] を Adobe Managed Services（AMS）で使用しており、大きな PSD ファイルまたは PSB ファイルを大量に処理する予定がある場合は、アドビカスタマーサポートにお問い合わせください。アドビカスタマーサポート担当者と協力して、AMS デプロイメントに関するこれらのベストプラクティスを実装し、アドビ独自の形式に対する最適なツールとモデルを選択します。 [!DNL Experience Manager] では、30000 x 23000 ピクセルを超える高解像度の PSB ファイルを処理できない場合があります。
+>[!DNL Experience Manager] を Adobe Managed Services（AMS）で使用しており、大きな PSD ファイルまたは PSB ファイルを大量に処理する予定がある場合は、アドビカスタマーサポートにお問い合わせください。アドビカスタマーサポート担当者と協力して、AMS デプロイメントに関するこれらのベストプラクティスを実装し、アドビ独自の形式に対する最適なツールとモデルを選択します。[!DNL Experience Manager] では、30000 x 23000 ピクセルを超える高解像度の PSB ファイルを処理できない場合があります。
 
 ## [!DNL Adobe Camera Raw] ライブラリ {#adobe-camera-raw-library}
 

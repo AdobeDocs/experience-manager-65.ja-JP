@@ -109,13 +109,13 @@ Experience Manager を手動で設定するには：
 
    >[!NOTE]
    >
-   >Bearer トークンで認証される各リクエストには、Adobe IMS への 3 回の呼び出し、ユーザーの同期、Experience Manager でのログイントークンの作成のオーバーヘッドが発生します。 このオーバーヘッドを解決するために、Adobe Asset Link は、Experience Manager からの応答で返されたログイントークンをキャプチャし、後続のリクエストと共に送信します。 このプロセスを機能させるには、Bearer 認証ハンドラーの相対的な優先度を調整する必要があります。
+   >Bearer トークンで認証される各リクエストには、Adobe IMS への 3 回の呼び出し、ユーザーの同期、Experience Manager でのログイントークンの作成のオーバーヘッドが発生します。このオーバーヘッドを解決するために、Adobe Asset Link は、Experience Manager からの応答で返されたログイントークンをキャプチャし、後続のリクエストと共に送信します。このプロセスを機能させるには、Bearer 認証ハンドラーの相対的な優先度を調整する必要があります。
 
 1. （オプション）Experience Manager ユーザーの電子メール ID に大文字のドメイン名または大文字と小文字を混在させたドメイン名がある場合は、Experience Manager web コンソールで、**[!UICONTROL Adobe Granite ACP プラットフォーム設定]**&#x200B;の&#x200B;**[!UICONTROL ユーザーのロックを小文字に変更]**&#x200B;を選択します。
 
 ## ビジネスプロファイルへの移行後の追加の設定 {#configure-migration-activity}
 
-Adobe Asset Link のユーザーは、Experience Manager に接続して、組織のメイン Creative Cloud エンタープライズ版から IMS ログインを許可できます。 Experience Manager はクライアント ID を使用して、許可された IMS 組織を識別します。 ビジネスプロファイルに移行した後、Bearer 認証ハンドラーの Experience Manager で、IMS 組織のクライアント ID と秘密鍵を設定する必要があります。 ビジネスプロファイルについて詳しくは、[Adobe プロファイルの概要](https://helpx.adobe.com/jp/enterprise/kb/introducing-adobe-profiles.html)を参照してください。
+Adobe Asset Link のユーザーは、Experience Manager に接続して、組織のメイン Creative Cloud エンタープライズ版から IMS ログインを許可できます。Experience Manager はクライアント ID を使用して、許可された IMS 組織を識別します。ビジネスプロファイルに移行した後、Bearer 認証ハンドラーの Experience Manager で、IMS 組織のクライアント ID と秘密鍵を設定する必要があります。ビジネスプロファイルについて詳しくは、[Adobe プロファイルの概要](https://helpx.adobe.com/jp/enterprise/kb/introducing-adobe-profiles.html)を参照してください。
 
 Experience Manager と Creative Cloud エンタープライズ版で異なる Adobe IMS 組織を使用し、これら 2 つの組織間でドメインの信頼関係が確立されている場合のみ、追加の設定が必要になります。
 
@@ -165,11 +165,11 @@ Experience Manager と Creative Cloud エンタープライズ版で異なる Ad
 
 グループマッピングは、Experience Manager 内のグループと Adobe IMS 内のグループとの対応を決定します。これは、AdobeAsset Link のユーザーに Experience Manager Assets へのアクセス権限を付与する方法に重要な役割を果たします。
 
-Adobe Asset Link と共に使用すると、Experience Manager はユーザー管理機能を Adobe IMS に委任します。 Adobe IMS のユーザーとグループに対応するユーザーとグループが自動的に作成されます。 また、Experience Manager のユーザー、グループ、グループのメンバーシップは、Adobe IMS と一致するように同期されます。
+Adobe Asset Link と共に使用すると、Experience Manager はユーザー管理機能を Adobe IMS に委任します。Adobe IMS のユーザーとグループに対応するユーザーとグループが自動的に作成されます。また、Experience Manager のユーザー、グループ、グループのメンバーシップは、Adobe IMS と一致するように同期されます。
 
-例えば、Adobe Asset Link ユーザーが Adobe IMS グループ assetlink-users のメンバーである場合を考えてみましょう。 この場合、その Adobe IMS グループのユーザーが初めて Adobe Asset Link に接続すると、assetlink-users という名前の同期済みグループが Experience Manager に作成されます。 Adobe IMS グループの各新規ユーザーが、初めてAdobeの Asset Link を通じて Experience Manager に接続すると、Experience Manager 内の対応するグループに追加されます。
+例えば、Adobe Asset Link ユーザーが Adobe IMS グループ assetlink-users のメンバーである場合を考えてみましょう。この場合、その Adobe IMS グループのユーザーが初めて Adobe Asset Link に接続すると、assetlink-users という名前の同期済みグループが Experience Manager に作成されます。Adobe IMS グループの各新規ユーザーが、初めてAdobeの Asset Link を通じて Experience Manager に接続すると、Experience Manager 内の対応するグループに追加されます。
 
-Experience Manager 内の Adobe IMS に対応し、グループと同期しているグループは、直接アクセスが許可されるか、別のグループのメンバーにすることでアクセスが許可されます。 権限の管理方法の例を次に示します。
+Experience Manager 内の Adobe IMS に対応し、グループと同期しているグループは、直接アクセスが許可されるか、別のグループのメンバーにすることでアクセスが許可されます。権限の管理方法の例を次に示します。
 
 ![グループの例](assets/group-examples.png)
 
@@ -177,7 +177,7 @@ Experience Manager 内の Adobe IMS に対応し、グループと同期して�
 
 * **[!UICONTROL Adobe Granite OAuth IMS プロバイダー]**&#x200B;設定で&#x200B;**[!UICONTROL グループマッピング]**&#x200B;プロパティが空になっていることを確認します。
 * Adobe Asset Link ユーザーグループのメンバーシップは、ユーザーが認証を行い、**[!UICONTROL Apache Jackrabbit Oak デフォルト同期ハンドラー]**&#x200B;設定の&#x200B;**[!UICONTROL ユーザーの有効期限]**&#x200B;プロパティの期間が経過した際に評価されます。現在、ユーザーを Experience Manager 内のグループに追加したり、グループから削除したりして、Adobe IMS と同期させることができます。
-* グループ名の競合を回避します。 Adobe IMS で作成したグループに使用する（ユーザー管理のための）名前が、すべての Experience Manager システムグループ名とは異なることを確認します。
+* グループ名の競合を回避します。Adobe IMS で作成したグループに使用する（ユーザー管理のための）名前が、すべての Experience Manager システムグループ名とは異なることを確認します。
 
    例えば、 `dam-users` グループや Experience Manager の管理者によって作成されたグループと異なることを確認します。
 
@@ -186,21 +186,21 @@ Experience Manager 内の Adobe IMS に対応し、グループと同期して�
 
 **初回のアクセス制御の設定**
 
-Adobe Asset Link を通じて接続するユーザーは、必要な権限が付与された後にのみ、アセットを表示して操作することができます。 前述の[グループマッピング](#group-mapping)節では、Experience Manager で作成されたユーザーグループが、Adobe IMS 内の組織内のユーザーグループにどのように対応し、同期されるかについて説明します。 Experience Manager 管理者には、これらのグループを使用して、Adobe Asset Link ユーザーのアクセス制御を管理することをお勧めします。
+Adobe Asset Link を通じて接続するユーザーは、必要な権限が付与された後にのみ、アセットを表示して操作することができます。前述の[グループマッピング](#group-mapping)節では、Experience Manager で作成されたユーザーグループが、Adobe IMS 内の組織内のユーザーグループにどのように対応し、同期されるかについて説明します。Experience Manager 管理者には、これらのグループを使用して、Adobe Asset Link ユーザーのアクセス制御を管理することをお勧めします。
 
 （アクセス制御の管理に使用される）Adobe IMS グループと同期される各 Experience Manager グループ：
 
 1. グループに、Adobe Asset Link からの初期接続に使用できるメンバーがいることを確認します。
-1. そのユーザーを使用して Adobe Asset Link にログインし、Experience Manager に接続します。 この接続は失敗すると想定されています。
-1. Experience Manager で、Adobe IMS 内のグループに対応するグループを探し、目的のアクセス制御を許可します。 例えば、新しいグループを dam-users グループのメンバーにします。
+1. そのユーザーを使用して Adobe Asset Link にログインし、Experience Manager に接続します。この接続は失敗すると想定されています。
+1. Experience Manager で、Adobe IMS 内のグループに対応するグループを探し、目的のアクセス制御を許可します。例えば、新しいグループを dam-users グループのメンバーにします。
 1. Adobe Asset Link を閉じ、Creative Cloud アプリケーションを再起動します。
 1. ユーザーが期待どおりのアクセス権を持っていることを確認するには、Adobe Asset Link を再度開きます。
 
-これらの手順を実行すると、同じグループ内の他のユーザーは、最初の試行で Adobe Asset Link を使って Experience Manager に接続できるようになります。 自動的に、グループの他のユーザーと同じ権限が付与されます。
+これらの手順を実行すると、同じグループ内の他のユーザーは、最初の試行で Adobe Asset Link を使って Experience Manager に接続できるようになります。自動的に、グループの他のユーザーと同じ権限が付与されます。
 
 ## Adobe Asset Link の Experience Manager ユーザーを管理 {#manage-users}
 
-Adobe Asset Link ユーザーは、Creative Cloud アプリケーションにサインインすると Experience Manager に接続できます。 この認証は、Adobe IMS テクノロジーを使用し、Experience Manager にユーザー情報が存在しない場合は、ユーザー情報を作成します。 Experience Manager をお利用の企業のお客様は、Experience Manager と統合された外部の ID プロバイダーを使用してユーザーを管理することが一般的です。 ID プロバイダーには、Adobe IMS や、SAML および LDAP プロトコルを使用する他の製品が含まれます。 または、Experience Manager ではローカルにユーザーを作成および管理できます。
+Adobe Asset Link ユーザーは、Creative Cloud アプリケーションにサインインすると Experience Manager に接続できます。この認証は、Adobe IMS テクノロジーを使用し、Experience Manager にユーザー情報が存在しない場合は、ユーザー情報を作成します。Experience Manager をお利用の企業のお客様は、Experience Manager と統合された外部の ID プロバイダーを使用してユーザーを管理することが一般的です。ID プロバイダーには、Adobe IMS や、SAML および LDAP プロトコルを使用する他の製品が含まれます。または、Experience Manager ではローカルにユーザーを作成および管理できます。
 
 次のような場合、Adobe Asset Link から Experience Manager に接続するユーザーは、以前に直接サインインした際に Experience Manager に保存されている既存のユーザー情報と競合しません。
 
@@ -248,7 +248,7 @@ Experience Manager 6.4 および Experience Manager 6.5 では、管理者は、
 
 ## Experience Manager 6.4.x バージョンでのカスタムインデックスの作成 {#create-custom-index}
 
-Experience Manager には、クエリに使用するためのインデックスが含まれています。特定のバージョンに対して次のカスタムインデックスを作成します。Experience Manager 6.5.0 には、デフォルトでこのインデックスが含まれています。 Adobe Asset Link では、ユーザーがチェックアウトしたアセットを判断するためにこのインデックスが必要です。
+Experience Manager には、クエリに使用するためのインデックスが含まれています。特定のバージョンに対して次のカスタムインデックスを作成します。Experience Manager 6.5.0 には、デフォルトでこのインデックスが含まれています。Adobe Asset Link では、ユーザーがチェックアウトしたアセットを判断するためにこのインデックスが必要です。
 
 1. CRXDE で `/oak:index` ノードを見つけます。`cqDrivelock` という名前のノードを作成し、その `Type` を `oak:QueryIndexDefinition` に設定します。
 

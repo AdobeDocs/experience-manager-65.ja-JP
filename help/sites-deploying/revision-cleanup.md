@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '5904'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -387,7 +387,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>最新のオンラインでのリビジョンクリーンアップの実行に関する統計はどこで確認できますか。</strong></td>
-   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で表示されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
+   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で表示されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -396,15 +396,15 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>オンラインでのリビジョンクリーンアップが開始/停止しました
       <ul>
-       <li>オンラインでのリビジョンクリーンアップは、見積もり、コンパクション、クリーンアップの 3 つのフェーズで構成されます。リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンのAEMでは、「<code>TarMK GC #{}: estimation started</code>「見積もりの開始を示す」<code>TarMK GC #{}: compaction started, strategy={}</code>"コンパクションの開始をマークし、"T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>"は、クリーンアップの開始をマークします。</li>
+       <li>オンラインでのリビジョンクリーンアップは、見積もり、コンパクション、クリーンアップの 3 つのフェーズで構成されます。リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンの AEM では、メッセージ「<code>TarMK GC #{}: estimation started</code>」は見積もりの開始を示し、「<code>TarMK GC #{}: compaction started, strategy={}</code>」はコンパクションの開始を示し、「T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>」はクリーンアップの開始を示します。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップで取得したディスクスペース
       <ul>
-       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み/深さは {}/{} （{} バイト/{}）です。"</li>
+       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み付け／深さは {}／{}（{} バイト／{}）です。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップ中に問題が発生しました
       <ul>
-       <li>多くの障害状態があり、すべての障害は、「TarMK GC」で始まる WARN または ERROR ログメッセージでマークされます。</li>
+       <li>多くの失敗条件があり、すべての障害は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。</li>
       </ul> </li>
     </ul> <p>また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</p> </td>
    <td> </td>
@@ -425,7 +425,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップが失敗したかどうかを検出する方法と、回復する手順を教えてください。</strong></td>
-   <td>障害状態は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。 また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
+   <td>失敗条件は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
    <td> </td>
   </tr>
   <tr>
@@ -435,7 +435,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><p><strong>スタンバイインスタンスで自動クリーンアップを監視する方法を教えてください。</strong></p> </td>
-   <td><p>ステータス、進行状況および統計は、<code>SegmentRevisionGarbageCollection</code> MBean を使用し、JMX 経由で表示されます。次の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak ドキュメント</a>も参照してください。 </p> <p>MBean の参照は、<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用して取得できます。</p> <p>確認できるのは、システムが最後に起動されて以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。また、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>も参照してください。</p> <p>ログファイルを使用して、自動クリーンアップのステータス、進行状況および統計情報を確認することもできます。</p> </td>
+   <td><p>ステータス、進行状況および統計は、<code>SegmentRevisionGarbageCollection</code> MBean を使用し、JMX 経由で表示されます。次の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak ドキュメント</a>も参照してください。 </p> <p>MBean の参照は、<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code> を使用して取得できます。</p> <p>確認できるのは、システムが最後に起動されて以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。また、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>も参照してください。</p> <p>ログファイルを使用して、自動クリーンアップのステータス、進行状況および統計情報を確認することもできます。</p> </td>
    <td> </td>
   </tr>
   <tr>

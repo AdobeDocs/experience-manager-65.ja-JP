@@ -12,7 +12,7 @@ discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5006'
 ht-degree: 100%
 
@@ -444,9 +444,9 @@ JSONP サービスへの最後の呼び出し以降キャッシュされてい�
 * **port：**（Number）サービスのポート番号。
 * **secure：**（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-   * auto: //
+   * 自動：//
    * true：https://
-   * false: https://
+   * false:https://
 
 #### getServiceURL(resolve) {#getserviceurl-resolve}
 
@@ -481,9 +481,9 @@ ContextHub.Store.JSONPStore オブジェクトを初期化します。
       * port：（Number）サービスのポート番号。
       * secure：（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-         * auto: //
+         * 自動：//
          * true：https://
-         * false: https://
+         * false:https://
       * timeout：（Number）タイムアウトまでに JSONP サービスの応答を待機する時間（ミリ秒単位）。
       * ttl：JSONP サービスの最小呼び出し間隔（ミリ秒単位）。（[queryService](/help/sites-developing/contexthub-api.md#queryservice-reload) 関数を参照）。
 

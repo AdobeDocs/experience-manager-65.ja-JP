@@ -15,7 +15,7 @@ mini-toc-levels: 3
 source-git-commit: d5824078ca3e1ff2b48874446aaebe3fdd60cfdc
 workflow-type: tm+mt
 source-wordcount: '1386'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -210,40 +210,41 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 
 ビューアで問題が発生している場合、次のトラブルシューティングガイドに従ってください。
 
-### 問題:ビューアプリセットが公開されていない {#viewers-not-published}
+### 問題：ビューアプリセットが公開されていない {#viewers-not-published}
 
 **デバッグの方法**
 
-1. 次のサンプルマネージャー診断ページに進みます。 `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`.
+1. サンプルマネージャー診断ページ `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html` に移動します。
 1. 計算された値を確認します。正しく動作すると、次のように表示されます。`_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets` です。
 
    >[!NOTE]
    >
-   >ビューアアセットを同期するために、Dynamic Mediaクラウド設定をおこなってから約 10 分かかる場合があります。
+   >Dynamic Media クラウドの設定後、ビューアアセットが同期するまで 10 分ほどかかることがあります。
 
 1. アクティブでないアセットが残る場合は、「**アクティブでないアセットをすべて表示**」ボタンのどちらかを選択して詳細を確認してください。
 
 **解決策**
 
-1. 管理ツールのビューアプリセットリストに移動します。 `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`
+1. 管理ツールのビューアプリセットリスト（`https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`）に移動します。
 1. すべてのビューアプリセットを選択したあと、「**公開**」を選択します。
 1. サンプルマネージャーに戻り、アクティブでないアセット数がゼロになったことを確認します。
 
-### 問題：ビューアプリセットのアートワークが、アセットの詳細のプレビューまたは URL/埋め込みコードのコピーで 404 を返す場合 {#viewer-preset-404}
+### 問題：ビューアプリセットのアートワークが、アセット詳細のプレビューまたは URL をコピー／埋め込みコードで 404 を返す {#viewer-preset-404}
 
 **デバッグの方法**
 
 CRXDE Lite で以下を行います。
 
-1. に移動します。 `<sync-folder>/_CSS/_OOTB` Dynamic Media同期フォルダー内のフォルダー ( 例： `/content/dam/_CSS/_OOTB`) をクリックします。
+1. Dynamic Media 同期フォルダー内の `<sync-folder>/_CSS/_OOTB` フォルダー（例えば `/content/dam/_CSS/_OOTB`）に移動します。
 1. 問題のあるアセットのメタデータノードを見つけます（例えば `<sync-folder>/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/`）。
 1. `dam:scene7*` プロパティがあることを確認します。アセットの同期と公開に成功した場合は `dam:scene7FileStatus` が **PublishComplete** に設定されています。
-1. 次のプロパティと文字列リテラルの値を連結して、ダイナミックメディアに直接アートワークを要求します。
+1. 次のプロパティと文字列リテラルの値を連結して Dynamic Media に直接アートワークを要求します。
 
    * `dam:scene7Domain`
    * `"is/content"`
    * `dam:scene7Folder`
-   * `<asset-name>`例： 
+   * `<asset-name>`
+例： 
 `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
 
 **解決策**
@@ -252,27 +253,27 @@ CRXDE Lite で以下を行います。
 
 1. CRXDE Lite に移動します。
 1. `<sync-folder>/_CSS/_OOTB` を削除します。
-1. CRX パッケージマネージャー ( ) に移動します。 `https://localhost:4502/crx/packmgr/`.
-1. リスト内でビューアパッケージを検索します。次で始まる `cq-dam-scene7-viewers-content`.
+1. CRX パッケージマネージャー（`https://localhost:4502/crx/packmgr/`）に移動します。
+1. リストでビューアパッケージを検索します（`cq-dam-scene7-viewers-content` で始まります）。
 1. 「**再インストール**」を選択します。
 1. クラウドサービスページで、Dynamic Media 設定ページに移動した後、Dynamic Media - Scene7 設定の設定ダイアログボックスを開きます。
-1. 何も変更せず、「**保存**」をクリックします。この保存操作をトリガーすると、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが再度作成されます。
+1. 何も変更せず、「**保存**」をクリックします。この保存アクションで、サンプルアセット、ビューアプリセット CSS およびアートワークを作成および同期するロジックが、再度トリガーされます。
 
-### 問題：画像プレビューがビューアプリセットオーサリングで読み込まれない {#image-preview-not-loading}
+### 問題：ビューアプリセットのオーサリングで画像プレビューが読み込まれない {#image-preview-not-loading}
 
 **解決策**
 
 1. Experience Manager で、Experience Manager ロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL CRXDE Lite]** に移動します。
-1. 左側のレールで、次の場所にあるサンプルコンテンツフォルダーに移動します。
+1. 左側のパネルで、次の場所にあるサンプルコンテンツフォルダーに移動します。
 
    `/content/dam/_DMSAMPLE`
 
-1. を削除します。 `_DMSAMPLE` フォルダー。
-1. 左側のレールで、次の場所にある presets フォルダーに移動します。
+1. `_DMSAMPLE` フォルダーを削除します。
+1. 左側のパネルで、次の場所にあるプリセットフォルダーに移動します。
 
    `/conf/global/settings/dam/dm/presets/viewer`
 
-1. を削除します。 `viewer` フォルダー。
+1. `viewer` フォルダーを削除します。
 1. CRXDE Lite ページの左上隅付近にある「**[!UICONTROL すべて保存]**」を選択します。
-1. CRXDE Liteページの左上隅で、 **ホームに戻る** アイコン
-1. の再作成 [Cloud ServicesでのDynamic Media設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services).
+1. CRXDE Lite ページの左上隅にある「**ホームに戻る**」アイコンを選択します。
+1. [Cloud Services の Dynamic Media 設定](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)を再作成します。

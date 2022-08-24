@@ -22,7 +22,7 @@ Assets では、ビデオアセットを統合管理できます。ビデオを�
 Dynamic Media Classic ビデオの統合により、最適化されたビデオの範囲をすべての画面に拡大します（デバイスと帯域幅の自動検出）。
 
 * Dynamic Media Classic ビデオコンポーネントでは、デスクトップ、タブレットおよびモバイルで適切な形式と画質を使用してビデオを再生するために、デバイスと帯域幅を自動的に検出します。
-* Assets - 単一のビデオアセットだけでなく、アダプティブビデオセットを含めることもできます。アダプティブビデオセットは、複数の画面にまたがってシームレスにビデオを再生するために必要なビデオレンディションをすべて含んだコンテナです。 アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップ、iOS、Android™、BlackBerry®、Windows モバイルデバイスなど、複数の画面にまたがるアダプティブビデオのストリーミングには、S7 ビデオコンポーネントと共にアダプティブビデオセットを使用します。 詳しくは、[アダプティブビデオセットに関する Dynamic Media Classic のドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html?lang=ja#video)を参照してください。
+* Assets - 単一のビデオアセットだけでなく、アダプティブビデオセットを含めることもできます。アダプティブビデオセットは、複数の画面にまたがってシームレスにビデオを再生するために必要なビデオレンディションをすべて含んだコンテナです。アダプティブビデオセットでは、同じビデオを、400 kbps、800 kbps、1000 kbps などの様々なビットレートと形式でエンコードしたバージョンにグループ分けします。デスクトップ、iOS、Android™、BlackBerry®、Windows モバイルデバイスなど、複数の画面にまたがるアダプティブビデオのストリーミングには、S7 ビデオコンポーネントと共にアダプティブビデオセットを使用します。詳しくは、[アダプティブビデオセットに関する Dynamic Media Classic のドキュメント](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html?lang=ja#video)を参照してください。
 
 ## FFMPEG と Dynamic Media Classic について {#about-ffmpeg-and-scene}
 
@@ -88,7 +88,7 @@ Dynamic Media Classic ビデオコンポーネントでは次の形式がサポ�
 
 ### ビューアとエンコーディングプリセットの更新 {#updating-viewer-and-encoding-presets}
 
-Dynamic Media Classic でプリセットが更新されている場合は、Experience Manager でビデオのビューアとエンコーディングプリセットを更新します。 その場合は、クラウド設定の Dynamic Media Classic 設定に移動して、「 **ビューアとエンコーディングプリセットの更新** 」を選択します。
+Dynamic Media Classic でプリセットが更新されている場合は、Experience Manager でビデオのビューアとエンコーディングプリセットを更新します。その場合は、クラウド設定の Dynamic Media Classic 設定に移動して、「 **ビューアとエンコーディングプリセットの更新** 」を選択します。
 
 ![chlimage_1-131](assets/chlimage_1-131.png)
 
@@ -97,7 +97,7 @@ Dynamic Media Classic でプリセットが更新されている場合は、Expe
 Adobe DAM から Dynamic Media Classic にプライマリソースビデオをアップロードする方法。
 
 1. Dynamic Media Classic のエンコーディングプロファイルでクラウド設定を指定した CQ DAM のターゲットフォルダーに移動します。
-1. **[!UICONTROL アップロード]**&#x200B;を選択して、プライマリソースビデオをアップロードします。 [!UICONTROL DAM アセットの更新]ワークフローが完了し、「**[!UICONTROL Dynamic Media Classic に公開]**」にチェックマークが付くと、ビデオのアップロードとエンコーディングが完了します。
+1. **[!UICONTROL アップロード]**&#x200B;を選択して、プライマリソースビデオをアップロードします。[!UICONTROL DAM アセットの更新]ワークフローが完了し、「**[!UICONTROL Dynamic Media Classic に公開]**」にチェックマークが付くと、ビデオのアップロードとエンコーディングが完了します。
 
    >[!NOTE]
    >
@@ -109,7 +109,7 @@ Adobe DAM から Dynamic Media Classic にプライマリソースビデオを�
 
 Experience Manager を使用する場合は、Sites で使用可能なビデオコンポーネントと、Dynamic Media Classic ビデオコンポーネントの両方にアクセスできます。これらのコンポーネントに互換性はありません。
 
-Dynamic Media Classic ビデオコンポーネントは、Dynamic Media Classic ビデオでのみ使用できます。 基盤コンポーネントは、Experience Manager（ffmpeg を使用）および Dynamic Media Classic ビデオから保存されたビデオで使用できます。
+Dynamic Media Classic ビデオコンポーネントは、Dynamic Media Classic ビデオでのみ使用できます。基盤コンポーネントは、Experience Manager（ffmpeg を使用）および Dynamic Media Classic ビデオから保存されたビデオで使用できます。
 
 次の表は、どのコンポーネントをどのようなシナリオで使用するべきかを示しています。
 
@@ -139,7 +139,7 @@ Dynamic Media Classic ビデオの閲覧には Dynamic Media Classic ビデオ�
 
 #### ビデオプロファイルの作成 {#creating-video-profiles}
 
-Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic のエンコーディングプリセットに従って、様々なビデオエンコーディングが作成されます。基盤ビデオコンポーネントで使用するには、選択した各 Dynamic Media Classic エンコーディングプリセットに対してビデオプロファイルを作成する必要があります。 これにより、対応する DAM レンディションをビデオコンポーネントで選択できます。
+Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic のエンコーディングプリセットに従って、様々なビデオエンコーディングが作成されます。基盤ビデオコンポーネントで使用するには、選択した各 Dynamic Media Classic エンコーディングプリセットに対してビデオプロファイルを作成する必要があります。これにより、対応する DAM レンディションをビデオコンポーネントで選択できます。
 
 >[!NOTE]
 >
@@ -148,7 +148,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 1. Experience Manager で&#x200B;**[!UICONTROL ツール]**&#x200B;に移動し、「**[!UICONTROL 設定コンソール]**」を選択します。
 1. 設定コンソールで、ナビゲーションツリーの&#x200B;**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
 1. Dynamic Media Classic ビデオプロファイルを作成します。「**[!UICONTROL 新規]** 」メニュー内の「 **[!UICONTROL ページを作成]**」を選択します。
-1. Dynamic Media Classic ビデオプロファイルのテンプレートを選択します。 新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」を選択します。
+1. Dynamic Media Classic ビデオプロファイルのテンプレートを選択します。新しいビデオプロファイルページに名前を付け、「**[!UICONTROL 作成]**」を選択します。
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
 
@@ -181,7 +181,7 @@ Dynamic Media Classic クラウド設定で選択した Dynamic Media Classic �
 
 #### チェックリスト {#checklist}
 
-1. Dynamic Media Classic クラウド設定を作成します。 ビデオエンコーディングのプリセットが設定され、インポーターが実行中であることを確認します。
+1. Dynamic Media Classic クラウド設定を作成します。ビデオエンコーディングのプリセットが設定され、インポーターが実行中であることを確認します。
 1. クラウド設定で選択した各ビデオエンコーディングのプリセットに対して、Dynamic Media Classic ビデオプロファイルを作成します。
 1. ビデオプロファイルをアクティベートする必要があります。
 1. 目的のページで基盤ビデオコンポーネントの設計を設定します。

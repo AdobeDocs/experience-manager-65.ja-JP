@@ -13,7 +13,7 @@ exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
 source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
 workflow-type: tm+mt
 source-wordcount: '668'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 
@@ -25,7 +25,7 @@ AEM Communities では、[コミュニティサイト](overview.md#community-sit
 
 特定のデプロイメントとサイトデザインにとって何が必要かについては
 
-* 連絡先 [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)
+* [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)に問い合わせる
 
 メイン [Dispatcher のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja).
 

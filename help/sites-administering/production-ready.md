@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 32da99f0-f058-40ae-95a8-2522622438ce
 exl-id: 3c342014-f8ec-4404-afe5-514bdb651aae
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 100%
 
@@ -69,9 +69,9 @@ java -jar aem-quickstart.jar -r author,crx3,crx3mongo,nosamplecontent -Doak.mong
 
 | **設定** | **作成者** | **公開** |
 |---|---|---|
-| TXT rendition | disabled | disabled |
-| HTML rendition | disabled | disabled |
-| JSON rendition | enabled | enabled |
-| XML rendition | disabled | disabled |
+| TXT rendition | disabled | 無効 |
+| HTML rendition | 無効 | 無効 |
+| JSON rendition | enabled | 有効 |
+| XML rendition | 無効 | 無効 |
 | json.maximumresults | 1000 | 100 |
-| Auto Index | disabled | disabled |
+| Auto Index | 無効 | 無効 |

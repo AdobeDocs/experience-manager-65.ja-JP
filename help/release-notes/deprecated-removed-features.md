@@ -3,7 +3,7 @@ title: Adobe Experience Manager 6.5 リリースで廃止および削除され�
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1751'
 ht-degree: 100%
 

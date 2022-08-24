@@ -7,10 +7,10 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
 workflow-type: tm+mt
 source-wordcount: '3802'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ URL に関して一般的に認められているベストプラクティスが�
 
 AEM プロジェクトで URL を評価するときには、次のことを確認してください。
 
-「ユーザーがこの URL を目にしたがって、ページのコンテンツを見なかった場合、そのページの内容を説明できますか？」
+「ユーザーが URL を目にしたときに、ページのコンテンツを見なくても、そのページの内容を説明できますか。」
 
 答えが「はい」であれば、その URL は検索エンジンに効果があります。
 
@@ -156,7 +156,7 @@ String myParam = req.getParameter("myParam");
 このタイプのサーブレットの SCR 注釈は、次のようになります。
 
 ```
-@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json", methods="GET")
+@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
 ```
 
 この場合、URL によってアドレス指定されるリソース（`myPageType` リソースのインスタンス）にサーブレットで自動的にアクセスできます。アクセスするには、次のメソッドを呼び出します。
@@ -320,7 +320,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 両方について、ページの先頭に次のタグを適用します。
 
 ```xml
-<link rel="canonical" href="my-brand/my-page.html"/>
+<link rel=”canonical” href=”my-brand/my-page.html”/>
 ```
 
 `href` は、相対パスとして指定することも、絶対パスとして指定することもできます。ページの正規 URL を確認し、このタグを出力するには、このコードをページマークアップに挿入する必要があります。

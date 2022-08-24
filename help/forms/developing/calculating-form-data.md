@@ -13,7 +13,7 @@ discoiquuid: b4f57e42-60a6-407d-9764-15a11615827d
 role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1882'
 ht-degree: 100%
 
@@ -125,8 +125,7 @@ Forms サービスのクライアント API を使用して、サーバー上で
 
 **関連項目**
 
-[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
-[Java API を使用してフォームデータを計算する](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
+[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)[Java API を使用してフォームデータを計算する](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-java-api)
 [Web サービス API を使用してフォームデータを計算する](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 [Forms サービス API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
@@ -169,7 +168,7 @@ Forms API（Java）を使用してフォームデータを計算します。
    * `InputStream` オブジェクトの `read` メソッドを呼び出してバイト配列を引数として渡すことによって、バイト配列を作成してフォームデータストリームを入力します。
    * `javax.servlet.ServletOutputStream` オブジェクトの `write` メソッドを呼び出して、フォームデータストリームをクライアント web ブラウザーに送信します。バイト配列を `write` メソッドに渡します。
 
-**関連項目**
+**関連トピック**
 
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)

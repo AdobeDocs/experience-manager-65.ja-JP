@@ -3,7 +3,7 @@ title: JEE 上の AEM Forms サーバークラスターの設定とトラブル�
 description: JEE 上の AEM Forms サーバークラスターの設定方法とトラブルシューティング方法について説明します
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
 source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4033'
 ht-degree: 100%
 

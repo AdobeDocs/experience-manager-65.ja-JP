@@ -12,7 +12,7 @@ discoiquuid: 7f378b94-5233-4358-8d93-a7b3386df00b
 docset: aem65
 exl-id: 27b8302c-250b-4ce6-b3cf-c938738f2d92
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 100%
 
@@ -99,7 +99,7 @@ AEM 内のティーザーは、以下の複数の部品から構成されます�
    <td>C1 </td>
    <td>T5</td>
    <td>S1、S2、S6</td>
-   <td>マーケティング</td>
+   <td>マーケター</td>
   </tr>
   <tr>
    <td>C1 </td>
@@ -176,7 +176,7 @@ AEM 内のティーザーは、以下の複数の部品から構成されます�
    <td>C1 </td>
    <td>T5</td>
    <td>S1、S2、S6</td>
-   <td>マーケティング</td>
+   <td>マーケター</td>
    <td>はい</td>
    <td>100</td>
    <td>3</td>

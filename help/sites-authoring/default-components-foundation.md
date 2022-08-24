@@ -13,10 +13,10 @@ docset: aem65
 legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/editmode
 pagetitle: Foundation Components
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '7362'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -238,8 +238,8 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 * **データ**
 
-   * **グラフデータ**
-CSV 形式でグラフデータを入力します。コンマ区切り値の形式では、フィールド区切り文字としてコンマ (&quot;,&quot;) が使用されます。
+   * **チャートデータ**
+グラフデータを入力するには、CSV（Comma Separated Values）形式を使用します。CSV 形式では、フィールドの区切り文字としてコンマ（「,」）を使用します。
 
 * **詳細**
 

@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: e0c20fd2-b084-4f61-936c-5282826a8d3d
 role: Developer
 exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 100%
@@ -981,7 +981,7 @@ public class ManagePreferences {
         map = pmutil.getPreferences(path);
         for(String str:map.keySet()) {
             //assert on the key as "ReverseOrder"
-            //assert on the value[map.get(str)] as "false"
+            //assert on the value[map.get(str)] as "false”
         }
     } catch (UMException e) {
         e.printStackTrace();

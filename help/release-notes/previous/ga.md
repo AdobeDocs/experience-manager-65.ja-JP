@@ -2,10 +2,10 @@
 title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
 source-wordcount: '4696'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -145,7 +145,7 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 * 新規プロジェクト用の単一ページアプリ Maven プロジェクトアーキタイプ 1.0.6 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-spa-project-archetype/releases) を参照してください。
 * HTL バージョン 1.4 については、[リリースノートの GitHub](https://github.com/adobe/htl-spec/releases/tag/1.4) を参照してください。
 
-   * 文字列、配列およびオブジェクトに対する&quot;in&quot;演算子
+   * 文字列、配列、オブジェクトの「in」演算子
 
       ```html
       ${'a' in 'abc’}

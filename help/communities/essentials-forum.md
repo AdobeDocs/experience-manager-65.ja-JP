@@ -1,8 +1,8 @@
 ---
 title: フォーラムの基本事項
-seo-title: フォーラムの基本事項
+seo-title: Forum Essentials
 description: フォーラムの概要
-seo-description: フォーラムの概要
+seo-description: Forum overview
 uuid: 68849582-8742-40be-9e7e-0b574ae38815
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
 exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 48%
+source-wordcount: '253'
+ht-degree: 49%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 48%
 
 このページでは、フォーラム機能の操作に関する基本情報をまとめています。
 
-## クライアント側の基本事項  {#essentials-for-client-side}
+## クライアント側の基本事項 {#essentials-for-client-side}
 
 <table>
  <tbody>
@@ -31,7 +31,7 @@ ht-degree: 48%
   </tr>
   <tr>
    <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
-   <td>不可</td>
+   <td>いいえ</td>
   </tr>
   <tr>
    <td> <a href="clientlibs.md"><strong>clientllibs</strong></a></td>
@@ -47,7 +47,7 @@ ht-degree: 48%
   </tr>
   <tr>
    <td><strong> properties</strong></td>
-   <td><a href="forum.md">フォーラム機能</a>を参照</td>
+   <td>詳しくは、 <a href="forum.md">フォーラム機能</a></td>
   </tr>
  </tbody>
 </table>
@@ -64,9 +64,9 @@ ht-degree: 48%
 
 ### フォーラム機能 {#forum-function}
 
-[フォーラム機能](functions.md#forum-function)を含むコミュニティサイト構造には、設定済みの`forum`コンポーネントのほか、モデレート、タグ付け、翻訳に影響する設定が含まれます。
+を含むコミュニティサイト構造 [フォーラム機能](functions.md#forum-function)（設定済みを含む） `forum` コンポーネントのほか、モデレート、タグ付けおよび翻訳に影響する設定も含まれます。
 
-### フォーラム投稿(UGC)へのアクセス{#accessing-forum-posts-ugc}
+### フォーラム投稿（UGC）へのアクセス {#accessing-forum-posts-ugc}
 
 UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
 
@@ -74,9 +74,9 @@ AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)
 
 **リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
 
-次のページを参照してください。
+以下を参照してください。
 
-* [ストレージリソースプロバイダーの概要](srp.md)  — 概要とリポジトリの使用方法の概要。
-* [SRPとUGCの基本事項](srp-and-ugc.md) - SRPユーティリティのメソッドと例。
-* [SRPによるUGCへのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン
-* [SocialUtilsのリファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在のSRPユーティリティメソッドにマッピングします。
+* [ストレージリソースプロバイダの概要](srp.md)  — の概要とリポジトリの使用の概要。
+* [SRP と UGC の基本事項](srp-and-ugc.md) - SRP ユーティリティメソッドと例。
+* [SRP を使用した UGC へのアクセス](accessing-ugc-with-srp.md)  — コーディングのガイドライン。
+* [SocialUtils リファクタリング](socialutils.md)  — 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングします。

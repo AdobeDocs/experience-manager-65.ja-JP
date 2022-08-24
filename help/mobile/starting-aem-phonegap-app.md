@@ -1,29 +1,29 @@
 ---
 title: AEM PhoneGap の起動
-seo-title: AEM PhoneGap の起動
+seo-title: Starting AEM PhoneGap
 description: このページでは、開発者向けスターターキットについて説明します。
-seo-description: このページでは、開発者向けスターターキットについて説明します。
+seo-description: Follow this page to learn about the starterkit for developers.
 uuid: 952bf9f9-5c79-4212-91b7-1d3850ec2402
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 2ecf05ed-4e56-4e0b-89cf-5161741f9001
-source-git-commit: a3c303d4e3a85e1b2e794bec2006c335056309fb
+exl-id: 7d56b9f0-5aa5-4b68-a85e-7e80415cbc76
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 54%
+source-wordcount: '407'
+ht-degree: 52%
 
 ---
 
-
-# AEM PhoneGap の起動  {#starting-aem-phonegap}
+# AEM PhoneGap の起動 {#starting-aem-phonegap}
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-開発者にとって最も良いのは、githubのAdobe Experience Manager Mobile Starterkitを見てみることです
+デベロッパーにとって、まず github のAdobe Experience Manager Mobile Starterkit を見てみるのが最適です
 
 https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
@@ -31,18 +31,18 @@ https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit
 
 開発者は、このサンプルを基に、PhoneGap を使用した AEM Mobile アプリケーションを開発できます。スターターキットおよび参照アプリケーションを使用して学習することで、リッチなモバイルアプリケーションを作成するための基礎を確実に理解できます。
 
-* [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit)を使用して、AEM Mobileカタログに適したアプリを作成します。
-* 既存のアプリをAEM Mobileに移行する場合も、新規に開始する場合も、AEM Mobileの新機能の多くを示す、完全なソースを持つ[参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference)が作成されました。
-* すべてのサンプルはGitHubにあります。[https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps)を追加し、Mavenでプロジェクトをブートストラップする処理を含めます。
-* ほとんどの会議トークでは、[Kitchen Sinkのチュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)を活用します。これはGithubでも見つけることができ、Apache Cordovaのネイティブ拡張機能の使用に焦点を当てています。
+* 以下を使用： [AEM PhoneGap スターターキット](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) :AEM Mobileカタログに適したアプリを作成します。
+* A [参照アプリ](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) 既存のアプリをAEM Mobileに移行する場合も、新規に開始する場合も、AEM Mobileの新機能の多くを示す完全なソースが作成されています。
+* すべてのサンプルは GitHub にあります。 [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) Maven でプロジェクトをブートストラップする機能を含めます。
+* ほとんどの会議交渉は、 [Kitchen Sink のチュートリアル](https://github.com/blefebvre/aem-phonegap-kitchen-sink)は GitHub でも検索でき、Apache Cordova のネイティブ拡張機能の使用に重点を置いています。
 
 >[!NOTE]
 >
->スターターキットに慣れる機会を得たら、Adobe Experience Manager *のコンポーネントとテンプレートについて学ぶことが重要です。*
+>スターターキットに慣れる機会があれば、Adobe Experience Managerについて学ぶことが重要です *コンポーネントとテンプレート*
 
 ## テンプレートおよびコンポーネント {#templates-and-components}
 
-AEM *テンプレート*&#x200B;と&#x200B;*コンポーネント*&#x200B;を使用すると、ビジネスオーナーはカスタムエクスペリエンスを作成できます。 テンプレートと&#x200B;*コンポーネント*&#x200B;は、両方とも標準で提供されています。または、既存のコンポーネントを拡張するか、グリーンフィールド（詳細）を作成することで、開発者がカスタム開発できます。 ** テンプレートとコン ** ポーネントを使用すると、AEMオーサーがドラッグ&amp;ドロップして、魅力的で関連性の高いエクスペリエンスを作成できます。
+AEM *テンプレート* および *コンポーネント* 事業部門の所有者がカスタムエクスペリエンスを作成できるようにします。 テンプレートと *コンポーネント* は、標準で用意されている場合も、開発者が既存のコンポーネントを拡張する場合も、緑のフィールド（詳細）を作成する場合も、ユーザーがカスタムで開発する場合もあります。 *テンプレート* および *コンポーネント* AEM オーサーがドラッグ&amp;ドロップして、魅力的で関連性の高いエクスペリエンスを作成できるようにします。
 
 1. [コンポーネントの作成](/help/sites-developing/components.md)
 1. [テンプレートの作成](/help/sites-developing/templates.md)

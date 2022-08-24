@@ -12,7 +12,7 @@ discoiquuid: a08cee9c-e981-4483-8bdc-e6353977f854
 feature: Upgrading
 exl-id: 797bbdf9-917a-4537-a5f9-bf2682db968b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 100%
 
@@ -149,7 +149,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
   </tr>
   <tr>
    <td>6.2 のリソースタイプ</td>
-   <td>n/a</td>
+   <td>該当なし</td>
   </tr>
  </tbody>
 </table>
@@ -373,7 +373,7 @@ AEM 6.1 では、標準のフルテキストの述語は検索フォームの一
 | 6.1 のデフォルトの検索フォームのノード | fulltext |
 |---|---|
 | 6.1 のリソースタイプ | dam/gui/components/admin/customsearch/searchpredicates/fulltextpredicate |
-| 6.2 のリソースタイプ | n/a |
+| 6.2 のリソースタイプ | 該当なし |
 
 6.1 では、標準のフルテキストの述語は検索フォームの一部でした。6.2 では、フルテキストフィールドが OmniSearch で置き換えられました。この述語はプログラムによってスキップされ、削除可能です。
 

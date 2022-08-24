@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 9b1d2bf3-f28c-41b2-9026-1f3311556422
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '15514'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -263,7 +263,7 @@ Document Security API（Java）を使用してポリシーを作成します。
 
 Document Security サービスを使用するコード例については、次を参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用したポリシーの作成&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用したポリシーの作成」
 
 ### Web サービス API を使用してポリシーを作成する {#create-a-policy-using-the-web-service-api}
 
@@ -321,8 +321,8 @@ Document Security API（web サービス）を使用してポリシーを作成�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用したポリシーの作成»
-* クイックスタート (SwaRef):Web サービス API を使用したポリシーの作成»
+* 「クイックスタート（MTOM）：web サービス API を使用したポリシーの作成」
+* 「クイックスタート（SwaRef）：web サービス API を使用したポリシーの作成」
 
 ## ポリシーの変更 {#modifying-policies}
 
@@ -388,7 +388,7 @@ Document Security API（Java）を使用して既存のポリシーを変更し�
 1. 既存のポリシーを取得します。
 
    * `RightsManagementClient` オブジェクトの `getPolicyManager` メソッドを呼び出すことによって `PolicyManager` オブジェクトを作成します。
-   * の作成 `Policy` を呼び出して更新するポリシーを表すオブジェクト `PolicyManager` オブジェクトの `getPolicy` メソッドを使用して次の値を渡す»
+   * 更新するポリシーを表す `Policy` オブジェクトを作成するには、`PolicyManager` オブジェクトの `getPolicy` メソッドを呼び出し、次の値を渡します。
 
       * ポリシーが属するポリシーセット名を表す文字列値。`null` を指定すると、`MyPolicies` ポリシーセットが使用されるようになります。
       * ポリシー名を表す文字列値。
@@ -450,8 +450,8 @@ Document Security API（web サービス）を使用して既存のポリシー�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用したポリシーの変更»
-* クイックスタート (SwaRef):Web サービス API を使用したポリシーの変更»
+* 「クイックスタート（MTOM）：web サービス API を使用したポリシーの変更」
+* 「クイックスタート（SwaRef）：web サービス API を使用したポリシーの変更」
 
 ## ポリシーの削除 {#deleting-policies}
 
@@ -506,7 +506,7 @@ Document Security API（Java）を使用してポリシーを削除します。
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用したポリシーの削除&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用したポリシーの削除」
 
 ### Web サービス API を使用したポリシーの削除 {#delete-policies-using-the-web-service-api}
 
@@ -545,8 +545,8 @@ Document Security API（web サービス）を使用してポリシーを削除�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用したポリシーの削除»
-* クイックスタート (SwaRef):Web サービス API を使用したポリシーの削除»
+* 「クイックスタート（MTOM）：web サービス API を使用したポリシーの削除」
+* 「クイックスタート（SwaRef）：web サービス API を使用したポリシーの削除」
 
 ## PDF ドキュメントへのポリシーの適用 {#applying-policies-to-pdf-documents}
 
@@ -642,8 +642,8 @@ Document Security API（Java）を使用して、PDF ドキュメントにポリ
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート（EJB モード）:Java API を使用したPDFドキュメントへのポリシーの適用»
-* &quot;クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへのポリシーの適用&quot;
+* 「クイックスタート（EJB モード）：Java API を使用した PDF ドキュメントへのポリシーの適用」
+* 「クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへのポリシーの適用」
 
 **関連トピック**
 
@@ -713,8 +713,8 @@ Document Security API（web サービス）を使用して、PDF ドキュメン
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用してPDFドキュメントにポリシーを適用する»
-* クイックスタート (SwaRef):Web サービス API「 」を使用してPDFドキュメントにポリシーを適用する
+* 「クイックスタート（MTOM）：web サービス API を使用して PDF ドキュメントにポリシーを適用する」
+* 「クイックスタート（SwaRef）：web サービス API を使用して PDF ドキュメントにポリシーを適用する」
 
 ## PDF ドキュメントからのポリシーの削除 {#removing-policies-from-pdf-documents}
 
@@ -794,7 +794,7 @@ Document Security API（Java）を使用して、ポリシーで保護された 
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントからのポリシーの削除&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントからのポリシーの削除」
 
 ### Web サービス API を使用したポリシーの削除 {#remove-a-policy-using-the-web-service-api}
 
@@ -844,8 +844,8 @@ Document Security API（web サービス）を使用して、ポリシーで保�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API「 」を使用したPDFドキュメントからのポリシーの削除
-* クイックスタート (SwaRef):Web サービス API を使用したPDFドキュメントからのポリシーの削除»
+* 「クイックスタート（MTOM）：web サービス API を使用した PDF ドキュメントからのポリシーの削除」
+* 「クイックスタート（SwaRef）：web サービス API を使用した PDF ドキュメントからのポリシーの削除」
 
 **関連トピック**
 
@@ -937,7 +937,7 @@ Document Security API（Java）を使用して、ポリシーで保護された 
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用したドキュメントの取り消し&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用したドキュメントの取り消し」
 
 ### Web サービス API を使用したドキュメントへのアクセスの取り消し {#revoke-access-to-documents-using-the-web-service-api}
 
@@ -986,8 +986,8 @@ Document Security API（web サービス）を使用して、ポリシーで保�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用したドキュメントの取り消し»
-* クイックスタート (SwaRef):Web サービス API を使用したドキュメントの取り消し»
+* 「クイックスタート（MTOM）：web サービス API を使用したドキュメントの失効」
+* 「クイックスタート（SwaRef）：web サービス API を使用したドキュメントの失効」
 
 **関連トピック**
 
@@ -1069,7 +1069,7 @@ Document Security API（Java）を使用して、失効したドキュメント�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート（SOAP モード）:Web サービス API を使用した取り消されたドキュメントへのアクセス権の回復»
+* 「クイックスタート（SOAP モード）：失効したドキュメントへのアクセス権限を web サービス API を使用して復元する」
 
 ### 失効したドキュメントへのアクセス権限を web サービス API を使用して復元する {#reinstate-access-to-revoked-documents-using-the-web-service-api}
 
@@ -1114,8 +1114,8 @@ Document Security API（web サービス）を使用して、失効したドキ�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した取り消されたドキュメントへのアクセス権の回復»
-* クイックスタート (SwaRef):Web サービス API を使用した取り消されたドキュメントへのアクセス権の回復»
+* 「クイックスタート（MTOM）：web サービス API を使用した失効ドキュメントへのアクセス権の回復」
+* 「クイックスタート（SwaRef）：web サービス API を使用した失効ドキュメントへのアクセス権の回復」
 
 **関連トピック**
 
@@ -1203,7 +1203,7 @@ Document Security Service API（Java）を使用して、ポリシーで保護�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用した PDF 保護ポリシードキュメントの検査&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用したポリシーで保護された PDF ドキュメントの検査」
 
 ### Web サービス API を使用したポリシーで保護された PDF ドキュメントの検査 {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
@@ -1251,8 +1251,8 @@ Document Security Service API（web サービス）を使用して、ポリシ�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用したPDF保護ドキュメントの検査»
-* クイックスタート (SwaRef):Web サービス API を使用したPDF保護ドキュメントの検査»
+* 「クイックスタート（MTOM）：web サービス API を使用したポリシーで保護された PDF ドキュメントの検査」
+* 「クイックスタート（SwaRef）：web サービス API を使用したポリシーで保護された PDF ドキュメントの検査」
 
 **関連トピック**
 
@@ -1423,7 +1423,7 @@ Document Security API（Java）を使用して透かしを作成します。
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用した透かしの作成&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用した透かしの作成」
 
 ### Web サービス API を使用した透かしの作成 {#create-watermarks-using-the-web-service-api}
 
@@ -1470,8 +1470,8 @@ Document Security API（web サービス）を使用して透かしを作成し�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した透かしの作成»
-* クイックスタート (SwaRef):Web サービス API を使用した透かしの作成»
+* 「クイックスタート（MTOM）：web サービス API を使用した透かしの作成」
+* 「クイックスタート（SwaRef）：web サービス API を使用した透かしの作成」
 
 **関連トピック**
 
@@ -1618,7 +1618,7 @@ Document Security API（web サービス）を使用して透かしを変更し�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した透かしの変更»
+* 「クイックスタート（MTOM）：web サービス API を使用した透かしの変更」
 
 ## イベントの検索 {#searching-for-events}
 
@@ -1698,7 +1698,7 @@ Rights Management API（Java）を使用してイベントを検索します。
 
 Rights Management サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (SOAP):Java API を使用したイベントの検索»
+* 「クイックスタート（SOAP）：Java API を使用したイベントの検索」
 
 ### Web サービス API を使用したイベントの検索 {#search-for-events-using-the-web-service-api}
 
@@ -1942,8 +1942,8 @@ Rights Management API（web サービス）を使用してイベントを検索�
 
 Rights Management サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用したイベントの検索»
-* クイックスタート (SwaRef):Web サービス API を使用したイベントの検索»
+* 「Quick Start（MTOM）：web サービス API を使用したイベントの検索」
+* 「Quick Start（SwaRef）：web サービス API を使用したイベントの検索」
 
 **関連トピック**
 
@@ -2043,7 +2043,7 @@ Document Security API（Java）を使用して、Word ドキュメントにポ�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート（SOAP モード）:Java API を使用して Word ドキュメントにポリシーを適用する»
+* 「クイックスタート（SOAP モード）：Java API を使用した Word ドキュメントへのポリシーの適用」
 
 ### Web サービス API を使用して Word ドキュメントにポリシーを適用する {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
@@ -2107,7 +2107,7 @@ Document Security API（web サービス）を使用して、Word ドキュメ�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用して Word ドキュメントにポリシーを適用する
+* 「クイックスタート（MTOM）：web サービス API を使用した Word ドキュメントへのポリシーの適用」
 
 ## Word ドキュメントからのポリシーの削除 {#removing-policies-from-word-documents}
 
@@ -2187,7 +2187,7 @@ Document Security API（Java） を使用して、ポリシーで保護された
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用した Word ドキュメントからのポリシーの削除 &quot;
+* 「クイックスタート（SOAP モード）：Java API を使用した Word ドキュメントからのポリシーの削除」
 
 ### Web サービス API を使用して Word ドキュメントからポリシーを削除 {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 
@@ -2237,7 +2237,7 @@ Document Security API（web サービス）を使用して、ポリシーで保�
 
 Document Security サービスを使用するコード例については、次のクイックスタートを参照してください。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した Word ドキュメントからのポリシーの削除»
+* 「クイックスタート（MTOM）：web サービス API を使用した Word ドキュメントからのポリシーの削除」
 
 **関連トピック**
 

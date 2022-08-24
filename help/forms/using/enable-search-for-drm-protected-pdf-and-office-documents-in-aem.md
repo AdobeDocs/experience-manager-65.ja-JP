@@ -12,7 +12,7 @@ noindex: true
 feature: Document Security
 exl-id: 91cbd1f1-d53d-455b-8d2c-6918b521db81
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 100%
 
@@ -32,7 +32,7 @@ Adobe Experience Manager には、AEM に保存された様々なアセットを
 
 ## AEM Forms Workflow（JEE 上の AEM Forms）内での安全な接続の確立 {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
 
-安全な接続は、JEE 上の AEM Forms と、同じサーバー上で実行している OSGi サービスとの間の情報の流れを  シームレスにします。次のいずれかの方法を使用して安全な接続を確立します。
+安全な接続は、JEE 上の AEM Forms と、同じサーバー上で実行している OSGi サービスとの間の情報の流れをシームレスにします。次のいずれかの方法を使用して安全な接続を確立します。
 
 * JEE 上の AEM Forms の管理者資格情報を使用した AEM Forms Client SDK Bundle の設定
 * 相互認証を使用した AEM Forms Client SDK Bundle の設定

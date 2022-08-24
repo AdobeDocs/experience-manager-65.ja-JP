@@ -13,7 +13,7 @@ docset: aem65
 feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2148'
 ht-degree: 100%
 
@@ -124,7 +124,7 @@ AEM 6.3 以降では、アップグレード前のメンテナンス最適化タ
   </tr>
   <tr>
    <td><code>WorkflowPurgeTask</code></td>
-   <td>crx2 ／ crx3</td>
+   <td>crx2/crx3</td>
    <td>実行前に、Adobe Granite のワークフローのパージ設定 OSGi を設定する必要があります。</td>
   </tr>
   <tr>

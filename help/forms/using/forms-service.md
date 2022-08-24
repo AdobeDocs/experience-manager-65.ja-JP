@@ -10,7 +10,7 @@ topic-tags: document_services
 discoiquuid: a9695d10-43ec-40eb-942f-7720abaa0973
 exl-id: bd1216e4-2248-484b-a3c1-c209da4ff94f
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 100%
 

@@ -12,7 +12,7 @@ discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1534'
 ht-degree: 100%
 
@@ -95,7 +95,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 >
 >Adobe Analytics API のセキュリティが変更され、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を使用する必要があります。
+>[Adobe Analytics が提供する ActivityMap プラグイン](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)を使用する必要があります。
 
 ## Adobe Analytics フレームワークの作成 {#creating-a-adobe-analytics-framework}
 

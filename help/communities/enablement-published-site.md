@@ -1,8 +1,8 @@
 ---
 title: 公開したサイトを使ってみる
-seo-title: 公開したサイトを使ってみる
+seo-title: Experience the Published Site
 description: イネーブルメントのために、公開したサイトを参照する
-seo-description: イネーブルメントのために、公開したサイトを参照する
+seo-description: Browse to a published site for enablement
 uuid: 1bfefa8a-fd9c-4ca8-b2ff-add79776c8ae
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,7 +12,7 @@ discoiquuid: 26715b94-e2ea-4da7-a0e2-3e5a367ac1cd
 exl-id: 801416ed-d321-45a2-8032-8935094a4d44
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1228'
 ht-degree: 45%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 45%
 
 まず、サイト作成時に表示された URL を参照します。ただし、このとき参照するのはパブリッシュサーバー上の URL です。次に例を示します。
 
-* 作成者URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
-* パブリッシュURL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
+* 作成者 URL = [http://localhost:4502/content/sites/enable/en.html](http://localhost:4502/content/sites/enable/en.html)
+* 公開 URL = [http://localhost:4503/content/sites/enable/en.html](http://localhost:4503/content/sites/enable/en.html)
 
 [デフォルトホームページを設定](enablement-create-site.md#changethedefaulthomepage)した場合は、[http://localhost:4503/](http://localhost:4503/) を参照するだけでサイトが開きます。
 
@@ -41,34 +41,34 @@ ht-degree: 45%
 
 ## 匿名のサイト訪問者 {#anonymous-site-visitor}
 
-匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。facebookやTwitterに自己登録やログインのオプションはないことに注意してください。
+匿名のサイト訪問者には、この非公開のイネーブルメントコミュニティサイトのログインページがすぐに表示されます。facebookまたはTwitterに自己登録したり、ログインしたりするオプションはありません。
 
-このホームページには、次の4つのメニュー項目が表示されます。`Assignments, Ski Catalog, What's New`と`Discussions`の両方に割り当てられますが、サインインしない限り、何も実行できません。
+このホームページには、次の 4 つのメニュー項目が表示されます。 `Assignments, Ski Catalog, What's New` および `Discussions`にログインしない限り、到達できないものはありません。
 
 >[!NOTE]
 >
 >サイト訪問者に自己登録を許可することなく、イネーブルメントサイトへの匿名アクセスを許可できます。
 >
->イネーブルメントリソースが`show in catalog`および`allow anonymous access`に設定されている場合、匿名のサイト訪問者がカタログ内のリソースを表示できます。
+>イネーブルメントリソースが `show in catalog` および `allow anonymous access`を使用すると、匿名のサイト訪問者がカタログ内のリソースを表示できるようになります。
 
-### JCR {#prevent-anonymous-access-on-jcr}での匿名アクセスを防ぐ
+### JCR での匿名アクセスの防止 {#prevent-anonymous-access-on-jcr}
 
-既知の制限により、jcrコンテンツとjsonを通じてコミュニティサイトのコンテンツを匿名訪問者に公開しますが、サイトのコンテンツに対して&#x200B;**[!UICONTROL 匿名アクセスを許可]**&#x200B;は無効になっています。 ただし、この動作は、Slingの制限を回避策として使用して制御できます。
+ただし、既知の制限により、コミュニティサイトコンテンツは jcr コンテンツと json を通じて匿名の訪問者に公開されます。 **[!UICONTROL 匿名アクセスを許可]** はサイトのコンテンツに対して無効です。 ただし、この動作は、Sling の制限を回避策として使用して制御できます。
 
-コミュニティサイトのコンテンツを、匿名ユーザーがjcrコンテンツやjsonを介してアクセスするのを防ぐには、次の手順に従います。
+jcr コンテンツと json を介した匿名ユーザーによるアクセスからコミュニティサイトのコンテンツを保護するには、次の手順に従います。
 
-1. AEMオーサーインスタンスで、https://&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.htmlに移動します。
+1. AEMオーサーインスタンスで、 https://に移動します。&lt;host>:&lt;port>/editor.html/content/site/&lt;sitename>.html
 
    >[!NOTE]
    >
    >ローカライズされたサイトに移動しないでください。
 
-1. **[!UICONTROL ページのプロパティ]**&#x200B;に移動します。
+1. に移動します。 **[!UICONTROL ページプロパティ]**.
 
    ![page-properties](assets/page-properties.png)
 
 1. 「**[!UICONTROL 詳細]**」タブに移動します。
-1. **[!UICONTROL 認証要件]**&#x200B;を有効にします。
+1. 有効にする **[!UICONTROL 認証要件]**.
 
    ![site-authentication](assets/site-authentication.png)
 
@@ -77,9 +77,9 @@ ht-degree: 45%
 
 ## 登録済みメンバー {#enrolled-member}
 
-このエクスペリエンスは、ユーザー`Riley Taylor`と`Sidney Croft`が[作成](enablement-setup.md#publishcreateenablementmembers)で、[が&#x200B;*Ski Lessons*&#x200B;の学習パスに&#x200B;*Community Ski Class*&#x200B;グループのメンバーシップを通じて割り当てられている](resource.md#settings)に依存します。
+このエクスペリエンスはユーザーに依存しています `Riley Taylor` および `Sidney Croft` 中 [作成済み](enablement-setup.md#publishcreateenablementmembers) および [割り当て済み](resource.md#settings) から *Ski Lessons* のメンバーシップを通じて学ぶ道 *コミュニティスキークラス* グループ化します。
 
-でログイン
+ログイン方法
 
 * `Username: riley`
 * `Password: password`
@@ -88,7 +88,7 @@ ht-degree: 45%
 
 次にメンバーがサインインしたときは、1 番目のメニュー項目のページがホームページとして表示されます。
 
-![在籍者](assets/enrolled-member.png)
+![在籍メンバー](assets/enrolled-member.png)
 
 ### 割り当て {#assignments}
 
@@ -104,23 +104,23 @@ ht-degree: 45%
 
 カード左上隅のアイコンは、割り当ての種類を示しています。道路のイメージは、含まれるイネーブルメントリソースの数を含む学習パス用です。
 
-![assignment1](assets/assignment1.png)
+![割り当て 1](assets/assignment1.png)
 
 「Ski Lessons」を選択すると、その学習パスで参照される 2 つのイネーブルメントリソースが表示されます。**
 
-![assignment2](assets/assignment2.png)
+![割り当て 2](assets/assignment2.png)
 
 「Ski Lesson 1」を選択すると、イネーブルメントリソースの詳細ページが表示されます。**
 
-詳細ページから、メンバーは学習し、[rate](rating.md)レッスンを学習し、[comments](comments.md)を追加できます。 メンバーのアクティビティは、サイトの新機能セクションに反映されます。
+メンバーは詳細ページから学習できます。 [評価](rating.md) レッスンと追加 [コメント](comments.md). メンバーのアクティビティは、サイトの新着情報セクションに反映されます。
 
 イネーブルメントリソースとのインタラクションは、オーサー環境からアクセスできるレポートセクションに表示されます。
 
-![assignment3](assets/assignment3.png)
+![割り当て 3](assets/assignment3.png)
 
 ### Ski Catalog {#ski-catalog}
 
-Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられたイネーブルメントリソースのカタログです。2つの&#x200B;*Ski Lesson*&#x200B;リソースには`Skiing`タグが付けられ、`All`または`Tutorial: Sports / Skiing`以外のタグが選択されている場合は、何も表示されません。
+Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられたイネーブルメントリソースのカタログです。2 人は *Ski Lesson* リソースは `Skiing` タグを使用し、 `All` または `Tutorial: Sports / Skiing` が選択されている場合、何も表示されません。
 
 メンバーにイネーブルメントリソースが（直接または学習パスを通じて）割り当てられていないときも、カタログ内にあるイネーブルメントリソースを使用したり、コメントや評価を付けてフィードバックを与えることができます。
 
@@ -128,7 +128,7 @@ Ski Catalog のページは、`Tutorial` 名前空間のタグが付けられた
 
 ### Discussions {#discussions}
 
-`Enablement Tutorial`の作成元のコミュニティサイトテンプレートには、イネーブルメントリソース（[有効](enablement-create-site.md#step33asettings)）の評価とコメント付けに加えて、[フォーラム機能](functions.md#forum-function)（タイトルは`Discussions)`）が含まれます。
+イネーブルメントリソース ([有効化時](enablement-create-site.md#step33asettings))、コミュニティサイトテンプレートの基になる `Enablement Tutorial` が作成されました： [フォーラム機能](functions.md#forum-function) ( タイトルは `Discussions)`.
 
 「`Discussions`」のリンクを選択し、トピックを投稿します。
 
@@ -140,30 +140,30 @@ Sidney Croft（sidney／password）としてログインおよびログインし
 
 ### 新機能 {#what-s-new}
 
-`What's New`メニュー項目は、このコミュニティサイトの構造で[アクティビティストリーム機能](functions.md#activity-stream-function)に与えられるタイトルです。
+この `What's New` メニュー項目は、 [アクティビティストリーム機能](functions.md#activity-stream-function) このコミュニティサイトの構造内で使用できます。
 
-Sidneyとしてサインインしたままで、`What's New`リンクを選択してアクティビティを表示します。
+Sidney としてサインインしたまま、 `What's New` リンクをクリックしてアクティビティを表示します。
 
 ![新メニュー](assets/whats-new-menu.png)
 
 ## 信頼されているコミュニティメンバー {#trusted-community-member}
 
-このエクスペリエンスでは、` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)`に[モデレーター](enablement-create-site.md#moderation)と[リソースの連絡先](resource.md#settings)の役割が割り当てられていると想定します。
+この操作は、次を前提としています。 ` [Quinn Harper](enablement-setup.md#publishcreateenablementmembers)` は次の役割を割り当てられました： [モデレーター](enablement-create-site.md#moderation) および [リソース連絡先](resource.md#settings).
 
-でログイン
+ログイン方法
 
 * `Username: quinn`
 * `Password: password`
 
-サインインすると、新しいメニュー項目`Administration`が表示されます。これは、メンバーにモデレーターの役割が与えられたためです。
+サインインすると、新しいメニュー項目が表示されます。 `Administration`（メンバーにモデレーターの役割が与えられたために表示されます）
 
 ![trusted-member-homepage](assets/trusted-member-homepage.png)
 
-ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinnはモデレーターとイネーブルメントリソースの連絡先で、イネーブルメントリソースや学習パスに登録されていなかったので、表示するものはありません。
+ホームページは、1 番目のメニュー項目として定義されている割り当てページです。Quinn はモデレーターおよびイネーブルメントリソースの連絡先で、イネーブルメントリソースまたは学習パスに登録されていなかったので、表示するものはありません。
 
 ### 管理 {#administration}
 
-あるのは、`Riley Taylor`と`Sidney Croft`の2人の学習者による活動です。 `Administration`リンクを選択してモデレートコンソールにアクセスすると、Quinnは[一括モデレートコンソール](moderation.md)を使用して投稿をモデレートできます。
+そこにあるのは、2 人の学習者が行動を起こしていることだ。 `Riley Taylor` および `Sidney Croft`. 次を選択すると、 `Administration` モデレートコンソールにアクセスするためのリンクをクインすると、 [一括モデレートコンソール](moderation.md) モデレートする
 
 サイドパネルのアイコンを選択すると、コミュニティコンテンツの検索に使用するフィルターの展開／折りたたみが切り替わります。
 
@@ -175,18 +175,18 @@ Sidneyとしてサインインしたままで、`What's New`リンクを選択�
 
 学習者とイネーブルメントリソースに関するレポートにアクセスには、2 つの方法があります。
 
-オーサー環境で、**コミュニティ/[リソースコンソール](resources.md)**&#x200B;に移動します。このコンソールでイネーブルメントリソースを管理し、コミュニティサイトを選択すると、次のレポートを生成できます。
+作成者が、 **コミュニティ [リソースコンソール](resources.md)**（イネーブルメントリソースを管理する場所）。コミュニティサイトを選択すると、
 
 * すべてのイネーブルメントリソースと学習パス
-* 特定のイネーブルメントリソースまたは学習パス
+* 1 つの特定のイネーブルメントリソースまたは学習パス
 
-**コミュニティ、[レポートコンソール](reports.md)**&#x200B;に移動し、次の方法でレポートを生成します。
+次に移動： **コミュニティ [レポートコンソール](reports.md)**、およびに従ってレポートを生成します。
 
-* イネーブルメントリソースと学習パスの割り当て
-* 特定の期間のコミュニティサイトへの投稿
-* 特定の期間におけるコミュニティサイトの表示（サイト訪問）
+* イネーブルメントリソースと学習パスへの割り当て
+* 特定の期間におけるコミュニティサイトへの投稿
+* 特定の期間におけるコミュニティサイトの表示回数（サイト訪問回数）
 
-* 投稿と表示は、すべてのコンテンツまたは特定のコンテンツに対して行うことができます。
+* 投稿と閲覧は、すべてのコンテンツに対して、または特定のコンテンツに対して、次のように設定できます。
 
    * フォーラム
    * フォーラムトピック
@@ -202,12 +202,12 @@ Sidneyとしてサインインしたままで、`What's New`リンクを選択�
 パブリッシュ環境でリソースに対しておこなわれるアクティビティやインタラクションが少ない場合は、オーサー環境でレポートを表示すると有益です。
 
 * オーサー環境で、管理者権限でログインします。
-* メインメニューから&#x200B;**[!UICONTROL コミュニティ]** / **[!UICONTROL リソース]**&#x200B;に移動します。
-* `Enablement Tutorial`サイトを選択します。
-* すべてのリソースの概要を表示するには、`Report`アイコンを選択します。
-* リソースを選択し、そのリソースに関するレポート用の`Report`アイコンを選択します。
+* メインメニューからに移動します。 **[!UICONTROL コミュニティ]** > **[!UICONTROL リソース]**.
+* を選択します。 `Enablement Tutorial` サイト。
+* を選択します。 `Report` アイコンをクリックします。
+* リソースを選択し、 `Report` アイコンを使用して、そのリソースに関するレポートを表示できます。
 
-Adobe Analytics のデータを表示するには時期尚早のようです。データが表示されるには 1 時間から 12 時間かかります。ただし、基本的なSCORMレポートは既に使用可能です。
+Adobe Analytics のデータを表示するには時期尚早のようです。データが表示されるには 1 時間から 12 時間かかります。ただし、基本的な SCORM レポートは既に使用可能です。
 
 #### Ski Lessons のリソースレポート {#ski-lessons-resource-report}
 
@@ -215,11 +215,11 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 
 #### Ski Lessons のユーザーレポート {#ski-lessons-user-report}
 
-* **[!UICONTROL コミュニティ/リソース]**&#x200B;を選択します。
+* 選択 **[!UICONTROL コミュニティ/リソース]**
 
-* カード`Enablement Tutorial`を開く
-* カード`Ski Lessons`を開く
-*  `Report > User Report`
+* カードを開く `Enablement Tutorial`
+* カードを開く `Ski Lessons`
+* 選択 `Report > User Report`
 
 ![ski-lessons-user-report](assets/ski-lessons-user-report.png)
 
@@ -234,28 +234,28 @@ Adobe Analytics のデータを表示するには時期尚早のようです。�
 割り当てに関するレポートの場合：
 
 * オーサー環境で、管理者権限でログインします。
-* **[!UICONTROL コミュニティ]** / **[!UICONTROL レポート]** / **[!UICONTROL 割り当てレポート]**&#x200B;に移動します。
-* プルダウンメニューから「**[!UICONTROL サイト]**」を選択します（「`Enablement Tutorial`」を選択します）。
+* に移動します。 **[!UICONTROL コミュニティ]** > **[!UICONTROL レポート]** > **[!UICONTROL 割り当てレポート]**.
+* を選択します。 **[!UICONTROL サイト]** プルダウンメニューから ( `Enablement Tutorial`) をクリックします。
 
-* **[!UICONTROL グループ]**&#x200B;を選択します（`Community Ski Class`を選択）。
+* 選択 **[!UICONTROL グループ]** ( `Community Ski Class`)
 
-* **[!UICONTROL 割り当て]**&#x200B;を選択します（`Ski Lessons`を選択）。
+* を選択します。 **[!UICONTROL 割り当て]** ( `Ski Lessons`)
 
-* 「**[!UICONTROL 生成]**」を選択します。
+* 選択 **[!UICONTROL 生成]**
 
 ![report-assignment](assets/report-assignment.png)
 
 ビューに関するレポートの場合：
 
 * オーサー環境で、管理者権限でログインします。
-* **[!UICONTROL コミュニティ]** / **[!UICONTROL レポート]** / **[!UICONTROL レポートを表示]**&#x200B;に移動します。
-* プルダウンメニューから「**サイト**」を選択します（「`Enablement Tutorial`」を選択します）。
+* に移動します。 **[!UICONTROL コミュニティ]** > **[!UICONTROL レポート]** > **[!UICONTROL 表示レポート]**.
+* を選択します。 **サイト** プルダウンメニューから ( `Enablement Tutorial`) をクリックします。
 
-* 「**[!UICONTROL コンテンツタイプ]**」を選択します（「`all`」を選択します）。
+* 選択 **[!UICONTROL コンテンツタイプ]** ( `all`) をクリックします。
 
-* **[!UICONTROL 日付範囲]**&#x200B;を選択します（`Last 7 days`を選択）。
+* を選択します。 **[!UICONTROL 日付範囲]** ( `Last 7 days`) をクリックします。
 
-* 「**[!UICONTROL 生成]**」を選択します。
+* 選択 **[!UICONTROL 生成]**.
 
 ![report-views](assets/report-views.png)
 

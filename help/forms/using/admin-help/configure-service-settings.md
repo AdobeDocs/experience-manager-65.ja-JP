@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
 workflow-type: tm+mt
 source-wordcount: '10683'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 99%
 
    >[!NOTE]
    >
-   >サービスの管理ページに表示されるすべてのサービスに「設定」タブがあるわけではありません。作成したプロセスについて、Workbench でプロセスに設定パラメーターを追加した場合にのみ「設定」タブが表示されます( [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp) .)
+   >サービスの管理ページに表示されるすべてのサービスに「設定」タブがあるわけではありません。作成したプロセスについて、Workbench でプロセスに設定パラメーターを追加した場合にのみ「設定」タブが表示されます（[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)の「設定パラメーター」を参照）。
 
 
 1. 「セキュリティ」タブをクリックして、サービスのセキュリティ設定を指定します。[サービスのセキュリティ設定の変更](configure-service-settings.md#modifying-security-settings-for-a-service)を参照してください。
@@ -123,7 +123,7 @@ Convert PDF サービスでは、以下の設定を使用できます。
 
 **トランザクションタイムアウト（秒単位）：**&#x200B;操作をラップしているトランザクションがロールバックされるまで、基になるトランザクションプロバイダーが待機する秒数です。既存のトランザクションコンテキストが適用されている場合、この値は無視されます。デフォルト値は 180 です。
 
-**スムージングのしきい値の解像度 (dpi):** テキスト、ラインアートおよび画像に対してスムージング（アンチエイリアシング）を適用する画像解像度（これらの要素に対して「スムージングを適用」オプションを選択した場合）。
+**スムージングのしきい値解像度（dpi）**&#x200B;テキスト、ラインアートおよび画像に対して「スムージングを適用」オプションを選択している場合に、これらの要素にスムージング（アンチエイリアス）を適用する画像解像度です。
 
 **スムージングをテキストに適用：**&#x200B;テキストのアンチエイリアシングを制御します。 テキストのスムージングを無効にしてテキストをよりシャープにし、画面の拡大時に読みやすくするには、このチェックボックスをオフにします。
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 100%
 
@@ -73,7 +73,7 @@ AEM には、次のような包括的な機能を提供する、](/help/sites-au
 
 >[!NOTE]
 >
->[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
+>[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
 >
 >[AEM 最新化ツール](modernization-tools.md)が、コアコンポーネントへの移行に役立ちます。
 
@@ -106,7 +106,7 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 * [コンテンツフラグメント用コンポーネント](/help/sites-developing/components-content-fragments.md)
 * [JSON 形式のページ情報の取得](/help/sites-developing/pageinfo.md)
 * [コンポーネントの国際化](/help/sites-developing/i18n.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
 * [非表示条件の使用](/help/sites-developing/hide-conditions.md)
 * クラシック UI
 

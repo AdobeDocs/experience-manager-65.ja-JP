@@ -38,7 +38,7 @@ OLD content of the above NOTE, changed wrt CQDOC-18661.
 
 **アセットをダウンロードするには、次の手順に従います。**
 
-1. 左上隅のロゴをクリックします。 左側のパネルで「**[!UICONTROL ナビゲーション]**」をクリックします。
+1. 左上隅のロゴをクリックします。左側のパネルで「**[!UICONTROL ナビゲーション]**」をクリックします。
 1. [!UICONTROL ナビゲーション]ページで、**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**&#x200B;をクリックします。
 1. ダウンロードするアセットを含むフォルダーに移動します。
 1. フォルダーを選択するか、フォルダー内の 1 つ以上のアセットを選択します。
@@ -73,7 +73,7 @@ OLD content of the above NOTE, changed wrt CQDOC-18661.
    asset.download.prezip.maxcontentsize=I"102400"
    ```
 
-デフォルトでは、`GET` のファイルダウンロード要求に対して、[!DNL Experience Manager] では、ZIP アーカイブのダウンロードサイズに対して 50 MB の制限が適用されます。 `POST` のリクエストまたはユーザーインターフェイスから開始されるダウンロードは、この制限の影響を受けません。
+デフォルトでは、`GET` のファイルダウンロード要求に対して、[!DNL Experience Manager] では、ZIP アーカイブのダウンロードサイズに対して 50 MB の制限が適用されます。`POST` のリクエストまたはユーザーインターフェイスから開始されるダウンロードは、この制限の影響を受けません。
 
 ## アセットダウンロードサーブレットの無効化 {#disable-asset-download-servlet}
 

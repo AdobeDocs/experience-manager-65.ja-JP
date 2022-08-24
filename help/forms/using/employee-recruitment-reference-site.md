@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5f04b13e-ea40-4c86-9168-e020c52435a2
 exl-id: bdfc0a20-1e98-47f9-a1d1-5af5b3ef15db
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 100%
 
@@ -57,7 +57,7 @@ We.Finance 社のリファレンスサイトポータルを使用すると、ユ
 
 ### 登場人物 {#personas}
 
-このシナリオでは、以下の人物が登場します。
+このシナリオでは、次の人物が登場します。
 
 * Sarah Rose （組織の求人に応募している候補者）
 * John Jacobs （人材採用担当者）
@@ -108,7 +108,7 @@ John Jacobs は、Sarah Rose のプロファイルを採用担当マネージャ
 
 ### 実際の動作確認 {#see-it-yourself-1}
 
-`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` に移動し、John Jacobs のユーザー名とパスワード（jjacobs／password）を使用してログインします。候補者のプロファイルをレビューするタスクを開き、申込者を最終候補者名簿に追加します。
+`https://[publishHost]:[publishPort]/content/we-finance/global/en/login.html?resource=/aem/inbox.html` に移動し、John Jacobs のユーザー名とパスワード（jjacobs／password）を使用してログインします。候補者のプロファイルをレビューするタスクと最終候補者名簿を開きます。
 
 ## Gloria が申込書をレビューし、申込者の面接を承認 {#gloria-reviews-the-application-and-approves-the-applicant-for-an-interview}
 

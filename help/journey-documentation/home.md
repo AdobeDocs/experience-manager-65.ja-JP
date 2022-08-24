@@ -3,7 +3,7 @@ title: AEM ドキュメントのジャーニー
 description: ドキュメントジャーニーは、複雑で異なる機能を組み合わせ、ベストプラクティス方式でビジネス目標を解決することで、AEM ドキュメント内のナレーション構造を提供します。AEM の初心者を念頭に置いて設計されたジャーニーでは、A から Z の目標を達成するための概念と機能を紹介しています。
 exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
 source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1234'
 ht-degree: 100%
 

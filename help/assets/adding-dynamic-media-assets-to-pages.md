@@ -12,7 +12,7 @@ role: User, Admin
 exl-id: 62d4a38c-2873-4560-8d58-ad172288764d
 feature: Components,Publishing
 source-git-commit: d947bd98b3a0f6fd79cde5b5b2fca23487077da3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3258'
 ht-degree: 100%
 

@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: e047a95e-0acb-438a-8d27-f005c0adc508
 exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
 source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2625'
 ht-degree: 100%
 
@@ -63,7 +63,7 @@ AEM forms でユーザーからの電子メールメッセージを受信して�
 
 1. 管理コンソールで、ホーム／サービス／forms ワークフロー／サーバー設定／タスク通知をクリックします。
 1. タスクの割り当てテンプレートを開きます。
-1. タスク通知のテンプレートを次のとおりに設定します。`https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
+1. タスク通知のテンプレートを次のとおりに設定します。 `https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@`
 
    ```java
    https://@@notification-host@@:8080/lc/libs/ws/index.html?taskId=@@taskid@@

@@ -1,8 +1,8 @@
 ---
 title: アプリのテンプレートとコンポーネント
-seo-title: アプリのテンプレートとコンポーネント
+seo-title: App Templates and Components
 description: このページでは、アプリのテンプレートとコンポーネントについて説明します。テンプレートの構造について詳しく説明します。
-seo-description: このページでは、アプリのテンプレートとコンポーネントについて説明します。テンプレートの構造について詳しく説明します。
+seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
 uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 90%
+source-wordcount: '405'
+ht-degree: 89%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 テンプレートはページを作成するための雛形として使用され、選択した範囲内で使用できるコンポーネントを定義します。テンプレートは、そこから作成されるページと同じ構造を持つノードの階層ですが、実際のコンテンツは含みません。
 
@@ -32,7 +32,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->CRXDE Liteを使用したAEMアプリケーションの開発方法については、[CRXDE Liteによる開発](/help/sites-developing/developing-with-crxde-lite.md)を参照してください。
+>CRXDE Liteを使用したAEMアプリケーションの開発方法については、 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 テンプレートはページの基礎です。
 
@@ -40,7 +40,7 @@ ht-degree: 90%
 
 このコピー処理により、ページには、初期コンテンツ（通常はトップレベルコンテンツのみ）と sling:resourceType プロパティ、ページのレンダリングに使用するページコンポーネントのパス（子ノード jcr:content に含まれるすべてのもの）ができます。
 
-## テンプレートの構造  {#structure-of-a-template}
+## テンプレートの構造 {#structure-of-a-template}
 
 以下の 2 つの側面について考慮する必要があります。
 
@@ -61,20 +61,20 @@ ht-degree: 90%
 >AEM におけるテンプレートとコンポーネントの基礎については、以下のリソースを参照してください。
 >
 >* [テンプレート](/help/sites-developing/templates.md)
-* [コンポーネント](/help/sites-developing/components.md)
-
+>* [コンポーネント](/help/sites-developing/components.md)
+>
 
 
 テンプレートとコンポーネントについての基本的な知識が得られたら、次のリソースを参照してください。
 
 * [テンプレートとコンポーネントの作成および追加](/help/mobile/mobile-ondemand-app-templates.md)
-* [コンテンツのプロパティを使用したコンテンツの書き出し](/help/mobile/on-demand-content-properties-exporting.md)
+* [コンテンツのプロパティを使用したコンテンツのエクスポート](/help/mobile/on-demand-content-properties-exporting.md)
 * [ベストプラクティス](/help/mobile/best-practices-aem-mobile.md)
 * [AEM Mobile コンテンツサービスの開発](/help/mobile/developing-content-services.md)
 
 ### その他のリソース {#additional-resources}
 
-モバイルアプリに関する追加トピックについては、以下のリンクを参照してください。
+モバイルアプリに関するその他のトピックについては、以下のリンクを参照してください。
 
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
 * [モバイルアプリのテスト](/help/mobile/develop-mobile-apps-testing.md)

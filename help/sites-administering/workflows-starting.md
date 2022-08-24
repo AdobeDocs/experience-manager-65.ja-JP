@@ -173,7 +173,7 @@ ht-degree: 100%
       このランチャープロパティは、次のような項目のコンマ区切りリストです。
 
       * `property-name` は、指定したプロパティ名に対して実行されたすべての `jcr` イベントを無視します。
-      * `event-user-data:<*someValue*>` は、[ `ObservationManager` API](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String) で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。 
+      * `event-user-data:<*someValue*>` は、[ `ObservationManager` API で設定した `*<someValue*`> `user-data` を含むすべてのイベントを無視します。](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String
 
       次に例を示します。
 

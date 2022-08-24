@@ -148,7 +148,7 @@ Google の PageSpeed ツールは、ページパフォーマンスに関する�
 * エラーログを見てエラーや警告を調べます。詳しくは、[ログ](/help/sites-deploying/configure-logging.md)を参照してください。
 * メモリや CPU の使用状況のなどシステムのハードウェアリソースを監視します。これらのリソースが、パフォーマンスボトルネックの原因になっていることがよくあります。
 * キャッシュを最大限に確保するために、ページのアーキテクチャと、URL パラメーターの使用を最小限に抑えるための仕組みを最適化します。
-* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と [Performance tuning tips ](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) のドキュメントに従ってください。
+* [パフォーマンスの最適化](/help/sites-deploying/configuring-performance.md)と [Performance tuning tips](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html) のドキュメントに従ってください。
 
 * オーサーインスタンスでの特定のページやコンポーネントの編集に問題がある場合は、タッチ UI の開発者モードを使用して、問題のあるページを調べてください。そうすることで、ページ上の各コンテンツ領域の内訳とそれぞれの読み込み時間がわかります。
 * サイト上のすべての JS と CSS を最小限にします。具体的な方法については、こちらの[ブログ投稿](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)を参照してください。

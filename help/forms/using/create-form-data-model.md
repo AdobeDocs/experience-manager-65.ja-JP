@@ -10,9 +10,9 @@ discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1421'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -59,14 +59,14 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 
    1. AEM [!DNL Forms] のオーサーインスタンスに管理者としてログインし、AEM Web コンソールのバンドルに移動します。デフォルトの URL は、[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles) です。
 
-   1. 「**[!UICONTROL インストール／アップデート]**」をタップします。「[!UICONTROL バンドルのアップロード／インストール]」ダイアログが表示されます。
+   1. **[!UICONTROL Install/Update]** をタップします。「[!UICONTROL バンドルのアップロード／インストール]」ダイアログが表示されます。
 
    1. 「**[!UICONTROL ファイルを選択]**」をタップし、[!DNL MySQL] JDBC ドライバーの OSGi バンドルを探して選択します。「**[!UICONTROL バンドルを開始]**」と「**[!UICONTROL パッケージを更新]**」を選択して「**[!UICONTROL インストールまたはアップデート]**」をタップします。[!DNL MySQL] の [!DNL Oracle Corporation's] JDBC ドライバーがアクティブになっていることを確認します。ドライバーがインストールされます。
 
 1. [!DNL MySQL] データベースをデータソースとして設定します。
 
    1. AEM web コンソール（[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)）に移動します。
-   1. 「**Apache Sling Connection Pooled DataSource**」という設定を探します。その設定をタップして編集モードで開きます。
+   1. 「**Apache Sling Connection Pooled DataSource**」という設定を探し、その設定をタップして編集モードで開きます。
    1. 設定ダイアログで、以下の詳細情報を指定します。
 
       * **Datasource name**：任意のデータソース名を指定します。例えば、「**WeRetailMySQL**」などを指定します。
@@ -75,12 +75,12 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
       * **JDBC connection URI**：データベースの接続 URL を指定します。ポート 3306 およびスキーマ weretail で実行される [!DNL MySQL] データベースの場合、URL は `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8` です。
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
-      * **Test on Borrow**：「**[!UICONTROL Test on Borrow]**」オプションを有効にします。
-      * **Test on Return**：「**[!UICONTROL Test on Return]**」オプションを有効にします。
-      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、「**select * from customerdetails**」などを指定します。
+      * **Test on Borrow：** は **[!UICONTROL Test on Borrow]** オプションを有効にします。
+      * **Test on Return：** は **[!UICONTROL Test on Return]** オプションを有効にします。
+      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例： **選択 &#42; 顧客の詳細から**.
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
 
-         上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして「**[!UICONTROL 保存]**」をタップします。
+         上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして **[!UICONTROL Save]** をタップします。
 
          以下のような設定が作成されます。
 

@@ -1,8 +1,8 @@
 ---
 title: トラブルシューティング
-seo-title: トラブルシューティング
+seo-title: Troubleshooting
 description: 既知の問題を含むコミュニティのトラブルシューティング
-seo-description: 既知の問題を含むコミュニティのトラブルシューティング
+seo-description: Troubleshooting Community including Known Issues
 uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,7 +12,7 @@ discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '354'
 ht-degree: 82%
 
 ---
@@ -33,8 +33,7 @@ ht-degree: 82%
 
 CQ 5.4 でフォーラムが作成され、トピックが投稿された後、サイトが AEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページに次のエラーが表示されることがあります。
 
-不正なパターン文字&#39;a&#39;
-このサーバーの`/content/demoforums/forum-test.html`に要求を提供できません。ログに次の内容が含まれています。
+無効なパターン文字「a」は次に対する要求を処理できません： `/content/demoforums/forum-test.html` このサーバーとログには次の情報が含まれます。
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -45,24 +44,24 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 この問題は、com.day.cq.commons.date.RelativeTimeFormat の形式文字列が 5.4 と 5.5 の間に変更され、「ago」を表す「a」が許可されなくなったというものです。
 
-したがって、RelativeTimeFormat() APIを使用するコードは、次の変更が必要になります。
+したがって、RelativeTimeFormat() API を使用するコードは、以下を変更する必要があります。
 
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
-* 次の操作を行います。`final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
+* To: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
 障害は、オーサー環境とパブリッシュ環境で異なります。オーサー環境では、エラーは表示されず、フォーラムトピックが表示されないだけです。パブリッシュ環境では、ページにエラーが表示されます。
 
 詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
-## 一般的な問題  {#common-concerns}
+## 一般的な問題 {#common-concerns}
 
 ### ログ内の警告：Handlebars の廃止 {#warning-in-logs-handlebars-deprecated}
 
 起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
 
-* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、  `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
+* `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-[SCF](scf.md#handlebarsjavascripttemplatinglanguage)には独自のi18nヘルパーユーティリティが付属しているので、この警告は無視しても問題ありません。 `jknack.handlebars.Handlebars`起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
+この警告は、 `jknack.handlebars.Handlebars`、使用元 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)には、独自の i18n ヘルパーユーティリティが付属しています。 起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
 
 ### ログ内の警告：OakResourceListener の processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

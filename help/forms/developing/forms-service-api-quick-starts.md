@@ -608,7 +608,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 ## クイックスタート（SOAP モード）：Java API を使用した権限が有効なフォームのレンダリング {#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api}
 
-次のコードの例では、権限が付与されたフォームをクライアントの web ブラウザーにレンダリングしています。このコードの例で設定された使用権限により、ユーザーはフォームにコメントを追加してフォームデータを保存できるようになります。 （[権限が付与されたフォームのレンダリング](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms)を参照）。
+次のコードの例では、権限が付与されたフォームをクライアントの web ブラウザーにレンダリングしています。このコードの例で設定された使用権限により、ユーザーはフォームにコメントを追加してフォームデータを保存できるようになります。（[権限が付与されたフォームのレンダリング](/help/forms/developing/rendering-forms.md#rendering-rights-enabled-forms)を参照）。
 
 ```java
  /*
@@ -1536,7 +1536,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 ## クイックスタート（SOAP モード）：Java API を使用して、XML として送信された HTML フォームの処理 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
 
-次のコードの例では、XML データとして送信された HTML フォームが処理されます。`processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/x-www-form-urlencoded` です。`mortgageAmount`、`lastName` および `firstName` という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText` という名前のユーザー定義メソッドを使用します。`org.w3c.dom.Document` インスタンスと、ノード名を指定する文字列の値を受け入れます。このメソッドは、ノードの値を表す文字列値を返します。（[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照してください）。
+次のコードの例では、XML データとして送信された HTML フォームが処理されます。`processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/x-www-form-urlencoded` です。`mortgageAmount`、`lastName` および `firstName` という名前のフィールドに対応する値が表示されます。このクイックスタートでは、`getNodeText` という名前のユーザー定義メソッドを使用します。`org.w3c.dom.Document` インスタンスと、ノード名を指定する文字列の値を受け入れます。このメソッドは、ノードの値を表す文字列値を返します。（[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照してください）。
 
 ```java
  /*

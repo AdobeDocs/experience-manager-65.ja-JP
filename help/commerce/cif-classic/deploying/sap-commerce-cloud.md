@@ -8,7 +8,7 @@ topic-tags: e-commerce
 content-type: reference
 exl-id: ecbd0097-c407-4581-bab2-4729a71df4a3
 source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 100%
 

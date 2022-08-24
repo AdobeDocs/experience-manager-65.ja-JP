@@ -9,7 +9,7 @@ contentOwner: sarchiz
 discoiquuid: 47c2a80f-78ac-4372-86b4-06351a1dd58f
 docset: aem65
 source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 100%
 

@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
 workflow-type: tm+mt
 source-wordcount: '2709'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ Java コンテンツリポジトリでコンテンツをどのようにモデル
 
 REST アプローチは、作業内容に深く根ざしています。つまり、何よりも、ステートフルなインタラクションを回避すること、また、URI がコンテンツおよびサービスの確定的なアドレスであることを心に留めておくことです。
 
-REST(REpresentational State Transfer) とは、World Wide Web が基にするソフトウェアアーキテクチャスタイルを指します。Web を動作させる主要な要素について説明し、Web ベースのソフトウェアの設計方法に関する一連の原則を示します。Web 上で使用する API をデザインする場合は、これらの「ベストプラクティス」に従うと効果的です。
+REST（REpresentational State Transfer）は、World Wide Web の基礎となっているソフトウェアアーキテクチャスタイルを示します。Web を機能させるための重要な要素について説明するものであり、Web ベースのソフトウェアの設計方法について一連の原則を提供します。したがって、Web 経由で使用する API を設計するときは、これらの「ベストプラクティス」を順守することが合理的です。
 
 REST は非常に多くの作業の背景に指針となる考え方を提供するので、RESTful な設計の教義を熟知しておくことが不可欠と考える必要があります。手始めとしてふさわしいのは、[Roy Fielding 氏の論文](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)です。
 

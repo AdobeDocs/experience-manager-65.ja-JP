@@ -1,8 +1,8 @@
 ---
 title: アプリのメタデータの編集
-seo-title: アプリのメタデータの編集
+seo-title: Editing App Metadata
 description: アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。このページでは、アプリのデータの編集について説明します。
-seo-description: アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。このページでは、アプリのデータの編集について説明します。
+seo-description: App metadata is required details for releasing an application to a vendor's store. Follow this page to learn about editing app data.
 uuid: c140be0f-8403-416e-af0f-29072a2ab942
 contentOwner: User
 content-type: reference
@@ -12,18 +12,18 @@ discoiquuid: 07b38da6-2efa-4a43-9afa-7151a241a5ad
 exl-id: 897a04b9-e357-4f1c-8aa0-2c2528f8556d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '394'
-ht-degree: 72%
+source-wordcount: '369'
+ht-degree: 71%
 
 ---
 
-# アプリのメタデータの編集  {#editing-app-metadata}
+# アプリのメタデータの編集 {#editing-app-metadata}
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-**アプリを管理**&#x200B;タイルとアプリを管理ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。これには、共通のメタデータ、iOSメタデータ、スクリーンショットが含まれる場合があります。 共通およびiOSメタデータについて詳しくは、[アプリを管理タイル](/help/mobile/phonegap-app-details-tile.md)を参照してください。
+**アプリを管理**&#x200B;タイルとアプリを管理ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。アプリケーションをベンダーのストアにリリースするには、詳細なアプリのメタデータが必要です。これには、一般的なメタデータ、iOSのメタデータ、スクリーンショットが含まれる場合があります。 詳しくは、 [アプリを管理タイル](/help/mobile/phonegap-app-details-tile.md) 共通メタデータとiOSメタデータについて詳しくは、を参照してください。
 
 ## アプリのデータの編集 {#editing-the-app-data}
 
@@ -33,9 +33,9 @@ ht-degree: 72%
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. 「。..」をクリックして詳細を表示または編集するには をクリックします。****
+1. 詳細を表示または編集するには、「。..」をクリックします。 の右下隅に **アプリを管理** タイル。
 
-1. 次の図に示すように、使用可能な5つのタブのいずれかで詳細を入力または表示します。
+1. 次の図に示すように、使用可能な 5 つのタブのいずれかで詳細を入力または表示します。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
@@ -50,7 +50,7 @@ ht-degree: 72%
 
 ## スクリーンショットの追加および削除 {#add-and-remove-screenshots}
 
-アプリのスクリーンショットをメタデータのロールアップに含めることができます。ベンダーによっては、アプリをアプリストアに提出する際に正確なスクリーンショットが要求される場合があります。これらの画像は、既にAssetsに存在している必要があります。 スクリーンショットのアップロードについては、[アセットピッカー](../assets/search-assets.md#assetpicker)を参照してください。
+アプリのスクリーンショットをメタデータのロールアップに含めることができます。ベンダーによっては、アプリをアプリストアに提出する際に正確なスクリーンショットが要求される場合があります。これらの画像は、既に Assets に存在している必要があります。 スクリーンショットのアップロードについては、[アセットピッカー](../assets/search-assets.md#assetpicker)を参照してください。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -58,12 +58,12 @@ ht-degree: 72%
 
 アセットをスクリーンショットとして追加するには：
 
-1. **アプリを管理**&#x200B;ページの編集モードで、追加（プラスアイコン）をクリックします。
-1. アセットを選択し、「**選択**」をクリックしてアセットを追加します。
+1. 次の **アプリを管理** ページで、「追加」（プラスアイコン）をクリックします。
+1. アセットを選択し、 **選択** をクリックしてアセットを追加します。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. アセットを選択し、「**選択**」をクリックしてアセットを追加します。
+1. アセットを選択し、 **選択** をクリックしてアセットを追加します。
 
 >[!NOTE]
 >
@@ -92,4 +92,4 @@ ht-degree: 72%
 管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [AEM と Adobe PhoneGap Enterprise での開発](/help/mobile/developing-in-phonegap.md)
-* [AEM での Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
+* [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

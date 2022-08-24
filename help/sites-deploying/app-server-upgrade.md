@@ -6,7 +6,7 @@ exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
 source-git-commit: 5e875e0420540ca209e7d677046e8d010ae4e145
 workflow-type: tm+mt
 source-wordcount: '452'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 98%
 
 この手順では、どの例でも JBoss をアプリケーションサーバーとして使用し、有効な AEM のバージョンが既にデプロイされているものとします。ここでは、**AEM バージョン 6.4 から 6.5** へのアップグレードについて説明します。
 
-1. まず、TomCat を起動してください。 ほとんどの状況で、`./catalina.sh` 起動スクリプトを実行することで起動できます。このために、ターミナルから次のコマンドを実行します。
+1. まず、TomCat を起動してください。ほとんどの状況で、`./catalina.sh` 起動スクリプトを実行することで起動できます。このために、ターミナルから次のコマンドを実行します。
 
    ```shell
    $CATALINA_HOME/bin/catalina.sh start

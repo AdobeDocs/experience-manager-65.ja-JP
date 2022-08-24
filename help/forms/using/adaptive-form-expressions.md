@@ -10,10 +10,10 @@ discoiquuid: 2fd2276e-cfe3-47ad-94c1-9c7af56b7a17
 docset: aem65
 feature: Adaptive Forms
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '2746'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -127,7 +127,7 @@ ht-degree: 99%
 
 **戻り値のタイプ**：式は、アコーディオンのタイトルとなる文字列を返します。
 
-**例：** &quot;アカウント番号：&quot; + textbox1.value
+**例**：“Account number : “ + textbox1.value
 
 ### 検証式 {#validate-expression}
 

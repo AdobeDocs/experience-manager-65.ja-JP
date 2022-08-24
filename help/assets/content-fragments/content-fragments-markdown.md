@@ -4,10 +4,10 @@ description: コンテンツフラグメントエディターで Markdown 構文
 feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 98%
 
     `![Alt text][id]`
 
-&quot;id&quot;は定義された画像参照の名前です。 画像参照は、次のようにリンク参照と同じ構文を使用して定義されます。
+「id」は、定義された画像参照の名前です。画像参照は、次のようにリンク参照と同じ構文を使用して定義されます。
 
     `[id]: url/to/image "Optional title attribute"`
 

@@ -3,7 +3,7 @@ title: AEM Content and Commerce リリースノート 2021
 description: AEM Content and Commerce リリースノート 2021
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
 source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 100%
 

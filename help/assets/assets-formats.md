@@ -9,7 +9,7 @@ exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 source-git-commit: fcbfd8b378282d908b68c61ab235e9b80fd6644c
 workflow-type: tm+mt
 source-wordcount: '1751'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -256,11 +256,11 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 |---|:---:|:---:|:---:|:---:|:---:|
 | [AI](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | - | - | - | - |
 | [INDD](managing-image-presets.md#indesign-indd-file-format) | ✓ | - | - | - | - |
-| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) （下記の注意を参照） | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [PDF](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)（下記のメモを参照） | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
 >
->安全なPDFの場合、アップロードのみがサポートされます。
+>安全な PDF の場合、アップロードのみがサポートされます。
 
 上記の機能に加えて、次を考慮する必要があります。
 

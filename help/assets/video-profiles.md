@@ -12,10 +12,10 @@ feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 77687a0674b939460bd34011ee1b94bd4db50ba4
 workflow-type: tm+mt
 source-wordcount: '3689'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Dynamic Media には、事前定義済みのアダプティブビデオエンコ
 
 * **ビデオプレーヤーのサイズ**
 
-   デフォルトでは、アダプティブビデオエンコーディングプロファイルの「幅」は「自動」に設定されています。 再生中は、プレーヤーのサイズに応じた最適な品質が使用されます。
+   デフォルトでは、アダプティブビデオエンコーディングプロファイルの「幅」は「自動」に設定されています。再生中は、プレーヤーのサイズに応じた最適な品質が使用されます。
 
 [ビデオエンコーディングのベストプラクティス](/help/assets/video.md#best-practices-for-encoding-videos)を参照してください。
 

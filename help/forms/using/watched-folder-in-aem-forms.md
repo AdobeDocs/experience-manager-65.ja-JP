@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 44f866e1435bd98f7dbe3f4ba8500830075db001
 workflow-type: tm+mt
 source-wordcount: '7149'
 ht-degree: 98%
@@ -592,7 +592,7 @@ log.info("Exiting workflow script!")
 * %F = ソースファイル名
 * %E = ソースファイル拡張子
 
-出力パラメーターのマッピングパターンが「File.separator」（パスセパレーター）で終わる場合、フォルダーが作成され、内容がそのフォルダーにコピーされます。 パターンが「File.separator」で終わらない場合は、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
+出力パラメーターのマッピングパターンが「File.separator」（つまり、パスセパレーター）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
 
 ## PDF Generator と監視フォルダーの連携 {#using-pdf-generator-with-a-watched-folder}
 

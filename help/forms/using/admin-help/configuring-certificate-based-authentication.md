@@ -11,7 +11,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: d958ae65-3008-4d68-9e11-4346e149827f
 exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
 
@@ -70,11 +70,11 @@ User Management は、通常、ユーザー名とパスワードを使用して�
 
    * 「Alex (Authentication) Pink」から「Alex Pink」を抽出するには
 
-      **Regex:** (.&amp;ast;)\(認証\) (.&amp;ast;)
+      **正規表現：** (.&amp;ast;)\(認証\) (.&amp;ast;)
 
    * 「Alex (Authentication) Pink」から「Pink Alex」を抽出するには
 
-      **Regex:** (.&amp;ast;)\(認証\) (.&amp;ast;)
+      **正規表現：** (.&amp;ast;)\(認証\) (.&amp;ast;)
 
       カスタムオーダー：$2 $1（2 番目のグループを返し、最初のグループに連結、空白スペース文字で取得）
 

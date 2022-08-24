@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: ad450124-49a5-4afb-aac3-ed3733d6504b
 docset: aem65
 exl-id: b6ded6ac-4fb1-49f9-b272-16774c3e89a3
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '741'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ We.Finance 社の自動保険申し込みのシナリオでは、次の 2 人の
 
 ### Gloria が We.Finance 社から保険契約の更新通知を送信する {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria は AEM インスタンスにログインし、「 **自動保険更新**」をクリックしてから「**エージェント UI を開く**」をクリックします。クリックすると、Sarah Rose のポリシーの詳細が保険関連ドキュメントに表示されます。Gloria がクリック&#x200B;**送信** 画面に「送信開始」と表示され、数秒後に「送信に成功しました」と表示されます。
+Gloria は AEM インスタンスにログインし、「 **自動保険更新**」をクリックしてから「**エージェント UI を開く**」をクリックします。クリックすると、Sarah Rose のポリシーの詳細が保険関連ドキュメントに表示されます。Gloria が「**送信**」をクリックすると、画面に「送信開始」メッセージが表示されたあと、数秒後に「送信完了」と表示されます。
 
-Sarah は「Your Auto Insurance Renewal」（自動保険更新）という件名の電子メールを受信します。
+Sarah は「自動保険更新」という件名の電子メールを受信します。
 
 ![エージェント UI](assets/agent_ui_email_new.png)
 

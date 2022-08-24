@@ -1,5 +1,5 @@
 ---
-title: Livefyre との統合
+title: 'Livefyre との統合 '
 seo-title: Integrating with Livefyre
 description: Livefyre の業界最高レベルのキュレーション機能を AEM 6.5 インスタンスと統合する方法を説明します。これにより、ソーシャルネットワークからの有用なユーザー生成コンテンツ（UGC）をサイトに数分で公開できます。
 seo-description: Learn how to integrate and use Livefyre with AEM 6.5.
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# Livefyre との統合{#integrating-with-livefyre}
+# Livefyre との統合 {#integrating-with-livefyre}
 
 Livefyre の業界最高レベルのキュレーション機能を AEM 6.5 インスタンスと統合する方法を説明します。これにより、ソーシャルネットワークからの有用なユーザー生成コンテンツ（UGC）をサイトに数分で公開できます。
 

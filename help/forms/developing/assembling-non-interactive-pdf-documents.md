@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 role: Developer
 exl-id: 4677b9e5-3811-4de3-b4f4-9574b5898486
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
+source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
 source-wordcount: '1775'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -154,9 +154,9 @@ Assembler サービス API（Java）を使用して、非インタラクティ�
 1. 非インタラクティブ PDF ドキュメントを保存します。
 
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
-   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします。必ず `invokeOneDocument` メソッドが返した `Document` オブジェクトを使用するように確認します。
+   * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします。`invokeOneDocument` メソッドが返した `Document` オブジェクトを使用していることを確認してください。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 
 ## Web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
@@ -219,9 +219,9 @@ Assembler Service API（web サービス）を使用して、非インタラク�
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、非インタラクティブ PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡します。
    * `invokeOneDocument` メソッドから返された `BLOB` オブジェクトのコンテンツを格納するバイト配列を作成します。`BLOB` オブジェクトの `MTOM` フィールドの値を取得して、バイト配列に入力します。
    * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+   *  `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出してバイト配列を渡すことにより、バイト配列の内容を PDF ファイルに書き込みます。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した非インタラクティブPDFドキュメントのアセンブリ」
+* 「クイックスタート（MTOM）：Web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 
 **関連トピック**
 

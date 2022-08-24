@@ -1,8 +1,8 @@
 ---
 title: コミュニティサイトコンソール
-seo-title: コミュニティサイトコンソール
+seo-title: Communities Sites Console
 description: コミュニティサイトコンソールにアクセスする方法
-seo-description: コミュニティサイトコンソールにアクセスする方法
+seo-description: How to access the Communities Sites console
 uuid: 74134281-244c-40da-a941-7f2f3e706d4b
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: 4130f952-5bb5-4e32-91d6-47b2885b30a4
 docset: aem65
 role: Admin
-source-git-commit: d42057a2f8ce50332f404388fd1cfc9b6a154765
+exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
+source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
 workflow-type: tm+mt
-source-wordcount: '3288'
+source-wordcount: '3278'
 ht-degree: 46%
 
 ---
-
 
 # コミュニティサイトコンソール {#communities-sites-console}
 
@@ -32,30 +32,30 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->[コミュニティサイト](/help/communities/sites-console.md)、[コミュニティサイトテンプレート](/help/communities/sites.md)、[コミュニティグループテンプレート](/help/communities/tools-groups.md)、[コミュニティ機能](/help/communities/functions.md)の作成に使用する主なコミュニティメニューは、オーサー環境でのみ使用します。
+>作成用のメインのコミュニティメニュー [コミュニティサイト](/help/communities/sites-console.md), [コミュニティサイトテンプレート](/help/communities/sites.md), [コミュニティグループテンプレート](/help/communities/tools-groups.md) および [コミュニティ機能](/help/communities/functions.md) は、オーサー環境でのみ使用されます。
 
 ## 前提条件 {#prerequisites}
 
 コミュニティサイトを作成する前に、以下の手順をおこなう必要があります。**：
 
-* 1つ以上のパブリッシュインスタンスが実行されていることを確認します。
-* [トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author)を有効にして、メンバーとメンバーグループを管理します。
-* [プライマリパブリッシャー](/help/communities/deploy-communities.md#primary-publisher)を特定します。
-* [プライマリパ](/help/communities/deploy-communities.md#replication-agents-on-author) ブリッシャーポートがデフォルト(4503)でない場合は、レプリケーションを構成します。
+* 1 つ以上のパブリッシュインスタンスが実行中であることを確認します。
+* を有効にします。 [トンネルサービス](/help/communities/deploy-communities.md#tunnel-service-on-author) をクリックして、メンバーとメンバーグループを管理します。
+* 次を識別： [主発行者](/help/communities/deploy-communities.md#primary-publisher).
+* [レプリケーションの設定](/help/communities/deploy-communities.md#replication-agents-on-author) プライマリパブリッシャーポートがデフォルト (4503) でない場合。
 
 サイトで様々な機能がサポートされるよう確実に準備するために、次の手順を実行することをお勧めします。
 
-* [最新の機能パック](/help/communities/deploy-communities.md#latestfeaturepack)をインストールします。
-* AEM Communitiesの[Adobe Analytics](/help/communities/analytics.md)を有効にします。
-* [email](/help/communities/email.md)を設定します
-* [コミュニティ管理者](/help/communities/users.md#creating-community-members)を特定します。
-* [ソーシャルログイ](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) ン用にOAuthハンドラーを有効にします。
+* のインストール [最新の機能パック](/help/communities/deploy-communities.md#latestfeaturepack).
+* 有効にする [Adobe Analytics](/help/communities/analytics.md) AEM Communities
+* 設定 [電子メール](/help/communities/email.md)
+* 特定 [コミュニティ管理者](/help/communities/users.md#creating-community-members).
+* [OAuth ハンドラーを有効にする](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) ソーシャルログイン用。
 
 ## コミュニティサイトコンソールへのアクセス {#accessing-communities-sites-console}
 
 オーサー環境でコミュニティサイトコンソールに移動するには、：
 
-* グローバルナビゲーションから：**[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**
+* グローバルナビゲーションから： **[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**
 
 コミュニティサイトコンソールには、既存のコミュニティサイトが表示されます。このコンソールから、コミュニティサイトを作成、編集、管理および削除できます。
 
@@ -63,7 +63,7 @@ ht-degree: 46%
 
 ネストされたグループのオーサリング、変更、公開、書き出しまたは追加をおこなうために既存のコミュニティサイトにアクセスするには、サイトのフォルダーアイコンを選択します。
 
-例えば、次の画像は、2つのコミュニティサイト用のフォルダーを表示するメインのコミュニティサイトコンソールを示しています。[enable](/help/communities/getting-started-enablement.md)と[engage](/help/communities/getting-started.md):
+例えば、次の画像は、2 つのコミュニティサイト用のフォルダーを表示するメインのコミュニティサイトコンソールを示しています。 [有効](/help/communities/getting-started-enablement.md) および [エンゲージ](/help/communities/getting-started.md):
 
 ![site-console](assets/site-console.png)
 
@@ -71,11 +71,11 @@ ht-degree: 46%
 
 サイト作成コンソールでは、選択した[コミュニティサイトテンプレート](/help/communities/sites.md)と設定に基づき、サイトの機能を段階的に組み立てることができます。
 
-作成されるサイトには、いずれもログイン機能が含まれます。これは、サイト訪問者がコンテンツの投稿、メッセージの送信またはグループへの参加をおこなう前に、サインインする必要があるからです。その他の機能には、ユーザープロファイル、メッセージング、通知、サイトメニュー、検索、テーマ、ブランディングが含まれます。
+作成されるサイトには、いずれもログイン機能が含まれます。これは、サイト訪問者がコンテンツの投稿、メッセージの送信またはグループへの参加をおこなう前に、サインインする必要があるからです。その他の機能には、ユーザープロファイル、メッセージング、通知、サイトメニュー、検索、テーマ設定、ブランディングが含まれます。
 
-コミュニティサイトコンソールの上部にある「`Create`」ボタンを選択すると、プロセスが開始されます。
+プロセスは、 `Create` コミュニティサイトコンソールの上部にあるボタン。
 
-作成プロセスでは、一連の手順がパネル形式で表示されます。パネルには、設定する機能セット（サブパネルとして表示）が含まれています。最後の手順でサイトをコミットする前に、**次の**&#x200B;または&#x200B;**前の手順に戻る**&#x200B;を選択できます。
+作成プロセスでは、一連の手順がパネル形式で表示されます。パネルには、設定する機能セット（サブパネルとして表示）が含まれています。を **次へ** 手順または **戻る** を前の手順に戻してから、最後の手順でサイトをコミットします。
 
 ### 手順 1：サイトテンプレート {#step-site-template}
 
@@ -87,38 +87,38 @@ ht-degree: 46%
 
    サイトの表示タイトル。
 
-   タイトルは、公開済みサイトとサイト管理UIに表示されます。
+   タイトルは、公開されたサイトおよびサイトの管理 UI に表示されます。
 
 * **コミュニティサイトの説明**
 
    サイトの説明。
 
-   この説明は、公開済みのサイトには表示されません。
+   公開されたサイトに説明は表示されません。
 
 * **コミュニティサイトのルート**
 
-   サイトのルートパス。
+   サイトへのルートパス。
 
-   デフォルトのルートは`/content/sites`ですが、ルートはWebサイト内の任意の場所に移動できます。
+   デフォルトのルートはです。 `/content/sites`を参照してください。ただし、ルートは Web サイト内の任意の場所に移動できます。
 
 * **コミュニティサイトのベース言語**
 
-   (単一の言語の場合は手を付けないでおきます。英語)プルダウンメニューを使用して、ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）の1つ以上の&#x200B;*ベース言語を選択します。*&#x200B;追加された言語ごとに1つのコミュニティサイトが作成され、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)で説明されているベストプラクティスに従って、同じサイトフォルダー内に存在します。 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+   ( 単一言語の場合は手を付けないでください。英語 ) プルダウンメニューを使用して 1 つを選択します *以上* 使用可能な言語 ( ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)) のベース言語。 追加された言語ごとに 1 つのコミュニティサイトが作成され、 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
 
 * **コミュニティサイト名**:
 
-   URLに表示されるサイトのルートページの名前。
+   URL に表示されるサイトのルートページの名前。
 
    * サイトの作成後に名前が簡単に変更されないので、名前を再度確認します。
-   * ベースURL( `https://server:port/site root/site name)` )が`Community Site Name`の下に表示されます。
+   * ベース URL ( `https://server:port/site root/site name)` が `Community Site Name`.
 
-   * 有効なURLに、ベース言語コード+ &quot;.html&quot;を追加する
+   * 有効な URL に、ベース言語コード+ &quot;.html&quot;を追加します。
 
-      *例：*  `https://localhost:4502/content/sites/mysight/en.html`
+      *例：*, `https://localhost:4502/content/sites/mysight/en.html`
 
-* **コミュニティサイトテンプレ** ートメニュー
+* **コミュニティサイトテンプレート** メニュー
 
-   プルダウンメニューを使用して、利用可能な[コミュニティサイトテンプレート](/help/communities/tools.md)を選択します。
+   プルダウンメニューを使用して、使用可能な [コミュニティサイトテンプレート](/help/communities/tools.md).
 
 * 「**次へ**」を選択します。
 
@@ -130,7 +130,7 @@ ht-degree: 46%
 
 ![sitetheme](assets/sitetheme.png)
 
-このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、`Twitter Bootstrap` を使用しています。プリロードされた多数のBootstrapテーマの1つを選択して、選択したコミュニティサイトテンプレートのスタイルを設定したり、Bootstrapテーマをアップロードしたりできます。
+このフレームワークでは、レスポンシブで柔軟なサイトデザインを実現できるよう、`Twitter Bootstrap` を使用しています。プリロードされた多数のBootstrapテーマの 1 つを選択して、選択したコミュニティサイトテンプレートのスタイルを設定したり、Bootstrapテーマをアップロードしたりできます。
 
 選択すると、テーマの上に不透明な青色のチェックマークのオーバーレイが表示されます。
 
@@ -138,7 +138,7 @@ ht-degree: 46%
 
 #### コミュニティサイトブランディング {#community-site-branding}
 
-![サイトブランディング](assets/site-branding.png)
+![site-branding](assets/site-branding.png)
 
 コミュニティサイトブランディングとは、各ページ上部にヘッダーとして表示される画像のことです。
 
@@ -146,12 +146,12 @@ ht-degree: 46%
 
 画像を選択するときは、次の点に注意してください。
 
-* 画像の高さは、画像の上端から120ピクセルに切り抜かれます。
-* 画像は、ブラウザーウィンドウの左端に固定されます。
-* 画像の幅が次の場合に、画像のサイズは変更されません。
+* 画像の高さは、画像の上端から 120 ピクセルの位置に切り抜かれます。
+* 画像はブラウザーウィンドウの左端に固定されます。
+* 画像のサイズは変更されず、画像の幅が次のようになる。
 
    * ブラウザーの幅より小さい場合、画像は水平方向に繰り返されます。
-   * ブラウザーの幅より大きい場合、画像は切り抜かれたように見えます。
+   * ブラウザーの幅より大きい場合は、画像が切り抜かれて表示されます。
 
 * 「**次へ**」を選択します。
 
@@ -173,11 +173,11 @@ ht-degree: 46%
 >
 >いくつかの設定サブパネルでは、信頼されているメンバーを、UGC のモデレーター、グループの管理者またはパブリッシュ環境でのイネーブルメントリソースの連絡先に割り当てることができます。
 >
->慣例は、パブリッシュ側の[ユーザーとユーザーグループ](/help/communities/users.md)（メンバーとメンバーグループ）がオーサー環境で複製されないようにするためです。
+>この規則は、パブリッシュ側で使用されます。 [ユーザーとユーザーグループ](/help/communities/users.md) （メンバーとメンバーグループ）をオーサー環境で複製しないようにする必要があります。
 >
 >したがって、オーサー環境でコミュニティサイトを作成し、信頼されているメンバーを様々な役割に割り当てる場合は、パブリッシュ環境からメンバーのデータを取得する必要があります。
 >
->これは、オーサー環境で` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)`を有効にすることで実現されます。
+>これを行うには、 ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` オーサー環境用。
 
 #### ユーザー管理 {#user-management}
 
@@ -185,19 +185,19 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->[イネーブルメントコミュニティサイト](/help/communities/overview.md#enablement-community)は非公開にすることをお勧めします（詳しくは、アカウント担当者にお問い合わせください）。
+>を推奨します。 [イネーブルメントコミュニティサイト](/help/communities/overview.md#enablement-community) 非公開にする（詳しくは、アカウント担当者にお問い合わせください）。
 >
 >コミュニティサイトを非公開にするとは、匿名のサイト訪問者に対してアクセスを拒否し、自己登録やソーシャルログインを使用禁止にすることです。
 
 * **ユーザー登録を許可**
 
    オンにすると、サイト訪問者は自己登録によってコミュニティメンバーになる場合があります。
-オフにすると、コミュニティサイトは*制限*され、サイト訪問者はコミュニティサイトのメンバーグループに割り当てられ、リクエストを行うか、電子メールで招待が送信されます。 オフにすると、匿名アクセスは許可されません。
+オフにした場合、コミュニティサイトは *制限* サイト訪問者は、コミュニティサイトのメンバーグループに割り当てられ、リクエストを行うか、電子メールで招待状を送信する必要があります。 オフにした場合、匿名アクセスは許可されません。
 非公開のコミュニティサイトの場合はオフにします。**&#x200B;初期設定はオンです。
 
 * **匿名アクセスを許可**
 
-   オンにすると、コミュニティサイトは「オープン」になり、サイト訪問者は誰でもサイトにアクセスできます。
+   オンにすると、コミュニティサイトが「オープン」になり、サイト訪問者は誰でもサイトにアクセスできます。
 オフにすると、サインイン済みのメンバーのみがサイトにアクセスできます。非公開のコミュニティサイトの場合はオフにします。 初期設定はオンです。
 
 * **メッセージを許可**
@@ -207,12 +207,12 @@ ht-degree: 46%
 
 * **ソーシャルログインを許可 : Facebook**
 
-   オンにすると、サイト訪問者はFacebookアカウントの資格情報を使用してログインできます。 選択した[Facebookクラウド設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)を、コミュニティサイトの作成後にコミュニティサイトのメンバーグループにユーザーを追加するように設定する必要があります。
+   オンにすると、サイト訪問者はFacebookアカウントの資格情報を使用してログインできます。 選択した [Facebookクラウド設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) コミュニティサイトを作成した後、コミュニティサイトのメンバーグループにユーザーを追加するように設定する必要があります。
 オフにすると、Facebook ログインは表示されません。非公開のコミュニティサイトの場合はオフのままにします。**&#x200B;初期設定はオフです。
 
 * **ソーシャルログインを許可 : Twitter**
 
-   オンにすると、サイト訪問者はTwitterアカウントの資格情報を使用してログインできます。 選択した[Twitterクラウド設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)を、コミュニティサイトの作成後にコミュニティサイトのメンバーグループにユーザーを追加するように設定する必要があります。
+   オンにすると、サイト訪問者はTwitterアカウントの資格情報を使用してログインできます。 選択した [Twitterクラウド設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) コミュニティサイトを作成した後、コミュニティサイトのメンバーグループにユーザーを追加するように設定する必要があります。
 オフにすると、Twitter ログインは表示されません。非公開のコミュニティサイトの場合はオフのままにします。**&#x200B;初期設定はオフです。
 
 >[!NOTE]
@@ -223,13 +223,13 @@ ht-degree: 46%
 
 #### タグ付け {#tagging}
 
-![サイトタグ付け](assets/site-tagging.png)
+![site-tagging](assets/site-tagging.png)
 
 コミュニティコンテンツに適用できるタグを制御するには、以前に[タグ付けコンソール](/help/sites-administering/tags.md#tagging-console)で定義したタグ名前空間を選択します。
 
-また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとリソースを定義するときに表示される選択肢が制限されます。重要な情報については、[イネーブルメントリソースのタグ付け](/help/communities/tag-resources.md)を参照してください。
+また、コミュニティサイトに対してタグ名前空間を選択すると、カタログとリソースを定義するときに表示される選択肢が制限されます。詳しくは、 [イネーブルメントリソースのタグ付け](/help/communities/tag-resources.md) 重要な情報を参照してください。
 
-* テキスト検索ボックス：入力を開始して、サイトで使用可能なタグを特定します。
+* テキスト検索ボックス：サイトで使用できるタグを識別するには、入力を開始します。
 
 #### 役割 {#roles}
 
@@ -241,19 +241,19 @@ ht-degree: 46%
 
 * **コミュニティマネージャー**
 
-   入力を開始して、コミュニティメンバーとメンバーグループを管理できる1人以上のコミュニティメンバーまたはメンバーグループを選択します。
+   入力を開始して、コミュニティメンバーとメンバーグループを管理できる 1 つ以上のコミュニティメンバーまたはメンバーグループを選択します。
 
 * **コミュニティのモデレーター**
 
-   入力を開始して、ユーザー生成コンテンツのモデレーターとして信頼される1人以上のコミュニティメンバーまたはメンバーグループを選択します。
+   入力を開始して、ユーザー生成コンテンツのモデレーターとして信頼される 1 つ以上のコミュニティメンバーまたはメンバーグループを選択します。
 
 * **コミュニティ権限を持つメンバー**
 
-   [コミュニティ機能](/help/communities/functions.md)に対して`Allow Privileged Member`が選択されている場合に、1つ以上のコミュニティメンバーまたはメンバーグループを選択して、新しいコンテンツを作成できるようにします。
+   入力を開始して、1 つ以上のコミュニティメンバーまたはメンバーグループを選択し、新しいコンテンツを作成するには、 `Allow Privileged Member` が [コミュニティ機能](/help/communities/functions.md).
 
 * **コミュニティ管理者**
 
-   入力を開始して、他のサイト管理者や既定のコミュニティ管理者とは関係なく、サイト構造を処理できる1人または複数のサイト管理者を選択します。 階層の任意のレベルでグループを作成し、ネストされたグループのデフォルトの管理者になることができます（ただし、後でネストされたグループの管理者の役割から削除することもできます）。
+   入力を開始して、他のサイト管理者やデフォルトのコミュニティ管理者とは無関係にサイト構造を処理できる 1 人または複数のサイト管理者を選択します。 階層の任意のレベルでグループを作成し、ネストされたグループのデフォルト管理者になることができます（ただし、後でネストされたグループの管理者の役割から削除することもできます）。
 
 #### モデレート {#moderation}
 
@@ -263,11 +263,11 @@ ht-degree: 46%
 
 * **コンテンツを事前にモデレート**
 
-   オンにすると、投稿されたコミュニティコンテンツはモデレーターによって承認されるまで表示されません。 初期設定はオフです。詳しくは、[コミュニティコンテンツのモデレート](/help/communities/moderate-ugc.md#premoderation)を参照してください。
+   オンにすると、投稿されたコミュニティコンテンツは、モデレーターが承認するまで表示されません。 初期設定はオフです。詳しくは、 [コミュニティコンテンツのモデレート](/help/communities/moderate-ugc.md#premoderation).
 
 * **コンテンツが非表示になるまでのフラグ設定しきい値**
 
-   0より大きい場合は、トピックまたは投稿に何回フラグが設定されたら、公開表示から非表示になります。 -1に設定した場合、フラグ付きのトピックまたは投稿が公開表示で非表示になることはありません。 初期設定は 5 です。
+   0 より大きい場合は、トピックまたは投稿に何回フラグが設定された後に、その投稿が公開ビューで非表示になるかを指定する必要があります。 -1 に設定した場合、フラグ付きのトピックまたは投稿が公開表示から非表示になることはありません。 デフォルトは 5 です。
 
 #### Analytics  {#analytics}
 
@@ -275,7 +275,7 @@ ht-degree: 46%
 
 * **Analytics を有効にする**
 
-   Adobe Analyticsがコミュニティ機能用に[設定](/help/communities/analytics.md)されている場合にのみ使用できます。
+   Adobe Analyticsが [設定済み](/help/communities/analytics.md) コミュニティ機能の場合
 初期設定はオフです。オンにすると、以下の追加選択メニューが表示されます。
 
 ![site-analytics-enable](assets/site-analytics-enable.png)
@@ -283,7 +283,7 @@ ht-degree: 46%
 * **クラウド設定フレームワークの参照**
 
    プルダウンメニューから、このコミュニティサイト用に設定した Analytics クラウドサービスフレームワークを選択します。
-   `Communities` は、コミュニティ機能向けのAnalytics設 [定ドキュメントのフレームワークの](/help/communities/analytics.md#aem-analytics-framework-configuration) 例です。
+   `Communities` は、次のフレームワークの例です： [コミュニティ機能用の Analytics 設定](/help/communities/analytics.md#aem-analytics-framework-configuration) ドキュメント。
 
 #### 翻訳 {#translation}
 
@@ -291,31 +291,31 @@ ht-degree: 46%
 
 * **機械翻訳を許可**
 
-   オン（デフォルトはオフ）にすると、サイト内のUGCに対して機械翻訳が有効になります。 これは、サイトが多言語サイトとして設定されている場合でも、ページコンテンツなどの他のコンテンツには影響しません。 AEM Communities用のライセンス翻訳サービスの設定について詳しくは、[ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md)を参照してください。 全体的な概要については、[多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md)を参照してください。
+   オン（デフォルトはオフ）にすると、サイト内の UGC に対して機械翻訳が有効になります。 この変更は、サイトが多言語サイトとして設定されている場合でも、ページコンテンツなどの他のコンテンツには影響しません。 詳しくは、 [ユーザー生成コンテンツの翻訳](/help/communities/translate-ugc.md) を参照してください。 詳しくは、 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md) を参照してください。
 
 ![allow-machine-translation](assets/allow-machine-translation.png)
 
 * **選択した言語の機械翻訳を有効にする**
 
-   機械翻訳が有効な言語は、[翻訳統合設定](/help/communities/translate-ugc.md#translation-integration-configuration)で指定されたシステム設定にデフォルトで設定されます。 これらのデフォルト設定は、デフォルトを削除したり、プルダウンメニューから他の言語を選択したりすることで、このサイトで上書きできます。
+   機械翻訳が有効な言語は、 [翻訳統合の設定](/help/communities/translate-ugc.md#translation-integration-configuration). これらのデフォルト設定は、デフォルトを削除するか、プルダウンメニューから他の言語を選択することで、このサイトに対して上書きできます。
 
 * **変換プロバイダーを選択**
 
-   デフォルトでは、サービスプロバイダーは、デモのみ`microsoft`を使用する体験版サービスです。 翻訳サービスプロバイダーがライセンスされていない場合は、**機械翻訳を許可**&#x200B;をオフにする必要があります。
+   デフォルトでは、サービスプロバイダーは、 `microsoft` デモのみ。 翻訳サービスプロバイダーがライセンスされていない場合、 **機械翻訳を許可** をオフにする必要があります。
 
 * **グローバル共有ストアを選択**
 
-   複数の言語コピーがあるWebサイトの場合、グローバル共有ストアは各言語コピーから見える1つのスレッドの会話を提供します。 これを実現するには、言語コピーとして含まれているいずれかの言語を選択します。初期設定は&#x200B;*No Global Shared Store*&#x200B;です。
+   複数の言語コピーがある Web サイトの場合、グローバル共有ストアは会話のスレッドを 1 つ提供し、各言語コピーから表示できます。 これを実現するには、言語コピーとして含まれているいずれかの言語を選択します。デフォルトはです。 *グローバル共有ストアがありません*.
 
 * **変換プロバイダー設定を選択**
 
-   ライセンスされた翻訳プロバイダー用に作成された[翻訳統合フレームワーク](/help/sites-administering/tc-tic.md)を選択します。
+   を選択します。 [翻訳統合フレームワーク](/help/sites-administering/tc-tic.md) ライセンスされた翻訳プロバイダー用に作成されました。
 
 * **コミュニティサイトの翻訳オプションを選択**
 
    * **ページ全体を翻訳**
 
-      選択すると、ページ上のすべてのUGCがページの基本言語に翻訳されます。
+      選択すると、ページ上のすべての UGC がページのベース言語に翻訳されます。
 
       初期設定では選択されていません。**
 
@@ -350,29 +350,29 @@ ht-degree: 46%
 
 ![サイトの有効化](assets/site-enablement.png)
 
-`ENABLEMENT`設定は、選択したコミュニティサイトテンプレートに[割り当て機能](/help/communities/functions.md#assignments-function)が含まれている場合に適用されます。この機能は、イネーブルメント機能がライセンスされ、[設定](/help/communities/enablement.md)されている場合に使用できます。 割り当て機能を含む参照サイトテンプレートは`Reference Structured Learning Site Template.`です
+この `ENABLEMENT`設定は、選択したコミュニティサイトテンプレートに [割り当て機能](/help/communities/functions.md#assignments-function)：イネーブルメント機能がライセンスを受け、 [設定済み](/help/communities/enablement.md). 割り当て機能を含む参照サイトテンプレートは次のとおりです。 `Reference Structured Learning Site Template.`
 
-* **イネーブルメントマネージャー**
-（必須）このイネーブルメントコミュニティを管理す `Community Enablementmanagers` るために選択できるのは、グループのメンバーのみです。イネーブルメントマネージャーは、メンバーをリソースに割り当てます。 [ユーザーとユーザーグループの管理](/help/communities/users.md)も参照してください。
+* **実施可能マネージャー**
+（必須） `Community Enablementmanagers` このイネーブルメントコミュニティを管理するために、グループを選択できます。 イネーブルメントマネージャーは、メンバーをリソースに割り当てます。 関連トピック [ユーザーとユーザーグループの管理](/help/communities/users.md).
 
 * **Marketing Cloud 組織 ID**
 
-   （オプション） [Video Heartbeat Analytics](/help/communities/analytics.md#video-heartbeat-analytics)ライセンスのID。
+   （オプション） [ビデオハートビート分析](/help/communities/analytics.md#video-heartbeat-analytics) ライセンス。
 
 * 「**次へ**」を選択します。
 
 ### 手順 4：コミュニティサイトの作成 {#step-create-communities-site}
 
-調整が必要な場合は、「**戻る**」ボタンを使用して調整します。
+調整が必要な場合は、 **戻る** ボタンを使用して作成します。
 
-**作成**&#x200B;を選択して開始すると、サイトの作成プロセスを中断できません。
+1 回 **作成** を選択して開始すると、サイトの作成プロセスは中断できません。
 
 サイト作成後は、以下のようになります。
 
 * URL（ノード名）の変更はサポートされていません。
 * 今後、コミュニティサイトテンプレートを変更しても、作成したコミュニティサイトには影響しません。
 * コミュニティサイトテンプレートを無効にしても、作成したコミュニティサイトには影響しません。
-* コミュニティサイトの[STRUCTURE](#modify-structure)を編集するには、そのプロパティを変更します。
+* 次の項目を編集できます。 [構造](#modify-structure) コミュニティサイトのプロパティを変更します。
 
 ![create-site](assets/create-site1.png)
 
@@ -384,11 +384,11 @@ ht-degree: 46%
 
 ![site-project](assets/site-project.png)
 
-サイトにマウスポインターを置くか、サイトカードに触れると、[オーサーモード](#authoring-site-content)でサイトを編集[、](#modifying-site-properties)変更用のサイトプロパティを開く[、](#publishing-the-site)を公開、[サイトを書き出す](#exporting-the-site)、[サイトを削除するアイコンが表示されます。](#deleting-the-site)
+サイト上にマウスカーソルを置いたとき、またはサイトカードにマウスを合わせたときに、 [オーサーモードでのサイトの編集](#authoring-site-content), [変更用にサイトのプロパティを開く](#modifying-site-properties), [サイトのパブリッシュ](#publishing-the-site), [サイトのエクスポート](#exporting-the-site)、および [サイトの削除](#deleting-the-site).
 
 ## サイトコンテンツのオーサリング {#authoring-site-content}
 
-サイトのコンテンツは、他の AEM Web サイトと同じツールを使用してオーサリングできます。オーサリング用にサイトを開くには、サイトにマウスポインターを置くと表示される`Open Site`アイコンを選択します。 サイトが新しいタブで開き、コミュニティサイトコンソールにアクセスできるようになります。
+サイトのコンテンツは、他の AEM Web サイトと同じツールを使用してオーサリングできます。オーサリング用にサイトを開くには、 `Open Site` サイトにマウスポインターを置くと表示されるアイコン。 サイトが新しいタブで開き、コミュニティサイトコンソールにアクセスできるようになります。
 
 ![site-content](assets/site-content.png)
 
@@ -398,11 +398,11 @@ ht-degree: 46%
 
 ## サイトプロパティの変更 {#modifying-site-properties}
 
-![サイトを編集](assets/edit-site.png)
+![edit-site](assets/edit-site.png)
 
-サイトの作成プロセス中に指定した既存のサイトのプロパティを変更するには、サイトにマウスポインターを置くと表示される`Edit Site`アイコンを選択します。
+サイト作成プロセス中に指定された既存のサイトのプロパティは、 `Edit Site`サイトにマウスポインターを置くと表示されるアイコン。
 
-`Details of the following properties match the descriptions provided in the` [サイト](#site-creation) 作成セクション。
+`Details of the following properties match the descriptions provided in the` [サイトの作成](#site-creation) 」セクションに入力します。
 
 ![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
@@ -421,14 +421,14 @@ ht-degree: 46%
 
 ### 構造の変更 {#modify-structure}
 
-構造パネルでは、最初にコミュニティサイトテンプレートから作成された構造を変更できます。パネルから、次のことが可能です。
+構造パネルでは、最初にコミュニティサイトテンプレートから作成された構造を変更できます。パネルから、次の操作を実行できます。
 
-* 追加の[コミュニティ機能](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
+* 追加の [コミュニティ機能](/help/communities/functions.md) をサイト構造に追加します。
 * サイト構造内のコミュニティ機能のインスタンスで、次の操作を実行します。
 
    * **`gear icon`**
 
-      表示タイトルやURL名*、[権限を持つメンバーグループ](/help/communities/users.md#privilegedmembersgroups)などの設定を編集します。
+      表示タイトルや URL 名*、 [権限を持つメンバーグループ](/help/communities/users.md#privilegedmembersgroups).
 
    * **`trashcan icon`**
 
@@ -436,22 +436,21 @@ ht-degree: 46%
 
    * **`grid icon`**
 
-      サイトのトップレベルナビゲーションバーに表示される機能の順序を変更します。
+      サイトのトップレベルナビゲーションバーに表示される関数の順序を変更します。
 
 >[!NOTE]
 >
->トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティサイトのホームページは変更できません。
+>トップにある機能を除き、サイト構造のすべての機能の順序を変更できます。したがって、コミュニティサイトのホームページを変更することはできません。
 
 >[!CAUTION]
 >
->* 表示タイトルは副作用なく変更できますが、コミュニティサイトに属するコミュニティ機能のURL名を編集することはお勧めしません。
+>* 表示タイトルは副作用なしに変更できますが、コミュニティサイトに属するコミュニティ機能の URL 名を編集することはお勧めしません。
 >
->
-例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
+>例えば、URL の名前を変更しても、既存の UGC は移動されません。そのため、UGC が「失われる」ことになります。
 
 >[!CAUTION]
 >
->グループ関数は、**&#x200B;を&#x200B;*の最初の関数にし、サイト構造内で唯一の*&#x200B;関数にしないでください。
+>グループ機能は、 *not* は *最初でも唯一でも* 関数を使用して、サイト構造内で使用できます。
 >
 >他の機能（[ページ機能](/help/communities/functions.md#page-function)など）を含め、その機能を 1 番目にリストする必要があります。
 
@@ -476,7 +475,7 @@ ht-degree: 46%
 * [タグ](#tagging)
 * [モデレート](#moderation)
 * [メンバーの役割](#roles)
-* [分析](#analytics)
+* [Analytics](#analytics)
 * [翻訳](#translation)
 
 ### サムネイルの変更 {#modify-thumbnail}
@@ -487,11 +486,11 @@ ht-degree: 46%
 
 イネーブルメントパネルでは、コミュニティサイトの作成中に表示された設定にアクセスできます。
 
-[ENABLEMENT](#enablement)の説明を参照してください。
+詳しくは、 [有効化](#enablement) 説明。
 
 ## サイトの公開 {#publishing-the-site}
 
-コミュニティサイトを新しく作成または変更した後、サイト上にマウスポインターを置くと表示される`Publish Site`アイコンを選択して、サイトを公開（アクティブ化）できます。
+コミュニティサイトを新しく作成または変更した後、 `Publish Site` アイコンをクリックします。
 
 ![publish-site](assets/publish-site.png)
 
@@ -521,16 +520,16 @@ UGC はサイトパッケージに含まれていません。
 
 新しいコミュニティサイトが公開されると、新しいメンバーグループが作成されます（ユーザーグループはパブリッシュ環境で作成されます）。各グループには、様々な管理の役割およびメンバーの役割に応じて適切な権限が設定されます。
 
-メンバーグループ用に作成された名前には、[手順1](#step13asitetemplate)で指定された&#x200B;*site-name*（URLに表示される名前）と、コミュニティサイトやコミュニティサイトのルートが同じサイト名を持つグループとの競合を防ぐための一意のIDが含まれます。
+メンバーグループ用に作成された名前には、 *site-name* ～のサイトを考えると [手順 1](#step13asitetemplate) （URL に表示される名前）および一意の ID。コミュニティサイトや、異なるコミュニティサイトのルートに同じサイト名を持つグループとの競合を避けるために使用されます。
 
 例えば、「Getting Started Tutorial」というタイトルを持つサイトのサイト名が「engage」の場合、モデレーターのユーザーグループは次のようになります。
 
 * タイトル：コミュニティ Engage モデレーター
 * 名前：community-*engage-uid*-moderators
 
-サイト作成中にモデレーターまたはグループ管理者の役割を割り当てられたメンバーは、適切なグループとメンバーグループに割り当てられます。これらのグループとメンバーの割り当ては、新しいサイトが公開されると、パブリッシュ環境で作成されます。
+サイト作成中にモデレーターまたはグループ管理者の役割を割り当てられたメンバーは、適切なグループとメンバーグループに割り当てられます。これらのグループとメンバーの割り当ては、新しいサイトが公開されると、公開時に作成されます。
 
-詳しくは、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+詳しくは、 [ユーザーとユーザーグループの管理](/help/communities/users.md).
 
 >[!NOTE]
 >
@@ -538,24 +537,23 @@ UGC はサイトパッケージに含まれていません。
 >
 >* `community-<site-name>-<uid>-members`
 >
->
-が作成されたら、適用された[Facebook Cloud Service](/help/communities/social-login.md#createafacebookcloudservice)を設定して、このグループにユーザーを追加する必要があります。
+>が作成され、適用される [Facebook cloud service](/help/communities/social-login.md#createafacebookcloudservice) は、このグループにユーザーを追加するように設定する必要があります。
 
 ## 認証エラーの設定 {#configure-for-authentication-error}
 
-ユーザーが誤った資格情報を入力してログインに失敗した場合、コミュニティサイトはデフォルトでサンプルのログインページにリダイレクトします。このログイン例は、[実稼動サーバー](/help/sites-administering/production-ready.md)には存在しません。
+ユーザーが誤った資格情報を入力してログインに失敗した場合、コミュニティサイトはデフォルトでサンプルのログインページにリダイレクトします。このサンプルログインは、 [本番サーバ](/help/sites-administering/production-ready.md).
 
 正しくリダイレクトするには、サイトを設定してパブリッシュ環境にプッシュした後、以下の手順を実行し、認証失敗時にコミュニティサイトにリダイレクトされるようにします。
 
 * 各AEMパブリッシュインスタンスで。
 * 管理者権限でサインインします。
-* [Webコンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします。
+* 次にアクセス： [Web コンソール](/help/sites-deploying/configuring-osgi.md).
 
-   * 例えば、[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)のようにします。
+   * 例： [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
-* `Adobe Granite Login Selector Authentication Handler`を探します。
-* 「`pencil`」アイコンを選択して、設定を編集用に開きます。
-* **Login Page Mappings**&#x200B;を次のように入力します。
+* 場所 `Adobe Granite Login Selector Authentication Handler`.
+* を選択します。 `pencil` アイコンをクリックし、設定を開いて編集します。
+* を入力します。 **ログインページのマッピング** 次のように指定します。
 
    `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
@@ -576,18 +574,15 @@ UGC はサイトパッケージに含まれていません。
 
 * 「ログアウト」を選択します。
 * 「ログイン」を選択します。
-* ユーザー名「x」やパスワード「x」など、明らかに正しくない資格情報を入力します。
-* ログインページに「無効なログイン」エラーが表示されます。
+* ユーザー名「x」やパスワード「x」など、明らかに間違った資格情報を入力します。
+* ログインページには「無効なログイン」エラーが表示されます。
 
 ![test-authentication](assets/test-authentication.png)
 
 ## 主なサイトのコンソールからコミュニティサイトへのアクセス {#accessing-community-sites-from-main-sites-console}
 
-グローバルナビゲーションのサイトコンソールから、コミュニティサイトは`Community Sites`フォルダーに配置されます。
+グローバルナビゲーションサイトコンソールから、コミュニティサイトは `Community Sites` フォルダー。
 
 コミュニティサイトにはこの方法でアクセスできますが、管理タスクをおこなう場合は、コミュニティサイトコンソールからコミュニティサイトにアクセスする必要があります。
 
 ![access-site](assets/access-site.png)
-
-
-

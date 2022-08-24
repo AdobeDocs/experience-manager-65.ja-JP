@@ -12,7 +12,7 @@ discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
 source-git-commit: 72012fa441edb01deb7e557b707fb068d8e9892e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 100%
 
@@ -27,15 +27,15 @@ ht-degree: 100%
 >6.5.3.0:
 >
 >* **Externalizer ドメイン**を選択できるようになりました。
->  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
+   >  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
 >
 >6.5.2.0：
 >
 >* エクスペリエンスフラグメントは、次のいずれかに書き出すことができます。
->
->   * デフォルトのワークスペース。
->   * クラウド設定で指定された名前付きワークスペース。
->   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
+   >
+   >   * デフォルトのワークスペース。
+   >   * クラウド設定で指定された名前付きワークスペース。
+   >   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
 >
 >* AEM は [IMS を使用した Adobe Target と統合](/help/sites-administering/integration-target-ims.md)する必要があります。
 >
@@ -61,13 +61,13 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
 >[!NOTE]
 >
->Adobe Target のワークスペースを使用することで、組織（グループ）のメンバーが、他のユーザーにアクセス権を付与せずに、この組織のみのためにオファーおよびアクティビティを作成、管理できるようになります。例えば、グローバルな関係における国固有の組織などです。
+>Adobe Target のワークスペースを使用すると、組織（グループ）のメンバーは、他のユーザーにアクセス権を付与することなく、その組織専用のオファーとアクティビティを作成および管理することができます。例えば、国際的な企業の国別の組織などです。
 
 >[!NOTE]
 >
->詳しくは、次のリンクも参照してください。
+>詳しくは、以下も参照してください。
 >
->* [Adobe Target 開発](https://www.adobe.io/apis/experiencecloud/target.html)
+>* [Adobe Target Developers](https://www.adobe.io/apis/experiencecloud/target.html)
 >* [コアコンポーネント - エクスペリエンスフラグメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/experience-fragment.html)
 >
 
@@ -81,7 +81,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 様々なアクションが必要です。
 
 1. [IMS を使用して AEM と Adobe Target を統合する](/help/sites-administering/integration-target-ims.md)必要があります。
-2. エクスペリエンスフラグメントは AEM オーサーインスタンスから書き出されます。このため、オーサーインスタンスで [AEM Link Externalizer を設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)し、エクスペリエンスフラグメント内の参照が web 配信用に外部化されるようにします。
+2. エクスペリエンスフラグメントは AEM オーサーインスタンスから書き出されるので、オーサーインスタンスに [AEM Link Externalizer を設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)して、クスペリエンスフラグメント内のあらゆる参照が web 配信用に外部化されるようにする必要があります。
 
    >[!NOTE]
    >
@@ -89,17 +89,17 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
 ## クラウド設定の追加 {#add-the-cloud-configuration}
 
-フラグメントを書き出す前に、**Adobe Target** の&#x200B;**クラウド設定**&#x200B;をフラグメントまたはフォルダーに追加する必要があります。これにより次の操作が可能になります。
+フラグメントを書き出す前に、**Adobe Target** 用の&#x200B;**クラウド設定**&#x200B;をフラグメントまたはフォルダーに追加する必要があります。この結果、次のことも可能になります。
 
-* 書き出しに使用するフォーマットオプションを指定する
-* 宛先として Target ワークスペースを選択する
-* エクスペリエンスフラグメント内の参照を書き換える Externalizer ドメインを選択する（オプション）。
+* 書き出しに使用する形式オプションを指定する
+* Target ワークスペースを宛先として選択する
+* エクスペリエンスフラグメントに含まれる参照を書き換えるための Externalizer ドメインを選択する（オプション）
 
 必要なオプションは、必要なフォルダーやフラグメントの&#x200B;**ページのプロパティ**&#x200B;で選択できます。仕様は必要に応じて継承されます。
 
 1. **エクスペリエンスフラグメント**&#x200B;コンソールに移動します。
 
-1. 適切なフォルダーまたはフラグメントの&#x200B;**ページプロパティ**&#x200B;を開きます。
+1. 適切なフォルダーまたはフラグメントの&#x200B;**ページのプロパティ**&#x200B;を開きます。
 
    >[!NOTE]
    >
@@ -108,9 +108,9 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
    >
    >クラウド設定をエクスペリエンスフラグメント自体に追加すると、設定はすべての変更によって継承されます。
 
-1. **クラウドサービス**&#x200B;タブを選択します。
+1. 「**クラウドサービス**」タブを選択します。
 
-1. **クラウドサービス設定**&#x200B;で、ドロップダウンリストから **Adobe Target** を選択します。
+1. **クラウドサービス設定**&#x200B;で、ドロップダウンリストから「**Adobe Target**」を選択します。
 
    >[!NOTE]
    >
@@ -118,26 +118,26 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
    >
    >コアコンポーネントを参照してください。
    >
-   >[コアコンポーネント - エクスペリエンスフラグメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/experience-fragment.html)
+   >[コアコンポーネント - エクスペリエンスフラグメント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
 
    **Adobe Target** の下で、次を選択します。
 
    * 適切な設定
-   * 必須フォーマットオプション
+   * 必要な形式オプション
    * Adobe Target ワークスペース
-   * 必要な場合 - Externalizer ドメイン
+   * Externalizer ドメイン（必要な場合）
 
    >[!CAUTION]
    >
    >Externalizer ドメインはオプションです。
    >
-   > AEM Externalizer は 、書き出されるコンテンツが特定の&#x200B;*公開*&#x200B;ドメインを指すようにしたい場合に設定されます。詳しくは、[AEM Link Externalizer の設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)を参照してください。
+   > AEM Externalizer を設定するのは、コンテンツの書き出し先を特定の&#x200B;*パブリッシュ*&#x200B;ドメインに指定する場合です。詳しくは、[AEM Link Externalizer の設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)を参照してください。
    >
-   > また、Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
+   > また、Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関係があり、「オファーコンテンツを表示」などのメタデータには関係しません。
 
-   例えば、フォルダーの場合：
+   例えば、フォルダーの場合は下図のようになります。
 
-   ![フォルダー - Cloud Services](assets/xf-target-integration-01.png " フォルダー - Cloud Services")
+   ![フォルダー - Cloud Services](assets/xf-target-integration-01.png "フォルダー - Cloud Services")
 
 1. **保存して閉じます**。
 
@@ -162,13 +162,13 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
 
    >[!NOTE]
    >
-   >エクスペリエンスフラグメントがすでに書き出されている場合は、**Adobe Target でアップデート** を選択します。
+   >エクスペリエンスフラグメントが既に書き出されている場合は、**Adobe Target でアップデート** を選択します。
 
 1. 要求に応じて&#x200B;**公開せずに書き出し**&#x200B;または&#x200B;**公開**&#x200B;をタップ／クリックします。
 
    >[!NOTE]
    >
-   >**公開する**&#x200B;を選択すると、エクスペリエンスフラグメントはすぐに公開され、Target に送信されます。
+   >**公開**&#x200B;を選択すると、エクスペリエンスフラグメントはすぐに公開され、Target に送信されます。
 
 1. 確認ダイアログで「**OK**」をタップ／クリックします。
 
@@ -196,17 +196,17 @@ AEM から Target にエクスペリエンスフラグメントを書き出す�
 
 ## Adobe Target に書き出し済みのエクスペリエンスフラグメントの削除 {#deleting-an-experience-fragment-already-exported-to-adobe-target}
 
-Target に書き出し済みのエクスペリエンスフラグメントを削除すると、そのフラグメントがすでに Target のオファーで使用されている場合に問題が発生する可能性があります。フラグメントのコンテンツが AEM によって配信されているため、フラグメントを削除するとオファーが使用できなくなります。
+Target に書き出し済みのエクスペリエンスフラグメントを削除すると、そのフラグメントが既に Target のオファーで使用されている場合に問題が発生する可能性があります。フラグメントのコンテンツが AEM によって配信されているため、フラグメントを削除するとオファーが使用できなくなります。
 
 そのような状況を避けるためには：
 
 * エクスペリエンスフラグメントが現在アクティビティで使用されていない場合、AEM はユーザーに警告メッセージなしでフラグメントを削除することを許可します。
 * エクスペリエンスフラグメントが現在ターゲットのアクティビティで使用されている場合、フラグメントを削除するとアクティビティに影響が及ぶ可能性があると、AEM ユーザーに警告メッセージが表示されます。
 
-   AEM のエラーメッセージは、ユーザーがエクスペリエンスフラグメントを（強制的に）削除することを禁止するものではありません。エクスペリエンスフラグメントが削除された場合
+   AEM のエラーメッセージは、ユーザーがエクスペリエンスフラグメントを（強制的に）削除することを禁止するものではありません。エクスペリエンスフラグメントが削除された場合は、次のような結果になります。
 
    * AEM エクスペリエンスフラグメントを使用した Target オファーで望ましくない動作が見られる場合があります。
 
-      * エクスペリエンスフラグメント HTML が Target にプッシュされたため、オファーは引き続きレンダリングされる可能性があります。
-      * 参照されているアセットが AEM でも削除されている場合、エクスペリエンスフラグメント内の参照はすべて正しく機能しない可能性があります。
-   * 当然ながら、エクスペリエンスフラグメントは AEM にはもう存在しないため、さらに変更することは不可能です。
+      * エクスペリエンスフラグメント HTML が Target にプッシュされたため、オファーが引き続きレンダリングされる可能性があります。
+      * 参照されているアセットが AEM でも削除されている場合、エクスペリエンスフラグメント内の参照はどれも正しく機能しない可能性があります。
+   * 当然ながら、エクスペリエンスフラグメントが AEM には存在しないため、さらに変更することは不可能です。

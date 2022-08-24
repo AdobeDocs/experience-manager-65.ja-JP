@@ -11,7 +11,7 @@ topic-tags: operations
 discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: 74882ccf78a62d543f1598f12ee009f9922c18a4
 workflow-type: tm+mt
 source-wordcount: '19016'
 ht-degree: 100%
@@ -1809,7 +1809,7 @@ Output サービスが操作を実行すると、操作が成功したかどう�
 
 Output API（Java）を使用して複数の PDF ファイルを作成するには、次の手順に従います。
 
-1. プロジェクトファイルを含める&quot;
+1. プロジェクトファイルの組み込み
 
    adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 

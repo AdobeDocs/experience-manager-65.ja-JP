@@ -1,8 +1,8 @@
 ---
 title: アプリケーションの作成および設定アクション
-seo-title: アプリケーションの作成および設定アクション
+seo-title: Application Create and Configuration Actions
 description: アプリを作成することは、多くの場合、AEM Mobile On-Demand コンテンツを作成および管理するための第一歩です。このページでは、この機能について詳しく見ていきます。
-seo-description: アプリを作成することは、多くの場合、AEM Mobile On-Demand コンテンツを作成および管理するための第一歩です。このページでは、この機能について詳しく見ていきます。
+seo-description: Creating an app is often the first step towards creating and managing AEM Mobile On-Demand content. Follow this page to learn more.
 uuid: f6b41d9a-d896-479e-9f6c-e91a88f3e74d
 contentOwner: User
 content-type: reference
@@ -12,8 +12,8 @@ discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 95%
+source-wordcount: '442'
+ht-degree: 94%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)
+>アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 ## On-Demand アプリケーションの作成 {#creating-an-on-demand-application}
 
@@ -33,12 +33,12 @@ ht-degree: 95%
 >
 >ダッシュボードは、アプリのコンテンツ、メタデータおよび AEM Mobile On-Demand の接続ステータスの概要を把握できる一連の便利なタイルです。
 >
->詳しくは、[AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md)を参照してください。
+>詳しくは、 [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 」を参照してください。
 
 **On-Demand アプリを作成するには：**
 
 1. サイドレールから「**モバイル**」を選択します。
-1. ナビゲーションから「**アプリ**」を選択します。
+1. 選択 **アプリ** をクリックします。
 1. 「**作成**」をクリックし、ドロップダウンから「**アプリ**」を選択します。
 1. モバイルアプリのテンプレートを選択し、「**次へ**」をクリックします。
 1. 「**タイトル**」、「**名前**」、「**説明**」など、アプリのプロパティを入力します。
@@ -64,7 +64,7 @@ ht-degree: 95%
 
 アプリケーションダッシュボードから On-Demand アプリを作成したら、次のステップでは、アプリをクラウド設定に関連付けます。
 
-詳しくは、[アプリのクラウド設定への関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)を参照してください。
+詳しくは、 [アプリをクラウド設定に関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
 
 ### さらに先のステップ {#getting-ahead}
 

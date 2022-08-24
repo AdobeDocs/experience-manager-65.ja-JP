@@ -1,8 +1,8 @@
 ---
 title: バッジコンソール
-seo-title: バッジコンソール
+seo-title: Badges Console
 description: Communities のバッジコンソールを使用すると、バッジを獲得（授与された）したとき、またはコミュニティで特定の役割についた（割り当てられた）ときにメンバーに表示できるカスタムバッジを追加できます
-seo-description: Communities のバッジコンソールを使用すると、バッジを獲得（授与された）したとき、またはコミュニティで特定の役割についた（割り当てられた）ときにメンバーに表示できるカスタムバッジを追加できます
+seo-description: The Communities Badges console lets you add custom badges that can be displayed for members when earned (awarded) or when they take on a specific role in the community (assigned)
 uuid: 7103b133-ef3f-47d6-a2dc-4e6ff92e8fed
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -14,8 +14,8 @@ role: Admin
 exl-id: 50ed9ec4-ff04-4f9d-aefb-0837542a9455
 source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 62%
+source-wordcount: '287'
+ht-degree: 57%
 
 ---
 
@@ -37,7 +37,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 オーサー環境で、バッジコンソールに移動します。
 
-* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL バッジ]**
+* グローバルナビゲーションから： **[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL バッジ]**
 
 このコンソールでは、現在利用可能なバッジが表示され、新しいバッジを追加できます。
 
@@ -45,7 +45,7 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 ## バッジを作成 {#create-badge}
 
-バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジ画像はリポジトリの`/libs/settings/community/badging/images`に保存され、パブリッシュ環境に自動的にレプリケートされます。
+バッジを作成するには、適度に小さい画像（高さが 26 から 32 ピクセルの 72 dpi）をアップロードし、名前を入力します。バッジの画像は、リポジトリ ( ) の `/libs/settings/community/badging/images` とは、パブリッシュ環境に自動的にレプリケートされます。
 
 パブリッシュ環境がパブリッシャーのファームである場合、[ユーザーの同期](/help/communities/sync.md)を設定する必要があります。
 
@@ -53,22 +53,22 @@ Communities のバッジコンソールでは、バッジを獲得（授与さ�
 
 * **画像をアップロード**
 
-   （*必須*）JPEG形式またはPNG形式で、32 x 32ピクセル、72dpiの推奨サイズを持つバッジ画像。
+   (*必須*)JPEGまたは PNG 形式の 72dpi での推奨サイズが 32 x 32 ピクセルのバッジ画像。
 
-* **Name**
+* **名前**
 
-   （*必須*）バッジ名。 デフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
+   (*必須*) バッジ名。 これがデフォルトです `Display Name` リポジトリのノード名。 この `Name` は有効なリポジトリノード名ではありません。変更されます。
 
 * **表示名**
 
-   （*オプション*）UIでバッジに表示する名前。 初期設定は、`Name`に入力された、変更されていないテキストです。
+   (*オプション*) UI でバッジに表示する名前です。 デフォルトは、 `Name`.
 
 * **説明**
 
-   （*オプション*）バッジの説明。
+   (*オプション*) バッジの説明。
 
 ## 追加情報 {#additional-information}
 
-スコアルールとバッジルールの設定について詳しくは、[スコアとバッジ](/help/communities/implementing-scoring.md)を参照してください。
+スコアルールとバッジルールの設定について詳しくは、 [スコアとバッジ](/help/communities/implementing-scoring.md).
 
 メンバーのバッジの管理については、[メンバーコンソール](/help/communities/members.md)を参照してください。

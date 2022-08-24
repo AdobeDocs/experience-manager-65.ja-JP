@@ -6,7 +6,7 @@ role: Architect, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
 source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1799'
 ht-degree: 100%
 
@@ -36,12 +36,12 @@ ht-degree: 100%
 
 [!DNL Experience Manager] にアセットを移行するにはいくつかの手順を経る必要があるので、フェーズ別に処理することをお勧めします。移行のフェーズは次のとおりです。
 
-1. ワークフローを無効化する。
-1. タグを読み込む。
-1. アセットを取り込む。
-1. レンディションを処理する。
-1. アセットをアクティベートする。
-1. ワークフローを有効化する。
+1. ワークフローの無効化.
+1. タグの読み込み.
+1. アセットの取り込み.
+1. レンディションの処理.
+1. アセットのアクティベート.
+1. ワークフローを有効化する.
 
 ![chlimage_1-223](assets/chlimage_1-223.png)
 

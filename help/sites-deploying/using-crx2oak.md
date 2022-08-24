@@ -14,7 +14,7 @@ exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
 source-git-commit: 08e7cbe50fbfb301b38c3c36dfa22bfc1024e181
 workflow-type: tm+mt
 source-wordcount: '1248'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -26,8 +26,7 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 このツールを使用して、Apache Jackrabbit 2 をベースとする以前の CQ バージョンから Oak にデータを移行したり、Oak リポジトリ間でデータをコピーしたりできます。
 
-次の場所で、パブリックAdobeリポジトリから最新バージョンの crx2oak をダウンロードできます。
-[https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
+最新バージョンの crx2oak は、次の場所で公開されているアドビのリポジトリからダウンロードできます。[https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
 最新バージョンの変更点と修正点の一覧は、[CRX2Oak のリリースノート](https://docs.adobe.com/content/help/ja/experience-manager-64/release-notes/crx2oak.html)にあります。
 

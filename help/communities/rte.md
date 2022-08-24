@@ -1,8 +1,8 @@
 ---
 title: リッチテキストエディターの基本事項
-seo-title: リッチテキストエディターの基本事項
+seo-title: Rich Text Editor Essentials
 description: リッチテキストエディター機能の概要
-seo-description: リッチテキストエディター機能の概要
+seo-description: Rich text Editor feature overview
 uuid: f96015cc-114b-431a-a5ba-dc195c2a0b83
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -12,8 +12,8 @@ discoiquuid: 0225a543-0fad-488b-8b0b-8b3512d44fbe
 exl-id: 821e32f4-da8d-4bbb-936a-0844b8a24cdd
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 74%
+source-wordcount: '230'
+ht-degree: 73%
 
 ---
 
@@ -29,16 +29,16 @@ ht-degree: 74%
 
 ## リッチテキストエディターの有効化 {#enabling-rich-text-editor}
 
-ユーザー生成コンテンツ（UGC）を許可するコミュニティコンポーネントを有効にすることによって、RTE を許可することができます。コンポーネントがページに追加されたか、[関数](functions.md)内に含まれたかに応じて、RTEがデフォルトで有効になっている場合とそうでない場合があります。
+ユーザー生成コンテンツ（UGC）を許可するコミュニティコンポーネントを有効にすることによって、RTE を許可することができます。コンポーネントがページに追加されたか、ページ内に含まれたかに応じて [関数](functions.md)の場合、RTE はデフォルトで有効になっている場合と無効になっている場合があります。
 
-有効になっていない場合は、[オーサー編集モード](sites-console.md#authoring-site-content)に入り、編集するコンポーネントを選択し、`Rich Text Editor`チェックボックスをオンにします。
+有効になっていない場合は、 [オーサー編集モード](sites-console.md#authoring-site-content)をクリックし、編集するコンポーネントを選択して、 `Rich Text Editor` チェックボックス。
 
 RTE は、次のコミュニティコンポーネントに使用できます。
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
 * [コメント](comments.md)
-* [ファイルライブラリ](file-library.md)
+* [Filelibrary](file-library.md)
 * [フォーラム](forum.md)
 * [メッセージ](configure-messaging.md)
 * [Q&amp;A](working-with-qna.md)
@@ -56,11 +56,11 @@ RTE は、次のコミュニティコンポーネントに使用できます。
 
 ### カスタマイズの例：インラインリンク {#example-customization-inline-links}
 
-セキュリティ上の懸念事項により、デフォルトでメンバーに表示されるリッチテキストアイコンのセットにハイパーリンクオプションは含まれません。UGCでhrefが許可されている場合、悪戯の機能は広範です。
+セキュリティ上の懸念事項により、デフォルトでメンバーに表示されるリッチテキストアイコンのセットにハイパーリンクオプションは含まれません。UGC で href が許可されている場合、悪戯の能力は大きくなります。
 
 ツールバーにハイパーリンクオプションを追加するには：
 
-* 「 `links` 」という名前のツールバーを追加します。
+* 「 `links`&quot;
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
 * 「**[!UICONTROL すべて保存]**」を選択します。
 

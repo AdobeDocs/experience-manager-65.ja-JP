@@ -10,7 +10,7 @@ discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
 source-git-commit: b6774acc4ec32c87a5ad5f5b2ea885e1e1aa867e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 100%
 
@@ -160,7 +160,7 @@ ht-degree: 100%
 * 編集（テキストフラグメントの場合のみ）：テキストドキュメントフラグメントを編集するためのリッチテキストエディターが起動します。詳しくは、[テキストのフォーマット](#formattingtext)を参照してください。
 
 * 選択（目のアイコン）：インタラクティブ通信にドキュメントフラグメントを含めたり、インタラクティブ通信からドキュメントフラグメントを除外したりすることができます。
-* 未入力値：ターゲット領域の未入力変数の数が表示されます。これは、表示専用情報です。
+* 未入力値：ドキュメントフラグメントの未入力変数の数が表示されます。これは、表示専用情報です。
 
 ### リストドキュメントフラグメント {#list-document-fragments}
 

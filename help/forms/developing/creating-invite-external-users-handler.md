@@ -4,7 +4,7 @@ description: 外部ユーザー招待ハンドラーの作成
 role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 100%
 
