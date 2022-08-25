@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b14cbc4cad15b06754db8b8c992a596d4d64c096
+source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
 workflow-type: tm+mt
-source-wordcount: '6037'
+source-wordcount: '6253'
 ht-degree: 99%
 
 ---
@@ -85,11 +85,11 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 ## Cloud Services での Dynamic Media 設定の作成 {#configuring-dynamic-media-cloud-services}
 
-**Dynamic Media を設定する前に** - Dynamic Media 資格情報を含むプロビジョニングメールを受け取ったら、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)をクリックし、アカウントにサインインしてパスワードを変更します。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+<!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
-![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
+   ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**Cloud Services での Dynamic Media 設定の作成：**
+**To create a Dynamic Media Configuration in Cloud Services:** -->
 
 1. Experience Manager オーサーモードで、Experience Manager ロゴを選択してグローバルナビゲーションコンソールにアクセスし、ツールアイコンを選択して、**[!UICONTROL Cloud Services]** ／**[!UICONTROL Dynamic Media Configuration]** に移動します。
 1. Dynamic Media 設定ブラウザーページの左側のパネルで、「**[!UICONTROL グローバル]**」を選択して（「**[!UICONTROL グローバル]**」の左側にあるフォルダーアイコンは選択しないでください）、「**[!UICONTROL 作成]**」を選択します。
@@ -97,8 +97,24 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
    **[!UICONTROL Dynamic Media に接続]**&#x200B;を選択します。
 
-   >[!NOTE]
-   Dynamic Media 資格情報を含むプロビジョニングメールを受け取ったら、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにサインインしてパスワードを変更します。プロビジョニング電子メールで提供されたパスワードは、システムが生成したもので、一時的なパスワードです。Dynamic Media Cloud Service が正しい資格情報で設定されるように、パスワードを更新することが重要です。
+1. **[!UICONTROL パスワードを変更]**&#x200B;ダイアログボックスの「**[!UICONTROL 新しいパスワード]**」フィールドに、8～25 文字の新しいパスワードを入力します。パスワードには、次のうち少なくとも 1 つを含める必要があります。
+
+   * 大文字
+   * 小文字
+   * Number
+   * 特殊文字：`# $ & . - _ : { }`
+
+   「**[!UICONTROL 現在のパスワード]**」フィールドは意図的に事前入力されており、操作時には非表示になっています。
+
+   必要に応じて、パスワードの目のアイコンを選択してパスワードを表示し、入力または再入力したパスワードのスペルを確認できます。アイコンをもう一度選択すると、パスワードが非表示になります。
+
+1. 「**[!UICONTROL パスワードを繰り返す]**」フィールドに新しいパスワードを再入力し、「**[!UICONTROL 完了]**」を選択します。
+
+   新しいパスワードは、**[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」を選択したときに保存されます。
+
+   **[!UICONTROL パスワードを変更]**&#x200B;ダイアログボックスで「**[!UICONTROL キャンセル]**」を選択した場合でも、新規作成の Dynamic Media 設定を保存する際に、新しいパスワードを入力する必要があります。
+
+   [Dynamic Media のパスワードの変更](#change-dm-password)も参照してください。
 
 1. 接続に成功したら、次のように設定します。アスタリスク（*）を含む見出しが必須です。
 
@@ -147,6 +163,37 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 これで基本設定が完了しました。Dynamic Media - Scene7 モードを使用する準備が整いました。
 
 設定をさらにカスタマイズする場合は、[（任意）Dynamic Media - Scene7 モードでの詳細設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)で示す任意のタスクを実行できます。
+
+### Dynamic Media のパスワードの変更 {#change-dm-password}
+
+Dynamic Media でのパスワードの有効期限は、現在のシステム日付から 100 年間に設定されています。
+
+パスワードには、次のうち少なくとも 1 つを含める必要があります。
+
+* 大文字
+* 小文字
+* 数値
+* 特殊文字：`# $ & . - _ : { }`
+
+必要に応じて、パスワードの目のアイコンを選択してパスワードを表示し、入力または再入力したパスワードのスペルを確認できます。アイコンをもう一度選択すると、パスワードが非表示になります。
+
+変更したパスワードは、**[!UICONTROL Dynamic Media 設定を編集]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」を選択したときに保存されます。
+
+**パスワードをDynamic Mediaに変更するには：**
+
+1. Experience Manager 作成者モードで、Experience Manager ロゴを選択して、グローバルナビゲーションコンソールにアクセスします。
+1. コンソールの左側でツールアイコンを選択し、に移動します。 **[!UICONTROL Cloud Services] > [!UICONTROL Dynamic Media Configuration]**.
+1. Dynamic Media 設定ブラウザーページの左側のペインで「**[!UICONTROL global]**」を選択します。**[!UICONTROL global]** の左側にあるフォルダーアイコンを選択しないでください。次に、「**[!UICONTROL 編集]**」を選択します。
+1. **[!UICONTROL Dynamic Media 設定を編集]**&#x200B;ページで「**[!UICONTROL パスワード]**」フィールドのすぐ下の「**[!UICONTROL パスワードを変更]**」を選択します。
+1. **[!UICONTROL パスワードを変更]**&#x200B;ダイアログボックスで以下を行います。
+
+   * 「**[!UICONTROL 新しいパスワード]**」フィールドに、新しいパスワードを入力します。
+
+      「**[!UICONTROL 現在のパスワード]**」フィールドは意図的に事前入力されており、操作時には非表示になっています。
+
+   * 「**[!UICONTROL パスワードを繰り返す]**」フィールドに新しいパスワードを再入力し、「**[!UICONTROL 完了]**」を選択します。
+
+1. **[!UICONTROL Dynamic Media 設定を編集]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」を選択したあと、「**[!UICONTROL OK]**」を選択します。
 
 ## （任意）Dynamic Media - Scene7 モードでの詳細設定 {#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
@@ -384,7 +431,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 **デフォルトの命名規則を設定するには、以下の手順に従います。**
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、アカウントにログインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、アドビカスタマーサポートにお問い合わせください。
 

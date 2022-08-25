@@ -12,10 +12,10 @@ discoiquuid: b7777dc5-a867-4799-9e2c-a1f4bb5dd96a
 docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: de774bec7440805273928267ea6c09669720ea24
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 100%
+source-wordcount: '962'
+ht-degree: 98%
 
 ---
 
@@ -114,6 +114,17 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 コンテンツフラグメント管理では、初期レンダリング処理を使用してページの最終的な HTML 出力を生成します。これは、コンテンツフラグメントコンポーネントによって内部で使用されますが、参照ページ上の参照フラグメントを更新するバックグラウンド処理でも使用されます。
 
 内部では、このレンダリングに Sling Rewriter を使用します。各設定は `/libs/dam/config/rewriter/cfm` にあり、必要に応じて調整できます。詳しくは、[Apache Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) を参照してください。
+
+>[!CAUTION]
+>
+>リライターの設定を調整/オーバーレイする場合：
+>
+>* `/libs/dam/config/rewriter/cfm`
+>
+>その後 `serializerType` **必須** 更新先：
+>
+>* `serializerType="html5-serializer"`
+
 
 既製の設定は、次の変換サービスを使用します。
 
