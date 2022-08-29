@@ -226,7 +226,6 @@ hybris で管理されている製品データを AEM で使用できるよう�
 >1. `size`
 >
 >1. さらにもう 1 つ
-
 >
 >この追加バリアントは、製品リファレンスの `variationAxis` プロパティ（Geometrixx Outdoors の場合、通常は `color`）を使用して選択されます。
 
