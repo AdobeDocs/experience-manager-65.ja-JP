@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 6c6f67929b774492d8caa052598b8c33e9a41710
+source-git-commit: 74e3d4204166280e8624298098042b8cb222c034
 workflow-type: tm+mt
 source-wordcount: '6253'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -118,9 +118,9 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 1. 接続に成功したら、次のように設定します。アスタリスク（*）を含む見出しが必須です。
 
-   * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。複数の Dynamic Media アカウントを持つことができます。例えば、異なるサブブランド、事業部、ステージングまたは実稼動環境を持つことができます。
+   * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。Experience Managerでは、1 つのDynamic Mediaアカウントを使用できます。 <!-- CQDOC-19579 and CQDOC-19612 -->
 
-   <!-- UNHIDE FEBRUARY 24, 2022 See also [Configure Dynamic Media company alias account](/help/assets/dm-alias-account.md). -->
+      関連トピック [Dynamic Media会社エイリアスアカウントの設定](/help/assets/dm-alias-account.md).
 
    * **[!UICONTROL 会社のルートフォルダーのパス]**
 
