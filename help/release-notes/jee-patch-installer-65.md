@@ -5,7 +5,7 @@ uuid: 76662858-afca-4ba3-883b-9b9a61874f15
 content-type: reference
 discoiquuid: b0283feb-c3ec-4ef0-885c-46bc83a61e26
 exl-id: 6b17472b-9226-4319-b305-4dba862d21af
-source-git-commit: 495b9a006f5288ad6579e13aaea82ace6d6f0e91
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 69%
@@ -16,7 +16,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->詳細情報またはパッチの入手については、[サポートにお問い合わせ](https://www.adobe.com/account/sign-in.supportportal.html)ください。
+>詳細情報またはパッチの入手については、[サポートにお問い合わせ](https://www.adobe.com/jp/account/sign-in.supportportal.html)ください。
 
 ## パッチインストーラーについて {#about-the-patch-installer}
 
@@ -65,8 +65,8 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
-   * [AEM Forms のインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
-   * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
+   * [AEM Forms のインストールおよびデプロイ（JBoss 版）](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
+   * [AEM Forms のインストールおよびデプロイ（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
 
 1. （JBoss のみ）パッチをインストールしてサーバーを設定した後、JBoss Application Server の tmp および work ディレクトリを削除します。
 

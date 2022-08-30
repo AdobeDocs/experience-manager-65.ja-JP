@@ -6,10 +6,10 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
+source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
-source-wordcount: '3802'
-ht-degree: 95%
+source-wordcount: '3803'
+ht-degree: 94%
 
 ---
 
@@ -33,14 +33,14 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 
 [!UICONTROL ページエディター]でページをターゲット先として編集する場合、作成者は、アセットのソースとして機能する別の [!DNL Assets] デプロイメントのアセットをシームレスに検索、参照および埋め込むことができます。管理者は、 [!DNL Sites] の機能を備える [!DNL Experience Manager] のデプロイメントと [!DNL Assets] の機能を備える [!DNL Experience Manager] 別のデプロイメントとの 1 回限りの統合を作成します。サイト作成者は、Connected Assets を通じてサイトの web ページで Dynamic Media 画像を使用し、スマート切り抜きや画像プリセットなどの Dynamic Media 機能を利用することもできます。
 
-[!DNL Sites] 作成者の場合、リモートアセットは読み取り専用のローカルアセットとして利用できます。この機能は、サイトエディター上のリモートアセットへのシームレスな検索とアクセスをサポートします。Sites で完全なアセットコーパスを使用する必要があるその他のユースケースについては、Connected Assets を活用する代わりにアセットの一括移行を検討してください。詳しくは、[Experience Manager Assets 移行ガイド](/help/assets/assets-migration-guide.md)を参照してください。
+[!DNL Sites] 作成者の場合、リモートアセットは読み取り専用のローカルアセットとして利用できます。この機能は、サイトエディター上のリモートアセットへのシームレスな検索とアクセスをサポートします。Sites で完全なアセットコーパスを使用する必要があるその他の使用例については、Connected Assets を使用する代わりにアセットを一括で移行することを検討してください。 詳しくは、[Experience Manager Assets 移行ガイド](/help/assets/assets-migration-guide.md)を参照してください。
 
 ### 前提条件とサポートされているデプロイメント {#prerequisites}
 
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は [!DNL Experience Manager] as a Cloud Service で使用できます。この機能が [!DNL Experience Manager] as a [!DNL Cloud Service]を参照してください。 [Connected Assets inExperience Manageras a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja).
+* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は [!DNL Experience Manager] as a Cloud Service で使用できます。この機能が [!DNL Experience Manager] as a [!DNL Cloud Service]を参照してください。 [Connected Assets inExperience Manageras a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html).
 
    |  | [!DNL Sites] as a [!DNL Cloud Service] | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
    |---|---|---|---|
@@ -158,8 +158,7 @@ Connected Assets で [!DNL Dynamic Media] を使用するには、以下の手�
 
 [!DNL Assets] および [!DNL Sites] のデプロイメントで [!DNL Dynamic Media] を設定するには、以下を実行します。
 
-1. [!DNL Dynamic Media] を有効にして、リモート [!DNL Assets] 作成者デプロイメントでグローバル構成として設定します。Dynamic Media を設定するには、[Dynamic Media の設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。<br/>
-リモート [!DNL Assets] デプロイメントの [!UICONTROL Dynamic Media 同期モード]で、「**[!UICONTROL デフォルトで有効]**」を選択します。
+1. [!DNL Dynamic Media] を有効にして、リモート [!DNL Assets] 作成者デプロイメントでグローバル構成として設定します。Dynamic Media を設定するには、[Dynamic Media の設定](/help/assets/config-dynamic.md#configuring-dynamic-media-cloud-services)を参照してください。リモート [!DNL Assets] デプロイメントの [!UICONTROL  Dynamic Media 同期モード]で、「**[!UICONTROL デフォルトで有効]**」を選択します。
 
 1. [Sites デプロイメントと Assets デプロイメント間の接続の設定](#configure-a-connection-between-sites-and-assets-deployments)に説明されているとおりに、Connected Assets を設定します。また、「**[!UICONTROL Dynamic Media Connected Assets 用の元のレンディションを取得]**」オプションを選択します。
 
@@ -169,7 +168,7 @@ Connected Assets で [!DNL Dynamic Media] を使用するには、以下の手�
    * ローカルの [!DNL Sites] の [!UICONTROL Dynamic Media 同期モード]で、「**[!UICONTROL デフォルトで無効]**」を選択します。[!DNL Sites] デプロイメントでは、[!DNL Dynamic Media] アカウントに対する読み取り専用アクセスが必要です。
    * ローカルの [!DNL Sites] の「**[!UICONTROL アセットを公開]**」オプションで、「**[!UICONTROL 選択的公開]**」を選択します。「**[!UICONTROL すべてのコンテンツを同期]**」は選択しないでください。
 
-1. 画像コアコンポーネントで[[!DNL Dynamic Media] サポートを有効にします。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja#dynamic-media)この機能を使用すると、ローカルの [!DNL Sites] デプロイメント上の web ページの作成者が [!DNL Dynamic Media] 画像を使用する場合、デフォルトの[画像コンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html)に [!DNL Dynamic Media] 画像を表示できます。
+1. 画像コアコンポーネントで[[!DNL Dynamic Media] サポートを有効にします。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja#dynamic-media)この機能を使用すると、ローカルの [!DNL Sites] デプロイメント上の web ページの作成者が [!DNL Dynamic Media] 画像を使用する場合、デフォルトの[画像コンポーネント](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html)に [!DNL Dynamic Media] 画像を表示できます。
 
 ## リモートアセットの使用 {#use-remote-assets}
 
