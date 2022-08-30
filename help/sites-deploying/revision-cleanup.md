@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
 workflow-type: tm+mt
-source-wordcount: '5904'
-ht-degree: 100%
+source-wordcount: '5912'
+ht-degree: 97%
 
 ---
 
@@ -128,7 +128,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### AEM 6.5 のアップグレードに関する考慮事項 {#aem-upgrade-considerations}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td>質問 </td>
@@ -143,7 +143,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### Oak Segment Tar への移行 {#migrating-to-oak-segment-tar}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>質問</strong></td>
@@ -205,7 +205,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### オンラインでのリビジョンクリーンアップの実行 {#running-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>質問</strong></td>
@@ -368,7 +368,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### オンラインでのリビジョンクリーンアップの監視 {#monitoring-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップ中に監視する必要があるものは何ですか。</strong></td>
@@ -387,7 +387,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>最新のオンラインでのリビジョンクリーンアップの実行に関する統計はどこで確認できますか。</strong></td>
-   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で表示されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
+   <td><p>ステータス、進行状況および統計は、JMX（<code>SegmentRevisionGarbageCollection</code> MBean）経由で表示されます。<code>SegmentRevisionGarbageCollection</code> MBean の詳細に関しては、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">次の段落</a> を参照してください。</p> <p>進行状況は、 <code>EstimatedRevisionGCCompletion</code> のフィールド名で追跡できます。 <code>SegmentRevisionGarbageCollection MBean.</code></p> <p>MBean の参照を取得するには、 <code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用します。</p> <p>確認できるのは、システムを最後に起動した以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。詳細に関しては、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>を参照してください。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -396,15 +396,15 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>オンラインでのリビジョンクリーンアップが開始/停止しました
       <ul>
-       <li>オンラインでのリビジョンクリーンアップは、見積もり、コンパクション、クリーンアップの 3 つのフェーズで構成されます。リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンの AEM では、メッセージ「<code>TarMK GC #{}: estimation started</code>」は見積もりの開始を示し、「<code>TarMK GC #{}: compaction started, strategy={}</code>」はコンパクションの開始を示し、「T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>」はクリーンアップの開始を示します。</li>
+       <li>オンラインでのリビジョンクリーンアップは、見積もり、コンパクション、クリーンアップの 3 つのフェーズで構成されます。リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンのAEMでは、「<code>TarMK GC #{}: estimation started</code>「見積もりの開始を示す」<code>TarMK GC #{}: compaction started, strategy={}</code>"コンパクションの開始をマークし、"T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>"は、クリーンアップの開始をマークします。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップで取得したディスクスペース
       <ul>
-       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み付け／深さは {}／{}（{} バイト／{}）です。</li>
+       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み/深さは {}/{} （{} バイト/{}）です。"</li>
       </ul> </li>
      <li>リビジョンのクリーンアップ中に問題が発生しました
       <ul>
-       <li>多くの失敗条件があり、すべての障害は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。</li>
+       <li>多くの障害状態があり、すべての障害は、「TarMK GC」で始まる WARN または ERROR ログメッセージでマークされます。</li>
       </ul> </li>
     </ul> <p>また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</p> </td>
    <td> </td>
@@ -425,7 +425,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップが失敗したかどうかを検出する方法と、回復する手順を教えてください。</strong></td>
-   <td>失敗条件は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
+   <td>障害状態は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。 また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
    <td> </td>
   </tr>
   <tr>
@@ -435,7 +435,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><p><strong>スタンバイインスタンスで自動クリーンアップを監視する方法を教えてください。</strong></p> </td>
-   <td><p>ステータス、進行状況および統計は、<code>SegmentRevisionGarbageCollection</code> MBean を使用し、JMX 経由で表示されます。次の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak ドキュメント</a>も参照してください。 </p> <p>MBean の参照は、<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection”</code> を使用して取得できます。</p> <p>確認できるのは、システムが最後に起動されて以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。また、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>も参照してください。</p> <p>ログファイルを使用して、自動クリーンアップのステータス、進行状況および統計情報を確認することもできます。</p> </td>
+   <td><p>ステータス、進行状況および統計は、<code>SegmentRevisionGarbageCollection</code> MBean を使用し、JMX 経由で表示されます。次の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#monitoring-via-jmx" target="_blank">Oak ドキュメント</a>も参照してください。 </p> <p>MBean の参照は、<code>ObjectName org.apache.jackrabbit.oak:name="Segment node store revision garbage collection",type="SegmentRevisionGarbageCollection"</code> を使用して取得できます。</p> <p>確認できるのは、システムが最後に起動されて以降の統計情報のみであることにご注意ください。外部の監視ツールを利用すると、AEM の稼動時間外もデータを監視できます。また、 <a href="/help/sites-administering/operations-dashboard.md#monitoring-with-nagios" target="_blank">外部の監視ツールの例として、Nagios にヘルスチェックを接続するための AEM のドキュメント</a>も参照してください。</p> <p>ログファイルを使用して、自動クリーンアップのステータス、進行状況および統計情報を確認することもできます。</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -453,7 +453,7 @@ TarMK GC: no base state available, running full compaction instead
 
 ### オンラインでのリビジョンクリーンアップのトラブルシューティング {#troubleshooting-online-revision-cleanup}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップを実行しない場合に起こり得る最悪の状況は何ですか。</strong></td>
@@ -507,15 +507,68 @@ TarMK GC: no base state available, running full compaction instead
 
 オンラインでのリビジョンクリーンアッププロセス中に問題が発生した場合、詳細な error.log が生成されます。以下のマトリックスでは、最も一般的なメッセージを説明し、解決策を示しています。
 
-| **フェーズ** | **ログメッセージ** | **説明** | **次の手順** |
+<!---| **Phase** |**Log Messages** |**Explanation** |**Next Steps** |
 |---|---|---|---|
-|  |  |  |  |
-| 見積もり | TarMK GC #2：圧縮が一時停止されたので、見積もりはスキップされました | 設定によってシステムでコンパクションが無効になっている場合は、見積もりフェーズがスキップされます。 | オンラインでのリビジョンクリーンアップの有効化. |
-|  | TarMK GC #2：見積もりが中断されました：${REASON}。Skipping compaction. | 見積もりフェーズが完了せずに終了しました。見積もりフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。 | 示されている理由によって異なります。 |
-| コンパクション | TarMK GC #2：コンパクションは一時停止されました | 設定によってコンパクションフェーズが一時停止している限り、見積もりフェーズもコンパクションフェーズも実行されません。 | オンラインでのリビジョンクリーンアップの有効化。 |
-|  | TarMK GC #2：コンパクションがキャンセルされました：${REASON}。 | コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。さらに、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルした場合も、コンパクションがキャンセルされることがあります。 | 示されている理由によって異なります。 |
-|  | TarMK GC #2：5 回のサイクル後、32.902 分 (1974140 ms) でコンパクションに失敗しました | このメッセージは、復旧不可能なエラーがあったのではなく、一定数の試行の後にコンパクションが終了されたことのみを意味します。また、 [次の段落](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes) を参照してください。 | 以下の [Oak ドキュメント](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes) および [オンラインでのリビジョンクリーンアップの実行](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) の節の最後の質問をお読みください。 |
-| クリーンアップ | TarMK GC #2：クリーンアップが中断されました | リポジトリーをシャットダウンしてクリーンアップがキャンセルされました。整合性への影響はありません。また、多くの場合、ディスク領域は完全には再利用されません。残りの領域は、次のリビジョンクリーンアップサイクルで再利用されます。 | リポジトリがシャットダウンされた理由を調査し、今後はメンテナンスウィンドウ中にリポジトリがシャットダウンされないようにします。 |
+|   |  |  |  |
+| Estimation |TarMK GC #2: estimation skipped because compaction is paused |The estimation phase is skipped when compaction is disabled on the system by configuration. |Enable Online Revision Cleanup. |
+|   |TarMK GC #2: estimation interrupted: ${REASON}. Skipping compaction. |The estimation phase terminated prematurely. Some examples of events that could interrupt the estimation phase: not enough memory or disk space on the host system. |Depends on the given reason. |
+| Compaction |TarMK GC #2: compaction paused |As long as the compaction phase is paused by configuration, neither the estimation phase nor the compaction phase will be executed. |Enable online revision cleanup. |
+|   |TarMK GC #2: compaction cancelled: ${REASON}. |The compaction phase terminated prematurely. Some examples of events that could interrupt the compaction phase: not enough memory or disk space on the host system. Moreover, compaction can also be cancelled by shutting down the system or by explicitly cancelling it via administrative interfaces such as the Maintenance Window within the Operations Dashobard. |Depends on the given reason. |
+|   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message doesn’t mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
+| Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |-->
+
+<table style="table-layout:auto">
+ <tbody>
+  <tr>
+    <th>フェーズ</th>
+    <th>ログメッセージ</th>
+    <th>説明</th>
+    <th>次の手順</th>
+  </tr>  
+  <tr>
+    <td>見積もり</td>
+    <td>TarMK GC #2：圧縮が一時停止されたので、見積もりはスキップされました。</td>
+    <td>設定によってシステムでコンパクションが無効になっている場合は、見積もりフェーズがスキップされます。</td>
+    <td>オンラインでのリビジョンクリーンアップの有効化.</td>
+  </td>
+  </tr>
+  <tr>
+    <td>該当なし</td>
+    <td>TarMK GC #2：見積もりが中断されました：${REASON}。Skipping compaction.</td>
+    <td>見積もりフェーズが完了せずに終了しました。見積もりフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。</td>
+    <td>示されている理由によって異なります。</td>
+  </td>
+  </tr>
+  <tr>
+    <td>コンパクション</td>
+    <td>TarMK GC #2：コンパクションは一時停止されました。</td>
+    <td>設定によってコンパクションフェーズが一時停止している限り、見積もりフェーズもコンパクションフェーズも実行されません。</td>
+    <td>オンラインでのリビジョンクリーンアップの有効化。</td>
+  </td>
+  </tr>
+   <tr>
+    <td>該当なし</td>
+    <td>TarMK GC #2：コンパクションがキャンセルされました：${REASON}。</td>
+    <td>コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。また、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルすることで、コンパクションをキャンセルすることもできます。</td>
+    <td>示されている理由によって異なります。</td>
+  </td>
+  </tr>
+  <tr>
+    <td>該当なし</td>
+    <td>TarMK GC #2：5 回のサイクル後、32.902 分 (1974140 ms) でコンパクションに失敗しました.</td>
+    <td>このメッセージは、復旧不可能なエラーがあったのではなく、一定数の試行の後にコンパクションが終了されたことのみを意味します。また、 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">」を参照してください。</a></td>
+    <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> および オンラインでのリビジョンクリーンアップの実行 の節の最後の質問をお読みください。</a></td>
+  </td>
+  </tr>
+  <tr>
+    <td>クリーンアップ</td>
+    <td>TarMK GC #2：クリーンアップが中断されました。</td>
+    <td>リポジトリーをシャットダウンしてクリーンアップがキャンセルされました。整合性への影響はありません。また、ディスク容量が完全に再利用されない可能性が高くなります。 残りの領域は、次のリビジョンクリーンアップサイクルで再利用されます。</td>
+    <td>リポジトリがシャットダウンされた理由を調べ、今後はメンテナンスウィンドウ中にリポジトリがシャットダウンされないようにします。</td>
+  </td>
+  </tr>
+  </tbody>
+</table>
 
 ## オフラインでのリビジョンクリーンアップの実行方法 {#how-to-run-offline-revision-cleanup}
 
@@ -601,7 +654,7 @@ java -Dupdate.limit=10000 -Dcompaction-progress-log=150000 -Dlogback.configurati
 
 ### オフラインでのリビジョンクリーンアップに関するよくある質問 {#offline-revision-cleanup-frequently-asked-questions}
 
-<table>
+<table style="table-layout:auto">
  <tbody>
   <tr>
    <td><strong>オフラインでのリビジョンクリーンアップの時間に作用する要因は何ですか。</strong></td>
