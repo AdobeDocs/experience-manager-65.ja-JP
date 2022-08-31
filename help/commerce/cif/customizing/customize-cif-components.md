@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: dceb187ba28ad7c377e98d29d6c815fe37e23077
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2604'
 ht-degree: 100%
@@ -344,7 +344,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
-   <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+   <jcr:root xmlns:sling="https://sling.apache.org/jcr/sling/1.0" xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
        jcr:description="Product Teaser Component"
        jcr:primaryType="cq:Component"
        jcr:title="Product Teaser"

@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: 2fd1a21a-0f90-49d8-9f62-383b268d540d
 role: Developer
 exl-id: 703b6798-d40f-4769-96fc-e440090ca983
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 100%
@@ -62,7 +62,7 @@ AEM Forms リポジトリにあるリソースへのパスは次のとおりで�
 
 >[!NOTE]
 >
->Applications/FormsApplication はデフォルトでは存在しません。クイックスタートに従うには、Workbench を使用してこのアプリケーションを作成します。Workbench を使用したアプリケーションの作成について詳しくは、[プロセスデザインの概要](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)を参照してください。
+>Applications/FormsApplication はデフォルトでは存在しません。クイックスタートに従うには、Workbench を使用してこのアプリケーションを作成します。Workbench を使用したアプリケーションの作成について詳しくは、[プロセスデザインの概要](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)を参照してください。
 
 ## クイックスタート（SOAP モード）：Java API を使用したフォルダーの作成 {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 

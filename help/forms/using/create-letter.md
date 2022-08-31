@@ -9,10 +9,10 @@ topic-tags: correspondence-management
 discoiquuid: 6cef0bcf-e2f0-4a5a-85a1-6d8a5dd9bd01
 feature: Correspondence Management
 exl-id: 2f996a50-7c7d-41b6-84b2-523b6609254b
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '3982'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -69,7 +69,7 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
 #### レイアウトフラグメント {#layout-fragment}
 
-レイアウトフラグメントは、1 つ以上のレター内で使用できるレイアウトです。繰り返し可能なパターン（特に動的テーブル）を作成するには、レイアウトフラグメントを使用します。レイアウトには、「アドレス」や「参照番号」などの一般的なフォームフィールドを含めることができます。また、ターゲット領域を示す空のサブフォームを含めることもできます。レイアウト（XDP）は Designer で作成され、その後 [Forms や Documents にアップロード](/help/forms/using/get-xdp-pdf-documents-aem.md)されます。
+レイアウトフラグメントは、1 つ以上のレター内で使用できるレイアウトです。繰り返し可能なパターン（特に動的テーブル）を作成するには、レイアウトフラグメントを使用します。レイアウトには、「住所」や「参照番号」など、一般的なフォームフィールドを含めることができます。 また、ターゲット領域を示す空のサブフォームを含めることもできます。レイアウト（XDP）は Designer で作成され、その後 [Forms や Documents にアップロード](/help/forms/using/get-xdp-pdf-documents-aem.md)されます。
 
 ### レターの作成 {#letter-creation}
 
@@ -230,7 +230,7 @@ Correspondence Management ワークフローは、次の 4 つのフェーズか
 
 * [互換性パッケージ](compatibility-package.md)。互換性パッケージをインストールし、**Forms** ページの「**レター**」オプションを表示します。
 * レター XDP（[レイアウト](/help/forms/using/document-fragments.md)）。
-* レターのパーツを形成するその他の XDP（[レイアウトフラグメント](document-fragments.md#document-fragments)）。XDPs\Layouts は [Designer](http://www.adobe.com/go/learn_aemforms_designer_65_jp) 内に作成されます。
+* レターのパーツを形成するその他の XDP（[レイアウトフラグメント](document-fragments.md#document-fragments)）。XDPs\Layouts は [Designer](https://www.adobe.com/go/learn_aemforms_designer_65_jp) 内に作成されます。
 * 関連する[データディクショナリ](/help/forms/using/data-dictionary.md)（オプション）。
 * 通信に使用する[データモジュール](/help/forms/using/document-fragments.md)。
 * [テストデータ](/help/forms/using/data-dictionary.md#p-working-with-test-data-p) は、テストデータが格納される XML ファイルです。データディクショナリを使用する場合は、テストデータが必要です。

@@ -6,7 +6,7 @@ seo-description: AEM Modernization Tools help you easily convert your legacy AEM
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 exl-id: 8865a641-fdac-43ab-b1c3-722f120cd749
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 100%
@@ -15,14 +15,14 @@ ht-degree: 100%
 
 # AEM Modernization Tools {#modernization-tools}
 
-[AEM Modernization Tools を使用すると、以下の変換を容易におこなえるようになります。](http://opensource.adobe.com/aem-modernize-tools/)
+[AEM Modernization Tools を使用すると、以下の変換を容易におこなえるようになります。](https://opensource.adobe.com/aem-modernize-tools/)
 
 * [静的テンプレート](page-templates-static.md)から[編集可能テンプレートへ](page-templates-editable.md)
 * [デザイン設](page-templates-static.md)定から[ポリシーへ](page-templates-editable.md)
-* [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)から[コアコンポーネントへ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)から[コアコンポーネントへ](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/introduction.html)
 * [クラシック UI](website.md) [からタッチ操作対応 UI へ](touch-ui-concepts.md)
 
-これらのツールの使用方法について詳しくは、[ぞれぞれのドキュメント](http://opensource.adobe.com/aem-modernize-tools/)を参照してください。
+これらのツールの使用方法について詳しくは、[ぞれぞれのドキュメント](https://opensource.adobe.com/aem-modernize-tools/)を参照してください。
 
 >[!NOTE]
 >

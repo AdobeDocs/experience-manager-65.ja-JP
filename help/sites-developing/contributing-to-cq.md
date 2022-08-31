@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f52402df-f6dc-4c62-82bc-cbce489b2b74
 exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2709'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -63,7 +63,7 @@ Java コンテンツリポジトリでコンテンツをどのようにモデル
 
 REST アプローチは、作業内容に深く根ざしています。つまり、何よりも、ステートフルなインタラクションを回避すること、また、URI がコンテンツおよびサービスの確定的なアドレスであることを心に留めておくことです。
 
-REST（REpresentational State Transfer）は、World Wide Web の基礎となっているソフトウェアアーキテクチャスタイルを示します。Web を機能させるための重要な要素について説明するものであり、Web ベースのソフトウェアの設計方法について一連の原則を提供します。したがって、Web 経由で使用する API を設計するときは、これらの「ベストプラクティス」を順守することが合理的です。
+REST(REpresentational State Transfer) とは、World Wide Web が基にするソフトウェアアーキテクチャスタイルを指します。Web を動作させる主要な要素について説明し、Web ベースのソフトウェアの設計方法に関する一連の原則を示します。Web 上で使用する API をデザインする場合は、これらの「ベストプラクティス」に従うと効果的です。
 
 REST は非常に多くの作業の背景に指針となる考え方を提供するので、RESTful な設計の教義を熟知しておくことが不可欠と考える必要があります。手始めとしてふさわしいのは、[Roy Fielding 氏の論文](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)です。
 
@@ -143,7 +143,7 @@ Apache Sling の要求解決に関しては、コンテンツリポジトリの�
 
 JCR には事前に定義されたノードタイプおよびプロパティタイプが多数含まれていますが、一般的にタイピングシステムは非常に柔軟です。実際に、JCR の長所の 1 つは、構造化コンテンツも非構造化コンテンツも同じくらい簡単に格納および管理できることです。つまり、JCR には高度に構造化されたデータを含めることができますが、任意の動的データ構造もスキーマ制約なしで含めることができます。
 
-JCR の Java API に関する JavaDoc は、[こちら](http://jackrabbit.apache.org/jcr/jcr-api.html)を参照してください。
+JCR の Java API に関する JavaDoc は、[こちら](https://jackrabbit.apache.org/jcr/jcr-api.html)を参照してください。
 
 JavaDoc または JCR の仕様自体を読む前に、Adobe Experience Services によって実装された JCR の[概要](/help/sites-developing/the-basics.md#java-content-repository)にも目を通しておくことをお勧めします。
 

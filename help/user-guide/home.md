@@ -4,10 +4,10 @@ seo-title: AEM 6.5 User Guide Hub
 description: AEM 6.5 の理解、インストール、管理および使用に関する重要なリソースの概要
 seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
 exl-id: 51788662-6214-408e-98d9-692950c366be
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 100%
+ht-degree: 85%
 
 ---
 
@@ -48,8 +48,8 @@ ht-degree: 100%
 
 会話に参加する!
 
-* [AEM Sites フォーラム](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
-* [AEM Communities フォーラム](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
-* [AEM Forms フォーラム](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
-* [AEM Assets フォーラム](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
-* [AEM Mobile フォーラム](http://forums.adobe.com/community/experiencemanagermobile)
+* [AEM Sites フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+* [AEM Communities フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
+* [AEM Forms フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
+* [AEM Assets フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
+* [AEM Mobile フォーラム](https://forums.adobe.com/community/experiencemanagermobile)

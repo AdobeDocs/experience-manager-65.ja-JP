@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 5632a8df-a827-4e38-beaa-18b61c2208a3
 role: Admin
 exl-id: 847fa303-8d1e-4a17-b90d-5f9da5ca2d77
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 100%
@@ -25,7 +25,7 @@ AEM Forms JEE ワークフローには、ビジネスプロセスを設計、作
 * 監視フォルダーの使用
 * 電子メールの使用
 
-AEM Forms JEE ワークフロープロセスの作成について詳しくは、[Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)を参照してください。
+AEM Forms JEE ワークフロープロセスの作成について詳しくは、[Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)を参照してください。
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2244'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -36,11 +36,11 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><p>AEM Forms および AEM Forms を他の Adobe 製品と統合するための方法に関する一般的な情報</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65_jp">AEM Forms の概要</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms の概要</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>AEM Forms 用のすべてのドキュメント</p> </td>
-   <td><p><a href="http://adobe.com/go/learn_aemforms_introduction_65">AEM Forms のドキュメント</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms のドキュメント</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>現在のバージョンに関するパッチアップデート、テクニカルノート、および追加情報</p> </td>
@@ -99,7 +99,7 @@ Workbench は、開発者およびフォーム作成者が自動化されたビ�
 
 ### サポートされているプラットフォーム {#supported-platforms}
 
-Workbench でサポートされているプラットフォームの完全なリストについては、[AEM Forms でサポートされているプラットフォーム](http://adobe.com/go/learn_aemforms_supportedplatforms_65_jp)を参照してください。
+Workbench でサポートされているプラットフォームの完全なリストについては、[AEM Forms でサポートされているプラットフォーム](https://adobe.com/go/learn_aemforms_documentation_65_jp)を参照してください。
 
 ## Designer のインストールに関する考慮事項 {#designer-installation-considerations}
 
@@ -172,7 +172,7 @@ Workbench をインストールする前に、Workbench の実行に必要なソ
 1. コンピューターに以下のアイテムがインストールされました。
    * **Workbench**：スタートメニューにショートカットフォルダーを保存するよう選択した場合にこのメニューから Workbench を起動するには、すべてのプログラム／AEM Forms／Workbench を選択します。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbenchの使用</a>ドキュメントを参照してください。
    * **Designer**：Designer は Workbench 内部からアクセスできます。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer ヘルプ</a>のはじめにのトピックを参照してください。
-   * **AEM Forms SDK**：SDK 使用方法の詳細については、<a href="http://www.adobe.com/go/learn_aemforms_programming_65">AEM Forms によるプログラミング</a>を参照してください。
+   * **AEM Forms SDK**：SDK 使用方法の詳細については、<a href="https://www.adobe.com/go/learn_aemforms_programming_65">AEM Forms によるプログラミング</a>を参照してください。
 
 ## プロセスのアップグレード {#upgrading-processes}
 
@@ -188,7 +188,7 @@ Workbench を使用するには、通常は別のコンピューターで AEM Fo
 
 ### タイムアウトの設定 {#configuring-timeout-settings}
 
-デフォルトでは、Workbench は動作状況に関係なく 2 時間後にタイムアウトになります。タイムアウトの設定を編集するには、<a href="https://docs.adobe.com/content/help/jp/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理コンソールヘルプ</a> の「User Management の設定」の「詳細なシステム属性の設定」を参照してください。
+デフォルトでは、Workbench は動作状況に関係なく 2 時間後にタイムアウトになります。タイムアウト設定を編集するには、 <a href="https://docs.adobe.com/content/help/jp/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理コンソールヘルプ</a>.
 
 ### HTTPS 経由で接続するための Workbench の設定 {#configuring-workbench-to-connect-over-HTTPS}
 
@@ -230,7 +230,7 @@ Forms Generator または Output が、特定のフォームテンプレート�
 * **テンプレートの UUID**：各テンプレートには、Designer により、フォームとそのバージョンに応じて固有の識別子（UUID）が挿入されます。埋め込まれた UUID は、フォームが更新されるびに更新されます。例えば、XDP テンプレートには次の内容が表示されます。
 
    `<?xml version="1.0" encoding="UTF-8"?>`
-   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=http://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="http://www.xfa.org/schema/xfa-template/2.6/">`
+   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
 
 * **レンダリングオプション**：キャッシュの内容は、固有のレンダリングオプションのセットごとにレンダリングフォームキャッシュ内に個別に保存されます。
 

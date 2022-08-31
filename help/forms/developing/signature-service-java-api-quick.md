@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: 07fffbd5-5430-4abc-b532-0840ecc7b1b0
 role: Developer
 exl-id: 34069505-a6cf-4540-932b-604f81823178
-source-git-commit: 9fa433bedefdb3272b43d540ba26624e28c1dbbd
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 100%
@@ -1425,7 +1425,7 @@ public class ApplyDocumentTimeStamp {
 
                 //Create a TSPOptionSpec object to pass to in AddSignatureValidationOptionSpec
                 TSPOptionSpec tspSpec = new TSPOptionSpec();
-                tspSpec.setTspServerURL("http://tsp-server-url.com");
+                tspSpec.setTspServerURL("https://tsp-server-url.com");
                 tspSpec.setTspServerPassword("provide Timestamp server password");
                 tspSpec.setTspServerUsername("provide Timestamp server username");
                 addSigValidiationSpec.setTSPOptionSpec(tspSpec);

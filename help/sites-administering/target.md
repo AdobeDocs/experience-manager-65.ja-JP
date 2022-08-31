@@ -10,16 +10,16 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 454854f8-6053-406c-888d-f427777bf570
 exl-id: 2b17d8cd-a43c-4d54-b990-a6f0cb1db22b
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '600'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
 # Adobe Target との統合{#integrating-with-adobe-target}
 
-Adobe Marketing Cloud に含まれている [Adobe Target](http://www.adobe.com/jp/solutions/testing-targeting/testandtarget.html) を使用すると、あらゆるチャネルにわたってターゲット設定と測定を行い、コンテンツの関連性を高めることができます。Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。AEM では Adobe Target Standard に使用されているターゲット設定ワークフローが採用されています。Target を使用すると、AEM のターゲット設定の編集環境に慣れ親しむことができます。
+Adobe Marketing Cloud に含まれている [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) を使用すると、あらゆるチャネルにわたってターゲット設定と測定を行い、コンテンツの関連性を高めることができます。Adobe Target はマーケター向けのツールで、オンラインテストを設計および実行し、その場で（行動に基づいた）オーディエンスセグメントを作成し、コンテンツとオンラインエクスペリエンスのターゲット設定を自動化するために使用されます。AEM では Adobe Target Standard に使用されているターゲット設定ワークフローが採用されています。Target を使用すると、AEM のターゲット設定の編集環境に慣れ親しむことができます。
 
 AEM Sites を Adobe Target に統合して、ページ内のコンテンツを次のようにパーソナライズできます。
 

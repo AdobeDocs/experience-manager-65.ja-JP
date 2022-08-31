@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 471d7f48dc4653000b4852dbbeb886b05e28e644
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '3778'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -64,24 +64,24 @@ ht-degree: 99%
       + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://docs.adobe.com/content/help/ja/aem-forms-automated-conversion-service/using/introduction.html)
    + AEM Forms の JEE へのインストール {#jee-installation}
       + [JEE 上の AEM Forms でサポートされているプラットフォーム](using/aem-forms-jee-supported-platforms.md)
-      + [JEE 上における AEM forms のインストールおよびデプロイ（JBoss Turnkey を使用）](http://www.adobe.com/go/learn_aemforms_installTurnkey_64_jp)
+      + [JEE 上における AEM forms のインストールおよびデプロイ（JBoss Turnkey を使用）](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_jp)
       + [AEM Forms Document Security サーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
-      + [AEM Forms のインストールの準備（シングルサーバー）](http://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms のインストールおよびデプロイ（JBoss 版）](http://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms のインストールおよびデプロイ（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
-      + [JEE 上の AEM Forms のインストールおよびデプロイ（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
+      + [AEM Forms のインストールの準備（シングルサーバー）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65_jp)
+      + [JEE 上の Adobe Experience Manager Forms のインストールおよびデプロイ（JBoss 版）](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
+      + [JEE 上の Adobe Experience Manager Forms のインストールおよびデプロイ（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
+      + [JEE 上の AEM Forms のインストールおよびデプロイ（WebLogic 版）](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
       + [AEM Forms ワークベンチのインストール ](using/install-workbench.md)
       + [ Designer のインストールと設定](using/installing-configuring-designer.md)
-      + [AEM Forms のインストールの準備（サーバークラスタ）](http://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65_jp)
-      + [JBoss クラスターでの JEE 上の Adobe Experience Manager Forms の設定](http://www.adobe.com/go/learn_aemforms_clusterJBoss_65_jp)
-      + [WebSphere クラスターでの JEE 上の Adobe Experience Manager Forms の設定](http://www.adobe.com/go/learn_aemforms_clusterWebSphere_65_jp)
-      + [WebLogic クラスターでの JEE 上の Adobe Experience Manager Forms の設定](http://www.adobe.com/go/learn_aemforms_clusterWebLogic_65_jp)
+      + [AEM Forms のインストールの準備（サーバークラスタ）](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65_jp)
+      + [JBoss クラスターでの JEE 上の Adobe Experience Manager Forms の設定](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65_jp)
+      + [WebSphere クラスターでの JEE 上の Adobe Experience Manager Forms の設定](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65_jp)
+      + [WebLogic クラスターでの JEE 上の Adobe Experience Manager Forms の設定](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65_jp)
    + AEM Forms の設定 {#configure-aem-forms}
       + [AEM Forms サーバーのパフォーマンスチューニング](using/performance-tuning-aem-forms.md)
       + [アダプティブフォームのキャッシュの設定](using/configure-adaptive-forms-cache.md)
       + [AEM DS の設定](using/configuring-the-processing-server-url-.md)
       + [同期スケジューラの設定](using/configure-synchronization-scheduler.md)
-      + [Connector for Microsoft SharePoint の設定](http://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
+      + [Connector for Microsoft SharePoint の設定](https://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
       + [AEM Forms の AEM デスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
@@ -92,13 +92,13 @@ ht-degree: 99%
       + [互換性パッケージをインストールする](using/compatibility-package.md)
       + [AEM Forms のアセットとドキュメントの移行](using/migration-utility.md)
    + JEE 上の AEM Forms のアップグレード {#aem-forms-jee-upgrade}
-      + [AEM Forms へのアップグレードの準備](http://www.adobe.com/go/learn_aemforms_prepareupgrade_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms 用アップグレードのチェックリストと計画](http://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)
+      + [AEM Forms へのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65_jp)
+      + [JEE 上の Adobe Experience Manager Forms 用アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)
       + [JEE 上の AEM 6.5 Forms へのアップグレード](using/upgrade-forms-jee.md)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
-      + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](http://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](http://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](http://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_jp)
+      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
+      + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
+      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
+      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
    + [フォームを分類するための新しいフォルダーの作成](using/creating-new-folders-categorize-forms.md)
@@ -371,12 +371,12 @@ ht-degree: 99%
    + [別のユーザーの代わりにドキュメントを保護する](using/protect-document-on-behalf-of-another-user.md)
 + Forms Designer {#use-forms-designer}
    + [Forms Designer ヘルプ](using/forms-designer-help.md)
-   + [Designer の使用](http://www.adobe.com/go/learn_aemforms_designer_65_jp)
-   + [Designer クイックスタートチュートリアル](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)
-   + [Designer サンプル](http://www.adobe.com/go/learn_aemforms_designer_samples_65_jp)
-   + [Designer スクリプティング基礎](http://www.adobe.com/go/learn_aemforms_scriptingBasics_65_jp)
-   + [Designer スクリプティングリファレンス](http://www.adobe.com/go/learn_aemforms_scriptingReference_65_jp)
-   + [Designer FormCalc リファレンス](http://www.adobe.com/go/learn_aemforms_formCalc_65_jp)
+   + [Designer の使用](https://www.adobe.com/go/learn_aemforms_designer_65_jp)
+   + [Designer クイックスタートチュートリアル](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
+   + [Designer サンプル](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
+   + [Designer スクリプティング基礎](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
+   + [Designer スクリプティングリファレンス](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
+   + [Designer FormCalc リファレンス](https://www.adobe.com/go/learn_aemforms_formCalc_65)
    + [HTML5 フォームでの手書き署名の使用](using/scribble-signature.md)
    + [Designer での Page Zero コンテンツの変更](using/changing-page-zero-content-designer.md)
 + AEM Forms のカスタマイズ {#customize-aem-forms}
@@ -583,8 +583,8 @@ ht-degree: 99%
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/ProgramLC/javadoc/index.html)
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
    + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
-   + [Assembler サービスおよび DDX リファレンス](http://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
-   + [Workbench ヘルプ](http://www.adobe.com/go/learn_aemforms_workbench_65_jp)
+   + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
+   + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
    + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
       + JEE 上の AEM Forms でのプログラミングの概要 {#introduction-programming-aem-forms-jee}
          + [Java API クイックスタートの概要](developing/introducing-java-api-soap-quick.md)

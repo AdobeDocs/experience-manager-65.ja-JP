@@ -9,10 +9,10 @@ topic-tags: publish
 discoiquuid: f0a5588d-f210-4f04-bc35-b62834f90ab1
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
-source-git-commit: de7b1d2d0f3863f9554b346204c18cc57d4bf814
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '7575'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -443,10 +443,10 @@ PDF ファイルは、サイズを小さくして最適化します。この変�
 
 * **[!UICONTROL ロケール]**：PDF ドキュメントの生成に使用する言語を設定します。リテラル値を指定する場合、リストから言語を選択するか、次のいずれかの値を選択します。
    * **Use Server Default**：
-（デフォルト）AEM Forms サーバー上で設定されているロケール設定を使用します。ロケール設定は、管理コンソールを使用して設定します（「[Designer ヘルプ](http://www.adobe.com/go/learn_aemforms_designer_65_jp)」を参照）。
+（デフォルト）AEM Forms サーバー上で設定されているロケール設定を使用します。ロケール設定は、管理コンソールを使用して設定します（「[Designer ヘルプ](https://www.adobe.com/go/learn_aemforms_designer_65_jp)」を参照）。
 
    * **カスタム値を使用するには**：
-リテラルボックスにロケールコードを入力するか、ロケールコードを含む文字列変数を選択します。サポートされているすべてのロケールコードのリストについては、http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html を参照してください。
+リテラルボックスにロケールコードを入力するか、ロケールコードを含む文字列変数を選択します。サポートされるロケールコードの完全なリストについては、https://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.htmlを参照してください。
 
 * **[!UICONTROL Copies]**：出力の作成部数を指定する整数値。デフォルト値は 1 です。
 

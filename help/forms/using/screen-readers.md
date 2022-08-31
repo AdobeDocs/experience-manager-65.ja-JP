@@ -10,10 +10,10 @@ topic-tags: hTML5_forms
 discoiquuid: 53c57180-7004-4534-9146-603f7770a6fe
 feature: Mobile Forms
 exl-id: 07d20c2f-7d13-48ac-8d58-b367eb194558
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '335'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -25,7 +25,7 @@ HTML5 フォームは標準の HTML 構成を使用して、これらのフォ�
 
 ## アクセシビリティの標準 {#accessibility-standards}
 
-HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](http://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) を参照してください。
+HTML5 フォームは既知の例外を含むアクセシビリティのリハビリテーション法第 508 条に準拠します。詳しくは、[HTML5 フォームの VPAT](https://wwwimages.adobe.com/content/dam/acom/en/accessibility/compliance/pdfs/livecycle-mobile-forms-es4-section-508-vpat.pdf) を参照してください。
 
 ## HTML5 フォーム向けに認定されたスクリーンリーダー {#certified-screen-readers-for-html-forms}
 

@@ -2,10 +2,10 @@
 title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -23,7 +23,7 @@ App Builder を使用すると、次のような様々なユースケースで A
 * コアサービス拡張 - カスタム機能およびビジネスロジックを使用してデフォルトの動作を拡張することで、コアアプリケーション機能を拡張します。
 * ユーザーエクスペリエンス拡張 - コアエクスペリエンスを拡張してビジネス要件をサポートするか、顧客固有のデジタルプロパティ、ストアフロントおよびバックオフィスアプリを構築します。
 
-App Builder（旧称 Project Firefly）は、2020年夏以降、開発者プレビューを通じて、法人のお客様やパートナーが利用できるようになりました。App Builder の一般リリース（GA）は 2021年12月に予定されています。アドビの[体験版プログラム](http://adobe.ly/appbuilder-trial)を通じて開発者が App Builder を試すことを歓迎します。
+App Builder（旧称 Project Firefly）は、2020年夏以降、開発者プレビューを通じて、法人のお客様やパートナーが利用できるようになりました。App Builder の一般リリース（GA）は 2021年12月に予定されています。アドビの[体験版プログラム](https://adobe.ly/appbuilder-trial)を通じて開発者が App Builder を試すことを歓迎します。
 
 >[!NOTE]
 >

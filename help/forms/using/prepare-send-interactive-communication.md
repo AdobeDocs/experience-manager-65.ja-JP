@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 110c86ea-9bd8-4018-bfcc-ca33e6b3f3ba
 feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
-source-git-commit: b6774acc4ec32c87a5ad5f5b2ea885e1e1aa867e
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 100%
@@ -346,9 +346,9 @@ public class CCRDraftService implements CCRDocumentInstanceService {
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.adobe.livecycle</groupId>

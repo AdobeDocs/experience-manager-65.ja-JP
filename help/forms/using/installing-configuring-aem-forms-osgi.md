@@ -10,10 +10,10 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '1870'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -238,5 +238,5 @@ AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target 
 AEM Forms のデータ取得機能を使用するための環境を設定しました。この機能を使用するための手順は、次のとおりです。
 
 * [最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)
-* [最初の PDF フォームを作成する](http://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)
+* [最初の PDF フォームを作成する](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
 * [HTML5 フォームの概要](/help/forms/using/introduction.md)

@@ -4,10 +4,10 @@ seo-title: Resources for New AEM Users
 description: AEM を初めて使用するユーザー向けの質問、回答およびリソース
 seo-description: Questions, answers, and resources for users new to AEM
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '360'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Manager (AEM) は、商用 Web サイトおよび関連サー�
 
 ## AEM ソフトウェアはどこからダウンロードすればよいですか？ {#download}
 
-メンテナンスおよびサポートの有効な契約を締結済みのお客様には、コードが記載されているメール通知が届き、[Adobe Licensing Website](http://licensing.adobe.com/) から AEM をダウンロードできます。
+メンテナンスおよびサポートの有効な契約を締結済みのお客様には、コードが記載されているメール通知が届き、[Adobe Licensing Website](https://licensing.adobe.com/) から AEM をダウンロードできます。
 
 [AEM ソフトウェアのデプロイに関する詳細情報。](/help/sites-deploying/home.md)
 
@@ -59,4 +59,4 @@ AEM のすべてのリリースノートについては、次を参照してく�
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [AEM 6.5 で削除された機能および非推奨（廃止予定）になった機能のリスト](/help/release-notes/deprecated-removed-features.md)
 
-ご不明な点については、[AEM Community チーム](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)にお問い合わせいただくか、Twitter ハンドル名 [@AdobeExpCare](https://twitter.com/adobeexpcare) でご質問ください。
+ご不明な点については、[AEM Community チーム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)にお問い合わせいただくか、Twitter ハンドル名 [@AdobeExpCare](https://twitter.com/adobeexpcare) でご質問ください。

@@ -10,16 +10,16 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 6bc60122d2512a6f58c0204cd240a1b99a37ed93
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '842'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
 # SAML 2.0 認証ハンドラー{#saml-authentication-handler}
 
-AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラーが付属しています。このハンドラーによって、`HTTP POST` バインディングを使用した [SAML](http://saml.xml.org/saml-specifications) 2.0 認証要求プロトコル（Web-SSO プロファイル）のサポートが提供されます。
+AEM には、[SAML](https://saml.xml.org/saml-specifications) 認証ハンドラーが付属しています。このハンドラーによって、`HTTP POST` バインディングを使用した [SAML](https://saml.xml.org/saml-specifications) 2.0 認証要求プロトコル（Web-SSO プロファイル）のサポートが提供されます。
 
 サポート対象は次のとおりです。
 
@@ -38,7 +38,7 @@ AEM には、[SAML](http://saml.xml.org/saml-specifications) 認証ハンドラ�
 
 ## SAML 2.0 認証ハンドラーの設定 {#configuring-the-saml-authentication-handler}
 
-[Web コンソール](/help/sites-deploying/configuring-osgi.md)を使用すると、[SAML](http://saml.xml.org/saml-specifications) 2.0 認証ハンドラーの設定（**Adobe Granite SAML 2.0 Authentication Handler**）にアクセスできます。設定可能なプロパティを以下に示します。
+[Web コンソール](/help/sites-deploying/configuring-osgi.md)を使用すると、[SAML](https://saml.xml.org/saml-specifications) 2.0 認証ハンドラーの設定（**Adobe Granite SAML 2.0 Authentication Handler**）にアクセスできます。設定可能なプロパティを以下に示します。
 
 >[!NOTE]
 >

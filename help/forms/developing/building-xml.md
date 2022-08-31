@@ -2,10 +2,10 @@
 title: JEE Workbench 上の AEM Forms で Execute Script サービスを使用して XML データを作成する方法を教えてください。
 description: JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '1003'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -55,7 +55,7 @@ XML 変数の格納に使用される Java クラスは次のとおりです。
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl は NodeImpl のサブクラスなので、XML プロセス変数は NodeImpl の派生であると想定できます。NodeImpl のドキュメントは、[こちら](http://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html)で参照できます。
+DocumentImpl は NodeImpl のサブクラスなので、XML プロセス変数は NodeImpl の派生であると想定できます。NodeImpl のドキュメントは、[こちら](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html)で参照できます。
 
 **Execute Script サービスを使用したサンプル XML の作成**
 

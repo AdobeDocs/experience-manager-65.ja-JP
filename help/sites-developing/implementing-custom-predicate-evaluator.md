@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 100%
@@ -200,7 +200,7 @@ src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,

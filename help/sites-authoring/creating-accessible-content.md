@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 向けアクセシブルコンテンツの作成（WCAG 2.1 準拠）
 description: AEM を使用すると、障碍のあるユーザーが web コンテンツにアクセスして使用できるようになります。
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
 workflow-type: tm+mt
 source-wordcount: '13956'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -351,6 +351,7 @@ AEM では、適切な HTML 要素を使用することにより、意味のあ�
       >
       >* `<b>` の代わりに `<strong>` を使用
       >* `<i>` の代わりに `<em>` を使用
+
       >
       >それぞれ実質的には同じですが、好ましいのは、意味的に正しい HTML である `<strong>` と `<em>` です。開発チームがプロジェクトインスタンスを作成する際に、`<strong>` と `<em>` ではなく `<b>` と `<i>` を使用するように RTE を設定できます。
 
@@ -557,7 +558,7 @@ AEM では、適切な HTML 要素を使用することにより、意味のあ�
 >
 >* [Px to Em Calculator - Omni](https://www.omnicalculator.com/conversion/px-to-em)
 >* [Font size conversion: pixel-point-em-rem-percent](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/)
->* [PMtoEM.com: PX to EM conversion made simple](http://pxtoem.com)
+>* [PMtoEM.com: PX to EM conversion made simple](https://pxtoem.com)
 
 
 コントラスト比を確認するには、[Paciello Group の Color Contrast Analyser](https://www.paciellogroup.com/resources/contrast-analyser.html) や [WebAIM の Color Contrast Checker](https://www.webaim.org/resources/contrastchecker/) などの色コントラストツールを使用してください。これらのツールを使用すると、色のペアを確認し、コントラストの問題を報告できます。
@@ -938,7 +939,7 @@ John Smith’s publications
 
 複数の要素の中で、キーボードフォーカスがある要素を知ることが可能である必要があります。画面に操作可能なキーボードコントロールが 1 つしかない場合、視覚的なデザインは操作可能なキーボードアイテムを 1 つだけ表示するので、達成基準は満たされます。
 
-達成基準で「操作モード」としているのは、フォーカスインジケーターが常に表示されるとは限らないプラットフォームを考慮するためです。ほとんどの場合、操作モードは 1 つだけなので、この達成基準が適用されます。
+達成基準で「操作モード」と表されている場合、これは、フォーカスインジケーターが常に表示されるとは限らないプラットフォームを考慮するためです。 ほとんどの場合、操作モードは 1 つだけなので、この達成基準が適用されます。
 
 #### 達成方法 - フォーカスの可視化（2.4.7） {#how-to-meet-focus-visible}
 
@@ -972,10 +973,10 @@ John Smith’s publications
 この達成基準を満たすために、ページ上部の `lang` 要素内で `<html>` 属性を使用して、Web ページのデフォルト言語を識別できます。次に例を示します。
 
 * 英語で書かれているページの場合、`<html>` 要素は次のようになります。
-   `<html lang = “en”>`
+   `<html lang = "en">`
 
 * 一方、スペイン語でレンダリングされるページの場合は、次の標準規格を採用します。
-   `<html lang = “es”>`
+   `<html lang = "es">`
 
 AEM では、ページのデフォルト言語はページ作成時に設定されますが、[ページプロパティ](/help/sites-authoring/editing-page-properties.md)の編集時に変更することもできます。
 
@@ -1007,7 +1008,7 @@ AEM では、ページのデフォルト言語はページ作成時に設定さ�
 
 #### 達成方法 - 一部分の言語（3.1.2） {#how-to-meet-language-of-parts}
 
-`lang` 属性を使用して、コンテンツの言語の変更を識別できます。例えば、ドイツ語（ISO 639-1 コード “de”）の引用は、次のように表示できます。
+`lang` 属性を使用して、コンテンツの言語の変更を識別できます。例えば、ドイツ語（ISO 639-1 コード&quot;de&quot;）の引用は、次のように表示されます。
 
 ```xml
 <blockquote cite = "John F. Kennedy" lang = "de">
@@ -1022,7 +1023,7 @@ AEM では、ページのデフォルト言語はページ作成時に設定さ�
 同様に、`span` 要素を次のように使用した場合は、一般的でない外来語やフレーズをブラウザーで正しくレンダリングできます。
 
 ```xml
-<p>The only French phrase I know is <span lang = “fr”>je ne sais quoi</code>.</p>
+<p>The only French phrase I know is <span lang = "fr">je ne sais quoi</code>.</p>
 ```
 
 >[!NOTE]
