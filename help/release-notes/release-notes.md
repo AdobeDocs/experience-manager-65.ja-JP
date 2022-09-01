@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 0bd7c444bf0424b60c11b7171b7ea7ae9d7f3926
+source-git-commit: 21cbb1df659c8ff82170bb953b05260219dc4970
 workflow-type: tm+mt
-source-wordcount: '2624'
-ht-degree: 45%
+source-wordcount: '3237'
+ht-degree: 39%
 
 ---
 
@@ -78,9 +78,37 @@ ht-degree: 45%
 
 ## [!DNL Forms] {#forms-6514}
 
->[!NOTE]
->
->* [!DNL Experience Manager Forms] では、[!DNL Experience Manager] サービスパックのリリース予定日の 1 週間後にアドオンパッケージをリリースします。この場合、アドオンパッケージは 2022 年 9 月 1 日（木）にリリースされます。 さらに、Formsの修正および機能強化のリストもこの節に追加されます。
+* ファイルがマルチパネルアダプティブフォームに添付され、アダプティブフォームのドラフトが保存されると、エラーが発生します。 （NPR-38978）
+* ユーザーが AdobePDF 設定で createPDF2 Java API を使用してRGBプロファイルを CMYK プロファイルに変換した場合、このオプションは Java API では機能しません。 このオプションは、スタンドアロンの DistillerClient アプリケーションで正常に機能します。 （NPR-38858、CQ-4346181）
+* AEM 6.5 Forms Service Pack 12(6.5.12.0) をインストールすると、AEM Workflows の「タスクの割り当て」手順で、タスクを閉じる以外のすべてのオプションが使用できなくなります。 （NPR-38743）
+* レコードのドキュメント (DoR) では、テーブルの一部の値が切り捨てられます。 （NPR-38657）
+* データ XML を使用した FormSet のプレビュー時に、XDP にフローティングフィールドが含まれている場合、FormSet のプレビュー時にはデータは表示されませんが、「プレビューPDF」オプションを使用するとデータが表示されます。
+* アダプティブFormsでは、ラジオボタンとチェックボックスがタブ順に表示されません。 （NPR-38645）
+* を使用する場合、 `Summary Step` フォームの送信後に翻訳済みアダプティブフォームのレコードのドキュメント (DoR) を生成する場合、はローカライズされた言語に翻訳されません。 （NPR-38567）
+* AEM Workflow ステップの「再試行を無効にする」オプションが期待どおりに動作しません。 この問題は断続的に発生します。（NPR-38547）
+* リッチテキストフィールドを含むアダプティブフォームが送信されると、 `an Internal Error while Submitting a Form` エラーが発生しました。 フォームを送信する前にユーザーがリッチテキストフィールドにフォーカスを移した場合、エラーは発生しません。 （NPR-38542）
+* エラー `sling-default-3-AdobeSignRefreshTokenScheduleJob com.adobe.forms.foundation.oauth.model.OAuthConfigSlingModel Refresh Token not present for: /conf/gws-eform/cashlite/settings/cloudconfigs/fdm/cashlite/jcr:content occurs` がログに記録されます。 （NPR-38541）
+* ユーザーがアダプティブフォームにPDFをアップロードすると、AEM Formsサーバーが応答しなくなります。 （NPR-38398）
+* OSGi サーバー上のAEM Formsで、Document Service API を使用してPDFを認証すると、次のエラーで失敗します。com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311。 （CQ-4346252）
+* 下書きレターを送信すると、 `Could not upload asset from xml input` エラーが発生しました。 機能には影響しません。 ドラフトを開くと、レターは正しくレンダリングされます。 (CQ-4345979、CQ-4344418)
+* 日付がドイツ形式で入力され、 `Preview with Data` オプションをレターに使用した場合、「日付」フィールドはレンダリングされません。 （CQ-4345783）
+* Web ポータルを構築し、データに基づいてバーコードを生成する場合、一部のバーコードが正しくデコードされません。 （CQ-4345743）
+* PDFへの PostScript 変換で、出力ドキュメントが期待どおりの色でレンダリングされなかった問題を修正しました。 （CQ-4345074）
+* リソースリゾルバは、断続的な送信エラーを引き起こし、1 回の送信で同じスタックトレースが複数回表示されます。 （CQ-4344764）
+* ユーザーは、 `cmDataUrl` パラメーター。 下書きは初めて正常に開きます。 問題は、以降の試行で発生し始めます。 （CQ-4344418）
+* ユーザーが `&` シンボルを使用してインタラクティブ通信 (IC) を読み込むと、対応する IC の下書きが読み込めなくなる。 （CQ-4343969）
+* AEM Forms Designer でスタイルオプションを使用して PCL ファイルを生成する場合、生成されたファイルには指定のスタイルが適用されません。 （CQ-4339573）
+* ページ数が 15 を超える場合、動的 XDP フォームからアダプティブフォームへの自動変換が失敗します。 これは、ページ数が 15 未満の場合に正常に機能します。 （NPR-35337）
+* 「お気に入りに追加」オプションを使用した場合でも、スクリーンリーダーに切り替える状態は示されません。 （NPR-37137）
+* フォームデータモデルでは、データベースベースベースに基づくフォームデータモデルの小数点以下の値は、金額と小額の金額データ型用に切り捨てられます。. (CQDOC-19509)
+* Workspace でワークフローのナビゲーションリンクを選択した場合、HTMLリンクが選択されていることは示されません。 （NPR-37138）
+* 手書き署名機能は、アクセシビリティガイドラインに対応していません。 （NPR-37596）
+* AEM Formsは log4j 1.x を使用します。log4j 1.x のサポートが提供終了になりました。 （NPR-38273）
+* MSSQL データベースをフォームデータモデルのデータソースとして使用し、値を取得すると、取得値の小数点以降の数値が自動的に表示されます。 （CQ-4346190）
+* Forms 6.5 Designer で、Forms 6.1 Designer で作成したフォームを開き、テキストボックスを編集すると、段落の間隔が指定したスペースを超えます。スペースに対する以前の設定がすべて削除され、テキストボックスの手動での再フォーマットが必要になります。（CQ-4341899）
+* バーコード SSCC-18 に正しくない値が表示されます。Forms サーバーが、バーコードの右側の値を省略します。（CQ-4342400）
+* Forms 6.5 Designer で作成された静的 PDF フォームの場合、PDF アクセシビリティが次のエラーで失敗します。`Tab order entry in page with annotations not set to "S"`（CQ-4343117）
+* Forms Designer で、ハイパーリンクの画面Readerテキストを指定する機能が追加されました。（NPR-36221）
 
 
 ## 統合 {#integrations-6514}
@@ -142,7 +170,7 @@ ht-degree: 45%
 
 ## 翻訳プロジェクト {#translation-6514}
 
-* 親ページで参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
+* 親ページの参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
 
 ## ユーザーインターフェイス {#ui-6514}
 
@@ -208,12 +236,13 @@ ht-degree: 45%
 
 1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.12以降です (Web コンソールを使用： `/system/console/bundles`) をクリックします。 <!-- NPR-38747 -->
 
-
 ### [!DNL Experience Manager] Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
 >
->[!DNL Experience Manager] Forms を使用していない場合はスキップしてください。[!DNL Experience Manager] Forms の修正プログラムは、[!DNL Experience Manager] サービスパックリリース予定日の 1 週間後に、別のアドオンパッケージとして提供されます。
+>[!DNL Experience Manager] Forms を使用していない場合はスキップしてください。
+
+<!-- Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release. -->
 
 1. サービスパックがインストールされていることを確認してください。[!DNL Experience Manager]
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
