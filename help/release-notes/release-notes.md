@@ -1,10 +1,11 @@
 ---
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
-description: 「リリース情報、新機能、インストール方法、詳細な変更リストを見つける [!DNL Adobe Experience Manager] 6.5."
+description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 783edcdf0f96426008b6f824a7aa0aa0deb5c613
+exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
+source-git-commit: 0bd7c444bf0424b60c11b7171b7ea7ae9d7f3926
 workflow-type: tm+mt
-source-wordcount: '2623'
+source-wordcount: '2624'
 ht-degree: 45%
 
 ---
@@ -141,7 +142,7 @@ ht-degree: 45%
 
 ## 翻訳プロジェクト {#translation-6514}
 
-* 親ページの参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
+* 親ページで参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
 
 ## ユーザーインターフェイス {#ui-6514}
 

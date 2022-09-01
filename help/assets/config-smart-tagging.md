@@ -5,16 +5,23 @@ contentOwner: AG
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
-source-git-commit: bb46b0301c61c07a8967d285ad7977514efbe7ab
+source-git-commit: 83e9ab570fac686fd53c9c2594cbfb2c05a89a0c
 workflow-type: tm+mt
-source-wordcount: '2170'
-ht-degree: 100%
+source-wordcount: '2262'
+ht-degree: 96%
 
 ---
 
 # スマートタグ付けのために [!DNL Assets] を準備 {#configure-asset-tagging-using-the-smart-content-service}
 
 スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe Sensei] スマートコンテンツサービスを活用します。設定が完了したら、いくつかの画像とタグを使用してサービスのトレーニングを行います。
+
+>[!NOTE]
+>
+>* スマートコンテンツサービスは、新しく使用できなくなりました [!DNL Experience Manager Assets] オンプレミス型の顧客。 既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスを使用できます。
+>* スマートコンテンツサービスは既存のユーザーが利用できます [!DNL Experience Manager Assets] Managed Servicesをご利用のお客様（この機能を既に有効にしています）。
+>* 新規 [!DNL Experience Manager Assets] Managed Servicesのお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定できます。
+
 
 スマートコンテンツサービスを使用する前に、次を確認します。
 
@@ -51,7 +58,14 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
 1. **[!UICONTROL AEM スマートコンテンツサービス]**&#x200B;ダイアログで、以下の値を使用します。
 
-   **[!UICONTROL サービス URL]**: `https://mc.adobe.io/marketingcloud/smartcontent`
+   **[!UICONTROL サービス URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
+
+   （例：`https://smartcontent.adobe.io/apac`）。次を指定できます。 `na`, `emea`、または `apac` :Experience Managerオーサーインスタンスがホストされる地域。
+
+   >[!NOTE]
+   >
+   >2022 年 9 月 1 日より前にExperience Manager管理サービスがプロビジョニングされている場合は、次のサービス URL を使用します。
+   >`https://mc.adobe.io/marketingcloud/smartcontent`
 
    **[!UICONTROL 認証サーバー]**: `https://ims-na1.adobelogin.com`
 
