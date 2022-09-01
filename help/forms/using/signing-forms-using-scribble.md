@@ -10,10 +10,10 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '638'
+ht-degree: 73%
 
 ---
 
@@ -21,9 +21,28 @@ ht-degree: 100%
 
 **手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームの PDF バージョンが表示されます。署名ステップコンポーネントを使用するには、レコードのドキュメントオプションが有効になっているか、フォームテンプレートに基づくアダプティブフォームが必要です。
 
-両方のコンポーネントでは、フォームに署名するために、以下のようなウィンドウが表示されます。また、位置情報アイコン ![aem_6_3_geolocation](assets/aem_6_3_geolocation.png) をクリックすることで、署名に位置情報を追加することもできます。
+![手書き署名ダイアログ](/help/forms/using/assets/scribble-signature.png)
 
-![手書き署名ダイアログ](assets/scribble-signature.png)
+## 署名ウィンドウで使用できる様々なオプション
+
+* **回答：** 次をクリック： **ペイントブラシ** アイコンをクリックして、キャンバスに署名を描画します。
+* **B:** 次をクリック： **クリア** アイコンを使用して、キャンバス上の署名をクリアします。
+* **C:** 次をクリック： **位置情報** アイコン：署名と共に位置情報を追加します。
+* **D:** 次をクリック： **キーボード** アイコンをクリックして、キャンバスに名前を入力します。
+
+完了![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) 手書き署名ウィンドウのアイコンを使用すると、署名を編集できません。 署名を編集する場合は、現在の署名を無視し、上記の [ ブラシ/キーボードをペイント ] オプションを使用して再署名する必要があります。
+
+次をタップします。 **設定** ![設定](assets/configure.png) アイコンをクリックして、手書き署名キャンバスの縦横比を設定します。
+* 手書き署名キャンバスの縦横比が 1 未満の場合、位置情報は手書き署名キャンバスの下部に追加されます。
+
+* 手書き署名キャンバスの縦横比が 1 を超える場合、位置情報は手書き署名キャンバスの右側に追加されます。
+
+![手書き署名 — 下](/help/forms/using/assets/scribble-signature-aspectratio.PNG)
+
+
+>[!NOTE]
+>
+>署名は常に PNG 形式で保存されます。
 
 ## アダプティブフォームでの手書き署名使用の設定 {#configure-an-adaptive-form-to-use-scribble-signature}
 
@@ -60,14 +79,14 @@ ht-degree: 100%
 
 1. フォームへの記入を完了して署名ステップページに到達すると、署名画面が表示されます。
 
-   ![EchoSign ページの署名画面](assets/esignscribblesign.jpg)
+   ![手書き署名ダイアログ](/help/forms/using/assets/esignscribblesign.jpg)
 
 1. 「**[!UICONTROL 署名]**」をクリックします。手書き署名ダイアログが表示されます。フォームに署名し、完了（![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)）アイコンをクリックして、変更内容を保存します。
 
-   ![手書き署名ダイアログ](assets/scribblewidget.jpg)
+   ![手書き署名ダイアログ](/help/forms/using/assets/scribblewidget.png)
 
 1. 「完了」をクリックして署名プロセスを完了します。
 
-   ![署名プロセスの完了](assets/scribblecomplete.jpg)
+   ![署名プロセスの完了](/help/forms/using/assets/scribblecomplete.jpg)
 
 署名がフォームに追加され、フォームコントロールが次のパネルに移動します。

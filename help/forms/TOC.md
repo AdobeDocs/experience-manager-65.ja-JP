@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '3778'
+source-wordcount: '3801'
 ht-degree: 97%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 97%
       + [JEE 上の AEM Forms のセキュリティに関する一般的な考慮事項](using/general-security-considerations.md)
       + [JEE 上の AEM Forms 環境の堅牢化](using/hardening-aem-forms-jee-environment.md)
       + [JEE 上の AEM Forms 管理者設定のセキュリティ保護の設定](using/configuring-secure-administration-settings-aem.md)
+      + [メールサービスの OAuth2 サポート](using/oauth2-support-for-mail-service.md)
 + フォームデータモデル {#form-data-model}
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
@@ -332,6 +333,7 @@ ht-degree: 97%
    + [Analytics とレポートの設定](using/configure-analytics-forms-documents.md)
    + [AEM Forms の分析レポートの確認方法と詳細](using/view-understand-aem-forms-analytics-reports.md)
    + [アダプティブフォームの A/B テストの作成と管理](using/ab-testing-adaptive-forms.md)
+   + [Adobe Analytics との統合](using/integrate-aem-forms-with-adobe-analytics.md)
 + AEM Forms の公開と処理 {#publish-process-aem-forms}
    + [ポータル上のフォーム発行の概要](using/introduction-publishing-forms.md)
    + [ドラフトと送信コンポーネントとデータベースの統合のサンプル](using/integrate-draft-submission-database.md)
@@ -681,6 +683,7 @@ ht-degree: 97%
          + [Web サービス API を使用した DDX ドキュメントの検証](developing/validate-ddx-document-using-web.md)
 + トラブルシューティング {#troubleshooting}
    + [特定のバージョンのOracleJDK で一部のフォーム機能を使用できない](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
+   + [JEE 上のアダプティブFormsバージョンの添付ファイルを含む電子メールを取得するための追加手順](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)

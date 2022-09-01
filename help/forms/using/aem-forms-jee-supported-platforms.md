@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: f1dade2cb15f98bb7830f6afb27ec493dc182a37
+source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
 workflow-type: tm+mt
-source-wordcount: '3550'
-ht-degree: 99%
+source-wordcount: '3583'
+ht-degree: 96%
 
 ---
 
@@ -91,9 +91,9 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
   <tr>
-   <td><p>Oracle Java™ SE 11（64 ビット版）</p> </td>
-   <td><p>Z：サポート対象外</p> </td>
-   <td><p> </p> </td>
+   <td><p>OracleJava™ SE 11（64 ビット） <sup> [8] </sup> </p>  </td>
+   <td><p>A：サポート対象</p> </td>
+   <td><p>マイナーリリースとアップデート </p> </td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64 ビット</td>
@@ -361,6 +361,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
 1. AEM Forms on JEE は CentOS 上の WebSphere Application Server をサポートしていません。
 1. JEE 上の AEM Forms では、JBoss ロールベースのアクセス制御（RBAC）をサポートしていません。
+1. JEE 上のAEM Formsは、OracleJava™ SE 11（64 ビット）SDK（アプリケーションサーバー JBoss EAP 7.4 用のみ）をサポートしています。
 
 この他に、JEE 上での Adobe AEM Forms の導入のためにソフトウェアを選択する際には、次の項目を考慮してください。
 
@@ -517,7 +518,7 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 > - PDF Generator では Microsoft Office 365 をサポートしていません。
 > - PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 > - 「OCR PDF」、「PDF を最適化」、「PDF を書き出し」の各機能は、Windows でのみサポートされています。
-> - Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
+> - Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 > - PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 
@@ -633,7 +634,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 
 >[!NOTE]
 >
-> Acrobat DC Product Family では、基本的に別々の製品である Acrobat と Reader のそれぞれに、「クラシック」と「継続」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
+> Acrobat DC Product Family では、基本的に異なる製品であるAcrobatとReaderの両方に 2 つのトラックを導入しています。「クラシック」と「連続」 2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
 
 ### ブラウザー {#browsers}
 
@@ -749,7 +750,7 @@ JEE 上の AEM Forms では、指定されたメジャーおよびマイナー�
 
 ## サードパーティパッチサポートポリシー {#third-party-patch-support-policy}
 
-AEM Forms on JEE でサードパーティ製ソフトウェアを使用するための要件は、それぞれの製品ドキュメントの「必要システム構成」セクションに記述されています。すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
+JEE 上のAEM Formsのサードパーティのソフトウェア要件は、それぞれの製品ドキュメントの「必要システム構成」セクションに記載されています。 すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
 
 AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM Forms on JEE の開発とリリースの時点において最新だったサードパーティ製インフラストラクチャの特定のパッチレベルを、そのバージョンの AEM Forms on JEE でサポートしているインフラストラクチャの最小のパッチまたはサービスパックのレベルから記述しています。
 
@@ -794,6 +795,10 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 > プラットフォームは [AEM Forms 6.5.12.0 および 6.5.10.0 で非推奨となり、AEM Forms 6.5 サービスパック 18（6.5.18.0）リリースまでは引き続きサポートされます](https://helpx.adobe.com/support/programs/eol-matrix.html)。
 
 ## 変更履歴 {#revision-history}
+
+- 2022 年 9 月 1 日
+
+   - oracleJava™ SE 11 （64 ビット） SDK のサポートを、アプリケーションサーバー JBoss EAP 7.4 に追加しました。
 
 - 2022 年 3 月 03 日（PT）
 
