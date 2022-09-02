@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 3f7191ecdddf7325f2c1153f1ec733893cc649dc
+source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
 workflow-type: tm+mt
-source-wordcount: '3795'
+source-wordcount: '3791'
 ht-degree: 97%
 
 ---
@@ -332,7 +332,6 @@ ht-degree: 97%
    + [Analytics とレポートの設定](using/configure-analytics-forms-documents.md)
    + [AEM Forms の分析レポートの確認方法と詳細](using/view-understand-aem-forms-analytics-reports.md)
    + [アダプティブフォームの A/B テストの作成と管理](using/ab-testing-adaptive-forms.md)
-   + [Adobe Analytics との統合](using/integrate-aem-forms-with-adobe-analytics.md)
 + AEM Forms の公開と処理 {#publish-process-aem-forms}
    + [ポータル上のフォーム発行の概要](using/introduction-publishing-forms.md)
    + [ドラフトと送信コンポーネントとデータベースの統合のサンプル](using/integrate-draft-submission-database.md)
