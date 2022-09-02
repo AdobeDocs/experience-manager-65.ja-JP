@@ -12,10 +12,10 @@ discoiquuid: 91e85e86-2361-4d1d-aa73-c3cce46ab1f1
 docset: aem65
 feature: Document Security
 exl-id: d00ae232-b018-44e5-b04b-376d4cd9c6eb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 18c180a491af10b41393ad841f2fa74d02ec9cd9
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 100%
+source-wordcount: '1205'
+ht-degree: 97%
 
 ---
 
@@ -53,7 +53,7 @@ Document Security SDK、Adobe Acrobat、Document Security Extension for Microsof
 
    Document Security SDK は Java と C++ の両方で利用することができます。Java SDK は、AEM Forms Document Security に付属しています。JEE 上に AEM Forms をデプロイする際に、Java SDK がインストールされます。C++ SDK を入手する場合は、[AEM サポートチーム](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)にお問い合わせください。C++ SDK は、Microsoft Visual Studio 2013 を使用してコンパイルすることができます。 SDK の機能とその使用方法については、[Document Security API のドキュメント](https://help.adobe.com/ja_JP/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)のサイトを参照してください。 
 
-* **Adobe Acrobat：** Adobe Acrobat を使用して、Microsoft Office、ウェブブラウザー、またはその他の PDF 形式の印刷に対応しているアプリケーションなど、一般的なデスクトップアプリケーションで作成された PDF ドキュメントにセキュリティポリシーを適用することができます。
+* **Adobe Acrobat:** Adobe Acrobatを使用すると、Microsoft Office、Web ブラウザー、PDF形式での印刷をサポートする任意のアプリケーションなど、一般的なデスクトップアプリケーションを使用して作成したPDFドキュメントにセキュリティポリシーを適用できます。
 
    Adobe Acrobat は、[アドビ システムズ社の Web サイト](https://acrobat.adobe.com/jp/ja/free-trial-download.html)で購入、ダウンロードできます。Adobe Acrobat の記事「[PDF のセキュリティポリシーの設定](https://helpx.adobe.com/jp/acrobat/using/setting-security-policies-pdfs.html)」には、Adobe Acrobat を使用したポリシーの作成や適用についての詳細が掲載されています。 
 

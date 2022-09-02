@@ -2,10 +2,10 @@
 title: リンクチェッカー
 description: リンクチェッカーは、内部リンクと外部リンクの両方を検証し、リンクの書き換えを許可するのに役立ちます。
 exl-id: 8ec4c399-b192-46fd-be77-3f49b83ce711
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 0b9de3261d8747f3e7107962b6aea1dbdf9d6773
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 100%
+source-wordcount: '987'
+ht-degree: 98%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 コンテンツ作成者は、コンテンツページに含まれるすべてのリンクの検証に関心を持つ必要はありません。
 
-リンクチェッカーは、コンテンツ作成者に対して、次のようなリンクを自動的に提供します。
+リンクチェッカーが自動的に実行され、コンテンツ作成者は次のリンクを使用できます。
 
 * コンテンツに追加されたリンクの検証
 * コンテンツ内のすべての外部リンクのリストの表示
