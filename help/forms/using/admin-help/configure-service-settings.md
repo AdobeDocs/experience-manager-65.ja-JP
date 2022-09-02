@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 2fab4b0c-e5db-47cd-b85a-4ff5ad6eb178
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3e6eba85dbd9e98ac29fed55c1787e5633bafc04
 workflow-type: tm+mt
-source-wordcount: '10769'
-ht-degree: 98%
+source-wordcount: '10683'
+ht-degree: 99%
 
 ---
 
@@ -186,16 +186,6 @@ Email サービスでは、以下の設定を使用できます。
 **SMTP ユーザー：** SMTP サーバーへのログインに使用するユーザーアカウントのユーザー名です。
 
 **SMTP パスワード：** SMTP ユーザーアカウントと関連付けられているパスワードです。
-
-**0Auth2.0 認証：** Auth2.0 認証サービスは、組織が安全な電子メール要件に準拠できるように、統合メールサービスをサポートします。
-
-**クライアント ID :** Azure ポータルが、認証に使用されるアプリケーション ID を生成します。
-
-**クライアント秘密鍵：** Azure ポータルが秘密鍵を生成し、認証に使用します。
-
-**更新トークン：**  OAuth クライアントは、文字列を使用して、ユーザーの操作なしに新しいアクセストークンを取得します。
-
-クライアント ID、クライアントの秘密鍵、更新トークンを取得して使用する方法について詳しくは、 [電子メールサービスの OAuth2.0 認証サポート](/help/forms/using/oauth2-support-for-mail-service.md).
 
 **SMTP トランスポートセキュリティ：** SMTP サーバーへの接続に使用するセキュリティプロトコルです。
 

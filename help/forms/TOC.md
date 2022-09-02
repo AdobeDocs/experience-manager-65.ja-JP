@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 3f7191ecdddf7325f2c1153f1ec733893cc649dc
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3795'
 ht-degree: 97%
 
 ---
@@ -122,7 +122,6 @@ ht-degree: 97%
       + [JEE 上の AEM Forms のセキュリティに関する一般的な考慮事項](using/general-security-considerations.md)
       + [JEE 上の AEM Forms 環境の堅牢化](using/hardening-aem-forms-jee-environment.md)
       + [JEE 上の AEM Forms 管理者設定のセキュリティ保護の設定](using/configuring-secure-administration-settings-aem.md)
-      + [メールサービスの OAuth2 サポート](using/oauth2-support-for-mail-service.md)
 + フォームデータモデル {#form-data-model}
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
