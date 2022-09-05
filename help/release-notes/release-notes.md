@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 381ab110ccf5605b17382b9c77693c819e31e3b6
 workflow-type: tm+mt
-source-wordcount: '3237'
-ht-degree: 39%
+source-wordcount: '3224'
+ht-degree: 38%
 
 ---
 
@@ -152,7 +152,6 @@ ht-degree: 39%
 * ネストされたレイアウトコンテナに追加すると、テキストコンポーネントの位置がずれます。（NPR-38193）
 * コンポーネントのスタイルシステム設定がない場合、空の「スタイル」タブが表示されていました。 設定が存在しない場合、「 」タブが非表示になりました。 (NPR-38218) <!-- version 2 (old) of description above * Style tab is blank on components without styles/policies. (NPR-38218) -->
 * プロパティ `useLegacyResponsiveBehaviour` が、認証済みの場合にのみ機能します。（NPR-37996）
-* jquery-ui を最新バージョンにアップグレードすると、エディターが機能しませんでした。（SITES-5647）
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6514}
 
