@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 966a3ea6b8cb9b42e21f8e3eb3fee1c7ca93cf51
+source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
 workflow-type: tm+mt
-source-wordcount: '3559'
-ht-degree: 97%
+source-wordcount: '3583'
+ht-degree: 96%
 
 ---
 
@@ -89,6 +89,11 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <th><p><strong>プラットフォーム</strong></p> </th>
    <th><p><strong>サポートレベル</strong></p> </th>
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
+  </tr>
+  <tr> 
+   <td><p>OracleJava™ SE 11（64 ビット） <sup> [8] </sup> </p>  </td>
+   <td><p>A：サポート対象</p> </td>
+   <td><p>マイナーリリースとアップデート </p> </td>
   </tr>
   <tr>
    <td>Azul Zulu OpenJDK 11 - 64 ビット</td>
@@ -791,12 +796,9 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 
 ## 変更履歴 {#revision-history}
 
-<!-- 
-- Sep 01, 2022
-  
-  - Added support for Oracle Java™ SE 11 (64 bit) SDK for application server JBoss EAP 7.4.
+- 2022 年 9 月 1 日
 
-  -->
+   - oracleJava™ SE 11 （64 ビット） SDK のサポートを、アプリケーションサーバー JBoss EAP 7.4 に追加しました。
 
 - 2022 年 3 月 03 日（PT）
 
