@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 74e3d4204166280e8624298098042b8cb222c034
+source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
 workflow-type: tm+mt
-source-wordcount: '6253'
+source-wordcount: '6282'
 ht-degree: 98%
 
 ---
@@ -118,7 +118,11 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 1. 接続に成功したら、次のように設定します。アスタリスク（*）を含む見出しが必須です。
 
-   * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。Experience Managerでは、1 つのDynamic Mediaアカウントを使用できます。 <!-- CQDOC-19579 and CQDOC-19612 -->
+   * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。
+      >[!IMPORTANT]
+      Experience ManagerのインスタンスでサポートされるDynamic MediaCloud Servicesは 1 つだけです。複数の設定を追加しないでください。 1 つのExperience Managerインスタンス上の複数のDynamic Media設定 _not_ Adobeでサポートまたは推奨。
+
+      <!-- CQDOC-19579 and CQDOC-19612 -->
 
       関連トピック [Dynamic Media会社エイリアスアカウントの設定](/help/assets/dm-alias-account.md).
 
