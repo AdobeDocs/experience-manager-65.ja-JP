@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d4ceb82e-2889-4507-af22-b051af83be38
 exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fafcf5f9ec64f147447300b02afbc0590d0c5e22
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 100%
+source-wordcount: '881'
+ht-degree: 99%
 
 ---
 
@@ -150,6 +150,12 @@ curl -u <user>:<password> -F cmd=delete http://localhost:4502/crx/packmgr/servic
 
 ```shell
 curl -u <user>:<password> http://localhost:4502/etc/packages/my_packages/test.zip
+```
+
+#### パッケージのレプリケート {#replicate-a-package}
+
+```shell
+curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/my_packages/test.zip?cmd=replicate
 ```
 
 ### ユーザー管理 {#user-management}
