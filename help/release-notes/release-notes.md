@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 381ab110ccf5605b17382b9c77693c819e31e3b6
+source-git-commit: 935698e6c8caabccb7bbe0aa9f45012d07163660
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3257'
 ht-degree: 38%
 
 ---
@@ -123,6 +123,7 @@ ht-degree: 38%
 * バーコード SSCC-18 に正しくない値が表示されます。Forms サーバーが、バーコードの右側の値を省略します。（CQ-4342400）
 * Forms 6.5 Designer で作成された静的 PDF フォームの場合、PDF アクセシビリティが次のエラーで失敗します。`Tab order entry in page with annotations not set to "S"`（CQ-4343117）
 * Forms Designer で、ハイパーリンクの画面Readerテキストを指定する機能が追加されました。（NPR-36221）
+* 非 XFA アダプティブフォームに繰り返し可能なパネルを追加し、非 XFA フォーム内の繰り返し可能なパネルの数が 15 を超える場合、新しいインスタンスを追加するのに最大 7 ～ 8 秒かかる場合があります。 （NPR-37346）
 
 ## 統合 {#integrations-6514}
 
