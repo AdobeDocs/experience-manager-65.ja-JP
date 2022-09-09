@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
-source-git-commit: 78359fb8ecbcc0227ab5a3910175aed73d823902
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '1865'
-ht-degree: 100%
+source-wordcount: '1862'
+ht-degree: 98%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 100%
 * チェックアウト
 * 検索
 
-AEM 検索やサードパーティ検索（Search&amp;Promote など）、またはこれらを組み合わせた検索をおこなうための、統合フックが提供されています。
+検索には、AEM検索、サードパーティ検索またはその組み合わせを使用できる統合フックが提供されます。
 
 ## e コマースエンジンの選択 {#ecommerce-engine-selection}
 
@@ -129,6 +129,7 @@ e コマースフレームワークは任意の e コマースソリューショ
 >
 >1. `size`
 >1. さらにもう 1 つ
+
 >
 >   この追加バリアントは、製品リファレンスの `variationAxis` プロパティ（Geometrixx Outdoors の場合、通常は `color`）を使用して選択されます。
 

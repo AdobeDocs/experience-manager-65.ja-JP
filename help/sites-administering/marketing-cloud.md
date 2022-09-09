@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '873'
 ht-degree: 100%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Manager（AEM）は、Adobe Marketing Cloud の次の製品と�
 * Adobe Target：顧客へのオンラインコンテンツの関連性を継続的に高め、より多くのコンバージョンを生み出すための機能をマーケティング担当者に提供します。
 * Adobe Dynamic Media Classic は、メディア管理の自動化、web パブリッシングの効率化、および web エクスペリエンスの強化をホストされた環境内で行います。
 * Adobe Dynamic Tag Management：アドビやサードパーティのタグをいくつでもすばやく簡単に管理できる直感的なツールをマーケティング担当者に提供します。
-* Adobe Search&amp;Promote：サイトの検索結果を管理し最適化できる機能をマーケティング担当者に提供します。
+<!-- Search&Promote is end of life as of September 1, 2022 * Adobe Search&Promote gives marketers the ability to control and optimize the search results on their sites. -->
 * Adobe Campaign：メール配信コンテンツを Adobe Experience Manager で直接管理できます。
 
 さらに、AEM を [Creative Cloud と統合](/help/assets/aem-cc-integration-best-practices.md)したり、[サードパーティのサービス](/help/sites-administering/third-party-services.md)と統合したりすることもできます。
@@ -87,13 +87,13 @@ Adobe Experience Manager と Dynamic Media Classic の統合方法について�
 
 Audience Manager 統合は AEM 6.3 では削除されています。
 
-## Search&amp;Promote との統合 {#integrating-with-search-promote}
+<!-- Search&Promote is end of life as of September 1, 2022 ## Integrating with Search&Promote {#integrating-with-search-promote} -->
 
-Adobe Search&amp;Promote を使用すると、マーケターは、web サイトおよびモバイルサイト上で、訪問者が関連商品やコンテンツを参照、検索、比較および選択する方法を最適化することができます。企業では、ビジネス目標と訪問者の意図に基づいて、優先度の高い項目のプロモーションを簡単に実施できます。また、KPI に基づくトリガーまたは指標を利用して、マーチャンダイジングとプロモーションのアクティビティを自動化できます。
+<!-- Search&Promote is end of life as of September 1, 2022 Adobe Search&Promote enables marketers to optimizehow visitors browse, find, compare, and select relevant products and content on web and mobile sites. Businesses can easily promote priority items based on business objectives and visitor intent, as well as automate merchandising and promotions activity via KPI-based triggers or metrics. -->
 
-Adobe Search&amp;Promote は、信頼性とスケーラビリティに優れたホスト型サイト検索アプリケーションです。数百万のページや商品の規模にまで拡張でき、小売サイトからニュースサイトまで、訪問者数の多いオンラインビジネスに対応できます。Adobe Search&amp;Promote は、マーケティング担当者による、かつてないレベルの管理性と指標ベースの関連性を実現します。
+<!-- Search&Promote is end of life as of September 1, 2022 Adobe Search&Promote is a reliable and scalable hosted site search application, capable of scaling to millions of pages or products, for heavily visited online businesses ranging from retail to news sites. It offers unprecedented levels of marketer control and metrics-based relevance. -->
 
-AEM と Search&amp;Promote の統合について詳しくは、[Adobe Search&amp;Promote との統合](/help/sites-administering/search-and-promote.md)を参照してください。
+<!-- Search&Promote is end of life as of September 1, 2022 For information about integrating AEM and Search&Promote, see [Integrating with Adobe Search&Promote](/help/sites-administering/search-and-promote.md). -->
 
 ## Adobe Campaign との統合 {#integrating-with-adobe-campaign}
 

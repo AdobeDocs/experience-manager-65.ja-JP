@@ -7,9 +7,9 @@ user-guide-title: AEM 6.5 クラシック UI オーサリングユーザーガ�
 user-guide-description: このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。
 feature: Authoring
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '264'
 ht-degree: 100%
 
 ---
@@ -49,7 +49,6 @@ ht-degree: 100%
    + [タグの使用 ](classic-feature-tags.md)
    + [基礎モード](classic-feature-scaffolding.md)
    + [デザインモードでのコンポーネントの設定 ](classic-page-author-design-mode.md)
-   + [ページへの Search&amp;Promote 機能の追加 ](classic-feature-search-promote.md)
    + [コンポーネント](classic-page-author-default-components.md)
 + ワークフロー {#workflows}
    + [ワークフローへの参加 ](classic-workflows-participating.md)

@@ -8,9 +8,9 @@ breadcrumb-title: オーサリングガイド
 user-guide-description: AEM でのコンテンツ作成やオーサリングのための主要な概念について説明します。
 feature: Authoring
 role: User
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '291'
 ht-degree: 100%
 
 ---
@@ -80,7 +80,6 @@ ht-degree: 100%
    + [コンテンツインサイト](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/content-insights.html?lang=ja)
    + [ページパフォーマンスの分析 ](ci-analyze.md)
    + [ページ分析データの表示 ](pa-using.md)
-   + [ページへの Search&amp;Promote 機能の追加 ](search-and-promote.md)
 + パーソナライズ機能 {#personalization}
    + [パーソナライズ機能](personalization.md)
    + [ContextHub データを使用したページのプレビュー](ch-previewing.md)

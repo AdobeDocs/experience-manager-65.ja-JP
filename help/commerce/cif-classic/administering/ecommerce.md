@@ -5,10 +5,10 @@ topic-tags: e-commerce
 content-type: reference
 docset: aem65
 exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 100%
+source-wordcount: '729'
+ht-degree: 99%
 
 ---
 
@@ -147,7 +147,7 @@ AEM e コマースフレームワークは、以下の機能を提供します�
 
    * AEM 検索
    * e コマースシステムの検索
-   * サードパーティの検索（Search&amp;Promote など）
+   * サードパーティ検索
    * またはこれらの組み合わせ
 
    ![](/help/sites-administering/assets/chlimage_1-131.png)

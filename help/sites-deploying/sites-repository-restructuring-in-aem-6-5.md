@@ -10,9 +10,9 @@ topic-tags: repo_restructuring
 discoiquuid: 3eccb2d5-c325-43a6-9c03-5f93f7e30712
 feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1462'
 ht-degree: 100%
 
 ---
@@ -36,7 +36,8 @@ ht-degree: 100%
 * [ページ基礎モード](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-scaffolding)
 * [レスポンシブグリッド LESS](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#responsive-grid-less)
 * [静的テンプレートデザイン](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#static-template-designs)
-* [Adobe Search and Promote 統合クライアントライブラリ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries)
+
+<!-- Search&Promote is end-of-life September 1, 2022 * [Adobe Search and Promote Integration Client Libraries](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-search-and-promote-integration-client-libraries) -->
 * [Adobe Target 統合クライアントライブラリ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#adobe-target-integration-client-libraries)
 * [WCM Foundation クライアントライブラリ](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#wcm-foundation-client-libraries)
 
@@ -376,38 +377,38 @@ ht-degree: 100%
  </tbody>
 </table>
 
-### Adobe Search and Promote 統合クライアントライブラリ {#adobe-search-and-promote-integration-client-libraries}
+<!-- Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promote Integration Client Libraries {#adobe-search-and-promote-integration-client-libraries}
 
 <table>
  <tbody>
   <tr>
-   <td><strong>以前の場所</strong></td>
+   <td><strong>Previous location</strong></td>
    <td><p><code>/etc/clientlibs/foundation/searchpromote</code></p> </td>
   </tr>
   <tr>
-   <td><strong>新しい場所</strong></td>
+   <td><strong>New location(s)</strong></td>
    <td><code>/libs/cq/searchpromote/clientlibs/searchpromote</code></td>
   </tr>
   <tr>
-   <td><strong>再構築の手引き</strong></td>
-   <td><p>これらのクライアントライブラリをカスタムで使用する場合は、パスではなくカテゴリでクライアントライブラリを参照する必要があります。</p>
+   <td><strong>Restructuring guidance</strong></td>
+   <td><p>Any custom use of these Client Libraries should reference the Client Library by category, and not by path.</p>
     <ol>
-     <li>以前の場所のパスによるクライアントライブラリへの参照はすべて <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM のクライアントライブラリ参照フレームワーク</a>を使用するように更新する必要があります。</li>
-     <li>AEM のクライアントライブラリ参照フレームワークを使用できない場合、クライアントライブラリの絶対パスは AEM のクライアントライブラリプロキシサーブレットを介して参照できます:</li>
+     <li>Any references to the Client Library by path at the Previous Location should be updated to use <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM's Client Library referencing framework</a>.</li>
+     <li>If AEM's Client Library referencing framework cannot be used, the absolute path of the Client Libraries can be referenced via AEM's Client Library Proxy servlet:</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/searchpromote/clientlibs/searchpromotei.js</code></li>
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
-   <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 cq:ClientLIbraryFolder ノードを検索し、カテゴリプロパティを調べます:</p>
+   <td><strong>Notes</strong></td>
+   <td><p>Editing of these Client Libraries was never supported.</p> <p>To obtain the Client Library categories, visit each cq:ClientLIbraryFolder node via CRXDELite and inspect the categories property:</p>
     <ul>
      <li><code>/libs/cq/searchpromote/clientlibs/searchpromote</code></li>
     </ul> </td>
   </tr>
  </tbody>
-</table>
+</table> -->
 
 ### Adobe Target 統合クライアントライブラリ {#adobe-target-integration-client-libraries}
 
