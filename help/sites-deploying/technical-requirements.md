@@ -6,7 +6,7 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 80702b274c35dae7fd7a3d8137124e1240e57d7c
+source-git-commit: 0b1080b99edaa3f0eb21d72bda82774ba3a21703
 workflow-type: tm+mt
 source-wordcount: '3452'
 ht-degree: 94%
@@ -188,8 +188,8 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
 | **Linux、Red Hat ディストリビューションベース** | A：サポート対象 `[1]` `[3]` |
-| Linux、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `[2]` |
-| Linux、SUSE ディストリビューションベース | A：サポート対象 |
+| Linux、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `[1]` `[2]` |
+| Linux、SUSE ディストリビューションベース | A：サポート対象 `[1]` |
 | Microsoft Windows Server 2019 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft Windows Server 2016 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft Windows Server 2012 R2 | Z：サポート対象外 |
