@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2d12f1652a3b8ec4e6ca9c737dc844d1f53f7d08
+source-git-commit: 2bad64ebc94cf5b09149a8216648de763a6e30d0
 workflow-type: tm+mt
-source-wordcount: '5365'
-ht-degree: 99%
+source-wordcount: '5369'
+ht-degree: 98%
 
 ---
 
@@ -654,7 +654,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Microsoft® Windows**
 
-* Microsoft Office の[サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)のインストールが完了し、すべてのアプリケーションでダイアログを開く操作がキャンセルされていることを確認します。
+* 32 ビット版であることを確認します。 [サポート対象バージョン ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Microsoft Office のインストールが完了し、すべてのアプリケーションでダイアログを開く操作がキャンセルされました。
 * PDF Generator ユーザーが PDF 設定 UI に追加されていることを確認します。
 * PDF Generator ユーザーが管理グループのメンバーであり、[プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege)権限がそのユーザーに対して設定されていることを確認します。
 * ユーザーが PDF Generator UI で設定されていることを確認し、次のアクションを実行します。
@@ -668,7 +668,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Linux®**
 
-* [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)の Open Office がインストールされ、開くダイアログはすべてのアプリケーションでキャンセルされ、Office アプリケーションが正常に起動することを確認します。
+* 32 ビットまたは 64 ビットであることを確認する [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Open Office がインストールされている場合、開くダイアログはすべてのアプリケーションでキャンセルされ、Office アプリケーションが正常に起動します。
 * 環境変数 `OpenOffice_PATH` を作成し、[コンソール](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)または dt（デバイスツリー）プロファイルに設定されている OpenOffice のインストール先を指すように設定します。
 * OpenOffice のインストールに問題がある場合は、OpenOffice のインストールに必要な [32 ビットライブラリ](#extrarequirements)が利用可能であることを確認します。
 
