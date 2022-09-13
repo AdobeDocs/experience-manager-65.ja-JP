@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 060bfb2ed3288b0ef9fbb5ba7f6b06ee027062b6
 workflow-type: tm+mt
-source-wordcount: '3583'
-ht-degree: 96%
+source-wordcount: '3624'
+ht-degree: 95%
 
 ---
 
@@ -22,6 +22,14 @@ ht-degree: 96%
 # JEE 上の AEM Forms でサポートされているプラットフォーム {#supported-platforms-for-aem-forms-on-jee}
 
 ## サポートされているプラットフォーム {#supported-platforms}
+
+<div class="preview">
+
+AEM 6.5 Forms Service Pack 12(6.5.12.0) は、JEE 上のAEM 6.5 Formsの最新の完全インストーラーを提供します。
+
+Adobeでは、 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja"> JEE 上のAEM 6.5.12.0 Forms </a> AEM 6.5 の代わりに完全インストーラー（2022 年 3 月 3 日にリリース）。インストーラー（2019 年 4 月 8 日にリリース）。
+
+</div>
 
 ### サポートレベル {#support-levels}
 
