@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 477e3d6d7e64a86726a71a8c554593441c94d5bc
+source-git-commit: a0612d10c91cf096403dad1c50b0884feeb10ec2
 workflow-type: tm+mt
-source-wordcount: '5388'
-ht-degree: 97%
+source-wordcount: '5461'
+ht-degree: 96%
 
 ---
 
@@ -605,32 +605,29 @@ System Readiness Tool は、PDF Generator 変換を実行するようにマシ�
    >
    > * srt_config.yaml ファイルを使用して、様々な設定を行うことができます。ファイルの形式は次のとおりです。
 
-
-   ```
-      # =================================================================
-      # SRT Configuration
-      # =================================================================
-      #Note - follow correct format to avoid parsing failures
-      #e.g. <param name>:<space><param value> 
-      #locale: (mandatory field)Locale to be used for SRT. Supported locales [en/fr/de/ja].
-      locale: en
-   
-      #aemTempDir: AEM Temp direcotry
-      aemTempDir:
-   
-      #users: provide PDFG converting users list
-      #users:
-      # - user1
-      # - user2
-      users:
-   
-      #profile: select profile to run specific checks. Choose from [LCM], more will be added soon 
-      profile:
-   
-      #outputDir: directory where output files will be saved
-      outputDir:
-   ```
-
+       #=================================================================
+       # SRT 設定
+       #=================================================================
+       #Note — 解析エラーを避けるために正しい形式に従います。
+       #e.g &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       #locale:（必須フィールド）SRT に使用するロケール。 サポートされているロケール [en/fr/de/ja]。
+       ロケール：en
+       
+       #aemTempDir:AEM Temp ディレクトリ
+       aemTempDir:
+       
+       #users:PDFG 変換ユーザーリストの提供
+       #users:
+       # - user1
+       # - user2
+       ユーザー：
+       
+       #profile:特定のチェックを実行するには、「プロファイル」を選択します。 [LCM] から選択すると、追加が近日中に行われます
+       プロファイル：
+       
+       #outputDir:出力ファイルを保存するディレクトリ
+       outputDir:
+   >
 1. `[Path_of_reports_folder]` に移動します。SystemReadinessTool.html ファイルを開きます。レポートを検証して前述の問題を修正します。
 
 ## トラブルシューティング
