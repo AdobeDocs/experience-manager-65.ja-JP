@@ -8,7 +8,7 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: a0612d10c91cf096403dad1c50b0884feeb10ec2
+source-git-commit: 26fbf8629715c983ccae9dcdee1defb279849107
 workflow-type: tm+mt
 source-wordcount: '5461'
 ht-degree: 96%
@@ -605,11 +605,12 @@ System Readiness Tool は、PDF Generator 変換を実行するようにマシ�
    >
    > * srt_config.yaml ファイルを使用して、様々な設定を行うことができます。ファイルの形式は次のとおりです。
 
-       #=================================================================
        # SRT 設定
-       #=================================================================
-       #Note — 解析エラーを避けるために正しい形式に従います。
-       #e.g &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       
+       #注意 — 解析エラーを避けるために正しい形式に従ってください
+       
+       #例： &lt;param name=&quot;&quot;>:&lt;space>&lt;param value=&quot;&quot;>
+       
        #locale:（必須フィールド）SRT に使用するロケール。 サポートされているロケール [en/fr/de/ja]。
        ロケール：en
        
