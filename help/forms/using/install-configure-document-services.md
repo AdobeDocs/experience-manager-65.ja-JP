@@ -8,9 +8,9 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 2bad64ebc94cf5b09149a8216648de763a6e30d0
+source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
 workflow-type: tm+mt
-source-wordcount: '5369'
+source-wordcount: '5389'
 ht-degree: 98%
 
 ---
@@ -650,7 +650,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++
 
-+++Open Office
++++OpenOffice
 
 **Microsoft® Windows**
 
@@ -668,7 +668,8 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Linux®**
 
-* 32 ビットまたは 64 ビットであることを確認する [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Open Office がインストールされている場合、開くダイアログはすべてのアプリケーションでキャンセルされ、Office アプリケーションが正常に起動します。
+* のインストール [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice の AEM Formsは、32 ビット版と 64 ビット版の両方をサポートしています。 インストール後、すべての OpenOffice アプリケーションを開き、すべてのダイアログウィンドウをキャンセルして、アプリケーションを閉じます。 アプリケーションを再度開き、OpenOffice アプリケーションを開いたときにダイアログボックスが表示されないことを確認します。
+
 * 環境変数 `OpenOffice_PATH` を作成し、[コンソール](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)または dt（デバイスツリー）プロファイルに設定されている OpenOffice のインストール先を指すように設定します。
 * OpenOffice のインストールに問題がある場合は、OpenOffice のインストールに必要な [32 ビットライブラリ](#extrarequirements)が利用可能であることを確認します。
 

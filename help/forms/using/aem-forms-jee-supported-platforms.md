@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: bc9168eb22f2ebe7ae5408d5e033e085e47c7438
+source-git-commit: 923ee0e20a6e41c9493a77b179f93dd81ff91020
 workflow-type: tm+mt
-source-wordcount: '3636'
-ht-degree: 95%
+source-wordcount: '3683'
+ht-degree: 94%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 95%
 
 <div class="preview">
 
-AEM 6.5 Forms Service Pack 12(6.5.12.0) は、JEE 上のAEM 6.5 Formsの最新の完全インストーラーを提供します。
+Adobeが [完全インストーラ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) JEE 上のAEM 6.5 Forms Service Pack 12(6.5.12.0) とパッチインストーラー 完全なインストーラーは新しいプラットフォームをサポートし、パッチインストーラーはバグ修正のみを含みます。
 
-Adobeでは、 <a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja"> JEE 上のAEM 6.5.12.0 Forms </a> AEM 6.5 の代わりに完全インストーラー（2022 年 3 月 3 日にリリース）。インストーラー（2019 年 4 月 8 日にリリース）。
+JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、新規インストールを実行するか、最新のソフトウェアを使用することを計画している場合、Adobeでは [AEM 6.5.12.0 Forms on JEE フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 2019 年 4 月 8 日にリリースされた、AEM 6.5 Formsインストーラーの代わりに 2022 年 3 月 3 日にリリースされました。
 
 </div>
 
