@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 32b97aeff398a19556d46ff6c905dc3019988bc1
+source-git-commit: e5b78a6f84fa0f9de746ca4ae69a8df4f474e305
 workflow-type: tm+mt
-source-wordcount: '5389'
-ht-degree: 98%
+source-wordcount: '5388'
+ht-degree: 97%
 
 ---
 
@@ -659,7 +659,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * PDF Generator ユーザーが管理グループのメンバーであり、[プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege)権限がそのユーザーに対して設定されていることを確認します。
 * ユーザーが PDF Generator UI で設定されていることを確認し、次のアクションを実行します。
    1. Microsoft® Windows に、PDF Generator ユーザーでログインします。
-   1. Microsoft® Office または Open Office アプリケーションを開き、すべてのダイアログをキャンセルします。
+   1. Microsoft® Office または OpenOffice アプリケーションを開き、すべてのダイアログをキャンセルします。
    1. AdobePDF をデフォルトのプリンターとして設定します。
    1. Acrobat を PDF ファイルのデフォルトプログラムに設定します。
    1. Microsoft Office アプリケーションのファイル／印刷および Acrobat リボンを使用して手動変換を実行し、すべてのダイアログをキャンセルします。
