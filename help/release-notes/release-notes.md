@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 935698e6c8caabccb7bbe0aa9f45012d07163660
+source-git-commit: 48f898a774d2ddd6d2c31f6a4107c71e4032cfc2
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3281'
 ht-degree: 38%
 
 ---
@@ -118,7 +118,7 @@ ht-degree: 38%
 * Workspace でワークフローのナビゲーションリンクを選択した場合、HTMLリンクが選択されていることは示されません。 （NPR-37138）
 * 手書き署名機能は、アクセシビリティガイドラインに対応していません。 （NPR-37596）
 * AEM Formsは log4j 1.x を使用します。log4j 1.x のサポートが提供終了になりました。 （NPR-38273）
-* MSSQL データベースをフォームデータモデルのデータソースとして使用し、値を取得すると、取得値の小数点以降の数値が自動的に表示されます。 （CQ-4346190）
+* MSSQL データベースをフォームデータモデルのデータソースとして使用し、値を取得する場合、取得値の小数以降の数値は切り捨てられます。 （CQ-4346190）
 * Forms 6.5 Designer で、Forms 6.1 Designer で作成したフォームを開き、テキストボックスを編集すると、段落の間隔が指定したスペースを超えます。スペースに対する以前の設定がすべて削除され、テキストボックスの手動での再フォーマットが必要になります。（CQ-4341899）
 * バーコード SSCC-18 に正しくない値が表示されます。Forms サーバーが、バーコードの右側の値を省略します。（CQ-4342400）
 * Forms 6.5 Designer で作成された静的 PDF フォームの場合、PDF アクセシビリティが次のエラーで失敗します。`Tab order entry in page with annotations not set to "S"`（CQ-4343117）
@@ -317,7 +317,8 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THE LIST.
  -->
 
-* [GraphQL インデックスパッケージ 1.0.3 を使用した AEM コンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.3.zip)
+* [GraphQL インデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
