@@ -10,10 +10,10 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 11bad847558d295d1cf38aa9e8f246fc6fc3877b
 workflow-type: tm+mt
-source-wordcount: '3695'
-ht-degree: 100%
+source-wordcount: '3826'
+ht-degree: 96%
 
 ---
 
@@ -129,7 +129,7 @@ ht-degree: 100%
 
    * 通貨記号（€、￥、£ など）
    * 数学記号（∑、√、∂、^ など）
-   * 句読記号（‟、” など）
+   * 「 」や「 」などの句読点記号
 
    ![specialcharacters](assets/specialcharacters.png)
 
@@ -288,6 +288,22 @@ ht-degree: 100%
 1. AEM で、次の URL を使用してご使用のサーバーの Adobe Experience Manager web コンソール設定を開きます。https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
 1. **[!UICONTROL Correspondence Management 設定]**&#x200B;を探してクリックします。
 1. **[!UICONTROL パブリッシュでレターインスタンスを管理]**&#x200B;設定をオンにして、「**[!UICONTROL 保存]**」をクリックします。
+
+### ドラフト保存機能を有効にする {#enable-save-draft-feature}
+
+レターを公開する前に、またはパブリッシュインスタンスでドラフトを保存する前に、次の手順を実行して「ドラフトとして保存」機能を有効にします。
+
+1. 次の URL を使用して、サーバーの Web コンソール設定を開きます。https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr.
+
+1. 「*com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name*」設定の横にある「**編集**」アイコンをクリックします。
+
+1. 内 *VersionRestoreManager 作成者の URL* 「 」フィールドで、対応するオーサーインスタンスの URL を指定します。
+
+1. 「保存」をクリックします。
+
+この *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* デフォルトでは、プロパティはパブリッシュインスタンスに引き継がれません。 パブリッシュインスタンスでドラフトの再読み込みを有効にするには、パブリッシュインスタンスでこれらのプロパティを使用する必要があります。
+
+引き継ぐため *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* インスタンスをパブリッシュするプロパティ。コンポーネントを次のように無効にします。 *com.day.cq.replication.impl.ReplicationPropertiesFilterFactory* をオーサーインスタンスに設定します。`http://server:port/system/console/components`
 
 レターインスタンスの保存が有効にされると、レターインスタンスの保存場所を選択するためのオプションが表示されます。レターインスタンスを保存するための 2 つのオプション（ローカル保存とリモート保存）があります。
 
