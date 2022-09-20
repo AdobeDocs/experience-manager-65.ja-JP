@@ -10,10 +10,10 @@ discoiquuid: 87742cb2-357b-421f-b79d-e355887ddec0
 docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
-source-git-commit: 11bad847558d295d1cf38aa9e8f246fc6fc3877b
+source-git-commit: 1a6881b29024799c44b2068ea82750c983a012e5
 workflow-type: tm+mt
-source-wordcount: '3826'
-ht-degree: 96%
+source-wordcount: '3867'
+ht-degree: 95%
 
 ---
 
@@ -291,19 +291,29 @@ ht-degree: 96%
 
 ### ドラフト保存機能を有効にする {#enable-save-draft-feature}
 
-レターを公開する前に、またはパブリッシュインスタンスでドラフトを保存する前に、次の手順を実行して「ドラフトとして保存」機能を有効にします。
+レターを公開する前に、またはパブリッシュインスタンスでドラフトを保存する前に、オーサーインスタンスとパブリッシュインスタンスで次の手順を実行して、「ドラフトとして保存」機能を有効にします。
 
-1. 次の URL を使用して、サーバーの Web コンソール設定を開きます。https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr.
+この *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* デフォルトでは、プロパティはパブリッシュインスタンスに引き継がれません。 引き継ぐため *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* パブリッシュインスタンスのプロパティを無効にします。 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネント。 コンポーネントを無効にするには：
 
-1. 「*com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name*」設定の横にある「**編集**」アイコンをクリックします。
+1. オーサーインスタンスで、 Adobe Experience Manager Web コンソールのコンポーネントコンソールを開きます。 デフォルトの URL は、`http://author-server:port/system/console/components` です。
 
-1. 内 *VersionRestoreManager 作成者の URL* 「 」フィールドで、対応するオーサーインスタンスの URL を指定します。
+1. を検索します。 **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** コンポーネント。
+
+1. クリック ![「無効」ボタン](/help/forms/using/assets/enablebutton.png) 無効にするアイコン [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネント。
+
+![オーサーインスタンス](/help/forms/using/assets/replicationproperties.png)
+
+ドラフトとして保存機能を有効にするには、次の場所にある既存の URL を置き換えます。 [!UICONTROL VersionRestoreManager 作成者の URL] を作成します。 URL を置き換えるには：
+
+1. パブリッシュインスタンスで、を開きます。 [!UICONTROL Adobe Manager Web コンソールの設定]. デフォルトの URL は、`https://publish-server:port/system/console/configMgr` です。
+
+1. を検索して開きます。 **[!UICONTROL Correspondence Management — オーサーインスタンスバージョンの復元設定]** コンポーネント。
+
+1. を **[!UICONTROL VersionRestoreManager 作成者の URL]** フィールドに、オーサーインスタンスの URL を入力します。
 
 1. 「保存」をクリックします。
 
-この *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* デフォルトでは、プロパティはパブリッシュインスタンスに引き継がれません。 パブリッシュインスタンスでドラフトの再読み込みを有効にするには、パブリッシュインスタンスでこれらのプロパティを使用する必要があります。
-
-引き継ぐため *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* インスタンスをパブリッシュするプロパティ。コンポーネントを次のように無効にします。 *com.day.cq.replication.impl.ReplicationPropertiesFilterFactory* をオーサーインスタンスに設定します。`http://server:port/system/console/components`
+![パブリッシュインスタンス](/help/forms/using/assets/correspondencemanagement.png)
 
 レターインスタンスの保存が有効にされると、レターインスタンスの保存場所を選択するためのオプションが表示されます。レターインスタンスを保存するための 2 つのオプション（ローカル保存とリモート保存）があります。
 
@@ -323,7 +333,7 @@ ht-degree: 96%
 
 #### 処理作成者設定を指定する {#specify-processing-author-settings}
 
-1. AEM で、次の URL を使用してご使用のサーバーの Adobe Experience Manager web コンソール設定を開きます。`https://<server>:<port>/<contextpath>/system/console/configMgr` 
+1. AEM で、次の URL を使用してご使用のサーバーの Adobe Experience Manager web コンソール設定を開きます。`https://<server>:<port>/system/console/configMgr` 
 
    ![Adobe Experience Manager の Web コンソール設定を使用する場合](assets/2configmanager.png)
 
