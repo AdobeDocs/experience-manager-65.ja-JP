@@ -10,10 +10,10 @@ discoiquuid: dfc473eb-6091-4f5d-a5a0-789972c513a9
 docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 126d5309fe3c3b6474e180d21f5c7d1697d9e08a
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 99%
+source-wordcount: '1884'
+ht-degree: 97%
 
 ---
 
@@ -105,11 +105,14 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 
    * llibicu
 
+* インストール [Microsoft Visual Studio 2019 32 ビット再頒布可能パッケージ](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+
+
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 AEM Forms アドオンパッケージは AEM にデプロイされるアプリケーションです。このパッケージには、AEM Forms データ取得およびその他の機能が含まれています。次の手順を実行してアドオンパッケージをインストールします。
 
-1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
+1. [ソフトウェア配布](https://experience.adobe.com/jp/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
@@ -124,7 +127,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### （Windows のみ）Visual Studio の再配布可能な自動インストール {#automatic-installation-visual-studio-redistributables}
 
-AEM インスタンスを権限昇格モードでインストールすると、AEM Forms アドオンパッケージのインストール時に、不足している Visual Studio 再配布可能ファイルが自動的にインストールされます。
+AEMインスタンスを管理者権限でインストールした場合、AEM Formsアドオンパッケージのインストール中に、32 ビット Visual Studio の再配布可能パッケージが自動的にインストールされます。
 
 Visual Studio の再配布可能パッケージが自動的にインストールされているかを評価するには、`/crx-repository/logs/` ディレクトリにある `error.log` ファイルを開きます。ログには次のメッセージが含まれます。
 
