@@ -1,5 +1,5 @@
 ---
-title: '分析とレポートの設定 '
+title: 分析とレポートの設定
 seo-title: Configuring analytics and reports
 description: Adobe Analytics を設定し、アダプティブフォーム、アダプティブドキュメント、HTML5 フォームを使用中に、インタラクティブパターンやユーザーが直面する問題を見つける方法について学びます。
 seo-description: Learn how to configure Adobe Analytics to discover interaction patterns and problems users face while using adaptive forms, adaptive documents, and HTML5 forms.
@@ -10,22 +10,24 @@ topic-tags: integrations
 discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 66631fd0813f623f3321072fc00fd90f7fa33d21
 workflow-type: tm+mt
-source-wordcount: '1506'
-ht-degree: 100%
+source-wordcount: '1531'
+ht-degree: 98%
 
 ---
 
-# 分析とレポートの設定 {#configuring-analytics-and-reports}
+# 分析フレームワークを使用したCloud Service {#analyticsusingcloudframework}
 
-AEM Forms は、Adobe Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
+AEM Forms は、 Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
 
 >[!NOTE]
 >
 >AEM Forms のアドオンパッケージの一部として、AEM Forms の分析の機能を使用できます。アドオンパッケージのインストールについて詳しくは、「[AEM Forms のインストールと設定](../../forms/using/installing-configuring-aem-forms-osgi.md)」を参照してください。
 >
 >アドオンパッケージの他に、Adobe Analytics のアカウントと AEM インスタンスでの管理者権限が必要になります。解決方法について詳しくは、「[Adobe Analytics](https://www.adobe.com/jp/solutions/digital-analytics.html)」を参照してください。
+
+また、Launch を使用して分析をAdobeできます。 AEM Formsを Launch と統合する方法について詳しくは、Adobe [AdobeLaunch を使用した Analytics](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md).
 
 ## 概要 {#overview}
 
@@ -186,4 +188,4 @@ Adobe Analytics フレームワークは、Adobe Analytics 変数と AEM 変数�
 
    **A.** 「Analytics を有効にする」ボタン **B.** 選択したフォーム
 
-   フォーム分析レポートの表示について詳しくは、「[AEM Forms 分析レポートの確認方法と詳細](../../forms/using/view-understand-aem-forms-analytics-reports.md)」を参照してください
+   フォーム分析レポートの表示について詳しくは、「[AEM Forms 分析レポートの確認方法と詳細](../../forms/using/view-understand-aem-forms-analytics-reports.md)」を参照してください。

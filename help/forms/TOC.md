@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 081b0c70ceca0502cb84d7e1b68b0b12dc45a4e7
+source-git-commit: 633a9b6d972cf8b0bb102a7efd5eeb8e0b71a19e
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 97%
+source-wordcount: '3814'
+ht-degree: 96%
 
 ---
 
@@ -330,7 +330,8 @@ ht-degree: 97%
 + AEM Forms と Experience Cloud ソリューションとの統合 {#integrate-aem-forms-with-experience-cloud-solutions}
    + [AEM Forms でターゲット設定されたエクスペリエンスを作成する](/help/forms/using/experience-targeting-forms.md)
    + [フォームのコンバージョン率の測定と効率性の改善](using/measure-improve-performance-forms-documents.md)
-   + [Analytics とレポートの設定](using/configure-analytics-forms-documents.md)
+   + [分析フレームワークを使用したCloud Service](using/configure-analytics-forms-documents.md)
+   + [AdobeLaunch を使用した Analytics](using/integrate-aem-forms-with-adobe-analytics.md)
    + [AEM Forms の分析レポートの確認方法と詳細](using/view-understand-aem-forms-analytics-reports.md)
    + [アダプティブフォームの A/B テストの作成と管理](using/ab-testing-adaptive-forms.md)
 + AEM Forms の公開と処理 {#publish-process-aem-forms}
@@ -683,6 +684,7 @@ ht-degree: 97%
 + トラブルシューティング {#troubleshooting}
    + [特定のバージョンのOracleJDK で一部のフォーム機能を使用できない](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
    + [JEE 上のアダプティブFormsバージョンの添付ファイルを含む電子メールを取得するための追加手順](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
+   + [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)

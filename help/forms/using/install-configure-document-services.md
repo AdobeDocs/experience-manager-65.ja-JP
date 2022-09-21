@@ -8,10 +8,10 @@ topic-tags: installing
 discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
-source-git-commit: 26fbf8629715c983ccae9dcdee1defb279849107
+source-git-commit: 652f2f9b55857b8962f5bfd4edb85f3700866485
 workflow-type: tm+mt
-source-wordcount: '5461'
-ht-degree: 96%
+source-wordcount: '5535'
+ht-degree: 95%
 
 ---
 
@@ -786,6 +786,15 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 * アドビ製品の初回起動から 7 日以内にオンラインにアクセスして、オンラインでのアクティベーションと登録を完了したり、インターネット対応デバイスと製品のシリアル番号を使用してこのプロセスを完了したりできます。手順について詳しくは、[オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en)を参照してください。
 
 +++
+
++++ Word または Excel ファイルを Windows Server 上のPDFに変換できません
+
+ユーザーが Word または Excel ファイルをMicrosoft Windows Server 上のPDFに変換しようとすると、次のエラーが発生します。
+
+*プライマリコンバータからのエラーメッセージ：ALC-PDG-015-003-Theシステムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
+
+この問題を解決するには、 [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+
 
 ## 次の手順 {#next-steps}
 
