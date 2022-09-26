@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 4e68a8a8d84d0ffa1d28ab13c196731e58b4cf9a
+source-git-commit: 1a383f0e620adf6968d912a9a1759e5ee020c908
 workflow-type: tm+mt
 source-wordcount: '3447'
 ht-degree: 99%
@@ -183,7 +183,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. ファイルを編集し、設定に必要な設定オプションを追加します。
 1. AEM を起動します。
 
-### 1.10.x S3 コネクターの新しいバージョンへのアップグレード {#upgrading-to-a-new-version-of-the-s-connector}
+## 1.10.x S3 コネクターの新しいバージョンへのアップグレード {#upgrading-to-a-new-version-of-the-s-connector}
 
 1.10.x S3 コネクターを新しいバージョンにアップグレードする必要がある場合は（1.10.0 から 1.10.4 へのアップグレードなど）、以下の手順に従います。
 
@@ -260,7 +260,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
  </tbody>
 </table>
 
-**データストアのキャッシュ**
+### データストアのキャッシュ {#data-store-caching}
 
 >[!NOTE]
 >
@@ -272,11 +272,11 @@ oak-run の「`datastorecacheupgrade`」コマンドを使用して、キャッ�
 
 キャッシュにはサイズ制限があり、cacheSize パラメーターを使用して設定できます。
 
-**ダウンロード**
+#### ダウンロード {#downloads}
 
 データストアからアクセスする前に、要求されたファイル／Blob のレコードがローカルキャッシュでチェックされます。キャッシュにファイルを追加しているときに、キャッシュが設定された制限（`cacheSize` パラメーターを参照）を超えると、領域を再利用できるように、ファイルの一部が消去されます。
 
-**非同期アップロード**
+#### 非同期アップロード {#async-upload}
 
 キャッシュでは、データストアへの非同期アップロードがサポートされています。ファイルは（ファイルシステム上の）キャッシュでローカルにステージングされ、非同期ジョブでファイルのアップロードが開始されます。非同期アップロードの数は、ステージングキャッシュのサイズによって制限されます。ステージングキャッシュのサイズは、`stagingSplitPercentage` パラメーターを使用して設定します。このパラメーターでは、ステージングキャッシュに使用するキャッシュサイズの割合（％）を定義します。また、ダウンロードに使用可能なキャッシュの割合（％）は、**（100 - `stagingSplitPercentage`）&#42;`cacheSize`** として計算されます。
 
