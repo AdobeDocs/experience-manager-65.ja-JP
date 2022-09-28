@@ -12,10 +12,10 @@ discoiquuid: 492741d5-8d2b-4a81-8f21-e621ef3ee685
 legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
-source-git-commit: 7cd4b6918a8b0de68f9f5c6a79ab3b49e8ef6fc1
+source-git-commit: b27a7a1cc2295b1640520dcb56be4f3eb4851499
 workflow-type: tm+mt
-source-wordcount: '2868'
-ht-degree: 100%
+source-wordcount: '2674'
+ht-degree: 99%
 
 ---
 
@@ -288,36 +288,7 @@ Solr インデックスの用途は主にフルテキスト検索ですが、パ
 
 AEM での統合はリポジトリレベルで実行されるので、Solr は、Oak（AEM に付属する新しいリポジトリ実装）で使用できるインデックスの候補の 1 つです。
 
-Solr は、組み込みサーバーとして AEM インスタンスと共に動作するか、リモートサーバーとして動作するように設定できます。
-
-### AEM での組み込み Solr サーバーの設定 {#configuring-aem-with-an-embedded-solr-server}
-
->[!CAUTION]
->
->実稼動環境では組み込み Solr サーバーは使用しないでください。開発環境のみで使用する必要があります。
-
-AEM は、Web コンソール経由で設定可能な組み込み Solr サーバーと共に利用できます。この場合、Solr サーバーは、組み込み先の AEM インスタンスと同じ JVM 内で実行されます。
-
-組み込み Solr サーバーは次の手順で設定できます。
-
-1. Web コンソール（`https://serveraddress:4502/system/console/configMgr`）にアクセスします
-1. 「**Oak Solr server provider**」を検索します。
-1. 「編集」ボタンを押し、次のウィンドウのドロップダウンリストで、サーバータイプを「**Embedded Solr**」に設定します。
-
-1. 次に、「**Oak Solr embedded server configuration**」を編集して設定を作成します。設定オプションについて詳しくは、[Apache Solr の web サイト](https://lucene.apache.org/solr/documentation.html)を参照してください。
-
-   >[!NOTE]
-   >
-   >Solr ホームディレクトリ（solr.home.path）設定により、AEM インストールフォルダー内の同名のフォルダーが検索されます。
-
-1. CRXDE を開き、Admin でログインします。
-1. **solrlndex** というノード（タイプ **oak:QueryIndexDefinition**）を **oak:index** の下に追加し、次のプロパティを設定します。
-
-   * **タイプ：** `solr`（String タイプ）
-   * **async:** `async`（String タイプ）
-   * **reindex：** `true`（Boolean タイプ）
-
-1. 変更内容を保存します。
+AEMインスタンスでリモートサーバーとして機能するように設定できます。
 
 ### AEM での単一リモート Solr サーバーの設定 {#configuring-aem-with-a-single-remote-solr-server}
 

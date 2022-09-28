@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: e8320b1dac681fd2c9e749344e8c126487d840ba
+source-git-commit: 4c3cc888a7590fdbee9b7d7e441602e4ae3f54b0
 workflow-type: tm+mt
-source-wordcount: '3557'
+source-wordcount: '3511'
 ht-degree: 98%
 
 ---
@@ -59,8 +59,6 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * **管理者パスワード**&#x200B;をインストール後に変更して、インスタンスの [セキュリティ](/help/sites-administering/security-checklist.md) を確保してください。
 * その他の変更は必要ありません。また、リポジトリへのアクセスに影響を与える可能性があるので、注意が必要です。
-
-**Wiki メールサービス**：Wiki から送信されるメールの設定を行います。
 
 **Apache Felix OSGi 管理コンソール**&#x200B;設定：
 
@@ -441,10 +439,6 @@ CQ リライターの HTML パーサーを制御します。
 **Day Commons JDBC Connections Pool**：コンテンツのソースとして使用される外部データベースへのアクセスを設定します。
 
 これはファクトリ設定なので、複数のインスタンスを設定できます。
-
-**Adobe CQ Media DPS Sessions Service**：パブリケーションで使用する DPS セッションを管理します。
-
-具体的には、`dps.session.service.url.name`、を定義できます。デフォルトは [https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions](https://dpsapi2.digitalpublishing.acrobat.com/webservices/sessions) に設定されています。
 
 **CDN Rewriter**：AEM と CDN の間の通信では、アセットやバイナリが安全な方法でエンドユーザーに配信されるようにする必要があります。この方法では 2 つのタスクをおこないます。
 
