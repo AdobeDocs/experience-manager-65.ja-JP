@@ -6,10 +6,10 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: 1a383f0e620adf6968d912a9a1759e5ee020c908
+source-git-commit: 1a741ff01fcf17dfdcc8c1cebcd858052d07361c
 workflow-type: tm+mt
-source-wordcount: '3447'
-ht-degree: 99%
+source-wordcount: '3583'
+ht-degree: 90%
 
 ---
 
@@ -204,61 +204,93 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. jar ファイルを AEM インストールフォルダーの **&lt;aem-install>**/crx-quickstart/install/15 にコピーします。
 1. AEM を起動して、コネクタの機能を確認します。
 
-次のオプションを指定して設定ファイルを使用できます。
+設定ファイルは、以下に説明するオプションと共に使用できます。
 
-* accessKey：AWS アクセスキーです。
-* secretKey：AWS 秘密アクセスキーです。**注意：** 次の場合に `accessKey` または `secretKey` が指定されていない場合、 [IAM ロール](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) は認証に使用されます。
-* s3Bucket：バケット名です。
-* s3Region：バケットのリージョンです。
-* path：データストアのパスです。デフォルト値は **&lt;AEM install folder>/repository/datastore** です。
-* minRecordLength：データストアに格納するオブジェクトの最小サイズです。最小／デフォルトは **16 KB** です。
-* maxCachedBinarySize：このサイズ以下のバイナリは、メモリキャッシュに格納されます。サイズはバイト単位です。デフォルト値は **17408 **（17 KB）です。
+<!--
+* accessKey: The AWS access key.
+* secretKey: The AWS secret access key. **Note:** When the `accessKey` or `secretKey` is not specified then the [IAM role](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) is used for authentication.
+* s3Bucket: The bucket name.
+* s3Region: The bucket region.
+* path: The path of the data store. The default is **&lt;AEM install folder&gt;/repository/datastore**
+* minRecordLength: The minimum size of an object that should be stored in the data store. The minimum/default is **16KB.**
+* maxCachedBinarySize: Binaries with size less than or equal to this size will be stored in memory cache. The size is in bytes. The default is **17408 **(17 KB).
+* cacheSize: The size of the cache. The value is specified in bytes. The default is **64GB**.
+* secret: Only to be used if using binaryless replication for shared datastore setup.
+* stagingSplitPercentage: The percentage of cache size configured to be used for staging asynchronous uploads. The default value is **10**.
+* uploadThreads: The number of uploads threads that are used for asynchronous uploads. The default value is **10**.
+* stagingPurgeInterval: The interval in seconds for purging finished uploads from the staging cache. The default value is **300** seconds (5 minutes).
+* stagingRetryInterval: The retry interval in seconds for failed uploads. The default value is **600** seconds (10 minutes).
+-->
 
-* cacheSize：キャッシュのサイズです。値はバイト単位で指定されます。デフォルト値は **64 GB** です。
-* secret：共有データストア設定でバイナリなしのレプリケーションを使用する場合にのみ使用します。
-* stagingSplitPercentage：非同期アップロードのステージングに使用するように設定されたキャッシュサイズの割合（％）です。デフォルト値は **10** です。
-* uploadThreads：非同期アップロードに使用するアップロードスレッドの数です。デフォルト値は **10** です。
-* stagingPurgeInterval：完了したアップロードをステージングキャッシュからパージする間隔（秒単位）です。デフォルト値は **300** 秒（5 分）です。
-* stagingRetryInterval：失敗したアップロードの再試行間隔（秒単位）です。デフォルト値は **600** 秒（10 分）です。
+### S3 Connector 設定ファイルオプション {#s3-connector-configuration-file-options}
 
-### バケットリージョンのオプション {#bucket-region-options}
+>[!NOTE]
+>
+>S3 コネクタは、IAM ユーザー認証と IAM ロール認証の両方をサポートしています。 IAM ロール認証を使用するには、 `accessKey` および `secretKey` の値を設定ファイルから取得します。 S3 コネクタは、デフォルトで [IAM ロール](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) インスタンスに割り当てられました。
+
+| キー | 説明 | デフォルト | 必須 |
+| --- | --- | --- | --- |
+| accessKey | バケットへのアクセス権を持つ IAM ユーザーのキー ID にアクセスします。 |  | はい、IAM ロールを使用していない場合は有効です。 |
+| secretKey | バケットへのアクセス権を持つ IAM ユーザーの秘密アクセスキー。 |  | はい、IAM ロールを使用していない場合は有効です。 |
+| cacheSize | ローカルキャッシュのサイズ（バイト単位）です。 | 64 GB | いいえ. |
+| connectionTimeout | 最初に接続を確立したときにタイムアウトするまでに待機する時間（ミリ秒）を設定します。 | 10000 | いいえ. |
+| maxCachedBinarySize | この値（バイト単位）以下のサイズのバイナリは、メモリキャッシュに格納されます。 | 17408(17 KB) | いいえ. |
+| maxConnections | 許可されるオープン HTTP 接続の最大数を設定します。 | 50 | いいえ. |
+| maxErrorRetry | 失敗（再取得可能）リクエストの再試行の最大回数を設定します。 | 3 | いいえ. |
+| minRecordLength | データストアに格納する必要があるオブジェクトの最小サイズ（バイト単位）です。 | 16384 | いいえ. |
+| path | AEMデータストアのローカルパス。 | `crx-quickstart/repository/datastore` | いいえ. |
+| proxyHost | クライアントが接続するオプションのプロキシホストを設定します。 |  | いいえ. |
+| proxyPort | クライアントが接続するオプションのプロキシポートを設定します。 |  | いいえ. |
+| s3Bucket | S3 バケットの名前。 |  | はい |
+| s3EndPoint | S3 REST API エンドポイント。 |  | いいえ. |
+| s3Region | バケットが存在する領域。 参照 [ページ](https://docs.aws.amazon.com/general/latest/gr/s3.html) を参照してください。 | AWSインスタンスが実行されている地域。 | いいえ. |
+| socketTimeout | 確立されたオープン接続を介してデータが転送され、接続がタイムアウトして閉じられるまでの待機時間（ミリ秒）を設定します。 | 50000 | いいえ. |
+| stagingPurgeInterval | ステージングキャッシュから完了したアップロードをパージする時間間隔（秒）。 | 300 | いいえ. |
+| stagingRetryInterval | 失敗したアップロードを再試行する間隔（秒）。 | 600 | いいえ. |
+| stagingSplitPercentage | 割合 `cacheSize` 非同期アップロードのステージングに使用します。 | 10 | いいえ. |
+| uploadThreads | 非同期アップロードで使用されるアップロードスレッドの数です。 | 10 | いいえ. |
+| writeThreads | S3 転送マネージャを介した書き込みに使用される同時スレッドの数。 | 10 | いいえ. |
+
+<!---
+### Bucket region options {#bucket-region-options}
 
 <table>
  <tbody>
   <tr>
-   <td>米国標準</td>
+   <td>US Standard</td>
    <td><code>us-standard</code></td>
   </tr>
   <tr>
-   <td>米国西部</td>
+   <td>US West</td>
    <td><code>us-west-2</code></td>
   </tr>
   <tr>
-   <td>米国西部（北カリフォルニア）</td>
+   <td>US West (Northern California)</td>
    <td><code>us-west-1</code></td>
   </tr>
   <tr>
-   <td>欧州（アイルランド）<br /> </td>
+   <td>EU (Ireland)<br /> </td>
    <td><code>EU</code></td>
   </tr>
   <tr>
-   <td>アジア太平洋（シンガポール）<br /> </td>
+   <td>Asia Pacific (Singapore)<br /> </td>
    <td><code>ap-southeast-1</code></td>
   </tr>
   <tr>
-   <td>アジア太平洋（シドニー）<br /> </td>
+   <td>Asia Pacific (Sydney)<br /> </td>
    <td><code>ap-southeast-2</code></td>
   </tr>
   <tr>
-   <td>アジア太平洋（東京）</td>
+   <td>Asia Pacific (Tokyo)</td>
    <td><code>ap-northeast-1</code></td>
   </tr>
   <tr>
-   <td>南米（サンパウロ）<br /> </td>
+   <td>South America (Sao Paolo)<br /> </td>
    <td><code>sa-east-1</code></td>
   </tr>
  </tbody>
 </table>
+-->
 
 ### データストアのキャッシュ {#data-store-caching}
 
