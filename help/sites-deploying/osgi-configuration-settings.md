@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 4c3cc888a7590fdbee9b7d7e441602e4ae3f54b0
+source-git-commit: 71c318e59f39b091f52650853be2d472354c2f1c
 workflow-type: tm+mt
-source-wordcount: '3511'
+source-wordcount: '3474'
 ht-degree: 98%
 
 ---
@@ -243,11 +243,6 @@ JSON を無効にしないでください。
 * **Script User**：このオプションのプロパティでは、スクリプトの読み取りに使用するリポジトリユーザーアカウントを指定できます。アカウントを指定しない場合は、`admin` ユーザーがデフォルトで使用されます。
 
 * **Default Extensions**：デフォルトの動作が使用される拡張子のリストです。つまり、リソースタイプの最後のパスセグメントをスクリプト名として使用できます。
-
-**Day Commons GFX Font Helper**：グラフィックのレンダリング時に、DrawText を使用してテキストを埋め込むことができます。そのために、独自のフォントをインストールすることも可能です。
-
-* プロジェクト固有のフォントを検索する「**Font Path**」を定義します。
-例えば、`/apps/myapp/fonts` と指定します。
 
 **Apache HTTP Components Proxy Configuration**：Apache HTTP クライアントを使用するすべてのコード用のプロキシ設定です。HTTP の作成時（レプリケーション時など）に使用されます。
 
