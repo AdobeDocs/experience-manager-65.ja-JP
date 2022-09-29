@@ -12,10 +12,10 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: 1e301f3991a18a594ac10a6548a0a645327dd4dd
+source-git-commit: f39102c938107b8ce01325499f29f00e287b5bcc
 workflow-type: tm+mt
 source-wordcount: '1995'
-ht-degree: 95%
+ht-degree: 91%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 95%
 
 1. HTML フォームで表示されるフォントの一部がフォームをデザインする間に使用されるものと違う理由は？
 
-   回答：HTML5 フォームは、フォーム内にフォントが埋め込まれる PDF フォームと違い、フォントを埋め込みません。HTML バージョンのフォームが期待どおりに表示されるようにするには、XDP で指定したフォントがサーバー上およびクライアントのマシンで使用できることを確認してください。目的のフォントがサーバー上で使用できない場合、代替フォントが使用されます。さらに、クライアントデバイスで使用できない、Form Template のフォントを使用すると、テキストの表示にはブラウザーのデフォルトのフォントが使用されます。
+   回答：HTML5 Formsでは、( フォーム内にフォントが埋め込まれるPDF formsとは異なり ) フォントの埋め込みは許可されていません。 フォームのHTMLバージョンが期待どおりにレンダリングされるようにするには、AEM Formsサーバーの CRX リポジトリ (AEM Content Repository) と、AEM Designer がインストールされているマシンで、フォントが使用可能であることを確認します。 AEM Formsサーバーの CRX リポジトリ、またはAEM Designer がインストールされている場所でフォントが使用できない場合、フォームはフォールバックフォントを使用してレンダリングされます。
 
 1. vAlign と hAlign の属性は HTML フォームでサポートされていますか？
 
