@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4472da2e9aa0b45e0d5f03bfdc53a2748d82cdb3
 workflow-type: tm+mt
-source-wordcount: '5317'
-ht-degree: 100%
+source-wordcount: '5351'
+ht-degree: 99%
 
 ---
 
@@ -23,6 +23,10 @@ ht-degree: 100%
 >[!NOTE]
 >
 >単一ページアプリケーションフレームワークにもとづくクライアントサイドレンダリング（_React_ など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+
+>[!NOTE]
+>
+>様々な例は、Geometrixxサンプルコンテンツに基づいています。このコンテンツは、AEMには付属しなくなり、We.Retail に置き換えられました。 Geometrixx のダウンロードおよびインストール方法については、[We.Retail 参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx)を参照してください。
 
 Web ページが表示されるクライアントの表示域に適応するように Web ページをデザインします。レスポンシブデザインを使用すると、同じページを複数のデバイスで、縦、横の両方の向きで効果的に表示できます。次の画像の例は、表示域サイズの変更に対してページがどのように応答するかを示しています。
 
