@@ -12,10 +12,10 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 71c318e59f39b091f52650853be2d472354c2f1c
+source-git-commit: 73fba5249a05b0bdb9871a6e19c6bed10a7e7e4b
 workflow-type: tm+mt
-source-wordcount: '3474'
-ht-degree: 98%
+source-wordcount: '3476'
+ht-degree: 97%
 
 ---
 
@@ -276,7 +276,7 @@ JSON を無効にしないでください。
 
 >[!CAUTION]
 >
->「**Minify**」または「**Gzip**」の設定を変更する場合は、`/var/clientlibs` の内容も削除する必要があります。これはキャッシュバージョンの clientlibs であり、次回の要求時に再構築されます。
+>次のいずれかの設定を変更する場合 **縮小** または **Gzip** また、clientlibs キャッシュのコンテンツを削除する必要があります。 詳しくは、 [ナレッジベース記事](https://helpx.adobe.com/ca/experience-manager/kb/How-to-force-a-recompilation-of-all-Sling-scripts-jsps-java-sightly-on-AEM-6-4.html) 」を参照してください。
 
 >[!NOTE]
 >
