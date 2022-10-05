@@ -10,14 +10,26 @@ content-type: reference
 topic-tags: platform
 discoiquuid: 94a05894-743a-4ace-a292-bfee90ba9068
 exl-id: 54b942f9-5dd9-4826-9a0a-028f2d7b8e41
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: f97eb2e028263016131b0c86be5a0508ae4def9b
 workflow-type: tm+mt
-source-wordcount: '2310'
-ht-degree: 100%
+source-wordcount: '2371'
+ht-degree: 98%
 
 ---
 
 # Query Builder の述語リファレンス{#query-builder-predicate-reference}
+
+>[!CAUTION]
+>
+>このページの情報がすべてではありません。
+>
+>詳しくは、 **使用可能な述語** Query Builder Debugger コンソールで、例：
+>* [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
+>
+>例：
+>
+>* [http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29](http://localhost:4502/system/console/services?filter=%28component.factory%3Dcom.day.cq.search.eval.PredicateEvaluator%2F*%29)
+
 
 ## 一般 {#general}
 
