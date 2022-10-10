@@ -12,7 +12,7 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: a6067ebb1b5be67515cd3567f56c72463c5f7123
+source-git-commit: fd9661ee94edf8f88a93ae35ba2563b3021add4d
 workflow-type: tm+mt
 source-wordcount: '5901'
 ht-degree: 92%
@@ -129,7 +129,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
    * **パスをパージ**
 パージするコンテンツの開始パスを設定します ( 例： 
-`/content/geometrixx-outdoors`）内に表示されます。
+`/content/wknd`）内に表示されます。
 
       >[!CAUTION]
       >
