@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 633a9b6d972cf8b0bb102a7efd5eeb8e0b71a19e
+source-git-commit: 40434fc8f2e0fd4b66102cdd5779dc578330d7b4
 workflow-type: tm+mt
-source-wordcount: '3814'
-ht-degree: 96%
+source-wordcount: '3808'
+ht-degree: 97%
 
 ---
 
@@ -85,7 +85,6 @@ ht-degree: 96%
       + [AEM Forms と Adobe LiveCycle の接続](using/aem-livecycle-connector.md)
       + [AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定](using/submit-form-data-livecycle-process.md)
       + [AEM Forms の AEM デスクトップアプリケーション](/help/forms/using/aem-desktop-app-for-aem-forms.md)
-      + [メーリングサービスの OAuth2 サポート](/help/forms/using//oauth2-support-for-mail-service.md)
 + AEM Forms をアップグレード {#upgrade-aem-forms}
    + [有効なアップグレードパス](using/upgrade.md)
    + OSGi での AEM Forms のアップグレード {#aem-forms-osgi-upgrade}
