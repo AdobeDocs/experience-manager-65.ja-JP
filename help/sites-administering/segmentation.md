@@ -1,5 +1,5 @@
 ---
-title: 'ContextHub でのセグメント化の設定 '
+title: ContextHub でのセグメント化の設定
 seo-title: Configuring Segmentation with ContextHub
 description: ContextHub でのセグメント化の設定方法について説明します。
 seo-description: Learn how to configure segmentation with Context Hub.
@@ -10,10 +10,10 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d546462b4b78a743e047dcfea5fc2dc92d131bb5
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 100%
+source-wordcount: '1787'
+ht-degree: 96%
 
 ---
 
@@ -35,9 +35,13 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 [オーディエンス](/help/sites-authoring/managing-audiences.md)コンソールは、ContextHub または ClientContext のセグメントを管理したり、Adobe Target アカウントのオーディエンスを管理したりする目的で使用します。このドキュメントでは、ContextHub のセグメントの管理について取り上げます。[ClientContext セグメント](/help/sites-administering/campaign-segmentation.md)および Adobe Target セグメントについては、それぞれ関連するドキュメントを参照してください。
 
-セグメントにアクセスするには、グローバルナビゲーションで「**ナビゲーション／パーソナライズ機能／オーディエンス**」を選択します。
+セグメントにアクセスするには、設定を選択する必要があります。 グローバルナビゲーションで、 **ナビゲーション/パーソナライズ機能/オーディエンス**. 利用可能な設定が表示されます。
 
-![chlimage_1-310](assets/chlimage_1-310.png)
+![オーディエンス — 設定](assets/segmentation-access-confs.png)
+
+設定を選択して、セグメントを表示します（例： WKND サイト）。
+
+![オーディエンス — セグメント](assets/segmentation-access-segments.png)
 
 ## セグメントエディター {#segment-editor}
 
@@ -130,7 +134,7 @@ AEM では、ユーザーエクスペリエンスを簡単にパーソナライ�
 
 新しいセグメントを定義するには、次の手順に従います。
 
-1. [セグメントへのアクセス](/help/sites-administering/segmentation.md#accessing-segments)後、セグメントを作成する[フォルダーに移動](#organizing-segments)するか、ルートのままにしておきます。
+1. 後 [セグメントへのアクセス](/help/sites-administering/segmentation.md#accessing-segments), [フォルダーに移動します。](#organizing-segments) セグメントを作成する場所です。
 
 1. 「作成」ボタンをタップまたはクリックし、「**ContextHub セグメントを作成**」を選択します。
 
