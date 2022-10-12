@@ -12,10 +12,10 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: 85987222e8b216f22ae1fec4e080488d01f23063
+source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
 workflow-type: tm+mt
-source-wordcount: '5905'
-ht-degree: 92%
+source-wordcount: '5972'
+ht-degree: 90%
 
 ---
 
@@ -609,12 +609,12 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>スレッドダンプ</td>
    <td>JVM スレッドを監視。競合、ロック、長時間の実行を識別。</td>
-   <td><p>オペレーティングシステムによって異なります。<br /> - Unix／Linux：<code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（コンソールモード）：Ctrl キーを押しながら Break キーをクリック<br /> </p> <p><a href="https://java.net/projects/tda/">TDA</a> などの分析ツールも使用できます。<br /> </p> </td>
+   <td><p>オペレーティングシステムによって異なります。<br /> - Unix／Linux：<code>kill -QUIT &lt;<em>pid</em>&gt;</code><br /> - Windows（コンソールモード）：Ctrl キーを押しながら Break キーをクリック<br /> </p> <p><a href="https://github.com/irockel/tda">TDA</a> などの分析ツールも使用できます。<br /> </p> </td>
   </tr>
   <tr>
    <td>ヒープダンプ</td>
    <td>パフォーマンス低下の原因となるメモリ不足の問題。</td>
-   <td><p>AEM に対する Java 呼び出しに、<br />「<code>-XX:+HeapDumpOnOutOfMemoryError</code><br />」オプションを追加します。</p> <p><a href="https://java.sun.com/javase/6/webnotes/trouble/TSG-VM/html/clopts.html#gbzrr">Troubleshooting Guide for Java SE 6 with HotSpot VM</a> を参照してください。</p> </td>
+   <td><p>AEM に対する Java 呼び出しに、<br />「<code>-XX:+HeapDumpOnOutOfMemoryError</code><br />」オプションを追加します。</p> <p>詳しくは、 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">JVM のトラブルシューティングページのオプション/フラグ</a>.</p> </td>
   </tr>
   <tr>
    <td>システム呼び出し</td>
@@ -624,7 +624,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>Apache Bench</td>
    <td>メモリリークを識別し、応答時間を選択分析。</td>
-   <td><p>基本的な使用法は次のとおりです。</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>詳しくは、<a href="#apache-bench">Apache Bench</a> および <a href="https://httpd.apache.org/docs/2.2/programs/ab.html">ab man ページ</a>を参照してください。</p> </td>
+   <td><p>基本的な使用法は次のとおりです。</p> <p><code>ab -k -n &lt;<em>requests</em>&gt; -c &lt;<em>concurrency</em>&gt; &lt;<em>url</em>&gt;</code></p> <p>詳しくは、<a href="#apache-bench">Apache Bench</a> および <a href="https://httpd.apache.org/docs/2.4/programs/ab.html">ab man ページ</a>を参照してください。</p> </td>
   </tr>
   <tr>
    <td>Search Analysis</td>
@@ -634,7 +634,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>JMeter</td>
    <td>読み込みおよび機能テスト。</td>
-   <td><a href="https://jakarta.apache.org/jmeter/">https://jakarta.apache.org/jmeter/</a></td>
+   <td><a href="https://jmeter.apache.org/">https://jmeter.apache.org/</a></td>
   </tr>
   <tr>
    <td>JProfiler</td>
@@ -642,14 +642,19 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
    <td><a href="https://www.ej-technologies.com/">https://www.ej-technologies.com/</a></td>
   </tr>
   <tr>
+   <td>Java Flight Recorder</td>
+   <td>Java Flight Recorder(JFR) は、実行中の Java アプリケーションに関する診断データとプロファイルデータを収集するためのツールです。</td>
+   <td><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE</a></td>
+  </tr>
+  <tr>
    <td>JConsole</td>
    <td>JVM の指標およびスレッドを監視。</td>
-   <td><p>使用法：jconsole</p> <p><a href="https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html">jconsole</a> および <a href="#monitoring-performance-using-jconsole">JConsole を使用したパフォーマンスの監視</a> を参照してください。</p> <p><strong>注意：</strong> JDK 1.6 では、Top や TDA（Thread Dump Analyzer）などのプラグインを使用して JConsole を拡張できます。</p> </td>
+   <td><p>使用法：jconsole</p> <p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html">jconsole</a> および <a href="#monitoring-performance-using-jconsole">JConsole を使用したパフォーマンスの監視</a> を参照してください。</p> <p><strong>注意：</strong> JDK 1.8 では、Top や TDA（Thread Dump Analyzer）などのプラグインを使用して JConsole を拡張できます。</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>JVM の指標、スレッド、メモリおよびプロファイリングを監視。</td>
-   <td><p>使用法：jvisualvm または visualvm<br /> </p> <p><a href="https://java.sun.com/javase/6/docs/technotes/tools/share/jvisualvm.html">jvisualvm</a>、<a href="https://visualvm.dev.java.net/">visualvm</a> および<a href="#monitoring-performance-using-j-visualvm">（J）VisualVM を使用したパフォーマンスの監視</a>を参照してください。</p> <p><strong>注意：</strong> JDK 1.6 では、プラグインを使用して VisualVM を拡張できます。</p> </td>
+   <td><p>使用方法：visualvm または visualvm<br /> </p> <p>詳しくは、 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">visualvm</a> および <a href="#monitoring-performance-using-j-visualvm">(J)VisualVM を使用したパフォーマンスの監視</a>.</p> <p><strong>注意：</strong> JDK 1.8 では、プラグインを使用して VisualVM を拡張できます。VisualVM は JDK 9 以降で廃止されます。 代わりに、Java Flight Recorder を使用してください。</p> </td>
   </tr>
   <tr>
    <td>truss/strace、lsof</td>
@@ -664,7 +669,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>CPU およびメモリプロファイリングツール<br /> </td>
    <td><a href="#interpreting-the-request-log">開発中に低速の要求を分析する際に使用</a>。</td>
-   <td>例えば、<a href="https://www.yourkit.com/">YourKit</a> などです。</td>
+   <td>例えば、<a href="https://www.yourkit.com/">YourKit</a> などです。または <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java Flight Recorder</a>.</td>
   </tr>
   <tr>
    <td><a href="#information-collection">情報収集</a></td>
@@ -810,7 +815,7 @@ $ java -jar ../opt/helpers/rlog.jar -n 10 request.log
 
 ### Apache Bench {#apache-bench}
 
-特殊なケース（ガベージコレクションなど）の影響を最小限にするために、`apachebench`（詳細なドキュメントについては [ab](https://httpd.apache.org/docs/2.2/programs/ab.html) などを参照）などのツールを使用してメモリリークを特定し、応答時間を選択分析することをお勧めします。
+特殊なケース（ガベージコレクションなど）の影響を最小限にするために、`apachebench`（詳細なドキュメントについては [ab](https://httpd.apache.org/docs/2.4/programs/ab.html) などを参照）などのツールを使用してメモリリークを特定し、応答時間を選択分析することをお勧めします。
 
 Apache Bench は次の方法で使用できます。
 
@@ -921,7 +926,7 @@ Percentage of the requests served within a certain time (ms)
 
 ### （J）VisualVM を使用したパフォーマンスの監視 {#monitoring-performance-using-j-visualvm}
 
-JDK 1.6 以降、ツールコマンド `jvisualvm` を使用できます。JDK 1.6 をインストールすると、次の操作を実行できます。
+JDK 6-8 の場合、tool コマンド `visualvm` が使用可能です。 JDK をインストールすると、次の操作を実行できます。
 
 1. AEM インスタンスを起動します。
 
@@ -932,7 +937,7 @@ JDK 1.6 以降、ツールコマンド `jvisualvm` を使用できます。JDK 1
 1. 次のいずれかを実行します。
 
    * `jvisualvm`：JDK 1.6 bin フォルダー内（テスト済みバージョン）
-   * `visualvm`：[VisualVM](https://visualvm.dev.java.net/) からダウンロードできます（最先端バージョン）
+   * `visualvm`：[VisualVM](https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/) からダウンロードできます（最先端バージョン）
 
 1. `Local` アプリケーション内から、`com.day.crx.quickstart.Main` をダブルクリックします。「概要」がデフォルトで表示されます。
 
@@ -1185,7 +1190,7 @@ JConsole の場合は以下のとおりです。
    ```
 
 * 次に、JConsole を使用して JVM に接続します。次を参照してください。
-   ` [https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/6/docs/technotes/guides/management/jconsole.html)`
+   ` [https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html)`
 
 これは、使用中のメモリ量、使用されている GC アルゴリズム、アルゴリズムの実行にかかる時間、アプリケーションのパフォーマンスへの影響を確認するうえで役立ちます。これがないと、チューニングは「ノブをランダムに回している」だけになります。
 
@@ -1193,4 +1198,4 @@ JConsole の場合は以下のとおりです。
 >
 >Oracle の VM に関しては、以下にも情報があります。
 >
->[https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/7/docs/technotes/guides/vm/server-class.html)
+>[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
