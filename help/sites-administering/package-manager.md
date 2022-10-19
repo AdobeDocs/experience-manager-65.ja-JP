@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 6694a135-d1e1-4afb-9f5b-23991ee70eee
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
-source-git-commit: de58ba638c22b7148e1349417d1f514c26c5887e
+source-git-commit: d303a374fd4ab8e398fd909dec4ce6155a2163f5
 workflow-type: tm+mt
-source-wordcount: '3525'
-ht-degree: 100%
+source-wordcount: '3573'
+ht-degree: 99%
 
 ---
 
@@ -506,6 +506,16 @@ POST リクエストを介して検証する場合、応答は JSON オブジェ
 1. 「**インストール**」をクリックします。
 
 1. インストールの進行状況の詳細は、アクティビティログに記録されます。
+
+>[!CAUTION]
+>
+>* デジタルアセットをインストールする場合は、次の手順を実行する必要があります。
+   >  最初に、ワークフローランチャーをアクティベート解除します。
+   >  OSGi コンソールの「Components」メニューオプションを使用して、アクティベートを解除します。
+   >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
+>* 次に、インストールが完了したら、ワークフローランチャーを再アクティベートします。
+>
+>ワークフローランチャーをアクティベート解除しておくと、インストール時に Assets インポーターフレームワークによって、アセットに意図しない操作がおこなわれることはありません。
 
 インストールが正常に完了すると、パッケージリストが更新され、「**インストール済み**」がパッケージのステータスに表示されます。
 
