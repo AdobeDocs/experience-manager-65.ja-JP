@@ -140,7 +140,7 @@ ht-degree: 99%
    + [ [!DNL Brand Portal] へのフォルダーの公開](brand-portal-publish-folder.md)
    + [ [!DNL Brand Portal] へのコレクションの公開](brand-portal-publish-collection.md)
 + コンテンツフラグメント {#content-fragments}
-   + [コンテンツフラグメントの操作](content-fragments/content-fragments.md)
+   + [コンテンツフラグメントの使用方法](content-fragments/content-fragments.md)
    + [コンテンツフラグメントと GraphQL のヘッドレス配信](content-fragments/content-fragments-graphql.md)
    + [インスタンスに対するコンテンツフラグメント機能の有効化](content-fragments/content-fragments-configuration-browser.md)
    + [コンテンツフラグメントモデル](content-fragments/content-fragments-models.md)

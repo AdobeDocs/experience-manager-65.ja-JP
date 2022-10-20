@@ -125,7 +125,7 @@ ht-degree: 100%
       + [コンテンツフラグメントへのアクセスと配信](headless/getting-started/create-api-request.md)
    + コンテンツフラグメント{#content-fragments}
       + [コンテンツフラグメントと GraphQL のヘッドレス配信](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-graphql.html?lang=ja)
-      + [コンテンツフラグメントの操作](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html?lang=ja)
+      + [コンテンツフラグメントの使用方法](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments.html?lang=ja)
       + [インスタンスに対するコンテンツフラグメント機能の有効化](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-configuration-browser.html?lang=ja)
       + [コンテンツフラグメントモデル](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-models.html?lang=ja)
       + [コンテンツフラグメントの管理](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-managing.html?lang=ja)
