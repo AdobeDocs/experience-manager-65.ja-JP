@@ -3,7 +3,7 @@ title: アプリケーションサーバーのインストール環境のアッ�
 description: アプリケーションサーバーからデプロイされる AEM のインスタンスのアップグレード方法について説明します。
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
-source-git-commit: 5e875e0420540ca209e7d677046e8d010ae4e145
+source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 100%
@@ -33,7 +33,7 @@ ht-degree: 100%
 1. 次に、crx2oak 移行ツールを使用してリポジトリを移行してください。これをおこなうには、crx2oak の最新バージョンを [この場所](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/) からダウンロードしてください。
 
    ```shell
-   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -XX:MaxPermSize=2048M -jar crx2oak.jar --load-profile segment-fds
+   SLING_HOME= $AEM-HOME/crx-quickstart java -Xmx4096m -jar crx2oak.jar --load-profile segment-fds
    ```
 
 1. 次の操作をおこなって、sling.properties ファイル内の必要なプロパティを削除します。
