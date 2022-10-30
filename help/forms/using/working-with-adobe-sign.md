@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
-feature: Adaptive Forms, Adobe Sign
+feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 28d092a7713438c27213766f0bb702b699305b88
 workflow-type: tm+mt
 source-wordcount: '3826'
 ht-degree: 100%
@@ -298,7 +298,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
    > * **[!UICONTROL 署名者ステップ]**&#x200B;コンポーネントをフォームにドラッグアンドドロップすると、「**[!UICONTROL 署名者とフォーム記入者は同一ですか？]**」オプションが自動的に「**はい**」に設定されます。フォームを正しく機能させるには、このオプションが設定されている必要があります。
    >
    > * 最適なエクスペリエンスを得るには、署名ステップコンポーネントの後に概要ステップコンポーネントを使用します。署名ステップコンポーネントでフォームに署名する際に入力が完了すると、概要ステップが自動的に送信され、すぐにフォームが送信されます。概要ステップを使用しない場合、自動送信は、[Adobe Sign Configuration Service](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status) を使用して設定された間隔の後にのみトリガーされます。
-   > 以下に、いくつかのベストプラクティスを示します。
+      > 以下に、いくつかのベストプラクティスを示します。
    > * 署名ステップを含むアダプティブフォームパネルは、常にアダプティブフォームの最後または 2 番目の最後のパネルに表示されます。2 番目の最後のパネルは、最後のパネルに概要ステップが含まれている場合にのみ使用できます。
    > * 署名または概要ステップコンポーネントを含むパネルに他のコンポーネントを含めることはできません。
    > * 署名ステップを含むアダプティブフォームには送信ボタンを含めることはできません。
