@@ -10,10 +10,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 7fed5ce55f6ee7638d2578ee7ef2d84deb24277f
+source-git-commit: 4712f57808ae769646b00d1098648686815121b6
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 72%
+source-wordcount: '1556'
+ht-degree: 70%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 72%
 
 AEMとAdobe Campaignを統合すると、電子メール配信、コンテンツ、フォームをAEMで直接管理できます。 ソリューション間の双方向通信を有効にするには、Adobe Campaign Classic と AEM の両方で設定手順が必要です。
 
-この統合により、AEMとAdobe Campaign Classicを独立して使用できます。 マーケターはAdobe Campaignでキャンペーンを作成し、ターゲティングを使用できますが、コンテンツ作成者は同時にAEMのコンテンツデザインを操作できます。 この統合により、AEMのキャンペーンのコンテンツとデザインを、Adobe Campaignがターゲットにして配信できるようになります。
+この統合により、AEMとAdobe Campaign Classicを独立して使用できます。 マーケターはAdobe Campaignでキャンペーンを作成し、ターゲティングを使用できますが、コンテンツ作成者は同時にAEMのコンテンツデザインを操作できます。 統合を使用すると、Adobe Campaignで作成されたキャンペーンのコンテンツとデザインを、AEMがターゲット設定して配信できます。
 
 ## 統合手順 {#integration-steps}
 
@@ -44,7 +44,7 @@ AEM と Campaign の統合には、両方のソリューションで多くの手
    * Adobe Campaign Classic のセットアップおよび設定方法に関する詳細が必要な場合は、[Adobe Campaign Classic ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)、特にインストールおよび設定ガイドを参照してください。
 * AEMへの管理者アクセス
 
-## AEM 統合パッケージの Campaign へのインストール {#install-package}
+## Campaign でのAEM統合パッケージのインストール {#install-package}
 
 Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接続に必要な標準設定が多数含まれています。
 
@@ -68,7 +68,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
 これで、統合パッケージがインストールされました。
 
-## Campaign での AEM のオペレーターの作成 {#create-operator}
+## Campaign でのAEM用のオペレーターの作成 {#create-operator}
 
 統合パッケージによって、AEM が Adobe Campaign への接続に使用する `aemserver` オペレーターが自動的に作成されます。このオペレーターのセキュリティゾーンを定義し、パスワードを設定する必要があります。
 
@@ -122,7 +122,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
 1. 「**OK**」をクリックし、`aemserver` オペレーターのパスワードを保存します。
 
-## AEM での Campaign 統合の設定 {#campaign-integration}
+## AEMでの Campaign 統合の設定 {#campaign-integration}
 
 AEM は、Campaign と通信するために「[Campaign で設定済みのオペレーター](#create-operator)」を使用します
 
@@ -194,12 +194,12 @@ AEMオーサーインスタンスからパブリッシュインスタンスへ�
 
 1. 「**保存**」して閉じるをタップまたはクリックします。
 
-Externalizer が設定され、Adobe Campaignがコンテンツにアクセスできない。
+Externalizer が設定され、Adobe Campaignがコンテンツにアクセスできるようになりました。
 
 >[!NOTE]
 パブリッシュインスタンスは、Adobe Campaign サーバーから到達可能である必要があります。が `localhost:4503` Adobe Campaignがアクセスできない別のサーバーの場合、AEMからの画像はAdobe Campaignコンソールに表示されません。
 
-## AEM での campaign-remote ユーザーの設定 {#configure-user}
+## AEMでの campaign-remote ユーザーの設定 {#configure-user}
 
 Campaign が AEM と通信するには、AEM で `campaign-remote` ユーザーのパスワードを設定する必要があります。
 
@@ -213,7 +213,7 @@ Campaign が AEM と通信するには、AEM で `campaign-remote` ユーザー�
 1. 「**保存**」をクリックして、パスワードの変更を保存します。
 1. 「**保存して閉じる**」をクリックして、変更を `campaign-remote` ユーザーに保存します。
 
-## Campaign での AEM 外部アカウントの設定 {#acc-setup}
+## Campaign でのAEM外部アカウントの設定 {#acc-setup}
 
 [Campaign に **AEM 統合**&#x200B;パッケージをインストール](#install-package)する際に、AEM 用の外部アカウントが作成されます。 この外部アカウントを設定すると、Adobe CampaignはAEMに接続し、ソリューション間で双方向の通信を可能にします。
 
