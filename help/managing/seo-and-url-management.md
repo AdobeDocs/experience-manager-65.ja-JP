@@ -7,10 +7,10 @@ topic-tags: managing
 content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
-source-git-commit: 8cb016eefc2699ffb3dfa926a289123b96927055
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3802'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -30,7 +30,7 @@ URL に関して一般的に認められているベストプラクティスが�
 
 AEM プロジェクトで URL を評価するときには、次のことを確認してください。
 
-「ユーザーが URL を目にしたときに、ページのコンテンツを見なくても、そのページの内容を説明できますか。」
+「ユーザーがこの URL を目にしたがって、ページのコンテンツを見なかった場合、そのページの内容を説明できますか？」
 
 答えが「はい」であれば、その URL は検索エンジンに効果があります。
 
@@ -156,7 +156,7 @@ String myParam = req.getParameter("myParam");
 このタイプのサーブレットの SCR 注釈は、次のようになります。
 
 ```
-@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
+@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json", methods="GET")
 ```
 
 この場合、URL によってアドレス指定されるリソース（`myPageType` リソースのインスタンス）にサーブレットで自動的にアクセスできます。アクセスするには、次のメソッドを呼び出します。
@@ -320,7 +320,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 両方について、ページの先頭に次のタグを適用します。
 
 ```xml
-<link rel=”canonical” href=”my-brand/my-page.html”/>
+<link rel="canonical" href="my-brand/my-page.html"/>
 ```
 
 `href` は、相対パスとして指定することも、絶対パスとして指定することもできます。ページの正規 URL を確認し、このタグを出力するには、このコードをページマークアップに挿入する必要があります。
@@ -366,9 +366,9 @@ AEM では、[Apache Sling Sitemap モジュール](https://github.com/apache/sl
 
 >[!NOTE]
 >
-> これは、Adobe Experience Manager バージョン 6.5.11.0 以降で製品機能として使用できます。
+>これは、Adobe Experience Manager バージョン 6.5.11.0 以降で製品機能として使用できます。
 > 
-> 古いバージョンの場合は、自分で Sling サーブレットを登録し、`sitemap.xml` 呼び出しをリッスンし、サーブレット API を介して提供されるリソースを使用して、現在のページとその子孫を検索し、sitemap.xml ファイルを出力できます。
+>古いバージョンの場合は、自分で Sling サーブレットを登録し、`sitemap.xml` 呼び出しをリッスンし、サーブレット API を介して提供されるリソースを使用して、現在のページとその子孫を検索し、sitemap.xml ファイルを出力できます。
 
 Apache Sling Sitemap モジュールは、最上位のサイトマップとネストされたサイトマップを区別します。どちらも、`sling:sitemapRoot` プロパティが `true` に設定されているリソースについて生成されます。一般に、サイトマップは、ツリーの最上位のサイトマップ（他にサイトマップの上位要素を持たないリソース）のパスにあるセレクターを使用してレンダリングされます。また、この最上位のサイトマップルートはサイトマップのインデックスも公開します。このインデックスは通常、サイト所有者が検索エンジンの設定ポータルで設定したり、サイトの `robots.txt` に追加したりするものです。
 
@@ -380,7 +380,7 @@ Apache Sling Sitemap モジュールは、最上位のサイトマップとネ�
 
 >[!NOTE]
 >
-> セレクター `sitemap` および `sitemap-index` は、カスタム実装と干渉する可能性があります。製品機能を使用しない場合は、これらのセレクターを提供する独自のサーブレットを 0 より大きい `service.ranking` で設定します。
+>セレクター `sitemap` および `sitemap-index` は、カスタム実装と干渉する可能性があります。製品機能を使用しない場合は、これらのセレクターを提供する独自のサーブレットを 0 より大きい `service.ranking` で設定します。
 
 デフォルトの設定では、ページのプロパティダイアログには、ページをサイトマップルートとしてマークオプションがあり、前述したように、ページ自体とその下位要素のサイトマップを生成します。この動作は `SitemapGenerator` インターフェイスの実装によって実装されており、代替実装を追加することで拡張することができます。ただし、XML サイトマップを再生成する頻度は、コンテンツオーサリングワークフローとワークロードに大きく依存するので、製品には `SitemapScheduler` 設定は含まれていません。これにより、機能が効果的にオプトインします。
 

@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: 72012fa441edb01deb7e557b707fb068d8e9892e
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 100%
@@ -27,15 +27,15 @@ ht-degree: 100%
 >6.5.3.0:
 >
 >* **Externalizer ドメイン**を選択できるようになりました。
->  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
+   >  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
 >
 >6.5.2.0：
 >
 >* エクスペリエンスフラグメントは、次のいずれかに書き出すことができます。
->
->   * デフォルトのワークスペース。
->   * クラウド設定で指定された名前付きワークスペース。
->   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
+   >
+   >   * デフォルトのワークスペース。
+   >   * クラウド設定で指定された名前付きワークスペース。
+   >   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
 >
 >* AEM は [IMS を使用した Adobe Target と統合](/help/sites-administering/integration-target-ims.md)する必要があります。
 >
@@ -131,9 +131,9 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
    >
    >Externalizer ドメインはオプションです。
    >
-   > AEM Externalizer を設定するのは、コンテンツの書き出し先を特定の&#x200B;*パブリッシュ*&#x200B;ドメインに指定する場合です。詳しくは、[AEM Link Externalizer の設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)を参照してください。
+   >AEM Externalizer を設定するのは、コンテンツの書き出し先を特定の&#x200B;*パブリッシュ*&#x200B;ドメインに指定する場合です。詳しくは、[AEM Link Externalizer の設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)を参照してください。
    >
-   > また、Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関係があり、「オファーコンテンツを表示」などのメタデータには関係しません。
+   >また、Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関係があり、「オファーコンテンツを表示」などのメタデータには関係しません。
 
    例えば、フォルダーの場合は下図のようになります。
 

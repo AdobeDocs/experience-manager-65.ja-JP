@@ -4,9 +4,9 @@ description: Adobe のエンジニアリングおよびコンサルティング�
 topic-tags: site-features, best-practices
 feature: Multi Site Manager
 exl-id: 3fedc1ba-64f5-4fbe-9ee5-9b96b75dda58
-source-git-commit: c6ccd204dbd514d6195424aff495bc38f1f31bce
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1616'
 ht-degree: 100%
 
 ---
@@ -56,9 +56,9 @@ MSM は、コンテンツのデプロイメントを自動化するための設�
 
 ライブコピーで新しいサイトを作成する際には、ブループリント設定を作成して MSM のすべての機能セットを使用可能にすると便利です。
 
->[注意!]
+>[!NOTE]
 >
-> 「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
+>「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
 
 ## コンポーネントとコンテナの同期 {#components-and-container-synchronization}
 

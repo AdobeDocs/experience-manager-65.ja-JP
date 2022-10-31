@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 discoiquuid: da96d3d8-a338-470a-8d20-55ea39bd15bf
 exl-id: 2e4f8f51-df02-4bbb-99bb-30181facd1e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 100%
@@ -161,9 +161,8 @@ AEM Forms ポータルのドラフトと送信コンポーネントにより、�
 
 >[!NOTE]
 >
-> * MySQL 向けの JDBC ドライバーは、サンプルでは提供されていません。これに対してのプロビジョニングを行い、JDBC 接続プールの設定に必要な情報を提供してください。
-> * オーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用するよう指定します。JDBC 接続の URI フィールドの値は、すべてのオーサーインスタンスとパブリッシュインスタンスで同じである必要があります。
->
+>* MySQL 向けの JDBC ドライバーは、サンプルでは提供されていません。これに対してのプロビジョニングを行い、JDBC 接続プールの設定に必要な情報を提供してください。
+>* オーサーインスタンスとパブリッシュインスタンスで同じデータベースを使用するよう指定します。JDBC 接続の URI フィールドの値は、すべてのオーサーインスタンスとパブリッシュインスタンスで同じである必要があります。
 
 
 1. 他の設定はそのままにし、「**[!UICONTROL 保存]**」をクリックします。

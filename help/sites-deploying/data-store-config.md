@@ -6,7 +6,7 @@ topic-tags: deploying
 docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3583'
 ht-degree: 90%
@@ -493,11 +493,12 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 >クラスターまたは共有データストア設定（Mongo または Segment Tar を使用）でガベージコレクションを実行すると、特定の Blob ID を削除できないことについての警告がログに表示されることがあります。これは、以前のガベージコレクションで削除された Blob ID が、その ID が削除されたことを知らない他のクラスターまたは共有ノードによって誤って再度参照されることが原因で発生します。その結果、前回の実行時に既に削除された ID を、ガベージコレクションで再度削除しようとするので、警告がログに記録されます。この動作はパフォーマンスや機能に影響しません。
 
 >[!NOTE]
-> 共有データストアの設定を使用している場合、データストアのガベージコレクションが無効になった状態で、Lucene Binary クリーンアップタスクを実行すると、使用するディスク領域が突然増加することがあります。この問題を回避するには、次の手順に従って、オーサーとパブリッシュの全インスタンスについて BlobTracker を無効にする必要があります。
 >
-> 1. AEM インスタンスを停止します。
-> 2. `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` ファイルで `blobTrackSnapshotIntervalInSecs=L"0"` パラメーターを追加します。このパラメーターを使用するには、Oak 1.12.0 以降のバージョンが必要です。
-> 3. AEM インスタンスを再起動します。
+>共有データストアの設定を使用している場合、データストアのガベージコレクションが無効になった状態で、Lucene Binary クリーンアップタスクを実行すると、使用するディスク領域が突然増加することがあります。この問題を回避するには、次の手順に従って、オーサーとパブリッシュの全インスタンスについて BlobTracker を無効にする必要があります。
+>
+>1. AEM インスタンスを停止します。
+>2. `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` ファイルで `blobTrackSnapshotIntervalInSecs=L"0"` パラメーターを追加します。このパラメーターを使用するには、Oak 1.12.0 以降のバージョンが必要です。
+>3. AEM インスタンスを再起動します。
 
 
 新しいバージョンの AEM では、複数のリポジトリによって共有されるデータストアでもガベージコレクションを実行できます。共有データストアでデータストアのガベージコレクションを実行できるようにするには、次の手順に従います。

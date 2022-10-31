@@ -7,7 +7,7 @@ topic-tags: upgrading
 content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 100%
@@ -127,7 +127,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
-> 上記のインデックス定義の作成プロセスは、 `oak-run-1.12.0` バージョン以降のみでサポートされています。ターゲティングは、Granite リポジトリーバンドル `com.adobe.granite.repository-x.x.xx.jar` を使用して行われます。
+>上記のインデックス定義の作成プロセスは、 `oak-run-1.12.0` バージョン以降のみでサポートされています。ターゲティングは、Granite リポジトリーバンドル `com.adobe.granite.repository-x.x.xx.jar` を使用して行われます。
 
 上記の手順では、`merge-index-definitions_target.json` という名前の JSON ファイルを作成します。これはインデックス定義です。
 
@@ -141,7 +141,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 >[!NOTE]
 >
-> このチェックポイントは、後でインデックスが読み込まれた際に削除されます。
+>このチェックポイントは、後でインデックスが読み込まれた際に削除されます。
 
 詳細に関しては、Oak ドキュメントの[チェックポイントの作成](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html#out-of-band-create-checkpoint)を参照してください。
 

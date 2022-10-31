@@ -6,7 +6,7 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 9a74a92262a1ee8dd651965b3a770c4c843f7980
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3452'
 ht-degree: 94%
@@ -491,18 +491,18 @@ Windows x86 の場合：
 
 >[!NOTE]
 >
-> PDF Generator では、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみがサポートされます。
+>PDF Generator では、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみがサポートされます。
 >
-> さらに、次の点に注意してください。
+>さらに、次の点に注意してください。
 >
-> * PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
-> * PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
-> * PDFジェネレーターは、Microsoft Office Professional Plus の 32 ビット版の Retail と、Windows オペレーティングシステムでの変換に必要なその他のソフトウェアのみをサポートしています。
-> * PDFジェネレーターは、Linux オペレーティングシステム上の OpenOffice の 32 ビット版および 64 ビット版をサポートしています。
-> * PDF Generator では Microsoft Office 365 をサポートしていません。
-> * OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
-> * Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))
-> * PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
+>* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
+>* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
+>* PDFジェネレーターは、Microsoft Office Professional Plus の 32 ビット版の Retail と、Windows オペレーティングシステムでの変換に必要なその他のソフトウェアのみをサポートしています。
+>* PDFジェネレーターは、Linux オペレーティングシステム上の OpenOffice の 32 ビット版および 64 ビット版をサポートしています。
+>* PDF Generator では Microsoft Office 365 をサポートしていません。
+>* OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
+>* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 >
 
 

@@ -2,7 +2,7 @@
 title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 99%
@@ -27,7 +27,7 @@ App Builder（旧称 Project Firefly）は、2020年夏以降、開発者プレ�
 
 >[!NOTE]
 >
-> App Builder の活用を考えている AEM as a Cloud Service ユーザーの場合は、[Adobe Developer App Builder を使用した Adobe Experience Manager as a Cloud Service の拡張](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html?lang=ja)を参照してください。
+>App Builder の活用を考えている AEM as a Cloud Service ユーザーの場合は、[Adobe Developer App Builder を使用した Adobe Experience Manager as a Cloud Service の拡張](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html?lang=ja)を参照してください。
 
 ## アーキテクチャ {#architecture}
 

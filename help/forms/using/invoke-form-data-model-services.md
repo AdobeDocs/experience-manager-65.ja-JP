@@ -9,7 +9,7 @@ topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
 feature: Adaptive Forms
 exl-id: cf037174-3153-486f-85b1-c974cd5a1ace
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 100%
@@ -129,7 +129,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, c
 
 >[!NOTE]
 >
-> `success` コールバック関数を使用する場合、指定したフォームフィールドに出力値が入力されません。
+>`success` コールバック関数を使用する場合、指定したフォームフィールドに出力値が入力されません。
 
 ```javascript
 var operationInfo = {

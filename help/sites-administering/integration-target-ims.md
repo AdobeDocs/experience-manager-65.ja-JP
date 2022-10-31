@@ -2,7 +2,7 @@
 title: IMS を使用した Adobe Target との統合
 description: IMS を使用した AEM と Adobe Target の統合について説明します
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
-source-git-commit: eb05fb92491932e4c2489c5adb533bbbae1d2870
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 100%
@@ -278,9 +278,9 @@ AEM に戻り、Adobe Developer Console の Target 向け統合から必要な�
 
 >[!NOTE]
 >
-> 既存の Target 設定を変更する場合：
+>既存の Target 設定を変更する場合：
 >
-> 1. テナント ID を再入力します。
-> 2. Target に再接続します。
-> 3. 設定を保存します。
+>1. テナント ID を再入力します。
+>2. Target に再接続します。
+>3. 設定を保存します。
 

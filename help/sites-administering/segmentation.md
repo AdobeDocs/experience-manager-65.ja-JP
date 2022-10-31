@@ -10,7 +10,7 @@ topic-tags: personalization
 content-type: reference
 discoiquuid: 6cade87c-9ed5-47d7-9b39-c942268afdad
 exl-id: 8bd6c88b-f36a-422f-ae6c-0d59f365079a
-source-git-commit: d546462b4b78a743e047dcfea5fc2dc92d131bb5
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 96%
@@ -297,7 +297,7 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 
 >[!NOTE]
 >
-> セグメントをフォルダー間で移動することはできません。
+>セグメントをフォルダー間で移動することはできません。
 
 ## セグメントの適用のテスト {#testing-the-application-of-a-segment}
 

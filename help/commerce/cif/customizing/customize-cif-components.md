@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '2604'
 ht-degree: 100%
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 >[!TIP]
 >
-> 独自のコマース実装を開始する際に [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を使用します。
+>独自のコマース実装を開始する際に [AEM プロジェクトアーキタイプ](https://github.com/adobe/aem-project-archetype)を使用します。
 
 ## 作成する内容
 
@@ -44,7 +44,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 >[!NOTE]
 >
-> （CIF を含む AEM プロジェクトアーキタイプに基づく）**既存のプロジェクトを使用**&#x200B;する場合、このセクションをスキップできます。
+>（CIF を含む AEM プロジェクトアーキタイプに基づく）**既存のプロジェクトを使用**&#x200B;する場合、このセクションをスキップできます。
 
 1. 次の git コマンドを実行して、プロジェクトのクローンを作成します。
 
@@ -83,7 +83,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    >[!NOTE]
    >
-   > ダイアログ（_レンチ_&#x200B;アイコンをクリック）を使用してコンポーネントを設定することで、表示された製品を設定することもできます。
+   >ダイアログ（_レンチ_&#x200B;アイコンをクリック）を使用してコンポーネントを設定することで、表示された製品を設定することもできます。
 
 4. これで、製品ティーザーによって製品が表示されます。製品名と製品の価格は、表示されるデフォルトの属性です。
 
@@ -95,7 +95,7 @@ AEM に表示された製品と製品データは Adobe Commerce に格納され
 
 >[!TIP]
 >
-> 製品属性セットの一部として、既にカスタムの&#x200B;**はい／いいえ**&#x200B;属性がある場合は、それを使用して、この節をスキップしてください。
+>製品属性セットの一部として、既にカスタムの&#x200B;**はい／いいえ**&#x200B;属性がある場合は、それを使用して、この節をスキップしてください。
 
 1. Adobe Commerce インスタンスにログインします。
 1. **カタログ**／**製品**&#x200B;に移動します。
@@ -124,7 +124,7 @@ AEM に表示された製品と製品データは Adobe Commerce に格納され
 
    >[!TIP]
    >
-   > 製品属性の管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html)を参照してください。
+   >製品属性の管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/catalog/attribute-best-practices.html)を参照してください。
 
 1. **システム**／**ツール**／**キャッシュ管理**&#x200B;に移動します。データスキーマはアップデートされたので、Adobe Commerce 内のキャッシュタイプの一部を無効にする必要があります。
 1. 「**設定**」の横のチェックボックスをオンにして、**更新**&#x200B;用にキャッシュタイプを送信します。
@@ -133,7 +133,7 @@ AEM に表示された製品と製品データは Adobe Commerce に格納され
 
    >[!TIP]
    >
-   > キャッシュ管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/system/cache-management.html)を参照してください。
+   >キャッシュ管理の詳細については、[Adobe Commerce ユーザーガイド](https://docs.magento.com/user-guide/system/cache-management.html)を参照してください。
 
 ## GraphQL IDE を使用した属性の検証 {#use-graphql-ide}
 
@@ -182,7 +182,7 @@ AEM コードを始める前に、GraphQL IDE を使用して [Adobe Commerce Gr
 
    >[!TIP]
    >
-   > Adobe Commerce GraphQL に関する詳細なドキュメントは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
+   >Adobe Commerce GraphQL に関する詳細なドキュメントは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
 
 ## 製品ティーザーの Sling モデルのアップデート {#updating-sling-model-product-teaser}
 
@@ -289,7 +289,7 @@ Sling モデルは Java として実装され、生成されたプロジェク�
 
    >[!NOTE]
    >
-   > `createdAt()` メソッドは、[製品インターフェイス](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java)の一部として実装されています。一般的なスキーマ属性のほとんどは実装されているので、真のカスタム属性に対してのみ `addCustomSimpleField` を使用します。
+   >`createdAt()` メソッドは、[製品インターフェイス](https://github.com/adobe/commerce-cif-magento-graphql/blob/master/src/main/java/com/adobe/cq/commerce/magento/graphql/ProductInterface.java)の一部として実装されています。一般的なスキーマ属性のほとんどは実装されているので、真のカスタム属性に対してのみ `addCustomSimpleField` を使用します。
 
 1. Java コードのデバッグに役立つロガーを追加します。
 
@@ -336,7 +336,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 >[!NOTE]
 >
-> この製品ティーザーや CIF ページコンポーネントなど、CIF 製品およびカテゴリピッカーを使用してコンポーネントをカスタマイズする場合は、必ずコンポーネントダイアログに必要な `cif.shell.picker` clientlib を含めてください。詳しくは、[CIF 製品とカテゴリピッカーの使用](use-cif-pickers.md)を参照してください。
+>この製品ティーザーや CIF ページコンポーネントなど、CIF 製品およびカテゴリピッカーを使用してコンポーネントをカスタマイズする場合は、必ずコンポーネントダイアログに必要な `cif.shell.picker` clientlib を含めてください。詳しくは、[CIF 製品とカテゴリピッカーの使用](use-cif-pickers.md)を参照してください。
 
 1. IDE で、`ui.apps` モジュールに移動して展開し、フォルダー階層を `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser` まで展開し、`.content.xml` ファイルを検査します。
 
@@ -430,7 +430,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    >[!CAUTION]
    >
-   > また、ティーザーで使用される製品が属性セットの一部としての `eco_friendly` 属性を持たない場合は、スタックトレースが表示されることがあります。
+   >また、ティーザーで使用される製品が属性セットの一部としての `eco_friendly` 属性を持たない場合は、スタックトレースが表示されることがあります。
 
 ## エコフレンドリーバッジにスタイルを追加 {#add-styles}
 
@@ -471,7 +471,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    >[!NOTE]
    >
-   > フロントエンドワークフローに関する詳細については、「[CIF コアコンポーネントのスタイル設定](./style-cif-component.md)」を参照してください。
+   >フロントエンドワークフローに関する詳細については、「[CIF コアコンポーネントのスタイル設定](./style-cif-component.md)」を参照してください。
 
 1. 変更を保存し、コマンドラインターミナルから Maven を使用して AEM にアップデートをデプロイします。
 

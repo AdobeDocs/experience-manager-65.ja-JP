@@ -9,7 +9,7 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 0125021a-1c00-4ea3-b7fb-1533b7b9f4f2
-source-git-commit: 014731aa9c5c4d7d419ff8b037142b47e7b7da01
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 100%
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
-> 検索エンジン最適化（SEO）は、多くのマーケティング担当者にとって重要な課題となっています。したがって、多くの AEM プロジェクトで SEO に関する課題に対処する必要があります。詳しくは、[SEO および URL 管理のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html?lang=ja)を参照してください。
+>検索エンジン最適化（SEO）は、多くのマーケティング担当者にとって重要な課題となっています。したがって、多くの AEM プロジェクトで SEO に関する課題に対処する必要があります。詳しくは、[SEO および URL 管理のベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/managing/managing-further-reference/seo-and-url-management.html?lang=ja)を参照してください。
 
 [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)は、製品ページとカテゴリページの URL をカスタマイズする高度な設定を提供します。多くの実装では、検索エンジン最適化（SEO）用にこれらの URL をカスタマイズします。次のビデオでは、`UrlProvider` サービスと [Sling マッピング](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)の機能を設定して、製品ページとカテゴリページの URL をカスタマイズする方法について詳しく説明します。
 
@@ -32,7 +32,7 @@ SEO の要件とニーズに応じて `UrlProvider` サービスを設定する�
 
 >[!NOTE]
 >
-> AEM CIF コアコンポーネントのリリース 2.0.0 以降では、URL プロバイダーの設定には、1.x リリースで提供されていた設定可能なフリーテキスト形式ではなく、事前に定義された URL 形式のみが使用されます。さらに、セレクターを使用して URL 内のデータを渡すことはなくなり、代わりにサフィックスが使用されます。
+>AEM CIF コアコンポーネントのリリース 2.0.0 以降では、URL プロバイダーの設定には、1.x リリースで提供されていた設定可能なフリーテキスト形式ではなく、事前に定義された URL 形式のみが使用されます。さらに、セレクターを使用して URL 内のデータを渡すことはなくなり、代わりにサフィックスが使用されます。
 
 ### 製品ページの URL 形式 {#product}
 
@@ -73,7 +73,7 @@ SEO の要件とニーズに応じて `UrlProvider` サービスを設定する�
 
 >[!NOTE]
 > 
-> `url_path` は、製品またはカテゴリの上位層の `url_keys` と製品またはカテゴリの `url_key` をスラッシュ `/` で区切って連結したものです。
+>`url_path` は、製品またはカテゴリの上位層の `url_keys` と製品またはカテゴリの `url_key` をスラッシュ `/` で区切って連結したものです。
 
 ### 特定のカテゴリーページ／製品ページ {#specific-pages}
 

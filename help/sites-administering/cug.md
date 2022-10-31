@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6ae57874-a9a1-4208-9001-7f44a1f57cbe
 docset: aem65
 exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
-source-git-commit: cb4b0cb60b8709beea3da70495a15edc8c4831b8
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '794'
 ht-degree: 100%
 
 ---
@@ -82,11 +82,11 @@ CUG をページに適用するには：
 
    ![screenshot_2018-10-30at163003](assets/screenshot_2018-10-30at163003.png)
 
-   >[注]
+   >[!NOTE]
    >
-   > 「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
+   >「権限」タブの CUG をブループリントからライブコピーにロールアウトすることはできません。ライブコピーを設定する際には、この点を考慮してください。
    >
-   > 詳しくは、[このページ](closed-user-groups.md#aem-livecopy)を参照してください。
+   >詳しくは、[このページ](closed-user-groups.md#aem-livecopy)を参照してください。
 
 1. 次のウィンドウで CUG を探して追加します。この場合は、**cug_access** という名前のグループを追加します。最後に、「**保存**」を押します。
 1. 「**有効**」をクリックして、このページ（およびすべての子ページ）が CUG に属することを定義します。

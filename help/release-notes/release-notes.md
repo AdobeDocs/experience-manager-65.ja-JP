@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 48f898a774d2ddd6d2c31f6a4107c71e4032cfc2
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3281'
 ht-degree: 38%
@@ -84,7 +84,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
-> Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
+>Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ ht-degree: 38%
 
 ## 翻訳プロジェクト {#translation-6514}
 
-* 親ページの参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
+* 親ページで参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
 
 ## ユーザーインターフェイス {#ui-6514}
 
@@ -326,7 +326,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 
 * [!DNL Experience Manager] 6.5 Service Pack 10 または以前の Service Pack を [!DNL Experience Manager] 6.5 にインストールすると、アセットのカスタムワークフローモデル（`/var/workflow/models/dam` に作成）のランタイムコピーが削除されます。
 ランタイムコピーを取得するには、HTTP API を使用して、カスタムワークフローモデルの設計時コピーとランタイムコピーを同期させることをお勧めします。
-   `<designModelPath>/jcr:content.generate.json`
+   `<designModelPath>/jcr:content.generate.json`.
 
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 

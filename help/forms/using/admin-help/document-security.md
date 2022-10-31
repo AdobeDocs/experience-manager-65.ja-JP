@@ -1,5 +1,5 @@
 ---
-title: 'ドキュメントセキュリティとは？ '
+title: ドキュメントセキュリティとは？
 seo-title: About document security
 description: Document Security を使用して、事前定義の機密設定を作成、保存および適用し、情報を安全に配布する方法について説明します。
 seo-description: Learn how you can create, store, and apply predefined confidentiality settings, and distribute your information safely using document security.
@@ -12,7 +12,7 @@ discoiquuid: 1820cb38-ba70-4cce-8895-290524bdd9bf
 docset: aem65
 feature: Document Security
 exl-id: 0cdc9ee3-0172-43be-9b62-ed768534c074
-source-git-commit: de5eb53f6160991ca0718d61afaeed2078a4fa88
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '3286'
 ht-degree: 100%
@@ -276,4 +276,4 @@ Document Security のインストール時に、*グローバルポリシーセ�
 
    >[!NOTE]
    >
-   > [getAllPolicysetnames()](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API を使用すると、最大 1,000 個のポリシーセット名を取得できます。内部的には、API は、API 呼び出し元がドキュメント公開者権限持つ最大 1,000 個のポリシーを取得し、取得したポリシーに関連付けられた一意のポリシーセット名のリストを作成して返します。例えば、API が 1,000 個のポリシーを取得し、取得したポリシーが合計 200 個のポリシーセットに関連付けられている場合、API は 200 個のポリシーセット名のみを返します。
+   >[getAllPolicysetnames()](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API を使用すると、最大 1,000 個のポリシーセット名を取得できます。内部的には、API は、API 呼び出し元がドキュメント公開者権限持つ最大 1,000 個のポリシーを取得し、取得したポリシーに関連付けられた一意のポリシーセット名のリストを作成して返します。例えば、API が 1,000 個のポリシーを取得し、取得したポリシーが合計 200 個のポリシーセットに関連付けられている場合、API は 200 個のポリシーセット名のみを返します。

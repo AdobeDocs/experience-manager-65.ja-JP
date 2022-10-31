@@ -3,7 +3,7 @@ title: コマース統合フレームワークを使用した、AEM と Adobe Co
 description: AEM と Adobe Commerce は、コマース統合フレームワーク（CIF）を使用してシームレスに統合されます。CIF を使用すると、AEMはAdobe Commerceインスタンスにアクセスし、GraphQL を介してAdobe Commerceと通信できます。 また、AEM オーサーは、製品とカテゴリの選択機能と製品コンソールを使用して、Adobe Commerce からオンデマンドで取得した製品とカテゴリデータを参照できます。さらに、CIF には標準搭載のストアフロントが用意されており、コマースプロジェクトの迅速化に役立ちます。
 thumbnail: aem-magento-architecture.jpg
 exl-id: f843784c-5ff7-41d1-97c5-13facb8459b2
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 95%
@@ -16,7 +16,7 @@ Experience Manager と Adobe Commerce は、コマース統合フレームワー
 
 >[!NOTE]
 >
-> サポートされる GraphQL API の最小バージョンは 2.3.5 です。一部の機能は、新しいバージョンでのみ、または Adobe Commerce エディションでのみサポートされます。
+>サポートされる GraphQL API の最小バージョンは 2.3.5 です。一部の機能は、新しいバージョンでのみ、または Adobe Commerce エディションでのみサポートされます。
 
 ## アーキテクチャの概要 {#overview}
 

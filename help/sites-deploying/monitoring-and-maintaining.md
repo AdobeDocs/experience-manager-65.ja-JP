@@ -12,7 +12,7 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: b9a3db4144a571291bdf1c9a9f0e841f284df0c8
+source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
 workflow-type: tm+mt
 source-wordcount: '5972'
 ht-degree: 90%
@@ -448,11 +448,12 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >| `'.'yyyy-MM-dd-HH-mm` | 毎分の初めにローテーション。 |
    >
    >メモ：日時を指定する場合：
-   > 1. 一重引用符（&#39; &#39;）の範囲内で、リテラルテキストを「エスケープ」する必要があります。
-      >
-      >     これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
    >
-   >  1. オプションの任意の場所で、有効なファイル名に使用できる文字のみを使用します。
+   >1. 一重引用符（&#39; &#39;）の範囲内で、リテラルテキストを「エスケープ」する必要があります。
+      >
+      >    これは、特定の文字がパターン文字として解釈されるのを防ぐためです。
+   >
+   >1. オプションの任意の場所で、有効なファイル名に使用できる文字のみを使用します。
 
 
 1. 任意のツールで新しいログファイルを読み取ります。
