@@ -1,5 +1,5 @@
 ---
-title: 'ページプロパティの編集 '
+title: ページプロパティの編集
 seo-title: Editing Page Properties
 description: ページに必要なプロパティを定義します
 seo-description: Define the required properties for a page
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
-source-git-commit: 9946bfd3c2701a37d13e6eb6b4c19562ef77d24c
+source-git-commit: 1cd63d2ce5c5caf408b11eb6bac9b1a54dae0b25
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1886'
 ht-degree: 100%
 
 ---
@@ -367,7 +367,7 @@ ht-degree: 100%
 
       * 新しい値は、「**完了**」を選択したときに、選択したすべてのページに適用されます。
       * フィールドが複数値（タグなど）の場合は、新しい値を追加するか、共通の値を削除できます。
-   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。そのようなフィールドを編集する際は、データが失われないように、慎重に行う必要があります。
+   * 共通のフィールドに、ページによって異なる値が設定されている場合、それらのフィールドは特別な値（「`<Mixed Entries>`」というテキストなど）で示されます。
 
 
 >[!NOTE]
