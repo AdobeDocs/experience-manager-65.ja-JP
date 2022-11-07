@@ -12,12 +12,13 @@ discoiquuid: 4b676e7e-191f-4a19-8b8f-fc3e30244b59
 docset: aem65
 feature: Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
-source-git-commit: a90ea57142110ebd11a8a9580c29df1698b8dce1
+source-git-commit: 99c9eddad7a2ec7eb23b3c374a1c0e65e141da20
 workflow-type: tm+mt
 source-wordcount: '2005'
 ht-degree: 84%
 
 ---
+
 
 # HTML5 フォームに関するよくある質問（FAQ）{#frequently-asked-questions-faq-for-html-forms}
 

@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 40434fc8f2e0fd4b66102cdd5779dc578330d7b4
+source-git-commit: 99c9eddad7a2ec7eb23b3c374a1c0e65e141da20
 workflow-type: tm+mt
-source-wordcount: '3808'
+source-wordcount: '3811'
 ht-degree: 97%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 97%
 + リリースノート {#release-notes-new-features}
    + [リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
    + [新機能の概要](using/whats-new.md)
+   + [よくある質問](/help/forms/using/frequently-asked-questions-faq.md)
    + [非推奨（廃止予定）の機能](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/sp-release-notes.html?lang=ja)
 + はじめに {#getting-started}
    + [AEM Forms の概要](using/introduction-aem-forms.md)
