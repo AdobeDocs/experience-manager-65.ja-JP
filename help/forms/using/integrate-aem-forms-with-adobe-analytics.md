@@ -1,21 +1,14 @@
 ---
 title: AEM Forms と Adobe Analytics を統合する方法
-seo-title: Learn how to integrate AEM Forms with Adobe Analytics.
 description: AEM FormsはAdobe Analyticsと統合され、発行されたフォームのパフォーマンス指標を取得して追跡します。
-seo-description: To discover interaction patterns and problems users face while using adaptive forms.
-uuid: e258805c-4da8-4c5d-ae91-7bea78a6a71b
-content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: integrations
-discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
-exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: 67d492713d9e2236dbf81c5f3c781c80717ec9a6
+source-git-commit: 503e579a00c9e029393b0a8a580faba2231c7589
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 91%
 
 ---
+
 
 # を使用した Analytics [!DNL Adobe Launch] {#analyticsusingadobelaunch}
 
