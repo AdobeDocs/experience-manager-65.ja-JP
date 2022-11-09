@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 3f06f7a1-bdf0-4700-8a7f-1d73151893ba
 exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
-source-git-commit: c9df4b43083376f0110368afe642ec74290a52f8
+source-git-commit: b60278940f48731ee9085635c0d4a3d7da24ebc8
 workflow-type: tm+mt
-source-wordcount: '4679'
-ht-degree: 100%
+source-wordcount: '4664'
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ AEM 6 での Oak への移行に伴い、クエリとインデックスの管理
 
 さらに、[クエリとインデックスの作成に関する Oak のドキュメント](/help/sites-deploying/queries-and-indexing.md)をお読みください。AEM 6 における新しい概念であるインデックスに加えて、Oak クエリの構文も大きく異なります。以前の AEM インストールからコードを移行する際にはこの違いを考慮する必要があります。
 
-## クエリを使用する必要がある場合 {#when-to-use-queries}
+## クエリを使用する場面 {#when-to-use-queries}
 
 ### リポジトリと分類の設計 {#repository-and-taxonomy-design}
 
@@ -121,7 +121,7 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 **開発時**
 
-`oak.queryLimitInMemory` の低しきい値（例：10000）と Oak を設定します。`queryLimitReads`（例：UnsupportedOperationException にヒットして「The query read more than x nodes...」と表示されたときに高負荷のクエリを最適化します。
+`oak.queryLimitInMemory` の低しきい値（例：10000）と Oak を設定します。`queryLimitReads`（例：5000) で、UnsupportedOperationException を押したときに、「The query read more than x nodes...」というメッセージが表示され、高価なクエリを最適化します。
 
 これにより、リソースを集中的に使用するクエリ（つまり、インデックスのないクエリまたは対応するインデックスが少ないクエリ）を回避することができます。例えば、100 万個のノードを読み取るクエリでは I/O が増加し、アプリケーションの全体的なパフォーマンスに悪影響が生じます。上述のような制限が原因で失敗するクエリは、分析して最適化する必要があります。
 
@@ -176,7 +176,7 @@ Solr インデックスは、開発環境用の AEM サーバーに組み込ん�
 
 >[!NOTE]
 >
->統合型の Solr 検索アプローチを採用すると、インデックス作成を Solr サーバーにオフロードできます。クローラベースのアプローチで Solr サーバーの高度な機能を使用する場合は、追加の設定作業が必要です。このような実装を高速化するために、Headwire が[オープンソースのコネクター](https://www.aemsolrsearch.com/#/)を開発しています。
+>統合型の Solr 検索アプローチを採用すると、インデックス作成を Solr サーバーにオフロードできます。クローラベースのアプローチで Solr サーバーの高度な機能を使用する場合は、追加の設定作業が必要です。
 
 ただし、このアプローチには 1 つマイナス面があります。AEM のクエリはデフォルトで ACL を適用するので、ユーザーがアクセス権を持たない結果は表示されませんが、検索を Solr サーバーにオフロードするとこの非表示機能が働かなくなります。この方法で検索をオフロードする場合は、ユーザーに見せてはいけない結果を表示していないかを特に注意して確認する必要があります。
 
