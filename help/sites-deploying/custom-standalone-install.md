@@ -6,7 +6,7 @@ seo-description: Learn about the options available when installing a standalone 
 content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
 source-wordcount: '1622'
 ht-degree: 97%
@@ -268,7 +268,7 @@ The license.properties file
 Log files
 --------------------------------------------------------------------------------
   Once Quickstart has been unpacked and started, log files can be found under   
-  /Users/aheimoz/CQInstallationKits/AEM-65150-L8/crx-quickstart/logs.           
+  /Users/aemdocs/CQInstallationKits/AEM-65150-L8/crx-quickstart/logs.           
 --------------------------------------------------------------------------------
 ```
 

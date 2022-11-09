@@ -1,16 +1,16 @@
 ---
-title: '"コンテンツの再利用：マルチサイトマネージャーとライブコピー"'
-seo-title: 'Reusing Content: Multi Site Manager and Live Copy'
+title: "コンテンツの再利用：マルチサイトマネージャーとライブコピー"
+seo-title: "Reusing Content: Multi Site Manager and Live Copy"
 description: ライブコピーとマルチサイトマネージャーを使用してコンテンツを再利用する方法について説明します。
 seo-description: Learn about reusing content with Live Copies and the Multi Site Manager.
 uuid: 9f955226-8fc9-4357-b90c-c6896b0dc4b4
-contentOwner: Alison Heimoz
+contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
 workflow-type: tm+mt
 source-wordcount: '2664'
 ht-degree: 100%
