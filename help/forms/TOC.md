@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 99c9eddad7a2ec7eb23b3c374a1c0e65e141da20
+source-git-commit: 55e9344c088a38bc4c9f916a13c310a029b3b2f4
 workflow-type: tm+mt
-source-wordcount: '3811'
-ht-degree: 97%
+source-wordcount: '3819'
+ht-degree: 95%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 97%
    + [アダプティブフォームのオーサリングの概要](using/introduction-forms-authoring.md)
    + [インタラクティブ通信の概要](using/interactive-communications-overview.md)
    + [フォーム管理の概要](using/introduction-managing-forms.md)
-   + [自動フォーム変換サービスの概要](https://docs.adobe.com/content/help/ja/aem-forms-automated-conversion-service/using/introduction.html)
+   + [自動フォーム変換サービスの概要](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
    + チュートリアル：最初のアダプティブフォームを作成 {#create-first-adaptive-form}
       + [チュートリアル：最初のアダプティブフォームを作成](using/create-your-first-adaptive-form.md)
       + [チュートリアル：アダプティブフォームの作成](using/create-adaptive-form.md)
@@ -57,12 +57,12 @@ ht-degree: 97%
    + [AEM Forms のアーキテクチャとデプロイメントトポロジー](using/aem-forms-architecture-deployment.md)
    + [AEM Forms のインストールに永続性タイプを選択する](using/choosing-persistence-type-for-aem-forms.md)
    + OSGi での AEM Forms のインストール {#osgi-installation}
-      + [OSGi での AEM forms でサポートされるプラットフォーム](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/deploying/introduction/technical-requirements.html)
+      + [OSGi での AEM forms でサポートされるプラットフォーム](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=ja)
       + [ドキュメントサービスのインストールと設定](using/install-configure-document-services.md)
       + [データ取得機能をインストールして設定する](using/installing-configuring-aem-forms-osgi.md)
       + [OSGi での Forms 中心のワークフローのインストールと設定](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [インタラクティブ通信をインストールして設定する](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://docs.adobe.com/content/help/ja/aem-forms-automated-conversion-service/using/introduction.html)
+      + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
    + AEM Forms の JEE へのインストール {#jee-installation}
       + [JEE 上の AEM Forms でサポートされているプラットフォーム](using/aem-forms-jee-supported-platforms.md)
       + [JEE 上における AEM forms のインストールおよびデプロイ（JBoss Turnkey を使用）](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_jp)
@@ -578,8 +578,8 @@ ht-degree: 97%
    + [プロセスレポートのアドホッククエリ](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [トラブルシューティングプロセスのレポート](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
-   + [開発者の基本事項](https://docs.adobe.com/content/help/ja-JP/experience-manager-65/developing/home.html)
-   + [HTML テンプレート言語](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
+   + [開発者の基本事項](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+   + [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/ProgramLC/javadoc/index.html)
@@ -685,6 +685,7 @@ ht-degree: 97%
    + [特定のバージョンのOracleJDK で一部のフォーム機能を使用できない](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
    + [JEE 上のアダプティブFormsバージョンの添付ファイルを含む電子メールを取得するための追加手順](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
    + [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
+   + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer、Apple Safari で XFA ベースのPDF formsを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
