@@ -1,9 +1,8 @@
 ---
 title: Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer、Apple Safari で XFA ベースのPDF formsを開けない
 seo-title: Unable to open XFA-based PDF forms in Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer, or Apple Safari
-docset: aem65
 feature: Adaptive Forms
-source-git-commit: 12d8978f685dd7bdae12e51275edeb50fa930eb0
+source-git-commit: faaec082169e3d03c75b8d762dbe4d76475766af
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
