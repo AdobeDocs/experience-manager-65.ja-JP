@@ -10,16 +10,16 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e4aaef48ce7d6e49e9a76f78a74b7dea127f6cce
 workflow-type: tm+mt
-source-wordcount: '2011'
-ht-degree: 99%
+source-wordcount: '2042'
+ht-degree: 95%
 
 ---
 
 # データソースの設定{#configure-data-sources}
 
-![](do-not-localize/data-integeration.png)
+![データ統合](do-not-localize/data-integeration.png)
 
 AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のタイプがサポートされています。これらのタイプは、すぐに使用することができます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
@@ -35,7 +35,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 
 AEM Web Console Configuration を使用してリレーショナルデータベースを設定することができます。以下の操作を実行します。
 
-1. AEM web コンソールに移動します（https://server:host/system/console/configMgr）。
+1. AEM web コンソール（`https://server:host/system/console/configMgr`）にアクセスします。
 1. 「**[!UICONTROL Apache Sling Connection Pooled DataSource]**」という設定を探し、その設定をタップして編集モードで開きます。
 1. 設定ダイアログで、設定するデータベースの詳細を指定します。例えば、以下のような詳細を指定します。
 
@@ -49,14 +49,10 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
    >
    >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。暗号化するには、以下の手順を実行します。
    >
-   >    
-   >    
-   >    1. https://&#39;[server]:[port]&#39;/system/console/crypto に移動します。
-   >    1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をタップします。
+   > 1. https://&#39;[server]:[port]&#39;/system/console/crypto に移動します。
+   > 1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をタップします。
 
-   >    
-   >    
-   >    
+   >
    >暗号化されたテキストが「保護されたテキスト」フィールドに表示されます。このテキストを設定内で指定できます。
 
 1. プールからオブジェクトを取得するときにそのオブジェクトを検証する場合は「**[!UICONTROL Test on Borrow]**」を有効にし、プールにオブジェクトを返すときにそのオブジェクトを検証する場合は「**[!UICONTROL Test on Return]**」を有効にします。
@@ -67,13 +63,17 @@ AEM Web Console Configuration を使用してリレーショナルデータベ�
 
 1. 「**[!UICONTROL 保存]**」をタップして、設定内容を保存します。
 
+   >[!NOTE]
+   >
+   > Formsデータモデルにリレーショナルデータベース用の予約キーワードであるオブジェクトが含まれている場合、データの追加、更新、取得に関する問題が発生する可能性があります。 したがって、フォームデータモデル内では、このようなオブジェクトを使用しないでください。
+
 ## AEM ユーザープロファイルの設定 {#configure-aem-user-profile}
 
 AEM Web コンソールでユーザープロファイルコネクター設定を使用して、AEM のユーザープロファイルを設定することができます。以下の操作を実行します。
 
 1. AEM web コンソール（https://&#39;[server]:[port]&#39;system/console/configMgr）に移動します。
 1. 「**[!UICONTROL AEM Forms データ統合 - ユーザープロファイルコネクター設定]**」という設定をタップして、この設定を編集モードで開きます。
-1. ユーザープロファイルコネクター設定ダイアログで、ユーザープロファイルプロパティの追加、削除、更新を行うことができます。ここで指定したプロパティは、フォームデータモデルで使用することができます。ユーザープロファイルのプロパティを指定する場合は、以下の形式で指定します。
+1. ユーザープロファイルコネクター設定ダイアログで、ユーザープロファイルプロパティの追加、削除、更新を行うことができます。指定したプロパティは、フォームデータモデルで使用できます。 ユーザープロファイルのプロパティを指定する場合は、以下の形式で指定します。
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
 
@@ -161,7 +161,6 @@ RESTful サービスを設定するには、以下の手順を実行します。
 
    * **[!UICONTROL ソケットタイムアウト]**&#x200B;フィールドに、2 つのデータパケット間の非アクティブの最大時間を指定します。デフォルト値は 30 秒です。
 
-
 ## SOAP Web サービスの設定 {#configure-soap-web-services}
 
 SOAP ベースの web サービスは、[Web Services Description Language（WSDL）の仕様](https://www.w3.org/TR/wsdl)に従って記述します。AEM クラウドサービスで SOAP ベースの Web サービスを設定するには、その Web サービスの WSDL URL を確認して、以下の手順を実行します。
@@ -224,4 +223,4 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
 ## 次の手順 {#next-steps}
 
-上記の手順により、データソースが設定されました。次に、フォームデータモデルを作成します。データソースが設定されていないフォームデータモデルが既に作成されている場合は、上記の手順で設定したデータソースにそのフォームデータモデルを関連付けます。詳しくは、「[フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)」を参照してください。
+上記の手順により、データソースが設定されました。次に、フォームデータモデルを作成できます。データソースのないフォームデータモデルを既に作成している場合は、そのモデルを設定したデータソースに関連付けることができます。 詳しくは、「[フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)」を参照してください。
