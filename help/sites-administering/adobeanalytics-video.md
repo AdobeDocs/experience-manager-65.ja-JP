@@ -1,5 +1,5 @@
 ---
-title: 'Adobe Analytics のビデオトラッキングの設定 '
+title: Adobe Analytics のビデオトラッキングの設定
 seo-title: Configuring Video Tracking for Adobe Analytics
 description: SiteCatalyst のビデオトラッキングの設定について説明します。
 seo-description: Learn about configuring video tracking for SiteCatalyst.
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: a18ddac1-9e4c-4857-9cb3-4d5eeb8dd9ec
 docset: aem65
 exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 100%
+source-wordcount: '1742'
+ht-degree: 98%
 
 ---
 
@@ -140,7 +140,7 @@ XX というサフィックスは、マイルストーンを定義する追跡�
 
 1. CQ 変数を Adobe Analytics プロパティにマッピングするには、CQ 変数の横のコンテンツファインダーから Adobe Analytics プロパティをコンポーネント上にドラッグします。
 
-   マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://docs.adobe.com/content/help/ja/media-analytics/using/media-overview.html)ガイドを参照してください。
+   マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)ガイドを参照してください。
 
 1. ページに [フレームワークを追加](/help/sites-administering/adobeanalytics.md)します。
 1. 設定を&#x200B;**プレビューモード**&#x200B;でテストするには、ビデオを再生して Adobe Analytics 呼び出しをトリガーします。
@@ -275,7 +275,7 @@ eventdata.events.milestoneXX
 
 1. CQ 変数を Adobe Analytics プロパティにマッピングするには、CQ 変数の横のコンテンツファインダーから Adobe Analytics プロパティをコンポーネント上にドラッグします。
 
-   マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)ガイドを参照してください。
+   マッピングの最適化については、[Adobe Analytics でのビデオの測定](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)ガイドを参照してください。
 
 1. ページに [フレームワークを追加](/help/sites-administering/adobeanalytics.md)します。
 1. 設定を&#x200B;**プレビューモード**&#x200B;でテストするには、ビデオを再生して Adobe Analytics 呼び出しをトリガーします。
@@ -383,4 +383,4 @@ eventdata.events.milestoneXX
 
 **このチュートリアルで使用しているリファレンス：**
 
-[0] [https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html](https://docs.adobe.com/content/help/en/media-analytics/using/media-overview.html)
+[0] [https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)

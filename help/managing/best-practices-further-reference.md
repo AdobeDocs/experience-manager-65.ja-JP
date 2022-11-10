@@ -10,9 +10,9 @@ topic-tags: managing-checklist
 content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '3757'
+source-wordcount: '3755'
 ht-degree: 100%
 
 ---
@@ -34,7 +34,7 @@ AEM を実装するとき（特に初回）は、[AEM の機能とワークフ�
 次のような使用する AEM の機能と、デザインへの影響を検討します。
 
 * [Commerce](/help/commerce/cif-classic/administering/ecommerce.md)
-* [Screens](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)
 * [Assets](/help/assets/assets.md)
 * [タグ](/help/sites-administering/tags.md)
 * [マルチサイト管理と翻訳](/help/sites-administering/msm-and-translation.md)

@@ -1,5 +1,5 @@
 ---
-title: 'ページ分析データの表示 '
+title: ページ分析データの表示
 seo-title: Seeing Page Analytics Data
 description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
 seo-description: Use page analytics data to gauge the effectiveness of their page content
@@ -12,9 +12,9 @@ discoiquuid: 5d192a48-c86f-4803-bb0d-0411ac7470f5
 docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '438'
 ht-degree: 100%
 
 ---
@@ -91,4 +91,4 @@ Sites コンソールから「[コンテンツインサイト](/help/sites-autho
 >
 >Adobe Analytics API 内のセキュリティの変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->[Adobe Analytics で提供される ActivityMap プラグイン](https://docs.adobe.com/content/help/ja/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)を今すぐ使用する必要があります。
+>[Adobe Analytics で提供される ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を今すぐ使用する必要があります。

@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '836'
-ht-degree: 100%
+source-wordcount: '832'
+ht-degree: 99%
 
 ---
 
@@ -51,7 +51,7 @@ AEM に含まれる [cookie オプトアウトサービス](/help/sites-developi
 
 AEM Sitesには、Adobe Analytics On-demand サービス内の機能を使用した、Analytics によるインサイトの拡張との統合（オプション）が含まれています。
 
-Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://docs.adobe.com/content/help/ja-JP/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
+Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
 
 ## Target によるパーソナライゼーションの拡張 {#enhanced-personalization-by-target}
 

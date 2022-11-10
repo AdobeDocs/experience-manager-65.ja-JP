@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: e938bdc7-f8f5-4da5-81f6-7f60c6b4b8e6
 feature: Upgrading
 exl-id: ef3895b9-8d35-4881-8188-c864ae3f0b4c
-source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 100%
+source-wordcount: '1246'
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,7 @@ CRX2Oak は、異なるリポジトリ間でデータを移行するために設
 
 最新バージョンの crx2oak は、次の場所で公開されているアドビのリポジトリからダウンロードできます。[https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/](https://repo1.maven.org/maven2/com/adobe/granite/crx2oak/)
 
-最新バージョンの変更点と修正点の一覧は、[CRX2Oak のリリースノート](https://docs.adobe.com/content/help/ja/experience-manager-64/release-notes/crx2oak.html)にあります。
+最新バージョンの変更点と修正点の一覧は、[CRX2Oak のリリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/crx2oak.html)にあります。
 
 >[!NOTE]
 >

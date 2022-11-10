@@ -8,9 +8,9 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: f29612ee633d2a62144b770f3c225fc82b9174f8
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1297'
 ht-degree: 100%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 100%
    + [Bulk Editor の開発](dev-bulk-editor.md)
    + [レポートの開発](dev-reports.md)
 + コンポーネント{#components}
-   + [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+   + [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
    + [スタイルシステム](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=ja)
    + [コンポーネントの概要](components.md)
    + [AEM コンポーネント - 基本](components-basics.md)

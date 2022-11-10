@@ -10,9 +10,9 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 273836ad0afd6466eac437bf7711e7dbabc1d5e9
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1354'
 ht-degree: 100%
 
 ---
@@ -51,7 +51,8 @@ AEM には、オーサーインスタンスのページオーサリング機能�
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 >
->このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-user-interface-customization-for-aem6.html) でも説明しています。
+
+
 
 >[!CAUTION]
 >

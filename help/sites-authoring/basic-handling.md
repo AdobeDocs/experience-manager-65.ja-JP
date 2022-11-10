@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 21181a6f-b434-40ed-8eb1-ebdfc98964dd
 docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
-source-git-commit: 440aa5a2f4a020a16104f11eaf484a2cf7291e1f
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2969'
+source-wordcount: '2967'
 ht-degree: 100%
 
 ---
@@ -124,7 +124,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
   </tr>
   <tr>
    <td>Screens</td>
-   <td><a href="https://docs.adobe.com/content/help/ja-JP/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">スクリーン</a>では、あらゆる場所、あらゆるサイズの対顧客画面をすべて管理できます。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=ja">スクリーン</a>では、あらゆる場所、あらゆるサイズの対顧客画面をすべて管理できます。</td>
   </tr>
   <tr>
    <td>Sites</td>

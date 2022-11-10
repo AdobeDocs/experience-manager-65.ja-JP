@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2244'
+source-wordcount: '2242'
 ht-degree: 98%
 
 ---
@@ -188,7 +188,7 @@ Workbench を使用するには、通常は別のコンピューターで AEM Fo
 
 ### タイムアウトの設定 {#configuring-timeout-settings}
 
-デフォルトでは、Workbench は動作状況に関係なく 2 時間後にタイムアウトになります。タイムアウト設定を編集するには、 <a href="https://docs.adobe.com/content/help/jp/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理コンソールヘルプ</a>.
+デフォルトでは、Workbench は動作状況に関係なく 2 時間後にタイムアウトになります。タイムアウト設定を編集するには、 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理コンソールヘルプ</a>.
 
 ### HTTPS 経由で接続するための Workbench の設定 {#configuring-workbench-to-connect-over-HTTPS}
 

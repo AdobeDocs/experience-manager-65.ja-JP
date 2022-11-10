@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 61a4e196-bd53-4ef0-816b-c14401462457
 docset: aem65
 exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '670'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,8 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >* [オーバーレイ](/help/sites-developing/overlays.md)の使用と作成
 >* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)
 >
->このトピックについては、[AEM Gems](https://docs.adobe.com/content/ddc/en/gems.html) セッション - [User interface customization for AEM 6.0](https://docs.adobe.com/content/ddc/jp/gems/user-interface-customization-for-aem-6.html) でも説明しています。
+
+
 
 >[!CAUTION]
 >
@@ -54,6 +55,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 >1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
 >
 >1. `/apps` 内で変更作業をおこないます。
+
 >
 
 

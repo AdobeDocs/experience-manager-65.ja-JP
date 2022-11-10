@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '2234'
-ht-degree: 100%
+source-wordcount: '2228'
+ht-degree: 99%
 
 ---
 
@@ -79,7 +79,7 @@ API を簡単に操作できるように、AEM Forms には、Batch API を使�
 
 JSON ファイルに保存されたレコードからインタラクティブ通信を作成するには：
 
-1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html?lang=ja)を作成して、Batch API を使用するように設定します。
+1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成して、Batch API を使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
    1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」をタップします。
    1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
@@ -109,7 +109,7 @@ JSON ファイルに保存されたレコードからインタラクティブ通
 
 #### 外部データソースに保存され、フォームデータモデルを介してアクセスされる入力データを使用して、インタラクティブ通信を作成する {#use-fdm-as-data-source}
 
-外部データソースに保存されたデータ（レコード）とインタラクティブ通信テンプレートを組み合わせて、インタラクティブ通信を作成できます。インタラクティブ通信を作成する場合は、フォームデータモデル（FDM）を介して外部データソースに接続し、データにアクセスします。外部データソースから同じフォームデータモデルを使用してデータを取得するように、監視フォルダーのバッチ処理サービスを設定できます。[外部データソースに保存されたレコードからインタラクティブ通信を作成する](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html?lang=ja)には、次をおこないます。
+外部データソースに保存されたデータ（レコード）とインタラクティブ通信テンプレートを組み合わせて、インタラクティブ通信を作成できます。インタラクティブ通信を作成する場合は、フォームデータモデル（FDM）を介して外部データソースに接続し、データにアクセスします。外部データソースから同じフォームデータモデルを使用してデータを取得するように、監視フォルダーのバッチ処理サービスを設定できます。[外部データソースに保存されたレコードからインタラクティブ通信を作成する](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html)には、次をおこないます。
 
 1. テンプレートのフォームデータモデルを設定します。
    1. インタラクティブ通信テンプレートに関連付けたフォームデータモデルを開きます。
@@ -141,7 +141,7 @@ JSON ファイルに保存されたレコードからインタラクティブ通
 
    1. ファイルを保存して閉じます。
 
-1. [監視フォルダー](https://docs.adobe.com/content/help/en/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成して、Batch API サービスを使用するように設定します。
+1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成して、Batch API サービスを使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
    1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」をタップします。
    1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。

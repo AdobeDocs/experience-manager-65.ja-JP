@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: bb8dbb9069c4575af62a4d0b21195cee75944fea
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1802'
 ht-degree: 99%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 99%
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)
 
 ## 基本概念 {#basic-concepts}
 
@@ -127,7 +127,7 @@ AEM Managed Services を使用すれば、次のようなメリットを享受�
 
 **クラウドマネージャー**：Adobe Experience Manager Services 製品の一部である Cloud Manager は、組織がクラウド内で Adobe Experience Manager を自己管理することをさらに可能にするセルフサービスポータルです。これには、IT チームと実装パートナーがパフォーマンスやセキュリティを犠牲にすることなくカスタマイズやアップデートの提供を迅速化できるようにする、最先端の継続的インテグレーションと継続的配信（CI／CD）パイプラインが含まれます。Cloud Manager は、Adobe Managed Service のお客様のみご利用いただけます。
 
-Cloud Manger とそのリソースについて詳しくは、[**Cloud Manager ユーザーガイド**](https://docs.adobe.com/content/help/ja-JP/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)を参照してください。
+Cloud Manger とそのリソースについて詳しくは、[**Cloud Manager ユーザーガイド**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)を参照してください。
 
 ## はじめに {#getting-started}
 
@@ -313,4 +313,4 @@ AEM が起動し、Web ブラウザーが適切なページに自動的にリダ
 * [AEM プラットフォームの概要](/help/sites-deploying/platform.md)
 * [パフォーマンスガイドライン](/help/sites-deploying/performance-guidelines.md)
 * [AEM Mobile 使用の手引き](/help/mobile/getting-started-aem-mobile.md)
-* [AEM Screens とは](https://docs.adobe.com/content/help/en/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [AEM Screens とは](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)

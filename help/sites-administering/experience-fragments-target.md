@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1216'
 ht-degree: 100%
 
 ---
@@ -27,15 +27,15 @@ ht-degree: 100%
 >6.5.3.0:
 >
 >* **Externalizer ドメイン**を選択できるようになりました。
->  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
+   >  **メモ：** Externalizer ドメインは、Target に送信されるエクスペリエンスフラグメントのコンテンツにのみ関連し、「オファーコンテンツを表示」などのメタデータには関連しません。
 >
 >6.5.2.0：
 >
 >* エクスペリエンスフラグメントは、次のいずれかに書き出すことができます。
->
->   * デフォルトのワークスペース。
->   * クラウド設定で指定された名前付きワークスペース。
->   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
+   >
+   >   * デフォルトのワークスペース。
+   >   * クラウド設定で指定された名前付きワークスペース。
+   >   * **メモ：**&#x200B;特定のワークスペースに書き出すには、Adobe Target Premium が必要です。
 >
 >* AEM は [IMS を使用した Adobe Target と統合](/help/sites-administering/integration-target-ims.md)する必要があります。
 >
@@ -68,7 +68,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 >詳しくは、以下も参照してください。
 >
 >* [Adobe Target Developers](https://www.adobe.io/apis/experiencecloud/target.html)
->* [コアコンポーネント - エクスペリエンスフラグメント](https://docs.adobe.com/content/help/ja/experience-manager-core-components/using/components/experience-fragment.html)
+>* [コアコンポーネント - エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=ja)
 >
 
 
@@ -118,7 +118,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
    >
    >コアコンポーネントを参照してください。
    >
-   >[コアコンポーネント - エクスペリエンスフラグメント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html)
+   >[コアコンポーネント - エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html)
 
    **Adobe Target** の下で、次を選択します。
 

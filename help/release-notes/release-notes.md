@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: d31fef1fe7023dfa5129bb8d136550b43ef197d1
 workflow-type: tm+mt
-source-wordcount: '3281'
-ht-degree: 38%
+source-wordcount: '3302'
+ht-degree: 37%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 38%
 
 >[!NOTE]
 >
->2022 年 9 月 1 日から、新しいExperience Manager Assets On-Premise のお客様はスマートコンテンツサービスを利用できなくなります。 この機能を既に有効にしている既存のオンプレミスおよび Adobe Managed Services のお客様は、影響を受けません。
+>2022 年 9 月 1 日から、新しいExperience Manager Assets On-Premise のお客様はスマートコンテンツサービスを利用できなくなります。 この機能を既に有効にしているオンプレミスおよび Adobe Managed Services の既存のお客様は、影響を受けません。
 
 ### [!DNL Dynamic Media] {#dynamic-media-6514}
 
@@ -93,28 +93,28 @@ ht-degree: 38%
 -->
 
 * ファイルがマルチパネルアダプティブフォームに添付され、アダプティブフォームのドラフトが保存されると、エラーが発生します。 （NPR-38978）
-* ユーザーが AdobePDF 設定で createPDF2 Java API を使用してRGBプロファイルを CMYK プロファイルに変換した場合、このオプションは Java API では機能しません。 このオプションは、スタンドアロンの DistillerClient アプリケーションで正常に機能します。 （NPR-38858、CQ-4346181）
+* ユーザーが AdobePDF 設定で createPDF2 Java™ API を使用してRGBプロファイルを CMYK プロファイルに変換した場合、このオプションは Java™ API では機能しません。 このオプションは、スタンドアロンの DistillerClient アプリケーションで正常に機能します。 （NPR-38858、CQ-4346181）
 * AEM 6.5 Forms Service Pack 12(6.5.12.0) をインストールすると、AEM Workflows の「タスクの割り当て」手順で、タスクを閉じる以外のすべてのオプションが使用できなくなります。 （NPR-38743）
 * レコードのドキュメント (DoR) では、テーブルの一部の値が切り捨てられます。 （NPR-38657）
 * データ XML を使用した FormSet のプレビュー時に、XDP にフローティングフィールドが含まれている場合、FormSet のプレビュー時にはデータは表示されませんが、「プレビューPDF」オプションを使用するとデータが表示されます。
 * アダプティブFormsでは、ラジオボタンとチェックボックスがタブ順に表示されません。 （NPR-38645）
 * を使用する場合、 `Summary Step` フォームの送信後に翻訳済みアダプティブフォームのレコードのドキュメント (DoR) を生成する場合、はローカライズされた言語に翻訳されません。 （NPR-38567）
 * AEM Workflow ステップの「再試行を無効にする」オプションが期待どおりに動作しません。 この問題は断続的に発生します。（NPR-38547）
-* リッチテキストフィールドを含むアダプティブフォームが送信されると、 `an Internal Error while Submitting a Form` エラーが発生しました。 フォームを送信する前にユーザーがリッチテキストフィールドにフォーカスを移した場合、エラーは発生しません。 （NPR-38542）
+* リッチテキストフィールドを含むアダプティブフォームが送信されると、 `an Internal Error while Submitting a Form` エラーが発生しました。 ユーザーがリッチテキストフィールドにフォーカスした場合、フォームを送信する前に、エラーは発生しません。 （NPR-38542）
 * エラー `sling-default-3-AdobeSignRefreshTokenScheduleJob com.adobe.forms.foundation.oauth.model.OAuthConfigSlingModel Refresh Token not present for: /conf/gws-eform/cashlite/settings/cloudconfigs/fdm/cashlite/jcr:content occurs` がログに記録されます。 （NPR-38541）
 * ユーザーがアダプティブフォームにPDFをアップロードすると、AEM Formsサーバーが応答しなくなります。 （NPR-38398）
 * OSGi サーバー上のAEM Formsで、Document Service API を使用してPDFを認証すると、次のエラーで失敗します。com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311。 （CQ-4346252）
 * 下書きレターを送信すると、 `Could not upload asset from xml input` エラーが発生しました。 機能には影響しません。 ドラフトを開くと、レターは正しくレンダリングされます。 (CQ-4345979、CQ-4344418)
 * 日付がドイツ形式で入力され、 `Preview with Data` オプションをレターに使用した場合、「日付」フィールドはレンダリングされません。 （CQ-4345783）
 * Web ポータルを構築し、データに基づいてバーコードを生成する場合、一部のバーコードが正しくデコードされません。 （CQ-4345743）
-* PDFへの PostScript 変換で、出力ドキュメントが期待どおりの色でレンダリングされなかった問題を修正しました。 （CQ-4345074）
+* PDFへの Postscript 変換で、出力ドキュメントが期待どおりの色でレンダリングされない。 （CQ-4345074）
 * リソースリゾルバは、断続的な送信エラーを引き起こし、1 回の送信で同じスタックトレースが複数回表示されます。 （CQ-4344764）
-* ユーザーは、 `cmDataUrl` パラメーター。 下書きは初めて正常に開きます。 問題は、以降の試行で発生し始めます。 （CQ-4344418）
+* ユーザーは、 `cmDataUrl` パラメーター。 下書きが初めて正常に開きます。 問題は、以降の試行で発生し始めます。 （CQ-4344418）
 * ユーザーが `&` シンボルを使用してインタラクティブ通信 (IC) を読み込むと、対応する IC の下書きが読み込めなくなる。 （CQ-4343969）
 * AEM Forms Designer でスタイルオプションを使用して PCL ファイルを生成する場合、生成されたファイルには指定のスタイルが適用されません。 （CQ-4339573）
 * ページ数が 15 を超える場合、動的 XDP フォームからアダプティブフォームへの自動変換が失敗します。 これは、ページ数が 15 未満の場合に正常に機能します。 （NPR-35337）
 * 「お気に入りに追加」オプションを使用した場合でも、スクリーンリーダーに切り替える状態は示されません。 （NPR-37137）
-* フォームデータモデルでは、データベースベースベースに基づくフォームデータモデルの小数点以下の値は、金額と小額の金額データ型用に切り捨てられます。. (CQDOC-19509)
+* フォームデータモデルでは、データベースベースベースに基づくフォームデータモデルの小数点以下の値は、金額と小額の金額データ型用に切り捨てられます。 (CQDOC-19509)
 * Workspace でワークフローのナビゲーションリンクを選択した場合、HTMLリンクが選択されていることは示されません。 （NPR-37138）
 * 手書き署名機能は、アクセシビリティガイドラインに対応していません。 （NPR-37596）
 * AEM Formsは log4j 1.x を使用します。log4j 1.x のサポートが提供終了になりました。 （NPR-38273）
@@ -122,8 +122,8 @@ ht-degree: 38%
 * Forms 6.5 Designer で、Forms 6.1 Designer で作成したフォームを開き、テキストボックスを編集すると、段落の間隔が指定したスペースを超えます。スペースに対する以前の設定がすべて削除され、テキストボックスの手動での再フォーマットが必要になります。（CQ-4341899）
 * バーコード SSCC-18 に正しくない値が表示されます。Forms サーバーが、バーコードの右側の値を省略します。（CQ-4342400）
 * Forms 6.5 Designer で作成された静的 PDF フォームの場合、PDF アクセシビリティが次のエラーで失敗します。`Tab order entry in page with annotations not set to "S"`（CQ-4343117）
-* Forms Designer で、ハイパーリンクの画面Readerテキストを指定する機能が追加されました。（NPR-36221）
-* 非 XFA アダプティブフォームに繰り返し可能なパネルを追加し、非 XFA フォーム内の繰り返し可能なパネルの数が 15 を超える場合、新しいインスタンスを追加するのに最大 7 ～ 8 秒かかる場合があります。 （NPR-37346）
+* Forms Designer で、ハイパーリンクの画面Readerテキストを指定する機能が追加されました。 （NPR-36221）
+* 非 XFA アダプティブフォームに繰り返し可能なパネルを追加し、非 XFA フォーム内の繰り返し可能なパネルの数が 15 を超える場合、インスタンスを追加するのに最大 7 ～ 8 秒かかる場合があります。 （NPR-37346）
 
 ## 統合 {#integrations-6514}
 
@@ -183,7 +183,7 @@ ht-degree: 38%
 
 ## 翻訳プロジェクト {#translation-6514}
 
-* 親ページで参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
+* 親ページの参照として追加されたサブページのローンチが、 `isDeep` プロパティが `false`. （NPR-38531）
 
 ## ユーザーインターフェイス {#ui-6514}
 
@@ -206,9 +206,9 @@ ht-degree: 38%
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.14.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Adobeは、 [!DNL Experience Manager] 6.5.14.0パッケージ。 <!-- UPDATE FOR EACH NEW RELEASE -->
+>Adobeでは、 [!DNL Experience Manager] 6.5.14.0パッケージ。 したがって、サービスパックをインストールする前に、 `crx-repository` 戻す必要がある場合に備えて <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ### [!DNL Experience Manager] 6.5 へのサービスパックのインストール {#install-service-pack}
 
@@ -284,7 +284,7 @@ JEE 上の [!DNL Experience Manager] Forms の累積インストーラーのイ�
 
 >[!NOTE]
 >
->Experience Manager6.5.14.0では、UberJar のバージョン (6.5.13.0) は以前のリリースと同じであることに注意してください。
+>Experience Manager6.5.14.0では、UberJar のバージョン (6.5.13.0) は以前のリリースと同じです。
 
 Maven プロジェクトで UberJar を使用するには、 [UberJar の使用方法](/help/sites-developing/ht-projects-maven.md) およびは、プロジェクト POM に次の依存関係を含めます。 <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 

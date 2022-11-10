@@ -11,10 +11,10 @@ topic-tags: introduction
 discoiquuid: b315720f-e9b8-4063-99e2-1b9aa6bba460
 docset: aem65
 exl-id: 33dc1ee7-1e34-43d8-9265-c66535f5e002
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 100%
+source-wordcount: '667'
+ht-degree: 98%
 
 ---
 
@@ -137,8 +137,8 @@ ht-degree: 100%
 タッチ UI への移行とは直接関係ありませんが、移行に際して検討を推奨する関連事項として、次のものがあります。
 
 * [テンプレート](/help/sites-developing/templates.md) - [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
-* [HTL](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
 >
@@ -149,8 +149,8 @@ ht-degree: 100%
 AEM の開発について詳しくは、以下のリソースのコレクションを参照してください。
 
 * [ユーザーガイドの作成](/help/sites-developing/home.md)
-* [Granite UI ドキュメント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 Sites のチュートリアルとビデオ](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+* [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [AEM 6.5 Sites のチュートリアルとビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [AEM Sites の開発の手引き - WKND チュートリアル ](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://helpx.adobe.com/jp/experience-manager/kt/eseminars/gems/aem-index.html)
 * [AEM 最新化ツール](https://opensource.adobe.com/aem-modernize-tools/)

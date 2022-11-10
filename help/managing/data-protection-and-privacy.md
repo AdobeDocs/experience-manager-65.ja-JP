@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 discoiquuid: 0bcd7ac4-3071-466d-bd11-701f35ccf5bd
 docset: aem65
 exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '923'
 ht-degree: 100%
 
 ---
@@ -115,9 +115,9 @@ AEM の製品範囲に関する規制ドキュメントについては、以下�
 これらの Adobe Experience Manager 統合は、データ保護およびプライバシー（GDPR や CCPA など）に対応したサービスと共に行われます。Adobe Target や Adobe Analytics の個人データは、統合に関連して AEM に保存されません。
 詳しくは、次のセクションを参照してください。
 
-* [Adobe Target - プライバシーの概要](https://docs.adobe.com/content/help/ja/target/using/implement-target/before-implement/privacy/privacy.html)
+* [Adobe Target - プライバシーの概要](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html?lang=ja)
 
-* [Adobe Analytics データプライバシーのワークフロー](https://docs.adobe.com/content/help/ja-JP/analytics/admin/data-governance/an-gdpr-workflow.html)
+* [Adobe Analytics データプライバシーのワークフロー](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html?lang=ja)
 
 ## AEM Communities {#aem-communities}
 

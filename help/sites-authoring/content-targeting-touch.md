@@ -11,9 +11,9 @@ topic-tags: personalization
 discoiquuid: 9d940744-3b00-4721-829a-96d17bb738e8
 docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '5355'
+source-wordcount: '5349'
 ht-degree: 100%
 
 ---
@@ -296,7 +296,7 @@ Target コンポーネントにドラッグされたコンポーネントは、�
    >
    >
    >管理者は、この設定を必須にするかどうかを **で決定できます。https://&lt;host>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
-   >ユーザーに場所の入力を求めるには、「場所を強制」チェックボックスをオンにします。
+   ユーザーに場所の入力を求めるには、「場所を強制」チェックボックスをオンにします。
 
 1. オファーを作成するエクスペリエンスを選択します。
 1. オファーを作成します。
@@ -529,7 +529,7 @@ Adobe Target をターゲティングエンジンとして使用し、アカウ�
  </tbody>
 </table>
 
-成功指標について詳しくは、[Adobe Target ドキュメント](https://docs.adobe.com/content/help/ja-JP/target/using/activities/success-metrics/success-metrics.translate.html)を参照してください。
+成功指標について詳しくは、[Adobe Target ドキュメント](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)を参照してください。
 
 ### 設定の構成（AEM ターゲティング） {#configuring-settings-aem-targeting}
 
@@ -568,28 +568,28 @@ Adobe Target を使用する場合に目標と設定を構成するには：
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+1. 「**目標指標**」領域の「**主な目標**」で、コンバージョン、売上高、エンゲージメントなど追跡する成功指標を選択し、その指標の測定方法（または目標に達したことを示すためにオーディエンスが取るアクション）を入力します。成功指標については、前の表の目標指標の定義および [Adobe Target のドキュメント](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)を参照してください。
 
    右上隅の 3 つのドットをクリックし、「**名前を変更**」を選択して、目標の名前を変更できます。
 
    すべてのフィールドをクリアする必要がある場合は、右上隅の 3 つのドットをクリックし、「**すべてのフィールドをクリア**」を選択します。
 
-   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://docs.adobe.com/content/help/en/target/using/activities/success-metrics/success-metrics.html)を参照してください。
+   どの指標にも定義可能な詳細設定があります。この設定にアクセスするには、「**詳細設定**」を選択します。前の表の成功指標のカウント方法の定義と [Adobe Target のドキュメント](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)を参照してください。
 
    >[!NOTE]
-   >1 つ以上の目標を定義する必要があります。
+   1 つ以上の目標を定義する必要があります。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
    >[!NOTE]
-   >指標に不足している情報がある場合は、指標が赤い線で囲まれます。
+   指標に不足している情報がある場合は、指標が赤い線で囲まれます。
 
 1. 「**新しい指標を追加**」をクリックして、追加の成功指標を設定します。
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
    >[!NOTE]
-   >追加の目標を削除するには、3 つのドットをクリックまたはタップし、「**削除**」をクリックまたはタップします。AEM では、1 つ以上の目標を定義する必要があります。
+   追加の目標を削除するには、3 つのドットをクリックまたはタップし、「**削除**」をクリックまたはタップします。AEM では、1 つ以上の目標を定義する必要があります。
 
 1. 成功指標のカウント方法をさらに詳細に制御する場合は、「**詳細設定**」をクリックまたはタップして、この設定にアクセスします。
 1. 「**保存**」をクリックします。
@@ -611,7 +611,7 @@ Adobe Target を使用する場合に目標と設定を構成するには：
 プロファイルを読み込んだときに予期せぬコンテンツがページ上に表示された場合は、このリストの各項目の設定を確認してください。
 
 >[!NOTE]
->A/B テストを使用してシミュレートをおこなった場合は、トラフィックの割合に基づいてエクスペリエンスが表示されます。この表示制御は Adobe Target がおこないますが、作成者の予期せぬ結果になることがあります（_author アクティビティは、シミュレーション時の再評価を可能にする特定の設定と同期されます）。トラフィック設定に基づいて他のエクスペリエンスを表示するには、何回かページを更新しなければならない場合があります。
+A/B テストを使用してシミュレートをおこなった場合は、トラフィックの割合に基づいてエクスペリエンスが表示されます。この表示制御は Adobe Target がおこないますが、作成者の予期せぬ結果になることがあります（_author アクティビティは、シミュレーション時の再評価を可能にする特定の設定と同期されます）。トラフィック設定に基づいて他のエクスペリエンスを表示するには、何回かページを更新しなければならない場合があります。
 
 訪問者のエクスペリエンスをシミュレートするには、以下のツールを使用します。
 
@@ -704,7 +704,7 @@ Target コンポーネントをカスタマイズするには、次の 2 つの�
 </table>
 
 >[!NOTE]
->コンポーネントを選択してターゲット設定可能にすると、AEM はそのコンポーネントの置き換えと Adobe Target コンポーネントの挿入もおこないます（Adobe Target コンポーネントは、ページに手動で追加できるだけでなく、既存コンポーネントをターゲット設定する場合にも使用できます）。
+コンポーネントを選択してターゲット設定可能にすると、AEM はそのコンポーネントの置き換えと Adobe Target コンポーネントの挿入もおこないます（Adobe Target コンポーネントは、ページに手動で追加できるだけでなく、既存コンポーネントをターゲット設定する場合にも使用できます）。
 
 ClientContext（クライアント側）をエンジンとして選択した場合：
 

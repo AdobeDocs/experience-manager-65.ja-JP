@@ -11,9 +11,9 @@ topic-tags: site-features
 discoiquuid: b53348ca-fc50-4e7d-953d-b4c03a5025bb
 docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '4874'
+source-wordcount: '4872'
 ht-degree: 100%
 
 ---
@@ -604,7 +604,7 @@ AEM には、次の 2 つのタイプの基本テンプレートが用意され�
 >
 >初期コンテンツは、コンテンツを作成するための出発点となるコンポーネントおよびページレイアウトを準備するためのものです。そのまま残す実際のコンテンツとなるものではありません。そのため、初期コンテンツは変換できません。
 >
->ヘッダーやフッターなど、翻訳可能なテキストをテンプレートに含める必要がある場合は、[コアコンポーネントのローカライゼーション機能](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/get-started/localization.html)を使用できます。
+>ヘッダーやフッターなど、翻訳可能なテキストをテンプレートに含める必要がある場合は、[コアコンポーネントのローカライゼーション機能](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)を使用できます。
 
 ### テンプレートの編集 - レイアウト - テンプレート作成者 {#editing-a-template-layout-template-author}
 

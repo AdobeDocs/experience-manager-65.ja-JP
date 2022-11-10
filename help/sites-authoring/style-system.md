@@ -1,5 +1,5 @@
 ---
-title: 'スタイルシステム '
+title: スタイルシステム
 seo-title: Style System
 description: スタイルシステムを使用すると、テンプレート作成者がコンポーネントのコンテンツポリシーのスタイルクラスを定義し、コンテンツ作成者がページでのコンポーネントの編集時にそのスタイルクラスを選択できます。これらのスタイルは、1 つのコンポーネントの別の視覚的バリエーションとして使用することができるので、コンポーネントがより柔軟で扱いやすいものになります。
 seo-description: The Style System allows a template author to define style classes in the content policy of a component so that a content author is able to select them when editing the component on a page. These styles can be alternative visual variations of a component, making it more flexible.
@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: e3ccddb6-be5e-4e5f-a017-0eed263555ce
 exl-id: 1772368a-f5c9-440c-a92a-0f1d34cc4bf8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 100%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 100%
 
 ## 使用方法 {#use}
 
-この機能のデモを行うために、コアコンポーネントの[タイトルコンポーネント](https://www.adobe.com/go/aem_cmp_title_v2_jp)の [WKND](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) による実装を例として使用します。
+この機能のデモを行うために、コアコンポーネントの[タイトルコンポーネント](https://www.adobe.com/go/aem_cmp_title_v2_jp)の [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja) による実装を例として使用します。
 
 次の[コンテンツ作成者として](#as-a-content-author)節と[テンプレート作成者として](#as-a-template-author)節では、WKND のスタイルシステムを使用してスタイルシステムの機能をテストする方法について説明します。
 
@@ -156,6 +156,7 @@ AEM バージョン 6.5.3.0 で、編集ダイアログのオプションとし�
 >1. HTL（`data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`）が他のすべての要素よりも優先されます。
 >1. 次に、複数のアクティブなスタイルの中で、コンポーネントのポリシーで設定されたスタイルのリストの最初のスタイルが優先されます。
 >1. 最後に、コンポーネントの `cq:htmlTag` または `cq:tagName` がフォールバック値と見なされます。
+
 >
 
 

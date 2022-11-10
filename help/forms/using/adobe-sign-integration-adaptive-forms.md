@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 92%
+source-wordcount: '1089'
+ht-degree: 91%
 
 ---
 
@@ -121,7 +121,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
 1. **[!UICONTROL Forms 共通設定サービス]を開きます。**
 1. 「**[!UICONTROL 許可]**」フィールドで、「すべてのユーザー - すべてのユーザーに（匿名かログインしているかによらず）添付ファイルのプレビューとフォームの検証と署名を許可」を&#x200B;**選択**&#x200B;して「**[!UICONTROL 保存]」をクリックします。**&#x200B;オーサーインスタンスが [!DNL Adobe Sign] を使用するように設定されます。
 1. 設定を公開します。
-1. [レプリケーション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=ja)を使用して、対応する公開インスタンスに同一の構成を作成します。
+1. [レプリケーション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html)を使用して、対応する公開インスタンスに同一の構成を作成します。
 
 これで [!DNL Adobe Sign] が AEM [!DNL Forms] に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォームで Adobe Sign サービスを使用する](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)には、上記のとおりアダプティブフォームのプロパティで作成した設定コンテナを指定します。
 

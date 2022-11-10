@@ -12,9 +12,9 @@ discoiquuid: d305821d-1371-4e4a-8b28-8eee8fafa43b
 docset: aem65
 role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '589'
 ht-degree: 41%
 
 ---
@@ -31,7 +31,7 @@ AEM Communitiesでは、ユーザープロファイルの管理やユーザー�
 
 >[!NOTE]
 >
->[AEM Communities 内の Adobe Analytics](/help/communities/analytics.md) サイトを設定している場合は、収集されたユーザーデータが Adobe Analytics サーバーに送信されます。Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除や、GDPR に準拠するための処理をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
+>[AEM Communities 内の Adobe Analytics](/help/communities/analytics.md) サイトを設定している場合は、収集されたユーザーデータが Adobe Analytics サーバーに送信されます。Adobe Analytics は、ユーザーデータのアクセス、書き出し、削除や、GDPR に準拠するための処理をおこなう API を提供しています。詳しくは、[アクセス要求および削除要求の送信](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
 
 これらの API を使用するには、 `/services/social/ugcmanagement` UserUgcManagement サービスをアクティブ化してエンドポイントを作成します。 このサービスをアクティブ化するには、 [サンプルサーブレット](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) 次で利用可能： [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). 次に、次のような http リクエストを使用して、コミュニティサイトのパブリッシュインスタンスでエンドポイントをヒットします。
 
@@ -63,7 +63,7 @@ AEM Communitiesでは、ユーザープロファイルの管理やユーザー�
 
 ### Adobe Analyticsから UGC を削除 {#delete-ugc-from-adobe-analytics}
 
-Adobe Analyticsからユーザーデータを削除するには、 [GDPR Analytics のワークフロー](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-workflow.html);の場合、API はAdobe Analyticsからユーザーデータを削除しません。
+Adobe Analyticsからユーザーデータを削除するには、 [GDPR Analytics のワークフロー](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html);の場合、API はAdobe Analyticsからユーザーデータを削除しません。
 
 AEM Communitiesで使用されるAdobe Analytics変数のマッピングについては、次の画像を参照してください。
 

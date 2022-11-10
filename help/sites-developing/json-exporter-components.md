@@ -10,9 +10,9 @@ topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 100%
 
 ---
@@ -78,7 +78,7 @@ Model インターフェイスには、シリアル化されるメソッドを�
 
 ## 例 {#example}
 
-コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html) からサポートされており、参照として使用できます。
+コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) からサポートされており、参照として使用できます。
 
 例えば、画像コアコンポーネントの Sling Model 実装とその注釈されたインターフェイスを参照してください。
 
@@ -98,4 +98,4 @@ GitHub のコード
 * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
 * [コンテンツフラグメントを使用したオーサリング](/help/sites-authoring/content-fragments.md)
 * [コンテンツサービス用の JSON エクスポーター](/help/sites-developing/json-exporter.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)および[コンテンツフラグメントコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)

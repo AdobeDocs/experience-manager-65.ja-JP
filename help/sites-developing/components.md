@@ -10,10 +10,10 @@ topic-tags: components
 content-type: reference
 discoiquuid: 45efff93-2fe5-4313-83a0-0e23a540da93
 exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 100%
+source-wordcount: '590'
+ht-degree: 98%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 100%
 * 標準化されたユーザーインターフェイスがあります。
 * 設定可能な編集動作があります。
 * Granite UI コンポーネントに基づくサブ要素を使用して構築されたダイアログボックスを使用します。
-* [HTL](https://docs.adobe.com/content/help/ja-JP/experience-manager-htl/using/overview.html)（推奨）または JSP を使用して作成できます。
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)（推奨）または JSP を使用して作成できます。
 * デフォルトの機能を拡張するカスタマイズされたコンポーネントを作成するために開発できます。
 
 コンポーネントはモジュールなので、次のことができます。
@@ -64,7 +64,7 @@ AEM には、次のような包括的な機能を提供する、](/help/sites-au
 
 アドビが提供する AEM コンポーネントには 2 つのセットがあります。
 
-* [コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [基盤コンポーネント](/help/sites-authoring/default-components-foundation.md)
 
 **コアコンポーネント**&#x200B;は、AEM 6.3 で導入され、柔軟で豊富なオーサリング機能を提供します。[We.Retail 参照サイト](/help/sites-developing/we-retail.md)では、コアコンポーネントがどのように使用できるかや、コンポーネント開発の現在のベストプラクティスについて説明しています。
@@ -73,7 +73,7 @@ AEM には、次のような包括的な機能を提供する、](/help/sites-au
 
 >[!NOTE]
 >
->[コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
+>[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)は、コンポーネントデザインおよび開発の現在のベストプラクティスを示し、リファレンス実装として提供されます。
 >
 >[AEM 最新化ツール](modernization-tools.md)が、コアコンポーネントへの移行に役立ちます。
 
@@ -106,7 +106,7 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 * [コンテンツフラグメント用コンポーネント](/help/sites-developing/components-content-fragments.md)
 * [JSON 形式のページ情報の取得](/help/sites-developing/pageinfo.md)
 * [コンポーネントの国際化](/help/sites-developing/i18n.md)
-* [コアコンポーネント](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [非表示条件の使用](/help/sites-developing/hide-conditions.md)
 * クラシック UI
 

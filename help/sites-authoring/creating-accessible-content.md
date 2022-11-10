@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 向けアクセシブルコンテンツの作成（WCAG 2.1 準拠）
 description: AEM を使用すると、障碍のあるユーザーが web コンテンツにアクセスして使用できるようになります。
 exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '13956'
+source-wordcount: '13950'
 ht-degree: 99%
 
 ---
@@ -66,11 +66,11 @@ Web ページ上の情報はテキスト以外の様々な形式（写真、ビ�
 
 #### 達成方法 - テキスト以外のコンテンツ（1.1.1） {#how-to-meet-non-text-content}
 
-静的なグラフィックの場合、そのグラフィックと同等の代替テキストを指定することが基本的な要件です。それには、「**代替テキスト**」フィールドを使用します。例えば、**[画像](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/image.html)**&#x200B;コアコンポーネントを参照してください。
+静的なグラフィックの場合、そのグラフィックと同等の代替テキストを指定することが基本的な要件です。それには、「**代替テキスト**」フィールドを使用します。例えば、**[画像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)**&#x200B;コアコンポーネントを参照してください。
 
 >[!NOTE]
 >
->標準搭載のコアコンポーネントには、個々の画像に代替テキスト記述を追加するための「**代替テキスト**」フィールドが用意されていないもの（**[カルーセル](https://docs.adobe.com/content/help/jp/experience-manager-core-components/using/components/carousel.html)**&#x200B;など）もありますが、「**ラベル**」フィールド（「**[アクセシビリティ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/components/carousel.html#accessibility-tab)**」タブ）は全コンポーネントにあります。
+>標準搭載のコアコンポーネントには、個々の画像に代替テキスト記述を追加するための「**代替テキスト**」フィールドが用意されていないもの（**[カルーセル](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=ja)**&#x200B;など）もありますが、「**ラベル**」フィールド（「**[アクセシビリティ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=ja#accessibility-tab)**」タブ）は全コンポーネントにあります。
 >
 >AEM インスタンスにこれらのバージョンを実装する場合は、作成者がコンテンツに追加できるように、開発チームは `alt` 属性をサポートするようにこれらのコンポーネントを設定する必要があります（[追加の HTML 要素および属性のサポートの追加](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)を参照）。
 

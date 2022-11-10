@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Best Practices
 description: AEM 6.5 のベストプラクティス、トラブルシューティング、およびトレーニングに関するリソース
 seo-description: Resources for best practices, troubleshooting and training for AEM 6.5
 exl-id: 077c00b9-f2ec-49a3-8d85-a3d3ecf287bb
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '425'
 ht-degree: 100%
 
 ---
@@ -46,7 +46,7 @@ AEM は、組織で様々用途で使用でき、会社全体に幅広く機能�
 * [AEM Communities はじめに](/help/communities/getting-started.md)
 * [AEM Livefyre はじめに](https://answers.livefyre.com/developers/getting-started/)
 
-また、新しい WKND チュートリアルも用意しています、これは、[AEM を使用して初めて Web サイトを作成する手順を示すガイド](https://docs.adobe.com/content/help/ja-JP/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)であると同時に、AEM が主要な構築ブロックとなっている[アドビのデジタル基盤ソリューションをデプロイする手順](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)も示します。
+また、新しい WKND チュートリアルも用意しています、これは、[AEM を使用して初めて Web サイトを作成する手順を示すガイド](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)であると同時に、AEM が主要な構築ブロックとなっている[アドビのデジタル基盤ソリューションをデプロイする手順](https://helpx.adobe.com/marketing-cloud/how-to/digital-foundation.html)も示します。
 
 ## AEM の推奨デプロイメント {#deployments}
 

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: bff078cd-c390-4870-ad1d-192807c67ca4
 docset: aem65
 exl-id: 92b62532-4f79-410d-903e-d2bca6d0fd1c
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 100%
+source-wordcount: '1266'
+ht-degree: 97%
 
 ---
 
@@ -199,7 +199,7 @@ ClientContext 機能をページに追加するには、&lt;body> タグの直�
 
 mbox の作成に使用されるデフォルトの mbox.js ファイルは、/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js にあります。カスタムの mbox.js ファイルを使用するには、このファイルを Target クラウド設定に追加します。mbox.js ファイルを追加するには、そのファイルがファイルシステム上で使用可能になっている必要があります。
 
-例えば、[Marketing Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)を使用する場合は、mbox.js をダウンロードし、使用するテナントに基づいて `imsOrgID` 変数に適切な値を格納する必要があります。この変数は、Marketing Cloud ID サービスとの統合に必須です。詳しくは、[Adobe Target のレポートソースとしての Adobe Analytics](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) および[実装する前に](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=ja)を参照してください。
+例えば、[Marketing Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/home.html)を使用する場合は、mbox.js をダウンロードし、使用するテナントに基づいて `imsOrgID` 変数に適切な値を格納する必要があります。この変数は、Marketing Cloud ID サービスとの統合に必須です。詳しくは、[Adobe Target のレポートソースとしての Adobe Analytics](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) および[実装する前に](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html)を参照してください。
 
 >[!NOTE]
 >
@@ -235,7 +235,7 @@ Target 設定にカスタム mbox.js ファイルが含まれます。これは�
 >
 >DTM を使用していない場合は、注文確認を Adobe Target に送信します。
 
-Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（Adobe Target ドキュメントの [orderConfirmPage mbox の作成](https://docs.adobe.com/content/help/ja/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html)を参照）。mbox が `orderConfirmPage` という名前を持ち、以下の特定のパラメーター名を使用している場合は、Adobe Target が mbox データを注文確認データとして認識します。
+Web サイトのパフォーマンスを追跡するには、注文確認ページから Adobe Target に購入情報を送信します（Adobe Target ドキュメントの [orderConfirmPage mbox の作成](https://experienceleague.adobe.com/docs/dtm/implementing/target/configure-target/mboxes/order-confirmation-mbox.html)を参照）。mbox が `orderConfirmPage` という名前を持ち、以下の特定のパラメーター名を使用している場合は、Adobe Target が mbox データを注文確認データとして認識します。
 
 * productPurchasedId：購入された商品を識別する ID のリスト。
 * orderId：注文の ID。

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 9584392a-d8a3-45a4-9cdf-fd211c8e6091
 docset: aem65
 exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
-source-git-commit: 840ea373537799af995c3b8ce0c8bf575752775b
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 100%
+source-wordcount: '2072'
+ht-degree: 99%
 
 ---
 
@@ -67,7 +67,7 @@ SPA では、コンテンツの動的レンダリングのみに依存する必�
 
 ## AEM プロジェクトアーキタイプ {#aem-project-archetype}
 
-AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## SPA デザインモデル {#spa-design-models}
 
@@ -173,7 +173,7 @@ AEM 用の SPA を開発する際に、フロントエンド開発者が実行�
 
 ![screen_shot_2018-12-11at144019](assets/screen_shot_2018-12-11at144019.png)
 
-`MapTo` ヘルパーは、バックエンドとフロントエンドのコンポーネントを一致させる「接着剤」です。
+この `MapTo` helper は、バックエンドとフロントエンドのコンポーネントを一致させる「接着剤」です。
 
 * これは、JS コンテナ（または JS 段落システム）に、JSON に存在する各コンポーネントのレンダリングは、どの JS コンポーネントが関与するのかを伝えるものです。
 * JS コンポーネントでレンダリングされる HTML に HTML データ属性が追加されるので、SPA エディターは、コンポーネントの編集時に作成者に表示するダイアログボックスを把握できます。

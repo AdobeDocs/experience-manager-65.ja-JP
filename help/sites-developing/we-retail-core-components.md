@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: af3cd818-61cf-4da1-bfb5-87540911ddd5
 exl-id: b5f2be67-c93c-4dbc-acc0-3edd8f1a282f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '535'
 ht-degree: 100%
 
 ---
@@ -87,6 +87,6 @@ ht-degree: 100%
 
 ## その他の情報 {#further-information}
 
-コアコンポーネントについて詳しくは、オーサリングドキュメントの[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)でコアコンポーネント機能の概要を参照し、開発者用ドキュメントの[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)で技術的な概要を参照してください。
+コアコンポーネントについて詳しくは、オーサリングドキュメントの[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)でコアコンポーネント機能の概要を参照し、開発者用ドキュメントの[コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja)で技術的な概要を参照してください。
 
 また、[編集可能テンプレート](/help/sites-developing/we-retail-editable-templates.md)も詳しく調査することをお勧めします。編集可能テンプレートについて詳しくは、オーサリングドキュメントの[ページテンプレートの作成](/help/sites-authoring/templates.md)または開発者用ドキュメントのページ[テンプレート - 編集可能](/help/sites-developing/page-templates-editable.md)を参照してください。

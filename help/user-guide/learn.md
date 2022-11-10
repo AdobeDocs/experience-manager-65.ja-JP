@@ -4,10 +4,10 @@ seo-title: Learn About AEM 6.5 Capabilities
 description: AEM 6.5 の基本的な機能の説明
 seo-description: An description of the essential capabilities of AEM 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
-source-git-commit: 52385af23b04cda33a88ec42bb150650eb58fe4e
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 86%
+source-wordcount: '398'
+ht-degree: 85%
 
 ---
 
@@ -38,7 +38,7 @@ AEM Forms では、通信管理機能、ドキュメントセキュリティ、�
 
 ## AEM Screens {#aem-screens}
 
-Screens は、Adobe Experience Manager 機能であり、包括的なデジタルマーケティングプラットフォームと連携して、様々なタイプの画面を含んだ動的かつインタラクティブなデジタルエクスペリエンスおよびインタラクションを公開できます。[詳細情報を参照してください。](https://docs.adobe.com/content/help/ja/experience-manager-screens/user-guide/aem-screens-introduction.html)
+Screens は、Adobe Experience Manager 機能であり、包括的なデジタルマーケティングプラットフォームと連携して、様々なタイプの画面を含んだ動的かつインタラクティブなデジタルエクスペリエンスおよびインタラクションを公開できます。[詳細情報を参照してください。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)
 
 ## AEM Communities {#aem-communities}
 

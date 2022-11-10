@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 6bc228866aca785ec768daefb73970fc24568ef0
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 100%
+source-wordcount: '2582'
+ht-degree: 99%
 
 ---
 
@@ -33,8 +33,8 @@ ht-degree: 100%
 >このページは、[コンテンツの再利用：Multi Site Manager](/help/sites-administering/msm.md) と併せて読んでください。
 >
 >AEM 6.4 における Sites のリポジトリ再構築の次の節も参考になる場合があります。
->* [Multi-site Manager のブループリント設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html?lang=ja#multi-site-manager-blueprint-configurations)
->* [Multi-site Manager のロールアウト設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html?lang=ja#multi-site-manager-rollout-configurations)
+>* [Multi-site Manager のブループリント設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html?lang=en#multi-site-manager-blueprint-configurations)
+>* [Multi-site Manager のロールアウト設定](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/restructuring/sites-repository-restructuring-in-aem-6-4.html#multi-site-manager-rollout-configurations)
 
 
 >[!CAUTION]

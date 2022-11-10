@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8f06d4b6-7d30-4ebc-9c6a-3bb8607a9be8
 docset: aem65
 exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '784'
 ht-degree: 100%
 
 ---
@@ -129,5 +129,4 @@ AEM 6.5 でのタッチ操作対応 UI の機能強化について詳しくは�
 
 * [タッチ操作対応 UI のページオーサリングのカスタマイズ](/help/sites-developing/customizing-page-authoring-touch.md)（サンプルコードを含む）。
 
-* [タッチ操作対応カスタマイズでの AEM Gem セッション](https://docs.adobe.com/content/ddc/jp/gems/user-interface-customization-for-aem-6.html)。
 * [Granite UI ドキュメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)。

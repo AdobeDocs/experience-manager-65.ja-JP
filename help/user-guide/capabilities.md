@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Capabilities User Guide
 description: AEM 6.5 の基本的な機能の概要
 seo-description: An overview of the essential capabilities of AEM 6.5
 exl-id: d9941242-a01d-48fa-bad0-4c5b9dd16f4c
-source-git-commit: 1cef6f87fa66fd78d439c23e6ac907f9531b8fd6
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '143'
 ht-degree: 100%
 
 ---
@@ -47,7 +47,7 @@ Adobe Managed Services クラウドデプロイメントなど、[Adobe Experien
 
 ## AEM Livefyre {#aem-livefyre}
 
-[ユーザー作成コンテンツを AEM Livefyre と共有します。](https://docs.adobe.com/content/help/ja/livefyre/using/home.html)
+[ユーザー作成コンテンツを AEM Livefyre と共有します。](https://experienceleague.adobe.com/docs/livefyre/using/home.html?lang=ja)
 
 ## AEM Mobile {#aem-mobile}
 

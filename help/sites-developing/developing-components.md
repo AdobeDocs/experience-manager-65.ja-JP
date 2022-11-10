@@ -12,10 +12,10 @@ discoiquuid: 8cdb6db4-adaa-4eda-af7d-310a0b44b80b
 docset: aem65
 legacypath: /content/docs/en/aem/6-2/develop/components/components-touch-optimized
 exl-id: 573cdc36-e9c3-4803-9c4e-cebd0cf0a56f
-source-git-commit: f2a208acfa28f23cbf63d055c5d28698df476892
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '3485'
-ht-degree: 100%
+source-wordcount: '3477'
+ht-degree: 99%
 
 ---
 
@@ -79,7 +79,7 @@ AEM コンポーネントを使用して、web ページ上で使用できるコ
 
 ### HTML テンプレート言語の使用 {#using-the-html-template-language}
 
-[HTML テンプレート言語（HTL）](https://docs.adobe.com/content/help/ja/experience-manager-htl/using/overview.html)は、AEM 6.0 で JSP（JavaServer Pages）に代わって導入されたスクリプティング言語であり、HTML の扱いに適した、推奨されるサーバー側テンプレートシステムです。堅牢なエンタープライズ Web サイトを構築する必要のある Web 開発者にとって、HTL は安全性と開発効率の向上に役立ちます。
+[HTML テンプレート言語（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)は、AEM 6.0 で JSP（JavaServer Pages）に代わって導入されたスクリプティング言語であり、HTML の扱いに適した、推奨されるサーバー側テンプレートシステムです。堅牢なエンタープライズ Web サイトを構築する必要のある Web 開発者にとって、HTL は安全性と開発効率の向上に役立ちます。
 
 >[!NOTE]
 >
@@ -431,7 +431,7 @@ GitHub のコード
 
 >[!NOTE]
 >
->コンポーネントインスタンスの自動作成は、[コアコンポーネント](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/introduction.html)と編集可能テンプレートの使用時に UI 内で簡単に設定できるようになりました。特定のメディアタイプに自動的に関連付けるコンポーネントの定義について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
+>コンポーネントインスタンスの自動作成は、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)と編集可能テンプレートの使用時に UI 内で簡単に設定できるようになりました。特定のメディアタイプに自動的に関連付けるコンポーネントの定義について詳しくは、[ページテンプレートの作成](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)を参照してください。
 
 ## AEM Brackets 拡張の使用 {#using-the-aem-brackets-extension}
 
@@ -440,7 +440,7 @@ GitHub のコード
 この拡張には、次の機能があります。
 
 * 同期を容易にして（Maven や File Vault は不要）、開発者の効率を向上させるだけでなく、AEM に関する知識が限られたフロントエンド開発者もプロジェクトに参加できるようにします。
-* コンポーネント開発の単純化やセキュリティ向上のために設計されたテンプレート言語 [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) を一部サポートしています。
+* コンポーネント開発の単純化やセキュリティ向上のために設計されたテンプレート言語 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) を一部サポートしています。
 
 >[!NOTE]
 >
@@ -452,7 +452,7 @@ GitHub のコード
 
 * HTL
 
-   * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/overview.html) の使用は必須ではありません。ただし、コンポーネントを更新する必要がある場合は、[JSP から HTL への移行](/help/sites-developing/components-basics.md#htl-vs-jsp)を検討することをお勧めします。
+   * [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) の使用は必須ではありません。ただし、コンポーネントを更新する必要がある場合は、[JSP から HTL への移行](/help/sites-developing/components-basics.md#htl-vs-jsp)を検討することをお勧めします。
 
 * コンポーネント
 

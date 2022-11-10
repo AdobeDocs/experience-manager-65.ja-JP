@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームのキャッシュの設定
 seo-title: Configure adaptive forms cache
-description: 'アダプティブフォームのキャッシュは、アダプティブフォームおよびアダプティブドキュメント向けに設計されています。これは、クライアント側のアダプティブフォームまたはドキュメントのレンダリングの時間を短縮する目的で、アダプティブフォームとアダプティブドキュメントをキャッシュします。 '
+description: アダプティブフォームのキャッシュは、アダプティブフォームおよびアダプティブドキュメント向けに設計されています。これは、クライアント側のアダプティブフォームまたはドキュメントのレンダリングの時間を短縮する目的で、アダプティブフォームとアダプティブドキュメントをキャッシュします。
 seo-description: The adaptive forms cache is designed specifically for adaptive forms and documents. It caches adaptive forms and adaptive documents with the objective of reducing the time required to render an adaptive form or document on the client.
 uuid: ba8f79fd-d8dc-4863-bc0d-7c642c45505c
 content-type: reference
@@ -11,10 +11,10 @@ discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
 docset: aem65
 role: Admin
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 100%
+source-wordcount: '883'
+ht-degree: 96%
 
 ---
 
@@ -62,10 +62,10 @@ ht-degree: 100%
 
 Dispatcher 上のアダプティブフォームのキャッシュを有効にして設定するには、以下の手順を実行してください。
 
-1. 環境のすべての公開インスタンスに対して次の URL を開き、 [ご使用の環境の公開インスタンス用のフラッシュエージェントを有効にしてください](https://docs.adobe.com/content/help/ja/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
+1. 環境のすべての公開インスタンスに対して次の URL を開き、 [ご使用の環境の公開インスタンス用のフラッシュエージェントを有効にしてください](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
    `http://[server]:[port]]/etc/replication/agents.publish/flush.html`
 
-1. [dispatcher.any ファイルに以下を追加します](https://docs.adobe.com/content/help/ja/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)。
+1. [dispatcher.any ファイルに以下を追加します](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#automatically-invalidating-cached-files)。
 
    ```JSON
       /invalidate
@@ -94,7 +94,7 @@ Dispatcher 上のアダプティブフォームのキャッシュを有効にし
    * アダプティブフォームは、更新されたバージョンのフォームが公開されなくなるまで、キャッシュ内に残ります。
 
    * アダプティブフォームで参照されている新しいバージョンのリソースが公開されると、影響を受けたアダプティブフォームは自動的に無効になります。参照されるリソースの自動無効化には、いくつかの例外があります。例外の回避策については、 [トラブルシューティング](#troubleshooting) の節を参照してください。
-1. [以下のルール dispatcher.any またはカスタムルールファイルを追加します](https://docs.adobe.com/content/help/ja/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。キャッシュをサポートしない URL は除外されます。例えば、インタラクティブ通信などです。
+1. [以下のルール dispatcher.any またはカスタムルールファイルを追加します](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache)。キャッシュをサポートしない URL は除外されます。例えば、インタラクティブ通信などです。
 
    ```JSON
       /0000 {
@@ -118,7 +118,7 @@ Dispatcher 上のアダプティブフォームのキャッシュを有効にし
       }
    ```
 
-1. [「URL パラメーターを無視」リストに以下のパラメーターを追加します](https://docs.adobe.com/content/help/ja/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters)。
+1. [「URL パラメーターを無視」リストに以下のパラメーターを追加します](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters)。
 
    ```JSON
       /ignoreUrlParams {
@@ -128,7 +128,7 @@ Dispatcher 上のアダプティブフォームのキャッシュを有効にし
       }
    ```
 
-AEM 環境は、アダプティブフォームをキャッシュするように設定されています。すべてのタイプのアダプティブフォームをキャッシュします。キャッシュされたページを配信する前に、ページのユーザーアクセス権限を確認する必要がある場合は、[セキュリティで保護されたコンテンツのキャッシュ](https://docs.adobe.com/content/help/ja/experience-manager-dispatcher/using/configuring/permissions-cache.html)を参照してください。
+AEM 環境は、アダプティブフォームをキャッシュするように設定されています。すべてのタイプのアダプティブフォームをキャッシュします。キャッシュされたページを配信する前に、ページのユーザーアクセス権限を確認する必要がある場合は、[セキュリティで保護されたコンテンツのキャッシュ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html)を参照してください。
 
 ## トラブルシューティング {#troubleshooting}
 

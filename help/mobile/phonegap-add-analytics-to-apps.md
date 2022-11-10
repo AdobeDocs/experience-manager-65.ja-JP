@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: cd9d2bea-48d8-4a17-8544-ea25dcad69f3
 exl-id: 8d965e94-c368-481d-b000-6e22456c34db
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 63%
+source-wordcount: '939'
+ht-degree: 64%
 
 ---
 
@@ -104,7 +104,7 @@ Geometrixx Outdoorsアプリ config.xml は、 */content/phonegap/geometrixx-out
 
 ### アプリを完全にトラッキングするためのコードの実装 {#instrument-your-code-for-full-app-tracking}
 
-複数のトラッキング API が [AMS Phonegap プラグイン API です。](https://docs.adobe.com/content/help/en/mobile-services/ios/phonegap-ios/phonegap-methods.html)
+複数のトラッキング API が [AMS Phonegap プラグイン API です。](https://experienceleague.adobe.com/docs/mobile-services/ios/phonegap-ios/phonegap-methods.html)
 
 これらを使用すると、ユーザーがアプリ内でどのページに移動しているか、どのコントロールが最も使用されているかなど、状態およびアクションをトラッキングできます。アプリをトラッキング用に実装する最も簡単な方法は、AMS プラグインが提供する Analytics API を利用することです。
 

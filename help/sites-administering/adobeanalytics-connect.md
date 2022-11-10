@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6b545a51-3677-4ea1-ac7e-2d01ba19283e
 docset: aem65
 exl-id: 8262bbf9-a982-479b-a2b5-f8782dd4182d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
 workflow-type: tm+mt
-source-wordcount: '1534'
-ht-degree: 100%
+source-wordcount: '1528'
+ht-degree: 99%
 
 ---
 
@@ -95,7 +95,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 >
 >Adobe Analytics API のセキュリティが変更され、AEM に含まれているバージョンの Activity Map は使用できなくなりました。
 >
->[Adobe Analytics が提供する ActivityMap プラグイン](https://docs.adobe.com/content/help/en/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)を使用する必要があります。
+>[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)を使用する必要があります。
 
 ## Adobe Analytics フレームワークの作成 {#creating-a-adobe-analytics-framework}
 
@@ -184,7 +184,7 @@ AEM は、デフォルトではサンノゼのデータセンター（https://ap
 1. 「**保存して閉じる**」を選択します。
 1. ページを&#x200B;**[公開](/help/sites-authoring/publishing-pages.md)**&#x200B;して、ページおよび接続された設定／ファイルをアクティベートします。
 1. 最後に、パブリッシュインスタンス上のページを訪問し、**検索**&#x200B;コンポーネントを使用してキーワード（例：aubergine）を検索します。
-1. [Adobe Experience Cloud デバッガー](https://docs.adobe.com/content/help/ja/debugger/using/experience-cloud-debugger.html)などの適切なツールを使用して、Adobe Analytics への呼び出しを確認できます。
+1. [Adobe Experience Cloud デバッガー](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html)などの適切なツールを使用して、Adobe Analytics への呼び出しを確認できます。
 1. 提供されている呼び出しの例では、入力された値（例：aubergine）が eVar7 に格納され、イベントリストが event3 に格納されます。
 
 ### ページビュー {#page-views}

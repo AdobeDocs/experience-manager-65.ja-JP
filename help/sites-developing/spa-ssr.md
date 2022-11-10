@@ -1,7 +1,7 @@
 ---
-title: 'SPA およびサーバーサイドレンダリング '
+title: SPA およびサーバーサイドレンダリング
 seo-title: SPA and Server-Side Rendering
-description: '"SPA およびサーバーサイドレンダリング"'
+description: "SPA およびサーバーサイドレンダリング"
 seo-description: null
 uuid: 27e26e3f-65d4-4069-b570-58b8b9e2a1ae
 contentOwner: bohnert
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 844e5c96-2a18-4869-b4c8-2fb9efe0332a
 docset: aem65
 exl-id: a80bc883-e0f6-4714-bd28-108262f96d77
-source-git-commit: eeb4c7f6a80d6bad5cd1b540dfacfc7bc5071664
+source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1754'
 ht-degree: 100%
 
 ---
@@ -180,7 +180,7 @@ AEM が標準で Angular および React SPA フレームワークをサポー�
 
 >[!NOTE]
 >
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://docs.adobe.com/content/help/ja-JP/experience-manager-core-components/using/developing/archetype/overview.html)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ## Node.js の使用 {#using-node-js}
 
