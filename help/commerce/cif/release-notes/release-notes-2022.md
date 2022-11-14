@@ -5,7 +5,7 @@ exl-id: d0a66e70-c4f1-4051-8161-11f07dad0612
 source-git-commit: 0fdff88695646603cec120d25f156f8c918686df
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 81%
+ht-degree: 86%
 
 ---
 
@@ -77,17 +77,17 @@ ht-degree: 81%
 
 ### 新機能 {#what-is-new-may}
 
-* より良くシンプルな概要を示す新しい製品コックピットプロパティページ
+* よりわかりやすいシンプルな概要を示す新しい製品コックピットのプロパティページ
 
-![製品コクピットのプロパティの概要](/help/assets/CIF/product_cockpit_properties_overview.png)
+![製品コックピットのプロパティの概要](/help/assets/CIF/product_cockpit_properties_overview.png)
 
-* I/O Runtime 上のサードパーティコネクタの互換性と堅牢性の向上
+* I/O Runtime でのサードパーティコネクタの互換性と堅牢性の向上
 
 * GQL クライアント設定の上書きのサポートを強化（例：カスタムキャッシュ動作の設定）
 
 ### バグ修正 {#bug-fixes-may}
 
-* 複数値の製品ピッカーフィールドに、2 番目と追加の製品が無効と表示される
+* 複数値の製品ピッカーフィールドに、2 番目の製品と追加の製品が無効と表示されます
 
 * 製品ピッカーがコンポーネントの背後に隠れている場合があります
 

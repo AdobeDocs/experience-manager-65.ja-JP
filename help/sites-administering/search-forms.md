@@ -329,11 +329,11 @@ ht-degree: 100%
 >[!NOTE]
 >
 >* 一般的な検索用の述語は、次の場所で定義されています。
->  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >* siteadmin（クラシック UI）にのみ関連する検索用の述語は、次の場所にあります。
->  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
->   * これらは非推奨であり、後方互換性のためにのみ使用できます。
+   >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+   >   * これらは非推奨であり、後方互換性のためにのみ使用できます。
 >
 >この情報は参照用です。`/libs` には変更を加えないでください。
 

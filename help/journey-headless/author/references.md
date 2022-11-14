@@ -106,7 +106,7 @@ ht-degree: 100%
 
 ## その他のリソース {#additional-resources}
 
-* [コンテンツフラグメントの操作](/help/assets/content-fragments/content-fragments.md)
+* [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
 
    * [コンテンツフラグメントの管理](/help/assets/content-fragments/content-fragments-managing.md)
 

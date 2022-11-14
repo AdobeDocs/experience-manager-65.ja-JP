@@ -1,5 +1,5 @@
 ---
-title: 'ページの差分 '
+title: ページの差分
 seo-title: Page Diff
 description: ページの差分表示を使用すると、2 つのページを並べて比較し、差分を強調表示できます。
 seo-description: The page diff feature allows for the convenient side-by-side comparison of two pages with their differences highlighted.

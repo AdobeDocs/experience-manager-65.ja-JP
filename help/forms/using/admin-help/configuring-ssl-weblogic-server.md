@@ -9,10 +9,10 @@ content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_ssl
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 968c2574-ec9a-45ca-9c64-66f4caeec285
-source-git-commit: 80b8571bf745b9e7d22d7d858cff9c62e9f8ed1e
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1049'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -121,7 +121,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -genkey -v -alias ads-credentials -keyalg RSA -keystore "ads-credentials.jks" -validity 3650 -storepass P@ssw0rd -keypass P@ssw0rd -dname "CN=wasnode01, OU=LC, O=Adobe, L=Noida, S=UP,C=91
    ```
 
-   「ads-credentials.jks」という名前のカスタム ID キーストアファイルが [appserverdomain]/adobe/[server name] ディレクトリに作成されます。
+   「ads-credentials.jks」という名前のカスタム ID キーストアファイルが [appserverdomain]/adobe/[サーバー名] ディレクトリ。
 
 1. 次のコマンドを入力して、ads-credentials キーストアから証明書を抽出します。
 
@@ -141,7 +141,7 @@ keytool コマンドの使用方法について詳しくは、JDK マニュア�
    C:\Program Files\Java\jrockit-jdk1.6.0_24-R28\bin\keytool" -export -v -alias ads-credentials -file "ads-ca.cer" -keystore "ads-credentials.jks" -storepass P@ssw0rd
    ```
 
-   「ads-ca.cer」という名前の証明書ファイルが、[appserverdomain]/adobe/[*server name*] ディレクトリに作成されます。
+   「ads-ca.cer」という名前の証明書ファイルが [appserverdomain]/adobe/[*サーバー名*] ディレクトリ。
 
 1. ads-ca.cer ファイルを、アプリケーションサーバーとのセキュリティで保護された通信を必要とする任意のホストコンピューターにコピーします。
 1. 次のコマンドを入力して、証明書を新しいキーストアファイル（カスタム信頼キーストア）に挿入します。

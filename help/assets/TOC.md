@@ -9,7 +9,7 @@ user-guide-description: デジタルアセットを作成、管理、処理お�
 source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
 workflow-type: tm+mt
 source-wordcount: '675'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 99%
    + [Dynamic Media アセットを配信する](delivering-dynamic-media-assets.md)
    + [Dynamic Media でホットリンク保護を有効化する](hotlink-protection.md)
    + [3D サポート](/help/assets/assets-3d.md)
-   + [Dynamic Mediaの制限](limitations.md)
+   + [Dynamic Media の制限](limitations.md)
    + [画像セット](image-sets.md)
    + [パノラマ画像](panoramic-images.md)
    + [混在メディアセット](mixed-media-sets.md)

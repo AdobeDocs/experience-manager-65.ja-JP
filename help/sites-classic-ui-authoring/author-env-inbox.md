@@ -1,5 +1,5 @@
 ---
-title: 'インボックス '
+title: インボックス
 seo-title: Your Inbox
 description: AEM の様々な領域から通知を受け取ることができます。例えば、ページコンテンツに対して実行する必要のあるアクションを表す作業項目やタスクに関する通知を受け取ります。
 seo-description: You can receive notifications from various areas of AEM such as notification about work items or tasks that represent actions that you need to perform on page content.

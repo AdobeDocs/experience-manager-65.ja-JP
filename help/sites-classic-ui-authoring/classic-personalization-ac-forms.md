@@ -1,5 +1,5 @@
 ---
-title: 'AEM での Adobe Campaign フォームの作成 '
+title: AEM での Adobe Campaign フォームの作成
 seo-title: Creating Adobe Campaign Forms in AEM
 description: AEM では、Web サイト上で Adobe Campaign と連携するフォームを作成できます。特定のフィールドをフォームに挿入して、Adobe Campaign データベースにマップできます。
 seo-description: AEM lets you create and use forms that interact with Adobe Campaign on your website. Specific fields can be inserted into your forms and mapped to the Adobe Campaign database.

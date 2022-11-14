@@ -1,8 +1,8 @@
 ---
 title: コンテンツフラグメントのメタデータとタグの定義について
 description: コンテンツフラグメントのメタデータとタグの定義について
-exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
-source-git-commit: 38525b6cc14e9f6025564c060b8cfb4f9e0ea473
+exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
+source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%

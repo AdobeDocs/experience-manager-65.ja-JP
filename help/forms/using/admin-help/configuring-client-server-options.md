@@ -11,10 +11,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0f069fbc-10c2-403e-9419-5e9920035d75
 feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '10242'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -403,7 +403,7 @@ Document Security では、保護されたドキュメントで実行される�
 
 以下の設定により、ユーザーがクライアントアプリケーションを介して Document Security にログインするときに表示されるログインプロンプトのテキストを指定できます。
 
-**ようこそテキスト**：「ユーザー名とパスワードを使用してログインしてください」などの、ウェルカムメッセージのテキストです。ウェルカムメッセージのテキストには、Document Security へのログイン方法と、管理者または組織内のサポート担当者への連絡方法が記載されている必要があります。例えば、外部ユーザーがパスワードを忘れた場合や、登録方法やログイン方法に関して質問がある場合は、管理者に問い合わせる必要があります。このウェルカムテキストでは最大 512 文字を使用できます。
+**ようこそテキスト：** お知らせメッセージのテキスト（「ユーザー名とパスワードを使用してログインしてください」など）。 ウェルカムメッセージのテキストには、Document Security へのログイン方法と、管理者または組織内のサポート担当者への連絡方法が記載されている必要があります。例えば、外部ユーザーがパスワードを忘れた場合や、登録方法やログイン方法に関して質問がある場合は、管理者に問い合わせる必要があります。このウェルカムテキストでは最大 512 文字を使用できます。
 
 **ユーザー名テキスト：**&#x200B;ユーザー名ボックスのテキストラベルです。
 
@@ -442,7 +442,7 @@ Document Security を使用して、ポリシーの作成時に適用できる�
 
 テキストベースの透かしを選択する場合、透かし内に複数のテキストエントリを使用したいくつかの要素を指定でき、各要素の位置を指定できます。これらの要素に、ヘッダー、フッターなど、意味のある名前を割り当てます。
 
-例えば、透かしとして、ヘッダー、フッター、余白、ドキュメント全体に異なるテキストを指定する場合、いくつかの透かし要素を作成して位置を指定します。ユーザーのユーザー ID とドキュメントにアクセスしている時点の日付をヘッダーに表示し、ポリシー名を右余白に、「機密情報」というカスタムテキストをドキュメントの対角線上に表示する場合は、テキストを使用した透かし要素をタイプごとに定義し、その書式と位置を指定します。透かしがドキュメントに適用されると、透かしのすべての要素は、透かしに追加された順番で、ドキュメントに同時に適用されます。
+例えば、透かしとして、ヘッダー、フッター、余白、ドキュメント全体に異なるテキストを指定する場合、いくつかの透かし要素を作成して位置を指定します。ユーザーのユーザー ID とドキュメントにアクセスした現在の日付をヘッダーに表示し、右余白にポリシー名とカスタムテキスト&quot;CONFIDENTIAL&quot;をドキュメントに対して斜めに表示する場合は、テキストとテキストを使用して個別の透かし要素を定義し、書式と位置を指定します。 透かしがドキュメントに適用されると、透かしのすべての要素は、透かしに追加された順番で、ドキュメントに同時に適用されます。
 
 通常、ロゴなどのグラフィックコンテンツや著作権情報や登録商標などの特殊記号を含めるには、PDF ベースの透かしを使用します。
 
@@ -555,7 +555,7 @@ Document Security 設定ファイルを変更することで、透かし要素�
 
 登録電子メールには、登録ページへのリンクと登録方法に関する情報が含まれています。招待ユーザーによって登録が行われると、アクティベートページへのリンクが記載されたアクティベート用の電子メールが Document Security から送信されます。アカウントがアクティベートされると、アクティベートを解除するか削除するまで、そのアカウントは有効のままです。
 
-組み込み登録を有効にした場合は、SMTP サーバー、登録電子メールの詳細、アクセス権限およびパスワードリセット用電子メールの情報を一度だけ指定します。組み込み登録を有効にする前に、User Management 内にローカルドメインを作成済みであること、および「Document Security ユーザーの招待」ロールを組織内の適切なユーザーとグループにアサインしていることを確認してください。（[ローカルドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)および[ロールの作成および設定](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)を参照）。組み込み登録を使用しない場合は、AEM Forms SDK を使用して、独自のユーザー登録システムを作成する必要があります。詳しくは、「[AEM Forms によるプログラミング](/help/forms/developing/introducing-java-api-soap-quick.md)」の「AEM Forms 向け SPI の開発」を参照してください。組み込み登録オプションを使用しない場合は、アクティベート用の電子メールにメッセージを設定すると共に、クライアントのログイン画面で、新しいパスワードやその他の情報について管理者に問い合わせる方法をユーザーに知らせることをお勧めします。
+組み込み登録を有効にした場合は、SMTP サーバー、登録電子メールの詳細、アクセス権限およびパスワードリセット用電子メールの情報を一度だけ指定します。組み込み登録を有効にする前に、User Management でローカルドメインを作成し、組織内の適切なユーザーおよびグループに「Document Security ユーザーの招待」ロールが割り当てられていることを確認してください。 （[ローカルドメインの追加](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)および[ロールの作成および設定](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)を参照）。組み込み登録を使用しない場合は、AEM Forms SDK を使用して、独自のユーザー登録システムを作成する必要があります。詳しくは、『 AEM forms SPI の開発』( [AEM forms によるプログラミング](/help/forms/developing/introducing-java-api-soap-quick.md). 組み込み登録オプションを使用しない場合は、アクティベート用の電子メールにメッセージを設定すると共に、クライアントのログイン画面で、新しいパスワードやその他の情報について管理者に問い合わせる方法をユーザーに知らせることをお勧めします。
 
 **招待ユーザー登録の有効化と設定**
 
@@ -902,7 +902,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 ```xml
  <node name="ClientVersionRules">
      <map>
-         <entry key="infoURL" value=”https://get.a.new/version.html”/>
+         <entry key="infoURL" value="https://get.a.new/version.html"/>
      </map>
      <node name="Denials">
          <map/>
@@ -927,7 +927,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 ```xml
  <node name="ClientVersionRules">
      <map>
-         <entry key="infoURL" value=”https://get.a.new/version.html”/>
+         <entry key="infoURL" value="https://get.a.new/version.html"/>
      </map>
      <node name="Denials">
          <map/>
@@ -969,7 +969,7 @@ Acrobat Reader DC Extensions for Microsoft Office は、Microsoft Word、Microso
 多くの Document Security ユーザーは、Right Management ユーザーインターフェイスを使用している間、**www.adobe.com** などの外部リンクへのアクセス権を持っていません。
 
 * `https://[host]:'port'/adminui`
-* `https://[host]:'port'/edc`
+* `https://[host]:'port'/edc`.
 
 次の config.xml への変更は、すべての外部リンクを Right Management ユーザーインターフェイスから無効化します。
 

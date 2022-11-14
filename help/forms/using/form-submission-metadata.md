@@ -1,7 +1,7 @@
 ---
 title: ユーザーデータからフォーム送信メタデータへの情報の追加
 seo-title: Adding information from user data to form submission metadata
-description: 'ユーザーが提供したデータを使用して、送信済みフォームのメタデータに情報を追加する方法を学習します。 '
+description: ユーザーが提供したデータを使用して、送信済みフォームのメタデータに情報を追加する方法を学習します。
 seo-description: Learn how to add information to metadata of a submitted form with user provided data.
 uuid: c3eea3c0-31f8-4bf8-b5cf-34f907bdbdba
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

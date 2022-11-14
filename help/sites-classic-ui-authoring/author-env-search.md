@@ -1,5 +1,5 @@
 ---
-title: '検索 '
+title: 検索
 seo-title: Search
 description: AEM のオーサー環境は、リソースタイプに応じて、コンテンツを検索するための様々なメカニズムを提供します。
 seo-description: The author environment of AEM provides various mechanisms for searching for content, dependent on the resource type.

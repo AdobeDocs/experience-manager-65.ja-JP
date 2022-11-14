@@ -1,5 +1,5 @@
 ---
-title: '効果的なニュースレターのランディングページの作成 '
+title: 効果的なニュースレターのランディングページの作成
 seo-title: Creating an Effective Newsletter Landing Page
 description: 効果的なニュースレターのランディングページは、ニュースレター（または他の電子メールマーケティングキャンペーン）に新規登録するユーザーを増やすことができます。ニュースレターの新規登録で収集する情報は、見込み客の獲得に利用できます。
 seo-description: An effective newsletter landing page helps you get as many people as possible to sign up for your newsletter (or other email marketing campaign). You can use the information you gather from your newsletter sign ups to get leads.

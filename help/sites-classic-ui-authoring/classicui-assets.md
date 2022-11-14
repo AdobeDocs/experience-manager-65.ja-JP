@@ -1,5 +1,5 @@
 ---
-title: 'アセットの操作 '
+title: アセットの操作
 seo-title: Working with Assets
 description: オーサー環境とツールのセクションでは、ページの編集中にアセットを検索して使用するためのコンテンツファインダーの使用について説明しています。AEM Assets では、次のような他のアセット操作方法を使用できます。
 seo-description: The Author Environment and Tools section provides information about using Content Finder to find and use assets when editing pages. AEM Assets provides other methods for working with assets.

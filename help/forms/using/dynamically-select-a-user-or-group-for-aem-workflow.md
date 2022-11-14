@@ -1,7 +1,7 @@
 ---
 title: AEM Forms 中心のワークフローステップのためのユーザーまたはグループの動的な選択
 seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
-description: '実行時に AEM Forms Workflow のユーザーまたはグループを選択する方法について説明します。 '
+description: 実行時に AEM Forms Workflow のユーザーまたはグループを選択する方法について説明します。
 seo-description: Learn how to select a user or group for an AEM Forms workflow at the runtime.
 uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting

@@ -1,5 +1,5 @@
 ---
-title: 'インボックス '
+title: インボックス
 seo-title: Your Inbox
 description: インボックスを使用したタスクの管理
 seo-description: Managing your tasks with the inbox

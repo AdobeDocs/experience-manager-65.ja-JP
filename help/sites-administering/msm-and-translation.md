@@ -61,9 +61,9 @@ Web サイトとページを管理するための以下の管理ツールが用�
 >いずれの使用例の場合も、次のベストプラクティスをお読みになることをお勧めします。
 >
 >* [MSM のベストプラクティス](/help/sites-administering/msm-best-practices.md)（特に次の事項）
->
->   * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
->   * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
+   >
+   >   * [サイトの作成](/help/sites-administering/msm-best-practices.md#create-site)
+   >   * [MSM と多言語の Web サイト](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
 >* [翻訳のベストプラクティス](/help/sites-administering/tc-bp.md)
 

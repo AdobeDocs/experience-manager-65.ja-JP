@@ -1,5 +1,5 @@
 ---
-title: '"チュートリアル：ドキュメントフラグメントの作成"'
+title: "チュートリアル：ドキュメントフラグメントの作成"
 seo-title: Create document fragments for Interactive Communication
 description: インタラクティブ通信用のドキュメントフラグメントの作成
 seo-description: Create document fragments for Interactive Communication

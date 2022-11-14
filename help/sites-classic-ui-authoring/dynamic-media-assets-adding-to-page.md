@@ -1,5 +1,5 @@
 ---
-title: 'ページへの Dynamic Media アセットの追加 '
+title: ページへの Dynamic Media アセットの追加
 description: Web サイトで使用するアセットにダイナミックメディア機能を追加するには、ダイナミックメディアまたはインタラクティブメディアのコンポーネントをページに直接追加します。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS

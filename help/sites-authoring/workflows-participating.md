@@ -1,5 +1,5 @@
 ---
-title: 'ワークフローへの参加 '
+title: ワークフローへの参加
 seo-title: Participating in Workflows
 description: ワークフローには通常、ページまたはアセットでユーザーがアクティビティを実行する必要があるステップが含まれています。
 seo-description: Workflows typically include steps that require a person to perform an activity on a page or asset.

@@ -12,7 +12,7 @@ discoiquuid: 6866d209-5789-4ef9-bc3c-d644d4fb4b1c
 docset: aem65
 role: Admin
 exl-id: 22276580-e6bc-41c5-9ac3-e8f291f676b7
-source-git-commit: 812b9f3af3ad04343e648a8d07d53f8442978b82
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 56%
@@ -209,7 +209,7 @@ in **[!UICONTROL 設定]** > **[!UICONTROL モデレート]**.
 
 スパム検出は、送信済みのユーザー生成コンテンツの中から、好ましくないコンテンツをスパムとしてマーキングして除外する自動モデレート機能です。 ユーザーがスパムとしてマークすることで、送信されたコンテンツの望ましくない部分を送信しました。 有効にすると、事前に設定されたスパムワードの集まりに基づいて、ユーザーが生成したコンテンツがスパムかどうかを識別します。 デフォルトのスパムワードは次の場所にあります。
 
-`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`
+`/libs/settings/community/sites/moderation/spamdetector-conf/profiles/spam_words.txt`.
 
 ただし、デフォルトのスパムワードをカスタマイズまたは拡張するには、[overlay](/help/communities/overlay-comments.md) を使用して、デフォルトのスパムワードの構造に従って /apps ディレクトリ内にスパムワードを作成します。
 

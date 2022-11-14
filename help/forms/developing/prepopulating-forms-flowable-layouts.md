@@ -11,10 +11,10 @@ topic-tags: operations
 discoiquuid: 30a12fc6-07b8-4c7c-b9e2-caa2bec0ac48
 role: Developer
 exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
 workflow-type: tm+mt
 source-wordcount: '3505'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 100%
 
 既にデータを含むフォームに事前入力する場合は、XML データソース内に既に表示されているデータを指定する必要があります。10 個のフィールドを含むフォームの 4 個のフィールドにデータが含まれているとします。次に、残り 6 個のフィールドに事前入力するとします。この場合、フォームの事前入力に使用する 10 個の XML 要素を XML データソースに指定する必要があります。6 個の要素のみを指定した場合、元の 4 個のフィールドは空になります。
 
-例えば、サンプルの確認フォームなどのフォームを事前入力することができます。（[インタラクティブ PDF Forms のレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)を参照。）
+例えば、サンプルの確認フォームなどのフォームを事前入力することができます。( [インタラクティブPDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 
 サンプルの確認フォームを事前入力するには、フォーム内の 3 個のフィールドに一致する 3 個の XML 要素を含む XML データソースを作成する必要があります。このフォームには、 `FirstName`、`LastName`、`Amount` の 3 個のフィールドが含まれています。最初のステップでは、フォームデザイン内のフィールドと一致する XML 要素を含む XML データソースを作成します。次のステップでは、次の XML コードに示すように、XML 要素にデータ値を割り当てます。
 

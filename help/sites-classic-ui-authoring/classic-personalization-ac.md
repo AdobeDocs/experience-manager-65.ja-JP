@@ -1,5 +1,5 @@
 ---
-title: 'Adobe Campaign の使用 '
+title: Adobe Campaign の使用
 seo-title: Working with Adobe Campaign
 description: Adobe Campaign は、あらゆるオンラインチャネルとオフラインチャネルをまたいでキャンペーンのパーソナライズと配信をおこなうためのソリューションです。
 seo-description: Adobe Campaign is a set of solutions that lets you personalize and deliver campaigns across all of your online and offline channels.

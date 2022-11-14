@@ -1,5 +1,5 @@
 ---
-title: 'セグメント化について '
+title: セグメント化について
 seo-title: Understanding Segmentation
 description: キャンペーンを作成する場合、セグメント化を考えることが重要になります。ほとんどの場合、キャンペーンを開始する前にセグメントをあらかじめ定義しておく必要があります。
 seo-description: Segmentation is a key consideration when creating a campaign. In most cases, you will need to have segments already defined before starting your campaign.

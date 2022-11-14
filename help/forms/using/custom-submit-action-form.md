@@ -1,5 +1,5 @@
 ---
-title: 'アダプティブフォーム向けのカスタム送信アクションの作成 '
+title: アダプティブフォーム向けのカスタム送信アクションの作成
 seo-title: Writing custom Submit action for adaptive forms
 description: AEM Forms では、アダプティブフォーム向けのカスタム送信アクションを作成することができます。本記事では、アダプティブフォームにカスタム送信アクションを追加する方法を説明します。
 seo-description: AEM Forms lets you create custom Submit action for Adaptive forms. This article describes the procedure to add custom Submit action for Adaptive forms.

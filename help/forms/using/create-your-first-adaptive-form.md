@@ -1,6 +1,6 @@
 ---
 title: 「チュートリアル：最初のアダプティブフォームを作成する」
-seo-title: 'Tutorial: Create your first adaptive form'
+seo-title: "Tutorial: Create your first adaptive form"
 description: ここでは、インタラクティブでレスポンシブな高機能のフォームを作成する方法について説明します。
 seo-description: Learn to create business class, interactive, and responsive forms.
 uuid: ee351a3f-ea6a-4b4c-8045-4948ad51b7c1

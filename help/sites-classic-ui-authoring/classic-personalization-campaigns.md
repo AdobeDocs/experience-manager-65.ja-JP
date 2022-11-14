@@ -1,5 +1,5 @@
 ---
-title: 'キャンペーンの管理 '
+title: キャンペーンの管理
 seo-title: Campaign Management
 description: キャンペーン管理では、デジタルマーケティング担当者は、パーソナライズされたコンテンツを配信し、訪問者に対して個別のエクスペリエンスを作成できます。これにより、Web、電子メールおよびモバイルサービス内のマーケティングキャンペーンを統合し、訪問者との関係を深めることができます。
 seo-description: Campaign management provides digital marketers the opportunity to deliver personalized content and so create dedicated experiences for visitors. It allows you to orchestrate your marketing campaigns across the web, email and mobile services and so engage your visitors.

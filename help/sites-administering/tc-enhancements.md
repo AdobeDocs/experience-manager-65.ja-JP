@@ -13,7 +13,7 @@ exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
 source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 76%
 
 ## 翻訳メモリの更新 {#translation-memory-updates}
 
-翻訳されたコンテンツの手動編集を翻訳管理システム (TMS) に同期して、翻訳メモリをトレーニングすることができます。
+翻訳済みコンテンツを手動で編集すると、翻訳管理システム（TMS）に同期し直され、翻訳メモリに反映されます。
 
 1. Sites コンソールから、翻訳済みページのテキストコンテンツを更新した後、「**翻訳メモリを更新**」を選択します。
 
@@ -73,20 +73,20 @@ ht-degree: 76%
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
-AEMは、設定済みの TMS の翻訳メモリ内の既存の文字列の翻訳を更新します。
+AEM は、設定済みの TMS の翻訳メモリ内の既存の文字列の翻訳を更新します。
 
 * このアクションは、設定済みの TMS の翻訳メモリ内の既存の文字列の翻訳を更新します。
 * 新しい翻訳ジョブは作成されません。
-* AEM翻訳 API を介して、翻訳を TMS に返します（以下を参照）。
+* AEM 翻訳 API を介して、翻訳を TMS に返します（以下を参照）。
 
 この機能を使用するには：
 
-* AEMで使用する TMS を設定する必要があります。
-* コネクタは、メソッドを実装する必要があります [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
+* AEM で使用するように TMS を設定する必要があります。
+* コネクターはメソッド [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html) を実装する必要があります。
    * このメソッド内のコードは、翻訳メモリの更新リクエストの処理を決定します。
-   * AEM翻訳フレームワークは、この方法の実装を通じて、文字列の値のペア（元の翻訳と更新された翻訳）を TMS に返します。
+   * AEM 翻訳フレームワークは、このメソッドの実装を通じて、文字列の値のペア（元の翻訳と更新された翻訳）を TMS に返します。
 
-専用の翻訳メモリが使用されている場合、翻訳メモリの更新を傍受し、カスタムの宛先に送信できます。
+独自の翻訳メモリを使用している場合、翻訳メモリの更新をインターセプトして、独自の宛先に送信できます。
 
 ## 複数のレベルの言語コピー {#language-copies-on-multiple-levels}
 

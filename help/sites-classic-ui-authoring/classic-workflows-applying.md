@@ -1,5 +1,5 @@
 ---
-title: 'ページへのワークフローの適用 '
+title: ページへのワークフローの適用
 seo-title: Applying Workflows to Pages
 description: ワークフローは、Web サイトコンソールから、またはページの編集中にはサイドキックから開始できます。
 seo-description: Workflows can be started from either the Websites console or, when editing a page, from Sidekick.

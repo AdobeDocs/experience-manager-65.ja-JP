@@ -200,7 +200,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
    }
    ```
 
-   宛先
+   To
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -245,7 +245,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 }
 ```
 
-宛先
+To
 
 ```css
 .error-dialog{
@@ -278,7 +278,7 @@ AEM Forms Workspace では、エラーダイアログをカスタマイズする
 }
 ```
 
-宛先
+To
 
 ```css
 .error-dialog .head-bar{

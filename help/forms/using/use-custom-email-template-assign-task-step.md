@@ -1,7 +1,7 @@
 ---
 title: タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用
 seo-title: Use custom email templates in an Assign Task step
-description: 'Forms ワークフローの電子メール通知のカスタム電子メールテンプレート '
+description: Forms ワークフローの電子メール通知のカスタム電子メールテンプレート
 seo-description: Custom email templates for forms workflow email notifications
 uuid: ba453d54-813f-4a4f-a82e-1a6a28b6939c
 topic-tags: publish

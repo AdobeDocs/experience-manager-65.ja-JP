@@ -1,5 +1,5 @@
 ---
-title: 'ページ編集時の注釈 '
+title: ページ編集時の注釈
 seo-title: Annotations when Editing a Page
 description: Web サイトのページにコンテンツを追加すると、実際に公開する前に議論の対象となることが多くあります。このために、コンテンツに直接関係するコンポーネントの多くに注釈を追加することができます。
 seo-description: Adding content to the pages of your website is often subject to discussions prior to it actually being published. To aid this, many components directly related to content allow you to add an annotation.

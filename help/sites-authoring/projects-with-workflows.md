@@ -1,5 +1,5 @@
 ---
-title: 'プロジェクトワークフローの操作 '
+title: プロジェクトワークフローの操作
 seo-title: Working with Project Workflows
 description: すぐに使用可能な様々なプロジェクトワークフローが用意されています。
 seo-description: A variety of project workflows are available out of the box.

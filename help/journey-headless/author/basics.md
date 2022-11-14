@@ -243,7 +243,7 @@ AEM インストールは、通常、少なくとも次の 2 つの環境で構�
 
    * [パネルセレクター](/help/sites-authoring/basic-handling.md#rail-selector)
 
-* [コンテンツフラグメントの操作](/help/assets/content-fragments/content-fragments.md)
+* [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
 
    * [コンテンツフラグメントの管理](/help/assets/content-fragments/content-fragments-managing.md)
 

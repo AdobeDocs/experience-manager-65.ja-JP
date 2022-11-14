@@ -1,5 +1,5 @@
 ---
-title: 'Adobe Campaign 6.1 および Adobe Campaign Standard の使用 '
+title: Adobe Campaign 6.1 および Adobe Campaign Standard の使用
 seo-title: Working with Adobe Campaign 6.1 and Adobe Campaign Standard
 description: AEM で電子メールコンテンツを作成して、Adobe Campaign の電子メールで処理することができます。
 seo-description: You can create email content in AEM and process it in Adobe Campaign emails.

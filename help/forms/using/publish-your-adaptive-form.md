@@ -1,6 +1,6 @@
 ---
 title: 「チュートリアル：アダプティブフォームの公開」
-seo-title: 'Tutorial: Publish your adaptive form'
+seo-title: "Tutorial: Publish your adaptive form"
 description: アダプティブフォームを AEM ページとして公開する、AEM Sites ページにフォームを埋め込む、外部 web ページにアダプティブフォームを埋め込む
 seo-description: Publish the adaptive form as an AEM page, embed the form to an AEM Sites page, or embed the adaptive form in an external webpage
 uuid: 1b164376-e61a-40aa-9f16-c79d24a72e20

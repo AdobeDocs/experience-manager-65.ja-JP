@@ -1,5 +1,5 @@
 ---
-title: '基本操作 '
+title: 基本操作
 seo-title: Basic Handling
 description: AEM オーサー環境を使用する際の基本操作の概要。Sites コンソールを基礎として使用します。
 seo-description: An overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.

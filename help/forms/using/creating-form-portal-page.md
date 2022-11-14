@@ -1,5 +1,5 @@
 ---
-title: 'フォームポータルページの作成 '
+title: フォームポータルページの作成
 seo-title: Creating a forms portal page
 description: フォームポータルでは、Web開発者にAdobe Experience Manager (AEM)を使用して作成されたWebサイトでフォームポータルを作成してカスタマイズするためのコンポーネントが支給されます。
 seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).

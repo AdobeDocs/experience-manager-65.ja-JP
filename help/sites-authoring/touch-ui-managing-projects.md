@@ -1,5 +1,5 @@
 ---
-title: 'プロジェクトの管理 '
+title: プロジェクトの管理
 seo-title: Managing Projects
 description: プロジェクトコンソールでアクセスして管理できる 1 つのエンティティにリソースをグループ化することで、プロジェクトを整理できます。
 seo-description: Projects lets you organize your project by grouping resources into one entity which can be acessed and managed intheProjects console

@@ -1,7 +1,7 @@
 ---
 title: 人間中心の長期間有効なプロセスの呼び出し
 seo-title: Invoking Human-Centric Long-Lived Processes
-description: 'Invocation API を使用する Java Webベースのクライアントアプリケーション、Web サービスを使用する ASP.NET アプリケーション、および Remoting を使用する Flex で構築されたクライアントアプリケーションを使用して、Workbench で作成された人間中心の長期プロセスをプログラムで呼び出します。 '
+description: Invocation API を使用する Java Webベースのクライアントアプリケーション、Web サービスを使用する ASP.NET アプリケーション、および Remoting を使用する Flex で構築されたクライアントアプリケーションを使用して、Workbench で作成された人間中心の長期プロセスをプログラムで呼び出します。
 seo-description: Programmatically invoke human-centric long-lived processes created in Workbench using a Java web-based client application that uses the Invocation API, an ASP.NET application that uses web services, and a client application built with Flex that uses Remoting.
 uuid: 42269d41-a90f-4ea1-aeb9-d61337bcfa54
 contentOwner: admin

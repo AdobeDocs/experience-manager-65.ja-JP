@@ -1,5 +1,5 @@
 ---
-title: '遅延読み込みによる大きなフォームのパフォーマンスの向上 '
+title: 遅延読み込みによる大きなフォームのパフォーマンスの向上
 seo-title: Improve performance of large forms with lazy loading
 description: 遅延読み込みを使用すると、フォームのフラグメントが表示されるまでそれらの初期化と読み込みを延期することにより、大きく複雑なアダプティブフォームのパフォーマンスを向上できます。
 seo-description: Lazy loading significantly improves the performance of large and complex adaptive forms by deferring initialization and loading of form fragments until they are visible.

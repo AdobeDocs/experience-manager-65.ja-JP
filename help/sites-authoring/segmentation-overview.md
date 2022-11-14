@@ -1,5 +1,5 @@
 ---
-title: 'セグメント化について '
+title: セグメント化について
 seo-title: Understanding Segmentation
 description: セグメント化は、キャンペーンを作成するときの主要な考慮事項です。
 seo-description: Segmentation is a key consideration when creating a campaign

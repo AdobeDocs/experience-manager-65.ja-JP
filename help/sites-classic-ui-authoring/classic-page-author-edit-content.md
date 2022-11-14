@@ -1,5 +1,5 @@
 ---
-title: 'ページのコンテンツの編集 '
+title: ページのコンテンツの編集
 seo-title: Editing Page Content
 description: コンテンツは、ページにドラッグ可能なコンポーネントを使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
 seo-description: Content is added using components that can be dragged onto the page. These can then be edited in place, moved, or deleted.

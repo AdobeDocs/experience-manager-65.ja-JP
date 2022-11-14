@@ -160,7 +160,7 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 
 ## 使用可能な機能 {#available-features}
 
-コンテンツフラグメントは特定のアセットタイプです。](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの操作[を参照してください。
+コンテンツフラグメントは特定のアセットタイプです。](/help/assets/content-fragments/content-fragments.md)コンテンツフラグメントの使用方法[を参照してください。
 
 API を通じて使用できる機能について詳しくは、以下を参照してください。
 

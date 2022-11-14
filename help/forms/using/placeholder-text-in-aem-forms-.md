@@ -1,5 +1,5 @@
 ---
-title: 'AEM Forms のプレースホルダーテキスト '
+title: AEM Forms のプレースホルダーテキスト
 seo-title: Placeholder text in AEM Forms
 description: プレースホルダーテキストは、コントロールに値がない場合に、ユーザーのデータ入力を支援するためのものです。これはサンプルの値にすることも、使用する形式に関する簡単な説明にすることもできます。
 seo-description: Placeholder text is intended to aid the user with data entry when the control has no value. It could be a sample value or a brief description of the expected format.

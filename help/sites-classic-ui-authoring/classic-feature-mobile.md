@@ -1,5 +1,5 @@
 ---
-title: 'モバイルデバイス用のページのオーサリング '
+title: モバイルデバイス用のページのオーサリング
 seo-title: Authoring a Page for Mobile Devices
 description: モバイルページをオーサリングする場合、ページはモバイルデバイスをエミュレートする方法で表示されます。ページのオーサリング時に、いくつかのエミュレーターを切り替えて、エンドユーザーがページにアクセスしたときの表示を確認できます。
 seo-description: When authoring a mobile page, the page is displayed in a way that emulates the mobile device. When authoring the page, you can switch between several emulators to see what the end-user sees when accessing the page.

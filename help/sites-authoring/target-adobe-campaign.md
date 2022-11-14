@@ -1,5 +1,5 @@
 ---
-title: 'Adobe Campaign のターゲット設定 '
+title: Adobe Campaign のターゲット設定
 seo-title: Targeting your Adobe Campaign
 description: セグメント化を設定した後で、Adobe Campaign のターゲット設定エクスペリエンスを作成できます。
 seo-description: You can create targeted experiences for Adobe Campaign after setting up segmentation

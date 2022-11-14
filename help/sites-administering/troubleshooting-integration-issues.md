@@ -62,7 +62,7 @@ AEM でカスタムデータインポーターサービスを作成について�
 
 ### PollingImporter が原因でシャットダウンに時間がかかる {#shutdown-takes-a-long-time-due-to-the-pollingimporter}
 
-Analytics は継承メカニズムを念頭に置いて設計されています。通常、ページプロパティの「[クラウドサービス](/help/sites-developing/extending-cloud-config.md)」タブ内の Analytics 設定への参照を追加することで、サイトの Analytics を有効にします。ページで別の設定が必要な場合を除き、設定は再度参照する必要はなく、自動的にすべてのサブページに継承されます。サイトへの参照を追加すると、タイプ `cq;PollConfig` の複数のノード（AEM 6.3 以前の場合は 12、AEM 6.4 以降の場合は 6）も自動的に作成されます。これは、Analytics データを AEM にインポートするために使用される PollingImporters をインスタンス化します。そのため、以下のようなことが起こりえます。
+Analytics は継承メカニズムを念頭に置いて設計されています。通常、ページプロパティの「[クラウドサービス](/help/sites-developing/extending-cloud-config.md)」タブ内の Analytics 設定への参照を追加することで、サイトの Analytics を有効にします。ページで別の設定が必要な場合を除き、設定は再度参照する必要はなく、自動的にすべてのサブページに継承されます。サイトへの参照を追加すると、タイプ `cq;PollConfig` の複数のノード（AEM 6.3 以前の場合は 12、AEM 6.4 以降の場合は 6）も自動的に作成されます。これは、Analytics データを AEM にインポートするために使用される PollingImporters をインスタンス化します。これにより、以下を実現できます。
 
 * Analytics を参照しているページがたくさんあると、大量の PollingImporter につながります。
 * さらに、Analytics 設定への参照とともにページをコピーして貼り付けると、PollingImporters が重複します。

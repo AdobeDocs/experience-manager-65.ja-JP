@@ -1,5 +1,5 @@
 ---
-title: 'アカウント環境の設定 '
+title: アカウント環境の設定
 seo-title: Configuring your account environment
 description: AEM では、アカウントおよびオーサー環境の特定項目を設定できます。
 seo-description: AEM provides you with the capability to configure your account and certain aspects of the author environment.

@@ -1,7 +1,7 @@
 ---
-title: 'プロセスレポートの概要 '
+title: プロセスレポートの概要
 seo-title: Getting Started with Process Reporting
-description: ' AEM Forms on JEE のプロセスレポートを使用するために必要な手順'
+description: AEM Forms on JEE のプロセスレポートを使用するために必要な手順
 seo-description: The steps you need to follow to get started with AEM Forms on JEE Process Reporting
 uuid: 685cad39-da2c-411d-a0b0-201917438bcf
 content-type: reference

@@ -452,9 +452,9 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがカレンダーイベントを作成する |
-| ADD | メンバーがカレンダーイベントについてコメントする |
+| 追加 | メンバーがカレンダーイベントについてコメントする |
 | UPDATE | メンバーのカレンダーイベントまたはコメントが編集される |
-| DELETE | メンバーのカレンダーイベントまたはコメントが削除される |
+| 削除 | メンバーのカレンダーイベントまたはコメントが削除される |
 
 **[コメントコンポーネント](/help/communities/comments.md)** SocialEvent `topic`=  = com/adobe/cq/social/comment
 
@@ -463,7 +463,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがコメントを作成する |
 | 追加 | メンバーがコメントに返信する |
 | 更新 | メンバーのコメントが編集される |
-| DELETE | メンバーのコメントが削除される |
+| 削除 | メンバーのコメントが削除される |
 
 **[ファイルライブラリコンポーネント](/help/communities/file-library.md)** SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
 
@@ -472,7 +472,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがフォルダーを作成する |
 | ATTACH | メンバーがファイルをアップロードする |
 | 更新 | メンバーがフォルダーまたはファイルを更新する |
-| DELETE | メンバーがフォルダーまたはファイルを削除する |
+| 削除 | メンバーがフォルダーまたはファイルを削除する |
 
 **[フォーラムコンポーネント](/help/communities/forum.md)** SocialEvent `topic`=  = com/adobe/cq/social/forum
 
@@ -481,7 +481,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがフォーラムトピックを作成する |
 | 追加 | メンバーがフォーラムトピックに返信する |
 | 更新 | メンバーのフォーラムトピックまたは返信が編集される |
-| DELETE | メンバーのフォーラムトピックまたは返信が削除される |
+| 削除 | メンバーのフォーラムトピックまたは返信が削除される |
 
 **[ジャーナルコンポーネント](/help/communities/blog-feature.md)** SocialEvent `topic`=  = com/adobe/cq/social/journal
 
@@ -490,7 +490,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | POST | メンバーがブログ記事を作成する |
 | 追加 | メンバーがブログ記事にコメントする |
 | 更新 | メンバーのブログ記事またはコメントが編集される |
-| DELETE | メンバーのブログ記事またはコメントが削除される |
+| 削除 | メンバーのブログ記事またはコメントが削除される |
 
 **[Q&amp;A コンポーネント](/help/communities/working-with-qna.md)** SocialEvent `topic` = com/adobe/cq/social/qna
 
@@ -501,7 +501,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 | 更新 | メンバーの Q&amp;A の質問または回答が編集される |
 | SELECT | メンバーの回答が選択される |
 | UNSELECT | メンバーの回答の選択が解除される |
-| DELETE | メンバーの Q&amp;A の質問または回答が削除される |
+| 削除 | メンバーの Q&amp;A の質問または回答が削除される |
 
 **[レビューコンポーネント](/help/communities/reviews.md)** SocialEvent `topic`=  = com/adobe/cq/social/review
 
@@ -509,7 +509,7 @@ curl -i -X POST -H "Accept:application/json" -u admin:admin -F ":operation=socia
 |---|---|
 | POST | メンバーがレビューを作成する |
 | 更新 | メンバーのレビューが編集される |
-| DELETE | メンバーのレビューが削除される |
+| 削除 | メンバーのレビューが削除される |
 
 **[評価コンポーネント](/help/communities/rating.md)**
 SocialEvent `topic`= com/adobe/cq/social/tally/rating

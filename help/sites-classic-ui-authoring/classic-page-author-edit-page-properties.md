@@ -1,5 +1,5 @@
 ---
-title: 'ページプロパティの編集 '
+title: ページプロパティの編集
 seo-title: Editing Page Properties
 description: ページのプロパティは、ページの性質によって異なることがあります。例えば、ページによってはライブコピーに接続されていたり、接続されずにライブコピー情報が必要に応じて利用可能な場合があります。
 seo-description: Properties of a page can vary depending on the nature of the page. For example some pages might be connected to a live copy while others are not and the live copy information will be available as appropriate.

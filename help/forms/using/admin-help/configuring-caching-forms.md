@@ -1,5 +1,5 @@
 ---
-title: 'Forms のキャッシュの構成 '
+title: Forms のキャッシュの構成
 seo-title: Configuring caching for Forms
 description: キャッシュ設定の構成方法と、キャッシュのクラスター化方法の考慮事項について説明します。
 seo-description: Learn how to configure cache settings and how to cluster considerations for caches.

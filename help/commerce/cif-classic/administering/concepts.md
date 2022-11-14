@@ -1,5 +1,5 @@
 ---
-title: '概念 '
+title: 概念
 description: e コマースと AEM の一般的な概念
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce

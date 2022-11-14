@@ -1,5 +1,5 @@
 ---
-title: 'ページバージョンの処理 '
+title: ページバージョンの処理
 seo-title: Working with Page Versions
 description: ページのバージョンを作成、比較および復元します
 seo-description: Create, compare, and restore versions of a page

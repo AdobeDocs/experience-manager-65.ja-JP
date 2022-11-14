@@ -1,6 +1,6 @@
 ---
 title: レイアウトモードを使用してインタラクティブ通信のコンポーネントのサイズを変更
-description: 'レイアウトモードで使用できるレスポンシブグリッドを使用して、コンポーネントの位置を定義する '
+description: レイアウトモードで使用できるレスポンシブグリッドを使用して、コンポーネントの位置を定義する
 feature: Interactive Communication
 exl-id: 9534fcb2-4260-4dd0-9f7e-779b10fd3a22
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d

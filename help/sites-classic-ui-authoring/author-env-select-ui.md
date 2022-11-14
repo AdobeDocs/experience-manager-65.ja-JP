@@ -1,5 +1,5 @@
 ---
-title: 'UI の選択 '
+title: UI の選択
 seo-title: Selecting your UI
 description: オーサリングユーザーが使用しやすいように、タッチ対応 UI は必要に応じてクラシック UI に切り替えることができます。
 seo-description: For convenience to authoring users, the touch-enabled UI does allow for switching to the classic UI when necessary.

@@ -1,5 +1,5 @@
 ---
-title: '''チュートリアル：アダプティブフォームの作成'''
+title: 'チュートリアル：アダプティブフォームの作成'
 seo-title: Create an adaptive form
 description: このチュートリアルでは、アダプティブフォームの作成方法、レイアウトの設定、プレビューの表示方法について説明します。また、送信操作の設定方法についても説明します。
 seo-description: Learn to create, layout, and preview an adaptive form. Also, learn to configure submit actions.

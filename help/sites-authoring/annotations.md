@@ -1,5 +1,5 @@
 ---
-title: 'ページ編集時の注釈 '
+title: ページ編集時の注釈
 seo-title: Annotations when Editing a Page
 description: コンテンツに直接関連する多くのコンポーネントでは、注釈を追加できます
 seo-description: Many components directly related to content allow you to add an annotation

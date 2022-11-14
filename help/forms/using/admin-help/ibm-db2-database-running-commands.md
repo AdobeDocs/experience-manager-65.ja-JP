@@ -1,6 +1,6 @@
 ---
 title: 「IBM DB2 データベース：定期保守のコマンドの実行」
-seo-title: 'IBM DB2 database: Running commands for regular maintenance'
+seo-title: "IBM DB2 database: Running commands for regular maintenance"
 description: このドキュメントでは、AEM Forms データベースの定期保守で推奨される IBM DB2 コマンドの一覧を示します。
 seo-description: This document lists IBM DB2 commands that are recommended for regular maintenance of your AEM forms database.
 uuid: 235d59df-b9b9-4770-8b7d-00713701c3c2

@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media ニュースレターアーカイブ
-description: 'Experience League でアーカイブされている Dynamic Media ニュースレターは月刊のニュースレターでした。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されていました。アーカイブされたニュースレターには、廃止されたワンストップショップニュースレターで利用できた貴重な知識構築リソースが含まれています。アーカイブされたニュースレターには、ハウツービデオとソリューションの概要が含まれます。また、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介も含まれています。 '
+description: Experience League でアーカイブされている Dynamic Media ニュースレターは月刊のニュースレターでした。Dynamic Media および Dynamic Media Classic をすばやく習得して価値の実現にすぐに着手できるように工夫されていました。アーカイブされたニュースレターには、廃止されたワンストップショップニュースレターで利用できた貴重な知識構築リソースが含まれています。アーカイブされたニュースレターには、ハウツービデオとソリューションの概要が含まれます。また、画像プリセット、ビューアプリセット、ビデオプロファイルといった主要な機能の紹介も含まれています。
 keywords: Dynamic Media;ニュースレター;製品アップデート;ヒントとテクニック;イベント;カスタマーサクセス;ブログ;ブログ;画像;ビデオ;機能;機能
 contentOwner: Rick Brough
 solution: Experience Manager, Dynamic Media Classic

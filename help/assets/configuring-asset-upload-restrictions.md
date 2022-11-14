@@ -1,6 +1,6 @@
 ---
 title: アセットのアップロード制限を設定する
-description: 'ユーザーがアップロードできるアセット（ファイル）のタイプを制限する '
+description: ユーザーがアップロードできるアセット（ファイル）のタイプを制限する
 contentOwner: AG
 role: Developer, Admin, Architect
 feature: Asset Management,Upload

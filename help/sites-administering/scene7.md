@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
 exl-id: f244cfb5-5550-4f20-92f0-bb296e2bf76e
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '5484'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -577,7 +577,7 @@ Digital Asset Manager／Dynamic Media Classic アセットの同期でトリガ�
    >
    >`process=MaintainLayers&layerNaming=AppendName&createTemplate=true`
    >
-   >PSD ファイルに「レイヤー」が存在することを確認します。厳密に 1 つの画像またはマスク付きの画像の場合、処理対象のレイヤーが存在しないので、1 つの画像として処理されます。
+   >PSDファイルに「レイヤー」が含まれていることを確認します。 厳密に 1 つの画像またはマスク付きの画像の場合、処理対象のレイヤーが存在しないので、1 つの画像として処理されます。
 
 1. CRXDE Lite ページの左上隅の&#x200B;**[!UICONTROL すべて保存]**&#x200B;を選択します。
 

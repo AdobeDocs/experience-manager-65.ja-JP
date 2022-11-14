@@ -1,7 +1,7 @@
 ---
 title: Designer のインストールと設定
 seo-title: Installing and configuring Designer
-description: 'WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。ここでは、スタンドアロンの Designer をインストールする方法について説明します。  '
+description: WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。ここでは、スタンドアロンの Designer をインストールする方法について説明します。
 seo-description: Designer is available as a stand-alone installer and is also bundled with Workbench. Learn how to install stand-alone Designer.
 uuid: c5b779d1-cb6a-48f4-87d6-48464753e516
 contentOwner: gtalwar

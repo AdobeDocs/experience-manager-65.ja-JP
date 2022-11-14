@@ -1,5 +1,5 @@
 ---
-title: 'オーサリング - 環境とツール '
+title: オーサリング - 環境とツール
 seo-title: Authoring - the Environment and Tools
 description: AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています
 seo-description: The authoring environment of AEM provides various mechanisms for organizing and editing your content

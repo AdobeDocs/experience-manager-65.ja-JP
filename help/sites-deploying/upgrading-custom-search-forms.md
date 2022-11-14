@@ -1,5 +1,5 @@
 ---
-title: 'カスタム検索フォームのアップグレード '
+title: カスタム検索フォームのアップグレード
 seo-title: Upgrading Custom Search Forms
 description: この記事では、カスタム検索フォームを機能させるために、アップグレード後に必要となる調整について説明します。
 seo-description: This article details the adjustments that are required after an upgrade in order for the custom search forms to function.

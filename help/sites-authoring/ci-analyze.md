@@ -1,5 +1,5 @@
 ---
-title: 'ページパフォーマンスの分析 '
+title: ページパフォーマンスの分析
 seo-title: Analyzing Page Performance
 description: コンテンツインサイトページを使用して、作成しているページのパフォーマンスを分析します。
 seo-description: Use the Content Insight page to analyze the performance of the page that you are authoring

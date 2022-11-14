@@ -1,5 +1,5 @@
 ---
-title: 'キャンペーンの設定 '
+title: キャンペーンの設定
 seo-title: Setting up your campaign
 description: 新しいキャンペーンを設定するには、キャンペーンを保持するブランドを作成し、エクスペリエンスを保持するキャンペーンを作成して、最後に新しいキャンペーンのプロパティを定義する必要があります。
 seo-description: Setting up a new campaign requires creating a brand to hold your campaigns, creating a campaign to hold experiences, and finally defining the properties for your new campaign.

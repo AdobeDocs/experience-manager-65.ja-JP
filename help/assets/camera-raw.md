@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Adobe Camera Raw] のデジタルアセット処理サポート"'
+title: "[!DNL Adobe Camera Raw] のデジタルアセット処理サポート"
 description: ' [!DNL Adobe Experience Manager Assets] で  [!DNL Adobe Camera Raw]  のサポートを有効にする方法を説明します'
 contentOwner: AG
 role: Admin

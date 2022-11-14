@@ -10,7 +10,7 @@ products: SG_EXPERIENCEMANAGER/6.4
 discoiquuid: d211d8b0-e75f-49c3-808d-5d0e26ad3a6b
 role: Admin
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 100%
@@ -123,7 +123,7 @@ JEE 上の AEM Forms サービスには、少なくとも SOAP アクセスが�
 1. 「**書き出し**」をクリックして、既存の AEM Forms の設定を含んだ config.xml ファイルを生成します。
 1. エディターで XML ファイルを開き、次のエントリを見つけます。
 
-   `<entry key=”assertionValidityInMinutes” value=”120”/>`
+   `<entry key="assertionValidityInMinutes" value="120"/>`
 
 1. 値を 5（分単位）より大きい任意の数に変更し、ファイルを保存します。
 1. 管理コンソールで、既存の設定ファイルの読み込みと書き出しページに戻ります。

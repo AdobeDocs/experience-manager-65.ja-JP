@@ -1,5 +1,5 @@
 ---
-title: 'ビデオ '
+title: ビデオ
 seo-title: Video
 description: Assets では、ビデオアセットを統合管理できます。ビデオを直接 Assets にアップロードして Dynamic Media Classic に対する自動エンコーディングを行ったり、Assets から直接 Dynamic Media Classic ビデオにアクセスしてページオーサリングを行ったりできます。
 contentOwner: User

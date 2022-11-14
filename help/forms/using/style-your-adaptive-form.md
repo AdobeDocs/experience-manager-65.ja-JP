@@ -1,7 +1,7 @@
 ---
-title: 'アダプティブフォームのスタイル設定 '
+title: アダプティブフォームのスタイル設定
 seo-title: Style your adaptive form
-description: 'カスタムテーマの作成、個別コンポーネントのスタイル設定、テーマでの Web フォントの使用について説明します。 '
+description: カスタムテーマの作成、個別コンポーネントのスタイル設定、テーマでの Web フォントの使用について説明します。
 seo-description: Learn to create a custom theme, style individual components, and use web fonts in a theme
 page-status-flag: de-activated
 uuid: ffb2cc22-baaf-4525-a2e3-29f39271c670

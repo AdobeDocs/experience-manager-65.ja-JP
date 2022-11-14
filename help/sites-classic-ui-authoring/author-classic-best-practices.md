@@ -1,5 +1,5 @@
 ---
-title: 'ベストプラクティス '
+title: ベストプラクティス
 seo-title: Best Practices
 description: オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
 seo-description: Authoring best practices describe how to use AEM in the most efficient and most effective way possible. This growing list of topics includes a variety of areas in AEM.

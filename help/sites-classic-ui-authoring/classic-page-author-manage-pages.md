@@ -1,5 +1,5 @@
 ---
-title: 'ページの作成と整理 '
+title: ページの作成と整理
 seo-title: Creating and Organizing Pages
 description: ここでは、ページ上でコンテンツを作成できるように、AEM でページを作成および管理する方法について説明します。
 seo-description: This section describes how to create and manage pages with AEM so that you can then create content on those pages.

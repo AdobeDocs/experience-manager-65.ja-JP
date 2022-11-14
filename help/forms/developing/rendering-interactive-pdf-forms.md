@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 3cb307ec-9b7b-4f03-b860-48553ccee746
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
 workflow-type: tm+mt
 source-wordcount: '2487'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -55,7 +55,7 @@ Forms サービスが、どのようにしてインタラクティブフォー�
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>ユーザーがローン申し込みフォームに入力し、送信ボタンをクリックすると、データが <code>HandleData</code> Java サーブレットに送信されます。（<i>「ローン申し込みフォーム」</i>を参照してください。）</p></td>
+   <td><p>ユーザーがローン申し込みフォームに入力し、送信ボタンをクリックすると、データが <code>HandleData</code> Java サーブレットに送信されます。( <i>"Loan form"</i>.)</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>

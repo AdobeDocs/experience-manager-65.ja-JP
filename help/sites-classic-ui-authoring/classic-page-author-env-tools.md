@@ -1,5 +1,5 @@
 ---
-title: 'オーサリング - 環境とツール '
+title: オーサリング - 環境とツール
 seo-title: Authoring - the Environment and Tools
 description: Web サイトコンソールを使用すると、Web サイトを管理したり、Web サイト内を移動したりできます。2 つのペインを使用して、Web サイトの構造を展開したり、必要な要素に対するアクションを実行できます。
 seo-description: The Websites console allows you to manage and navigate your website. Using two panes, the structure of your website can be expanded and actions taken on the required elements.

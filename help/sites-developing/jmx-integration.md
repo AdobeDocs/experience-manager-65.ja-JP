@@ -1,5 +1,5 @@
 ---
-title: 'JMX コンソールを使用したサービスの統合 '
+title: JMX コンソールを使用したサービスの統合
 seo-title: Integrating Services with the JMX Console
 description: JMX コンソールを使用してサービスを管理する MBean を作成してデプロイすることで、管理タスクを実行できるようにサービス属性および操作を公開します
 seo-description: Expose service attributes and operations to enable administration tasks to be performed by creating and deploying MBeans to manage services using the JMX Console

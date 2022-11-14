@@ -11,10 +11,10 @@ topic-tags: coding
 discoiquuid: df7b60bb-4897-479e-a05e-1b1e9429ed87
 role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
 workflow-type: tm+mt
 source-wordcount: '2506'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ REST リクエストを使用する場合は、Forms サービスを直接呼び
 
 REST を使用してサービスを呼び出すと、AEM Forms のユーザー名とパスワードの入力を求められます。ただし、ユーザー名とパスワードを指定しない場合は、Service Security を無効にできます。
 
-REST を使用して Forms サービスを呼び出す（プロセスがアクティブになるとプロセスがサービスになります）には、REST エンドポイントを設定します。（[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)の「エンドポイントの管理」を参照。）
+REST を使用して Forms サービスを呼び出す（プロセスがアクティブになるとプロセスがサービスになります）には、REST エンドポイントを設定します。(「エンドポイントの管理」( [管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp).)
 
 REST エンドポイントを設定した後、HTTP GET メソッドまたは POST メソッドを使用して、Forms サービスを呼び出すことができます。
 
@@ -99,7 +99,7 @@ REST リクエストを使用してAEM Forms サービスを呼び出す場合�
  http://localhost:8080/rest/async_invoke/SomeService. SomeOperation?integer_input_variable=123&string_input_variable=abc
 ```
 
-この URL は、この呼び出しを行うジョブの識別子の値（「text/plain」形式）を返します。
+この URL は、この呼び出しをおこなうジョブの識別子の値（「text/plain」形式）を返します。
 
 非同期呼び出しのステータスは、 URLの呼び出しを使用して `services` を `async_status` に置き換えることで取得できます。URL は、この呼び出しに関連付けられたジョブの識別子の値を指定する `job_id` パラメーターを含む必要があります。次に例を示します。
 
@@ -107,7 +107,7 @@ REST リクエストを使用してAEM Forms サービスを呼び出す場合�
  http://localhost:8080/rest/async_status/SomeService.SomeOperation?job_id=2345353443366564
 ```
 
-この URL は、ジョブマネージャの仕様に従ってジョブステータスをエンコードする整数値（「text/plain」形式）を返します（例えば、2 は実行、3 は完了、4 は失敗といった意味）。
+この URL は、ジョブマネージャの仕様に従ってジョブステータスをエンコードする整数値（「text/plain」形式）を返します（例えば、2 は実行、3 は完了、4 は失敗といった意味で）。
 
 ジョブが完了した場合、URL は、サービスが同期的に呼び出された場合と同じ結果を返します。
 

@@ -1,6 +1,6 @@
 ---
-title: '"Microsoft SQL Server データベース：設定の最適なチューニング"'
-seo-title: 'Microsoft SQL Server database: Fine-tuning the configuration'
+title: "Microsoft SQL Server データベース：設定の最適なチューニング"
+seo-title: "Microsoft SQL Server database: Fine-tuning the configuration"
 description: Microsoft SQL Server データベースの設定の最適なチューニング方法について説明します。
 seo-description: Learn how you can fine tune the configuration of your Microsoft SQL Server database.
 uuid: 2d618aab-3c67-4edb-a28f-a20904689e6f

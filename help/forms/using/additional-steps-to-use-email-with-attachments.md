@@ -1,7 +1,8 @@
 ---
-title: '添付ファイル付きの電子メールを取得するための追加手順 '
-description: '添付ファイル付きの電子メールを取得するための追加手順   '
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+title: 添付ファイル付きの電子メールを取得するための追加手順
+description: 添付ファイル付きの電子メールを取得するための追加手順
+exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
+source-git-commit: 2e9b9c40f54aa54a946e4320341ed4a760c56fd1
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%

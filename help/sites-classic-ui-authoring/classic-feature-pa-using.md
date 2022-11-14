@@ -1,5 +1,5 @@
 ---
-title: 'ページ分析データの表示 '
+title: ページ分析データの表示
 seo-title: Seeing Page Analytics Data
 description: ページ分析データを使用すると、ページコンテンツの効果を測定できます。
 seo-description: Use page analytics data to gauge the effectiveness of their page content.

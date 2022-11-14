@@ -1,5 +1,5 @@
 ---
-title: 'オーサリング時の AEM のトラブルシューティング '
+title: オーサリング時の AEM のトラブルシューティング
 seo-title: Troubleshooting AEM when Authoring
 description: 以下のセクションでは、AEM の使用時に発生する可能性のあるいくつかの問題を取り上げます。それらのトラブルシューティング方法に関する推奨事項についても説明します。
 seo-description: The following section covers some issues that you might encounter when using AEM, together with suggestions on how to troubleshoot them.

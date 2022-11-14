@@ -34,9 +34,9 @@ ht-degree: 40%
 | **動詞** | **説明** |
 |---|---|
 | POST | メンバーがカレンダーイベントを作成します |
-| ADD | カレンダーイベントに対するメンバーのコメント |
+| 追加 | カレンダーイベントに対するメンバーのコメント |
 | UPDATE | メンバーのカレンダーイベントまたはコメントが編集されました |
-| DELETE | メンバーのカレンダーイベントまたはコメントが削除されました |
+| 削除 | メンバーのカレンダーイベントまたはコメントが削除されました |
 
 [コメントコンポーネント](essentials-comments.md) SocialEvent `topic`=  = com/adobe/cq/social/comment
 
@@ -45,7 +45,7 @@ ht-degree: 40%
 | POST | メンバーがコメントを作成します |
 | 追加 | メンバーがコメントに返信しました |
 | 更新 | メンバーのコメントが編集されました |
-| DELETE | メンバーのコメントが削除されます |
+| 削除 | メンバーのコメントが削除されます |
 
 [ファイルライブラリコンポーネント](essentials-file-library.md) SocialEvent `topic`=  = com/adobe/cq/social/fileLibrary
 
@@ -54,7 +54,7 @@ ht-degree: 40%
 | POST | メンバーがフォルダーを作成します |
 | ATTACH | メンバーがファイルをアップロードします |
 | 更新 | メンバーがフォルダーまたはファイルを更新します |
-| DELETE | メンバーがフォルダまたはファイルを削除しました |
+| 削除 | メンバーがフォルダまたはファイルを削除しました |
 
 [フォーラムコンポーネント](essentials-forum.md) SocialEvent `topic`=  = com/adobe/cq/social/forum
 
@@ -63,7 +63,7 @@ ht-degree: 40%
 | POST | メンバーがフォーラムトピックを作成します |
 | 追加 | フォーラムトピックに返信するメンバー |
 | 更新 | メンバーのフォーラムトピックまたは返信が編集されました |
-| DELETE | メンバーのフォーラムトピックまたは返信が削除されました |
+| 削除 | メンバーのフォーラムトピックまたは返信が削除されました |
 
 [ジャーナルコンポーネント](blog-developer-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/journal
 
@@ -72,7 +72,7 @@ ht-degree: 40%
 | POST | メンバーがブログ記事を作成します |
 | 追加 | ブログ記事に対するメンバーコメント |
 | 更新 | メンバーのブログ記事またはコメントが編集されました |
-| DELETE | メンバーのブログ記事またはコメントが削除されました |
+| 削除 | メンバーのブログ記事またはコメントが削除されました |
 
 [Q&amp;A コンポーネント](qna-essentials.md) SocialEvent `topic` = com/adobe/cq/social/qna
 
@@ -83,7 +83,7 @@ ht-degree: 40%
 | 更新 | メンバーの Q&amp;A の質問または回答が編集されます |
 | SELECT | メンバーの回答が選択されています |
 | UNSELECT | メンバーの回答が選択解除されました |
-| DELETE | メンバーの Q&amp;A の質問または回答が削除されます |
+| 削除 | メンバーの Q&amp;A の質問または回答が削除されます |
 
 [レビューコンポーネント](reviews-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/review
 
@@ -91,7 +91,7 @@ ht-degree: 40%
 |---|---|
 | POST | メンバーがレビューを作成 |
 | 更新 | メンバーのレビューが編集されました |
-| DELETE | メンバーのレビューが削除されました |
+| 削除 | メンバーのレビューが削除されました |
 
 [評価コンポーネント](rating-basics.md) SocialEvent `topic`=  = com/adobe/cq/social/tally
 

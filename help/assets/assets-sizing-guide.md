@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Assets] サイジングガイド"'
+title: "[!DNL Assets] サイジングガイド"
 description: ' [!DNL Adobe Experience Manager Assets] のデプロイに必要なインフラストラクチャとリソースを見積もるための効率的な指標を決定するためのベストプラクティス。'
 contentOwner: AG
 role: Architect, Admin

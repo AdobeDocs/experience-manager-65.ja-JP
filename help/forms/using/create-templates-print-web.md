@@ -1,5 +1,5 @@
 ---
-title: '"チュートリアル：テンプレートの作成"'
+title: "チュートリアル：テンプレートの作成"
 seo-title: Create Print and Web templates for Interactive Communication
 description: インタラクティブ通信用の印刷テンプレートと Web テンプレートの作成
 seo-description: Create Print and Web templates for Interactive Communication

@@ -267,10 +267,10 @@ Dynamic Media Classic のコンテンツブラウザーを使用すると、Dyna
 >* [セキュアプレビューが有効](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)に設定されている場合、Dynamic Media Classic 上の公開済みアセットと未公開アセットの両方が Dynamic Media Classic コンテンツブラウザーに表示されます。
 >* コンテンツブラウザーに&#x200B;**[!UICONTROL Dynamic Media Classic]** または **[!UICONTROL S7]**&#x200B;アイコンがオプションとして表示されない場合は、 [Dynamic Media Classic が Experience Manager と連携するように設定](/help/sites-administering/scene7.md)しなければなりません。
 >* ビデオの場合、Dynamic Media Classic コンテンツブラウザーは次の項目をサポートしています。
->
->   * アダプティブビデオセット：複数の Screens でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
->   * 単一の MP4 ビデオ
->   * 単一の F4V ビデオ
+   >
+   >   * アダプティブビデオセット：複数の Screens でシームレスに再生するために必要なすべてのビデオレンディションのコンテナ
+   >   * 単一の MP4 ビデオ
+   >   * 単一の F4V ビデオ
 
 
 ### タッチ操作向け UI でのコンテンツを参照 {#browsing-content-in-the-touch-optimized-ui}

@@ -335,7 +335,8 @@ Adobe Campaign コンポーネントには、ほとんどのコンポーネン�
 
 大部分のコンポーネントでは、次の項目を設定できます。
 
-#### タイトルとテキスト {#title-and-text}
+#### タイトルとテキスト
+ {#title-and-text}
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 

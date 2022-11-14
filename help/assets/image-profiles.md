@@ -10,10 +10,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 3b869153e0fdee08df2a4aaf73fe3ce9fbebaad7
+source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
 workflow-type: tm+mt
 source-wordcount: '2831'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -21,10 +21,13 @@ ht-degree: 98%
 
 画像をアップロードするときに、フォルダーにイメージプロファイルを適用することで、アップロード時に自動的に画像を切り抜くことができます。
 
+>[!NOTE]
+>
+>スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
+
 >[!IMPORTANT]
 >
->・スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
-・イメージプロファイルは、PDF、アニメーションGIF、INDD(Adobe InDesign) ファイルには適用されません。
+>イメージプロファイルは、PDF ファイル、アニメーション GIF ファイル、INDD（Adobe InDesign）ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
@@ -55,7 +58,8 @@ ht-degree: 98%
 ダウンサンプリングされた最終的な画像に対するシャープフィルター効果を微調整するには、「**[!UICONTROL アンシャープマスク]**」を選択します。効果の強さ、効果の半径（ピクセル単位）、無視されるコントラストのしきい値を調整できます。この効果では、Adobe Photoshop の「*アンシャープマスク*」フィルターと同じオプションを使用します。
 
 >[!NOTE]
-アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、ptiff 内の最大サイズのレンディションはアンシャープマスクの影響を受けませんが、サムネールのような小さいサイズのレンディションは変更されます（そしてアンシャープマスクを表示します）。
+>
+>アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、ptiff 内の最大サイズのレンディションはアンシャープマスクの影響を受けませんが、サムネールのような小さいサイズのレンディションは変更されます（そしてアンシャープマスクを表示します）。
 
 「**[!UICONTROL アンシャープマスク]**」には次のフィルタリングオプションがあります。
 
@@ -159,8 +163,9 @@ ht-degree: 98%
 
 ## 単一の画像のスマート切り抜きまたはスマートスウォッチの編集 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
->[!IMPORTANT]
-スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
+>[!NOTE]
+>
+>スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
 
 画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を手動で行って、焦点位置を細かく調整することができます。
 

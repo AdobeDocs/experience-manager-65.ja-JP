@@ -1,5 +1,5 @@
 ---
-title: 'デザインモードでのコンポーネントの設定 '
+title: デザインモードでのコンポーネントの設定
 seo-title: Configuring Components in Design Mode
 description: AEM インスタンスが標準インストールされている場合、コンポーネントの選択はサイドキックですぐに使用できます。これらに加えて、その他の様々なコンポーネントも使用できます。このようなコンポーネントを有効または無効にするには、デザインモードを使用します。
 seo-description: When AEM instance is installed out-of-the-box, a selection of components are immediately available in the sidekick. In addition to these, various other components are also available. You can use Design mode to Enable/disable such components.

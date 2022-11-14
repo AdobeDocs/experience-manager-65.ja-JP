@@ -1,7 +1,7 @@
 ---
 title: 通し番号を使用したドキュメントのアセンブリ
 seo-title: Assembling Documents Using Bates Numbering
-description: '通し番号を使用して、Java および web サービス API を使用して PDF ドキュメントをアセンブリします。 '
+description: 通し番号を使用して、Java および web サービス API を使用して PDF ドキュメントをアセンブリします。
 seo-description: Use Bates numbering to assemble PDF documents using the Java and Web Service API.
 uuid: 28d5faeb-6915-41a2-b6a0-78d255df024f
 contentOwner: admin

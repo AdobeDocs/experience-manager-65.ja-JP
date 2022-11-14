@@ -1,5 +1,5 @@
 ---
-title: '電子メールサービスプロバイダーへの電子メールの公開 '
+title: 電子メールサービスプロバイダーへの電子メールの公開
 seo-title: Publishing an Email to Email Service Providers
 description: ニュースレターを ExactTarget や Silverpop Engage などの電子メールサービスに公開することができます。
 seo-description: You can publish newsletters to e-mail services such as ExactTarget and Silverpop Engage.

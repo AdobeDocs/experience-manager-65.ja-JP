@@ -1,7 +1,7 @@
 ---
 title: FormsService にドキュメントを渡す
 seo-title: Passing Documents to the FormsService
-description: 'フォームデザインを含む com.adobe.idp.Document オブジェクトを Forms サービスに渡します。Forms サービスは、com.adobe.idp.Document オブジェクトにあるフォームデザインをレンダリングします。 '
+description: フォームデザインを含む com.adobe.idp.Document オブジェクトを Forms サービスに渡します。Forms サービスは、com.adobe.idp.Document オブジェクトにあるフォームデザインをレンダリングします。
 seo-description: Pass a com.adobe.idp.Document object that contains the form design to the Forms service. The Forms service renders the form design located in the com.adobe.idp.Document object.
 uuid: 841e97f3-ebb8-4340-81a9-b6db11f0ec82
 contentOwner: admin

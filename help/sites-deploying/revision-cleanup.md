@@ -523,7 +523,7 @@ TarMK GC: no base state available, running full compaction instead
     <th>フェーズ</th>
     <th>ログメッセージ</th>
     <th>説明</th>
-    <th>次の手順</th>
+    <th>次のステップ</th>
   </tr>  
   <tr>
     <td>見積もり</td>
@@ -533,7 +533,7 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
   <tr>
-    <td>該当なし</td>
+    <td>アプローチ</td>
     <td>TarMK GC #2：見積もりが中断されました：${REASON}。Skipping compaction.</td>
     <td>見積もりフェーズが完了せずに終了しました。見積もりフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。</td>
     <td>示されている理由によって異なります。</td>
@@ -547,14 +547,14 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
    <tr>
-    <td>該当なし</td>
+    <td>アプローチ</td>
     <td>TarMK GC #2：コンパクションがキャンセルされました：${REASON}。</td>
     <td>コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。また、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルすることで、コンパクションをキャンセルすることもできます。</td>
     <td>示されている理由によって異なります。</td>
   </td>
   </tr>
   <tr>
-    <td>該当なし</td>
+    <td>アプローチ</td>
     <td>TarMK GC #2：5 回のサイクル後、32.902 分 (1974140 ms) でコンパクションに失敗しました.</td>
     <td>このメッセージは、復旧不可能なエラーがあったのではなく、一定数の試行の後にコンパクションが終了されたことのみを意味します。また、 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">」を参照してください。</a></td>
     <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> および オンラインでのリビジョンクリーンアップの実行 の節の最後の質問をお読みください。</a></td>

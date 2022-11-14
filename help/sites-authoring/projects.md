@@ -95,7 +95,7 @@ ht-degree: 100%
 * [プロジェクト情報](#project-info)
 * [チーム](#team)
 * [ランディングページ](#landing-pages)
-* [電子メール](#emails)
+* [メール](#emails)
 * [ワークフロー](#workflows)
 * [ローンチ](#launches)
 * [タスク](#tasks)
@@ -169,7 +169,7 @@ ht-degree: 100%
 
 このワークフローについては、[ランディングページを作成ワークフロー](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)ドキュメントで説明します。
 
-### 電子メール {#emails}
+### メール {#emails}
 
 **電子メール**&#x200B;タイルを使用して、電子メールのリクエストを管理できます。このタイルで、**電子メールをリクエスト**&#x200B;ワークフローを開始します。
 

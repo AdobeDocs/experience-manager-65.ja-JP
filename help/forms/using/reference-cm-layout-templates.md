@@ -1,7 +1,7 @@
 ---
 title: 参照レターテンプレート
 seo-title: Reference letter templates
-description: 'AEM Forms には、すばやくレターを作成できる Correspondence Management のレターレイアウトテンプレートが用意されています。 '
+description: AEM Forms には、すばやくレターを作成できる Correspondence Management のレターレイアウトテンプレートが用意されています。
 seo-description: AEM Forms provides Correspondence Management letter layout templates that you can use to create letters quickly.
 uuid: 3b2312d9-daa0-435b-976f-4969b54c5056
 products: SG_EXPERIENCEMANAGER/6.3/FORMS

@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -147,7 +147,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 1. Javascript コードを **s_doPlugins** 関数に追加します。
 
-次の例では、一般的な区切り文字「|」を使用して、ページ上でキャプチャされたデータを階層順に連結しています。
+次の例では、ページに取り込まれたデータを階層順に連結し、共通の区切り文字「|」を使用して連結します。
 
 Adobe Analytics フレームワークには、以下の設定があります。
 

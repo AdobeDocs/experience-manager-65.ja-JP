@@ -1,5 +1,5 @@
 ---
-title: 'ページの作成と整理 '
+title: ページの作成と整理
 description: AEM を使用してページを作成および管理する方法
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d

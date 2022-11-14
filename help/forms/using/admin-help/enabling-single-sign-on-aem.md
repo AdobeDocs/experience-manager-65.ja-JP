@@ -1,5 +1,5 @@
 ---
-title: 'AEM forms でのシングルサインオンの有効化 '
+title: AEM forms でのシングルサインオンの有効化
 seo-title: Enabling single sign-on in AEM forms
 description: HTTP ヘッダーと SPNEGO を使用してシングルサインオン（SSO）を有効化する方法について説明します。
 seo-description: Learn how to enable single sign-on (SSO) using HTTP headers and SPNEGO.

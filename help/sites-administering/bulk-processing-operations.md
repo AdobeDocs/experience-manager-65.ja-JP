@@ -1,7 +1,7 @@
 ---
 title: 一括処理操作
 seo-title: Bulk Processing Operations
-description: 'null'
+description: null
 seo-description: null
 page-status-flag: never-activated
 uuid: 62a6c379-a460-4f8f-a909-03d04fa8944b

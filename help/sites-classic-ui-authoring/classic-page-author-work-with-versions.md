@@ -1,5 +1,5 @@
 ---
-title: 'ページバージョンの処理 '
+title: ページバージョンの処理
 seo-title: Working with Page Versions
 description: バージョン管理では、特定の時点でのページの「スナップショット」が作成されます。
 seo-description: Versioning creates a "snapshot" of a page at a specific point in time.

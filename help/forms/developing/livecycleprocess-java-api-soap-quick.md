@@ -1,7 +1,7 @@
 ---
 title: LiveCycleProcess Java API クイックスタート（SOAP）
 seo-title: LiveCycleProcess Java API(SOAP)Quick Start
-description: 'LiveCycleProcess Java API（SOAP）クイックスタートを使用して、プロセスインスタンスの検索、プロセスインスタンスの休止、中断されたプロセスインスタンスの開始、プロセスインスタンスの終了、プロセスデータのパージ、ジョブのステータスの取得を行います。 '
+description: LiveCycleProcess Java API（SOAP）クイックスタートを使用して、プロセスインスタンスの検索、プロセスインスタンスの休止、中断されたプロセスインスタンスの開始、プロセスインスタンスの終了、プロセスデータのパージ、ジョブのステータスの取得を行います。
 seo-description: Use the LiveCycleProcess Java API (SOAP) Quick Start to search for process instances, suspend process instances, start suspended process instances, terminate process instances, purge process data, and retrieve the status of a job.
 uuid: ad14fb50-8dd5-44e0-9e48-f0f0334e04d6
 contentOwner: admin

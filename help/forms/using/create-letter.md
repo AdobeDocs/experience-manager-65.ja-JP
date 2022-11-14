@@ -1,7 +1,7 @@
 ---
 title: レターの作成
 seo-title: Create Letter
-description: 'このトピックでは、レターを作成する手順、レターにデータモジュールや添付ファイルを追加する手順、Correspondence Management でレターをプレビューする手順について説明します。 '
+description: このトピックでは、レターを作成する手順、レターにデータモジュールや添付ファイルを追加する手順、Correspondence Management でレターをプレビューする手順について説明します。
 seo-description: This topic gives you the steps to create a letter, add data modules and attachments to it, and preview it in Correspondence Management.
 uuid: b5cdbf01-db85-4ff8-9fda-1489542bffef
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

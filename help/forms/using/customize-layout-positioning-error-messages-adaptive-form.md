@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームのエラーメッセージのレイアウトと位置のカスタマイズ
 seo-title: Customize layout and positioning of error messages of an adaptive form
-description: 'アダプティブフォームのエラーメッセージのレイアウトと位置をカスタマイズできます。 '
+description: アダプティブフォームのエラーメッセージのレイアウトと位置をカスタマイズできます。
 seo-description: You can customize layout and positioning of the error messages of an adaptive for.
 uuid: 6d3490f6-c867-44c9-a527-55f6d7221f99
 content-type: reference

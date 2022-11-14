@@ -1,5 +1,5 @@
 ---
-title: 'アクティビティの管理 '
+title: アクティビティの管理
 seo-title: Managing Activities
 description: アクティビティコンソールでは、ブランドのマーケティングアクティビティを作成、整理、管理できます。次のことができます。
 seo-description: The Activities console enables you to create, organize, and manage the marketing activities of your brands

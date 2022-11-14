@@ -1,7 +1,7 @@
 ---
 title: ローンチの昇格
 seo-title: Promoting Launches
-description: 'コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 '
+description: コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。
 seo-description: You need to promote launch pages to move the content back into the source (production) before publishing.
 uuid: 2dc41817-fcfb-4485-a085-7b57b9fe89ec
 contentOwner: Chris Bohnert

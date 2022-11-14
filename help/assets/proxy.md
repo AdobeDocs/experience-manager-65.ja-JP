@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Assets] プロキシ開発"'
+title: "[!DNL Assets] プロキシ開発"
 description: プロキシは、プロキシワーカーを使用してジョブを処理する  [!DNL Experience Manager]  インスタンスです。 [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネントを設定する方法、カスタムプロキシワーカーを開発する方法について説明します。
 contentOwner: AG
 role: Admin, Architect
