@@ -72,7 +72,7 @@ _gaq.push(['_trackPageview']);
 
    ![](assets/analytics_genericoverview.png)
 
-1. + をクリックし、ダイアログを使用して新しい設定を追加します。最小限の割り当てでは、名前（例：google analytics）を試用します。
+1. &#x200B;+ をクリックし、ダイアログを使用して新しい設定を追加します。最小限の割り当てでは、名前（例：google analytics）を試用します。
 
    ![](assets/analytics_addconfig.png)
 

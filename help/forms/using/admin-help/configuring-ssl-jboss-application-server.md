@@ -90,7 +90,7 @@ JBoss Application Server で SSL を設定するには、認証時に SSL 秘密
 
    * サーバークラスター - `[appserver root]`¥domain¥configuration¥domain_&lt;dbname>.xml
 
-1. 
+1. &#x200B;
    * **シングルサーバーの場合、** lc_&lt;dbaname/tunkey>.xml ファイルの &lt;security-realms> セクションに次のテキストを追加します。
 
    ```xml
