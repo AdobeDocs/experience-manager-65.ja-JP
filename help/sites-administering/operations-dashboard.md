@@ -12,7 +12,7 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: ee45113daee495d9b56a0f6e2c463d9cca006540
+source-git-commit: dd8f24ce412a8ca6c44224a7602533dae0898e92
 workflow-type: tm+mt
 source-wordcount: '6230'
 ht-degree: 99%
@@ -520,7 +520,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 この URL から直接アクセスすることもできます。`https://serveraddress:port/libs/granite/operations/content/diagnosistools/indexManager.html`
 
-![screen-shot_2019-06-18at154754](assets/screen-shot_2019-06-18at154754.png)
+![index_manager](assets/index_manager.png)
 
 この UI で、画面左上隅の検索ボックスにフィルター条件を入力して、テーブル内のインデックスにフィルターを適用することができます。
 
