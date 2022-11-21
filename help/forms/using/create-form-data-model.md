@@ -1,5 +1,5 @@
 ---
-title: '"チュートリアル：フォームデータモデルの作成 "'
+title: "チュートリアル：フォームデータモデルの作成 "
 seo-title: Create Form Data Model Tutorial
 description: フォームデータモデルの作成
 seo-description: Create form data model
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.3/FORMS
 discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c3178eefb5aca3afea2f3df8381b52461247d6f3
 workflow-type: tm+mt
-source-wordcount: '1421'
-ht-degree: 99%
+source-wordcount: '1518'
+ht-degree: 93%
 
 ---
 
@@ -57,6 +57,7 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 
 1. [!DNL MySQL] データベース用の JDBC ドライバーを OSGi バンドルとしてインストールします。
 
+   1. ダウンロード [[!DNL MySQL] JDBC ドライバ OSGi バンドル](http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html).
    1. AEM [!DNL Forms] のオーサーインスタンスに管理者としてログインし、AEM Web コンソールのバンドルに移動します。デフォルトの URL は、[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles) です。
 
    1. **[!UICONTROL Install/Update]** をタップします。「[!UICONTROL バンドルのアップロード／インストール]」ダイアログが表示されます。
@@ -73,8 +74,18 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
       * **DataSource service property name**：データソース名を保管するサービスプロパティの名前を指定します。この名前は、データソースインスタンスを OSGi サービスとして登録する際に指定されます。例えば、「**datasource.name**」などを指定します。
       * **JDBC driver class**：JDBC ドライバーの Java クラス名を指定します。[!DNL MySQL] データベースの場合は、**com.mysql.jdbc.Driver**&#x200B;と指定します。
       * **JDBC connection URI**：データベースの接続 URL を指定します。ポート 3306 およびスキーマ weretail で実行される [!DNL MySQL] データベースの場合、URL は `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8` です。
+
+      >[!NOTE]
+      >
+      > 次の場合に [!DNL MySQL] データベースがファイアウォール内にある場合、データベースホスト名はパブリック DNS ではありません。 データベースの IP アドレスを */etc/hosts* AEMホストマシンのファイル。
+
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
+
+      >[!NOTE]
+      >
+      >AEM Formsは、の NT 認証をサポートしていません [!DNL MySQL]. AEM Web コンソール ( ) に移動します。 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) 「Apache Sling Connection Pooled Datasource」を検索します。「JDBC connection URI」プロパティの値を「integratedSecurity」に設定し、作成したユーザー名とパスワードを使用して、 [!DNL MySQL] データベース。
+
       * **Test on Borrow：** は **[!UICONTROL Test on Borrow]** オプションを有効にします。
       * **Test on Return：** は **[!UICONTROL Test on Return]** オプションを有効にします。
       * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例： **選択 &#42; 顧客の詳細から**.
@@ -85,6 +96,8 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
          以下のような設定が作成されます。
 
          ![relational-database-data-source-configuration](assets/relational-database-data-source-configuration.png)
+
+
 
 ## 手順 2：フォームデータモデルを作成する {#create-fdm}
 
