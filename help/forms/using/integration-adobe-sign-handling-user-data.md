@@ -10,7 +10,7 @@ feature: Acrobat Sign
 role: Admin
 exl-id: b43ed9b7-b1ef-4878-ae3b-643b558eed7b
 source-git-commit: 28d092a7713438c27213766f0bb702b699305b88
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '307'
 ht-degree: 100%
 
