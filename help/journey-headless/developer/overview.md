@@ -3,7 +3,7 @@ title: AEM ヘッドレスデベロッパージャーニー
 description: AEM ヘッドレス CMS のドキュメント。AEM の強力で柔軟なヘッドレス機能とその能力、および初めての開発プロジェクトでの活用方法を示すガイド付きのジャーニーをここから始めてください。
 exl-id: f24fb308-daa7-426f-ba45-37a236b5a500
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1212'
 ht-degree: 100%
 
