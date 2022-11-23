@@ -4,7 +4,7 @@ description: アプリケーションサーバーからデプロイされる AEM
 feature: Upgrading
 exl-id: 86dd10ae-7f16-40c8-84b6-91ff2973a523
 source-git-commit: c0574b50f3504a4792405d6fcd8aa3a2e8e6c686
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '452'
 ht-degree: 100%
 
