@@ -3,7 +3,7 @@ title: アセットフォルダーのヘッドレス作成のクイック開始�
 description: AEM コンテンツフラグメントモデルを使用すると、ヘッドレスコンテンツの基盤となるコンテンツフラグメントの構造を定義できます。
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
 source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '379'
 ht-degree: 100%
 
