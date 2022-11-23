@@ -8,7 +8,7 @@ user-guide-description: このガイドでは、従来のユーザーインタ�
 feature: Authoring
 role: User
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
 ht-degree: 100%
 
