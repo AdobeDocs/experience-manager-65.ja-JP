@@ -12,7 +12,7 @@ discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '774'
 ht-degree: 100%
 
@@ -148,7 +148,7 @@ pom.xml
 
    src/main/java/com/adobe/aem/docs/search/ReplicationPredicateEvaluator.java
 
-   次のスニペットは、[ユニファイド diff 形式](https://en.wikipedia.org/wiki/Diff#Unified_format)での違いを示しています
+   次のスニペットは、[ユニファイド diff 形式](https://ja.wikipedia.org/wiki/Diff#.E3.83.A6.E3.83.8B.E3.83.95.E3.82.A1.E3.82.A4.E3.83.89.E5.BD.A2.E5.BC.8F_.28Unified_format.29)での違いを示しています
 
 ```
 @@ -19,8 +19,11 @@
