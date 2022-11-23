@@ -3,7 +3,7 @@ title: AEM 内での外部 SPA の編集
 description: このドキュメントでは、スタンドアロン SPA を AEM インスタンスにアップロードし、編集可能なコンテンツのセクションを追加し、オーサリングを有効にするための推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
 source-git-commit: 237de641ba02705f8171b1526946a4dc1b60b6a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2392'
 ht-degree: 100%
 
