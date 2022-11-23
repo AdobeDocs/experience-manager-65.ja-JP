@@ -10,7 +10,7 @@ topic-tags: publish
 discoiquuid: 515ceaf6-c132-4e1a-b3c6-5d2c1ccffa7c
 exl-id: cfca6656-d2db-476d-a734-7a1d1e44894e
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '693'
 ht-degree: 100%
 
