@@ -10,8 +10,8 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: cb621332-a149-4f8d-9425-fd815b033c38
 exl-id: 2b396850-e9fb-46d9-9daa-ebd410a9e1a5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: ht
 source-wordcount: '2004'
 ht-degree: 100%
 
@@ -559,7 +559,7 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 ### ワークフローの状態の確認時のシステムワークフローの除外 {#filtering-out-system-workflows-when-checking-workflow-status}
 
-[WorkflowStatus API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) を使用して、ノードのワークフローステータスに関する情報を取得できます。
+[WorkflowStatus API](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) を使用して、ノードのワークフローステータスに関する情報を取得できます。
 
 各種メソッドには以下のパラメーターがあります。
 
@@ -615,7 +615,7 @@ var wfData = wfSession.newWorkflowData("JCR_PATH", repoPath);
 wfSession.startWorkflow(model, wfData);
 
 // querying and managing a workflow
-var workflows = wfSession.getWorkflows(“RUNNING“);
+var workflows = wfSession.getWorkflows("RUNNING");
 var workflow= wfSession.getWorkflow(id);
 wfSession.suspendWorkflow(workflow);
 wfSession.resumeWorkflow(workflow);
