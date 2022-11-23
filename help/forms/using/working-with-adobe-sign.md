@@ -12,7 +12,7 @@ docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
 source-git-commit: 4714554609a10e58b1c7141696d694fac46887a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3826'
 ht-degree: 100%
 
@@ -195,7 +195,6 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
    * **[!UICONTROL 署名者の電子メールアドレス]：**&#x200B;署名者の電子メールアドレスを指定します。署名者は、ここで指定した電子メールアドレスで、署名する必要があるドキュメントやフォームを受信します。フォームフィールドで指定した電子メールアドレスを使用することも、ログインユーザーの AEM ユーザープロファイルで指定した電子メールアドレスを使用することも、電子メールアドレスを手動で入力することもできます。このステップは、必ず実行する必要があります。最初の署名者または唯一の署名者（署名者が 1 人の場合）のメールアドレスが、AEM Cloud Service の設定に使用された [!DNL Adobe Sign] アカウントと一致していないことを確認します。
 
    * **[!UICONTROL 署名者の認証方法]：**&#x200B;署名するフォームを開く前にユーザーを認証する方法を指定します。電話による認証、ナレッジベースによる認証、ソーシャル ID に基づく認証のいずれかを選択することができます。
-
    >[!NOTE]
    >
    >    * ソーシャル ID に基づく認証の場合、Facebook、Google、LinkedIn を使用した認証オプションがデフォルトで用意されています。これ以外のソーシャル認証プロバイダーを使用する場合は、[!DNL Adobe Sign] サポートまでお問い合わせください。
@@ -249,7 +248,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
 
    次を使用して、アダプティブフォームにデジタル署名を適用します。
 
-   * クラウド署名：トラストサービスプロバイダーがホストする[デジタル ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) を使用して署名します。
+   * クラウド署名：トラストサービスプロバイダーがホストする[デジタル ID](https://helpx.adobe.com/jp/sign/kb/digital-certificate-providers.html) を使用して署名します。
    * Adobe Acrobat または Reader：ドキュメントをダウンロードして Adobe Acrobat または Reader で開き、スマートカード、USB トークン、ファイルベースのデジタル ID を使用して署名します。
 
    クラウド署名フィールドをアダプティブフォームに追加した後、次の手順を実行して設定プロセスを完了します。
@@ -298,6 +297,7 @@ AEM [!DNL Forms] の 1 つのインスタンスに対して、複数の [!DNL Ad
    >
    >* **[!UICONTROL 署名者ステップ]**&#x200B;コンポーネントをフォームにドラッグアンドドロップすると、「**[!UICONTROL 署名者とフォーム記入者は同一ですか？]**」オプションが自動的に「**はい**」に設定されます。フォームを正しく機能させるには、このオプションが設定されている必要があります。
    >* 最適なエクスペリエンスを得るには、署名ステップコンポーネントの後に概要ステップコンポーネントを使用します。署名ステップコンポーネントでフォームに署名する際に入力が完了すると、概要ステップが自動的に送信され、すぐにフォームが送信されます。概要ステップを使用しない場合、自動送信は、[Adobe Sign Configuration Service](../../forms/using/adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-scheduler-to-sync-the-signing-status) を使用して設定された間隔の後にのみトリガーされます。
+
    >
    >以下に、いくつかのベストプラクティスを示します。
    >
