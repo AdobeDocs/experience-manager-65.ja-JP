@@ -12,7 +12,7 @@ discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
 source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4628'
 ht-degree: 100%
 
@@ -133,7 +133,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 * ドキュメントがサーバー上にない場合は、Remoting アップロードサーブレットを使用して、ドキュメントを AEM Forms にアップロードします。AEM Forms の新機能は、セキュアなドキュメントをアップロードする機能です。セキュアなドキュメントをアップロードする場合、*ドキュメントアップロードアプリケーションユーザー*&#x200B;の役割を持つユーザーを使用する必要があります。この役割がないと、ユーザーはセキュアなドキュメントをアップロードできません。セキュアなドキュメントをアップロードする場合は、シングルサインオンを使用することをお勧めします。（[Remoting を使用したプロセスを呼び出すためのセキュアなドキュメントの受け渡し](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照。）
 
 >[!NOTE]
->セキュアでないドキュメントのアップロードを許可するように AEM Forms が設定されている場合は、ドキュメントのアップロードアプリケーションユーザーの役割を持たないユーザーを使用してドキュメントをアップロードできます。ユーザーは、ドキュメントのアップロード権限を持つこともできます。ただし、AEM Forms がセキュアなドキュメントのみを許可するように設定されている場合は、ユーザーに「ドキュメントのアップロードアプリケーションユーザー」の役割または「ドキュメントのアップロード」権限があることを確認します。（[セキュアなドキュメントとセキュアでないドキュメントを受け入れるための AEM Forms の設定](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)を参照。
+セキュアでないドキュメントのアップロードを許可するように AEM Forms が設定されている場合は、ドキュメントのアップロードアプリケーションユーザーの役割を持たないユーザーを使用してドキュメントをアップロードできます。ユーザーは、ドキュメントのアップロード権限を持つこともできます。ただし、AEM Forms がセキュアなドキュメントのみを許可するように設定されている場合は、ユーザーに「ドキュメントのアップロードアプリケーションユーザー」の役割または「ドキュメントのアップロード」権限があることを確認します。（[セキュアなドキュメントとセキュアでないドキュメントを受け入れるための AEM Forms の設定](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)を参照。
 
 指定したアップロード URL には、標準の Flash アップロード機能を使用します：`https://SERVER:PORT/remoting/lcfileupload`。その後、タイプ `Document` の入力パラメーターが予想される場所であればどこでも `DocumentReference` を使用できます
 ` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`Remoting クイックスタートは、Remoting アップロードサーブレットを使用して、PDF ファイルを `MyApplication/EncryptDocument` プロセスに渡します。（[AEM Forms Remoting（AEM Forms では非推奨）を使用してセキュアでないドキュメントを渡すことによる、短時間のみ有効なプロセスの呼び出し](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)を参照。）
@@ -197,7 +197,7 @@ Flex で作成されたアプリケーションから AEM Forms プロセスを�
 1. 戻り値を処理します。
 
 >[!NOTE]
->この節では、セキュアでないドキュメントをアップロードするように AEM Forms が設定されている場合に、AEM Forms プロセスを呼び出してドキュメントをアップロードする方法について説明します。AEM Forms プロセスを呼び出し、セキュアなドキュメントをアップロードする方法、およびセキュアなドキュメントとセキュアでないドキュメントを受け入れるように AEM Forms を設定する方法について詳しくは、[Remoting を使用してプロセスを呼び出すための安全なドキュメントの受け渡し](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照してくだい。
+この節では、セキュアでないドキュメントをアップロードするように AEM Forms が設定されている場合に、AEM Forms プロセスを呼び出してドキュメントをアップロードする方法について説明します。AEM Forms プロセスを呼び出し、セキュアなドキュメントをアップロードする方法、およびセキュアなドキュメントとセキュアでないドキュメントを受け入れるように AEM Forms を設定する方法について詳しくは、[Remoting を使用してプロセスを呼び出すための安全なドキュメントの受け渡し](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)を参照してくだい。
 
 **mx:RemoteObject インスタンスの作成**
 
@@ -302,14 +302,14 @@ AEM Forms User Manager で Flex アプリケーションからリモートリク
 カスタム認証の場合、サーバーはクライアントに fault を送信し、認証が必要であることを示します。
 
 >[!NOTE]
->HTTP トークンを使用した認証の実行について詳しくは、[HTTP トークンを使用した SSO 認証を実行する Flash Builder アプリケーションの作成](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)を参照してください。
+HTTP トークンを使用した認証の実行について詳しくは、[HTTP トークンを使用した SSO 認証を実行する Flash Builder アプリケーションの作成](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)を参照してください。
 
 ### カスタム認証の使用 {#using-custom-authentication}
 
 管理コンソールでカスタム認証を有効にするには、リモートエンドポイントの認証方法を「基本」から「カスタム」に変更します。カスタム認証を使用する場合、クライアントアプリケーションはログインには `ChannelSet.login` メソッド、ログアウトには `ChannelSet.logout` メソッドを呼び出します。
 
 >[!NOTE]
->以前のリリースの AEM Forms では、`RemoteObject.setCredentials` メソッドを呼び出して資格情報を宛先に送信していました。`setCredentials` メソッドは、コンポーネントがサーバーへの接続を最初に試みるまで、資格情報を実際にサーバーに渡しませんでした。したがって、コンポーネントが障害イベントを発行した場合、その障害が認証エラーによって発生したか、別の理由で発生したかを確認することはできません。`ChannelSet.login`メソッドは、呼び出し時にサーバーに接続し、認証の問題をすぐに処理できるようにします。`setCredentials` メソッドは引き続き使用できますが、`ChannelSet.login` メソッドを使用することをお勧めします。
+以前のリリースの AEM Forms では、`RemoteObject.setCredentials` メソッドを呼び出して資格情報を宛先に送信していました。`setCredentials` メソッドは、コンポーネントがサーバーへの接続を最初に試みるまで、資格情報を実際にサーバーに渡しませんでした。したがって、コンポーネントが障害イベントを発行した場合、その障害が認証エラーによって発生したか、別の理由で発生したかを確認することはできません。`ChannelSet.login`メソッドは、呼び出し時にサーバーに接続し、認証の問題をすぐに処理できるようにします。`setCredentials` メソッドは引き続き使用できますが、`ChannelSet.login` メソッドを使用することをお勧めします。
 
 同じチャンネルと対応する ChannelSet オブジェクトを複数の宛先で使用できるので、1 つの宛先にログインすると、同じ単一のチャンネルまたは同じ複数のチャンネルを使用する他の宛先にログインされます。2 つのコンポーネントが同じ ChannelSet オブジェクトに異なる資格情報を適用する場合は、最後に適用された資格情報が使用されます。複数のコンポーネントが同じ認証済み ChannelSet オブジェクトを使用している場合、`logout` メソッドは、すべてのコンポーネントを宛先からログアウトします。
 
@@ -454,7 +454,7 @@ AEM Forms のデベロッパーは、フォームガイド（非推奨）の機�
 AEM Forms Remoting（AEM Forms では非推奨）を使用して AEM Forms サービスが呼び出されると、クライアントアプリケーションは認証 Cookie をリクエストの一部として渡します。ユーザーは既に認証されているので、クライアントアプリケーションから AEM Forms サービスに接続するために、追加のログインは必要ありません。
 
 >[!NOTE]
->Cookie が無効または見つからない場合、ログインページへの暗黙的なリダイレクトはありません。そのため、匿名サービスを呼び出すことができます。
+Cookie が無効または見つからない場合、ログインページへの暗黙的なリダイレクトはありません。そのため、匿名サービスを呼び出すことができます。
 
 AEM Forms のシングルサインオンメカニズムを回避するには、独自にログインおよびログアウトするクライアントアプリケーションを記述します。シングルサインオンメカニズムを回避する場合は、アプリケーションで基本認証またはカスタム認証を使用できます。
 
@@ -548,7 +548,7 @@ Flex で構築されたクライアントアプリケーションを起動し、
 セキュリティで保護されているドキュメントを渡す場合は、シングルサインオンを使用し、*ドキュメントアップロードアプリケーションユーザー*&#x200B;の役割を持つ AEM Forms ユーザーを指定します。この役割がないと、ユーザーはセキュアなドキュメントをアップロードできません。プログラムによってユーザーに役割を割り当てることもできます（[役割と権限の管理](/help/forms/developing/users.md#managing-roles-and-permissions)を参照）。
 
 >[!NOTE]
->新しい役割を作成し、その役割のメンバーが安全なドキュメントをアップロードできるようにする場合、ドキュメントのアップロード権限を指定する必要があります。
+新しい役割を作成し、その役割のメンバーが安全なドキュメントをアップロードできるようにする場合、ドキュメントのアップロード権限を指定する必要があります。
 
 AEM Forms は、アップロードサーブレットに渡されたトークンを返す `getFileUploadToken` という名前の操作をサポートしています。`DocumentReference.constructRequestForUpload` メソッドには、AEM Forms への URL と `LC.FileUploadAuthenticator.getFileUploadToken` メソッドによって返されたトークンが必要です。このメソッドは、アップロードサーブレットへの呼び出しで使用される `URLRequest` オブジェクトを返します。次のコードは、このアプリケーションロジックの例を示しています。
 
@@ -616,7 +616,7 @@ AEM Forms は、アップロードサーブレットに渡されたトークン�
 1. 「 Flex アプリケーションからセキュリティで保護されていないドキュメントのアップロードを許可する」オプションの選択がオフになっていることを確認します。
 
 >[!NOTE]
->セキュリティで保護されていないドキュメントを受け入れるように AEM Forms を設定するには、「 Flex アプリケーションからセキュリティで保護されていないドキュメントのアップロードを許可する」オプションを選択します。次に、アプリケーションまたはサービスを再起動して、設定が有効になることを確認します。
+セキュリティで保護されていないドキュメントを受け入れるように AEM Forms を設定するには、「 Flex アプリケーションからセキュリティで保護されていないドキュメントのアップロードを許可する」オプションを選択します。次に、アプリケーションまたはサービスを再起動して、設定が有効になることを確認します。
 
 ### クイックスタート：Remoting を使用してセキュリティで保護されたドキュメントを渡すことによる短時間のみ有効なプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
 
@@ -969,7 +969,7 @@ AEM Forms データタイプの完全修飾データタイプがエイリアス�
 ActionScript クラスのフィールドは、AEM Forms データタイプに属するフィールドと一致します。Customer ActionScript クラスにある 6 つのフィールドは `com.adobe.livecycle.sample.customer.Customer` に属するフィールドに一致します。
 
 >[!NOTE]
->Forms データタイプに属するフィールド名を判別する良い方法は、web ブラウザーでサービスの WSDL を表示することです。WSDL は、サービスのデータタイプと対応するデータメンバーを指定します。Customer サービスでは、WSDL `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.` が使用されます。
+Forms データタイプに属するフィールド名を判別する良い方法は、web ブラウザーでサービスの WSDL を表示することです。WSDL は、サービスのデータタイプと対応するデータメンバーを指定します。Customer サービスでは、WSDL `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.` が使用されます。
 
 Customer ActionScript クラスは、customer という名前のパッケージに属しています。AEM Forms データタイプにマッピングするすべての ActionScript クラスは、独自のパッケージに配置することをお勧めします。次の図に示すように、Flex プロジェクトの src フォルダーにフォルダーを作成し、ActionScript ファイルをそのフォルダーに配置します。
 
@@ -980,7 +980,7 @@ Customer ActionScript クラスは、customer という名前のパッケージ�
 次のコード例は、Customer サービスを呼び出して新しい顧客を作成します。このコード例を実行する場合は、必ずすべてのテキストボックスに入力してください。また、`com.adobe.livecycle.sample.customer.Customer` にマッピングする Customer.as ファイルを必ず作成してください。
 
 >[!NOTE]
->このクイックスタートを実行する前に、Bank カスタムコンポーネントを作成してデプロイする必要があります。
+このクイックスタートを実行する前に、Bank カスタムコンポーネントを作成してデプロイする必要があります。
 
 ```java
  <?xml version="1.0" encoding="utf-8"?>
