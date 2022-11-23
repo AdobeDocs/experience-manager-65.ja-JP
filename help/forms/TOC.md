@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 55e9344c088a38bc4c9f916a13c310a029b3b2f4
+source-git-commit: 43a1cff0d7c2fe1d25e41cff3d02d1a55e6792c5
 workflow-type: tm+mt
-source-wordcount: '3819'
+source-wordcount: '3824'
 ht-degree: 95%
 
 ---
@@ -686,6 +686,7 @@ ht-degree: 95%
    + [JEE 上のアダプティブFormsバージョンの添付ファイルを含む電子メールを取得するための追加手順](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
    + [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
    + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer、Apple Safari で XFA ベースのPDF formsを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
+   + [CRX リポジトリを復元できません](/help/forms/using/restore-crx-repository.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
