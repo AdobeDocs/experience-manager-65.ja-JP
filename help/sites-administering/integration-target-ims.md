@@ -3,7 +3,7 @@ title: IMS を使用した Adobe Target との統合
 description: IMS を使用した AEM と Adobe Target の統合について説明します
 exl-id: 8ddd86d5-a5a9-4907-b07b-b6552d7afdc8
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1500'
 ht-degree: 100%
 
