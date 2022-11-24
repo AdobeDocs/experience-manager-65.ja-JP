@@ -7,7 +7,7 @@ breadcrumb-title: リリースノート
 user-guide-description: AEM 6.5 の最近の新機能については、リリースノートを参照してください。
 feature: Release Information
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: e1b6eaf85d13d0a031dd8a2424490ba2b10a3d52
+source-git-commit: f5c23c9c4f795b00223e88bedce0278cb459086f
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 100%
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 + [AEM 6.5 リリースノート](home.md)
 + [最新のリリースノート](release-notes.md)
-+ 以前のリリースノート {#service-pack}
++ 以前のリリースノート {#service-pack} <!--   + [6.5.14](previous/6.5.14.md) -->
    + [6.5.13](previous/6.5.13.md)
    + [6.5.12](previous/6.5.12.md)
    + [6.5.11](previous/6.5.11.md)

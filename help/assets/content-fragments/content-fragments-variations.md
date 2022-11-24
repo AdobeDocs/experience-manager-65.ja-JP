@@ -4,10 +4,10 @@ description: フラグメントのコンテンツを作成し、目的に応じ�
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
 workflow-type: tm+mt
-source-wordcount: '2256'
-ht-degree: 100%
+source-wordcount: '2426'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 * フラグメントの[コンテンツの入力](#authoring-your-content)
 * **プライマリ**&#x200B;コンテンツの[バリエーションの作成および管理](#managing-variations)
 
-編集中のデータタイプに応じて他の様々なアクションを実行します。次に例を示します。
+編集するデータタイプに応じて、その他の様々なアクションを実行します。例：
 
 * [フラグメントへのビジュアルアセットの挿入](#inserting-assets-into-your-fragment)（画像）
 
@@ -40,24 +40,38 @@ ht-degree: 100%
 
 ## コンテンツのオーサリング {#authoring-your-content}
 
-コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。構造化されたフラグメントには、コンテンツモデルで定義された、様々なデータタイプの各種フィールドが含まれています。
+コンテンツフラグメントを編集用に開くと、デフォルトで「**バリエーション**」タブが開きます。このタブで、プライマリまたはバリエーション（ある場合）のコンテンツをオーサリングできます。構造化フラグメントには、コンテンツモデルで定義された様々なデータタイプの様々なフィールドが含まれています。
 
 次に例を示します。
 
 ![全画面表示エディター](assets/cfm-variations-02.png)
-次の操作が可能です。
 
-* 「**バリエーション**」タブで直接編集できます。
+以下の操作を実行できます。
 
-   * 各データタイプには、異なる編集オプションが用意されています。
+* コンテンツを **バリエーション** タブ；各データタイプには、次のように異なる編集オプションが用意されています。
 
-* **複数行テキスト**&#x200B;フィールドの場合は、[全画面表示エディター](#full-screen-editor)を開いて次の操作を行うこともできます。
+   * **複数行テキスト**&#x200B;フィールドの場合は、[全画面表示エディター](#full-screen-editor)を開いて次の操作を行うこともできます。
 
-   * [形式](#formats)の選択
-   * その他の編集オプションの表示（[リッチテキスト](#rich-text)形式の場合）
-   * 様々な[アクション](#actions)へのアクセス
+      * [形式](#formats)の選択
+      * その他の編集オプションの表示（[リッチテキスト](#rich-text)形式の場合）
+      * 様々な[アクション](#actions)へのアクセス
+   * **フラグメント参照**&#x200B;フィールドの場合は、モデル定義に応じて、「[コンテンツフラグメントを編集](#fragment-references-edit-content-fragment)」オプションを使用できます。
 
-* **フラグメント参照**&#x200B;フィールドの場合は、モデル定義に応じて、「**[コンテンツフラグメントを編集](#fragment-references-edit-content-fragment)**」オプションを使用できます。
+
+* 割り当て **タグ** 現在のバリエーションに対してタグの追加、更新、削除が可能
+
+   * [タグ](/help/sites-authoring/tags.md)は、コンテンツの分類に使用できるので、フラグメントを整理する際に特に効果を発揮します。タグは、コンテンツを（タグ別に）検索したり、一括操作を適用する目的で使用できます。
+
+
+      * タグを検索すると、タグ付きのバリエーションがハイライト表示された状態でフラグメントが返されます。
+      * バリエーションタグは、バリエーション名を使用する代わりに、特定のコンテンツ配信ネットワーク (CDN) プロファイル（CDN キャッシュ用）のバリエーションをグループ化するためにも使用できます。
+
+      例えば、関連するフラグメントを「クリスマスローンチ」とタグ付けして、これらのフラグメントをサブセットとして参照できるようにしたり、新しいフォルダーで別のローンチと共に使用するためにコピーしたりできます。
+   >[!NOTE]
+   >
+   >**タグ** また、 **マスター** バリエーション ) を [メタデータ](/help/assets/content-fragments/content-fragments-metadata.md)
+
+* [マスター](#managing-variations)コンテンツの&#x200B;**バリエーションの作成および管理.**
 
 ### 全画面表示エディター {#full-screen-editor}
 
@@ -219,12 +233,12 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >  `/content/dam/my-brand/en/path-down/my-content-fragment`
 
 >[!CAUTION]
->英語版は標準で提供されています。
->他の言語版は、パッケージ共有から言語モデルパッケージとして使用できます。
->* [フランス語（fr）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [ドイツ語（de）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [イタリア語（it）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [スペイン語（es）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+英語版は標準で提供されています。
+他の言語版は、パッケージ共有から言語モデルパッケージとして使用できます。
+* [フランス語（fr）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+* [ドイツ語（de）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+* [イタリア語（it）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+* [スペイン語（es）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 
@@ -293,7 +307,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 * エディターの全画面表示モードと通常モードのどちらの場合も、注釈はテキストのハイライトとして示されます。注釈の完全な詳細を表示、編集および削除するには、ハイライト表示されたテキストをクリックします。するとダイアログが再度開きます。
 
    >[!NOTE]
-   >1 つのテキストに複数の注釈が適用されている場合は、ドロップダウンセレクターが表示されます。
+   1 つのテキストに複数の注釈が適用されている場合は、ドロップダウンセレクターが表示されます。
 
 * 注釈が適用されたテキスト全体を削除すると、注釈も削除されます。
 
@@ -310,11 +324,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 アセットは書式設定なしでフラグメントの段落シーケンスに追加されます。[ページでフラグメントを利用、参照](/help/sites-authoring/content-fragments.md)する際に書式を設定できます。
 
 >[!CAUTION]
->参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
->ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
+ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
 
 >[!NOTE]
->[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
+[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. 画像を追加したい位置にカーソルを置きます。
 1. **アセットを挿入** アイコンを使用して、検索ダイアログを開きます。
@@ -331,9 +345,9 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 「**選択**」を使用して、コンテンツフラグメント段落システムの現在の位置にアセットを追加します。
 
    >[!CAUTION]
-   >アセットを追加後に形式を変更すると次のようになります。
-   >* **プレーンテキスト**：アセットはフラグメントから完全に失われます。
-   >* **Markdown**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとアセットがまた表示されます。
+   アセットを追加後に形式を変更すると次のようになります。
+   * **プレーンテキスト**：アセットはフラグメントから完全に失われます。
+   * **Markdown**：アセットは表示されなくなりますが、**リッチテキスト**&#x200B;に戻すとアセットがまた表示されます。
 
 
 ### コンテンツフラグメントのフラグメントへの挿入 {#inserting-content-fragment-into-your-fragment}
@@ -343,14 +357,14 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 これらは参照として、フラグメント内の現在の場所に追加されます。
 
 >[!NOTE]
->このオプションは、「**複数行テキスト**」が「**フラグメント参照を許可**」に設定されている場合に使用できます。
+このオプションは、「**複数行テキスト**」が「**フラグメント参照を許可**」に設定されている場合に使用できます。
 
 >[!CAUTION]
->参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
->ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
+参照ページではこれらのアセットの移動や削除はできません。移動や削除にはフラグメントエディターを使用する必要があります。
+ただし、アセットの書式設定（サイズなど）は、[ページエディター](/help/sites-authoring/content-fragments.md)で行う必要があります。フラグメントエディターでのアセットの表示は、純粋にコンテンツフローのオーサリング用です。
 
 >[!NOTE]
->[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
+[画像](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)は様々な方法でフラグメントやページに追加できます。
 
 1. フラグメントを追加したい位置にカーソルを置きます。
 1. **コンテンツフラグメントを挿入** アイコンを使用して、検索ダイアログを開きます。
@@ -367,9 +381,9 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 「**選択**」を使用して、選択したコンテンツフラグメントへの参照を現在のコンテンツフラグメント（現在の場所）に追加します。
 
    >[!CAUTION]
-   >別のフラグメントへの参照を追加した後に、次の形式に変更する場合：
-   >* **プレーンテキスト**：参照はフラグメントから完全に失われます。
-   >* **Markdown**：参照は残ります。
+   別のフラグメントへの参照を追加した後で、形式を次のように変更する場合：
+   * **プレーンテキスト**：参照はフラグメントから完全に失われます。
+   * **Markdown**：参照は残ります。
 
 
 ## バリエーションの管理 {#managing-variations}
@@ -387,7 +401,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 「**追加**」を選択します。フラグメントの **プライマリ** が新しいバリエーションにコピーされ、 [編集](#editing-a-variation) 用に開かれます。
 
    >[!NOTE]
-   >新しいバリエーションを作成すると、常に&#x200B;**プライマリ**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
+   新しいバリエーションを作成すると、常に&#x200B;**プライマリ**&#x200B;がコピーされます（現在開いているバリエーションではありません）。
+
+   >[!NOTE]
+   新しいバリエーションを作成すると、 **タグ** 現在、 **マスター** バリエーションが新しいバリエーションにコピーされます。
 
 ### バリエーションの編集 {#editing-a-variation}
 
@@ -411,7 +428,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. 「**名前を変更**」アクションを確認します。
 
 >[!NOTE]
->この手順はバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
+この手順はバリエーションの&#x200B;**タイトル**&#x200B;にのみ影響を与えます。
 
 ### バリエーションの削除 {#deleting-a-variation}
 
@@ -424,7 +441,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 1. ダイアログで「**削除**」アクションを確認します。
 
 >[!NOTE]
->**プライマリ**&#x200B;は削除できません。
+**プライマリ**&#x200B;は削除できません。
 
 ### プライマリとの同期 {#synchronizing-with-master}
 
@@ -433,10 +450,10 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 バリエーションの編集時には、バリエーションの現在の要素をプライマリと同期させるアクションにアクセスできます。これにより、プライマリに行われた変更内容を必要なバリエーションに自動的にコピーできます。
 
 >[!CAUTION]
->同期を使用できるのは、変更内容&#x200B;*を&#x200B;**プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
->バリエーションの現在の要素のみが同期されます。
->同期は、**複数行テキスト**&#x200B;データタイプに対してのみ機能します。
->*バリエーションから&#x200B;**プライマリ***へ変更内容を転送することはできません。
+同期を使用できるのは、変更内容&#x200B;*を&#x200B;**プライマリ**からバリエーションに*&#x200B;コピーする場合のみです。
+バリエーションの現在の要素のみが同期されます。
+同期は、 **複数行テキスト** データタイプ。
+*バリエーションから&#x200B;**プライマリ***へ変更内容を転送することはできません。
 
 <!-- needs new screenshot for synchronize effect -->
 
@@ -460,4 +477,4 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![プライマリとの同期](assets/cfm-variations-11c.png)
 
-1. 「**同期**」を選択すると、バリエーションが更新され、表示されます。
+1. 選択 **同期**&#x200B;の場合、バリエーションが更新され、表示されます。
