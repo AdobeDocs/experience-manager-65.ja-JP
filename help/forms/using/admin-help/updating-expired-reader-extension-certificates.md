@@ -1,139 +1,191 @@
 ---
-title: 期限切れの Reader Extension サービス証明書を更新しています
-description: Reader 用の拡張ドキュメントが機能しません。証明書を更新してください
+title: Reader拡張証明書の有効期限とその影響
+description: Reader拡張証明書の有効期限とその影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+source-git-commit: bbc8fdf2eb7dd35600e2e2a87550e9de557f0eb0
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 98%
+source-wordcount: '1109'
+ht-degree: 4%
 
 ---
 
-# 期限切れの Reader Extension サービス証明書を更新しています {#Updating-expired-Reader-Extension-service-certificates}
 
-Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Reader Extension サービスを使用する資格があります。サービスを使用すると、追加の使用権限を付与して Adobe Reader の機能を拡張することで、組織内でインタラクティブ PDF ドキュメントを簡単に共有できます。このサービスは、PDF ドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Reader DC を使用して PDF ドキュメントを開いた場合には通常使用できない機能をアクティブにします。サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Adobe Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
+# Reader拡張証明書の有効期限とその影響 {#expiration-of-reader-extensions-certificates-and-its-impact}
 
-アドビは PKI（公開鍵インフラストラクチャ）を活用して、ライセンスやイネーブルメント機能に使用する電子証明書を発行します。Adobeは、証明機関「Adobeルート CA」に基づいて証明書を発行しており、2023 年 1 月 7 日に期限が切れる予定です。 この認証機関の下で発行されたすべての証明書の有効期限が切れます。証明書の有効期限が切れると、証明書に依存するすべての機能は機能しなくなります。例えば、Adobe Acrobat Reader を使用してコメントを追加できる Reader 用の拡張 PDF ドキュメントは、2023 年 1 月 7 日以降、機能しなくなります。この問題を解決するには、Reader Extension サービスの管理者は、古い証明書を使用して、新しい Adobe Root CA G2 が発行した新しい証明書を取得し、PDF ドキュメントに再適用する必要があります（Reader は、新しい証明書で PDF ドキュメントを拡張します）。
+Adobe Experience Manager Forms(AEM Forms) をご利用のお客様は、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Acrobat Reader DC Extensions サービスを使用する権利が付与されます。 このサービスを使用すると、追加の使用権限でAcrobat Readerの機能を拡張し、組織がインタラクティブなPDFドキュメントを簡単に共有できます。 このサービスは、PDFドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Readerを使用してPDFドキュメントを開いた場合に使用できない機能をアクティブにします。 サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。Acrobat Readerで権限が付与されたPDFドキュメントを開いたユーザーは、そのドキュメントに対して有効な操作を実行できます。
 
-証明書の有効期限は、JEE 上の AEM Forms と OSGi スタック上の AEM Forms の両方に影響します。両方のスタックには、異なる手順のセットがあります。[前提条件](#Pre-requisites)および[新しい証明書の取得](#obtain-the-certificates)を満たした後、スタックに応じて、次のパスのいずれかを選択します。
+Adobeでは、公開鍵基盤 (PKI) を利用して、ライセンスや機能の有効化に使用する電子証明書を発行します。 Adobeは、2023 年 1 月 7 日に期限切れに設定された認証局「Adobeルート CA」に基づいて証明書を発行しています。 新しい認証局「Adobeルート CA G2」と、新しい認証局に基づく証明書が使用できるようになりました。
 
-* [JEE 環境上の AEM Forms の証明書の更新](#Updating-and-Applying-certificates-for-an-AEM-Forms-on-JEE-environment)
-* [OSGi 環境上の AEM Forms の証明書の更新](#Updating-and-applying-certificates-for-an-AEM-Forms-on-OSGi-environment)
+2023 年 1 月 7 日以降、古い証明書 (「Adobeルート CA」に基づく証明書 ) は機能しなくなります。 Adobeでは、2023 年 1 月 7 日以前にPDFドキュメントをReaderするために、「Adobeルート CA G2」に基づく新しい証明書の使用を開始することをお勧めします。  以下が可能です。 [Adobeライセンス Web サイトから新しい証明書を取得する](https://licensing.adobe.com/) またはAdobeのサポート。
+
+PDFドキュメント (2023 年 1 月 7 日より前の古い証明書を使用して拡張されたReader) は、お客様がダウンロードしたものも含め、引き続き、それらに適用されるすべての使用権限で使用され、更新は必要ありません。
+
+## よくある質問
+
+**Q.Adobeルート証明書とAcrobat Reader Extensions 証明書の違いは何ですか？ Adobeルート証明書はAcrobat Reader Extensions 証明書に依存していますか？ これらの証明書の有効期限は 2023 年 1 月ですか？**
+
+A.Adobeルート CA は、Acrobat Reader Extensions 証明書の発行元の認証局です。 2023 年 1 月 7 日に、「Adobeルート CA」と、そこから発行されたすべての証明書の有効期限が切れます。
+
+**証明書の失効と、Adobeの使用/開始に対する影響に関する以前のPDFはありましたか？ そのコミュニケーションは無視すべきですか？**
+A.状況の再評価に基づき、2023 年 1 月 7 日より前の「Adobeルート CA」から発行された生産証明書を用いて延長されたすべてのPDF文書は、2023 年 1 月 7 日以降も変更なく引き続き機能します。 既にPDFを更新している場合、エクスペリエンスは変更されません
+
+
+**Q.他に質問がある場合は誰に問い合わせればよいですか？**
+
+A.連絡先は [Adobeサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support) またはサポートチケットを発行します。
+
+**Q. 2023 年 1 月 7 日より前に証明書を更新しない場合はどうなりますか。**
+
+A. 2023 年 1 月 7 日より前に発行された古い「Adobeルート CA」からの実稼動証明書を使用して拡張されたすべてのPDFドキュメントは、2023 年 1 月 7 日以降も引き続き機能します。 評価証明書で拡張されたPDFは、有効期限の後は機能しません。
+
+**Q.新しい証明書の説明は古い証明書とは異なりますか。**
+
+A.新しいAcrobat Reader Extensions 証明書の説明 **G3-P24** をプログラム名として使用します。 古い証明書（「証明書ルート CA」に基づく証明書）の説明で、次のことを行います。 **P24** は、プログラム名として言及されます。
+
+**Q.最新の証明書を取得するにはどうすればよいですか？**
+
+A.権利を付与されているFormsのすべてのお客様（アクティブライセンスを持つ）は、新しい証明書 (「Adobeルート CA G2」に基づく証明書 ) を [Adobeライセンス Web サイト](https://licensing.adobe.com/). Adobeライセンス Web サイトで証明書が見つからない場合は、 [Adobeサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) またはサポートチケットを発行します。
+
+**Q. 「Adobeルート CA」 （古い認証局）から発行された証明書を使用して拡張されたPDFドキュメントは、2023 年 1 月 7 日以降も引き続き機能しますか？**
+
+A.はい。2023 年 1 月 7 日より前に「Adobeルート CA」（旧証明機関）から発行された実稼動証明書を使用して拡張されたすべてのPDFドキュメントは、2023 年 1 月 7 日以降、変更なしで引き続き機能します。 PDF証明書を使用して拡張された評価ドキュメントは、有効期限を過ぎると機能しなくなります。
+
+**Q. 「Adobeルート CA」（古い証明機関）から発行された証明書で拡張されたPDFドキュメントを引き続き使用するには、どのバージョンのAdobe Acrobat Readerが必要ですか？**
+
+A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA」（古い証明機関）で拡張されたPDFドキュメントを使用する必要があります。 このドキュメントの公開時にサポートされているAcrobat Readerのバージョンです。 を使用している場合、 [Adobe Acrobatの非サポートバージョン](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を使用する場合、Adobeは、 [最新バージョンのAdobe Acrobat Readerをダウンロードしてインストールする](https://get.adobe.com/jp/reader/).
+
+**Q. 「Adobeルート CA 2」（新しい証明機関）から発行された証明書で拡張されたPDFドキュメントを引き続き使用するには、どのバージョンのAdobe Acrobat Readerが必要ですか？**
+
+A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA 2」（新しい証明機関）で拡張されたPDFドキュメントを使用する必要があります。 を使用している場合、 [Adobe Acrobat Readerの非サポートバージョン](https://helpx.adobe.com/support/programs/eol-matrix.html)を使用する場合、Adobeは、 [最新バージョンのAdobe Acrobat Readerをダウンロードしてインストールする](https://get.adobe.com/reader/).
+
+**Q.既存のエイリアスを引き続き使用しながら、古いAcrobat Reader Extensions 証明書を削除して、Adobe Experience Manager Formsサーバーに新しい証明書を追加できますか？**
+
+A.はい。古いAcrobat Reader Extensions 証明書を削除して、既存のエイリアスを持つ新しい証明書をAdobe Experience Manager Forms Server に追加できます。
+
+**Q.新しい証明書と古いAcrobat Reader Extensions 証明書の両方をAdobe Experience Manager Forms Server に保持できますか？**
+
+A.はい。Adobe Experience Manager Forms Server 上では、両方の証明書を保持できますが、異なるエイリアスを使用できます。 2023 年 1 月 8 日以降は、新しい証明書のみを使用して、PDFドキュメントをReader拡張できます。
+
+**Q.同じAcrobat Reader Extensions 証明書をすべてのAdobe Experience Manager Forms環境に読み込むことはできますか？**
+
+A.はい。同じAcrobat Reader Extensions 証明書を複数の環境で使用できます。
+
+**Q.PDF文書に適用される使用権限を確認する方法を教えてください。**
+
+A. [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) PDFドキュメントに適用された使用権限に関する情報を取得する API。
+
+**Q. Acrobat Reader Extensions 証明書ファイルのパスワードを変更する方法を教えてください。**
+
+A. Microsoft Windows で証明書のパスワードを変更するには、Microsoft管理コンソール (MMC) を使用して証明書をインストールし、「 」を選択します **キーを書き出し可能にする**. インストールが完了したら、証明書を秘密鍵で書き出し、PFX ファイルに別のパスワードを使用します。
+
+
+<!-- 
+## Applying the certificates {#obtaning-and-applying-the-certificates} 
+
+You can choose one of the following paths to apply latest certificates:
+
+* [Updating certificates for an AEM Forms on JEE environment](#Updating-and-Applying-certificates-for-an-AEM-Forms-on-JEE-environment) 
+* [Updating certificates for an AEM Forms on OSGi environment](#Updating-and-applying-certificates-for-an-AEM-Forms-on-OSGi-environment)
 
 >[!NOTE]
 >
->このドキュメントでは、用語の証明書と資格情報が互換的に使用されています。
+>The document uses the term certificates and credentials interchangeably.
 
-## 前提条件 {#Pre-requisites}
+### Pre-requisites {#Pre-requisites}
 
-証明書を更新するには、AEM Forms 管理者コンソールで使用できるアクションと、AEM Forms が提供する Reader Extension API を使用する必要があります。このドキュメントは、Adobe Experience Manager Forms API の使用に関する知識を持つユーザーおよび管理者を対象としています。開始する前に、次のことを確認します。
+Updating the certificates requires using actions available on AEM Forms administrator console and Reader Extension APIs provided by AEM Forms. The document is intended for users and administrators with knowledge of using Adobe Experience Manger Forms APIs. Before you start, ensure that: 
 
-* ユーザーには、基になる AEM Forms 環境の管理者権限があります。
-* ユーザーが[開発環境](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/howto-projects-eclipse.html?lang=ja)を設定し、それにアクセスできます。
-* 証明書を取得できます。
+* the user has administrator rights on underlying AEM Forms environment. 
+* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/howto-projects-eclipse.html) and has access to it.
+* [obtain the certificates](#obtain-the-certificates).
 
-### 証明書を取得する {#obtain-the-certificates}
 
-使用権限秘密鍵証明書は、公開鍵と秘密鍵の両方を含んでいる電子証明書、および秘密鍵証明書にアクセスするためのパスワードとして提供されます。
+### Obtain the certificates {#obtain-the-certificates}
 
-Reader Extensions 製品版を購入した場合、実稼働環境用の使用権限秘密鍵証明書は、アドビライセンス web サイト（LWS）によって配信されます。実稼働環境用の使用権限秘密鍵証明書は、組織に固有のものであり、必要とする特定の使用権限を有効にすることができます。
+The Rights credential is delivered as a digital certificate that contains the public key, the private key, and the password used to access the credential.
 
-Reader Extensions を各自のソフトウェアに統合したパートナーまたはソフトウェアプロバイダーを通じて Reader Extensions を入手した場合、使用権限秘密鍵証明書は、アドビからパートナーに提供され、その後パートナーからお客様に提供されます。
+If your organization purchases a production version of Reader Extensions, the production Rights credential is delivered by Adobe Licensing Website (LWS). A production Rights credential is unique to your organization and can enable the specific usage rights that you require.
+
+If you obtained Reader Extensions through a partner or software provider who integrated Reader Extensions into their software, the Rights credential is provided to you by that partner who, in turn, receives this credential from Adobe.
 
 >[!NOTE]
 >
->使用権限秘密鍵証明書は、一般的なドキュメントの署名や識別情報のアサーションには使用できません。これらの場合は、自己署名証明書を使用するか、認証局（CA）から識別情報証明書を取得してください。
+>The Rights credential cannot be used for typical document signing or assertion of identity. For these applications, you can use a self-sign certificate or acquire an identity certificate from a Certificate Authority (CA).
 
-次のタイプの使用権限秘密鍵証明書を取得できます。
+The following types of Rights credentials are available:
 
-**Customer Evaluation（カスタマー評価用）**：Reader Extensions を評価するお客様に提供される、有効期限が短い秘密鍵証明書。この秘密鍵証明書を使用してドキュメントに適用されている使用権限は、証明書の有効期限が切れると失効します。この種類の秘密鍵証明書は、2 ～ 3 か月間のみ有効です。
+**Customer Evaluation**: A credential with a short validity period that is provided to customers who want to evaluate Reader Extensions. Usage rights applied to documents using this credential expire when the credential expires. This type of credential is valid only for two to three months.
 
-**Production（実稼働環境用）**：フル製品を購入したお客様に提供される、有効期間が長い秘密鍵証明書。Production（実稼働環境用）証明書は、ユーザーごとに固有ですが、複数のシステムにインストールできます。
+**Production**: A credential with a long validity period that is provided to customers who purchased the full product. Production credentials are unique to each customer but can be installed on multiple systems.
 
-Reader 用の証明書を既に使用して PDF ファイルを拡張している場合は、実稼働用の証明書を[アドビライセンス web サイト（LWS）](https://licensing.adobe.com/)からダウンロードできます。
+If you have already used certificates to reader extend PDF files, download a production certificate from [Adobe Licensing Website (LWS)](https://licensing.adobe.com/).
 
-## JEE 環境上の AEM Forms の証明書の更新と適用 {#Updating-and-Applying-certificates-for-an-AEM-Forms-on-JEE-environment}
+### Applying certificates for an AEM Forms on JEE environment {#Updating-and-Applying-certificates-for-an-AEM-Forms-on-JEE-environment} 
 
-JEE スタック上の AEM Forms で新しい証明書を更新および適用するには、新しい資格情報の読み込み、既存の PDF ドキュメントからの使用権限の削除、使用権限の適用が必要です。Admin Console を使用して資格情報を読み込み、AEM Forms Reader Extension API を使用して使用権限を削除および適用できます。
+Applying new certificates on AEM Forms on JEE stack requires importing new credentials and applying usage rights. You can use admin console to import credentials and AEM Forms Reader Extension APIs to apply usage rights. 
 
-### 資格情報のインポートと設定
+#### Import and configure credentials 
 
-Trust Store の管理ページを使用して、新しい資格情報や置き換え用の資格情報をインポートすることができます。Trust Store には複数の Reader Extensions 証明書が含まれることがあります。これらの証明書の 1 つを、デフォルトの Reader Extensions 証明書として指定する必要があります。デフォルトの証明書は、Workbench ユーザーがプロセス作成時に、どの証明書を使用するかを判断できない場合に使用されます。デフォルトの証明書には以下の規則が適用されます。
+You can use the Trust Store Management pages to import a new credential. The Trust Store may contain more than one Reader Extensions credential. You must designate one of those credentials as the default Reader Extensions credential. The default credential is used when a Workbench user is unable to determine which credential to use during process creation. These rules apply to default credentials:
 
-*  Reader エクステンション証明書をインポートする際に、Trust Store に Reader Extensions 証明書が 1 つしか含まれていない場合は、その証明書がデフォルトとして設定されます。
-* 「デフォルト」オプションを選択して Reader Extensions 証明書をインポートすると、既存のデフォルトの証明書からデフォルトタイプが削除されます。読み込まれた証明書がデフォルトになります。
-* デフォルトの Reader Extensions 証明書は削除できません。デフォルトの証明書を削除するには、最初に、他の証明書をデフォルトとして設定します。ただし、証明書が 1 つしかない場合は例外で、デフォルトの証明書でも削除できます。
-* デフォルトの Reader Extensions 証明書は更新できません。
+* If you import a Reader Extensions credential and the Trust Store contains no other Reader Extensions credentials, it is set as the default.
+* If you import a Reader Extensions credential with the Default option selected, the default type is removed from an existing default credential. The imported credential becomes the default.
+* You cannot delete a default Reader Extensions credential. To delete the default credential, first set another credential as the default. An exception to this rule is that if there is only one credential, you can delete it even though it is the default.
+* You cannot update a default Reader Extensions credential.
 
-資格情報をインポートするには、以下の手順に従います：
+To import the credentials: 
 
-1. 管理コンソールで、設定／Trust Store の管理／ローカル秘密鍵証明書をクリックします。
-1. 「読み込み」をクリックし、「Trust Store の種類」で「Acrobat Reader DC Extensions 証明書」を選択します。
-1. （オプション）この証明書を Acrobat Reader DC Extensions のデフォルトの証明書として指定するには、「デフォルト」を選択します。
-1. 「エイリアス」ボックスに、証明書の ID を入力します。この ID は、Acrobat Reader DC Extensions で証明書の表示名として使用されます。このエイリアスは、AEM Forms SDK を使用してプログラムから証明書にアクセスするときにも使用されます。
-1. 「ファイルを選択」をクリックして証明書を探し、証明書のパスワードを入力して「OK」をクリックします。
+1. In administration console, click Settings > Trust Store Management > Local Credentials.
+1. Click Import and, under Trust Store Type, select Acrobat Reader DC extensions Credential.
+1. (Optional) To indicate that this credential is the default credential to use with Acrobat Reader DC extensions, select Default.
+1. In the Alias box, type an identifier for the credential. This identifier is used as the display name for the credential in Acrobat Reader DC extensions. This alias is also used to access the credential programmatically using the AEM forms SDK.
+1. Click Choose File to locate the credential, type the password of the credential, and then click OK.
 
-「形式が正しくないか、パスワードが正しくないため、証明書を読み込めませんでした」というエラーメッセージが表示される場合は、パスワードが有効であることを確認してください。
+If the error message "Failed to import credential due to either incorrect file format, or incorrect password" appears, verify that the password is valid.
 
-プログラムによって証明書を読み込んだり、削除したりすることもできます（「[AEM Forms によるプログラミング](../../developing/credentials.md)」を参照してください。）
+You can also import and delete credentials programmatically. (See [Programming with AEM forms](../../developing/credentials.md).)
 
-### 使用権限を付与された既存の PDF ドキュメントから使用権限を削除
+<!-- ### Remove usage rights from existing rights-enabled PDF documents
 
-最新の資格情報を使用して使用権限を適用する前に、使用権限を付与された既存の PDF ドキュメントから使用権限を削除してください。JEE 上の AEM Forms は、使用権限を削除する API を提供します。詳しい手順については、[PDF ドキュメントから使用権限の削除](../../developing/assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)を参照してください。
+Remove usage rights from existing rights-enabled PDF documents before applying usage rights with latest credentials. AEM Forms on JEE provides APIs to remove usage rights. For detailed instructions, see [Removing Usage Rights from PDF Documents](../../developing/assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
 
-Workbench で開発した JEE プロセス上の AEM Forms の使用権限を削除するには、[Workbench ヘルプ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf)を参照してください。
+To remove usage rights for AEM Forms on JEE processes developed in Workbench, see [Workbench Help](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf). 
 
-### 使用権限を PDF ドキュメントに適用する
+#### Apply the usage rights to PDF documents 
 
-新しい資格情報を読み込み、既存の権限が付与された PDF ドキュメントから使用権限を削除した後、新しい資格情報を使用して PDF ドキュメントに使用権限を適用してください。Acrobat Reader DC エクステンション Java クライアント API および web サービスを使用すると、PDF ドキュメントに使用権限を適用することができます。詳しくは、[PDF ドキュメントへの使用権限の適用](../../developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)を参照してください。
+After importing new credentials, you can apply usage rights to PDF documents using the Acrobat Reader DC extensions Java Client API and web service.  For details, see [Applying Usage Rights to PDF Documents](../../developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents). 
 
 
-## OSGi 環境での AEM Forms の証明書の更新と適用 {#Updating-and-applying-certificates-for-an-AEM-Forms-on-OSGi-environment}
+### Applying certificates for an AEM Forms on OSGi environment {#Updating-and-applying-certificates-for-an-AEM-Forms-on-OSGi-environment}
 
-OSGi スタック上の AEM Forms で新しい証明書を更新および適用するには、新しい資格情報の読み込み、既存の PDF ドキュメントからの使用権限の削除、使用権限の適用が必要です。Admin Console を使用して資格情報を読み込み、AEM Forms Reader Extension API を使用して使用権限を削除および適用できます。
+Applying new certificates on AEM Forms on OSGi stack requires importing new credentials and applying usage rights. You can use admin console to import credentials and AEM Forms Reader Extension APIs to apply usage rights. 
 
-### 認証情報の読み込み {#Import-credentials}
+#### Import credentials {#Import-credentials}
 
-OSGi 環境の AEM Forms では、Reader Extension 資格情報が fd-service ユーザーに関連付けられます。fd-user キーストアの資格情報を追加する前に、次の手順を実行してキーストアを作成してください。
+In an AEM Forms on OSGi environment, a Reader Extension credential is associated with fd-service user. Before adding credentials for fd-user key store, perform the following steps to create a key store: 
 
-1. AEM オーサーインスタンスに管理者としてログインします。
-1. **[!UICONTROL ツール]**／**[!UICONTROL セキュリティ]**／**[!UICONTROL ユーザー]**&#x200B;に移動します。
-1. fd-service ユーザーアカウントが見つかるまで、ユーザーのリストを下にスクロールします。
-1. **[!UICONTROL fd-service]** ユーザーをクリックします。
-1. 「キーストア」タブをクリックします。
-1. **[!UICONTROL キーストアを作成]**&#x200B;をクリックします。
-1. キーストアアクセスパスワードを設定し、設定を保存してキーストアパスワードを作成してください。
+1. Log in to your AEM Author instance as an Administrator.
+1. Go to **[!UICONTROL Tools]**> **[!UICONTROL Security]**>**[!UICONTROL Users]**.
+1. Scroll down the list of users until you find fd-service user account.
+1. Click **[!UICONTROL fd-service]** user.
+1. Click keystore tab.
+1. Click **[!UICONTROL Create KeyStore]**.
+1. Set the KeyStore Access Password and save your settings to create the KeyStore password.
 
-キーストアを作成した後、fd-service ユーザーに資格情報を追加してください。次のビデオでは、手順を説明しています。
+After creating the key-store, add credentials to fd-service user. The following video explains the steps: 
 
 >[!VIDEO](https://images-tv.adobe.com/mpcv3/5577/8db8e554-f04b-4fae-8108-b9b5e0eb03ad_1627925794.854x480at800_h264.mp4)
 
-次のコマンドは、pfx ファイルの詳細を一覧表示します。コマンドを実行する前に、.pfx ファイルを含むディレクトリに移動します。
+The following command list the details of the pfx file. Before running the command, navigate to the directory that contains the .pfx file.
 
-`keytool -v -list -storetype pkcs12 -keystore <name of your .pfx file>`
+`keytool -v -list -storetype pkcs12 -keystore [name of your .pfx file]`
 
-例えば、keytool -v -list -storetype pkcs12 -keystore 1005566.pfx の場合、1005566.pfx はご使用の pfx ファイルの名前です。
+For example keytool -v -list -storetype pkcs12 -keystore 1005566.pfx where 1005566.pfx is the name of my pfx file
 
-### 使用権限を付与された既存の PDF ドキュメントから使用権限を削除
+<!-- ### Remove usage rights from existing rights-enabled PDF documents
 
-最新の資格情報を使用して使用権限を適用する前に、使用権限を付与された既存の PDF ドキュメントから使用権限を削除してください。docAssuranceServiceAPI から removeUsageRights API を呼び出すことによって、ドキュメントの使用権限を削除できます。詳しくは、[使用権限の削除](/help/forms/using/aem-document-services-programmatically.md#removing-usage-rights)ドキュメントを参照してください。
+Remove usage rights from existing rights-enabled PDF documents before applying usage rights with latest credentials. You can remove the usage rights for a document by invoking the removeUsageRights API from within the docAssuranceServiceAPI. For detailed information, see [Remove Usage Rights](/help/forms/using/aem-document-services-programmatically.md#removing-usage-rights) document.
 
-### 使用権限を PDF ドキュメントに適用する
+#### Apply the usage rights to PDF documents 
 
-OSGi 環境上の AEM Forms で使用権限を適用するには、カスタム OSGi サービスを作成して、ドキュメントに使用権限を付与してください。また、POST メソッドを使用してサーブレットを作成し、Reader 用の拡張 PDF をユーザーに返すこともできます。詳しい手順については、 [Reader Extensions の適用](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html?lang=ja)を参照してください。
-
-## よくあるご質問
-
-**他に質問がある場合、誰に問い合わせればよいですか？**
-
-[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support)に連絡するか、またはサポートチケットを発行してください。
-
-**2023 年 1 月 7 日より前に証明書を更新しない場合はどうなりますか？**
-
-古い証明書で Reader 用の拡張 PDF ドキュメントを開こうとすると、エラーメッセージが表示され、読み取り用の拡張機能にアクセスできなくなります。エラーの例です。
-
-`The document has been changed since it was created and use of extended features in no longer available. Please contact the author for the orignal version of this document.`
-
-**新しい説明の名前に何か変更はありますか？**
-
-新しい Reader Extension の証明書では、説明内でプログラム名として G3-P24 が挙げられています。古い証明書では、説明内に P24 というプログラム名が記載されていました。
+To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html).  -->
