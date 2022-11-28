@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: b33c42edb44617d26ead0df3a9de7bdb39c2e9f4
+source-git-commit: 89bb9223bb5e1e1d8719c5d957ec380872ed3e96
 workflow-type: tm+mt
-source-wordcount: '6282'
-ht-degree: 98%
+source-wordcount: '6489'
+ht-degree: 95%
 
 ---
 
@@ -153,8 +153,10 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 IP を許可リストに登録して、ユーザーがコンテンツを安全にプレビューできるようにすることができます。
+1. 公開前にDynamic Mediaコンテンツを安全にプレビューするには、Experience Manager作成者がトークンベースの検証を使用するので、Experience Manager作成者は、デフォルトでDynamic Mediaコンテンツをプレビューできます。 ただし、コンテンツを安全にプレビ許可リストューするためのアクセス権をユーザーに提供するために、さらに IP を「」することができます。 
 このアクションを Experience Manager で設定するには、[Image Server 用の Dynamic Media 公開設定 - 「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab)を参照してください。
+
+ACL（アクセス制御リスト）権限の有効化など、設定をさらにカスタマイズする場合は、必要に応じて、 [（オプション） Dynamic Media - Scene7モードでの詳細設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
@@ -165,8 +167,6 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
     * In the upper-right corner of the page, select **[!UICONTROL Save]**. -->
 
 これで基本設定が完了しました。Dynamic Media - Scene7 モードを使用する準備が整いました。
-
-設定をさらにカスタマイズする場合は、[（任意）Dynamic Media - Scene7 モードでの詳細設定](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)で示す任意のタスクを実行できます。
 
 ### Dynamic Media のパスワードの変更 {#change-dm-password}
 
@@ -203,6 +203,8 @@ Dynamic Media でのパスワードの有効期限は、現在のシステム日
 
 Dynamic Media - Scene7 モードのセットアップと設定をさらにカスタマイズしたり、パフォーマンスを最適化したりする場合は、次の&#x200B;*オプション*&#x200B;タスクを 1 つまたは複数実行できます。
 
+* [（オプション） Dynamic Media - Scene7モードでの ACL 権限の有効化](#optional-enable-acl)
+
 * [（任意）2 GB を超えるアセットのアップロードに対する Dynamic Media - Scene7 モードの設定](#optional-config-dms7-assets-larger-than-2gb)
 
 * [（オプション）Dynamic Media - Scene7 モードのセットアップと設定](#optional-setup-and-configuration-of-dynamic-media-scene7-mode-settings)
@@ -210,6 +212,33 @@ Dynamic Media - Scene7 モードのセットアップと設定をさらにカス
 * [（任意）Dynamic Media - Scene7 モードのパフォーマンスの調整](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
 * [（任意）レプリケーション用のアセットのフィルタリング](#optional-filtering-assets-for-replication)
+
+### （オプション） Dynamic Media - Scene7モードでのアクセス制御リスト権限の有効化 {#optional-enable-acl}
+
+AEMでDynamic Media - Scene7モードを実行すると、現在、転送されます。 `/is/image` PlatformServerServlet の ACL（アクセス制御リスト）権限を確認せずに、セキュアプレビュー画像サービングに対する要求を送信します。 しかし、 *有効* ACL 権限。 これにより、認証された `/is/image` リクエスト。 ユーザーがアセットへのアクセスを許可されていない場合は、「403 - Forbidden」エラーが表示されます。
+
+**Dynamic Media - Scene7モードで ACL 権限を有効にするには：**
+
+1. Experience Manager から、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;に移動します。
+
+   ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
+
+1. 新しいブラウザータブが開き、**[!UICONTROL Adobe Experience Manager Web コンソール設定]**&#x200B;ページが表示されます。
+
+   ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
+
+1. ページで、名前までスクロールします。 *Adobe CQ Scene7 PlatformServer*.
+
+1. 名前の右側にある鉛筆アイコン (**[!UICONTROL 設定値の編集]**) をクリックします。
+
+1. の **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** ページで、次の 2 つの設定のチェックボックスをオンにします。
+
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — この設定を有効にすると、保存する権限の結果が 2 分（デフォルト）間キャッシュされます。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name`  — この設定を有効にすると、Dynamic Media Image Server を介してアセットをプレビューする際のユーザーのアクセスを検証します。
+
+   ![Dynamic Media - Scene7モードでアクセス制御リスト設定を有効にする](/help/assets/assets-dm/acl.png)
+
+1. ページの右下隅にある「 」を選択します。 **[!UICONTROL 保存]**.
 
 ### （任意）2 GB を超えるアセットのアップロードに対する Dynamic Media - Scene7 モードの設定 {#optional-config-dms7-assets-larger-than-2gb}
 
