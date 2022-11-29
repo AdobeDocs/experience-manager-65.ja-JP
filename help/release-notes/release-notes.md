@@ -2,8 +2,7 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-exl-id: 0288aa12-8d9d-4cec-9a91-7a4194dd280a
-source-git-commit: 3fff3ac4e09058a6c7f7bf4a99f85b3aab0ab1a9
+source-git-commit: 937af2df46b93aab6c9010814175d72a9bd583db
 workflow-type: tm+mt
 source-wordcount: '3176'
 ht-degree: 35%
