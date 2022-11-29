@@ -12,9 +12,9 @@ discoiquuid: e72da81b-4085-49b0-86c3-11ad48978a8a
 docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
-source-git-commit: bc3dd7d229a75323b98a96d60dcbb3ae2b8c09ab
+source-git-commit: 97b0cec1c8091bbc5736bd68bdee257ca423f93e
 workflow-type: tm+mt
-source-wordcount: '5469'
+source-wordcount: '5454'
 ht-degree: 99%
 
 ---
@@ -215,16 +215,17 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 
 >[!NOTE]
 >
->ACL はサンプルに付属しています。アプリケーションに適した ACL を確認し、決定しておくことをお勧めします。付属の ACL を確認するには、CRXDE にアクセスし、以下のノードの「**アクセス制御**」タブを選択します。
+>ACL はサンプルに付属しています。アプリケーションに適した ACL を確認し、決定しておくことをお勧めします。付属の ACL を確認するには、**CRXDE** にアクセスし、以下のノードの「**アクセス制御**」タブを選択します。
 >
->`/etc/cloudservices/facebookconnect/geometrixx-outdoorsfacebookapp`：全員に読み取りアクセスを許可します。
->`/etc/cloudservices/twitterconnect/geometrixx-outdoors-twitter-app`：全員に読み取りアクセスを許可します。
->`/home/users/geometrixx-outdoors`：全員に`*/profile*`の読み取りアクセスを許可します。
->`*/social/relationships/following/*`。
+>* `/etc/cloudservices`
+>* `/home/users/we-retail`
 >
->カスタムアプリケーションは、次のような他の関係`*/social/relationships/friend/*`や`*/social/relationships/pending-following/*`用のアクセスを設定できます。 
+>カスタムアプリケーションは、次のような他の関係に対するアクセスを設定できます。
 >
->コミュニティ特有の ACL を作成する場合は、そのコミュニティに参加するメンバーに追加の権限を付与できます。例えば、ユーザーが `/content/geometrixx-outdoors/en/community/hiking` または `/content/geometrixx-outdoors/en/community/winter-sports` のコミュニティに参加する場合などです。
+>* `*/social/relationships/friend/*`
+>* または `*/social/relationships/pending-following/*`.
+>
+>コミュニティ特有の ACL を作成する場合は、そのコミュニティに参加するメンバーに追加の権限を付与できます。例えば、ユーザーが次の場所でコミュニティに参加する場合は、このような状況が考えられます。 `/content/we-retail/us/en/community`
 
 ### 権限の状態 {#permission-states}
 
