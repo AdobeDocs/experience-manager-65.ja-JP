@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '3853'
+source-wordcount: '3858'
 ht-degree: 29%
 
 ---
@@ -107,9 +107,9 @@ ht-degree: 29%
 
 ### 主な特長 {#keyfeatures}
 
-* AEM Forms Designer がスペイン語ロケールで使用できるようになりました。 (LC-3920051)
-* OAuth2 を使用して、Microsoft Office 365 メールサーバープロトコル（SMTP および IMAP）で認証できるようになりました。 （NPR-35177）
-* 次の設定が可能です。 [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) プロパティを true に設定すると、サーバー側のレコードのドキュメントから除外する非表示フィールドが識別されます。 （NPR-38149）
+* AEM Forms Designer が [スペイン語ロケール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). (LC-3920051)
+* これで、 [Microsoft Office 365 メールサーバープロトコル（SMTP および IMAP）で認証するための OAuth2](/help/forms/using/oauth2-support-for-mail-service.md). （NPR-35177）
+* 次の設定が可能です。 [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) プロパティを true に設定すると、サーバー側のレコードのドキュメントから除外する非表示フィールドが識別されます。 （NPR-38149）
 * AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ (x86) の 32 ビット版が必要です。  （NPR-36690）
 
 ### 修正 {#fixes}
@@ -165,7 +165,7 @@ ht-degree: 29%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQLは例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
+* GraphQL は例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
 * リスト表示でのタイトルの順序の並べ替え（昇順と降順の両方）、A、C、B の順序でタイトルの順序を並べ替えます (SITES-7585)
 * コンテンツフラグメントのバリエーションにタグ付けのサポートを追加しました。 （SITES-8168）
 * 不要な Odin 固有のコードをExperience Manager6.5 で特定および削除しました。 （SITES-3574）

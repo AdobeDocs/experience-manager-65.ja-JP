@@ -1,18 +1,16 @@
 ---
-title: Microsoft® Office 365 メールサーバープロトコルの OAuth2 サポート
-description: Microsoft® Office 365 メールサーバープロトコルの OAuth2 サポート
-source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
+title: Microsoft® Office 365 メールサーバープロトコルの OAuth2 ベースの認証を設定する
+description: Microsoft® Office 365 メールサーバープロトコルの OAuth2 ベースの認証を設定する
+source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 3%
 
 ---
 
-# Microsoft® Office 365 メールサーバープロトコルの OAuth 2.0 サポート {#oauth2-support-for-the-microsoft-mail-server-protocols}
+# Microsoft® Office 365 メールサーバープロトコルとの統合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
-AEM Formsでは、組織が安全な電子メール要件に準拠できるように、Microsoft® Office 365 メールサーバープロトコルとの統合に対して OAuth 2.0 のサポートを提供しています。 Azure Active Directory (Azure AD) は、OAuth 2.0 認証サービスを提供します。このサービスを使用すると、IMAP、POP、SMTP などの様々なプロトコルとの接続や、Office 365 ユーザーの電子メールデータへのアクセスが可能になります。
-
-OAuth 2.0 サービスを介して認証するMicrosoft® Office 365 メールサーバープロトコルを設定する手順を以下に示します。
+組織が安全な電子メール要件に準拠できるように、AEM Formsでは、Microsoft® Office 365 メールサーバープロトコルとの統合に対して OAuth 2.0 のサポートを提供しています。 Azure Active Directory (Azure AD) OAuth 2.0 認証サービスを使用して、IMAP、POP、SMTP などの様々なプロトコルと接続し、Office 365 ユーザーの電子メールデータにアクセスできます。 OAuth 2.0 サービスを介して認証するMicrosoft® Office 365 メールサーバープロトコルを設定する手順を以下に示します。
 
 1. ログイン [https://portal.azure.com/](https://portal.azure.com/) およびを検索します。 **Azure Active Directory** 検索バーで、結果をクリックします。
 または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
@@ -22,9 +20,8 @@ OAuth 2.0 サービスを介して認証するMicrosoft® Office 365 メール�
 
 1. 必要に応じて情報を入力し、「 **登録**.
    ![サポートされているアカウント](/help/forms/using/assets/azure_suuportedaccountype.png)
-
-
-   上記の場合、 **任意の組織ディレクトリ（任意の Azure AD ディレクトリ — マルチテナント）および個人用のMicrosoft®アカウント（Skype、Xbox など）のアカウント** 」オプションが選択されている。
+上記の場合、 
+**任意の組織ディレクトリ（任意の Azure AD ディレクトリ — マルチテナント）および個人用のMicrosoft®アカウント（Skype、Xbox など）のアカウント** 」オプションが選択されている。
 
    >[!NOTE]
    >
@@ -88,7 +85,9 @@ OAuth 2.0 サービスを介して認証するMicrosoft® Office 365 メール�
 ## 更新トークンの生成 {#generating-the-refresh-token}
 
 次に、次の手順で説明する更新トークンを生成する必要があります。
+
 1. コマンドプロンプトを開き、次の cURL コマンドを使用して refreshToken を取得します。
+
 1. を `clientID`, `client_secret` および `redirect_uri` と、 `<code>`:
 
    `curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/common/oauth2/v2.0/token`
@@ -163,9 +162,4 @@ OAuth 2.0 サービスを介して認証するMicrosoft® Office 365 メール�
 * 電子メールサービスが正しく動作していない場合。 を再生成してください `Refresh Token` 上記のように。 新しい値がデプロイされるまで数分かかります。
 
 * Workbench を使用して電子メールエンドポイントで電子メールサーバーの詳細を設定中にエラーが発生しました。Workbench の代わりに Admin UI を使用してエンドポイントを設定してみてください。
-
-
-
-
-
 
