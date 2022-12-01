@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 43a1cff0d7c2fe1d25e41cff3d02d1a55e6792c5
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3824'
+source-wordcount: '3830'
 ht-degree: 95%
 
 ---
@@ -371,6 +371,7 @@ ht-degree: 95%
    + [ポータブル保護ライブラリを使用して、ポリシーで保護された PDF ドキュメントを Reader 用に拡張します。](using/reader-extending-policy-protected-pdf-documents-using-ppl.md)
    + [Document Security によって保護された PDF ドキュメントと Microsoft Office ドキュメントを AEM で検索可能にする](using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
    + [別のユーザーの代わりにドキュメントを保護する](using/protect-document-on-behalf-of-another-user.md)
+   + [Microsoft Mail Service の oAuth2.0 のサポート](/help/forms/using/oauth2-support-for-mail-service.md)
 + Forms Designer {#use-forms-designer}
    + [Forms Designer ヘルプ](using/forms-designer-help.md)
    + [Designer の使用](https://www.adobe.com/go/learn_aemforms_designer_65_jp)

@@ -11,10 +11,10 @@ discoiquuid: ce65cb5f-94ec-4423-9fa9-d617e9703091
 docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: 9ee8e79777b89fbf4d6e5b5fd1dbb1ef3bc9ad5d
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3483'
-ht-degree: 100%
+source-wordcount: '3466'
+ht-degree: 98%
 
 ---
 
@@ -298,10 +298,10 @@ ht-degree: 100%
 「レコードのドキュメント」タブに入力するブランディング情報をローカライズするには、ブラウザーのロケールを正しく設定する必要があります。レコードのドキュメントのブランディング情報をカスタマイズするには、次の手順を実行します。
 
 1. レコードのドキュメント内でパネル（ルートパネル）を選択して、「![設定](assets/configure.png)」をタップします。
-1. ![dortab](assets/dortab.png) をタップします。「レコードのドキュメント」タブが表示されます。
+1. ![dortab](/help/forms/using/assets/dortab.png) をタップします。「レコードのドキュメント」タブが表示されます。
 1. レコードのドキュメントをレンダリングする、デフォルトのテンプレートまたはカスタムのテンプレートのいずれかを選択します。デフォルトのテンプレートを選択すると、レコードのドキュメントのサムネイルが「テンプレート」ドロップダウンの下に表示されます。
 
-   ![brandingtemplate](assets/brandingtemplate.png)
+   ![brandingtemplate](/help/forms/using/assets/brandingtemplate.png)
 
    カスタムのテンプレートを選択する場合は、AEM Forms サーバーで XDP を参照して選択します。使用する AEM Forms サーバーにないテンプレートを使用する場合は、最初に XDP を AEM Forms サーバーにアップロードする必要があります。
 
@@ -396,7 +396,7 @@ ht-degree: 100%
 **フォームレベルの設定**
 
 * **バインドされていないフィールドをレコードのドキュメントに含める：**&#x200B;このプロパティを設定すると、スキーマベースのアダプティブフォームのバインドされていないフィールドが、レコードのドキュメントに追加されます。デフォルトでは true になっています。
-* **非表示の場合はレコードのドキュメントからフィールドを除外**：このプロパティを設定すると、「レコードのドキュメントから除外」フィールドレベルプロパティが true でないときにその動作が上書きされます。フォームの送信時にフィールドが非表示の場合、これらのフィールドは、プロパティが true に設定されているとレコードのドキュメントから除外されます（ただし「レコードのドキュメントから除外」プロパティが設定されていない場合）。
+* **非表示の場合に DoR からフィールドを除外：** 非表示のフィールドを除外するプロパティを設定します [!UICONTROL レコードのドキュメント] フォーム送信時に 有効にする場合 [サーバーで再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)を指定した場合、サーバーは非表示のフィールドを再計算してから、 [!UICONTROL レコードのドキュメント].
 
 ## レコードのドキュメントに対する改ページの適用 {#apply-page-breaks-in-dor}
 
@@ -404,13 +404,12 @@ ht-degree: 100%
 
 レコードのドキュメントに改ページを適用するには：
 
-1. パネルをタップし、「![設定](assets/configure-icon.svg)」を選択します。
-
+1. パネルをタップし、「 」を選択します。 ![設定](/help/forms/using/assets/configure.png)
 1. 「**[!UICONTROL レコードのドキュメント]**」を展開すると、プロパティが表示されます。
 
-1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](assets/folder-icon.svg)」をタップします。
+1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
 1. 「**[!UICONTROL 次のページの先頭]**」／「**[!UICONTROL 選択]**」をタップします。また、「**[!UICONTROL ページの先頭]**」をタップしてマスターページを選択し、「**[!UICONTROL 選択]**」をタップして改ページを適用することもできます。
-1. 「![保存](assets/save_icon.svg)」をタップして、プロパティを保存します。
+1. 「![保存](/help/forms/using/assets/save_icon.png)」をタップして、プロパティを保存します。
 
 選択したパネルは次のページに移動します。
 
@@ -425,13 +424,13 @@ ht-degree: 100%
 
 2 つ目のマスターページのプロパティをパネルに適用し、3 つ目のマスターページのプロパティをそれ以降のパネルに適用するには、以下の手順を実行します。
 
-1. パネルをタップして 2 つ目のマスターページを適用し、「 ![設定](assets/configure-icon.svg).」を選択します。
-1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](assets/folder-icon.svg)」をタップします。
+1. パネルをタップして 2 つ目のマスターページを適用し、「 ![設定](assets/cmppr.png).」を選択します。
+1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
 1. 「**[!UICONTROL ページ上]**」をタップして、2 つ目のマスターページを選択し、「**[!UICONTROL 選択]**」をタップします。
 AEM Forms は、アダプティブフォーム内の該当するパネルとそれ以降のすべてのパネルに 2 つ目のマスターページを適用します。
-1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 後]**&#x200B;フィールドの「![フォルダー](assets/folder-icon.svg)」をタップします。
+1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 後]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
 1. 「**[!UICONTROL 移動先ページ]**」をタップして、3 つ目のマスターページを選択し、「**[!UICONTROL 選択]**」をタップします。 
-1. 「![保存](assets/save_icon.svg)」をタップして、プロパティを保存します。
+1. 「![保存](/help/forms/using/assets/save_icon.png)」をタップして、プロパティを保存します。
 AEM Forms は、アダプティブフォーム内の該当するパネルとそれ以降のすべてのパネルに 3 つ目のマスターページを適用します。
 
 

@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 937af2df46b93aab6c9010814175d72a9bd583db
+source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
 workflow-type: tm+mt
-source-wordcount: '3176'
-ht-degree: 35%
+source-wordcount: '3853'
+ht-degree: 29%
 
 ---
 
@@ -105,9 +105,44 @@ ht-degree: 35%
 
 ## [!DNL Forms] {#forms-6515}
 
->[!NOTE]
->
->の修正点 [!DNL Experience Manager] Formsは、スケジュールされた [!DNL Experience Manager] サービスパックのリリース日。 この場合、アドオンパッケージは 2022 年 12 月 1 日（木）にリリースされます。 さらに、Formsの修正および機能強化のリストもこの節に追加されます。
+### 主な特長 {#keyfeatures}
+
+* AEM Forms Designer がスペイン語ロケールで使用できるようになりました。 (LC-3920051)
+* OAuth2 を使用して、Microsoft Office 365 メールサーバープロトコル（SMTP および IMAP）で認証できるようになりました。 （NPR-35177）
+* 次の設定が可能です。 [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) プロパティを true に設定すると、サーバー側のレコードのドキュメントから除外する非表示フィールドが識別されます。 （NPR-38149）
+* AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ (x86) の 32 ビット版が必要です。  （NPR-36690）
+
+### 修正 {#fixes}
+
+* アダプティブフォームの data-disabled プロパティを切り替えても、ラジオボタンとチェックボックスグループの外観は変わりません。 （NPR-39368）
+* アダプティブフォームが翻訳されると、一部の翻訳が失われ、正しく表示されません。 （NPR-39367）
+* ページのプロパティを「非表示」に設定した場合、そのページはフォームセットから削除されません。 （NPR-39325）
+* レコードのドキュメントでは、ページの最後に動的な脚注セクションは存在しません。 （NPR-39322）
+* アダプティブフォーム用にレコードのドキュメントが生成された場合、ラジオボタンとチェックボックスで垂直方向の配置のみが許可されます。 ユーザーは、ラジオボタンとチェックボックスの水平方向の配置を設定できません。 （NPR-39321）
+* Correspondence Management をデプロイした後、複数のユーザーがフォームにアクセスしようとすると、org.apache.sling.i18n.impl.JcrResourceBundle.loadPotentialLanguageRoots がボトルネックになり、スレッドの大部分が突き刺されます。 多くの場合、フォームのページリクエストの読み込みには、サーバーの読み込みが非常に少ない場合でも、1 分以上かかりました。 （NPR-39176、CQ-4347710）
+* アダプティブフォームで、遅延読み込みされたアダプティブフォームフラグメントでリッチテキストフィールドを使用すると、次のエラーが発生します。
+   * コンテンツを編集したり、「リッチテキスト」フィールドに何も追加したりすることはできません。
+   * リッチテキストに適用された表示パターンが適用されない。 
+   * 最小フィールド長に関するエラーメッセージは、フォームの送信時には表示されません。
+   * このリッチテキストフィールドの内容は、生成された submit-XML に複数回含まれます。 （NPR-39168）
+* アダプティブフォームで日付選択オプションを使用すると、値を正しい形式に変換できません。 （NPR-39156）
+* アダプティブフォームをHTMLフォームとしてプレビューしている間、一部のサブフォームが親フォームと重なるので、正しくレンダリングされません。 （NPR-39046）
+* パネルに非表示のテーブルがあり、アダプティブフォームが表形式ビューを使用してレンダリングされている場合、最初のタブのフィールドが正しく表示されません。 （NPR-39025）
+* この `Body` 標準 (OOTB) テンプレートのタグが見つかりません。 (NPR-39022)
+* レコードのドキュメントは、アダプティブフォームの言語で生成されません。 常に英語で生成されます。 （NPR-39020）
+* アダプティブフォームに複数のパネルが含まれ、一部のパネルでは標準の **添付ファイル** コンポーネント、 `Error occurred while draft saving` エラーが発生します。 （NPR-38978）
+* 条件 `=` アダプティブフォームのチェックボックス、ドロップダウンリスト、ラジオボタンフィールドで署名が使用され、レコードのドキュメントが生成されます。 `=` 生成されたレコードのドキュメントには署名が表示されません。（NPR-38859）
+* 6.5.11.0サービスパックのアップグレード後に、通知バッチ処理エラーの数が複数回増加しています。 （NPR-39636）
+* テストデータを指定しないと、Correspondence Management レターがエージェント UI に読み込まれません。 （CQ-4348702）
+* IBM® WebSphere®を使用してデプロイされたAEM FormsからAEM Forms Service Pack 14(SP14) を適用すると、データベースの初期化中にブートストラップが失敗し、 `java.lang.NoClassDefFoundError:org/apache/log4j/Logger` エラーが発生しました。（NPR-39414）
+* OSGi サーバー上のAEM Form で、Document Service API を使用してPDFを認証すると、次のエラーで失敗します。com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311-003 （NPR-38855）
+* ユーザーがAEM 6.3 Formsでレターをレンダリングするためにラッパーサービスを使用しようとすると、 `java.lang.reflect.UndeclaredThrowableException` エラーが発生しました。 （CQ-4347259）
+* XDP がHTML5 フォームとしてレンダリングされる場合、アダプティブフォーム内のオブジェクトの配置に関係なく、マスターページのコンテンツが最初にレンダリングされます。 （CQ-4345218）
+* 宛先サーバーでのアプリケーションの設定は、ソースサーバーで定義された設定に変更されます ( **読み込み完了時に設定を上書き** アプリケーションのインポート時にオプションがオンになっていません。 （NPR-39044）
+* ユーザーが Configuration Manager を使用してコネクタ設定を更新しようとすると、失敗します。（CQ-4347077）
+* ユーザーが管理者ユーザーのデフォルトのパスワードを変更した後に JEE 上のAEM Formsパッチを実行しようとすると、例外が発生します `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 発生します。 （CQ-4348277）
+* AEM Designer では、チェックボックスを含む表のセルに、キャプションのないフォームフィールドが配置されます。(LC-3920410)
+* ユーザーがAEM Forms Designer でヘルプを開こうとすると、正しく表示されません。 （CQ-4341996）
 
 ## [!DNL Sites] {#sites-6515}
 
@@ -130,7 +165,7 @@ ht-degree: 35%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL は例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
+* GraphQLは例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
 * リスト表示でのタイトルの順序の並べ替え（昇順と降順の両方）、A、C、B の順序でタイトルの順序を並べ替えます (SITES-7585)
 * コンテンツフラグメントのバリエーションにタグ付けのサポートを追加しました。 （SITES-8168）
 * 不要な Odin 固有のコードをExperience Manager6.5 で特定および削除しました。 （SITES-3574）
@@ -285,7 +320,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
  -->
 
 * [GraphQL インデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
