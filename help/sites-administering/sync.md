@@ -12,10 +12,10 @@ discoiquuid: c061b358-8c0d-40d3-8090-dc9800309ab3
 docset: aem65
 exl-id: 89f55598-e749-42b8-8f2a-496f45face66
 feature: Security
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 002b9035f37a1379556378686b64d26bbbc30288
 workflow-type: tm+mt
-source-wordcount: '2427'
-ht-degree: 100%
+source-wordcount: '2445'
+ht-degree: 86%
 
 ---
 
@@ -47,13 +47,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->セッションが必要な場合は、SSO ソリューションか定着セッションを使用して、別のパブリッシャーに切り替わった際にはお客様にログインしてもらうことをお勧めします。
+>セッションが必要な場合は、SSO ソリューションを使用するか、スティッキーセッションを使用し、別のパブリッシュインスタンスに切り替えられた場合は顧客にログインさせることをお勧めします。
 
 >[!CAUTION]
 >
->ユーザー同期が有効化されている場合でも、***administrators*** グループの同期はサポートされません。代わりに、「差分のインポート」が失敗した旨を示すログがエラーログに記録されます。
+>ユーザー同期が有効化されている場合でも、**administrators** グループの同期はサポートされません。代わりに、「差分のインポート」が失敗した旨を示すログがエラーログに記録されます。
 >
->このため、デプロイメントがパブリッシュファームで、**administrators** グループに対してユーザーが追加または削除された場合、変更は各パブリッシュインスタンスに対して手動で実行する必要があります。
+>したがって、デプロイメントがパブリッシュファームの場合、ユーザーが **管理者** グループの作成時には、各パブリッシュインスタンスで手動で変更をおこなう必要があります。
 
 ## ユーザー同期の有効化 {#enable-user-sync}
 
@@ -71,9 +71,9 @@ ht-degree: 100%
 
 ### 前提条件 {#prerequisites}
 
-1. ）1 つのパブリッシャーでユーザーおよびユーザーグループが既に作成されている場合は、ユーザー同期を設定して有効にする前に、ユーザーデータをすべてのパブリッシャーと[手動で同期](#manually-syncing-users-and-user-groups)することをお勧めします。
+1. ユーザーとユーザーグループが 1 つのパブリッシュインスタンス上で既に作成されている場合は、次の操作を行うことをお勧めします。 [手動同期](#manually-syncing-users-and-user-groups) ユーザー同期を設定して有効にする前に、すべてのパブリッシュインスタンスに対するユーザーデータを設定します。
 
-ユーザー同期を有効にすると、新規に作成されたユーザーおよびグループのみが同期されるようになります。
+ユーザー同期を有効にすると、新しく作成されたユーザーとグループのみが同期されます。
 
 1. 最新のコードがインストールされていることを確認します。
 
@@ -159,7 +159,7 @@ ht-degree: 100%
 
 **権限の設定**
 
-**`administrators`**ユーザーグループのメンバーである承認済みユーザーがすべてのパブリッシュインスタンスで作成されたら、ユーザーデータをオーサー環境からパブリッシュ環境に同期する権限があるその承認済みユーザーをオーサー環境で識別する必要があります。
+権限を持つユーザーが 1 人で、 **`administrators`** ユーザーグループがすべてのパブリッシュインスタンスで作成されている場合は、認証済みユーザーがオーサーインスタンスからパブリッシュインスタンスにユーザーデータを同期する権限を持っていると認識される必要があります。
 
 * **オーサー環境で**
 
@@ -182,7 +182,7 @@ ht-degree: 100%
 
 **ユーザー同期の有効化**
 
-* **パブリッシュ環境で**：
+* **各パブリッシュインスタンスで**：
 
    * 管理者権限でサインインします。
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
@@ -194,8 +194,8 @@ ht-degree: 100%
 検証 `Name`：`socialpubsync-reverse`
 
       * 「`Enabled`」チェックボックスをオンにします
-      * 「`Save`」を選択します
-   * 各パブリッシュインスタンスで**繰り返します**
+      * 「`Save`」を選択します。
+   * 各パブリッシュインスタンスで&#x200B;**繰り返し**&#x200B;ます
 
 
 
@@ -269,14 +269,14 @@ ht-degree: 100%
 
 ![](assets/chlimage_1-25.png)
 
-* **Exporter Endpoints**
-各パブリッシャーにエクスポーターエンドポイントが必要です。例えば、パブリッシャーが localhost:4503 と 4504 の 2 つの場合、以下の 2 つのエントリが必要です。
+* **エクスポーターエンドポイント**
+パブリッシュインスタンスごとにエクスポーターエンドポイントが必要です。 例えば、パブリッシュインスタンスが 2 つ（localhost:4503 と 4504）ある場合、2 つのエントリが存在するはずです。
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
-* **Importer Endpoints**
-各パブリッシャーにインポーターエンドポイントが必要です。例えば、パブリッシャーが localhost:4503 と 4504 の 2 つの場合、次の 2 つのエントリが必要です。
+* **インポーターエンドポイント**
+各パブリッシュインスタンスにインポーターエンドポイントが必要です。 例えば、パブリッシュインスタンスが 2 つ（localhost:4503 と 4504）ある場合、2 つのエントリが存在するはずです。
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
@@ -404,7 +404,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 仕様上、パブリッシュ環境で作成されたユーザーとプロファイル（自己登録）は、オーサー環境では表示されません。
 
-トポロジが[パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)であり、ユーザー同期が正しく設定されると、Sling 配布を使用して*ユーザー*と&#x200B;*ユーザープロファイル*&#x200B;がパブリッシュファーム間で同期されます。
+トポロジが [パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm) ユーザー同期が正しく設定されている場合、 *ユーザー* および *ユーザープロファイル* は、Sling 配布を使用してパブリッシュファーム全体で同期されます。
 
 ### セキュリティコンソールでのユーザーまたはユーザーグループの作成 {#users-or-user-groups-are-created-using-security-console}
 
@@ -416,7 +416,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ### ユーザー同期をオフラインにする方法 {#how-to-take-user-sync-offline}
 
-[パブリッシャーを削除](#how-to-remove-a-publisher)したり、[データを手動で同期](#manually-syncing-users-and-user-groups)したりするためにユーザー同期をオフラインにするには、配布キューが空であり、静止している必要があります。
+ユーザー同期をオフラインにして、 [パブリッシュインスタンスを削除する](#how-to-remove-a-publish-instance) または [データの手動同期](#manually-syncing-users-and-user-groups)を指定する場合、配布キューは空で静止している必要があります。
 
 配布キューの状態をチェックするには：
 
@@ -459,7 +459,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ![](assets/chlimage_1-28.png)
 
-#### パブリッシャーに対する診断の実行方法 {#how-to-run-diagnostics-for-publishers}
+#### パブリッシュインスタンスの診断を実行する方法 {#how-to-run-diagnostics-for-publish-instances}
 
 診断がオーサー環境から実行された場合は、成否の結果に[情報]セクションが含まれています。このセクションには、設定済みのパブリッシュインスタンスのリストが確認用に表示されます。
 
@@ -535,7 +535,7 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ### ユーザーおよびユーザーグループの手動同期 {#manually-syncing-users-and-user-groups}
 
-* ユーザーおよびユーザーグループが存在するパブリッシャーで：
+* ユーザーとユーザーグループが存在するパブリッシュインスタンス上：
 
    * [ユーザー同期が有効になっている場合は無効にします](#how-to-take-user-sync-offline)
    * `/home` の[パッケージを作成](/help/sites-administering/package-manager.md#creating-a-new-package)します
@@ -553,13 +553,13 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 ユーザー同期を設定したり、有効にしたりするには、手順 1（[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)）に進みます。
 
-### パブリッシャーが使用不能になった場合 {#when-a-publisher-becomes-unavailable}
+### パブリッシュインスタンスが使用できなくなった場合 {#when-a-publish-instance-becomes-unavailable}
 
-パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。パブリッシャーに対する変更はキューに入れられ、パブリッシャーがオンラインに戻った時点で処理されます。
+パブリッシュインスタンスが使用不能になっても、今後オンラインに戻る場合は削除しないでください。変更はパブリッシュインスタンスに対してキューに入れられ、オンラインに戻ると、変更が処理されます。
 
 パブリッシュインスタンスがオンラインに戻ることがない場合や永続的にオフラインのままである場合は、削除する必要があります。そのままにしておくと、キューの蓄積によってオーサー環境のディスク使用量が著しく増加します。
 
-パブリッシャーが停止した場合、オーサー環境のログに次のような例外が記録されます。
+パブリッシュインスタンスがダウンした場合、オーサーログには次のような例外があります。
 
 ```
 28.01.2016 15:57:48.475 ERROR
@@ -569,14 +569,14 @@ Web コンソールに表示される、編集されたデフォルトの設定�
  org.apache.sling.distribution.packaging.DistributionPackageImportException: failed in importing package ...
 ```
 
-### パブリッシャーの削除方法 {#how-to-remove-a-publisher}
+### パブリッシュインスタンスを削除する方法 {#how-to-remove-a-publish-instance}
 
-[Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory) からパブリッシャーを削除するには、配布キューが空であり、静止している必要があります。
+パブリッシュインスタンスを [Apache Sling Distribution Agent - Sync Agents Factory](#apache-sling-distribution-agent-sync-agents-factory)を指定する場合、配布キューは空で静止している必要があります。
 
 * オーサー環境で：
 
    * [ユーザー同期をオフラインにする](#how-to-take-user-sync-offline)
-   * [手順 7](#apache-sling-distribution-agent-sync-agents-factory)に従って、次の両方のサーバーリストからパブリッシャーを削除します。
+   * follow [手順 7](#apache-sling-distribution-agent-sync-agents-factory) 両方のサーバーリストからパブリッシュインスタンスを削除するには：
 
       * `Exporter Endpoints`
       * `Importer Endpoints`
