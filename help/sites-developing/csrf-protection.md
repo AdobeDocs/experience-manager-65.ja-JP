@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 100%
+source-wordcount: '260'
+ht-degree: 88%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-トークンを利用するには、デプロイメント内のすべてのインスタンスに `/etc/keys/hmac` バイナリをレプリケーションする必要があります。HMAC 鍵をすべてのインスタンスにコピーするには、鍵を格納するパッケージを作成し、パッケージマネージャーを使用してすべてのインスタンスにインストールする方法が便利です。
+トークンを利用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケートする必要があります。 詳しくは、 [HMAC キーのレプリケート](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) を参照してください。
 
 >[!NOTE]
 >

@@ -10,9 +10,9 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 2c263c0d-2521-49df-88ba-f304a25af8ab
 exl-id: e24d815c-83e2-4639-8273-b4c0a6bb008a
-source-git-commit: 32e2a30d9f3327d26b81a07730ace04e4e68b0d1
+source-git-commit: f8d249f5d3fac243b4989c3eca4be2730dcf16ec
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '801'
 ht-degree: 100%
 
 ---
@@ -68,16 +68,12 @@ MongoMK オーサーインスタンスと TarMK パブリッシュインスタ�
 
 ### HMAC 鍵のレプリケーション {#replicating-the-hmac-key}
 
-HMAC 鍵は、`/etc/key` のバイナリプロパティとしてリポジトリに存在します。その横にある **View** リンクをクリックすることで別個にダウンロードできます。
-
-![chlimage_1-35](assets/chlimage_1-35a.png)
-
 インスタンス間で鍵をレプリケーションするには、次の手順に従います。
 
 1. コピーする鍵要素を含む AEM インスタンス（通常はオーサーインスタンス）にアクセスします。
 1. ローカルファイルシステム内で、`com.adobe.granite.crypto.file` を見つけます。例えば、次のパスにあります。
 
-   * &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
