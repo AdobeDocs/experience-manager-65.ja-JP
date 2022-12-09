@@ -10,10 +10,10 @@ discoiquuid: 1b905e66-dc05-4f14-8025-62a78feef12a
 docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
-source-git-commit: 84ae92f889661a639e931b2a7ba9a999d5258841
-workflow-type: ht
-source-wordcount: '6794'
-ht-degree: 100%
+source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
+workflow-type: tm+mt
+source-wordcount: '6888'
+ht-degree: 99%
 
 ---
 
@@ -580,6 +580,9 @@ Syntax （パラメーターの構文）：
    1. 文字列
    1. 数値
    1. ブール値
+   1. 対象範囲
+
+   範囲は、アダプティブフォームの参照フィールドに使用されます。 フォームが遅延読み込みを使用している場合は、`scope`を使用してフィールドにアクセスできます。フィールドは、フィールドが読み込まれたときか、フィールドがグローバルとしてマークされているときにアクセスできます。
 
    他のすべてのパラメータータイプは、上記のいずれかに分類されます。「なし」はサポートされていません。上記のタイプのいずれかを選択していることを確認してください。タイプでは、大文字と小文字は区別されません。パラメーターでは、スペースは使用できません`name`。`<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
@@ -594,6 +597,29 @@ Syntax （戻り値のタイプの構文）：
    1. ブール値
 
    他のすべての戻り値のタイプは、上記のいずれかに分類されます。「なし」はサポートされていません。上記のタイプのいずれかを選択していることを確認してください。戻り値の型では、大文字と小文字は区別されません。
+
+* **This**
+Syntax（これ構文）： 
+`@this currentComponent`
+
+   ルールが記述されているアダプティブフォームコンポーネントを参照するには、@this を使用します。
+
+   次の例は、フィールド値に基づいています。次の例では、ルールによりフォーム内のフィールドが非表示になります。`this.value`の`this`部分は、ルールが記述されている基になるアダプティブフォームコンポーネントを参照します。
+
+   ```
+      /**
+      * @function myTestFunction
+      * @this currentComponent
+      * @param {scope} scope in which code inside function will be executed.
+      */
+      myTestFunction = function (scope) {
+         if(this.value == "O"){
+               scope.age.visible = true;
+         } else {
+            scope.age.visible = false;
+         }
+      }
+   ```
 
 >[!NOTE]
 >
