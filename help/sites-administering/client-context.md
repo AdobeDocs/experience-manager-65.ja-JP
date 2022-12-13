@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 7a3322fe-554e-479e-a27c-4259cdd3ba2e
 docset: aem65
 exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 02afc4eb78acaacc40d3ba1830ccb1e9c3907d0f
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1877'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Client Context は、ContextHub に変更されました。詳しくは、関連する[設定]（ch-configuring.md）および[開発者](/help/sites-developing/contexthub.md)ドキュメントを参照してください。
+>Client Context は、ContextHub に変更されました。詳しくは、[設定](/help/sites-developing/ch-configuring.md)および[開発者](/help/sites-developing/contexthub.md)に関する関連ドキュメントを参照してください。
 
 Client Context は、現在のページと訪問者に関する特定の情報を提供するメカニズムです。**Ctrl + Alt + c キー**（Windows）または **control + option + c キー**（Mac）で開くことができます。
 
@@ -113,7 +113,7 @@ JSONP ストアは他のストアと同じですが、別のドメインから�
 **タグクラウド**：現在のページに設定されているタグと、サイト閲覧中に収集されたタグを表示します。タグの上にマウスを移動すると、現在のユーザーがその特定のタグを保持しているページにアクセスした回数が表示されます。
 
 >[!NOTE]
->訪問したページに表示される DAM アセットに設定されているタグはカウントされません。
+訪問したページに表示される DAM アセットに設定されているタグはカウントされません。
 
 **Technographics ストア**：このコンポーネントは、インストール環境によって異なります。
 
@@ -124,7 +124,7 @@ JSONP ストアは他のストアと同じですが、別のドメインから�
 詳しくは、[ClientContext の詳細](/help/sites-developing/client-context.md)を参照してください。
 
 >[!NOTE]
->ページデータは、ClientContext のデフォルトのコンポーネントではなくなりました。必要に応じて、ClientContext を編集し、**汎用ストアのプロパティ**&#x200B;コンポーネントを追加して、**ストア**&#x200B;を `pagedata` として定義するように設定することにより、ページデータを追加できます。
+ページデータは、ClientContext のデフォルトのコンポーネントではなくなりました。必要に応じて、ClientContext を編集し、**汎用ストアのプロパティ**&#x200B;コンポーネントを追加して、**ストア**&#x200B;を `pagedata` として定義するように設定することにより、ページデータを追加できます。
 
 ## ClientContext プロファイルの変更 {#changing-the-client-context-profile}
 
