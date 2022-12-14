@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
-source-git-commit: 2801ef5ec5ed7b01f4eb046baa439f6d5de56b75
+source-git-commit: d30bfb9e67d0a2a0e870ee0841ed14060def7756
 workflow-type: tm+mt
-source-wordcount: '3249'
-ht-degree: 100%
+source-wordcount: '3252'
+ht-degree: 99%
 
 ---
 
@@ -436,7 +436,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 1. [こちらのドキュメントで説明されているように](/help/sites-authoring/templates.md#creating-a-new-template-template-author)編集可能テンプレートと同じようにテンプレートを作成します。これは、テンプレートタイプの基盤となります。
 1. CRXDE Lite を使用している場合は、新しく作成したテンプレートを `templates` ノードから`template-types`テンプレートフォルダー[の下の ](/help/sites-developing/page-templates-editable.md#template-folders) ノードにコピーします。
 1. このテンプレートを[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md#template-folders)の下の `templates` ノードから削除します。
-1. `template-types` ノードの下にあるテンプレートのコピーで、`cq:template` および `cq:templateType` `jcr:content` プロパティをすべて削除します。
+1. ( `template-types` ノード、すべて削除 `cq:template` および `cq:templateType` すべての `jcr:content` ノード。
 
 また、GitHub で入手できる、編集可能テンプレートのサンプルを基盤として使用し、独自のテンプレートタイプを作成することもできます。
 
