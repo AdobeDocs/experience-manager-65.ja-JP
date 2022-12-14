@@ -2,10 +2,10 @@
 title: AEM 内での外部 SPA の編集
 description: このドキュメントでは、スタンドアロン SPA を AEM インスタンスにアップロードし、編集可能なコンテンツのセクションを追加し、オーサリングを有効にするための推奨手順について説明します。
 exl-id: 25236af4-405a-4152-8308-34d983977e9a
-source-git-commit: 237de641ba02705f8171b1526946a4dc1b60b6a3
-workflow-type: ht
-source-wordcount: '2392'
-ht-degree: 100%
+source-git-commit: 90f3fb05581820167ea0dcf50fb23048609af31d
+workflow-type: tm+mt
+source-wordcount: '2446'
+ht-degree: 97%
 
 ---
 
@@ -358,6 +358,10 @@ mvn clean install -PautoInstallSinglePackage
 1. AEM でのページの編集を確認します。
 
    * プロジェクトを AEM にデプロイし、新しく作成した `test` ページに移動します。これで、ページコンテンツがレンダリングされ、AEM コンポーネントが編集可能になります。
+
+## フレームワークの制限 {#framework-limitations}
+
+RemotePage コンポーネントは、実装が、 [ここにあります。](https://github.com/shellscape/webpack-manifest-plugin) ただし、RemotePage コンポーネントは、（remote-page-next コンポーネントを介して）React フレームワークと連携することをテストされただけなので、Angularなど他のフレームワークからのアプリケーションのリモート読み込みはサポートされていません。
 
 ## その他のリソース {#additional-resources}
 
