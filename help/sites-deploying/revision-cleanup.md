@@ -1,8 +1,8 @@
 ---
 title: リビジョンクリーンアップ
 seo-title: Revision Cleanup
-description: AEM 6.3 でのリビジョンクリーンアップ機能の使用方法を説明します。
-seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.3.
+description: AEM 6.5 でのリビジョンクリーンアップ機能の使用方法を説明します。
+seo-description: Learn how to use the Revision Cleanup functionality in AEM 6.5.
 uuid: 321f5038-44b0-4f1e-a1aa-2d29074eed70
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 550e7993f88367ec4b5c1d024dc742c087c1a9eb
+source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
 workflow-type: tm+mt
-source-wordcount: '5912'
-ht-degree: 97%
+source-wordcount: '5918'
+ht-degree: 96%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 97%
 
 リポジトリが更新されるたびに、新しいコンテンツのリビジョンが作成されます。その結果、更新のたびにリポジトリのサイズが大きくなります。リポジトリのサイズが無制限に増大しないように、古いリビジョンをクリーンアップして、ディスクリソースを解放する必要があります。このメンテナンス機能は、リビジョンクリーンアップと呼ばれます。AEM 6.0 以降では、この機能をオフラインルーチンとして使用できます。
 
-AEM 6.3 では、この機能のオンラインバージョンである「オンラインでのリビジョンクリーンアップ」が導入されました。AEM インスタンスをシャットダウンする必要があったオフラインのリビジョンクリーンアップとは異なり、オンラインでのリビジョンクリーンアップは AEM インスタンスがオンラインの状態で実行できます。オンラインでのリビジョンクリーンアップはデフォルトで有効になります。リビジョンクリーンアップを実行する際はこの方法を使用することが推奨されます。
+AEM 6.3 以降では、この機能のオンラインバージョンとして、オンラインでのリビジョンクリーンアップが導入されました。 AEM インスタンスをシャットダウンする必要があったオフラインのリビジョンクリーンアップとは異なり、オンラインでのリビジョンクリーンアップは AEM インスタンスがオンラインの状態で実行できます。オンラインでのリビジョンクリーンアップはデフォルトで有効になります。リビジョンクリーンアップを実行する際はこの方法を使用することが推奨されます。
 
 **メモ**：オンラインでのリビジョンクリーンアップの概要および使用方法について詳しくは、[ビデオを参照してください](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=ja)。
 
@@ -162,7 +162,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>以前の Tar 形式もサポートされますか。</strong></td>
-   <td>AEM 6.3 では、新しい OAK Segment Tar のみがサポートされます。</td>
+   <td>AEM 6.3 以降では、新しい Oak Segment Tar のみがサポートされます。</td>
    <td> </td>
   </tr>
   <tr>
@@ -171,7 +171,7 @@ TarMK GC: no base state available, running full compaction instead
    <td> </td>
   </tr>
   <tr>
-   <td><strong>6.3 にアップグレードしてから、（例えば、別のメンテナンスウィンドウを使用して）後で移行を実行できますか。</strong></td>
+   <td><strong>6.3 以降にアップグレードし、後で移行を行うことはできますか（別のメンテナンスウィンドウを使用するなど）。</strong></td>
    <td>できません。前述のとおり、コンテンツの移行は必須です。</td>
    <td> </td>
   </tr>
@@ -249,7 +249,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップを実行するための前提条件はありますか。</strong></td>
-   <td><p>オンラインでのリビジョンクリーンアップは、AEM 6.3 以降のリリースでのみ使用できます。また、古いバージョンの AEM を使用している場合は、新しい <a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak Segment Tar</a> に移行する必要があります。</p> </td>
+   <td><p>オンラインでのリビジョンクリーンアップは、AEM 6.3 以降のリリースでのみ使用できます。 また、古いバージョンの AEM を使用している場合は、新しい <a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak Segment Tar</a> に移行する必要があります。</p> </td>
    <td> </td>
   </tr>
   <tr>
