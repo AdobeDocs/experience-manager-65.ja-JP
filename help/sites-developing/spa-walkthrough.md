@@ -1,24 +1,18 @@
 ---
 title: SPA の概要およびガイド
-seo-title: SPA Introduction and Walkthrough
 description: この記事では、SPA の概念を説明し、基本的な SPA アプリケーションを使用したオーサリング方法を紹介し、基礎となる AEM SPA エディターとの関連を示します。
-seo-description: This article introduces the concepts of a SPA and walks through using a basic SPA application for authoring, showing how it relates to the underlying AEM SPA Editor.
-uuid: 4b0a9e53-3892-4d60-8bd3-7ff740d2f137
-contentOwner: bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
-discoiquuid: 0478afcb-b029-4ce6-b3e6-cee4bb5408ce
-docset: aem65
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
+source-git-commit: 0e8ad326e883f73e795929ce7d5d36f1bcdc5347
 workflow-type: tm+mt
 source-wordcount: '1966'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
 
-# SPA の概要およびガイド{#spa-introduction-and-walkthrough}
+
+# SPA の概要およびガイド {#spa-introduction-and-walkthrough}
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築したいと考え、作成者はそうして構築されたサイトのコンテンツを AEM 内でシームレスに編集したいと考えています。
 
@@ -36,16 +30,23 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 
 この概要とガイドの目標は、SPA が注目される理由、その一般的な動作、AEM エディターでの SPA の処理方法、標準の AEM アプリケーションとの違いを AEM 開発者に示すことです。
 
-このウォークスルーは、標準的な AEM 機能と、サンプルの We.Retail Journal アプリに基づいています。以下の要件を満たす必要があります。
+## 要件 {#requirements}
 
-* [AEM バージョン 6.4 サービスパック 2 以降](/help/release-notes/release-notes.md)
-* [GitHub で入手可能なサンプルの We.Retail Journal アプリをここにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
+このガイドは、標準的な AEM 機能と、サンプルの WKND SPA Project アプリに基づいています。このチュートリアルに従うには、次の機能を使用できる必要があります。
+
+* [AEMバージョン 6.5.4 以降](/help/release-notes/release-notes.md)
+   * システムの管理者権限が必要です。
+* [GitHub で入手可能なサンプルの WKND SPA Project アプリ](https://github.com/adobe/aem-guides-wknd-spa)
+   * をダウンロードします。 [React アプリの最新リリース。](https://github.com/adobe/aem-guides-wknd-spa/releases) 次のように名前が付けられます。 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
+   * をダウンロードします。 [最新のサンプル画像](https://github.com/adobe/aem-guides-wknd-spa/releases) アプリの 次のように名前が付けられます。 `wknd-spa-sample-images-X.Y.Z.zip`.
+   * [パッケージマネージャーの使用](/help/sites-administering/package-manager.md) を使用して、AEMの他のパッケージと同様にパッケージをインストールします。
+   * このチュートリアルの目的では、Maven を使用してアプリをインストールする必要はありません。
 
 >[!CAUTION]
 >
->このドキュメントでは、[We.Retail Journal アプリ](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)をデモの目的でのみ使用します。どのプロジェクト作業にも使用しないでください。
+>このドキュメントでは、 [WKND Spa Project アプリ](https://github.com/adobe/aem-guides-wknd-spa) デモ目的のみ。 どのプロジェクト作業にも使用しないでください。
 >
->AEM プロジェクトでは、 [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
+>任意のAEMプロジェクトで [AEMプロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) は、SPA SDK を利用した React またはAngularを使用したSPAプロジェクトをサポートします。
 
 ### SPA について  {#what-is-a-spa}
 
@@ -98,39 +99,31 @@ SPA の背後にある主な考え方は、サーバー呼び出しに起因す�
 
 AEM SPA Editor を活用する SPA が構築されている場合、コンテンツの編集および作成時に、コンテンツ作成者は違いを認識しません。共通の AEM 機能を利用でき、作成者のワークフローに変更を加える必要はありません。
 
->[!NOTE]
->
->このウォークスルーは、標準的な AEM 機能と、サンプルの We.Retail Journal アプリに基づいています。以下の要件を満たす必要があります。
->
->* [AEM バージョン 6.4（サービスパック 2 を適用済み）](/help/release-notes/release-notes.md)
->* [GitHub で入手可能なサンプルの We.Retail Journal アプリをここにインストールします。](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal)
->
+1. AEM で WKND SPA Project アプリを編集します。
 
+   `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
-1. AEM で We.Retail Journal アプリを編集します。
-
-   `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
-
-   ![screen_shot_2018-06-07at142533](assets/screen_shot_2018-06-07at142533.png)
+   ![手順 1](assets/spa-walkthrough-step-1.png)
 
 1. 見出しコンポーネントを選択すると、他のコンポーネントと同様にツールバーが表示されます。「**編集**」を選択します。
 
-   ![screen_shot_2018-06-07at142937](assets/screen_shot_2018-06-07at142937.png)
+   ![手順 2](assets/spa-walkthrough-step-2.png)
 
 1. AEM 内でコンテンツを通常どおりに編集します。変更内容が保持されることに注意してください。
 
-   ![screen_shot_2018-06-07at143419](assets/screen_shot_2018-06-07at143419.png)
+   ![手順 3](assets/spa-walkthrough-step-3.png)
 
    >[!NOTE]
+   >
    >インプレーステキストエディターと SPA について詳しくは、[SPA Editor の概要](spa-overview.md#requirements-limitations)を参照してください。
 
 1. アセットブラウザーを使用して、新しい画像を画像コンポーネントにドラッグ＆ドロップします。
 
-   ![screen_shot_2018-06-07at143530](assets/screen_shot_2018-06-07at143530.png)
+   ![手順 4](assets/spa-walkthrough-step-4.png)
 
 1. 変更が保持されます。
 
-   ![screen_shot_2018-06-07at143732](assets/screen_shot_2018-06-07at143732.png)
+   ![手順 5](assets/spa-walkthrough-step-5.png)
 
 追加のコンポーネントをページにドラッグ＆ドロップしたり、コンポーネントを並べ替えたり、レイアウトを変更したりするなどのオーサリングツールは、SPA 以外のどの アプリケーションでもサポートされます。
 
@@ -138,7 +131,7 @@ AEM SPA Editor を活用する SPA が構築されている場合、コンテン
 >
 >SPA エディターは、アプリケーションの DOM を変更しません。SPA 自体が DOM を管理します。
 >
->この機能を確認するには、この記事の次の節、[SPA アプリと AEM SPA エディター](/help/sites-developing/spa-walkthrough.md#spa-apps-and-the-aem-spa-editor)に進みます。
+>この機能を確認するには、この記事の次の節、[SPA アプリと AEM SPA エディター](#spa-apps-and-the-aem-spa-editor)に進みます。
 
 ## SPA アプリと AEM SPA エディター {#spa-apps-and-the-aem-spa-editor}
 
@@ -146,21 +139,21 @@ SPA がエンドユーザーにとってどのように動作するかを体験�
 
 ### SPA アプリケーションの使用 {#using-an-spa-application}
 
-1. We.Retail Journal アプリを、公開サーバーで読み込むか、ページエディターの&#x200B;**ページ情報**&#x200B;メニューから「**公開済みとして表示**」オプションを使用して読み込みます。
+1. WKND SPA Project アプリを公開サーバーで読み込むか、ページエディターの&#x200B;**ページ情報**&#x200B;メニューから「**公開済みとして表示**」オプションを使用して読み込みます。
 
-   `/content/we-retail-journal/react.html`
+   `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
-   ![screen_shot_2018-06-08at102650](assets/screen_shot_2018-06-08at102650.png)
+   ![手順 1](assets/spa-walkthrough-step-1-1.png)
 
    子ページへのナビゲーション、天気ウィジェット、記事などを含むページ構造があります。
 
 1. メニューを使用して子ページに移動し、ページが読み込まれるのを確認します。更新は必要ありません。
 
-   ![screen_shot_2018-06-08at102815](assets/screen_shot_2018-06-08at102815.png)
+   ![手順 2](assets/spa-walkthrough-step-1-2.png)
 
 1. ブラウザーに組み込まれている開発者ツールを開き、子ページを移動しながらネットワークアクティビティを監視します。
 
-   ![screen_shot_2018-06-08at103922](assets/screen_shot_2018-06-08at103922.png)
+   ![手順 3](assets/spa-walkthrough-step-1-3.png)
 
    アプリ内でページ間を移動する際のトラフィック量は非常に少なくなります。ページのリロードは行われず、新しい画像のみが要求されます。
 
@@ -168,62 +161,37 @@ SPA がエンドユーザーにとってどのように動作するかを体験�
 
 子ページをナビゲートする際にページがリロードされないとすると、どのように読み込まれるのでしょうか。
 
-次の節の [SPA アプリケーションの読み込み](/help/sites-developing/spa-walkthrough.md#loading-an-spa-application)では、SPA を読み込む仕組みと、コンテンツを同期や非同期で読み込み方法を詳しく説明します。
+次の節では、 [SPA Application の読み込み](#loading-an-spa-application) では、SPAの読み込みの仕組みと、コンテンツの同期および非同期での読み込み方法について詳しく説明します。
 
 ### SPA アプリケーションの読み込み {#loading-an-spa-application}
 
-1. 読み込みがまだの場合は、Web.Retai ジャーナルアプリケーションを公開サーバーに読み込むか、ページエディターの&#x200B;**ページ情報**&#x200B;メニューから「**公開済みとして表示**」オプションを使用して読み込みます。
+1. 読み込みがまだの場合は、WKND SPA アプリケーションを公開サーバーに読み込むか、ページエディターの&#x200B;**ページ情報**&#x200B;メニューから「**公開済みとして表示**」オプションを使用して読み込みます。
 
-   `/content/we-retail-journal/react.html`
+   `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
-   ![screen_shot_2018-06-07at144736](assets/screen_shot_2018-06-07at144736.png)
+   ![手順 1](assets/spa-walkthrough-step-1-1.png)
 
 1. ブラウザーの組み込みツールを使用して、ページのソースを表示します。
 1. ソースのコンテンツは極端に制限されます。
 
-   ```
-   <!DOCTYPE HTML>
-   <html lang="en-CH">
-       <head>
-       <meta charset="UTF-8">
-       <title>We.Retail Journal</title>
-   
-       <meta name="template" content="we-retail-react-template"/>
-   
-   <link rel="stylesheet" href="/etc.clientlibs/we-retail-journal/react/clientlibs/we-retail-journal-react.css" type="text/css">
-   
-   <link rel="stylesheet" href="/libs/wcm/foundation/components/page/responsive.css" type="text/css">
-   
-   </head>
-       <body class="page basicpage">
-   
-   <div id="page"></div>
-   
-   <script type="text/javascript" src="/etc.clientlibs/we-retail-journal/react/clientlibs/we-retail-journal-react.js"></script>
-   
-       </body>
-   </html>
-   ```
-
-   ページの本文にはコンテンツが含まれていません。主に、スタイルシートと React スクリプト `we-retail-journal-react.js` の呼び出しで構成されます。
-
-   この React スクリプトは、このアプリケーションのプライマリドライバーであり、すべてのコンテンツのレンダリングを担います。
+   * ページの本文にはコンテンツが含まれていません。ページは主に、スタイルシートと、`clientlib-react.min.js` などの様々なスクリプトの呼び出しで構成されます。
+   * これらのスクリプトは、このアプリケーションのプライマリドライバーであり、すべてのコンテンツのレンダリングを担当します。
 
 1. ブラウザーに組み込まれているツールを使用して、ページを調べます。完全に読み込まれた DOM のコンテンツを表示します。
 
-   ![screen_shot_2018-06-07at151848](assets/screen_shot_2018-06-07at151848.png)
+   ![手順 4](assets/spa-walkthrough-step-1-4.png)
 
-1. インスペクターの「ネットワーク」タブに切り替えて、ページを再読み込みします。
+1. 次に切り替え： **ネットワーク** 」タブに移動し、ページをリロードします。
 
    イメージリクエストを無視した場合、ページに対して読み込まれるプライマリリソースは、ページ、CSS、React Javascript、その依存関係、およびページの JSON データです。
 
-   ![screen_shot_2018-06-07at152155](assets/screen_shot_2018-06-07at152155.png)
+   ![手順 5](assets/spa-walkthrough-step-1-5.png)
 
 1. `react.model.json` を新しいタブに読み込みます。
 
-   `/content/we-retail-journal/react.model.json`
+   `http://<host>:<port>/content/wknd-spa-react/us/en/home.model.json`
 
-   ![screen_shot_2018-06-07at152636](assets/screen_shot_2018-06-07at152636.png)
+   ![手順 6](assets/spa-walkthrough-step-1-6.png)
 
    AEM SPA エディターは、[AEM コンテンツサービス](/help/assets/content-fragments/content-fragments.md)を利用して、ページのコンテンツ全体を JSON モデルとして配信します。
 
@@ -233,39 +201,37 @@ SPA がエンドユーザーにとってどのように動作するかを体験�
 
 1. このモデルでは、ページを同期して読み込むように複数のページをグループ化できるので、必要なページ再読み込み数を減らせます。
 
-   We.Retail Journal の例では、訪問者は一般的にこれらのすべてのページを訪問するので、`home`、`blog`、および `aboutus` ページは同期して読み込まれます。ただし、訪問者がページを訪問する可能性が低いため、`weather` ページは非同期で読み込まれます。
+   WKND SPA Project アプリケーションの例では、訪問者は一般的にこれらのすべてのページを訪問するので、`home`、`page-1`、`page-2`、`page-3` ページは同期して読み込まれます。
 
    この動作は必須ではなく、完全に定義可能です。
 
-   ![screen_shot_2018-06-07at153945](assets/screen_shot_2018-06-07at153945.png)
+   ![手順 7](assets/spa-walkthrough-step-1-7.png)
 
-1. この動作の違いを表示するには、 ページを再読み込みし、インスペクターのネットワークアクティビティをクリアします。ページメニューのブログのページと会社概要のページに移動して、ネットワークアクティビティが報告されていないことを確認します。
+1. この動作の違いを表示するには、ページを再読み込みし、開発者ツールのネットワークアクティビティをクリアします。 ページメニューの `page-1` に移動し、`page-1` のイメージのリクエストが唯一のネットワークアクティビティであることを確認します。`page-1` 自体は読み込む必要はありません。
 
-   天気ページに移動して、`weather.model.json` が非同期で呼び出されることを確認します。
-
-   ![screen_shot_2018-06-07at155738](assets/screen_shot_2018-06-07at155738.png)
+   ![手順 8](assets/spa-walkthrough-step-1-8.png)
 
 ### SPA エディターとのインタラクション {#interaction-with-the-spa-editor}
 
-サンプルの We.Retail Journal アプリケーションを使用すると、JSON コンテンツ配信のコンテンツサービスやリソースの非同期読み込みを活用し、アプリケーションの動作と公開時の読み込み方法がよくわかります。
+サンプルの WKND SPA Project アプリケーションを使用すると、JSON コンテンツ配信のコンテンツサービスやリソースの非同期読み込みを活用し、アプリケーションの動作と公開時の読み込み方法が明確になります。
 
 また、コンテンツ作成者は、SPA エディターを使用したコンテンツを AEM 内でシームレスに作成できます。
 
 次の節では、SPA エディターが SPA 内のコンポーネントを AEM コンポーネントに関連付け、このシームレスな編集操作を実現できるようにする契約を検討します。
 
-1. エディターで We.Retail Journal アプリケーションを読み込み、**プレビュー**&#x200B;モードに切り替えます。
+1. エディターで WKND SPA Project アプリケーションを読み込み、**プレビュー**&#x200B;モードに切り替えます。
 
-   `https://localhost:4502/editor.html/content/we-retail-journal/react.html`
+   `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
 1. ブラウザーに組み込まれている開発者ツールを使用して、ページのコンテンツを調べます。選択ツールを使用して、ページ上の編集可能なコンポーネントを選択し、表示の詳細を要素に選択します。
 
    コンポーネントには新しいデータ属性 `data-cq-data-path` があります。
 
-   ![screen_shot_2018-06-08at095124](assets/screen_shot_2018-06-08at095124.png)
+   ![手順 2](assets/spa-walkthrough-step-2-2.png)
 
    例：
 
-   `data-cq-data-path="root/responsivegrid/paragraph_1`
+   `data-cq-data-path="/content/wknd-spa-react/us/en/home/jcr:content/root/responsivegrid/text`
 
    このパスは、各コンポーネントの編集コンテキスト設定オブジェクトの取得と関連付けを可能にします。
 
