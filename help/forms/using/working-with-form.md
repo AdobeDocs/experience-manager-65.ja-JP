@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
 discoiquuid: 8a5e038e-b39a-41de-88a0-47642e5bd5bf
 exl-id: adff5339-e026-4924-a401-f249f37fc6e6
-source-git-commit: 3c691a9e8673f3229368abbd550982d207eb8ac6
+source-git-commit: eb71119474f03a969a721c792b6f1ac330f9dbf3
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 82%
@@ -32,7 +32,7 @@ AEM Forms アプリケーションでは、次のようにフォームを同期�
 
 AFA(AEM Form Application)Android アプリの同期に失敗した場合は、次の手順を実行して同期の問題を修正します。
 
-1. 次に移動： **https://&#39;[server]:[ポート]&#39;system/console/configMgr**.
+1. 次に移動： **https://[server]:[ポート]/system/console/configMgr**.
 1. を検索します。 **[!UICONTROL AdobeGranite トークン認証ハンドラー]** をクリックし、 **[!UICONTROL 編集]**.
 1. を選択します。 **[!UICONTROL なし]** オプションを選択します。 **[!UICONTROL login-token cookie の SameSite 属性]** 属性。
 1. 「**[!UICONTROL 保存]**」をクリックします。
