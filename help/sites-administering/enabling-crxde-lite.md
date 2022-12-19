@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 72df3ece-badf-466b-8f9a-0ec985d87741
 exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a4183bb9d72763ebea3b464c77fce978c723e053
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 100%
+source-wordcount: '258'
+ht-degree: 82%
 
 ---
 
@@ -30,6 +30,16 @@ AEM のインストールを可能な限り保護するために、セキュリ�
 ```
 
 この推奨事項は攻撃対象領域を可能な限り減らすことを目的としていますが、システム管理者はコンテンツの参照や実稼動インスタンスの問題をデバッグするために CRXDE Lite にアクセスする必要がある場合があります。
+
+次のいずれかを使用してCRXDE Liteを有効にできます。 [OSGi 設定](#enabling-crxde-lite-osgi) または [cURL コマンド](#enabling-crxde-lite-curl).
+
+>[!WARNING]
+>
+>これらのメソッドの動作にわずかな違いがあるので、を使用する必要があります ***どちらか*** OSGI ***または*** cURL。
+>
+>次の 2 つの方法があります。 ***not*** 交換可能
+
+## OSGI でのCRXDE Liteの有効化 {#enabling-crxde-lite-osgi}
 
 無効にした場合、CRXDE Lite をオンにするには次の手順を実行します。
 
@@ -48,6 +58,8 @@ AEM のインストールを可能な限り保護するために、セキュリ�
    * 「**絶対 URI を使用**」ボックスにチェックマークを入れます。
 
 1. CRXDE Lite の使用が終わったら、再度 WebDAV を無効にしてください。
+
+## cURL でのCRXDE Liteの有効化 {#enabling-crxde-lite-curl}
 
 CRXDE Lite は、次のコマンドを実行して、cURL を使用して有効にすることもできます。
 
