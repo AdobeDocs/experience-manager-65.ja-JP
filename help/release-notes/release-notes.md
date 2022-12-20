@@ -2,9 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
-source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
+exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
+source-git-commit: a0e9bfd4bcbf7091d5537c6d88025ef4d6046b4d
 workflow-type: tm+mt
-source-wordcount: '3858'
+source-wordcount: '3989'
 ht-degree: 29%
 
 ---
@@ -165,7 +166,7 @@ ht-degree: 29%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQL は例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
+* GraphQLは例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
 * リスト表示でのタイトルの順序の並べ替え（昇順と降順の両方）、A、C、B の順序でタイトルの順序を並べ替えます (SITES-7585)
 * コンテンツフラグメントのバリエーションにタグ付けのサポートを追加しました。 （SITES-8168）
 * 不要な Odin 固有のコードをExperience Manager6.5 で特定および削除しました。 （SITES-3574）
@@ -220,11 +221,20 @@ ht-degree: 29%
 
 ### [!DNL Experience Manager] 6.5 へのサービスパックのインストール {#install-service-pack}
 
+>[!NOTE]
+>
+> 最新の [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)で、次の手順を実行します。
+> 1. のインストール [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) サーブレットフラグメント。
+> 1. アプリケーションサーバーが安定するのを待ちます。
+> 1. インストール [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip).
+
+
+
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. パッケージマネージャーを開き、「 **[!UICONTROL パッケージをアップロード]** をクリックしてパッケージをアップロードします。 詳しくは、 [パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -257,6 +267,11 @@ ht-degree: 29%
 
 1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.13以降です (Web コンソールを使用： `/system/console/bundles`) をクリックします。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
+>[!NOTE]
+>
+>最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md).
+
+
 ### [!DNL Experience Manager] Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
@@ -270,7 +285,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 1. サービスパックがインストールされていることを確認してください。[!DNL Experience Manager]
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. [AEM Forms アドオンパッケージのインストール](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の記載どおりに Forms アドオンパッケージをインストールします。
-1. Experience Manager6.5 Formsでレターを使用する場合は、 [最新の AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html#forms-updates).
+1. Experience Manager6.5 Formsでレターを使用する場合は、 [最新の AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja).
 
 ### JEE 上の [!DNL Experience Manager] Forms のインストール {#install-aem-forms-jee-installer}
 
@@ -282,7 +297,7 @@ JEE 上の [!DNL Experience Manager] Forms の累積インストーラーのイ�
 
 >[!NOTE]
 >
->JEE 上の [!DNL Experience Manager] Forms の累積インストーラーをインストールした後、最新の Forms アドオンパッケージをインストールし、`crx-repository\install` フォルダーから Forms アドオンパッケージを開き、サーバーを再起動します。
+>の累積インストーラーをインストールした後 [!DNL Experience Manager] JEE 上のFormsで、最新の Service Pack をインストールします。 Service Pack のインストールが完了したら、最新のFormsアドオンパッケージをインストールし、Formsアドオンパッケージを `crx-repository\install` フォルダーを開き、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
 
@@ -319,8 +334,8 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [GraphQL インデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+* [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
@@ -328,7 +343,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 
 * [!DNL Experience Manager] 6.5 Service Pack 10 または以前の Service Pack を [!DNL Experience Manager] 6.5 にインストールすると、アセットのカスタムワークフローモデル（`/var/workflow/models/dam` に作成）のランタイムコピーが削除されます。
 ランタイムコピーを取得するには、HTTP API を使用して、カスタムワークフローモデルの設計時コピーとランタイムコピーを同期させることをお勧めします。
-   `<designModelPath>/jcr:content.generate.json`.
+   `<designModelPath>/jcr:content.generate.json`
 
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 

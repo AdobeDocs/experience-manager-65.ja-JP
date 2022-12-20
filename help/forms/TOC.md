@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 35595ffca9d2f6fd80bfe93bade247f5b4600469
+source-git-commit: 29b283970f2c37782700b69302715e8404ce83ae
 workflow-type: tm+mt
-source-wordcount: '3827'
+source-wordcount: '3835'
 ht-degree: 95%
 
 ---
@@ -688,6 +688,7 @@ ht-degree: 95%
    + [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
    + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer、Apple Safari で XFA ベースのPDF formsを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
    + [CRX リポジトリを復元できません](/help/forms/using/restore-crx-repository.md)
+   + [AEM 6.5.15.0 Service Pack のインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
