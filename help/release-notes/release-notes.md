@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: a0e9bfd4bcbf7091d5537c6d88025ef4d6046b4d
+source-git-commit: 214c5e27567a515837c0ab52601f3491a9144120
 workflow-type: tm+mt
-source-wordcount: '3989'
-ht-degree: 29%
+source-wordcount: '3946'
+ht-degree: 28%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 29%
 ### 主な特長 {#keyfeatures}
 
 * AEM Forms Designer が [スペイン語ロケール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). (LC-3920051)
-* これで、 [Microsoft Office 365 メールサーバープロトコル（SMTP および IMAP）で認証するための OAuth2](/help/forms/using/oauth2-support-for-mail-service.md). （NPR-35177）
+* これで、 [Microsoft® Office 365 メールサーバープロトコル（SMTP および IMAP）で認証するための OAuth2](/help/forms/using/oauth2-support-for-mail-service.md). （NPR-35177）
 * 次の設定が可能です。 [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) プロパティを true に設定すると、サーバー側のレコードのドキュメントから除外する非表示フィールドが識別されます。 （NPR-38149）
 * AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ (x86) の 32 ビット版が必要です。  （NPR-36690）
 
@@ -141,7 +141,7 @@ ht-degree: 29%
 * XDP がHTML5 フォームとしてレンダリングされる場合、アダプティブフォーム内のオブジェクトの配置に関係なく、マスターページのコンテンツが最初にレンダリングされます。 （CQ-4345218）
 * 宛先サーバーでのアプリケーションの設定は、ソースサーバーで定義された設定に変更されます ( **読み込み完了時に設定を上書き** アプリケーションのインポート時にオプションがオンになっていません。 （NPR-39044）
 * ユーザーが Configuration Manager を使用してコネクタ設定を更新しようとすると、失敗します。（CQ-4347077）
-* ユーザーが管理者ユーザーのデフォルトのパスワードを変更した後に JEE 上のAEM Formsパッチを実行しようとすると、例外が発生します `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 発生します。 （CQ-4348277）
+* ユーザーが管理者ユーザーのデフォルトのパスワードを変更した後に JEE 上のAEM Forms パッチを実行しようとすると、例外が発生します `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 発生します。 （CQ-4348277）
 * AEM Designer では、チェックボックスを含む表のセルに、キャプションのないフォームフィールドが配置されます。(LC-3920410)
 * ユーザーがAEM Forms Designer でヘルプを開こうとすると、正しく表示されません。 （CQ-4341996）
 
@@ -221,15 +221,6 @@ ht-degree: 29%
 
 ### [!DNL Experience Manager] 6.5 へのサービスパックのインストール {#install-service-pack}
 
->[!NOTE]
->
-> 最新の [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)で、次の手順を実行します。
-> 1. のインストール [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) サーブレットフラグメント。
-> 1. アプリケーションサーバーが安定するのを待ちます。
-> 1. インストール [AEM 6.5.15.0 service pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip).
-
-
-
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
@@ -269,7 +260,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md).
+>最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md) をクリックして、トラブルシューティングの手順を確認します。
 
 
 ### [!DNL Experience Manager] Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
@@ -293,11 +284,13 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 >
 >JEE で AEM Forms を使用していない場合はスキップします。JEE 上の [!DNL Experience Manager] Forms の修正は別のインストーラーを介して配布されます。
 
-JEE 上の [!DNL Experience Manager] Forms の累積インストーラーのインストールとデプロイメント後の設定について詳しくは、[リリースノート](jee-patch-installer-65.md)を参照してください。
+JBoss EAP 7.4.0 以外の任意のアプリケーションサーバーを使用する JEE 上のすべてのAEM Forms環境で、次の手順を実行します。
 
->[!NOTE]
->
->の累積インストーラーをインストールした後 [!DNL Experience Manager] JEE 上のFormsで、最新の Service Pack をインストールします。 Service Pack のインストールが完了したら、最新のFormsアドオンパッケージをインストールし、Formsアドオンパッケージを `crx-repository\install` フォルダーを開き、サーバーを再起動します。
+1. の累積インストーラーをインストールします。 [!DNL Experience Manager] JEE 上のFormsとデプロイメント後の設定については、 [リリースノート](jee-patch-installer-65.md).
+
+1. のインストール [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) サーブレットフラグメントを作成し、Application Server が安定するのを待ちます。
+1. インストール [AEM 6.5.15.0 service pack](#install-service-pack).
+1. のインストール [最新のFormsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)、 Formsアドオンパッケージを `crx-repository\install` フォルダーを開き、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
 
@@ -335,7 +328,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
  -->
 
 * [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
