@@ -1,9 +1,9 @@
 ---
 title: 最新の 6.5.15.0サービスパックがインストールされると、CRX/bundle と開始ページサービスが使用できなくなる
 description: 最新の 6.5.15.0サービスパックがインストールされると、CRX/bundle と開始ページサービスが使用できなくなる
-source-git-commit: cae425c7dbf315d0fb51ebc745b047d894328d5b
+source-git-commit: 974796a6b9e921f8c2f40d72a4764eb9f4d8b92b
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '348'
 ht-degree: 16%
 
 ---
@@ -42,7 +42,7 @@ AEM 6.5.15.0サービスパックをインストールした後、CRX/bundle を
 
 1. 次のURLに移動：: `[aem-forms root]\crx-repository\launchpad\felix\bundle[x]\version0.1`.
 1. を検索 `bundle.jar` をクリックし、 `bundle.jar` から `bundle.jar.bak`.
-1. コピー `Bundle for AEM 6.5 Forms on JEE Service Pack 15` この場所で [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
+1. を `Bundle for AEM 6.5 Forms on JEE Service Pack 15` この場所で [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. アプリケーションサーバーを起動し、ログが安定するのを待って、バンドルの状態を確認します。
 1. すべてのバンドルがアクティブ状態になったら、 [JEE 上のAEM 6.5 Forms Service Pack 15 のフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) から `system/console/bundles` アプリケーションサーバーが安定するのを待ちます。
 1. アプリケーションサーバーを停止します。
