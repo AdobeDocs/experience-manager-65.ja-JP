@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: e73a65569963a5f60f7a4670998ada29deeb26b8
+source-git-commit: a27e460a19d3f986ee87b33263b8db1e45897497
 workflow-type: tm+mt
 source-wordcount: '4036'
 ht-degree: 28%
@@ -288,6 +288,7 @@ JBoss EAP 7.4.0 以外の任意のアプリケーションサーバーを使用�
    >[!NOTE]
    >
    >最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)、をインストールする前に [JEE 上のAEM 6.5 Forms Service Pack 15 のフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) JEE 上のAEM 6.5 Forms環境では、CRX/bundle と開始ページの動作が停止し、サービスの使用不可エラーが発生する場合があります。 問題を解決するには、次の操作を実行します。 [ここにリスト](/help/forms/using/aem-service-pack-installation-solution.md).
+
 1. のインストール [最新のFormsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)、 Formsアドオンパッケージを `crx-repository\install` フォルダーを開き、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
@@ -326,7 +327,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
  -->
 
 * [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
