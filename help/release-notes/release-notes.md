@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 214c5e27567a515837c0ab52601f3491a9144120
+source-git-commit: 9b7321d7fbac46966876540b4ad9355ce33ab54e
 workflow-type: tm+mt
-source-wordcount: '3946'
+source-wordcount: '3974'
 ht-degree: 28%
 
 ---
@@ -260,8 +260,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md) をクリックして、トラブルシューティングの手順を確認します。
-
+>最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)（フラグメントサーブレットの前） `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` JEE 上のAEM Forms環境の場合、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md) をクリックして、トラブルシューティングの手順を確認します。
 
 ### [!DNL Experience Manager] Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
@@ -273,7 +272,7 @@ ht-degree: 28%
 Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package a week after the scheduled [!DNL Experience Manager] Service Pack release.
 -->
 
-1. サービスパックがインストールされていることを確認してください。[!DNL Experience Manager]
+1. をインストール済みであることを確認します。 [!DNL Experience Manager] サービスパック。
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. [AEM Forms アドオンパッケージのインストール](/help/forms/using/installing-configuring-aem-forms-osgi.md#install-aem-forms-add-on-package)の記載どおりに Forms アドオンパッケージをインストールします。
 1. Experience Manager6.5 Formsでレターを使用する場合は、 [最新の AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja).
@@ -288,7 +287,7 @@ JBoss EAP 7.4.0 以外の任意のアプリケーションサーバーを使用�
 
 1. の累積インストーラーをインストールします。 [!DNL Experience Manager] JEE 上のFormsとデプロイメント後の設定については、 [リリースノート](jee-patch-installer-65.md).
 
-1. のインストール [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://jira.corp.adobe.com/secure/attachment/9396977/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) サーブレットフラグメントを作成し、Application Server が安定するのを待ちます。
+1. のインストール [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) サーブレットフラグメントを生成し、アプリケーションサーバーが安定するのを待ちます。—>
 1. インストール [AEM 6.5.15.0 service pack](#install-service-pack).
 1. のインストール [最新のFormsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)、 Formsアドオンパッケージを `crx-repository\install` フォルダーを開き、サーバーを再起動します。
 
@@ -327,7 +326,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [GraphQL インデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
