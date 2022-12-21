@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: 5d04a479001c5ea6423599969b39a4697a2da590
+source-git-commit: 3e0380e85c300305cbb97e4d0a0918a60542610b
 workflow-type: tm+mt
-source-wordcount: '3974'
+source-wordcount: '3970'
 ht-degree: 28%
 
 ---
@@ -166,7 +166,7 @@ ht-degree: 28%
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQLは例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
+* GraphQL は例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
 * リスト表示でのタイトルの順序の並べ替え（昇順と降順の両方）、A、C、B の順序でタイトルの順序を並べ替えます (SITES-7585)
 * コンテンツフラグメントのバリエーションにタグ付けのサポートを追加しました。 （SITES-8168）
 * 不要な Odin 固有のコードをExperience Manager6.5 で特定および削除しました。 （SITES-3574）
@@ -258,10 +258,6 @@ ht-degree: 28%
 
 1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.13以降です (Web コンソールを使用： `/system/console/bundles`) をクリックします。 <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
->[!NOTE]
->
->最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)（フラグメントサーブレットの前） `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` JEE 上のAEM Forms環境の場合、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md) をクリックして、トラブルシューティングの手順を確認します。
-
 ### [!DNL Experience Manager] Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
 
 >[!NOTE]
@@ -289,6 +285,11 @@ JBoss EAP 7.4.0 以外の任意のアプリケーションサーバーを使用�
 
 1. のインストール [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) サーブレットフラグメントを生成し、アプリケーションサーバーが安定するのを待ちます。
 1. インストール [AEM 6.5.15.0 service pack](#install-service-pack).
+
+   >[!NOTE]
+   >
+   >最新の [AEMサービスパック (6.5.15.0)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)（フラグメントサーブレットの前） `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` JEE 環境では、CRX/bundle と開始ページにサービス使用不可エラーが表示されます。 [ここをクリック](/help/forms/using/aem-service-pack-installation-solution.md) をクリックして、トラブルシューティングの手順を確認します。
+
 1. のインストール [最新のFormsアドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)、 Formsアドオンパッケージを `crx-repository\install` フォルダーを開き、サーバーを再起動します。
 
 ### UberJar {#uber-jar}
@@ -326,7 +327,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+* [GraphQL インデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。

@@ -1,9 +1,9 @@
 ---
 title: 最新の 6.5.15.0サービスパックがインストールされると、CRX/bundle と開始ページサービスが使用できなくなる
 description: 最新の 6.5.15.0サービスパックがインストールされると、CRX/bundle と開始ページサービスが使用できなくなる
-source-git-commit: 813d8ffc53dc1928674367c9568b6269642cecb7
+source-git-commit: 3c04322ef2801246044f9b316962d4d37b972213
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '342'
 ht-degree: 16%
 
 ---
@@ -44,7 +44,7 @@ AEM 6.5.15.0サービスパックをインストールした後、CRX/bundle を
 1. を検索 `bundle.jar` をクリックし、 `bundle.jar` から `bundle.jar.bak`.
 1. コピー `bundle.jar` この場所で [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bundle.jar).
 1. アプリケーションサーバーを起動し、ログが安定するのを待って、バンドルの状態を確認します。
-1. すべてのバンドルがアクティブ状態になったら、 `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` からのサーブレットフラグメント `system/console/bundles` 次からダウンロード： [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) アプリケーションサーバーが安定するのを待ちます。
+1. すべてのバンドルがアクティブ状態になったら、 [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) からのサーブレットフラグメント `system/console/bundles` アプリケーションサーバーが安定するのを待ちます。
 1. アプリケーションサーバーを停止します。
 1. に移動します。 `[aem-forms root]\crx-repository\launchpad\felix\bundle52\version0.1` をクリックし、 `bundle.jar`.
 1. 名前を変更 `bundle.jar.bak` から `bundle.jar`.
