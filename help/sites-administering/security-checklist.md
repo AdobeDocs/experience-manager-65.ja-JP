@@ -12,8 +12,8 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 58c89e0b96da0f36d233cb8c14e259cc595ddda7
-workflow-type: ht
+source-git-commit: 66e9e8e1d9f43faa3d0e4fe61e8206bdab1348f6
+workflow-type: tm+mt
 source-wordcount: '2859'
 ht-degree: 100%
 
@@ -272,7 +272,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 Sling はコンテンツ中心型です&#x200B;*。*&#x200B;つまり、（HTTP）要求がそれぞれ JCR リソース（リポジトリーノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理が行われるということです。
 
-* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
+* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。。
 * 次に、リソースのプロパティを要求の特定の部分（例：セレクター、拡張子など）と組み合わせてレンダラー（スクリプト）が特定されます。
 
 >[!NOTE]
@@ -409,18 +409,18 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 1. コピーする鍵要素を含む AEM インスタンス（通常はオーサーインスタンス）にアクセスします。
 1. ローカルファイルシステム内で、com.adobe.granite.crypto.file を見つけます。例えば、次のパスにあります。
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
    各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。 
 
 1. データフォルダーに移動します。次に例を示します。
 
-   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
+   * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC とマスターファイルをコピーします。
 1. 次に、HMAC 鍵の複製先となるターゲットインスタンスにアクセスし、データフォルダーに移動します。次に例を示します。
 
-   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
+   * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. 前の手順でコピーした 2 つのファイルを貼り付けます。
 1. ターゲットインスタンスが既に実行されている場合は、[Crypto バンドルを更新](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle)します。
