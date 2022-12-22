@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 33b8cf60e2a6ae13c103040d96b0e2db487ddd99
+source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
 workflow-type: tm+mt
-source-wordcount: '3452'
-ht-degree: 93%
+source-wordcount: '3488'
+ht-degree: 91%
 
 ---
 
@@ -455,10 +455,6 @@ Windows x86 の場合：
    <td>WP、WPD</td>
   </tr>
   <tr>
-   <td>Microsoft® Office Visio 2019<br /> </td>
-   <td>VSD、VSDX</td>
-  </tr>
-  <tr>
    <td>Microsoft® Office Visio 2016（非推奨）<br /> </td>
    <td>VSD、VSDX</td>
   </tr>
@@ -469,10 +465,6 @@ Windows x86 の場合：
   <tr>
    <td>Microsoft® Publisher 2016（非推奨）<br /> </td>
    <td>PUB</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Project 2019<br /> </td>
-   <td>MPP</td>
   </tr>
   <tr>
    <td>Microsoft® Project 2016（非推奨）<br /> </td>
@@ -503,6 +495,8 @@ Windows x86 の場合：
 >* OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
+>* PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
+>* PDFジェネレーターが、Microsoft Project 2019 を使用してファイルを変換できません。 Microsoft Project 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
 >
 
 

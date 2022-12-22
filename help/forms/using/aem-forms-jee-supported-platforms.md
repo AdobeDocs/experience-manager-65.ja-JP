@@ -11,10 +11,10 @@ discoiquuid: f777865e-d4a8-40ef-87b0-130c19eb1b91
 docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
+source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
 workflow-type: tm+mt
-source-wordcount: '3683'
-ht-degree: 94%
+source-wordcount: '3720'
+ht-degree: 93%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 94%
 
 Adobeが [完全インストーラ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) JEE 上のAEM 6.5 Forms Service Pack 12(6.5.12.0) とパッチインストーラー 完全なインストーラーは新しいプラットフォームをサポートし、パッチインストーラーはバグ修正のみを含みます。
 
-JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、新規インストールを実行するか、最新のソフトウェアを使用することを計画している場合、Adobeでは [AEM 6.5.12.0 Forms on JEE フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) 2019 年 4 月 8 日にリリースされた、AEM 6.5 Formsインストーラーの代わりに 2022 年 3 月 3 日にリリースされました。
+JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、新規インストールを実行するか、最新のソフトウェアを使用することを計画している場合、Adobeでは [AEM 6.5.12.0 Forms on JEE フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) 2019 年 4 月 8 日にリリースされた、AEM 6.5 Formsインストーラーの代わりに 2022 年 3 月 3 日にリリースされました。
 
 </div>
 
@@ -462,11 +462,11 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
    <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic トラック</a> 最新バージョン</td>
+   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic トラック</a> 最新バージョン</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic トラック</a> 最新バージョン（非推奨）</td>
+   <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic トラック</a> 最新バージョン（非推奨）</td>
    <td>XPS、画像形式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF、DWF</td>
   </tr>
   <tr>
@@ -480,10 +480,6 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
   <tr>
    <td>WordPerfect 2020<br /> </td>
    <td>WP、WPD</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Office Visio 2019<br /> </td>
-   <td>VSD、VSDX</td>
   </tr>
   <tr>
    <td>Microsoft® Office Visio 2016（非推奨）<br /> </td>
@@ -530,6 +526,9 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 >- Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
 >
 >- PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
+>- PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
+>- PDFジェネレーターが、Microsoft Project 2019 を使用してファイルを変換できません。 引き続き、 Microsoft Project 2016 を使用して.MPP ファイルを変換できます。
+>
 
 
 ### アクセシビリティサポートの例外事項 {#exceptions-to-accessibility-support}
@@ -801,7 +800,7 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 
 >[!NOTE]
 >
->プラットフォームは [AEM Forms 6.5.12.0 および 6.5.10.0 で非推奨となり、AEM Forms 6.5 サービスパック 18（6.5.18.0）リリースまでは引き続きサポートされます](https://helpx.adobe.com/support/programs/eol-matrix.html)。
+>プラットフォームは [AEM Forms 6.5.12.0 および 6.5.10.0 で非推奨となり、AEM Forms 6.5 サービスパック 18（6.5.18.0）リリースまでは引き続きサポートされます](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)。
 
 ## 変更履歴 {#revision-history}
 
