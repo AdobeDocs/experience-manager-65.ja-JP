@@ -2,9 +2,9 @@
 title: Reader拡張証明書の有効期限とその影響
 description: Reader拡張証明書の有効期限とその影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
-source-git-commit: 5f8061ebd2143f11567ac5b78162bdd02106d2e3
+source-git-commit: 6e9a7f3307ed05f887d60c7c7310100cd4596b23
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1121'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 4%
 
 Adobe Experience Manager Forms(AEM Forms) をご利用のお客様は、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Acrobat Reader DC Extensions サービスを使用する権利が付与されます。 このサービスを使用すると、追加の使用権限でAcrobat Readerの機能を拡張し、組織がインタラクティブなPDFドキュメントを簡単に共有できます。 このサービスは、PDFドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Readerを使用してPDFドキュメントを開いた場合に使用できない機能をアクティブにします。 サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。Acrobat Readerで権限が付与されたPDFドキュメントを開いたユーザーは、そのドキュメントに対して有効な操作を実行できます。
 
-Adobeでは、公開鍵基盤 (PKI) を利用して、ライセンスや機能の有効化に使用する電子証明書を発行します。 Adobeは、2023 年 1 月 7 日に期限切れに設定された認証局「Adobeルート CA」に基づいて証明書を発行しています。 新しい認証局「Adobeルート CA G2」と、新しい認証局に基づく証明書が使用できるようになりました。
+Adobeでは、公開鍵基盤 (PKI) を利用して、ライセンスや機能の有効化に使用する電子証明書を発行します。 Adobeは認証局の下で証明書を発行しています **Adobeルート CA**:2023 年 1 月 7 日に期限切れになるように設定されています。 証明書の有効期限は、から発行される実稼動用の証明書を使用して拡張されたPDFドキュメントには影響しません **Adobeルート CA** ベースの証明書（古い証明書）。 お客様がダウンロードしたPDFドキュメントを含め、2023 年 1 月 7 日より前の古い証明書を使用して拡張されたすべてのReaderドキュメントは、引き続き、それらに適用されるすべての使用権限に対応し、更新は必要ありません。
 
-2023 年 1 月 7 日以降、古い証明書 (「Adobeルート CA」に基づく証明書 ) は機能しなくなります。 Adobeでは、2023 年 1 月 7 日以前にPDFドキュメントをReaderするために、「Adobeルート CA G2」に基づく新しい証明書の使用を開始することをお勧めします。  以下が可能です。 [Adobeライセンス Web サイトから新しい証明書を取得する](https://licensing.adobe.com/) またはAdobeのサポート。
-
-PDFドキュメント (2023 年 1 月 7 日より前の古い証明書を使用して拡張されたReader) は、お客様がダウンロードしたものも含め、引き続き、それらに適用されるすべての使用権限で使用され、更新は必要ありません。
+新しい認証局 **Adobeルート CA G2**、および新しい認証局に基づく証明書が使用できるようになりました。 2023 年 1 月 7 日以前に、新しい証明書 ( **Adobeルート CA G2**  — 新しいReaderドキュメントを拡張するPDF  以下が可能です。 [Adobeライセンス Web サイトから新しい証明書を取得する](https://licensing.adobe.com/) またはAdobeのサポート。
 
 ## よくある質問
 
@@ -56,7 +54,7 @@ A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA」（古い証�
 
 **Q. 「Adobeルート CA 2」（新しい証明機関）から発行された証明書で拡張されたPDFドキュメントを引き続き使用するには、どのバージョンのAdobe Acrobat Readerが必要ですか？**
 
-A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA 2」（新しい証明機関）で拡張されたPDFドキュメントを使用する必要があります。 を使用している場合、 [Adobe Acrobat Readerの非サポートバージョン](https://helpx.adobe.com/support/programs/eol-matrix.html)を使用する場合、Adobeは、 [最新バージョンのAdobe Acrobat Readerをダウンロードしてインストールする](https://get.adobe.com/reader/).
+A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA 2」（新しい証明機関）で拡張されたPDFドキュメントを使用する必要があります。 を使用している場合、 [Adobe Acrobat Readerの非サポートバージョン](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を使用する場合、Adobeは、 [最新バージョンのAdobe Acrobat Readerをダウンロードしてインストールする](https://get.adobe.com/jp/reader/).
 
 **Q.既存のエイリアスを引き続き使用しながら、古いAcrobat Reader Extensions 証明書を削除して、Adobe Experience Manager Formsサーバーに新しい証明書を追加できますか？**
 
