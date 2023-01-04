@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: a27e460a19d3f986ee87b33263b8db1e45897497
+source-git-commit: d3b830730ef06fb9968a46d6f26a275417cf36f0
 workflow-type: tm+mt
-source-wordcount: '4036'
+source-wordcount: '4046'
 ht-degree: 28%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 28%
 * ユーザーが管理者ユーザーのデフォルトのパスワードを変更した後に JEE 上のAEM Forms パッチを実行しようとすると、例外が発生します `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 発生します。 （CQ-4348277）
 * AEM Designer では、チェックボックスを含む表のセルに、キャプションのないフォームフィールドが配置されます。(LC-3920410)
 * ユーザーがAEM Forms Designer でヘルプを開こうとすると、正しく表示されません。 （CQ-4341996）
+* 複数のロケールを持つアダプティブFormsの読み込みが遅い。 （NPR-39176）
 
 ## [!DNL Sites] {#sites-6515}
 
@@ -327,7 +328,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
  -->
 
 * [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+このパッケージは、GraphQL を使用するお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
