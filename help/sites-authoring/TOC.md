@@ -9,7 +9,7 @@ user-guide-description: AEM でのコンテンツ作成やオーサリングの�
 feature: Authoring
 role: User
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 100%
 
