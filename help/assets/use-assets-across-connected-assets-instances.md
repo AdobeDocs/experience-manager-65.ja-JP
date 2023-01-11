@@ -6,10 +6,10 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: 0df4bce6651517c6049578d0a1434726ab04e240
+source-git-commit: cd7800546ec4ebc950c5ebca4d7c80779cb2632c
 workflow-type: tm+mt
-source-wordcount: '3837'
-ht-degree: 92%
+source-wordcount: '3877'
+ht-degree: 91%
 
 ---
 
@@ -355,6 +355,13 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 * ローカルの [!DNL Sites] デプロイメントからリモート DAM デプロイメントにアクセスできない場合は、クロスサイト cookie が許可され、[同じサイト cookie サポート](/help/sites-administering/same-site-cookie-support.md)が設定されていることを確認します。クロスサイト cookie がブロックされると、[!DNL Experience Manager] のデプロイメントが認証されない場合があります。例えば、匿名モードの [!DNL Google Chrome] は、サードパーティ cookie をブロックする可能性があります。[!DNL Chrome] ブラウザーで cookie を許可するには、アドレスバーの目アイコンをクリックし、**サイトが動作していません**／**ブロック**&#x200B;に移動し、リモート DAM URL を選択して、ログイントークン cookie を許可します。または、「[サードパーティ cookie を有効にする方法](https://support.google.com/chrome/answer/95647)」を参照してください。
 
    ![シークレットモードでの Chrome での cookie エラー](assets/chrome-cookies-incognito-dialog.png)
+
+* Experience Manager Sitesas a Cloud Serviceの Sites デプロイメントから Adobe Managed Services リモート DAM デプロイメントにアクセスできない場合は、 `aem_author.vhost` ファイル、次の場所にあります。 `"/etc/httpd/conf.d/available_vhosts`（リモート DAM の Dispatcher 設定に次のヘッダーを含める場合）
+
+   ```xml
+   Header Set Access-Control-Allow-Origin <Local Sites instance host>
+   Header Set Access-Control-Allow-Credentials true
+   ```
 
 * リモート参照が取得されず、エラーメッセージが表示される場合は、[!DNL Sites] のデプロイメントが使用可能かどうか、また、ネットワーク接続の問題がないかどうかを確認します。確認のために後で再試行します。[!DNL Assets] デプロイメントは、 [!DNL Sites] デプロイメントとの接続の確立を 2 回試み、失敗を報告します。
 
