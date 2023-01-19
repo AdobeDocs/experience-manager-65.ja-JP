@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: e8026cb0c7de3b1c903bf95dc31e567076e837eb
+source-git-commit: 72ed4ceee560839c6573461cb5d4d6cbccfd696f
 workflow-type: tm+mt
-source-wordcount: '3488'
+source-wordcount: '3525'
 ht-degree: 91%
 
 ---
@@ -201,6 +201,16 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 1. Adobe Managed Services でサポートされている Linux ディストリビューション.
 1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
 1. AEM Forms は、サポートレベル R の制限なしに Microsoft Window Server でサポートされています。。
+
+>[!NOTE]
+>
+>AEM Forms 6.5 をインストールする場合は、次の 32 ビット版のMicrosoft Visual C++再配布可能パッケージがインストールされていることを確認してください。
+>
+>* Microsoft Visual C++ 2008 の再頒布可能パッケージ
+>* Microsoft Visual C++ 2010 の再頒布可能パッケージ
+>* Microsoft Visual C++ 2012 再頒布可能パッケージ
+>* Microsoft Visual C++ 2013 の再頒布可能パッケージ（6.5 時点）
+
 
 
 ### 仮想／クラウドコンピューティング環境 {#virtual-cloud-computing-environments}
