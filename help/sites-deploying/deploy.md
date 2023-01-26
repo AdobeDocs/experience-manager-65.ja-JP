@@ -11,7 +11,7 @@ topic-tags: deploying
 discoiquuid: e48cc0ed-688c-44c8-b6d6-5f3c8593a295
 docset: aem65
 exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
-source-git-commit: 85a0c578a2cf57e2b4d65123cffe3816624211c8
+source-git-commit: 2a350548674ff3f8dc49defa47ac2b028da76f4b
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 97%
@@ -165,7 +165,7 @@ AEM ソフトウェアパッケージには、次の 2 つの形式がありま�
 
    *ファイルディレクトリのパスには、US ASCII 文字のみを含めてください。*
 
-1. を **jar** および **ライセンス**&#x200B;このディレクトリ内のファイル：
+1. を **jar** および **ライセンス** このディレクトリ内のファイル：
 
    ```shell
    <aem-install>/
