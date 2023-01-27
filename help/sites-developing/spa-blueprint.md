@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: e13953bed73481738832a00a7563a07149c2d3bd
-workflow-type: ht
-source-wordcount: '2079'
-ht-degree: 100%
+source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -150,7 +150,7 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 コンテナは、子コンポーネントを内包してレンダリングするためのコンポーネントです。これをおこなうには、コンテナはモデルの `:itemsOrder`、`:items` および `:children` プロパティを反復します。
 
-コンテナは、` [ComponentMapping](/help/sites-developing/spa-blueprint.md#componentmapping)` ライブラリのストアから子コンポーネントを動的に取得します。次に、コンテナは、モデルプロバイダー機能で子コンポーネントを拡張し、最後にインスタンス化します。
+コンテナは、[`ComponentMapping`](/help/sites-developing/spa-blueprint.md#componentmapping) ライブラリのストアから子コンポーネントを動的に取得します。次に、コンテナは、モデルプロバイダー機能で子コンポーネントを拡張し、最後にインスタンス化します。
 
 ### ページ {#page}
 

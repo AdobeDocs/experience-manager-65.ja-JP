@@ -10,10 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: d9f1e24e-51a9-4f28-b2cd-2e97aed63a24
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 509ea0945e6c80e50f6f5bffd4c68282d586504a
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 100%
+source-wordcount: '491'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +43,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 
 >[!NOTE]
 >
->現在、We.Retail Journal サンプル React プロジェクトは、自動アプローチを示していますが、Angular プロジェクトは手動アプローチを示しています。半自動アプローチも有効なユースケースです。
+>この [We.Retail ジャーナル](https://github.com/adobe/aem-sample-we-retail-journal) サンプル React プロジェクトは、自動アプローチを示し、Angularプロジェクトは手動アプローチを示します。 半自動アプローチも有効なユースケースです。
 
 >[!CAUTION]
 >
@@ -60,7 +60,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 デフォルトではこの処理が自動的に有効になっています。無効にする場合は、SPA で次のメタプロパティをレンダリングする必要があります。
 
 ```
-<meta property="cq:pagemodel_router" content="disable"\>
+<meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
 なお、ルートが選択されると、対応するページモデルの読み込みが `PageModelManager` で自動的に試行されるので、SPA のすべてのルートを AEM 内のアクセス可能なリソース（`/content/mysite/mypage"` など）に対応させる必要があります。ただし、SPA では、必要に応じて、`PageModelManager` で無視する必要があるルートの「ブロックリスト」を定義することもできます。
