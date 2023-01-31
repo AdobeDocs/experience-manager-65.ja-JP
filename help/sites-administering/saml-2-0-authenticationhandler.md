@@ -10,10 +10,10 @@ topic-tags: Security
 content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
-source-git-commit: 2a889134943d75d147af6d06ea67397f75158d40
+source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 96%
+source-wordcount: '850'
+ht-degree: 92%
 
 ---
 
@@ -117,7 +117,15 @@ SAML アサーションは署名されます。オプションとして暗号化
 >
 >以下のステップは、ハンドラーが署名またはメッセージを複合化できるようにする必要がある場合にのみ必須です。
 
-1. **秘密鍵ファイルを選択** をクリックして秘密鍵ファイルをアップロードします。この鍵は PKCS#8 形式で、エンコードが DER である必要があります。
+1. AEMの証明書/鍵のペアを作成します。 OpenSSL を使用して生成するコマンドは、次の例のようになります。
+
+   `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
+
+1. キーを DER エンコードで PKCS#8 形式に変換します。 これは、AEMキーストアに必要な形式です。
+
+   `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
+
+1. **秘密鍵ファイルを選択** をクリックして秘密鍵ファイルをアップロードします。
 1. 「**証明書チェーンファイルを選択**」をクリックして証明書ファイルをアップロードします。
 1. 以下のようにエイリアスを割り当てます。
 
