@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 72ed4ceee560839c6573461cb5d4d6cbccfd696f
+source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
 workflow-type: tm+mt
-source-wordcount: '3525'
-ht-degree: 91%
+source-wordcount: '3529'
+ht-degree: 89%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Manager をインストールするための最小要件：
 
 >[!NOTE]
 >
->* デジタルアセットを使用する場合は、より多くの基本メモリが必要になります。詳しくは、[デプロイおよびメンテナンス](/help/sites-deploying/deploy.md#default-local-install)を参照してください。
+>* デジタルアセットを使用する場合は、より多くの基本メモリが必要になります。詳しくは、[デプロイとメンテナンス](/help/sites-deploying/deploy.md#default-local-install)を参照してください。
 >* [AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)には 15 GB の一時領域が必要です。
 >
 
@@ -65,7 +65,7 @@ Adobe Experience Manager をインストールするための最小要件：
    <td>アドビはこの構成への完全なサポートと保守を提供します。この構成は、アドビの品質保証プロセスでカバーされます。</td>
   </tr>
   <tr>
-   <td><strong>R：制限サポート</strong></td>
+   <td><strong>R：限定サポート</strong></td>
    <td>顧客のプロジェクト成功のために、アドビは、制限されたサポートプログラムの範囲内で完全なサポートを提供します。このサポートプログラムでは、特定の条件を満たす必要があります。R レベルのサポートでは、顧客からの正式な依頼とアドビによる承認が必要です。詳しくは、アドビカスタマーケアにお問い合わせください。</td>
   </tr>
  </tbody>
@@ -100,7 +100,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 | Azul Zulu OpenJDK 11 - 64-bit | A：サポート対象 `[3]` |  |
 | Azul Zulu OpenJDK 8 - 64-bit | A：サポート対象 `[3]` |  |
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は Oracle による非 LTS でのリリースです（[Oracle Java SE サポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、 [Adobe Experience Managerの Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) を参照してください。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は Oracle による非 LTS でのリリースです（[Oracle Java SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、 [Adobe Experience Managerの Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) を参照してください。
 
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
@@ -114,19 +114,19 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 | **プラットフォーム** | **説明** | **サポートレベル** |
 |---|---|---|
-| **TAR ファイルを使用したファイルシステム** `[1]` | リポジトリー | A：サポート対象 |
+| **TAR ファイルを使用したファイルシステム** `[1]` | リポジトリ | A：サポート対象 |
 | **データストアを使用したファイルシステム** `[1]` | バイナリ | A：サポート対象 |
 | ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z：実稼動環境ではサポート対象外 |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft Azure Blob Storage | バイナリ | A：サポート対象 |
 | MongoDB Enterprise 4.2 | リポジトリ | A：サポート対象 `[2, 3, 4]` |
 | MongoDB Enterprise 4.0 | リポジトリ | Z：サポート対象外 |
-| MongoDB Enterprise 3.6 | リポジトリー | Z：サポート対象外 |
-| MongoDB Enterprise 3.4 | リポジトリー | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[5]` |
-| Oracle Database 12c（12.1.x） | リポジトリおよび Forms データベース | R：制限サポート |
+| MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
+| MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
+| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：限定サポート `[5]` |
+| Oracle Database 12c（12.1.x） | リポジトリおよび Forms データベース | R：限定サポート |
 | Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
-| **Apache Lucene（クイックスタート組み込み）** | 検索サービス | A：サポート対象 |
+| **Apache Lucene（クイックスタートビルトイン）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
 
 1. 「ファイルシステム」には、POSIX 準拠のブロックストレージが含まれます。ブロックストレージには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスが状況に応じて変化し、全体的なパフォーマンスに影響を及ぼす可能性があることに注意してください。ネットワークやリモートファイルシステムと一緒に AEM の負荷テストを行うことを推奨します。
@@ -137,7 +137,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 >[!NOTE]
 >
->AEM コミュニティの機能について詳しくは、[コミュニティのデプロイ](/help/communities/deploy-communities.md)を参照してください。
+>AEM Communities の機能について詳しくは、[Communities のデプロイ](/help/communities/deploy-communities.md)を参照してください。
 
 >[!NOTE]
 >
@@ -165,7 +165,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR ファイル）として実行することも、サード-パーティのアプリケーションサーバー内の Web アプリケーション（WAR ファイル）として実行することもできます。
 
-サーブレット API の最低限必要なバージョンはサーブレット 3.1 です。
+Servlet API の最低限必要なバージョンは Servlet 3.1 です。
 
 | プラットフォーム | サポートレベル |
 |---|---|
@@ -196,7 +196,7 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 | Oracle Solaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux Kernel 2.6、3.x、4.x、5.x には、Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など、Red Hat ディストリビューションからの派生製品が含まれます。 AEM Formsアドオン機能は、CentOS 7、Red Hat Enterprise Linux 7、および Red Hat Enterprise Linux 8 でのみサポートされています。
+1. Linux カーネル 2.6、3. x, 4. x および 5 x には、Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など、Red Hat ディストリビューションの派生物が含まれます。 AEM Formsアドオン機能は、CentOS 7、Red Hat Enterprise Linux 7、Red Hat Enterprise Linux 8、および Red Hat Enterprise Linux 9 でのみサポートされます。
 1. AEM Formsは Ubuntu 20.04 LTS でサポートされています。
 1. Adobe Managed Services でサポートされている Linux ディストリビューション.
 1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
@@ -215,7 +215,7 @@ Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR �
 
 ### 仮想／クラウドコンピューティング環境 {#virtual-cloud-computing-environments}
 
-Microsoft Azure や Amazon Web Services（AWS）など、クラウドコンピューティング環境の仮想マシンでの Adobe Experience Manager の稼動は、このページに記載されている技術要件およびアドビの標準サポート条件に従ってサポートされています。
+Adobe Experience Managerは、Microsoft Azure やAmazon Web Services(AWS) などのクラウドコンピューティング環境上での仮想マシンで、このページに記載されている技術要件と、Adobeの標準的なサポート条件に従って実行できるようサポートされています。
 
 クラウドネイティブな環境の場合は、AEM製品ラインで最新のオファーを確認します。Adobe Experience Manager as a Cloud Service。 詳しくは、 [Adobe Experience Manager as a Cloud Service Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=en) 」を参照してください。
 
@@ -394,7 +394,7 @@ Linux で Dynamic Media を使用する場合は、次の必要条件を満た�
 >
 >**SELinux の無効化：**&#x200B;画像サービングは、SELinux が有効の場合は動作しません。このオプションはデフォルトで有効です。この問題を修正するには、**/etc/selinux/config** ファイルを編集し、SELinux 値を次のように変更します。
 >
->`SELINUX=enforcing`**コピー先：**`SELINUX=disabled`
+>`SELINUX=enforcing`**を、**`SELINUX=disabled` に変更
 
 >[!NOTE]
 >
@@ -502,7 +502,7 @@ Windows x86 の場合：
 >* PDFジェネレーターは、Microsoft Office Professional Plus の 32 ビット版の Retail と、Windows オペレーティングシステムでの変換に必要なその他のソフトウェアのみをサポートしています。
 >* PDFジェネレーターは、Linux オペレーティングシステム上の OpenOffice の 32 ビット版および 64 ビット版をサポートしています。
 >* PDF Generator では Microsoft Office 365 をサポートしていません。
->* OCR PDF、PDF を最適化および PDF を書き出しの機能は、Windows でのみサポートされます。
+>* OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
 >* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 >* PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
@@ -515,7 +515,7 @@ Windows x86 の場合：
 * Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server または Microsoft® Windows® 10
 * 1 GHz 以上の高速プロセッサー（PAE、NX、および SSE2 に対応）
 * 1 GB の RAM（32 ビット OS の場合）または 2 GB の RAM（64 ビット OS の場合）
-* 16 GB のディスク空き容量（32-bit OS の場合）または 20 GB のディスク空き容量（64-bit OS の場合）
+* 16 GB のディスク空き容量（32 ビット OS の場合）または 20 GB のディスク空き容量（64 ビット OS の場合）
 * グラフィックメモリ - 128 MB の GPU（256 MB 推奨）
 * 2.35 GB のハードディスク空き容量
 * 1024 x 768 ピクセル以上のモニター解像度
