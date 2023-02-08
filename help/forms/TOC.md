@@ -583,7 +583,7 @@ ht-degree: 95%
    + [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
-   + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/ProgramLC/javadoc/index.html)
+   + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
    + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
    + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
