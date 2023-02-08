@@ -10,7 +10,7 @@ content-type: reference
 topic-tags: repo_restructuring
 discoiquuid: 80bd707f-c02d-4616-9b45-90f6c726abea
 exl-id: 2d852d9d-9be3-487a-966a-4902bd7df7f9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3f64bd7f5b4eb43aeefb9277a94e10ef1f0df59c
 workflow-type: tm+mt
 source-wordcount: '2693'
 ht-degree: 100%
@@ -41,7 +41,7 @@ ht-degree: 100%
 * [インボックスタスク](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#inbox-tasks)
 * [Multi-site Manager のブループリント設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#multi-site-manager-blueprint-configurations)
 * [AEM プロジェクトダッシュボードガジェット設定](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#aem-projects-dashboard-gadget-configurations)
-* [レプリケーション通知電子メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
+* [レプリケーション通知メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#replication-notification-e-mail-template)
 * [タグ](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags)
 * [翻訳 Cloud Services](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-cloud-services)
 * [翻訳言語](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-languages)
@@ -49,7 +49,7 @@ ht-degree: 100%
 * [翻訳 Widget クライアントライブラリ](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#translation-widget-client-library)
 * [ツリー Activation Web コンソール](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tree-activation-web-console)
 * [ベンダー翻訳コネクタクラウドサービス](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#vendor-translation-connector-cloud-services)
-* [ワークフロー通知電子メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
+* [ワークフロー通知メールテンプレート](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
 ## 6.5 へのアップグレード時におこなう変更 {#with-upgrade}
 
@@ -99,7 +99,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
       <ol>
        <li>例えば、次のようにエクスポートします。
         <ul>
-         <li><code>/config/settings/workflow/models/dam/my_workflow_model</code> および </li>
+         <li><code>/conf/global/settings/workflow/models/dam/my_workflow_model</code> および </li>
          <li><code>/var/workflow/models/dam/my_workflow_model</code></li>
         </ul> </li>
       </ol> </li>
@@ -525,7 +525,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
  </tbody>
 </table>
 
-### レプリケーション通知電子メールテンプレート {#replication-notification-e-mail-template}
+### レプリケーション通知メールテンプレート {#replication-notification-e-mail-template}
 
 <table style="table-layout:auto">
  <tbody>
@@ -542,7 +542,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
    <td><p>新規または変更されたレプリケーション通知のメールテンプレートは、新しい場所（<code>/apps</code>）に移行する必要があります。</p>
     <ol>
      <li>新規または変更されたレプリケーション通知のメールテンプレートを、以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li>
-     <li>移行されたすべてのレプリケーション通知電子メールテンプレートを以前の場所から削除します。</li>
+     <li>移行されたすべてのレプリケーション通知メールテンプレートを以前の場所から削除します。</li>
     </ol> </td>
   </tr>
   <tr>
@@ -795,7 +795,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
  </tbody>
 </table>
 
-### ワークフロー通知電子メールテンプレート {#workflow-notification-email-templates}
+### ワークフロー通知メールテンプレート {#workflow-notification-email-templates}
 
 <table style="table-layout:auto">
  <tbody>
@@ -817,7 +817,7 @@ ContextHub 設定の `sling:resourceType` は、絶対パスではなく相対�
   </tr>
   <tr>
    <td><strong>備考</strong></td>
-   <td><p>ワークフロー通知電子メールテンプレートの解決は、次の順序でおこなわれます。</p>
+   <td><p>ワークフロー通知メールテンプレートの解決は、次の順序でおこなわれます。</p>
     <ol>
      <li><code>/etc/workflow/notification</code></li>
      <li><code>/conf/global/settings/workflow/notification</code></li>
