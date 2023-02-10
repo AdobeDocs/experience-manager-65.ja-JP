@@ -1,9 +1,6 @@
 ---
 title: クイックビューを使用したカスタムポップアップの作成
-seo-title: Use Quickview to create custom pop-ups
 description: e コマースエクスペリエンスではデフォルトのクイックビューが使用され、ポップアップに購入を促す商品情報が表示されます。ポップアップにカスタムコンテンツを表示することもできます。
-seo-description: The default Quickview is used in ecommerce experiences whereby a pop-up is displayed with product information to drive a purchase. You can trigger custom content to display in the pop-ups.
-uuid: b906cfff-ac44-4989-b6da-8a9bbf02af03
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: dynamic-media
@@ -12,9 +9,9 @@ discoiquuid: 4bcab3f4-500f-432e-b16b-cdc26b9bab4d
 feature: Viewers
 role: User, Admin
 exl-id: 4e7f17ea-6985-4644-b91c-2c1299d01321
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 05af34f8be6a4e32c3488ec05bc0133154caff7f
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1052'
 ht-degree: 100%
 
 ---
@@ -35,7 +32,7 @@ e コマースエクスペリエンスではデフォルトのクイックビュ
 
 1. アップロードしたアセット用にクイックビューを作成します。
 
-   一般には、使用しているビューアでアセットを使用するために編集するときにクイックビューを作成します。
+   一般には、使用しているビューアでアセットを使用できるように編集すると同時にクイックビューを作成します。
 
    <table>
     <tbody>

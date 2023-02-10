@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: d3045e1a68d05eb257a6444f75a30faae4950db1
+source-git-commit: a8db862b4a90ee6679de44df9508caf75a4c3eec
 workflow-type: tm+mt
 source-wordcount: '6489'
 ht-degree: 95%
@@ -55,7 +55,7 @@ ht-degree: 95%
 
 Dynamic Media を有効にするには、ターミナルウィンドウに次のように入力し（使用されるポートの例は 4502 です）、コマンドラインから `dynamicmedia_scene7` 実行モードを使用して Experience Manager を起動します。
 
-```shell
+```shell {.line-numbers}
 java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=500000 -jar cq-quickstart-6.5.0.jar -gui -r author,dynamicmedia_scene7 -p 4502
 ```
 
@@ -93,7 +93,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
 1. Experience Manager オーサーモードで、Experience Manager ロゴを選択してグローバルナビゲーションコンソールにアクセスし、ツールアイコンを選択して、**[!UICONTROL Cloud Services]** ／**[!UICONTROL Dynamic Media Configuration]** に移動します。
 1. Dynamic Media 設定ブラウザーページの左側のパネルで、「**[!UICONTROL グローバル]**」を選択して（「**[!UICONTROL グローバル]**」の左側にあるフォルダーアイコンは選択しないでください）、「**[!UICONTROL 作成]**」を選択します。
-1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ページで、タイトル、Dynamic Media アカウントの電子メールアドレス、パスワードを入力し、地域を選択します。この情報は、プロビジョニングの電子メールでアドビから提供されます。メールを受け取っていない場合は、アドビカスタマーサポートにお問い合せください。
+1. **[!UICONTROL Dynamic Media 設定を作成]**&#x200B;ページで、タイトル、Dynamic Media アカウントのメールアドレス、パスワードを入力し、地域を選択します。この情報は、プロビジョニングのメールでアドビから提供されます。メールを受け取っていない場合は、アドビカスタマーサポートにお問い合せください。
 
    **[!UICONTROL Dynamic Media に接続]**&#x200B;を選択します。
 
@@ -120,7 +120,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
    * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。
       >[!IMPORTANT]
-      Experience ManagerのインスタンスでサポートされるDynamic MediaCloud Servicesは 1 つだけです。複数の設定を追加しないでください。 1 つのExperience Managerインスタンス上の複数のDynamic Media設定 _not_ Adobeでサポートまたは推奨。
+      Experience ManagerのインスタンスでサポートされるDynamic MediaCloud Servicesは 1 つだけです。複数の設定を追加しないでください。 1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
 
       <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -176,7 +176,7 @@ Dynamic Media でのパスワードの有効期限は、現在のシステム日
 
 * 大文字
 * 小文字
-* 数値
+* Number
 * 特殊文字：`# $ & . - _ : { }`
 
 必要に応じて、パスワードの目のアイコンを選択してパスワードを表示し、入力または再入力したパスワードのスペルを確認できます。アイコンをもう一度選択すると、パスワードが非表示になります。
@@ -497,7 +497,7 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 **バッチセットプリセットを作成するには：:**
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、アカウントにログインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、アドビカスタマーサポートにお問い合わせください。
 
@@ -533,7 +533,7 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 例として、`spin-2dspin` という名前の多軸スピンセットを作成します。1 行あたり 12 個の画像が含まれる 3 行のスピンセット画像セットがあります。画像の名前は次のとおりです。
 
-```
+```xml {.line-numbers}
 spin-01-01
  spin-01-02
  …
@@ -553,7 +553,7 @@ spin-01-01
 
 **2D スピンセットを自動生成するためのバッチセットプリセットを作成するには：**
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)を開き、アカウントにログインします。
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、アカウントにログインします。
 
    資格情報とログオンの詳細は、プロビジョニング時にアドビから付与されたものです。この情報をお持ちでない場合は、アドビカスタマーサポートにお問い合わせください。
 
