@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
-source-git-commit: f0746c6b7ada548c47d13089160ecccec5f2bd2b
+source-git-commit: c4d45bc80f0973097d7b5917dca54390cfd40bd7
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3786'
 ht-degree: 27%
 
 ---
@@ -302,6 +302,8 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 
 * [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+
+* コンテンツモデルのカスタム API 名を使用した可能性のあるGraphQLクエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
