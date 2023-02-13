@@ -12,9 +12,9 @@ docset: aem65
 feature: Correspondence Management
 exl-id: 9e1b0067-c7dc-4bbb-a209-d674592be858
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2170'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ XDP は Adobe Forms Designer でデザインします。この記事では、フ
 
 ## レターまたはインタラクティブ通信の印刷チャネル用のレイアウトを作成する {#creating-a-layout-for-letters-or-for-interactive-communications-print-channel}
 
-レイアウトを使用して、レターまたはインタラクティブ通信の印刷チャネルの外観を定義します。レイアウトには、「住所」や「参照番号」などの一般的なフォームフィールドを含めることができます。 また、ターゲット領域を示す空のサブフォームも含めます。Form Designer で作成したレイアウトは、アプリケーションによって AEM サーバーにアップロードされます。通信テンプレートまたはインタラクティブ通信の印刷チャネルを作成する際に、AEM サーバーでそのレイアウトを選択することができます。
+レイアウトを使用して、レターまたはインタラクティブ通信の印刷チャネルの外観を定義します。レイアウトには、「アドレス」や「参照番号」などの一般的なフォームフィールドを含めることができます。また、ターゲット領域を示す空のサブフォームも含みます。Form Designer で作成したレイアウトは、アプリケーションによって AEM サーバーにアップロードされます。通信テンプレートまたはインタラクティブ通信の印刷チャネルを作成する際に、AEM サーバーでそのレイアウトを選択することができます。
 
 ![Designer：レイアウトを作成する](assets/claimsubrogationlayout.png)
 
