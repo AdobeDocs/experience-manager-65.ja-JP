@@ -8,9 +8,9 @@ content-type: reference
 feature: Upgrading
 exl-id: 85bc041e-0ab1-42de-8bcc-c98a175d7494
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1341'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ AEM で完全なインデックス作成を有効にするには、PDF などの
 
 システムに保存されたバイナリのテキストは、tika ライブラリを持つ oak-run ツールを使用して抽出できます。実稼働システムのクローンは、アップグレードの前に取得でき、このテキスト抽出プロセスに使用できます。次の手順を実行すると、この処理によってテキストストアが作成されます。
 
-**1.リポジトリをトラバースし、バイナリの詳細を収集します**
+**1. リポジトリをトラバースし、バイナリの詳細を収集します**
 
 この手順では、パスと BLOB ID を含むバイナリのタプルを含む CSV ファイルを生成します。
 
@@ -63,7 +63,7 @@ java java -jar oak-run.jar tika <nodestore path> --fds-path <datastore path> --d
 
 `–fds-path` の代わりに `--fake-ds-path=temp` パラメーターを使用して、プロセスを高速化します。
 
-**2.既存のインデックスで使用可能なバイナリテキストストアを再利用**
+**2. 既存のインデックスで使用可能なバイナリテキストストアを再利用**
 
 既存のシステムからインデックスデータをダンプし、テキストストアをエクストラクトします。
 
@@ -83,7 +83,7 @@ java -jar oak-run.jar tika --data-file text-extraction/oak-binary-stats.csv --st
 
 ここで、 `oak-index-name` はフルテキストインデックスの名前です（例：「lucene」）。
 
-**3.上記の手順で除外したバイナリに対して、tika ライブラリを使用してテキスト抽出プロセスを実行します**
+**3. 上記の手順で除外したバイナリに対して、tika ライブラリを使用してテキスト抽出プロセスを実行します**
 
 ```
 java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika --data-file text-extraction/oak-binary-stats.csv --store-path text-extraction/store --fds-path <datastore path> extract
@@ -103,7 +103,7 @@ java -cp oak-run.jar:tika-app-1.21.jar org.apache.jackrabbit.oak.run.Main tika -
 
 インデックスをオフラインで作成するには、以下の手順に従います。
 
-**1.ターゲット AEM バージョンの Oak Lucene インデックス定義を生成します。**
+**1. ターゲット AEM バージョンの Oak Lucene インデックス定義を生成します。**
 
 既存のインデックス定義をダンプします。変更を受けたインデックス定義は、対象の AEM バージョンの Adobe Granite リポジトリーバンドルと oak-run を使用して生成されました。
 
@@ -131,7 +131,7 @@ java -cp oak-run.jar:bundle-com.adobe.granite.repository.jar org.apache.jackrabb
 
 上記の手順では、`merge-index-definitions_target.json` という名前の JSON ファイルを作成します。これはインデックス定義です。
 
-**2.リポジトリー** でチェックポイントを作成
+**2. リポジトリー** でチェックポイントを作成
 
 実稼動環境用 **source** AEMインスタンスに、有効期間が長いチェックポイントを作成します。これは、リポジトリーのクローンを作成する前に行う必要があります。
 
@@ -178,7 +178,7 @@ AEM 6.4 以降のバージョンでは、AEM には、起動シーケンス時�
 
 ### Runbook と体験版の実行を準備する {#prepare-a-runbook-and-trial-run}
 
-実稼動環境でアップグレードを実行する前に、[Runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook) を準備し、トライアルを何回か実行することをお勧めします。
+実稼動環境でアップグレードを実行する前に、[Runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html?lang=ja#building-the-upgrade-and-rollback-runbook) を準備し、トライアルを何回か実行することをお勧めします。
 
 ### オフラインインデックス付きドキュメントトラバーサルモード {#doc-traversal-mode-with-offline-indexing}
 
