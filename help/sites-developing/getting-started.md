@@ -12,9 +12,9 @@ discoiquuid: 95346ce1-84b7-4bd1-a1e2-6a803139dc69
 docset: aem65
 exl-id: 8314d7fe-0a46-453d-9592-f1bcd8c8f10a
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '259'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ WKND 開発者向けチュートリアルは[こちら](https://experienceleague
 
 このチュートリアルの実装では、AEM の数多くの強力な機能を利用しています。サイトの実装には以下が使用されます。
 
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 * [Sling Model](https://sling.apache.org/documentation/bundles/models.html)
 * [タッチ UI](/help/sites-developing/touch-ui-concepts.md)
 * [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
