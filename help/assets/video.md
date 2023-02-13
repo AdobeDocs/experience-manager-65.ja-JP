@@ -74,6 +74,7 @@ ht-degree: 100%
    * ビデオアセットをプレビューして公開します。
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
+
          [ビデオをプレビュー](managing-video-assets.md#upload-and-preview-video-assets)するか[アセットをプレビュー](previewing-assets.md)します。
          [ビデオレンディションを表示](video-renditions.md)
          [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
@@ -83,9 +84,11 @@ ht-degree: 100%
    * ビデオのメタデータを操作します。
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
+
          [ビデオレンディションのプロパティを表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
+
          [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
 
       * [デジタルアセットのメタデータの管理](metadata.md)
@@ -111,9 +114,11 @@ ht-degree: 100%
    * サードパーティの web コンテンツ管理システムを使用している場合、web ページにビデオをリンクするか、ビデオを埋め込むことができます。
 
       * URL を使用したビデオの統合：
+
          [Web アプリケーションに URL をリンクします](linking-urls-to-yourwebapplication.md)。
 
       * Web ページの埋め込みコードを使用したビデオの統合：
+
          [Web ページにビデオビューアを埋め込みます](embed-code.md)。
    * [YouTube にビデオを公開します](#publishing-videos-to-youtube)。
    * [ビデオレポートを生成します](#viewing-video-reports)。
@@ -866,7 +871,6 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
-
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -901,7 +905,6 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
-
    >
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
@@ -1061,6 +1064,7 @@ Dynamic Media で標準提供されているビデオビューアを使用して
       trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
+
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->

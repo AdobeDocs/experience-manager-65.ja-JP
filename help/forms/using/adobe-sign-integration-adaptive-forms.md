@@ -52,7 +52,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    >手順1〜4を実行して、新しい構成コンテナを作成し、コンテナで [!DNL Adobe Sign] 構成を作成するか、**ツール** ![ハンマー](assets/hammer.png)／**[!UICONTROL Cloud Services]**／**[!UICONTROL Adobe Sign]**&#x200B;で既存の `global` フォルダーを使用できます。新しい設定コンテナで設定を作成する場合、必ず&#x200B;**[!UICONTROL 設定コンテナ]**&#x200B;フィールドに値を入力する必要があります。
 
    >[!NOTE]
-   Cloud Services 設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM [!DNL Forms] サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
+   >Cloud Services 設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM [!DNL Forms] サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
 
 1. 設定ページで「**[!UICONTROL 作成]**」をタップして、AEM [!DNL Forms] 内に [!DNL Adobe Sign] の設定を作成します。
 1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の&#x200B;**[!UICONTROL 名前]**&#x200B;を指定して「**[!UICONTROL 次へ]**」をタップします。必要に応じてタイトルを指定し、設定のサムネールを参照して選択することもできます。
@@ -73,7 +73,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    別の [!DNL Adobe Sign] 設定を Adobe Experience Manager の機能またはコンポーネント用に作成する場合は、すべての [!DNL Adobe Sign] クラウド設定が同じシャードをポイントしていることを確認してください。
 
    >[!NOTE]
-   **Adobe Sign 設定を作成**&#x200B;ページを開いたままにします。 閉じないでください。 **クライアント ID** および&#x200B;**クライアント秘密鍵**&#x200B;は、以降の手順で説明するように、[!DNL Adobe Sign] アプリケーションの OAuth 設定を行った後に取得できます。
+   >**Adobe Sign 設定を作成**&#x200B;ページを開いたままにします。 閉じないでください。 **クライアント ID** および&#x200B;**クライアント秘密鍵**&#x200B;は、以降の手順で説明するように、[!DNL Adobe Sign] アプリケーションの OAuth 設定を行った後に取得できます。
 
 
 1. 以下の手順に従って、[!DNL Adobe Sign] アプリケーションの OAuth 設定を指定します。
@@ -107,7 +107,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    データベースシャードの値を更新することができます。サーバーを再起動すると、データベースシャードの新しい値を使用することができます。
 
    >[!NOTE]
-   オーサーインスタンスとパブリッシュインスタンスの設定が同じシャードを指していることを確認します。1 つの組織に対して複数の Adobe Sign 設定を作成する場合は、すべての設定で同じシャードが使用されていることを確認します。
+   >オーサーインスタンスとパブリッシュインスタンスの設定が同じシャードを指していることを確認します。1 つの組織に対して複数の Adobe Sign 設定を作成する場合は、すべての設定で同じシャードが使用されていることを確認します。
 
 1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページに戻ります。「**[!UICONTROL 設定]**」タブで、「**クライアント ID**」（アプリケーション ID とも言われます）と「**クライアント秘密鍵**」の値を指定します。AEM Forms 用に作成した [Adobe Sign アプリケーションのクライアント ID とクライアント秘密鍵](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)を使用します。
 
