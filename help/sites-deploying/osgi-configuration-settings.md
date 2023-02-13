@@ -13,9 +13,9 @@ docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
 source-git-commit: 73fba5249a05b0bdb9871a6e19c6bed10a7e7e4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3476'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -95,8 +95,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 **Apache Sling GET Servlet**：レンダリングの一部の要素を設定します。
 
 * **Auto Index**：閲覧のためのディレクトリのレンダリングを有効または無効にします。
-* **有効にする** デフォルトのレンディション ( **HTML**, **プレーンテキスト**, **JSON** または **XML**.
-JSON を無効にしないでください。
+* デフォルトのレンディション（**HTML**、**プレーンテキスト**、**JSON**、**XML** など）を&#x200B;**有効化**（または無効化）します。JSON を無効にしないでください。
 
 >[!NOTE]
 >
@@ -104,9 +103,9 @@ JSON を無効にしないでください。
 
 **Apache Sling Java Script Handler**：.java ファイルのコンパイルを、スクリプト（サーブレット）として設定します。
 
-特定の設定がパフォーマンスに影響を及ぼす可能性があります。可能な場合（特に、実稼動インスタンスの場合）は、それらを無効にしてください。
+特定の設定がパフォーマンスに影響を及ぼす可能性があります。可能である場合に（特に、実稼動インスタンスの場合）、それらを無効にするようにします。
 
-* **ソース VM** および **ターゲット VM**：ランタイム JVM として使用する JDK バージョンを定義します。
+* **Source VM** および **Target VM** で、ランタイム JVM として使用する JDK バージョンを定義します。
 
 * 実稼動インスタンスの場合：
 
@@ -276,7 +275,7 @@ JSON を無効にしないでください。
 
 >[!CAUTION]
 >
->次のいずれかの設定を変更する場合 **縮小** または **Gzip** また、clientlibs キャッシュのコンテンツを削除する必要があります。 詳しくは、 [ナレッジベース記事](https://helpx.adobe.com/ca/experience-manager/kb/How-to-force-a-recompilation-of-all-Sling-scripts-jsps-java-sightly-on-AEM-6-4.html) 」を参照してください。
+>**Minify** または **Gzip** の設定を変更する場合は、clientlibs キャッシュの内容も削除する必要があります。詳しくは、[ナレッジベースの記事](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
@@ -313,7 +312,7 @@ JSON を無効にしないでください。
 AEM では次の 2 つの UI を使用できます。
 
 * タッチ操作対応 UI が標準の UI です。
-* 非推奨（廃止予定）のクラシック UI は、引き続き完全に動作します。
+* 非推奨のクラシック UI も引き続き問題なく機能します
 
 AEM ルートマッピングを使用すると、希望する UI を、インスタンスのデフォルトとして設定できます。
 
