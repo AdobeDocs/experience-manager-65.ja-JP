@@ -11,9 +11,9 @@ discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
 docset: aem65
 exl-id: 8d17194b-8baf-4878-b3ae-d351a056aebf
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1107'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -135,8 +135,8 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
       | ノード | プロパティ | タイプ |
       |---|---|---|
       | sharedWith | sharedWith | 文字列 |
-      | locked | ロック済み | ブール値 |
-      | returned | 返された | ブール値 |
+      | locked | locked | ブール値 |
+      | returned | returned | ブール値 |
       | allowInboxSharing | allowInboxSharing | ブール値 |
       | allowExplicitSharing | allowExplicitSharing | ブール値 |
 
@@ -151,8 +151,8 @@ AEM インボックスでは、アクティブなタスクのみが表示され�
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [プロパティインデックスを作成し、true に設定します](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index)。
+1. [プロパティインデックスを作成し、true に設定します](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=ja#the-property-index)。
 
 1. CRX DE でインデックスを設定するか、パッケージを介してデプロイした後、[リポジトリーのインデックスを再作成します](https://helpx.adobe.com/jp/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
 
-https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html
+https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=ja
