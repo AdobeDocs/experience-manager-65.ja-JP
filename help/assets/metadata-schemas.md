@@ -7,9 +7,9 @@ role: User,Admin
 feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3630'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 99%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=en) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/metadata-schemas.html?lang=en) |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/metadata-schemas.html?lang=ja) |
 
 個々の組織では、アセットの検出、使用、相互運用性などを強化するメタデータモデルを用意します。正しいメタデータを適用することは、メタデータ駆動型のワークフローとプロセスを維持するために不可欠です。組織全体のメタデータ戦略および標準に準拠するには、DAM ユーザーの連携に役立つメタデータスキーマを使用します。[!DNL Adobe Experience Manager] では、メタデータスキーマの作成、維持管理、適用を簡単かつ柔軟に行えます。
 
