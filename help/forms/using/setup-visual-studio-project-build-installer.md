@@ -9,7 +9,7 @@ discoiquuid: c71c2a17-54f9-4c95-a90a-3c89d6d45721
 docset: aem65
 exl-id: ae7340c8-38cc-4b2b-ba17-22011471fd7d
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '909'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ AEM Forms では、AEM Forms アプリケーションの完全なソースコー
 
 AEM Forms アプリケーションソースを入手するには、以下の手順を実行します。
 
-1. [ソフトウェア配布](https://experience.adobe.com/jp/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
+1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
 1. 「**[!UICONTROL フィルター]**」セクションで、
    1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
