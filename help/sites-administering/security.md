@@ -13,9 +13,9 @@ docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 source-git-commit: 97b0cec1c8091bbc5736bd68bdee257ca423f93e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5454'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -73,7 +73,7 @@ AEM WCM では複数のユーザーとグループがインストールされま
   </tr>
   <tr>
    <td><p>anonymous</p> <p> </p> </td>
-   <td>ユーザー</td>
+   <td>User</td>
    <td><p>インスタンスに対する未認証のアクセスのデフォルトの権限を保持します。デフォルトでは、最小限のアクセス権限が保持されます。</p> <p>このアカウントを誤って削除した場合は、起動時に再作成されます。このアカウントを完全に削除することはできませんが、無効にすることは可能です。</p> </td>
    <td>オーサーインスタンスの機能に悪影響を及ぼす可能性があるため、このアカウントを削除または無効にしないでください。削除することを義務付けているセキュリティ要件がある場合は、まずシステムに与える影響をテストするようにしてください。</td>
   </tr>
@@ -220,12 +220,12 @@ AEM WCM では、アクセス制御リスト（ACL）を使用して、様々な
 >* `/etc/cloudservices`
 >* `/home/users/we-retail`
 >
->カスタムアプリケーションは、次のような他の関係に対するアクセスを設定できます。
+>カスタムアプリケーションは、次のような他の関係へのアクセスを設定できます。
 >
 >* `*/social/relationships/friend/*`
->* または `*/social/relationships/pending-following/*`.
+>* または `*/social/relationships/pending-following/*`。
 >
->コミュニティ特有の ACL を作成する場合は、そのコミュニティに参加するメンバーに追加の権限を付与できます。例えば、ユーザーが次の場所でコミュニティに参加する場合は、このような状況が考えられます。 `/content/we-retail/us/en/community`
+>コミュニティ特有の ACL を作成する場合は、そのコミュニティに参加するメンバーに追加の権限を付与できます。例えば、ユーザーが `/content/we-retail/us/en/community` でコミュニティに参加する場合がこれに該当します。
 
 ### 権限の状態 {#permission-states}
 
