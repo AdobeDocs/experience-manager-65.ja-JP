@@ -10,7 +10,7 @@ docset: aem65
 role: Admin
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1612'
 ht-degree: 100%
 
@@ -161,7 +161,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)」を参照してください。
+   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)」を参照してください。
 
 1. リファラーフィルターサービスの設定：
 
@@ -171,7 +171,7 @@ AEM Forms には、いくつかの必須およびオプションの設定があ�
 
 キャッシングは、データへのアクセスにかかる時間を短縮し、遅延を削減して I/O 速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、アダプティブフォームのレンダリングの時間を短縮します。
 
-* アダプティブフォームのキャッシュを使用するときは、[AEM ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
+* アダプティブフォームのキャッシュを使用するときは、[AEM ディスパッチャー](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
 * カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
 次の手順を実行してアダプティブフォームのキャッシュを設定します。
