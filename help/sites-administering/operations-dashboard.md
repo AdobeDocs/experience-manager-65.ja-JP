@@ -13,9 +13,9 @@ docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 source-git-commit: dd8f24ce412a8ca6c44224a7602533dae0898e92
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6230'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -326,9 +326,9 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 ### ヘルスチェック設定 {#health-check-configuration}
 
-デフォルトでは、標準のAEMインスタンスの場合、ヘルスチェックは 60 秒ごとに実行されます。
+デフォルトでは、標準の AEM インスタンスの場合、ヘルスチェックは 60 秒ごとに実行されます。
 
-次の項目を設定できます。 **期間** と [OSGi 設定](/help/sites-deploying/configuring-osgi.md) **クエリヘルスチェック設定** (com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics)。
+[OSGi 設定](/help/sites-deploying/configuring-osgi.md)の&#x200B;**クエリヘルスチェック設定**（com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics）で&#x200B;**期間**&#x200B;を設定できます。
 
 ## Nagios での監視 {#monitoring-with-nagios}
 
@@ -520,7 +520,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 
 この URL から直接アクセスすることもできます。`https://serveraddress:port/libs/granite/operations/content/diagnosistools/indexManager.html`
 
-![index_manager](assets/index_manager.png)
+![インデックスマネージャー](assets/index_manager.png)
 
 この UI で、画面左上隅の検索ボックスにフィルター条件を入力して、テーブル内のインデックスにフィルターを適用することができます。
 
