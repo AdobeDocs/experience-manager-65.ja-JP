@@ -12,9 +12,9 @@ discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
 source-git-commit: 4472da2e9aa0b45e0d5f03bfdc53a2748d82cdb3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5351'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->様々な例は、Geometrixxサンプルコンテンツに基づいています。このコンテンツは、AEMには付属しなくなり、We.Retail に置き換えられました。 Geometrixx のダウンロードおよびインストール方法については、[We.Retail 参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx)を参照してください。
+>多くの例は、Geometrixx サンプルコンテンツに基づいています。Geometrixx は、現在 AEM に同梱されておらず、We.Retail に置き換えられています。Geometrixx のダウンロードおよびインストール方法については、[We.Retail 参照実装](/help/sites-developing/we-retail.md#we-retail-geometrixx)を参照してください。
 
 Web ページが表示されるクライアントの表示域に適応するように Web ページをデザインします。レスポンシブデザインを使用すると、同じページを複数のデバイスで、縦、横の両方の向きで効果的に表示できます。次の画像の例は、表示域サイズの変更に対してページがどのように応答するかを示しています。
 
@@ -486,7 +486,7 @@ AEM サービスの設定方法について詳しくは、[OSGi の設定](/help
   <tr>
    <th>サービスまたはノード名</th>
    <td>「設定」タブのサービス名：Adobe CQ Adaptive Image Component Servlet</td>
-   <td>com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet</td>
+   <td>com.day.cq.wcm.foundation.impl. AdaptiveImageComponentServlet</td>
   </tr>
   <tr>
    <th>プロパティ</th>
