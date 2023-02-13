@@ -12,9 +12,9 @@ content-type: reference
 discoiquuid: 378bc33d-ab6c-4651-9688-102c961561fc
 exl-id: 01c69aa9-2623-42dc-9e2d-62bc5e01cf0e
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '9211'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -869,7 +869,7 @@ AEM では、ページのデフォルト言語は、ページを作成する際�
 
 #### 達成方法 - 一部分の言語（3.1.2） {#how-to-meet-language-of-parts}
 
-`lang` 属性を使用して、コンテンツの言語の変更を識別できます。例えば、ドイツ語（ISO 639-1 コード&quot;de&quot;）の引用は、次のように表示されます。
+`lang` 属性を使用して、コンテンツの言語の変更を識別できます。例えば、ドイツ語（ISO 639-1 コード「de」）の引用は、次のように表示できます。
 
 ```xml
 <blockquote cite = "John F. Kennedy" lang = "de">
