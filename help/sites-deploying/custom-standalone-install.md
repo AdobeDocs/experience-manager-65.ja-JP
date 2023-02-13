@@ -7,9 +7,9 @@ content-type: reference
 topic-tags: deploying
 exl-id: d6484bb7-8123-4f42-96e8-aa441b1093f3
 source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1622'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -163,7 +163,7 @@ Java マシンの一時フォルダーのデフォルトの場所は `/tmp`で�
 
 >[!CAUTION]
 >
->これらのオプションは、AEM 6.5(6.5.0.0) の元のリリース以降で有効です。 SP の新しいリリースでは変更が可能です。
+>これらのオプションは、AEM 6.5（6.5.0.0）のオリジナルのリリース以降で有効です。 SP の新しいリリースでは変更が可能です。
 
 ```shell
 Loading quickstart properties: default
