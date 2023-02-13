@@ -12,9 +12,9 @@ discoiquuid: 6c1f8869-62d9-4fac-aa0d-b99bb0e86d6b
 docset: aem65
 exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1445'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Adobe Analytics に送信するデータを収集するフレームワークに�
 
    ![aa-13](assets/aa-13.png)
 
-   デフォルトのコンポーネントグループは複数あります。 **一般**, **コマース**, **コミュニティ**、および **その他**. AEM インスタンスは、異なるグループおよびコンポーネントを表示するように設定されていることがあります。
+   デフォルトのコンポーネントグループには、**一般**、**コマース**、**コミュニティ**&#x200B;および&#x200B;**その他**&#x200B;があります。AEM インスタンスは、異なるグループおよびコンポーネントを表示するように設定されていることがあります。
 
 1. Adobe Analytics 変数をコンポーネントで定義された変数にマッピングするには、**Analytics 変数**&#x200B;をコンテンツファインダーからトラッキングコンポーネントのフィールドにドラッグします。たとえば、 `Page Name (pageName)` を `pagedata.title` にドラッグします。
 
