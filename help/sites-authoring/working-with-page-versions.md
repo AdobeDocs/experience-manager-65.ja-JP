@@ -12,9 +12,9 @@ discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
 source-git-commit: b11a97b9b00e6f80fb0243e234ed1dc2c004ed3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1491'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -203,7 +203,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->[タイムワープは、ローンチと共に使用して将来をプレビューすることもできます](/help/sites-authoring/launches.md) AEM 6.5.10.0以降を実行している場合。
+>AEM 6.5.10.0 以降を実行している場合、[タイムワープをローンチと組み合わせて使用して、未来をプレビューすることもできます](/help/sites-authoring/launches.md)。
 
 コンテンツの作成は継続的な共同作業プロセスなので、コンテンツの変更内容を把握するために、公開された Web サイトを作成者が経時的に追跡できるようにすることがタイムワープの目的です。この機能では、ページのバージョンを使用してパブリッシュ環境の状態を判断します。
 
