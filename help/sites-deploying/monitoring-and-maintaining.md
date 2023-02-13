@@ -13,9 +13,9 @@ docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5972'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -100,30 +100,30 @@ CRX ドキュメントの[バックアップと復元](/help/sites-administering
 
 ### 概要 {#overview}
 
-この **バージョンをパージ** このツールは、週次メンテナンスタスクとして使用できます。 を初めて使用する場合は、その前に追加して設定する必要があります。 その後は、リクエストに応じて、または週単位で実行できます。
+**バージョンのパージ**&#x200B;ツールは、週次メンテナンスタスクとして使用できます。 初めて使用する前に、追加して設定する必要があります。 その後はリクエストに応じて、または週間ベースで実行することができます。
 
 ### Web サイトのバージョンのパージ {#purging-versions-of-a-web-site}
 
 Web サイトのバージョンをパージするには、次の手順を実行します。
 
-1. 次に移動： **[ツール](/help/sites-administering/tools-consoles.md)** **コンソール**&#x200B;を選択します。 **操作**, **メンテナンス**&#x200B;を、 **週別メンテナンスウィンドウ**.
+1. **[ツール](/help/sites-administering/tools-consoles.md)** **コンソール**&#x200B;に移動し、**操作**／**メンテナンス**／**週別メンテナンスウィンドウ**&#x200B;を選択します。
 
-1. 選択 **+追加** をクリックします。
+1. 上部ツールバーの「**+追加**」を選択します。
 
    ![バージョンのパージを追加](assets/version-purge-add.png)
 
-1. 選択 **バージョンのパージ** 」を選択します。 **新規タスクの追加** ダイアログ。 次に、 **保存**.
+1. **新規タスクを追加**&#x200B;ダイアログで「**バージョンのパージ**」を選択します。次に「**保存**」します。
 
    ![バージョンのパージを追加](assets/version-purge-add-new-task.png)
 
-1. この **バージョンのパージ** タスクが追加されます。 カードアクションを使用して、次のことを実行できます。
-   * 選択 — 上部のツールバーに追加のアクションが表示されます
-   * 実行 — 設定したパージを直ちに実行します。
-   * 設定 — 週別パージタスクを設定します
+1. **バージョンのパージ**&#x200B;タスクが追加されます。 カードアクションを使用して、以下を実行できます。
+   * 選択 - 上部のツールバーに追加のアクションが表示されます
+   * 実行 - 設定したパージを直ちに実行します。
+   * 設定 - 週次パージタスクを設定します
 
    ![バージョンのパージアクション](assets/version-purge-actions.png)
 
-1. を選択します。 **設定** Web コンソールを開くアクション **Day CQ WCM バージョンのパージタスク**&#x200B;を使用して、次の項目を設定できます。
+1. **設定**&#x200B;アクションを選択し、**Day CQ WCM バージョンパージタスク**&#x200B;の web コンソールを開いて、以下を設定することができます。
 
    ![バージョンのパージ設定](assets/version-purge-configuration.png)
 
@@ -139,35 +139,35 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
    * **バージョンを再帰的にパージ**
 
-      * パスで定義されたノードのみをパージする場合は、選択を解除します。
-      * パスとその子孫で定義されたノードをパージする場合に選択します。
+      * パスで定義したノードのみをパージする場合は、選択を解除します。
+      * パスで定義したノードおよびその下位のノードをパージする場合に選択します。
    * **バージョンの最大数**
-保持するバージョンの最大数（各ノードの）を設定します。 この設定を使用しない場合は、空のままにします。
+保持するバージョンの（各ノードの）最大数を設定します。 この設定を使用しない場合は、空のままにします。
 
    * **バージョンの最小数**
-保持するバージョンの最小数（各ノードの）を設定します。 この設定を使用しない場合は、空のままにします。
+保持するバージョンの（各ノードの）最小数を設定します。 この設定を使用しない場合は、空のままにします。
 
-   * **最大バージョン期間**
-保持するバージョンの最大期間を日数で設定します（各ノードに対して）。 この設定を使用しない場合は、空のままにします。
-   次に、 **保存**.
+   * **バージョンの最長有効期間**
+保持するバージョンの（各ノードに対の）最長有効期間を日数で設定します。 この設定を使用しない場合は、空のままにします。
+   次に、 **保存**&#x200B;します。
 
-1. に移動または戻る **週別メンテナンスウィンドウ** ウィンドウと選択 **実行** をクリックして、プロセスを直ちに起動します。
+1. **週別メンテナンスウィンドウ**&#x200B;のウィンドウに移動または戻り、「**実行**」を選択して、プロセスをすぐに起動します。
 
 >[!CAUTION]
 >
->クラシック UI ダイアログを使用して、 [ドライラン](#analyzing-the-console) 設定の内容：
+>クラシック UI ダイアログを使用して、設定した[ドライラン](#analyzing-the-console)を実行することができます。
 >
 >* http://localhost:4502/etc/versioning/purge.html
 >
 >パージされたノードを元に戻すには、リポジトリを復元するしかありません。設定は自己管理する必要があるので、パージの前に必ずドライランを実行することをお勧めします。
 
-#### ドライラン — コンソールの分析 {#analyzing-the-console}
+#### ドライラン - コンソールの分析 {#analyzing-the-console}
 
-クラシック UI には、 **ドライラン** オプション：
+クラシック UI では、次からの&#x200B;**ドライラン**&#x200B;オプションが提供されます。
 
 * http://localhost:4502/etc/versioning/purge.html
 
-処理されたすべてのノードがリストされます。 この処理の間、ノードのステータスは次のいずれかになります。
+この処理では、処理されたすべてのノードがリストされます。 この処理の間、ノードのステータスは次のいずれかになります。
 
 * `ignore (not versionnable)`：ノードはバージョン管理をサポートしないので、処理中は無視されます。
 
@@ -179,7 +179,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 さらに、コンソールでは、バージョンに関して次のような有益な情報が提供されます。
 
 * `V 1.0`：バージョン番号。
-* `V 1.0.1`&#42;:星は、バージョンが現在の（基本）バージョンであり、パージできないことを示します。
+* `V 1.0.1`&#42;：星形は、バージョンが現在の（基本）バージョンであり、パージできないことを示しています。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`：バージョンの日付。
 
@@ -368,7 +368,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`.
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
    >
    >また、ログファイルが
    >
@@ -615,7 +615,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>ヒープダンプ</td>
    <td>パフォーマンス低下の原因となるメモリ不足の問題。</td>
-   <td><p>AEM に対する Java 呼び出しに、<br />「<code>-XX:+HeapDumpOnOutOfMemoryError</code><br />」オプションを追加します。</p> <p>詳しくは、 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">JVM のトラブルシューティングページのオプション/フラグ</a>.</p> </td>
+   <td><p>AEM に対する Java 呼び出しに、<br />「<code>-XX:+HeapDumpOnOutOfMemoryError</code><br />」オプションを追加します。</p> <p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">JVM のトラブルシューティングページのオプション／フラグ</a>を参照してください。</p> </td>
   </tr>
   <tr>
    <td>システム呼び出し</td>
@@ -644,18 +644,18 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   </tr>
   <tr>
    <td>Java Flight Recorder</td>
-   <td>Java Flight Recorder(JFR) は、実行中の Java アプリケーションに関する診断データとプロファイルデータを収集するためのツールです。</td>
+   <td>Java Flight Recorder（JFR）は、実行中の Java アプリケーションに関する診断データとプロファイルデータを収集するためのツールです。</td>
    <td><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE</a></td>
   </tr>
   <tr>
    <td>JConsole</td>
    <td>JVM の指標およびスレッドを監視。</td>
-   <td><p>使用法：jconsole</p> <p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html">jconsole</a> および <a href="#monitoring-performance-using-jconsole">JConsole を使用したパフォーマンスの監視</a> を参照してください。</p> <p><strong>注意：</strong> JDK 1.8 では、Top や TDA（Thread Dump Analyzer）などのプラグインを使用して JConsole を拡張できます。</p> </td>
+   <td><p>使用法：jconsole</p> <p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html">jconsole</a> および <a href="#monitoring-performance-using-jconsole">JConsole を使用したパフォーマンスの監視</a> を参照してください。</p> <p><strong>メモ：</strong>JDK 1.8 では、Top や TDA（Thread Dump Analyzer）などのプラグインを使用して JConsole を拡張できます。</p> </td>
   </tr>
   <tr>
    <td>Java VisualVM</td>
    <td>JVM の指標、スレッド、メモリおよびプロファイリングを監視。</td>
-   <td><p>使用方法：visualvm または visualvm<br /> </p> <p>詳しくは、 <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">visualvm</a> および <a href="#monitoring-performance-using-j-visualvm">(J)VisualVM を使用したパフォーマンスの監視</a>.</p> <p><strong>注意：</strong> JDK 1.8 では、プラグインを使用して VisualVM を拡張できます。VisualVM は JDK 9 以降で廃止されます。 代わりに、Java Flight Recorder を使用してください。</p> </td>
+   <td><p>使用法：jvisualvm または visualvm<br /> </p> <p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">visualvm</a> および <a href="#monitoring-performance-using-j-visualvm">(J)VisualVM</a> を使用したパフォーマンスの監視を参照してください。</p> <p><strong>メモ：</strong>JDK 1.8 では、プラグインを使用して VisualVM を拡張できます。VisualVM は JDK 9 以降で廃止されます。その代わりに、Java Flight Recorder を使用してください。</p> </td>
   </tr>
   <tr>
    <td>truss/strace、lsof</td>
@@ -670,7 +670,7 @@ OSGi イベントで生成される監査記録は、AEM Web コンソールの�
   <tr>
    <td>CPU およびメモリプロファイリングツール<br /> </td>
    <td><a href="#interpreting-the-request-log">開発中に低速の要求を分析する際に使用</a>。</td>
-   <td>例えば、<a href="https://www.yourkit.com/">YourKit</a> などです。または <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java Flight Recorder</a>.</td>
+   <td>例えば、<a href="https://www.yourkit.com/">YourKit</a> などです。または <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java Flight Recorder</a> です。</td>
   </tr>
   <tr>
    <td><a href="#information-collection">情報収集</a></td>
@@ -697,7 +697,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 09:43:41 [66] <- 200 text/html 797ms
 ```
 
-特定の期間（例：様々な 24 時間以上）のすべてのGETエントリを合計することで、Web サイトの平均トラフィックに関する情報を提供できます。
+24 時間の監視を何度か行うなどして、特定の期間内の GET エントリをすべて合計することにより、web サイトの平均トラフィックを把握できます。
 
 #### request.log での応答時間の監視 {#monitoring-response-times-with-the-request-log}
 
@@ -727,7 +727,7 @@ request.log は、実行される各要求を、応答と共に登録します�
 
 * 応答の行には、以下が含まれます。
 
-   * ステータスコード (200 は「成功」を表し、404 は「ページが見つかりません」を表します。
+   * ステータスコード（200 は「成功」、404 は「ページが見つかりません」
    * MIME タイプ
    * 応答時間
 
@@ -927,7 +927,7 @@ Percentage of the requests served within a certain time (ms)
 
 ### （J）VisualVM を使用したパフォーマンスの監視 {#monitoring-performance-using-j-visualvm}
 
-JDK 6-8 の場合、tool コマンド `visualvm` が使用可能です。 JDK をインストールすると、次の操作を実行できます。
+JDK 6～8 の場合、ツールコマンド `visualvm` を使用できます。JDK をインストールすると、次の操作を実行できます。
 
 1. AEM インスタンスを起動します。
 
@@ -1113,7 +1113,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 * ナレッジベース
 
-   * [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+   * [遅延しているプロセスおよびブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
 ### メモリ不足 {#out-of-memory}
 
