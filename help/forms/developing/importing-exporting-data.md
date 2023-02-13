@@ -12,9 +12,9 @@ discoiquuid: 2e783745-c986-45ba-8e65-7437d114ca38
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
 source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2778'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -181,7 +181,7 @@ PDF フォームと有効な XML データソースを参照した後、デー�
 
 1. PDF フォームを PDF ファイルとして保存します。
 
-   * の作成 `java.io.File` オブジェクトに置き換えて、ファイル拡張子が「。PDF」であることを確認します。
+   * `java.io.File` オブジェクトを作成し、ファイル拡張子が「 .pdf」であることを確認します。
    * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします（`importData` メソッドが返した `Document` オブジェクトを使用してください）。
 
 **関連情報**
