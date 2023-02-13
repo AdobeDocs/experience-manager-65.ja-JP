@@ -7,9 +7,9 @@ topic-tags: author
 role: Admin
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2242'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -36,11 +36,11 @@ ht-degree: 98%
   </tr>
   <tr>
    <td><p>AEM Forms および AEM Forms を他の Adobe 製品と統合するための方法に関する一般的な情報</p> </td>
-   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms の概要</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_programming_65_jp">AEM Forms の概要</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>AEM Forms 用のすべてのドキュメント</p> </td>
-   <td><p><a href="https://adobe.com/go/learn_aemforms_introduction_65">AEM Forms のドキュメント</a><br /> <br /> </p> </td>
+   <td><p><a href="https://adobe.com/go/learn_aemforms_programming_65_jp">AEM Forms のドキュメント</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>現在のバージョンに関するパッチアップデート、テクニカルノート、および追加情報</p> </td>
@@ -170,9 +170,9 @@ Workbench をインストールする前に、Workbench の実行に必要なソ
 1. インストールの概要を確認します。「Adobe AEM forms Workbench の起動」を選択して Workbench を起動し、「次へ」をクリックします。
 1. リリースノートを確認して「完了」をクリックします。
 1. コンピューターに以下のアイテムがインストールされました。
-   * **Workbench**：スタートメニューにショートカットフォルダーを保存するよう選択した場合にこのメニューから Workbench を起動するには、すべてのプログラム／AEM Forms／Workbench を選択します。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbenchの使用</a>ドキュメントを参照してください。
+   * **Workbench**：スタートメニューにショートカットフォルダーを保存するよう選択した場合にこのメニューから Workbench を起動するには、すべてのプログラム／AEM Forms／Workbench を選択します。詳しくは、<a href="https://helpx.adobe.com/jp/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Workbenchの使用</a>ドキュメントを参照してください。
    * **Designer**：Designer は Workbench 内部からアクセスできます。詳しくは、<a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer ヘルプ</a>のはじめにのトピックを参照してください。
-   * **AEM Forms SDK**：SDK 使用方法の詳細については、<a href="https://www.adobe.com/go/learn_aemforms_programming_65">AEM Forms によるプログラミング</a>を参照してください。
+   * **AEM Forms SDK**：SDK 使用方法の詳細については、<a href="https://www.adobe.com/go/learn_aemforms_programming_65_jp">AEM Forms によるプログラミング</a>を参照してください。
 
 ## プロセスのアップグレード {#upgrading-processes}
 
@@ -188,7 +188,7 @@ Workbench を使用するには、通常は別のコンピューターで AEM Fo
 
 ### タイムアウトの設定 {#configuring-timeout-settings}
 
-デフォルトでは、Workbench は動作状況に関係なく 2 時間後にタイムアウトになります。タイムアウト設定を編集するには、 <a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理コンソールヘルプ</a>.
+デフォルトでは、Workbench は動作状況に関係なく 2 時間後にタイムアウトになります。タイムアウトの設定を編集するには、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html?lang=ja">管理コンソールヘルプ</a> の「User Management の設定」の「詳細なシステム属性の設定」を参照してください。
 
 ### HTTPS 経由で接続するための Workbench の設定 {#configuring-workbench-to-connect-over-HTTPS}
 
