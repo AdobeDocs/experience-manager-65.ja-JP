@@ -9,9 +9,9 @@ discoiquuid: b53eae8c-16ba-47e7-9421-7c33e141d268
 role: Admin
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 source-git-commit: 420b7f83939aef548501b4676ddca1ec9fc2aa03
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5530'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -89,7 +89,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
 
 ### UNIX ベースのオペレーティングシステムの追加要件 {#extrarequirements}
 
-UNIX ベースのオペレーティングシステムを使用している場合は、各オペレーティングシステムのインストールメディアから、次の 32 ビットパッケージをインストールします。
+Unix ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次の 32 ビットパッケージをインストールしてください。
 <table>
  <tbody>
   <tr>
@@ -471,8 +471,8 @@ Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使�
 
    1. [AEM パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を開き、`adobe-aemfd-pdfg-common-pkg-[version].zip` ファイルをパッケージマネージャーからダウンロードします。
    1. ダウンロードした.zip ファイルを解凍します。管理者権限でコマンドプロンプトを開きます。
-   1.  `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
-   1. を解凍します。 `adobe-aemfd-pdfg-common-pkg-[version]`.
+   1. `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\` に移動します。
+   1. `adobe-aemfd-pdfg-common-pkg-[version]` を解凍します。
    1. `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` ディレクトリに移動します。次のバッチファイルを実行します。
 
       `Acrobat_for_PDFG_Configuration.bat`
@@ -583,7 +583,7 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
 ## System Readiness Tool（SRT） {#SRT}
 
-この [System Readiness Tool](#srt-configuration) 装置が Generator Conversions を実行するように正しく設定されているかどうかをPDFします。 ツールは、指定されたパスでレポートを生成します。ツールを実行するには：
+[System Readiness ツール](#srt-configuration)は、PDF Generator 変換を実行するようにマシンが正しく設定されているかどうかを確認します。ツールは、指定されたパスでレポートを生成します。ツールを実行するには：
 
 1. コマンドプロンプトを開き、`[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` フォルダーに移動します。
 
@@ -595,7 +595,7 @@ Assembler サービスは、Reader Extensions サービス、Signature サービ
 
    >[!NOTE]
    >
-   >* pdfgen.api ファイルが Acrobat プラグインフォルダーで使用できないことが System Readiness Tool から報告された場合は、pdfgen.api ファイルを `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` ディレクトリから `[Acrobat_root]\Acrobat\plug_ins` ディレクトリにコピーします。
+   >* pdfgen.api ファイルが Acrobat プラグインフォルダーで使用できないことが System Readiness ツールから報告された場合は、pdfgen.api ファイルを `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` ディレクトリから `[Acrobat_root]\Acrobat\plug_ins` ディレクトリにコピーします。
 
 
 1. `[Path_of_reports_folder]` に移動します。SystemReadinessTool.html ファイルを開きます。レポートを検証して前述の問題を修正します。
@@ -629,16 +629,16 @@ srt_config.yaml ファイルを使用して、SRT ツールの様々な設定を
    outputDir:
 ```
 
-* **ロケール：** これは必須のパラメータです。 英語 (en)、ドイツ語 (de)、フランス語 (fr)、日本語 (ja) をサポートしています。 デフォルト値は en です。OSGi 上のAEM Formsで実行されるPDFジェネレーターサービスには影響しません。
-* **aemTempDir:** これはオプションのパラメータです。 Adobe Experience Managerの一時的な保存場所を指定します。
-* **ユーザー：** これはオプションのパラメータです。 ユーザーを指定して、ユーザーが User Generator の実行に必要なディレクトリに対する必要な権限と読み取り/書き込みアクセス権を持っているかどうかを確認できます。 ユーザーを指定しない場合、ユーザー固有のチェックはスキップされ、失敗としてレポートに表示されます。
-* **outputDir:** SRT レポートを保存する場所を指定します。 デフォルトの場所は、SRT ツールの現在の作業ディレクトリです。
+* **Locale：**&#x200B;これは必須パラメーターです。英語（en）、ドイツ語（de）、フランス語（fr）、日本語（ja）をサポートしています。 デフォルト値は en です。OSGi 上の AEM Forms で実行される PDF Generator サービスには影響しません。
+* **aemTempDir：**&#x200B;これはオプションのパラメーターです。Adobe Experience Manager の一時的な保存場所を指定します。
+* **users：**&#x200B;これはオプションのパラメーターです。ユーザーを指定して、そのユーザーが PDF Generator の実行に必要なディレクトリに対する必要な権限と読み取り／書き込みアクセス権を持っているかどうかを確認できます。 ユーザーが指定されていない場合、ユーザー固有のチェックはスキップされ、失敗としてレポートに表示されます。
+* **outputDir：** SRT レポートを保存する場所を指定します。 デフォルトの場所は、SRT ツールの現在の作業ディレクトリです。
 
 ## トラブルシューティング
 
 SRT ツールが報告する問題をすべて修正した後でも問題が発生した場合は、次のチェックを実行します。
 
-次のチェックを実行する前に、 [System Readiness Tool](#SRT) ではエラーは報告されません。
+次のチェックを実行する前に、[System Readiness ツール](#SRT)がエラーを報告していないことを確認します。
 
 +++ Adobe Acrobat
 
@@ -655,10 +655,10 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Microsoft® Windows**
 
-* 32 ビット版であることを確認します。 [サポート対象バージョン ](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) Microsoft Office のインストールが完了し、すべてのアプリケーションでダイアログを開く操作がキャンセルされました。
+* Microsoft Office 32 ビット[サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)のインストールが完了していること、およびすべてのアプリケーションでダイアログを開くことがキャンセルされていることを確認します。
 * PDF Generator ユーザーが PDF 設定 UI に追加されていることを確認します。
 * PDF Generator ユーザーが管理グループのメンバーであり、[プロセスレベルトークンの置き換え](#grant-the-replace-a-process-level-token-privilege)権限がそのユーザーに対して設定されていることを確認します。
-* ユーザーが User Generator UI で設定されていることを確認し、次のPDFを実行します。
+* ユーザーが PDF Generator UI で設定されており、次のアクションを実行していることを確認します。
    1. Microsoft® Windows に、PDF Generator ユーザーでログインします。
    1. Microsoft® Office または OpenOffice アプリケーションを開き、すべてのダイアログをキャンセルします。
    1. AdobePDF をデフォルトのプリンターとして設定します。
@@ -669,9 +669,9 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Linux®**
 
-* のインストール [サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) OpenOffice の AEM Formsは、32 ビット版と 64 ビット版の両方をサポートしています。 インストール後、すべての OpenOffice アプリケーションを開き、すべてのダイアログウィンドウをキャンセルして、アプリケーションを閉じます。 アプリケーションを再度開き、OpenOffice アプリケーションを開く際にダイアログボックスが表示されないことを確認します。
+* OpenOffice の[サポート対象バージョン](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)をインストールします。AEM Formsは、32 ビットバージョンと 64 ビットバージョンの両方をサポートしています。  インストール後、すべての OpenOffice アプリケーションを開き、すべてのダイアログウィンドウをキャンセルして、アプリケーションを閉じます。 アプリケーションを再度開き、OpenOffice アプリケーションを開く際にダイアログボックスが表示されないことを確認します。
 
-* 環境変数の作成 `OpenOffice_PATH` を設定し、OpenOffice のインストールが [コンソール](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) または dt（デバイスツリー）プロファイル
+* 環境変数 `OpenOffice_PATH` を作成し、[コンソール](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)または dt（デバイスツリー）プロファイルに設定されている OpenOffice のインストール先を指すように設定します。
 * OpenOffice のインストールに問題がある場合は、OpenOffice のインストールに必要な [32 ビットライブラリ](#extrarequirements)が利用可能であることを確認します。
 
 +++
@@ -765,20 +765,20 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 * Adobe Acrobat の既存のライセンスを持っていて、そのライセンスが期限切れの場合、[最新バージョンの Adobe Application Manager をダウンロード](https://helpx.adobe.com/jp/creative-suite/kb/aam-troubleshoot-download-install.html)し、シリアル番号を移行します。[シリアル番号の移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)前に以下のことを行います。
 
-   * 次のコマンドを使用して、prov.xml を生成し、 [シリアル番号の移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) 番号記事。
+   * 次のコマンドを使用して prov.xml を生成し、[シリアル番号の移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)の記事で提供されているコマンドの代わりに、prov.xml ファイルを使用して既存のインストールを再シリアル化します。
 
-          &quot;&#39;
+          ```
           
-          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX 形式または ALL のロケールの制限付きリスト ] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
+          adobe_prtk --tool=VolumeSerialize --generate --serial=&lt;serialnum> [--leid=&lt;LEID>] [--regsuppress=ss] [--eulasuppress] [--locales=limited list of locales in xx_XX format or ALL>] [--provfile=&lt;Absolute path to prov.xml>]
           
-          &quot;&#39;
+          ```
       
    * パッケージをボリュームシリアライズします（prov.xml ファイルと新しいシリアルを使用して既存のインストールを再シリアライズします）。PRTK インストールフォルダーから次のコマンドを管理者として実行し、クライアントマシンにデプロイされたパッケージをシリアライズしてアクティベートします。
 
-          &quot;&#39;
-          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
+          ```
+          adobe_prtk --tool=VolumeSerialize --provfile=C:\prov.xml –stream
           
-          &quot;&#39;
+          ```
       
 * 大規模インストールの場合は、[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) をクリックして、以前のバージョンの Reader と Acrobat を削除します。インストーラーをカスタマイズし、組織のすべてのマシンにデプロイします。
 
@@ -786,17 +786,18 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++ AEM Forms サーバーはオフラインまたはセキュアな環境にあり、インターネットを使用して Acrobat をアクティブ化できません。
 
-* アドビ製品の初回起動から 7 日以内にオンラインにアクセスして、オンラインでのアクティベーションと登録を完了したり、インターネット対応デバイスと製品のシリアル番号を使用してこのプロセスを完了したりできます。手順について詳しくは、[オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en)を参照してください。
+* アドビ製品の初回起動から 7 日以内にオンラインにアクセスして、オンラインでのアクティベーションと登録を完了したり、インターネット対応デバイスと製品のシリアル番号を使用してこのプロセスを完了したりできます。手順について詳しくは、[オフラインアクティベーション](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=jp)を参照してください。
 
 +++
 
-+++ Word または Excel ファイルを Windows Server 上のPDFに変換できません
++++ Windows Server 上で Word または Excel ファイルを PDF に変換できない
 
-ユーザーが Word または Excel ファイルをMicrosoft Windows Server 上のPDFに変換しようとすると、次のエラーが発生します。
+ユーザーが Word ファイルまたは Excel ファイルを Microsoft Windows Server 上で PDF に変換しようとすると、次のエラーが発生します。
 
-*プライマリコンバータからのエラーメッセージ：ALC-PDG-015-003-Theシステムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
+*プライマリコンバータからのエラーメッセージ：
+ALC-PDG-015-003-システムは入力ファイルを開くことができません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
-この問題を解決するには、 [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
+この問題を解決するには、[Word ファイルまたは Excel ファイルを Windows Server 上で PDF に変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)を参照してください。
 
 
 ## 次の手順 {#next-steps}
