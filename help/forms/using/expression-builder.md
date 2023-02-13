@@ -11,8 +11,8 @@ discoiquuid: 68e3071e-7ce6-4bdc-8561-14bcaeae2b6c
 docset: aem65
 feature: Correspondence Management
 exl-id: b41af9fe-c698-44b3-9ac6-97d42cdc02d4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: ht
 source-wordcount: '786'
 ht-degree: 100%
 
@@ -69,7 +69,7 @@ ht-degree: 100%
 
 ### リモート関数 {#remote-function}
 
-リモート関数を使用すると、式内でカスタムロジックを使用できます。Java のメソッドとして式内で使用するためのカスタムロジックを作成でき、その関数は式内で使用できます。使用可能なリモート関数の一覧は、式ビルダーの左側の「リモート関数」タブにあります。
+リモート関数を使用すると、式内でカスタムロジックを使用できます。Java のメソッドとして式内で使用するためのカスタムロジックを作成でき、その関数は式内で使用できます。使用可能なリモート関数の一覧は、式エディターの左側の「リモート関数」タブにあります。
 
 ![remotefunction](assets/remotefunction.png)
 
@@ -104,11 +104,11 @@ ht-degree: 100%
    * java.lang.Boolean
    * ブール値
    * java.lang.Integer
-   * 整数
+   * Int
    * java.lang.Short
    * Short
    * java.lang.Byte
-   * バイト
+   * byte
    * java.lang.Double
    * 倍精度浮動小数点
    * java.lang.Long
