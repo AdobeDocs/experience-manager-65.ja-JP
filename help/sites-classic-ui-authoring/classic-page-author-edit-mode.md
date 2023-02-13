@@ -1,7 +1,7 @@
 ---
 title: ページオーサリング用コンポーネント
 seo-title: Components for Page Authoring
-description: コンポーネントは、サイドキックの「コンポーネント」タブと「新規コンポーネントを挿入」セレクターでページを編集するときに（「コンポーネントまたはアセットをここにドラッグ」領域でダブルクリックしたとき）使用できます。
+description: コンポーネントは、サイドキックの「コンポーネント」タブと「新規コンポーネントを挿入」セレクターでページを編集するとき（「コンポーネントまたはアセットをここにドラッグ」領域でダブルクリックしたとき）に使用できます。
 seo-description: The components are available when editing a page from the Components tab of the sidekick and the Insert New Component selector (when you double-click in the Drag components or assets here area).
 uuid: c353073d-d4d1-4529-b8bd-d0ca302cc9a0
 contentOwner: User
@@ -11,8 +11,8 @@ content-type: reference
 discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
-workflow-type: tm+mt
+source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
+workflow-type: ht
 source-wordcount: '6133'
 ht-degree: 100%
 
@@ -205,7 +205,7 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 * **データ**
 
    * **チャートデータ**
-グラフデータを入力するには、CSV（Comma Separated Values）形式を使用します。CSV 形式では、フィールドの区切り文字としてコンマ（「,」）を使用します。
+チャートデータを入力するには、CSV（Comma Separated Values）形式を使用します。CSV 形式では、フィールドの区切り文字としてコンマ（「,」）を使用します。
 
 * **詳細**
 
@@ -703,7 +703,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 >
 >テーブルには&#x200B;**テーブル**&#x200B;コンポーネントを使用することを推奨しますが、**テキスト**&#x200B;コンポーネントでも作成できます。
 
-テキストコンポーネントでは、[リッチテキストエディター](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)で提供されている機能により、WYSIWYG エディターを使用してテキストブロックを入力できます。各種のアイコンを使用すると、テキストを書式設定できます（フォント特性、整列、リンク、リストおよびインデントを含む）。
+テキストコンポーネントでは、[リッチテキストエディター](/help/sites-classic-ui-authoring/classic-page-author-rich-text-editor.md)で提供されている機能により、WYSIWYG エディターを使用してテキストブロックを入力できます。各種アイコンを使用して、テキストを書式設定できます（フォント特性、整列、リンク、リストおよびインデントなど）。
 
 ![dc_text](assets/dc_text.png)
 
@@ -883,7 +883,6 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 * **タイトルとテキスト**
 
-
    このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。適切な場合は、フィールドで複数選択が有効かどうかや、選択肢に使用できる項目など、その他の主要な情報を定義することもできます。
 
 * **初期値**
@@ -905,7 +904,6 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 これらのタブには必要なパラメーターが表示されます。必要なパラメーターは個々のコンポーネントのタイプによって異なりますが、次のようなものがあります。
 
 * **タイトルとテキスト**
-
 
    * **要素名**
 
@@ -1076,7 +1074,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
          * **このリストにリードが追加されます**
 必要なリードリストを指定します。
-      * **アカウントの作成と更新**
+      * **Create and Update Account**
 
          * **初期グループ**
 
@@ -1242,7 +1240,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!NOTE]
 >
->Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/jp/experience-manager/using/uploading-files-aem1.html)を参照してください。
+>Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)を参照してください。
 
 ### 非表示のフィールド {#hidden-field}
 
@@ -1335,7 +1333,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
       * **写真を保管**
       * **Geometrixx Media**
       * **標準タグ**
-      * **マーケター**
+      * **マーケティング**
       * **アセットのプロパティ**
    * **ピクセル単位の幅**
    * **ポップアップのサイズ**
