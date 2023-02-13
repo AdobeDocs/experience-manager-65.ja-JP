@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 772f6188-5e0b-4e66-b94a-65a0cc267ed3
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '832'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 99%
 
 AEM Sites は、GDPR コンプライアンスの義務に関してお客様を支援する準備ができています。このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。
 
-詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
+詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ AEM に含まれる [cookie オプトアウトサービス](/help/sites-developi
 
 AEM Sitesには、Adobe Analytics On-demand サービス内の機能を使用した、Analytics によるインサイトの拡張との統合（オプション）が含まれています。
 
-Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html) を参照してください。
+Adobe Analytics に関連する GDPR データサブジェクトリクエストの管理についての詳細は、[Adobe Analytics と GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=ja) を参照してください。
 
 ## Target によるパーソナライゼーションの拡張 {#enhanced-personalization-by-target}
 
