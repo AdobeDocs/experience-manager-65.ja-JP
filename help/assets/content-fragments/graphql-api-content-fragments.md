@@ -4,9 +4,9 @@ description: Adobe Experience Manager（AEM） のコンテンツフラグメン
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4089'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -323,7 +323,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | 日時 | Calendar |  日時を ISO 8086 形式で表示するために使用します。選択したタイプに応じて、AEM GraphQL で使用できるフレーバーは、`onlyDate`、`onlyTime`、`dateTime` の 3 つです。 |
 | 定義済みリスト |  String |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  [String] |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
-| コンテンツ参照 |  文字列 |  AEM 内の別のアセットへのパスを表示するために使用します |
+| コンテンツ参照 |  String |  AEM 内の別のアセットへのパスを表示するために使用します |
 | フラグメント参照 |  *モデルタイプ* |  特定のモデルタイプの別のコンテンツフラグメントを参照するために使用します（モデルの作成時に定義されます） |
 
 ### ヘルパーフィールド {#helper-fields}
@@ -543,10 +543,10 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
    * モデル名に `List` を付け加えます（例：`cityList`）
    * [サンプルクエリ - すべての都市に関するすべての情報](#sample-all-information-all-cities)を参照してください
 
-* フィルター `includeVariations` が `List` クエリのタイプ。  クエリ結果でコンテンツフラグメントのバリエーションを取得するには、 `includeVariations` フィルターは次のように設定する必要があります： `true`.
+* フィルター `includeVariations` は `List` のクエリタイプに含まれます。クエリ結果でコンテンツフラグメントのバリエーションを取得するには、`includeVariations` フィルターは `true` に設定する必要があります。
 
    >[!CAUTION]
-   >フィルター `includeVariations` は、システム生成フィールドと一緒に使用することはできません `_variation`.
+   >フィルター `includeVariations` は、システム生成フィールド `_variation` と併用できません。
 
 * 論理和（OR）を使用する場合：
    * ` _logOp: OR` を使用します
@@ -578,17 +578,17 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
          >指定されたバリエーションがコンテンツフラグメントに対して存在しない場合、マスターバリエーションが（フォールバック）デフォルトとして返されます。
 
          >[!CAUTION]
-         >システム生成フィールド `_variation` フィルターと一緒に使用することはできません `includeVariations`.
+         >システム生成フィールド `_variation` は、フィルター `includeVariations` と併用できません。
 
          * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)を参照してください
-      * `_tags` :：タグを含むコンテンツフラグメントまたはバリエーションの ID を表示します。これは、 `cq:tags` 識別子。
+      * `_tags`：タグを含むコンテンツフラグメントまたはバリエーションの ID を表示する `cq:tags` 識別子の配列です。
 
-         * 詳しくは、 [サンプルクエリ — 区切り文字としてタグ付けされたすべての都市の名前](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)
-         * 詳しくは、 [特定のタグがアタッチされた特定のモデルのコンテンツフラグメントバリエーションのサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)
+         * [サンプルクエリ - 市区町村の区切り文字としてタグ付けされた、すべての都市の名前](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)を参照してください。
+         * 詳しくは、[特定のタグが添付された、任意のモデルのコンテンツフラグメントバリエーションのサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)を参照してください。
 
          >[!NOTE]
          >
-         >また、コンテンツフラグメントのメタデータを一覧表示して、タグを照会することもできます。
+         >また、コンテンツフラグメントのメタデータを一覧表示して、タグをクエリできます。
    * 操作の場合：
 
       * `_operator`：特定の演算子（`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`）を適用します
