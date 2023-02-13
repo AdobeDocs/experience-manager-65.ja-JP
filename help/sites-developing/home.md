@@ -5,9 +5,9 @@ description: AEM インスタンスを構築する方法を説明します。プ
 seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '360'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -45,9 +45,9 @@ AEM インスタンスを構築する方法を説明します。プラットフ�
 
 * [AEM チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
 * [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
-* [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 * [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
 * [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
