@@ -11,7 +11,7 @@ discoiquuid: 42df2db3-4d3c-4954-a03e-221e2f548305
 feature: Language Copy
 exl-id: 2011a976-d506-4c0b-9980-b8837bdcf5ad
 source-git-commit: 1be3d394283493f7c282ea4c3d794458d88e1ac3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '681'
 ht-degree: 100%
 
