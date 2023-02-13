@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '463'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [オーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-## サイト {#sites}
+## Sites {#sites}
 
 Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
 
@@ -79,7 +79,7 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
  </tbody>
 </table>
 
-## コミュニティ {#communities}
+## Communities {#communities}
 
 [AEM Communities](/help/communities/overview.md) を使用すると、オンプレミスのコミュニティの作成と管理が容易になります。
 
@@ -96,7 +96,7 @@ HTML Template Language（HTL）は、AEM 6.0 で導入された新しい HTML �
 
 |  |  |  |
 |---|---|---|
-| HTL の概要 | [HTL の概要と構文](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | このドキュメントでは、HTL とは何か、HTL に移行する方法、サンプルプロジェクト、構文、式およびステートメントを説明しています。 |
+| HTL の概要 | [HTL の概要と構文](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | このドキュメントでは、HTL とは何か、HTL に移行する方法、サンプルプロジェクト、構文、式およびステートメントを説明しています。 |
 | Java での API の使用 | [HTL Java Use-API](https://helpx.adobe.com/jp/experience-manager/htl/using/use-api.html) | HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります。 |
 
 >[!NOTE]
