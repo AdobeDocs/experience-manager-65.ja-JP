@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: 6fc2751e-f42a-4519-bc8c-695057f21b69
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3755'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ ht-degree: 100%
 
 ### AEM 内の機能 {#features-within-aem}
 
-AEM を実装するとき（特に初回）は、[AEM の機能とワークフロー](https://www.adobe.com/ja/marketing/experience-manager.html)を見直して、必要な領域を確認する必要があります。
+AEM を実装するとき（特に初回）は、[AEM の機能とワークフロー](https://www.adobe.com/marketing/experience-manager.html)を見直して、必要な領域を確認する必要があります。
 
 次のような使用する AEM の機能と、デザインへの影響を検討します。
 
