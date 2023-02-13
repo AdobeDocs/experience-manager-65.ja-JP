@@ -13,9 +13,9 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2088'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 99%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=en) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=ja) |
 | AEM 6.5 | この記事 |
 | AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/brandportal/configure-aem-assets-with-brand-portal.html?lang=ja) |
 
