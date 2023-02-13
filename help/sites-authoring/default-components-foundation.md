@@ -14,9 +14,9 @@ legacypath: /content/docs/en/aem/6-2/author/page-authoring/default-components/ed
 pagetitle: Foundation Components
 exl-id: 278701f3-3f0c-45f4-90b7-c0e316a7da8a
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7272'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 98%
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 タイトルと説明を含むリンクを定義できます。
 
@@ -232,14 +232,14 @@ JPEG 画像の場合は、表示域のサイズも JPEG の画質に影響しま
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 グラフコンポーネントを使用すると、棒グラフ、折れ線ブラフまたは円グラフを追加できます。AEM では、指定したデータからグラフが作成されます。データは、「データ」タブに直接入力するか、スプレッドシートをコピーして貼り付けます。
 
 * **データ**
 
-   * **グラフデータ**
-CSV 形式でグラフデータを入力します。コンマ区切り値の形式では、フィールド区切り文字としてコンマ (&quot;,&quot;) が使用されます。
+   * **チャートデータ**
+チャートデータを入力するには、CSV（コンマ区切り値）形式を使用します。CSV 形式では、コンマ（「,」）をフィールドの区切り記号として使用します。
 
 * **詳細**
 
@@ -275,7 +275,7 @@ CSV 形式でグラフデータを入力します。コンマ区切り値の形�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 デザインパッケージを含む zip ファイルをアップロードできます。
 
@@ -283,7 +283,7 @@ CSV 形式でグラフデータを入力します。コンマ区切り値の形�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 ダウンロードコンポーネントで、特定のファイルをダウンロードするための、選択した Web ページ上のリンクが作成されます。コンテンツファインダーからアセットをドラッグするか、ファイルをアップロードできます。
 
@@ -303,7 +303,7 @@ Geometrixx でのダウンロードコンポーネントの例は次のとおり
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 外部アプリケーション統合コンポーネント（**External**）を使用すると、iframe で外部アプリケーションを AEM ページに埋め込むことができます。
 
@@ -334,7 +334,7 @@ Geometrixx でのダウンロードコンポーネントの例は次のとおり
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 >[!CAUTION]
 >
@@ -382,7 +382,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[画像コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[画像コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)を利用することをお勧めします。
 
 画像コンポーネントによって、指定したパラメーターに従って、画像とそれに付随するテキストが表示されます。
 
@@ -468,7 +468,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!NOTE]
 >
->このコンポーネントは [HTML テンプレート言語（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)を使用して実装されています。
+>このコンポーネントは [HTML テンプレート言語（HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)を使用して実装されています。
 
 ### リスト {#list}
 
@@ -548,7 +548,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 >[!CAUTION]
 >
@@ -614,7 +614,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コンテンツフラグメントのコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コンテンツフラグメントのコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)を利用することをお勧めします。
 
 **参照**&#x200B;コンポーネントを使用すると、（現在のインスタンス内にある）AEM Web サイトの別のページからテキストを参照できます。参照された段落のコンテンツは、現在のページの段落と同様に表示されます。元の段落が変更されると、コンテンツが更新されます（ページの更新が必要な場合があります）。
 
@@ -648,7 +648,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[クイック検索コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/quick-search.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[クイック検索コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/quick-search.html?lang=ja)を利用することをお勧めします。
 
 検索コンポーネントで、ページに検索機能を追加します。
 
@@ -717,7 +717,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[ナビゲーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html)、[言語ナビゲーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/language-navigation.html)、[パンくずコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/breadcrumb.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[ナビゲーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=ja)、[言語ナビゲーション](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/language-navigation.html?lang=ja)、[パンくずコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/breadcrumb.html?lang=ja)を利用することをお勧めします。
 
 自動的なサイトマップのリスト表示。デフォルトの設定では、現在の Web サイトのすべてのページが（アクティブなリンクとして）すべて表示されます。例えば、次のように表示されます。
 
@@ -735,7 +735,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[カルーセルコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=ja)を利用することをお勧めします。
 
 >[!CAUTION]
 >
@@ -769,7 +769,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja)を利用することをお勧めします。
 
 >[!NOTE]
 >
@@ -818,7 +818,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[テキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja)を利用することをお勧めします。
 
 >[!NOTE]
 >
@@ -847,7 +847,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[画像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)および[テキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[画像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=ja)および[テキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=ja)を利用することをお勧めします。
 
 テキストと画像コンポーネントで、テキストブロックと画像を追加します。テキストと画像を個別に追加して編集することもできます。詳しくは、[テキスト](#text)コンポーネントと[画像](#image)コンポーネントを参照してください。
 
@@ -895,7 +895,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[タイトルコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html?lang=en)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[タイトルコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html?lang=ja)を利用することをお勧めします。
 
 タイトルコンポーネントには次の機能があります。
 
@@ -924,7 +924,7 @@ Flash コンポーネントを使用すると、Flash ムービーをロード�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。アドビでは、[コアコンポーネント埋め込みコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html)を代わりに利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。アドビでは、[コアコンポーネント埋め込みコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=ja)を代わりに利用することをお勧めします。
 
 >[!CAUTION]
 >
@@ -985,7 +985,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->コンポーネントからこの基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>コンポーネントからこの基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 フォームコンポーネントは、訪問者が入力を送信するフォームを作成するために使用されます。フォームおよびフォームコンポーネントは、ユーザーからのフィードバック（例えばお客様満足度アンケート）やユーザー情報（例えばユーザー登録）などの情報を収集するのに使用できます。
 
@@ -1023,7 +1023,6 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 * **タイトルとテキスト**
 
-
    このタブでは、フォームのタイトルや付随するテキストなど、基本情報を指定する必要があります。適切な場合は、フィールドで複数選択が有効かどうかや、選択肢に使用できる項目など、その他の主要な情報を定義することもできます。
 
 * **初期値**
@@ -1045,7 +1044,6 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 これらのタブには必要なパラメーターが表示されます。必要なパラメーターは個々のコンポーネントのタイプによって異なりますが、次のようなものがあります。
 
 * **タイトルとテキスト**
-
 
    * **要素名**
 
@@ -1107,7 +1105,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームコンテナコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-container.html?lang=ja)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームコンテナコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=ja)を利用することをお勧めします。
 
 フォームコンポーネントは、**フォーム開始**&#x200B;要素および&#x200B;**フォーム終了**&#x200B;要素を使用してフォームの開始と終了の両方を定義します。フォームが確実に正しく定義されるように、これらの要素は常にペアとして使用されます。
 
@@ -1117,7 +1115,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!NOTE]
 >
->基盤コンポーネントのフォームコンポーネントでは、他のフォームコンポーネント（ボタン、テキスト、非表示など）の使用のみサポートしています。[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)のフォームコンポーネントを基盤コンポーネントフォーム内で使用すること（およびその逆の使用）はサポートされていません。
+>基盤コンポーネントのフォームコンポーネントでは、他のフォームコンポーネント（ボタン、テキスト、非表示など）の使用のみサポートしています。[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)のフォームコンポーネントを基盤コンポーネントフォーム内で使用すること（およびその逆の使用）はサポートされていません。
 
 #### フォームの開始 {#start-of-form}
 
@@ -1230,7 +1228,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
          * **このリストにリードが追加されます**
 
             必要なリードリストを指定します。
-      * **アカウントの作成と更新**
+      * **Create and Update Account**
 
          * **初期グループ**
 
@@ -1336,7 +1334,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html?lang=ja)を利用することをお勧めします。
 
 ユーザーがアカウント名を入力できます。
 
@@ -1346,7 +1344,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html?lang=ja)を利用することをお勧めします。
 
 次の形式の国際化対応アドレスフィールドを追加できます。
 
@@ -1358,7 +1356,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 >[!CAUTION]
 >
@@ -1374,7 +1372,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html?lang=ja)を利用することをお勧めします。
 
 チェックボックスを使用すると、1 つ以上のチェックボックスのリストを構築できます。チェックボックスでは同時に複数の項目を選択できます。
 
@@ -1392,7 +1390,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 クレジットカードの詳細を入力するために必要なフィールドを提供できます。使用可能なカードの種類や、必要な情報（セキュリティコードなど）を指定するように設定できます。
 
@@ -1402,7 +1400,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html?lang=ja)を利用することをお勧めします。
 
 ドロップダウンリストは、使用する選択肢の値の範囲を設定できます。
 
@@ -1420,7 +1418,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 ファイルのアップロードコンポーネントを使用すると、ユーザーがファイルを選択してアップロードできるようになります。
 
@@ -1428,13 +1426,13 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!NOTE]
 >
->Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/jp/experience-manager/using/uploading-files-aem1.html)を参照してください。
+>Sling サーブレットにファイルをアップロードするためのカスタムアップロードコンポーネントを作成できます。詳しくは、[Adobe Experience Manager へのファイルのアップロード](https://helpx.adobe.com/experience-manager/using/uploading-files-aem1.html)を参照してください。
 
 ### 非表示のフィールド {#hidden-field}
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームの非表示コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-hidden.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームの非表示コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-hidden.html?lang=ja)を利用することをお勧めします。
 
 このコンポーネントでは、非表示のフィールドを作成できます。非表示のフィールドは様々な用途で使用できます。例えば、フォームの送信後にアクションの実行が必要な場合や、後処理で非表示のデータが必要な場合などです。
 
@@ -1450,7 +1448,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html?lang=ja)を利用することをお勧めします。
 
 画像ボタンを使用すると、独自の画像やテキストのボタンを作成できます。
 
@@ -1460,7 +1458,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 画像のアップロードコンポーネントを使用すると、ユーザーが画像ファイルを選択してアップロードできるようになります。
 
@@ -1470,7 +1468,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 リンクフィールドを使用すると、ユーザーが URL を指定できます。
 
@@ -1482,7 +1480,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 ユーザーが自分のパスワードを入力できるようにします。
 
@@ -1492,7 +1490,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 このコンポーネントには、次の 2 つのフィールドがあります。
 
@@ -1507,7 +1505,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームオプションコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-options.html?lang=ja)を利用することをお勧めします。
 
 ラジオグループを使用すると、1 つ以上のラジオボタンのチェックボックスのリストを構築できます。このチェックボックスでは 1 つの項目のみを選択できます。
 
@@ -1525,7 +1523,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html?lang=ja)を利用することをお勧めします。
 
 このコンポーネントを使用すると、デフォルトのテキストを指定した送信ボタンを作成できます。
 
@@ -1539,7 +1537,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)を利用することをお勧めします。
 
 このフィールドでは、タグを選択できます。
 
@@ -1557,7 +1555,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
       * **写真を保管**
       * **Geometrixx Media**
       * **標準タグ**
-      * **マーケター**
+      * **マーケティング**
       * **アセットのプロパティ**
       * **ピクセル単位の幅**
       * **ポップアップのサイズ**
@@ -1566,7 +1564,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームテキストコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-text.html?lang=ja)を利用することをお勧めします。
 
 標準テキストフィールドは、必要なサイズに設定し、独自の導入メッセージを付けることができます。
 
@@ -1576,7 +1574,7 @@ HTML5 要素と共に使用する場合は、[ビデオプロファイルの設�
 
 >[!CAUTION]
 >
->この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html)を利用することをお勧めします。
+>この基盤コンポーネントは廃止されました。代わりに、[フォームボタンコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-button.html?lang=ja)を利用することをお勧めします。
 
 このコンポーネントを使用すると、ワークフロー内で使用する送信ボタンを作成できます。
 
