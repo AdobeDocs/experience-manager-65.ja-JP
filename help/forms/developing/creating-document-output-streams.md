@@ -12,7 +12,7 @@ discoiquuid: de527d50-991b-4ca3-a8ac-44d5cab988e9
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '19016'
 ht-degree: 100%
 
@@ -1148,10 +1148,10 @@ Output サービス API と Assembler サービス API（web サービス）を�
 
 Output サービスを使用すると、PostScript、PCL（Printer Control Language）または次のラベル形式などのストリームをファイルに印刷できます。
 
-* ゼブラ — ZPL
+* Zebra - ZPL
 * Intermec - IPL
 * Datamax - DPL
-* 東芝 — TPCL
+* TecToshiba - TPCL
 
 Output サービスを使用すると、XML データをフォームデザインと結合し、フォームをファイルに印刷できます。次の図に、レーザーファイルとラベルファイルを作成する Output サービスを示します。
 
@@ -1202,7 +1202,7 @@ AEM Forms が JBoss 以外のサポート対象の J2EE アプリケーション
 
 >[!NOTE]
 >
->定義できる実行時オプションがあります。設定できるすべてのオプションについては、[AEM Forms API リファレンス](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)の `PrintedOutputOptionsSpec` クラスリファレンスを参照してください。
+>定義できる実行時オプションがあります。設定できるすべてのオプションについては、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `PrintedOutputOptionsSpec` クラスリファレンスを参照してください。
 
 **印刷ストリームをファイルに印刷**
 
@@ -1353,10 +1353,10 @@ Output API（web サービス）を使用してファイルに印刷します。
 
 出力サービスを使用すると、PostScript、PCL（Printer Control Language）または次のラベル形式などのプリントストリームをネットワークプリンターに送信できます。
 
-* ゼブラ — ZPL
+* Zebra - ZPL
 * Intermec - IPL
 * Datamax - DPL
-* 東芝 — TPCL
+* TecToshiba - TPCL
 
 Output サービスを使用すると、XML データをフォームデザインと結合し、フォームをプリントストリームとして出力できます。例えば、PostScript プリントストリームを作成して、ネットワークプリンターに送信できます。次の図は、プリントストリームをネットワークプリンターに送信する Output サービスを示しています。
 
@@ -1809,7 +1809,7 @@ Output サービスが操作を実行すると、操作が成功したかどう�
 
 Output API（Java）を使用して複数の PDF ファイルを作成するには、次の手順に従います。
 
-1. プロジェクトファイルを含める&quot;
+1. プロジェクトファイルを含める」
 
    adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
