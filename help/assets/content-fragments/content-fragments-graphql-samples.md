@@ -4,9 +4,9 @@ description: GraphQL を AEM と共に使用し、サンプルコンテンツと
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1530'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -356,14 +356,14 @@ query {
 }
 ```
 
-### サンプルクエリ - すべての都市の名前 都市区切りとしてタグ付け {#sample-names-all-cities-tagged-city-breaks}
+### サンプルクエリ - すべての都市の名前都市滞在型休暇としてタグ付けされた {#sample-names-all-cities-tagged-city-breaks}
 
 次の場合：
 
-* という名前の様々なタグを作成します。 `Tourism` : `Business`, `City Break`, `Holiday`
-* そして、これらを様々な `City` インスタンス
+* `Tourism` : `Business`、`City Break`、`Holiday` という名前の様々なタグを作成し、
+* これらを様々な `City` インスタンスのマスターバリエーションに割り当てます
 
-次に、クエリを使用して、 `name` および `tags`の `city`スキーマ。
+この場合、クエリを使用して、`city` スキーマで都市滞在型休暇としてタグ付けされたすべてのエントリの `name` および `tags` の詳細を返すことができます。
 
 **サンプルクエリ**
 
@@ -1535,11 +1535,11 @@ query {
 }
 ```
 
-### 特定のモデルの複数のコンテンツフラグメントとそのバリエーションのサンプルクエリ {#sample-wknd-multiple-fragment-variations-given-model}
+### 特定モデルの複数のコンテンツフラグメントとそのバリエーションのサンプルクエリ {#sample-wknd-multiple-fragment-variations-given-model}
 
 このクエリでは次のものを検索します。
 
-* （タイプのコンテンツフラグメントの場合） `article` およびすべてのバリエーション
+* `article` タイプのコンテンツフラグメントとすべてのバリエーション
 
 **サンプルクエリ**
 
@@ -1562,11 +1562,11 @@ query {
 }
 ```
 
-### 特定のタグがアタッチされた特定のモデルのコンテンツフラグメントバリエーションのサンプルクエリ{#sample-wknd-fragment-variations-given-model-specific-tag}
+### 特定のタグが設定された特定モデルのコンテンツフラグメントバリエーションのサンプルクエリ{#sample-wknd-fragment-variations-given-model-specific-tag}
 
 このクエリでは次のものを検索します。
 
-* （タイプのコンテンツフラグメントの場合） `article` タグを持つ 1 つ以上のバリエーション `WKND : Activity / Hiking`
+* タグ `WKND : Activity / Hiking` の付いた 1 つ以上のバリエーションを持つ `article` タイプのコンテンツフラグメント
 
 **サンプルクエリ**
 
@@ -1642,7 +1642,7 @@ query {
 |--- |--- |--- |
 | 会社名 | 1 行のテキスト |  |
 | CEO | フラグメント参照（1 つ） | [Person](#model-person) |
-| 従業員数 | フラグメント参照（複数フィールド） | [人物](#model-person) |
+| 従業員数 | フラグメント参照（複数フィールド） | [Person](#model-person) |
 
 #### Person（人物） {#model-person}
 
@@ -1704,7 +1704,7 @@ query {
 | ショートカット／ID | title |
 |--- |--- |
 | GB | Gameblitz |
-|  GS | 配偶星 |
+|  GS | Gamestar |
 |  OSC | Oscar |
 
 #### 都市 {#fragment-city}
