@@ -12,9 +12,9 @@ discoiquuid: d8546227-d78d-4fe2-a092-222482bb69c9
 docset: aem65
 exl-id: c80bf347-d1ed-488f-a41a-ceb05a6df9e4
 source-git-commit: e961ce67e5b1a71e3af6dded304d99cd9e6896bc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4033'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -283,7 +283,7 @@ TODO リストからは複数のタスクを送信できます。タスク名と
 >
 >* 適切なメールのテンプレートを使用するように Workspace を設定するには、[AEM Forms JEE 管理者ガイド](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/)を参照してください。
 >
->* AEM Forms Workspace でタスクを送信した後にドラフトが転送されると、電子メール通知が送信されます。 ドラフトがAEM Forms Workspace のスタートポイントから転送される場合、電子メール通知は送信されません。
+>* AEM Forms Workspace にタスクを送信した後にドラフトが転送されると、メール通知が送信されます。 ドラフトが AEM Forms Workspace のスタートポイントから転送される場合、メール通知は送信されません。
 
 
 電子メールを使用してタスクを完了すると、そのタスクは AEM Forms Workspace の TODO リストから削除されます。
