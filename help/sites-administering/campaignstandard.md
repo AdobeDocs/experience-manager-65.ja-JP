@@ -1,7 +1,7 @@
 ---
 title: Adobe Campaign Standard との統合
 seo-title: Integrating with Adobe Campaign Standard
-description: AEMとAdobe Campaign Standardを統合する方法について説明します。
+description: AEM と Adobe Campaign Standard の統合方法について学びます。
 seo-description: Learn how to integrate AEM with Adobe Campaign Standard.
 uuid: ef31339e-d925-499c-b8fb-c00ad01e38ad
 contentOwner: User
@@ -11,73 +11,73 @@ content-type: reference
 discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
 source-git-commit: a0062ffbdd6477eca494fea4142d271f3015599a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1807'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 
 # Adobe Campaign Standard との統合 {#integrating-with-adobe-campaign-standard}
 
-AEMとAdobe Campaignを統合すると、電子メール配信、コンテンツ、フォームをAEMで直接管理できます。 ソリューション間の双方向通信を可能にするには、Adobe Campaign StandardとAEMの両方での設定手順が必要です。
+AEM を Adobe Campaign と統合すると、メール配信、コンテンツ、フォームを AEM で直接管理できます。ソリューション間の双方向通信を有効にするには、Adobe Campaign Standard と AEM の両方で設定手順が必要です。
 
-この統合により、AEMとAdobe Campaign Standardを独立して使用できます。 マーケターはAdobe Campaignでキャンペーンを作成し、ターゲティングを使用できますが、コンテンツ作成者は同時にAEMのコンテンツデザインを操作できます。 統合を使用すると、Adobe Campaignで作成されたキャンペーンのコンテンツとデザインを、AEMがターゲット設定して配信できます。
+この統合により、AEM と Adobe Campaign Standard を個別に使用できます。マーケターは Adobe Campaign でキャンペーンを作成してターゲティングを使用できますが、コンテンツ作成者は並行して AEM でコンテンツのデザインに取り組むことができます。この統合により、AEM 内に作成されたキャンペーンのコンテンツとデザインを、Adobe Campaign でターゲットにして配信できるようになります。
 
 ## 統合手順 {#integration-steps}
 
-AEMとAdobe Campaign Standard間の統合を設定するには、両方のソリューションでいくつかの手順が必要です。
+AEM と Adobe Campaign Standard 間の統合を設定するには、両方のソリューションで多くの手順が必要です。
 
-1. [の設定 ](#aemserver-user)
-1. [を確認します。 ](#resource-type-filter)
-1. [Campaign でのAEM固有の E メール配信テンプレートの作成](#aem-email-delivery-template)
-1. [AEMでの Campaign 統合の設定](#campaign-integration)
-1. [AEM パブリッシュインスタンスへのレプリケーションの設定](#replication)
-1. [AEM Externalizer の設定](#externalizer)
-1. [の設定 ](#campaign-remote-user)
-1. [Campaign でのAEM外部アカウントの設定](#acc-external-user)
+1. [を設定 ](#aemserver-user)
+1. [を確認 ](#resource-type-filter)
+1. [Campaign で AEM 固有のメール配信テンプレートを作成](#aem-email-delivery-template)
+1. [AEM で Campaign 統合を設定](#campaign-integration)
+1. [AEM パブリッシュインスタンスへのレプリケーションを設定](#replication)
+1. [AEM Externalizer を設定](#externalizer)
+1. [を設定 ](#campaign-remote-user)
+1. [Campaign で AEM 外部アカウントを設定](#acc-external-user)
 
-このドキュメントでは、これらの各手順を詳しく説明します.
+このドキュメントでは、これらの各手順を詳しく説明します。
 
 ## 前提条件 {#prerequisites}
 
-* Adobe Campaign Standardへの管理者アクセス
-   * Adobe Campaign Standardのセットアップおよび設定方法について詳しくは、 [Adobe Campaign Standardドキュメント。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
-* AEMへの管理者アクセス
+* Adobe Campaign Standard への管理者アクセス
+   * Adobe Campaign Standard のセットアップおよび設定方法について詳しくは、[Adobe Campaign Standard ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)を参照してください。
+* AEM への管理者アクセス
 
-## Campaign での aemserver ユーザーの設定 {#aemserver-user}
+## Campaign で aemserver ユーザーを設定 {#aemserver-user}
 
-Adobe Campaign Standardにはデフォルトでが付属しています `aemserver` AEMがAdobe Campaignに接続する際に使用するユーザー。 このユーザーに適切なセキュリティグループを割り当て、そのパスワードを設定する必要があります。
+Adobe Campaign Standard には、AEM が Adobe Campaign に接続する際に使用する `aemserver` ユーザーが、デフォルトで付属しています。このユーザーに適切なセキュリティグループを割り当て、パスワードを設定する必要があります。
 
-1. 管理者としてAdobe Campaignにログインします。
+1. 管理者として Adobe Campaign にログインします。
 
-1. メニューバーの左上にあるAdobe Campaignロゴをタップまたはクリックしてグローバルナビゲーションを開き、「 」を選択します。 **管理** > **ユーザーとセキュリティ** > **ユーザー** をクリックします。
+1. メニューバーの左上にある Adobe Campaign ロゴをタップまたはクリックしてグローバルナビゲーションを開き、ナビゲーションメニューから、**管理**／**ユーザーとセキュリティ**／**ユーザー**&#x200B;を選択します。
 
-1. をタップまたはクリックします。 `aemserver` ユーザーコンソールの
+1. コンソールの `aemserver` ユーザーをタップまたはクリックします。
 
-1. 次を確認します。 `aemserver` 少なくとも、役割を持つセキュリティグループにユーザーが割り当てられている `deliveryPrepare` に割り当てられました。 デフォルトでは、グループは `Standard Users` には、この役割があります。
+1. `aemserver` ユーザーが、少なくとも、役割 `deliveryPrepare` が割り当てられたセキュリティグループに割り当てられていることを確認します。デフォルトでは、`Standard Users` グループはこの役割を持っています。
 
-   ![Adobe Campaignの aemserver ユーザー](assets/acs-aemserver-user.png)
+   ![Adobe Campaign の aemserver ユーザー](assets/acs-aemserver-user.png)
 
-1. タップまたはクリック **保存** 変更を保存します。
+1. 「**保存**」をタップまたはクリックして、変更内容を保存します。
 
-お使いの `aemserver` ユーザーには、AEMがAdobe Campaignと通信するために必要な権限が付与されました。
+`aemserver` ユーザーに、AEM が Adobe Campaign と通信するために必要な権限が付与されました。
 
-ただし、AEMが `aemserver` ユーザー、そのパスワードを設定する必要があります。 これは、Adobe Campaignでは実行できません。 この作業は、Adobe・サポート・エンジニアが行う必要があります。 [チケットを発券し、カスタマーケアにAdobeしてください](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support) リセットをリクエストする `aemserver` パスワード。 パスワードをAdobeカスタマーケアから取得したら、安全な場所に保管してください。
+ただし、AEMが `aemserver` ユーザーを使用する前に、そのパスワードを設定する必要があります。 これは、Adobe Campaign では実行することができません。 この作業は、アドビのサポートエンジニアが行う必要があります。 [アドビカスタマーケアでチケットを発行](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)して、`aemserver` パスワードのリセットをリクエストしてください。パスワードをアドビカスタマーケアから取得したら、安全な場所に保管してください。
 
-## キャンペーンの AEMResourceTypeFilter を確認する {#resource-type-filter}
+## Campaign の AEMResourceTypeFilter を確認 {#resource-type-filter}
 
-この `AEMResourceTypeFilter` は、Adobe Campaignで使用できるAEMリソースのフィルタリングに使用する、Adobe Campaignのオプションです。 AEMには多数のコンテンツが含まれているので、このオプションは、Adobe CampaignでAdobe Campaignで使用するように特別に設計されたタイプのAEMコンテンツのみを取得できるフィルターとして機能します。
+`AEMResourceTypeFilter` は、Adobe Campaign で使用できる AEM リソースのフィルタリングに使用する、Adobe Campaign のオプションです。 AEM には多くのコンテンツが含まれているため、このオプションは、Adobe Campaign で使用するために特別に設計されたタイプの AEM コンテンツのみを Adobe Campaign が取得できるようにするフィルターとして機能します。
 
-このオプションは事前設定済みです。 ただし、AEMの Campaign コンポーネントをカスタマイズしている場合は、更新が必要になる場合があります。 次の手順で `AEMResourceTypeFilter` オプションが設定されている場合は、次の手順に従います。
+このオプションは事前設定済みです。 ただし、AEM の Campaign コンポーネントをカスタマイズしている場合は、アップデートが必要になる場合があります。 `AEMResourceTypeFilter` オプションが設定されていることを確認するには、次の手順に従います。
 
-1. 管理者としてAdobe Campaignにログインします。
+1. 管理者として Adobe Campaign にログインします。
 
-1. メニューバーの左上にあるAdobe Campaignロゴをタップまたはクリックしてグローバルナビゲーションを開き、「 」を選択します。 **管理** > **アプリケーション設定** > **オプション** をクリックします。
+1. メニューバーの左上にある Adobe Campaign ロゴをタップまたはクリックしてグローバルナビゲーションを開き、ナビゲーションメニューから、**管理**／**アプリケーション設定**／**オプション** を選択します。
 
-1. をタップまたはクリックします。 `AEMResourceTypeFilter` をクリックします。
+1. オプションコンソールで `AEMResourceTypeFilter` をタップまたはクリックします。
 
-1. の設定を確認します。 `AEMResourceTypeFilter`. パスはコンマで区切られ、デフォルトでは次の値が含まれます。
+1. `AEMResourceTypeFilter` の設定を確認します。パスはコンマで区切られ、デフォルトでは次の値が含まれます。
 
    * `mcm/campaign/components/newsletter`
    * `mcm/campaign/components/campaign_newsletterpage`
@@ -85,47 +85,47 @@ Adobe Campaign Standardにはデフォルトでが付属しています `aemserv
 
    ![AEMResourceTypeFilter](assets/acs-aem-resource-type-filter.png)
 
-1. タップまたはクリック **保存** 変更を保存します。
+1. 「**保存**」をタップまたはクリックして、変更内容を保存します。
 
-お使いの `AEMResourceTypeFilter` これで、AEMから正しいコンテンツを取得するようにが設定されました。
+これで `AEMResourceTypeFilter` は、AEM から正しいコンテンツを取得するように設定されました。
 
-## Campaign でのAEM固有の E メール配信テンプレートの作成 {#aem-email-delivery-template}
+## Campaign で AEM 固有のメール配信テンプレートを作成 {#aem-email-delivery-template}
 
-デフォルトでは、AEMはAdobe Campaignの電子メールテンプレートでは有効になっていません。 AEMコンテンツを使用した E メールの作成に使用できる新しい E メール配信テンプレートを設定する必要があります。 AEM固有の E メール配信テンプレートを作成するには、次の手順に従います。
+デフォルトでは、AEM 機能は、Adobe Campaign のメールテンプレートでは有効になっていません。AEM コンテンツを使用したメール作成に使用できる、新しいメール配信テンプレートを設定する必要があります。AEM 固有のメール配信テンプレートを作成するには、次の手順に従います。
 
-1. 管理者としてAdobe Campaignにログインします。
+1. 管理者として Adobe Campaign にログインします。
 
-1. メニューバーの左上にあるAdobe Campaignロゴをタップまたはクリックしてグローバルナビゲーションを開き、「 」を選択します。 **リソース** > **テンプレート** > **配信テンプレート** をクリックします。
+1. メニューバーの左上にある Adobe Campaign ロゴをタップまたはクリックしてグローバルナビゲーションを開き、ナビゲーションメニューで、**リソース**／**テンプレート**／**配信テンプレート**&#x200B;を選択します。
 
-1. 配信テンプレートコンソールで、デフォルトの E メールテンプレートを探します **E メール（メール）で送信** をクリックし、カード（または行）にマウスを移動すると、そのカードを表すオプションが表示されます。 クリック **要素を複製**.
+1. 配信テンプレートコンソールで、デフォルトのメールテンプレートである&#x200B;**電子メール（メール）で送信**&#x200B;を探し、そのカード（または行）の上にマウスを置いてオプションを表示します。「**要素を複製**」をクリックします。
 
    ![要素を複製](assets/acs-copy-template.png)
 
-1. 内 **確認** ダイアログ、クリック **確認** をクリックして、テンプレートを複製します。
+1. **確認**&#x200B;ダイアログで、「**確認**」をクリックしてテンプレートを複製します。
 
    ![確認ダイアログ](assets/acs-confirmation.png)
 
-1. テンプレートエディターが開き、 **E メール（メール）で送信** テンプレート。 次をクリック： **プロパティを編集** アイコンをクリックします。
+1. **電子メール（メール）で送信**&#x200B;テンプレートのコピーを使用して、テンプレートエディターが開きます。ウィンドウの右上にある「**プロパティを編集**」アイコンをクリックします。
 
    ![テンプレートエディター](assets/acs-template-editor.png)
 
-1. プロパティウィンドウで、 **ラベル** 新しいAEMテンプレートを説明するフィールド。
+1. プロパティウィンドウで、新しい AEM テンプレートの内容を説明するよう「**ラベル**」フィールドを変更します。
 
-1. 次をクリック： **コンテンツ** 見出しを展開して選択します。 **Adobe Experience Manager** 内 **コンテンツソース** 」ドロップダウンリストから選択できます。
+1. **コンテンツ**&#x200B;見出しをクリックして展開し、「**コンテンツソース**」ドロップダウンで「**Adobe Experience Manager**」を選択します。
 
-1. これにより、 **Adobe Experience Managerアカウント** フィールドに入力します。 ドロップダウンを使用して、 **Adobe Experience Managerインスタンス (aemInstance)** ユーザー。 これは、AEM統合のデフォルトの外部ユーザーです。
+1. これにより、「**Adobe Experience Manager アカウント**」フィールドが表示されます。ドロップダウンを使用して、「**Adobe Experience Manager インスタンス (aemInstance)**」ユーザーを選択します。これは、AEM 統合環境用のデフォルトの外部ユーザーです。
 
 ![テンプレートのプロパティの設定](assets/acs-template-properties.png)
 
-1. クリック **確認** をクリックして、プロパティの変更を保存します。
+1. 「**確認**」をクリックして、プロパティへの変更内容を保存します。
 
-1. テンプレートエディターで、 **保存** をクリックして、AEMで使用する電子メールテンプレートの変更済みコピーを保存します。
+1. テンプレートエディターで、「**保存**」をクリックして、AEM で使用するメールテンプレートの変更済みコピーを保存します。
 
-これで、AEMコンテンツを使用できる E メールテンプレートが作成されました。
+これで、AEM コンテンツを使用できるメールテンプレートが作成されました。
 
-## AEMでの Campaign 統合の設定 {#campaign-integration}
+## AEM で Campaign 統合を設定 {#campaign-integration}
 
-AEMは、組み込みの統合と `aemserver` Adobe Campaignで設定したユーザー。 この統合を設定するには、次の手順に従います。
+AEM は、組み込まれた統合機能と、Adobe Campaign で設定した `aemserver` ユーザーを使用して Adobe Campaign と通信します。この統合を設定するには、次の手順に従います。
 
 1. AEM オーサリングインスタンスに管理者としてログインします。
 
@@ -139,8 +139,8 @@ AEMは、組み込みの統合と `aemserver` Adobe Campaignで設定したユ�
 
 1. 設定を編集するための新しいウィンドウとダイアログが開きます。必要な情報を入力します。
 
-   * **ユーザー名**  — これは [の `aemserver` 前の手順で設定したAdobe Campaignのユーザー。](#aemserver-user)デフォルトでは `aemserver` です。
-   * **パスワード**  — これは、 [の `aemserver` 前の手順でAdobeカスタマーケアにリクエストしたAdobe Campaignのユーザー。](#aemserver-user)
+   * **ユーザー名** - これは、[前の手順で設定した、Adobe Campaign の `aemserver` ユーザーです。](#aemserver-user)デフォルトでは `aemserver` です。
+   * **パスワード** - これは、[前の手順でアドビカスタマーケアにリクエストした、Adobe Campaign の `aemserver` ユーザーのパスワードです。](#aemserver-user)
    * **API エンドポイント** - これは、Adobe Campaign インスタンス URL です。
 
    ![AEM での Adobe Campaign の設定](assets/configure-campaign.png)
@@ -151,62 +151,62 @@ AEM が Adobe Campaign と通信できるようになりました。
 
 >[!NOTE]
 >
->Adobe Campaign サーバーがインターネット経由で到達可能であることを確認してください。AEMは、プライベートネットワークにアクセスできません。
+>Adobe Campaign サーバーがインターネット経由で到達可能であることを確認してください。AEM はプライベートネットワークにアクセスできません。
 
-## AEM パブリッシュインスタンスへのレプリケーションの設定 {#replication}
+## AEM パブリッシュインスタンスへのレプリケーションを設定 {#replication}
 
-Campaign コンテンツは、AEMオーサリングインスタンス上でコンテンツ作成者が作成します。 このインスタンスは、通常、組織内でのみ使用できます。 画像やアセットなどのコンテンツをキャンペーンの受信者がアクセスできるようにするには、そのコンテンツを公開する必要があります。
+キャンペーンのコンテンツは、コンテンツ作成者が AEM オーサリングインスタンスで作成します。このインスタンスは通常、組織内でしか使用できません。画像やアセットなどのコンテンツをキャンペーンの受信者がアクセスできるようにするには、そのコンテンツを公開する必要があります。
 
-レプリケーションエージェントは、AEMオーサーインスタンスからパブリッシュインスタンスにコンテンツを公開する役割を持ち、統合が正しく機能するには設定されている必要があります。 また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
+レプリケーションエージェントは、AEM オーサーインスタンスからパブリッシュインスタンスにコンテンツを公開する役割を持ち、このエージェントが正しく機能するには統合環境に対して設定されている必要があります。また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
 
-AEMオーサーインスタンスからパブリッシュインスタンスへのレプリケーションを設定するには、次の手順を実行します。
+AEM オーサーインスタンスからパブリッシュインスタンスへのレプリケーションを設定するには、次の手順を実行します。
 
 1. AEM オーサリングインスタンスに管理者としてログインします。
 
-1. グローバルナビゲーションサイドレールで、「 」を選択します。 **ツール** > **導入** > **レプリケーション** > **作成者のエージェント**&#x200B;をタップし、次に、をタップまたはクリックします。 **デフォルトエージェント（パブリッシュ）**.
+1. グローバルナビゲーションサイドパネルから、**ツール**／**デプロイメント**／**レプリケーション**／**オーサー環境のエージェント**&#x200B;の順に選択し、**デフォルトエージェント（パブリッシュ）**&#x200B;をタップまたはクリックします。
 
    ![レプリケーションエージェントの設定](assets/acc-replication-config.png)
 
 1. 「**編集**」をタップまたはクリックして、「**トランスポート**」タブを選択します。
 
-1. の設定 **URI** デフォルトの `localhost` 値にAEMパブリッシュインスタンスの IP アドレスを含める。
+1. デフォルトの `localhost` 値を AEM パブリッシュインスタンスの IP アドレスに置き換えて、「**URI**」フィールドを設定します。
 
    ![「トランスポート」タブ](assets/acc-transport-tab.png)
 
-1. タップまたはクリック **OK** をクリックして、エージェント設定の変更を保存します。
+1. 「**OK**」をタップまたはクリックして、エージェント設定に対する変更を保存します。
 
-キャンペーン受信者がコンテンツにアクセスできるように、AEMパブリッシュインスタンスへのレプリケーションを設定しました。
+AEM パブリッシュインスタンスへのレプリケーションを設定したので、キャンペーン受信者がコンテンツにアクセスできるようになりました。
 
 >[!NOTE]
 >
->レプリケーション URL を使用せずに、公開 URL を使用する場合は、OSGi を使用して次の設定で公開 URL を設定できます。
+>レプリケーション URL を使用せずに、公開 URL を使用する場合は、OSGi を介して、以下の設定で公開 URL を設定することができます
 >
->グローバルナビゲーションサイドレールで、「 」を選択します。 **ツール** > **運用** > **Web コンソール** > **OSGi 設定** およびを検索します。 **AEM Campaign の統合 — 設定**. 設定を編集し、フィールドを変更します **パブリック URL** (`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`) をクリックします。
+>グローバルナビゲーションサイドパネルで、**ツール**／**運用**／**Web コンソール**／**OSGi 設定** を選択し、**AEM Campaign の統合 - 設定**&#x200B;を検索します。設定を編集し、「**公開 URL**（`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`）」フィールドを変更します。
 
 ## AEM Externalizer の設定 {#externalizer}
 
 [Externalizer は リソースパスを外部および絶対 URL に変換する AEMの OSGi サービスです。この URL は、AEM が Campaign で使用できるコンテンツを提供するために必要です。](/help/sites-developing/externalizer.md)Campaign の統合が機能するように設定する必要があります。
 
 1. AEM オーサリングインスタンスに管理者としてログインします。
-1. グローバルナビゲーションサイドレールで、「 」を選択します。 **ツール** > **運用** > **Web コンソール** > **OSGi 設定** およびを検索します。 **Day CQ link Externalizer**.
-1. デフォルトでは、 **ドメイン** フィールドは、パブリッシュインスタンスを対象としています。 URL をデフォルトから変更 `http://localhost:4503` 公開されているパブリッシュインスタンスに追加します。
+1. グローバルナビゲーションサイドパネルで、**ツール**／**運用**／**Web コンソール**／**OSGi 設定**&#x200B;を選択し、**Day CQ Link Externalizer**&#x200B;を検索します。
+1. デフォルトでは、「**ドメイン**」フィールドの最新エントリは、公開インスタンスを対象としています。 URL をデフォルトの `http://localhost:4503` から、公開されているパブリッシュインスタンスに変更します。
 
    ![Externalizer の設定](assets/acc-externalizer-config.png)
 
 1. 「**保存**」して閉じるをタップまたはクリックします。
 
-Externalizer が設定され、Adobe Campaignがコンテンツにアクセスできるようになりました。
+Externalizer が設定され、Adobe Campaign がコンテンツにアクセスできるようになりました。
 
 >[!NOTE]
-パブリッシュインスタンスは、Adobe Campaign サーバーから到達可能である必要があります。が `localhost:4503` Adobe Campaignがアクセスできない別のサーバーの場合、AEMからの画像はAdobe Campaignコンソールに表示されません。
+パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
 
-## AEMでの campaign-remote ユーザーの設定 {#campaign-remote-user}
+## AEM での campaign-remote ユーザーを設定 {#campaign-remote-user}
 
-AEMがAdobe Campaignと通信する際に使用できるAdobe Campaignのユーザーが必要な場合と同様に、Adobe CampaignとAEMを通信するには、AEMのユーザーも必要です。 デフォルトでは、Campaign 統合によって `campaign-remote` AEMのユーザー。 このユーザーを設定するには、次の手順に従います。
+AEM が Adobe Campaign と通信する際に使用する Adobe Campaign のユーザーが必要であるのと同様に、Adobe Campaign が AEM と通信するには、AEM のユーザーも必要です。デフォルトでは、Campaign 統合によって AEM に `campaign-remote` ユーザーが作成されます。次の手順に従って、このユーザーを設定します。
 
 1. AEM に管理者としてログインします。
 1. メインナビゲーションコンソールで、左側のパネルにある「**ツール**」をクリックします。
-1. 次に、 **セキュリティ** > **ユーザー** をクリックして、ユーザー管理コンソールを開きます。
+1. 次に、**セキュリティ**／**ユーザー**&#x200B;をクリックして、ユーザー管理コンソールを開きます。
 1. `campaign-remote` ユーザーを見つけます。
 1. `campaign-remote` ユーザーを選択し、「**プロパティ**」をクリックしてユーザーを編集します。
 1. **ユーザー設定を編集**&#x200B;ウィンドウで、「**パスワードを変更**」をクリックします。
@@ -214,32 +214,32 @@ AEMがAdobe Campaignと通信する際に使用できるAdobe Campaignのユー�
 1. 「**保存**」をクリックして、パスワードの変更を保存します。
 1. 「**保存して閉じる**」をクリックして、変更を `campaign-remote` ユーザーに保存します。
 
-## Campaign でのAEM外部アカウントの設定 {#acc-external-user}
+## Campaign で AEM 外部アカウントを設定 {#acc-external-user}
 
-次の場合： [AEM固有の e メール配信テンプレートの作成](#aem-email-delivery-template) テンプレートで `aemInstance` AEMと通信する外部アカウント 両方のソリューション間で双方向通信を有効にするには、Adobe Campaignでこのアカウントを設定する必要があります。
+[AEM 固有のメール配信テンプレートを作成](#aem-email-delivery-template)した場合、テンプレートが `aemInstance` 外部アカウントを使用して AEM と通信する必要があると指定したことになります。両方のソリューション間で双方向通信を有効にするには、Adobe Campaign でこのアカウントを設定する必要があります。
 
-1. 管理者としてAdobe Campaignにログインします。
+1. 管理者として Adobe Campaign にログインします。
 
-1. メニューバーの左上にあるAdobe Campaignロゴをタップまたはクリックしてグローバルナビゲーションを開き、「 」を選択します。 **管理** > **アプリケーション設定** > **外部アカウント** をクリックします。
+1. メニューバーの左上にある Adobe Campaign ロゴをタップまたはクリックしてグローバルナビゲーションを開き、ナビゲーションメニューから、**管理**／**アプリケーション設定**／**外部アカウント**&#x200B;を選択します。 
 
-1. をタップまたはクリックします。 **Adobe Experience Managerインスタンス (aemInstance)** ユーザーコンソールの
+1. ユーザーコンソールの **Adobe Experience Manager インスタンス（aemInstance）**&#x200B;をタップまたはクリックします。
 
-1. ユーザーが **Adobe Experience Manager** を **タイプ**.
+1. ユーザーが **Adobe Experience Manager** を&#x200B;**タイプ**&#x200B;として持っていることを確認します。
 
-1. 内 **接続** 「 」セクションで、次のフィールドを定義します。
+1. 「**接続**」セクションで、次のフィールドを定義します。
 
-   1. サーバー：これはAEMオーサリングサーバーの URL です。 スラッシュで終わることはできません。
-   1. アカウント：これは `campaign-remote` ユーザー [AEMで事前に設定されている](#campaign-remote-user)
-   1. パスワード：これは、 `campaign-remote`ユーザー [AEMで事前に設定されている](#campaign-remote-user)
+   1. サーバー：これは AEM オーサリングサーバーの URL です。 最後尾をスラッシュにしないでください。
+   1. アカウント：これは [AEM で事前に設定した](#campaign-remote-user) `campaign-remote` ユーザーです。
+   1. パスワード：これは、[AEM で事前に設定した](#campaign-remote-user) `campaign-remote` ユーザー用のパスワードです。
 
    ![aemInstance ユーザーの編集](assets/acs-external-acount-editor.png)
 
-1. 次を確認します。 **有効** チェックボックスがオンの状態で、 **保存** 変更を保存します。
+1. 「**有効**」チェックボックスが選択されていることを確認したら、「**保存**」をクリックして変更内容を保存します。
 
-おめでとうございます。AEMとAdobe Campaign Standardの統合が完了しました。
+おめでとうございます。AEM と Adobe Campaign Standard の統合が完了しました。
 
 ## 次のステップ {#next-steps}
 
-Adobe Campaign ClassicとAEMの両方が設定された状態で、統合が完了しました。
+Adobe Campaign Classic と AEM の両方が設定されたので、統合は完了です。
 
 Adobe Experience Manager でニュースレターを作成する方法については、[このドキュメント](/help/sites-authoring/campaign.md)の続きで説明します。
