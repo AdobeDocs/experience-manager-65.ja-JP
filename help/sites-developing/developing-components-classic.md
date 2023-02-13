@@ -12,9 +12,9 @@ discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
 source-git-commit: 43a30b5ba76ea470cc50a962d4f04b4a1508964d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2392'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 99%
 >
 >クラシック UI 用のコンポーネントの開発には HTML テンプレート言語（HTL）と JSP のどちらも使用できますが、このページでは JSP を使用した開発について説明します。これは単に、クラシック UI 内では JSP が使用されてきたからです。
 >
->現在では、HTL が AEM の推奨スクリプティング言語とされています。手法を比較するには、[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) および [AEM コンポーネントの開発](/help/sites-developing/developing-components.md)を参照してください。
+>現在では、HTL が AEM の推奨スクリプティング言語とされています。手法を比較するには、[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) および [AEM コンポーネントの開発](/help/sites-developing/developing-components.md)を参照してください。
 
 ## 構造 {#structure}
 
@@ -336,7 +336,7 @@ CQ と Sling のタグライブラリを使用すると、テンプレートや�
         image.loadStyleData(currentStyle);
    ```
 
-   強調表示したコードのフラグメント *%/div class=&quot;image&quot;/%* は、このタグのカスタムスタイルを生成する新しいコードで置き換える予定です。
+   強調表示したコードのフラグメント *%>&lt;div class=&quot;image&quot;>&lt;%* は、このタグのカスタムスタイルを生成する新しいコードで置き換える予定です。
 
    ```xml
    // todo: add new CSS class for the 'right image' instead of using
