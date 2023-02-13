@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: f192a8a3-1116-4d32-9b57-b53d532c0dbf
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1491'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -94,7 +94,7 @@ AEM Forms を異なる環境に回復する場合、次のような変更点が�
 
 ### AEM Forms のホスト名または IP アドレスの変更 {#changing-the-aem-forms-hostname-or-ip-address}
 
-クラスター環境でキャッシュに UDP ではなく TCP を使用している場合、キャッシュロケーターの設定を更新する必要があります。使用しているアプリケーションサーバーに関連する設定ガイドの「キャッシュロケーターの設定（TCP を使用するキャッシュのみ）」を参照してください。
+クラスター環境でキャッシュに UDP ではなく TCP を使用している場合、キャッシュロケーターの設定を更新する必要があります。ご使用のアプリケーションサーバーに対応する設定ガイドの「キャッシュロケーターの設定（TCP を使用するキャッシュのみ）」を参照してください。
 
 ### AEM Forms ノードのファイルシステムパスの変更 {#changing-the-aem-forms-node-file-system-paths}
 
