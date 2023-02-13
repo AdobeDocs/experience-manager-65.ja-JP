@@ -12,9 +12,9 @@ feature: Interactive Images
 role: User, Admin
 exl-id: 8a609024-e9e6-4805-8306-48d095110eb6
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4275'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -157,9 +157,9 @@ Experience Manager Assets でバナー画像にホットスポットを追加す
 
 この 3 つの例で使用されているものと同じアプローチを次のデモ Web ページに適用できます。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=ja)
 
-デモ Web ページには複数の製品サムネールがあり、それぞれに「詳細を表示」というラベルの付いたクイックビューボタンがあります。 Web ブラウザーのデバッグツールをアクティブにしたまま各ボタンを選択し、記録されたクイックビュー URL に注目してください。そのページの 4 つの製品クイックビューをすべてアクティベートすると、バックエンドに対して以下のリストのクイックビューリクエストが作成されます。
+このデモ web ページにはいくつかの製品サムネールがあり、それぞれのサムネールには、「詳しく見る」というラベルの付いたクイックビューボタンが用意されています。Web ブラウザーのデバッグツールをアクティブにしたまま各ボタンを選択し、記録されたクイックビュー URL に注目してください。そのページの 4 つの製品クイックビューをすべてアクティベートすると、バックエンドに対して以下のリストのクイックビューリクエストが作成されます。
 
 * `/datafeed/Male-Windbreaker.json`
 * `/datafeed/Male-SimpleHenley.json`
@@ -346,7 +346,7 @@ Experience Manager Sites の顧客である場合は、インタラクティブ�
 
 次のデモ Web サイトを例として使用します。
 
-[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html)
+[https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=ja](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html?lang=ja)
 
 3 人の男性の写真には、以下のような静的 `IMG` タグが使用されています。
 
