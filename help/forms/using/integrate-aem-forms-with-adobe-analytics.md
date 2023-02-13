@@ -1,20 +1,20 @@
 ---
 title: AEM Forms と Adobe Analytics を統合する方法
-description: AEM FormsはAdobe Analyticsと統合され、発行されたフォームのパフォーマンス指標を取得して追跡します。
+description: AEM Forms は Adobe Analytics と統合されているので、公開済みフォームのパフォーマンス指標を取得および追跡できます。
 docset: aem65
 exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 source-git-commit: 45ca98ffb68e1e31e2f45f352e86f5aa1b6f0f00
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1806'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
-# を使用した Analytics [!DNL Adobe Launch] {#analyticsusingadobelaunch}
+# [!DNL Adobe Launch] を使用した Analytics {#analyticsusingadobelaunch}
 
 AEM Forms は、[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=ja) と統合されているので、公開済みフォームのパフォーマンス指標を取得および追跡できます。これらの指標を分析する目的は、ビジネスユーザーがエンドユーザーの行動に関するインサイトを得て、データキャプチャエクスペリエンスを最適化できるようにすることです。Adobe Analytics for Adaptive Forms を介して、ログインしているユーザーとログインしていない（匿名）ユーザーの両方の動作を取得および追跡できます。
 
-また、分析フレームワークを使用してCloud Serviceを実行できます。 AEM Formsを Framework と統合する方法について詳しくは、 [分析フレームワークを使用したCloud Service](/help/forms/using/configure-analytics-forms-documents.md). Cloud Serviceフレームワークを使用して Analytics よりもAdobeLaunch を使用する主な利点は、標準のイベントに加えて、カスタムイベントも定義できる点です。 カスタマイズされたイベントは、ルールエディターまたは顧客の clientlib を使用して定義され、 [!DNL Adobe Analytics].
+Cloud Service フレームワークを使用して分析を実行することもできます。AEM Forms を Cloud Service フレームワークと統合する方法について詳しくは、[Cloud Service フレームワークを使用した Analytics](/help/forms/using/configure-analytics-forms-documents.md) を参照してください。Cloud Service フレームワークを使用して Analytics よりも Adobe Launch を使用する主な利点は、標準のイベントに加えて、カスタムイベントも定義できる点です。 カスタマイズされたイベントは、ルールエディターまたは顧客の clientlib を使用して定義され、[!DNL Adobe Analytics] のイベントにマップされます。
 
 この記事で取り上げる操作を実行すると、[!DNL Adobe Analytics] でレポートを設定したり表示したりできます（次のビデオを参照）。
 
@@ -36,7 +36,7 @@ AEM Forms は、[Adobe Analytics](https://experienceleague.adobe.com/docs/analyt
 
 * **保存**：ユーザーがフォームポータルにフォームを保存した回数。
 
-既製のイベントに加えて、カスタムイベントを定義することもできます。
+これらの標準のイベントとは別に、カスタムイベントを定義することもできます。
 
 次の図は、[!DNL Adobe Analytics] でレポートを表示する前に実行する必要があるアクションを示しています。
 
@@ -208,7 +208,7 @@ Adobe Launch 設定を作成するには、次の手順を実行します。
 
 1. 「**[!UICONTROL タイトル]**」フィールドで設定のタイトルを指定します。
 
-1. 「[関連付けられている Adobe IMS 設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html)」を選択します。
+1. 「[関連付けられている Adobe IMS 設定](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=ja)」を選択します。
 
 1. [Adobe Analytics の設定](#Configure-adobe-analytics) 時に使用した会社の名前を選択します。
 
@@ -231,7 +231,7 @@ Adobe Launch 設定を作成するには、次の手順を実行します。
 アダプティブフォームで [!DNL Adobe Analytics] を有効にすると、AEM Forms と [!DNL Adobe Analytics] の間に適切なデータイベントフローがあるかどうかを[検証](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=ja#validate-the-page-view-beacon)できます。AEM Forms と Adobe Analytics の統合が完了しました。これで [Adobe Analytics でのレポートの設定と表示](#view-reports-adobe-analytics)を行えるようになりました。
 
 >[!NOTE]
->場合によっては、 [分析フレームワークを使用したCloud Service](/help/forms/using/configure-analytics-forms-documents.md) および **AdobeLaunch を使用した Analytics** 機能は同時に有効になります。 **AdobeLaunch を使用した Analytics** が優先されます。
+>[クラウドサービスのフレームワークを使用した分析](/help/forms/using/configure-analytics-forms-documents.md)機能と **Adobe Launch を使用した分析**&#x200B;機能の両方が同時に有効になっている場合、**Adobe Launch を使用した分析**&#x200B;機能が優先されます。
 
 ### カスタムイベントをキャプチャするルールの作成（オプション） {#capture-custom-events}
 
@@ -284,4 +284,4 @@ Analytics データをアダプティブフォームから [!DNL Adobe Analytics
 
 1. Ctrl + S キーを押し、名前を指定してプロジェクトを保存します。
 
-フォームの分析レポートの表示について詳しくは、 [AEM Forms Analytics レポートの表示と理解](../../forms/using/view-understand-aem-forms-analytics-reports.md).
+フォーム分析レポートの表示について詳しくは、「[AEM Forms 分析レポートの表示と理解](../../forms/using/view-understand-aem-forms-analytics-reports.md)」を参照してください。
