@@ -6,9 +6,9 @@ role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1043'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 97%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=en) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/link-sharing.html?lang=en) |
+| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/link-sharing.html?lang=ja) |
 
 [!DNL Adobe Experience Manager Assets] では、アセット、フォルダー、コレクションを組織内や外部（パートナーやベンダーなど）のメンバーと共有できます。リンクによるアセットの共有は、外部の関係者が [!DNL Assets] にログインせずにリソースを利用できる便利な方法です。
 
