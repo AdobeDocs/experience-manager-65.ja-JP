@@ -6,9 +6,9 @@ role: Admin, Architect
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
 source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1670'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -193,7 +193,7 @@ JVM で監視できるベースラインパラメーターをいくつか示し�
 監視中に問題が発生した場合は、以下のトラブルシューティングを実行して、[!DNL Experience Manager] デプロイメントでよくある問題を解決できます。
 
 * TarMK を使用している場合は、Tar 圧縮を頻繁に実行します。詳しくは、[リポジトリのメンテナンス](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。
-* `OutOfMemoryError` ログを確認します。詳しくは、 [メモリの問題を分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja).
+* `OutOfMemoryError` ログを確認します。詳しくは、[メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)を参照してください。
 
 * ログを確認し、インデックス化されていないクエリ、ツリートラバーサル、インデックストラバーサルへの参照がないかを確認します。これらは、インデックス化されていないクエリ、または不適切にインデックス化されたクエリを示しています。クエリおよびインデックス作成のパフォーマンスを最適化するためのベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md)を参照してください。
 * ワークフローが予期したとおりに動作していることを確認するには、ワークフローコンソールを使用します。可能な場合は、複数のワークフローを単一のワークフローにまとめます。
