@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: fe6ba6af-f500-4c0d-b984-fb617d4bf48a
 exl-id: 9fa3e531-11b3-4b8d-a87c-a08faf06f5b7
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1600'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -141,7 +141,7 @@ s.linkTrackVars= 'prop4';
 
 ## リンクトラッキング設定の例 {#example-link-tracking-configuration}
 
-次の手順を実行して、Adobe Analytics 統合のリンクトラッキング動作を調査します。この手順は、[Adobe Marketing Cloud デバッガー](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html)からの結果を表示します。
+次の手順を実行して、Adobe Analytics 統合のリンクトラッキング動作を調査します。この手順は、[Adobe Marketing Cloud デバッガー](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html?lang=ja)からの結果を表示します。
 
 ### 一般設定 {#general-configuration}
 
