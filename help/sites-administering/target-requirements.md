@@ -12,9 +12,9 @@ discoiquuid: ae4a6e97-c0d7-472d-a25f-b89b1abf4df3
 docset: aem65
 exl-id: 30813c44-51ac-4e6e-8ee6-4e8baacb1ff9
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '555'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ AEM と Adobe Target を統合するには、有効な Adobe Target アカウン
 >
 >統合を使用するには、Target チームによってご自身のアカウントも有効にされている必要があります。
 >
->そうでない場合は、[Adobe カスタマーケア](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html)にご連絡ください。
+>そうでない場合は、[Adobe カスタマーケア](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja)にご連絡ください。
 
 ## Target レプリケーションエージェントの有効化 {#enabling-the-target-replication-agent}
 
