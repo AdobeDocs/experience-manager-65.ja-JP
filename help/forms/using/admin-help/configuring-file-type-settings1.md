@@ -10,9 +10,9 @@ geptopics: SG_AEMFORMS/categories/working_with_pdf_generator
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 89f4d3cf-eb2e-4d55-8209-16ecbba03792
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6171'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ PDF Generator では、サポートされるファイルタイプについてア
 * デフォルトで使用するファイルタイプ設定を指定（[PDF Generator 設定ファイルの読み込みおよび書き出し](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照）
 * [デフォルト設定を変更](/help/forms/using/admin-help/configuring-file-type-settings1.md#change-the-default-settings)
 * [PDF/A サポートの有効化](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
-* [ファイルタイプ設定の削除](https://helpx.adobe.com/aem-forms/6-2/admin-help/enable-pdf-a-support.html)
+* [ファイルタイプ設定の削除](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ PDF Generator では、サポートされるファイルタイプについてア
 
 1. 次のセクションで必要な情報を入力します。
 
-   [PDF Generator 設定ファイルの読み込みおよび書き出し](https://helpx.adobe.com/aem-forms/6-2/admin-help/importing-exporting-pdf-generator-configuration.html)
+   [PDF Generator 設定ファイルの読み込みおよび書き出し](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
 
 [Adobe PDF の書き出し設定（Windows のみ）](#adobe-pdf-export-settings-windows-only)
 
@@ -257,7 +257,7 @@ PDF Generator では、PDF ファイルのサイズを低減することがで�
 
    >[!NOTE]
    >
-   >*ドキュメントにサブセットが埋め込まれているフォントの埋め込みを解除する場合、+ 記号をフォント名のプレフィックスとして指定します。例えば、「+Helvetica」と入力します。*
+   >*ドキュメントにサブセットが埋め込まれているフォントの埋め込みを解除する場合、+ 記号をフォント名のプレフィックスとして指定します。例えば、「+Helvetica」とします。*
 
 1. 埋め込まれたフォントの使用中のサブセットのみを埋め込む場合、「**すべての埋め込まれたフォントをサブセット化**」を選択します。
 
@@ -518,7 +518,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 styleName1=level1[,styleName2=level2...]
 
-Microsoft Word のスタイル名にコンマ (,) または等号 (=) が含まれる場合、特殊文字の前にエスケープ文字 (&quot;\_) を付けます。 例えば、「Heading, 1」という名前のスタイルを「Heading\, 1」と指定します。
+Microsoft Word のスタイル名にコンマ（,）または等号（=）が含まれる場合、記号の前にエスケープ文字（&quot;\_）を付ける必要があります。例えば、「Heading, 1」というスタイルは Heading\, 1 と指定します。
 
 ## Microsoft Visio の設定（Windows のみ） {#visio}
 
@@ -622,6 +622,6 @@ Microsoft Word のスタイル名にコンマ (,) または等号 (=) が含ま�
 * Adobe FrameMaker：`fm`
 * Adobe Photoshop：`psd`
 
-これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、「追加のネイティブファイル形式のサポートの追加」( [AEM forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62).
+これらのファイルタイプのサポートにはカスタマイズが必要になる場合があります。詳しくは、[AEM Forms のプログラミング](https://www.adobe.com/go/learn_aemforms_programming_62)の「追加のネイティブファイル形式に対するサポートの追加」を参照してください。
 
 PDFG ネットワークプリンターの設定のヘルプについては、[PDFG ネットワークプリンターの設定（Windows のみ）](/help/forms/using/admin-help/setting-pdfg-network-printer-windows.md)を参照してください。
