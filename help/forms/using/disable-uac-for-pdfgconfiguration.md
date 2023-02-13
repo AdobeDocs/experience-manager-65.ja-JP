@@ -3,19 +3,20 @@ title: JEE と OSGI の両方に適用可能な PDFG 設定の UAC の無効化
 description: PDFG 設定の UAC を無効にする手順
 exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
 source-git-commit: 2e9b9c40f54aa54a946e4320341ed4a760c56fd1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '255'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# Word または Excel ファイルを Windows Server 上のPDFに変換できません {#unable-to-convert-word-excel-files-PDF}
+# Windows Server 上で Word または Excel ファイルを PDF に変換できない {#unable-to-convert-word-excel-files-PDF}
 
 ## 問題 {#issue}
 
-ユーザーが Word または Excel ファイルをMicrosoft Windows Server 上のPDFに変換しようとすると、次のエラーが発生します。
+ユーザーが Word ファイルまたは Excel ファイルを Microsoft Windows Server 上で PDF に変換しようとすると、次のエラーが発生します。
 
-*プライマリコンバータからのエラーメッセージ：ALC-PDG-015-003-Theシステムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
+*プライマリコンバーターからのエラーメッセージ：
+ALC-PDG-015-003-システムは入力ファイルを開けません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
 
 ## 解決策 {#solution}
@@ -36,5 +37,5 @@ ht-degree: 63%
 ## 適用先 {#appliesto}
 
 このソリューションは、次の場合に適用されます。
-* JEE 上のAEM Forms Server
-* AEM Forms on OSGi Server
+* JEE サーバー上の AEM Forms
+* OSGi サーバー上の AEM Forms
