@@ -13,9 +13,9 @@ docset: aem65
 pagetitle: Components for Content Fragments
 exl-id: f2edd9b2-f231-42f3-a25e-428cd1d96c2a
 source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '962'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -117,11 +117,11 @@ Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ペ�
 
 >[!CAUTION]
 >
->リライターの設定を調整/オーバーレイする場合：
+>リライターの設定を調整／オーバーレイする場合：
 >
 >* `/libs/dam/config/rewriter/cfm`
 >
->その後 `serializerType` **必須** 更新先：
+>`serializerType` を次のように更新する&#x200B;**必要があります**。
 >
 >* `serializerType="html5-serializer"`
 
