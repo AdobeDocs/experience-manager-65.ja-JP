@@ -10,9 +10,9 @@ topic-tags: customization
 discoiquuid: 3c2a44a7-24e7-49ee-bf18-eab0e44efa42
 exl-id: 3458471a-9815-463e-8044-68631073863c
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1170'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -101,19 +101,19 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>このイベントはフィールドがフォーカスされるたびにトリガーされます。これにより、「Enter」スクリプトをフィールドに対して実行できます。 イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>このイベントはフィールドがフォーカスされるたびにトリガーされます。フィールドで「入力」スクリプトの実行を可能にします。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>このイベントはフィールドを離れるたびにトリガーされます。これにより、エンジンはフィールドの値を設定し、その「終了」スクリプトを実行できます。 イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>このイベントはフィールドを離れるたびにトリガーされます。エンジンがフィールドの値を設定し、その「終了」スクリプトを実行することを可能にします。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>このイベントは、フィールドに記述された「変更」スクリプトをエンジンが実行できるようにトリガーされます。 イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>このイベントがトリガーされ、エンジンがフィールドに書かれた「変更」スクリプトを実行することが可能になります。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>このイベントはフィールドがクリックされるたびにトリガーされます。これにより、エンジンはフィールドで記述された「クリック」スクリプトを実行できます。 イベントをトリガーするための構文は<br /> （ウィジェット）を使用します。_trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>このイベントはフィールドがクリックされるたびにトリガーされます。エンジンがフィールドに書かれた「クリック」スクリプトを実行することが可能になります。イベントをトリガーするための構文は<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -137,7 +137,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <td>フォーカスをフィールドに移し、XFA_CLICK_EVENT を呼び出します。</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage:文字列 </em>エラーを表す<br /> <em>errorType:文字列 ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage: string </em>representing the error<br /> <em>errorType: string ("warning"/"error")</em></p> <p><strong>注意</strong>：HTML5 フォームにのみ適用可能です。</p> </td>
    <td>エラーメッセージとエラータイプをウィジェットに送信します。ウィジェットはエラーを表示します。</td>
   </tr>
   <tr>
@@ -210,7 +210,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 <table>
  <tbody>
   <tr>
-   <th>関数</th>
+   <th>Function</th>
    <th>説明</th>
   </tr>
   <tr>
@@ -247,7 +247,7 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
    <th>説明</th>
   </tr>
   <tr>
-   <td>値</td>
+   <td>values</td>
    <td><p>値の配列（オン／オフ／中間）。</p> <p>これは、checkButton のさまざまなステートのための値の配列です。 values[0] はステートがオンのときの値です。values[1] はステートがオフのときの値です。<br />values[2] はステートが中間のときの値です。値配列の長さは、state オプションの値と同じです。<br /> </p> </td>
   </tr>
   <tr>
@@ -267,5 +267,5 @@ Forms のフレームワークとやりとりするために、ウィジェッ�
 |---|---|
 | 日 | そのフィールドのローカライズされた曜日の名前。 |
 | months | そのフィールドのローカライズされた月の名前。 |
-| ゼロ | 数字の 0 のローカライズされたテキスト。 |
+| zero | 数字の 0 のローカライズされたテキスト。 |
 | clearText | 「クリア」ボタンのローカライズされたテキスト。 |
