@@ -6,9 +6,9 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 source-git-commit: 83e9ab570fac686fd53c9c2594cbfb2c05a89a0c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2262'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->* スマートコンテンツサービスは、新しく使用できなくなりました [!DNL Experience Manager Assets] オンプレミス型の顧客。 既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスを使用できます。
->* スマートコンテンツサービスは既存のユーザーが利用できます [!DNL Experience Manager Assets] Managed Servicesをご利用のお客様（この機能を既に有効にしています）。
->* 新規 [!DNL Experience Manager Assets] Managed Servicesのお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定できます。
+>* [!DNL Experience Manager Assets] オンプレミスの新規のお客様には、スマートコンテンツサービスをご利用いただけなくなりました。既にこの機能を有効にしているオンプレミス版のお客様は、引き続きスマートコンテンツサービスをご使用いただけます。
+>* スマートコンテンツ サービスは、この機能を既に有効にしている既存の [!DNL Experience Manager Assets] Managed Services のお客様にご利用いただけます。
+>* [!DNL Experience Manager Assets] Managed Services の新規のお客様は、この記事に記載されている手順に従ってスマートコンテンツサービスを設定してください。
 
 
 スマートコンテンツサービスを使用する前に、次を確認します。
@@ -60,11 +60,11 @@ Adobe Developer Console と統合する場合、[!DNL Experience Manager] サー
 
    **[!UICONTROL サービス URL]**: `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   （例：`https://smartcontent.adobe.io/apac`）。次を指定できます。 `na`, `emea`、または `apac` :Experience Managerオーサーインスタンスがホストされる地域。
+   （例：`https://smartcontent.adobe.io/apac`）。Experience Manager オーサーインスタンスがホストされている地域として、`na`、`emea` または `apac` を指定することができます。
 
    >[!NOTE]
    >
-   >2022 年 9 月 1 日より前にExperience Manager管理サービスがプロビジョニングされている場合は、次のサービス URL を使用します。
+   >2022年9月1日（PT）より前に Experience Manager Managed Service がプロビジョニングされている場合は、次のサービス URL を使用します。
    >`https://mc.adobe.io/marketingcloud/smartcontent`
 
    **[!UICONTROL 認証サーバー]**: `https://ims-na1.adobelogin.com`
