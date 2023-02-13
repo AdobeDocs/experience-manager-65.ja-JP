@@ -13,9 +13,9 @@ docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '290'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 73%
 
 ## 前提条件 {#pre-requisites}
 
-* 32 ビット版のをインストールする  [Visual C++ 2019 再頒布可能パッケージ (x86)](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
+* 32 ビット版の [Visual C++ 2019 再頒布可能パッケージ（x86）](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。
 * Designer をインストールまたはアンインストールするための管理者権限を持つユーザー。
 
 ## Designer のインストール {#install-designer}
@@ -31,11 +31,11 @@ ht-degree: 73%
 WorkBench にバンドルされている Designer は、スタンドアロンのインストーラーとして使用することができます。Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
 
 1. AEM Forms Designer の以前のバージョンが既にインストールされている場合は、そのバージョンをアンインストールします。
-1. 次から Designer をダウンロード： [Adobeライセンス Web サイト](https://licensing.adobe.com/).
+1. [アドビライセンス web サイト](https://licensing.adobe.com/)から Designer をダウンロードします。
 
    >[!NOTE]
    >
-   > * Adobe Experience Manager 6.5 Forms Service Pack 15(6.5.15.0) 以降のForms Designer バージョンには、Service Pack バージョンも含まれています。 例えば、Service Pack 15 の場合、バージョン番号は 6.5.15.20221112.1.0です。この例では、6.5.15 が Service Pack のバージョンです。
+   > * Adobe Experience Manager 6.5 Forms サービスパック 15（6.5.15.0）以降の Forms Designer バージョンには、サービスパックバージョンも含まれています。例えば、サービスパック 15 の場合、バージョン番号は 6.5.15.20221112.1.0 です。この例では、6.5.15 がサービスパックのバージョンです。
 
 
 1. setup.exe をダブルクリックして Designer のインストーラーを起動します。
