@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '479'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->ページプロパティのカスタマイズ方法については、「[ページプロパティの拡張チュートリアルl](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) 」を参照してください。
+>ページプロパティのカスタマイズ方法については、「[ページプロパティの拡張チュートリアルl](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html?lang=ja) 」を参照してください。
 
 ## ページプロパティの設定 {#configuring-your-page-properties}
 
