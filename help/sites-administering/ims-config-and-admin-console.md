@@ -12,9 +12,9 @@ discoiquuid: f6112dea-a1eb-4fd6-84fb-f098476deab7
 exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
 source-git-commit: 778987e69a23f81584f7a86db2fe24df64035919
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1683'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
