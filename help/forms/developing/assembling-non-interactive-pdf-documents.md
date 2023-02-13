@@ -13,9 +13,9 @@ discoiquuid: 8a75c201-bd88-4809-be08-69de94656489
 role: Developer
 exl-id: 4677b9e5-3811-4de3-b4f4-9574b5898486
 source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1775'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -156,7 +156,7 @@ Assembler サービス API（Java）を使用して、非インタラクティ�
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
    * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします。必ず `invokeOneDocument` メソッドが返した `Document` オブジェクトを使用するように確認します。
 
-* &quot;クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ&quot;
+* 「クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ」
 
 ## Web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
@@ -221,7 +221,7 @@ Assembler Service API（web サービス）を使用して、非インタラク�
    * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
    * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
 
-* 「クイックスタート (MTOM):Web サービス API を使用した非インタラクティブPDFドキュメントのアセンブリ」
+* 「クイックスタート（MTOM）：web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 
 **関連トピック**
 
