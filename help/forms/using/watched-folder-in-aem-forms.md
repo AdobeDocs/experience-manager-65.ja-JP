@@ -11,9 +11,9 @@ discoiquuid: db38972c-be3f-49fd-8cc1-45b16ed244af
 docset: aem65
 exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7149'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 98%
 
 以下の方法のいずれか 1 つを使用して、監視フォルダーをファイルシステムに作成できます。
 
-* 監視フォルダー設定ノードのプロパティを設定する際に、次の例に示すように、 folderPath プロパティに親ディレクトリの完全パスを入力し、作成する監視フォルダーの名前を追加します。 `C:/MyPDFs/MyWatchedFolder`
-この 
-`MyWatchedFolder`フォルダーが存在しない場合、AEM Formsは指定されたパスにフォルダーを作成しようとします。
+* 監視フォルダー設定ノードのプロパティを設定する際に、次の例に示すように、folderPath プロパティに親ディレクトリの完全パスを入力し、作成する監視フォルダーの名前を追加します。`C:/MyPDFs/MyWatchedFolder`
+ 
+`MyWatchedFolder` フォルダーが存在しない場合、AEM Forms は指定されたパスにフォルダーを作成しようとします。
 
 * ファイルシステム上にフォルダーを作成してから監視フォルダーエンドポイントを設定し、folderPath プロパティにフルパスを入力します。folderPath プロパティについて詳しくは、「[監視フォルダーのプロパティ](#watchedfolderproperties)」を参照してください。
 
@@ -78,7 +78,7 @@ ht-degree: 98%
 
    * publish
 
-   * 作成者, publish
+   * author, publish
 
    * publish, author
 
@@ -106,7 +106,7 @@ ht-degree: 98%
 
       * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
       * &#42;[dD][Aa]&#39;port&#39;
-      * &#42;.[Xx][Mm][Ll]
+      * &#42;[Xx][Mm][Ll]
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
 
@@ -117,10 +117,10 @@ ht-degree: 98%
 
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * データ [0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
 
-      * &#42;.[dD][Aa]&#39;port&#39;
-      * &#42;.[Xx][Mm][Ll]
+      * &#42;[dD][Aa]&#39;port&#39;
+      * &#42;[Xx][Mm][Ll]
 
 ファイルパターンについて詳しくは、「[ファイルパターンについて](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)」を参照してください。
 
@@ -569,9 +569,9 @@ log.info("Exiting workflow script!")
 * data.&#42;
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * データ [0-9][0-9][0-9].[dD][aA]&#39;port&#39;
-   * &#42;.[dD][Aa]&#39;port&#39;
-   * &#42;.[Xx][Mm][Ll]
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * &#42;[dD][Aa]&#39;port&#39;
+   * &#42;[Xx][Mm][Ll]
 
 * 結果を保存する出力フォルダーのファイルパターンを定義できます。出力フォルダー（結果、保存および失敗）には、次のファイルパターンのいずれでも指定できます。
 * %Y = 年（4 桁表記）
@@ -592,7 +592,7 @@ log.info("Exiting workflow script!")
 * %F = ソースファイル名
 * %E = ソースファイル拡張子
 
-出力パラメーターのマッピングパターンが「File.separator」（パスセパレーター）で終わる場合、フォルダーが作成され、内容がそのフォルダーにコピーされます。 パターンが「File.separator」で終わらない場合は、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
+出力パラメーターのマッピングパターンが「File.separator」（つまり、パスセパレーター）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。
 
 ## PDF Generator と監視フォルダーの連携 {#using-pdf-generator-with-a-watched-folder}
 
@@ -641,8 +641,7 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 ### ワークフローの作成 {#create-a-workflow}
 
-1. ブラウザーウィンドウで「AEM ワークフロー」UI を開きます。
-
+1. ブラウザーウィンドウで AEM ワークフロー UI を開きます。
    <https://[servername>]:&#39;port&#39;/workflow
 
 1. モデルビューで、「**新規**」をクリックします。新しいワークフローダイアログで、「**タイトル**」を指定し、「**OK**」をクリックします。
@@ -680,4 +679,4 @@ ECMAScript で PDF Generator の createPDF API を使用して、Microsoft Word 
 
 ## 既知の問題 {#watched-folder-known-issues}
 
-JEE 上のAEM 6.5 Formsの起動時に、JBoss が完全に起動する前にファイルの処理が開始され、ファイルの処理が失敗します。 この問題を回避するには、JBoss を起動する前に、すべての監視フォルダーをクリアします。
+JEE 上の AEM 6.5 Forms を起動すると、JBoss が完全に起動する前にファイルの処理が開始され、ファイルの処理に失敗します。 この問題を回避するには、JBoss を起動する前に、すべての監視フォルダーを消去します。
