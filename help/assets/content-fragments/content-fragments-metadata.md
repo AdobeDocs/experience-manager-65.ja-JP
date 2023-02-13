@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 6316ef72-7647-4e85-b8cf-152557b26540
 source-git-commit: bb5d39277db10fd8d3b436c8d1f40d9d2010adee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '222'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -34,11 +34,11 @@ ht-degree: 77%
    * **説明**
    * **タグ**
       * [タグ](/help/sites-authoring/tags.md)は、コンテンツの分類に使用できるので、フラグメントを整理する際に特に効果を発揮します。タグは、コンテンツを（タグ別に）検索したり、一括操作を適用する目的で使用できます。
-例えば、関連するフラグメントを「クリスマスローンチ」とタグ付けして、これらのフラグメントをサブセットとして参照できるようにしたり、新しいフォルダーで別のローンチと共に使用するためにコピーしたりできます。
+例えば、関係のあるフラグメントを「クリスマスローンチ」としてタグ付けして、これらのフラグメントだけをサブセットとして閲覧できるようにしたり、今後の別のローンチで使用するために新しいフォルダーにコピーしたりできます。
       >[!NOTE]
       >
-      >**タグ** また、 [バリエーションコンテンツのオーサリング](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) そして [バリエーションの作成](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+      >**タグ**&#x200B;は、[バリエーションコンテンツのオーサリング](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)時、および[バリエーションの作成](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation)時にも追加できます。
 
-   * **作成済み** （表示のみ）
+   * **作成日時**（表示のみ）
    次に例を示します。
    ![メタデータ](assets/cfm-metadata-02.png)
