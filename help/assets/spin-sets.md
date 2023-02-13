@@ -12,9 +12,9 @@ feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1952'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 98%
 
 スピンセットは、物体を回転させて調べるという現実世界の操作をシミュレートしたものです。スピンセットによって、あらゆる角度からアイテムを表示して、あらゆる角度から重要な細部を目で確認できます。
 
-スピンセットは、360 度の閲覧エクスペリエンスをシミュレートします。Dynamic Media は、ビューアがアイテムを回転できる単一軸のスピンセットを提供します。さらに、ユーザは、マウスで数回クリックするだけで、任意のビューを「自由形式」でズームおよびパンできます。 このようにして、ユーザーは特定の視点からより詳しくアイテムを調べることができます。
+スピンセットは、360 度の閲覧エクスペリエンスをシミュレートします。Dynamic Media は、ビューアがアイテムを回転できる単一軸のスピンセットを提供します。さらに、ユーザーは「自由形式」のズームを実行し、マウスを数回クリックするだけで任意のビューをパンできます。このようにして、ユーザーは特定の視点からより詳しくアイテムを調べることができます。
 
 スピンセットのバナーには、「**[!UICONTROL SPINSET]**」と表示されます。また、スピンセットが公開されている場合、公開日が&#x200B;**[!UICONTROL 地球]**&#x200B;アイコン付きでバナーに表示され、最終変更日も&#x200B;**[!UICONTROL 鉛筆]**&#x200B;アイコン付きで表示されます。
 
@@ -50,7 +50,7 @@ ht-degree: 98%
 
    スピンセットでサポートされている形式のリストについては、[Dynamic Media - サポートされているラスター画像形式](/help/assets/assets-formats.md#supported-raster-image-formats-dynamic-media)を参照してください。
 
-1. [スピンセットの作成](#creating-spin-sets).
+1. [スピンセットの作成](#creating-spin-sets)。
 
    スピンセットを作成するには、**[!UICONTROL 作成／スピンセット]**&#x200B;を選択し、セットの名前を付け、アセットを選択し、画像の表示順を選択します。
 
@@ -68,15 +68,15 @@ ht-degree: 98%
 
    詳しくは、[ビューアプリセットの追加と編集](/help/assets/managing-viewer-presets.md)を参照してください。
 
-1. [スピンセットの表示](#viewing-spin-sets).
+1. [スピンセットの表示](#viewing-spin-sets)。
 
    バッチセットプリセットを使用して作成したセットを表示したり、それらのセットにアクセスしたりするには、3 つの方法があります（バッチセットプリセットを使用して作成したセットは、ユーザーインターフェイスに表示&#x200B;*されません*）。
 
-1. [スピンセットのプレビュー](/help/assets/previewing-assets.md).
+1. [スピンセットのプレビュー](/help/assets/previewing-assets.md)。
 
    スピンセットを選択すると、プレビューできます。スピンセットを回転します。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左パネルのドロップダウンメニューにあります。
 
-1. [スピンセットの公開](/help/assets/publishing-dynamicmedia-assets.md).
+1. [スピンセットの公開](/help/assets/publishing-dynamicmedia-assets.md)。
 
    スピンセットを公開すると、URL と埋め込み文字列がアクティベートされます。また、[ビューアプリセットを公開](/help/assets/managing-viewer-presets.md)する必要があります。
 
@@ -88,9 +88,9 @@ ht-degree: 98%
 
    詳しくは、[Web ページへのスピンセットのリンク](/help/assets/linking-urls-to-yourwebapplication.md)と[ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-必要に応じて、 [スピンセットの編集](#editing-spin-sets). また、[スピンセットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および変更することもできます。
+必要に応じて、[スピンセットを編集](#editing-spin-sets)することができます。また、[スピンセットのプロパティ](/help/assets/manage-assets.md#editing-properties)を表示および変更することもできます。
 
-## スピンセットのアセットのアップロード {#uploading-assets-for-spin-sets}
+## スピンセットのアセットをアップロード {#uploading-assets-for-spin-sets}
 
 1 次元スピンセットを使用するには、少なくとも 8～12 枚の写真が必要です。2 次元スピンセットの場合は少なくとも 16～24 枚必要になります。アイテムが回転したり反転したりしているように見せるには、一定の間隔でアイテムを撮影する必要があります。例えば、1 次元スピンセットに 12 個の写真を含める場合、アイテムを 30 度ずつ（360/12）回転させながら写真を撮影します。
 
