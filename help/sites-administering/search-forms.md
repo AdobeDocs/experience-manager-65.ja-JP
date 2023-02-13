@@ -7,7 +7,7 @@ topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2042'
 ht-degree: 100%
 
@@ -329,11 +329,11 @@ ht-degree: 100%
 >[!NOTE]
 >
 >* 一般的な検索用の述語は、次の場所で定義されています。
->  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
+   >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
 >* siteadmin（クラシック UI）にのみ関連する検索用の述語は、次の場所にあります。
->  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
->   * これらは非推奨であり、後方互換性のためにのみ使用できます。
+   >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
+   >   * これらは非推奨であり、後方互換性のためにのみ使用できます。
 >
 >この情報は参照用です。`/libs` には変更を加えないでください。
 
