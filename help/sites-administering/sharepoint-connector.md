@@ -12,9 +12,9 @@ discoiquuid: 907316d1-3d23-4c46-bccb-bad6fe1bd1bb
 docset: aem65
 exl-id: 10ea7d2e-6e44-4d5c-a2b2-63c73b18f172
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1562'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 99%
 
 SharePoint コネクターでは次の基本機能がサポートされています。
 
-* SharePoint からのコンテンツおよびメタデータの読み取り.
+* SharePoint からのコンテンツおよびメタデータの読み取り。
 * ネイティブな SharePoint 認証および承認を適用することによる、アクセスされるコンテンツの SharePoint セキュリティ設定の確認
 * コンテンツファインダーを使用したコンテンツ統合
 * 外部リソースなどの AEM コンポーネントを使用した SharePoint 画像およびビデオの表示
@@ -205,7 +205,7 @@ Microsoft SharePoint 2010 および Microsoft SharePoint 2013 のバージョン
 [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) に移動します。
 
 1. OSGI／設定をクリックします。
-1. 「Day JCR Connector for Microsoft Sharepoint」を検索
+1. 「Day JCR Connector for Microsoft Sharepoint」を探します。
 1. 「設定値を編集」をクリックします。
 1. 「Sharepoint Connection Factory」の値として「com.day.crx.spi.sharepoint.security.FormsBasedAuthenticationConnectionFactory」を設定します。
 1. 「**保存**」をクリックします。
