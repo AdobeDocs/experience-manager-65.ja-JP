@@ -4,9 +4,9 @@ description: AEM 6.5 の同一サイト cookie サポート
 topic-tags: security
 exl-id: e1616385-0855-4f70-b787-b01701929bbc
 source-git-commit: f7a4907ca6ce8ecaff9ef1fdf99ec0951ff497e0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '219'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 91%
 
 この設定のデフォルト値（`SameSite=Lax`）により、AEM インスタンスまたはサービス間の認証が機能しないことがあります。これは、これらのサービスのドメインや URL 構造が、この cookie ポリシーの制約に該当しない可能性があるためです。
 
-この問題を回避するには、 `SameSite` cookie 属性を `None` ログイントークン用。
+これを回避するには、ログイントークンの `SameSite` cookie 属性を `None` に設定する必要があります。
 
 >[!CAUTION]
 >
