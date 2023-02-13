@@ -11,15 +11,15 @@ discoiquuid: 96a77980-4213-4779-a540-00905ea8f7e3
 docset: aem65
 exl-id: 72f0f8e3-e70b-4f78-aa0e-b31768b536f7
 source-git-commit: 66631fd0813f623f3321072fc00fd90f7fa33d21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1531'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# 分析フレームワークを使用したCloud Service {#analyticsusingcloudframework}
+# Cloud Service フレームワークを使用した Analytics {#analyticsusingcloudframework}
 
-AEM Forms は、 Analytics と統合されているため、発行済みのフォームとドキュメントのパフォーマンス指標を取得および追跡できます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
+AEM Forms は、Analytics と統合されているため、公開中のフォームとドキュメントのパフォーマンス指標を取得およびトラックできます。これらの指標分析の意図は、フォームやドキュメントをさらに有効利用するために必要な変更に関して十分な情報に基づいた決定を行えるよう支援することです。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ AEM Forms は、 Analytics と統合されているため、発行済みのフ�
 >
 >アドオンパッケージの他に、Adobe Analytics のアカウントと AEM インスタンスでの管理者権限が必要になります。解決方法について詳しくは、「[Adobe Analytics](https://www.adobe.com/jp/solutions/digital-analytics.html)」を参照してください。
 
-また、Launch を使用して分析をAdobeできます。 AEM Formsを Launch と統合する方法について詳しくは、Adobe [AdobeLaunch を使用した Analytics](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md).
+Adobe Launch を使用して分析することもできます。 AEM Forms を Adobe Launch と統合する方法について詳しくは、[Adobe Launch を使用した分析](/help/forms/using/integrate-aem-forms-with-adobe-analytics.md)を参照してください。
 
 ## 概要 {#overview}
 
