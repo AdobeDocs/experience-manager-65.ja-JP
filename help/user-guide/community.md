@@ -5,9 +5,9 @@ description: AEM コミュニティ
 seo-description: The AEM Community
 exl-id: 2e73572c-78de-4c20-ada8-d95f7fd16dc9
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ AEM コミュニティには世界中の何千ものメンバーが参加して�
 
 メンバー向けのイベントが多数あります。毎月、AEM の特定のトピックに関してエキスパートに質問できるセッションを開催しています。また、[Immerse](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__fb7p-the_immerseagendai.html) や [Adobe Summit](https://summit.adobe.com/na/?promoid=6JMR7JQY&amp;mv=other)、さらにはお住まいの地域のユーザーグループイベントなど、主要なイベントについてもお知らせいたします。
 
-[今すぐ AEM コミュニティにアクセスして、どのようなイベントがおこなわれているかを確認する](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)ことをお勧めします。
+[今すぐ AEM コミュニティにアクセスして、どのようなイベントがおこなわれているかを確認する](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)ことをお勧めします。
 
 ## コードサンプルを入手して役立てることはできますか？ {#code-samples}
 
