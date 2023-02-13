@@ -7,9 +7,9 @@ role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
 source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2753'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -222,7 +222,7 @@ XMP の書き戻しにより、[!DNL Experience Manager] でメタデータが�
 * アセットのバージョンが作成されます
 * [!UICONTROL 「DAM アセットの更新」がアセットに対して実行されます]
 
-上記の結果により、大量のリソースが消費されます。したがって、Adobeでは、必要がない場合、XMPの書き戻しを無効にすることをお勧めします。 詳しくは、 [XMPの書き戻し](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html?lang=ja).
+上記の結果により、大量のリソースが消費されます。このため、アドビでは、XMP の書き戻しが不要な場合は無効にすることをお勧めします。詳しくは、[XMP の書き戻し](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/xmp-writeback.html?lang=ja)を参照してください。
 
 ワークフロー実行フラグがチェックされている場合、大量のメタデータを読み込むと、リソースを集中的に使用する XMP 書き戻しアクティビティが発生するおそれがあります。このような読み込みは、他のユーザーのパフォーマンスに影響しないように、サーバー使用率が低いときに計画します。
 
@@ -242,7 +242,7 @@ Sites の実装などで、アセットを多数のパブリッシュインス�
 
 ## 検索インデックス {#search-indexes}
 
-[最新のサービスパック](/help/release-notes/release-notes.md)およびパフォーマンス関連のホットフィックスをインストールしてください。多くの場合、これらはシステムインデックスの更新を含みます。一部のインデックスの最適化については、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=en)を参照してください。
+[最新のサービスパック](/help/release-notes/release-notes.md)およびパフォーマンス関連のホットフィックスをインストールしてください。多くの場合、これらはシステムインデックスの更新を含みます。一部のインデックスの最適化については、[パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/performance-tuning-guidelines.html?lang=ja)を参照してください。
 
 頻繁に実行するクエリにカスタムインデックスを作成します。詳しくは、[スロークエリの分析手法（英語）](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html)と[カスタムインデックスの作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。クエリやインデックスについての追加のインサイトやベストプラクティスについては、[クエリとインデックスに関するベストプラクティス](/help/sites-deploying/best-practices-for-queries-and-indexing.md) を参照してください。
 
@@ -281,7 +281,7 @@ PDF ドキュメント内のテキストを検索するなど、アセットの�
 お客様からのネットワークのパフォーマンスに関するすべての懸念については、次のタスクを実行してください。
 
 * お客様のネットワーク内からネットワークのパフォーマンスをテストする
-* アドビのネットワーク内からネットワークのパフォーマンスをテストする。AMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
+* アドビのネットワーク内からネットワークのパフォーマンスをテストするAMS ユーザーの場合、CSE を使用してアドビのネットワーク内からテストしてください。
 * 別のアクセスポイントからネットワークのパフォーマンスをテストする
 * ネットワークのベンチマークツールを使用する
 * ディスパッチャーに対してテストする
