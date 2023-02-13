@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 exl-id: b138f6d1-0870-4071-b96e-4a759ad9a76e
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3802'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ URL に関して一般的に認められているベストプラクティスが�
 
 AEM プロジェクトで URL を評価するときには、次のことを確認してください。
 
-「ユーザーがこの URL を目にしたがって、ページのコンテンツを見なかった場合、そのページの内容を説明できますか？」
+「ユーザーが URL を目にしたときに、ページのコンテンツを見なくても、そのページの内容を説明できますか？」
 
 答えが「はい」であれば、その URL は検索エンジンに効果があります。
 
@@ -258,7 +258,7 @@ AEM で受信要求のマッピングまたはページ上の URL の書き換�
 
    * **Apache Sling Resource Resolver Factory**
 
-      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
+      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`
    URL を短縮するために必要なマッピングを正規表現として構築した後、ビルドに含まれている OsgiConfignode の `config.publish` でこれらの設定を定義することをお勧めします。
 
    `/etc/map`マッピングを定義する代わりに、プロパティ **URL Mappings**（`resource.resolver.mapping`）に直接割り当てることができます。
