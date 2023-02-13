@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: 8b0297a1-d922-410f-9aaf-3a6b87e11dc0
 exl-id: 65b2029e-03c9-4df4-8579-2b15dbee1035
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '629'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 93%
 
 ## 完了の定義に基づいて作業する {#work-according-to-a-definition-of-done}
 
-各チームは、何を意味するかについて異なる定義を持っていますが、受け入れる前に、ストーリーが定義された条件を満たすようにすることが重要です。
+チームごとに「完了」の定義は異なりますが、定義を統一し、状況が定義済みの条件を満たしていることを確認してから受け入れることが重要です。
 
 次に、チームが一般的に指定しているいくつかの条件を示します。
 
@@ -64,7 +64,7 @@ Jackalope や Prosper などのカスタムフレームワークを使用する�
 
 ### ボーイスカウトのルールを守る {#follow-the-boy-scout-rule}
 
-男の子Scoutには規則があります。「見つけたよりはましにしておけ」 開発チームのメンバー全員がこのルールを守り、散らかっていたらそのままにしないで片付けるようにすると、コードは継続的に改善されます。
+ボーイスカウトには、「来たときよりも美しく」というルールがあります。開発チームのメンバー全員がこのルールを守り、散らかっていたらそのままにしないで片付けるようにすると、コードは継続的に改善されます。
 
 ### YAGNI 機能を導入しない {#avoid-implementing-yagni-features}
 
