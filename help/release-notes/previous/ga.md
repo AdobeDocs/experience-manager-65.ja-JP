@@ -3,9 +3,9 @@ title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4697'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 74%
 | バージョン | 6.5 |
 | 種類 | メジャーリリース |
 | 一般公開日 | 2019年4月8日（PT） |
-| 推奨されるアップデート | 詳しくは、 [AEM の最新のアップデート](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=en)を参照してください。 |
+| 推奨されるアップデート | 詳しくは、 [AEM の最新のアップデート](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)を参照してください。 |
 
 ### 参考情報 {#trivia}
 
-このバージョンののリリースサイクル [!DNL Adobe Experience Manager] 2018 年 4 月 4 日に開始し、23 回の品質保証とバグ修正を繰り返し、2019 年 3 月 28 日に終了しました。 このリリースで修正された機能強化や新機能を含む、お客様関連の問題の総数は 1345 です。
+このバージョンの [!DNL Adobe Experience Manager] のリリースサイクルは、2018年4月4日（PT）に開始し、23 回の品質保証とバグ修正を繰り返し、2019年3月28日（PT）に終了しました。このリリースで修正された、機能強化と新機能を含むお客様関連の問題の総数は 1345 件です。
 
 [!DNL Adobe Experience Manager] 6.5 は、2019年4月8日（PT）に一般公開されました。
 
@@ -30,51 +30,51 @@ ht-degree: 74%
 
 ## 新機能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5 は、[!DNL Adobe Experience Manager] 6.4 コードベースに対するアップグレードリリースです。新機能と拡張機能、主なお客様向けの修正、優先度の高いお客様向けの機能強化、製品の安定化に向けた一般的なバグ修正を提供します。 また、[!DNL Adobe Experience Manager] 6.4 の SP4 までのサービスパックリリースも含まれています。
+[!DNL Adobe Experience Manager] 6.5 は、[!DNL Adobe Experience Manager] 6.4 コードベースに対するアップグレードリリースです。新機能と強化された機能、お客様向けの重要な修正、お客様向けの優先順位の高い機能強化、製品の安定性向上のための全般的なバグ修正が加えられています。また、[!DNL Adobe Experience Manager] 6.4 の SP4 までのサービスパックリリースも含まれています。
 
 次のリストはその概要です。詳細については以降のページを参照してください。
 
 ### [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
-のプラットフォーム [!DNL Adobe Experience Manager] 6.5 OSGi ベースのフレームワーク（Apache Sling および Apache Felix）の更新バージョンと Java™ Content Repository の上に構築：Apache Jackrabbit Oak 1.10.2.
+[!DNL Adobe Experience Manager] 6.5 のプラットフォームは、アップデートバージョンの OSGi ベースのフレームワーク（Apache Sling および Apache Felix）と Java™ コンテンツリポジトリの Apache Jackrabbit Oak 1.10.2 上に構築されています。
 
 Quickstart は、サーブレットエンジンとして Eclipse Jetty 9.4.15 を使用します。
 
-#### Java™サポート  {#java-support}
+#### Java™ サポート  {#java-support}
 
-* Java™ 11 の新しいサポートと、既にサポートされている Java™ 8。
+* 既にサポートされている Java™ 8 に加えて、Java™ 11 を新しくサポートします。
 * 最適なパフォーマンスを得るには、デフォルトの GC 値を他の値に置き換えてください。詳しくは、[インストールとアップデート](/help/sites-deploying/custom-standalone-install.md)の節を参照してください。
-* Java™ 11 および Java™ 8 のメンテナンスアップデートは、AdobeがAEM関連のプロジェクトでのお客様向けの使用を目的として、Oracleから公開されない場合に配布されます。
+* Java™ 11 および Java™ 8 のメンテナンスアップデートが Oracle から公開されない場合は、AEM 関連プロジェクトで使用するお客様向けにアドビが配布します。
 
-#### Java™開発 {#java-development}
+#### Java™ の開発 {#java-development}
 
-* 現在 [Uberjar の 2 つのバージョン](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)：非推奨とマークされていないパブリックインターフェイスを含む推奨バージョン、および非推奨とマークされたインターフェイスを含むバージョン。
+* [Uberjar の 2 つのバージョン](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)（廃止予定としてマークされていないパブリックインターフェイスを使用した推奨バージョンと、廃止予定としてマークされているインターフェイスを含むバージョン）がリリースされました。
 
 #### ユーザーインターフェイス {#user-interface}
 
 UI に対して様々な機能強化がおこなわれ、生産性と使いやすさが向上しました。
 
 * ユーザーとグループの新しい権限管理 UI
-* 列表示では、画面に表示されるエントリのみが読み込まれ、ユーザーがスクロールを開始したときにのみ読み込まれるようになりました。 リスト表示とカード表示は、6.0 以降に既に行われています（6.4 で改善されました）。
+* 列表示では、画面上に表示されるエントリのみを読み込み、それ以外のエントリはユーザーがスクロールを開始した場合にのみ読み込まれるようになりました。AEM 6.0 以降のリストおよびカード表示には、この機能が既に実装されています（AEM 6.4 で改善されました）。
 * 列表示には、該当する場合、ページやアセットのワークフローステータスが含まれるようになりました。
 * 「[すべてを選択](/help/sites-authoring/basic-handling.md#select-all)」アクションを使用すると、同じフォルダー内のすべてのページやアセットに対してアクションを手軽に実行することができます。
 * 「[すべてを選択](/help/sites-authoring/basic-handling.md#select-all)」アクションは、読み込まれたページやアセットだけでなく、すべてのページやアセットに対してアクションの実行を試みます。アクションがバルクアクションを処理するようにアップグレードされていない場合、警告ダイアログが表示されます。
 
 >[!CAUTION]
 >
->クラシック UI の機能がさらに強化される予定はありません。AEM 6.5 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は非推奨の間も引き続き完全にサポートされます。 [詳細情報](/help/sites-deploying/ui-recommendations.md)。
+>クラシック UI の機能がさらに強化される予定はありません。AEM 6.5 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は非推奨になっても引き続き完全にサポートされます。[詳細情報](/help/sites-deploying/ui-recommendations.md)。
 
 #### 検索およびインデックス作成 {#indexing-and-search}
 
-* Oak の検索で動的ファセットをサポートするようになりました。例えば、アセット検索のフィルターレールには、結果の推定数が表示されます。
+* Oak の検索で動的ファセットをサポートするようになりました。例えば、アセット検索のフィルターパネルに結果の予測件数が表示されます。
 * QueryBuilder は、動的ファセットを使用して結果を返すように拡張されました。
 
 #### アップグレード {#upgrade}
 
-* AEM 6.2、6.3、6.4 を実行しているお客様は、AEM 6.5 への直接インプレースアップグレードがサポートされています。インプレースアップグレードを使用するお客様は、まず 6.4 にアップグレードする必要があります。 その後、6.5 にアップグレードするか、インスタンス間で直接AEM 6.5 にコンテンツを転送する方法でアップグレードします。
+* AEM 6.5 への直接インプレースアップグレードは、AEM 6.2、6.3、6.4 を使用しているお客様に対してサポートされています。5.x または 6.0／6.1 を使用しているお客様がインプレースアップグレードを使用するには、まず 6.4 にアップグレードする必要があります。その後、6.5 にアップグレードするか、インスタンス間のコンテンツの転送を通じて AEM 6.5 に直接アップグレードします。
 * アップグレード手順は 6.5 でもほぼ変わりません。
-* アドビでは、6.4 で導入された後方互換性、アップグレードの複雑性の評価、持続可能なアップグレードの機能を引き続きサポートします。必要に応じて、これらの領域にバージョン固有の更新がおこなわれました。
-* パターン検出のパッケージ化がシンプルになりました。 6.5 へのアップグレードを評価するパッケージが 1 つあり、利用可能なソースバージョンに対して 1 つあります。
+* 6.4 で導入された下位互換性、アップグレードの複雑さの評価、持続可能なアップグレードの機能を引き続きサポートしています。必要に応じて、これらの分野でバージョン固有の更新が行われてきました。
+* パターン検出のパッケージ化がシンプルになりました。使用可能なソースバージョンの 6.5 へのアップグレードを評価するパッケージが 1 つあります。
 * アップグレードの手順について詳しくは、 [アップグレードドキュメント](/help/sites-deploying/upgrade.md)を参照してください。
 
 #### プロジェクトとワークフロー {#projects-and-workflows}
@@ -83,12 +83,12 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 #### リポジトリ {#repository}
 
-* Adobe Experience Manager 6.5 の基盤は、OSGi ベースのフレームワーク（Apache Sling および Apache Felix）の更新バージョンと Java™ Content Repository の上に構築されています。Apache Jackrabbit Oak 1.10.2.
+* Adobe Experience Manager 6.5 の基盤は、アップデートバージョンの OSGi ベースのフレームワーク（Apache Sling および Apache Felix）と Java™ コンテンツリポジトリの Apache Jackrabbit Oak 1.10.2 上に構築されています。
 * 修正された問題の概要については、[Apache Jackrabbit Oak Jira v. 1.10.0](https://archive.apache.org/dist/jackrabbit/oak/1.10.0/RELEASE-NOTES.txt)、[Apache Jackrabbit Oak Jira v. 1.10.1](https://archive.apache.org/dist/jackrabbit/oak/1.10.1/RELEASE-NOTES.txt) および [Apache Jackrabbit Oak Jira v. 1.10.2](https://archive.apache.org/dist/jackrabbit/oak/1.10.2/RELEASE-NOTES.txt) を参照してください。
 
 >[!CAUTION]
 >
->AEM 6.3 以降に存在する Oak Segment Tar の新しいバージョンには、リポジトリの移行が必要です。 この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの格納機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
+>AEM 6.3 以降の新しいバージョンの Oak セグメント Tar は、リポジトリを移行する必要があります。この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの格納機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
 
 #### OSGi {#osgi}
 
@@ -96,7 +96,7 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 
 #### セキュリティ {#security}
 
-* 管理者ユーザーのパスワードの有効期限を追加しました。
+* 管理者ユーザーパスワードの有効期限が追加されました。
 
 #### Web サーバー {#web-server}
 
@@ -111,21 +111,21 @@ UI に対して様々な機能強化がおこなわれ、生産性と使いや�
 SPA のサポートは AEM 6.4 SP2 の一部として導入されたものですが、AEM 6.5 ではさらに以下が可能になりました。
 
 * テンプレートエディターを使用して、AEM で編集可能な SPA の部分を編集および設定できます。
-* マルチサイト管理を使用して、国、フランチャイズまたはホワイトラベルの付いたSPAエクスペリエンスを作成する
+* マルチサイト管理を使用して国ごと、フランチャイズごと、またはホワイトレーベルの SPA エクスペリエンスを作成できます
 
 #### ヘッドレスコンテンツ管理 {#headless-content-management}
 
-AEMは、様々な形式やスタックの様々なレベルからコンテンツを提供できます。 一部は、2008 年以降、](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)Sling GET[ および ](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)POST Servlet[ で機能しています。コンテンツサービス（[Sling Model エクスポーター](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=en)）は AEM 6.3 で導入されたもので、AEM SJ SDK で単一ページアプリの改善に使用されている方法です。[HTTP API for Assets](/help/assets/mac-api-assets.md) は、AEM 6.5 向けに拡張された CRUD API です。
+AEM では、多様な形式で様々なスタックレベルからコンテンツを提供できます。一部は、2008 年以降、](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html)Sling GET[ および ](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html)POST Servlet[ で機能しています。コンテンツサービス（[Sling Model エクスポーター](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)）は AEM 6.3 で導入されたもので、AEM SJ SDK で単一ページアプリの改善に使用されている方法です。[HTTP API for Assets](/help/assets/mac-api-assets.md) は、AEM 6.5 向けに拡張された CRUD API です。
 
 新しい HTTP API の機能は次のとおりです。
 
-* 追加済み [アセットの HTTP API に対するコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md) フラグメントを作成、更新、読み取り、削除するには、次の手順に従います。
+* [Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになり、フラグメントの作成、更新、読み取り、削除が可能になりました。
 * [コンテンツフラグメントリストのコアコンポーネント](https://www.aemcomponents.dev)でコンテンツサービスを通じてコンテンツフラグメントのリストを公開します。
 * コンポーネントごとにコンテンツサービスのデフォルト JSON 出力を表示する[コアコンポーネントライブラリ](https://www.aemcomponents.dev)
 
 #### Screens アドオン {#screens-add-on}
 
-インタラクティブなキオスクからデジタルサイネージに至るまで、すべてのデジタルディスプレイでエクスペリエンスを効率的に設計、配信および最適化します。
+インタラクティブなキオスク端末からデジタルサイネージに至るまで、あらゆるデジタル表示でのエクスペリエンスを効率良くデザイン、配信、最適化します。
 
 * コンテンツ再利用の向上により、デジタルと実店舗の区別なくエクスペリエンスとコンテンツを統一できます。
 * ローンチのサポートにより、オーサリングおよび承認／公開ワークフローを効率化します。
@@ -141,11 +141,11 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### コンポーネントとテンプレートの開発 {#component-amp-template-development}
 
-* 新規プロジェクト用の Maven プロジェクトアーキタイプ 18 以降 ( [リリースノート用の GitHub](https://github.com/adobe/aem-project-archetype/releases).
-* 新しいプロジェクト用の単一ページアプリ Maven プロジェクトアーキタイプ 1.0.6 以降 ( [リリースノート用の GitHub](https://github.com/adobe/aem-spa-project-archetype/releases).
-* HTL バージョン 1.4( [リリースノート用の GitHub](https://github.com/adobe/htl-spec/releases/tag/1.4).
+* 新規プロジェクト用の Maven プロジェクトアーキタイプ 18 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-project-archetype/releases) を参照してください。
+* 新規プロジェクト用の単一ページアプリ Maven プロジェクトアーキタイプ 1.0.6 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-spa-project-archetype/releases) を参照してください。
+* HTL バージョン 1.4 については、[リリースノートの GitHub](https://github.com/adobe/htl-spec/releases/tag/1.4) を参照してください。
 
-   * 文字列、配列およびオブジェクトに対する「in」演算子：
+   * 文字列、配列、オブジェクトの「in」演算子
 
       ```html
       ${'a' in 'abc’}
@@ -169,15 +169,15 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
    * 負の数のサポート
 
-* コアコンポーネント 2.3.2 以降 ( [リリースノート用の GitHub](https://github.com/adobe/aem-core-wcm-components/releases).
-* レイアウトコンテナのグリッドシステム ( [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid).
+* コアコンポーネント 2.3.2 以上については、[リリースノートの GitHub](https://github.com/adobe/aem-core-wcm-components/releases) を参照してください。
+* レイアウトコンテナのグリッドシステムについては、[GitHub](https://github.com/Adobe-Marketing-Cloud/aem-responsivegrid) を参照してください。
 * クライアントライブラリマネージャー：JavaScript クライアントライブラリの軽量化に合わせて Google Closure Compiler がデフォルトになり（以前のデフォルトは Yahoo YUI でした）、Google Closure Compiler がバージョン v20190121 に更新されました。
 * テンプレートエディターとポリシー
 
    * JS SDK を使用している単一ページアプリのテンプレートを作成および編集できます（SPA エディターとも呼ばれます）。
 
-* リファレンスサイト We.Retail 4.0( [リリースノート用の GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases).
-* 最新のエディタ機能を使用するために既存のサイトをアップグレードするツールキットについては、 [GitHub リポジトリ](https://github.com/adobe/aem-modernize-tools)
+* 参照サイト We.Retail 4.0 については、[リリースノートの GitHub](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases) を参照してください。
+* 既存のサイトをアップグレードして最新のエディター機能を使用するためのツールキットについては、[Github リポジトリ](https://github.com/adobe/aem-modernize-tools)を参照してください。
 
 >[!CAUTION]
 >
@@ -186,35 +186,35 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 #### サイト管理 {#site-administration}
 
 * [参照](/help/sites-authoring/author-environment-tools.md#references)レールには、選択したページを参照する内部リンクを一覧表示する新しいセクションがあります。これは、ページをオフラインで取得したり削除することが想定される場合や、オフラインで取得する前に調整する必要があるページを確認する場合に便利です。
-* この [リスト表示](/help/sites-authoring/basic-handling.md#list-view) には、ページがワークフロー内にあるときのステータスを示す新しいワークフロー列があります。
+* [リスト表示](/help/sites-authoring/basic-handling.md#list-view)には、ページがワークフローに含まれている場合にステータスを表示する新しいワークフロー列があります。
 * [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)で、ページにサムネールを割り当てるときに既存のアセットを参照できるようになりました（「サムネール」タブ）。
 
 #### ページエディター {#page-editor}
 
-* JS SDK(SPA Editor とも呼ばれます ) を使用する React およびAngularのクライアントサイドコンポーネントを使用して構築された、シングルページアプリエクスペリエンスのコンテキスト内編集と構成を可能にします
+* JS SDK を使用する React および Angular クライアント側コンポーネントで構築された単一ページアプリエクスペリエンスのコンテキスト内編集および作成が可能になりました（SPA エディターとも呼ばれます）。
 * 基礎モードは、ページに基礎モードが設定されている場合にのみ表示されます。
 
 #### コンテンツフラグメントとエディター {#content-fragments-amp-editor}
 
-* 新規 [注釈](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations) コンテンツフラグメントエディターのパネルを使用して、一般的なコメントを作成したり、テキスト内でおこなわれたコメントを表示したりできます（タイムラインパネルにも表示されます）。
-* 複数行テキスト要素のデフォルトコンテンツタイプを [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md) シンプルテキスト、リッチテキストまたは Markdown へ
+* 全般的なコメントを書き込んだり、テキスト内のコメントを表示（タイムラインレールにも表示）するための新しい[注釈](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations)パネルがコンテンツフラグメントエディターに追加されました。
+* [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)で、複数行テキスト要素のデフォルトのコンテンツタイプを簡単なテキスト、リッチテキスト、マークダウンのいずれかに設定できます。
 * RTE（フルスクリーン表示）でテキストを選択して、[コメント／注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)を追加できます。
 * 参照レールでコンテンツフラグメント並列に表示して、[バージョンを比較](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)できるようになりました。
 * アセットのダウンロードレポートにコンテンツフラグメントが適宜表示されるようになりました。
-* /api.json を通じて、[Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになりました。コンテンツフラグメントの作成、更新、読み取り、削除をおこなうための API があります。
+* /api.json を通じて、[Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになりました。コンテンツフラグメントの作成、更新、読み取りおよび削除のための API が用意されています。
 
 #### エクスペリエンスフラグメント {#experience-fragments}
 
 * [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)のインデックス作成を改善して、フラグメントの使用ページの検索でコンテンツが見つかるようになりました。。
-* この [Target に書き出し](/help/sites-administering/experience-fragments-target.md) 「 」オプションを使用すると、エクスペリエンスフラグメントを JSON( デフォルトは「HTML」) またはその両方として送信できるようになりました。
+* 「[Adobe Target に書き出し](/help/sites-administering/experience-fragments-target.md)」オプションで、エクスペリエンスフラグメントを JSON（デフォルトは HTML）またはその両方として送信できるようになりました。
 
 #### 翻訳 {#translation}
 
 * プロジェクトマスターを使用して、翻訳プロジェクトを手軽に作成できます。。
-* 翻訳ジョブをデフォルトで承認済みステータスに設定することで、翻訳プロジェクトの実行を簡単にします。
-* サードパーティの翻訳メモリの変更を使用して翻訳済みページを更新することを許可します。
-* JSON 形式での翻訳ジョブの書き出しを許可します。
-* V3 API を使用するようにMicrosoft®翻訳統合を更新しました。
+* 翻訳ジョブをデフォルトで承認済みステータスに設定することで、翻訳プロジェクトの実行を簡略化できます。
+* サードパーティ翻訳メモリの変更点に合わせて翻訳済みページを更新できます。
+* 翻訳ジョブを JSON 形式で書き出すことができます。
+* Microsoft Translation® との連携機能をアップデートして V3 API を使用します。
 
 #### マルチサイト管理（MSM） {#multi-site-management-msm}
 
@@ -242,18 +242,18 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 >* Target へのエクスペリエンスフラグメントのエクスポートを使用し、Target のコンソールでアクティビティを実行している場合、`at.js. 1.x` と `at.js 2.x` の両方をサポートしています。
 
 
-* Adobe Targetの統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
-* Adobe Target の `mbox.js` バージョン 63 が含まれています。Adobeでは、実装を `at.js` v1.x.
+* Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
+* Adobe Target の `mbox.js` バージョン 63 が含まれています。アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
 * `at.js` バージョン 1.5.0 が含まれるようになりました。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。Adobeでは、 [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して、AppMeasurement.js をサイトにプロビジョニングします。
+* `AppMeasurement.js` v1.8.0 が含まれています。[Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
-AEM 6.4 以降、コマース統合フレームワークの改善のリリースサイクルが早くなりました。詳しくは[こちら](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html)を参照してください。
+AEM 6.4 以降、コマース統合フレームワークの改善のリリースサイクルが早くなりました。詳しくは[こちら](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html?lang=ja)を参照してください。
 
 #### Communities アドオン {#communities-add-on}
 
@@ -266,7 +266,7 @@ AEM Communities では、登録ユーザーがユーザー生成コンテンツ�
 
 ![@メンションのサポート](/help/release-notes/assets/at-mentions.png)
 
-コミュニティユーザーは、姓、名またはユーザー名を検索して、誰かが自分に連絡を取ったか、注意を払う必要があるかを確認する必要はありません。 さらに、UGC 作成者は、問題に最もうまく対処し入力を追加できる特定の登録ユーザーからの応答を探すことができます。
+コミュニティユーザーは、自分の名、姓またはユーザー名を検索しなくても、誰かが自分に接触してきたかどうか、または誰かが自分の注意を引く必要があるのかどうかを確認できます。さらに、UGC 作成者は、問題に最もうまく対処し入力を追加できる特定の登録ユーザーからの応答を探すことができます。
 
 コミュニティ管理者は、コミュニティコンポーネントで&#x200B;**メンションを有効化**&#x200B;して、これらのコンポーネントの機能を登録ユーザーが使用できるようにする必要があります。
 
@@ -282,7 +282,7 @@ AEM Communities では、登録ユーザーがユーザー生成コンテンツ�
 
 [カスタムフィルター](/help/communities/moderation.md#custom-filters) が開発され、一括モデレート UI に追加できるようになりました。
 
-A [サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) これは、タグを介したフィルタリングを示しています。 [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter). このプロジェクトをベースに、類似のスタムフィルターを開発できます。
+タグによるフィルタリングの例を示す[サンプルプロジェクト](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter)を [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-communities-extensions/tree/master/aem-communities-moderation-filter) で入手できます。このプロジェクトをベースに、類似のカスタムフィルターを開発できます。
 
 ![カスタムフィルター](/help/release-notes/assets/custom-tag-filter.png)
 
@@ -314,7 +314,7 @@ AEM 6.5 Communities のイネーブルメント機能は、Shareable Content Obj
 ##### その他の機能強化 {#other-enhancements}
 
 * Solr 7 のサポート
-* AEM 6.5 Communities では、MSRP と DSRP の設定時に、Apache Solr 7.0 バージョンの検索プラットフォームをサポートしています。
+* AEM 6.5 Communities は、MSRP および DSRP の設定時に、Apache Solr 7.0 バージョンの検索プラットフォームに対応しています。
 
 ### [!DNL Experience Manager Assets] {#experience-manager-assets}
 
@@ -416,12 +416,12 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 ### [!DNL Adobe Experience Manager Forms] {#experience-manager-forms}
 
-AEM 6.5 Formsには、いくつかの新機能および機能強化が含まれています。 主なものは次のとおりです。
+AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられています。主なものは次のとおりです。
 
 * 送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できるトランザクションレポート
 * インタラクティブコミュニケーションのユーザビリティの向上
 * アダプティブフォームでのクラウドベースの電子署名
-* AEM Sitesシングルページアプリケーション (SPA) にアダプティブフォームとインタラクティブ通信を埋め込む。
+* AEM Sites の単一ページアプリケーション（SPA）へのアダプティブフォームやインタラクティブコミュニケーションの組み込み。
 * AEM ワークフローでの変数のサポート
 * インタラクティブコミュニケーションでのデータ表示パターンのサポート
 * アダプティブフォームおよびインタラクティブコミュニケーションテーブルの並べ替え
@@ -433,11 +433,11 @@ AEM 6.5 Formsには、いくつかの新機能および機能強化が含まれ�
 
 使用している AEM 6.5 インスタンスを Livefyre と統合できます。詳しくは、[Livefyre と AEM を統合する方法](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/livefyre.html?lang=ja-JP)を参照してください。
 
-### 顧客中心の開発を使用 {#leverage-customer-focused-development}
+### 顧客中心開発の使用 {#leverage-customer-focused-development}
 
-Adobeは、お客様が仕様、開発、およびテスト中に開発プロセスのすべての段階に貢献できる、お客様中心の開発モデルを使用しています。 このプロセスで貢献しているすべてのお客様およびパートナーに感謝します。
+アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-Adobeには、お客様中心のバグ解決と拡張リクエストの開発の収集、優先順位付け、追跡を可能にする手順とプロセスが用意されています。 [Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 この優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更がおこなわれました。
 
@@ -464,14 +464,14 @@ Adobeには、お客様中心のバグ解決と拡張リクエストの開発の
 
 * 様々なプラットフォーム向けの AEM Screens Players（[ダウンロード](https://download.macromedia.com/screens/)）
 
-* スマートコンテンツの言語モデル。英語がプレインストールされています。他の言語もダウンロードできます。
+* スマートコンテンツの言語モデル。英語は事前インストール済み。ほかに以下の言語がダウンロード可能
 
    * [ドイツ語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
    * [スペイン語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
    * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
    * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
-* AEM Modernize Tools Suite（ダイアログ変換ツールなど） （[GitHub プロジェクト](https://github.com/adobe/aem-modernize-tools)）
+* ダイアログ変換ツールなどの AEM Modernize Tool Suite（[GitHub プロジェクト](https://github.com/adobe/aem-modernize-tools)）
 
 **Assets**
 
@@ -512,13 +512,13 @@ Adobeには、お客様中心のバグ解決と拡張リクエストの開発の
 
 >[!NOTE]
 >
->Oracleは、OracleJava™ SE 製品の長期サポート (LTS) モデルに移行しました。 Java™ 9 と 10 は非 LTS リリースで、Oracle別。詳しくは、 [OracleJava™ SE サポート・ロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html). AdobeはAEMを実稼動環境でのみ実行するために、Java™の LTS リリースをサポートしています。 AEM 6.5 で使用する場合は、Java™ 11 をお勧めします。
+>Oracle は Oracle Java™ SE 製品の長期サポート（LTS）モデルに移行しました。Java™ 9 および 10 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/technetwork/java/eol-135779.html)を参照してください）。アドビでは、AEM を実稼働環境で実行するためにのみ、Java™ の LTS リリース版をサポートしています。AEM 6.5 で使用するバージョンとしては、Java™ 11 をお勧めします。
 
 ## 廃止される機能および削除された機能 {#deprecated-and-removed-features}
 
-Adobeは、製品の機能を絶えず評価し、機能をより強力なバージョンに置き換える予定や、将来の期待や拡張に備えるために、選択したパーツの再実装を決定しています。
+アドビでは、製品の機能を常時評価して、さらに強力なバージョンへの置き換えの計画や、将来の展望や拡張に備えた部分的な再実装の決定を継続的に行っています。
 
-[!DNL Adobe Experience Manager] 6.5 については、[廃止される機能および削除された機能のリスト](/help/release-notes/deprecated-removed-features.md)を参照してください。このページには、将来の変更に関する事前発表と、以前のリリースから更新するお客様向けの重要なお知らせも含まれています。
+[!DNL Adobe Experience Manager] 6.5 については、[廃止される機能および削除された機能のリスト](/help/release-notes/deprecated-removed-features.md)を参照してください。このページには、将来的に行われる変更の予告と、前のリリースからアップデートするお客様向けの重要な注意事項も含まれています。
 
 ## 既知の問題 {#known-issues}
 
@@ -559,25 +559,25 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
 ### Assets {#assets}
 
-* **検索：** 検索文字列の先頭にスペース ([OAK-4786](https://issues.apache.org/jira/browse/OAK-4786))
+* **検索：**&#x200B;検索文字列の先頭にスペースが含まれている場合、検索結果が返されません（[OAK-4786](https://issues.apache.org/jira/browse/OAK-4786)）
 * **フォルダーメタデータスキーマ**：選択ボタンを追加すると、「ID」フィールドと「値」フィールドが期待どおりにレンダリングされず、削除機能が機能しない（CQ-4261144）
 * アセット名の変更時に、アセット名に空白を使用できない（CQ-4266403）
 
 ### Forms {#forms}
 
-* AEM Formsを Linux®オペレーティングシステムにインストールすると、ハードウェアセキュリティモジュールを使用したデジタル署名が機能しない。 （CQ-4266721）
-* (AEM Forms on WebSphere®のみ ) **Forms Workflow** > **タスク検索** オプションを指定すると、 **管理者** と **ユーザー名** を検索条件として使用します。 （CQ-4266457）
+* AEM Forms が Linux® オペレーティングシステムにインストールされている場合、ハードウェアセキュリティモジュールを使用したデジタル署名が機能しません（CQ-4266721）
+* （WebSphere® 上の AEM Forms のみ）**ユーザー名**&#x200B;を検索条件として&#x200B;**管理者**&#x200B;を検索する場合、**Forms Workflow**／**タスク検索**&#x200B;を実行しても結果が返されません。（CQ-4266457）
 
-* AEM Formsが、JPEG圧縮を含む TIF およびTIFFファイルをPDFドキュメントに変換できない。 （CQ-4265972）
+* AEM Forms では、JPEG 圧縮の TIF および TIFF ファイルを PDF ドキュメントに変換できません（CQ-4265972）
 * **AEM Forms の移行**&#x200B;ページの「**AEM Forms アセットスキャナー**」オプションと「**レターからインタラクティブコミュニケーションへの移行**」オプションが機能しない（CQ-4266572）
 
-* (JBoss® 7 のみ ) 以前のバージョンからAEM 6.5 Formsにアップグレードし、デフォルトの送信プロセスまたはデフォルトのレンダリングプロセスのコピーを作成して使用したプロセス (.lca) がある場合、そのようなプロセス (.lca) を使用するHTML5 Formsは必要なアクションを実行できません。 （CQ-4243928）
+* （JBoss® 7のみ）AEM Forms を以前のバージョンから 6.5 にアップグレードするとき、以前のバージョンにデフォルトの送信プロセスまたはレンダリングプロセスをコピーして使用しているプロセス（.lca）があると、そのプロセス（.lca）を使用する HTML5 フォームが必要なアクションを実行できません。（CQ-4243928）
 * アダプティブフォームで、ルールエディターからフォームデータモデルサービスを呼び出して画像選択コンポーネントの値を動的に更新する場合、画像選択コンポーネントの値が更新されない（CQ-4254754）
-* AEM Forms Designer インストーラーを実行するには、32 ビット版の [Visual C++ 再頒布可能ランタイムパッケージ 2012](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) と [Visual C++ 再頒布可能ランタイムパッケージ 2013](https://support.microsoft.com/en-us/topic/update-for-visual-c-2013-and-visual-c-redistributable-package-5b2ac5ab-4139-8acc-08e2-9578ec9b2cf1) が必要です。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。（CQ-4265668）
+* AEM Forms Designer インストーラーを実行するには、32 ビット版の [Visual C++ 再頒布可能ランタイムパッケージ 2012](https://docs.microsoft.com/ja-JP/cpp/windows/latest-supported-vc-redist?view=msvc-170) と [Visual C++ 再頒布可能ランタイムパッケージ 2013](https://support.microsoft.com/ja-jp/topic/update-for-visual-c-2013-and-visual-c-redistributable-package-5b2ac5ab-4139-8acc-08e2-9578ec9b2cf1) が必要です。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。（CQ-4265668）
 
-* PDF ジェネレーターは、スマートカードベースの認証をサポートしていません。管理者が Windows サーバーでグループポリシー `Interactive Logon: Require Smart card` を有効にすると、既存のすべての PDF Generator のユーザーが無効になります。
+* PDF ジェネレーターは、スマートカードベースの認証をサポートしていません。管理者が Windows サーバーでグループポリシー `Interactive Logon: Require Smart card` を有効にすると、既存の PDF Generator のユーザーがすべて無効になります。
 
-* Dispatcher を通じて、フォームをホストするコンポーネントおよびパブリッシュインスタンスの値を動的に更新するようにアダプティブフォームを設定すると、フィールドの値を動的に更新する機能が動作しなくなります。 この問題を解決するには、パブリッシュインスタンスで CRXDE を開き、`/libs/fd/af/runtime/clientlibs/guideChartReducer` を検索して、次のプロパティを作成します。
+* コンポーネントの値を動的に更新するようにアダプティブフォームが設定されていて、そのフォームをホストするパブリッシュインスタンスに Dispatcher を通じてアクセスする場合、フィールドの値を動的に更新する機能が動作しなくなります。この問題を解決するには、パブリッシュインスタンスで CRXDE を開き、`/libs/fd/af/runtime/clientlibs/guideChartReducer` を検索して、次のプロパティを作成します。
 
    * 名前：allowProxy
    * タイプ：Boolean
@@ -590,7 +590,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
    このプロパティを設定すると、ランタイムフォルダー内のクライアントライブラリからプロキシにアクセスできます。（CQ-4268679）
 
 * AEM Forms を起動すると、`SAX Security Manager could not be setup` 警告が表示されます。
-* Apple iOSまたはAdobe Acrobat Reader 20.10.00を実行している iPadOS で、AEM Forms Document Security で保護されたPDFを開くとき
+* Adobe Acrobat Reader バージョン 20.10.00 を実行している Apple iOS または iPadOS で、AEM Forms Document Security で保護された PDF を開いたとき
 * 標準の HTML アップロードフィールドを含んだフォームを Apple iOS デバイスから送信すると、ファイルの内容が送信されず、送信先で 0 バイトのファイルを受信することがあります。Apple iOS 15.1 では、この問題を修正しています。
 
 ## 製品のダウンロードとサポート（制限付きサイト） {#product-download-and-support-restricted-sites}
