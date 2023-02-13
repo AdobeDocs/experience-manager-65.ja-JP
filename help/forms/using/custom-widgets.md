@@ -13,9 +13,9 @@ docset: aem65
 feature: Mobile Forms
 exl-id: 76bd1e2d-9e65-452c-8cef-123d28886a62
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '639'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -101,7 +101,7 @@ window.formBridge.registerConfig("widgetConfig",
 }*
 ```
 
-ここで、「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを表す jQuery CSS セレクターです。 以下には、さまざまなケースでの識別子の値が記載されています。
+ここで「identifier」は、特定のフィールド、特定のタイプの一連のフィールド、またはすべてのフィールドを現す jQuery CSS セレクターです。以下には、さまざまなケースでの識別子の値が記載されています。
 
 | 識別子のタイプ | 識別子 | 説明 |
 |---|---|---|
