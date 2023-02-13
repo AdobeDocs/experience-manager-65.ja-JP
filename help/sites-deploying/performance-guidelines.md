@@ -12,9 +12,9 @@ discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2976'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -462,7 +462,7 @@ TarMK の使用時に優れたパフォーマンスを実現するには、次�
   <tr>
    <td>Lucene インデックス設定</td>
    <td><p><code>CopyOnRead</code></p> <p><code>CopyOnWrite</code></p> <p><code>Prefetch Index Files</code></p> </td>
-   <td><p>Enabled</p> <p>有効</p> <p>有効</p> </td>
+   <td><p>Enabled</p> <p>Enabled</p> <p>Enabled</p> </td>
    <td>利用可能なパラメーターについて詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">このページ</a>を参照してください。</td>
   </tr>
   <tr>
@@ -480,7 +480,7 @@ TarMK の使用時に優れたパフォーマンスを実現するには、次�
   <tr>
    <td>DAM メタデータの書き戻し</td>
    <td><code>Transient Workflow</code></td>
-   <td>オン</td>
+   <td>checked</td>
    <td>このワークフローでは、元のバイナリへの XMP の書き戻しを管理し、JCR で最終変更日を設定します。</td>
   </tr>
  </tbody>
@@ -572,7 +572,7 @@ MongoMK の使用時に優れたパフォーマンスを実現するには、次
   <tr>
    <td>Lucene インデックス設定</td>
    <td><p><code>CopyOnRead</code></p> <p><code>CopyOnWrite</code></p> <p><code>Prefetch Index Files</code></p> </td>
-   <td><p>有効</p> <p>有効</p> <p>有効</p> </td>
+   <td><p>Enabled</p> <p>Enabled</p> <p>Enabled</p> </td>
    <td>利用可能なパラメーターについて詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">このページ</a>を参照してください。</td>
   </tr>
   <tr>
@@ -780,8 +780,8 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
   <tr>
    <td>ディスク</td>
    <td>SSD - 10k IOPS</td>
-   <td>SSD - 10,000 IOPS</td>
-   <td>SSD - 10,000 IOPS</td>
+   <td>SSD - 10k IOPS</td>
+   <td>SSD - 10k IOPS</td>
   </tr>
   <tr>
    <td>Java</td>
@@ -855,6 +855,6 @@ TarMK と MongoMK について詳しくは、[推奨されるデプロイメン�
 
    * カスタムインデックスには Lucene インデックスを使用してください。
 
-* **ワークフローをカスタマイズすると、パフォーマンスが大幅に向上します**&#x200B;例えば、「アセットを更新」ワークフローでビデオ手順を削除したり、使用されていないリスナーを無効にしたりする場合などです。
+* **ワークフローをカスタマイズすると、パフォーマンスが大幅に向上する場合があります**。例えば、「アセットを更新」のワークフローのビデオ手順を削除したり、使用されていないリスナーを無効化したりします。
 
 詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)のページも参照してください。
