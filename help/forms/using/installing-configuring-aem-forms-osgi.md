@@ -11,9 +11,9 @@ docset: aem65
 role: Admin
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1882'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -105,7 +105,7 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 
    * llibicu
 
-* インストール [Microsoft Visual Studio 2019 32 ビット再頒布可能パッケージ](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170).
+* [32 ビット版の Microsoft Visual Studio 2019 再頒布可能パッケージ](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。
 
 
 ## AEM Forms アドオンパッケージのインストール {#install-aem-forms-add-on-package}
@@ -127,7 +127,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### （Windows のみ）Visual Studio の再配布可能な自動インストール {#automatic-installation-visual-studio-redistributables}
 
-AEMインスタンスを管理者権限でインストールした場合、AEM Formsアドオンパッケージのインストール中に、32 ビット Visual Studio の再配布可能パッケージが自動的にインストールされます。
+AEM インスタンスを権限昇格モードでインストールすると、AEM Forms アドオンパッケージのインストール時に、32 ビット版の Visual Studio 再頒布可能パッケージ ファイルが自動的にインストールされます。
 
 Visual Studio の再配布可能パッケージが自動的にインストールされているかを評価するには、`/crx-repository/logs/` ディレクトリにある `error.log` ファイルを開きます。ログには次のメッセージが含まれます。
 
@@ -188,7 +188,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)」を参照してください。
+   ファイルを保存して閉じます。フィルターについて詳しくは、「[ディスパッチャードキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)」を参照してください。
 
 1. リファラーフィルターサービスの設定：
 
@@ -198,7 +198,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
 キャッシングは、データへのアクセスにかかる時間を短縮し、遅延を削減して I/O 速度を改善するメカニズムです。アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。これにより、アダプティブフォームのレンダリングの時間を短縮します。
 
-* アダプティブフォームのキャッシュを使用するときは、[AEM ディスパッチャー](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
+* アダプティブフォームのキャッシュを使用するときは、[AEM ディスパッチャー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja) を使用してアダプティブフォームのクライアントライブラリ（CSS および JavaScript）をキャッシュします。
 * カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 
 次の手順を実行してアダプティブフォームのキャッシュを設定します。
@@ -241,5 +241,5 @@ AEM Forms は Adobe Marketing Cloud ソリューションである Adobe Target 
 AEM Forms のデータ取得機能を使用するための環境を設定しました。この機能を使用するための手順は、次のとおりです。
 
 * [最初のアダプティブフォームを作成する](/help/forms/using/create-your-first-adaptive-form.md)
-* [最初の PDF フォームを作成する](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
+* [最初の PDF フォームを作成する](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)
 * [HTML5 フォームの概要](/help/forms/using/introduction.md)
