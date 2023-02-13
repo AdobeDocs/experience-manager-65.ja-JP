@@ -5,9 +5,9 @@ description: AEM を初めて使用するユーザー向けの質問、回答お
 seo-description: Questions, answers, and resources for users new to AEM
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '360'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -44,11 +44,11 @@ AEM 6.5 の最新ドキュメントはまさにここです。
 * [AEM 6.1](https://docs.adobe.com/docs/en/aem/6-1.html)**
 * [AEM 6.0](https://docs.adobe.com/docs/en/aem/6-0.html)**
 * [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
-* [AEM 5.6](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.5](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.4](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CQ 5.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
-* [CRX 2.3](https://helpx.adobe.com/experience-manager/aem-previous-versions.html)**
+* [AEM 5.6](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CQ 5.5](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CQ 5.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CQ 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
+* [CRX 2.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja#previous-updates)**
 
 ** アドビで正式にサポートされなくなったバージョンを示します。
 
@@ -59,4 +59,4 @@ AEM のすべてのリリースノートについては、次を参照してく�
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [AEM 6.5 で削除された機能および非推奨（廃止予定）になった機能のリスト](/help/release-notes/deprecated-removed-features.md)
 
-ご不明な点については、[AEM Community チーム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)にお問い合わせいただくか、Twitter ハンドル名 [@AdobeExpCare](https://twitter.com/adobeexpcare) でご質問ください。
+ご不明な点については、[AEM Community チーム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)にお問い合わせいただくか、Twitter ハンドル名 [@AdobeExpCare](https://twitter.com/adobeexpcare) でご質問ください。
