@@ -12,9 +12,9 @@ discoiquuid: 3d14837d-41a8-480a-83ba-392e32f84c65
 docset: aem65
 exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 source-git-commit: 7ceee6819618d785f04029b9ac1c6f763995b3ac
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2861'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -224,7 +224,7 @@ Web クライアントには、`cq:ClientLibraryFolder` ノードにアクセス
 
 #### アプリケーション専用のクライアントライブラリフォルダー {#app-specific-client-library-folders}
 
-アプリケーション関連のすべてのファイルは、`/apps` 内のアプリケーションフォルダーに格納することをお勧めします。Web サイト訪問者の `/apps` フォルダーに対するアクセスを拒否することもお勧めします。両方のベストプラクティスを満たすには、以下にクライアントライブラリフォルダーを作成します。 `/apps`を使用し、プロキシサーブレットを通じてアクセスできるようにします。詳しくは、 [クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet).
+アプリケーション関連のすべてのファイルは、`/apps` 内のアプリケーションフォルダーに格納することをお勧めします。Web サイト訪問者の `/apps` フォルダーに対するアクセスを拒否することもお勧めします。両方のベスト プラクティスを満たすには、`/apps` の下にクライアントライブラリフォルダーを作成し、[クライアントライブラリフォルダーの配置とプロキシクライアントライブラリサーブレットの使用](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet)で説明されているように、プロキシサーブレットを介してアクセスできるようにします。
 
 埋め込むクライアントライブラリフォルダーを識別するには、categories プロパティを使用します。ライブラリを埋め込むには、次のプロパティ属性を使用して、埋め込み `cq:ClientLibraryFolder` ノードにプロパティを追加します。
 
