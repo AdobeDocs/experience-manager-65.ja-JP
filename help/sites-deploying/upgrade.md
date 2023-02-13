@@ -11,9 +11,9 @@ targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
 source-git-commit: 02fc145d5ec1458d1f71a2f353b56b944a267f3e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '694'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -70,8 +70,8 @@ AEM では最近、アップグレードの計画時に役立つ、アップグ�
 
 最近の AEM バージョンの変更点について詳しくは、完全版のリリースノートを参照してください。
 
-* [一般リリースノート（Adobe Experience Manager 6.4）](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html?lang=ja)
-* [Adobe Experience Manager 6.5 最新の Service Pack リリースノート](/help/release-notes/release-notes.md)
+* [Adobe Experience Manager 6.4 の一般リリースノート](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/release-notes.html?lang=ja)
+* [Adobe Experience Manager 6.5 の最新のサービスパックリリースノート](/help/release-notes/release-notes.md)
 
 ## アップグレードの概要 {#upgrade-overview}
 
