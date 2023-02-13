@@ -5,9 +5,9 @@ description: AEM 6.5 の理解、インストール、管理および使用に�
 seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
 exl-id: 51788662-6214-408e-98d9-692950c366be
 source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '214'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 85%
 
 会話に参加する!
 
-* [AEM Sites フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)
+* [AEM Sites フォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 * [AEM Communities フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
 * [AEM Forms フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
 * [AEM Assets フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
