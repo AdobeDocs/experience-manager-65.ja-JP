@@ -10,9 +10,9 @@ discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
 source-git-commit: c3178eefb5aca3afea2f3df8381b52461247d6f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1518'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 
 1. [!DNL MySQL] データベース用の JDBC ドライバーを OSGi バンドルとしてインストールします。
 
-   1. ダウンロード [[!DNL MySQL] JDBC ドライバ OSGi バンドル](http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html).
+   1. [[!DNL MySQL] JDBC ドライバー OSGi バンドル](http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html)をダウンロードします。
    1. AEM [!DNL Forms] のオーサーインスタンスに管理者としてログインし、AEM Web コンソールのバンドルに移動します。デフォルトの URL は、[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles) です。
 
    1. **[!UICONTROL Install/Update]** をタップします。「[!UICONTROL バンドルのアップロード／インストール]」ダイアログが表示されます。
@@ -77,18 +77,18 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 
       >[!NOTE]
       >
-      > 次の場合に [!DNL MySQL] データベースがファイアウォール内にある場合、データベースホスト名はパブリック DNS ではありません。 データベースの IP アドレスを */etc/hosts* AEMホストマシンのファイル。
+      > [!DNL MySQL] データベースがファイアウォールの内側にある場合、データベースホスト名はパブリック DNS ではありません。データベースの IP アドレスを AEM ホストマシンの */etc/hosts* ファイルに追加する必要があります。
 
       * **Username**：データベースのユーザー名を指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
       * **Password**：データベースのパスワードを指定します。データベースとの接続を確立するには、JDBC ドライバーを有効にする必要があります。
 
       >[!NOTE]
       >
-      >AEM Formsは、の NT 認証をサポートしていません [!DNL MySQL]. AEM Web コンソール ( ) に移動します。 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) 「Apache Sling Connection Pooled Datasource」を検索します。「JDBC connection URI」プロパティの値を「integratedSecurity」に設定し、作成したユーザー名とパスワードを使用して、 [!DNL MySQL] データベース。
+      >AEM Forms は、[!DNL MySQL] の NT 認証をサポートしていません。[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) で AEM web コンソールに移動し、「Apache Sling Connection Pooled Datasource」を検索します。「JDBC 接続 URI」プロパティでは、「integratedSecurity」の値を False に設定し、作成したユーザー名とパスワードを使用して [!DNL MySQL] データベースに接続します。
 
       * **Test on Borrow：** は **[!UICONTROL Test on Borrow]** オプションを有効にします。
       * **Test on Return：** は **[!UICONTROL Test on Return]** オプションを有効にします。
-      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例： **選択 &#42; 顧客の詳細から**.
+      * **Validation Query**：プールからの接続状態を確認するための SQL SELECT クエリを指定します。このクエリでは、1 行以上の行が返される必要があります。例えば、**customerdetails から &#42; を選択します**。
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
 
          上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして **[!UICONTROL Save]** をタップします。
