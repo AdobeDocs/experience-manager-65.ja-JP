@@ -12,9 +12,9 @@ discoiquuid: 1e9dd0d7-209a-4989-b66b-bca0d04b437a
 docset: aem65
 exl-id: 3cd9374f-6f16-40fb-97cf-5f9a750b8dd2
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1884'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -103,7 +103,7 @@ ht-degree: 99%
    >* 既存のページには設定しないでください。
 
 
-   また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。詳しくは、 [バニティー URL へのアクセスの有効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
+   また、バニティー URL へのアクセスを有効にするように Dispatcher を設定する必要があります。詳しくは、 [バニティー URL へのアクセスの有効化](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-access-to-vanity-urls-vanity-urls) を参照してください。
 
 * **バニティ URL をリダイレクト**
 
