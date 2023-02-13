@@ -12,9 +12,9 @@ docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1089'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
 
 1. 現在のブラウザーウィンドウの URL をメモ帳にコピーします。この URL は、AEM [!DNL Forms] で [!DNL Adobe Sign] アプリケーションを設定する際に必要になります。
 
-1. 内 **[!UICONTROL 設定]** タブ、 **[!UICONTROL OAuth URL]** フィールドにはデフォルトの URL が含まれます。 URL の形式は次の通りです。
+1. 「**[!UICONTROL 設定]**」タブで、「**[!UICONTROL OAuth URL]**」フィールドにはデフォルトの URL が入力されています。URL の形式は次の通りです。
 
    `https://<shard>/public/oAuth/v2`
 
@@ -73,7 +73,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    別の [!DNL Adobe Sign] 設定を Adobe Experience Manager の機能またはコンポーネント用に作成する場合は、すべての [!DNL Adobe Sign] クラウド設定が同じシャードをポイントしていることを確認してください。
 
    >[!NOTE]
-   キープ **Adobe Sign設定を作成** ページが開きます。 閉じないでください。 次を検索： **クライアント ID** および **クライアント秘密鍵** 次の項目の OAuth 設定を行った後 [!DNL Adobe Sign] 今後の手順で説明するアプリケーション
+   **Adobe Sign 設定を作成**&#x200B;ページを開いたままにします。 閉じないでください。 **クライアント ID** および&#x200B;**クライアント秘密鍵**&#x200B;は、以降の手順で説明するように、[!DNL Adobe Sign] アプリケーションの OAuth 設定を行った後に取得できます。
 
 
 1. 以下の手順に従って、[!DNL Adobe Sign] アプリケーションの OAuth 設定を指定します。
@@ -109,7 +109,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    >[!NOTE]
    オーサーインスタンスとパブリッシュインスタンスの設定が同じシャードを指していることを確認します。1 つの組織に対して複数の Adobe Sign 設定を作成する場合は、すべての設定で同じシャードが使用されていることを確認します。
 
-1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページに戻ります。内 **[!UICONTROL 設定]** タブで、 **クライアント ID** （アプリケーション ID とも呼ばれます）および **クライアント秘密鍵**. 以下を使用： [Adobe Signアプリケーションのクライアント ID およびクライアント秘密鍵](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) AEM Forms用に作成されました。
+1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページに戻ります。「**[!UICONTROL 設定]**」タブで、「**クライアント ID**」（アプリケーション ID とも言われます）と「**クライアント秘密鍵**」の値を指定します。AEM Forms 用に作成した [Adobe Sign アプリケーションのクライアント ID とクライアント秘密鍵](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)を使用します。
 
 1. 「**[!UICONTROL 添付ファイルにも Adobe Sign を有効にする]**」オプションを選択すると、アダプティブフォームに添付されているファイルが、署名用に送信された対応する [!DNL Adobe Sign] ドキュメントに添付されます。
 
@@ -121,7 +121,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
 1. **[!UICONTROL Forms 共通設定サービス]を開きます。**
 1. 「**[!UICONTROL 許可]**」フィールドで、「すべてのユーザー - すべてのユーザーに（匿名かログインしているかによらず）添付ファイルのプレビューとフォームの検証と署名を許可」を&#x200B;**選択**&#x200B;して「**[!UICONTROL 保存]」をクリックします。**&#x200B;オーサーインスタンスが [!DNL Adobe Sign] を使用するように設定されます。
 1. 設定を公開します。
-1. [レプリケーション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html)を使用して、対応する公開インスタンスに同一の構成を作成します。
+1. [レプリケーション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=ja)を使用して、対応する公開インスタンスに同一の構成を作成します。
 
 これで [!DNL Adobe Sign] が AEM [!DNL Forms] に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォームで Adobe Sign サービスを使用する](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)には、上記のとおりアダプティブフォームのプロパティで作成した設定コンテナを指定します。
 
