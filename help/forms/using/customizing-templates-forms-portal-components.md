@@ -12,9 +12,9 @@ docset: aem65
 feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1225'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -91,7 +91,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 説明した例では、２つのDiv要素はカスタムテンプレートの一番上に存在します。*最初に、&quot;__FP_boxes-container&quot; CSSクラスで、リストされているフォームのコンテナエレメントとして機能します。2番目に、&quot;__FP_boxes&quot; CSSクラスで基本エンティティのテンプレート、この場合フォームになります。Div 要素に存在する&#x200B;**data-repeatable**の属性の値は&#x200B;**true**です。*
 
-それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります.フォームの特定の場所でカスタムメタデータを表示するには、そこに **${metadata_prop} プロパティ** を追加します。
+それぞれのプレースホルダーには 1 つずつ OOTB メタデータセットがあります. フォームの特定の場所でカスタムメタデータを表示するには、そこに **${metadata_prop} プロパティ** を追加します。
 
 *この例では、メタデータプロパティは複数のインスタンスで使用されています。例えば、**description**、**name**、**formUrl**、**htmlStyle**、**pdfUrl**、**pdfStyle**、および&#x200B;**path**で所定の方法で使用されます。*
 
@@ -156,7 +156,7 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 
 ![ドラフトと送信ノード](assets/raw-image-with-index.png)
 
-**A**.コンテナの要素
+**A**. コンテナの要素
 
 **B.** 固定階層のある「path」メタデータで、各フォームに保存されたサムネールを取得します。
 
