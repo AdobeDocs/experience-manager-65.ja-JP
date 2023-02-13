@@ -1,7 +1,7 @@
 ---
 title: コードサンプル
 seo-title: Code Samples
-description: アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました.
+description: アドビのコンサルティングサービスチームが、一連の AEM コードサンプルを生成しました。
 seo-description: The Adobe Consulting Services Team has generated a series of AEM code samples.
 uuid: 16f23fa6-5a3c-4697-87de-86db37b3ec1b
 contentOwner: User
@@ -11,7 +11,7 @@ topic-tags: best-practices
 discoiquuid: 07bf0224-6744-42d4-861f-d656ccfad171
 exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
 source-git-commit: 317c0a50631a983469729d5eb37760d8a3c30e98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
 ht-degree: 100%
 
