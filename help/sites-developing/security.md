@@ -5,9 +5,9 @@ description: アプリケーションのセキュリティは、開発フェー�
 seo-description: Application Security starts during the development phase
 exl-id: c4f7f45f-224b-4fc3-b4b0-f5b21b8a466f
 source-git-commit: c55b70ec11842d3f7d82adbf552b2624c1dcc599
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '426'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 86%
 
 ## リクエストセッションの使用 {#use-request-session}
 
-権限の最小化の原則に従い、Adobeでは、すべてのリポジトリアクセスを、ユーザー要求にバインドされたセッションと適切なアクセス制御を使用して行うことをお勧めします。
+最小権限の原則に従って、アドビでは、リポジトリへのすべてのアクセスを、ユーザー要求と適切なアクセス制御にバインドされたセッションを使用して行うことをお勧めします。
 
 ## クロスサイトスクリプティング（XSS）に対する保護 {#protect-against-cross-site-scripting-xss}
 
@@ -57,4 +57,4 @@ webservicesupport モジュールは、統計と設定情報を次の場所に�
 
 ## クロスサイトリクエストフォージェリ攻撃からの保護 {#protect-against-cross-site-request-forgery-attacks}
 
-CSRF 攻撃を軽減するためにAEMが採用しているセキュリティメカニズムについて詳しくは、 [Sling Referrer Filter](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery) セキュリティチェックリストの項及び [CSRF Protection Framework のドキュメント](/help/sites-developing/csrf-protection.md).
+CSRF 攻撃を軽減するために AEM で採用されているセキュリティメカニズムについて詳しくは、セキュリティチェックリストの [Sling リファラーフィルター](/help/sites-administering/security-checklist.md#protect-against-cross-site-request-forgery)の節と、[CSRF 対策フレームワークのドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。
