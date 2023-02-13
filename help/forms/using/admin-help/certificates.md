@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9fd531c0-5206-4be0-a450-13e0dc806068
 exl-id: 1fe0e7b4-6109-4f7a-8858-8237a1c5c93b
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '641'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Trust Store の管理では、電子署名の検証および証明書認証の�
 
 署名の検証を完了するために必要となる証明書は、同じストア（HSM またはデータベース）にある必要があります。
 
-Trust Manager API を使用して証明書の読み込みおよび削除を行うこともできます。詳しくは、「Trust Manager API を使用した証明書の読み込み」および「Trust Manager API を使用した証明書の削除」を参照してください。 [AEM forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp).
+Trust Manager API を使用して証明書の読み込みおよび削除を行うこともできます。詳しくは、[AEM Forms によるプログラミング](https://www.adobe.com/go/learn_aemforms_programming_63_jp)の「Trust Manager API を使用した証明書の読み込み」および「Trust Manager API を使用した証明書の削除」を参照してください。
 
 ## 証明書の読み込み {#import-a-certificate}
 
