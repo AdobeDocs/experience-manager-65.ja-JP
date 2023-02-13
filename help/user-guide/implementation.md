@@ -5,9 +5,9 @@ description: AEM 6.5 の実装方法の概要
 seo-description: An overview of how to implement AEM 6.5
 exl-id: 33404f0d-c04c-4720-8a24-ded6738ec7d4
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -23,11 +23,11 @@ AEM 開発者の場合は、[AEM での開発の概要](/help/sites-developing/h
 
 ## AEM 用の HTL（HTML テンプレート言語） {#htl-for-aem}
 
-[HTML テンプレート言語を使用して AEM 向けに開発します。](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+[HTML テンプレート言語を使用して AEM 向けに開発します。](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 
 ## AEM 用の Cloud Manager {#cloud-manager-for-aem}
 
-[AEM での Cloud Manager の使用方法を確認します](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)。
+[AEM での Cloud Manager の使用方法を確認します](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja)。
 
 ## Dispatcher 設定 {#dispatcher-configuration}
 
