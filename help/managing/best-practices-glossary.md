@@ -12,9 +12,9 @@ discoiquuid: cca21688-40b1-433d-93dc-cd62e5558507
 docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7036'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -208,7 +208,8 @@ Adobe Experience Manager（AEM）の標準的なメンテナンスタスクと�
 
 ビジネス要件ドキュメント（BRD）では、プロジェクトのビジネスソリューションの詳細を説明し、顧客のビジネスニーズおよび期待を明確に指定しています。また、BRD では、ビジネスソリューションとテクニカルソリューションが区別されます。
 
-BRD は、ビジネスソリューションを調査する際に、次の質問に答える必要があります。「ビジネスは何をしたいと思っているのですか？」
+ビジネスソリューションを調査する場合、BRD は次の質問に答える必要があります。
+「ビジネスで実現したいことは何ですか？」
 
 ### ソリューションへの必要な調整および ROI や KPI 期待値に対して特定され、準拠したアーキテクチャに関するビジネスの承認 {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
