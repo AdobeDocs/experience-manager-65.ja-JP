@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.4/FORMS
 discoiquuid: 761e7909-43ba-4642-bcfc-8d76f139b9a3
 exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7163'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -175,7 +175,7 @@ Watched Folder サービスでは、エンドポイントの作成、更新お�
 * data.&amp;ast; を指定すると、*data1* や *data2* などの名前を持つファイルおよびフォルダーが対象に含まれます。
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * データ [0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
    * &amp;ast;。[dD][Aa]&#39;port&#39;
    * &amp;ast;。[Xx][Mm][Ll]
 
@@ -247,7 +247,7 @@ Watched Folder サービスでは、エンドポイントの作成、更新お�
 * data.&amp;ast;
 * 次のような名前および拡張子が混在する式に一致するファイル。
 
-   * データ [0-9][0-9][0-9].[dD][aA]&#39;port&#39;
+   * Data[0-9][0-9][0-9].[dD][aA]&#39;port&#39;
    * &amp;ast;。[dD][Aa]&#39;port&#39;
    * &amp;ast;。[Xx][Mm][Ll]
 
@@ -271,7 +271,7 @@ Watched Folder サービスでは、エンドポイントの作成、更新お�
 * %F = ソースファイル名
 * %E = ソースファイル拡張子
 
-出力パラメーターのマッピングパターンが「File.separator」（パスセパレーター）で終わる場合、フォルダーが作成され、内容がそのフォルダーにコピーされます。 パターンが「File.separator」で終わらない場合は、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。 出力パラメーターのマッピングについて詳しくは、[監視フォルダーのヒントとテクニック](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders)を参照してください。
+出力パラメーターのマッピングパターンが「File.separator」（つまり、パスセパレーター）で終わる場合、フォルダーが作成され、コンテンツがそのフォルダーにコピーされます。パターンが「File.separator」で終わらない場合、コンテンツ（結果ファイルまたはフォルダー）がその名前で作成されます。出力パラメーターのマッピングについて詳しくは、[監視フォルダーのヒントとテクニック](configuring-watched-folder-endpoints.md#tips-and-tricks-for-watched-folders)を参照してください。
 
 ## ジョブ数の制限について {#about-throttling}
 
