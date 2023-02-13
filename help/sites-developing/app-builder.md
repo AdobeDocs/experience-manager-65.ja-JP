@@ -3,9 +3,9 @@ title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manag
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
 source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '577'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
