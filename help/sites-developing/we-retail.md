@@ -11,9 +11,9 @@ topic-tags: best-practices
 discoiquuid: f50150af-deff-4c29-bfe0-1cfc67b29d51
 exl-id: 504c61c7-dcd3-412c-9239-d24a2b78e4b9
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '750'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ We.Retail は、AEM の標準的な参照実装として、AEM の最も強力�
 | [グローバル化されたサイト構造](/help/sites-administering/tc-bp.md) | We.Retail には、国固有の Web サイトにライブコピーできる言語マスターが含まれています。 | [試してみる](/help/sites-developing/we-retail-globalized-site-structure.md) |
 | [レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md) | すべてのページには、画面やデバイスのサイズに動的に適応するレスポンシブレイアウトが採用されています。 | [試してみる](/help/sites-developing/we-retail-responsive-layout.md) |
 | [編集可能テンプレート](/help/sites-developing/page-templates-editable.md) | すべてのページが編集可能テンプレートに基づいており、開発者以外のユーザーがテンプレートを変更したり、カスタマイズしたりできます。 | [試してみる](/help/sites-developing/we-retail-editable-templates.md) |
-| [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | すべてのコンポーネントが HTL に基づいています。 |  |
+| [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | すべてのコンポーネントが HTL に基づいています。 |  |
 | [e コマース機能](/help/commerce/cif-classic/developing/ecommerce.md) | 製品カタログを特徴としています。 |  |
 | [コミュニティサイト](/help/communities/overview.md) | 訪問者がコミュニティでのディスカッションに参加したりブログを読んだりできるようにします。 |  |
 | [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) | すべてのコンポーネントが新しいコアコンポーネントに基づいており、使いやすく、設定変更も手早くおこなえます。 | [試してみる](/help/sites-developing/we-retail-core-components.md) |
