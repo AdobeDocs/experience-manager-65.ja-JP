@@ -12,9 +12,9 @@ kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2592'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -190,7 +190,7 @@ AEM コードを始める前に、GraphQL IDE を使用して [Adobe Commerce Gr
 
 Sling モデルは Java として実装され、生成されたプロジェクトの&#x200B;**コア**&#x200B;モジュールにあります。
 
-[任意の IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#set-up-the-development-ide) を使用して、Venia プロジェクトをインポートします。使用したクリーンショットは、[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?#microsoft-visual-studio-code) からのものです。
+[任意の IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#set-up-the-development-ide) を使用して、Venia プロジェクトをインポートします。使用したクリーンショットは、[Visual Studio Code IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=ja#microsoft-visual-studio-code) からのものです。
 
 1. IDE で、**コア**&#x200B;モジュールの下に移動して、次の操作を行います。`core/src/main/java/com/venia/core/models/commerce/MyProductTeaser.java`
 
@@ -330,7 +330,7 @@ Sling モデルは Java として実装され、生成されたプロジェク�
 
 ## 製品ティーザーのマークアップのカスタマイズ {#customize-markup-product-teaser}
 
-AEM コンポーネントの一般的な拡張機能は、コンポーネントによって生成されたマークアップを変更することです。これは、コンポーネントがマークアップのレンダリングに使用する [HTL スクリプト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)を上書きすることで行われます。HTML Template Language（HTL）は、AEM コンポーネントがオーサリングされたコンテンツに基づいて動的にマークアップをレンダリングし、コンポーネントを再利用する際に使用する、軽量なテンプレート言語です。例えば、製品ティーザーを何度も繰り返し使用すれば、異なる製品を表示できます。
+AEM コンポーネントの一般的な拡張機能は、コンポーネントによって生成されたマークアップを変更することです。これは、コンポーネントがマークアップのレンダリングに使用する [HTL スクリプト](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)を上書きすることで行われます。HTML Template Language（HTL）は、AEM コンポーネントがオーサリングされたコンテンツに基づいて動的にマークアップをレンダリングし、コンポーネントを再利用する際に使用する、軽量なテンプレート言語です。例えば、製品ティーザーを何度も繰り返し使用すれば、異なる製品を表示できます。
 
 この例では、ティーザーの上にバナーをレンダリングして、カスタム属性に基づいて製品が「エコフレンドリー」であることを示します。コンポーネントの[マークアップをカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=ja#customizing-the-markup)するデザインパターンは、AEM CIF コアコンポーネントだけでなく、すべての AEM コンポーネントに対して実際に標準です。
 
@@ -392,7 +392,7 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
    Sling モデルメソッドを HTL で呼び出すと、メソッドの `get` および `is` 部分が削除され、最初の文字が小文字に変換されます。`isShowBadge()` は `.showBadge` となり、`isEcoFriendly` は `.ecoFriendly` となります。`.isEcoFriendly()` から返されるブール値に基づいて、`<span>Eco Friendly</span>` が表示されるかどうかを決定します。
 
-   `data-sly-test` などの HTL ブロック文の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html)を参照してください。
+   `data-sly-test` などの HTL ブロック文の詳細については、[こちら](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=ja)を参照してください。
 
 1. 変更を保存し、コマンドラインターミナルから Maven を使用して AEM にアップデートをデプロイします。
 
