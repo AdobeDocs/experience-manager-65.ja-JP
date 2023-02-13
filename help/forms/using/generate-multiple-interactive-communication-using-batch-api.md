@@ -8,9 +8,9 @@ topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2228'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -79,7 +79,7 @@ API を簡単に操作できるように、AEM Forms には、Batch API を使�
 
 JSON ファイルに保存されたレコードからインタラクティブ通信を作成するには：
 
-1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成して、Batch API を使用するように設定します。
+1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html?lang=ja)を作成して、Batch API を使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
    1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」をタップします。
    1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
@@ -109,7 +109,7 @@ JSON ファイルに保存されたレコードからインタラクティブ通
 
 #### 外部データソースに保存され、フォームデータモデルを介してアクセスされる入力データを使用して、インタラクティブ通信を作成する {#use-fdm-as-data-source}
 
-外部データソースに保存されたデータ（レコード）とインタラクティブ通信テンプレートを組み合わせて、インタラクティブ通信を作成できます。インタラクティブ通信を作成する場合は、フォームデータモデル（FDM）を介して外部データソースに接続し、データにアクセスします。外部データソースから同じフォームデータモデルを使用してデータを取得するように、監視フォルダーのバッチ処理サービスを設定できます。[外部データソースに保存されたレコードからインタラクティブ通信を作成する](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html)には、次をおこないます。
+外部データソースに保存されたデータ（レコード）とインタラクティブ通信テンプレートを組み合わせて、インタラクティブ通信を作成できます。インタラクティブ通信を作成する場合は、フォームデータモデル（FDM）を介して外部データソースに接続し、データにアクセスします。外部データソースから同じフォームデータモデルを使用してデータを取得するように、監視フォルダーのバッチ処理サービスを設定できます。[外部データソースに保存されたレコードからインタラクティブ通信を作成する](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/work-with-form-data-model.html?lang=ja)には、次をおこないます。
 
 1. テンプレートのフォームデータモデルを設定します。
    1. インタラクティブ通信テンプレートに関連付けたフォームデータモデルを開きます。
@@ -141,13 +141,13 @@ JSON ファイルに保存されたレコードからインタラクティブ通
 
    1. ファイルを保存して閉じます。
 
-1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html)を作成して、Batch API サービスを使用するように設定します。
+1. [監視フォルダー](https://experienceleague.adobe.com/docs/experience-manager-64/forms/publish-process-aem-forms/creating-configure-watched-folder.html?lang=ja)を作成して、Batch API サービスを使用するように設定します。
    1. AEM Forms オーサーインスタンスにログインします。
    1. **[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL 監視フォルダーを設定]**&#x200B;に移動します。「**[!UICONTROL 新規]**」をタップします。
    1. フォルダーの&#x200B;**[!UICONTROL 名前]**&#x200B;と物理的&#x200B;**[!UICONTROL パス]**&#x200B;を指定します。例えば、`c:\batchprocessing` のように指定します。
    1. **[!UICONTROL 次を使用してファイルを処理]**&#x200B;フィールドで「**[!UICONTROL サービス]**」オプションを選択します。
    1. **[!UICONTROL サービス名]**&#x200B;フィールドで、**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** サービスを選択します。
-   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。例：%F/ [pattern](https://helpx.adobe.com/experience-manager/6-5/forms/using/admin-help/configuring-watched-folder-endpoints.html#about_file_patterns) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
+   1. **[!UICONTROL 出力ファイルパターン]**&#x200B;を指定します。例：%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/manage-endpoints/configuring-watched-folder-endpoints.html?lang=ja) は、監視フォルダーが Watched Folder\input フォルダーのサブフォルダー内で入力ファイルを見つけることを指定します。
 1. 以下の手順に従って、詳細設定パラメーターを設定します。
    1. 「**[!UICONTROL 詳細]**」タブを開いて、次のカスタムプロパティを追加します。
 
@@ -155,9 +155,9 @@ JSON ファイルに保存されたレコードからインタラクティブ通
       |--- |--- |--- |
       | templatePath | 文字列 | 使用するインタラクティブ通信テンプレートのパスを指定します。例えば、 /content/dam/formsanddocuments/testsample/mediumic のように指定します。これは必須プロパティです。 |
       | recordPath | 文字列 | recordPath フィールドの値は、インタラクティブ通信の名前を設定するのに役立ちます。レコードのフィールドのパスは、recordPath フィールドの値として設定できます。例えば、 /employee/Id を指定した場合、id フィールドの値は、対応するインタラクティブ通信の名前になります。デフォルト値はランダムな[random UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()) です。 |  |
-      | usePrefillService | ブール値 | 値を True に設定します。デフォルト値は false です。値を true に設定すると、Batch API は設定されたフォームデータモデルからデータを読み取り、インタラクティブ通信に入力します。usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 |
+      | usePrefillService | Boolean | 値を True に設定します。デフォルト値は false です。値を true に設定すると、Batch API は設定されたフォームデータモデルからデータを読み取り、インタラクティブ通信に入力します。usePrefillService が true に設定されている場合、（レコードごとに）入力された JSON データは FDM 引数として扱われます。 |
       | batchType | 文字列 | 値を PRINT、WEB、または WEB_AND_PRINT に設定します。デフォルト値は WEB_AND_PRINT です。 |
-      | ロケール | 文字列 | 出力インタラクティブ通信のロケールを指定します。そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブ通信を生成することができます。デフォルト値は en_US です。 |
+      | locale | 文字列 | 出力インタラクティブ通信のロケールを指定します。そのまま使用できるサービスでは、ロケールオプションは使用されませんが、カスタムサービスを作成して、ローカライズされたインタラクティブ通信を生成することができます。デフォルト値は en_US です。 |
 
    1. 「**[!UICONTROL 作成]**」をタップすると、監視フォルダーが作成されます。
 1. 監視フォルダーを使用してインタラクティブ通信を生成します。
