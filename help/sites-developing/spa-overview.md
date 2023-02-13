@@ -12,9 +12,9 @@ discoiquuid: 06b8c0be-4362-4bd1-ad57-ea5503616b17
 docset: aem65
 exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
 source-git-commit: a547b2e24205c63284a0e77f2e7f5678ae24968b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1657'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -190,7 +190,7 @@ SPA で作成したテキストコンポーネントのインプレースエデ�
 
 ### 制限事項 {#limitations}
 
-AEM SPA Editor SDK は、AEM 6.4 サービスパック 2 で導入されました。Adobeで完全にサポートされ、引き続き拡張および拡張されます。 次の AEM 機能は、SPA エディターではまだサポートされていません。
+AEM SPA Editor SDK は、AEM 6.4 サービスパック 2 で導入されました。これはアドビで完全にサポートされており、機能強化と拡張が続けられています。次の AEM 機能は、SPA エディターではまだサポートされていません。
 
 * ターゲットモード
 * ContextHub
