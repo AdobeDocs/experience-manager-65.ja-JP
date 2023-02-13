@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 20c8eb1d-5847-4902-b7d3-4c3286423b46
 exl-id: 0f710685-dc4f-4333-9847-d002b2637d08
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2204'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ Adobe Target の下で、「**設定を表示**」をクリックまたはタッ
 
 >[!NOTE]
 >
->AEM 6.3 では、Target ライブラリファイル [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html) を選択できます。このファイルは、Adobe Target 用の新しい実装ライブラリであり、通常の web 実装と単一ページアプリケーションの両方に使用できるように設計されています。
+>AEM 6.3 では、Target ライブラリファイル [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=ja) を選択できます。このファイルは、Adobe Target 用の新しい実装ライブラリであり、通常の web 実装と単一ページアプリケーションの両方に使用できるように設計されています。
 >
 >AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 >
@@ -108,7 +108,7 @@ Adobe Target の下で、「**設定を表示**」をクリックまたはタッ
 オプトインウィザードを使用せずに手動で Adobe Target と統合します。
 
 >[!NOTE]
-Target ライブラリファイル [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html) は、Adobe Target 用の新しい実装ライブラリであり、通常の ｗeb 実装と単一ページアプリケーションの両方に使用できるように設計されています。mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
+Target ライブラリファイル [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=ja) は、Adobe Target 用の新しい実装ライブラリであり、通常の ｗeb 実装と単一ページアプリケーションの両方に使用できるように設計されています。mbox.js の代わりに AT.js をクライアントライブラリとして使用することをお勧めします。
 AT.js は、mbox.js ライブラリと比較して、いくつかの点で改善されています。
 * Web 実装のページ読み込み時間が改善されています。
 * セキュリティが改善されています。
@@ -127,9 +127,9 @@ Adobe Target からセグメントを同期するように、クラウド設定�
 
 次の手順を実行して、AEM に Target クラウド設定を作成します。
 
-1. に移動します。 **Cloud Services** 経由 **AEMロゴ** > **ツール** > **Cloud Services** > **従来のCloud Services**. （[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）
+1. **AEM ロゴ**／**ツール**／**クラウドサービス**／**従来のクラウドサービス**&#x200B;を使用して、**クラウドサービス**&#x200B;に移動します。（[http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html)）
 
-   この **Cloud Services** 概要ページが開きます。
+   **クラウドサービス**&#x200B;概要ページが開きます。
 
 1. 「**Adobe Target**」セクションで、「**今すぐ設定**」をクリックします。
 1. **設定を作成**&#x200B;ダイアログで、次の操作を実行します。
@@ -210,7 +210,7 @@ Target クラウド設定を設定したら、Target フレームワークを追
 
 ### アクティビティと Target クラウド設定の関連付け  {#associating-activities-with-the-target-cloud-configuration}
 
-[AEM アクティビティ](/help/sites-authoring/activitylib.md)を Target クラウド設定に関連付け、アクティビティを [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) にミラーリングできるようにします。
+[AEM アクティビティ](/help/sites-authoring/activitylib.md)を Target クラウド設定に関連付け、アクティビティを [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=ja) にミラーリングできるようにします。
 
 >[!NOTE]
 使用可能なアクティビティの種類は、次のオプションによって決まります。
