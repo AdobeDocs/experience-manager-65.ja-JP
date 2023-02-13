@@ -12,9 +12,9 @@ feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
 source-git-commit: d83a647d8ac5466ba09230c584d5d501aab55274
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2184'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -36,14 +36,14 @@ ht-degree: 94%
 >
 >Assets ユーザーインターフェイスについて詳しくは、[アセットの管理](/help/assets/manage-assets.md)を参照してください。
 
-画像セットを作成する際、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+画像セットを作成する際、アドビでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 制限が適用されました |
+| 制限タイプ | ベストプラクティス | 適用される制限 |
 | --- | --- | --- |
-| セットあたりの重複アセット数 | 重複なし | 20 |
+| 1 セットあたりの重複アセット数 | 重複なし | 20 |
 | 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
 
-関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
+[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 
 ## クイックスタート：画像セット {#quick-start-image-sets}
 
@@ -57,7 +57,7 @@ ht-degree: 94%
 
 <!--    Adobe Experience Manager Assets supports many image file formats, but lossless TIFF, PNG, and EPS images are recommended. -->
 
-1. [画像セットの作成](#creating-image-sets).
+1. [画像セットを作成](#creating-image-sets)
 
    画像セットで、画像セットビューア内のサムネール画像をクリックします。
 
@@ -78,12 +78,12 @@ ht-degree: 94%
 
    ビューアのプリセットを作成または編集する場合は、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL ビューアプリセット]**&#x200B;に移動してください。
 
-1. （オプション） [画像セットの表示](/help/assets/image-sets.md#viewing-image-sets) バッチセットプリセットを使用して作成した
+1. （オプション）バッチセットプリセットを使用して作成した[画像セットを表示](/help/assets/image-sets.md#viewing-image-sets)します。
 1. [画像セットをプレビューします](/help/assets/previewing-assets.md)。
 
    画像セットを選択すると、プレビューできます。サムネールアイコンを選択して、選択したビューアでの画像セットの表示を確認できます。**[!UICONTROL ビューア]**&#x200B;メニューから様々なビューアを選択できます。このメニューは左パネルのドロップダウンメニューにあります。
 
-1. [画像セットの公開](/help/assets/publishing-dynamicmedia-assets.md).
+1. [画像セットを公開](/help/assets/publishing-dynamicmedia-assets.md)します。
 
    画像セットを公開すると、URL と埋め込みコードがアクティベートされます。さらに、作成した[カスタムビューアプリセットを公開する](/help/assets/managing-viewer-presets.md)必要があります。既製のビューアプリセットが既に公開されています。
 
@@ -125,7 +125,7 @@ ht-degree: 94%
 >* ブラック、ブラウンおよびグリーンの色のサムネール。
 
 
-## 画像セットの作成 {#creating-image-sets}
+## 画像セットを作成 {#creating-image-sets}
 
 画像セットは、ユーザーインターフェイスまたは API 経由で作成できます。ここでは、UI で画像セットを作成する方法について説明します。
 
@@ -140,16 +140,16 @@ ht-degree: 94%
 >
 >ファイル名に「,」（コンマ）が含まれているアセットについては、画像セットはサポートされません。
 
-画像セットを作成する際、Adobeでは次のベストプラクティスを推奨し、次の制限を適用します。
+画像セットを作成する際、アドビでは次のベストプラクティスを推奨し、次の制限を適用します。
 
-| 制限タイプ | ベストプラクティス | 制限が適用されました |
+| 制限タイプ | ベストプラクティス | 適用される制限 |
 | --- | --- | --- |
-| セットあたりの重複アセット数 | 重複なし | 20 |
+| 1 セットあたりの重複アセット数 | 重複なし | 20 |
 | 1 セットあたりの最大画像数 | 1 セットあたり 5～10 個の画像 | 1000 |
 
-関連トピック [Dynamic Mediaの制限](/help/assets/limitations.md).
+[Dynamic Media の制限](/help/assets/limitations.md)も参照してください。
 
-**画像セットを作成するには:**
+**画像セットを作成するには：**
 
 1. Experience Manager で、Experience Manager ロゴを選択してグローバルナビゲーションコンソールにアクセスし、**[!UICONTROL ナビゲーション]**／**[!UICONTROL アセット]** に移動します。画像セットを作成する場所に移動し、**[!UICONTROL 作成]**／**[!UICONTROL 画像セット]**&#x200B;に移動して、画像セットエディターページを開きます。
 
@@ -193,7 +193,7 @@ ht-degree: 94%
 
 1. 「**[!UICONTROL 保存]**」を選択します。新しく作成した画像セットが、作成先のフォルダーに表示されます。
 
-## 画像セットの表示 {#viewing-image-sets}
+## 画像セットを表示 {#viewing-image-sets}
 
 画像セットは、ユーザーインターフェイスで作成することも、[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して自動的に作成することもできます。
 
@@ -221,7 +221,7 @@ ht-degree: 94%
 >
 >[画像セットの編集](#editing-image-sets) の説明に従って、ユーザーインターフェイスを通じて画像セットを表示できます。
 
-## 画像セットの編集 {#editing-image-sets}
+## 画像セットを編集 {#editing-image-sets}
 
 画像セットには、次のような様々な編集タスクを実行できます。
 
@@ -259,10 +259,10 @@ ht-degree: 94%
 
 1. 編集が完了したら、「**[!UICONTROL 保存]**」を選択します。
 
-## 画像セットのプレビュー {#previewing-image-sets}
+## 画像セットをプレビュー {#previewing-image-sets}
 
 詳しくは、[アセットのプレビュー](/help/assets/previewing-assets.md)を参照してください。
 
-## 画像セットの公開 {#publishing-image-sets}
+## 画像セットを公開 {#publishing-image-sets}
 
 [アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
