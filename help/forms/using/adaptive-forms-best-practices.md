@@ -10,9 +10,9 @@ discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 source-git-commit: f05ddd2fb72258b7de5d361eb87f5e68e7ddd7ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4529'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -98,16 +98,16 @@ AEM プロジェクトのセットアップを完了したら、アダプティ�
 
 ### フォームテンプレートの作成
 
-アダプティブフォームは、 **設定ブラウザー**. フォームテンプレートを有効にするには、 [アダプティブフォームテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
+**設定ブラウザー**&#x200B;で有効になっているフォームテンプレートを使用して、アダプティブ フォームを作成できます。フォームテンプレートを有効にするには、[アダプティブフォームテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=ja)を参照してください。
 
-フォームテンプレートは、別のオーサーマシンで作成されたアダプティブフォームパッケージからアップロードすることもできます。 フォームテンプレートは、 [aemforms-references-*パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). 推奨されるベストプラクティスの一部を次に示します。
-* この **nosamplecontent** 実行モードは、オーサーに対してのみ推奨され、パブリッシュノードに対しては推奨されません。
-* アダプティブフォーム、テーマ、テンプレート、クラウド設定などのアセットのオーサリングは、設定済みのパブリッシュノードでのみオーサーノード上で実行できます。
-詳しくは、 [フォームとドキュメントの発行と非公開](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
-* Formsのアドオンパッケージは、オーサリングに加えて、ドキュメントサービスの操作をサポートするために公開に必要です。したがって、依存関係と見なすことができます。
-Forms関連のサンプルテンプレート、テーマ、DOR パッケージのみが必要な場合は、次からダウンロードできます。 [aemforms-references-*パッケージ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
+フォームテンプレートは、別のオーサーマシンで作成されたアダプティブフォームパッケージからアップロードすることもできます。 [aemforms-references-* パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすると、フォームテンプレートが利用可能になります。推奨されるベストプラクティスの一部を次に示します。
+* **nosamplecontent** 実行モードは、オーサーノードに対してのみ推奨され、パブリッシュノードに対しては推奨されません。
+* アダプティブフォーム、テーマ、テンプレート、クラウド設定などのアセットのオーサリングはオーサーノード上でのみ実行でき、設定済みのパブリッシュノードで公開できます。
+詳しくは、[フォームとドキュメントの公開と非公開](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=ja)を参照してください。
+* ドキュメントサービスの運用をサポートするためには、オーサリングとパブリッシュに Forms アドオンパッケージが必要であることから、これを依存関係と見なすことができます。
+Forms 関連のサンプルテンプレート、テーマおよび DOR パッケージのみ必要な場合は、[aemforms-references-* パッケージ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=ja)からダウンロードすることができます。
 
-詳しくは、 [アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md).
+詳しくは、[アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md)のベストプラクティスの節を参照してください。
 
 ## アダプティブフォームのオーサリング {#author-adaptive-forms}
 
@@ -185,7 +185,7 @@ AEM Forms が提供する[ルールエディター](/help/forms/using/rule-edito
    * ファイル添付および利用条件コンポーネントは、遅延読み込みフラグメントではサポートされません。
    * 遅延読み込みパネルにある値は、その値がフォームの別の部分で使用されている場合、「グローバルに値を使用」とマークします。これにより、パネルが読み込まれていない場合に、この値を使用できるようになります。
    * 条件に基づいて表示または非表示する必要があるフラグメントに対して、表示ルールを記述することを検討します。
-* 値を **リクエストあたりの呼び出し数** 内 **Apache Sling Main Servlet** かなり大きな数に これにより、Formsサーバーが追加の呼び出しを許可できます。 この設定では、デフォルト値の 1500 が表示されます。 この値（1500 呼び出し）は、Sites や Assets などの他のExperience Managerコンポーネントに対して使用されます。 アダプティブフォームのデフォルト値セットは20000です。 次の場合に `too many calls` ログのエラーまたはフォームのレンダリングに失敗しました。問題を解決するには、値を大きくしてみてください。 呼び出しの数が20000を超える場合、フォームは複雑で、ブラウザーでフォームをレンダリングするのに時間がかかる場合があります。 これは、フォームが初めて読み込まれたときにのみ発生し、フォームがキャッシュされ、フォームがキャッシュされた後は、パフォーマンスに大きな影響を与えません。
+* **Apache Sling Main Servlet** の&#x200B;**リクエストあたりの呼び出し数**&#x200B;の値をかなり大きな値に設定します。これにより、Forms サーバーが追加の呼び出しを許可することができます。 この設定では、デフォルト値の 1500 が表示されます。 この値（1500 の呼び出し）は、Sites や Assets などの他の Experience Manager コンポーネントに対して使用されます。 アダプティブフォームのデフォルトの値セットは 20000 です。 ログで `too many calls` エラーが発生した場合、またはフォームのレンダリングに失敗した場合は、値を大きくして問題を解決してください。呼び出し数が 20000 を超える場合は、フォームが複雑であるという意味で、ブラウザーでフォームをレンダリングするのに時間がかかる場合があります。これは、フォームが初めて読み込まれたときにのみ発生し、フォームがキャッシュされた後は、パフォーマンスに大きな影響を与えません。
 
 ### アダプティブフォームに事前にデータを取り込む {#prefilling-adaptive-forms}
 
