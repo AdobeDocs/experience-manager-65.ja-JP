@@ -11,9 +11,9 @@ docset: aem65
 feature: Correspondence Management
 exl-id: da966787-a3b9-420f-8b7c-f00d05c61d43
 source-git-commit: 1a6881b29024799c44b2068ea82750c983a012e5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3867'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -129,7 +129,7 @@ ht-degree: 95%
 
    * 通貨記号（€、￥、£ など）
    * 数学記号（∑、√、∂、^ など）
-   * 「 」や「 」などの句読点記号
+   * 句読記号（‟、” など）
 
    ![specialcharacters](assets/specialcharacters.png)
 
@@ -293,23 +293,23 @@ ht-degree: 95%
 
 レターを公開する前に、またはパブリッシュインスタンスでドラフトを保存する前に、オーサーインスタンスとパブリッシュインスタンスで次の手順を実行して、「ドラフトとして保存」機能を有効にします。
 
-この *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* デフォルトでは、プロパティはパブリッシュインスタンスに引き継がれません。 引き継ぐため *cq:lastReplicationAction*, *cq:lastreplicated* および *cq:lastReplicatedBy* パブリッシュインスタンスのプロパティを無効にします。 [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネント。 コンポーネントを無効にするには：
+*cq:lastReplicationAction*、*cq:lastreplicated* および *cq:lastReplicatedBy* プロパティは、デフォルトではパブリッシュインスタンスに引き継がれません。*cq:lastReplicationAction*、*cq:lastreplicated* および *cq:lastReplicatedBy* プロパティをパブリッシュインスタンスに引き継ぐには、[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネントを無効にします。コンポーネントを無効にするには：
 
-1. オーサーインスタンスで、 Adobe Experience Manager Web コンソールのコンポーネントコンソールを開きます。 デフォルトの URL は、`http://author-server:port/system/console/components` です。
+1. オーサーインスタンスで、 Adobe Experience Manager web コンソールのコンポーネントコンソールを開きます。デフォルトの URL は、`http://author-server:port/system/console/components` です。
 
-1. を検索します。 **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** コンポーネント。
+1. **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** コンポーネントを検索します。
 
-1. クリック ![「無効」ボタン](/help/forms/using/assets/enablebutton.png) 無効にするアイコン [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネント。
+1. 「![無効ボタン](/help/forms/using/assets/enablebutton.png)」アイコンをクリックして、[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] コンポーネントを無効にします。
 
 ![オーサーインスタンス](/help/forms/using/assets/replicationproperties.png)
 
-ドラフトとして保存機能を有効にするには、次の場所にある既存の URL を置き換えます。 [!UICONTROL VersionRestoreManager 作成者の URL] を作成します。 URL を置き換えるには：
+ドラフトとして保存機能を有効にするには、[!UICONTROL VersionRestoreManager Author URL] の既存の URL をオーサーインスタンスの URL に置き換えます。URL を置き換えるには：
 
-1. パブリッシュインスタンスで、を開きます。 [!UICONTROL Adobe Manager Web コンソールの設定]. デフォルトの URL は、`https://publish-server:port/system/console/configMgr` です。
+1. パブリッシュインスタンスで、[!UICONTROL Adobe Manager web コンソールの設定]を開きます。デフォルトの URL は、`https://publish-server:port/system/console/configMgr` です。
 
-1. を検索して開きます。 **[!UICONTROL Correspondence Management — オーサーインスタンスバージョンの復元設定]** コンポーネント。
+1.  **[!UICONTROL Correspondence Management - オーサーインスタンスバージョンの復元設定]**&#x200B;コンポーネントを検索して開きます。
 
-1. を **[!UICONTROL VersionRestoreManager 作成者の URL]** フィールドに、オーサーインスタンスの URL を入力します。
+1. 「**[!UICONTROL VersionRestoreManager Author URL]**」フィールドを見つけて、オーサーインスタンスの URL を指定します。
 
 1. 「保存」をクリックします。
 
@@ -379,7 +379,7 @@ HTML5 フォームのスクリプティングのサポートについて詳し�
 
 デフォルトでは、「通信を作成」UI は HTML フォームまたはモバイルフォームを使用してレタープレビューをレンダリングします。モバイルフォームのプレビューは、ブラウザのネイティブプラグインを使用し、追加のプラグインを必要としないため、どのブラウザでレンダリングしても問題はありません。レタープレビューモードは、PDF に変更することができます。ただし、ブラウザの制約により、レターのインタラクティブな PDF プレビューの異なる機能で問題が発生する可能性があります。
 
-レタープレビューとブラウザの互換性について詳しくは、「[NPAPI ブラウザプラグインのサポート終了とその影響](https://helpx.adobe.com/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)」を参照してください。
+レタープレビューとブラウザの互換性について詳しくは、「[NPAPI ブラウザプラグインのサポート終了とその影響](https://helpx.adobe.com/jp/aem-forms/kb/discontinuation-of-npapi-plugins-impact-on-aem-forms.html)」を参照してください。
 
 レターのプレビューモードを変更するには、次の手順を完了してください。
 
