@@ -12,9 +12,9 @@ discoiquuid: 4ef78c8c-783f-4aac-a499-692cd4acef75
 feature: Mobile Forms
 exl-id: bcb5afc5-2190-4269-aba2-63842db9df3f
 source-git-commit: c4045313200ffecbf05abfacd67aabc80ad67e7f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3892'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -328,7 +328,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td>caption</td>
-   <td> <br /> </td>
+   <td> caption オブジェクトは、フォームデザインオブジェクトに関連付けられる説明ラベルを表します。<br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -481,7 +481,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td>instanceManager</td>
-   <td> <br /> </td>
+   <td> instanceManager オブジェクトは、フォームモデルオブジェクトのインスタンスの作成、削除、および移動を管理します。<br /> </td>
    <td>なし</td>
   </tr>
  </tbody>
@@ -512,7 +512,7 @@ ht-degree: 99%
     </ul> </td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>このノードの名前を指定します。</td>
    <td>HTML ではスクリプトの使用による名前の設定は許可されていません。</td>
   </tr>
@@ -593,7 +593,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>カラー</td>
+   <td>color</td>
    <td>color プロパティは一意の塗りつぶしカラーを定義します。</td>
    <td>
     <ul>
@@ -614,7 +614,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>カラー</td>
+   <td>color</td>
    <td>color プロパティは、フォーム上のリニアグラデーション塗りつぶしのための一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -652,7 +652,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>カラー</td>
+   <td>color</td>
    <td>color プロパティは、パターンオブジェクトの一意のカラーを記述します。 </td>
    <td>
     <ul>
@@ -673,7 +673,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>カラー</td>
+   <td>color</td>
    <td>color プロパティは、放射状オブジェクトの一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -694,7 +694,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>カラー</td>
+   <td>color</td>
    <td>color プロパティは、点描オブジェクトの一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -725,12 +725,12 @@ ht-degree: 99%
    <td> </td>
   </tr>
   <tr>
-   <td>存在</td>
+   <td>presence</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td>
    <td>ランタイムでの値の設定はサポートされていません。</td>
   </tr>
@@ -752,7 +752,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>カラー</td>
+   <td>color</td>
    <td>color プロパティは、コーナーオブジェクトの一意のカラーを記述します。</td>
    <td>
     <ul>
@@ -773,7 +773,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>ボーダー</td>
+   <td>border</td>
    <td>border オブジェクトは、checkButton オブジェクトを囲む境界線を表します。 </td>
    <td>変更はモデルに反映され、スクリプティングに使用できますが、HTML 要素には同期されません。したがって、変更は UI には反映されません。<br /> </td>
   </tr>
@@ -790,7 +790,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>ボーダー</td>
+   <td>border</td>
    <td>border オブジェクトは、choiceList オブジェクトを囲む境界線を表します。</td>
    <td> </td>
   </tr>
@@ -801,7 +801,7 @@ ht-degree: 99%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| ボーダー | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
+| border | border オブジェクトは、dateTimeEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## 画像 {#image}
 
@@ -829,13 +829,13 @@ ht-degree: 99%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| ボーダー | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
+| border | border オブジェクトは、imageEdit オブジェクトを囲む境界線を表します。 |  |
 
 ## numericEdit {#numericedit}
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| ボーダー | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
+| border | border オブジェクトは、オブジェクトを囲む境界線を表します。 | なし |
 
 ## object {#object}
 
@@ -881,7 +881,7 @@ ht-degree: 99%
    <td><strong>例外</strong></td>
   </tr>
   <tr>
-   <td>ボーダー</td>
+   <td>border</td>
    <td>border オブジェクトは、オブジェクトを囲む境界線を表します。<br /> </td>
    <td>なし</td>
   </tr>
@@ -903,7 +903,7 @@ ht-degree: 99%
    <td>なし</td>
   </tr>
   <tr>
-   <td>ボーダー</td>
+   <td>border</td>
    <td>このフィールドを囲む境界線を指定します。</td>
    <td>なし</td>
   </tr>
@@ -949,7 +949,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td>caption</td>
-   <td>  caption オブジェクトは、フォームデザインオブジェクトに関連付けられた説明ラベルを表します。<br /> </td>
+   <td> caption オブジェクトは、フォームデザインオブジェクトに関連付けられる説明ラベルを表します。<br /> </td>
    <td>なし</td>
   </tr>
   <tr>
@@ -963,17 +963,17 @@ ht-degree: 99%
    <td>なし</td>
   </tr>
   <tr>
-   <td>存在</td>
+   <td>presence</td>
    <td>オブジェクトの可視性を指定します。</td>
    <td> </td>
   </tr>
   <tr>
-   <td>アクセス</td>
+   <td>access</td>
    <td>コンテナのコンテンツへのユーザーアクセスを制御します。オブジェクト、例えばサブフォーム。</td>
    <td>exclgrp 内の個々の項目については、常にオープンを返します。 </td>
   </tr>
   <tr>
-   <td>名前</td>
+   <td>name</td>
    <td>スクリプト式でこのオブジェクトまたはイベントを指定するために使用可能な識別子を指定します。</td>
    <td>なし</td>
   </tr>
@@ -1017,7 +1017,7 @@ ht-degree: 99%
  </tbody>
 </table>
 
-## ボーダー {#border}
+## border {#border}
 
 <table>
  <tbody>
@@ -1109,7 +1109,7 @@ ht-degree: 99%
 
 | **プロパティ** | **説明** | **例外** |
 |---|---|---|
-| 存在 | オブジェクトの可視性を指定します。 | なし |
+| presence | オブジェクトの可視性を指定します。 | なし |
 
 ## FormCalc {#formcalc}
 
@@ -1353,4 +1353,4 @@ FormCalc は e フォーム中心のロジックと計算のルートを作成�
 
 >[!NOTE]
 >
->HTML5 フォームはクライアントサイド（ブラウザー）でレンダリングされます。クライアント側を使用することをお勧めします **validate** および **calculate** スクリプトを使用します。
+>HTML5 フォームはクライアントサイド（ブラウザー）でレンダリングされます。サーバーサイドのスクリプトではなく、クライアントサイドの **validate** スクリプトおよび **calculate** スクリプトの使用をお勧めします。
