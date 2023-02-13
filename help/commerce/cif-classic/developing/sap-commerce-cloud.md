@@ -10,9 +10,9 @@ content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2308'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 98%
 * 買い物かご
 * チェックアウト
 
-検索には、AEM検索、e コマースシステムの検索、サードパーティ検索またはその組み合わせを使用できる統合フックが提供されます。
+検索のために、AEM 検索、e コマースシステムの検索、サードパーティ検索、またはこれらを組み合わせた検索を行うための、統合フックが提供されています。
 
 ## e コマースエンジンの選択 {#ecommerce-engine-selection}
 
