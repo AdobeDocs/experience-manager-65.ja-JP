@@ -12,9 +12,9 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
 source-git-commit: 85189a4c35d1409690cbb93946369244e8848340
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3466'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -396,7 +396,7 @@ ht-degree: 98%
 **フォームレベルの設定**
 
 * **バインドされていないフィールドをレコードのドキュメントに含める：**&#x200B;このプロパティを設定すると、スキーマベースのアダプティブフォームのバインドされていないフィールドが、レコードのドキュメントに追加されます。デフォルトでは true になっています。
-* **非表示の場合に DoR からフィールドを除外：** 非表示のフィールドを除外するプロパティを設定します [!UICONTROL レコードのドキュメント] フォーム送信時に 有効にする場合 [サーバーで再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)を指定した場合、サーバーは非表示のフィールドを再計算してから、 [!UICONTROL レコードのドキュメント].
+* **非表示の場合に DoR からフィールドを除外：**&#x200B;フォーム送信時に[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外するようにプロパティを設定します。[サーバーで再検証](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)を有効にすると、サーバーは非表示のフィールドを再計算してから、[!UICONTROL レコードのドキュメント]から非表示のフィールドを除外します。
 
 ## レコードのドキュメントに対する改ページの適用 {#apply-page-breaks-in-dor}
 
@@ -404,7 +404,7 @@ ht-degree: 98%
 
 レコードのドキュメントに改ページを適用するには：
 
-1. パネルをタップし、「 」を選択します。 ![設定](/help/forms/using/assets/configure.png)
+1. パネルをタップし、「![設定](/help/forms/using/assets/configure.png)」を選択します。
 1. 「**[!UICONTROL レコードのドキュメント]**」を展開すると、プロパティが表示されます。
 
 1. 「**[!UICONTROL ページネーション]**」セクションで、**[!UICONTROL 場所]**&#x200B;フィールドの「![フォルダー](/help/forms/using/assets/folder-icon.png)」をタップします。
