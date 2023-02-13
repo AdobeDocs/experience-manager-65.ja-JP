@@ -13,9 +13,9 @@ legacypath: /content/docs/en/aem/6-0/deploy/upgrade/queries-and-indexing
 feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
 source-git-commit: b27a7a1cc2295b1640520dcb56be4f3eb4851499
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2674'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -288,7 +288,7 @@ Solr インデックスの用途は主にフルテキスト検索ですが、パ
 
 AEM での統合はリポジトリレベルで実行されるので、Solr は、Oak（AEM に付属する新しいリポジトリ実装）で使用できるインデックスの候補の 1 つです。
 
-AEMインスタンスでリモートサーバーとして機能するように設定できます。
+AEM インスタンスでリモートサーバーとして機能するように設定できます。
 
 ### AEM での単一リモート Solr サーバーの設定 {#configuring-aem-with-a-single-remote-solr-server}
 
