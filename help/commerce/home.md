@@ -3,9 +3,9 @@ title: AEM Content and Commerce
 description: AEM Content and Commerce の使用と管理の方法を理解します。統合に関する役立つ記事や、AEM ストアフロントの使用を開始する方法も用意されています。
 exl-id: b5b074e7-6da7-49ed-9cdb-f7c37d08e08c
 source-git-commit: 3ac32e5a2a1b2b266e2fc9f4ba8c7393a0566ff4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '355'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -38,15 +38,15 @@ AEM Content and Commerce の使用と管理の方法を理解します。統合�
 | [開発ユーザーガイド](/help/sites-developing/home.md) | AEM インスタンスを構築する方法を説明します。 |
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
+| [AEM Livefyre](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=ja) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
 
 ## 主要な AEM リソース
 
 * [AEM チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja)
 * [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
-* [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 * [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
 * [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)
