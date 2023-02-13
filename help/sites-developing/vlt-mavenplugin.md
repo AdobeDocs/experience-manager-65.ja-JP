@@ -3,13 +3,13 @@ title: Adobe Content Package Maven Plugin
 description: Content Package Maven Plugin を使用した AEM アプリケーションのデプロイについて説明します
 exl-id: 002c00ba-eda1-4481-bc35-1f4d972e4073
 source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '159'
 ht-degree: 100%
 
 ---
 
-# Adobeコンテンツパッケージ Maven プラグイン {#adobe-content-package-maven-plugin}
+# Adobe Content Package Maven Plugin {#adobe-content-package-maven-plugin}
 
 パッケージデプロイメントおよび管理タスクを Maven プロジェクトに組み込むには、Adobe Content Package Maven Plugin を使用します。
 
