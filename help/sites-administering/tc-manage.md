@@ -1,20 +1,11 @@
 ---
 title: 翻訳プロジェクトの管理
-seo-title: Managing Translation Projects
 description: AEM で翻訳プロジェクトを管理する方法について説明します。
-seo-description: Learn how to manage translation projects in AEM.
-uuid: f6f79b5b-dc08-4dde-b464-719345d233a6
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: site-features
-content-type: reference
-discoiquuid: c8672774-6911-497d-837b-1e5953c4226a
-feature: Language Copy
 exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7efb1b8d345b07835e5f45a1afe9da13163411b2
 workflow-type: tm+mt
-source-wordcount: '3442'
-ht-degree: 100%
+source-wordcount: '3536'
+ht-degree: 97%
 
 ---
 
@@ -418,6 +409,16 @@ AEM では、翻訳プロジェクトがコンテンツの初期翻訳用に作�
    ![chlimage_1-39](assets/chlimage_1-39.jpeg)
 
 1. 「開始」をクリックまたはタップします。
+
+## ソースページの移動または名前の変更 {#move-source}
+
+翻訳済みのソースページを [名前が変更されたか、移動されました](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page)移動後に再度ページを翻訳すると、新しいページ名と場所に基づいて新しい言語コピーが作成されます。 以前の名前/場所に基づく古い言語コピーは、引き続き存在します。
+
+このシナリオのベストプラクティスは、次の手順に従うことです。
+1. 移動するソースページに関連付けられている言語コピーを非公開にします。
+1. 削除します。
+1. 新しく移動したソースページから新しい言語コピーを作成します。
+1. 新しく作成された言語コピーを公開します。
 
 ## プロジェクトコンソールを使用した翻訳プロジェクトの作成 {#creating-a-translation-project-using-the-projects-console}
 
