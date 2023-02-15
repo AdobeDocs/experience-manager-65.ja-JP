@@ -2,10 +2,10 @@
 title: AEM FormsのAEM Formsパッチインストール手順
 description: OSGi および JEE 環境に対するAEM Forms Service Pack のインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 72e4d6372a013acde1c2cf7e46cc36e3525e53bf
+source-git-commit: 0083de8ba459662d04ba80d8c63f21735d82ac82
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 55%
+source-wordcount: '1797'
+ht-degree: 56%
 
 ---
 
@@ -91,7 +91,8 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
       >[!NOTE]
       >
-      > の使用 **ConfigurationManager.bat** ファイルを使用すると、 .lax ファイルの名前を手動で更新するのを防ぐことができます。
+      >* の更新または置き換え **ConfigurationManager.bat** ファイルを使用すると、 .lax ファイルの名前を手動で更新するのを避けることができます。
+
 
 1. **[UNIX ベースの場合のみ]:** この **Configuration Manager を起動します。** デフォルトでは、「 」チェックボックスがオンになっています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、「**Configuration Manager を起動**」オプションの選択を解除してから、「**[!UICONTROL 完了]**」をクリックします。`[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
 
@@ -104,7 +105,6 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
    * [AEM forms のインストールおよびデプロイ (WebSphere® Cluster 版 )](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
    * [AEM Forms for WebLogic クラスターのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
-これは
 
 >[!NOTE]
 >
@@ -244,8 +244,6 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 +++
 
 ## トラブルシューティング
-
-* インストール中にエラーが発生した場合は、AEM Forms Service Pack を再インストールします。 問題が解決しない場合は、Adobeサポートに問い合わせてください。
 
 * If **パッケージマネージャー UI のダイアログ** service pack のインストール中に終了します。デプロイメントにアクセスする前に、エラーログが安定するのを待ちます。 アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを保証します。 通常、この問題は Safari ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
 
