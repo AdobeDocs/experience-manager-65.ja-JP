@@ -13,7 +13,7 @@ exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
 source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 92%
+ht-degree: 95%
 
 ---
 
@@ -42,7 +42,7 @@ AEM には、[SAML](https://saml.xml.org/saml-specifications) 認証ハンドラ
 >
 >SAML 2.0 認証ハンドラーはデフォルトでは無効になっています。このハンドラーを有効にするには、次のどちらかのプロパティを設定する必要があります。
 >
->* ID プロバイダーPOSTURL または IDP URL。
+>* ID プロバイダーの POST URL または IDP URL。
 >* サービスプロバイダーのエンティティ ID
 >
 
@@ -57,7 +57,7 @@ AEM には、[SAML](https://saml.xml.org/saml-specifications) 認証ハンドラ
 
 **IDP 証明書エイリアス** グローバル TrustStore における IdP の証明書のエイリアスです。このプロパティが空の場合は、認証ハンドラーが無効になります。設定方法は、以下の「AEM TrustStore への IdP 証明書の追加」を参照してください。
 
-**IDP URL** SAML 認証リクエストの送信先となる IDP の URL。 このプロパティが空の場合は、認証ハンドラーが無効になります。
+**IDP URL** SAML 認証要求を送信する必要のある IDP の URL です。このプロパティが空の場合は、認証ハンドラーが無効になります。
 
 >[!CAUTION]
 >

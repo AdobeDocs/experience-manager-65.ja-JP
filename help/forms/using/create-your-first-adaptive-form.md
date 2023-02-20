@@ -59,7 +59,7 @@ ht-degree: 98%
 
 * 顧客が配送先住所を追加するためのアダプティブフォームを作成する
 * 顧客の情報を表示して保存するためのアダプティブフォームフィールドのレイアウトを設定する
-* フォームコンテンツが記載された電子メールを送信するためのアクションを作成する
+* フォームコンテンツが記載されたメールを送信するためのアクションを作成する
 * アダプティブフォームのプレビューと送信を行う
 
 [![ガイドを参照してください](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
@@ -107,7 +107,7 @@ ht-degree: 98%
 
 [![ガイドを参照してください](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
-## 手順 5：アダプティブフォームをパブリッシュする {#step-publish-your-adaptive-form}
+## 手順 5：アダプティブフォームを公開する {#step-publish-your-adaptive-form}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 

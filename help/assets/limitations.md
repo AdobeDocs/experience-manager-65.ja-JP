@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media の制限
-description: 画像セットやスピンセットを作成したり、PDF をアップロードしたりする際の、ベストプラクティスと適用される制限について説明します。また、Dynamic Mediaでサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせについても説明します。
+description: 画像セットやスピンセットを作成したり、PDF をアップロードしたりする際の、ベストプラクティスと適用される制限について説明します。また、Dynamic Media でサポートしていない web ブラウザーとオペレーティングシステムの組み合わせについても学びます。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
@@ -11,7 +11,7 @@ exl-id: e4d4059e-ac0b-42e7-910c-001310796574
 source-git-commit: 9247a81a518b1bd6e037c234a6c67f95209bfde8
 workflow-type: tm+mt
 source-wordcount: '235'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 80%
 このトピックには、次のセクションが含まれます。
 
 * [アセットタイプに関する Dynamic Media のベストプラクティスと適用される制限](#best-practice-enforced-limits)
-* [Dynamic Mediaでサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせ](#unsupported-browser-os)
+* [Dynamic Media でサポートしていない web ブラウザーとオペレーティングシステムの組み合わせ](#unsupported-browser-os)
 
 ## アセットタイプに関する Dynamic Media のベストプラクティスと適用される制限 {#best-practice-enforced-limits}
 
@@ -38,9 +38,9 @@ ht-degree: 80%
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
-## Dynamic Mediaでサポートされていない Web ブラウザーとオペレーティングシステムの組み合わせ {#unsupported-browser-os}
+## Dynamic Media でサポートしていない web ブラウザーとオペレーティングシステムの組み合わせ {#unsupported-browser-os}
 
-Dynamic Mediaでは、次の Web ブラウザーとオペレーティングシステムの組み合わせはサポートされていません。
+Dynamic Media では、次の web ブラウザーとオペレーティングシステムの組み合わせをサポートしていません。
 
 * Internet Explorer 11 と Windows 7
 * Internet Explorer 11 と Windows 8.1

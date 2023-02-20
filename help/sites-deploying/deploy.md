@@ -14,7 +14,7 @@ exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 source-git-commit: 2a350548674ff3f8dc49defa47ac2b028da76f4b
 workflow-type: tm+mt
 source-wordcount: '1802'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -177,7 +177,7 @@ AEM ソフトウェアパッケージには、次の 2 つの形式がありま�
 
 1. GUI 環境でインスタンスを起動するには、**`cq-quickstart-6.5.0.jar`** ファイルをダブルクリックします。
 
-   または、コマンドラインからAEMを起動することもできます。
+   または、AEM はコマンドラインから起動することもできます。
 
    ```shell
        java -Xmx1024M -jar cq-quickstart-6.5.0.jar

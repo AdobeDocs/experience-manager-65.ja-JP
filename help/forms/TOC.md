@@ -11,7 +11,7 @@ role: User
 source-git-commit: 29b283970f2c37782700b69302715e8404ce83ae
 workflow-type: tm+mt
 source-wordcount: '3835'
-ht-degree: 95%
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 95%
    + [アダプティブフォームのオーサリングの概要](using/introduction-forms-authoring.md)
    + [インタラクティブ通信の概要](using/interactive-communications-overview.md)
    + [フォーム管理の概要](using/introduction-managing-forms.md)
-   + [自動フォーム変換サービスの概要](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/introduction.html)
+   + [自動フォーム変換サービスの概要](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/introduction.html?lang=ja)
    + チュートリアル：最初のアダプティブフォームを作成 {#create-first-adaptive-form}
       + [チュートリアル：最初のアダプティブフォームを作成](using/create-your-first-adaptive-form.md)
       + [チュートリアル：アダプティブフォームの作成](using/create-adaptive-form.md)
@@ -62,7 +62,7 @@ ht-degree: 95%
       + [データ取得機能をインストールして設定する](using/installing-configuring-aem-forms-osgi.md)
       + [OSGi での Forms 中心のワークフローのインストールと設定](using/installing-configuring-forms-centric-workflow-on-osgi.md)
       + [インタラクティブ通信をインストールして設定する](using/installing-configuring-intreactive-communication-correspondence-management.md)
-      + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/configure-service.html)
+      + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/configure-service.html?lang=ja)
    + AEM Forms の JEE へのインストール {#jee-installation}
       + [JEE 上の AEM Forms でサポートされているプラットフォーム](using/aem-forms-jee-supported-platforms.md)
       + [JEE 上における AEM forms のインストールおよびデプロイ（JBoss Turnkey を使用）](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_jp)
@@ -96,10 +96,10 @@ ht-degree: 95%
       + [AEM Forms へのアップグレードの準備](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65_jp)
       + [JEE 上の Adobe Experience Manager Forms 用アップグレードのチェックリストと計画](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65_jp)
       + [JEE 上の AEM 6.5 Forms へのアップグレード](using/upgrade-forms-jee.md)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
+      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65_jp)
+      + [JEE 上の AEM Forms への自動アップグレード（JBoss 版）](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65_jp)
+      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebSphere 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65_jp)
+      + [JEE 上の Adobe Experience Manager Forms へのアップグレード（WebLogic 版）](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65_jp)
 + AEM Forms の管理 {#manage-administer-aem-forms}
    + [OSGi 上の AEM Forms のグループと権限](using/forms-groups-privileges-tasks.md)
    + [フォームを分類するための新しいフォルダーの作成](using/creating-new-folders-categorize-forms.md)
@@ -330,8 +330,8 @@ ht-degree: 95%
 + AEM Forms と Experience Cloud ソリューションとの統合 {#integrate-aem-forms-with-experience-cloud-solutions}
    + [AEM Forms でターゲット設定されたエクスペリエンスを作成する](/help/forms/using/experience-targeting-forms.md)
    + [フォームのコンバージョン率の測定と効率性の改善](using/measure-improve-performance-forms-documents.md)
-   + [分析フレームワークを使用したCloud Service](using/configure-analytics-forms-documents.md)
-   + [AdobeLaunch を使用した Analytics](using/integrate-aem-forms-with-adobe-analytics.md)
+   + [Cloud Service フレームワークを使用した Analytics](using/configure-analytics-forms-documents.md)
+   + [Adobe Launch を使用した Analytics](using/integrate-aem-forms-with-adobe-analytics.md)
    + [AEM Forms の分析レポートの確認方法と詳細](using/view-understand-aem-forms-analytics-reports.md)
    + [アダプティブフォームの A/B テストの作成と管理](using/ab-testing-adaptive-forms.md)
 + AEM Forms の公開と処理 {#publish-process-aem-forms}
@@ -345,10 +345,10 @@ ht-degree: 95%
    + [フォームとドキュメントの公開と非公開](using/publishing-unpublishing-forms.md)
    + [API を使用した Web ページ上のフォームの一覧表示](using/listing-forms-webpage-using-apis.md)
    + [発行済みフォームへのアクセスと入力](using/accessing-filling-published-forms.md)
-   + [電子メールによるフォーム送信確認の送信](using/form-submission-receipt-via-email.md)
+   + [メールによるフォーム送信確認の送信](using/form-submission-receipt-via-email.md)
    + [監視フォルダーの作成または設定](using/creating-configure-watched-folder.md)
-   + [タスクの割り当て手順におけるカスタムの電子メールテンプレートの使用](using/use-custom-email-template-assign-task-step.md)
-   + [電子メール通知におけるメタデータの使用](using/use-metadata-in-email-notifications.md)
+   + [タスクの割り当て手順におけるカスタムのメールテンプレートの使用](using/use-custom-email-template-assign-task-step.md)
+   + [メール通知におけるメタデータの使用](using/use-metadata-in-email-notifications.md)
 + Forms ポータル {#use-forms-portal}
    + [フォームポータルコンポーネントのテンプレートをカスタマイズする](using/customizing-templates-forms-portal-components.md)
    + [フォームポータルコンポーネントの有効化](using/enabling-forms-portal-components.md)
@@ -374,11 +374,11 @@ ht-degree: 95%
 + Forms Designer {#use-forms-designer}
    + [Forms Designer ヘルプ](using/forms-designer-help.md)
    + [Designer の使用](https://www.adobe.com/go/learn_aemforms_designer_65_jp)
-   + [Designer クイックスタートチュートリアル](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
-   + [Designer サンプル](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
-   + [Designer スクリプティング基礎](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
-   + [Designer スクリプティングリファレンス](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
-   + [Designer FormCalc リファレンス](https://www.adobe.com/go/learn_aemforms_formCalc_65)
+   + [Designer クイックスタートチュートリアル](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65_jp)
+   + [Designer サンプル](https://www.adobe.com/go/learn_aemforms_designer_samples_65_jp)
+   + [Designer スクリプティング基礎](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65_jp)
+   + [Designer スクリプティングリファレンス](https://www.adobe.com/go/learn_aemforms_scriptingReference_65_jp)
+   + [Designer FormCalc リファレンス](https://www.adobe.com/go/learn_aemforms_formCalc_65_jp)
    + [HTML5 フォームでの手書き署名の使用](using/scribble-signature.md)
    + [Designer での Page Zero コンテンツの変更](using/changing-page-zero-content-designer.md)
 + AEM Forms のカスタマイズ {#customize-aem-forms}
@@ -451,8 +451,8 @@ ht-degree: 95%
       + [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md)
    + エンドポイントの管理 {#manage-endpoints}
       + [エンドポイントの追加、有効化、変更または削除](/help/forms/using/admin-help/adding-enabling-modifying-or-removing.md)
-      + [電子メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
-      + [oAuth2.0 認証の設定](/help/forms/using/oauth2-support-for-mail-service.md)
+      + [メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
+      + [OAuth2.0 認証の設定](/help/forms/using/oauth2-support-for-mail-service.md)
       + [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
       + [監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
       + [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)
@@ -579,14 +579,14 @@ ht-degree: 95%
    + [プロセスレポートのアドホッククエリ](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md)
    + [トラブルシューティングプロセスのレポート](/help/forms/using/process-reporting/troubleshooting-process-management.md)
 + 開発者向けリファレンス {#developer-reference}
-   + [開発者の基本事項](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-   + [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+   + [開発者の基本事項](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=ja)
+   + [HTML テンプレート言語](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
    + [アダプティブフォームをデバッグするための AEM プラグイン。](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
    + [AEM Forms Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/javadocs/index.html)
    + [JEE での AEM Forms の Java API リファレンス](https://helpx.adobe.com/jp/experience-manager/6-5/forms/programlc/javadoc/index.html)
    + [HTML5 フォームの Form Bridge API](using/form-bridge-apis.md)
    + [アダプティブフォームの JavaScript ライブラリ API リファレンス](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
-   + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
+   + [Assembler サービスおよび DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddxRef_65_jp)
    + [Workbench ヘルプ](https://www.adobe.com/go/learn_aemforms_workbench_65_jp)
    + JEE 上の AEM Forms でのプログラミング {#programming-aem-forms-jee}
       + JEE 上の AEM Forms でのプログラミングの概要 {#introduction-programming-aem-forms-jee}
@@ -683,11 +683,11 @@ ht-degree: 95%
          + [ポリシーを使用したドキュメントの保護](developing/protecting-documents-policies.md)
          + [Web サービス API を使用した DDX ドキュメントの検証](developing/validate-ddx-document-using-web.md)
 + トラブルシューティング {#troubleshooting}
-   + [特定のバージョンのOracleJDK で一部のフォーム機能を使用できない](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
-   + [JEE 上のアダプティブFormsバージョンの添付ファイルを含む電子メールを取得するための追加手順](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
-   + [Word または Excel ファイルを Windows Server 上のPDFに変換できません](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
-   + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer、Apple Safari で XFA ベースのPDF formsを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
-   + [CRX リポジトリを復元できません](/help/forms/using/restore-crx-repository.md)
+   + [特定のバージョンの Oracle JDK で一部の Forms 機能を使用できない](using/unable-to-use-forms-features-with-certain-versions-of-oracle-jdk.md)
+   + [JEE バージョンのアダプティブフォームの添付ファイルを含むメールを受信するための追加手順](/help/forms/using/additional-steps-to-use-email-with-attachments.md)
+   + [Windows Server 上で Word または Excel ファイルを PDF に変換できない](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
+   + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer または Apple Safari で XFA ベースの PDF フォームを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
+   + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
    + [AEM 6.5.15.0 Service Pack のインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)

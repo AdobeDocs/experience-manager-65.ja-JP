@@ -1,12 +1,12 @@
 ---
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
-description: リリース情報、新機能、インストール方法、詳細な変更リストを見つけます。 [!DNL Adobe Experience Manager] 6.5.
+description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: 38227a66-f2a9-4909-9297-1eced4ed6e8c
 source-git-commit: c4d45bc80f0973097d7b5917dca54390cfd40bd7
 workflow-type: tm+mt
 source-wordcount: '3786'
-ht-degree: 27%
+ht-degree: 97%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 27%
 
 ## [!DNL Experience Manager] 6.5.15.0 の内容 {#what-is-included-in-aem-6515}
 
-[!DNL Experience Manager] 6.5.15.0には、2019 年 4 月の 6.5 の初期リリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、バグ修正、パフォーマンス、安定性、セキュリティの改善が含まれています。 [このサービスパックをインストール](#install) オン [!DNL Experience Manager] 6.5. <!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.15.0 には、2019年4月の 6.5 リリースの公開当初にリリースされた新機能、お客様から要望のあった主な機能強化およびパフォーマンスや安定性、セキュリティの向上が含まれています。[このサービスパック](#install)を [!DNL Experience Manager] 6.5 にインストール<!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- Some of the key features and improvements are the following:
 
@@ -37,121 +37,121 @@ ht-degree: 27%
 
 ## [!DNL Assets] {#assets-6515}
 
-* アセット内でのアセットの移動に失敗した場合でも、Experience Managerの名前は変更できます。 （NPR-38753）
-* アセットを [!UICONTROL リスト表示]の場合、一部のタイトルが欠落しています。 （CQ-4345746）
-* スクリーンリーダーが [!UICONTROL 関連付け] ボタンをクリックします。 （ASSETS-6938）
-* スクリーンリーダーが、フォルダーのリストが含まれるアセットナビゲーションページでフォルダーアイコンを誤って検出しました。 （ASSETS-6936）
-* コレクションをコピーする際に、画像に空のがない `alt` attribute または role=&quot;presentation&quot;を設定します。 その結果、画像はスクリーンリーダーユーザに公開される。 （ASSETS-6932）
-* アセットへの注釈の追加中に表示されるテキストには、4 つの:5:1 のコントラスト比（背景色と比較） （ASSETS-6931）
-* アセットのプロパティページの「IPTC」タブで、ページの幅を調整すると、ページの内容が正しく収まらず、横方向にスクロールします。 （ASSETS-6929）
-* アセットをフィルターすると、 [!UICONTROL 分] および [!UICONTROL 最大] フィールドは、値の入力後に非表示になります。 （ASSETS-6925）
-* Experience Managerコレクションでは、スクリーンリーダーは [!UICONTROL 電子メール] フィールドに値を入力します。 （ASSETS-6923）
-* 要素に注釈を付ける際に、代替テキストが見つかりません。 （ASSETS-6922）
-* 日付選択フィールドに「時間」と「分」のテキストが記述されている場合、テキストエラーメッセージは表示されません。 エラーは、赤の色を使用してのみ識別されます。 (ASSETS-6852、ASSETS-6921、ASSETS-6920、ASSETS-6907)
-* の代替テキスト `[role='img']` 「ファイル」フィルターが見つかりません。 （ASSETS-6919）
-* のスクリーンリーダーに関する誤ったお知らせ [!UICONTROL 作成] サブメニュー。 （ASSETS-6916）
-* Experience Managerコレクションで、削除ボタン `X` スクリーンリーダーに読み上げるためのテキストがありません。 （ASSETS-6912）
-* Experience Managerで Color Contrast Analyzer を使用する場合、カレンダーウィジェットの日付選択で現在の日付と選択した日付を区別することはできません。 隣接する色と正反対に、少なくとも 3:1 のコントラスト比を欠いています。 （ASSETS-6911）
-* Experience Managerファイルで、次のいずれかのオプションを選択します。 [!UICONTROL スケジュール] 「公開を管理」のラジオボタン。ラジオボタンのオプション名と状態は、スクリーンリーダーによって通知されます。 ただし、 **スケジュール** ラベルは通知されません。 (ASSETS-6908、ASSETS-6906)
-* 並べ替えアイコンに代替テキストがありません。 （ASSETS-6904）
-* アセットプロパティページで、フィールド名 `Person` 「 IPTC 拡張」タブのラベルは、スクリーンリーダーによって通知されません。 スクリーンリーダーは、編集可能で現在は空白のフィールドのみを読み上げ、ラベル名は読み上げません。 (ASSETS-6903、ASSETS-6848)
-* 注釈ツールは、キーボードを使用して表示できません。 マウスを使用して、注釈ツールを表示する画像を描画します。 （ASSETS-6899）
-* Experience Managerコレクションで、 **詳細** 「 」タブに、境界と隣接する色の間に間違ったコントラスト比が表示されます。 （ASSETS-6895）
-* アセットの編集中に一部の要素の ARIA 属性値が正しくありません。 （ASSETS-6894）
-* ワークフローの作成中、スクリーンリーダーで見出しが正しく識別されない。 （ASSETS-6892）
-* コレクションのコピー時に、「画像をSVG」削除ボタン `X` role=&quot;img&quot;を使用した場合、role=&quot;presentation&quot;がありません。 その結果、画像はスクリーンリーダーユーザに公開される。 （ASSETS-6890）
-* 内 **基本** タブ内のアセットのプロパティを編集する場合、スクリーンリーダーで「タグ」フィールドの展開状態や折りたたみ状態が適切に読み上げられない。 （ASSETS-6889）
-* この **基本** 「 」タブ（アセットのプロパティ）には、重複した ID を持つページが含まれます。 （ASSETS-6888）
-* ワークフローの作成時にタイトルを定義するテキストフィールドのラベルは、テキストボックスに値を指定すると表示されなくなります。 （ASSETS-6887）
-* リンクを共有している受信者のリストは、見出しを含むデータテーブルとして表示されますが、スクリーンリーダーユーザーにとって、意味的にはデータテーブルとして識別されません。 （ASSETS-6886）
-* に空のフィールドを表すエラーメッセージは表示されません `Add Email Address` フィールドに入力します。 エラーは色でのみ表示されます。 (ASSETS-6885、ASSETS-6843)
-* プレースホルダーテキスト、パス、代替テキストの背景色と比較して、コントラスト比が 4.5:1 以上ありません。 (ASSETS-6884、ASSETS-6865)
-* スマートコレクションの保存中に一部の ARIA 属性の値が無効になりました。 （ASSETS-6882）
-* スマートコレクションを保存すると、一部のラベルがスクリーンリーダーに適切に関連付けられません。 （ASSETS-6881）
-* アセットプロパティの「 IPTC 」タブでは、スクリーンリーダーはキーワードフォームフィールドのラベルを読み上げません。 （ASSETS-6879）
-* Experience Managerコレクションで、 [!UICONTROL 電子メール] 「 」フィールドが必須フィールドとして識別されず、値を指定しない場合、エラーメッセージは表示されません。 （ASSETS-6877）
-* Experience Managerファイルで、 **リンク共有** 画面が `Add Email Address`. エラーは、色の使用でのみ識別されます。 (ASSETS-6876、ASSETS-6875)
-* [!UICONTROL 切り抜きとマップ] アセットの編集中に、オプションにプログラム名が付かない。 （ASSETS-6874）
-* フィルターテキストには、背景色と比較して 4.5:1 の契約比率が不足しています。 （ASSETS-6873）
-* メインナビゲーションページのフォルダー名のテキストの背景色と比較した場合、コントラストの比率が 4.5:1 ではありません。 （ASSETS-6872）
-* を実行中に [!UICONTROL コピー] コレクションの操作、 **[!UICONTROL ユーザーを追加]** コンボボックスのフォームコントロールが、その表示可能なラベルと正しく関連付けられていません。 （ASSETS-6870）
-* スクリーンリーダーが [!UICONTROL 作成] ボタンサブメニューオプション （ASSETS-6869）
-* 「範囲」、「ワークフロー」および「タイムゾーン」オプションの背景色と比較した場合、コントラスト比は 4.5:1 ではありません。 （ASSETS-6868）
-* スクリーンリーダーが、 **タイムライン** 列。 （ASSETS-6864）
-* スマートコレクションの保存中に、一部の ARIA ロールの子要素が見つかりません。 （ASSETS-6862）
-* アセットを共有する際には、次の用に ARIA 属性が必要です： `Search/Add Email Address` フィールドが指定されていません。 （ASSETS-6860）
-* この **マップ** キーボードを使用してダイアログボックスを表示することはできません。 代わりに、マウスをクリックしてマップダイアログボックスを表示する必要があります。 （ASSETS-6859）
-* アセットプロパティページの「基本」タブに、一部の ARIA ロールの子要素が見つかりません。 （ASSETS-6858）
-* アセットプロパティの「 IPTC 」タブで使用できる空のテキスト入力フィールドのコントラスト比は、隣接する色と比較して 3:1 ではありません。 (ASSETS-6854、ASSETS-6847)
-* 「 **タイムライン** セクションがスクリーンリーダーで誤って検出される。 （ASSETS-6850）
-* スクリーンリーダーが、アセットのプロパティの「基本」タブにある「レビューステータス」コンボボックスが読み取り専用フィールドであると認識しません。 （ASSETS-6849）
-* スクリーンリーダーで、「Select All」チェックボックスと「Annotation」チェックボックスのラベルが適切に読み上げられない。 （ASSETS-6846）
-* キーボードフォーカスが `About Adobe Experience Manager` オプションは **ヘルプを表示** メニュー （ASSETS-6845）
-* スクリーンリーダーは、カード表示のキーボード矢印キーを使用してフォルダーのリスト内を移動する際に、選択したフォルダーを正しく読み上げることができない。 （ASSETS-6844）
-* PDFをExperience Managerにアップロードする際、メモリ使用量は常に増加しています。 （ASSETS-16889）
-* ワークフローで.ZIP ファイルを Assets 内のフォルダー名に変換しても、.ZIP ファイル名の大文字と小文字は区別されません。 （ASSETS-16712）
-* Brand PortalからExperience Manager6.5 に切り替えた場合、初めてフィルターを適用した際に、ユーザーの述語フィルターに適切な結果が表示されません。 （ASSETS-15932）
-* ビデオに注釈を付けることができません。 （ASSETS-15217）
-* **公開を管理** 複製アクセス権のないユーザーのオプションが表示されなくなり、 `READ` および `WRITE` ～へのアクセス `ETC` および `VAR`. （ASSETS-15007）
-* 複数の参照を持つアセットの場合、プロパティページの読み込み時間が長くなります。 （ASSETS-14182）
-* Brand Portalから画像を非公開にすると、Experience ManagerはDynamic Mediaから画像を非公開にするので、ライブ Web サイトには画像が表示されません。 （ASSETS-14118）
-* Dynamic Mediaのスマート切り抜きカードで XSS の問題が発生しました。 (ASSETS-14212、ASSETS-14208、ASSETS-13704)
-* Dynamic Mediaのビューアプリセットで XSS 問題が発生する。 （ASSETS-13822）
-* AEMで DM アセットをプレビューする際に、ユーザーアクセスを検証します。 （CQ-4314757）
+* Experience Manager でアセットの移動に失敗した場合でも、アセットの名前が変更できます。（NPR-38753）
+* アセットを[!UICONTROL リスト表示]すると、一部のタイトルが欠落しています。（CQ-4345746）
+* スクリーンリーダーが、アセットのプロパティページ上にある「基本」タブの「[!UICONTROL 関連付け]」ボタンのサブメニューを読み上げません。（ASSETS-6938）
+* スクリーンリーダーが、フォルダーのリストを含むアセットナビゲーションページのフォルダーアイコンを誤って検出します。（ASSETS-6936）
+* コレクションのコピー中に、画像に空の `alt` 属性または role=&quot;presentation&quot; がありません。その結果、画像はスクリーンリーダーのユーザーに公開されます。（ASSETS-6932）
+* アセットに注釈を付ける際に表示されるテキストに、背景色と比較して 4:5:1 のコントラスト比がありません。（ASSETS-6931）
+* アセットプロパティページの「IPTC」タブ上でページ幅を調整すると、ページコンテンツが適切に収まらず、水平スクロールが発生します。（ASSETS-6929）
+* アセットをフィルターすると、「[!UICONTROL 分]」フィールドおよび「[!UICONTROL 最大]」フィールドが、値の入力後に非表示になります。（ASSETS-6925）
+* Experience Manager コレクションで、スクリーンリーダーがダウンロード画面で「[!UICONTROL メール]」フィールドを通知しません。（ASSETS-6923）
+* 要素に注釈を付ける際に、代替テキストがありません。（ASSETS-6922）
+* 日付選択フィールドの「時間」と「分」にテキストが書き込まれる場合、テキストエラーメッセージが表示されません。エラーが赤色を使用してのみ識別されます。（ASSETS-6852、ASSETS-6921、ASSETS-6920、ASSETS-6907）
+* ファイルフィルターの `[role='img']` の代替テキストがありません。（ASSETS-6919）
+* 「[!UICONTROL 作成]」サブメニューに対する、スクリーンリーダーの誤った読み上げ。（ASSETS-6916）
+* Experience Manager コレクションで、「削除」ボタン `X` にスクリーンリーダーが読み上げるテキストがありません。（ASSETS-6912）
+* Experience Manager で Color Contrast Analyzer を使用している際、カレンダーウィジェットの日付選択で、現在の日付と選択した日付との間に色の違いがありません。隣接する色との比率で、少なくとも 3:1 のコントラスト比を欠いています。（ASSETS-6911）
+* Experience Manager ファイルで、公開を管理の「[!UICONTROL スケジュール]」ラジオボタンからオプションの 1 つを選択すると、ラジオボタンオプションの名前と状態をスクリーンリーダーが読み上げます。ただし、「**スケジュール**」ラベルは読み上げません。 （ASSETS-6908、ASSETS-6906）
+* 「並べ替え」アイコンに代替テキストがありません。 （ASSETS-6904）
+* アセットプロパティページで、「IPTC 拡張」タブのラベルのフィールド名 `Person` を、スクリーンリーダーが読み上げません。 スクリーンリーダーが、編集可能で現在は空白のフィールドのみを読み上げ、ラベル名を読み上げません。（ASSETS-6903、ASSETS-6848）
+* 注釈ツールがキーボードを使用して表示できません。マウスを使用して画像を描画し、注釈ツールを表示します。 （ASSETS-6899）
+* Experience Manager コレクションで、「**詳細**」タブに、境界と隣接するいずれかの色の間に間違ったコントラスト比が表示されます。（ASSETS-6895）
+* アセットの編集中に、一部の要素の ARIA 属性値が正しくありません。（ASSETS-6894）
+* スクリーンリーダーは、ワークフローの作成中に見出しを正しく識別しません。（ASSETS-6892）
+* コレクションをコピーする際、role=&quot;img&quot; がある SVG 画像削除ボタン `X` に role=&quot;presentation&quot; がありません。その結果、画像はスクリーンリーダーのユーザーに公開されます。（ASSETS-6890）
+* アセットプロパティの「**基本**」タブで、スクリーンリーダーがタグフィールドの展開状態または折りたたみ状態を適切に読み上げません。（ASSETS-6889）
+* アセットプロパティの「**基本**」タブには、重複した ID を持つページが含まれています。（ASSETS-6888）
+* ワークフローの作成中にテキストボックスに値を指定すると、タイトルを定義するテキストフィールドのラベルが表示されなくなります。（ASSETS-6887）
+* リンクを共有している間の受信者リストは、見出し付きのデータテーブルとして表示されますが、スクリーンリーダーのユーザーには意味的にデータテーブルとして識別されません。（ASSETS-6886）
+* `Add Email Address` フィールドに空のフィールドを表すエラーメッセージは表示されません。エラーがカラーのみで表示されます。（Assets-6885、Assets-6843）
+* プレースホルダーテキスト、パス、代替テキストが、背景色と比較して最低限の 4.5:1 のコントラスト比を満たしていません。（Assets-6884、Assets-6865）
+* スマートコレクションの保存中、一部の ARIA 属性の値が無効です。（ASSETS-6882）
+* スマートコレクションを保存する際、一部のラベルがスクリーンリーダーに適切に関連付けられません。 （ASSETS-6881）
+* アセットプロパティの「IPTC」タブで、スクリーンリーダーがキーワードフォームフィールドのラベルを読み上げません。（ASSETS-6879）
+* Experience Manager Collections で、「[!UICONTROL メール]」フィールドが必須フィールドとして識別されず、値を指定しなくてもエラーメッセージが表示されません。（ASSETS-6877）
+* Experience Manager のファイルで、**リンク共有**&#x200B;画面のエラーメッセージが `Add Email Address` に表示されません。エラーが、カラーの使用でのみ識別されます。（Assets-6876、Assets-6875）
+* [!UICONTROL 切り抜きおよびマップ]オプションに、アセットの編集中にプログラム名が付きません。（ASSETS-6874）
+* フィルターテキストが、背景色と比較して 4.5:1 のコントラスト比を満たしていません。（ASSETS-6873）
+* メインナビゲーションページのフォルダー名のテキストが、背景色と比較した 4.5:1 のコントラスト比を満たしていません。（ASSETS-6872）
+* コレクションの[!UICONTROL コピー]操作を実行中に、「**[!UICONTROL ユーザーを追加]**」コンボボックスのフォームコントロールが、表示ラベルに正しく関連付けられていません。（ASSETS-6870）
+* スクリーンリーダーが「[!UICONTROL 作成]」ボタンのサブメニューオプションを読み上げません。（ASSETS-6869）
+* 「範囲」、「ワークフロー」、「タイムゾーン」オプションが、背景色と比較した場合、コントラスト比が 4.5:1 ではありません。（ASSETS-6868）
+* スクリーンリーダーが、**タイムライン**&#x200B;列の折りたたみ状態を誤って読み上げます。（ASSETS-6864）
+* スマートコレクションの保存中に、一部の ARIA 役割の子要素が欠落します。 （ASSETS-6862）
+* アセットを共有する際、`Search/Add Email Address` フィールドに必須の ARIA 属性が指定されません。（ASSETS-6860）
+* **マップ**&#x200B;ダイアログボックスが、キーボードを使用して表示できません。マップダイアログボックスを表示するには、代わりにマウスをクリックする必要があります。（ASSETS-6859）
+* アセットプロパティページの「基本」タブで、一部の ARIA 役割の子要素が欠落しています。（ASSETS-6858）
+* アセットプロパティの「IPTC」タブで使用できる空のテキスト入力フィールドが、隣接する色とのコントラスト比が 3:1 ではありません。（Assets-6854、Assets-6847）
+* 「**タイムライン**」セクションのプロファイルアイコンが、スクリーンリーダーによって誤って検出されます。（ASSETS-6850）
+* スクリーンリーダーが、アセットプロパティの「基本」タブにある「レビューステータス」コンボボックスが読み取り専用フィールドであることを読み上げません。（ASSETS-6849）
+* スクリーンリーダーが、「すべて選択」チェックボックスと「注釈」チェックボックスのラベルを適切に読み上げません。（ASSETS-6846）
+* キーボードフォーカスが、**ヘルプを表示**&#x200B;メニューで使用可能な `About Adobe Experience Manager` オプションをスキップします。（ASSETS-6845）
+* スクリーンリーダーが、カード表示でキーボード矢印キーを使用してフォルダーのリストを移動しているときに、選択したフォルダーを正しく読み上げません。（ASSETS-6844）
+* Experience Manager に PDF をアップロードしている間、メモリ使用量が継続的に増加します。（ASSETS-16889）
+* ワークフローが Assets で .ZIP ファイルをフォルダー名に変換する際、.ZIP ファイル名の大文字と小文字が区別されません。 （ASSETS-16712）
+* Brand Portal から Experience Manager 6.5 に切り替えるときに、ユーザー述語フィルターを初めて適用すると、適切な結果が表示されません。（ASSETS-15932）
+* ビデオに注釈を付けることができません。（ASSETS-15217）
+* 「**公開を管理**」オプションが、複製アクセス権がなく、`ETC` および `VAR` への `READ` および `WRITE` アクセス権を持つユーザーに対して表示されなくなります。（ASSETS-15007）
+* 複数の参照を持つアセットで、プロパティページの読み込み時間が長くなります。（ASSETS-14182）
+* Brand Portal から画像を非公開にすると、Experience Manager が Dynamic Media からも画像を非公開にするので、ライブ web サイトに画像が表示されません。（ASSETS-14118）
+* Dynamic Media のスマート切り抜きカードでの XSS の問題。（Assets-14212、Assets-14208、Assets-13704）
+* Dynamic Media のビューアプリセットでの XSS の問題。 （ASSETS-13822）
+* AEM で DM アセットをプレビューしながら、ユーザーアクセスを検証します。（CQ-4314757）
 
 
 ## Commerce {#commerce-6515}
 
-* ストアページの作成に失敗し、カタログのロールアウトプロセス全体を停止しました。 （CQ-4347181）
+* ストアページの作成が失敗し、カタログのロールアウトプロセス全体が停止しました。（CQ-4347181）
 
 ## [!DNL Forms] {#forms-6515}
 
-### 主な特長 {#keyfeatures}
+### 主な機能 {#keyfeatures}
 
-* AEM Forms Designer が [スペイン語ロケール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja). (LC-3920051)
+* AEM Forms Designer が [スペイン語ロケール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)で利用できるようになりました。（LC-3920051）
 * これで、 [Microsoft® Office 365 メールサーバープロトコル（SMTP および IMAP）で認証するための OAuth2](/help/forms/using/oauth2-support-for-mail-service.md). （NPR-35177）
-* 次の設定が可能です。 [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) プロパティを true に設定すると、サーバー側のレコードのドキュメントから除外する非表示フィールドが識別されます。 （NPR-38149）
-* AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ (x86) の 32 ビット版が必要です。  （NPR-36690）
+* [サーバーで再検証](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=ja#enabling-server-side-validation-br)プロパティを true に設定すると、サーバーサイドのレコードのドキュメントから除外する非表示フィールドを識別することができます。 （NPR-38149）
+* AEM Forms Designer には、Visual C++ 2019 再頒布可能パッケージ（x86）の 32 ビットバージョンが必要です。  （NPR-36690）
 
 ### 修正 {#fixes}
 
-* アダプティブフォームの data-disabled プロパティを切り替えても、ラジオボタンとチェックボックスグループの外観は変わりません。 （NPR-39368）
+* アダプティブフォームの data-disabled プロパティを切り替えても、「ラジオボタン」とチェックボックスグループの外観が変わりません。 （NPR-39368）
 * アダプティブフォームが翻訳されると、一部の翻訳が失われ、正しく表示されません。 （NPR-39367）
-* ページのプロパティを「非表示」に設定した場合、そのページはフォームセットから削除されません。 （NPR-39325）
-* レコードのドキュメントでは、ページの最後に動的な脚注セクションは存在しません。 （NPR-39322）
-* アダプティブフォーム用にレコードのドキュメントが生成された場合、ラジオボタンとチェックボックスで垂直方向の配置のみが許可されます。 ユーザーは、ラジオボタンとチェックボックスの水平方向の配置を設定できません。 （NPR-39321）
-* Correspondence Management をデプロイした後、複数のユーザーがフォームにアクセスしようとすると、org.apache.sling.i18n.impl.JcrResourceBundle.loadPotentialLanguageRoots がボトルネックになり、スレッドの大部分が突き刺されます。 多くの場合、フォームのページリクエストの読み込みには、サーバーの読み込みが非常に少ない場合でも、1 分以上かかりました。 （NPR-39176、CQ-4347710）
-* アダプティブフォームで、遅延読み込みされたアダプティブフォームフラグメントでリッチテキストフィールドを使用すると、次のエラーが発生します。
-   * コンテンツを編集したり、「リッチテキスト」フィールドに何も追加したりすることはできません。
-   * リッチテキストに適用された表示パターンが適用されない。 
-   * 最小フィールド長に関するエラーメッセージは、フォームの送信時には表示されません。
-   * このリッチテキストフィールドの内容は、生成された submit-XML に複数回含まれます。 （NPR-39168）
-* アダプティブフォームで日付選択オプションを使用すると、値を正しい形式に変換できません。 （NPR-39156）
-* アダプティブフォームをHTMLフォームとしてプレビューしている間、一部のサブフォームが親フォームと重なるので、正しくレンダリングされません。 （NPR-39046）
-* パネルに非表示のテーブルがあり、アダプティブフォームが表形式ビューを使用してレンダリングされている場合、最初のタブのフィールドが正しく表示されません。 （NPR-39025）
-* この `Body` 標準 (OOTB) テンプレートのタグが見つかりません。 (NPR-39022)
-* レコードのドキュメントは、アダプティブフォームの言語で生成されません。 常に英語で生成されます。 （NPR-39020）
-* アダプティブフォームに複数のパネルが含まれ、一部のパネルでは標準の **添付ファイル** コンポーネント、 `Error occurred while draft saving` エラーが発生します。 （NPR-38978）
-* 条件 `=` アダプティブフォームのチェックボックス、ドロップダウンリスト、ラジオボタンフィールドで署名が使用され、レコードのドキュメントが生成されます。 `=` 生成されたレコードのドキュメントには署名が表示されません。（NPR-38859）
-* 6.5.11.0サービスパックのアップグレード後に、通知バッチ処理エラーの数が複数回増加しています。 （NPR-39636）
-* テストデータを指定しないと、Correspondence Management レターがエージェント UI に読み込まれません。 （CQ-4348702）
-* IBM® WebSphere®を使用してデプロイされたAEM FormsからAEM Forms Service Pack 14(SP14) を適用すると、データベースの初期化中にブートストラップが失敗し、 `java.lang.NoClassDefFoundError:org/apache/log4j/Logger` エラーが発生しました。（NPR-39414）
-* OSGi サーバー上のAEM Form で、Document Service API を使用してPDFを認証すると、次のエラーで失敗します。com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311-003 （NPR-38855）
-* ユーザーがAEM 6.3 Formsでレターをレンダリングするためにラッパーサービスを使用しようとすると、 `java.lang.reflect.UndeclaredThrowableException` エラーが発生しました。 （CQ-4347259）
-* XDP がHTML5 フォームとしてレンダリングされる場合、アダプティブフォーム内のオブジェクトの配置に関係なく、マスターページのコンテンツが最初にレンダリングされます。 （CQ-4345218）
-* 宛先サーバーでのアプリケーションの設定は、ソースサーバーで定義された設定に変更されます ( **読み込み完了時に設定を上書き** アプリケーションのインポート時にオプションがオンになっていません。 （NPR-39044）
-* ユーザーが Configuration Manager を使用してコネクタ設定を更新しようとすると、失敗します。（CQ-4347077）
+* ページのプロパティを非表示に設定した場合、そのページはフォームセットから削除されません。 （NPR-39325）
+* レコードのドキュメントで、ページの最後に動的な脚注セクションが存在しません。 （NPR-39322）
+* アダプティブフォーム用にレコードのドキュメントが生成された場合、ラジオボタンとチェックボックスで垂直方向のアラインメントのみが許可されます。ユーザーは、ラジオボタンとチェックボックスの水平方向の配置を設定することができません。 （NPR-39321）
+* Correspondence Management をデプロイした後、複数のユーザーがフォームにアクセスしようとすると、org.apache.sling.i18n.impl.JcrResourceBundle.loadPotentialLanguageRoots がボトルネックになり、スレッドの大部分が衝突します。サーバーの負荷が非常に低いときでも、様々なフォームページリクエストの読み込みに 1 分以上かかることが多く発生しました。（NPR-39176、CQ-4347710）
+* アダプティブフォームで、遅延読み込みされたアダプティブフォームフラグメントでリッチテキストフィールドを使用すると、次のエラーのいくつかが発生します。
+   * コンテンツを編集したり、リッチテキストフィールドに何かを追加したりすることができません。
+   * リッチテキストに適用された表示パターンが適用されません。 
+   * 最小フィールド長に関するエラーメッセージがフォームの送信時に表示されません。
+   * このリッチテキストフィールドの内容は、生成された submit-XML に複数回含まれます。（NPR-39168）
+* アダプティブフォームで日付選択オプションを使用すると、値を正しい形式に変換することができません。 （NPR-39156）
+* アダプティブフォームを HTML フォームとしてプレビューしているときに、一部のサブフォームが親フォームと重なるので、正しくレンダリングされません。（NPR-39046）
+* パネルに非表示のテーブルがあり、アダプティブフォームが表形式表示を使用してレンダリングされている場合、最初のタブのフィールドが正しく表示されません。 （NPR-39025）
+* `Body` タグが OOTB（標準提供）テンプレートにありません。（NPR-39022）
+* レコードのドキュメントがアダプティブフォームの言語で生成されません。 常に英語で生成されます。 （NPR-39020）
+* アダプティブフォームに複数のパネルが含まれ、一部のパネルで標準の&#x200B;**添付ファイル**&#x200B;コンポーネントが使用される場合、`Error occurred while draft saving` エラーが発生します。（NPR-38978）
+* `=` 記号がアダプティブフォームのチェックボックス、ドロップダウンリスト、ラジオボタンフィールドで使用され、レコードのドキュメントが生成されると、生成されたレコードのドキュメントに `=` 記号が表示されません。（NPR-38859）
+* 6.5.11.0 サービスパックのアップグレード後に、バッチ処理エラー通知の数が数倍に増加します。（NPR-39636）
+* テストデータを規定しないと、Correspondence Management レターがエージェント UI に読み込まれません。（CQ-4348702）
+* ユーザーが IBM® WebSphere® を使用してデプロイされた AEM Forms サービスパック 14（SP14）フォーム AEM Forms を適用すると、データベースの初期化中にブートストラップが失敗し、`java.lang.NoClassDefFoundError:org/apache/log4j/Logger` エラーが発生します。（NPR-39414）
+* OSGi サーバー上の AEM Form で、ドキュメントサービス API を使用して PDF を認証すると、次のエラーで失敗します。com.adobe.fd.signatures.truststore.errors.exception.CredentialRetrievalException:AEM-DSS-311-003（NPR-38855）
+* ユーザーが AEM 6.3 Forms でレターをレンダリングするためにラッパーサービスを使用しようとすると、`java.lang.reflect.UndeclaredThrowableException` エラーが発生します。（CQ-4347259）
+* XDP が HTML5 フォームとしてレンダリングされる場合、アダプティブフォーム内のオブジェクトの配置に関係なく、マスターページのコンテンツが最初にレンダリングされます。（CQ-4345218）
+* アプリケーションの読み込み時に「**読み込みが完了したら設定を上書きする**」オプションがオンになっていない場合でも、宛先サーバーのアプリケーションの設定がソースサーバーで定義された設定に変更されます。（NPR-39044）
+* ユーザーが Configuration Manager を使用してコネクタ設定をアップデートしようとすると、失敗します。（CQ-4347077）
 * ユーザーが管理者ユーザーのデフォルトのパスワードを変更した後に JEE 上のAEM Forms パッチを実行しようとすると、例外が発生します `com.adobe.livecycle.lcm.core.LCMException[ALC-LCM-200-003]: Failed to whitelist the classes` 発生します。 （CQ-4348277）
-* AEM Designer では、チェックボックスを含む表のセルに、キャプションのないフォームフィールドが配置されます。(LC-3920410)
-* ユーザーがAEM Forms Designer でヘルプを開こうとすると、正しく表示されません。 （CQ-4341996）
+* AEM Designer で、チェックボックスを含むテーブルのセルにキャプションのないフォームフィールドが配置されます。（LC-3920410）
+* ユーザーが AEM Forms Designer でヘルプを開こうとすると、正しく表示されません。 （CQ-4341996）
 * 複数のロケールを持つアダプティブFormsの読み込みが遅い。 （NPR-39176）
 
 ## [!DNL Sites] {#sites-6515}
 
-* Experience Manager Sites Launchs コンソールが空白で表示されていました。 （NPR-39188）
-* 参照を含むページをページの移動中にアクティベートする必要がある場合、参照は調整されませんでした。 （NPR-39061）
-* レイアウトコンテナが親コンテナで非表示になっていない場合、レイアウトの変更がネストされたコンテナ内のすべてのコンポーネントに適用されるわけではありません。 （NPR-39041）
-* 320 ピクセルの幅で、コンテンツが他のコンテンツと重複しなくなりました。 （SITES-8885）
+* Experience Manager Sites ローンチコンソールが空白で表示されました。（NPR-39188）
+* ページの移動中に参照を含むページもアクティブにする必要があった場合に、参照が調整されませんでした。（NPR-39061）
+* 親コンテナを使用してレイアウトコンテナを再表示すると、ネストされたコンテナ内のすべてのコンポーネントにレイアウトの変更が適用されません。（NPR-39041）
+* 320 ピクセルの幅で、コンテンツが他のコンテンツと重ならなくなりました。（SITES-8885）
 * ダイアログボックスを閉じた後にフォーカスが追加されました。 （SITES-8885）
 
 ### アクセシビリティ {#access-6515}
@@ -159,66 +159,66 @@ ht-degree: 27%
 <!-- REMOVED FROM TOTAL RELEASE CANDIDATE LIST * The scrollable region of the Page Editor did not have keyboard access. (SITES-2936) -->
 <!-- REMOVED FROM TOTAL RELEASE CANDIDATE LIST * The color input field of the Page Editor is not labeled or visible on the screen. (SITES-2925) -->
 <!-- REMOVED FROM TOTAL RELEASE CANDIDATE LIST * The iframe in the Page Editor is missing a title attribute; it must have an accessible name. (SITES-2894) -->
-* この **[!UICONTROL 注釈]** ボタンにアクセシビリティ名がありません。 （SITES-2892）
-* ACTIVE ユーザインターフェイスコンポーネントの状態 (**[!UICONTROL 切り取り]**, **[!UICONTROL コピー]**, **[!UICONTROL 貼り付け]**, **[!UICONTROL コンポーネントを挿入]**, **[!UICONTROL グループ]**&#x200B;など ) には、内側または外側の隣接する背景との間に、3～1 個以上の明るさのコントラスト比がありません。 (SITES-8889、SITES-8756、SITES-8885)
-* ステータスメッセージは自動的には通知されませんでした。 (SITES-8889、SITES-8756、SITES-8885)
-* テキストコンテンツのコントラスト比が 4.5:1 を欠いています。 (SITES-8756、SITES-8885)
-* リンクまたはボタンのテキストに、ホバー時またはフォーカス時のコントラスト比が 4.5:1 でない。 (SITES-8756、SITES-8885)
+* 「**[!UICONTROL 注釈]**」ボタンにアクセシビリティ名が付いていません。 （SITES-2892）
+* アクティブなユーザーインターフェイスコンポーネントのステート（**[!UICONTROL カット]**、**[!UICONTROL コピー]**、**[!UICONTROL ペースト]**、**[!UICONTROL コンポーネントの挿入]**、**[!UICONTROL グループ]**&#x200B;など）に、内側または外側の隣接する背景と少なくとも 3 対 1 の輝度コントラスト比がありません。（SITES-8889、SITES-8756、SITES-8885）
+* ステータスメッセージが自動的に通知されませんでした。 （SITES-8889、SITES-8756、SITES-8885）
+* テキストコンテンツが、4.5:1 のコントラスト比を満たしていません。（Sites-8756、Sites-8885）
+* ホバーまたはフォーカス時のリンクまたはボタンテキストが、4.5:1 のコントラスト比を満たしていません。（Sites-8756、Sites-8885）
 
 ### [!DNL Content Fragments] {#sites-contentfragments-6515}
 
-* GraphQLは例外を発生します。 例えば、コンテンツフラグメントからバリエーションタグを取得することはできません。 「electric」という名前のバリエーションはありません。 この問題は、 `getVariationTags` 例外を発生させる既存のバリエーション以外のバリエーションの場合。 （SITES-8898）
-* リスト表示でのタイトルの順序の並べ替え（昇順と降順の両方）、A、C、B の順序でタイトルの順序を並べ替えます (SITES-7585)
+* GraphQL が例外を発生します。例えば、コンテンツフラグメントからバリエーションタグを取得できません。「electric」という名前のバリエーションがありません。この問題は、既存のバリエーション以外の `getVariationTags` を呼び出すと、例外が発生することが原因です。（SITES-8898）
+* リスト表示のタイトルの並べ替えで（昇順および降順）、タイトルを A、C、B の順序で表示する方法。（Sites-7585）
 * コンテンツフラグメントのバリエーションにタグ付けのサポートを追加しました。 （SITES-8168）
-* 不要な Odin 固有のコードをExperience Manager6.5 で特定および削除しました。 （SITES-3574）
-* コンテンツフラグメントエディターのユーザーインターフェイスから言語コピーフラグメントを公開すると、関連する参照が英語フォルダーの下で公開されていました。 （NPR-39182）
-* 日付フィールドに日付が事前入力されています。 （NPR-39124）
-* ラジオボタンオプションを選択すると、タグが 2 回目に表示されなくなりました。 （NPR-39071）
+* 不要な Odin 固有のコードを Experience Manager 6.5 から特定して削除しました。 （SITES-3574）
+* コンテンツフラグメントエディターのユーザーインターフェイスから言語コピーフラグメントを公開すると、関連する参照が英語フォルダーの下で公開されていました。（NPR-39182）
+* 日付フィールドに日付が事前入力されます。 （NPR-39124）
+* ラジオボタンオプションを選択すると、2 回目にタグが表示されなくなりました。 （NPR-39071）
 
-### 流体 XP {#sites-fluidxp-6515}
+### Fluid XP {#sites-fluidxp-6515}
 
-* クライアントライブラリの ES6 コンパイルサポートを有効にする `/libs/cq/gui/components/siteadmin/admin/restoretree/clientlibs/restoretree.js`. （NPR-39067）
-* 検証が行われるのは、例えば **[!UICONTROL 必須]** が選択されていません。 （NPR-39063）
-* どちらでも **[!UICONTROL コピー]** または **[!UICONTROL ライブコピー]** タスク、 `cq:targetMetadata` 情報が誤って複製されていました。 この機能により、Experience Manager内の 2 つ以上のエクスペリエンスフラグメントが、Target で書き出された同じオファーを指すようになっていました。 （NPR-38970）
-* ツリーの復元操作の後、メッセージ `Un-publication pending. #0 in the queue` は、最初に公開されたことのないページのユーザーインターフェイスに表示されます。 （NPR-38847）
+* クライアントライブラリ `/libs/cq/gui/components/siteadmin/admin/restoretree/clientlibs/restoretree.js` の ES6 コンパイルのサポートを有効にします。（NPR-39067）
+* 「**[!UICONTROL 必須]**」が選択されていない場合でも検証が行われるため、コンテンツフラグメントモデルのマルチフィールドを空にして保存することができません。（NPR-39063）
+* 「**[!UICONTROL コピー]**」または「**[!UICONTROL ライブコピー]**」タスクで、 `cq:targetMetadata` 情報が誤って複製されていました。 この機能により、Experience Manager 内の 2 つ以上のエクスペリエンスフラグメントが、ターゲットに書き出した同じオファーを指すようになっていました。 （NPR-38970）
+* ツリーの復元アクションの後、そもそも公開されたことがないページのユーザーインターフェイスに、メッセージ `Un-publication pending. #0 in the queue` が表示されます。 （NPR-38847）
 
 ### ページエディター {#sites-pageeditor-6515}
 
-* 取り消しで、コンポーネントに追加されたテキストに対する最後の変更が削除されませんでした。 代わりに、ページが更新されると、コンポーネント全体が削除されます。 （SITES-8597）
-* アップグレード `jquery-ui` を最新バージョンに変更すると、ページエディターが正しく機能しなくなっていました。 （NPR-38596）
-* 320 ピクセルの幅で、コンテンツが他のコンテンツと重複しなくなりました。 （SITES-8756）
-* ダイアログを閉じた後にフォーカスが追加されました (SITES-8756)
+* 取り消しが、コンポーネントに追加されたテキストに対する最後の変更を削除しませんでした。代わりに、ページが更新されると、コンポーネント全体が削除されました。（SITES-8597）
+* `jquery-ui` を最新バージョンにアップグレードすると、ページエディターが正しく機能しなくなりました。 （NPR-38596）
+* 320 ピクセルの幅で、コンテンツが他のコンテンツと重ならなくなりました。（SITES-8756）
+* ダイアログを閉じた後にフォーカスが追加されました（Sites-8756）
 
 ## Sling {#sling-6515}
 
-* `Repoinit` では、プリンシパル名に空白が含まれるグループの作成または管理がサポートされていませんでした。これは、グループ名が文字列として扱われ、引用符の引用をサポートしていなかったためです。 (SLING-10952)
-* ログに誤ってエラーメッセージや例外が入力されていました。 （NPR-39024）
+* `Repoinit` が、プリンシパル名に空白が含まれるグループの作成または管理をサポートしていませんでした。これは、グループ名が文字列として扱われ、引用符がサポートされていなかったためです。（SLING-10952）
+* 誤ってエラーメッセージや例外でログがいっぱいになります。 （NPR-39024）
 
 ## 翻訳プロジェクト {#translation-6515}
 
-* プロジェクトパネルで、更新済み言語コピーの翻訳ジョブに宛先ページが追加されていました。ソースページは更新されませんでした。 （NPR-39278）
-* 翻訳プロジェクト内のすべてのページのプレビューを生成する際に、翻訳プロセスが失敗していました。 （NPR-39059）
-* 言語ロケールが存在しない場合、イベントの参照ルールが設定されているときに、その言語ロケールがロケールフォルダに作成されます。 （NPR-39054）
+* プロジェクトパネルから、更新済み言語コピーの翻訳ジョブに宛先ページが追加されていました。ソースページは更新されませんでした。（NPR-39278）
+* 翻訳プロジェクト内のすべてのページのプレビューを生成する際に、翻訳プロセスが失敗していました。（NPR-39059）
+* 言語ロケールが存在しない場合でも、イベントの参照ルールが設定されていると、その言語ロケールがロケールフォルダーに作成されます。 （NPR-39054）
 
 ## ユーザーインターフェイス {#ui-6515}
 
-* JavaScript エラーはファイル内で発生します `multifield.js` コンテンツフラグメントモデルエディターおよびコンテンツフラグメントエディターのコンテンツフラグメントモデルの特定のフィールドの場合 （NPR-39350）
+* コンテンツフラグメントモデルエディターおよびコンテンツフラグメントエディターのコンテンツフラグメントモデルの特定のフィールドに対して、ファイル `multifield.js` 内で JavaScript エラーが発生します。（NPR-39350）
 
 ## ワークフロー {#workflow-6515}
 
-* Experience Manager6.5.11 で正常に実行されたExperience Managerの 6.5.13 で、一貫して実行されていなかった問題を修正しました。 （NPR-39023）
+* Experience Manager 6.5.11 で正常に実行されたワークフローは、Experience Manager 6.5.13 では安定して実行されませんでした。（NPR-39023）
 
 ## [!DNL Experience Manager] 6.5.15.0 のインストール {#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.15.0が必要 [!DNL Experience Manager] 6.5. [アップグレードドキュメント](/help/sites-deploying/upgrade.md) を参照してください。 <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.15.0 には [!DNL Experience Manager] 6.5 が必要です。手順について詳しくは、[アップグレードに関するドキュメント](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.15.0 をインストールしてください。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> * Adobeでは、 [!DNL Experience Manager] 6.5.15.0パッケージ。 したがって、パックをインストールする前に、 `crx-repository` 戻す必要がある場合に備えて <!-- UPDATE FOR EACH NEW RELEASE -->
+> * アドビでは、[!DNL Experience Manager] 6.5.15.0 パッケージを削除またはアンインストールすることを推奨しません。 したがって、パッケージをインストールする前に、ロールバックする必要がある場合に備えて `crx-repository` のバックアップを作成する必要があります。<!-- UPDATE FOR EACH NEW RELEASE -->
 > * AEM Forms用 Service Pack のインストール手順については、 [AEM Forms Service Pack のインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 
@@ -230,9 +230,9 @@ ht-degree: 27%
 
 1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. パッケージマネージャーを開き、「 **[!UICONTROL パッケージをアップロード]** をクリックしてパッケージをアップロードします。 詳しくは、 [パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
+1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
-1. パッケージを選択し、「 」を選択します。 **[!UICONTROL インストール]**.
+1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
 
 1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。[Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
 
@@ -249,13 +249,13 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->Experience Manager6.5.15.0では、Bootstrapのインストールはサポートされていません。 <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.15.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 **インストールの検証**
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ (`/system/console/productinfo`) は、更新されたバージョン文字列を表示します `Adobe Experience Manager (6.5.15.0)` under [!UICONTROL インストール済み製品]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (6.5.15.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
 
@@ -267,9 +267,9 @@ AEM Formsに Service Pack をインストールする手順については、 [A
 
 ### UberJar {#uber-jar}
 
-の UberJar [!DNL Experience Manager] 6.5.15.0は、 [Maven 中央リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.15/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.15.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.15/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
-Maven プロジェクトで UberJar を使用するには、 [UberJar の使用方法](/help/sites-developing/ht-projects-maven.md) およびは、プロジェクト POM に次の依存関係を含めます。 <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 ```shell
 <dependency>
@@ -300,8 +300,8 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST.
  -->
 
-* [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-このパッケージは、GraphQLを使用しているお客様に必要です。これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+* [GraphQL インデックスパッケージ 1.0.5 を使用した AEM コンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
+GraphQL を使用するユーザーは、このパッケージが必要です。このパッケージにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * コンテンツモデルのカスタム API 名を使用した可能性のあるGraphQLクエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
@@ -318,15 +318,15 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 * アダプティブフォームでユーザーが初めてフィールドを設定する場合、設定を保存するオプションはプロパティブラウザーに表示されません。同じエディターでアダプティブフォームの他のフィールドを設定するように選択すると、問題が解決します。
 
 * [!DNL Experience Manager] 6.5.x.x のインストール中に、次のエラーや警告メッセージが表示される場合があります。
-   * 「Adobe Target統合が [!DNL Experience Manager] Target Standard API（IMS 認証）を使用してエクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」/「Adobe Experience Manager」タイプの代わりに、「HTML」/「Adobe Target Classic」タイプのオファーを複数作成します。
+   * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
-   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` :登録の変更が未登録に完了するのを待機中にタイムアウトが発生しました。
+   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : 登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
 * コンテンツフラグメントまたはサイトやページを移動／削除／公開しようとすると、コンテンツフラグメントの参照を取得する際にバックグラウンドクエリが失敗し、機能が動作しなくなるという問題があります。
-正しい操作を確実におこなうには、次のプロパティをインデックス定義ノードに追加する必要があります `/oak:index/damAssetLucene` （インデックスの再作成は不要）:
+正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。
 
    ```xml
    "tags": [
@@ -337,7 +337,7 @@ Maven プロジェクトで UberJar を使用するには、 [UberJar の使用�
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ {#osgi-bundles-and-content-packages-included}
 
-次のテキストドキュメントでは、に含まれる OSGi バンドルとコンテンツパッケージの一覧を示します。 [!DNL Experience Manager] 6.5.15.0: <!-- UPDATE FOR EACH NEW RELEASE -->
+次のテキストドキュメントには、[!DNL Experience Manager] 6.5.15.0 に含まれている OSGi バンドルとコンテンツパッケージの一覧が記載されています。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * [Experience Manager 6.5.15.0 に含まれている OSGi バンドルの一覧](/help/release-notes/assets/65150_bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 * [Experience Manager 6.5.15.0 に含まれているコンテンツパッケージの一覧](/help/release-notes/assets/65150_packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->

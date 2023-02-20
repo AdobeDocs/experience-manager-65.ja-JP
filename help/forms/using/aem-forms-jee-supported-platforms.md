@@ -14,7 +14,7 @@ exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
 workflow-type: tm+mt
 source-wordcount: '3699'
-ht-degree: 89%
+ht-degree: 95%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 89%
 
 <div class="preview">
 
-Adobeが [完全インストーラ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) JEE 上のAEM 6.5 Forms Service Pack 12(6.5.12.0) とパッチインストーラー 完全なインストーラーは新しいプラットフォームをサポートし、パッチインストーラーはバグ修正のみを含みます。
+アドビでは、JEE 版 AEM 6.5 Forms サービスパック 12（6.5.12.0）を含んだ[完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のほか、パッチインストーラーをリリースしました。完全なインストーラーは新しいプラットフォームに対するサポートを提供するのに対して、パッチインストーラーはバグ修正のみを含んでいます。
 
-JEE 上のAEM 6.5 Forms環境で最新のソフトウェアを使用する場合は、新規インストールを実行するか、最新のソフトウェアを使用することを計画している場合、Adobeでは [AEM 6.5.12.0 Forms on JEE フルインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) 2019 年 4 月 8 日にリリースされた、AEM 6.5 Formsインストーラーの代わりに 2022 年 3 月 3 日にリリースされました。
+新規インストールを実行する場合や、JEE 版 AEM 6.5 Forms 環境の最新ソフトウェアを使用することを計画している場合は、2019年4月8日（PT）にリリースされた AEM 6.5 Forms インストーラーではなく、2022年3月3日（PT）にリリースされた [JEE 版 AEM 6.5.12.0 Forms の完全なインストーラー](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)を使用することをお勧めします。
 
 </div>
 
@@ -100,7 +100,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <th><p><strong>サポートされているパッチ定義</strong></p> </th>
   </tr>
   <tr> 
-   <td><p>OracleJava™ SE 11（64 ビット） <sup> [8] </sup> </p>  </td>
+   <td><p>Oracle Java™ SE 11（64 ビット）<sup> [8] </sup> </p>  </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>マイナーリリースとアップデート </p> </td>
   </tr>
@@ -163,7 +163,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td><p>サポート対象</p> </td>
   </tr>
   <tr>
-   <td><p>Oracleデータベース 12c リリース 2(12.2.0.1.0)（非推奨）</p> </td>
+   <td><p>Oracle Database 12c リリース 2（12.2.0.1.0）（非推奨）</p> </td>
    <td><p>リポジトリ Microkernel</p> </td>
    <td><p>サポート対象</p> </td>
   </tr>
@@ -268,7 +268,7 @@ Adobe Experience Manager Forms を使用するには、Java 仮想マシンが�
    <td>サービスパックと重要なアップデート</td>
   </tr>
   <tr>
-   <td><p>JBoss® Enterprise Application Platform (EAP) 7.1.4 <sup>[2] [3] [7]</sup> （廃止） </p> </td>
+   <td><p>JBoss® Enterprise Application Platform（EAP）7.1.4 <sup>[2] [3] [7]</sup>（非推奨） </p> </td>
    <td><p>A：サポート対象</p> </td>
    <td><p>パッチと累積パッチ（サポート対象の EAP バージョン用）</p> </td>
   </tr>
@@ -370,7 +370,7 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
 1. AEM Forms on JEE は CentOS 上の WebSphere Application Server をサポートしていません。
 1. JEE 上の AEM Forms では、JBoss ロールベースのアクセス制御（RBAC）をサポートしていません。
-1. JEE 上のAEM Formsは、OracleJava™ SE 11（64 ビット）SDK（アプリケーションサーバー JBoss EAP 7.4 用のみ）をサポートしています。
+1. JEE 版 AEM Forms は、アプリケーションサーバー JBoss EAP 7.4 用の Oracle Java™ SE 11（64 ビット）SDK のみをサポートしています。
 
 この他に、JEE 上での Adobe AEM Forms の導入のためにソフトウェアを選択する際には、次の項目を考慮してください。
 
@@ -435,11 +435,11 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
   </tr>
   <tr>
    <td>Microsoft Sharepoint </td>
-   <td>2016 年（廃止）<br /> </td>
+   <td>2016（非推奨）<br /> </td>
   </tr>
   <tr>
    <td>Microsoft Sharepoint </td>
-   <td>2019年<br /> </td>
+   <td>2019<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -516,7 +516,7 @@ PDF Generator では、英語、フランス語、ドイツ語および日本語
 - PDF Generator では Microsoft Office 365 をサポートしていません。
 - PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
 - OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
-- Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))&quot;
+- Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 - PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 - PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
 - PDFジェネレーターが、Microsoft Project 2019 を使用してファイルを変換できません。 引き続き、 Microsoft Project 2016 を使用して.MPP ファイルを変換できます。
@@ -633,7 +633,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 </table>
 
 >[!NOTE]
-Acrobat DC Product Family では、基本的に異なる製品であるAcrobatとReaderの両方に 2 つのトラックを導入しています。「クラシック」と「連続」 2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
+Acrobat DC 製品ファミリーでは、基本的に異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
 
 ### ブラウザー {#browsers}
 
@@ -736,7 +736,7 @@ JEE 上の AEM Forms では、指定されたメジャーおよびマイナー�
 
 ## サードパーティパッチサポートポリシー {#third-party-patch-support-policy}
 
-JEE 上のAEM Formsのサードパーティのソフトウェア要件は、それぞれの製品ドキュメントの「必要システム構成」セクションに記載されています。 すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
+JEE 版 AEM Forms のサードパーティソフトウェア要件は、それぞれの製品ドキュメントの「必要システム構成」の節に記載されています。すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
 
 JEE 上のAEM Formsのサードパーティの参照プラットフォームには、JEE 上のAEM Formsの開発とリリースの際に最新であったサードパーティインフラストラクチャの特定のパッチレベルと、そのバージョンの JEE 上のAEM Formsでサポートされるインフラストラクチャの最小パッチ/サービスパックレベルが示されます。
 
@@ -752,7 +752,7 @@ Adobeの管理の及ばない状況下では、後方互換性を主張するサ
 
 ## プラットフォームのアップデート {#platform-updates}
 
-2022 年 6 月 2 日のAEM Forms 6.5.13.0リリースでは、次のプラットフォームは非推奨（廃止予定）となります。
+2022年6月2日（PT）の AEM Forms 6.5.13.0 リリースで、以下のプラットフォームは非推奨（廃止予定）になっています。
 
 - Microsoft SharePoint 2016
 
@@ -781,9 +781,9 @@ Adobeの管理の及ばない状況下では、後方互換性を主張するサ
 
 ## 変更履歴 {#revision-history}
 
-- 2022 年 9 月 1 日
+- 2022年9月1日（PT）
 
-   - oracleJava™ SE 11 （64 ビット） SDK のサポートを、アプリケーションサーバー JBoss EAP 7.4 に追加しました。
+   - アプリケーションサーバー JBoss EAP 7.4 用の Oracle Java™ SE 11（64 ビット）SDK のサポートが追加されました。
 
 - 2022 年 3 月 03 日（PT）
 
@@ -809,8 +809,8 @@ Adobeの管理の及ばない状況下では、後方互換性を主張するサ
       - [!DNL Microsoft Windows Server 2019]
       - [!DNL RHEL8]
 
-- 2020 年 12 月 3 日
-   - 次のプラットフォームのAEM Forms 6.5.7.0 以降でのサポートが追加されました。
+- 2020年12月3日（PT）
+   - AEM Forms 6.5.7.0 以降で次のプラットフォームのサポートが追加されました。
       - [!DNL Microsoft SQL Server 2019]
 
 - 2020年9月9日

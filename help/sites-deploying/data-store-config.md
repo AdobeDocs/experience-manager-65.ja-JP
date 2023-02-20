@@ -9,7 +9,7 @@ exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 source-git-commit: 461424de9158e14e251037004ea3590ed35bb4a0
 workflow-type: tm+mt
 source-wordcount: '3584'
-ht-degree: 90%
+ht-degree: 99%
 
 ---
 
@@ -226,30 +226,30 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 >[!NOTE]
 >
->S3 コネクタは、IAM ユーザー認証と IAM ロール認証の両方をサポートしています。 IAM ロール認証を使用するには、 `accessKey` および `secretKey` の値を設定ファイルから取得します。 S3 コネクタは、デフォルトで [IAM ロール](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html) インスタンスに割り当てられました。
+>S3 コネクタは、IAM ユーザー認証と IAM 役割認証の両方をサポートしています。 IAM 役割認証を使用するには、`accessKey` および `secretKey` の値を設定ファイルから削除します。 S3 コネクタは、デフォルトで [IAM 役割](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html)インスタンスに割り当てられます。
 
 | キー | 説明 | デフォルト | 必須 |
 | --- | --- | --- | --- |
-| accessKey | バケットへのアクセス権を持つ IAM ユーザーのキー ID にアクセスします。 |  | はい、IAM ロールを使用していない場合は有効です。 |
-| secretKey | バケットへのアクセス権を持つ IAM ユーザーの秘密アクセスキー。 |  | はい、IAM ロールを使用していない場合は有効です。 |
-| cacheSize | ローカルキャッシュのサイズ（バイト単位）です。 | 64GB | いいえ. |
-| connectionTimeout | 最初に接続を確立したときにタイムアウトするまでに待機する時間（ミリ秒）を設定します。 | 10000 | いいえ. |
-| maxCachedBinarySize | この値（バイト単位）以下のサイズのバイナリは、メモリキャッシュに格納されます。 | 17408(17 KB) | いいえ. |
-| maxConnections | 許可されるオープン HTTP 接続の最大数を設定します。 | 50 | いいえ. |
-| maxErrorRetry | 失敗（再取得可能）リクエストの再試行の最大回数を設定します。 | 3 | いいえ. |
-| minRecordLength | データストアに格納する必要があるオブジェクトの最小サイズ（バイト単位）です。 | 16384 | いいえ. |
-| path | AEMデータストアのローカルパス。 | `crx-quickstart/repository/datastore` | いいえ. |
-| proxyHost | クライアントが接続するオプションのプロキシホストを設定します。 |  | いいえ. |
-| proxyPort | クライアントが接続するオプションのプロキシポートを設定します。 |  | いいえ. |
+| accessKey | バケットへのアクセス権を持つ IAM ユーザーのキー ID にアクセスします。 |  | はい、IAM 役割を使用していない場合は有効です。 |
+| secretKey | バケットへのアクセス権を持つ IAM ユーザーの秘密アクセスキー。 |  | はい、IAM 役割を使用していない場合は有効です。 |
+| cacheSize | ローカルキャッシュのサイズ（バイト単位）です。 | 64 GB | いいえ。 |
+| connectionTimeout | 最初に接続を確立したときにタイムアウトするまでに待機する時間（ミリ秒単位）を設定します。 | 10000 | いいえ。 |
+| maxCachedBinarySize | このサイズ以下のバイナリ（バイト単位）は、メモリキャッシュに格納されます。 | 17408（17 KB） | いいえ。 |
+| maxConnections | 許可されるオープン HTTP 接続の最大数を設定します。 | 50 | いいえ。 |
+| maxErrorRetry | 失敗（再試行可能）リクエストの再試行の最大回数を設定します。 | 3 | いいえ。 |
+| minRecordLength | データストアに格納するオブジェクトの最小サイズ（バイト単位）です。 | 16384 | いいえ。 |
+| path | AEM データストアのローカルパス。 | `crx-quickstart/repository/datastore` | いいえ。 |
+| proxyHost | クライアントが接続するオプションのプロキシホストを設定します。 |  | いいえ。 |
+| proxyPort | クライアントが接続するオプションのプロキシポートを設定します。 |  | いいえ。 |
 | s3Bucket | S3 バケットの名前。 |  | はい |
-| s3EndPoint | S3 REST API エンドポイント。 |  | いいえ. |
-| s3Region | バケットが存在する領域。 参照 [ページ](https://docs.aws.amazon.com/general/latest/gr/s3.html) を参照してください。 | AWSインスタンスが実行されている地域。 | いいえ. |
-| socketTimeout | 確立されたオープン接続を介してデータが転送され、接続がタイムアウトして閉じられるまでの待機時間（ミリ秒）を設定します。 | 50000 | いいえ. |
-| stagingPurgeInterval | ステージングキャッシュから完了したアップロードをパージする時間間隔（秒）。 | 300 | いいえ. |
-| stagingRetryInterval | 失敗したアップロードを再試行する間隔（秒）。 | 600 | いいえ. |
-| stagingSplitPercentage | 割合 `cacheSize` 非同期アップロードのステージングに使用します。 | 10 | いいえ. |
-| uploadThreads | 非同期アップロードで使用されるアップロードスレッドの数です。 | 10 | いいえ. |
-| writeThreads | S3 転送マネージャを介した書き込みに使用される同時スレッドの数。 | 10 | いいえ. |
+| s3EndPoint | S3 REST API エンドポイント。 |  | いいえ。 |
+| s3Region | バケットが存在する地域。 詳しくは、この[ページ](https://docs.aws.amazon.com/ja_jp/general/latest/gr/s3.html)を参照してください。 | AWS インスタンスが実行されている地域。 | いいえ。 |
+| socketTimeout | 確立されたオープン接続を介してデータが転送され、接続がタイムアウトして閉じられるまでの待機時間（ミリ秒単位）を設定します。 | 50000 | いいえ。 |
+| stagingPurgeInterval | 完了したアップロードをステージングキャッシュからパージする間隔（秒単位）です。 | 300 | いいえ。 |
+| stagingRetryInterval | 失敗したアップロードを再試行する間隔（秒単位）です。 | 600 | いいえ。 |
+| stagingSplitPercentage | 非同期アップロードのステージングに使用される `cacheSize` の割合。 | 10 | いいえ。 |
+| uploadThreads | 非同期アップロードに使用されるアップロードスレッドの数です。 | 10 | いいえ。 |
+| writeThreads | S3 転送マネージャーを介した書き込みに使用される同時スレッドの数。 | 10 | いいえ。 |
 
 <!---
 ### Bucket region options {#bucket-region-options}

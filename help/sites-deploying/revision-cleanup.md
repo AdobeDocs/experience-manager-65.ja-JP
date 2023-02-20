@@ -14,7 +14,7 @@ exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
 source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
 workflow-type: tm+mt
 source-wordcount: '5918'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
@@ -396,15 +396,15 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>オンラインでのリビジョンクリーンアップが開始/停止しました
       <ul>
-       <li>オンラインでのリビジョンクリーンアップは、見積もり、コンパクション、クリーンアップの 3 つのフェーズで構成されます。リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンのAEMでは、「<code>TarMK GC #{}: estimation started</code>「見積もりの開始を示す」<code>TarMK GC #{}: compaction started, strategy={}</code>"コンパクションの開始をマークし、"T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>"は、クリーンアップの開始をマークします。</li>
+       <li>オンラインでのリビジョンクリーンアップは、見積もり、コンパクション、クリーンアップの 3 つのフェーズで構成されます。リポジトリに十分な量のガベージが含まれていない場合は、見積もりによってコンパクションとクリーンアップがスキップされることがあります。最新バージョンの AEM では、メッセージ「<code>TarMK GC #{}: estimation started</code>」は見積もりの開始を示し、「<code>TarMK GC #{}: compaction started, strategy={}</code>」はコンパクションの開始を示し、「T<code>arMK GC #{}: cleanup started. Current repository size is {} ({} bytes</code>」はクリーンアップの開始を示します。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップで取得したディスクスペース
       <ul>
-       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み/深さは {}/{} （{} バイト/{}）です。"</li>
+       <li>スペースは、クリーンアップフェーズが完了した場合にのみ再利用されます。クリーンアップフェーズの完了は、ログメッセージ「T<code>arMK GC #{}: cleanup completed in {} ({} ms</code>」で示されます。クリーンアップ後のサイズは {}（{} バイト）で、再利用された領域は {}（{} バイト）です。コンパクションマップの重み付け／深さは {}／{}（{} バイト／{}）です。</li>
       </ul> </li>
      <li>リビジョンのクリーンアップ中に問題が発生しました
       <ul>
-       <li>多くの障害状態があり、すべての障害は、「TarMK GC」で始まる WARN または ERROR ログメッセージでマークされます。</li>
+       <li>多くの失敗条件があり、すべての障害は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。</li>
       </ul> </li>
     </ul> <p>また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</p> </td>
    <td> </td>
@@ -425,7 +425,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>オンラインでのリビジョンクリーンアップが失敗したかどうかを検出する方法と、回復する手順を教えてください。</strong></td>
-   <td>障害状態は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。 また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
+   <td>失敗条件は、「TarMK GC」で始まる WARN または ERROR ログメッセージで示されます。 また、<a href="/help/sites-deploying/revision-cleanup.md#troubleshooting-based-on-error-messages">エラーメッセージに基づくトラブルシューティング</a>の節を参照してください。</td>
    <td> </td>
   </tr>
   <tr>
@@ -533,7 +533,7 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
   <tr>
-    <td>アプローチ</td>
+    <td>該当なし</td>
     <td>TarMK GC #2：見積もりが中断されました：${REASON}。Skipping compaction.</td>
     <td>見積もりフェーズが完了せずに終了しました。見積もりフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。</td>
     <td>示されている理由によって異なります。</td>
@@ -547,24 +547,24 @@ TarMK GC: no base state available, running full compaction instead
   </td>
   </tr>
    <tr>
-    <td>アプローチ</td>
+    <td>該当なし</td>
     <td>TarMK GC #2：コンパクションがキャンセルされました：${REASON}。</td>
-    <td>コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。また、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルすることで、コンパクションをキャンセルすることもできます。</td>
+    <td>コンパクションフェーズが完了せずに終了しました。コンパクションフェーズを中断させる可能性があるイベントの例としては、ホストシステムでのメモリ不足やディスク領域の不足があります。さらに、システムをシャットダウンするか、操作ダッシュボード内のメンテナンスウィンドウなどの管理インターフェイスを使用して明示的にキャンセルした場合も、コンパクションがキャンセルされることがあります。</td>
     <td>示されている理由によって異なります。</td>
   </td>
   </tr>
   <tr>
-    <td>アプローチ</td>
-    <td>TarMK GC #2：5 回のサイクル後、32.902 分 (1974140 ms) でコンパクションに失敗しました.</td>
-    <td>このメッセージは、復旧不可能なエラーがあったのではなく、一定数の試行の後にコンパクションが終了されたことのみを意味します。また、 <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">」を参照してください。</a></td>
-    <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> および オンラインでのリビジョンクリーンアップの実行 の節の最後の質問をお読みください。</a></td>
+    <td>該当なし</td>
+    <td>TarMK GC #2：5 回のサイクル後、32.902 分（1974140 ms）でコンパクションに失敗しました。</td>
+    <td>このメッセージは、復旧不可能なエラーがあったのではなく、ただ一定数の試行の後にコンパクションが終了されたという意味です。また、<a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">次の段落</a>も参照してください。</td>
+    <td>以下の <a href="https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes">Oak ドキュメント</a> およびオンラインでのリビジョンクリーンアップの実行の節の最後の質問を参照してください。</a></td>
   </td>
   </tr>
   <tr>
     <td>クリーンアップ</td>
     <td>TarMK GC #2：クリーンアップが中断されました。</td>
-    <td>リポジトリーをシャットダウンしてクリーンアップがキャンセルされました。整合性への影響はありません。また、ディスク容量が完全に再利用されない可能性が高くなります。 残りの領域は、次のリビジョンクリーンアップサイクルで再利用されます。</td>
-    <td>リポジトリがシャットダウンされた理由を調べ、今後はメンテナンスウィンドウ中にリポジトリがシャットダウンされないようにします。</td>
+    <td>リポジトリーをシャットダウンしてクリーンアップがキャンセルされました。整合性への影響はありません。また、多くの場合、ディスク容量は完全には再利用されません。残りの領域は、次のリビジョンクリーンアップサイクルで再利用されます。</td>
+    <td>リポジトリがシャットダウンされた理由を調査し、今後はメンテナンスウィンドウ中にリポジトリがシャットダウンされないようにします。</td>
   </td>
   </tr>
   </tbody>

@@ -11,7 +11,7 @@ mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
 source-git-commit: a8db862b4a90ee6679de44df9508caf75a4c3eec
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '6489'
 ht-degree: 100%
 

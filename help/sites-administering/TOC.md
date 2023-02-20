@@ -11,7 +11,7 @@ role: Admin
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
 workflow-type: tm+mt
 source-wordcount: '630'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 99%
    + [リッチテキストエディタープラグインの設定](configure-rich-text-editor-plug-ins.md)
    + [ビデオコンポーネントの設定](config-video.md)
    + [Bulk Editor](bulk-editor.md)
-   + [電子メール通知の設定](notification.md)
+   + [メール通知の設定](notification.md)
    + [リンクチェッカー](external-link-checker.md)
    + [AEM のトラブルシューティング](troubleshoot.md)
    + [ワークフローへのアクセスの管理](workflows-managing.md)
@@ -112,7 +112,7 @@ ht-degree: 99%
    + [サードパーティのサービスとの統合](third-party-services.md)
    + [Salesforce との統合](salesforce.md)
    + [Adobe Target との統合](target.md)
-   + [Adobeラーニングマネージャーとの統合](adobe-learningmanager.md)
+   + [Adobe Learning Manager との統合](adobe-learningmanager.md)
    + [Adobe Analytics との統合](adobeanalytics.md)
    + [Adobe Analytics への接続とフレームワークの作成](adobeanalytics-connect.md)
    + [Adobe Analytics のリンクトラッキングの設定](adobeanalytics-link.md)
@@ -147,7 +147,7 @@ ht-degree: 99%
    + [Adobe Classifications](adobeanalytics-classifications.md)
    + [ソリューション統合](integration.md)
    + [Adobe Target へのエクスペリエンスフラグメントの書き出し](experience-fragments-target.md)
-   + [電子メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
+   + [メールテンプレートのベストプラクティス](best-practices-for-email-templates.md)
    + [Livefyre との統合](livefyre.md)
 + ベストプラクティス {#bestpractices}
    + [ベストプラクティス](administer-best-practices.md)

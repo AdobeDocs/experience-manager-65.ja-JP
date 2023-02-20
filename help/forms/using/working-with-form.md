@@ -12,7 +12,7 @@ exl-id: adff5339-e026-4924-a401-f249f37fc6e6
 source-git-commit: eb71119474f03a969a721c792b6f1ac330f9dbf3
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -30,11 +30,11 @@ AEM Forms アプリケーションでは、次のようにフォームを同期�
 
 複数のフォームを同期するには、オーサーインスタンスで、フォームマネージャーから複数のフォームを選択して、「**AEM Forms アプリケーションと同期**」をタップします。フォームが発行されると、AEM Forms アプリはパブリッシュサーバーに接続してフォームを取得することができます。
 
-AFA(AEM Form Application)Android アプリの同期に失敗した場合は、次の手順を実行して同期の問題を修正します。
+AFA（AEM Form Application）Android アプリの同期に失敗した場合は、次の手順を実行して同期の問題を修正します。
 
 1. 次に移動： **https://[server]:[ポート]/system/console/configMgr**.
-1. を検索します。 **[!UICONTROL AdobeGranite トークン認証ハンドラー]** をクリックし、 **[!UICONTROL 編集]**.
-1. を選択します。 **[!UICONTROL なし]** オプションを選択します。 **[!UICONTROL login-token cookie の SameSite 属性]** 属性。
+1. **[!UICONTROL Adobe Granite トークン認証ハンドラー]**&#x200B;を検索し、「**[!UICONTROL 編集]**」をクリックします。
+1. **[!UICONTROL SameSite 属性の login-token Cookie]** のドロップダウンメニューから、オプション「**[!UICONTROL なし]**」を選択します。
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
 ![AFA Android アプリと画像を同期](/help/forms/using/assets/afaandroid.png)
@@ -51,5 +51,5 @@ AFA(AEM Form Application)Android アプリの同期に失敗した場合は、�
 
 **フォームを開いて更新するには**
 
-1. フォームを開くには、 **[!UICONTROL フォーム]** を設定します。
+1. フォームを開くには、ホーム画面に表示されている&#x200B;**[!UICONTROL フォーム]**&#x200B;をタップします。
 1. フォームのフィールドの更新、添付ファイルの追加、ドラフトとして保存、送信の操作を行うことができます。

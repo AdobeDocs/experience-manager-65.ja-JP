@@ -5,7 +5,7 @@ exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 source-git-commit: e3caa3e3067cf5e29cfcdf4286047eb346aefa23
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -43,15 +43,15 @@ AEM リリースノートでは、AEM の最新リリースに関する重要な
 
 * [AEM チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja)
 * [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
-* [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 * [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other)
+* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja)
 * [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
 ## 著作権、ライセンス、免責事項 {#copyright-licenses-and-disclaimers}
 
-詳しくは、 [https://www.adobe.com/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html)
+詳しくは、[https://www.adobe.com/jp/legal/terms/enterprise-licensing.html](https://www.adobe.com/jp/legal/terms/enterprise-licensing.html) を参照してください。
 
-サードパーティライセンスの告知：[https://www.adobe.com/products/eula/third_party](https://www.adobe.com/products/eula/third_party.html)
+サードパーティライセンスの告知：[https://www.adobe.com/jp/products/eula/third_party](https://www.adobe.com/jp/products/eula/third_party.html)

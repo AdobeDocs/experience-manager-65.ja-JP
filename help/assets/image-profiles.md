@@ -13,7 +13,7 @@ exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
 source-git-commit: 1759b6b2a0360b6fc173e711aaf88484c554eae8
 workflow-type: tm+mt
 source-wordcount: '3000'
-ht-degree: 94%
+ht-degree: 95%
 
 ---
 
@@ -23,8 +23,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->・スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
-• 画像プロファイルは、PDF ファイル、アニメーション GIF ファイルまたは INDD（Adobe InDesign）ファイルには適用されません。
+>• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。• 画像プロファイルは、PDF ファイル、アニメーション GIF ファイルや INDD（Adobe InDesign）ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
@@ -172,7 +171,7 @@ ht-degree: 94%
 ## 単一の画像のスマート切り抜きまたはスマートスウォッチの編集 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
-・スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
+• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
 
 画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を手動で行って、焦点位置を細かく調整することができます。
 
@@ -202,7 +201,7 @@ ht-degree: 94%
 ## 複数の画像のスマート切り抜きまたはスマートスウォッチの編集 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
 
 >[!IMPORTANT]
-・スマート切り抜きは、Dynamic Media - Scene7モードでのみ使用できます。
+• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
 
 スマート切り抜きを含んだ画像プロファイルをフォルダーに適用すると、そのフォルダー内のすべての画像に切り抜きが適用されます。必要に応じて、複数の画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を&#x200B;*手動*&#x200B;で行って、その焦点位置を細かく調整することができます。
 

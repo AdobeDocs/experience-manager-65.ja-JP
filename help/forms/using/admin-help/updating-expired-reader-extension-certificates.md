@@ -1,80 +1,80 @@
 ---
-title: Reader拡張証明書の有効期限とその影響
-description: Reader拡張証明書の有効期限とその影響
+title: Reader 拡張証明書の有効期限とその影響
+description: Reader 拡張証明書の有効期限とその影響
 exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
 source-git-commit: 6e9a7f3307ed05f887d60c7c7310100cd4596b23
 workflow-type: tm+mt
 source-wordcount: '1121'
-ht-degree: 4%
+ht-degree: 86%
 
 ---
 
 
-# Reader拡張証明書の有効期限とその影響 {#expiration-of-reader-extensions-certificates-and-its-impact}
+# Reader 拡張証明書の有効期限とその影響 {#expiration-of-reader-extensions-certificates-and-its-impact}
 
-Adobe Experience Manager Forms(AEM Forms) をご利用のお客様は、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Acrobat Reader DC Extensions サービスを使用する権利が付与されます。 このサービスを使用すると、追加の使用権限でAcrobat Readerの機能を拡張し、組織がインタラクティブなPDFドキュメントを簡単に共有できます。 このサービスは、PDFドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Readerを使用してPDFドキュメントを開いた場合に使用できない機能をアクティブにします。 サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。Acrobat Readerで権限が付与されたPDFドキュメントを開いたユーザーは、そのドキュメントに対して有効な操作を実行できます。
+Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Acrobat Reader DC Extensions サービスを使用する資格があります。サービスを使用すると、追加の使用権限を付与して Acrobat Reader の機能を拡張することで、組織内でインタラクティブ PDF ドキュメントを簡単に共有できます。このサービスは、PDF ドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Reader を使用して PDF ドキュメントを開いた場合には使用できない機能をアクティブにします。サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。使用権限を付与された PDF ドキュメントを Acrobat Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-Adobeでは、公開鍵基盤 (PKI) を利用して、ライセンスや機能の有効化に使用する電子証明書を発行します。 Adobeは認証局の下で証明書を発行しています **Adobeルート CA**:2023 年 1 月 7 日に期限切れになるように設定されています。 証明書の有効期限は、から発行される実稼動用の証明書を使用して拡張されたPDFドキュメントには影響しません **Adobeルート CA** ベースの証明書（古い証明書）。 お客様がダウンロードしたPDFドキュメントを含め、2023 年 1 月 7 日より前の古い証明書を使用して拡張されたすべてのReaderドキュメントは、引き続き、それらに適用されるすべての使用権限に対応し、更新は必要ありません。
+アドビは公開鍵インフラストラクチャ（PKI）を活用して、ライセンスやイネーブルメント機能に使用する電子証明書を発行します。Adobeは認証局の下で証明書を発行しています **Adobeルート CA**:2023 年 1 月 7 日に期限切れになるように設定されています。 証明書の有効期限は、から発行される実稼動用の証明書を使用して拡張されたPDFドキュメントには影響しません **Adobeルート CA** ベースの証明書（古い証明書）。 お客様がダウンロードしたPDFドキュメントを含め、2023 年 1 月 7 日より前の古い証明書を使用して拡張されたすべてのReaderドキュメントは、引き続き、それらに適用されるすべての使用権限に対応し、更新は必要ありません。
 
-新しい認証局 **Adobeルート CA G2**、および新しい認証局に基づく証明書が使用できるようになりました。 2023 年 1 月 7 日以前に、新しい証明書 ( **Adobeルート CA G2**  — 新しいReaderドキュメントを拡張するPDF  以下が可能です。 [Adobeライセンス Web サイトから新しい証明書を取得する](https://licensing.adobe.com/) またはAdobeのサポート。
+新しい認証局 **Adobeルート CA G2**、および新しい認証局に基づく証明書が使用できるようになりました。 2023 年 1 月 7 日以前に、新しい証明書 ( **Adobeルート CA G2**  — 新しいReaderドキュメントを拡張するPDF  [新しい証明書の取得は、アドビのライセンス web サイトから](https://licensing.adobe.com/)、またはアドビのサポートから可能です。
 
 ## よくある質問
 
-**Q.Adobeルート証明書とAcrobat Reader Extensions 証明書の違いは何ですか？ Adobeルート証明書はAcrobat Reader Extensions 証明書に依存していますか？ これらの証明書の有効期限は 2023 年 1 月ですか？**
+**質問：Adobe ルート証明書と Acrobat Reader Extensions 証明書の違いは何ですか？ Adobe ルート証明書は Acrobat Reader Extensions 証明書に依存していますか。両方の証明書の有効期限は 2023年1月ですか。**
 
-A.Adobeルート CA は、Acrobat Reader Extensions 証明書の発行元の認証局です。 2023 年 1 月 7 日に、「Adobeルート CA」と、そこから発行されたすべての証明書の有効期限が切れます。
+回答：Adobe ルート CA は、Acrobat Reader Extensions 証明書の発行元の認証局です。 2023年1月7日（PT）に「Adobeルート CA」と、そこから発行されたすべての証明書の有効期限が切れます。
 
-**証明書の失効や、PDF文書の使用・開封に対する影響に関して、Adobeからの以前の連絡があった。 そのコミュニケーションは無視すべきですか？**
+**質問：証明書の失効や、PDF ドキュメントの使用や開封に対する影響に関して、アドビから以前連絡がありました。 その通信は無視すべきですか。**
 
-A.状況の再評価に基づき、2023 年 1 月 7 日より前の「Adobeルート CA」から発行された生産証明書を用いて延長されたすべてのPDF文書は、2023 年 1 月 7 日以降、変更なしで引き続き機能します。 既にPDFドキュメントを更新している場合、エクスペリエンスに変更はありません。
+回答：状況の再評価に基づき、2023年1月7日（PT）以前に「Adobeルート CA」から発行された実稼働環境用の証明書を用いて延長されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も変更なしで引き続き機能します。既にPDFドキュメントを更新している場合、エクスペリエンスに変更はありません。
 
 **Q.他に質問がある場合は誰に問い合わせればよいですか？**
 
-A.連絡先は [Adobeサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support) またはサポートチケットを発行します。
+回答：[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support)に連絡するか、またはサポートチケットを発行してください。
 
-**Q. 2023 年 1 月 7 日より前に証明書を更新しない場合はどうなりますか。**
+**質問：2023年1月7日（PT）より前に証明書をアップデートしない場合はどうなりますか？**
 
-A. 2023 年 1 月 7 日より前に発行された古い「Adobeルート CA」からの実稼動証明書を使用して拡張されたすべてのPDFドキュメントは、2023 年 1 月 7 日以降も引き続き機能します。 評価証明書で拡張されたPDFは、有効期限の後は機能しません。
+回答：2023年1月7日（PT）より前に発行された古い「Adobeルート CA」からの実稼働環境用の証明書を使用して拡張されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も引き続き機能します。評価用証明書で拡張された PDF は、有効期限が切れた後は機能しません。
 
-**Q.新しい証明書の説明は古い証明書とは異なりますか。**
+**質問：新しい証明書の説明は古い証明書とは異なりますか？**
 
-A.新しいAcrobat Reader Extensions 証明書の説明 **G3-P24** をプログラム名として使用します。 古い証明書（「証明書ルート CA」に基づく証明書）の説明で、次のことを行います。 **P24** は、プログラム名として言及されます。
+回答：新しい Acrobat Reader Extensions 証明書の説明には、プログラム名として **G3-P24** が記載されています。古い証明書（「証明書ルート CA」に基づく証明書）の説明では、**P24** がプログラム名として記載されています。
 
-**Q.最新の証明書を取得するにはどうすればよいですか？**
+**質問：最新の証明書を取得するにはどうすればよいですか？**
 
-A.権利を付与されているFormsのすべてのお客様（アクティブライセンスを持つ）は、新しい証明書 (「Adobeルート CA G2」に基づく証明書 ) を [Adobeライセンス Web サイト](https://licensing.adobe.com/). Adobeライセンス Web サイトで証明書が見つからない場合は、 [Adobeサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) またはサポートチケットを発行します。
+回答：資格のある（有効なライセンスを持つ）Forms 顧客は、新しい証明書（「Adobe Root CA G2」に基づく証明書）を[アドビライセンス web サイト](https://licensing.adobe.com/)からダウンロードできます。アドビライセンス web サイトで証明書が見つからない場合は、[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja&amp;s#support)に連絡するか、またはサポートチケットを発行します。
 
-**Q. 「Adobeルート CA」（古い認証局）から発行された証明書を使用して拡張されたPDFドキュメントは、2023 年 1 月 7 日以降も引き続き機能しますか。**
+**質問：「Adobeルート CA」（古い認証局）から発行された証明書を使用して拡張された PDF ドキュメントは、2023年1月7日（PT）以降も引き続き機能しますか？**
 
-A.はい。2023 年 1 月 7 日より前に「Adobeルート CA」（旧証明機関）から発行された実稼働版証明書を使用して拡張されたすべてのPDFドキュメントは、2023 年 1 月 7 日以降、変更なしで引き続き機能します。 PDF証明書を使用して拡張された評価ドキュメントは、有効期限を過ぎると機能しなくなります。
+回答：はい。2023年1月7日（PT）より前に「Adobeルート CA」（旧証明機関）から発行された実稼働環境用の証明書を使用して拡張されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も変更なしで引き続き機能します。 評価用証明書を使用して拡張された PDF ドキュメントは、有効期限を過ぎると機能しなくなります。
 
-**Q. 「Adobeルート CA」（古い証明機関）から発行された証明書で拡張されたPDFドキュメントを引き続き使用するには、どのバージョンのAdobe Acrobat Readerが必要ですか？**
+**質問：「Adobeルート CA」（古い認証局）から発行された証明書で拡張された PDF ドキュメントを引き続き使用するには、どのバージョンの Adobe Acrobat Reader が必要ですか？**
 
-A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA」（古い証明機関）で拡張されたPDFドキュメントを使用する必要があります。 このドキュメントの公開時にサポートされているAcrobat Readerのバージョンです。 を使用している場合、 [Adobe Acrobatの非サポートバージョン](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を使用する場合、Adobeは、 [最新バージョンのAdobe Acrobat Readerをダウンロードしてインストールする](https://get.adobe.com/jp/reader/).
+回答：Adobe Acrobat Reader 2020 以降では、「Adobeルート CA」（古い認証局）で拡張された PDF ドキュメントを使用する必要があります。 このドキュメントの公開時点でサポートされている Acrobat Reader のバージョンです。[サポートされていないバージョンの Adobe Acrobat](https://helpx.adobe.com/jp/support/programs/eol-matrix.html) を使用している場合、アドビは[最新バージョンの Adobe Acrobat Reader](https://get.adobe.com/jp/reader/) をダウンロードしてインストールすることをお勧めします。
 
-**Q. 「Adobeルート CA 2」（新しい証明機関）から発行された証明書で拡張されたPDFドキュメントを引き続き使用するには、どのバージョンのAdobe Acrobat Readerが必要ですか？**
+**質問：「Adobeルート CA 2」（新しい認証局）から発行された証明書で拡張された PDF ドキュメントを引き続き使用するには、どのバージョンの Adobe Acrobat Reader が必要ですか？**
 
-A. Adobe Acrobat Reader 2020 以降では、「Adobeルート CA 2」（新しい証明機関）で拡張されたPDFドキュメントを使用する必要があります。 を使用している場合、 [Adobe Acrobat Readerの非サポートバージョン](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)を使用する場合、Adobeは、 [最新バージョンのAdobe Acrobat Readerをダウンロードしてインストールする](https://get.adobe.com/jp/reader/).
+回答：「Adobe Root CA 2」（新しい認証局）で拡張された PDF ドキュメントを利用するには、Adobe Acrobat Reader 2020 以降が必要です。[サポートされていないバージョンの Adobe Acrobat Reader](https://helpx.adobe.com/jp/support/programs/eol-matrix.html) を使用している場合、アドビは[最新バージョンの Adobe Acrobat Reader をダウンロードしてインストールする](https://get.adobe.com/jp/reader/)ことをお勧めします。
 
-**Q.既存のエイリアスを引き続き使用しながら、古いAcrobat Reader Extensions 証明書を削除して、Adobe Experience Manager Formsサーバーに新しい証明書を追加できますか？**
+**質問：既存のエイリアスを引き続き使用しながら、古い Acrobat Reader Extensions 証明書を削除し、Adobe Experience Manager Forms サーバーに新しい証明書を追加できますか？**
 
-A.はい。古いAcrobat Reader Extensions 証明書を削除して、既存のエイリアスを持つ新しい証明書をAdobe Experience Manager Forms Server に追加できます。
+回答：はい。古い Acrobat Reader Extensions 証明書を削除して、既存のエイリアスを持つ新しい証明書を Adobe Experience Manager Forms サーバーに追加できます。
 
-**Q.新しい証明書と古いAcrobat Reader Extensions 証明書の両方をAdobe Experience Manager Forms Server に保持できますか？**
+**質問：新しい証明書と古い Acrobat Reader Extensions 証明書の両方を Adobe Experience Manager Forms サーバーに保持できますか？**
 
-A.はい。Adobe Experience Manager Forms Server 上では、両方の証明書を保持できますが、異なるエイリアスを使用できます。 2023 年 1 月 8 日以降は、新しい証明書のみを使用して、PDFドキュメントをReader拡張できます。
+回答：はい。Adobe Experience Manager Forms サーバー上では、両方の証明書を保持できますが、異なるエイリアスを使用します。 2023年1月7日（PT）以降は、新しい証明書のみを使用して、PDF ドキュメントを Reader 拡張することができます。
 
-**Q.同じAcrobat Reader Extensions 証明書をすべてのAdobe Experience Manager Forms環境に読み込むことはできますか？**
+**質問：同じ Acrobat Reader Extensions 証明書をすべての Adobe Experience Manager Forms 環境に読み込むことができますか？**
 
-A.はい。同じAcrobat Reader Extensions 証明書を複数の環境で使用できます。
+回答：はい。同じ Acrobat Reader Extensions 証明書を複数の環境で使用することができます。
 
-**Q.PDF文書に適用される使用権限を確認する方法を教えてください。**
+**質問：PDF ドキュメントに適用される使用権限を確認する方法を教えてください。**
 
-A. [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) PDFドキュメントに適用された使用権限に関する情報を取得する API。
+回答：[getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=ja#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API を使用して、PDF ドキュメントに適用される使用権限に関する情報を取得することができます。
 
-**Q. Acrobat Reader Extensions 証明書ファイルのパスワードを変更する方法を教えてください。**
+**質問：Acrobat Reader Extensions 証明書ファイルのパスワードを変更する方法を教えてください。**
 
-A. Microsoft Windows で証明書のパスワードを変更するには、Microsoft管理コンソール (MMC) を使用して証明書をインストールし、「 」を選択します **キーを書き出し可能にする**. インストールが完了したら、証明書を秘密鍵で書き出し、PFX ファイルに別のパスワードを使用します。
+回答：Microsoft Windows で証明書のパスワードを変更するには、Microsoft 管理コンソール（MMC）を使用して証明書をインストールし、「**キーをエクスポート可能としてマークする**」を選択します。インストールが完了したら、証明書を秘密鍵を使用して書き出し、PFX ファイルに別のパスワードを使用します。
 
 
 <!-- 

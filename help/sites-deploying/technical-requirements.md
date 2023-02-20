@@ -9,7 +9,7 @@ exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
 workflow-type: tm+mt
 source-wordcount: '3529'
-ht-degree: 89%
+ht-degree: 95%
 
 ---
 
@@ -75,7 +75,7 @@ Adobe Experience Manager をインストールするための最小要件：
 
 | サポートレベル | 説明 |
 |---|---|
-| **Z：サポート対象外** | この構成はサポートされません。Adobe では、この構成が動作するかどうかに関する一切の表明をせず、この構成をサポートしません。 |
+| **Z：サポート対象外** | この設定はサポートされません。Adobe では、この設定が動作するかどうかに関する一切の表明をせず、この設定をサポートしません。 |
 
 ## サポートされているプラットフォーム {#supported-platforms}
 
@@ -91,21 +91,21 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 
 | **プラットフォーム** | **サポートレベル** | **リンク** |
 |---|---|---|
-| OracleJava SE 11 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
+| Oracle Java SE 11 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | Oracle Java SE 10 JDK | Z：サポート対象外 `[1]` |
 | Oracle Java SE 9 JDK | Z：サポート対象外 `[1]` |
-| OracleJava SE 8 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
+| Oracle Java SE 8 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
 | IBM J9 VM - ビルド 2.9、JRE 1.8.0 | A：サポート対象 `[2]` |
 | IBM J9 VM - ビルド 2.8、JRE 1.8.0 | A：サポート対象 `[2]` |
-| Azul Zulu OpenJDK 11 - 64-bit | A：サポート対象 `[3]` |  |
-| Azul Zulu OpenJDK 8 - 64-bit | A：サポート対象 `[3]` |  |
+| Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` |  |
+| Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` |  |
 
-1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は Oracle による非 LTS でのリリースです（[Oracle Java SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、 [Adobe Experience Managerの Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf) を参照してください。
+1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は Oracle による非 LTS でのリリースです（[Oracle Java SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
 
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
 
-1. Azul Zulu OpenJDK LTS バージョンは、バージョン 6.5 SP9 以降のオンプレミスのAEM展開でサポートされます。 Azul Zulu JDK LTS バージョンのサポートと配布は、お客様が Azul から直接ライセンスを受ける必要があります。
+1. Azul Zulu OpenJDK LTS バージョンは、バージョン 6.5 SP9 以降のオンプレミスの AEM デプロイメントでサポートされます。Azul Zulu JDK LTS バージョンのサポートと配布は、お客様が Azul から直接ライセンスを取得する必要があります。
 
 
 ### ストレージと永続性 {#storage-persistence}
@@ -123,14 +123,14 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 | MongoDB Enterprise 4.0 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：限定サポート `[5]` |
-| Oracle Database 12c（12.1.x） | リポジトリおよび Forms データベース | R：限定サポート |
+| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[5]` |
+| Oracle Database 12c（12.1.x） | リポジトリおよび Forms データベース | R：制限サポート |
 | Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
 | **Apache Lucene（クイックスタートビルトイン）** | 検索サービス | A：サポート対象 |
 | Apache Solr | 検索サービス | A：サポート対象 |
 
 1. 「ファイルシステム」には、POSIX 準拠のブロックストレージが含まれます。ブロックストレージには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスが状況に応じて変化し、全体的なパフォーマンスに影響を及ぼす可能性があることに注意してください。ネットワークやリモートファイルシステムと一緒に AEM の負荷テストを行うことを推奨します。
-1. MongoDB Enterprise 4.2 を使用するには、最低でもAEM 6.5 SP9 が必要です。
+1. MongoDB Enterprise 4.2 を使用するには、最低でも AEM 6.5 SP9 が必要です。
 1. MongoDB Sharding は AEM ではサポートしていません。
 1. MongoDB Storage Engine WiredTiger のみサポートされています。
 1. AEM Forms アップグレード版のお客様にサポートされています。新規インストールの場合はサポートされていません。
@@ -217,9 +217,9 @@ Servlet API の最低限必要なバージョンは Servlet 3.1 です。
 
 Adobe Experience Managerは、Microsoft Azure やAmazon Web Services(AWS) などのクラウドコンピューティング環境上での仮想マシンで、このページに記載されている技術要件と、Adobeの標準的なサポート条件に従って実行できるようサポートされています。
 
-クラウドネイティブな環境の場合は、AEM製品ラインで最新のオファーを確認します。Adobe Experience Manager as a Cloud Service。 詳しくは、 [Adobe Experience Manager as a Cloud Service Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=en) 」を参照してください。
+クラウドネイティブな環境の場合は、AEM 製品ラインの最新オファー、Adobe Experience Manager as a Cloud Service をご確認ください。詳しくは、[Adobe Experience Manager as a Cloud Service ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)を参照してください。
 
-Adobeでは、AEMを Azure またはAWSにデプロイするための Adobe Managed Services も提供しています。 Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://www.adobe.com/jp/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)も参照してください。
+アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://www.adobe.com/jp/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)も参照してください。
 
 AEM を Azure や AWS にデプロイするその他あらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、このページに記載されている技術仕様に従って、仮想コンピューティング環境に対して提供されます。これらのクラウド環境で実行される AEM に関連する問題を報告する場合は、その問題が、クラウドコンピューティング環境に固有のクラウドサービスと関係なく再現可能である必要があります。ただし、クラウドサービスが、このページに記載されている技術要件の一部として特別にサポートされている場合は除きます（Azure Blob ストレージ、AWS S3 など）。
 
@@ -332,7 +332,7 @@ Microsoft Windows 7 以降を使用して、SSL で保護されていない AEM 
 
 1. このサブキーに 2 以上の値を使用して、BasicAuthLevel レジストリエントリを追加します。
 
-Windows での WebDav クライアントの応答性を向上させるには、 [Microsoftサポート KB 2445570](https://support.microsoft.com/kb/2445570)
+Windows で WebDav クライアントの応答性を改善する方法については、[Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) を参照してください。
 
 ## プラットフォームに関するその他の注意点 {#additional-platform-notes}
 
@@ -499,11 +499,11 @@ Windows x86 の場合：
 >
 >* PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
 >* PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
->* PDFジェネレーターは、Microsoft Office Professional Plus の 32 ビット版の Retail と、Windows オペレーティングシステムでの変換に必要なその他のソフトウェアのみをサポートしています。
->* PDFジェネレーターは、Linux オペレーティングシステム上の OpenOffice の 32 ビット版および 64 ビット版をサポートしています。
->* PDF Generator では Microsoft Office 365 をサポートしていません。
+>* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および Windows オペレーティングシステムでの変換に必要な、その他のソフトウェアのみサポートしています。
+>* PDF Generator は、Linux オペレーティング システム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
+>* PDF Generator は Microsoft Office 365 をサポートしていません。
 >* OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメントに応じて、 AEM Forms製品の説明 ([オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html) または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 >* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
 >* PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
 >* PDFジェネレーターが、Microsoft Project 2019 を使用してファイルを変換できません。 Microsoft Project 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
