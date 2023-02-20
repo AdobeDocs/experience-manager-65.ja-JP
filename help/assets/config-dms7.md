@@ -119,8 +119,9 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 1. 接続に成功したら、次のように設定します。アスタリスク（*）を含む見出しが必須です。
 
    * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。
+
       >[!IMPORTANT]
-      Experience Manager の 1 つのインスタンスでサポートされる、Cloud Services の Dynamic Media 設定は 1 つだけです。複数の設定を追加しないでください。1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
+      >Experience Manager の 1 つのインスタンスでサポートされる、Cloud Services の Dynamic Media 設定は 1 つだけです。複数の設定を追加しないでください。1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
 
       <!-- CQDOC-19579 and CQDOC-19612 -->
 
@@ -149,8 +150,8 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
          * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
 
    >[!NOTE]
-   Dynamic Media - Scene7 モードではバージョン管理はサポートされていません。また、遅延アクティベーションは、「Dynamic Media 設定を編集」ページの&#x200B;**[!UICONTROL アセットを公開]**&#x200B;が&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
-   アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
+   >Dynamic Media - Scene7 モードではバージョン管理はサポートされていません。また、遅延アクティベーションは、「Dynamic Media 設定を編集」ページの&#x200B;**[!UICONTROL アセットを公開]**&#x200B;が&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
+   >アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 1. 公開前に Dynamic Media コンテンツを安全にプレビューするには、Experience Manager オーサーはトークンベースの検証を使用しているので、Experience Manager オーサーで Dynamic Media コンテンツをデフォルトでプレビューできます。IP を許可リストに登録することで、ユーザーはコンテンツを安全にプレビューできるようになります。このアクションを Experience Manager で設定するには、[Image Server 用 Dynamic Media 公開設定 -「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab)を参照してください。
@@ -250,7 +251,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 * Experience Manager インスタンスに Amazon S3 または Microsoft® Azure Blob ストレージが設定されていることを確認してください。
 
    >[!NOTE]
-   大きなアセットのアップロード機能は、Blob ストレージ設定の Azure SAS ではサポートされていないので、アクセスキーと秘密鍵を使用して Azure Blob ストレージを設定します。
+   >大きなアセットのアップロード機能は、Blob ストレージ設定の Azure SAS ではサポートされていないので、アクセスキーと秘密鍵を使用して Azure Blob ストレージを設定します。
 
 * Oak の[直接バイナリアクセスのダウンロード](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)を有効にします（Oak の&#x200B;*直接バイナリアクセスのアップロード*&#x200B;は必須ではありません）。
 
@@ -355,7 +356,7 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 [画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
 
 >[!NOTE]
-デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]** 」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。[表示する画像プリセット数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセット数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
+>デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]** 」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。[表示する画像プリセット数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセット数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
 
 #### サポートされている形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
 
@@ -473,7 +474,7 @@ Experience Manager Assets でサポートされていない形式のカスタム
    「**[!UICONTROL コードを表示]**」チェックボックスを選択して、選択した形式と同時に作成される正規表現値を表示できます。フォーム表示により制限を受ける場合、命名規則の要素を定義するために正規表現値を入力または変更できます。値をフォーム表示で解析できない場合は、フォームフィールドは非アクティブになります。
 
    >[!NOTE]
-   非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの一番下に表示されます。
+   >非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの一番下に表示されます。
 
 1. 必要に応じて各要素を展開し、使用する命名規則を入力します。
 1. 必要に応じて、次の操作をおこないます。
@@ -594,7 +595,7 @@ spin-01-01
    上記のサンプルは、デモ目的でのみ使用されています。必要に応じて独自の正規表現を作成できます。
 
    >[!NOTE]
-   行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
+   >行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
 
 1. 命名規則と作成オプションの設定では、アセットの命名規則で定義したベース名にサフィックスとプレフィックスを指定します。
 
@@ -649,7 +650,7 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 1. [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動して、**Queue: Granite Transient Workflow Queue** を検索します。
 
    >[!NOTE]
-   OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
+   >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
@@ -672,7 +673,7 @@ Granite のワークフローキューは、一時的でないワークフロー
 1. `https://<server>/system/console/configMgr` に移動して、**Queue: Granite Workflow Queue** を検索します。
 
    >[!NOTE]
-   OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
+   >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
@@ -719,7 +720,7 @@ Dynamic Media を画像、ビデオまたはその両方に使用する場合は
 | ダイナミックメディアビデオ配信 | filter-video | **video/** で始まる | 標準の「filter-video」は、以下の操作を実行します。<br>• 元のビデオと静的なサムネールのレンディションをレプリケーションから除外します。 |
 
 >[!NOTE]
-フィルターは、MIME タイプに適用されます。パスを指定することはできません。
+>フィルターは、MIME タイプに適用されます。パスを指定することはできません。
 
 #### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
 
