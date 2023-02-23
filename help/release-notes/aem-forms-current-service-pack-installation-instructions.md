@@ -2,10 +2,10 @@
 title: AEM FormsのAEM Formsパッチインストール手順
 description: OSGi および JEE 環境に対するAEM Forms Service Pack のインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 0083de8ba459662d04ba80d8c63f21735d82ac82
+source-git-commit: c4584e34b5b12f29dc995bd5483bcbad476a82ef
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 56%
+source-wordcount: '1767'
+ht-degree: 55%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 56%
 |---|---|
 | バージョン | 6.5.15.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2022年12月01日（PT） |
+| 日付 | 2023 年 12 月 01 日 |
 | ダウンロード URL | [最新のAEM Formsリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -114,7 +114,12 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 +++4. サーブレットフラグメントをインストール
 
-インストールが必須です。 **サーブレットフラグメント** JBoss® EAP 7.4.0 で実行されているアプリケーションサーバーを除くすべてのアプリケーションサーバーの場合。サーブレットフラグメントをダウンロードしてインストールするには、次の手順に従います。
+>[!NOTE]
+>
+> これは、 **サーブレットフラグメント** を実行しているアプリケーションサーバーを除くすべてのアプリケーションサーバー **JBoss® EAP 7.4.0**.
+
+
+サーブレットフラグメントをダウンロードしてインストールするには：
 
 1. フラグメントをダウンロードしていない場合は、からダウンロードします。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
 
@@ -132,7 +137,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
 1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。[Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
@@ -168,18 +173,6 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 +++
 
-
-<!-- 1. (JBoss only) After installing the patch and configuring the server, delete  tmp  and work directories of JBoss application server.
-
->[!IMPORTANT]
->
->Before installing [AEM 6.5.15.0 service pack](#install-the-aem-service-pack-install-aem-service-pack), for all the AEM Forms on JEE environments using any application servers other than JBoss EAP 7.4.0: 
-> * Install  the [org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar) servlet fragment and wait for the application server to stabilize.
->* If you install the latest [AEM service pack (6.5.15.0)](#install-the-aem-service-pack-install-aem-service-pack), prior to the fragment servlet `org.apache.felix.http.servlet-api-1.2.0_fragment-full.jar` on JEE environment, the CRX/bundle and the start page show service unavailable errors, [click here](/help/forms/using/aem-service-pack-installation-solution.md) to know the troubleshooting steps. 
-
-### !-->
-
-
 ## OSGi 環境のAEM Forms に Service Pack をダウンロードしてインストールする {#download-and-install-for-osgi-service-pack}
 
 ![OSGi のインストール手順](/help/forms/using/assets/osgiinstallation.png)
@@ -206,7 +199,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
-1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
 1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。[Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
@@ -249,4 +242,4 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 * インストールが完了したら、アクティビティの監視ログ (error.log) を確認します。 ログにアクティビティが表示されなくなるまで、数分待ちます。 AEM インスタンスを再起動します。
 
-* 次の情報が得られた場合、 **service-unavailable エラー** 最新のAEM Forms 6.5.15.0 service pack のインストール後、 [サーブレットフラグメントとバンドルのインストール](/help/forms/using/aem-service-pack-installation-solution.md) エラーを修正する。
+* 次の情報が得られた場合、 **service-unavailable エラー** AEM Forms 6.5.15.0 service pack のインストール後、 [サーブレットフラグメントとバンドルのインストール](/help/forms/using/aem-service-pack-installation-solution.md) エラーを修正する。

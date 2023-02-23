@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: d07b87532fe84f4729d4769ad5a178d3b2830e4f
+source-git-commit: 156e83ad9f73e200da70f824b598a713c0e2e97f
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 53%
+source-wordcount: '2195'
+ht-degree: 52%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 53%
 | バージョン | 6.5.16.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | タイプ | サービスパックのリリース |
 | 日付 | 2023 年 2 月 23 日木曜日 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]be/packages/cq650/servicepack/aem-service-pkg-6.5.16.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## [!DNL Experience Manager] 6.5.16.0 の内容 {#what-is-included-in-aem-6516}
 
