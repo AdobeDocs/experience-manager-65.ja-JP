@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: f578a3c5dee24bbb9995329777eea02bb8f1b654
+source-git-commit: 40ae6c06f3296bfd4affe3e862d57df747d9bb82
 workflow-type: tm+mt
-source-wordcount: '4507'
+source-wordcount: '4520'
 ht-degree: 95%
 
 ---
@@ -460,7 +460,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 1. （オプション）ビューアプリセットを編集ページの最上部の近くにある「**[!UICONTROL デスクトップ]**」、「**[!UICONTROL タブレット]**」または「**[!UICONTROL 電話]**」を選択して、異なる種類のデバイスや画面のビジュアルスタイルを個別に定義します。
 1. ビューアプリセットエディターページで、「**[!UICONTROL ビヘイビアー]**」タブを選択します。または、設定するビジュアル要素をビューアで選択することもできます。例えば、 *VideoPlayer* 次の場所に入力 **[!UICONTROL 修飾子]** > **[!UICONTROL 再生]**&#x200B;では、次の 3 つのアダプティブストリーミングオプションのいずれかを選択できます。
 
-   * **[!UICONTROL ダッシュ]**  — ビデオはダッシュとしてのみストリーミングされます。
+   * **[!UICONTROL ダッシュ]**  — ビデオはダッシュとしてのみストリーミングされます。 ただし、Safari/iOSデバイスでは、 **[!UICONTROL hls]** をタイプとして使用します。
    * **[!UICONTROL hls]**  — ビデオは hls としてのみストリーミングされます。
    * **[!UICONTROL auto]**  — ベストプラクティス。 DASH および HLS ストリームの作成は、ストレージに最適化されています。 したがって、Adobeでは、常に **[!UICONTROL auto]** を再生タイプとして使用します。 次のように、ビデオはダッシュ、HLS、またはプログレッシブとしてストリーミングされます。
       * ブラウザが DASH をサポートしている場合は、最初に DASH ストリーミングが使用されます。

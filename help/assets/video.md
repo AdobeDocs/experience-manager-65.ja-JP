@@ -12,10 +12,10 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 2c4be989decbac2a4109e7c02cd9d6231c1d0753
+source-git-commit: 86394ab7e7de89615218d6ddd6843ec9276275cd
 workflow-type: tm+mt
-source-wordcount: '12541'
-ht-degree: 88%
+source-wordcount: '12734'
+ht-degree: 86%
 
 ---
 
@@ -231,17 +231,17 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>デスクトップ</td>
    <td>Firefox 45 以降</td>
-   <td>DASH*または HLS</td>
+   <td>DASH*または HLS アダプティブストリーミング。</td>
   </tr>
   <tr>
    <td>デスクトップ</td>
    <td>Chrome</td>
-   <td>DASH*または HLS</td>
+   <td>DASH*または HLS アダプティブストリーミング。</td>
   </tr>
   <tr>
    <td>デスクトップ</td>
    <td>Safari（Mac）</td>
-   <td>HLS</td>
+   <td>HLS アダプティブストリーミング。</td>
   </tr>
   <tr>
    <td>モバイル</td>
@@ -251,7 +251,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>モバイル</td>
    <td>Chrome（Android™ 7 以降）</td>
-   <td>DASH*または HLS</td>
+   <td>DASH*または HLS アダプティブストリーミング。</td>
   </tr>
   <tr>
    <td>モバイル</td>
@@ -261,17 +261,17 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>モバイル</td>
    <td>Safari（iOS）</td>
-   <td>HLS</td>
+   <td>HLS アダプティブストリーミング。</td>
   </tr>
   <tr>
    <td>モバイル</td>
    <td>Chrome（iOS）</td>
-   <td>DASH*または HLS</td>
+   <td>HLS アダプティブストリーミング。</td>
   </tr>
   <tr>
    <td>モバイル</td>
    <td>BlackBerry®</td>
-   <td>DASH*または HLS</td>
+   <td>DASH*または HLS アダプティブストリーミング。/td&gt;
   </tr>
  </tbody>
 </table>
@@ -429,7 +429,7 @@ Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセッ�
 
 ### アカウントで DASH を有効にする {#enable-dash}
 
-DASH(Digital Adaptive Streaming over HTTP) は、ビデオストリーミングの国際標準で、様々なビデオビューアで広く採用されています。 DASH を有効にすると、アダプティブビデオストリーミング用に HLS または DASH から選択するオプションが表示されます。 プレーヤー間の自動切り替えで、両方をオプトすることもできます。
+DASH(Digital Adaptive Streaming over HTTP) は、ビデオストリーミングの国際標準で、様々なビデオビューアで広く採用されています。 アカウントで DASH が有効になっている場合、アダプティブビデオストリーミング用に DASH または HLS のいずれかを選択できます。 または、プレーヤー間の自動切り替えで両方をオプトできます ( **[!UICONTROL auto]** ビューアプリセットで再生タイプとしてが選択されています。
 
 アカウントで DASH を有効にする主なメリットには、次のようなものがあります。
 
@@ -444,12 +444,28 @@ DASH(Digital Adaptive Streaming over HTTP) は、ビデオストリーミング�
    >
    >現在、お使いのアカウントで DASH を有効にしているのは、北米でのみです。
 
+アカウントで DASH を有効にするには、次の 2 つの手順が必要です。
+
+* DASH を使用するようにDynamic Mediaを設定することで、簡単に実行できます。
+* Experience Manager6.5 で DASH を使用するように設定します。DASH は、作成して送信するAdobeカスタマーサポートケースを通じて行われます。
+
 **アカウントで DASH を有効にするには：**
 
-1. [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動します。
+1. **Dynamic Mediaの設定** - Dynamic MediaExperience Manager6.5 で、に移動します。 [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
 1. を検索 **AEM Assets Dynamic Media Video Advanced Streaming** 機能フラグ。
 1. チェックボックスをオンにして DASH を有効（オン）にします。
 1. 「**[!UICONTROL 保存]**」を選択します。
+1. **Experience Manager6.5 の設定** - [Admin Consoleを使用して、新しいサポートケースの作成を開始します](https://helpx.adobe.com/jp/enterprise/using/support-for-experience-cloud.html).
+1. 手順に従い、次の情報を入力しながら、サポートケースを作成します。
+
+   * 主要連絡先の氏名、メールアドレス、電話番号。
+   * Dynamic Mediaアカウントの名前。
+   * Experience Manager6.5 で DASH を有効にするように指定します。
+
+1. Adobeカスタマーサポートにより、リクエストの送信順に基づいて DASH カスタマー待機リストに追加されます。
+1. Adobeがリクエストを処理する準備が整うと、カスタマーサポートから連絡があり、DASH を有効にするための目標日を調整して設定できます。
+1. 完了後、カスタマーサポートから通知があります。
+1. を [ビデオビューアプリセット](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) いつも通り
 
 ## YouTube へのビデオの公開 {#publishing-videos-to-youtube}
 
