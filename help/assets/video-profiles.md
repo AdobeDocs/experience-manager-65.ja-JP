@@ -12,10 +12,10 @@ feature: Video Profiles
 role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '3689'
-ht-degree: 100%
+source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
+workflow-type: tm+mt
+source-wordcount: '3727'
+ht-degree: 98%
 
 ---
 
@@ -280,7 +280,7 @@ Experience Manager でビデオプロファイルを作成または編集する�
    <td><code>keyframe</code></td>
    <td>キーフレーム間のターゲットフレーム数。2～10 秒ごとにキーフレームを生成できるように、この値を計算します。例えば、1 秒あたり 30 フレームの場合、キーフレーム間隔は 60～300 にします。<br /> <br /> キーフレーム間隔を短くすると、アダプティブビデオエンコーディングでストリームのシークと切り替えの動作が向上し、動きの多いビデオの画質も向上します。ただし、キーフレームが増えるとファイルのサイズも増えるので、通常、キーフレーム間隔を短くすると、特定のビットレートでの全体的なビデオの画質は低下します。</td>
    <td><code>String</code></td>
-   <td><p>正の数。</p> <p>初期設定は 300 です。</p> <p>HLS（HTTP ライブストリーミング）の推奨値は 60～90 です。</p> </td>
+   <td><p>正の数。</p> <p>初期設定は 300 です。</p> <p>DASH または HLS の推奨値は 60～90 です。 ( ビデオに DASH を使用するには、まずアカウントで DASH を有効にする必要があります。 詳しくは、 <a href="/help/assets/video.md#enable-dash">アカウントで DASH を有効にする</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -298,7 +298,7 @@ Experience Manager でビデオプロファイルを作成または編集する�
    <td><code>audioBitrateCustom</code></td>
    <td>オーディオコーデックでサポートされている場合、オーディオストリームに固定ビットレートを強制的に適用するには、値を <code>true</code> に設定します。</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>／<code>false</code></p> <p>デフォルトは <code>false</code> です。</p> <p>HLS（HTTP ライブストリーミング）の推奨値は <code>false</code> です。</p> <p> </p> </td>
+   <td><p><code>true</code>／<code>false</code></p> <p>デフォルトは <code>false</code> です。</p> <p>DASH または HLS の推奨値は次のとおりです。 <code>false</code>. ( ビデオに DASH を使用するには、まずアカウントで DASH を有効にする必要があります。 詳しくは、 <a href="/help/assets/video.md#enable-dash">アカウントで DASH を有効にする</a>.)</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>

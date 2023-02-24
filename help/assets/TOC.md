@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: cd3dcd0232e1ecf69c79b03ab960cfbfc283ee76
+source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 100%
+source-wordcount: '681'
+ht-degree: 99%
 
 ---
 
@@ -97,6 +97,8 @@ ht-degree: 100%
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [  [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
    + [コンテンツフラグメント用 GraphQL API](content-fragments/graphql-api-content-fragments.md)
+   + [GraphiQL IDE の使用](content-fragments/graphiql-ide.md)
+   + [永続クエリ](content-fragments/persisted-queries.md)
    + [コンテンツフラグメントに対するリモート GraphQL クエリの認証](content-fragments/graphql-authentication-content-fragments.md)
    + [GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](/help/assets/content-fragments/content-fragments-graphql-samples.md)
    + [[!DNL Assets] プロキシ開発](proxy.md)

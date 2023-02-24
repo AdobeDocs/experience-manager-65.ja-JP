@@ -2,10 +2,10 @@
 title: AEM Delivery API を使用してコンテンツにアクセスする方法
 description: AEM ヘッドレスデベロッパージャーニーのこのパートでは、GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスする方法を説明します。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 100%
+source-wordcount: '1335'
+ht-degree: 98%
 
 ---
 
@@ -245,9 +245,8 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
    * ツール／Assets／GraphQL の使用
    * [GraphQL エンドポイントの有効化](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
 
-* GraphiQL のインストール（必要な場合）
-   * 専用パッケージとしてインストール
-   * [AEM GraphiQL インターフェイスのインストール](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
+* GraphiQL へのアクセス（必要な場合）
+   * [AEM GraphiQL インターフェイス](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)
 
 ### サンプル構造 {#sample-structure}
 
@@ -270,9 +269,9 @@ AEM GraphQL API をクエリで実際に使用するにあたって、次のよ�
 
 ### クエリのテスト場所 {#where-to-test-your-queries}
 
-クエリは、GraphiQL インターフェイス（例えば次の場所）で入力できます。
+クエリは、 [GraphiQL インターフェイス](/help/assets/content-fragments/graphiql-ide.md)（例： ）。
 
-* `http://localhost:4502/content/graphiql.html`
+* `http://localhost:4502/aem/graphiql.html`
 
 ![GraphiQL インターフェイス](assets/graphiql-interface.png "GraphiQL インターフェイス")
 

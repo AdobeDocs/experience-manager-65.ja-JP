@@ -4,9 +4,9 @@ description: AEM の強力なヘッドレス配信機能を活用するために
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: 8dc8eff86ff25534a578dd227033aa185853d930
+source-git-commit: da41f48d08b7629a734e2f60077af6190a7fee8f
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '271'
 ht-degree: 100%
 
 ---
@@ -42,10 +42,6 @@ AEM の強力なヘッドレス配信機能を活用するために、設定ブ�
 >[!NOTE]
 >
 >詳しくは、「[設定ブラウザー](/help/sites-administering/configurations.md#using-configuration-browser)」も参照してください。
-
->[!CAUTION]
->
->サブ設定（設定内にネストされた設定）は、コンテンツフラグメントでの使用はサポートされますが、GraphQL クエリには使用できません。
 
 1. **ツール**／**一般**&#x200B;に移動し、**設定ブラウザー**&#x200B;を開きます。
 

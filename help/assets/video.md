@@ -12,10 +12,10 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '11766'
-ht-degree: 100%
+source-git-commit: 2c4be989decbac2a4109e7c02cd9d6231c1d0753
+workflow-type: tm+mt
+source-wordcount: '12541'
+ht-degree: 88%
 
 ---
 
@@ -74,7 +74,6 @@ ht-degree: 100%
    * ビデオアセットをプレビューして公開します。
 
       * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
-
          [ビデオをプレビュー](managing-video-assets.md#upload-and-preview-video-assets)するか[アセットをプレビュー](previewing-assets.md)します。
          [ビデオレンディションを表示](video-renditions.md)
          [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
@@ -84,11 +83,9 @@ ht-degree: 100%
    * ビデオのメタデータを操作します。
 
       * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
-
          [ビデオレンディションのプロパティを表示](video-renditions.md)
 
       * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
-
          [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
 
       * [デジタルアセットのメタデータの管理](metadata.md)
@@ -114,11 +111,9 @@ ht-degree: 100%
    * サードパーティの web コンテンツ管理システムを使用している場合、web ページにビデオをリンクするか、ビデオを埋め込むことができます。
 
       * URL を使用したビデオの統合：
-
          [Web アプリケーションに URL をリンクします](linking-urls-to-yourwebapplication.md)。
 
       * Web ページの埋め込みコードを使用したビデオの統合：
-
          [Web ページにビデオビューアを埋め込みます](embed-code.md)。
    * [YouTube にビデオを公開します](#publishing-videos-to-youtube)。
    * [ビデオレポートを生成します](#viewing-video-reports)。
@@ -133,7 +128,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 
 例えば、iOS モバイルデバイスでは、3G、4G、Wi-Fi などの帯域幅が検出されます。次に、アダプティブビデオセット内の様々なビデオビットレートの中から、適切なエンコード済みビデオが自動的に選択されます。そのビデオが、デスクトップ、モバイルデバイスまたはタブレットにストリーミングされます。
 
-さらに、デスクトップまたはモバイルデバイスでネットワーク状況が変化した場合に、ビデオ品質が自動的に、動的に切り替えられます。また、デスクトップが全画面表示モードに切り替わった場合、アダプティブビデオセットがより高い解像度を使用するように応答するので、ユーザーの視聴エクスペリエンスが向上します。アダプティブビデオセットを使用すると、Dynamic Media ビデオを複数の画面とデバイスで再生するユーザーにとって最適な再生方法が提供されます。
+さらに、デスクトップまたはモバイルデバイスでネットワーク状況が変化した場合に、ビデオ品質が自動的に、動的に切り替えられます。また、顧客がデスクトップでフルスクリーンモードに移行した場合、アダプティブビデオセットはより高い解像度を使用して応答し、顧客の表示エクスペリエンスが向上します。 アダプティブビデオセットを使用すると、Dynamic Media ビデオを複数の画面とデバイスで再生するユーザーにとって最適な再生方法が提供されます。
 
 再生または再生時に選択するエンコード済みビデオの決定に、ビデオプレーヤーが使用するロジックは、次のアルゴリズムに基づきます。
 
@@ -147,7 +142,7 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 
 1 つのビデオおよびアダプティブビデオセットの管理では、次の方法がサポートされています。
 
-* サポートされる各種ビデオ形式およびオーディオ形式のビデオをアップロードして、複数の画面での再生用にビデオを MP4 H.264 形式へとエンコードすること。事前定義済みのアダプティブビデオセット、1 つのビデオのエンコーディングプリセットを使用するか、独自のエンコーディングをカスタマイズしてビデオの品質とサイズを制御することができます。
+* 多数のサポートされているビデオ形式およびオーディオ形式からビデオをアップロードし、複数の画面で再生するためにビデオを MP4 H.264 形式にエンコーディングします。 事前定義済みのアダプティブビデオセット、1 つのビデオのエンコーディングプリセットを使用するか、独自のエンコーディングをカスタマイズしてビデオの品質とサイズを制御することができます。
 
    * アダプティブビデオセットが生成される場合、そのセットには MP4 ビデオが含まれます。
    * **注意**：マスター／ソースビデオはアダプティブビデオセットには追加されません。
@@ -160,7 +155,9 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする BlackBerry® デバイスについては、[BlackBerry® でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
-このビデオ形式をサポートする Windows デバイスについては、[Windows Phone 8 でサポートされているメディアコーデック](https://docs.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs)のページで確認できます。
+このビデオ形式をサポートする Windows デバイスについては、[Windows Phone 8 でサポートされているメディアコーデック](https://learn.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs)のページで確認できます。
+
+
 
 * Dynamic Media ビデオビューアプリセットを使用してビデオを再生します。このビューアプリセットには、次のビューアが含まれます。
 
@@ -178,15 +175,15 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデオプレーヤーです。このプリセットを使用すれば、HTML5 ビデオ再生でよくある問題や、モバイルデバイスに関する問題（アダプティブストリーミング配信機能がない、デスクトップブラウザーの対応状況が限定的であるなど）の多くを回避することができます。
 
-プレーヤーの設計面では、ビデオプレーヤーの機能を標準の web 開発ツールで設計できます。例えば、HTML5 と CSS を使用して、ボタン、コントロールおよびカスタムのポスター画像背景をデザインして、カスタマイズした表示によって顧客に対応することができます。
+プレーヤーのデザイン側では、標準の Web 開発ツールを使用してビデオプレーヤーの機能をデザインできます。 例えば、HTML5 と CSS を使用して、ボタン、コントロールおよびカスタムのポスター画像背景をデザインして、カスタマイズした表示によって顧客に対応することができます。
 
-ビューアの再生側から見れば、ビューアによってブラウザーのビデオ機能が自動的に検出されます。その後、HLS（HTTP ライブストリーミング）を使用してビデオが配信されます。HLS はアダプティブビデオストリーミングとも呼ばれます。または、これらの配信方法が使用できない場合は、HTML5 プログレッシブが代わりに使用されます。
+ビューアの再生側では、ブラウザーのビデオ機能が自動的に検出されます。 次に、HLS または DASH（アダプティブビデオストリーミングとも呼ばれる）を使用してビデオを配信します。 または、これらの配信方法が使用できない場合は、HTML5 プログレッシブが代わりに使用されます。
 
 単一のプレーヤーにまとめることで、次のようなことができるようになりました。
 
 * HTML5 と CSS を使って再生コンポーネントをデザインする機能
 * 埋め込み再生する機能
-* ブラウザーの機能に応じて、アダプティブストリーミングとプログレッシブストリーミングを使い分ける
+* ブラウザーの機能に応じて、アダプティブストリーミングとプログレッシブストリーミングを使用する
 
 リッチメディアコンテンツの配信範囲をデスクトップユーザーとモバイルユーザーの両方に拡大し、ビデオエクスペリエンスを確実に効率化することができます。
 
@@ -196,16 +193,16 @@ Dynamic Media の HTML5 ビデオビューアプリセットは堅牢なビデ�
 
 デスクトップおよびモバイルへのアダプティブビデオストリーミングの場合、ビットレートの切り替えに使用されるビデオは、アダプティブビデオセット内のすべての MP4 ビデオに基づいています。
 
-ビデオ再生は、HLS（HTTP ライブストリーミング）かプログレッシブビデオダウンロードを使用して行われます。6.0、6.1、6.2 など以前の Experience Manager バージョンでは、ビデオは HTTP 上でストリーミングされました。
+ビデオ再生は、HLS または DASH、またはプログレッシブビデオダウンロードを使用しておこなわれます。 6.0、6.1、6.2 など以前の Experience Manager バージョンでは、ビデオは HTTP 上でストリーミングされました。
 
-一方、Experience Manager 6.3 以降では、DM ゲートウェイサービスの URL が常に HTTPS も使用するので、ビデオは HTTPS でストリーミングされるようになりました（つまり HLS）。このデフォルトの動作はユーザーに影響しません。つまり、ブラウザーでサポートされていない場合を除き、ビデオストリーミングは常に HTTPS 上で行われます（以下の表を参照してください）。したがって、次のようになります。
+ただし、Experience Manager6.3 以降では、DM ゲートウェイサービスの URL も常に HTTPS を使用するので、ビデオは HTTPS（つまり、HLS または DASH）経由でストリーミングされるようになりました。 このデフォルトの動作はユーザーに影響しません。つまり、ブラウザーでサポートされていない場合を除き、ビデオストリーミングは常に HTTPS 上で行われます（以下の表を参照してください）。したがって、次のようになります。
 
 * HTTPS web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しています。
 * HTTP web サイトが HTTPS ビデオストリーミングに対応している場合は、ストリーミングが適しており、web ブラウザーから混合コンテンツに関する問題は発生しません。
 
 HLS は、アダプティブビデオストリーミングの Apple 標準で、ネットワーク帯域幅のキャパシティに応じて再生を自動的に調整します。また、HLS では、ビデオの残りがダウンロードされるまで待たなくても、ビデオ内の任意のポイントを「シーク」できます。
 
-プログレッシブビデオは、ユーザーのデスクトップシステムやモバイルデバイスにダウンロードしてローカルに保存することで配信されます。
+プログレッシブビデオは、ユーザーのデスクトップシステムまたはモバイルデバイス上でローカルにビデオをダウンロードして保存することで配信されます。
 
 デバイス、ブラウザーおよびデスクトップコンピューターやモバイルデバイスでの Dynamic Media ビデオビューアによるビデオの再生方法を次の表に示します。
 
@@ -224,7 +221,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>デスクトップ</td>
    <td>Internet Explorer 11+</td>
-   <td>Windows 8 および Windows 10 では、HLS が要求されるたびに HTTPS を強制的に使用します。既知の制約事項：このブラウザー／オペレーティングシステムの組み合わせでは、HLS での HTTP は機能しません。<br /> <br /> Windows 7 - プログレッシブダウンロード。HTTP プロトコルと HTTPS プロトコルの選択には標準的なロジックが使用されます。</td>
+   <td>Windows 8 および Windows 10 - DASH*または HLS が要求された場合は HTTPS を強制的に使用します。 既知の制限事項：このブラウザー/オペレーティングシステムの組み合わせでは、HTTP on DASH*または HLS は機能しません<br /> <br /> Windows 7 — プログレッシブダウンロード。 HTTP プロトコルと HTTPS プロトコルの選択には標準的なロジックが使用されます。</td>
   </tr>
   <tr>
    <td>デスクトップ</td>
@@ -234,12 +231,12 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>デスクトップ</td>
    <td>Firefox 45 以降</td>
-   <td>HLS</td>
+   <td>DASH*または HLS</td>
   </tr>
   <tr>
    <td>デスクトップ</td>
    <td>Chrome</td>
-   <td>HLS</td>
+   <td>DASH*または HLS</td>
   </tr>
   <tr>
    <td>デスクトップ</td>
@@ -254,7 +251,7 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>モバイル</td>
    <td>Chrome（Android™ 7 以降）</td>
-   <td>HLS</td>
+   <td>DASH*または HLS</td>
   </tr>
   <tr>
    <td>モバイル</td>
@@ -269,15 +266,19 @@ HLS は、アダプティブビデオストリーミングの Apple 標準で、
   <tr>
    <td>モバイル</td>
    <td>Chrome（iOS）</td>
-   <td>HLS</td>
+   <td>DASH*または HLS</td>
   </tr>
   <tr>
    <td>モバイル</td>
    <td>BlackBerry®</td>
-   <td>HLS</td>
+   <td>DASH*または HLS</td>
   </tr>
  </tbody>
 </table>
+
+>[!IMPORTANT]
+>
+>*ビデオに DASH を使用するには、まずアカウントのAdobeテクニカルサポートが DASH を有効にする必要があります。 詳しくは、 [アカウントで DASH を有効にする](#enable-dash).)
 
 ## Dynamic Media ビデオソリューションのアーキテクチャ {#architecture-of-dynamic-media-video-solution}
 
@@ -316,7 +317,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 ### ファイルのメタデータの取得 {#obtaining-a-file-s-metadata}
 
-ビデオ編集ツールを使用してメタデータを参照するか、メタデータ取得用のアプリケーションを使用して、ファイルのメタデータを取得することができます。以下は、サードパーティアプリケーションの MediaInfo を使用してビデオファイルのメタデータを取得する手順です。
+ファイルのメタデータを取得するには、ビデオ編集ツールを使用してメタデータを表示するか、メタデータを取得するために設計されたアプリケーションを使用します。次に、サードパーティアプリケーションである MediaInfo を使用してビデオファイルのメタデータを取得する手順を示します。
 
 1. [MediaInfo のダウンロードページ](https://mediaarea.net/ja/MediaInfo/Download)に移動します。
 1. GUI バージョンのインストーラーを選択してダウンロードし、インストール手順に従って操作します。
@@ -326,7 +327,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 プライマリソースビデオファイルのビデオエンコーディングプリセットを選択または作成するときには、プライマリソースビデオファイルと同じ縦横比をプリセットに使用してください。縦横比とは、ビデオの高さに対する幅の比率のことです。
 
-ビデオファイルの縦横比を求めるには、ファイルのメタデータを取得し、そのファイルの幅と高さを記録します（前述のファイルのメタデータの取得を参照してください）。さらに、次の式を使用して縦横比を計算します。
+ビデオファイルの縦横比を決定するには、ファイルのメタデータを取得し、ファイルの幅と高さをメモします（前述のファイルのメタデータの取得を参照）。 次に、次の式を使用して縦横比を決定します。
 
 幅/高さ = 縦横比
 
@@ -353,11 +354,11 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 
 * **[!UICONTROL 固定ビットレートエンコーディング]**（CBR）- CBR エンコーディングでは、ビットレートまたは 1 秒あたりのビット数が、エンコーディングプロセス全体で同じ数値に維持されます。CBR エンコーディングでは、設定されているデータレートが、ビデオ全体での設定値として使用されます。また、CBR エンコーディングでは、メディアファイルの品質は最適化されませんが、その分、空き容量の節約になります。ビデオ全体に同じようなモーションレベルが含まれている場合は、CBR を使用します。CBR は、ビデオコンテンツのストリーミングに最も一般的に使用されています。[カスタムで追加するビデオエンコーディングパラメーターの使用](/help/assets/video-profiles.md#using-custom-added-video-encoding-parameters)も参照してください。
 
-* **[!UICONTROL 可変ビットレートエンコーディング]**（VBR）- VBR エンコーディングでは、圧縮形式で必要となるデータに基づいて、データのレートが設定した下限から上限の範囲内で調整されます。つまり、VBR エンコーディングプロセスでは、メディアファイルのビットレートが、そのニーズに応じて動的に増減します。VBR は、CBR よりエンコードに時間がかかりますが、生成されるメディアファイルは最高品質となります。VBR は、ビデオコンテンツの HTTP プログレッシブ配信に最も一般的に使用されます。
+* **[!UICONTROL 可変ビットレートエンコーディング]** (VBR) - VBR エンコーディングでは、圧縮形式で必要なデータに基づいて、データのレートが設定した下限から上限の範囲内で調整されます。 つまり、VBR エンコーディングプロセスでは、メディアファイルのビットレートが、そのニーズに応じて動的に増減します。VBR は、CBR よりエンコードに時間がかかりますが、生成されるメディアファイルは最高品質となります。VBR は、ビデオコンテンツの HTTP プログレッシブ配信に最も一般的に使用されます。
 
 VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選択すべきかと言えば、ほとんどの場合、メディアファイルには VBR を使用することをお勧めします。VBR は、優位性のあるビットレートで CBR より高品質のファイルを生成します。VBR を使用するときは、2 パスエンコーディングを使用し、最大ビットレートをターゲットビデオのビットレートの 1.5 倍に設定してください。
 
-ビデオエンコーディングプリセットを選択するときには、ターゲットエンドユーザーの接続速度を念頭に置いてください。その速度の 80% のデータレートを持つプリセットを選択してください。例えば、ターゲットエンドユーザーの接続速度が 1,000 Kbps の場合、ビデオデータレートが 800 Kbps のプリセットが最適です。
+ビデオエンコーディングプリセットを選択する際には、ターゲットエンドユーザーの接続速度を記憶します。 その速度の 80% のデータレートを持つプリセットを選択してください。例えば、ターゲットエンドユーザーの接続速度が 1000 Kbps の場合、最適なプリセットは、ビデオデータレートが 800 Kbps のものです。
 
 次の表に、一般的な接続速度のデータレートを示します。
 
@@ -370,7 +371,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 ### 解像度 {#resolution}
 
-**解像度**&#x200B;は、ビデオファイルの高さと幅をピクセル単位で表したものです。ほとんどのソースビデオは、1,920 x 1,080 などの高解像度で保存されます。ストリーミング用のソースビデオは、比較的低い解像度（640 x 480 以下）に圧縮されます。
+**解像度** ビデオファイルの高さと幅をピクセル単位で表します。ほとんどのソースビデオは高解像度（例えば、1920 x 1080）で保存されます。 ストリーミング用に、ソースビデオはより小さい解像度（640 x 480 以下）に圧縮されます。
 
 解像度とデータレートは、ビデオの品質を決める、一体的な関連を持つ 2 つの要素です。同じビデオ品質を維持するには、ビデオファイル内のピクセル数が多いほど（解像度が高いほど）、データレートを高くする必要があります。例えば、320 x 240 の解像度と 640 x 480 の解像度のビデオファイルにおけるフレームあたりピクセル数を考察すると、次のようになります。
 
@@ -403,7 +404,7 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 日本および米国では、ほとんどのビデオは 1 秒あたりのフレーム数（fps）が 29.97 で撮影されます。また、ヨーロッパでは、ほとんどのビデオが 25 fps で撮影されます。映画は 24 fps で撮影されます。
 
-プライマリソースビデオファイルの fps レートに一致するビデオエンコーディングプリセットを選択します。例えば、プライマリソースビデオが 25 fps の場合は、25 fps のエンコーディングプリセットを選択します。デフォルトでは、すべてのカスタムエンコーディングでプライマリソースビデオファイルの fps が使用されます。そのため、ビデオエンコーディングプリセットを作成するときに、fps 設定を明示的に指定する必要はありません。
+プライマリソースビデオファイルの fps レートに一致するビデオエンコーディングプリセットを選択します。例えば、プライマリソースビデオが 25 fps の場合は、25 fps のエンコーディングプリセットを選択します。デフォルトでは、すべてのカスタムエンコーディングでプライマリソースビデオファイルの fps が使用されます。 そのため、ビデオエンコーディングプリセットを作成するときに、fps 設定を明示的に指定する必要はありません。
 
 ### ビデオエンコーディングのサイズ {#video-encoding-dimensions}
 
@@ -426,13 +427,37 @@ VBR と CRB のどちらを使用するべきかVBR と CBR のどちらを選�
 
 Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセットの使用を推奨しています。MP4 ファイルでは H.264 ビデオコーデックが使用されるので、高品質のビデオを圧縮されたファイルサイズで作成することができます。
 
+### アカウントで DASH を有効にする {#enable-dash}
+
+DASH(Digital Adaptive Streaming over HTTP) は、ビデオストリーミングの国際標準で、様々なビデオビューアで広く採用されています。 DASH を有効にすると、アダプティブビデオストリーミング用に HLS または DASH から選択するオプションが表示されます。 プレーヤー間の自動切り替えで、両方をオプトすることもできます。
+
+アカウントで DASH を有効にする主なメリットには、次のようなものがあります。
+
+* アダプティブストリーミング用に DASH ストリームビデオをパッケージ化します。 この方法を使用すると、配信の効率が向上します。 アダプティブストリーミングにより、顧客に最適な表示エクスペリエンスを提供します。
+* Dynamic Media Player でブラウザーに最適化されたストリーミングにより、HLS と DASH のストリーミングを切り替え、最高のサービス品質を確保します。 Safari ブラウザーを使用すると、ビデオプレーヤーが HLS に自動的に切り替わります。
+* ビデオビューアプリセットを編集して、優先ストリーミング方式（HLS または DASH）を設定できます。
+* 最適化されたビデオエンコーディングにより、DASH 機能を有効にしながら、追加のストレージを使用しなくて済みます。 HLS と DASH の両方に対して 1 つのビデオエンコードセットが作成され、ビデオの保存コストが最適化されます。
+* ビデオ配信をよりアクセシブルにするのに役立ちます。
+* API を使用してストリーミング URL も取得します。
+
+   >[!IMPORTANT]
+   >
+   >現在、お使いのアカウントで DASH を有効にしているのは、北米でのみです。
+
+**アカウントで DASH を有効にするには：**
+
+1. [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動します。
+1. を検索 **AEM Assets Dynamic Media Video Advanced Streaming** 機能フラグ。
+1. チェックボックスをオンにして DASH を有効（オン）にします。
+1. 「**[!UICONTROL 保存]**」を選択します。
+
 ## YouTube へのビデオの公開 {#publishing-videos-to-youtube}
 
 以前作成した YouTube チャンネルに、オンプレミス Experience Manager ビデオアセットを直接公開できます。
 
 ビデオアセットを YouTube に公開するには、タグを使用して Experience Manager Assets をセットアップします。これらのタグを YouTube チャンネルに関連付けます。ビデオアセットのタグが YouTube チャンネルのタグと一致する場合、ビデオが YouTube に公開されます。YouTube への公開は、関連するタグが使用されている限り、ビデオの通常公開と一緒に行われます。
 
-YouTube は独自のエンコーディングを行います。そのため、Experience Manager にアップロードされた元のビデオファイルは、Dynamic Media のエンコードで作成されたビデオレンディションではなく YouTube に公開されます。Dynamic Media を使用してビデオを処理する必要はありませんが、再生にビューアプリセットが必要な場合は、それが行われます。
+YouTube は独自のエンコーディングを行います。したがって、Experience Managerにアップロードされた元のビデオファイルは、Dynamic Media のエンコーディングで作成されたビデオレンディションの代わりにYouTubeに公開されます。 Dynamic Media を使用してビデオを処理する必要はありませんが、再生にビューアプリセットが必要な場合は、それが行われます。
 
 ビデオ処理プロファイルをスキップして YouTube に直接公開すると、Experience Manager Assets のビデオアセットに対して、表示可能なサムネールが作成されません。また、 `dynamicmedia` または `dynamicmedia_scene7` 実行モードで実行する場合、エンコードされていないビデオは、どの Dynamic Media アセットタイプとも機能しません。
 
@@ -487,7 +512,7 @@ Google Cloud を設定するには：
 
 1. 次のいずれかの操作を行います。
 
-   * プロジェクトのダッシュボードの「スタートガイド」カードで、「**[!UICONTROL API を探索して有効にする]**」をタップします。
+   * プロジェクトのダッシュボードの「はじめに」カードで、をタップします。 **[!UICONTROL API の確認と有効化]**.
    * プロジェクトのダッシュボードの「API」カードで「**[!UICONTROL API の概要に移動]**」をタップします。
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
@@ -533,7 +558,7 @@ Google Cloud を設定するには：
    **注意**：上記のパスはデモ用の例です。
 
 1. 「**[!UICONTROL OAuth クライアント ID の作成]**」をクリックします。
-1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 3 で、「**[!UICONTROL OAuth 2.0 同意画面を設定する]**」の下で、現在使用している Gmail 電子メールアドレスを選択します。
+1. **[!UICONTROL プロジェクトへの認証情報の追加]**&#x200B;ページの手順 3 で、「**[!UICONTROL OAuth 2.0 同意画面を設定する]**」の下で、現在使用している Gmail メールアドレスを選択します。
 
    ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
 
@@ -641,9 +666,9 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、Experience Manager で利用可能なタグのリストを表示します。
 1. 1 つ以上のタグをタップして追加します。
 
-   追加したタグを削除するには、そのタグを選択して、「**[!UICONTROL X]**」をタップします。
+   追加したタグを削除するには、タグを選択し、 **[!UICONTROL X]**.
 
-1. 使用するタグの追加が終了したら、「**[!UICONTROL 保存]**」をタップします。
+1. 使用するタグの追加が終了したら、をタップします。 **[!UICONTROL 保存]**.
 
    次は、YouTube チャンネルにビデオを公開します。
 
@@ -686,9 +711,9 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 1. ドロップダウンリストアイコン（上下逆のキャレット）をタップして、Experience Manager で利用可能なタグのリストを表示します。
 1. 1 つ以上のタグをタップして追加します。
 
-   追加したタグを削除するには、そのタグを選択して、「**X**」をタップします。
+   追加したタグを削除するには、タグを選択し、 **X**.
 
-1. 使用するタグの追加が終了したら、「**[!UICONTROL OK]**」をタップします。
+1. 使用するタグの追加が終了したら、をタップします。 **[!UICONTROL OK]**.
 
    次は、YouTube チャンネルにビデオを公開します。
 
@@ -807,7 +832,7 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 
 **Web アプリケーションに YouTube URL をリンクするには：**
 
-1. URL のコピー先となる、*YouTube への公開済み*&#x200B;ビデオアセットの場所に移動して選択します。
+1. 次に移動： *YouTube公開* URL をコピーして選択するビデオアセット。
 
    YouTube URL をコピーするには、*その前に*&#x200B;ビデオアセットを YouTube に&#x200B;*公開しておく*&#x200B;必要があります。
 
@@ -840,7 +865,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 ## ビデオエンコーディングと YouTube への公開の進行状況を監視 {#monitoring-video-encoding-and-youtube-publishing-progress}
 
-ビデオエンコーディングが適用されたフォルダーに新しいビデオをアップロードしたり、YouTube にビデオを公開したりする場合は、ビデオエンコーディング／YouTube への公開の進行状況を監視できます。YouTube への公開の実際の進行状況は、ログによってのみ確認できます。ただし、その失敗または成功は、次の手順で説明する追加の方法で一覧表示されます。さらに、YouTube の公開ワークフローやビデオエンコーディングが完了するか中断されると、そのことを知らせる電子メール通知を受け取ります。
+ビデオエンコーディングが適用されたフォルダーに新しいビデオをアップロードしたり、YouTube にビデオを公開したりする場合は、ビデオエンコーディング／YouTube への公開の進行状況を監視できます。YouTube への公開の実際の進行状況は、ログによってのみ確認できます。ただし、その失敗または成功は、次の手順で説明する追加の方法で一覧表示されます。さらに、YouTube の公開ワークフローやビデオエンコーディングが完了するか中断されると、そのことを知らせるメール通知を受け取ります。
 
 ### 進行状況の監視 {#monitoring-progress}
 
@@ -871,6 +896,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
+
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -905,6 +931,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >    * Apache Sling Job Queue Configuration
    >    * Adobe Granite Workflow External Process Job Handler
    >    * Granite Workflow Timeout Queue
+
    >
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
@@ -917,9 +944,9 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    ![chlimage_1-436](assets/chlimage_1-436.png)
 
-1. 中止またはエラーが発生したワークフロージョブに関する電子メール通知を受け取ります。これらの電子メール通知は、管理者が設定できます。詳しくは、[電子メール通知の設定](#configuring-e-mail-notifications)を参照してください。
+1. 中止またはエラーが発生したワークフロージョブに関するメール通知を受け取ります。これらのメール通知は、管理者が設定できます。詳しくは、[メール通知の設定](#configuring-e-mail-notifications)を参照してください。
 
-#### 電子メール通知の設定 {#configuring-e-mail-notifications}
+#### メール通知の設定 {#configuring-e-mail-notifications}
 
 >[!NOTE]
 >
@@ -927,7 +954,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 通知の設定方法は、エンコーディングジョブに関する通知と、YouTube への公開ジョブに関する通知のどちらを希望しているかによって異なります。
 
-* エンコーディングジョブの場合、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL web コンソール]**&#x200B;を選択して、**[!UICONTROL Day CQ Workflow Email Notification Service]** を検索することで、すべての Experience Manager ワークフロー電子メール通知の設定ページにアクセスできます。[Experience Manager で電子メール通知を設定](/help/sites-administering/notification.md)を参照してください。「**[!UICONTROL Notify on Abort]**」または「**[!UICONTROL Notify on Complete]**」のチェックボックスをオン／オフにできます。
+* エンコーディングジョブの場合、**[!UICONTROL ツール]**／**[!UICONTROL 運営]**／**[!UICONTROL web コンソール]**&#x200B;を選択して、**[!UICONTROL Day CQ Workflow Email Notification Service]** を検索することで、すべての Experience Manager ワークフローメール通知の設定ページにアクセスできます。[Experience Manager でメール通知を設定](/help/sites-administering/notification.md)を参照してください。「**[!UICONTROL Notify on Abort]**」または「**[!UICONTROL Notify on Complete]**」のチェックボックスをオン／オフにできます。
 
 * YouTube への公開ジョブの場合、次の手順に従います。
 
@@ -952,11 +979,11 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    * 公開の失敗
    * 公開の完了（チャネルと URL に関する情報を含む）
 
-   チェックボックスをオフにすると、YouTube の公開ワークフローから指定された電子メール通知は届きません。
+   チェックボックスをオフにすると、YouTube の公開ワークフローから指定されたメール通知は届きません。
 
    >[!NOTE]
    >
-   >これらの電子メールは YouTube に固有で、かつ一般的なワークフロー電子メール通知です。結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つの電子メール通知セットを受け取ることができます。
+   >これらのメールは YouTube に固有で、かつ一般的なワークフローメール通知です。結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つのメール通知セットを受け取ることができます。
 
 1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;**[!UICONTROL 完了]**&#x200B;アイコン（チェックマーク）をタップします。
 1. YouTube に公開ワークフローページで、右上隅にある「**[!UICONTROL 同期]**」をタップします。
@@ -977,7 +1004,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 すべての&#x200B;*公開済み*&#x200B;ビデオの表も表示されるので、ビデオ開始数の合計に基づいて、web サイトで視聴された上位のビデオを追跡できます。
 
-リストのビデオ名をタップすると、ビデオのオーディエンス保持（ドロップオフ）レポートが折れ線グラフの形式で表示されます。このグラフには、ビデオ再生中の特定の瞬間におけるビュー数が表示されます。ビデオを再生すると、プレーヤーの時間インジケーターと同期して縦棒が表示されていきます。この折れ線グラフが急激に下るところは、オーディエンスが関心をなくして再生を終了したところです。
+リスト内のビデオ名をタップすると、ビデオのオーディエンス保持（ドロップオフ）レポートが折れ線グラフの形式で表示されます。グラフには、ビデオの再生中の任意の時間のビュー数が表示されます。ビデオを再生すると、縦棒はプレーヤーの時間インジケーターと同期して追跡されます。折れ線グラフのデータの下落は、オーディエンスが興味のない場所から離脱した場所を示します。
 
 ビデオが Adobe Experience Manager Dynamic Media 以外でエンコードされた場合、オーディエンス保持（ドロップオフ）グラフおよび表内の再生率データは利用できません。
 
@@ -985,7 +1012,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 >[!NOTE]
 >
->トラッキングおよびレポートのデータは、Dynamic Media 独自のビデオプレーヤーと関連するビデオプレーヤープリセットの使用状況のみに基づいています。そのため、他のビデオプレーヤーによって再生されたビデオを追跡およびレポートすることはできません。
+>トラッキングとレポートのデータは、Dynamic Media 独自のビデオプレーヤーと関連するビデオプレーヤープリセットの使用にのみ基づいています。したがって、他のビデオプレーヤーを介して再生されたビデオを追跡してレポートすることはできません。
 
 デフォルトでは、ビデオレポートを最初に開いたときに、今月初めから今月の今日の日付までのビデオデータが表示されます。ただし、このデフォルトの日付範囲を上書きして、独自の日付範囲を指定することができます。次回ビデオレポートを開くと、指定した日付範囲が使用されます。
 
@@ -1003,7 +1030,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    「トップの指標」グループボックスに、サイト全体にわたるすべての&#x200B;*公開済み*&#x200B;ビデオに関する様々な集計値が表示されます。
 
-1. 上位の公開済みビデオを示した表で、ビデオ名をタップしてビデオを再生し、そのビデオのオーディエンス保持（ドロップオフ）レポートを表示します。
+1. 上位の公開済みビデオの一覧が表示された表で、ビデオ名をタップしてビデオを再生し、ビデオのオーディエンス保持（ドロップオフ）レポートも表示します。
 
 ### Dynamic Media HTML5 ビューア SDK を使用して作成したビデオビューアに基づいたビデオレポートの表示 {#viewing-video-reports-based-on-a-video-viewer-that-you-created-using-the-scene-hmtl-viewer-sdk}
 
@@ -1064,14 +1091,13 @@ Dynamic Media で標準提供されているビデオビューアを使用して
       trackingManager.setCallback(appMeasurementBridge.track, 
        appMeasurementBridge);
       ```
-
    appMeasurementBridge オブジェクトには組み込みのトラッキング関数があります。ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
 <!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ## ビデオへのキャプションまたはサブタイトルの追加 {#adding-captions-to-video}
 
-クローズドキャプションを 1 つのビデオまたはアダプティブビデオセットに追加することにより、ビデオの配信先をグローバルマーケットまで拡大できます。クローズドキャプションを追加すると、音声を吹き替る必要がなくなり、また異なる言語ごとにネイティブスピーカーの音声を使って再録音する必要もなくなります。ビデオは録画された言語で再生されます。外国語のサブタイトルが表示されるので、違う言語の視聴者も音声部分を理解できます。
+クローズドキャプションを 1 つのビデオまたはアダプティブビデオセットに追加することにより、ビデオの配信先をグローバルマーケットまで拡大できます。クローズドキャプションを追加することで、オーディオのダビングが不要になったり、ネイティブスピーカーを使用して異なる言語ごとにオーディオを再録音する必要がなくなります。 ビデオは録画された言語で再生されます。外国語のサブタイトルが表示されるので、違う言語の視聴者も音声部分を理解できます。
 
 クローズドキャプションは、耳の不自由な方にもご利用いただけるため、アクセシビリティの向上にもつながります。
 
@@ -1089,7 +1115,7 @@ URL で JSON 機能を使用する方法について詳しくは、*Dynamic Medi
 
 1. サードパーティアプリケーションまたはサービスを使用して、ビデオキャプション／サブタイトルのファイルを作成します。
 
-   WebVTT（Web Video Text Tracks）標準に従ってファイルを作成してください。キャプションファイルの拡張子は .vtt です。WebVTT キャプション標準をよく確認してください。
+   作成するファイルが、WebVTT(Web Video Text Tracks) 標準に従っていることを確認します。 キャプションファイルの拡張子は .vtt です。WebVTT キャプション標準をよく確認してください。
 
    [WebVTT：Web Video Text Tracks 形式（英語）](https://w3c.github.io/webvtt/)を参照してください。
 
@@ -1164,7 +1190,7 @@ Chapter 4
 Cost-efficient access to rapidly evolving technology.
 ```
 
-上記の例では、`Chapter 1` はキュー識別子で、オプションです。`00:00:000 --> 01:04:364` のキュー時間は、チャプターの開始時間と終了時間を、`00:00:000` という形式で指定しています。最後の 3 桁はミリ秒で、`000` のまま残しておくこともできます。チャプタータイトルの `The bicycle store behind it all` は、チャプターの内容を示す実際の説明です。ユーザーが、ビデオのタイムラインのビジュアルキューポイントにマウスポインターを置くと、キュー識別子、開始キュー時刻およびチャプタータイトルが、ビデオプレーヤーポップアップに表示されます。
+上記の例では、`Chapter 1` はキュー識別子で、オプションです。`00:00:000 --> 01:04:364` のキュー時間は、チャプターの開始時間と終了時間を、`00:00:000` という形式で指定しています。最後の 3 桁はミリ秒で、`000` のまま残しておくこともできます。チャプタータイトル： `The bicycle store behind it all` は、チャプターの内容を示す実際の説明です。 ユーザーがビデオのタイムラインのビジュアルキューポイントにマウスポインターを置くと、キュー識別子、開始キュー時間およびチャプタータイトルが、ビデオプレーヤーポップアップに表示されます。
 
 HTML5 ビデオビューアを使用するので、作成するチャプターファイルが WebVTT（Web Video Text Tracks）標準に準拠していることを確認してください。チャプターファイルの拡張子は `.vtt` です。WebVTT キャプション標準をよく確認してください。
 
@@ -1251,7 +1277,7 @@ Experience Manager 内のすべてのビデオには、サムネールを関連�
 
       * ツールバーで、「**[!UICONTROL アセットからサムネールを選択]**」をタップします。
       * 「**[!UICONTROL サムネールを選択]**」をタップします。
-      * 既にアップロードして公開した画像アセットのうち、使用するものを選択します。アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
+      * 使用する、以前にアップロードおよび公開された画像アセットの場所に移動します。 アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
       * 画像アセットを選択し、「**[!UICONTROL 選択]**」をタップします。
 
 
@@ -1330,7 +1356,342 @@ Dynamic Media では、ビデオの合計時間に基づいて 10 個（デフ�
 1. ツールバーの&#x200B;**[!UICONTROL プロパティを表示]**&#x200B;アイコン（丸で囲まれた「i」）をタップします。
 1. ビデオのプロパティページで、「**[!UICONTROL サムネールを変更]**」をタップします。
 1. サムネールを変更ページで、ツールバーの「**[!UICONTROL 新しいサムネールをアップロード]**」をタップします。
-1. 使用するサムネール画像に移動して、その画像を選択します。次に「**[!UICONTROL 開く]**」をタップして、Experience Manager への画像のアップロードを開始します。アップロード後に、必ず画像を公開してください。
+1. 使用するサムネール画像に移動して選択し、をタップします。 **[!UICONTROL 開く]** をクリックして、画像のExperience Managerへのアップロードを開始します。 アップロード後に、必ず画像を公開してください。
 1. 画像をアップロードして公開したら、サムネールを変更ページで、「**[!UICONTROL 変更を保存]**」をタップします。
 
    カスタムサムネールがビデオに追加されます。
+
+## Dynamic MediaアセットのDynamic Media URL の変更 {#manifest-urls}
+
+Dynamic Mediaで処理されるビデオは、標準のビューアを使用したり、マニフェスト URL に直接アクセスして独自のカスタムビューアを使用して再生したりすることで使用できます。 次に、ビデオのマニフェスト URL を取得する API を示します。
+
+### getVideoManifestURI API について
+
+この `getVideoManifestURI`API は c を通じて公開されます。`q-scene7-api:com.day.cq.dam.scene7.api` とを使用して、次のマニフェスト URL を生成できます。
+
+```java
+/**   
+* Returns the manifest url for videos 
+* @param resource video resource 
+* @param manifestType type of video streaming manifest being requested 
+* @param onlyIfPublished return a manifest only if the video is published 
+* @return the manifest url for videos 
+* 
+* @throws Exception 
+*/
+@Nullable 
+String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean onlyIfPublished) throws Exception;
+```
+
+#### getVideoManifestURI API パラメーター
+
+この API では、次の 3 つのパラメーターを取り込みます。
+
+| パラメーター | 説明 |
+| --- | --- |
+| `resource` | Dynamic Mediaが取り込んだビデオに対応するリソース。 |
+| `manifestType` | 次のいずれかを指定できます。 `ManifestType.DASH` または `ManifestType.HLS` |
+| `onlyIfPublished` | マニフェスト URI が公開され、配信層で使用できる場合にのみ生成される場合に、true に設定します。 |
+
+上記のメソッドを使用してビデオのマニフェスト URL を取得するには、 [ビデオエンコーディングプロファイル](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) を「ビデオのアップロード」フォルダーにアップロードします。 Dynamic Mediaは、フォルダーに割り当てられたビデオエンコーディングファイルで見つかったエンコーディングに基づいて、これらのビデオを処理します。 これで、上記の API を呼び出して、アップロードされたビデオのマニフェスト URL を取得できます。
+
+### エラーのシナリオ
+
+エラーがある場合、API は null を返します。 例外は、Experience Managerエラーログに記録されます。 ログに記録されるエラーは、次の文字列で始まります。 `Could not generate Video Manifest URI`. 次のシナリオでは、このようなエラーが発生する可能性があります。
+
+* An `IllegalArgumentException` は、次のいずれかに関してログに記録されます。
+
+   * この `resource` 渡されたパラメータが null です。
+   * この `resource` 渡されたパラメーターはビデオではありません。
+   * この `manifestType` 渡されたパラメータが null です。
+   * この `onlyIfPublished` パラメーターが true として渡されたが、ビデオは公開されていない。
+   * Dynamic Mediaのアダプティブビデオセットを使用してビデオが取り込まれませんでした。
+
+* `IOException` Dynamic Mediaへの接続で問題が発生した場合にログに記録されます。
+* `UnsupportedOperationException` がログに記録されるのは、 `manifestType` 渡されたパラメータ `ManifestType.DASH`の場合、ビデオは DASH 形式で処理されていません。
+
+以下は、 *HTTPWhiteBoard* 仕様。 コード構文の各タブを選択します。
+
+>[!BEGINTABS]
+
+>[!TAB pom.xml に依存関係を追加]
+
++++**pom.xml に依存関係を追加**
+
+```java
+dependency> 
+     <groupId>com.day.cq.dam</groupId> 
+     <artifactId>cq-scene7-api</artifactId> 
+     <version>5.12.64</version> 
+     <scope>provided</scope> 
+</dependency> 
+```
+
++++
+
+>[!TAB サンプルサーブレット]
+
++++**サンプルサーブレット**
+
+```java
+@Component
+        service = Servlet.class 
+) 
+@HttpWhiteboardServletPattern(value = ManifestServlet.SERVLET_PATTERN) 
+@HttpWhiteboardContextSelect(value = Constants.SERVLET_CONTEXT_SELECTOR) 
+public class ManifestServlet extends HttpServlet { 
+
+   private static final Logger LOGGER = LoggerFactory.getLogger(ManifestServlet.class); 
+
+   private final ObjectMapper objectMapper; 
+
+    @Reference 
+    private Scene7Service scene7Service; 
+
+   public static final String SERVLET_PATTERN = Constants.VIDEO_API_PREFIX + "/manifestUrl"; 
+
+   public ManifestServlet() {
+         this.objectMapper = new ObjectMapper(); 
+         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); 
+   }
+
+   @Override 
+
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        final ResourceResolver resolver = getResourceResolver(request); 
+        String assetPath = request.getParameter("assetPath"); 
+        String manifest = request.getParameter("manifestType"); 
+        String onlyIfPublished = request.getParameter("onlyIfPublished"); 
+        Resource resource = resolver.getResource(assetPath); 
+        response.setCharacterEncoding(StandardCharsets.UTF_8.toString()); 
+        response.setContentType("application/json"); 
+        if(resource == null) { 
+            LOGGER.info("could not retrieve the resource from JCR"); 
+            error("could not retrieve the resource from JCR", response); 
+            return; 
+        }
+
+        String manifestUri = null; 
+
+        try{ 
+            ManifestType manifestType =  ManifestType.DASH; 
+            if(manifest != null) { 
+                manifestType = ManifestType.valueOf(manifest); 
+            } 
+            manifestUri = scene7Service.getVideoManifestURI(resource, manifestType, onlyIfPublished != null); 
+            objectMapper.writeValue(response.getWriter(), new ManifestUrl(manifestUri)); 
+            response.setContentType("application/json"); 
+        } catch (Exception e) { 
+            LOGGER.error(e.getMessage(), e); 
+            error(String.format("Unable to get the manifest url for %s. %s", assetPath, e.getMessage()), response); 
+        } 
+    } 
+
+    private ResourceResolver getResourceResolver(HttpServletRequest request) { 
+        Object rr = request.getAttribute(AuthenticationSupport.REQUEST_ATTRIBUTE_RESOLVER); 
+        if (!(rr instanceof ResourceResolver)) { 
+            throw new IllegalStateException( 
+                    "The request does not seem to have been created via Apache Sling's authentication mechanism."); 
+        } else { 
+            return (ResourceResolver) rr; 
+        } 
+    } 
+
+    private void error(String errorMessage, HttpServletResponse response) throws IOException { 
+        ManifestUrl errorManifest = new ManifestUrl(null); 
+        errorManifest.setErrorMessage(errorMessage); 
+        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); 
+        objectMapper.writeValue(response.getWriter(), errorManifest); 
+    } 
+} 
+```
+
++++
+
+>[!TAB サーブレットの応答クラス]
+
++++**サーブレットの応答クラス**
+
+```java
+public class ManifestUrl extends VideoResponse { 
+     String manifestUrl; 
+     public ManifestUrl(String manifestUrl) { 
+         this.manifestUrl = manifestUrl; 
+     } 
+     public String getManifestUrl() { 
+         return manifestUrl; 
+     } 
+} 
+
+public abstract class VideoResponse { 
+     String errorString; 
+
+     public String getErrorString() { 
+         return errorString; 
+     } 
+
+     public void setErrorMessage(String errorString) { 
+         this.errorString = errorString; 
+     } 
+} 
+```
+
++++
+
+>[!TAB サーブレットで参照される定数ファイル]
+
++++**サーブレットで参照される定数ファイル**
+
+```java
+public final class Constants { 
+
+     private Constants() { 
+     } 
+
+     public static final String VIDEO_API_PREFIX = "/dynamicmedia/video"; 
+     public static final String SERVLET_CONTEXT_SELECTOR = "(" + HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_NAME + "=" + 
+             DMSampleApiHttpContext.CONTEXT_NAME + ")"; 
+
+ } 
+```
+
++++
+
+>[!TAB ServletContext]
+
++++**ServletContext**
+
+上記のサーブレットを、 `servletContext`. 次に、 `servletContext`.
+
+```java
+public class DMSampleApiHttpContext extends ServletContextHelper { 
+
+ public static final String CONTEXT_NAME = "com.adobe.dmSample"; 
+ public static final String CONTEXT_PATH = "/dmSample"; 
+
+ private final MimeTypeService mimeTypeService; 
+
+ private final AuthenticationSupport authenticationSupport; 
+
+ /** 
+  * Constructs a new context that will use the given dependencies. 
+  * 
+  * @param mimeTypeService Used when providing mime type of requests. 
+  * @param authenticationSupport Used to authenticate requests with sling. 
+  */ 
+ @Activate 
+ public DMSampleApiHttpContext(@Reference final MimeTypeService mimeTypeService, 
+                               @Reference final AuthenticationSupport authenticationSupport) { 
+     this.mimeTypeService = mimeTypeService; 
+     this.authenticationSupport = authenticationSupport; 
+ } 
+
+ // ---------- HttpContext interface ---------------------------------------- 
+ /** 
+  * Returns the MIME type as resolved by the <code>MimeTypeService</code> or 
+  * <code>null</code> if the service is not available. 
+  */ 
+ @Override 
+ public String getMimeType(String name) { 
+     MimeTypeService mtservice = mimeTypeService; 
+     if (mtservice != null) { 
+         return mtservice.getMimeType(name); 
+     } 
+     return null; 
+ } 
+
+ /** 
+  * Returns the real context path that is used to mount this context. 
+  * @param req servlet request 
+  * @return the context path 
+  */ 
+ public static String getRealContextPath(HttpServletRequest req) { 
+     final String path = req.getContextPath(); 
+     if (path.equals(CONTEXT_PATH)) { 
+         return ""; 
+     } 
+     return path.substring(CONTEXT_PATH.length()); 
+ } 
+
+ /** 
+  * Returns a request wrapper that transforms the context path back to the original one 
+  * @param req request 
+  * @return the request wrapper 
+  */ 
+ public static HttpServletRequest createContextPathAdapterRequest(HttpServletRequest req) { 
+     return new HttpServletRequestWrapper(req) { 
+
+         @Override 
+         public String getContextPath() { 
+             return getRealContextPath((HttpServletRequest) getRequest()); 
+         } 
+
+     }; 
+
+ } 
+
+ /** 
+  * Always returns <code>null</code> because resources are all provided 
+  * through individual endpoint implementations. 
+  */ 
+ @Override 
+ public URL getResource(String name) { 
+     return null; 
+ } 
+
+ /** 
+  * Tries to authenticate the request using the 
+  * <code>SlingAuthenticator</code>. If the authenticator or the Repository 
+  * is missing this method returns <code>false</code> and sends a 503/SERVICE 
+  * UNAVAILABLE status back to the client. 
+  */ 
+ @Override 
+ public boolean handleSecurity(HttpServletRequest request, 
+                               HttpServletResponse response) throws IOException { 
+
+     final AuthenticationSupport authenticator = this.authenticationSupport; 
+     if (authenticator != null) { 
+         return authenticator.handleSecurity(createContextPathAdapterRequest(request), response); 
+     } 
+
+     // send 503/SERVICE UNAVAILABLE, flush to ensure delivery 
+     response.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, 
+             "AuthenticationSupport service missing. Cannot authenticate request."); 
+     response.flushBuffer(); 
+
+     // terminate this request now 
+     return false; 
+ } 
+}
+```
+
++++
+
+>[!ENDTABS]
+
+### サンプルサーブレットの使用
+
+このサーブレットを呼び出すには、 `GET` ～での手術 `/dmSample/dynamicmedia/video/manifestUrl`. 次のクエリパラメーターが渡されます。
+
+| クエリパラメーター | 説明 |
+| --- | --- |
+| `assetPath` | 必須です。ビデオのパス。 `manifestUrl` が生成されます。 |
+| `manifestType` | オプション. パラメータは DASH または HLS です。 渡されない場合は、デフォルトで DASH に設定されます。 |
+| `onlyIfPublished` | オプション. 渡された場合、 `manifestUrl` は、ビデオが公開された場合にのみ返されます。 |
+
+この例では、次の設定を考えてみましょう。
+
+* 会社は `samplecompany`.
+* オーサーインスタンスは `http://sample-aem-author.com`.
+* フォルダー `/content/dam/video-example` には、ビデオエンコーディングプロファイルが適用されています。
+* ビデオ `scenery.mp4` がフォルダーにアップロードされました `/content/dam/video-example`.
+
+サーブレットは、次の方法で呼び出すことができます。
+
+| タイプ | 説明 |
+| :--- | --- |
+| HLS | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=HLS&assetPath=/content/dam/video-example/scenery.mp4`<br><br>DASH 配信が有効な場合：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8?packagedStreaming=true"}`<br><br>DASH 配信が無効になっている場合：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.m3u8"}` |
+| ダッシュ | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scenery.mp4`<br><br>DASH 配信が有効な場合：<br>`{"manifestUrl":"https://s7d1.scene7.com/is/content/samplecompany/scenery-AVS.mpd"}`<br><br>DASH 配信が無効になっている場合：<br>`{}` |
+| エラー：アセットのパスが正しくありません | `http://sample-aem-author.com/dmSample/dynamicmedia/video/manifestUrl?manifestType=DASH&assetPath=/content/dam/video-example/scennnnnnery.mp4`<br><br>`{"errorString":"could not retrieve the resource from JCR"}` |
+
+
