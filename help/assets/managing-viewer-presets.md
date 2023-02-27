@@ -12,9 +12,9 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 40ae6c06f3296bfd4affe3e862d57df747d9bb82
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '4520'
+source-wordcount: '4522'
 ht-degree: 95%
 
 ---
@@ -458,7 +458,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
    >ボタンのアートワークの場合は、2 倍画像を選択し、高解像度のアートワークをアップロードします。インタラクティブ画像やショッパブルバナーを操作する場合は、すぐに使える様々なホットスポットボタンから選択することもできます。
 
 1. （オプション）ビューアプリセットを編集ページの最上部の近くにある「**[!UICONTROL デスクトップ]**」、「**[!UICONTROL タブレット]**」または「**[!UICONTROL 電話]**」を選択して、異なる種類のデバイスや画面のビジュアルスタイルを個別に定義します。
-1. ビューアプリセットエディターページで、「**[!UICONTROL ビヘイビアー]**」タブを選択します。または、設定するビジュアル要素をビューアで選択することもできます。例えば、 *VideoPlayer* 次の場所に入力 **[!UICONTROL 修飾子]** > **[!UICONTROL 再生]**&#x200B;では、次の 3 つのアダプティブストリーミングオプションのいずれかを選択できます。
+1. ビューアプリセットエディターページで、「**[!UICONTROL ビヘイビアー]**」タブを選択します。または、設定するビジュアル要素をビューアで選択することもできます。例えば、 *VideoPlayer* 次の場所に入力 **[!UICONTROL 修飾子]** > **[!UICONTROL 再生]**&#x200B;に設定すると、3 つのアダプティブビットレートストリーミングオプションの中から 1 つを選択できます。
 
    * **[!UICONTROL ダッシュ]**  — ビデオはダッシュとしてのみストリーミングされます。 ただし、Safari/iOSデバイスでは、 **[!UICONTROL hls]** をタイプとして使用します。
    * **[!UICONTROL hls]**  — ビデオは hls としてのみストリーミングされます。
@@ -491,7 +491,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
    >[!IMPORTANT]
    >
-   >アダプティブストリーミングプロファイルを使用する古いビデオでは、URL は通常どおり（HLS ストリーミングを使用）再生を続けます。 [ビデオアセットを再処理](/help/assets/processing-profiles.md#reprocessing-assets). 再処理後も、同じ URL が引き続き機能しますが、現在はで使用されます *両方* DASH および HLS ストリーミングが有効になっています。
+   >アダプティブビットレートストリーミングプロファイルを使用する古いビデオでは、URL は HLS ストリーミングを使用して、 [ビデオアセットを再処理](/help/assets/processing-profiles.md#reprocessing-assets). 再処理後も、同じ URL が引き続き機能しますが、現在はで使用されます *両方* DASH および HLS ストリーミングが有効になっています。
 
 ### インタラクティブビデオのビューアプリセットの作成に関する考慮事項 {#special-considerations-for-creating-an-interactive-viewer-preset}
 

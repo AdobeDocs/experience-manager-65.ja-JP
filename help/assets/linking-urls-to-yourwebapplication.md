@@ -10,9 +10,9 @@ discoiquuid: d12e6ea3-aaf4-4672-9679-3c16c76d7d5b
 role: User, Admin
 exl-id: d62275f0-02a4-48c9-bfb1-e23d63b618c9
 feature: Configuration
-source-git-commit: dacbfbc8b4677ac7b63b92c45602e030031de3a1
+source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1279'
 ht-degree: 99%
 
 ---
@@ -158,7 +158,7 @@ Dynamic Media は静的アセットの配信をサポートします。静的ア
 
    この例は、公開されたビデオレンディションの完全なビデオ URL です。
 
-## アダプティブストリーミング用のビデオ URL の取得（DASH または HLS） {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## アダプティブビットレートストリーミング用のビデオ URL の取得（DASH または HLS） {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL 導入]**／**[!UICONTROL クラウド]**／**[!UICONTROL クラウドサービス]**&#x200B;に移動します。
 1. **[!UICONTROL Cloud Services]** ページで、「**[!UICONTROL Dynamic Media Cloud Services]**」見出しまでスクロールダウンして、「**[!UICONTROL 設定を表示]**」を選択します。
