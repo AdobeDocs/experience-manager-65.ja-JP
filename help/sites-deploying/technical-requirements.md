@@ -6,10 +6,10 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 93de94bb17ea898f0fe15e62fb031cab239a3682
+source-git-commit: 74535a6ad78abf795f55f1ba4e1123b58802aefe
 workflow-type: tm+mt
-source-wordcount: '3534'
-ht-degree: 95%
+source-wordcount: '3536'
+ht-degree: 94%
 
 ---
 
@@ -131,7 +131,7 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 | Apache Solr | 検索サービス | A：サポート対象 |
 
 1. 「ファイルシステム」には、POSIX 準拠のブロックストレージが含まれます。ブロックストレージには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスが状況に応じて変化し、全体的なパフォーマンスに影響を及ぼす可能性があることに注意してください。ネットワークやリモートファイルシステムと一緒に AEM の負荷テストを行うことを推奨します。
-1. MongoDB Enterprise 4.2 を使用するには、最低でも AEM 6.5 SP9 が必要です。
+1. MongoDB Enterprise バージョン 4.2 および 4.4 には、最低でもAEM 6.5 SP9 が必要です。
 1. MongoDB Sharding は AEM ではサポートしていません。
 1. MongoDB Storage Engine WiredTiger のみサポートされています。
 1. AEM Forms アップグレード版のお客様にサポートされています。新規インストールの場合はサポートされていません。

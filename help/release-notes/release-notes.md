@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: 78aa7aac838dabc1c4f0329520092e4755541322
+source-git-commit: 676472125cf472d42b792fae87dffe263e499014
 workflow-type: tm+mt
-source-wordcount: '2196'
-ht-degree: 52%
+source-wordcount: '2605'
+ht-degree: 44%
 
 ---
 
@@ -78,13 +78,30 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 
 ## [!DNL Forms] {#forms-6516}
 
->[!NOTE]
->
->の修正点 [!DNL Experience Manager] Formsは、スケジュールされた [!DNL Experience Manager] サービスパックのリリース日。 この場合、アドオンパッケージのリリースは 2023 年 3 月 2 日（木）です。 さらに、Formsの修正および機能強化のリストがこの節に追加されました。
+### [!DNL Forms] 主な機能 {#forms-features-6516}
 
-<!--
-### [!DNL Forms] Fixes {#forms-fixes-6516}
--->
+* [ヘッドレスアダプティブForms](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 開発者は、従来のグラフィカルユーザーインターフェイスを使用するのではなく、API を使用してアクセスし、操作できるインタラクティブフォームを作成、公開、管理できます。
+
+* [アダプティブFormsコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、24 個のオープンソースの BEM 準拠コンポーネントのセットです。 これらのコンポーネントはオープンソースで、開発者は、組織の特定のニーズに合わせて、これらのコンポーネントを簡単にカスタマイズおよび拡張できます。 カスタマイズする既存のスキルを持つすべてのユーザー [WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) では、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
+
+* OSGi 上のReader拡張サービスに、Adobe Acrobat ReaderでのデータのインポートまたはエクスポートをおこなうPDFに対する使用権限のインポートとエクスポートを可能にする個別のオプションが追加されました。 （NPR-39909）
+
+### [!DNL Forms] 修正 {#forms-fixes-6516}
+
+* タスクの割り当て**手順を使用して割り当てられたタスクに関する通知を送信する場合、割り当てられた個人に 1 つではなく 2 つの電子メールが送信されます。 （NPR-40078）
+* ユーザーがテーブルヘッダーを非表示にした場合、以前に設定した列幅が未設定になり、すべての列が同じ幅を保持します。 （NPR-40063）
+* 管理者ユーザーのデフォルトのパスワードを `admin`、 `Prepare Adobe Experience Manager Server For DSC deployment` AEM Forms JEE Service Pack でエラーが発生したことを確認します。 (NPR-40062)、(NPR-39387)
+* OutputService API と AssemblerService API が、PDFフォームをPDF/A に変換できない。(NPR-39990)
+* AssemblerService はPDF/A にPDFを変換できません。ユーザーがPDFをPDF/A に変換すると、次のエラーが発生します。 `PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Summary" ignoreUnusedResources="true" allowCertificationSignatures="true"> <Violation count="6" key="PDFA_CS_001_NOT_DEVICE_INDEPENDENT" description="ColorSpace is not device independent`. （NPR-39956）
+* GuideSubmitServlet API 呼び出しのサーバー側検証が失敗した場合、クライアントに送信される応答ではエラーは返されません。 （NPR-39925）
+* Windows サーバーでAEM 6.5.15.0 Service Pack にアップグレードした後、複数のエラーメッセージが表示され、電子メールサービスが機能しません。（NPR-39919）
+* AEM 6.5.14.0にアップグレードし、importData サービスを使用してPDFを XML と結合すると、次のエラーが発生します。 `Caused by: java.lang.NoSuchMethodError: com.adobe.xfa.form.FormModel.isXFABarcode(Lcom/adobe/xfa/Node;)Ljava/lang/Boolean`.（NPR-39807）
+* ユーザーが **ドキュメントセキュリティオフィス** 拡張機能では、次の問題が発生します。
+   * Microsoft® Excel が頻繁にクラッシュします。
+   * 保護されたドキュメントを開くと、 **ドキュメントセキュリティオフィス** 拡張機能がコンピューターにインストールされていると認識されません。 セキュリティ拡張機能をダウンロードしてインストールするようにユーザーに指示します。 （NPR-39768）
+* ユーザーがAEM 6.5.15.0 Service Pack にアップグレードした後、PostScript から Pdf への変換が機能しない。 (NPR-39765)、(NPR-39764)
+* アダプティブフォームを開いた後にツアー画面を開こうとすると、NullPointer 例外が発生して失敗します。`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:”` (NPR-39654)
+* Windows では、ユーザーが高コントラストの黒の設定を有効にすると、HTML5 Formsコンテンツは、ブラウザーでHTMLプレビューとしてレンダリングされると不明瞭になります。 （NPR-39018）
 
 ## 統合 {#integrations-6516}
 
@@ -205,16 +222,7 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 
 ### Service Pack のインストール [!DNL Experience Manager] Forms {#install-aem-forms-add-on-package}
 
->[!NOTE]
->
->[!DNL Experience Manager] Forms を使用していない場合はスキップしてください。
-
-[!DNL Experience Manager] Forms の修正プログラムは、[!DNL Experience Manager] サービスパックリリース予定日の 1 週間後に、別のアドオンパッケージとして提供されます。
-
-<!-- 
-
-For instructions to install the service pack on AEM Forms, see [AEM Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
--->
+AEM Formsに Service Pack をインストールする手順については、 [AEM Forms Service Pack のインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
 ### UberJar {#uber-jar}
 
@@ -264,7 +272,7 @@ GraphQL を使用するユーザーは、このパッケージが必要です。
 
 * コンテンツモデルのカスタム API 名を使用した可能性のあるGraphQLクエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
-* [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
+* [!DNL Microsoft®® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss®® EAP 7.1] をサポートしていないので、[!DNL Microsoft®® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
 * 以下をアップグレードする場合、 [!DNL Experience Manager] 6.5.0 ～ 6.5.4 から Java™ 11 の最新のサービスパックへのインスタンスが表示されます。 `RRD4JReporter` 例外 `error.log` ファイル。 例外を停止するには、のインスタンスを再起動します。 [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
@@ -289,6 +297,9 @@ GraphQL を使用するユーザーは、このパッケージが必要です。
      ]
    "refresh": true
    ```
+
+* AEM Formsでは、POP3 プロトコルはMicrosoft® Office 365 の電子メールエンドポイントでは機能しません。
+* JBoss® 7.1.4 プラットフォームで、ユーザーがAEM 6.5.16.0 Service Pack をインストールしたとき、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ {#osgi-bundles-and-content-packages-included}
 

@@ -2,10 +2,10 @@
 title: AEM FormsのAEM Formsパッチインストール手順
 description: OSGi および JEE 環境に対するAEM Forms Service Pack のインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: c4584e34b5b12f29dc995bd5483bcbad476a82ef
+source-git-commit: b15581701aaff72db2fc0030b0062d2f12150d8f
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 55%
+source-wordcount: '1726'
+ht-degree: 50%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 55%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.15.0 |
+| バージョン | 6.5.16.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023 年 12 月 01 日 |
+| 日付 | 2023 年 3 月 3 日 |
 | ダウンロード URL | [最新のAEM Formsリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 >[!NOTE]
 >
-> Adobeは、6 回目のサービスパックのたびに完全なインストーラをリリースします。 JEE 上のAEM 6.5 Forms Service Pack 12(6.5.12.0) は、最後の完全インストーラーです。 完全なインストーラーは新しいプラットフォームをサポートし、通常のサービスパックインストーラーにはバグ修正と一般的な改善のみが含まれています。 新規インストールを実行する場合や、JEE 版 AEM 6.5 Forms 環境の最新ソフトウェアを使用することを計画している場合は、2019年4月8日（PT）にリリースされた AEM 6.5 Forms インストーラーではなく、2022年3月3日（PT）にリリースされた JEE 版 AEM 6.5.12.0 Forms の完全なインストーラーを使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
+> Adobeは、6 回目のサービスパックごとに完全なインストーラーをリリースします。 JEE 上のAEM 6.5 Forms Service Pack 12(6.5.12.0) は、最後の完全インストーラーです。 フルインストーラーは新しいプラットフォームをサポートし、通常のサービスパックインストーラーは新機能、バグ修正、一般的な改善を含みます。 新規インストールを実行する場合や、JEE 版 AEM 6.5 Forms 環境の最新ソフトウェアを使用することを計画している場合は、2019年4月8日（PT）にリリースされた AEM 6.5 Forms インストーラーではなく、2022年3月3日（PT）にリリースされた JEE 版 AEM 6.5.12.0 Forms の完全なインストーラーを使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 
 ## JEE 環境のAEM Forms に Service Pack をダウンロードしてインストールする {#download-and-install-for-jee-service-pack}
 
@@ -42,7 +42,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 +++1. 既存の環境のバックアップを作成します。
 
 1. バックアップ [CRX リポジトリ、データベーススキーマ、GDS（グローバルドキュメントストレージ）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
-1. &lt; をバックアップします。*AEM_forms_root*>/deploy フォルダー。 これは、Service Pack をアンインストールする場合に必要です。
+1. &lt; をバックアップします。*AEM_forms_root*>/deploy フォルダー。
 
 >[!NOTE]
 >
@@ -52,8 +52,8 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 +++2.必要なソフトウェアをダウンロードします。
 
-* [AEM Forms on JEE 6.5.15.0 Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
-* [AEM 6.5.15.0 サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
+* [AEM Forms on JEE Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
+* [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 * [フラグメントサーブレット](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
@@ -62,7 +62,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 +++3. JEE 上のAEM Forms Service Pack をインストールします。
 
 1. アプリケーションサーバーを停止します。
-1. を抽出します。 **AEM Forms on JEE 6.5.15.0 Service Pack インストーラーアーカイブ** をハードドライブに追加します。
+1. を抽出します。 **AEM Forms on JEE Service Pack インストーラーアーカイブ** をハードドライブに追加します。
 
    * **Windows**
 インストーラをコピーしたハードディスク上のインストールメディアまたはフォルダの適切なディレクトリに移動し、 
@@ -91,7 +91,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
       >[!NOTE]
       >
-      >* の更新または置き換え **ConfigurationManager.bat** ファイルを使用すると、 .lax ファイルの名前を手動で更新するのを避けることができます。
+      >* の更新または置き換え **ConfigurationManager.bat** ファイルを使用すると、 .lax ファイルを手動で更新するのを防ぐことができます。
 
 
 1. **[UNIX ベースの場合のみ]:** この **Configuration Manager を起動します。** デフォルトでは、「 」チェックボックスがオンになっています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、「**Configuration Manager を起動**」オプションの選択を解除してから、「**[!UICONTROL 完了]**」をクリックします。`[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
@@ -116,7 +116,9 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 >[!NOTE]
 >
-> これは、 **サーブレットフラグメント** を実行しているアプリケーションサーバーを除くすべてのアプリケーションサーバー **JBoss® EAP 7.4.0**.
+> * 場合によっては、 **AEM Service Pack 6.5.15.0**&#x200B;の場合、 **サーブレットフラグメント**. より前のバージョンからアップグレードする場合 **AEM Service Pack 6.5.15.0**&#x200B;の場合は、 **サーブレットフラグメント**.
+> * これは、 **サーブレットフラグメント** を実行しているアプリケーションサーバーを除くすべてのアプリケーションサーバー **JBoss® EAP 7.4.0**.
+
 
 
 サーブレットフラグメントをダウンロードしてインストールするには：
@@ -140,11 +142,10 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 1. [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
-1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。[Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
 
 **自動インストール**
 
-[!DNL ExperienceManager] 6.5.15.0. の自動インストールに使用できる方法は 2 つあります<!--       UPDATE FOR EACH NEW RELEASE -->
+自動インストールに使用できる方法は 2 つあります [!DNL ExperienceManager] サービスパック。<!--       UPDATE FOR EACH NEW RELEASE -->
 
 * サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。パッケージが自動的にインストールされます。
 
@@ -152,15 +153,15 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
    >[!NOTE]
    >
-   >Experience Manager 6.5.15.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACHNEW RELEASE -->
+   >Experience ManagerサービスパックはBootstrapのインストールをサポートしていません。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **インストールの検証**
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ（`/system/console/productinfo`）の`Adobe Experience      Manager (6.5.15.0)`インストール済み製品[!UICONTROL に、更新されたバージョン文字列 ] が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. 製品情報ページ（`/system/console/productinfo`）の`Adobe Experience Manager (spversion)`インストール済み製品[!UICONTROL に、更新されたバージョン文字列 ] が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
 1. すべての OSGi バンドルは、 **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** OSGi コンソール (Web コンソールを使用： `/system/console/bundles`) をクリックします。
-1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.13以降です (WebConsole を使用： `/system/console/     bundles`) をクリックします。
+1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.14以降です (WebConsole を使用： `/system/console/     bundles`) をクリックします。
 
 +++
 
@@ -190,7 +191,7 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 +++2.必要なソフトウェアをダウンロードします。
 
-* [AEM 6.5.15.0 サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
+* [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 
 +++
@@ -202,28 +203,27 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 1. [ソフトウェア配布](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)からサービスパックをダウンロードします。 <!-- UPDATE FOR EACH NEW RELEASE -->
 1. パッケージマネージャーを開き、「**[!UICONTROL パッケージをアップロード]**」を選択して、パッケージをアップロードします。詳しくは、[パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 1. パッケージを選択して、「**[!UICONTROL インストール]**」を選択します。
-1. S3 コネクタを更新するには、サービスパックのインストール後にインスタンスを停止し、既存のコネクタをインストールフォルダーに用意されている新しいバイナリファイルに置き換えて、インスタンスを再起動します。[Amazon S3 データストア](/help/sites-deploying/data-store-config.md#upgrading-to-a-new-version-of-the-s-connector)を参照してください。
 
 **自動インストール**
 
-[!DNL Experience Manager] 6.5.15.0. の自動インストールに使用できる方法は 2 つあります<!--       UPDATE FOR EACH NEW RELEASE -->
+自動インストールに使用できる方法は 2 つあります [!DNL Experience Manager] サービスパック。<!--  UPDATE FOR EACH NEW RELEASE -->
 
 * サーバーがオンラインで使用可能な場合、パッケージを `../crx-quickstart/install` フォルダーに配置します。パッケージが自動的にインストールされます。
 * [パッケージマネージャーの HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) を使用します。ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
    >[!NOTE]
    >
-   >Experience Manager 6.5.15.0 では、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+   >Experience ManagerサービスパックはBootstrapのインストールをサポートしていません。 <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **インストールの検証**
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience      Manager (6.5.15.0)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (spversion)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. すべての OSGi バンドルは、OSGi コンソールで **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** です（web コンソールを使用：`/system/console/bundles`）。
 
-   1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.13 以降です（web コンソールを使用：`/system/console/bundles`）。
+   1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/bundles`）。
 
 +++
 
