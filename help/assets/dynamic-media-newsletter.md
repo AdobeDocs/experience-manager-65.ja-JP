@@ -7,10 +7,10 @@ solution: Experience Manager, Dynamic Media Classic
 role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Collaboration,Dynamic Media Classic
-source-git-commit: cdf6a22e8a0fd2e73cd4d25074e0c7162c047d92
+source-git-commit: a7f1f41d54663b753bc22c6e5d54b4cb621609fd
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 100%
+source-wordcount: '1077'
+ht-degree: 98%
 
 ---
 
@@ -40,7 +40,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
     * Summit customer spotlight: Under Armour.
     * Never miss an Experience Insider webinar.
     * Public sector spotlight: The urgent need for digital enrollment.
-    * Look what’s new in Experience Manager Innovation.
+    * Look what's new in Experience Manager Innovation.
     * Build your Experience Manager skills *live* with the Adobe pros.
     * Connect with the Adobe Experience Manager Community.
     * Fast-track your Adobe expertise with Adobe Experience League. -->
@@ -54,7 +54,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
    * Dynamic Media Classic のオンデマンドのスキルビルダー Web セミナーの視聴
    * Online Adobe Summit 2020 の Dynamic Media セッションを表示
    * 無料の Dynamic Media Classic 監査の詳細
-   * `John Monroe` 氏（カスタマーサクセスサービス担当シニアプログラムマネージャー）へのインタビュー
+   * Meet `Jon Monroe`(Adobeカスタマーソリューション担当シニアプログラムマネージャー )
 
 * **[2020 年 2 月、第 2 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html?lang=ja)**
 
@@ -65,7 +65,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
    * Dynamic Media の切り抜きマジックの使い方を知る
    * Dynamic Media Classic の価値を高めるために、アドビの無料監査を活用してください。
    * Dynamic Media Classic の新しいユーザーインターフェイスの説明
-   * `Georgia Myers` 氏（Adobe Experience Cloud カスタマーサクセス担当マネージャー）へのインタビュー
+   * Meet `Georgia Myers` Adobe Experience CloudのAdobeアカウントチーム
 
 * **[2020 年 1 月、第 1 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_01_2020_Jan.html?lang=ja)**
 
