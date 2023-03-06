@@ -1,15 +1,15 @@
 ---
-title: Dynamic Media アセットの配信
+title: Sites Classic オーサリングでのDynamic Mediaアセットの配信
 description: Dynamic Media を使用する場合、ビデオでも画像でも、Dynamic Media アセットを Web サイトに配信するオプションは複数あります。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
 content-type: reference
 exl-id: 40f41bb0-b3cb-4c16-b5db-ac8ea1a86aa3
-source-git-commit: f4b7566abfa0a8dbb490baa0e849de6c355a3f06
+source-git-commit: 59e182c165f6fd4b822eaf0e34f6e4b3bb18eb14
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 100%
+source-wordcount: '113'
+ht-degree: 92%
 
 ---
 

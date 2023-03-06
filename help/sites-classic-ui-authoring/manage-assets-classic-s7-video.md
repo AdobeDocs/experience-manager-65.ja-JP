@@ -1,6 +1,5 @@
 ---
-title: ビデオ
-seo-title: Video
+title: ビデオ Sites Classic オーサリングの場合
 description: Assets では、ビデオアセットを統合管理できます。ビデオを直接 Assets にアップロードして Dynamic Media Classic に対する自動エンコーディングを行ったり、Assets から直接 Dynamic Media Classic ビデオにアクセスしてページオーサリングを行ったりできます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -8,10 +7,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: dfaa4b3f-f65a-4fe3-87a7-f3bc71015e56
 exl-id: c540aa49-9981-4e8c-97df-972085b26490
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 59e182c165f6fd4b822eaf0e34f6e4b3bb18eb14
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 100%
+source-wordcount: '1682'
+ht-degree: 99%
 
 ---
 
