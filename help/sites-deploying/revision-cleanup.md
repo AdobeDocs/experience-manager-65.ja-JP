@@ -11,10 +11,10 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: b7f9b5256e07d4bfbc0c3454e8d2fe112ea650e8
+source-git-commit: 28046104e75a833736f53b0e9d1edf4c8fbe6249
 workflow-type: tm+mt
-source-wordcount: '5918'
-ht-degree: 99%
+source-wordcount: '5898'
+ht-degree: 98%
 
 ---
 
@@ -574,15 +574,9 @@ TarMK GC: no base state available, running full compaction instead
 
 >[!CAUTION]
 >
->AEM のインストールで使用する Oak バージョンに応じて、異なるバージョンの Oak-run ツールを使用する必要があります。ツールを使用する前に、以下のバージョン要件を確認してください。
->
->* Oak バージョン **1.0.0 ～ 1.0.11**&#x200B;または&#x200B;**1.1.0 ～ 1.1.6**&#x200B;の場合は、Oak-run バージョン** 1.0.11** を使用します。
->
->* **上述のものよりも新しい** Oak バージョンについては、AEM インストールの Oak コアと一致するバージョンの oak-run を使用します。
->
+>AEMインストールの Oak コアバージョンと一致するバージョン番号（メジャーとマイナーの両方）を持つ Oak-run ツールリリースを使用します。 例えば、AEMインスタンスに Oak コアバージョン 1.22.x がある場合、Oak-run ツールバージョン 1.22.x を使用する必要があります。
 
-
-アドビは、リビジョンクリーンアップを実行するための **Oak-run** というツールを提供しています。このツールは以下のページでダウンロードできます。
+Adobeには、 **Oak-run** リビジョンのクリーンアップを実行する場合。 このツールは以下のページでダウンロードできます。
 
 [https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/](https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-run/)
 
