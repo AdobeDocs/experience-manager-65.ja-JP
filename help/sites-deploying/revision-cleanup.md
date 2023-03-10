@@ -11,9 +11,9 @@ topic-tags: deploying
 discoiquuid: f03ebe60-88c0-4fc0-969f-949490a8e768
 feature: Configuring
 exl-id: e53c4c81-f62e-4b6d-929a-6649c8ced23c
-source-git-commit: 28046104e75a833736f53b0e9d1edf4c8fbe6249
+source-git-commit: 5c26a043d735921d91044156f2749dc761dbb566
 workflow-type: tm+mt
-source-wordcount: '5898'
+source-wordcount: '5901'
 ht-degree: 98%
 
 ---
@@ -574,7 +574,7 @@ TarMK GC: no base state available, running full compaction instead
 
 >[!CAUTION]
 >
->AEMインストールの Oak コアバージョンと一致するバージョン番号（メジャーとマイナーの両方）を持つ Oak-run ツールリリースを使用します。 例えば、AEMインスタンスに Oak コアバージョン 1.22.x がある場合、Oak-run ツールバージョン 1.22.x を使用する必要があります。
+>AEMインストールの Oak コアバージョンと一致するバージョン番号（メジャーとマイナーの両方）を持つ Oak-run ツールリリースを使用します。 例えば、AEMインスタンスに Oak コアバージョン 1.22.x がある場合、Oak-run ツール 1.22.x の最新バージョンを使用する必要があります。
 
 Adobeには、 **Oak-run** リビジョンのクリーンアップを実行する場合。 このツールは以下のページでダウンロードできます。
 
