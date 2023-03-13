@@ -12,10 +12,10 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 66e9e8e1d9f43faa3d0e4fe61e8206bdab1348f6
-workflow-type: ht
-source-wordcount: '2859'
-ht-degree: 100%
+source-git-commit: 7efe4a011d831c34f6aafd877654e8b41fec96e0
+workflow-type: tm+mt
+source-wordcount: '2889'
+ht-degree: 97%
 
 ---
 
@@ -86,19 +86,24 @@ Web コンソールのパスワードの変更について詳しくは、以下�
 
 #### OSGi Web コンソールの admin パスワードの変更 {#changing-the-osgi-web-console-admin-password}
 
-Web コンソールへのアクセスに使用するパスワードの変更も必要です。そのためには、[Apache Felix OSGi Management Console](/help/sites-deploying/osgi-configuration-settings.md) の以下のプロパティを設定します。
+Web コンソールへのアクセスに使用するパスワードの変更も必要です。これは、 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) 次のプロパティを更新するには、 **Apache Felix OSGi Management Console**:
 
-**User Name** および **Password**：Apache Felix Web Management Console 自体にアクセスするための認証情報です。
-インスタンスのセキュリティを確保するために、初期インストール後にパスワードを変更する必要があります。
+* **ユーザー名**&#x200B;と&#x200B;**パスワード**：Apache Felix web 管理コンソールにアクセスするための資格情報です。パスワードを変更する必要があります *後* インスタンスのセキュリティを確保するための最初のインストール。
 
 次の手順を実行します。
 
-1. Web コンソール（`<server>:<port>/system/console/configMgr`）にアクセスします。
-1. **Apache Felix OSGi Management Console** に移動して、**ユーザー名**&#x200B;と&#x200B;**パスワード**&#x200B;を変更します。
+>[!NOTE]
+>
+>詳しくは、 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) OSGi 設定の詳細は、を参照してください。
+
+1. の使用 **ツール**, **運用** メニュー、を開きます。 **Web コンソール** をクリックし、 **設定** 」セクションに入力します。
+例： `<server>:<port>/system/console/configMgr`.
+1. のエントリに移動して開きます。 **Apache Felix OSGi Management Console**.
+1. を **ユーザー名** および **パスワード**.
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
-1. 「**保存**」をクリックします。
+1. 「**保存**」を選択します。
 
 ### カスタムエラーハンドラーの実装 {#implement-custom-error-handler}
 
@@ -272,7 +277,7 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
 Sling はコンテンツ中心型です&#x200B;*。*&#x200B;つまり、（HTTP）要求がそれぞれ JCR リソース（リポジトリーノード）の形式でコンテンツにマップされるので、コンテンツに焦点を当てた処理が行われるということです。
 
-* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
+* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。。
 * 次に、リソースのプロパティを要求の特定の部分（例：セレクター、拡張子など）と組み合わせてレンダラー（スクリプト）が特定されます。
 
 >[!NOTE]
