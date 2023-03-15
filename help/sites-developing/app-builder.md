@@ -2,16 +2,16 @@
 title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: a5f3e33a6abe7ac1bbd610a8528fd599d1ffd2aa
-workflow-type: ht
-source-wordcount: '577'
-ht-degree: 100%
+source-git-commit: cc1b86a15eb7ef45616bc9ea4f8aab4a28e74add
+workflow-type: tm+mt
+source-wordcount: '550'
+ht-degree: 97%
 
 ---
 
 # Adobe Developer App Builder を使用した [!DNL Adobe Experience Manager] の拡張 {#extend-using-app-builder}
 
-## AEM の App Builder とは {#project-firefly}
+## AEM の App Builder とは {#project-appbuilder}
 
 新しい Adobe Developer App Builder は、AEM の機能を開発者が容易に拡張できる拡張フレームワークを提供します。
 
@@ -23,7 +23,7 @@ App Builder を使用すると、次のような様々なユースケースで A
 * コアサービス拡張 - カスタム機能およびビジネスロジックを使用してデフォルトの動作を拡張することで、コアアプリケーション機能を拡張します。
 * ユーザーエクスペリエンス拡張 - コアエクスペリエンスを拡張してビジネス要件をサポートするか、顧客固有のデジタルプロパティ、ストアフロントおよびバックオフィスアプリを構築します。
 
-App Builder（旧称 Project Firefly）は、2020年夏以降、開発者プレビューを通じて、法人のお客様やパートナーが利用できるようになりました。App Builder の一般リリース（GA）は 2021年12月に予定されています。アドビの[体験版プログラム](https://adobe.ly/appbuilder-trial)を通じて開発者が App Builder を試すことを歓迎します。
+2020 年夏以降、App Builder は、エンタープライズのお客様およびパートナーに対して、アドビの開発者プレビューを通じて使用できるようになりました。 App Builder の一般リリース（GA）は 2021年12月に予定されています。アドビの[体験版プログラム](https://adobe.ly/appbuilder-trial)を通じて開発者が App Builder を試すことを歓迎します。
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ App Builder（旧称 Project Firefly）は、2020年夏以降、開発者プレ�
 
 次の図は、App Builder 上で構築された標準アプリケーションでこれらの機能がどのように利用されているかを示しています。
 
-![アーキテクチャ](assets/firefly-architecture.jpg)
+![アーキテクチャ](assets/appbuilder-architecture.jpg)
 
 App Builder のアーキテクチャについて詳しくは、[アーキテクチャの概要](https://www.adobe.io/app-builder/docs/guides/)を参照してください。
 
@@ -63,6 +63,3 @@ App Builder には、開発者向けのビデオとドキュメントが用意�
 
 * [Adobe Developer Web サイトの App Builder コードラボ](https://www.adobe.io/app-builder/docs/resources/)
 
-## サポート {#support}
-
-開発者サポートに類するリクエストについては、開発者が [Experience League フォーラム](https://experienceleaguecommunities.adobe.com/t5/app-builder/ct-p/project-firefly?profile.language=ja)を使用することをお勧めします。
