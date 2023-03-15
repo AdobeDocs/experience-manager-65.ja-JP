@@ -4,9 +4,9 @@ description: MSM に関する最も一般的な問題のトラブルシューテ
 feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
-source-git-commit: 289c4644063504ec3c8e02d930933ad7260600f0
+source-git-commit: a323e6c30bf2c226f6613d1b9b037a0beedbfc0d
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -26,8 +26,14 @@ MSM は、リソース URL のセレクターと共に要求できる複数の�
 
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * ブループリントページでこの情報を使用して、リンクされているすべてのライブコピーのリストと、追加のライブコピーのステータス情報を取得します。
+   * 次に例を示します。
+      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+
+
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * ライブコピーページでこれを使用して、ブループリントページとの接続に関する詳細情報を取得します。ページがライブコピーでない場合は、何も返されません。
+   * 次に例を示します。
+      `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 これらのサーブレットは、`com.day.cq.wcm.msm` ロガーを介して DEBUG ログメッセージを生成します。これも役に立ちます。
 
