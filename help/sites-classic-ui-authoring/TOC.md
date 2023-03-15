@@ -8,7 +8,7 @@ user-guide-description: このガイドでは、従来のユーザーインタ�
 feature: Authoring
 role: User
 source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 100%
 
@@ -64,7 +64,7 @@ ht-degree: 100%
    + [キャンペーン管理](classic-personalization-campaigns.md)
    + [ランディングページ](classic-personalization-campaigns-landingpage.md)
    + [Target オファー](classic-personalization-campaigns-target-offers.md)
-   + [電子メールマーケティング ](classic-personalization-campaigns-email.md)
+   + [メールマーケティング ](classic-personalization-campaigns-email.md)
    + [バウンスメールの追跡](classic-personalization-campaigns-email-tracking-bounces.md)
    + [ティーザーと戦略 ](classic-personalization-campaigns-teasers-strategy.md)
    + [キャンペーンの設定 ](classic-personalization-campaigns-setting-up-your.md)
