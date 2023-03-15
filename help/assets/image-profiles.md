@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media 画像プロファイル
-description: アンシャープマスクのほか、スマート切り抜きとスマートスウォッチのどちらか一方または両方の設定を含む画像プロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
+description: アンシャープマスクの設定、スマート切り抜きとスマートスウォッチのどちらか一方または両方の設定を含むイメージプロファイルを作成し、そのプロファイルを画像アセットのフォルダーに適用します。
 uuid: 9049fab9-d2be-4118-8684-ce58f3c8c16a
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,10 +10,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: 1759b6b2a0360b6fc173e711aaf88484c554eae8
+source-git-commit: f93e57c861ceda20ee82019da38b3b16791dbd0d
 workflow-type: tm+mt
-source-wordcount: '3000'
-ht-degree: 95%
+source-wordcount: '3011'
+ht-degree: 90%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。• 画像プロファイルは、PDF ファイル、アニメーション GIF ファイルや INDD（Adobe InDesign）ファイルには適用されません。
+>• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。・イメージプロファイルは、PDF、アニメーションGIF、INDD(Adobe InDesign) ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
@@ -37,18 +37,21 @@ ht-degree: 95%
 
 <!-- CQDOC-16069 for paragraph directly below -->
 
-スマート切り抜きの座標は、縦横比に応じて異なります。画像プロファイルのスマート切り抜き設定で、画像プロファイルに追加された寸法の縦横比が同じ場合、その縦横比が Dynamic Media に送信されます。アドビでは、同じ切り抜き領域を使用することを推奨します。そうすることで、画像プロファイルで使用される寸法に影響を与えないようにすることができます。
+スマート切り抜きの座標は、縦横比に応じて異なります。イメージプロファイルの各種スマート切り抜き設定で、イメージプロファイルに追加されたサイズの縦横比が同じ場合、同じ縦横比がDynamic Mediaに送信されます。 アドビでは、同じ切り抜き領域を使用することを推奨します。そうすれば、イメージプロファイルで使用される様々なサイズに影響を与えません。
 
 スマート切り抜きの生成のたびに、追加の処理が必要になることに注意してください。例えば、スマート切り抜きの縦横比を 5 つ以上追加すると、アセット取り込み速度が遅くなる可能性があります。また、システムへの負荷も大きくなります。スマート切り抜きはフォルダーレベルで適用できるので、必要な場所で&#x200B;*のみ*&#x200B;フォルダーに使用することをお勧めします。
 
 **イメージプロファイルでのスマート切り抜きの定義に関するガイドライン**
 スマート切り抜きの使用状況を制御し、切り抜きの処理時間や保存に最適化するには、次のガイドラインおよびヒントをAdobeが推奨します。
 
-* 同じ幅と高さの値を持つ重複するスマート切り抜きプロファイルを作成しないでください。
-* エンドの使用状況ではなく、切り抜きディメンションに基づいてスマート切り抜きに名前を付けます。 これにより、単一のディメンションが複数のページで使用される重複に対して最適化できます。
-* すべてのフォルダーまたはすべてのアセットに適用される共通のスマート切り抜きプロファイルの代わりに、特定のフォルダーおよびサブフォルダーに対して、ページごと/アセットタイプのイメージプロファイルを作成します。
+* スマート切り抜きを適用する画像アセットには、50 x 50 ピクセル以上のスマート切り抜きが適用される必要があります。 &lt;!-- CQDOC-20087>
+* 重複したスマート切り抜きのサイズを含むイメージプロファイルは許可されていません。 &lt;!-- CQDOC-20087>
+* スマート切り抜きオプションが設定された重複した名前付きイメージプロファイルは、許可されていません。 &lt;!-- CQDOC-20087>
+* すべてのフォルダーまたはすべてのアセットに適用される共通のスマート切り抜きプロファイルの代わりに、特定のフォルダーおよびサブフォルダーに対して、ページごと/アセットタイプごとのイメージプロファイルを作成します。
 * サブフォルダーに適用するイメージプロファイルは、フォルダーに適用されるイメージプロファイルよりも優先されます。
-* 画像あたり 10 ～ 15 個のスマート切り抜きをおこない、画面の比率と処理時間に合わせて最適化するのが理想的です。
+* 画像あたり 10～15 のスマート切り抜きを行い、画面の比率と処理時間に合わせて最適化するのが理想的です。
+<!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
+* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages.-->
 
 2 つの画像切り抜きオプションから選択できます。また、カラーおよび画像スウォッチの作成を自動化するか、ターゲットの解像度をまたいで切り抜きコンテンツを保持するかを選択することもできます。
 
@@ -59,7 +62,7 @@ ht-degree: 95%
 | --- | --- | --- |
 | ピクセル切り抜き | 画像サイズにのみ基づいて画像を一括で切り抜きます。 | このオプションを使用するには、「切り抜きオプション」ドロップダウンリストで「**[!UICONTROL ピクセル切り抜き]**」を選択します。<br><br>画像の各辺から切り抜くには、画像の任意の辺または四辺からの切り抜きのサイズ（ピクセル数）を入力します。画像がどれだけ切り抜かれるかは、画像ファイル内の ppi（1 インチあたりのピクセル数）の設定によって変わります。<br><br>画像プロファイルのピクセル切り抜きは、以下のように処理されます。<br>• 値は「上」、「下」、「左」、「右」です。<br>• 左上隅が `0,0` と見なされ、ここからピクセル切り抜きが計算されます。<br>• 切り抜きの開始点：「左」が X、「上」が Y です。<br>• 水平方向の計算：元の画像の水平方向のピクセルサイズから「左」と「右」を差し引きます。<br>• 垂直方向の計算：垂直方向の高さ（ピクセル）から「上」と「下」を差し引きます。<br><br>例えば、4000 x 3000 ピクセルの画像があるとします。値として「上」= 250、「下」= 500、「左」= 300、「右」= 700 を使用します。<br><br>左上 (300,250) から、(4000-300-700, 3000-250-500) つまり (3000,2250) のフィルスペースを使って切り抜きます。 |
 | スマート切り抜き | 視焦点位置に基づいて画像を一括で切り抜きます。 | スマート切り抜きでは、Adobe Sensei の人工知能の能力を利用して、自動的に画像を一括ですばやく切り抜きます。画面サイズに関係なく、あらゆる画像の焦点位置を自動的に検出して切り抜き、目的の箇所を抜き出します。</p> <p>スマート切り抜きを使用するには、「切り抜きオプション」ドロップダウンリストで「**[!UICONTROL スマート切り抜き]**」を選択し、「レスポンシブ画像の切り抜き」の右側で、この機能を有効（オン）にします。</p> <p>大、中および小のデフォルトのブレークポイントサイズでは、通常、モバイル、タブレットデバイス、デスクトップおよびバナーで使用されるほとんどの画像のすべてのサイズに対応できます。大、中および小のデフォルト名は、必要に応じて編集できます。</p> <p>ブレークポイントを追加するには、「**[!UICONTROL 切り抜きを追加]**」を選択します。切り抜きを削除するには、ごみ箱アイコンを選択します。 |
-| カラーおよび画像スウォッチ | 各画像の画像スウォッチを一括で生成します。 | **注意**：Dynamic Media Classic ではスマートスウォッチはサポートされません。<br><br>商品画像から色やテクスチャを示す高品質のスウォッチを自動的に検出して生成します。<br><br>カラーおよび画像スウォッチを使用するには、「切り抜きオプション」ドロップダウンリストで「**[!UICONTROL スマート切り抜き]**」を選択し、「カラーおよび画像スウォッチ」の右側で、この機能を有効（オン）にします。「幅」と「高さ」テキストフィールドにピクセル値を入力します。<br><br>画像の切り抜きはすべてレンディションパネルから使用できますが、スウォッチを使用するには URL のコピー機能を利用しなければなりません。独自のビューコンポーネントを使用して、サイトにスウォッチをレンダリングします。（カルーセルバナーはこのルールの例外です。カルーセルバナーで使用されるスウォッチについては、Dynamic Media が表示コンポーネントを提供します）。<br><br>**画像スウォッチの使用**<br>&#x200B;画像スウォッチの URL はシンプルな構造です。<br><br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>ここでは、`:Swatch` がアセットリクエストに追加されています。<br><br>**カラースウォッチの使用**<br>&#x200B;カラースウォッチを使用するには、`req=userdata` リクエストに以下の情報を含めます。<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>例えば、以下は Dynamic Media Classic のスウォッチアセットです。<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>スウォッチアセットの対応する `req=userdata` URL は以下のようになります。<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br><br>この `req=userdata` の応答は以下のようになります。<br>`SmartCropDef=Swatch SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br><br>また、以下の URL の例のように、XML 形式または JSON 形式の `req=userdata` 応答を要求することもできます。<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**注意：**&#x200B;独自の WCM コンポーネントを作成して、カラースウォッチを要求し、24 ビット RGB の 16 進値で表される `SmartSwatchColor` 属性を解析します。<br><br>詳しくは、[`userdata`ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/req/r-userdata.html?lang=ja)も参照してください。 |
+| カラーおよび画像スウォッチ | 各画像の画像スウォッチを一括で生成します。 | **注意**：Dynamic Media Classic ではスマートスウォッチはサポートされません。<br><br>商品画像から色やテクスチャを示す高品質のスウォッチを自動的に検出して生成します。<br><br>カラーおよび画像スウォッチを使用するには、「切り抜きオプション」ドロップダウンリストで「**[!UICONTROL スマート切り抜き]**」を選択し、「カラーおよび画像スウォッチ」の右側で、この機能を有効（オン）にします。「幅」と「高さ」テキストフィールドにピクセル値を入力します。<br><br>画像の切り抜きはすべてレンディションパネルから使用できますが、スウォッチを使用するには URL のコピー機能を利用しなければなりません。独自のビューコンポーネントを使用して、サイトにスウォッチをレンダリングします。（カルーセルバナーはこのルールの例外です。カルーセルバナーで使用されるスウォッチについては、Dynamic Media が表示コンポーネントを提供します）。<br><br>**画像スウォッチの使用**<br>&#x200B;画像スウォッチの URL はシンプルな構造です。<br><br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>ここでは、`:Swatch` がアセットリクエストに追加されています。<br><br>**カラースウォッチの使用**<br>&#x200B;カラースウォッチを使用するには、`req=userdata` リクエストに以下の情報を含めます。<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>例えば、以下は Dynamic Media Classic のスウォッチアセットです。<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>スウォッチアセットの対応する `req=userdata` URL は以下のようになります。<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br><br>この `req=userdata` の応答は以下のようになります。<br>`SmartCropDef=Swatch SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br><br>また、以下の URL の例のように、XML 形式または JSON 形式の `req=userdata` 応答を要求することもできます。<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**注意：**&#x200B;独自の WCM コンポーネントを作成して、カラースウォッチを要求し、24 ビット RGB の 16 進値で表される `SmartSwatchColor` 属性を解析します。<br><br>詳しくは、[`userdata`ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur.html?lang=ja)も参照してください。 |
 
 ## アンシャープマスク {#unsharp-mask}
 
@@ -78,7 +81,7 @@ ht-degree: 95%
 
 シャープニングについては、[画像のシャープニング](/help/assets/assets/sharpening_images.pdf)を参照してください。
 
-## Dynamic Media の画像プロファイルの作成 {#creating-image-profiles}
+## Dynamic Media イメージプロファイルの作成 {#creating-image-profiles}
 
 他のアセットタイプへの高度な処理パラメーターの定義については、[アセット処理の設定](config-dms7.md#configuring-asset-processing)を参照してください。
 
@@ -86,10 +89,10 @@ ht-degree: 95%
 
 [処理プロファイルを使用するためのデジタルアセットの編成のベストプラクティス](/help/assets/organize-assets.md)を参照してください。
 
-**Dynamic Media の画像プロファイルを作成するには：**
+**Dynamic Media 画像プロファイルを作成するには**：
 
 1. Adobe Experience Manager のロゴを選択し、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
-1. 「**[!UICONTROL 作成]**」を選択して、画像プロファイルを追加できます。
+1. 選択 **[!UICONTROL 作成]** イメージプロファイルを追加できます。
 1. プロファイル名を入力し、アンシャープマスクのほか、切り抜きとスウォッチのいずれかまたは両方の値を入力します。
 
    目的に沿ったプロファイル名を使用します。例えば、スウォッチのみを生成するプロファイルを作成する（つまり、スマート切り抜きが無効（オフ）になっていて、カラーと画像スウォッチが有効（オン）になっている）場合、「スマートスウォッチ」というプロファイル名を使用できます。
@@ -100,30 +103,30 @@ ht-degree: 95%
 
 1. 「**[!UICONTROL 保存]**」を選択します。新しく作成されたプロファイルが、使用可能なプロファイルのリストに表示されます。
 
-## Dynamic Media の画像プロファイルの編集または削除 {#editing-or-deleting-image-profiles}
+## Dynamic Media イメージプロファイルの編集または削除 {#editing-or-deleting-image-profiles}
 
 1. Experience Manager ロゴを選択し、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
-1. 編集または削除するイメージプロファイルを選択します。編集するには、「 **[!UICONTROL 画像プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像プロファイルを削除]**」を選択します。
+1. 編集または削除する画像プロファイルを選択します。編集するには、「 **[!UICONTROL 画像プロファイルを編集]**」を選択します。削除するには、「**[!UICONTROL 画像プロファイルを削除]**」を選択します。
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
 1. 編集の場合は、変更内容を保存します。削除の場合は、プロファイルの削除を確定します。
 
-## フォルダーへの Dynamic Media 画像プロファイルの適用 {#applying-an-image-profile-to-folders}
+## フォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-an-image-profile-to-folders}
 
-フォルダーに画像プロファイルを割り当てると、サブフォルダーは自動的に親フォルダーのプロファイルを継承します。つまり、フォルダーに 1 つの画像プロファイルのみを適用すればよいことになります。そのため、アセットをアップロード、保存、使用およびアーカイブする場所のフォルダー構造については入念に検討してください。
+フォルダーに画像プロファイルを割り当てると、サブフォルダーは自動的に親フォルダーのプロファイルを継承します。つまり、1 つのフォルダーに割り当てられるイメージプロファイルは 1 つだけです。 そのため、アセットをアップロード、保存、使用およびアーカイブする場所のフォルダー構造については入念に検討してください。
 
-フォルダーに異なる画像プロファイルを割り当てた場合、新しいプロファイルが以前のプロファイルよりも優先されます。以前に存在していたフォルダーのアセットは変更されずに維持されます。新しいプロファイルは、その後にフォルダーに追加されるアセットに対して適用されます。
+フォルダーに異なるイメージプロファイルを割り当てた場合、新しいプロファイルが以前のプロファイルよりも優先されます。以前に存在していたフォルダーのアセットは変更されずに維持されます。新しいプロファイルは、その後にフォルダーに追加されるアセットに対して適用されます。
 
 プロファイルが割り当てられているフォルダーの場合は、ユーザーインターフェイス上で、カードに表示されるプロファイル名で示されます。
 
-<!-- When you add smart crop to an existing image profile, you need to re-trigger the [DAM Update Asset workflow](assets-workflow.md) if you want to generate crops for existing assets in your asset repository. -->
+<!-- When you add smart crop to an existing Image Profile, you need to re-trigger the [DAM Update Asset workflow](assets-workflow.md) if you want to generate crops for existing assets in your asset repository. -->
 
-画像プロファイルは、特定のフォルダーに適用することも、全アセットにグローバルに適用することもできます。
+イメージプロファイルは、特定のフォルダーに適用することも、全アセットにグローバルに適用することもできます。
 
 後で変更した既存のイメージプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
-### 特定フォルダーへの Dynamic Media 画像プロファイルの適用 {#applying-image-profiles-to-specific-folders}
+### 特定フォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-specific-folders}
 
 **[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」から、特定のフォルダーにイメージプロファイルを適用できます。この節では、イメージプロファイルをフォルダーに適用するための方法を両方とも説明します。
 
@@ -131,7 +134,7 @@ ht-degree: 95%
 
 後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
-#### プロファイルユーザーインターフェイスを使用した、フォルダーへの Dynamic Media 画像プロファイルの適用 {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### プロファイルユーザーインターフェイスを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
 1. Experience Manager ロゴを選択し、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
 1. 1 つ以上のフォルダーに適用するイメージプロファイルを選択します。
@@ -140,21 +143,21 @@ ht-degree: 95%
 
 1. 「**[!UICONTROL 処理プロファイルをフォルダーに適用]**」を選択し、新たにアップロードされたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 適用]**」を選択します。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
-#### プロパティを使用したフォルダーへの Dynamic Media 画像プロファイルの適用 {#applying-image-profiles-to-folders-from-properties}
+#### プロパティを使用したフォルダーへの Dynamic Media イメージプロファイルの適用 {#applying-image-profiles-to-folders-from-properties}
 
-1. Experience Manager のロゴを選択し、**[!UICONTROL Assets]** に移動します。次に、画像プロファイルを適用するフォルダーの親フォルダーに移動します。
+1. Experience Manager のロゴを選択し、**[!UICONTROL Assets]** に移動します。次に、イメージプロファイルを適用するフォルダーの親フォルダーに移動します。
 1. チェックマークを選択して対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」を選択します。
 1. 「**[!UICONTROL イメージプロファイル]**」タブを選択します。「**[!UICONTROL プロファイル名]**」ドロップダウンリストからプロファイルを選択し、「**[!UICONTROL 保存して閉じる]**」を選択します。既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-### Dynamic Media 画像プロファイルのグローバル適用 {#applying-an-image-profile-globally}
+### Dynamic Media イメージプロファイルグローバルな適用 {#applying-an-image-profile-globally}
 
 特定のフォルダーにプロファイルを適用できるだけでなく、グローバルにプロファイルを適用することもできます。これにより、Experience Manager Assets にアップロードされている、すべてのフォルダー内にあるすべてのコンテンツに、選択したプロファイルを適用できます。
 
 後で変更した既存のビデオプロファイルが存在するフォルダー内のアセットを再処理できます。[処理プロファイルを編集した後のフォルダー内のアセットの再処理](processing-profiles.md#reprocessing-assets)を参照してください。
 
-**Dynamic Media 画像プロファイルをグローバルに適用するには：**
+**Dynamic Media 画像プロファイルをグローバルに適用するには**：
 
 1. 次のいずれかの操作を行います。
 
@@ -186,7 +189,7 @@ ht-degree: 95%
 1. Experience Manager ロゴを選択し、**[!UICONTROL Assets]** に移動した後、スマート切り抜きまたはスマートスウォッチの画像プロファイルが適用されているフォルダーに移動します。
 
 1. フォルダーを選択して、そのコンテンツを開きます。
-1. スマート切り抜きまたはスマートスウォッチを調整したい画像を選択します。
+1. スマート切り抜きまたはスマートスウォッチを調整する画像を選択します。
 1. ツールバーで、「**[!UICONTROL スマート切り抜き]**」を選択します。
 
 1. 次のいずれかの操作を行います。
@@ -252,23 +255,23 @@ ht-degree: 95%
 
 1. ページの右上付近にある「**[!UICONTROL 保存]**」を選択し、「**[!UICONTROL 閉じる]**」を選択して、アセットのフォルダーに戻ります。
 
-## フォルダーからの Dynamic Media 画像プロファイルの削除 {#removing-an-image-profile-from-folders}
+## フォルダーからのDynamic Mediaイメージプロファイルの削除 {#removing-an-image-profile-from-folders}
 
 フォルダーからイメージプロファイルを削除すると、サブフォルダーは自動的に親フォルダーのプロファイルの削除状態を継承します。ただし、フォルダー内で実行されたファイルの処理はそのまま維持されます。
 
 **[!UICONTROL ツール]**&#x200B;メニュー内から、またはフォルダー内にいる場合は「**[!UICONTROL プロパティ]**」で、特定のフォルダーからイメージプロファイルを削除できます。この節では、イメージプロファイルをフォルダーから削除するための方法を両方とも説明します。
 
-### プロファイルユーザーインターフェイスを使用した、フォルダーからの Dynamic Media 画像プロファイルの削除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### プロファイルユーザーインターフェイスを使用したフォルダーからの Dynamic Media イメージプロファイルの削除 {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
 1. Experience Manager ロゴを選択し、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL 画像プロファイル]**&#x200B;に移動します。
-1. 1 つ以上のフォルダーから削除するイメージプロファイルを選択します。
+1. 1 つ以上のフォルダーから削除する画像プロファイルを選択します。
 1. 「**[!UICONTROL フォルダーから処理プロファイルを削除]**」を選択し、プロファイルを削除する 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 削除]**」を選択します。
 
    名前がフォルダー名の下に表示されなくなっていることで、イメージプロファイルがフォルダーに適用されていないことを確認できます。
 
-### プロパティを使用したフォルダーからの Dynamic Media 画像プロファイルの削除 {#removing-image-profiles-from-folders-via-properties}
+### プロパティを使用したフォルダーからの Dynamic Media イメージプロファイルの削除 {#removing-image-profiles-from-folders-via-properties}
 
-1. Experience Manager ロゴを選択し、**[!UICONTROL Assets]** に移動した後、画像プロファイルを削除するフォルダーに移動します。
+1. Experience Manager ロゴを選択して「**[!UICONTROL アセット]**」に移動した後、画像プロファイルを削除するフォルダーに移動します。
 1. チェックマークを選択して対象のフォルダーを選択し、「**[!UICONTROL プロパティ]**」を選択します。
 1. 「**[!UICONTROL イメージプロファイル]**」タブを選択します。
 1. 「**[!UICONTROL プロファイル名]**」ドロップダウンリストから「**[!UICONTROL なし]**」を選択し、「**[!UICONTROL 保存して閉じる]**」を選択します。
