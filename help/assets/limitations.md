@@ -9,7 +9,7 @@ feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: e4d4059e-ac0b-42e7-910c-001310796574
 source-git-commit: 9247a81a518b1bd6e037c234a6c67f95209bfde8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '235'
 ht-degree: 100%
 
