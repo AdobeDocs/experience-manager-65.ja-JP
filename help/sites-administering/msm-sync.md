@@ -13,13 +13,13 @@ docset: aem65
 feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
 source-git-commit: 96aa75dec7433aa3961944fa57a80c4719316ba5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2696'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# ライブコピーの同期の設定{#configuring-live-copy-synchronization}
+# ライブコピーの同期の設定 {#configuring-live-copy-synchronization}
 
 以下のタスクを実行して、ライブコピーとソースコンテンツを同期する方法およびタイミングを制御します。
 
@@ -172,7 +172,7 @@ ht-degree: 99%
   </tr>
   <tr>
    <td>referencesUpdate</td>
-   <td><p>ライブコピーでは、この同期アクションによってリンクなどの参照が更新されます。<br />ブループリント内の特定のリソースを指す、ライブコピーページ内のパスを検索します。パスが見つかったら、（ブループリントの代わりに）ライブコピー内の関連リソースを指すようにそのパスを更新します。ブループリント外のターゲットを持つ参照は変更されません。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM References Update Action サービスを設定</a>して、除外するノードタイプ、段落項目、ページプロパティを指定してください。 </p> </td>
+   <td><p>この同期アクションにより、ライブコピーでは、リンクなどの参照が更新されます。<br />ブループリント内の特定のリソースを指す、ライブコピーページ内のパスを検索します。パスが見つかったら、（ブループリントの代わりに）ライブコピー内の関連リソースを指すようにそのパスを更新します。ブループリント外のターゲットを持つ参照は変更されません。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">CQ MSM References Update Action サービスを設定</a>して、除外するノードタイプ、段落項目、ページプロパティを指定してください。 </p> </td>
    <td> </td>
   </tr>
   <tr>
