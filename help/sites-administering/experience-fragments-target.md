@@ -12,13 +12,13 @@ discoiquuid: d4152b4d-531b-4b62-8807-a5bc5afe94c6
 docset: aem65
 exl-id: f2921349-de8f-4bc1-afa2-aeace99cfc5c
 source-git-commit: 88763b318e25efb16f61bc16530082877392c588
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1553'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
-# Adobe Target へのエクスペリエンスフラグメントの書き出し{#exporting-experience-fragments-to-adobe-target}
+# Adobe Target へのエクスペリエンスフラグメントの書き出し {#exporting-experience-fragments-to-adobe-target}
 
 >[!CAUTION]
 >
@@ -139,7 +139,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 
    ![フォルダー - Cloud Services](assets/xf-target-integration-01.png "フォルダー - Cloud Services")
 
-1. **保存して閉じます**。
+1. **保存して閉じる**。
 
 ## Adobe Target へのエクスペリエンスフラグメントの書き出し {#exporting-an-experience-fragment-to-adobe-target}
 
@@ -201,7 +201,7 @@ Target に書き出し済みのエクスペリエンスフラグメントを削�
 そのような状況を避けるためには：
 
 * エクスペリエンスフラグメントが現在アクティビティで使用されていない場合、AEM はユーザーに警告メッセージなしでフラグメントを削除することを許可します。
-* エクスペリエンスフラグメントが現在ターゲットのアクティビティで使用されている場合、フラグメントを削除するとアクティビティに影響が及ぶ可能性があると、AEM ユーザーに警告メッセージが表示されます。
+* エクスペリエンスフラグメントが現在 Target のアクティビティで使用されている場合、フラグメントを削除するとアクティビティに影響が及ぶ可能性があると、AEM ユーザーに警告メッセージが表示されます。
 
    AEM のエラーメッセージは、ユーザーがエクスペリエンスフラグメントを（強制的に）削除することを禁止するものではありません。エクスペリエンスフラグメントが削除された場合は、次のような結果になります。
 
@@ -215,11 +215,11 @@ Target に書き出し済みのエクスペリエンスフラグメントを削�
 
 ## Target に書き出したエクスペリエンスフラグメントからの ClientLibs の削除 {#removing-clientlibs-from-fragments-exported-target}
 
-エクスペリエンスフラグメントには、完全な html タグと、エクスペリエンスフラグメントコンテンツ作成者が作成したとおりにフラグメントをレンダリングするために必要なすべてのクライアントライブラリ (CSS/JS) が含まれます。 これは設計によるものです
+エクスペリエンスフラグメントには、完全な HTML タグと、エクスペリエンスフラグメントコンテンツ作成者が作成したとおりにフラグメントをレンダリングするために必要なすべてのクライアントライブラリ（CSS／JS）が含まれています。これは仕様によるものです。
 
-AEMで配信されるページ上でAdobe Targetと共にエクスペリエンスフラグメントオファーを使用する場合、ターゲットページには、必要なすべてのクライアントライブラリが既に含まれています。 また、エクスペリエンスフラグメントオファーに不要な HTML も必要ありません ( [注意点](#considerations)) をクリックします。
+AEM によって配信されるページで Adobe Target とエクスペリエンスフラグメントオファーを併用する場合、ターゲットページには必要なすべてのクライアントライブラリが既に含まれています。 また、エクスペリエンスフラグメントオファーの不要な HTML も必要ありません（[考慮事項](#considerations)を参照）。
 
-次に、エクスペリエンスフラグメントオファーの html の擬似例を示します。
+次に、エクスペリエンスフラグメントオファーの HTML の擬似例を示します。
 
 ```html
 <!DOCTYPE>
@@ -235,37 +235,37 @@ AEMで配信されるページ上でAdobe Targetと共にエクスペリエン�
 </html>
 ```
 
-高レベルでは、AEMがAdobe Targetにエクスペリエンスフラグメントを書き出す際に、いくつかの追加の Sling セレクターを使用します。 例えば、書き出されたエクスペリエンスフラグメントの URL は次のようになります（注意してください） `nocloudconfigs.atoffer`):
+大まかに言えば、AEM が Adobe Target にエクスペリエンスフラグメントを書き出す際に、いくつかの追加の Sling セレクターを使用します。 例えば、書き出されたエクスペリエンスフラグメントの URL は次のようになります（`nocloudconfigs.atoffer` に注意）。
 
 * http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
 
-この `nocloudconfigs` セレクターは HTL を使用して定義され、次の場所からコピーしてオーバーレイできます。
+`nocloudconfigs` セレクターは HTL を使用して定義され、次の場所からコピーしてオーバーレイできます。
 
 * /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
 
-この `atoffer` セレクターは、 [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). クライアントライブラリの削除に使用できます。
+`atoffer` セレクターは、実際には [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html) を使用した後処理で適用されます。いずれかを使用して、クライアントライブラリを削除できます。
 
 ### 例 {#example}
 
-ここでは、 `nocloudconfigs`.
+ここでは、`nocloudconfigs` を使用してこれを行う方法を説明します。
 
 >[!NOTE]
 >
->詳しくは、 [編集可能なテンプレート](/help/sites-developing/templates.md#editable-templates) 詳しくは、を参照してください。
+>詳しくは、[編集可能なテンプレート](/help/sites-developing/templates.md#editable-templates)を参照してください。
 
 #### オーバーレイ {#overlays}
 
-この例では、 [overlays](/help/sites-developing/overlays.md) 含めると、クライアントライブラリが削除されます *および* 不要な html。 既にエクスペリエンスフラグメントテンプレートタイプが作成されていることを前提としています。 コピー元となる必要があるファイル `/libs/cq/experience-fragments/components/xfpage/` 次を含む：
+この特定の例では、[オーバーレイ](/help/sites-developing/overlays.md)が含まれているため、クライアントライブラリ&#x200B;*と*&#x200B;不要な HTML が削除されます。エクスペリエンスフラグメントのテンプレートタイプを既に作成していることを前提としています。 `/libs/cq/experience-fragments/components/xfpage/` からコピーする必要がある必要なファイルは次のとおりです。
 
 * `nocloudconfigs.html`
 * `head.nocloudconfigs.html`
 * `body.nocloudconfigs.html`
 
-#### Template-Type Overlays {#template-type-overlays}
+#### テンプレートタイプのオーバーレイ {#template-type-overlays}
 
 この例では、次の構造を使用します。
 
-![Template-Type Overlays](assets/xf-target-integration-02.png "Template-Type Overlays")
+![テンプレートタイプのオーバーレイ](assets/xf-target-integration-02.png "テンプレートタイプのオーバーレイ")
 
 これらのファイルの内容は次のとおりです。
 
@@ -283,12 +283,12 @@ AEMで配信されるページ上でAdobe Targetと共にエクスペリエン�
 
 >[!NOTE]
 >
->使用する `data-sly-unwrap` 必要な body タグを削除するには `nocloudconfigs.html`.
+>`data-sly-unwrap` を使用して本文タグを削除するには、`nocloudconfigs.html` が必要です。
 
 ### 検討事項 {#considerations}
 
-Adobe Targetでエクスペリエンスフラグメントオファーを使用してAEMサイトとAEM以外のサイトの両方をサポートする必要がある場合は、2 つのエクスペリエンスフラグメント（2 つの異なるテンプレートタイプ）を作成する必要があります。
+Adobe Target でエクスペリエンスフラグメントオファーを使用して AEM サイトと AEM 以外のサイトの両方をサポートする必要がある場合は、2 つのエクスペリエンスフラグメント（2 つの異なるテンプレートタイプ）を作成する必要があります。
 
-* 1 つ目は、clientlibs/extra html を削除するオーバーレイを備えたものです。
+* clientlibs/extra html を削除するオーバーレイを使用しているもの
 
-* オーバーレイを持たず、必要な clientlibs を含む
+* オーバーレイがなく、必要な clientlibs が含まれているもの
