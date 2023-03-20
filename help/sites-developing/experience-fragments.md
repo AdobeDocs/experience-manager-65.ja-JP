@@ -12,9 +12,9 @@ discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 source-git-commit: 6e54073a0c1d67218283b096db3f2e5597f10376
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1784'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -58,18 +58,18 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
 
-### HTMLレンディション生成の設定 {#configuring-html-rendition-generation}
+### HTML レンディション生成の設定 {#configuring-html-rendition-generation}
 
-HTMLレンディションは、Sling Rewriter Pipelines を使用して生成されます。 パイプラインは次の場所で定義されます。 `/libs/experience-fragments/config/rewriter/experiencefragments`. HTML変換サービスでは、次のオプションをサポートしています。
+HTML レンディションは、Sling Rewriter パイプラインを使用して生成されます。パイプラインは、`/libs/experience-fragments/config/rewriter/experiencefragments` で定義されます。HTML 変換サービスでは、次のオプションをサポートしています。
 
 * `allowedCssClasses`
-   * 最終レンディションに残す CSS クラスに一致する RegEx 式。
-   * これは、お客様が特定の CSS クラスを廃止したい場合に役立ちます
+   * 最終レンディションに残す CSS クラスに一致する正規表現。
+   * これは、顧客が特定の CSS クラスを取り除きたい場合に便利です。
 * `allowedTags`
-   * 最終レンディションで許可するHTMLタグのリスト。
-   * デフォルトでは、次のタグを使用できます（設定は不要）。html, head, title, body, img, p, span, ul, li, a, a, a, a, a, a, a, em, strong, h1, h2, h3, h5, h6, br, noscript, div，リンク，スクリプト
+   * 最終的なレンディションで許可される HTML タグのリスト。
+   * デフォルトでは、次のタグが許可されています（設定は不要）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link、script
 
-オーバーレイを使用してリライターを設定することをお勧めします。 詳しくは、 [AEMでのオーバーレイas a Cloud Service](/help/sites-developing/overlays.md)
+オーバーレイを使用してリライターを設定することをお勧めします。詳しくは、[AEM as a Cloud Service でのオーバーレイ](/help/sites-developing/overlays.md)を参照してください。
 
 ## ソーシャルバリエーション {#social-variations}
 
