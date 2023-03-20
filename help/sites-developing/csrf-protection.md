@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: f453427d-c813-48b7-b2f9-adadea39c67d
 exl-id: e6b0f8f7-54b0-4dd6-86ad-5516954c6d90
 source-git-commit: f841e3886771fb00eee6e476d7111d4a335a9d51
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
-# CSRF 対策フレームワーク{#the-csrf-protection-framework}
+# CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
 アドビでは、Apache Sling Referrer Filter 以外にも、この種の攻撃を防ぐための新しい CSRF 対策フレームワークを用意しています。
 
@@ -35,7 +35,7 @@ ht-degree: 88%
 
 ### 暗号鍵のレプリケーション {#replicating-crypto-keys}
 
-トークンを利用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケートする必要があります。 詳しくは、 [HMAC キーのレプリケート](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) を参照してください。
+トークンを利用するには、デプロイメント内のすべてのインスタンスに HMAC バイナリをレプリケーションする必要があります。詳しくは、[HMAC キーのレプリケーション](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key)を参照してください。
 
 >[!NOTE]
 >
