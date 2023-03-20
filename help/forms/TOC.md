@@ -11,7 +11,7 @@ role: User
 source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
 workflow-type: tm+mt
 source-wordcount: '3846'
-ht-degree: 99%
+ht-degree: 97%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 99%
       + [インストールサービスのフォームの自動コンバージョンサービスと設定](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/table-of-contents/configure-service.html?lang=ja)
    + AEM Forms の JEE へのインストール {#jee-installation}
       + [JEE 上の AEM Forms でサポートされているプラットフォーム](using/aem-forms-jee-supported-platforms.md)
-      + [JEE 上における AEM forms のインストールおよびデプロイ（JBoss Turnkey を使用）](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_jp)
+      + [JEE 上における AEM Forms のインストールおよびデプロイ（JBoss Turnkey を使用）](https://www.adobe.com/go/learn_aemforms_installTurnkey_65_jp)
       + [AEM Forms Document Security サーバーのインストールと設定](using/installing-and-configuring-the-document-security-server.md)
       + [AEM Forms のインストールの準備（シングルサーバー）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65_jp)
       + [JEE 上の Adobe Experience Manager Forms のインストールおよびデプロイ（JBoss 版）](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
@@ -210,8 +210,8 @@ ht-degree: 99%
    + [AEM Forms Workspace では利用できない Flex Workspace の機能](using/features-flex-workspace-available-html.md)
    + [Backbone インタラクション](using/backbone-interaction.md)
    + [再利用可能なコンポーネントの説明](using/description-reusable-components.md)
-   + [レンダラーのためのドキュメントの詳細](using/document-details-renderer.md)
-   + [Web アプリケーションでの AEM Forms Workspace コンポーネントの統合](using/integrating-html-ws-components-web.md)
+   + [レンダラーのドキュメントの詳細](using/document-details-renderer.md)
+   + [Web アプリケーションでのAEM Forms Workspace コンポーネントの統合](using/integrating-html-ws-components-web.md)
    + [新しいレンダリングと送信サービス](using/new-render-submit-service.md)
    + [フォルダー構造について](using/folder-structure.md)
    + [AEM Forms Workspace でのサードパーティアプリケーションの統合](using/integrating-correspondence-management-html-workspace.md)
@@ -225,8 +225,8 @@ ht-degree: 99%
    + [タスクの詳細ページのカスタマイズ](using/customizing-task-details-page.md)
    + [プロセスインスタンスのリストのカスタマイズ](using/customizing-listing-process-instances.md)
    + [タスクアクションのカスタマイズ](using/customizing-task-actions.md)
-   + [TODO リストでの追加のデータの表示](using/display-additional-data-in-todo-list.md)
-   + [サマリー URL でのタスク変数の取得](using/getting-task-variables-summary-url.md)
+   + [TODO リストでの追加データの表示](using/display-additional-data-in-todo-list.md)
+   + [概要 URL でのタスク変数の取得](using/getting-task-variables-summary-url.md)
    + [ルートアクションで使用されるイメージのカスタマイズ](using/images-route-actions.md)
    + [JavaScript ファイルの縮小](using/minification-javascript-files.md)
    + [追跡テーブルのカスタマイズ](using/sorting-tracking-tables-add-columns.md)
@@ -235,7 +235,7 @@ ht-degree: 99%
    + [AEM Forms ワークスペースで使用する各種 API](using/apis-used-html-workspace.md)
    + [AEM Forms Workspace における既存のプロセスデータを使用した新しいプロセスの開始](using/initiating-new-process-existing-process.md)
    + [2 つの AEM Forms ワークプレースインスタンスを 1 つのサーバー上にホストする](using/two-html-workspace-instances-one.md)
-   + [インターフェイスのカラースキーム変更](using/changing-color-scheme-interface.md)
+   + [インターフェイスのカラースキームの変更](using/changing-color-scheme-interface.md)
    + [インターフェイスのフォントの変更](using/changing-font-interface.md)
    + [ブランディングのための組織ロゴの変更](using/changing-organization-logo-branding.md)
    + [タスクの概要ペインでの情報の表示](using/displaying-information-task-summary-pane.md)
@@ -470,7 +470,7 @@ ht-degree: 99%
    + PDF Generator の操作 {#work-with-pdf-generator}
       + [PDF Generator の操作の概要](/help/forms/using/admin-help/overview-5.md)
       + [マルチスレッドファイル変換の有効化](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
-      + [Adobe PDF 設定の指定](/help/forms/using/admin-help/configuring-pdf-settings.md)
+      + [Adobe PDF設定](/help/forms/using/admin-help/configuring-pdf-settings.md)
       + [セキュリティ設定の指定](/help/forms/using/admin-help/configuring-security-settings.md)
       + [ファイルタイプ設定の指定](/help/forms/using/admin-help/configuring-file-type-settings.md)
       + [PDF Generator 設定ファイルの読み込みおよび書き出し](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
@@ -514,7 +514,7 @@ ht-degree: 99%
       + [埋め込むフォントの指定](/help/forms/using/admin-help/specify-fonts-embed.md)
       + [セキュリティ設定の指定](/help/forms/using/admin-help/specify-security-settings.md)
       + [文字セットの変更](/help/forms/using/admin-help/change-character-set.md)
-   + Forms ワークフローの設定{#configure-forms-workflow}
+   + Forms ワークフローの設定 {#configure-forms-workflow}
       + [管理およびプロセスの用語について](/help/forms/using/admin-help/administration-process-terminology.md)
       + [プロセスの管理](/help/forms/using/admin-help/processes.md)
       + [業務カレンダーの設定](/help/forms/using/admin-help/configuring-business-calendars.md)
@@ -528,7 +528,7 @@ ht-degree: 99%
    + Workspace の設定 {#configure-workspace}
       + [Workspace の概要](/help/forms/using/admin-help/overview-10.md)
       + [グローバル設定の読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-global-settings.md)
-      + [今日のお知らせの設定](/help/forms/using/admin-help/setting-message-day.md)
+      + [今日のメッセージの設定](/help/forms/using/admin-help/setting-message-day.md)
       + [検索テンプレートのカスタマイズ](/help/forms/using/admin-help/customizing-search-templates.md)
       + [Workspace に表示されるカテゴリの管理](/help/forms/using/admin-help/categories-displayed-workspace.md)
    + ヘルスモニター {#health-monitor}
@@ -688,7 +688,7 @@ ht-degree: 99%
    + [Windows Server 上で Word または Excel ファイルを PDF に変換できない](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
    + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer または Apple Safari で XFA ベースの PDF フォームを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
    + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
-   + [AEM 6.5.15.0 Service Pack のインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
+   + [AEM 6.5.15.0 サービスパックのインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux 環境でのAEM Forms JEE 6.5.15.0 Service Pack のインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)

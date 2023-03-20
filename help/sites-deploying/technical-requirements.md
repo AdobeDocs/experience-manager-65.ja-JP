@@ -1,7 +1,7 @@
 ---
 title: 技術要件
 seo-title: Technical Requirements
-description: AEM でサポートされているクライアントおよびサーバーのプラットフォームのリスト。
+description: AEMでサポートされるクライアントおよびサーバープラットフォームのリストです。
 seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
@@ -9,23 +9,23 @@ exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: 74535a6ad78abf795f55f1ba4e1123b58802aefe
 workflow-type: tm+mt
 source-wordcount: '3536'
-ht-degree: 94%
+ht-degree: 55%
 
 ---
 
-# 技術要件{#technical-requirements}
+# 技術要件 {#technical-requirements}
 
-アドビは、このドキュメントの以下の情報に記載されているプラットフォームで Adobe Experience Manager（AEM）をサポートしています。
+Adobeは、このドキュメントで次の情報に従って、プラットフォームでAdobe Experience Manager(AEM) をサポートします。
 
-プラットフォームに関連する問題については、プラットフォームのベンダーにお問い合わせください。
+プラットフォームに関する問題が発生した場合は、プラットフォームのベンダーにお問い合わせください。
 
 >[!NOTE]
 >
->AEM をインストールするプラットフォームによっては、別のユーザー管理要件が適用される場合があります。
+>AEMをインストールするプラットフォームに応じて、ユーザー管理に関する一連の要件が異なる場合があります。
 
 ## 前提条件 {#prerequisites}
 
-Adobe Experience Manager をインストールするための最小要件：
+Adobe Experience Managerのインストールに関する最小要件：
 
 * Java Platform, Standard Edition JDK または他のサポートされている [Java 仮想マシン](#java-virtual-machines)がインストールされていること
 * Experience Manager Quickstart ファイル（スタンドアロン JAR または web アプリケーションデプロイメント WAR）
@@ -39,18 +39,18 @@ Adobe Experience Manager をインストールするための最小要件：
 
 >[!NOTE]
 >
->* デジタルアセットを使用する場合は、より多くの基本メモリが必要になります。詳しくは、[デプロイとメンテナンス](/help/sites-deploying/deploy.md#default-local-install)を参照してください。
+>* デジタルアセットの使用例には、より多くのベースメモリが必要です。 詳しくは、 [デプロイと保守](/help/sites-deploying/deploy.md#default-local-install) 」を参照してください。
 >* [AEM Forms アドオンパッケージ](/help/forms/using/installing-configuring-aem-forms-osgi.md)には 15 GB の一時領域が必要です。
 >
 
 
-詳しくは、[ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)を参照してください。
+詳しくは、 [ハードウェアのサイズ設定のガイドライン](/help/managing/hardware-sizing-guidelines.md).
 
 ### サポートレベル {#support-levels}
 
-ここでは、Adobe Experience Manager でサポートされているクライアントおよびサーバープラットフォームを示します。アドビは、推奨構成とその他の構成の両方について、複数のレベルのサポートを提供しています。
+このドキュメントでは、Adobe Experience Managerでサポートされるクライアントおよびサーバープラットフォームを示します。 Adobeは、推奨設定とその他の設定の両方に対して、複数のレベルのサポートを提供します。
 
-### サポートされる構成 {#supported-configurations}
+### サポートされる設定 {#supported-configurations}
 
 アドビは以下の構成を推奨し、標準ソフトウェア保守契約の一環として完全なサポートを提供しています。
 
@@ -66,12 +66,12 @@ Adobe Experience Manager をインストールするための最小要件：
   </tr>
   <tr>
    <td><strong>R：限定サポート</strong></td>
-   <td>顧客のプロジェクト成功のために、アドビは、制限されたサポートプログラムの範囲内で完全なサポートを提供します。このサポートプログラムでは、特定の条件を満たす必要があります。R レベルのサポートでは、顧客からの正式な依頼とアドビによる承認が必要です。詳しくは、アドビカスタマーケアにお問い合わせください。</td>
+   <td>お客様のプロジェクトを確実に成功させるために、Adobeは、限定的なサポートプログラム内で完全なサポートを提供します。このプログラムでは、特定の条件を満たす必要があります。 R レベルのサポートでは、正式なお客様のリクエストとAdobeによる確認が必要です。 詳しくは、Adobeカスタマーケアにお問い合わせください。</td>
   </tr>
  </tbody>
 </table>
 
-### サポートされていない構成 {#unsupported-configurations}
+### サポートされていない設定 {#unsupported-configurations}
 
 | サポートレベル | 説明 |
 |---|---|
@@ -81,7 +81,7 @@ Adobe Experience Manager をインストールするための最小要件：
 
 ### Java 仮想マシン {#java-virtual-machines}
 
-このアプリケーションの実行には、Java 仮想マシンが必要です。Java 仮想マシンは、Java Development Kit（JDK）ディストリビューションによって提供されます。
+このアプリケーションを実行するには、Java 仮想マシンが必要です。Java 仮想マシンは、Java Development Kit(JDK) ディストリビューションによって提供されます。
 
 Adobe Experience Manager は、次のバージョンの Java 仮想マシンで動作します。
 
@@ -110,13 +110,13 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 
 ### ストレージと永続性 {#storage-persistence}
 
-Adobe Experience Manager のリポジトリのデプロイには、様々なオプションがあります。サポートされるテクノロジーとストレージオプションについては、以下のリストを参照してください。
+Adobe Experience Managerのリポジトリをデプロイするには、様々なオプションが存在します。 次のリストに、サポートされるテクノロジーとストレージのオプションを示します。
 
 | **プラットフォーム** | **説明** | **サポートレベル** |
 |---|---|---|
 | **TAR ファイルを使用したファイルシステム** `[1]` | リポジトリ | A：サポート対象 |
 | **データストアを使用したファイルシステム** `[1]` | バイナリ | A：サポート対象 |
-| ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z：実稼動環境ではサポート対象外 |
+| ファイルシステムの TAR ファイルへのバイナリの格納 `[1]` | バイナリ | Z:実稼動環境ではサポートされていません |
 | Amazon S3 | バイナリ | A：サポート対象 |
 | Microsoft Azure Blob Storage | バイナリ | A：サポート対象 |
 | MongoDB Enterprise 4.4 | リポジトリ | A：サポート対象 `[2, 3, 4]` |
@@ -124,17 +124,17 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 | MongoDB Enterprise 4.0 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.6 | リポジトリ | Z：サポート対象外 |
 | MongoDB Enterprise 3.4 | リポジトリ | Z：サポート対象外 |
-| IBM DB2 10.5 | リポジトリおよび Forms データベース | R：制限サポート `[5]` |
-| Oracle Database 12c（12.1.x） | リポジトリおよび Forms データベース | R：制限サポート |
-| Microsoft SQL Server 2016 | Forms データベース | A：サポート対象 |
-| **Apache Lucene（クイックスタートビルトイン）** | 検索サービス | A：サポート対象 |
-| Apache Solr | 検索サービス | A：サポート対象 |
+| IBM DB2 10.5 | リポジトリとFormsデータベース | R：制限サポート `[5]` |
+| Oracle Database 12c（12.1.x） | リポジトリとFormsデータベース | R：制限サポート |
+| Microsoft SQL Server 2016 | Forms Database | A：サポート対象 |
+| **Apache Lucene（Quickstart 組み込み）** | Search Service | A：サポート対象 |
+| Apache Solr | Search Service | A：サポート対象 |
 
-1. 「ファイルシステム」には、POSIX 準拠のブロックストレージが含まれます。ブロックストレージには、ネットワークストレージテクノロジーが含まれます。ファイルシステムのパフォーマンスが状況に応じて変化し、全体的なパフォーマンスに影響を及ぼす可能性があることに注意してください。ネットワークやリモートファイルシステムと一緒に AEM の負荷テストを行うことを推奨します。
+1. 「ファイルシステム」には、POSIX に準拠したブロックストレージが含まれます。 これには、ネットワークストレージテクノロジーが含まれます。 ファイル・システムのパフォーマンスは異なり、全体的なパフォーマンスに影響を与える場合があることに注意してください。 ネットワーク/リモートファイルシステムと組み合わせて、テスト用AEMを読み込むことをお勧めします。
 1. MongoDB Enterprise バージョン 4.2 および 4.4 には、最低でもAEM 6.5 SP9 が必要です。
 1. MongoDB Sharding は AEM ではサポートしていません。
-1. MongoDB Storage Engine WiredTiger のみサポートされています。
-1. AEM Forms アップグレード版のお客様にサポートされています。新規インストールの場合はサポートされていません。
+1. MongoDB Storage Engine WiredTiger のみがサポートされています。
+1. AEM Formsのアップグレードのお客様に対してサポートされます。 新規インストールの場合はサポートされていません。
 
 >[!NOTE]
 >
@@ -142,13 +142,13 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 >[!NOTE]
 >
->MongoDB はサードパーティソフトウェアであり、AEM ライセンスパッケージには含まれていません。詳しくは、[MongoDB のライセンスポリシー](https://www.mongodb.org/about/licensing/)ページを参照してください。
+>MongoDB はサードパーティのソフトウェアで、AEMライセンスパッケージには含まれていません。 詳しくは、 [MongoDB ライセンスポリシー](https://www.mongodb.org/about/licensing/) ページ。
 >
->MongoDB を利用した AEM デプロイメントを最大限活用するために、アドビでは、プロフェッショナルサポートを受けられる MongoDB Enterprise バージョンのライセンスを取得することを推奨しています。詳しくは、「[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk)」を参照してください。
+>MongoDB を使用したAEMのデプロイメントを最大限に活用するには、Adobeは、プロフェッショナルサポートを受けられるように MongoDB Enterprise バージョンのライセンスを取得することをお勧めします。 詳しくは、「[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk)」を参照してください。
 >
->このライセンスには、標準レプリカセットが含まれます。このレプリカセットは、1 つのプライマリインスタンスと 2 つのセカンダリインスタンスで構成されており、これらのインスタンスは、オーサーとパブリッシュのいずれのデプロイメントにも使用できます。
+>ライセンスには、標準レプリカセットが含まれます。標準レプリカセットは、1 つのプライマリインスタンスと 2 つのセカンダリインスタンスで構成され、オーサーデプロイメントまたはパブリッシュデプロイメントに使用できます。
 >
->MongoDB でオーサーとパブリッシュの両方を実行したい場合は、2 つのライセンスを個別に購入する必要があります。
+>MongoDB でオーサーとパブリッシュの両方を実行する場合は、2 つの異なるライセンスを購入する必要があります。
 >
 >アドビカスタマーケアは、AEM での MongoDB の使用に関する問題の絞り込みを支援します。
 >
@@ -156,22 +156,22 @@ Adobe Experience Manager のリポジトリのデプロイには、様々なオ�
 
 >[!NOTE]
 >
->上記のサポート対象リレーショナルデータベースはサードパーティソフトウェアであり、AEM ライセンスパッケージには含まれていません。
+>上記のサポートされるリレーショナルデータベースは、サードパーティのソフトウェアであり、AEMライセンスパッケージには含まれていません。
 >
->サポートされているリレーショナルデータベースを使用して AEM 6.5 を実行するには、データベースベンダーと別途サポート契約を締結する必要があります。アドビカスタマーケアは、リレーショナルデータベースを AEM 6.5 で利用することに関連する問題の絞り込みを支援いたします。
+>サポートされているリレーショナルデータベースでAEM 6.5 を実行するには、データベースベンダーとの別のサポート契約が必要です。 Adobeカスタマーケアは、リレーショナルデータベースをAEM 6.5 で使用する際の問題の絞り込みを支援します。
 >
->**AEM 6.5 では現在、ほとんどのリレーショナルデータベースがレベル R の範囲でサポートされ、前述のレベル R の説明にあるサポートの基準とサポートプログラムが適用されます。**
+>**現在、ほとんどのリレーショナルデータベースは、AEM 6.5 の Level-R 内でサポートされています。このデータベースには、上記の Level-R の説明に記載されているサポート基準とサポートプログラムが付属しています。**
 
-### サーブレットエンジン／アプリケーションサーバー {#servlet-engines-application-servers}
+### サーブレットエンジン/アプリケーションサーバー {#servlet-engines-application-servers}
 
-Adobe Experience Manager はスタンドアロンサーバー（quickstart JAR ファイル）として実行することも、サード-パーティのアプリケーションサーバー内の Web アプリケーション（WAR ファイル）として実行することもできます。
+Adobe Experience Managerは、スタンドアロンサーバー（quickstart JAR ファイル）として、またはサードパーティのアプリケーションサーバー（WAR ファイル）内の Web アプリケーションとして実行できます。
 
-Servlet API の最低限必要なバージョンは Servlet 3.1 です。
+必要な最小サーブレット API バージョンはサーブレット 3.1 です
 
 | プラットフォーム | サポートレベル |
 |---|---|
-| **Quickstart 組み込みサーブレットエンジン（Jetty 9.4）** | A：サポート対象 |
-| Oracle WebLogic Server 12.2（12cR2） | Z：サポート対象外 |
+| **Quickstart 組み込みの Servlet Engine (Jetty 9.4)** | A：サポート対象 |
+| OracleWebLogic Server 12.2 (12cR2) | Z：サポート対象外 |
 | IBM WebSphere Application Server Continuous Delivery（LibertyProfile）（Web Profile 7.0 および IBM JRE 1.8） | R：新規契約向けの制限サポート `[2]` |
 | IBM WebSphere Application Server 9.0 および IBM JRE 1.8 | R：新規契約向けの制限サポート `[1]` `[2]` |
 | Apache Tomcat 8.5.x | R：新規契約向けの制限サポート `[2]` |
@@ -179,85 +179,85 @@ Servlet API の最低限必要なバージョンは Servlet 3.1 です。
 | JBoss EAP 7.1.4 と JBoss Application Server | R：新規契約向けの制限サポート `[1]` `[2]` |
 | JBoss EAP 7.0.x と JBoss Application Server | Z：サポート対象外 |
 
-1. AEM Forms を備えたデプロイメントに推奨されています。
-1. アプリケーションサーバーでの AEM 6.5 デプロイメントの起動は制限サポートに移行します。既存のお客様は AEM 6.5 にアップグレードして、アプリケーションサーバーを引き続き使用することができます。新規のお客様には、前述のレベル R の説明にあるサポート基準とサポートプログラムが適用されます。
+1. AEM Formsを使用したデプロイメントに推奨されます。
+1. アプリケーションサーバーでAEM 6.5 デプロイメントを開始すると、制限付きサポートに移行します。 既存のお客様は、AEM 6.5 にアップグレードして、引き続きアプリケーションサーバーを使用することができます。 新規のお客様の場合は、上記のレベル R の説明に記載されているサポート基準とサポートプログラムが提供されます。
 
-### サーバーオペレーティングシステム {#server-operating-systems}
+### サーバオペレーティングシステム {#server-operating-systems}
 
-実稼働環境の Adobe Experience Manager は次のサーバープラットフォームで動作します。
+Adobe Experience Managerは、実稼動環境では次のサーバープラットフォームと連携します。
 
 | **プラットフォーム** | **サポートレベル** |
 |---|---|
-| **Linux、Red Hat ディストリビューションベース** | A：サポート対象 `[1]` `[3]` |
+| **Linux（Red Hat ディストリビューションに基づく）** | A：サポート対象 `[1]` `[3]` |
 | Linux、Debian ディストリビューションベース（Ubuntu を含む） | A：サポート対象 `[1]` `[2]` |
 | Linux、SUSE ディストリビューションベース | A：サポート対象 `[1]` |
 | Microsoft Windows Server 2019 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft Windows Server 2016 `[4]` | R：新規契約向けの制限サポート `[5]` |
 | Microsoft Windows Server 2012 R2 | Z：サポート対象外 |
-| Oracle Solaris 11 | Z：サポート対象外 |
+| OracleSolaris 11 | Z：サポート対象外 |
 | IBM AIX 7.2 | Z：サポート対象外 |
 
-1. Linux カーネル 2.6、3. x, 4. x および 5 x には、Red Hat Enterprise Linux、CentOS、OracleLinux、Amazon Linux など、Red Hat ディストリビューションの派生物が含まれます。 AEM Formsアドオン機能は、CentOS 7、Red Hat Enterprise Linux 7、Red Hat Enterprise Linux 8、および Red Hat Enterprise Linux 9 でのみサポートされます。
-1. AEM Formsは Ubuntu 20.04 LTS でサポートされています。
-1. Adobe Managed Services でサポートされている Linux ディストリビューション.
-1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。AEM Sites および AEM Assets の新規デプロイメントは、お客様の依頼に応じて提供されます。
-1. AEM Forms は、サポートレベル R の制限なしに Microsoft Window Server でサポートされています。。
+1. Linux Kernel 2.6, 3.x、4.x および 5.x には Red Hat ディストリビューションの派生 OS（Red Hat Enterprise Linux、CentOS、Oracle Linux、Amazon Linux など）が含まれます。AEM Forms のアドオン機能は、CentOS 7、Red Hat Enterprise Linux 7、Red Hat Enterprise Linux 8 および Red Hat Enterprise Linux 9 でのみサポートされています。
+1. AEM Forms は Ubuntu 20.04 LTS でサポートされています。
+1. Adobe Managed Services でサポートされている Linux ディストリビューション。
+1. Microsoft Windows 版の実稼働デプロイメントは、お客様が 6.5 にアップグレードする場合と、実稼動以外の用途に使用する場合にサポートされています。新しいデプロイメントは、AEM Sitesおよび Assets に対してオンリクエストでおこなわれます。
+1. AEM Formsは、Microsoft Window Server でサポートされていますが、サポートレベルの R 制限はありません。
 
 >[!NOTE]
 >
->AEM Forms 6.5 をインストールする場合は、次の 32 ビット版のMicrosoft Visual C++再配布可能パッケージがインストールされていることを確認してください。
+>AEM Forms 6.5 をインストールする場合は、次の 32 ビット版の Microsoft Visual C++ 再頒布可能パッケージがインストールされていることを確認してください。
 >
 >* Microsoft Visual C++ 2008 の再頒布可能パッケージ
 >* Microsoft Visual C++ 2010 の再頒布可能パッケージ
->* Microsoft Visual C++ 2012 再頒布可能パッケージ
+>* Microsoft Visual C++ 2012 の再頒布可能パッケージ
 >* Microsoft Visual C++ 2013 の再頒布可能パッケージ（6.5 時点）
 
 
 
 ### 仮想／クラウドコンピューティング環境 {#virtual-cloud-computing-environments}
 
-Adobe Experience Managerは、Microsoft Azure やAmazon Web Services(AWS) などのクラウドコンピューティング環境上での仮想マシンで、このページに記載されている技術要件と、Adobeの標準的なサポート条件に従って実行できるようサポートされています。
+Microsoft Azure や Amazon Web Services（AWS）など、クラウドコンピューティング環境の仮想マシンで稼動する Adobe Experience Manager は、このページに記載されている技術要件およびアドビの標準サポート条件に従ってサポートされています。
 
 クラウドネイティブな環境の場合は、AEM 製品ラインの最新オファー、Adobe Experience Manager as a Cloud Service をご確認ください。詳しくは、[Adobe Experience Manager as a Cloud Service ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)を参照してください。
 
-アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。[Adobe Managed Services に関するドキュメント](https://www.adobe.com/jp/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t)も参照してください。
+アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。詳しくは、 [Adobe Managed Services に関する追加ドキュメント](https://www.adobe.com/jp/marketing-cloud/enterprise-content-management/managed-services-cloud-platform.html?aemClk=t).
 
-AEM を Azure や AWS にデプロイするその他あらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、このページに記載されている技術仕様に従って、仮想コンピューティング環境に対して提供されます。これらのクラウド環境で実行される AEM に関連する問題を報告する場合は、その問題が、クラウドコンピューティング環境に固有のクラウドサービスと関係なく再現可能である必要があります。ただし、クラウドサービスが、このページに記載されている技術要件の一部として特別にサポートされている場合は除きます（Azure Blob ストレージ、AWS S3 など）。
+Azure、AWS、またはその他のクラウドコンピューティング環境にAEMをデプロイするその他すべての場合、Adobeからのサポートは、このページに記載されている技術仕様に従って、仮想コンピューティング環境に含まれます。 これらのクラウド環境で実行されるAEMに関して報告された問題は、Azure Blob Storage やAWS S3 など、このページに記載されている技術要件の一部としてクラウドサービスが特にサポートされていない限り、クラウドコンピューティング環境に固有のクラウドサービスとは独立して再現できます。
 
-Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合は、クラウドプロバイダーまたは使用するクラウド環境への AEM のデプロイメントをサポートするパートナーと直接共同作業することを強くお勧めします。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
+AEMを Adobe Managed Services 以外の Azure またはAWSにデプロイする方法に関する推奨事項については、お客様が選択したクラウド環境でのAEMのデプロイをサポートするクラウドプロバイダーまたはAdobeパートナーと直接連携することを強くお勧めします。 選択したクラウドプロバイダーまたはパートナーは、特定のパフォーマンス、負荷、拡張性、セキュリティ要件を満たすために、アーキテクチャのサイズ設定、設計、実装を担当します。
 
-### Dispatcher のプラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
+### Dispatcher プラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
 
 Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンの Dispatcher をダウンロード](https://helpx.adobe.com/jp/experience-manager/dispatcher/release-notes.html)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
-Dispatcher バージョン 4.3.2 で使用する場合は、次の Web サーバーがサポートされています。
+Dispatcher バージョン 4.3.2 での使用では、次の Web サーバーがサポートされています。
 
 | プラットフォーム | サポートレベル |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | A：サポート対象 |
-| Microsoft IIS 10（Internet Information Server） | A：サポート対象 |
-| Microsoft IIS 8.5（Internet Information Server） | Z：サポート対象外 |
+| Microsoft IIS 10 (Internet Information Server) | A：サポート対象 |
+| Microsoft IIS 8.5(Internet Information Server) | Z：サポート対象外 |
 
 1. Apache httpd のソースコードをベースとして構築された Web サーバーは、ベースとした httpd のバージョンと同じサポートレベルでサポートされます。これらに当てはまるか不明の場合は、アドビに問い合わせて、それぞれのサーバー製品に関するサポートレベルを確認してください。以下の場合に該当します。
 
-   1. HTTP サーバーが公式の Apache ソースディストリビューションのみを使用して構築されている。または、
-   1. HTTP サーバーが実行中のオペレーティングシステムの一部として配布されている。例：IBM HTTP Server、Oracle HTTP Server
+   1. HTTP サーバーは、公式の Apache ソースディストリビューションのみを使用して構築されています。
+   1. HTTP サーバーは、HTTP サーバーが実行されているオペレーティングシステムの一部として配信されました。 例：IBM HTTP Server、Oracle HTTP Server
 
-1. Dispatcher は、Windows オペレーティングシステム版の Apache 2.4.x ではサポートされていません。
+1. Dispatcher は、Windows オペレーティングシステム用の Apache 2.4.x では使用できません。
 
-## サポートされているクライアントプラットフォーム {#supported-client-platforms}
+## サポートされるクライアントプラットフォーム {#supported-client-platforms}
 
-### オーサリングユーザーインターフェイス向けにサポートされているブラウザー {#supported-browsers-for-authoring-user-interface}
+### オーサリングユーザーインターフェイスでサポートされているブラウザー {#supported-browsers-for-authoring-user-interface}
 
-Adobe Experience Manager ユーザーインターフェイスは次のクライアントプラットフォームで動作します。すべてのブラウザーは、デフォルトのプラグインおよびアドインのセットを使用してテストされています。
+Adobe Experience Managerユーザーインターフェイスは、次のクライアントプラットフォームで動作します。 すべてのブラウザーは、デフォルトのプラグインとアドオンのセットを使用してテストされます。
 
-AEM のユーザーインターフェイスは、大きめの画面（通常はノートブックまたはデスクトップコンピューター）およびタブレットフォームファクター（Apple iPad、Microsoft Surface など）に向けて最適化されています。携帯電話のフォームファクターはサポートされていません。
+AEMのユーザーインターフェイスは、大きな画面（通常はノートブックやデスクトップコンピューター）とタブレットのフォームファクタ (Apple iPadやMicrosoft Surface など ) に最適化されています。 電話のフォームファクタはサポートされていません。
 
 >[!NOTE]
 >
->**リリースサイクルの短いブラウザーのサポート**
+>**リリースサイクルの短いブラウザーのサポート：**
 >
->Mozilla Firefox、Google Chrome および Microsoft Edge では、数ヶ月ごとに更新プログラムがリリースされます。アドビは、これらのブラウザーの今後のバージョンで以下に示したサポートレベルを維持するために、Adobe Experience Manager の更新プログラムを提供します。
+>Mozilla Firefox、Google Chrome、Microsoft Edge のリリースは、数か月ごとに更新されます。 Adobeは、これらのブラウザーの今後のバージョンで、以下に示すサポートレベルを維持するため、Adobe Experience Managerのアップデートの提供に取り組んでいます。
 
 <table>
  <tbody>
@@ -292,12 +292,12 @@ AEM のユーザーインターフェイスは、大きめの画面（通常は�
    <td>A：サポート対象</td>
   </tr>
   <tr>
-   <td>Apple Safari（macOS）（エバーグリーン）</td>
+   <td>Apple Safari on macOS（エバーグリーン）</td>
    <td>A：サポート対象</td>
    <td>A：サポート対象</td>
   </tr>
   <tr>
-   <td>Apple Safari 11.x（macOS）</td>
+   <td>Apple Safari 11.x(macOS)</td>
    <td>Z：サポート対象外</td>
    <td>Z：サポート対象外</td>
   </tr>
@@ -314,36 +314,36 @@ AEM のユーザーインターフェイスは、大きめの画面（通常は�
  </tbody>
 </table>
 
-1. Firefox の延長サポート版（ESR）。[詳しくは、mozilla.org を参照してください。](https://www.mozilla.org/en-US/firefox/organizations/faq/)
-1. Apple iPad のサポート。
+1. Firefox の拡張サポートリリース [詳しくは、mozilla.org を参照してください。](https://www.mozilla.org/ja-JP/firefox/organizations/faq/)
+1. Apple iPadのサポート
 
-### Web サイト向けにサポートされているブラウザー {#supported-browsers-for-websites}
+### Web サイトでサポートされるブラウザー {#supported-browsers-for-websites}
 
-一般的に、AEM Sites でレンダリングされる Web サイトのブラウザーサポートは、AEM ページテンプレート、デザイン、コンポーネント出力の実装に依存するので、これらの部品を実装する団体によって管理されます。
+一般に、AEM Sitesでレンダリングされる Web サイトのブラウザーサポートは、AEMページテンプレートの実装、デザインおよびコンポーネントの出力に依存するので、これらの部分を実装する当事者を制御します。
 
 ### WebDAV クライアント {#webdav-clients}
 
 **Microsoft Windows 7 以降**
 
-Microsoft Windows 7 以降を使用して、SSL で保護されていない AEM インスタンスに正常に接続するには、保護されていないネットワーク上での基本認証を Windows で有効にする必要があります。そのためには、Web クライアントの Windows レジストリを次のように変更する必要があります。
+Microsoft Windows 7 以降で、SSL で保護されていないAEMインスタンスに正常に接続するには、セキュリティで保護されていないネットワークを介した基本認証を Windows で有効にする必要があります。 これには、WebClient の Windows レジストリの変更が必要です。
 
-1. 次のレジストリのサブキーを探します。
+1. レジストリサブキーを探します。
 
    * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
 
-1. このサブキーに 2 以上の値を使用して、BasicAuthLevel レジストリエントリを追加します。
+1. 2 以上の値を使用して、このサブキーに BasicAuthLevel レジストリエントリを追加します。
 
 Windows で WebDav クライアントの応答性を改善する方法については、[Microsoft Support KB 2445570](https://support.microsoft.com/kb/2445570) を参照してください。
 
-## プラットフォームに関するその他の注意点 {#additional-platform-notes}
+## その他の Platform に関する注意 {#additional-platform-notes}
 
-ここでは、Adobe Experience Manager およびそのアドオンの実行に関する注意点や詳細情報を説明します。
+この節では、Adobe Experience Managerとそのアドオンの実行に関する特別な注意事項と詳細情報を提供します。
 
 ### IPv4 と IPv6 {#ipv-and-ipv}
 
-Adobe Experience Manager のすべての要素（インスタンス、Dispatcher）は、IPv4 と IPv6 のいずれのネットワークにもインストールできます。
+Adobe Experience Manager（インスタンス、Dispatcher）のすべての要素は、IPv4 と IPv6 の両方のネットワークにインストールできます。
 
-特別な設定は不要で、シームレスに運用できます。必要に応じて、使用するネットワークの種類に適した形式を使用して IP アドレスを指定できます。
+特別な設定が不要なので、操作はシームレスです。 必要に応じて、ネットワークの種類に適した形式を使用して、IP アドレスを指定するだけです。
 
 つまり、IP アドレスを指定する必要がある場合には、次の形式から（必要に応じて）選択できます。
 
@@ -359,9 +359,9 @@ Adobe Experience Manager のすべての要素（インスタンス、Dispatcher
 * デフォルトの `localhost` は、IPv4 と IPv6 の両方のネットワークインストール用に変換されます。
 例：`https://localhost:4502`
 
-### AEM Dynamic Media アドオンの要件 {#requirements-for-aem-dynamic-media-add-on}
+### AEM Dynamic Media Add-on の要件 {#requirements-for-aem-dynamic-media-add-on}
 
-AEM Dynamic Media はデフォルトで無効になっています。[Dynamic Media の有効化](/help/assets/config-dynamic.md#enabling-dynamic-media)についてはこちらを参照してください。
+AEM Dynamic Mediaはデフォルトで無効になっています。 [Dynamic Media の有効化](/help/assets/config-dynamic.md#enabling-dynamic-media)についてはこちらを参照してください。
 
 Dynamic Media を有効にする場合は、以下の追加の技術要件が適用されます。
 
@@ -369,54 +369,54 @@ Dynamic Media を有効にする場合は、以下の追加の技術要件が適
 >
 >これらのシステム要件は、Dynamic Media - ハイブリッドモードを使用する場合に&#x200B;**のみ**&#x200B;適用されます。Dynamic Media - ハイブリッドモードには画像サーバーが組み込まれており、特定のオペレーティングシステムでのみ認定されています。
 >
->Dynamic Media - Scene7 モード（**dynamicmedia_scene7** 実行モード）で Dynamic Media を実行する場合は、追加のシステム要件はありません。AEM と同じシステム要件が適用されます。Dynamic Media - Scene7 モードのアーキテクチャではクラウドベースの画像サービスを使用しており、AEM に組み込まれたサービスを使用していません。
+>Dynamic Media - Scene7 モード（**dynamicmedia_scene7** 実行モード）で Dynamic Media を実行する場合は、追加のシステム要件はありません。AEM と同じシステム要件が適用されます。Dynamic Media - Scene7モードのアーキテクチャでは、AEMに埋め込まれたサービスではなく、クラウドベースの画像サービスを使用します。
 
 #### ハードウェア {#hardware}
 
-次のハードウェア要件は、Linux と Windows の両方に適用されます。
+Linux と Windows の両方に適用できるハードウェア要件は次のとおりです。
 
-* Intel Xeon または AMD Opteron CPU（4 コア以上）
+* Intel Xeon または AMD Opteron CPU と 4 コア以上
 * 16 GB 以上の RAM
 
 #### Linux {#linux}
 
 Linux で Dynamic Media を使用する場合は、次の必要条件を満たす必要があります。
 
-* RedHat Enterprise 7 または CentOS 7 以降（最新の修正パッチを適用）
-* 64 ビットのオペレーティングシステム
-* スワッピング無効（推奨）
-* SELinux 無効（以下の注意を参照）
+* 最新の修正パッチが適用された RedHat Enterprise 7 または CentOS 7 以降
+* 64 ビットオペレーティングシステム
+* スワップ無効（推奨）
+* SELinux 無効（後述の注意を参照）
 
 >[!NOTE]
 >
->LC_CTYPE（ロケール）が `en_US.UTF-8` 以外に設定されている場合、Dynamic Media は機能しません。値を確認するには、コマンドプロンプトで「locale」と入力します。設定が異なっている場合は、AEM を実行する前に「export LC_CTYPE=」と入力して、LC_CTYPE 環境変数を空の文字列に設定します。
+>LC_CTYPE（ロケール）が `en_US.UTF-8` 以外に設定されている場合、Dynamic Media は機能しません。その値を確認するには、コマンドプロンプトで「locale」と入力します。 これを設定しない場合、AEMを実行する前に&quot;export LC_CTYPE=&quot;と入力して、LC_CTYPE 環境変数を空の文字列に設定します。
 
 >[!NOTE]
 >
->**SELinux の無効化：**&#x200B;画像サービングは、SELinux が有効の場合は動作しません。このオプションはデフォルトで有効です。この問題を修正するには、**/etc/selinux/config** ファイルを編集し、SELinux 値を次のように変更します。
+>**SELinux を無効にする：** SELinux がオンの場合、画像サービングは機能しません。 このオプションはデフォルトで有効です。この問題を修正するには、 **/etc/selinux/config** ファイルを開き、SELinux 値を次の値から変更します。
 >
 >`SELINUX=enforcing`**を、**`SELINUX=disabled` に変更
 
 >[!NOTE]
 >
->**NUMA アーキテクチャ：** AMD64 および Intel EM64T のプロセッサーを搭載したシステムは、通常は NUMA プラットフォームとして構成されます。このようなプラットフォームでは、カーネルにより、1 つのメモリノードではなく複数のメモリノードがブート時に作成されます。
+>**NUMA アーキテクチャ：** AMD64 および Intel EM64Tを搭載したプロセッサを搭載したシステムは、通常、NUMA(Non-Uniform Memory Architecture) プラットフォームとして構成されます。つまり、カーネルは単一のメモリノードを構築するのではなく、起動時に複数のメモリノードを構築します。
 >
->複数のノードを作成することで、他のノードが使い果たされる前に 1 つ以上のノードでメモリが枯渇する場合があります。メモリの枯渇が発生した場合、カーネルは、空きメモリがあってもプロセス（Image Server、Platform Server など）を強制終了することがあります。
+>複数のノード構成体を使用すると、他のノードが消費される前に、1 つ以上のノードでメモリが枯渇する可能性があります。 メモリが枯渇した場合、カーネルは、使用可能なメモリがあるにもかかわらず、プロセス（Image Server や Platform Server など）を強制終了することを決定できます。
 >
->そのため、そのようなシステムを実行している場合は、**numa=off** ブートオプションを使用して NUMA をオフにし、カーネルによるこれらのプロセスの強制終了を防ぐことをお勧めします。
+>したがって、Adobeでは、NUMA をオフにするようなシステムを実行している場合、 **numa=off** カーネルがこれらのプロセスを強制終了するのを避けるための boot オプション。
 
 >[!NOTE]
 >
->**サーバーのホスト名が解決される必要があります：**&#x200B;サーバーのホスト名が IP アドレスに解決可能であることを確認してください。解決できない場合は、完全修飾ホスト名と IP アドレスを **/etc/hosts** に次のように追加してください。
+>**サーバーホスト名を解決する必要があります：** サーバーのホスト名が IP アドレスに解決できることを確認します。 解決できない場合は、完全修飾ホスト名と IP アドレスを **/etc/hosts** に次のように追加してください。
 >
 >`<ip address> <fully qualified hostname>`
 
 #### Windows {#windows}
 
 * Microsoft Windows Server 2016
-* 物理メモリ（RAM）の 2 倍以上のスワップ領域
+* スワップ領域が物理メモリ (RAM) の少なくとも 2 倍の容量に等しい
 
-Windows で Dynamic Media を使用するには、Microsoft Visual Studio 2010、2013、2015 の x64 および x86 用の再頒布可能パッケージをインストールします。
+Windows でDynamic Mediaを使用するには、x64 および x86 用のMicrosoft Visual Studio 2010、2013、および 2015 の再頒布可能パッケージをインストールします。
 
 Windows x64 の場合：
 
@@ -430,12 +430,12 @@ Windows x86 の場合：
 * Microsoft Visual Studio 2013 の再頒布可能パッケージを入手する（[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)）
 * Microsoft Visual Studio 2015 の再頒布可能パッケージを入手する（[https://www.microsoft.com/ja-jp/download/details.aspx?id=52685](https://www.microsoft.com/ja-jp/download/details.aspx?id=52685)）
 
-#### MacOS {#macos}
+#### macOS {#macos}
 
 * 10.9.x 以降
-* 試用およびデモの目的でのみサポート
+* 体験版およびデモ版のみサポート
 
-### AEM Forms PDF Generator の要件 {#requirements-for-aem-forms-pdf-generator}
+### AEM Forms Manager の要件 {#requirements-for-aem-forms-pdf-generator}
 
 ### PDF Generator のソフトウェアサポート {#software-support-for-pdf-generator}
 
@@ -443,7 +443,7 @@ Windows x86 の場合：
  <tbody>
   <tr>
    <th><p><strong>製品</strong></p> </th>
-   <th><p><strong>PDF への変換でサポートされている形式</strong></p> </th>
+   <th><p><strong>PDFへの変換でサポートされる形式</strong></p> </th>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic トラック</a> 最新バージョン</td>
@@ -494,7 +494,7 @@ Windows x86 の場合：
 
 >[!NOTE]
 >
->PDF Generator では、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみがサポートされます。
+>PDFジェネレーターは、英語版、フランス語版、ドイツ語版、および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみをサポートしています。
 >
 >さらに、次の点に注意してください。
 >
@@ -503,11 +503,11 @@ Windows x86 の場合：
 >* PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および Windows オペレーティングシステムでの変換に必要な、その他のソフトウェアのみサポートしています。
 >* PDF Generator は、Linux オペレーティング システム上の 32 ビット版および 64 ビット版の OpenOffice をサポートしています。
 >* PDF Generator は Microsoft Office 365 をサポートしていません。
->* OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
->* Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
+>* OCRPDF、Optimize PDF、Export PDFの各機能は、Windows でのみサポートされます。
+>* Acrobatのバージョンは、PDFジェネレーター機能を有効にするために、AEM Formsにバンドルされています。 バンドルされたバージョンには、AEM FormsPDFジェネレーターで使用するため、AEM Formsライセンスの期間中、AEM Formsからのみプログラムでアクセスする必要があります。 詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 >* PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
->* PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
->* PDFジェネレーターが、Microsoft Project 2019 を使用してファイルを変換できません。 Microsoft Project 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
+>* PDF ジェネレーターは、Microsoft Visio 2019 を使用してファイルを変換できません。Microsoft Visio 2016 を引き続き使用して、.VSD ファイルや .VSDX ファイルを変換できます。
+>* PDF ジェネレーターは、Microsoft Project 2019 を使用してファイルを変換できません。Microsoft Project 2016 を引き続き使用して、.VSD ファイルと.VSDX ファイルを変換できます。
 >
 
 
@@ -524,13 +524,13 @@ Windows x86 の場合：
 * Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC。
 * Designer をインストールするための管理者権限。
 
-### AEM Assets の XMP メタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
+### AEM Assets XMPメタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-XMP の書き戻しは次のプラットフォームおよびファイル形式でサポートされ、有効にされます。
+XMPの書き戻しは、次のプラットフォームおよびファイル形式でサポートされ、有効になります。
 
 * **オペレーティングシステム：**
 
-   * Linux（32 ビット、64 ビットシステムでは 32 ビットアプリケーションのサポートが必要）32 ビットのクライアントライブラリをインストールする手順については、[64 ビット RedHat Linux で XMP の抽出と書き戻しを有効にする方法](https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)を参照してください。
+   * Linux（64 ビットシステムでは 32 ビットおよび 32 ビットアプリケーションがサポートされます）。 32 ビットのクライアントライブラリをインストールする手順については、[64 ビット RedHat Linux で XMP の抽出と書き戻しを有効にする方法](https://helpx.adobe.com/jp/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)を参照してください。
 
    * Windows Server
    * Mac OS X（64 ビット）

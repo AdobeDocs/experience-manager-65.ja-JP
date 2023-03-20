@@ -5,7 +5,7 @@ mini-toc-levels: 3
 source-git-commit: 676472125cf472d42b792fae87dffe263e499014
 workflow-type: tm+mt
 source-wordcount: '2605'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -222,7 +222,7 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 
 ### Service Pack のインストール [!DNL Experience Manager] Forms {#install-aem-forms-add-on-package}
 
-AEM Formsに Service Pack をインストールする手順については、 [AEM Forms Service Pack のインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
+AEM Forms にサービスパックをインストールする手順については、[AEM Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)を参照してください。
 
 ### UberJar {#uber-jar}
 
@@ -270,7 +270,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * [GraphQL インデックスパッケージ 1.0.5 を使用した AEM コンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
 GraphQL を使用するユーザーは、このパッケージが必要です。このパッケージにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
-* コンテンツモデルのカスタム API 名を使用した可能性のあるGraphQLクエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
+* コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
 * [!DNL Microsoft®® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss®® EAP 7.1] をサポートしていないので、[!DNL Microsoft®® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 

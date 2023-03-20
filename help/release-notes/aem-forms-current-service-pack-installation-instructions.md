@@ -1,15 +1,15 @@
 ---
-title: AEM FormsのAEM Formsパッチインストール手順
-description: OSGi および JEE 環境に対するAEM Forms Service Pack のインストール手順
+title: AEM Forms の AEM Forms パッチのインストール手順
+description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
 source-git-commit: b15581701aaff72db2fc0030b0062d2f12150d8f
 workflow-type: tm+mt
 source-wordcount: '1726'
-ht-degree: 50%
+ht-degree: 87%
 
 ---
 
-# AEM 6.5 Forms Service Pack のインストール手順 {#aem-form-patch-installation-instructions}
+# AEM 6.5 Forms サービスパックのインストール手順 {#aem-form-patch-installation-instructions}
 
 ## リリース情報
 
@@ -18,69 +18,69 @@ ht-degree: 50%
 | バージョン | 6.5.16.0 |
 | タイプ | サービスパックのリリース |
 | 日付 | 2023 年 3 月 3 日 |
-| ダウンロード URL | [最新のAEM Formsリリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
+| ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
 >
->最新の [AEM Service Pack リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja) 修正された問題の完全なリストを参照してください。
+>修正された問題の一覧については、最新の[AEM サービスパックリリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)を参照してください。
 
-## Experience Manager Forms 6.5 に含まれる機能
+## Experience Manager Forms 6.5 に含まれる内容
 
-Adobe Experience Manager(AEM)Formsサービスパックには、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善など、新機能およびアップグレードされた機能が含まれています。 最新の機能と改善を提供するために、AEM Formsリリースのサービスパックを定期的に用意しています。 スタックに応じて、次のいずれかのパスを選択して、お使いの環境に service pack をダウンロードおよびインストールします。
+Adobe Experience Manager（AEM）Forms サービスパックには、お客様からリクエストされた主な機能強化、パフォーマンス、安定性、セキュリティの改善など、新機能およびアップグレードされた機能が含まれています。最新の機能と改善を提供するために、AEM Forms リリースのサービスパックを定期的に用意しています。スタックに応じて次のいずれかのパスを選択し、お使いの環境にサービスパックをダウンロードしてインストールします。
 
-* [JEE 環境のAEM Forms に Service Pack をダウンロードしてインストールする](#download-and-install-for-jee-service-pack)
-* [OSGi 環境のAEM Forms に Service Pack をダウンロードしてインストールする](#download-and-install-for-osgi-service-pack)
+* [JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール](#download-and-install-for-jee-service-pack)
+* [OSGi 環境の AEM Forms へのサービスパックのダウンロードおよびインストール](#download-and-install-for-osgi-service-pack)
 
 >[!NOTE]
 >
 > Adobeは、6 回目のサービスパックごとに完全なインストーラーをリリースします。 JEE 上のAEM 6.5 Forms Service Pack 12(6.5.12.0) は、最後の完全インストーラーです。 フルインストーラーは新しいプラットフォームをサポートし、通常のサービスパックインストーラーは新機能、バグ修正、一般的な改善を含みます。 新規インストールを実行する場合や、JEE 版 AEM 6.5 Forms 環境の最新ソフトウェアを使用することを計画している場合は、2019年4月8日（PT）にリリースされた AEM 6.5 Forms インストーラーではなく、2022年3月3日（PT）にリリースされた JEE 版 AEM 6.5.12.0 Forms の完全なインストーラーを使用することをお勧めします。完全なインストーラーを使用した後、最新のサービスパックをインストールします。
 
-## JEE 環境のAEM Forms に Service Pack をダウンロードしてインストールする {#download-and-install-for-jee-service-pack}
+## JEE 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-jee-service-pack}
 
 ![JEE のインストール](/help/forms/using/assets/jeeinstallation.png)
 
-+++1. 既存の環境のバックアップを作成します。
++++1。既存の環境のバックアップを作成します。
 
-1. バックアップ [CRX リポジトリ、データベーススキーマ、GDS（グローバルドキュメントストレージ）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
-1. &lt; をバックアップします。*AEM_forms_root*>/deploy フォルダー。
+1. [CRX リポジトリ、データベーススキーマ、GDS（グローバルドキュメントストレージ）](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html?lang=ja)をバックアップします。
+1. &lt;*AEM_forms_root*>/deploy フォルダーをバックアップします。
 
 >[!NOTE]
 >
-> AEM Service Pack インストーラーを実行する前に、AEMのインストールディレクトリに対する書き込みアクセス権があることを確認します。
+> AEM サービスパックインストーラーを実行する前に、AEM のインストールディレクトリに対する書き込みアクセス権があることを確認します。
 
 +++
 
-+++2.必要なソフトウェアをダウンロードします。
++++2. 必要なソフトウェアをダウンロードします。
 
-* [AEM Forms on JEE Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
+* [JEE への AEM Forms のサービスパック](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 * [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 * [フラグメントサーブレット](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Forg.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)
 
 +++
 
-+++3. JEE 上のAEM Forms Service Pack をインストールします。
++++3。AEM Forms on JEE サービスパックのインストール
 
 1. アプリケーションサーバーを停止します。
-1. を抽出します。 **AEM Forms on JEE Service Pack インストーラーアーカイブ** をハードドライブに追加します。
+1. **AEM Forms on JEE のサービスパックインストーラーアーカイブ**&#x200B;をハードドライブに抽出します。
 
    * **Windows**
-インストーラをコピーしたハードディスク上のインストールメディアまたはフォルダの適切なディレクトリに移動し、 
-`aemforms65_cfp_install.exe` ファイル.
+インストールメディアまたはハードディスク上にあるインストーラーのコピー先フォルダー内の適切なディレクトリに移動して、をダブルクリックします 
+`aemforms65_cfp_install.exe` ファイル。
 
       * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
    * **Linux®**
-適切なディレクトリに移動し、シェルからを選択して、と入力します。 
+適切なディレクトリに移動して、シェルから次のように入力します 
 `./aem65_cfp_install.bin`
 
-      * (Linux®) `Linux/Disk1/InstData/NoVM`
+      * （Linux®）`Linux/Disk1/InstData/NoVM`
 
-   インストールの手順を示すインストールウィザードが起動します。
+   これにより、インストール手順を示すインストールウィザードが起動します。
 
-1. 概要パネルで「**[!UICONTROL 次へ]**」をクリックします。
+1. 概要パネルで、 **[!UICONTROL 次へ]**.
 1. **インストールフォルダーを選択**&#x200B;画面で、表示されるデフォルトの場所が既存のインストール場所であることを確認するか、または「**[!UICONTROL 参照]**」をクリックして AEM Forms がインストールされている別のフォルダーを選択してから、「**[!UICONTROL 次へ]**」をクリックします。
-1. Service Pack の概要情報を読み、 **[!UICONTROL 次へ]**.
+1. サービスパックの概要情報を読み、「**[!UICONTROL 次へ]**」をクリックします。
 1. プリインストールの概要情報を読み、「**[!UICONTROL インストール]**」をクリックします。
 1. インストールが完了したら、「**[!UICONTROL 次へ]**」をクリックして、インストールされたファイルに対して Quick Fix アップデートを適用します。
 1. **[Windows のみ]：** 次のいずれかのステップを実行します。
@@ -94,25 +94,25 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
       >* の更新または置き換え **ConfigurationManager.bat** ファイルを使用すると、 .lax ファイルを手動で更新するのを防ぐことができます。
 
 
-1. **[UNIX ベースの場合のみ]:** この **Configuration Manager を起動します。** デフォルトでは、「 」チェックボックスがオンになっています。 「**[!UICONTROL 完了]**」をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、「**Configuration Manager を起動**」オプションの選択を解除してから、「**[!UICONTROL 完了]**」をクリックします。`[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
+1. **[UNIX ベース専用]：**「**Configuration Manager を起動**」チェックボックスは、デフォルトで選択されています。「**[!UICONTROL 完了]**」をクリックして Configuration Manager をすぐに実行するか、**Configuration Manager** を後で実行するには、「**Configuration Manager を起動**」オプションの選択を解除してから、「**[!UICONTROL 完了]**」をクリックします。`[AEM_forms_root]/configurationManager/bin` ディレクトリ内の適切なスクリプトを使用して、後で **Configuration Manager** を起動することができます。
 
 1. アプリケーションサーバーに応じて、以下のいずれかのドキュメントを選択し、*AEM Forms の設定とデプロイ*&#x200B;節の指示に従ってください。
 
-   * [AEM Forms のインストールおよびデプロイ（JBoss 版）®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
-   * [AEM Forms のインストールおよびデプロイ（WebSphere 版）®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
-   * [AEM Forms for WebLogic のインストールとデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
-   * [AEM forms のインストールおよびデプロイ (JBoss® Cluster 版 )](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
-   * [AEM forms のインストールおよびデプロイ (WebSphere® Cluster 版 )](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
-   * [AEM Forms for WebLogic クラスターのインストールとデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
+   * [AEM Forms for JBoss® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
+   * [AEM Forms for WebSphere® のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
+   * [ AEM Forms for WebLogic のインストールおよびデプロイ](https://www.adobe.com/go/learn_aemforms_installWebLogic_65_jp)
+   * [AEM forms for JBoss® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/install-cluster-jboss.pdf)
+   * [AEM forms for WebSphere® Cluste のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-websphere.pdf)
+   * [AEM Forms for WebLogic Cluster のインストールおよびデプロイ](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/install-cluster-weblogic.pdf)
 
 
 >[!NOTE]
 >
-> JEE 上のAEM Forms Service Pack をインストールした後、次の場所からFormsアドオンパッケージを削除する必要があります。 `crx-repository\install` フォルダーを開いてから、appserver を再起動します。 最新のFormsアドオンパッケージを [ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja).
+> JEE 上に AEM Forms サービスパックをインストールした後、appserver を再起動する前に、`crx-repository\install` フォルダーから Forms アドオンパッケージを削除する必要があります。[ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)から、最新の Forms アドオンパッケージをダウンロードします。
 
 +++
 
-+++4. サーブレットフラグメントをインストール
++++4。サーブレットフラグメントのインストール
 
 >[!NOTE]
 >
@@ -123,19 +123,19 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 サーブレットフラグメントをダウンロードしてインストールするには：
 
-1. フラグメントをダウンロードしていない場合は、からダウンロードします。 [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar).
+1. フラグメントをダウンロードしていない場合は、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar)からダウンロードします。
 
-1. アプリケーションサーバーを起動し、ログが安定するのを待って、バンドルの状態を確認します。
+1. アプリケーションサーバーを起動し、ログが安定するのを待ってから、バンドルの状態を確認します。
 
-1. Web コンソールバンドルを開きます。 デフォルトの URL は `http://[Server]:[Port]/system/console/bundles` です。
+1. Web コンソールのバンドルを開きます。デフォルトの URL は `http://[Server]:[Port]/system/console/bundles` です。
 
-1. 「Install/Update」をクリックします。 ダウンロードしたフラグメントを選択します。 `org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`. 「**Install**」または「**Update**」をクリックします。アプリケーションサーバーが安定するのを待つ
+1. 「インストール／更新」をクリックします。ダウンロードしたフラグメント「`org.apache.felix.http.servlet-api-1.2.0_fragment_full.jar`」を選択します。「**インストール**」または「**更新**」をクリックします。アプリケーションサーバーが安定するまで待つ
 
 1. アプリケーションサーバーを停止します。
 
 +++
 
-+++5. AEM サービスパック をインストールします。
++++5。AEM サービスパックをインストールします。
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
@@ -159,44 +159,44 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 このリリースでの動作が認定されたプラットフォームについては、[技術要件](/help/sites-deploying/technical-requirements.md)を参照してください。
 
-1. 製品情報ページ（`/system/console/productinfo`）の`Adobe Experience Manager (spversion)`インストール済み製品[!UICONTROL に、更新されたバージョン文字列 ] が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
-1. すべての OSGi バンドルは、 **[!UICONTROL アクティブ]** または **[!UICONTROL フラグメント]** OSGi コンソール (Web コンソールを使用： `/system/console/bundles`) をクリックします。
-1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン1.22.14以降です (WebConsole を使用： `/system/console/     bundles`) をクリックします。
+1. 製品情報ページ（`/system/console/productinfo`）の[!UICONTROL インストール済み製品]に、更新されたバージョン文字列 `Adobe Experience Manager (spversion)` が表示されます。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. すべての OSGi バンドルは、OSGi コンソールで&#x200B;**[!UICONTROL アクティブ]**&#x200B;または&#x200B;**[!UICONTROL フラグメント]**&#x200B;のいずれかになっています（web コンソールを使用：`/system/console/bundles`）。
+1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/     bundles`）。
 
 +++
 
-+++6. AEM Experience Manager Formsアドオンパッケージのインストール
++++6。AEM Experience Manager Forms アドオンパッケージのインストール
 
-1. をインストール済みであることを確認します。 [!DNL Experience Manager] サービスパック。
+1. [!DNL Experience Manager] サービスパックがインストールされていることを確認してください。
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. [AEM Forms アドオンパッケージのインストール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の記載どおりに Forms アドオンパッケージをインストールします。
 1. Experience Manager 6.5 Forms でレターを使用する場合は、[最新の AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールします。
 
 +++
 
-## OSGi 環境のAEM Forms に Service Pack をダウンロードしてインストールする {#download-and-install-for-osgi-service-pack}
+## OSGi 環境の AEM Forms へのサービスパックのダウンロードおよびインストール {#download-and-install-for-osgi-service-pack}
 
 ![OSGi のインストール手順](/help/forms/using/assets/osgiinstallation.png)
 
 
-+++1. 既存の環境のバックアップを作成します。
++++1。既存の環境のバックアップを作成します。
 
-1. バックアップ [CRX リポジトリとデータベーススキーマ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
+1. [CRX リポジトリとデータベーススキーマ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html?lang=ja)をバックアップします。
 
 >[!NOTE]
 >
-> リレーショナルデータベース用のAEM Forms Service Pack をインストールする場合は、DB_schema のバックアップを作成する必要があります。
+> リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
 
 +++
 
-+++2.必要なソフトウェアをダウンロードします。
++++2. 必要なソフトウェアをダウンロードします。
 
 * [AEM サービスパック](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja)
 * [Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 
 +++
 
-+++3. AEM サービスパック をインストールします。
++++3。AEM サービスパック をインストールします。
 
 1. インスタンスが更新モードの場合（インスタンスが以前のバージョンから更新された場合）、インストール前にインスタンスを再起動します。インスタンスの現在の稼動時間が長い場合、アドビは再起動することを推奨します。
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
@@ -227,9 +227,9 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 +++
 
-+++4. AEM Experience Manager Formsアドオンパッケージのインストール
++++4。AEM Experience Manager Forms アドオンパッケージのインストール
 
-1. をインストール済みであることを確認します。 [!DNL Experience Manager] サービスパック。
+1. [!DNL Experience Manager] サービスパックがインストールされていることを確認してください。
 1. [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)のリストから、使用しているオペレーティングシステムに対応する Forms アドオンパッケージをダウンロードします。
 1. [AEM Forms アドオンパッケージのインストール](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の記載どおりに Forms アドオンパッケージをインストールします。
 1. Experience Manager 6.5 Forms でレターを使用する場合は、[最新の AEMFD 互換性パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールします。
@@ -238,8 +238,8 @@ Adobe Experience Manager(AEM)Formsサービスパックには、お客様から�
 
 ## トラブルシューティング
 
-* If **パッケージマネージャー UI のダイアログ** service pack のインストール中に終了します。デプロイメントにアクセスする前に、エラーログが安定するのを待ちます。 アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを保証します。 通常、この問題は Safari ブラウザーで発生しますが、どのブラウザーでも断続的に発生する場合があります。
+* サービスパックのインストール中に&#x200B;**パッケージマネージャー UI のダイアログ**&#x200B;が終了した場合は、エラーログが安定するまで待ってからデプロイメントにアクセスしてください。アップデーターバンドルのアンインストールに関連する特定のログが表示されるのを待ってから、インストールが成功したことを確認してください。この問題は、通常 Safari ブラウザーで発生しますが、どのブラウザーでもときどき発生する場合があります。
 
-* インストールが完了したら、アクティビティの監視ログ (error.log) を確認します。 ログにアクティビティが表示されなくなるまで、数分待ちます。 AEM インスタンスを再起動します。
+* インストールが完了したら、アクティビティの監視ログ（error.log）を確認します。ログにアクティビティが表示されなくなるまで、数分お待ちください。AEM インスタンスを再起動します。
 
 * 次の情報が得られた場合、 **service-unavailable エラー** AEM Forms 6.5.15.0 service pack のインストール後、 [サーブレットフラグメントとバンドルのインストール](/help/forms/using/aem-service-pack-installation-solution.md) エラーを修正する。
