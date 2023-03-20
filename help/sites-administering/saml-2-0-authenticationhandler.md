@@ -11,13 +11,13 @@ content-type: reference
 discoiquuid: 6ed09b5d-5089-43d2-b9d5-e7db57be5c02
 exl-id: 8e54bccf-0ff1-448d-a237-ec42fd3bfa23
 source-git-commit: 6fa3679429527e026313b22d953267503598d1a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '850'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
-# SAML 2.0 認証ハンドラー{#saml-authentication-handler}
+# SAML 2.0 認証ハンドラー {#saml-authentication-handler}
 
 AEM には、[SAML](https://saml.xml.org/saml-specifications) 認証ハンドラーが付属しています。このハンドラーによって、`HTTP POST` バインディングを使用した [SAML](https://saml.xml.org/saml-specifications) 2.0 認証要求プロトコル（Web-SSO プロファイル）のサポートが提供されます。
 
@@ -117,11 +117,11 @@ SAML アサーションは署名されます。オプションとして暗号化
 >
 >以下のステップは、ハンドラーが署名またはメッセージを複合化できるようにする必要がある場合にのみ必須です。
 
-1. AEMの証明書/鍵のペアを作成します。 OpenSSL を使用して生成するコマンドは、次の例のようになります。
+1. AEM の証明書／鍵のペアを作成します。OpenSSL を使用して生成するコマンドは、次の例のようになります。
 
    `openssl req -newkey rsa:2048 -new -x509 -days 3652 -nodes -out certificate.crt -keyout key.pem`
 
-1. キーを DER エンコードで PKCS#8 形式に変換します。 これは、AEMキーストアに必要な形式です。
+1. キーを DER エンコードを使用して PKCS#8 形式に変換します。これは、AEM キーストアで必要な形式です。
 
    `openssl pkcs8 -topk8 -inform PEM -outform DER -in key.pem -out key.der -nocrypt`
 
