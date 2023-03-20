@@ -12,13 +12,13 @@ discoiquuid: 6ed15763-02cc-45d1-adf6-cf9e5e8ebdb0
 docset: aem65
 exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
 source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '546'
 ht-degree: 100%
 
 ---
 
-# SPA への React コンポーネントの実装{#implementing-a-react-component-for-spa}
+# SPA への React コンポーネントの実装 {#implementing-a-react-component-for-spa}
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。開発者は SPA フレームワークを使用してサイトを構築したいと考え、作成者はそうして構築されたサイトのコンテンツを AEM 内でシームレスに編集したいと考えています。
 
