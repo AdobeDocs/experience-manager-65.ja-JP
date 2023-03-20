@@ -2,7 +2,7 @@
 title: 永続的な GraphQL クエリ
 description: Adobe Experience Manager で GraphQL クエリを永続化してパフォーマンスを最適化する方法を説明します。クライアントアプリケーションで HTTP GET メソッドを使用して永続的クエリをリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュできるので、最終的にクライアントアプリケーションのパフォーマンスが向上します。
 source-git-commit: 9369f7cb9c507bbd7d7761440ceef907552aeb7d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1088'
 ht-degree: 100%
 
