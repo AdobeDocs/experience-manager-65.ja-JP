@@ -7,9 +7,9 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 source-git-commit: cd7800546ec4ebc950c5ebca4d7c80779cb2632c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3877'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は [!DNL Experience Manager] as a Cloud Service で使用できます。[!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[ as a ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja) での Connected Assets を参照してください。
+* [!DNL Adobe Experience Manager] のデプロイメントタイプでは、サポートされている条件の 1 つが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets] は [!DNL Experience Manager] as a Cloud Service で使用できます。[!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[ Experience Manager as a Cloud Service における Connected Assets ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
 
    |  | [!DNL Sites] as a [!DNL Cloud Service] | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
    |---|---|---|---|
@@ -356,7 +356,7 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 
    ![シークレットモードでの Chrome での cookie エラー](assets/chrome-cookies-incognito-dialog.png)
 
-* Experience Manager Sitesas a Cloud Serviceの Sites デプロイメントから Adobe Managed Services リモート DAM デプロイメントにアクセスできない場合は、 `aem_author.vhost` ファイル、次の場所にあります。 `"/etc/httpd/conf.d/available_vhosts`（リモート DAM の Dispatcher 設定に次のヘッダーを含める場合）
+* Experience Manager Sitesas a Cloud Service の Sites デプロイメントから Adobe Managed Services リモート DAM デプロイメントにアクセスできない場合は、リモート DAM 用の `aem_author.vhost` ファイル（`"/etc/httpd/conf.d/available_vhosts` で入手可能）を更新して、Dispatcher 設定に次のヘッダーを含めます。
 
    ```xml
    Header Set Access-Control-Allow-Origin <Local Sites instance host>
