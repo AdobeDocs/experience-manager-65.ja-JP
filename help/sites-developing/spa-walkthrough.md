@@ -5,9 +5,9 @@ topic-tags: spa
 content-type: reference
 exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
 source-git-commit: 0e8ad326e883f73e795929ce7d5d36f1bcdc5347
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1966'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -32,21 +32,21 @@ SPA エディターには、AEM 内で SPA をサポートするための包括�
 
 ## 要件 {#requirements}
 
-このガイドは、標準的な AEM 機能と、サンプルの WKND SPA Project アプリに基づいています。このチュートリアルに従うには、次の機能を使用できる必要があります。
+このガイドは、標準的な AEM 機能と、サンプルの WKND SPA Project アプリに基づいています。このチュートリアルを行うには、次の機能を使用できる必要があります。
 
-* [AEMバージョン 6.5.4 以降](/help/release-notes/release-notes.md)
+* [AEM バージョン 6.5.4 以降](/help/release-notes/release-notes.md)
    * システムの管理者権限が必要です。
-* [GitHub で入手可能なサンプルの WKND SPA Project アプリ](https://github.com/adobe/aem-guides-wknd-spa)
-   * をダウンロードします。 [React アプリの最新リリース。](https://github.com/adobe/aem-guides-wknd-spa/releases) 次のように名前が付けられます。 `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
-   * をダウンロードします。 [最新のサンプル画像](https://github.com/adobe/aem-guides-wknd-spa/releases) アプリの 次のように名前が付けられます。 `wknd-spa-sample-images-X.Y.Z.zip`.
-   * [パッケージマネージャーの使用](/help/sites-administering/package-manager.md) を使用して、AEMの他のパッケージと同様にパッケージをインストールします。
+* [GitHub で入手可能なサンプルの WKND SPA プロジェクトアプリ](https://github.com/adobe/aem-guides-wknd-spa)
+   * [React アプリの最新リリースをダウンロードします。](https://github.com/adobe/aem-guides-wknd-spa/releases) 名前は `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip` のようになります。
+   * アプリの[最新のサンプル画像](https://github.com/adobe/aem-guides-wknd-spa/releases)をダウンロードします。名前は `wknd-spa-sample-images-X.Y.Z.zip` のようになります。
+   * [パッケージマネージャーを使用](/help/sites-administering/package-manager.md)して、AEM の他のパッケージと同じようにパッケージをインストールします。
    * このチュートリアルの目的では、Maven を使用してアプリをインストールする必要はありません。
 
 >[!CAUTION]
 >
->このドキュメントでは、 [WKND Spa Project アプリ](https://github.com/adobe/aem-guides-wknd-spa) デモ目的のみ。 どのプロジェクト作業にも使用しないでください。
+>このドキュメントでは、[WKND SPA プロジェクトアプリ](https://github.com/adobe/aem-guides-wknd-spa)をデモンストレーション用としてのみ使用します。どのプロジェクト作業にも使用しないでください。
 >
->任意のAEMプロジェクトで [AEMプロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) は、SPA SDK を利用した React またはAngularを使用したSPAプロジェクトをサポートします。
+>AEM プロジェクトでは、[AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を活用します。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を活用します。
 
 ### SPA について  {#what-is-a-spa}
 
@@ -161,7 +161,7 @@ SPA がエンドユーザーにとってどのように動作するかを体験�
 
 子ページをナビゲートする際にページがリロードされないとすると、どのように読み込まれるのでしょうか。
 
-次の節では、 [SPA Application の読み込み](#loading-an-spa-application) では、SPAの読み込みの仕組みと、コンテンツの同期および非同期での読み込み方法について詳しく説明します。
+次の節の [SPA アプリケーションの読み込みでは、](#loading-an-spa-application)SPA を読み込む仕組みと、コンテンツを同期や非同期で読み込み方法を詳しく説明します。
 
 ### SPA アプリケーションの読み込み {#loading-an-spa-application}
 
@@ -181,7 +181,7 @@ SPA がエンドユーザーにとってどのように動作するかを体験�
 
    ![手順 4](assets/spa-walkthrough-step-1-4.png)
 
-1. 次に切り替え： **ネットワーク** 」タブに移動し、ページをリロードします。
+1. 開発者ツールの「**ネットワーク**」タブに切り替えて、ページをリロードします。
 
    イメージリクエストを無視した場合、ページに対して読み込まれるプライマリリソースは、ページ、CSS、React Javascript、その依存関係、およびページの JSON データです。
 
@@ -207,7 +207,7 @@ SPA がエンドユーザーにとってどのように動作するかを体験�
 
    ![手順 7](assets/spa-walkthrough-step-1-7.png)
 
-1. この動作の違いを表示するには、ページを再読み込みし、開発者ツールのネットワークアクティビティをクリアします。 ページメニューの `page-1` に移動し、`page-1` のイメージのリクエストが唯一のネットワークアクティビティであることを確認します。`page-1` 自体は読み込む必要はありません。
+1. この動作の違いを表示するには、 ページを再読み込みし、開発者ツールのネットワークアクティビティをクリアします。ページメニューの `page-1` に移動し、`page-1` のイメージのリクエストが唯一のネットワークアクティビティであることを確認します。`page-1` 自体は読み込む必要はありません。
 
    ![手順 8](assets/spa-walkthrough-step-1-8.png)
 
