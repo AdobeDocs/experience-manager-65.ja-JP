@@ -11,13 +11,13 @@ docset: aem65
 feature: Adaptive Forms
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 source-git-commit: 26403941129f3a80fdb3e9b964cb943a04b3bfa1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6888'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# アダプティブフォームのルールエディタ－{#adaptive-forms-rule-editor}
+# アダプティブフォームのルールエディタ－ {#adaptive-forms-rule-editor}
 
 ## 概要 {#overview}
 
@@ -582,7 +582,7 @@ Syntax （パラメーターの構文）：
    1. ブール値
    1. 対象範囲
 
-   範囲は、アダプティブフォームの参照フィールドに使用されます。 フォームが遅延読み込みを使用している場合は、`scope`を使用してフィールドにアクセスできます。フィールドは、フィールドが読み込まれたときか、フィールドがグローバルとしてマークされているときにアクセスできます。
+   範囲を使用して、アダプティブフォームのフィールドを参照します。フォームが遅延読み込みを使用している場合は、`scope`を使用してフィールドにアクセスできます。フィールドは、フィールドが読み込まれたときか、フィールドがグローバルとしてマークされているときにアクセスできます。
 
    他のすべてのパラメータータイプは、上記のいずれかに分類されます。「なし」はサポートされていません。上記のタイプのいずれかを選択していることを確認してください。タイプでは、大文字と小文字は区別されません。パラメーターでは、スペースは使用できません`name`。`<Parameter Descrption>` `<parameter>  can have multiple words. </parameter>`
 
