@@ -12,9 +12,9 @@ docset: aem65
 role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 source-git-commit: 26e71c5f09eb9fa3f3eda01deb871ac63e348a30
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3699'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -365,8 +365,8 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 
 1. AEM Forms on JEE では、MySQL を搭載した IBM® WebSphere® をサポートしていません。
 1. AEM Forms on JEE では、SUSE Linux Enterprise Server 12 上での JBoss をサポートしていません。SUSE Linux Enterprise Server 12 上では、IBM WebSphere のみがサポートされています。
-1. JEE 上のAEM Formsは、JBoss®ではOracleJava™ SE 以外の JDK をサポートしていません。
-1. JEE 上のAEM Formsは、IBM® WebSphere®ではIBM® JDK 以外の JDK をサポートしていません。
+1. AEM Forms on JEE は、Oracle Java™ SE 以外の JBoss® を使用する JDK をサポートしていません。
+1. AEM Forms on JEE は、IBM® JDK 以外の IBM® WebSphere® を使用する JDK をサポートしていません。
 1. CRX リポジトリは、TarMK、MongoDB、およびリレーショナルデータベース（RDBMK）の永続性をサポートします。アプリケーションサーバーと CRX リポジトリ間に 2 つの異なるデータベースシステムを持つことはできません。ただし、AEM Forms on JEE 環境では、CRX リポジトリで MongoMK を使用でき、アプリケーションサーバーでサポートしているリレーショナルデータベースを使用できます。
 1. AEM Forms on JEE は CentOS 上の WebSphere Application Server をサポートしていません。
 1. JEE 上の AEM Forms では、JBoss ロールベースのアクセス制御（RBAC）をサポートしていません。
@@ -377,10 +377,10 @@ JEE サーバーでの AEM Forms の設置でプラットフォームを選択�
 - JEE 上の AEM Forms では、指定されたメジャーおよびマイナーバージョンのサポートソフトウェアに対して、アップデート、パッチ、および修正パックをサポートしています。ただし、次のメジャーまたはマイナーバージョンに対するアップデートは、とくに記載がない限りサポートされていません。
 - クラスタベースのインストールは、TarMK 永続性タイプをサポートしません。サポートされている永続性については、[AEM Forms のインストールに永続性タイプを選択する](/help/forms/using/choosing-persistence-type-for-aem-forms.md)を参照してください。
 - JEE 上の AEM Forms では、弊社の[サードパーティソフトウェアサポートポリシー](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)に従い、さまざまなサードパーティ製のソフトウェアをサポートしています。
-- JEE 上の AEM Forms では、サードパーティベンダーによって提供されているサポートに基づいてプラットフォームをサポートします。組み合わせによっては、サードパーティベンダーが許可しない場合があります。例えば、多くのベンダーが、自社のアプリケーションサーバーを Oracle で使用することを認めていません。その結果、JEE 上のAEM Formsでもこれらの組み合わせをサポートしていません。 サポートしているソフトウェアバージョンを確実に選択するようにするために、サードパーティベンダーのサポート表もチェックしてください。
+- JEE 上の AEM Forms では、サードパーティベンダーによって提供されているサポートに基づいてプラットフォームをサポートします。組み合わせによっては、サードパーティベンダーが許可しない場合があります。例えば、多くのベンダーが、自社のアプリケーションサーバーを Oracle で使用することを認めていません。そのため、AEM Forms on JEE でもこれらの組み合わせをサポートしていません。サポートしているソフトウェアバージョンを確実に選択するようにするために、サードパーティベンダーのサポート表もチェックしてください。
 - JEE 上の AEM Forms は TarMK コールドスタンバイをサポートしません。
 - JEE 上の AEM Forms は垂直クラスタリングをサポートしません。
-- JEE 上のAEM Formsは、クラスター環境では MySQL データベースをサポートしていません。
+- AEM Forms on JEE では、クラスター環境での MySQL データベースをサポートしていません。
 - 削除または更新されたプラットフォームの一覧は、[AEM 6.5 Forms 新機能の概要](../../forms/using/whats-new.md)のドキュメントを参照してください。
 
 ### LDAP サーバー（オプション） {#ldap-servers-optional}
@@ -518,8 +518,8 @@ PDF Generator では、英語、フランス語、ドイツ語および日本語
 - OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
 - Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
 - PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
-- PDFジェネレータは、Microsoft Visio 2019 を使用してファイルを変換できません。 Microsoft Visio 2016 を引き続き使用して、 .VSD および.VSDX ファイルを変換できます。
-- PDFジェネレーターが、Microsoft Project 2019 を使用してファイルを変換できません。 引き続き、 Microsoft Project 2016 を使用して.MPP ファイルを変換できます。
+- PDF ジェネレーターは、Microsoft Visio 2019 を使用してファイルを変換できません。Microsoft Visio 2016 を引き続き使用して、.VSD ファイルや .VSDX ファイルを変換できます。
+- PDF ジェネレーターは、Microsoft Project 2019 を使用してファイルを変換できません。Microsoft Project 2016 を引き続き使用して .MPP ファイルを変換できます。
 >
 
 
@@ -667,7 +667,7 @@ Acrobat DC 製品ファミリーでは、基本的に異なる製品である Ac
    <td>すべてのアップデート</td>
   </tr>
   <tr>
-   <td>Apple Safari(macOS)</td>
+   <td>macOS の Apple Safari</td>
    <td>A：サポート対象</td>
    <td>すべてのアップデート</td>
   </tr>
@@ -738,13 +738,13 @@ JEE 上の AEM Forms では、指定されたメジャーおよびマイナー�
 
 JEE 版 AEM Forms のサードパーティソフトウェア要件は、それぞれの製品ドキュメントの「必要システム構成」の節に記載されています。すべてのドキュメントは、[https://adobe.com/go/learn_aemforms_documentation_65_jp](https://adobe.com/go/learn_aemforms_documentation_65_jp) からアクセスすることができます。
 
-JEE 上のAEM Formsのサードパーティの参照プラットフォームには、JEE 上のAEM Formsの開発とリリースの際に最新であったサードパーティインフラストラクチャの特定のパッチレベルと、そのバージョンの JEE 上のAEM Formsでサポートされるインフラストラクチャの最小パッチ/サービスパックレベルが示されます。
+AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM Forms on JEE の開発とリリースの時点において最新だったサードパーティ製インフラストラクチャの特定のパッチレベルを、そのバージョンの AEM Forms on JEE でサポートしているインフラストラクチャの最小のパッチまたはサービスパックのレベルから記述しています。
 
 アドビシステムズ社では、サードパーティベンダーがリリース時に JEE 上の AEM Forms がサポートするバージョンとの後方互換性を保証していると仮定して、サードパーティベンダーの緊急および推奨パッチをサポートします。アドビシステムズ社は、JEE 上の AEM Forms ドキュメントに記載の最小パッチレベル後にリリースされたパッチのみをサポートします。
 
 場合によっては、アドビは、主要な機能が変更され、そのために完全な後方互換性がサポートされなくなったサードパーティ製のアップデートはサポートしません。サポートされているアップデートの詳細については、[サポートされているパッチ定義](https://helpx.adobe.com/jp/aem-forms/aem-forms-third-party-software-patch.html)で特定のベンダー製品とアドビがサポートするパッチタイプを参照してください。
 
-Adobeの管理の及ばない状況下では、後方互換性を主張するサードパーティ製パッチは、Adobe製品やお客様の環境に悪影響を及ぼす場合があります。 このような場合、アドビシステムズ社は、お客様がサードパーティからの緊急パッチを重要なシステムに適用する前にその影響を評価することを推奨します。アドビシステムズ社はサードパーティと共に妥当なビジネス努力を払って、通常のアドビサポートプログラムを通してあるいはサードパーティがパッチの問題を修正することによって、そのような問題を解決します。このことは、アドビによってサポートされる新たにリリースされたサードパーティ製パッチが、ベンダーによってマニュアルに記載されているようにまたは JEE 上の AEM Forms と機能することを保証するものではありません。
+アドビの管理の及ばない状況においては、後方互換性を主張しているサードパーティ製パッチによって、アドビ製品またはお客様の環境に悪い影響を及ぼす可能性があります。このような場合、アドビシステムズ社は、お客様がサードパーティからの緊急パッチを重要なシステムに適用する前にその影響を評価することを推奨します。アドビシステムズ社はサードパーティと共に妥当なビジネス努力を払って、通常のアドビサポートプログラムを通してあるいはサードパーティがパッチの問題を修正することによって、そのような問題を解決します。このことは、アドビによってサポートされる新たにリリースされたサードパーティ製パッチが、ベンダーによってマニュアルに記載されているようにまたは JEE 上の AEM Forms と機能することを保証するものではありません。
 
 アドビシステムズ社は、任意の時点で、JEE 上の AEM Forms リリースおよびそれらのサポートされているパッチ定義によってサポートされているサードパーティリファレンスプラットフォームを変更する権利を保留します。
 
