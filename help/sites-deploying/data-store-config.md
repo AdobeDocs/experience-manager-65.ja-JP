@@ -7,13 +7,13 @@ docset: aem65
 feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 source-git-commit: 461424de9158e14e251037004ea3590ed35bb4a0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3584'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# AEM 6 でのノードストアとデータストアの設定{#configuring-node-stores-and-data-stores-in-aem}
+# AEM 6 でのノードストアとデータストアの設定 {#configuring-node-stores-and-data-stores-in-aem}
 
 ## はじめに {#introduction}
 
@@ -497,7 +497,7 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 >共有データストアの設定を使用している場合、データストアのガベージコレクションが無効になった状態で、Lucene Binary クリーンアップタスクを実行すると、使用するディスク領域が突然増加することがあります。この問題を回避するには、次の手順に従って、オーサーとパブリッシュの全インスタンスについて BlobTracker を無効にする必要があります。
 >
 >1. AEM インスタンスを停止します。
->2. `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` ファイルで `blobTrackSnapshotIntervalInSecs=L"0"` パラメーターを追加します。このパラメーターを使用するには、Oak 1.12.0 以降のバージョンが必要です。
+>2. `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config` ファイルで `blobTrackSnapshotIntervalInSecs=L"0"` パラメーターを追加します。このパラメーターを使用するには、Oak 1.12.0、1.10.2 以降のバージョンが必要です。
 >3. AEM インスタンスを再起動します。
 
 
