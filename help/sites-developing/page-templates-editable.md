@@ -12,9 +12,9 @@ discoiquuid: 1099cc44-de6d-499e-8b52-f2f5811ae086
 docset: aem65
 exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
 source-git-commit: ae56ffafff38fe60530a8850732de58ba8c8f8f9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3252'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 98%
 
 編集可能テンプレートの作成は、主にテンプレート作成者が、[テンプレートコンソールおよびテンプレートエディター](/help/sites-authoring/templates.md)を使用しておこないます。ここでは、そのプロセスの概要を示し、技術的なレベルでどのような処理が行われるかを説明します。
 
-AEM プロジェクトで編集可能テンプレートを使用する方法について詳しくは、[Lazybones を使用した AEM プロジェクトの作成](https://helpx.adobe.com/jp/experience-manager/using/aem_lazybones.html)を参照してください。
+AEM プロジェクトで編集可能テンプレートを使用する方法について詳しくは、[Lazybones を使用した AEM プロジェクトの作成](https://helpx.adobe.com/experience-manager/using/aem_lazybones.html)を参照してください。
 
 新しい編集可能テンプレートを作成する場合は、次の手順を実行します。
 
@@ -436,7 +436,7 @@ AEM プロジェクトで編集可能テンプレートを使用する方法に�
 1. [こちらのドキュメントで説明されているように](/help/sites-authoring/templates.md#creating-a-new-template-template-author)編集可能テンプレートと同じようにテンプレートを作成します。これは、テンプレートタイプの基盤となります。
 1. CRXDE Lite を使用している場合は、新しく作成したテンプレートを `templates` ノードから`template-types`テンプレートフォルダー[の下の ](/help/sites-developing/page-templates-editable.md#template-folders) ノードにコピーします。
 1. このテンプレートを[テンプレートフォルダー](/help/sites-developing/page-templates-editable.md#template-folders)の下の `templates` ノードから削除します。
-1. ( `template-types` ノード、すべて削除 `cq:template` および `cq:templateType` すべての `jcr:content` ノード。
+1. `template-types` ノードの下にあるテンプレートのコピーで、すべての `jcr:content` ノードから `cq:template` および `cq:templateType` プロパティをすべて削除します。
 
 また、GitHub で入手できる、編集可能テンプレートのサンプルを基盤として使用し、独自のテンプレートタイプを作成することもできます。
 
@@ -540,7 +540,7 @@ GitHub のコード
 
 ### コンテンツポリシー {#content-policies}
 
-コンテンツ（またはデザイン）ポリシーは、コンポーネントの使用可否や最小/最大の寸法など、コンポーネントのデザインプロパティを定義します。 これらのポリシーは、テンプレートと、そのテンプレートを使用して作成されるページに適用されます。テンプレートエディターでコンテンツポリシーを作成して選択できます。
+コンテンツ（またはデザイン）ポリシーは、コンポーネントの可用性や最小／最大寸法など、コンポーネントのデザインプロパティを定義します。これらのポリシーは、テンプレートと、そのテンプレートを使用して作成されるページに適用されます。テンプレートエディターでコンテンツポリシーを作成して選択できます。
 
 * `root` ノード上の `cq:policy` プロパティ
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
