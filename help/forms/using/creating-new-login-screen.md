@@ -1,7 +1,7 @@
 ---
 title: 新しいログイン画面の作成
 seo-title: Creating a new login screen
-description: AEM Forms Workspace または Forms Manager を例にした、LiveCycle モジュールのログインページの変更方法。
+description: AEM Forms Workspace やForms Manager など、LiveCycleモジュールのログインページの変更方法。
 seo-description: How-to modify the login page of LiveCycle modules, for example of AEM Forms workspace or Forms Manager.
 uuid: 2d4a72f4-cc9a-412d-856d-0fca75f1272b
 content-type: reference
@@ -10,16 +10,16 @@ topic-tags: forms-workspace
 discoiquuid: 35497785-263d-44b1-9ee4-85921997295b
 docset: aem65
 exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 100%
+source-wordcount: '462'
+ht-degree: 79%
 
 ---
 
 # 新しいログイン画面の作成{#creating-a-new-login-screen}
 
-AEM Forms ログイン画面を使用するすべての AEM Forms モジュールのログイン画面を変更することができます。例えば、変更すると Forms Manager および AEM Forms Workspace の両方のログイン画面に影響が及びます。
+AEM Formsログイン画面を使用するすべてのAEM Formsモジュールのログイン画面を変更できます。 例えば、変更は、Forms Manager とAEM Forms Workspace の両方のログイン画面に影響します。
 
 ## 前提条件 {#prerequisite}
 
@@ -153,7 +153,7 @@ String browserLocale = "en";
     }
 ```
 
-宛先
+To
 
 ```jsp
 String browserLocale = "en";
@@ -204,7 +204,7 @@ String browserLocale = "en";
 
 1. ここで、テキストを変更するノード（該当するロケールコードフォルダの下）のプロパティ `sling:message` の値を変更します。翻訳は、ノードのプロパティ `sling:key` の値に示されているキーを介して行われます。
 
-1. 新しいキーと値のペアを追加するには、次のアクションを実行します。次に続くスクリーンショットの例を確認してください。
+1. 新しいキーと値のペアを追加する場合は、次の操作を実行します。 次のスクリーンショットの例を確認します。
 
    1. `sling:MessageEntry` タイプのノードを作成するか、またはすべてのロケールフォルダーの下で既存のノードをコピーして名前を変更します。
    1. コピー `login.jsp` :
@@ -225,7 +225,7 @@ String browserLocale = "en";
                        <% if (loginFailed) {%>
    ```
 
-   宛先
+   To
 
    ```jsp
    div class="loginContent">
@@ -276,7 +276,7 @@ css.newLoginContentArea {
    <div class="loginContentArea">
    ```
 
-   宛先
+   To
 
    ```jsp
    <div class="newLoginContentArea">
@@ -292,7 +292,7 @@ css.newLoginContentArea {
 1. `/apps/livecycle/core/content/login` に新しい画像を追加します。画像を追加するには：
 
    1. WebDAV クライアントをインストールします。
-   1. webDAV クライアントを使用して、`/apps/livecycle/core/content/login` フォルダーに移動します。詳しくは、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/jp/crx/current/how_to/webdav_access.html) を参照してください。
+   1. webDAV クライアントを使用して、`/apps/livecycle/core/content/login` フォルダーに移動します。詳しくは、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
 
    1. 新しい画像を追加します。
 
@@ -319,7 +319,7 @@ css.newLoginContentArea {
 <div class="loginContainerBkg">
 ```
 
-宛先
+To
 
 ```jsp
 <div class="newLginContainerBkg">

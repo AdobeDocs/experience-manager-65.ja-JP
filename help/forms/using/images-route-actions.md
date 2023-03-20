@@ -1,7 +1,7 @@
 ---
 title: ルートアクションで使用されるイメージのカスタマイズ
 seo-title: Customize images used in route actions
-description: LiveCycle AEM Forms Workspace のルートアクションで使用されるイメージをカスタマイズする方法。
+description: LiveCycleAEM Forms Workspace のルートアクションで使用されるイメージをカスタマイズする方法。
 seo-description: How-to customize the images used in route actions in LiveCycle AEM Forms workspace.
 uuid: 42608376-587e-4b57-a9d5-8f9ebd981426
 content-type: reference
@@ -9,20 +9,20 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 10158c13-47b4-43e3-ac47-690f3cbab158
 exl-id: 687c6569-7189-4039-9c7a-bc29658a7756
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 30327950779337ce869b6ca376120bc09826be21
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 100%
+source-wordcount: '307'
+ht-degree: 74%
 
 ---
 
 # ルートアクションで使用されるイメージのカスタマイズ {#customize-images-used-in-route-actions}
 
-ルートアクションで使用されるイメージをカスタマイズするには、「[カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」で説明されている手順を実行し、次にこの記事で説明する手順を実行します。
+ルートアクションで使用されるイメージをカスタマイズするには、 [カスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md) この記事で説明する手順が続きます。
 
 ## ルートアクションのイメージ {#images-for-route-actions}
 
-1. 次の場所の CSS に新しいルートアクションのイメージを定義するスタイルを追加します。
+1. 新しいルートアクション用に、次の場所にある CSS でイメージを定義するスタイルを追加します。
 
    `/apps/ws/css/newStyle.css`
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >WebDAV アクセスについて詳しくは、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://docs.adobe.com/docs/jp/crx/current/how_to/webdav_access.html) を参照してください。
+   >WebDAV アクセスについて詳しくは、[https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
 
    >[!NOTE]
    >
