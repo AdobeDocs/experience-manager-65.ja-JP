@@ -1,7 +1,7 @@
 ---
 title: アセット一覧表示画面へのカスタムアクションの追加
 seo-title: Add custom action to the Asset Listing view
-description: この記事では、アセット一覧表示画面にカスタムアクションを追加する方法について説明します。
+description: この記事では、アセット一覧表示にカスタムアクションを追加する方法について説明します
 seo-description: This article teaches how to add custom action to the Asset Listing view
 uuid: 45f25cfb-f08f-42c6-99c5-01900dd8cdee
 content-type: reference
@@ -11,10 +11,10 @@ discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 100%
+source-wordcount: '1355'
+ht-degree: 73%
 
 ---
 
@@ -22,28 +22,28 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-Correspondence Management ソリューションでは、「アセットを管理」UI にカスタムアクションを追加できます。
+Correspondence Management ソリューションを使用すると、アセットを管理ユーザーインターフェイスにカスタムアクションを追加できます。
 
-次のカスタムアクションをアセット一覧表示画面に追加できます。
+次の目的で、アセット一覧表示にカスタムアクションを追加できます。
 
-* 1 つ以上のアセットタイプまたはレター。
-* 1 つまたは複数のアセット／レター選択時の実行アクション（アクション／コマンドをアクティブにする）、または非選択時の実行アクション。
+* 1 つ以上のアセットタイプまたはレター
+* 1 つ、複数のアセット/レターを選択した場合、または選択しない場合に実行（アクション/コマンドがアクティブになる）
 
-このカスタマイズの使用事例として、レターのアセット一覧表示画面に「Download Flat PDF」コマンドを追加するシナリオが示されます。このカスタマイズのシナリオを活用し、ユーザーが選択した 1 つのレターのフラット PDF をダウンロードできるようにします。
+このカスタマイズは、「フラットPDFをダウンロード」コマンドをレターのアセット一覧表示に追加するシナリオで実演されます。 このカスタマイズのシナリオを活用し、ユーザーが選択した 1 つのレターのフラット PDF をダウンロードできるようにします。
 
 ### 前提条件 {#prerequisites}
 
-以下で説明するシナリオまたは同様のシナリオを完了するには、次の知識が必要になります。
+次のシナリオまたは類似のシナリオを完了するには、次の知識が必要です。
 
 * CRX
 * JavaScript
-* Java
+* Java™
 
-## シナリオ：レターリストの UI にコマンドを追加してレターのフラットな PDF 版をダウンロードする {#addcommandtoletters}
+## シナリオ：レターのフラットPDF版をダウンロードするコマンドをレターリストのユーザーインターフェイスに追加する {#addcommandtoletters}
 
-次の手順でレターのアセット一覧画面に「Download Flat PDF」コマンドを追加し、選択されたレターのフラットな PDF のダウンロードをユーザに許可することができます。これらの手順で適切なコードとパラメーターを使用することで、データディクショナリやテキストなどこれ以外のアセットにその他の機能を追加することもできます。
+以下の手順では、「フラットPDFをダウンロード」コマンドをレターのアセット一覧表示に追加し、選択したレターのフラットPDFをユーザーがダウンロードできるようにします。 これらの手順を適切なコードとパラメーターと共に使用して、データディクショナリやテキストなど、別のアセットに対して他の機能を追加できます。
 
-Correspondence Management をカスタマイズしてレターのフラットな PDF のダウンロードをユーザーに許可するには、以下の手順を実行します。
+Correspondence Management をカスタマイズして、ユーザーがフラットPDFのレターをダウンロードできるようにするには、次の手順を実行します。
 
 1. `https://'[server]:[port]'/[ContextPath]/crx/de` にアクセスし、管理者としてログインします。
 
@@ -55,7 +55,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       >[!NOTE]
       >
-      >このパスは、1 つまたはそれ以上のアセット／レターの選択時に機能するアクションを作成する際に使用されます。選択を行わなくても機能するアクションを作成する場合は、代わりに次のパスにオーバーレイノードを作成し、それに応じて残りの手順を完了します。
+      >このパスは、1 つ以上のアセット/レターの選択に対応するアクションの作成に固有です。 選択を行わずに動作するアクションを作成する場合は、代わりに次のパスのオーバーレイノードを作成し、それに従って残りの手順を完了します。
       >
       >
       >`/libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/default/items`
@@ -86,7 +86,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
       **型：** nt:unstructured
 
-   1. 新しく作成したノードをクリックします（ここでは downloadFlatPDF）。CRX にノードのプロパティが表示されます。
+   1. 作成した新しいノード（ここでは downloadFlatPDF）をクリックします。 CRX にノードのプロパティが表示されます。
 
    1. 次のプロパティをノード（ここでは downloadFlatPDF）に追加し、「**すべて保存**」をクリックします。
 
@@ -110,7 +110,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
         <tr>
         <td>icon</td>
         <td>文字列</td>
-        <td>icon-download<br /> <br />Correspondence Management のコマンド／メニューの左側に表示されるアイコンです。使用できるその他のアイコンと設定については、<a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html" target="_blank">CoralUI Icons ドキュメント</a>を参照してください。<br /> </td>
+        <td>icon-download<br /> <br />Correspondence Management のコマンド／メニューの左側に表示されるアイコンです。使用できるその他のアイコンと設定については、<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja" target="_blank">CoralUI Icons ドキュメント</a>を参照してください。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -134,7 +134,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
         </tr>
         <tr>
         <td>title</td>
-        <td>文字列</td>
+        <td>String</td>
         <td>Download a flat PDF of the selected letter（または任意のラベルや代替テキスト）<br /> <br />このタイトルは、カスタムコマンドの上にカーソルを置いたときに Correspondence Management に表示される代替テキストです。</td>
         </tr>
         </tbody>
@@ -226,9 +226,9 @@ Correspondence Management をカスタマイズしてレターのフラットな
       '</div>';
       ```
 
-      この手順で追加するコードは libs フォルダーのコードを上書きします。そのため、変更前のコードを /apps 階層の formaction.js ファイルにコピーしてください。/libs 階層から /apps 階層にコードをコピーすることでも変更前の機能を保持することができます。
+      この手順で追加したコードは libs フォルダーのコードを上書きするので、前のコードを/apps ブランチの formaction.js ファイルにコピーします。 /libs ブランチから/apps ブランチにコードをコピーすると、以前の機能も確実に機能します。
 
-      上記のコードは、この手順で作成されたレターごとのコマンド処理のアクションに使用されます。その他のアセットの処理を行うアクションについては、JavaScript コードを変更してください。
+      上記のコードは、この手順で作成したコマンドを文字固有で処理するためのコードです。 他のアセットを処理するアクションを作成する場合は、JavaScript コードを変更します。
 
 1. 次の手順で、apps フォルダーに、actionhandlers フォルダー内の items フォルダーに類似したパス／構造で items という名前のフォルダーを作成します。
 
@@ -279,7 +279,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
    1. **POST.jsp** ファイルをダブルクリックして、CRX で開きます。
    1. POST.jsp ファイルに次のコードを追加して、「**すべて保存**」をクリックします。
 
-      このコードはレターのレンダリングサービスに固有のコードです。その他のアセットに関しては、このコードにアセットの Java ライブラリを追加してください。AEM Forms API について詳しくは、「[AEM Forms API](https://adobe.com/go/learn_aemforms_javadocs_63_en)」を参照してください。
+      このコードはレターレンダリングサービスに固有です。 他のアセットの場合は、そのアセットの Java™ライブラリをこのコードに追加します。 AEM Forms API について詳しくは、 [AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja).
 
       AEM ライブラリについて詳しくは、AEM [コンポーネント](/help/sites-developing/components.md)を参照してください。
 
@@ -354,7 +354,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 1. `https://'[server]:[port]'/[ContextPath]/projects.html` に移動し、ログインします。
 
-1. **Forms／レター**&#x200B;を選択します。Correspondence Management によってシステムで使用可能なレターが一覧表示されます。
+1. **Forms／レター**&#x200B;を選択します。Correspondence Management には、システムで使用可能なレターが一覧表示されます。
 1. 「**選択**」をクリックし、選択するレターをクリックします。
 1. **詳細**／**&lt;Download Flat PDF>**（この記事の解説に従って作成したカスタム機能）を選択します。PDF でレターをダウンロードするダイアログが表示されます。
 

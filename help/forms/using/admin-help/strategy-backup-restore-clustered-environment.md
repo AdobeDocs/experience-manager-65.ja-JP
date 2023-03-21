@@ -1,7 +1,7 @@
 ---
 title: クラスター環境でのバックアップと復元の方策
 seo-title: Strategy for backup and restore in a clustered environment
-description: AEM Forms の実装で、追加のカスタムデータを異なるデータベースに格納する場合、そのカスタムデータをバックアップするための方法を導入し、AEM Forms データと同期させる必要があります。
+description: AEM forms の実装環境で、追加のカスタムデータを別のデータベースに格納する場合は、そのデータをバックアップする方法を導入し、AEM forms のデータと同期を維持する必要があります。
 seo-description: If your AEM forms implementation stores additional custom data in a different database, you must implement a strategy to back up this data ensuring that it remains in sync with the AEM forms data.
 uuid: c29b989c-30ed-4a8e-bab8-9b7746291a33
 contentOwner: admin
@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: c332985b-4556-4056-961a-fce2356da88d
 exl-id: 98c96349-f253-475f-b646-352269814a38
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 100%
+source-wordcount: '1416'
+ht-degree: 20%
 
 ---
 
@@ -21,121 +21,121 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->AEM forms の実装で、追加のカスタムデータを異なるデータベースに格納する場合、そのカスタムデータをバックアップするための方法を導入し、AEM forms データと同期させる必要があります。また、追加のデータベースを同期しないシナリオにも対処できるように、アプリケーションを堅牢な方法で設計する必要があります。一貫性のある状態を維持するために、実行するデータベース操作をトランザクションコンテキストで行うことを強くお勧めします。
+>AEM forms の実装環境で、追加のカスタムデータを別のデータベースに格納する場合は、そのデータをバックアップする方法を導入し、AEM forms のデータと同期を維持する必要があります。 また、追加のデータベースが同期しなくなるシナリオに対応できる堅牢性を備えたアプリケーションを設計する必要があります。 実行するデータベース操作は、トランザクションのコンテキストで実行し、一貫性のある状態を維持することを強くお勧めします。
 
-エラーから回復するためには、AEM Forms システムの次の部分をバックアップする必要があります。
+エラーから回復するには、AEM forms システムの次の部分をバックアップする必要があります。
 
-* AEM Forms が使用するデータベース
-* 長期のデータおよびその他の永続的なドキュメントを持つ GDS
-* AEM データベース (crx-repository)
+* AEM forms で使用されるデータベース
+* 長期間有効なデータとその他の永続的なドキュメントを持つ GDS
+* AEMデータベース (crx-repository)
 
 >[!NOTE]
 >
->AEM Forms セットアップで使用されているその他のデータ（例えば、カスタマーフォント、コネクターデータなど）をすべてバックアップする必要があります。
+>カスタマーフォント、コネクタデータなど、AEM forms の設定で使用されている他のデータをバックアップする必要があります。
 
 ## クラスター環境のバックアップ {#back-up-a-clustered-environment}
 
-ここでは、AEM Forms クラスター環境をバックアップする次の方策について検討します。
+このトピックでは、AEM forms クラスター環境をバックアップする次の方法について説明します。
 
-* ダウンタイムを必要とするオフラインバックアップ
+* ダウンタイムを伴うオフラインバックアップ
 * ダウンタイムを必要としないオフラインバックアップ（シャットダウンされているセカンダリノードのバックアップ）
-* ダウンタイムを必要としないがレスポンスに遅れが生じるオンラインバックアップ
-* ブートストラッププロパティファイルのバックアップ
+* ダウンタイムなしで応答の遅延を伴うオンラインバックアップ
+* Bootstrapプロパティファイルのバックアップ
 
-### ダウンタイムを必要とするオフラインバックアップ {#offline-backup-with-downtime}
+### ダウンタイムを伴うオフラインバックアップ {#offline-backup-with-downtime}
 
-1. クラスターと関連サービス全体をシャットダウンします（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
-1. 任意のノード上で、データベース、GDS、およびコネクターをバックアップします（[バックアップおよび回復するファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)を参照してください）。
-1. AEM リポジトリをオフラインでバックアップするには、次の手順を実行します。
+1. クラスター全体と関連サービスをシャットダウンします。 ( [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. 任意のノードで、データベース、GDS およびコネクタをバックアップします。 ( [バックアップおよびリカバリするファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
+1. AEMリポジトリをオフラインでバックアップするには、次の手順を実行します。
 
-   1. 各クラスターノードごとに、クラスターノード ID を持つファイルをバックアップします。
+   1. 各クラスターノードに対して、クラスターノード ID を含むファイルをバックアップします。
    1. すべてのセカンダリクラスターノードのすべてのファイル（サブディレクトリも含む）をバックアップします。
    1. 各クラスターノードのリポジトリ / システム ID を別々にバックアップします。
 
-   手順について詳しくは、「[バックアップと復旧](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)」を参照してください。
+   詳細な手順については、 [バックアップと復元](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
-1. カスタマーフォントなど、その他すべてのデータをバックアップします。
-1. クラスターを再び起動します。
+1. カスタマーフォントなど、その他のデータをバックアップします。
+1. クラスターを再起動します。
 
-### ダウンタイムを必要としないオフラインバックアップ {#offline-backup-with-no-downtime}
+### ダウンタイムなしのオフラインバックアップ {#offline-backup-with-no-downtime}
 
-1. ローリングバックアップモードに入ります（[バックアップモードの開始](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)を参照してください）。
+1. ローリングバックアップモードに入ります。 ( [バックアップモードの開始](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
 
-   回復後にローリングバックアップモードを終了する必要があることに注意してください。
+   リカバリ後は、ローリングバックアップモードを終了します。
 
-1. AEM に関してクラスターのセカンダリノードをすべてシャットダウンします。（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
-1. 任意のノード上で、データベース、GDS、およびコネクターをバックアップします（[バックアップおよび回復するファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)を参照してください）。
-1. AEM リポジトリをオフラインでバックアップするには、次の手順を実行します。
+1. AEMに関するクラスターのセカンダリノードをシャットダウンします。 ( [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. 任意のノードで、データベース、GDS およびコネクタをバックアップします。 ( [バックアップおよびリカバリするファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
+1. AEMリポジトリをオフラインでバックアップするには、次の手順を実行します。
 
-   1. 各クラスターノードごとに、クラスターノード ID を持つファイルをバックアップします。
+   1. 各クラスターノードに対して、クラスターノード ID を含むファイルをバックアップします。
    1. すべてのセカンダリクラスターノードのすべてのファイル（サブディレクトリも含む）をバックアップします。
    1. 各クラスターノードのリポジトリ / system.id を別々にバックアップします。
 
-   手順について詳しくは、「[バックアップと復旧](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)」を参照してください。
+   詳細な手順については、 [バックアップと復元](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
-1. カスタマーフォントなど、その他すべてのデータをバックアップします。
-1. クラスターを再び起動します。
+1. カスタマーフォントなど、その他のデータをバックアップします。
+1. クラスターを再起動します。
 
-### ダウンタイムを必要としないがレスポンスに遅れが生じるオンラインバックアップ {#online-backup-with-no-downtime-but-delay-in-response}
+### ダウンタイムなしで応答の遅延を伴うオンラインバックアップ {#online-backup-with-no-downtime-but-delay-in-response}
 
-1. ローリングバックアップモードに入ります（[バックアップモードの開始](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes)を参照してください）。
+1. ローリングバックアップモードに入ります。 ( [バックアップモードの開始](/help/forms/using/admin-help/backing-aem-forms-data.md#entering-the-backup-modes))
 
-   回復後にローリングバックアップモードを終了する必要があることに注意してください。
+   リカバリ後は、ローリングバックアップモードを終了します。
 
-1. AEM に関してクラスターのセカンダリノードをすべてシャットダウンします。（[サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services)を参照してください）。
-1. 任意のノード上で、データベース、GDS、およびコネクターをバックアップします（[バックアップおよび回復するファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover)を参照してください）。
-1. AEM リポジトリをオンラインでバックアップするには、次の手順を実行します。
+1. AEMに関するクラスターのセカンダリノードをシャットダウンします。 ( [サービスの開始と停止](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))
+1. 任意のノードで、データベース、GDS およびコネクタをバックアップします。 ( [バックアップおよびリカバリするファイル](/help/forms/using/admin-help/files-back-recover.md#files-to-back-up-and-recover))
+1. AEMリポジトリをオンラインでバックアップするには、次の手順を実行します。
 
-   1. 各クラスターノードごとに、cluster_node.id を持つファイルをバックアップします。
+   1. 各クラスタノードに対して、 cluster_node.id を含むファイルをバックアップします。
    1. 各クラスターノードのリポジトリ / system.id を別々にバックアップします。
    1. 任意のセカンダリノード上で、リポジトリのオンラインバックアップを行います。手順について詳しくは「オンラインバックアップ」を参照してください。
 
-1. カスタマーフォントなど、その他すべてのデータをバックアップします。
-1. クラスターを再び起動します。
+1. カスタマーフォントなど、その他のデータをバックアップします。
+1. クラスターを再起動します。
 
-### ブートストラッププロパティファイルのバックアップ {#back-up-the-bootstrap-properties-file}
+### Bootstrapプロパティファイルのバックアップ {#back-up-the-bootstrap-properties-file}
 
-AEM クラスターを作成すると、すべてのセカンダリノードに対してアプリケーションサーバー内にプロパティファイルが作成されます。ブートストラッププロパティファイルをバックアップすることをお勧めします。このファイルは、アプリケーションサーバー上の次の場所にあります。
+AEM クラスターを作成すると、すべてのセカンダリノードに対してアプリケーションサーバー内にプロパティファイルが作成されます。Bootstrap・プロパティ・ファイルをバックアップすることをお勧めします。 ファイルは、アプリケーションサーバー上の次の場所にあります。
 
-* JBoss: BIN ディレクトリ内
-* WebLogic: ドメインディレクトリ内
-* WebSphere: プロファイルディレクトリ内
+* JBoss®:BIN ディレクトリ内
+* WebLogic:ドメインディレクトリ内
+* WebSphere®:プロファイルディレクトリ内
 
-AEM サカンダリノードの災害時復旧シナリオのためにこのファイルをバックアップし、リストアする場合はアプリケーションサーバーの指定場所でそれを置き換える必要があります。
+AEMセカンダリ・ノードの災害復旧シナリオ用のファイルをバックアップし、リストアされた場合は、アプリケーション・サーバ上の指定した場所に置き換えます。
 
-## クラスター環境の回復 {#recovery-in-a-clustered-environment}
+## クラスター環境での回復 {#recovery-in-a-clustered-environment}
 
-クラスター全体または単一ノードが故障した場合、バックアップを使ってそれを復元する必要があります。
+クラスタ全体または単一のノードに障害が発生した場合は、バックアップを使用して復元します。
 
-単一ノードの回復の場合は、その単一ノードをシャットダウンし、単一ノード回復手順を実行する必要があります。
+単一ノードのリカバリの場合は、単一ノードをシャットダウンし、単一ノードのリカバリ手順を実行します。
 
-データベースのクラッシュなどの障害でクラスター全体が故障した場合は、次の手順を実行する必要があります。復元は、使用したバックアップの方法に依存します。
+データベースのクラッシュなどの障害が原因でクラスター全体が失敗した場合は、次の手順を実行します。 復元は、使用するバックアップの方法によって異なります。
 
 ### 単一ノードの復元 {#restoring-a-single-node}
 
-1. 障害ノードを停止します。
+1. 破損したノードを停止します。
 
    >[!NOTE]
    >
    >障害ノードが AEM プライマリノードの場合は、クラスターノード全体をシャットダウンします。
 
 1. システムイメージから物理システムを再作成します。
-1. イメージの作成後に適用されたパッチまたはアップデートを AEM Forms に適用します。この情報は、バックアップ手順で記録されたものです。システムをバックアップしたときと同じパッチレベルに AEM Forms を回復する必要があります。
-1. （*オプション*）その他すべてのノードが正常に機能している場合は、AEM リポジトリも障害がある可能性があります。この場合は、AEM リポジトリの error.log ファイル内にリポジトリ非同期メッセージがあります。
+1. イメージの作成後に適用されたAEM forms にパッチまたはアップデートを適用します。 この情報は、バックアップ手順中に記録されました。 AEM forms は、システムのバックアップ時と同じパッチレベルに復元する必要があります。
+1. (*オプション*) その他のすべてのノードが正常に動作している場合は、AEMリポジトリも破損している可能性があります。 この場合、AEMリポジトリの error.log ファイルにリポジトリの非同期メッセージが表示されます。
 
    リポジトリを復元するには、次の手順を実行します。
 
    >[!NOTE]
    >
-   >圧縮された crx-repository バックアップをオンラインで取得した場合は、それを任意の場所に解凍し、オフライン復元プロセスに従ってください。
+   >圧縮された crx-repository バックアップがオンラインになった場合は、任意の場所で展開し、オフラインの復元プロセスに従います。
 
-   1. ノードの clusterNode ディレクトリ内にある repository、shared、version、および workspaces ディレクトリを削除します。
-   1. クラスターノードのバックアップ（サブディレクトリも含む）をノードに復元します。
-   1. ノードにある clusterNode/revision.log ファイルを削除します。
-   1. ノードに .lock がある場合は、それを削除します。
-   1. ノードに repository/system.id がある場合は、それを削除します。
+   1. ノードの clusterNode ディレクトリにある repository、shared、version および workspaces ディレクトリを削除します。
+   1. クラスターノード（サブディレクトリも含む）のバックアップをノードに復元します。
+   1. ノードのclusterNode/revision.logファイルを削除します。
+   1. ノードに.lock が存在する場合は、そのノードを削除します。
+   1. ノードにrepository/system.idが存在する場合は、そのノードを削除します。
    1. ノード上に &amp;ast;&amp;ast;/listener.properties ファイルが存在する場合は削除します。
-   1. 各クラスターノードごとに、repository/cluster_node.id を復元します。
+   1. 個々のクラスターノードに対してrepository/cluster_node.idを復元します。
 
 >[!NOTE]
 >
@@ -143,29 +143,29 @@ AEM サカンダリノードの災害時復旧シナリオのためにこのフ�
 
 * 障害ノードが AEM プライマリノードの場合は、セカンダリリポジトリフォルダーのすべてのコンテンツ（crx-repository\crx.0000、ここで 0000 は任意の桁数）を crx-repository\ リポジトリフォルダーにコピーし、セカンダリリポジトリフォルダーを削除します。
 * クラスターノードを再起動する前に、プライマリノードからリポジトリ /clusterd.txt を削除します。
-* 最初にプライマリノードを起動し、それが完全に立ち上がったら、他のノードを起動します。
+* プライマリノードが最初に起動し、起動後に他のノードを起動します。
 
 ### クラスター全体の復元 {#restoring-the-entire-cluster}
 
 1. すべてのクラスターノードを停止します。
 1. システムイメージから物理システムを再作成します。
-1. イメージの作成後に適用されたパッチまたはアップデートを AEM Forms に適用します。この情報は、バックアップの確認事項の最初の項目に基づいて、記録したものです。システムをバックアップしたときと同じパッチレベルに AEM Forms を回復する必要があります。
-1. データベース、GDS、およびコネクターを復元します
-1. 次の操作を実行して、AEM リポジトリをオフラインで回復します。
+1. イメージの作成後に適用されたAEM forms にパッチまたはアップデートを適用します。 この情報は、バックアップ手順の手順 1 で記録されました。 AEM forms は、システムのバックアップ時と同じパッチレベルに復元する必要があります。
+1. データベース、GDS、およびコネクタを復元します。
+1. 次の手順を実行して、AEMリポジトリをオフラインで復元します。
 
    >[!NOTE]
    >
-   >圧縮された crx-repository バックアップをオンラインで取得した場合は、それを任意の場所に解凍し、オフライン復元プロセスに従ってください。
+   >圧縮された crx-repository バックアップがオンラインになった場合は、任意の場所で展開し、オフラインの復元プロセスに従います。
 
-   1. すべてのクラスターノードで、clusterNode ディレクトリ内にある repository、shared、version、および workspaces ディレクトリを削除します。
-   1. 共有ディレクトリ内にあるすべてのファイルとディレクトリを削除します。
-   1. クラスターノードのバックアップ（サブディレクトリも含む）を 1 つのクラスターノードに復元します。
-   1. 復元したクラスターノードのすべてのファイルを、その他のすべてのクラスターノードにコピーします。この作業が完了すれば、各クラスターノードには同じデータが含まれます。
-   1. すべてのクラスターノードにある clusterNode/revision.log ファイルを削除します。
-   1. すべてのクラスターノードで .lock がある場合は、それを削除します。
-   1. すべてのクラスターノードで repository/system.id がある場合は、それを削除します。
+   1. すべてのクラスターノードで、clusterNode ディレクトリ内の repository、shared、version、および workspaces ディレクトリを削除します。
+   1. 共有ディレクトリ内のすべてのファイルとディレクトリを削除します。
+   1. クラスターノード（サブディレクトリを含む）のバックアップを 1 つのクラスターノードに復元します。
+   1. 復元したクラスターノードのすべてのファイルを、他のすべてのクラスターノードにコピーします。 完了すると、各クラスターノードに同じデータが含まれます。
+   1. すべてのクラスターノードでclusterNode/revision.logファイルを削除します。
+   1. すべてのクラスターノードに.lock が存在する場合は、それを削除します。
+   1. repository/system.idすべてのクラスターノードが存在する場合は削除します。
    1. すべてのクラスターノードで &amp;ast;&amp;ast;/listener.properties ファイルが存在する場合は削除します。
-   1. 各クラスターノードごとに、repository/cluster_node.id を復元します。
+   1. 個々のクラスターノードに対してrepository/cluster_node.idを復元します。
 
 >[!NOTE]
 >
@@ -173,19 +173,19 @@ AEM サカンダリノードの災害時復旧シナリオのためにこのフ�
 
 * 障害ノードが AEM プライマリノードの場合は、セカンダリリポジトリフォルダーのすべてのコンテンツ（crx-repository\crx.0000 のようなもので、0000 は任意の桁数）を crx-repository\ リポジトリフォルダーにコピーします。
 * クラスターノードを再起動する前に、プライマリノードからリポジトリ /clusterd.txt を削除します。
-* 最初にプライマリノードを起動し、それが完全に立ち上がったら、他のノードを起動します。
+* プライマリノードが最初に起動し、起動後に他のノードを起動します。
 
 ## Correspondence Management Solution パブリッシュノードのバックアップと復元 {#back-up-and-restore-correspondence-management-solution-publish-node}
 
-パブリッシャーノードは、クラスター環境ではプライマリとセカンダリの関係がありません。パブリッシャーノードのバックアップは、「[バックアップと復元](https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html)」に従って行うことができます。
+パブリッシャーノードは、クラスター環境ではプライマリとセカンダリの関係がありません。任意のパブリッシャーノードのバックアップを作成するには、次の手順を実行します [バックアップと復元](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
-### 単一パブリッシャーノードの回復 {#recover-a-single-publisher-node}
+### 単一のパブリッシャーノードを復元する {#recover-a-single-publisher-node}
 
-1. 回復する必要のあるノードをシャットダウンし、そのノードが再び立ち上がるまではパブリッシュ作業を行わないようにします。
-1. [バックアップの復元]（https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring the Backup）を使用してパブリッシュノードを復元します。
+1. 復元が必要なノードをシャットダウンし、ノードが再び立ち上がるまで公開アクティビティを実行しないでください。
+1. 次を使用してパブリッシュノードを復元します。 [バックアップの復元](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
-### クラスターの回復 {#recover-a-cluster}
+### クラスターの復元 {#recover-a-cluster}
 
-1. クラスターをシャットダウンします。
-1. [バックアップの復元]（https://docs.adobe.com/docs/en/crx/current/administering/backup_and_restore.html#Restoring the Backup）を使用してパブリッシュノードを復元します。
+1. クラスタをシャットダウンします。
+1. 次を使用してパブリッシュノードを復元します。 [バックアップの復元](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 1. 作成者クラスターのプライマリノードを起動してからセカンダリノードを起動します。
