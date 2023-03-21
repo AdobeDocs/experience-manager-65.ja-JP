@@ -509,17 +509,17 @@ AEM Forms アプリケーションで Apache Cordova がサポートされるよ
 </table>
 
 >[!NOTE]
-PDF Generator では、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみがサポートされます。
-さらに、次の点に注意してください。
-- PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
-- PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
-- PDF Generator では Microsoft Office 365 をサポートしていません。
-- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
-- OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
-- Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
-- PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
-- PDF ジェネレーターは、Microsoft Visio 2019 を使用してファイルを変換できません。Microsoft Visio 2016 を引き続き使用して、.VSD ファイルや .VSDX ファイルを変換できます。
-- PDF ジェネレーターは、Microsoft Project 2019 を使用してファイルを変換できません。Microsoft Project 2016 を引き続き使用して .MPP ファイルを変換できます。
+>PDF Generator では、英語、フランス語、ドイツ語および日本語版のサポート対象のオペレーティングシステムとアプリケーションのみがサポートされます。
+>さらに、次の点に注意してください。
+>- PDF Generator で変換を実行するには、32 ビット版の [Acrobat 2020 Classic トラックバージョン 20.004.30006](https://helpx.adobe.com/jp/acrobat/release-note/release-notes-acrobat-reader.html) または Acrobat 2017 バージョン 17.011.30078 が必要です。
+>- PDF Generator では、32 ビットリテール版の Microsoft Office Professional Plus および変換に必要なその他のソフトウェアのみサポートしています。
+>- PDF Generator では Microsoft Office 365 をサポートしていません。
+>- PDF Generator の OpenOffice 向け変換機能は、Windows と Linux でのみサポートされています。
+>- OCR PDF、PDF 最適化、PDF 書き出しの各機能は、Windows でのみサポートされます。
+>- Acrobat のバージョンは、PDF Generator 機能を有効にするために、AEM Forms にバンドルされます。バンドルされたバージョンは、AEM Forms PDF Generator で使用するために、AEM Forms ライセンスの期間中、AEM Forms でのみプログラムによってアクセスされます。詳しくは、デプロイメント（[オンプレミス](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)または [Managed Services](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)）に応じた AEM Forms 製品説明を参照してください。
+>- PDF Generator サービスでは Microsoft Windows 10 をサポートしていません。
+>- PDF ジェネレーターは、Microsoft Visio 2019 を使用してファイルを変換できません。Microsoft Visio 2016 を引き続き使用して、.VSD ファイルや .VSDX ファイルを変換できます。
+>- PDF ジェネレーターは、Microsoft Project 2019 を使用してファイルを変換できません。Microsoft Project 2016 を引き続き使用して .MPP ファイルを変換できます。
 >
 
 
@@ -633,7 +633,7 @@ AEM Forms の次のサブシステムは、[リハビリテーション法 508 �
 </table>
 
 >[!NOTE]
-Acrobat DC 製品ファミリーでは、基本的に異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
+>Acrobat DC 製品ファミリーでは、基本的に異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。2 つのトラックについての詳細や比較については、[https://www.adobe.com/go/acrobatdctracks_jp](https://www.adobe.com/go/acrobatdctracks_jp) を参照してください。
 
 ### ブラウザー {#browsers}
 
@@ -675,12 +675,12 @@ Acrobat DC 製品ファミリーでは、基本的に異なる製品である Ac
 </table>
 
 >[!NOTE]
-以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
-- Safari は Macintosh OS X でのみサポートされています。
-- Acrobat DC 以降のバージョンでは、Workspace は Macintosh OS X 10.6 および 10.7 上の Safari 5.1 をサポートしています。Safari 5.1 の Adobe Reader、Acrobat との互換性については、[https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html) を参照してください。
-- 管理コンソールは Safari ではサポートされていません。
-- Correspondence Management は、AEM 6.1 Forms で Windows® Internet Explorer 9.0 をサポートしていません。
-- Forms ポータルは、アクセシビリティのために、JAWS 14.0 画面読み上げソフトウェアを Internet Explorer 11 でサポートしています。
+>以下にデスクトップに対する一部のブラウザー関連の例外事項を示します。
+>- Safari は Macintosh OS X でのみサポートされています。
+>- Acrobat DC 以降のバージョンでは、Workspace は Macintosh OS X 10.6 および 10.7 上の Safari 5.1 をサポートしています。Safari 5.1 の Adobe Reader、Acrobat との互換性については、[https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/jp/x-productkb/multi/safari-5-1-incompatible-reader.html) を参照してください。
+>- 管理コンソールは Safari ではサポートされていません。
+>- Correspondence Management は、AEM 6.1 Forms で Windows® Internet Explorer 9.0 をサポートしていません。
+>- Forms ポータルは、アクセシビリティのために、JAWS 14.0 画面読み上げソフトウェアを Internet Explorer 11 でサポートしています。
 
 
 #### モバイルクライアント {#mobile-clients}
@@ -711,7 +711,7 @@ Acrobat DC 製品ファミリーでは、基本的に異なる製品である Ac
 </table>
 
 >[!NOTE]
-- Forms Portal は iPad の Safari でのみサポートされています。
+>- Forms Portal は iPad の Safari でのみサポートされています。
 
 
 ### AEM Forms アプリケーション {#aem-forms-workspace-app}
@@ -777,7 +777,7 @@ AEM Forms on JEE のサードパーティ参照プラットフォームは、AEM
 - OpenOffice 4.1.2
 
 >[!NOTE]
-プラットフォームは [AEM Forms 6.5.12.0 および 6.5.10.0 で非推奨となり、AEM Forms 6.5 サービスパック 18（6.5.18.0）リリースまでは引き続きサポートされます](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)。
+>プラットフォームは [AEM Forms 6.5.12.0 および 6.5.10.0 で非推奨となり、AEM Forms 6.5 サービスパック 18（6.5.18.0）リリースまでは引き続きサポートされます](https://helpx.adobe.com/jp/support/programs/eol-matrix.html)。
 
 ## 変更履歴 {#revision-history}
 
