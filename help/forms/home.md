@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Forms Guide
 description: この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '367'
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+workflow-type: tm+mt
+source-wordcount: '348'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 100%
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | AEM の Commerce 統合フレームワークについて説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html?lang=ja) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
 
 ## 主要な AEM リソース
 

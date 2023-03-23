@@ -5,9 +5,9 @@ user-guide-title: Assets ガイド
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: f4016056-47a2-4d86-b12b-90d062d6a21a
-source-git-commit: 8a51bbf3cea999f77e6eea41e184926121d6a866
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '325'
 ht-degree: 100%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 100%
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、Experience Manager プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | Experience Manager の Commerce Integration Framework について説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html?lang=ja) | このガイドでは、ユーザー作成コンテンツを [!DNL Livefyre] と共有する方法について説明します。 |
+
 
 ## 主要な [!DNL Experience Manager] リソース
 

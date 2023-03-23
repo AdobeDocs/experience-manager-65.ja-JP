@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Developing User Guide
 description: AEM インスタンスを構築する方法を説明します。プラットフォームとコンポーネントの詳細を説明し、開発ツールとパーソナライゼーションに関する情報を確認します。
 seo-description: Covers how to build out your AEM instance.
 exl-id: 4413f5e8-7e52-4ea7-8be3-5717b780a6e2
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '360'
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+workflow-type: tm+mt
+source-wordcount: '341'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,6 @@ AEM インスタンスを構築する方法を説明します。プラットフ�
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | AEM の Commerce 統合フレームワークについて説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html?lang=ja) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
 
 ## 主要な AEM リソース
 

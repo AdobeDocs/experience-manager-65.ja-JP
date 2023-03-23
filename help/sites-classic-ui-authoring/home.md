@@ -4,9 +4,9 @@ seo-title: AEM 6.5 Classic UI Authoring User Guide
 description: このガイドでは、従来のユーザーインタフェイスを使用した AEM でのオーサリングの概念を説明します。
 seo-description: Covers the concepts of authoring in AEM in the classic UI.
 exl-id: 4ce591f1-a361-473a-b07d-a618f5c57f58
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '346'
+source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+workflow-type: tm+mt
+source-wordcount: '327'
 ht-degree: 100%
 
 ---
@@ -39,7 +39,6 @@ ht-degree: 100%
 | [ユーザーガイドの管理](/help/managing/home.md) | このガイドでは、AEM プロジェクトを正常に管理する方法について説明します。 |
 | [Commerce ユーザーガイド](/help/commerce/home.md) | AEM の Commerce 統合フレームワークについて説明します。 |
 | [モバイルユーザーガイド](/help/mobile/home.md) | このガイドでは、モバイルアプリケーション用のコンテンツを作成および管理する方法について説明します。 |
-| [AEM Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/home.html?lang=ja) | このガイドでは、ユーザー生成コンテンツを Livefyre と共有する方法について説明します。 |
 
 ## 主要な AEM リソース
 
