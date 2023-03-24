@@ -1,7 +1,7 @@
 ---
 title: Multi Site Manager の拡張
 seo-title: Extending the Multi Site Manager
-description: ここでは、Multi Site Manager の機能を拡張する方法について説明します
+description: このページでは、マルチサイトマネージャーの機能を拡張する方法について説明します
 seo-description: This page helps you extend the functionalities of the Multi Site Manager
 uuid: dfa7d050-29fc-4401-8d4d-d6ace6b49bea
 contentOwner: User
@@ -11,18 +11,18 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: ht
-source-wordcount: '2582'
-ht-degree: 100%
+source-git-commit: 0caaa4b5de519567df4a527f62a2583abd7ed937
+workflow-type: tm+mt
+source-wordcount: '2593'
+ht-degree: 73%
 
 ---
 
 # Multi Site Manager の拡張{#extending-the-multi-site-manager}
 
-ここでは、Multi Site Manager の機能を拡張する方法について説明します。
+このページでは、マルチサイトマネージャーの機能を拡張する方法について説明します。
 
-* MSM Java API の主な構成要素について学習します。
+* MSM Java API の主なメンバーについて説明します。
 * ロールアウト設定で使用できる、新しい同期アクションを作成します。
 * デフォルトの言語コードと国コードを変更します。
 
@@ -39,16 +39,16 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->Multi Site Manager とその API は Web サイトのオーサリング時に使用するものなので、オーサー環境での使用のみを目的としています。
+>Multi Site Manager とその API は、Web サイトのオーサリング時に使用されるので、オーサー環境でのみ使用することを目的としています。
 
 ## Java API の概要 {#overview-of-the-java-api}
 
-Multi Site Management は、以下のパッケージで構成されています。
+マルチサイト管理は、次のパッケージで構成されています。
 
 * [com.day.cq.wcm.msm.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/package-frame.html)
 * [com.day.cq.wcm.msm.commons](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/commons/package-frame.html)
 
-主要な MSM API オブジェクトは、次のような関係にあります（[使用される用語](/help/sites-administering/msm.md#terms-used)も参照してください）。
+主な MSM API オブジェクトは、次のように操作します ( [使用された用語](/help/sites-administering/msm.md#terms-used)):
 
 ![chlimage_1-73](assets/chlimage_1-73.png)
 
@@ -61,8 +61,8 @@ Multi Site Management は、以下のパッケージで構成されています�
    * ブループリント設定（`Blueprint`）の使用は任意ですが、これを使用すると、
 
       * 作成者がソースに対して「**ロールアウト**」オプションを使用できます（これにより、このソースから継承するライブコピーに変更を（明示的に）プッシュできます）。
-      * 作成者が「**サイトを作成**」を使用できます（これにより、ユーザーが簡単に言語を選択し、ライブコピーの構造を設定できます）。
-      * 作成されるすべてのライブコピーに対するデフォルトのロールアウト設定を定義できます。
+      * 作成者が **サイトを作成**;これにより、ユーザーは簡単に言語を選択し、ライブコピーの構造を設定できます。
+      * 結果のライブコピーに対するデフォルトのロールアウト設定を定義します。
 
 * **`LiveRelationship`**
 
@@ -99,11 +99,11 @@ Multi Site Management は、以下のパッケージで構成されています�
 
    `RolloutConfig` は、呼び出し時に使用される `LiveActions` のリストを保持します。`LiveCopy` は `RolloutConfig` を継承し、その結果が `LiveRelationship` に含まれます。
 
-   * 初めてライブコピーを設定するときは、（LiveAction を呼び出す）RolloutConfig も使用します。
+   * ライブコピーの初回セットアップでは、(LiveActions をトリガーする )RolloutConfig も使用します。
 
 ## 新しい同期アクションの作成 {#creating-a-new-synchronization-action}
 
-カスタム同期アクションを作成して、ロールアウト設定と併用します。[インストール済みのアクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)が特定のアプリケーション要件を満たさない場合に同期アクションを作成します。同期アクションを作成するには、次の 2 つのクラスを作成します。
+ロールアウト設定で使用するカスタム同期アクションを作成します。 同期アクションを作成する ( [インストール済みのアクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions) 特定のアプリケーション要件を満たさないでください。 これをおこなうには、次の 2 つのクラスを作成します。
 
 * アクションを実行する [ `com.day.cq.wcm.msm.api.LiveAction`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) インターフェイスの実装。
 * [`com.day.cq.wcm.msm.api.LiveActionFactory`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) インターフェイスを実装し、`LiveAction` クラスのインスタンスを作成する OSGi コンポーネント。
@@ -170,16 +170,16 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 ## 新しいロールアウト設定の作成 {#creating-a-new-rollout-configuration}
 
-インストールされるロールアウト設定がアプリケーションの要件を満たさない場合は、ロールアウト設定を作成します。
+インストールされたロールアウト設定がアプリケーションの要件を満たさない場合は、ロールアウト設定を作成します。
 
-* [ロールアウト設定を作成](#create-the-rollout-configuration)します。
-* [ロールアウト設定に同期アクションを追加](#add-synchronization-actions-to-the-rollout-configuration)します。
+* [ロールアウト設定の作成](#create-the-rollout-configuration).
+* [ロールアウト設定に同期アクションを追加する](#add-synchronization-actions-to-the-rollout-configuration).
 
-ブループリントまたはライブコピーページでロールアウト設定を指定すると、新しいロールアウト設定が使用可能になります。
+新しいロールアウト設定は、ブループリントページまたはライブコピーページでロールアウト設定を設定する際に使用できます。
 
 >[!NOTE]
 >
->[ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts)も参照してください。
+>関連トピック [ロールアウトのカスタマイズのベストプラクティス](/help/sites-administering/msm-best-practices.md#customizing-rollouts).
 
 ### ロールアウト設定の作成 {#create-the-rollout-configuration}
 
@@ -194,13 +194,14 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    >[!NOTE]
    >これは、次のプロジェクトのカスタマイズバージョンです。
    >`/libs/msm/wcm/rolloutconfigs`
-   >これが最初の設定の場合は、作成する必要があります。
+   >これが最初の設定の場合、 `/libs` 下に新しいブランチを作成するには、ブランチをテンプレートとして使用する必要があります。 `/apps`.
 
    >[!NOTE]
    >
    >/libs パス内の設定は一切変更しないでください。
    >/libs のコンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
    >設定およびその他の変更に推奨される方法は次のとおりです。
+   >
    >* 必要な項目（例：/libs 内に存在する項目）を、/apps の下で再作成します。
    >* /apps 内で変更作業を行います。
 
@@ -247,16 +248,16 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 名前は、[同期アクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)の下の表の「**アクション名**」と同じである必要があります。例えば、`contentCopy` または `workflow` です。
    * **タイプ**：`cq:LiveSyncAction`
 
-1. 必要に応じてさらに同期アクションノードを追加して設定します。アクションノードを実行する順序に並べ替えます。一番上のアクションノードが最初に実行されます。
+1. 必要な数の同期アクションノードを追加して構成します。 アクションノードの順序が、実行する順序に一致するようにアクションノードを並べ替えます。 最上位のアクションノードが最初に発生します。
 
 ## シンプルな LiveActionFactory クラスの作成と使用 {#creating-and-using-a-simple-liveactionfactory-class}
 
 この節の手順を実行して `LiveActionFactory` を作成し、ロールアウト設定で使用します。この手順では、Maven と Eclipse を使用して、`LiveActionFactory` を作成およびデプロイします。
 
-1. [Maven プロジェクトを作成](#create-the-maven-project)し、Eclipse に読み込みます。
-1. POM ファイルに[依存関係を追加](#add-dependencies-to-the-pom-file)します。
+1. [Maven プロジェクトの作成](#create-the-maven-project) Eclipse に読み込みます。
+1. [依存関係を追加](#add-dependencies-to-the-pom-file) を POM ファイルに追加します。
 1. [`LiveActionFactory` インターフェイスを実装し、](#implement-liveactionfactory)OSGi バンドルをデプロイします。
-1. [ロールアウト設定を作成](#create-the-example-rollout-configuration)します。
+1. [ロールアウト設定の作成](#create-the-example-rollout-configuration).
 1. [ライブコピーを作成](#create-the-live-copy)します。
 
 Maven プロジェクトと Java クラスのソースコードは、公開されている Git リポジトリで入手できます。
@@ -270,19 +271,19 @@ GitHub のコード
 
 ### Maven プロジェクトの作成 {#create-the-maven-project}
 
-以下の手順では、adobe-public プロファイルを Maven 設定ファイルに追加している必要があります。
+以下の手順では、Maven 設定ファイルに adobe-public プロファイルを追加している必要があります。
 
 * adobe-public プロファイルについては、[コンテンツパッケージ Maven プラグインの取得](/help/sites-developing/vlt-mavenplugin.md#obtaining-the-content-package-maven-plugin)を参照してください。
-* Maven 設定ファイルについては、Maven の[設定リファレンス](https://maven.apache.org/settings.html)を参照してください。
+* Maven 設定ファイルについて詳しくは、Maven [設定リファレンス](https://maven.apache.org/settings.html).
 
-1. 端末またはコマンドラインセッションを開き、ディレクトリがプロジェクトを作成する場所を指すように変更します。
+1. ターミナルまたはコマンドラインセッションを開き、プロジェクトを作成する場所を指すようにディレクトリを変更します。
 1. 以下のコマンドを入力します。
 
    ```xml
    mvn archetype:generate -DarchetypeGroupId=com.day.jcr.vault -DarchetypeArtifactId=multimodule-content-package-archetype -DarchetypeVersion=1.0.0 -DarchetypeRepository=adobe-public-releases
    ```
 
-1. インタラクティブなプロンプトで、次の値を指定します。
+1. インタラクティブプロンプトで次の値を指定します。
 
    * `groupId`：`com.adobe.example.msm`
    * `artifactId`：`MyLiveActionFactory`
@@ -292,7 +293,7 @@ GitHub のコード
    * `artifactName`：`MyLiveActionFactory package`
    * `packageGroup`：`myPackages`
 
-1. Eclipse を起動して、[Maven プロジェクトを読み込みます](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse)。
+1. Eclipse を起動し、 [Maven プロジェクトを読み込む](/help/sites-developing/howto-projects-eclipse.md#import-the-maven-project-into-eclipse).
 
 ### POM ファイルへの依存関係の追加 {#add-dependencies-to-the-pom-file}
 
@@ -351,7 +352,7 @@ GitHub のコード
    ```
 
 1. **Project Explorer** から、バンドルの POM ファイルを `MyLiveActionFactory-bundle/pom.xml` で開きます。
-1. エディターで、「`pom.xml`」タブをクリックし、project/dependencies セクションを探します。次の XML を dependencies 要素内に追加して、ファイルを保存します。
+1. エディターで、「`pom.xml`」タブをクリックし、project/dependencies セクションを探します。次の XML を dependencies 要素内に追加し、ファイルを保存します。
 
    ```xml
     <dependency>
@@ -556,8 +557,8 @@ GitHub のコード
 
 1. 次のプロパティと[標準の手順を使用して、ロールアウト設定](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)を作成および設定します。
 
-   * **タイトル**：ロールアウト設定例
-   * **名前**： examplerolloutconfig
+   * **タイトル**:ロールアウト設定の例
+   * **名前**:examplerolloutconfig
    * **cq:trigger**：`publish`
 
 ### ロールアウト設定例へのライブアクションの追加 {#add-the-live-action-to-the-example-rollout-configuration}
@@ -583,7 +584,7 @@ GitHub のコード
 
 ### ライブコピーの作成 {#create-the-live-copy}
 
-ロールアウト設定を使用して、We.Retail 参照サイトの English/Products ブランチの[ライブコピーを作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)します。
+[ライブコピーの作成](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page) （We.Retail 参照サイトの英語/製品ブランチのロールアウト設定を使用）:
 
 * **ソース**：`/content/we-retail/language-masters/en/products`
 
@@ -619,12 +620,12 @@ In some cases, the **Chapters** selection is not required in the create site wiz
 
 ## 言語名とデフォルトの国の変更 {#changing-language-names-and-default-countries}
 
-AEM では、言語コードと国コードのデフォルトセットを使用します。
+AEMでは、デフォルトの言語と国コードのセットが使用されます。
 
-* デフォルトの言語コードは、ISO-639-1 で定義されている小文字 2 文字のコードです。
-* デフォルトの国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコードです。
+* デフォルトの言語コードは、ISO-639-1 で定義されている小文字の 2 文字のコードです。
+* デフォルトの国コードは、ISO 3166 で定義されている小文字または大文字の 2 文字コードです。
 
-MSM は、保存されている言語コードと国コードのリストを使用して、ページの言語バージョン名に関連付けられている国名を判断します。必要に応じて、リストの次の要素を変更できます。
+MSM では、保存されている言語と国コードのリストを使用して、ページの言語バージョンの名前に関連付けられている国名を特定します。 必要に応じて、リストの以下の側面を変更できます。
 
 * 言語タイトル
 * 国名
@@ -652,34 +653,34 @@ MSM は、保存されている言語コードと国コードのリストを使�
 1. `/libs/wcm/core/resources/languages` ノードを右クリックして、「**コピー**」をクリックします。
 1. `/apps/wcm/core/resources` フォルダーを右クリックして、「**貼り付け**」をクリックします。必要に応じて子ノードを変更します。
 1. 「**すべて保存**」をクリックします。
-1. **ツール**／**操作**／**Web コンソール**&#x200B;の順にクリックします。このコンソールから「**OSGi**」をクリックし、次に「**設定**」をクリックします。
+1. クリック **ツール**, **運用** その後 **Web コンソール**. このコンソールで、 **OSGi**&#x200B;を、 **設定**.
 1. **Day CQ WCM Language Manager** を探してクリックし、「**言語リスト**」の値を `/apps/wcm/core/resources/languages` に変更して、「**保存**」をクリックします。
 
    ![chlimage_1-78](assets/chlimage_1-78.png)
 
 ## ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 
-カスタムページプロパティの作成時に、新しいプロパティをすべてのライブコピーへのロールアウトの対象にするかどうかを検討しなければならない場合があります。
+カスタムページプロパティを作成する際には、新しいプロパティがライブコピーへのロールアウトの対象になるかどうかを検討する必要が生じる場合があります。
 
-例えば、次の 2 つのページプロパティを追加する場合は、
+例えば、2 つの新しいページプロパティを追加する場合は、次のようになります。
 
-* 連絡先電子メール：
+* 連絡先メール:
 
-   * このプロパティは国（またはブランドなど）によって異なるので、ロールアウトする必要はありません。
-
-* キービジュアルのスタイル：
-
-   * プロジェクトの要件としては、このプロパティは（通常は）すべての国（またはブランドなど）に共通なので、ロールアウトする必要があります。
-
-次のことを保証する必要があります。
-
-* 連絡先電子メール：
-
-   * このプロパティを、ロールアウトするプロパティから除外します。詳しくは、[プロパティとノードタイプの同期からの除外](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization)を参照してください。
+   * このプロパティは、国（またはブランドなど）ごとに異なるので、ロールアウトする必要はありません。
 
 * キービジュアルのスタイル：
 
-   * 継承がキャンセルされている場合以外はタッチ操作対応 UI でこのプロパティを編集できないようにし、さらに継承を回復できるようにします。継承を制御するには、関連付けの状態をトグル切り替えするチェーンリンクまたはチェーン解除リンクをクリックします。
+   * プロジェクト要件は、このプロパティが（通常は）すべての国（またはブランドなど）共通の状態でロールアウトされることです。
+
+次の点を確認する必要があります。
+
+* 連絡先メール:
+
+* このプロパティを、ロールアウトするプロパティから除外します。詳しくは、[プロパティとノードタイプの同期からの除外](/help/sites-administering/msm-sync.md#excluding-properties-and-node-types-from-synchronization)を参照してください。
+
+* キービジュアルのスタイル：
+
+* 継承がキャンセルされた場合を除き、タッチ操作対応 UI でこのプロパティを編集できないようにしてください。また、継承を元に戻すこともできます。これは、接続の状態を示す切り替えを行うチェーンリンクまたは破断リンクをクリックすることで制御します。
 
 ページプロパティをロールアウトの対象にするかどうか（したがって編集時に継承をキャンセルまたは復元するかどうか）は、次のダイアログプロパティで制御されます。
 
@@ -689,10 +690,10 @@ MSM は、保存されている言語コードと国コードのリストを使�
    * ダイアログ内にチェーンリンクシンボルを作成します。
    * 継承がキャンセルされている（チェーンリンクが解除されている）場合は、編集のみ可能です。
    * リソースの最初の子レベルにのみ適用されます。
-   * **タイプ**：`String`
+      * **タイプ**：`String`
 
-   * **値**：対象のプロパティ名を保持します（また、`name` プロパティの値と比較できます）。例として、次を参照してください。
-      `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
+      * **値**：対象のプロパティ名を保持します（また、`name` プロパティの値と比較できます）。例として、次を参照してください。
+         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 `cq-msm-lockable` が定義されている場合は、次の方法でチェーンの解除またはクローズを MSM と連携できます。
 
@@ -714,4 +715,4 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 >[!NOTE]
 >
->継承を再度有効にしても、ライブコピーページのプロパティはソースのプロパティとは自動的には同期されません。必要な場合は、手動で同期をリクエストできます。
+>継承を再度有効にした場合、ライブコピーページのプロパティはソースプロパティと自動的に同期されません。 必要な場合は、手動で同期をリクエストできます。
