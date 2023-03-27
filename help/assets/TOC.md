@@ -6,9 +6,9 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '683'
 ht-degree: 99%
 
 ---
@@ -158,6 +158,7 @@ ht-degree: 99%
 + アセットの管理 {#managing}
    + [デジタルアセットの管理](manage-assets.md)
    + [コレクションの管理](manage-collections.md)
+   + [アセットセレクター](asset-selector.md)
    + [重複項目の検出の有効化](duplicate-detection.md)
    + [デジタルアセットの整理](organize-assets.md)
    + [ビデオアセットの管理](managing-video-assets.md)
