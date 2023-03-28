@@ -7,9 +7,9 @@ feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '5605'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 100%
 
 ### 動的検索ファセット {#dynamicfacets}
 
-検索ファセット内で予想される検索結果の数は動的に更新されますが、この数を使用して、検索結果ページから目的のアセットをより迅速に見つけることができます。検索フィルターを適用する前であっても、予想されるアセット数は更新されます。フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。
+検索ファセットで期待される検索結果の数を動的に更新することで、検索結果ページから目的のアセットをより迅速に見つけることができます。 期待される数のアセットが、検索フィルターを適用する前でも更新されます。 フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット概数の表示](assets/asset_search_results_in_facets_filters.png)
 
@@ -111,13 +111,13 @@ ht-degree: 100%
 
 ### 検索ランキングおよびブースト {#searchrank}
 
-メタデータフィールド内のすべての検索用語に一致する検索結果が最初に表示され、スマートタグ内の検索用語のいずれかに一致する検索結果はその後に表示されます。上記の例の場合、検索結果が表示される順序はおおよそ次のようになります。
+メタデータフィールド内のすべての検索語句に一致する検索結果が最初に表示され、その後にスマートタグ内のいずれかの検索語句に一致する検索結果が表示されます。 上記の例では、検索結果の表示順序は次のようになります。
 
 1. 各種メタデータフィールド内の「`woman running`」に一致するもの。
 1. スマートタグ内の「`woman running`」に一致するもの。
 1. スマートタグ内の「`woman`」または「`running`」に一致するもの。
 
-特定のアセットに対するキーワードの有効性を高めることで、キーワードに基づいた検索を強化できます。つまり、特定のキーワードを昇格させた場合、それらのキーワードに基づいて検索すると、それらのキーワードの対象となる画像が検索結果の最上部に表示されます。
+特定のアセットのキーワードの関連性を高め、そのキーワードに基づく検索を促進できます。 つまり、特定のキーワードを昇格させた画像は、これらのキーワードに基づいて検索を行う際に、検索結果の上部に表示されます。
 
 1. [!DNL Assets] のユーザーインターフェイスから、アセットのプロパティページを開きます。「**[!UICONTROL 詳細]**」をクリックし、「**[!UICONTROL 検索キーワードに採用]**」の下の「**[!UICONTROL 追加]**」をクリックします。
 1. 「**[!UICONTROL 昇格を検索]**」ボックスで、画像検索時の強化の対象となるキーワードを指定し、「**[!UICONTROL 追加]**」をクリックします。同じ方法で複数のキーワードを指定できます。
@@ -175,14 +175,14 @@ ht-degree: 100%
 | 有効期限 | expires:YYYY-MM-DDTHH |
 | オンタイム | ontime:YYYY-MM-DDTHH |
 | オフタイム | offtime:YYYY-MM-DDTHH |
-| 時間の範囲（有効期限、オンタイム、オフタイム） | facet field : lowerbound..upperbound |
-| パス | /content/dam/&lt;folder name> |
-| PDF タイトル | pdftitle:&quot;Adobe Document&quot; |
+| 時間の範囲（有効期限、日時、オフタイム） | ファセットフィールド：下限…上 |
+| パス | /content/dam/&lt;folder name=&quot;&quot;> |
+| PDF タイトル | pdftitle:&quot;Adobe文書&quot; |
 | 件名 | subject:&quot;Training&quot; |
 | タグ | tags:&quot;Location And Travel&quot; |
 | タイプ | type:&quot;image\png&quot; |
-| 画像の幅 | width:lowerbound..upperbound |
-| 画像の高さ | height:lowerbound..upperbound |
+| 画像の幅 | width:lowerbound...上 |
+| 画像の高さ | height:lowerbound..上 |
 | Person | person:John |
 
 `path`、`limit`、`size`、`orderby` プロパティは、`OR` 演算子を使用して他のプロパティと組み合わせることはできません。
@@ -248,10 +248,10 @@ ht-degree: 100%
 
 | 名前 | 値 | 例 | 目的 |
 |---|---|---|---|
-| resource suffix (B) | URL のリソースサフィックスとしてのフォルダーパス： [https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えばフォルダーが `/content/dam/we-retail/en/activities` の場合、URL は `https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` のような形式になります | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
+| リソースサフィックス (B) | URL のリソースサフィックスとしてのフォルダーパス： [https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 特定のフォルダーが選択された状態でアセットセレクターを起動するには、例えばフォルダーが `/content/dam/we-retail/en/activities` の場合、URL は `https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` のような形式になります | アセットセレクターの起動時に特定のフォルダーを選択する必要がある場合、そのフォルダーをリソースサフィックスとして渡します。 |
 | `mode` | single、multiple | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | 複数モードでは、アセットセレクターを使用して、いくつかのアセットを同時に選択できます。 |
 | `dialog` | true、false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | アセットセレクターを Granite ダイアログとして開くには、これらのパラメーターを使用します。このオプションは、Granite パスフィールドを使用してアセットセレクターを起動し、pickerSrc URL として設定する場合にのみ適用できます。 |
-| `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。この場合、アセットセレクターを使用すると、ルートフォルダーの下の子アセット（直接／間接）のみを選択できます。 |
+| `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | アセットセレクターのルートフォルダーを指定するには、このオプションを使用します。 この場合、アセットセレクターを使用して、ルートフォルダーの下の子アセット（直接/間接）のみを選択できます。 |
 | `viewmode` | 検索を |  | `assettype` パラメーターと `mimetype` パラメーターを指定して、アセットセレクターを検索モードで起動します。 |
 | `assettype` | 画像、ドキュメント、マルチメディア、アーカイブ。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives` </li></ul> | 渡された値に基づいてアセットタイプをフィルタリングするには、このオプションを使用します。 |
 | `mimetype` | アセットの MIME タイプ（`/jcr:content/metadata/dc:format`）（ワイルドカードもサポートされています）。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?mimetype=image/png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&mimetype=*png`</li></ul> | MIME タイプに基づいてアセットをフィルタリングするために使用します。 |
@@ -396,13 +396,13 @@ PSD ファイルや PDF ファイルなどのアセットをユーザーがア�
 
 | 検索フィールド | 検索プロパティの値 |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| MIME タイプ | 画像、ドキュメント、マルチメディア、アーカイブ、その他 |
-| 最終変更 | 時間、日、週、月、年 |
-| ファイルサイズ | 小、中、大 |
-| 公開ステータス | 公開済みまたは非公開 |
-| 承認ステータス | 承認または却下 |
-| 向き | 水平方向、垂直方向、四角形 |
-| スタイル | カラーまたは白黒 |
+| MIME タイプ | 画像、ドキュメント、マルチメディア、アーカイブ、その他。 |
+| 最終変更 | 時間、日、週、月、年。 |
+| ファイルサイズ | 小、中、大。 |
+| 公開ステータス | 公開済みまたは非公開。 |
+| 承認済みステータス | 承認済みまたは却下済み。 |
+| 向き | 「水平」、「垂直」、「四角形」のいずれかを選択します。 |
+| スタイル | 色、または白黒。 |
 | ビデオの高さ | 最小値と最大値として指定。値はビデオレンディションのメタデータにのみ保存されます。 |
 | ビデオの幅 | 最小値と最大値として指定。値はビデオレンディションのメタデータにのみ保存されます。 |
 | ビデオ形式 | DVI、Flash、MPEG4、MPEG、OGG Theora、QuickTime、Windows Media。値はソースビデオとレンディションのメタデータに保存されます。 |
