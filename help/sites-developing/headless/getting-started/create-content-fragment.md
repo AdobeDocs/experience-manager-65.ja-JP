@@ -2,7 +2,7 @@
 title: コンテンツフラグメントのヘッドレス作成のクイック開始ガイド
 description: AEM のコンテンツフラグメントを使用して、ページに依存しないヘッドレス配信用コンテンツを設計、作成、キュレーションおよび使用する方法を説明します。
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 100%
@@ -32,16 +32,16 @@ AEM のコンテンツフラグメントを使用して、ページに依存し�
    * 使用できるモデルは、コンテンツフラグメントを作成する&#x200B;[**アセットフォルダーに対して定義した**&#x200B;クラウド設定](create-assets-folder.md)によって異なります。
    * `We could not find any models` というメッセージが表示された場合は、アセットフォルダーの設定を確認してください。
 
-   ![コンテンツフラグメントモデルを選択](../assets/content-fragment-model-select.png)
+   ![コンテンツフラグメントモデルを選択](assets/content-fragment-model-select.png)
 1. 必要に応じて、**タイトル**、**説明**、**タグ**&#x200B;を指定し、「**作成**」をタップまたはクリックします。
 
-   ![コンテンツフラグメントを作成](../assets/content-fragment-create.png)
+   ![コンテンツフラグメントを作成](assets/content-fragment-create.png)
 1. 確認ウィンドウで「**開く**」をタップまたはクリックします。
 
-   ![作成されたコンテンツフラグメントの確認](../assets/content-fragment-confirmation.png)
+   ![作成されたコンテンツフラグメントの確認](assets/content-fragment-confirmation.png)
 1. コンテンツフラグメントエディターで、コンテンツフラグメントの詳細を指定します。
 
-   ![コンテンツフラグメントエディター](../assets/content-fragment-edit.png)
+   ![コンテンツフラグメントエディター](assets/content-fragment-edit.png)
 1. 「**保存**」または「**保存して閉じる**」をタップまたはクリックします。
 
 コンテンツフラグメントは他のコンテンツフラグメントを参照でき、必要に応じてネストされたコンテンツ構造を作成できます。

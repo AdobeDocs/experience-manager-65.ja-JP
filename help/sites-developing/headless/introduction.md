@@ -2,7 +2,7 @@
 title: AEM 6.5 Sites 向けヘッドレス開発
 description: コンテンツモデル、コンテンツフラグメント、GraphQL API など、AEM 6.5 の強力なヘッドレス機能が連携する仕組みと、エクスペリエンスを一元管理して複数のチャネルで提供する方法を学びます。
 exl-id: b6598bcf-b2ce-403a-87cf-6895fec8a91b
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 100%
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 ヘッドレス実装は、フルスタックおよびハイブリッドソリューションにおける従来のようなページおよびコンポーネント管理ではなく、チャネルに依存しない再利用可能なコンテンツフラグメントの作成とそのクロスチャネル配信に重点を置いています。これは、web エクスペリエンスを実装するための最新の動的な開発パターンです。
 
-![AEM 実装モデル](assets/aem-implementation-models.png)
+![AEM 実装モデル](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
 ## ヘッドフルとヘッドレスの比較 {#headful-headless}
 

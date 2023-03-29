@@ -2,7 +2,7 @@
 title: AEM Delivery API を使用してコンテンツにアクセスする方法
 description: AEM ヘッドレスデベロッパージャーニーのこのパートでは、GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスする方法を説明します。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
-source-git-commit: 62d921df1b03520b53ceefa072530bf0214df30a
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 98%
@@ -243,10 +243,10 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 
 * エンドポイントの有効化
    * ツール／Assets／GraphQL の使用
-   * [GraphQL エンドポイントの有効化](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
+   * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
 
 * GraphiQL へのアクセス（必要な場合）
-   * [AEM GraphiQL インターフェイス](/help/assets/content-fragments/graphql-api-content-fragments.md#graphiql-interface)
+   * [AEM GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)
 
 ### サンプル構造 {#sample-structure}
 
@@ -269,7 +269,7 @@ AEM GraphQL API をクエリで実際に使用するにあたって、次のよ�
 
 ### クエリのテスト場所 {#where-to-test-your-queries}
 
-クエリは、 [GraphiQL インターフェイス](/help/assets/content-fragments/graphiql-ide.md)（例： ）。
+クエリは、 [GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)（例： ）。
 
 * `http://localhost:4502/aem/graphiql.html`
 
@@ -362,14 +362,14 @@ AEM GraphQL API の使用と必要な要素の設定について詳しくは、�
    * [変数](https://graphql.org/learn/queries/#variables)
    * [GraphQL Java ライブラリ](https://graphql.org/code/#java)
 * [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql)
-* [AEM での GraphQL の使用方法](/help/assets/content-fragments/graphql-api-content-fragments.md)
-   * [GraphQL エンドポイントの有効化](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)
-   * [AEM GraphiQL インターフェイスのインストール](/help/assets/content-fragments/graphql-api-content-fragments.md#installing-graphiql-interface)
-* [サンプルコンテンツフラグメント構造](/help/assets/content-fragments/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
-* [AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ](/help/assets/content-fragments/content-fragments-graphql-samples.md)
-   * [サンプルクエリ - 1 つの特定の都市フラグメント](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
-   * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
-   * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/assets/content-fragments/content-fragments-graphql-samples.md#sample-cities-named-variation)
+* [AEM での GraphQL の使用方法](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+   * [GraphQL エンドポイントの有効化](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)
+   * [AEM GraphiQL インターフェイスのインストール](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)
+* [サンプルコンテンツフラグメント構造](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#content-fragment-structure-graphql)
+* [AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
+   * [サンプルクエリ - 1 つの特定の都市フラグメント](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)
+   * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)
+   * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)
 * [設定ブラウザーでコンテンツフラグメント機能を有効にする](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser)
 * [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
    * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)

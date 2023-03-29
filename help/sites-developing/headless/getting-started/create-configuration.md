@@ -2,7 +2,7 @@
 title: ヘッドレス設定の作成に関するクイックスタートガイド
 description: AEM 6.5 でヘッドレス機能を使い始めるための最初の手順として、設定を作成します。
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 100%
@@ -34,7 +34,7 @@ AEM のヘッドレスなコンテンツ管理に関しては、AEM 内でコン
    * **コンテンツフラグメントモデル**
    * **GraphQL の永続的なクエリ**
 
-   ![設定の作成](../assets/create-configuration.png)
+   ![設定の作成](assets/create-configuration.png)
 
 1. 「**作成**」をタップまたはクリックします。
 

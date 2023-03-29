@@ -2,7 +2,7 @@
 title: AEM ヘッドレスの概要
 description: ここでは、AEM ヘッドレスデベロッパージャーニーのこの部分では、AEM ヘッドレスの前提条件について説明します。
 exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
-source-git-commit: 40e81b63e28a75c769507654d7f1d75da82f0bd6
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 100%
@@ -287,7 +287,7 @@ AEM を使用した[一般的なヘッドレス実装](#level-1)の場合、デ�
 * [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md) - コンテンツフラグメントの技術ドキュメント
 * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md) - コンテンツフラグメントモデルの技術ドキュメント
 * [GraphQL 技術ドキュメント](https://graphql.org) - GraphQL の定義（外部リンク）
-* [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) - コンテンツフラグメントにアクセスして配信するリクエストを作成する方法を説明する技術ドキュメント
+* [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) - コンテンツフラグメントにアクセスして配信するリクエストを作成する方法を説明する技術ドキュメント
 * [Assets REST API](/help/assets/assets-api-content-fragments.md) - コンテンツフラグメント（およびその他のアセット）を作成および変更する方法を説明する技術ドキュメント
-* [永続クエリ](/help/assets/content-fragments/persisted-queries.md) - AEM での永続クエリに関する技術ドキュメント
+* [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md) - AEM での永続クエリに関する技術ドキュメント
 * [AEM のヘッドフルとヘッドレス](/help/sites-developing/headful-headless.md) - AEM で使用可能なヘッドレス統合レベルの完全な説明

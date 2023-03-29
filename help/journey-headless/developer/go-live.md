@@ -2,7 +2,7 @@
 title: ヘッドレスアプリケーションの運用開始方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法について説明します。
 exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 100%
@@ -104,7 +104,7 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 
 ### ローンチ前にヘッドレスアプリケーションのセキュリティを確保 {#secure-and-scale-before-launch}
 
-1. GraphQL リクエストの[認証](/help/assets/content-fragments/graphql-authentication-content-fragments.md)を準備
+1. GraphQL リクエストの[認証](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)を準備
 
 ### モデル構造と GraphQL 出力 {#structure-vs-output}
 

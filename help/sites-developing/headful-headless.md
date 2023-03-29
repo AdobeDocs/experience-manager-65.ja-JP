@@ -2,7 +2,7 @@
 title: AEM におけるヘッドフルとヘッドレス
 description: AEM プロジェクトはヘッドフルモデルでもヘッドレスモデルで実装できますが、二者択一ではありません。AEM は、1 つのプロジェクトで両方のモデルのメリットを活用できる柔軟性を備えています。
 exl-id: c9597c78-be05-42ff-84fe-f7451119e83d
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: ac70fb534a95c9eee6f8340d9b8720a607b9f79f
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 100%
@@ -21,7 +21,7 @@ AEM には、コンテンツの作成と配信を 1 つのプラットフォー�
 
 しかし、これは二者択一である必要はありません。AEM にはこれまでにはない柔軟性があるので、プロジェクトに両方のモデルのメリットを活用できます。
 
-![AEM 実装モデル](headless/assets/aem-implementation-models.png)
+![AEM 実装モデル](/help/sites-developing/headless/getting-started/assets/aem-implementation-models.png)
 
 ヘッドフルモデルつまりフルスタックモデルでは、コンテンツは AEM リポジトリで管理され、Java や HTL などに基づく AEM コンポーネントを使用してユーザーエクスペリエンス用にレンダリングされます。このモデルでは、コンテンツの作成、スタイル設定、表示、配信がすべて AEM で行われます。
 
@@ -54,18 +54,18 @@ SPA 統合は AEM の 4 つのレベルに分かれます。
    * コンテンツは、2 つの別個のシステムで独立に作成、管理、配信されます。
 * **レベル 1：コンテンツフラグメント統合**
    * AEM で[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)を使用して、SPA 用の限られたコンテンツを作成および管理します。
-   * SPA は、AEM の [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
+   * SPA は、AEM の [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
    * 一部のコンテンツは AEM で管理され、一部は外部システムで管理されます。
    * コンテンツは SPA でのみ表示できます。
 * **レベル 2：SPA を AEM に組み込む**
    * AEM で[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)を使用して、SPA 用のコンテンツを作成および管理します。
-   * SPA は、AEM の [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
+   * SPA は、AEM の [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
    * 一部のコンテンツは AEM で管理され、一部は外部システムで管理されます。
    * コンテンツは AEM 内でインコンテクストで表示できます。
    * 限られたコンテンツを AEM 内で編集できます。
 * **レベル 3：SPA を AEM に組み込んで完全に有効にする**
    * AEM で[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)を使用して、SPA 用のコンテンツを作成および管理します。
-   * SPA は、AEM の [GraphQL API](/help/assets/content-fragments/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
+   * SPA は、AEM の [GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) を通じてこのコンテンツを取得します。
    * コンテンツは AEM 内でインコンテクストで表示できます。
    * ほとんどのコンテンツを AEM 内で編集できます。
 

@@ -8,10 +8,10 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: c5bc743f845281bdbad522053c0e57791921ffd2
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 98%
+source-wordcount: '1285'
+ht-degree: 99%
 
 ---
 
@@ -138,11 +138,12 @@ ht-degree: 98%
    + 配信 API{#delivery-api}
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=ja)
       + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja)
-      + [コンテンツフラグメント GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-api-content-fragments.html?lang=ja)
-      + [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphiql-ide.html)
-      + [永続クエリ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/persisted-queries.html)
-      + [コンテンツフラグメントに対するリモート AEM GraphQL クエリの認証](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/graphql-authentication-content-fragments.html?lang=ja)
-      + [AEM GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/content-fragments-graphql-samples.html?lang=ja)
+      + [コンテンツフラグメント GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
+      + [GraphQLエンドポイントの管理](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
+      + [GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
+      + [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)
+      + [コンテンツフラグメントに対するリモート AEM GraphQL クエリの認証](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
+      + [AEM GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + ハイブリッドおよび SPA の AEM 開発{#spas}
    + [AEM でのハイブリッドと SPA](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
    + [SPA の概要およびガイド](spa-walkthrough.md)

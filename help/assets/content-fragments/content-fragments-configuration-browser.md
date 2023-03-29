@@ -4,8 +4,8 @@ description: AEM の強力なヘッドレス配信機能を活用するために
 feature: Content Fragments
 role: User
 exl-id: a9990b0c-56c7-4e61-bae9-98e19a7f364e
-source-git-commit: da41f48d08b7629a734e2f60077af6190a7fee8f
-workflow-type: ht
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ AEM の強力なヘッドレス配信機能を活用するために、設定ブ�
 >**コンテンツフラグメントモデル**&#x200B;を有効にしない場合：
 >
 >* 新しいモデルを作成する&#x200B;**作成**&#x200B;オプションは使用できません。
->* [Sites 設定を選択して関連するエンドポイントを作成する](/help/assets/content-fragments/graphql-api-content-fragments.md#enabling-graphql-endpoint)ことはできません。
+>* [Sites 設定を選択して関連するエンドポイントを作成する](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)ことはできません。
 
 
 コンテンツフラグメント機能を有効にするには、次の操作を実行する必要があります。

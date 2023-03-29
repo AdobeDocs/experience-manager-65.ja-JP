@@ -6,10 +6,10 @@ audience: end-user
 user-guide-title: Assets ガイド
 breadcrumb-title: Assets ガイド
 user-guide-description: デジタルアセットを作成、管理、処理および配布します。
-source-git-commit: 0c6c269e9f0cbdcc0c5e3b925ef09b9923cbb2b3
+source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 99%
+source-wordcount: '723'
+ht-degree: 93%
 
 ---
 
@@ -96,11 +96,11 @@ ht-degree: 99%
    + [アセットエディターの拡張](asseteditorx.md)
    + [[!DNL Assets] HTTP API](mac-api-assets.md)
    + [  [!DNL Assets]  HTTP API でのコンテンツフラグメントのサポート](assets-api-content-fragments.md)
-   + [コンテンツフラグメント用 GraphQL API](content-fragments/graphql-api-content-fragments.md)
-   + [GraphiQL IDE の使用](content-fragments/graphiql-ide.md)
-   + [永続クエリ](content-fragments/persisted-queries.md)
-   + [コンテンツフラグメントに対するリモート GraphQL クエリの認証](content-fragments/graphql-authentication-content-fragments.md)
-   + [GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](/help/assets/content-fragments/content-fragments-graphql-samples.md)
+   + [コンテンツフラグメント用 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphql-api-content-fragments.html)
+   + [GraphiQL IDE の使用](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphiql-ide.html)
+   + [永続クエリ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/persisted-queries.html)
+   + [コンテンツフラグメントに対するリモート GraphQL クエリの認証](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/graphql-authentication-content-fragments.html)
+   + [GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/delivery-api/content-fragments-graphql-samples.html)
    + [[!DNL Assets] プロキシ開発](proxy.md)
 + アセットの管理 {#administer}
    + [サポートされているファイル形式](assets-formats.md)

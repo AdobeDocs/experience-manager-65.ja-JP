@@ -2,8 +2,8 @@
 title: アセットフォルダーのヘッドレス作成のクイック開始ガイド
 description: AEM コンテンツフラグメントモデルを使用すると、ヘッドレスコンテンツの基盤となるコンテンツフラグメントの構造を定義できます。
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
-source-git-commit: a2ababa9dd9115e963b91a7271d204d287557c40
-workflow-type: ht
+source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
+workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 100%
 
@@ -33,16 +33,16 @@ AEM コンテンツフラグメントモデルを使用すると、ヘッドレ�
       * タイトルに基づいて自動的に生成され、[AEM の命名規則](/help/sites-developing/naming-conventions.md)に従って調整されます。
       * 必要に応じて調整できます。
 
-   ![フォルダーを作成](../assets/assets-folder-create.png)
+   ![フォルダーを作成](assets/assets-folder-create.png)
 1. 先ほど作成したフォルダーを選択し、ツールバーから「**プロパティ**」を選択します（または、`p` [キーボードショートカットを使用します](/help/sites-authoring/keyboard-shortcuts.md)）。
 1. **プロパティ**&#x200B;ウィンドウで、「**Cloud Services**」タブを選択します。
 1. **クラウド設定**&#x200B;で、[以前に作成した設定](create-configuration.md)を選択します。
 
-   ![アセットフォルダーの設定](../assets/assets-folder-configure.png)
+   ![アセットフォルダーの設定](assets/assets-folder-configure.png)
 1. 「**保存して閉じる**」をタップまたはクリックします。
 1. 確認ウィンドウで「**OK**」をタップまたはクリックします。
 
-   ![確認ウィンドウ](../assets/assets-folder-confirmation.png)
+   ![確認ウィンドウ](assets/assets-folder-confirmation.png)
 
 先ほど作成したフォルダー内に、追加のサブフォルダーを作成できます。サブフォルダーは、親フォルダーの&#x200B;**クラウド設定**&#x200B;を継承します。別の設定モデルを使用する場合は、この設定を上書きできます。
 
