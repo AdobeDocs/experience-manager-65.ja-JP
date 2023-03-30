@@ -12,10 +12,10 @@ discoiquuid: b210f5d7-1d68-49ee-ade7-667c6ab11d2b
 docset: aem65
 exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
 workflow-type: tm+mt
-source-wordcount: '6065'
-ht-degree: 28%
+source-wordcount: '6053'
+ht-degree: 27%
 
 ---
 
@@ -138,9 +138,9 @@ A **複合ヘルスチェック** は、複数の個々のチェックから情�
 
 ### 複合ヘルスチェックの作成 {#creating-a-composite-health-check}
 
-複合ヘルスチェックの役割は、共通の機能のセットを共有する複数の個々のヘルスチェックを集計することです。 たとえば、セキュリティ複合ヘルスチェックは、セキュリティ関連の検証を実行する個々のヘルスチェックをすべてグループ化します。 複合チェックを作成する最初の手順は、OSGi 設定を追加することです。 操作ダッシュボードに表示するには、簡単なチェックと同じ方法で、新しい設定ノードを追加する必要があります。
+複合ヘルスチェックの役割は、共通の機能のセットを共有する複数の個々のヘルスチェックを集計することです。 たとえば、セキュリティ複合ヘルスチェックは、セキュリティ関連の検証を実行する個々のヘルスチェックをすべてグループ化します。 複合チェックを作成する最初の手順は、OSGi 設定を追加することです。 操作ダッシュボードに表示するには、簡単なチェックと同じ方法で新しい設定ノードを追加する必要があります。
 
-1. OSGI コンソールで web 設定マネージャーに移動します。これを行うには、`https://serveraddress:port/system/console/configMgr` にアクセスします。
+1. OSGI コンソールで Web Configuration Manager に移動します。 アクセス `https://serveraddress:port/system/console/configMgr`
 1. **Apache Sling Composite Health Check** というエントリを検索します。見つかったら、システムチェック用とセキュリティチェック用の 2 つの設定が既に使用可能であることを確認します。
 1. 設定の右側にある「+」ボタンを押して、設定を作成します。 次に示すように、新しいウィンドウが表示されます。
 
@@ -153,7 +153,7 @@ A **複合ヘルスチェック** は、複数の個々のチェックから情�
    * **名前 (hc.name):** 複合ヘルスチェックの名前。 意味のある名前を付けることをお勧めします。
    * **タグ (hc.tags):** このヘルスチェックのタグ。 この複合ヘルスチェックが別の複合ヘルスチェックの一部を目的とする場合（ヘルスチェックの階層など）、この複合が関連するタグを追加します。
    * **MBean 名 (hc.mbean.name):** この複合ヘルスチェックの JMX MBean に与えられる Mbean の名前。
-   * **タグをフィルター (filter.tags):** 複合ヘルスチェックに固有のプロパティ。 これらは、複合で集計するタグです。 複合ヘルスチェックは、この複合のフィルタタグのいずれかに一致するタグを持つすべてのヘルスチェックをグループの下に集計します。 例えば、フィルタータグを持つ複合ヘルスチェック **テスト** および **check**&#x200B;は、 **テスト** および **check** タグプロパティ ( `hc.tags`) をクリックします。
+   * **タグをフィルター (filter.tags):** 複合ヘルスチェックに固有のプロパティ。 これらのタグは複合によって集計されます。 複合ヘルスチェックは、この複合のフィルタタグのいずれかに一致するタグを持つすべてのヘルスチェックをグループの下に集計します。 例えば、フィルタータグを持つ複合ヘルスチェック **テスト** および **check**&#x200B;は、 **テスト** および **check** タグプロパティ ( `hc.tags`) をクリックします。
 
    >[!NOTE]
    >
@@ -180,7 +180,7 @@ A **複合ヘルスチェック** は、複数の個々のチェックから情�
 
    >[!NOTE]
    >
-   >デフォルトでダッシュボードに既に存在する複合チェックの下に論理的に属する個々のヘルスチェックを作成すると、自動的にキャプチャされ、それぞれの複合チェックの下にグループ化されます。 このため、これらのチェック用に設定ノードを作成する必要はありません。
+   >デフォルトでダッシュボードに既に存在する複合チェックの下に論理的に属する個々のヘルスチェックを作成すると、自動的にキャプチャされ、それぞれの複合チェックの下にグループ化されます。 したがって、これらのチェック用に設定ノードを作成する必要はありません。
    >
    >例えば、個々のセキュリティヘルスチェックを作成する場合は、「**セキュリティ**」タグが付いている必要があります。 これは、[ 操作 ] ダッシュボードの [ セキュリティチェック ] 複合チェックの下に自動的に表示されます。
 
@@ -308,11 +308,11 @@ A **複合ヘルスチェック** は、複数の個々のチェックから情�
   </tr>
   <tr>
    <td>コードキャッシュチェック</td>
-   <td><p>これは、Java 7 に存在する CodeCache バグをトリガーする可能性のある複数の JVM 条件を検証するヘルスチェックです。</p>
+   <td><p>Java™ 7 に存在する CodeCache バグをトリガーする可能性のある複数の JVM 条件を検証するヘルスチェック：</p>
     <ul>
-     <li>インスタンスが Java 7 上で実行され、コードキャッシュのフラッシュが有効な場合、警告を返します</li>
-     <li>インスタンスが Java 7 上で実行され、予約済みコードキャッシュのサイズが最小しきい値（デフォルト値は 90 MB）未満の場合、警告を返します</li>
-    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。<a href="https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8012547">バグについて詳しくは、このページ</a>を参照してください。</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
+     <li>インスタンスが Java™ 7 上で実行され、コードキャッシュのフラッシュが有効な場合に警告を返します</li>
+     <li>インスタンスが Java™ 7 上で実行され、予約済みコードキャッシュのサイズが最小しきい値（デフォルト値は 90 MB）未満の場合、警告を返します</li>
+    </ul> <p><code>minimum.code.cache.size</code> しきい値は設定可能です。バグについて詳しくは、 <a href="https://bugs.java.com/bugdatabase/"> その後、バグ ID 8012547を検索します。</a>.</p> <p>このヘルスチェックの MBean は次のとおりです。 <a href="http://localhost:4502/system/console/jmx/org.apache.sling.healthcheck%3Aname%3DcodeCacheHealthCheck%2Ctype%3DHealthCheck" target="_blank">org.apache.sling.healthcheck:name=codeCacheHealthCheck,type=HealthCheck</a>.</p> </td>
   </tr>
   <tr>
    <td>リソース検索パスエラー</td>
@@ -575,7 +575,7 @@ UI を使用して、画面の左上隅にある検索ボックスにフィル�
 
 Lucene バイナリクリーンアップタスクを使用すると、Lucene バイナリをパージし、実行中のデータストアのサイズ要件を減らすことができます。 Lucene のバイナリチャーンは、成功への以前の依存関係の代わりに、毎日再利用されます。 [データストアのガベージコレクション](/help/sites-administering/data-store-garbage-collection.md) 実行
 
-メンテナンスタスクは Lucene 関連のリビジョンガベージを減らすために開発されましたが、タスクを実行すると、次のような一般的な効率の向上が得られます。
+メンテナンスタスクは Lucene 関連のリビジョンガベージを減らすために開発されましたが、タスクを実行すると、次のような一般的な効率の向上があります。
 
 * データストアのガベージコレクションタスクを毎週実行すると、より迅速に完了できます。
 * また、AEM全体のパフォーマンスが少し向上する場合があります。
@@ -629,7 +629,7 @@ Lucene バイナリクリーンアップタスクには、**AEM／ツール／�
 
 ## カスタムメンテナンスタスク {#custom-maintenance-tasks}
 
-カスタムメンテナンスタスクは OSGi サービスとして実装できます。メンテナンスタスクのインフラストラクチャは Apache Sling のジョブ処理に基づいているので、メンテナンスタスクでは Java インターフェイス ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)` を実装する必要があります。さらに、以下に示すいくつかのサービス登録プロパティがメンテナンスタスクとして検出されることを宣言する必要があります。
+カスタムメンテナンスタスクは OSGi サービスとして実装できます。メンテナンスタスクインフラストラクチャは Apache Sling のジョブ処理に基づいているので、メンテナンスタスクは Java™インターフェイスを実装する必要があります ` [org.apache.sling.event.jobs.consumer.JobExecutor](https://sling.apache.org/apidocs/sling7/org/apache/sling/event/jobs/consumer/JobExecutor.html)`.さらに、次に示すように、メンテナンスタスクとして検出されるサービス登録プロパティを複数宣言する必要があります。
 
 <table>
  <tbody>
@@ -766,7 +766,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
    <td>システム</td>
    <td>
     <ul>
-     <li>オペレーティングシステムと OS のバージョン ( 例：Mac OS X)</li>
+     <li>オペレーティングシステムと OS のバージョン ( 例：macOS X)</li>
      <li>から取得したシステム負荷平均 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/OperatingSystemMXBean.html#getSystemLoadAverage--">OperatingSystemMXBeanusable</a></li>
      <li>ディスク容量（ホームディレクトリがあるパーティション上）</li>
      <li>最大ヒープ（<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryMXBean.html#getHeapMemoryUsage--">MemoryMXBean</a> によって返されます）</li>
