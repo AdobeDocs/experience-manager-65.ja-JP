@@ -19,7 +19,7 @@ ht-degree: 39%
 
 # アダプティブフォームの A/B テストの作成と管理 {#create-and-manage-a-b-test-for-adaptive-forms}
 
-|除外|[!BADGE 廃止]{type=negative tooltip="この機能は現在提供終了です"}
+|除外|[!BADGE 廃止]{type=negative tooltip="この機能は現在提供終了です"}|
 <div class="preview"> アダプティブフォーム機能の A/B テストは提供が終了し、サポートされなくなりました。 </div>
 
 ## 概要 {#overview-br}
