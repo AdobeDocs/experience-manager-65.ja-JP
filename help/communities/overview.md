@@ -1,7 +1,7 @@
 ---
 title: AEM Communities の概要
 seo-title: AEM Communities Overview
-description: AEM Communities の機能とセットアップの概要
+description: AEM Communitiesの機能とセットアップの概要
 seo-description: An overview of AEM Communities features and setup
 uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
 contentOwner: Janice Kendall
@@ -11,22 +11,18 @@ content-type: reference
 discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '1435'
-ht-degree: 31%
+source-wordcount: '1273'
+ht-degree: 2%
 
 ---
 
 # AEM Communities の概要 {#aem-communities-overview}
 
-Adobe Experience Manager（AEM）Communities では、高いパフォーマンスと優れたサイト管理機能を持つオンプレミスのコミュニティサイトを素早く作成し、サイト訪問者を価値あるコミュニティメンバーに転換できます。
+Adobe Experience Manager(AEM)Communities を使用すると、パフォーマンスの向上、サイト管理の向上、貴重なコミュニティメンバーへのサイト訪問者の転換を促すオンプレミスのコミュニティサイトをすばやく作成できます。
 
-<!--
-Contact your account representative for information regarding licensing of AEM Communities as well as additional licensing for enablement features and Adobe Analytics.
--->
-
-## Communities の機能 {#communities-features}
+## コミュニティの機能 {#communities-features}
 
 AEM Communitiesを使用すると、サイト訪問者との関係を構築できます。次の機能があります。
 
@@ -40,19 +36,18 @@ AEM Communitiesを使用すると、サイト訪問者との関係を構築で�
 * **ファイル共有**,
 * **通知** および **アクティビティストリーム**,
 * 許可 **タグ付け** (@mention) ユーザー生成コンテンツに登録された他のメンバーの注意を引くため。
-* サポート **キーボード操作** イネーブルメントコンポーネント（カタログとコースの再生、割り当て、ファイルライブラリなど）に対して実行します。
 
-Communities の機能は、GitHub.com で公開されている [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki)で試すことができます。また、新しい We.Retail のリファレンス実装内でも試すことができます。
+コミュニティの機能は、 [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki) GitHub.com で公開されている、または新しい We.Retail 参照実装で使用できます。
 
 ## コミュニティサイト {#community-sites}
 
-コミュニティサイトは、シンプルなウィザードで作成できる AEM サイトです。作成される Web サイトには、数多くの一般的な機能があらかじめ組み込まれています。
+コミュニティサイトは、簡単なウィザードを使用して作成されたAEMサイトで、多くの共通機能があらかじめサイトに組み込まれた Web サイトになります。
 
 この [サイト作成ウィザード](/help/communities/sites-console.md):
 
 * 選択したに基づいてサイトの機能を構築します [コミュニティサイトテンプレート](/help/communities/sites.md) 例：
 
-   * [コミュニティ機能](#community-functions)から作成したテンプレート
+   * 次の場所から作成 [コミュニティ機能](#community-functions)
    * オプション [コミュニティグループ](#communitygroups) 機能
 
 * 設定を使用して次の設定を行います。
@@ -82,11 +77,11 @@ Communities の機能は、GitHub.com で公開されている [AEM Demo Machine
 
 新しいコミュニティサイトを簡単に作成するには、 [AEM Communitiesの概要](/help/communities/getting-started.md).
 
-## コミュニティコンテンツの永続性 {#community-content-persistence}
+## コミュニティコンテンツの持続性 {#community-content-persistence}
 
-AEM Communities でコミュニティコンテンツのパフォーマンスと同期を改善するには、ユーザー生成コンテンツ（UGC）専用の共通ストアを用意し、それをすべての AEM インスタンス（オーサーおよびパブリッシュ）で共有することが必要です。
+コミュニティコンテンツのパフォーマンスと同期を向上させるために、AEM Communitiesには、すべてのAEM（オーサーおよびパブリッシュ）インスタンス間で共有されるユーザー生成コンテンツ (UGC) 専用の共通ストアが必要です。
 
-コミュニティコンテンツは、ストレージリソースプロバイダー（SRP）を介して簡単にアクセスできます。SRP はアクセスを基本トポロジから切り離すレイヤーを提供し、UGC の共通ストアをサポートします。
+コミュニティコンテンツには、ストレージリソースプロバイダー (SRP) を通じて簡単にアクセスできます。SRP は、基になるトポロジとは別にアクセスするためのレイヤーを提供し、UGC 用の共通ストアをサポートします。
 
 コミュニティコンテンツの永続性と推奨されるデプロイメントについて詳しくは、以下を参照してください。
 
@@ -98,48 +93,43 @@ AEM Communities でコミュニティコンテンツのパフォーマンスと�
 
 オーサー環境では、グローバルナビゲーションコンソールから [コミュニティコンソール](/help/communities/consoles.md)（次を含む）:
 
-* [サイト](/help/communities/sites-console.md)コンソール
+* [サイト](/help/communities/sites-console.md) コンソール
 
    * サイトの作成
    * サイト編集
    * サイト管理
-   * [コミュニティグループ](/help/communities/groups.md)コンソール
+   * [コミュニティグループ](/help/communities/groups.md) コンソール
 
-* [モデレート](/help/communities/moderation.md)コンソール
+* [モデレート](/help/communities/moderation.md) コンソール
 
    * オーサー環境およびパブリッシュ環境向けの一般的な一括モデレート UI です。
    * 新しいフィルター条件。
 
-* [メンバーおよびグループ](/help/communities/members.md)管理コンソール
+* [メンバーとグループ](/help/communities/members.md) 管理コンソール
 
    * オーサー環境からパブリッシュ側のユーザー（メンバー）を作成および管理する機能を提供します。
    * メンバーを禁止する機能を提供します。
    * オーサー環境からパブリッシュ側のユーザーグループ（メンバーグループ）を作成および管理する機能を提供します。
 
-* [レポート](/help/communities/reports.md)コンソール
+* [レポート](/help/communities/reports.md) コンソール
 
    * 割り当て、投稿、表示に関するレポートを生成できます。
 
-* [リソース](/help/communities/resources.md)コンソール
+グローバルツールコンソールから、次のコミュニティツールにアクセスできます。
 
-   * イネーブルメントリソースと学習パスを作成する機能を提供します。
-   * イネーブルメントリソースと学習パスに関するレポートにアクセスできます。
-
-グローバルツールコンソールから次のコミュニティツールにアクセスできます。
-
-* [サイトテンプレート](/help/communities/tools.md#sitetemplatesconsole)コンソール
+* [サイトテンプレート](/help/communities/tools.md#sitetemplatesconsole) コンソール
 
    * コミュニティサイトテンプレートを作成および管理します。
 
-* [グループテンプレート](/help/communities/tools.md#grouptemplatesconsole)コンソール
+* [グループテンプレート](/help/communities/tools.md#grouptemplatesconsole) コンソール
 
    * コミュニティグループテンプレートを作成および管理します。
 
-* [コミュニティ機能](/help/communities/tools.md#communityfunctionsconsole)コンソール
+* [コミュニティ機能](/help/communities/tools.md#communityfunctionsconsole) コンソール
 
    * コミュニティ機能を作成および管理します。
 
-* [ストレージ設定](/help/communities/tools.md#storageconfiguratonconsole)コンソール
+* [ストレージ設定](/help/communities/tools.md#storageconfiguratonconsole) コンソール
 
    * を選択して設定します。 [共通店](/help/communities/working-with-srp.md) サイトの
 
@@ -153,15 +143,15 @@ AEM Communities でコミュニティコンテンツのパフォーマンスと�
 
 コミュニティサイトテンプレートは、コミュニティ機能とコミュニティグループテンプレートで構成され、ログイン、ユーザープロファイル、メッセージング、サイトメニュー、検索、テーマ設定、ブランディング機能など、コミュニティサイトの構造を提供します。
 
-[サイトテンプレートコンソール](/help/communities/sites.md)を参照してください。
+詳しくは、 [サイトテンプレートコンソール](/help/communities/sites.md).
 
 ## コミュニティ機能 {#community-functions}
 
-コミュニティに必要とされる機能はだいたい決まっています。AEM Communities では、こうした機能が基本要素として用意されており、「コミュニティ機能」と呼ばれています。
+コミュニティ体験で期待される機能は、よく知られています。 AEM Communitiesでは、これらの機能はコミュニティ機能と呼ばれる構築ブロックとして使用できます。
 
 コミュニティ機能は、通常のAEMページで、コミュニティサイトテンプレートに簡単に組み込むことのできる機能内に組み込まれたコンポーネントを含みます。
 
-[コミュニティ機能コンソール](/help/communities/functions.md)を参照してください。
+詳しくは、 [コミュニティ機能コンソール](/help/communities/functions.md).
 
 ## コミュニティグループとグループテンプレート {#community-groups-and-group-templates}
 
@@ -179,17 +169,15 @@ AEM Communities でコミュニティコンテンツのパフォーマンスと�
 
 ## コミュニティコンポーネント {#community-components}
 
-コミュニティサイトの構成要素である[コミュニティコンポーネント](/help/communities/author-communities.md)は、AEM サイトに Communities 機能を追加するために使用します。
+この [コミュニティコンポーネント](/help/communities/author-communities.md) コミュニティサイトを構築する際に、AEMサイトにコミュニティ機能を追加する際に使用できます。
 
-[コミュニティコンポーネントガイド](/help/communities/components-guide.md)では、これらのコンポーネントをインタラクティブに検討できます。
+この [コミュニティコンポーネントガイド](/help/communities/components-guide.md) は、コンポーネントをインタラクティブに調査するために使用できます。
 
-## コミュニティのタイプ {#types-of-communities}
-
-### エンゲージメントコミュニティ {#engagement-community}
+## Engagement Community {#engagement-community}
 
 エンゲージメントコミュニティとは、顧客のエンゲージメントに焦点を当てたコミュニティサイトで、顧客に対して、情報を提供し、フィードバックを提供し、顧客がコミュニティメンバーとしてやり取りできるようにします。
 
-エンゲージメントコミュニティの機能には次のものがあります。
+エンゲージメントコミュニティの機能には次のものが含まれます。
 
 * ログイン
 * メッセージ
@@ -209,23 +197,6 @@ AEM Communities でコミュニティコンテンツのパフォーマンスと�
 
 新しいエンゲージメントコミュニティを素早く簡単に作成するには、次を参照してください。 [AEM Communitiesの概要](/help/communities/getting-started.md).
 
-### イネーブルメントコミュニティ {#enablement-community}
-
-イネーブルメントコミュニティは、オンライン学習機能を用意したコミュニティサイトです。
-
-イネーブルメントコミュニティの機能には、次のものが含まれます。
-
-* のすべての機能 [エンゲージメントコミュニティ](#engagement-community).
-* コンテンツと学習を割り当てる機能メンバーおよびメンバーグループに対するリソース。
-* クイズやテストなどの SCORM コンテンツをサポートします。
-* 割り当て完了のトラッキング。
-* Reporting and Analytics にアクセスします。
-* フォーラム、メッセージング、コメント、評価を通じて、学習リソースに関する会話を行う機能。
-
-イネーブルメントコミュニティは、 [イネーブルメントアドオンが設定されています](/help/communities/enablement.md)：実稼動環境で使用するために追加のライセンスが必要です。 イネーブルメントコミュニティサイトには、 [割り当て機能](#community-functions).
-
-新しいイネーブルメントコミュニティを簡単に作成するには、 [AEM Communities使用の手引き](/help/communities/getting-started-enablement.md).
-
 ## AEM Demo Machine {#aem-demo-machine}
 
 この [AEM Demo Machine](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine) AEMのデモを管理および実行します [サイト](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Sites), [Assets](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Assets), [コミュニティ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Communities), [アプリ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Apps) および [Forms](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Scenario%20Forms)（多くの場合、クイックスタートインスタンスを起動するよりも多くの設定が必要です）。 AEM Demo Machine が追加の [インフラ](https://github.com/Adobe-Marketing-Cloud/aem-demo-machine/wiki/Infrastructure) （MongoDB、Solr、MySQL、FFmpeg、電子メールサーバーなど）。
@@ -243,11 +214,11 @@ AEM Demo Machine には、有効なAEMライセンスが必要です。
 
 >[!NOTE]
 >
->AEM Demo Machine の[紹介ビデオ](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be)を参照してください（13:26）。
+>表示 [ビデオの紹介](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) をAEM Demo Machine (13:26)に追加します。
 
-## AEM Communities ドキュメント {#aem-communities-documentation}
+## AEM Communities Documentation {#aem-communities-documentation}
 
 * 訪問 [コミュニティのデプロイ](deploy-communities.md) を参照して、推奨されるデプロイメントについて確認してください。
-* コミュニティサイトの作成、コミュニティグループの追加、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、タグ付け、通知、スコアおよびバッジについては、[コミュニティサイトの管理](administer-landing.md)を参照してください。
+* 訪問 [コミュニティサイトの管理](administer-landing.md) コミュニティサイトの作成、コミュニティグループの追加、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、タグ付け、通知、スコア付け、バッジについて説明します。
 * 訪問 [コミュニティの開発](communities.md) ソーシャルコンポーネントフレームワーク (SCF) と、コミュニティのコンポーネントと機能のカスタマイズについて説明します。
 * 訪問 [コミュニティコンポーネントのオーサリング](author-communities.md) コミュニティコンポーネントを使用して作成および設定する方法を学ぶには、以下を参照してください。

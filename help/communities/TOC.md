@@ -7,9 +7,9 @@ breadcrumb-title: Communities ガイド
 user-guide-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。
 feature: Communities
 role: User
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '451'
 ht-degree: 100%
 
 ---
@@ -23,15 +23,10 @@ ht-degree: 100%
    + [AEM Communities の概要](overview.md)
    + [AEM Communities リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/sp-release-notes.html?lang=ja)
    + [AEM Communities 使用の手引き](getting-started.md)
-   + [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
    + [初期セットアップ](setup.md)
    + [新しいコミュニティサイトの作成](create-site.md)
    + [公開したサイトを使ってみる](published-site.md)
    + [ネストされたグループの作成](nested-groups.md)
-   + [イネーブルメントのための初期設定](enablement-setup.md)
-   + [イネーブルメントのための新しいコミュニティサイトの作成](enablement-create-site.md)
-   + [イネーブルメントリソースの作成と割り当て](resource.md)
-   + [公開したイネーブルメントサイトを使ってみる](enablement-published-site.md)
 + デプロイ {#deploy}
    + [Communities のデプロイ](deploy-communities.md)
    + [AEM 6.5 Communities へのアップグレード](upgrade.md)
@@ -42,7 +37,6 @@ ht-degree: 100%
    + [コミュニティサイト](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/administer-landing.html?lang=ja)
    + [コミュニティコンソール](consoles.md)
    + [コミュニティ機能のための Analytics の設定](analytics.md)
-   + [イネーブルメント機能の設定](enablement.md)
    + [メッセージングの設定](messaging.md)
    + [コミュニティコンテンツのモデレート](moderate-ugc.md)
    + [メールの設定](email.md)
@@ -62,9 +56,7 @@ ht-degree: 100%
    + [コミュニティ機能](functions.md)
    + [ストレージ設定](srp-config.md)
    + [バッジコンソール](badges.md)
-   + [イネーブルメントリソースのコンソール](resources.md)
    + [レポートコンソール](reports.md)
-   + [イネーブルメント機能のための MySQL 設定](mysql.md)
    + [コミュニティのための FFmpeg](ffmpeg.md)
    + [コンテキスト内モデレート](in-context.md)
    + [高度なスコアとバッジ](advanced.md)
@@ -75,7 +67,6 @@ ht-degree: 100%
    + [DSRP 向け MySQL 設定](dsrp-mysql.md)
    + [JSRP - JCR ストレージリソースプロバイダー](jsrp.md)
    + [SRP 用の Solr 設定](solr.md)
-   + [イネーブルメントリソースのタグ付け](tag-resources.md)
    + [ユーザー生成コンテンツのタグ付け](tag-ugc.md)
    + [ユーザー生成コンテンツの翻訳](translate-ugc.md)
    + [コミュニティのユーザーの同期](sync.md)
@@ -94,10 +85,8 @@ ht-degree: 100%
    + [ストレージリソースプロバイダーの概要](srp.md)
    + [コミュニティサイトの基本事項](sites-for-developers.md)
    + [アクティビティストリームの基本事項](essentials-activities.md)
-   + [割り当ての基本事項](essentials-assignments.md)
    + [ブログの基本事項](blog-developer-basics.md)
    + [カレンダーの基本事項](calendar-basics-for-developers.md)
-   + [カタログの基本事項](catalog-developer-essentials.md)
    + [コミュニティコンポーネントの clientlib](clientlibs.md)
    + [コメントの基本事項](essentials-comments.md)
    + [コミュニティコンポーネントの OSGi イベント](events.md)
@@ -145,10 +134,8 @@ ht-degree: 100%
    + [コミュニティコンポーネント](author-communities.md)
    + [コミュニティコンポーネントの基本](basics.md)
    + [アクティビティストリーム機能](activities.md)
-   + [割り当て機能](assignments.md)
    + [ブログ機能](blog-feature.md)
    + [カレンダー機能](calendar.md)
-   + [カタログ機能](catalog.md)
    + [コメントの使用](comments.md)
    + [おすすめコンテンツ機能](featured.md)
    + [ファイルライブラリ機能](file-library.md)

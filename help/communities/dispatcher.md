@@ -1,7 +1,7 @@
 ---
 title: Communities 用の Dispatcher の設定
 seo-title: Configuring Dispatcher for Communities
-description: AEM Communities 用の Dispatcher の設定
+description: AEM Communities用の Dispatcher の設定
 seo-description: Configure the dispatcher for AEM Communities
 uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
@@ -10,10 +10,10 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: b5cf18d8e83786a23005aadf8aafe43d006a2e67
+source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 71%
+source-wordcount: '636'
+ht-degree: 15%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 71%
 
 ## AEM Communities {#aem-communities}
 
-AEM Communities では、[コミュニティサイト](overview.md#community-sites)が適切に機能するように Dispatcher を設定する必要があります。コミュニティイネーブルメントやソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
+AEM Communitiesの場合、の適切な機能を確保するために、Dispatcher を設定する必要があります。 [コミュニティサイト](overview.md#community-sites). ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
 
-特定のデプロイメントとサイトデザインにとって何が必要かについては
+お客様の特定の導入およびサイト設計に必要な事項を学ぶには
 
 * [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)に問い合わせる
 
@@ -33,13 +33,13 @@ AEM Communities では、[コミュニティサイト](overview.md#community-sit
 
 ### 概要 {#overview}
 
-AEM Communities 用の Dispatcher のキャッシュとは、Dispatcher によってコミュニティサイトのページの完全にキャッシュされたバージョンを提供する機能です。
+AEM Communitiesの Dispatcher キャッシュは、Dispatcher がコミュニティサイトのページの完全にキャッシュされたバージョンを提供する機能です。
 
-現在、コミュニティサイトを閲覧するユーザー、検索の結果コミュニティページに辿り着いたユーザー、ページのインデックスを作成する検索エンジンなど、匿名のサイト訪問者に対してのみサポートされます。メリットは、匿名のユーザーと検索エンジンのパフォーマンスが向上することです。
+現在、コミュニティサイトを閲覧したユーザー、検索の結果コミュニティページにアクセスしたユーザー、ページをインデックス化した検索エンジンなど、匿名のサイト訪問者に対してのみサポートされています。 メリットは、匿名のユーザーと検索エンジンのパフォーマンスが向上することです。
 
-サインインしているメンバーの場合、Dispatcher はキャッシュをバイパスして、要求をパブリッシャーに直接リレーするため、すべてのページが動的に生成されて提供されます。
+サインインしたメンバーの場合、Dispatcher はキャッシュをバイパスし、要求をパブリッシャーに直接リレーして、すべてのページが動的に生成および配信されるようにします。
 
-Dispatcher のキャッシュをサポートするように設定すると、TTL に基づく「max age」期限がヘッダーに追加され、Dispatcher にキャッシュされたページが最新に保たれます。
+Dispatcher のキャッシュをサポートするように設定した場合、Dispatcher がキャッシュしたページを最新の状態に保つために、TTL ベースの「max age」の有効期限がヘッダーに追加されます。
 
 ### 要件 {#requirements}
 
@@ -51,7 +51,7 @@ Dispatcher のキャッシュをサポートするように設定すると、TTL
 
 ### 設定 {#configuration}
 
-OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」で、指定されたパスに保存されるキャッシュされたページの有効期限を設定します。
+OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー — 最大経過時間** 指定されたパスの下に表示される、キャッシュされたページの有効期限を設定します。
 
 * 次の [Web コンソール](../../help/sites-deploying/configuring-osgi.md)
 
@@ -64,29 +64,25 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 * **フィルターパターン**
 
-   *（必須）* コミュニティページへの 1 つ以上のパス。 （例：`/content/sites/engage/(.*)`）。
+   *（必須）* コミュニティページへの 1 つ以上のパス。 例：`/content/sites/engage/(.*)`
 
 * **Cache-Control の最大経過時間**
 
-   *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 この値はゼロ（0）より大きくする必要があります。
-
-## Dispatcher クライアントヘッダー {#dispatcher-client-headers}
-
-/clientheaders セクション ( `dispatcher.any`特定のヘッダーセットをリストする場合は、 `"CSRF-Token"` ～のために [イネーブルメント機能](enablement.md) 正しく動作させる。
+   *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 0 より大きい値を指定する必要があります。
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
-`dispatcher.any` ファイルの /filter セクションは[コンテンツへのアクセスの設定 - /filter](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#filter) に記述されています。
+の/filter セクション `dispatcher.any` ファイルは、 [コンテンツへのアクセスの設定 — /filter](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
 
-このセクションでは、Communities 機能を正しく機能させるために必要になる可能性があるエントリについて説明します。
+この節では、コミュニティ機能を適切に機能させるために必要なエントリについて説明します。
 
-フィルターのプロパティ名は、フィルターパターンの適用順序を示す 4 桁の数字を使用するという命名規則に従います。複数のフィルターパターンを 1 つの要求に適用した場合は、最後に適用されたフィルターパターンが有効になります。したがって、通常は、最初のフィルターパターンであらゆるものを拒否し、後続のパターンで何らかの規則性に基づいてアクセスを認めるという方法をとります。
+フィルタープロパティ名は、フィルターパターンを適用する順序を示す 4 桁の数字を使用する規則に従います。 複数のフィルターパターンを 1 つの要求に適用した場合は、最後に適用されたフィルターパターンが有効になります。したがって、最初のフィルターパターンは、多くの場合、すべてを拒否するために使用され、次のパターンは、制御された方法でアクセスを復元するために役立ちます。
 
-以下のサンプルでは、プロパティ名を使用しています。特定の dispatcher.any ファイルに合わせて変更が必要な可能性があります。
+以下のサンプルでは、任意の特定の dispatcher.any ファイルに合わせて変更する必要がある可能性のあるプロパティ名を使用します。
 
 関連トピック：
 
-* [Dispatcher のセキュリティのチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja#getting-started)
+* [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja#getting-started)
 
 >[!NOTE]
 >
@@ -97,7 +93,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 >
 >Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)を参照してください。また、 [AEMセキュリティチェックリスト](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html) AEMのインストールに関するセキュリティの詳細については、を参照してください。
 
-以下のエントリを /filter セクションの最後に追加する必要があります（特にすべての拒否エントリの後）。
+次のエントリは、特にすべての deny エントリの後に/filter セクションの末尾に追加する必要があります。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -129,16 +125,6 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
-
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-/0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-/0173 { /type "allow" /url "/content/sites/*" }
-/0174 { /type "allow" /url "/content/communities/scorm/*" }
-/0175 { /type "allow" /url "/content/sites/*" }
-/0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
 
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
@@ -203,16 +189,6 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 # enable personalization
 /0062 { /type "allow" /url "/libs/cq/personalization/*" }
 
-# for Enablement features
-/0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-/0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-/0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-/0173 { /type "allow" /glob "GET /content/sites/*" }
-/0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-/0175 { /type "allow" /url "GET /content/sites/*" }
-/0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-/0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
-
 # Enable CSRF token otherwise nothings works.
 /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
 # Allow SCF User Model to bootstrap as it depends on the granite user
@@ -249,7 +225,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 ## Dispatcher ルール {#dispatcher-rules}
 
-`dispatcher.any` のルールセクションは、要求された URL に基づいてキャッシュされる応答を定義します。Communities の場合、ルールセクションを使用して、キャッシュしないものを定義します。
+のルールセクション `dispatcher.any` は、要求された URL に基づいてキャッシュする応答を定義します。 Communities の場合、ルールセクションを使用して、キャッシュしないものを定義します。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -297,13 +273,13 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
 
 ## トラブルシューティング {#troubleshooting}
 
-よくある問題の原因は、フィルタールールを挿入するときに、以前のルールへの影響を考慮しないことです。特に、アクセスを拒否するルールを追加するときには注意が必要です。
+主な問題の原因は、以前のルールへの影響に注意を払わずにフィルタールールを挿入することです。特に、アクセスを拒否するルールを追加する場合に問題が発生します。
 
-通常は、最初のフィルターパターンであらゆるものを拒否し、後続のフィルターで何らかの規則性に基づいてアクセスを認めるという方法をとります。1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
+最初のフィルターパターンは、多くの場合、次のフィルターが制御された方法でアクセスを復元するように、すべてを拒否するために使用されます。 1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
 
-## dispatcher.any のサンプル {#sample-dispatcher-any}
+## サンプルの dispatcher.any {#sample-dispatcher-any}
 
-以下は、Communities の /filters と /rules が含まれる `dispatcher.any` のサンプルファイルです。
+以下はサンプルです `dispatcher.any` Communities /filters と/rules を含むファイル。
 
 <!-- New code wrt CQDOC-16081, changed by Vishabh on 10 Dec 2020.
 -->
@@ -428,17 +404,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
    /0064 { /type "allow" /url "/etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
 
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /url "/content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /url "/content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /url "/content/sites/*" }
-   /0174 { /type "allow" /url "/content/communities/scorm/*" }
-   /0175 { /type "allow" /url "/content/sites/*" }
-   /0176 { /type "allow" /url "/libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "/libs/granite/security/currentuser.json" }
-
-      # Enable CSRF token otherwise nothings works.
+         # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /url "/libs/granite/csrf/token.json *"}
 
    # Allow SCF User Model to bootstrap as it depends on the granite user
@@ -750,17 +716,7 @@ OSGi 設定「**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**」
    /0063 { /type "allow" /glob "* /system/sling/logout*" }
    /0064 { /type "allow" /glob "GET /etc/cloudservices/*" }
    /0062 { /type "allow" /url "/libs/cq/personalization/*"  }  # enable personalization
-
-   # For Enablement features
-   /0170 { /type "allow" /url "/libs/granite/csrf/token.json*" }
-   /0171 { /type "allow" /glob "POST /content/sites/*/resources/en/*" }
-   /0172 { /type "allow" /glob "GET /content/communities/enablement/reports/*" }
-   /0173 { /type "allow" /glob "GET /content/sites/*" }
-   /0174 { /type "allow" /glob "GET /content/communities/scorm/*" }
-   /0175 { /type "allow" /url "GET /content/sites/*" }
-   /0176 { /type "allow" /url "GET /libs/granite/security/userinfo.json"}
-   /0177 { /type "allow" /url "GET /libs/granite/security/currentuser.json" }
-
+   
       # Enable CSRF token otherwise nothings works.
    /5001 { /type "allow" /glob "GET /libs/granite/csrf/token.json *"}
 
