@@ -1,7 +1,7 @@
 ---
 title: メンバーコンソールとグループ管理コンソール
 seo-title: Members & Groups Management Consoles
-description: メンバーコンソールとグループ管理コンソールにアクセスする方法
+description: メンバーおよびグループ管理コンソールにアクセスする方法
 seo-description: How to access Members and Groups Management consoles
 uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 37%
+source-wordcount: '946'
+ht-degree: 5%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 37%
 
 ## 概要 {#overview}
 
-AEM Communities の機能の多くは、サイト訪問者に対して、パブリッシュ環境でコミュニティに参加する前に登録とサインインを求めます。ユーザー登録が必要なのはパブリッシュ環境に限られ、一般に *メンバー* 区別する *ユーザー* がオーサー環境に登録されている。
+AEM Communitiesの機能を使用する場合は、サイト訪問者を登録してサインインしてから、パブリッシュ環境でコミュニティに参加する必要が生じます。 ユーザー登録が必要なのはパブリッシュ環境に限られ、一般に *メンバー* 区別する *ユーザー* がオーサー環境に登録されている。
 
-### パブリッシュ環境のメンバー（ユーザー） {#members-users-on-publish}
+### 公開時のメンバー（ユーザー） {#members-users-on-publish}
 
 コミュニティメンバーコンソールとグループコンソールを使用して、 *公開* 環境は、 *作成者* 環境。 これは、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっている。
 
-### オーサー環境のユーザー {#users-on-author}
+### 作成者のユーザー {#users-on-author}
 
 に登録されているユーザーとグループを管理するための *作成者* 環境のセキュリティコンソールを使用するには、が必要です。
 
@@ -37,11 +37,11 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 >[!NOTE]
 >
->サンプルコンテンツがデプロイされて有効になっていると、オーサー環境とパブリッシュ環境の両方に多数のサンプルユーザーが存在します。を使用してを実行する場合、これらのユーザーは表示されません [nosamplecontent 実行モード](../../help/sites-administering/production-ready.md).
+>サンプルコンテンツがデプロイされ有効になっている場合、多くのサンプルユーザーがオーサー環境とパブリッシュ環境の両方に存在します。 を使用してを実行する場合、これらのユーザーは表示されません [nosamplecontent 実行モード](../../help/sites-administering/production-ready.md).
 
 ## メンバーコンソール {#members-console}
 
-パブリッシュ環境で登録されたメンバーをオーサー環境で管理するには、次の場所にあるメンバーコンソールを使用します。
+オーサー環境で、パブリッシュ環境で登録されたメンバーを管理するためのメンバーコンソールを開くには、次の手順を実行します。
 
 * グローバルナビゲーションから、 **[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL メンバー]**
 
@@ -62,15 +62,15 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 「 `Members` ヘッダーを使用して、検索サイドパネルを閉じます。
 
-### メンバーの統計 {#member-statistics}
+### メンバー統計 {#member-statistics}
 
 表示されている列 `Views`, `Posts`, `Follows` および `Likes` ユーザーがAdobe Analyticsを使用して 1 つ以上のコミュニティサイトのメンバーになっている場合に更新されます [有効](sites-console.md#analytics).
 
-### CSV の書き出し {#export-csv}
+### CSV を書き出し {#export-csv}
 
 の選択 `Export CSV` リンクを使用すると、すべてのメンバーがコンマ区切り値のリストとしてダウンロードされ、スプレッドシートに読み込むのに適しています。
 
-列ヘッダーは次のとおりです。
+列ヘッダーは次のとおりです
 
 `| Screen Name |Last Name |First Name |Status |Views |Posts |Follows |Likes |`
 
@@ -80,14 +80,15 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 ![create-member1](assets/create-member1.png)
 
-### 一般 - メンバー詳細 {#general-member-details}
+### 一般 — メンバーの詳細 {#general-member-details}
 
-大部分のフィールドはオプションです。メンバーは後からフィールドに自分のプロファイルを入力できます。
+ほとんどのフィールドはオプションのフィールドで、メンバーは後でプロファイルに入力できます。
 
 * **[!UICONTROL ID]**
 
 (*必須*) 許可可能 ID は、メンバーのログイン ID です。
-デフォルトでは、ID は必須の電子メールアドレスの値に設定されています。*作成後は、ID を変更できません*.
+デフォルトでは、ID は必要な電子メールアドレスの値に設定されています。
+*作成後は、ID を変更できません*.
 
 * **[!UICONTROL メールアドレス]**
 
@@ -112,44 +113,44 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 * 選択 **[!UICONTROL 保存]**
 
-### 一般 - アカウント設定 {#general-account-settings}
+### 一般 — アカウント設定 {#general-account-settings}
 
-アカウント設定では、コミュニティ管理者は以下の設定をおこなうことができます。：
+アカウント設定では、コミュニティ管理者は次の操作を実行できます。
 
 * **[!UICONTROL ステータス]**
-
    * 禁止メンバーがサインインできず、メンバーがページを表示したり、サインインが必要なアクティビティに参加したりできません。 彼らは未だにオープンなコミュニティサイトを匿名で訪問する可能性があります。
 
-   * 禁止されていないメンバーはコミュニティサイトのすべての機能にアクセスできます。
+   * 禁止されていないメンバーはコミュニティサイトに完全にアクセスできます。
 
    デフォルトは `Not Banned` です。
 
 * **[!UICONTROL 貢献度の制限]**
 
    オンにすると、メンバーによるコンテンツの投稿機能は制限されます。
-初期設定は、貢献度の制限の設定によって異なります。[メンバーの貢献度の制限](limits.md)を参照してください。
+デフォルトは、貢献度の制限の設定によって異なります。
+詳しくは、 [メンバー貢献度の制限](limits.md).
 
 * **[!UICONTROL パスワードを変更]**
 
    既存のメンバーを変更する際に存在するリンク。 コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
 
-### 一般 - 写真 {#general-photo}
+### 一般 — 写真 {#general-photo}
 
-メンバーのアバターを設定するには、まず「**[!UICONTROL 画像をアップロード]**」を選択して、.jpg、.png、.tif、.gif のいずれかから画像の種類を選択します。画像の推奨サイズは、72 dpi での 240 x 240 ピクセルです。
+メンバーのアバターを提供するには、まず、 **[!UICONTROL 画像をアップロード]** .jpg、.png、.tif または.gif 形式の画像を選択します。 画像の推奨サイズは、72 dpi での 240 x 240 ピクセルです。
 
-### 一般 - メンバーをサイトに追加 {#general-add-member-to-sites}
+### 一般 — サイトにメンバーを追加 {#general-add-member-to-sites}
 
-1 つ以上のコミュニティサイトのメンバーグループにメンバーを追加できます。まず、テキストボックスにテキストを入力します。
+メンバーは、1 つ以上のコミュニティサイトのメンバーグループに追加できます。 まず、テキストボックスにテキストを入力します。
 
-### 一般 - メンバーをグループに追加 {#general-add-member-to-groups}
+### 一般 — グループにメンバーを追加 {#general-add-member-to-groups}
 
-1 つ以上のメンバーグループにメンバーを追加できます。まず、テキストボックスにテキストを入力します。
+メンバーは、1 つ以上のメンバーグループに追加できます。 まず、テキストボックスにテキストを入力します。
 
 ### 「バッジ」タブ {#badges-tab}
 
-この `BADGES` panel では、バッジを手動で割り当てたり、取り消したりすることができます。 バッジは通常、獲得するものですが、役割の割り当てに使用することもできます。
+この `BADGES` panel では、バッジを手動で割り当てたり、取り消したりすることができます。 バッジは、割り当てられた役割に対して使用することも、通常は獲得されたバッジに対して使用することもできます。
 
-[スコアとバッジ](implementing-scoring.md)も参照してください。
+関連トピック [スコアとバッジ](implementing-scoring.md).
 
 ![create-member2](assets/create-member2.png)
 
@@ -161,16 +162,14 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 ## グループコンソール {#groups-console}
 
-グループコンソールはオーサー環境から使用でき、パブリッシュ環境で登録されたメンバーグループの作成や管理をおこなうことができます。特に、以下の目的で使用されます。
-* [権限を持つメンバーグループ](users.md#privilegedmembersgroups)
-* のグループベースの割り当て [イネーブルメントリソース](resources.md)
+オーサー環境から使用できるグループコンソールを使用すると、パブリッシュ環境で登録されたメンバーグループを作成および管理できます。 特に～に役立つ [権限を持つメンバーグループ](users.md#privilegedmembersgroups).
 
 グループコンソールにアクセスするには：
 * グローバルナビゲーションから、 **[!UICONTROL ナビゲーション]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL グループ]**.
 
 >[!CAUTION]
 >
->[トンネルサービス](deploy-communities.md#tunnel-service-on-author)が有効でない場合、グループコンソールを使用することはできません。
+>グループコンソールは、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっていません。
 
 ### 新しいグループを作成 {#create-new-group}
 
@@ -178,19 +177,19 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 ![group-console1](assets/group-console1.png)
 
-パブリッシュ側の新しいメンバーグループを作成するには、以下のフィールドを指定します。
+新しい公開側メンバーグループを作成するための必須フィールドは次のとおりです。
 
 * **[!UICONTROL ID]**
 
    (*必須*) グループの一意の ID。
 
-   *ID は一度作成すると変更できません。*
+   *作成後は、ID を変更できません。*
 
 * **[!UICONTROL 名前]**
 
    (*オプション*) グループの表示名。
 
-   デフォルトの値は ID です。
+   デフォルト値は ID です。
 
 * **[!UICONTROL 説明]**
 
@@ -202,7 +201,7 @@ AEM Communities の機能の多くは、サイト訪問者に対して、パブ�
 
 * 選択 **[!UICONTROL 保存]**
 
-## 承認された管理者 {#authorized-administrators}
+## 認証済み管理者 {#authorized-administrators}
 
 コミュニティメンバーコンソールでメンバーを操作する場合は、適切な権限を持つユーザーとして、および [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が正しく設定されている必要があります。
 

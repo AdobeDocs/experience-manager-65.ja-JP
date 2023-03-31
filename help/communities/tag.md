@@ -10,18 +10,18 @@ topic-tags: developing
 content-type: reference
 discoiquuid: d355a3ee-c8a8-4a07-8d28-d1a99bda315c
 exl-id: 6e8af8cf-1239-46f9-b2fe-4aa80abc86ea
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 60%
+source-wordcount: '252'
+ht-degree: 5%
 
 ---
 
 # タグの基本事項 {#tag-essentials}
 
-AEM Communities コンポーネントの設定でタグ付けを有効化すると、コミュニティメンバーは、パブリッシュ環境で投稿するコンテンツをタグ付けできるようになります。
+AEM Communitiesコンポーネントでタグ付けが有効になっている場合、コミュニティメンバーは、パブリッシュ環境で投稿するコンテンツにタグ付けできます。
 
-パブリッシュ環境で適用されるタグの基礎となるインフラストラクチャは、オーサー環境でコンテンツ（ページやアセットなど）に適用されるタグの場合と同じです。
+パブリッシュ環境で適用されるタグの基盤となるインフラストラクチャは、オーサー環境でコンテンツに適用されるタグ（ページやアセットなど）の場合と同じです。
 
 * 詳しくは、 [タグの管理](../../help/sites-administering/tags.md) および [ユーザー生成コンテンツのタグ付け](tag-ugc.md) (UGC) を参照してください。
 
@@ -29,9 +29,7 @@ AEM Communities コンポーネントの設定でタグ付けを有効化する�
 
 * 詳しくは、 [Social タグクラウドの使用](tagcloud.md) を参照してください。 `social tag cloud` コンポーネントをページに追加して、パブリッシュ環境で UGC に適用されたタグをハイライトします。
 
-* カタログのリソースをタグ付けする方法については、[イネーブルメントリソースのタグ付け](tag-resources.md)を参照してください。
-
-UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)または次のいずれかの機能を設定する際に有効化することができます。
+UGC のタグ付けは、 [コミュニティサイト](sites-console.md#tagging) または次の機能の 1 つ：
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -41,7 +39,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
-### Social タグクラウド {#social-tag-cloud}
+### ソーシャルタグクラウド {#social-tag-cloud}
 
 <table>
  <tbody>
@@ -50,7 +48,7 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
    <td>social/commons/components/hbs/tagcloud</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>包含可能な</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
@@ -82,8 +80,8 @@ UGC のタグ付けは、[コミュニティサイト](sites-console.md#tagging)
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
-## タグの検索 {#tag-searching}
+## タグ検索 {#tag-searching}
 
-[機能パック 1](deploy-communities.md#latestfeaturepack)（FP1）以降では、[タグタイトル](../../help/sites-developing/framework.md#tag-characteristics)を使用して、タグの検索を実行します。
+現在 [機能パック 1](deploy-communities.md#latestfeaturepack) (FP1)、タグ検索は [タグのタイトル](../../help/sites-developing/framework.md#tag-characteristics).
 
-FP1 より前では、[タグ ID](../../help/sites-developing/framework.md#tagid) を使用して、タグの検索を実行していました。
+FP1 以前は、 [タグ id](../../help/sites-developing/framework.md#tagid).

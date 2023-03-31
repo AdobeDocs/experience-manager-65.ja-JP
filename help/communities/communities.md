@@ -1,7 +1,7 @@
 ---
 title: コミュニティの開発
 seo-title: Developing Communities
-description: フォーラム、ユーザーグループなどのコミュニティ機能を作成し、カスタマイズします
+description: フォーラムやユーザーグループなどのコミュニティ機能を作成し、カスタマイズする
 seo-description: Create and customize community features such as forums, user groups, and more
 uuid: 51dc54da-9090-4d36-adf9-72d5479062a5
 contentOwner: msm-service
@@ -10,10 +10,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: d1b4cf87291f7e4a0670a21feca1ebf8dd5e0b5e
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 58%
+source-wordcount: '385'
+ht-degree: 18%
 
 ---
 
@@ -21,24 +21,23 @@ ht-degree: 58%
 
 ## 概要 {#overview}
 
-AEM Communities により、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成およびカスタマイズが簡素化されます。これらの機能を使用すると、パブリッシュ環境にユーザー生成コンテンツ (UGC) が入力されます。
+AEM Communitiesは、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成とカスタマイズを簡単にします。 これらの機能を使用すると、パブリッシュ環境にユーザー生成コンテンツ (UGC) が入力されます。
 
 の基盤 [コミュニティサイト](overview.md#communitiessites) が [ソーシャルコンポーネントフレームワーク](scf.md) (SCF)。 コミュニティサイトの作成は、 [コミュニティサイトテンプレート](sites-console.md) それは [コミュニティ機能](functions.md).
 
-概要および使用の手引きのチュートリアルについては、以下を参照してください。
+概要と入門チュートリアルについては、次を参照してください。
 
 * [AEM Communities の概要](overview.md)
 * [AEM Communities 使用の手引き](getting-started.md)
-* [イネーブルメントのための AEM Communities 使用の手引き](getting-started-enablement.md)
 
 >[!NOTE]
 > 
->[最新リリース](deploy-communities.md#latest-releases)によって常に最新状態にしておくことをお勧めします。
+>を常に最新の状態に保つことを強くお勧めします。 [最新リリース](deploy-communities.md#latest-releases).
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-* [コミュニティコンテンツストレージ](working-with-srp.md)：UGC 共通ストアの使用可能な SRP 選択肢について説明します。
-* [コミュニティに推奨されるトポロジ](topologies.md)：使用例および SRP 選択肢に基づいてトポロジについて説明します。
+* [コミュニティコンテンツストレージ](working-with-srp.md):UGC 共通ストアで使用可能な SRP の選択肢について説明します。
+* [コミュニティ用の推奨トポロジ](topologies.md):使用例と SRP の選択に基づくトポロジについて説明します。
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
@@ -52,7 +51,7 @@ AEM Communities により、フォーラム、ユーザーグループ、ブロ�
 
 ## コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
 
-AEM Communities のコンポーネントおよび機能によって、[コミュニティサイト](sites-console.md)に構成要素が提供されます。
+AEM Communitiesのコンポーネント、機能および機能は、 [コミュニティサイト](sites-console.md).
 
 * [コンポーネントおよび機能の基本事項](essentials.md)
 * [コミュニティコンポーネントの clientlib](clientlibs.md)
@@ -67,13 +66,13 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 ## コミュニティグループ {#community-groups}
 
-[コミュニティグループ](overview.md#communitygroups)は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。コミュニティグループの作成は、パブリッシュ環境またはオーサー環境でおこなうことができます。
+[コミュニティグループ](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを作成できるようにする概念です。 コミュニティグループの作成は、パブリッシュ環境またはオーサー環境でおこなうことができます。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [グループ機能](functions.md#groups-function)
 * [コミュニティグループテンプレート](tools-groups.md)
 * [ユーザーとユーザーグループの管理](users.md)
-* [作成者のコミュニティグループ](creating-groups.md)
+* [作成者向けコミュニティグループ](creating-groups.md)
 
 ## データの管理 {#managing-data}
 
@@ -84,7 +83,7 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 * [クライアント側チュートリアル](tutorials.md#client-side-customization)
 * [サーバー側チュートリアル](tutorials.md#server-side-customization)
-* [方法の説明](tutorials.md#how-to-instructions)
+* [ハウツーインストラクション](tutorials.md#how-to-instructions)
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -95,6 +94,6 @@ AEM Communities のコンポーネントおよび機能によって、[コミュ
 
 * 訪問 [コミュニティのデプロイ](deploy-communities.md) を参照してください。
 
-* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理およびメッセージングの設定については、[コミュニティサイトの管理](administer-landing.md)を参照してください。
+* 訪問 [コミュニティサイトの管理](administer-landing.md) コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、メッセージングの設定について説明します。
 
 * 訪問 [コミュニティコンポーネントのオーサリング](author-communities.md) コミュニティコンポーネントを使用して作成および設定する方法を学ぶには、以下を参照してください。

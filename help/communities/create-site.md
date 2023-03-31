@@ -1,7 +1,7 @@
 ---
 title: 新しいコミュニティサイトの作成
 seo-title: Author a New Community Site
-description: 新しい AEM Communities サイトを作成する方法
+description: 新しいAEM Communitiesサイトの作成方法
 seo-description: How to author a new AEM Communities site
 uuid: 4f609f5f-ef07-44fc-aeb3-1c616e120d46
 contentOwner: Janice Kendall
@@ -11,23 +11,23 @@ content-type: reference
 discoiquuid: 8ae324ea-8b84-47a3-aabf-1fee2a3bd46d
 docset: aem65
 exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 42%
+source-wordcount: '1601'
+ht-degree: 3%
 
 ---
 
 # 新しいコミュニティサイトの作成{#author-a-new-community-site}
 
-## コミュニティサイトの作成 {#create-a-community-site}
+## コミュニティサイトを作成 {#create-a-community-site}
 
 オーサーインスタンスを使用してコミュニティサイトを作成します。 AEM オーサーインスタンスで、次の操作を実行します。
 
-1. 管理者権限でサインインします。
+1. 管理者権限でログインします。
 1. グローバルナビゲーションから、に移動します。 **[!UICONTROL コミュニティ]** > **[!UICONTROL サイト]**.
 
-コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を案内するウィザードが提供されます。を `Next` 手順または `Back` を前の手順に戻してから、最後の手順でサイトをコミットします。
+コミュニティサイトコンソールでは、コミュニティサイトを作成する手順を示すウィザードを使用できます。 を `Next` 手順または `Back` を前の手順に戻してから、最後の手順でサイトをコミットします。
 
 新しいコミュニティサイトの作成を開始するには：
 
@@ -35,19 +35,19 @@ ht-degree: 42%
 
 ![createcommunitysite](assets/createcommunitysite.png)
 
-### 手順 1：サイトテンプレート {#step-site-template}
+### 手順 1:サイトテンプレート {#step-site-template}
 
 ![サイトを作成するテンプレート](assets/create-site.png)
 
-[「サイトテンプレート」の手順](/help/communities/sites-console.md#step2013asitetemplate)では、URL のタイトル、説明、名前を入力し、コミュニティサイトテンプレートを選択します。次に例を示します。
+の [サイトテンプレートの手順](/help/communities/sites-console.md#step2013asitetemplate)、タイトル、説明、URL の名前を入力し、コミュニティサイトテンプレートを選択します。次に例を示します。
 
 * **コミュニティサイトのタイトル**: `Getting Started Tutorial`
 * **コミュニティサイトの説明**: `A site for engaging with the community.`
 * **コミュニティサイトのルート**:（デフォルトのルートの場合は空白のままにします） `/content/sites`)
-* **クラウド設定**：（クラウド設定が指定されていない場合は空欄のままにする）指定されたクラウド設定へのパスを入力します。
-* **コミュニティサイトの基本言語**:（単一言語の場合は、手を付けないでください）。英語 ) ドロップダウンリストを使用して、1 つを選択します *以上* 使用可能な言語 ( ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)) のベース言語。 追加された言語ごとに 1 つのコミュニティサイトが作成され、 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md). 各サイトのルートページには、選択したいずれかの言語の言語コード（例えば、英語では「en」、フランス語では「fr」）で名付けられた子ページが含まれます。
+* **クラウド設定**:（クラウド設定が指定されていない場合は空白にします）指定したクラウド設定へのパスを指定します。
+* **コミュニティサイトの基本言語**:（単一言語の場合は、手を付けないでください）。英語 ) ドロップダウンリストを使用して、1 つを選択します *以上* 使用可能な言語 ( ドイツ語、イタリア語、フランス語、日本語、スペイン語、ポルトガル語（ブラジル）、中国語（繁体字）、中国語（簡体字）)) のベース言語。 追加された言語ごとに 1 つのコミュニティサイトが作成され、 [多言語サイトのコンテンツの翻訳](/help/sites-administering/translation.md). 各サイトのルートページには、選択した言語の 1 つの言語コード（英語の場合は「en」、フランス語の場合は「fr」など）で名前が付けられた子ページが含まれます。
 
-* **コミュニティサイト名**：engage
+* **コミュニティサイト名**:エンゲージ
 
    * サイトの作成後に名前が簡単に変更されないので、名前を再確認します。
    * 初期 URL がコミュニティサイト名の下に表示されます
@@ -58,17 +58,17 @@ ht-degree: 42%
 
 * 「**次へ**」を選択します。
 
-### 手順 2：デザイン {#step-design}
+### 手順 2:デザイン {#step-design}
 
 デザインの手順は、テーマとブランディングバナーを選択するための 2 つの節で説明します。
 
-#### コミュニティサイトテーマ {#community-site-theme}
+#### コミュニティサイトのテーマ {#community-site-theme}
 
-目的のスタイルを選択し、テンプレートに適用します。選択すると、テーマはチェックマークでオーバーレイされます。
+テンプレートに適用するスタイルを選択します。 選択すると、テーマはチェックマークでオーバーレイされます。
 
-#### コミュニティサイトブランディング {#community-site-branding}
+#### コミュニティサイトのブランディング {#community-site-branding}
 
-（オプション）サイトのページ全体に表示するバナー画像をアップロードします。 バナーは、ブラウザーの左端、コミュニティサイトのヘッダーとナビゲーションリンクの間に固定されています。 バナーの高さは 120 ピクセルに切り詰められます。バナーがブラウザーの幅や 120 ピクセルの高さに合わせてリサイズされることはありません。
+（オプション）サイトのページ全体に表示するバナー画像をアップロードします。 バナーは、ブラウザーの左端、コミュニティサイトのヘッダーとナビゲーションリンクの間に固定されています。 バナーの高さは 120 ピクセルに切り抜かれます。 バナーのサイズは、ブラウザーの幅と 120 ピクセルの高さに合わせて変更されません。
 
 ![community-site-branding](assets/community-site-branding.png)
 
@@ -76,15 +76,13 @@ ht-degree: 42%
 
 「**次へ**」を選択します。
 
-### 手順 3：設定 {#step-settings}
+### 手順 3:設定 {#step-settings}
 
-設定ステップで、選択する前に `Next`ユーザー管理、タグ付け、モデレート、グループ管理、分析、翻訳およびイネーブルメントに関する設定にアクセスできる 7 つのセクションがあることに注意してください。
-
-次にアクセス： [AEM Communities使用の手引き](/help/communities/getting-started-enablement.md) イネーブルメント機能を使用する方法を学ぶためのチュートリアルです。
+設定ステップで、選択する前に `Next`ユーザー管理、タグ付け、モデレート、グループ管理、分析および翻訳に関する設定にアクセスできる 7 つの節があることに注意してください。
 
 #### ユーザー管理 {#user-management}
 
-「[ユーザー管理](/help/communities/sites-console.md#user-management)」タブのチェックボックスをすべてオンにします。
+のすべてのチェックボックスをオンにします。 [ユーザー管理](/help/communities/sites-console.md#user-management)
 
 * サイト訪問者に自己登録を許可するには
 * サイト訪問者がサインインせずにサイトを表示できるようにするには
@@ -94,7 +92,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->実稼動環境では、カスタムの Facebook アプリケーションおよび Twitter アプリケーションを作成する必要があります。[Facebook と Twitter を使用したソーシャルログイン](/help/communities/social-login.md)を参照してください。
+>実稼動環境では、カスタムのFacebookおよびTwitterアプリケーションを作成する必要があります。 詳しくは、 [facebookとTwitterを使用したソーシャルログイン](/help/communities/social-login.md).
 
 ![コミュニティサイト設定](assets/site-settings.png)
 
@@ -102,12 +100,12 @@ ht-degree: 42%
 
 コミュニティコンテンツに適用できるタグを制御するには、以前に [タグ付けコンソール](/help/sites-administering/tags.md#tagging-console) ( [チュートリアル名前空間](/help/communities/setup.md#create-tutorial-tags)) をクリックします。
 
-名前空間は先行入力検索で簡単に検索できます。例：
+名前空間を検索するには、先頭入力検索を使用すると簡単です。 例：
 
 * 型 `tut`
 * 選択 `Tutorial`
 
-![tagging](assets/tagging.png)
+![タグ付け](assets/tagging.png)
 
 #### 役割 {#roles}
 
@@ -118,7 +116,7 @@ ht-degree: 42%
 例：
 
 * 型 `q`
-* 選択 [クインハーパー](/help/communities/enablement-setup.md#publishcreateenablementmembers)
+* クインハーパーを選択
 
 >[!NOTE]
 >
@@ -132,17 +130,17 @@ ht-degree: 42%
 
 ![モデレート](assets/moderation1.png)
 
-#### ANALYTICS {#analytics}
+#### 分析 {#analytics}
 
-Adobe Analytics のライセンスを持っていて、Analytics のクラウドサービスおよびフレームワークが設定されている場合は、Analytics を有効にしてフレームワークを選択できます。
+Adobe Analyticsがライセンスされ、Analytics クラウドサービスとフレームワークが設定されている場合は、Analytics を有効にしてフレームワークを選択できます。
 
-[コミュニティ機能のための Analytics の設定](/help/communities/analytics.md)を参照してください。
+詳しくは、 [コミュニティ機能用の Analytics 設定](/help/communities/analytics.md).
 
 ![分析](assets/analytics.png)
 
 #### 翻訳 {#translation}
 
-[翻訳設定](/help/communities/sites-console.md#translation)では、サイトの基本言語に加えて、UGC の翻訳を許可するかどうかと、どの言語に翻訳するかを指定します。
+この [翻訳設定](/help/communities/sites-console.md#translation) サイトのベース言語と、UGC を翻訳できるかどうか、および翻訳できる場合はどの言語に変換するかを指定します。
 
 * チェック **機械翻訳を許可**
 * デフォルトの機械翻訳サービスで翻訳用に選択されたデフォルトの言語をそのまま使用
@@ -153,31 +151,21 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ![translation-settings](assets/translation-settings.png)
 
-#### イネーブルメント {#enablement}
-
-エンゲージメントコミュニティを作成する場合は空白のままにします。
-
-[イネーブルメントコミュニティ](/help/communities/overview.md#enablement-community)をすばやく作成する方法のチュートリアルについて詳しくは、[イネーブルメントのための AEM Communities 使用の手引き](/help/communities/getting-started-enablement.md)を参照してください。
-
-「**次へ**」を選択します。
-
-![実施可能](assets/enablement.png)
-
-### 手順 4：コミュニティサイトの作成 {#step-create-communities-site}
+### 手順 4:コミュニティサイトを作成 {#step-create-communities-site}
 
 選択 **を作成します。**
 
 ![create-site](assets/create-site2.png)
 
-プロセスが完了すると、新しいサイトのフォルダーがコミュニティサイトコンソールに表示されます。
+処理が完了すると、新しいサイトのフォルダーがコミュニティ — サイトコンソールに表示されます。
 
 ![communitiessitesconsole](assets/communitiessitesconsole.png)
 
 ## コミュニティサイトを公開 {#publish-the-community-site}
 
-作成したサイトは、コミュニティ - サイトコンソールで管理する必要があります。このコンソールは、新しいサイトを作成するコンソールと同じものです。
+作成したサイトは、コミュニティ — サイトコンソール、および新しいサイトを作成できる同じコンソールから管理する必要があります。
 
-コミュニティサイトのフォルダーを選択して開いた後、サイトアイコンにマウスカーソルを合わせると 4 つのアクションアイコンが表示されます。
+コミュニティサイトのフォルダーを選択して開いた後、サイトアイコンの上にマウスポインターを置くと、次の 4 つのアクションアイコンが表示されます。
 
 ![siteactionicons-1](assets/siteactionicons-1.png)
 
@@ -185,7 +173,7 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ![siteactionsnew-1](assets/siteactionsnew-1.png)
 
-各アイコンの機能は次のとおりです（左から右の順に説明）。
+左から右に、次のように表示されます。
 
 * **サイトを開く**
 
@@ -201,19 +189,20 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 * **サイトを書き出し**
 
-   書き出しアイコンを選択して、コミュニティサイトのパッケージを作成します。このパッケージが、[パッケージマネージャー](/help/sites-administering/package-manager.md)に格納され、ダウンロード可能になります。UGC はサイトパッケージに含まれていません。
+   書き出しアイコンを選択して、コミュニティサイトのパッケージを作成し、そのパッケージを次の場所に保存します。 [パッケージマネージャー](/help/sites-administering/package-manager.md) とダウンロードされました。
+UGC はサイトパッケージに含まれていません。
 
 * **サイトを削除**
 
-   削除アイコンを選択して、内からコミュニティサイトを削除します。 **[!UICONTROL コミュニティ/サイトコンソール]**. サイトを削除すると、UGC やユーザーグループ、アセット、データベースレコードなど、そのサイトに関連付けられているアイテムがすべて削除されます。
+   削除アイコンを選択して、内からコミュニティサイトを削除します。 **[!UICONTROL コミュニティ/サイトコンソール]**. この操作により、UGC、ユーザーグループ、アセット、データベースレコードなど、サイトに関連するすべての項目が削除されます。
 
 ![siteactions](assets/siteactions.png)
 
 >[!NOTE]
 >
->パブリッシュインスタンスにデフォルトポートの 4503 を使用していない場合は、デフォルトのレプリケーションエージェントを編集し、ポート番号を正しい値に設定します。
+>パブリッシュインスタンスにデフォルトポート 4503 を使用しない場合は、デフォルトレプリケーションエージェントを編集して、ポート番号を正しい値に設定します。
 >
->オーサーインスタンスで、メインメニューから：
+>オーサーインスタンスで、メインメニューから次の操作を実行します。
 >
 >1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL 運用]** > **[!UICONTROL レプリケーション]** メニュー
 >1. 選択 **[!UICONTROL 作成者のエージェント]**.
@@ -225,9 +214,9 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 >1. （オプション）「 」を選択します。 **[!UICONTROL クリア]** または **[!UICONTROL 再試行を強制]** レプリケーションキューをリセットします。
 
 
-### サイトの公開 {#select-publish}
+### 公開を選択 {#select-publish}
 
-公開サーバーが実行中であることを確認したら、地球のアイコンを選択して、コミュニティサイトを公開します。
+パブリッシュサーバーが実行されていることを確認したら、世界アイコンを選択してコミュニティサイトを公開します。
 
 ![publish-site](assets/publish-site.png)
 
@@ -235,22 +224,22 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ### 新しいコミュニティユーザーグループ {#new-community-user-groups}
 
-新しいコミュニティサイトとともに、新しいユーザーグループが作成されます。各グループには、様々な管理機能に応じて適切な権限が設定されています。詳しくは、 [コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites).
+新しいコミュニティサイトと共に、様々な管理機能に対して適切な権限が設定された新しいユーザーグループが作成されます。 詳しくは、 [コミュニティサイトのユーザーグループ](/help/communities/users.md#usergroupsforcommunitysites).
 
-この新しいコミュニティサイトでは、手順 1 で「engage」というサイト名を指定したので、[グループコンソール](/help/communities/members.md)（グローバルナビゲーション：コミュニティ／グループ）で以下に示す 4 つの新しいユーザーグループを確認できます。
+この新しいコミュニティサイトでは、手順 1 でサイト名「engage」を指定すると、 [グループコンソール](/help/communities/members.md) ( グローバルナビゲーション：コミュニティ、グループ ):
 
 * コミュニティエンゲージコミュニティマネージャー
 * コミュニティエンゲージグループ管理者
-* コミュニティ Engage メンバー
-* コミュニティ Engage モデレーター
+* コミュニティエンゲージメンバー
+* コミュニティエンゲージモデレーター
 * コミュニティエンゲージ権限を持つメンバー
 * コミュニティエンゲージサイトコンテンツマネージャー
 
 注意： [Aaron McDonald](/help/communities/tutorials.md#demo-users) は、
 
 * コミュニティエンゲージコミュニティマネージャー
-* コミュニティ Engage モデレーター
-* コミュニティ Engage メンバー（モデレーターグループのメンバーとして間接的に）
+* コミュニティエンゲージモデレーター
+* コミュニティエンゲージメンバー（間接的にモデレーターグループのメンバーとして）
 
 ![user-group](assets/user-group.png)
 
@@ -258,7 +247,7 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ![エンゲージ](assets/engage.png)
 
-## 認証エラーの設定 {#configure-for-authentication-error}
+## 認証エラー用の設定 {#configure-for-authentication-error}
 
 サイトが設定され、パブリッシュにプッシュされると、 [ログインマッピングの設定](/help/communities/sites-console.md#configure-for-authentication-error) ( `Adobe Granite Login Selector Authentication Handler`) をパブリッシュインスタンスでクリックします。 ログイン資格情報が正しく入力されていない場合、認証エラーによってコミュニティサイトのログインページが再度表示され、エラーメッセージが表示されるという利点があります。
 
@@ -270,7 +259,7 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ### デフォルトのホームページの変更 {#change-the-default-home-page}
 
-公開サイトをデモ目的で操作するときは、デフォルトのホームページを新しいサイトに変更すると便利です。
+公開サイトをデモ用に使用する場合は、デフォルトのホームページを新しいサイトに変更すると便利です。
 
 そのためには、 [CRXDE](https://localhost:4503/crx/de) を編集するには Lite を使用します。 [resource-mapping](/help/sites-deploying/resource-mapping.md) パブリッシュに関するテーブル。
 
@@ -291,14 +280,14 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
    * プロパティの追加:
 
-   * **名前**：sling:match
-      * **タイプ**：String
+   * **名前** sling:match
+      * **タイプ** 文字列
       * **値** localhost.4503/$ （「$」文字で終わる必要があります）
    * プロパティの追加:
 
-      * **名前**：sling:internalRedirect
-      * **タイプ**：String
-      * **値**：/content/sites/engage/en.html
+      * **名前** sling:internalRedirect
+      * **タイプ** 文字列
+      * **値** /content/sites/engage/en.html
 
 
 1. 選択 **すべて保存します。**
@@ -319,18 +308,18 @@ Adobe Analytics のライセンスを持っていて、Analytics のクラウド
 
 ![error-message](assets/error-message.png)
 
-#### トラブルシューティング：リダイレクト失敗 {#troubleshooting-fail-to-redirect}
+#### トラブルシューティング：リダイレクトに失敗 {#troubleshooting-fail-to-redirect}
 
 &#39;**$**&#39; （正規表現の末尾） `sling:match`文字列が非常に重要なので、正確に `https://localhost:4503/` がマッピングされている場合、リダイレクト値の前に、URL の server:port の後に存在する可能性のある任意のパスが付きます。 したがって、AEMがログインページにリダイレクトしようとすると、失敗します。
 
 ### サイトの変更 {#modify-the-site}
 
-サイトを最初に作成した後、作成者は[サイトを開くアイコン](/help/communities/sites-console.md#authoring-site-content)を使用して、標準的な AEM のオーサリングアクティビティを実行できます。
+サイトが最初に作成された後、作成者は [サイトを開くアイコン](/help/communities/sites-console.md#authoring-site-content) 標準のAEMオーサリングアクティビティを実行する場合。
 
-また、管理者は[サイトを編集アイコン](/help/communities/sites-console.md#modifying-site-properties)を使用して、タイトルなどのサイトプロパティを変更できます。
+また、管理者は [サイトを編集アイコン](/help/communities/sites-console.md#modifying-site-properties) をクリックして、サイトのプロパティ（タイトルなど）を変更します。
 
-変更後は、必ず&#x200B;**保存**&#x200B;して再&#x200B;**公開**&#x200B;してください。
+変更後は、次の操作をおこなってください。 **保存** および re **公開** サイト。
 
 >[!NOTE]
 >
->AEM に馴染みがない場合は、[基本操作](/help/sites-authoring/basic-handling.md)に関するドキュメントおよび[ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md)を参照してください。
+>AEMに詳しくない場合は、 [基本操作](/help/sites-authoring/basic-handling.md) および [ページのオーサリングのクイックガイド](/help/sites-authoring/qg-page-authoring.md).

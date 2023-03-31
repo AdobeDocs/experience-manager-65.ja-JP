@@ -1,7 +1,7 @@
 ---
 title: コミュニティコンソール
 seo-title: Communities Consoles
-description: コミュニティコンソールについて説明しています
+description: コミュニティコンソールの説明
 seo-description: Community Consoles explained
 uuid: 1c5b2600-9059-4b44-9741-f1b627423d3c
 contentOwner: Janice Kendall
@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 5fa9ee8b-5893-4ae9-a986-bfdbb00f355f
 role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 17%
+source-wordcount: '311'
+ht-degree: 2%
 
 ---
 
 # コミュニティコンソール {#communities-consoles}
 
-オーサー環境のグローバルナビゲーションパネルで使用できる AEM Communities コンソールでは、以下の管理タスクにアクセスできます。：
+AEM Communitiesコンソールは、オーサー環境のグローバルナビゲーションパネルから使用でき、次のような管理タスクにアクセスできます。
 
 * [コミュニティサイトの作成](sites-console.md)
 * 追加中 [グループ](groups.md) サイト内にネストされる
@@ -40,7 +40,7 @@ ht-degree: 17%
 
 ## グローバルナビゲーションパネル {#global-navigation-panel}
 
-`Adobe Experience Manager` のアイコンを選択し、グローバルナビゲーションパネルを開いて次の 2 つのアイコンにアクセスします。
+を選択します。 `Adobe Experience Manager` アイコン（左上隅）をクリックしてグローバルナビゲーションパネルを開き、2 つのアイコンにアクセスします。
 
 * [ナビゲーションコンソール](#navigation-console)
 * [ツールコンソール](tools.md)
@@ -66,10 +66,6 @@ ht-degree: 17%
 * [レポート](reports.md)
 
    レポートコンソールでは、コミュニティサイトに [有効なAdobe Analytics](sites-console.md#analytics). コンソールは、オーサー環境でのみ使用できます。
-
-* [リソース](resources.md)
-
-   リソースコンソールでは、 [実施可能マネージャー](enablement.md#communitymanagers) リソースの作成、管理、およびメンバーへの割り当て [実施可能コミュニティサイト](overview.md#enablement-community). コンソールは、オーサー環境でのみ使用できます。
 
 ## ツールコンソール {#tools-console}
 
