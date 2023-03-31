@@ -10,16 +10,17 @@ topic-tags: integrations
 discoiquuid: 8f776f30-ff93-4d19-94c6-c4bfe6f1fae2
 docset: aem65
 exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
-source-git-commit: ccbb6a33c2ee8029d2e82d9098c07de18af166ac
+source-git-commit: 294d12e7d1b5293f165a164ff1fcc624f7b2b648
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1568'
 ht-degree: 39%
 
 ---
 
 # アダプティブフォームの A/B テストの作成と管理 {#create-and-manage-a-b-test-for-adaptive-forms}
 
-|除外|[!BADGE 廃止]{type=negative tooltip="この機能は現在提供終了です"}|
+[!BADGE 廃止]{type=negative tooltip="この機能は現在提供終了です"}
+
 <div class="preview"> アダプティブフォーム機能の A/B テストは提供が終了し、サポートされなくなりました。 </div>
 
 ## 概要 {#overview-br}
