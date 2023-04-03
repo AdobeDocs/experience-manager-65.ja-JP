@@ -1,7 +1,7 @@
 ---
 title: 実行モード
 seo-title: Run Modes
-description: 実行モードを使用して、固有の目的に合わせて AEM インスタンスを調整する方法を学習します。
+description: 実行モードを使用して、特定の目的に合わせてAEMインスタンスを調整する方法を説明します。
 seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
 uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 100%
+ht-degree: 64%
 
 ---
 
 # 実行モード{#run-modes}
 
-実行モードを使用すると、オーサーまたはパブリッシュ、テスト、開発、イントラネットなど、特定の目的に合わせて AEM インスタンスを調整できます。
+実行モードを使用すると、特定の目的に合わせてAEMインスタンスを調整できます。例えば、オーサーまたはパブリッシュ、テスト、開発、イントラネットなどです。
 
 以下の操作を実行できます。
 
@@ -57,7 +57,7 @@ ht-degree: 100%
 
 ## カスタマイズされた実行モード {#customized-run-modes}
 
-独自のカスタマイズされた実行モードも作成できます。これらを組み合わせて次のようなシナリオに対応できます。
+独自にカスタマイズした実行モードを作成することもできます。 これらを組み合わせて、次のようなシナリオをカバーできます。
 
 * `author` + `development`
 
@@ -71,19 +71,19 @@ ht-degree: 100%
 
 カスタマイズされた実行モードは、起動のたびに選択することもできます。
 
-## samplecontent および nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
+## samplecontent と nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
 
-これらのモードでは、サンプルコンテンツの使用を制御できます。サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージや設定を含めることができます。
+これらのモードを使用すると、サンプルコンテンツの使用を制御できます。 サンプルコンテンツは、クイックスタートのビルド前に定義され、パッケージ、設定などを含めることができます。
 
 * `samplecontent` 実行モードでは、サンプルコンテンツがインストールされます（デフォルトモード）。
 
 * `nosamplecontent` モードでは、サンプルコンテンツはインストールされません。
 
-nosamplecontent 実行モードは、実稼働インストール用に設計されています。
+nosamplecontent 実行モードは、実稼動インストール用に設計されています。
 
 ## 実行モードの設定プロパティの定義 {#defining-configuration-properties-for-a-run-mode}
 
-特定の実行モードに使用する設定プロパティの値をまとめてリポジトリに保存できます。
+特定の実行モードで使用される設定プロパティの値のコレクションをリポジトリに保存できます。
 
 実行モードは、フォルダー名のサフィックスで示されます。これにより、すべての設定を 1 つのリポジトリに格納できます。次に例を示します。
 
@@ -103,13 +103,13 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
    該当する実行モードに使用（config など）
 
-これらのフォルダー内で個々の設定ノードを定義する方法、および複数の実行モードの組み合わせに関する設定を作成する方法について詳しくは、[リポジトリでの OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を参照してください。
+詳しくは、 [リポジトリ内の OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) これらのフォルダー内で個々の設定ノードを定義する方法と、複数の実行モードの組み合わせに対する設定を作成する方法について詳しくは、を参照してください。
 
 >[!NOTE]
 >
->[インストール実行モード](#installation-run-modes)（オーサーなど）に関しては、インストール後は実行モードを変更できません。ただし、個々の設定プロパティの変更は、再起動時に有効になります。
+>の場合 [インストール実行モード](#installation-run-modes) （例：author）インストール後に実行モードを変更することはできません。 ただし、個々の設定プロパティに対する変更は、の再起動時に有効になります。
 
-## 特定の実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
+## 実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
 特定の実行モード用にインストールする必要がある追加のバンドルも指定できます。これらの定義に関しては、インストールフォルダーを使用してバンドルが保持されます。繰り返しになりますが、実行モードはプレフィックスで示されます。
 
@@ -120,12 +120,11 @@ nosamplecontent 実行モードは、実稼働インストール用に設計さ�
 
 ## 特定の実行モードでの CQ の起動 {#starting-cq-with-a-specific-run-mode}
 
-複数の実行モードの設定を定義した場合は、起動時にどれを使用するかを定義する必要があります。使用する実行モードを指定する方法は複数あります。優先順位は次のとおりです。
+複数の実行モードの設定を定義した場合は、起動時に使用する設定を定義する必要があります。 使用する実行モードを指定する方法はいくつかあります。解決の順序は次のとおりです。
 
+1. [システムプロパティ (](#using-a-system-property-in-the-start-script)
 1. [ ](#using-the-sling-properties-file)
 1. [ ](#using-the-r-option)
-1. [システムプロパティ (](#using-a-system-property-in-the-start-script)
-
 1. [ファイル名検出](#filename-detection-renaming-the-jar-file)
 
 アプリケーションサーバーを使用している場合は、[web.xml で実行モードを定義](#defining-the-run-mode-in-web-xml-with-application-server)することもできます。
@@ -165,7 +164,7 @@ java -jar cq-56-p4545.jar -r dev
 * publish
 * author
 
-jar ファイルでは、次の命名規則を使用する必要があります。
+jar ファイルでは、命名規則を使用する必要があります。
 
 `cq5-<run-mode>-p<port-number>`
 
@@ -173,9 +172,9 @@ jar ファイルでは、次の命名規則を使用する必要があります�
 
 `cq5-publish-p4503`
 
-### web.xml での実行モードの定義（アプリケーションサーバー使用時） {#defining-the-run-mode-in-web-xml-with-application-server}
+### web.xml での実行モードの定義（アプリケーションサーバーを使用） {#defining-the-run-mode-in-web-xml-with-application-server}
 
-アプリケーションサーバーを使用している場合は、
+アプリケーションサーバーを使用している場合は、次のプロパティも設定できます。
 
 `sling.run.modes`
 
