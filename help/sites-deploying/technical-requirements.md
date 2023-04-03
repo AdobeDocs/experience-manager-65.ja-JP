@@ -6,9 +6,9 @@ seo-description: A list of the supported client and server platforms for AEM.
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 74535a6ad78abf795f55f1ba4e1123b58802aefe
+source-git-commit: 64a15e970bc72114c14ed60e4bec3e694584eb16
 workflow-type: tm+mt
-source-wordcount: '3536'
+source-wordcount: '3546'
 ht-degree: 55%
 
 ---
@@ -101,7 +101,7 @@ Adobe Experience Manager は、次のバージョンの Java 仮想マシンで�
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` |  |
 
 1. Oracle は Oracle Java SE 製品の「長期サポート」（LTS）モデルに移行しました。Java 9、Java 10、Java 12 は Oracle による非 LTS でのリリースです（[Oracle Java SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java SE テクノロジーを利用しているすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
-
+   **重要：Java 11 は、2026 年 9 月まで少なくともサポートされます。**
 
 1. IBM JRE は、WebSphere Application Server と共に使用する場合にのみサポートされます。
 
