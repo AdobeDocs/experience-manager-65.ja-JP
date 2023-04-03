@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: 676472125cf472d42b792fae87dffe263e499014
+source-git-commit: 72b3eaea279911569dbd6b9acf41527111e9e53c
 workflow-type: tm+mt
-source-wordcount: '2605'
-ht-degree: 45%
+source-wordcount: '2665'
+ht-degree: 44%
 
 ---
 
@@ -271,6 +271,17 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 GraphQL を使用するユーザーは、このパッケージが必要です。このパッケージにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
+
+* GraphQLクエリでは、 `damAssetLucene` インデックス `fragments` 索引 その結果、GraphQLクエリが失敗するか、実行に非常に長い時間がかかる可能性があります。
+
+   問題を修正するには、 `damAssetLucene` は、次の 2 つのプロパティを含むように設定する必要があります。
+
+   * `contentFragment`
+   * `model`
+
+   インデックス定義を変更した後、インデックス再作成が必要です (`reindex` = `true`) をクリックします。
+
+   これらの手順の後、GraphQLクエリの実行が高速化されます。
 
 * [!DNL Microsoft®® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss®® EAP 7.1] をサポートしていないので、[!DNL Microsoft®® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
