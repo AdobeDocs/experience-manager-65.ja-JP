@@ -9,10 +9,10 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 5febbb1e-795c-49cd-a8f4-c6b4b540673d
 exl-id: f2f968b8-b21c-487d-bc0d-ed60903bc4bf
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 31%
+source-wordcount: '1178'
+ht-degree: 32%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 31%
   <tr>
    <td><strong>手順 0</strong></td>
    <td>リクエストフローの分析</td>
-   <td><p>ブラウザーで標準的な HTTP リクエスト分析を使用して、リクエストフローを分析できます。 Chrome でこの分析をおこなう方法について詳しくは、以下を参照してください。<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing"><br /> https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
+   <td><p>ブラウザーで標準的な HTTP リクエスト分析を使用して、リクエストフローを分析できます。 Chrome でこの分析をおこなう方法について詳しくは、以下を参照してください。<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>手順 2</strong></td>
@@ -97,7 +97,7 @@ ht-degree: 31%
   <tr>
    <td><strong>手順 8</strong></td>
    <td>ローカルインスタンスでは、遅さは再現可能ですか？</td>
-   <td><br /> <p>用途 <a href="/help/sites-developing/tough-day.md">Tough Day</a> 本番インスタンスから「実世界」の条件をレプリケートする場合。 開発の領域でこのシナリオが現実的でない場合は、別のネットワークコンテキストで実稼動インスタンス（または同一のステージングインスタンス）をテストしてください。<br /> </p> </td>
+   <td><br /> <p>用途 <a href="/help/sites-developing/tough-day.md">Tough Day</a> ：本番インスタンスから「実世界」の条件をレプリケートします。 開発の領域でこのシナリオが現実的でない場合は、別のネットワークコンテキストで実稼動インスタンス（または同一のステージングインスタンス）をテストしてください。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>手順 9</strong></td>
@@ -212,7 +212,7 @@ ht-degree: 31%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">アセット同期サービス</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">複数の DAM インスタンス</a></li>
-     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">こちら</a>および<a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">こちら</a>にあるパフォーマンスチューニングのヒントに関する記事<br /> </li>
+     <li>パフォーマンスチューニングのヒント記事 <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">ここ</a>.<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -228,7 +228,7 @@ ht-degree: 31%
   <tr>
    <td><strong>手順 31</strong></td>
    <td>Dispatcher の前で CDN を使用する</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en#using-dispatcher-with-a-cdn">CDN での Dispatcher の使用</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#using-dispatcher-with-a-cdn">CDN での Dispatcher の使用</a><br /> </td>
   </tr>
   <tr>
    <td><strong>手順 32</strong></td>
@@ -240,7 +240,7 @@ ht-degree: 31%
    <td>リクエストをキャッシュ可能にする</td>
    <td>
     <ol>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en">一般的な Dispatcher 設定</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja">一般的な Dispatcher 設定</a></li>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#configuring-the-dispatcher-cache-cache">Dispatcher キャッシュの設定</a></li>
     </ol> <p>キャッシュ率を向上させる方法要求をキャッシュ可能にする（Dispatcher のベストプラクティス）</p> <p>また、キャッシュ設定を最適化するには、以下の設定を考慮してください。<br /> </p>
     <ol>
@@ -277,7 +277,7 @@ ht-degree: 31%
   <tr>
    <td><strong>手順 39</strong></td>
    <td>接続オーバーヘッドを削減するには、事前接続を使用します</td>
-   <td>上記の Gem セッションを参照してください。 また、W3c での追加のドキュメントの事前接続も行います。<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
+   <td>上記の Gem セッションを参照してください。 また、W3c に関する追加の接続前のドキュメントも示します。<a href="https://html.spec.whatwg.org/#linkTypes"> https://html.spec.whatwg.org/#linkTypes</a></td>
   </tr>
   <tr>
    <td><strong>手順 40 および 41</strong><br /> </td>

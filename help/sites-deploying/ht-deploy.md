@@ -1,7 +1,7 @@
 ---
 title: 設定方法に関する記事
 seo-title: Configuration How-To Articles
-description: AEM の特定のデプロイメントタスクを実行する方法について説明する記事のリストです。
+description: AEMで特定のデプロイメントタスクを実行する方法を説明する記事のリストです。
 seo-description: A list of articles that describe how to accomplish specific deployment tasks in AEM.
 uuid: 5a339a6f-9c1a-4324-92d3-08b975131a1b
 contentOwner: Guillaume Carlino
@@ -11,20 +11,20 @@ topic-tags: configuring
 discoiquuid: 257f3e4a-4b59-4cbb-bf61-f72f173676e6
 feature: Configuring
 exl-id: e9ea9df4-a355-41fc-a102-01a5d7ca2629
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 100%
+source-wordcount: '88'
+ht-degree: 45%
 
 ---
 
 # 設定方法に関する記事{#configuration-how-to-articles}
 
-次のトピックでは、AEM の特定のデプロイメントタスクを実行する方法について説明します。
+次のトピックでは、特定のAEMデプロイメントタスクを実行する方法について説明します。
 
-* [ログビューアを使用する方法](https://helpx.adobe.com/jp/experience-manager/kb/logsviewer.html)
+* [ログビューアの使用方法](https://helpx.adobe.com/jp/experience-manager/kb/logsviewer.html)
 * [ワークフローと監査ログをパージする方法](https://helpx.adobe.com/jp/experience-manager/kb/howtopurgewf.html)
 
-* [パフォーマンスチューニングのヒント](https://helpx.adobe.com/experience-manager/kb/performance-tuning-tips.html)
+* [パフォーマンスチューニングのヒント](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)
 * [ようこそ画面から機能を削除する方法](/help/sites-developing/customizing-the-welcome-console.md)
 * [位置トラッカー機能を無効にする方法](https://helpx.adobe.com/jp/experience-manager/kb/turn-off-geolocation.html)

@@ -1,7 +1,7 @@
 ---
 title: OSGi 設定
 seo-title: OSGi Configuration Settings
-description: この記事では、プロジェクトの実装に関連する OSGi 設定（バンドルに従ってリストされます）について説明します。このリストはガイドラインの役割を果たすものであり、完全ではありません。
+description: この記事では、プロジェクトの実装に関連する OSGi 設定（バンドルに従って一覧表示）について詳しく説明します。 このリストはガイドラインとして機能し、完全なものではありません。
 seo-description: This article details the OSGi configuration settings (listed according to bundle) that are relevant to project implementation. The list acts as a guideline and it is not exhaustive.
 uuid: 192d3287-ec99-403b-bab0-45721e4e3abd
 contentOwner: User
@@ -12,10 +12,10 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: 73fba5249a05b0bdb9871a6e19c6bed10a7e7e4b
-workflow-type: ht
-source-wordcount: '3476'
-ht-degree: 100%
+source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+workflow-type: tm+mt
+source-wordcount: '3429'
+ht-degree: 47%
 
 ---
 
@@ -23,23 +23,23 @@ ht-degree: 100%
 
 [OSGi](https://www.osgi.org/) は、AEM の技術スタックにおける基本要素です。AEM の複合バンドルおよびそれらの設定を制御するために使用します。
 
-OSGi は標準化されたプリミティブを提供し、小さく再利用が可能で連携機能に優れたコンポーネントを組み合わせてアプリケーションを構築することを可能にします。これらのコンポーネントからアプリケーションを作成し、デプロイすることができます&#x200B;*。*
+OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネントを使用してアプリケーションを構築できる、標準化されたプリミティブを提供します。これらのコンポーネントは、アプリケーションに組み込み、デプロイできます*&quot;.
 
-これにより、 バンドルの管理が容易になり、バンドルを個別に停止、インストール、開始できます。相互依存関係は自動的に処理されます。各 OSGi コンポーネント（[OSGi の仕様](https://www.osgi.org/Specifications/HomePage)を参照）は、各種バンドルの 1 つに含まれています。AEM で作業する場合、このようなバンドルの構成設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+この機能により、バンドルを個別に停止、インストール、開始できるので、バンドルを容易に管理できます。 相互依存関係は自動的に処理されます。各 OSGi コンポーネント（[OSGi の仕様](https://www.osgi.org/Specifications/HomePage)を参照）は、各種バンドルの 1 つに含まれています。AEMを操作する場合、このようなバンドルの設定を管理する方法はいくつかあります。参照 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
 
 次の OSGi 設定（バンドルに従ったリスト）は、プロジェクトの実装に関連しています。すべての設定に調整が必要なわけではなく、一部の設定は AEM の動作を説明する目的で言及されています。
 
 >[!CAUTION]
 >
->このリストはガイドラインの役割を果たすものであり、完全ではありません。すべてのバンドルがリストされているわけではなく、リストされているバンドルに関しても、すべてのパラメーターがリストされているわけではありません。
+>このリストは、ガイドラインとしての役割を果たすことを目的としており、すべてを網羅したものではありません。 一部のバンドルが一覧表示されるわけではありません。また、存在する一部のバンドルのすべてのパラメータも表示されません。
 >
 >必要な設定は、プロジェクトによって異なります。
 >
->使用する値およびパラメーターの詳細は、Web コンソールを確認してください。
+>使用する値とパラメーターの詳細については、 Web コンソールを参照してください。
 
 >[!NOTE]
 >
->OSGi 設定の差分ツール（[AEM ツール](https://helpx.adobe.com/experience-manager/kb/tools/aem-tools.html)の一部）を使用して、デフォルトの OSGi 設定のリストを表示できます。
+>OSGi 設定の差分ツール（[AEM ツール](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html?lang=en)の一部）を使用して、デフォルトの OSGi 設定のリストを表示できます。
 
 >[!NOTE]
 >
@@ -47,9 +47,9 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **AEM レプリケーションイベントリスナー**&#x200B;設定：
 
-* **実行モード**：レプリケーションイベントがリスナーに配信されます。例えば、オーサーとして定義されている場合、これはレプリケーションを「開始」するシステムです。
+* この **実行モード**：レプリケーションイベントがリスナーに配布されます。 例えば、author として定義された場合、レプリケーションを「開始」するシステムです。
 
-* プロジェクトコードがパブリッシュ環境でレプリケーションイベント（リバースレプリケーション）を処理する場合は、実行モードの&#x200B;**publish**&#x200B;を追加する必要があります。例えば、Dispatcher を使用してパブリッシュ環境からフラッシュする場合や、他のパブリッシュインスタンスへの標準レプリケーションが発生する場合などです。
+* 実行モードの追加 **公開** プロジェクトコードがパブリッシュ環境でレプリケーションイベント（リバースレプリケーション）を処理する場合。 例えば、Dispatcher を使用してパブリッシュ環境からフラッシュする場合や、他のパブリッシュインスタンスへの標準レプリケーションが発生する場合などです。
 
 **AEM リポジトリ変更リスナー**&#x200B;設定：
 
@@ -62,7 +62,7 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Felix OSGi 管理コンソール**&#x200B;設定：
 
-* **Plugins**：**Apache Felix Web Management Console** で最上位のメニュー項目として使用できる、メインのナビゲーション項目（コンソールプラグイン）です。それぞれ容量とリソースが必要なので、不要なものは無効にしてください。
+* **プラグイン**、 **Apache Felix Web Management Console** を最上位のメニュー項目として使用する。 各にはスペースとリソースが必要なので、不要な項目を無効にします。
 
 >[!CAUTION]
 >
@@ -78,61 +78,62 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 **Apache Sling Customizable Request Data Logger** 設定：
 
 * **ロガー名**&#x200B;と&#x200B;**ログ形式**：リクエストおよびアクセスのログの場所と形式を設定します（デフォルト：`request.log`）。このログファイルは、パフォーマンスを分析する際や、web チェーンに関連する機能をデバッグする際に必須です。
-これは [Apache Sling Request Logger](#apacheslingrequestlogger) とペアで使用されます。
+これはとペアになっています [Apache Sling Request Logger](#apacheslingrequestlogger).
 
-詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
+詳しくは、 [AEM Logging](/help/sites-deploying/configure-logging.md) および [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
 **Apache Sling Eventing Thread Pool** 設定：
 
 * **Min Pool Size** および **Max Pool Size**：イベントスレッドを保持するために使用するプールのサイズ。
 
-* **Queue Size**：プールを使い果たした場合のスレッドキューの最大サイズ。推奨値は `-1` です（キューが無制限に設定されます）。制限を設定すると、その制限を超えた場合にスレッドが失われる可能性があります。
+* **Queue Size**：プールを使い果たした場合のスレッドキューの最大サイズ。推奨される値は次のとおりです。 `-1` キューを無制限に設定するからです。 制限を設定すると、制限を超えた場合に損失が発生する可能性があります。
 
-* これらの設定を変更すると、イベント数が非常に多い状況（例：AEM DAM またはワークフローの使用頻度が高い場合）におけるパフォーマンスの強化に役立ちます。
+* これらの設定を変更すると、多数のイベントが発生する状況でのパフォーマンスが向上します。例えば、AEM DAM やワークフローの使用量が多い場合などです。
 * テストを実施して、状況に応じた値を確立する必要があります。
 * これらの設定はインスタンスのパフォーマンスに影響を及ぼす可能性があるので、変更の際は十分な理由と検討が必要です。
 
 **Apache Sling GET Servlet**：レンダリングの一部の要素を設定します。
 
 * **Auto Index**：閲覧のためのディレクトリのレンダリングを有効または無効にします。
-* デフォルトのレンディション（**HTML**、**プレーンテキスト**、**JSON**、**XML** など）を&#x200B;**有効化**（または無効化）します。JSON を無効にしないでください。
+* **有効にする** デフォルトのレンディション ( **HTML**, **プレーンテキスト**, **JSON**&#x200B;または **XML**.
+JSON を無効にしないでください。
 
 >[!NOTE]
 >
 >AEM を[実稼動準備完了モード](/help/sites-administering/production-ready.md)で実行している場合は、この設定は自動的に実稼動インスタンス用に設定されます。
 
-**Apache Sling Java Script Handler**：.java ファイルのコンパイルを、スクリプト（サーブレット）として設定します。
+**Apache Sling JavaScript Handler** .java ファイルのコンパイルの設定を、スクリプト（サーブレット）として構成します。
 
-特定の設定がパフォーマンスに影響を及ぼす可能性があります。可能である場合に（特に、実稼動インスタンスの場合）、それらを無効にするようにします。
+特定の設定がパフォーマンスに影響を与える場合があります。 これらの設定は、可能な限り（特に実稼動インスタンスの場合）無効にします。
 
-* **Source VM** および **Target VM** で、ランタイム JVM として使用する JDK バージョンを定義します。
+* **ソース VM** および **ターゲット VM**：ランタイム JVM として使用する JDK バージョンを定義します。
 
-* 実稼動インスタンスの場合：
+* 本番インスタンスの場合：
 
    * 「**デバッグ情報の生成**」を無効化
 
-**Apache Sling JCR Installer**：多くの場合、これらのパラメーターの設定は必要ありませんが、設定を理解しておくと開発時やデバッグ時に役立ちます。例えば、インストールフォルダーはパッケージのチェックイン／チェックアウトまたは作成に役立つ場合があります。
+**Apache Sling JCR Installer**：多くの場合、これらのパラメーターの設定は必要ありませんが、設定を理解しておくと開発時やデバッグ時に役立ちます。例えば、インストールフォルダーは、チェックインやチェックアウト、パッケージの作成に役立ちます。
 
-* **Installation folders name regexp** および **Max hierarchy depth of install folders**：インストールするリソースを検索するリポジトリフォルダーとその階層の深さを指定します。ワイルドカードを使用すると（例：.&#42;/install）、該当する一致項目（例えば `/libs/sling/install` や `/libs/cq/core/install`）がすべて検索されます。
+* **Installation folders name regexp** および **Max hierarchy depth of install folders**：インストールするリソースを検索するリポジトリフォルダーとその階層の深さを指定します。ワイルドカードを&#42;/install) 適切なすべての一致が検索されます。例： `/libs/sling/install` および `/libs/cq/core/install`.
 
 * **Search Path**：インストールするリソースを jcrinstall が検索するパスのリストです。そのパスの重み付け係数を示す数値も表示されます。
 
 **Apache Sling Job Event Handler**：ジョブのスケジュール設定を管理するパラメーターを設定します。
 
-* **再試行間隔**、**再試行の最大回数**、**並列ジョブの最大数**、**待機時間の確認**&#x200B;など。
+* **再試行間隔**, **再試行の最大数**, **並列ジョブの最大数**, **待機時間の確認**&#x200B;など。
 
 * これらの設定を変更すると、多数のジョブが存在するシナリオのパフォーマンスが向上します。例えば、AEM DAM とワークフローの使用頻度が高い場合などです。
 * テストを実施して、状況に応じた値を確立する必要があります。
 * これらの設定は理由なく変更しないでください。十分に検討してから変更してください。
 
-**Apache Sling JSP Script Handler**：JSP スクリプトハンドラーのパフォーマンス関連の設定を行います。パフォーマンスを向上するには、可能な限り設定を無効にしてください。
+**Apache Sling JSP Script Handler**：JSP スクリプトハンドラーのパフォーマンス関連の設定を行います。パフォーマンスを向上させるには、できるだけ無効にする必要があります。
 
-特に、実稼動インスタンスの場合は、次の設定を無効にします。
+特に、本番インスタンスの場合は、次の手順に従います。
 
 * 「**デバッグ情報の生成**」を無効化
-* **Keep Generated Java**
+* 無効 **生成済み Java™を保持**
 * 「**マッピングされたコンテンツ**」を無効化
-* **Display Source Fragments**
+* 無効 **ソースフラグメントを表示**
 
 >[!NOTE]
 >
@@ -140,13 +141,13 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Sling Logging Configuration** 設定：
 
-* **Log Level** および **Log File**：主要なログ設定（error.log）の場所とログレベルを定義します。`DEBUG`、`INFO`、`WARN`、`ERROR` および `FATAL` のいずれかのレベルを設定できます。
+* **Log Level** および **Log File**：主要なログ設定（error.log）の場所とログレベルを定義します。レベルは、次のいずれかに設定できます。 `DEBUG`, `INFO`, `WARN`, `ERROR`、および `FATAL`.
 
-* **Number of Log Files** および **Log File Threshold**：ログファイルのサイズとバージョンのローテーションを定義します。
+* **ログファイルの数** および **ログファイルのしきい値** ：ログファイルのサイズとバージョンの回転を定義します。
 
-* **Message Pattern**：ログメッセージの形式を定義します。
+* **メッセージパターン** ログメッセージの形式を定義します。
 
-詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md#global-logging)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
+詳しくは、 [AEM Logging](/help/sites-deploying/configure-logging.md#global-logging) および [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
 **Apache Sling Logging Logger Configuration（ファクトリ設定）** 設定：
 
@@ -154,23 +155,23 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * **Logger**：カテゴリを定義します（例：com.day.cq のログのみ）。
 
-* 「**Factory Configurations**」を使用することにより、必要とされる様々なログレベルとカテゴリに応じて、任意の数の設定を追加できます。
-* このような設定は開発時に役立ちます。例えば、特定のログファイルで、特定のサービスのトレースメッセージをログに記録する場合などです。
-* このような設定は実稼動環境で役立ちます。例えば、特定のサービスに関するメッセージを個々のログファイルに記録して、簡単に監視できるようにする場合などです。
+* 次を使用： **ファクトリ設定**&#x200B;を使用すると、必要な様々なログレベルやカテゴリに応じて、任意の数の設定を追加できます。
+* このような設定は開発時に役立ちます。例えば、特定のサービスのTRACEメッセージを特定のログファイルに記録する場合などです。
+* このような設定は、実稼動環境で役立ちます。例えば、特定のサービスに関するメッセージを個々のログファイルに記録して、監視を容易にする場合などです。
 
-詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
+詳しくは、 [AEM Logging](/help/sites-deploying/configure-logging.md) および [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
 **Apache Sling Logging Writer Configuration（ファクトリ設定）** 設定：
 
 * **Log File**：ログファイルの有無を定義します。
 * **Number of Log Files**：バージョンのローテーションを定義します。
 
-* ライターは **Apache Sling Logging Logger Configuration** 設定で使用できます。
+* このライターは、 **Apache Sling Logging Logger Configuration** 設定。
 
-* このような設定は開発時に役立ちます。例えば、特定のログファイルで、特定のサービスのトレースメッセージをログに記録する場合などです。
-* このような設定は実稼動環境で役立ちます。例えば、特定のサービスに関するメッセージを個々のログファイルに記録して、簡単に監視できるようにする場合などです。
+* このような設定は開発時に役立ちます。例えば、特定のサービスのTRACEメッセージを特定のログファイルに記録する場合などです。
+* このような設定は、実稼動環境で役立ちます。例えば、特定のサービスに関するメッセージを個々のログファイルに記録して、監視を容易にする場合などです。
 
-詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
+詳しくは、 [AEM Logging](/help/sites-deploying/configure-logging.md) および [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
 **Apache Sling Main Servlet** 設定：
 
@@ -178,13 +179,13 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Apache Sling MIME Type Service** 設定：
 
-* **MIME Types**：プロジェクトで必要な MIME タイプをシステムに追加します。これにより、ファイルに対する `GET` 要求において、ファイル形式とアプリケーションをリンクするための適切な content-type ヘッダーを設定できます。
+* **MIME タイプ** プロジェクトで必要なタイプをシステムに追加する場合。 これにより、 `GET` ファイルに対して、ファイルタイプとアプリケーションをリンクするための正しい content-type ヘッダーを設定するようリクエストします。
 
-**Apache Sling Referrer Filter**：CRX WebDAV および Apache Sling の Cross-Site Request Forgery（CSRF）に関する既知のセキュリティ問題に対応するには、リファラーフィルターを設定する必要があります。
+**Apache Sling Referrer Filter** CRX WebDAV および Apache Sling のクロスサイトリクエストフォージェリ (CSRF) に関する既知のセキュリティ問題に対処するには、リファラーフィルターを設定する必要があります。
 
-リファラーフィルターサービスは OSGi のサービスの 1 つであり、次の設定が可能です。
+リファラーフィルターサービスは、次の設定が可能な OSGi サービスです。
 
-* フィルター処理する HTTP メソッド
+* どの http メソッドをフィルターするか
 * 空のリファラーヘッダーを使用できるかどうか
 * サーバーホスト以外に許可されるサーバーのリスト
 
@@ -192,38 +193,38 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 >[!NOTE]
 >
->Apache Sling Referrer Filter はクイックフィックスパッケージのインストールに依存します。
+>Apache Sling Referrer Filter は、クイックフィックスパッケージのインストールによって異なります。
 
 **Apache Sling Request Logger** 設定：
 
 * 要求をログに記録する方法を定義するための様々なパラメーター。
-* **Enable Request Log**：有効または無効にします。
+* **リクエストログを有効にする**、を有効または無効にします。
 
-* **Enable Access Log**：有効または無効にします。
+* **アクセスログを有効にする**、を有効または無効にします。
 
-これは [Apache Sling Customizable Request Data Logger](#apacheslingcustomizablerequestdatalogger) とペアで使用されます。
+とペア [Apache Sling Customizable Request Data Logger](#apacheslingcustomizablerequestdatalogger).
 
-詳しくは、[AEM のログ](/help/sites-deploying/configure-logging.md)および [Sling のログ](https://sling.apache.org/site/logging.html)に関するページを参照してください。
+詳しくは、 [AEM Logging](/help/sites-deploying/configure-logging.md) および [Sling Logging](https://sling.apache.org/documentation/development/logging.html).
 
 **Apache Sling Resource Resolver Factory**：Sling リソースの解決の主要な要素を設定します。
 
-* **Resource Search Path**：プロジェクト固有のパスを追加します（ただし、`/libs` または `/apps` は削除しないでください）。
+* **リソース検索パス**、プロジェクト固有のパスを追加します（ただし、削除はしません）。 `/libs` または `/apps`) をクリックします。
 
 * **Virtual URLs**：バニティー URL のマッピングを定義します。
 
-* **URL Mappings**：エイリアスを定義します（例：`/content` から `/` へのマッピング）。
+* **URL マッピング** エイリアスを定義する。例： `/content` から `/`.
 
 * **Mapping Location**：`/etc/map` で外面化されるマッパー設定です。
 
 * ローカルインストール（例えば、`https://localhost:4502/system/console/jcrresolver`）を使用して、どのリソースリゾルバーがアクティブかを判断します。
 
-詳しくは、[https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution](https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution) を参照してください。
+詳しくは、 [https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution](https://cwiki.apache.org/confluence/display/SLING/Flexible+Resource+Resolution).
 
 >[!CAUTION]
 >
->具体的には、これらのオプションはリポジトリで設定する必要があります。
+>これらのオプションをリポジトリで設定します。
 >
->そうしないと、Felix コンソールで行った「**URL Mappings**」に対する変更が、次回の起動時に AEM によって上書きされる可能性があります。
+>それ以外の場合は、 **URL マッピング** Felix コンソールを使用すると、次回の起動時にAEMによって上書きされる場合があります。
 
 **Apache Sling Servlet／Script Resolver and Error Handler** Sling サーブレットとスクリプトリゾルバーには、次の複数のタスクがあります。
 
@@ -235,47 +236,46 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 次のような様々なパラメーターを設定できます。
 
-* **Execution Paths**：実行可能なスクリプトを検索するパスを表示します。特定のパスを設定することで、実行可能なスクリプトを制限できます。パスを設定しない場合は、デフォルト値（`/` = ルート）が使用され、すべてのスクリプトの実行が許可されます。
+* **実行パス**  — 実行可能スクリプトを検索するパスをリストします。 特定のパスを設定することで、実行可能なスクリプトを制限できます。 パスが設定されていない場合は、デフォルトのが使用されます ( `/` = root) で、すべてのスクリプトを実行できます。
+設定されたパス値がスラッシュで終わる場合、サブツリー全体が検索されます。 末尾にスラッシュを付けないと、スクリプトは完全に一致する場合にのみ実行されます。
 
-設定したパス値がスラッシュで終わる場合は、サブツリー全体が検索されます。末尾にスラッシュを指定しないと、完全一致の場合にのみスクリプトが実行されます。
+* **スクリプトユーザ**  — このオプションのプロパティは、スクリプトの読み取りに使用するリポジトリユーザーアカウントを指定できます。 アカウントが指定されていない場合、 `admin` ユーザーはデフォルトで使用されています。
 
-* **Script User**：このオプションのプロパティでは、スクリプトの読み取りに使用するリポジトリユーザーアカウントを指定できます。アカウントを指定しない場合は、`admin` ユーザーがデフォルトで使用されます。
+* **デフォルトの拡張機能**  — デフォルトの動作が使用される拡張機能のリスト。 リソースタイプの最後のパスセグメントは、スクリプト名として使用できます。
 
-* **Default Extensions**：デフォルトの動作が使用される拡張子のリストです。つまり、リソースタイプの最後のパスセグメントをスクリプト名として使用できます。
+**Apache HTTP コンポーネントプロキシ設定** - Apache HTTP クライアントを使用するすべてのコードのプロキシ設定。HTTP の作成時に使用されます。 例えば、レプリケーション時などです。
 
-**Apache HTTP Components Proxy Configuration**：Apache HTTP クライアントを使用するすべてのコード用のプロキシ設定です。HTTP の作成時（レプリケーション時など）に使用されます。
-
-新しい設定を作成する際は、工場出荷時の設定に変更を加える代わりに、設定マネージャー（**https://localhost:4502/system/console/configMgr/**）を使用してこのコンポーネントの新しい工場出荷時の設定を作成してください。このプロキシ設定は、**org.apache.http.proxyconfigurator** で利用できます。
+設定を作成する際は、ファクトリ設定を変更しないでください。 代わりに、次の場所にある設定マネージャーを使用して、このコンポーネントのファクトリ設定を作成します。 **https://localhost:4502/system/console/configMgr/**. このプロキシ設定は、**org.apache.http.proxyconfigurator** で利用できます。
 
 >[!NOTE]
 >
->AEM 6.0 以前のリリースでは、プロキシは Day Commons HTTP Client で設定されていました。AEM 6.1 以降のリリースでは、プロキシ設定は、「Day Commons HTTP Client」設定ではなく、「Apache HTTP Components Proxy Configuration」に移動されました。
+>AEM 6.0 以前のリリースでは、プロキシは Day Commons HTTP Client で設定されていました。 AEM 6.1 以降のリリースでは、プロキシ設定は「Day Commons HTTP Client」設定ではなく「Apache HTTP Components Proxy Configuration」に移動されました。
 
-**Day CQ Antispam**：使用するスパム対策サービス （Akismet）を設定します。次の項目を登録する必要があります。
+**Day CQ Antispam**：使用するスパム対策サービス （Akismet）を設定します。この機能を使用するには、以下を登録する必要があります。
 
 * **プロバイダー**
 * **API キー**
 * **登録済みの URL**
 
-**Adobe Granite HTML Library Manager**：クライアントライブラリ（css または js）の処理（例えば、基盤となる構造の表示形式）を制御するために設定します。
+**AdobeGraniteHTMLライブラリマネージャー** を設定して、基になる構造の表示方法など、クライアントライブラリ（css または js）の処理を制御します。
 
-* 実稼動インスタンスの場合：
+* 本番インスタンスの場合：
 
-   * 「**Minify**」を有効化（CRLF および空白文字を削除）
-   * 「**Gzip**」を有効化（1 回の要求でファイルを gzip してアクセスするため）
-   * 「**Debug**」を無効化
-   * 「**Timing**」を無効化
+   * 有効 **縮小** （CRLF 文字と空白文字を削除）。
+   * 有効 **Gzip** （1 回の要求でファイルを gzip で圧縮してアクセスできるようにする）。
+   * 無効 **デバッグ**
+   * 無効 **タイミング**
 
-* JS 開発の場合（特に、Firebug を使用するか、デバッグをおこなう場合）：
+* JS 開発の場合（特に Firebugging/デバッグの場合）:
 
-   * 「**Minify**」を無効にします。
-   * 「**Debug**」を有効にして、デバッグ用のファイルを分離し、Firebug で使用します。
-   * 「**Timing**」を有効にします（タイミングに関する設定をおこなう場合）。
-   * **Debug** コンソールを有効にして、JS コンソールのログメッセージを確認します。
+   * 無効 **縮小**
+   * 有効 **デバッグ** を使用して、デバッグ用にファイルを分割し、firebug と共に使用します。
+   * 有効 **タイミング** タイミングに興味があれば
+   * 有効 **デバッグ** コンソールを使用して、JS コンソールのログメッセージを確認します。
 
 >[!CAUTION]
 >
->**Minify** または **Gzip** の設定を変更する場合は、clientlibs キャッシュの内容も削除する必要があります。詳しくは、[ナレッジベースの記事](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=ja)を参照してください。
+>次のいずれかの設定を変更する場合 **縮小** または **Gzip**、clientlibs キャッシュのコンテンツを削除します。 詳しくは、 [ナレッジベース記事](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=en) 」を参照してください。
 
 >[!NOTE]
 >
@@ -283,17 +283,17 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 **Day CQ HTTP Header Authentication Handler**：HTTP リクエストの基本的な認証方法に関するシステム全体の設定です。
 
-[閉じられたユーザーグループ](/help/sites-administering/cug.md)を使用すると、（特に）以下を設定できます。
+を使用する場合 [閉じられたユーザーグループ](/help/sites-administering/cug.md)を使用すると、次の設定を行うことができます。
 
-* **HTTP レルム**
+* **HTTP 領域**
 * **デフォルトのログインページ**
 
 **Day CQ Link Checker Service**：必要に応じて、次の項目を設定します。
 
 * **Scheduler Period**：外部リンクを自動的にチェックする間隔を定義します。
 
-* **Bad Link Tolerance Interval**：失敗した外部リンクが無効と見なされるまでの期間を指定します。
-* **Link Check Override Patterns**：リンクチェックから除外するパスを定義します。
+* チェック **不正なリンク許容間隔** 失敗した外部リンクが無効と見なされるまでの期間。
+* **リンクチェック上書きパターン**：リンクチェックから除外するパスを定義します。
 
 **Day CQ Link Checker Task**：単一のリンクチェッカータスク（外部リンクを確認するタスク）の設定を指定します。
 
@@ -301,13 +301,13 @@ OSGi は標準化されたプリミティブを提供し、小さく再利用が
 
 * リンクをチェックする際に外部アクセスのために必要な、インターネットアクセスおよび NTLM 用のプロキシに関連する様々なパラメーターを設定します。
 
-**Day CQ Mail Service**：メールサーバーのホスト名とアクセスの詳細を設定します。「メールサービスの設定」の節を参照してください。
+**Day CQ Mail Service**：メールサーバーのホスト名とアクセスの詳細を設定します。メールサービスの設定の節を参照してください。
 
 **Day CQ MCM Newsletter**：ニュースレターで使用する様々な設定を指定します。
 
 **Day CQ Root Mapping**：以下の項目を設定します。
 
-* **Target Path**：「`/`」に対するリクエストのリダイレクト先を定義します。
+* **ターゲットパス** を定義します。 `/`」はにリダイレクトされます。
 
 AEM では次の 2 つの UI を使用できます。
 
@@ -316,13 +316,13 @@ AEM では次の 2 つの UI を使用できます。
 
 AEM ルートマッピングを使用すると、希望する UI を、インスタンスのデフォルトとして設定できます。
 
-* タッチ操作対応 UI をデフォルトの UI にするには、**Target Path** を次のように指定します。
+* タッチ操作対応 UI をデフォルトの UI にするには、 **ターゲットパス** は次を指す必要があります。
 
    ```shell
       /projects.html
    ```
 
-* クラシック UI をデフォルトの UI とするには、**Target Path**&#x200B;を次のように指定します。
+* クラシック UI をデフォルトの UI にするには、 **ターゲットパス** は次を指す必要があります。
 
    ```shell
       /welcome.html
@@ -332,42 +332,46 @@ AEM ルートマッピングを使用すると、希望する UI を、インス
 >
 >標準インストールでは、タッチ操作向け UI がデフォルトの UI です。
 
-**Adobe Granite SSO Authentication Handler**：シングルサインオン（SSO）の詳細を設定します。この詳細情報は、企業の作成者の設定や、LDAP との連動で必要となることが多くあります。
+**AdobeGranite SSO 認証ハンドラー** - SSO（シングルサインオン）の詳細を設定します。 これらの詳細は、多くの場合、エンタープライズオーサー設定で必要になります。多くの場合、LDAP で必要です。
 
 様々な設定プロパティがあります。
 
-* **Path**&#x200B;この認証ハンドラーをアクティブにする対象のパス。このパラメーターを空のままにすると、認証ハンドラーは無効になります。例えば、/ というパスを指定すると、認証ハンドラーはリポジトリ全体に対して使用されます。
+* **パス**
+この認証ハンドラーがアクティブなパス。 このパラメーターが空のままの場合、認証ハンドラーは無効になります。 例えば、パス/を指定すると、認証ハンドラーがリポジトリ全体に使用されます。
 
 * **サービスランキング**
-OSGi フレームワークサービスランキングの値は、このサービスの呼び出しに使用する順序を示すために使用されます。これは 
+OSGi Framework Service Ranking 値は、このサービスの呼び出しに使用される順序を示すために使用されます。 この値は 
 `int` 値で、値が大きいほど優先度が高くなります。
 デフォルト値は `0` です。
 
-* **Header Names**：ユーザー ID を含む可能性のあるヘッダーの名前です。
+* **ヘッダー名**
+ユーザー ID を含む可能性のあるヘッダーの名前。
 
-* **Cookie Names**：ユーザー ID を含む可能性のある cookie の名前です。
+* **cookie 名**
+ユーザー ID を含む可能性のある Cookie の名前。
 
-* **Parameter Names**：ユーザー ID を指定する可能性のある要求パラメーターの名前です。
+* **パラメーター名**
+ユーザー ID を提供する可能性のあるリクエストパラメーターの名前。
 
 * **User Map**：選択したユーザーについて、HTTP リクエストから抽出されたユーザー名を、認証情報オブジェクト内の別のユーザー名に置き換えることができます。マッピングはここで定義します。ユーザー名  
-`admin` がマップの両側に表示される場合、マッピングは無視されます。「=」文字を使用する場合は、先頭に「\」を付けてエスケープする必要があります。
+`admin` はマップのどちらかの側に表示され、マッピングは無視されます。 「=」文字は、先頭に「\」を付けてエスケープする必要があります。
 
 * **Format**：ユーザー ID を指定する際の形式を示します。次のいずれかを使用します。
 
    * `Basic`：ユーザー ID が HTTP Basic 認証形式でエンコードされている場合
    * `AsIs`：ユーザー ID がプレーンテキストで指定されている場合や、正規表現が適用されている値をそのまま、または正規表現として使用する必要がある場合
 
-**Day CQ WCM Debug Filter**：ページへのアクセス時に ?debug=layout などのサフィックスを使用できるので、開発時に便利です。例えば、https://localhost:4502/cf#/content/geometrixx/en/support.html?debug=layout は開発者が関心を持つ可能性のあるレイアウト情報を提供します。
+**Day CQ WCM Debug Filter**：ページへのアクセス時に ?debug=layout などのサフィックスを使用できるので、開発時に便利です。例えば、https://localhost:4502/cf#/content/geometrixx/en/support.html?debug=layoutは、開発者が興味を持つ可能性のあるレイアウト情報を提供します。
 
-* パフォーマンスとセキュリティを確保するために、実稼動インスタンスではこれを無効にします。
+* パフォーマンスとセキュリティを確保するには、本番インスタンスでを無効にします。
 
 **Day CQ WCM Filter**：以下の項目を設定します。
 
-* **WCM Mode ** デフォルトモードを定義します。
-* オーサーインスタンスには、`edit`、`disable,preview` または `analytics` を使用できます。
+* **WCM モード** をクリックしてデフォルトのモードを定義します。
+* オーサーインスタンスでは、このモードは `edit`, `disable,preview`または `analytics`.
 その他のモードは、サイドキックからアクセスできます。またはサフィックス `?wcmmode=disabled` を使用して実稼動環境をエミュレートできます。
 
-* パブリッシュインスタンスでは、`disabled` に設定して、その他のモードにアクセスできないようにする必要があります。
+* パブリッシュインスタンスでは、このモードを `disabled` をクリックして、他のモードにアクセスできないようにします。
 
 >[!NOTE]
 >
@@ -375,7 +379,7 @@ OSGi フレームワークサービスランキングの値は、このサービ
 
 **Day CQ WCM Link Checker Configurator**：以下の項目を設定します。
 
-* **書き換え設定のリスト**：コンテンツベースのリンクチェックツール設定の場所のリストを指定します。設定は実行モードに基づくことができます。これはオーサー環境とパブリッシュ環境を区別するために重要です。それぞれの環境でリンクチェッカーの設定が異なる場合があるからです。
+* **書き換え設定のリスト** ：コンテンツベースのリンクチェッカー設定の場所のリストを指定します。 設定は、実行モードに基づいておこなうことができます。 リンクチェッカーの設定が異なる場合があるので、この事実はオーサー環境とパブリッシュ環境を区別するために重要です。
 
 **Day CQ WCM Page Manager Factory**：以下の項目を設定します。
 
@@ -385,13 +389,13 @@ OSGi フレームワークサービスランキングの値は、このサービ
 
 * **パス**：システムが `jcr:Event` をトリガーする前にページの変更をリッスンする場所のリストです。
 
-**Adobe Page Impressions Tracker**：オーサーインスタンスの場合は、次のように設定します。
+**Adobeページインプレッショントラッカー** オーサーインスタンスの場合は、次のようにを設定します。
 
 * **sling.auth.requirements**：このプロパティの値を `-/libs/wcm/stats/tracker` に設定します
 
 >[!CAUTION]
 >
->この設定では、トラッキングサービスへの匿名リクエストが許可されます。
+>この設定により、トラッキングサービスに対する匿名リクエストが許可されます。
 
 >[!NOTE]
 >
@@ -399,7 +403,7 @@ OSGi フレームワークサービスランキングの値は、このサービ
 
 **Day CQ WCM Page Statistics**：パブリッシュインスタンスの場合は、次のように設定します。
 
-* **URL to send data**：ページ統計の追跡に使用する URL を設定します（トラッカー要求が Dispatcher を経由する場合は必須）。例えば、デフォルトは `https://localhost:4502/libs/wcm/stats/tracker` です。
+* **データを送信する URL** ページ統計の追跡に使用する URL を設定するには（トラッカーリクエストが Dispatcher を通過する場合は不可欠です）、例えば、デフォルトは `https://localhost:4502/libs/wcm/stats/tracker`.
 
 * **Tracking script enabled**：ページ上の追跡スクリプトのインクルードを有効化（`true`）または無効化（`false`）します。デフォルト値は `false` です。
 
@@ -412,7 +416,7 @@ OSGi フレームワークサービスランキングの値は、このサービ
 * **Create Version on Activation**：標準インストールで有効になります。
 * **Enable Purging**
 
-* **Purge Paths**：検索アクションで検索するパス。
+* **パージパス**：検索アクションで検索するパス。
 * **Implicit Versioning Paths**：暗黙のバージョン管理がアクティブなパス。
 
 * **Max Version Age**：バージョンの最長有効期間（日数）。
@@ -423,27 +427,27 @@ OSGi フレームワークサービスランキングの値は、このサービ
 
 **Day CQ Workflow Email Notification Service**：ワークフローから送信されるメール通知を設定します。
 
-**CQ Rewriter HTML Parser Factory**
+**CQ RewriterHTMLパーサーファクトリ**
 
-CQ リライターの HTML パーサーを制御します。
+CQ リライターのHTMLパーサーを制御します。
 
-* **Additional Tags to Process** - パーサーで処理する HTML タグを追加または削除できます。デフォルトで処理されるタグは、A、IMG、AREA、FORM、BASE、LINK、SCRIPT、BODY、HEAD です。
-* **キャメルケースを保持** - デフォルトでは、HTML パーサーによってキャメルケース（例：eBay）の属性が小文字（例：ebay）に変換されます。キャメルケースの属性を保持するには、これをオフにします。これは、Angular 2 などのフロントエンドフレームワークを使用する際に役立ちます。
+* **処理する追加のタグ**  — パーサーで処理するHTMLタグを追加または削除できます。 デフォルトでは、次のタグが処理されます。A,IMG,AREA,FORM,BASE,LINK,SCRIPT,BODY,HEAD
+* **キャメルケースを保持**  — デフォルトでは、HTMLパーサーはキャメルケースで属性を変換します ( 例えば、 `eBay`) を小文字 ( 例： `ebay`) をクリックします。 この設定をオフにして、キャメルケースの属性を保持することができます。 この設定は、Angular2 などのフロントエンドフレームワークを使用する場合に役立ちます。
 
 **Day Commons JDBC Connections Pool**：コンテンツのソースとして使用される外部データベースへのアクセスを設定します。
 
-これはファクトリ設定なので、複数のインスタンスを設定できます。
+ファクトリ設定のため、複数のインスタンスを設定できます。
 
-**CDN Rewriter**：AEM と CDN の間の通信では、アセットやバイナリが安全な方法でエンドユーザーに配信されるようにする必要があります。この方法では 2 つのタスクをおこないます。
+**CDN Rewriter** アセットやバイナリが安全な方法でエンドユーザーに配信されるように、AEMと CDN 間の通信を確保する必要があります。 このプロセスには、次の 2 つのタスクが含まれます。
 
-* 最初（またはキャッシュ内のリソースが期限切れになった後）に、CDN を介して AEM からリソースにアクセスします。
-* CDN にリソースがキャッシュされた後は、CDN にキャッシュされたリソースに安全にアクセスします。要求は AEM に送信されず、そのリソースにアクセスできるすべてのユーザーの処理は CDN でおこなわれます。
+* CDN を介して（またはキャッシュで期限切れになった後に）AEMからリソースに初めてアクセスする。
+* リソースが CDN にキャッシュされた後はAEMに送信されず、そのリソースにアクセスできるすべてのユーザーは CDN から提供される必要があるので、CDN にキャッシュされたリソースに安全にアクセスできます。
 
-AEM は、内部アセットの URL を外部の CDN URL に書き直すリライターを提供しています。これにより、JWS 署名および有効期限を含む、CDN に渡すリンクが書き直され、アセットに安全にアクセスできるようになります。この機能は、オーサーインスタンスで使用されます。
+AEMは、内部アセットの URL を外部 CDN の URL に書き換えるリライターを提供します。 JWS 署名を含む CDN に渡されるリンクを書き換え、アセットに安全にアクセスできるようにするための有効期限を設定します。 この機能は、オーサーインスタンスで使用されます。
 
 全体的なフローは次のとおりです。
 
-1. ユーザーが AEM で認証をおこない、アセットを含むページを要求します。
+1. ユーザーがAEMで認証し、アセットを含むページを要求します。
 1. リクエストされたページには、`/content/dam/geometrixx-media/articles/paladin_trailer.jpg/jcr:content/renditions/cq5dam.thumbnail.319.319.png` に類似したアセットが含まれます
 1. リライターは、リンクを、JWS 署名を含む CDN URL に変換します。
    `CDN_domain/content/dam/geometrixx-media/articles/paladin_trailer.jpg/_jcr_content/renditions/cq5dam.thumbnail.319.319.png?cdn_sign=JWS_SIGNATURE`
@@ -458,7 +462,7 @@ AEM は、内部アセットの URL を外部の CDN URL に書き直すリラ�
 
 >[!NOTE]
 >
->現在、この機能は、AEM オーサーインスタンスでのみ使用できます。
+>この機能は、AEMオーサーインスタンスに対してのみ有効です。
 
 **CDNConfigServiceImpl**：CDN 設定を指定します。
 
