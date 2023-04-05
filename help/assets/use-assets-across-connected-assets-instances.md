@@ -6,10 +6,10 @@ mini-toc-levels: 2
 role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
-source-git-commit: b10b7d957ef3a28b5eeb05383a7504c6516f7aa7
+source-git-commit: 8d4ff8bcb7df4770bc1ed7e7c2cad27befe3d175
 workflow-type: tm+mt
-source-wordcount: '3856'
-ht-degree: 97%
+source-wordcount: '3909'
+ht-degree: 96%
 
 ---
 
@@ -363,5 +363,5 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 
    ![アセットのリモート参照の再試行に失敗](assets/reference-report-failure.png)
 
-
+* Cookie が Sites サーバーからGoogle Chrome の Assets サーバーに送信されない場合、Assets 接続が HTTPS を介していないためです。 Assets インスタンスで HTTPS を使用しない場合、 `SameSite=None` Assets サーバーでの認証後は、ヘッダーを応答に追加できません。
 
