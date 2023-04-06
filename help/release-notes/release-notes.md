@@ -2,7 +2,7 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: 99a2167fa1eaee8111ad4e3bd7cdd36ad47a9a4c
+source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
 workflow-type: tm+mt
 source-wordcount: '2705'
 ht-degree: 42%
@@ -80,7 +80,7 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 
 ### [!DNL Forms] 主な機能 {#forms-features-6516}
 
-* [ヘッドレスアダプティブForms](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 開発者は、従来のグラフィカルユーザーインターフェイスを使用するのではなく、API を使用してアクセスし、操作できるインタラクティブフォームを作成、公開、管理できます。
+* [ヘッドレスアダプティブForms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 開発者は、従来のグラフィカルユーザーインターフェイスを使用するのではなく、API を使用してアクセスし、操作できるインタラクティブフォームを作成、公開、管理できます。
 
 * [アダプティブFormsコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、24 個のオープンソースの BEM 準拠コンポーネントのセットです。 これらのコンポーネントはオープンソースで、開発者は、組織の特定のニーズに合わせて、これらのコンポーネントを簡単にカスタマイズおよび拡張できます。 カスタマイズする既存のスキルを持つすべてのユーザー [WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) では、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
 
@@ -100,7 +100,7 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
    * Microsoft® Excel が頻繁にクラッシュします。
    * 保護されたドキュメントを開くと、 **ドキュメントセキュリティオフィス** 拡張機能がコンピューターにインストールされていると認識されません。 セキュリティ拡張機能をダウンロードしてインストールするようにユーザーに指示します。 （NPR-39768）
 * ユーザーがAEM 6.5.15.0 Service Pack にアップグレードした後、PostScript から Pdf への変換が機能しない。 (NPR-39765)、(NPR-39764)
-* アダプティブフォームを開いた後にツアー画面を開こうとすると、NullPointer 例外が発生して失敗します。`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:”` (NPR-39654)
+* アダプティブフォームを開いた後にツアー画面を開こうとすると、NullPointer 例外が発生して失敗します。`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * Windows では、ユーザーが高コントラストの黒の設定を有効にすると、HTML5 Formsコンテンツは、ブラウザーでHTMLプレビューとしてレンダリングされると不明瞭になります。 （NPR-39018）
 
 ## 統合 {#integrations-6516}

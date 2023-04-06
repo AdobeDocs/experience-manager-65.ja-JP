@@ -1,38 +1,36 @@
 ---
-title: Web コンソール
-seo-title: Web Console
-description: AEM での Web コンソールの使用方法について説明します。
-seo-description: Learn how to use the web console in AEM.
+title: AEMの Web コンソール
+description: AEMで Web コンソールを使用する方法を説明します。
 uuid: 047274ff-4d7d-4c7d-95be-06f363beae2e
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 discoiquuid: f934eb02-1f84-44f2-9f14-3f17250c9a90
 exl-id: bdfeaf85-e832-40c1-8769-7d027cdb021e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 100%
+source-wordcount: '724'
+ht-degree: 60%
 
 ---
 
 # Web コンソール{#web-console}
 
-AEM の Web コンソールは、[Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html) に基づいています。Apache Felix は、OSGi R4 サービスプラットフォームを実装するためのコミュニティによる取り組みです。このプラットフォームには、OSGi フレームワークと標準のサービスが含まれています。
+AEM(Adobe Experience Manager) の Web コンソールは、 [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix は、OSGi フレームワークと標準サービスを含む、OSGi R4 Service Platform を実装するためのコミュニティの取り組みです。
 
 >[!NOTE]
 >
->Web コンソールでは、デフォルト設定に言及している説明はすべて、Sling のデフォルトに関連しています。
+>Web コンソールでは、デフォルト設定に関する説明は Sling のデフォルトに関連します。
 >
 >AEM には独自のデフォルトがあるので、設定されたデフォルトは、コンソールに記載された設定とは異なる場合があります。
 
 Web コンソールには、OSGi バンドルを維持するために次のような一連のタブがあります。
 
-* [Configuration](#configuration)：OSGi バンドルの設定に使用します。AEM システムパラメーターを設定するための基盤となるメカニズムです。
-* [Bundles](#bundles)：バンドルのインストールに使用します。
-* [Components](#components)：AEM で必要なコンポーネントのステータスの制御に使用します。
+* [設定](#configuration):OSGi バンドルの設定に使用されます。AEMシステムパラメーターを設定するための基盤となるメカニズムです。
+* [バンドル](#bundles):バンドルのインストールに使用
+* [コンポーネント](#components):AEMに必要なコンポーネントのステータスを制御するために使用されます
 
-おこなわれた変更は、実行中のシステムにすぐに適用されます。再起動は不要です。
+変更は、実行中のシステムに直ちに適用されます。 再起動は不要です。
 
 コンソールには `../system/console`からアクセスできます。次に例を示します。
 
@@ -40,13 +38,13 @@ Web コンソールには、OSGi バンドルを維持するために次のよ�
 
 ## 設定 {#configuration}
 
-「**Configuration**」タブは、OSGi バンドルの設定に使用します。AEM システムパラメーターを設定するための基盤となるメカニズムです。
+この **設定** タブは OSGi バンドルの設定に使用されるので、AEMシステムパラメーターを設定するための基礎となるメカニズムです。
 
 >[!NOTE]
 >
->詳しくは、[Web コンソールでの OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を参照してください。
+>詳しくは、 [Web コンソールを使用した OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) 詳しくは、を参照してください。
 
-「**Configuration**」タブにアクセスするには、次のいずれかを使用します。
+この **設定** タブには、次のいずれかの方法でアクセスできます。
 
 * ドロップダウンメニュー：
 
@@ -64,10 +62,10 @@ Web コンソールには、OSGi バンドルを維持するために次のよ�
 
 * **設定**
 
-   既存の設定を更新できます。設定には永続識別子（PID）が割り当てられています。設定は次のいずれかになります。
+   既存の設定を更新できます。これらは永続的な ID(PID) を持ち、次のいずれかになります。
 
-   * 標準かつ AEM に不可欠な設定。これらの設定は必須であり、削除すると値がデフォルト設定に戻ります。
-   * 「Factory Configurations」から作成されたインスタンス。これらのインスタンスはユーザーによって作成され、削除するとインスタンスが削除されます。
+   * AEMの標準的かつ不可欠なものこれらは必須です。削除した場合、値はデフォルト設定に戻ります。
+   * ファクトリ設定から作成されたインスタンスこれらのインスタンスはユーザーが作成し、削除するとインスタンスが削除されます。
 
 * **ファクトリ設定**
 
@@ -93,7 +91,7 @@ Web コンソールには、OSGi バンドルを維持するために次のよ�
 
 * **削除**
 
-   現在の設定を削除します。標準の場合は、パラメーターがデフォルト設定に戻ります。ファクトリ設定から作成された場合は、特定のインスタンスが削除されます。
+   現在の設定を削除します。標準の場合、パラメータはデフォルト設定に戻されます。 ファクトリ設定から作成した場合は、特定のインスタンスが削除されます。
 
 * **バインド解除**
 
@@ -153,7 +151,7 @@ Web コンソールには、OSGi バンドルを維持するために次のよ�
 
 >[!NOTE]
 >
->**更新**&#x200B;後に、**パッケージの更新**&#x200B;を実行することをお勧めします。
+>後 **更新** 次の操作を実行することをお勧めします。 **パッケージを更新**.
 
 ## コンポーネント {#components}
 
@@ -171,12 +169,12 @@ Web コンソールには、OSGi バンドルを維持するために次のよ�
 
 ![screen_shot_2012-02-15at52144pm-1](assets/screen_shot_2012-02-15at52144pm-1.png)
 
-特定のコンポーネントの名前をクリックすると、そのステータスに関する詳細情報が表示されます。ここで、コンポーネントを有効または無効にしたり、再読み込みしたりすることもできます。
+特定のコンポーネントの名前をクリックすると、そのステータスに関する詳細情報が表示されます。 ここでは、コンポーネントを有効、無効または再読み込みすることもできます。
 
 ![chlimage_1-62](assets/chlimage_1-62.png)
 
 >[!NOTE]
 >
->コンポーネントの有効化または無効化が適用されるのは、AEM／CRX が再起動されるまでです。
+>コンポーネントの有効化（無効化）は、AEM/CRX が再起動されるまでの間のみ適用されます。
 >
->開始状態はコンポーネントの記述子内で定義されます。この記述子は開発時に生成され、バンドルの作成時にバンドルに格納されます。
+>開始状態は、コンポーネント記述子内で定義されます。この記述子は開発時に生成され、バンドルの作成時にバンドルに保存されます。
