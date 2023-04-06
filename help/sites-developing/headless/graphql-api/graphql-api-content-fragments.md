@@ -3,9 +3,9 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
+source-git-commit: cee709161100db6597bdb18ca03b3130d9e242f1
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3225'
 ht-degree: 98%
 
 ---
@@ -22,12 +22,6 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 * 特定の要件に限定された配信を確保
 * 1 つの API クエリへの応答としてレンダリングに必要なものだけを一括配信
 
->[!CAUTION]
->
->GraphQLを使用しているお客様は、GraphQLインデックスパッケージ 1.0.5 を使用してAEMコンテンツフラグメントをインストールする必要があります。
->
->詳しくは、 [リリースノート](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 詳しくは、を参照してください。
-
 >[!NOTE]
 >
 >GraphQL は現在 Adobe Experience Manager (AEM) の 2 つの（別々の）シナリオで使用されています。
@@ -35,6 +29,10 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 >* [AEM Commerce が、GraphQL 経由でコマースプラットフォームのデータを使用する](/help/commerce/cif/integrating/magento.md)。
 >* AEM コンテンツフラグメントが、AEM GraphQL API（標準の GraphQL に基づくカスタム実装）と連携して、アプリケーションで使用するための構造化コンテンツを配信する。
 
+
+## 前提条件 {#prerequisites}
+
+GraphQLを使用しているお客様は、GraphQLインデックスパッケージ 1.0.5 を使用してAEMコンテンツフラグメントをインストールする必要があります。詳しくは、 [リリースノート](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 詳しくは、を参照してください。
 
 ## GraphQL API {#graphql-api}
 
