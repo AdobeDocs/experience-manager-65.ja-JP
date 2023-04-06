@@ -3,9 +3,9 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3224'
 ht-degree: 98%
 
 ---
@@ -21,6 +21,12 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 * REST で API リクエストの反復を回避
 * 特定の要件に限定された配信を確保
 * 1 つの API クエリへの応答としてレンダリングに必要なものだけを一括配信
+
+>[!CAUTION]
+>
+>GraphQLを使用しているお客様は、GraphQLインデックスパッケージ 1.0.5 を使用してAEMコンテンツフラグメントをインストールする必要があります。
+>
+>詳しくは、 [リリースノート](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 詳しくは、を参照してください。
 
 >[!NOTE]
 >

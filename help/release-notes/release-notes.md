@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: 72b3eaea279911569dbd6b9acf41527111e9e53c
+source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
 workflow-type: tm+mt
-source-wordcount: '2665'
-ht-degree: 44%
+source-wordcount: '2692'
+ht-degree: 43%
 
 ---
 
@@ -224,6 +224,14 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 
 AEM Forms にサービスパックをインストールする手順については、[AEM Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)を参照してください。
 
+### Experience Managerコンテンツフラグメント用のGraphQLインデックスパッケージのインストール {#install-aem-graphql-index-add-on-package}
+
+GraphQLを使用しているお客様は、 [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip). これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+
+>[!NOTE]
+>
+>このパッケージは、インスタンスごとに 1 回だけインストールする必要があります。すべての Service Pack と共に再インストールする必要はありません。
+
 ### UberJar {#uber-jar}
 
 [!DNL Experience Manager] 6.5.16.0 の UberJar は、[Maven Central リポジトリ](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.15/)で入手できます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
@@ -266,9 +274,6 @@ Maven プロジェクトで UberJar を使用するには、[UberJar の使用�
 <!-- REMOVED AS PER CQDOC-20022, JANUARY 23, 2023 * If you install [!DNL Experience Manager] 6.5 Service Pack 10 or a previous service pack on [!DNL Experience Manager] 6.5, the runtime copy of your assets custom workflow model (created in `/var/workflow/models/dam`) is deleted.
 To retrieve your runtime copy, Adobe recommends to synchronize the design-time copy of the custom workflow model with its runtime copy using the HTTP API:
 `<designModelPath>/jcr:content.generate.json`. -->
-
-* [GraphQL インデックスパッケージ 1.0.5 を使用した AEM コンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip)
-GraphQL を使用するユーザーは、このパッケージが必要です。このパッケージにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
 * コンテンツモデルのカスタム API 名を使用していた可能性のある GraphQL クエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新してください。
 
