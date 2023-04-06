@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: ea90bd913b437a564fb50e01af7719510fa22e74
+source-git-commit: 99a2167fa1eaee8111ad4e3bd7cdd36ad47a9a4c
 workflow-type: tm+mt
-source-wordcount: '2692'
-ht-degree: 43%
+source-wordcount: '2705'
+ht-degree: 42%
 
 ---
 
@@ -226,7 +226,11 @@ AEM Forms にサービスパックをインストールする手順について�
 
 ### Experience Managerコンテンツフラグメント用のGraphQLインデックスパッケージのインストール {#install-aem-graphql-index-add-on-package}
 
-GraphQLを使用しているお客様は、 [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip). これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+GraphQLを使用しているお客様は、 [GraphQLインデックスパッケージ 1.0.5 を使用したAEMコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcfm-graphql-index-def-1.0.5.zip).
+
+これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
+
+このパッケージをインストールしないと、GraphQLクエリが遅くなったり失敗したりする場合があります。
 
 >[!NOTE]
 >
