@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
+source-git-commit: f53dbe7d51ff976f8d79702a86527f984aa00997
 workflow-type: tm+mt
-source-wordcount: '2967'
+source-wordcount: '2983'
 ht-degree: 39%
 
 ---
@@ -111,7 +111,7 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 * ユーザーが、IE 互換モードでMicrosoft Edge ブラウザー上でアダプティブフォームをHTMLとしてプレビューする場合、正しく表示されません。（CQ-4352216）
 * 翻訳を有効にするには、アンダースコアやハイフンなどの特殊文字を含む新しいロケールを辞書に含める必要があります。 （NPR-40088）
 
-AEM 6.5.16.0 Formsアドオンサービスパックをインストールした後、次の問題が発生していました。 そのため、AEM 6.5.16.0 Formsアドオンサービスパックの更新バージョンがリリースされました。
+AEM 6.5.16.0 Formsアドオンサービスパックをインストールすると、以下に示す問題が発生していました。 そのため、 [AEM 6.5.16.0 Formsアドオンサービスパック — 6.0.914](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) がリリースされました。 Adobeでは、更新されたサービスパックを使用することをお勧めします。
 * ユーザーが forms-users グループのユーザーを使用してアダプティブフォームを作成しようとすると、任意のテンプレートを選択するオプションが表示されず、次のようなエラーが発生します。内部サーバーエラー：com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76) at java.base/java.util.stream.ReferenceExceptionpipeline$2$1.accept(ReferencePipeline.java:176) at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) (FORMS-7629)
 * コードエディターのルールで加えた変更は保存されません。(FORMS-7532)
 
