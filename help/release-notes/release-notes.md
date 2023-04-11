@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: a17b25e55a0bf16a0df42a7ba4768503618a19e2
+source-git-commit: a2fa4eacf1b39f185fdf46581ca7c5dcc8083969
 workflow-type: tm+mt
-source-wordcount: '2705'
-ht-degree: 42%
+source-wordcount: '2967'
+ht-degree: 39%
 
 ---
 
@@ -88,7 +88,7 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 
 ### [!DNL Forms] 修正 {#forms-fixes-6516}
 
-* タスクの割り当て**手順を使用して割り当てられたタスクに関する通知を送信する場合、割り当てられた個人に 1 つではなく 2 つの電子メールが送信されます。 （NPR-40078）
+* を使用する場合、 **タスクを割り当て** 割り当てられたタスクに関する通知を送信する手順では、割り当てられた個人に 1 つではなく 2 つの電子メールが送信されます。 （NPR-40078）
 * ユーザーがテーブルヘッダーを非表示にした場合、以前に設定した列幅が未設定になり、すべての列が同じ幅を保持します。 （NPR-40063）
 * 管理者ユーザーのデフォルトのパスワードを `admin`、 `Prepare Adobe Experience Manager Server For DSC deployment` AEM Forms JEE Service Pack でエラーが発生したことを確認します。 (NPR-40062)、(NPR-39387)
 * OutputService API と AssemblerService API が、PDFフォームをPDF/A に変換できない。(NPR-39990)
@@ -102,6 +102,18 @@ Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビッ�
 * ユーザーがAEM 6.5.15.0 Service Pack にアップグレードした後、PostScript から Pdf への変換が機能しない。 (NPR-39765)、(NPR-39764)
 * アダプティブフォームを開いた後にツアー画面を開こうとすると、NullPointer 例外が発生して失敗します。`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
 * Windows では、ユーザーが高コントラストの黒の設定を有効にすると、HTML5 Formsコンテンツは、ブラウザーでHTMLプレビューとしてレンダリングされると不明瞭になります。 （NPR-39018）
+* ユーザーがメタデータを追加しようとすると、ドラフトコンポーネントと送信コンポーネントの両方で「保存」ボタンが機能しなくなります。（CQ-4349601）
+* AEM 6.5.15.0 Service Pack にアップグレードした後、Visual Editor で相対 URL のリダイレクトが機能しなくなりました。 （NPR-39947）
+* ユーザーがAEM 6.5.15.0 Service Pack にアップグレードすると、Internet Explorer でのリダイレクトの動作が停止します。 （CQ-4351745）
+* ユーザーがAEM 6.5.15.0 Service Pack にアップグレードした後、HTML見出しタグが認識されない。 HTMLの見出しタグのタグコードは、HTMLフォームにテキストとして表示されます。 （NPR-39915）
+* ユーザーがアダプティブフォームを送信しようとすると、次のようなタイプキャストエラーが発生します。 `ERROR [10.207.64.167 [1668589530607] POST /app/LS4/content/forms/af/revalidate/jcr:content/guideContainer.af.submit.jsp HTTP/1.1]`(NPR-39809)
+* ユーザーがレコードのドキュメントを **メールの送信** 送信アクションの場合は、正しく表示されません。 メールテンプレートは、レコードのドキュメントのプレビューに埋め込まれます。 （CQ-4352155）
+* ユーザーが、IE 互換モードでMicrosoft Edge ブラウザー上でアダプティブフォームをHTMLとしてプレビューする場合、正しく表示されません。（CQ-4352216）
+* 翻訳を有効にするには、アンダースコアやハイフンなどの特殊文字を含む新しいロケールを辞書に含める必要があります。 （NPR-40088）
+
+AEM 6.5.16.0 Formsアドオンサービスパックをインストールした後、次の問題が発生していました。 そのため、AEM 6.5.16.0 Formsアドオンサービスパックの更新バージョンがリリースされました。
+* ユーザーが forms-users グループのユーザーを使用してアダプティブフォームを作成しようとすると、任意のテンプレートを選択するオプションが表示されず、次のようなエラーが発生します。内部サーバーエラー：com.adobe.aem.formsndocuments.servlet.ThemeClientLibraryDataSourceServlet.lambda$getThemeLibCategoryList$3(ThemeClientLibraryDataSourceServlet.java:76) at java.base/java.util.stream.ReferenceExceptionpipeline$2$1.accept(ReferencePipeline.java:176) at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) (FORMS-7629)
+* コードエディターのルールで加えた変更は保存されません。(FORMS-7532)
 
 ## 統合 {#integrations-6516}
 
