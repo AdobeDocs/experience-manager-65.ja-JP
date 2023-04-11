@@ -12,10 +12,10 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: 5ac1b0a343c3742f27fecbfb0de577d65c2607d0
+source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '8098'
+ht-degree: 58%
 
 ---
 
@@ -278,7 +278,7 @@ DASH は国際標準、HLS はApple標準です。 どちらもアダプティ�
 
 >[!IMPORTANT]
 >
->*ビデオに DASH を使用するには、まずアカウントのAdobeテクニカルサポートが DASH を有効にする必要があります。 詳しくは、 [アカウントで DASH を有効にする](#enable-dash).)
+>*ビデオに DASH を使用するには、まずアカウントのAdobeテクニカルサポートが DASH を有効にする必要があります。 詳しくは、 [アカウントで DASH を有効にする](#enable-dash).
 
 ## Dynamic Mediaビデオソリューションのアーキテクチャ {#architecture-of-dynamic-media-video-solution}
 
@@ -442,7 +442,7 @@ DASH(Digital Adaptive Streaming over HTTP) は、ビデオストリーミング�
 
    >[!IMPORTANT]
    >
-   >現在、お使いのアカウントで DASH を有効にしているのは、北米でのみです。
+   >現在、アカウントで DASH を有効にするのは、アジア太平洋および北米でのみ利用できます。ヨーロッパ中東アフリカで間もなく登場する
 
 アカウントで DASH を有効にするには、次の 2 つの手順が必要です。
 
@@ -473,7 +473,7 @@ DASH(Digital Adaptive Streaming over HTTP) は、ビデオストリーミング�
 >
 >ビデオレポートを使用できるのは、Dynamic Media - ハイブリッドモードを実行している場合のみです。
 
-ビデオレポートは、指定した時間にわたるいくつかの集計指標を表示し、*公開された*個別および集計ビデオが期待通りに実行されていることを監視するのに役立ちます。次の上位指標データは、web サイト全体で公開されているすべてのビデオについて集計されます。
+ビデオレポートでは、指定した時間内に複数の集計指標が表示され、 *公開済み* 個々のビデオと集計ビデオが期待どおりに動作しています。 次の上位指標データは、web サイト全体で公開されているすべてのビデオについて集計されます。
 
 * ビデオ開始
 * 完了率
