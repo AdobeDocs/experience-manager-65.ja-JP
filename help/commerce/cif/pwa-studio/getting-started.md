@@ -5,10 +5,10 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 exl-id: de7b8f05-b6b7-4105-84a5-940c16ebf2b4
-source-git-commit: a467009851937c4a10b165a3d253c47bf990bbc5
+source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 100%
+source-wordcount: '769'
+ht-degree: 68%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 100%
 
 PWA Studio は GraphQL により初期設定で Adobe Commerce とシームレスに統合されており、革新的で魅力的なストアフロントやその他のデジタルエクスペリエンスを作成するためのオプションを無制限に提供します。
 
-コンテンツフラグメントは、構造が事前に定義されたコンテンツの断片です。この構造により、GraphQL を API として使用して、様々な形式（JSON や Markdown など）のコンテンツフラグメントをヘッドレス方式で利用し、独立してレンダリングすることができます。コンテンツフラグメントには、GraphQL に必要なすべてのデータタイプとフィールドが含まれているので、アプリケーションは利用可能な情報のみをリクエストして、期待する情報だけを受け取ることができます。コンテンツフラグメントの構造は柔軟なので、複数の場所や複数のチャネルでの使用にも適しています。
+コンテンツフラグメントは、構造が事前定義されたコンテンツの要素です。この構造により、GraphQL を様々な形式（JSON や Markdown など）の API として使用しながら、ヘッドレスな方法でコンテンツを利用し、独立してレンダリングすることができます。コンテンツフラグメントには、GraphQL に必要なすべてのデータタイプとフィールドが含まれているので、アプリケーションは利用可能な情報のみをリクエストして、期待する情報だけを受け取ることができます。コンテンツフラグメントの構造は柔軟なので、複数の場所や複数のチャネルでの使用にも適しています。
 
-Adobe Experience Manager のコンテンツフラグメントモデルエディターを使用すれば、必要な構造を簡単に設計できます。Adobe Experience Manager コンテンツフラグメント（または他の任意のデータ）を PWA Studio アプリケーションと統合するうえでの主な課題は、複数の GraphQL エンドポイントからデータを取得することです。これは、PWA Studio が、初期設定では、単一の Adobe Commerce GraphQL エンドポイントで機能するようになっているからです。
+Adobe Experience Manager のコンテンツフラグメントモデルエディターを使用すれば、必要な構造を簡単に設計できます。Adobe Experience Manager コンテンツフラグメント（または他の任意のデータ）を PWA Studio アプリケーションと統合するうえでの主な課題は、複数の GraphQL エンドポイントからデータを取得することです。これは、PWA Studioが単一のAdobe Commerce GraphQLエンドポイントで動作するように設定されていないからです。
 
 ## アーキテクチャ {#architecture}
 
@@ -26,7 +26,7 @@ Adobe Experience Manager のコンテンツフラグメントモデルエディ�
 
 ## PWA Studio のセットアップ {#setup-pwa}
 
-PWA Studio アプリをセットアップするには、Adobe Commerce の [PWA Studio のドキュメント](https://developer.adobe.com/commerce/pwa-studio/tutorials/)に従います。
+PWA Studioアプリを設定するには、Adobe Commerceに従います。 [PWA Studio文書](https://developer.adobe.com/commerce/pwa-studio/tutorials/).
 
 PWA Studio を AEM の GraphQL エンドポイントに接続するには、[AEM Extension for PWA Studio](https://github.com/adobe/aem-pwa-studio-extensions) を使用します。
 
@@ -48,7 +48,7 @@ PWA Studio を AEM の GraphQL エンドポイントに接続するには、[AEM
    <Adapter apiBase={apiBase} apollo={{ link: linkWrapper(apolloLink) }} store={store}>
    ```
 
-   Apollo Client のカスタマイズについて詳しくは、[linkWrapper.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/linkWrapper.js) を参照してください。
+   詳細は、 [linkWrapper.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/linkWrapper.js).
 
 1. ブログエントリを使用してナビゲーションコンポーネントを拡張するには、pwa-root/local-intercept.js を次のように変更します。
 
@@ -62,8 +62,7 @@ PWA Studio を AEM の GraphQL エンドポイントに接続するには、[AEM
 
    ナビゲーションコンポーネントのカスタマイズについて詳しくは、[addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js) と、PWA Studio の[拡張フレームワーク](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/)に関するドキュメントを参照してください。
 
-1. Apollo Client は、<https://pwa-studio/endpoint.js> に AEM GraphQL エンドポイントがあることを想定します。エンドポイントをこの場所にマッピングするには、PWA Studio アプリケーションの UPWARD 設定を次のようにカスタマイズする必要があります。
-a. AEM_CFM_GRAPHQL 変数を pwa-root/.env に追加し、AEM コンテンツフラグメントの GraphQL エンドポイントを指すように変数を調整します。
+1. Apollo クライアントは、AEM GraphQLエンドポイントを次の場所に置くことを想定しています： `<https://pwa-studio/endpoint.js>`. エンドポイントをこの場所にマッピングするには、PWA Studioアプリケーションの UPPOURD 設定をカスタマイズします。a.宛先 `pwa-root/.env`で、 AEM_CFM_GRAPHQL変数を追加し、AEMコンテンツフラグメントGraphQLエンドポイントを指すように調整します。
 
    例：AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
@@ -90,13 +89,13 @@ a. AEM_CFM_GRAPHQL 変数を pwa-root/.env に追加し、AEM コンテンツフ
 
 ## AEM のセットアップ {#setup-aem}
 
-AEM コンテンツフラグメントのドキュメントに従って、AEM プロジェクトの GraphQL エンドポイントをセットアップします。さらに、AEM プロジェクトに次の設定を追加して、PWA Studio アプリケーションから GraphQL エンドポイントにアクセスできるようにします。
+AEMコンテンツフラグメントのドキュメントに従って、AEMプロジェクトのGraphQLエンドポイントを設定します。 また、AEMプロジェクトに次の設定を追加して、PWA StudioアプリケーションがGraphQLエンドポイントにアクセスできるようにします。
 
 * Adobe Granite クロスオリジンリソース共有ポリシー（com.adobe.granite.cors.impl.CORSPolicyImpl）
 
-   allowedorigin プロパティに PWA アプリケーションの完全なホスト名を設定します。
+   を `allowedorigin` プロパティをPWA・アプリケーションの完全なホスト名に追加します。
 
-   例：<https://pwa-studio-test-vflyn.local.pwadev:9366>
+   例：`<https://pwa-studio-test-vflyn.local.pwadev:9366>`
 
 * Apache Sling Referrer Filter（org.apache.sling.security.impl.ReferrerFilter.cfg.json）
 
@@ -106,7 +105,7 @@ AEM コンテンツフラグメントのドキュメントに従って、AEM プ
 
 両方の設定の完全な例については、<https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config> を参照してください。
 
-GraphQL エンドポイントを紹介するために、サンプルコンテンツフラグメントのモデルとデータのサンプルを、コンテンツパッケージで用意しました。これらは、PWA Studio 用拡張機能に付属する React コンポーネントとうまく連携して機能します。
+GraphQLエンドポイントを紹介するために、Adobeは、コンテンツパッケージを介して、いくつかのサンプルコンテンツフラグメントモデルおよびデータを準備しました。 これらのコンポーネントは、拡張機能に付属する React コンポーネントとPWA Studioします。
 
 ## 使用方法 {#how-to-use}
 
@@ -116,15 +115,15 @@ GraphQL エンドポイントを紹介するために、サンプルコンテン
 
 実稼動のセットアップは、様々な点で異なるものになる可能性があります。
 
-* Apollo Client をカスタマイズする代わりに、AEM と Adobe Commerce GraphQL データを組み合わせて単一のフェデレーテッド GraphQL エンドポイントにすることができます。
-* PWA Studio アプリケーションでは、UPWARD 設定のプロキシを介さずに、AEM GraphQL エンドポイント URL を直接使用することもできます。このプロキシは別のレイヤー（CDN など）に移動することもできます。
-* どのアプローチが最適かは、エンドユーザーへの PWA Studio アプリケーションの提供方法によっても大きく異なります。
+* Apollo クライアントをカスタマイズする代わりに、AEMとAdobe Commerce GraphQLのデータを組み合わせた単一のフェデレーテッドGraphQLエンドポイントを使用できます。
+* PWA Studio アプリケーションでは、UPWARD 設定のプロキシを介さずに、AEM GraphQL エンドポイント URL を直接使用することもできます。プロキシは別のレイヤー（CDN など）に移動することもできます。
+* また、このアプローチは、エンドユーザーにPWA Studio・アプリケーションを提供する方法によっても大きく異なります。
 
 この拡張機能には 2 つの例が用意されています。
 
 ### ブログ {#blog}
 
-いくつかのコンテンツフラグメントモデルに基づいてブログ投稿を表示します。さらに、AEM GraphQL エンドポイントと連携するように Apollo Client を設定する方法と、ナビゲーションコンポーネントを PWA Studio で拡張する方法の例も含まれています。詳しくは、[GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension) を参照してください。
+いくつかのコンテンツフラグメントモデルに基づいてブログ投稿を表示します。また、AEM GraphQLエンドポイントと連携するように Apollo クライアントを設定する方法や、PWA Studioでナビゲーションコンポーネントを拡張する方法の例も含まれています。 詳しくは、[GitHub](https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension) を参照してください。
 
 ### PDP エンリッチメント {#pdp-enrichment}
 
