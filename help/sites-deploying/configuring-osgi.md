@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 55f6aab3e41159735e332b2740e3a21c563c1157
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1949'
 ht-degree: 41%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 41%
 
 OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネントを使用してアプリケーションを構築できる、標準化されたプリミティブを提供します。これらのコンポーネントは、アプリケーションに組み込み、デプロイできます*&quot;.
 
-これにより、バンドルの管理が容易になり、バンドルを個別に停止、インストール、開始できます。 相互依存関係は自動的に処理されます。各 OSGi コンポーネント ( [OSGi の仕様](https://www.osgi.org/Specifications/HomePage)を参照) は、様々なバンドルの 1 つに含まれています。
+これにより、バンドルの管理が容易になり、バンドルを個別に停止、インストール、開始できます。 相互依存関係は自動的に処理されます。各 OSGi コンポーネント ( [OSGi の仕様](https://docs.osgi.org/specification/)を参照) は、様々なバンドルの 1 つに含まれています。
 
 これらのバンドルの設定は、次のいずれかの方法で管理できます。
 

@@ -1,7 +1,7 @@
 ---
 title: サードパーティのサービスとの統合
 seo-title: Integrating with Third-Party Services
-description: AEM とサードパーティのサービスを統合する方法について説明します。
+description: AEMをサードパーティのサービスと統合する方法について説明します。
 seo-description: Learn how to integrate AEM with third party services.
 uuid: bfafd00b-46bc-4af2-b3e8-874afb1ed697
 contentOwner: Guillaume Carlino
@@ -10,28 +10,28 @@ topic-tags: integration
 content-type: reference
 discoiquuid: e0d6478a-4420-46a6-96fe-082a30ee82f0
 exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
-source-git-commit: d19b203ffe75a5628f350113d4d74a2916beffc8
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 49%
 
 ---
 
 # サードパーティのサービスとの統合{#integrating-with-third-party-services}
 
-既製の AEM は、アドビ以外の次の製品と統合できます。
+AEMを使用すると、を次の非Adobe製品の標準でと統合できます。
 
-* Amazon SNS 接続 - Amazon Web サービス
-* BrightEdge Content Optimizer - 検索用に最適化されたコンテンツ
-* ExactTarget - 電子メールマーケティング
-* Facebook Connect - ソーシャルネットワーキング
-* 汎用分析スニペット - 分析
-* Microsoft Translator、その他の機械翻訳プロバイダー
-* Pushwoosh 接続 - アプリ - プッシュ通知
+* Amazon SNS 接続 — Amazon Web サービス
+* BrightEdge Content Optimizer — 検索用に最適化されたコンテンツ
+* ExactTarget — 電子メールマーケティング
+* Facebook Connect — ソーシャルネットワーキング
+* 汎用分析スニペット — analytics
+* Microsoft®翻訳者またはその他の機械翻訳プロバイダー
+* Pushwoosh 接続 — アプリ — プッシュ通知
 * Salesforce - 販売および CRM ソフトウェア
-* Silverpop Engage - マーケティングの自動化、電子メール、モバイルおよびソーシャル
-* Twitter - ソーシャルネットワーキング
-* YouTube - ビデオ共有
+* Twitter — ソーシャルネットワーキング
+* YouTube — ビデオ共有
+<!-- * Silverpop Engage - marketing automation, email, mobile, and social NO LONGER EXISTS; ITS REPLACEMENT IS UNKNOWN -->
 
 また、AEM を [Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md) と統合できます。
 
@@ -39,25 +39,26 @@ ht-degree: 100%
 
 Salesforce.com は企業向けのクラウドコンピューティングを提供し、ソーシャルエンタープライズへの移行を支援します。
 
-AEM サイトと Salesforce の統合については、[Salesforce との統合](/help/sites-administering/salesforce.md)を参照してください。
+AEMサイトと Salesforce の統合について詳しくは、 [Salesforce との統合](/help/sites-administering/salesforce.md).
 
-## Silverpop Engage との統合 {#integrating-with-silverpop-engage}
+<!-- THE INFORMATION BELOW APPEARS OBSOLETE; first URL is a 404. I could not find a suitable replacement for it.
+## Integrating with Silverpop Engage {#integrating-with-silverpop-engage}
 
 >[!NOTE]
 >
->既製の AEM は Silverpop Engage と統合できません。AEM を Silverpop Engage と統合するには、パッケージ共有から[パッケージをダウンロード](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content)します。
+>Silverpop Engage integration is not available out of the box. To integrate AEM with Silverpop Engage, [download the package](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content) from Package Share.
 
-Silverpop Engage は、マーケティングの自動化、電子メール、モバイルおよびソーシャルの機能を提供します。
+Silverpop Engage provides marketing automation, email, mobile, and social.
 
-AEM サイトと ExactTarget の統合については、[Silverpop Engage との統合](/help/sites-administering/silverpop.md)を参照してください。
+For information about integrating your AEM site and ExactTarget, see [Integrating with Silverpop Engage](/help/sites-administering/silverpop.md). -->
 
 ## ExactTarget との統合 {#integrating-with-exacttarget}
 
-ExactTarget の電子メールマーケティングソリューションを使用すると、あらゆる規模の組織において、ターゲットを厳選し、完全に統合された、きわめて重要な電子メールキャンペーンを企画して実施できます。
+ExactTarget の電子メールマーケティングソリューションを使用すると、あらゆる規模の組織が、ターゲットを厳選し、ミッションクリティカルで完全に統合された電子メールキャンペーンを設計および提供できます。
 
-AEM サイトと ExactTarget の統合については、[ExactTarget との統合](/help/sites-administering/exacttarget.md)を参照してください。
+AEMサイトと ExactTarget の統合について詳しくは、 [ExactTarget の設定](/help/sites-administering/exacttarget.md).
 
-## Facebook および Twitter との統合 {#integrating-with-facebook-and-twitter}
+## facebookおよびTwitterとの統合 {#integrating-with-facebook-and-twitter}
 
 Facebook および Twitter は広く普及しているソーシャルネットワーキングサービスです。AEM と Facebook および Twitter の統合によって、組織が所有しているデジタル資産に Facebook または Twitter のログインオプションを付けて、プロファイル情報に基づいてユーザーエクスペリエンスをパーソナライズすることができます。マーケティング担当者は、プロファイル情報を他のソースのデータ（顧客関係管理システムや Web サイトのプロファイルなど）と組み合わせて、統一されたユーザービューを作成することもできます。
 
@@ -65,4 +66,4 @@ Facebook および Twitter は広く普及しているソーシャルネット�
 
 ## その他のプロバイダーとの統合 {#integrating-with-other-providers}
 
-AEM では、[汎用分析スニペット](/help/sites-administering/external-providers.md)を使用して、その他の外部プロバイダーに接続できます。
+AEMを使用すると、 [汎用分析スニペット。](/help/sites-administering/external-providers.md)

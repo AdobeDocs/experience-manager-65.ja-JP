@@ -4,9 +4,9 @@ description: Adobe Experience Managerでサポートされているクライア�
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
 workflow-type: tm+mt
-source-wordcount: '3499'
+source-wordcount: '3498'
 ht-degree: 30%
 
 ---
@@ -214,7 +214,7 @@ AEMを Azure またはAWSにデプロイする方法に関する推奨事項に�
 
 ### Dispatcher プラットフォーム（Web サーバー） {#dispatcher-platforms-web-servers}
 
-Dispatcher は、キャッシュおよびロードバランシングコンポーネントです。[最新バージョンの Dispatcher をダウンロード](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
+Dispatcher は、キャッシュおよびロードバランシングのコンポーネントです。 [最新バージョンの Dispatcher をダウンロード](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=en)します。Experience Manager 6.5 ではバージョン 4.3.2 以降の Dispatcher が必要です。
 
 Dispatcher バージョン 4.3.2 での使用では、次の Web サーバーがサポートされています。
 
