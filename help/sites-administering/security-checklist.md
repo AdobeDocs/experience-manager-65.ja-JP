@@ -12,10 +12,10 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: f23adcf200b625e2ab2a766460c41fd7e38fae83
+source-git-commit: 41752e40f2bceae98d4a9ff8bf130476339fe324
 workflow-type: tm+mt
-source-wordcount: '2986'
-ht-degree: 28%
+source-wordcount: '3025'
+ht-degree: 27%
 
 ---
 
@@ -395,7 +395,17 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。 権限の最小化の原則に従って、アクセスを制限する必要があります。
 
-これをサポートするため、Adobeは、お客様が構築する基盤として、許可堅牢化パッケージを提供します。 これは、リポジトリのルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティに匿名アクセスを制限することで機能します。 パッケージをダウンロードできます [ここ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) とは、サポートされているすべてのバージョンのAEMにインストールできます。 詳しくは、リリースノートを参照してください。
+これをサポートするため、Adobeは、お客様が構築する基盤として、許可堅牢化パッケージを提供します。 これは、リポジトリのルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティに匿名アクセスを制限することで機能します。 パッケージをダウンロードできます [ここ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) とは、サポートされているすべてのバージョンのAEMにインストールできます。
+
+変更を説明するために、パッケージをインストールする前に匿名で表示できるノードプロパティを比較できます。
+
+![パッケージをインストールする前に](/help/sites-administering/assets/before_resized.png)
+
+パッケージのインストール後に表示可能なものを使用します。 `jcr:createdBy` および `jcr:lastModifiedBy` は表示されません。
+
+![パッケージのインストール後](/help/sites-administering/assets/after_resized.png)
+
+詳しくは、パッケージのリリースノートを参照してください。
 
 ### クリックジャッキングの防止 {#prevent-clickjacking}
 
