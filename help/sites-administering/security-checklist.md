@@ -12,7 +12,7 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
+source-git-commit: f23adcf200b625e2ab2a766460c41fd7e38fae83
 workflow-type: tm+mt
 source-wordcount: '2986'
 ht-degree: 28%
@@ -389,7 +389,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 >
 >詳しくは、 [許可可能なノード名の生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
 
-**匿名権限堅牢化パッケージ**
+### 匿名権限堅牢化パッケージ {#anonymous-permission-hardening-package}
 
 デフォルトでは、AEMには次のようなシステムメタデータが格納されます。 `jcr:createdBy` または `jcr:lastModifiedBy` ノードのプロパティとして、通常のコンテンツの横にあるリポジトリで。 設定とアクセス制御の設定に応じて、場合によっては、これによって、例えば、生の JSON または XML としてレンダリングされる場合などに、個人識別情報 (PII) が公開される可能性があります。
 
