@@ -12,10 +12,10 @@ discoiquuid: de7d7209-c194-4d19-853b-468ebf3fa4b2
 docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
-source-git-commit: 70c2d7c910f61169869aab9fdcbff4c4564ea9bd
+source-git-commit: e44480535ea7058dc41fc747351446b670d03b7f
 workflow-type: tm+mt
-source-wordcount: '2818'
-ht-degree: 29%
+source-wordcount: '2986'
+ht-degree: 28%
 
 ---
 
@@ -388,6 +388,14 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 >[!NOTE]
 >
 >詳しくは、 [許可可能なノード名の生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+
+**匿名権限堅牢化パッケージ**
+
+デフォルトでは、AEMには次のようなシステムメタデータが格納されます。 `jcr:createdBy` または `jcr:lastModifiedBy` ノードのプロパティとして、通常のコンテンツの横にあるリポジトリで。 設定とアクセス制御の設定に応じて、場合によっては、これによって、例えば、生の JSON または XML としてレンダリングされる場合などに、個人識別情報 (PII) が公開される可能性があります。
+
+すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。 権限の最小化の原則に従って、アクセスを制限する必要があります。
+
+これをサポートするため、Adobeは、お客様が構築する基盤として、許可堅牢化パッケージを提供します。 これは、リポジトリのルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティに匿名アクセスを制限することで機能します。 パッケージをダウンロードできます [ここ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) とは、サポートされているすべてのバージョンのAEMにインストールできます。 詳しくは、リリースノートを参照してください。
 
 ### クリックジャッキングの防止 {#prevent-clickjacking}
 
