@@ -1,7 +1,7 @@
 ---
 title: AEM Forms のデプロイメントの監視
 seo-title: Monitoring AEM forms deployments
-description: AEM Forms のデプロイメントは、システムレベルおよび内部レベルの両方で監視できます。このドキュメントでは、AEM Forms のデプロイメントの監視について説明します。
+description: AEM forms のデプロイメントは、システムレベルと内部レベルの両方で監視できます。 このドキュメントでは、AEM forms のデプロイメントの監視について説明します。
 seo-description: You can monitor AEM forms deployments from both a system level and an internal level. Learn more about monitoring AEM forms deployments from this document.
 uuid: 032b7a93-3069-4ad5-a8c6-4c160f290669
 contentOwner: admin
@@ -10,29 +10,29 @@ geptopics: SG_AEMFORMS/categories/maintaining_aem_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: b3e7bca0-5aaf-4f28-bddb-fd7e8ed72ee8
 exl-id: 931e8095-5c7c-4c1f-b95b-75ac2827d4f3
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 100%
+source-wordcount: '581'
+ht-degree: 30%
 
 ---
 
 # AEM Forms のデプロイメントの監視 {#monitoring-aem-forms-deployments}
 
-AEM Forms のデプロイメントは、システムレベルおよび内部レベルの両方で監視できます。スペシャリスト管理ツール（HP OpenView、IBM Tivoli、CA UniCenter およびサードパーティ JMX モニターである *JConsole* など）を使用することで、Java アクティビティを詳細に監視できます。監視方法の導入により、AEM Forms デプロイメントの可用性、信頼性およびパフォーマンスが向上します。
+AEM forms のデプロイメントは、システムレベルと内部レベルの両方で監視できます。 HP OpenView、IBM® Tivoli、CA UniCenter、および JMX と呼ばれるサード・パーティ製モニターなど、スペシャリスト管理ツールを使用できます。 *JConsole* を使用して、Java™アクティビティを特別に監視します。 監視戦略を実装すると、AEM Forms デプロイメントの可用性、信頼性、パフォーマンスが向上します。
 
-AEM Forms のデプロイメントの監視について詳しくは、「[AEM Forms デプロイメントの監視用テクニカルガイド](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf)」を参照してください。
+<!-- For more information about monitoring AEM forms deployments, see [A technical guide for monitoring AEM forms deployments](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
 ## MBean を使用した監視 {#monitoring-using-mbeans}
 
-AEM Forms には、ナビゲーションおよび統計情報を提供する 2 つの MBean が登録されています。統合とインスペクションのためにサポートされている MBean はこれらのみです。
+AEM Formsには、ナビゲーションと統計の情報を提供する 2 つの登録済み MBean が用意されています。 次の部品は、統合と検査でサポートされる唯一の MBean です。
 
 * **ServiceStatistic：**&#x200B;この MBean はサービス名とそのバージョンに関する情報を提供します。
-* **OperationStatistic：**&#x200B;この MBean は Forms サーバーのすべてのサービスに関する統計情報を提供します。この MBean で管理者は呼び出し時間、エラー数など、特定のサービスに関する情報を取得できます。
+* **OperationStatistic:** この MBean は、すべてのAEM Formsサーバーのサービスの統計を提供します。 この MBean では、管理者が呼び出し時間やエラー数など、特定のサービスに関する情報を取得できます。
 
-### ServiceStatisticMbean 公開インターフェイス {#servicestatisticmbean-public-interfaces}
+### ServiceStatisticMbean パブリックインターフェイス {#servicestatisticmbean-public-interfaces}
 
-次の ServiceStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
+ServiceStatistic MBean の次のパブリックインターフェイスには、テスト目的でアクセスできます。
 
 ```java
  public String getServiceId();
@@ -40,9 +40,9 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
  public int getMinorVersion();
 ```
 
-### OperationStatisticMbean 公開インターフェイス {#operationstatisticmbean-public-interfaces}
+### OperationStatisticMbean パブリックインターフェイス {#operationstatisticmbean-public-interfaces}
 
-次の OperationStatistic MBean の公開インターフェイスには、テスト用途でアクセスできます。
+OperationStatistic MBean の次のパブリックインターフェイスには、テスト目的でアクセスできます。
 
 ```java
  // InvocationCount: The number of times the method is invoked.
@@ -68,9 +68,9 @@ AEM Forms には、ナビゲーションおよび統計情報を提供する 2 �
  public void setExceptionMessage(String errorMessage);
 ```
 
-### MBean ツリーおよび運用の統計情報 {#mbean-tree-operation-statistics}
+### MBean ツリーおよび操作の統計 {#mbean-tree-operation-statistics}
 
-JMX コンソール（JConsole）を使用すると、OperationStatistic MBean の統計情報を使用できます。この統計情報は MBean の属性です。次の階層ツリーで移動できます。
+JMX コンソール (JConsole) を使用すると、OperationStatistic MBean の統計を使用できます。 これらの統計は MBean の属性で、次の階層ツリーの下で移動できます。
 
 **MBean ツリー**
 
@@ -84,7 +84,7 @@ JMX コンソール（JConsole）を使用すると、OperationStatistic MBean �
 
 **運用の統計情報**
 
-**呼び出し時間：**&#x200B;メソッドの実行にかかる時間。要求のシリアライズ、クライアントからサーバーへの転送、およびデシリアライズにかかる時間は含まれません。
+**呼び出し時間：**&#x200B;メソッドの実行にかかる時間。この呼び出しには、リクエストのシリアル化、クライアントからサーバーへの転送、シリアル化解除の時間は含まれません。
 
 **呼び出し数：**&#x200B;サービスを呼び出した回数。
 
@@ -102,16 +102,16 @@ JMX コンソール（JConsole）を使用すると、OperationStatistic MBean �
 
 **時間単位：** デフォルトはミリ秒です。
 
-JMX 監視を有効にするには、一般的にアプリケーションサーバーに何らかの設定が必要です。詳しくは、アプリケーションサーバーのドキュメントを参照してください。
+JMX 監視を有効にするには、通常、アプリケーションサーバーにいくつかの設定が必要です。 詳しくは、アプリケーションサーバーのドキュメントを参照してください。
 
-### オープン JMX アクセスをセットアップする方法の例 {#examples-of-how-to-set-up-open-jmx-access}
+### オープン JMX アクセスの設定方法の例 {#examples-of-how-to-set-up-open-jmx-access}
 
-**JBoss 4.0.3/4.2.0 - JVM スタートアップの設定**
+**JBoss® 4.0.3/4.2.0 - JVM スタートアップの設定**
 
-JConsole から MBean を表示するには、JBoss アプリケーションサーバーの JVM スタートアップパラメーターを設定する必要があります。JBoss は必ず run.bat/sh ファイルから起動します。
+JConsole から MBean を表示するには、JBoss アプリケーションサーバーの JVM 起動パラメーターを設定します。 JBoss が run.bat/sh ファイルから起動されていることを確認します。
 
 1. InstallJBoss/bin にある run.bat ファイルを編集します。
-1. JAVA_OPTS 行を見つけ、次の内容を追加します。
+1. JAVA_OPTS 行を検索し、次の行を追加します。
 
    ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
@@ -120,7 +120,7 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 **WebLogic 9.2 /10 - JVM スタートアップの設定**
 
 1. `[WebLogic home]/user_projects/domains/Adobe_Live_Cycle/bin` にある startWebLogic.bat ファイルを編集します。
-1. JAVA_OPTS 行を見つけ、次の内容を追加します。
+1. JAVA_OPTS 行を検索し、次の行を追加します。
 
    ```shell
     -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9088 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
@@ -130,22 +130,22 @@ JConsole から MBean を表示するには、JBoss アプリケーションサ�
 
 >[!NOTE]
 >
->WebLogic の場合、リモートまたは IIOP を使用して MBean にアクセスできます。
+>WebLogic の場合は、リモートまたは IIOP を使用して MBean にアクセスできます。
 
-**MBean へのリモートからのアクセス**
+**MBean へのリモートアクセス**
 
-1. 新しい接続のために JConsole を起動し、リモートタブをクリックします。
-1. ホストとポート（JVM のスタートアップオプションで指定した番号である 9088）を入力します。
+1. 新しい接続用に JConsole を起動し、リモートタブをクリックします。
+1. ホスト名とポート（JVM の起動時に指定する番号 9088）を入力します。
 
-**Websphere 6.1 - JVM スタートアップの設定**
+**WebSphere® 6.1 - JVM スタートアップの設定**
 
-1. 管理コンソール（Application server／server1／Process Definition／JVM）で、Generic JVM Argument のフィールドに次の行を追加します。
+1. Admin Console(Application server/server1/Process Definition/JVM) で、Generic JVM Argument のフィールドに次の行を追加します。
 
    ```shell
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote
    ```
 
-1. /opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties ファイル（または &lt;Your Websphere JRE>/ lib/management/management.properties）に次の 3 行を追加するか、コメントを解除します。
+1. /opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.propertiesファイルに次の 3 行を追加するか、コメントを解除します ( または &lt;your websphere=&quot;&quot; jre=&quot;&quot;>/ lib/management/management.properties):
 
    ```shell
     com.sun.management.jmxremote.port=9999 //any port you like, but make sure you use this port when you connect

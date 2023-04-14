@@ -1,8 +1,6 @@
 ---
 title: プロセスレポートの概要
-seo-title: Getting Started with Process Reporting
-description: AEM Forms on JEE のプロセスレポートを使用するために必要な手順
-seo-description: The steps you need to follow to get started with AEM Forms on JEE Process Reporting
+description: JEE 上のAEM Forms Process Reporting の使用を開始する手順
 uuid: 685cad39-da2c-411d-a0b0-201917438bcf
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,10 +8,10 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
 workflow-type: tm+mt
-source-wordcount: '1710'
-ht-degree: 100%
+source-wordcount: '1693'
+ht-degree: 74%
 
 ---
 
@@ -29,13 +27,13 @@ ht-degree: 100%
 
 現在 Forms Workflow を使用している場合、AEM Forms データベースには大量のデータが含まれている可能性があります。
 
-プロセスレポート公開サービスは、データベースで現在使用可能なすべての AEM Forms データを公開します。つまり、レポートやクエリを実行する必要がないレガシーデータがデータベースに含まれている場合、そのデータはレポートする必要がないにもかかわらず、すべてリポジトリに公開されます。そのようなデータは、プロセスレポートリポジトリにデータを公開するサービスを実行する前に、パージすることをお勧めします。これにより、公開サービスと、レポートデータのクエリサービスの両方のパフォーマンスが向上します。
+Process Reporting 公開サービスは、データベースで現在使用可能なすべてのAEM Formsデータを公開します。 つまり、レポートやクエリを実行する必要がないレガシーデータがデータベースに含まれている場合、そのデータはレポートに必要ないにもかかわらず、すべてリポジトリにも公開されます。 そのようなデータは、プロセスレポートリポジトリにデータを公開するサービスを実行する前に、パージすることをお勧めします。これにより、パブリッシャーサービスと、レポート用にデータをクエリするサービスの両方のパフォーマンスが向上します。
 
-AEM Forms プロセスデータのパージについて詳しくは、[プロセスデータのパージ](https://help.adobe.com/ja_JP/livecycle/11.0/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7cb2.2.html)を参照してください。
+AEM Forms プロセスデータのパージについて詳しくは、[プロセスデータのパージ](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en)を参照してください。
 
 >[!NOTE]
 >
->パージユーティリティのヒントとテクニックについては、Adobe Developer Connection の「[プロセスとジョブのパージ](https://www.adobe.com/content/dam/Adobe/en/devnet/livecycle/pdfs/purging_processes_jobs.pdf)」に関する記事を参照してください。
+>パージユーティリティのヒントとテクニックについては、Adobe Developer Connection の「[プロセスとジョブのパージ](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en)」に関する記事を参照してください。
 
 ## プロセスレポートサービスの設定 {#configuring-process-reporting-services}
 
@@ -43,60 +41,60 @@ AEM Forms プロセスデータのパージについて詳しくは、[プロセ
 
 プロセスレポートサービスは、AEM Forms データベースから Process Reporting リポジトリに、スケジュールに従ってデータを公開します。
 
-この操作はリソースを大量に消費する可能性があり、AEM Forms サーバーのパフォーマンスに影響を与える可能性があります。AEM Forms サーバーが混んでいない時間帯でスケジュールすることをお勧めします。
+この操作はリソースを大量に消費する可能性があり、AEM Forms サーバーのパフォーマンスに影響を与える可能性があります。AEM Forms Server のビジータイムスロット外でスケジュールすることをお勧めします。
 
 デフォルトでは、データの公開は毎日午前 2 時に実行されるようにスケジュールされています。
 
-デフォルトのスケジュールを変更するには、次の手順を実行します。
+公開スケジュールを変更するには、次の手順を実行します。
 
 >[!NOTE]
 >
 >クラスターで AEM Forms を実装して実行している場合は、クラスターの各ノードで次の手順を実行します。
 
-1. AEM Forms サーバーインスタンスを停止します。
+1. AEM Forms Server インスタンスを停止します。
 1. &#x200B;
 
    * （Windows の場合）`[JBoss root]/bin/run.conf.bat` ファイルをエディターで開きます。
-   * （Linux、AIX、Solaris の場合）`[JBoss root]/bin/run.conf.sh` ファイルをエディターで開きます。
+   * (Linux®、AIX®、Solaris™の場合 ) `[JBoss root]/bin/run.conf.sh` ファイルを編集します。
 
 1. JVM 引数 `-Dreporting.publisher.cron = <expression>.` を追加します。
 
-   例：次の Cron 式を使用すると、プロセスレポートは 5 時間ごとに AEM Forms データをプロセスレポートリポジトリに公開します。
+   例：次の Cron 式を使用すると、Process Reporting は 5 時間ごとにAEM Formsデータを Process Reporting リポジトリに公開します。
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. `run.conf.bat` ファイルを保存して閉じます。
 
-1. AEM Forms サーバーインスタンスを再起動します。
+1. AEM Forms Server インスタンスを再起動します。
 
-1. AEM Forms サーバーインスタンスを停止します。
-1. WebSphere 管理コンソールにログインします。ナビゲーションツリーで&#x200B;**サーバー**／**アプリケーションサーバー**&#x200B;をクリックし、右側のウィンドウでサーバー名をクリックします。
+1. AEM Forms Server インスタンスを停止します。
+1. WebSphere® Administrative Console にログインします。ナビゲーションツリーで、 **サーバー** > **アプリケーションサーバー** 次に、右側のウィンドウで、サーバ名をクリックします。
 
-1. サーバーインフラストラクチャーで&#x200B;**Java およびプロセス管理**／**プロセス定義**&#x200B;をクリックします。
+1. 「Server Infrastructure」で、 **Java™と Process Management** > **プロセス定義**.
 
-1. 「その他のプロパティ」で「**Java 仮想マシン**」をクリックします。
+1. 「追加のプロパティ」で、「 **Java™ Virtual Machine**.
 
    「汎用 JVM 引数」ボックスで引数 `-Dreporting.publisher.cron = <expression>.` を追加します。
 
-   **例**：次の Cron 式を使用すると、プロセスレポートは 5 時間ごとに AEM Forms データをプロセスレポートリポジトリに公開します。
+   **例**:次の Cron 式を使用すると、Process Reporting は 5 時間ごとにAEM Formsデータを Process Reporting リポジトリに公開します。
 
    * `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. 「**適用**」をクリックし、次に「**マスター設定に直接保存**」をクリックします。
-1. AEM Forms サーバーインスタンスを再起動します。
-1. AEM Forms サーバーインスタンスを停止します。
+1. AEM Forms Server インスタンスを再起動します。
+1. AEM Forms Server インスタンスを停止します。
 1. WebLogic 管理コンソールにログインします。WebLogic 管理コンソールのデフォルトのアドレスは、`https://[hostname]:[port]/console` です。
 1. Change Center で、「**Lock &amp; Edit**」をクリックします。
-1. 「Domain Structure」で、**Environment**／**Servers** をクリックし、右側のウィンドウで、管理対象サーバー名をクリックします。
+1. 「ドメイン構造」で、 **環境** > **サーバー** 右側のウィンドウで、管理対象サーバー名をクリックします。
 1. 次の画面で、「**設定**&#x200B;タブ」、「**サーバー起動**」タブをクリックします。
 1. 「引数」ボックスに、JVM 引数 `-Dreporting.publisher.cron = <expression>` を追加します。
 
-   **例**：次の Cron 式を使用すると、プロセスレポートは 5 時間ごとに AEM Forms データをプロセスレポートリポジトリに公開します。
+   **例**:次の Cron 式を使用すると、Process Reporting は 5 時間ごとにAEM Formsデータを Process Reporting リポジトリに公開します。
 
    `-Dreporting.publisher.cron = 0_0_0/5_*_*_?`
 
 1. 「**保存**」をクリックし、「**変更をアクティベート**」をクリックします。
-1. AEM Forms サーバーインスタンスを再起動します。
+1. AEM Forms Server インスタンスを再起動します。
 
 ![processdatapublisherservice](assets/processdatapublisherservice.png)
 
@@ -139,9 +137,9 @@ ReportConfiguration サービスは、プロセスレポートのクエリサー
 1. **ReportingConfiguration** サービスを開きます。
 1. **レコード数**
 
-   リポジトリでクエリを実行すると、結果に大量のレコードが含まれる可能性があります。結果セットが大きい場合、クエリの実行によってサーバーリソースが消費される可能性があります。
+   リポジトリでクエリを実行する場合、結果に多数のレコードが含まれる可能性があります。 結果セットが大きい場合、クエリの実行によってサーバーリソースが消費される可能性があります。
 
-   大きな結果セットを処理するために、ReportConfiguration サービスはクエリ処理を複数のレコードに分割します。これにより、システムの負荷が軽減されます。
+   大きな結果セットを処理するために、ReportConfiguration サービスはクエリ処理を複数のレコードに分割します。これにより、システム負荷が軽減されます。
 
    `Default`：`1000`
 
@@ -153,10 +151,10 @@ ReportConfiguration サービスは、プロセスレポートのクエリサー
 
    >[!NOTE]
    >
-   >これは、「ProcessDataStorage 構成」オプションで&#x200B;**ルートフォルダー**&#x200B;に指定した場所と同じです。
+   >この場所は、ProcessDataStorage 構成オプションで指定した場所と同じです **ルートフォルダー**.
    >
    >
-   >ProcessDataStorage 設定の「ルートフォルダー」オプションを更新する場合は、ReportConfiguration サービスの CRX ストレージパスの場所を更新する必要があります。
+   >ProcessDataStorage 設定の「Root Folder」オプションを更新する場合は、ReportConfiguration サービスの CRX Storage Path の場所を更新する必要があります。
 
 1. 「**保存**」をクリックして **CQ 設定マネージャー**&#x200B;を閉じます。
 
@@ -186,9 +184,7 @@ ProcessDataPublisher サービスは、AEM Forms データベースからプロ�
 
 **バッチ間隔（秒）**
 
-ProcessDataPublisher サービスが実行されるたびに、このサービスはまず、最後のサービス実行からの時間をバッチ間隔で分割します。次にこのサービスは、AEM Forms データの各間隔を個別に処理します。
-
-これは、サイクル内の各実行（バッチ）中に、パブリッシャーがエンドツーエンドで処理するデータのサイズを制御するのに役立ちます。
+ProcessDataPublisher サービスが実行されるたびに、このサービスはまず、最後のサービス実行からの時間をバッチ間隔で分割します。次に、サービスはAEM Formsのデータの各間隔を個別に処理し、パブリッシャーがサイクル内の各実行（バッチ）中にエンドツーエンドで処理するデータのサイズを制御するのに役立ちます。
 
 例えばパブリッシャーを毎日実行する場合、1 回の実行で 1 日分のデータをすべて処理する代わりに、デフォルトで、それぞれ 1 時間の 24 個のバッチに分割して処理します。
 
@@ -212,7 +208,7 @@ AEM Forms 環境には、環境が設定された時点からのデータが含�
 
 デフォルトでは、ProcessDataPublisher サービスは AEM Forms データベースからすべてのデータを読み込みます。
 
-レポートのニーズに応じて、特定の日時の後にデータに対してレポートやクエリを実行する予定がある場合は、日時を指定することをお勧めします。その後、パブリッシングサービスは、その日時以降に日付を公開します。
+レポートのニーズに応じて、特定の日時の後にデータに対してレポートやクエリを実行する予定がある場合は、日時を指定することをお勧めします。 その後、公開サービスはその時刻以降の日付を公開します。
 
 `Default`：`01-01-1970 00:00:00`
 
@@ -230,7 +226,7 @@ AEM Forms 環境には、環境が設定された時点からのデータが含�
 
 プロセスレポートの URL（https://&lt;server>:&lt;port>/lc/pr）に移動すると、ログイン画面が表示されます。
 
-プロセスレポートモジュールにログインするための認証情報を指定します。
+プロセスレポートモジュールにログオンするには、資格情報を指定します。
 
 >[!NOTE]
 >
