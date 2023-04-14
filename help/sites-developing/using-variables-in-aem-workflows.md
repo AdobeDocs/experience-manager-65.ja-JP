@@ -1,8 +1,6 @@
 ---
 title: AEM ワークフローの変数
-seo-title: Variables in AEM Workflows
 description: 変数を作成し、その変数の値を設定し、OR 分岐および移動 AEM ワークフローステップで使用します。
-seo-description: Create a variable, set a value for the variable, and use it in OR Split and  Goto AEM workflow steps.
 uuid: cc62ff11-51d4-4db4-9c6d-5dc2caa1da52
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -10,10 +8,10 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
 workflow-type: tm+mt
-source-wordcount: '2057'
-ht-degree: 100%
+source-wordcount: '2048'
+ht-degree: 86%
 
 ---
 
@@ -25,20 +23,22 @@ AEM ワークフローモデルでは、次のことができます。
 
 * 保存する情報タイプに基づいて、データタイプの [変数を作成します](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable)。
 * [変数の値を設定する](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)には、「変数を設定する」ワークフローステップを使用します。
-* OR 分岐および移動 AEMワークフローステップで [変数を使用](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable)して、ルーティングの決定を行う式を定義します。また、すべての AEM Forms ワークフローステップで変数を使用することもできます。
+* [変数の使用](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable) OR 分割および移動AEMワークフローステップで、ルーティングの決定をおこなう式を定義できます。 また、すべてのAEM Forms Workflow ステップで変数を使用することもできます。
 
 次のビデオでは、AEM ワークフローモデルで変数を作成、設定および使用する方法を示します。
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
 
-変数は、[MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
+変数は、[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
 
 ## 変数の作成 {#create-a-variable}
 
 変数は、ワークフローモデルのサイドキックにある「変数」セクションを使用して作成します。AEM ワークフロー変数は、次のデータタイプをサポートしています。
 
 * **プリミティブデータタイプ**：Long、Double、Boolean、Date、String
-* **複雑なデータタイプ**：[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?lang=ja) および [JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html?lang=ja)
+* **複雑なデータタイプ**：[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?lang=ja) および [JSON](https://www.javadoc.io/doc/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 
    ![変数を追加](assets/variables_add_variable_new.png)
 
-1. 「変数の追加」ダイアログで、名前を指定し、変数のタイプを選択します。
+1. 変数を追加ダイアログで、名前を指定し、変数のタイプを選択します。
 1. 「**[!UICONTROL タイプ]**」ドロップダウンリストからデータタイプを選択し、次の値を指定します。
 
    * プリミティブデータタイプ - 変数のオプションのデフォルト値を指定します。
@@ -72,7 +72,7 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 
 ## 変数の設定 {#set-a-variable}
 
-「変数を設定」ステップを使用して、変数の値を設定し、値が設定される順序を定義できます。変数は、変数の設定ステップで変数のマッピングがリストされている順序で設定されます。
+「変数を設定」ステップを使用して、変数の値を設定し、値が設定される順序を定義できます。変数は、変数設定手順で変数マッピングが表示される順序で設定されます。
 
 変数値を変更すると、変更が発生したプロセスのインスタンスのみに影響します。例えば、ワークフローが開始され変数データが変更されると、変更はそのワークフローのインスタンスのみに影響します。変更は、以前に開始された、または後で開始されたワークフローの他のインスタンスには影響しません。
 
@@ -89,19 +89,19 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 
 ### 変数間マッピングの追加 {#add-mapping-between-variables}
 
-変数間のマッピングを追加するには、次の手順を実行します。
+変数間でマッピングを追加するには、次の手順を実行します。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「ステップ」アイコンをタップします。
-1. 「**変数を設定**」ステップをワークフローエディターにドラッグ＆ドロップし、手順をタップして ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （設定）を選択します。
+1. 次をドラッグ&amp;ドロップ： **変数を設定** ワークフローエディターにステップを移動し、ステップをタップして「 」を選択します。 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （設定）を参照してください。
 1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
-1. より多くの変数をマップして、意味のある式を作成します。「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png)」をタップして、変更内容を保存します。
+1. より多くの変数をマッピングして、意味のある式を作成できるようにします。 「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png)」をタップして、変更内容を保存します。
 
 ### 例 1：XML 変数をクエリして、文字列変数の値を設定 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
-XML タイプの変数を選択し、XML ファイルを格納します。XML 変数をクエリして、XML ファイルで使用可能なプロパティの文字列変数の値を設定します。「**XML 変数に XPATH を指定**」フィールドを使用して、文字列変数に格納するプロパティを定義します。
+XML ファイルを保存する XML 型の変数を選択します。 XML 変数をクエリして、XML ファイルで使用可能なプロパティの文字列変数の値を設定します。「**XML 変数に XPATH を指定**」フィールドを使用して、文字列変数に格納するプロパティを定義します。
 
-この例では、**formdata** XML 変数を選択して **cc-app.xml** ファイルを格納します。**formdata** 変数をクエリして、**emailaddress** 文字列変数の値を設定し、**cc-app.xml** ファイルで使用できる **emailAddress** プロパティの値を格納します。
+この例では、**formdata** XML 変数を選択して **cc-app.xml** ファイルを格納します。クエリ **formdata** 変数を使用して、 **emailaddress** string 変数には、 **emailAddress** プロパティは **cc-app.xml** ファイル。
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "変数の値を設定")
 
@@ -110,6 +110,8 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 式を使用して変数の和を計算し、結果を変数に格納します。
 
 この例では、式エディターを使用して式を定義し、**assetscost** 変数と **balanceamount** 変数の和を計算し、その結果を **totalvalue** 変数に格納します。
+
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
@@ -121,7 +123,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 * 他のワークフロー変数、数値または数式を使用して、変数の値を設定します。
 * ワークフロー変数、文字列、数値、または式を数式内で使用
-* 変数の値を設定する条件を追加します。
+* 変数の値を設定できるように、条件を追加します。
 * 条件の間に演算子を追加します。
 
 ![式エディター](assets/variables_expression_editor_new.png)
@@ -146,7 +148,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 ### 変数をサポートするワークフローステップ {#workflow-steps-with-support-for-variables}
 
-移動ステップ、OR 分割ステップおよびすべての AEM Forms Workflow ステップは変数をサポートします。
+移動ステップ、OR 分割ステップ、およびすべての AEM Forms Workflow ステップは変数をサポートします。
 
 #### OR 分割ステップ {#or-split-step}
 
@@ -158,6 +160,8 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 この例では、ルーティング式を定義する前に、[例 2 ](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。**totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 同様に、外部スクリプトパスを選択するか、ルーティング式の ECMA スクリプトを指定して、アクティブな分岐を評価します。「**[!UICONTROL 分岐名の変更]**」をタップして、分岐に別名を指定します。
@@ -166,7 +170,7 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 #### 移動ステップ {#go-to-step}
 
-**移動ステップ**&#x200B;を使用すると、ルーティング式の結果に応じて、ワークフローモデル内で実行する次のステップを指定できます。
+この **ステップに移動** ルーティング式の結果に応じて、ワークフローモデルで実行する次のステップを指定できます。
 
 OR 分割ステップと同様に、ルール定義、ECMA スクリプト、または外部スクリプトを使用して、移動ステップのルーティング式を定義できます。
 
@@ -184,11 +188,11 @@ OR 分割ステップと同様に、ルール定義、ECMA スクリプト、ま
 
 ### 変数をサポートしないワークフローステップ {#workflow-steps-without-support-for-variables}
 
-[MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
+[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
 
 #### 変数値の取得 {#retrieve-the-variable-value}
 
-ECMA スクリプトで次の API を使用して、データタイプに基づいて既存の変数の値を取得します。
+データ型に基づいて既存の変数の値を取得するには、ECMA スクリプトで次の API を使用します。
 
 | 変数データタイプ | API |
 |---|---|
@@ -208,7 +212,7 @@ workItem.getWorkflowData().getMetaDataMap().get(accname, Packages.java.lang.Stri
 
 #### 変数値の更新 {#update-the-variable-value}
 
-ECMA スクリプトで次の API を使用して、変数の値を更新します。
+変数の値を更新するには、ECMA スクリプトで次の API を使用します。
 
 ```
 workItem.getWorkflowData().getMetaDataMap().put(variableName, value)
@@ -226,7 +230,7 @@ workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 
 API を使用して変数を設定し、それらを渡してワークフローインスタンスを呼び出すことができます。
 
-[workflowSession.startWorkflows](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) は、モデル、wfData、metaData を引数として使用します。MetaDataMap を使用して変数の値を設定します。
+[workflowSession.startWorkflows](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) は、モデル、wfData、metaData を引数として使用します。MetaDataMap を使用して変数の値を設定します。
 
 この API では、 **variableName** 変数は metaData.put(variableName, value) を使用して **value** に設定されます。
 
@@ -253,7 +257,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 変数を削除する前に、ワークフローから変数のすべての参照を削除します。この変数がワークフローで使用されていないことを確認します。
 
-以下の手順を実行し、変数を削除します。
+変数を削除するには、次の手順に従います。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンをタップします。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
 1. 削除する変数名の横にある削除アイコンをタップします。

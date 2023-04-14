@@ -1,7 +1,7 @@
 ---
 title: AEM Forms ワークフローの変数
 seo-title: Variables in AEM Forms Workflows
-description: 変数を作成し、変数の値を設定し、AEM Forms Workflow ステップで変数を使用してください。
+description: 変数を作成し、変数の値を設定して、AEM Forms Workflow ステップで使用します。
 seo-description: Create a variable, set a value for the variable, and use it in AEM Forms workflow steps.
 uuid: 634a75c4-4899-478f-9e5d-a870f5efa583
 contentOwner: khsingh
@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 3d0eb55eb35fcf5da1212b8be7c0aeee11307bb6
+source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
 workflow-type: tm+mt
 source-wordcount: '2208'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -25,13 +25,15 @@ AEM ワークフローモデルでは、次のことができます。
 
 * 保存する情報タイプに基づいて、データタイプの [変数を作成します](../../forms/using/variable-in-aem-workflows.md#create-a-variable)。
 * [変数の値を設定する](../../forms/using/variable-in-aem-workflows.md#set-a-variable)には、「変数を設定する」ワークフローステップを使用します。
-* すべての AEM Forms Workflow ステップの [変数を使用](../../forms/using/variable-in-aem-workflows.md#use-a-variable) して格納された値を取得し、OR 分岐ステップおよび移動ステップでルーティング式を定義します。
+* すべての AEM Forms Workflow ステップで[変数を使用して](../../forms/using/variable-in-aem-workflows.md#use-a-variable)格納された値を取得し、OR 分割ステップおよび移動ステップでルーティング式を定義します。
 
 次のビデオでは、AEM ワークフローモデルで変数を作成、設定および使用する方法を示します。
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_introduction_1_1.mp4)
 
-変数は、既存の [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
+変数は、既存の [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスの拡張です。ECMAScript で [MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) を使用すると、変数を使用して保存されたメタデータにアクセスできます。
 
 ## 変数の作成 {#create-a-variable}
 
@@ -115,6 +117,8 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 この例では、式エディターを使用して式を定義し、**assetscost** 変数と **balanceamount** 変数の和を計算し、その結果を **totalvalue** 変数に格納します。
 
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
+
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## 式エディターの使用 {#use-expression-editor}
@@ -150,7 +154,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 ### 変数をサポートするワークフローステップ {#workflow-steps-with-support-for-variables}
 
-移動ステップ、OR 分割ステップおよびすべての AEM Forms Workflow ステップは変数をサポートします。
+移動ステップ、OR 分割ステップ、およびすべての AEM Forms Workflow ステップは変数をサポートします。
 
 #### OR 分割ステップ {#or-split-step}
 
@@ -161,6 +165,8 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 変数を使用して、式エディターを使用したルーティング式を定義できます。OR 分割ステップでルーティング式を使用する方法について詳しくは、「[OR 分割ステップ](/help/sites-developing/workflows-step-ref.md#or-split)」を参照してください。
 
 この例では、ルーティング式を定義する前に、[例 2 ](../../forms/using/variable-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。**totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
+
+<!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
@@ -188,7 +194,7 @@ OR 分割ステップと同様に、ルール定義、ECMA スクリプト、ま
 
 ### 変数をサポートしないワークフローステップ {#workflow-steps-without-support-for-variables}
 
-[MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
+[MetaDataMap](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) インターフェイスを使用して、変数をサポートしないワークフロー手順の変数にアクセスできます。
 
 #### 変数値の取得 {#retrieve-the-variable-value}
 
@@ -202,7 +208,7 @@ ECMA スクリプトで次の API を使用して、データタイプに基づ�
 | フォームデータモデル | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.google.gson.JsonObject.class); |
 
-ドキュメントおよびフォームデータモデルの変数データタイプには、[AEM Forms アドオンパッケージ](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)が必要です。
+ドキュメントおよびフォームデータモデルの変数データタイプには、[AEM Forms アドオンパッケージ](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)が必要です。
 
 **例**
 
@@ -271,7 +277,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### ワークフロー変数を使用して、機密性の高いユーザーデータを JCR 外に保存 {#jcr-independent-persistance}
 
-Forms Workflow を使用して処理されるデータには、個人を特定できる情報や個人情報などの機密性の高いユーザーデータを含めることができます。企業は、様々なワークフローステップで処理される（およびワークフロー変数を使用して渡される）データを、JCR ストレージから所有および管理する外部データストアに格納することを選択できます。外部ストレージへのワークフローデータの保持について詳しくは、[顧客が所有するデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
+Forms Workflowを使用して処理されるデータには、個人を特定できる情報や機密情報など、機密性の高いユーザーデータを含めることができます。 企業は、様々なワークフローステップで処理される（およびワークフロー変数を使用して渡される）データを、JCR ストレージから所有および管理する外部データストアに格納することを選択できます。外部ストレージへのワークフローデータの保持について詳しくは、[顧客が所有するデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
 [!DNL Adobe Experience Manager] は、ワークフロー API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) を提供して、外部の Azure BLOB ストレージにワークフロー変数を保存します。API の使用について詳しくは、[ワークフロー変数を使用して、機密データをパラメータ化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)を参照してください。
 
 ## 変数の編集 {#edit-a-variable}
