@@ -1,7 +1,7 @@
 ---
 title: AEM Forms Workspace のトラブルシューティングガイドライン
 seo-title: Troubleshooting guidelines for AEM Forms workspace
-description: ログを有効にし、ブラウザーでデバッガーを使用して AEM Forms Workspace をトラブルシューティングします。
+description: ログを有効にし、ブラウザーで Debugger を使用してAEM Forms Workspace のトラブルシューティングをおこなう。
 seo-description: Enable logs and use debugger in browser to troubleshoot AEM Forms workspace.
 uuid: 07b8c8ed-f1ff-4be5-8005-251ff7b2ac85
 contentOwner: robhagat
@@ -10,24 +10,25 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 5dae9ed9-77a3-44f5-a94d-ca5c355c8730
 exl-id: a054b60a-5e89-4c98-87bc-35669988d160
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 100%
+source-wordcount: '734'
+ht-degree: 19%
 
 ---
 
 # AEM Forms Workspace のトラブルシューティングガイドライン {#troubleshooting-guidelines-for-aem-forms-workspace}
 
-この記事では、ログを有効にしてブラウザーでデバッガーを使用することによって、AEM Forms Workspace をデバッグする方法について説明します。また、AEM Forms Workspace および回避策を使用する場合に直面する共通の問題についても説明します。
+この記事では、ログを有効にし、ブラウザーで debugger を使用してAEM Forms Workspace をデバッグする方法について説明します。 また、AEM Forms Workspace とその回避策を使用する際に発生する可能性のある一般的な問題についても説明します。
 
-## AEM Forms Workspace パッケージをインストールできない {#unable-to-install-aem-forms-workspace-package}
+## AEM Forms Workspace パッケージをインストールできません {#unable-to-install-aem-forms-workspace-package}
 
-パッチをインストールした後、AEM Forms Workspace を開きます。「リソースが見つかりません」というエラーが発生した場合は、CRX Package Manager を開いて、`adobe-lc-workspace-pkg-<version>.zip` パッケージを再インストールします。
+パッチをインストールしたら、AEM Forms Workspace を開きます。 「リソースが見つかりません」というエラーが発生した場合は、CRX Package Manager を開いて、`adobe-lc-workspace-pkg-<version>.zip` パッケージを再インストールします。
 
 パッケージをインストールするときに、「`javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`」というエラーが発生した場合は、次の手順を実行します。
 
-1. CRX DE Lite にログインします。デフォルトの URL は、`https://[localhost]:'port'/lc/crx/de/index.jsp` です。
+1. CRXDE Lite にログインします。
+デフォルトの URL は、`https://[localhost]:'port'/lc/crx/de/index.jsp` です。
 1. 次のノードを削除します。
 
    `/home/groups/P/PERM_WORKSPACE_USER`
@@ -36,11 +37,11 @@ ht-degree: 100%
 1. `adobe-lc-workspace-pkg-[version].zip` パッケージを検索してインストールします。
 1. アプリケーションサーバーを再起動します。
 
-## AEM Forms Workspace のログ {#aem-forms-workspace-nbsp-logging}
+## AEM Forms workspace ログ {#aem-forms-workspace-nbsp-logging}
 
-様々なレベルでログを生成することにより、エラーの最適なトラブルシューティングを行うことができます。たとえば、複合アプリケーションでは、コンポーネントレベルでログすると、特定のコンポーネントのデバッグおよびトラブルシューティングに役立ちます。
+様々なレベルでログを生成し、エラーの最適なトラブルシューティングを可能にします。 例えば、複雑なアプリケーションでは、コンポーネントレベルでログを記録すると、特定のコンポーネントのデバッグとトラブルシューティングに役立ちます。
 
-AEM Forms Workspace では次の操作が可能です。
+AEM Forms Workspace の場合：
 
 * 特定のコンポーネントファイルについてのログ情報を取得するには、URL に `/log/<ComponentFile>/<LogLevel>` を付け加えて `Enter` キーを押します。特定のログレベルにおけるコンポーネントファイルのすべてのログ情報は、コンソールに印刷されます。
 
@@ -50,9 +51,9 @@ AEM Forms Workspace では次の操作が可能です。
 
 >[!NOTE]
 >
->デフォルトでは、すべてのコンポーネントのログレベルは INFO に設定されます。
+>デフォルトでは、すべてのコンポーネントのログレベルは「情報」(INFO) に設定されています。
 
-* ユーザーによって設定されたログレベルは、そのブラウザーセッションでのみ保持されます。ユーザーがページを更新すると、ログレベルはすべてのコンポーネントに対してその初期値に設定されます。
+* ユーザーが設定したログレベルは、そのブラウザーセッションでのみ維持されます。 ユーザーがページを更新すると、すべてのコンポーネントのログレベルが初期値に設定されます。
 
 ### AEM Forms Workspace のコンポーネントファイルのリスト {#list-of-component-files-in-nbsp-aem-forms-workspace}
 
@@ -141,9 +142,9 @@ AEM Forms Workspace では次の操作が可能です。
  </tbody>
 </table>
 
-### AEM Forms Workspaceアプリで使用可能なログレベル {#log-levels-available-in-nbsp-aem-forms-workspace}
+### AEM Forms Workspace で使用可能なログレベル {#log-levels-available-in-nbsp-aem-forms-workspace}
 
-* FATAL
+* 致命的
 * ERROR
 * WARN
 * INFO
@@ -151,46 +152,46 @@ AEM Forms Workspace では次の操作が可能です。
 * TRACE
 * OFF
 
-## ブラウザーへの情報のデバッグ {#debugging-information-for-browsers}
+## ブラウザーのデバッグ情報 {#debugging-information-for-browsers}
 
-スクリプトおよびスタイルは異なるブラウザーにデバッグすることができます。
+スクリプトとスタイルは、異なるブラウザーでデバッグできます。
 
-* **IE でのデバッグ**：AEM Forms Workspace を IE でデバッグするには、[https://msdn.microsoft.com/en-us/library/hh772704(v=vs.85).aspx](https://msdn.microsoft.com/ja-jp/library/hh772704(v=vs.85).aspx) を参照してください。
+* **IE でのデバッグ**:IE でAEM Forms Workspace をデバッグするには、以下を参照してください。 [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
 
-* **Chrome でのデバッグ**：Chrome でデバッガーを開くには、Ctrl+Shift+I のショートカットキーを使用します。詳しくは、[https://developer.chrome.com/extensions/tut_debugging.html](https://developer.chrome.com/extensions/tut_debugging.html) を参照してください。
+* **Chrome でのデバッグ**:Chrome でデバッガーを開くには、次のショートカットを使用します。Ctrl + Shift + I。詳しくは、以下を参照してください。 [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
 
 * **Firefox でのデバッグ**：複数のアドオンを Firefox でスクリプトおよびスタイルのデバッグに使用することができます。例えば、Firebug はデバッグユーティリティの 1 つです（[https://getfirebug.com](https://getfirebug.com)）。
 
 ## FAQ {#faqs}
 
-1. Google Chrome で PDF フォームをレンダリングまたは送信することができません。
+1. PDFフォームがGoogle Chrome でレンダリングまたは送信されません。
 
-   1. Adobe® Reader® プラグインをインストールします。
-   1. Chrome で、chrome://plugins を開いて使用可能なプラグインを表示します。
-   1. Chrome PDF Viewer プラグインを無効にして Adobe Reader プラグインを有効にします。
+   1. Adobe®Reader®プラグインをインストールします。
+   1. Chrome で、chrome://pluginsを開いて使用可能なプラグインを表示します。
+   1. ChromePDFビューアプラグインを無効にし、Adobe Readerプラグインを有効にします。
 
-1. Google Chrome で SWF フォームまたは Guide がレンダリングされません。
+1. SWFフォームまたはガイドがGoogle Chrome でレンダリングされません。
 
-   1. Chrome で、chrome://plugins を開いて使用可能なプラグインを表示します。
-   1. Adobe Flash® Player プラグインの詳細を参照してください。
-   1. Adobe Flash Player プラグインの下で PepperFlash を無効にします。
+   1. Chrome で、chrome://pluginsを開いて使用可能なプラグインを表示します。
+   1. AdobeFlash® Player プラグインの詳細を参照してください。
+   1. AdobeFlash Playerプラグインの PepperFlash を無効にします。
 
-1. AEM Forms Workspace をカスタマイズしましたが、変更を表示することができません。
+1. AEM Forms Workspace をカスタマイズしましたが、変更が表示されません。
 
-   ブラウザーのキャッシュをクリアしてから AEM Forms Workspace にアクセスしてください。
+   ブラウザーのキャッシュをクリアして、AEM Forms Workspace にアクセスします。
 
-1. デスクトップで開いたときにフォームを HTML にレンダリングされるようにするには、ユーザーは何をすればよいですか?
+1. デスクトップで開いたときにフォームをHTMLでレンダリングできるようにするには、ユーザーは何をおこなう必要がありますか？
 
-   Workbench を使用する際に、タスクの割り当て手順でデフォルトのプロファイルに HTML ラジオボタンを選択してください。
+   Workbench の使用中に、タスクの割り当て手順でデフォルトプロファイルのHTMLラジオボタンを選択します。
 
-1. クリックしても添付ファイルが表示されません。
+1. 添付ファイルをクリックしても表示されません。
 
-   添付ファイルを表示するには、ブラウザーのポップアップを有効にしてください。
+   添付ファイルを表示するには、ブラウザーでポップアップを有効にします。
 
-1. ユーザーが Forms Application にログインしています。ユーザーが Workspace にログインしようとしても、ユーザーに Workspace 権限がない場合は、読み込まれません。
+1. ユーザーが Forms アプリケーションにログインしている。 ユーザーが Workspace にログインしようとすると、Workspace 権限を持たない場合は、読み込まれない可能性があります。
 
-   他の Forms Application からログアウトしてから、Workspace にログインしてください。
+   他の Forms アプリケーションからログアウトし、Workspace にログインします。
 
-1. デザインにプロセスプロパティを使用している HTML フォームを AEM Forms Workspace でレンダリングすると、フォーム内に「送信」ボタンが表示されます。
+1. HTMLフォームは、デザインでプロセスプロパティを使用し、AEM Forms Workspace でレンダリングされると、フォーム内に「送信」ボタンを表示します。
 
-   フォームのデザイン中にプロセスプロパティを使用すると、フォーム内に「送信」ボタンが追加されます。AEM Forms Workspace で PDF としてレンダリングすると、「送信」ボタンはエンドユーザーに表示されなくなります。ただし、AEM Forms Workspace で HTML フォームとしてレンダリングすると、「送信」ボタンがエンドユーザーに表示されます。フォーム内で「送信」ボタンをクリックしても、いずれのアクションも開始されません。AEM Forms Workspace の下部（フォームの外側）にある「送信」ボタンをクリックすると、タスクは完了します。
+   フォームをデザインする際に、プロセスのプロパティを使用すると、フォーム内に「送信」ボタンが追加されます。 AEM Forms Workspace でPDFとしてレンダリングされた場合、送信ボタンはエンドユーザーには表示されません。 ただし、AEM Forms Workspace でHTMLフォームとしてレンダリングする場合は、エンドユーザーに「送信」ボタンが表示されます。 フォーム内でこの「送信」ボタンをクリックしても、アクションは開始されません。 AEM Formsワークスペースの下部（フォームの外側）にある「送信」ボタンをクリックすると、タスクが完了します。

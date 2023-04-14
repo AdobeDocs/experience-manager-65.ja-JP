@@ -12,9 +12,9 @@ discoiquuid: ed3a858c-7a43-4515-a2ff-43ca465c7d7d
 docset: aem65
 feature: Configuring
 exl-id: 19eedcf2-140a-452d-aa8f-6fd7f219e5f8
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
+source-git-commit: d3923e5e693e7426ee57e81e203f31964a23af3a
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3430'
 ht-degree: 46%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 46%
 
 OSGi &quot;*は、小さく、再利用可能で、協調的なコンポーネントを使用してアプリケーションを構築できる、標準化されたプリミティブを提供します。これらのコンポーネントは、アプリケーションに組み込み、デプロイできます*&quot;.
 
-この機能により、バンドルを個別に停止、インストール、開始できるので、バンドルを容易に管理できます。 相互依存関係は自動的に処理されます。各 OSGi コンポーネント（[OSGi の仕様](https://www.osgi.org/Specifications/HomePage)を参照）は、各種バンドルの 1 つに含まれています。AEMを操作する場合、このようなバンドルの設定を管理する方法はいくつかあります。参照 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
+この機能により、バンドルを個別に停止、インストール、開始できるので、バンドルを容易に管理できます。 相互依存関係は自動的に処理されます。各 OSGi コンポーネント（[OSGi の仕様](https://docs.osgi.org/specification/)を参照）は、各種バンドルの 1 つに含まれています。AEMを操作する場合、このようなバンドルの設定を管理する方法はいくつかあります。参照 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
 
 次の OSGi 設定（バンドルに従ったリスト）は、プロジェクトの実装に関連しています。すべての設定に調整が必要なわけではなく、一部の設定は AEM の動作を説明する目的で言及されています。
 
