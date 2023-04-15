@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-manager
 discoiquuid: 0d961630-573b-4c8e-902f-996f1d1265b6
 exl-id: a1d97b15-14a6-4c3d-bdd3-6366f7acdfc8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 18cfefb794382b5314b18a62645f1fba28d314a2
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 100%
+source-wordcount: '222'
+ht-degree: 56%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 100%
 
 トランザクションとして自動的に計上されないアクションを記録するには、TransactionRecorder API を使用します
 
-カスタムコードを使用すると、PDFフォームを送信したり、エージェント UI のプレビュー URL をエンドユーザーに送信してインタラクティブ通信をプレビューしたり、AEM Forms で使用できる送信メソッドの代わりにカスタムメソッドを使用してフォームを送信したりできます。前述の AEM Forms API のすべてのアクションとカスタム実装は、トランザクションとはみなされません。AEM Forms は、トランザクションなどのアクションを記録するために、[TransactionRecorder](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html) という API を備えています。
+カスタムコードを使用してPDFフォームを送信したり、エージェント UI のプレビュー URL をエンドユーザーに送信してインタラクティブ通信をプレビューしたりできます。 または、AEM Formsで提供される送信メソッドを使用する代わりに、カスタムメソッドを使用してフォームを送信します。 前述の AEM Forms API のすべてのアクションとカスタム実装は、トランザクションとはみなされません。AEM Formsには API が用意されています。 [TransactionRecorder](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/aem/transaction/core/ITransactionRecorder.html)：トランザクションなどのアクションを記録します。
 
-トランザクションを記録するには、 [標準 Sling サーブレット](https://helpx.adobe.com/experience-manager/using/custom-sling-servlets.html) を書き込み、サーブレットをクライアントから呼び出してトランザクションを記録します。AJAX またはその以外の標準的な方法を使用して、サーブレットを呼び出すことができます。
+トランザクションを記録するには、 [標準 Sling サーブレット](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) を書き込み、サーブレットをクライアントから呼び出してトランザクションを記録します。AJAX またはその以外の標準的な方法を使用して、サーブレットを呼び出すことができます。
 
 ## サーバー側コードのサンプル {#sample-server-sided-code}
 
-下のサンプルコードを使用すると、カスタム OSGi バンドルを使用して JAVA クラスから TransactionRecorder API を実行できます。
+次のサンプルコードを使用して、カスタム OSGi バンドルを使用して Java™クラスから TransactionRecorder API を実行できます。
 
 ```java
 import com.adobe.aem.transaction.core.ITransactionRecorder;
