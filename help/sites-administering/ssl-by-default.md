@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: 68077369-0549-4c0f-901b-952e323013ea
 docset: aem65
 exl-id: 574e2fc2-6ebf-49b6-9b65-928237a8a34d
-source-git-commit: 252924afb70dd311a27d04278fbe363db15e9519
+source-git-commit: 9273282b26aeab5f65f0f05aa8ad754962dc59ec
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '853'
 ht-degree: 44%
 
 ---
@@ -40,7 +40,7 @@ AEMのホーム画面から関連するインボックスメッセージをク�
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. 資格情報を入力したら、「 **次へ** をクリックします。 次に、SSL 接続用に関連付けられた秘密鍵と証明書をアップロードします。
+1. 資格情報を入力したら、「 **次へ** をクリックします。 次に、SSL/TLS 接続用の関連する秘密鍵と証明書をアップロードします。
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
@@ -152,7 +152,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 ### パッケージ経由 {#via-package}
 
-または、次の必須項目が既に含まれているパッケージをアップロードして、SSL 設定を自動化することもできます。
+または、次の必要な項目が既に含まれているパッケージをアップロードして、SSL/TLS 設定を自動化することもできます。
 
 * ssl-service ユーザーのキーストア。 これは、 */home/users/system/security/ssl-service/keystore* リポジトリ内に保存されます。
 * `GraniteSslConnectorFactory` 設定
@@ -178,7 +178,7 @@ it for any subsequent updating of the private key or certificate.</dd>
    openssl req -sha256 -new -key localhostprivate.key -out localhost.csr -subj "/CN=localhost"
    ```
 
-1. SSL 証明書を生成し、秘密鍵で署名します。 この例では、は今から 1 年後に期限切れになります。
+1. SSL/TLS 証明書を生成し、秘密鍵で署名します。 この例では、は今から 1 年後に期限切れになります。
 
    ```shell
    openssl x509 -req -days 365 -in localhost.csr -signkey localhostprivate.key -out localhost.crt
