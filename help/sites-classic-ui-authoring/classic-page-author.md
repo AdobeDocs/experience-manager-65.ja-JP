@@ -1,8 +1,6 @@
 ---
 title: ページのオーサリング
-seo-title: Authoring Pages
 description: AEM でのオーサリングについて、次の 2 種類の概要があります。（1）作成者が行う最初の手順 - 新規の作成者向けの概要と、（2）ページのオーサリングのクイックガイド - 主なアクションに関するクイックガイド（概要レベル）。
-seo-description: There are two overviews to authoring with AEM. (1) First Steps for Authors - an introduction for new authors, and (2) Quick Guide to Authoring Pages - a quick guide (high-level) to the main actions.
 uuid: 95d12bd6-c51d-4b7c-9d67-a152a822eb01
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: a3606d72-1bd8-4886-9285-6457dae66486
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 100%
+ht-degree: 92%
 
 ---
 
@@ -27,9 +25,9 @@ ht-degree: 100%
 >
 >ここでは、コンテンツページのオーサリングに関連するタスクについて取り上げます。<!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
 
-## ページのオーサリングに使用される機能の概要 {#quick-overview-of-features-used-for-authoring-pages}
+## ページのオーサリングに使用される機能の概要のクイック {#quick-overview-of-features-used-for-authoring-pages}
 
-オーサー環境では、ページのオーサリングに役立つ次の機能を利用できます。
+ページのオーサリング時に役立つように、オーサー環境は次のような機能を提供します。
 
 * **ドラッグ＆ドロップ**
 コンポーネント（テキスト、画像など）およびデジタルアセット（画像など）は、目的の位置にドラッグ＆ドロップするだけで、ページ上で簡単に配置できます。

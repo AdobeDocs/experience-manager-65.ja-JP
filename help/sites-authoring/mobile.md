@@ -1,8 +1,6 @@
 ---
-title: モバイルデバイス用のページのオーサリング
-seo-title: Authoring a Page for Mobile Devices
-description: モバイル用にオーサリングするときは、複数のエミュレーターを切り替えて、エンドユーザー向けの表示を見ることができます。
-seo-description: When authoring for mobile, you can switch between several emulators to see what the end-user sees
+title: モバイルデバイス用のコンテンツページのオーサリング
+description: モバイル用にオーサリングする場合、複数のエミュレーターを切り替えて、エンドユーザーに表示される内容を確認できます。
 uuid: a7a1ba68-d608-4819-88d1-0dab5955d3f4
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +8,18 @@ content-type: reference
 topic-tags: site-features
 discoiquuid: 9554cdb3-b604-4d50-9760-89b9e7a7755f
 exl-id: 9c6c6386-5ffd-4fa6-9aa1-f5b0e31d1046
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 100%
+source-wordcount: '226'
+ht-degree: 39%
 
 ---
 
 # モバイルデバイス用のページのオーサリング {#authoring-a-page-for-mobile-devices}
 
-モバイルページをオーサリングする場合、ページはモバイルデバイスをエミュレートする方法で表示されます。ページのオーサリング時に、いくつかのエミュレーターを切り替えて、エンドユーザーがページにアクセスしたときの表示を確認できます。
+モバイルページをオーサリングする場合、ページはモバイルデバイスをエミュレートする方法で表示されます。 ページの作成時に、複数のエミュレーターを切り替えて、ページにアクセスする際にエンドユーザーに表示される内容を確認できます。
 
-ページをレンダリングするデバイスの機能に従って、デバイスはカテゴリ機能、スマートおよびタッチにグループ分けされます。エンドユーザーがモバイルページにアクセスするときは、AEM はデバイスを検出して、そのデバイスグループに対応する表現を送信します。
+デバイスは、ページをレンダリングするデバイスの機能に応じて、カテゴリ機能、スマート、タッチにグループ化されます。 エンドユーザーがモバイルページにアクセスすると、AEMはデバイスを検出し、そのデバイスグループに対応する表現を送信します。
 
 >[!NOTE]
 >
@@ -35,8 +33,8 @@ ht-degree: 100%
 1. **We.Retail**／**アメリカ合衆国**／**英語**&#x200B;のページを開きます。
 
 1. **プレビュー**&#x200B;モードに切り替えます。
-1. ページ上部のデバイスアイコンをクリックして、必要なエミュレーターに切り替えます。
-1. コンポーネントをコンポーネントブラウザーからページにドラッグ&amp;ドロップします。
+1. ページ上部のデバイスアイコンをクリックして、目的のエミュレーターに切り替えます。
+1. コンポーネントブラウザーからページにコンポーネントをドラッグ&amp;ドロップします。
 
 ページは次のようになります。
 

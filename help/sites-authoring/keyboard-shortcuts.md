@@ -1,8 +1,6 @@
 ---
-title: コンソールのキーボードショートカット
-seo-title: Keyboard Shortcuts for Consoles
-description: これらのキーボードショートカットを使用することで、オーサリング時の時間を節約できます
-seo-description: Save time when authoring by using these keyboard shortcuts
+title: AEMのコンソールのキーボードショートカット
+description: これらのキーボードショートカットを使用してオーサリング時に時間を節約できます。
 uuid: 3b90570f-e187-4f09-9ccf-838e5657de2f
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +8,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: f5ab3f61-aa5a-49ae-a976-6ab7f0d11ea6
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
-source-git-commit: ad8f98d22c2f2095ee92741331170be996103d95
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 100%
+source-wordcount: '380'
+ht-degree: 63%
 
 ---
 
@@ -36,7 +34,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 |  | `Left Arrow` | ツリー構造を上に移動／ツリーノードを折りたたむ |
 |  | `Down Arrow` | ページのリストを（同じレベルで）下に移動 |
 |  | `Up Arrow` | ページのリストを（同じレベルで）上に移動 |
-| コンソール - 列表示 | `Shift-Up/Down Arrow` | ページのリストを（同じレベルで）上に移動 |
+| コンソール — 列表示 | `Shift-Up/Down Arrow` | ページのリストを（同じレベルで）上に移動 |
 |  | `Esc` | ページのリストを（同じレベルで）上に移動 |
 | コンソール | `?` | キーボードショートカットヘルプ |
 |  | `/` | [検索](/help/sites-authoring/search.md)を呼び出す |
@@ -65,19 +63,19 @@ Windows の[修飾子キー](/help/sites-authoring/keyboard-shortcuts.md#os-spec
 
 ## ブラウザーとキーボードショートカット {#browsers-and-keyboard-shortcuts}
 
-デフォルトのブラウザー動作が、AEM ショートカットで上書きされることはありませんが、AEM では、人気のあるブラウザーで既に使用されている一般的なショートカットを使用しないようにしています。
+AEMは、一般的なブラウザーで既に使用されている一般的なショートカットを避けますが、AEMのショートカットでは、デフォルトのブラウザー動作は上書きされません。
 
-また、キーボードショートカットは、すべてのロケールおよびキーボードレイアウトで同じです。
+また、すべてのロケールとキーボードレイアウトで、キーボードショートカットが同じです。
 
 >[!NOTE]
 >
->AEM ショートカットは、デフォルトのブラウザー動作を上書きしません。
+>AEMショートカットは、デフォルトのブラウザー動作を上書きしません。
 >
->AEM とブラウザーのショートカットで競合が発生した場合は、AEM ショートカットは機能しなくなり、ブラウザー機能に従います。
+>AEMとブラウザーのショートカットの間で競合が発生する場合、AEMのショートカットは機能せず、ブラウザーの機能に従います。
 
 >[!CAUTION]
 >
->AEM キーボードショートカットは、スクリーンリーダー、一部のブラウザー機能および他のアクセシビリティツールに干渉する可能性があります。
+>AEMのキーボードショートカットが、スクリーンリーダー、一部のブラウザー機能、その他のアクセシビリティツールに干渉する可能性があります。
 >
 >アドビでは、スクリーンリーダーを使用する場合、[AEM キーボードショートカットを無効にする](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)ことをお勧めします。
 
@@ -85,9 +83,9 @@ Windows の[修飾子キー](/help/sites-authoring/keyboard-shortcuts.md#os-spec
 
 AEM には、一部の一般的に使用される機能（編集、プロパティ、コピー／貼り付け、様々なサイドレールのメニューの表示など）のキーボードショートカットが用意されています。
 
-キーボードショートカットを使用しないユーザーや特定のアクセシビリティ要件のあるユーザーの場合、すべてのキーボードショートカットを無効にできます。
+キーボードショートカットを使用しないユーザーや、特定のアクセシビリティ要件を持つユーザーの場合、すべてのキーボードショートカットを無効にできます。
 
-次の 2 か所でキーボードショートカットのアクティベーションを解除できます。
+キーボードショートカットは、次の 2 つの場所で非アクティブにできます。
 
 * [環境設定](/help/sites-authoring/user-properties.md#my-preferences)
 * [ヘルプメニュー](/help/sites-authoring/basic-handling.md#accessing-help)

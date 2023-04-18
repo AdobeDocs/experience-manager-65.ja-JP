@@ -1,8 +1,6 @@
 ---
-title: 'UI の選択 '
-seo-title: Selecting your UI
-description: AEM で使用するインターフェイスを設定します
-seo-description: Configure which interface you will use to work in AEM
+title: AEMでのユーザーインターフェイスの選択
+description: AEMで使用するインターフェイスを設定します。
 uuid: ab127f2f-2f8a-4398-90dd-c5d48eed9e53
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,22 +9,22 @@ content-type: reference
 discoiquuid: e418d330-f234-411d-8cad-3fd9906dcbee
 docset: aem65
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 100%
+source-wordcount: '745'
+ht-degree: 52%
 
 ---
 
 # UI の選択 {#selecting-your-ui}
 
-タッチ対応 UI が標準 UI になり、サイトの管理と編集はほぼ同等の機能を持つようになりましたが、[クラシック UI](/help/sites-classic-ui-authoring/classicui.md) に切り替えたくなることもあるでしょう。そのためのオプションがいくつか用意されています。
+タッチ操作対応 UI が標準 UI になり、サイトの管理と編集はほぼ同等の機能を備えていますが、 [クラシック UI](/help/sites-classic-ui-authoring/classicui.md). これをおこなうには、いくつかのオプションがあります。
 
 >[!NOTE]
 >
 >クラシック UI の機能の同一性の状況について詳しくは、[タッチ UI 機能の同一性](/help/release-notes/touch-ui-features-status.md)のドキュメントを参照してください。
 
-様々な場所で、使用する UI を定義できます。
+使用する UI を様々な場所で定義できます。
 
 * [ユーザーのインスタンス用のデフォルト UI の設定](#configuring-the-default-ui-for-your-instance)
 ユーザーのログイン時にデフォルトで表示する UI を設定します。ただし、ユーザーはこの設定を上書きしたり、自分のアカウントまたは現在のセッション用に別の UI を選択したりできます。
@@ -37,11 +35,11 @@ ht-degree: 100%
 * [現在のセッションでのクラシック UI への切り替え](#switching-to-classic-ui-for-the-current-session)
 現在のセッション用にクラシック UI に切り替えます。
 
-* [ページのオーサリング時には、状況に応じて、UI が自動的に上書きされます](#ui-overrides-for-the-editor)。
+* の場合 [ページオーサリングシステムが UI に関連して特定の上書きをおこなう](#ui-overrides-for-the-editor).
 
 >[!CAUTION]
 >
->クラシック UI に切り替えるための様々なオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
+>クラシック UI に切り替える様々なオプションをすぐに使用することはできません。その場では、インスタンスに合わせて特別に設定する必要があります。
 >
 >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
@@ -51,27 +49,27 @@ ht-degree: 100%
 >
 >アップグレード後、ページオーサリングが自動的にタッチ対応 UI に切り替わることはありませんが、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用すると、その切り替えを設定できます。[エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
 
-## ユーザーのインスタンス用のデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
+## インスタンスのデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
-システム管理者は、[ルートマッピング](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping)を使用して、起動時およびログイン時に表示される UI を設定できます。
+システム管理者は、起動時とログイン時に表示される UI を、 [ルートマッピング](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping).
 
-この設定はユーザーデフォルトまたはセッション設定によって上書きできます。
+この設定は、ユーザーの既定値またはセッション設定で上書きできます。
 
-## ユーザーのアカウント用のクラシック UI オーサリングの設定 {#setting-classic-ui-authoring-for-your-account}
+## アカウントのクラシック UI オーサリングの設定 {#setting-classic-ui-authoring-for-your-account}
 
-各ユーザーは、[ユーザーの環境設定](/help/sites-authoring/user-properties.md#userpreferences)にアクセスして、ページオーサリング用に（デフォルト UI の代わりに）クラシック UI を使用するかどうかを定義できます。
+各ユーザーは、 [ユーザーの環境設定](/help/sites-authoring/user-properties.md#userpreferences) ページオーサリングにクラシック UI を（デフォルトの UI の代わりに）使用するかどうかを定義します。
 
-この設定はセッション設定によって上書きできます。
+この設定は、セッション設定で上書きできます。
 
-## 現在のセッションでのクラシック UI への切り替え {#switching-to-classic-ui-for-the-current-session}
+## 現在のセッションのクラシック UI への切り替え {#switching-to-classic-ui-for-the-current-session}
 
-タッチ対応 UI を使用しているデスクトップユーザーは、必要に応じてクラシック UI（デスクトップ専用）に戻すことができます。現在のセッション用にクラシック UI に切り替えるには、複数の方法があります。
+タッチ操作対応 UI を使用している場合、デスクトップユーザーはクラシック（デスクトップのみ）UI に戻すことができます。 現在のセッションでクラシック UI に切り替える方法はいくつかあります。
 
 * **ナビゲーションリンク**
 
    >[!CAUTION]
    >
-   >クラシック UI に切り替えるためのこのオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
+   >クラシック UI に切り替えるためのこのオプションは、すぐには使用できません。インスタンスに対して特に設定する必要があります。
    >
    >
    >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
@@ -99,7 +97,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->クラシック UI に切り替えるためのこのオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
+>クラシック UI に切り替えるためのこのオプションは、すぐには使用できません。インスタンスに対して特に設定する必要があります。
 >
 >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
@@ -107,11 +105,11 @@ ht-degree: 100%
 
 ![syui-02](assets/syui-02.png)
 
-### エディターの UI 上書き {#ui-overrides-for-the-editor}
+### エディターの UI の上書き {#ui-overrides-for-the-editor}
 
-ページのオーサリング時には、ユーザーまたはシステム管理者が定義した設定がシステムによって上書きされることがあります。
+ユーザーまたはシステム管理者が定義した設定は、ページのオーサリング時にシステムによって上書きできます。
 
-* ページのオーサリング時には次のようになります。
+* ページのオーサリング時：
 
    * URL で `cf#` を使用してページにアクセスする場合、クラシックエディターが強制的に使用されます。次に例を示します。
       `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
@@ -131,12 +129,12 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->[ユーザーが既にページオーサリング用の環境設定を定義している](#settingthedefaultauthoringuiforyouraccount)場合は、OSGi プロパティの変更によってその設定が上書きされることはありません。
+>If [ユーザーが既にページオーサリングの環境設定を定義しています](#settingthedefaultauthoringuiforyouraccount)の場合、OSGi プロパティを変更して上書きされることはありません。
 
 >[!CAUTION]
 >
->既に説明したように、Cookie を使用しているので、次の操作はお勧めしません。
+>既に説明したように、cookie の使用により、次の操作はお勧めしません。
 >
->* URL の手動編集 - 非標準の URL を使用すると予期しない状況となり、機能しなくなる可能性があります。
+>* URL を手動で編集 — 非標準の URL を使用すると、不明な状況が発生し、機能が不足する場合があります。
 >* 両方のエディターを同時に開くこと - 例えば、別のウィンドウで開くなど。
 

@@ -1,8 +1,6 @@
 ---
-title: 'ページのコンテンツの編集 '
-seo-title: Editing Page Content
-description: ページを作成したら、必要な変更をおこなうためにコンテンツを編集できます
-seo-description: Once your page is created you can edit the content to make the updates you require
+title: ページのコンテンツの編集
+description: ページが作成されたら、コンテンツを編集して必要な更新を行うことができます。
 uuid: 5b4f0a8f-5196-42ea-8413-203783a0b77b
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,22 +9,22 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
 workflow-type: tm+mt
-source-wordcount: '3045'
-ht-degree: 100%
+source-wordcount: '3047'
+ht-degree: 52%
 
 ---
 
 # ページのコンテンツの編集 {#editing-page-content}
 
-ページが作成されたら（新規作成、またはローンチやライブコピーの一部として作成）、コンテンツを編集して、必要な更新をおこなうことができます。
+ページが作成されたら（新規またはローンチまたはライブコピーの一部として）、コンテンツを編集して、必要な更新をおこなうことができます。
 
-コンテンツは、ページにドラッグ可能な[コンポーネント](/help/sites-authoring/default-components-console.md)（コンテンツのタイプに適したもの）を使用して追加されます。コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
+コンテンツを追加するには、 [コンポーネント](/help/sites-authoring/default-components-console.md) （コンテンツタイプに適した）ページにドラッグできます。 コンポーネントはその後、そのまま編集したり、移動や削除をおこなったりすることができます。
 
 >[!NOTE]
 >
->ページを編集するための[適切なアクセス権](/help/sites-administering/security.md)と[権限](/help/sites-administering/security.md#permissions)がアカウントにある必要があります。
+>アカウントに [適切なアクセス権](/help/sites-administering/security.md) および [権限](/help/sites-administering/security.md#permissions) ページを編集する場合。
 >
 >問題が発生した場合は、システム管理者にお問い合わせください。
 
@@ -44,53 +42,53 @@ ht-degree: 100%
 
 ![screen_shot_2018-03-22at111338](assets/screen_shot_2018-03-22at111338.png)
 
-ツールバーを使用すると、様々なオプションにアクセスできます。現在のコンテキストと設定によっては、一部のオプションを使用できないことがあります。
+ツールバーを使用すると、多数のオプションにアクセスできます。 現在のコンテキストと設定によっては、一部のオプションを使用できない場合があります。
 
 * **サイドパネルを切り替え**
 
-   サイドパネルが開きます（または閉じます）。このパネルには、[アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)、[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)および[コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree)が含まれています。
+   これにより、サイドパネルが開く（または閉じる）ので、 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser), [コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)、および [コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree).
 
    ![](do-not-localize/screen_shot_2018-03-22at111425.png)
 
 * **ページ情報**
 
-   ページの詳細およびページに対して実行できるアクション（ページ情報の表示と編集、ページのプロパティの表示、およびページの公開／非公開など）を含む[ページ情報](/help/sites-authoring/author-environment-tools.md#page-information)メニューにアクセスできます。
+   次にアクセスできる [ページ情報](/help/sites-authoring/author-environment-tools.md#page-information) ページ上で実行できるページの詳細やアクションを含むメニュー（ページ情報の表示と編集、ページプロパティの表示、ページの公開/非公開を含む）。
 
    ![](do-not-localize/screen_shot_2018-03-22at111437.png)
 
 * **エミュレーター**
 
-   別のデバイスでのページのルックアンドフィールをエミュレートするために使用する[エミュレーターツールバー](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)を切り替えます。レイアウトモードでは自動的に切り替わります。
+   を切り替えます。 [エミュレーターツールバー](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)：別のデバイスでのページのルックアンドフィールをエミュレートするために使用されます。 これは、レイアウトモードで自動的に切り替えられます。
 
    ![](do-not-localize/screen_shot_2018-03-22at111442.png)
 
 * **ContextHub**
 
-   [ContextHub](/help/sites-authoring/ch-previewing.md) を開きます。プレビューモードでのみ使用できます。
+   を開きます。 [コンテキストハブ](/help/sites-authoring/ch-previewing.md). プレビューモードでのみ使用できます。
 
    ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
 
 * **ページタイトル**
 
-   情報のためにのみ表示されます。
+   これは単なる情報です。
 
    ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
 
 * **モードセレクター**
 
-   現在の[モード](/help/sites-authoring/author-environment-tools.md#page-modes)が表示され、別のモード（編集、レイアウト、タイムワープ、ターゲット設定など）を選択できます。
+   現在の [mode](/help/sites-authoring/author-environment-tools.md#page-modes) また、編集、レイアウト、タイムワープ、ターゲット設定など、別のモードを選択することもできます。
 
    ![chlimage_1-120](assets/chlimage_1-120.png)
 
 * **プレビュー**
 
-   [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)を有効にします。公開時に表示されるとおりにページを表示します。
+   有効 [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode). 公開時に表示されるページが表示されます。
 
    ![chlimage_1-121](assets/chlimage_1-121.png)
 
 * **注釈**
 
-   ページをレビューするときに、ページに[注釈](/help/sites-authoring/annotations.md)を追加できます。最初の注釈を追加後、アイコンは、ページ上の注釈の数を示す数字に切り替わります。
+   次を追加できます： [注釈](/help/sites-authoring/annotations.md) をページに追加します。 最初の注釈の後、アイコンはページ上の注釈の数を示す番号に切り替わります。
 
    ![](do-not-localize/screen_shot_2018-03-22at111638.png)
 
@@ -104,7 +102,7 @@ ht-degree: 100%
 >
 >ステータスバーは、適切な特権を持つユーザーアカウントにのみ表示されます。
 
-通知には、ページに対して実行されているワークフローが一覧表示されます。ユーザーが現在のワークフローステップに関係している場合は、[ワークフローのステータスに影響する](/help/sites-authoring/workflows-participating.md)オプションや、ワークフローの詳細を取得するオプションを使用できます。例えば、次のようなものがあります。
+通知には、ページに対して実行されているワークフローが一覧表示されます。 ユーザーが現在のワークフローステップに関与している場合は、次のオプションを選択します。 [ワークフローのステータスに影響を与える](/help/sites-authoring/workflows-participating.md) また、ワークフローに関する詳細情報も次のように表示されます。
 
 * **完了** - 「**作業項目を完了**」ダイアログが開きます
 
@@ -120,9 +118,9 @@ ht-degree: 100%
 
 ## コンポーネントプレースホルダー {#component-placeholder}
 
-コンポーネントプレースホルダーは、コンポーネントをドロップしたときのコンポーネントの配置場所（現在ポインターを置いているコンポーネントの上）を示します。
+コンポーネントプレースホルダーは、コンポーネントをドロップしたときの位置を示すインジケーターで、現在カーソルを合わせているコンポーネントの上に表示されます。
 
-* ページに新しいコンポーネントを追加する場合（コンポーネントブラウザーからドラッグ）：
+* 新しいコンポーネントをページに追加する場合（コンポーネントブラウザーからドラッグ）:
 
    ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
 
@@ -140,11 +138,11 @@ ht-degree: 100%
 1. [コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)を開きます。
 1. 必要なコンポーネントを[必要な位置](#component-placeholder)までドラッグします。
 
-1. [コンポーネントを編集します。](#editmovecopypastedelete)
+1. コンポーネントを[編集](#editmovecopypastedelete)します。
 
 >[!NOTE]
 >
->モバイルデバイスでは、コンポーネントブラウザーは画面全体に表示されます。コンポーネントをドラッグすると、ブラウザーが閉じて、コンポーネントを配置できるようにページが再び表示されます。
+>モバイルデバイスでは、コンポーネントブラウザーが画面全体に表示されます。 コンポーネントのドラッグを開始すると、ブラウザーが閉じてページが再度表示され、コンポーネントを配置できます。
 
 ### 段落システムからのコンポーネントの挿入 {#inserting-a-component-from-the-paragraph-system}
 
@@ -153,7 +151,7 @@ ht-degree: 100%
 1. ページが&#x200B;[**編集**&#x200B;モード](/help/sites-authoring/author-environment-tools.md#page-modes)であることを確認します。
 1. 段落システムから新しいコンポーネントを選択して追加する方法は 2 つあります。
 
-   * 既存のコンポーネントのツールバーまたは「**コンポーネントをここにドラッグ**」ボックスから&#x200B;**コンポーネントを挿入**&#x200B;オプション（+）を選択します。
+   * を選択します。 **コンポーネントを挿入** オプション (+) を既存のコンポーネントのツールバーまたは **ここにコンポーネントをドラッグ** ボックス
 
    ![screen_shot_2018-03-22at112536](assets/screen_shot_2018-03-22at112536.png)
 
@@ -167,7 +165,7 @@ ht-degree: 100%
 
 ### アセットブラウザーを使用したコンポーネントの挿入 {#inserting-a-component-using-the-assets-browser}
 
-[アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)からアセットをドラッグして、ページに新しいコンポーネントを追加することもできます。この操作により、適切なタイプの新しいコンポーネント（アセットが格納される）が自動的に作成されます。
+また、ページに新しいコンポーネントを追加するには、 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser). これにより、適切なタイプ（およびアセットを含む）の新しいコンポーネントが自動的に作成されます。
 
 これは次のアセットタイプに有効です（一部はページや段落システムに依存します）。
 
@@ -175,7 +173,7 @@ ht-degree: 100%
  <tbody>
   <tr>
    <th><strong>アセットタイプ</strong></th>
-   <th><strong>結果のコンポーネントの種類</strong></th>
+   <th><strong>結果のコンポーネントタイプ</strong></th>
   </tr>
   <tr>
    <td>画像</td>
@@ -202,27 +200,27 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->この動作は使用しているインストール環境で設定できます。詳しくは、[アセットをドラッグするとコンポーネントインスタンスが作成されるように段落システムを設定](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance)を参照してください。
+>この動作は使用しているインストール環境で設定できます。詳しくは、 [アセットをドラッグするとコンポーネントインスタンスが作成されるように段落システムを設定する](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) 詳しくは、を参照してください。
 
 前述のいずれかのアセットタイプをドラッグしてコンポーネントを作成するには：
 
 1. ページが&#x200B;[**編集**&#x200B;モード](/help/sites-authoring/author-environment-tools.md#page-modes)であることを確認します。
-1. [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser)を開きます。
-1. 必要なアセットを必要な位置までドラッグします。[コンポーネントプレースホルダー](#component-placeholder)にコンポーネントの配置先が表示されます。
+1. を開きます。 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser).
+1. 必要なアセットを必要な位置までドラッグします。 この [コンポーネントプレースホルダー](#component-placeholder) コンポーネントを配置する場所を示します。
 
-   アセットタイプに適したコンポーネントが、必要な場所に作成されます。これには選択したアセットが含まれます。
+   アセットタイプに適したコンポーネントが必要な場所に作成され、選択したアセットが格納されます。
 
-1. 必要に応じて、コンポーネントを[編集](#editmovecopypastedelete)します。
+1. [編集](#editmovecopypastedelete) 必要に応じて、コンポーネントを選択します。
 
 >[!NOTE]
 >
->モバイルデバイスでは、アセットブラウザーは画面全体に表示されます。アセットをドラッグすると、ブラウザーが閉じて、アセットを配置できるようにページが再び表示されます。
+>モバイルデバイスでは、アセットブラウザーが画面全体に表示されます。 アセットのドラッグを開始すると、ブラウザーが閉じてページが再度表示され、アセットを配置できます。
 
-アセットを参照したとき、アセットをすぐに変更する必要があることに気づいた場合は、アセット名の横にある編集アイコンをクリックすると、ブラウザーから直接[アセットエディター](/help/assets/manage-assets.md)を開始できます。
+アセットを参照したときに、アセットをすばやく変更する必要があることに気づいた場合は、 [アセットエディター](/help/assets/manage-assets.md) ブラウザーから直接アセット名の横にある編集アイコンをクリックします。
 
 ![screen_shot_2018-03-22at112735](assets/screen_shot_2018-03-22at112735.png)
 
-## 編集／設定／コピー／切り取り／削除／貼り付け {#edit-configure-copy-cut-delete-paste}
+## 編集/設定/コピー/切り取り/削除/貼り付け {#edit-configure-copy-cut-delete-paste}
 
 コンポーネントを選択すると、ツールバーが開きます。このツールバーからコンポーネントに対して様々なアクションを実行できます。
 
@@ -244,45 +242,45 @@ ht-degree: 100%
 
 * **コピー**
 
-   コンポーネントをクリップボードにコピーします。貼り付け後も、元のコンポーネントは残ります。
+   これにより、コンポーネントがクリップボードにコピーされます。 貼り付け操作の後も、元のコンポーネントは保持されます。
 
    ![](do-not-localize/screen_shot_2018-03-22at113000.png)
 
 * **切り取り**
 
-   コンポーネントをクリップボードにコピーします。貼り付け後、元のコンポーネントは削除されます。
+   これにより、コンポーネントがクリップボードにコピーされます。 貼り付け操作の後、元のコンポーネントは削除されます。
 
    ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
 
 * **削除**
 
-   確認後に、ページからコンポーネントを削除します。
+   これにより、確認を含むページからコンポーネントが削除されます。
 
    ![](do-not-localize/screen_shot_2018-03-22at113012.png)
 
 * **コンポーネントの挿入**
 
-   [新しいコンポーネントを追加](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system)するためのダイアログが開きます。
+   これにより、次のダイアログが開きます。 [新しいコンポーネントを追加](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
    ![](do-not-localize/screen_shot_2018-03-22at113017.png)
 
 * **貼り付け**
 
-   クリップボードにコピーしたコンポーネントをページに貼り付けます。元のコンポーネントが残るかどうかは、コピーするか、切り取るかによって決まります。
+   これにより、コンポーネントがクリップボードからページに貼り付けられます。 オリジナルが残るかどうかは、コピーを使用したか切り取ったかによって異なります。
 
-   * 同じページ、または別のページに貼り付けることができます。
-   * 項目は、貼り付けアクションを選択した項目の上に貼り付けられます。
+   * 同じページまたは別のページに貼り付けることができます。
+   * 貼り付けられた項目は、貼り付けアクションを選択した項目の上に貼り付けられます。
    * 貼り付けアクションは、クリップボードにコンテンツがある場合にのみ表示されます。
 
    ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
    >[!NOTE]
    >
-   >切り取り／コピー操作の前に既に開いていた別のページに貼り付ける場合は、ページを更新して、貼り付けたコンテンツを表示する必要があります。
+   >切り取り/コピー操作の前に開いていた別のページに貼り付ける場合は、ページを更新して、貼り付けたコンテンツを表示する必要があります。
 
 * **グループ**
 
-   複数のコンポーネントを一度に選択できます。デスクトップデバイスで同じ操作をおこなうには、**Ctrl キーを押しながらクリック**&#x200B;するか、または **Command キーを押しながらクリック**&#x200B;します。
+   これにより、複数のコンポーネントを一度に選択できます。 デスクトップデバイスで同じ操作をおこなうには、**Ctrl キーを押しながらクリック**&#x200B;するか、または **Command キーを押しながらクリック**&#x200B;します。
 
    ![](do-not-localize/screen_shot_2018-03-22at113240.png)
 
@@ -294,7 +292,7 @@ ht-degree: 100%
 
 * **レイアウト**
 
-   選択したコンポーネントの[レイアウト](/help/sites-authoring/editing-content.md#edit-component-layout)を変更できます。選択したコンポーネントにのみ適用され、ページ全体の[レイアウトモード](/help/sites-authoring/author-environment-tools.md#page-modes)はアクティブ化されません。
+   これにより、 [レイアウト](/help/sites-authoring/editing-content.md#edit-component-layout) 選択したコンポーネントの。 これは、選択したコンポーネントにのみ適用され、 [レイアウトモード](/help/sites-authoring/author-environment-tools.md#page-modes) ページ全体に対して
 
    ![](do-not-localize/screen_shot_2018-03-22at113044.png)
 
@@ -308,10 +306,10 @@ ht-degree: 100%
 
 コンポーネント内のコンテンツを追加または編集するには、次の 2 つの方法があります。
 
-* [編集用のコンポーネントのダイアログ](#component-edit-dialog)を開きます。
-* アセットブラウザーから[アセットをドラッグ＆ドロップ](#draganddropintocomponent)して、コンテンツを直接追加します。
+* を開きます。 [編集用のコンポーネントダイアログ](#component-edit-dialog).
+* [アセットをドラッグ&amp;ドロップ](#draganddropintocomponent) アセットブラウザーからコンテンツを直接追加します。
 
-### コンポーネントの編集ダイアログ {#component-edit-dialog}
+### コンポーネント編集ダイアログ {#component-edit-dialog}
 
 [コンポーネントツールバーの編集（鉛筆）アイコン](#edit-configure-copy-cut-delete-paste)を使用して、コンポーネントを開いてコンテンツを編集できます。
 
@@ -330,9 +328,9 @@ ht-degree: 100%
    >編集は、空の画像コンポーネントでは動作しません。
    >
    >
-   >画像を編集する前に、[（設定を使用して）画像をドラッグまたはアップロードする](/help/sites-authoring/default-components-foundation.md#image)必要があります。
+   >必ず [画像のドラッグまたはアップロード（設定を使用）](/help/sites-authoring/default-components-foundation.md#image) 編集を開始する前に
 
-* 画像コンポーネント - 全画面
+* 画像コンポーネント — 全画面表示
 
    画像コンポーネント[の全画面表示モードに入ると](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)、画像を編集する領域が広くなり、追加の編集オプション（「**マップを起動**」や「**ズームをリセット**」など）が表示されます。また、全画面表示では切り抜きプリセットを選択できます。
 
@@ -344,7 +342,7 @@ ht-degree: 100%
 
 ### アセットのコンポーネントへのドラッグ＆ドロップ {#drag-and-drop-assets-into-component}
 
-次の特定のコンポーネントタイプでは、アセットブラウザーから直接コンポーネントにアセットをドラッグ＆ドロップして、コンテンツを更新することができます。
+特定のコンポーネントタイプでは、アセットブラウザーから直接コンポーネントにアセットをドラッグ&amp;ドロップして、コンテンツを更新できます。
 
 | **アセットタイプ** | **コンポーネントの種類** |
 |---|---|
@@ -354,7 +352,7 @@ ht-degree: 100%
 | ビデオ | Flash |
 | コンテンツフラグメント | コンテンツフラグメント |
 
-## フルスクリーンモードで（コンテンツを）編集 {#edit-content-full-screen-mode}
+## （コンテンツ）全画面表示モードの編集 {#edit-content-full-screen-mode}
 
 次のアイコンを使用して、すべてのコンポーネントで全画面表示モードにアクセス（または終了）できます。
 
@@ -366,14 +364,14 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->一部のコンポーネントでは、全画面表示モードにすると、基本のインプレースエディターより多くのオプションが表示されます。
+>一部のコンポーネントでは、全画面表示モードには、基本のインプレースエディターよりも多くのオプションが用意されています。
 
 ## コンポーネントの移動 {#moving-a-component}
 
 段落コンポーネントを移動するには：
 
-1. タップ＆ホールドまたはクリック＆ホールドによって移動する段落を選択します。
-1. 段落を新しい場所にドラッグします。段落を配置できる場所が示されます。目的の場所にドロップします。
+1. タップ&amp;ホールドまたはクリック&amp;ホールドで移動する段落を選択します。
+1. 段落を新しい場所にドラッグします。 AEMは、段落を預ける場所を示します。 目的の場所にドロップします。
 
    ![screen_shot_2018-03-22at121821](assets/screen_shot_2018-03-22at121821.png)
 
@@ -395,11 +393,11 @@ ht-degree: 100%
 
    ![](do-not-localize/chlimage_1-21.png)
 
-1. レイアウトアクションを選択すると、
+1. 「Layout」アクションを選択したら、次の操作を実行します。
 
    * コンポーネントのサイズ変更ハンドルが表示されます。
-   * エミュレーターツールバーが画面の上部に表示されます。
-   * 標準の編集アクションの代わりにレイアウトアクションが、コンポーネントツールバーに表示されます。
+   * 画面の上部にエミュレーターツールバーが表示されます。
+   * 標準の編集アクションの代わりにレイアウトアクションがコンポーネントツールバーに表示されます。
 
    ![screen_shot_2018-03-22at133843](assets/screen_shot_2018-03-22at133843.png)
 
@@ -423,11 +421,11 @@ ht-degree: 100%
 * [ローンチ](/help/sites-authoring/launches.md)（ライブコピーをベースとしている場合）
 * 特定のコンポーネント（Geometrixx 内の継承された段落システムなど）
 
-継承はキャンセル（その後再度有効化）できます。コンポーネントによって、次の場所から操作できます。
+継承はキャンセル（その後再度有効化）できます。コンポーネントに応じて、次の場所から使用できます。
 
 * **ライブコピー**
 
-   ライブコピーまたは（ライブコピーに基づいた）ローンチの一部であるページにコンポーネントがある場合のコンポーネントツールバー。次に例を示します。
+   ライブコピーまたは（ライブコピーに基づく）ローンチの一部であるページ上にコンポーネントがある場合、コンポーネントツールバー。 次に例を示します。
 
    ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
 
@@ -435,7 +433,7 @@ ht-degree: 100%
 
    ![](do-not-localize/screen_shot_2018-03-22at134406.png)
 
-   キャンセル済みの場合は継承を再度有効にできます。
+   または、既にキャンセルされている場合は継承を再度有効にします。
 
    ![](do-not-localize/screen_shot_2018-03-22at134417.png)
 
@@ -445,13 +443,13 @@ ht-degree: 100%
 
 * **継承された段落システム**
 
-   設定ダイアログです。例えば、「継承された段落システム」と同様です。
+   設定ダイアログ。 例えば、継承された段落システムの場合は次のようになります。
 
    ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ## ページテンプレートの編集 {#editing-the-page-template}
 
-ページが[編集可能なテンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、[ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information)の&#x200B;**編集テンプレート**&#x200B;を選択することによって、[テンプレートエディター](/help/sites-authoring/templates.md#editing-templates-template-authors)に簡単に切り替えることができます。
+ページが [編集可能なテンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)を使用すると、 [テンプレートエディター](/help/sites-authoring/templates.md#editing-templates-template-authors) 選択する **テンプレートを編集** 内 [ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information).
 
 ページが[静的テンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合は、ツールバーの[ページモードセレクター](/help/sites-authoring/author-environment-tools.md#page-modes)を使用して[デザインモード](/help/sites-authoring/default-components-designmode.md)に切り替え、ページで使用するコンポーネントを有効／無効にすることができます。
 
@@ -459,10 +457,10 @@ ht-degree: 100%
 
 ## ライブコピーステータス {#live-copy-status}
 
-[ライブコピーステータスページモード](/help/sites-authoring/author-environment-tools.md#page-modes)では、ライブコピーのステータスの簡単な概要、および継承される（または継承されない）コンポーネントを示すことができます。
+この [ライブコピーステータスページモード](/help/sites-authoring/author-environment-tools.md#page-modes) ライブコピーのステータスと継承される（または継承されない）コンポーネントの概要を簡単に確認できます。
 
-* 緑のボーダー：継承
-* ピンクのボーダー：継承がキャンセルされている
+* 緑の境界線：継承
+* ピンクの境界線：継承がキャンセルされました
 
 次に例を示します。
 
@@ -470,7 +468,7 @@ ht-degree: 100%
 
 ## 注釈の追加 {#adding-annotations}
 
-[注釈](/help/sites-authoring/annotations.md)を使用すると、レビュー担当者や他の作成者がコンテンツに関するフィードバックを提供できます。注釈は、レビューや検証の目的でよく使用されます。
+[注釈](/help/sites-authoring/annotations.md) レビュー担当者や他の作成者がコンテンツに関するフィードバックを提供することを許可します。 多くの場合、レビューや検証の目的で使用されます。
 
 ## ページのプレビュー {#previewing-pages}
 
@@ -478,11 +476,11 @@ ht-degree: 100%
 
 * [プレビューモード](#preview-mode) - その場ですばやく確認できるプレビュー
 
-* [公開済みとして表示](#view-as-published) - ページを新しいタブに開くフルプレビュー
+* [公開済みとして表示](#view-as-published)  — ページを新しいタブで開く完全なプレビュー
 
 >[!NOTE]
 >
->* コンテンツ内のリンクは表示されますが、編集モードでアクセスすることはできません。
+>* コンテンツ内のリンクは表示されますが、編集モードではアクセスできません。
 >* リンクを使用して移動する場合には、いずれかのプレビューオプションを使用してください。
 >* プレビューと最後に選択したモードを切り替えるには、[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` を使用します。
 >
@@ -490,41 +488,41 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->両方のオプションで WCM Mode Cookie が設定されています。
+>両方のオプションに WCM Mode Cookie が設定されている。
 
 ### プレビューモード {#preview-mode}
 
-コンテンツの編集時に、プレビュー[モード](/help/sites-authoring/author-environment-tools.md#page-modes)を使用してページをプレビューすることができます。このモードでは、次の操作を実行できます。
+コンテンツの編集時に、プレビューを使用してページをプレビューできます [mode](/help/sites-authoring/author-environment-tools.md#page-modes). このモード：
 
 * 各種編集メカニズムを非表示にして公開時にページがどのように表示されるかをすばやく確認できます。
 * リンクを使用して移動できます。
-* ページコンテンツは更新&#x200B;**されません**。
+* 実行 **not** ページコンテンツを更新します。
 
-オーサリング時に、ページエディターの右上にある次のアイコンを使用して、プレビューモードに切り替えることができます。
+オーサリング時には、ページエディターの右上にある次のアイコンを使用してプレビューモードを使用できます。
 
 ![chlimage_1-125](assets/chlimage_1-125.png)
 
 ### 公開済みとして表示 {#view-as-published}
 
-「**公開済みとして表示**」オプションは、[ページ情報](/help/sites-authoring/author-environment-tools.md#page-information)メニューで使用できます。これによりページが新しいタブで開き、コンテンツが更新され、ページがパブリッシュ環境で表示されるとおりに表示されます。
+この **公開済みとして表示** オプションは、 [ページ情報](/help/sites-authoring/author-environment-tools.md#page-information) メニュー これにより、新しいタブでページが開き、コンテンツが更新され、ページがパブリッシュ環境で表示されるとおりに表示されます。
 
 ## ページのロック {#locking-a-page}
 
 AEM では、他のユーザーによるコンテンツの変更を防ぐためにページをロックすることができます。ページのロックは、1 つの特定のページで大量の編集作業をおこなう場合や、短期間ページを凍結する必要がある場合に便利です。
 
-ページは次のいずれかの場所からロックできます。
+ページは次のいずれかからロックできます。
 
-* **サイト**&#x200B;コンソール
+* **サイト** コンソール
 
-   1. [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)でページを選択します。
+   1. を含むページを選択します。 [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. ロックアイコンを選択します。
 
    ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **ページエディター**
 
-   1. **ページ情報**&#x200B;アイコンを選択して、メニューを開きます。
-   1. 「**ページをロック**」オプションを選択します。
+   1. を選択します。 **ページ情報** アイコンをクリックしてメニューを開きます。
+   1. を選択します。 **ページをロック** オプション。
 
 ロックすると、コンソール表示の情報が更新され、編集時にロック記号がツールバーに表示されます。
 
@@ -532,7 +530,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 >[!CAUTION]
 >
->ページのロックは、[別のユーザーとして実行している](/help/sites-administering/security.md#impersonating-another-user)場合に実行できます。ただし、この方法でロックされたページをロック解除できるのは、別のユーザーとして実行したユーザーか、管理者ユーザーです。
+>ページのロックは、[別のユーザーとして実行している](/help/sites-administering/security.md#impersonating-another-user)場合に実行できます。ただし、この方法でロックされたページのロックを解除できるのは、別のユーザーとして実行されたか、管理者ユーザーによってのみです。
 >
 >実際にページのロック作業を行ったユーザーに成り代わっても、ページをロック解除できません。
 
@@ -546,7 +544,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 >[!CAUTION]
 >
->ページのロックは、[別のユーザーとして実行している](/help/sites-administering/security.md#impersonating-another-user)場合に実行できます。ただし、この方法でロックされたページをロック解除できるのは、別のユーザーとして実行したユーザーか、管理者ユーザーです。
+>ページのロックは、[別のユーザーとして実行している](/help/sites-administering/security.md#impersonating-another-user)場合に実行できます。ただし、この方法でロックされたページのロックを解除できるのは、別のユーザーとして実行されたか、管理者ユーザーによってのみです。
 >
 >実際にページのロック作業を行ったユーザーに成り代わっても、ページをロック解除できません。
 
@@ -576,25 +574,25 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 
 コンテンツページで要素（テキストコンポーネントなど）が選択されている場合、取り消しコマンドとやり直しコマンドは選択した項目に適用されます。
 
-取り消しおよびやり直しコマンドの動作は、他のソフトウェアプログラムの動作と類似しています。これらのコマンドを使用すると、コンテンツに関する決定をおこなう中で、Web ページの最新の状態に復元できます。例えば、テキスト段落をページ上の別の場所に移動した場合に、取り消しコマンドを使用して、その段落を元の場所に戻すことができます。前の場所のほうがいい場合は、やり直しコマンドを使用して「取り消しを取り消し」ます。
+取り消しコマンドとやり直しコマンドの動作は、他のソフトウェアプログラムの動作と同じです。 コンテンツに関する決定を行う際に、Web ページの最新の状態を復元するには、コマンドを使用します。 例えば、テキスト段落をページ上の別の場所に移動した場合に、取り消しコマンドを使用して、その段落を元の場所に戻すことができます。その後、前の位置の方が良いと判断した場合は、やり直しコマンドを使用して「元に戻す」操作を元に戻します。
 
 >[!NOTE]
 >
 >以下の操作を実行できます。
 >
->* 取り消しを使用してからページの編集をおこなっていない限り、アクションをやり直すことができます。
->* 最大 20 回の編集アクションを取り消すことができます（デフォルト設定）。
->* 様々な[キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)を利用して取り消しとやり直しをおこなうこともできます。
+>* 取り消しを使用してからページの編集を行っていない限り、操作をやり直します。
+>* 最大 20 個の編集アクションを取り消します（デフォルト設定）。
+>* また、 [キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 元に戻す/やり直しの場合。
 >
 
 
-取り消しおよびやり直しは、次のようなページの変更に対して使用できます。
+取り消しとやり直しは、次のタイプのページの変更に対して使用できます。
 
 * 段落の追加、編集、削除および移動
 * 段落コンテンツのインプレース編集
-* ページ内部での項目のコピー、カットおよび貼り付け
+* ページ内の項目のコピー、切り取り、貼り付け
 
-フォームコンポーネントがレンダリングするフォームフィールドは、ページのオーサリング中に指定された値を持つことにはなりません。そのため、取り消しおよびやり直しコマンドは、それらのタイプのコンポーネントの値に対しておこなった変更には影響を与えません。例えば、ドロップダウンリスト内の値の選択を取り消すことはできません。
+フォームコンポーネントがレンダリングするフォームフィールドは、ページのオーサリング時に値を指定するものではありません。 したがって、取り消しコマンドとやり直しコマンドは、これらのタイプのコンポーネントの値に加えた変更には影響しません。 例えば、コンボボックス内の値の選択を取り消すことはできません。
 
 >[!NOTE]
 >
@@ -602,4 +600,4 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 
 >[!NOTE]
 >
->ファイルや画像への変更の履歴は、少なくとも 10 時間維持されます。この時間を経過すると、変更の取り消しは保証されません。管理者はデフォルトの 10 時間を変更できます。
+>ファイルおよび画像に対する変更の履歴は、少なくとも 10 時間保持されます。 ただし、これ以降は、変更の取り消しは保証されません。 管理者は、デフォルトの 10 時間を変更できます。

@@ -1,8 +1,6 @@
 ---
-title: ページへのワークフローの適用
-seo-title: Applying Workflows to Pages
+title: コンテンツページへのワークフローの適用
 description: オーサリングでは、ワークフローを呼び出して、ページにアクションを実行することができます。複数のワークフローを適用することもできます。
-seo-description: When authoring, you can invoke workflows to take action on your pages; it is also possible to apply more than one workflow..
 uuid: 652d9a23-907d-43ad-9eef-7ab1d07918cd
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 6472dc94-96e0-4286-8f86-d85726cc843c
 docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
-workflow-type: ht
-source-wordcount: '648'
-ht-degree: 100%
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 63%
 
 ---
 
@@ -26,10 +24,10 @@ ht-degree: 100%
 
 * 適用されるワークフロー。
 （AEM 管理者によって割り当てられた、アクセス権限がある）任意のワークフローを適用できます。
-* オプションで、ユーザーのインボックス内のワークフローインスタンスの特定に役立つタイトル。
-* ワークフローペイロード。これは 1 つ以上のページにできます。
+* オプションで、ユーザーのインボックス内のワークフローインスタンスを識別するのに役立つタイトルです。
+* ワークフローのペイロード。1 つ以上のページを指定できます。
 
-ワークフローは以下のものから開始できます。
+ワークフローは、次の場所から開始できます。
 
 * [サイトコンソール](#starting-a-workflow-from-the-sites-console)。
 * [ページの編集中に「ページ情報](#starting-a-workflow-from-the-page-editor)」から。
@@ -38,14 +36,14 @@ ht-degree: 100%
 >
 >関連トピック：
 >
->* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md)
+>* [DAM アセットにワークフローを適用する方法](/help/assets/assets-workflow.md).
 >* [プロジェクトワークフローの操作](/help/sites-authoring/projects-with-workflows.md)。
 >
 
 
 >[!NOTE]
 >
->AEM 管理者は[他のいくつかの方法を使用してワークフローを開始できます](/help/sites-administering/workflows-starting.md)。
+>AEM管理者が [他のいくつかの方法でワークフローを開始](/help/sites-administering/workflows-starting.md).
 
 ## Sites コンソールからのワークフローの開始 {#starting-a-workflow-from-the-sites-console}
 
@@ -54,9 +52,9 @@ ht-degree: 100%
 * [サイトツールバーの「作成」オプション](#starting-a-workflow-from-the-sites-toolbar)。
 * [サイトコンソールのタイムラインレール](#starting-a-workflow-from-the-timeline)。
 
-両方の場合で、以下の作業が必要です。
+どちらの場合も、次の操作が必要です。
 
-* [ワークフローの作成ウィザードでワークフロー詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)
+* [ワークフローを作成ウィザードでワークフローの詳細を指定します](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### Sites ツールバーからのワークフローの開始 {#starting-a-workflow-from-the-sites-toolbar}
 
@@ -68,7 +66,7 @@ ht-degree: 100%
 
    ![screen_shot_2019-03-06at121237pm](assets/screen_shot_2019-03-06at121237pm.png)
 
-1. **ワークフローの作成**&#x200B;ウィザードは、[ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)するために役立ちます。
+1. この **ワークフローを作成** ウィザードが役立ちます [ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### タイムラインからのワークフローの開始 {#starting-a-workflow-from-the-timeline}
 
@@ -79,32 +77,32 @@ ht-degree: 100%
 
    ![screen-shot_2019-03-05at120026](assets/screen-shot_2019-03-05at120026.png)
 
-1. **ワークフローの作成**&#x200B;ウィザードは、[ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard)するために役立ちます。
+1. この **ワークフローを作成** ウィザードが役立ちます [ワークフローの詳細を指定](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### ワークフローの作成ウィザードでのワークフローの詳細の指定 {#specifying-workflow-details-in-the-create-workflow-wizard}
 
-**ワークフローの作成**&#x200B;ウィザードは、ワークフローを選択し、必要な詳細を指定するために役立ちます。
+この **ワークフローを作成** ウィザードは、ワークフローを選択し、必要な詳細を指定するのに役立ちます。
 
-**ワークフローの作成**&#x200B;ウィザードを以下のいずれかから開いた後
+を開いた後 **ワークフローを作成** ウィザードを次のいずれかから選択します。
 
 * [サイトツールバーの「作成」オプション](#starting-a-workflow-from-the-sites-toolbar)。
 * [サイトコンソールのタイムラインレール](#starting-a-workflow-from-the-timeline)。
 
-以下のように詳細を指定できます。
+次の詳細を指定できます。
 
-1. **プロパティ**&#x200B;手順で、ワークフローの基本オプションを次のように定義します。
+1. 内 **プロパティ** 手順では、ワークフローの基本オプションを定義します。
 
    * **ワークフローモデル**
    * **ワークフロータイトル**
 
-      * このインスタンスのタイトルを指定して、後の段階でそれを識別するために役立てることができます。
+      * このインスタンスのタイトルを指定して、後の段階で識別しやすくすることができます。
 
-   ワークフローモデルによっては、以下のオプションも使用できます。これらにより、ペイロードとして作成されたパッケージは、ワークフローが完成した後も維持されます。
+   ワークフローモデルに応じて、次のオプションも使用できます。 これにより、ペイロードとして作成されたパッケージを、ワークフローの完了後も保持できます。
 
    * **ワークフローパッケージを維持**
    * **パッケージタイトル**
 
-      * 識別を容易にするために、パッケージのタイトルを指定できます。
+      * 識別に役立つように、パッケージのタイトルを指定できます。
    >[!NOTE]
    >
    >ワークフローが[マルチリソースサポート](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support)のために設定されており、複数のリソースが選択されている場合は、**ワークフローパッケージを維持**&#x200B;オプションが使用できます。
@@ -125,9 +123,9 @@ ht-degree: 100%
          * 変更されたページのみを含める。
          * 既に公開済みのページのみを含める。
 
-         指定された子は、ワークフローが適用されるリソースのリストに追加されます。
+         指定した子は、ワークフローが適用されるリソースのリストに追加されます。
 
-      * 「**選択範囲を削除**」は、そのリソースをワークフローから削除します。
+      * **選択項目を削除** をクリックして、そのリソースをワークフローから削除します。
 
    ![wf-53](assets/wf-53.png)
 
@@ -139,6 +137,6 @@ ht-degree: 100%
 
 ## ページエディターからのワークフローの開始 {#starting-a-workflow-from-the-page-editor}
 
-ページの編集中にツールバーから「**ページ情報**」を選択できます。ドロップダウンメニューに「**ワークフローで開始**」オプションがあります。これによりダイアログが開き、必要なワークフローと必要な場合はタイトルを指定できます。
+ページの編集時に、 **ページ情報** をクリックします。 ドロップダウンメニューにはオプションがあります **ワークフローで開始**. これによりダイアログが開き、必要なワークフローと必要な場合はタイトルを指定できます。
 
 ![wf-54](assets/wf-54.png)

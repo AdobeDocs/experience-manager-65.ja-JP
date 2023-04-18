@@ -1,18 +1,16 @@
 ---
 title: AEM Mobile On-Demand
-seo-title: AEM Mobile On-Demand
-description: このページでは、AEM（Adobe Experience Manager）での On-Demand Services アプリの開発の概要について説明します。このページでは、アプリの開発者に関連するトピックについて説明します。
-seo-description: Follow this page as a starting point for developing On-Demand Services app with AEM (Adobe Experience Manager). The page covers the topics that are relevant to a developer of an app.
+description: このページでは、AEM(Adobe Experience Manager) を使用した On-Demand Services アプリの開発の出発点として説明します。 このページでは、アプリの開発者に関連するトピックについて説明します。
 uuid: 35b64823-9451-44bf-b254-3b6767f0d109
 contentOwner: JYOTIKA SYAL
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 discoiquuid: cc97a926-d893-46a9-8aea-b56cbee5df01
 exl-id: a2134afd-4c0e-4a93-ac58-013b98fd9a09
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 41%
+ht-degree: 5%
 
 ---
 
@@ -20,11 +18,11 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
 >[!NOTE]
 >
->AEMをコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/jp/digital-publishing-solution/topics.html).
+>AEMをコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
@@ -34,7 +32,7 @@ ht-degree: 41%
 
 An **AEM developer** を有効にするために、カスタム web テンプレートおよびコンポーネントを拡張および作成します。 *AEM オーサー* 美しく魅力的なモバイルエクスペリエンスを作成します。 これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（任意のリモートサーバー）の両方をオムニチャネルサービスエンドポイントに通信します。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Marketing Cloudとの統合を含む、豊富で関連性の高いエクスペリエンスを作成します。
 
-AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作成するときに以下のタスクを担当します。
+AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを実行します。
 
 * [アプリのテンプレートとコンポーネント](/help/mobile/app-templates-and-components1.md)
 * [モバイルとコンテンツ同期](/help/mobile/mobile-ondemand-contentsync.md)
@@ -50,5 +48,5 @@ AEM 開発者は、AEM Mobile On-Demand Services を使用してアプリを作�
 
 管理者および作成者の役割と責任について詳しくは、以下のリソースを参照してください。
 
-* [AEM Mobile On-demand Services アプリの AEM コンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
-* [AEM Mobile On-demand Services を使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)
+* [AEM Mobile On-demand Servicesアプリ用AEMコンテンツのオーサリング](/help/mobile/mobile-apps-ondemand.md)
+* [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)
