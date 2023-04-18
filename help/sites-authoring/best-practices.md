@@ -1,8 +1,6 @@
 ---
-title: ベストプラクティス
-seo-title: Best Practices
-description: AEM を可能な限り効率的かつ効果的に使用する方法です
-seo-description: How to use AEM in the most efficient and most effective way possible
+title: AEMオーサリングを使用する際のベストプラクティス
+description: 可能な限り効率的かつ最も効果的にAEMを使用する方法。
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +8,18 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 100%
+source-wordcount: '291'
+ht-degree: 58%
 
 ---
 
 # ベストプラクティス {#best-practices}
 
-オーサリングのベストプラクティスでは、AEM を可能な限り効率的かつ効果的に使用する方法を説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
+オーサリングのベストプラクティスでは、AEMをできるだけ効率的かつ効果的に使用する方法について説明しています。 このトピックのリストは、AEMの様々な領域で増えています。
 
-次の領域について、ベストプラクティスに関するドキュメントが提供されています。
+次の領域に、ベストプラクティスに関するドキュメントが用意されています。
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -33,7 +31,7 @@ ht-degree: 100%
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-以降の表では、特定のドキュメントの説明とリンクを示します。
+以下の表では、特定のドキュメントについて説明し、リンクします。
 
 ## Assets {#assets}
 
@@ -49,10 +47,10 @@ Dynamic Media 機能と Dynamic Media Classic の統合を含む Assets に関�
   <tr>
    <td>ビデオエンコーディング</td>
    <td><a href="/help/assets/video.md#best-practices-for-encoding-videos">エンコーディングのベストプラクティス</a></td>
-   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを示します。</td>
+   <td>ソースビデオファイルのエンコーディングに関するベストプラクティスのヒントを説明します。</td>
   </tr>
   <tr>
-   <td>ダイナミックイメージング</td>
+   <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging のベストプラクティス</a></td>
    <td><p>Dynamic Media 機能を使用している場合や、Dynamic Media Classic と統合している場合に、最良の結果を得るために画像をシャープにする方法と、画像の品質を最適化する方法について説明します。 </p> </td>
   </tr>
@@ -64,9 +62,9 @@ Dynamic Media 機能と Dynamic Media Classic の統合を含む Assets に関�
  </tbody>
 </table>
 
-## サイト {#sites}
+## Sites {#sites}
 
-Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
 
 |  |  |  |
 |---|---|---|
@@ -77,5 +75,5 @@ Web サイトコンテンツの管理と作成には、次に示すいくつか�
 
 |  |  |  |
 |---|---|---|
-| アダプティブフォーム | [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) | アダプティブフォームの設定、オーサリングおよびカスタマイズのベストプラクティスについて説明します。 |
-| HTML5 のフォーム | [HTML5 フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) | HTML5 フォームのレイアウトおよびデザインの作業でのベストプラクティスについて説明します。 |
+| アダプティブフォーム | [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) | アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。 |
+| HTML5 のフォーム | [Forms5 を設計する際のベストプラクティスHTML](/help/forms/using/best-practices-for-html5-forms.md) | レイアウト 5 フォームのレイアウトとデザインに関するベストプラクティスについてHTMLします。 |

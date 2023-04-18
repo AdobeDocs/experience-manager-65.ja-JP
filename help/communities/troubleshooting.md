@@ -1,8 +1,6 @@
 ---
-title: トラブルシューティング
-seo-title: Troubleshooting
+title: コミュニティのトラブルシューティング
 description: 既知の問題を含むコミュニティのトラブルシューティング
-seo-description: Troubleshooting Community including Known Issues
 uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,28 +8,28 @@ topic-tags: developing
 content-type: reference
 discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 82%
+source-wordcount: '359'
+ht-degree: 1%
 
 ---
 
-# トラブルシューティング {#troubleshooting}
+# コミュニティのトラブルシューティング {#troubleshooting}
 
-ここでは、一般的な問題および既知の問題について説明します。
+この節では、コミュニティのトラブルシューティングに関する一般的な問題と既知の問題について説明します。
 
 ## 既知の問題 {#known-issues}
 
-### ディスパッチャーの再取得でエラーが発生する {#dispatcher-refetch-fails}
+### Dispatcher の再取得に失敗 {#dispatcher-refetch-fails}
 
-ディスパッチャー 4.1.5 を新しいバージョンの Jetty と共に使用する場合、再取得によって、要求がタイムアウトするまで待機した後、「リモートサーバーから応答を受信できません」というエラーが発生することがあります。
+新しいバージョンの Jetty で Dispatcher 4.1.5 を使用する場合、リフェッチを実行すると、リクエストがタイムアウトするのを待った後に「リモートサーバーから応答を受け取れません」となる場合があります。
 
-ディスパッチャー 4.1.6 以降を使用すると、この問題は解決します。
+Dispatcher 4.1.6 以降を使用すると、この問題が解決します。
 
 ### CQ 5.4 からのアップグレード後にフォーラム投稿にアクセスできない {#cannot-access-forum-post-after-upgrading-from-cq}
 
-CQ 5.4 でフォーラムが作成され、トピックが投稿された後、サイトが AEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページに次のエラーが表示されることがあります。
+フォーラムが CQ 5.4 で作成され、トピックが投稿された後で、サイトがAEM 5.6.1 以降にアップグレードされた場合、既存の投稿を表示しようとすると、ページで次のエラーが発生する場合があります。
 
 無効なパターン文字「a」は次に対する要求を処理できません： `/content/demoforums/forum-test.html` このサーバーとログには次の情報が含まれます。
 
@@ -42,30 +40,30 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.call(DefaultSlingScri
 at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScript.java:171)
 ```
 
-この問題は、com.day.cq.commons.date.RelativeTimeFormat の形式文字列が 5.4 と 5.5 の間に変更され、「ago」を表す「a」が許可されなくなったというものです。
+問題は、com.day.cq.commons.date.RelativeTimeFormat の書式文字列が 5.4 から 5.5 に変更され、「ago」の「a」は受け入れられなくなったことです。
 
 したがって、RelativeTimeFormat() API を使用するコードは、以下を変更する必要があります。
 
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * To: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-障害は、オーサー環境とパブリッシュ環境で異なります。オーサー環境では、エラーは表示されず、フォーラムトピックが表示されないだけです。パブリッシュ環境では、ページにエラーが表示されます。
+失敗は、オーサーとパブリッシュで異なります。 オーサー環境では、警告なく失敗し、フォーラムトピックを表示しません。 公開すると、ページ上でエラーがスローされます。
 
-詳しくは、[com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
+詳しくは、 [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
-## 一般的な問題 {#common-concerns}
+## 一般的な懸念事項 {#common-concerns}
 
-### ログ内の警告：Handlebars の廃止 {#warning-in-logs-handlebars-deprecated}
+### ログ内の警告：Handlebars は非推奨 {#warning-in-logs-handlebars-deprecated}
 
-起動時（初回ではなく、2 回目以降のすべての起動時）に、次の警告がログに表示されることがあります。
+起動時（1 日ではなく、その後のすべて）に、次の警告がログに表示される場合があります。
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-この警告は、 `jknack.handlebars.Handlebars`、使用元 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)には、独自の i18n ヘルパーユーティリティが付属しています。 起動時に、AEM 固有の [i18n ヘルパー](handlebars-helpers.md#i-n)に置き換えられます。この警告は、既存のヘルパーのオーバーライドを確認するためにサードパーティのライブラリによって生成されます。
+この警告は、 `jknack.handlebars.Handlebars`、使用元 [SCF](scf.md#handlebarsjavascripttemplatinglanguage)には、独自の i18n ヘルパーユーティリティが付属しています。 起動時に、AEM固有の [i18n ヘルパー](handlebars-helpers.md#i-n). この警告は、既存のヘルパーの上書きを確認するために、サードパーティのライブラリによって生成されます。
 
-### ログ内の警告：OakResourceListener の processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
+### ログ内の警告：OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
-ソーシャルコミュニティの多数のフォーラムトピックを投稿すると、OakResourceListener の processOsgiEventQueue から大量の警告および情報ログが生成されることがあります。
+多数の Social Communities フォーラムトピックを投稿すると、OakResourceListener processOsgiEventQueue からの警告と情報ログが大量に発生する可能性があります。
 
 これらの警告は無視しても問題ありません。
 
@@ -78,9 +76,9 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 23.04.2014 14:21:18.990 *WARN* [pool-5-thread-3] org.apache.sling.jcr.resource.internal.OakResourceListener processOsgiEventQueue: Resource at /var/replication/data/1f799fb4-0aeb-4660-aadb-705657f16048/b9/b91f1690-87e8-41d8-a78e-cd2259f837c8/jcr:content not found, which is not expected for an added or modified node
 ```
 
-### ログ内のエラー：IndexElementFactory の NoClassDefFoundError {#error-in-logs-noclassdeffounderror-for-indexelementfactory}
+### ログのエラー：IndexElementFactory の NoClassDefFoundError {#error-in-logs-noclassdeffounderror-for-indexelementfactory}
 
-AEM 5.6.1 GA を最新の cq-socialcommunities-pkg-1.4.x または AEM 6.0 にアップグレードすると、ある状態での起動時にログファイルにエラーが記録されますが、再起動時にエラーは表示されず、自動的に解決されます。
+AEM 5.6.1 GA を最新の cq-socialcommunities-pkg-1.4.x またはAEM 6.0 にアップグレードすると、起動時にログファイルにエラーが表示され、再起動時にエラーが見つからないことを示す条件が解決されます。
 
 ```xml
 14.11.2013 20:52:39.453 ERROR [Apache Sling JCR Resource Event Queue Processor for path '/'] com.adobe.cq.social.storage.index.impl.IndexService Error occurred while processing event java.util.ConcurrentModificationException

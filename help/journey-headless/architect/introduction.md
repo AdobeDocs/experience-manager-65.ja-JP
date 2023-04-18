@@ -1,11 +1,11 @@
 ---
-title: AEM ヘッドレスコンテンツアーキテクトジャーニー
+title: Adobe Experience Managerヘッドレスコンテンツアーキテクトジャーニー
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをモデル化する方法を紹介します。
 exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 100%
+source-wordcount: '704'
+ht-degree: 99%
 
 ---
 

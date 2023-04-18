@@ -1,8 +1,6 @@
 ---
-title: ベストプラクティス
-seo-title: Best Practices
-description: Adobe のエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました
-seo-description: Adobe Engineering and Consulting teams have developed a comprehensive set of best practices for AEM developers
+title: AEM開発者向けのベストプラクティス
+description: アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +8,18 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: ht
-source-wordcount: '463'
-ht-degree: 100%
+source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 54%
 
 ---
 
 # ベストプラクティス{#best-practices}
 
-## 開発者向けのベストプラクティス - はじめに {#best-practices-for-developers-getting-started}
+## 開発者向けのベストプラクティス — はじめに {#best-practices-for-developers-getting-started}
 
-アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。Adobe の開発者は、これらのベストプラクティスに沿って、中核となる AEM 製品の更新やお客様の実装に合わせたカスタムコードを開発しています。
+アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。Adobe開発者は、コアAEM製品のアップデートと顧客実装のカスタマーコードを開発する際に、これらのベストプラクティスに従います。
 
 AEM 開発プロジェクトを開始する前に、まず、次のベストプラクティスを確認してください。
 
@@ -42,9 +40,9 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [Communities](/help/sites-developing/best-practices.md#communities)
 * [ツール／HTL](/help/sites-developing/best-practices.md#tooling-htl)
 
-具体的なドキュメントについては、後述の表に説明とリンクを示します。
+以下の表では、特定のドキュメントについて説明し、リンクします。
 
-管理、デプロイとメンテナンスまたはオーサリングのベストプラクティスについては、次のページを参照してください。
+管理、デプロイ、メンテナンスまたはオーサリングに関するベストプラクティスについては、次のいずれかを参照してください。
 
 * [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
 * [オーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
@@ -52,29 +50,29 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 
 ## Sites {#sites}
 
-Web サイトコンテンツの管理と作成には、次に示すいくつかのベストプラクティスがあります。
+Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
 
 <table>
  <tbody>
   <tr>
-   <td>標準のタッチ操作対応 UI の基本となる概念</td>
+   <td>標準のタッチ操作対応 UI の背後にある理論の一部。</td>
    <td><p><a href="/help/sites-developing/touch-ui-concepts.md">タッチ操作対応 UI：概念</a></p> <p><a href="/help/sites-developing/touch-ui-structure.md">タッチ操作対応 UI：構造</a></p> </td>
    <td>タッチ操作対応 UI の概念および構造の概要を説明しています。</td>
   </tr>
   <tr>
    <td>タッチ対応 UI：コンソールのカスタマイズ </td>
    <td><a href="/help/sites-developing/customizing-consoles-touch.md">タッチ操作対応 UI のコンソールのカスタマイズ</a></td>
-   <td>タッチ操作対応 UI のコンソールを拡張するための最適な方法を説明しています。</td>
+   <td>このドキュメントでは、タッチ操作対応 UI のコンソールを拡張する最適な方法について説明します。</td>
   </tr>
   <tr>
-   <td>タッチ操作対応 UI：ページオーサリングのカスタマイズ</td>
+   <td>タッチ操作対応 UI:ページオーサリングのカスタマイズ</td>
    <td><a href="/help/sites-developing/customizing-page-authoring-touch.md">タッチ操作対応 UI のページオーサリングのカスタマイズ</a></td>
-   <td>タッチ操作対応 UI のページオーサリングを拡張する方法を説明しています。</td>
+   <td>タッチ操作対応 UI 用にページオーサリングを拡張する方法について説明します。</td>
   </tr>
   <tr>
    <td>ワークフロー</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">ワークフローの作成と拡張</a></td>
-   <td><p>ワークフローを利用すると、Adobe Experience Manager（AEM）のアクティビティを自動化し、AEM 環境内でおこなわれる大量の処理を表現できるので、ワークフローを導入する際は入念にプランを立てることを強くお勧めします。</p> </td>
+   <td><p>ワークフローを使用すると、Adobe Experience Manager(AEM) のアクティビティを自動化し、AEM環境で発生する大量の処理を表すことができるので、ワークフローの実装を慎重に計画することを強くお勧めします。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -92,11 +90,11 @@ Communities のベストプラクティスは、こちらで説明していま�
 
 ## ツール／HTL {#tooling-htl}
 
-HTML Template Language（HTL）は、AEM 6.0 で導入された新しい HTML テンプレートシステムです。JSP や ESP に代わって、AEM ではこのテンプレートシステムが推奨されます。
+HTMLHTML言語 (HTL) は、AEM 6.0 で導入された新しいテンプレートシステムです。JSP と ESP に代わり、AEMで推奨されるテンプレートシステムになります。
 
 |  |  |  |
 |---|---|---|
-| HTL の概要 | [HTL の概要と構文](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | このドキュメントでは、HTL とは何か、HTL に移行する方法、サンプルプロジェクト、構文、式およびステートメントを説明しています。 |
+| HTL の概要 | [HTL の概要と構文](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) | このドキュメントでは、HTL の概要、HTL への移行方法、サンプルプロジェクト、構文、式、ステートメントについて説明します |
 | Java での API の使用 | [HTL Java Use-API](https://helpx.adobe.com/jp/experience-manager/htl/using/use-api.html) | HTL Java Use-API を使用すると、HTL ファイルからカスタム Java クラスのヘルパーメソッドへのアクセスが可能になります。 |
 
 >[!NOTE]
