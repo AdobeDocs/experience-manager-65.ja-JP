@@ -1,16 +1,17 @@
 ---
 title: AEM での GraphiQL IDE の使用
 description: Adobe Experience Manager で GraphiQL IDE を使用する方法について説明します。
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
-workflow-type: tm+mt
+exl-id: d4b01485-658b-4245-b2e6-04be8abc8ecf
+source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
+workflow-type: ht
 source-wordcount: '792'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 # GraphiQL IDE の使用 {#graphiql-ide}
 
-標準の実装 [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE は、Adobe Experience Manager(AEM) のGraphQL API で使用できます。
+標準の [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE の実装は、Adobe Experience Manager（AEM） の GraphQL API で使用できます。
 
 >[!NOTE]
 >
@@ -90,7 +91,7 @@ ht-degree: 94%
 
 また、GraphiQL IDE では、[クエリ変数](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables)を管理することもできます。
 
-次に例を示します。
+例：
 
 ![GraphQL 変数](assets/cfm-graphqlapi-03.png "GraphQL 変数")
 
@@ -131,7 +132,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## 永続クエリの公開 {#publishing-persisted-queries}
 
-次を選択したら、 [持続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md) リスト（左パネル）から、 **公開** および **非公開** アクション。 これにより、パブリッシュ環境（`dev-publish` など）に対してアクティブ化され、テスト時にアプリケーションから簡単にアクセスできるようになります。
+リスト（左パネル）から [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)を選択したら、「**公開**」アクションと「**非公開**」アクションを使用できます。これにより、パブリッシュ環境（`dev-publish` など）に対してアクティブ化され、テスト時にアプリケーションから簡単にアクセスできるようになります。
 
 >[!NOTE]
 >
@@ -149,7 +150,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
   >The target environment might need adjusting, depending on your requirements.
 -->
 
-次に例を示します。
+例：
 
 `http://localhost:4502/graphql/execute.json/global/article-list-01`
 
