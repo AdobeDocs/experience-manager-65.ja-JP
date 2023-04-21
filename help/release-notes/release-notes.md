@@ -2,10 +2,11 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+exl-id: fc7d3727-7cd4-47a4-8e75-840f9f9c0e62
+source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
 workflow-type: tm+mt
 source-wordcount: '2986'
-ht-degree: 39%
+ht-degree: 85%
 
 ---
 
@@ -20,88 +21,88 @@ ht-degree: 39%
 | バージョン | 6.5.16.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | タイプ | サービスパックのリリース |
 | 日付 | 2023 年 2 月 23 日木曜日 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]be/packages/cq650/servicepack/aem-service-pkg-6.5.16.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| ダウンロード URL | [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[…]be/packages/cq650/servicepack/aem-service-pkg-6.5.16.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 ## [!DNL Experience Manager] 6.5.16.0 の内容 {#what-is-included-in-aem-6516}
 
-[!DNL Experience Manager] 6.5.16.0 には、2019年4月の 6.5 リリースの公開当初にリリースされた新機能、お客様から要望のあった主な機能強化およびパフォーマンスや安定性、セキュリティの向上が含まれています。[このサービスパック](#install)を [!DNL Experience Manager] 6.5 にインストール<!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.16.0 には、2019 年 4 月の 6.5 初期公開以降にリリースされた新機能、お客様から要望のあった主な機能強化、パフォーマンスや安定性、セキュリティの向上が含まれています。[このサービスパック](#install)を [!DNL Experience Manager] 6.5 にインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- Some of the key features and improvements are the following:
 
 * _REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
-Dynamic Mediaの主な改善点は次のとおりです。
+Dynamic Media の主な改善点は次のとおりです。
 
-Dynamic Mediaビデオ配信（CMAF を使用）でのアダプティブビットレートストリーミングに対して、新しいプロトコル DASH（HTTP 経由でのダイナミックアダプティブストリーミング）のサポートが開始されました。 [共通メディアアプリケーション形式] 有効 )。
+CMAF（[共通メディアアプリケーション形式]）が有効化された Dynamic Media ビデオ配信で、アダプティブビットレートストリーミングをサポートする新しいプロトコル DASH（HTTP での動的アダプティブストリーミング）が開始されました。
 
-* アダプティブストリーミング (DASH/HLS) により、エンドユーザーがビデオを視聴する際の操作性が向上します。
-* DASH はアダプティブビデオストリーミングの国際標準プロトコルで、業界で広く採用されています。
+* アダプティブストリーミング（DASH/HLS）により、エンドユーザーがビデオを視聴する際の操作性が向上します。
+* DASH はアダプティブビデオストリーミングの国際標準プロトコルであり、業界で広く採用されています。
 * アジア太平洋および北米で現在利用可能（サポートチケットを通じて有効化）。ヨーロッパ中東アフリカで間もなく登場する
 
-詳しくは、 [アカウントで DASH を有効にする](/help/assets/video.md#enable-dash).
+詳しくは、「[アカウントでの DASH の有効化](/help/assets/video.md#enable-dash)」を参照してください。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
 ## [!DNL Assets] {#assets-6516}
 
-* Connected Assets:リモート DAM の画像に対してスマート切り抜きオプションを有効にし、画像をフォルダーにアップロードし、フォルダーをローカルサイトに同期した場合、ローカルの Sites デプロイメントではフォルダーが開きません。 （NPR-39912）
-* コレクションを名前で並べ替えると、リスト表示が適切に機能しない (ASSETS-19401)
-* サイズの大きいメディアファイル (JPEG) がコレクションにアップロードされると、Experience Managerは応答を停止します。 （ASSETS-19387）
-* コンテンツツリーペインでは、アセットの場所が適切にレンダリングされないので、表示されるアセット名が正しくありません。 （ASSETS-18870）
-* リンクを使用してコレクションを共有する際、URL 内のデータが、カード表示とリスト表示のシャッフルで一致しません。 （ASSETS-18758）
-* フォルダータイプに対してフィルターを使用してオムニサーチを実行すると、検索結果に一貫性がなくなります。 （ASSETS-18227）
-* この `dam:size` プロパティがXMPの書き戻し後に更新されないので、誤った情報がから返されます。 `/platform/path/to/asset.jpg;resource=metadata` API （ASSETS-17631）
-* すべてのリソースインスタンスで閉じられていないExperience Managerリゾルバーです。 （ASSETS-16904）
-* アセットのバージョンを作成できません ( `create` および `modify` 権限。 （ASSETS-15956）
-* この `move` アセットを別のポイントに移動する際に、ボタンがランダムに無効になります。 （ASSETS-14889）
-* スクリーンリーダーは、見出しを識別できません。見出しタグ内ではテキストが定義されず、一般的なテキストとして定義されています。 （ASSETS-6924）
-* 画像の下の代替テキストは必須ではありませんが、画像の下に表示されるテキストは、 `Type` 属性。 （ASSETS-6915）
+* 接続されたアセット：リモート DAM の画像に対してスマート切り抜きオプションを有効にし、画像をフォルダーにアップロードしてフォルダーをローカルサイトに同期すると、ローカルサイトのデプロイメントでフォルダーが開きません。（NPR-39912）
+* コレクションを名前で並べ替えると、リスト表示が適切に機能しません。（ASSETS-19401）
+* サイズの大きいメディアファイル（JPEG）がコレクションにアップロードされると、Experience Manager が応答を停止します。（ASSETS-19387）
+* コンテンツツリーペインでは、アセットの場所が適切にレンダリングされないので、表示されるアセット名が正しくありません。（ASSETS-18870）
+* リンクを使用してコレクションを共有する際、カード表示とリスト表示を入れ替えるとURL 内のデータが一致しません。（ASSETS-18758）
+* フォルダータイプに対してフィルターを使用してオムニサーチを実行すると、検索結果に一貫性がなくなります。（ASSETS-18227）
+* `dam:size` プロパティが XMP の書き戻し後に更新されないので、`/platform/path/to/asset.jpg;resource=metadata` API から誤った情報が返されます。（ASSETS-17631）
+* すべての Experience Manager インスタンスでリソースリゾルバーが閉じられません。（ASSETS-16904）
+* `create` および `modify` の権限が割り当てられていても、アセットのバージョンを作成できません。（ASSETS-15956）
+* アセットを別のポイントに移動する際に、`move` ボタンがランダムに無効になります。（ASSETS-14889）
+* 見出しタグ内でテキストが定義されず、一般的なテキストとして定義されるので、スクリーンリーダーが見出しを識別できません。（ASSETS-6924）
+* 画像の下の代替テキストは必須ではありませんが、画像の下に表示されるテキストが `Type` 属性で繰り返されます。（ASSETS-6915）
 
 
 ## [!DNL Assets] - [!DNL Dynamic Media] {#dm-6516}
 
-* フォーム要素にラベルが含まれていません。 NVDA や JAWS などのスクリーンリーダーでは、フォームラベル情報が正しくお知らせされません。 （CQ-4344078）
-* ドロップダウンが `Escape` キーは、キーボードで使用される。 （CQ-4344077）
-* 無効な入力が与えられた後にインラインエラー修正候補に表示される情報アイコン（「i」という文字）は、キーボードを使用してアクセスできません。 （CQ-4344076）
-* `getManifestURI` JCR プロパティが次のように読み取られたので、null を返します。 `toString` の代わりに `getString`. （ASSETS-18674）
-* SmartCrop ビデオコンポーネントが正しく動作していません。 コンポーネントは、ストリーミングではなく再生を実行しており、VTT 呼び出しが失敗し、404 エラーが発生します。 （ASSETS-18468）
-* 選択 **[!UICONTROL プロパティ]** アセットのビューアページで、null ポインターの例外が発生する。 （ASSETS-18420）
-* [!DNL Experience Manager] 次の機能を含む DASH ストリーミングのユーザインターフェイスが変更されました。
-   * ビデオプロファイルエディターに「 CMAF (Common Media Application Format) 」フィールドが表示される。
+* フォーム要素にラベルが含まれていません。NVDA や JAWS などのスクリーンリーダーでは、フォームのラベル情報が正しく通知されません。（CQ-4344078）
+* `Escape` キーをキーボードで使用すると、ドロップダウンが閉じません。（CQ-4344077）
+* 無効な入力が行われた後にインラインエラー候補に表示される情報アイコン（「i」という文字）は、キーボードを使用してアクセスできません。（CQ-4344076）
+* JCR プロパティが `getString` ではなく `toString` と読み取られたので、`getManifestURI` が null を返します。（ASSETS-18674）
+* SmartCrop ビデオコンポーネントが正しく動作していません。コンポーネントがストリーミングではなく再生を実行しており、VTT 呼び出しが失敗して 404 エラーが発生します。（ASSETS-18468）
+* アセットの閲覧者ページで「**[!UICONTROL プロパティ]**」を選択すると、null ポインターの例外が発生します。（ASSETS-18420）
+* [!DNL Experience Manager] のユーザインターフェイスが、次の機能を含む DASH ストリーミング用に変更されました。
+   * ビデオプロファイルエディターに「CMAF（共通メディアアプリケーション形式）」フィールドが表示されます。
    * ビデオのアップロードプロセスでは、CMAF フラグが送信されます。
-   * オプション **[!UICONTROL auto]**, **[!UICONTROL hls]**、および **[!UICONTROL ダッシュ]** がビューアプリセットエディターの再生ドロップダウンリストで使用できるようになりました。 **[!UICONTROL 動作]** タブをクリックします。
+   * **[!UICONTROL 自動]**、**[!UICONTROL HLS]**、**[!UICONTROL ダッシュ]**&#x200B;の各オプションを、閲覧者プリセットエディターの「**[!UICONTROL 動作]**」タブの再生ドロップダウンリストで使用できるようになりました。
 （ASSETS-17428）
-* ナビゲーションで、 **[!UICONTROL Assets]** > **[!UICONTROL ファイル]** > **[!UICONTROL 作成]** > **[!UICONTROL カルーセルセット]**&#x200B;の場合、画像アイコンは「スライド 1」のテキスト文字列と重なります。 （ASSETS-18578）
-* 非公開のアセットが再び公開される。 （ASSETS-16428）
-* Experience Manager作成者が読み込みの問題によりダウンし、合成アラートの作成を促すメッセージが表示されました。 （ASSETS-15937）
-* Dynamic Mediaの一般設定ページに、未翻訳のエラーメッセージが表示されます `Failed to fetch data` が表示されます。 （ASSETS-15617）
+* ナビゲーションで、**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**／**[!UICONTROL 作成]**／**[!UICONTROL カルーセルセット]**&#x200B;を選択すると、画像アイコンが「スライド 1」のテキスト文字列と重なります。（ASSETS-18578）
+* 未公開のアセットが再び公開されます。（ASSETS-16428）
+* Experience Manager 作成者が読み込みの問題によりダウンし、合成アラートの作成を促すメッセージが表示されます。（ASSETS-15937）
+* Dynamic Media の一般設定ページに、未翻訳のエラーメッセージ `Failed to fetch data` が表示されます。（ASSETS-15617）
 
 ## [!DNL Forms] {#forms-6516}
 
-### [!DNL Forms] 主な機能 {#forms-features-6516}
+### [!DNL Forms] の主な機能 {#forms-features-6516}
 
-* [ヘッドレスアダプティブForms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) 開発者は、従来のグラフィカルユーザーインターフェイスを使用するのではなく、API を使用してアクセスし、操作できるインタラクティブフォームを作成、公開、管理できます。
+* [ヘッドレスアダプティブフォーム](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)を使用すると、デベロッパーは、従来のグラフィカルユーザーインターフェイスではなく、API を介してアクセスおよび操作できるインタラクティブなフォームを作成、公開、管理できます。
 
-* [アダプティブFormsコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、24 個のオープンソースの BEM 準拠コンポーネントのセットです。 これらのコンポーネントはオープンソースで、開発者は、組織の特定のニーズに合わせて、これらのコンポーネントを簡単にカスタマイズおよび拡張できます。 カスタマイズする既存のスキルを持つすべてのユーザー [WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=en) では、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
+* [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja#features)は、Adobe Experience Manager WCM コアコンポーネントの基盤上に構築された、BEM に準拠した 24 個のオープンソースからなるコンポーネント群です。これらのコンポーネントはオープンソースなので、デベロッパーは組織の特定のニーズに合わせて簡単にカスタマイズおよび拡張できます。[WCM コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=ja)をカスタマイズできる既存のスキルがあれば、これらのコンポーネントを簡単にカスタマイズおよびスタイル設定できます。
 
-* OSGi 上のReader拡張サービスに、Adobe Acrobat ReaderでのデータのインポートまたはエクスポートをおこなうPDFに対する使用権限のインポートとエクスポートを可能にする個別のオプションが追加されました。 （NPR-39909）
+* OSGi の Reader Extension サービスには、Adobe Acrobat Reader でデータをインポートまたはエクスポートするために、PDF のインポートおよびエクスポートの使用権限を有効化する個別のオプションが追加されました。（NPR-39909）
 
-### [!DNL Forms] 修正 {#forms-fixes-6516}
+### [!DNL Forms] の修正 {#forms-fixes-6516}
 
 * を使用する場合、 **タスクを割り当て** 割り当てられたタスクに関する通知を送信する手順では、割り当てられた個人に 1 つではなく 2 つの電子メールが送信されます。 （NPR-40078）
-* ユーザーがテーブルヘッダーを非表示にした場合、以前に設定した列幅が未設定になり、すべての列が同じ幅を保持します。 （NPR-40063）
-* 管理者ユーザーのデフォルトのパスワードを `admin`、 `Prepare Adobe Experience Manager Server For DSC deployment` AEM Forms JEE Service Pack でエラーが発生したことを確認します。 (NPR-40062)、(NPR-39387)
-* OutputService API と AssemblerService API が、PDFフォームをPDF/A に変換できない。(NPR-39990)
-* AssemblerService はPDF/A にPDFを変換できません。ユーザーがPDFをPDF/A に変換すると、次のエラーが発生します。 `PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Summary" ignoreUnusedResources="true" allowCertificationSignatures="true"> <Violation count="6" key="PDFA_CS_001_NOT_DEVICE_INDEPENDENT" description="ColorSpace is not device independent`. （NPR-39956）
-* GuideSubmitServlet API 呼び出しのサーバー側検証が失敗した場合、クライアントに送信される応答ではエラーは返されません。 （NPR-39925）
-* Windows サーバーでAEM 6.5.15.0 Service Pack にアップグレードした後、複数のエラーメッセージが表示され、電子メールサービスが機能しません。（NPR-39919）
-* AEM 6.5.14.0にアップグレードし、importData サービスを使用してPDFを XML と結合すると、次のエラーが発生します。 `Caused by: java.lang.NoSuchMethodError: com.adobe.xfa.form.FormModel.isXFABarcode(Lcom/adobe/xfa/Node;)Ljava/lang/Boolean`.（NPR-39807）
-* ユーザーが **ドキュメントセキュリティオフィス** 拡張機能では、次の問題が発生します。
+* ユーザーがテーブルヘッダーを非表示にすると、以前に設定した列幅が未設定になり、すべての列が同じ幅になります。（NPR-40063）
+* 管理者ユーザーのデフォルトのパスワードを `admin` から変更すると、AEM Forms JEE サービスパックで `Prepare Adobe Experience Manager Server For DSC deployment` チェックを実行する際にエラーが発生します。（NPR-40062）、（NPR-39387）
+* OutputService と AssemblerService の API で、PDF フォームを PDF/A に変換できません。（NPR-39990）
+* AssemblerService で PDF を PDF/A に変換できません。ユーザーが PDF を PDF/A に変換すると、次のエラーが発生します。`PDFAConformance isCompliant="false" compliance="PDF/A-1b" resultLevel="Summary" ignoreUnusedResources="true" allowCertificationSignatures="true"> <Violation count="6" key="PDFA_CS_001_NOT_DEVICE_INDEPENDENT" description="ColorSpace is not device independent`（NPR-39956）
+* GuideSubmitServlet API 呼び出しでサーバーサイドの検証が失敗した場合、クライアントに送信される応答でエラーが返されません。（NPR-39925）
+* Windows サーバーで AEM 6.5.15.0 サービスパックにアップグレードすると、複数のエラーメッセージが表示されてメールサービスが機能しません。（NPR-39919）
+* AEM 6.5.14.0 にアップグレードし、importData サービスを使用して PDF を XML と結合すると、次のエラーが発生します。`Caused by: java.lang.NoSuchMethodError: com.adobe.xfa.form.FormModel.isXFABarcode(Lcom/adobe/xfa/Node;)Ljava/lang/Boolean`（NPR-39807）
+* ユーザーが **ドキュメントセキュリティ Office** 拡張機能をインストールすると、次の問題が発生します。
    * Microsoft® Excel が頻繁にクラッシュします。
-   * 保護されたドキュメントを開くと、 **ドキュメントセキュリティオフィス** 拡張機能がコンピューターにインストールされていると認識されません。 セキュリティ拡張機能をダウンロードしてインストールするようにユーザーに指示します。 （NPR-39768）
-* ユーザーがAEM 6.5.15.0 Service Pack にアップグレードした後、PostScript から Pdf への変換が機能しない。 (NPR-39765)、(NPR-39764)
-* アダプティブフォームを開いた後にツアー画面を開こうとすると、NullPointer 例外が発生して失敗します。`[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` (NPR-39654)
-* Windows では、ユーザーが高コントラストの黒の設定を有効にすると、HTML5 Formsコンテンツは、ブラウザーでHTMLプレビューとしてレンダリングされると不明瞭になります。 （NPR-39018）
+   * セキュリティで保護されているドキュメントを開くときに、**ドキュメントセキュリティ Office** 拡張機能がマシンにインストールされていると認識されません。セキュリティ拡張機能をダウンロードしてインストールするようにユーザーに伝えます。（NPR-39768）
+* ユーザーが AEM 6.5.15.0 サービスパックにアップグレードした後で、PostScript から PDF への変換が機能しません。（NPR-39765）、（NPR-39764）
+* ユーザーがアダプティブフォームを開いた後にツアー画面を開こうとすると、NullPointer 例外 `[172.17.0.1[1662032923933]GET/libs/fd/af/content/editors/form/tour/content.htmlHTTP/1.1]com.day.cq.wcm.core.impl.WCMDebugFilterException:org.apache.sling.api.scripting.ScriptEvaluationException:"` が発生して失敗します。（NPR-39654）
+* Windows では、ユーザーが高コントラストの黒の設定を有効にすると、ブラウザーで HTML プレビューとしてレンダリングされたときに HTML5 フォームのコンテンツが不明瞭になります。（NPR-39018）
 * ユーザーがメタデータを追加しようとすると、ドラフトコンポーネントと送信コンポーネントの両方で「保存」ボタンが機能しなくなります。（CQ-4349601）
 * AEM 6.5.15.0 Service Pack にアップグレードした後、Visual Editor で相対 URL のリダイレクトが機能しなくなりました。 （NPR-39947）
 * ユーザーがAEM 6.5.15.0 Service Pack にアップグレードすると、Internet Explorer でのリダイレクトの動作が停止します。 （CQ-4351745）
@@ -117,66 +118,66 @@ AEM 6.5.16.0 Formsアドオンサービスパックをインストールする�
 
 ## 統合 {#integrations-6516}
 
-* AdobeSearch&amp;PromoteコードとExperience Manager6.5 から依存関係を削除。AdobeSearch&amp;Promoteは 2022 年 9 月にサービス終了に達しました。 詳しくは、 [AdobeSearch&amp;Promoteのサービス終了に関するお知らせ](https://experienceleague.adobe.com/docs/discontinued/using/search-promote.html?lang=en). （NPR-39706）
+* Experience Manager 6.5 から Adobe Search&amp;Promote コードと依存関係を削除します。Adobe Search&amp;Promote は 2022 年 9 月にサービスを終了しました。詳しくは、「[Adobe Search&amp;Promote のサービス終了に関するお知らせ](https://experienceleague.adobe.com/docs/discontinued/using/search-promote.html?lang=ja)」を参照してください。（NPR-39706）
 
 ## [!DNL Sites] {#sites-6516}
 
-* 現在 `cq-wcm-core` artifactory リリースに POM がありません。 （SITES-10983）
-* ロールアウトプレビューアクションでは、作成するページのリストを表示しないでください。 (SITES-10355、CQ-4266213)
-* MSM 分離後にロールアウトすると、分離されたページが再作成されます。 （SITES-9841）
-* ローンチの作成がタイムアウトになっています。ユーザーは、読み込み画面でリクエストがタイムアウトするまでに、何分も待つ必要があります。 （SITES-9051）
-* ロールアウトページユーザーインターフェイスに存在しない親ページのパスが表示されています。 成功メッセージ付きでページをロールアウトできますが、親ページがロールアウトされないので、子ページはロールアウトされません。 （SITES-8621）
+* 現在の `cq-wcm-core` アーティファクトリリースには POM がありません。（SITES-10983）
+* ロールアウトプレビューアクションでは、作成するページをリストするべきではありません。（SITES-10355、CQ-4266213）
+* MSM 分離後にロールアウトすると、分離されたページが再作成されます。（SITES-9841）
+* ローンチの作成がタイムアウトしています。ユーザーは、リクエストがタイムアウトするまで、読み込み画面で何分も待つ必要があります。（SITES-9051）
+* ロールアウトページのユーザーインターフェイスに、存在しない親ページのパスが表示されます。成功メッセージが表示されてページをロールアウトできますが、親ページが最初にロールアウトされないので、子ページはロールアウトされません。（SITES-8621）
 
 ### [!DNL Sites] - コアコンポーネント {#sites-core-components-6516}
 
-* 電子メールページのリンク処理を一元化し、モデルのカスタマイズが不要になりました。 （SITES-9002）
+* メールページのリンク処理を一元化し、モデルのカスタマイズが不要になりました。（SITES-9002）
 
-### [!DNL Sites]  — 管理ユーザーインターフェイス {#sites-adminui-6516}
+### [!DNL Sites] - 管理ユーザーインターフェイス {#sites-adminui-6516}
 
-* CSV の書き出しで、選択したページの下にあるすべてのページが書き出されない。 （SITES-9390）
+* CSV のエクスポートで、選択したページにあるすべてのページをエクスポートすることができません。（SITES-9390）
 
 ### [!DNL Sites] - [!DNL Content Fragments] {#sites-contentfragments-6516}
 
-* コンテンツフラグメントの JSON を印刷できません。 これは、コンテンツフラグメントのプレビューページを開いたときにGraphQLクエリを生成できないからです。 （SITES-8619）
-* コンテンツフラグメントモデルエディターを再度開くと、 **[!UICONTROL 日時]** フィールドのタイプは、デフォルトで日付と時刻に設定されます。 （SITES-8401）
+* コンテンツフラグメントの JSON を印刷できません。これは、コンテンツフラグメントのプレビューページを開いたときに、GraphQL クエリを生成できないためです。（SITES-8619）
+* コンテンツフラグメントモデルのエディターを再度開くと、すべての「**[!UICONTROL 日付と時間]**」フィールドが日付と時間のタイプにデフォルト設定されます。（SITES-8401）
 
 ### [!DNL Sites] - [!DNL Experience Fragments] {#sites-experiencefragments-6516}
 
-* 許可されたテンプレートの下にテンプレートがリストされている場合でも、エクスペリエンスフラグメントを別のフォルダーに移動することはできません。 （SITES-8601）
+* 許可されたテンプレートの一覧にテンプレートが表示されている場合でも、エクスペリエンスフラグメントを別のフォルダーに移動することができません。（SITES-8601）
 * （SITES-7989）
 
 
 ### [!DNL Sites] - ページエディター {#sites-pageeditor-6516}
 
-* オーサリングモードでのページレンダリングで多数の `TemplatedResourceImpl` オブジェクト。 （SITES-9350）
+* SITES-8464（オーサリングモードでページレンダリングを行うと多数の `TemplatedResourceImpl` オブジェクトが作成される）で改善された、リソースリゾルバーの依存関係を更新します。（SITES-9350）
 
 
 ## Sling {#sling-6516}
 
-* Experience Managerは起動時にデッドロックされます。 （NPR-39832）
-* バニティーパスがExperience Managerのバージョンストレージに多数存在する場合、Experience Managerの開始に失敗します。 （NPR-38955）
+* Experience Manager が起動時にデッドロックされます。（NPR-39832）
+* バニティーパスが Experience Manager のバージョンストレージに多数存在する場合、Experience Manager の起動は失敗します。（NPR-38955）
 
 
-## 翻訳プロジェクト {#translation-6516}
+## 移動プロジェクト {#translation-6516}
 
-* In `MicrosoftTranslationServiceImpl`、クエリー文字列パラメーター `Category` が正しくありません。 （NPR-39828）
-* 翻訳プロジェクトを作成すると、エラーが表示されます *マスターページリソースが存在しません*;翻訳プロジェクトは作成されません。 （NPR-39762）
-* 人間の翻訳コネクタを使用する翻訳プロジェクトに期限を設定できません。 （NPR-39593）
+* `MicrosoftTranslationServiceImpl` のクエリ文字列パラメーター `Category` が正しくありません。（NPR-39828）
+* 移動プロジェクトを作成すると「*マスターページリソースが存在しません*」というエラーが表示され、移動プロジェクトが作成されません。（NPR-39762）
+* 人間の移動コネクターを使用する移動プロジェクトに期限を設定できません。（NPR-39593）
 
 ## ユーザーインターフェイス {#ui-6516}
 
-* より小さい解像度に変更すると、DatePicker が表示されず、AM/PM の選択が表示されず、表示も変更もされません。 （NPR-39948）
-* js の縮小（JavaScript の最小化）を使用する場合、解析エラーが原因で縮小は処理されません。 （NPR-39650）
-* タグフィールド (`/libs/cq/gui/components/coral/common/form/tagfield`) がタイムラインと競合しています。 （CQ-4350751）
+* 解像度を下げると DatePicker が表示されません。また、AM/PM の選択が表示されないか、表示が変化しません。（NPR-39948）
+* js の縮小（JavaScript の最小化）を使用する場合、解析エラーが原因で縮小は処理されません。（NPR-39650）
+* タグフィールド（`/libs/cq/gui/components/coral/common/form/tagfield`）がタイムラインと競合しています。（CQ-4350751）
 
 
 ## WCM {#wcm-6516}
 
-* ロールアウトプレビューアクションでは、作成するページのリストを表示しないでください。 (CQ-4266213、SITES-10355)
+* ロールアウトプレビューアクションでは、作成するページをリストするべきではありません。（CQ-4266213、SITES-10355）
 
 ## ワークフロー {#workflow-6516}
 
-* から編集可能なワークフローモデルを手動で削除 `/conf` 編集可能なモデルを持たない、長持ちするランタイムモデルインスタンスを残します。 （CQ-4349365）
+* 編集可能なワークフローモデルを `/conf` から手動で削除すると、編集可能なモデルのない長期的なランタイムモデルインスタンスが残ります。（CQ-4349365）
 
 
 ## [!DNL Experience Manager] 6.5.16.0 のインストール {#install}
@@ -232,7 +233,7 @@ AEM 6.5.16.0 Formsアドオンサービスパックをインストールする�
 
 1. OSGi バンドル `org.apache.jackrabbit.oak-core` はバージョン 1.22.14 以降です（web コンソールを使用：`/system/console/bundles`）。<!-- NPR-39939 for 6.5.16.0 --> <!-- NPR-39436 for 6.5.15.0 --> <!-- OAK Oak oak VERSION -MAY- NEED TO BE UPDATED FOR EACH NEW RELEASE -->
 
-### Service Pack のインストール [!DNL Experience Manager] Forms {#install-aem-forms-add-on-package}
+### [!DNL Experience Manager] Forms へのサービスパックのインストール {#install-aem-forms-add-on-package}
 
 AEM Forms にサービスパックをインストールする手順については、[AEM Forms サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)を参照してください。
 
@@ -254,7 +255,7 @@ GraphQLを使用しているお客様は、 [GraphQLインデックスパッケ�
 
 >[!NOTE]
 >
->Experience Manager6.5.16.0では、UberJar のバージョン (6.5.15.0) は以前のリリースと同じです。
+>Experience Manager 6.5.16.0 では、UberJar のバージョン（6.5.15.0）は以前のリリースと同じままです。
 
 
 Maven プロジェクトで UberJar を使用するには、[UberJar の使用方法](/help/sites-developing/ht-projects-maven.md)を参照し、プロジェクト POM に次の依存関係を含めます。<!-- CHECK FOR UPDATE EACH NEW RELEASE -->
@@ -306,7 +307,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * [!DNL Microsoft®® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss®® EAP 7.1] をサポートしていないので、[!DNL Microsoft®® Windows Server 2019] は [!DNL AEM Forms 6.5.10.0] の自動インストールをサポートしていません。
 
-* 以下をアップグレードする場合、 [!DNL Experience Manager] 6.5.0 ～ 6.5.4 から Java™ 11 の最新のサービスパックへのインスタンスが表示されます。 `RRD4JReporter` 例外 `error.log` ファイル。 例外を停止するには、のインスタンスを再起動します。 [!DNL Experience Manager]. <!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
+* [!DNL Experience Manager] インスタンスを 6.5.0～6.5.4 から Java™ 11 の最新のサービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
 
 * ユーザーは、[!DNL Assets] の階層内のフォルダーの名前を変更し、ネストされたフォルダーを [!DNL Brand Portal] に公開できます。ただし、ルートフォルダーが再公開されるまで、[!DNL Brand Portal] でフォルダーのタイトルは更新されません。
 
@@ -330,8 +331,8 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    "refresh": true
    ```
 
-* AEM Formsでは、POP3 プロトコルはMicrosoft® Office 365 の電子メールエンドポイントでは機能しません。
-* JBoss® 7.1.4 プラットフォームで、ユーザーがAEM 6.5.16.0 Service Pack をインストールしたとき、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
+* AEM Forms では、POP3 プロトコルは Microsoft® Office 365 のメールエンドポイントでは機能しません。
+* JBoss® 7.1.4 プラットフォームで AEM 6.5.16.0 サービスパックをインストールすると、 `adobe-livecycle-jboss.ear` デプロイが失敗します。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ {#osgi-bundles-and-content-packages-included}
 

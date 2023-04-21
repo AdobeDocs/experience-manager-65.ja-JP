@@ -5,7 +5,7 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 
 情報アーキテクトは、コンテンツを配信するために、チャネルエンドポイント用のクエリを設計する必要があります。一般に、これらのクエリは、モデルやエンドポイントごとに 1 回だけ作成する必要があります。この「はじめる前に」ガイドの目的上、1 つだけ作成します。
 
-1. AEMにログインし、 [GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md):
+1. AEM にログインし、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)にアクセスします。
    * 例：`http://<host>:<port>/aem/graphiql.html`
 
 1. GraphiQL は、GraphQL のブラウザー内のクエリエディターです。クエリを構築して、コンテンツフラグメントを取得し、それらを JSON としてヘッドレスに配信できます。
@@ -58,13 +58,13 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
    ![GraphiQL query](assets/graphiql-query.png)
 -->
 
-1. 次をクリック： **クエリを実行** （右向き矢印）アイコンをクリックするか、 `Ctrl-Enter` ホットキーと結果は、右側のパネルに JSON として表示されます。
+1. 「**クエリを実行**」アイコン（右矢印）をクリックするか `Ctrl-Enter` ホットキーを使用すると、結果が JSON として右側のパネルに表示されます。
    ![GraphiQL の結果](assets/graphiql-results.png)
 
 1. 以下をクリックします。
    * ページの右上にある&#x200B;**ドキュメント**。文脈依存ドキュメントが表示され、独自のモデルに適合するクエリの構築に役立ちます。
    * 上部のツールバーにある&#x200B;**履歴**。以前のクエリが表示されます。
-   * **名前を付けて保存** および **保存** をクリックしてクエリを保存します。保存後、クエリを一覧表示してから取得できます。 **永続クエリ** パネルと **公開**.
+   * 「**名前を付けて保存**」と「**保存**」をクリックしてクエリを保存します。保存後は、**永続クエリ**&#x200B;パネルと「**パブリッシュ**」でクエリを一覧表示して取得できます。.
       ![GraphiQL ドキュメント](assets/graphiql-documentation.png)
 
 GraphQL を使用すると、特定のデータセットや個々のデータオブジェクトだけでなく、オブジェクトの特定の要素、ネストされた結果、クエリ変数のオファーサポートなどをターゲットできる構造化クエリが可能です。
@@ -77,7 +77,7 @@ GraphQL では、反復的な API リクエストと過剰な配信を回避で�
 
 * **[設定ブラウザー](create-configuration.md)** - AEM 設定ブラウザーの詳細
 * **[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)** - コンテンツフラグメントの作成と管理に関する詳細
-* **[GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)** GraphiQL IDE の使用の詳細
-* **[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)** 持続クエリの詳細は、次のとおりです。
+* **[GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)** - GraphiQL IDE の使用の詳細
+* **[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)** - 永続クエリの詳細
 * **[AEM Assets HTTP API でサポートされるコンテンツフラグメント](/help/assets/assets-api-content-fragments.md)** - CRUD 操作（作成、読み取り、更新、削除）を介して HTTP API 経由で直接 AEM コンテンツにアクセスする方法の詳細
 * **[GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)** - コンテンツフラグメントをヘッドレスで配信する方法の詳細

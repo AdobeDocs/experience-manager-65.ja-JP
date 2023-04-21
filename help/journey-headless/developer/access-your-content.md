@@ -5,7 +5,7 @@ exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
 workflow-type: tm+mt
 source-wordcount: '1335'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -269,7 +269,7 @@ AEM GraphQL API をクエリで実際に使用するにあたって、次のよ�
 
 ### クエリのテスト場所 {#where-to-test-your-queries}
 
-クエリは、 [GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)（例： ）。
+クエリは、次の例のように、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)で入力できます。
 
 * `http://localhost:4502/aem/graphiql.html`
 

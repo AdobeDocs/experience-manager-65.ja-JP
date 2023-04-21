@@ -1,7 +1,7 @@
 ---
 title: セキュリティチェックリスト
 seo-title: Security Checklist
-description: AEMを設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
+description: AEM を設定およびデプロイする際の様々なセキュリティに関する考慮事項について説明します。
 seo-description: Learn about the various security considerations when configuring and deploying AEM.
 uuid: 8e293316-4177-4271-87c6-9dc1a2e85a07
 contentOwner: msm-service
@@ -15,13 +15,13 @@ feature: Security
 source-git-commit: 41752e40f2bceae98d4a9ff8bf130476339fe324
 workflow-type: tm+mt
 source-wordcount: '3025'
-ht-degree: 27%
+ht-degree: 52%
 
 ---
 
 # セキュリティチェックリスト {#security-checklist}
 
-この節では、デプロイ時にAEMのインストールが安全になるようにするために必要な様々な手順について説明します。 このチェックリストは、上から順に適用するように設計されています。
+このセクションでは、デプロイ時に AEM のインストールが安全になるようにするために必要な様々な手順について説明します。このチェックリストは、上から順に適用するように設計されています。
 
 >[!NOTE]
 >
@@ -33,9 +33,9 @@ ht-degree: 27%
 
 ## 主なセキュリティ対策 {#main-security-measures}
 
-### 実稼動準備モードでAEMを実行 {#run-aem-in-production-ready-mode}
+### 実稼動準備モードでの AEM の実行 {#run-aem-in-production-ready-mode}
 
-詳しくは、 [実稼動準備モードでのAEMの実行](/help/sites-administering/production-ready.md).
+詳しくは、「[実稼動準備モードでの AEM の実行](/help/sites-administering/production-ready.md)」を参照してください。
 
 ### トランスポート層のセキュリティのための HTTPS の有効化 {#enable-https-for-transport-layer-security}
 
@@ -47,9 +47,9 @@ ht-degree: 27%
 
 ### セキュリティホットフィックスのインストール {#install-security-hotfixes}
 
-最新の [Adobeが提供するセキュリティホットフィックス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja).
+最新の[アドビ提供のセキュリティホットフィックス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)がインストールされていることを確認してください。
 
-### AEMおよび OSGi コンソールの Admin アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
+### AEM および OSGi コンソールの管理者アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
 Adobeでは、インストール後に、権限を持つ [**AEM** `admin` アカウント](#changing-the-aem-admin-password) （すべてのインスタンス）。
 
@@ -67,39 +67,40 @@ Adobeでは、インストール後に、権限を持つ [**AEM** `admin` アカ
 
 #### AEM admin パスワードの変更 {#changing-the-aem-admin-password}
 
-AEM admin アカウントのパスワードは、 [Granite の操作 — ユーザー](/help/sites-administering/granite-user-group-admin.md) コンソール。
+AEM 管理者アカウントのパスワードは、[Granite の操作 - ユーザー](/help/sites-administering/granite-user-group-admin.md)コンソールで変更できます。
 
 このコンソールでは、`admin` アカウントの編集と[パスワードの変更](/help/sites-administering/granite-user-group-admin.md#changing-the-password-for-an-existing-user)を行うことができます。
 
 >[!NOTE]
 >
->admin アカウントを変更すると、OSGi Web コンソールのアカウントも変更されます。 admin アカウントを変更した後、OSGi アカウントを別のアカウントに変更する必要があります。
+>管理者アカウントを変更すると、OSGi web コンソールのアカウントも変更されます。管理者アカウントを変更したら、OSGi アカウントを別のアカウントに変更する必要があります。
 
 #### OSGi web コンソールのパスワード変更の重要性 {#importance-of-changing-the-osgi-web-console-password}
 
 AEM `admin` アカウントとは別に、OSGi web コンソールのデフォルトのパスワードを変更しない場合は、次の問題が発生する可能性があります。
 
-* 起動時およびシャットダウン時にデフォルトのパスワードでサーバーを公開（大規模なサーバーの場合は数分かかる場合があります）
-* リポジトリがダウン/再起動中のバンドルで、OSGI が実行中の場合のサーバーの公開。
+* 起動時およびシャットダウン時にデフォルトのパスワードでサーバーが公開される（大規模なサーバーの場合は数分かかる場合があります）
+* リポジトリがダウンまたはバンドルを再起動中で、OSGI を実行中に、サーバーが公開される
 
-Web コンソールのパスワードの変更について詳しくは、 [OSGi Web コンソールの管理者パスワードの変更](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password) 下
+Web コンソールのパスワードの変更について詳しくは、「[OSGi web コンソールの管理者パスワードの変更](/help/sites-administering/security-checklist.md#changing-the-osgi-web-console-admin-password)」を参照してください。
 
-#### OSGi Web コンソールの管理者パスワードの変更 {#changing-the-osgi-web-console-admin-password}
+#### OSGi web コンソールの管理者パスワードの変更 {#changing-the-osgi-web-console-admin-password}
 
 Web コンソールへのアクセスに使用するパスワードを変更します。 を使用します。 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) 次のプロパティを更新するには、 **Apache Felix OSGi Management Console**:
 
-* **ユーザー名**&#x200B;と&#x200B;**パスワード**：Apache Felix web 管理コンソールにアクセスするための資格情報です。パスワードを変更する必要があります *後* インスタンスのセキュリティを確保するための最初のインストール。
+* **ユーザー名**&#x200B;と&#x200B;**パスワード**：Apache Felix web 管理コンソールにアクセスするための資格情報です。
+インスタンスのセキュリティを確保するには、最初のインストールの*後に*&#x200B;パスワードを変更する必要があります。
 
 >[!NOTE]
 >
->詳しくは、 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) OSGi 設定の詳細は、を参照してください。
+>OSGi 設定について詳しくは、「[OSGi 設定](/help/sites-deploying/configuring-osgi.md)」を参照してください。
 
 **OSGi Web コンソールの管理者パスワードを変更するには**:
 
-1. の使用 **ツール**, **運用** メニュー、を開きます。 **Web コンソール** をクリックし、 **設定** 」セクションに入力します。
-例： `<server>:<port>/system/console/configMgr`.
-1. のエントリに移動して開きます。 **Apache Felix OSGi Management Console**.
-1. を **ユーザー名** および **パスワード**.
+1. **ツール**／**操作**&#x200B;メニューから、**Web コンソール**&#x200B;を開き、「**設定**」セクションに移動力します。
+例：`<server>:<port>/system/console/configMgr`
+1. **Apache Felix OSGi 管理コンソール**&#x200B;に移動してエントリを開きます。
+1. **ユーザー名**&#x200B;および **パスワード**&#x200B;を変更します。
 
    ![chlimage_1-3](assets/chlimage_1-3.png)
 
@@ -113,7 +114,7 @@ Adobeでは、情報開示を防ぐために、特に 404 および 500 HTTP 応
 >
 >詳しくは、 [カスタムスクリプトやエラーハンドラーを作成する方法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=en) を参照してください。
 
-### Dispatcher のセキュリティチェックリストを完了する {#complete-dispatcher-security-checklist}
+### Dispatcher のセキュリティチェックリストの完了 {#complete-dispatcher-security-checklist}
 
 AEM Dispatcher は、インフラストラクチャの重要な部分です。 Adobeでは、 [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en).
 
@@ -123,11 +124,11 @@ AEM Dispatcher は、インフラストラクチャの重要な部分です。 A
 
 ## 検証手順 {#verification-steps}
 
-### レプリケーションユーザーとトランスポートユーザーの設定 {#configure-replication-and-transport-users}
+### レプリケーションの設定とユーザーのトランスポート {#configure-replication-and-transport-users}
 
-AEM の標準インストールでは、`admin` をデフォルトの[レプリケーションエージェント](/help/sites-deploying/replication.md)内のトランスポート認証情報のユーザーとして指定します。また、管理者ユーザーは、オーサーシステムでレプリケーションのソースを設定する際に使用します。
+AEM の標準インストールでは、`admin` をデフォルトの[レプリケーションエージェント](/help/sites-deploying/replication.md)内のトランスポート認証情報のユーザーとして指定します。また、管理者ユーザーは、オーサーシステムでレプリケーションを展開する際に使用します。
 
-セキュリティに関する考慮事項については、次の 2 つの点を考慮して、特定の使用例をすぐに反映するように変更する必要があります。
+セキュリティに関する考慮事項については、次の 2 つの点を考慮して、特定の使用例がすぐに反映されるように両方を変更する必要があります。
 
 * この **輸送利用者** は管理者ユーザーではない必要があります。 代わりに、パブリッシュシステムの関連する部分に対するアクセス権のみを持つユーザーをパブリッシュシステム上に設定し、そのユーザーの資格情報をトランスポートに使用します。
 
@@ -135,11 +136,11 @@ AEM の標準インストールでは、`admin` をデフォルトの[レプリ�
 
 * この **レプリケーションユーザー** または **エージェントユーザー ID** また、管理者ユーザーではなく、レプリケートされたコンテンツのみを表示できるユーザーでもある必要があります。 レプリケーションユーザーは、パブリッシュ元に送信される前に、オーサーシステムでレプリケートされるコンテンツを収集するために使用されます。
 
-### 操作ダッシュボードのセキュリティヘルスチェックを確認します。 {#check-the-operations-dashboard-security-health-checks}
+### 操作ダッシュボードのセキュリティヘルスチェックの確認 {#check-the-operations-dashboard-security-health-checks}
 
-AEM 6 には、システムオペレーターが問題のトラブルシューティングやインスタンスの正常性の監視をおこなえるよう支援する、新しい操作ダッシュボードが導入されました。
+AEM 6 には、システムオペレーターが問題のトラブルシューティングやインスタンスの正常性の監視を行うための新しい操作ダッシュボードが導入されました。
 
-また、このダッシュボードには、セキュリティヘルスチェックのコレクションが付属しています。 実稼動インスタンスでの運用を開始する前に、すべてのセキュリティヘルスチェックのステータスを確認することをお勧めします。 詳しくは、[操作ダッシュボードのドキュメント](/help/sites-administering/operations-dashboard.md)を参照してください。
+このダッシュボードには、セキュリティヘルスチェックのコレクションも付属しています。実稼動インスタンスでの運用を開始する前に、すべてのセキュリティヘルスチェックのステータスを確認することをお勧めします。詳しくは、[操作ダッシュボードのドキュメント](/help/sites-administering/operations-dashboard.md)を参照してください。
 
 ### サンプルコンテンツが存在するかどうかを確認 {#check-if-example-content-is-present}
 
@@ -151,27 +152,27 @@ AEM 6 には、システムオペレーターが問題のトラブルシュー�
 
 詳しくは、 [パッケージの操作](package-manager.md).
 
-### CRX 開発バンドルが存在するかどうかを確認します {#check-if-the-crx-development-bundles-are-present}
+### CRX 開発バンドルが存在するかどうかの確認 {#check-if-the-crx-development-bundles-are-present}
 
-これらの開発用 OSGi バンドルは、アクセス可能にする前に、オーサーとパブリッシュの両方の生産システムでアンインストールする必要があります。
+これらの開発用 OSGi バンドルは、アクセスできるようにする前に、オーサーとパブリッシュの両方の実稼働システムからアンインストールする必要があります。
 
-* AdobeCRXDE サポート (com.adobe.granite.crxde-support)
-* AdobeGranite CRX Explorer (com.adobe.granite.crx-explorer)
-* AdobeGraniteCRXDE Lite(com.adobe.granite.crxde-lite)
+* Adobe CRXDE サポート（com.adobe.granite.crxde-support）
+* Adobe Granite CRX Explorer（com.adobe.granite.crx-explorer）
+* Adobe Granite CRXDE Lite（com.adobe.granite.crxde-lite）
 
-### Sling 開発バンドルが存在するかどうかを確認します。 {#check-if-the-sling-development-bundle-is-present}
+### Sling 開発バンドルが存在するかどうかの確認 {#check-if-the-sling-development-bundle-is-present}
 
 この [AEM Developer Tools](/help/sites-developing/aem-eclipse.md) Apache Sling Tooling Support Install(org.apache.sling.tooling.support.install) をデプロイします。
 
-この OSGi バンドルは、オーサーとパブリッシュの両方の生産システムでアクセス可能にする前にアンインストールする必要があります。
+この OSGi バンドルは、アクセスできるようにする前に、オーサーとパブリッシュの両方の実稼働システムからアンインストールする必要があります。
 
-### クロスサイトリクエストフォージェリに対するProtect {#protect-against-cross-site-request-forgery}
+### クロスサイトリクエストフォージェリーからの保護 {#protect-against-cross-site-request-forgery}
 
 #### CSRF 対策フレームワーク {#the-csrf-protection-framework}
 
 AEM 6.1 には、クロスサイトリクエストフォージェリーから保護する **CSRF 対策フレームワーク**&#x200B;と呼ばれるメカニズムが搭載されています。使用方法について詳しくは、[ドキュメント](/help/sites-developing/csrf-protection.md)を参照してください。
 
-#### Sling Referrer Filter {#the-sling-referrer-filter}
+#### Sling リファラーフィルター {#the-sling-referrer-filter}
 
 CRX WebDAV および Apache Sling のクロスサイトリクエストフォージェリ (CSRF) に関する既知のセキュリティ問題に対処するには、リファラーフィルターの設定を追加して、それを使用します。
 
@@ -216,7 +217,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 ### OSGi 設定 {#osgi-settings}
 
-一部の OSGi 設定は、アプリケーションのデバッグを容易にするために、デフォルトで設定されています。 パブリッシュインスタンスとオーサーの実稼動インスタンスでこのような設定を変更して、内部情報が公開されないようにします。
+アプリケーションのデバッグを容易にするために、一部の OSGi 設定はデフォルトで指定されています。パブリッシュインスタンスとオーサーの実稼動インスタンスでこのような設定を変更して、内部情報が公開されないようにします。
 
 >[!NOTE]
 >
@@ -224,12 +225,12 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 次の各サービスについて、指定した設定を変更する必要があります。
 
-* [AdobeGraniteHTMLライブラリマネージャー](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
+* [Adobe Granite HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
-   * 有効 **縮小** （CRLF 文字と空白文字を削除）。
-   * 有効 **Gzip** （1 回の要求でファイルを gzip で圧縮してアクセスできるようにする）。
-   * 無効 **デバッグ**
-   * 無効 **タイミング**
+   * 「**縮小**」を有効にして CRLF 文字と空白文字を削除する
+   * 「**Gzip**」を有効にして、1 回のリクエストでファイルを gzip で圧縮してアクセスできるようにする。
+   * 「**デバッグ**」を無効にする
+   * 「**タイミング**」を無効にする
 
 * [Day CQ WCM デバッグフィルター](/help/sites-deploying/osgi-configuration-settings.md#day-cq-wcm-debug-filter)：
 
@@ -252,11 +253,11 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 AEMを操作する場合、このようなサービスの設定を管理する方法はいくつかあります。参照 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
 
-## その他の読み取り値 {#further-readings}
+## 参考情報 {#further-readings}
 
-### サービス拒否 (DoS) 攻撃の軽減 {#mitigate-denial-of-service-dos-attacks}
+### サービス拒否（DoS）攻撃の軽減 {#mitigate-denial-of-service-dos-attacks}
 
-サービス拒否 (DoS) 攻撃とは、意図したユーザーがコンピュータリソースを利用できない状態にする試みです。 この攻撃は、多くの場合、リソースをオーバーロードすることで行われます。例：
+サービス拒否（DoS）攻撃とは、意図したユーザーがコンピュータリソースを利用できない状態にする試みです。この攻撃は、多くの場合、リソースをオーバーロードすることで行われます。例：
 
 * 外部ソースからの大量のリクエスト。
 * システムが正常に配信できる以上の詳細情報のリクエスト。
@@ -279,7 +280,7 @@ AEMを操作する場合、このようなサービスの設定を管理する�
 
 Sling は *コンテンツ中心の*.(HTTP) 要求が JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、処理はコンテンツに焦点を当てます。
 
-* 最初のターゲットは、コンテンツを保持するリソース（JCR ノード）です。
+* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です.
 * 次に、レンダラー（スクリプト）は、リソースプロパティから、要求の特定の部分（セレクターや拡張子など）と共に配置されます。
 
 詳しくは、 [Sling リクエストの処理](/help/sites-developing/the-basics.md#sling-request-processing) を参照してください。
@@ -288,14 +289,14 @@ Sling は *コンテンツ中心の*.(HTTP) 要求が JCR リソース（リポ�
 
 DoS の誤用を防ぐには、次の操作を行います。
 
-1. アプリケーションレベルでコントロールを組み込みます。 可能なバリエーションの数により、デフォルトの設定は実行できません。
+1. アプリケーションレベルでコントロールを組み込みます。可能なバリエーションの数により、デフォルトの設定は実行できません。
 
    アプリケーションでは、次の操作を実行する必要があります。
 
    * アプリケーションのセレクターを制御して、必要とされる明示的なセレクター&#x200B;*のみ*&#x200B;提供し、他のすべてに対しては `404` を返します。
-   * コンテンツノードの数に制限がない場合に出力を防ぎます。
+   * コンテンツノードを無制限に出力できないようにします。
 
-1. 問題のある領域になる可能性のある、デフォルトのレンダラーの設定を確認します。
+1. 問題となる可能性のある、デフォルトのレンダラー設定を確認します。
 
    * 特に、JSON レンダラーは複数のレベルでツリー構造を横断します。
 
@@ -330,7 +331,7 @@ DoS の誤用を防ぐには、次の操作を行います。
 
 1. ブラウザーで *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr* を参照して、web コンソールに移動します
 
-1. を検索 **Day CQ WCM Form Chooser Servlet**
+1. **Day CQ WCM Form 選択サーブレット**&#x200B;を検索します
 1. エントリをクリックした後、 **詳細検索が必要** を次のウィンドウに表示します。
 
 1. 「**保存**」をクリックします。
@@ -341,11 +342,11 @@ DoS の誤用を防ぐには、次の操作を行います。
 
 ダウンロード機能が必要ない場合は、オーサーデプロイメントとパブリッシュデプロイメントでサーブレットを無効にします。 セットアップでアセットダウンロードサーブレットを有効にする必要がある場合、詳細については[この記事](/help/assets/download-assets-from-aem.md)を参照してください。また、デプロイメントでサポートできるダウンロードの最大制限を定義できます。
 
-### WebDAV を無効にする {#disable-webdav}
+### WebDAV の無効化 {#disable-webdav}
 
 適切な OSGi バンドルを停止して、オーサー環境とパブリッシュ環境の両方で WebDAV を無効にします。
 
-1. に接続 **Felix 管理コンソール** 実行日：
+1. 以下で実行されている **Felix 管理コンソール**&#x200B;に接続します。
 
    `https://<*host*>:<*port*>/system/console`
 
@@ -375,7 +376,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 有効にする設定は実行しないでください。AEMで許可可能 ID を生成するデフォルトの方法になったからです。
 
-非推奨ですが、既存のアプリケーションとの下位互換性を確保するために古い実装が必要な場合に備えて、無効にすることができます。 これをおこなうには、次の手順を実行する必要があります。
+非推奨ですが、既存のアプリケーションとの下位互換性を確保するために古い実装が必要な場合には、この方法を無効にすることができます。これをおこなうには、次の手順を実行する必要があります。
 
 1. Web コンソールに移動して、**Apache Jackrabbit Oak SecurityProvider** のプロパティ **requiredServicePids** から org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName エントリを削除します。
 
@@ -387,7 +388,7 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 >[!NOTE]
 >
->詳しくは、 [許可可能なノード名の生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html).
+>詳しくは、「[許可可能なノード名の生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html)」で Oak のドキュメントを参照してください。
 
 ### 匿名権限堅牢化パッケージ {#anonymous-permission-hardening-package}
 
@@ -413,17 +414,17 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 クリックジャッキングについて詳しくは、 [OWASP サイト](https://www.owasp.org/index.php/Clickjacking).
 
-### 必要に応じて、暗号化キーを適切にレプリケートする {#make-sure-you-properly-replicate-encryption-keys-when-needed}
+### 必要に応じて暗号化キーの適切なレプリケートを確認 {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
-特定のAEM機能および認証スキームでは、すべてのAEMインスタンスに暗号化キーをレプリケートする必要があります。
+特定の AEM 機能および認証スキームでは、すべての AEM インスタンスに暗号化キーをレプリケートする必要があります。
 
 キーの保存方法は 6.3 以前のバージョンとは異なるので、事前にキーのレプリケーションはバージョン間で異なる方法でおこなわれます。
 
-詳しくは、以下を参照してください。
+詳しくは以下を参照してください。
 
-#### AEM 6.3 のキーのレプリケート {#replicating-keys-for-aem}
+#### AEM 6.3 用のキーのレプリケート {#replicating-keys-for-aem}
 
-以前のバージョンでは、レプリケーションキーはAEM 6.3 以降、ファイルシステムに保存されていました。
+以前のバージョンではレプリケーションキーがリポジトリに保存されていましたが、AEM 6.3 以降はファイルシステムに保存されます。
 
 したがって、インスタンス間で鍵をレプリケートするには、ソースインスタンスからファイルシステム上のターゲットインスタンスの場所に鍵をコピーします。
 
@@ -436,12 +437,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
    この `bundle.info` 各フォルダー内のファイルは、バンドル名を識別します。
 
-1. データフォルダーに移動します。次に例を示します。
+1. データフォルダーに移動します。例：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
 1. HMAC ファイルとマスターファイルをコピーします。
-1. 次に、HMAC キーの複製先のターゲットインスタンスに移動し、データフォルダーに移動します。 次に例を示します。
+1. 次に、HMAC キーの複製先のターゲットインスタンスに移動し、データフォルダーにアクセスします。例：
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
@@ -459,12 +460,12 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 AEM 6.2 以前のバージョンでは、鍵は `/etc/key` ノードの下のリポジトリに保存されます。
 
-インスタンス間で鍵を安全にレプリケートするには、このノードのみをレプリケートすることをお勧めします。 ノードを選択してレプリケートするには、次のCRXDE Liteを使用します。
+インスタンス間でキーを安全にレプリケートするには、このノードのみをレプリケートすることをお勧めします。ノードを選択してレプリケートするには、次の CRXDE Lite を使用します。
 
 1. *`https://&lt;serveraddress&gt;:4502/crx/de/index.jsp`* に移動して CRXDE Lite を開きます
 1. `/etc/key` ノードを選択します。
-1. 次に移動： **レプリケーション** タブをクリックします。
-1. を押します。 **レプリケーション** 」ボタンをクリックします。
+1. 「**レプリケーション**」タブに移動します。
+1. 「**レプリケーション**」ボタンをクリックします。
 
 ### 侵入テストの実施 {#perform-a-penetration-test}
 
