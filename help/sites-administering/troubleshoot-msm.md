@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
 source-git-commit: a323e6c30bf2c226f6613d1b9b037a0beedbfc0d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '762'
 ht-degree: 100%
 
@@ -26,13 +26,13 @@ MSM は、リソース URL のセレクターと共に要求できる複数の�
 
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * ブループリントページでこの情報を使用して、リンクされているすべてのライブコピーのリストと、追加のライブコピーのステータス情報を取得します。
-   * 次に例を示します。
+   * 例：
       `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * ライブコピーページでこれを使用して、ブループリントページとの接続に関する詳細情報を取得します。ページがライブコピーでない場合は、何も返されません。
-   * 次に例を示します。
+   * 例：
       `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 これらのサーブレットは、`com.day.cq.wcm.msm` ロガーを介して DEBUG ログメッセージを生成します。これも役に立ちます。
@@ -56,7 +56,7 @@ MSM は、リソース URL のセレクターと共に要求できる複数の�
 
 これらのプロパティに表示される情報は UI に反映される必要がありますが、トラブルシューティングをおこなう場合は、MSM アクションが発生したときにリポジトリで直接 MSM の動作を確認すると便利です。
 
-また、リポジトリでクエリーを実行し、特定の状態にあるページのセットを見つけるためにも、これらのプロパティを知ることが役立ちます。次に例を示します。
+また、リポジトリでクエリーを実行し、特定の状態にあるページのセットを見つけるためにも、これらのプロパティを知ることが役立ちます。例：
 
 * `select * from cq:LiveSync` は、すべてのライブコピーのルートページを返します。
 
