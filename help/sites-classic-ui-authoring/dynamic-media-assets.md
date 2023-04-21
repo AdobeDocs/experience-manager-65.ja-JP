@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media を操作する Sites Classic オーサリングの場合
+title: Dynamic Media を操作するSites クラシックオーサリングの場合
 description: Dynamic Media は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。。
 uuid: 201d7ff5-0ebc-4680-9ac4-00c229be5f04
 contentOwner: Chris Bohnert
@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 2a60cacf-0551-44d4-9965-705a715d44c5
 exl-id: b00d83ab-aeec-4199-bfe4-4f928fb49930
 source-git-commit: 59e182c165f6fd4b822eaf0e34f6e4b3bb18eb14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '205'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
