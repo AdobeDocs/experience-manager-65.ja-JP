@@ -3,7 +3,7 @@ title: コンテンツをモデル化する方法
 description: AEM ヘッドレスデベロッパージャーニーのこの部分では、コンテンツフラグメントモデルとコンテンツフラグメントとともにコンテンツモデリングを使用して、AEM ヘッドレス配信用のコンテンツをモデル化する方法について説明します。
 exl-id: f75b433f-5a81-4259-a9f5-b58954b87970
 source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1826'
 ht-degree: 100%
 
