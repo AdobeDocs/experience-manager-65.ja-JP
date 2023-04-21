@@ -4,9 +4,9 @@ description: Adobe Experience Managerでサポートされているクライア�
 content-type: reference
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
+source-git-commit: 32af8ee1680bb0a357e64d614f22234ed331d314
 workflow-type: tm+mt
-source-wordcount: '3498'
+source-wordcount: '3513'
 ht-degree: 57%
 
 ---
@@ -89,6 +89,7 @@ Adobe Experience Managerは、次のバージョンの Java™ Virtual Machines 
 
 | **プラットフォーム** | **サポートレベル** | **リンク** |
 |---|---|---|
+| OracleJava™ SE 17 JDK | Z：サポート対象外 `[1]` |
 | OracleJava™ SE 11 JDK - 64 ビット | A：サポート対象 `[1]` | [ダウンロード](https://experience.adobe.com/#/downloads/content/software-distribution/ja/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
 | OracleJava™ SE 10 JDK | Z：サポート対象外 `[1]` |
 | OracleJava™ SE 9 JDK | Z：サポート対象外 `[1]` |
@@ -99,7 +100,7 @@ Adobe Experience Managerは、次のバージョンの Java™ Virtual Machines 
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` |  |
 
 1. Oracleは、OracleJava™ SE 製品の「長期サポート」(LTS) モデルに移行しました。 Java™ 9、Java™ 10、Java™ 12 は、Oracle別の非 LTS リリースです ( [OracleJava™ SE サポート・ロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)) をクリックします。 実稼動環境にAEMをデプロイするために、Adobeは Java™の LTS リリースのみをサポートしています。 oracleJava™ SE JDK のサポートと配布は、OracleJava™ SE テクノロジーを使用するすべてのAEMのお客様に対して、LTS リリースの公開以降のすべてのメンテナンスアップデートを含め、Adobeで直接サポートされます。 詳しくは、 [Adobe Experience Managerの Java™サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf).
-   **重要：Java™ 11 は、2026 年 9 月まで以上でサポートされます。**
+**重要：OracleJava™ 11 は、2026 年 9 月まで少なくともサポートされます。 oracleJava™ 17 のサポートは準備中です。**
 
 1. IBM® JRE は、WebSphere® Application Server と共にのみサポートされます。
 
