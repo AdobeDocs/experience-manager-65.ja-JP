@@ -3,7 +3,7 @@ title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
 source-git-commit: 01bf12ec46966ab2c78e2e825840230ea1bd3395
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1726'
 ht-degree: 100%
 
