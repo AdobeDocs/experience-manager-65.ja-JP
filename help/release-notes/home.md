@@ -3,7 +3,7 @@ title: Adobe Experience Manager 6.5 のリリースノート
 description: AEM リリースノートでは、AEM の最新リリースに関する重要な情報（新機能、サポートされているプラットフォーム、廃止予定の機能および削除された機能、既知の問題など）を説明しています。
 exl-id: 2fc93249-9bd0-4e34-83b2-80f51c102ed1
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '355'
 ht-degree: 100%
 
