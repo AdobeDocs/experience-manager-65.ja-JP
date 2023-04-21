@@ -3,7 +3,7 @@ title: AEM Delivery API を使用してコンテンツにアクセスする方�
 description: AEM ヘッドレスデベロッパージャーニーのこのパートでは、GraphQL クエリを使用してコンテンツフラグメントのコンテンツにアクセスする方法を説明します。
 exl-id: 44f85d00-a958-470a-8a6e-e2ae1580525a
 source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1335'
 ht-degree: 100%
 
