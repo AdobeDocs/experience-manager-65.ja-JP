@@ -9,9 +9,9 @@ breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
 source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3846'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -211,7 +211,7 @@ ht-degree: 97%
    + [Backbone インタラクション](using/backbone-interaction.md)
    + [再利用可能なコンポーネントの説明](using/description-reusable-components.md)
    + [レンダラーのドキュメントの詳細](using/document-details-renderer.md)
-   + [Web アプリケーションでのAEM Forms Workspace コンポーネントの統合](using/integrating-html-ws-components-web.md)
+   + [Web アプリケーションでの AEM Forms ワークスペースコンポーネントの統合](using/integrating-html-ws-components-web.md)
    + [新しいレンダリングと送信サービス](using/new-render-submit-service.md)
    + [フォルダー構造について](using/folder-structure.md)
    + [AEM Forms Workspace でのサードパーティアプリケーションの統合](using/integrating-correspondence-management-html-workspace.md)
@@ -225,8 +225,8 @@ ht-degree: 97%
    + [タスクの詳細ページのカスタマイズ](using/customizing-task-details-page.md)
    + [プロセスインスタンスのリストのカスタマイズ](using/customizing-listing-process-instances.md)
    + [タスクアクションのカスタマイズ](using/customizing-task-actions.md)
-   + [TODO リストでの追加データの表示](using/display-additional-data-in-todo-list.md)
-   + [概要 URL でのタスク変数の取得](using/getting-task-variables-summary-url.md)
+   + [To Do リストでの追加データの表示](using/display-additional-data-in-todo-list.md)
+   + [サマリー URLでのタスク変数の取得](using/getting-task-variables-summary-url.md)
    + [ルートアクションで使用されるイメージのカスタマイズ](using/images-route-actions.md)
    + [JavaScript ファイルの縮小](using/minification-javascript-files.md)
    + [追跡テーブルのカスタマイズ](using/sorting-tracking-tables-add-columns.md)
@@ -247,8 +247,8 @@ ht-degree: 97%
    + [シングルサインオンとタイムアウトハンドラー](using/single-sign-timeout-handlers.md)
    + [HTML Workspace でのアダプティブフォームの使用](using/using-adaptive-form-html-workspace.md)
    + [AEM Forms Workspace に Microsoft Office SharePoint Server を統合する](using/integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server.md)
-   + [TODO リストの操作](using/todo-lists.md)
-   + [AEM Forms Workspace のトラブルシューティングガイドライン](using/troubleshooting-guidelines-html-workspace.md)
+   + [To Do リストの操作](using/todo-lists.md)
+   + [AEM Forms ワークスペースのトラブルシューティングガイドライン](using/troubleshooting-guidelines-html-workspace.md)
 + AEM Forms アプリケーション {#aem-forms-app}
    + [AEM Forms アプリケーションの概要](using/aem-forms-app.md)
    + [AEM Forms アプリケーションの環境設定](using/setup-environment-mobile-workspace.md)
@@ -351,7 +351,7 @@ ht-degree: 97%
    + [メール通知におけるメタデータの使用](using/use-metadata-in-email-notifications.md)
 + Forms ポータル {#use-forms-portal}
    + [フォームポータルコンポーネントのテンプレートをカスタマイズする](using/customizing-templates-forms-portal-components.md)
-   + [フォームポータルコンポーネントの有効化](using/enabling-forms-portal-components.md)
+   + [フォームポータルのコンポーネントの有効化](using/enabling-forms-portal-components.md)
    + [フォームポータルページの作成 ](using/creating-form-portal-page.md)
    + [フォームポータルで送信済みフォームを操作するための API](using/report-submitted-data-forms.md)
    + [ドラフトと送信コンポーネントのカスタムストレージ](using/adding-custom-storage-provider-forms.md)
@@ -454,7 +454,7 @@ ht-degree: 97%
       + [メールエンドポイントの設定](/help/forms/using/admin-help/configuring-email-endpoints.md)
       + [OAuth2.0 認証の設定](/help/forms/using/oauth2-support-for-mail-service.md)
       + [リモートエンドポイントの設定](/help/forms/using/admin-help/configuring-remoting-endpoints.md)
-      + [監視フォルダーエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
+      + [監視フォルダーのエンドポイントの設定](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md)
       + [タスクマネージャーエンドポイントの設定](/help/forms/using/admin-help/configuring-task-manager-endpoints.md)
       + [エンドポイントの種類](/help/forms/using/admin-help/types-endpoints.md)
    + Acrobat Reader DC Extensions の設定 {#configure-acrobat-reader-dc-extensions}
@@ -470,7 +470,7 @@ ht-degree: 97%
    + PDF Generator の操作 {#work-with-pdf-generator}
       + [PDF Generator の操作の概要](/help/forms/using/admin-help/overview-5.md)
       + [マルチスレッドファイル変換の有効化](/help/forms/using/admin-help/enabling-multi-threaded-file-conversions.md)
-      + [Adobe PDF設定](/help/forms/using/admin-help/configuring-pdf-settings.md)
+      + [Adobe PDF 設定の指定](/help/forms/using/admin-help/configuring-pdf-settings.md)
       + [セキュリティ設定の指定](/help/forms/using/admin-help/configuring-security-settings.md)
       + [ファイルタイプ設定の指定](/help/forms/using/admin-help/configuring-file-type-settings.md)
       + [PDF Generator 設定ファイルの読み込みおよび書き出し](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
@@ -528,7 +528,7 @@ ht-degree: 97%
    + Workspace の設定 {#configure-workspace}
       + [Workspace の概要](/help/forms/using/admin-help/overview-10.md)
       + [グローバル設定の読み込みと書き出し](/help/forms/using/admin-help/importing-exporting-global-settings.md)
-      + [今日のメッセージの設定](/help/forms/using/admin-help/setting-message-day.md)
+      + [今日のお知らせの設定](/help/forms/using/admin-help/setting-message-day.md)
       + [検索テンプレートのカスタマイズ](/help/forms/using/admin-help/customizing-search-templates.md)
       + [Workspace に表示されるカテゴリの管理](/help/forms/using/admin-help/categories-displayed-workspace.md)
    + ヘルスモニター {#health-monitor}
@@ -689,7 +689,7 @@ ht-degree: 97%
    + [Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer または Apple Safari で XFA ベースの PDF フォームを開けない](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
    + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
    + [AEM 6.5.15.0 サービスパックのインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
-   + [JBoss Linux 環境でのAEM Forms JEE 6.5.15.0 Service Pack のインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
+   + [JBoss Linux 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)
