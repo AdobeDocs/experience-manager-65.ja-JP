@@ -3,7 +3,7 @@ title: コンテンツフラグメントモデルのヘッドレス作成のク�
 description: コンテンツフラグメントモデルを使用して、AEM のヘッドレス機能を利用して作成および提供するコンテンツの構造を定義します。
 exl-id: 653e35c9-7b6a-49ae-b55d-af2ec40e257d
 source-git-commit: 7355c149500f9e5044c9ff78af208d36ee681f56
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '492'
 ht-degree: 100%
 
