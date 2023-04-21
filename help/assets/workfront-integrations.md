@@ -5,9 +5,9 @@ role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 57e2bffe-8094-4557-99c8-7b482681687e
 source-git-commit: d83242c8fa6a8cd627a6db24f3c45fcaeae45b2b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1170'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 97%
 | 「ユーザーを AEM に誘導」をクリックしたときに Workfront でリンクされたアセット | ユーザーは、Workfront 内からリンクされたアセットをプレビューするように AEM に誘導されます。 | ✓ | ✓ | 今後提供予定 |
 | リンクされた AEM フォルダーを Workfront に自動的に作成 | プロジェクトのステータスを使用して、リンクされた AEM フォルダーを Workfront に自動的に作成します。Workfront のポートフォリオ、プログラムおよびプロジェクトに基づいて、AEM フォルダーを自動的に設定します。 | 不可 | ✓ | なし |
 | Workfront から AEM リポジトリに直接移動 | ユーザーが Workfront 内に設定された使用可能な AEM リポジトリに移動できるようになります。 | ✓ | なし | ✓ |
-| WorkfrontでのリンクされたAEMフォルダーの作成 | 「ドキュメント」タブのオプションを使用して、WorkfrontでリンクされたAEMフォルダーを手動で作成します。 | ✓ | なし | ✓ |
+| リンクされた AEM フォルダーを Workfront に作成 | 「ドキュメント」タブのオプションを使用して、リンクされた AEM フォルダーを Workfront に作成します。 | ✓ | なし | ✓ |
 | コメントの同期 | アセットのコメントを [!DNL Workfront] から [!DNL Assets] への自動的に同期 | 不可 | ✓ | なし |
 | 単一の AEM 環境に接続する複数の Workfront 環境をサポート | 複数の Workfront 環境のユーザーが単一の AEM 環境に接続できます。 | ✓ | なし | ✓ |
 | 単一の Workfront 環境に接続する複数の AEM 環境をサポート | 単一の Workfront 環境内のユーザーが、複数の AEM 環境間でアセットを送信またはリンクすることができます。 | ✓ | ✓ | ✓ |
