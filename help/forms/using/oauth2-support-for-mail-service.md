@@ -3,9 +3,9 @@ title: Microsoft® Office 365 メールサーバープロトコルの OAuth2 ベ
 description: Microsoft® Office 365 メールサーバープロトコルの OAuth2 ベース認証の設定
 exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 source-git-commit: d19de2955adef56570378a6d62ec0015718f9039
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '975'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 92%
    >[!NOTE]
    >
    > * **任意の組織ディレクトリ（任意の Azure AD ディレクトリ - マルチテナント）内のアカウント**&#x200B;の場合、個人用のメールアカウントではなく、職場アカウントを使用することをお勧めします。
-   > * **個人用Microsoft®アカウントのみ** アプリケーションはサポートされていません。
+   > * **個人用の Microsoft® アカウントのみ**&#x200B;のアプリケーションはサポートされていません。
    > * **マルチテナントおよび個人用の Microsoft® アカウント**&#x200B;アプリケーションを使用することをお勧めします。
 
 
@@ -67,13 +67,13 @@ ht-degree: 92%
 
 次に、以下の手順で説明する認可コードを生成する必要があります。
 
-1. 置き換えた後、ブラウザーで次の URL を開きます `clientID` と `<client_id>` および `redirect_uri` アプリケーションのリダイレクト URI を使用：
+1. `clientID` を `<client_id>` に、`redirect_uri` をアプリケーションのリダイレクト URI に置き換えた後で、次の URL をブラウザーで開きます。
 
    ```https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login```
 
    >[!NOTE]
    >
-   > シングルテナントアプリケーションの場合は、 `common` を `[tenantid]` 認証コードを生成するための次の URL: `https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
+   > シングルテナントアプリケーションの場合は、認証コードを生成するために、次の URL の `common` を `[tenantid]` に置き換えます。`https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/authorize?client_id=[[clientid]]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20openid%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
 1. 上記の URL を入力すると、ログイン画面にリダイレクトされます。
    ![ログイン画面](/help/forms/using/assets/azure_loginscreen.png)
@@ -98,7 +98,7 @@ ht-degree: 92%
 
    >[!NOTE]
    >
-   > シングルテナントアプリケーションで、更新トークンを生成するには、次の cURL コマンドを使用して、 `common` と `[tenantid]` 次の場所：
+   > シングルテナントアプリケーションで更新トークンを生成するには、次の cURL コマンドを使用して `common` を `[tenantid]` に置き換えます。
    >`curl -H “ContentType application/x-www-form-urlencoded” -d “client_id=[client-id]&scope=https%3A%2F%2Foutlook.office.com%2FIMAP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FPOP.AccessAsUser.All%20https%3A%2F%2Foutlook.office.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office.com%2FUser.Read%20https%3A%2F%2Foutlook.office.com%2FMail.Read%20offline_access&code=[code]&grant_type=authorization_code&redirect_uri=[redirect_uri]&client_secret=[secretkey_value]” -X POST https://login.microsoftonline.com/[tenantid]/oauth2/v2.0/token`
 
 1. 更新トークンをメモしておきます。
@@ -125,7 +125,7 @@ ht-degree: 92%
    >[!NOTE]
    >
    >* Transport Security プロトコルの有効な値は「blank」、「SSL」または「TLS」です。oAuth 認証サービスを有効にするには、**SMTP Transport Security** と **Receive Transport Security** の値を **TLS** に設定する必要があります。
-   >* **POP3 プロトコル** は、電子メールエンドポイントの使用中は、OAuth でサポートされていません。
+   >* メールエンドポイントを使用している場合、**POP3 プロトコル**&#x200B;は OAuth でサポートされていません。
 
 
    ![接続設定](/help/forms/using/assets/oauth_connectionsettings.png)
