@@ -8,9 +8,9 @@ role: User, Admin
 exl-id: 8aa779e0-cf76-45a7-a474-556fdfded31b
 feature: Collaboration,Dynamic Media Classic
 source-git-commit: a7f1f41d54663b753bc22c6e5d54b4cb621609fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1077'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -54,7 +54,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
    * Dynamic Media Classic のオンデマンドのスキルビルダー Web セミナーの視聴
    * Online Adobe Summit 2020 の Dynamic Media セッションを表示
    * 無料の Dynamic Media Classic 監査の詳細
-   * Meet `Jon Monroe`(Adobeカスタマーソリューション担当シニアプログラムマネージャー )
+   * アドビカスタマーソリューションの担当シニアプログラムマネージャー、`Jon Monroe` を紹介します。
 
 * **[2020 年 2 月、第 2 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html?lang=ja)**
 
@@ -65,7 +65,7 @@ Experience League 提供の Dynamic Media ニュースレターは、Dynamic Med
    * Dynamic Media の切り抜きマジックの使い方を知る
    * Dynamic Media Classic の価値を高めるために、アドビの無料監査を活用してください。
    * Dynamic Media Classic の新しいユーザーインターフェイスの説明
-   * Meet `Georgia Myers` Adobe Experience CloudのAdobeアカウントチーム
+   * Adobe Experience Cloud のアドビアカウントチームの `Georgia Myers` を紹介します。
 
 * **[2020 年 1 月、第 1 号](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_01_2020_Jan.html?lang=ja)**
 
