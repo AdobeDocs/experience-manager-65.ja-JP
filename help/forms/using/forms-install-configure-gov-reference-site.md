@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: ce6d24e53a27b64a5d0a9db2e4b6672bd77cf9ec
+source-git-commit: d0233ba5358f961339317bc1d63d51f1826d8c13
 workflow-type: tm+mt
-source-wordcount: '4677'
+source-wordcount: '4670'
 ht-degree: 97%
 
 ---
@@ -749,7 +749,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 ### アクセシビリティテスト用の Chrome アドオンの有効化 {#enable-chrome-add-on}
 
-アクセシビリティテストを実行するには、見つかった Chrome プラグインをインストールします [ここ](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=ja). <!-- This URL is a 404. Please fix and update this topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+アクセシビリティテストを実行するには、次の場所にある Chrome プラグインをインストールします。 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 インストール後、Chrome ブラウザー内でテストするページを読み込みます ( 注意：複数のタブを開くと、スコアに影響が及ぶ場合があります。1 つのタブだけを開くことをお勧めします )。 ページを読み込んだら、
 そのページで**右クリック**&#x200B;し、「**Audits**」タブを選択します。その画面で開発者は、アクセシビリティプラグインで実行する検証のタイプを選択できます。必要なオプションをすべて選択したら、「レポートを生成」ボタンをクリックできます。 これにより、アクセシビリティの総合評価や、その評価を向上するための提案が記載された PDF ドキュメントが生成されます。
