@@ -3,10 +3,10 @@ title: コンテンツフラグメントと共に使用する AEM GraphQL API
 description: Adobe Experience Manager（AEM） のコンテンツフラグメントを AEM GraphQL API と共に使用してヘッドレスコンテンツ配信を実現する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
-source-git-commit: cee709161100db6597bdb18ca03b3130d9e242f1
+source-git-commit: cf78742614fd2d35f59905895dfacb83190140cd
 workflow-type: tm+mt
-source-wordcount: '3225'
-ht-degree: 98%
+source-wordcount: '3250'
+ht-degree: 97%
 
 ---
 
@@ -104,14 +104,14 @@ GraphQL では、次のいずれかを返すクエリを実行できます。
 
 * **[エントリのリスト](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-AEM は、クエリ（両方のタイプ）を Dispatcher と CDN によって[](/help/sites-developing/headless/graphql-api/persisted-queries.md)キャッシュできる永続クエリに変換する機能を提供します。
+AEM は、クエリ（両方のタイプ）を、Dispatcher と CDN によってキャッシュできる[永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)に変換する機能を提供します。
 
 ### GraphQL クエリのベストプラクティス（Dispatcher と CDN） {#graphql-query-best-practices}
 
 [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)は、パブリッシュインスタンスで次のように使用することをお勧めします。
 
 * キャッシュされます
-* これらは、AEMによって一元的に管理されます
+* AEM で一元管理されます
 
 <!-- is this fully accurate? -->
 >[!NOTE]
@@ -138,7 +138,7 @@ GraphQL は GET リクエストもサポートしていますが、永続クエ�
 
 このインターフェイスを使用すると、クエリを直接入力しテストできます。
 
-次に例を示します。
+例：
 
 * `http://localhost:4502/content/graphiql.html`
 
@@ -148,7 +148,7 @@ GraphQL は GET リクエストもサポートしていますが、永続クエ�
 
 >[!NOTE]
 >
->詳しくは、 [GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md).
+>詳しくは、「[GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md)」を参照してください。
 
 ## オーサー環境とパブリッシュ環境の使用例 {#use-cases-author-publish-environments}
 
@@ -239,7 +239,7 @@ Sites GraphQL サービスは、コンテンツフラグメントモデルに対
 
 * ユーザーが生成するフィールド
 
-   選択された[フィールドタイプ](#field-types)を使用して、コンテンツフラグメントモデルの設定方法に基づいてフィールドが作成されます。フィールド名は、**データタイプ**&#x200B;の「**プロパティ名**」フィールドから取得されます。
+   選択された[フィールドタイプ](#data-types)を使用して、コンテンツフラグメントモデルの設定方法に基づいてフィールドが作成されます。フィールド名は、**データタイプ**&#x200B;の「**プロパティ名**」フィールドから取得されます。
 
    * また、**レンダリング時の名前**&#x200B;プロパティも考慮する必要があります。ユーザーが特定のデータ型を、例えば、1 行のテキストか複数フィールドのどちらかとして設定できるからです。
 
@@ -247,21 +247,23 @@ Sites GraphQL サービスは、コンテンツフラグメントモデルに対
 
    これらは、コンテンツフラグメントを識別するためや、コンテンツフラグメントに関する詳細を取得するために使用されます。
 
-### フィールドタイプ {#field-types}
+### データタイプ {#data-types}
 
 AEM 用 GraphQL では一連のタイプをサポートしています。サポートされているすべてのコンテンツフラグメントモデルデータ型と、それに対応する GraphQL 型を以下の表に示します。
 
 | コンテンツフラグメントモデル - データ型 | GraphQL の型 | 説明 |
 |--- |--- |--- |
-| 1 行のテキスト | String、[String] |  作成者名、場所名などの単純な文字列に使用します。 |
-| 複数行テキスト | String |  記事の本文などのテキストを出力するために使用します |
-| Number |  Float、[Float] | 浮動小数点数と整数を表示するために使用します |
-| Boolean |  Boolean |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
-| 日時 | Calendar |  日時を ISO 8086 形式で表示するために使用します。選択したタイプに応じて、AEM GraphQL で使用できるフレーバーは、`onlyDate`、`onlyTime`、`dateTime` の 3 つです。 |
-| 定義済みリスト |  String |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
-|  タグ |  [String] |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
-| コンテンツ参照 |  String |  AEM 内の別のアセットへのパスを表示するために使用します |
-| フラグメント参照 |  *モデルタイプ* |  特定のモデルタイプの別のコンテンツフラグメントを参照するために使用します（モデルの作成時に定義されます） |
+| 1 行のテキスト | `String`、`[String]` |  作成者名、場所名などの単純な文字列に使用します. |
+| 複数行テキスト | `String` |  記事の本文などのテキストを出力するために使用します |
+| Number |  `Float`, `[Float]` | 浮動小数点数と整数を表示するために使用します |
+| Boolean |  `Boolean` |  チェックボックスを表示するために使用します（単純な真／偽のステートメント） |
+| 日時 | `Calendar` |  日時を ISO 8086 形式で表示するために使用します. 選択したタイプに応じて、AEM GraphQL で使用できるフレーバーは、`onlyDate`、`onlyTime`、`dateTime` の 3 つです。 |
+| 定義済みリスト |  `String` |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
+|  タグ |  `[String]` |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
+| コンテンツ参照 |  `String` |  AEM 内の別のアセットへのパスを表示するために使用します |
+| フラグメント参照 |  *モデルタイプ* <br><br>単一のフィールド： `Model`  — 直接参照されるモデルタイプ <br><br>複数フィールド（1 つの参照タイプ）: `[Model]`  — 型の配列 `Model`（配列から直接参照） <br><br>複数の参照型を持つマルチフィールド： `[AllFragmentModels]`  — 和集合型を持つ配列から参照される、すべてのモデル型の配列 |  特定のモデルタイプの 1 つ以上のコンテンツフラグメントを参照するために使用されます。モデルが作成されたときに定義されます。 |
+
+{style="table-layout:auto"}
 
 ### ヘルパーフィールド {#helper-fields}
 
@@ -286,7 +288,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 }
 ```
 
-特定のタイプのコンテンツフラグメントを 1 つ取得するには、まずそのパスも決定する必要があります。次に例を示します。
+特定のタイプのコンテンツフラグメントを 1 つ取得するには、まずそのパスも決定する必要があります。例：
 
 ```xml
 {
@@ -356,7 +358,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 
 #### バリエーション {#variations}
 
-コンテンツフラグメントのバリエーションに対するクエリを簡略化するために、`_variations` フィールドが実装されています。次に例を示します。
+コンテンツフラグメントのバリエーションに対するクエリを簡略化するために、`_variations` フィールドが実装されています。例：
 
 ```xml
 {
