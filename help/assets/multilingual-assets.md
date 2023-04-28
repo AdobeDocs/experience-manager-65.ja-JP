@@ -1,14 +1,14 @@
 ---
-title: 多言語アセットとアセット翻訳
-description: バイナリ、メタデータ、タグなどのアセットを複数の言語に翻訳するワークフローを自動化する方法を学習してください。
+title: 多言語アセット
+description: バイナリ、メタデータ、タグなどのアセットを複数の言語に翻訳するワークフローを自動化する方法を学習します。
 contentOwner: AG
 feature: Asset Management
 role: Admin
 exl-id: edccf23c-087e-4253-babb-dd4c6610517d
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
-workflow-type: ht
-source-wordcount: '202'
-ht-degree: 100%
+source-git-commit: 68f9179222c55840c4edf8774687cd8fde8cde4b
+workflow-type: tm+mt
+source-wordcount: '199'
+ht-degree: 96%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 100%
 
 機械翻訳：機械翻訳サービスでは、アセットのメタデータとタグがすぐに翻訳されます。
 
-アセットの翻訳には次の手順が含まれます。
+アセットの翻訳には、以下が含まれます。
 
 1. [Experience Manager と翻訳サービスプロバイダーの接続](/help/sites-administering/tc-tic.md#connecting-to-a-translation-service-provider)
 1. [翻訳統合フレームワーク設定の作成](/help/sites-administering/tc-tic.md)
