@@ -3,10 +3,10 @@ title: AEM での GraphQL の使用方法 - サンプルコンテンツとサン
 description: GraphQL を AEM と共に使用し、サンプルコンテンツとクエリを調べて、コンテンツをヘッドレスに提供する方法を説明します。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
-workflow-type: ht
-source-wordcount: '1530'
-ht-degree: 100%
+source-git-commit: e773990c6bd32df65c7f62060f7eca5547b7b614
+workflow-type: tm+mt
+source-wordcount: '1586'
+ht-degree: 97%
 
 ---
 
@@ -1306,15 +1306,15 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
-  articleByPath (_path: "/content/dam/wknd/en/magazine/skitouring/skitouring") {
+  adventureByPath(_path: "/content/dam/wknd-shared/en/magazine/western-australia/western-australia-by-camper-van") {
     item {
+      _path
+      title
+      _model {
         _path
-        author
-        referencearticle {
-          _path
-          author
+        title
       }
     }
   }
@@ -1323,16 +1323,42 @@ query {
 
 ### ネストされたコンテンツフラグメントのサンプルクエリ - 複数モデルタイプ {#sample-wknd-nested-fragment-multiple-model}
 
+#### 単一参照モデルタイプ
+
 このクエリでは次のものを検索します。
 
 * `bookmark` タイプの複数のコンテンツフラグメントについて
-   * 特定のモデルタイプ `article` および `adventure` の他のフラグメントへのフラグメント参照を含むもの
+   * と特定のモデルタイプの他のフラグメントへのフラグメント参照 `article`
 
 >[!NOTE]
 >
->フィールド `fragments` のデータタイプは `fragment-reference` で、モデル `Article` および `Adventure` が選択されています。
+>フィールド `fragments` はデータタイプです `fragment-reference`（モデルを使用） `Article` 選択済み クエリ配信 `fragments` 配列として `[Article]`.
 
-```xml
+```graphql
+{
+  bookmarkList {
+    items {
+        fragments {
+          _path
+          author
+        }
+     }
+  }
+}
+```
+
+#### 複数の参照モデルタイプ
+
+このクエリでは次のものを検索します。
+
+* `bookmark` タイプの複数のコンテンツフラグメントについて
+   * 特定のモデルタイプ `Article` および `Adventure` の他のフラグメントへのフラグメント参照を含むもの
+
+>[!NOTE]
+>
+>フィールド `fragments` のデータタイプは `fragment-reference` で、モデル `Article` および `Adventure` が選択されています。クエリ配信 `fragments` 配列として `[AllFragmentModels]`：和集合タイプで非参照になります。
+
+```graphql
 {
   bookmarkList {
     items {
