@@ -1,16 +1,17 @@
 ---
 title: 永続的な GraphQL クエリ
 description: Adobe Experience Manager で GraphQL クエリを永続化してパフォーマンスを最適化する方法を説明します。永続化されたクエリは、HTTPGETメソッドを使用してクライアントアプリケーションからリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュでき、最終的にクライアントアプリケーションのパフォーマンスが向上します。
-source-git-commit: f4a3b7edc9187c1984afedb4e3b4c558354a4d84
+exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
+source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 73%
+source-wordcount: '1424'
+ht-degree: 72%
 
 ---
 
 # 永続的な GraphQL クエリ {#persisted-queries-caching}
 
-永続的なクエリは、Adobe Experience Manager（AEM）as a Cloud Service サーバーで作成および保存される GraphQL クエリです。永続的なクエリは、クライアントアプリケーションから GET リクエストでリクエストできます。GETリクエストの応答は、Dispatcher およびコンテンツ配信ネットワーク (CDN) レイヤーでキャッシュでき、最終的には、要求元のクライアントアプリケーションのパフォーマンスを向上させます。 これは、標準の GraphQL クエリとは異なります。標準クエリは、応答を簡単にはキャッシュできない POST リクエストを使用して実行されます。
+永続化されたクエリは、Adobe Experience Manager(AEM) サーバー上で作成および保存されるGraphQLクエリです。 永続的なクエリは、クライアントアプリケーションから GET リクエストでリクエストできます。GETリクエストの応答は、Dispatcher およびコンテンツ配信ネットワーク (CDN) レイヤーでキャッシュでき、最終的には、要求元のクライアントアプリケーションのパフォーマンスを向上させます。 これは、標準の GraphQL クエリとは異なります。標準クエリは、応答を簡単にはキャッシュできない POST リクエストを使用して実行されます。
 
 <!--
 >[!NOTE]
@@ -260,7 +261,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 永続クエリのキャッシュ {#caching-persisted-queries}
 
-永続化されたクエリは、 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=en) およびコンテンツ配信ネットワーク (CDN) レイヤーを使用すると、最終的に、要求元のクライアントアプリケーションのパフォーマンスを向上できます。
+永続化されたクエリは、 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) およびコンテンツ配信ネットワーク (CDN) レイヤーを使用すると、最終的に、要求元のクライアントアプリケーションのパフォーマンスを向上できます。
 
 デフォルトでは、AEMは有効期間 (TTL) の定義に基づいてキャッシュを無効にします。 これらの TTL は、次のパラメーターで定義できます。 これらのパラメーターには様々な方法でアクセスでき、使用するメカニズムに応じて名前が異なります。
 

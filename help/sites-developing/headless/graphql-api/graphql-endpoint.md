@@ -1,11 +1,11 @@
 ---
 title: AEM の GraphQL エンドポイントの管理
-description: ヘッドレスコンテンツ配信用に Adobe Experience Manager as a Cloud Service の GraphQL エンドポイントを管理する方法を説明します。
+description: ヘッドレスコンテンツ配信のためにAdobe Experience ManagerでGraphQLエンドポイントを管理する方法を説明します。
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
-source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
-workflow-type: ht
-source-wordcount: '515'
-ht-degree: 100%
+source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+workflow-type: tm+mt
+source-wordcount: '511'
+ht-degree: 97%
 
 ---
 
