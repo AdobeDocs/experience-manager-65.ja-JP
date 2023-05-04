@@ -4,10 +4,10 @@ seo-title: Resources for New AEM Users
 description: AEM を初めて使用するユーザー向けの質問、回答およびリソース
 seo-description: Questions, answers, and resources for users new to AEM
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 74%
+source-wordcount: '298'
+ht-degree: 56%
 
 ---
 
@@ -34,23 +34,9 @@ Adobe Experience Manager(AEM) は、商用 Web サイトや関連サービスを
 
 ## AEM の以前のバージョンのドキュメントはどこにありますか？ {#versions}
 
-AEM 6.5 の最新ドキュメントはまさにここです。
+AEM 6.5 ドキュメントに適した場所にいます。
 
-Adobeには、Adobe Experience Managerの古いバージョンに関するドキュメントも含まれています。 任意のページでバージョンコンポーネントを使用して、バージョン間を移動したり、このリストから選択したりできます。
-
-* [AEM 6.4](https://experienceleague.adobe.com/docs/experience-manager-64.html?lang=ja)
-* [AEM 6.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)
-* [AEM 6.2](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [AEM 6.0](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [AEM 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [AEM 5.6](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [CQ 5.5](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [CQ 5.4](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [CQ 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-* [CRX 2.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)**
-
-** アドビで正式にサポートされなくなったバージョンを示します。
+Adobeには、Adobe Experience Managerの古いバージョンに関するドキュメントも含まれています。 以下をご覧ください。 [Adobe Experience Manager、CQ および CRX ドキュメントの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
 
 ## AEM 6.5 のリリースノートはどこにありますか？ {#release-notes}
 

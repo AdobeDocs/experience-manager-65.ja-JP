@@ -8,10 +8,10 @@ topic-tags: process-reporting
 discoiquuid: 7c1fcde0-b983-4b24-bc19-fcee1d4f096b
 docset: aem65
 exl-id: 1272e854-fa64-4bfd-b073-8fbcf210e9b5
-source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 74%
+source-wordcount: '1673'
+ht-degree: 75%
 
 ---
 
@@ -29,11 +29,11 @@ ht-degree: 74%
 
 Process Reporting 公開サービスは、データベースで現在使用可能なすべてのAEM Formsデータを公開します。 つまり、レポートやクエリを実行する必要がないレガシーデータがデータベースに含まれている場合、そのデータはレポートに必要ないにもかかわらず、すべてリポジトリにも公開されます。 そのようなデータは、プロセスレポートリポジトリにデータを公開するサービスを実行する前に、パージすることをお勧めします。これにより、パブリッシャーサービスと、レポート用にデータをクエリするサービスの両方のパフォーマンスが向上します。
 
-AEM Forms プロセスデータのパージについて詳しくは、[プロセスデータのパージ](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en)を参照してください。
+AEM Forms プロセスデータのパージについて詳しくは、[プロセスデータのパージ](/help/forms/using/admin-help/purging-process-data.md)を参照してください。
 
 >[!NOTE]
 >
->パージユーティリティのヒントとテクニックについては、Adobe Developer Connection の「[プロセスとジョブのパージ](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/maintain-aem-forms-database/purging-process-data.html?lang=en)」に関する記事を参照してください。
+>パージユーティリティのヒントとテクニックについては、Adobe Developer Connection の「[プロセスとジョブのパージ](/help/forms/using/admin-help/purging-process-data.md)」に関する記事を参照してください。
 
 ## プロセスレポートサービスの設定 {#configuring-process-reporting-services}
 

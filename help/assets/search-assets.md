@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search, Metadata
 role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
-source-git-commit: 9406dc74887d29e93461e1015a8f52fa7ee196f6
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '5613'
+source-wordcount: '5601'
 ht-degree: 94%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 94%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/using/search-assets.html?lang=ja) |
 
 [!DNL Adobe Experience Manager Assets] は、コンテンツ速度の向上を達成するのに役立つ堅牢なアセット検出方法を備えています。標準搭載の機能とカスタム方法を使用すると、シームレスでインテリジェントな検索エクスペリエンスでチームが市場投入までの時間を短縮できます。アセットの検索は、デジタルアセット管理システムの利用の中核を成します。用途は、クリエイティブ担当者によるさらなる利用、ビジネスユーザーやマーケティング担当者によるアセットの堅牢な管理、DAM 管理者による管理などです。[!DNL Assets] ユーザーインターフェイスまたは他のアプリやサーフェスで実行できる簡易検索、詳細検索、カスタム検索は、これらの使用目的を達成するのに役立ちます。
 

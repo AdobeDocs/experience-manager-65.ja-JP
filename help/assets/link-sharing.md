@@ -5,10 +5,10 @@ contentOwner: AG
 role: User
 feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
-source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
-workflow-type: ht
-source-wordcount: '1043'
-ht-degree: 100%
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+workflow-type: tm+mt
+source-wordcount: '1031'
+ht-degree: 94%
 
 ---
 
@@ -18,14 +18,13 @@ ht-degree: 100%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/share-assets.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/link-sharing.html?lang=ja) |
 
 [!DNL Adobe Experience Manager Assets] では、アセット、フォルダー、コレクションを組織内や外部（パートナーやベンダーなど）のメンバーと共有できます。リンクによるアセットの共有は、外部の関係者が [!DNL Assets] にログインせずにリソースを利用できる便利な方法です。
 
 >[!PREREQUISITES]
 >
 >* リンクとして共有するフォルダーやアセットに対する `Edit ACL` 権限が必要です。
->* ユーザーに電子メールを送信するには、[Day CQ Mail Service](#configmailservice) で SMTP サーバーの詳細を設定します。 
+>* ユーザーにメールを送信するには、[Day CQ Mail Service](#configmailservice) で SMTP サーバーの詳細を設定します。 
 
 
 ## アセットの共有 {#share-assets}
@@ -43,15 +42,15 @@ ht-degree: 100%
 
    *図：アセットをリンクとして共有するためのダイアログ。*
 
-1. **[!UICONTROL リンク共有]**&#x200B;ダイアログの電子メールアドレスボックスに、リンクを共有するユーザーの電子メール ID を入力します。1 人または複数のユーザーを追加できます。
+1. **[!UICONTROL リンク共有]**&#x200B;ダイアログのメールアドレスボックスに、リンクを共有するユーザーのメール ID を入力します。1 人または複数のユーザーを追加できます。
 
    >[!NOTE]
    >
-   >組織内のメンバーではないユーザーの電子メール ID を入力した場合、ユーザーの電子メール ID に「[!UICONTROL External User]」というプレフィックスが付きます。
+   >組織内のメンバーではないユーザーのメール ID を入力した場合、ユーザーのメール ID に「[!UICONTROL External User]」というプレフィックスが付きます。
 
-1. 「**[!UICONTROL 件名]**」ボックスに、共有するアセットの件名を入力します。
+1. 内 **[!UICONTROL 件名]** ボックスに、共有するアセットの件名を入力します。
 
-1. 「**[!UICONTROL メッセージ]**」ボックスに、オプションでメッセージを入力します。
+1. 内 **[!UICONTROL メッセージ]** ボックスに、オプションのメッセージを入力します。
 
 1. 「**[!UICONTROL 有効期限]**」フィールドに、日付ピッカーを使用してリンクの有効期限の日付と時間を指定します。リンクのデフォルトの有効期間は 1 日です。
 
@@ -59,9 +58,9 @@ ht-degree: 100%
 
 1. ユーザーが元のアセットをダウンロードできるようにするには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。ユーザーが共有アセットのレンディションのみをダウンロードできるようにするには、「**[!UICONTROL ファイルのレンディションのダウンロードを許可]**」を選択します。
 
-1. 「**[!UICONTROL 共有]**」をクリックします。電子メールでリンクをユーザーと共有することを確認するメッセージが表示されます。
+1. 「**[!UICONTROL 共有]**」をクリックします。メールでリンクをユーザーと共有することを確認するメッセージが表示されます。
 
-1. 共有アセットを表示するには、ユーザーが受け取った電子メールのリンクをクリックまたはタップします。アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。プレビューを閉じるには、「**[!UICONTROL 戻る]**」をクリックします。フォルダーを共有したら、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
+1. 共有アセットを表示するには、ユーザーが受け取ったメールのリンクをクリックまたはタップします。アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。プレビューを閉じるには、「**[!UICONTROL 戻る]**」をクリックします。フォルダーを共有したら、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
 
    ![共有アセットのプレビュー](assets/chlimage_1-546.png)
 
@@ -83,10 +82,10 @@ ht-degree: 100%
 1. サービスのリストから、**[!UICONTROL Day CQ Mail Service]** を探します。
 1. サービスの横の「**[!UICONTROL 編集]**」をクリックして、**[!UICONTROL Day CQ Mail Service]** のパラメーターと名前に対して言及される詳細を次のように設定します。
 
-   * SMTP server host name：電子メールサーバーのホスト名
-   * SMTP server port：電子メールサーバーのポート
-   * SMTP user：メールサーバーのユーザー名
-   * SMTP パスワード：電子メールサーバーのパスワード
+   * SMTP サーバーのホスト名：メールサーバーのホスト名
+   * SMTP サーバーポート：メールサーバーポート
+   * SMTP ユーザー：メールサーバーのユーザー名
+   * SMTP パスワード：メールサーバーのパスワード
 
    ![chlimage_1-263](assets/chlimage_1-548.png)
 
@@ -108,7 +107,7 @@ ht-degree: 100%
 
 * 名前に空白を含むアセットフォルダーまたはコレクションは共有されない場合があります。
 * ユーザーが共有アセットをダウンロードできない場合は、[!DNL Experience Manager] 管理者に[ダウンロード制限](#configure-maximum-data-size)を確認してください。
-* 共有アセットへのリンクを含む電子メールを送信できない場合、または他のユーザーがお客様からの電子メールを受信できない場合、[!DNL Experience Manager] 管理者に[電子メールサービス](#configure-day-cq-mail-service)が設定されているかどうかを確認してください。
+* 共有アセットへのリンクを含むメールを送信できない場合、または他のユーザーがお客様からのメールを受信できない場合、[!DNL Experience Manager] 管理者に[メールサービス](#configure-day-cq-mail-service)が設定されているかどうかを確認してください。
 * リンク共有機能を使用してアセットを共有できない場合は、適切な権限を持っていることを確認してください。[アセットの共有](#share-assets)を参照してください。
 * 共有アセットが別の場所に移動されると、そのリンクは機能しなくなります。リンクを再作成し、ユーザーと再共有します。
 

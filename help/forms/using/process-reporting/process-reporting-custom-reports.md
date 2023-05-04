@@ -10,10 +10,10 @@ topic-tags: process-reporting
 discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: bd33c0884be55b76ef526c8c938236e743dc3dc6
 workflow-type: tm+mt
-source-wordcount: '973'
-ht-degree: 90%
+source-wordcount: '953'
+ht-degree: 92%
 
 ---
 
@@ -632,7 +632,7 @@ response.setCharacterEncoding("utf-8");
 
 ## 既存のプロセスレポート UI へのレポート UI の統合  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-結果を表示するための個別の UI を作成するための前提条件は [Sling の基本](https://wem.help.adobe.com/enterprise/ja_jp/10-0/wem/developing/the_basics.html)、[CRX ノードの作成](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#creating-a-node)および適切な[アクセス権限](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html?lang=en#access-control)です。
+結果を表示するための個別の UI を作成するための前提条件は [Sling の基本](https://wem.help.adobe.com/enterprise/ja_jp/10-0/wem/developing/the_basics.html)、[CRX ノードの作成](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node)および適切な[アクセス権限](/help/sites-developing/developing-with-crxde-lite.md#access-control)です。
 
 1. 個別の UI を作成します。
 1. `/content/process-reporting-runtime/custom-reports` プラグイン可能なすべてのレポート用ノードに、子 `nt:unstructured` ノードを作成します。

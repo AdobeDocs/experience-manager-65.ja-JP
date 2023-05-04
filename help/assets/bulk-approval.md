@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Collaboration, Collections
 role: User
 exl-id: 23c90e10-aa03-450e-9fb0-2f5be0c5066b
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
-workflow-type: ht
-source-wordcount: '819'
-ht-degree: 100%
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 89%
 
 ---
 
@@ -18,15 +18,14 @@ ht-degree: 100%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/bulk-approval.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/using/bulk-approval.html?lang=ja) |
 
 フォルダー内またはコレクション内のアセットに対してレビューワークフローを設定し、それをレビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
 [!DNL Adobe Experience Manager Assets] では、フォルダー内またはコレクション内のアセットに対してアドホックレビューワークフローを設定し、レビュー担当者またはクリエイティブパートナーと共有してフィードバックを得ることができます。
 
-レビューワークフローをプロジェクトと関連付けることも、独立したレビュータスクを作成することもできます。
+レビューワークフローをプロジェクトに関連付けるか、独立したレビュータスクを作成することができます。
 
-ユーザーがアセットを共有した後で、レビュー担当者がアセットを承認または拒否できます。ワークフローの様々なステージで、様々なタスクの完了に関する通知が対象の受信者に送られます。例えば、ユーザーがフォルダーまたはコレクションを共有すると、レビュー担当者は、フォルダーまたはコレクションがレビューのために共有されたという通知を受け取ります。
+ユーザーがアセットを共有した後で、レビュー担当者がアセットを承認または拒否できます。ワークフローの様々な段階で通知が送信され、様々なタスクの完了に関して意図した受信者に通知が送信されます。 例えば、あるフォルダーまたはコレクションを共有した場合、レビュー担当者に、あるフォルダーまたはコレクションがレビュー用に共有されたことを知らせる通知が届きます。
 
 レビュー担当者がレビューを終了（アセットを承認または拒否）すると、ユーザーはレビューが完了したという通知を受け取ります。
 
@@ -66,15 +65,15 @@ ht-degree: 100%
    ![review_task](assets/review_task.png)
 
 1. ツールバーの「**[!UICONTROL 完了]**」をクリックします。ダイアログでコメントを入力し、「**[!UICONTROL 完了]**」をクリックして確定します。
-1. [!DNL Assets] ユーザーインターフェイスに移動し、フォルダーを開きます。カードビューとリストビューに、アセットの承認状況アイコンが表示されます。
+1. [!DNL Assets] ユーザーインターフェイスに移動し、フォルダーを開きます。カード表示とリスト表示に、アセットの承認状況アイコンが表示されます。
 
    **カードビュー**
 
    ![カードビューに表示されるレビューのステータス](assets/chlimage_1-404.png)
 
-   **リストビュー**
+   **リスト表示**
 
-   ![リストビューに表示されるレビューのステータス](assets/review_status_listview.png)
+   ![リスト表示に表示されるレビューのステータス](assets/review_status_listview.png)
 
 ## コレクション用レビュータスクの作成 {#creating-a-review-task-for-collections}
 
@@ -105,7 +104,7 @@ ht-degree: 100%
    ![review_task_collection](assets/review_task_collection.png)
 
 1. ツールバーの「**[!UICONTROL 完了]**」をクリックします。ダイアログでコメントを入力し、「**[!UICONTROL 完了]**」をクリックして確定します。
-1. コレクションコンソールに移動して、コレクションを開きます。アセットの承認ステータスアイコンは、カード表示とリスト表示の両方に表示されます。
+1. コレクションコンソールに移動して、コレクションを開きます。 アセットの承認ステータスアイコンは、カード表示とリスト表示の両方に表示されます。
 
    ![collection_reviewstatuscardview](assets/collection_reviewstatuscardview.png)
 
@@ -113,4 +112,4 @@ ht-degree: 100%
 
    ![collection_reviewstatuslistview](assets/collection_reviewstatuslistview.png)
 
-   *図：リストビュー*
+   *図：リスト表示*

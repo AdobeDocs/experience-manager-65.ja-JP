@@ -10,10 +10,10 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 17%
+source-wordcount: '1122'
+ht-degree: 18%
 
 ---
 
@@ -57,10 +57,10 @@ AEM forms は、次のエラーから確実に回復します。
 1. (WebSphere® Application Server)WebSphere® Application Server の新しいインスタンスに回復する場合は、restoreConfig.bat/sh コマンドを実行します。
 1. AEM forms データベースを回復します。まず、データベースのバックアップファイルを使用してデータベースの復元操作を実行し、次に、回復したデータベースにトランザクションのやり直しログを適用します。 ( [AEM forms データベース](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database).) 詳しくは、次のナレッジベース記事を参照してください。
 
-   * [AEM forms の DB2®バックアップと回復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#db2)
-   * [AEM Forms の Oracle バックアップと回復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#oracle)
-   * [AEM forms のMicrosoft® SQL Server バックアップと回復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#sql-server)
-   * [AEM Forms の MySQL バックアップと回復](https://experienceleague.adobe.com/docs/experience-manager-64/forms/administrator-help/aem-forms-backup-recovery/files-back-recover.html?lang=en#mysql)
+   * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
+   * [AEM Forms の Oracle バックアップと回復](/help/forms/using/admin-help/files-back-recover.md#oracle)
+   * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
+   * [AEM Forms の MySQL バックアップと回復](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
 1. GDS ディレクトリを回復します。まず、AEM forms の既存のインストールで GDS ディレクトリの内容を削除し、次に、バックアップされた GDS から GDS ディレクトリの内容をコピーします。 GDS ディレクトリの場所を変更した場合は、 [回復中の GDS の場所の変更](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
 1. 次の例に示すように、復元する GDS バックアップディレクトリの名前を変更します。
@@ -71,15 +71,15 @@ AEM forms は、次のエラーから確実に回復します。
 
    * (JBoss®) 名前を変更 `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` 移動先：
 
-      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`
+      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`。
 
    * （WebLogic）`[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
-      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`
+      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`。
 
    * (WebSphere®) 名前を変更 `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` 移動先：
 
-      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`
+      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`。
 
 1. コンテンツ保存場所のルートディレクトリを復元するには、まずAEM forms の既存のインストールにあるコンテンツ保存場所のルートディレクトリの内容を削除し、次に、スタンドアロン環境またはクラスター環境のタスクに従って内容を復元します。
 

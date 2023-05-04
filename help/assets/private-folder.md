@@ -5,10 +5,10 @@ contentOwner: AG
 role: User
 feature: Collaboration
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
-workflow-type: ht
-source-wordcount: '607'
-ht-degree: 100%
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+workflow-type: tm+mt
+source-wordcount: '595'
+ht-degree: 97%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 100%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/managing/private-folder.html?lang=ja) |
 
 [!DNL Adobe Experience Manager Assets] のユーザーインターフェイスに、自分だけが使用できるプライベートフォルダーを作成できます。このプライベートフォルダーを他のユーザーと共有して、他のユーザーに様々な権限を割り当てることができます。ユーザーはフォルダーに対して、割り当てられた特権のレベルに応じた様々なタスク（フォルダー内のアセットの表示、アセットの編集など）を実行できます。
 
@@ -62,7 +61,7 @@ ht-degree: 100%
 
 1. 「**[!UICONTROL 保存]**」をクリックします。割り当てた役割に応じて、ユーザーが [!DNL Assets] にログインしたときに、プライベートフォルダーに対する一連の権限が割り当てられます。
 1. 「**[!UICONTROL OK]**」をクリックして、確認メッセージを閉じます。
-1. フォルダーを共有するユーザーに対して、共有に関する通知が送信されます。通知を確認するには、そのユーザーの資格情報で [!DNL Assets] にログインします。
+1. フォルダーを共有するユーザーに、共有通知が送信されます。 通知を確認するには、そのユーザーの資格情報で [!DNL Assets] にログインします。
 
    ![chlimage_1-416](assets/chlimage_1-416.png)
 

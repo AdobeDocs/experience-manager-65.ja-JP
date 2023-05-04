@@ -9,9 +9,9 @@ content-type: reference
 topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1465'
 ht-degree: 38%
 
 ---
@@ -90,7 +90,7 @@ AEMの内部インデックス再作成プロセスは、リポジトリデー�
 1. 許容可能な監視キューの制限を超えないようにするには、次の操作をお勧めします。
 
    * コミットの一定率を下げます。 コミットの短いスパイクは許容できますが、一定の速度を下げる必要があります。
-   * [Performance tuning tips／Mongo Storage Tuning／Document cache size](https://experienceleague.adobe.com/docs/experience-manager-64/deploying/configuring/configuring-performance.html?lang=en) の説明に従って、`DiffCache` のサイズを大きくします。
+   * [Performance tuning tips／Mongo Storage Tuning／Document cache size](/help/sites-deploying/configuring-performance.md) の説明に従って、`DiffCache` のサイズを大きくします。
 
 ## スタックしたインデックス再作成プロセスの識別と修正 {#identifying-and-remediating-a-stuck-re-indexing-process}
 

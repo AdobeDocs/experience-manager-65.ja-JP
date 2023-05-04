@@ -8,9 +8,9 @@ contentOwner: anujkapo
 discoiquuid: fe5da0aa-d3a8-4b77-a447-9e429fdc2816
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: d0233ba5358f961339317bc1d63d51f1826d8c13
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
-source-wordcount: '4670'
+source-wordcount: '4663'
 ht-degree: 97%
 
 ---
@@ -225,8 +225,8 @@ ht-degree: 97%
 
 **参照：**
 
-1. [Microsoft Dynamics OData の設定](https://experienceleague.adobe.com/docs/experience-manager-64/forms/form-data-model/ms-dynamics-odata-configuration.html?lang=ja)
-1. [AEM Forms用Microsoft Dynamics の設定](https://helpx.adobe.com/experience-manager/kt/forms/using/config-dynamics-for-aem-forms.html)
+1. [Microsoft Dynamics OData の設定](/help/forms/using/ms-dynamics-odata-configuration.md)
+1. [AEM Forms用Microsoft Dynamics の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
 
 #### MS Dynamics OData クラウドサービス {#ms-dynamics-odata-cloud-service}
 

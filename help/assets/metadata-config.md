@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
-source-git-commit: 068f6c1c2909c2840e9ad4c0ad295538e543d9c9
-workflow-type: ht
-source-wordcount: '2012'
-ht-degree: 100%
+source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+workflow-type: tm+mt
+source-wordcount: '2000'
+ht-degree: 91%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 100%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM 6.4 | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-64/assets/administer/metadata-profiles.html?lang=ja) |
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, etc. operations that end-users can do.
@@ -105,7 +104,7 @@ ht-degree: 100%
 
 1. ツールバーの「**[!UICONTROL コピー]**」をクリックします。
 1. **[!UICONTROL メタデータプロファイルをコピー]**&#x200B;ダイアログで、メタデータプロファイルの新しいコピーのタイトルを入力します。
-1. 「**[!UICONTROL コピー]**」をクリックします。メタデータプロファイルのコピーが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに表示されます。
+1. クリック **[!UICONTROL コピー]**. メタデータプロファイルのコピーが、**[!UICONTROL メタデータプロファイル]**&#x200B;ページのプロファイルのリストに表示されます。
 
    ![メタデータプロファイルページに追加されたメタデータプロファイルのコピー](assets/copy-metadata-profile.png)
 
@@ -150,12 +149,12 @@ To apply a metadata profile globally, follow these steps:
 
 ### フォルダーメタデータスキーマフォームの編集 {#edit-folder-metadata-schema-forms}
 
-以下を含む、新しく追加された、または既存のメタデータスキーマフォームを編集できます。
+次の情報を含む、新しく追加したメタデータスキーマフォームまたは既存のメタデータスキーマフォームを編集できます。
 
 * タブ
-* タブ内のフォーム項目
+* タブ内のフォーム項目。
 
-これらのフォーム項目を CRX リポジトリーのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。新しいタブまたはフォーム項目をメタデータスキーマフォームに追加できます。
+これらのフォーム項目を CRX リポジトリーのメタデータノード内のフィールドにマップしたり、フォーム項目を設定したりできます。メタデータスキーマフォームに新しいタブやフォーム項目を追加できます。
 
 1. スキーマフォームページで、作成したフォームを選択し、ツールバーの「**[!UICONTROL 編集]**」オプションを選択します。
 1. フォルダーメタデータスキーマエディターページで、`+` をクリックしてフォームにタブを追加します。タブの名前を変更するには、デフォルト名をクリックし、「**[!UICONTROL 設定]**」に新しい名前を指定します。
@@ -199,7 +198,7 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL フィールドラベル]**：フォルダーのプロパティページに表示されるメタデータプロパティの名前。
 
-**[!UICONTROL プロパティにマッピング]**：このプロパティは、フォルダーノードが保存されている CRX リポジトリ内でのフォルダーノードの相対パスを指定します。この値は、パスがフォルダーのノードの下にあることを示す「**./**」で始まります。
+**[!UICONTROL プロパティにマッピング]**:このプロパティは、CRX リポジトリ内のフォルダーノードが保存される相対パスを指定します。 「」で始まります。**./**」と表示され、パスがフォルダーのノードの下にあることを示します。
 
 このプロパティの有効な値は次のとおりです。
 
@@ -211,13 +210,13 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL JSON パス]**：オプションのキーと値のペアを指定する JSON ファイルのパスを指定します。
 
-**[!UICONTROL プレースホルダー]**：このプロパティを使用して、メタデータプロパティに関連するプレースホルダーテキストを指定します。
+**[!UICONTROL プレースホルダー]**:メタデータプロパティに関する関連するプレースホルダーテキストを指定するには、このプロパティを使用します。
 
 **[!UICONTROL 選択肢]**：リストの選択肢を指定するには、このプロパティを使用します。
 
 **[!UICONTROL 説明]**：メタデータコンポーネントの短い説明を追加するには、このプロパティを使用します。
 
-**[!UICONTROL クラス]**：プロパティに関連付けられているオブジェクトクラス。
+**[!UICONTROL クラス]**:プロパティが関連付けられているオブジェクトクラス。
 
 ### フォルダーメタデータスキーマフォームの削除 {#delete-folder-metadata-schema-forms}
 
@@ -248,11 +247,11 @@ To apply a metadata profile globally, follow these steps:
 
 #### フォルダー作成時のスキーマの割り当て {#assign-a-schema-when-creating-a-folder}
 
-フォルダーを作成するときに、フォルダーメタデータスキーマを割り当てることができます。システムに 1 つ以上のフォルダーメタデータスキーマが存在する場合は、**[!UICONTROL フォルダーを作成]**&#x200B;ダイアログに追加リストが表示されます。希望のスキーマを選択できます。デフォルトではスキーマは選択されていません。
+フォルダーの作成時に、フォルダーメタデータスキーマを割り当てることができます。 システムに 1 つ以上のフォルダーメタデータスキーマが存在する場合は、 **[!UICONTROL フォルダーを作成]** ダイアログ。 目的のスキーマを選択できます。 デフォルトでは、スキーマは選択されていません。
 
 1. [!DNL Experience Manager Assets] ユーザーインターフェイスで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 1. フォルダーのタイトルと名前を指定します。
-1. フォルダーメタデータスキーマリストから希望のスキーマを選択します。次に、「**[!UICONTROL 作成]**」をクリックします。
+1. 「フォルダーメタデータスキーマ」リストで、目的のスキーマを選択します。 次に、「**[!UICONTROL 作成]**」をクリックします。
 
    ![select_schema](assets/select_schema.png)
 
