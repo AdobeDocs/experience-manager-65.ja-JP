@@ -10,10 +10,10 @@ discoiquuid: 4f9301db-edf8-480b-886c-b5e8fca5bf5c
 feature: Image Profiles
 role: User, Admin
 exl-id: 67240ad0-1a7c-4e58-a518-1e36d771f1a1
-source-git-commit: bbb64f44c80e96bafcd53277f6d753d84acf5189
-workflow-type: ht
-source-wordcount: '3047'
-ht-degree: 100%
+source-git-commit: bb0658ef33736587fbc191738d57cf586e5cba9d
+workflow-type: tm+mt
+source-wordcount: '3045'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 >[!IMPORTANT]
 >
 >• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
->• 画像プロファイルは、PDF ファイル、アニメーション GIF ファイル、INDD（Adobe InDesign）ファイルには適用されません。
+• 画像プロファイルは、PDF ファイル、アニメーション GIF ファイル、INDD（Adobe InDesign）ファイルには適用されません。
 
 ## 切り抜きツールオプション {#crop-options}
 
@@ -63,10 +63,10 @@ ht-degree: 100%
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
-2 つの画像切り抜きオプションから選択できます。また、カラーおよび画像スウォッチの作成を自動化するか、ターゲットの解像度をまたいで切り抜きコンテンツを保持するかを選択することもできます。
+次の 2 つの画像切り抜きオプションから選択できます。ピクセル切り抜きまたはスマート切り抜き。 また、カラーおよび画像スウォッチの自動作成を選択することもできます。
 
 >[!IMPORTANT]
->• アドビでは、生成される切り抜きやスウォッチをレビューして、それらが適切であり、ブランドや価値との関連性が高いことを確認することをお勧めします。• スマート切り抜きでは、CMYK 画像形式はサポートされていません。
+• アドビでは、生成される切り抜きやスウォッチをレビューして、それらが適切であり、ブランドや価値との関連性が高いことを確認することをお勧めします。• スマート切り抜きでは、CMYK 画像形式はサポートされていません。
 
 | オプション | 用途 | 説明 |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ ht-degree: 100%
 ダウンサンプリングされた最終的な画像に対するシャープフィルター効果を微調整するには、「**[!UICONTROL アンシャープマスク]**」を選択します。効果の強さ、効果の半径（ピクセル単位）、無視されるコントラストのしきい値を調整できます。このエフェクトでは、Adobe Photoshop の「*アンシャープマスク*」フィルターと同じオプションを使用します。
 
 >[!NOTE]
->アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、ptiff 内の最大サイズのレンディションはアンシャープマスクの影響を受けませんが、サムネールのような小さいサイズのレンディションは変更されます（そしてアンシャープマスクを表示します）。
+アンシャープマスクは、PTIFF（Pyramid TIFF）内のダウンスケールされたレンディション（50％以上ダウンサンプルされたもの）にのみ適用されます。つまり、ptiff 内の最大サイズのレンディションはアンシャープマスクの影響を受けませんが、サムネールのような小さいサイズのレンディションは変更されます（そしてアンシャープマスクを表示します）。
 
 「**[!UICONTROL アンシャープマスク]**」には次のフィルタリングオプションがあります。
 
@@ -184,7 +184,7 @@ ht-degree: 100%
 ## 単一の画像のスマート切り抜きまたはスマートスウォッチの編集 {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
->• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
+• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
 
 画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を手動で行って、焦点位置を細かく調整することができます。
 
@@ -214,7 +214,7 @@ ht-degree: 100%
 ## 複数の画像のスマート切り抜きまたはスマートスウォッチの編集 {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
 
 >[!IMPORTANT]
->• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
+• スマート切り抜きは、Dynamic Media - Scene7 モードでのみ使用できます。
 
 スマート切り抜きを含んだ画像プロファイルをフォルダーに適用すると、そのフォルダー内のすべての画像に切り抜きが適用されます。必要に応じて、複数の画像のスマート切り抜きウィンドウの位置の再調整またはサイズの変更を&#x200B;*手動*&#x200B;で行って、その焦点位置を細かく調整することができます。
 
