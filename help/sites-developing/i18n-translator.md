@@ -365,6 +365,7 @@ AEM インスタンスで新しい言語の辞書を定義したら、作成者�
       ```
              /apps/wcm/core/resources/languages
       ```
+
    OSGi Web コンソールを使用してこの設定をおこなうことができます。
 
    ```shell

@@ -119,6 +119,7 @@ window.addEventListener("FormBridgeInitialized",
          "submitUrl" : "`<submitUrl>`"
          });
          ```
+
    * **config：**&#x200B;設定の値
 
 
