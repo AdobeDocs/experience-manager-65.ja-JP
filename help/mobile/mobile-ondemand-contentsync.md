@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: 8fb70ca4-86fc-477d-9773-35b84d5e85a8
 exl-id: a6e59334-09e2-4bb8-b445-1868035da556
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '2993'
+source-wordcount: '2995'
 ht-degree: 0%
 
 ---
@@ -255,7 +255,7 @@ AEMサービスの名前： **PathRewriterTransformerFactory** では、書き�
 * `com.day.cq.contentsync.handler.ContentUpdateHandler`  — すべての更新ハンドラーが実装する必要があるインターフェイス
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - Sling を使用してリソースのレンダリングを簡素化する抽象クラス
 
-クラスを OSGi コンポーネントファクトリとして登録し、バンドルの OSGi コンテナにデプロイします。 これは、 [Maven SCR プラグイン](https://felix.apache.org/site/apache-felix-maven-scr-plugin.html) JavaDoc タグまたは注釈の使用 次の例は、JavaDoc のバージョンを示しています。
+クラスを OSGi コンポーネントファクトリとして登録し、バンドルの OSGi コンテナにデプロイします。 これは、 [Maven SCR プラグイン](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html) JavaDoc タグまたは注釈の使用 次の例は、JavaDoc のバージョンを示しています。
 
 ```java
 /*

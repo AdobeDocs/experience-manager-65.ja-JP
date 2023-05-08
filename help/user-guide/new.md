@@ -1,13 +1,11 @@
 ---
-title: 新規 AEM ユーザー向けリソース
-seo-title: Resources for New AEM Users
-description: AEM を初めて使用するユーザー向けの質問、回答およびリソース
-seo-description: Questions, answers, and resources for users new to AEM
+title: 新規Adobe Experience Managerユーザー向けリソース
+description: Adobe Experience Managerを初めて使用するユーザー向けの質問、回答、リソース
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 56%
+source-wordcount: '300'
+ht-degree: 44%
 
 ---
 
@@ -30,7 +28,7 @@ Adobe Experience Manager(AEM) は、商用 Web サイトや関連サービスを
 
 ## AEM の公式サポートを受けるにはどうしたらよいですか。 {#official-support}
 
-ライセンスを受けたお客様は、次の場所からAEMのサポートを受けることができます。 [カスタマーケアチーム](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support). また、[AEM コミュニティ](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)または Twitter ハンドル名 [@AdobeExpCare](https://twitter.com/adobeexpcare) で質問することもできます。
+ライセンスを受けたお客様は、次の場所からAEMのサポートを受けることができます。 [カスタマーケアチーム](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support). また、 [AEM Community](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) または AdobeExpCare Twitterハンドルの `https://twitter.com/adobeexpcare`.
 
 ## AEM の以前のバージョンのドキュメントはどこにありますか？ {#versions}
 
@@ -45,4 +43,4 @@ AEM のすべてのリリースノートについては、次を参照してく�
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [AEM 6.5 で削除された機能および非推奨（廃止予定）になった機能のリスト](/help/release-notes/deprecated-removed-features.md)
 
-ご質問がある場合は、 [AEM Community team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) twitterに尋ねる [@AdobeExpCare](https://twitter.com/adobeexpcare).
+ご質問がある場合は、 [AEM Community team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) または、AdobeExpCare Twitterハンドルに関する質問 ( `https://twitter.com/adobeexpcare`.

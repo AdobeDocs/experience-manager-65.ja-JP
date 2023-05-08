@@ -1,16 +1,14 @@
 ---
-title: AEM Mobile - GDPR 対応
-seo-title: AEM Mobile - GDPR Readiness
-description: '"AEM Mobile - GDPR 対応"'
-seo-description: null
+title: Adobe Experience Manager Mobile - GDPR 対応
+description: Adobe Experience Manager Mobile - GDPR 対応
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
 discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 89%
+source-wordcount: '691'
+ht-degree: 6%
 
 ---
 
@@ -20,78 +18,78 @@ ht-degree: 89%
 >
 >以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
 
-## AEM Mobile の GDPR サポート {#aem-mobile-gdpr-support}
+## AEM Mobile GDPR のサポート {#aem-mobile-gdpr-support}
 
-AEM Mobile は、GDPR コンプライアンスの義務に関してお客様を支援する準備ができています。個人データは AEM Mobile には保存されません。プロビジョニングされている場合は、Adobe ID で Adobe Experience Mobile にログインすることができます。
+AEM Mobileは、お客様が GDPR に準拠するための義務を果たすのを支援する準備が整っています。 AEM Mobileには個人データは保存されません。 プロビジョニングされている場合は、Adobe IDで Adobe Experience Mobile にログオンできます。
 
-[https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html)
+<!-- [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html) -->
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-アドビのデジタルパブリッシング製品（AEM Mobile の先行製品）では、アドビによる GDPR 対応の取り組みをサポートしています。[https://www.adobe.com/jp/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja) を参照してください。以下では、アドビと協力して GDPR 要求を開始する方法など、Digital Publishing Suite 製品における GDPR 関連機能のサポートの詳細について説明します。
+Adobeのデジタル出版製品 (AEM Mobileに先立つ ) は、Adobeの GDPR 対応に関する取り組みをサポートしています。 詳しくは、 [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html). 以下に、GDPR 要求を開始するためのAdobeとの連携方法など、Digital Publishing Suite 製品での GDPR 関連機能のサポートに関する詳細を示します。
 
-AEM Mobile と以前の Digital Publishing Suite 製品を混同しないように、以下から Digital Publishing Suite 製品にログインできるようになっています。
+AEM Mobileを以前の Digital Publishing Suite 製品と混同しないようにするには、次の URL から Digital Publishing Suite 製品にログインします。
 
-[https://digitalpublishing.acrobat.com/welcome.html](https://digitalpublishing.acrobat.com/welcome.html)
+[https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
 ### GDPR 要求の開始 {#initiating-a-gdpr-request}
 
-Digital Publishing Suite の GDPR 要求を開始する場合は、アドビカスタマーケアにお問い合わせください。
+Digital Publishing Suite の GDPR リクエストを開始する場合は、Adobeカスタマーケアにお問い合わせください。
 
-顧客データを検索するには、以下の ID が必要です。サブセットを受け取った場合は、それ以外の ID がこのユーザーに該当しなかったことを意味します。
+顧客データを検索するには、次の ID が必要です。 受け取ったサブセットは、他の ID がこのユーザーに適用されなかったことを示します。
 
 必須:
 
-* 顧客の契約 ID：*dpsc-contractId*
+* 顧客の契約 ID : *dpsc-contractId*
 
 次のうち少なくとも 1 つを指定します。
 
-* エンドユーザーの顧客提供 OAuth ID（顧客の直接権利付与システムで使用されている ID）：*dpsc-directEntitlementId*
-* Windows アプリユーザーの場合は、エンドユーザーの App Store ID：*dpsc-windowsAppStoreId*
-* エンドユーザーが DPS App とのやり取りに使用する電子メールアドレス：*email*
+* エンドユーザーが指定した OAuth ID（顧客の直接権利付与システムで使用される ID）: *dpsc-directEntitlementId*
+* Windows アプリのユーザーの場合、エンドユーザーのApp Store ID は次のようになります。 *dpsc-windowsAppStoreId*
+* エンドユーザーが DPS アプリの操作に使用した電子メールアドレス： *電子メール*
 
-### よくある質問（FAQ） {#frequently-asked-questions-faq}
+### よくある質問 (FAQ) {#frequently-asked-questions-faq}
 
 **Adobeリクエストを開始すると、App Storeでの購入が削除されますか？**
 
-アドビが削除するのは、App Store での購入品に関する情報（例：サブスクリプションなど）です。購入品そのものは App Store の記録に残っています。アプリ（エンドユーザー）が App Store にログインしたら、それらのレシートが再度取り出されてアドビに送信されます。それ以降は、新しい購入品と見なされ、再度アクセスできるようにアプリで復元されます。
+Adobeは、アプリストアでの購入（購読など）に関する情報を削除します ただし、購入は、アプリストアで記録されたままです。 アプリ（エンドユーザー）が App Store にログインすると、それらのレシートが再度取得され、Adobeに送信されます。その後、新規購入と見なされ、アプリが再度アクセスできるように復元されます。
 
 **Adobeは、ユーザーリクエストを開始する際に、お客様が提供したDELETEを削除しますか？**
 
-アドビが削除するのは、顧客の追加の直接権利付与に関する情報です。顧客が使用した OAuth メカニズムにアプリ（エンドユーザー）がログインした場合は、アドビに情報が送信され、サービスによって追加の権利（資格情報）が再び取り出されます。
+Adobeは、顧客の追加の直接権利付与の情報を削除します。 アプリ（エンドユーザー）が、顧客が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスが追加の使用権限を再度取得します。
 
 **エンドユーザーにはどのようなことが期待されますか。**
 
-エンドユーザーは、アプリをアンインストールする必要があります。これは、アプリに権利を割り当てる際のキーが、ビューアソフトウェアの一部としてデバイス上に存在しているからです。アプリを再インストールすると、（App Store ユーザーに関連付けられている）既存の購入品も（顧客の OAuth ユーザーに関連付けられている）直接の権利付与も復元されます。
+アプリに権限を割り当てる際のキーは、ビューアソフトウェアの一部としてデバイス上に存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールする場合、（App Store ユーザーに関連付けられた）既存の購入と（顧客の OAuth ユーザーに関連付けられた）直接の権利付与が引き続き復元されることを認識する必要があります。
 
 **デバイス上のユーザー間でアプリを共有するとどうなりますか？**
 
-アドビでは、特定のユーザーに直接結び付く情報はほとんど保有していません。データは、ランダムに生成される UUID を使用して関連付けられます。その ID は、アプリのデータに格納され、アプリで要求が開始されるたびに渡されます。つまり、同じデバイスでアプリを共有するエンドユーザーは同じ UUID を使用することになり、GDPR 要求をおこなうユーザーがすべてのデータを所有していると見なされます。アクセス要求と削除要求の場合、DPSC では、アプリを共有している複数のユーザーが 1 人のユーザーと見なされます。
+Adobeは、特定のユーザーに直接関連付けられる情報をほとんど持ちません。 この変数は、ランダムに作成された UUID を使用してデータを関連付けます。この UUID は、アプリのデータに保持され、アプリが開始するリクエストごとに渡されます。 つまり、同じデバイスでアプリを共有するエンドユーザーは同じ UUID を使用し、GDPR 要求をおこなうユーザーによってすべてのデータが所有されていると見なされます。 アクセス要求と削除要求の両方で、DPSC は、アプリを共有するユーザーを 1 人のユーザーと見なします。
 
 **Analytics で追跡される個人データは何ですか？**
 
-なし. 追跡されるデータはありますが、それは（個人データではなく）アプリレベルのデータです。例えば、起動、クラッシュ、終了、アクティビティ、購入、Folio オーバーレイなどのイベントが含まれます。地理的位置、氏名、デバイス ID、IP アドレスなどは追跡されません。
+なし. 追跡されているデータがありますが、アプリレベル（個人レベルではありません）です。 これには、起動、クラッシュ、閉じる、アクティビティ、購入、Folio オーバーレイなどのイベントが含まれます。 地理的な場所、名前、デバイス ID、IP アドレスは追跡されません。
 
-**エンドユーザーが自分自身の情報を指定しても、データが見つかりませんでした。なぜ？**
+**エンドユーザーが情報を入力しましたが、何も見つかりませんでした。 なぜ？**
 
-Digital Publishing Suite 製品が進化するにつれて、サービスの実装が変更され、難読化されるデータが増えてきました。ユーザーが提供した情報を使用してもデータが見つからない場合は、その情報からそのユーザーにさかのぼれないことを意味します。
+Digital Publishing Suite 製品の進化に伴い、サービスの実装が変更され、より多くのデータが不明化されました。 ユーザーが指定したデータを使用してデータが見つからなかった場合、そのユーザーのデータをそのユーザーに追跡できないことを意味します。
 
 ### 例 {#example}
 
-GDPR 要求を開始する場合は、アドビカスタマーケアにお問い合わせください。
+GDPR リクエストを開始するには、Adobeカスタマーケアにお問い合わせください。
 
 Digital Publishing Suite GDPR 要求の入力と結果の出力の例を次に示します。
 
 #### 入力： {#inputs}
 
 ```
-dpsc-contractId = “12345-1234-12416234” 
-directEntitlementId = “1234-1234-1234” 
-windowsAppStoreId = “testWinAppStoreId” 
-email = “test@what.com”
+dpsc-contractId = "12345-1234-12416234" 
+directEntitlementId = "1234-1234-1234" 
+windowsAppStoreId = "testWinAppStoreId" 
+email = "test@what.com"
 ```
 
-#### 出力： {#outputs}
+#### 出力 {#outputs}
 
 ```
 {
