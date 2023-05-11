@@ -3,10 +3,10 @@ title: Adobe Experience Manager でコンテンツを作成するようにリッ
 description: Adobe Experience Manager でコンテンツを作成するように Adobe Experience Manager リッチテキストエディターを設定する方法について学びます。
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
-source-git-commit: fb9363a39ffc9d3929a31a3a19a124b806607ef4
+source-git-commit: 53a18ec48331f1c25c15e8f7a59bd57e95639895
 workflow-type: tm+mt
-source-wordcount: '3021'
-ht-degree: 73%
+source-wordcount: '2924'
+ht-degree: 71%
 
 ---
 
@@ -46,10 +46,10 @@ Experience Manager では、コンポーネントの各種モードを使用し�
 
 | 編集モード | 編集領域 | 有効化が推奨される機能 | タッチ UI | クラシック UI |
 |--- |--- |--- |--- |--- |
-| インライン | インプレース編集を使用して、小さな編集作業をすばやくおこなうことができます。ダイアログボックスを開かない書式 | 最小限の RTE 機能 | Y | Y |
-| RTE 全画面 | ページ全体に広がる | 必要なすべての RTE 機能 | Y | N |
-| ダイアログ | ページコンテンツの上にあるダイアログボックス（ページ全体をカバーしない） | クラシック UI の場合、必要なすべての RTE 機能。タッチ UI の場合、必要に応じて機能を有効化／無効化 | Y | Y |
-| ダイアログ（フルスクリーン） | フルスクリーンモードと同じ。RTE の横にダイアログのフィールドを含む | 必要なすべての RTE 機能 | Y | N |
+| インライン | インプレース編集を使用して、小さな編集作業をすばやくおこなうことができます。ダイアログボックスを開かない書式 | 最小限の RTE 機能 | ○ | ○ |
+| RTE 全画面 | ページ全体に広がる | 必要なすべての RTE 機能 | ○ | × |
+| ダイアログ | ページコンテンツの上にあるダイアログボックス（ページ全体をカバーしない） | クラシック UI の場合、必要なすべての RTE 機能。タッチ UI の場合、必要に応じて機能を有効化／無効化 | ○ | ○ |
+| ダイアログ（フルスクリーン） | フルスクリーンモードと同じ。RTE の横にダイアログのフィールドを含む | 必要なすべての RTE 機能 | ○ | × |
 
 >[!NOTE]
 >
@@ -109,14 +109,14 @@ RTE の基本機能は、該当するプラグインのノードにある `featu
 | プラグイン ID | 機能 | 説明 |
 |--- |--- |--- |
 | edit | cut copy paste-default paste-plaintext paste-wordhtml | [切り取り、コピーおよび 3 つの貼り付けモード](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [findreplace](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | find replace | 検索と置換。 |
-| [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | bold italic underline | [基本的なテキストの書式設定](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [image](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | 画像 | 基本的な画像サポート（コンテンツまたはコンテンツファインダーからのドラッグ）。ブラウザーの種類に応じて、様々なサポート機能が提供されます |
-| [keys](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) |  | この値を定義するには、 [タブのサイズ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
-| [justify](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | justifyleft justifycenter justifyright | 段落の整列。 |
-| [リンク](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | modifylink unlink anchor | [ハイパーリンクとアンカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
-| [lists](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | ordered unordered indent outdent | このプラグインは、[インデントとリスト](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin)（ネストされたリストを含む）の両方を制御します。 |
-| [misctools](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | specialchars sourceedit | 各種ツールを使用して、[特殊文字](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar)の入力や HTML ソースの編集をおこなうことができます。また、独自のリストを定義する場合は、[特殊文字の範囲](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar)全体を追加できます。 |
+| findreplace | find replace | 検索と置換。 |
+| format | bold italic underline | [基本的なテキストの書式設定](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles). |
+| image | 画像 | 基本的な画像サポート（コンテンツまたはコンテンツファインダーからのドラッグ）。ブラウザーの種類に応じて、様々なサポート機能が提供されます |
+| keys |  | この値を定義するには、 [タブのサイズ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize). |
+| justify | justifyleft justifycenter justifyright | 段落の整列。 |
+| リンク | modifylink unlink anchor | [ハイパーリンクとアンカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles). |
+| lists | ordered unordered indent outdent | このプラグインは、[インデントとリスト](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin)（ネストされたリストを含む）の両方を制御します。 |
+| misctools | specialchars sourceedit | 各種ツールを使用して、[特殊文字](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar)の入力や HTML ソースの編集をおこなうことができます。また、独自のリストを定義する場合は、[特殊文字の範囲](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar)全体を追加できます。 |
 | Paraformat | paraformat | `<h2>`デフォルトの段落形式は、段落、見出し 1、見出し 2 および見出し 3（`<p>`、`<h1>`、`<h3>`）です。以下が可能です。 [他の段落書式を追加する](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats) またはリストを拡張します。 |
 | spellcheck | checktext | [言語対応スペルチェッカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict). |
 | スタイル | スタイル | CSS クラスを使用したスタイル設定のサポート。テキストで使用するスタイルの範囲を独自に追加（または拡張）する場合は、[新しいテキストスタイルを追加](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)します。 |
@@ -323,12 +323,12 @@ RTE ツールバーに表示される Coral アイコンと使用可能なコマ
 
 ## その他の情報 {#further-information}
 
-RTE の設定について詳しくは、 [AEM Widget API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.RichText) 参照。
+RTE の設定について詳しくは、 [AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) 参照。
 
 特に、使用可能なプラグインと関連オプションを確認するには、次の手順を実行します。
 
-* この [CQ.form.RichText](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) コンポーネントは、スタイル設定されたテキスト情報（リッチテキスト）を編集するためのフォームフィールドを提供します。 リッチテキストフォームで使用できるすべてのパラメーターについては、設定オプションを参照してください。
-* リッチテキストコンポーネントは、[CQ.form.rte.plugins.Plugin](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) の下にリストされるプラグインを使用した幅広い機能を提供します。各プラグインについては、以下を参照してください。
+* この [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText) コンポーネントは、スタイル設定されたテキスト情報（リッチテキスト）を編集するためのフォームフィールドを提供します。 リッチテキストフォームで使用できるすべてのパラメーターについては、設定オプションを参照してください。
+* リッチテキストコンポーネントは、[CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin) の下にリストされるプラグインを使用した幅広い機能を提供します。各プラグインについては、以下を参照してください。
 
    * 有効化（または無効化）が可能な機能の詳細については「機能」を参照してください。
    * 適切なプラグインの詳細な設定に使用できるすべてのパラメーターについては、「設定オプション」を参照してください。
