@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: e803fde42cfb7b7c9d3fb6483ca661ce386d6464
+source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2019'
 ht-degree: 83%
 
 ---
@@ -150,57 +150,6 @@ This is an automatically generated message. Please do not reply.
 
    PageModified => /content/geometrixx/ja/products
 
-### フォーラム通知用のメールテンプレート {#email-templates-for-forum-notification}
-
-フォーラム通知用の電子メールテンプレートは、次の場所にあります。
-
-`/etc/notification/email/default/com.day.cq.collab.forum`
-
-デフォルトの英語のテンプレート（`en.txt`）は次のように定義されています。
-
-```xml
-subject=[CQ Forum Notification]
-
-header=-------------------------------------------------------------------------------------\n \
-Time: Time: ${time}\n \
-Forum Page Path: ${forum.path}\n \
--------------------------------------------------------------------------------------\n\n
-
-message=Page: ${host.prefix}${forum.path}.html\n
-
-footer=\n \
--------------------------------------------------------------------------------------\n \
-This is an automatically generated message. Please do not reply.
-```
-
-#### フォーラム通知用のメールテンプレートのカスタマイズ {#customizing-email-templates-for-forum-notification}
-
-フォーラム通知用の英語のメールテンプレートをカスタマイズするには：
-
-1. CRXDE で、次のファイルを開きます。
-
-   `/etc/notification/email/default/com.day.cq.collab.forum/en.txt`
-
-1. 必要に応じてファイルを変更します。
-1. 変更内容を保存します。
-
-テンプレートは、次のフォーマットにする必要があります。
-
-```
- subject=<text_1>
- header=<text_2>
- message=<text_3>
- footer=<text_4>
-```
-
-`<text_x>` には、静的なテキストと動的な文字列変数を混在させることができます。
-
-フォーラム通知用のメールテンプレート内では次の変数を使用できます。
-
-* `${time}`、イベントの日時。
-
-* `${forum.path}`、フォーラムページのパス。
-
 ### ワークフロー通知用のメールテンプレート {#email-templates-for-workflow-notification}
 
 ワークフロー通知用の電子メールテンプレート（英語）は、次の場所にあります。
@@ -293,7 +242,6 @@ subject=<text_1>
 1. CRXDE で、ファイル `<language-code>.txt` を以下に追加します。
 
    * `/libs/settings/notification-templates/com.day.cq.wcm.core.page`：ページ通知用
-   * `/etc/notification/email/default/com.day.cq.collab.forum`：フォーラム通知用
    * `/libs/settings/workflow/notification/email/default`：ワークフロー通知用
 
 1. 言語に合わせてファイルを調整します。

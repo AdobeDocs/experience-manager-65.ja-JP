@@ -10,10 +10,10 @@ discoiquuid: 5d2364b7-4497-4f8b-85ef-6e780bfb8c36
 docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
+source-git-commit: bb27c7dfedd5a16728674f7584b0c462a92646e6
 workflow-type: tm+mt
 source-wordcount: '5934'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -127,7 +127,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
 
    * **パスをパージ**
 パージするコンテンツの開始パスを設定します。例： 
-`/content/wknd`
+`/content/wknd`。
 
       >[!CAUTION]
       >
@@ -247,9 +247,9 @@ AEM WCM およびリポジトリへのすべてのアクセス要求は、ここ
 すべてのアップグレード操作のログを提供します。アップグレード操作が実行されるのは、 
 `com.day.compat.codeupgrade` および `com.adobe.cq.upgradesexecutor` の各パッケージです。
 
-* `<cq-installation-dir>/crx-quickstart/repository`
+* `<cq-installation-dir>/crx-quickstart/repository/segmentstore`
 
-   * `revision.log`
+   * `journal.log`
 リビジョンジャーナル処理の情報。
 
 >[!NOTE]
@@ -366,7 +366,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`。
    >
    >また、ログファイルが
    >
@@ -770,7 +770,7 @@ Adobeは、「低速」ページを `request.log`を設定し、それぞれを�
 AEMには、次の様々なヘルパーツールが含まれています。
 `<cq-installation-dir>/crx-quickstart/opt/helpers`
 
-これらのツールの 1 つは `rlog.jar`を使用すると、すばやく並べ替えることができます `request.log` リクエストは、最長から最短の時間で、期間別に表示されます。
+この道具の一つは `rlog.jar`を使用すると、すばやく並べ替えることができます `request.log` リクエストは、最長から最短の時間で、期間別に表示されます。
 
 次のコマンドは、考えられる引数を示しています。
 
@@ -1095,9 +1095,9 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 >[!NOTE]
 詳しくは、以下の記事も参照してください。
-* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=en)
-* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en)
-* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=en)
+* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
+* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
 * [遅いプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
@@ -1123,7 +1123,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [AEM を起動](/help/sites-deploying/deploy.md#getting-started)するために使用される JVM 設定
 * ナレッジベース
 
-   * [メモリの問題を分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=en)
+   * [メモリの問題を分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
 
 ### ディスク I/O {#disk-i-o}
 
@@ -1141,7 +1141,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * [バージョンのパージ](/help/sites-deploying/version-purging.md)を設定しているかどうかと、その設定方法
 * ナレッジベース
 
-   * [開いているファイルが多すぎます](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=en)
+   * [開いているファイルが多すぎます](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=ja)
    * [ジャーナルの消費ディスク容量が多すぎます](https://helpx.adobe.com/jp/experience-manager/kb/JournalTooMuchDiskSpace.html)
 
 ### 通常のパフォーマンス低下 {#regular-performance-degradation}
