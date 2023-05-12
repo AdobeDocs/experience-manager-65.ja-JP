@@ -1,7 +1,7 @@
 ---
 title: ワークフローインスタンスの管理
 seo-title: Administering Workflow Instances
-description: ワークフローインスタンスの管理方法について説明します。
+description: ワークフローインスタンスの管理方法を説明します。
 seo-description: Lear how to administer Workflow Instances.
 uuid: 81e53ef5-fe62-4ed4-b2d4-132aa986d5aa
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: operations
 content-type: reference
 discoiquuid: d9c96e7f-9416-48e1-a6af-47384f7bee92
 exl-id: 90923d39-3ac5-4028-976c-d011f0404476
-source-git-commit: 1b57fca352457e973bd7395e060e3d0495a9d920
-workflow-type: ht
-source-wordcount: '1134'
-ht-degree: 100%
+source-git-commit: 25f7218355b7715949273c84eb72ddde3d6a0a65
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 78%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 100%
 
 ワークフローの管理用に、次の各種コンソールが用意されています。[グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)を使用して&#x200B;**ツール**&#x200B;パネルを開き、その後「**ワークフロー**」を選択します。
 
-* **モデル**：ワークフロー定義を管理します
+* **モデル**:ワークフロー定義の管理
 * **インスタンス**：実行中のワークフローインスタンスを表示および管理します
-* **ランチャー**：ワークフローの起動方法を確認します
-* **アーカイブ**：正常に完了したワークフローの履歴を表示します
-* **エラー**：エラーで終了したワークフローの履歴を表示します
+* **ランチャー**:ワークフローの起動方法の管理
+* **アーカイブ**:正常に完了したワークフローの履歴を表示
+* **失敗**:エラーで完了したワークフローの履歴を表示
 * **自動割り当て**：テンプレートへの自動割り当てワークフローを設定します
 
 ## ワークフローインスタンスのステータスの監視 {#monitoring-the-status-of-workflow-instances}
@@ -41,26 +41,27 @@ ht-degree: 100%
 
    ![wf-96](assets/wf-96.png)
 
+<!--
+## Search Workflow Instances {#search-workflow-instances}
 
-## ワークフローインスタンスの検索 {#search-workflow-instances}
-
-1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
-1. 「**インスタンス**」を選択して現在進行中のワークフローインスタンスのリストを表示します。上部のパネルの左隅で、「**フィルター**」を選択します。または、alt+1 キーを押します。次のダイアログが開きます。
+1. Using Navigation select **Tools**, then **Workflow**.
+1. Select **Instances** to display the list of workflow instances currently in progress. On the top rail, in the left corner, select **Filters**. Alternatively, you can use the keystrokes alt+1. The following dialog is displayed:
 
    ![wf-99-1](assets/wf-99-1.png)
 
-1. フィルターダイアログで、ワークフローの検索条件を選択します。次の入力に基づいて検索できます。
+1. In the Filter dialog, select the workflow search criteria. You can search based on these inputs:
 
-   * ペイロードパス：特定のパスの選択
-   * ワークフローモデル：ワークフローモデルの選択
-   * 担当者：ワークフローの担当者の選択
-   * タイプ：タスク、ワークフロー項目またはワークフローの失敗
-   * タスクステータス：アクティブ、完了または終了
-   * 役割：所有者および担当者、所有者のみ、担当者のみ
-   * 開始日：指定した日付の前または後の開始日
-   * 終了日：指定した日付の前または後の終了日
-   * 期日：指定した日付の前または後の期日
-   * 更新日：指定した日付の前または後の更新日
+   * Payload path: Select a specific path
+   * Workflow model: Select a workflow model
+   * Assignee: Select a workflow Assignee
+   * Type: Task, Workflow item, or Workflow Failure
+   * Task Status: Active, Complete, or Terminated
+   * Where I Am: Owner AND Assignee, Owner only, Assignee only
+   * Start Date: Start date before or after a specified date
+   * End Date: End date before or after a specified date
+   * Due Date: Due date before or after a specified date
+   * Updated Date: Updated date before or after a specified date
+-->
 
 ## ワークフローインスタンスの休止、再開および終了 {#suspending-resuming-and-terminating-a-workflow-instance}
 
@@ -82,9 +83,9 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >中止ステータスはユーザーアクションの結果として発生するので、正常終了と見なされます。例えば、次のような場合が当てはまります。
+   >abort ステータスは、ユーザーの操作の結果として発生するので、正常終了と見なされます。例：
    >
-   >* 「**終了**」アクションが使用された場合
+   >* 使用 **終了** アクション
    >* ワークフローの対象となるページが（強制的に）削除されたことによって、ワークフローが終了した場合
 
 
@@ -108,8 +109,8 @@ ht-degree: 100%
 エラーを調査し、その後ワークフローを再開または停止するには、次のステップに従います。
 
 1. ナビゲーションを使用して、**ツール**／**ワークフロー**&#x200B;を選択します。
-1. 「**エラー**」を選択して正常に完了しなかったワークフローインスタンスのリストを表示します。
-1. 特定の項目を選択し、その後適切なアクションを選択します。
+1. 選択 **失敗** ：正常に完了しなかったワークフローインスタンスのリストを表示します。
+1. 特定の項目を選択し、適切なアクションを選択します。
 
    ![wf-47](assets/wf-47.png)
 
@@ -119,7 +120,7 @@ ht-degree: 100%
 
 有効期間とステータスに応じてワークフローインスタンスをパージするように **Adobe Granite のワークフローのパージ設定**&#x200B;を設定します。また、すべてのモデルまたは特定のモデルのワークフローインスタンスをパージすることもできます。
 
-また、様々な条件を満たすワークフローインスタンスをパージするために、サービスの設定を複数作成することもできます。例えば、予想していた時間よりも大幅に実行時間の長い特定のワークフローモデルのインスタンスをパージする設定を作成します。さらに、リポジトリーのサイズを最小限に抑えるために、特定の日数が経過した後に完了したワークフローをすべてパージするもう 1 つの設定を作成します。
+また、サービスの複数の設定を作成して、異なる条件を満たすワークフローインスタンスをパージすることもできます。 例えば、特定のワークフローモデルが予想より長く実行されている場合に、そのインスタンスをパージする設定を作成します。 さらに、リポジトリーのサイズを最小限に抑えるために、特定の日数が経過した後に完了したワークフローをすべてパージするもう 1 つの設定を作成します。
 
  サービスを設定するには、[Web コンソール](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用するか、[リポジトリに OSGi 設定を追加](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)します。次の表では、どちらの方法でも必要になるプロパティについて説明しています。
 
@@ -137,32 +138,32 @@ ht-degree: 100%
  <tbody>
   <tr>
    <th>プロパティ名（Web コンソール）</th>
-   <th>OSGi のプロパティ名</th>
+   <th>OSGi プロパティ名</th>
    <th>説明</th>
   </tr>
   <tr>
-   <td>Job Name</td>
+   <td>ジョブ名</td>
    <td>scheduledpurge.name</td>
-   <td>スケジュール設定されたパージのわかりやすい名前。</td>
+   <td>スケジュールされたパージのわかりやすい名前。</td>
   </tr>
   <tr>
-   <td>Workflow Status</td>
+   <td>ワークフローのステータス</td>
    <td>scheduledpurge.workflowStatus</td>
-   <td><p>パージするワークフローインスタンスのステータス。有効な値は次のとおりです。</p>
+   <td><p>パージするワークフローインスタンスのステータス。 有効な値は次のとおりです。</p>
     <ul>
-     <li>COMPLETED：完了したワークフローインスタンスがパージされます。</li>
-     <li>RUNNING：実行中のワークフローインスタンスがパージされます。</li>
+     <li>完了：完了したワークフローインスタンスはパージされます。</li>
+     <li>実行中：実行中のワークフローインスタンスはパージされます。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>Models To Purge</td>
+   <td>パージするモデル</td>
    <td>scheduledpurge.modelIds</td>
    <td><p>パージするワークフローモデルの ID。この ID は model ノードのパスです（例：<br /> /var/workflow/models/dam/update_asset<br />）。 </p> <p>複数のモデルを指定するには、web コンソールの「 +」ボタンをクリックします。 </p> <p>すべてのワークフローモデルのインスタンスをパージする値を指定しないでください。</p> </td>
   </tr>
   <tr>
-   <td>Workflow Age</td>
+   <td>ワークフローの期間</td>
    <td>scheduledpurge.daysold</td>
-   <td>パージするワークフローインスタンスの有効期間（日数）。</td>
+   <td>パージするワークフローインスタンスの経過期間（日数）。</td>
   </tr>
  </tbody>
 </table>
@@ -177,9 +178,9 @@ ht-degree: 100%
 >
 >`com.adobe.granite.workflow.core.WorkflowSessionFactory`。
 
-| プロパティ名（Web コンソール） | OSGi のプロパティ名 |
+| プロパティ名（Web コンソール） | OSGi プロパティ名 |
 |---|---|
-| Max Inbox Query Size | granite.workflow.inboxQuerySize |
+| インボックスクエリの最大サイズ | granite.workflow.inboxQuerySize |
 
 ## 顧客所有のデータストアに対するワークフロー変数の使用 {#using-workflow-variables-customer-datastore}
 
