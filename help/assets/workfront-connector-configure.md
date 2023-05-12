@@ -4,7 +4,8 @@ description: ' [!DNL Workfront for Experience Manager enhanced connector] の設
 role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 100%
@@ -100,7 +101,7 @@ Adobe Workfront ドキュメントとアセット間のメタデータマッピ�
 
    * ドキュメントのカスタムフォームフィールド
    * プロジェクトのカスタムフォームフィールド
-   * カスタムフォームフィールドの発行
+   * カスタムフォームフィールドの公開
    * タスクのカスタムフォームフィールド
    * プロジェクトの概要フィールド（ID、名前、説明、参照番号）
 

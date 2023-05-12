@@ -6,8 +6,9 @@ docset: aem65
 feature: 3D Assets
 role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
-source-git-commit: aa45839c53cb2c0715c9163847351aa2391309e0
-workflow-type: ht
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 100%
 

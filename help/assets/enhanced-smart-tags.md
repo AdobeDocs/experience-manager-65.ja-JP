@@ -5,7 +5,8 @@ contentOwner: AG
 feature: Smart Tags, Search
 role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 84%

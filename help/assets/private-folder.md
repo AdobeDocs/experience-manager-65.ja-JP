@@ -5,7 +5,8 @@ contentOwner: AG
 role: User
 feature: Collaboration
 exl-id: c1aece06-7c1c-43a0-bea0-6f11ecda7e68
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 97%

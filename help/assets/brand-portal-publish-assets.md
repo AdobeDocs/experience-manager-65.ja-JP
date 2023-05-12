@@ -13,7 +13,8 @@ docset: aem65
 feature: Brand Portal
 role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%

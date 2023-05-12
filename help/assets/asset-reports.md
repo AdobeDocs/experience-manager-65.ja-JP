@@ -5,10 +5,11 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 93%
+ht-degree: 92%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 93%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/asset-reports.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-アセットレポートを使用すると、 [!DNL Adobe Experience Manager Assets] デプロイメントのユーティリティを評価できます。[!DNL Assets] を使用すると、デジタルアセットに関する様々なレポートを生成できます。レポートでは、システムの使用状況、ユーザーによるアセットの操作方法、ダウンロードされたアセットや共有されているアセットなどに関する有用な情報が提供されます。
+アセットレポートを使用すると、 [!DNL Adobe Experience Manager Assets] デプロイメントのユーティリティを評価できます。[!DNL Assets] を使用すると、デジタルアセットに関する様々なレポートを生成できます。レポートには、システムの使用状況、ユーザーによるアセットの操作方法、ダウンロードされたアセットや共有されているアセットに関する有用な情報が表示されます。
 
 レポートの情報を使用して重要な成功指標を導き出し、企業やお客様における [!DNL Assets] の採用状況を測定することができます。
 

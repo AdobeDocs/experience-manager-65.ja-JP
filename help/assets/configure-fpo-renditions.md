@@ -5,8 +5,9 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Renditions
 exl-id: 1e4ddd73-a31c-4ddd-94eb-1dac6a4835b3
-source-git-commit: 9d5440747428830a3aae732bec47d42375777efd
-workflow-type: ht
+hide: true
+source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 100%
 
