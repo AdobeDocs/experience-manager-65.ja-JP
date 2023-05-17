@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 7f595bec8ea138d5a73a17d0548320a31544dcd1
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 70%
+source-wordcount: '1018'
+ht-degree: 67%
 
 ---
 
@@ -66,6 +66,8 @@ ht-degree: 70%
    >ローンチにページやブランチを追加するには、サイト内に存在する必要があります。例：共通の最上位ルートの下。
    >
    >サイトの最上位レベルの下に言語ルートが含まれている場合、ローンチのページとブランチは共通言語ルートの下にある必要があります。
+   >
+   >ソースパスに親ページまたは子ページを含むローンチを作成しようとすると、失敗し、「Destination already exists at :path to the page」というエラーが返されます。
 
 1. 各エントリに対して、次の操作を行うかどうかを指定できます。
 
