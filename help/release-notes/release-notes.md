@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fc7d3727-7cd4-47a4-8e75-840f9f9c0e62
-source-git-commit: b8c9e5cd3192b51954091b677d700c51617c9460
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '2986'
+source-wordcount: '2972'
 ht-degree: 85%
 
 ---
@@ -37,7 +37,7 @@ CMAF（[共通メディアアプリケーション形式]）が有効化され�
 
 * アダプティブストリーミング（DASH/HLS）により、エンドユーザーがビデオを視聴する際の操作性が向上します。
 * DASH はアダプティブビデオストリーミングの国際標準プロトコルであり、業界で広く採用されています。
-* アジア太平洋および北米で現在利用可能（サポートチケットを通じて有効化）。ヨーロッパ中東アフリカで間もなく登場する
+* サポートチケットを送信することで、現在利用できます。
 
 詳しくは、「[アカウントでの DASH の有効化](/help/assets/video.md#enable-dash)」を参照してください。
 

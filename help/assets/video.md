@@ -12,9 +12,9 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
-source-git-commit: c704397f08e163a58ee6ac1dbaefc3171298864e
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '8086'
+source-wordcount: '8066'
 ht-degree: 99%
 
 ---
@@ -155,8 +155,6 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサポートされています。このビデオ形式をサポートする BlackBerry® デバイスについては、[BlackBerry® でサポートされているビデオ形式](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482)のページで確認できます。
 
 このビデオ形式をサポートする Windows デバイスについては、[Windows Phone 8 でサポートされているメディアコーデック](https://learn.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs)のページで確認できます。
-
-
 
 * 以下を含む Dynamic Media ビデオビューアープリセットを使用して、ビデオを再生します。
 
@@ -439,10 +437,6 @@ DASH（HTTP での動的アダプティブストリーミング）はビデオ�
 * 顧客がビデオ配信をアクセスしやすくなります。
 * API を使用してストリーミング URL を取得することもできます。
 
-   >[!IMPORTANT]
-   >
-   >現在、アカウントで DASH を有効にするのは、アジア太平洋および北米でのみ利用できます。ヨーロッパ中東アフリカで間もなく登場する
-
 アカウントで DASH を有効にするには、次の 2 つの手順が必要です。
 
 * DASH を使用するように Dynamic Media を設定します。これは、自分で簡単に行えます。
@@ -452,10 +446,10 @@ DASH（HTTP での動的アダプティブストリーミング）はビデオ�
 
 1. **Dynamic Media の設定** - Experience Manager 6.5 の Dynamic Media で、[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動します。
 1. 「**AEM Assets Dynamic Media のビデオの高度なストリーミング**」機能フラグを検索します。
-1. チェックボックスを選択して DASH を有効（オン）にします。
+1. DASH を有効（オン）にするには、チェックボックスをオンにします。
 1. 「**[!UICONTROL 保存]**」を選択します。
 1. **Experience Manager 6.5 の設定** - [Admin Console で新しいサポートケースの作成を開始します。](https://helpx.adobe.com/jp/enterprise/using/support-for-experience-cloud.html)
-1. 手順に従い、次の情報を入力しながらサポートケースを作成します。
+1. サポートケースを作成するには、次の情報を必ず指定しながら、指示に従ってください。
 
    * 主要連絡先の氏名、メールアドレス、電話番号。
    * Dynamic Media アカウントの名前。
@@ -716,7 +710,7 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
 
 ## Dynamic Media - Scene7 モードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオをクリックする気になるようなものにします。
+ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオを選択するよう促すのに役立ちます。
 
 Experience Manager 内のすべてのビデオには、サムネールを関連付ける必要があります。サムネールを置き換えずに削除することはできません。デフォルトでは、Experience Manager にビデオをアップロードすると、最初のフレームがサムネールとして使用されます。例えば、ブランド設定やビジュアル検索用にサムネールをカスタマイズできます。ビデオのサムネールをカスタマイズするには、ビデオを再生して、使用するフレームで一時停止します。あるいは、Digital Asset Manager に既にアップロードして&#x200B;*公開*&#x200B;している画像アセットを選択できます。
 

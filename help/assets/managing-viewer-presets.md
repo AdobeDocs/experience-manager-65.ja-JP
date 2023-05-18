@@ -12,10 +12,10 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/viewer
 feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
-source-git-commit: 3430897fc98aecbcf6cc7bf6bdc9b3df24e92366
+source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
 workflow-type: tm+mt
-source-wordcount: '4523'
-ht-degree: 99%
+source-wordcount: '4519'
+ht-degree: 98%
 
 ---
 
@@ -60,7 +60,7 @@ Web ページによってニーズは異なります。例えば、HTML5 ビュ�
 
 >[!NOTE]
 >
->標準提供ビューアを使用するには、まずすべて公開する必要があります。
+>標準提供のすべてのビューアを公開してから、最初に使用します。
 >[ビューアプリセットの公開]を参照してください。（#publishing-viewer-presets）
 
 ### ビューアプリセットのシステム互換性  {#viewer-preset-system-compatibility}
@@ -72,7 +72,7 @@ Dynamic Media に付属するすべての標準提供のビューアのプリセ
 * Apple iPad
 * Android™ スマートフォン
 * Android™ タブレット
-* ビデオについては、[Blackberry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) と [Windows Phone](https://docs.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs) 用に MP4 の再生が追加でサポートされています。
+* ビデオについては、[Blackberry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) と [Windows Phone](https://learn.microsoft.com/ja-jp/windows/uwp/audio-video-camera/supported-codecs) 用に MP4 の再生が追加でサポートされています。
 
 ### ビューアプリセットのリッチメディアタイプ {#rich-media-types-for-viewer-presets}
 
@@ -498,7 +498,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
 **パネル内の画像サムネールのディスプレイモードについて**
 
-インタラクティブビデオのビューアプリセットを作成または編集するとき、「**[!UICONTROL ビヘイビアー]**」タブの&#x200B;**[!UICONTROL 選択したコンポーネント]**&#x200B;メニューから `InteractiveSwatches` を選択するときに使用するディスプレイモードの設定を選択できます。選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。`segment`ディスプレイモード（デフォルト）または `continuous` ディスプレイモードを選択できます。
+インタラクティブビデオのビューアプリセットを作成または編集するとき、「**[!UICONTROL ビヘイビアー]**」タブの&#x200B;**[!UICONTROL 選択したコンポーネント]**&#x200B;メニューから `InteractiveSwatches` を選択するときに使用するディスプレイモードの設定を選択できます。選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。 `segment`ディスプレイモード（デフォルト）または `continuous` ディスプレイモードを選択できます。
 
 <table>
  <tbody>
@@ -563,7 +563,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 1. Adobe Experience Manager の左上隅にある Adobe Experience Manager ロゴを選択し、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL ビューアプリセット]**&#x200B;を選択します。
 1. ビューアプリセットページの「**[!UICONTROL 状態]**」列ヘッダーの下で、ビューアプリセットのアクティベートとアクティベート解除の切り替えアイコンを選択します。
 
-   アクティベートされたビューアプリセットには、右側の青いボックスに切替スイッチが表示されます。アクティベート解除されたビューアプリセットには、左側の薄いグレーのボックスに切替スイッチが表示されます。
+   アクティベートされたビューアプリセットには、青いボックス内で、右側にトグルしたアイコンが示されます。アクティベート解除されたビューアプリセットには、薄いグレーのボックス内で、左側にトグルしたアイコンが示されます。
 
 ## ビューアプリセットの公開 {#publishing-viewer-presets}
 
