@@ -6,10 +6,11 @@ mini-toc-levels: 1
 role: User, Admin
 feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: ht
+hide: true
+source-git-commit: c1878d6aadba9c795168459dbd5f09abfe0fc327
+workflow-type: tm+mt
 source-wordcount: '1751'
-ht-degree: 100%
+ht-degree: 82%
 
 ---
 
@@ -45,11 +46,11 @@ ht-degree: 100%
 | PICT | − | − | − | − | − | − | ✓ |
 | PSB | ✓ | ✓ | ✓ | ✓ | − | − | − |
 
-‡ 結合された画像は PSD ファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像とは異なる場合があります。
+‡ 結合された画像は PSD ファイルから抽出されます。これは、Adobe Photoshopによって生成され、画像ファイルに含まれるPSDです。 設定によって、結合された画像は実際の画像とは異なる場合があります。
 
-上記の情報に加えて、以下を考慮してください。
+上記の情報に加えて、次の点を考慮してください。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
+* EPSファイルのサポートは、ラスターイメージにのみ適用されます。 例えば、EPSのベクトル画像のサムネールの生成は、デフォルトではサポートされていません。 サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
 
 * PSB ファイル形式でのメタデータの書き戻しは、`NComm` ハンドラーに追加すると機能するようになります。
 
@@ -75,7 +76,7 @@ ht-degree: 100%
 Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い [!DNL Adobe Illustrator] ファイルや PDF ファイルに対して、高品質のサムネールとプレビューを生成します。次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
 * 処理でリソースに負担がかかる、コンテンツ集約型の AI ファイルや PDF ファイル。
-* AI／PDF ファイル。デフォルトではサムネールは生成されません。
+* AI/PDFファイル（デフォルトではサムネールは生成されません）。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
 [PDF ラスタライザーの使用](aem-pdf-rasterizer.md)を参照してください。
@@ -142,9 +143,9 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 ## サポートされるアーカイブ形式 {#supported-archive-formats}
 
-サポートされるアーカイブ形式と一般的な DAM ワークフローの適用性については、次の表で説明します。
+次の表に、サポートされるアーカイブ形式と、一般的な DAM ワークフローの適用可能性を示します。
 
-| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
+| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | TGZ | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | JAR | ✓ | ✓ | ✓ | ✓ | ✓ | − |
@@ -156,7 +157,7 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 次に、いくつかの特定のファイル形式に対する通常の DAM 機能の適用性について説明します。
 
-| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media の配信 |
+| 形式 | ストレージ | バージョン管理 | ワークフロー | 公開 | アクセス制御 | Dynamic Media Delivery |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | SVG | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | CSS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -220,7 +221,7 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 | SVG | image/svg+xml |  |  |
 | SWF | application/x-shockwave-flash |  |  |
 | TAR | application/x-tar |  |  |
-| TIF／TIFF | image/tiff |  |  |
+| TIF /TIFF | image/tiff |  |  |
 | TTC | application/x-font-ttf |  |  |
 | TTF | application/x-font-ttf |  |  |
 | VOB | video/dvd |  | [ExcludeMasterVideoFromAVS](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-exclude-master-video-from-avs.html?lang=ja) |
@@ -236,17 +237,17 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 | ビデオファイル拡張子 | コンテナ | 推奨されるビデオコーデック | サポートされないビデオコーデック |
 |---|---|---|---|
-| AVI | A/V Interleave | XVID、DIVX、HDV、MiniDV（DV25）、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3（IV30）、MJPEG、Microsoft® Video 1（MS-CRAM） |
-| FLV、F4V | Adobe Flash | H264/AVC、Flix VP6、H263、Sorenson | SWF（ベクターアニメーションファイル） |
+| AVI | A/V インターリーブ | XVID、DIVX、HDV、MiniDV (DV25)、Techsmith Camtasia、Huffyuv、Fraps、Panasonic DVCPro | Indeo3（IV30）、MJPEG、Microsoft® Video 1（MS-CRAM） |
+| FLV、F4V | AdobeFlash | H264/AVC、Flix VP6、H263、Sorenson | SWF（ベクトルアニメーションファイル） |
 | M4V | Apple iTunes | H264/AVC | − |
-| MKV | Matroska | H264/AVC | − |
+| MKV | マトロスカ | H264/AVC | − |
 | MOV、QT | Apple QuickTime | H264/AVC、Apple ProRes422 &amp; HQ、Sony XDCAM、Sony DVCAM、HDV、Panasonic DVCPro、Apple DV（DV25）、Apple PhotoJPEG、Sorenson、Avid DNxHD、Avid AVR | Apple Intermediate、Apple Animation |
-| MP4 | MPEG-4 | H264/AVC（すべてのプロファイル） | − |
+| MP4 | MPEG-4 | H264/AVC （すべてのプロファイル） | − |
 | MPG、VOB、M2V、MP2 | MPEG-2 | MPEG-2 | − |
-| MXF ‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、Panasonic DVCPro | − |
-| OGV、OGG | Ogg | Theora、VP3、Dirac | − |
+| MXF ‡ | MXF | Sony XDCAM、MPEG-2、MPEG-4、パナソニック DVCPro | − |
+| OGV、OGG | Ogg | シオラ、VP3、ディラク | − |
 | WebM | WebM | Google VP8 | − |
-| WMV | Windows Media 9 | WMV3（v9）、WMV2（v8）、WMV1（v7）、GoToMeeting（G2M2、G2M3、G2M4） | Microsoft® Screen（MSS2）、Microsoft® Photo Story（WVP2） |
+| WMV | Windows Media 9 | WMV3(v9)、WMV2(v8)、WMV1(v7)、GoToMeeting(G2M2、G2M3、G2M4) | Microsoft® Screen（MSS2）、Microsoft® Photo Story（WVP2） |
 
 ‡このビデオ形式は、Dynamic Media のインタラクティブビデオでの使用や、Experience Manager Assets の注釈での使用には、まだサポートされていません。
 
@@ -264,9 +265,9 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 上記の機能に加えて、次を考慮する必要があります。
 
-* PDF ファイルの動的レンディションの生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
+* Dynamic Mediaを使用してPDFファイルの動的レンディションを生成するには、 [Adobe Illustrator(AI)、Postscript(EPS) およびPDFのファイル形式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
-* AI ファイルの動的レンディションのプレビューと生成に Dynamic Media を使用するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
+* Dynamic Mediaを使用して AI ファイルの動的レンディションをプレビューおよび生成するには、 [Adobe Illustrator(AI)、Postscript(EPS) およびPDFのファイル形式。](../assets/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * INDD ファイルの動的レンディションの生成に Dynamic Media を使用するには、[InDesign（INDD）ファイル形式](../assets/managing-image-presets.md#indesign-indd-file-format)を参照してください。
 
@@ -283,9 +284,9 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 | [EPS](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | − |
 | PICT | ✓ | − | − | − | − | − |
 
-‡ 結合された画像は PSD ファイルから抽出されます。この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
+‡ 結合された画像は PSD ファイルから抽出されます。これは、Adobe Photoshopによって生成され、画像ファイルに含まれるPSDです。 設定によって、結合された画像は実際の画像である場合とそうでない場合があります。
 
-* EPS ファイルのサポートは画像のラスタライズにのみ適用されます。例えば、EPS ベクター画像のサムネールの生成はデフォルトではサポートされません。サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。サードパーティツールを統合して追加機能を有効にするには、「[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)」を参照してください。
+* EPSファイルのサポートは、ラスターイメージにのみ適用されます。 例えば、EPSのベクトル画像のサムネールの生成は、デフォルトではサポートされていません。 サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。サードパーティツールを統合して追加機能を有効にするには、「[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)」を参照してください。
 
 * [!DNL Dynamic Media] を使用して EPS ファイルのプレビューと動的レンダリングを生成するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式を参照してください。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
