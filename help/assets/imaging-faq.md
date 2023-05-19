@@ -9,7 +9,7 @@ discoiquuid: bf8c6bbd-847d-43d7-9ff4-7231bfd8d107
 feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
-source-git-commit: 164b3745c5bddf6ec77f9ac2ada19cfa10c6d266
+source-git-commit: ea983b24da66edd02f86614690f8bc5e1e2499d9
 workflow-type: tm+mt
 source-wordcount: '3624'
 ht-degree: 93%
