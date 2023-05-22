@@ -8,7 +8,7 @@ content-type: reference
 topic-tags: best-practices
 discoiquuid: 669018a0-f6ef-42b2-9c6f-83d7dd5a7095
 exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
-source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
+source-git-commit: 18f843ed3ffb719d168b67826baaffd926ffd2dd
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 17%
@@ -53,14 +53,14 @@ AEMでの多くのパフォーマンス測定（クエリ応答時間など）�
 
 #### テストツール {#testing-tools}
 
-* Adobe **Tough Day** ツールを使用して、AEMインスタンスに負荷を生成し、パフォーマンスデータを収集できます。 AdobeのAEMエンジニアリングチームは、実際にはツールを使用してAEM製品自体の読み込みテストを実行します。 Tough Day で実行されるスクリプトは、プロパティファイルと JMX XML ファイルを介して設定されます。 詳しくは、 [Tough Day のドキュメント](/help/sites-developing/tough-day.md).
+* Adobe **Tough Day** ツールを使用して、AEMインスタンスに負荷を生成し、パフォーマンスデータを収集できます。 AdobeのAEMエンジニアリングチームは、実際にはこのツールを使用してAEM製品自体の読み込みテストを実行します。 Tough Day で実行されるスクリプトは、プロパティファイルと JMX XML ファイルを介して設定されます。 詳しくは、 [Tough Day のドキュメント](/help/sites-developing/tough-day.md).
 
 * AEMには、すぐに使用できるツールが用意されており、問題のあるクエリ、リクエスト、エラーメッセージをすばやく確認できます。 詳しくは、 [診断ツール](/help/sites-administering/operations-dashboard.md#diagnosis-tools) 操作ダッシュボードのドキュメントの節を参照してください。
 * Apache は、 **JMeter** これは、パフォーマンスと負荷のテスト、および機能的な動作に使用できます。 オープンソースのソフトウェアであり、自由に使用できますが、エンタープライズ製品よりも機能セットが小さく、学習曲線が急激です。 JMeter は Apache の Web サイト ( [https://jmeter.apache.org/](https://jmeter.apache.org/)
 
 * **Load Runner** はエンタープライズレベルの負荷テスト製品です。無償の評価版も提供されています。詳しくは、 [https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
-* Web サイト読み込みテストツール ( [Neustar](https://neustarsecurityservices.com/web-performance-management) また、を使用することもできます。
+* Web サイト読み込みテストツール ( [Vercara](https://vercara.com/website-performance-management) また、を使用することもできます。
 * モバイル Web サイトまたはレスポンシブ Web サイトをテストする場合は、別のツールセットを使用する必要があります。 ネットワーク帯域幅を制限し、3G や EDGE などの低速なモバイル接続をシミュレートすることで機能します。 より広く使用されているツールの中に、次のものが含まれます。
 
    * **[Network Link Conditioner](https://nshipster.com/network-link-conditioner/)** - 簡単に使用できる UI を備えており、またかなり低いレベルのネットワークスタックで動作します。OS X と iOS のバージョンがあります。
