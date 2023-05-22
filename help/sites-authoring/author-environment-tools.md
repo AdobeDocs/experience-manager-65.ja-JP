@@ -272,7 +272,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 * [ページをロールアウト](/help/sites-administering/msm.md#msm-from-the-ui)
 * [ワークフローを開始](/help/sites-authoring/workflows-applying.md#starting-a-workflow-from-the-page-editor)
 * [ページをロック](/help/sites-authoring/editing-content.md#locking-a-page)
-* [ページを発行](/help/sites-authoring/publishing-pages.md#main-pars-title-10)
+* [ページを公開](/help/sites-authoring/publishing-pages.md#main-pars-title-10)
 * [ページを非公開](/help/sites-authoring/publishing-pages.md#main-pars-title-5)
 * [テンプレートを編集](/help/sites-authoring/templates.md)（ページが[編集可能なテンプレート](/help/sites-authoring/templates.md#editable-and-static-templates)に基づいている場合）
 

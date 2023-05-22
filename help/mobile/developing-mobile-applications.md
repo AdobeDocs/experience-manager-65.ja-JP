@@ -1,7 +1,7 @@
 ---
 title: AEM でのモバイルアプリケーションの開発
 seo-title: Developing Mobile Applications in AEM
-description: Adobe PhoneGap Enterprise を使用して AEM でモバイルアプリケーションの開発を開始するには、このページの説明に従います。
+description: ここでは、Adobe PhoneGap Enterprise を使用したAEMでのモバイルアプリケーションの開発を開始します。
 seo-description: Follow this page to start developing mobile application in AEM using Adobe PhoneGap Enterprise.
 uuid: d8442447-ee04-4bb2-a0d7-17dcc8979dba
 contentOwner: User
@@ -13,7 +13,7 @@ exl-id: cf8ba05c-6dcd-4880-b8bf-72382118cd80
 source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
 workflow-type: tm+mt
 source-wordcount: '583'
-ht-degree: 75%
+ht-degree: 15%
 
 ---
 
@@ -21,42 +21,42 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-AEM では、Adobe PhoneGap および Adobe Publishing Solution を利用することにより、コンテンツが豊富でユーティリティベースの次のようなクロスプラットフォームモバイルアプリケーションを作成し、管理できます。
+AEMは、Adobe PhoneGapとAdobePublishing Solutions を活用し、コンテンツに富んだユーティリティベースのクロスプラットフォームモバイルアプリケーションを作成および管理できます。
 
-* 社内のすべてのモバイルアプリを 1 箇所で管理します。
-* 開発環境およびステージング環境でアプリをレビューします。プロファイルのプロビジョニングに伴う複雑さやアプリのビルドおよび共有用のアップロードを行う作業は不要です。
-* AEM オーサリング環境を使用して、アプリ向けのリッチコンテンツを作成および管理します。
-* Adobe PhoneGap で HTML5 を使用して、デバイスネイティブの機能による充実したエクスペリエンスを生成します。
-* Cordova WebView による新規または既存の&#x200B;**ネイティブ**&#x200B;アプリケーションに HTML5 WebView を導入します。
-* リッチなマルチメディアコンテンツを作成および管理して、Web、モバイル Web、モバイルアプリ、印刷物などすべての配信チャネルで共有します。
+* すべての会社のモバイルアプリを 1 か所で管理します。
+* プロファイルのプロビジョニングの複雑さや、共有用にアプリを作成およびアップロードする追加の手間を必要とせずに、開発環境およびステージング環境でアプリをレビューできます。
+* AEMオーサリング環境を使用して、アプリのリッチコンテンツを作成および管理します。
+* HTML5 とAdobe PhoneGapを使用して、デバイスネイティブ機能を備えたリッチなエクスペリエンスを作成します。
+* 新規または既存のHTMLに Web ビューを導入する **ネイティブ** Cordova WebViews を介したアプリケーション。
+* Web、モバイル Web、モバイルアプリ、印刷など、あらゆる配信チャネルにわたって、リッチなマルチメディアコンテンツを作成、キュレーションおよび共有します。
 
-AEM は、Adobe **[PhoneGap Build サービス](https://build.phonegap.com/)と統合され、アプリケーションをビルドしてデプロイするプロセスの簡素化を実現しています。**
+AEMとAdobe **[PhoneGap Buildサービス](https://build.phonegap.com/)** アプリケーションのビルドとデプロイのプロセスを簡略化します。
 
-**Adobe ContentSync** を使用すると、ユーザーはアプリケーションを再インストールしたり、AppStore や Google Play やその他のアプリ提供元からダウンロードしたりすることなく、ページおよびコンテンツの更新を自分のデバイスに無線（OTA）で簡単にダウンロードできます。
+**AdobeContentSync** を使用すると、アプリを再インストールしたり、appStore、Google Play、その他のアプリソースからダウンロードしたりしなくても、Over-the-Air(OTA) をデバイスに簡単にページやコンテンツの更新をダウンロードできます。
 
-**Adobe Analytics**&#x200B;は、AEM アプリに完全に統合されており、配布、位置情報、オペレーティングシステム、デバイス、クリックストリーム、iBeacon の詳細なトラッキングを行うことができます。
+**Adobe Analytics** はAEMアプリに完全に統合され、配布、位置情報、オペレーティングシステム、デバイス、クリックストリーム、iBeacon トラッキングなどの詳細な追跡が可能です。
 
 ## アプリの作成 {#creating-apps}
 
 開発者は、 [AEM PhoneGap スターターキット](https://github.com/Adobe-Marketing-Cloud/aem-phonegap-starter-kit) で見つかった追加リソースと共に [https://github.com/adobe-marketing-cloud-apps](https://github.com/adobe-marketing-cloud-apps) Cordova Webviews を実行する参照用ネイティブアプリを含め、AEMアプリを PhoneGap でブートストラップする場合。
 
-Starter Kit Git リポジトリの readme には、スターターキットを使用するためのチュートリアルが含まれています。
+Starter Kit Git リポジトリの readme には、スターターキットの使用に関するチュートリアルが含まれています。
 
 * ブランディングのカスタマイズ
-* Maven サンプルビルドおよびデプロイメントターゲット
-* ソース制御リポジトリの設定
+* Maven のサンプルビルドおよびデプロイメントターゲット
+* ソース管理リポジトリの設定
 * ローカルまたはリモートのAEMインスタンスへのインストールとデプロイ
-* AEM からのアンインストール
+* AEMからのアンインストール
 
 >[!NOTE]
 >
 >ラボを含むその他の参照用実装ソースは、GitHub にあります [ここ](https://github.com/adobe-marketing-cloud-apps) そして、「台所流し台」の源 [ここ](https://github.com/blefebvre/aem-phonegap-kitchen-sink).
 
-## iOS 9 ホストおよび HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
+## IOS 9 および HTTP ホスト用の開発 {#developing-for-ios-and-http-hosts}
 
-iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解決の問題に留意する必要があります。この問題により、安全でないホスト ( *http://localhost:4502*) をクリックします。 この問題は、（Cordova CLI で利用される）cordova-ios の今後のリリースで解決される予定ですが、それまでは次の方法で回避できます。
+iOSの開発者は、iOS 9 で実行される Cordova アプリのオープンな問題を認識している必要があります。 この問題により、安全でないホスト ( *http://localhost:4502*) をクリックします。 この問題は、（Cordova CLI で使用される）cordova-ios の今後のリリースで解決されますが、それまでの間に、次の 2 つの回避策が用意されています。
 
 1. 即時の回避策として、iOS 8 シミュレーターを問題なく使用できます。
 1. iOS 9 を使用する必要がある場合は、 apps -Info.plist （実行後に見つかります） `cordova platform add ios` 」の&lt;app root=&quot;&quot;>/platforms/ios/&lt;app name=&quot;&quot;>/&lt;app name=&quot;&quot;>-Info.plist&quot;) ファイルを手動で編集して、次のプロパティを含めることができます。
@@ -93,7 +93,7 @@ iOS の開発者は、iOS 9 で Cordova アプリを実行した場合の未解�
 
 ### その他のリソース {#additional-resources}
 
-管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
+管理者および開発者の役割と責務について詳しくは、以下のリソースを参照してください。
 
-* [AEM での Adobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)
+* [AEMを使用したAdobe PhoneGap Enterprise 向けのオーサリング](/help/mobile/phonegap.md)
 * [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)
