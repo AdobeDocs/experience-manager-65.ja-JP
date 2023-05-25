@@ -2,9 +2,9 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: f8af806bbb78623d5ba12379fc547a2cffc03841
+source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2620'
 ht-degree: 42%
 
 ---
@@ -70,6 +70,7 @@ ht-degree: 42%
 * 検索フィルターを使用して複数の選択されたアセットに対してワークフローをトリガーできません。 (ASSETS-7689)
 * 検索結果から「アセット」（または複数のアセット）を選択すると、「関連付け」または「関連付けを解除」オプションは表示されません。 ただし、オプションは使用可能です。それ以外の場合は、使用可能です。 (ASSETS-7679)
 * ログイン後に 1 回だけ検索フィルターパネルが開き、検索ページを終了して検索を再実行した場合は開きません。 (ASSETS-7671)
+* リンクを共有する際に、電子メールコンボボックスに適切なコントラスト比が表示されません。 (ASSETS-17349)
 
 <!-- REMOVED BY ENGINEERING FROM TOTAL RELEASE CANDIDATE LIST 
 * When you select any file in a Collection and click `Download`, and then navigate to the email checkbox and expand it, regular text and email link is not recognizable due to background color. (ASSETS-17349) 
