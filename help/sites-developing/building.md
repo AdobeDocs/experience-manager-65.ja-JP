@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: 032aea1f-0105-4299-8d32-ba6bee78437f
 feature: Tagging
 exl-id: d885520d-d0ed-45fa-8511-faa2495d667a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: be028f116ccb83853cd46dc742438babd2207314
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 100%
+source-wordcount: '903'
+ht-degree: 93%
 
 ---
 
 # AEM アプリケーションへのタグ付けの構築{#building-tagging-into-an-aem-application}
 
-カスタム AEM アプリケーション内のタグまたは拡張タグをプログラムで操作するために、このページでは、次の使用方法を説明します。
+このページでは、カスタムAEMアプリケーション内のタグや拡張タグをプログラムで操作する目的で、
 
 * [タグ付け API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/tagging/package-summary.html)
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 タグに関する関連情報については、次を参照してください。
 
 * タグの作成と管理、およびタグが適用されているコンテンツについては、「[タグの管理](/help/sites-administering/tags.md)」を参照してください。
-* コンテンツのタグ付けについては、[タグの使用](/help/sites-authoring/tags.md)を参照してください。
+* [タグの使用](/help/sites-authoring/tags.md) コンテンツのタグ付けについて詳しくは、を参照してください。
 
 ## タグ付け API の概要 {#overview-of-the-tagging-api}
 
@@ -199,3 +199,7 @@ AEM では、言語はページ言語またはユーザー言語のどちらか�
 >[!NOTE]
 >
 >新しい言語は、AEM で認識される言語である必要があります。つまり、`/libs/wcm/core/resources/languages` の下でノードとして使用できる必要があります。
+
+>[!CAUTION]
+>
+>サービスパックをインストールすると、/content/cq:tags ノードの languages プロパティがデフォルトにリセットされます。 したがって、インストール前にプロパティから追加する必要があります。
