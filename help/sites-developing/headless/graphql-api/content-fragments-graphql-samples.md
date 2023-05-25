@@ -1,18 +1,18 @@
 ---
-title: AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ
-description: GraphQL を AEM と共に使用し、サンプルコンテンツとクエリを調べて、コンテンツをヘッドレスに提供する方法を説明します。
+title: AEMでのGraphQLの使用方法について — サンプルコンテンツおよびクエリ
+description: GraphQLをAEMと共に使用して、サンプルコンテンツとクエリを参照し、コンテンツをヘッドレスに提供する方法を学びます。
 feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
-source-git-commit: 85f8da2a30e1bb5b78cbb36cd9b79939dd913251
+source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
 source-wordcount: '1586'
-ht-degree: 97%
+ht-degree: 76%
 
 ---
 
 # AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ {#learn-graphql-with-aem-sample-content-queries}
 
-GraphQL を AEM と共に使用し、サンプルコンテンツとクエリを調べて、コンテンツをヘッドレスに提供する方法を説明します。
+GraphQLをAEMと共に使用して、サンプルコンテンツとクエリを参照し、コンテンツをヘッドレスに提供する方法を学びます。
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ GraphQL を AEM と共に使用し、サンプルコンテンツとクエリを�
 >* [コンテンツフラグメントと共に使用する AEM GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
 
-GraphQL クエリの基本と、AEM コンテンツフラグメントとの連携方法を学ぶには、いくつかの実践的な例が参考になります。
+GraphQLクエリとAEMコンテンツフラグメントの使用方法を学ぶには、実用的な例をいくつか見るのに役立ちます。
 
 以下を参照してください。
 
@@ -38,7 +38,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 >[!NOTE]
 >
->インスタンスによっては、[AEM GraphQL API に付属している GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface)に直接アクセスして、クエリの送信とテストをおこなうことができます。
+>インスタンスに応じて、 [AEM GraphQL API に含まれる GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphiql-interface) クエリの送信とテストに使用します。
 >
 >例：`http://localhost:4502/content/graphiql.html`
 
@@ -48,11 +48,11 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 ### サンプルクエリ - 使用可能なすべてのスキーマとデータタイプ {#sample-all-schemes-datatypes}
 
-このクエリでは、使用可能なすべてのスキーマのすべての `types` を返します。
+このサンプルクエリは、 `types` （使用可能なすべてのスキーマ用）
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   __schema {
     types {
@@ -65,7 +65,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "__schema": {
@@ -141,10 +141,10 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 ### サンプルクエリ - すべての都市に関するすべての情報 {#sample-all-information-all-cities}
 
-すべての都市に関するすべての情報を取得するには、次のような非常に基本的なクエリを使用します。
+すべての都市に関するすべての情報を取得するには、次の基本クエリを使用します。
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   cityList {
     items
@@ -152,9 +152,9 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 }
 ```
 
-実行時にクエリが自動的に展開されて、次のように、すべてのフィールドが組み込まれます。
+実行すると、クエリが自動的に展開され、次のすべてのフィールドが含まれます。
 
-```xml
+```graphql
 {
   cityList {
     items {
@@ -169,7 +169,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -224,11 +224,11 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 ### サンプルクエリ - すべての都市の名前 {#sample-names-all-cities}
 
-これは、`city` スキーマ内のすべてのエントリの `name` を返す単純なクエリです。
+このサンプルクエリは、 `name`の `city`スキーマ。
 
 **サンプルクエリ**
 
-```xml
+```xmgraphqll
 query {
   cityList {
     items {
@@ -240,7 +240,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -274,11 +274,11 @@ query {
 
 ### サンプルクエリ - 1 つの特定の都市フラグメント {#sample-single-specific-city-fragment}
 
-これは、リポジトリー内の特定の場所にある 1 つのフラグメントエントリの詳細を返すクエリです。
+このサンプルクエリは、リポジトリ内の特定の場所にある単一のフラグメントエントリの詳細を返すクエリです。
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   cityByPath (_path: "/content/dam/sample-content-fragments/cities/berlin") {
     item {
@@ -294,7 +294,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityByPath": {
@@ -315,11 +315,11 @@ query {
 
 ### サンプルクエリ - 名前付きバリエーションを持つすべての都市 {#sample-cities-named-variation}
 
-`city` Berlin の新しいバリエーションを「Berlin Center」（`berlin_centre`）という名前で作成する場合は、クエリを使用してバリエーションの詳細を返すことができます。
+「ベルリンセンター」という名前のバリエーション (`berlin_centre`)、 `city` ベルリンでは、クエリを使用してバリエーションの詳細を返すことができます。
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   cityList (variation: "berlin_center") {
     items {
@@ -335,7 +335,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -360,14 +360,14 @@ query {
 
 次の場合：
 
-* `Tourism` : `Business`、`City Break`、`Holiday` という名前の様々なタグを作成し、
-* これらを様々な `City` インスタンスのマスターバリエーションに割り当てます
+* 様々なタグを作成し、名前を付けます。 `Tourism` : `Business`, `City Break`, `Holiday`
+* をクリックし、これらのタグを様々な `City` インスタンス
 
 この場合、クエリを使用して、`city` スキーマで都市滞在型休暇としてタグ付けされたすべてのエントリの `name` および `tags` の詳細を返すことができます。
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   cityList(
     includeVariations: true,
@@ -383,7 +383,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -414,7 +414,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   companyList {
     items {
@@ -443,7 +443,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -538,11 +538,11 @@ query {
 
 ### サンプルクエリ - 「Jobs」または「Smith」という名前を持つすべての人物 {#sample-all-persons-jobs-smith}
 
-`Jobs` または `Smith` という名前を持つすべての `persons` が抜き出されます。
+このサンプルクエリでは、 `persons` 名前の付いたものは `Jobs`または `Smith`.
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   personList(filter: {
     name: {
@@ -567,7 +567,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "personList": {
@@ -592,11 +592,11 @@ query {
 
 ### サンプルクエリ - 「Jobs」という名前を持たないすべての人物 {#sample-all-persons-not-jobs}
 
-`Jobs` または `Smith` という名前を持つすべての `persons` が抜き出されます。
+このサンプルクエリでは、 `persons` 名前の付いたものは `Jobs`または `Smith`.
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   personList(filter: {
     name: {
@@ -618,7 +618,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "personList": {
@@ -663,7 +663,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   adventureList(
     filter: {
@@ -685,7 +685,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "adventureList": {
@@ -702,13 +702,13 @@ query {
 }
 ```
 
-### サンプルクエリ - ドイツまたはスイスにあり、人口が 400000 から 999999 範囲にあるすべての都市 {#sample-all-cities-d-ch-population}
+### サンプルクエリ — ドイツまたはスイスのすべての都市 ( 人口400000 ～ 999999) {#sample-all-cities-d-ch-population}
 
-ここでは、フィールドの組み合わせに基づいてフィルタリングされます。`AND`（暗黙的）を使用して `population` の範囲を選択しつつ、`OR`（明示的）を使用して必要な都市を選択しています。
+ここでは、フィールドの組み合わせがフィルターされます。 `AND`（暗黙的）を使用して `population` の範囲を選択しつつ、`OR`（明示的）を使用して必要な都市を選択しています。
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     population: {
@@ -744,7 +744,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -771,7 +771,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     name: {
@@ -795,7 +795,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -822,7 +822,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     categories: {
@@ -846,7 +846,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -880,7 +880,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   cityList(filter: {
     categories: {
@@ -906,7 +906,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -932,7 +932,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   companyList(filter: {
     employees: {
@@ -964,7 +964,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -998,7 +998,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   companyList(filter: {
     employees: {
@@ -1040,7 +1040,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "companyList": {
@@ -1090,7 +1090,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   awardList(filter: {
       id: {
@@ -1117,7 +1117,7 @@ query {
 
 **サンプル結果**
 
-```xml
+```json
 {
   "data": {
     "awardList": {
@@ -1146,7 +1146,7 @@ query {
 
 ## WKND プロジェクトを使用したサンプルクエリ {#sample-queries-using-wknd-project}
 
-これらのサンプルクエリは WKND プロジェクトに基づいています。これには次のものが含まれています。
+これらのサンプルクエリは WKND プロジェクトに基づいています。次のようになります。
 
 * 次の URL で入手できるコンテンツフラグメントモデル：
    `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1156,7 +1156,7 @@ query {
 
 >[!NOTE]
 >
->結果は膨大な量になる可能性があるので、ここでは再現されていません。
+>結果は広範に及ぶ可能性があるので、ここでは再現されていません。
 
 ### 特定モデルのコンテンツフラグメントのうち指定のプロパティを持つものをすべて取得するサンプルクエリ {#sample-wknd-all-model-properties}
 
@@ -1167,7 +1167,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   articleList {
     items {
@@ -1187,7 +1187,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   adventureList {
     items {
@@ -1244,7 +1244,7 @@ query {
 このサンプルクエリでは次のものを検索します。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
-   * その中の、次のすべてのコンテンツ形式
+   * そのパス内に、次のすべての形式のコンテンツが含まれます。
       * HTML
       * Markdown
       * プレーンテキスト
@@ -1252,7 +1252,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures") {
     item {
@@ -1278,7 +1278,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   adventureByPath(_path: "/content/dam/wknd/en/adventures/riverside-camping-australia/riverside-camping-australia") {
     item {
@@ -1298,7 +1298,7 @@ query {
 このクエリでは次のものを検索します。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
-   * その中の、参照されている（ネストされた）フラグメントのパスと作成者
+   * そのパス内に、参照先（ネストされた）フラグメントのパスと作成者が入ります。
 
 >[!NOTE]
 >
@@ -1393,7 +1393,7 @@ query {
 
 次のクエリは、`_references` を使用して、すべてのコンテンツ参照を返します。
 
-```xml
+```graphql
 {
   bookmarkList {
      _references {
@@ -1427,13 +1427,13 @@ query {
 
 #### 添付ファイルを含んだ複数のコンテンツフラグメントのサンプルクエリ {#sample-wknd-multiple-fragments-attachments}
 
-次のクエリは、すべての `attachments`（`content-reference` タイプの特定のフィールド（サブグループ））を返します。
+次のクエリは、すべてを返します `attachments`  — 型の特定のフィールド（サブグループ） `content-reference`:
 
 >[!NOTE]
 >
 >フィールド `attachments` のデータタイプは `content-reference` で、様々なフ形式が選択されています。
 
-```xml
+```graphql
 {
   bookmarkList {
     items {
@@ -1477,7 +1477,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   bookmarkByPath(_path: "/content/dam/wknd/en/bookmarks/skitouring") {
     item {
@@ -1515,11 +1515,11 @@ query {
 このクエリでは次のものを検索します。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
-   * その中の、バリエーション `variation1` に関するデータ
+   * そのパス内で、バリエーションに関連するデータは次のようになります。 `variation1`
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   articleByPath (_path: "/content/dam/wknd/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
     item {
@@ -1544,7 +1544,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   articleList (variation: "variation1") {
     items {
@@ -1569,7 +1569,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 query {
   articleList(
     includeVariations: true  ){
@@ -1596,7 +1596,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 {
   articleList(
     includeVariations: true,
@@ -1625,7 +1625,7 @@ query {
 
 **サンプルクエリ**
 
-```xml
+```graphql
 { 
   articleList (_locale: "fr") {
     items {
@@ -1652,7 +1652,7 @@ query {
 
 ### サンプルコンテンツフラグメントモデル（スキーマ） {#sample-content-fragment-models-schemas}
 
-サンプルクエリでは、次のコンテンツモデルとその相互関係（参照関係「->」）を使用します。
+サンプルクエリでは、次のコンテンツモデルとその相互関係（参照 —>）を使用します。
 
 * [Company](#model-company)
 -> [Person](#model-person)
@@ -1687,7 +1687,7 @@ query {
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
 | ショートカット／ID | 1 行のテキスト |  |
-| title（タイトル） | 1 行のテキスト |  |
+| タイトル | 1 行のテキスト |  |
 
 #### City（市区町村） {#model-city}
 
@@ -1696,7 +1696,7 @@ query {
 | フィールド名 | データタイプ | 参照 |
 |--- |--- |--- |
 | name（氏名） | 1 行のテキスト |  |
-| 国名 | 1 行のテキスト |  |
+| Country | 1 行のテキスト |  |
 | 人口 | 数値 |  |
 | カテゴリ | タグ |  |
 

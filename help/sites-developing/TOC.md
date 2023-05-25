@@ -8,10 +8,10 @@ breadcrumb-title: 開発ガイド
 user-guide-description: このガイドでは、AEM インスタンスの構築方法について説明します。
 feature: Developing
 role: Developer
-source-git-commit: ad0f0bd8b0c230e002c734adca87da22bfa3a7cd
+source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 99%
+source-wordcount: '1296'
+ht-degree: 98%
 
 ---
 
@@ -142,6 +142,8 @@ ht-degree: 99%
       + [GraphQLエンドポイントの管理](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
       + [GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)
+      + [GraphQLクエリの最適化](/help/sites-developing/headless/graphql-api/graphql-optimization.md)
+      + [最適化された GraphQL フィルタリング用コンテンツフラグメントの更新](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
       + [コンテンツフラグメントに対するリモート AEM GraphQL クエリの認証](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md)
       + [AEM GraphQL API とコンテンツフラグメント - コンテンツとクエリの例](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md)
 + ハイブリッドおよび SPA の AEM 開発{#spas}
@@ -233,7 +235,7 @@ ht-degree: 99%
       + [レポートの開発](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/dev-reports.html?lang=ja)
 + テスト{#testing}
    + [計画](planning.md)
-   + [必要になるテスト環境の種類](test-environments.md)
+   + [必要なテスト環境の種類](test-environments.md)
    + [テストケースの定義](test-cases.md)
    + [テスト - 実行のタイミングとテスター](when-who.md)
    + [テスト計画の策定](test-plan.md)
