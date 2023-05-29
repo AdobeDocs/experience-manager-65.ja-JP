@@ -6,10 +6,10 @@ role: User, Admin
 feature: Metadata
 exl-id: 82148ae5-37e9-4fc5-ada9-db3d91b29c33
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 8bd103e392bf5630cb2db654dedcfe4f926b2c9d
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 88%
+source-wordcount: '808'
+ht-degree: 85%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 88%
 
 [!DNL Adobe Experience Manager Assets] の XMP の書き戻し機能では、メタデータの変更内容を元のアセットのレンディションに複製します。アセット内からアセットのメタデータを変更すると、またはアセットをアップロードすると、変更内容はまずアセット階層のメタデータノードに保存されます。
 
-XMP の書き戻し機能によって、メタデータの変更が、アセットのすべてのレンディションまたは特定のレンディションに反映されます。この機能は、`jcr` 名前空間を使用するメタデータプロパティのみを書き戻します。つまり、`dc:title` という名前のプロパティは書き戻されますが、`mytitle` という名前のプロパティは書き戻されません。
+XMP の書き戻し機能によって、メタデータの変更が、アセットのすべてのレンディションまたは特定のレンディションに反映されます。この機能は、登録された名前空間（という名前のプロパティ）を使用するメタデータプロパティのみを書き戻します。 `dc:title` が書き戻されたが、 `mytitle` がではありません。
 
 「`Classic Leather`」というタイトルのアセットの「[!UICONTROL タイトル]」プロパティを「`Nylon`」に変更するシナリオについて考えます。
 
