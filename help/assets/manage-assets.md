@@ -7,9 +7,9 @@ feature: Asset Management,Search
 mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 7bfa9a9e143f199c42161b92dcba66ae441ad1fb
 workflow-type: tm+mt
-source-wordcount: '9970'
+source-wordcount: '9993'
 ht-degree: 78%
 
 ---
@@ -402,6 +402,9 @@ ZIP アーカイブは、その他のサポートされているアセットと�
    ![日付時間の選択、または「オンタイム」フィールドのキーボードキーを使用して、アセットのアクティベーションの日時を追加する](assets/datepicker.png)
 
    *図：日付選択を使用して、アセットのアクティベーションをスケジュールします。*
+
+1. 確認する必要があります **[!UICONTROL オン/オフタイムに達しました]** オプションを使用します。
+   ![エージェントの設定](assets-dm/Agent-settings.png)
 
 1. 特定の期間の後にアセットのアクティベートを解除するには、「**[!UICONTROL オフタイム]**」フィールドの横にある日付選択を使用して、アクティベートを解除する日付と時間を選択します。アクティベートを解除する日付は、アセットに設定されたアクティベート日より後の日付にしてください。[!UICONTROL オフタイム]の経過後、アセットとそのレンディションは、 Web インターフェイスでも HTTP API でも使用できません。[!DNL Assets]
 
