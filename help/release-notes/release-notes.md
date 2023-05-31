@@ -2,10 +2,11 @@
 title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
-source-git-commit: 0bce05571590bc09e2b65f6bd6c1f387c71fba3a
+exl-id: fed4e110-9415-4740-aba1-75da522039a9
+source-git-commit: efd2a41b6b53a72b941ac23386b6aa4c41c9da15
 workflow-type: tm+mt
-source-wordcount: '2620'
-ht-degree: 42%
+source-wordcount: '2683'
+ht-degree: 41%
 
 ---
 
@@ -103,6 +104,36 @@ ht-degree: 42%
 * Adobe Target IMS 設定をレガシークラウド設定のユーザー資格情報に変換する場合、 `connectedWhen` プロパティは変更されません。 この問題により、すべての呼び出しが、設定がまだ IMS ベースであったかのように実行されます。 （CQ-4352810）
 * 追加中 `modifyProperties` ～への許可 `fd-cloudservice` Adobe Sign設定のシステムユーザー。 (FORMS-6164)
 * Adobe Targetと統合されたExperience Managerでは、AB テストアクティビティを作成すると、そのアクティビティに関連付けられたオーディエンスが Target と同期されません。 （NPR-40085）
+
+## Oak{#oak-6517}
+
+Service Pack 13 以降で、永続性キャッシュに影響する次のエラーログが表示され始めました。
+
+```shell
+org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.0.202/5]
+at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:1004)
+    at org.h2.mvstore.MVStore.getUnsupportedWriteFormatException(MVStore.java:1059)
+    at org.h2.mvstore.MVStore.readStoreHeader(MVStore.java:878)
+    at org.h2.mvstore.MVStore.<init>(MVStore.java:455)
+    at org.h2.mvstore.MVStore$Builder.open(MVStore.java:4052)
+    at org.h2.mvstore.db.Store.<init>(Store.java:129)
+```
+
+または
+
+```shell
+org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supported format 2 [2.1.214/5].
+```
+
+この例外を解決するには、次の手順を実行します。
+
+1. 次の 2 つのフォルダーを `crx-quickstart/repository/`
+
+   * `cache`
+   * `diff-cache`
+
+1. Service Pack をインストールするか、Experience Managerをas a Cloud Serviceして再起動します。
+の新しいフォルダー `cache` および `diff-cache` が自動的に作成され、 `mvstore` 内 `error.log`.
 
 ## プラットフォーム{#platform-6517}
 
