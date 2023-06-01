@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 071d7bf2e7c9ceb3328e77262cc45ed3f2e303cc
-workflow-type: ht
-source-wordcount: '3846'
-ht-degree: 100%
+source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
+workflow-type: tm+mt
+source-wordcount: '3860'
+ht-degree: 99%
 
 ---
 
@@ -127,6 +127,7 @@ ht-degree: 100%
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
    + [Microsoft Dynamics OData の設定](using/ms-dynamics-odata-configuration.md)
+   + [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 統合](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [フォームデータモデルの作成](using/create-form-data-models.md)
    + [フォームデータモデルの操作](using/work-with-form-data-model.md)
    + [フォームデータモデルの使用](using/using-form-data-model.md)
@@ -142,7 +143,7 @@ ht-degree: 100%
    + [リダイレクトページの設定](using/configuring-redirect-page.md)
    + [アクセシブルなアダプティブフォームの作成](using/creating-accessible-adaptive-forms.md)
    + [繰り返し可能なセクションを使用したフォームの作成](using/creating-forms-repeatable-sections.md)
-   + [AEM サイトページへのアダプティブフォームまたはインタラクティブ通信の埋め込み](using/embed-adaptive-form-aem-sites.md)
+   + [AEM Sites ページへのアダプティブフォームまたはインタラクティブ通信の埋め込み](using/embed-adaptive-form-aem-sites.md)
    + [外部 Web ページへのアダプティブフォームの埋め込み](using/embed-adaptive-form-external-web-page.md)
    + [アダプティブフォームコンポーネントのインラインスタイリング](using/inline-style-adaptive-forms.md)
    + [複数ステップのフォームシーケンスの概要](using/introduction-form-sequence.md)
@@ -335,7 +336,7 @@ ht-degree: 100%
    + [AEM Forms の分析レポートの確認方法と詳細](using/view-understand-aem-forms-analytics-reports.md)
    + [アダプティブフォームの A/B テストの作成と管理](using/ab-testing-adaptive-forms.md)
 + AEM Forms の公開と処理 {#publish-process-aem-forms}
-   + [ポータル上のフォーム発行の概要](using/introduction-publishing-forms.md)
+   + [ポータル上のフォーム公開の概要](using/introduction-publishing-forms.md)
    + [ドラフトと送信コンポーネントとデータベースの統合のサンプル](using/integrate-draft-submission-database.md)
    + [ドラフトと送信に使用するストレージサービスの設定](using/configuring-draft-submission-storage.md)
    + [AEM インボックスでの Forms アプリケーションとタスクの管理 ](using/manage-applications-inbox.md)
@@ -344,7 +345,7 @@ ht-degree: 100%
    + [ページでのリンクコンポーネントの埋め込み](using/embedding-link-component-page.md)
    + [フォームとドキュメントの公開と非公開](using/publishing-unpublishing-forms.md)
    + [API を使用した Web ページ上のフォームの一覧表示](using/listing-forms-webpage-using-apis.md)
-   + [発行済みフォームへのアクセスと入力](using/accessing-filling-published-forms.md)
+   + [公開済みフォームへのアクセスと入力](using/accessing-filling-published-forms.md)
    + [メールによるフォーム送信確認の送信](using/form-submission-receipt-via-email.md)
    + [監視フォルダーの作成または設定](using/creating-configure-watched-folder.md)
    + [タスクの割り当て手順におけるカスタムのメールテンプレートの使用](using/use-custom-email-template-assign-task-step.md)
@@ -690,6 +691,7 @@ ht-degree: 100%
    + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
    + [AEM 6.5.15.0 サービスパックのインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
+   + [JEE WebLogic Server での EAR デプロイメントの失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)

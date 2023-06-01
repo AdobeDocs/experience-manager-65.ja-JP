@@ -2,10 +2,10 @@
 title: AEM Forms の AEM Forms パッチのインストール手順
 description: OSGi および JEE 環境に対する AEM Forms サービスパックのインストール手順
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 01bf12ec46966ab2c78e2e825840230ea1bd3395
-workflow-type: ht
-source-wordcount: '1726'
-ht-degree: 100%
+source-git-commit: 57ead48ba3211075ae4b85801ba8cf6394582a9d
+workflow-type: tm+mt
+source-wordcount: '1728'
+ht-degree: 98%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 100%
 
 | 製品 | Adobe Experience Manager 6.5 Forms |
 |---|---|
-| バージョン | 6.5.16.0 |
+| バージョン | 6.5.17.0 |
 | タイプ | サービスパックのリリース |
-| 日付 | 2023 年 3 月 2 日 |
+| 日付 | 2023 年 6 月 1 日 |
 | ダウンロード URL | [AEM Forms の最新リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja) |
 
 >[!NOTE]
@@ -72,7 +72,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
       * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
    * **Linux®**
 適切なディレクトリに移動して、シェルから次のように入力します 
-`./aem65_cfp_install.bin`
+`./aem65_cfp_install.bin`。
 
       * （Linux®）`Linux/Disk1/InstData/NoVM`
 
@@ -152,7 +152,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 * [パッケージマネージャーの HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) を使用します。ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
    >[!NOTE]
-   >Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+   Experience Manager サービスパックでは、Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
    **インストールの検証**
 
@@ -183,7 +183,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 1. [CRX リポジトリとデータベーススキーマ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html?lang=ja)をバックアップします。
 
 >[!NOTE]
->リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
+リレーショナルデータベース用の AEM Forms サービスパックをインストールする場合は、DB_schema のバックアップを作成する必要があります。
 
 +++
 
@@ -210,7 +210,7 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 * [パッケージマネージャーの HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) を使用します。ネストされたパッケージがインストールされるように、`cmd=install&recursive=true` を使用します。
 
    >[!NOTE]
-   >Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
+   Experience Manager サービスパックは Bootstrap のインストールをサポートしていません。<!-- UPDATE FOR EACH NEW RELEASE -->
 
    **インストールの検証**
 
@@ -239,4 +239,4 @@ Adobe Experience Manager（AEM）Forms サービスパックには、お客様�
 
 * インストールが完了したら、アクティビティの監視ログ（error.log）を確認します。ログにアクティビティが表示されなくなるまで、数分お待ちください。AEM インスタンスを再起動します。
 
-*  AEM Forms 6.5.15.0 サービスパックのインストール後、**サービスを利用できないエラー**&#x200B;が発生した場合は、[サーブレットフラグメントとバンドルをインストール](/help/forms/using/aem-service-pack-installation-solution.md)してエラーを修正します。
+* 次の情報が得られた場合、 **service-unavailable エラー** AEM Forms 6.5.15.0以降の service pack のインストール後、 [サーブレットフラグメントとバンドルのインストール](/help/forms/using/aem-service-pack-installation-solution.md) エラーを修正する。

@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: efd2a41b6b53a72b941ac23386b6aa4c41c9da15
+source-git-commit: 2391eb74979b7ee9ed148763ffebf125ef09fc88
 workflow-type: tm+mt
-source-wordcount: '2683'
-ht-degree: 41%
+source-wordcount: '3475'
+ht-degree: 31%
 
 ---
 
@@ -30,7 +30,9 @@ ht-degree: 41%
 
 ## [!DNL Experience Manager] 6.5.17.0 の内容 {#what-is-included-in-aem-6517}
 
-[!DNL Experience Manager] 6.5.17.0には、2019 年 4 月の 6.5 の初期リリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、バグ修正、パフォーマンス、安定性、セキュリティの改善が含まれています。 [このサービスパック](#install)を [!DNL Experience Manager] 6.5 にインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
+[!DNL Experience Manager] 6.5.17.0には、2019 年 4 月の 6.5 の初期リリース以降にリリースされた新機能、お客様からリクエストされた主な機能強化、バグ修正、パフォーマンス、安定性、セキュリティの改善が含まれています。 [このサービスパックを [!DNL Experience Manager] 6.5 にインストール](#install)。
+
+<!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- Some of the key features and improvements are the following:
 
@@ -46,6 +48,13 @@ ht-degree: 41%
    これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 * **Dynamic Media _スナップショット_**— テスト画像やDynamic Media URL を試して、様々な画像修飾子の出力を確認し、スマートイメージングを最適化してファイルサイズ（WebP および AVIF 配信を使用）、ネットワーク帯域幅、デバイスピクセル比を確認します。 詳しくは、 [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **Dynamic Mediaでの DASH ストリーミング** - Dynamic Mediaビデオ配信（CMAF を有効にした場合）でアダプティブストリーミングが開始される新しいプロトコル (DASH - Dynamic Adaptive Streaming over HTTP) のサポート。 すべての地域で利用可能 [サポートチケットを通じて有効化される](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
+
+* **AEM Site ページでのアダプティブFormsの統合**:AEM Sitesエディター内でアダプティブFormsコンポーネントを活用し、以下を使用して、デジタル登録エクスペリエンスをシームレスに作成します。 — アダプティブFormsコンテナとアダプティブForms — 埋め込み (v2) コンポーネント。
+* **AEM Formsでの reCAPTCHA Enterprise のサポート**:AEM Formsでの reCAPTCHA Enterprise のサポートを追加し、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
+* **Adobe Acrobat Sign for Government with AEM Formsのサポート**:AEM FormsとAdobe Signの安全で準拠した統合（FedRAMP 準拠）を実現
+* **データ交換用にAEM Formsと Salesforce の統合を有効化**:OAuth 2.0 クライアント資格情報は、Salesforce アプリケーションでの安全で直接のアプリケーション認証と承認のためにフローされ、ユーザーの関与なしにアプリケーション間のシームレスな通信を可能にします。
+* **ワークフローエンジンの最適化と機能強化**:ワークフローインスタンスの数を最小限に抑えると、ワークフローエンジンのパフォーマンスが向上します。 に加えて `COMPLETED` および `RUNNING` ステータス値の場合、ワークフローは 3 つの新しいステータス値もサポートします。 `ABORTED`, `SUSPENDED`、および `FAILED`.
+* ZPL 出力形式は、文字、A4、A5 など、様々な用紙サイズをサポートします。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
@@ -95,9 +104,41 @@ ht-degree: 41%
 
 ## [!DNL Forms]{#forms-6517}
 
->[!NOTE]
->
->の修正点 [!DNL Experience Manager] Formsは、スケジュールされた [!DNL Experience Manager] サービスパックのリリース日。 この場合、アドオンパッケージのリリースは 2023 年 6 月 1 日（木）です。 さらに、Formsの修正および機能強化のリストがこの節に追加されました。
+* ユーザーがAEM 6.5.16.0 Service Pack にアップグレードした場合、添付ファイルが正しく取得されません。 (FORMS-8906)
+* AEM 6.5.15.0 Service Pack に更新した後、IE 互換モードの Edge ブラウザーで、HTML5 Forms が機能しないか、正しく読み込まれません。 (FORMS-8526、FORMS-8523)
+* ユーザーがAEM 6.5.16.0 Service Pack を適用すると、ルールエディターを開けません。 (FORMS-8290)
+* 数値ボックスコンポーネントに検証の最大桁数を適用すると、失敗します。 (FORMS-7938)
+* インタラクティブ通信文を作成する際、PDF内のグラフコンポーネントが正しく生成されません。 (FORMS-7827、FORMS-8297)
+* Java ガベージコレクションは、AEM Forms OSGi サーバー上の古い生成ヒープをクリアできません。 (FORMS-8207)
+* ユーザーがAEM 6.5.16.0 Service Pack にアップグレードした場合、送信後に CRX メタデータのプロパティが欠落します。 (FORMS-8205)
+* アダプティブフォーム内の日付選択コンポーネントを無効にした場合でも、編集可能です。 (FORMS-7804)
+* AEM 6.5.16.0 Forms Service Pack では、ユーザーがポリシーセットコーディネーターを編集しようとすると、Manager Document Publisher は常にオフのままになります。 (FORMS-7775、FORMS-8599)
+* ユーザーがAEM 6.5.16.0 Service Pack にアップグレードすると、翻訳が必要な文字列を処理する「GuideNode.externalize」メソッドが動作を停止します。 (FORMS-7709)
+* 内 `Assign task` 手順：ユーザーが「通知メールを送信」を選択してワークフローを起動すると、受信した電子メールにテキストが正しく表示されません。 受信した E メールに含まれるテキストの代わりに、疑問符が受け取られます。 (FORMS-7675)
+* レコードのドキュメントが部分的にローカライズされています。 (FORMS-7674、FORMS-7573)
+* 割り当てられた特定の権限でも、ユーザーはポリシーセットを編集できません。 (FORMS-7665)
+* ユーザーが `forms-users` グループが新しいフォームの作成を試み、AEM Formsインスタンスがクラッシュします。 (FORMS-7629)
+* ユーザーがアダプティブフォームの「リセット」、「保存」、「送信」の各ボタンをクリックしても、画面にメッセージは表示されません。 (FORMS-7524)
+* AEM 6.5.16.0 Service Pack での PDFG 変換のパフォーマンスを向上させるために、スリープ間隔を設定できるようになりました。 (FORMS-6752)
+* 切り替えオプションは同じですが、ユーザーがカーソルを少しドラッグした場合でも、フィールドの表示/非表示は変わります。 (FORMS-6728)
+* ユーザーがAEM 6.5.15.0 Service Pack にアップグレードすると、アダプティブフォームが Internet Explorer でレンダリングされると、リダイレクトが機能しなくなります。 (FORMS-6725)
+* AEM Designer で作成されたPDFフォーム内のすべての背景オブジェクトに対する PAC 2021 ツールは、 `Path object not tagged`. (FORMS-6707)
+* ユーザーがインボックスでフィルターを適用すると、 `NullPointerException` エラー。 (FORMS-6706)
+* ユーザーがフラグメントを参照しているテンプレート (.tds) ファイルを読み込むと、AEM Designer がクラッシュします。  (FORMS-6702)
+* ユーザーがAEM Forms Designer 6.5 で Output Service を使用して静的PDFを作成した場合、次のようなエラーが発生します。 `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
+* ユーザーが単純なワークフローを作成し、単純な変数を追加すると、 `set variable mapping` エラーが発生しました。 (FORMS-5819)
+* ユーザーが Output Service を使用してPDFを生成しようとしたとき（とマークされている場合） `PDF/A-1a`、`Preflight` サービスが失敗しました。 （LC-3920837）
+* AEM 6.5.16.0 Service Pack をインストールした後、AEMデザイナーが開けません。 （LC-3921000）
+* ユーザーがチェックボックスとラジオボタンを追加した場合、タグツリーの構造は、タグの標準に従ってPDFされません。 （LC-3920838）
+* PDFの埋め込みとサブセット化を使用して静的PDFを生成した場合、出力サービスを通じて、生成されるフォントには埋め込みフォントのみが含まれます。 （LC-3920963）
+* RTL 形式では、ヘブライ語のテキストが正しく表示されません。 （LC-3919632）
+* ユーザーが JBoss Turnkey サーバーでAEM 6.5.16.0 Service Pack にアップグレードした場合、Signature Service は呼び出しに失敗します。 発生したエラー： `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
+* AEM 6.5.14.0 Service Pack にアップグレードした後、CRX ノードを別の場所に移動する処理が機能しなくなる。 エラーは次のように発生します。 `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`.(FORMS-7713)
+* ユーザーがAEM 6.5.16.0 Service Pack に更新すると、 `Usage Rights` 申し込みに失敗しました。 (FORMS-7892)
+* ユーザーがPDFドキュメントを生成しようとすると、PDF/A-1b 検証が失敗します。 (FORMS-7615)
+* ユーザーが `Configure` オプション `Form Container` コンポーネントを使用しない場合、ブラウザーが応答しなくなります (FORMS-7605)。
+* ユーザーがAEM Forms 6.5.16.0 Service Pack を更新し、 `LicenseType` から `Production`の場合、変更は反映されません。 (FORMS-7594)
+* ユーザーが、 `Chinese Full Width Characters`を含めている場合、 `ValidateForm` プロセス。 (FORMS-7464)
 
 ## 統合{#integrations-6517}
 
@@ -351,8 +392,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    "refresh": true
    ```
 
-* AEM Forms では、POP3 プロトコルは Microsoft® Office 365 のメールエンドポイントでは機能しません。
-* JBoss® 7.1.4 プラットフォームで、ユーザーがAEM 6.5.16.0 Service Pack をインストールすると、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
+* JBoss® 7.1.4 プラットフォームで、ユーザーがAEM 6.5.16.0以降の Service Pack をインストールするとき、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
