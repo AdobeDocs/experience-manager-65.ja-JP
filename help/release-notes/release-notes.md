@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2391eb74979b7ee9ed148763ffebf125ef09fc88
+source-git-commit: a54d75ba653f469495203fa4643dbd78dbd7c38f
 workflow-type: tm+mt
-source-wordcount: '3475'
+source-wordcount: '3499'
 ht-degree: 31%
 
 ---
@@ -52,9 +52,9 @@ ht-degree: 31%
 * **AEM Site ページでのアダプティブFormsの統合**:AEM Sitesエディター内でアダプティブFormsコンポーネントを活用し、以下を使用して、デジタル登録エクスペリエンスをシームレスに作成します。 — アダプティブFormsコンテナとアダプティブForms — 埋め込み (v2) コンポーネント。
 * **AEM Formsでの reCAPTCHA Enterprise のサポート**:AEM Formsでの reCAPTCHA Enterprise のサポートを追加し、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
 * **Adobe Acrobat Sign for Government with AEM Formsのサポート**:AEM FormsとAdobe Signの安全で準拠した統合（FedRAMP 準拠）を実現
-* **データ交換用にAEM Formsと Salesforce の統合を有効化**:OAuth 2.0 クライアント資格情報は、Salesforce アプリケーションでの安全で直接のアプリケーション認証と承認のためにフローされ、ユーザーの関与なしにアプリケーション間のシームレスな通信を可能にします。
-* **ワークフローエンジンの最適化と機能強化**:ワークフローインスタンスの数を最小限に抑えると、ワークフローエンジンのパフォーマンスが向上します。 に加えて `COMPLETED` および `RUNNING` ステータス値の場合、ワークフローは 3 つの新しいステータス値もサポートします。 `ABORTED`, `SUSPENDED`、および `FAILED`.
-* ZPL 出力形式は、文字、A4、A5 など、様々な用紙サイズをサポートします。
+* **データ交換用にAEM Formsと Salesforce の統合を有効化**:OAuth 2.0 クライアント資格情報フローを使用して、AEM forms と Salesforce アプリケーションの統合を設定します。 これにより、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーの関与なくシームレスな通信が可能になります。
+* **ワークフローエンジンの最適化と機能強化**:ワークフローインスタンスの数を最小限に抑えて、ワークフローエンジンのパフォーマンスを向上させます。 に加えて `COMPLETED` および `RUNNING` ステータス値の場合、ワークフローは 3 つの新しいステータス値もサポートします。 `ABORTED`, `SUSPENDED`、および `FAILED`.
+* **ZPL 出力用の用紙サイズのサポート**:AEM Forms Designer では、XMLFM は XDP ベースのテンプレート用に、レター、A4、A5 など、様々な用紙サイズで ZPL 出力を生成します。
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
