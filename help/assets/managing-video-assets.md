@@ -521,7 +521,6 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >* Apache Sling ジョブキューの設定
    >* Adobe Granite ワークフロー外部プロセスジョブハンドラー
    >* Granite ワークフロータイムアウトキュー
-
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
@@ -554,7 +553,6 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
    >* Apache Sling ジョブキューの設定
    >* Adobe Granite ワークフロー外部プロセスジョブハンドラー
    >* Granite ワークフロータイムアウトキュー
-
    >
    >これらの設定の&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**&#x200B;および&#x200B;**[!UICONTROL タイムアウト]**&#x200B;プロパティは調整できます。
 
