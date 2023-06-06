@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 7f152c3b7b80c78bb73b45e83cc566e9bbb0c393
+source-git-commit: 206242583fcbf651dbc6234dc01be5140d0cfca7
 workflow-type: tm+mt
-source-wordcount: '3494'
-ht-degree: 31%
+source-wordcount: '3537'
+ht-degree: 30%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 31%
    これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 * **Dynamic Media _スナップショット_**— テスト画像やDynamic Media URL を試して、様々な画像修飾子の出力を確認し、スマートイメージングを最適化してファイルサイズ（WebP および AVIF 配信を使用）、ネットワーク帯域幅、デバイスピクセル比を確認します。 詳しくは、 [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **Dynamic Mediaでの DASH ストリーミング** - Dynamic Mediaビデオ配信（CMAF を有効にした場合）でアダプティブストリーミングが開始される新しいプロトコル (DASH - Dynamic Adaptive Streaming over HTTP) のサポート。 すべての地域で利用可能 [サポートチケットを通じて有効化される](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
-
+* **AEM SitesとコンテンツフラグメントのAEM Assets次世代Dynamic Mediaとの統合**:AEM Assetsas a Cloud Serviceの次世代Dynamic Mediaのユーザーは、AEM Sites 6.5 のオンプレミスインスタンスまたはマネージドサービスインスタンスを使用したオーサリングと配信に、これらのクラウドホストアセットを使用できるようになりました。
 * **AEM Site ページでのアダプティブFormsの統合**:AEM Sitesエディター内でアダプティブFormsコンポーネントを活用し、以下を使用して、デジタル登録エクスペリエンスをシームレスに作成します。 — アダプティブFormsコンテナとアダプティブForms — 埋め込み (v2) コンポーネント。
 * **AEM Formsでの reCAPTCHA Enterprise のサポート**:AEM Formsでの reCAPTCHA Enterprise のサポートを追加し、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
 * **Adobe Acrobat Sign for Government with AEM Formsのサポート**:AEM FormsとAdobe Signの安全で準拠した統合（FedRAMP 準拠）を実現
