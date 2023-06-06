@@ -7,10 +7,10 @@ role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 56632bd6ce9fc90f0bc61f903f84f7ea8bbcd12d
 workflow-type: tm+mt
-source-wordcount: '3389'
-ht-degree: 77%
+source-wordcount: '3288'
+ht-degree: 76%
 
 ---
 
@@ -287,22 +287,6 @@ MSM では、ソースアセットとそのライブコピーとのライブ関�
    ![ライブコピーの概要コンソールからライブコピーフォルダー内の多数のアセットを容易に更新できる](assets/livecopyconsole_update_many_assets.png)
 
    *図：[!UICONTROL ライブコピーの概要]コンソールからライブコピーフォルダー内の多数のアセットを容易に更新できる*
-
-## [!DNL Assets] に対応した MSM の拡張 {#extend-api}
-
-[!DNL Experience Manager] では、MSM Java API を使用して機能を拡張することができます。[!DNL Assets]の場合、拡張は MSM for[!DNL Sites]の場合と同じように機能します。詳しくは、[MSM の拡張](/help/sites-developing/extending-msm.md)を参照してください。具体的な作業については、以下を参照してください。
-
-* [Java API の概要](/help/sites-developing/extending-msm.md#overview-of-the-java-api)
-* [新しい同期アクションの作成](/help/sites-developing/extending-msm.md#creating-a-new-synchronization-action)
-* [ロールアウト設定の作成](/help/sites-developing/extending-msm.md#creating-a-new-rollout-configuration)
-* [シンプルな LiveActionFactory クラスの作成と使用](/help/sites-developing/extending-msm.md#creating-and-using-a-simple-liveactionfactory-class)
-
->[!NOTE]
->
->* MSM for [!DNL Sites] におけるブループリントは、MSM for [!DNL Assets] ではライブコピーソースと呼ばれます。
->* 「サイト作成ウィザード」での章削除のステップは、MSM for [!DNL Assets] ではサポートされていません。
->* ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI）は、MSM for [!DNL Assets]では対応していません。
-
 
 ## ライブコピーに対するアセット管理タスクの影響 {#manage-assets}
 
