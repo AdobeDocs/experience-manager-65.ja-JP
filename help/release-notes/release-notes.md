@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 2c9337af99811d7b58712e1d0def7b5af5661c11
+source-git-commit: 36edc2507d9acd7d5f94e433a654ccc1647bb58a
 workflow-type: tm+mt
-source-wordcount: '3567'
+source-wordcount: '3568'
 ht-degree: 30%
 
 ---
@@ -187,7 +187,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 * ページの言語コピーが期待どおりに更新されませんでした。 （SITES-11191）
 * キャンペーンページ以外の呼び出しを開く `targeteditor.html` 不必要に を削除します。 `targeteditor` 不要な場合はを呼び出します。 （SITES-12469）
 * 注釈の付いたページにはライブコピーを作成できません。 （SITES-12154）
-* ページのロールアウトはExperience Manager6.5.16 で動作しています。 （SITES-12008）
+* Experience Manager6.5.16 でページのロールアウトが機能しない。 （SITES-12008）
 * メモリ不足、～による高いごみ収集活動 `NotificationManagerImpl`. `NotificationManager` バンドルをExperience Manager6.5 にアップグレードします。 （SITES-11440）
 * Service Pack 17 をブロックしていた WCM IT テストを修正しました。 （SITES-13089）
 * サーブレットでサイト参照の取得に失敗しました。 （SITES-10901）
