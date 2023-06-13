@@ -1,8 +1,6 @@
 ---
-title: Adobe Campaign Classic との統合
-seo-title: Integrating with Adobe Campaign Classic
-description: AEM と Adobe Campaign Classic の統合方法について説明します。
-seo-description: Learn how to integrate AEM with Adobe Campaign Classic
+title: AEM 6.5 とAdobe Campaign Classicの統合
+description: AEM 6.5 とAdobe Campaign Classicを統合する方法について説明します。
 uuid: 3c998b0e-a885-4aa9-b2a4-81b86f9327d3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,19 +8,23 @@ topic-tags: integration
 content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
-source-git-commit: 4712f57808ae769646b00d1098648686815121b6
-workflow-type: ht
-source-wordcount: '1556'
-ht-degree: 100%
+source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
+workflow-type: tm+mt
+source-wordcount: '1583'
+ht-degree: 96%
 
 ---
 
 
-# Adobe Campaign Classic との統合 {#integrating-campaign-classic}
+# AEM 6.5 とAdobe Campaign Classicの統合 {#integrating-campaign-classic}
 
-AEM を Adobe Campaign と統合すると、メール配信、コンテンツ、フォームを AEM で直接管理できます。ソリューション間の双方向通信を有効にするには、Adobe Campaign Classic と AEM の両方で設定が必要です。
+AEMとAdobe Campaign Classic(ACC) を統合すると、電子メール配信、コンテンツ、フォームをAEMで直接管理できます。 ソリューション間の双方向通信を有効にするには、Adobe Campaign Classic と AEM の両方で設定が必要です。
 
 この統合では、AEM と Adobe Campaign Classic を個別に使用することができます。マーケターは Adobe Campaign でキャンペーンを作成してターゲティングを使用できますが、コンテンツ作成者は並行して AEM でコンテンツのデザインに取り組むことができます。この統合により、AEM 内に作成されたキャンペーンのコンテンツとデザインを、Adobe Campaign でターゲットにして配信できるようになります。
+
+>[!INFO]
+>
+>このドキュメントでは、Adobe Campaign ClassicとAEM 6.5 を統合する方法について詳しく説明します。その他の Campaign 統合については、このドキュメントを参照してください [AEM 6.5 とAdobe Campaignの統合。](campaign.md)
 
 ## 統合手順 {#integration-steps}
 
@@ -98,7 +100,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
    * `allowHTTP="true"`
    * `sessionTokenOnly="true"`
-   * `allowUserPassword="true"`
+   * `allowUserPassword="true"`。
 
 1. ファイルを保存します。
 
@@ -156,13 +158,13 @@ AEM が Adobe Campaign と通信できるようになりました。
 
 キャンペーンのコンテンツは、コンテンツ作成者が AEM オーサリングインスタンスで作成します。このインスタンスは通常、組織内でしか使用できません。画像やアセットなどのコンテンツをキャンペーンの受信者がアクセスできるようにするには、そのコンテンツを公開する必要があります。
 
-レプリケーションエージェントは、AEM オーサーインスタンスからパブリッシュインスタンスにコンテンツを公開する役割を持ち、このエージェントが正しく機能するには統合環境に対して設定されている必要があります。また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートする場合にも必要です。
+レプリケーションエージェントは、AEM オーサーインスタンスからパブリッシュインスタンスにコンテンツを公開する役割を持ち、このエージェントが正しく機能するには統合環境に対して設定されている必要があります。また、この手順は、あるオーサーインスタンス設定をパブリッシュインスタンスにレプリケートするためにも必要です。
 
 AEM オーサーインスタンスからパブリッシュインスタンスへのレプリケーションを設定するには、次の手順を実行します。
 
-1. AEM オーサーインスタンスに管理者としてログインします。
+1. AEM オーサリングインスタンスに管理者としてログインします。
 
-1. グローバルナビゲーションサイドパネルで、**ツール**／**デプロイメント**／**レプリケーション**／**オーサーのエージェント**&#x200B;を選択し、「**デフォルトエージェント (パブリッシュ)**」をタップまたはクリックします。
+1. グローバルナビゲーションサイドパネルから、**ツール**／**デプロイメント**／**レプリケーション**／**オーサー環境のエージェント**&#x200B;の順に選択し、**デフォルトエージェント（パブリッシュ）**&#x200B;をタップまたはクリックします。
 
    ![レプリケーションエージェントの設定](assets/acc-replication-config.png)
 
@@ -172,7 +174,7 @@ AEM オーサーインスタンスからパブリッシュインスタンスへ�
 
    ![「トランスポート」タブ](assets/acc-transport-tab.png)
 
-1. 「**OK**」をタップまたはクリックして、エージェント設定の変更内容を保存します。
+1. 「**OK**」をタップまたはクリックして、エージェント設定に対する変更を保存します。
 
 AEM パブリッシュインスタンスへのレプリケーションを設定したので、キャンペーン受信者がコンテンツにアクセスできるようになりました。
 
@@ -180,24 +182,25 @@ AEM パブリッシュインスタンスへのレプリケーションを設定�
 >
 >レプリケーション URL を使用せずに、公開 URL を使用する場合は、OSGi を介して、以下の設定で公開 URL を設定することができます
 >
->グローバルナビゲーションサイドパネルから、**ツール**／**操作**／**Web コンソール**／**OSGi 設定**&#x200B;を選択し、**AEM Campaign 統合 - 設定**&#x200B;を検索します。設定を編集し、「**公開 URL**」フィールド（`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`）を変更します。
+>グローバルナビゲーションサイドパネルで、**ツール**／**運用**／**Web コンソール**／**OSGi 設定** を選択し、**AEM Campaign の統合 - 設定**&#x200B;を検索します。設定を編集し、「**公開 URL**（`com.day.cq.mcm.campaign.impl.IntegrationConfigImpl#aem.mcm.campaign.publicUrl`）」フィールドを変更します。
 
 ## AEM Externalizer の設定 {#externalizer}
 
 [Externalizer は リソースパスを外部の絶対 URL に変換する AEM の OSGi サービスです。この URL は、Campaign で使用できるコンテンツを AEM から提供するために必要になります。](/help/sites-developing/externalizer.md)Campaign 統合を機能させるには、これを設定する必要があります。
 
 1. AEM オーサーインスタンスに管理者としてログインします。
-1. グローバルナビゲーションサイドパネルから、**ツール**／**操作**／**Web コンソール**／**OSGi 設定**&#x200B;を選択し、**Day CQ Link Externalizer** を検索します。
-1. デフォルトでは、「**ドメイン**」フィールドの前回のエントリはパブリッシュインスタンスを対象としています。 URL をデフォルトの `http://localhost:4503` から、公開されているパブリッシュインスタンスに変更します。
+1. グローバルナビゲーションサイドパネルで、**ツール**／**運用**／**Web コンソール**／**OSGi 設定**&#x200B;を選択し、**Day CQ Link Externalizer**&#x200B;を検索します。
+1. デフォルトでは、「**ドメイン**」フィールドの最新エントリは、公開インスタンスを対象としています。 URL をデフォルトの `http://localhost:4503` から、公開されているパブリッシュインスタンスに変更します。
 
    ![Externalizer の設定](assets/acc-externalizer-config.png)
 
-1. 「**保存**」をタップまたはクリックします。
+1. 「**保存**」して閉じるをタップまたはクリックします。
 
 Externalizer が設定され、Adobe Campaign がコンテンツにアクセスできるようになりました。
 
 >[!NOTE]
->パブリッシュインスタンスは、Adobe Campaign サーバーから到達可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は、Adobe Campaign コンソールに表示されません。
+>
+パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
 
 ## AEM での campaign-remote ユーザーを設定 {#configure-user}
 

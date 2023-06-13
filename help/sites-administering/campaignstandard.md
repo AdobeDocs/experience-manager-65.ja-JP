@@ -1,8 +1,6 @@
 ---
-title: Adobe Campaign Standard との統合
-seo-title: Integrating with Adobe Campaign Standard
-description: AEM と Adobe Campaign Standard の統合方法について学びます。
-seo-description: Learn how to integrate AEM with Adobe Campaign Standard.
+title: AEM 6.5 とAdobe Campaign Standardの統合
+description: AEM 6.5 とAdobe Campaign Standardを統合する方法について説明します。
 uuid: ef31339e-d925-499c-b8fb-c00ad01e38ad
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,19 +8,23 @@ topic-tags: integration
 content-type: reference
 discoiquuid: 5c0fec99-7b1e-45d6-a115-e498d288e9e1
 exl-id: caa43d80-1f38-46fc-a8b9-9485c235c0ca
-source-git-commit: a0062ffbdd6477eca494fea4142d271f3015599a
-workflow-type: ht
-source-wordcount: '1807'
-ht-degree: 100%
+source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
+workflow-type: tm+mt
+source-wordcount: '1834'
+ht-degree: 96%
 
 ---
 
 
-# Adobe Campaign Standard との統合 {#integrating-with-adobe-campaign-standard}
+# AEM 6.5 とAdobe Campaign Standardの統合 {#integrating-with-adobe-campaign-standard}
 
-AEM を Adobe Campaign と統合すると、メール配信、コンテンツ、フォームを AEM で直接管理できます。ソリューション間の双方向通信を有効にするには、Adobe Campaign Standard と AEM の両方で設定手順が必要です。
+AEM 6.5 をAdobe Campaign Standard(ACS) と統合すると、E メール配信、コンテンツ、フォームをAEMで直接管理できます。 ソリューション間の双方向通信を有効にするには、Adobe Campaign Standard と AEM の両方で設定手順が必要です。
 
 この統合により、AEM と Adobe Campaign Standard を個別に使用できます。マーケターは Adobe Campaign でキャンペーンを作成してターゲティングを使用できますが、コンテンツ作成者は並行して AEM でコンテンツのデザインに取り組むことができます。この統合により、AEM 内に作成されたキャンペーンのコンテンツとデザインを、Adobe Campaign でターゲットにして配信できるようになります。
+
+>[!INFO]
+>
+>このドキュメントでは、Adobe Campaign StandardとAEM 6.5 を統合する方法について詳しく説明します。その他の Campaign 統合については、このドキュメントを参照してください [AEM 6.5 とAdobe Campaignの統合。](campaign.md)
 
 ## 統合手順 {#integration-steps}
 
@@ -198,7 +200,8 @@ AEM パブリッシュインスタンスへのレプリケーションを設定�
 Externalizer が設定され、Adobe Campaign がコンテンツにアクセスできるようになりました。
 
 >[!NOTE]
->パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
+>
+パブリッシュインスタンスは、Adobe Campaign サーバーからアクセス可能である必要があります。`localhost:4503` または Adobe Campaign が到達できない別のサーバーを指している場合、AEM からの画像は Adobe Campaign コンソールに表示されません。
 
 ## AEM での campaign-remote ユーザーを設定 {#campaign-remote-user}
 
