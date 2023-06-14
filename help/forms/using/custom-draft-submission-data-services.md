@@ -1,18 +1,16 @@
 ---
 title: ドラフトおよび送信データサービスのカスタマイズ
-seo-title: Customizing Draft and Submission data services
-description: デフォルトでは、AEM Forms はドラフトと送信済みのアダプティブフォームをパブリッシュインスタンスのデフォルトのノードに保存します。ただし、AEM Forms のドラフトと送信データサービスを設定することにより、ドラフトおよび送信済みアダプティブフォームのストレージをカスタマイズできます。
-seo-description: AEM Forms, by default, stores draft and submitted adaptive forms in a default node on the Publish instance. However, you can configure the draft and submission data services of AEM Forms to customize the storage of draft and submitted adaptive forms.
+description: AEM Formsはデフォルトで、ドラフトと送信済みのアダプティブフォームをパブリッシュインスタンスのデフォルトのノードに保存します。 ただし、AEM Formsのドラフトと送信データサービスを設定して、ドラフトと送信済みのアダプティブフォームのストレージをカスタマイズすることはできます。
 uuid: c3ec1708-3b11-4142-93f0-1cffb6643f34
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: 602fd6a9-9a65-411c-8475-a4082a3fdee0
 exl-id: ed10ef8c-7b9c-43cf-bea8-7cf9742a8cac
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 100%
+source-wordcount: '270'
+ht-degree: 28%
 
 ---
 
@@ -20,24 +18,24 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-AEM Forms ではアダプティブフォームをドラフトとして保存できます。ドラフト機能により、ユーザーは作業中のフォームを維持することができます。これにより、ユーザーはデバイスを問わずいつでもフォームに記入および送信できます。
+AEM Formsを使用すると、アダプティブフォームをドラフトとして保存できます。 ドラフト機能を使用すると、ユーザーは作業中のフォームを維持できます。 その後、ユーザーは任意のデバイスからいつでもフォームに入力して送信できます。
 
-デフォルトでは、AEM Forms はドラフトと送信に関連付けられたユーザーデータを `/content/forms/fp` ノードのパブリッシュインスタンスに保存します。
+デフォルトでは、AEM Formsはドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの `/content/forms/fp` ノード。
 
-ただし、AEM Forms ポータルコンポーネントは、ドラフトおよび送信用のユーザーデータの保存の実装をカスタマイズするデータサービスを提供します。例えば、組織に現在実装されているデータストアにデータを保存することができます。
+ただし、AEM Forms Portal コンポーネントは、ドラフトと送信用のユーザーデータの保存の実装をカスタマイズするデータサービスを提供します。 例えば、組織に現在実装されているデータストアにデータを保存することができます。
 
-ユーザーデータのストレージをカスタマイズするには、[ドラフトデータ](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p)および[送信データ](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p)サービスを参照してください。
+ユーザーデータのストレージをカスタマイズするには、 [下書きデータ](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) および [送信データ](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) サービス。
 
 ## 前提条件 {#prerequisites}
 
-* [フォームポータルコンポーネント](/help/forms/using/enabling-forms-portal-components.md)を有効にする
-* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)の作成
-* [フォームポータル用アダプティブフォーム](/help/forms/using/draft-submission-component.md)を有効にする
+* 有効にする [Forms Portal コンポーネント](/help/forms/using/enabling-forms-portal-components.md)
+* の作成 [Forms Portal ページ](/help/forms/using/creating-form-portal-page.md)
+* 有効にする [Forms Portal 用アダプティブフォーム](/help/forms/using/draft-submission-component.md)
 * [カスタムストレージの実装の詳細](/help/forms/using/draft-submission-component.md#customizing-the-storage)を学ぶ
 
 ## ドラフトデータサービス {#draft-data-service}
 
-ユーザーのドラフトデータのストレージをカスタマイズするには、`DraftAFDataService` インターフェイスのすべてのメソッドに対して実装を指定する必要があります。
+ユーザーのドラフトデータのストレージをカスタマイズするには、 `DraftAFDataService` インターフェイス。
 
 メソッドとその引数の説明を、次のインターフェイスのコードサンプルに示します。
 
@@ -84,7 +82,7 @@ public interface DraftAFDataService {
 
 ## 送信データサービス {#submission-data-service}
 
-ユーザーの送信データのストレージをカスタマイズするには、`SubmittedAFDataService` インターフェイスのすべてのメソッドに対して実装を指定する必要があります。
+ユーザー送信データのストレージをカスタマイズするには、 `SubmittedAFDataService` インターフェイス。
 
 メソッドとその引数の説明を、次のインターフェイスのコードサンプルに示します。
 

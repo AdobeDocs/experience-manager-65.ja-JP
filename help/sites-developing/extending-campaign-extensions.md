@@ -1,8 +1,6 @@
 ---
 title: カスタム拡張の作成
-seo-title: Creating Custom Extensions
-description: AEM から Adobe Campaign のカスタムコードを呼び出したり、AEM から Adobe Campaign への呼び出しをおこなうことができます
-seo-description: You can call your custom code in Adobe Campaign from AEM or from AEM to Adobe Campaign
+description: カスタムコードは、Adobe CampaignでAEMから、またはAEMからAdobe Campaignに呼び出すことができます。
 uuid: 8392aa0d-06cd-4b37-bb20-f67e6a0550b1
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,47 +8,47 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: f536bcc1-7744-4f05-ac6a-4cec94a1ffb6
 exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 100%
+source-wordcount: '510'
+ht-degree: 17%
 
 ---
 
 # カスタム拡張の作成{#creating-custom-extensions}
 
-一般的に、プロジェクトを実装する場合は、AEM と Adobe Campaign の両方にカスタムコードを含めます。既存の API を使用して、AEM から Adobe Campaign のカスタムコードを呼び出したり、AEM から Adobe Campaign への呼び出しをおこなうことができます。ここでは、その具体的な方法を説明します。
+通常、プロジェクトを実装する場合、AEMとAdobe Campaignの両方にカスタムコードがあります。 既存の API を使用して、Adobe CampaignでカスタムコードをAEMから、またはAEMからAdobe Campaignに呼び出すことができます。 このドキュメントでは、その方法について説明します。
 
 ## 前提条件 {#prerequisites}
 
-以下の製品がインストールされている必要があります。
+以下をインストールする必要があります。
 
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
 詳しくは、[AEM と Adobe Campaign 6.1 の統合](/help/sites-administering/campaignonpremise.md)を参照してください。
 
-## 例 1：AEM から Adobe Campaign {#example-aem-to-adobe-campaign}
+## 例 1:AEM to Adobe Campaign {#example-aem-to-adobe-campaign}
 
-AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server Page）を基盤としています。この JSSP ファイルはキャンペーンコンソールにあり、すべて「**amc**」（Adobe Marketing Cloud）で始まります。
+AEMと Campaign の標準的な統合は、JSON と JSSP(JavaScript Server Page) に基づいています。 JSSP ファイルは Campaign コンソールにあり、すべてが次で始まります **aec** (Adobe Experience Cloud)。
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 >[!NOTE]
 >
->[この例については、Package Share から入手できる Geometrixx](/help/sites-developing/we-retail.md) を参照してください。
+>[この例については、「Geometrixx」を参照してください。](/help/sites-developing/we-retail.md)：パッケージ共有から入手できます。
 
-この例では、新しいカスタム JSSP ファイルを作成し、AEM 側から呼び出して、結果を取得します。例えば、この方法を利用して、Adobe Campaign からデータを取得したり、Adobe Campaign にデータを保存したりできます。
+この例では、新しいカスタム JSSP ファイルが作成され、結果を取得するためにAEM側から呼び出します。 例えば、Adobe Campaignからデータを取得したり、Adobe Campaignにデータを保存したりするために使用できます。
 
-1. Adobe Campaign で新しい JSSP ファイルを作成するには、**新規**&#x200B;アイコンをクリックします。
+1. Adobe Campaignで JSSP ファイルを作成するには、 **新規** アイコン
 
    ![](do-not-localize/chlimage_1-4a.png)
 
-1. この JSSP ファイルの名前を入力します。この例では、「**cus:custom.jssp**」を使用します（**cus** 名前空間に配置することを意味します）。
+1. この JSSP ファイルの名前を入力します。この例では、 **cus:custom.jssp** が使用されている ( つまり、 **カス** 名前空間 ) で使用されます。
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
-1. 以下のコードを JSSP ファイル内に挿入します。
+1. 次のコードを jssp ファイル内に配置します。
 
    ```
    <%
@@ -59,15 +57,15 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
    %>
    ```
 
-1. ファイルを保存します。残りの作業は AEM でおこないます。
-1. この JSSP を呼び出す簡単なサーブレットを AEM 側に作成します。この例では、次のように仮定しています。
+1. 作業内容を保存します。 残りの作業はAEMです。
+1. この JSSP を呼び出せるように、AEM側でシンプルなサーブレットを作成します。 この例では、次のような場合を想定できます。
 
-   * AEM と Adobe Campaign 間に有効な接続がある
-   * Adobe Campaign クラウドサービスが **/content/geometrixx-outdoors** に設定されている
+   * AEMと Campaign の間の接続が機能している
+   * Campaign クラウドサービスは、次の場所で設定されます： **/content/geometrixx-outdoors**
 
    この例で最も重要なオブジェクトは、**GenericCampaignConnector** です。このオブジェクトを使用すると、Adobe Campaign 側にある JSSP ファイルを呼び出す（GET および POST）ことができます。
 
-   コードの抜粋を以下に示します。
+   次に、小さなコードスニペットを示します。
 
    ```
    @Reference
@@ -79,7 +77,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
    return results.bodyAsString();
    ```
 
-1. この例でわかるように、呼び出しに資格情報を渡す必要があります。この資格情報を getCredentials() メソッドを使用して取得し、Adobe Campaign クラウドサービスが設定されているページに渡すことができます。
+1. この例では、資格情報を呼び出しに渡す必要があります。 Campaign クラウドサービスが設定されているページを渡す getCredentials() メソッドを使用して取得できます。
 
    ```xml
    // page containing the cloudservice for Adobe Campaign
@@ -87,7 +85,7 @@ AEM と Adobe Campaign の標準の統合は、JSON と JSSP（JavaScript Server
    CampaignCredentials credentials = campaignConnector.retrieveCredentials(config);
    ```
 
-完全なコードは以下のようになります。
+完全なコードは次のようになります。
 
 ```java
 import java.io.IOException;
@@ -162,33 +160,33 @@ public class CustomServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## 例 2：Adobe Campaign から AEM {#example-adobe-campaign-to-aem}
+## 例 2:Adobe CampaignからAEMへ {#example-adobe-campaign-to-aem}
 
-AEM には、サイト管理エクスプローラービューのどこでも使用できるオブジェクトを取得するための API がデフォルトで用意されています。
+AEMは、siteadmin explorer ビューの任意の場所で使用可能なオブジェクトを取得するための API を標準で提供しています。
 
 ![chlimage_1-17](assets/chlimage_1-17a.png)
 
 >[!NOTE]
 >
->[この例については、Package Share から入手できる Geometrixx](/help/sites-developing/we-retail.md) を参照してください。
+>[この例については、「Geometrixx」を参照してください。](/help/sites-developing/we-retail.md)：パッケージ共有から入手できます。
 
-エクスプローラーの各ノードには、API がリンクされています。例えば、以下のノードの場合、
+エクスプローラー内の各ノードには、そのノードにリンクされた API があります。 ノードの場合の例：
 
 * [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
-API は以下のようになります。
+API は次のとおりです。
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-URL の末尾の「**.1.json**」は、取得したいサブレベルの番号に応じて、「**.2.json**」や「**.3.json**」に置き換えることができます。すべてのサブレベルを取得するには、キーワード「**infinity**」を使用します。
+URL の末尾 **.1.json** は **.2.json**, **.3.json**&#x200B;を取得するサブレベルの数に従って選択します。 これらすべてのキーワードを取得するには、 **無限** は以下の場合に使用できます。
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-API を利用するには、デフォルトでは、AEM が基本認証を使用することを理解する必要があります。
+API を使用する場合、AEMはデフォルトで基本認証を使用します。
 
-6.1.1（build 8624 以上）では、複数のロジックの中でこのロジックを実装する JS ライブラリ **amcIntegration.js** を使用できます。
+という名前の JS ライブラリ **amcIntegration.js** は、6.1.1（ビルド 8624 以降）で使用でき、他の複数のロジックの中でそのロジックを実装します。
 
-### AEM の API 呼び出し {#aem-api-call}
+### AEM API 呼び出し {#aem-api-call}
 
 ```java
 loadLibrary("nms:amcIntegration.js");

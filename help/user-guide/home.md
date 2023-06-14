@@ -1,13 +1,11 @@
 ---
 title: AEM 6.5 ユーザーガイドハブ
-seo-title: AEM 6.5 User Guide Hub
 description: AEM 6.5 の理解、インストール、管理および使用に関する重要なリソースの概要
-seo-description: An overview of all of the essential resources for understanding, installing, managing, and using AEM 6.5
 exl-id: 51788662-6214-408e-98d9-692950c366be
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: ht
-source-wordcount: '214'
-ht-degree: 100%
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 82%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 100%
 
 ## はじめに {#introduction}
 
-| [最初の手順](https://helpx.adobe.com/jp/experience-manager/get-started.html) | [特集ビデオ](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-5-videos.html) | [リリースノート](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes.html) |
+| [最初の手順](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/home.html?lang=ja) | [チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja) | [リリースノート](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=ja) |
 |:-:|:-:|:-:|
 | AEM 使用の手引きに関するチュートリアルと記事を見つける | 6.5 の新機能を重点的に解説するビデオの選択 | AEM 6.5 の新機能を見つける |
 
@@ -38,11 +36,11 @@ ht-degree: 100%
 サポート担当者は、次の方法で支援を受けることができます。
 
 * Web：Experience Manager サポートポータル
-* 電話： [お住まいの地域の電話番号を見つけます。](https://helpx.adobe.com/jp/contact/dma-external/DMACustomeCareRegionalPhoneNumbers.html)
+* 電話： [お住まいの地域の電話番号を見つけます。](https://experienceleague.adobe.com/?lang=ja&amp;support-tab=home#support)
 
 >[!NOTE]
 >
->**サポート担当者**&#x200B;かどうか不明な場合は、この[ユーザータイプが自分に当てはまるかどうか](https://helpx.adobe.com/jp/experience-cloud/supported-users.html)と、[エンタープライズサポート利用条件](https://helpx.adobe.com/jp/support/programs/enterprise-support-terms.html)を確認してください。
+>次に該当するかどうかは不明です： **サポート委任者**? これが [ユーザータイプが適用されます](https://helpx.adobe.com/jp/experience-cloud/supported-users.html) Adobe [エンタープライズサポート利用条件](https://helpx.adobe.com/jp/support/programs/enterprise-support-terms.html).
 
 ## コミュニティ {#community}
 
@@ -52,4 +50,4 @@ ht-degree: 100%
 * [AEM Communities フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-communities.html)
 * [AEM Forms フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-forms.html)
 * [AEM Assets フォーラム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/aem-assets.html)
-* [AEM Mobile フォーラム](https://forums.adobe.com/community/experiencemanagermobile)
+* [AEM Mobile フォーラム](https://experienceleaguecommunities.adobe.com/)

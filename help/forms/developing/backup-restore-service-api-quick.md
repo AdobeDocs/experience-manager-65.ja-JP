@@ -1,6 +1,5 @@
 ---
 title: Backup and Restore サービス API のクイックスタート
-seo-title: Backup and Restore Service APIQuick Starts
 description: Backup and Restore サービス API のクイックスタート
 uuid: c3992be2-ceb4-480d-9c8f-71eb0ea66dde
 contentOwner: admin
@@ -10,10 +9,10 @@ topic-tags: develop
 discoiquuid: 813162be-dbf5-4dc1-80ff-e37dbc25ef60
 role: Developer
 exl-id: ae17fd3a-0ba4-4a00-907b-811e500b0e14
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 100%
+source-wordcount: '246'
+ht-degree: 40%
 
 ---
 
@@ -21,21 +20,21 @@ ht-degree: 100%
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-Java API クイックスタート（SOAP）は、Backup and Restore サービス API で使用できます。
+Java™ API Quick Start(SOAP) は、バックアップと復元サービス API で使用できます。
 
-[クイックスタート：Java API（SOAP）を使用したバックアップモードの開始](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
+[クイックスタート：Java を使用したバックアップモードの開始](backup-restore-service-api-quick.md#quick-start-soap-mode-entering-backup-mode-using-the-java-api)
 
-[クイックスタート：Java API（SOAP）を使用したバックアップモードの終了](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
+[クイックスタート：Java を使用したバックアップモードの終了](backup-restore-service-api-quick.md#quick-start-soap-mode-leaving-backup-mode-using-the-java-api)
 
-AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
+AEM Forms の操作は、AEM Forms の強く型付けされた API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->AEM Forms によるプログラミングにあるクイックスタートは、Forms オペレーティングシステムに基づいています。ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照してください。
+>「 AEM Formsでのプログラミング」のクイックスタートは、Formsオペレーティングシステムに基づいています。 ただし、UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。（[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
-## クイックスタート（SOAP モード）：Java API を使用したバックアップモードの開始 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したバックアップモードの開始 {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
-次の Java コード例では、2 時間にわたり、一意のラベルが指定されたバックアップモードになります。バックアップ時間の経過後、またはバックアップモードが明示的に終了された場合、Forms サーバーはグローバルドキュメントストレージからのファイルのパージを再開します。（[Forms サーバーでのバックアップモードの開始](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server)を参照。）
+次の Java™コードの例は、2 時間間一意のラベルを持つバックアップモードに入ります。 バックアップ時間が期限切れになった後、またはバックアップモードが明示的に終了した場合、Formsサーバーはグローバルドキュメントストレージからファイルをパージします。 ( [Forms Server でのバックアップモードの開始](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
 
 ```java
  /*
@@ -123,7 +122,7 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
              // Enter backup mode on the forms server server
              BackupModeEntryResult backupResult = backup.enterBackupMode(backUpLabel,minsInBackupMode, continousCoverage);
  
-             // Get information from entering backup mode ontheforms server server.
+             // Get information from entering backup mode on the forms server server.
              if (backupResult != null)
              {
                  System.out.println("Start time is: " + backupResult.getStartTime());
@@ -148,9 +147,9 @@ AEM Forms の操作は、AEM Forms の厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したバックアップモードの終了 {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
+## クイックスタート（SOAP モード）:Java™ API を使用したバックアップモードの終了 {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
 
-次の Java コード例では、Forms サーバーでバックアップモードが明示的に終了され、グローバルドキュメントストレージからのファイルのパージを再開します。（[Forms サーバーでのバックアップモードの終了](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server)を参照。）
+次の Java™コードの例では、明示的にFormsサーバーがバックアップモードを終了し、グローバルドキュメントストレージからファイルをパージするように戻します。 ( [Forms Server でのバックアップモードの終了](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
 
 ```java
  /*
