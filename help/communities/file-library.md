@@ -1,8 +1,6 @@
 ---
 title: ファイルライブラリ機能
-seo-title: File Library Feature
 description: ファイルライブラリ機能を使用すると、サインインしているサイト訪問者がファイルをアップロード、管理、ダウンロードできます
-seo-description: The File Library feature lets signed-in site visitors upload, manage, and download files
 uuid: e78a90bd-f1d3-44f8-98eb-1498a55e8217
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ea2b23af-49c3-409b-a041-43c42d846f21
 docset: aem65
 exl-id: 05cfaab5-a12d-475f-9095-a9fb13571d0a
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '733'
 ht-degree: 11%
 
 ---
@@ -35,17 +33,17 @@ ht-degree: 11%
 
 * `Communities / File Library`
 
-をクリックし、ページ上の適切な場所にドラッグします。
+ページ上の場所にドラッグします。
 
 必要な情報については、 [コミュニティコンポーネントの基本](/help/communities/basics.md).
 
-次の場合に [必要なクライアント側ライブラリ](/help/communities/essentials-file-library.md#essentials-for-client-side) が含まれる場合、この方法で `File Library` コンポーネントが表示されます。
+次の場合に [必要なクライアント側ライブラリ](/help/communities/essentials-file-library.md#essentials-for-client-side) が含まれる場合は、その方法です `File Library` コンポーネントが表示されます。
 
 ![file-library1](assets/file-library1.png)
 
 ### ファイルライブラリの設定 {#configuring-file-library}
 
-配置された `File Library` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+配置された `File Library` コンポーネントを使用して、 `Configure` アイコンをクリックすると、編集ダイアログボックスが開きます。
 
 ![configure-new](assets/configure-new.png)
 
@@ -61,7 +59,7 @@ ht-degree: 11%
 
 * **1 ページのコメント数**
 
-  1 ページに表示するコメントの数と、表示する返信の数を制限します。 デフォルトはです。 **10**.
+  1 ページに表示するコメントの数と表示する返信の数を制限します。 デフォルトはです。 **10**.
 
 * **最大ファイルサイズ**
 
@@ -73,7 +71,7 @@ ht-degree: 11%
 
 * **許可されるファイルタイプ**
 
-  「ドット」区切り文字を使用したファイル拡張子のコンマ区切りリスト。 例：.jpg、.jpeg、.png、.doc、.docx、.pdf ファイルタイプが指定されている場合、指定されていないファイルは許可されません。 デフォルトは指定されておらず、すべてのファイルタイプが許可されます。
+  「ドット」区切り記号を使用したファイル拡張子のコンマ区切りリスト。 例： .jpg、.jpeg、.png、.doc、.docx、.pdf。 ファイルタイプを指定した場合、指定しなかったファイルタイプは許可されません。 デフォルトは指定されておらず、すべてのファイルタイプが許可されます。
 
 * **リッチテキストエディター**
 
@@ -89,7 +87,7 @@ ht-degree: 11%
 
 * **許可された名前空間**
 
-  「タグ付けを許可」がオンの場合、使用可能なタグは、チェックした名前空間に限定されます。 何も選択しない場合は、すべてが許可されます。 初期設定は、すべての名前空間です。
+  「タグ付けを許可」をオンにした場合、使用可能なタグは、チェックする名前空間に制限されます。 名前空間が選択されていない場合は、すべてが許可されます。 初期設定は、すべての名前空間です。
 
 * **推奨の制限**
 
@@ -97,7 +95,7 @@ ht-degree: 11%
 
 * **投票を許可**
 
-  オンにすると、ファイルの投票機能が有効になります。 初期設定はオフです。
+  オンにすると、ファイルに対して投票する機能が有効になります。 初期設定はオフです。
 
 * **フォローを許可**
 
@@ -113,7 +111,7 @@ ht-degree: 11%
 
 * **UI メンションパターン**
 
-  投稿に登録したユーザーにタグ付け (@mention) するのに許可されるパターン文字列を指定します。 例：`~{{familyName}}{{givenName}}`
+  投稿内の登録ユーザーにタグ付け (@mention) するために、許可されるパターン文字列を指定します。 例：`~{{familyName}}{{givenName}}`
 
 * **スレッド化された返信を許可**
 
@@ -129,7 +127,7 @@ ht-degree: 11%
 
 * **コメントを削除**
 
-  オンにすると、コメントを投稿した訪問者はコメントを削除できます。 初期設定はオンです。
+  オンにすると、コメントを投稿した訪問者は必要に応じてコメントを削除できます。 初期設定はオンです。
 
 * **コメントを拒否**
 

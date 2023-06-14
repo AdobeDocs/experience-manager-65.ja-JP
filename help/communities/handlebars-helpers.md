@@ -1,8 +1,6 @@
 ---
 title: SCF Handlebars ヘルパー
-seo-title: SCF Handlebars Helpers
 description: SCF での作業を容易にする Handlebars ヘルパーメソッド
-seo-description: Handlebars Helper methods to facilitate work with SCF
 uuid: 9c514199-871e-4b68-8147-2052d2eeda15
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -10,10 +8,10 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 8b6c1697-d693-41f4-8337-f41658465107
 exl-id: bfb95cae-4b0f-4521-a113-042dc4005a63
-source-git-commit: fe731e1a8866fbdd1f982d67d6ff29cbf7f0cd7c
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 6%
+source-wordcount: '1473'
+ht-degree: 3%
 
 ---
 
@@ -183,7 +181,7 @@ Then content-loadmore would return
 
 ## If-wcm-mode {#if-wcm-mode}
 
-の現在の値をテストするブロックヘルパー [WCM モード](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) を、文字列区切りのモードのリストに対して設定します。
+の現在の値をテストするブロックヘルパー [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) を、文字列区切りのモードのリストに対して設定します。
 
 ### パラメーター {#parameters-4}
 
@@ -193,7 +191,7 @@ Then content-loadmore would return
 
 * **mode**:文字列
 
-  （オプション） [WCM モード](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/WCMMode.html) をテストします。
+  （オプション） [WCM モード](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) をテストします。
 
 ### 例 {#example-2}
 
@@ -236,9 +234,9 @@ Then content-loadmore would return
 
 コンポーネントをテンプレート内の既存のリソース以外として含めるためのヘルパーです。
 
-これにより、リソースを JCR ノードとして追加した場合よりも簡単に、プログラムによってカスタマイズできます。 詳しくは、 [コミュニティコンポーネントの追加または追加](scf.md#add-or-include-a-communities-component).
+このメソッドを使用すると、リソースを JCR ノードとして追加する場合よりも簡単に、プログラムによってリソースをカスタマイズできます。 詳しくは、 [コミュニティコンポーネントの追加または追加](scf.md#add-or-include-a-communities-component).
 
-一部のコミュニティコンポーネントのみがインクルード可能です。 AEM 6.1 の場合、インクルード可能なものは次のとおりです。 [コメント](essentials-comments.md), [評価](rating-basics.md), [レビュー](reviews-basics.md)、および [投票](essentials-voting.md).
+含めることができるコミュニティコンポーネントは、一部のみです。 <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
 このヘルパーは、サーバー側にのみ適用され、次のような機能を提供します。 [cq:include](../../help/sites-developing/taglib.md) （JSP スクリプト用）
 
@@ -254,7 +252,7 @@ Then content-loadmore would return
 
 * **resourceType**:文字列
 
-  （オプション）リソースタイプは、デフォルトでコンテキストからリソースタイプに設定されます。
+  （オプション）リソースタイプのデフォルトは、コンテキストからのリソースタイプです。
 
 * **テンプレート**:文字列
 
@@ -274,11 +272,11 @@ Then content-loadmore would return
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-これにより、次の場所に新しいコメントコンポーネントが含まれます： `this.id` + /comments.
+次の場所に新しいコメントコンポーネントが含まれます： `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
-AEM HTML クライアントライブラリを含むヘルパーです。js、css、theme の各ライブラリを指定できます。 js や css など、異なるタイプの複数のインクルージョンの場合、このタグを Handlebars スクリプトで複数回使用する必要があります。
+AEM HTML クライアントライブラリを含むヘルパーです。js、css、theme の各ライブラリを指定できます。 js や css など、異なるタイプの複数のインクルージョンの場合、このタグは Handlebars スクリプトで複数回使用する必要があります。
 
 このヘルパーは、サーバー側にのみ適用され、次のような機能を提供します。 [ui:includeClientLib](../../help/sites-developing/taglib.md) （JSP スクリプト用）
 
@@ -286,19 +284,19 @@ AEM HTML クライアントライブラリを含むヘルパーです。js、css
 
 * **カテゴリ**:文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての JavaScript ライブラリと CSS ライブラリが含まれます。 テーマ名は要求から抽出されます。
+  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての JavaScript ライブラリと CSS ライブラリを含めます。 テーマ名は要求から抽出されます。
 
 * **テーマ**:文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべてのテーマ関連ライブラリ（CSS と JS の両方）が含まれます。 テーマ名は要求から抽出されます。
+  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定したカテゴリのすべてのテーマ関連ライブラリ（CSS と JS の両方）を含めます。 テーマ名は要求から抽出されます。
 
 * **js**:文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定したカテゴリの JavaScript ライブラリがすべてインクルードされます。
+  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての JavaScript ライブラリを含めます。
 
 * **css**:文字列
 
-  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定したカテゴリの CSS ライブラリがすべてインクルードされます。
+  （オプション）クライアントライブラリカテゴリのコンマ区切りリストです。 指定されたカテゴリのすべての CSS ライブラリを含めます。
 
 ### 例 {#examples-2}
 
@@ -379,7 +377,7 @@ Depending on how long in the past, may return
 
 XSS に対する保護に役立つ、HTML要素コンテンツのソース文字列をエンコードするヘルパーです。
 
-注意：これはバリデーターではなく、属性値の書き込みには使用されません。
+注意：このヘルパーはバリデーターではなく、属性値の書き込みには使用されません。
 
 ### パラメーター {#parameters-9}
 
@@ -397,7 +395,7 @@ XSS に対する保護に役立つ、HTML要素コンテンツのソース文字
 
 XSS に対する保護に役立つ、HTML属性値に書き込むためのソース文字列をエンコードするヘルパーです。
 
-注意：これはバリデーターではなく、アクションにつながる属性（href、src、イベントハンドラー）の記述には使用できません。
+注意：このヘルパーはバリデーターではなく、アクションにつながる属性（href、src、イベントハンドラー）の記述には使用できません。
 
 ### パラメーター {#parameters-10}
 
@@ -415,7 +413,7 @@ XSS に対する保護に役立つ、HTML属性値に書き込むためのソー
 
 XSS に対する保護に役立つ、JavaScript の文字列コンテンツに書き込むためのソース文字列をエンコードするヘルパーです。
 
-注意：これはバリデーターではなく、任意の JavaScript への書き込みには使用されません。
+注意：このヘルパーはバリデーターではなく、任意の JavaScript への書き込みには使用しません。
 
 ### パラメーター {#parameters-11}
 
@@ -433,7 +431,7 @@ var input = {{xss-jsString topic-title}}
 
 XSS に対する保護に役立つ、HTMLhref または srce 属性値として書き込むための URL の不要部分を削除するヘルパーです。
 
-注意：空の文字列を返す場合があります
+注意：このヘルパーは、空の文字列を返す場合があります。
 
 ### パラメーター {#parameters-12}
 
@@ -450,7 +448,7 @@ XSS に対する保護に役立つ、HTMLhref または srce 属性値として�
 ## Handlebars.js の基本概要 {#handlebars-js-basic-overview}
 
 * Handlebars ヘルパー呼び出しは、単純な識別子 ( *名前* （ヘルパーの）の後に、0 個以上のスペースで区切られたパラメータが続きます。
-* パラメーターには、単純な文字列、数値、ブール値、JSON オブジェクトのほか、最後のパラメーターとしてキーと値のペア（ハッシュ引数）のオプションのシーケンスを指定できます。
+* パラメーターには、単純な文字列、数値、ブール値、JSON オブジェクトを指定でき、最後のパラメーターとしてキーと値のペア（ハッシュ引数）のオプションのシーケンスを指定できます。
 * ハッシュ引数のキーは、単純な識別子である必要があります。
 * ハッシュ引数の値は Handlebars 式です。単純な識別子、パス、または文字列。
 * 現在のコンテキスト `this`は、常に Handlebars ヘルパーで使用できます。
@@ -522,11 +520,11 @@ template(data);
 
 ## カスタム SCF ヘルパー {#custom-scf-helpers}
 
-カスタムヘルパーは、特にデータを渡す際に、サーバー側およびクライアント側で実装する必要があります。 SCF の場合、ページが要求されたときにサーバーが特定のコンポーネントのHTMLを生成するので、ほとんどのテンプレートはサーバー側でコンパイルおよびレンダリングされます。
+カスタムヘルパーは、特にデータを渡す際に、サーバー側とクライアント側に実装する必要があります。 SCF の場合、ページが要求されたときにサーバーが特定のコンポーネントのHTMLを生成するので、ほとんどのテンプレートはサーバー側でコンパイルおよびレンダリングされます。
 
 ### サーバー側カスタムヘルパー {#server-side-custom-helpers}
 
-カスタム SCF ヘルパーをサーバー側に実装して登録するには、Java インターフェイスを実装するだけです [TemplateHelper](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)、作成 [OSGi サービス](../../help/sites-developing/the-basics.md#osgi) OSGi バンドルの一部としてインストールします。
+サーバー側でカスタム SCF ヘルパーを実装して登録するには、Java™インターフェイスを実装するだけです [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html)、作成 [OSGi サービス](../../help/sites-developing/the-basics.md#osgi) OSGi バンドルの一部としてインストールします。
 
 次に例を示します。
 

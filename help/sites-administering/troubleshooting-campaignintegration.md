@@ -8,10 +8,10 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
 exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
-source-git-commit: 0d91e54fde32f2fafb9a616ed4e957e9590fff26
+source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 5%
+source-wordcount: '806'
+ht-degree: 2%
 
 ---
 
@@ -24,20 +24,20 @@ Adobe Campaign Classic(ACC) 統合に関する問題のトラブルシューテ�
 
 ## トラブルシューティングに関する一般的なヒント {#general-troubleshooting-tips}
 
-両方のソリューション (AEM / Adobe Campaign Classic、Adobe Campaign Classic / AEM) で HTTP 呼び出しが送受信されているかどうかを確認します。 これは、ファイアウォール/SSL の問題を回避するためです。
+両方のソリューション (AEM / Adobe Campaign Classic、Adobe Campaign Classic / AEM) で HTTP 呼び出しが送受信されているかどうかを確認します。 このヒントは、ファイアウォール/SSL の問題を回避するのに役立ちます。
 
-* AEM機能の場合は、AEMオーサーインターフェイスから JSON 呼び出しがリクエストされます
-   * HTTP-500 エラーは発生しません。
-   * HTTP 500 のエラーが発生した場合は、`error.log` で詳細を確認してください。
+* AEM機能の場合、AEMオーサーインターフェイスから JSON 呼び出しが要求されていることを確認できます
+   * これらの呼び出しでは、HTTP-500 エラーは発生しません。
+   * HTTP-500 エラーが表示された場合は、 `error.log` を参照してください。
 * AEMでキャンペーンクラスのデバッグレベルを上げると、問題のトラブルシューティングにも役立ちます。
 
 ## 接続に失敗した場合 {#when-the-connection-fails}
 
-設定済みの **aemserver** 演算子をAdobe Campaign Classicで使用します。
+設定済みの **`aemserver`** 演算子をAdobe Campaign Classicで使用します。
 
 ## 画像がAdobe Campaign Classicコンソールに表示されない場合 {#if-images-do-not-appear-in-the-adobe-campaign-console}
 
-HTMLソースを確認し、クライアントマシンから URL を開けることを検証します。 URL に `localhost:4503` この設定で、AEMオーサーインスタンス上の Day CQ Link Externalizer の設定を、Adobe Campaign Classicコンソールマシンからアクセスできるパブリッシュインスタンスを指すように変更します。
+HTMLソースを確認し、クライアントマシンから URL を開けることを検証します。 URL に `localhost:4503` この設定で、AEMオーサーインスタンス上の Day CQ Link Externalizer の設定を変更します。 Adobe Campaign Classicコンソールマシンから到達できるパブリッシュインスタンスを指すようにします。
 
 [Externalizer の設定](/help/sites-administering/campaignstandard.md#configuring-the-externalizer) を参照してください。
 
@@ -70,7 +70,7 @@ Adobe Campaign Classic用の Apache HTTPD サービスを開始すると、エ�
 
 ## スクリプト「get_nms_amcGetSeedMetaData_jssp」のコンパイル中にエラーが発生した場合 {#if-you-get-an-error-while-compiling-script-get-nms-amcgetseedmetadata-jssp}
 
-AEMログファイルに次のエラーメッセージが表示される場合。
+AEMログファイルに次のエラーメッセージが表示される場合：
 
 `com.day.cq.mcm.campaign.impl.CampaignConnectorImpl Internal Adobe Campaign error: response body is Error while compiling script 'get_nms_amcGetSeedMetaData_jssp' line 45: String.prototype.toJSON called on incompatible XML.`
 
@@ -86,7 +86,7 @@ Adobe Campaign Classicサーバーで次の回避策を使用します。
 
 クリック時に **同期** ボタンがAdobe Campaign Classicに表示される場合は、次のエラーが発生することがあります。
 
-* `Error while executing the method ‘aemListContent' of service [nms:delivery](https://nmsdelivery/)`
+* `Error while executing the method 'aemListContent' of service [nms:delivery](https://nmsdelivery/)`
 
 この問題を修正するには、AEM接続 URL が **外部アカウント** Adobe Campaign Classicでは、マシンからアクセスできます。
 
@@ -98,15 +98,15 @@ Adobe Campaign Classicサーバーで次の回避策を使用します。
 
 * `Cannot parse XTK Date+Time 'undefined': not a valid XTK value.`
 
-これは、AEMインスタンス上に古いAdobe Campaign Classic情報が存在する場合に発生します。 この問題を解決するには、次の方法があります。
+このエラーは、AEMインスタンス上に古いAdobe Campaign Classic情報がある場合に発生します。 この問題は、次の手順で解決できます。
 
-1. AEM上にあるすべてのAdobe Campaign Classic統合設定の削除
-1. 統合を再構築しています。
-1. 新しいテンプレートを作成します。
+1. AEM上にあるすべてのAdobe Campaign Classic統合設定を削除します。
+1. 統合を再構築します。
+1. テンプレートの作成.
 
 ## Cloud Serviceの設定時に SSL への接続でエラーが表示される場合 {#if-a-connection-to-ssl-displays-an-error-when-setting-up-the-cloud-service}
 
-次の情報がに表示された場合は、Adobe Campaignサポートチームとチケットを発行してください。 `error.log` AEM.
+次の情報がに表示された場合は、Adobe Campaignサポートチームにチケットを送信します。 `error.log` AEM.
 
 ```text
 javax.net.ssl.SSLProtocolException: handshake alert:  unrecognized_name
@@ -120,27 +120,27 @@ at sun.security.ssl.AppOutputStream.write(Unknown Source)
 
 ## 同期ダイアログに、期待される HTTPS リンクではなく HTTP リンクが表示される場合 {#if-you-see-http-instead-of-an-expected-https-links-in-the-synchronization-dialog}
 
-AEMは、Adobe Campaign Classic配信でコンテンツを同期しようとすると、ニュースレターのリストを返します。 ただし、リスト内のニュースレターへの URL は、HTTPS ではなく HTTP アドレスになる場合があります。 リスト内の項目の 1 つを選択すると、エラーが発生します。 これは、次の設定で発生する可能性があります。
+AEMは、Adobe Campaign Classic配信でコンテンツを同期しようとすると、ニュースレターのリストを返します。 ただし、リスト内のニュースレターへの URL は、HTTPS ではなく HTTP アドレスになる場合があります。 リスト内の項目の 1 つを選択すると、エラーが発生します。 このエラーは、次の設定で発生する可能性があります。
 
 * AEM オーサーとの通信に https を使用してホストされたAdobe Campaign
 * リバースプロキシが SSL を終了しています
 * オンプレミスの AEM オーサーインスタンス
 
-この問題を解決するには：
+この問題を解決するには、以下の手順を実行します。
 
 * 元のプロトコルをヘッダーとして渡すようにAEM Dispatcher またはリバースプロキシを設定する必要があります。
 * この **Apache Felix Http Service SSL Filter** AEMの OSGi 設定では、必要なヘッダー設定を使用して設定する必要があります。
    * `https://<host>:<port>/system/console/configMgr`
-   * [https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter](https://felix.apache.org/documentation/subprojects/apache-felix-http-service.html#using-the-ssl-filter) を参照
+   * 詳しくは、 [https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter](https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter)
 
 ## ページプロパティでカスタムテンプレートを選択することはできません {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 
-AEM for Adobe Campaign Classicでメールテンプレートを作成する場合は、プロパティを含める必要があります `acMapping` 値 `mapRecipient` 内 `jcr:content` 」ノードを選択しないと、Adobe Campaign Classicテンプレートを **ページプロパティ** AEM. フィールドは無効に表示されます。
+AEM for Adobe Campaign Classicでメールテンプレートを作成する場合は、プロパティを含める必要があります `acMapping` 値 `mapRecipient` 内 `jcr:content` ノードを設定します。 選択しない場合、はでAdobe Campaign Classicテンプレートを選択できません。 **ページプロパティ** AEM. フィールドが無効になっています。
 
 ## AEMログに「com.day.cq.mcm.campaign.servlets.util.ParameterMapper」というエラーが表示される場合 {#if-you-get-the-error-com-day-cq-mcm-campaign-servlets-util-parametermapper-in-your-logs}
 
 エラーが表示される場合があります `com.day.cq.mcm.campaign.servlets.util.ParameterMapper` (AEMで、カスタムテンプレートを使用する際に )
 
-これは、 `acMapping` プロパティが `recipient.firstName`を指定した場合、空の値がAdobe Campaign Manager で作成されます。
+このエラーは、 `acMapping` プロパティが `recipient.firstName`を指定した場合、空の値がAdobe Campaign Manager で作成されます。
 
-この場合は、次の URL からAEM用の機能パック 6576 をインストールします。 [パッケージ共有](/help/sites-administering/package-manager.md#package-share).
+このエラーが発生した場合は、次の場所からAEM用機能パック 6576 をインストールします。 [パッケージ共有](/help/sites-administering/package-manager.md#package-share).
