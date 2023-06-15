@@ -1,7 +1,7 @@
 ---
 title: Adobe Sign の AEM Forms への統合
 seo-title: Integrate Adobe Sign with AEM Forms
-description: AEM Forms 用に Adobe Sign を設定する方法
+description: Adobe Sign for AEM Formsの設定方法を説明します
 seo-description: Learn how to configure Adobe Sign for AEM Forms
 uuid: e5049775-fb6c-4228-9823-e6a2811460da
 contentOwner: sashanka
@@ -11,10 +11,10 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '1089'
-ht-degree: 100%
+source-git-commit: 9b792e8601ac52f92e8bc143e3d1e8c4eb7cd79c
+workflow-type: tm+mt
+source-wordcount: '2004'
+ht-degree: 62%
 
 ---
 
@@ -22,9 +22,15 @@ ht-degree: 100%
 
 [!DNL Adobe Sign] により、アダプティブフォームの電子サインワークフローを有効にできます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
-[!DNL Adobe Sign] とアダプティブフォームの一般的なシナリオでは、ユーザーがアダプティブフォームに入力して&#x200B;**サービスを申し込みます**。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームの入力、送信、署名を行うと、サービスプロバイダーにそのフォームが送信され、追加の処理が実行されます。サービスプロバイダーは受信した申込フォームを確認し、[!DNL Adobe Sign] を使用して申請を承認します。これに類似した電子サインワークフローを有効にするには、[!DNL Adobe Sign] を AEM [!DNL Forms] に統合します。
+[!DNL Adobe Acrobat Sign] とアダプティブフォームの一般的なシナリオでは、ユーザーがアダプティブフォームに入力してサービスを申し込みます。例えば、クレジットカードの申込フォームや住民サービスフォームなどです。ユーザーが申込フォームに入力、送信、署名すると、フォームがサービスプロバイダーに送信され、さらにアクションが実行されます。 サービスプロバイダーは受信した申込フォームを確認し、[!DNL Adobe Acrobat Sign] を使用して申請を承認します。AEM Formsは、Adobe Acrobat SignとAdobe Acrobat Sign Solutionsの両方の政府機関をサポートしています。 ライセンスと要件に応じて、次のいずれかのソリューションとAEM Formsを統合または接続できます。
 
-AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Services で [!DNL Adobe Sign] を設定します。
+* [AEM FormsとAdobe Acrobat Signの接続](#adobe-sign)
+* [AEM FormsをAdobe Acrobat Sign Solutionsと連携して政府機関向け](#adobe-acrobat-sign-for-government)
+
+## AEM FormsとAdobe Acrobat Signの接続 {#adobe-sign}
+
+接続するには **[!DNL AEM Forms]** と **[!DNL Adobe Acrobat Sign]**&#x200B;を設定し、前提条件の節に示すソフトウェアとアカウントを設定して、 AEM FormsオーサーインスタンスとパブリッシュインスタンスでAdobe Sign Cloud Serviceを設定します。
+
 
 ## 前提条件 {#prerequisites}
 
@@ -52,7 +58,8 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    >手順1〜4を実行して、新しい構成コンテナを作成し、コンテナで [!DNL Adobe Sign] 構成を作成するか、**ツール** ![ハンマー](assets/hammer.png)／**[!UICONTROL Cloud Services]**／**[!UICONTROL Adobe Sign]**&#x200B;で既存の `global` フォルダーを使用できます。新しい設定コンテナで設定を作成する場合、必ず&#x200B;**[!UICONTROL 設定コンテナ]**&#x200B;フィールドに値を入力する必要があります。
 
    >[!NOTE]
-   >Cloud Services 設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM [!DNL Forms] サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
+   >
+   Cloud Services 設定ページの URL が「**HTTPS**」で始まっていることを確認してください。「HTTPS」で始まっていない場合は、AEM [!DNL Forms] サーバーで [SSL を有効](/help/sites-administering/ssl-by-default.md)にしてください。
 
 1. 設定ページで「**[!UICONTROL 作成]**」をタップして、AEM [!DNL Forms] 内に [!DNL Adobe Sign] の設定を作成します。
 1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の&#x200B;**[!UICONTROL 名前]**&#x200B;を指定して「**[!UICONTROL 次へ]**」をタップします。必要に応じてタイトルを指定し、設定のサムネールを参照して選択することもできます。
@@ -73,7 +80,8 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    別の [!DNL Adobe Sign] 設定を Adobe Experience Manager の機能またはコンポーネント用に作成する場合は、すべての [!DNL Adobe Sign] クラウド設定が同じシャードをポイントしていることを確認してください。
 
    >[!NOTE]
-   >**Adobe Sign 設定を作成**&#x200B;ページを開いたままにします。 閉じないでください。 **クライアント ID** および&#x200B;**クライアント秘密鍵**&#x200B;は、以降の手順で説明するように、[!DNL Adobe Sign] アプリケーションの OAuth 設定を行った後に取得できます。
+   >
+   **Adobe Sign 設定を作成**&#x200B;ページを開いたままにします。 閉じないでください。 **クライアント ID** および&#x200B;**クライアント秘密鍵**&#x200B;は、以降の手順で説明するように、[!DNL Adobe Sign] アプリケーションの OAuth 設定を行った後に取得できます。
 
 
 1. 以下の手順に従って、[!DNL Adobe Sign] アプリケーションの OAuth 設定を指定します。
@@ -83,6 +91,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    1. **[!UICONTROL クライアント ID]** および&#x200B;**[!UICONTROL クライアント秘密鍵]**&#x200B;をメモ帳に追加します。
    1. 上記の手順でコピーした HTTPS URL を「**[!UICONTROL リダイレクト URL]**」ボックスに追加します。
    1. [!DNL Adobe Sign] アプリケーションに対して以下の OAuth 設定を有効にして、「**[!UICONTROL 保存]**」をクリックします。
+
    * aggrement_read
    * aggrement_write
    * aggrement_send
@@ -104,10 +113,11 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
 
    **na1** は、デフォルトのデータベースシャードを参照します。
 
-   データベースシャードの値を更新することができます。サーバーを再起動すると、データベースシャードの新しい値を使用することができます。
+   データベースシャードの値を更新することができます。データベースシャードの新しい値を使用できるように、サーバーを再起動します。
 
    >[!NOTE]
-   >オーサーインスタンスとパブリッシュインスタンスの設定が同じシャードを指していることを確認します。1 つの組織に対して複数の Adobe Sign 設定を作成する場合は、すべての設定で同じシャードが使用されていることを確認します。
+   >
+   オーサーインスタンスとパブリッシュインスタンスの設定が同じシャードを指していることを確認します。1 つの組織に対して複数の Adobe Sign 設定を作成する場合は、すべての設定で同じシャードが使用されていることを確認します。
 
 1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページに戻ります。「**[!UICONTROL 設定]**」タブで、「**クライアント ID**」（アプリケーション ID とも言われます）と「**クライアント秘密鍵**」の値を指定します。AEM Forms 用に作成した [Adobe Sign アプリケーションのクライアント ID とクライアント秘密鍵](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)を使用します。
 
@@ -125,6 +135,100 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
 
 これで [!DNL Adobe Sign] が AEM [!DNL Forms] に統合され、アダプティブフォームで使用できるようになりました。[アダプティブフォームで Adobe Sign サービスを使用する](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)には、上記のとおりアダプティブフォームのプロパティで作成した設定コンテナを指定します。
 
+## AEM FormsをAdobe Acrobat Sign Solutionsと連携して政府機関向け {#adobe-acrobat-sign-for-government}
+
+[!BADGE ベータ版ドキュメント]{type=Caution tooltip="黄色のステータス"}
+<span class="preview"> この節にはベータ版ドキュメントが含まれており、変更される可能性があります。</span>
+
+AEM FormsとAdobe Acrobat Sign Solutions for Government の接続は、複数の手順で構成されます。 以下が含まれます。
+
+* AEMインスタンスのリダイレクト URL の作成
+* リダイレクト URL とスコープをAdobe Sign Solutions for Government チームと共有する
+* Adobe Signチームからの資格情報の受信
+* 受け取った資格情報を使用してAEM FormsをAdobe Acrobat Sign Solutions for Government に接続します
+
+![](/help/forms/using/assets/adobe-acrobat-sign-govt-workflow.png)
+
+AEM Formsas a Cloud Serviceは、開発環境、ステージ環境、実稼動環境を提供します。 の開発環境とAdobe Acrobat Sign Solutions for Government を接続する方法を後で開始し、ステージ環境と実稼動環境を接続する方法について説明します。
+
+### 事前準備 {#prerequisites-for-adobe-sign-for-acrobat-sign-for-government}
+
+AEM FormsとAdobe Acrobat Sign Solution の接続を開始する前に、
+
+* 次を確認します。 [Adobe Acrobat Sign Solutions for Government](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#account-provisioning) アカウントがプロビジョニングされました。
+* AEM [!DNL Forms] サーバは [SSL が有効](/help/sites-administering/ssl-by-default.md) .
+* AEM [!DNL Forms] サーバーが使用しています [同一の暗号鍵](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed) オーサーインスタンスとパブリッシュインスタンスの場合。
+
+### AEM Formsas a Cloud ServiceとAdobe Acrobat Sign Solutions for Government {#connect-adobe-acrobat-sign-for-government}
+
+#### AEMインスタンスのリダイレクト URL の作成
+
+1. Formsas a Cloud Serviceのオーサーインスタンスで、に移動します。 **[!UICONTROL ツール]** ![ハンマー](assets/hammer.png) > **[!UICONTROL 一般]** > **[!UICONTROL 設定ブラウザー]**.
+1. **[!UICONTROL 設定ブラウザー]**&#x200B;ページで「**[!UICONTROL 作成]**」をタップします。
+1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログで、設定の&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、「**[!UICONTROL クラウド設定]**」を有効にして「**[!UICONTROL 作成]**」をタップします。これにより、Cloud Services 用の設定コンテナが作成されます。フォルダー名にスペースが含まれていないことを確認します。
+1. に移動します。 **[!UICONTROL ツール]** ![ハンマー](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** 前の手順で作成した設定コンテナを開きます。 アダプティブフォームを作成する際に、**[!UICONTROL 設定コンテナ]**&#x200B;フィールドにコンテナ名を指定します。
+1. 設定ページで「**[!UICONTROL 作成]**」をタップして、AEM Forms 内に [!DNL Adobe Acrobat Sign] の設定を作成します。
+1. 現在のブラウザーウィンドウの URL を、URL からメモ帳にコピーします。 この URL は `re-direct URL`. 次の節では、 `re-direct URL` および `Scopes` Adobe Signチームとリクエスト資格情報（クライアント ID とクライアント秘密鍵）を使用します。
+
+>
+>
+>
+* の使用 [トップレベル](https://en.wikipedia.org/wiki/Top-level_domain) ドメイン： `re-direct URL`. 例：`https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+* ローカル URL を `re-direct URL`. 例：`https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/SignConfig`
+> 
+
+
+#### リダイレクト URL とスコープをAdobe Signチームと共有し、資格情報を受け取る
+
+Adobe Acrobat Sign for Government Solutions チームには、 `re-direct URL` Adobe Acrobat Signアプリケーション（以下に示す）でAEM Formsと政府機関向けのAdobe Acrobat Sign Solutionsとの接続を可能にする資格情報（クライアント ID とクライアント秘密鍵）を生成するために有効にするスコープ。
+
+共有する `scopes` （以下に示す）および `re-direct URL` を作成し、前の節の最後の手順をAdobe Acrobat Sign for Government Solution 担当者 ([Adobe Professional Servicesチームメンバー](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#password)) をクリックします。
+
+**_スコープ_**
+
+* [!DNL aggrement_read]
+* [!DNL aggrement_write]
+* [!DNL aggrement_send]
+* [!DNL widget_read]
+* [!DNL widget_write]
+* [!DNL workflow_read]
+* [!DNL offline_access]
+
+担当者が資格情報を生成し、共有します。 次の節では、資格情報（クライアント ID とクライアントの秘密鍵）を使用して、AEM FormsをAdobe Acrobat Sign Solutionsと政府機関向けに接続します。
+
+#### 受け取った資格情報を使用してAEM FormsをAdobe Acrobat Sign Solutions for Government に接続します
+
+1. を開きます。 `re-direct URL` ブラウザーに表示されます。 を作成し、 `re-direct URL` の最後の段階で [AEMインスタンスでのリダイレクト URL の作成](#create-redirect-url) 」セクションに入力します。
+
+1. **[!UICONTROL Adobe Sign 設定を作成]**&#x200B;ページの「**[!UICONTROL 一般]**」タブで、設定の&#x200B;**[!UICONTROL 名前]**&#x200B;を指定して「**[!UICONTROL 次へ]**」をタップします。必要に応じて&#x200B;**[!UICONTROL タイトル]**&#x200B;を指定し、設定の&#x200B;**[!UICONTROL サムネ―ル]**&#x200B;を参照して選択することもできます。「**[!UICONTROL 次へ]**」をクリックします。
+
+1. 内 **[!UICONTROL 設定]** タブ **[!UICONTROL Adobe Sign設定を作成]** ページ、 **[!UICONTROL ソリューションを選択]** オプション、選択 [!DNL Adobe Acrobat Sign Solutions for Government].
+
+   ![Adobe Acrobat Sign Solutions for Government](/help/forms/using/assets/adobe-sign-for-govt.png)
+
+1. 内 **[!UICONTROL 電子メール]** 「 」フィールドで、Adobe Acrobat Sign Solutions for Government アカウントに関連付けられた電子メールアドレスを指定します。
+
+1. この **[!UICONTROL OAuth URL]** フィールドは、Adobe Signデータベースシャードを指定します。 「 」フィールドにはデフォルトの URL が入力されます。 URL は変更しないでください。
+
+1. Adobe Acrobat Signが政府機関向けのソリューション担当者 ([Adobe Professional Servicesチームメンバー]) を [**[!UICONTROL クライアント ID]** および **[!UICONTROL クライアント秘密鍵]**].
+
+1. を選択します。 **[!UICONTROL 添付ファイルに対してAdobe Acrobat Signを有効にする]** アダプティブフォームに添付されたファイルを、対応する [!DNL Adobe Acrobat Sign] ドキュメントが署名用に送信されました。
+
+1. 「**[!UICONTROL Adobe Sign に接続]**」をタップします。資格情報の入力画面が表示されたら、[!DNL Adobe Acrobat Sign] アプリケーションの作成時に使用したユーザー名とパスワードを入力します。`your developer account` へのアクセスを確認するメッセージが表示されたら、「**[!UICONTROL アクセスを許可]**」をクリックします。資格情報が正しく、[!DNL AEM Forms] が [!DNL Adobe Acrobat Sign] 開発者アカウントにアクセスできるようにした場合は、次のような成功メッセージが表示されます。
+
+   ![Adobe Acrobat Sign Cloud 設定成功](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
+
+   <!-- > When prompted for credentials, provide username and password of the account used while creating [!DNL Adobe Acrobat Sign] application. When asked to confirm access for `your developer account`, Click **[!UICONTROL Allow Access]**. -->
+
+1. 「**[!UICONTROL 作成]**」をタップして、 設定を作成します。
+1. AEM web コンソールを開きます。URL は `https://'[server]:[port]'/system/console/configMgr` です。
+1. **[!UICONTROL Forms 共通設定サービス]を開きます。**
+1. 「**[!UICONTROL 許可]**」フィールドで、「すべてのユーザー - すべてのユーザーに（匿名かログインしているかによらず）添付ファイルのプレビューとフォームの検証と署名を許可」を&#x200B;**選択**&#x200B;して「**[!UICONTROL 保存]」をクリックします。**&#x200B;オーサーインスタンスが [!DNL Adobe Sign] を使用するように設定されます。
+
+1. 設定を公開します。
+1. [レプリケーション](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=ja)を使用して、対応する公開インスタンスに同一の構成を作成します。
+
+次に、以下を実行できます。 [アダプティブフォームでのAdobe Acrobat Signフィールドの追加を使用します。](working-with-adobe-sign.md) または [AEM Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). Cloud Service設定に使用する設定コンテナを、有効になっているすべてのアダプティブFormsに追加してください。 [!DNL Adobe Acrobat Sign]. 設定コンテナは、アダプティブフォームのプロパティから指定できます。
 
 
 ## [!DNL Adobe Sign] スケジューラーを設定して署名ステータスを同期する {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
@@ -136,7 +240,7 @@ AEM [!DNL Forms] で [!DNL Adobe Sign] を使用するには、AEM Cloud Service
    ブラウザーウィンドウで、以下の URL に移動することもできます。
    `https://[localhost]:'port'/system/console/configMgr`
 
-1. 「**[!UICONTROL Adobe Sign 設定サービス]**」オプションを探して選択します。「[ステータス更新スケジューラーの式](https://en.wikipedia.org/wiki/Cron#CRON_expression)」フィールドで **[!UICONTROL Cron 式]**&#x200B;を指定して「**[!UICONTROL 保存]**」をクリックします。例えば、毎日午前 0 時に設定サービスを実行するには、**[!UICONTROL ステータス更新スケジューラー式]**&#x200B;フィールドに `0 0 0 1/1 * ? *` を指定します。
+1. を探して開きます。 **[!UICONTROL Adobe Sign Configuration Service]** オプション。 を指定します。 [cron 式](https://en.wikipedia.org/wiki/Cron#CRON_expression) 内 **[!UICONTROL ステータス更新スケジューラの式]** フィールドとクリック **[!UICONTROL 保存]**. 例えば、毎日午前 0 時に設定サービスを実行するには、**[!UICONTROL ステータス更新スケジューラー式]**&#x200B;フィールドに `0 0 0 1/1 * ? *` を指定します。
 
 これで、[!DNL Adobe Sign] のステータスを同期するデフォルトの間隔が変更されました。
 
