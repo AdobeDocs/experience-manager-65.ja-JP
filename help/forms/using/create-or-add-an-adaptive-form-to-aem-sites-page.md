@@ -2,19 +2,15 @@
 title: アダプティブフォームを作成するか、AEM Sitesページに追加する
 description: アダプティブフォームを容易に作成したり、シームレスにAEM Sitesページに追加したりする方法を学びます。 動的でカスタマイズ可能なフォームを Web サイトに統合し、デジタルエクスペリエンスを最適化して最大限の効果を得るための、順を追った手法とベストプラクティスについて説明します。
 feature: Adaptive Forms
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2862'
 ht-degree: 1%
 
 ---
 
 
 # アダプティブフォームを作成するか、AEM Sitesページに追加する {#create-or-add-an-adaptive-form-to-aem-sites-page}
-
-[!BADGE リリース前のドキュメント]{type=Caution tooltip="黄色のステータス"}
-
-<span class="preview"> これはリリース前のドキュメントで、変更される可能性があります。</span>
 
 AEM Formsを使用すれば、アダプティブフォームを Web ページにシームレスに組み込むことができます。 これにより、訪問者は、ページを離れることなく、フォームに簡単に入力して送信できます。 これにより、Web サイト上の他の要素とのやり取りを容易に行いながら、フォームを積極的に操作することができます。
 
@@ -236,8 +232,6 @@ Sites ページでアダプティブフォームを作成するには：
 1. アダプティブフォームコンテナのプロパティをクリックします。 ![アダプティブフォームコンテナのプロパティ](/help/forms/using/assets/configure-icon.svg) アイコン データモデルを設定するためのアダプティブフォームコンテナダイアログボックスが開きます。
    ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. フォームデータモデルを選択. を開きます。 **[!UICONTROL 基本]** タブをクリックします。 事前入力サービスで、「 」を選択します。 **[!UICONTROL Forms Portal Draft Prefill Service]**.
-
-
 1. 「**[!UICONTROL 完了]**」をクリックします。
 
 ## フォームの送信時または「ありがとうございます」メッセージの表示時に、ユーザーを新しいユーザーにリダイレクトします

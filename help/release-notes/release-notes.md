@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 36edc2507d9acd7d5f94e433a654ccc1647bb58a
+source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
 workflow-type: tm+mt
-source-wordcount: '3568'
-ht-degree: 30%
+source-wordcount: '3738'
+ht-degree: 28%
 
 ---
 
@@ -45,14 +45,20 @@ ht-degree: 30%
    * バージョンを作成します。
    * アセットの関連付けまたは関連付け解除
 
-   これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
+  これらの操作を実行する場合、アセットの場所に移動してアセットのプロパティを表示する必要はありません。
 * **Dynamic Media _スナップショット_**— テスト画像やDynamic Media URL を試して、様々な画像修飾子の出力を確認し、スマートイメージングを最適化してファイルサイズ（WebP および AVIF 配信を使用）、ネットワーク帯域幅、デバイスピクセル比を確認します。 詳しくは、 [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 * **Dynamic Mediaでの DASH ストリーミング** - Dynamic Mediaビデオ配信（CMAF を有効にした場合）でアダプティブストリーミングが開始される新しいプロトコル (DASH - Dynamic Adaptive Streaming over HTTP) のサポート。 すべての地域で利用可能 [サポートチケットを通じて有効化される](/help/assets/video.md#enable-dash-on-your-account-enable-dash).
 * **Experience Manager Sitesおよびコンテンツフラグメントと Assets の次世代Dynamic Mediaの統合** - Experience Manager Assetsas a Cloud Serviceの次世代Dynamic Mediaのユーザーは、これらのクラウドホストアセットを、Experience Manager Sites 6.5 のオンプレミスインスタンスまたはManaged Servicesインスタンスでのオーサリングと配信に使用できるようになりました。
-* **Experience Manager SitesページでのアダプティブFormsの統合**:Experience Manager Sitesエディター内でアダプティブFormsコンポーネントを使用し、次の機能を使用して、デジタル登録エクスペリエンスをシームレスに作成します。 — アダプティブFormsコンテナとアダプティブForms — 埋め込み (v2) コンポーネント。
-* **Experience Manager Formsでの reCAPTCHA Enterprise のサポート**:Experience Manager Formsでの reCAPTCHA Enterprise のサポートを追加し、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
-* **Adobe Acrobat Sign for Government with Experience Manager Formsのサポート**:Experience Manager FormsとAdobe Signの安全で準拠した統合（FedRAMP 準拠）を実現
-* **データ交換用にExperience Manager Formsと Salesforce の統合を有効化**:OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Formsと Salesforce アプリケーションの統合を設定します。 この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーの関与なくシームレスな通信が可能になります。
+
+**AEM Forms**
+
+* **[AEM Page Editor 内のアダプティブForms](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)**:AEMページエディターを使用して、複数のフォームをすばやく作成し、サイトページに追加できるようになりました。 この機能を使用すると、コンテンツ作成者は、動的な動作、検証、データ統合、レコードのドキュメントの生成、ビジネスプロセスの自動化など、アダプティブフォームコンポーネントの機能を利用して、Sites ページ内にシームレスなデータ取得エクスペリエンスを作成できます。 以下の操作を実行できます。
+   * フォームコンポーネントをAEM SitesエディターまたはエクスペリエンスフラグメントのアダプティブFormsコンテナコンポーネントにドラッグ&amp;ドロップして、アダプティブフォームを作成します。
+   * AEM Sitesエディター内でアダプティブFormsウィザードを使用すると、任意の Sites ページとは独立したフォームを作成して、自由に複数のページでそのようなフォームを再利用できます。
+   * 複数のフォームを Sites ページに追加し、ユーザーエクスペリエンスを合理化し、より柔軟に提供します。
+* **[Experience Manager Formsでの reCAPTCHA Enterprise のサポート](/help/forms/using/captcha-adaptive-forms.md)**:Experience Manager Formsでの reCAPTCHA Enterprise のサポートを追加し、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
+* **[Adobe Acrobat Sign for Government with Experience Manager Formsのサポート](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**:AEM Formsは、Adobe Acrobat Sign for Government（FedRAMP 準拠）と統合されました。 この統合により、政府関連のアカウント（政府機関および機関）に対するアダプティブフォーム送信により、e-Signatures の高度なコンプライアンスとセキュリティを提供します。 Adobe Acrobat Sign for Government との統合により、Adobeのパートナーや政府のお客様は、Adaptive Formsで最もミッションクリティカルで機密性の高い業務の一部に電子署名を使用できます。 このセキュリティの強化により、すべての電子署名が FedRAMP Moderate コンプライアンスに完全に準拠し、Adobeの政府のお客様に安心して対応できます。
+* **[データ交換用にExperience Manager Formsと Salesforce の統合を有効化](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**:OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Formsと Salesforce アプリケーションの統合を設定します。 この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーの関与なくシームレスな通信が可能になります。
 * **ワークフローエンジンの最適化と機能強化**:ワークフローインスタンスの数を最小限に抑えて、ワークフローエンジンのパフォーマンスを向上させます。 に加えて `COMPLETED` および `RUNNING` ステータス値の場合、ワークフローは 3 つの新しいステータス値もサポートします。 `ABORTED`, `SUSPENDED`、および `FAILED`.
 
 
@@ -357,14 +363,14 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * GraphQLクエリでは、 `damAssetLucene` インデックス `fragments` 索引 このアクションを実行すると、GraphQLクエリが失敗するか、実行に時間がかかる場合があります。
 
-   問題を修正するには、 `damAssetLucene` は、次の 2 つのプロパティを含むように設定する必要があります。
+  問題を修正するには、 `damAssetLucene` は、次の 2 つのプロパティを含むように設定する必要があります。
 
    * `contentFragment`
    * `model`
 
-   インデックス定義を変更した後、インデックス再作成が必要です (`reindex` = `true`) をクリックします。
+  インデックス定義を変更した後、インデックス再作成が必要です (`reindex` = `true`) をクリックします。
 
-   これらの手順の後、GraphQLクエリの実行が高速化されます。
+  これらの手順の後、GraphQLクエリの実行が高速化されます。
 
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。
 
@@ -385,12 +391,12 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 * コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、バックグラウンドクエリが失敗したため、コンテンツフラグメント参照が取得される際に問題が発生します。 つまり、この機能は動作しません。
 正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。
 
-   ```xml
-   "tags": [
-       "visualSimilaritySearch"
-     ]
-   "refresh": true
-   ```
+  ```xml
+  "tags": [
+      "visualSimilaritySearch"
+    ]
+  "refresh": true
+  ```
 
 * JBoss® 7.1.4 プラットフォームで、Experience Manager6.5.16.0以降の Service Pack をインストールすると、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
 * 1.8.0_281 より高い JDK バージョンは、WebLogic JEE サーバーではサポートされていません。
@@ -414,4 +420,3 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
 >* [アドビ製品アップデートの優先通知に登録する](https://www.adobe.com/subscription/priority-product-update.html)
-
