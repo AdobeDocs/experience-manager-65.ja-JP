@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: f0ffa552bd4a5b8b20a58aed7847c4de07acc4f4
+source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3870'
 ht-degree: 99%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 99%
 + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
    + [アダプティブフォームの操作のベストプラクティス](using/adaptive-forms-best-practices.md)
    + [アダプティブフォームの作成](using/creating-adaptive-form.md)
+   + [アダプティブフォームを作成するか、AEM Sitesページに追加する](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
    + [アダプティブフォームフラグメント](using/adaptive-form-fragments.md)
    + [送信アクションの設定](using/configuring-submit-actions.md)
    + [アダプティブフォームの CAPTCHA の使用](using/captcha-adaptive-forms.md)
