@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
+source-git-commit: 4e6521f0d40fc10e016bf197d5b31033192e3214
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 52%
@@ -31,7 +31,7 @@ AEM Formsは、アダプティブフォームで CAPTCHA をサポートして�
 
 ## アダプティブForms向けにGoogleによる reCAPTCHA サービスを設定する {#google-reCAPTCHA}
 
-AEM Formsのユーザーは、Googleの reCAPTCHA サービスを使用して、アダプティブフォームに CAPTCHA を実装できます。 サイトを保護する高度な CAPTCHA 機能を提供します。 reCAPTCHA の仕組みについて詳しくは、 [Google reCAPTCHA](https://developers.google.com/reCAPTCHA/). reCAPTCHA v2 や reCAPTCHA Enterprise を含む reCAPTCHA サービスは、AEM Formsに統合されています。 reCAPTCHA サービスを設定して、以下を有効にすることができます。
+AEM Formsのユーザーは、Googleの reCAPTCHA サービスを使用して、アダプティブフォームに CAPTCHA を実装できます。 サイトを保護する高度な CAPTCHA 機能を提供します。 reCAPTCHA の仕組みについて詳しくは、 [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA v2 や reCAPTCHA Enterprise を含む reCAPTCHA サービスは、AEM Formsに統合されています。 reCAPTCHA サービスを設定して、以下を有効にすることができます。
 
 * [AEM Formsの reCAPTCHA Enterprise](#steps-to-implement-reCAPTCHA-enterprise-in-forms)
 * [AEM Formsの reCAPTCHA v2](#steps-to-implement-reCAPTCHA-v2-in-forms)
