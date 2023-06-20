@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1005'
 ht-degree: 2%
 
 ---
@@ -93,9 +93,9 @@ AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテン�
 
 ### PhoneGap Buildタイル {#the-phonegap-build-tile}
 
-この **PhoneGap Buildタイル** 接続先 [https://build.phonegap.com](https://build.phonegap.com) リモートビルドを構築し、ホストします。 ビルドが完了すると、ビルドはダウンロードとして、または QR コードを介して直接デバイスで利用できるようになります。
+この **PhoneGap Buildタイル** 接続先 `https://build.phonegap.com` リモートビルドを構築し、ホストします。 ビルドが完了すると、ビルドはダウンロードとして、または QR コードを介して直接デバイスで利用できるようになります。
 
-または、デバイスソースをダウンロードし、 [PhoneGap CLI](https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html).
+または、PhoneGap CLI (`https://docs.phonegap.com/en/3.5.0/guide_cli_index.md.html`) をクリックします。
 
 ![PhoneGap Buildタイル](assets/chlimage_1-140.png)
 

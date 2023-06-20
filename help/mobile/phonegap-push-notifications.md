@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3280'
 ht-degree: 1%
 
 ---
@@ -133,7 +133,6 @@ Amazon SNS を使用しない場合は、これらの手順をスキップでき
    1. 「セキュリティ資格情報」タブをクリックします。
    1. ここから、鍵が表示され、新しい鍵が作成されます。 後で使用するためにキーを保存します。
 
-
 1. **トピックの作成**
 
    1. クリック **トピックを作成** トピック名を選択します。 トピック ARN、トピック所有者、地域、表示名など、すべてのフィールドを記録します。
@@ -150,8 +149,8 @@ Amazon SNS を使用しない場合は、これらの手順をスキップでき
 
       1. APNS の場合、P12 ファイル、パスワード、証明書および秘密鍵をすべて入力する必要があります。 これらは、手順で取得されたはずです。 *Appleプッシュ通知サービス (APNS) の使用* 上
       1. GCM の場合、API キーを入力する必要があります。 これは、手順で取得されたはずです。 *Google Cloud Messaging(GCM) サービスの使用* 上
-   1. サポートするプラットフォームごとに、上記の手順を 1 回繰り返します。 iOSと Android の両方にプッシュできるようにするには、2 つの Platform アプリケーションを作成する必要があります。
 
+   1. サポートするプラットフォームごとに、上記の手順を 1 回繰り返します。 iOSと Android の両方にプッシュできるようにするには、2 つの Platform アプリケーションを作成する必要があります。
 
 1. **ID プールの作成**
 
@@ -178,7 +177,6 @@ Amazon SNS を使用しない場合は、これらの手順をスキップでき
     </table>
 
    1. クリック **ポリシーを適用**
-
 
 #### Pushwoosh メッセージングサービスの使用 {#using-the-pushwoosh-messaging-service}
 
@@ -275,9 +273,9 @@ PhoneGap を使用してアプリを構築してデプロイするには、2 つ
 
 **注意：** プッシュ通知のテストでは、エミュレーターで十分ではありません。プッシュ通知では、プッシュプロバイダー (AppleまたはGoogle) とデバイスの間で異なるプロトコルが使用されるからです。 現在のMac/PC ハードウェアおよびエミュレーターでは、この機能はサポートされていません。
 
-1. *PhoneGap Build* は、PhoneGap が提供するサービスで、サーバー上でアプリを構築し、デバイスに直接ダウンロードできるようにします。 詳しくは、 [PhoneGap Buildドキュメント](https://build.phonegap.com/) を参照して、PhoneGap Buildを設定および使用する方法を確認してください。
+1. *PhoneGap Build* は、PhoneGap が提供するサービスで、サーバー上でアプリを構築し、デバイスに直接ダウンロードできるようにします。 詳しくは、PhoneGap Buildドキュメント ( `https://build.phonegap.com/` を参照して、PhoneGap Buildを設定および使用する方法を確認してください。
 
-1. *PhoneGap コマンドラインインターフェイス* (CLI) コマンドラインで豊富な PhoneGap コマンドセットを使用して、アプリのビルド、デバッグ、デプロイをおこなうことができます。 詳しくは、 [PhoneGap 開発者向けドキュメント](https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface) を参照して、PhoneGap CLI を設定して使用する方法を確認してください。
+1. *PhoneGap コマンドラインインターフェイス* (CLI) コマンドラインで豊富な PhoneGap コマンドセットを使用して、アプリのビルド、デバッグ、デプロイをおこなうことができます。 PhoneGap 開発者向けドキュメント (`https://docs.phonegap.com/en/edge/guide_cli_index.md.html#The%20Command-Line%20Interface`) を参照して、PhoneGap CLI を設定して使用する方法を確認してください。
 
 ### 手順 7:プッシュ通知の送信 {#step-send-a-push-notification}
 

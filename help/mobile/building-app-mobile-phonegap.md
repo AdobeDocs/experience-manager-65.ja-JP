@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1022'
 ht-degree: 3%
 
 ---
@@ -59,7 +59,7 @@ PhoneGap コマンドラインインターフェイス (CLI) を使用して、�
 
 PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クライアントユーティリティをインストールする必要があります。 次の手順を実行するには、インターネット接続が必要です。
 
-1. ダウンロードとインストール [Node.js](https://nodejs.org/).
+1. ダウンロードとインストール [Node.js](https://nodejs.org/ja/).
 1. ターミナルまたはコマンドプロンプトを開き、次のノードコマンドを入力して PhoneGap ユーティリティをインストールします。
 
    ```shell
@@ -112,7 +112,7 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
 
 ### PhoneGap CLI を使用したビルド {#using-the-phonegap-cli-to-build}
 
-PhoneGap CLI を使用して、アプリケーションをコンパイルしてインストールします。 PhoneGap CLI の使用方法について詳しくは、 PhoneGap [コマンドラインインターフェイス](https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html) ドキュメント。
+PhoneGap CLI を使用して、アプリケーションをコンパイルしてインストールします。 PhoneGap CLI の使用方法について詳しくは、 PhoneGap コマンドラインインターフェイス (`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`) ドキュメントを参照してください。
 
 1. ターミナルまたはコマンドプロンプトを開き、現在のディレクトリをダウンロードしたアプリケーションの ZIP ファイルに変更します。 例えば、次の例では、ディレクトリが ng-app-cli.1392137825303.zip ファイルに変更されます。
 
@@ -162,7 +162,7 @@ AEM内でPhoneGap Buildサービスを使用できるようにPhoneGap Build設�
 
    **注意：** ビルドが正常に完了した場合、AEM Beta バージョンではインボックス通知が作成されません。
 
-1. 成功ダイアログボックスで、「PhoneGap Build」をクリックしてAdobe PhoneGap Buildページを開きます。 [https://build.phonegap.com/apps](https://build.phonegap.com/apps). アプリが表示されるのを待っている場合は、 [PhoneGap Buildステータス](https://status.build.phonegap.com/) ページ。
+1. 成功ダイアログボックスで、「PhoneGap Build」をクリックしてAdobe PhoneGap Buildページを開きます。 `https://build.phonegap.com/apps`. アプリが表示されるのを待っている場合は、次の場所でPhoneGap Buildステータスを確認できます： `https://status.build.phonegap.com/`.
 
    ビルドのインストールについて詳しくは、 [PhoneGap Build文書](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 

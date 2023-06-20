@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '656'
 ht-degree: 4%
 
 ---
@@ -27,17 +27,17 @@ ht-degree: 4%
 
 ## Bootstrap環境 {#bootstrap-your-development-environment}
 
-[PhoneGap CLI の設定](https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
+PhoneGap CLI の設定 (`https://docs.phonegap.com/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface`)
 
 iOSの場合：iPhone および iPad 向けの開発をおこなうには、Apple Xcode IDE を使用する必要があります。
 
 * 無料でダウンロードできます [ここ](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
-* [PhoneGap iOS platform ガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide)
+* PhoneGap iOSプラットフォームガイド (`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`)
 
 Android™の場合：iPhone や iPad 向けの開発を行うには、Googleの Android™ Stuido IDE が必要です。
 
 * 無料でダウンロードできます [ここ](https://developer.android.com/studio).
-* [PhoneGap Android™プラットフォームガイド](https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide)
+* PhoneGap Android™プラットフォームガイド (`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
 
 ## ソースのダウンロード {#download-the-source}
 
@@ -67,7 +67,7 @@ PhoneGap CLI は、プラットフォームプロジェクトの作成、ソー�
 
 >[!NOTE]
 >
->これらの手順はすべて個別に実行できます。詳しくは、 [PhoneGap CLI ドキュメント](https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/).
+>これらの手順はすべて個別に実行できます。 PhoneGap CLI のドキュメント (`https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/`) をクリックします。
 
 1. PhoneGap CLI をインストール済みであることを確認します。上記を参照してください。
 1. コンソール（またはターミナル）ウィンドウで、抽出したソースのルートディレクトリに移動します。

@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: cfc7ad16-965e-4075-bc4d-5630abeaba55
 exl-id: 397def36-45b2-47a7-b103-99ca22b6dae1
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ angularページの本文は、wcmMode が検出されたか (!= WCMMode.DISABLE
 
 オーサーモードでは、各ページが個別にレンダリングされます。 Angularは、ページ間のルーティングを処理しないほか、ページのコンポーネントを含む部分的なテンプレートの読み込みに使用される ng-view も使用しません。 代わりに、ページテンプレート (template.jsp) のコンテンツは、 `cq:include` タグを使用します。
 
-この方法では、作成者の機能（段落システム、サイドキック、デザインモードなどでのコンポーネントの追加や編集など）を を呼び出し、変更せずに関数を呼び出す。 アプリ用のページなど、クライアント側のレンダリングに依存するページは、AEMオーサーモードでは正常に動作しません。
+この方法では、作成者の機能 ( 段落システム、Sidekick、デザインモードなどでのコンポーネントの追加や編集など ) を を呼び出し、変更せずに関数を呼び出す。 アプリ用のページなど、クライアント側のレンダリングに依存するページは、AEMオーサーモードでは正常に動作しません。
 
 template.jsp インクルードは `div` 要素 `ng-controller` ディレクティブ。 この構造により、DOM コンテンツをコントローラーにリンクできます。 したがって、クライアント側でレンダリングされるページは失敗しますが、個々のコンポーネントは正常に機能します（以下のコンポーネントの節を参照）。
 
@@ -369,7 +369,7 @@ www ディレクトリには、アプリの外観と動作を実装するすべ�
 
 #### www/config.xml {#www-config-xml}
 
-この [PhoneGap ドキュメント](https://docs.phonegap.com) は、このファイルを「グローバル設定ファイル」として参照します。 config.xml には、アプリの名前、アプリの「環境設定」( 例えば、iOS Web ビューでオーバースクロールが可能かどうか )、および次のようなプラグインの依存関係が含まれます。 *のみ* PhoneGap Build で使用されます。
+PhoneGap ドキュメント (`https://docs.phonegap.com`) は、このファイルを「グローバル設定ファイル」と呼びます。 config.xml には、アプリの名前、アプリの「環境設定」( 例えば、iOS Web ビューでオーバースクロールが可能かどうか )、および次のようなプラグインの依存関係が含まれます。 *のみ* PhoneGap Build で使用されます。
 
 config.xml ファイルはAEMの静的ファイルで、コンテンツ同期を介してそのまま書き出されます。
 
@@ -381,7 +381,7 @@ config.xml ファイルには `content` 要素：
 
 `<content src="content/phonegap/geometrixx/apps/ng-geometrixx-outdoors/en.html" />`
 
-In [PhoneGap ドキュメント](https://docs.phonegap.com)の場合、この要素は、「 &lt;content> 要素は、トップレベルの web assets ディレクトリにアプリの開始ページを定義します。 デフォルト値は index.html で、これは通常、プロジェクトの最上位の www ディレクトリに表示されます。
+PhoneGap ドキュメント (`https://docs.phonegap.com`) の場合、この要素は「 &lt;content> 要素は、トップレベルの web assets ディレクトリにアプリの開始ページを定義します。 デフォルト値は index.html で、これは通常、プロジェクトの最上位の www ディレクトリに表示されます。
 
 index.html ファイルが存在しない場合、PhoneGap Build は失敗します。 したがって、このファイルが含まれます。
 
