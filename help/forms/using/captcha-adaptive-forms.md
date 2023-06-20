@@ -11,7 +11,7 @@ discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 feature: Adaptive Forms
 exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
-source-git-commit: 4e6521f0d40fc10e016bf197d5b31033192e3214
+source-git-commit: 031c683029c61f8f49c07d276c27e05b3fcfd5fc
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 52%
@@ -40,9 +40,9 @@ AEM Formsのユーザーは、Googleの reCAPTCHA サービスを使用して、
 
 ### reCAPTCHA Enterprise の設定  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. の作成 [reCAPTCHA Enterprise プロジェクト](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 有効 [reCAPTCHA Enterprise API](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-reCAPTCHA-enterprise-api).
+1. の作成 [reCAPTCHA Enterprise プロジェクト](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 有効 [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
 1. [取得](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) プロジェクト ID。
-1. の作成 [API キー](https://cloud.google.com/reCAPTCHA-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) および [web サイトのサイトキー](https://cloud.google.com/reCAPTCHA-enterprise/docs/create-key#create-key).
+1. の作成 [API キー](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) および [web サイトのサイトキー](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
 1. クラウドサービスの設定コンテナを作成します。
 
    1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
@@ -60,7 +60,7 @@ AEM Formsのユーザーは、Googleの reCAPTCHA サービスを使用して、
    1. タップ **[!UICONTROL reCAPTCHA]**. 設定ページが開きます。 前の手順で作成した設定コンテナを選択し、をタップします。 **[!UICONTROL 作成]**.
    1. 「バージョン」として「 reCAPTCHA Enterprise 」を選択し、「名前」を指定します。reCAPTCHA Enterprise サービスのプロジェクト ID、サイトキー、API キー（手順 2 および 3 で取得）。
    1. キーのタイプを選択します。キーのタイプは、例えば、Google Cloud プロジェクトで設定したサイトキーと同じにする必要があります。 **チェックボックスサイトキー** または **スコアベースのサイトキー**.
-   1. 0 ～ 1 の範囲でしきい値スコアを指定します ([クリックしてスコアの詳細を知る](https://cloud.google.com/reCAPTCHA-enterprise/docs/interpret-assessment#interpret_scores)) をクリックします。 スコアがしきい値以上になると、人間のインタラクションを識別し、それ以外の場合はボットのインタラクションを考慮します。
+   1. 0 ～ 1 の範囲でしきい値スコアを指定します ([クリックしてスコアの詳細を知る](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)) をクリックします。 スコアがしきい値以上になると、人間のインタラクションを識別し、それ以外の場合はボットのインタラクションを考慮します。
 
       > 注意：
       >
@@ -77,7 +77,7 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 ## Google reCAPTCHA v2 の設定 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
-1. 取得 [reCAPTCHA API キーペア](https://www.google.com/reCAPTCHA/admin) Googleから これには、 **サイトキー** および **秘密鍵**.
+1. 取得 [reCAPTCHA API キーペア](https://www.google.com/recaptcha/admin) Googleから これには、 **サイトキー** および **秘密鍵**.
 1. クラウドサービスの設定コンテナを作成します。
    1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
