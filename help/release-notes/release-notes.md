@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 8f2c8964c2a6c2f0fcb446b7bca1f8cb822906f7
+source-git-commit: 1077aeabacb1dbb489dbc7222c45da0a35b8cf16
 workflow-type: tm+mt
-source-wordcount: '3738'
+source-wordcount: '3777'
 ht-degree: 28%
 
 ---
@@ -400,6 +400,7 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * JBoss® 7.1.4 プラットフォームで、Experience Manager6.5.16.0以降の Service Pack をインストールすると、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
 * 1.8.0_281 より高い JDK バージョンは、WebLogic JEE サーバーではサポートされていません。
+* AEM 6.5.15 以降、 ```org.apache.servicemix.bundles.rhino``` バンドルには新しい巻上げ動作があります。 strict モード (```use strict;```) では、変数を正しく宣言する必要があります。そうしないと、実行されず、代わりにランタイムエラーが発生します。
 
 ## 含まれている OSGi バンドルとコンテンツパッケージ{#osgi-bundles-and-content-packages-included}
 
