@@ -3,9 +3,9 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 1077aeabacb1dbb489dbc7222c45da0a35b8cf16
+source-git-commit: fa8ddf107e2cf19b4d162501a5fbb21cf48b8e66
 workflow-type: tm+mt
-source-wordcount: '3777'
+source-wordcount: '3798'
 ht-degree: 28%
 
 ---
@@ -145,6 +145,7 @@ ht-degree: 28%
 * ユーザーがExperience Manager Forms 6.5.16.0 Service Pack を更新し、 `LicenseType` から `Production`の場合、変更は反映されません。 (FORMS-7594)
 * ユーザーが、 `Chinese Full Width Characters`を含めている場合、 `ValidateForm` プロセス。 (FORMS-7464)
 * Experience Manager Forms Designer では、XMLFM は XDP ベースのテンプレート用に、レター、A4、A5 など、様々な用紙サイズで ZPL 出力を生成します。 (FORMS-7898)
+* ブラウザーの制限により、Experience Manager Forms 6.5.14.0では、194 個のフォームフィールドの後、フォームの自動入力オプションが機能しません。 (FORMS-9426)
 
 ## 統合{#integrations-6517}
 
