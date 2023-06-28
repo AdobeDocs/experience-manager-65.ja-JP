@@ -5,10 +5,10 @@ role: Admin
 feature: Integrations
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=ja) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-connector-install.html?lang=en) |
 | AEM 6.5 | この記事 |
 
 [!DNL Adobe Experience Manager] の管理者アクセス権を持つユーザーが拡張コネクタをインストールします。インストールする前に、プラットフォームのサポートとその他の[コネクタの前提条件](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience)を確認してください。
@@ -31,12 +31,11 @@ ht-degree: 100%
 >
 >* 詳しくは、[Workfront for Experience Manager Assets 拡張コネクタに関するパートナー認定試験](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)を参照してください。試験について詳しくは、[試験ガイド](https://express.adobe.com/page/Tc7Mq6zLbPFy8/)を参照してください。
 
-
 コネクタをインストールするには、次の手順に従います。
 
 1. [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)からコネクタをダウンロードします。
 1. [ファイアウォールを設定します](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html)。
-1. Dispatcher で、`authorization`、`username` および `apikey` という HTTP ヘッダーを許可します。`/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
+1. Dispatcher で、という名前の HTTP ヘッダーを許可します。 `authorization`, `username`、および `apikey`. `/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
 1. [!DNL Experience Manager] リポジトリに次のパスが存在しないことを確認します。
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`

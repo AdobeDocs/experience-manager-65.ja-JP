@@ -5,10 +5,10 @@ role: Admin
 feature: Integrations
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 39930967e2f423b7fbbc79bcb85f78d15809e97d
 workflow-type: tm+mt
 source-wordcount: '1737'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=ja) |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets-view/integrations/workfront-connector-configure.html?lang=en) |
 | AEM 6.5 | この記事 |
 
 [!DNL Adobe Experience Manager] で管理者アクセス権を持つユーザーは拡張コネクタをインストール後に設定します。インストール手順については、[コネクタのインストール](/help/assets/workfront-integrations.md)を参照してください。
@@ -30,7 +30,6 @@ ht-degree: 100%
 >* アドビでは、拡張コネクタバージョン 1.7.4 以降をサポートしています。以前のプレリリースバージョンやカスタムバージョンはサポートされていません。拡張コネクタのバージョンを確認するには、[パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)の左側のパネルで使用可能な `digital.hoodoo` グループに移動します。
 >
 >* 詳しくは、[Workfront for Experience Manager Assets 拡張コネクタに関するパートナー認定試験](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)を参照してください。試験について詳しくは、[試験ガイド](https://express.adobe.com/page/Tc7Mq6zLbPFy8/)を参照してください。
-
 
 ## イベント購読の設定 {#event-subscriptions}
 
@@ -46,7 +45,7 @@ ht-degree: 100%
 * セクション 6 で作成した [!UICONTROL Workfront カスタム統合]を選択します。
 * 「[!UICONTROL Workfront イベント購読の有効化]」をクリック します。
 
-   ![イベント購読](/help/assets/assets/event-subs.png)
+  ![イベント購読](/help/assets/assets/event-subs.png)
 
 ## リンクされたフォルダーの設定 {#linked-folders}
 
