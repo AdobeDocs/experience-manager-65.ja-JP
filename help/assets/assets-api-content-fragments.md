@@ -2,9 +2,10 @@
 title: Assets HTTP API での Adobe Experience Manager コンテンツフラグメントのサポート
 description: AEM ヘッドレス配信機能の重要な部分である、Assets HTTP API でのコンテンツフラグメントのサポートについて学びます。
 feature: Content Fragments,Assets HTTP API
+role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 48131c5accfe73b83197bd581ed5a22bc4890a56
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 77%
@@ -76,7 +77,6 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 >
 >* `/api/assets` は `.model` セレクターを使用する&#x200B;**必要はありません**。
 >* `/content/path/to/page` は `.model` セレクターを使用する&#x200B;**必要があります**。
-
 
 実行する操作は HTTP メソッドで決まります。
 
@@ -155,7 +155,6 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 >* [CORS/AEMの説明](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=ja)
 >* [ビデオ — AEMを使用した CORS 向けの開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=ja)
 >
-
 
 特定の認証要件がある環境では、OAuth を推奨します。
 
@@ -335,49 +334,52 @@ Assets REST API は、フォルダーのプロパティへのアクセスを公�
 
 * **500**（内部サーバーエラー）
 
-   >[!NOTE]
-   >
-   >次の場合に返されます。
-   >
-   >* 特定のコードで識別できないエラーが発生した場合
-   >* 指定されたペイロードが無効な場合
+  >[!NOTE]
+  >
+  >次の場合に返されます。
+  >
+  >* 特定のコードで識別できないエラーが発生した場合
+  >* 指定されたペイロードが無効な場合
 
-
-   次に、このエラーステータスが返された場合の一般的なシナリオと、生成されるエラーメッセージ（等幅）を示します。
+  次に、このエラーステータスが返された場合の一般的なシナリオと、生成されるエラーメッセージ（等幅）を示します。
 
    * 親フォルダーが存在しない（`POST` でコンテンツフラグメントを作成する場合）
    * コンテンツフラグメントモデルが指定されていない（cq:model が見つからない）、読み取れない（パスが無効か権限の問題が原因）、または有効なフラグメントモデルがありません。
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
+
    * コンテンツフラグメントを作成できなかった（アクセス権限の問題が発生している可能性がある）。
 
       * `Could not create content fragment`
+
    * タイトルや説明を更新できなかった。
 
       * `Could not set value on content fragment`
+
    * メタデータを設定できなかった。
 
       * `Could not set metadata on content fragment`
+
    * コンテンツ要素が見つからなかったか更新できなかった
 
       * `Could not update content element`
       * `Could not update fragment data of element`
 
-   通常、詳細なエラーメッセージは次のように返されます。
+  通常、詳細なエラーメッセージは次のように返されます。
 
-   ```xml
-   {
-     "class": "core/response",
-     "properties": {
-       "path": "/api/assets/foo/bar/qux",
-       "location": "/api/assets/foo/bar/qux.json",
-       "parentLocation": "/api/assets/foo/bar.json",
-       "status.code": 500,
-       "status.message": "...{error message}.."
-     }
-   }
-   ```
+  ```xml
+  {
+    "class": "core/response",
+    "properties": {
+      "path": "/api/assets/foo/bar/qux",
+      "location": "/api/assets/foo/bar/qux.json",
+      "parentLocation": "/api/assets/foo/bar.json",
+      "status.code": 500,
+      "status.message": "...{error message}.."
+    }
+  }
+  ```
 
 ## API リファレンス {#api-reference}
 
