@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: 316b93575d9cbbc2c5a64bc5030b036a2ade5b92
+source-git-commit: d244fb50ad0f165d31bc51ee671b80bdd13c860e
 workflow-type: tm+mt
 source-wordcount: '3777'
 ht-degree: 28%
@@ -106,7 +106,7 @@ ht-degree: 28%
 
 ## [!DNL Commerce]{#commerce-6517}
 
-* 移動されたタグはガベージコレクションされますが、次の製品で参照されます： `/var`. （CQ-4351337）
+* 移動されたタグはガベージコレクションされますが、次の製品で参照されます： `/var`. (CQ-4351337)
 
 ## [!DNL Forms]{#forms-6517}
 
@@ -149,7 +149,7 @@ ht-degree: 28%
 
 ## 統合{#integrations-6517}
 
-* Adobe Target IMS 設定をレガシークラウド設定のユーザー資格情報に変換する場合、 `connectedWhen` プロパティは変更されません。 この問題により、すべての呼び出しが、設定がまだ IMS ベースであったかのように実行されます。 （CQ-4352810）
+* Adobe Target IMS 設定をレガシークラウド設定のユーザー資格情報に変換する場合、 `connectedWhen` プロパティは変更されません。 この問題により、すべての呼び出しが、設定がまだ IMS ベースであったかのように実行されます。 (CQ-4352810)
 * 追加中 `modifyProperties` ～への許可 `fd-cloudservice` Adobe Sign設定のシステムユーザー。 (FORMS-6164)
 * Adobe Targetと統合されたExperience Managerでは、AB テストアクティビティを作成すると、そのアクティビティに関連付けられたオーディエンスが Target と同期されません。 （NPR-40085）
 
@@ -249,7 +249,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 * `SegmentNotfound errors` クラスの閉じられていないリソースリゾルバーが原因で、実稼動オーサーインスタンスのログ内で発生する問題を修正しました。 `com.day.cq.workflow.impl.email.EMailNotificationServic`. （NPR-40187）
 * 閉じていない閉じた状態 `ResourceResolver` 例外がログに記録されています。 (ASSETS-22495)
 * 膨大な量のPSD/PDFが発生した場合にExperience Manager作成者がクラッシュする `DocumentAncestors` メタデータ属性がアップロードされます。 (ASSETS-22966)
-* クラスのセッションリーク `InboxSharingCache` と `user-reader-service`. （CQ-4352513）
+* クラスのセッションリーク `InboxSharingCache` と `user-reader-service`. (CQ-4352513)
 * 「ワークフローイニシエーター参加者選択」ステップで参加者ステップのユーザーとグループが一覧表示されると、不完全なユーザーとグループのリストが表示されます。 この問題は、あるグループが別のグループのメンバーでもあった場合に発生していました。 （NPR-40055）
 * ワークフローのパージが強化されました。 （NPR-40459）
 
@@ -373,6 +373,16 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
   これらの手順の後、GraphQLクエリの実行が高速化されます。
 
+* コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、バックグラウンドクエリが失敗したため、コンテンツフラグメント参照が取得される際に問題が発生します。 つまり、この機能は動作しません。
+正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。
+
+  ```xml
+  "tags": [
+      "visualSimilaritySearch"
+    ]
+  "refresh": true
+  ```
+
 * [!DNL Microsoft® Windows Server 2019] は [!DNL MySQL 5.7] および [!DNL JBoss® EAP 7.1] をサポートしていないので、[!DNL Microsoft® Windows Server 2019] は [!DNL Experience Manager Forms 6.5.10.0] の自動インストールをサポートしていません。
 
 * [!DNL Experience Manager] インスタンスを 6.5.0～6.5.4 から Java™ 11 の最新のサービスパックにアップグレードすると、`error.log` ファイルに `RRD4JReporter` 例外が表示されます。例外を停止するには、[!DNL Experience Manager] のインスタンスを再起動します。<!-- THIS BULLET POINT WAS UPDATED AS PER CQDOC-20021, JANUARY 23, 2023 -->
@@ -388,16 +398,6 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
    * `com.adobe.granite.maintenance.impl.TaskScheduler` - granite/operations/maintenance にメンテナンスウィンドウが見つかりません。
    * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
    * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]` : 登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
-
-* コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、バックグラウンドクエリが失敗したため、コンテンツフラグメント参照が取得される際に問題が発生します。 つまり、この機能は動作しません。
-正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。
-
-  ```xml
-  "tags": [
-      "visualSimilaritySearch"
-    ]
-  "refresh": true
-  ```
 
 * JBoss® 7.1.4 プラットフォームで、Experience Manager6.5.16.0以降の Service Pack をインストールすると、 `adobe-livecycle-jboss.ear` デプロイに失敗しました。
 * 1.8.0_281 より高い JDK バージョンは、WebLogic JEE サーバーではサポートされていません。
