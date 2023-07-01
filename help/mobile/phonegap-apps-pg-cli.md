@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: 4a034e15-3394-4be3-9e8e-bc894668946a
 exl-id: fbeceb70-b199-478b-907b-253ed212ff99
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '666'
 ht-degree: 4%
 
 ---
@@ -89,10 +89,10 @@ phonegap run ios
 >1. この新しいフォルダーに移動します（cd テスト）
 >1. 実行 `phonegap create helloWorld`
 >1. helloWorld(cd helloWorld) に移動します。
->1. 実行 `phonegap run android` ( 上記のように、android をiOSに置き換えます )。
->1. 新しく作成した PhoneGap アプリを実行するエミュレーターが開き、ネイティブへの JavaScript ブリッジが動作している場合は「デバイス準備完了」と表示されます。
+>1. 実行 `phonegap run android` ( または、上記のように Android™をiOSに置き換えます )。
+1. 新しく作成した PhoneGap アプリを実行するエミュレーターが開き、ネイティブへの JavaScript ブリッジが動作している場合は「デバイス準備完了」と表示されます。
 >
->このトラブルシューティングは、PhoneGap CLI 開発環境が正しく実行されていることを確認します。
+このトラブルシューティングは、PhoneGap CLI 開発環境が正しく実行されていることを確認します。
 
 ## Safari およびIOSデバッグでの JavaScript のデバッグ {#debug-javascripts-with-safari-and-ios-debug}
 
@@ -147,13 +147,13 @@ phonegap run <platform> --emulator
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-* コントロールボタンを使用して、メソッドの実行、ステップオーバー、ステップインおよびステップアウトを続行します。
+* コントロールボタンを使用して、メソッドの実行、上へ、下へ、および下へのステップアウトを続行します。
 
-![](do-not-localize/chlimage_1-4.png)
+![横の行に配置された、5 つの異なる機能するコントロールボタン。](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >
->変数の値を確認するには、現在のメソッドで、マウスにマウスポインターを置きます。
+変数の値を確認するには、現在のメソッドで、マウスにマウスポインターを置きます。
 
 ## 次の手順 {#the-next-steps}
 

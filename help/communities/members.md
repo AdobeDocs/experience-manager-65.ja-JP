@@ -1,8 +1,6 @@
 ---
 title: メンバーコンソールとグループ管理コンソール
-seo-title: Members & Groups Management Consoles
 description: メンバーおよびグループ管理コンソールにアクセスする方法
-seo-description: How to access Members and Groups Management consoles
 uuid: 2e93e861-a066-4189-91db-f8b784bc5aea
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '942'
 ht-degree: 5%
 
 ---
@@ -55,7 +53,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 の左側にあるサイドパネルアイコンを選択します。 `Members` ヘッダーを使用して、検索サイドパネルを開くかどうかを切り替えます。
 
-![](assets/leftpanel-icon.png)
+![検索サイドパネルのアイコン。](assets/leftpanel-icon.png)
 
 
 ![member-console2](assets/member-console2.png)
@@ -97,21 +95,21 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 * **[!UICONTROL パスワード]**
 
-   (*必須*) ログインパスワード。
+  (*必須*) ログインパスワード。
 
 * **[!UICONTROL パスワードの確認入力]**
 
-   (*必須*) 確認用のパスワードを再入力します。
+  (*必須*) 確認用のパスワードを再入力します。
 
 * **[!UICONTROL メンバーをサイトに追加]**
 
-   (*オプション*) メンバーをコミュニティサイトのメンバーグループに追加するには、既存のコミュニティサイトから選択します。
+  (*オプション*) 既存のコミュニティサイトから選択して、メンバーをコミュニティサイトのメンバーグループに追加します。
 
 * **[!UICONTROL メンバーをグループに追加]**
 
-   (*オプション*) 既存のメンバーグループから選択して、そのグループにメンバーを追加します。
+  (*オプション*) 既存のメンバーグループから選択して、そのグループにメンバーを追加します。
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ### 一般 — アカウント設定 {#general-account-settings}
 
@@ -122,17 +120,17 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
    * 禁止されていないメンバーはコミュニティサイトに完全にアクセスできます。
 
-   デフォルトは `Not Banned` です。
+  デフォルトは `Not Banned` です。
 
 * **[!UICONTROL 貢献度の制限]**
 
-   オンにすると、メンバーによるコンテンツの投稿機能は制限されます。
+  オンにすると、メンバーによるコンテンツの投稿機能は制限されます。
 デフォルトは、貢献度の制限の設定によって異なります。
 詳しくは、 [メンバー貢献度の制限](limits.md).
 
 * **[!UICONTROL パスワードを変更]**
 
-   既存のメンバーを変更する際に存在するリンク。 コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
+  既存のメンバーを変更する際に存在するリンク。 コミュニティ管理者がメンバーのパスワードをリセットする機能を提供します。
 
 ### 一般 — 写真 {#general-photo}
 
@@ -173,7 +171,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 ### 新しいグループを作成 {#create-new-group}
 
-選択 `Add Group` パブリッシュ環境でグループを作成する場合。
+選択 `Add Group` をクリックして、パブリッシュ環境でグループを作成します。
 
 ![group-console1](assets/group-console1.png)
 
@@ -181,25 +179,25 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 * **[!UICONTROL ID]**
 
-   (*必須*) グループの一意の ID。
+  (*必須*) グループの一意の ID。
 
-   *作成後は、ID を変更できません。*
+  *作成後は、ID を変更できません。*
 
 * **[!UICONTROL 名前]**
 
-   (*オプション*) グループの表示名。
+  (*オプション*) グループの表示名。
 
-   デフォルト値は ID です。
+  デフォルト値は ID です。
 
 * **[!UICONTROL 説明]**
 
-   (*オプション*) グループの目的と権限の説明。
+  (*オプション*) グループの目的と権限の説明。
 
 * **[!UICONTROL メンバーをグループに追加]**
 
-   (*オプション*) グループの最初のメンバーとして含めるパブリッシュ側のメンバーを選択します。
+  (*オプション*) グループの最初のメンバーとして含めるパブリッシュ側のメンバーを選択します。
 
-* 選択 **[!UICONTROL 保存]**
+* 「**[!UICONTROL 保存]**」を選択します
 
 ## 認証済み管理者 {#authorized-administrators}
 

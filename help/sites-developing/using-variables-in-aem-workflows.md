@@ -8,10 +8,10 @@ content-type: reference
 discoiquuid: bbb9936e-ecd2-44b3-b4ae-dd62a3160641
 docset: aem65
 exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '2048'
-ht-degree: 86%
+source-wordcount: '2096'
+ht-degree: 82%
 
 ---
 
@@ -62,7 +62,7 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
    * フォームデータモデル - フォームデータモデルのパスを指定します。
    * ArrayList - コレクションのサブタイプを指定します。
 
-1. 変数の説明（オプション）を指定し、![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) をタップして変更を保存します。変数は、左側のペインで使用可能なリストに表示されます。
+1. 変数の説明を任意で指定し、をタップします。 ![ボックス内にチェックマークが付く保存アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 変更を保存します。 変数は、左側のペインで使用可能なリストに表示されます。
 
 変数を作成する場合、次のプラクティスをお勧めします。
 
@@ -92,10 +92,10 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 変数間でマッピングを追加するには、次の手順を実行します。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「ステップ」アイコンをタップします。
-1. 次をドラッグ&amp;ドロップ： **変数を設定** ワークフローエディターにステップを移動し、ステップをタップして「 」を選択します。 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （設定）を参照してください。
+1. 次をドラッグ&amp;ドロップ： **変数を設定** ワークフローエディターにステップを移動し、ステップをタップして「 」を選択します。 ![レンチが示す設定アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (設定).
 1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
-1. より多くの変数をマッピングして、意味のある式を作成できるようにします。 「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png)」をタップして、変更内容を保存します。
+1. より多くの変数をマッピングして、意味のある式を作成できるようにします。 タップ ![ボックス内にチェックマークが付く保存アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 変更を保存します。
 
 ### 例 1：XML 変数をクエリして、文字列変数の値を設定 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
@@ -250,8 +250,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## 変数の編集 {#edit-a-variable}
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンをタップします。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
-1. 編集する変数名の横にある「![](https://helpx.adobe.com/content/dam/help/images/en/edit.png)（編集）」アイコンをタップします。
-1. 変数情報を編集し、「![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png)」をタップして変更を保存します。変数の「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドは編集できません。
+1. 次をタップします。 ![鉛筆記号で示される編集アイコン。](https://helpx.adobe.com/content/dam/help/images/en/edit.png) （編集）編集する変数名の横にあるアイコン。
+1. 変数情報を編集し、 ![チェックマークが付く保存アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 変更を保存します。 変数の「**[!UICONTROL 名前]**」フィールドと「**[!UICONTROL タイプ]**」フィールドは編集できません。
 
 ## 変数の削除 {#delete-a-variable}
 
@@ -261,4 +261,4 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンをタップします。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
 1. 削除する変数名の横にある削除アイコンをタップします。
-1. ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) をタップして、確認して変数を削除します。
+1. タップ ![チェックマーク記号で示される完了アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) をクリックして、変数を確定および削除します。

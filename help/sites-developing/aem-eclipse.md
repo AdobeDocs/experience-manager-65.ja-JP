@@ -1,8 +1,6 @@
 ---
 title: AEM Developer Tools for Eclipse
-seo-title: AEM Developer Tools for Eclipse
 description: AEM Developer Tools for Eclipse
-seo-description: null
 uuid: 566e49f2-6f28-4aa7-bfe0-b5f9675310bf
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +8,16 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: a2ae76a8-50b0-4e43-b791-ad3be25b8582
 exl-id: 00473769-c447-4966-a71e-117c669e0151
-source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 42%
+source-wordcount: '788'
+ht-degree: 57%
 
 ---
 
 # AEM Developer Tools for Eclipse {#aem-developer-tools-for-eclipse}
 
-![](do-not-localize/chlimage_1-9.png)
+![AEM Developer Tools for Eclipse 用の円形の画像モチーフ。](do-not-localize/chlimage_1-9.png)
 
 ## 概要 {#overview}
 
@@ -30,7 +28,7 @@ ht-degree: 42%
 * Eclipse Server Connector による AEM インスタンスとのシームレスな統合。
 * コンテンツと OSGI バンドルの同期。
 * コードのホットスワップ機能を備えたデバッグサポート。
-* 特定のプロジェクト作成ウィザードを使用したAEM Projects のシンプルなBootstrap。
+* 固有のプロジェクト作成ウィザードからの AEM プロジェクトの簡単なブートストラップ.
 * JCR プロパティの容易な編集。
 
 ## 要件 {#requirements}
@@ -40,7 +38,7 @@ AEM Developer Tools を使用する前に、以下の手順を実行します。
 * ダウンロードとインストール [Java™ EE 開発者向け Eclipse IDE](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers). AEM Developer Tools は現在、Eclipse Kepler 以降をサポートします。
 
 * AEM バージョン 5.6.1 以降で使用できます。
-* Eclipse のインストールを設定し、1 GB 以上のヒープメモリがあることを確認するには、 `eclipse.ini` 設定ファイル ( [Eclipse の FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
+* [Eclipse に関する FAQ](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F) の説明に従って、`eclipse.ini` 設定ファイルを編集し、ヒープメモリが 1 GB 以上になるように Eclipse を設定します。
 
 >[!NOTE]
 >
@@ -52,17 +50,17 @@ AEM Developer Tools を使用する前に、以下の手順を実行します。
 
 1. 次を参照： **AEM Developer Tools** ウェブサイト： `https://eclipse.adobe.com/aem/dev-tools/`.
 
-1. を **インストールリンク**.
+1. **インストール用リンク**&#x200B;をコピーします。
 
    または、インストールリンクを使用する代わりにアーカイブをダウンロードできます。 これにより、オフラインでのインストールが可能になりますが、自動更新通知が送信されなくなります。
 
-1. Eclipse で、 **ヘルプ** メニュー
-1. クリック **新しいソフトウェアのインストール**.
-1. クリック **追加…**.
+1. Eclipse で、**ヘルプ**&#x200B;メニューを開きます。
+1. 「**Install New Software**」をクリックします。
+1. 「**Add...**」をクリックします。
 1. In **名前** 「 AEM Developer Tools 」と入力します。
 1. 「**Location**」にインストール用 URL をコピーします。
 1. 「**OK**」をクリックします。
-1. 両方を選択 **AEM** および **Sling** プラグイン
+1. 「**AEM**」プラグインと「**Sling**」プラグインの両方をオンにします。
 1. 「**Next**」をクリックします。
 1. 「**次へ**」をクリックします。
 1. リンク契約に同意し、 **完了**.
@@ -82,11 +80,11 @@ AEM Development Tools for Eclipse には、AEMプロジェクトとインスタ�
 
 ## サンプルのマルチモジュールプロジェクト {#sample-multi-module-project}
 
-「AEM Developer Tools」には、Eclipse でのプロジェクト設定をすばやく習得できる、サンプルのマルチモジュールプロジェクトが含まれています。 また、AEMのいくつかの機能のベストプラクティスガイドとしても機能します。 プロジェクトのアーキタイプについて詳しくは、[こちら](https://github.com/adobe/aem-project-archetype)を参照してください。
+「AEM Developer Tools」には、Eclipse でのプロジェクト設定をすばやく習得できる、サンプルのマルチモジュールプロジェクトが含まれています。 また、AEM のいくつかの機能のベストプラクティスガイドとしても役立ちます。プロジェクトのアーキタイプについて詳しくは、[こちら](https://github.com/adobe/aem-project-archetype)を参照してください。
 
 サンプルプロジェクトを作成するには、次の手順を実行します。
 
-1. 内 **ファイル** > **新規** > **プロジェクト** メニュー、参照 **AEM** 「 」セクションで「 」を選択します。 **AEM Sample Multi-Module Project**.
+1. **File**／**New**／**Project**&#x200B;メニューで、「**AEM**」セクションを参照して、「**AEM Sample Multi-Module Project**」を選択します。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -153,12 +151,12 @@ AEM のデプロイメントに適したバージョンを追加してくださ�
 
 Apache Sling IDE tooling for Eclipse の公式 web サイトでは、次の有益な情報を参照できます。
 
-* この [**Eclipse 用 Apache Sling IDE ツール** ユーザーガイド](https://sling.apache.org/documentation/development/ide-tooling.html)このドキュメントでは、AEM開発ツールでサポートされる概念、サーバー統合、デプロイメント機能の概要を説明します。
+* [**Apache Sling IDE tooling for Eclipse** ユーザーガイド](https://sling.apache.org/documentation/development/ide-tooling.html)。このドキュメントでは、全体のコンセプト、AEM 開発ツールがサポートするサーバー統合およびデプロイメント機能について説明します。
 * [トラブルシューティング情報](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting)
 * [既知の問題リスト](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues)
 
 次の公式の [Eclipse](https://www.eclipse.org/) ドキュメントは、環境の設定に役立ちます。
 
-* [Eclipse 使用の手引き](https://www.eclipse.org/getting-started/)
+* [Eclipse 使用の手引き](https://eclipseide.org/getting-started/)
 * [Eclipse Luna ヘルプシステム](https://help.eclipse.org/latest/index.jsp)
 * [Maven 統合（m2eclipse）](https://www.eclipse.org/m2e/)

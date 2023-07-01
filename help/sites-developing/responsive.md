@@ -1,8 +1,6 @@
 ---
 title: Web ページのレスポンシブデザイン
-seo-title: Responsive design for web pages
-description: レスポンシブデザインを使用すると、同じページを複数のデバイスで、複数の向きで効果的に表示できます
-seo-description: With responsive design, the same pages can be effectively displayed on multiple devices in multiple orientations
+description: レスポンシブデザインでは、同じページを複数のデバイスで、複数の向きで効果的に表示できます。
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,9 +9,9 @@ content-type: reference
 discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
-source-git-commit: e05f6cd7cf17f4420176cf76f28cb469bcee4a0a
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '5336'
+source-wordcount: '5375'
 ht-degree: 44%
 
 ---
@@ -23,6 +21,7 @@ ht-degree: 44%
 >[!NOTE]
 >
 >単一ページアプリケーションフレームワークにもとづくクライアントサイドレンダリング（_React_ など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>
 
 >[!NOTE]
 >
@@ -201,7 +200,7 @@ AEMを操作する場合、このようなサービスの設定を管理する�
 * 親フォルダー：`/apps/application_name/config`
 * 名前：`com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-   MobileEmulatorProvider サービスがファクトリサービスであるので、- `*alias*` サフィックスは必須です。このファクトリで一意となる任意のエイリアスを使用します。
+  MobileEmulatorProvider サービスがファクトリサービスであるので、- `*alias*` サフィックスは必須です。このファクトリで一意となる任意のエイリアスを使用します。
 
 * jcr:primaryType: `sling:OsgiConfig`
 
@@ -211,12 +210,12 @@ AEMを操作する場合、このようなサービスの設定を管理する�
 * 型：`String[]`
 * 値：Web ページをレンダリングするページコンポーネントへのパス。例えば、geometrixx-media アプリケーションでは次の値を使用します。
 
-   ```
-   geometrixx-media/components/page
-    geometrixx-unlimited/components/pages/page
-    geometrixx-unlimited/components/pages/coverpage
-    geometrixx-unlimited/components/pages/issue
-   ```
+  ```
+  geometrixx-media/components/page
+   geometrixx-unlimited/components/pages/page
+   geometrixx-unlimited/components/pages/coverpage
+   geometrixx-unlimited/components/pages/issue
+  ```
 
 ### デバイスグループの指定 {#specifying-the-device-groups}
 
@@ -235,6 +234,7 @@ AEMを操作する場合、このようなサービスの設定を管理する�
 >[!NOTE]
 >
 >レスポンシブデザインに使用するデバイスグループの場合は、デバイスグループを編集し、「一般」タブで「エミュレーターを無効にする」を選択します。 このオプションは、レスポンシブデザインとは関係のないエミュレーターカルーセルが表示されないようにします。
+>
 
 ## アダプティブ画像の使用 {#using-adaptive-images}
 
@@ -326,6 +326,7 @@ picturefill.js コードが必要とする必須 div 要素を生成するコン
 >* HTML を生成するスクリプト：`/libs/foundation/components/adaptiveimage/adaptiveimage.jsp`
 >
 >次節では、このコンポーネントの詳細について説明します。
+>
 
 ### AEM の画像レンダリングについて {#understanding-image-rendering-in-aem}
 
@@ -366,6 +367,7 @@ picturefill.js コードが必要とする必須 div 要素を生成するコン
 >[!NOTE]
 >
 >Web クライアントは、 matchMedia および Picturefill JavaScript ライブラリ（または類似のライブラリ）を使用して、メディアセレクターを評価します。
+>
 
 イメージリクエストを処理するサーブレットは、次のタスクを実行する必要があります。
 
@@ -575,16 +577,16 @@ AdaptiveImageComponentServlet クラスは、writeLayer メソッドもオーバ
 * 370x150
 * 480 x 200
 * 127x127
-* 770x360
+* 770 x 360
 * 620x290
-* 480x225
+* 480 x 225
 * 320x150
 * 375x175
 * 303x142
 * 1170x400
 * 940x340
 * 770x300
-* 480x190
+* 480 x 190
 
 画質の次の値がサポートされます。
 
@@ -657,6 +659,7 @@ info.geometrixx.commons.impl.servlets.ImageReferenceModificationServlet クラ�
 
 >[!NOTE]
 >[com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) クラスには getFileReference メソッドが含まれます。
+>
 
 ## 可変グリッドの開発 {#developing-a-fluid-grid}
 
@@ -698,6 +701,7 @@ AEM では、可変グリッドを効率的かつ効果的に実装できます�
 >[!NOTE]
 >
 >1 つのコンポーネントに、parsys コンポーネントを参照する `cq:include` 要素が複数含まれている場合、それぞれの `path` 属性には異なる値を指定する必要があります。
+>
 
 #### ページコンポーネントグリッドの拡大縮小 {#scaling-the-page-component-grid}
 
@@ -862,13 +866,13 @@ HTML5 テクノロジーを使用すると、グリッドを実装し、グリ�
 
 グリッドを使用して、異なる表示域サイズに合わせてコンテンツブロックを拡大縮小します。 コンテンツブロックは特定の数の列にまたがります。 表示域のサイズに応じて、列の幅が増減すると、コンテンツブロックの幅もそれに応じて増減します。 拡大/縮小は、コンテンツブロックの並列配置に対応するだけの広さの大サイズおよび中サイズのビューポートの両方をサポートします。
 
-![](do-not-localize/chlimage_1-1a.png)
+![2 つのグリッドのイメージ。一方は他方よりも小さくスケールされます。](do-not-localize/chlimage_1-1a.png)
 
 #### グリッド内のコンテンツの再配置 {#repositioning-content-in-the-grid}
 
 コンテンツブロックのサイズは、最小の幅で制限できます。この幅を超えると、拡大/縮小が無効になります。 小さいビューポートの場合は、グリッドを使用して、コンテンツのブロックを水平方向ではなく垂直方向に分布させることができます。
 
-![](do-not-localize/chlimage_1-2a.png)
+![2 つのグリッドのイメージ。一方は他方より小さく再配置されます。](do-not-localize/chlimage_1-2a.png)
 
 ### グリッドのデザイン {#designing-the-grid}
 
@@ -953,7 +957,7 @@ CSS には、次の構造を使用する一連のメディアクエリが含ま�
 
 各メディアクエリ内の `.row-fluid` セレクターにスタイルを追加します。そのメディアクエリに使用するページレイアウトに従って値を設定します。例えば、次の図は、幅の広い表示域ではコンテンツを水平方向に、幅の狭い表示域では垂直方向に広げる行を示しています。
 
-![](do-not-localize/chlimage_1-3a.png)
+![連続して 2 つのコンテンツブロックの画像。行が再配置されたことを示す 2 番目の画像。](do-not-localize/chlimage_1-3a.png)
 
 次の CSS によりこの動作を実装できます。
 

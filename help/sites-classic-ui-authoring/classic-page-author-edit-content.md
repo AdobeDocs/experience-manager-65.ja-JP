@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: de321869-ebf9-41a1-8203-e12bdb088678
 docset: aem65
 exl-id: e1b5aea0-983c-4e7b-9d35-d7beeee45dc7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1755'
-ht-degree: 34%
+source-wordcount: '1836'
+ht-degree: 33%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 34%
 >
 >問題が発生した場合は、システム管理者にお問い合わせください。
 
-## サイドキック {#sidekick}
+## Sidekick {#sidekick}
 
 サイドキックは、ページをオーサリングする際の重要なツールです。 ページのオーサリング時にフローティングされるので、常に表示されます。
 
@@ -207,19 +207,19 @@ ht-degree: 34%
 
 ページのプレビューに重要な 2 つのアイコンがサイドキックの下の枠に表示されます。
 
-![](do-not-localize/chlimage_1-5.png)
+![7 つのアイコンの横列を持つサイドキックの下の境界線。 行の先頭にある 2 つのアイコン（編集アイコンとプレビューモードアイコン）は、それぞれ鉛筆記号と虫眼鏡記号で示されます。](do-not-localize/chlimage_1-5.png)
 
 * 鉛筆アイコンは、現在編集モードでコンテンツの追加、変更、移動または削除を行っていることを示します。
 
-   ![](do-not-localize/chlimage_1-6.png)
+  ![鉛筆記号で示される編集アイコン。](do-not-localize/chlimage_1-6.png)
 
 * 虫眼鏡アイコンを使用すると、プレビューモードを選択できます。このモードでは、パブリッシュ環境と同じようにページを表示できます（ページの更新も必要になる場合があります）。
 
-   ![](do-not-localize/chlimage_1-7.png)
+  ![虫眼鏡の記号で示されるプレビューモードのアイコン。](do-not-localize/chlimage_1-7.png)
 
-   プレビューモードでは、サイドキックが縮小されます。下向き矢印アイコンをクリックすると、編集モードに戻ります。
+  プレビューモードでは、サイドキックが縮小されます。下向き矢印アイコンをクリックすると、編集モードに戻ります。
 
-   ![](do-not-localize/chlimage_1-8.png)
+  ![タイトルがAEMのバーで、タイトルの右側に下向き矢印記号が付いた編集モードアイコンが表示されます。](do-not-localize/chlimage_1-8.png)
 
 ## 検索と置換 {#find-replace}
 
@@ -286,7 +286,6 @@ AEMには、実行したアクションの履歴と、実行したアクショ�
 >* 最大 20 個の編集アクションを取り消す（デフォルト設定）。
 >* また、 [キーボードショートカット](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) 元に戻す/やり直しの場合。
 >
-
 
 取り消しとやり直しは、次のタイプのページの変更に対して使用できます。
 

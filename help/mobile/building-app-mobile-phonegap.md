@@ -1,8 +1,6 @@
 ---
 title: モバイルアプリケーションのビルド
-seo-title: Building Mobile Applications
-description: このページでは、GitHub から入手可能なコードを使用してモバイルアプリケーションを構築する方法に関する詳細な手順を説明します。アプリケーションを構築して、デバイスやシミュレーターにインストールし、テストやアプリストアに公開します。 PhoneGap コマンドラインインターフェイスを使用して、またはPhoneGap Buildを使用してクラウド内で、アプリケーションをローカルに構築できます。
-seo-description: This page provides a complete step-by-step article on how to build a mobile application using code available from GitHub is available here.Build your application to install to a device or simulator for testing or for publishing to app stores. You can build applications locally using the PhoneGap Command Line Interface, or in the cloud using PhoneGap Build.
+description: このページでは、GitHub から入手可能なコードを使用してモバイルアプリケーションを構築する方法に関する詳細な手順を説明しています。 アプリケーションをビルドして、テスト用またはアプリストアに公開用に、デバイスまたはシミュレーターにインストールします。 PhoneGap コマンドラインインターフェイスを使用して、またはPhoneGap Buildを使用してクラウド内で、アプリケーションをローカルに構築できます。
 uuid: 1ff6fe1a-24cc-4973-a2cd-8d356bc649b0
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
 discoiquuid: b2778086-8280-4306-bf3a-f6ec2a0e04df
 exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1058'
 ht-degree: 3%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 アプリケーションをビルドして、テスト用またはアプリストアに公開用に、デバイスまたはシミュレーターにインストールします。 PhoneGap コマンドラインインターフェイスを使用して、またはPhoneGap Buildを使用してクラウド内で、アプリケーションをローカルに構築できます。
 
@@ -59,14 +57,14 @@ PhoneGap コマンドラインインターフェイス (CLI) を使用して、�
 
 PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クライアントユーティリティをインストールする必要があります。 次の手順を実行するには、インターネット接続が必要です。
 
-1. ダウンロードとインストール [Node.js](https://nodejs.org/ja/).
+1. ダウンロードとインストール [Node.js](https://nodejs.org/ja).
 1. ターミナルまたはコマンドプロンプトを開き、次のノードコマンドを入力して PhoneGap ユーティリティをインストールします。
 
    ```shell
    npm install -g phonegap
    ```
 
-   UNIX または Linux システムでは、コマンドの先頭にを付ける必要がある場合があります。 `sudo`.
+   UNIX®または Linux®システムでは、場合によっては、コマンドの先頭にを付ける必要があります。 `sudo`.
 
    端末は、一連の HTTPGETコマンドの結果を示します。 インストールが正常に完了すると、次の例のように、ターミナルはライブラリのインストール先を示します。
 
@@ -88,16 +86,16 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
 1. （オプション）ターゲットとするモバイルプラットフォーム用の SDK を取得します。
 
    * iOSプラットフォーム用のアプリを作成するには、最新バージョンのをインストールしてください [Xcode](https://developer.apple.com/xcode/).
-   * Android アプリを作成するには、 [Android SDK](https://developer.android.com/).
+   * Android™アプリを作成するには、 [Android™ SDK](https://developer.android.com/).
 
 ### コンテンツ ZIP ファイルのダウンロード {#downloading-the-content-zip-file}
 
 モバイルアプリケーションのコンテンツをファイルシステムに移動します。
 
 1. モバイルアプリケーションページで、アプリケーションを選択します。
-1. （オプション）完全なインストール用のアプリケーションを構築するには、ツールバーで、「キャッシュをクリア」アイコンをクリックまたはタップします。
+1. （オプション）完全なインストール用のアプリケーションを構築するには、ツールバーの「キャッシュをクリア」アイコンをクリックします。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![壊れたリンクシンボルで示されるキャッシュアイコンをクリアします。](do-not-localize/chlimage_1.png)
 
    >[!NOTE]
    >
@@ -105,7 +103,7 @@ PhoneGap CLI を使用してビルドするには、Node.js と PhoneGap クラ�
 
 1. ツールバーの「 CLI Assets をダウンロード」アイコンをクリックまたはタップします。
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![重複するタブレット記号で示される CLI Assets アイコンをダウンロードします。](do-not-localize/chlimage_1-1.png)
 
 1. ZIP ファイルを保存したら、成功ダイアログの「閉じる」をクリックします。
 1. ZIP ファイルの内容を抽出します。
@@ -120,7 +118,7 @@ PhoneGap CLI を使用して、アプリケーションをコンパイルして�
    cd ~/Downloads/ng-app-cli.1392137825303
    ```
 
-1. ターゲットとするプラットフォームの phonegap コマンドを入力します。 例えば、次のコマンドを実行すると、Android 用のアプリが構築されます。
+1. ターゲットとするプラットフォームの phonegap コマンドを入力します。 例えば、次のコマンドは Android™用のアプリを構築します。
 
    ```shell
    phonegap build android
@@ -140,7 +138,7 @@ AEM内でPhoneGap Buildサービスを使用できるようにPhoneGap Build設�
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 設定を作成ダイアログで、Title プロパティの値を入力します。 既定では、Name プロパティの値はタイトルから派生しますが、名前を入力することもできます。 「作成」をクリックします。
+1. 設定を作成ダイアログボックスで、Title プロパティの値を入力します。 既定では、Name プロパティの値はタイトルから派生しますが、名前を入力することもできます。 「作成」をクリックします。
 1. [PhoneGap Buildの設定 ] ダイアログで、PhoneGap Buildのユーザ名とパスワードを入力し、[OK] をクリックします。
 
 ### PhoneGap Buildの使用 {#using-phonegap-build}
@@ -150,7 +148,7 @@ AEM内でPhoneGap Buildサービスを使用できるようにPhoneGap Build設�
 1. モバイルアプリケーションページで、モバイルアプリケーションを開きます。 ([http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap))
 1. （オプション）完全なインストール用のアプリケーションを構築するには、アプリケーションを選択し、キャッシュをクリアアイコンをクリックします。
 
-   ![](do-not-localize/chlimage_1-2.png)
+   ![壊れたリンクシンボルで示されるキャッシュアイコンをクリアします。](do-not-localize/chlimage_1-2.png)
 
    >[!NOTE]
    >
@@ -158,7 +156,7 @@ AEM内でPhoneGap Buildサービスを使用できるようにPhoneGap Build設�
 
 1. スプラッシュページを選択し、「リモートビルド」アイコンをクリックします。
 
-   ![](do-not-localize/chlimage_1-3.png)
+   ![2 つの丸歯車が示すリモートアイコンを作成します。](do-not-localize/chlimage_1-3.png)
 
    **注意：** ビルドが正常に完了した場合、AEM Beta バージョンではインボックス通知が作成されません。
 

@@ -1,8 +1,6 @@
 ---
 title: モバイルアプリケーションのオーサリング
-seo-title: Authoring Mobile Applications
 description: AEM Mobile Dashboard を使用すると、モバイルアプリケーションを作成、構築およびデプロイし、アプリケーションメタデータを作成、削除および編集できます。 このページでは、この機能について詳しく見ていきます。
-seo-description: he AEM Mobile Dashboard allows you to create, build and deploy your mobile application, create, delete and edit application metadata. Follow this page to learn more.
 uuid: 293b5d29-df7e-42dd-ae64-8c677317e7a5
 contentOwner: User
 content-type: reference
@@ -10,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-adobe-phonegap-enterprise
 discoiquuid: abfeea65-102d-4800-abeb-304d61afcc13
 exl-id: 073daff7-0c1d-4715-bfd4-3e2336e4cb88
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1016'
 ht-degree: 2%
 
 ---
@@ -87,7 +85,7 @@ AEM Sites内でおこなう場合と同じ方法で、AEM Mobileでコンテン�
 
 このアイコンは、アプリシェルのコンテンツリリースパッケージを表します
 
-![](do-not-localize/chlimage_1-6.png)
+![2 つの四角形で重なっているパッケージシンボルで示されるコンテンツリリースパッケージアイコン。](do-not-localize/chlimage_1-6.png)
 
 これらのアイコンは、アプリコンテンツのコンテンツリリースパッケージを表します
 
