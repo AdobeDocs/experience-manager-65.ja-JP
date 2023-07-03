@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 8ae6817a-16d3-4740-b67a-498e75adf350
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: cae9890cd61d6d894f34c7299e2e15ee70e14ac9
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 42%
+source-wordcount: '913'
+ht-degree: 41%
 
 ---
 
@@ -68,13 +68,13 @@ ht-degree: 42%
 
 1. **親**&#x200B;アイコンをクリックまたはタップします。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103204.png)
+   ![親](do-not-localize/screen_shot_2018-03-22at103204.png)
 
    これにより、現在のコンポーネントを格納する段落システムを選択します。
 
 1. 段落システムの&#x200B;**設定**&#x200B;アイコンが親のアクションバーに表示されます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256.png)
+   ![設定](do-not-localize/screen_shot_2018-03-22at103256.png)
 
    このアイコンを選択してダイアログを表示します。
 
@@ -121,7 +121,7 @@ ht-degree: 42%
 
 1. ダイアログを開くには、「**設定**」アイコンを使用します。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103256-1.png)
+   ![設定アイコン](do-not-localize/screen_shot_2018-03-22at103256-1.png)
 
    デザインダイアログでは、使用可能なデザインパラメーターに従ってコンポーネントを設定できます。
 
@@ -151,12 +151,12 @@ ht-degree: 42%
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
-   複数エントリのダイアログリストからエントリを削除するには、「削除」アイコンを使用します。
+   以下を使用： **削除** 複数エントリのダイアログリストからエントリを削除するアイコン。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103809.png)
+   ![削除](do-not-localize/screen_shot_2018-03-22at103809.png)
 
    以下を使用： **移動** 複数エントリのダイアログリストでエントリの順序を並べ替えるアイコン。
 
-   ![](do-not-localize/screen_shot_2018-03-22at103816.png)
+   ![移動](do-not-localize/screen_shot_2018-03-22at103816.png)
 
 1. クリックまたはタップ **完了** アイコンをクリックして保存し、ダイアログを閉じます。
