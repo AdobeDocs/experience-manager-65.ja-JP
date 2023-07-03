@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f92ed674-5865-4a53-8c3a-369536861f14
 docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
+source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
 workflow-type: tm+mt
-source-wordcount: '3047'
+source-wordcount: '3082'
 ht-degree: 52%
 
 ---
@@ -46,51 +46,51 @@ ht-degree: 52%
 
 * **サイドパネルを切り替え**
 
-   これにより、サイドパネルが開く（または閉じる）ので、 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser), [コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)、および [コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree).
+  これにより、サイドパネルが開く（または閉じる）ので、 [アセットブラウザー](/help/sites-authoring/author-environment-tools.md#assets-browser), [コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)、および [コンテンツツリー](/help/sites-authoring/author-environment-tools.md#content-tree).
 
-   ![](do-not-localize/screen_shot_2018-03-22at111425.png)
+  ![サイドパネルを切り替え](do-not-localize/screen_shot_2018-03-22at111425.png)
 
 * **ページ情報**
 
-   次にアクセスできる [ページ情報](/help/sites-authoring/author-environment-tools.md#page-information) ページ上で実行できるページの詳細やアクションを含むメニュー（ページ情報の表示と編集、ページプロパティの表示、ページの公開/非公開を含む）。
+  次にアクセスできる [ページ情報](/help/sites-authoring/author-environment-tools.md#page-information) ページ上で実行できるページの詳細やアクションを含むメニュー（ページ情報の表示と編集、ページプロパティの表示、ページの公開/非公開を含む）。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111437.png)
+  ![ページ情報](do-not-localize/screen_shot_2018-03-22at111437.png)
 
 * **エミュレーター**
 
-   を切り替えます。 [エミュレーターツールバー](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)：別のデバイスでのページのルックアンドフィールをエミュレートするために使用されます。 これは、レイアウトモードで自動的に切り替えられます。
+  を切り替えます。 [エミュレーターツールバー](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)：別のデバイスでのページのルックアンドフィールをエミュレートするために使用されます。 これは、レイアウトモードで自動的に切り替えられます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111442.png)
+  ![エミュレーター](do-not-localize/screen_shot_2018-03-22at111442.png)
 
 * **ContextHub**
 
-   を開きます。 [コンテキストハブ](/help/sites-authoring/ch-previewing.md). プレビューモードでのみ使用できます。
+  を開きます。 [コンテキストハブ](/help/sites-authoring/ch-previewing.md). プレビューモードでのみ使用できます。
 
-   ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
+  ![screen_shot_2018-03-22at111543](assets/screen_shot_2018-03-22at111543.png)
 
 * **ページタイトル**
 
-   これは単なる情報です。
+  これは単なる情報です。
 
-   ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
+  ![screen_shot_2018-03-22at111554](assets/screen_shot_2018-03-22at111554.png)
 
 * **モードセレクター**
 
-   現在の [mode](/help/sites-authoring/author-environment-tools.md#page-modes) また、編集、レイアウト、タイムワープ、ターゲット設定など、別のモードを選択することもできます。
+  現在の [mode](/help/sites-authoring/author-environment-tools.md#page-modes) また、編集、レイアウト、タイムワープ、ターゲット設定など、別のモードを選択することもできます。
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+  ![chlimage_1-120](assets/chlimage_1-120.png)
 
 * **プレビュー**
 
-   有効 [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode). 公開時に表示されるページが表示されます。
+  有効 [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode). 公開時に表示されるページが表示されます。
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+  ![chlimage_1-121](assets/chlimage_1-121.png)
 
 * **注釈**
 
-   次を追加できます： [注釈](/help/sites-authoring/annotations.md) をページに追加します。 最初の注釈の後、アイコンはページ上の注釈の数を示す番号に切り替わります。
+  次を追加できます： [注釈](/help/sites-authoring/annotations.md) をページに追加します。 最初の注釈の後、アイコンはページ上の注釈の数を示す番号に切り替わります。
 
-   ![](do-not-localize/screen_shot_2018-03-22at111638.png)
+  ![注釈](do-not-localize/screen_shot_2018-03-22at111638.png)
 
 ### ステータスの通知 {#status-notification}
 
@@ -122,11 +122,11 @@ ht-degree: 52%
 
 * 新しいコンポーネントをページに追加する場合（コンポーネントブラウザーからドラッグ）:
 
-   ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
+  ![screen_shot_2018-03-22at111928](assets/screen_shot_2018-03-22at111928.png)
 
 * 既存のコンポーネントを移動する場合：
 
-   ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
+  ![screen_shot_2018-03-22at112445](assets/screen_shot_2018-03-22at112445.png)
 
 ## コンポーネントの挿入 {#inserting-a-component}
 
@@ -230,77 +230,77 @@ ht-degree: 52%
 
 * **編集**
 
-   [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)[コンポーネントのコンテンツを編集](#edit-content)できます。多くの場合、ツールバーが提供されます。
+  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)[コンポーネントのコンテンツを編集](#edit-content)できます。多くの場合、ツールバーが提供されます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at112936.png)
+  ![編集](do-not-localize/screen_shot_2018-03-22at112936.png)
 
 * **設定**
 
-   [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)、コンポーネントのプロパティを編集および設定できます。多くの場合、ダイアログが開きます。
+  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)、コンポーネントのプロパティを編集および設定できます。多くの場合、ダイアログが開きます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at112955.png)
+  ![設定](do-not-localize/screen_shot_2018-03-22at112955.png)
 
 * **コピー**
 
-   これにより、コンポーネントがクリップボードにコピーされます。 貼り付け操作の後も、元のコンポーネントは保持されます。
+  これにより、コンポーネントがクリップボードにコピーされます。 貼り付け操作の後も、元のコンポーネントは保持されます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113000.png)
+  ![コピー](do-not-localize/screen_shot_2018-03-22at113000.png)
 
 * **切り取り**
 
-   これにより、コンポーネントがクリップボードにコピーされます。 貼り付け操作の後、元のコンポーネントは削除されます。
+  これにより、コンポーネントがクリップボードにコピーされます。 貼り付け操作の後、元のコンポーネントは削除されます。
 
-   ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
+  ![screen_shot_2018-03-22at113007](assets/screen_shot_2018-03-22at113007.png)
 
 * **削除**
 
-   これにより、確認を含むページからコンポーネントが削除されます。
+  これにより、確認を含むページからコンポーネントが削除されます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113012.png)
+  ![削除](do-not-localize/screen_shot_2018-03-22at113012.png)
 
 * **コンポーネントの挿入**
 
-   これにより、次のダイアログが開きます。 [新しいコンポーネントを追加](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  これにより、次のダイアログが開きます。 [新しいコンポーネントを追加](/help/sites-authoring/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
-   ![](do-not-localize/screen_shot_2018-03-22at113017.png)
+  ![コンポーネントを挿入](do-not-localize/screen_shot_2018-03-22at113017.png)
 
 * **貼り付け**
 
-   これにより、コンポーネントがクリップボードからページに貼り付けられます。 オリジナルが残るかどうかは、コピーを使用したか切り取ったかによって異なります。
+  これにより、コンポーネントがクリップボードからページに貼り付けられます。 オリジナルが残るかどうかは、コピーを使用したか切り取ったかによって異なります。
 
    * 同じページまたは別のページに貼り付けることができます。
    * 貼り付けられた項目は、貼り付けアクションを選択した項目の上に貼り付けられます。
    * 貼り付けアクションは、クリップボードにコンテンツがある場合にのみ表示されます。
 
-   ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
+  ![screen_shot_2018-03-22at113553](assets/screen_shot_2018-03-22at113553.png)
 
-   >[!NOTE]
-   >
-   >切り取り/コピー操作の前に開いていた別のページに貼り付ける場合は、ページを更新して、貼り付けたコンテンツを表示する必要があります。
+  >[!NOTE]
+  >
+  >切り取り/コピー操作の前に開いていた別のページに貼り付ける場合は、ページを更新して、貼り付けたコンテンツを表示する必要があります。
 
 * **グループ**
 
-   これにより、複数のコンポーネントを一度に選択できます。 デスクトップデバイスで同じ操作をおこなうには、**Ctrl キーを押しながらクリック**&#x200B;するか、または **Command キーを押しながらクリック**&#x200B;します。
+  これにより、複数のコンポーネントを一度に選択できます。 デスクトップデバイスで同じ操作をおこなうには、**Ctrl キーを押しながらクリック**&#x200B;するか、または **Command キーを押しながらクリック**&#x200B;します。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113240.png)
+  ![グループ](do-not-localize/screen_shot_2018-03-22at113240.png)
 
 * **親**
 
-   選択したコンポーネントの親コンポーネントを選択できます。
+  選択したコンポーネントの親コンポーネントを選択できます。
 
-   ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
+  ![screen_shot_2018-03-22at113028](assets/screen_shot_2018-03-22at113028.png)
 
 * **レイアウト**
 
-   これにより、 [レイアウト](/help/sites-authoring/editing-content.md#edit-component-layout) 選択したコンポーネントの。 これは、選択したコンポーネントにのみ適用され、 [レイアウトモード](/help/sites-authoring/author-environment-tools.md#page-modes) ページ全体に対して
+  これにより、 [レイアウト](/help/sites-authoring/editing-content.md#edit-component-layout) 選択したコンポーネントの。 これは、選択したコンポーネントにのみ適用され、 [レイアウトモード](/help/sites-authoring/author-environment-tools.md#page-modes) ページ全体に対して
 
-   ![](do-not-localize/screen_shot_2018-03-22at113044.png)
+  ![レイアウト](do-not-localize/screen_shot_2018-03-22at113044.png)
 
 * **エクスペリエンスフラグメントバリエーションに変換**
 
-   これを使用すると、選択したコンポーネントから新しい[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を作成したり、既存のエクスペリエンスフラグメントに追加したりできます。
+  これを使用すると、選択したコンポーネントから新しい[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を作成したり、既存のエクスペリエンスフラグメントに追加したりできます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at113033.png)
+  ![エクスペリエンスフラグメントバリエーションに変換](do-not-localize/screen_shot_2018-03-22at113033.png)
 
 ## 編集（コンテンツ） {#edit-content}
 
@@ -317,28 +317,28 @@ ht-degree: 52%
 
 * [テキストコンポーネント](/help/sites-authoring/rich-text-editor.md#main-pars-title-24)
 
-   ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
+  ![screen_shot_2018-03-22at120215](assets/screen_shot_2018-03-22at120215.png)
 
 * 画像コンポーネント
 
-   ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
+  ![screen_shot_2018-03-22at120252](assets/screen_shot_2018-03-22at120252.png)
 
-   >[!NOTE]
-   >
-   >編集は、空の画像コンポーネントでは動作しません。
-   >
-   >
-   >必ず [画像のドラッグまたはアップロード（設定を使用）](/help/sites-authoring/default-components-foundation.md#image) 編集を開始する前に
+  >[!NOTE]
+  >
+  >編集は、空の画像コンポーネントでは動作しません。
+  >
+  >
+  >必ず [画像のドラッグまたはアップロード（設定を使用）](/help/sites-authoring/default-components-foundation.md#image) 編集を開始する前に
 
 * 画像コンポーネント — 全画面表示
 
-   画像コンポーネント[の全画面表示モードに入ると](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)、画像を編集する領域が広くなり、追加の編集オプション（「**マップを起動**」や「**ズームをリセット**」など）が表示されます。また、全画面表示では切り抜きプリセットを選択できます。
+  画像コンポーネント[の全画面表示モードに入ると](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)、画像を編集する領域が広くなり、追加の編集オプション（「**マップを起動**」や「**ズームをリセット**」など）が表示されます。また、全画面表示では切り抜きプリセットを選択できます。
 
-   ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
+  ![screen_shot_2018-03-22at120529](assets/screen_shot_2018-03-22at120529.png)
 
 * [テキストと画像の基盤コンポーネント](/help/sites-authoring/default-components-foundation.md#text-image)など、複数の基本コンポーネントから構成されるコンポーネントでは、最初に編集オプションが確認されます。
 
-   ![chlimage_1-123](assets/chlimage_1-123.png)
+  ![chlimage_1-123](assets/chlimage_1-123.png)
 
 ### アセットのコンポーネントへのドラッグ＆ドロップ {#drag-and-drop-assets-into-component}
 
@@ -356,7 +356,7 @@ ht-degree: 52%
 
 次のアイコンを使用して、すべてのコンポーネントで全画面表示モードにアクセス（または終了）できます。
 
-![](do-not-localize/chlimage_1-20.png)
+![フルスクリーンモードを編集](do-not-localize/chlimage_1-20.png)
 
 例えば、**テキスト**&#x200B;コンポーネントの場合は、次のように表示されます。
 
@@ -391,7 +391,7 @@ ht-degree: 52%
 
    コンポーネントのレイアウトを調整するには、**レイアウト**&#x200B;アクションをクリックまたはタップします。
 
-   ![](do-not-localize/chlimage_1-21.png)
+   ![コンポーネントツールバー](do-not-localize/chlimage_1-21.png)
 
 1. 「Layout」アクションを選択したら、次の操作を実行します。
 
@@ -405,7 +405,7 @@ ht-degree: 52%
 
 1. 必要なレイアウトの変更を加えて、コンポーネントのアクションメニューの「**閉じる**」ボタンをクリックすると、コンポーネントのレイアウトの変更が終わります。コンポーネントのツールバーは通常の編集状態に戻ります。
 
-   ![](do-not-localize/screen_shot_2018-03-22at133920.png)
+   ![閉じる](do-not-localize/screen_shot_2018-03-22at133920.png)
 
 >[!NOTE]
 >
@@ -425,27 +425,27 @@ ht-degree: 52%
 
 * **ライブコピー**
 
-   ライブコピーまたは（ライブコピーに基づく）ローンチの一部であるページ上にコンポーネントがある場合、コンポーネントツールバー。 次に例を示します。
+  ライブコピーまたは（ライブコピーに基づく）ローンチの一部であるページ上にコンポーネントがある場合、コンポーネントツールバー。 次に例を示します。
 
-   ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
+  ![screen_shot_2018-03-22at134339](assets/screen_shot_2018-03-22at134339.png)
 
-   「継承をキャンセル」オプションを使用できます。
+  「継承をキャンセル」オプションを使用できます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at134406.png)
+  ![継承をキャンセル](do-not-localize/screen_shot_2018-03-22at134406.png)
 
-   または、既にキャンセルされている場合は継承を再度有効にします。
+  または、既にキャンセルされている場合は継承を再度有効にします。
 
-   ![](do-not-localize/screen_shot_2018-03-22at134417.png)
+  ![継承を再度有効にする](do-not-localize/screen_shot_2018-03-22at134417.png)
 
-   ブループリントまたはライブコピーのソースでは、ロールアウトアクションも使用できます。
+  ブループリントまたはライブコピーのソースでは、ロールアウトアクションも使用できます。
 
-   ![](do-not-localize/screen_shot_2018-03-22at134516.png)
+  ![ロールアウト](do-not-localize/screen_shot_2018-03-22at134516.png)
 
 * **継承された段落システム**
 
-   設定ダイアログ。 例えば、継承された段落システムの場合は次のようになります。
+  設定ダイアログ。 例えば、継承された段落システムの場合は次のようになります。
 
-   ![chlimage_1-124](assets/chlimage_1-124.png)
+  ![chlimage_1-124](assets/chlimage_1-124.png)
 
 ## ページテンプレートの編集 {#editing-the-page-template}
 
@@ -485,7 +485,6 @@ ht-degree: 52%
 >* プレビューと最後に選択したモードを切り替えるには、[キーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md) `Ctrl-Shift-M` を使用します。
 >
 
-
 >[!NOTE]
 >
 >両方のオプションに WCM Mode Cookie が設定されている。
@@ -517,7 +516,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
    1. を含むページを選択します。 [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
    1. ロックアイコンを選択します。
 
-   ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
+  ![screen_shot_2018-03-22at134928](assets/screen_shot_2018-03-22at134928.png)
 
 * **ページエディター**
 
@@ -552,7 +551,7 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 次のアイコンを使用して、アクションの取り消しまたはやり直しを行うことができます。これらのアイコンは、ツールバーに適宜表示されます。
 
-![](do-not-localize/screen_shot_2018-03-23at093614.png)
+![取り消しとやり直し](do-not-localize/screen_shot_2018-03-23at093614.png)
 
 >[!NOTE]
 >
@@ -584,7 +583,6 @@ AEM では、ユーザーが実行するアクションの履歴と、それら�
 >* 最大 20 個の編集アクションを取り消します（デフォルト設定）。
 >* また、 [キーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md) 元に戻す/やり直しの場合。
 >
-
 
 取り消しとやり直しは、次のタイプのページの変更に対して使用できます。
 
