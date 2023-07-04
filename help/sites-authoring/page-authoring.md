@@ -1,6 +1,6 @@
 ---
-title: AEMでのコンテンツページのオーサリング
-description: コンテンツページのオーサリング時に必要となるタスク。
+title: AEM でのコンテンツページのオーサリング
+description: コンテンツページのオーサリングに関連するタスクです。
 uuid: 454d94aa-da27-45cb-bbb2-7bfcef103806
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,15 +10,15 @@ discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '315'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
 # ページのオーサリング {#authoring-pages}
 
-次に、AEMでのオーサリングの 2 種類の概要を示します。
+ここでは、AEM でのオーサリングの 2 種類の概要を示します。
 
 * [作成者が行う最初の手順](/help/sites-authoring/first-steps.md) - 新規の作成者向けの概要です。
 
@@ -28,9 +28,9 @@ ht-degree: 85%
 >
 >ここでは、コンテンツページのオーサリングに関連するタスクについて取り上げます。この他にも、ページのオーサリングに密接に関連する機能が多数あります。それらについては、[オーサリングガイド](/help/sites-authoring/home.md)の他の節で説明しています。
 
-## ページのオーサリングに使用される機能の概要のクイック {#quick-overview-of-features-used-for-authoring-pages}
+## ページのオーサリングに使用される機能の概要 {#quick-overview-of-features-used-for-authoring-pages}
 
-ページのオーサリング時に役立つように、オーサー環境は次のような機能を提供します。
+オーサー環境では、ページのオーサリングに役立つ次の機能を利用できます。
 
 * **ドラッグ＆ドロップ**
 コンポーネント（テキスト、画像など）およびデジタルアセット（画像など）は、目的の位置にドラッグ＆ドロップするだけで、ページ上で簡単に配置できます。
