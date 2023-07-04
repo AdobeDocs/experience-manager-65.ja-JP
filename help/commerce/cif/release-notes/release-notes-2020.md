@@ -3,7 +3,7 @@ title: AEM Content and Commerce リリースノート 2020
 description: AEM Content and Commerce リリースノート 2020
 exl-id: 440ecd8e-55dc-4606-8678-c65cda1d2b3a
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1328'
 ht-degree: 100%
 
