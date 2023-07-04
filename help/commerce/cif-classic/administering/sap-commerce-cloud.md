@@ -1,41 +1,41 @@
 ---
-title: AEM with SAPCommerce Cloud
-description: AEMと SAPCommerce Cloudの使用方法を説明します。
+title: AEM と SAP Commerce Cloud の使用
+description: AEM と SAP Commerce Cloud の使用方法を説明します。
 uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1717'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
 # SAP Commerce Cloud {#sap-commerce-cloud}
 
-インストール後、インスタンスを設定できます。
+インストール後、次のインスタンスを設定できます。
 
-1. [ファセット検索のGeometrixx Outdoors](#configure-the-facetted-search-for-geometrixx-outdoors).
+1. [Geometrixx Outdoors 用のファセット検索を設定する](#configure-the-facetted-search-for-geometrixx-outdoors)。
 1. [カタログバージョンを設定します](#configure-the-catalog-version)。
-1. [インポート構造の設定](#configure-the-import-structure).
-1. [読み込む製品属性の設定](#configure-the-product-attributes-to-load).
-1. [製品データのインポート](#importing-the-product-data).
+1. [読み込み構造を設定する](#configure-the-import-structure)。
+1. [読み込む製品属性を設定する](#configure-the-product-attributes-to-load)。
+1. [製品データを読み込む](#importing-the-product-data)。
 1. [カタログインポーターを設定します](#configure-the-catalog-importer)。
-1. 以下を使用： [インポーターを使用してカタログを読み込みます](#catalog-import) をAEMの特定の場所に追加します。
+1. [インポーターを使用して、カタログを AEM の特定の場所に読み込みます](#catalog-import)。
 
-## ファセット検索のGeometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
+## Geometrixx Outdoors 用にファセット検索を設定する {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
->hybris 5.3.0.1 以降では、この設定は必要ありません。
+>hybris 5.3.0.1 以降では、これは必要ありません。
 
 1. ブラウザーで次の URL にアクセスし、**Hybris 管理コンソール**&#x200B;に移動します。
 
    [http://localhost:9001/hmc/hybris](http://localhost:9001/hmc/hybris)
 
-1. サイドバーで、 **システム**&#x200B;を、 **ファセット検索**&#x200B;を、 **ファセット検索設定**.
+1. サイドバーから、「**システム**」、「**ファセット検索**」、「**ファセット検索設定**」を選択します。
 1. **Sample Solr Configuration for clothescatalog** 用に&#x200B;**エディターを開きます**。
 
 1. 「**Catalog versions**」の下の「**Add Catalog version**」を使用して、リストに `outdoors-Staged` と `outdoors-Online` を追加します。
@@ -94,7 +94,7 @@ ht-degree: 67%
    ![chlimage_1-41](/help/sites-administering/assets/chlimage_1-41a.png)
 
 1. 変更内容を&#x200B;**保存**&#x200B;します。
-1. 開く **システム**, **ファセット検索**&#x200B;を、 **インデクサー操作ウィザード**. cron ジョブを開始します。
+1. 「**システム**」、「**ファセット検索**」、「**インデクサー操作ウィザード**」を開きます。cron ジョブを開始します。
 
    * **インデクサー操作**：`full` 
    * **Solr 設定**：`Sample Solr Config for Clothes`
@@ -112,9 +112,9 @@ ht-degree: 67%
 >
 >AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
-ログ出力は、作成したページやコンポーネントに関するフィードバックを提供し、潜在的なエラーを報告します。
+ログ出力は、作成したページおよびコンポーネントに関するフィードバックを提供し、潜在的なエラーを報告します。
 
-## インポート構造の設定 {#configure-the-import-structure}
+## 読み込み構造の設定 {#configure-the-import-structure}
 
 次のリストは、デフォルトで作成される（アセット、ページ、コンポーネントの）サンプル構造を示しています。
 
@@ -155,7 +155,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->以下が可能です。 [独自の読み込みハンドラを実装して、このプロセスをカスタマイズします。](#configure-the-import-structure).
+>[独自のインポートハンドラーを実装して、このプロセスをカスタマイズ](#configure-the-import-structure)できます。
 
 インポート時に生成される構造は、次の目的で設定できます。
 
@@ -179,9 +179,9 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
    >
    >AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。設定可能なパラメーターとそのデフォルト値の詳細については、コンソールも参照してください。
 
-## 製品データのインポート {#importing-the-product-data}
+## 製品データの読み込み {#importing-the-product-data}
 
-製品データを読み込むには、様々な方法があります。 製品データは、環境の初期設定時に、または hybris データに変更が加えられた後に、読み込むことができます。
+製品データを読み込むには、様々な方法があります。製品データは、環境の初期設定時または hybris データに変更が加えられた後に、読み込むことができます。
 
 * [完全読み込み](#full-import)
 * [増分読み込み](#incremental-import)
@@ -201,11 +201,11 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 >
 >hybris 実装（`geometrixx-outdoors/en_US`）は、商品 ID と他の基本的な情報のみを `/etc/commerce` の配下に保存します。
 >
->hybris サーバーは、製品に関する情報が要求されるたびに参照されます。
+>hybris サーバーは、製品に関する情報がリクエストされるたびに参照されます。
 
 ### 完全読み込み {#full-import}
 
-1. 必要に応じて、既存の製品データをすべて削除します (CRXDE Lite)。
+1. 必要に応じて、CRXDE Lite を使用して、すべての既存製品データを削除します。
 
    1. 商品データを保持するサブツリーに移動します。
 
@@ -244,7 +244,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 ### 増分読み込み {#incremental-import}
 
-1. AEMで保持されている関連製品の情報を、次の場所にある適切なサブツリーで確認します。
+1. AEM で保持されている関連製品の情報を、次の場所にある適切なサブツリーで確認します。
 
    `/etc/commerce/products`
 
@@ -276,7 +276,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 読み込み処理には長い時間がかかることがあるので、商品同期の拡張として、カタログの特定の領域を選択して手動で呼び出される高速更新を実行できます。書き出しフィードと標準属性設定を使用します。
 
-1. AEMで保持されている関連製品の情報を、次の場所にある適切なサブツリーで確認します。
+1. AEM で保持されている関連製品の情報を、次の場所にある適切なサブツリーで確認します。
 
    `/etc/commerce/products`
 
@@ -298,7 +298,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. クリックボックスを選択 **高速更新**.
+1. クリックボックス「**高速更新**」を選択します。
 1. 「**カタログをインポート**」をクリックして読み込みを開始します。
 
    完了したら、AEM で更新されたデータを次の場所で確認できます。
@@ -336,13 +336,13 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 * **ルートパス** カタログを読み込むパス。
 
-## カタログからの商品の削除 {#removing-a-product-from-the-catalog}
+## カタログからの製品の削除 {#removing-a-product-from-the-catalog}
 
-カタログから 1 つ以上の製品を削除するには：
+カタログから 1 つ以上の製品を削除するには、次の手順に従います。
 
-1. [OSGi サービス用にを設定する](/help/sites-deploying/configuring-osgi.md) **Day CQ Commerce Hybris カタログインポーター**;関連項目 [カタログインポーターの設定](#configure-the-catalog-importer).
+1. [OSGi サービス用の設定](/help/sites-deploying/configuring-osgi.md)、**Day CQ Commerce Hybris カタログインポーター**、[カタログインポーターの設定](#configure-the-catalog-importer)を参照してください。
 
-   次のプロパティをアクティブにします。
+   次のプロパティをアクティベートします。
 
    * **製品の削除を有効にする**
    * **製品アセットの削除を有効にする**
@@ -358,15 +358,15 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
    >[!NOTE]
    >
-   >1 つ目のインポートは、製品情報を初期化することです。 2 つ目のインポートでは、すべてが正常に動作し、製品セットが準備できていることを確認します。
+   >1 つ目の読み込みは、製品情報を初期化することです。2 つ目の読み込みでは、すべてが正常に動作し、製品セットが準備できていることを確認します。
 
-1. 削除する製品を含むカテゴリページを確認します。 製品の詳細が表示されます。
+1. 削除する製品を含むカテゴリページを確認します。製品の詳細が表示されます。
 
    例えば、次のカテゴリは Cajamara 製品の詳細を表示します。
 
    [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-1. hybris コンソールで製品を削除します。 「**Change approval status**」オプションを使用して、ステータスを「`unapproved`」に設定します。製品がライブフィードから削除されます。
+1. hybris コンソールで製品を削除します。「**Change approval status**」オプションを使用して、ステータスを「`unapproved`」に設定します。製品がライブフィードから削除されます。
 
    次に例を示します。
 
@@ -375,8 +375,8 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    * `Cajamara` を検索します
    * この商品を選択し、承認ステータスを「`unapproved`」に変更します。
 
-1. 別の増分更新を実行します ( [カタログの読み込み](#catalog-import)) をクリックします。 ログには、削除された製品のリストが表示されます。
-1. [ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog) 適切なカタログ 製品ページと製品ページは、AEM内から削除されます。
+1. 増分更新を再度実行します（[カタログの読み込み](#catalog-import)を参照）。ログには、削除された製品がリストされます。
+1. 該当するカタログを[ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)します。製品および製品ページが AEM 内から削除されます。
 
    次に例を示します。
 
@@ -394,13 +394,13 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 1. 商品を元に戻すには：
 
    1. hybris で、承認ステータスを「**approved**」に戻します。
-   1. AEM内：
+   1. AEM で以下を行います。
 
-      1. 増分更新を実行する
+      1. 増分更新を実行します
       1. 該当するカタログを再度ロールアウトします。
-      1. 適切なカテゴリページを更新します
+      1. 該当するカテゴリページを更新します
 
-## ClientContext への注文履歴特性の追加 {#add-order-history-trait-to-the-client-context}
+## クライアントコンテキストへの注文履歴特性の追加 {#add-order-history-trait-to-the-client-context}
 
 注文履歴を [ClientContext](/help/sites-developing/client-context.md) に追加するには：
 
@@ -409,14 +409,14 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    * 編集するページを開いてから、**Ctrl + Alt + C** キー（Windows）または **control + option + C** キー（Mac）を使用してクライアントコンテキストを開きます。ClientContext の左上隅にある鉛筆アイコンを使用して、**ClientContext のデザインページを開きます**。
    * [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html) に直接移動します。
 
-1. [を **注文履歴** コンポーネント](/help/sites-administering/client-context.md#adding-a-property-component) から **買い物かご** ClientContext の t コンポーネント。
-1. ClientContext に注文履歴の詳細が表示されていることを確認できます。 次に例を示します。
+1. [**注文履歴**&#x200B;コンポーネント](/help/sites-administering/client-context.md#adding-a-property-component)をクライアントコンテキストの&#x200B;**買い物かご**&#x200B;コンポーネントに追加します。
+1. クライアントコンテキストに注文履歴の詳細が表示されていることを確認できます。次に例を示します。
 
-   1. を開きます。 [クライアントコンテキスト](/help/sites-administering/client-context.md).
-   1. 買い物かごに項目を追加します。
+   1. [クライアントコンテキスト](/help/sites-administering/client-context.md)を開きます。
+   1. 買い物かごに商品を追加します。
    1. チェックアウトを完了します。
-   1. ClientContext を確認します。
-   1. 別の項目を買い物かごに追加します。
+   1. クライアントコンテキストを確認します。
+   1. 別の商品を買い物かごに追加します。
    1. チェックアウトページに移動します。
 
       * ClientContext に注文履歴の概要が表示されます。
