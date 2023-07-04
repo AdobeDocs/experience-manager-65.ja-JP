@@ -1,7 +1,7 @@
 ---
 title: AEM Forms ワークフローの変数
 seo-title: Variables in AEM Forms Workflows
-description: 変数を作成し、変数の値を設定して、AEM Forms Workflow ステップで使用します。
+description: 変数を作成、変数の値を設定し、AEM Forms Workflow ステップで使用してください。
 seo-description: Create a variable, set a value for the variable, and use it in AEM Forms workflow steps.
 uuid: 634a75c4-4899-478f-9e5d-a870f5efa583
 contentOwner: khsingh
@@ -11,9 +11,9 @@ discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
 source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2208'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -154,7 +154,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。XML �
 
 ### 変数をサポートするワークフローステップ {#workflow-steps-with-support-for-variables}
 
-移動ステップ、OR 分割ステップ、およびすべての AEM Forms Workflow ステップは変数をサポートします。
+移動ステップ、OR‧分割ステップ、およびすべての‧AEM‧Forms‧Workflow‧ステップでは、変数をサポートしています。
 
 #### OR 分割ステップ {#or-split-step}
 
@@ -277,7 +277,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### ワークフロー変数を使用して、機密性の高いユーザーデータを JCR 外に保存 {#jcr-independent-persistance}
 
-Forms Workflowを使用して処理されるデータには、個人を特定できる情報や機密情報など、機密性の高いユーザーデータを含めることができます。 企業は、様々なワークフローステップで処理される（およびワークフロー変数を使用して渡される）データを、JCR ストレージから所有および管理する外部データストアに格納することを選択できます。外部ストレージへのワークフローデータの保持について詳しくは、[顧客が所有するデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
+Forms Workflow を使用して処理されるデータには、個人を特定できる情報や個人情報などの機密性の高いユーザーデータが含まれることがあります。企業は、様々なワークフローステップで処理される（およびワークフロー変数を使用して渡される）データを、JCR ストレージから所有および管理する外部データストアに格納することを選択できます。外部ストレージへのワークフローデータの保持について詳しくは、[顧客が所有するデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
 [!DNL Adobe Experience Manager] は、ワークフロー API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) を提供して、外部の Azure BLOB ストレージにワークフロー変数を保存します。API の使用について詳しくは、[ワークフロー変数を使用して、機密データをパラメータ化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)を参照してください。
 
 ## 変数の編集 {#edit-a-variable}
