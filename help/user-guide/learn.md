@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Manager 6.5 の機能の詳細
+title: Adobe Experience Manager 6.5 の機能について
 seo-title: Learn about Adobe Experience Manager 6.5 Capabilities
-description: Adobe Experience Manager 6.5 の基本的な機能について説明します。
+description: Adobe Experience Manager 6.5 の重要な機能について説明します
 seo-description: An description of the essential capabilities of Adobe Experience Manager 6.5
 exl-id: dc3b8690-f664-4ffa-993b-7a8634e6fe6b
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '362'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -15,35 +15,35 @@ ht-degree: 5%
 
 ## Experience Manager Sites {#aem-sites}
 
-Experience Manager Sitesは、Adobe Experience Manager内のコンテンツ管理システムです。 Web サイト、モバイルサイトおよびオンサイト画面をまたいでデジタルエクスペリエンスを作成、管理および配信し、それらをグローバルにリーチし、個人的に関連性が高く魅力的なものにすることができます。 [詳細情報](https://business.adobe.com/products/experience-manager/sites/web-content-management.html) または [新しいビデオ機能チュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en)
+Experience Manager Sites は、Adobe Experience Manager 内のコンテンツ管理システムです。web サイト、モバイルサイト、オンサイト画面をまたぐデジタルエクスペリエンスを 1 つの場所から作成、管理、配信できるだけでなく、世界中から利用可能であり、個人的にも関連性が高く魅力的なエクスペリエンスを実現します。[詳細を確認する](https://business.adobe.com/products/experience-manager/sites/web-content-management.html?lang=ja)か、[機能についての新しいビデオチュートリアルをご覧ください](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=ja)。
 
 ## Experience Manager Assets {#aem-assets}
 
-Experience Manager Assetsを使用すると、組織はマルチテナントのクラウドプラットフォームからデジタルアセットを簡単に作成、管理、配信、最適化できます。 [AEM Assetsに関する新しいビデオ機能チュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+Experience Manager Assets を使用すると、組織はマルチテナントクラウドプラットフォームからデジタルアセットを簡単に作成、管理、配信、最適化できます。[AEM Assets の機能に関する新しいビデオチュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)
 
-* [Experience Manager Assetsの使用](/help/assets/manage-assets.md)
+* [Experience Manager Assets の操作](/help/assets/manage-assets.md)
 * [Dynamic Media の操作](/help/assets/dynamic-media.md)
 * [Experience Manager のリリースノート](/help/release-notes/release-notes.md)
 
 ## Experience Manager Forms {#aem-forms}
 
-Experience Managerは、複雑なデジタルフォームの作成、管理、公開、更新を容易におこなえるソリューションを提供し、バックエンドのプロセス、ビジネスルール、データとの統合を実現します。
+Experience Manager は、バックエンドプロセス、ビジネスルール、データとの統合だけでなく、複雑なデジタルフォームを作成、管理、公開、更新するための使いやすいソリューションを実現します。
 
-Experience Manager Formsは、フォームのオーサリング、管理、公開と、通信管理機能、ドキュメントセキュリティ、統合分析を組み合わせて、魅力的なエンドツーエンドのエクスペリエンスを作成します。 [Experience Manager Formsの新しいビデオ機能チュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+Experience Manager Forms では、フォームのオーサリング、管理、発行を、通信管理機能、ドキュメントセキュリティ、統合分析と組み合わせた、魅力的なエンドツーエンドのエクスペリエンスを作成できます。[Experience Manager Forms の機能に関する新しいビデオチュートリアルをご覧ください。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)
 
-* [Experience Manager Formsの概要](/help/forms/using/introduction-aem-forms.md)
-* [Experience Manager Formsの新機能](/help/forms/using/whats-new.md)
-* [Experience Manager Formsのアーキテクチャとトポロジ](/help/forms/using/aem-forms-architecture-deployment.md)
-* [パフォーマンスチューニングExperience Manager Forms](/help/forms/using/performance-tuning-aem-forms.md)
+* [Experience Manager Forms の概要](/help/forms/using/introduction-aem-forms.md)
+* [Experience Manager Forms の新機能](/help/forms/using/whats-new.md)
+* [Experience Manager Forms のアーキテクチャとトポロジ](/help/forms/using/aem-forms-architecture-deployment.md)
+* [Experience Manager Forms のパフォーマンスの調整](/help/forms/using/performance-tuning-aem-forms.md)
 
 ## Experience Manager Screens {#aem-screens}
 
-Experience Manager Screensは、Adobe Experience Managerの機能です。包括的なデジタルマーケティングプラットフォームから、様々な種類の画面に関する動的でインタラクティブなデジタルエクスペリエンスやインタラクションを公開できます。 [詳細情報を参照してください。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)
+Experience Manager Screens は Adobe Experience Manager の機能であり、包括的なデジタルマーケティングプラットフォームと連携して、動的でインタラクティブなデジタルエクスペリエンスと様々なタイプの画面に関するインタラクションを公開できます。[詳細情報。](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)
 
-## Experience Managerコミュニティ {#aem-communities}
+## Experience Manager Communities {#aem-communities}
 
-Experience Managerコミュニティは、フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能を含むオンラインコミュニティエクスペリエンスを作成し、顧客、従業員、ブランドにとって有益な機能です。 [詳細情報を参照してください。](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/overview.html?lang=en)
+Experience Manager Communities は Adobe Experience Manager の機能であり、フォーラム、ユーザーグループ、学習リソースだけでなく、顧客、従業員、ブランドにとって価値のあるその他のソーシャル機能を含むオンラインコミュニティエクスペリエンスの作成に役立ちます。[詳細情報。](https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/overview.html?lang=ja)
 
-## Experience Manager基盤 {#aem-foundation}
+## Experience Manager の基盤 {#aem-foundation}
 
-詳しくは、 [Adobe Experience Manager 6.5 foundation](/help/sites-deploying/home.md) およびAdobeのManaged Servicesデプロイメントモデルを使用するか、一部の [このリリースの機能を紹介する新しいビデオです。](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=en)
+[Adobe Experience Manager 6.5 の基盤](/help/sites-deploying/home.md)とアドビの Managed Services デプロイメントモデルの詳細を確認するか、[このリリースの機能を紹介する新しいビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html?lang=ja)をご覧ください。
