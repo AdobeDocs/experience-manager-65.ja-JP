@@ -1,6 +1,6 @@
 ---
-title: 作成者向けの最初の手順
-description: ここでは、Adobe Experience Manager(AEM) でコンテンツをオーサリングする際に使用する主なタスクの概要について説明します。
+title: 作成者が行う最初の手順
+description: ここでは、Adobe Experience Manager（AEM）でコンテンツをオーサリングする際に使用する主なタスクの概要について説明します。
 uuid: 1343acf9-b104-40f3-a3f2-df42060cb4fd
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,17 +9,17 @@ topic-tags: page-authoring, introduction
 discoiquuid: 7f5713fe-01e3-450e-b71a-dc567d9a192e
 exl-id: b41aa7e5-1a5f-4e5e-be79-637d9f71ad72
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '412'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
 # 作成者がおこなう最初の手順 {#first-steps-for-authors}
 
-この節では、 [コンテンツのオーサリングを開始中](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) をAdobe Experience Manager(AEM) に置き換えます。
+ここでは、Adobe Experience Manager（AEM）で[コンテンツのオーサリングを開始する](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)際に使用する主なタスクの概要について説明します。
 
-対象は次のとおりです。
+説明する内容は次のとおりです。
 
 * [はじめに](#getting-started)：初めてページを作成して公開するために必要になる基本的な一連のイベントについて、詳しく説明します。
 
@@ -27,23 +27,23 @@ ht-degree: 26%
 
 ## はじめに {#getting-started}
 
-ここでは、最初のページを作成して公開するために必要なイベントの基本的なシーケンスについて詳しく説明します。
+最初のページを作成して公開するために必要になる基本的なイベントシーケンスについて、詳しく説明します。
 
 ### ページの場所への移動 {#navigating-to-the-page-location}
 
-Web サイトのコンテンツはツリー構造で保持されます。 ページを作成または編集するには、 [Web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#navigating-with-the-websites-console).
+Web サイトのコンテンツはツリー構造で管理されます。ページを作成または編集するには、[web サイトコンソール](/help/sites-classic-ui-authoring/author-env-basic-handling.md#navigating-with-the-websites-console)でそのページの場所に移動する必要があります。
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-編集する前に、次の操作を行う必要があります。 [新しいページを作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page).
+編集前に、[新しいページを作成](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#creating-a-new-page)する必要があります。
 
 ### ページを開く {#opening-a-page}
 
-編集など、多くのアクションを実行する場合は、次の手順を実行します。 [ページを開く](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#opening-a-page-for-editing).
+編集などの多くのアクションで、[ページを開く](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#opening-a-page-for-editing)必要があります。
 
 ### ページの編集 {#editing-a-page}
 
-インスタンスに既存のページが存在するか、新しいページを自分で作成した直後の場合は、 [ページの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) 基準：
+インスタンスに既存のページがあるか、新しいページを自分で作成した直後の場合は、次の方法で[ページを編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md)できます。
 
 * [コンポーネント（段落）の挿入](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#inserting-a-component)
 * [コンポーネントの編集](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties)
@@ -57,7 +57,7 @@ Web サイトのコンテンツはツリー構造で保持されます。 ペー
 
 ### ページの公開  {#publishing-a-page}
 
-ページの編集が完了したら、次の操作をおこないます。 [ページを公開（またはアクティベート）します。](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10) web サイトの訪問者が使用できるようにします。
+ページの編集が完了したら、web サイトへの訪問者がページを閲覧できるように、[ページを公開（またはアクティブ化）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#main-pars-title-10)します。
 
 ## その他のアクション {#further-actions}
 
@@ -65,28 +65,28 @@ Web サイトのコンテンツはツリー構造で保持されます。 ペー
 
 ### ページのコピー {#copying-a-page}
 
-～する方が簡単な場合もある。 [ページのコピー](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page) を参照してください。コンテンツを一から作り直すのではなく、コンテンツを再利用する必要があります。
+場合によっては、[ページをコピー](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#copying-and-pasting-a-page)してそのコンテンツを再利用する方が、すべてのコンテンツを最初から作成し直すよりも簡単です。
 
 ### ページの移動または名前の変更 {#moving-or-renaming-a-page}
 
-[ページの移動と名前の変更](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page) は、基本的に同じ操作でおこなわれます。
+[ページの移動と名前変更](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#moving-or-renaming-page)は、基本的に同じアクションで実行されます。
 
 ### ページの非公開 {#unpublishing-a-page}
 
-公開 Web サイト上で、以前に公開（またはアクティブ化）したコンテンツを使用できないようにするには、次の手順を実行します。 [ページを非公開（または非アクティブ化）にする](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page).
+前に公開（またはアクティブ化）したコンテンツを公開 web サイトで閲覧できないようにするには、[ページを非公開（または非アクティブ化）](/help/sites-classic-ui-authoring/classic-page-author-publish-pages.md#unpublishing-a-page)します。
 
 ### ページの削除 {#deleting-a-page}
 
-ページが不要になった場合は、 [ページの削除](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#deleting-a-page).
+ページが不要になった場合は、[ページを削除](/help/sites-classic-ui-authoring/classic-page-author-manage-pages.md#deleting-a-page)できます。
 
 ### ページプロパティの設定 {#setting-the-page-properties}
 
-毎 [ページにプロパティがあります](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md) これらを定義して、操作の側面を決定できます。
+すべての[ページにプロパティがあり](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。
 
 ### ページのバージョンの作成 {#creating-a-version-of-a-page}
 
-以下が可能です。 [ページのバージョンを作成する](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version) その後 [元のバージョンに戻す](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick) 必要に応じて。
+[ページのバージョンを作成](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#creating-a-new-version)した後で、必要に応じて[元のバージョンに戻す](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoring-a-page-version-from-sidekick)ことができます。
 
 ## 詳細情報 {#more-information}
 
-オーサリングに関する詳細については、 [ページオーサリング](/help/sites-classic-ui-authoring/classic-page-author.md) および [オーサー環境の使用](/help/sites-classic-ui-authoring/author-env.md).
+オーサリングについて詳しくは、[ページのオーサリング](/help/sites-classic-ui-authoring/classic-page-author.md)および[オーサー環境の操作](/help/sites-classic-ui-authoring/author-env.md)を参照してください。
