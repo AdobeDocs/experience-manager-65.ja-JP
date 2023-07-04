@@ -3,7 +3,7 @@ title: AEM 6.5 管理ユーザーガイド
 description: AEM 6.5 の管理について説明します。これらのガイドでは、サイトの機能、デプロイメント操作、セキュリティ機能、パーソナライゼーション、統合などについて説明します。
 exl-id: 299c783a-1495-4c0d-8431-cd7de142a163
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '328'
 ht-degree: 100%
 
