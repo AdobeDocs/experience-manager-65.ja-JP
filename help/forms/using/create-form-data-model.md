@@ -10,9 +10,9 @@ discoiquuid: 12e6c325-ace0-4a57-8ed4-6f7ceee23099
 docset: aem65
 exl-id: 40bc5af6-9023-437e-95b0-f85d3df7d8aa
 source-git-commit: e147605ff4d5c3d2403632285956559db235c084
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1512'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
@@ -20,15 +20,15 @@ ht-degree: 67%
 
 ![04-create-form-data-model-main](assets/04-create-form-data-model-main.png)
 
-このチュートリアルは、 [最初のアダプティブフォームを作成する](../../forms/using/create-your-first-adaptive-form.md) 系列。 チュートリアルの使用例を理解、実行、デモするために、時系列に従うことをお勧めします。
+これは、[最初のアダプティブフォームを作成する](../../forms/using/create-your-first-adaptive-form.md)シリーズを構成するチュートリアルです。チュートリアルの使用例全体を理解、実行、デモするために、シリーズを時系列に沿って実施することをお勧めします。
 
 ## チュートリアルについて {#about-the-tutorial}
 
-AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの web サービス、OData サービス、リレーショナルデータベースなど、バックエンドの様々なデータソースを使用してフォームデータモデルを作成できます。フォームデータモデル内でデータモデルオブジェクトとサービスを設定し、アダプティブフォームに関連付けることができます。 アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。 このサービスを使用すると、アダプティブフォームに事前に入力し、送信されたフォームデータをデータモデルオブジェクトに書き戻すことができます。
+AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユーザープロファイル、RESTful Web サービス、SOAP ベースの web サービス、OData サービス、リレーショナルデータベースなど、バックエンドの様々なデータソースを使用してフォームデータモデルを作成できます。フォームデータモデル内でデータモデルオブジェクトおよびサービスを設定し、アダプティブフォームに関連付けることができます。アダプティブフォームのフィールドは、データモデルオブジェクトのプロパティに連結されます。このサービスを使用すると、アダプティブフォームに事前に入力し、送信されたフォームデータをデータモデルオブジェクトに書き込むことができます。
 
 フォームデータの統合機能とフォームデータモデルについて詳しくは、「[AEM Forms のデータ統合機能](../../forms/using/data-integration.md)」を参照してください。
 
-このチュートリアルでは、フォームデータモデルを準備し、作成し、設定し、アダプティブフォームに関連付ける手順について説明します。 このチュートリアルを完了すると、次の操作を実行できるようになります。
+このチュートリアルでは、フォームデータモデルの準備、作成、設定およびアダプティブフォームとの関連付けの手順について説明します。このチュートリアルを完了すると、次の操作を実行できるようになります。
 
 * [MySQL データベースをデータソースとして設定する](#config-database)
 * [MySQL データソースを使用して、フォームデータモデルを作成する](#create-fdm)
@@ -49,15 +49,15 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 * 「[JDBC データベースドライバーのバンドル](/help/sites-developing/jdbc.md#bundling-the-jdbc-database-driver)」の説明に従って、[!DNL MySQL] JDBC ドライバー用の OSGi バンドルが設定されていること
 * 最初のチュートリアル「[アダプティブフォームの作成](/help/forms/using/create-adaptive-form.md)」の説明に従って、アダプティブフォームが設定されていること
 
-## 手順 1:MySQL データベースをデータソースとして設定する {#config-database}
+## 手順 1：MySQL データベースをデータソースとして設定する {#config-database}
 
-様々なタイプのデータソースを設定して、フォームデータモデルを作成できます。 このチュートリアルでは、サンプルデータを設定して入力した MySQL データベースを設定します。 その他のサポート対象データソースとその設定方法について詳しくは、 [AEM Forms Data Integration](../../forms/using/data-integration.md).
+様々なタイプのデータソースを設定して、フォームデータモデルを作成できます。このチュートリアルでは、サンプルデータが取り込まれた MySQL データベースを設定します。その他のサポート対象データソースとその設定方法について詳しくは、[AEM Forms データ統合](../../forms/using/data-integration.md)を参照してください。
 
 [!DNL MySQL] データベースを設定するには、次の手順を実行します。
 
 1. [!DNL MySQL] データベース用の JDBC ドライバーを OSGi バンドルとしてインストールします。
 
-   1. ダウンロード [!DNL MySQL] JDBC ドライバ OSGi バンドル `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html`. <!-- This URL is an insecure link but using https is not possible -->
+   1. [!DNL MySQL] JDBC ドライバー OSGi バンドルを `http://www.java2s.com/ref/jar/download-orgosgiservicejdbc100jar-file.html` からダウンロードします。<!-- This URL is an insecure link but using https is not possible -->
    1. AEM [!DNL Forms] のオーサーインスタンスに管理者としてログインし、AEM Web コンソールのバンドルに移動します。デフォルトの URL は、[https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles) です。
 
    1. **[!UICONTROL Install/Update]** をタップします。「[!UICONTROL バンドルのアップロード／インストール]」ダイアログが表示されます。
@@ -67,12 +67,12 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 1. [!DNL MySQL] データベースをデータソースとして設定します。
 
    1. AEM web コンソール（[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)）に移動します。
-   1. 「**Apache Sling Connection Pooled DataSource**」という設定を探し、をタップして、設定を編集モードで開きます。
+   1. 「**Apache Sling Connection Pooled DataSource**」という設定を探し、その設定をタップして編集モードで開きます。
    1. 設定ダイアログで、次の詳細を指定します。
 
-      * **データソース名：** 任意の名前を指定できます。 例えば、「**WeRetailMySQL**」などを指定します。
-      * **DataSource サービスのプロパティ名**:DataSource 名を含むサービスプロパティの名前を指定します。 データソースインスタンスを OSGi サービスとして登録する際に指定されます。 例： **datasource.name**.
-      * **JDBC ドライバークラス**:JDBC ドライバーの Java クラス名を指定します。 [!DNL MySQL] データベースの場合は、**com.mysql.jdbc.Driver**&#x200B;と指定します。
+      * **データソース名：**&#x200B;任意の名前を指定できます。例えば、「**WeRetailMySQL**」などを指定します。
+      * **DataSource サービスのプロパティ名**：DataSource 名を含むサービスプロパティの名前を指定します。データソースインスタンスを OSGi サービスとして登録する際に指定されます。例えば、**datasource.name** です。
+      * **JDBC ドライバークラス**：JDBC ドライバーの Java クラス名を指定します。[!DNL MySQL] データベースの場合は、**com.mysql.jdbc.Driver**&#x200B;と指定します。
       * **JDBC connection URI**：データベースの接続 URL を指定します。ポート 3306 およびスキーマ weretail で実行される [!DNL MySQL] データベースの場合、URL は `jdbc:mysql://'server':3306/weretail?autoReconnect=true&useUnicode=true&characterEncoding=utf-8` です。
 
       >[!NOTE]
@@ -88,7 +88,7 @@ AEM [!DNL Forms] のデータ統合モジュールを使用すると、AEM ユ�
 
       * **Test on Borrow：** は **[!UICONTROL Test on Borrow]** オプションを有効にします。
       * **Test on Return：** は **[!UICONTROL Test on Return]** オプションを有効にします。
-      * **検証クエリ：** プールからの接続を検証する SQL SELECT クエリを指定します。 クエリは、少なくとも 1 つの行を返す必要があります。 例えば、**customerdetails から &#42; を選択します**。
+      * **検証クエリ：**&#x200B;プールからの接続を検証する SQL SELECT クエリを指定します。クエリは、1 行以上の行を返す必要があります。例えば、**customerdetails から &#42; を選択します**。
       * **Transaction Isolation**：このオプションの値を「**READ_COMMITTED**」に設定します。
 
          上記以外のプロパティはデフォルト[値](https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html)のままにして **[!UICONTROL Save]** をタップします。
@@ -114,19 +114,19 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
 **customer-shipping-billing-details** というフォームデータモデルが作成されます。
 
-## 手順 3:フォームデータモデルを設定する {#config-fdm}
+## 手順 3：フォームデータモデルを設定する {#config-fdm}
 
 フォームデータモデルを設定するには、次の操作を行います。
 
 * データモデルオブジェクトとサービスを追加する
 * データモデルオブジェクトの読み取りサービスと書き込みサービスの設定
 
-フォームデータモデルを設定するには、以下の手順を実行します。
+フォームデータモデルを設定するには、次の手順に従います。
 
 1. AEM オーサーインスタンスで、**[!UICONTROL フォーム]**／**[!UICONTROL データ統合]**&#x200B;に移動します。デフォルトの URL は、[https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm](https://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) です。
 1. 前の手順で作成した **customer-shipping-billing-details** というフォームデータモデルが表示されます。編集モードで開きます。
 
-   選択したデータソース **WeRetailMySQL** がフォームデータモデル内に設定されている。
+   選択したデータソース **WeRetailMySQL** がフォームデータモデルで設定されます。
 
    ![default-fdm](assets/default-fdm.png)
 
@@ -140,12 +140,12 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
       * 市区町村
       * ステート
       * 郵便番号
-   * **サービス :**
+   * **サービス：**
 
-      * get
+      * 取得
       * 更新
 
-   タップ **選択項目を追加** 選択したデータモデルオブジェクトとサービスをフォームデータモデルに追加する場合。
+   「**選択項目を追加**」をタップして、フォームデータモデルに対して選択したデータモデルオブジェクトおよびサービスを追加します。
 
    ![WeRetail スキーマ](assets/weretail_schema_new.png)
 
@@ -153,14 +153,14 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
    >
    >JDBC データソースのデフォルトの get サービス、update サービス、insert サービスは、フォームデータモデルでそのまま使用することができます。
 
-1. データモデルオブジェクトの読み取りサービスと書き込みサービスを設定します。
+1. データモデルオブジェクトに読み取りサービスおよび書き込みサービスを設定します。
 
-   1. を選択します。 **customerdetails** データモデルオブジェクトをタップします。 **[!UICONTROL プロパティを編集]**.
+   1. **customerdetails** データモデルオブジェクトを選択して、「**[!UICONTROL プロパティを編集]**」をタップします。
    1. 「読み取りサービス」ドロップダウンで「**[!UICONTROL get]**」を選択します。customerdetails データモデルオブジェクトのプライマリキーである **id** 引数が自動的に追加されます。タグ ![aem_6_3_edit](assets/aem_6_3_edit.png) をタップして 、次のように引数を設定します。
 
       ![read-default](assets/read-default.png)
 
-   1. 同様に、 **[!UICONTROL 更新]** を書き込みサービスとして使用する。 この **customerdetails** オブジェクトが引数として自動的に追加されます。 引数は次のように設定します。
+   1. 同様に、書き込みサービスとして「**[!UICONTROL 更新]**」を選択します。**customerdetails** オブジェクトが引数として自動的に追加されます。引数は次のように設定されます。
 
       ![write-default](assets/write-default.png)
 
@@ -179,8 +179,8 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
    1. **[!UICONTROL get]** サービスを選択して「**[!UICONTROL プロパティの編集]**」をタップします。プロパティダイアログが開きます。
    1. プロパティを編集ダイアログで、以下のプロパティを指定します。
 
-      * **タイトル**:サービスのタイトルを指定します。 例：配送先住所を取得します。
-      * **説明**:サービスの詳細な機能を含む説明を指定します。 次に例を示します。
+      * **タイトル**：サービスのタイトルを指定します。例：配送先住所を取得します。
+      * **説明**：サービスの詳細な機能を含む説明を指定します。次に例を示します。
 
          このサービスは [!DNL MySQL] データベースから配送先住所などの顧客についての詳細を取得します
 
@@ -188,8 +188,8 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
          customerdetail スキーマ
 
-      * **配列を返す**:を無効にします。 **配列を返す** オプション。
-      * **引数**:次の名前の引数を選択 **ID**.
+      * **配列を返す**：「**配列を返す**」オプションを無効にします。
+      * **引数**：**ID** という引数を選択します。
 
       「**[!UICONTROL 完了]**」をタップします。これで、顧客の詳細情報を MySQL データベースから取得するサービスが設定されました。
 
@@ -199,8 +199,8 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
    1. [!UICONTROL プロパティを編集]ダイアログで、以下を指定します。
 
-      * **タイトル**:サービスのタイトルを指定します。 例えば、「配送先住所を更新」などです。
-      * **説明**:サービスの詳細な機能を含む説明を指定します。 次に例を示します。
+      * **タイトル**：サービスのタイトルを指定します。例えば、「配送先住所を更新」などです。
+      * **説明**：サービスの詳細な機能を含む説明を指定します。次に例を示します。
 
          このサービスは、配送先住所とそれに関連するフィールドを MySQL データベース内で更新します
 
@@ -217,15 +217,15 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
 
 
-フォームデータモデル内のデータモデルオブジェクトとサービスが設定されています。 これで、フォームデータモデルをテストできます。
+フォームデータモデル内のデータモデルオブジェクトとサービスが設定されています。これで、フォームデータモデルをテストできます。
 
-## 手順 4:フォームデータモデルをテストする {#test-fdm}
+## 手順 4：フォームデータモデルをテストする {#test-fdm}
 
 データモデルオブジェクトとサービスをテストすることにより、フォームデータモデルが正しく設定されているかどうかを確認することができます。
 
 テストを実行するには、以下の手順を実行します。
 
-1. 次に移動： **[!UICONTROL モデル]** タブで、 **customerdetails** データモデルオブジェクトを選択し、をタップします。 **[!UICONTROL モデルオブジェクトのテスト]**.
+1. 「**[!UICONTROL モデル]**」タブに移動し、**customerdetails** データモデルオブジェクトを選択し、「**[!UICONTROL モデルオブジェクトをテスト]**」をタップします。
 1. [!UICONTROL モデル／サービスのテスト]ウィンドウの「**[!UICONTROL モデル／サービスを選択]**」ドロップダウンで「**[!UICONTROL モデルオブジェクトを読み込み]**」を選択します。
 1. 「**customerdetails**」セクションで、設定済み [!DNL MySQL] データベース内の **id** 引数を指定して「**[!UICONTROL テスト]**」をタップします。
 
@@ -233,9 +233,9 @@ AEM [!DNL Forms] には、設定済みデータソースから[フォームデ�
 
    ![test-read-model](assets/test-read-model.png)
 
-1. 同様に、書き込みモデルのオブジェクトとサービスをテストできます。
+1. 同様に、書き込みモデルオブジェクトおよびサービスをテストできます。
 
-   次の例では、更新サービスは、データベース内の ID 7102715のアドレスの詳細を正常に更新します。
+   次の例では、更新サービスは、データベース内の ID 7102715 のアドレスの詳細を正常に更新します。
 
    ![test-write-model](assets/test-write-model.png)
 
