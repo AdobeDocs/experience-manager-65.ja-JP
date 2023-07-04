@@ -11,7 +11,7 @@ exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
 workflow-type: tm+mt
 source-wordcount: '4663'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -56,12 +56,12 @@ ht-degree: 97%
       * **core.wcm.components.all-2.0.4.zip** - *サンプル WCM コンポーネントのコレクション*
 
       * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *Sites ページ列コントロール用の AEM Sites グリッドレイアウトパッケージ*
+
    * **we-gov-forms.ui.content-&lt;version>.zip** - *すべてのコンテンツ、ページ、画像、フォーム、インタラクティブ通信アセットなどが含まれます。*
 
    * **we-gov-forms.ui.analytics-&lt;version>.zip** - *リポジトリ内に保存するすべての We.Gov Forms Analytics データが含まれます。*
 
    * **we-gov-forms.config.public-&lt;version>.zip** - *フォームのデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
-
 
 このパッケージのアセットには、次のものが含まれます。
 
@@ -84,8 +84,8 @@ ht-degree: 97%
 
 1. [ソフトウェア配布](https://experience.adobe.com/downloads)を開きます。ソフトウェア配布にログインするには、Adobe ID が必要です。
 1. ヘッダーメニューで「**[!UICONTROL Adobe Experience Manager]**」をタップします。
-1. 内 **[!UICONTROL フィルター]** セクション：
-   1. 選択 **[!UICONTROL Forms]** から **[!UICONTROL 解決策]** 」ドロップダウンリストから選択できます。
+1. 「**[!UICONTROL フィルター]**」セクションで、
+   1. 「**[!UICONTROL ソリューション]**」ドロップダウンリストから「**[!UICONTROL Forms]**」を選択します。
    2. パッケージのバージョンとタイプを選択します。また、「**[!UICONTROL ダウンロードを検索]**」オプションを使用して結果をフィルターすることもできます。
 1. **we-gov-forms.pkg.all-&lt;version>.zip** パッケージ名をタップし、「**[!UICONTROL EULA 条項に同意]**」を選択して、「**[!UICONTROL ダウンロード]**」をタップします。
 1. [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja)を開き「**[!UICONTROL パッケージをアップロード]**」をクリックしてパッケージをアップロードします。
@@ -183,7 +183,7 @@ ht-degree: 97%
 
 1. SSL 証明書およびキーの詳細：
 
-   1. 「CN=localhost」に対して発行
+   1. 「CN=localhost」に対して公開
    1. 10 年の有効性
    1. 「password」のパスワード値
 1. 秘密鍵は *localhostprivate.der*。
@@ -256,8 +256,8 @@ ht-degree: 97%
       1. 認証範囲 - **openid**
       1. 認証ヘッダー - **認証ベアラ**
       1. リソース - 例：`https://msdynamicsserver.api.crm3.dynamics.com`
-   1. 「OAuth に接続」をクリックします。
 
+   1. 「OAuth に接続」をクリックします。
 
 1. 認証が成功したら、「保存して閉じる」をクリックして統合を完了します。
 
@@ -281,7 +281,7 @@ ht-degree: 97%
 1. リソース URL/サービスルート URL を探すには、MS Dynamics インスタンスダッシュボードに移動します。
 1. 上部のナビゲーションバーで、「Sales」または独自のインスタンスタイプをクリックし、「設定を選択」をクリックします。
 1. 右下の「カスタマイズ」と「開発者向けリソース」をクリックします。
-1. 次のサービスルート URL があります。例：
+1. そのサービスのルート URL が表示されます。例：
 
    *`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 
@@ -311,9 +311,11 @@ ht-degree: 97%
 1. サービスをテストし、設定済みのデータソースに正常に接続できることを確認します。
 
    >[!NOTE]
+   >
    サービスをテストしたら、**キャンセル**&#x200B;をクリックし、不本意の変更がフォームデータモデルに反映されないようにします。
 
    >[!NOTE]
+   >
    データソースが FDM に正常にバインドされるには、AEM サーバーの再起動が必要であることが報告されています。
 
 #### フォームデータモデル（Derby）のテスト {#test-fdm-derby}
@@ -418,6 +420,7 @@ Adobe Analytics アカウントのユーザー資格情報を見つけるには�
 #### Adobe Analytics Sites レポートを表示 {#view-adobe-analytics-sites-reporting}
 
 >[!NOTE]
+>
 `we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
 
 1. *https://&lt;aemserver>:&lt;port>/sites.html/content* に移動します。 
@@ -446,6 +449,7 @@ Adobe Analytics アカウントのユーザー資格情報を見つけるには�
 #### Adobe Analytics Forms レポートを表示 {#view-adobe-analytics-forms-reporting}
 
 >[!NOTE]
+>
 `we-gov-forms.ui.analytics-<version>.zip` パッケージがインストールされている場合、AEM Forms Analytics データはオフラインでも、Adobe Analytics クラウド設定なしでも利用できますが、AEM Sites データにはアクティブなクラウド設定が必要です。
 
 1. 次に移動します。
@@ -492,6 +496,7 @@ Manager の左上の ／>ツール／>セキュリティ／ >Adobe IMS設定を�
 1. 設定の残りの部分を続行しないでください。 [Adobe I/O での統合の作成](#create-integration-adobeio)節を確認してください。
 
 >[!NOTE]
+>
 この節で作成された証明書は、Adobe I/Oで統合サービスを作成するために使用されます。統合サービスで作成すると、Adobe I/O からのその情報を使用して設定を完了することができます。
 
 #### Adobe I/O での統合の作成 {#create-integration-adobeio}
@@ -738,7 +743,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 ### デモに関する考慮事項 {#demo-considerations}
 
 * AGRS-159 に従い、登録アダプティブフォームで使用する連絡先の名前（名、ミドルネーム、姓）は固有にします。
-* 登録アダプティブフォームは、フォームの「電子メール」フィールドで指定された電子メールにAdobe Sign電子メールを送信します。 このメールアドレスには、Adobe Sign クラウド設定で使用したのと同じメールアドレスを指定することはできません。
+* 登録アダプティブフォームは、フォームのメールフィールドに指定されたメールアドレスに Adobe Sign メールを送信します。このメールアドレスには、Adobe Sign クラウド設定で使用したのと同じメールアドレスを指定することはできません。
 
 ### 既知の問題 {#known-issues}
 
@@ -751,8 +756,8 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 アクセシビリティテストを実行するには、次の場所にある Chrome プラグインをインストールします。 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
-インストール後、Chrome ブラウザー内でテストするページを読み込みます ( 注意：複数のタブを開くと、スコアに影響が及ぶ場合があります。1 つのタブだけを開くことをお勧めします )。 ページを読み込んだら、
-そのページで**右クリック**&#x200B;し、「**Audits**」タブを選択します。その画面で開発者は、アクセシビリティプラグインで実行する検証のタイプを選択できます。必要なオプションをすべて選択したら、「レポートを生成」ボタンをクリックできます。 これにより、アクセシビリティの総合評価や、その評価を向上するための提案が記載された PDF ドキュメントが生成されます。
+インストールしたら、テストするページを Chrome ブラウザーで読み込みます（メモ：タブが複数開かれているとスコアに影響する場合があります。タブは 1 つだけ開くことをお勧めします）。ページを読み込んだら、
+そのページで**右クリック**&#x200B;し、「**Audits**」タブを選択します。その画面で開発者は、アクセシビリティプラグインで実行する検証のタイプを選択できます。必要なオプションをすべて選択したら、「レポートを生成」ボタンをクリックできます。これにより、アクセシビリティの総合評価や、その評価の向上につながる提案が記載された PDF ドキュメントが生成されます。
 
 レポートの実行後、次の情報が表示されます。
 
@@ -791,6 +796,7 @@ AEM Forms で **Forms**／**テーマ**／**リファレンステーマ**／**Ul
 1. サービス定義を開き、選択したサービスをワークフロー内で呼び出せるようにしてください。
 
    >[!NOTE]
+   >
    ユーザーが Configuration Manager ページ内でサービスを有効にしているのと同じ理由で、要求された外部サービスと通信するために、ユーザーは引き続きサービス設定を行う必要があります。
 
    ![we gov forms パッケージ](assets/aftia-configuration-options.jpg)

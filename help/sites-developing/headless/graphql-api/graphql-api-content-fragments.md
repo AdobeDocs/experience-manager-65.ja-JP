@@ -6,7 +6,7 @@ exl-id: beae1f1f-0a76-4186-9e58-9cab8de4236d
 source-git-commit: 1481d613783089046b44d4652d38f7b4b16acc4d
 workflow-type: tm+mt
 source-wordcount: '4479'
-ht-degree: 59%
+ht-degree: 61%
 
 ---
 
@@ -29,10 +29,9 @@ AEM の GraphQL API を使用すると、ヘッドレス CMS 実装の JavaScrip
 >* [AEM Commerce が、GraphQL 経由でコマースプラットフォームのデータを使用する](/help/commerce/cif/integrating/magento.md)。
 >* AEM コンテンツフラグメントが、AEM GraphQL API（標準の GraphQL に基づくカスタム実装）と連携して、アプリケーションで使用するための構造化コンテンツを配信する。
 
-
 ## 前提条件 {#prerequisites}
 
-GraphQLを使用しているお客様は、GraphQLインデックスパッケージ 1.0.5 を使用してAEMコンテンツフラグメントをインストールする必要があります。詳しくは、 [リリースノート](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 詳しくは、を参照してください。
+GraphQL を使用しているお客様は、GraphQL インデックスパッケージ 1.0.5 を使用した AEM コンテンツフラグメントをインストールする必要があります。詳しくは、[リリースノート](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package)を参照してください。
 
 ## GraphQL API {#graphql-api}
 
@@ -40,15 +39,15 @@ GraphQL とは次のことを意味します。
 
 * 「*...API のクエリ言語と、既存のデータを使用してこれらのクエリを満たすランタイムです。GraphQLは、API でデータの完全で理解可能な説明を提供します。 必要なものと不要なものを正確に求める力をクライアントに提供し、API を時間の経過と共に発展させ、強力な開発者ツールを可能にします。*&quot;.
 
-   [GraphQL.org](https://graphql.org) を参照
+  [GraphQL.org](https://graphql.org) を参照
 
 * 「*...柔軟な API レイヤー用のオープンな仕様。GraphQLを既存のバックエンドに重ねて、以前よりも迅速に製品を構築できます。.*&quot;.
 
-   「[Explore GraphQL](https://graphql.com/)」を参照
+  「[Explore GraphQL](https://graphql.com/)」を参照
 
 * *&quot;...2012 年にFacebookが社内で開発したデータクエリ言語および仕様で、2015 年に公開オープンソースになりました。 開発者の生産性を高め、転送データの量を最小限に抑えるために、REST ベースのアーキテクチャに代わる手段を提供します。GraphQL は、あらゆる規模の数百の組織により実稼働環境で使用されています...」*
 
-   [GraphQL Foundation](https://graphql.org/foundation) を参照してください。
+  [GraphQL Foundation](https://graphql.org/foundation) を参照してください。
 
 <!--
 "*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
@@ -113,7 +112,7 @@ AEMは、クエリ（両方のタイプ）をに変換する機能を提供し�
 <!-- is this fully accurate? -->
 >[!NOTE]
 >
->通常、オーサー環境には Dispatcher/CDN がないので、そこでの永続化クエリの使用ではパフォーマンスの向上はありません。テスト以外に
+>通常、オーサーには Dispatcher／CDN がないので、永続クエリをテストする以外に使用してもパフォーマンス上のメリットはありません。
 
 POST リクエストを使用する GraphQL クエリは、キャッシュされないのでお勧めしません。そのため、デフォルトのインスタンスでは、Dispatcher はそれらのクエリをブロックするように設定されています。
 
@@ -135,7 +134,7 @@ GraphQLはGETリクエストもサポートしますが、これらのリクエ�
 
 このインターフェイスでは、クエリを直接入力およびテストできます。
 
-次に例を示します。
+例：
 
 * `http://localhost:4502/content/graphiql.html`
 
@@ -236,13 +235,13 @@ Sites GraphQL サービスは、コンテンツフラグメントモデルに対
 
 * ユーザーが生成するフィールド
 
-   選択された[フィールドタイプ](#data-types)を使用して、コンテンツフラグメントモデルの設定方法に基づいてフィールドが作成されます。フィールド名は、**データタイプ**&#x200B;の「**プロパティ名**」フィールドから取得されます。
+  選択された[フィールドタイプ](#data-types)を使用して、コンテンツフラグメントモデルの設定方法に基づいてフィールドが作成されます。フィールド名は、**データタイプ**&#x200B;の「**プロパティ名**」フィールドから取得されます。
 
    * また、 **レンダリング形式** を設定して、特定のデータタイプを設定できるようにします。 例えば、1 行のテキストフィールドを複数の 1 行のテキストを含むように設定するには、 `multifield` をドロップダウンから選択します。
 
 * GraphQL for AEMでも、複数の [ヘルパーフィールド](#helper-fields).
 
-   これらのフィールドは、コンテンツフラグメントを識別するために、またはコンテンツフラグメントに関する詳細情報を取得するために使用されます。
+  これらのフィールドは、コンテンツフラグメントを識別するために、またはコンテンツフラグメントに関する詳細情報を取得するために使用されます。
 
 ### データタイプ {#data-types}
 
@@ -258,7 +257,7 @@ AEM 用 GraphQL では一連のタイプをサポートしています。サポ�
 | 定義済みリスト |  `String` |  モデルの作成時に定義されたオプションのリストに含まれるオプションを表示するために使用します |
 |  タグ |  `[String]` |  AEM で使用されているタグを表す文字列のリストを表示するために使用します |
 | コンテンツ参照 |  `String` |  AEM 内の別のアセットへのパスを表示するために使用します |
-| フラグメント参照 |  *モデルタイプ* <br><br>単一のフィールド： `Model`  — 直接参照されるモデルタイプ <br><br>複数フィールド（1 つの参照タイプ）: `[Model]`  — 型の配列 `Model`（配列から直接参照） <br><br>複数の参照型を持つマルチフィールド： `[AllFragmentModels]`  — 和集合型を持つ配列から参照される、すべてのモデル型の配列 |  特定のモデルタイプの 1 つ以上のコンテンツフラグメントを参照するために使用されます。モデルが作成されたときに定義されます。 |
+| フラグメント参照 |  *モデルタイプ*<br><br>単一のフィールド： `Model` - 直接参照されるモデル型 <br><br>マルチフィールド（1 つの参照タイプ）：`[Model]` - 型の配列 `Model`（配列から直接参照）<br><br>複数の参照型を持つマルチフィールド：`[AllFragmentModels]` - 和集合型を持つ配列から参照される、すべてのモデル型の配列 | モデルの作成時に定義された、特定のモデル型の 1 つ以上のコンテンツフラグメントの参照に使用します |
 
 {style="table-layout:auto"}
 
@@ -651,7 +650,6 @@ query {
 >
 >* オフセットが高いほど、JCR クエリの結果セット全体から項目をスキップするのにかかる時間が長くなります。 大規模な結果セットに対する代替ソリューションは、`first` および `after` メソッドでページ分割されたクエリを使用することです。
 
-
 ### ページ分割されたクエリ - first と after {#paginated-first-after}
 
 `...Paginated` クエリタイプは、ほとんどの `...List` クエリタイプの機能（フィルタリング、並べ替え）を再利用しますが、`offset`／`limit` 引数の代わりに、[GraphQL カーソル接続仕様](https://relay.dev/graphql/connections.htm)で定義されている `first`／`after` 引数を使用します。[GraphQL の概要](https://graphql.org/learn/pagination/#pagination-and-edges)では、堅苦しくない概要を見つけることができます。
@@ -689,7 +687,6 @@ query {
 >
 >* 内部の技術的制約により、ネストされたフィールドに並べ替えとフィルタリングが適用されると、パフォーマンスが低下します。 したがって、ルートレベルで保存されたフィルター/並べ替えフィールドを使用します。 大きなページ分割された結果セットをクエリする場合は、この方法もお勧めします。
 
-
 ## AEM 用の GraphQL - 拡張機能の概要 {#graphql-extensions}
 
 AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様に従います。AEMを使用したGraphQLクエリには、次のような拡張機能があります。
@@ -701,24 +698,23 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
    * モデル名に `List` を付け加えます（例：`cityList`）
    * [サンプルクエリ - すべての都市に関するすべての情報](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)を参照してください
 
-   これにより、以下のことが可能になります。
+  これにより、以下のことが可能になります。
 
    * [結果の並べ替え](#sorting)
 
       * `ASC` : 昇順
       * `DESC` : 降順
+
    * 次のいずれかを使用して、結果のページを返します。
 
       * [オフセットと制限を指定したリストクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#list-offset-limit)
       * [最初とその後を指定したページ分割クエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#paginated-first-after)
    * [サンプルクエリ - すべての都市に関するすべての情報](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-information-all-cities)を参照してください
 
-
-
 * フィルター `includeVariations` は `List` のクエリタイプに含まれます。クエリ結果でコンテンツフラグメントのバリエーションを取得するには、 `includeVariations` フィルターは次のように設定する必要があります： `true`.
 
-   >[!CAUTION]
-   >フィルター `includeVariations` は、システム生成フィールド `_variation` と併用できません。
+  >[!CAUTION]
+  >フィルター `includeVariations` は、システム生成フィールド `_variation` と併用できません。
 
 * 論理和（OR）を使用する場合：
    * ` _logOp: OR` を使用します
@@ -735,51 +731,50 @@ AEM 用の GraphQL でのクエリの基本操作は、標準の GraphQL 仕様�
 
       * `_locale`：言語を表示します（言語マネージャーに基づく）
          * [特定ロケールの複数のコンテンツフラグメントのサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-given-locale)を参照してください
+
       * `_metadata`：フラグメントのメタデータを表示します
          * [メタデータのサンプルクエリ - 「GB」という賞のメタデータのリスト](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-metadata-awards-gb)を参照してください
+
       * `_model`：コンテンツフラグメントモデル（パスとタイトル）のクエリを許可します
          * [モデルからのコンテンツフラグメントモデルのサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-content-fragment-model-from-model)を参照してください
+
       * `_path`：リポジトリ内のコンテンツフラグメントへのパス
          * [サンプルクエリ - 1 つの特定の都市フラグメント](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-single-specific-city-fragment)を参照してください
+
       * `_reference`：参照（リッチテキストエディターでのインライン参照など）を表示します
          * [プリフェッチされた参照を含んだ複数のコンテンツフラグメントのサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-multiple-fragments-prefetched-references)を参照してください
+
       * `_variation`：コンテンツフラグメント内の特定のバリエーションを表示します
 
-         >[!NOTE]
-         >
-         >指定されたバリエーションがコンテンツフラグメントに対して存在しない場合は、マスターバリエーションが（フォールバック）デフォルトとして返されます。
+        >[!NOTE]
+        >
+        >指定されたバリエーションがコンテンツフラグメントに対して存在しない場合は、マスターバリエーションが（フォールバック）デフォルトとして返されます。
 
-         >[!CAUTION]
-         >システム生成フィールド `_variation` は、フィルター `includeVariations` と併用できません。
+        >[!CAUTION]
+        >システム生成フィールド `_variation` は、フィルター `includeVariations` と併用できません。
 
          * [サンプルクエリ - 名前付きバリエーションを持つすべての都市](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-cities-named-variation)を参照してください
+
       * `_tags` :：タグを含むコンテンツフラグメントまたはバリエーションの ID を表示します。このリストは、 `cq:tags` 識別子。
 
          * [サンプルクエリ - 市区町村の区切り文字としてタグ付けされた、すべての都市の名前](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-names-all-cities-tagged-city-breaks)を参照してください。
          * 詳しくは、[特定のタグが添付された、任意のモデルのコンテンツフラグメントバリエーションのサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-fragment-variations-given-model-specific-tag)を参照してください。
 
-         >[!NOTE]
-         >
-         >また、コンテンツフラグメントのメタデータを一覧表示して、タグをクエリできます。
+        >[!NOTE]
+        >
+        >また、コンテンツフラグメントのメタデータを一覧表示して、タグをクエリできます。
+
    * 操作の場合：
 
       * `_operator`：特定の演算子（`EQUALS`、`EQUALS_NOT`、`GREATER_EQUAL`、`LOWER`、`CONTAINS`、`STARTS_WITH`）を適用します
          * [サンプルクエリ - 「Jobs」という名前を持たないすべての人物](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-persons-not-jobs)を参照してください
          * [サンプルクエリ - `_path` が特定のプレフィックスで始まるすべてのアドベンチャーを参照してください](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-wknd-all-adventures-cycling-path-filter)
+
       * `_apply`：特定の条件（例：`AT_LEAST_ONCE`）を適用します
          * [サンプルクエリ - 少なくとも 1 回は現れる項目を含んだ配列をフィルタリング](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-array-item-occur-at-least-once)を参照してください
+
       * `_ignoreCase`：クエリの実行時に大文字と小文字を区別しません
          * [サンプルクエリ - 名前に SAN が含まれるすべての都市（大文字と小文字を区別しない場合）](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-all-cities-san-ignore-case)を参照してください
-
-
-
-
-
-
-
-
-
-
 
 * GraphQL のユニオン型がサポートされています
 
@@ -877,7 +872,6 @@ CORS の設定に加えて、サードパーティホストからのアクセス
 >* 信頼できるドメインにのみアクセスを許可する
 >* 機密情報が公開されないようにする
 >* ワイルドカードを使用しない [*] 構文；この機能は、GraphQLエンドポイントへの認証済みのアクセスを無効にし、世界中に公開します。
-
 
 >[!CAUTION]
 >

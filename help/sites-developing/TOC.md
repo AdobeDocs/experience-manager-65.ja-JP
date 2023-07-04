@@ -42,7 +42,7 @@ ht-degree: 98%
    + [タグライブラリ](taglib.md)
    + テンプレート{#templates}
       + [テンプレート](templates.md)
-      + [ページテンプレート - 編集可能 ](page-templates-editable.md)
+      + [ページテンプレート - 編集可能](page-templates-editable.md)
       + [ページテンプレート - 静的](page-templates-static.md)
       + [コンテンツフラグメントテンプレート](content-fragment-templates.md)
       + [アダプティブテンプレートレンダリング](templates-adaptive-rendering.md)
@@ -139,7 +139,7 @@ ht-degree: 98%
       + [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=ja)
       + [コンテンツフラグメント REST API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=ja)
       + [コンテンツフラグメント GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
-      + [GraphQLエンドポイントの管理](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
+      + [GraphQL エンドポイントの管理](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
       + [GraphiQL IDE の使用](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [永続クエリ](/help/sites-developing/headless/graphql-api/persisted-queries.md)
       + [GraphQLクエリの最適化](/help/sites-developing/headless/graphql-api/graphql-optimization.md)

@@ -6,7 +6,7 @@ exl-id: fed4e110-9415-4740-aba1-75da522039a9
 source-git-commit: d244fb50ad0f165d31bc51ee671b80bdd13c860e
 workflow-type: tm+mt
 source-wordcount: '3777'
-ht-degree: 28%
+ht-degree: 31%
 
 ---
 
@@ -106,51 +106,51 @@ ht-degree: 28%
 
 ## [!DNL Commerce]{#commerce-6517}
 
-* 移動されたタグはガベージコレクションされますが、次の製品で参照されます： `/var`. (CQ-4351337)
+* 移動されたタグはガベージコレクションされますが、次の製品で参照されます： `/var`. （CQ-4351337）
 
 ## [!DNL Forms]{#forms-6517}
 
 * AEM 6.5.15.0 Service Pack に更新した後、IE 互換モードの Edge ブラウザーで、HTML5 Forms が機能しないか、正しく読み込まれません。 (FORMS-8526、FORMS-8523)
-* ユーザーがAEM 6.5.16.0 Service Pack を適用すると、ルールエディターを開けません。 (FORMS-8290)
-* 数値ボックスコンポーネントに検証の最大桁数を適用すると、失敗します。 (FORMS-7938)
+* ユーザーがAEM 6.5.16.0 Service Pack を適用すると、ルールエディターを開けません。 （FORMS-8290）
+* 数値ボックスコンポーネントに検証の最大桁数を適用すると、失敗します。 （FORMS-7938）
 * インタラクティブ通信文を作成する際、PDF内のグラフコンポーネントが正しく生成されません。 (FORMS-7827、FORMS-8297)
-* Java™ガベージコレクションが、Experience Manager Forms OSGi サーバー上の古い生成ヒープをクリアできない。 (FORMS-8207)
-* ユーザーがExperience Manager6.5.16.0 Service Pack にアップグレードすると、送信後に CRX メタデータのプロパティが欠落します。 (FORMS-8205)
-* アダプティブフォーム内の日付選択コンポーネントを無効にした場合でも、編集可能です。 (FORMS-7804)
+* Java™ガベージコレクションが、Experience Manager Forms OSGi サーバー上の古い生成ヒープをクリアできない。 （FORMS-8207）
+* ユーザーがExperience Manager6.5.16.0 Service Pack にアップグレードすると、送信後に CRX メタデータのプロパティが欠落します。 （FORMS-8205）
+* アダプティブフォーム内の日付選択コンポーネントを無効にした場合でも、編集可能です。 （FORMS-7804）
 * Experience Manager6.5.16.0 Forms Service Pack では、ユーザーがポリシーセットコーディネーターを編集しようとすると、Manager Document Publisher は常にオフのままになります。 (FORMS-7775、FORMS-8599)
-* ユーザーがExperience Manager6.5.16.0 Service Pack にアップグレードすると、翻訳が必要な文字列を処理する「GuideNode.externalize」メソッドが動作を停止します。 (FORMS-7709)
-* 内 `Assign task` 手順：ユーザーが「通知メールを送信」を選択してワークフローを起動すると、受信した電子メールにテキストが正しく表示されません。 受信した E メールに含まれるテキストの代わりに、疑問符が受け取られます。 (FORMS-7675)
+* ユーザーがExperience Manager6.5.16.0 Service Pack にアップグレードすると、翻訳が必要な文字列を処理する「GuideNode.externalize」メソッドが動作を停止します。 （FORMS-7709）
+* 内 `Assign task` 手順：ユーザーが「通知メールを送信」を選択してワークフローを起動すると、受信した電子メールにテキストが正しく表示されません。 受信した E メールに含まれるテキストの代わりに、疑問符が受け取られます。 （FORMS-7675）
 * レコードのドキュメントが部分的にローカライズされています。 (FORMS-7674、FORMS-7573)
-* 割り当てられた特定の権限でも、ユーザーはポリシーセットを編集できません。 (FORMS-7665)
-* ユーザーが `forms-users` グループがフォームの作成を試み、Experience Manager Formsインスタンスがクラッシュします。 (FORMS-7629)
-* ユーザーがアダプティブフォームの「リセット」、「保存」、「送信」の各ボタンをクリックしても、画面にメッセージは表示されません。 (FORMS-7524)
-* Experience Manager6.5.16.0 Service Pack での PDFG 変換のパフォーマンスを向上させるために、スリープ間隔を設定できるようになりました。 (FORMS-6752)
-* 切り替えオプションは同じですが、ユーザーがカーソルを少しドラッグした場合でも、フィールドの表示/非表示は変わります。 (FORMS-6728)
-* ユーザーがExperience Manager6.5.15.0 Service Pack にアップグレードすると、アダプティブフォームが Internet Explorer でレンダリングされると、リダイレクトが機能しなくなります。 (FORMS-6725)
-* Experience Manager・デザイナが作成したPDF・フォーム内のすべてのバックグラウンド・オブジェクトの PAC 2021 ツールは、エラーを返します。 `Path object not tagged`. (FORMS-6707)
-* ユーザーがインボックスでフィルターを適用すると、 `NullPointerException` エラー。 (FORMS-6706)
-* ユーザーがフラグメントを参照しているテンプレート (.tds) ファイルを読み込むと、Experience ManagerDesigner がクラッシュします。 (FORMS-6702)
-* ユーザーがExperience Manager Forms Designer 6.5 で Output Service を使用して静的PDFを作成した場合、次のようなエラーが発生します。 `OCCD (optional content configuration dictionary) contains AS key`. (FORMS-6691)
-* ユーザーが単純なワークフローを作成し、単純な変数を追加すると、 `set variable mapping` エラーが発生しました。 (FORMS-5819)
+* 割り当てられた特定の権限でも、ユーザーはポリシーセットを編集できません。 （FORMS-7665）
+* ユーザーが `forms-users` グループがフォームの作成を試み、Experience Manager Formsインスタンスがクラッシュします。 （FORMS-7629）
+* ユーザーがアダプティブフォームの「リセット」、「保存」、「送信」の各ボタンをクリックしても、画面にメッセージは表示されません。 （FORMS-7524）
+* Experience Manager6.5.16.0 Service Pack での PDFG 変換のパフォーマンスを向上させるために、スリープ間隔を設定できるようになりました。 （FORMS-6752）
+* 切り替えオプションは同じですが、ユーザーがカーソルを少しドラッグした場合でも、フィールドの表示/非表示は変わります。 （FORMS-6728）
+* ユーザーがExperience Manager6.5.15.0 Service Pack にアップグレードすると、アダプティブフォームが Internet Explorer でレンダリングされると、リダイレクトが機能しなくなります。 （FORMS-6725）
+* Experience Manager・デザイナが作成したPDF・フォーム内のすべてのバックグラウンド・オブジェクトの PAC 2021 ツールは、エラーを返します。 `Path object not tagged`. （FORMS-6707）
+* ユーザーがインボックスでフィルターを適用すると、 `NullPointerException` エラー。 （FORMS-6706）
+* ユーザーがフラグメントを参照しているテンプレート (.tds) ファイルを読み込むと、Experience ManagerDesigner がクラッシュします。 （FORMS-6702）
+* ユーザーがExperience Manager Forms Designer 6.5 で Output Service を使用して静的PDFを作成した場合、次のようなエラーが発生します。 `OCCD (optional content configuration dictionary) contains AS key`. （FORMS-6691）
+* ユーザーが単純なワークフローを作成し、単純な変数を追加すると、 `set variable mapping` エラーが発生しました。 （FORMS-5819）
 * ユーザーが Output Service を使用してPDFを生成しようとしたとき（とマークされている場合） `PDF/A-1a`、`Preflight` サービスが失敗しました。 （LC-3920837）
 * Experience Manager6.5.16.0 Service Pack をインストールした後、Experience Managerデザイナーを開けません。 （LC-3921000）
 * ユーザーがチェックボックスとラジオボタンを追加した場合、タグツリーの構造は、タグの標準に従ってPDFされません。 （LC-3920838）
 * PDFの埋め込みとサブセット化を使用して静的PDFを生成した場合、出力サービスを通じて、生成されるフォントには埋め込みフォントのみが含まれます。 （LC-3920963）
 * RTL 形式では、ヘブライ語のテキストが正しく表示されません。 （LC-3919632）
-* ユーザーが JBoss® Turnkey サーバーでExperience Manager6.5.16.0 Service Pack にアップグレードした場合、Signature Service は呼び出しに失敗します。 発生したエラー： `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. (FORMS-7833)
-* Experience Manager6.5.14.0 Service Pack にアップグレードした後、CRX ノードを別の場所に移動する処理が機能しない。 エラーは次のように発生します。 `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`. (FORMS-7713)
-* ユーザーがExperience Manager6.5.16.0 Service Pack を更新すると、 `Usage Rights` 申し込みに失敗しました。 (FORMS-7892)
-* ユーザーがPDFドキュメントを生成しようとすると、PDF/A-1b 検証が失敗します。 (FORMS-7615)
-* ユーザーが `Configure` オプション `Form Container` コンポーネントを使用しない場合、ブラウザーは応答しなくなります。 (FORMS-7605)
-* ユーザーがExperience Manager Forms 6.5.16.0 Service Pack を更新し、 `LicenseType` から `Production`の場合、変更は反映されません。 (FORMS-7594)
-* ユーザーが、 `Chinese Full Width Characters`を含めている場合、 `ValidateForm` プロセス。 (FORMS-7464)
-* Experience Manager Forms Designer では、XMLFM は XDP ベースのテンプレート用に、レター、A4、A5 など、様々な用紙サイズで ZPL 出力を生成します。 (FORMS-7898)
+* ユーザーが JBoss® Turnkey サーバーでExperience Manager6.5.16.0 Service Pack にアップグレードした場合、Signature Service は呼び出しに失敗します。 発生したエラー： `java.lang.ClassCastException: com.adobe.xfa.TextNode cannot be cast to com.adobe.xfa.Element`. （FORMS-7833）
+* Experience Manager6.5.14.0 Service Pack にアップグレードした後、CRX ノードを別の場所に移動する処理が機能しない。 エラーは次のように発生します。 `ALC-CRX-30000-000: com.adobe.ep.crx.client.exceptions.CRCException: ALC-CRX-030-000-[Internal Server Error]`. （FORMS-7713）
+* ユーザーがExperience Manager6.5.16.0 Service Pack を更新すると、 `Usage Rights` 申し込みに失敗しました。 （FORMS-7892）
+* ユーザーがPDFドキュメントを生成しようとすると、PDF/A-1b 検証が失敗します。 （FORMS-7615）
+* ユーザーが `Configure` オプション `Form Container` コンポーネントを使用しない場合、ブラウザーは応答しなくなります。 （FORMS-7605）
+* ユーザーがExperience Manager Forms 6.5.16.0 Service Pack を更新し、 `LicenseType` から `Production`の場合、変更は反映されません。 （FORMS-7594）
+* ユーザーが、 `Chinese Full Width Characters`を含めている場合、 `ValidateForm` プロセス。 （FORMS-7464）
+* Experience Manager Forms Designer では、XMLFM は XDP ベースのテンプレート用に、レター、A4、A5 など、様々な用紙サイズで ZPL 出力を生成します。 （FORMS-7898）
 
 
 ## 統合{#integrations-6517}
 
-* Adobe Target IMS 設定をレガシークラウド設定のユーザー資格情報に変換する場合、 `connectedWhen` プロパティは変更されません。 この問題により、すべての呼び出しが、設定がまだ IMS ベースであったかのように実行されます。 (CQ-4352810)
-* 追加中 `modifyProperties` ～への許可 `fd-cloudservice` Adobe Sign設定のシステムユーザー。 (FORMS-6164)
+* Adobe Target IMS 設定をレガシークラウド設定のユーザー資格情報に変換する場合、 `connectedWhen` プロパティは変更されません。 この問題により、すべての呼び出しが、設定がまだ IMS ベースであったかのように実行されます。 （CQ-4352810）
+* 追加中 `modifyProperties` ～への許可 `fd-cloudservice` Adobe Sign設定のシステムユーザー。 （FORMS-6164）
 * Adobe Targetと統合されたExperience Managerでは、AB テストアクティビティを作成すると、そのアクティビティに関連付けられたオーディエンスが Target と同期されません。 （NPR-40085）
 
 ## Oak{#oak-6517}
@@ -249,7 +249,7 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 * `SegmentNotfound errors` クラスの閉じられていないリソースリゾルバーが原因で、実稼動オーサーインスタンスのログ内で発生する問題を修正しました。 `com.day.cq.workflow.impl.email.EMailNotificationServic`. （NPR-40187）
 * 閉じていない閉じた状態 `ResourceResolver` 例外がログに記録されています。 (ASSETS-22495)
 * 膨大な量のPSD/PDFが発生した場合にExperience Manager作成者がクラッシュする `DocumentAncestors` メタデータ属性がアップロードされます。 (ASSETS-22966)
-* クラスのセッションリーク `InboxSharingCache` と `user-reader-service`. (CQ-4352513)
+* クラスのセッションリーク `InboxSharingCache` と `user-reader-service`. （CQ-4352513）
 * 「ワークフローイニシエーター参加者選択」ステップで参加者ステップのユーザーとグループが一覧表示されると、不完全なユーザーとグループのリストが表示されます。 この問題は、あるグループが別のグループのメンバーでもあった場合に発生していました。 （NPR-40055）
 * ワークフローのパージが強化されました。 （NPR-40459）
 
@@ -310,13 +310,13 @@ org.h2.mvstore.MVStoreException: The write format 1 is smaller than the supporte
 
 Experience Manager Formsに Service Pack をインストールする手順については、 [Experience Manager Forms Service Pack のインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md).
 
-### Experience Managerコンテンツフラグメント用のGraphQLインデックスパッケージのインストール{#install-aem-graphql-index-add-on-package}
+### Experience Manager コンテンツフラグメント用の GraphQL インデックスパッケージのインストール{#install-aem-graphql-index-add-on-package}
 
 GraphQLを使用しているお客様は、 [GraphQLインデックスパッケージ 1.1.1 を使用したExperience Managerコンテンツフラグメント](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/cfm-graphql-index-def-1.1.1.zip).
 
 これにより、実際に使用する機能に基づいて、必要なインデックス定義を追加できます。
 
-このパッケージをインストールしないと、GraphQLクエリが遅くなったり失敗したりする場合があります。
+このパッケージをインストールしないと、GraphQL クエリが遅くなったり失敗したりする場合があります。
 
 >[!NOTE]
 >
@@ -362,16 +362,16 @@ To retrieve your runtime copy, Adobe recommends to synchronize the design-time c
 
 * コンテンツモデルのカスタム API 名を使用した可能性のあるGraphQLクエリを、代わりにコンテンツモデルのデフォルト名を使用するように更新します。
 
-* GraphQLクエリでは、 `damAssetLucene` インデックス `fragments` 索引 このアクションを実行すると、GraphQLクエリが失敗するか、実行に時間がかかる場合があります。
+* GraphQL クエリでは、`fragments` インデックスの代わりに `damAssetLucene` インデックスを使用する場合があります。このアクションを実行すると、GraphQLクエリが失敗するか、実行に時間がかかる場合があります。
 
-  問題を修正するには、 `damAssetLucene` は、次の 2 つのプロパティを含むように設定する必要があります。
+  問題を修正するには、`damAssetLucene` は、次の 2 つのプロパティを含むように設定する必要があります。
 
    * `contentFragment`
    * `model`
 
-  インデックス定義を変更した後、インデックス再作成が必要です (`reindex` = `true`) をクリックします。
+  インデックス定義を変更した後、インデックス再作成が必要です（`reindex` = `true`）。
 
-  これらの手順の後、GraphQLクエリの実行が高速化されます。
+  これらの手順を行うと、GraphQL クエリの実行が高速化されます。
 
 * コンテンツフラグメント、サイト、ページのいずれかを移動、削除または公開しようとすると、バックグラウンドクエリが失敗したため、コンテンツフラグメント参照が取得される際に問題が発生します。 つまり、この機能は動作しません。
 正しく動作させるには、インデックス定義ノード `/oak:index/damAssetLucene` に次のプロパティを追加する必要があります（インデックスの再作成は不要です）。

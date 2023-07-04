@@ -5,7 +5,7 @@ exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
 source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
 workflow-type: tm+mt
 source-wordcount: '300'
-ht-degree: 44%
+ht-degree: 72%
 
 ---
 
@@ -13,10 +13,10 @@ ht-degree: 44%
 
 ## Adobe Experience Manager（AEM）とは何で、ドキュメントはどこから取得すればよいですか？ {#what-is-aem}
 
-Adobe Experience Manager(AEM) は、商用 Web サイトや関連サービスを構築、管理、デプロイする Web ベースのクライアントサーバーシステムです。 複数のインフラストラクチャレベルの機能とアプリケーションレベルの機能を 1 つの統合パッケージに組み合わせます。
+Adobe Experience Manager（AEM）は、商用 web サイトおよび関連サービスを構築、管理、デプロイするための、web ベースのクライアントサーバーシステムです。インフラストラクチャレベルおよびアプリケーションレベルのいくつかの機能を組み合わせて単一の統合パッケージにします。
 
-* [詳しくは、ドキュメントを参照してください](/help/sites-deploying/home.md)
-* [AEM の最新のドキュメント更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
+* [詳しくは、ドキュメントを参照してください。](/help/sites-deploying/home.md)
+* [AEM の最新のドキュメント更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
 
 ## AEM ソフトウェアはどこからダウンロードすればよいですか？ {#download}
 
@@ -24,17 +24,17 @@ Adobe Experience Manager(AEM) は、商用 Web サイトや関連サービスを
 
 [AEM ソフトウェアのデプロイに関する詳細情報。](/help/sites-deploying/home.md)
 
-訪問 [AEM Sustenance Hub](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja) を参照してください。
+AEM リリースについては、[AEM Sustenance Hub](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja) を参照してください。
 
 ## AEM の公式サポートを受けるにはどうしたらよいですか。 {#official-support}
 
-ライセンスを受けたお客様は、次の場所からAEMのサポートを受けることができます。 [カスタマーケアチーム](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support). また、 [AEM Community](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) または AdobeExpCare Twitterハンドルの `https://twitter.com/adobeexpcare`.
+ライセンスをお持ちのお客様は、アドビの[カスタマーケアチーム](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)から AEM のサポートを受けることができます。また、 [AEM Community](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=ja) または AdobeExpCare Twitterハンドルの `https://twitter.com/adobeexpcare`.
 
 ## AEM の以前のバージョンのドキュメントはどこにありますか？ {#versions}
 
 AEM 6.5 ドキュメントに適した場所にいます。
 
-Adobeには、Adobe Experience Managerの古いバージョンに関するドキュメントも含まれています。 以下をご覧ください。 [Adobe Experience Manager、CQ および CRX ドキュメントの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
+また、Adobe Experience Manager の古いバージョンに関するドキュメントも用意しています。以下をご覧ください。 [Adobe Experience Manager、CQ および CRX ドキュメントの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
 
 ## AEM 6.5 のリリースノートはどこにありますか？ {#release-notes}
 
@@ -43,4 +43,4 @@ AEM のすべてのリリースノートについては、次を参照してく�
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [AEM 6.5 で削除された機能および非推奨（廃止予定）になった機能のリスト](/help/release-notes/deprecated-removed-features.md)
 
-ご質問がある場合は、 [AEM Community team](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community) または、AdobeExpCare Twitterハンドルに関する質問 ( `https://twitter.com/adobeexpcare`.
+ご質問がある場合は、 [AEM Community team](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) または、AdobeExpCare Twitterハンドルに関する質問 ( `https://twitter.com/adobeexpcare`.

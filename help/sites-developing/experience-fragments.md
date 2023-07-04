@@ -1,5 +1,5 @@
 ---
-title: AEM Sites開発のエクスペリエンスフラグメント
+title: AEM Sites でのエクスペリエンスフラグメント開発
 description: エクスペリエンスフラグメントのカスタマイズについて学びます。
 uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
@@ -12,7 +12,7 @@ exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
 source-wordcount: '1781'
-ht-degree: 94%
+ht-degree: 99%
 
 ---
 
@@ -34,9 +34,9 @@ ht-degree: 94%
 
 URL で `.plain.` セレクターを使用すると、プレーン HTML レンディションにアクセスできます。
 
-これはブラウザーから使用できますが、主な目的は、他のアプリケーション（サードパーティの Web アプリ、カスタムモバイル実装など）が URL のみを使用してエクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
+これはブラウザーから利用できますが、主な目的は、他のアプリケーション（例えば、サードパーティ eb アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
 
-プレーンHTMLレンディションは、次のパスにプロトコル、ホストおよびコンテキストパスを追加します。
+プレーン HTML レンディションは、次のようなパスにプロトコル、ホストおよびコンテキストパスを追加します。
 
 * タイプが `src`、`href`、`action` のいずれか
 
@@ -48,7 +48,7 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 >[!NOTE]
 >
->リンクは常にパブリッシュインスタンスを参照します。 これらはサードパーティによって使用されることを目的としているので、リンクは常にオーサーからではなくパブリッシュインスタンスから呼び出されます。
+>リンクは、常にパブリッシュインスタンスを参照します。リンクは、サードパーティによって使用されることを意図しているので、オーサーインスタンスではなく、常にパブリッシュインスタンスから呼び出されます。
 
 ![xf-14](assets/xf-14.png)
 
@@ -109,11 +109,9 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
 
    1. テンプレートの名前は次の文字列で始まる必要があります。
       `experience-fragments`
-これにより、ユーザーは /content/experience-fragments にエクスペリエンスフラグメントを作成できます。 
-このフォルダーの `cq:allowedTemplates` プロパティには、`experience-fragment` で始まる名前の付いたすべてのテンプレートが含まれています。ユーザーは、このプロパティを更新して、独自の命名方式やテンプレート場所を取り入れることができます。
+これにより、ユーザーは /content/experience-fragments にエクスペリエンスフラグメントを作成できます。このフォルダーの `cq:allowedTemplates` プロパティには、`experience-fragment` で始まる名前の付いたすべてのテンプレートが含まれています。ユーザーは、このプロパティを更新して、独自の命名方式やテンプレート場所を取り入れることができます。
 
 1. [使用可能なテンプレート](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder)はエクスペリエンスフラグメントコンソールで設定できます。
-
 <!--
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
 -->
@@ -281,7 +279,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 * `href` 属性のみ
 
 * 特定のエクスペリエンスフラグメントの場合：
-   `/content/experience-fragment/master`
+  `/content/experience-fragment/master`
 
 「Adobe Target に書き出し」システムに通す他のあらゆるエクスペリエンスフラグメントは無視され、本サービスに実装される変更の影響を受けません。
 
@@ -294,7 +292,6 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 このメソッドは入力として次のパラメーターを受け取ります。
 
 * `link`：
- 
 現在処理中のリンクの `String` 表現です。これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
 
 * `tag`：

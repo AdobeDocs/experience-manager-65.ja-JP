@@ -1,17 +1,17 @@
 ---
 title: 永続的な GraphQL クエリ
-description: Adobe Experience Manager で GraphQL クエリを永続化してパフォーマンスを最適化する方法を説明します。永続化されたクエリは、HTTPGETメソッドを使用してクライアントアプリケーションからリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュでき、最終的にクライアントアプリケーションのパフォーマンスが向上します。
+description: Adobe Experience Manager で GraphQL クエリを永続化してパフォーマンスを最適化する方法を説明します。クライアントアプリケーションで HTTP GET メソッドを使用して永続クエリをリクエストでき、応答を Dispatcher および CDN レイヤーにキャッシュできるので、最終的にクライアントアプリケーションのパフォーマンスが向上します。
 exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
 source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
 workflow-type: tm+mt
 source-wordcount: '1424'
-ht-degree: 72%
+ht-degree: 98%
 
 ---
 
 # 永続的な GraphQL クエリ {#persisted-queries-caching}
 
-永続化されたクエリは、Adobe Experience Manager(AEM) サーバー上で作成および保存されるGraphQLクエリです。 永続的なクエリは、クライアントアプリケーションから GET リクエストでリクエストできます。GETリクエストの応答は、Dispatcher およびコンテンツ配信ネットワーク (CDN) レイヤーでキャッシュでき、最終的には、要求元のクライアントアプリケーションのパフォーマンスを向上させます。 これは、標準の GraphQL クエリとは異なります。標準クエリは、応答を簡単にはキャッシュできない POST リクエストを使用して実行されます。
+永続化されたクエリは、Adobe Experience Manager(AEM) サーバー上で作成および保存されるGraphQLクエリです。 永続的なクエリは、クライアントアプリケーションから GET リクエストでリクエストできます。GET リクエストの応答は、Dispatcher および CDN（コンテンツ配信ネットワーク）レイヤーでキャッシュできるので、最終的には、要求元のクライアントアプリケーションのパフォーマンスが向上します。これは、標準の GraphQL クエリとは異なります。標準クエリは、応答を簡単にはキャッシュできない POST リクエストを使用して実行されます。
 
 <!--
 >[!NOTE]
@@ -19,7 +19,7 @@ ht-degree: 72%
 >Persisted Queries are recommended. See [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) for details, and the related Dispatcher configuration.
 -->
 
-AEM では [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md) を使用して、[実稼動環境に移行](#transfer-persisted-query-production)する前に GraphQL クエリを開発、テスト、保持できます。カスタマイズが必要な場合 ( 例： [キャッシュのカスタマイズ](/help/sites-developing/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) を使用すると、API を使用できます。cURL の例は、 [GraphQLクエリの永続化方法](#how-to-persist-query).
+AEM では [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md) を使用して、[実稼動環境に移行](#transfer-persisted-query-production)する前に GraphQL クエリを開発、テストおよび永続化できます。カスタマイズが必要な場合（例えば、[キャッシュをカスタマイズする](/help/sites-developing/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)場合）、API を使用できます。[GraphQL クエリを永続化する方法](#how-to-persist-query)で示される cURL の例を参照してください。
 
 ## 永続的なクエリとエンドポイント {#persisted-queries-and-endpoints}
 
@@ -39,9 +39,9 @@ AEM では [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-i
 例えば、`my-query` という特定のクエリがあり、このクエリが Sites 設定 `my-conf` のモデル `my-model` を使用する場合は、次のようになります。
 
 * 特定エンドポイント `my-conf` を使用してクエリを作成すると、クエリは次のように保存されます。
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
+  `/conf/my-conf/settings/graphql/persistentQueries/my-query`
 * `global` エンドポイントを使用して同じクエリを作成できますが、クエリは次のように保存されます。
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+  `/conf/global/settings/graphql/persistentQueries/my-query`
 
 >[!NOTE]
 >
@@ -56,10 +56,10 @@ AEM では [GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-i
 クエリを永続化するには、次のような様々な方法があります。
 
 * GraphiQL IDE - [永続クエリの保存](/help/sites-developing/headless/graphql-api/graphiql-ide.md#saving-persisted-queries)を参照してください（推奨される方法）
-* cURL — 次の例を参照
+* cURL - 次の例を参照してください。
 * その他のツール（[Postman](https://www.postman.com/) など）
 
-GraphiQL IDE は、クエリを保持するための&#x200B;**推奨**&#x200B;される方法です。を使用して特定のクエリを保持するには **cURL** コマンドラインツール：
+GraphiQL IDE は、クエリを保持するための&#x200B;**推奨**&#x200B;される方法です。**cURL** コマンドラインツールを使用して特定のクエリを永続化するには、次の手順に従います。
 
 1. 新しいエンドポイント URL `/graphql/persist.json/<config>/<persisted-label>` に PUT してクエリを準備します。
 
@@ -261,11 +261,11 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 永続クエリのキャッシュ {#caching-persisted-queries}
 
-永続化されたクエリは、 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) およびコンテンツ配信ネットワーク (CDN) レイヤーを使用すると、最終的に、要求元のクライアントアプリケーションのパフォーマンスを向上できます。
+永続クエリが推奨されるのは、[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) と CDN（コンテンツ配信ネットワーク）レイヤーでキャッシュされ、最終的に要求元のクライアントアプリケーションのパフォーマンスを向上させることができるからです。
 
-デフォルトでは、AEMは有効期間 (TTL) の定義に基づいてキャッシュを無効にします。 これらの TTL は、次のパラメーターで定義できます。 これらのパラメーターには様々な方法でアクセスでき、使用するメカニズムに応じて名前が異なります。
+デフォルトでは、AEM は有効期間（TTL）の定義に基づいてキャッシュを無効にします。これらの TTL は、次のパラメーターで定義できます。これらのパラメーターには様々な方法でアクセスでき、使用するメカニズムに応じて名前が異なります。
 
-| キャッシュタイプ | [HTTP ヘッダー](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi 設定  |
+| キャッシュタイプ | [HTTP ヘッダー](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Cache-Control) | cURL | OSGi 設定 |
 |--- |--- |--- |--- |
 | ブラウザー | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` |
 | CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` |
@@ -278,15 +278,15 @@ query getAdventuresByActivity($activity: String!) {
 
 オーサーインスタンスの場合、デフォルト値は次のとおりです。
 
-* `max-age`  : 60
-* `s-maxage` : 60
-* `stale-while-revalidate` : 86400
-* `stale-if-error` : 86400
+* `max-age`：60
+* `s-maxage`：60
+* `stale-while-revalidate`：86400
+* `stale-if-error`：86400
 
-次のもの：
+これらは
 
-* は OSGi 設定で上書きできません
-* は、cURL を使用して HTTP ヘッダー設定を定義するリクエストで上書きできます。適切な設定を含める必要があります `cache-control` および/または `surrogate-control`;例については、 [永続化されたクエリレベルでのキャッシュの管理](#cache-persisted-query-level)
+* OSGi 設定で上書きできません
+* cURL を使用して HTTP ヘッダー設定を定義するリクエストで上書きできます。リクエストには、`cache-control` や `surrogate-control` に適した設定を含める必要があります。例については、[永続クエリレベルでのキャッシュの管理](#cache-persisted-query-level)を参照してください。
 
 <!-- CQDOC-20186 -->
 <!-- following entry is only when the GraphiQL IDE is ready; add cross-reference too -->
@@ -298,12 +298,12 @@ query getAdventuresByActivity($activity: String!) {
 
 パブリッシュインスタンスの場合、デフォルト値は次のとおりです。
 
-* `max-age`  : 60
-* `s-maxage` : 7200
-* `stale-while-revalidate` : 86400
-* `stale-if-error` : 86400
+* `max-age`：60
+* `s-maxage`：7200
+* `stale-while-revalidate`：86400
+* `stale-if-error`：86400
 
-これらは上書きできます。
+これらは
 
 <!-- CQDOC-20186 -->
 <!-- following entry is only when the GraphiQL IDE is ready -->
@@ -311,9 +311,9 @@ query getAdventuresByActivity($activity: String!) {
 * [from the GraphQL IDE](#http-cache-headers-graphiql-ide)
 -->
 
-* [永続化されたクエリレベルで](#cache-persisted-query-level);これには、コマンドラインインターフェイスで cURL を使用してAEMにクエリを投稿し、永続化されたクエリを公開する必要があります。
+* [永続クエリレベルで](#cache-persisted-query-level)上書きできます。それには、コマンドラインインターフェイスで cURL を使用して AEM にクエリをポストし、永続クエリを公開する必要があります。
 
-* [OSGi 設定を使用](#cache-osgi-configration)
+* [OSGi 設定で上書きできます](#cache-osgi-configration)
 
 <!-- CQDOC-20186 -->
 <!-- keep for future use; check link -->
@@ -325,9 +325,9 @@ The GraphiQL IDE - see [Saving Persisted Queries](/help/sites-developing/headles
 
 ### 永続化されたクエリレベルでのキャッシュの管理 {#cache-persisted-query-level}
 
-これには、コマンドラインインターフェイスで cURL を使用してAEMにクエリを投稿する必要があります。
+これを行うには、コマンドラインインターフェイスで cURL を使用して AEM にクエリを実行する必要があります。
 
-PUT(create) メソッドの例を次に示します。
+PUT（作成）メソッドの例を次に示します。
 
 ```bash
 curl -u admin:admin -X PUT \
@@ -336,7 +336,7 @@ curl -u admin:admin -X PUT \
 --data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-POST(update) メソッドの例を次に示します。
+POST（更新）メソッドの例を次に示します。
 
 ```bash
 curl -u admin:admin -X POST \
@@ -345,15 +345,15 @@ curl -u admin:admin -X POST \
 --data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-`cache-control` は、作成時に設定することもできますし（PUT リクエストを使用）、後で設定することもできます（例えば、POST リクエストを使用）。AEM ではデフォルト値を提供できるので、永続クエリを作成する際に cache-control はオプションです。詳しくは、 [GraphQLクエリの永続化方法](#how-to-persist-query)（cURL を使用してクエリを永続化する例）。
+`cache-control` は、作成時に設定することもできますし（PUT リクエストを使用）、後で設定することもできます（例えば、POST リクエストを使用）。AEM ではデフォルト値を提供できるので、永続クエリを作成する際に cache-control はオプションです。cURL を使用してクエリを永続化する例については、[GraphQL クエリを永続化する方法](#how-to-persist-query)を参照してください。
 
 ### OSGi 設定を使用したキャッシュの管理 {#cache-osgi-configration}
 
-キャッシュをグローバルに管理するには、次の手順を実行します。 [OSGi 設定の指定](/help/sites-deploying/configuring-osgi.md) の **永続的なクエリサービス設定**. それ以外の場合、この OSGi 設定は [パブリッシュインスタンスのデフォルト値](#publish-instances).
+キャッシュをグローバルに管理するには、**永続的なクエリサービス設定**&#x200B;に対して [OSGi 設定を指定](/help/sites-deploying/configuring-osgi.md)できます。それ以外の場合、この OSGi 設定は[パブリッシュインスタンスのデフォルト値](#publish-instances)を使用します。
 
 >[!NOTE]
 >
->OSGi の設定は、パブリッシュインスタンスにのみ適しています。 この設定はオーサーインスタンス上に存在しますが、無視されます。
+>OSGi の設定は、パブリッシュインスタンスにのみ適しています。この設定はオーサーインスタンス上に存在しますが、無視されます。
 
 ## アプリで使用するクエリ URL のエンコード {#encoding-query-url}
 

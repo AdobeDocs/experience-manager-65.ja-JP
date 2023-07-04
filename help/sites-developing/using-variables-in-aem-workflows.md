@@ -11,7 +11,7 @@ exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
 source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
 workflow-type: tm+mt
 source-wordcount: '2096'
-ht-degree: 82%
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 * 保存する情報タイプに基づいて、データタイプの [変数を作成します](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable)。
 * [変数の値を設定する](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)には、「変数を設定する」ワークフローステップを使用します。
-* [変数の使用](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable) OR 分割および移動AEMワークフローステップで、ルーティングの決定をおこなう式を定義できます。 また、すべてのAEM Forms Workflow ステップで変数を使用することもできます。
+* OR 分岐と移動 AEM ワークフローステップで[変数を使用](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable)して、ルーティングを決定するための式を定義できるようにします。また、AEM Forms のすべてのワークフローステップで変数を使用することもできます。
 
 次のビデオでは、AEM ワークフローモデルで変数を作成、設定および使用する方法を示します。
 
@@ -38,7 +38,7 @@ AEM ワークフローモデルでは、次のことができます。
 変数は、ワークフローモデルのサイドキックにある「変数」セクションを使用して作成します。AEM ワークフロー変数は、次のデータタイプをサポートしています。
 
 * **プリミティブデータタイプ**：Long、Double、Boolean、Date、String
-* **複雑なデータタイプ**：[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html?lang=ja) および [JSON](https://www.javadoc.io/doc/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)
+* **複雑なデータタイプ**：[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html) および [JSON](https://www.javadoc.io/doc/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 AEM Forms ワークフローで使用できるその他の複雑なデータタイプについては、[AEM Forms ワークフローの変数](/help/forms/using/variable-in-aem-workflows.md)を参照してください。ArrayList データタイプを使用して、変数コレクションを作成します。すべてのプリミティブデータタイプと複合データタイプに対して ArrayList 変数を作成できます。例えば、ArrayList 変数を作成し、サブタイプとして String を選択して、変数を使用して複数の文字列値を格納します。
 
-変数を作成するには、次の手順を実行します。
+変数を作成するには：
 
 1. AEM インスタンスで、ツール／ワークフロー／モデルに移動します。
 1. 「**[!UICONTROL 作成]**」をタップし、ワークフローモデルのタイトルとオプション名を指定します。モデルを選択し、「**[!UICONTROL 編集]**」をタップします。
@@ -72,7 +72,7 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 
 ## 変数の設定 {#set-a-variable}
 
-「変数を設定」ステップを使用して、変数の値を設定し、値が設定される順序を定義できます。変数は、変数設定手順で変数マッピングが表示される順序で設定されます。
+「変数を設定」ステップを使用して、変数の値を設定し、値が設定される順序を定義できます。変数は、変数マッピングが「変数を設定」ステップにリストされている順序で設定されます。
 
 変数値を変更すると、変更が発生したプロセスのインスタンスのみに影響します。例えば、ワークフローが開始され変数データが変更されると、変更はそのワークフローのインスタンスのみに影響します。変更は、以前に開始された、または後で開始されたワークフローの他のインスタンスには影響しません。
 
@@ -89,19 +89,19 @@ AEM Forms ワークフローで使用できるその他の複雑なデータタ�
 
 ### 変数間マッピングの追加 {#add-mapping-between-variables}
 
-変数間でマッピングを追加するには、次の手順を実行します。
+変数間マッピングを追加するには、次の手順を実行します。
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「ステップ」アイコンをタップします。
 1. 次をドラッグ&amp;ドロップ： **変数を設定** ワークフローエディターにステップを移動し、ステップをタップして「 」を選択します。 ![レンチが示す設定アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (設定).
 1. 「変数を設定」ダイアログで、 **[!UICONTROL マッピング]**／**[!UICONTROL マッピングを追加]** を選択します。
 1. 「**変数のマップ**」セクションで、データを格納する変数を選択し、マッピングモードを選択して、変数に格納する値を指定します。マッピングモードは、変数のタイプによって異なります。
-1. より多くの変数をマッピングして、意味のある式を作成できるようにします。 タップ ![ボックス内にチェックマークが付く保存アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 変更を保存します。
+1. より多くの変数をマッピングして、有意義な式を作成できるようにします。タップ ![ボックス内にチェックマークが付く保存アイコン。](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 変更を保存します。
 
 ### 例 1：XML 変数をクエリして、文字列変数の値を設定 {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
-XML ファイルを保存する XML 型の変数を選択します。 XML 変数をクエリして、XML ファイルで使用可能なプロパティの文字列変数の値を設定します。「**XML 変数に XPATH を指定**」フィールドを使用して、文字列変数に格納するプロパティを定義します。
+XML ファイルを保存する XML タイプの変数を選択します。XML 変数をクエリして、XML ファイルで使用可能なプロパティの文字列変数の値を設定します。「**XML 変数に XPATH を指定**」フィールドを使用して、文字列変数に格納するプロパティを定義します。
 
-この例では、**formdata** XML 変数を選択して **cc-app.xml** ファイルを格納します。クエリ **formdata** 変数を使用して、 **emailaddress** string 変数には、 **emailAddress** プロパティは **cc-app.xml** ファイル。
+この例では、**formdata** XML 変数を選択して **cc-app.xml** ファイルを格納します。**formdata** 変数をクエリすることで、**cc-app.xml** ファイルで使用可能な **emailAddress** プロパティの値を格納する **emailaddress** 文字列変数の値を設定できます。
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "変数の値を設定")
 
@@ -148,7 +148,7 @@ XML ファイルを保存する XML 型の変数を選択します。 XML 変数
 
 ### 変数をサポートするワークフローステップ {#workflow-steps-with-support-for-variables}
 
-移動ステップ、OR 分割ステップ、およびすべての AEM Forms Workflow ステップは変数をサポートします。
+移動ステップ、OR‧分割ステップ、およびすべての‧AEM‧Forms‧Workflow‧ステップでは、変数をサポートしています。
 
 #### OR 分割ステップ {#or-split-step}
 
@@ -170,7 +170,7 @@ OR 分割は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 #### 移動ステップ {#go-to-step}
 
-この **ステップに移動** ルーティング式の結果に応じて、ワークフローモデルで実行する次のステップを指定できます。
+**移動ステップ**&#x200B;を使用すると、ルーティング式の結果に応じて、ワークフローモデルで次に実行するステップを指定できます。
 
 OR 分割ステップと同様に、ルール定義、ECMA スクリプト、または外部スクリプトを使用して、移動ステップのルーティング式を定義できます。
 
@@ -192,7 +192,7 @@ OR 分割ステップと同様に、ルール定義、ECMA スクリプト、ま
 
 #### 変数値の取得 {#retrieve-the-variable-value}
 
-データ型に基づいて既存の変数の値を取得するには、ECMA スクリプトで次の API を使用します。
+データタイプに基づいて既存の変数の値を取得するには、ECMA スクリプトで次の API を使用します。
 
 | 変数データタイプ | API |
 |---|---|
@@ -230,7 +230,7 @@ workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 
 API を使用して変数を設定し、それらを渡してワークフローインスタンスを呼び出すことができます。
 
-[workflowSession.startWorkflows](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) は、モデル、wfData、metaData を引数として使用します。MetaDataMap を使用して変数の値を設定します。
+[workflowSession.startWorkflows](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/WorkflowSession.html?lang=ja#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) は、モデル、wfData、metaData を引数として使用します。MetaDataMap を使用して変数の値を設定します。
 
 この API では、 **variableName** 変数は metaData.put(variableName, value) を使用して **value** に設定されます。
 
@@ -257,7 +257,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 変数を削除する前に、ワークフローから変数のすべての参照を削除します。この変数がワークフローで使用されていないことを確認します。
 
-変数を削除するには、次の手順に従います。
+変数を削除するには：
 
 1. ワークフローの編集ページで、ワークフローモデルのサイドキックにある「変数」アイコンをタップします。左側のペインの「変数」セクションには、既存のすべての変数が表示されます。
 1. 削除する変数名の横にある削除アイコンをタップします。

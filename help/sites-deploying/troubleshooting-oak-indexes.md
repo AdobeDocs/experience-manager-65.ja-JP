@@ -10,7 +10,7 @@ topic-tags: deploying
 discoiquuid: ea70758f-6726-4634-bfb4-a957187baef0
 exl-id: 85981463-189c-4f50-9d21-1d2f734b960a
 source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1465'
 ht-degree: 100%
 

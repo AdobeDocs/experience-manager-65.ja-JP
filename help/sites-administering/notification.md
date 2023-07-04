@@ -1,7 +1,7 @@
 ---
 title: メール通知の設定
 seo-title: Configuring Email Notification
-description: AEMで電子メール通知を設定する方法を説明します。
+description: AEM でメール通知を設定する方法を説明します。
 seo-description: Learn how to configure Email Notification in AEM.
 uuid: 6cbdc312-860b-4a69-8bbe-2feb32204a27
 contentOwner: Guillaume Carlino
@@ -13,22 +13,22 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
 source-wordcount: '2026'
-ht-degree: 83%
+ht-degree: 99%
 
 ---
 
 # メール通知の設定{#configuring-email-notification}
 
-AEMは、次のユーザーに電子メール通知を送信します。
+AEM は、次のユーザーに対してメール通知を送信します。
 
 * 変更やレプリケーションなど、ページイベントを購読したことがある。[通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)では、このようなイベントを購読する方法について説明します。
 
 * フォーラムイベントを購読したことがある
-* ワークフローで手順を実行する必要があります。 この [参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step) ここでは、ワークフローでの e メール通知のトリガー方法について説明します。
+* ワークフローで手順を実行する必要がある。[参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
 
 前提条件：
 
-* ユーザーのプロファイルで有効な E メールアドレスを定義する必要があります。
+* ユーザーのプロファイルで有効なメールアドレスが定義されている必要があります。
 * **Day CQ Mail Service** が適切に設定されている必要があります。
 
 ユーザーへの通知は、各自がプロファイルで定義している言語のメールで送信されます。言語ごとに、独自のカスタマイズ可能なテンプレートがあります。新しい言語用には新しいメールテンプレートを追加できます。
@@ -39,7 +39,7 @@ AEMは、次のユーザーに電子メール通知を送信します。
 
 ## メールサービスの設定 {#configuring-the-mail-service}
 
-AEMで E メールを送信するには、 **Day CQ Mail Service** を適切に設定する必要があります。 設定は Web コンソールで確認できます。 AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+AEM でメールを送信できるようにするには、**Day CQ Mail Service** を適切に設定する必要があります。設定は web コンソールで確認できます。AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 以下の制約が適用されます。
 
@@ -71,7 +71,7 @@ AEMで E メールを送信するには、 **Day CQ Mail Service** を適切に�
 
 1. 「**すべて保存**」をクリックします。
 
-次の手順を実行して、コンテンツパッケージのソースフォルダー内でノードを定義します。
+次の手順を実行して、コンテンツパッケージのソースフォルダーでノードを定義します。
 
 1.  `jcr_root/apps/*app_name*/config folder` に、`com.day.cq.wcm.notification.email.impl.EmailChannel.xml` という名前のファイルを作成します。
 
@@ -82,17 +82,17 @@ AEMで E メールを送信するには、 **Day CQ Mail Service** を適切に�
 
 1.  ファイルを保存します。
 
-## ワークフロー電子メール通知サービスの設定 {#configuring-the-workflow-email-notification-service}
+## ワークフローメール通知サービスの設定 {#configuring-the-workflow-email-notification-service}
 
-ワークフローの電子メール通知を受け取ると、送信元電子メールアドレスとホスト URL プレフィックスの両方がデフォルト値に設定されます。 これらの値は、 **Day CQ Workflow Email Notification Service** をクリックします。 その場合は、リポジトリ内の変更を保持することをお勧めします。
+ワークフローのメール通知を受け取ると、送信元メールアドレスおよびホスト URL プレフィックスの両方がデフォルト値に設定されます。Web コンソールで **Day CQ Workflow Email Notification Service** を設定して、これらの値を変更できます。その場合は、リポジトリ内の変更内容を保存することをお勧めします。
 
-デフォルトの設定は、Web コンソールで次のように表示されます。
+デフォルト設定は、web コンソールに次のように表示されます。
 
 ![chlimage_1-277](assets/chlimage_1-277.png)
 
 ### ページ通知用のメールテンプレート {#email-templates-for-page-notification}
 
-ページ通知用の電子メールテンプレートは、以下にあります。
+ページ通知用のメールテンプレートは、次の場所にあります。
 
 `/libs/settings/notification-templates/com.day.cq.wcm.core.page`
 
@@ -126,7 +126,7 @@ This is an automatically generated message. Please do not reply.
 1. 必要に応じてファイルを変更します。
 1. 変更内容を保存します。
 
-テンプレートは、次のフォーマットにする必要があります。
+テンプレートは、次の形式にする必要があります。
 
 ```
  subject=<text_1>
@@ -135,7 +135,7 @@ This is an automatically generated message. Please do not reply.
  footer=<text_4>
 ```
 
-ここで、 &lt;text_x> は、静的テキストと動的文字列変数を組み合わせることができます。 次の変数は、ページ通知用の電子メールテンプレート内で使用できます。
+&lt;text_x> には、静的なテキストと動的な文字列変数を混在させることができます。ページ通知用のメールテンプレート内では次の変数を使用できます。
 
 * `${time}`、イベントの日時。
 
@@ -152,7 +152,7 @@ This is an automatically generated message. Please do not reply.
 
 ### ワークフロー通知用のメールテンプレート {#email-templates-for-workflow-notification}
 
-ワークフロー通知用の電子メールテンプレート（英語）は、次の場所にあります。
+ワークフロー通知用のメールテンプレート（英語）は、次の場所にあります。
 
 `/libs/settings/workflow/notification/email/default/en.txt`
 
@@ -177,7 +177,7 @@ View the overview in your ${host.prefix}/aem/inbox\n \
 This is an automatically generated message. Please do not reply.
 ```
 
-#### ワークフロー通知用の電子メールテンプレートのカスタマイズ {#customizing-email-templates-for-workflow-notification}
+#### ワークフロー通知用のメールテンプレートのカスタマイズ {#customizing-email-templates-for-workflow-notification}
 
 ワークフローイベント通知用の英語のメールテンプレートをカスタマイズするには：
 
@@ -188,7 +188,7 @@ This is an automatically generated message. Please do not reply.
 1. 必要に応じてファイルを変更します。
 1. 変更内容を保存します。
 
-テンプレートは、次のフォーマットにする必要があります。
+テンプレートは、次の形式にする必要があります。
 
 ```
 subject=<text_1>
@@ -235,9 +235,9 @@ subject=<text_1>
 * `${payload.path}`、ペイロードのパス
 * `${host.prefix}`、ホストのプレフィックス（例：http://localhost:4502）
 
-### 新しい言語用の電子メールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
+### 新しい言語用のメールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
-新しい言語用のテンプレートを追加するには：
+新しい言語用のテンプレートを追加するには、次の手順に従います。
 
 1. CRXDE で、ファイル `<language-code>.txt` を以下に追加します。
 
@@ -251,13 +251,13 @@ subject=<text_1>
 >
 >メールテンプレートのファイル名として使用される `<language-code>` は、AEM で認識できる小文字 2 文字の言語コードにする必要があります。言語コードについては、AEM は ISO-639-1 に依存しています。
 
-## AEM Assets電子メール通知の設定 {#assetsconfig}
+## AEM Assets メール通知の設定 {#assetsconfig}
 
-AEM Assetsのコレクションが共有または非共有の場合、ユーザーはAEMから電子メール通知を受け取ることができます。 電子メール通知を設定するには、次の手順に従います。
+AEM Assets のコレクションが共有されている場合も共有されていない場合も、ユーザーは AEM からメール通知を受信できます。メール通知を設定するには、次の手順に従います。
 
-1. 電子メールサービスを設定します ( 前述の [メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service).
+1. 前述の[メールサービスの設定](/help/sites-administering/notification.md#configuring-the-mail-service)の説明に従って、メールサービスを設定します。
 1. AEM に管理者としてログインします。**ツール**／**操作**／**Web コンソール**&#x200B;をクリックして、Web コンソール設定を開きます。
-1. 編集 **Day CQ DAM Resource Collection Servlet**. 選択 **メールを送信**. 「**保存**」をクリックします。
+1. **Day CQ DAM リソースコレクションサーブレット**&#x200B;を編集します。「**メールを送信**」を選択します。「**保存**」をクリックします。
 
 ## OAuth の設定 {#setting-up-oauth}
 
@@ -412,6 +412,6 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 最後に、以下により設定を確認します。
 
 1. 公開インスタンスのアドレスに移動し、管理者としてログインします。
-1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。これにより、SMTP プロバイダー（この場合は Outlook）のページにリダイレクトされます。
+1. ブラウザーで新しいタブを開き、`http://serveraddress:serverport/services/mailer/oauth2/authorize` に移動します。これにより、ご利用の SMTP プロバイダー（この場合は Outlook）のページにリダイレクトされます。
 1. ログインして、必要な権限を与えることに同意する
 1. 同意すると、トークンがリポジトリに格納されます。ご利用の公開インスタンスで次の URL に直接アクセスすることで、`accessToken` のトークンにアクセスできます。`http://serveraddress:serverport/crx/de/index.jsp#/conf/global/settings/mailer/oauth`
