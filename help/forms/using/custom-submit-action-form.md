@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォーム向けのカスタム送信アクションの作成
 seo-title: Writing custom Submit action for adaptive forms
-description: AEM Formsを使用すると、アダプティブフォームのカスタム送信アクションを作成できます。 この記事では、アダプティブフォームのカスタム送信アクションを追加する手順について説明します。
+description: AEM Forms では、アダプティブフォーム向けのカスタム送信アクションを作成することができます。この記事では、アダプティブフォームのカスタム送信アクションを追加する手順について説明します。
 seo-description: AEM Forms lets you create custom Submit action for Adaptive forms. This article describes the procedure to add custom Submit action for Adaptive forms.
 uuid: fd8e1dac-b997-4e86-aaf6-3507edcb3070
 content-type: reference
@@ -11,9 +11,9 @@ discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
 source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1616'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 82%
 
 ## 送信アクションのワークフロー {#workflow-for-a-submit-action}
 
-このフローチャートは、アダプティブフォームで「**[!UICONTROL 送信]**」ボタンをクリックしたときにトリガーされる送信アクションのワークフローを表しています。添付ファイルコンポーネント内のファイルがサーバーにアップロードされ、フォームデータはアップロードされたファイルの URL で更新されます。 クライアント内では、データは JSON 形式で保存されます。 クライアントは、指定したデータをメッセージし、XML 形式で返す内部サーブレットに Ajax リクエストを送信します。 クライアントは、このデータをアクションフィールドと照合します。そして、Form Submit アクションを通して、データを最終サーブレット（Guide Submit サーブレット）に送信します。次に、サーブレットが送信アクションにコントロールを転送します。送信アクションは、異なるスリングリソースにリクエストを転送するか、ブラウザーを別の URL にリダイレクトさせることができます。
+このフローチャートは、アダプティブフォームで「**[!UICONTROL 送信]**」ボタンをクリックしたときにトリガーされる送信アクションのワークフローを表しています。添付ファイルコンポーネント内のファイルがサーバーにアップロードされ、フォームデータはアップロードされたファイルの URL を使用して更新されます。クライアント内では、データは JSON 形式で保存されます。クライアントは内部サーブレットに Ajax リクエストを送信し、サーブレットは指定したデータを処理して XML 形式で返します。クライアントは、このデータをアクションフィールドと照合します。そして、Form Submit アクションを通して、データを最終サーブレット（Guide Submit サーブレット）に送信します。次に、サーブレットが送信アクションにコントロールを転送します。送信アクションは、異なるスリングリソースにリクエストを転送するか、ブラウザーを別の URL にリダイレクトさせることができます。
 
 ![送信アクションのワークフローを示したフローチャート](assets/diagram1.png)
 
 ### XML データ形式 {#xml-data-format}
 
-XML データは、**`jcr:data`** リクエストパラメーターを使ってサーブレットへと送信されます。送信アクションは、パラメーターにアクセスしてデータを処理できます。 次のコードは、XML データの形式を説明しています。フォームモデルにバインドされているフィールドは、**`afBoundData`** セクションに表示されます。バインドされていないフィールドは、`afUnoundData` セクションに表示されます。`data.xml` ファイルの形式について詳しくは、[アダプティブフォームフィールドの自動埋め込みの概要](../../forms/using/prepopulate-adaptive-form-fields.md)を参照してください。
+XML データは、**`jcr:data`** リクエストパラメーターを使ってサーブレットへと送信されます。送信アクションは、パラメーターにアクセスしてデータを処理できます。次のコードは、XML データの形式を説明しています。フォームモデルにバインドされているフィールドは、**`afBoundData`** セクションに表示されます。バインドされていないフィールドは、`afUnoundData` セクションに表示されます。`data.xml` ファイルの形式について詳しくは、[アダプティブフォームフィールドの自動埋め込みの概要](../../forms/using/prepopulate-adaptive-form-fields.md)を参照してください。
 
 ```xml
 <?xml ?>
@@ -53,11 +53,11 @@ XML データは、**`jcr:data`** リクエストパラメーターを使って�
 
 ### アクションフィールド {#action-fields}
 
-送信アクションは、HTML の [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input) タグを使って、レンダリングされたフォームの HTML に非表示の入力フィールドを追加することができます。これらの非表示のフィールドには、フォーム送信の処理中に必要な値を含めることができます。フォーム送信時に、これらのフィールド値は、送信アクションが送信処理中に使用することのできるリクエストパラメーターとしてポストバックされます。この入力フィールドは、アクションフィールドと呼ばれます。
+送信アクションは、HTML の [input](https://developer.mozilla.org/ja-jp/docs/Web/HTML/Element/Input) タグを使って、レンダリングされたフォームの HTML に非表示の入力フィールドを追加することができます。これらの非表示のフィールドには、フォーム送信の処理中に必要な値を含めることができます。フォーム送信時に、これらのフィールド値は、送信アクションが送信処理中に使用することのできるリクエストパラメーターとしてポストバックされます。この入力フィールドは、アクションフィールドと呼ばれます。
 
 例えば、フォームの記入にかかった時間も取得する送信アクションであれば、`startTime` および `endTime` のフィールドを非表示で追加することができます。
 
-スクリプトを使って、フォームがレンダリングされた時間ならびにフォーム送信前の時間を、それぞれ `startTime` および `endTime` フィールドの値として指定することができます。送信ActionScript `post.jsp` その後、リクエストパラメーターを使用してこれらのフィールドにアクセスし、フォームの入力に必要な合計時間を計算できます。
+スクリプトを使って、フォームがレンダリングされた時間ならびにフォーム送信前の時間を、それぞれ `startTime` および `endTime` フィールドの値として指定することができます。その後、送信 ActionScript `post.jsp` が、リクエストパラメーターを使用してこれらのフィールドにアクセスし、フォームの記入にかかった合計時間を計算することができます。
 
 ### 添付ファイル {#file-attachments}
 
@@ -91,8 +91,8 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 送信アクションは、次のファイルを含む sling:Folder です。
 
-* **addfields.jsp**：このスクリプトは、レンディション中に HTML ファイルに追加されるアクションフィールドを指定します。このスクリプトを使用して、post.jsp スクリプトでの送信時に必要な非表示の入力POSTを追加します。
-* **dialog.xml**:このスクリプトは、CQ コンポーネントダイアログに似ています。 作成者がカスタマイズする設定情報を提供します。フィールドは、送信アクションを選択するときに、アダプティブフォーム編集ダイアログの送信アクションタブに表示されます。
+* **addfields.jsp**：このスクリプトは、レンディション中に HTML ファイルに追加されるアクションフィールドを指定します。post.POST.jsp スクリプトでの送信中に必要な非表示の入力パラメーターの追加には、このスクリプトを使用します。
+* **dialog.xml**：このスクリプトは、CQ コンポーネントダイアログに似ています。作成者がカスタマイズする設定情報を提供します。フィールドは、送信アクションを選択するときに、アダプティブフォーム編集ダイアログの送信アクションタブに表示されます。
 * **post.POST.jsp**：送信サーブレットは、送信されたデータおよび前のセクションからの追加データで、このスクリプトを呼び出します。このページで言及されるアクションの実行は、post.POST.jsp スクリプトの実行を意味します。送信アクションをアダプティブフォームに登録し、アダプティブフォーム編集ダイアログに表示するには、次のプロパティを sling:Folder: に追加します。
 
    * 文字列型で値が **fd/af/components/guidesubmittype** の **guideComponentType**
@@ -116,7 +116,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 1. **作成者にメール設定を促す設定フィールドを指定します。**
 
-   アダプティブフォームには、ユーザーに電子メールを送信する電子メールアクションも用意されています。 要件に応じて、このアクションをカスタマイズします。 /libs/fd/af/components/guidesubmittype/email/dialog に移動します。 cq:dialog ノード内のノードを、送信アクションの cq:dialog ノード（/apps/custom_submit_action/store_and_email/dialog）にコピーします。
+   アダプティブフォームには、ユーザーにメールを送信するメール送信アクションもあります。要件に応じて、このアクションをカスタマイズします。/libs/fd/af/components/guidesubmittype/email/dialog に移動します。cq:dialog ノード内のノードを、送信アクションの cq:dialog ノード（/apps/custom_submit_action/store_and_email/dialog）にコピーします。
 
    ![メール送信アクションのカスタマイズ](assets/step3.png)
 
@@ -130,19 +130,19 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    * **文字列**&#x200B;型の **jcr:description** と値 **Store and Email Action**
 
-1. 任意のアダプティブフォームを開きます。 次をクリック： **編集** 隣のボタン **開始** 開く **編集** ダイアログが表示されます。 新しいアクションが、「**送信アクション**」タブに表示されます。**格納およびメール送信アクション**&#x200B;を選択すると、ダイアログノードに追加された設定が表示されます。
+1. 任意のアダプティブフォームを開きます。「**開始**」の横にある「**編集**」ボタンをクリックし、アダプティブフォームコンテナの&#x200B;**編集**&#x200B;ダイアログを開きます。新しいアクションが、「**送信アクション**」タブに表示されます。**格納およびメール送信アクション**&#x200B;を選択すると、ダイアログノードに追加された設定が表示されます。
 
    ![送信アクション設定ダイアログ](assets/store_and_email_submit_action_dialog.jpg)
 
-1. **タスクを完了するには、「 」アクションを使用します。**
+1. **アクションを使用してタスクを完了します。**
 
    post.POST.jsp スクリプトをアクションに追加します（/apps/custom_submit_action/store_and_mail/）。
 
-   OOTB の格納アクション（post.POST.jsp スクリプト）を実行します。以下を使用： [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)CQ が Store アクションを実行するコードで提供する (java.lang.String, java.lang.String, org.apache.sling.api.resource.Resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse) API。 次のコードを JSP ファイルに追加します。
+   OOTB の格納アクション（post.POST.jsp スクリプト）を実行します。CQ がコード内で提供する [FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)（java.lang.String、java.lang.String、org.apache.sling.api.resource.Resource、org.apache.sling.api.SlingHttpServletRequest、org.apache.sling.api.SlingHttpServletResponse）API を、格納アクション内で実行します。次のコードを JSP ファイルに追加します。
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 
-   メールを送信するために、コードが受信者のメールアドレスを設定から読み取ります。アクションのスクリプトで設定値を取得するには、次のコードを使用して、現在のリソースのプロパティを読み取ります。 同様に、他の設定ファイルも読み取ることができます。
+   メールを送信するために、コードが受信者のメールアドレスを設定から読み取ります。アクションのスクリプトに設定値を取り込むには、次のコードを使用して現在のリソースのプロパティを読み込みます。同様に、他の設定ファイルも読み取ることができます。
 
    `ValueMap properties = ResourceUtil.getValueMap(resource);`
 
@@ -192,4 +192,4 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
    %>
    ```
 
-   アダプティブフォーム内のアクションを選択します。 アクションによりメールが送信され、データが保存されます。
+   アダプティブフォームでアクションを選択します。アクションによりメールが送信され、データが保存されます。
