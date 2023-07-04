@@ -3,7 +3,7 @@ title: AEM Content and Commerce リリースノート 2019
 description: AEM Content and Commerce リリースノート 2019
 exl-id: 7e61a75d-6b35-46ee-b88a-444c10b2708f
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '978'
 ht-degree: 100%
 
@@ -119,7 +119,7 @@ ht-degree: 100%
 
 ### 新機能 {#what-is-new-july}
 
-* 最初の CIF アーキタイプは、開発者に次のデプロイメントオプションを提供します。1. AEM Venia ストアフロントをデプロイする 2.新しいプロジェクトの基礎モードをデプロイする 3.既存のプロジェクトの CIF 要素を使用する
+* 最初の CIF アーキタイプは、開発者に次のデプロイメントオプションを提供します。1. AEM Venia ストアフロントをデプロイする 2. 新しいプロジェクトの基礎モードをデプロイする 3. 既存のプロジェクトの CIF 要素を使用する
 
 * カテゴリやサブカテゴリ間の移動をサポートするマルチレベルのカタログナビゲーション。
 
