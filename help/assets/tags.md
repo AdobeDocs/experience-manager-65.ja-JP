@@ -11,9 +11,9 @@ feature: Viewers
 role: User, Admin,Developer,Data Engineer,Data Architect
 exl-id: 161dfe22-bc1c-4b60-8ab6-a19407a39e2e
 source-git-commit: cd797b1a5edd05715761f5914ebc64fdb64745af
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6631'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -422,7 +422,7 @@ Dynamic Media ビューア拡張機能を使用すると、Dynamic Media ビュ�
 
 また、この統合ソリューションを Experience Manager Sites で使用する場合は、次の設定を行う必要があります。
 
-* [!DNL Adobe Developer Console]  — 統合は、Experience Platformタグ用に作成されます。
+* [!DNL Adobe Developer Console] - Experience Platform タグ用に統合が作成されます。
 * Experience Manager オーサーノード - IMS 設定と Experience Platform タグクラウド設定。
 
 設定の一環として、Adobe Analytics と Experience Platform タグが既に有効になっている Adobe Experience Cloud の会社にアクセスできることを確認してください。
@@ -683,13 +683,13 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    次の情報メッセージが表示されます。
 
-   *有効なアクセストークンを取得するために、新しい証明書の公開鍵がAdobe Developerコンソールのテクニカルアカウントに追加されます。*
+   *有効なアクセストークンを取得するには、新しい証明書の公開鍵を Adobe Developer Console のテクニカルアカウントに追加する必要があります。*
 
    情報ダイアログボックスを閉じるには、「**[!UICONTROL OK]**」を選択します。
 
    ![2019-07-25_12-09-24](assets/2019-07-25_12-09-24.png)
 
-1. 公開鍵ファイル (&#42;.crt) をローカルシステムに追加し、 **[!UICONTROL 公開鍵をダウンロード]**.
+1. 公開鍵ファイル（&#42;*.crt）をローカルシステムにダウンロードするには、「**[!UICONTROL 公開鍵のダウンロード]**」を選択します。
 
    >[!NOTE]
    >
@@ -697,9 +697,9 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    ![2019-07-25_12-52-24](assets/2019-07-25_12-52-24.png)
 
-1. ブラウザーの新しいタブで、に移動します。 [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/integrations).
+1. 新しいブラウザータブで、[[!DNL Adobe Developer Console]](https://developer.adobe.com/console/integrations) に移動します。
 
-1. 次の **[!UICONTROL Adobe Developer Console の統合]** ページの右上隅付近で、「 」を選択します。 **[!UICONTROL 新しい統合]**.
+1. **[!UICONTROL Adobe Developer Console 統合]**&#x200B;ページの右上隅近くにある「**[!UICONTROL 新規の統合]**」を選択します。
 1. **[!UICONTROL 統合の新規作成]**&#x200B;ダイアログボックスで、「**[!UICONTROL API へのアクセス]**」ラジオボタンが選択されていることを確認し、「**[!UICONTROL 続行]**」を選択します。
 
    ![2019-07-25_13-04-20](assets/2019-07-25_13-04-20.png)
@@ -714,7 +714,7 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
    * 「**[!UICONTROL 説明]**」フィールドに、統合の説明を入力します。
 
-   * 内 **[!UICONTROL 公開鍵証明書]** 」領域に、公開鍵ファイル (&#42;.crt) をダウンロードする必要があります。
+   * 「**[!UICONTROL 公開鍵証明書]**」領域で、この手順で以前にダウンロードした公開鍵ファイル（&#42;*.crt）をアップロードします。
 
    * 「**[!UICONTROL Experience Platform タグ API 用の役割を選択]**」の見出しの下から「**[!UICONTROL 管理者]**」を選択します。
 
@@ -854,4 +854,4 @@ Experience Manager 設定は、次の 2 つの主な手順で構成されます�
 
 この制限は回避することは可能です。上記の Experience Manager パブリッシュノードの Experience Platform タグクラウド設定で、Experience Platform タグライブラリの開発用 URL またはステージング用 URL を指定します。これにより、Experience Manager のパブリッシュノードでは、開発版またはステージング版の Experience Platform タグライブラリが使用されます。
 
-Experience Platform タグクラウド設定の詳細に関しては、 [（ [!DNL Adobe Developer Console]](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) 経由による Experience Manager と Experience Platform タグの統合）を参照してください。
+Experience Platform タグクラウド設定の詳細に関しては、 [（ [!DNL Adobe Developer Console]](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=ja) 経由による Experience Manager と Experience Platform タグの統合）を参照してください。
