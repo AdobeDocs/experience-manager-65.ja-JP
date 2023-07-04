@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 198098c0-432b-4a93-a94e-2552337435dd
 exl-id: 01c6bb29-1d2d-4a45-b291-0e8d97c01a08
 source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '308'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
@@ -23,21 +23,21 @@ ht-degree: 52%
 
 これらの命名規則は、以下のような様々なレベルで実装されます。
 
-* JcrUtil:のAEM実装 [JCR ユーティリティ](#jcr-utilities).
+* JcrUtil：[JCR ユーティリティ](#jcr-utilities)の AEM 実装。
 * ページマネージャー：[ページマネージャー](#page-manager)は、ページレベルの操作用のメソッドを提供します。
-* 使用されている UI に応じて、次の手順を実行します。
+* 使用する UI：
 
    * [標準のタッチ操作対応 UI](#standard-ui)
    * [クラシック UI](#classic-ui)
 
 ### JCR ユーティリティ {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) は、JCR ユーティリティのAEM実装です。 名前の検証に特に関心があるのは、文字マッピングを制御し、次の検証を行う点です。
+[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) は JCR ユーティリティの AEM 実装です。名前の検証では特に、制御する文字マッピングおよび次の点が確認されます。
 
 * `isValidName`
 
-   * 名前が空でなく、有効な文字のみを含んでいるかどうかをチェックします。
-   * 提案された名前が有効かどうかを確認するために使用できます。
+   * 名前が空でなく、有効な文字のみが含まれるかどうかを確認します。
+   * 推奨される名前が有効かどうかを確認するのに使用できます。
 
 * `createValidName`
 
@@ -50,26 +50,26 @@ ht-degree: 52%
 
 ### 標準 UI {#standard-ui}
 
-標準のタッチ操作対応 UI は次のとおりです。
+標準のタッチ操作対応 UI：
 
-* 次のいずれかの場合に、PageManager が課した制限に従って名前を検証します。
+* 次のいずれかの場合、ページマネージャーによって課せられる制約に従って名前が確認されます。
 
-   * ノード名に変換するために、ページタイトルが指定されます。
-   * 明示的なノード名が提供されています
+   * ノード名に変換されるようにページタイトルが提供されている。
+   * 明示的なノード名が提供されている。
 
 ### クラシック UI {#classic-ui}
 
-クラシック UI にはより厳しい制限が課されています。
+クラシック UI にはさらに厳しい制約があります。
 
-* 次のいずれかの場合に、明示的なノード名を検証します。
+* 名前が有効と判断されるのは、明示的なノード名が次のいずれかの場合です。
 
-   * ノード名に変換するために、ページタイトルが指定されます。
-   * 明示的なノード名が提供されています
+   * ノード名に変換されるようにページタイトルが提供されている。
+   * 明示的なノード名が提供されている。
 
 * 有効な文字（`PageManagerImpl` によって他の文字の使用が許可されていても、クラシック UI でページを作成する場合は、次の文字のみが有効です）。
 
-   * &#39;a&#39; ～ &#39;z&#39;
-   * &#39;A&#39; ～ &#39;Z&#39;
-   * &#39;0&#39; ～ &#39;9&#39;
+   * a～z
+   * A～Z
+   * 0～9
    * _（アンダースコア）
    * `-`（ダッシュ／マイナス）
