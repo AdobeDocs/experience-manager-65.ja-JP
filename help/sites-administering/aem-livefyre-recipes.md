@@ -1,7 +1,7 @@
 ---
 title: AEM Livefyre のレシピ
 seo-title: AEM Livefyre Recipes
-description: Adobe Experience Manager Livefyre の一般的な使用例に関する詳しい手順です。
+description: Adobe Experience Manager Livefyre の一般的なユースケースについての手順の説明です。
 seo-description: Step-by-step instructions on common use cases for Adobe Experience Manager Livefyre.
 uuid: 78695a63-fca6-4990-9755-0aeaae4a7f64
 contentOwner: alba
@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: fdea5ede-d44f-463e-af8a-111ee7469ede
 exl-id: 7ccd67a7-9945-48c1-9986-f4eaf0f2b961
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '33'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->[AdobeLivefyre は 2021 年 11 月 30 日をもって正式にサービスを終了しています](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=en).
+>[Adobe Livefyre は 2021年11月30日に正式にサービスを終了しました](https://experienceleague.adobe.com/docs/discontinued/using/livefyre.html?lang=ja)。
 
 <!--
 Step-by-step instructions on common use cases for Adobe Experience Manager Livefyre.
