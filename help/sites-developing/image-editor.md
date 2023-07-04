@@ -1,6 +1,6 @@
 ---
 title: 画像エディター
-description: 画像エディターはAEMの中核となる要素で、コンポーネントで使用すると、コンテンツ作成者が画像を操作しやすくなります。
+description: 画像エディターは AEM の中核となる要素であり、コンテンツ作成者はこれを使用することで、画像を容易に操作できます。
 uuid: de6ac71b-380a-4b67-b697-ac34a79a9cc4
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,19 +9,19 @@ topic-tags: components
 discoiquuid: f6347492-cf48-4835-b8fd-ce9a75a09abe
 exl-id: af6cf1e0-8901-4621-9f72-e791cb8d68ae
 source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '312'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
 # 画像エディター{#image-editor}
 
-画像エディターはAEMの中核となる要素で、コンポーネントで使用すると、コンテンツ作成者が画像を操作しやすくなります。
+画像エディターは AEM の中核となる要素であり、コンテンツ作成者はこれを使用することで、画像を容易に操作できます。
 
 >[!CAUTION]
 >
->この記事で説明している画像エディターの機能を使用するには、[機能パック 24267](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) をインストールする必要があります。
+>この記事で説明している画像エディターの機能を使用するには、[機能パック 24267](https://experience.adobe.com/jp/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/cq-6.4.0-featurepack-24267) をインストールする必要があります。
 
 ## 画像マップの相対単位 {#relative-units-for-image-map}
 
