@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Managerでのヘッドレス向けのオーサリング
+title: Adobe Experience Manager でのヘッドレス向けオーサリング
 description: Adobe Experience Manager の強力で柔軟なヘッドレス機能と、プロジェクトのコンテンツをオーサリングする方法を紹介します。
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '632'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
