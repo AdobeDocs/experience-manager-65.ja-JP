@@ -10,9 +10,9 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 source-git-commit: ea983b24da66edd02f86614690f8bc5e1e2499d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3624'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -30,14 +30,14 @@ ht-degree: 93%
 
 >[!TIP]
 >
->Dynamic Mediaを使用して、Dynamic Mediaの画像修飾子とスマートイメージングのメリットを体験してみましょう [_スナップショット_](https://snapshot.scene7.com/).
+>Dynamic Media の&#x200B;[_スナップショット_](https://snapshot.scene7.com/)を使用して、Dynamic Media の画像修飾子とスマートイメージングのメリットを体験してみましょう。
 >
-> スナップショットは、最適化された動的な画像配信にDynamic Mediaが持つ力を説明する視覚的なデモツールです。 テスト画像またはDynamic Media URL を試して、様々なDynamic Media画像修飾子の出力を視覚的に観察し、スマートイメージングの最適化で次のことを確認します。
+> スナップショットは、最適化された動的な画像配信における Dynamic Media のパワーをわかりやすく伝えるために作られた、視覚的なデモツールです。テスト画像や Dynamic Media の URL を試して、様々な Dynamic Media 画像修飾子の出力を視覚的に観察し、次の項目に対するスマートイメージング最適化を確認します。
 >* ファイルサイズ（WebP および AVIF 配信を使用）
 >* ネットワーク帯域幅
 >* DPR（デバイスのピクセル比）
 >
->スナップショットの使い方を学ぶには、 [スナップショットトレーニングビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=en) （3 分 17 秒）。
+>スナップショットの使用がどれほど簡単かを知るには、[スナップショットのトレーニングビデオ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=ja)（3 分 17 秒）を再生してください。
 
 スマートイメージングを、クラス最高のプレミアム CDN（コンテンツ配信ネットワーク）サービスと完全に統合することで、パフォーマンスを大幅にアップさせることができます。このサービスは、サーバー、ネットワーク、およびピアリングポイント間の最適なインターネットルートを見つけます。インターネットのデフォルトのルートを使用する代わりに、待ち時間が最も短く、パケット損失率が最も低いルートを見つけます。
 
@@ -77,7 +77,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 ### ブラウザーフォーマット変換（bfc）について {#bfc}
 
-画像 URL に `bfc=on` を追加してブラウザーフォーマット変換を有効にすると、異なるブラウザー向けに JPEG と PNG が非可逆 AVIF、非可逆 WebP、非可逆 JPEGXR、非可逆 JPEG2000 に自動的に変換されます。これらの形式をサポートしていないブラウザーでは、スマートイメージングは引き続き JPEG または PNG を提供します。形式と共に、新しい形式の品質はスマートイメージングによって再計算されます。
+画像 URL に `bfc=on` を追加してブラウザーフォーマット変換を有効にすると、異なるブラウザー向けに JPEG と PNG が非可逆 AVIF、非可逆 WebP、非可逆 JPEGXR、非可逆 JPEG2000 に自動的に変換されます。これらの形式をサポートしていないブラウザーでは、スマートイメージングは引き続き JPEG または PNG を提供します。形式と共に、新しい形式の画質がスマートイメージングによって再計算されます。
 
 画像の URL に `bfc=off` を追加することで、スマートイメージングをオフにすることもできます。
 
@@ -87,7 +87,7 @@ Dynamic Media 画像サービングおよび画像レンダリング API の [bf
 
 デバイスピクセル比（DPR）は、CSS ピクセル比とも呼ばれ、デバイスの物理ピクセルと論理ピクセルの関係を表します。特に、Retina 画面の出現に伴い、最新のモバイルデバイスのピクセル解像度が急速に増加しています。
 
-デバイスのピクセル比の最適化を有効にすると、画像が画面のネイティブ解像度でレンダリングされ、シャープになります。
+デバイスピクセル比の最適化を有効にすると、画像が画面のネイティブ解像度でレンダリングされるので、画面が鮮明に見えます。
 
 現在、ディスプレイのピクセル密度は Akamai CDN ヘッダー値から得られます。
 
@@ -100,7 +100,6 @@ Dynamic Media 画像サービングおよび画像レンダリング API の [bf
 >
 >* 全社レベルの DPR 設定がオフの場合でも、`dpr=on,dprValue` を使用できます。
 >* DPR の最適化により、結果の画像が Dynamic Media の MaxPix 設定より大きくなる場合、画像の縦横比を維持することで MaxPix の幅が常に認識されます。
-
 
 | 要求された画像サイズ | デバイスピクセル比（dpr）の値 | 配信される画像サイズ |
 |---|---|---|
@@ -146,7 +145,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 * AVIF 変換がうまくいかなかった場合やブラウザーが AVIF をサポートしていない場合は、自動的に WebP に変換します
 * Safari で WebP がサポートされていない場合は、自動的に JPEG2000 に変換します
 * IE 9 以降については、または Edge で WebP がサポートされていない場合は、自動的に JPEGXR に変換します\
-   | 画像の形式 | サポートされているブラウザー |
+  | 画像の形式 | サポートされているブラウザー |
 |---|---|
 | AVIF | [https://caniuse.com/avif](https://caniuse.com/avif) |
 | WebP | [https://caniuse.com/webp](https://caniuse.com/webp) |
@@ -163,7 +162,7 @@ DPR とネットワーク帯域幅の値は、バンドルされた CDN のク�
 * JPEG
 * PNG
 
-JPEG画像ファイル形式の場合、新しい形式の品質はスマートイメージングによって再計算されます。
+JPEG 画像ファイル形式の場合、新しい形式の画質がスマートイメージングによって再計算されます。
 
 透明度をサポートしている PNG などの画像ファイル形式の場合は、非可逆の AVIF および WebP を配信するようにスマートイメージングを設定できます。スマートイメージングでは、非可逆の形式変換の場合、画像の URL で指定されている画質を使用します。それ以外の場合は、Dynamic Media の会社アカウントで設定されている画質を使用します。
 
@@ -171,7 +170,7 @@ JPEG画像ファイル形式の場合、新しい形式の品質はスマート�
 
 スマートイメージングは既存の画像プリセットと連携し、すべての画像設定に従います。変更されるのは、画像形式、画質設定またはその両方です。形式変換の場合、スマートイメージングは画像プリセットの設定で定義されているとおりの完全な視覚的忠実性を維持しますが、ファイルサイズは小さくなります。
 
-例えば、JPEG 形式、サイズ 500 x 500、画質=85、アンシャープマスク=0.1,1,5 と定義された画像プリセットがあるとします。スマートイメージングがユーザーが Chrome ブラウザーを使用していることを検出すると、画像は WebP 形式（サイズ 500 x 500）に変換されます。 また、アンシャープマスク= 0.1,1,5 は、WebP の品質で、JPEGの品質が可能な限り 85 に一致します。 その WebP 変換のフットプリントが JPEG と比較され、2 つのうち小さい方が返されます。
+例えば、JPEG 形式、サイズ 500 x 500、画質=85、アンシャープマスク=0.1,1,5 と定義された画像プリセットがあるとします。ユーザーが Chrome ブラウザーを使用していることをスマートイメージングが検出すると、画像は WebP 形式（サイズ 500 x 500）に変換されます。また、アンシャープマスク=0.1,1,5 は、JPEG の画質=85 にできるだけ一致する WebP の画質で適用されます。その WebP 変換のフットプリントが JPEG と比較され、2 つのうち小さい方が返されます。
 
 ## スマートイメージングを使用する場合、URL の変更や、画像プリセットの変更、サイトへの新しいコードのデプロイなどは必要ですか？ {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
@@ -227,26 +226,26 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
       * AVIF
       * DPR とネットワーク帯域幅の最適化
       * PNG から非可逆 AVIF または非可逆 WebP への変換
+
    * スマートイメージングを有効にするすべてのドメイン（`images.company.com` や `mycompany.scene7.com`）。
 
-      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
+     ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
-      **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
+     **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
 
-      「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。
+     「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。
 
    * 直接的な関係で管理されているのではなく、アドビを通じて CDN を使用していることを確認します。
 
    * `s7d1.scene7.com`、`s7d2.scene7.com`、`s7d13.scene7.com` などの汎用ドメインではなく、`images.company.com` や `mycompany.scene7.com` などの専用ドメインを使用していることを確認します。
 
-      ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
+     ドメインを探すには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=ja#getting-started)を開き、会社情報アカウントまたはアカウントにログインします。
 
-      **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
+     **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
 
-      「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
+     「**[!UICONTROL 公開先サーバー名]**」というラベルの付いたフィールドを見つけます。現在、汎用の Dynamic Media Classic ドメインを使用している場合は、この切り替えの一環として独自のカスタムドメインへの移行をリクエストできます。
 
    * HTTP/2 で動作させるかどうかを指定します。
-
 
 1. アドビカスタマーサポートでは、要求が送信された順序に基づいて、スマートイメージングカスタマー待ちリストに貴社を追加します。
 1. リクエストを処理する準備が整った時点で、カスタマーサポートから連絡を差し上げ、調整と日取り設定を行います。
@@ -282,11 +281,11 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
    * macOS では、デベロッパーパネルの「**[!UICONTROL ネットワーク]**」タブで、「**[!UICONTROL キャッシュを無効にする]**」を選択します。
 
 1. コンテンツタイプが適切な形式に変換されるのを監視します。次のスクリーンショットは、Chrome 上で PNG 画像が動的に WebP に変換されているのを示しています。ドメインで AVIF が有効になっている場合は、コンテンツタイプに AVIF が表示されることも期待できます。
-1. 異なるブラウザーおよびユーザー条件で、このテストを繰り返します。
+1. このテストを、様々なブラウザーやユーザー条件で繰り返します。
 
 >[!NOTE]
 >
->一部の画像が変換されるわけではありません。 スマートイメージングは、変換がパフォーマンスを向上させる可能性があるかどうかを判断します。予期されるパフォーマンスゲインがない場合や、形式が JPEG や PNG でない場合、画像は変換されません。
+>すべての画像が変換されるわけではありません。スマートイメージングは、変換がパフォーマンスを向上させる可能性があるかどうかを判断します。予期されるパフォーマンスゲインがない場合や、形式が JPEG や PNG でない場合、画像は変換されません。
 
 ![image2017-11-14_15398](/help/assets/assets/image2017-11-14_15398.png)
 
@@ -315,7 +314,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 ## スマートイメージングで AVIF の最適化を無効にするにはどうすればよいですか？{#disable-avif}
 
-WebP をデフォルトで提供する状態に戻す場合は、同様にサポートケースを作成します。通常どおり、画像の URL に `bfc=off` パラメーターを追加して、スマートイメージングをオフにできます。ただし、スマートイメージングの URL 修飾子で WebP または AVIF を選択することはできません。この機能は、会社のアカウントレベルで維持されます。
+WebP をデフォルトで提供する状態に戻す場合は、同様にサポートケースを作成します。通常どおり、画像の URL に `bfc=off` パラメーターを追加して、スマートイメージングをオフにできます。ただし、スマートイメージングの URL 修飾子で WebP または AVIF を選択することはできません。この機能は、会社アカウントレベルで維持管理されています。
 
 ## 要求に対してスマートイメージングをオフにできますか？{#turning-off-smart-imaging}
 
