@@ -3,9 +3,9 @@ title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
 description: 「[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています」
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4675'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Quickstart は、サーブレットエンジンとして Eclipse Jetty 9.4.15 �
 
 #### ユーザーインターフェイス {#user-interface}
 
-UI に様々な機能強化が加えられ、生産性が向上し、使いやすくなりました。
+UI に対して様々な機能強化が行われ、生産性と使いやすさが向上しました。
 
 * ユーザーとグループの新しい権限管理 UI
 * 列表示では、画面上に表示されるエントリのみを読み込み、それ以外のエントリはユーザーがスクロールを開始した場合にのみ読み込まれるようになりました。AEM 6.0 以降のリストおよびカード表示には、この機能が既に実装されています（AEM 6.4 で改善されました）。
@@ -62,7 +62,7 @@ UI に様々な機能強化が加えられ、生産性が向上し、使いや�
 
 >[!CAUTION]
 >
->Adobeは、クラシック UI をさらに強化する予定はありません。 AEM 6.5 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用できます。 クラシック UI は非推奨になっても引き続き完全にサポートされます。[詳細情報](/help/sites-deploying/ui-recommendations.md)。
+>クラシック UI の機能がさらに強化される予定はありません。AEM 6.5 にはクラシック UI が含まれており、以前のリリースからアップグレードするお客様はクラシック UI をそのまま使用し続けることができます。クラシック UI は非推奨になっても引き続き完全にサポートされます。[詳細情報](/help/sites-deploying/ui-recommendations.md)。
 
 #### 検索およびインデックス作成 {#indexing-and-search}
 
@@ -88,7 +88,7 @@ UI に様々な機能強化が加えられ、生産性が向上し、使いや�
 
 >[!CAUTION]
 >
->AEM 6.3 以降の新しいバージョンの Oak セグメント Tar は、リポジトリを移行する必要があります。古いバージョンの TarMK からアップグレードする場合や、別のタイプの永続性から新しいセグメント Tar を切り替える場合は、この手順が必須です。 新しいセグメント Tar の利点について詳しくは、 [Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar).
+>AEM 6.3 以降の新しいバージョンの Oak セグメント Tar は、リポジトリを移行する必要があります。この手順は、古いバージョンの TarMK からアップグレードする場合、または別のタイプの永続性機能から新しい Segment Tar に切り替える場合に必須です。新しい Segment Tar のメリットについて詳しくは、[Oak Segment Tar への移行に関する FAQ](/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar) を参照してください。
 
 #### OSGi {#osgi}
 
@@ -106,36 +106,36 @@ UI に様々な機能強化が加えられ、生産性が向上し、使いや�
 
 #### 管理された単一ページアプリ {#managed-single-page-apps}
 
-ページエディターを使用すると、クライアント側でレンダリングされたエクスペリエンス ( [as SPA Editor](/help/sites-developing/spa-architecture.md)) をクリックします。 AEM SJ SDK を使用して、JavaScript フレームワーク React またはAngularで構築された既存の単一ページアプリを拡張し、実務者が編集できるようにすることができます。
+ページエディターでは、コンテンツのコンテキスト内編集と、レンダリングされたクライアントサイドエクスペリエンス内での作成／レイアウトの機能が追加されました（[SPA エディター](/help/sites-developing/spa-architecture.md)とも呼ばれます）。JavaScript フレームワークの React または Angular を使用して作成された既存の単一ページアプリを、AEM SJ SDK を使用して拡張することで、実務担当者による編集が可能になります。
 
-AEM 6.4 SP2 の一部として初めて出荷されたSPAサポートでは、AEM 6.5 で次の機能を利用できます。
+SPA のサポートは AEM 6.4 SP2 の一部として導入されたものですが、AEM 6.5 ではさらに以下が可能になりました。
 
-* テンプレートエディターを使用して、SPAの編集可能なAEM部分を編集および設定します
+* テンプレートエディターを使用して、AEM で編集可能な SPA の部分を編集および設定できます。
 * マルチサイト管理を使用して国ごと、フランチャイズごと、またはホワイトレーベルの SPA エクスペリエンスを作成できます
 
 #### ヘッドレスコンテンツ管理 {#headless-content-management}
 
-AEM では、多様な形式で様々なスタックレベルからコンテンツを提供できます。2008 年から、 [SlingGET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) および [POSTサーブレット](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). コンテンツサービス ([Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)) はAEM 6.3 で導入され、AEM SJ SDK で単一ページアプリをハイドレートするために使用される方法です。 この [アセットの HTTP API](/help/assets/mac-api-assets.md) は、AEM 6.5 用に拡張された CRUD API です。
+AEM では、多様な形式で様々なスタックレベルからコンテンツを提供できます。一部は、2008 年以降、[Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) および [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html) で機能しています。コンテンツサービス（[Sling Model エクスポーター](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)）は AEM 6.3 で導入されたもので、AEM SJ SDK で単一ページアプリの改善に使用されている方法です。[HTTP API for Assets](/help/assets/mac-api-assets.md) は、AEM 6.5 向けに拡張された CRUD API です。
 
 新しい HTTP API の機能は次のとおりです。
 
 * [Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになり、フラグメントの作成、更新、読み取り、削除が可能になりました。
 * [コンテンツフラグメントリストのコアコンポーネント](https://www.aemcomponents.dev)でコンテンツサービスを通じてコンテンツフラグメントのリストを公開します。
-* [コアコンポーネントライブラリ](https://www.aemcomponents.dev) これは、各コンポーネントのデフォルトの Content Services JSON 出力を表示します
+* コンポーネントごとにコンテンツサービスのデフォルト JSON 出力を表示する[コアコンポーネントライブラリ](https://www.aemcomponents.dev)
 
 #### Screens アドオン {#screens-add-on}
 
 インタラクティブなキオスク端末からデジタルサイネージに至るまで、あらゆるデジタル表示でのエクスペリエンスを効率良くデザイン、配信、最適化します。
 
-* コンテンツの再利用を改善し、デジタル/店頭全体でエクスペリエンスとコンテンツを統合
-* ローンチのサポートにより、オーサリングおよび承認/公開ワークフローを合理化
-* SPA Editor を使用したリッチなインタラクティブエクスペリエンスの編集と配信
+* コンテンツ再利用の向上により、デジタルと実店舗の区別なくエクスペリエンスとコンテンツを統一できます。
+* ローンチのサポートにより、オーサリングおよび承認／公開ワークフローを効率化します。
+* SPA エディターを使用して、機能豊富でインタラクティブなエクスペリエンスを編集および配信できます。
 * ローンチを使用して、サイネージコンテンツの今後の変更を計画できるようになりました。
 * シーケンスチャンネルでの従量制再生が可能になりました。
 * ソースファイル（Excel シートなど）を使用してプロジェクト構造を自動作成できるようになりました。
 * 堅牢なオンラインおよびオフラインの操作（スマート同期）が追加されてメディアプレイヤーのサポートが強化され、大規模なサイネージネットワークにも対応できるようになりました。
-* 動的プレースホルダーを使用して、データでトリガーされるコンテンツの場所または設定に基づいてパーソナライズします。
-* AEM Screens Player へのAdobe Analyticsの統合によって推進される統合されたインサイト
+* 動的プレースホルダーを使用して、データでトリガーされるコンテンツの場所または設定別にパーソナライズできます。
+* Adobe Analytics と AEM Screens Player の連携でインサイトの統合が促進されます。
 
 AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=ja)のリリースノートを参照してください。
 
@@ -185,32 +185,32 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### サイト管理 {#site-administration}
 
-* この [参照](/help/sites-authoring/author-environment-tools.md#references) パネルに、選択したページを指す内部リンクのリストを表示する新しいセクションが追加されました。 これは、ページをオフラインで取得したり、削除したりする場合に、オフラインにする前に調整が必要なページを確認するのに役立ちます。
+* [参照](/help/sites-authoring/author-environment-tools.md#references)パネルには、選択したページを参照する内部リンクを一覧表示する新しいセクションがあります。これは、ページをオフラインにしたり削除したりすることが想定される場合に、オフラインにする前に調整する必要があるページを確認するのに便利です。
 * [リスト表示](/help/sites-authoring/basic-handling.md#list-view)には、ページがワークフローに含まれている場合にステータスを表示する新しいワークフロー列があります。
-* 内 [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)を使用する場合、ページにサムネールを割り当てる際に、既存のアセットを参照できるようになりました（「サムネール」タブ）。
+* [ページのプロパティ](/help/sites-authoring/editing-page-properties.md)で、ページにサムネールを割り当てるときに既存のアセットを参照できるようになりました（「サムネール」タブ）。
 
 #### ページエディター {#page-editor}
 
 * JS SDK を使用する React および Angular クライアント側コンポーネントで構築された単一ページアプリエクスペリエンスのコンテキスト内編集および作成が可能になりました（SPA エディターとも呼ばれます）。
-* 基礎モードは、ページに基礎モードページが設定されている場合にのみ表示されます。
+* 基礎モードは、ページに基礎モードが設定されている場合にのみ表示されます。
 
-#### コンテンツフラグメントとエディター {#content-fragments-amp-editor}
+#### コンテンツフラグメントおよびエディター {#content-fragments-amp-editor}
 
 * 全般的なコメントを書き込んだり、テキスト内のコメントを表示（タイムラインレールにも表示）するための新しい[注釈](/help/assets/content-fragments/content-fragments-variations.md#viewing-editing-deleting-annotations)パネルがコンテンツフラグメントエディターに追加されました。
 * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)で、複数行テキスト要素のデフォルトのコンテンツタイプを簡単なテキスト、リッチテキスト、マークダウンのいずれかに設定できます。
-* 追加 [コメント/注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment) RTE（フルスクリーン表示）でテキストを選択する
-* [バージョンの比較](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) 参照レールを使用してコンテンツフラグメントを並べて表示する
-* アセットのダウンロードレポートに、それに応じてコンテンツフラグメントが表示されるようになりました
-* 追加 [Assets HTTP API に対するコンテンツフラグメントのサポート](/help/assets/assets-api-content-fragments.md) /api.jsonから。 コンテンツフラグメントの作成、更新、読み取りおよび削除のための API が用意されています。
+* RTE（フルスクリーン表示）でテキストを選択して、[コメント／注釈](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)を追加できます。
+* 参照パネルでコンテンツフラグメントを並列表示して、[バージョンを比較](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions)できるようになりました。
+* アセットのダウンロードレポートにコンテンツフラグメントが適切に表示されるようになりました。
+* /api.json を通じて、[Assets HTTP API でコンテンツフラグメントがサポート](/help/assets/assets-api-content-fragments.md)されるようになりました。コンテンツフラグメントの作成、更新、読み取りおよび削除のための API が用意されています。
 
-#### エクスペリエンスフラグメント  {#experience-fragments}
+#### エクスペリエンスフラグメント {#experience-fragments}
 
-* のインデックス作成を改善しました。 [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を検索すると、そのコンテンツが、使用されているページの検索で見つかります。
+* [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)のインデックス作成を改善して、フラグメントが使用されているページの検索でコンテンツが見つかるようになりました。
 * 「[Adobe Target に書き出し](/help/sites-administering/experience-fragments-target.md)」オプションで、エクスペリエンスフラグメントを JSON（デフォルトは HTML）またはその両方として送信できるようになりました。
 
 #### 翻訳 {#translation}
 
-* プロジェクトマスターを使用して、翻訳プロジェクトを簡単に作成できます。
+* プロジェクトマスターを使用して、翻訳プロジェクトを手軽に作成できます。
 * 翻訳ジョブをデフォルトで承認済みステータスに設定することで、翻訳プロジェクトの実行を簡略化できます。
 * サードパーティ翻訳メモリの変更点に合わせて翻訳済みページを更新できます。
 * 翻訳ジョブを JSON 形式で書き出すことができます。
@@ -224,12 +224,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 #### ローンチ {#launches}
 
-* ローンチの新しいレビューおよび承認ワークフローと、承認されたローンチページのみを昇格させる機能
-* 追加済み [オプション（プロモーションステップの直後に Launch を削除するように UI 内）](/help/sites-authoring/launches-promoting.md#promoting-launch-pages)
+* ローンチの新しいレビューおよび承認ワークフローと、承認済みのローンチページのみ昇格させる機能が追加されました。
+* [プロモーションステップの直後にローンチを削除するオプションが UI に追加](/help/sites-authoring/launches-promoting.md#promoting-launch-pages)されました。
 
 #### コンテンツのターゲティングとシミュレーション {#content-targeting-simulation}
 
-* ContextHub データレイヤーとクライアント側ルールエンジンの JavaScript が更新され、jQuery 3 がデフォルトで使用されるようになりました。
+* ContextHub データレイヤーおよびクライアントサイドルールエンジンの JavaScript が更新されて、jQuery 3 をデフォルトで使用するようになりました。
 
 #### AEM と Adobe Target {#aem-amp-adobe-target}
 
@@ -270,9 +270,9 @@ AEM Communities では、登録ユーザーがユーザー生成コンテンツ�
 
 コミュニティ管理者は、コミュニティコンポーネントで&#x200B;**メンションを有効化**&#x200B;して、これらのコンポーネントの機能を登録ユーザーが使用できるようにする必要があります。
 
-**グループメッセージ**
+**グループメッセージング**
 
-登録されたコミュニティメンバーは、同じメッセージをグループメンバーに個別に送信する代わりに、単一の電子メール構成を使用して、ダイレクトメッセージをグループに一括で送信できるようになりました。 [グループメッセージング](/help/communities/configure-messaging.md)を許可する には、[Messaging Operations Service](/help/communities/messaging.md#group-messaging) の両方のインスタンスを有効にします。
+コミュニティの登録メンバーは、同じメッセージをグループメンバーに個々に送信するのではなく、1 回のメール作成でダイレクトメッセージをグループに一括送信できるようになりました。[グループメッセージング](/help/communities/configure-messaging.md)を許可する には、[Messaging Operations Service](/help/communities/messaging.md#group-messaging) の両方のインスタンスを有効にします。
 
 ![グループメッセージ](/help/release-notes/assets/group-messaging.png)
 
@@ -286,9 +286,9 @@ AEM Communities では、登録ユーザーがユーザー生成コンテンツ�
 
 ![カスタムフィルター](/help/release-notes/assets/custom-tag-filter.png)
 
-**一括モデレートでのリスト表示**
+**一括モデレートのリスト表示**
 
-改善された UI を備えた新しいリスト表示が一括モデレートで提供され、ユーザー生成コンテンツエントリを表示できるようになりました。
+UI が改善された新しいリスト表示が一括モデレートで利用できるようになり、ユーザ生成コンテンツエントリを表示できるようになりました。
 
 ![リスト表示での一括モデレート](/help/release-notes/assets/list-view-moderation.png)
 
@@ -296,11 +296,11 @@ AEM Communities では、登録ユーザーがユーザー生成コンテンツ�
 
 **作成者側のサイトおよびグループ管理者**
 
-AEM 6.5 以降では、様々なコミュニティサイトやグループ/ネストされたグループの分散管理（および管理）が可能です。 複数のコミュニティサイトやネストされたグループをホストする組織では、サイト（およびグループ）の作成時に、オーサー側で管理者の役割のメンバーを選択できるようになりました。
+AEM 6.5 以降の Communities では、様々なコミュニティサイトやグループ／ネストされたグループの分散管理が可能です。複数のコミュニティサイトやネストされたグループをホストしている組織では、サイト（およびグループ）の作成時に作成者側で管理者の役割のメンバーを選択できるようになりました。
 
 ![サイト管理者](/help/release-notes/assets/site-admin.png)
 
-サイト管理者は、任意の階層レベルにグループを作成でき、それらのデフォルトの管理者になります。これらの管理者は、後で他のグループの管理者によって削除することができます。グループ管理者は、グループ G1 を管理し、G1 の下にネストされたサブグループを作成できます。
+サイト管理者は、任意の階層レベルにグループを作成でき、それらのデフォルトの管理者になります。これらの管理者は、後で他のグループの管理者によって削除することができます。グループ管理者はグループ G1 を管理し、G1 内にネストしたサブグループを作成することができます。
 
 ##### イネーブルメントの機能強化 {#enhancements-to-enablement}
 
@@ -362,7 +362,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### Connected Assets {#connectedassets}
 
-大規模な企業では、Web サイトの作成に必要なインフラストラクチャを分散できます。 Web サイトの作成機能と必要なデジタルアセットが異なるサイロに存在する場合があります。
+大企業では、web サイトの作成に必要なインフラストラクチャを分散させることができます。しかし、web サイトの作成機能と必要なデジタルアセットが、異なるサイロに存在する場合があります。
 
 [!DNL Experience Manager Sites] は、web ページの作成機能を備えています。[!DNL Experience Manager Assets] は Web サイトに必要なアセットを提供するデジタルアセット管理（DAM）システムです。[!DNL Experience Manager] では、[!DNL Sites] と [!DNL Assets] の統合により、上記のユースケースをサポートできるようになりました。詳しくは、[Connected Assets の機能の設定方法と使用方法](/help/assets/use-assets-across-connected-assets-instances.md)を参照してください。
 
@@ -372,7 +372,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### Dynamic Media {#dynamic-media}
 
-[!DNL Dynamic Media] を利用すると、リッチメディアのオーサリングと配信が [!DNL Experience Manager Assets] で強化され、臨場感あふれるパーソナライズされた最先端のエクスペリエンスを促進できます。単一の高品質なプライマリアセットをアップロードし、Adobeの高度なクラウドレンダリングとビューアを使用することで、任意のレンディションの組み合わせをその場で配信して、組織のメディア戦略をサポートできます。
+[!DNL Dynamic Media] を利用すると、リッチメディアのオーサリングと配信が [!DNL Experience Manager Assets] で強化され、臨場感あふれるパーソナライズされた最先端のエクスペリエンスを促進できます。高品質のプライマリアセットを 1 つアップロードし、アドビの高度なクラウドレンダリングと閲覧者を使用すると、その場でレンディションを任意に組み合わせて配信し、組織のメディア戦略をサポートすることができます。
 
 新しい [!DNL Dynamic Media] 機能について詳しくは、[Dynamic Media のリリースノート](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html?lang=ja-JP)を参照してください。
 
@@ -390,7 +390,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### 検索エクスペリエンスの強化 {#experience-enhancement-for-searching}
 
-[!DNL Experience Manager] 6.5 以降では、マーケティング担当者が検索結果ページから目的のアセットをすばやく見つけることができます。検索ファセットのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対して期待されるカウントを表示すると、ユーザーは検索結果を効率的にナビゲートできます。 詳しくは、[Experience Manager でのアセットの検索](/help/assets/search-assets.md)を参照してください。
+[!DNL Experience Manager] 6.5 以降では、マーケティング担当者が検索結果ページから目的のアセットをすばやく見つけることができます。検索ファセットのアセット数は、検索フィルターを適用する前でも更新されます。フィルターに対して予想されるアセット数を確認すると、検索結果をすばやく効率的にナビゲートすることができます。詳しくは、[Experience Manager でのアセットの検索](/help/assets/search-assets.md)を参照してください。
 
 ![検索ファセットで検索結果をフィルタリングしない場合のアセット数の表示](/help/assets/assets/asset_search_results_in_facets_filters.png)
 
@@ -406,9 +406,9 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 #### メタデータの機能強化 {#metadata-enhancements}
 
-[!DNL Assets] では、アセットフォルダーのメタデータスキーマを作成できます。これにより、フォルダープロパティのページに表示されるレイアウトとメタデータを定義します、フォルダーのメタデータスキーマを既存のフォルダーまたは作成するフォルダーに割り当てることができるようになりました。詳しくは、 [フォルダーメタデータスキーマ](/help/assets/metadata-config.md#folder-metadata-schema).
+[!DNL Assets] では、アセットフォルダーのメタデータスキーマを作成できます。これにより、フォルダープロパティのページに表示されるレイアウトとメタデータを定義します、フォルダーのメタデータスキーマを既存のフォルダーまたは作成するフォルダーに割り当てることができるようになりました。詳細情報は、[フォルダーメタデータスキーマ](/help/assets/metadata-config.md#folder-metadata-schema)を参照してください。
 
-カスケードメタデータを指定する場合、フォームに手動で入力する代わりに、実行時に JSON ファイルから読み込むことができます。 詳しくは、[カスケードメタデータ](/help/assets/metadata-schemas.md#cascading-metadata)を参照してください。
+カスケードメタデータを指定すると、選択肢をフォームに手動で入力する代わりに、実行時に JSON ファイルから読み込むことができます。詳しくは、[カスケードメタデータ](/help/assets/metadata-schemas.md#cascading-metadata)を参照してください。
 
 #### レポート機能の強化 {#reporting-enhancements}
 
@@ -418,7 +418,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられています。主なものは次のとおりです。
 
-* 送信済みのフォーム、処理済みのドキュメント、レンダリング済みのドキュメントの数を追跡するトランザクションレポート
+* 送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できるトランザクションレポート
 * インタラクティブ通信の操作性の向上
 * アダプティブフォームでのクラウドベースの電子署名
 * AEM Sites の単一ページアプリケーション（SPA）へのアダプティブフォームやインタラクティブコミュニケーションの組み込み。
@@ -435,9 +435,9 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。[Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
-この優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更がおこなわれました。
+このような優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更が行われました。
 
-## リリースに含まれるファイルのリスト {#list-of-files-that-are-part-of-the-release}
+## このリリースに含まれるファイルのリスト {#list-of-files-that-are-part-of-the-release}
 
 **基盤**
 
@@ -447,12 +447,12 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 * Eclipse IDE 用プラグイン（[詳細およびダウンロード](/help/sites-developing/aem-eclipse.md)）
 
 * Brackets コードエディターの拡張機能（[詳細およびダウンロード](/help/sites-developing/aem-brackets.md)）
-* Maven/Gradle の依存関係 ([ダウンロードリンク](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/))
+* Maven／Gradle の依存関係（[ダウンロードリンク](https://repo1.maven.org/maven2/com/adobe/aem/uber-jar/6.5.0/)）
 
 **Sites**
 
-* コアコンポーネント ([GitHub プロジェクト](https://github.com/adobe/aem-core-wcm-components))
-* We.Retail 参照実装 ([詳細を表示](/help/sites-developing/we-retail.md))
+* コアコンポーネント（[GitHub プロジェクト](https://github.com/adobe/aem-core-wcm-components)）
+* We.Retail 参照実装（[詳細を表示](/help/sites-developing/we-retail.md)）
 * Maven プロジェクトアーキタイプ：
 
    * フルスタックサイトの場合：[GitHub プロジェクト](https://github.com/adobe/aem-project-archetype)
@@ -467,21 +467,21 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
    * [イタリア語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
    * [フランス語](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
 
-* ダイアログ変換ツールなどの AEM Modernize Tool Suite([GitHub プロジェクト](https://github.com/adobe/aem-modernize-tools))
+* ダイアログ変換ツールなどの AEM Modernize Tool Suite（[GitHub プロジェクト](https://github.com/adobe/aem-modernize-tools)）
 
 **Assets**
 
-* 拡張ラスタライザを追加するPDF([詳細を表示](/help/assets/aem-pdf-rasterizer.md))
-* 拡張 RAW 画像サポートを追加するパッケージ ([詳細を表示](/help/assets/camera-raw.md))
+* 強化された PDF Rasterizer を追加するためのパッケージ（[詳細を表示](/help/assets/aem-pdf-rasterizer.md)）
+* 強化された RAW 画像のサポートを追加するためのパッケージ（[詳細を表示](/help/assets/camera-raw.md)）
 
 **Forms**
 
-* [AEM Forms機能のパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
+* [AEM Forms 機能パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)
 * [AEM Forms OSGi Client SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
 
 ## 言語 {#languages}
 
-ユーザーインターフェイスは、次の言語で使用できます。
+ ユーザーインターフェイスは次の言語で使用できます。
 
 * 英語
 * ドイツ語
@@ -556,8 +556,8 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 ### Assets {#assets}
 
 * **検索：**&#x200B;検索文字列の先頭にスペースが含まれている場合、検索結果が返されません（[OAK-4786](https://issues.apache.org/jira/browse/OAK-4786)）
-* **フォルダーメタデータスキーマ**:選択ボタンを追加すると、「 ID 」と「 Value 」フィールドが期待どおりにレンダリングされず、削除機能が動作しない。 （CQ-4261144）
-* アセットの名前を変更する際に、アセット名に空白を使用することはできません。 （CQ-4266403）
+* **フォルダーメタデータスキーマ**：選択ボタンを追加すると、ID フィールドと値 フィールドが期待どおりにレンダリングされず、削除機能が動作しません。（CQ-4261144）
+* アセット名の変更時に、アセット名に空白を使用することができません。（CQ-4266403）
 
 ### Forms {#forms}
 
@@ -565,10 +565,10 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 * （WebSphere® 上の AEM Forms のみ）**ユーザー名**&#x200B;を検索条件として&#x200B;**管理者**&#x200B;を検索する場合、**Forms Workflow**／**タスク検索**&#x200B;を実行しても結果が返されません。（CQ-4266457）
 
 * AEM Forms では、JPEG 圧縮の TIF および TIFF ファイルを PDF ドキュメントに変換できません（CQ-4265972）
-* この **AEM Forms Assets Scanner** および **レターからインタラクティブ通信への移行** オプションは **AEM Forms移行** ページ。 （CQ-4266572）
+* 「**AEM Forms アセットスキャナー**」オプションと「**レターからインタラクティブ通信への移行**」オプションが、**AEM Forms の移行**&#x200B;ページで機能しません。（CQ-4266572）
 
 * （JBoss® 7のみ）AEM Forms を以前のバージョンから 6.5 にアップグレードするとき、以前のバージョンにデフォルトの送信プロセスまたはレンダリングプロセスをコピーして使用しているプロセス（.lca）があると、そのプロセス（.lca）を使用する HTML5 フォームが必要なアクションを実行できません。（CQ-4243928）
-* アダプティブフォームでは、フォームデータモデルサービスがルールエディターから呼び出されて画像選択コンポーネントの値が動的に更新されても、画像選択コンポーネントの値は更新されません。 （CQ-4254754）
+* アダプティブフォームでは、ルールエディターからフォームデータモデルサービスを呼び出して画像選択コンポーネントの値を動的に更新する場合、画像選択コンポーネントの値が更新されません。（CQ-4254754）
 * AEM Forms Designer インストーラーを実行するには、32 ビット版の [Visual C++ 再頒布可能ランタイムパッケージ 2012](https://docs.microsoft.com/ja-JP/cpp/windows/latest-supported-vc-redist?view=msvc-170) と [Visual C++ 再頒布可能ランタイムパッケージ 2013](https://support.microsoft.com/ja-jp/topic/update-for-visual-c-2013-and-visual-c-redistributable-package-5b2ac5ab-4139-8acc-08e2-9578ec9b2cf1) が必要です。インストールを開始する前に、前述の再頒布可能ランタイムパッケージがインストールされていることを確認してください。（CQ-4265668）
 
 * PDF ジェネレーターは、スマートカードベースの認証をサポートしていません。管理者が Windows サーバーでグループポリシー `Interactive Logon: Require Smart card` を有効にすると、既存の PDF Generator のユーザーがすべて無効になります。
@@ -577,7 +577,7 @@ org.osgi.framework.bootdelegation=sun.*,com.sun.*,jdk.internal.reflect,jdk.inter
 
    * 名前：allowProxy
    * タイプ：Boolean
-   * 値：true
+   * 値：True
    * 保護：False
    * 必須：False
    * 複数：False
