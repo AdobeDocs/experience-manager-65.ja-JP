@@ -13,9 +13,9 @@ docset: aem65
 exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
 source-git-commit: 41752e40f2bceae98d4a9ff8bf130476339fe324
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3025'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
@@ -51,17 +51,17 @@ ht-degree: 52%
 
 ### AEM および OSGi コンソールの管理者アカウントのデフォルトパスワードの変更 {#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts}
 
-Adobeでは、インストール後に、権限を持つ [**AEM** `admin` アカウント](#changing-the-aem-admin-password) （すべてのインスタンス）。
+インストール後に、（すべてのインスタンスに対する）権限のある [**AEM** `admin`アカウント](#changing-the-aem-admin-password)のパスワードを変更することをお勧めします。
 
 以下のアカウントが該当します。
 
 * AEM `admin` アカウント
 
-   AEM admin アカウントのパスワードを変更した後、CRX にアクセスする際に新しいパスワードを使用します。
+   AEM 管理者アカウントのパスワードを変更した後、CRX へのアクセス時には新しいパスワードを使用します。
 
-* OSGi Web コンソールの `admin` パスワード
+* OSGi web コンソールの `admin` パスワード
 
-   この変更は、Web コンソールへのアクセスに使用する管理者アカウントにも適用されるので、アクセス時には同じパスワードを使用します。
+   この変更は、web コンソールへのアクセスに使用する admin アカウントにも適用されます。そのため、web コンソールへのアクセスの際にも同じパスワードを使用します。
 
 これらの 2 つのアカウントは、個別の資格情報を使用する異なるアカウントです。デプロイメントをセキュリティで保護するには、それぞれに強力なパスワードを設定することが不可欠です。
 
@@ -86,7 +86,7 @@ Web コンソールのパスワードの変更について詳しくは、「[OSG
 
 #### OSGi web コンソールの管理者パスワードの変更 {#changing-the-osgi-web-console-admin-password}
 
-Web コンソールへのアクセスに使用するパスワードを変更します。 を使用します。 [OSGi 設定](/help/sites-deploying/configuring-osgi.md) 次のプロパティを更新するには、 **Apache Felix OSGi Management Console**:
+Web コンソールへのアクセスに使用するパスワードを変更します。[OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用して、**Apache Felix OSGi 管理コンソール**&#x200B;の以下のプロパティを更新します。
 
 * **ユーザー名**&#x200B;と&#x200B;**パスワード**：Apache Felix web 管理コンソールにアクセスするための資格情報です。
 インスタンスのセキュリティを確保するには、最初のインストールの*後に*&#x200B;パスワードを変更する必要があります。
@@ -95,7 +95,7 @@ Web コンソールへのアクセスに使用するパスワードを変更し�
 >
 >OSGi 設定について詳しくは、「[OSGi 設定](/help/sites-deploying/configuring-osgi.md)」を参照してください。
 
-**OSGi Web コンソールの管理者パスワードを変更するには**:
+**OSGi web コンソールの admin パスワードの変更**：
 
 1. **ツール**／**操作**&#x200B;メニューから、**Web コンソール**&#x200B;を開き、「**設定**」セクションに移動力します。
 例：`<server>:<port>/system/console/configMgr`
@@ -108,15 +108,15 @@ Web コンソールへのアクセスに使用するパスワードを変更し�
 
 ### カスタムエラーハンドラーの実装 {#implement-custom-error-handler}
 
-Adobeでは、情報開示を防ぐために、特に 404 および 500 HTTP 応答コード用に、カスタムエラーハンドラーページを定義することをお勧めします。
+情報が開示されないようにするには、（404 および 500 HTTP 応答コード専用の）カスタムエラーハンドラーページを定義することをお勧めします。
 
 >[!NOTE]
 >
->詳しくは、 [カスタムスクリプトやエラーハンドラーを作成する方法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=en) を参照してください。
+>詳しくは、[カスタムスクリプトまたはエラーハンドラーの作成方法](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/custom-error-page.html?lang=ja)を参照してください。
 
 ### Dispatcher のセキュリティチェックリストの完了 {#complete-dispatcher-security-checklist}
 
-AEM Dispatcher は、インフラストラクチャの重要な部分です。 Adobeでは、 [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=en).
+AEM Dispatcher はインフラストラクチャの重要な部分です。[Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja)を確認することをお勧めします。
 
 >[!CAUTION]
 >
@@ -130,11 +130,11 @@ AEM の標準インストールでは、`admin` をデフォルトの[レプリ�
 
 セキュリティに関する考慮事項については、次の 2 つの点を考慮して、特定の使用例がすぐに反映されるように両方を変更する必要があります。
 
-* この **輸送利用者** は管理者ユーザーではない必要があります。 代わりに、パブリッシュシステムの関連する部分に対するアクセス権のみを持つユーザーをパブリッシュシステム上に設定し、そのユーザーの資格情報をトランスポートに使用します。
+* **トランスポートユーザー**&#x200B;は admin 以外のユーザーにする必要があります。正確には、パブリッシュシステムの関連部分へのアクセス権限のみを持つユーザーをパブリッシュシステムで設定し、そのユーザーの資格情報をトランスポートに使用してください。
 
    バンドルされたレプリケーション受信者ユーザーから開始し、状況に合わせてそのユーザーのアクセス権限を設定できます。
 
-* この **レプリケーションユーザー** または **エージェントユーザー ID** また、管理者ユーザーではなく、レプリケートされたコンテンツのみを表示できるユーザーでもある必要があります。 レプリケーションユーザーは、パブリッシュ元に送信される前に、オーサーシステムでレプリケートされるコンテンツを収集するために使用されます。
+* **レプリケーションユーザー**&#x200B;または&#x200B;**エージェントユーザー ID** も admin 以外のユーザー（ただし、レプリケーションされるコンテンツの確認のみ可能なユーザー）にする必要があります。レプリケーションユーザーは、レプリケーション対象のコンテンツを、パブリッシュに送信する前にオーサーシステムで収集するために使用します。
 
 ### 操作ダッシュボードのセキュリティヘルスチェックの確認 {#check-the-operations-dashboard-security-health-checks}
 
@@ -144,13 +144,13 @@ AEM 6 には、システムオペレーターが問題のトラブルシュー�
 
 ### サンプルコンテンツが存在するかどうかを確認 {#check-if-example-content-is-present}
 
-すべてのサンプルコンテンツとユーザー (Geometrixxプロジェクトとそのコンポーネントなど ) は、非公開でアクセスできるようにする前に、生産的なシステム上で完全にアンインストールおよび削除する必要があります。
+実稼動システムを公開する前に、そのシステム上のすべてのサンプルコンテンツ／ユーザー（Geometrixx プロジェクトやそのコンポーネントなど）を完全にアンインストールして削除しておく必要があります。
 
 >[!NOTE]
 >
->サンプル `We.Retail` このインスタンスがで実行されている場合、アプリケーションは削除されます [実稼動準備モード](/help/sites-administering/production-ready.md). このシナリオが該当しない場合は、パッケージマネージャーに移動し、検索とアンインストールを行って、サンプルコンテンツをアンインストールできます。 `We.Retail` パッケージ。
+>このインスタンスが[実稼動準備モード](/help/sites-administering/production-ready.md)で実行されている場合、サンプルの `We.Retail` アプリケーションは削除されます。このシナリオが当てはまらない場合は、パッケージマネージャーに移動して、すべての `We.Retail` パッケージを検索してアンインストールすることで、サンプルコンテンツをアンインストールできます。
 
-詳しくは、 [パッケージの操作](package-manager.md).
+[パッケージの操作](package-manager.md)を参照してください。
 
 ### CRX 開発バンドルが存在するかどうかの確認 {#check-if-the-crx-development-bundles-are-present}
 
@@ -162,7 +162,7 @@ AEM 6 には、システムオペレーターが問題のトラブルシュー�
 
 ### Sling 開発バンドルが存在するかどうかの確認 {#check-if-the-sling-development-bundle-is-present}
 
-この [AEM Developer Tools](/help/sites-developing/aem-eclipse.md) Apache Sling Tooling Support Install(org.apache.sling.tooling.support.install) をデプロイします。
+[AEM Developer Tools](/help/sites-developing/aem-eclipse.md) は Apache Sling Tooling Support Install（org.apache.sling.tooling.support.install）をデプロイします。
 
 この OSGi バンドルは、アクセスできるようにする前に、オーサーとパブリッシュの両方の実稼働システムからアンインストールする必要があります。
 
@@ -174,9 +174,9 @@ AEM 6.1 には、クロスサイトリクエストフォージェリーから保
 
 #### Sling リファラーフィルター {#the-sling-referrer-filter}
 
-CRX WebDAV および Apache Sling のクロスサイトリクエストフォージェリ (CSRF) に関する既知のセキュリティ問題に対処するには、リファラーフィルターの設定を追加して、それを使用します。
+CRX WebDAV および Apache Sling のクロスサイトリクエストフォージェリ（CSRF）に関する既存のセキュリティ問題に対応するには、リファラーフィルターを使用するために設定を追加します。
 
-リファラーフィルターサービスは、以下を設定できる OSGi サービスです。
+リファラーフィルターサービスは OSGi のサービスの 1 つであり、次の設定が可能です。
 
 * どの http メソッドをフィルターするか
 * 空のリファラーヘッダーを使用できるかどうか
@@ -195,7 +195,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    `Apache Sling Referrer Filter`
 
-1. 「`Allow Hosts`」フィールドに、リファラーとして許可するすべてのホストを入力します。各エントリは、フォームである必要があります
+1. 「`Allow Hosts`」フィールドに、リファラーとして許可するすべてのホストを入力します。各エントリは、
 
    &lt;protocol>://&lt;server>:&lt;port> の形式である必要があります。
 
@@ -203,27 +203,27 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    * `https://allowed.server:80` の場合、このサーバーからの指定ポートでの要求がすべて許可されます。
    * https 要求も許可する場合は、2 行目を入力する必要があります。
-   * そのサーバのすべてのポートを許可する場合は、 `0` をポート番号として設定します。
+   * このサーバーからすべてのポートを許可する場合は、ポート番号として `0` を使用できます。
 
 1. リファラーヘッダーが空の場合やない場合を許可するには、「`Allow Empty`」フィールドを選択します。
 
    >[!CAUTION]
    >
-   >Adobeでは、リファラーは、 `cURL` 空の値を許可する代わりに、システムが CSRF 攻撃にさらされる可能性があります。
+   >ご利用のシステムが CSRF 攻撃を受ける可能性があるため、`cURL` などのコマンドラインツールを使用する場合は、空の値を許可するのではなく、リファラーを指定することをお勧めします。
 
-1. このフィルターが `Filter Methods` フィールドに入力します。
+1. このフィルターが「`Filter Methods`」フィールドを使用してチェックする方法を編集します。
 
 1. 「**保存**」をクリックして変更を保存します。
 
 ### OSGi 設定 {#osgi-settings}
 
-アプリケーションのデバッグを容易にするために、一部の OSGi 設定はデフォルトで指定されています。パブリッシュインスタンスとオーサーの実稼動インスタンスでこのような設定を変更して、内部情報が公開されないようにします。
+アプリケーションのデバッグを容易にするために、一部の OSGi 設定はデフォルトで指定されています。実稼動のパブリッシュインスタンスとオーサーインスタンスでは、これらの設定を変更して、内部情報が公開されないようにします。
 
 >[!NOTE]
 >
->以下のすべての設定（を除く） **Day CQ WCM Debug Filter**&#x200B;は、 [実稼動準備モード](/help/sites-administering/production-ready.md). そのため、Adobeでは、実稼動環境にインスタンスをデプロイする前に、すべての設定を確認することをお勧めします。
+>以下の設定はすべて（**Day CQ WCM デバッグフィルター**&#x200B;は除く）、[実稼動準備モード](/help/sites-administering/production-ready.md)で自動的にカバーされます。このため、インスタンスを実稼働環境にデプロイする前にすべての設定を見直すことをお勧めします。
 
-次の各サービスについて、指定した設定を変更する必要があります。
+以下に示す各サービスについて、記載されている設定を変更してください。
 
 * [Adobe Granite HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
@@ -240,7 +240,7 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
    * （パブリッシュインスタンスのみ）「**WCM モード**」を「無効」に設定
 
-* [Apache Sling JavaScript Handler](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler):
+* [Apache Sling JavaScript ハンドラー](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler)：
 
    * 「**デバッグ情報の生成**」を無効化
 
@@ -249,18 +249,18 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
    * 「**デバッグ情報の生成**」を無効化
    * 「**マッピングされたコンテンツ**」を無効化
 
-詳しくは、 [OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md).
+[OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください。
 
-AEMを操作する場合、このようなサービスの設定を管理する方法はいくつかあります。参照 [OSGi の設定](/help/sites-deploying/configuring-osgi.md) を参照してください。
+AEM を操作しているときは、このようなサービスの設定を管理する方法がいくつかあります。詳細および推奨事項については、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 ## 参考情報 {#further-readings}
 
 ### サービス拒否（DoS）攻撃の軽減 {#mitigate-denial-of-service-dos-attacks}
 
-サービス拒否（DoS）攻撃とは、意図したユーザーがコンピュータリソースを利用できない状態にする試みです。この攻撃は、多くの場合、リソースをオーバーロードすることで行われます。例：
+サービス拒否（DoS）攻撃とは、意図したユーザーがコンピュータリソースを利用できない状態にする試みです。多くの場合、この攻撃ではリソースを過負荷状態にします。次に例を示します。
 
-* 外部ソースからの大量のリクエスト。
-* システムが正常に配信できる以上の詳細情報のリクエスト。
+* 外部のソースから大量のリクエストを送信する。
+* システムが正常に提供できないような大量の情報をリクエストされる。
 
    例えば、リポジトリ全体の JSON 表現を要求されます。
 
@@ -272,24 +272,24 @@ AEMを操作する場合、このようなサービスの設定を管理する�
    * `.../en.SelectorDosAttack.html`
    * `.../en.html/SuffixDosAttack`
 
-   すべての有効なバリエーション ( 例えば、 `200` 応答とをキャッシュするように設定 )Dispatcher によってキャッシュされ、最終的にファイルシステムがフルになり、以降の要求に対するサービスが不要になります。
+   有効なすべてのバリエーションが Dispatcher によってキャッシュされ（例えば、`200` 応答を返し、キャッシュするように設定されている場合）、最終的にはファイルシステムがいっぱいになり、以降のリクエストに対してサービスを提供できなくなります。
 
-このような攻撃を防ぐための設定には多くのポイントがありますが、ここでは、AEMに関連するポイントのみについて説明します。
+このような攻撃を防ぐための設定のポイントは多数ありますが、ここでは AEM に関連するポイントについてのみ説明します。
 
 **DoS を防ぐための Sling の設定**
 
-Sling は *コンテンツ中心の*.(HTTP) 要求が JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、処理はコンテンツに焦点を当てます。
+Sling は&#x200B;*コンテンツ中心型*&#x200B;です。（HTTP）リクエストがそれぞれ JCR リソース（リポジトリノード）の形式でコンテンツにマッピングされるので、コンテンツに焦点を当てた処理が行われます。
 
-* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です.
-* 次に、レンダラー（スクリプト）は、リソースプロパティから、要求の特定の部分（セレクターや拡張子など）と共に配置されます。
+* 最初のターゲットは、コンテンツを保持しているリソース（JCR ノード）です。
+* 次に、レンダラーまたはスクリプトが、リクエストの特定の部分（セレクターや拡張子など）と共にリソースプロパティから配置されます。
 
-詳しくは、 [Sling リクエストの処理](/help/sites-developing/the-basics.md#sling-request-processing) を参照してください。
+詳しくは、[Sling のリクエスト処理](/help/sites-developing/the-basics.md#sling-request-processing)を参照してください。
 
-このアプローチにより、Sling は強力で柔軟性が高くなりますが、常に柔軟性が高く、慎重に管理する必要があります。
+このアプローチにより Sling が強化され、柔軟性も向上しますが、これまでどおり柔軟性の管理には注意が必要です。
 
-DoS の誤用を防ぐには、次の操作を行います。
+DoS の誤用を防ぐには、以下を行います。
 
-1. アプリケーションレベルでコントロールを組み込みます。可能なバリエーションの数により、デフォルトの設定は実行できません。
+1. アプリケーションレベルで制御を組み込みます。可能なバリエーションの数が原因で、デフォルト設定が実現可能でない場合があります。
 
    アプリケーションでは、次の操作を実行する必要があります。
 
@@ -298,26 +298,26 @@ DoS の誤用を防ぐには、次の操作を行います。
 
 1. 問題となる可能性のある、デフォルトのレンダラー設定を確認します。
 
-   * 特に、JSON レンダラーは複数のレベルでツリー構造を横断します。
+   * 特に、JSON レンダラーでは、ツリー構造が複数のレベルに及びます。
 
       例えば、次のようなリクエストの場合、
 
       `http://localhost:4502/.json`
 
-      は、サーバーで重大な問題を引き起こす可能性のある JSON 表現でリポジトリ全体をダンプできました。 このため、Sling は最大結果数に制限を設定しています。 JSON レンダリングの深さを制限するには、次の値を設定します。
+      リポジトリ全体を JSON 表現でダンプできてしまうので、サーバーの重大な問題を引き起こすおそれがあります。そのため、Sling では結果の数に上限を設定しています。JSON レンダリングの深度を制限するには、次の値を設定します。
 
       **JSON の最大結果数**（`json.maximumresults`）
 
-      [Apache Sling GET サーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定で指定します。この制限を超えると、レンダリングは折りたたまれます。 AEM 内での Sling 用のデフォルト値は `1000` です。
+      [Apache Sling GET サーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)の設定で指定します。この制限を超えると、レンダリングが停止します。AEM 内での Sling 用のデフォルト値は `1000` です。
 
-   * 予防策として、他のデフォルトのレンダラー (HTML、プレーンテキスト、XML) を無効にする必要があります。 この操作を繰り返すには、 [Apache SlingGETサーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet).
+   * 予防策として、他のデフォルトレンダラー（HTML、プレーンテキスト、XML）を無効にしてください。ここでも、[Apache Sling GET サーブレット](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-get-servlet)を設定します。
    >[!CAUTION]
    >
-   >AEMの通常の操作に必要なので、JSON レンダラーを無効にしないでください。
+   >JSON レンダラーは AEM の通常操作に必要なので、無効にしないでください。
 
 1. ファイアウォールを使用して、インスタンスへのアクセスをフィルタリングします。
 
-   * オペレーティングシステムレベルのファイアウォールを使用して、インスタンスのポイントへのアクセスをフィルタリングする必要があります。これにより、保護されていない状態のままにした場合に、サービス拒否攻撃が発生する可能性があります。
+   * 保護されていない状態ではサービス拒否攻撃につながるおそれがあるインスタンスポイントへのアクセスをフィルタリングするには、オペレーティングシステムレベルのファイアウォールを使用する必要があります。
 
 **フォームセレクターを使用することで生じる DoS に対する軽減策**
 
@@ -325,28 +325,28 @@ DoS の誤用を防ぐには、次の操作を行います。
 >
 >この軽減策は、Forms を使用していない AEM 環境でのみ実行してください。
 
-これは、AEMでは標準で用意されている `FormChooserServlet`を使用すると、クエリでフォームセレクターを使用すると、コストのかかるリポジトリトラバーサルがトリガーになり、通常はAEMインスタンスが停止します。 フォームセレクターは、クエリに文字列 **&amp;ast;.form.&amp;ast;** が含まれていれば検出されてしまいます。
+AEM は `FormChooserServlet` 用の標準インデックスを提供していないので、クエリでフォームセレクターを使用すると、コストの高いリポジトリトラバーサルが発生する可能性があり、通常は AEM インスタンスが過負荷になって最終的に停止します。フォームセレクターは、クエリに文字列 **&amp;ast;.form.&amp;ast;** が含まれていれば検出されてしまいます。
 
-この問題を軽減するには、次の手順を実行します。
+この問題を軽減するには、次の手順を実行することができます。
 
 1. ブラウザーで *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr* を参照して、web コンソールに移動します
 
 1. **Day CQ WCM Form 選択サーブレット**&#x200B;を検索します
-1. エントリをクリックした後、 **詳細検索が必要** を次のウィンドウに表示します。
+1. エントリをクリックした後、次のウィンドウで「**詳細検索が必要**」を無効にします。
 
 1. 「**保存**」をクリックします。
 
 **アセットダウンロードサーブレットによって発生する DoS を軽減**
 
-デフォルトのアセットダウンロードサーブレットを使用すると、認証済みユーザーは、任意の大きさの同時ダウンロードリクエストを発行して、アセットの ZIP ファイルを作成できます。 大きな ZIP アーカイブを作成すると、サーバーとネットワークが過負荷になる可能性があります。この動作に起因する潜在的なサービス拒否（DoS）のリスクを軽減するために、[!DNL Experience Manager] パブリッシュインスタンスでは `AssetDownloadServlet` OSGi コンポーネントがデフォルトで無効になっています。これは、[!DNL Experience Manager] オーサーインスタンスでデフォルトで有効になっています。
+デフォルトのアセットダウンロードサーブレットを使用すると、認証済みユーザーは、任意の大きさの同時ダウンロードリクエストを発行してアセットの ZIP ファイルを作成することができます。大きな ZIP アーカイブを作成すると、サーバーとネットワークが過負荷になる可能性があります。この動作に起因する潜在的なサービス拒否（DoS）のリスクを軽減するために、[!DNL Experience Manager] パブリッシュインスタンスでは `AssetDownloadServlet` OSGi コンポーネントがデフォルトで無効になっています。これは、[!DNL Experience Manager] オーサーインスタンスでデフォルトで有効になっています。
 
-ダウンロード機能が必要ない場合は、オーサーデプロイメントとパブリッシュデプロイメントでサーブレットを無効にします。 セットアップでアセットダウンロードサーブレットを有効にする必要がある場合、詳細については[この記事](/help/assets/download-assets-from-aem.md)を参照してください。また、デプロイメントでサポートできるダウンロードの最大制限を定義できます。
+ダウンロード機能が必要ない場合は、オーサーデプロイメントとパブリッシュデプロイメントでこのサーブレットを無効にします。セットアップでアセットダウンロードサーブレットを有効にする必要がある場合、詳細については[この記事](/help/assets/download-assets-from-aem.md)を参照してください。また、デプロイメントでサポートできるダウンロードの最大制限を定義できます。
 
 ### WebDAV の無効化 {#disable-webdav}
 
-適切な OSGi バンドルを停止して、オーサー環境とパブリッシュ環境の両方で WebDAV を無効にします。
+該当する OSGi バンドルを停止して、オーサー環境とパブリッシュ環境の両方で WebDAV を無効にします。
 
-1. 以下で実行されている **Felix 管理コンソール**&#x200B;に接続します。
+1. 以下で動作している **Felix 管理コンソール**&#x200B;に接続します。
 
    `https://<*host*>:<*port*>/system/console`
 
@@ -356,9 +356,9 @@ DoS の誤用を防ぐには、次の操作を行います。
 
    `Apache Sling Simple WebDAV Access to repositories (org.apache.sling.jcr.webdav)`
 
-1. このバンドルを停止するには、「Actions」列で停止ボタンをクリックします。
+1. このバンドルを停止するには、「アクション」列で停止ボタンをクリックします。
 
-1. 再度、バンドルのリストで、次の名前のバンドルを探します。
+1. 再び、バンドルのリストで、次の名前のバンドルを探します。
 
    `Apache Sling DavEx Access to repositories (org.apache.sling.jcr.davex)`
 
@@ -370,13 +370,13 @@ DoS の誤用を防ぐには、次の操作を行います。
 
 ### ユーザーのホームパスに個人を特定できる情報を公開していないことの確認 {#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path}
 
-リポジトリユーザーのホームパスに個人を特定できる情報を公開しないようにすることで、ユーザーを保護することが重要です。
+個人を特定できる情報をリポジトリユーザーのホームパスで公開しないようにして、ユーザーを保護することが重要です。
 
-AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インターフェイスにより、ユーザー ID（または認証可能な ID）のノード名を保存する方法が変わりました。新しいインターフェイスでは、ノード名にユーザー ID が表示されなくなり、代わりにランダムな名前が生成されます。
+AEM 6.1 以降、`AuthorizableNodeName` インターフェイスの新しい実装により、ユーザー ID（認証可能な ID）のノード名の保存方法が変わりました。新しいインターフェイスでは、ノード名にユーザー ID を表示しなくなり、代わりにランダムな名前を生成します。
 
-有効にする設定は実行しないでください。AEMで許可可能 ID を生成するデフォルトの方法になったからです。
+これは現在、AEM で認証可能な ID を生成するデフォルトの方法となっているので、これを有効にするための設定は必要ありません。
 
-非推奨ですが、既存のアプリケーションとの下位互換性を確保するために古い実装が必要な場合には、この方法を無効にすることができます。これをおこなうには、次の手順を実行する必要があります。
+お勧めはしませんが、既存のアプリケーションとの下位互換性を確保するために古い実装が必要な場合には、この方法を無効にすることができます。それには、以下を行う必要があります。
 
 1. Web コンソールに移動して、**Apache Jackrabbit Oak SecurityProvider** のプロパティ **requiredServicePids** から org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName エントリを削除します。
 
@@ -384,25 +384,25 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 1. Web コンソールから **Apache Jackrabbit Oak Random Authorizable Node Name** OSGi 設定を削除します。
 
-   検索を容易にするために、この設定の PID は次のようになります。 **org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName**.
+   ちなみに、この設定の PID は **org.apache.jackrabbit.oak.security.user.RandomAuthorizableNodeName** です。該当する設定を見つける際の参考にしてください。
 
 >[!NOTE]
 >
->詳しくは、「[許可可能なノード名の生成](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html)」で Oak のドキュメントを参照してください。
+>詳しくは、Oak ドキュメントの [Authorizable Node Name Generation](https://jackrabbit.apache.org/oak/docs/security/user/authorizablenodename.html)（英語）を参照してください。
 
 ### 匿名権限堅牢化パッケージ {#anonymous-permission-hardening-package}
 
-デフォルトでは、AEMには次のようなシステムメタデータが格納されます。 `jcr:createdBy` または `jcr:lastModifiedBy` ノードのプロパティとして、通常のコンテンツの横にあるリポジトリで。 設定とアクセス制御の設定に応じて、場合によっては、これによって、例えば、生の JSON または XML としてレンダリングされる場合などに、個人識別情報 (PII) が公開される可能性があります。
+デフォルトでは、AEM は、`jcr:createdBy` や `jcr:lastModifiedBy` などのシステムメタデータをノードプロパティとして、リポジトリ内の通常のコンテンツの隣に保存します。設定とアクセス制御のセットアップに応じて、場合によっては、このようなノードが生の JSON または XML としてレンダリングされるなど、個人を特定できる情報（PII）の漏洩につながる可能性があります。
 
-すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。 権限の最小化の原則に従って、アクセスを制限する必要があります。
+すべてのリポジトリデータと同様に、これらのプロパティは Oak 認証スタックによって仲介されます。権限の最小化の原則に従って、これらのプロパティへのアクセスを制限する必要があります。
 
-これをサポートするため、Adobeは、お客様が構築する基盤として、許可堅牢化パッケージを提供します。 これは、リポジトリのルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティに匿名アクセスを制限することで機能します。 パッケージをダウンロードできます [ここ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) とは、サポートされているすべてのバージョンのAEMにインストールできます。
+これをサポートするため、アドビでは、お客様の構築基盤として権限堅牢化パッケージを提供しています。これは、リポジトリルートに「拒否」アクセス制御エントリをインストールし、一般的に使用されるシステムプロパティへの匿名アクセスを制限することで機能します。このパッケージは[こちら](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/jp/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip)からダウンロードでき、サポートされているすべてのバージョンの AEM にインストールできます。
 
-変更を説明するために、パッケージをインストールする前に匿名で表示できるノードプロパティを比較できます。
+変更点を説明するために、パッケージをインストールする前に匿名で表示できる次のノードプロパティと、
 
-![パッケージをインストールする前に](/help/sites-administering/assets/before_resized.png)
+![パッケージのインストール前](/help/sites-administering/assets/before_resized.png)
 
-パッケージのインストール後に表示可能なものを使用します。 `jcr:createdBy` および `jcr:lastModifiedBy` は表示されません。
+パッケージのインストール後に表示可能な次のノードプロパティを比較できます。ここでは、`jcr:createdBy` と `jcr:lastModifiedBy` は表示されません。
 
 ![パッケージのインストール後](/help/sites-administering/assets/after_resized.png)
 
@@ -410,15 +410,15 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 ### クリックジャッキングの防止 {#prevent-clickjacking}
 
-クリックジャックを防ぐため、Adobeでは、Web サーバーで `X-FRAME-OPTIONS` HTTP ヘッダーをに設定 `SAMEORIGIN`.
+クリックジャッキングを防ぐには、`X-FRAME-OPTIONS` に設定した HTTP ヘッダー `SAMEORIGIN` を指定するように web サーバーを設定することをお勧めします。
 
-クリックジャッキングについて詳しくは、 [OWASP サイト](https://www.owasp.org/index.php/Clickjacking).
+クリックジャッキングについて詳しくは、[OWASP のサイト](https://www.owasp.org/index.php/Clickjacking)を参照してください。
 
 ### 必要に応じて暗号化キーの適切なレプリケートを確認 {#make-sure-you-properly-replicate-encryption-keys-when-needed}
 
 特定の AEM 機能および認証スキームでは、すべての AEM インスタンスに暗号化キーをレプリケートする必要があります。
 
-キーの保存方法は 6.3 以前のバージョンとは異なるので、事前にキーのレプリケーションはバージョン間で異なる方法でおこなわれます。
+これを行う前に、6.3 とそれ以前のバージョンでは鍵を保存する方法が異なるので、鍵のレプリケーションはバージョン間で異なる方法で行われます。
 
 詳しくは以下を参照してください。
 
@@ -426,16 +426,16 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 以前のバージョンではレプリケーションキーがリポジトリに保存されていましたが、AEM 6.3 以降はファイルシステムに保存されます。
 
-したがって、インスタンス間で鍵をレプリケートするには、ソースインスタンスからファイルシステム上のターゲットインスタンスの場所に鍵をコピーします。
+したがって、インスタンス間で鍵をレプリケーションするには、ソースインスタンスからターゲットインスタンスのファイルシステム上の場所に鍵をコピーします。
 
-具体的には、次の操作を行う必要があります。
+具体的には、次の手順を実行する必要があります。
 
-1. コピーする主要な素材を含むAEMインスタンス（通常はオーサーインスタンス）にアクセスします。
+1. コピーする鍵データが含まれている AEM インスタンス（通常はオーサーインスタンス）にアクセスします。
 1. ローカルファイルシステム内で、com.adobe.granite.crypto.file を見つけます。例えば、次のパスにあります。
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
 
-   この `bundle.info` 各フォルダー内のファイルは、バンドル名を識別します。
+   各フォルダー内の `bundle.info` ファイルは、バンドル名を示します。
 
 1. データフォルダーに移動します。例：
 
@@ -448,11 +448,11 @@ AEM 6.1 以降では、新しく実装された `AuthorizableNodeName` インタ
 
 1. 前の手順でコピーした 2 つのファイルを貼り付けます。
 1. ターゲットインスタンスが既に実行されている場合は、[Crypto バンドルを更新](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle)します。
-1. キーのレプリケート先となるすべてのインスタンスに対して、上記の手順を繰り返します。
+1. 鍵のレプリケーション先のすべてのインスタンスに対して上記の手順を繰り返します。
 
 >[!NOTE]
 >
->AEMを初めてインストールする際に、以下のパラメーターを追加することで、6.3 より前のキーの保存方法に戻すことができます。
+>最初に AEM をインストールするときに次のパラメーターを追加することによって、6.3 よりも前の鍵の保存方法に戻すことができます。
 >
 >`-Dcom.adobe.granite.crypto.file.disable=true`
 
@@ -469,8 +469,8 @@ AEM 6.2 以前のバージョンでは、鍵は `/etc/key` ノードの下のリ
 
 ### 侵入テストの実施 {#perform-a-penetration-test}
 
-Adobeでは、実稼動環境に移行する前に、AEMインフラストラクチャの侵入テストを実行することをお勧めします。
+実稼動に移行する前に、AEM インフラストラクチャの侵入テストを実施することをお勧めします。
 
 ### 開発のベストプラクティス {#development-best-practices}
 
-新しい開発が [セキュリティのベストプラクティス](/help/sites-developing/security.md) AEM環境を安全に保つため。
+AEM 環境の安全を確保するには、新規開発において[セキュリティのベストプラクティス](/help/sites-developing/security.md)に従うことが重要です。
