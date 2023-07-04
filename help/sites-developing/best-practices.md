@@ -1,5 +1,5 @@
 ---
-title: AEM開発者向けのベストプラクティス
+title: AEM 開発者向けのベストプラクティス
 description: アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。
 uuid: f962c31f-8140-482f-b189-16376e23bfed
 contentOwner: Justin Edelson
@@ -9,17 +9,17 @@ topic-tags: best-practices
 discoiquuid: 99678c1a-81f3-4fb3-bf73-98f0691c3fb6
 exl-id: 0a478e80-c1b2-46c1-a6be-794d78b85d69
 source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '466'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
 # ベストプラクティス{#best-practices}
 
-## 開発者向けのベストプラクティス — はじめに {#best-practices-for-developers-getting-started}
+## 開発者向けのベストプラクティス - はじめに {#best-practices-for-developers-getting-started}
 
-アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。Adobe開発者は、コアAEM製品のアップデートと顧客実装のカスタマーコードを開発する際に、これらのベストプラクティスに従います。
+アドビのエンジニアリングチームとコンサルティングチームは、AEM 開発者向けの包括的なベストプラクティスを策定しました。アドビの開発者は、コアとなる AEM 製品のアップデートと顧客実装のための顧客コードを開発する際に、これらのベストプラクティスに従ってください。
 
 AEM 開発プロジェクトを開始する前に、まず、次のベストプラクティスを確認してください。
 
@@ -40,9 +40,9 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 * [Communities](/help/sites-developing/best-practices.md#communities)
 * [ツール／HTL](/help/sites-developing/best-practices.md#tooling-htl)
 
-以下の表では、特定のドキュメントについて説明し、リンクします。
+特定のドキュメントの説明とリンクは、以下の表に示されています。
 
-管理、デプロイ、メンテナンスまたはオーサリングに関するベストプラクティスについては、次のいずれかを参照してください。
+管理、デプロイ、メンテナンス、オーサリングのベストプラクティスについては、次のページのいずれかを参照してください。
 
 * [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
 * [オーサリングのベストプラクティス](/help/sites-authoring/best-practices.md)
@@ -50,12 +50,12 @@ AEM 開発プロジェクトを開始する前に、まず、次のベストプ�
 
 ## Sites {#sites}
 
-Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
+web サイトのコンテンツの管理とオーサリングには、次のようなベストプラクティスがあります。
 
 <table>
  <tbody>
   <tr>
-   <td>標準のタッチ操作対応 UI の背後にある理論の一部。</td>
+   <td>標準のタッチ操作対応 UI の基本となっている一部の理論。</td>
    <td><p><a href="/help/sites-developing/touch-ui-concepts.md">タッチ操作対応 UI：概念</a></p> <p><a href="/help/sites-developing/touch-ui-structure.md">タッチ操作対応 UI：構造</a></p> </td>
    <td>タッチ操作対応 UI の概念および構造の概要を説明しています。</td>
   </tr>
@@ -65,14 +65,14 @@ Web サイトコンテンツの管理とオーサリングには、次に示す�
    <td>このドキュメントでは、タッチ操作対応 UI のコンソールを拡張する最適な方法について説明します。</td>
   </tr>
   <tr>
-   <td>タッチ操作対応 UI:ページオーサリングのカスタマイズ</td>
+   <td>タッチ操作対応 UI：ページオーサリングのカスタマイズ</td>
    <td><a href="/help/sites-developing/customizing-page-authoring-touch.md">タッチ操作対応 UI のページオーサリングのカスタマイズ</a></td>
    <td>タッチ操作対応 UI 用にページオーサリングを拡張する方法について説明します。</td>
   </tr>
   <tr>
    <td>ワークフロー</td>
    <td><a href="/help/sites-developing/workflows-best-practices.md">ワークフローの作成と拡張</a></td>
-   <td><p>ワークフローを使用すると、Adobe Experience Manager(AEM) のアクティビティを自動化し、AEM環境で発生する大量の処理を表すことができるので、ワークフローの実装を慎重に計画することを強くお勧めします。</p> </td>
+   <td><p>ワークフローを使用すると、Adobe Experience Manager（AEM）アクティビティを自動化し、AEM 環境で発生する大量の処理を表現できるため、ワークフローの実装は慎重に計画するようにしてください。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -90,7 +90,7 @@ Communities のベストプラクティスは、こちらで説明していま�
 
 ## ツール／HTL {#tooling-htl}
 
-HTMLHTML言語 (HTL) は、AEM 6.0 で導入された新しいテンプレートシステムです。JSP と ESP に代わり、AEMで推奨されるテンプレートシステムになります。
+HTML テンプレート言語（HTL）は、AEM 6.0 で導入された新しい HTML テンプレートシステムです。JSP と ESP に代わり、AEM で推奨されるテンプレートシステムになります。
 
 |  |  |  |
 |---|---|---|
