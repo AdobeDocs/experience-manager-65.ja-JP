@@ -4,7 +4,7 @@ seo-title: AEM 6.5 Deploying User Guide
 description: Adobe Experience Manager 6.5 のインストールとデプロイ、Adobe Managed Services クラウドデプロイメントを含むアーキテクチャについて説明します。
 exl-id: 4a82008c-af69-414e-bd98-c7f683a74905
 source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '361'
 ht-degree: 100%
 
