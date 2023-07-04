@@ -1,11 +1,11 @@
 ---
-title: JEE 上のAEM Forms Custom DSC を使用したファイルの圧縮と解凍
-description: JEE 上のAEM Forms Custom DSC を使用してファイルを圧縮および解凍する方法を説明します
+title: JEE 上の AEM Forms のカスタム DSC を使用したファイルの圧縮と解凍
+description: JEE 上の AEM Forms のカスタム DSC を使用してファイルを圧縮および解凍する方法を説明します
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
 source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '485'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
