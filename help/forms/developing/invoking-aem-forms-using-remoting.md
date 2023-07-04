@@ -12,9 +12,9 @@ discoiquuid: 3d8bb2d3-b1f8-49e1-a529-b3e7a28da4bb
 role: Developer
 exl-id: 94a48776-f537-4b4e-8d71-51b08e463cba
 source-git-commit: c47b4dcfd2fbdcb0b98ad815f5b04d8f593e4f64
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4599'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -76,11 +76,11 @@ Workbench で作成されたプロセスは、Remoting を使用して呼び出�
 
 >[!NOTE]
 >
->*crossdomain.xml ファイルは、適切な場所に配置してください。 例えば、JBoss に AEM Forms をデプロイしたとすると、次の場所にこのファイルを配置します。&lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
+>*crossdomain.xml ファイルを適切な場所に配置してください。例えば、JBoss に AEM Forms をデプロイしたとすると、次の場所にこのファイルを配置します。&lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
 
 ## AEM Forms Flex ライブラリファイルを含める {#including-the-aem-forms-flex-library-file}
 
-Remoting を使用してAEM Formsプロセスをプログラムで呼び出すには、adobe-remoting-provider.swc ファイルをFlexプロジェクトのクラスパスに追加します。 この SWC ファイルは次の場所にあります。
+Remoting を使用して AEM Forms プロセスをプログラムで呼び出すには、adobe-remoting-provider.swc ファイルを Flex プロジェクトのクラスパスに追加します。この SWC ファイルは次の場所にあります。
 
 * *&lt;install_directory>\Adobe_Experience_Manager_forms\sdk\misc\DataServices\Client-Libraries*
 
@@ -98,15 +98,15 @@ Remoting を使用してAEM Formsプロセスをプログラムで呼び出す�
 
 ## Remoting を使用したドキュメントの処理 {#handling-documents-with-remoting}
 
-AEM Formsで使用される非プリミティブ Java™タイプの中で最も重要なものの 1 つは、 `com.adobe.idp.Document` クラス。 ドキュメントは、通常、AEM Forms 操作を呼び出すために必要です。主に PDF ドキュメントですが、SWF、HTML、XML、DOC ファイルなど、他のドキュメントタイプを含めることができます。（[Java API を使用した AEM Forms サービスへのデータの受け渡し](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)を参照。）
+AEM Forms で使用される最も重要な非プリミティブ Java タイプの 1 つは、`com.adobe.idp.Document` クラスです。ドキュメントは、通常、AEM Forms 操作を呼び出すために必要です。主に PDF ドキュメントですが、SWF、HTML、XML、DOC ファイルなど、他のドキュメントタイプを含めることができます。（[Java API を使用した AEM Forms サービスへのデータの受け渡し](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)を参照。）
 
-Flex で作成されたクライアントアプリケーションは、ドキュメントを直接リクエストできません。例えば、Adobe Reader を起動して、PDF ファイルを生成する URL をリクエストできません。PDFやMicrosoft® Word ドキュメントなどのドキュメントタイプのリクエストは、URL の結果を返します。 URL のコンテンツを表示するのはクライアントの責任です。 Document Management サービスは、URL およびコンテンツタイプ情報の生成に役立ちます。XML ドキュメントのリクエストは、結果に完全な XML ドキュメントを返します。
+Flex で作成されたクライアントアプリケーションは、ドキュメントを直接リクエストできません。例えば、Adobe Reader を起動して、PDF ファイルを生成する URL をリクエストできません。PDF や Microsoft® Word ドキュメントなどのドキュメントタイプのリクエストは、URL である結果を返します。URL のコンテンツを表示するのはクライアントの責任です。Document Management サービスは、URL およびコンテンツタイプ情報の生成に役立ちます。XML ドキュメントのリクエストは、結果に完全な XML ドキュメントを返します。
 
 ### 入力パラメーターとしてのドキュメントの受け渡し {#passing-a-document-as-an-input-parameter}
 
 Flex で作成されたクライアントアプリケーションは、ドキュメントを AEM Forms プロセスに直接渡すことができません。代わりに、クライアントアプリケーションは `mx.rpc.livecycle.DocumentReference` ActionScript クラスのインスタンスを使用して、`com.adobe.idp.Document` インスタンスを必要とする操作に入力パラメーターを渡します。Flex クライアントアプリケーションには、`DocumentReference` オブジェクトを設定するためのいくつかのオプションがあります。
 
-* ドキュメントがサーバー上にあり、そのファイルの場所がわかっている場合は、DocumentReference オブジェクトの referenceType プロパティを REF_TYPE_FILE に設定します。 次の例に示すように、fileRef プロパティをファイルの場所に設定します。
+* ドキュメントがサーバー上にあり、そのファイルの場所がわかっている場合は、DocumentReference オブジェクトの referenceType プロパティを REF_TYPE_FILE に設定します。次の例に示すように、fileRef プロパティをファイルの場所に設定します。
 
 ```java
  ... var docRef: DocumentReference = new DocumentReference(); 
@@ -114,7 +114,7 @@ Flex で作成されたクライアントアプリケーションは、ドキュ
  docRef.fileRef = "C:/install/adobe/cs2/How to Uninstall.pdf"; ...
 ```
 
-* 文書がサーバー上にあり、その URL がわかっている場合は、DocumentReference オブジェクトの referenceType プロパティを REF_TYPE_URL に設定します。 次の例に示すように、url プロパティを URL に設定します。
+* ドキュメントがサーバー上にあり、その URL がわかっている場合は、DocumentReference オブジェクトの referenceType プロパティを REF_TYPE_URL に設定します。次の例に示すように、url プロパティを URL に設定します。
 
 ```java
 ... var docRef: DocumentReference = new DocumentReference(); 
@@ -122,7 +122,7 @@ docRef.referenceType = DocumentReference.REF_TYPE_URL; 
 docRef.url = "https://companyserver:8080/DocumentManager/116/7855"; ...
 ```
 
-* クライアントアプリケーションのテキスト文字列から DocumentReference オブジェクトを作成するには、DocumentReference オブジェクトの referenceType プロパティを REF_TYPE_INLINE に設定します。 次の例に示すように、text プロパティを、オブジェクトに含めるテキストに設定します。
+* クライアントアプリケーションのテキスト文字列から DocumentReference オブジェクトを作成するには、DocumentReference オブジェクトの referenceType プロパティを REF_TYPE_INLINE に設定します。次の例に示すように、text プロパティを、オブジェクトに含めるテキストに設定します。
 
 ```java
 ... var docRef: DocumentReference = new DocumentReference(); 
@@ -173,7 +173,7 @@ Remoting クイックスタートは、Remoting アップロードサーブレ�
 
 ### クライアントアプリケーションにドキュメントを戻す {#passing-a-document-back-to-a-client-application}
 
-クライアントアプリケーションは、出力パラメーターとして `com.adobe.idp.Document` インスタンスを返すサービス操作のタイプ `mx.rpc.livecycle.DocumentReference` のオブジェクトを受け取ります。クライアントアプリケーションは Java ではなく ActionScript オブジェクトを扱うので、Java ベースの ドキュメントオブジェクトを Flex クライアントに戻すことはできません。代わりに、サーバーはドキュメントの URL を生成し、その URL をクライアントに戻します。この `DocumentReference` オブジェクトの `referenceType` プロパティは、コンテンツが `DocumentReference` オブジェクトを使用するか、 `DocumentReference.url` プロパティ。 `DocumentReference.contentType` プロパティはドキュメントのタイプを指定します。
+クライアントアプリケーションは、出力パラメーターとして `com.adobe.idp.Document` インスタンスを返すサービス操作のタイプ `mx.rpc.livecycle.DocumentReference` のオブジェクトを受け取ります。クライアントアプリケーションは Java ではなく ActionScript オブジェクトを扱うので、Java ベースの ドキュメントオブジェクトを Flex クライアントに戻すことはできません。代わりに、サーバーはドキュメントの URL を生成し、その URL をクライアントに戻します。`DocumentReference` オブジェクトの `referenceType` プロパティは、コンテンツが `DocumentReference` オブジェクト内にあるか、`DocumentReference.url` プロパティで URL から取得する必要があるかを指定します。`DocumentReference.contentType` プロパティはドキュメントのタイプを指定します。
 
 **関連トピック**
 
@@ -207,7 +207,7 @@ Flex で作成されたアプリケーションから AEM Forms プロセスを�
 * **宛先：**&#x200B;呼び出す AEM Forms プロセスの名前。例えば、`MyApplication/EncryptDocument` プロセスを呼び出すには、`MyApplication/EncryptDocument` を指定します。
 * **result：**&#x200B;結果を処理する Flex メソッドの名前。
 
-内 `mx:RemoteObject` タグ、指定 `<mx:method>` プロセスの呼び出しメソッドの名前を指定するタグ。 通常、Forms 呼び出しメソッドの名前は `invoke` です。
+`mx:RemoteObject` タグで、プロセスの呼び出しメソッドの名前を指定する `<mx:method>` タグを指定します。通常、Forms 呼び出しメソッドの名前は `invoke` です。
 
 次のコードの例では、`MyApplication/EncryptDocument` プロセスを呼び出す `mx:RemoteObject` インスタンスを作成します。
 
@@ -233,7 +233,7 @@ Flex で作成されたアプリケーションから AEM Forms プロセスを�
      ...
 ```
 
-を `ChannelSet` インスタンスから `mx:RemoteObject` インスタンスの `channelSet` フィールドに入力します（前のコードの例で示したように）。 一般的には、`ChannelSet.addChannel` メソッドの呼び出し時に完全修飾名を指定するのではなく、インポートステートメントでチャネルクラスをインポートします。
+`ChannelSet` インスタンスを `mx:RemoteObject` インスタンスの `channelSet` フィールドに割り当てます（前のコードの例を参照）。一般的には、`ChannelSet.addChannel` メソッドの呼び出し時に完全修飾名を指定するのではなく、インポートステートメントでチャネルクラスをインポートします。
 
 **入力値の受け渡し**
 
@@ -286,9 +286,9 @@ AEM Forms プロセスの出力パラメーターは、次の例に示すよう�
 
 1. ActionScript または MXML を使用して `mx:RemoteObject` インスタンスを作成します。「mx:RemoteObject インスタンスの作成」を参照してください。
 1. AEM Forms と通信するための `ChannelSet` インスタンスを設定し、それを `mx:RemoteObject` インスタンスに関連付けます。「AEM Forms へのチャネルを作成」を参照してください。
-1. チャネルセットの `login` メソッドまたはサービスの `setCredentials` メソッドを使用して、ユーザー識別子の値とパスワードを指定します。 （[シングルサインオンの使用](invoking-aem-forms-using-remoting.md#using-single-sign-on)を参照。）
+1. ChannelSet の `login` メソッドまたはサービスの `setCredentials` メソッドを呼び出して、ユーザー識別情報の値とパスワードを指定します。（[シングルサインオンの使用](invoking-aem-forms-using-remoting.md#using-single-sign-on)を参照。）
 1. `mx.rpc.livecycle.DocumentReference` インスタンスに、`MyApplication/EncryptDocument` プロセスに渡す保護されていない PDF ドキュメントを入力します。（[ドキュメントの入力パラメーターとしての受け渡し](invoking-aem-forms-using-remoting.md#passing-a-document-as-an-input-parameter)を参照。）
-1. を呼び出してPDFドキュメントを暗号化する `mx:RemoteObject` インスタンスの `invoke` メソッド。 入力パラメーター（保護されていない PDF ドキュメント）を含む `Object` を渡します。「入力値を渡す」を参照してください。
+1. `mx:RemoteObject` インスタンスの `invoke` メソッドを呼び出して PDF ドキュメントを暗号化します。入力パラメーター（保護されていない PDF ドキュメント）を含む `Object` を渡します。「入力値を渡す」を参照してください。
 1. プロセスから返される、パスワードで暗号化された PDF ドキュメントを取得します。「戻り値の処理」を参照してください。
 
 [クイックスタート：（AEM Forms では非推奨）AEM Forms Remoting を使用して保護されていないドキュメントを渡すことにより、短期間のプロセスを呼び出す](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
@@ -521,7 +521,7 @@ Flex で作成されたアプリケーションは、AEM Forms サービスに�
 
 **ログアウト**
 
-AEM Formsからログアウトしてセッションを無効にするには、クライアントのコンピューターから認証 Cookie を削除する必要があります。 シングルサインオンの目的はユーザーが 1 回だけログインするようにすることであるため、クライアントアプリケーションで cookie が削除されることは望ましくありません。このアクションは、ユーザーを効果的にログアウトします。
+AEM Forms からログアウトしてセッションを無効にするには、クライアントのコンピューターから認証 Cookie を削除する必要があります。シングルサインオンの目的はユーザーが 1 回だけログインするようにすることであるため、クライアントアプリケーションで cookie が削除されることは望ましくありません。このアクションは、ユーザーを効果的にログアウトします。
 
 そのため、クライアントアプリケーションで `RemoteObject.logout` メソッドを呼び出すと、セッションがログアウトされていないことを示すエラーメッセージがクライアントに生成されます。代わりに、ユーザーは一元化されたログインサービスを使用してログアウトして、認証 Cookie を削除できます。
 
@@ -904,11 +904,11 @@ Customer サービスは、`createCustomer` を言う名前の操作を公開し
  <tbody>
   <tr>
    <td><p>txtFirst</p></td>
-   <td><p>顧客の名を指定します。 </p></td>
+   <td><p>顧客の名前（名）を指定します。 </p></td>
   </tr>
   <tr>
    <td><p>txtLast</p></td>
-   <td><p>顧客の姓を指定します。 </p></td>
+   <td><p>顧客の名前（姓）を指定します。 </p></td>
   </tr>
   <tr>
    <td><p>txtPhone</p></td>
@@ -916,11 +916,11 @@ Customer サービスは、`createCustomer` を言う名前の操作を公開し
   </tr>
   <tr>
    <td><p>txtStreet</p></td>
-   <td><p>顧客の住所名を指定します。</p></td>
+   <td><p>顧客の住所（番地）を指定します。</p></td>
   </tr>
   <tr>
    <td><p>txtState</p></td>
-   <td><p>顧客の状態を指定します。 </p></td>
+   <td><p>顧客の都道府県を指定します。 </p></td>
   </tr>
   <tr>
    <td><p>txtZIP</p></td>
@@ -932,7 +932,7 @@ Customer サービスは、`createCustomer` を言う名前の操作を公開し
   </tr>
   <tr>
    <td><p>txtCustId</p></td>
-   <td><p>新しいアカウントが属する顧客識別子の値を指定します。このテキストボックスには、顧客サービスの <code>createCustomer</code> 操作。 </p></td>
+   <td><p>新しいアカウントが属する顧客識別子の値を指定します。このテキストボックスには、Customer サービスの <code>createCustomer</code> 操作の戻り値が入力されます。 </p></td>
   </tr>
  </tbody>
 </table>
@@ -977,7 +977,7 @@ Customer ActionScript クラスは、customer という名前のパッケージ�
 
 ### クイックスタート：Remoting を使用した Customer カスタムサービスの呼び出し {#quick-start-invoking-the-customer-custom-service-using-remoting}
 
-次のコード例は、顧客サービスを呼び出し、顧客を作成します。 このコード例を実行する場合は、必ずすべてのテキストボックスに入力してください。また、`com.adobe.livecycle.sample.customer.Customer` にマッピングする Customer.as ファイルを必ず作成してください。
+次のコード例は、Customer サービスを呼び出して顧客を作成します。このコード例を実行する場合は、必ずすべてのテキストボックスに入力してください。また、`com.adobe.livecycle.sample.customer.Customer` にマッピングする Customer.as ファイルを必ず作成してください。
 
 >[!NOTE]
 このクイックスタートを実行する前に、Bank カスタムコンポーネントを作成してデプロイする必要があります。
