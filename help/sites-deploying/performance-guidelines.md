@@ -1,7 +1,7 @@
 ---
 title: パフォーマンスガイドライン
 seo-title: Performance Guidelines
-description: この記事では、AEMデプロイメントのパフォーマンスを最適化する方法に関する一般的なガイドラインを示します。
+description: この記事では、AEM デプロイメントのパフォーマンスを最適化する方法に関する一般的なガイドラインを示します。
 seo-description: This article provides general guidelines on how to optimize the performance of your AEM deployment.
 uuid: 38cf8044-9ff9-48df-a843-43f74b0c0133
 contentOwner: User
@@ -12,15 +12,15 @@ discoiquuid: 9ccbc39e-aea7-455e-8639-9193abc1552f
 feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 source-git-commit: 9defa6d1843007e9375d839f72f6993c691a37c0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2913'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
 # パフォーマンスガイドライン{#performance-guidelines}
 
-このページでは、AEMデプロイメントのパフォーマンスを最適化する方法に関する一般的なガイドラインを示します。 AEMを初めて使用する場合は、パフォーマンスガイドラインを読む前に、次のページを確認してください。
+このページでは、AEMデプロイメントのパフォーマンスを最適化する方法に関する一般的なガイドラインを示します。AEM を初めて使用する場合は、パフォーマンスガイドラインを読む前に、次のページを確認してください。
 
 * [AEM の基本概念](/help/sites-deploying/deploy.md#basic-concepts)
 * [AEM のストレージの概要](/help/sites-deploying/storage-elements-in-aem-6.md#overview-of-storage-in-aem)
@@ -61,7 +61,7 @@ ht-degree: 28%
   </tr>
   <tr>
    <td><p>Assets</p> </td>
-   <td><p>Publish-HA</p> </td>
+   <td><p>パブリッシュ - HA</p> </td>
    <td><p>Solaris™</p> </td>
    <td><p>WebLogic</p> </td>
    <td><p>IBM®</p> </td>
@@ -75,40 +75,40 @@ ht-degree: 28%
   </tr>
   <tr>
    <td><p>Communities</p> </td>
-   <td><p>Author-CS</p> </td>
+   <td><p>オーサー - CS</p> </td>
    <td><p>Red Hat®</p> </td>
    <td><p>WebSphere®</p> </td>
    <td><p>HP</p> </td>
    <td><p>OAuth</p> </td>
-   <td><p>RDB/Oracle</p> </td>
-   <td><p>S3/Azure</p> </td>
+   <td><p>RDB／Oracle</p> </td>
+   <td><p>S3／Azure</p> </td>
    <td><p>Solr</p> </td>
    <td><p>iPlanet</p> </td>
-   <td><p>FireFox</p> </td>
+   <td><p>Firefox</p> </td>
    <td><p>Campaign</p> </td>
   </tr>
   <tr>
    <td><p>Forms</p> </td>
-   <td><p>オーサー — オフロード</p> </td>
+   <td><p>オーサー - オフロード</p> </td>
    <td><p>HP-UX</p> </td>
    <td><p>Tomcat</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
-   <td><p>RDB/DB2</p> </td>
+   <td><p>RDB／DB2</p> </td>
    <td><p>MongoDB</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
    <td><p>Chrome</p> </td>
-   <td><p>ソーシャル</p> </td>
+   <td><p>Social</p> </td>
   </tr>
   <tr>
    <td><p>モバイル</p> </td>
-   <td><p>オーサー — クラスター</p> </td>
+   <td><p>オーサー - クラスター</p> </td>
    <td><p>IBM® AIX®</p> </td>
    <td><p>JBoss®</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
-   <td><p>RDB/MySQL</p> </td>
+   <td><p>RDB／MySQL</p> </td>
    <td><p>RDBMS</p> </td>
    <td><p> </p> </td>
    <td><p> </p> </td>
@@ -116,7 +116,7 @@ ht-degree: 28%
    <td><p>対象読者</p> </td>
   </tr>
   <tr>
-   <td><p>マルチサイト</p> </td>
+   <td><p>Multi-site</p> </td>
    <td><p>ASRP</p> </td>
    <td><p>SUSE®</p> </td>
    <td><p> </p> </td>
@@ -260,68 +260,68 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->パフォーマンスガイドラインは主にAEM Sitesに適用されます。
+>パフォーマンスガイドラインは主に AEM Sites に適用されます。
 
 ## パフォーマンスガイドラインを使用するタイミング {#when-to-use-the-performance-guidelines}
 
-次の状況では、パフォーマンスガイドラインを使用します。
+パフォーマンスガイドラインは次の状況で使用します。
 
-* **初回のデプロイメント**:AEM Sitesまたは Assets の初めてのデプロイを計画する場合は、使用可能なオプションを理解しておくことが重要です。 特に、マイクロカーネル、ノードストア、データストアを設定する場合（デフォルト設定と比較）。 例えば、TarMK のデータストアのデフォルト設定をファイルデータストアに変更します。
-* **新しいバージョンへのアップグレード**:新しいバージョンにアップグレードする場合は、実行中の環境と比較したパフォーマンスの違いを理解することが重要です。 例えば、AEM 6.1 から 6.2 へ、またはAEM 6.0 CRX2 から 6.2 OAK へのアップグレードです。
-* **応答時間が遅い**:選択したノードストアアーキテクチャが要件を満たしていない場合は、他のトポロジオプションと比較してパフォーマンスの違いを理解することが重要です。 例えば、MongoMK の代わりに TarMK をデプロイしたり、Amazon S3 またはMicrosoft® Azure Data Store の代わりにファイルデータストアを使用したりします。
-* **作成者の追加**:推奨される TarMK トポロジがパフォーマンス要件を満たさず、オーサーノードのアップサイズが最大容量に達した場合は、パフォーマンスの違いを理解してください。 3 つ以上のオーサーノードでの MongoMK の使用と比較してください。 例えば、TarMK の代わりに MongoMK をデプロイします。
-* **コンテンツの追加**:推奨されるデータストアアーキテクチャが要件を満たしていない場合は、他のデータストアオプションと比較してパフォーマンスの違いを理解することが重要です。 例：ファイルデータストアの代わりに、Amazon S3 またはMicrosoft® Azure Data Store を使用します。
+* **初回のデプロイメント**：AEM Sites または Assets の初めてのデプロイを計画する場合は、使用可能なオプションを理解しておくことが重要です。特に、マイクロカーネル、ノードストアおよびデータストアを設定する場合（デフォルト設定と比較）。例えば、TarMK のデータストアのデフォルト設定をファイルデータストアに変更する場合などです。
+* **新しいバージョンへのアップグレード**：新しいバージョンにアップグレードする場合は、実行中の環境と比較してパフォーマンスの違いを理解することが重要です。例えば、AEM 6.1 から 6.2 へ、または AEM 6.0 CRX2 から 6.2 OAK にアップグレードする場合などです。
+* **応答時間が遅い**：選択したノードストアアーキテクチャが要件を満たしていない場合は、他のトポロジオプションと比較してパフォーマンスの違いを理解することが重要です。例えば、MongoMK の代わりに TarMK をデプロイしたり、Amazon S3 または Microsoft® Azure データストアの代わりにファイルデータストアを使用したりする場合です。
+* **オーサーの追加**：推奨 TarMK トポロジがパフォーマンス要件を満たさず、オーサーノードのサイズ拡張が使用可能な最大容量に達した場合は、パフォーマンスの違いを理解する必要があります。その際、3 つ以上のオーサーノードで MongoMK を使用する場合と比較します。例えば、TarMK の代わりに MongoMK をデプロイする場合などです。
+* **コンテンツの追加**：推奨データストアアーキテクチャが要件を満たさない場合は、他のデータストアオプションと比較してパフォーマンスの違いを理解することが重要です。例えば、ファイルデータストアの代わりに Amazon S3 または Microsoft® Azure データストアを使用する場合などです。
 
 ## はじめに {#introduction}
 
-この章では、AEMのアーキテクチャと最も重要なコンポーネントの概要を説明します。 また、開発ガイドラインを提供し、TarMK および MongoMK ベンチマークテストで使用されるテストシナリオについて説明します。
+この章では、AEM のアーキテクチャと AEM の最も重要なコンポーネントの大まかな概要を説明します。また、開発ガイドラインを示し、TarMK および MongoMK ベンチマークテストで使用されるテストシナリオについて説明します。
 
-### AEM Platform {#the-aem-platform}
+### AEM のプラットフォーム {#the-aem-platform}
 
-AEMプラットフォームは、次のコンポーネントで構成されています。
+AEM のプラットフォームは、次のコンポーネントで構成されています。
 
 ![chlimage_1](assets/chlimage_1a.png)
 
 AEM のプラットフォームについて詳しくは、[AEM とは](/help/sites-deploying/deploy.md#what-is-aem)を参照してください。
 
-### AEMアーキテクチャ {#the-aem-architecture}
+### AEM のアーキテクチャ {#the-aem-architecture}
 
-AEMデプロイメントには、3 つの重要な構築要素があります。 この **オーサーインスタンス** コンテンツ作成者、編集者および承認者がコンテンツの作成とレビューに使用する コンテンツが承認されると、コンテンツは、 **発行インスタンス** エンドユーザーがアクセスする場所から。 3 番目のビルディングブロックは **Dispatcher** で、これはキャッシュおよび URL フィルタリングを処理するモジュールとして、web サーバーにインストールされます。AEM のアーキテクチャについて詳しくは、[典型的なデプロイメントシナリオ](/help/sites-deploying/deploy.md#typical-deployment-scenarios)を参照してください。
+AEM のデプロイメントに重要な 3 つのビルディングブロックがあります。**オーサーインスタンス**&#x200B;は、コンテンツ作成者、編集者、および承認者がコンテンツの作成およびレビューを行うために使用します。コンテンツが承認されると、**パブリッシュインスタンス**&#x200B;という名前の 2 番目のインスタンスタイプに公開され、エンドユーザーはここからコンテンツにアクセスします。3 番目のビルディングブロックは **Dispatcher** で、これはキャッシュおよび URL フィルタリングを処理するモジュールとして、web サーバーにインストールされます。AEM のアーキテクチャについて詳しくは、[典型的なデプロイメントシナリオ](/help/sites-deploying/deploy.md#typical-deployment-scenarios)を参照してください。
 
 ![chlimage_1-1](assets/chlimage_1-1a.png)
 
 ### マイクロカーネル {#micro-kernels}
 
-マイクロカーネルは、AEMの永続性マネージャーとして機能します。 AEM で使用されるマイクロカーネルには、TarMK、MongoDB、リレーショナルデータベース（制限付きサポート）の 3 つのタイプがあります。ニーズに合わせて 1 つを選択するかは、インスタンスの目的と考慮するデプロイメントタイプによって異なります。 マイクロカーネルについて詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)のページを参照してください。
+マイクロカーネルは AEM で永続性マネージャーとして機能します。AEM で使用されるマイクロカーネルには、TarMK、MongoDB、リレーショナルデータベース（制限付きサポート）の 3 つのタイプがあります。インスタンスの目的と検討しているデプロイメントタイプによって、ニーズに合うマイクロカーネルを選択します。マイクロカーネルについて詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)のページを参照してください。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
 ### ノードストア {#nodestore}
 
-AEMでは、バイナリデータをコンテンツノードとは独立して保存できます。 バイナリデータが保存される場所は、 **データストア**&#x200B;コンテンツノードとプロパティの場所は **ノードストア**.
+AEM では、バイナリデータをコンテンツノードとは別に格納できます。バイナリデータの格納先は&#x200B;**データストア**&#x200B;と呼ばれます。一方、コンテンツノードおよびプロパティの格納先は&#x200B;**ノードストア**&#x200B;と呼ばれます。
 
 >[!NOTE]
 >
->Adobeでは、AEM オーサーインスタンスとパブリッシュインスタンスの両方で顧客が使用するデフォルトの永続化テクノロジーとして TarMK を推奨します。
+>アドビでは、AEM オーサーインスタンスとパブリッシュインスタンスの両方について、顧客がデフォルトで使用する永続性技術として TarMK を推奨します。
 
 >[!CAUTION]
 >
->リレーショナルデータベースマイクロカーネルは制限付きでサポートされています。 連絡先 [Adobeカスタマーケア](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support) このタイプのマイクロカーネルを使用する前に。
+>リレーショナルデータベースマイクロカーネルは制限付きでサポートされます。このタイプのマイクロカーネルを使用する前に、[アドビカスタマーケア](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)にお問い合わせください。
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 
 ### データストア {#data-store}
 
-多数のバイナリを処理する場合は、パフォーマンスを最大化するために、デフォルトのノードストアの代わりに外部データストアを使用することをお勧めします。 例えば、プロジェクトに多数のメディアアセットが必要な場合、それらをファイルまたは Azure/S3 Data Store に保存すると、MongoDB に直接保存するよりも高速にアクセスできます。
+多数のバイナリを処理する場合は、最大限のパフォーマンスを確保するために、デフォルトのノードストアではなく外部のデータストアを使用することをお勧めします。例えば、プロジェクトで多数のメディアアセットが必要な場合は、それらをファイルデータストアまたは Azure／S3 データストアに格納すると、MongoDB 内に直接格納する場合よりも迅速にアセットにアクセスできます。
 
 使用可能な設定オプションについて詳しくは、[ノードストアとデータストアの設定](/help/sites-deploying/data-store-config.md)を参照してください。
 
 >[!NOTE]
 >
->Adobeでは、Adobe Managed Services を使用して Azure またはAmazon Web Services(AWS) にAEMをデプロイするオプションを選択することをお勧めします。 お客様は、これらのクラウドコンピューティング環境でAEMをデプロイおよび運用する経験とスキルを持つチームのメリットを享受できます。 詳しくは、 [Adobe Managed Services に関する追加ドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
+>アドビでは、Adobe Managed Services を使用して Azure または Amazon Web Services（AWS）に AEM をデプロイするオプションを選択することをお勧めします。お客様は、これらのクラウドコンピューティング環境で AEM をデプロイおよび運用する経験とスキルを持つチームのメリットを享受できます。[Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 >
->AEMを Azure またはAWSにデプロイする方法に関する推奨事項については、Adobe Managed Services の外部で、クラウドプロバイダーを直接操作することをお勧めします。 または、任意のクラウド環境でのAEMのデプロイをサポートするAdobeのパートナーと協力することもできます。 選択したクラウドプロバイダーまたはパートナーは、特定のパフォーマンス、負荷、拡張性、セキュリティ要件を満たすために、サポートするアーキテクチャのサイズ設定、設計、実装を担当します。
->関連トピック [技術要件](/help/sites-deploying/technical-requirements.md#supported-platforms) ページ。
+>Adobe Managed Services の外部で Azure または AWS に AEM をデプロイする場合は、クラウドプロバイダーと直接共同作業することをお勧めします。または、任意のクラウド環境での AEM のデプロイをサポートするアドビのパートナーと協力することもできます。選択したクラウドプロバイダーまたはパートナーは、アーキテクチャのサイズ仕様、設計、および実装を担当し、顧客独自のパフォーマンス、負荷、スケーラビリティおよびセキュリティの要件が満たされるように支援します。
+>[技術要件](/help/sites-deploying/technical-requirements.md#supported-platforms)ページも参照してください。
 >
 >
 >
@@ -330,64 +330,64 @@ AEMでは、バイナリデータをコンテンツノードとは独立して�
 この節では AEM で使用されるカスタムインデックスプロバイダーを示します。インデックス作成について詳しくは、[Oak クエリとインデックス作成](/help/sites-deploying/queries-and-indexing.md)を参照してください。
 
 >[!NOTE]
-ほとんどのデプロイメントでは、Adobeは Lucene インデックスを使用することをお勧めします。 Solr は、特殊で複雑なデプロイメントでのスケーラビリティにのみ使用してください。
+アドビでは、ほとんどのデプロイメントで Lucene Index を使用することを推奨します。Solr は、特殊で複雑なデプロイメントでスケーラビリティを確保するためにのみ使用してください。
 
 ![chlimage_1-4](assets/chlimage_1-4a.png)
 
 ### 開発のガイドライン {#development-guidelines}
 
-～を目指すAEMの発展 **パフォーマンスと拡張性**. 次に、従うことのできるベストプラクティスを示します。
+AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を目標として開発してください。指針にすることができるベストプラクティスを次に示します。
 
-**実行**
+**DO**
 
-* プレゼンテーション、ロジック、コンテンツの分離を適用
-* 既存のAEM API を使用 ( 例：Sling) とツール ( 例：レプリケーション )
-* 実際のコンテンツのコンテキストで開発
-* 最適なキャッシュ性を実現する開発
-* 保存数を最小限に抑える ( 例：一時的なワークフローの使用
-* すべての HTTP エンドポイントが RESTful であることを確認します。
-* JCR 監視の範囲の制限
-* 非同期スレッドに注意する
+* 表示、ロジック、およびコンテンツを分離する
+* 既存の AEM API（Sling など）およびツール（レプリケーションなど）を使用する
+* 実際のコンテンツのコンテキストで開発する
+* キャッシュ可能性が最適になるように開発する
+* 保存の回数を最小限に抑える（一時的なワークフローなどを使用）
+* すべての HTTP エンドポイントが RESTful であるようにする
+* JCR 監視の範囲を制限
+* 非同期スレッドに留意する
 
 **DON&#39;T**
 
-* 可能な場合は、JCR API を直接使用しないでください
-* /libs を変更せず、オーバーレイを使用
+* 可能な場合は、JCR API を直接使用しない
+* /libs を変更せずに、オーバーレイを使用する
 * 可能な限りクエリを使用しない
-* Java™コードで OSGi サービスを取得する際には Sling バインディングを使用せず、次のコードを使用します。
+* Java™ コードで OSGi サービスを取得する場合は、Sling Binding を使用せずに以下を使用してください。
 
-   * @Reference in DS component
-   * @Inject in a Sling Model
-   * Sightly 使用クラスの sling.getService()
+   * DS コンポーネントの @Reference
+   * Sling Model の @Inject
+   * Sightly Use クラスの sling.getService()
    * JSP の sling.getService()
    * ServiceTracker
    * OSGi サービスレジストリへの直接アクセス
 
-AEMでの開発について詳しくは、 [開発 — 基本](/help/sites-developing/the-basics.md). その他のベストプラクティスについては、 [開発のベストプラクティス](/help/sites-developing/best-practices.md).
+AEM での開発について詳しくは、[開発の基本](/help/sites-developing/the-basics.md)を参照してください。その他のベストプラクティスについては、[開発のベストプラクティス](/help/sites-developing/best-practices.md)を参照してください。
 
 ### ベンチマークのシナリオ {#benchmark-scenarios}
 
 >[!NOTE]
-このページに表示されるすべてのベンチマークテストは、ラボ設定で実行されています。
+このページに表示されているすべてのベンチマークテストは、ラボ設定で行われています。
 
-以下に説明するテストシナリオは、TarMK、MongoMk、TarMK と MongoMk の各章のベンチマークセクションで使用されます。 特定のベンチマークテストで使用されているシナリオを確認するには、[技術仕様](/help/sites-deploying/performance-guidelines.md#tarmk-performance-benchmark)表のシナリオフィールドを参照してください。
+以下で説明するテストシナリオは、TarMK、MongoMk、および TarMK と MongoMk の章のベンチマークの節で使用されています。特定のベンチマークテストで使用されているシナリオを確認するには、[技術仕様](/help/sites-deploying/performance-guidelines.md#tarmk-performance-benchmark)表のシナリオフィールドを参照してください。
 
 **単一製品シナリオ**
 
 AEM Assets：
 
-* ユーザーインタラクション：アセットの参照/アセットの検索/アセットのダウンロード/アセットメタデータの読み込み/アセットメタデータの更新/アセットのアップロード/アセットのアップロードアップロードワークフローの実行
-* 実行モード：同時ユーザー数、ユーザーごとの単一インタラクション数
+* ユーザーインタラクション：アセットを参照／アセットを検索／アセットをダウンロード／アセットメタデータを読み取り／アセットメタデータを更新／アセットをアップロード／アセットのアップロードワークフローを実行
+* 実行モード：同時ユーザー、ユーザーごとの単一インタラクション
 
-**製品の混在シナリオ**
+**混合製品シナリオ**
 
 AEM Sites + Assets：
 
-* Sites のユーザーインタラクション：記事ページを読む/ページを読む/段落を作成/段落を編集/コンテンツページを作成/コンテンツページをアクティベート/検索を作成
-* Assets のユーザーインタラクション：アセットの参照/アセットの検索/アセットのダウンロード/アセットメタデータの読み込み/アセットメタデータの更新/アセットのアップロード/アセットのアップロードアップロードワークフローの実行
+* Sites ユーザーのインタラクション：記事ページを読み取り／ページを読み取り／パラグラフの作成／パラグラフを編集／コンテンツページを作成／コンテンツページをアクティブ化／作成者検索
+* Assets ユーザーのインタラクション：アセットを参照／アセットを検索／アセットをダウンロード／アセットメタデータを読み取り／アセットメタデータを更新／アセットをアップロード／アセットのアップロードワークフローを実行
 * 実行モード：同時ユーザー、ユーザーごとの混合インタラクション
 
-**垂直方向の使用例のシナリオ**
+**垂直方向のユースケースのシナリオ**
 
 メディア：
 
@@ -396,7 +396,7 @@ AEM Sites + Assets：
 
 ## TarMK {#tarmk}
 
-この章では、TarMK の一般的なパフォーマンスガイドラインで、アーキテクチャの最小要件と設定設定を指定します。 さらに明確化するために、ベンチマークテストも提供されています。
+この章では、最小のアーキテクチャ要件および設定を指定した TarMK の一般的なパフォーマンスガイドラインを示します。さらに明確にするためにベンチマークテストも示します。
 
 アドビでは、すべてのデプロイメントシナリオにおいて、AEM オーサーインスタンスとパブリッシュインスタンスの両方に対し TarMK をデフォルトの優先使用する技術とすることを顧客に推奨します。
 
@@ -405,20 +405,20 @@ TarMK について詳しくは、[デプロイメントのシナリオ](/help/si
 ### TarMK 最小アーキテクチャガイドライン {#tarmk-minimum-architecture-guidelines}
 
 >[!NOTE]
-以下に示す最小アーキテクチャガイドラインは、実稼動環境および高トラフィックサイト向けです。 以下のガイドラインに従います。 **not** の [最小仕様](/help/sites-deploying/technical-requirements.md#prerequisites) AEMを実行します。
+以下に示す最小アーキテクチャガイドラインは、実稼動環境および高トラフィックサイト向けです。これらのガイドラインは、AEM を実行するための[最小仕様](/help/sites-deploying/technical-requirements.md#prerequisites)では&#x200B;**ありません**。
 
-TarMK を使用する際に優れたパフォーマンスを確立するには、次のアーキテクチャから始める必要があります。
+TarMK の使用時に優れたパフォーマンスを実現するには、次のアーキテクチャから開始してください。
 
 * 1 つのオーサーインスタンス
 * 2 つのパブリッシュインスタンス
 * 2 つの Dispatcher
 
-次に、AEM Sites とAEM Assetsのアーキテクチャガイドラインを示します。
+以下に AEM Sites および AEM Assets でのアーキテクチャガイドラインを示します。
 
 >[!NOTE]
 ファイルデータストアを共有する場合は、バイナリなしのレプリケーションを&#x200B;**オン**&#x200B;にする必要があります。
 
-**AEM Sitesの Tar アーキテクチャのガイドライン**
+**AEM Sites での Tar アーキテクチャガイドライン**
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
@@ -428,7 +428,7 @@ TarMK を使用する際に優れたパフォーマンスを確立するには�
 
 ### TarMK 設定ガイドライン {#tarmk-settings-guideline}
 
-パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。 設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)。
+パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)。
 
 <table>
  <tbody>
@@ -445,7 +445,7 @@ TarMK を使用する際に優れたパフォーマンスを確立するには�
    <td>デフォルトでは、ジョブキューあたりの同時スレッド数は、CPU コア数と同じです。</td>
   </tr>
   <tr>
-   <td>Granite 一時的なワークフローキュー</td>
+   <td>Granite 一時ワークフローキュー</td>
    <td><code>Max Parallel</code></td>
    <td>CPU コア数の半分の値に設定します。</td>
    <td> </td>
@@ -454,19 +454,19 @@ TarMK を使用する際に優れたパフォーマンスを確立するには�
    <td>JVM パラメーター</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> </td>
    <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> </td>
-   <td>拡張クエリがシステムをオーバーロードしないようにするには、AEMの開始スクリプトにこれらの JVM パラメーターを追加します。</td>
+   <td>大規模なクエリによってシステムが過負荷になることを防ぐため、AEM の起動スクリプトにこれらの JVM パラメーターを追加します。</td>
   </tr>
   <tr>
-   <td>Lucene インデックスの設定</td>
+   <td>Lucene インデックス設定</td>
    <td><p><code>CopyOnRead</code></p> <p><code>CopyOnWrite</code></p> <p><code>Prefetch Index Files</code></p> </td>
    <td><p>Enabled</p> <p>Enabled</p> <p>Enabled</p> </td>
-   <td>使用可能なパラメーターの詳細については、 <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">このページ</a>.</td>
+   <td>利用可能なパラメーターについて詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">このページ</a>を参照してください。</td>
   </tr>
   <tr>
-   <td>データストア= S3 データストア</td>
+   <td>データストア = S3 データストア</td>
    <td><p><code>maxCachedBinarySize</code></p> <p><code>cacheSizeInMB</code></p> </td>
-   <td><p>1048576(1 MB) 以下</p> <p>最大ヒープサイズの 2～10%</p> </td>
-   <td>関連トピック <a href="/help/sites-deploying/data-store-config.md#data-store-configurations">データストアの設定</a>.</td>
+   <td><p>1048576（1 MB）以下</p> <p>最大ヒープサイズの 2～10％</p> </td>
+   <td><a href="/help/sites-deploying/data-store-config.md#data-store-configurations">データストアの設定</a>も参照してください。</td>
   </tr>
   <tr>
    <td>DAM アセットの更新ワークフロー</td>
@@ -478,7 +478,7 @@ TarMK を使用する際に優れたパフォーマンスを確立するには�
    <td>DAM メタデータの書き戻し</td>
    <td><code>Transient Workflow</code></td>
    <td>チェック済み</td>
-   <td>このワークフローは、元のバイナリへのXMPの書き戻しを管理し、JCR で最終変更日を設定します。</td>
+   <td>このワークフローでは、元のバイナリへの XMP の書き戻しを管理し、JCR で最終変更日を設定します。</td>
   </tr>
  </tbody>
 </table>
@@ -487,7 +487,7 @@ TarMK を使用する際に優れたパフォーマンスを確立するには�
 
 #### 技術仕様 {#technical-specifications}
 
-ベンチマークテストは以下の仕様に基づいて行われた。
+以下の仕様に基づいてベンチマークテストが実行されました。
 
 |  | **オーサーノード** |
 |---|---|
@@ -506,19 +506,19 @@ TarMK を使用する際に優れたパフォーマンスを確立するには�
 #### パフォーマンスベンチマーク結果 {#performance-benchmark-results}
 
 >[!NOTE]
-以下に示す数値は、ベースラインとして 1 に正規化されており、実際のスループット数ではありません。
+以下に示す数値は、ベースラインとして 1 に正規化されており、実際のスループットの数値ではありません。
 
 ![chlimage_1-7](assets/chlimage_1-7a.png) ![chlimage_1-8](assets/chlimage_1-8a.png)
 
 ## MongoMK {#mongomk}
 
-TarMK よりも MongoMK 永続性バックエンドを選択する主な理由は、インスタンスを水平方向にスケールすることです。 この機能は、常に 2 つ以上のアクティブなオーサーインスタンスが実行され、永続性ストレージシステムとして MongoDB を使用することを意味します。 複数のオーサーインスタンスを実行する必要があるのは、通常、すべての同時オーサリングアクティビティをサポートする単一のサーバーの CPU とメモリの容量が持続不可能になったためです。
+TarMK よりも MongoMK 永続性バックエンドを選択する主な理由は、インスタンスを水平方向にスケールできることです。つまり、常に 2 つ以上のアクティブなオーサーインスタンスが動作しており、MongoDB が永続性ストレージシステムとして使用されます。複数のオーサーインスタンスを実行する必要があるのは、通常、1 台のサーバーの CPU とメモリの処理能力では、同時に実行されるすべてのオーサリングアクティビティをサポートできないからです。
 
 TarMK について詳しくは、[デプロイメントのシナリオ](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)および [Mongo ストレージ](/help/sites-deploying/storage-elements-in-aem-6.md#mongo-storage)を参照してください。
 
-### MongoMK 最小アーキテクチャのガイドライン {#mongomk-minimum-architecture-guidelines}
+### MongoMK 最小アーキテクチャガイドライン {#mongomk-minimum-architecture-guidelines}
 
-MongoMK を使用する際に優れたパフォーマンスを確立するには、次のアーキテクチャから始める必要があります。
+MongoMK の使用時に優れたパフォーマンスを実現するには、次のアーキテクチャを出発点にする必要があります。
 
 * 3 つのオーサーインスタンス
 * 2 つのパブリッシュインスタンス
@@ -526,16 +526,16 @@ MongoMK を使用する際に優れたパフォーマンスを確立するには
 * 2 つの Dispatcher
 
 >[!NOTE]
-実稼動環境では、MongoDB は常に、プライマリと 2 つのセカンダリを持つレプリカセットとして使用されます。 読み取りと書き込みはプライマリに送られ、読み取りはセカンダリに送られます。 ストレージが使用できない場合、セカンダリの 1 つをアービターに置き換えることができますが、MongoDB レプリカセットは常に奇数のインスタンスで構成する必要があります。
+実稼動環境では、MongoDB は常に、プライマリと 2 つのセカンダリを持つレプリカセットとして使用されます。プライマリで読み取りと書き込みが行われ、セカンダリでは読み取りが行われることがあります。ストレージを利用できない場合、セカンダリの 1 つをアービターに置き換えることができますが、MongoDB レプリカセットは常に奇数のインスタンスで構成する必要があります。
 
 >[!NOTE]
 ファイルデータストアを共有する場合は、バイナリなしのレプリケーションを&#x200B;**オン**&#x200B;にする必要があります。
 
 ![chlimage_1-9](assets/chlimage_1-9a.png)
 
-### MongoMK 設定のガイドライン {#mongomk-settings-guidelines}
+### MongoMK 設定ガイドライン {#mongomk-settings-guidelines}
 
-パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。 設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=en)。
+パフォーマンスを高めるには、次に示す設定ガイドラインに従う必要があります。設定を変更する手順については、[このページを参照してください](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=ja)。
 
 <table>
  <tbody>
@@ -552,7 +552,7 @@ MongoMK を使用する際に優れたパフォーマンスを確立するには
    <td>デフォルトでは、ジョブキューあたりの同時スレッド数は、CPU コア数と同じです。</td>
   </tr>
   <tr>
-   <td>Granite 一時的なワークフローキュー</td>
+   <td>Granite 一時ワークフローキュー</td>
    <td><code>Max Parallel</code></td>
    <td>CPU コア数の半分の値に設定します。</td>
    <td> </td>
@@ -561,30 +561,30 @@ MongoMK を使用する際に優れたパフォーマンスを確立するには
    <td>JVM パラメーター</td>
    <td><p><code>Doak.queryLimitInMemory</code></p> <p><code>Doak.queryLimitReads</code></p> <p><code>Dupdate.limit</code></p> <p><code>Doak.fastQuerySize</code></p> <p><code>Doak.mongo.maxQueryTimeMS</code></p> </td>
    <td><p>500000</p> <p>100000</p> <p>250000</p> <p>True</p> <p>60000</p> </td>
-   <td>拡張クエリがシステムをオーバーロードしないようにするには、AEMの開始スクリプトにこれらの JVM パラメーターを追加します。</td>
+   <td>大規模なクエリによってシステムが過負荷になることを防ぐため、AEM の起動スクリプトにこれらの JVM パラメーターを追加します。</td>
   </tr>
   <tr>
-   <td>Lucene インデックスの設定</td>
+   <td>Lucene インデックス設定</td>
    <td><p><code>CopyOnRead</code></p> <p><code>CopyOnWrite</code></p> <p><code>Prefetch Index Files</code></p> </td>
    <td><p>Enabled</p> <p>Enabled</p> <p>Enabled</p> </td>
-   <td>使用可能なパラメーターについて詳しくは、 <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">このページ</a>.</td>
+   <td>使用可能なパラメーターについて詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html">このページ</a>を参照してください。</td>
   </tr>
   <tr>
-   <td>データストア= S3 データストア</td>
+   <td>データストア = S3 データストア</td>
    <td><p><code>maxCachedBinarySize</code></p> <p><code>cacheSizeInMB</code></p> </td>
-   <td><p>1048576(1 MB) 以下</p> <p>最大ヒープサイズの 2～10%</p> </td>
-   <td>関連トピック <a href="/help/sites-deploying/data-store-config.md#data-store-configurations">データストアの設定</a>.</td>
+   <td><p>1048576（1 MB）以下</p> <p>最大ヒープサイズの 2～10％</p> </td>
+   <td><a href="/help/sites-deploying/data-store-config.md#data-store-configurations">データストアの設定</a>も参照してください。</td>
   </tr>
   <tr>
    <td>DocumentNodeStoreService</td>
    <td><p><code>cache</code></p> <p><code>nodeCachePercentage</code></p> <p><code>childrenCachePercentage</code></p> <p><code>diffCachePercentage</code></p> <p><code>docChildrenCachePercentage</code></p> <p><code>prevDocCachePercentage</code></p> <p><code>persistentCache</code></p> </td>
-   <td><p>2048</p> <p>35 (25)</p> <p>20 (10)</p> <p>30 (5)</p> <p>10 (3)</p> <p>4 (4)</p> <p>。/cache,size=2048,binary=0,-compact,-compress</p> </td>
-   <td><p>キャッシュのデフォルトのサイズは 256 MB に設定されています。</p> <p>キャッシュの無効化の実行に要する時間に影響を与えます。</p> </td>
+   <td><p>2048</p> <p>35（25）</p> <p>20（10）</p> <p>30（5）</p> <p>10（3）</p> <p>4（4）</p> <p>。/cache,size=2048,binary=0,-compact,-compress</p> </td>
+   <td><p>キャッシュのデフォルトサイズは 256 MB に設定されています。</p> <p>キャッシュの無効化の実行にかかる時間に影響します。</p> </td>
   </tr>
   <tr>
    <td>oak-observation</td>
    <td><p><code>thread pool</code></p> <p><code>length</code></p> </td>
-   <td><p>最小値と最大値= 20</p> <p>50000</p> </td>
+   <td><p>最小および最大 = 20</p> <p>50000</p> </td>
    <td> </td>
   </tr>
  </tbody>
@@ -594,7 +594,7 @@ MongoMK を使用する際に優れたパフォーマンスを確立するには
 
 ### 技術仕様 {#technical-specifications-1}
 
-ベンチマークテストは以下の仕様に基づいて行われた。
+以下の仕様に基づいてベンチマークテストが実行されました。
 
 |  | **オーサーノード** | **MongoDB ノード** |
 |---|---|---|
@@ -613,40 +613,40 @@ MongoMK を使用する際に優れたパフォーマンスを確立するには
 ### パフォーマンスベンチマーク結果 {#performance-benchmark-results-1}
 
 >[!NOTE]
-以下に示す数値は、ベースラインとして 1 に正規化されており、実際のスループット数ではありません。
+以下に示す数値は、ベースラインとして 1 に正規化されており、実際のスループットの数値ではありません。
 
 ![chlimage_1-10](assets/chlimage_1-10a.png) ![chlimage_1-11](assets/chlimage_1-11a.png)
 
 ## TarMK と MongoMK {#tarmk-vs-mongomk}
 
-この 2 つを選択する際に考慮すべき基本的なルールは、TarMK はパフォーマンスを目的として設計され、MongoMK はスケーラビリティに使用される点です。 アドビでは、すべてのデプロイメントシナリオにおいて、AEM オーサーインスタンスとパブリッシュインスタンスの両方に対し TarMK をデフォルトの優先使用する技術とすることを顧客に推奨します。
+この 2 つのうちのどちらかを選択する際に考慮すべき基本ルールは、TarMK はパフォーマンス重視で設計されており、MongoMK はスケーラビリティ重視で使用されているということです。アドビでは、AEM オーサーインスタンスと AEM パブリッシュインスタンスの両方について、すべてのデプロイメントシナリオで顧客がデフォルトで使用する永続性技術として TarMK をお勧めします。
 
-TarMK よりも MongoMK 永続性バックエンドを選択する主な理由は、インスタンスを水平方向にスケールすることです。 この機能は、常に 2 つ以上のアクティブなオーサーインスタンスが実行され、永続性ストレージシステムとして MongoDB を使用することを意味します。 通常、複数のオーサーインスタンスを実行する必要があるのは、同時に実行するすべてのオーサリングアクティビティをサポートする単一のサーバーの CPU とメモリの容量が維持できなくなったためです。
+TarMK よりも MongoMK 永続性バックエンドを選択する主な理由は、インスタンスを水平方向にスケールできることです。つまり、常に 2 つ以上のアクティブなオーサーインスタンスが動作しており、MongoDB が永続性ストレージシステムとして使用されます。複数のオーサーインスタンスを実行する必要があるのは、通常、1 台のサーバーの CPU とメモリの処理能力では、同時に実行されるすべてのオーサリングアクティビティをサポートできないからです。
 
-TarMK と MongoMK の詳細については、 [推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#microkernels-which-one-to-use).
+TarMK と MongoMK の比較について詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md#microkernels-which-one-to-use)を参照してください。
 
 ### TarMK と MongoMk のガイドライン {#tarmk-vs-mongomk-guidelines}
 
-**TarMK のメリット**
+**TarMK の利点**
 
-* コンテンツ管理アプリケーション向けに設計
-* ファイルは常に一貫性があり、任意のファイルベースのバックアップ・ツールを使用してバックアップできます。
+* コンテンツ管理アプリケーション専用に設計されています。
+* 常にファイルの一貫性が保たれ、任意のファイルベースのバックアップツールを使用してファイルをバックアップできます。
 * フェイルオーバーメカニズムを備えています。詳しくは、[コールドスタンバイ](/help/sites-deploying/tarmk-cold-standby.md)を参照してください。
-* 運用上のオーバーヘッドを最小限に抑え、高パフォーマンスで信頼性の高いデータストレージを提供
-* TCO（総所有コスト）の削減
+* 運用上のオーバーヘッドを最小限に抑えながら、パフォーマンスと信頼性の高いデータストレージを提供します。
+* TCO（総保有コスト）を削減します。
 
-**MongoMK を選択するための条件**
+**MongoMK を選択する基準**
 
-* 1 日に接続した名前付きユーザーの数：何千もの間
-* 同時ユーザー数：数百以上の
-* 1 日あたりのアセット取り込みの量：何十万以上で
-* 1 日あたりのページ編集の量：何十万以上で
-* 1 日あたりの検索数：数十万以上で
+* 1 日に接続する名前付きユーザーの数：数千人以上
+* 同時ユーザーの数：数百人以上
+* 1 日に取り込むアセットのボリューム：数十万件以上
+* 1 日あたりのページ編集のボリューム：数十万件以上
+* 1 日あたりの検索件数：数万件以上
 
-### TarMK と MongoMK のベンチマーク {#tarmk-vs-mongomk-benchmarks}
+### TarMK と MongoMK のベンチマーク比較 {#tarmk-vs-mongomk-benchmarks}
 
 >[!NOTE]
-以下に示す数値は、ベースラインとして 1 に正規化されており、実際のスループット数ではありません。
+以下に示す数値はベースラインとして 1 に正規化されており、実際のスループット数値ではありません。
 
 ### シナリオ 1 技術仕様 {#scenario-technical-specifications}
 
@@ -734,7 +734,7 @@ TarMK と MongoMK の詳細については、 [推奨されるデプロイメン
 ### シナリオ 2 技術仕様 {#scenario-technical-specifications-1}
 
 >[!NOTE]
-1 つの TarMK システムと同数の MongoDB を使用して作成者を有効にするには、2 つのAEMノードを持つクラスターが必要です。 4 ノードの MongoDB クラスターは、1 つの TarMK インスタンスの 1.8 倍のオーサー数を処理できます。 8 ノードの MongoDB クラスターは、1 つの TarMK インスタンスの 2.3 倍のオーサー数を処理できます。
+1 つの TarMK システムを使用した場合と同じ数のオーサーを MongoDB で有効にするには、2 つの AEM ノードを含むクラスターが必要です。4 ノードの MongoDB クラスターで処理できるオーサーの数は、1 つの TarMK インスタンスの 1.8 倍です。8 ノードの MongoDB クラスターで処理できるオーサーの数は、1 つの TarMK インスタンスの 2.3 倍です。
 
 <table>
  <tbody>
@@ -823,29 +823,29 @@ TarMK と MongoMK の詳細については、 [推奨されるデプロイメン
 
 ## パフォーマンスガイドラインの概要  {#summary-of-performance-guidelines}
 
-このページで説明するガイドラインの概要を次に示します。
+このページに示されているガイドラインの概要は次の通りです。
 
-* **ファイルデータストアを使用する TarMK**  — ほとんどのお客様に推奨されるアーキテクチャ：
+* **ファイルデータストアを使用する TarMK** - 大部分の顧客に対する推奨アーキテクチャ：
 
    * 最小トポロジ：1 つのオーサーインスタンス、2 つのパブリッシュインスタンス、2 つの Dispatcher
-   * ファイルデータストアが共有されている場合、バイナリレスレプリケーションはオンになります
+   * ファイルデータストアを共有する場合は、バイナリレスレプリケーションを有効にします
 
-* **ファイルデータストアを使用する MongoMK**  — オーサー層の水平方向の拡張性に推奨されるアーキテクチャ：
+* **ファイルデータストアを使用する MongoMK** - オーサー層の水平方向のスケーラビリティのための推奨アーキテクチャ：
 
    * 最小トポロジ：3 つのオーサーインスタンス、3 つの MongoDB インスタンス、2 つのパブリッシュインスタンス、2 つの Dispatcher
-   * ファイルデータストアが共有されている場合、バイナリレスレプリケーションはオンになります
+   * ファイルデータストアを共有する場合は、バイナリレスレプリケーションを有効にします
 
-* **ノードストア** - NAS（ネットワーク接続型ストレージ）ではなく、ローカル・ディスクに格納
+* **ノードストア** - ネットワーク接続ストレージ（NAS）ではなくローカルディスクに格納
 * **Amazon S3** を使用する場合：
 
    * Amazon S3 データストアは、オーサー層とパブリッシュ層の間で共有されます
    * バイナリレスレプリケーションを有効にする必要があります
-   * データストアのガベージコレクションを使用するには、最初にすべてのオーサーノードとパブリッシュノードで実行し、次にオーサーノードで 2 回目に実行する必要があります
+   * データストアのガベージコレクションを使用するには、最初にすべてのオーサーノードとパブリッシュノードで実行してから、オーサーノードでもう一度実行する必要があります
 
-* **標準提供のインデックスに加えて、カスタムインデックスを作成する必要があります**  — 最も一般的な検索に基づく
+* **標準提供のインデックスに加えて、カスタムインデックスを作成する必要があります** - 最も一般的な検索に基づく
 
-   * Lucene インデックスは、カスタムインデックスに使用する必要があります
+   * カスタムインデックスには Lucene インデックスを使用する必要があります
 
-* **ワークフローをカスタマイズすると、パフォーマンスが大幅に向上します** - 「アセットを更新」ワークフローのビデオ手順を削除し、使用されていないリスナーを無効にするなどします。
+* **ワークフローをカスタマイズすると、パフォーマンスを大幅に改善できます** - 「アセットを更新」ワークフローのビデオ手順を削除したり、使用されていないリスナーを無効化したりします。
 
 詳しくは、[推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)のページも参照してください。
