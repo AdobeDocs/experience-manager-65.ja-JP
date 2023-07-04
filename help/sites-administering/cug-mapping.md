@@ -1,7 +1,7 @@
 ---
 title: AEM 6.5 のカスタムユーザグループマッピング
 seo-title: Custom User Group Mapping in AEM 6.5
-description: AEMでのカスタムユーザーグループマッピングの仕組みを説明します。
+description: AEM でカスタムユーザーグループマッピングがどのように機能するか説明します。
 seo-description: Lear how Custom User Group Mapping works in AEM.
 uuid: 7520351a-ab71-4661-b214-a0ef012c0c93
 contentOwner: User
@@ -13,9 +13,9 @@ docset: aem65
 exl-id: 661602eb-a117-454d-93d3-a079584f7a5d
 feature: Security
 source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '478'
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
@@ -31,22 +31,22 @@ ht-degree: 24%
    <td><strong>コメント</strong></td>
   </tr>
   <tr>
-   <td><p>プロパティ：cq:cugEnabled</p> <p>ノードタイプの宣言：該当なし、残余財産</p> </td>
-   <td><p>認証:</p> <p>ノード：rep:cugPolicy （ノードタイプ rep:CugPolicy の）</p> <p>ノードタイプの宣言：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 認証:</p> <p>Mixin のタイプ：granite:AuthenticationRequired</p> </td>
-   <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>注意：ポリシーは、設定済みのサポート対象パスでのみ適用できます。</p> <p>名前 rep:cugPolicy およびタイプ rep:CugPolicy を持つノードは保護されており、通常の JCR API 呼び出しを使用して書き込むことはできません。代わりに、JCR アクセス制御管理を使用します。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードで認証要件を強制するには、 mixin タイプ granite:AuthenticationRequired を追加するだけで十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
+   <td><p>プロパティ：cq:cugEnabled</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
+   <td><p>認証：</p> <p>ノード：rep:cugPolicy のノードタイプ rep:CugPolicy</p> <p>ノードタイプの宣言：rep:CugMixin</p> <p> </p> <p> </p> <p> </p> 認証:</p> <p>Mixin タイプ：granite:AuthenticationRequired</p> </td>
+   <td><p>読み取りアクセスを制限するために、専用の CUG ポリシーがターゲットノードに適用されます。</p> <p>メモ：ポリシーは、設定されているサポート対象パスにのみ適用できます。</p> <p>名前が rep:cugPolicy およびタイプが rep:CugPolicy のノードは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>詳しくは、<a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">このページ</a>を参照してください。</p> <p>ノードに認証要件を適用するには、Mixin タイプ granite:AuthenticationRequired を追加することで十分です。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
-   <td><p>プロパティ：cq:cugPrincipals</p> <p>ノードタイプの宣言：NA、残差プロパティ</p> </td>
+   <td><p>プロパティ：cq:cugPrincipals</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td><p>プロパティ：rep:principalNames</p> <p>ノードタイプの宣言：rep:CugPolicy</p> </td>
-   <td><p>制限された CUG の下のコンテンツを読み取ることが許可されたプリンシパルの名前を含むプロパティは保護されており、通常の JCR API 呼び出しを使用して書き込むことはできません。代わりに、JCR アクセス制御管理を使用します。</p> <p>詳しくは、 <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">このページ</a> を参照してください。</p> </td>
+   <td><p>制限付き CUG の下の内容を読み取ることが許可されているプリンシパルの名前を含むプロパティは保護されており、通常の JCR の API 呼び出しを使用して書き込むことはできません。代わりに JCR アクセス制御管理を使用してください。</p> <p>実装について詳しくは、<a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">こちらのページ</a>を参照してください。</p> </td>
   </tr>
   <tr>
-   <td><p>プロパティ：cq:cugLoginPage</p> <p>ノードタイプの宣言：NA、残差プロパティ</p> </td>
+   <td><p>プロパティ：cq:cugLoginPage</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td><p>プロパティ：granite:loginPath（オプション）</p> <p>ノードタイプの宣言：granite:AuthenticationRequired</p> </td>
    <td><p>Mixin タイプ granite:AuthenticationRequired が定義されている JCR ノードは、オプションで代替ログインパスを定義できます。</p> <p>メモ：設定済みのサポートパスの下でのみ適用されます。</p> </td>
   </tr>
   <tr>
-   <td><p>プロパティ：cq:cugRealm</p> <p>ノードタイプの宣言：NA、残差プロパティ</p> </td>
+   <td><p>プロパティ：cq:cugRealm</p> <p>ノードタイプの宣言：該当なし、残余プロパティ</p> </td>
    <td>該当なし</td>
    <td>新しい実装ではサポートされなくなりました。</td>
   </tr>
@@ -57,13 +57,13 @@ ht-degree: 24%
 
 **古い AEM バージョン**
 
-ラベル：AdobeGranite 閉じられたユーザーグループ (CUG) のサポート
+ラベル：Adobe Granite の閉じられたユーザーグループ（CUG）のサポート
 
 名前：com.day.cq.auth.impl.CugSupportImpl
 
 **AEM 6.5**
 
-* ラベル：Apache Jackrabbit Oak CUG 設定
+* ラベル：Apache Jackrabbit Oak CUG の設定
 
    名前：org.apache.jackrabbit.oak.spi.security.authorization.cug.impl.CugConfiguration
 
@@ -76,7 +76,7 @@ ht-degree: 24%
    ConfigurationPolicy = REQUIRED
 
 * 名前：com.adobe.granite.auth.requirement.impl.RequirementService
-* ラベル：AdobeGranite 認証要件およびログインパスハンドラー
+* ラベル：Adobe Granite 認証要件とログインパスハンドラー
 
    名前：com.adobe.granite.auth.requirement.impl.DefaultRequirementHandler
 
@@ -88,16 +88,16 @@ ht-degree: 24%
 
    >[!NOTE]
    > 
-   >この `CugExcludeImpl` が設定されていない場合、 `CugConfiguration` はデフォルトに戻ります。
+   >`CugExcludeImpl` が設定されていない場合、`CugConfiguration` がデフォルトに戻ります。
 
-   特別なニーズがある場合は、カスタム CugExclude 実装をプラグインできます。
+   特別なニーズがある場合は、カスタム CugExclude 実装をプラグインすることが可能です。
 
-* 一致するログインパスを LoginSelectorHandler に公開する LoginPathProvider を実装する OSGi コンポーネント。 これには RequirementHandler への必須参照が含まれており、granite:AuthenticationRequired mixin タイプを使用して、コンテンツに保存されている変更された認証要件をリッスンする監視者を登録するために使用されます。
+* LoginSelectorHandler に一致するログインパスを公開する LoginPathProvider を実装する OSGi コンポーネント。これは、granite:AuthenticationRequired mixin タイプによって、コンテンツに格納されている変更された認証要件を監視するオブザーバを登録するために使用される RequirementHandler への必須参照を持っています。
 * authRequirements の変更について SlingAuthenticator に通知する RequirementHandler を実装する OSGi コンポーネント。
 
-   このコンポーネントの構成ポリシーは REQUIRE なので、サポートされているパスのセットが指定されている場合にのみ有効化されます。
+   このコンポーネントの設定ポリシーは REQUIRE なことから、サポートされているパスのセットが指定されている場合にのみ有効になります。
 
-   サービスを有効にすると、RequirementService が起動します。
+   サービスを有効にすると RequirementService が起動します。
 
 <!-- nested tables not supported - text above is the table>
 <table>
