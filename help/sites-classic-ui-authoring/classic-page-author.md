@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: 3fe5b6cc-1494-43e1-add7-2f7828b676ad
 exl-id: a3606d72-1bd8-4886-9285-6457dae66486
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '298'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 92%
 >
 >ここでは、コンテンツページのオーサリングに関連するタスクについて取り上げます。<!-- There are many additional features closely related to page authoring, these are covered under [Site and Page Features](/sites-classic-ui-authoring/classic-feature.md). -->
 
-## ページのオーサリングに使用される機能の概要のクイック {#quick-overview-of-features-used-for-authoring-pages}
+## ページのオーサリングに使用される機能の概要 {#quick-overview-of-features-used-for-authoring-pages}
 
-ページのオーサリング時に役立つように、オーサー環境は次のような機能を提供します。
+オーサー環境では、ページのオーサリングに役立つ次の機能を利用できます。
 
 * **ドラッグ＆ドロップ**
 コンポーネント（テキスト、画像など）およびデジタルアセット（画像など）は、目的の位置にドラッグ＆ドロップするだけで、ページ上で簡単に配置できます。
