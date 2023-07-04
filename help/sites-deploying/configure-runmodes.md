@@ -1,7 +1,7 @@
 ---
 title: 実行モード
 seo-title: Run Modes
-description: 実行モードを使用して、特定の目的に合わせてAEMインスタンスを調整する方法を説明します。
+description: 実行モードを使用して、特定の目的に合わせて AEM インスタンスを調整する方法を説明します。
 seo-description: Learn how to tune your AEM instance for specific purposes by using run modes.
 uuid: 8a0c6e5c-4fae-43e2-b745-eee58f346ceb
 contentOwner: User
@@ -12,15 +12,15 @@ discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
 source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '747'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
 # 実行モード{#run-modes}
 
-実行モードを使用すると、特定の目的に合わせてAEMインスタンスを調整できます。例えば、オーサーまたはパブリッシュ、テスト、開発、イントラネットなどです。
+実行モードを使用すると、特定の目的に合わせて AEM インスタンスを調整できます。例えば、オーサーまたはパブリッシュ、テスト、開発、イントラネットなどです。
 
 以下の操作を実行できます。
 
@@ -57,7 +57,7 @@ ht-degree: 64%
 
 ## カスタマイズされた実行モード {#customized-run-modes}
 
-独自にカスタマイズした実行モードを作成することもできます。 これらを組み合わせて、次のようなシナリオをカバーできます。
+独自にカスタマイズした実行モードを作成することもできます。これらを組み合わせて、次のようなシナリオをカバーできます。
 
 * `author` + `development`
 
@@ -73,7 +73,7 @@ ht-degree: 64%
 
 ## samplecontent と nosamplecontent の使用 {#using-samplecontent-and-nosamplecontent}
 
-これらのモードを使用すると、サンプルコンテンツの使用を制御できます。 サンプルコンテンツは、クイックスタートのビルド前に定義され、パッケージ、設定などを含めることができます。
+これらのモードを使用すると、サンプルコンテンツの使用を制御できます。サンプルコンテンツは、クイックスタートの構築前に定義され、パッケージや設定などを含めることができます。
 
 * `samplecontent` 実行モードでは、サンプルコンテンツがインストールされます（デフォルトモード）。
 
@@ -103,13 +103,13 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
    該当する実行モードに使用（config など）
 
-詳しくは、 [リポジトリ内の OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) これらのフォルダー内で個々の設定ノードを定義する方法と、複数の実行モードの組み合わせに対する設定を作成する方法について詳しくは、を参照してください。
+これらのフォルダー内で個々の設定ノードを定義する方法と、複数の実行モードの組み合わせに対する設定を作成する方法について詳しくは、[リポジトリ内の OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を参照してください。
 
 >[!NOTE]
 >
->の場合 [インストール実行モード](#installation-run-modes) （例：author）インストール後に実行モードを変更することはできません。 ただし、個々の設定プロパティに対する変更は、の再起動時に有効になります。
+>[インストール実行モード](#installation-run-modes)（オーサーなど）の場合、インストール後に実行モードを変更できません。ただし、個々の設定プロパティに対する変更は、再起動時に有効になります。
 
-## 実行モード用にインストールする追加のバンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
+## 実行モードにインストールする追加バンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
 特定の実行モード用にインストールする必要がある追加のバンドルも指定できます。これらの定義に関しては、インストールフォルダーを使用してバンドルが保持されます。繰り返しになりますが、実行モードはプレフィックスで示されます。
 
@@ -120,7 +120,7 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
 ## 特定の実行モードでの CQ の起動 {#starting-cq-with-a-specific-run-mode}
 
-複数の実行モードの設定を定義した場合は、起動時に使用する設定を定義する必要があります。 使用する実行モードを指定する方法はいくつかあります。解決の順序は次のとおりです。
+複数の実行モードの設定を定義した場合は、起動時にどれを使用するかを定義する必要があります。使用する実行モードを指定する方法はいくつかあります。解決の順序は次のとおりです。
 
 1. [システムプロパティ (](#using-a-system-property-in-the-start-script)
 1. [ ](#using-the-sling-properties-file)
