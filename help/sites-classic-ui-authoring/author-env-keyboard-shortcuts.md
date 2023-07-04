@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: b6e42b9d-9e27-4f22-8543-442d03af48f3
 exl-id: 8cc9200e-981d-468f-b2bd-cd44e9a02bb5
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '114'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >
 >* Windows：**Ctrl** キーを押しながら必要なコンポーネントを&#x200B;**クリック**&#x200B;します。
 >
->* Mac: **Cmd**+**クリック** 必要なコンポーネント上。
+>* Mac：**Cmd** キーを押しながら必要なコンポーネントを&#x200B;**クリック**&#x200B;します。
 >
 
 
@@ -40,7 +40,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   </tr>
   <tr>
    <td>コンソール</td>
-   <td><strong><code>Shift-Double-Click</code></strong><br /> （必須ページ上）</td>
+   <td><strong><code>Shift-Double-Click</code></strong><br /> （必要なページで実行）</td>
    <td>ページを新しいウィンドウで開きます。<br /> <strong>注：</strong>これは、「<a href="/help/sites-classic-ui-authoring/author-env-user-props.md">ユーザープロパティ</a>」が「単一ウィンドウ」に設定されている場合に動作します。「複数ウィンドウ」に設定されている場合は、これがデフォルトの動作となります。</td>
   </tr>
  </tbody>
