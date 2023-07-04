@@ -10,9 +10,9 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 144fbe2d0efe20d848e9556f8d652a403d1835b2
+source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2026'
 ht-degree: 83%
 
 ---
@@ -144,11 +144,11 @@ This is an automatically generated message. Please do not reply.
 * `${userId}`、イベントを実行したユーザーの ID。
 * `${modifications}`、ページイベントのタイプとページパスを次の形式で表します。
 
-   &lt;page event type> => &lt;page path>
+  &lt;page event type> => &lt;page path>
 
-   次に例を示します。
+  次に例を示します。
 
-   PageModified => /content/geometrixx/ja/products
+  PageModified => /content/geometrixx/ja/products
 
 ### ワークフロー通知用のメールテンプレート {#email-templates-for-workflow-notification}
 
@@ -342,7 +342,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 1. 検索バーで **Azure Active Directory** を検索し、結果をクリックします。または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
 1. **アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
-   ![](assets/oauth-outlook1.png)
+   ![Microsoft Outlook 設定](assets/oauth-outlook1.png)
 
 1. 必要に応じて情報を入力し、**登録**&#x200B;をクリックします。
 1. 新しく作成されたアプリに移動し、**API 権限**&#x200B;を選択します。
@@ -397,7 +397,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 設定が完了すると、設定は次のようになります。
 
-![](assets/oauth-outlook-smptconfig.png)
+![AEM side configurations ビュー](assets/oauth-outlook-smptconfig.png)
 
 次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
 
