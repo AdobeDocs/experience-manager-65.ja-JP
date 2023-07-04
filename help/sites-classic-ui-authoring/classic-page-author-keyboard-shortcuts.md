@@ -1,6 +1,6 @@
 ---
 title: ページ編集時のキーボードショートカット
-description: AEM 全体で様々なキーボードショートカットを利用できます。ページの編集時に適用されるものや、コンソールの使用に適用されるものもあります。
+description: AEM 全体で様々なキーボードショートカットを利用できます。ページの編集時に適用されるものもあれば、コンソール使用に適用されるものもあります。
 uuid: a1753e0b-5701-426c-b974-2e8b8d81a30d
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,15 +9,15 @@ content-type: reference
 discoiquuid: 68fa88c5-a759-49fa-ab9b-8dc63c049d5f
 exl-id: 1c761aa7-a72f-46f0-8717-0b6e0d1cff55
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '313'
-ht-degree: 51%
+ht-degree: 100%
 
 ---
 
 # ページ編集時のキーボードショートカット{#keyboard-shortcuts-when-editing-pages}
 
-AEM 全体で様々なキーボードショートカットを利用できます。ページの編集時に適用されるものと、 [コンソールの使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+AEM 全体で様々なキーボードショートカットを利用できます。ページの編集時に適用されるものもあれば、[コンソール使用](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md)に適用されるものもあります。
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 >デスクトップデバイスでの複数選択：
 >
 >* Windows：Ctrl キーを押しながら必要なコンポーネントをクリックします。
->* Mac:Cmd キーを押しながら必要なコンポーネントをクリックします。
+>* Mac：Cmd キーを押しながら必要なコンポーネントをクリックします。
 >
 
 
@@ -99,7 +99,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Alt-c</code></strong></td>
-   <td>次を表示： <a href="/help/sites-administering/client-context.md">クライアントコンテキスト</a>.</td>
+   <td><a href="/help/sites-administering/client-context.md">クライアントコンテキスト</a>を表示します。</td>
   </tr>
   <tr>
    <td>リッチテキストエディター<br /> </td>
@@ -117,24 +117,24 @@ AEM 全体で様々なキーボードショートカットを利用できます�
    <td>下線</td>
   </tr>
   <tr>
-   <td>コンテンツファインダー — 検索ボックス</td>
+   <td>コンテンツファインダー - 検索ボックス</td>
    <td><strong><code>down-arrow</code></strong></td>
-   <td>トリガー候補リスト。 入力された文字が少なすぎてリストが自動的にトリガーされない場合に必要です（2 文字以上入力されている場合に発生します）。</td>
+   <td>候補リストをトリガーします。入力された文字が少なすぎてリストが自動的にトリガーされない場合に必要です（2 文字以上入力されている場合に発生します）。</td>
   </tr>
   <tr>
    <td> </td>
-   <td><strong><code>right-arrow</code></strong><br /> （推奨パス上）</td>
-   <td>選択したパスの項目とトリガーの候補を選択します。</td>
+   <td><strong><code>right-arrow</code></strong><br /> （候補のパスに対して）</td>
+   <td>項目を選択し、選択したパスの候補をトリガーします。</td>
   </tr>
   <tr>
    <td> </td>
-   <td><strong><code>left-arrow</code></strong><br /> （推奨パス上）</td>
-   <td>（親の兄弟のように）上位の項目とトリガーの候補を選択します。</td>
+   <td><strong><code>left-arrow</code></strong><br /> （候補のパスに対して）</td>
+   <td>項目を選択し、その祖先（親の兄弟など）の候補をトリガーします。</td>
   </tr>
   <tr>
    <td> </td>
-   <td><strong><code>Enter</code></strong><br /> （推奨パス上）</td>
-   <td>項目とトリガー検索を選択</td>
+   <td><strong><code>Enter</code></strong><br /> （候補のパスに対して）</td>
+   <td>項目を選択して、検索をトリガーします。</td>
   </tr>
   <tr>
    <td> </td>
@@ -144,7 +144,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
   <tr>
    <td>コンテンツファインダー<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
-   <td><p>アセットをドラッグし、宛先にドロップします。</p> <p>ドロップアクションを実行すると、新しい段落が生成されます。の代わりに使用します。</p> </td>
+   <td><p>アセットをドラッグし、宛先にドロップします。</p> <p>ドロップアクションによって、宛先のアセットが置き換わるのではなく、新しい段落が生成されます。</p> </td>
   </tr>
  </tbody>
 </table>
