@@ -5,9 +5,9 @@ index: n
 feature: Authoring
 exl-id: 3ac61645-4873-4602-b740-2236aba5bc5e
 source-git-commit: 768576e300b655962adc3e1db20fc5ec06a5ba6c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '346'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -82,9 +82,9 @@ AEM Fluid Experience の機能と、関連するサポートドキュメント�
 
 ## 詳しく見る {#learn-more}
 
-* [ヘッドレスユースケース向けの Fluid Experience](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=en)
-* [AEM コンテンツサービス：概要、理由、方法](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=en)
-* [コンテンツサービスの使用](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
-* [モバイルアプリの開発](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=en)
-* [サードパーティへのアクセスに関する FAQ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=en)
-* [Sling API の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)
+* [ヘッドレスユースケース向けの Fluid Experience](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=ja)
+* [AEM コンテンツサービス：概要、理由、方法](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=ja)
+* [コンテンツサービスの使用](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=ja)
+* [モバイルアプリの開発](https://experienceleague.adobe.com/docs/experience-manager-65/mobile/developing/developing-content-services.html?lang=ja)
+* [サードパーティアクセスに関する FAQ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=ja)
+* [Sling API の使用](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=ja#sling-models)
