@@ -1,7 +1,7 @@
 ---
 title: AEM コンポーネントの開発 - コードサンプル
 seo-title: Developing AEM Components - Code Samples
-description: この節では、AEM用に独自のコンポーネントを作成する方法の例をいくつか示します。
+description: このセクションでは、AEM 用に独自のコンポーネントを作成する方法の例を示します。
 seo-description: This section provides some examples on how to create your own components for AEM.
 uuid: 764b5dad-d3bb-48c6-9e93-9dc4e3f623db
 contentOwner: User
@@ -12,17 +12,17 @@ discoiquuid: 402c0d6b-2c26-490a-97c5-dfd4dea778e0
 legacypath: /content/docs/en/aem/6-2/develop/components/components-develop
 exl-id: 4059af12-49a7-489c-a2b8-d0481be57cc5
 source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
 # AEM コンポーネントの開発 - コードサンプル{#developing-aem-components-code-samples}
 
-この節では、AEM用に独自のコンポーネントを作成する方法の例をいくつか示します。
+このセクションでは、AEM 用に独自のコンポーネントを作成する方法の例を示します。
 
-基になる概念については、以下を参照してください。
+基本となる概念については、以下を参照してください。
 
 * [AEM コンポーネント - 基本](/help/sites-developing/components-basics.md)
 * [AEM コンポーネントの開発](/help/sites-developing/developing-components.md)
@@ -49,11 +49,11 @@ GitHub のコード
 
 >[!NOTE]
 >
->このコードサンプルは、AEM Gems セッション ( [ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=en).
+>このコードサンプルは、[ダイアログフィールドのカスタマイズ](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=ja)に関する AEM Gems セッションに関連しています。
 
 ## 関連リソース {#related-resources}
 
-### コンポーネントツールバーに新しいアクションを追加する {#add-new-action-to-a-component-toolbar}
+### 新しいアクションをコンポーネントツールバーに追加 {#add-new-action-to-a-component-toolbar}
 
 ページエディターの編集レイヤーを使用して、新しいアクションをコンポーネントツールバーに追加できます。
 
@@ -61,6 +61,6 @@ GitHub のコード
 
 ### コンテンツフラグメントのカスタマイズと拡張 {#customizing-and-extending-content-fragments}
 
-標準のコンテンツフラグメントコンポーネントを拡張して機能を追加することもできます。
+標準のコンテンツフラグメントコンポーネントを拡張して、機能を追加できます。
 
 詳しくは、[コンテンツフラグメントのカスタマイズと拡張](/help/sites-developing/customizing-content-fragments.md)を参照してください。
