@@ -11,9 +11,9 @@ discoiquuid: 222daab8-4514-44a5-b5c9-c5510809c74e
 docset: aem65
 exl-id: 30720061-d0e5-453b-a334-6a3aa9ca4c87
 source-git-commit: bd33c0884be55b76ef526c8c938236e743dc3dc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '953'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -26,13 +26,13 @@ QueryBuilder の REST インターフェイスを使用するか、QueryBuilder 
 カスタムレポートを追加する前に、次のテンプレート手順を実行します。
 
 1. カスタムレポートで使用するデータは、プロセスレポートで使用可能である必要があります。データを確実に使用できるようにするには、cron ジョブをスケジュールするか、プロセスレポート UI で「**[同期](https://helpx.adobe.com/jp/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** 」オプションを使用します。
-1. URL リクエスト（目的のクエリをカプセル化）は、適切なクエリ結果オブジェクトを返す必要があります。クエリを作成するには、[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en) の REST インターフェイスを使用して、QueryBuilder API を使用して OSGi サービスを作成します。動的クエリや静的クエリを作成できます。
+1. URL リクエスト（目的のクエリをカプセル化）は、適切なクエリ結果オブジェクトを返す必要があります。クエリを作成するには、[QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja) の REST インターフェイスを使用して、QueryBuilder API を使用して OSGi サービスを作成します。動的クエリや静的クエリを作成できます。
 
 1. 結果を表示するカスタムユーザーインターフェイスを作成します。スタンドアロンのユーザーインターフェイスを作成したり、結果を既存のプロセスレポート UI と統合したりできます。
 
 ## QueryBuilder の REST インターフェイスの使用 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST インターフェイスは、Java API と REST API を介してアセット共有 QueryBuilder の機能を表示します。次の手順を実行する前に [CRX QueryBuilder REST インターフェイス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)の使用方法を学びます。
+CRX QueryBuilder REST インターフェイスは、Java API と REST API を介してアセット共有 QueryBuilder の機能を表示します。次の手順を実行する前に [CRX QueryBuilder REST インターフェイス](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja)の使用方法を学びます。
 
 1. URL `https://'[server]:[port]'/lc/bin/querybuilder.json` を参照 
 1. プロセスレポートのストレージノード構造とノードプロパティに基づいてクエリを作成します。
@@ -49,7 +49,7 @@ CRX QueryBuilder REST インターフェイスは、Java API と REST API を介
 
 ## QueryBuilder API を使用したサービスの作成  {#creating-a-service-using-query-builder-api-nbsp}
 
-QueryBuilder API を使用してサービスを作成するための前提条件は、[CQ OSGI バンドルの作成と導入](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および [QueryBuilder API の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)です。
+QueryBuilder API を使用してサービスを作成するための前提条件は、[CQ OSGI バンドルの作成と導入](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および [QueryBuilder API の使用](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=ja)です。
 
 1. 適切な注釈で OSGi サービスを作成します。QueryBuilder にアクセスするには、次を使用します。
 
@@ -65,7 +65,7 @@ QueryBuilder API を使用してサービスを作成するための前提条件
     predicateGroup.setAllRequired(true);
    ```
 
-1. 新しく作成した predicateGroup に述語を追加します。以下に、便利な述語の構成をいくつか示します。 [5.3 での JcrBoolPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja), [5.3 での JcrPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja), [5.3 の RangePropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja), [5.3 の DateRangePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、および [5.3 の TypePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja).
+1. 新しく作成した predicateGroup に述語を追加します。[5.3 の JcrBoolPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の JcrPropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の RangePropertyPredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の DateRangePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[5.3 の TypePredicateEvaluator](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) は便利な述語の構成例です。
 
    静的レポートの場合は述語をハードコードし、動的レポートの場合はリクエストから述語を取得します。
 
@@ -424,7 +424,7 @@ public class PeriodicProcessVolume {
 
 ## 個別の UI の作成 {#creating-a-separate-ui-nbsp}
 
-結果を表示するための個別の UI を作成するための前提条件は次のとおりです。 [5.6.1 の Sling の基本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja), [CRX ノードの作成](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) 適切な [アクセス権限](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja).
+結果を表示するための個別の UI を作成するための前提条件は [5.6.1 での Sling の基本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)、[CRX ノードの作成](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)および適切な[アクセス権限](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)です。
 
 1. `/apps` ノードに CRX ノードを作成し、適切なアクセス権限を付与します。（PERM_PROCESS_REPORTING_USER）
 1. `/content` ノードにレンダラーを定義します。
