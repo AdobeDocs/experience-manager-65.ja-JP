@@ -8,9 +8,9 @@ contentOwner: carlino
 discoiquuid: c637964a-dfcb-41fe-9c92-934620fe2cb3
 exl-id: 3a483b9d-627a-41d3-8ac1-66f9c5e89ad5
 source-git-commit: 71842228dd3cb1ce3b79728912e8333d25fccefc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '302'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
@@ -18,32 +18,32 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制に適用できます。（GDPR や CCPA など）
+>以下のセクションでは GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に当てはまります。
 
-データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。詳しくは、 [GDPR ページ (Adobeプライバシーセンター )](https://business.adobe.com/privacy/general-data-protection-regulation.html).
+データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018年5月に発効します。[アドビプライバシーセンターの GDPR ページ](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
->詳しくは、 [AEM GDPR 対応](/help/managing/data-protection-and-privacy.md) 詳しくは、を参照してください。
+>詳しくは、[AEM の GDPR 対応](/help/managing/data-protection-and-privacy.md)を参照してください。
 
 ![screen_shot_2018-03-22at111606](assets/screen_shot_2018-03-22at111606.jpg)
 
-Adobeの標準のコマース統合では、AEMがエクスペリエンスレイヤーとなり、サービスを消費し、ヘッドレスモードで実行される顧客コマースプラットフォームにデータを送り返します。
+アドビのデフォルトのコマース統合では AEM がエクスペリエンスレイヤーとなり、サービスを利用して得られたデータをヘッドレスモードで動作する顧客のコマースプラットフォームに送り返します。
 
-一部のコマースプラットフォームでは、Adobeはプロファイル情報 ( `/home/users`) およびコマーストークン（コマースプラットフォームにログオンするため）をAEMで設定します。 これらの使用例については、 [AEM Platform に対する GDPR 要求の処理](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md).
+一部のコマースプラットフォームでは、プロファイル情報（`/home/users`）と（コマースプラットフォームにログインするための）コマーストークンが AEM 内に格納されます。これらのユースケースについては、[AEM プラットフォームでの GDPR 要求への対応](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)をお読みください。
 
 ![screen_shot_2018-03-22at111621](assets/screen_shot_2018-03-22at111621.jpg)
 
 ## AEM Commerce での GDPR 要求の処理 {#handling-gdpr-requests-for-aem-commerce}
 
-SalesforceCommerce Cloud統合の場合、AEM Commerce は GDPR 関連の情報を格納しません。 リクエストを [Salesforce Cloud](https://documentation.b2c.commercecloud.salesforce.com/DOC1/index.jsp).
+Salesforces Commerce Cloud 統合の場合、AEM Commerce には GDPR 関連の情報は一切格納されません。[Salesforce Cloud](https://documentation.b2c.commercecloud.salesforce.com/DOC1/index.jsp) にリクエストを転送してください。
 
-hybris と HCL WebSphere® Commerce の統合の場合、AEMにはいくつかのデータがあります。 以下を使用： [AEM Platform GDPR の手順](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md) そして、次の質問を考慮します。
+hybris および HCL WebSphere® Commerce 統合の場合、AEM 内に若干のデータが存在します。[AEM Platform の GDPR 手順](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)に従い、以下の質問について考察してください。
 
-1. **データはどこに保存/使用されますか？** AEMから表示される名前、コマースユーザー識別子、トークン、パスワード、住所データなど、キャッシュされたユーザープロファイル情報。
-1. **対象となる GDPR データを誰と共有すればよいですか？** AEM Commerce での GDPR 関連データの更新は（前述の関連するプロファイル情報を除く）保存されず、コマースプラットフォームにプロキシされて返されます。
-1. **ユーザーデータの削除方法は？** AEMのユーザープロファイルを削除し、コマースプラットフォームでユーザーの削除を呼び出します。
+1. **データはどこに格納され、使用されているか？** キャッシュ内のユーザープロファイル情報（名前、コマースユーザー識別子、トークン、パスワード、住所のデータ）が AEM から示されます。
+1. **対象となる GDPR データを誰と共有するか？** AEM Commerce 内の GDPR 関連データの更新は一切格納されず（前述の関連プロファイル情報は除く）、すべて管理元のコマースプラットフォームへと送り返されます。
+1. **ユーザーデータの削除方法は？** AEM でユーザープロファイルを削除し、コマースプラットフォームでユーザーの削除を呼び出してください。
 
 >[!NOTE]
 >
->以下をご覧ください： [hybris wiky](https://wiki.hybris.com/) または [HCL WebSphere® Commerce ドキュメント](https://help.hcltechsw.com/commerce/index.html)（必要に応じて）
+>[hybris の wiki](https://wiki.hybris.com/) または [HCL WebSphere® Commerce のドキュメント](https://help.hcltechsw.com/commerce/index.html)を必要に応じて参照してください。
