@@ -1,6 +1,6 @@
 ---
-title: AEMでのユーザーインターフェイスの選択
-description: AEMで使用するインターフェイスを設定します。
+title: AEM でのユーザーインターフェイスの選択
+description: AEM での作業に使用するインターフェイスを設定します。
 uuid: ab127f2f-2f8a-4398-90dd-c5d48eed9e53
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,15 +10,15 @@ discoiquuid: e418d330-f234-411d-8cad-3fd9906dcbee
 docset: aem65
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
 source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '745'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
 # UI の選択 {#selecting-your-ui}
 
-タッチ操作対応 UI が標準 UI になり、サイトの管理と編集はほぼ同等の機能を備えていますが、 [クラシック UI](/help/sites-classic-ui-authoring/classicui.md). これをおこなうには、いくつかのオプションがあります。
+タッチ操作対応 UI が標準 UI になり、サイトの管理と編集はほぼ同等の機能を備えていますが、ユーザーが[クラシック UI](/help/sites-classic-ui-authoring/classicui.md) に切り替えたい場合があるかもしれません。そのためのオプションがいくつか用意されています。
 
 >[!NOTE]
 >
@@ -35,11 +35,11 @@ ht-degree: 52%
 * [現在のセッションでのクラシック UI への切り替え](#switching-to-classic-ui-for-the-current-session)
 現在のセッション用にクラシック UI に切り替えます。
 
-* の場合 [ページオーサリングシステムが UI に関連して特定の上書きをおこなう](#ui-overrides-for-the-editor).
+* [ ページオーサリングの場合、システムは UI に関して特定の上書きを行います](#ui-overrides-for-the-editor)。
 
 >[!CAUTION]
 >
->クラシック UI に切り替える様々なオプションをすぐに使用することはできません。その場では、インスタンスに合わせて特別に設定する必要があります。
+>クラシック UI に切り替えるための様々なオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
 >
 >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
@@ -49,27 +49,27 @@ ht-degree: 52%
 >
 >アップグレード後、ページオーサリングが自動的にタッチ対応 UI に切り替わることはありませんが、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用すると、その切り替えを設定できます。[エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
 
-## インスタンスのデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
+## 使用しているインスタンスへのデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
-システム管理者は、起動時とログイン時に表示される UI を、 [ルートマッピング](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping).
+システム管理者は、[ルートマッピング](/help/sites-deploying/osgi-configuration-settings.md#daycqrootmapping)を使用して、起動時およびログイン時に表示される UI を設定できます。
 
-この設定は、ユーザーの既定値またはセッション設定で上書きできます。
+この設定は、ユーザーのデフォルト設定またはセッション設定で上書きできます。
 
 ## アカウントのクラシック UI オーサリングの設定 {#setting-classic-ui-authoring-for-your-account}
 
-各ユーザーは、 [ユーザーの環境設定](/help/sites-authoring/user-properties.md#userpreferences) ページオーサリングにクラシック UI を（デフォルトの UI の代わりに）使用するかどうかを定義します。
+各ユーザーは、[ユーザーの環境設定](/help/sites-authoring/user-properties.md#userpreferences)にアクセスして、ページオーサリングに（デフォルト UI ではなく）クラシック UI を使用するかどうかを定義できます。
 
 この設定は、セッション設定で上書きできます。
 
 ## 現在のセッションのクラシック UI への切り替え {#switching-to-classic-ui-for-the-current-session}
 
-タッチ操作対応 UI を使用している場合、デスクトップユーザーはクラシック（デスクトップのみ）UI に戻すことができます。 現在のセッションでクラシック UI に切り替える方法はいくつかあります。
+デスクトップユーザーがタッチ操作対応 UI を使用している場合に、クラシック（デスクトップのみ）UI に戻した方がよいこともあります。現在のセッションでクラシック UI に切り替える方法はいくつかあります。
 
 * **ナビゲーションリンク**
 
    >[!CAUTION]
    >
-   >クラシック UI に切り替えるためのこのオプションは、すぐには使用できません。インスタンスに対して特に設定する必要があります。
+   >クラシック UI に切り替えるためのこのオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
    >
    >
    >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
@@ -97,7 +97,7 @@ ht-degree: 52%
 
 >[!CAUTION]
 >
->クラシック UI に切り替えるためのこのオプションは、すぐには使用できません。インスタンスに対して特に設定する必要があります。
+>クラシック UI に切り替えるためのこのオプションは、そのまますぐに使用することはできません。使用しているインスタンス用に設定する必要があります。
 >
 >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
@@ -105,9 +105,9 @@ ht-degree: 52%
 
 ![syui-02](assets/syui-02.png)
 
-### エディターの UI の上書き {#ui-overrides-for-the-editor}
+### エディターの UI のオーバーライド {#ui-overrides-for-the-editor}
 
-ユーザーまたはシステム管理者が定義した設定は、ページのオーサリング時にシステムによって上書きできます。
+ユーザーまたはシステム管理者が定義した設定が、ページのオーサリング時にシステムによって上書きされることがあります。
 
 * ページのオーサリング時：
 
@@ -129,12 +129,12 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->If [ユーザーが既にページオーサリングの環境設定を定義しています](#settingthedefaultauthoringuiforyouraccount)の場合、OSGi プロパティを変更して上書きされることはありません。
+>[ユーザーが既にページオーサリングの環境設定を定義している場合](#settingthedefaultauthoringuiforyouraccount)、OSGi プロパティを変更して上書きされることはありません。
 
 >[!CAUTION]
 >
->既に説明したように、cookie の使用により、次の操作はお勧めしません。
+>既に説明したように、Cookie の使用により、次の操作はお勧めしません。
 >
->* URL を手動で編集 — 非標準の URL を使用すると、不明な状況が発生し、機能が不足する場合があります。
+>* URL を手動で編集 - 非標準の URL を使用すると、不明な状況が発生し、機能が不足する場合があります。
 >* 両方のエディターを同時に開くこと - 例えば、別のウィンドウで開くなど。
 
