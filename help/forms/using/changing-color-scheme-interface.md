@@ -11,30 +11,30 @@ topic-tags: forms-workspace
 discoiquuid: 18dab82a-badf-4c32-83a2-cd5cb04cae89
 exl-id: e0a261a2-518b-4984-a5b5-24f0b9222e24
 source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '228'
-ht-degree: 42%
+ht-degree: 100%
 
 ---
 
 # インターフェイスのカラースキームの変更 {#changing-the-color-scheme-of-the-interface}
 
-AEM Forms Workspace のユーザーインターフェイス部分のカラースキームは、要件に合わせて変更できます。 代表的なカラースキームのカスタマイズの例を以下に示します。 この記事の手順に加えて、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
+AEM Forms Workspace のユーザーインターフェイス部分のカラースキームは、要件に合わせて変更できます。代表的なカラースキームのカスタマイズの例を以下にいくつか示します。この記事の手順に加えて、「[AEM Forms Workspace のカスタマイズの一般的な手順](/help/forms/using/generic-steps-html-workspace-customization.md)」を参照してください。
 
 ## 上部ナビゲーションバー {#top-navigation-bar}
 
 ### 背景画像の使用 {#using-background-image}
 
-AEM Forms Workspace の上部にあるナビゲーションバーを更新するには：
+AEM Forms Workspace の上部にあるナビゲーションバーを更新する手順は次のとおりです。
 
-1. 背景画像を作成して色を更新します。 ファイルに newBackground.jpg という名前を付けます。
-1. WebDAV クライアントを使用して、/apps/ws/images フォルダーに背景画像ファイルをアップロードします。
+1. 背景画像を作成してカラーを更新します。ファイルに newBackground.jpg と名前を付けます。
+1. WebDAV クライアントを使用して、背景画像を /apps/ws/images フォルダーにアップロードします。
 
    >[!NOTE]
    >
    >WebDAV アクセスの詳細については、 [https://dev.day.com/docs/en/crx/current/how_to/webdav_access.html](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
 
-1. 次のスタイルを追加して、 /apps/ws/css/newStyle.cssで新しい背景画像を参照します。
+1. 次のスタイルを追加して、/apps/ws/css/newStyle.css の新しい背景画像を参照します。
 
    ```css
    #header {
@@ -42,7 +42,7 @@ AEM Forms Workspace の上部にあるナビゲーションバーを更新する
    }
    ```
 
-### CSS でのカラープロパティの使用 {#using-color-property-in-css}
+### CSS のカラープロパティの使用 {#using-color-property-in-css}
 
 1. /apps/ws/css にある newStyle.css に次のスタイルを追加します。
 
