@@ -1,6 +1,6 @@
 ---
-title: AEMオーサリングを使用する際のベストプラクティス
-description: 可能な限り効率的かつ最も効果的にAEMを使用する方法。
+title: AEM オーサリングを使用する際のベストプラクティス
+description: 可能な限り効率的かつ最も効果的に AEM を使用する方法。
 uuid: b3044cdf-8ca4-4012-b290-11f73c0cb1bf
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,17 +9,17 @@ content-type: reference
 discoiquuid: d15ded18-7417-47e2-9783-b23fa05a0cda
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '291'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
 # ベストプラクティス {#best-practices}
 
-オーサリングのベストプラクティスでは、AEMをできるだけ効率的かつ効果的に使用する方法について説明しています。 このトピックのリストは、AEMの様々な領域で増えています。
+オーサリングのベストプラクティスでは、AEM をできるだけ効率的かつ効果的に使用する方法について説明しています。AEM の様々な領域を対象としたトピックが順次追加されています。
 
-次の領域に、ベストプラクティスに関するドキュメントが用意されています。
+次の領域について、ベストプラクティスに関するドキュメントが提供されています。
 
 * [Assets](#assets)
 * [Sites](#sites)
@@ -31,7 +31,7 @@ ht-degree: 58%
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
 * [デプロイのベストプラクティス](/help/sites-deploying/best-practices.md)
 
-以下の表では、特定のドキュメントについて説明し、リンクします。
+特定のドキュメントの説明とリンクは、以下の表に示されています。
 
 ## Assets {#assets}
 
@@ -64,7 +64,7 @@ Dynamic Media 機能と Dynamic Media Classic の統合を含む Assets に関�
 
 ## Sites {#sites}
 
-Web サイトコンテンツの管理とオーサリングには、次に示すベストプラクティスがあります。
+Web サイトのコンテンツの管理とオーサリングには、次のようなベストプラクティスがあります。
 
 |  |  |  |
 |---|---|---|
@@ -75,5 +75,5 @@ Web サイトコンテンツの管理とオーサリングには、次に示す�
 
 |  |  |  |
 |---|---|---|
-| アダプティブフォーム | [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) | アダプティブフォームの設定、オーサリング、カスタマイズに関するベストプラクティスについて説明します。 |
-| HTML5 のフォーム | [Forms5 を設計する際のベストプラクティスHTML](/help/forms/using/best-practices-for-html5-forms.md) | レイアウト 5 フォームのレイアウトとデザインに関するベストプラクティスについてHTMLします。 |
+| アダプティブフォーム | [アダプティブフォームの操作のベストプラクティス](/help/forms/using/adaptive-forms-best-practices.md) | アダプティブフォームの設定、オーサリングおよびカスタマイズに関するベストプラクティスについて説明します。 |
+| HTML5 のフォーム | [HTML5 フォームのデザインのベストプラクティス](/help/forms/using/best-practices-for-html5-forms.md) | HTML 5 フォームのレイアウトおよびデザインに関するベストプラクティスについて説明します。 |
