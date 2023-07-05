@@ -76,8 +76,8 @@ NotSoSerial エージェントは、アプリケーションサーバーの AEM 
 1. **逆シリアル化ファイアウォール設定**&#x200B;を検索してクリックします。
 
    >[!NOTE]
-   次の URL にアクセスして、設定ページに直接アクセスすることもできます。
-   * `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
+   >次の URL にアクセスして、設定ページに直接アクセスすることもできます。
+   >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
 
 この設定には、許可リスト、ブロックリスト、逆シリアル化ログが含まれています。
@@ -109,7 +109,7 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
 エージェントの問題のトラブルシューティングについて詳しくは、以下の[動的なエージェントの読み込みによるエラー処理](#handling-errors-with-dynamic-agent-loading)を参照してください。
 
 >[!NOTE]
-`org.apache.commons.collections.functors` を許可リストに追加すると、ヘルスチェックは常に失敗します。
+>`org.apache.commons.collections.functors` を許可リストに追加すると、ヘルスチェックは常に失敗します。
 
 ## 動的なエージェントの読み込みによるエラー処理 {#handling-errors-with-dynamic-agent-loading}
 
@@ -124,10 +124,10 @@ URL にアクセスすると、エージェントに関連するヘルスチェ�
    ```
 
    >[!NOTE]
-   エージェントはフォークされた JVM では有効にできないので、CQ／AEM の -nofork オプションを、適切な JVM メモリ設定で使用する必要があります。
+   >エージェントはフォークされた JVM では有効にできないので、CQ／AEM の -nofork オプションを、適切な JVM メモリ設定で使用する必要があります。
 
    >[!NOTE]
-   Adobe 配布版の NotSoSerial エージェント JAR は、AEM インストールの `crx-quickstart/opt/notsoserial/` フォルダーにあります。
+   >Adobe 配布版の NotSoSerial エージェント JAR は、AEM インストールの `crx-quickstart/opt/notsoserial/` フォルダーにあります。
 
 1. JVM を停止して再開します。
 

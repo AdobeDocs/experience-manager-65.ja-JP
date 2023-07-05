@@ -158,12 +158,12 @@ Workbench をインストールする前に、Workbench の実行に必要なソ
 1. （オプション）フォームを作成および変更するツールが必要な場合は、「Adobe Designer のインストール」を選択します。
 
    >[!NOTE]
-   Acrobat 10 と共にインストールされた Designer を引き続き使用するには、このオプションの選択を解除したままにします。
+   >Acrobat 10 と共にインストールされた Designer を引き続き使用するには、このオプションの選択を解除したままにします。
 
 1. 表示されるデフォルトのディレクトリをそのまま使用するか、「選択」をクリックして Workbench のインストール先ディレクトリを選択し、「次へ」をクリックします。
 
    >[!NOTE]
-   インストールディレクトリのパスには、#（ポンド）および $（ドル）文字を含めることはできません。
+   >インストールディレクトリのパスには、#（ポンド）および $（ドル）文字を含めることはできません。
 
 1. インストール前の概要を確認して、「インストール」をクリックします。インストールの進行状況がインストールプログラムに表示されます。
 1. インストールの概要を確認します。「Adobe AEM forms Workbench の起動」を選択して Workbench を起動し、「次へ」をクリックします。
@@ -182,7 +182,7 @@ JEE 上の AEM Forms プロセスは、アップグレードウィザードを�
 Workbench を使用するには、通常は別のコンピューターで AEM Forms のインスタンスを実行させる必要があります。AEM Forms にログインにするには、ユーザー名とパスワードおよびサーバーの場所に関する詳細情報が必要です。
 
 >[!NOTE]
-EMC Documentum® または IBM® FileNet リポジトリプロバイダーを使用するように AEM Forms を設定している場合、AEM Forms 管理コンソールでデフォルトとして設定されている以外のリポジトリにログインするには、ユーザー名を username@Repository と指定します。
+>EMC Documentum® または IBM® FileNet リポジトリプロバイダーを使用するように AEM Forms を設定している場合、AEM Forms 管理コンソールでデフォルトとして設定されている以外のリポジトリにログインするには、ユーザー名を username@Repository と指定します。
 
 ### タイムアウトの設定 {#configuring-timeout-settings}
 
@@ -193,7 +193,7 @@ EMC Documentum® または IBM® FileNet リポジトリプロバイダーを使
 HTTPS 経由で Workbench を AEM Forms サーバーに接続するには、公開鍵を発行した認証局（CA）が信頼できることを Workbench が認識する必要があります。この証明書が信頼できるソースに由来すると認識されない場合、[Workbench_HOME]/workbench/jre/lib/security ディレクトリにある cacert ファイルを更新する必要があります。
 
 >[!NOTE]
-[Workbench_HOME] は、Workbench をインストールしたディレクトリを表します。デフォルトの場所は C:¥Program Files (x86)¥Adobe Experience Manager forms Workbench です。
+>[Workbench_HOME] は、Workbench をインストールしたディレクトリを表します。デフォルトの場所は C:¥Program Files (x86)¥Adobe Experience Manager forms Workbench です。
 
 HTTPS には、証明書で指定されている名前を使用して接続してください。この名前は通常、完全修飾ホスト名です。
 
@@ -201,7 +201,7 @@ HTTPS には、証明書で指定されている名前を使用して接続し�
 1. Secure Sockets Layer（SSL）証明書のコピーがあることを確認します。SSL サーバーを設定した管理者に問い合わせるか、web ブラウザーを使用して証明書を書き出します。
 
    >[!NOTE]
-   証明書を書き出すには、web ブラウザーを開いて管理コンソールにログインし、ブラウザーに証明書をインストールします。次にブラウザーから一時的な保存場所（または直接 [Workbench_HOME]/workbench/jre/lib/security ディレクトリ）に証明書を書き出します。
+   >証明書を書き出すには、web ブラウザーを開いて管理コンソールにログインし、ブラウザーに証明書をインストールします。次にブラウザーから一時的な保存場所（または直接 [Workbench_HOME]/workbench/jre/lib/security ディレクトリ）に証明書を書き出します。
 
 1. 証明書を [Workbench_HOME]/workbench/jre/lib/security ディレクトリにコピーします。
 
