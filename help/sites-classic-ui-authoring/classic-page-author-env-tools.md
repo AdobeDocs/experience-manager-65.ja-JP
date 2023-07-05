@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '898'
-ht-degree: 100%
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+workflow-type: tm+mt
+source-wordcount: '902'
+ht-degree: 99%
 
 ---
 
@@ -40,7 +40,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 [コンソールツールバーからのヘルプ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)をアクセスすると、ページ編集時にサイドキックからヘルプに（？アイコンを使用して）アクセスできます。
 
-![](do-not-localize/sidekick-collapsed-2.png)
+![Sidekick折りたたみ](do-not-localize/sidekick-collapsed-2.png)
 
 または、特定のコンポーネントの編集ダイアログで「**ヘルプ**」ボタンを使用することで、コンテキスト依存のヘルプが表示されます。
 
@@ -188,7 +188,7 @@ Web サイトコンソールには、[ページの現在のステータスに関
 
 クラシック UI でページを編集中に、サイドキックの下部のアイコンを使用して次のモードにアクセスできます。
 
-![](do-not-localize/chlimage_1-12.png)
+![ページモード](do-not-localize/chlimage_1-12.png)
 
 サイドキックの下部に並ぶ 1 行のアイコンは、ページを操作するモードの切り替えに使用します。
 
@@ -209,7 +209,6 @@ Web サイトコンソールには、[ページの現在のステータスに関
 >* [ClientContext](/help/sites-administering/client-context.md)
 >* Web サイト - Web サイトコンソールを開きます。
 >* 再読み込み - ページを更新します。
-
 
 ## キーボードショートカット {#keyboard-shortcuts}
 

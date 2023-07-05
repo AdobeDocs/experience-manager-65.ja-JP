@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: 813fda6a-e877-452b-82c3-e758720e7dd0
 docset: aem65
 exl-id: 90cb8893-65f3-4d82-9880-ce8dd80891b1
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 100%
+source-wordcount: '264'
+ht-degree: 76%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 100%
 
 ![screen_shot_2018-03-21at163054](assets/screen_shot_2018-03-21at163054.png)
 
-もう一度タップ／クリックするか、最初にコンポーネントをゆっくり 2 回タップ／クリックして選択すると、独自のツールバーを持つインプレース編集が表示されます。ここで、コンテンツの編集や、基本的な書式変更ができます。
+もう一度タップまたはクリックするか、最初にゆっくりダブルタップまたはクリックしてコンポーネントを選択すると、独自のツールバーを持つインプレース編集が開きます。 ここで、コンテンツを編集し、基本的な書式設定を変更できます。
 
 ![screen_shot_2018-03-21at163214](assets/screen_shot_2018-03-21at163214.png)
 
@@ -46,7 +46,7 @@ ht-degree: 100%
 
 ## フルスクリーン編集 {#full-screen-editing}
 
-テキストベースのコンポーネントの場合は、ツールバー![](do-not-localize/screen_shot_2018-03-21at163236.png)からフルスクリーンモードをタップすると、リッチテキストエディターが開き、残りのページコンテンツが非表示になります。
+テキストベースのコンポーネントの場合は、ツールバーからフルスクリーンモードをタップします。 ![フルスクリーン編集モード](do-not-localize/screen_shot_2018-03-21at163236.png) リッチテキストエディターを開き、残りのページコンテンツを非表示にします。
 
 フルスクリーンモードでは、オーサリングに使用できる設定済みオプションがすべて表示されます。使用できるオプションは、[設定によって異なります](/help/sites-administering/rich-text-editor.md)。
 

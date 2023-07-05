@@ -9,10 +9,10 @@ topic-tags: personalization
 discoiquuid: 9da34dab-7e89-4127-ab26-532687746b2a
 docset: aem65
 exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
-workflow-type: ht
-source-wordcount: '2828'
-ht-degree: 100%
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+workflow-type: tm+mt
+source-wordcount: '2839'
+ht-degree: 99%
 
 ---
 
@@ -85,7 +85,7 @@ HTML の見出しサイズ 1～4 に基づいた見出しレベル。
 
 画像をアップロードした後に、[インプレース編集](/help/sites-authoring/editing-content.md#editcontenttouchoptimizedui)を使用して、必要に応じて画像を切り抜いたり回転したりできます。
 
-![](do-not-localize/chlimage_1-10.png)
+![インプレース編集ツールバー](do-not-localize/chlimage_1-10.png)
 
 >[!NOTE]
 >
@@ -95,18 +95,15 @@ HTML の見出しサイズ 1～4 に基づいた見出しレベル。
 
 フルスクリーン編集モードで使用できる追加オプションがいくつか用意されています（マップ、ズームなど）。
 
-![](do-not-localize/chlimage_1-11.png)
+![フルスクリーン編集モード](do-not-localize/chlimage_1-11.png)
 
 画像を読み込む際は、次の設定が可能です。
 
-* **マップ**
-画像をマップするには、「マップ」を選択します。画像マップの作成方法（長方形、多角形など）を指定し、領域が指す位置を指定します。
+* **マップ**&#x200B;画像をマップするには、「マップ」を選択します。画像マップの作成方法（長方形、多角形など）を指定し、領域が指す位置を指定します。
 
-* **切り抜き**
-「切り抜き」をクリックして画像を切り抜きます。マウスを使用して画像を切り抜きます。
+* **切り抜き**「切り抜き」をクリックして画像を切り抜きます。マウスを使用して画像を切り抜きます。
 
-* **回転**
-画像を回転するには、「回転」を選択します。画像が目的の向きになるまで繰り返し使用します。
+* **回転**&#x200B;画像を回転するには、「回転」を選択します。画像が目的の向きになるまで繰り返し使用します。
 
 * **消去**
 現在の画像を削除します。
@@ -133,6 +130,7 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 >「**詳細**」タブの「**代替テキスト**」フィールドに情報を入力する必要があります。入力しない場合は画像を保存できず、次のエラーメッセージが表示されます。
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 画像（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -151,8 +149,7 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 リンクの使用方法に関する追加情報を付加します。
 
 * **LinkType**
-ドロップダウンリストで、 
-**カスタム URL** および **アダプティブドキュメント**。このフィールドは必須です。カスタム URL を選択した場合は、リンクの URL を指定できます。アダプティブドキュメントを選択した場合は、ドキュメントのパスを指定できます。
+ドロップダウンリストで、**カスタム URL** および **アダプティブドキュメント**。このフィールドは必須です。カスタム URL を選択した場合は、リンクの URL を指定できます。アダプティブドキュメントを選択した場合は、ドキュメントのパスを指定できます。
 
 * **追加の URL パラメーター**
 追加の URL パラメーターがあれば追加します。「項目を追加」をクリックして、複数の項目を追加します。
@@ -162,6 +159,7 @@ Web サイト内のアセットまたはその他のページへのリンクを�
 >「**URL 情報**」タブの「**リンクタイプ**」フィールドに情報を入力する必要があります。入力しない場合はコンポーネントを保存できず、次のエラーメッセージが表示されます。
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 リンク（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -197,11 +195,11 @@ Dynamic Media Classic（Scene7）画像テンプレートはレイヤー化さ�
 
 「**テキスト**」を選択すると、インラインエディターが表示されます。
 
-![](do-not-localize/chlimage_1-12.png)
+![テキストツールバー](do-not-localize/chlimage_1-12.png)
 
 「**画像**」を選択すると、画像用のインプレースエディターが表示されます。
 
-![](do-not-localize/chlimage_1-13.png)
+![画像ツールバー](do-not-localize/chlimage_1-13.png)
 
 画像の操作について詳しくは、[画像（Campaign）コンポーネント](#image-campaign)を参照してください。テキストの操作について詳しくは、[テキストとパーソナライズ機能（Campaign）コンポーネント](#text-personalization-campaign)を参照してください。
 
@@ -236,6 +234,7 @@ web サイト内のアセットまたはその他のページへのリンクを�
 >「**詳細**」タブの「**代替テキスト**」フィールドは必須です。入力されていない場合、コンポーネントを保存できず、次のエラーメッセージが表示されます。
 >
 >`Validation failed. Verify the values of the marked fields.`
+>
 
 テキストと画像（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -268,14 +267,14 @@ web サイト内のアセットまたはその他のページへのリンクを�
 
 Adobe Campaign コンポーネントを使用すると、ユーザーがニュースレターの購読や登録解除、またはユーザープロフィールの更新を行うために入力するフォームを作成できます。詳しくは、[Adobe Campaign Forms の作成](/help/sites-authoring/adobe-campaign-forms.md)を参照してください。
 
-各コンポーネントフィールドは、Adobe Campaign データベースフィールドにリンクできます。[コンポーネントとデータタイプ](#components-and-data-type)セクションで説明されているように、使用可能なフィールドは、フィールドに含まれるデータのタイプによって異なります。Adobe Campaign で受信者スキーマを拡張すると、データタイプが一致するコンポーネントで新しいフィールドが使用できるようになります。
+各コンポーネントフィールドは、Adobe Campaign データベースフィールドにリンクできます。使用可能なフィールドは、フィールドに含まれるデータのタイプによって異なります（[コンポーネントとデータタイプ](#components-and-data-type)の節を参照）。Adobe Campaign で受信者スキーマを拡張すると、データタイプが一致するコンポーネントで新しいフィールドが使用できるようになります。
 
 Adobe Campaign と統合するように設定されているフォームを開くと、「**Adobe Campaign**」セクションに以下のコンポーネントが表示されます。
 
 * チェックボックス （Campaign）
 * 日付フィールド（Campaign）と日付フィールド／HTML5（Campaign）
-* 暗号化されたプライマリキー (Campaign)
-* エラー表示 (Campaign)
+* 暗号化されたプライマリキー（Campaign）
+* エラー表示（Campaign）
 * 非表示の紐付けキー（Campaign）
 * 数値フィールド （Campaign）
 * オプションフィールド （Campaign）
@@ -379,7 +378,7 @@ Adobe Campaign コンポーネントには、すべてのコンポーネント�
 
 チェックボックス（Campaign）コンポーネントを使用すると、ユーザーがブーリアンデータタイプの Adobe Campaign プロファイルフィールドを変更できるようになります。例えば、受信者が任意のチャネルからの連絡を希望するかどうかを指定できるチェックボックス（Campaign）コンポーネントを使用できます。
 
-チェックボックス（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を行うことができます。
+チェックボックス（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を使用できます。
 
 チェックボックス（Campaign）コンポーネントの表示例を以下に示します。
 
@@ -403,7 +402,7 @@ Adobe Campaign コンポーネントには、すべてのコンポーネント�
 
 ### 暗号化されたプライマリキー (Campaign) {#encrypted-primary-key-campaign}
 
-このコンポーネントでは、Adobe Campaign プロファイルの識別子（Adobe Campaign Standard では&#x200B;**メインリソース識別子**、Adobe Campaign 6.1 では&#x200B;**暗号化されたプライマリキー**）を含む URL パラメーター名を定義します。
+このコンポーネントでは、Adobe Campaign プロファイルの識別子（Adobe Campaign Standard では&#x200B;**メインリソース識別子**、Adobe Campaign 6.1 では&#x200B;**暗号化されたプライマリキー**）を含んだ URL パラメーターの名前を定義します。
 
 Adobe Campaign プロファイルデータを表示および変更する各フォームには、暗号化されたプライマリキーコンポーネントを含める&#x200B;**必要があります**。
 
@@ -457,7 +456,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 
 このドロップダウンリストを使用すると、受信者の性別やステータスなどのオプションを選択できます。
 
-オプションフィールド（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を行うことができます。ドロップダウンリストに値を入力するには、Adobe Campaign の記号をクリックまたはタップして Adobe Campaign のパーソナライゼーションフィールドに移動して、適切なフィールドを選択します。
+オプションフィールド（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を使用できます。ドロップダウンリストに値を入力するには、Adobe Campaign の記号をクリックまたはタップして Adobe Campaign のパーソナライゼーションフィールドに移動して、適切なフィールドを選択します。
 
 ![chlimage_1-66](assets/chlimage_1-66.png)
 
@@ -475,7 +474,7 @@ Adobe Campaign プロファイルデータを表示および変更する各フ�
 >
 >このコンポーネントは、ユーザーがどのサービスを購読または購読解除しているかを確認しません。
 
-購読チェックリスト（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を行うことができます（このコンポーネントで利用できる Adobe Campaign 設定はありません）。
+購読チェックリスト（Campaign）コンポーネントでは、[大部分の Adobe Campaign コンポーネントに共通の設定](#settings-common-to-most-components)を使用できます。（このコンポーネントで利用できる Adobe Campaign 設定はありません）。
 
 購読チェックリスト（Campaign）コンポーネントの表示例を以下に示します。
 

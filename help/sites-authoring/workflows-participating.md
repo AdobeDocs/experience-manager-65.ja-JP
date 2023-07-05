@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: f170613c-329e-446b-9ac3-350615f1bfb6
 docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '1524'
-ht-degree: 100%
+source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+workflow-type: tm+mt
+source-wordcount: '1526'
+ht-degree: 99%
 
 ---
 
@@ -33,11 +33,11 @@ ht-degree: 100%
 
 * [通知](/help/sites-authoring/inbox.md)インジケーター（ツールバー）が増分されます。
 
-   ![](do-not-localize/wf-57.png)
+  ![通知インジケーター](do-not-localize/wf-57.png)
 
 * 通知[インボックス](/help/sites-authoring/inbox.md)に項目がリストされます
 
-   ![wf-58](assets/wf-58.png)
+  ![wf-58](assets/wf-58.png)
 
 * ページエディターを使用している場合、ステータスバーには次の情報が表示されます。
 
@@ -48,18 +48,18 @@ ht-degree: 100%
       * 左／右の矢印を使用して、様々なワークフローのステータス情報を参照します。
       * 実際の数字をクリックまたはタップして、該当するすべてのワークフローのドロップダウンリストを開き、ステータスバーに表示するワークフローを選択します。
 
-   ![wf-59](assets/wf-59.png)
+  ![wf-59](assets/wf-59.png)
 
-   >[!NOTE]
-   >
-   >ステータスバーは、例えば `workflow-users` グループのメンバーなど、ワークフロー特権のあるユーザーだけに表示されます。
-   >
-   >
-   >現在のユーザーがワークフローの現在のステップに直接関与している場合、アクションが表示されます。
+  >[!NOTE]
+  >
+  >ステータスバーは、例えば `workflow-users` グループのメンバーなど、ワークフロー特権のあるユーザーだけに表示されます。
+  >
+  >
+  >現在のユーザーがワークフローの現在のステップに直接関与している場合、アクションが表示されます。
 
 * リソースの&#x200B;**タイムライン**&#x200B;が開いている場合、ワークフローステップが表示されます。アラートバナーをクリックまたはタップすると、使用可能なアクションも表示されます。
 
-   ![screen_shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
+  ![screen_shot_2019-03-05at120453](assets/screen-shot_2019-03-05at120453.png)
 
 ### 参加者ステップの完了 {#completing-a-participant-step}
 
@@ -229,19 +229,19 @@ ht-degree: 100%
 
 * 「**作業項目**」タブ
 
-   ![wf-72](assets/wf-72.png)
+  ![wf-72](assets/wf-72.png)
 
 * 「**ワークフロー情報**」タブ：
 
-   ![wf-73](assets/wf-73.png)
+  ![wf-73](assets/wf-73.png)
 
-   [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)がモデルに設定されている場合は、これらに従って進行状況を表示できます。
+  [ワークフローステージ](/help/sites-developing/workflows.md#workflow-stages)がモデルに設定されている場合は、これらに従って進行状況を表示できます。
 
-   ![wf-107](assets/wf-107.png)
+  ![wf-107](assets/wf-107.png)
 
 * 「**コメント**」タブ：
 
-   ![wf-75](assets/wf-75.png)
+  ![wf-75](assets/wf-75.png)
 
 以下のいずれかから作業項目の詳細を開くことができます。
 

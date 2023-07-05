@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '500'
-ht-degree: 100%
+source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+workflow-type: tm+mt
+source-wordcount: '509'
+ht-degree: 98%
 
 ---
 
@@ -45,7 +45,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードに入るには、編集するページを開き、サイドキックアイコンを使用します。
 
-   ![](do-not-localize/chlimage_1.png)
+   ![デザインモード](do-not-localize/chlimage_1.png)
 
 1. 段落システムの「**編集**」（**段落のデザイン**）をクリックします。
 
@@ -59,7 +59,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードでは、サイドキックは最小化されます。矢印をクリックすると、サイドキックを最大化して編集モードに戻ることができます。
 
-   ![](do-not-localize/sidekick-collapsed.png)
+   ![Sidekick最小化](do-not-localize/sidekick-collapsed.png)
 
 ## コンポーネントのデザインの設定 {#configuring-the-design-of-a-component}
 
@@ -67,7 +67,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードに入るには、編集するページを開き、サイドキックアイコンを使用します。
 
-   ![](do-not-localize/chlimage_1-1.png)
+   ![デザインモード —Sidekick](do-not-localize/chlimage_1-1.png)
 
 1. コンポーネントのデザインを設定できます。
 
@@ -79,4 +79,4 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードでは、サイドキックは最小化されます。矢印をクリックすると、サイドキックを最大化して編集モードに戻ることができます。
 
-   ![](do-not-localize/sidekick-collapsed-1.png)
+   ![Sidekick最小化](do-not-localize/sidekick-collapsed-1.png)
