@@ -8,9 +8,9 @@ topic-tags: integration
 content-type: reference
 discoiquuid: b1d45f01-78de-423c-8f6b-5cb7067c3a2f
 exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
-source-git-commit: d673a447e9ce2377c8645c87f12be81cbad06238
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ Adobe Campaign Classicで次のエラーメッセージを探します。
 
 Adobe Campaign Classicで、末尾にスラッシュ (`/`) をクリックします。
 
-![chlimage_1-149](assets/chlimage_1-149.png)
+![Adobe Campaign Classic — ポート番号の後にスラッシュを付けないでください](assets/chlimage_1-149.png)
 
 ## Setlocale に関する警告が表示された場合 {#if-you-get-a-warning-about-your-setlocale}
 

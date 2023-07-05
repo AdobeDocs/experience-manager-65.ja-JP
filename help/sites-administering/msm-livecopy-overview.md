@@ -11,22 +11,22 @@ content-type: reference
 discoiquuid: 3763e985-7dd8-47fd-bfdf-2368b424c270
 feature: Multi Site Manager
 exl-id: 0c3488bd-5f32-4956-882c-93326a45b379
-source-git-commit: 53c39e4aa250b18d4fae0327b313b18901677f2c
-workflow-type: ht
-source-wordcount: '534'
-ht-degree: 100%
+source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 42%
 
 ---
 
 # ライブコピーの概要コンソール{#live-copy-overview-console}
 
-**ライブコピーの概要**&#x200B;では、次のことが可能です。
+この **ライブコピーの概要** では、次のことが可能です。
 
-* サイト全体での継承の表示／管理：
+* サイト全体での継承の表示/管理：
 
-   * ブループリントツリーと対応するライブコピー構造、およびそれらの継承ステータスの表示
-   * 継承ステータスの変更（休止、再開など）
-   * ブループリントおよびライブコピーのプロパティの表示
+   * ブループリントツリーと対応するライブコピー構造を、継承ステータスと共に表示します
+   * 継承ステータスを変更する。例：休止、再開
+   * ブループリントおよびライブコピーのプロパティを表示
 
 * ロールアウトアクションの実行
 
@@ -41,47 +41,47 @@ ht-degree: 100%
 
 「**ライブコピーの概要**」は、**Sites** コンソールの&#x200B;**参照**&#x200B;サイドパネルから開くことができます。
 
-1. **サイト**&#x200B;コンソールで、[ブループリントページに移動して選択します](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)。
-1. **[参照](/help/sites-authoring/basic-handling.md#references)**&#x200B;パネルを開き、「**ライブコピー**」を選択します。
+1. 内 **サイト** コンソール [ブループリントページに移動して選択します。](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources).
+1. を開きます。 **[参照](/help/sites-authoring/basic-handling.md#references)** パネルと選択 **ライブコピー**.
 
-   ![chlimage_1-359](assets/chlimage_1-359.png)
+   ![参照パネル — ライブコピー](assets/chlimage_1-359.png)
 
    >[!NOTE]
    >
-   >先に参照を開いてからブループリントを選択することもできます。
+   >最初に「参照」を開いてから、ブループリントを選択することもできます。
 
-1. 「**ライブコピーの概要**」を選択して、選択したブループリントに関連するすべてのライブコピーの概要を表示および使用します。
+1. 選択 **ライブコピーの概要** 選択したブループリントに関連するすべてのライブコピーの概要を表示および使用します。
 1. 「**閉じる**」を使用して終了し、**Sites** コンソールに戻ります。
 
-### ライブコピーの概要を開く - ブループリントページのプロパティ {#opening-live-copy-overview-properties-of-a-blueprint-page}
+### ライブコピーの概要を開く — ブループリントページのプロパティ {#opening-live-copy-overview-properties-of-a-blueprint-page}
 
-**ライブコピーの概要**&#x200B;は、ブループリントページのプロパティを表示しているときに開くことができます。
+この **ライブコピーの概要** は、ブループリントページのプロパティの表示時に開くことができます。
 
-1. 該当するブループリントページの&#x200B;**プロパティ**&#x200B;を開きます。
-1. 「**ブループリント**」タブを開きます。「**ライブコピーの概要**」オプションが上部のツールバーに表示されます。
+1. 開く **プロパティ** 適切なブループリントページ用の
+1. を開きます。 **ブループリント** タブ — **ライブコピーの概要** オプションが上部のツールバーに表示されます。
 
-   ![chlimage_1-360](assets/chlimage_1-360.png)
+   ![「ブループリント」タブ — ライブコピーの概要](assets/chlimage_1-360.png)
 
 1. 「**ライブコピーの概要**」を選択して、現在のブループリントに関連するすべてのライブコピーの概要を表示および使用します。
 
    >[!NOTE]
    >
-   >詳しくは、[ライブコピーのステータスのメッセージ - 最新／グリーン／同期中](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html)に関するナレッジベースの記事も参照してください。
+   >詳しくは、ナレッジベースの記事も参照してください。 [ライブコピーのステータスメッセージ — 最新/緑/同期](https://helpx.adobe.com/jp/experience-manager/kb/livecopy-status-message---up-to-date-green-in-sync.html).
 
 1. 「**閉じる**」を使用して終了し、**Sites** コンソールに戻ります。
 
 ## ライブコピーの概要の使用 {#using-the-live-copy-overview}
 
-**ライブコピーの概要**&#x200B;を使用して、ライブコピーに対するアクションを実行することもできます。
+この **ライブコピーの概要** ライブコピーに対してアクションを実行する場合にも使用できます。
 
 1. **ライブコピーの概要**&#x200B;を開きます。
-1. 必要なブループリントページまたはライブコピーページを選択します。ツールバーが更新され、使用できるアクションが表示されます。使用できる[アクション](/help/sites-administering/msm.md#terms-used)は、[ブループリント](#actions-for-a-blueprint-page)ページと[ライブコピー](#actions-for-a-live-copy-page)ページのどちらを選択したかによって異なります。
+1. 必要なブループリントまたはライブコピーページを選択します。ツールバーが更新され、使用可能なアクションが表示されます。 この [アクション](/help/sites-administering/msm.md#terms-used) 使用可能かは、 [ブループリント](#actions-for-a-blueprint-page) または [ライブコピー](#actions-for-a-live-copy-page) ページ：
 
 ### ブループリントページのアクション {#actions-for-a-blueprint-page}
 
 ブループリントページを選択した場合は、以下のアクションを使用できます。
 
-![chlimage_1-361](assets/chlimage_1-361.png)
+![ブループリントが選択されました — 使用可能なアクション](assets/chlimage_1-361.png)
 
 * 編集
 
@@ -93,13 +93,13 @@ ht-degree: 100%
 
 ### ライブコピーページのアクション {#actions-for-a-live-copy-page}
 
-ライブコピーページを選択した場合は、以下のアクションを使用できます。
+ライブコピーページを選択すると、次のアクションを使用できます。
 
-![chlimage_1-362](assets/chlimage_1-362.png)
+![ライブコピーページが選択されました — 使用可能なアクション](assets/chlimage_1-362.png)
 
 * 編集
 
-   * ライブコピーページを編集用に開きます。
+   * 編集用にライブコピーページを開きます。
 
 * [関係ステータス](#relationship-status)
 
@@ -127,19 +127,19 @@ ht-degree: 100%
 
 ## 関係ステータス {#relationship-status}
 
-**関係ステータス**&#x200B;コンソールには、様々な機能を提供する 2 つのタブがあります。
+この **関係ステータス** コンソールには、様々な機能を提供する 2 つのタブがあります。
 
 * [関係ステータス情報](#relationship-status-information)
 * [ライブコピー情報](#live-copy-information)
 
 ### 関係ステータス情報 {#relationship-status-information}
 
-このタブには、ブループリントとライブコピーの間の関係のステータスに関する詳細情報が表示されます。
+このタブには、ブループリントとライブコピーとの関係のステータスに関する詳細情報が表示されます。
 
-![chlimage_1-363](assets/chlimage_1-363.png)
+![関係ステータス情報](assets/chlimage_1-363.png)
 
 ### ライブコピー情報 {#live-copy-information}
 
-このタブでは、ライブコピー設定を表示および編集できます。
+このタブでは、ライブコピーの設定を表示および編集できます。
 
-![chlimage_1-364](assets/chlimage_1-364.png)
+![ライブコピー情報](assets/chlimage_1-364.png)

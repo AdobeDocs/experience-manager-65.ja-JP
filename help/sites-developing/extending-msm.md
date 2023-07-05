@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '2575'
-ht-degree: 99%
+source-wordcount: '2583'
+ht-degree: 98%
 
 ---
 
@@ -49,13 +49,13 @@ ht-degree: 99%
 
 主な MSM API オブジェクトは、次のようにやり取りします（[使用される用語](/help/sites-administering/msm.md#terms-used)も参照してください）。
 
-![chlimage_1-73](assets/chlimage_1-73.png)
+![メインの MSM API オブジェクト](assets/chlimage_1-73.png)
 
 * **`Blueprint`**
 
   `Blueprint`（[ブループリント設定](/help/sites-administering/msm.md#source-blueprints-and-blueprint-configurations)）は、ライブコピーのコンテンツ継承元となるページを指定します。
 
-  ![chlimage_1-74](assets/chlimage_1-74.png)
+  ![ブループリント](assets/chlimage_1-74.png)
 
    * ブループリント設定（`Blueprint`）の使用は任意ですが、これを使用すると、
 
@@ -634,7 +634,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 * ノードの `country` プロパティには、そのコードが表す国の正式名称が格納されます。
 * ノード名が言語コードのみ（`en` など）で構成されている場合、country プロパティは `*` で、追加の `defaultCountry` プロパティには、使用する国を示す言語-国のコードが格納されます。
 
-![chlimage_1-76](assets/chlimage_1-76.png)
+![言語定義](assets/chlimage_1-76.png)
 
 言語の変更手順
 
@@ -643,7 +643,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
    新しいフォルダーに「`wcm`」という名前を付けます。
 
-1. 前のステップを繰り返して、`/apps/wcm/core` フォルダーツリーを作成します。タイプ `sling:Folder` の `resources` というノードを `core` に作成します。<!-- ![chlimage_1-77](assets/chlimage_1-77.png) -->
+1. 前のステップを繰り返して、`/apps/wcm/core` フォルダーツリーを作成します。タイプ `sling:Folder` の `resources` というノードを `core` に作成します。<!-- ![Resources](assets/chlimage_1-77.png) -->
 
 1. `/libs/wcm/core/resources/languages` ノードを右クリックして、「**コピー**」をクリックします。
 1. `/apps/wcm/core/resources` フォルダーを右クリックして、「**貼り付け**」をクリックします。必要に応じて子ノードを変更します。
@@ -651,7 +651,7 @@ MSM は、保存されている言語コードと国コードのリストを使�
 1. **ツール**／**運営**／**Web コンソール**&#x200B;の順にクリックします。このコンソールから「**OSGi**」をクリックし、次に「**設定**」をクリックします。
 1. **Day CQ WCM Language Manager** を探してクリックし、「**言語リスト**」の値を `/apps/wcm/core/resources/languages` に変更して、「**保存**」をクリックします。
 
-   ![chlimage_1-78](assets/chlimage_1-78.png)
+   ![Day CQ WCM Language Manager](assets/chlimage_1-78.png)
 
 ## ページプロパティに対する MSM ロックの設定（タッチ操作対応 UI） {#configuring-msm-locks-on-page-properties-touch-enabled-ui}
 

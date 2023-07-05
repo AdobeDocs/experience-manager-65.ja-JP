@@ -11,10 +11,10 @@ topic-tags: site-features
 discoiquuid: 8386a16a-9d47-46d5-bc60-5f290c59e60e
 docset: aem65
 exl-id: 3beea5cd-5ae0-485b-8dfc-8b3a23c11586
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 44%
+source-wordcount: '578'
+ht-degree: 43%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 44%
 
 両方のページのソースは、ブラウザーウィンドウ上部のヘッダーバーにはっきりと表示されます。
 
-![chlimage_1-109](assets/chlimage_1-109.png)
+![ヘッダーに表示されるソース](assets/chlimage_1-109.png)
 
 差分表示では、コンポーネントおよびHTMLレベルでの変更が検出されます。 変更された項目は、異なる色でハイライト表示されます。
 
@@ -78,7 +78,7 @@ ht-degree: 44%
 
 選択されたサイドが画面全体に表示されますが、バーは上部に残るので、2 枚のページを切り替えることができます。
 
-![chlimage_1-110](assets/chlimage_1-110.png)
+![上部のバーを使用して、ページを切り替えることができます](assets/chlimage_1-110.png)
 
 また全画面表示を終了するアイコンをクリックして、全画面表示を閉じることができます。
 

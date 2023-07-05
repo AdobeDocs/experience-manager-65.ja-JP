@@ -9,10 +9,10 @@ topic-tags: site-features
 discoiquuid: 4ec6b408-a165-4617-8d90-e89d8a415bb3
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
-source-git-commit: 7f595bec8ea138d5a73a17d0548320a31544dcd1
+source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 96%
+source-wordcount: '1040'
+ht-degree: 92%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 96%
 
    必要に応じて繰り返します。
 
-   ![chlimage_1-225](assets/chlimage_1-225.png)
+   ![ソースを選択してページを追加](assets/chlimage_1-225.png)
 
    >[!NOTE]
    >
@@ -78,7 +78,7 @@ ht-degree: 96%
 
    「**次へ**」をクリックして次に進みます。
 
-   ![chlimage_1-226](assets/chlimage_1-226.png)
+   ![ページを含めるかどうかを指定](assets/chlimage_1-226.png)
 
 1. ウィザードの&#x200B;**プロパティ**&#x200B;ステップでは、次の情報を指定できます。
 
@@ -91,7 +91,7 @@ ht-degree: 96%
 
    * **ローンチ日**：ローンチコピーがアクティベートされる日時（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
 
-   ![chlimage_1-227](assets/chlimage_1-227.png)
+   ![プロパティを指定](assets/chlimage_1-227.png)
 
 1. 「**作成**」を使用してプロセスを完了し、新しいローンチを作成します。ローンチをすぐに開くかどうかを確認するダイアログが表示されます。
 
@@ -102,22 +102,20 @@ ht-degree: 96%
 
 ### 新しいテンプレートでのローンチの作成 {#create-launch-with-new-template}
 
-[ローンチを作成](/help/sites-authoring/launches-creating.md#create-launch-with-new-template)する際に、新しいテンプレートを使用するかどうかを選択できます。
-
-**新しいテンプレートを使用してページを置き換える**
+条件 [ローンチの作成](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) 新しいテンプレートをオプションと共に使用するかどうかを選択できます。 **新しいテンプレートを使用してページを置き換える**
 
 >[!CAUTION]
 >
 >このオプションは、**Sites** コンソールからローンチを作成する場合にのみ使用できます。**ローンチ**&#x200B;コンソールからローンチを作成する場合は使用できません。
 
-![chlimage_1-228](assets/chlimage_1-228.png)
+![新しいテンプレートを使用してページを置き換えます](assets/chlimage_1-228.png)
 
 これを選択すると、次の処理が行われます。
 
 * 使用可能なその他のオプションを更新します。
 * 必須のテンプレートを選択できる新しいステップを含みます。
 
-![chlimage_1-229](assets/chlimage_1-229.png)
+![テンプレートを選択](assets/chlimage_1-229.png)
 
 >[!CAUTION]
 >
@@ -140,11 +138,11 @@ ht-degree: 96%
 1. **ローンチ**&#x200B;コンソールで「**作成**」を選択します。
 1. 「**ページの追加**」を選択してから、フィルターで `/content/launches` を指定してローンチブランチに移動します。必要なローンチを選択し「**選択**」で確認します。
 
-   ![chlimage_1-230](assets/chlimage_1-230.png)
+   ![ローンチを選択](assets/chlimage_1-230.png)
 
 1. 「**次へ**」で続行し、他のローンチと同様に「**プロパティ**」に入力します。
 
-   ![chlimage_1-231](assets/chlimage_1-231.png)
+   ![プロパティを指定](assets/chlimage_1-231.png)
 
 #### ネストされたローンチの作成 - Sites コンソール {#creating-a-nested-launch-sites-console}
 
