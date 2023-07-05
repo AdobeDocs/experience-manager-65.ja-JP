@@ -1,7 +1,7 @@
 ---
 title: Analytics と外部プロバイダー
 seo-title: Analytics with External Providers
-description: Analytics と外部プロバイダーについて説明します。
+description: 外部プロバイダーとの Analytics について説明します。
 seo-description: Learn about Analytics with External Providers.
 uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: ec4f24528089fe3de639b974ff4ab6f8807fc7fc
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 100%
+source-wordcount: '448'
+ht-degree: 70%
 
 ---
+
 
 # Analytics と外部プロバイダー {#analytics-with-external-providers}
 
@@ -27,9 +28,9 @@ Analytics は、Web サイトがどのように使用されているかに関す
 * [Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * [Adobe Target](/help/sites-administering/target.md)
 
-また、**汎用分析スニペット**&#x200B;の独自のインスタンスを設定して、新しいサービス設定を定義できます。
+また、 **汎用 Analytics スニペット** をクリックして、新しいサービス設定を定義します。
 
-情報は、Web ページに追加されるコードの小さなスニペットを使用して収集されます。次に例を示します。
+その後、情報は、Web ページに追加されるコードの小さなスニペットを使用して収集されます。 次に例を示します。
 
 >[!CAUTION]
 >
@@ -47,11 +48,11 @@ _gaq.push(['_trackPageview']);
 })();
 ```
 
-このようなスニペットを使用して、データを収集しレポートを生成できます。収集される実際のデータは、プロバイダーおよび実際に使用されるスニペットによって異なります。統計の例には次が含まれます。
+このようなスニペットを使用すると、データを収集してレポートを生成できます。 収集される実際のデータは、プロバイダーと、使用する実際のコードスニペットによって異なります。 統計の例を次に示します。
 
-* 経時的な訪問者数
-* 訪問ページ数
-* 使用された検索語句
+* 長期間の訪問者数
+* 訪問したページ数
+* 使用する検索語句
 * ランディングページ
 
 >[!CAUTION]
@@ -70,15 +71,15 @@ _gaq.push(['_trackPageview']);
 1. 左側のパネルから、**クラウドサービス設定**&#x200B;を展開します。
 1. 「**汎用分析スニペット**」をダブルクリックしてページを開きます。
 
-   ![](assets/analytics_genericoverview.png)
+   ![汎用分析スニペット](assets/analytics_genericoverview.png)
 
-1. &#x200B;+ をクリックし、ダイアログを使用して新しい設定を追加します。最小限の割り当てでは、名前（例：google analytics）を試用します。
+1. + をクリックし、ダイアログを使用して新しい設定を追加します。最小限の割り当てでは、名前（例：google analytics）を試用します。
 
-   ![](assets/analytics_addconfig.png)
+   ![設定の作成](assets/analytics_addconfig.png)
 
 1. 「**作成**」をクリックすると、スニペットダイアログがすぐに開くので、適切な JavaScript スニペットをフィールドに貼り付けます。
 
-   ![](assets/analytics_snippet.png)
+   ![コンポーネントの編集](assets/analytics_snippet.png)
 
 1. 「**OK**」をクリックして保存します。
 
@@ -90,18 +91,18 @@ _gaq.push(['_trackPageview']);
 1. サイドキックから&#x200B;**ページプロパティ**&#x200B;を開き、「**クラウドサービス**」タブを選択します。
 1. 「**サービスを追加**」をクリックし、必要なサービス（例：**汎用分析スニペット**）を選択します。
 
-   ![](assets/analytics_selectservice.png)
+   ![クラウドサービスの追加](assets/analytics_selectservice.png)
 
 1. 「**OK**」をクリックして保存します。
 1. 「**クラウドサービス**」タブに戻されます。**汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
 
-   ![](assets/analytics_selectspecificservice.png)
+   ![クラウドサービス設定の追加](assets/analytics_selectspecificservice.png)
 
 1. 「**OK**」をクリックして保存します。
 
-   これで、ページのページソースを表示すると、スニペットが表示されるようになりました。
+   これで、ページのページソースを表示した場合に、スニペットを表示できます。
 
-   適切な期間が経過した後、収集された統計が表示できるようになります。
+   適切な期間が経過すると、収集された統計を表示できます。
 
    >[!NOTE]
    >

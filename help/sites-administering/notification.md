@@ -10,12 +10,13 @@ topic-tags: operations
 content-type: reference
 discoiquuid: 6466d7b8-e308-43c5-acdc-dec15f796f64
 exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 93dfac20bbb761abd580a004741ade20dc4ee2fe
 workflow-type: tm+mt
-source-wordcount: '2026'
-ht-degree: 99%
+source-wordcount: '2068'
+ht-degree: 96%
 
 ---
+
 
 # メール通知の設定{#configuring-email-notification}
 
@@ -54,7 +55,7 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 
 設定は、Web コンソールに次のように表示されます。
 
-![chlimage_1-276](assets/chlimage_1-276.png)
+![Day CQ Mail Service OSGi 設定ウィンドウ](assets/chlimage_1-276.png)
 
 ## メール通知チャネルの設定 {#configuring-the-email-notification-channel}
 
@@ -88,7 +89,7 @@ AEM でメールを送信できるようにするには、**Day CQ Mail Service*
 
 デフォルト設定は、web コンソールに次のように表示されます。
 
-![chlimage_1-277](assets/chlimage_1-277.png)
+![Day CQ Workflow Email Notification Service 設定ウィンドウ](assets/chlimage_1-277.png)
 
 ### ページ通知用のメールテンプレート {#email-templates-for-page-notification}
 
@@ -233,7 +234,7 @@ subject=<text_1>
 
 * `${payload.type}`、ペイロードのタイプ
 * `${payload.path}`、ペイロードのパス
-* `${host.prefix}`、ホストのプレフィックス（例：http://localhost:4502）
+* `${host.prefix}`、ホストプレフィックス、例： `http://localhost:4502`
 
 ### 新しい言語用のメールテンプレートの追加 {#adding-an-email-template-for-a-new-language}
 
@@ -310,11 +311,11 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
    * 更新トークンの有効期限：なし
 1. 「**保存**」をクリックします。
 
-<!-- clarify refresh token expiry, currrently not present in the UI -->
+<!-- clarify refresh token expiry, currently not present in the UI -->
 
 設定が完了すると、設定は次のようになります。
 
-![OAuth SMTP プロバイダー](assets/oauth-smtpprov2.png)
+![CQ Mailer SMTP Oauth2 Provider 設定ウィンドウ](assets/oauth-smtpprov2.png)
 
 次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
 
@@ -324,7 +325,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. コンポーネントの左側にある「再生」アイコンを押します。
 
-   ![components](assets/oauth-components-play.png)
+   ![OAuthCodeGenerateServlet および OAuthCodeAccessTokenGenerator を示すコンポーネントのリスト](assets/oauth-components-play.png)
 
 最後に、以下により設定を確認します。
 
@@ -342,7 +343,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 1. 検索バーで **Azure Active Directory** を検索し、結果をクリックします。または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
 1. **アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
-   ![Microsoft Outlook 設定](assets/oauth-outlook1.png)
+   ![Microsoft Outlook を設定する際の新しい登録ボタン](assets/oauth-outlook1.png)
 
 1. 必要に応じて情報を入力し、**登録**&#x200B;をクリックします。
 1. 新しく作成されたアプリに移動し、**API 権限**&#x200B;を選択します。
@@ -397,7 +398,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
 
 設定が完了すると、設定は次のようになります。
 
-![AEM side configurations ビュー](assets/oauth-outlook-smptconfig.png)
+![完了した CQ メーラー SMTP OAuth2 設定](assets/oauth-outlook-smptconfig.png)
 
 次に、OAuth コンポーネントをアクティベートします。手順は次のとおりです。
 
@@ -407,7 +408,7 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
    * `com.day.cq.mailer.oauth.servlets.handler.OAuthCodeAccessTokenGenerator`
 1. コンポーネントの左側にある「再生」アイコンを押します。
 
-![components2](assets/oauth-components-play.png)
+![OAuthCodeGenerateServlet と OAuthCodeAccessTokenGenerator を含むコンポーネントリストのスニペット](assets/oauth-components-play.png)
 
 最後に、以下により設定を確認します。
 

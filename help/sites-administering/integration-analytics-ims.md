@@ -2,12 +2,13 @@
 title: IMS を使用した Adobe Analytics との統合
 description: IMS を使用した AEM と Adobe Analytics の統合について説明します
 exl-id: 2833a6df-ef32-48ab-8395-0f26816f8443
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 5789954afea2d42444b6f6f9f185d7926624e7f0
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 100%
+source-wordcount: '1056'
+ht-degree: 98%
 
 ---
+
 
 # IMS を使用した Adobe Analytics との統合 {#integration-with-adobe-analytics-using-ims}
 
@@ -51,17 +52,17 @@ Analytics Standard API を介して AEM と Adobe Analytics を統合するに�
 1. **新しい証明書の作成**&#x200B;をアクティブにして、新しいエイリアスを入力します。
 1. 「**証明書の作成**」で確認します。
 
-   ![](assets/integrate-analytics-io-01.png)
+   ![Adobe IMSテクニカルアカウント設定ウィザード](assets/integrate-analytics-io-01.png)
 
-1. **ダウンロード**（または&#x200B;**公開鍵のダウンロード**）を選択してファイルをローカルドライブにダウンロードし、[AEM と Adobe Analytics 統合のための IMS の設定](#configuring-ims-for-adobe-analytics-integration-with-aem)時に使用できるようにします。
+1. **ダウンロード**（または&#x200B;**公開鍵のダウンロード**）を選択してファイルをローカルドライブにダウンロードし、[AEM との Adobe Analytics 統合用の IMS の設定](#configuring-ims-for-adobe-analytics-integration-with-aem)時に使用できるようにします。
 
    >[!CAUTION]
    >
    >この設定は、[AEM で IMS 設定を完了する](#completing-the-ims-configuration-in-aem)ときに再び必要になるため、開いたままにしてください。
 
-   ![](assets/integrate-analytics-io-02.png)
+   ![キーをAdobe I/Oに追加する情報ダイアログ](assets/integrate-analytics-io-02.png)
 
-## AEM と Adobe Analytics 統合のための IMS 設定 {#configuring-ims-for-adobe-analytics-integration-with-aem}
+## AEM との Adobe Analytics 統合用の IMS の設定 {#configuring-ims-for-adobe-analytics-integration-with-aem}
 
 Adobe Developer Console を使用する場合は、Adobe Analytics でプロジェクト（統合）を作成し、AEM で使用するための権限を割り当てる必要があります。
 
@@ -76,9 +77,9 @@ Adobe Developer Console を開いて、AEM が使用する Adobe Analytics で�
 1. 既に作成したプロジェクトが表示されます。**新規プロジェクトの作成**&#x200B;を選択 - 場所と使用方法は、以下に依存します。
 
    * まだプロジェクトがない場合は、 **新規プロジェクトを作成**が中央の下に表示されます。
-      ![新規プロジェクトの作成 - 最初のプロジェクト](assets/integration-analytics-io-02.png)
+     ![新規プロジェクトの作成 - 最初のプロジェクト](assets/integration-analytics-io-02.png)
    * 既存のプロジェクトがある場合は、それらがリストされ、 **新規プロジェクトの作成**が右上に表示されます。
-      ![新規プロジェクトの作成 - 複数のプロジェクト](assets/integration-analytics-io-03.png)
+     ![新規プロジェクトの作成 - 複数のプロジェクト](assets/integration-analytics-io-03.png)
 
 
 1. **プロジェクトに追加**&#x200B;を選択し、続いて **API** を選択します。
@@ -177,7 +178,6 @@ AEM に戻り、Analytics の統合プロジェクトから必要な値を追加
    次に例を示します。
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
-
 
 1. 設定を選択します。
 1. ツールバーから&#x200B;**ヘルスチェック**&#x200B;を選択し、次に&#x200B;**チェック**&#x200B;を選択します。

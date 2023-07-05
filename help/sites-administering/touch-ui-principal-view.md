@@ -11,12 +11,13 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: ddd908ed8287d77d9009633399c1e0bc1a12fe1b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 26%
 
 ---
+
 
 # 権限管理のプリンシパルビュー{#principal-view-for-permissions-management}
 

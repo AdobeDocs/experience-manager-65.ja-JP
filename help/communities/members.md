@@ -9,12 +9,13 @@ content-type: reference
 discoiquuid: ccabf301-b417-48aa-8501-8360fd9f3e36
 role: Admin
 exl-id: b64e24d2-8407-484c-8216-8d328ef5fa4f
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 201c87da1316944e594ade6d95800326b1e6667c
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '961'
 ht-degree: 5%
 
 ---
+
 
 # メンバーコンソールとグループ管理コンソール {#members-groups-management-consoles}
 
@@ -47,7 +48,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 >
 >メンバーコンソールを使用できない場合、 [トンネルサービス](deploy-communities.md#tunnel-service-on-author) が有効になっていません。
 
-![member-console1](assets/member-console1.png)
+![メンバーコンソール](assets/member-console1.png)
 
 ### 検索 {#search-features}
 
@@ -56,7 +57,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 ![検索サイドパネルのアイコン。](assets/leftpanel-icon.png)
 
 
-![member-console2](assets/member-console2.png)
+![メンバーコンソールのフィルターオプション](assets/member-console2.png)
 
 「 `Members` ヘッダーを使用して、検索サイドパネルを閉じます。
 
@@ -76,7 +77,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 選択 `Create Member` パブリッシュ環境でユーザーを作成する場合。
 
-![create-member1](assets/create-member1.png)
+![「新規メンバーの作成」ウィンドウ](assets/create-member1.png)
 
 ### 一般 — メンバーの詳細 {#general-member-details}
 
@@ -150,7 +151,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 関連トピック [スコアとバッジ](implementing-scoring.md).
 
-![create-member2](assets/create-member2.png)
+![[ メンバーシップ設定の編集 ] ウィンドウ](assets/create-member2.png)
 
 * **[!UICONTROL バッジを追加]**
    * 次の中から選択するための入力を開始 [使用可能なバッジ](badges.md). バッジを選択したら、各サイトまたはすべてのサイトを選択します。このサイトで、メンバーのアバターと共にバッジが表示されます。
@@ -173,7 +174,7 @@ AEM Communitiesの機能を使用する場合は、サイト訪問者を登録�
 
 選択 `Add Group` をクリックして、パブリッシュ環境でグループを作成します。
 
-![group-console1](assets/group-console1.png)
+![新しいグループを作成ウィンドウ](assets/group-console1.png)
 
 新しい公開側メンバーグループを作成するための必須フィールドは次のとおりです。
 

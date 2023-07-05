@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: b4370d23c7b1bd43e1f02a862f11952d04892eb3
+source-git-commit: 729e5eb99b0c14f3d2fd8c3f4ec636f7fb52124f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '226'
+ht-degree: 46%
 
 ---
+
 
 # 管理コンソール{#admin-consoles}
 

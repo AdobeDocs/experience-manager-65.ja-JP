@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 994a5751-7267-4a61-9bc7-01440a256c65
 docset: aem65
 exl-id: acb5b235-523e-4c01-9bd2-0cc2049f88e2
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 1036127ae508ec76c868db5fb67709c104c51123
 workflow-type: tm+mt
-source-wordcount: '1226'
-ht-degree: 55%
+source-wordcount: '1250'
+ht-degree: 52%
 
 ---
+
 
 # ID 管理{#identity-management}
 
@@ -61,11 +62,11 @@ Web サイトの個々の訪問者は、ユーザーがログインできる場�
 例えば、ユーザーは次の Geometrixx ページを使用して新しいプロファイルをリクエストできます。
 `http://localhost:4502/content/geometrixx-outdoors/en/user/register.html`
 
-![registerform](assets/registerform.png)
+![登録フォームのサンプル](assets/registerform.png)
 
 要求を送信すると、プロファイルページが開きます。ユーザーはこのページに個人の詳細情報を指定できます。
 
-![profilepage](assets/profilepage.png)
+![サンプルプロファイルページ](assets/profilepage.png)
 
 新しいアカウントは[ユーザーコンソール](/help/sites-administering/security.md)にも表示されます。
 
@@ -79,7 +80,7 @@ Web サイトの個々の訪問者は、ユーザーがログインできる場�
 
 `http://localhost:4502/content/geometrixx-outdoors/en/user/sign-in.html`
 
-![ログイン](assets/login.png)
+![ログインページのサンプル](assets/login.png)
 
 ## ログアウト {#logging-out}
 
@@ -106,13 +107,13 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 1. 押す **control-alt-C** をクリックして、clientcontext を開きます。
 1. ClientContext の左上隅で、 **プロファイルの読み込み** 」ボタンをクリックします。
 
-   ![「プロファイルを読み込み」ボタン](do-not-localize/loadprofile.png)
+   ![プロファイルを読み込みアイコン](do-not-localize/loadprofile.png)
 
 1. ダイアログウィンドウのドロップダウンリストから別のプロファイルを選択します。例： **Alison Parker**.
 1. 「**OK**」をクリックします。
 1. を再度クリックします。 **マイプロファイル**. フォームは Alison の詳細で更新されます。
 
-   ![profilealison](assets/profilealison.png)
+   ![Alison のサンプルプロファイル](assets/profilealison.png)
 
 1. これで、 **プロファイルを編集** または **パスワードを変更** をクリックして詳細を更新します。
 
@@ -136,11 +137,11 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
    次回プロファイルを確認する際に、好きな色を選択できます。
 
-   ![aparkerfavcolour](assets/aparkerfavcolour.png)
+   ![Alison Parker のお気に入りのカラーサンプルフィールド](assets/aparkerfavcolour.png)
 
    このフィールドは、関連するユーザーアカウントの **profile** セクションに保存されます。
 
-   ![aparkercrxdelite](assets/aparkercrxdelite.png)
+   ![CRXDE での Alison Parker のデータ](assets/aparkercrxdelite.png)
 
 ## プロファイルの状態 {#profile-states}
 
@@ -188,7 +189,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 プロファイルは `/home/users/geometrixx` にあります。
 
-![chlimage_1-138](assets/chlimage_1-138.png)
+![CRXDE で見たプロファイル](assets/chlimage_1-138.png)
 
 標準インストール（オーサーまたはパブリッシュ）では、すべてのユーザーがすべてのユーザーのプロファイル情報全体に対する読み取りアクセス権を持ちます。 全員が&quot;*すべての既存のユーザーとグループが自動的に含まれる組み込みグループ。 メンバーのリストは編集できません*&quot;.
 
@@ -205,7 +206,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 これを行うには「**[アクセス制御](/help/sites-administering/user-group-ac-admin.md#access-right-management)**」タブを使用します。
 
-![aclmanager](assets/aclmanager.png)
+![CRXDE での ACL の管理](assets/aclmanager.png)
 
 ## プロファイルコンポーネント {#profile-components}
 
@@ -220,22 +221,22 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 デフォルト設定では、コンポーネントは次のように表示されます。
 
-![dc_profiles_checkedpassword](assets/dc_profiles_checkedpassword.png)
+![パスワード確認ダイアログ](assets/dc_profiles_checkedpassword.png)
 
 ### プロファイルのアバター写真 {#profile-avatar-photo}
 
 このコンポーネントは、アバター写真ファイルを選択してアップロードするメカニズムをユーザーに提供します。
 
-![dc_profiles_avatarphoto](assets/dc_profiles_avatarphoto.png)
+![アバターセレクター](assets/dc_profiles_avatarphoto.png)
 
 ### プロファイルの詳細名 {#profile-detailed-name}
 
 このコンポーネントを使用すると、ユーザーは詳細な名前を入力できます。
 
-![dc_profiles_detailedname](assets/dc_profiles_detailedname.png)
+![詳細名ダイアログ](assets/dc_profiles_detailedname.png)
 
 ### プロファイルの性別 {#profile-gender}
 
 このコンポーネントを使用すると、ユーザーは性別を入力できます。
 
-![dc_profiles_gender](assets/dc_profiles_gender.png)
+![性別セレクター](assets/dc_profiles_gender.png)

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 69ca5acb-83f9-4e1b-9639-ec305779c931
 docset: aem65
 exl-id: a1d8b74e-67eb-4338-9e8e-fd693b1dbd48
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 1ba34f95cf3ce3f136482075802d2e4372f28917
 workflow-type: tm+mt
-source-wordcount: '1760'
-ht-degree: 25%
+source-wordcount: '1770'
+ht-degree: 23%
 
 ---
+
 
 # メールマーケティング {#e-mail-marketing}
 
@@ -56,13 +57,13 @@ ht-degree: 25%
 
 1. 次のアイコンを使用して、リスト表示を選択します。
 
-   ![リスト表示](do-not-localize/mcm_icon_listview-1.png)
+   ![リスト表示アイコン](do-not-localize/mcm_icon_listview-1.png)
 
 1. クリック **新規…**
 
    次の項目を指定できます。 **タイトル**, **名前** 作成するエクスペリエンスのタイプ。この例では、ニュースレターです。
 
-   ![mcm_createnewsletter](assets/mcm_createnewsletter.png)
+   ![エクスペリエンスを作成ダイアログ](assets/mcm_createnewsletter.png)
 
 1. 「**作成**」をクリックします。
 
@@ -70,7 +71,7 @@ ht-degree: 25%
 
    「**デフォルトの受信者リスト**」は、ニュースレターのタッチポイントを構成するので、必須のフィールドです（リストについて詳しくは、[リストの使用](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#workingwithlists)を参照してください）。
 
-   ![mcm_newnewnewsletterdialog](assets/mcm_newnewsletterdialog.png)
+   ![ページプロパティダイアログ](assets/mcm_newnewsletterdialog.png)
 
    * **送信元の名前**
 ニュースレターの送信者として表示させる名前です。
@@ -110,7 +111,7 @@ ht-degree: 25%
    >
    >変数を使用して、ニュースレターをパーソナライズします。 Geometrixxニュースレターでは、変数をテキストコンポーネントで使用できます。 変数の値は、ユーザープロファイルの情報から継承されます。
 
-   ![mcm_newsletter_content](assets/mcm_newsletter_content.png)
+   ![ニュースレターのコンテンツの編集](assets/mcm_newsletter_content.png)
 
 1. 変数を挿入するには、リストから変数を選択し、 **挿入**. 変数は、プロファイルから入力されます。
 
@@ -128,13 +129,13 @@ ht-degree: 25%
 
 1. 変数を表示する場所にカーソルを置き、ドロップダウンリストから変数を選択して、 **挿入**. 必要な数の変数に対してこの操作を行い、「 **OK**.
 
-   ![mcm_newsletter_variables](assets/mcm_newsletter_variables.png)
+   ![変数の追加](assets/mcm_newsletter_variables.png)
 
 1. 送信時に変数がどのように表示されるかをシミュレートするには、Ctrl + Alt + c キーを押して ClientContext を開き、「 」を選択します。 **読み込み**. プロファイルを読み込むユーザーをリストから選択し、「 」をクリックします。 **OK**.
 
    読み込んだプロファイルの情報によって変数が設定されます。
 
-   ![mc_newsletter_testvariables](assets/mc_newsletter_testvariables.png)
+   ![変数のテスト](assets/mc_newsletter_testvariables.png)
 
 ## 様々なメールクライアントでのニュースレターのテスト {#testing-newsletters-in-different-e-mail-clients}
 
@@ -161,11 +162,11 @@ ht-degree: 25%
 
 1. 上部のバーの電子メールクライアントをクリックして、そのクライアントでのニュースレターの表示を確認します。
 
-   ![chlimage_1-119](assets/chlimage_1-119.png)
+   ![E メールクライアントの切り替え](assets/chlimage_1-119.png)
 
 1. 確認するその他のメールクライアントについて、この手順を繰り返します。
 
-   ![chlimage_1-120](assets/chlimage_1-120.png)
+   ![E メールクライアントの変更](assets/chlimage_1-120.png)
 
 ## ニュースレター設定のカスタマイズ {#customizing-newsletter-settings}
 
@@ -178,11 +179,11 @@ ht-degree: 25%
 
 1. MCM で、設定をカスタマイズするニュースレターを開きます。
 
-   ![mcm_newsletter_open](assets/mcm_newsletter_open.png)
+   ![ニュースレターを開く](assets/mcm_newsletter_open.png)
 
 1. ニュースレターの上部にある「**設定**」をクリックします。
 
-   ![mcm_newsletter_settings](assets/mcm_newsletter_settings.png)
+   ![ニュースレター設定の編集](assets/mcm_newsletter_settings.png)
 1. 次を入力します。 **送信者** 電子メールアドレス
 
 1. を変更します。 **件名** 電子メールの（必要に応じて）。
@@ -213,7 +214,7 @@ ht-degree: 25%
 
 1. ニュースレターの上部で、 **テスト** 送信前にテストする場合。
 
-   ![mcm_newsletter_testsettings](assets/mcm_newsletter_testsettings.png)
+   ![ニュースレターをテストするための設定](assets/mcm_newsletter_testsettings.png)
 
 1. ニュースレターを送信するテストメールアドレスを入力し、 **送信**. プロファイルを変更する場合は、ClientContext に別のプロファイルを読み込みます。 これを行うには、Ctrl + Alt + c キーを押し、「読み込み」を選択してプロファイルを読み込みます。
 
@@ -253,11 +254,11 @@ ht-degree: 25%
 
 1. 受信者のリストで、ニュースレターを受信するリストを選択し、 **次へ**.
 
-   ![mcm_newslettersend](assets/mcm_newslettersend.png)
+   ![ニュースレターの送信](assets/mcm_newslettersend.png)
 
 1. 設定が完了しました。 クリック **送信** 実際にニュースレターを送信する場合。
 
-   ![mcm_newslettersendconfirm](assets/mcm_newslettersendconfirm.png)
+   ![ニュースレターが確認を送信しました](assets/mcm_newslettersendconfirm.png)
 
    >[!NOTE]
    >
@@ -277,15 +278,15 @@ ht-degree: 25%
 
 1. **ツール**&#x200B;メニューの「**ニュースレターを送信**」を選択します。**ニュースレターを送信**&#x200B;ウィンドウが開きます。
 
-   ![mcm_newslettersendfromlist](assets/mcm_newslettersendfromlist.png)
+   ![Newletter コンソール](assets/mcm_newslettersendfromlist.png)
 
 1. 「**ニュースレター**」フィールドで、送信するニュースレターを選択し、「**次へ**」をクリックします。
 
-   ![mcm_newslettersenddialog](assets/mcm_newslettersenddialog.png)
+   ![ニュースレターを送信ダイアログ](assets/mcm_newslettersenddialog.png)
 
 1. 設定が完了しました。 クリック **送信** 選択したニュースレターを指定したリードのリストに送信します。
 
-   ![mcm_newslettersenddialog_confirmation](assets/mcm_newslettersenddialog_confirmation.png)
+   ![確認を送信](assets/mcm_newslettersenddialog_confirmation.png)
 
    ニュースレターは選択した受信者に送信されます。
 
@@ -299,6 +300,6 @@ ht-degree: 25%
 
 1. クリック **Web サイト** をクリックし、Geometrixx **ツールバー** そしてそれを開きます。
 
-   ![chlimage_1-121](assets/chlimage_1-121.png)
+   ![購読サンプル](assets/chlimage_1-121.png)
 
 1. Geometrixxニュースレター **新規登録** フィールドに電子メールアドレスを入力し、 **新規登録**. これで、ニュースレターを購読しました。

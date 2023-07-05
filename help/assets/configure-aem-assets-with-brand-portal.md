@@ -13,12 +13,13 @@ feature: Brand Portal
 role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 14988b55c21131391fdcb033373774ee170f5305
 workflow-type: tm+mt
-source-wordcount: '2076'
-ht-degree: 100%
+source-wordcount: '2124'
+ht-degree: 97%
 
 ---
+
 
 # AEM Assets と Brand Portal の連携の設定 {#configure-integration-65}
 
@@ -103,6 +104,7 @@ Brand Porta lと連携する AEM Assets の設定には、AEM Assets オーサ�
 >AEM Assets オーサーインスタンスは、1 つの Brand Portal テナントとの連携のみ設定する必要があります。
 
 AEM Assets と Brand Portal を初めて設定する場合は、以下の手順を上記の順序で実行します。
+
 1. [公開証明書の取得](#public-certificate)
 1. [サービスアカウント（JWT）接続の作成](#createnewintegration)
 1. [IMS アカウントの設定](#create-ims-account-configuration)
@@ -274,7 +276,7 @@ IMS アカウントを設定するには、次の手順を実行します。
 
    ダイアログボックスの「**[!UICONTROL チェック]**」をクリックします。正常に設定されると、*トークンが正常に取得されました*&#x200B;というメッセージが表示されます。
 
-   ![](assets/create-new-integration5.png)
+   ![正常な設定の確認ダイアログ](assets/create-new-integration5.png)
 
 >[!CAUTION]
 >
@@ -298,7 +300,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
    「**[!UICONTROL サービス URL]**」に、Brand Portal テナント（組織）URL を入力します。
 
-   ![](assets/create-cloud-service.png)
+   ![Brand Portal Configuration ウィンドウ](assets/create-cloud-service.png)
 
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。クラウド設定が作成されます。
 
@@ -312,17 +314,17 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
 1. **ツール**&#x200B;の![ツール](assets/do-not-localize/tools.png)パネルで、**[!UICONTROL デプロイメント]**／**[!UICONTROL レプリケーション]**&#x200B;に移動します。
 
-   ![](assets/test-integration1.png)
+   ![ツールパネル](assets/test-integration1.png)
 
 1. レプリケーションページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
 
-   ![](assets/test-integration2.png)
+   ![レプリケーションページ](assets/test-integration2.png)
 
    Brand Portal テナントのために作成された 4 つのレプリケーションエージェントを表示できます。
 
    Brand Portal テナントのレプリケーションエージェントを探し、レプリケーションエージェント URL をクリックします。
 
-   ![](assets/test-integration3.png)
+   ![Assets レプリケーション設定](assets/test-integration3.png)
 
    >[!NOTE]
    >
@@ -330,11 +332,11 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
 1. AEM Assets と Brand Portal の間の接続を確認するには、**[!UICONTROL 接続をテスト]**&#x200B;アイコンをクリックします。
 
-   ![](assets/test-integration4.png)
+   ![アセットレプリケーション設定の確認](assets/test-integration4.png)
 
    *テストパッケージが正常に配信された*&#x200B;ことを示すメッセージが表示されます。
 
-   ![](assets/test-integration5.png)
+   ![テスト確認出力](assets/test-integration5.png)
 
 1. 4 つのレプリケーションエージェントすべてでテスト結果を確認します。
 
@@ -362,6 +364,7 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 ## 設定のアップグレード {#upgrade-integration-65}
 
 既存の設定を Adobe 開発者コンソールにアップグレードするには、以下の手順を上から順に実行します。
+
 1. [実行中のジョブの検証](#verify-jobs)
 1. [既存の設定を削除](#delete-existing-configuration)
 1. [設定の作成](#configure-new-integration-65)
@@ -376,13 +379,13 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
 1. レプリケーションページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
 
-   ![](assets/test-integration2.png)
+   ![アセットのレプリケーションエージェント](assets/test-integration2.png)
 
 1. Brand Portal テナントのレプリケーションエージェントを見つけます。
 
    すべてのレプリケーションエージェントに対して **キューが待機中**&#x200B;で、アクティブな公開ジョブがないことを確認します。
 
-   ![](assets/test-integration3.png)
+   ![レプリケーションキューの設定](assets/test-integration3.png)
 
 ### 既存の設定を削除 {#delete-existing-configuration}
 
@@ -395,15 +398,15 @@ Brand Portal Cloud Service を設定するには、次の手順を実行しま�
 
 1. `/etc/replications/agents.author` に移動して、Brand Portal テナントの 4 つのレプリケーションエージェントをすべて削除します。
 
-   ![](assets/delete-replication-agent.png)
+   ![CRXDE のレプリケーションエージェント](assets/delete-replication-agent.png)
 
 1. `/etc/cloudservices/mediaportal` に移動して、Brand Portal クラウドサービス設定を削除します。
 
-   ![](assets/delete-cloud-service.png)
+   ![CRXDE でのレプリケーションエージェントの詳細](assets/delete-cloud-service.png)
 
 1. `/home/users/mac` に移動して、Brand Portalテナントの **Macユーザー**&#x200B;を削除します。
 
-   ![](assets/delete-mac-user.png)
+   ![CRXDE でのレプリケーションエージェントの詳細](assets/delete-mac-user.png)
 
 
 AEM 6.5 オーサーインスタンスの Adobe開発者コンソールを使用して、[設定を作成](#configure-new-integration-65)できます。

@@ -11,12 +11,13 @@ content-type: reference
 discoiquuid: 95ab2e54-0f8d-49e0-ad20-774875f6f80a
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
-source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
+source-git-commit: 4dd216167f97eb6f6181586b57694b139872c5ef
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '958'
 ht-degree: 30%
 
 ---
+
 
 # Granite の操作 - ユーザー管理とグループ管理{#granite-operations-user-and-group-administration}
 
@@ -26,7 +27,7 @@ Granite は JCR API 仕様の CRX リポジトリ実装を組み込んでいる�
 
 Granite ユーザー管理コンソールとグループ管理コンソールは、どちらもタッチ操作向け UI の&#x200B;**[ツール](/help/sites-administering/tools-consoles.md)**&#x200B;コンソールから利用できます。
 
-![chlimage_1-72](assets/chlimage_1-72a.png)
+![ツールコンソール](assets/chlimage_1-72a.png)
 
 次のいずれかを選択 **ユーザー** または **グループ** ツールコンソールから適切なコンソールが開きます。 どちらでも、クリックボックスを使用してアクションを実行するか、ツールバーの「 」アクションを使用するか、下のリンクからアカウントの詳細を開いてアクションを実行できます。 **名前**.
 
@@ -42,7 +43,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 * [グループ管理](#group-administration)
 
-  ![chlimage_1-74](assets/chlimage_1-74a.png)
+  ![ユーザー管理コンソール](assets/chlimage_1-74a.png)
 
   この **グループ** コンソールリスト：
 
@@ -56,11 +57,11 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. 以下を使用： **ユーザーを追加** アイコン：
 
-   ![ユーザーを追加](do-not-localize/chlimage_1-1.png)
+   ![ユーザーを追加アイコン](do-not-localize/chlimage_1-1.png)
 
 1. この **ユーザーを作成** フォームが開きます：
 
-   ![chlimage_1-75](assets/chlimage_1-75a.png)
+   ![ユーザー詳細フォーム](assets/chlimage_1-75a.png)
 
    ここで、アカウントのユーザー詳細を入力できます（ほとんどの場合、標準的で説明のないものが多い）。
 
@@ -132,11 +133,11 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. [新規ユーザーの追加](#adding-a-new-user)の場合と同様に、詳細を編集できます。「**アカウント設定**」に「**パスワードを変更**」リンクがあります。
 
-   ![chlimage_1-76](assets/chlimage_1-76a.png)
+   ![アカウント設定ダイアログ](assets/chlimage_1-76a.png)
 
 1. この **パスワードを変更** ダイアログが開きます。 新しいパスワードとパスワードを入力し、再入力します。 用途 **OK** 変更を確定します。
 
-   ![chlimage_1-77](assets/chlimage_1-77a.png)
+   ![パスワードの変更ダイアログ](assets/chlimage_1-77a.png)
 
    パスワードが変更されたことを確認するメッセージが表示されます。
 
@@ -149,7 +150,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
    グループ選択ドロップダウンを開くには：
 
-   ![chlimage_1-78](assets/chlimage_1-78a.png)
+   ![グループセレクター](assets/chlimage_1-78a.png)
 
 1. 「 」選択ボックスでは、ユーザーアカウントが属するグループを選択または選択解除できます。
 
@@ -177,7 +178,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
 
 1. この **グループを作成** フォームが開きます：
 
-   ![chlimage_1-79](assets/chlimage_1-79a.png)
+   ![グループ詳細フォーム](assets/chlimage_1-79a.png)
 
    ここで、グループの詳細を入力できます。
 
