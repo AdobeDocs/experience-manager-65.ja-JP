@@ -2,8 +2,10 @@
 sub-product: AEM Content and Commerce
 user-guide-title: AEM Content and Commerce
 breadcrumb-title: コマースガイド
+feature: Commerce Integration Framework
+role: User
 user-guide-description: AEM コンテンツとコマースの使用方法と管理方法を理解します。
-source-git-commit: 0ae78938641c383a65462096235e3b62d6b67e23
+source-git-commit: b3c44f93c235b5daa7b6385a0c12841fcba767ff
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 100%
