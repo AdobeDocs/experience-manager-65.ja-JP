@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 2d35a2a4-0c8c-4b16-99a6-c6e6d66446dc
 docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
-source-git-commit: b3889b1897f0ec0c5bbf60c346b77b2906175904
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 59%
+source-wordcount: '1558'
+ht-degree: 51%
 
 ---
 
@@ -40,17 +40,17 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **作成**
 
-   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
+   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するので、シナリオによって異なる場合があります。
 
 * フォルダー内のページの並べ替え
 
-   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)で実行できます。変更内容が適用され、別の形式で表示できます。
+   * これは、で実行できます。 [リスト表示](/help/sites-authoring/basic-handling.md#list-view). 変更が適用され、他のビューに表示されます。
 
 #### ページオーサリング {#page-authoring}
 
 * リンクのナビゲーション
 
-   * ***リンクはナビゲーションに使用できません*** いつ **編集** モード。 リンクを使用するには、 [ページをプレビュー](/help/sites-authoring/editing-content.md#previewing-pages) 次のいずれかを使用します。
+   * ***リンクはナビゲーションに使用できません*** いつ **編集** モード。 リンクを使用して移動するには、次の操作が必要です。 [ページをプレビュー](/help/sites-authoring/editing-content.md#previewing-pages) 次のいずれかを使用します。
 
       * [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)
       * [公開済みとして表示](/help/sites-authoring/editing-content.md#view-as-published)
@@ -59,7 +59,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 >[!NOTE]
 >
->オーサリング作業をより簡単にできる多くのキーボードショートカットがあります。
+>オーサリングをより簡単にするためのキーボードショートカットがいくつか用意されています。
 >
 >* [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
 >* [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
@@ -69,7 +69,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ページの検索には様々な特徴があります。移動や検索をおこなうには、次のようにします。
 
-1. （**グローバルナビゲーション**&#x200B;の「**サイト**」オプションを使用して）[サイト](/help/sites-authoring/basic-handling.md#global-navigation)コンソールを開きます。これは、Adobe Experience Manager リンク（左上）を選択するとトリガー（ドロップダウン）されます。
+1. を開きます。 **サイト** コンソール ( **サイト** オプション [グローバルナビゲーション](/help/sites-authoring/basic-handling.md#global-navigation)) - Adobe Experience Managerリンク（左上）を選択するとトリガー（ドロップダウン）されます。
 
 1. 適切なページをタップまたはクリックしてツリーの下方向に移動します。ページリソースがどのように表されるかは、使用している表示（[カード、リスト、列](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)）によって異なります。
 
@@ -85,9 +85,9 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ### 新しいページの作成 {#creating-a-new-page}
 
-[新しいページを作成](/help/sites-authoring/managing-pages.md#creating-a-new-page)するには：
+宛先 [ページの作成](/help/sites-authoring/managing-pages.md#creating-a-new-page):
 
-1. [新しいページを作成する場所に移動します。](#finding-your-page)
+1. [場所に移動します。](#finding-your-page) ページを作成する場所です。
 1. 以下を使用： **作成** アイコンをクリックし、 **ページ** リストから：
 
    ![qgtap-02](assets/qgtap-02.png)
@@ -134,8 +134,6 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ### ページコンテンツの編集 {#editing-your-page-content}
 
-ページを編集するには：
-
 1. 編集する[ページに移動します。](#finding-your-page)
 1. 編集（鉛筆）アイコンを使用して、[編集するページを開きます](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing)。
 
@@ -143,12 +141,12 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    このアイコンには、次の場所からアクセスできます。
 
-   * [クイックアクション（カード表示/デスクトップのみ）](#quick-actions-card-view-desktop-only) 適切なリソースの
+   * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
    * ツールバー（[ページが選択されている](#selectiingyourpageforfurtheraction)場合）
 
-1. エディターが開くと、次の操作を実行できます。
+1. エディターが開いたら、次の操作を実行できます。
 
-   * [ページに新しいコンテンツを追加](/help/sites-authoring/editing-content.md#inserting-a-component) 基準：
+   * 次の方法を使用して、[新しいコンポーネントをページに追加](/help/sites-authoring/editing-content.md#inserting-a-component)します。
 
       * サイドパネルを開く
       * 「コンポーネント」タブを選択する ( [コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser))
@@ -161,7 +159,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    * [既存のコンポーネントのコンテンツを編集](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) ページ上：
 
       * タップまたはクリックしてコンポーネントツールバーを開きます。以下を使用： **編集** （鉛筆）アイコンをクリックして、ダイアログを開きます。
-      * タップ&amp;ホールドまたはダブルスロークリックで、コンポーネントのインプレースエディターを開きます。 使用可能なアクションが表示されます（一部のコンポーネントでは、これは制限付きで選択されます）。
+      * タップ&amp;ホールドまたはダブルスロークリックで、コンポーネントのインプレースエディターを開きます。 使用可能なアクションが表示されます（一部のコンポーネントでは、選択は制限されています）。
       * 使用可能なすべてのアクションを表示するには、次を使用してフルスクリーンモードに入ります。
 
      ![全画面表示モード](do-not-localize/screen_shot_2018-03-21at160706.png)
@@ -201,7 +199,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    >[!NOTE]
    >
-   >コンテンツ内のリンクを使用して移動するには、次を使用する必要があります [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode).
+   >コンテンツ内のリンクを使用して移動するには、 [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode).
 
 ### ページプロパティの編集 {#editing-the-page-properties}
 
@@ -212,7 +210,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    1. [ページに移動します。](#finding-your-page) を公開します。
    1. を選択します。 **プロパティ** アイコン：
 
-      * [クイックアクション（カード表示/デスクトップのみ）](#quick-actions-card-view-desktop-only) 適切なリソースの
+      * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
       * ツールバー（[ページが選択されている](#selectiingyourpageforfurtheraction)場合）
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
@@ -235,7 +233,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
    1. [ページに移動します。](#finding-your-page) を公開します。
    1. 次のいずれかで「**クイック公開**」アイコンをクリックします。
 
-      * [クイックアクション（カード表示/デスクトップのみ）](#quick-actions-card-view-desktop-only) 適切なリソースの
+      * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
       * （[ページが選択されている](#selectiingyourpageforfurtheraction)場合）ツールバー（「[後で公開する](/help/sites-authoring/publishing-pages.md#main-pars-title-12)」にアクセスすることもできます）
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
@@ -269,15 +267,15 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * コピー：
 
-      * 新しい場所に移動して、貼り付けをおこなう必要があります。
+      * 新しい場所に移動して、貼り付けます。
 
    * 移動：
 
-      * ページの移動に必要な情報を収集するためのウィザードが開きます。画面に表示される手順に従ってください。
+      * ページの移動に必要な情報を収集するためのウィザードが開きます。 画面に表示される指示に従います。
 
    * 削除：
 
-      * この操作の確認が求められます。
+      * アクションの確認を求められます。
 
    >[!NOTE]
    >
@@ -288,7 +286,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 [ページのロック](/help/sites-authoring/editing-content.md#locking-a-page)によって、自分の作業中に他の作成者が作業するのを防ぐことができます。ロック（およびロック解除）アイコン／ボタンは次の場所にあります。
 
 * ツールバー（[ページが選択されている](#selecting-your-page-for-further-action)場合）
-* （ページの編集時）[ページ情報ドロップダウンメニュー](#editing-the-page-properties)
+* この [ページ情報ドロップダウンメニュー](#editing-the-page-properties) （ページの編集時）
 * （ページの編集時）ページツールバー（ページがロックされている場合）
 
 例えば、「ロック」アイコンは次のように表示されます。
@@ -297,7 +295,7 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 ### ページ参照へのアクセス {#accessing-page-references}
 
-参照レールでは、ページへの（またはページからの）[参照に対するクイックアクセスを使用](/help/sites-authoring/author-environment-tools.md#references)できます。
+[参照へのクイックアクセス](/help/sites-authoring/author-environment-tools.md#references) 参照レールで、ページに、またはページからを使用できます。
 
 1. （**ページ選択**&#x200B;の前または後に）ツールバーアイコンを使用して「[参照](#selecting-your-page-for-further-action)」を選択します。
 
@@ -331,14 +329,14 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 
-   ページのバージョンが既に保存されている場合、そのバージョンがタイムラインに表示されます。
+   ページのバージョンが既に保存されている場合は、そのバージョンがタイムラインに表示されます。
 
 1. 復元するバージョンをタップまたはクリックします。これにより、追加のアクションボタンが表示されます。
 
    * **このバージョンに戻る**
 
-      * このバージョンが復元されます。
+      * バージョンが復元されます。
 
    * **違いを表示**
 
-      * ページが開き、（2 つのバージョン間の）違いが強調表示されます。
+      * ページが開き、（2 つのバージョン間の）違いがハイライト表示されます。

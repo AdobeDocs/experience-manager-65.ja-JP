@@ -11,9 +11,9 @@ topic-tags: Security
 discoiquuid: db8665fa-353f-45c2-8e37-169d5c1df873
 docset: aem65
 exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
-source-git-commit: ddd908ed8287d77d9009633399c1e0bc1a12fe1b
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '774'
 ht-degree: 26%
 
 ---
@@ -75,7 +75,7 @@ CRXDE を使用して、高度な権限および制限を管理します。 同�
 >
 >権限と説明の完全なリストについては、 [このページ](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-![特定のパスの検索権限](assets/image2019-3-21_0-5-47.png) ![](assets/image2019-3-21_0-6-53.png)
+![特定のパスの検索権限。](assets/image2019-3-21_0-5-47.png) ![垂直列で選択されたパスで表示されるように、「dam-users」の新しいエントリを追加します。](assets/image2019-3-21_0-6-53.png)
 
 権限のリストを選択したら、ユーザーは「権限タイプ」を選択できます。拒否または許可（下図を参照）
 

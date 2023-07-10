@@ -8,10 +8,10 @@ uuid: 62a6c379-a460-4f8f-a909-03d04fa8944b
 contentOwner: sarchiz
 discoiquuid: 47c2a80f-78ac-4372-86b4-06351a1dd58f
 docset: aem65
-source-git-commit: 4b965d8f7814816126601f6366c1ba313e404538
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 100%
+source-wordcount: '511'
+ht-degree: 69%
 
 ---
 
@@ -43,42 +43,42 @@ ht-degree: 100%
 
 ### カード表示 {#card-view}
 
-![](assets/unu.png)
+![様々な画像アセットのサムネール画像を表示するカード表示。](assets/unu.png)
 
 ### カードビューでの一括選択 {#bulk-selection-in-card-view}
 
 アセットまたはページは、右上の「**すべてを選択**」ボタンを使用して一括で選択できます。
 
-![](assets/doi.png) ![](assets/trei.png)
+![カード表示の右上隅に表示される「すべて」ボタンを選択します。](assets/doi.png) ![カード表示内の画像アセットのすべてのサムネール画像が、チェックマーク付きで選択された状態で表示されます。](assets/trei.png)
 
 ### リスト表示 {#list-view}
 
-リスト表示についても同じことが言えます。
+リスト表示についても同様です。
 
-![](assets/patru_modified.png)
+![リスト表示の右上隅にある「すべてを選択」オプションがハイライト表示されます。](assets/patru_modified.png)
 
 ### リスト表示での一括選択 {#bulk-selection-in-list-view}
 
 リスト表示で、「**すべてを選択**」ボタンを使用するか、左側の一括選択チェックボックスを使用します。
 
-![](assets/cinci.png) ![](assets/sase.png)
+![画像アセットのサムネール画像を表示するライブビューが横行に表示されます。](assets/cinci.png) ![画像アセットのサムネール画像を表示するリストボックスと、「名前」の左側にあるチェックボックスです。](assets/sase.png)
 
 ### 列表示 {#column-view}
 
-![](assets/sapte.png)
+![列表示では、画像アセットのサムネール画像が縦列に表示されます。](assets/sapte.png)
 
 ### 列表示での一括選択 {#bulk-selection-in-column-view}
 
-![](assets/opt.png)
+![列表示での画像アセットのすべてのサムネール画像が、チェックマーク付きで選択された状態で表示されます。](assets/opt.png)
 
 ## 一括有効操作 {#bulk-enabled-operations}
 
-選択後、3 つの一括有効アクション（**移動**、**コピー**、**削除**）のいずれかを実行できます。
+選択後に、次の 3 つの一括有効化アクションのいずれかを実行できます。 **移動**, **コピー** または **削除**.
 
 ここでは、上記で選択したアセットに対して&#x200B;**移動**&#x200B;操作が実行されます。どの表示でも、これにより、画面にロードされているアセットだけでなく、選択した場所にすべてのアセットが移動します。
 
-![](assets/noua.png)
+![列表示で選択したフォルダーを示すアセットを移動します。](assets/noua.png)
 
 **ダウンロード**&#x200B;など、一括操作が有効になっていないその他の操作の場合、ブラウザーに読み込まれる要素のみが操作に含まれることを示す警告が表示されます。
 
-![](assets/zece.png)
+![選択した画像アセットとポップアップダイアログボックスの「Bulk Action Not Supported」が表示されるアセットビュー。](assets/zece.png)

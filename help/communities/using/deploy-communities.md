@@ -5,9 +5,9 @@ description: AEM Communitiesのデプロイ方法
 seo-description: How to deploy AEM Communities
 content-type: reference
 topic-tags: deploying
-source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
+source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1755'
 ht-degree: 4%
 
 ---
@@ -53,27 +53,27 @@ ht-degree: 4%
       * [MongoDB のインストールと設定](/help/communities/msrp.md#mongodb-configuration)
       * [Solr を設定](/help/communities/solr.md)
       * [MSRP を選択](/help/communities/srp-config.md)
+
    * リレーショナルデータベース SRP の場合 [(DSRP)](/help/communities/dsrp.md)
 
       * [MySQL 用の JDBC ドライバーのインストール](#jdbc-driver-for-mysql)
       * [DSRP 用の MySQL のインストールと設定](/help/communities/dsrp-mysql.md)
       * [Solr を設定](/help/communities/solr.md)
       * [DSRP を選択](/help/communities/srp-config.md)
+
    * AdobeSRP の場合 [(ASRP)](/help/communities/asrp.md)
 
       * プロビジョニングについては、アカウント担当者にお問い合わせください。
       * [ASRP を選択](/help/communities/srp-config.md)
+
    * JCR SRP の場合 [(JSRP)](/help/communities/jsrp.md)
 
       * 共有 UGC ストアではありません：
 
          * UGC はレプリケートされません。
          * UGC は、UGC が入力されたAEMインスタンスまたはクラスター上でのみ表示されます。
+
       * デフォルトは JSRP です。
-
-
-
-
 
 
 ## 最新リリース {#latest-releases}
@@ -108,7 +108,7 @@ MySQL コネクタを取得し、別途インストールする必要があり�
 1. Web コンソールを使用して、バンドルをインストールして起動します。
 
    * 例： https://localhost:4502/system/console/bundles
-   * 選択 **`Install/Update`**
+   * **`Install/Update`** を選択します。
    * ダウンロードした ZIP アーカイブから抽出したバンドルを参照して選択
    * 確認する *Oracle社の MySQLcom.mysql.jdbc 用 JDBC ドライバ* がアクティブで、アクティブでない場合は開始（またはログを確認）
 
@@ -124,7 +124,7 @@ MySQL コネクタを取得し、別途インストールする必要があり�
 
 #### 例：MySQL Connector バンドルがインストールされている {#example-installed-mysql-connector-bundle}
 
-![](../assets/mysql-connector.png)
+![Adobe Experience Manager Web コンソール MySQL コネクタバンドル](../assets/mysql-connector.png)
 
 ### 高度な MLS のAEM {#aem-advanced-mls}
 
@@ -186,7 +186,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 
 したがって、次の操作が必要です。 **すべてのセカンダリパブリッシュインスタンスで設定を編集** チェックを外す **`Primary Publisher`** チェックボックスをオンにします。
 
-![](../assets/primary-publisher.png)
+![AEM Communities Publisher Configuration ダイアログボックスに「Publisher」プライマリチェックボックスが表示される](../assets/primary-publisher.png)
 
 パブリッシュファーム内のその他（セカンダリ）パブリッシュインスタンスの場合：
 
@@ -198,7 +198,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 * を `AEM Communities Publisher Configuration`
 * 編集アイコンを選択します。
 * 「 **プライマリ発行者** チェックボックス
-* 選択 **保存**
+* 「**保存**」を選択します
 
 ### オーサー環境のレプリケーションエージェント {#replication-agents-on-author}
 
@@ -234,7 +234,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 
 #### リバースレプリケーションエージェント（パブリッシュリバース） {#reverse-replication-agent-publish-reverse}
 
-![](../assets/reverse-replication-agent.png)
+![リバースレプリケーションエージェント（パブリッシュレバー）がオンまたは有効になっていることを示している。](../assets/reverse-replication-agent.png)
 
 ### オーサー環境のトンネルサービス {#tunnel-service-on-author}
 
@@ -256,7 +256,7 @@ AEM Communitiesでは、共通ストアはユーザー生成コンテンツ (UGC
 * を選択します。 **有効** チェックボックス
 * 「**保存**」を選択
 
-![](../assets/tunnel-service.png)
+![AEM Communities Publish Tunnel Service （「有効」チェックボックスを表示、選択またはオン）。](../assets/tunnel-service.png)
 
 ### 暗号鍵のレプリケート {#replicate-the-crypto-key}
 
@@ -270,25 +270,25 @@ AEM 6.3 以降では、鍵の素材はファイルシステムに保存され、
 
    * を `com.adobe.granite.crypto.file` ローカルファイルシステム内のバンドル
 
-      例：
+     例：
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
       * この `bundle.info` ファイルはバンドルを識別します
+
    * データフォルダーに移動します（例： ）。
 
       * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+
    * hmac ファイルとプライマリノードファイルをコピーします。
-
-
 
 * 各ターゲットAEMインスタンス
 
    * データフォルダーに移動します（例： ）。
 
       * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+
    * 前にコピーした 2 つのファイルを貼り付けます。
    * ～する必要がある。 [Granite Crypto バンドルを更新します。](#refresh-the-granite-crypto-bundle) (target AEMインスタンスが現在実行中の場合 )
-
 
 >[!CAUTION]
 >
@@ -309,13 +309,13 @@ AEM 6.2 以前の場合と同様に、キー資料をリポジトリに保存す
 使用 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) :
 
 * 参照先 [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de)
-* 選択 `/etc/key`
+* `/etc/key` を選択します。
 * 開く `Replication` タブ
-* 選択 `Replicate`
+* `Replicate` を選択します。
 
 * [Granite Crypto バンドルを更新します。](#refresh-the-granite-crypto-bundle)
 
-![](../assets/replicare-repository.png)
+![左のパネルと、右下のパネルで選択した「レプリケーション」タブにパス/etc/key を表示するCRXDE Lite。](../assets/replicare-repository.png)
 
 #### Granite 暗号バンドルを更新します。 {#refresh-the-granite-crypto-bundle}
 
@@ -326,10 +326,10 @@ AEM 6.2 以前の場合と同様に、キー資料をリポジトリに保存す
 * 場所 `Adobe Granite Crypto Support` バンドル (com.adobe.granite.crypto)
 * 選択 **更新**
 
-![](../assets/refresh-granite-bundle.png)
+![Granite Crypto Support バンドルのAdobeを更新しています。](../assets/refresh-granite-bundle.png)
 
 * しばらくすると、 **成功** ダイアログが表示されます。
-   `Operation completed successfully.`
+  `Operation completed successfully.`
 
 ### Apache HTTP サーバー {#apache-http-server}
 
