@@ -5,10 +5,10 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 100%
+source-wordcount: '1718'
+ht-degree: 77%
 
 ---
 
@@ -27,13 +27,13 @@ ht-degree: 100%
 
 JSON スキーマの使用上の主な特長を以下に示します。
 
-* JSON の構造は、アダプティブフォームのオーサリングモードの「コンテンツファインダー」タブでツリーとして表示されます。JSON 階層からアダプティブフォームに要素をドラッグして追加できます。
+* JSON の構造は、アダプティブフォームのオーサリングモードの「コンテンツファインダー」タブにツリーとして表示されます。 JSON 階層からアダプティブフォームに要素をドラッグして追加することができます。
 * 関連付けられたスキーマに準拠する JSON を使用して、フォームに事前入力できます。
 * ユーザーが入力したデータは、送信時には関連付けられたスキーマに適合する JSON として送信されます。
 
-JSON スキーマは、単純型要素と複合型要素で構成されています。要素には、その要素にルールを追加する属性が含まれています。これらの要素や属性がアダプティブフォーム上にドラッグされると、自動的に該当するアダプティブフォームコンポーネントにマッピングされます。
+JSON スキーマは、単純型要素と複合型要素で構成されています。要素には、その要素にルールを追加する属性が含まれています。これらの要素と属性がアダプティブフォームにドラッグされると、対応するアダプティブフォームコンポーネントに自動的にマッピングされます。
 
-JSON 要素とアダプティブフォームコンポーネントのマッピングは、次のように行われます。
+この JSON 要素とアダプティブフォームコンポーネントのマッピングは、次のようになります。
 
 ```json
 "birthDate": {
@@ -69,10 +69,10 @@ JSON 要素とアダプティブフォームコンポーネントのマッピン
     </ul> </td>
   </tr>
   <tr>
-   <td><p>format 制約を含む string プロパティ。例えば、電子メール、日付など。</p> <p>構文</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td>
+   <td><p>format 制約を含む string プロパティ。例えば、メール、日付など。</p> <p>構文</p> <p><code>{</code></p> <p><code>"type" : "string",</code></p> <p><code>"format" : "email"</code></p> <p><code>}</code></p> <p> </p> </td>
    <td>
     <ul>
-     <li>type が string で format が email の場合、電子メールコンポーネントがマップされます。</li>
+     <li>type が string で format が email の場合、メールコンポーネントがマップされます。</li>
      <li>type が string で format が hostname の場合、検証を含むテキストボックスコンポーネントがマップされます。</li>
     </ul> </td>
   </tr>
@@ -303,7 +303,7 @@ JSON スキーマの例を示します。
 
 ### 再使用可能なスキーマ定義 {#reusable-schema-definitions}
 
-定義キーを使用して、再使用可能なスキーマを識別します。再使用可能なスキーマ定義を使用して、フラグメントを作成します。これは、XSD での複合型の識別と同じです。定義を含む JSON スキーマのサンプルを以下に示します。
+定義キーを使用して、再使用可能なスキーマを識別します。再使用可能なスキーマ定義を使用して、フラグメントを作成します。これは、XSD で複合タイプを識別する場合と似ています。 定義を含む JSON スキーマのサンプルを以下に示します。
 
 ```json
 {
@@ -356,7 +356,7 @@ JSON スキーマの例を示します。
 
 ## フォームオブジェクトのスクリプトまたは式の設定  {#configure-scripts-or-expressions-for-form-objects}
 
-アダプティブフォームの式言語はJavascriptです。すべての数式は有効なJavaScriptの数式で、アダプティブフォームのスクリプトモデルAPIを使用しています。フォームオブジェクトを事前設定して、フォームイベントの[式を評価](adaptive-form-expressions.md)できます。
+JavaScript はアダプティブフォームの式言語です。 すべての式は有効な JavaScript 式で、アダプティブフォームのスクリプティングモデル API を使用します。 フォームオブジェクトを事前設定して、フォームイベントの[式を評価](adaptive-form-expressions.md)できます。
 
 アダプティブフォームの式やスクリプトをアダプティブフォームのコンポーネント用に事前設定するには、aem:afproperties プロパティを使用します。例えば、initialize イベントがトリガーされると、次のコードは電話フィールドの値を設定し、値をログに出力します。
 
@@ -393,163 +393,163 @@ JSON スキーマの例を示します。
   </tr>
   <tr>
    <td>テキストフィールド</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>数値フィールド</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>数値ステッパー</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>ラジオボタン</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>電話番号</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>切り替え</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>ボタン</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
   </tr>
   <tr>
    <td>チェックボックス</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>ドロップダウン</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>画像選択</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
   </tr>
   <tr>
    <td>データ入力フィールド</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>日付選択</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
-   <td>電子メール</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td>メール</td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>ファイル添付</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
   </tr>
   <tr>
    <td>画像</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -558,9 +558,9 @@ JSON スキーマの例を示します。
   </tr>
   <tr>
    <td>図面</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -569,9 +569,9 @@ JSON スキーマの例を示します。
   </tr>
   <tr>
    <td>パネル</td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
-   <td><img alt="" src="assets/yes_tick.png" /></td>
+   <td><img alt="はいチェックマークアイコン" src="assets/yes_tick.png" /></td>
    <td> </td>
    <td> </td>
    <td> </td>
@@ -699,7 +699,7 @@ JSON スキーマの要素に次の制限を追加して、アダプティブフ
   <tr>
    <td><p><code>pattern</code></p> </td>
    <td><p>文字列</p> </td>
-   <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>この pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピされます。</p> </td>
+   <td><p>文字のシーケンスを指定します。文字が指定されたパターンに適合すると、コンポーネントはその文字を受け入れます。</p> <p>pattern プロパティは、対応するアダプティブフォームコンポーネントの検証パターンにマッピングされます。</p> </td>
    <td>
     <ul>
      <li>XSD スキーマにマップされるすべてのアダプティブフォームコンポーネント </li>

@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
 exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
-source-git-commit: 1a3e0f90bbe133a7b0fc383b997e69b10ca82478
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 79%
+source-wordcount: '2068'
+ht-degree: 78%
 
 ---
 
@@ -396,7 +396,7 @@ Sites 専用の述語の、公開およびライブコピーのチェックボ�
 
 ### カスタマイズされた設定を作成または開く {#creating-opening-a-customized-configuration}
 
-1. **ツール**／**一般**／**検索フォーム**&#x200B;に移動します。
+1. に移動します。 **ツール** >>  **一般** >> **検索Forms**.
 
 1. カスタマイズする設定を選択します。
 1. 以下を使用： **編集** アイコンをクリックして、更新する設定を開きます。
@@ -439,7 +439,7 @@ Sites 専用の述語の、公開およびライブコピーのチェックボ�
 
 1. 「プレビュー」アイコンを選択します。
 
-   ![プレビューアイコン](do-not-localize/chlimage_1-31.png)
+   ![検索フォームのプレビュー](do-not-localize/chlimage_1-31.png)
 
 1. 検索フォームが、該当するコンソールの検索列に表示されるとおりに、すべて展開された状態で表示されます。
 

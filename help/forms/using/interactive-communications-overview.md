@@ -9,10 +9,10 @@ topic-tags: interactive-communications, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 67b03098-c58d-4a57-90e0-e4ddd78e5d99
 exl-id: 6cfbeec0-0be3-48b2-a4bb-fd19c69c92c7
-source-git-commit: 415744ca5c46a1495fe90369c162158c7fc2f1d4
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 100%
+source-wordcount: '487'
+ht-degree: 61%
 
 ---
 
@@ -21,18 +21,18 @@ ht-degree: 100%
 
 この記事では、インタラクティブ通信の概要、サンプルのユースケース、作成ワークフロー、インタラクティブ通信とレターの違いについて説明します。
 
-![](do-not-localize/correspondence-management.png)
+![hero-image](do-not-localize/correspondence-management.png)
 
 インタラクティブ通信を使用すると、業務上の書簡、ドキュメント、取引明細書、給付金通知、マーケティング用メール、請求書、ウェルカムキットなど、様々な通信記録の作成と配信を、カスタマイズされた安全な方法で一元的に管理できます。
 
 ## 主な機能 {#key-capabilities}
 
-以下に、インタラクティブ通信の主要な機能を示します。
+インタラクティブ通信の主な機能は次のとおりです。
 
-- すぐに使用できる、フォームデータモデルとの統合機能が付属しています。この機能により、バックエンドのデータベースと、MS® Dynamics などの CRM システムに簡単にアクセスすることができます。
-- 印刷チャネルと Web チャネル用の統合オーサリングインターフェイスが用意されています。このインターフェイスにより、印刷チャネルから Web チャネルを自動的に生成することができます。
-- 印刷チャネルと Web チャネルでグラフを使用して、視覚的に分かりやすい形式で情報を表現することができます。
-- ドキュメントフラグメントで、ルールエディターとフォームデータモデルを使用することができます。
+- すぐに使用できるフォームデータモデルとの統合により、バックエンドデータベースや MS® Dynamics などの他の CRM システムへのアクセスを簡単かつ合理化できます。
+- 印刷チャネルと Web チャネル用の統合オーサリングインターフェイス。印刷チャネルから Web チャネルを自動生成できます。
+- 印刷や Web で、分かりやすい視覚的な形式で情報を表示するグラフ
+- ドキュメントフラグメントは、ルールエディターとフォームデータモデルをサポートしています
 - エージェント UI で、インタラクティブ通信の印刷プレビューと web プレビューを表示できます。
 - ドラッグアンドドロップ操作でコンポーネントを配置し、印刷チャネルと Web チャネルを短時間で作成することができます。
 
@@ -49,7 +49,7 @@ ht-degree: 100%
 1. [フォームデータモデル](/help/forms/using/data-integration.md)、事前入力サービス、[印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)を指定します。プリントチャンネルから web チャンネルを生成することもできます。
 
 1. 必要に応じて[ドラッグ＆ドロップ方式のインターフェイス](/help/forms/using/introduction-interactive-communication-authoring.md)を使用して、ドキュメントフラグメント、画像、コンポーネントを、インタラクティブ通信のプリントチャンネルと web チャンネルに追加します。
-1. 追加したコンポーネントのプロパティを設定します。例えば、以下のようなコンポーネントがあります。
+1. 挿入されるコンポーネントのプロパティを設定します。次に例を示します。
 
    1. [画像](/help/forms/using/create-interactive-communication.md#step2)
    1. [テーブル](/help/forms/using/create-interactive-communication.md#tables)（レイアウトフラグメントを含む）
@@ -57,11 +57,11 @@ ht-degree: 100%
    1. [ドキュメントフラグメント](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. 印刷チャネルと Web チャネルのプレビューを表示し、必要に応じてインタラクティブ通信を編集します。
-1. エージェントはエージェント UI を使用して、インタラクティブ通信を受信者または後処理に送信するための[準備](/help/forms/using/prepare-send-interactive-communication.md)を行います。
+1. エージェントはエージェント UI を使用して [インタラクティブ通信の準備](/help/forms/using/prepare-send-interactive-communication.md) 受信者/後処理に送信するために使用します。
 
 ### 構築ブロック {#buildingblocks}
 
-インタラクティブ通信を作成するために必要な構築ブロックを以下に示します。
+インタラクティブ通信の作成に必要な構築ブロックを次に示します。
 
 - [フォームデータモデル](/help/forms/using/data-integration.md)
 - [印刷チャネルと Web チャネルのテンプレート](/help/forms/using/web-channel-print-channel.md)
@@ -86,38 +86,38 @@ ht-degree: 100%
    <td>印刷出力</td>
   </tr>
   <tr>
-   <td>スキーマ</td>
+   <td>Schema</td>
    <td>フォームデータモデル </td>
    <td>データディクショナリ </td>
   </tr>
   <tr>
    <td>ローカリゼーション</td>
-   <td>フォームデータモデルではサポートされていない</td>
-   <td>データディクショナリでサポートされている</td>
+   <td>フォームデータモデルではサポートされていません</td>
+   <td>データディクショナリでサポートされています</td>
   </tr>
   <tr>
    <td>ルールエディター</td>
    <td>
     <ul>
-     <li>テキストと条件でルールエディターを使用して、インライン条件を作成できる</li>
-     <li>インタラクティブ通信エディターで、Web チャネルのコンポーネントにルールを適用できる</li>
+     <li>インライン条件を作成するためのテキストおよび条件サポートのルールエディター</li>
+     <li>インタラクティブ通信エディターは、Web チャネルのコンポーネントに対するルールの適用をサポートしています</li>
     </ul> </td>
-   <td>条件式を作成するための UI はない</td>
+   <td>条件式を作成するための UI がありません</td>
   </tr>
   <tr>
    <td>オーサリング</td>
-   <td>ドラッグアンドドロップ方式のインターフェイスを使用して、印刷チャネルと Web チャネルを作成できる</td>
+   <td>印刷チャネルと Web チャネルを構築するためのドラッグ&amp;ドロップインターフェイス</td>
    <td>ドラッグ＆ドロップ機能はない </td>
   </tr>
   <tr>
    <td>グラフ</td>
-   <td>印刷チャネルと Web チャネルでグラフがサポートされている</td>
+   <td>印刷チャネルと Web チャネルでサポートされるグラフ</td>
    <td>サポート対象外</td>
   </tr>
   <tr>
    <td>テーマ</td>
-   <td>テーマを使用して Web チャネルのスタイルを設定できる</td>
-   <td>テーマはサポートされていない</td>
+   <td>テーマを使用して Web チャネルのスタイルを設定</td>
+   <td>テーマをサポートしていません</td>
   </tr>
    <tr>
    <td>ドラフト</td>

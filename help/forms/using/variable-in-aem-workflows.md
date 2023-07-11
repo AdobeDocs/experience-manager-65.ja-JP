@@ -10,10 +10,10 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: 936b636819eaef595fcdf9f1f3446d4ac0c28b2f
-workflow-type: ht
-source-wordcount: '2208'
-ht-degree: 100%
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+workflow-type: tm+mt
+source-wordcount: '2209'
+ht-degree: 99%
 
 ---
 
@@ -50,7 +50,7 @@ AEM ワークフローモデルでは、次のことができます。
 
 変数を作成するには、次の手順を実行します。
 
-1. AEM インスタンスで、ツール ![](/help/forms/using/assets/hammer.png)／ワークフロー／モデルに移動します。
+1. AEMインスタンスで、「ツール」に移動します。 ![ツール](/help/forms/using/assets/hammer.png) /ワークフロー/モデル
 1. 「**[!UICONTROL 作成]**」をタップし、ワークフローモデルのタイトルとオプション名を指定します。モデルを選択し、「**[!UICONTROL 編集]**」をタップします。
 1. ワークフローモデルのサイドキックにある変数アイコンをタップし、「**[!UICONTROL 追加変数]**」をタップします。
 

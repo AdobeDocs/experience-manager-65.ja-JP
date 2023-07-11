@@ -10,18 +10,18 @@ discoiquuid: e24dbd0e-4481-4f9d-9570-3a4046b3ef35
 docset: aem65
 feature: Adaptive Forms
 exl-id: c039faec-f832-43d5-8a86-22afa3bef2a4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 100%
+source-wordcount: '937'
+ht-degree: 99%
 
 ---
 
 # チュートリアル：アダプティブフォームの公開 {#tutorial-publish-your-adaptive-form}
 
-![](do-not-localize/13-publish-your-adaptive-form-small.png)
+![Hero-image](do-not-localize/13-publish-your-adaptive-form-small.png)
 
-これは、「[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)」シリーズを構成するチュートリアルです。チュートリアル内のユースケースを理解して実際に操作できるように、このシリーズのチュートリアルを最初から順に学習することをお勧めします。
+これは、[最初のアダプティブフォームを作成する](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)シリーズを構成するチュートリアルです。チュートリアルの使用例全体を理解、実行、デモするために、シリーズを時系列に沿って実施することをお勧めします。
 
 アダプティブフォームの準備が整ったら、エンドユーザーが使用できるようフォームを公開することができます。エンドユーザーは、公開されたフォームを任意のデバイスおよびインターネットブラウザーで開くことができます。アダプティブフォームが公開されると、フォームと関連コンテンツが AEM オーサーインスタンスから AEM パブリッシュインスタンスにコピーされます。このパブリッシュインスタンスを通じて、エンドユーザーはフォームを使用できるようになります。
 
@@ -33,7 +33,7 @@ ht-degree: 100%
 
 ## 事前準備 {#before-you-start}
 
-* **[AEM Forms パブリッシュインスタンスの設定](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**：パブリッシュインスタンスは、パブリッシュモードで実行される AEM [!DNL Forms] の公開インスタンスです。実稼動環境では、パブリッシュインスタンスは組織のファイアウォールの外部にあります。
+* **[AEM Forms パブリッシュインスタンスの設定](https://helpx.adobe.com/jp/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html)**：パブリッシュインスタンスは、パブリッシュモードで実行される AEM [!DNL Forms] のパブリッシュインスタンスです。実稼動環境では、パブリッシュインスタンスは組織のファイアウォールの外部にあります。
 * **[レプリケーションとリバースレプリケーションの設定](https://helpx.adobe.com/jp/experience-manager/6-3/help/sites-deploying/replication.html)**：レプリケーションは、コンテンツをオーサーインスタンスからパブリッシュインスタンスにコピーし、ユーザー入力（フォーム入力など）をパブリッシュインスタンスからオーサーインスタンスに返します。
 
 ## アダプティブフォームを AEM ページとして公開する {#publish-the-adaptive-form-as-an-aem-page}
@@ -69,7 +69,8 @@ AEM [!DNL Forms] には AEM [!DNL Forms] コンテナという名前のコンポ
    * 公開されたサイトページに埋め込まれたフォームのみを変更する場合は、元のフォームを公開します。変更内容は、公開されたサイトページに反映されます。公開されたサイトページにはフォームへの参照情報が含まれているため、ページを再公開する必要はありません。
    *  [!DNL Sites] ページと埋め込みフォームに変更を加えた場合、 [!DNL Sites] ページとフォームを再公開します。
 
-      ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+     ![embed-in-aem-sites](assets/embed-in-aem-sites.png)
+
    AEM [!DNL Sites] ページに追加された発送先住所と請求先住所の変更フォーム 。
 
 ## 外部 web ページへのアダプティブフォームの埋め込み {#embed-the-adaptive-form-in-an-external-webpage}

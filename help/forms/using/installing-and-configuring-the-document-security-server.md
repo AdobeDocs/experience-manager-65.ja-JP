@@ -8,10 +8,10 @@ contentOwner: khsingh
 discoiquuid: 600d13e7-6655-41c5-aab4-c8e9e2a8d14f
 role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 100%
+source-wordcount: '610'
+ht-degree: 87%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 100%
 
 Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。許可されたユーザーのみが保護されたドキュメントにアクセスできます。
 
-Adobe Experience Manager Forms の Document Security を使用して、許可されたユーザーだけがドキュメントを使用するように指定できます。Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。Adobe Portable Document Format （PDF）、Microsoft Word、Excel および PowerPoint を含むファイル形式に対応しています。
+Adobe Experience Manager Forms Document Security を使用すると、許可されたユーザーのみがドキュメントを使用できるようになります。 Document Security を使用すると、サポートされている形式で保存した情報を安全に配布できます。サポートされるファイル形式には、Adobeポータブルドキュメント形式 (PDF) ファイル、Microsoft Word、Excel、PowerPoint ファイルなどがあります。
 
-ドキュメントを保護するには、ポリシーを使用します。ポリシーに指定する機密設定によって、ポリシーを適用したドキュメントを受信者が使用できる方法が決まります。例えば、テキストの印刷やコピー、テキストの編集、または保護されたドキュメントへの署名や注釈の追加を実行できるかどうかを指定することができます。
+ドキュメントを保護するには、ポリシーを使用します。ポリシーで指定する機密設定によって、ポリシーを適用したドキュメントを受信者が使用する方法が決まります。 例えば、テキストの印刷やコピー、テキストの編集、保護されたドキュメントへの署名やコメントの追加を受信者が実行できるかどうかを指定できます。
 
-ポリシーは Document Security に保存されます。クライアントアプリケーションを使用してそのポリシーをドキュメントに適用します。ドキュメントにポリシーを適用すると、ドキュメントに含まれる情報は、ポリシーで指定されている機密設定で保護されます。ポリシーで保護されたドキュメントを、ポリシーで許可された受信者に配布できます。
+ポリシーは Document Security サーバーに保存されます。クライアントアプリケーションを使用してドキュメントにポリシーを適用します。 ドキュメントにポリシーを適用すると、ポリシーで指定された機密性設定によって、ドキュメントに含まれる情報が保護されます。ポリシーで保護されたドキュメントは、ポリシーで許可されている受信者に配布できます。
 
 また、Document Security は、ドキュメントの保護、保護されたドキュメントの表示、保護されたドキュメントのインデックス作成を行うためのクライアント、ビューア、およびインデクサーも提供します。Document Security について詳しくは、 [Document Security について](/help/forms/using/admin-help/document-security.md)を参照してください。
 
@@ -33,7 +33,7 @@ Document Security 機能は、JEE 上の AEM Forms でのみ使用できます�
 
 <!--fix above link-->
 
-![](do-not-localize/document-security-server_topology.png)
+![Document Security サーバートポロジ](do-not-localize/document-security-server_topology.png)
 
 次の図は、AEM Forms Document Security の一般的なアーキテクチャを示しています。
 
