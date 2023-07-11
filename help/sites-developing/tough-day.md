@@ -1,25 +1,25 @@
 ---
 title: Tough Day
-description: Tough Day テストでは、約 1,000 人の作成者がいる環境で、すべての操作が同時進行しているという最悪の状況を想定して、1 日の負荷をシミュレートします。。
+description: Tough Day テストは、すべての操作が同時におこなわれる最悪のシナリオで、約 1,000 人の作成者の日々の負荷をシミュレートします。
 topic-tags: testing
 content-type: reference
 exl-id: ceb9671c-57f9-4d81-94c0-0dbccd4d90a2
-source-git-commit: 1b92b973209fdbd2509b1c644c1064a1e9224a9e
-workflow-type: ht
-source-wordcount: '1849'
-ht-degree: 100%
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+workflow-type: tm+mt
+source-wordcount: '1824'
+ht-degree: 53%
 
 ---
 
 # Tough Day{#tough-day}
 
-## Tough Day 2 について {#what-is-tough-day}
+## Tough Day 2 とは {#what-is-tough-day}
 
-「Tough Day 2」は、AEM インスタンスの限界についてストレステストを実行するためのアプリケーションです。Tough Day 2 は、デフォルトのテストスイートを使用してそのまま実行することも、テストのニーズに合わせて設定することも可能です。このアプリケーションのプレゼンテーションについては、[こちらの録画](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=ja)を参照してください。
+「Tough Day 2」は、AEMインスタンスの制限に応じてテストできるアプリケーションです。 デフォルトのテストスイートですぐに使用できる状態にすることも、テストのニーズに合わせて設定することもできます。 ご覧いただけます [この録画](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) アプリのプレゼンテーション用。
 
 >[!CAUTION]
 >
->Tough Day 2 には Java 8 が必要です。
+>Tough Day 2 には Java™ 8 が必要です。
 
 ## Tough Day 2 の実行方法 {#how-to-run-tough-day}
 
@@ -29,19 +29,19 @@ ht-degree: 100%
 java -jar toughday2.jar --host=localhost
 ```
 
-パラメーターを追加した後に実行されるデフォルトスイートの名前は `toughday` です。このスイートには次のユースケースが含まれています。
+パラメーターを追加した後に実行されるデフォルトスイートの名前は `toughday` です。次の使用例が含まれます。
 
-* ページとそのページのライブコピーを作成する（ロールアウトを含む）
-* ホームページを取得する
-* querybuilder でクエリを実行する
-* アセット階層を作成する
+* ページとそのライブコピーを作成する（ロールアウトを含む）
+* ホームページを取得
+* querybuilder でクエリを実行
+* アセット階層の作成
 * アセットの削除
 
-このスイートには、15 ％の書き込みアクションと 85 ％の読み取りアクションが含まれています。
+このスイートには 15 %の書き込みアクションと 85 %の読み取りアクションが含まれます。
 
 スイートのテストを実行するために、Tough Day 2 によってデフォルトのコンテンツパッケージがインストールされます。この動作は`installsamplecontent`パラメーターを`false`に設定することで回避できます。ただし、実行するテストのデフォルトパスを変更することも必要になります。パラメーターを指定せずに jar を実行した場合は、Tough Day 2 で[ヘルプ情報](/help/sites-developing/tough-day.md#getting-help)が表示されます。
 
-原則として、アプリケーションを使用するには、次のパターンに従います。
+原則として、次のパターンに従うことで、アプリケーションを使用できます。
 
 ```xml
 java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  [<global arguments> | <actions> | --runmode | --publishmode]
@@ -49,17 +49,18 @@ java -jar toughday2.jar [--help | --help_full | --help_tests | --help_publish]  
 
 >[!NOTE]
 >
->Tough Day 2 にはクリーンアップステップが用意されていません。したがって、メインの実稼動インスタンスではなく、クローンされたステージングインスタンスで Tough Day 2 を実行することをお勧めします。ステージングインスタンスは、テスト後に削除する必要があります。
+Tough Day 2 にはクリーンアップ手順はありません。 その結果、メインの実稼動インスタンスではなく、クローンのステージングインスタンスで Tough Day 2 を実行することをお勧めします。 テストの後に、ステージングインスタンスを削除する必要があります。
+>
 
-### ヘルプの入手 {#getting-help}
+### ヘルプの表示 {#getting-help}
 
-Tough Day 2 には、コマンドラインからアクセスできる幅広いヘルプオプションが用意されています。次に例を示します。
+Tough Day 2 には、コマンドラインからアクセスできる様々なヘルプオプションが用意されています。 次に例を示します。
 
 ```xml
 java -jar toughday2.jar --help_full
 ```
 
-以下の表に、関連するヘルプパラメーターを示します。
+次の表に、関連するヘルプパラメーターを示します。
 
 <table>
  <tbody>
@@ -91,35 +92,35 @@ java -jar toughday2.jar --help_full
   <tr>
    <td> --help --runmode/publishmode type=&lt;Mode&gt;</td>
    <td>指定した実行またはパブリッシュモードに関する情報を一覧表示します。</td>
-   <td><p>java -jar toughday2.jar --help --runmode type=constantload</p> <p>java -jar toughday2.jar --help --publishmode type=intervals</p> </td>
+   <td><p>Java™ -jar toughday2.jar —help —runmode type=constantload</p> <p>Java™ -jar toughday2.jar —help —publishmode type=intervals</p> </td>
   </tr>
   <tr>
    <td>--help --suite=&lt;SuiteName&gt;</td>
    <td>特定のスイートのすべてのテストと、それぞれの設定可能なプロパティを一覧表示します。</td>
-   <td><br /> java -jar toughday2.jar --help --suite=get_tests</td>
+   <td><br /> Java™ -jar toughday2.jar —help —suite=get_tests</td>
   </tr>
   <tr>
    <td> --help --tag=&lt;Tag&gt;</td>
    <td><br /> 指定したタグを持つすべての項目を一覧表示します。</td>
-   <td>java -jar toughday2.jar --help --tag=publish</td>
+   <td>Java™ -jar toughday2.jar —help —tag=publish</td>
   </tr>
   <tr>
    <td>--help &lt;TestClass/PublisherClass&gt;</td>
    <td><br /> 特定のテストまたはパブリッシャーの設定可能なプロパティをすべて一覧表示します。</td>
-   <td><p>java -jar toughday2.jar --help UploadPDFTest</p> <p>java -jar toughday2.jar --help CSVPublisher</p> </td>
+   <td><p>Java™ -jar toughday2.jar —help UploadPDFTest</p> <p>Java™ -jar toughday2.jar —help CSVPublisher</p> </td>
   </tr>
  </tbody>
 </table>
 
 ### グローバルパラメーター {#global-parameters}
 
-Tough Day 2 には、テストの環境を設定または変更するグローバルパラメーターが用意されています。これには、ターゲットのホスト、ポート番号、使用されるプロトコル、インスタンスのユーザーとパスワードなどが含まれます。次に例を示します。
+Tough Day 2 では、テストの環境を設定または変更するグローバルパラメーターを提供します。 これには、ターゲットとなるホスト、ポート番号、使用するプロトコル、インスタンスのユーザーとパスワードなどが含まれます。 次に例を示します。
 
 ```xml
 java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m --dryrun=true
 ```
 
-以下のリストには、関連のあるパラメーターがあります。
+次のリストに、関連するパラメーターが表示されます。
 
 | **パラメーター** | **説明** | **デフォルト値** | **可能な値** |
 |---|---|---|---|
@@ -139,21 +140,21 @@ java -jar toughday2.jar --host=host --protocol=https --port=4502 --duration=30m 
 
 ## カスタマイズ {#customizing}
 
-カスタマイズの方法には、コマンドラインパラメーターを使用する方法と yaml 設定ファイルを使用する方法の 2 つがあります。**通常、設定ファイルは大規模なカスタムスイートに使用します。設定ファイルは、Tough Day 2 のデフォルトパラメーターよりも優先されます。コマンドラインパラメーターは、設定ファイルとデフォルトパラメーターの両方よりも優先されます。**
+カスタマイズは、次の 2 つの方法で実行できます。コマンドラインパラメーターまたは yaml 設定ファイル。 **設定ファイルは大規模なカスタムスイートで使用され、Tough Day 2 のデフォルトパラメーターを上書きします。 コマンドラインパラメータは、設定ファイルとデフォルトパラメータの両方を上書きします。**
 
 テスト設定を保存するには、yaml 形式でコピーする方法しかありません。
 
 ### 新規テストの追加 {#adding-a-new-test}
 
-デフォルトの `toughday` スイートを使用しない場合は、`add` パラメーターを使用して任意のテストを追加できます。コマンドラインパラメーターまたは yaml 設定ファイルを使用して `CreateAssetTreeTest` テストを追加する方法を以下の例に示します。
+デフォルトの `toughday` スイートを使用しない場合は、`add` パラメーターを使用して任意のテストを追加できます。以下の例は、 `CreateAssetTreeTest` コマンドラインパラメーターまたは yaml 設定ファイルを使用してテストします。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 globals:
@@ -164,15 +165,15 @@ tests:
 
 ### 同じテストの複数のインスタンスの追加  {#adding-multiple-instances-of-the-same-test}
 
-同じテストの複数のインスタンスを追加して実行することもできますが、そのためにはそれぞれのインスタンスに一意の名前を付ける必要があります。コマンドラインパラメーターまたは yaml 設定ファイルを使用して同じテストの 2 つのインスタンスを追加する方法を以下の例に示します。
+また、同じテストの複数のインスタンスを追加して実行することもできますが、各インスタンスには一意の名前を付ける必要があります。 以下の例は、コマンドラインパラメーターまたは yaml 設定ファイルを使用して、同じテストの 2 つのインスタンスを追加する方法を示しています。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest name=FirstAssetTree --add CreateAssetTreeTest name=SecondAssetTree
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 globals:
@@ -188,23 +189,23 @@ tests:
 
 ### テストプロパティの変更 {#changing-the-test-properties}
 
-1 つ以上のテストプロパティを変更する必要がある場合は、そのプロパティをコマンドラインまたは yaml 設定ファイルに追加できます。使用可能なすべてのテストプロパティを表示するには、コマンドラインに `--help <TestClass/PublisherClass>` パラメーターを追加してください。次に例を示します。
+1 つ以上のテストプロパティを変更する必要がある場合は、そのプロパティをコマンドラインまたは yaml 設定ファイルに追加できます。 使用可能なすべてのテストプロパティを表示するには、コマンドラインに `--help <TestClass/PublisherClass>` パラメーターを追加してください。次に例を示します。
 
 ```xml
 java -jar toughday2.jar --help CreatePageTreeTest
 ```
 
-yaml 設定ファイルによって Tough Day 2 のデフォルトのパラメーターが上書きされるので、コマンドラインパラメーターは設定ファイルとデフォルトの両方よりも優先されることに注意してください。
+yaml 設定ファイルは Tough Day 2 のデフォルトパラメーターを上書きし、コマンドラインパラメーターは設定ファイルとデフォルトの両方を上書きすることに注意してください。
 
-コマンドラインパラメーターまたは yaml 設定ファイルを使用して `CreatePageTreeTest` テストの `template` プロパティを変更する方法を以下の例に示します。
+以下の例は、 `template` プロパティ `CreatePageTreeTest` コマンドラインパラメーターまたは yaml 設定ファイルを使用してテストします。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreatePageTreeTest template=/conf/toughday-templates/settings/wcm/templates/toughday-template
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 globals:
@@ -215,19 +216,19 @@ tests:
       template : /conf/toughday-templates/settings/wcm/templates/toughday-template
 ```
 
-### 事前定義済みのテストスイートの使用 {#working-with-predefined-test-suites}
+### 定義済みのテストスイートの操作 {#working-with-predefined-test-suites}
 
 事前定義済みのスイートにテストを追加する方法、事前定義済みのスイートの既存のテストを再設定および除外する方法を以下の例に示します。
 
 事前定義済みのスイートに新しいテストを追加するには、`add` パラメーターを使用して、ターゲットとなる事前定義済みのスイートを指定します。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTest
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 globals:
@@ -237,17 +238,17 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-また、特定のスイート内の既存のテストは、`config`* *パラメーターを使用して再設定することもできます。スイート名とテストの実際の名前（テストクラス名ではありません）も指定する必要があることに注意してください。テスト名は、テストクラスの `name` プロパティで確認できます。テストプロパティの確認方法について詳しくは、[テストプロパティの変更](/help/sites-developing/tough-day.md#changing-the-test-properties)を参照してください。
+また、特定のスイート内の既存のテストは、`config`* *パラメーターを使用して再設定することもできます。また、（テストクラス名ではなく）テストのスイート名と実際の名前も指定する必要があります。 テスト名は、テストクラスの `name` プロパティで確認できます。テストプロパティの確認方法について詳しくは、[テストプロパティの変更](/help/sites-developing/tough-day.md#changing-the-test-properties)を参照してください。
 
 以下の例では0、`CreatePageTreeTest` のデフォルトのアセットタイトル（名前は `UploadAsset`）を「NewAsset」に変更しています。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --config UploadAsset title=NewAsset
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 globals:
@@ -259,15 +260,15 @@ tests:
       title : NewAsset
 ```
 
-さらに、`exclude` パラメーターを使用して、事前定義済みのスイートからテストを削除したり、デフォルトの設定から公開者を削除したりできます。スイート名とテストの実際の名前（テスト C `lass` 名ではありません）も指定する必要があることに注意してください。テスト名は、テストクラスの `name` プロパティで確認できます。以下の例では、（`UploadAsset` という名前の）`CreatePageTreeTest` テストを toughday スイートから削除しています。
+また、事前定義されたスイートまたは公開者のテストを、 `exclude` パラメーター。 また、（テスト C ではなく）テストのスイート名と実際の名前を指定する必要があります `lass` 名前 ) を参照してください。 テスト名は、テストクラスの `name` プロパティで確認できます。以下の例では、（`UploadAsset` という名前の）`CreatePageTreeTest` テストを toughday スイートから削除しています。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --exclude UploadAsset
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 globals:
@@ -285,15 +286,15 @@ Tough Day 2 は、**標準**&#x200B;モードと&#x200B;**定負荷**&#x200B;モ
 
 * `concurrency` - テストの実行のために Tough Day 2 によって作成されるスレッドの数を表します。これらのスレッドでは、実行時間が終了するか、実行するテストがなくなるまでテストが実行されます。
 
-* `waittime` - 同じスレッド上の連続した 2 つのテスト実行の間の待機時間。この値はミリ秒単位で指定する必要があります。
+* `waittime` - 同じスレッド上の連続した 2 つのテスト実行の間の待機時間。値はミリ秒単位で表す必要があります。
 
-次の例は、コマンドラインを使用してパラメーターを追加する方法を示しています。
+次の例は、コマンドラインを使用してパラメータを追加する方法を示しています。
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest --runmode=normal concurrency=20
 ```
 
-または、yaml 設定ファイルを使用してパラメーターを追加する方法もあります。
+または、yaml 設定ファイルを使用します。
 
 ```xml
 runmode:
@@ -306,9 +307,9 @@ runmode:
 
 ### テストの選択 {#test-selection}
 
-テストの選択プロセスはどちらの実行モードでも同じで、次のように進みます。すべてのテストには `weight` プロパティがあり、これによって、スレッドでの実行の可能性が決定します。例えば、テストが 2 つあり、一方の重みを 5、もう一方の重みを 10 とした場合、後者が実行される可能性は前者の 2 倍になります。
+テストの選択プロセスはどちらの実行モードでも同じで、次のように進みます。すべてのテストには `weight` プロパティがあり、これによって、スレッドでの実行の可能性が決定します。例えば、2 つのテストがあり、一方は重み付けが 5 でもう一方は 10 でも、後者は前者の 2 倍の確率で実行されます。
 
-さらに、テストには `count` プロパティを指定できます。これにより、実行回数が指定の数に制限されます。この回数に達すると、それ以上テストは実行されません。既に実行中のテストインスタンスはすべて、設定されたとおりに実行を終了します。次の例は、コマンドラインまたは yaml 設定ファイルを使用してこれらのパラメーターを追加する方法を示しています。
+さらに、テストには `count` プロパティを指定できます。これにより、実行回数が指定の数に制限されます。この数を超えると、テストはそれ以上実行されません。 既に実行中のすべてのテストインスタンスは、設定どおりに実行を終了します。 次の例は、これらのパラメーターをコマンドラインまたは yaml 設定ファイルを使用して追加する方法を示しています。
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --add CreatePageTreeTest weight=10 count=100 --runmode=normal concurrency=20
@@ -329,11 +330,11 @@ java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --ad
 
 >[!NOTE]
 >
->並列実行が原因で、実際のテスト実行回数は `count` パラメーターで設定された数と正確に一致しません。偏差が（`concurrency parameter` パラメーターによって制御される）実行スレッドの数に比例することを想定してください。
+並列実行が原因で、実際のテスト実行回数は `count` パラメーターで設定された数と正確に一致しません。偏差が（`concurrency parameter` パラメーターによって制御される）実行スレッドの数に比例することを想定してください。
 
 ### ドライラン {#dry-run}
 
-ドライランでは、指定されたすべての入力（コマンドラインパラメーターまたは設定ファイル）が解析され、デフォルト値と統合された結果が出力されます。テストは実行されません。
+ドライランは、指定されたすべての入力（コマンドラインパラメータまたは設定ファイル）を解析し、デフォルトと結合して結果を出力します。 どのテストも実行されません。
 
 ```xml
 java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTest --dryrun=true
@@ -341,11 +342,11 @@ java -jar toughday2.jar --host=localhost --suite=toughday --add CreatePageTreeTe
 
 ## 出力 {#output}
 
-Tough Day 2 では、テストの指標とログの両方が出力されます。詳しくは、これ以降の項を参照してください。
+Tough Day 2 は、テスト指標とログの両方を出力します。 詳しくは、次の節を参照してください。
 
-### テスト指標 {#test-metrics}
+### 指標のテスト {#test-metrics}
 
-現在、Tough Day 2 では、ユーザーが評価できる 9 種類のテスト指標が報告されます。**&#42;** 記号が付いた指標は、実行に成功した後にのみ報告されます。
+Tough Day 2 では、現在、評価できる 9 つのテスト指標がレポートされます。 **&#42;** 記号が付いた指標は、実行に成功した後にのみ報告されます。
 
 | **名前** | **説明** |
 |---|---|
@@ -369,20 +370,20 @@ Tough Day 2 では、テストの指標とログの両方が出力されます�
 
 デフォルトでは、両方の公開者が有効になっています。
 
-さらに、指標の報告には次の 2 つのモードがあります。
+また、指標がレポートされるモードは 2 つあります。
 
 * **simple** パブリッシュモード - 実行の開始から公開時点までの結果が報告されます。
 * **intervals** パブリッシュモード - 特定の期間内の結果が報告されます。期間は、**interval** パブリッシュモード／パラメーターを使用して設定することができます。
 
 次の例は、コマンドラインまたは yaml 設定ファイルを使用して `intervals` パラメーターを設定する方法を示しています。
 
-コマンドラインパラメーターを使用する場合：
+コマンドラインパラメータを使用する場合：
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreatePageTreeTest --publishmode type=intervals interval=10s
 ```
 
-yaml 設定ファイルを使用する場合：
+yaml 設定ファイルを使用すると、次のことができます。
 
 ```xml
 publishmode:
@@ -394,12 +395,12 @@ publishmode:
 
 ### ログ {#logging}
 
-Tough Day 2 では、Tough Day 2 を実行したディレクトリにログフォルダーが作成されます。このフォルダーには次の 2 種類のログが格納されます。
+Tough Day 2 では、Tough Day 2 を実行したディレクトリにログフォルダーが作成されます。このフォルダーには、次の 2 種類のログが含まれます。
 
-* **toughday.log**：アプリケーションの状態に関連したメッセージ、デバッグ情報およびグローバルメッセージが格納されます。
-* **toughday_&lt;testname>.log**：指定したテストに関連するメッセージ。
+* **toughday.log**:には、アプリケーションの状態、デバッグ情報およびグローバルメッセージに関連するメッセージが含まれます。
+* **強い日&lt;testname>.log**:指定したテストに関連するメッセージ。
 
-ログは上書きされません。その後の実行では、既存のログにメッセージが追加されます。ログには複数のレベルがあります。詳しくは、` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`を参照してください。
+ログは上書きされず、その後の実行で既存のログにメッセージが追加されます。 ログには複数のレベルがあります。詳しくは、` [loglevel parameter](/help/sites-developing/tough-day.md#global-parameters)`を参照してください。
 
 <!--
 #### Example Usage {#example-usage}

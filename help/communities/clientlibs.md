@@ -1,20 +1,16 @@
 ---
 title: コミュニティコンポーネントの clientlib
-seo-title: Clientlibs for Communities Components
-description: Communities 用のクライアント側ライブラリ
-seo-description: Client-side libraries for Communities
-uuid: d2a9f986-96cf-4ee8-81e6-36a96f45ddcb
+description: コミュニティ用のクライアント側ライブラリ
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 68ce47c8-a03f-40d6-a7f3-2cc64aee0594
 docset: aem65
 exl-id: 94415926-a273-4f03-b7b6-57fdac12c741
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 59%
+source-wordcount: '373'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +18,7 @@ ht-degree: 59%
 
 ## はじめに {#introduction}
 
-ドキュメントのこの節では、コミュニティコンポーネント用のクライアント側ライブラリ（clientlib）をページに追加する方法について説明します。
+この節では、コミュニティコンポーネント用のページにクライアント側ライブラリ (clientlibs) を追加する方法について説明します。
 
 基本情報については、以下を参照してください。
 
@@ -30,40 +26,40 @@ ht-degree: 59%
 * [SCF の clientlibs](/help/communities/client-customize.md#clientlibs) SCF コンポーネントをカスタマイズする際に役立つ情報を提供します。
 
 
-## clientlib が必要になる理由 {#why-clientlibs-are-required}
+## clientlibs が必要な理由 {#why-clientlibs-are-required}
 
-コンポーネントを正しく機能させ（JavaScript）、スタイル設定する（CSS）には、clientlib が必要です。
+コンポーネントが適切に機能し (JavaScript)、スタイル設定 (CSS) されるには、clientlibs が必要です。
 
-が存在する場合、 [コミュニティ機能](/help/communities/functions.md) 機能の場合、必要な clientlib を含む必要なすべてのコンポーネントと設定がコミュニティサイトに表示されます。 作成者が追加のコンポーネントを使用できる場合にのみ、追加の clientlib を追加する必要があります。
+が存在する場合、 [コミュニティ機能](/help/communities/functions.md) 機能の場合、必要な clientlib を含む必要なすべてのコンポーネントと設定がコミュニティサイトに存在します。 作成者が追加のコンポーネントを使用できる場合にのみ、追加の clientlib を追加する必要があります。
 
-必須の clientlib が欠落していると、[ページにコミュニティコンポーネントを追加](/help/communities/author-communities.md)したときに、JavaScript エラーが発生したり、予期しない外観が生じたりする可能性があります。
+必要な clientlib が見つからない場合、 [ページへのコミュニティコンポーネントの追加](/help/communities/author-communities.md) JavaScript エラーが発生し、予期しない外観が発生する場合がありました。
 
-### 例：clientlib が欠落している場合のレビューの配置 {#example-placed-reviews-without-clientlibs}
+### 例：Clientlibs を使用しない場合のレビューの配置 {#example-placed-reviews-without-clientlibs}
 
 ![placed-reviews](assets/placed-reviews.png)
 
-### 例：clientlib が存在する場合のレビューの配置 {#example-placed-reviews-with-clientlibs}
+### 例：Clientlibs でのレビューの配置 {#example-placed-reviews-with-clientlibs}
 
 ![reviews-clientlibs](assets/reviews-clientlibs.png)
 
-## 必須の clientlib の識別 {#identifying-required-clientlibs}
+## 必要な clientlib の識別 {#identifying-required-clientlibs}
 
-開発者向けの基本機能情報の中で、必須の clientlib が識別されています。
+開発者向けの基本的な機能情報は、必要な clientlib を特定します。
 
-また、AEM インスタンスから[コミュニティコンポーネントガイド](/help/communities/components-guide.md)を参照すると、コンポーネントに必須の clientlib カテゴリのリストにアクセスできます。
+さらに、AEMインスタンスから [コミュニティコンポーネントガイド](/help/communities/components-guide.md) では、コンポーネントに必要な clientlib カテゴリのリストにアクセスできます。
 
-例えば、 [レビューページ](https://localhost:4502/content/community-components/en/reviews.html) 以下に、必要な clientlib を示します。
+例えば、が [レビューページ](https://localhost:4502/content/community-components/en/reviews.html) 以下に、必要な clientlib を示します。
 
 * cq.ckeditor
 * cq.social.hbs.reviews
 
 ![clientlibs-reviews](assets/clientlibs-reviews.png)
 
-## 必須の clientlib の追加 {#adding-required-clientlibs}
+## 必要な clientlib の追加 {#adding-required-clientlibs}
 
-コミュニティコンポーネントをページに追加する場合、コンポーネントに必須の clientlib がまだ存在しなければ、追加する必要があります。
+コミュニティコンポーネントをページに追加する場合は、そのコンポーネントに必要な clientlib を追加する必要があります（まだ追加していない場合）。
 
-[CRXDE|Lite](#using-crxde-lite) を使用すると、コミュニティサイトページの既存の clientlibslist を変更できます。
+用途 [CRXDE|Lite](#using-crxde-lite) コミュニティサイトページの既存の clientlibslist を変更する場合。
 
 を使用してコミュニティサイトに clientlib を追加するには [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
@@ -83,13 +79,13 @@ ht-degree: 59%
          * さらにクライアントライブラリを追加するには、この手順を繰り返します。
 
          * 「**OK**」を選択します。
-   * **すべて保存** を選択します。
 
+   * **すべて保存** を選択します。
 
 >[!NOTE]
 >
->コミュニティサイト以外のサイトでは、使用されているクライアントライブラリの有無や場所を調べる必要があります。
+>サイトがコミュニティサイトでない場合は、そのサイトで使用されているクライアントライブラリの存在または場所を検出する必要があります。
 
-ここでは、[AEM Communities 使用の手引き](/help/communities/getting-started.md)の例（`site-name` は *engage*）を引用し、レビューコンポーネントを追加する場合に clientliblist がどのように表示されるかを示しています。
+の使用 [AEM Communitiesの概要](/help/communities/getting-started.md) 例： `site-name` が *エンゲージ*&#x200B;レビューコンポーネントを追加すると、clientliblist は次のように表示されます。
 
 ![review-component](assets/review-component.png)

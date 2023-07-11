@@ -1,33 +1,30 @@
 ---
 title: Adobe Analytics Framework のカスタマイズ
-seo-title: Customizing the Adobe Analytics Framework
 description: Adobe Analytics Framework のカスタマイズ
-seo-description: null
-uuid: 444a29c2-3b4e-4d21-adc0-5f317ece2b77
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
 discoiquuid: 11c0aac6-a7f6-4d6b-a080-b04643045a64
 exl-id: ab0d4f2e-f761-4510-ba51-4a2dcea49601
-source-git-commit: 9d142ce9e25e048512440310beb05d762468f6a2
-workflow-type: ht
-source-wordcount: '1618'
-ht-degree: 100%
+source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+workflow-type: tm+mt
+source-wordcount: '1613'
+ht-degree: 46%
 
 ---
 
 # Adobe Analytics Framework のカスタマイズ{#customizing-the-adobe-analytics-framework}
 
-Adobe Analytics フレームワークは、Adobe Analytics で追跡される情報を決定します。デフォルトのフレームワークをカスタマイズするには、Javascript を使用してカスタムトラッキングを追加し、Adobe Analytics プラグインを組み込み、トラッキングに使用するフレームワーク内の一般設定を変更します。
+Adobe Analytics フレームワークは、Adobe Analytics で追跡される情報を決定します。デフォルトのフレームワークをカスタマイズするには、JavaScript を使用して、カスタムトラッキングの追加、Adobe Analyticsプラグインの統合、およびトラッキングに使用するフレームワーク内での一般設定の変更をおこないます。
 
-## フレームワーク用に生成される Javascript について {#about-the-generated-javascript-for-frameworks}
+## フレームワーク用に生成される JavaScript について {#about-the-generated-javascript-for-frameworks}
 
-ページを Adobe Analytics フレームワークと関連付け、そのページに [Analytics モジュールへの参照](/help/sites-administering/adobeanalytics.md)を含めると、analytics.sitecatalyst.js ファイルがそのページ用に自動的に生成されます。
+ページがAdobe Analyticsフレームワークに関連付けられ、そのページに以下が含まれている場合 [Analytics モジュールへの参照](/help/sites-administering/adobeanalytics.md)を指定すると、analytics.sitecatalyst.js ファイルがページ用に自動的に生成されます。
 
-ページ内の Javascript が `s_gi` オブジェクト（s_code.js Adobe Analytics ライブラリが定義）を作成し、そのプロパティに値を割り当てます。オブジェクトインスタンスの名前は `s` です。この節に示すコード例では、この `s` 変数への参照を複数作成します。
+ページ内の JavaScript で、 `s_gi`オブジェクト (s_code.js Adobe Analyticsライブラリで定義されている ) を削除し、そのプロパティに値を割り当てます。 オブジェクトインスタンスの名前は `s` です。この節に示すコード例では、この `s` 変数への参照を複数作成します。
 
-次のコード例は、analytics.sitecatalyst.js ファイルのコードによく似ています。
+次のコード例は、analytics.sitecatalyst.js ファイルのコードに似ています。
 
 ```
 var s_account = "my_sitecatalyst_account";
@@ -59,15 +56,15 @@ s.doPlugins=s_doPlugins;
 */
 ```
 
-カスタム Javascript コードを使用してフレームワークをカスタマイズする場合は、このファイルの内容を変更します。
+カスタム JavaScript コードを使用してフレームワークをカスタマイズする場合、このファイルの内容を変更します。
 
 ## Adobe Analytics プロパティの設定 {#configuring-adobe-analytics-properties}
 
-Adobe Analytics には、フレームワーク上で設定できる事前定義済みの変数が数多くあります。変数 **charset**、**cookieLifetime**、**currencyCode** および **trackInlineStats** は、**Analytics 一般設定**&#x200B;リストにデフォルトで含まれています。
+Adobe Analytics内には、フレームワークで設定できる定義済みの変数がいくつかあります。 変数 **charset**、**cookieLifetime**、**currencyCode** および **trackInlineStats** は、**Analytics 一般設定**&#x200B;リストにデフォルトで含まれています。
 
 ![aa-22](assets/aa-22.png)
 
-このリストに、変数名と値を追加できます。これらの事前定義済みの変数と、追加したすべての変数を使用して、analytics.sitecatalyst.js ファイル内の `s` オブジェクトのプロパティを設定します。次の例は、追加された値 `CONSTANT` の `prop10` プロパティが、Javascript のコードでどのように表現されるかを示しています。
+このリストに、変数名と値を追加できます。これらの事前定義済みの変数と、追加したすべての変数を使用して、analytics.sitecatalyst.js ファイル内の `s` オブジェクトのプロパティを設定します。次の例は、 `prop10` 価値の財産 `CONSTANT` は JavaScript コードで表されます。
 
 ```
 var s_account = "my_sitecatalyst_account";
@@ -99,27 +96,27 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 1. 右側の列に変数の値（例：`CONSTANT`）を入力します。
 
-1. 変数を削除するには、変数の横の（-）ボタンをクリックします。
+1. 変数を削除するには、変数の横にある (-) ボタンをクリックします。
 
 >[!NOTE]
 >
->変数と値を入力する際は、形式とスペルが正しいことを確認してください。そうでない場合は、正しい値と変数のペアを使用して&#x200B;**呼び出しが送信されません**。変数や値のスペルが間違っていると、呼び出しを実行することさえできない場合があります。
+>変数と値を入力する際に、正しい形式とスペルが設定されていることを確認するか、 **呼び出しは送信されません** が正しい値と変数のペアになっていることを確認します。 変数と値のスペルが間違っていると、呼び出しの発生を防ぐこともできます。
 >
->これらの変数が正しく設定されていることを確認するには、Adobe Analytics の担当者に相談してください。
+>Adobe Analyticsの担当者に問い合わせて、これらの変数が正しく設定されていることを確認してください。
 
 >[!CAUTION]
 >
->このリストの変数の一部は、Adobe Analytics の呼び出しを正しく機能させるうえで&#x200B;**必須**&#x200B;です（**currencyCode**、**charSet** など）。
+>このリストに含まれる変数の一部は次のとおりです。 **必須** ( 例えば、Adobe Analyticsの呼び出しが **currencyCode**, **charSet**)
 >
 >そのため、フレームワーク自体から変数を削除しても、Adobe Analytics の呼び出しがおこなわれると、デフォルト値を持つ変数が付加されます。
 
-### Adobe Analytics フレームワークへのカスタム JavaScript の追加 {#adding-custom-javascript-to-an-adobe-analytics-framework}
+### Adobe Analytics Framework へのカスタム JavaScript の追加 {#adding-custom-javascript-to-an-adobe-analytics-framework}
 
-**Analytics の一般設定**&#x200B;領域にあるフリーフォームの Javascript ボックスを使用して、Adobe Analytics フレームワークにカスタムコードを追加できます。
+JavaScript からの自由のボックス ( **一般的な Analytics 設定** 「 」領域では、カスタムコードをAdobe Analyticsフレームワークに追加できます。
 
 ![aa-21](assets/aa-21.png)
 
-追加するコードは、analytics.sitecatalyst.js ファイルに付加されます。そのため、`s` 変数にアクセスできます。この変数は、`s_code.js` で定義されている `s_gi` Javascript オブジェクトのインスタンスです。例えば、次のコードの追加は、前節の例で値 `CONSTANT` の `prop10` という変数を追加することと同等です。
+追加するコードは、analytics.sitecatalyst.js ファイルに付加されます。したがって、 `s` 変数に含まれます。これは、 `s_gi` で定義される JavaScript オブジェクト `s_code.js`. 例えば、次のコードの追加は、前節の例で値 `CONSTANT` の `prop10` という変数を追加することと同等です。
 
 `s.prop10= 'CONSTANT';`
 
@@ -127,9 +124,9 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 `if (s.usePlugins) s.doPlugins(s)`
 
-以下の手順は、Javascript ボックスを使用して Adobe Analytics の追跡機能をカスタマイズする方法を示しています。Javascript で Adobe Analytics プラグインを使用する必要がある場合は、AEM に[プラグインを組み込んでください](/help/sites-administering/adobeanalytics.md)。
+以下の手順では、「 JavaScript 」ボックスを使用してAdobe Analyticsトラッキングをカスタマイズする方法を示します。 JavaScript でAdobe Analyticsプラグインを使用する必要がある場合、 [統合する](/help/sites-administering/adobeanalytics.md) AEMに
 
-1. `s.doPlugins` を実行するように、次の Javascript コードをボックスに追加します。
+1. 次の JavaScript コードをボックスに追加し、 `s.doPlugins` が実行されました：
 
    ```
    s.usePlugins=true;
@@ -141,29 +138,29 @@ s.trackingServerSecure = "xxxxxxx.net";
 
    >[!CAUTION]
    >
-   >何らかの方法でカスタマイズ済みで、基本のドラッグ＆ドロップインターフェイスまたは Adobe Analytics ビューのインライン Javascript からは実行できない Adobe Analytics の呼び出しに変数を含めて送信する場合は、このコードが必要です。
+   >このコードは、基本のドラッグ&amp;ドロップインターフェイスや、Adobe Analytics View のインライン JavaScript では実行できない方法でカスタマイズされたAdobe Analytics呼び出しで変数を送信する場合に必要です。
    >
    >カスタム変数が s_doPlugins 関数の外にある場合は、Adobe Analytics の呼び出しで *undefined* として送信
 
-1. Javascript コードを **s_doPlugins** 関数に追加します。
+1. に JavaScript コードを追加します。 **s_doPlugins** 関数に置き換えます。
 
 次の例では、一般的な区切り文字「|」を使用して、ページ上でキャプチャされたデータを階層順に連結しています。
 
-Adobe Analytics フレームワークには、以下の設定があります。
+Adobe Analyticsフレームワークには、次の設定があります。
 
 * `prop2` Adobe Analytics 変数は `pagedata.sitesection` サイトプロパティにマッピングされます。
 
 * `prop3` Adobe Analytics 変数は `pagedata.subsection` サイトプロパティにマッピングされます。
 
-* 次のコードがフリーフォームの Javascript ボックスに追加されます。
+* 次のコードが「JavaScript から解放」ボックスに追加されます。
 
-   ```
-   s.usePlugins=true;
-    function s_doPlugins(s) {
-    s.prop1 = s.prop2+'|'+s.prop3;
-    }
-    s.doPlugins=s_doPlugins;
-   ```
+  ```
+  s.usePlugins=true;
+   function s_doPlugins(s) {
+   s.prop1 = s.prop2+'|'+s.prop3;
+   }
+   s.doPlugins=s_doPlugins;
+  ```
 
 * このフレームワークを使用する web ページが訪問される（または、編集モードでページが再読み込みまたはプレビューされる）と、Adobe Analytics への呼び出しが実行されます。
 
@@ -173,7 +170,7 @@ Adobe Analytics フレームワークには、以下の設定があります。
 
 ### すべての Adobe Analytics フレームワーク用のグローバルカスタムコードの追加 {#adding-global-custom-code-for-all-adobe-analytics-frameworks}
 
-すべての Adobe Analytics フレームワークに組み込むカスタム Javascript コードを指定します。ページの Adobe Analytics フレームワークにカスタムの[フリーフォームの Javascript](/help/sites-administering/adobeanalytics.md) が含まれていない場合、/libs/cq/analytics/components/sitecatalyst/config.js.jsp スクリプトが生成する Javascript が [analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md) ファイルに付加されます。デフォルトでは、このスクリプトはコメントアウトされているので効果はありません。また、このコードは `s.usePlugins` を `false` に設定します。
+すべてのAdobe Analyticsフレームワークに統合されるカスタム JavaScript コードを提供する。 ページのAdobe Analyticsフレームワークにカスタムが含まれていない場合 [自由形式 JavaScript](/help/sites-administering/adobeanalytics.md)を指定した場合、 /libs/cq/analytics/components/sitecatalyst/config.js.jsp スクリプトで生成される JavaScript が [analytics.sitecatalyst.js](/help/sites-administering/adobeanalytics.md) ファイル。 デフォルトでは、このスクリプトはコメントアウトされているので効果はありません。また、このコードは `s.usePlugins` を `false` に設定します。
 
 ```
 /* Plugin Config */
@@ -190,15 +187,15 @@ analytics.sitecatalyst.js ファイル（Adobe Analytics の s_code.js ファイ
 
 if (s.usePlugins) s.doPlugins(s)
 
-したがって、`s_doPlugins` 関数内のすべてのコードが実行されるように、Javascript で `s.usePlugins` を `true` に設定する必要があります。このコードをカスタマイズするには、独自の Javascript を使用するファイルで config.js.jsp ファイルをオーバーレイします。Javascript で Adobe Analytics プラグインを使用する必要がある場合は、AEM に[プラグインを組み込んでください](/help/sites-administering/adobeanalytics.md)。
+したがって、JavaScript を `s.usePlugins` から `true` そのため、 `s_doPlugins` 関数が実行されます。 コードをカスタマイズするには、独自の JavaScript を使用するファイルでconfig.js.jsp ファイルをオーバーレイします。 JavaScript でAdobe Analyticsプラグインを使用する必要がある場合、 [統合する](/help/sites-administering/adobeanalytics.md) AEMに
 
 >[!NOTE]
 >
->/libs/cq/analytics/components/sitecatalyst/config.js.jsp ファイルは編集しないでください。特定の AEM アップグレードタスクまたはメンテナンスタスクによって、元のファイルが再インストールされ、変更内容が削除されることがあります。
+>/libs/cq/analytics/components/sitecatalyst/config.js.jsp ファイルは編集しないでください。 特定のAEMアップグレードまたはメンテナンスタスクを実行すると、元のファイルを再インストールして、変更を削除できます。
 
-1. CRXDE Lite で、/apps/cq/analytics/components フォルダー構造を作成します。
+1. CRXDE Liteで、 /apps/cq/analytics/components フォルダー構造を作成します。
 
-   1. /apps フォルダーを右クリックして、作成／フォルダーを作成をクリックします。
+   1. /apps フォルダーを右クリックし、作成/フォルダーを作成をクリックします。
    1. フォルダー名として「`cq`」を指定し、「OK」をクリックします。
    1. 同様に、`analytics` フォルダーと `components` フォルダーを作成します。
 
@@ -231,19 +228,19 @@ if (s.usePlugins) s.doPlugins(s)
    s.doPlugins=s_doPlugins;
    ```
 
-   /apps/cq/analytics/components/sitecatalyst/config.js.jsp スクリプトによって生成される Javascript コードが、 Adobe Analytics フレームワークを使用するすべてのページ用の analytics.sitecatalyst.js ファイルに挿入されます。
+   /apps/cq/analytics/components/sitecatalyst/config.js.jsp スクリプトで生成される JavaScript コードが、Adobe Analyticsフレームワークを使用するすべてのページの analytics.sitecatalyst.js ファイルに挿入されます。
 
-1. `s_doPlugins` 関数で実行する Javascript コードを追加して、「すべて保存」をクリックします。
+1. で実行する JavaScript コードを追加します。 `s_doPlugins` 関数を開き、[ すべて保存 ] をクリックします。
 
 >[!CAUTION]
 >
->ページのフレームワークのフリーフォームの Javascript に何らかのテキストが存在する場合（スペースのみでも）、config.js.jsp は無視されます。
+>ページのフレームワークの自由形式の JavaScript にテキストが存在する場合（空白のみ）、config.js.jsp は無視されます。
 
 ### AEM での Adobe Analytics プラグインの使用 {#using-adobe-analytics-plugins-in-aem}
 
-Adobe Analytics プラグイン用の Javascript コードを取得して、AEM で Adobe Analytics フレームワークに組み込みます。カスタム Javascript コードで使用できるよう、コードを `sitecatalyst.plugins` カテゴリのクライアントライブラリフォルダーに追加します。
+Adobe Analyticsプラグインの JavaScript コードを取得し、AEMのAdobe Analyticsフレームワークに統合します。 カテゴリのクライアントライブラリフォルダーにコードを追加する `sitecatalyst.plugins` カスタム JavaScript コードで使用できるようにします。
 
-例えば、`getQueryParams` プラグインを組み込む場合、カスタム Javascript の `s_doPlugins` 関数からプラグインを呼び出すことができます。次のコード例では、Adobe Analytics の呼び出しがトリガーされると、リファラーの URL の **pid** 内のクエリ文字列を **eVar1** として送信します。
+例えば、 `getQueryParams` プラグインを使用する場合は、 `s_doPlugins` 関数を使用します。 次のコード例では、 **&quot;pid&quot;** リファラーの URL から **eVar1**、Adobe Analytics呼び出しがトリガーされたとき。
 
 ```
 s.usePlugins=true;
@@ -264,9 +261,9 @@ AEM では次の Adobe Analytics プラグインをインストールして、�
 
 >[!NOTE]
 >
->プラグイン用の新しいクライアントライブラリフォルダーを作成します。`/libs/cq/analytics/clientlibs/sitecatalyst/plugins` フォルダーにはプラグインを追加しないでください。こうしておけば、AEM の再インストールやアップグレードをおこなっても、`sitecatalyst.plugins` カテゴリに加えた変更が上書きされずに済みます。
+>プラグイン用のクライアントライブラリフォルダーを作成します。 `/libs/cq/analytics/clientlibs/sitecatalyst/plugins` フォルダーにはプラグインを追加しないでください。こうしておけば、AEM の再インストールやアップグレードをおこなっても、`sitecatalyst.plugins` カテゴリに加えた変更が上書きされずに済みます。
 
-以下の手順を実行して、プラグイン用のクライアントライブラリフォルダーを作成します。この手順を実行する必要があるのは 1 回だけです。プラグインをクライアントライブラリフォルダーに追加するには、次の手順を実行します。
+次の手順を実行して、プラグインのクライアントライブラリフォルダーを作成します。 この手順は 1 回だけ実行する必要があります。 プラグインをクライアントライブラリフォルダーに追加するには、次の手順を実行します。
 
 1. Web ブラウザーで CRXDE Lite を開きます。([http://localhost:4502/crx/de](http://localhost:4502/crx/de))
 
@@ -276,31 +273,31 @@ AEM では次の Adobe Analytics プラグインをインストールして、�
 
    * タイプ：cq:ClientLibraryFolder
 
-1. 作成したクライアントライブラリフォルダーを選択し、右下のプロパティバーを使用して、次のプロパティを追加します。
+1. 作成したクライアントライブラリフォルダーを選択し、右下のプロパティバーを使用して次のプロパティを追加します。
 
    * 名前：categories
    * タイプ：String
    * 値：sitecatalyst.plugins
-   * マルチ：selected
+   * 複数：選択済み
 
    編集ウィンドウで「OK」をクリックして、プロパティの値を確認します。
 
-1. 作成したクライアントライブラリフォルダーを右クリックし、作成／ファイルを作成をクリックします。ファイル名として「js.txt」と入力し、「OK」をクリックします。
+1. 作成したクライアントライブラリフォルダーを右クリックし、作成/ファイルを作成をクリックします。 ファイル名として「js.txt」と入力し、「OK」をクリックします。
 
 1. 「すべて保存」をクリックします。
 
 以下の手順を実行して、プラグインのコードを取得し、AEM リポジトリ内に保存し、クライアントライブラリフォルダーに追加します。
 
-1. Adobe Analytics アカウントを使用して [sc.omniture.com](https://sc.omniture.com) にログインします。
-1. ランディングページで、ヘルプ／ヘルプホームに移動します。
+1. Adobe Analytics アカウントを使用して [sc.omniture.com](https://sc.omniture.com/login/) にログインします。
+1. ランディングページで、ヘルプ/ヘルプホームに移動します。
 1. 左側の目次で、「実装プラグイン」をクリックします。
-1. 追加するプラグインへのリンクをクリックし、ページが表示されたら、プラグインの JavaScript ソースコードを探して、そのコードを選択し、コピーします。
+1. 追加するプラグインへのリンクをクリックし、ページが開いたら、プラグインの JavaScript ソースコードを探し、コードを選択してコピーします。
 
-1. クライアントライブラリフォルダーを右クリックして、作成／ファイルを作成をクリックします。ファイル名として、組み込むプラグインの名前に「.js」を付けて入力し、「OK」をクリックします。例えば、getQueryParam プラグインを組み込む場合は、ファイルに getQueryParam.js という名前を付けます。
+1. クライアントライブラリフォルダーを右クリックし、作成/ファイルを作成をクリックします。 ファイル名に、統合するプラグインの名前と.js を入力し、「OK」をクリックします。 例えば、getQueryParam プラグインを組み込む場合は、ファイルに getQueryParam.js という名前を付けます。
 
    作成したファイルを編集用に開きます。
 
-1. プラグインの JavaScript コードをファイルに貼り付け、「すべて保存」をクリックし、ファイルを閉じます。
+1. プラグインの JavaScript コードをファイルに貼り付け、「すべて保存」をクリックして、ファイルを閉じます。
 
 1. クライアントライブラリフォルダーの js.txt ファイルを開きます。
 
@@ -308,6 +305,6 @@ AEM では次の Adobe Analytics プラグインをインストールして、�
 
 >[!NOTE]
 >
->プラグインの使用時は、サポートプラグインも必ず組み込んでください。さもないと、プラグインの Javascript がサポートプラグイン内の関数に対しておこなわれる呼び出しを認識しません。例えば、getPreviousValue() プラグインを正しく機能させるには、split() プラグインが必要です。
+>プラグインを使用する場合は、サポートするプラグインも必ず統合します。統合しない場合、プラグイン JavaScript は、サポートするプラグインの関数に対しておこなった呼び出しを認識しません。 例えば、getPreviousValue() プラグインを正しく機能させるには、split() プラグインが必要です。
 >
 > サポートプラグインの名前も **js.txt** に追加する必要があります。
