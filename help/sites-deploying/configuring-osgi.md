@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: d701e4ba-417f-4b57-b103-27fd25290736
 feature: Configuring
 exl-id: 5ecd09a3-c4be-4361-9816-03106435346f
-source-git-commit: 2981f11565db957fac323f81014af83cab2c0a12
-workflow-type: ht
-source-wordcount: '1949'
-ht-degree: 100%
+source-git-commit: bf55fcb855cbdad72c669058662ca70fe57e6632
+workflow-type: tm+mt
+source-wordcount: '1973'
+ht-degree: 97%
 
 ---
 
@@ -38,7 +38,7 @@ OSGi は「*標準化されたプリミティブを提供し、小さく再利�
 
    * Web コンソールは OSGi 設定の標準インターフェイスです。様々なプロパティを編集するための UI が提供されており、事前に定義されているリストから設定可能な値を選択できます。
 
-      そのため、最も簡単に使用できます。
+     そのため、最も簡単に使用できます。
 
    * Web コンソールで行われた設定は、現在のインスタンスにすぐに適用されます。現在の実行モードや、今後の実行モードの変更には関係ありません。
 
@@ -86,11 +86,12 @@ Web コンソールで設定を更新するには：
 
    * **ツール／操作**&#x200B;メニューのリンクから web コンソールを開きます。コンソールにログインしたら、次のドロップダウンメニューを使用できます。
 
-      **OSGi >**
+     **OSGi >**
 
    * ダイレクト URL 例：
 
-      `http://localhost:4502/system/console/configMgr`
+     `http://localhost:4502/system/console/configMgr`
+
    リストが表示されます。
 
 1. 次のいずれかの方法で、設定するバンドルを選択します。
@@ -124,7 +125,9 @@ Web コンソールで行った設定変更は、設定ファイル（`.config`�
 
 >[!NOTE]
 >
->設定ファイルは特殊な形式になっています（詳しくは [Sling Apache のドキュメント](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)を参照してください）。
+>設定ファイルの形式は固有です。詳しくは、 Sling Apache のドキュメントを参照してください。
+>* 詳細 [Apache Sling Provisioning Model と Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
+>* のチュートリアルと例 [Sling でのリソースとプロパティの取得](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
 >
 >そのため、実際の変更は web コンソールを使用して行い、設定ファイルが作成、維持されるようにすることをお勧めします。
 
@@ -230,7 +233,8 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
    * タイプ：`sling:OsgiConfig`
    * 名前：永続 ID（PID）
 
-      例えば、AEM WCM Version Manager の場合は `com.day.cq.wcm.core.impl.VersionManagerImpl` を使用します
+     例えば、AEM WCM Version Manager の場合は `com.day.cq.wcm.core.impl.VersionManagerImpl` を使用します
+
    >[!NOTE]
    >
    >ファクトリ設定を作成する場合は、`-<identifier>` を名前に付加します。
@@ -310,15 +314,15 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 * 作成者 - AEM WCM フィルター：
 
-   `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
+  `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
 
 * 公開 - AEM WCM フィルター：
 
-   `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
+  `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
 
 * 公開 - AEM WCM ページ統計：
 
-   `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
+  `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
 
 >[!NOTE]
 >
@@ -332,25 +336,25 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
 * Web コンソールを使用して設定を変更した場合、（通常は）リポジトリの次の場所に書き込まれます。
 
-   `/apps/{somewhere}`
+  `/apps/{somewhere}`
 
    * デフォルトでは、`{somewhere}` は `system/config` なので、設定は次の場所に書き込まれます。
 
-      `/apps/system/config`
+     `/apps/system/config`
 
    * ただし、最初にリポジトリ内の別の場所から取得した設定を編集する場合は、次のようにします。例：
 
-      /libs/foo/config/someconfig
+     /libs/foo/config/someconfig
 
-      その後、更新された設定が元の場所に書き込まれます。例：
+     その後、更新された設定が元の場所に書き込まれます。例：
 
-      `/apps/foo/config/someconfig`
+     `/apps/foo/config/someconfig`
 
 * `admin` によって変更された設定は、次の場所の下の `*.config` ファイルに保存されます。
 
-   ```
-      /crx-quickstart/launchpad/config
-   ```
+  ```
+     /crx-quickstart/launchpad/config
+  ```
 
    * この領域には、OSGi 設定管理者の非公開データがあり、システムへの入力方法に関係なく、`admin` で指定されたすべての設定の詳細が保持されています。
    * この領域は実装の詳細であり、ユーザーがこのディレクトリを直接編集することはできません。
@@ -358,11 +362,11 @@ Web コンソールを使用するほかに、リポジトリで設定の詳細�
 
       * Apache Felix OSGi Management Console
 
-         `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
+        `../crx/org/apache/felix/webconsole/internal/servlet/OsgiManager.config`
 
-      * CRX Sling クライアントレポジトリ
+      * CRX Sling クライアントリポジトリ
 
-         `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
+        `../com/day/crx/sling/client/impl/CRXSlingClientRepository/<pid-nr>.config`
 
 >[!CAUTION]
 >
