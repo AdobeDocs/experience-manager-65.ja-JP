@@ -1,19 +1,15 @@
 ---
 title: Communities 用の Dispatcher の設定
-seo-title: Configuring Dispatcher for Communities
 description: AEM Communities用の Dispatcher の設定
-seo-description: Configure the dispatcher for AEM Communities
-uuid: c17daca9-3244-4b10-9d4e-2e95df633dd9
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 content-type: reference
 topic-tags: deploying
-discoiquuid: 23745dd3-1424-4d22-8456-d2dbd42467f4
 exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 15%
+source-wordcount: '644'
+ht-degree: 13%
 
 ---
 
@@ -25,7 +21,7 @@ AEM Communitiesの場合、の適切な機能を確保するために、Dispatch
 
 お客様の特定の導入およびサイト設計に必要な事項を学ぶには
 
-* [カスタマーケア](https://helpx.adobe.com/jp/marketing-cloud/contact-support.html)に問い合わせる
+* [カスタマーケア](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja&amp;support-tab=home#support)に問い合わせる
 
 メイン [Dispatcher のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja).
 
@@ -35,15 +31,15 @@ AEM Communitiesの場合、の適切な機能を確保するために、Dispatch
 
 AEM Communitiesの Dispatcher キャッシュは、Dispatcher がコミュニティサイトのページの完全にキャッシュされたバージョンを提供する機能です。
 
-現在、コミュニティサイトを閲覧したユーザー、検索の結果コミュニティページにアクセスしたユーザー、ページをインデックス化した検索エンジンなど、匿名のサイト訪問者に対してのみサポートされています。 メリットは、匿名のユーザーと検索エンジンのパフォーマンスが向上することです。
+現在、コミュニティサイトを閲覧したユーザーや、検索の結果コミュニティページにアクセスしたユーザー、ページをインデックス化した検索エンジンなど、匿名のサイト訪問者に対してのみサポートされています。 メリットは、匿名ユーザーと検索エンジンのパフォーマンスが向上することです。
 
 サインインしたメンバーの場合、Dispatcher はキャッシュをバイパスし、要求をパブリッシャーに直接リレーして、すべてのページが動的に生成および配信されるようにします。
 
-Dispatcher のキャッシュをサポートするように設定した場合、Dispatcher がキャッシュしたページを最新の状態に保つために、TTL ベースの「max age」の有効期限がヘッダーに追加されます。
+Dispatcher のキャッシュをサポートするように設定した場合、Dispatcher がキャッシュしたページを最新に保つために、TTL ベースの「max age」の有効期限がヘッダーに追加されます。
 
 ### 要件 {#requirements}
 
-* Dispatcher バージョン 4.1.2 以降 ( [Dispatcher のインストール](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-install.html) （最新バージョンの場合）
+* Dispatcher バージョン 4.1.2 以降 ( [Dispatcher のインストール](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=en) （最新バージョンの場合）
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * バージョン 3.3.2 以降
@@ -53,45 +49,45 @@ Dispatcher のキャッシュをサポートするように設定した場合、
 
 OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー — 最大経過時間** 指定されたパスの下に表示される、キャッシュされたページの有効期限を設定します。
 
-* 次の [Web コンソール](../../help/sites-deploying/configuring-osgi.md)
+* 次の [Web コンソール](../../help/sites-deploying/configuring-osgi.md).
 
    * 例： [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * 場所 `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`
-* 「+」アイコンを選択して新しい接続設定を作成
+* 「+」アイコンを選択して、接続設定を作成できます。
 
-   ![dispatcher](assets/dispatcher.png)
+  ![dispatcher](assets/dispatcher.png)
 
 * **フィルターパターン**
-
-   *（必須）* コミュニティページへの 1 つ以上のパス。 例：`/content/sites/engage/(.*)`
+  *（必須）* コミュニティページへの 1 つ以上のパス。 例：`/content/sites/engage/(.*)`
 
 * **Cache-Control の最大経過時間**
-
-   *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 0 より大きい値を指定する必要があります。
+  *（必須）* キャッシュ制御ヘッダーに追加する最大経過時間（秒）。 0 より大きい値を指定する必要があります。
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
-の/filter セクション `dispatcher.any` ファイルは、 [コンテンツへのアクセスの設定 — /filter](https://helpx.adobe.com/jp/experience-manager/dispatcher/using/dispatcher-configuration.html#filter).
+の/filter セクション `dispatcher.any` ファイルは、 [コンテンツへのアクセスの設定 — /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja).
 
 この節では、コミュニティ機能を適切に機能させるために必要なエントリについて説明します。
 
-フィルタープロパティ名は、フィルターパターンを適用する順序を示す 4 桁の数字を使用する規則に従います。 複数のフィルターパターンを 1 つの要求に適用した場合は、最後に適用されたフィルターパターンが有効になります。したがって、最初のフィルターパターンは、多くの場合、すべてを拒否するために使用され、次のパターンは、制御された方法でアクセスを復元するために役立ちます。
+フィルタープロパティ名は、フィルターパターンを適用する順序を示す 4 桁の数字を使用する規則に従います。 1 つの要求に複数のフィルターパターンが適用される場合、最後に適用されたフィルターパターンが有効です。 したがって、最初のフィルターパターンは、多くの場合、すべてを拒否するために使用され、次のパターンは、制御された方法でアクセスを復元するために使用されます。
 
-以下のサンプルでは、任意の特定の dispatcher.any ファイルに合わせて変更する必要がある可能性のあるプロパティ名を使用します。
+以下のサンプルでは、特定の特定のプロパティに合わせて変更する必要があるプロパティ名を使用しています `dispatcher.any` ファイル。
 
 関連トピック：
 
-* [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja#getting-started)
+* [Dispatcher のセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=ja)
 
 >[!NOTE]
 >
 >**プロパティ名の例**
->表示されるすべてのプロパティ名（例： ） **/0050** および **/0170**&#x200B;を使用する場合は、既存の dispatcher.any 設定ファイル内に収まるように調整する必要があります。
+>表示されるすべてのプロパティ名（例： ） **/0050** および **/0170**( 既存の `dispatcher.any` 設定ファイル。
+>
 
 >[!CAUTION]
 >
->Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)を参照してください。また、 [AEMセキュリティチェックリスト](https://helpx.adobe.com/jp/experience-manager/6-3/sites/administering/using/security-checklist.html) AEMのインストールに関するセキュリティの詳細については、を参照してください。
+>Dispatcher を使用してアクセスを制限する場合の詳しい考慮事項については、[Dispatcher セキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)を参照してください。また、 [AEMセキュリティチェックリスト](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) AEMのインストールに関するセキュリティの詳細については、を参照してください。
+>
 
 次のエントリは、特にすべての deny エントリの後に/filter セクションの末尾に追加する必要があります。
 
@@ -275,7 +271,7 @@ OSGi 設定 **ACS AEM Commons - Dispatcher キャッシュ制御ヘッダー —
 
 主な問題の原因は、以前のルールへの影響に注意を払わずにフィルタールールを挿入することです。特に、アクセスを拒否するルールを追加する場合に問題が発生します。
 
-最初のフィルターパターンは、多くの場合、次のフィルターが制御された方法でアクセスを復元するように、すべてを拒否するために使用されます。 1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効になります。
+最初のフィルターパターンは、多くの場合、次のフィルターが制御された方法でアクセスを復元するように、すべてを拒否するために使用されます。 1 つのリクエストに複数のフィルターが適用される場合、最後に適用されるフィルターが有効です。
 
 ## サンプルの dispatcher.any {#sample-dispatcher-any}
 

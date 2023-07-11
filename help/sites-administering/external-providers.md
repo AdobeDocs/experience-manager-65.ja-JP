@@ -1,20 +1,16 @@
 ---
 title: Analytics と外部プロバイダー
-seo-title: Analytics with External Providers
 description: 外部プロバイダーとの Analytics について説明します。
-seo-description: Learn about Analytics with External Providers.
-uuid: 31a773ca-901e-45f2-be8f-951c26f9dbc5
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: bab465bc-1ff4-4f21-9885-e4a875c73a8d
 docset: aem65
 exl-id: 9bf818f9-6e33-4557-b2e4-b0d4900f2a05
-source-git-commit: ec4f24528089fe3de639b974ff4ab6f8807fc7fc
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 70%
+source-wordcount: '435'
+ht-degree: 35%
 
 ---
 
@@ -30,11 +26,11 @@ Analytics は、Web サイトがどのように使用されているかに関す
 
 また、 **汎用 Analytics スニペット** をクリックして、新しいサービス設定を定義します。
 
-その後、情報は、Web ページに追加されるコードの小さなスニペットを使用して収集されます。 次に例を示します。
+その後、情報が収集され、Web ページに追加されるコードの小さなスニペットが使用されます。 例：
 
 >[!CAUTION]
 >
->スクリプトは、`script` タグで囲まないようにしてください。
+>スクリプトをで囲まない `script` タグ。
 
 ```
 var _gaq = _gaq || [];
@@ -57,27 +53,27 @@ _gaq.push(['_trackPageview']);
 
 >[!CAUTION]
 >
->Geometrixx-Outdoors デモサイトは、ページプロパティで提供した属性が、対応する `js` スクリプトの HTML ソースコード（`</html>` 終了タグのすぐ上）に追加されます。
+>Geometrixxアウトドアデモサイトは、ページプロパティで指定された属性が HTML ソースコード ( `</html>` 終了タグ ) を、 `js` スクリプト
 >
 >独自の `/apps` がデフォルトページコンポーネント（`/libs/foundation/components/page`）から継承しない場合、ユーザー（またはその開発者）が対応する `js` スクリプトが含まれていること（例えば、`cq/cloudserviceconfigs/components/servicescomponents` が含まれているか、同様のメカニズムが使用されているか）を確認する必要があります。
 >
->これをしないと、どのサービス（汎用、Analytics、Target など）も機能しません。
+>これがないと、どのサービス（汎用、Analytics、Target など）も機能しません。
 
-## 汎用スニペットを使用した新しいサービスの作成 {#creating-a-new-service-with-a-generic-snippet}
+## 汎用スニペットを使用したサービスの作成 {#creating-a-new-service-with-a-generic-snippet}
 
 基本設定の場合：
 
 1. **ツール**&#x200B;コンソールを開きます。
-1. 左側のパネルから、**クラウドサービス設定**&#x200B;を展開します。
-1. 「**汎用分析スニペット**」をダブルクリックしてページを開きます。
+1. 左側のウィンドウから、を展開します。 **Cloud Services設定**.
+1. ダブルクリック **汎用分析スニペット** ページを開くには：
 
    ![汎用分析スニペット](assets/analytics_genericoverview.png)
 
-1. + をクリックし、ダイアログを使用して新しい設定を追加します。最小限の割り当てでは、名前（例：google analytics）を試用します。
+1. 「 + 」をクリックし、ダイアログボックスを使用して新しい設定を追加します。 少なくとも、名前を割り当てます ( 例：Google Analytics)。
 
    ![設定の作成](assets/analytics_addconfig.png)
 
-1. 「**作成**」をクリックすると、スニペットダイアログがすぐに開くので、適切な JavaScript スニペットをフィールドに貼り付けます。
+1. クリック **作成**&#x200B;スニペットダイアログがすぐに開き、適切な JavaScript スニペットをフィールドに貼り付けます。
 
    ![コンポーネントの編集](assets/analytics_snippet.png)
 
@@ -85,16 +81,16 @@ _gaq.push(['_trackPageview']);
 
 ## ページでの新しいサービスの使用 {#using-your-new-service-on-pages}
 
-今作成したサービス設定は、必要なページで使用するように設定する必要があります。
+次に、サービス設定を作成し、使用する必要のあるページを設定する必要があります。
 
 1. ページに移動します。
 1. サイドキックから&#x200B;**ページプロパティ**&#x200B;を開き、「**クラウドサービス**」タブを選択します。
-1. 「**サービスを追加**」をクリックし、必要なサービス（例：**汎用分析スニペット**）を選択します。
+1. クリック **サービスを追加**「 」をクリックし、必要なサービスを選択します。例えば、 **汎用分析スニペット**:
 
    ![クラウドサービスの追加](assets/analytics_selectservice.png)
 
 1. 「**OK**」をクリックして保存します。
-1. 「**クラウドサービス**」タブに戻されます。**汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。ドロップダウンリストを使用して、具体的なサービスインスタンス（例：google-analytics）を選択します。
+1. 次の場所に戻ります： **Cloud Services** タブをクリックします。 **汎用分析スニペット**&#x200B;が、`Configuration reference missing` のメッセージと共に表示されます。「 」ドロップダウンリストを使用して、特定のサービスインスタンスを選択します。 例えば、google-analytics の場合は次のようになります。
 
    ![クラウドサービス設定の追加](assets/analytics_selectspecificservice.png)
 
@@ -102,7 +98,7 @@ _gaq.push(['_trackPageview']);
 
    これで、ページのページソースを表示した場合に、スニペットを表示できます。
 
-   適切な期間が経過すると、収集された統計を表示できます。
+   一定時間が経過すると、収集した統計を表示できます。
 
    >[!NOTE]
    >

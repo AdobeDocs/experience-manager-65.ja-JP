@@ -1,17 +1,15 @@
 ---
 title: xtype の使用（クラシック UI）
-description: AEMで使用できるすべての xtype について説明します
-uuid: 6497caa4-2f9b-4f21-9023-88d485fd1d78
+description: Adobe Experience Managerで使用できるすべての xtype について説明します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: adb70b43-1b0b-4302-905a-c7612675dabb
 exl-id: 06ca4e6d-9ab7-4c5b-905c-07c448632f2b
-source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
 workflow-type: tm+mt
-source-wordcount: '6400'
-ht-degree: 74%
+source-wordcount: '6384'
+ht-degree: 70%
 
 ---
 
@@ -31,17 +29,17 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 >
 >このページでは、クラシック UI での ExtJS xtype の使用方法について説明します。
 >
->アドビでは、[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)および[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)に基づく標準の最新の[タッチ対応UI](/help/sites-developing/touch-ui-concepts.md)を活用することをお勧めします。
+>Adobeでは、標準の、最新の [タッチ操作対応 UI](/help/sites-developing/touch-ui-concepts.md) 基準 [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) および [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components).
 
 ## xtypes {#xtypes}
 
-以下に、Adobe Experience Managerで使用可能な xtype のリストを示します。
+Adobe Experience Managerで使用可能な xtype を以下に示します。
 
 * 注釈
 
   [CQ.wcm.Annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.Annotation)
 
-  Dialog は、ボディにフォーム、フッターにボタングループを備える特殊なウィンドウです。通常はコンテンツの編集に使用されますが、情報の表示にも使用できます。
+  Dialog は、ボディにフォーム、フッターにボタングループを備える特殊なウィンドウです。通常はコンテンツの編集に使用されますが、情報のみを表示することもできます。
 
 * arraystore
 
@@ -87,7 +85,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.BrowseDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.BrowseDialog)
 
-  BrowseDialog により、ユーザーはパスを選択するためにリポジトリを参照できます。通常、 [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
+  BrowseDialog を使用すると、ユーザーはリポジトリを参照してパスを選択できます。 通常、 [BrowseField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.BrowseField).
 
 * browsefield
 
@@ -107,7 +105,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.wcm.BulkEditorForm](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditorForm)
 
-  BulkEditorForm は、HTML フォームで囲まれた [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) を提供します。これは、のスタンドアロンバージョンです [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)、読み込みボタンにはHTMLフォームが必要です。
+  BulkEditorForm は、 [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor) 囲まれたHTML。 これは、のスタンドアロンバージョンです [CQ.wcm.BulkEditor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.BulkEditor)、読み込みボタンにはHTMLフォームが必要です。
 
 * button
 
@@ -211,13 +209,13 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   任意のの基本クラス [CQ.Ext.BoxComponent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.BoxComponent) 他のコンポーネントを含む可能性がある コンテナは、項目を含む基本的な動作（項目の追加、挿入、削除）を処理します。
 
-  最も一般的に使用される Container クラスは、 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel), [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window) および [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
+  最も一般的に使用される Container クラスは、 [CQ.Ext.Panel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Panel), [CQ.Ext.Window](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Window)、および [CQ.Ext.TabPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.TabPanel).
 
 * contentfinder
 
   [CQ.wcm.ContentFinder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.ContentFinder)
 
-  ContentFinder は特殊な 2 列です [ビューポート](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) これには、実際のコンテンツファインダーが左側に、コンテンツフレームが右側に含まれています。
+  ContentFinder は、特殊な 2 列で構成されます [ビューポート](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Viewport) これには、実際のコンテンツファインダーが左側に、コンテンツフレームが右側に含まれています。
 
 * contentfindertab
 
@@ -247,7 +245,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.wcm.CreateVersionDialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.CreateVersionDialog)
 
-  CreateVersionDialog は、新しいバージョンのページを作成できるダイアログです。
+  CreateVersionDialog は、新しいバージョンのページを作成できるダイアログボックスです。
 
 * customcontentpanel
 
@@ -295,7 +293,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Dialog](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Dialog)
 
-  Dialog は、ボディにフォーム、フッターにボタングループを備える特殊なウィンドウです。通常はコンテンツの編集に使用されますが、情報の表示にも使用できます。
+  Dialog は、ボディにフォーム、フッターにボタングループを備える特殊なウィンドウです。通常はコンテンツの編集に使用されますが、情報のみを表示することもできます。
 
 * dialogfieldset
 
@@ -385,13 +383,13 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.grid.GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)
 
-  このクラスは、行と列の表形式でデータを表示する、コンポーネントをベースにしたグリッドコントロールのプライマリインターフェイスを表示します。
+  このクラスは、行と列の表形式でデータを表す、コンポーネントベースのグリッドコントロールの主なインターフェイスを表します。
 
 * groupingstore
 
   [CQ.Ext.data.GroupingStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.GroupingStore)
 
-  利用可能なフィールドの 1 つでレコードをグループ化できるようにする、専用のストア実装。これは通常、 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) を使用して、グループ化された GridPanel のデータモデルを検証します。
+  利用可能なフィールドの 1 つでレコードをグループ化できるようにする、専用のストア実装。これは、 [CQ.Ext.grid.GroupingView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GroupingView) を使用して、グループ化された GridPanel のデータモデルを検証します。
 
 * heavymovedialog
 
@@ -403,7 +401,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.form.Hidden](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.Hidden)
 
-  フォームの送信で渡す必要があるフォーム内の非表示の値を格納するための、基本的な非表示フィールド。
+  フォーム送信時に渡す必要のあるフォームに、非表示の値を保存するための基本的な非表示フィールドです。
 
 * historybutton
 
@@ -471,7 +469,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.wcm.msm.LiveCopyProperties](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.msm.LiveCopyProperties)
 
-  LiveCopyProperties は、ライブコピープロパティ（関係の継承、同期のトリガー、同期操作）を表示および編集できるパネルを提供します。
+  LiveCopyProperties は、ライブコピーのプロパティ ( 関係の継承、同期トリガー、同期アクション ) を表示および編集するパネルを提供します。
 
 * lvbooleancolumn
 
@@ -517,7 +515,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem)
 
-  メニューにレンダリングするすべてのアイテムの基本クラス。BaseItem は、デフォルトのレンダリング、アクティブ化された状態の管理、すべてのメニューコンポーネントで共有される基本構成オプションを提供します。
+  メニューにレンダリングするすべてのアイテムの基本クラス。BaseItem は、デフォルトのレンダリング、アクティブな状態管理、およびすべてのメニューコンポーネントで共有される基本構成オプションを提供します。
 
 * menucheckitem
 
@@ -529,25 +527,25 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.menu.Item](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Item)
 
-  メニュー関連の機能（サブメニューなど）を必要とし、静的表示アイテムではないすべてのメニューアイテムの基底クラス。項目は、 [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem) メニュー固有のアクティベーションを追加し、「処理」をクリックします。
+  メニュー関連の機能（サブメニューなど）を必要とする、静的表示項目ではないすべてのメニュー項目の基本クラス。 項目は、 [CQ.Ext.menu.BaseItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.BaseItem) メニュー固有のアクティベーションを追加し、「処理」をクリックします。
 
 * menuseparator
 
   [CQ.Ext.menu.Separator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.Separator)
 
-  メニューに区切りバーを追加します。区切りバーは、メニューアイテムを論理的なグループに分けるために使用されます。通常は、add() を呼び出す際に&quot;-&quot;を使用し、直接作成するのではなく、アイテム設定に追加します。
+  メニューに区切りバーを追加します。区切りバーは、メニューアイテムを論理的なグループに分けるために使用されます。一般に、これらのうちの 1 つを追加するには、直接作成するのではなく、add() の呼び出しで「 — 」を使用するか、項目設定で追加します。
 
 * menutextitem
 
   [CQ.Ext.menu.TextItem](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.menu.TextItem)
 
-  通常は見出しやグループ区切りとして使用される静的テキスト文字列をメニューに追加します。
+  メニューに静的テキスト文字列を追加します。この文字列は、見出しまたはグループ区切り文字として使用されます。
 
 * メタデータ
 
   [CQ.dam.form.Metadata](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.dam.form.Metadata)
 
-  メタデータは、アセットエディターのページなどで使用されるメタデータフィールドに必要な情報を決定するための一連のフィールドを提供します。
+  メタデータは、アセットエディターページなどで使用されるメタデータフィールドに必要な情報を決定するための一連のフィールドを提供します。
 
   次のフィールドを提供します。
 
@@ -561,7 +559,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.form.MVT](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.MVT)
 
-  多変量分析テストコンポーネントを使用して、代替バナーとして表示される画像のセットを定義および編集できます。 クリックスルー率の統計は、バナーごとに収集されます。
+  Multivariate Testingコンポーネントを使用すると、1 つおきのバナーとして表示される画像のセットを定義および編集できます。 クリックスルー率の統計は、バナーごとに収集されます。
 
 * notificationinbox
 
@@ -579,7 +577,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.wcm.OfflineImporter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.OfflineImporter)
 
-  OfflineImporter は、Microsoft Word ドキュメントを AEM ページにインポートして変換するツールです。この機能により、ワード プロセッサを使用してオフラインでコンテンツを編集することができます。
+  OfflineImporter は、Microsoft® Word ドキュメントを読み込み、AEMページに変換するツールです。 この機能により、ワード プロセッサを使用してオフラインでコンテンツを編集することができます。
 
 * ownerdraw
 
@@ -591,7 +589,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.PagingToolbar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.PagingToolbar)
 
-  レコードの量が増えると、ブラウザーでレンダリングするのに必要な時間が長くなります。 ページングは、クライアントとやり取りされるデータの量を減らすために使用されます。
+  レコードの数が増えると、ブラウザーでレンダリングするのに必要な時間が長くなります。 ページングは、クライアントとやり取りされるデータの量を減らすために使用されます。
 
 * panel
 
@@ -605,7 +603,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.form.ParagraphReference](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.ParagraphReference)
 
-  段落の参照フィールドでは、ページを閲覧したり、段落の 1 つを選択したりできます。これは、トリガーフィールドと関連する段落参照ダイアログで構成されます。
+  段落参照フィールドを使用して、ページを参照し、段落の 1 つを選択できます。 これは、トリガーフィールドと関連する段落参照ダイアログボックスで構成されます。
 
 * パスワード
 
@@ -765,7 +763,7 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   SmartImage は、インテリジェントな画像アップローダです。 アップロードされた画像を処理するツール（例えば、画像マップを定義するツールや画像クロッパー）を提供します。
 
-  このコンポーネントは、主に別のダイアログタブで使用するように設計されています。
+  このコンポーネントは、別のダイアログタブで使用するように設計されています。
 
 * spacer
 
@@ -777,13 +775,13 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.form.Spinner](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.Spinner)
 
-  スピナーは、数値、日付、時間の値のトリガーフィールドです。 上下のトリガー、スクロールホイールまたはキーを使用すると、値を増減できます。
+  スピナーは、数値、日付、または時間の値のトリガーフィールドです。 上下のトリガー、スクロールホイールまたはキーを使用すると、値を増減できます。
 
 * splitbutton
 
   [CQ.Ext.SplitButton](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.SplitButton)
 
-  デフォルトのボタンのクリックイベントとは別に、イベントを発生させることのできる組み込みのドロップダウン矢印を提供する分割ボタン。これは通常、プライマリボタンのアクションに追加のオプションを提供するドロップダウンメニューの表示用に使用されます。ただし、カスタムハンドラーにより、矢印クリックの実装を提供できます。
+  デフォルトのボタンのクリックイベントとは別に、イベントを発生させることのできる組み込みのドロップダウン矢印を提供する分割ボタン。通常、これは、プライマリボタンの操作に追加のオプションを提供するドロップダウンメニューを表示するために使用されますが、任意のカスタムハンドラーで矢印クリックの実装を提供できます。
 
 * static
 
@@ -801,13 +799,13 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)
 
-  Store クラスは、[GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)、[ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)、[DataView](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView) などのコンポーネントの入力データを提供する [Record](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) オブジェクトのクライアントサイドキャッシュをカプセル化します。
+  Store クラスは、 [レコード](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Record) コンポーネントに入力データを提供するオブジェクト ( 例： [GridPanel](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.grid.GridPanel)、 [ComboBox](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.form.ComboBox)、または [データビュー](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.DataView).
 
 * suggestfield
 
   [CQ.form.SuggestField](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.SuggestField)
 
-   SuggestField は、ユーザーの入力に基づいた候補を提供します。
+  SuggestField は、ユーザーの入力に基づいて候補を提供します。
 
 * switcher
 
@@ -875,13 +873,13 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.Tip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tip)
 
-  @xtype tip は、[CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) と [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) の基底クラスであり、すべてのヒントベースのクラスで必要な基本のレイアウトと配置を提供します。このクラスは、単純で静的に配置された tip に直接使用できます。
+  @xtype tip は、[CQ.Ext.QuickTip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.QuickTip) と [CQ.Ext.Tooltip](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.Tooltip) の基底クラスであり、すべてのヒントベースのクラスで必要な基本のレイアウトと配置を提供します。このクラスは、単純で静的な位置に配置された tip に直接使用できます。
 
 * titleseparator
 
   [CQ.menu.TitleSeparator](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.menu.TitleSeparator)
 
-  メニューに区切りバーを追加します。区切りバーは、メニューアイテムを論理的なグループに分けるために使用されます。区切り文字には、タイトルを追加で含めることができます。
+  メニューに区切りバーを追加します。区切りバーは、メニューアイテムを論理的なグループに分けるために使用されます。区切り文字には、タイトルを含めることもできます。
 
 * toolbar
 
@@ -945,6 +943,6 @@ AEM で特定の xtype が使用されるコンポーネントを探すには、
 
   [CQ.Ext.data.XmlStore](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlStore)
 
-  作成する小さなヘルパークラス [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)を XML データから簡単に取得できます。 XmlStore は [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
+  作成する小さなヘルパークラス [CQ.Ext.data.Store](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.Store)を XML データから簡単に取得できます。 XmlStore は、 [CQ.Ext.data.XmlReader](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.Ext.data.XmlReader).
 
   **cqinclude** リポジトリ内の別のパスのウィジェットの定義を含む疑似 xtype。ページダイアログで最も一般的に使用されます。 この xtype に対する実際の JavaScript ウィジェットクラスはありません。 CQ.Util クラスの formatData() 関数によって処理されます。詳しくは、このナレッジベースの記事を参照してください。

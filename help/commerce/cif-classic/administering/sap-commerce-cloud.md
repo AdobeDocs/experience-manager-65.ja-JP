@@ -1,15 +1,14 @@
 ---
 title: AEM と SAP Commerce Cloud の使用
 description: AEM と SAP Commerce Cloud の使用方法を説明します。
-uuid: cee1a781-fcba-461e-a0a4-c561a1dbcbf3
 contentOwner: Guillaume Carlino
 topic-tags: e-commerce
 content-type: reference
 exl-id: c342f789-2ff7-4802-99c7-c3699218fe47
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '1717'
-ht-degree: 100%
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+workflow-type: tm+mt
+source-wordcount: '1702'
+ht-degree: 80%
 
 ---
 
@@ -17,7 +16,7 @@ ht-degree: 100%
 
 インストール後、次のインスタンスを設定できます。
 
-1. [Geometrixx Outdoors 用のファセット検索を設定する](#configure-the-facetted-search-for-geometrixx-outdoors)。
+1. [ファセット検索のGeometrixx Outdoors](#configure-the-facetted-search-for-geometrixx-outdoors).
 1. [カタログバージョンを設定します](#configure-the-catalog-version)。
 1. [読み込み構造を設定する](#configure-the-import-structure)。
 1. [読み込む製品属性を設定する](#configure-the-product-attributes-to-load)。
@@ -25,7 +24,7 @@ ht-degree: 100%
 1. [カタログインポーターを設定します](#configure-the-catalog-importer)。
 1. [インポーターを使用して、カタログを AEM の特定の場所に読み込みます](#catalog-import)。
 
-## Geometrixx Outdoors 用にファセット検索を設定する {#configure-the-facetted-search-for-geometrixx-outdoors}
+## ファセット検索のGeometrixx Outdoors {#configure-the-facetted-search-for-geometrixx-outdoors}
 
 >[!NOTE]
 >
@@ -52,27 +51,27 @@ ht-degree: 100%
    >
    >コンテキストメニュー（通常は右ボタンをクリック）を使用して、「`Create Solr sort`」を選択します。
    >
-   >Hybris 5.0.0 の場合は、「`Indexed Types`」タブを開き、「`ClothesVariantProduct`」をダブルクリックして「`SOLR Sort`」タブを開きます。
+   >Hybris 5.0.0 の場合は、 `Indexed Types` タブ、ダブルクリック `ClothesVariantProduct`をクリックし、次に「 」タブをクリックします。 `SOLR Sort`.
 
    ![chlimage_1-36](/help/sites-administering/assets/chlimage_1-36a.png)
 
-1. 「**Indexed Types**」タブで、「**Composed Type**」を次のように設定します。
+1. 内 **インデックス付き型** タブ、 **合成タイプ** 移動先：
 
    `Product - Product`
 
-1. 「**Indexed Types**」タブで、「`full`」の「**Indexer queries**」を次のように変更します。
+1. 内 **インデックス付き型** タブ、調整 **インデクサークエリ** 対象 `full`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}})
    ```
 
-1. 「**Indexed Types**」タブで、「`incremental`」の「**Indexer queries**」を次のように変更します。
+1. 内 **インデックス付き型** タブ、調整 **インデクサークエリ** 対象 `incremental`:
 
    ```shell
    SELECT {pk} FROM {Product} WHERE {pk} NOT IN ({{SELECT {baseProductpk} FROM {variantproduct}}}) AND {modifiedtime} <= ?lastIndexTime
    ```
 
-1. 「**Indexed Types**」タブで、`category` ファセットを変更します。カテゴリリストの最後のエントリをダブルクリックすると、「**Indexed property**」タブが表示されます。
+1. 内 **インデックス付き型** タブ、調整 `category` ファセット。 カテゴリリストの最後のエントリをダブルクリックして、 **インデックス付きプロパティ** タブ：
 
    >[!NOTE]
    >
@@ -85,7 +84,7 @@ ht-degree: 100%
    ![chlimage_1-39](/help/sites-administering/assets/chlimage_1-39a.png)
 
 1. 変更内容を&#x200B;**保存**&#x200B;します。
-1. 再び「**SOLR Item types**」から、以下のスクリーンショットに従って、`price` ファセットを変更します。`category` と同様に、`price` をダブルクリックすると、「**Indexed property**」タブが表示されます。
+1. 再び「**SOLR Item types**」から、以下のスクリーンショットに従って、`price` ファセットを変更します。例： `category`，ダブルクリック `price` 開く **インデックス付きプロパティ** タブ：
 
    ![chlimage_1-40](/help/sites-administering/assets/chlimage_1-40a.png)
 
@@ -106,7 +105,7 @@ ht-degree: 100%
 **Day CQ Commerce Hybris 設定**
 （`com.adobe.cq.commerce.hybris.common.DefaultHybrisConfigurationService`）
 
-通常、**カタログバージョン**&#x200B;は、`Online` または `Staged`（デフォルト）に設定されます。 
+**カタログバージョン** が `Online` または `Staged` （デフォルト）。
 
 >[!NOTE]
 >
@@ -151,7 +150,7 @@ ht-degree: 100%
               + ...
 ```
 
-`DefaultImportHandler` インターフェイスを実装する OSGi サービス `ImportHandler` によって、このような構造が作成されます。商品、商品バリエーション、カテゴリ、アセットなどを作成するために、実際のインポーターによって読み込みハンドラーが呼び出されます。
+`DefaultImportHandler` インターフェイスを実装する OSGi サービス `ImportHandler` によって、このような構造が作成されます。読み込みハンドラーは、製品、製品のバリエーション、カテゴリ、アセットなどを作成するために、実際のインポーターによって呼び出されます。
 
 >[!NOTE]
 >
@@ -181,7 +180,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 ## 製品データの読み込み {#importing-the-product-data}
 
-製品データを読み込むには、様々な方法があります。製品データは、環境の初期設定時または hybris データに変更が加えられた後に、読み込むことができます。
+製品データを読み込むには、様々な方法があります。 製品データは、環境の初期設定時または hybris データに変更が加えられた後に、読み込むことができます。
 
 * [完全読み込み](#full-import)
 * [増分読み込み](#incremental-import)
@@ -199,13 +198,13 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 >[!NOTE]
 >
->hybris 実装（`geometrixx-outdoors/en_US`）は、商品 ID と他の基本的な情報のみを `/etc/commerce` の配下に保存します。
+>hybris 実装 ( `geometrixx-outdoors/en_US`) は、製品 ID およびその他の基本情報のみを `/etc/commerce`.
 >
 >hybris サーバーは、製品に関する情報がリクエストされるたびに参照されます。
 
 ### 完全読み込み {#full-import}
 
-1. 必要に応じて、CRXDE Lite を使用して、すべての既存製品データを削除します。
+1. 必要に応じて、既存の製品データをすべて削除します。CRXDE Lite。
 
    1. 商品データを保持するサブツリーに移動します。
 
@@ -244,7 +243,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 ### 増分読み込み {#incremental-import}
 
-1. AEM で保持されている関連製品の情報を、次の場所にある適切なサブツリーで確認します。
+1. AEMで保持されている情報で、次の場所にある適切なサブツリーで、該当する製品を確認します。
 
    `/etc/commerce/products`
 
@@ -252,7 +251,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-1. hybris で、関連商品に関して保持している情報を更新します。
+1. hybris で、関連する製品に保持されている情報を更新します。
 
 1. AEM で hybris インポーターを開きます。
 
@@ -262,7 +261,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. 「**増分読み込み**」チェックボックスを選択します。
+1. チェックボックスを選択します。 **増分読み込み**.
 1. 「**カタログをインポート**」をクリックして読み込みを開始します。
 
    完了したら、AEM で更新されたデータを次の場所で確認できます。
@@ -276,7 +275,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 読み込み処理には長い時間がかかることがあるので、商品同期の拡張として、カタログの特定の領域を選択して手動で呼び出される高速更新を実行できます。書き出しフィードと標準属性設定を使用します。
 
-1. AEM で保持されている関連製品の情報を、次の場所にある適切なサブツリーで確認します。
+1. AEMで保持されている情報で、次の場所にある適切なサブツリーで、該当する製品を確認します。
 
    `/etc/commerce/products`
 
@@ -284,9 +283,9 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    [http://localhost:4502/crx/de/index.jsp#/etc/commerce/products](http://localhost:4502/crx/de/index.jsp#/etc/commerce/products)
 
-1. hybris で、関連商品に関して保持している情報を更新します。
+1. hybris で、関連する製品に保持されている情報を更新します。
 
-1. hybris で、商品を Express Queue に追加します。次に例を示します。
+1. hybris で、1 つ以上の製品を Express Queue に追加します。例：
 
    ![chlimage_1-43](/help/sites-administering/assets/chlimage_1-43a.png)
 
@@ -298,7 +297,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
    [http://localhost:4502/etc/importers/hybris.html](http://localhost:4502/etc/importers/hybris.html)
 
-1. クリックボックス「**高速更新**」を選択します。
+1. チェックボックスを選択します。 **高速更新**.
 1. 「**カタログをインポート**」をクリックして読み込みを開始します。
 
    完了したら、AEM で更新されたデータを次の場所で確認できます。
@@ -309,7 +308,7 @@ hybris から読み込まれた実際の商品情報は、次の場所にある�
 
 ## カタログインポーターの設定 {#configure-the-catalog-importer}
 
-hybris カタログは、hybris カタログ、カテゴリおよび商品用のバッチインポーターを使用して AEM に読み込むことができます。
+hybris カタログは、hybris カタログ、カテゴリおよび製品用のバッチインポーターを使用してAEMに読み込むことができます。
 
 インポーターが使用するパラメーターは、以下に合わせて設定できます。
 
@@ -328,7 +327,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 ![ecommerceimportconsole](/help/sites-administering/assets/ecommerceimportconsole.png)
 
-以下の情報を指定する必要があります。
+次の情報を指定する必要があります。
 
 * **基本ストア** hybris で設定された基本ストアの識別子。
 
@@ -353,8 +352,8 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 1. 増分更新を 2 回実行して、インポーターを初期化します（[カタログの読み込み](#catalog-import)を参照）。
 
-   * 1 回目の実行では、変更された商品セットがログリストに表示されます。
-   * 2 回目は、製品を更新する必要はありません。
+   * 初回の実行では、変更された製品のセットがログリストに表示されます。
+   * 2 回目は、製品は更新されません。
 
    >[!NOTE]
    >
@@ -375,23 +374,23 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    * `Cajamara` を検索します
    * この商品を選択し、承認ステータスを「`unapproved`」に変更します。
 
-1. 増分更新を再度実行します（[カタログの読み込み](#catalog-import)を参照）。ログには、削除された製品がリストされます。
-1. 該当するカタログを[ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)します。製品および製品ページが AEM 内から削除されます。
+1. 増分更新を再度実行します（[カタログの読み込み](#catalog-import)を参照）。ログには、削除された製品が一覧表示されます。
+1. 該当するカタログを[ロールアウト](/help/commerce/cif-classic/administering/generic.md#rolling-out-a-catalog)します。製品ページと製品ページがAEM内から削除されました。
 
    次に例を示します。
 
    * 次を開きます：:
 
-      [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
+     [http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris](http://localhost:4502/aem/catalogs.html/content/catalogs/geometrixx-outdoors-hybris)
 
    * `Hybris Base` カタログをロールアウトします
    * 次を開きます：:
 
-      [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
+     [http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html](http://localhost:4502/editor.html/content/geometrixx-outdoors/en_US/equipment/biking.html)
 
-   * `Cajamara` 商品が `Bike` カテゴリから削除されました
+   * この `Cajamara` 製品が `Bike` カテゴリ
 
-1. 商品を元に戻すには：
+1. 製品を回復する手順は、次のとおりです。
 
    1. hybris で、承認ステータスを「**approved**」に戻します。
    1. AEM で以下を行います。
@@ -406,7 +405,7 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
 
 1. 次のどちらかの方法で、[ClientContext のデザインページ](/help/sites-administering/client-context.md)を開きます。
 
-   * 編集するページを開いてから、**Ctrl + Alt + C** キー（Windows）または **control + option + C** キー（Mac）を使用してクライアントコンテキストを開きます。ClientContext の左上隅にある鉛筆アイコンを使用して、**ClientContext のデザインページを開きます**。
+   * 編集するページを開いてから、**Ctrl + Alt + C** キー（Windows）または **control + option + C** キー（Mac）を使用してクライアントコンテキストを開きます。ClientContext の左上隅にある鉛筆アイコンを使用して、 **ClientContextデザインページを開く**.
    * [http://localhost:4502/etc/clientcontext/default/content.html](http://localhost:4502/etc/clientcontext/default/content.html) に直接移動します。
 
 1. [**注文履歴**&#x200B;コンポーネント](/help/sites-administering/client-context.md#adding-a-property-component)をクライアントコンテキストの&#x200B;**買い物かご**&#x200B;コンポーネントに追加します。
@@ -430,7 +429,6 @@ hybris パッケージには、初期ページ構造を設定するためのカ�
    >
    >  キャンペーンは 1 つのエクスペリエンスで構成されます。
    >
-   >* セグメント（[http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html)）をクリックします。
+   >* セグメント ([http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html](http://localhost:4502/etc/segmentation/geometrixx-outdoors/returning-customer.html))
    >
    >* **注文履歴プロパティ**&#x200B;特性を使用してセグメントが作成されます。
-

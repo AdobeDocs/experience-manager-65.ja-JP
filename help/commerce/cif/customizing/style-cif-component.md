@@ -1,6 +1,6 @@
 ---
-title: AEM CIF コアコンポーネントのスタイル設定
-description: AEM CIF コアコンポーネントのスタイル設定方法を説明します。このチュートリアルでは、クライアントサイドライブラリ（clientlib）を使用して、Adobe Experience Manager（AEM）Commerce 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。このチュートリアルでは、ui.frontend モジュールと webpack プロジェクトがエンドツーエンドのビルドプロセスに統合される方法についても説明します。
+title: Adobe Experience Manager CIF コアコンポーネントのスタイル設定
+description: Adobe Experience Manager CIF コアコンポーネントのスタイル設定方法を説明します。 このチュートリアルでは、クライアント側ライブラリ (clientlib) を使用して、Adobe Experience Manager(AEM)Commerce 実装の CSS と JavaScript をデプロイおよび管理する方法について説明します。 このチュートリアルでは、ui.frontend モジュールと webpack プロジェクトがエンドツーエンドのビルドプロセスに統合される方法についても説明します。
 sub-product: Commerce
 topics: Development
 version: Cloud Service
@@ -9,16 +9,16 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
-source-git-commit: 63f066013c34a5994e2c6a534d88db0c464cc905
-workflow-type: ht
-source-wordcount: '2551'
-ht-degree: 100%
+source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+workflow-type: tm+mt
+source-wordcount: '2535'
+ht-degree: 79%
 
 ---
 
 # AEM CIF コアコンポーネントのスタイル設定 {#style-aem-cif-core-components}
 
-[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、Venia 参照用プロジェクトを調べ、AEM CIF コアコンポーネントで使用される CSS と JavaScript がどのように構成されているかを説明します。また、CSS を使用して新しいスタイルを作成し、**製品ティーザー**&#x200B;コンポーネントのデフォルトのスタイルをアップデートします。
+[CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。このチュートリアルでは、Venia 参照プロジェクトを調べ、AEM CIF コアコンポーネントで使用される CSS と JavaScript がどのように整理されているかを理解します。 また、CSS を使用してスタイルを作成し、 **製品ティーザー** コンポーネント。
 
 >[!TIP]
 >
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 ## 作成する内容
 
-このチュートリアルでは、カードに似た製品ティーザーコンポーネントに新しいスタイルを実装します。このチュートリアルで学習した内容は、他の CIF コアコンポーネントにも適用できます。
+このチュートリアルでは、カードに似た製品ティーザーコンポーネントに新しいスタイルを実装します。 このチュートリアルで学習した内容は、他の CIF コアコンポーネントにも適用できます。
 
 ![作成する内容](../assets/style-cif-component/what-you-will-build.png)
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 
 ## Venia プロジェクトのクローン {#clone-venia-project}
 
-Venia プロジェクト[のクローンを作成して](https://github.com/adobe/aem-cif-guides-venia)、デフォルトのスタイルを上書きします。
+クローンを作成しました [Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia) その後、既定のスタイルを上書きします。
 
 >[!NOTE]
 >
@@ -65,17 +65,17 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 ## クライアントライブラリと ui.frontend モジュール {#introduction-to-client-libraries}
 
-ストアフロントのテーマ／スタイルのレンダリングを担う CSS と JavaScript は、AEM で[クライアントライブラリ](/help/sites-developing/clientlibs.md)（clientlib）によって管理されます。クライアントライブラリは、プロジェクトのコード内で CSS と JavaScript を整理し、ページに配信するメカニズムを提供します。
+ストアフロントのテーマ／スタイルのレンダリングを担う CSS と JavaScript は、AEM で[クライアントライブラリ](/help/sites-developing/clientlibs.md)（clientlib）によって管理されます。クライアントライブラリは、プロジェクトのコード内の CSS と JavaScript を整理し、ページに配信するメカニズムを提供します。
 
-ブランド固有のスタイルは、これらのクライアントライブラリで管理される CSS を追加および上書きして、AEM CIF コアコンポーネントに適用できます。クライアントライブラリが構造化されてページに含まれる方法を理解することが重要です。
+ブランド固有のスタイルは、これらのクライアントライブラリで管理される CSS を追加および上書きすることで、AEM CIF コアコンポーネントに適用できます。 クライアントライブラリが構造化されてページに含まれる方法を理解することが重要です。
 
 [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=ja) は、プロジェクトのすべてのフロントエンドアセットを管理するための専用の [webpack](https://webpack.js.org/) プロジェクトです。これにより、フロントエンド開発者は、[TypeScript](https://www.typescriptlang.org/)、[Sass](https://sass-lang.com/) など、様々な言語やテクノロジーを使用できます。
 
-`ui.frontend` モジュールは Maven モジュールでもあり、NPM モジュールの [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) を使用して、より大きなプロジェクトに統合されています。ビルド時に、`aem-clientlib-generator` はコンパイル済みの CSS ファイルおよび JavaScript ファイルを `ui.apps` モジュールのクライアントライブラリにコピーします。
+この `ui.frontend` モジュールは、Maven モジュールでもあり、NPM モジュールを使用して、より大きなプロジェクトに統合されます。 [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). ビルド時に、`aem-clientlib-generator` はコンパイル済みの CSS ファイルおよび JavaScript ファイルを `ui.apps` モジュールのクライアントライブラリにコピーします。
 
 ![ui.frontend to ui.apps architecture](../assets/style-cif-component/ui-frontend-architecture.png)
 
-*コンパイル済みの CSS と JavaScript は、Maven のビルド中に `ui.frontend` モジュールから `ui.apps` モジュールにクライアントライブラリとしてコピーされます*。
+*コンパイル済みの CSS と JavaScript は、 `ui.frontend` モジュールを `ui.apps` Maven ビルド時のクライアントライブラリとしてのモジュール*
 
 ## ティーザースタイルのアップデート {#ui-frontend-module}
 
@@ -106,7 +106,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
    }
    ```
 
-   上記のルールは、製品ティーザーコンポーネントに非常に太いピンク色の枠線を追加します。
+   上記のルールでは、製品ティーザーコンポーネントに太いピンク色の枠線を追加します。
 
 1. 新しいターミナルウィンドウを開き、`ui.frontend` フォルダーに移動します。
 
@@ -127,7 +127,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
    [INFO] ------------------------------------------------------------------------
    ```
 
-   端末出力を検査します。Maven コマンドが、`npm run build` を含む複数の NPM スクリプトを実行したことがわかります。`npm run build` コマンドは `package.json` ファイル内で定義され、WebPack プロジェクトをコンパイルしてクライアントライブラリの生成をトリガーする効果があります。
+   端末出力を検査します。Maven コマンドが、次のような複数の NPM スクリプトを実行したことを確認できます。 `npm run build`. `npm run build` コマンドは `package.json` ファイル内で定義され、WebPack プロジェクトをコンパイルしてクライアントライブラリの生成をトリガーする効果があります。
 
 1. `ui.frontend/dist/clientlib-site/site.css` ファイルを検査します。
 
@@ -180,7 +180,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    **clientlib-cif** - これは、 [AEM CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)から必要な依存関係を単純に埋め込んだ空のクライアントライブラリでもあります。カテゴリは `venia.cif` です。
 
-   **clientlib-grid** - AEM レスポンシブグリッド機能を有効にするために必要な CSS が含まれます。AEM グリッドを使用すると、AEM エディターで[レイアウトモード](/help/sites-authoring/responsive-layout.md)が有効になり、コンテンツ作成者はコンポーネントのサイズを変更できます。カテゴリは `venia.grid` で、 `venia.base` ライブラリに埋め込まれます。
+   **clientlib-grid** - AEM レスポンシブグリッド機能を有効にするために必要な CSS が含まれます。AEMグリッドを使用すると、 [レイアウトモード](/help/sites-authoring/responsive-layout.md) AEM Editor を使用し、コンテンツ作成者がコンポーネントのサイズを変更できるようにします。 カテゴリは `venia.grid` で、 `venia.base` ライブラリに埋め込まれます。
 
 1. `ui.apps/src/main/content/jcr_root/apps/venia/components/page` の `customheaderlibs.html` ファイルと `customfooterlibs.html` ファイルを検査します。
 
@@ -201,7 +201,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 ## 製品ティーザーの作成 {#author-product-teaser}
 
-コードのアップデートがデプロイされたので、AEM オーサリングツールを使用して、製品ティーザーコンポーネントの新しいインスタンスをサイトのホームページに追加します。これにより、アップデートされたスタイルの表示が可能になります。
+コードのアップデートがデプロイされたので、AEM オーサリングツールを使用して、製品ティーザーコンポーネントの新しいインスタンスをサイトのホームページに追加します。これにより、更新されたスタイルを表示できます。
 
 1. 新しいブラウザータブを開き、サイトの&#x200B;**ホームページ**（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）に移動します。
 
@@ -213,7 +213,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    ![製品ティーザー（ピンクの枠線付き）](../assets/style-cif-component/pink-border-product-teaser.png)
 
-   以前に作成した CSS ルールの変更に基づき、製品ティーザーの枠線が明るいピンク色になりました。
+   以前に作成した CSS ルールの変更に基づいて、製品ティーザーの枠線が明るいピンク色になりました。
 
 ## ページ上でのクライアントライブラリの検証 {#verify-client-libraries}
 
@@ -225,7 +225,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    ![公開済みとして表示](../assets/style-cif-component/view-as-published.png)
 
-   これにより、AEM 作成者の javascript が読み込まれない状態で、公開されたサイトに表示されるようにページが開きます。URL に `?wcmmode=disabled` クエリパラメーターが追加されていることに注意してください。CSS と JavaScript を開発する場合は、このパラメーターを使用して、AEM オーサーからのコンテンツを含めずに、ページを簡略化することをお勧めします。
+   これにより、AEMオーサーの JavaScript が読み込まれずに、公開されたサイトに表示されるページが開きます。 URL に `?wcmmode=disabled` クエリパラメーターが追加されていることに注意してください。CSS と JavaScript を開発する場合は、このパラメーターを使用して、AEM作成者が提供する内容を一切含めずにページを簡略化することをお勧めします。
 
 1. ページソースを表示し、次のクライアントライブラリをいくつか識別できるようにします。
 
@@ -249,7 +249,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
    クライアントライブラリは、ページに配信される際に `/etc.clientlibs` プレフィックスが付けられ、[プロキシ](/help/sites-developing/clientlibs.md)経由で提供され、`/apps` や `/libs` で機密事項が公開されないようになります。
 
-   `venia/clientlibs/clientlib-site.min.css` と `venia/clientlibs/clientlib-site.min.js` に注意してください。これらは、`ui.frontend` モジュールから派生したコンパイル済みの CSS ファイルと JavaScript ファイルです。
+   `venia/clientlibs/clientlib-site.min.css` と `venia/clientlibs/clientlib-site.min.js` に注意してください。これらは、 `ui.frontend` モジュール。
 
 ## ページテンプレートによるクライアントライブラリの追加 {#client-library-inclusion-pagetemplates}
 
@@ -280,13 +280,13 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
    * `venia.dependencies` - `venia.site` が依存するベンダーライブラリを提供します。
    * `venia.site` - `ui.frontend` モジュールが生成する `clientlib-site` のカテゴリです。
 
-   他のテンプレートも同じポリシー、**コンテンツページ**、**ランディングページ**&#x200B;などを使用しています。 同じポリシーを再利用すると、同じクライアントライブラリをすべてのページに確実に含めることができます。
+   他のテンプレートも同じポリシー、**コンテンツページ**、**ランディングページ**&#x200B;などを使用しています。 同じポリシーを再利用することで、同じクライアントライブラリをすべてのページに確実に含めることができます。
 
-   テンプレートポリシーとページポリシーを使用してクライアントライブラリの組み込みを管理する利点は、テンプレートごとにポリシーを変更できることです。例えば、同じ AEM インスタンス内で 2 つの異なるブランドを管理しているとします。各ブランドには独自のスタイルまたは&#x200B;*テーマ*&#x200B;がありますが、基本ライブラリとコードは同じです。別の例として、特定のページにのみ表示したい大きなクライアントライブラリがある場合、そのテンプレートにのみ固有のページポリシーを作成できます。
+   テンプレートポリシーとページポリシーを使用してクライアントライブラリの組み込みを管理する利点は、テンプレートごとにポリシーを変更できることです。例えば、同じ AEM インスタンス内で 2 つの異なるブランドを管理しているとします。各ブランドには独自のスタイルまたは *テーマ* ただし、基本ライブラリとコードは同じです。 別の例として、特定のページにのみ表示したい大きなクライアントライブラリがある場合、そのテンプレートにのみ固有のページポリシーを作成できます。
 
 ## ローカル WebPack の開発 {#local-webpack-development}
 
-先ほどの演習では、`ui.frontend` モジュール内の Sass ファイルを更新し、Maven ビルドを実行した後に、変更を AEM にデプロイしました。次に、webpack-dev-server を活用して、フロントエンドのスタイルを迅速に開発する方法を説明します。
+先ほどの演習では、`ui.frontend` モジュール内の Sass ファイルを更新し、Maven ビルドを実行した後に、変更を AEM にデプロイしました。次に、webpack-dev-server を使用して、フロントエンドスタイルを迅速に開発する方法について説明します。
 
 webpack-dev-server は、AEM のローカルインスタンスから画像と一部の CSS/JavaScript をプロキシしますが、デベロッパーは、`ui.frontend` モジュール内のスタイルと JavaScript を変更できます。
 
@@ -324,7 +324,7 @@ webpack-dev-server は、AEM のローカルインスタンスから画像と一
    $ npm start
    ```
 
-   [http://localhost:8080/](http://localhost:8080/) で webpack-dev-server が起動します。
+   これにより、 [http://localhost:8080/](http://localhost:8080/)
 
    >[!CAUTION]
    >
@@ -338,11 +338,11 @@ webpack-dev-server は、AEM のローカルインスタンスから画像と一
 
 ## 製品ティーザー用のカードスタイルの実装 {#update-css-product-teaser}
 
-次に、 `ui.frontend` モジュール内の Sass ファイルを変更し、製品ティーザー用のカードに似たスタイルを実装します。webpack-dev-server は、変更をすぐに確認するために使用します。
+次に、 `ui.frontend` モジュール内の Sass ファイルを変更し、製品ティーザー用のカードに似たスタイルを実装します。webpack-dev-server は、変更をすばやく確認するために使用します。
 
 IDE と生成されたプロジェクトに戻ります。
 
-1. **ui.frontend** モジュールで、`_productteaser.scss` ファイルを再度開きます（`ui.frontend/src/main/styles/commerce/_productteaser.scss`）。
+1. 内 **ui.frontend** モジュール、ファイルを再度開く `_productteaser.scss` 時刻 `ui.frontend/src/main/styles/commerce/_productteaser.scss`.
 
 1. 製品ティーザーの枠線に次の変更を加えます。
 
@@ -435,7 +435,7 @@ IDE と生成されたプロジェクトに戻ります。
 
    ただし、変更は AEM にまだデプロイされていません。ソリューションファイルは、[こちら](../assets/style-cif-component/_productteaser.scss)からダウンロードできます。
 
-1. コマンドラインターミナルから、Maven スキルを使用して AEM にアップデートを展開します。
+1. コマンドラインターミナルから、Maven のスキルを使用してAEMにアップデートをデプロイします。
 
    ```shell
    $ cd aem-cif-guides-venia/
@@ -447,13 +447,13 @@ IDE と生成されたプロジェクトに戻ります。
 
 ## アップデートされた製品ティーザーを表示 {#view-updated-product-teaser}
 
-プロジェクトのコードを AEM にデプロイした後は、製品ティーザーの変更を確認できるようになります。
+プロジェクトのコードをAEMにデプロイすると、製品ティーザーの変更を確認できるようになります。
 
-1. ブラウザーに戻り、ホームページ（[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)）を再度更新します。アップデートされた製品ティーザースタイルが適用されていることが確認できます。
+1. ブラウザーに戻り、ホームページを更新します。 [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html). アップデートされた製品ティーザースタイルが適用されていることが確認できます。
 
    ![製品ティーザースタイルのアップデート](../assets/style-cif-component/product-teaser-new-style.png)
 
-1. 製品ティーザーを追加してテストします。複数のティーザーを一列に表示するためには、レイアウトモードを使用して、コンポーネントの幅とオフセットを変更します。
+1. 製品ティーザーを追加してテストします。複数のティーザーを一列に表示するには、レイアウトモードを使用して、コンポーネントの幅とオフセットを変更します。
 
    ![複数の製品ティーザー](../assets/style-cif-component/multiple-teasers-final.png)
 
@@ -461,13 +461,13 @@ IDE と生成されたプロジェクトに戻ります。
 
 [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp) で、アップデートされた CSS ファイルがデプロイされたことを確認できます（[http://localhost:4502/crx/de/index.jsp#/apps/venia/clientlibs/clientlib-site/css/site.css](http://localhost:4502/crx/de/index.jsp#/apps/venia/clientlibs/clientlib-site/css/site.css)）。
 
-新しい CSS ファイルや JavaScript ファイルをデプロイする場合は、ブラウザーで古いファイルが提供されないようにすることも重要です。これは、ブラウザーのキャッシュをクリアするか、新しいブラウザーセッションを開始することで解消できます。
+新しい CSS ファイルや JavaScript ファイルをデプロイする場合は、ブラウザーで古いファイルが提供されないようにすることも重要です。 これは、ブラウザーのキャッシュをクリアするか、新しいブラウザーセッションを開始することで解消できます。
 
 また、AEM は、パフォーマンスを考慮してクライアントライブラリをキャッシュしようとします。コードがデプロイされた後で、古いファイルが提供されることがあります。[クライアントライブラリのリビルドツール](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html)を使用して、AEM クライアントライブラリのキャッシュを手動で無効にすることができます。*AEM が古いバージョンのクライアントライブラリをキャッシュしていると思われる場合は、「キャッシュを無効にする」ことをお勧めします。「ライブラリのリビルド」は非効率で時間がかかります。*
 
 ## これで完了です {#congratulations}
 
-最初の AEM CIF コアコンポーネントのスタイルを設定し、webpack デベロッパーサーバーを使用しました。
+最初のAEM CIF コアコンポーネントのスタイルを設定し、webpack デベロッパーサーバーを使用した。
 
 ## ボーナスチャレンジ {#bonus-challenge}
 
