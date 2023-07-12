@@ -1,30 +1,26 @@
 ---
 title: clientlib の追加
-seo-title: Add Clientlibs
 description: ClientLibraryFolder の追加
-seo-description: Add a ClientLibraryFolder
-uuid: 2944923d-caca-4607-81a4-4122a2ce8e41
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 46f81c3f-6512-43f1-8ec1-cc717ab6f6ff
 docset: aem65
 exl-id: 569f2052-b4fe-4f7f-aec9-657217cba091
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: fd937341e26edd0c3edfced8e862066ebc30f9a3
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 41%
+source-wordcount: '672'
+ht-degree: 3%
 
 ---
 
 # clientlib の追加 {#add-clientlibs}
 
-## ClientLibraryFolder（clientlibs）の追加 {#add-a-clientlibraryfolder-clientlibs}
+## ClientLibraryFolder(clientlibs) の追加 {#add-a-clientlibraryfolder-clientlibs}
 
-`clientlibs` という名前の ClientLibraryFolder を作成し、ここに、サイトのページをレンダリングするために使用される JS および CSS を格納します。
+という名前の ClientLibraryFolder を作成します。 `clientlibs` サイトのページをレンダリングするために使用される JS と CSS を含む
 
-このクライアントライブラリに指定する `categories` プロパティの値は、clientlib をコンテンツページから直接含めたり、その他の clientlib に埋め込んだりする場合に使用される識別子です。
+この `categories` このクライアントライブラリに与えられるプロパティ値は、コンテンツページからこの clientlib を直接含めたり、他の clientlib に埋め込んだりするために使用される識別子です。
 
 1. 使用 **CRXDE Lite**、展開 `/etc/designs`
 
@@ -33,19 +29,19 @@ ht-degree: 41%
    * 名前：`clientlibs`
    * 型：`cq:ClientLibraryFolder`
 
-1. 「**OK**」をクリックします。
+1. クリック **OK**
 
 ![add-client-library](assets/add-client-library.png)
 
-新しい **ノードの「**&#x200B;プロパティ`clientlibs`」タブで、**categories** プロパティを入力します。
+内 **プロパティ** 新しい `clientlibs` ノードに、 **カテゴリ** プロパティ：
 
 * 名前：**categories**
 * タイプ：**String**
-* 値：**apps.an-scf-sandbox**
+* 値： **apps.an-scf-sandbox**
 * クリック **追加**
 * クリック **すべて保存**
 
-注意：categories 値の前に「apps.」を付けるのは、「所有アプリケーション」が /libs ではなく、/apps フォルダー内にあることを示すための規則です。重要：プレースホルダーを追加 `js.tx`t および **`css.txt`** ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
+注意：categories 値の前に「apps」を付けます。 は、「所有アプリケーション」が/libs ではなく/apps フォルダー内にあることを識別する規則です。 重要：プレースホルダーを追加 `js.tx`t および **`css.txt`** ファイル。 （正式には cq:ClientLibraryFolder ではありません。）
 
 1. 右クリック **`/etc/designs/an-scf-sandbox/clientlibs`**
 1. 選択 **ファイルを作成…**
@@ -56,9 +52,9 @@ ht-degree: 41%
 
 ![clientlibs-css](assets/clientlibs-css.png)
 
-css.txt および js.txt の最初の行によって、後述のファイルのリストが見つかる基本の場所が特定されます。
+css.txt と js.txt の最初の行は、以下のファイルのリストを検索する基本の場所を示します。
 
-css.txt の内容を次のように設定します。
+css.txt の内容を次のように設定してみてください。
 
 ```
 #base=.
@@ -73,17 +69,17 @@ css.txt の内容を次のように設定します。
 
 `}`
 
-### SCF clientlib の埋め込み {#embed-scf-clientlibs}
+### SCF Clientlibs を埋め込む {#embed-scf-clientlibs}
 
-**ノードの「**&#x200B;プロパティ`clientlibs`」タブで、複数値の String プロパティ **embed** を入力します。これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要なクライアントライブラリの多くを追加します。
+内 **プロパティ** タブ `clientlibs` ノードで、複数値の String プロパティを入力します。 **埋め込み**. これにより、必要な [SCF コンポーネントのクライアント側ライブラリ (clientlibs)](/help/communities/client-customize.md#clientlibs-for-scf). このチュートリアルでは、コミュニティコンポーネントに必要なクライアントライブラリの多くが追加されています。
 
-ページごとにダウンロードされる clientlib の利点とサイズ／スピードに関する考慮事項があるので、このアプローチが実稼動サイトでの使用に適している場合もあれば、そうでない場合もある点に&#x200B;**注意してください**。
+すべてのページにダウンロードされる clientlib の利便性とサイズ/速度に関する考慮事項があるので、実稼動サイトで使用する方法にはこの方法が望ましい場合とそうでない場合があります。
 
-1 つのページで 1 つの機能のみを使用する場合は、その機能の完全な clientlib をページに直接含めることができます ( 例：
+1 つのページで 1 つの機能のみを使用する場合、その機能の完全な clientlib をそのページに直接組み込むことができます（例： ）。
 
 `% ui:includeClientLib categories=cq.social.hbs.forum" %`
 
-この場合は、すべてを含めるなど、作成者の clientlib であるより基本的な SCF クライアントライブラリをお勧めします。
+この場合は、すべてを含め、作成者の clientlib であるより基本的な SCF クライアントライブラリをお勧めします。
 
 * 名前：**`embed`**
 * 型：**`String`**
@@ -98,7 +94,7 @@ css.txt の内容を次のように設定します。
       * **`cq.social.author.hbs.rating`**
       * **`cq.social.author.hbs.reviews`**
       * **`cq.social.author.hbs.voting`**
-      * 「**OK**」をクリックします。
+      * クリック **OK**
 
 * クリック **すべて保存**
 
@@ -108,15 +104,15 @@ css.txt の内容を次のように設定します。
 
 ![scf-clientlibs-view](assets/scf-clientlibs1.png)
 
-### playpage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
+### PlayPage テンプレートに clientlibs を含める {#include-clientlibs-in-playpage-template}
 
-を含めずに、 `apps.an-scf-sandbox` 必要な JavaScript とスタイルが使用できないので、ページの ClientLibraryFolder カテゴリ、SCF コンポーネントは機能しないか、スタイル設定されません。
+を含めずに、 `apps.an-scf-sandbox` 必要な JavaScript とスタイルが使用できないので、ページの ClientLibraryFolder カテゴリ、SCF コンポーネントは機能せず、スタイルも設定されません。
 
-例えば、clientlibs を挿入しなかった場合、SCF コメントコンポーネントは、スタイルが設定されていない状態で表示されます。
+例えば、clientlibs を含めないと、SCF コメントコンポーネントはスタイル設定されていない状態で表示されます。
 
 ![clientlibs-comment](assets/clientlibs-comment.png)
 
-apps.an-scf-sandbox clientlibs を含めると、SCF コメントコンポーネントは、スタイルが設定された状態で表示されます。
+apps.an-scf-sandbox clientlibs を含めると、 SCF コメントコンポーネントは次のスタイルで表示されます。
 
 ![clientlibs-comment-styled](assets/clientlibs-comment1.png)
 
@@ -127,7 +123,7 @@ include ステートメントは、 `head` セクション `html` スクリプ�
 1. 使用 **CRXDE Lite**&#x200B;を選択します。 **`/libs/foundation/components/page/headlibs.jsp`**
 
 1. 右クリックして「 」を選択します。 **コピー** （または、ツールバーから「コピー」を選択します）。
-1. 選択 **`/apps/an-scf-sandbox/components/playpage`**
+1. **`/apps/an-scf-sandbox/components/playpage`** を選択します。
 1. 右クリックして「 」を選択します。 **貼り付け** （または、ツールバーから「貼り付け」を選択します）。
 1. ダブルクリック **`headlibs.jsp`** 開ける
 1. ファイルの末尾に次の行を追加します。
@@ -145,17 +141,17 @@ include ステートメントは、 `head` セクション `html` スクリプ�
 <ui:includeClientLib categories="apps.an-scf-sandbox"/>
 ```
 
-Web サイトをブラウザーに読み込み、背景が青の網掛けでないかどうかを確認します。
+ブラウザーに Web サイトを読み込み、背景が青の影でないかどうかを確認します。
 
 [https://localhost:4502/content/an-scf-sandbox/en/play.html](https://localhost:4502/content/an-scf-sandbox/en/play.html)
 
 ![コミュニティプレイ](assets/community-play.png)
 
-### これまでの作業内容の保存 {#saving-your-work-so-far}
+### これまでの作業の保存 {#saving-your-work-so-far}
 
-この時点で、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにし、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールできます。
+この時点で、最小限のサンドボックスが存在し、再生中にリポジトリが破損し、再起動したい場合は、サーバーをオフにし、crx-quickstart/フォルダーの名前を変更または削除し、サーバーをオンにし、この保存済みパッケージをアップロードしてインストールします。
 
-すぐに操作してみたい場合は、[サンプルページの作成](/help/communities/create-sample-page.md)チュートリアルにこのパッケージがあります。
+このパッケージは、 [サンプルページの作成](/help/communities/create-sample-page.md) 飛び込んで遊び始めるのを待ちきれない人向けのチュートリアル！
 
 パッケージを作成するには：
 
@@ -165,9 +161,9 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
    * パッケージ名：an-scf-sandbox-minimal-pkg
    * バージョン：0.1
    * グループ：`leave as default`
-   * 「**OK**」をクリックします。
+   * クリック **OK**
 
-* 「**編集**」をクリックします。
+* クリック **編集**
 
    * 選択 **フィルター** タブ
 
@@ -180,9 +176,9 @@ Web サイトをブラウザーに読み込み、背景が青の網掛けでな�
       * クリック **フィルターを追加**
       * ルートパス：参照先 `/content/an-scf-sandbox**`
       * クリック **完了**
-   * 「**保存**」をクリックします。
 
+   * 「**保存**」をクリックします。
 
 * クリック **ビルド**
 
-これで、 **ダウンロード** ディスクに保存し **パッケージをアップロード** 他の場所では、選択 **詳細 > レプリケート** サンドボックスを localhost パブリッシュインスタンスにプッシュしてサンドボックスの領域を拡張するために使用します。
+これで、 **ダウンロード** ディスクに保存し **パッケージをアップロード** 別の場所に移動し、「 **詳細 > レプリケート** ：サンドボックスを localhost パブリッシュインスタンスにプッシュして、サンドボックスの領域を拡張します。
