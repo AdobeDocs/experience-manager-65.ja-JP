@@ -2,10 +2,10 @@
 title: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 description: Adobe Developer App Builder を使用した  [!DNL Adobe Experience Manager]  6.5 の拡張。
 exl-id: 8221c2db-82d4-43df-ad38-e8e7831541ac
-source-git-commit: cc1b86a15eb7ef45616bc9ea4f8aab4a28e74add
-workflow-type: ht
-source-wordcount: '550'
-ht-degree: 100%
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 68%
 
 ---
 
@@ -19,47 +19,47 @@ App Builder は、Adobe Experience Manager を拡張したカスタムエクス�
 
 App Builder を使用すると、次のような様々なユースケースで Adobe Experience Manager を容易に拡張できます。
 
-* ミドルウェア拡張 - カスタムコネクタを構築するか、事前に構築された統合のスイートを活用して、外部システムとアドビアプリケーションを接続します。
+* ミドルウェア拡張機能 — 外部システムとAdobeアプリケーションとを接続し、カスタムコネクタを構築するか、事前に構築された統合のスイートを使用します。
 * コアサービス拡張 - カスタム機能およびビジネスロジックを使用してデフォルトの動作を拡張することで、コアアプリケーション機能を拡張します。
 * ユーザーエクスペリエンス拡張 - コアエクスペリエンスを拡張してビジネス要件をサポートするか、顧客固有のデジタルプロパティ、ストアフロントおよびバックオフィスアプリを構築します。
 
-App Builder は、2020 年夏以降、開発者プレビューを通じて、法人のお客様やパートナーが利用できるようになりました。App Builder の一般リリース（GA）は 2021年12月に予定されています。アドビの[体験版プログラム](https://adobe.ly/appbuilder-trial)を通じて開発者が App Builder を試すことを歓迎します。
+2020 年夏以降、App Builder は、Adobeの開発者プレビューを通じて、エンタープライズの顧客やパートナーが使用できるようになりました。 App Builder の一般リリース（GA）は 2021年12月に予定されています。Adobeは、Adobeの [体験版プログラム](https://developer.adobe.com/app-builder/trial/).
 
 >[!NOTE]
 >
->App Builder の活用を考えている AEM as a Cloud Service ユーザーの場合は、[Adobe Developer App Builder を使用した Adobe Experience Manager as a Cloud Service の拡張](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/configuring-and-extending/app-builder.html?lang=ja)を参照してください。
+>AEM as a Cloud Serviceのお客様が App Builder を使用する場合は、 [Adobe Developer App Builder を使用したAdobe Experience Manager as a Cloud Serviceの拡張](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html?lang=en).
 
 ## アーキテクチャ {#architecture}
 
 標準のソリューションではなく、Adobe Developer App Builder では、AEM などのアドビクラウドソリューションを拡張するための、一貫性のある標準化された共通の開発プラットフォームを提供します。例えば、次のようなものがありす。
 
 * アドビ開発者コンソール - カスタムマイクロサービスおよび拡張機能の開発の場合、開発者は、プラグインや統合の作成に必要なすべてのツールと API にアクセスしながら、プロジェクトを構築および管理できます。
-* 開発者ツール - 開発者がカスタムの拡張機能や統合を容易に構築できるオープンソースのツール、SDK およびライブラリです。React Spectrum（アドビの UI ツールキット）を使用すれば、すべてのアドビアプリに共通の UI を 1 つ用意できます。
-* サービス - サーバーレスプラットフォーム上でインフラストラクチャをホスティングするための I/O Runtime や、イベントベースの統合のための I/O Events があります。また、データやファイルの保存も標準でサポートされています。
+* 開発者ツール - 開発者がカスタムの拡張機能や統合を容易に構築できるオープンソースのツール、SDK およびライブラリです。React Spectrum(Adobeの UI ツールキット ) を使用して、すべてのAdobeアプリに共通の UI を 1 つ用意します。
+* サービス —Adobeのサーバレスプラットフォーム上のインフラストラクチャをホスティングするための I/O Runtime、およびイベントベースの統合のための I/O イベント。 Adobeには、データとファイルの保存に関する標準のサポートも用意されています。
 * Adobe Experience Cloud - 開発者は、拡張機能や統合を送信して Experience Cloud 組織内で公開できます。その後、システム管理者がこれらの拡張機能を審査、管理および承認できます。App Builder のカスタム拡張機能およびツールは、公開されると、他の Adobe Experience Cloud アプリと一緒に表示されます。
 
-次の図は、App Builder 上で構築された標準アプリケーションでこれらの機能がどのように利用されているかを示しています。
+次の図は、App Builder 上に構築された標準アプリケーションがこれらの機能をどのように使用するかを示しています。
 
 ![アーキテクチャ](assets/appbuilder-architecture.jpg)
 
-App Builder のアーキテクチャについて詳しくは、[アーキテクチャの概要](https://www.adobe.io/app-builder/docs/guides/)を参照してください。
+App Builder のアーキテクチャについて詳しくは、[アーキテクチャの概要](https://developer.adobe.com/app-builder/docs/guides/)を参照してください。
 
 ## App Builder の基本を学ぶ {#additional-resources}
 
-App Builder を使い始める際に役立つように、参考になる一連のドキュメントを作成しました。
+App Builder を使い始めるのに役立つ一連のドキュメントが作成されました。
 
-* [App Builder の基礎知識](https://www.adobe.io/app-builder/docs/getting_started/)
+* [App Builder の基礎知識](https://developer.adobe.com/app-builder/docs/getting_started/)
 
 ## ドキュメントを利用した学習の続行 {#appbuilder-documentation}
 
 App Builder には、開発者向けのビデオとドキュメントが用意されています。ガイドや、独自のカスタムアプリケーションの開発を開始する際に役立つリファレンスドキュメントなどです。
 
-* [App Builder ドキュメント](https://www.adobe.io/app-builder/docs/overview/)
+* [App Builder ドキュメント](https://developer.adobe.com/app-builder/docs/overview/?lang=ja)
 * [App Builder ビデオ](https://www.youtube.com/playlist?list=PLcVEYUqU7VRfDij-Jbjyw8S8EzW073F_o)
 
 ## サンプルアプリケーションの試用 {#appbuilder-codesamples}
 
-開発を開始する準備はできていますか？迅速に作業を進めるのに役立つサンプルアプリケーションが多数用意されています。
+開発を開始する準備はできていますか？すばやく作業を進めるのに役立つサンプルアプリケーションが多数あります。
 
-* [Adobe Developer Web サイトの App Builder コードラボ](https://www.adobe.io/app-builder/docs/resources/)
+* [Adobe Developer Web サイトの App Builder コードラボ](https://developer.adobe.com/app-builder/docs/resources/?lang=ja)
 

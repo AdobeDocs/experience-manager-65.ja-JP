@@ -1,41 +1,37 @@
 ---
 title: カスタムクラウドサービスの作成
-seo-title: Creating a Custom Cloud Service
-description: デフォルトのクラウドサービスを、カスタムクラウドサービスタイプで拡張することができます
-seo-description: The default set of Cloud Services can be extended with custom Cloud Service types
-uuid: b105a0c1-b68c-4f57-8e3b-561c8051a08e
+description: デフォルトのCloud Servicesセットは、カスタムCloud Service型で拡張できます
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: e48e87c6-43ca-45ba-bd6b-d74c969757cd
 exl-id: 9414c77a-b180-4440-8386-e6eb4426e475
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e068cee192c0837f1473802143e0793674d400e8
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 100%
+source-wordcount: '406'
+ht-degree: 51%
 
 ---
 
 # カスタムクラウドサービスの作成{#creating-a-custom-cloud-service}
 
-デフォルトのクラウドサービスを、カスタムクラウドサービスタイプで拡張することができます。これにより、カスタムマークアップを構造的な方法でページに挿入できます。この手法は、Google Analytics や Chartbeat など、主としてサードパーティの分析プロバイダーに使用されます。Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
+デフォルトのCloud Servicesセットは、カスタムCloud Serviceタイプで拡張できます。 これにより、構造化された方法でページにカスタムマークアップを挿入できます。 これは主に、Google Analytics、Chartbeat など、サードパーティの分析プロバイダーで使用されます。 Cloud Services は、親ページから子ページに継承されますが、任意のレベルで継承を中断できます。
 
 >[!NOTE]
 >
->ここで紹介する手順は、Google Analytics を使用して新しいクラウドサービスを作成する場合の例です。この内容がそのまま実際のユースケースに当てはまるとは限りません。
+>このステップバイステップガイドでは、Cloud Serviceを使用した例を示します。Google Analytics すべてがユースケースに当てはまらない場合があります。
 
-1. CRXDE Lite で、`/apps` の下に新しいノードを作成します。
+1. CRXDE Liteで、以下にノードを作成します。 `/apps`:
 
    * **名前**：`acs`
    * **型**：`nt:folder`
 
-1. `/apps/acs` の下に新しいノードを作成します。
+1. の下にノードを作成します。 `/apps/acs`:
 
    * **名前**：`analytics`
    * **型**：`sling:Folder`
 
-1. `/apps/acs/analytics` の下に新しいノードを 2 つ作成します。
+1. の下に 2 つのノードを作成します。 `/apps/acs/analytics`:
 
    * **名前**：components
    * **型**：`sling:Folder`
@@ -45,8 +41,7 @@ ht-degree: 100%
    * **名前**：templates
    * **タイプ**：`sling:Folder`
 
-
-1. 「`/apps/acs/analytics/components`」を右クリックします。「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
+1. 右クリック `/apps/acs/analytics/components`. 「**作成...**」を選択し、「**コンポーネントを作成...**」をクリックします。表示されるダイアログで、以下の項目を指定します。
 
    * **ラベル**：`googleanalyticspage`
    * **タイトル**：`Google Analytics Page`
@@ -64,7 +59,7 @@ ht-degree: 100%
    * **名前：** `cq:defaultView`
    * **値：** `html`
 
-1. 以下の内容で、`content.jsp` という新しいファイルを `/apps/acs/analytics/components/googleanalyticspage` の下に作成します。
+1. という名前のファイルを作成します。 `content.jsp` under `/apps/acs/analytics/components/googleanalyticspage`（次の内容）
 
    ```xml
    <%@page contentType="text/html"
@@ -79,7 +74,7 @@ ht-degree: 100%
    </div>
    ```
 
-1. `/apps/acs/analytics/components/googleanalyticspage/` の下に新しいノードを作成します。
+1. の下にノードを作成します。 `/apps/acs/analytics/components/googleanalyticspage/`:
 
    * **名前**：`dialog`
    * **型**：`cq:Dialog`
@@ -92,7 +87,7 @@ ht-degree: 100%
       * **型**：`String`
       * **値**：`dialog`
 
-1. 「`/apps/acs/analytics/components/googleanalyticspage/dialog`」の下に新しいノードを作成します。
+1. の下にノードを作成します。 `/apps/acs/analytics/components/googleanalyticspage/dialog`:
 
    * **名前**：`items`
    * **型**：`cq:Widget`
@@ -102,12 +97,12 @@ ht-degree: 100%
       * **型**：`String`
       * **値**：`tabpanel`
 
-1. 「`/apps/acs/analytics/components/googleanalyticspage/dialog/items`」の下に新しいノードを作成します。
+1. の下にノードを作成します。 `/apps/acs/analytics/components/googleanalyticspage/dialog/items`:
 
    * **名前**：`items`
    * **型**：`cq:WidgetCollection`
 
-1. 「`/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`」の下に新しいノードを作成します。
+1. の下にノードを作成します。 `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items`:
 
    * **名前**：tab1
    * **型**：`cq:Panel`
@@ -117,15 +112,15 @@ ht-degree: 100%
       * **型**：`String`
       * **値**：`Config`
 
-1. 「`/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`」の下に新しいノードを作成します。
+1. の下にノードを作成します。 `/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`:
 
    * **名前**：items
    * **型**：`nt:unstructured`
    * **プロパティ**：
 
       * **名前**：`fieldLabel`
-      * **種類**：string
-      * **値**：アカウント ID
+      * **タイプ**:文字列
+      * **値**:アカウント ID
 
       * **名前**：`fieldDescription`
       * **型**：`String`
@@ -142,7 +137,7 @@ ht-degree: 100%
       * **値**：`textfield`
 
 1. `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` を `/apps/acs/analytics/components/googleanalyticspage/body.jsp` にコピーして、34 行目の `libs` を `apps` に変更し、79 行目のスクリプト参照を完全修飾パスにします。
-1. 「`/apps/acs/analytics/templates/`」の下に新しいテンプレートを次のように作成します。
+1. の下にテンプレートを作成します。 `/apps/acs/analytics/templates/`:
 
    * **Resource Type** = `acs/analytics/components/googleanalyticspage`
    * **Label** = `googleanalytics`
@@ -152,7 +147,7 @@ ht-degree: 100%
    * **sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage`（jcr:content ノードではなくテンプレートノード）
    * **cq:designPath** = `/etc/designs/cloudservices/googleanalytics`（jcr:content）
 
-1. 新しいコンポーネントを作成します： `/apps/acs/analytics/components/googleanalytics`。
+1. コンポーネントを作成します。 `/apps/acs/analytics/components/googleanalytics`.
 
    次の内容を `googleanalytics.jsp` に追加します。
 
@@ -195,7 +190,7 @@ ht-degree: 100%
 
    これによって、設定プロパティに基づいたカスタムマークアップが出力されます。
 
-1. `http://localhost:4502/miscadmin#/etc/cloudservices` に移動して、新しいページを作成します。
+1. に移動します。 `http://localhost:4502/miscadmin#/etc/cloudservices` ページを作成します。
 
    * **タイトル**：`Google Analytics`
    * **名前**：`googleanalytics`
@@ -206,14 +201,13 @@ ht-degree: 100%
    * **型**：`String`
    * **値**：`acs/analytics/components/googleanalytics`
 
-
-1. 新規作成したサービスページ（`http://localhost:4502/etc/cloudservices/googleanalytics.html`）に移動し、「**+**」をクリックして新しい設定を作成します。
+1. 新しく作成されたサービスページ ( `http://localhost:4502/etc/cloudservices/googleanalytics.html`) をクリックし、 **+** 設定を作成するには：
 
    * **親設定**：`/etc/cloudservices/googleanalytics`
    * **タイトル：**  `My First GA Config`
 
    「**Google Analytics 設定**」を選択し、「**作成**」をクリックします。
 
-1. **アカウント ID**（例：`AA-11111111-1`）を入力します。「**OK**」をクリックします。
-1. ページに移動し、「**クラウドサービス**」タブで、新たに作成された設定をページプロパティに追加します。
-1. このページにカスタムマークアップが追加されます。
+1. 入力 **アカウント ID**&#x200B;例： `AA-11111111-1`. 「**OK**」をクリックします。
+1. ページに移動し、新しく作成した設定をページプロパティの **Cloud Services** タブをクリックします。
+1. ページにはカスタムマークアップが追加されます。
