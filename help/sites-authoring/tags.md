@@ -1,5 +1,5 @@
 ---
-title: タグを使用した web サイト内のコンテンツの分類
+title: タグの使用
 description: タグを使用すると、web サイト内のコンテンツをすばやく簡単に分類できます。
 uuid: 5d922443-f924-426e-acf4-27dffd1053f6
 contentOwner: Chris Bohnert
@@ -9,14 +9,15 @@ topic-tags: site-features
 discoiquuid: 9fb6d603-eb17-4192-bfa6-6c316f14ac7d
 docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '575'
+source-git-commit: 8dafa901bc628ee5e4823e9f8811bf4d09b7e072
+workflow-type: tm+mt
+source-wordcount: '569'
 ht-degree: 100%
 
 ---
 
-# タグの使用 {#using-tags}
+
+# タグの使用  {#using-tags}
 
 タグを使用すると、web サイト内のコンテンツをすばやく簡単に分類できます。タグはキーワードやラベルとしてページ、アセット、その他のコンテンツに添付し、コンテンツや関連コンテンツを検索できます。
 
@@ -54,7 +55,7 @@ ht-degree: 100%
 
 * 個々のタグをアクティベートします。
 
-   ページと同様、新しく作成されたタグは、パブリッシュ環境で使用可能となる前にアクティベートする必要があります。
+  ページと同様、新しく作成されたタグは、パブリッシュ環境で使用可能となる前にアクティベートする必要があります。
 
 >[!NOTE]
 >
