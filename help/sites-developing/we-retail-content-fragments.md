@@ -1,27 +1,23 @@
 ---
 title: We.Retail のコンテンツフラグメントの使用
-seo-title: Trying out Content Fragments in We.Retail
 description: We.Retail のコンテンツフラグメントの使用
-seo-description: null
-uuid: 66daddfe-8e98-47b6-8499-db055887ac17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: best-practices
-discoiquuid: d1326737-f378-46d0-9916-61ead4d31639
 exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
-source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
+source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 92%
+source-wordcount: '455'
+ht-degree: 74%
 
 ---
 
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。（AEM の標準のインスタンスで使用できる）**We.Retail** には、基本のサンプルとして **Arctic Surfing in Lofoten** フラグメントが用意されています。これは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。**We.Retail** (Adobe Experience Managerの標準インスタンスで使用可能 ) は、フラグメントを提供します **Arctic Surfing in Lofoten** を基本的なサンプルとして使用します。 これは、次のことを示しています。
 
-* Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。コンテンツフラグメントを使用すると、チャネルに依存しないコンテンツを、（おそらくはチャネル固有の）バリエーションと共に作成できます。
+* Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。チャネルに特化しないコンテンツを、チャネル固有のバリエーションと共に作成できます。
 
    * [We.Retail でのコンテンツフラグメントアセットの場所](#where-to-find-content-fragments-in-we-retail)を参照してください。
 
@@ -29,7 +25,7 @@ ht-degree: 92%
 
    * [We.Retail でコンテンツフラグメントが使用される場所](#where-content-fragments-are-used-in-we-retail)を参照してください。
 
-コンテンツフラグメントの作成、管理、使用および開発に関する完全なドキュメントについて：
+コンテンツフラグメントの作成、管理、使用、開発に関する完全なドキュメントについては、次の手順を実行してください。
 
 * [その他の情報](#further-information)を参照してください。
 
@@ -37,7 +33,7 @@ ht-degree: 92%
 >
 >**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
->* **コンテンツフラグメント**&#x200B;は編集コンテンツで、主にテキストや関連する画像です。これらは、デザインやレイアウトを含まない純粋なコンテンツです。
+>* **コンテンツフラグメント** は、編集コンテンツ、主にテキストおよび関連する画像です。 これらは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、web ページのフラグメントです。
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
@@ -48,7 +44,7 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 これには、関連するビジュアルアセットと組み合わせられたフラグメントである **Arctic Surfing in Lofoten** などがあります。
 
-* **Assets**／**ファイル**／**We.Retail**／**英語**／**エクスペリエンス**／**Artic Surfing in Lofoten** の順に移動します。
+* 次の方法で移動： **Assets**, **ファイル**, **We.Retail**, **英語**, **エクスペリエンス**, **Arctic Surfing in Lofoten**:
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
 
@@ -86,9 +82,9 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 詳しくは、以下を参照してください。
 
-* [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
+* [コンテンツフラグメントの操作](/help/assets/content-fragments/content-fragments.md)
 
-   * コンテンツフラグメントアセットを作成、編集および管理する方法について説明します。
+   * コンテンツフラグメントアセットを作成、編集、管理する方法について説明します。
 
 * [コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)
 
