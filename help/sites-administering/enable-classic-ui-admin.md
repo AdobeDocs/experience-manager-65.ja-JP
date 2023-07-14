@@ -1,20 +1,16 @@
 ---
 title: 管理コンソール
-seo-title: Admin Consoles
 description: AEMで使用可能なAdmin Consoleの使用方法を説明します。
-seo-description: Lear how to use the Admin Consoles available in AEM.
-uuid: 82ab5267-2f2a-4772-85d5-678d883a0294
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: operations
 content-type: reference
-discoiquuid: 6dbe82c2-7a25-49ab-a980-3635f0344817
 docset: aem65
 exl-id: d4de517e-50bc-4ca5-89b1-295d259fd5bb
-source-git-commit: 729e5eb99b0c14f3d2fd8c3f4ec636f7fb52124f
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 46%
+ht-degree: 38%
 
 ---
 
@@ -27,7 +23,7 @@ ht-degree: 46%
 
 以下の例では、サイトコンソールのクラシック UI を再有効化しています。
 
-1. CRXDE Lite で、クラシック UI を再有効化する管理コンソールのノードを見つけます。目的のノードは次の場所にあります。
+1. CRXDE Liteを使用して、クラシック UI を再度有効にするAdmin Consoleに対応するノードを探します。 目的のノードは次の場所にあります。
 
    `/libs/cq/core/content/nav`
 
@@ -49,7 +45,7 @@ ht-degree: 46%
 
    `enableDesktopOnly = {Boolean}true`
 
-1. この **クラシック UI** オプションは、admin console で再びポップオーバーオプションとして使用できます。
+1. この **クラシック UI** オプションは、Admin Consoleのポップオーバーオプションとして再び使用できます。
 
    ![クラシック UI ポップオーバーオプション](assets/syui-01-2019-02-27-15-16-55.png)
 

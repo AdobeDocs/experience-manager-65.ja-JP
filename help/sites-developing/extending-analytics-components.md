@@ -1,17 +1,15 @@
 ---
 title: コンポーネントへの Adobe Analyticsトラッキングの追加
 description: コンポーネントへの Adobe Analyticsトラッキングの追加
-uuid: 447b140c-678c-428d-a1c9-ecbdec75cd42
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: a11c39b4-c23b-4207-8898-33aea25f2ad0
 exl-id: e6c1258c-81d5-48e4-bdf1-90d7cc13a22d
-source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 56%
+source-wordcount: '1266'
+ht-degree: 52%
 
 ---
 
@@ -38,7 +36,7 @@ ContextHub エントリは `<head>` タグのすぐ下に含めるようにし�
 
 `<head>` 要素の直後に挿入する `contexthub` スクリプトは、そのページに ContextHub 機能を追加します。
 
-`<head>` と `<body>` セクションに追加する `cloudservices` スクリプトはページに追加されたクラウドサービス設定に適用されます（そのページで複数のクラウドサービス設定を使用する場合も、ContextHub の JSP と Cloud Services の JSP は一度だけ追加する必要があります）。
+`<head>` と `<body>` セクションに追加する `cloudservices` スクリプトはページに追加されたクラウドサービス設定に適用されます( ページで複数のCloud Services設定を使用する場合、ContextHub jsp とCloud Servicesjsp を 1 回だけ含める必要があります )。
 
 Adobe Analyticsフレームワークをページに追加すると、 `cloudservices` スクリプトは、次の例のように、Adobe Analytics関連の JavaScript およびクライアント側ライブラリへの参照を生成します。
 
@@ -170,13 +168,13 @@ topnav コンポーネントを設定し、JSP ファイルを編集して追跡
    * 名前：`analytics`
    * 型：`nt:unstructured`
 
-1. 次のプロパティを分析ノードに追加して、トラッキングイベントに名前を付けます。
+1. 次のプロパティを analytics ノードに追加して、トラッキングイベントに名前を付けることができます。
 
    * 名前：cq:trackevents
    * タイプ：String
    * 値：topnavClick
 
-1. 次のプロパティを analytics ノードに追加して、データ変数に名前を付けます。
+1. 次のプロパティを analytics ノードに追加して、データ変数に名前を付けることができます。
 
    * 名前：cq:trackvars
    * タイプ：String
@@ -362,7 +360,7 @@ Adobe Analytics 統合モジュールは、AEM コンポーネントが生成す
 * product.evars.eVarName1
 * product.evars.eVarName_n
 
-e コマースモジュールは、s.products 変数データを生成する複数のコンポーネントを提供します。 例えば、submitorder コンポーネント ([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp)) は、次の例のような JavaScript を生成します。
+e コマースモジュールは、s.products 変数データを生成する複数のコンポーネントを提供します。 例えば、 `submitorder` コンポーネント ([http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp](http://localhost:4502/crx/de/index.jsp#/libs/commerce/components/submitorder/submitorder.jsp)) は、次の例のような JavaScript を生成します。
 
 ```
 <script type="text/javascript">
@@ -438,6 +436,6 @@ e コマースモジュールは、s.products 変数データを生成する複�
 
 #### トラッキングコールのサイズの制限 {#limiting-the-size-of-tracking-calls}
 
-一般に、Web ブラウザーはGETリクエストのサイズを制限します。 CQ の製品と SKU の値はリポジトリパスなので、複数の値を含む製品配列は要求サイズの制限を超える可能性があります。 そのため、コンポーネントで各 `CQ_Analytics.record function` の `product` 配列内の項目数を制限する必要があります。追跡する必要がある項目数が制限を超える可能性がある場合は、複数の関数を作成します。
+一般に、Web ブラウザーはGETリクエストのサイズを制限します。 CQ の製品と SKU の値はリポジトリパスなので、複数の値を含む製品配列は要求サイズの制限を超える可能性があります。 そのため、コンポーネントで各 `CQ_Analytics.record function` の `product` 配列内の項目数を制限する必要があります。追跡する必要がある項目の数が制限を超える場合は、複数の関数を作成します。
 
-例えば、e コマースの submitorder コンポーネントでは、1 つのコール内の `product` 項目数が 4 に制限されています。カートに 5 つ以上の製品が含まれると、このコンポーネントは複数の `CQ_Analytics.record` 関数を生成します。
+例：e コマース `submitorder` コンポーネントは `product` 4 への呼び出しの項目。 カートに 5 つ以上の製品が含まれると、このコンポーネントは複数の `CQ_Analytics.record` 関数を生成します。

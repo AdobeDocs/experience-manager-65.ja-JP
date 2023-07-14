@@ -3,12 +3,11 @@ title: Adobe Experience Manager Mobile - GDPR 対応
 description: Adobe Experience Manager Mobile - GDPR 対応
 uuid: 817c434f-4b78-40f7-99d6-6efafdedb77e
 contentOwner: trushton
-discoiquuid: 9399dd3d-a485-4f53-a6f2-7b190da4235b
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 6%
+source-wordcount: '688'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
+>以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制に適用できます。（GDPR や CCPA など）
 
 ## AEM Mobile GDPR のサポート {#aem-mobile-gdpr-support}
 
@@ -26,15 +25,15 @@ AEM Mobileは、お客様が GDPR に準拠するための義務を果たすの�
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobeのデジタル出版製品 (AEM Mobileに先立つ ) は、Adobeの GDPR 対応に関する取り組みをサポートしています。 詳しくは、 [https://www.adobe.com/privacy/general-data-protection-regulation.html](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html). 以下に、GDPR 要求を開始するためのAdobeとの連携方法など、Digital Publishing Suite 製品での GDPR 関連機能のサポートに関する詳細を示します。
+Adobeのデジタル出版製品 (AEM Mobileに先立つ ) は、Adobeの GDPR 対応に関する取り組みをサポートしています。 詳しくは、 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja). 以下に、GDPR 要求を開始するためのAdobeとの連携方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートに関する詳細を示します。
 
-AEM Mobileを以前の Digital Publishing Suite 製品と混同しないようにするには、次の URL から Digital Publishing Suite 製品にログインします。
+AEM Mobileと古いDigital Publishing Suite製品を混同しないように、次の場所でDigital Publishing Suite製品にログインできます。
 
 [https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
 ### GDPR 要求の開始 {#initiating-a-gdpr-request}
 
-Digital Publishing Suite の GDPR リクエストを開始する場合は、Adobeカスタマーケアにお問い合わせください。
+Adobeの GDPR リクエストを開始できるよう、カスタマーケアにお問い合わせください。Digital Publishing Suite
 
 顧客データを検索するには、次の ID が必要です。 受け取ったサブセットは、他の ID がこのユーザーに適用されなかったことを示します。
 
@@ -52,19 +51,19 @@ Digital Publishing Suite の GDPR リクエストを開始する場合は、Adob
 
 **Adobeリクエストを開始すると、App Storeでの購入が削除されますか？**
 
-Adobeは、アプリストアでの購入（購読など）に関する情報を削除します ただし、購入は、アプリストアで記録されたままです。 アプリ（エンドユーザー）が App Store にログインすると、それらのレシートが再度取得され、Adobeに送信されます。その後、新規購入と見なされ、アプリが再度アクセスできるように復元されます。
+Adobeは、アプリストアでの購入（購読など）に関する情報を削除しますが、購入はアプリストアで記録されたままです。 アプリ ( エンドAdobe) が App Store にログインすると、それらのレシートが再度取得され、後でに送信されます。これらは新規購入と見なされ、アプリによって再度アクセスできるように復元されます。
 
 **Adobeは、ユーザーリクエストを開始する際に、お客様が提供したDELETEを削除しますか？**
 
-Adobeは、顧客の追加の直接権利付与の情報を削除します。 アプリ（エンドユーザー）が、顧客が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスが追加の使用権限を再度取得します。
+Adobeは、顧客の追加の直接使用権限の許可を持つ情報を削除します。 アプリ（エンドユーザー）が、顧客が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスが追加の使用権限を再度取得します。
 
-**エンドユーザーにはどのようなことが期待されますか。**
+**エンドユーザーに対して期待される操作**
 
-アプリに権限を割り当てる際のキーは、ビューアソフトウェアの一部としてデバイス上に存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールする場合、（App Store ユーザーに関連付けられた）既存の購入と（顧客の OAuth ユーザーに関連付けられた）直接の権利付与が引き続き復元されることを認識する必要があります。
+アプリに権限を割り当てる際のキーは、ビューアソフトウェアの一部としてデバイス上に存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールした場合、既存の購入（App Store ユーザーに関連付けられている）と直接の権利付与（顧客の OAuth ユーザーに関連付けられている）が引き続き復元されることを認識する必要があります。
 
 **デバイス上のユーザー間でアプリを共有するとどうなりますか？**
 
-Adobeは、特定のユーザーに直接関連付けられる情報をほとんど持ちません。 この変数は、ランダムに作成された UUID を使用してデータを関連付けます。この UUID は、アプリのデータに保持され、アプリが開始するリクエストごとに渡されます。 つまり、同じデバイスでアプリを共有するエンドユーザーは同じ UUID を使用し、GDPR 要求をおこなうユーザーによってすべてのデータが所有されていると見なされます。 アクセス要求と削除要求の両方で、DPSC は、アプリを共有するユーザーを 1 人のユーザーと見なします。
+Adobeは、特定のユーザーに直接関連付けられる最小限の情報を持ちます。 この変数は、ランダムに作成された UUID を使用してデータを関連付けます。この UUID は、アプリのデータに保持され、アプリが開始するリクエストごとに渡されます。 つまり、同じデバイスでアプリを共有するエンドユーザーは同じ UUID を使用し、すべてのデータは、GDPR 要求をおこなう人の所有と見なされます。 アクセス要求と削除要求の両方で、DPSC は、アプリを共有する人を 1 人の人物と見なします。
 
 **Analytics で追跡される個人データは何ですか？**
 
@@ -76,9 +75,9 @@ Digital Publishing Suite 製品の進化に伴い、サービスの実装が変�
 
 ### 例 {#example}
 
-GDPR リクエストを開始するには、Adobeカスタマーケアにお問い合わせください。
+Adobeカスタマーケアに問い合わせて、GDPR リクエストを開始できます。
 
-Digital Publishing Suite GDPR 要求の入力と結果の出力の例を次に示します。
+次に、Digital Publishing SuiteGDPR 要求の入力と結果の出力の例を示します。
 
 #### 入力： {#inputs}
 

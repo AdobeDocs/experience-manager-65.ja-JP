@@ -1,19 +1,15 @@
 ---
 title: コミュニティの開発
-seo-title: Developing Communities
-description: フォーラムやユーザーグループなどのコミュニティ機能を作成し、カスタマイズする
-seo-description: Create and customize community features such as forums, user groups, and more
-uuid: 51dc54da-9090-4d36-adf9-72d5479062a5
+description: フォーラムやユーザーグループなどのコミュニティ機能を作成し、カスタマイズします。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: fbfe8097-3c3f-4a05-97ad-1ce526362a26
 exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
-source-git-commit: 4dbbcc41757843d3b2d5a3bbb2656ef587e83d2c
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 18%
+source-wordcount: '391'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +17,7 @@ ht-degree: 18%
 
 ## 概要 {#overview}
 
-AEM Communitiesは、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成とカスタマイズを簡単にします。 これらの機能を使用すると、パブリッシュ環境にユーザー生成コンテンツ (UGC) が入力されます。
+Adobe Experience Manager(AEM)Communities を使用すると、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成とカスタマイズが簡単に行えます。 これらの機能を使用すると、パブリッシュ環境にユーザー生成コンテンツ (UGC) が入力されます。
 
 の基盤 [コミュニティサイト](overview.md#communitiessites) が [ソーシャルコンポーネントフレームワーク](scf.md) (SCF)。 コミュニティサイトの作成は、 [コミュニティサイトテンプレート](sites-console.md) それは [コミュニティ機能](functions.md).
 
@@ -36,7 +32,7 @@ AEM Communitiesは、フォーラム、ユーザーグループ、ブログ、Q&
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-* [コミュニティコンテンツストレージ](working-with-srp.md):UGC 共通ストアで使用可能な SRP の選択肢について説明します。
+* [コミュニティコンテンツストレージ](working-with-srp.md):UGC 共通ストアで使用可能なソーシャルリソースプロバイダー (SRP) の選択肢について説明します。
 * [コミュニティ用の推奨トポロジ](topologies.md):使用例と SRP の選択に基づくトポロジについて説明します。
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
@@ -49,7 +45,7 @@ AEM Communitiesは、フォーラム、ユーザーグループ、ブログ、Q&
 * [コーディングのガイドライン](code-guide.md):ガイドライン、ヒント、テクニック。
 * [コミュニティコンポーネントガイド](components-guide.md):インタラクティブ開発ツール。
 
-## コンポーネントおよび機能の基本事項 {#component-function-and-feature-essentials}
+## コンポーネント、機能、機能の基本事項 {#component-function-and-feature-essentials}
 
 AEM Communitiesのコンポーネント、機能および機能は、 [コミュニティサイト](sites-console.md).
 
@@ -62,11 +58,11 @@ AEM Communitiesのコンポーネント、機能および機能は、 [コミュ
 ## コミュニティメンバー {#community-members}
 
 * [ユーザーとユーザーグループの管理](users.md)
-* [Facebook と Twitter を使用したソーシャルログイン](social-login.md)
+* [Social でのFacebookおよびTwitterのログイン](social-login.md)
 
 ## コミュニティグループ {#community-groups}
 
-[コミュニティグループ](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを作成できるようにする概念です。 コミュニティグループの作成は、パブリッシュ環境またはオーサー環境でおこなうことができます。
+[コミュニティグループ](overview.md#communitygroups) は、コミュニティメンバーがコミュニティサイト内でサブコミュニティを形成できるようにする概念です。 コミュニティグループの作成は、パブリッシュ環境またはオーサー環境でおこなうことができます。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [グループ機能](functions.md#groups-function)
@@ -92,7 +88,7 @@ AEM Communitiesのコンポーネント、機能および機能は、 [コミュ
 
 ## 関連するコミュニティドキュメント {#related-communities-documentation}
 
-* 訪問 [コミュニティのデプロイ](deploy-communities.md) を参照してください。
+* 訪問 [コミュニティのデプロイ](deploy-communities.md) を参照して、推奨されるデプロイメントと Dispatcher 設定について確認してください。
 
 * 訪問 [コミュニティサイトの管理](administer-landing.md) コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツのモデレート、メンバーの管理、メッセージングの設定について説明します。
 

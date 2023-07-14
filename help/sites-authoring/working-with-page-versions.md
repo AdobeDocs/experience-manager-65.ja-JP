@@ -1,18 +1,16 @@
 ---
 title: コンテンツのページバージョンの操作
 description: ページバージョンを作成、比較および復元します
-uuid: 29e049f0-532c-4e3b-b64f-5be88ee6b08c
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-discoiquuid: 1368347a-9b65-4cfc-87e1-62993dc627fd
 docset: aem65
 exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
-source-git-commit: 0a06837576e102d0e46f7afd0f5a197c292ddae7
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 58%
+source-wordcount: '1497'
+ht-degree: 57%
 
 ---
 
@@ -56,7 +54,7 @@ ht-degree: 58%
 1. バージョンを作成するページに移動して、そのページを表示します。
 1. [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)でページを選択します。
 1. を選択します。 **作成** オプションを使用して、ダイアログを開きます。
-1. ダイアログで、 **ラベル** および **コメント** 必要に応じて、次の手順に従います。
+1. ダイアログボックスで、 **ラベル** および **コメント**（必要に応じて）
 
    ![ラベルとコメントを入力](assets/screen_shot_2012-02-15at105050am.png)
 
@@ -89,7 +87,7 @@ ht-degree: 58%
 >この処理は次のようになります。
 >
 >1. 任意のページのバージョンを作成します。
->1. 最初のラベルおよびバージョンノードの名前は 1.0、1.1、1.2 などです。
+>1. 最初のラベルとバージョンノードの名前は、1.0、1.1、1.2 などです。
 >1. 最初のバージョンを回復する。この場合、1.0 です。
 >1. バージョンを再度作成します。
 >1. 生成されるラベルおよびノード名は、1.0.0、1.0.1、1.0.2 などになります。

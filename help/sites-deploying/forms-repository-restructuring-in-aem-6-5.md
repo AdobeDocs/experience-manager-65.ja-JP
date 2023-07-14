@@ -1,19 +1,15 @@
 ---
 title: AEM 6.5 における Forms リポジトリの再構築
-seo-title: Forms Repository Restructuring in AEM 6.5
-description: AEM 6.5 for Forms の新しいリポジトリ構造に移行するために必要な変更を加える方法について説明します。
-seo-description: Learn how to make the necessary changes in order to migrate to the new repository structure in AEM 6.5 for Forms.
-uuid: e60830d4-23ca-4be9-941a-ee4abe4786a6
+description: AEM 6.5 for Formsの新しいリポジトリ構造に移行するために必要な変更を行う方法を説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: repo_restructuring
-discoiquuid: 1ce9a622-5968-407f-a74b-d325a2bff669
 feature: Upgrading
 exl-id: d555422e-dc97-4d45-9525-4299d22315e2
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 100%
+source-wordcount: '511'
+ht-degree: 40%
 
 ---
 
@@ -25,7 +21,7 @@ ht-degree: 100%
 
 * [その他](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#misc)
 
-**今後のアップグレードまでにおこなう変更**
+**今後のアップグレードの前に**
 
 * [EchoSign クラウドサービス設定](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#echosign-cloud-service-configuration)
 * [reCAPTCHA クラウドサービス設定](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md#recaptcha-cloud-service-configurations)
@@ -40,64 +36,64 @@ ht-degree: 100%
 |---|---|
 | **新しい場所** | `/libs/fd/fp/components` |
 | **再構築の手引き** | カスタムコード内で従来の場所を明示的に参照している場合は、新しい場所に更新する必要があります。 |
-| **備考** | これらのクライアントライブラリは、変更したり拡張したりしないでください。 |
+| **備考** | これらのクライアントライブラリは、編集や拡張を行わないでください。 |
 
 | **以前の場所** | `/etc/clientlibs/fd/rte` |
 |---|---|
 | **新しい場所** | `/libs/fd/rte` |
-| **再構築の手引き** | クライアントライブラリ内のリソースを絶対パスで参照できる場合、新しいアセットでは新しいパスを使用する必要があります。 |
+| **再構築の手引き** | クライアントライブラリ内のリソースで絶対パスで参照できる場合は、新しいアセットで新しいパスを使用する必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新しい場所** | `/libs/fd/af/authoring/clientlibs` |
-| **再構築の手引き** | クライアントライブラリ内のリソースを絶対パスで参照できる場合、新しいアセットでは新しいパスを使用する必要があります。 |
+| **再構築の手引き** | クライアントライブラリ内のリソースで絶対パスで参照できる場合は、新しいアセットで新しいパスを使用する必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/clientlibs/fd/xfaforms` |
 |---|---|
 | **新しい場所** | `/libs/fd/xfaforms/clientlibs/` |
-| **再構築の手引き** | クライアントライブラリ内のリソースを絶対パスで参照できる場合、新しいアセットでは新しいパスを使用する必要があります。 |
+| **再構築の手引き** | クライアントライブラリ内のリソースで絶対パスで参照できる場合は、新しいアセットで新しいパスを使用する必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新しい場所** | `/libs/fd/af/runtime/clientlibs` |
-| **再構築の手引き** | クライアントライブラリ内のリソースを絶対パスで参照できる場合、新しいアセットでは新しいパスを使用する必要があります。 |
+| **再構築の手引き** | クライアントライブラリ内のリソースで絶対パスで参照できる場合は、新しいアセットで新しいパスを使用する必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/clientlibs/fd/af` |
 |---|---|
 | **新しい場所** | `/libs/fd/af/runtime/clientlibs` |
-| **再構築の手引き** | クライアントライブラリ内のリソースを絶対パスで参照できる場合、新しいアセットでは新しいパスを使用する必要があります。 |
+| **再構築の手引き** | クライアントライブラリ内のリソースで絶対パスで参照できる場合は、新しいアセットで新しいパスを使用する必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/clientlibs/fd/expeditor` |
 |---|---|
 | **新しい場所** | `/libs/fd/expeditor/clientlibs` |
-| **再構築の手引き** | クライアントライブラリ内のリソースを絶対パスで参照できる場合、新しいアセットでは新しいパスを使用する必要があります。 |
+| **再構築の手引き** | クライアントライブラリ内のリソースで絶対パスで参照できる場合は、新しいアセットで新しいパスを使用する必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/clientlibs/fd/fmaddon` |
 |---|---|
 | **新しい場所** | `/libs/fd/fmaddon` |
-| **再構築の手引き** | これらのクライアントライブラリを変更することは推奨されず、サポートもされていません。変更された場合は、AEM 提供のコードを使用するようにクライアントライブラリをロールバックしてください。 |
+| **再構築の手引き** | これらの clientlib の変更は、推奨もサポートもされていませんでした。 これらの clientlib に変更が加えられた場合、AEM提供のコードを使用するには、それらをロールバックする必要があります。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/aep` |
 |---|---|
 | **新しい場所** | `/var/fd/content/annotations` |
-| **再構築の手引き** | これらのクライアントライブラリを変更することは推奨されず、サポートもされていません。変更された場合は、AEM 提供のコードを使用するようにクライアントライブラリをロールバックしてください。 |
+| **再構築の手引き** | これらの clientlib の変更は、推奨もサポートもされていませんでした。 これらの clientlib に変更が加えられた場合、AEM提供のコードを使用するには、それらをロールバックする必要があります。 |
 | **備考** | 該当なし |
 
-## 今後のアップグレードまでにおこなう変更 {#prior-to-upgrade}
+## 今後のアップグレードの前に {#prior-to-upgrade}
 
 ### EchoSign クラウドサービス設定 {#echosign-cloud-service-configuration}
 
 | **以前の場所** | `/etc/cloudservices/echosign` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
-| **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
+| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 ### reCAPTCHA クラウドサービス設定 {#recaptcha-cloud-service-configurations}
@@ -105,7 +101,7 @@ ht-degree: 100%
 | **以前の場所** | `/etc/cloudservices/recaptcha` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
-| **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
+| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 ### Typekit クラウドサービス設定 {#typekit-cloud-service-configurations}
@@ -113,7 +109,7 @@ ht-degree: 100%
 | **以前の場所** | `/etc/cloudservices/typekit` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
-| **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
+| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 ### その他 {#misc-1}
@@ -121,11 +117,11 @@ ht-degree: 100%
 | **以前の場所** | `/etc/cloudservices/fdm` |
 |---|---|
 | **新しい場所** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
-| **再構築の手引き** | [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md)ユーティリティを Forms 移行 UI からトリガーします。 |
+| **再構築の手引き** | この [遅延コンテンツ移行](/help/sites-deploying/lazy-content-migration.md) Forms移行 UI からトリガーされるユーティリティ。 |
 | **備考** | 該当なし |
 
 | **以前の場所** | `/etc/designs/fd/fp` |
 |---|---|
 | **新しい場所** | `/libs/fd/fp` |
-| **再構築の手引き** | /etc 内のテンプレートへの参照は、最終的には、それらに対応する `/libs` 内のテンプレートを指すように更新してください。 |
+| **再構築の手引き** | /etc テンプレートへの参照を更新して、その参照を `/libs` 対応する |
 | **備考** | 該当なし |

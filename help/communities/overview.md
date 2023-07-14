@@ -1,28 +1,24 @@
 ---
 title: AEM Communities の概要
-seo-title: AEM Communities Overview
 description: AEM Communitiesの機能とセットアップの概要
-seo-description: An overview of AEM Communities features and setup
-uuid: 14405847-36ae-4958-bdc6-d799ecd05f06
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
 content-type: reference
-discoiquuid: 44374006-f711-4af8-a1fe-f89164f79581
 docset: aem65
 exl-id: d6243dff-a067-455c-a326-5f451f225efd
-source-git-commit: 9f9f80eb4cb74b687c7fadd41d0f8ea4ee967865
+source-git-commit: 260f71acd330167572d817fdf145a018b09cbc65
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1265'
 ht-degree: 2%
 
 ---
 
 # AEM Communities の概要 {#aem-communities-overview}
 
-Adobe Experience Manager(AEM)Communities を使用すると、パフォーマンスの向上、サイト管理の向上、貴重なコミュニティメンバーへのサイト訪問者の転換を促すオンプレミスのコミュニティサイトをすばやく作成できます。
+Adobe Experience Manager(AEM)Communities を使用すると、パフォーマンスの向上、サイト管理の向上、貴重なコミュニティメンバーへのサイト訪問者の転換を促すオンプレミスのコミュニティサイトを迅速に作成できます。
 
-## コミュニティの機能 {#communities-features}
+## Communities の機能 {#communities-features}
 
 AEM Communitiesを使用すると、サイト訪問者との関係を構築できます。次の機能があります。
 
@@ -62,7 +58,7 @@ AEM Communitiesを使用すると、サイト訪問者との関係を構築で�
 
    * ログイン：自己登録 [ソーシャルログイン](/help/communities/social-login.md)、ユーザープロファイル
 
-      * 通知：メンバーは、自分に関連するイベントや、ユーザーが生成したコンテンツを目にします。 [@mentioned](/help/communities/overview.md#mentionssupport).
+      * 通知：メンバーは、自分に関連するイベントや、自分が属する場所でユーザーが生成したコンテンツを見ることができます。 [@mentioned](/help/communities/overview.md#mentionssupport).
 
       * メッセージ：メンバーは、コミュニティサイト内でメッセージを送受信できます。
       * 検索：コミュニティサイト内での検索機能
@@ -75,25 +71,25 @@ AEM Communitiesを使用すると、サイト訪問者との関係を構築で�
    * ブランディング：コミュニティサイトのすべてのページに表示するバナー画像のオプションアップロード
    * ナビゲーションメニュー：コミュニティサイトテンプレートに含まれる機能に対してナビゲーションリンクが提供されます。
 
-新しいコミュニティサイトを簡単に作成するには、 [AEM Communitiesの概要](/help/communities/getting-started.md).
+簡単にコミュニティサイトを簡単に作成するには、 [AEM Communitiesの概要](/help/communities/getting-started.md).
 
 ## コミュニティコンテンツの持続性 {#community-content-persistence}
 
-コミュニティコンテンツのパフォーマンスと同期を向上させるために、AEM Communitiesには、すべてのAEM（オーサーおよびパブリッシュ）インスタンス間で共有されるユーザー生成コンテンツ (UGC) 専用の共通ストアが必要です。
+コミュニティコンテンツのパフォーマンスと同期を向上させるために、AEM Communitiesには、すべてのAEM（オーサーおよびパブリッシュ）インスタンス間で共有される、ユーザー生成コンテンツ (UGC) 用の共通ストアが必要です。
 
 コミュニティコンテンツには、ストレージリソースプロバイダー (SRP) を通じて簡単にアクセスできます。SRP は、基になるトポロジとは別にアクセスするためのレイヤーを提供し、UGC 用の共通ストアをサポートします。
 
 コミュニティコンテンツの永続性と推奨されるデプロイメントについて詳しくは、以下を参照してください。
 
-* [コミュニティコンテンツストレージ](/help/communities/working-with-srp.md):UGC で使用可能な SRP ストレージオプションについて説明します。
+* [コミュニティコンテンツストレージ](/help/communities/working-with-srp.md)- UGC で使用可能な SRP ストレージオプションについて説明します。
 * [推奨されるトポロジ](/help/communities/topologies.md)：使用例と SRP の選択に基づくトポロジについて説明します。
-* [AEM 6.5 Communities へのアップグレード](/help/communities/upgrade.md):AEM 6.5 に移行する際の UGC に関する有用な情報を提供します。
+* [AEM 6.5 Communities へのアップグレード](/help/communities/upgrade.md)- AEM 6.5 に移行する際の UGC に関する有用な情報を提供します。
 
 ## コミュニティコンソール {#communities-consoles}
 
 オーサー環境では、グローバルナビゲーションコンソールから [コミュニティコンソール](/help/communities/consoles.md)（次を含む）:
 
-* [サイト](/help/communities/sites-console.md) コンソール
+* [サイト](/help/communities/sites-console.md)コンソール
 
    * サイトの作成
    * サイト編集
@@ -135,7 +131,7 @@ AEM Communitiesを使用すると、サイト訪問者との関係を構築で�
 
 * [コンポーネントガイド](/help/communities/components-guide.md)
 
-   * サンプルサイト [コミュニティコンポーネント](https://localhost:4502/editor.html/content/community-components/en.html)を使用して、すべての Communities コンポーネントのサンプルとデフォルトの設定を提供し、それらを使用して試すことができます。
+   * サンプルサイト [コミュニティコンポーネント](https://localhost:4502/editor.html/content/community-components/en.html) では、すべてのコミュニティコンポーネントのサンプルをデフォルトの設定と、それらを使用した実験が可能です。
 
 ## コミュニティサイトテンプレート {#community-site-templates}
 
@@ -195,7 +191,7 @@ AEM Communitiesを使用すると、サイト訪問者との関係を構築で�
 * スコアとバッジ
 * Analytics レポート
 
-新しいエンゲージメントコミュニティを素早く簡単に作成するには、次を参照してください。 [AEM Communitiesの概要](/help/communities/getting-started.md).
+エンゲージメントコミュニティを素早く簡単に作成するには、次を参照してください。 [AEM Communitiesの概要](/help/communities/getting-started.md).
 
 ## AEM Demo Machine {#aem-demo-machine}
 
@@ -208,7 +204,7 @@ AEM Demo Machine には、以下が含まれます。
 
 * インストールするパッケージ。
 
-AEM Demo Machine は、Windows、MacOS、Linux 上の CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3、AEM 6.4 で正常にテストされました。
+AEM Demo Machine は、Windows、MacOS、および Linux®上で CQ 5.5、CQ 5.6.1、AEM 6.0、AEM 6.1、AEM 6.2、AEM 6.3、AEM 6.4 で正常にテストされました。
 
 AEM Demo Machine には、有効なAEMライセンスが必要です。
 
