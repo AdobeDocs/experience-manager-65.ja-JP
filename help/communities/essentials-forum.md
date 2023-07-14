@@ -1,25 +1,21 @@
 ---
 title: フォーラムの基本事項
-seo-title: Forum Essentials
 description: フォーラムの概要
-seo-description: Forum overview
-uuid: 68849582-8742-40be-9e7e-0b574ae38815
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: 059c5bbe-07eb-4873-8157-2196df887b27
 exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 49%
+source-wordcount: '246'
+ht-degree: 4%
 
 ---
 
 # フォーラムの基本事項 {#forum-essentials}
 
-このページでは、フォーラム機能の操作に関する基本情報をまとめています。
+このページでは、フォーラム機能の操作に関する基本情報を提供します。
 
 ## クライアント側の基本事項 {#essentials-for-client-side}
 
@@ -30,7 +26,7 @@ ht-degree: 49%
    <td>social/forum/components/hbs/forum<br /> social/forum/components/hbs/topic<br /> social/forum/components/hbs/post</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>インクルード可能</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>含める</strong></a></td>
    <td>いいえ</td>
   </tr>
   <tr>
@@ -56,23 +52,24 @@ ht-degree: 49%
 
 ## サーバー側の基本事項 {#essentials-for-server-side}
 
-* [フォーラム API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
+* [フォーラム API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
-* [フォーラムエンドポイント](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
+* [フォーラムエンドポイント](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
 
 * [サーバー側のカスタマイズ](server-customize.md)
 
 ### フォーラム機能 {#forum-function}
 
-を含むコミュニティサイト構造 [フォーラム機能](functions.md#forum-function)（設定済みを含む） `forum` コンポーネントのほか、モデレート、タグ付けおよび翻訳に影響する設定も含まれます。
+を含むコミュニティサイト構造 [フォーラム機能](functions.md#forum-function)（設定済みを含む） `forum` モデレート、タグ付け、翻訳に影響するコンポーネントおよび設定です。
 
-### フォーラム投稿（UGC）へのアクセス {#accessing-forum-posts-ugc}
+### フォーラム投稿 (UGC) へのアクセス {#accessing-forum-posts-ugc}
 
-UGC は、標準モデレート方法のいずれかを使用してモデレートする必要があります。[ユーザー生成コンテンツのモデレート](moderate-ugc.md)を参照してください。
+UGC は、モデレートの標準的な方法の 1 つを使用してモデレートする必要があります。
+詳しくは、 [ユーザー生成コンテンツのモデレート](moderate-ugc.md).
 
-AEM 6.1 Communities 以降では、UGC の[共通ストア](working-with-srp.md)を使用する際に、選択されたストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムによって UGC にアクセスする必要があります。
+Adobe Experience Manager 6.1 Communities の時点での、 [共通店](working-with-srp.md) UGC の場合は、選択したストレージオプション（ASRP、MSRP、JSRP など）に関係なく、プログラムで UGC にアクセスできます。
 
-**リポジトリ内の UGC の場所と形式は予告なく変更されることがあります**。
+**リポジトリ内の UGC の場所と形式は、警告なしで変更される場合があります**.
 
 以下を参照してください。
 
