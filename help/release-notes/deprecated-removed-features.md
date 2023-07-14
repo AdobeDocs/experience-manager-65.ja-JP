@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 58594be73372e128ba999a8290615fbcb447084e
-workflow-type: ht
-source-wordcount: '1675'
-ht-degree: 100%
+source-git-commit: 11e848d93964b5f8e45ccd7388a48953a3148e35
+workflow-type: tm+mt
+source-wordcount: '1727'
+ht-degree: 88%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 100%
 
 現在のデプロイメントでその機能を利用しているかどうかを確認し、提示される代替手段を使用するように実装を変更するための計画を立てることをお勧めします。
 
-| 領域 | 機能 | 代替手段 | バージョン（SP） |
+| 領域 | 機能 | 代替手段 | バージョン (SP) |
 |---|---|---|---|
-| [!DNL Sites] | **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 |  | 6.5.11.0 |
+| [!DNL Sites] | **ソーシャルメディアのステータス**&#x200B;のエクスペリエンスフラグメントのプロパティ。 |   | 6.5.11.0 |
 | [!DNL Sites] | シンプルなコンテンツフラグメントを作成するためのコンテンツフラグメントテンプレート。 | 現在の[モデルベースの構造化コンテンツフラグメント](/help/assets/content-fragments/content-fragments-models.md)。 | 6.5.11.0 |
 | Creative Cloud 統合 | AEM／Creative Cloud フォルダー共有は、クリエイティブユーザーが AEM のアセットにアクセスできるようにする手段として AEM 6.2 に導入されました。その結果、ユーザーはアセットを [!DNL Creative Cloud] アプリケーションで開いたり、AEM に新しいファイルをアップロードまたは変更を保存したりできるようになりました。Creative Cloud アプリケーションでリリースされた新しい機能である Adobe Asset Link では、ユーザーエクスペリエンスが大幅に向上し、Photoshop、InDesign、Illustrator 内から AEM のアセットへの直接アクセスが強化されています。AEM／Creative Cloud フォルダー共有の統合機能がさらに強化される予定はありません。この機能は AEM に含まれてはいますが、代替ソリューションを使用することをお勧めします。 | Adobe Asset Link や AEM Desktop App などの新しい Creative Cloud 統合機能に切り替えることをお勧めします。 |  |
 | Assets | `AssetDownloadServlet` は、パブリッシュインスタンスに対してデフォルトで無効になっています。詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 | 設定について詳しくは、[AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)を参照してください。 |  |
@@ -50,24 +50,24 @@ ht-degree: 100%
 |開発者向け|YUI を使用した JavaScript クライアントライブラリの圧縮／軽量化。アドビでは、YUI ライブラリを今後更新する予定はありません。AEM 6.4 までは、JavaScript を軽量化するデフォルトの手段は YUI で、Google Closure Compiler（GCC）に切り替えるオプションもありました。AEM 6.5 以降は、GCC がデフォルトになっています。|AEM 6.5 にアップグレードする場合は、実装で GCC に切り替えることをお勧めします||
 |開発者向け|CRXDE Lite のクラシック UI ダイアログエディター。 アドビでは、配布版（クイックスタート）の一部として出荷されているクラシック UI ダイアログエディターの機能を今後強化する予定はありません| 代替機能はありません。||
 |Forms|AEM Forms と AEM Mobile の統合は非推奨（廃止予定）になりました。代替機能はありません。||開発者向け|CRXDE Lite のクラシック UI ダイアログエディター。アドビでは、配布版（クイックスタート）の一部として出荷されているクラシック UI ダイアログエディターの機能を今後強化する予定はありません| 代替機能はありません。||
-|開発者向け|Lodash／Underscore クライアントライブラリ。アドビでは、配布版（クイックスタート）の一部として出荷されている Lodash／Underscore クライアントライブラリを今後保守および更新する予定はありません|コードにまだ Lodash／Underscore ライブラリが必要な場合は、それをプロジェクトコードベースに追加することをお勧めします。||
+|開発者向け|Lodash／Underscore クライアントライブラリ。Adobeは、配布版 (Quickstart) の一部として提供される Lodash/underscore クライアントライブラリをさらに保守および更新する予定はありません |Adobeでは、コードに Lodash/underscore を必要とするお客様が、プロジェクトコードベースに追加することをお勧めします。 || |Screens|Adobeは、2Publishers のセットアップに使用するcom.adobe.cq.screens.mq.activemq バンドルと関連する設定をさらに保守および更新する予定はありません。|Adobeは、2Publishers のセットアップがまだ必要なお客様に、 [ロードバランサー](https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=screens&amp;title=AEM+Screens+publish+environment+horizontal+scaling+through+Load+Balancer+session+stickiness) アプローチ。 ||
 
 ## 削除された機能 {#removed-features}
 
 この節では、AEM 6.5 で削除された機能について説明します。以前のリリースでは、これらの機能は「廃止」とマークされていました。
 
-| 領域 | 機能 | 代替手段 | バージョン（SP） |
+| 領域 | 機能 | 代替手段 | バージョン (SP) |
 |--- |--- |--- |--- |
 | [!DNL Experience Cloud] との統合 | [!DNL Adobe I/O] 経由での設定を使用して、アセットを [!DNL Experience Cloud] と同期できます。[!DNL Adobe Experience Cloud] は、以前は [!DNL Adobe Experience Cloud] と呼ばれていました。 | 質問がある場合は、[アドビカスタマーサポートまでお問い合わせください](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)。 |  |
-| Analytics の Activity Map | AEM に組み込まれている Activity Map のバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を使用してください。 |  |
+| AnalyticsActivity Map | AEMに含まれるActivity Mapのバージョン。 | Adobe Analytics API 内のセキュリティ変更により、AEM に含まれているバージョンの Activity Map は使用できなくなりました。[Adobe Analytics が提供する ActivityMap プラグイン](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=ja)を使用してください。 |  |
 | 統合 | ExactTarget の統合は、デフォルトの配布（クイックスタート）から削除され、使用できなくなりました。 | 代替手段はありません。 |  |
 | 統合 | Salesforce Force API との統合はデフォルトの配布版（クイックスタート）から削除され、[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)からインストールする追加パッケージになりました。 | 機能は引き続き利用できます。 |
-| Forms | Adobe Central 製品がサポートされなくなったので、Adobe Central Migration Bridge サービスのサポートが削除されました。 | 代替機能はありません. |  |
+| Forms | Central 製品のサポートが終了したので、AdobeCentral Migration Bridge サービスのAdobeは削除されました。 | 代替機能はありません. |  |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | 代替機能はありません. |  |
 | Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | 代替機能はありません |  |
 | Forms | LiveCycle ES4 SP1 から JEE での AEM 6.5 Forms へ直接アップグレードすることはできません | 詳しくは、AEM Forms のアップグレードに関するドキュメントの[使用可能なアップグレードパス](../forms/using/upgrade.md)を参照してください。 |  |
 | Forms | JEE 上の AEM Forms で、UPD ベースのクラスタリングがサポートされなくなりました。 | JEE 上の AEM Forms で使用できるのは、TCP ベースのクラスタリングのみです。UDP マルチキャストサーバーを以前のバージョンから JEE での AEM 5.5 Forms にアップグレードする場合は、手動設定を実行して、TCP ベースの GemFire クラスタリングに切り替えます。詳しい手順については、[JEE での AEM 6.5 Forms へのアップグレード](../forms/using/upgrade-forms-jee.md)を参照してください。 |  |
-| デベロッパー向け | デフォルトの配布版（クイックスタート）から Firebug Lite が削除されました | ブラウザー組み込みのデベロッパーコンソールを使用してください。 |
+| デベロッパー向け | Firebug Lite がデフォルトの配布版（クイックスタート）から削除されました | ブラウザーの組み込みの開発者コンソールを使用する |
 | デベロッパー向け | HTML クライアントライブラリマネージャーで `customJavaScriptPath` がサポートされなくなりました。 | 代替機能はありません |  |
 | [!DNL Assets] | アセットのオフロード機能は、[!DNL Adobe Experience Manager] 6.5 でサポートされなくなりました。 | 代替機能はありません。 |  |
 | キャッシュ | `system/console/slingjsp` は、AEM 6.5 ではサポートされなくなりました。 | クラスとわずかなキャッシュが、Apache Sling Commons FileSystem ClassLoader バンドルに格納されています。AEM web コンソールでバンドル番号を確認し、ファイルシステムから直接キャッシュフォルダーを削除できます（`crx-quickstart/launchpad/felix/bundle<ID>`）。 |  |
@@ -78,4 +78,4 @@ ht-degree: 100%
 
 | 領域 | 機能 | お知らせ |
 |--- |--- |--- |
-| 基盤 | UI フレームワーク | Coral UI 2 コンポーネントは 2019 年に廃止される予定です。Coral UI 3 は AEM 6.2 で導入され、AEM 6.5 は完全に Coral 3 に基づいています。Coral 2 を使用してカスタム UI を構築しているお客様およびパートナー様については、Coral 3 へのリファクタリングをおこなうことをお勧めします。アドビでは、Coral 2 のダイアログを Coral 3 に変換するツールを提供しています（](/help/sites-developing/modernization-tools.md)詳細情報[）。 |
+| 基盤 | UI フレームワーク | Adobeは、2019 年に Coral UI 2 コンポーネントの廃止を予定しています。 AEM 6.2 で Coral UI 3 が導入され、AEM 6.5 は完全に Coral 3 をベースにしています。 Adobeでは、Coral 2 でカスタム UI を構築したお客様およびパートナーに対し、Coral 3 にリファクタリングすることをお勧めします。 Adobeは、Coral 2 のダイアログを Coral 3 に変換するツールを提供しています — [詳細を表示](/help/sites-developing/modernization-tools.md). |
