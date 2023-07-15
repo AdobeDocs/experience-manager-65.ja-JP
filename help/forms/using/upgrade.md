@@ -11,10 +11,10 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 99%
+source-wordcount: '335'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されて
 
 次の図に、AEM Forms on JEE で使用可能なアップグレードパスを示します。
 
-![](do-not-localize/jee-upgrade-6-5.png)
+![JEE アップグレード 6.5](do-not-localize/jee-upgrade-6-5.png)
 
 次の場所から直接アップグレードを実行できます。
 

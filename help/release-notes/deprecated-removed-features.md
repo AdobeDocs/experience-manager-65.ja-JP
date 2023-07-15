@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 11e848d93964b5f8e45ccd7388a48953a3148e35
+source-git-commit: 9be9bb1706df750ede3f804012442bd73dc462ee
 workflow-type: tm+mt
-source-wordcount: '1727'
-ht-degree: 88%
+source-wordcount: '1730'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 アドビでは、製品の機能を絶えず評価して、常に下位互換性を慎重に考慮しながら、古い機能を作成し直したり、より近代的な機能に置き換えて、お客様にとっての全体的な価値を向上させています。
 
-近い将来行われる AEM 機能の削除や置換を通知するため、次のルールが適用されます。
+Adobe Experience Manager(AEM) 機能の差し迫った削除または置き換えを伝達するために、次の規則が適用されます。
 
 1. 廃止の発表がまず行われます。廃止中は、機能はまだ使用可能ですが、それ以上の機能強化は行われません。
 1. 廃止された機能の削除は、早ければ、次のメジャーリリースで行われます。削除の実際の目標期日を通知します。

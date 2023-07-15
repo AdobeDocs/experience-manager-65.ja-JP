@@ -11,9 +11,9 @@ discoiquuid: a20383f2-f86a-45bf-a39e-725ee764503b
 docset: aem65
 feature: Adaptive Forms
 exl-id: e5533b4f-93b7-4ea9-a01d-fdf9528652c8
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '898'
 ht-degree: 23%
 
 ---
@@ -96,7 +96,7 @@ AEM Formsには、デジタルビジネスプロセスをモバイルデバイ�
 * ビジネス運営に関するリアルタイムのインサイトを得るためのカスタマイズ可能なダッシュボード
 * サードパーティのレポートツールと接続するための API
 
-![](do-not-localize/3rd-draft.gif)
+![3 番目の下書き](do-not-localize/3rd-draft.gif)
 
 ## パーソナライズされた通信 {#personalized-communication}
 
@@ -115,6 +115,6 @@ AEM Formsを使用すると、ビジネスユーザーは、ドキュメント�
 * コンテンツの整合性および署名者の ID を検証するデジタル署名のサポート
 * 暗号化、使用ポリシー、トラッキング、監査など、AEM Formsの Document Security アドオン
 
-![](do-not-localize/layout-02.png)
+![レイアウト 2](do-not-localize/layout-02.png)
 
 合理化されたパーソナライズされた通信ワークフロー

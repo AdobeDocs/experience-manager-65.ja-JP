@@ -1,18 +1,14 @@
 ---
 title: コミュニティサイトの基本事項
-seo-title: Community Site Essentials
 description: コミュニティサイトの書き出しと削除、およびカスタムサイトテンプレートの作成
-seo-description: Exporting and deleting community sites and creating custom site templates
-uuid: f0ec0e71-64e9-415a-b14a-939a9b1611c1
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: dc7a085e-d6de-4bc8-bd7e-6b43f8d172d2
 exl-id: 1dc568cd-315c-4944-9a3e-e5d7794e5dc0
-source-git-commit: cc0574ae22758d095a3ca6b91f0ceae4a8691f0e
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
@@ -73,7 +69,7 @@ ht-degree: 3%
 
 ![crxde-siteconfiguration](assets/crxde-siteconfiguration.png)
 
-必ず **すべて保存** すべてのAEMインスタンスにカスタムコードをレプリケートします（コミュニティサイトコンテンツをコンソールから公開する際に、カスタムコードは含まれません）。
+必ず **すべて保存** すべてのAdobe Experience Manager(AEM) インスタンスにカスタムコードをレプリケートします（コミュニティサイトコンテンツをコンソールから公開する際に、カスタムコードは含まれません）。
 
 カスタムコードをレプリケートする場合の推奨方法は、次のとおりです。 [パッケージの作成](../../help/sites-administering/package-manager.md#creating-a-new-package) すべてのインスタンスにデプロイします。
 
@@ -85,7 +81,7 @@ ht-degree: 3%
 
 UGC とカスタムコードはコミュニティサイトパッケージに含まれていません。
 
-UGC を書き出すには、 [AEM Communities UGC 移行ツール](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration):GitHub で利用できるオープンソース移行ツールです。
+UGC を書き出すには、 [AEM Communities UGC 移行ツール](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration):GitHub で利用可能なオープンソース移行ツールです。
 
 ## コミュニティサイトの削除 {#deleting-a-community-site}
 
@@ -105,7 +101,7 @@ CRXDE を使用して、コミュニティサイトに関連付けられた一�
 
 * サイト ID は、 `rep:principalName`
 
-   例えば、 `rep:principalName = community-enable-nrh9h-members`
+  例えば、 `rep:principalName = community-enable-nrh9h-members`
 
    * **サイト名** = *有効*
    * **サイト ID** = *nrh9h*
@@ -113,9 +109,9 @@ CRXDE を使用して、コミュニティサイトに関連付けられた一�
 
 ### ユーザー生成コンテンツ {#user-generated-content}
 
-Github から communities-srp-tools プロジェクトを取得します。
+GitHub から communities-srp-tools プロジェクトを取得します。
 
-* [https://github.com/Adobe-Marketing-Cloud/communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/communities-srp-tools)
+* [https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools](https://github.com/Adobe-Marketing-Cloud/aem-communities-srp-tools)
 
 SRP からすべての UGC を削除するサーブレットが含まれます。
 
@@ -123,11 +119,11 @@ SRP からすべての UGC を削除するサーブレットが含まれます�
 
 * `path=/content/usergenerated/asi/mongo/content/sites/engage`
 
-これにより、ユーザー生成コンテンツ（パブリッシュ時に入力）は削除され、オーサリングコンテンツ（オーサー時に入力）は削除されません。 したがって [シャドウノード](srp.md#shadownodes) は影響を受けません。
+これにより、ユーザー生成コンテンツ（パブリッシュ時に入力）が削除されるだけでなく、オーサリングコンテンツ（オーサー時に入力）は削除されません。 したがって [シャドウノード](srp.md#shadownodes) は影響を受けません。
 
 ### コミュニティユーザーグループ {#community-user-groups}
 
-すべてのオーサーインスタンスとパブリッシュインスタンスで、 [セキュリティコンソール](../../help/sites-administering/security.md)を探し、 [ユーザーグループ](users.md) 次のようになります。
+すべてのオーサーインスタンスとパブリッシュインスタンスで、 [セキュリティコンソール](../../help/sites-administering/security.md)、を検索して削除する [ユーザーグループ](users.md) 次のようになります。
 
 * プレフィックス `community`
 * 続いて [一意のサイト id](#community-unique-site-id)

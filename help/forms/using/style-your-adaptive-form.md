@@ -9,9 +9,9 @@ topic-tags: introduction
 discoiquuid: 655303a4-99bb-4ba3-9d50-a178f5edcf85
 feature: Adaptive Forms
 exl-id: 7742c3ca-1755-44c5-b70f-61309f09d1b8
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2041'
 ht-degree: 67%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 67%
 
 テーマは、アダプティブフォームと同様、個別のエンティティです。 アダプティブフォームのコンポーネントやパネルのスタイル (CSS) が含まれています。 スタイルには、背景色、状態色、透明度、整列、サイズなどの CSS プロパティが含まれます。 テーマを適用すると、指定したスタイルがアダプティブフォームの対応するコンポーネントに適用されます。
 
-このチュートリアルでは、ヘッダーとフッター、テキストと数値のコンポーネント、添付ファイルコンポーネント、ボタンのスタイルを設定します。 まずテーマを作成することから始めましょう。
+このチュートリアルでは、ヘッダーとフッター、テキストと数値のコンポーネント、添付ファイルコンポーネント、ボタンのスタイルを設定します。 まず、テーマを作成します。
 
 ### テーマの作成 {#create-a-theme}
 
@@ -234,7 +234,7 @@ ht-degree: 67%
 
 1. 「**[!UICONTROL 顧客 ID]**」フィールドの上部で空白領域をタップし、「**[!UICONTROL レスポンシブパネルコンテナ]**」をタップします。**[!UICONTROL 背景]**／**[!UICONTROL 背景色]**&#x200B;を F1F2F2 に設定します。「![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)」をタップします。
 
-   ![](do-not-localize/responsive-panel-container.png)
+   ![レスポンシブパネルコンテナ](do-not-localize/responsive-panel-container.png)
 
 ### ボタンのスタイル設定 {#style-the-buttons}
 

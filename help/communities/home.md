@@ -1,25 +1,23 @@
 ---
 title: Adobe Experience Manager 6.5 Communities ガイド
-seo-title: Adobe Experience Manager 6.5 Communities Guide
-description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。コミュニティのデプロイ、管理、開発、オーサリングの方法を説明するガイドを参照してください。
-seo-description: Covers all AEM Communities tasks, such as creating online experiences such as forums, user groups, learning resources, and other social features.
+description: フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。コミュニティのデプロイ、管理、開発、オーサリングの方法を説明するこのガイドを参照してください。
 exl-id: 63040353-d34c-4306-9e7a-584ba48d8ad5
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
+source-git-commit: e161c37544c3391607cbe495644f3353b9f77fe3
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 91%
+source-wordcount: '352'
+ht-degree: 90%
 
 ---
 
-# Adobe Experience Manager 6.5 Communities ガイド
+# Adobe Experience Manager (AEM) 6.5 Communities ガイド
 
-フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。コミュニティのデプロイ、管理、開発、オーサリングの方法を説明するガイドを参照してください。
+フォーラム、ユーザーグループ、学習リソース、その他のソーシャル機能などのオンラインエクスペリエンスを作成します。コミュニティのデプロイ、管理、開発、オーサリングの方法を説明するこのガイドを参照してください。
 
 ## 主な AEM 記事
 
 * [AEM 使用の手引き](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=ja)
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
-* [最近のドキュメントの更新](https://helpx.adobe.com/jp/experience-manager/documentation-updates.html)
+* [最近のドキュメントの更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=ja)
 * [AEM セキュリティチェックリスト](/help/sites-administering/security-checklist.md)
 
 ## AEM 6.5 ユーザーガイド
@@ -42,11 +40,11 @@ ht-degree: 91%
 
 ## 主要な AEM リソース
 
-* [AEM チュートリアル](https://helpx.adobe.com/jp/experience-manager/kt/index/aem-6-4-videos.html)
-* [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja?lang=en)
+* [AEM チュートリアル](https://experienceleague.adobe.com/docs/experience-manager-tutorials.html?lang=ja)
+* [Dispatcher ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)
 * [HTL ユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 * [コアコンポーネントユーザーガイド](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja)
-* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja?lang=en)
+* [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=ja?lang=ja)
 * [GDPR 対応](/help/managing/data-protection-and-privacy.md)
-* [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other&amp;lang=ja#home)
+* [Experience League](https://experienceleague.adobe.com/#home)
 * [AEM コミュニティフォーラム](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=ja)

@@ -3,10 +3,10 @@ title: アダプティブフォームを作成するか、AEM Sitesページに�
 description: アダプティブフォームを容易に作成したり、シームレスにAEM Sitesページに追加したりする方法を学びます。 動的でカスタマイズ可能なフォームを Web サイトに統合し、デジタルエクスペリエンスを最適化して最大限の効果を得るための、順を追った手法とベストプラクティスについて説明します。
 feature: Adaptive Forms
 exl-id: 1813ccfc-87ce-46fa-a1d5-5edffd91efb0
-source-git-commit: cd6d9b4d019e24002e4fe1cc8679d270b24c2934
+source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
 workflow-type: tm+mt
-source-wordcount: '2883'
-ht-degree: 1%
+source-wordcount: '2913'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ AEMページエディターを使用すると、複数のフォームをすば�
 
 AEM FormsにはアダプティブフォームコンテナとアダプティブForms — 埋め込みコンポーネントが用意されています。 アダプティブフォームコンテナを使用して、エクスペリエンスフラグメントまたはAEM Sitesページで新しいフォームを作成できます。アダプティブForms — 埋め込みコンポーネントでは、既存のアダプティブフォームを追加したり、アダプティブFormsエディターを使用して新しいフォームを作成できます。
 
-![](/help/forms/using/assets/adaptive-form-in-sites-page.png)
+![サイトページのアダプティブフォーム](/help/forms/using/assets/adaptive-form-in-sites-page.png)
 
 ## アダプティブフォームコンテナコンポーネントをAEMページエディターまたはエクスペリエンスフラグメントで使用するメリット
 
@@ -65,7 +65,7 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
 
 +++  環境でのアダプティブFormsコアコンポーネントの有効化
 
-次を確認します。 [アダプティブFormsコアコンポーネントがお使いの環境で有効になっていること](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en).
+次を確認します。 [アダプティブFormsコアコンポーネントがお使いの環境で有効になっていること](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=ja).
 
 +++
 
@@ -121,7 +121,7 @@ AEM Page Editor でアダプティブフォームコンテナを使用すると�
 
 +++ アダプティブFormsコンテナの有効化
 
-有効にするには [!UICONTROL アダプティブFormsコンテナ] テンプレートのポリシーのコンポーネントで、次の手順を実行します。
+テンプレートのポリシーで[!UICONTROL アダプティブフォームコンテナ]コンポーネントを有効にするには、次の手順を実行します。
 
 1. AEM Sitesページまたはエクスペリエンスフラグメントを編集用に開きます。 ページを編集用に開くには、ページを選択して「編集」をクリックします。
 1. Sites ページまたはエクスペリエンスフラグメントページのテンプレートを開きます。 テンプレートを開くには、 [!UICONTROL ページ情報] ![ページ情報](/help/forms/using/assets/Smock_Properties_18_N.svg) > [!UICONTROL テンプレートを編集]. 対応するテンプレートがテンプレートエディターで開きます。
@@ -148,7 +148,7 @@ AEMページエディターのアダプティブフォームコンテナコン�
 
 Sites ページでアダプティブフォームを作成するには：
 
-1. AEM Sitesページを編集モードで開きます。
+1. AEM Sites ページを編集モードで開きます。
 1. 次をドラッグ&amp;ドロップ： **[!UICONTROL アダプティブFormsコンテナ]** コンポーネントをコンポーネントブラウザーからサイトページに移動します。 ページ上にフォーム用のスペースが作成されます。 レイアウトモードを使用して、コンテナスペースのサイズを変更できます。
 1. アダプティブフォームのコアコンポーネントをコンテナスペースにドラッグ&amp;ドロップしてフォームを作成します。
 1. 「送信」ボタンを追加します。
@@ -177,7 +177,7 @@ Sites ページでアダプティブフォームを作成するには：
 1. アダプティブフォームを含むAEM Sitesページを ( アダプティブFormsコンテナコンポーネントで ) 編集モードで開きます。
 1. コンテンツツリーを開き、 **[!UICONTROL アダプティブFormsコンテナ]** アダプティブフォームをホストする 1 つのAEM Sitesページで複数のアダプティブFormsをホストできます。 したがって、適切なアダプティブFormsコンテナを慎重に選択してください。
 1. メニューバーで、 ![エクスペリエンスフラグメントバリエーションに変換アイコン](/help/forms/using/assets/Smock_FilingCabinet_18_N.svg) エクスペリエンスフラグメントバリエーションに変換アイコン
-   ![](/help/forms/using/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
+   ![Sites ページ内のフォームをエクスペリエンスフラグメントに変換する](/help/forms/using/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
    アダプティブフォームコンテナを新しいエクスペリエンスフラグメントに変換するか、既存のエクスペリエンスフラグメントに追加するためのダイアログボックスが表示されます
 1. エクスペリエンスフラグメントバリエーションに変換ダイアログボックスで、次のオプションの値を設定します。
@@ -195,7 +195,7 @@ Sites ページでアダプティブフォームを作成するには：
 1. アダプティブフォームを含むAEMページエディターまたはエクスペリエンスフラグメントを開きます。
 1. コンテンツツリーを開き、 **[!UICONTROL アダプティブFormsコンテナ]** アダプティブフォームをホストする 1 つのAEM Sitesページで複数のアダプティブFormsをホストできます。 したがって、適切なアダプティブFormsコンテナを慎重に選択してください。
 1. アダプティブフォームコンテナのプロパティをクリックします。 ![アダプティブフォームコンテナのプロパティ](/help/forms/using/assets/configure-icon.svg) アイコン 送信アクションを設定するアダプティブフォームコンテナダイアログボックスが開きます。
-   ![](/help/forms/using/assets/adaptive-forms-container.png)
+   ![アダプティブフォームコンテナ](/help/forms/using/assets/adaptive-forms-container.png)
 1. 必要に応じて、送信アクションを選択して設定します。 送信アクションについて詳しくは、 [アダプティブフォーム送信アクション](configuring-submit-actions.md)
 
 
@@ -213,7 +213,7 @@ Sites ページでアダプティブフォームを作成するには：
 1. アダプティブフォームを含むAEMページエディターまたはエクスペリエンスフラグメントを開きます。
 1. コンテンツツリーを開き、 **[!UICONTROL アダプティブFormsコンテナ]** アダプティブフォームをホストする 1 つのAEM Sitesページで複数のアダプティブFormsをホストできます。 したがって、適切なアダプティブFormsコンテナを慎重に選択してください。
 1. アダプティブフォームコンテナのプロパティをクリックします。 ![アダプティブフォームコンテナのプロパティ](/help/forms/using/assets/configure-icon.svg) アイコン データモデルを設定するためのアダプティブフォームコンテナダイアログボックスが開きます。
-   ![](/help/forms/using/assets/form-data-model-adaptive-forms-container.png)
+   ![フォームデータモデルのアダプティブフォームコンテナ](/help/forms/using/assets/form-data-model-adaptive-forms-container.png)
 1. 必要に応じて、JSON スキーマまたはフォームデータモデルを選択し、設定します。 送信アクションについて詳しくは、 [アダプティブフォーム送信アクション](configuring-submit-actions.md).
 
    * を選択し、 **[!UICONTROL フォームモデル]** オプションを選択する場合は、 **[!UICONTROL フォームデータモデルを選択]** 」オプションを使用して事前設定済みのフォームデータモデルを選択します。
@@ -235,7 +235,7 @@ Sites ページでアダプティブフォームを作成するには：
 1. アダプティブフォームを含むAEMページエディターまたはエクスペリエンスフラグメントを開きます。
 1. コンテンツツリーを開き、 **[!UICONTROL アダプティブFormsコンテナ]** アダプティブフォームをホストする 1 つのAEM Sitesページで複数のアダプティブFormsをホストできます。 したがって、適切なアダプティブFormsコンテナを慎重に選択してください。
 1. アダプティブフォームコンテナのプロパティをクリックします。 ![アダプティブフォームコンテナのプロパティ](/help/forms/using/assets/configure-icon.svg) アイコン データモデルを設定するためのアダプティブフォームコンテナダイアログボックスが開きます。
-   ![](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
+   ![サービス fdm aem サイトページエディターの事前入力](/help/forms/using/assets/prefill-service-fdm-aem-sites-page-editor.png)
 1. フォームデータモデルを選択. を開きます。 **[!UICONTROL 基本]** タブをクリックします。 事前入力サービスで、「 」を選択します。 **[!UICONTROL Forms Portal Draft Prefill Service]**.
 1. 「**[!UICONTROL 完了]**」をクリックします。
 
