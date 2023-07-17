@@ -1,16 +1,14 @@
 ---
 title: コミュニティのトラブルシューティング
 description: 既知の問題を含むコミュニティのトラブルシューティング
-uuid: 99225430-fa2a-4393-ae5a-18b19541c358
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
 content-type: reference
-discoiquuid: cdb2d80a-2fbf-4ee6-b89b-b5d74e6d3bfc
 exl-id: ef4f4108-c485-4e2e-a58f-ff64eee9937e
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
+source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '350'
 ht-degree: 1%
 
 ---
@@ -42,20 +40,20 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 問題は、com.day.cq.commons.date.RelativeTimeFormat の書式文字列が 5.4 から 5.5 に変更され、「ago」の「a」は受け入れられなくなったことです。
 
-したがって、RelativeTimeFormat() API を使用するコードは、以下を変更する必要があります。
+したがって、RelativeTimeFormat() API を使用するコードは、次の値を変更する必要があります。
 
 * 送信元: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * To: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-失敗は、オーサーとパブリッシュで異なります。 オーサー環境では、警告なく失敗し、フォーラムトピックを表示しません。 公開すると、ページ上でエラーがスローされます。
+失敗は、オーサーとパブリッシュで異なります。 オーサー環境では、警告なく失敗し、フォーラムトピックは表示されません。 公開すると、ページ上でエラーがスローされます。
 
-詳しくは、 [com.day.cq.commons.date.RelativeTimeFormat](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
+詳しくは、 [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API を参照してください。
 
 ## 一般的な懸念事項 {#common-concerns}
 
 ### ログ内の警告：Handlebars は非推奨 {#warning-in-logs-handlebars-deprecated}
 
-起動時（1 日ではなく、その後のすべて）に、次の警告がログに表示される場合があります。
+起動時（最初ではなく、その後のすべて）に、次の警告がログに表示される場合があります。
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` は、 `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
@@ -63,7 +61,7 @@ at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScri
 
 ### ログ内の警告：OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 
-多数の Social Communities フォーラムトピックを投稿すると、OakResourceListener processOsgiEventQueue からの警告と情報ログが大量に発生する可能性があります。
+複数の Social Communities フォーラムトピックを投稿すると、OakResourceListener processOsgiEventQueue から大量の警告と情報ログが発生する可能性があります。
 
 これらの警告は無視しても問題ありません。
 

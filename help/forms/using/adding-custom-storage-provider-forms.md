@@ -1,19 +1,15 @@
 ---
 title: ドラフトと送信コンポーネントのカスタムストレージ
-seo-title: Custom storage for drafts and submissions component
-description: ドラフトおよび送信用のユーザーデータの保存場所をカスタマイズする方法を説明します。
-seo-description: See how to customize the storage of user data for drafts and submissions.
-uuid: ac2e80ee-a9c7-44e6-801e-fe5a840cb7f8
+description: ドラフトと送信に関するユーザーデータのストレージをカスタマイズする方法を参照してください。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
-discoiquuid: 154255e7-468a-42e6-a33d-eee691cf854d
 feature: Forms Portal
 exl-id: b1300eeb-2653-4bb5-b2fd-88048c9c43b9
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 3d80ea6a6fbad05afcdd1f41f4b9de70921ab765
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 100%
+source-wordcount: '332'
+ht-degree: 28%
 
 ---
 
@@ -21,20 +17,20 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-AEM Forms ではフォームをドラフトとして保存できます。ドラフト機能により、作業中のフォームを維持できるようになります。任意のデバイスから後でフォームを完成させて、送信できます
+AEM Formsを使用すると、フォームをドラフトとして保存できます。 ドラフト機能を使用すると、作業中のフォームを維持できます。このフォームを後から入力して、任意のデバイスから送信することができます。
 
-デフォルトでは、AEM Forms はフォームのドラフトと送信に関連付けられたユーザーデータをパブリッシュインスタンスの `/content/forms/fp` ノードに保存します。さらに、AEM Forms ポータルコンポーネントではデータサービスを使用でき、これを使用するとドラフトと送信のユーザーデータの保存の実装をカスタマイズできます。例えば、ユーザーデータをデータストアに保存できます。
+デフォルトでは、AEM Formsはフォームのドラフトと送信に関連付けられたユーザーデータを `/content/forms/fp` ノードをパブリッシュインスタンスに追加します。 また、AEM Formsポータルコンポーネントはデータサービスを提供し、これを使用して、ドラフトおよび送信用のユーザーデータの保存の実装をカスタマイズできます。 例えば、ユーザーデータをデータストアに格納できます。
 
 ## 前提条件  {#prerequisites}
 
-* [フォームポータルコンポーネント](/help/forms/using/enabling-forms-portal-components.md)を有効にする
-* [フォームポータルページ](/help/forms/using/creating-form-portal-page.md)を作成
-* [フォームポータル用アダプティブフォーム](/help/forms/using/draft-submission-component.md)を有効にする
+* 有効にする [Forms Portal コンポーネント](/help/forms/using/enabling-forms-portal-components.md)
+* の作成 [Forms Portal ページ](/help/forms/using/creating-form-portal-page.md)
+* 有効にする [Forms Portal 用アダプティブフォーム](/help/forms/using/draft-submission-component.md)
 * [カスタムストレージの実装の詳細](/help/forms/using/draft-submission-component.md#customizing-the-storage)を学ぶ
 
 ## ドラフトデータサービス {#draft-data-service}
 
-ドラフトのユーザーデータの保存場所をカスタマイズするには、`DraftDataService` インターフェイスのすべてのメソッドを実装する必要があります。次のサンプルコードでメソッドと引数を説明します。
+ドラフトのユーザーデータのストレージをカスタマイズするには、 `DraftDataService` インターフェイス。 次のサンプルコードでメソッドと引数を説明します。
 
 ```java
 /**
@@ -103,7 +99,7 @@ public interface DraftDataService {
 
 ## 送信データサービス {#submission-data-service}
 
-送信用のユーザーデータの保存場所をカスタマイズするには、`SubmitDataService` インターフェイスのすべてのメソッドを実装する必要があります。次のサンプルコードでメソッドと引数を説明します。
+送信するユーザーデータのストレージをカスタマイズするには、 `SubmitDataService` インターフェイス。 次のサンプルコードでメソッドと引数を説明します。
 
 ```java
 /**
@@ -188,7 +184,7 @@ public interface SubmitDataService {
 }
 ```
 
-フォームポータルでは、UUID（Universally Unique Identifier）の概念を使用して、ドラフトや送信済みフォームそれぞれに一意の ID を生成します。自分の一意の ID を作成することもできます。FPKeyGeneratorService インターフェースを実装して、メソッドをオーバーライドし、カスタムの論理を開発してドラフトや送信済みフォームそれぞれに一意の ID を生成することができます。また、カスタム ID 生成の実装のサービスランクを 0 より高く設定します。これにより、デフォルトの実装ではなくカスタムの実施が確実に使用されるようになります。
+Forms Portal では、 UUID(Universally Unique IDentifier) の概念を使用して、ドラフトおよび送信済みフォームごとに一意の ID を生成します。 独自の一意の ID を生成することもできます。 FPKeyGeneratorService インターフェースを実装して、メソッドをオーバーライドし、カスタムの論理を開発してドラフトや送信済みフォームそれぞれに一意の ID を生成することができます。また、カスタム ID 生成実装のサービスランクを 0 より大きく設定します。 これにより、デフォルトの実装の代わりにカスタム実装が必ず使用されるようになります。
 
 ```java
 public interface FPKeyGeneratorService {
@@ -203,11 +199,11 @@ public interface FPKeyGeneratorService {
 }
 ```
 
-上記のコードを使用して生成したカスタム ID のサービスの順位付けを上げるには、以下の注釈を使用します。
+以下の注釈を使用して、上記のコードで生成されたカスタム ID のサービスランキングを上げることができます。
 
 `@Properties(value = { @Property(name = "service.ranking", intValue = 15) } )`
 
-上記の注釈を使用するには、以下をプロジェクトに読み込みます。 
+上記の注釈を使用するには、以下をプロジェクトに読み込みます。
 
 ```java
 import org.apache.felix.scr.annotations.Properties;
