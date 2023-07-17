@@ -2,10 +2,10 @@
 title: Adobe Experience Manager 6.5 リリースで廃止および削除された機能です。
 description: リリースノート（Adobe Experience Manager 6.5 の廃止される機能および削除された機能）
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
-source-git-commit: 9be9bb1706df750ede3f804012442bd73dc462ee
+source-git-commit: 728069a863fb93b1bebcb1f243ebffc6ec833464
 workflow-type: tm+mt
-source-wordcount: '1730'
-ht-degree: 87%
+source-wordcount: '1712'
+ht-degree: 88%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Manager(AEM) 機能の差し迫った削除または置き換�
 |開発者向け|YUI を使用した JavaScript クライアントライブラリの圧縮／軽量化。アドビでは、YUI ライブラリを今後更新する予定はありません。AEM 6.4 までは、JavaScript を軽量化するデフォルトの手段は YUI で、Google Closure Compiler（GCC）に切り替えるオプションもありました。AEM 6.5 以降は、GCC がデフォルトになっています。|AEM 6.5 にアップグレードする場合は、実装で GCC に切り替えることをお勧めします||
 |開発者向け|CRXDE Lite のクラシック UI ダイアログエディター。 アドビでは、配布版（クイックスタート）の一部として出荷されているクラシック UI ダイアログエディターの機能を今後強化する予定はありません| 代替機能はありません。||
 |Forms|AEM Forms と AEM Mobile の統合は非推奨（廃止予定）になりました。代替機能はありません。||開発者向け|CRXDE Lite のクラシック UI ダイアログエディター。アドビでは、配布版（クイックスタート）の一部として出荷されているクラシック UI ダイアログエディターの機能を今後強化する予定はありません| 代替機能はありません。||
-|開発者向け|Lodash／Underscore クライアントライブラリ。Adobeは、配布版 (Quickstart) の一部として提供される Lodash/underscore クライアントライブラリをさらに保守および更新する予定はありません |Adobeでは、コードに Lodash/underscore を必要とするお客様が、プロジェクトコードベースに追加することをお勧めします。 || |Screens|Adobeは、2Publishers のセットアップに使用するcom.adobe.cq.screens.mq.activemq バンドルと関連する設定をさらに保守および更新する予定はありません。|Adobeは、2Publishers のセットアップがまだ必要なお客様に、 [ロードバランサー](https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=screens&amp;title=AEM+Screens+publish+environment+horizontal+scaling+through+Load+Balancer+session+stickiness) アプローチ。 ||
+|開発者向け|Lodash／Underscore クライアントライブラリ。Adobeは、配布版 (Quickstart) の一部として提供される Lodash/underscore クライアントライブラリをさらに保守および更新する予定はありません |Adobeでは、コードに Lodash/underscore を必要とするお客様が、プロジェクトコードベースに追加することをお勧めします。 || |Screens|Adobeは、2Publishers のセットアップに使用するcom.adobe.cq.screens.mq.activemq バンドルと関連する設定をさらに保守および更新する予定はありません。|Adobeでは、2Publishers のセットアップを引き続き必要とするお客様に、ロードバランサーのアプローチを使用することをお勧めします。 ||
 
 ## 削除された機能 {#removed-features}
 
