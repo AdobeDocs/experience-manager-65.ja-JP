@@ -1,16 +1,14 @@
 ---
 title: Adobe Experience Manager Mobile On-Demand Services の概要
-description: AEM mobile On-Demand Services アプリの管理の概要。 On-Demand Services のAEM管理者の役割と責任の概要を説明します。
-uuid: fd99c032-287a-489b-9690-b18980c55c29
+description: Adobe Experience Manager(AEM)mobile On-demand Services アプリの管理の概要。 On-Demand Services のAEM管理者の役割と責任の概要を説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 content-type: reference
 topic-tags: administering-on-demand-services-app
-discoiquuid: 5e1e6a51-67e1-42e3-bcb0-e16bc92c9cb3
 exl-id: 95cbedaf-9a94-45fa-8ddb-15be7a09f86d
-source-git-commit: ff7e37f24990a94510331a33cb05b7b44b3bfe85
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '298'
 ht-degree: 4%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
->コンテンツ管理ソースとしてAEMを使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Adobe Experience Manager(AEM) をコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 ## AEM 管理者 {#aem-administrator}
 
@@ -33,7 +31,7 @@ ht-degree: 4%
 >
 >AEM Mobile On-demand Servicesの環境を設定する前に、 [AEM Mobile Application Dashboard または Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An ***AEM administrator*** は、作成ウィザードを使用して新しいアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。 AEM Mobileを使用して新しいアプリを作成するAEM管理者 *作成ウィザード* 通常は、あらかじめ用意されている参照サンプルから目的のアプリテンプレートを 1 つ選択するか、（ほとんどの場合は） *AEM開発者。*
+An ***AEM administrator*** は、作成ウィザードを使用してアプリを作成するか、既存のアプリケーションを読み込むことで、AEM Mobileカタログにアプリケーションを追加します。 AEM Mobileを使用してアプリを作成するAEM管理者 *作成ウィザード* 通常は、Adobeの標準の参照サンプルから目的のアプリテンプレートを 1 つ選択するか、（通常は） *AEM開発者。*
 
 >[!NOTE]
 >
@@ -41,7 +39,7 @@ An ***AEM administrator*** は、作成ウィザードを使用して新しい�
 
 AEM管理者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを実行します。
 
-* [AEM Mobileの設定](/help/mobile/aem-mobile-setup.md)を含む
+* [AEM Mobileの設定](/help/mobile/aem-mobile-setup.md) 対象
 
    * AEM Mobile Provisioning
    * AEM Mobile用プロジェクトの作成

@@ -1,56 +1,52 @@
 ---
-title: AEM でのユーザー管理操作を監査する方法
-seo-title: How to Audit User Management Operations in AEM
-description: AEM でのユーザー管理操作を監査する方法について説明します。
-seo-description: Learn how to audit User Management Operations in AEM.
-uuid: 9d177afb-172c-4858-a678-254c97cfa472
+title: Adobe Experience Managerでユーザー管理操作を監査する方法
+description: Adobe Experience Managerでユーザー管理操作を監査する方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: ba6a56e5-b91c-4779-9154-d4300b2827f8
 docset: aem65
 exl-id: 7a4406c9-2f98-4bf8-b32c-1ec1e7ff36f0
 feature: Operations
-source-git-commit: 9134130f349c6c7a06ad9658a87f78a86b7dbf9c
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 100%
+source-wordcount: '300'
+ht-degree: 15%
 
 ---
 
-# AEM でのユーザー管理操作を監査する方法{#how-to-audit-user-management-operations-in-aem}
+# Adobe Experience Manager(AEM) でユーザー管理操作を監査する方法 {#how-to-audit-user-management-operations-in-aem}
 
 ## はじめに {#introduction}
 
-権限の変更を後で監査できるよう、変更操作をログに記録する機能が追加されました。
+AEMでは、権限の変更をログに記録して、後で監査できるようにする機能が導入されました。
 
-この機能強化により、ユーザーの権限とグループの割り当てに対する CRUD（作成、読み取り、更新、削除）アクションを監査できるようになります。さらに詳しく説明すると、次の事項がログに記録されます。
+この機能強化により、ユーザーの権限とグループ割り当てに対する CRUD（作成、読み取り、更新、削除）アクションを監査できます。 具体的には、次の情報が記録されます。
 
 * 新しく作成されたユーザー
-* グループに追加されたユーザー
+* グループに追加されているユーザー
 * 既存のユーザーまたはグループの権限の変更
 
-デフォルトでは、ログエントリは `error.log` ファイルに書き込まれます。監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。このリダイレクト方法について詳しくは、次の説明を参照してください。
+デフォルトでは、エントリは `error.log` ファイル。 監視を容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。これをおこなう方法について詳しくは、次の段落を参照してください。
 
-## 別のログファイルへの出力のリダイレクト {#redirecting-the-output-to-a-separate-log-file}
+## 出力を別のログファイルにリダイレクトする {#redirecting-the-output-to-a-separate-log-file}
 
-別のログファイルにログ出力をリダイレクトするには、新しい **Apache Sling Logging Logger** 設定を作成する必要があります。次の例では、別のファイルの名前として、`useraudit.log` を使用します。
+ログ出力を別のログファイルにリダイレクトするには、 **Apache Sling Logging Logger** 設定。 次を使用します。 `useraudit.log` を、以下の例の別のファイルの名前として使用します。
 
 1. Web コンソールに移動します（*https://serveraddress:serverport/system/console/configMgr*）。
-1. **Apache Sling Logging Logger Configuration** を検索します。次に、エントリの右側にある「+」を押して、新しいファクトリ設定を作成します。
+1. を検索 **Apache Sling Logging Logger Configuration**. 次に、エントリの右側にある「+」を押して、ファクトリ設定を作成します。
 1. 次の設定を作成します。
 
-   * **ログレベル：**&#x200B;情報
+   * **ログレベル：** 情報
    * **ログファイル：** logs/useraudit.log
    * **メッセージパターン：**&#x200B;レベルのデフォルト
    * **ロガー：** com.adobe.granite.security.user.internal.audit、com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   両方のロガーを「**Logger**」フィールドに入力するには、1 つ目のロガーの名前を入力し、次に、「+」ボタンを押してフィールドをもう 1 つ作成し、2 つ目のロガーの名前を入力する必要があります。
+   両方のロガーを **ロガー** 「 」フィールドに、最初のロガーの名前を入力し、次に「+」ボタンを押して 2 番目のロガーの名前を入力し、別のフィールドを作成する必要があります。
 
 ## 出力例 {#example-output}
 
-正しく設定されていれば、出力は次のようになります。
+正しく設定されている場合、出力は次のようになります。
 
 ```xml
 19.05.2017 15:15:08.933 *INFO* [0:0:0:0:0:0:0:1 [1495196108932] POST /libs/granite/security/post/authorizables.html HTTP/1.1] com.adobe.granite.security.user.internal.servlets.AuthorizableServlet Create Group 'group1' operation initiated by User 'admin' (administrator)
@@ -84,7 +80,7 @@ ht-degree: 100%
 
 ## クラシック UI {#classic-ui}
 
-クラシック UI では、ユーザーの追加と削除に関連して監査ログに記録される CRUD 操作に関する情報は、影響を受けるユーザーの ID と、変更の発生日時のみになります。
+クラシック UI では、ユーザーの追加と削除に関する監査ログに記録される CRUD 操作に関する情報は、影響を受けるユーザーの ID と、変更が発生した日時に限られます。
 
 次に例を示します。
 

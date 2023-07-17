@@ -1,16 +1,14 @@
 ---
 title: Adobe Experience Manager Mobile On-Demand
-description: 新しいAEM Mobileアプリエクスペリエンスを開始するには、コンテンツ編集の準備が整う前に、複数の役割を組み合わせる必要があります。 このページでは、AEM Mobile On-Demand サービスの概要について説明します。
-uuid: 175c609d-3cb8-4a1b-bfea-278df272e500
+description: 新しいAdobe Experience Manager(AEM) モバイルアプリエクスペリエンスを開始するには、コンテンツ編集の準備が整う前に、役割が連携する必要があります。 このページでは、AEM Mobile On-Demand サービスの概要について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: introduction
 content-type: reference
-discoiquuid: dc6891cd-19cc-4dff-8bda-a41ed8af8bfb
 exl-id: 4be199d8-963d-4807-b9bb-e23fa577c5f2
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 4%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 >[!NOTE]
 >
->AEMをコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Adobe Experience Manager(AEM) をコンテンツ管理ソースとして使用していない場合は、 [AEM Mobile On-demand Services Help](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 AEMには、コンテンツをモバイルアプリケーションに統合するためのツールがいくつか用意されています。
 
@@ -45,7 +43,7 @@ AEM Preflight アプリは、公開前にアプリとコンテンツをプレビ
 
 AEM Mobileは、AEMプラットフォーム全体を構成する 1 つの柱に過ぎません。
 
-新しいAEM Mobileアプリエクスペリエンスを開始するには、コンテンツ編集の準備が整う前に、複数の役割を組み合わせる必要があります。 新しいAEM Mobileアプリケーションを作成する出発点となる役割は次のとおりです。
+新しいAEM Mobileアプリエクスペリエンスを開始するには、コンテンツ編集の準備が整う前に、複数の役割を組み合わせる必要があります。 次の役割は、AEM Mobileアプリケーションの作成の出発点となります。
 
 * **管理者**
 * **開発者**
@@ -61,7 +59,7 @@ AEM Mobileは、AEMプラットフォーム全体を構成する 1 つの柱に�
 
 ### AEM 管理者 {#aem-administrator}
 
-An ***AEM administrator*** は、作成ウィザードを使用して新しいアプリを作成するか、既存のアプリを読み込むことで、AEM Mobileカタログに新しいアプリを追加します。 AEM Mobileを使用して新しいアプリを作成するAEM管理者 *作成ウィザード* 通常は、あらかじめ用意されている参照サンプルから目的のアプリテンプレートを 1 つ選択するか、（ほとんどの場合は） *AEM開発者。*
+An ***AEM administrator*** は、作成ウィザードを使用してアプリを作成するか、既存のアプリケーションを読み込むことで、AEM Mobileカタログにアプリケーションを追加します。 AEM Mobileを使用してアプリを作成するAEM管理者 *作成ウィザード* 通常は、Adobeの標準の参照サンプルから目的のアプリテンプレートを 1 つ選択するか、（通常は） *AEM開発者。*
 
 AEM管理者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを実行します。
 
@@ -74,7 +72,7 @@ AEM管理者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 
 ## AEM Developer {#aem-developer}
 
-An **AEM developer** は、カスタムの Web テンプレートおよびコンポーネントを拡張して作成することで、AEM オーサーインスタンスを活用して美しく魅力的なモバイルエクスペリエンスを作成できます。 これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（任意のリモートサーバー）の両方をオムニチャネルサービスエンドポイントに通信します。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Marketing Cloudとの統合を含む、豊富で関連性の高いエクスペリエンスを作成します。
+An **AEM developer** は、カスタムの Web テンプレートおよびコンポーネントを拡張して作成することで、AEM オーサーインスタンスを活用して美しく魅力的なモバイルエクスペリエンスを作成できます。 これらのテンプレートとコンポーネントは、モバイルアプリの世界に最適化されているだけではありません。ただし、デバイスとAEMサーバー（任意のリモートサーバー）の両方をオムニチャネルサービスエンドポイントに通信します。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Experience Cloudとの統合を含む、リッチで関連性の高いエクスペリエンスを作成します。
 
 AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のタスクを実行します。
 
@@ -89,9 +87,9 @@ AEM開発者は、AEM Mobile On-demand Servicesを使用してアプリを作成
 >
 >An *AEM developer&#39;s* の役割は、テンプレートとコンポーネントの開発で始まったり終わったりしません。 An *AEM developer* では、標準の参照実装サンプルを単に拡張するのではなく、まったく新しいアプリを作成できます。
 
-## コンテンツ作成者 {#aem-author}
+## AEM オーサー {#aem-author}
 
-An ***AEM オーサー* ( または *マーケター*)**は、カスタムで開発または標準搭載のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこないます。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Marketing Cloudとの統合を含む、豊富で関連性の高いエクスペリエンスを作成します。
+An ***AEM オーサー* ( または *マーケター*)**は、カスタムで開発または標準搭載のテンプレートおよびコンポーネントを使用して、ページの追加と編集、コンポーネントのドラッグ&amp;ドロップ、DAM からのすべてのタイプのメディア（画像、ビデオ、テキストフラグメント）の追加をおこないます。 AEMの組み込みコンテンツエディターは、 *AEM 作成者* ：アプリ内で、他のAdobe Experience Cloudとの統合を含む、リッチで関連性の高いエクスペリエンスを作成します。
 
 AEMの作成者は、AEM Mobile On-demand Servicesを使用してアプリを作成する際に、次のトピックを理解する必要があります。
 

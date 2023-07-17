@@ -1,17 +1,15 @@
 ---
 title: ユーザーおよびユーザーグループの設定
 description: このページでは、ユーザーの役割と、モバイルアプリのオーサリングと管理をサポートするようにユーザーとグループを設定する方法について説明します。
-uuid: 55cea2b3-d7e6-4174-92b3-ee97e46b59c4
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-adobe-phonegap-enterprise
-discoiquuid: 167f3bd9-7dbc-4e6b-9868-3ee53935641b
 exl-id: 9f814204-8cd4-4ba9-9e25-3ff1b25c1955
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 2%
+source-wordcount: '632'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 この章では、ユーザーの役割と、モバイルアプリのオーサリングと管理をサポートするようにユーザーとグループを設定する方法について説明します。
 
@@ -32,11 +30,11 @@ AEM Apps の権限モデルを整理および管理するのに役立つよう�
 
 ### AEM Mobile Application Content Authors（app-author グループ） {#aem-mobile-application-content-authors-app-author-group}
 
-app-authors グループのメンバーは、ページ、テキスト、画像およびビデオなど、AEMモバイルアプリケーションコンテンツのオーサリングを担当します。
+app-authors グループのメンバーは、ページ、テキスト、画像、ビデオなど、AEMモバイルアプリケーションコンテンツのオーサリングを担当します。
 
 #### グループ設定 — app-authors {#group-configuration-app-authors}
 
-1. 「app-authors」という新しいユーザーグループを作成します。
+1. 「app-authors」という名前のユーザーグループを作成します。
 
    ユーザーAdmin Consoleに移動します。 [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -50,7 +48,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
    app-authors を Authors グループに追加します。
 
-1. app-authors ユーザーグループを作成したら、 [ユーザー管理コンソール](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. app-authors ユーザーグループを作成したら、 [ユーザーAdmin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
@@ -59,9 +57,10 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 1. 次に移動： [権限コンソール](http://localhost:4502/useradmin) クラウドサービスを管理する権限を追加します。
 
    * /etc/cloudservices に対する（読み取り）
+
    >[!NOTE]
    >
-   >アプリ作成者は、AEMのデフォルトの content-authors(Authors) グループを拡張したので、/content/phonegap の下にコンテンツを作成する機能を継承しています。
+   >アプリ作成者は、AEMからデフォルトの content-authors(Authors) グループを拡張し、/content/phonegap の下にコンテンツを作成する機能を継承します。
 
 ### AEM Mobile Application Administrators グループ（app-admins グループ） {#aem-mobile-application-administrators-group-app-admins-group}
 
@@ -74,11 +73,11 @@ app-admins グループのメンバーは、app-authors に含まれているの
 >
 >権限は、AEM App コマンドセンターでの一部のユーザーアクションの可用性を決定します。
 >
->app-admins で利用できる app-authors では、一部のオプションが利用できません。
+>一部のオプションは、app-admins で利用できる app-authors では利用できません。
 
 #### グループ設定 — app-admins {#group-configuration-app-admins}
 
-1. app-admins という新しいグループを作成します。
+1. app-admins というグループを作成します。
 1. 以下のグループを新しい app-admins グループに追加します。
 
    * content-authors
@@ -112,14 +111,14 @@ app-admins グループのメンバーは、app-authors に含まれているの
 
 ダッシュボードタイルには、ユーザーが持っている権限に基づいて様々なアクションが表示される場合があります。 次に、各タイルで使用できるアクションを示します。
 
-これらの権限に加えて、現在のアプリの設定に基づいて、アクションの表示/非表示を切り替えることもできます。 例えば、PhoneGap クラウド設定がアプリに割り当てられていない場合、「リモートビルド」アクションを公開するポイントはありません。 これらは、「 」の下に一覧表示されます。**設定条件**&#39;セクション。
+これらの権限に加えて、現在のアプリの設定に基づいて、アクションの表示/非表示を切り替えることもできます。 例えば、PhoneGap クラウド設定がアプリに割り当てられていない場合、「リモートビルド」アクションを公開するポイントはありません。 これらは、以下の「 」の下にリストされます。**設定条件**&#39;セクション。
 
 ### アプリを管理タイル {#manage-app-tile}
 
 現在、タイルには権限を必要とするアクションはありませんが、アプリケーションの詳細ページには次のアクションがあります。
 
-* *編集* app-author および app-admin の場合 (UIトリガー- jcr:write - /content/phonegap/{suffix} 上 )
-* *ダウンロード* app-author および app-admin の場合 (UIトリガー- /content/phonegap/{suffix} 上 )
+* *編集* app-author および app-admin (UIトリガー- jcr:write - /content/phonegap/上{suffix})
+* *ダウンロード* app-author および app-admin (UIトリガー- /content/phonegap/上{suffix})
 
 以下の画像に、アプリの「ダウンロード」および「編集」オプションを示します。
 

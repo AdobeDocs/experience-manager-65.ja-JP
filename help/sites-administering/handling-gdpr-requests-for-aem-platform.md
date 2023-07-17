@@ -1,20 +1,16 @@
 ---
-title: AEM 基盤における GDPR 要件の取り扱い
-seo-title: Handling GDPR Requests for the AEM Foundation
-description: AEM 基盤における GDPR 要件の取り扱い
-seo-description: null
-uuid: d470061c-bbcf-4d86-9ce3-6f24a764ca39
+title: Adobe Experience Manager Foundation に対する GDPR 要求の処理
+description: Adobe Experience Manager Foundation に対する GDPR 要求の処理
 contentOwner: sarchiz
-discoiquuid: 8ee843b6-8cea-45fc-be6c-99c043f075d4
 exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 100%
+source-wordcount: '436'
+ht-degree: 59%
 
 ---
 
-# AEM 基盤における GDPR 要件の取り扱い{#handling-gdpr-requests-for-the-aem-foundation}
+# Adobe Experience Manager(AEM)Foundation に対する GDPR 要求の処理{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
 >
@@ -22,7 +18,7 @@ ht-degree: 100%
 
 ## AEM 基盤の GDPR サポート {#aem-foundation-gdpr-support}
 
-AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。そのため、この記事では主に、GDPR のアクセスリクエストと削除リクエストに対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
+AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。したがって、この記事の情報は主に、ユーザープロファイルへのアクセスと削除の方法、GDPR アクセス要求と削除要求にそれぞれ対処する方法について説明しています。
 
 ## ユーザープロファイルへのアクセス {#accessing-a-user-profile}
 
@@ -42,7 +38,7 @@ AEM 基盤のレベルでは、保存される個人データはユーザープ�
 
 ### HTTP API {#http-api}
 
-前述したように、自動化を促進するために、ユーザーデータにアクセスするための API が用意されています。利用可能な API には、以下のようにいくつかのタイプがあります。
+既に述べたように、Adobeは、自動化を容易にするユーザーデータにアクセスするための API を提供します。 利用可能な API には、以下のようにいくつかのタイプがあります。
 
 **UserProperties API**
 
@@ -75,8 +71,8 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### ユーザーの無効化 {#disable-user}
 
-1. 前述のように、ユーザー管理コンソールを開き、目的のユーザーを検索します。
-1. ユーザーの上にマウスポインターを置き、選択アイコンをクリックします。プロファイルがグレーに変わり、選択されたことが示されます。
+1. 前述のように、ユーザー管理コンソールを開き、該当するユーザーを検索します。
+1. ユーザーの上にマウスポインターを置いて、選択アイコンをクリックします。 プロファイルがグレーに変わり、選択されたことを示します。
 
 1. 上部のメニューの「無効にする」ボタンをクリックして、このユーザーを無効にします。
 
@@ -86,7 +82,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   次のように、プロファイルカードがグレーアウトされてロックが追加されるので、ユーザーのアクティベートが解除されたことがわかります。
+   ユーザーインターフェイスは、プロファイルカードをグレーアウトし、ロックを追加することで、ユーザーがアクティベートを解除されたことを示します。
 
    ![disableduser](assets/disableduser.png)
 
@@ -100,7 +96,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
+1. プロファイルノードとそのすべての子ノードを削除します。 プロファイルノードには、AEMのバージョンに応じて、次の 2 つの形式があります。
 
    1. `[!UICONTROL /profile]` のデフォルトの非公開プロファイル
    1. `[!UICONTROL /profiles]`（AEM 6.5 を使用して作成された新しいプロファイル用）
@@ -109,9 +105,9 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 ### HTTP API {#http-api-1}
 
-以下の手順では、`curl` コマンドラインツールを使用して **[!UICONTROL cavery]** `userId` を持つユーザーを無効化し、デフォルトの場所にあるそのユーザーのプロファイルを削除する方法を示します。
+以下の手順では、 `curl` コマンドラインツールを使用して、 **[!UICONTROL cavery]** `userId` を削除し、 `cavery` がデフォルトの場所で使用可能になっています。
 
-* *ユーザーホームの検索*
+* *ユーザーホームの検出*
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
@@ -120,7 +116,7 @@ curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/aut
 
 * *ユーザーの無効化*
 
-上記のコマンドから返された JSON ペイロードの home プロパティに含まれているノードパスを使用：
+上記のコマンドで返された JSON ペイロードの home プロパティに含まれているノードパスの使用
 
 ```shell
 curl -X POST -u user:password -FdisableUser="describe the reasons for disabling this user (GDPR in this case)" 'http://localhost:4502/home/users/we-retail/DSCP-athB1NYLBXvdTuN.rw.userprops.html'

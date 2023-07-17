@@ -1,19 +1,15 @@
 ---
 title: インストール時の admin パスワードの設定
-seo-title: Configure the Admin Password on Installation
-description: AEM のインストール時に admin パスワードを変更する方法について説明します。
-seo-description: Learn how to change the Admin Password on AEM Installation.
-uuid: 06da9890-ed63-4fb6-88d5-fd0e16bc4ceb
+description: Adobe Experience Managerのインストール時に管理者パスワードを変更する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-discoiquuid: 00806e6e-3578-4caa-bafa-064f200a871f
 exl-id: b55ff9d5-8139-4ecf-ba09-5cf88207c5c4
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 96e2e945012046e6eac878389b7332985221204e
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 100%
+source-wordcount: '302'
+ht-degree: 5%
 
 ---
 
@@ -21,37 +17,37 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-バージョン 6.3 以降の AEM では、新しいインスタンスのインストール時にコマンドラインを使用して admin パスワードを設定できます。
+バージョン 6.3 以降、Adobe Experience Manager(AEM) では、新しいインスタンスをインストールする際に、コマンドラインを使用して管理者パスワードを設定できます。
 
-それ以前のバージョンの AEM では、admin アカウントのパスワードと各種コンソールのパスワードをインストール終了後に変更する必要がありました。
+以前のバージョンのAEMでは、管理者アカウントのパスワードと他の様々なコンソールのパスワードをインストール後に変更する必要がありました。
 
-この機能により、AEM インスタンスのインストール時にリポジトリおよび Servlet Engine 用の新しい admin パスワードを設定できるようになり、後で手動で設定する必要がなくなりました。
+この機能により、AEMインスタンスのインストール中にリポジトリとサーブレットエンジンの新しい管理者パスワードを設定できる機能が追加され、後で手動で設定する必要がなくなります。
 
 >[!CAUTION]
 >
->ただし、この機能は Felix コンソールには対応しておらず、このコンソールのパスワードについては手動で変更する必要があります。詳しくは、関連する[セキュリティチェックリストの節](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts)を参照してください。
+>Felix コンソールは対象外で、パスワードを手動で変更する必要があります。 詳しくは、 [セキュリティチェックリストセクション](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
 
 ## 使用方法 {#how-do-i-use-it}
 
-この機能は、ファイルシステムエクスプローラーで JAR をダブルクリックする代わりに、コマンドラインから AEM をインストールする場合に自動的にトリガーされます。
+この機能は、ファイルシステムエクスプローラから JAR をダブルクリックするのではなく、コマンドラインを使用してAEMをインストールする場合に自動的にトリガーされます。
 
-コマンドラインから AEM インスタンスを実行するための一般的な構文は次のとおりです。
+コマンドラインからAEMインスタンスを実行するための一般的な構文は次のとおりです。
 
 ```shell
 java -jar aem6.3.jar
 ```
 
-コマンドラインからインスタンスを実行する際には、インストールプロセスの途中で admin パスワードの変更オプションが提示されます。
+コマンドラインからインスタンスを実行すると、インストールプロセス中に admin パスワードを変更するオプションが表示されます。
 
 ![chlimage_1-116](assets/chlimage_1-116a.png)
 
 >[!NOTE]
 >
->admin パスワードの変更を求めるメッセージは、新しい AEM インスタンスのインストール時にのみ表示されます。
+>管理者パスワードを変更するプロンプトは、新しいAEMインスタンスのインストール時にのみ表示されます。
 
 ## -nointeractive フラグの使用 {#using-the-nointeractive-flag}
 
-プロパティファイルでパスワードを指定することもできます。これは、`-Dadmin.password.file` システムプロパティと組み合わせた `-nointeractive` フラグを使用して行われます。
+プロパティファイルからパスワードを指定することもできます。 これは、 `-nointeractive` ～と組み合わされた旗 `-Dadmin.password.file` システムプロパティ。
 
 次に例を示します。
 
@@ -59,7 +55,7 @@ java -jar aem6.3.jar
 java -Dadmin.password.file =/path/to/passwordfile.properties -jar aem6.3.jar -nointeractive
 ```
 
-`passwordfile.properties` ファイル内のパスワードの書式は次のようにする必要があります。
+内のパスワード `passwordfile.properties` ファイルの形式は次のとおりです。
 
 ```xml
 admin.password = 12345678
@@ -67,4 +63,4 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->`-Dadmin.password.file` システムプロパティを使用せずに `-nointeractive` パラメーターだけを使用した場合は、AEM ではデフォルトの管理者パスワードが使用され、変更を求めるメッセージは表示されません（基本的に以前のバージョンの動作と同じになります）。インストールスクリプトのコマンドラインでこの非インタラクティブモードを使用して、インストールを自動化できます。
+>単に `-nointeractive` パラメーターに `-Dadmin.password.file` システムプロパティの場合、AEMはデフォルトの admin パスワードを使用しますが、変更を求めることはありません。つまり、以前のバージョンの動作をレプリケートします。 この非インタラクティブモードは、インストールスクリプトのコマンドラインを使用して自動インストールに使用できます。
