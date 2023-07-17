@@ -8,7 +8,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 6%
@@ -150,6 +150,6 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 ## 次の手順
 
 * [コアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [コアコンポーネントベースのアダプティブFormsのテンプレートを作成する](template-editor.md)

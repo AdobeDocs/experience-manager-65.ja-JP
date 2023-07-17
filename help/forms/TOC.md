@@ -8,9 +8,9 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: 73271612633ec349ee1c002044724f408324e5a2
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '3870'
+source-wordcount: '3881'
 ht-degree: 99%
 
 ---
@@ -127,10 +127,13 @@ ht-degree: 99%
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
    + [Microsoft Dynamics OData の設定](using/ms-dynamics-odata-configuration.md)
-   + [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 統合](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [フォームデータモデルの作成](using/create-form-data-models.md)
    + [フォームデータモデルの操作](using/work-with-form-data-model.md)
    + [フォームデータモデルの使用](using/using-form-data-model.md)
++ アダプティブForms — コアコンポーネント {#adaptive-forms-core-components}
+   + [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md)
+   + [コアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+   + [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
 + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
    + [アダプティブフォームの操作のベストプラクティス](using/adaptive-forms-best-practices.md)
    + [アダプティブフォームの作成](using/creating-adaptive-form.md)
@@ -621,7 +624,7 @@ ht-degree: 99%
          + [LiveCycleProcess Java API クイックスタート（SOAP）](developing/livecycleprocess-java-api-soap-quick.md)
          + [Output Service Java API Quick Start（SOAP）](developing/output-service-java-api-quick.md)
          + [PDF ユーティリティサービス Java API クイックスタート（SOAP）](developing/pdf-utilities-service-java-api.md)
-         + [Repository サービス API クイックスタート](developing/repository-service-api-quick-starts.md)
+         + [Repository Service API クイックスタート](developing/repository-service-api-quick-starts.md)
          + [Signature サービス Java API クイックスタート（SOAP）](developing/signature-service-java-api-quick.md)
          + [Task Manager サービス Java API クイックスタート（SOAP）](developing/task-manager-service-java-api.md)
          + [User Manager Java API クイックスタート（SOAP）](developing/user-manager-java-api-quick.md)
@@ -692,7 +695,6 @@ ht-degree: 99%
    + [CRX リポジトリを復元できない](/help/forms/using/restore-crx-repository.md)
    + [AEM 6.5.15.0 サービスパックのインストール後、サービスを利用できないエラーが発生しました](/help/forms/using/aem-service-pack-installation-solution.md)
    + [JBoss Linux 環境での AEM Forms JEE 6.5.15.0 サービスパックのインストールの問題](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
-   + [JEE WebLogic Server での EAR デプロイメントの失敗](/help/forms/using/ear-deployment-failing-on-jee-weblogic-server.md)
 + レガシードキュメント {#legacy-documentation}
    + [JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成](developing/building-xml.md)
    + [AEM Forms on JEE のカスタム DSC を使用したファイルの圧縮と解凍](developing/compressing-decompressing-custom-dsc.md)

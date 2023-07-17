@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2072'
 ht-degree: 12%
 
 ---
@@ -68,7 +68,7 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 ### テーマをカスタマイズするための前提条件 {#prerequisites}
 
-* [アダプティブFormsコアコンポーネントの有効化](/help/forms/using/installing-core-components.md) 環境に適用されます。
+* [アダプティブFormsコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md) 環境に適用されます。
 
 * 最新リリースのをインストールする [Apache Maven。](https://maven.apache.org/download.cgi) Apache Maven は、Java™プロジェクトで一般的に使用されるビルド自動化ツールです。 最新のリリースをインストールすると、テーマのカスタマイズに必要な依存関係が確保されます。
 
@@ -145,20 +145,17 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 1. `<your-theme-sources>/src/site/_variables.scss` ファイルを編集用に開きます。
 1. プロパティの値を変更します。 例えば、デフォルトのエラー色は赤です。 エラーの色を赤から青に変更するには、 `$error`変数を使用します。 例：`$error: #196ee5`
+
+   ![例：エラーの色が青に設定されました](/help/forms/using/assets/theme-level-changes.png)
+
 1. ファイルを保存して閉じます。
 
-<!--
-
-![Example: Error color set to blue](/help/forms/using/assets/variable-customization.png)
-
--->
 
 同様に、 `variable.scss` ファイル：複数のアダプティブフォームコンポーネントに影響を与えるフォントファミリーと種類、テーマとフォントの色、フォントサイズ、テーマの間隔、エラーアイコン、テーマの境界線のスタイル、その他の変数を設定します。
 
 ##### コンポーネントレベルスタイルを設定 {#component-based-customization}
 
 また、特定のアダプティブフォームコアコンポーネント（ボタン、チェックボックス、コンテナ、フッターなど）のフォント、色、サイズおよびその他の CSS プロパティをカスタマイズすることもできます。 特定のコンポーネントに関連付けられた CSS ファイルを編集することで、そのスタイルを組織のブランディングに合わせることができます。 コンポーネントのスタイルをカスタマイズするには、次の手順に従います。
-
 
 1. ファイルを開きます。 `<your-theme-sources>/src/components/<component>/<component.scss>` （編集用） 例えば、ボタンコンポーネントのフォントカラーを変更するには、 `<your-theme-sources>/src/components/button/button.scss`、ファイル。
 1. 必要に応じて、の値を変更します。 例えば、マウスポインターを置いたときのボタンコンポーネントの色を緑に変更するには、 `color: $white` プロパティを `cmp-adaptiveform-button__widget:hover` 16 進コード#12b453またはその他の緑のシェードへのクラス。 最終的なコードは次のようになります。
@@ -326,9 +323,9 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 ## 関連トピック
 
-* [コアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [コアコンポーネントベースのアダプティブフォームを作成する](create-an-adaptive-form-core-components.md)
 * [ルールエディターを使用して、フォームに動的な動作を追加します](rule-editor.md)
 * [コアコンポーネントベースのアダプティブFormsのテーマを作成またはカスタマイズする](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [コアコンポーネントベースのアダプティブFormsのテンプレートを作成する](template-editor.md)
-* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 

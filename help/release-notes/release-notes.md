@@ -3,7 +3,7 @@ title: ' [!DNL Adobe Experience Manager]  6.5 のリリースノート'
 description: ' [!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法、詳細な変更リストを確認します。'
 mini-toc-levels: 3
 exl-id: fed4e110-9415-4740-aba1-75da522039a9
-source-git-commit: d244fb50ad0f165d31bc51ee671b80bdd13c860e
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '3777'
 ht-degree: 31%
@@ -58,7 +58,7 @@ ht-degree: 31%
    * 複数のフォームを Sites ページに追加し、ユーザーエクスペリエンスを合理化し、より柔軟に提供します。
 * **[Experience Manager Formsでの reCAPTCHA Enterprise のサポート](/help/forms/using/captcha-adaptive-forms.md)**:Experience Manager Formsでの reCAPTCHA Enterprise のサポートを追加し、既存のGoogle reCAPTCHA v2 のサポートに加えて、不正なアクティビティやスパムに対する保護を強化しました。
 * **[Adobe Acrobat Sign for Government with Experience Manager Formsのサポート](/help/forms/using/adobe-sign-integration-adaptive-forms.md)**:AEM Formsは、Adobe Acrobat Sign for Government（FedRAMP 準拠）と統合されました。 この統合により、政府関連のアカウント（政府機関および機関）に対するアダプティブフォーム送信により、e-Signatures の高度なコンプライアンスとセキュリティを提供します。 Adobe Acrobat Sign for Government との統合により、Adobeのパートナーや政府のお客様は、Adaptive Formsで最もミッションクリティカルで機密性の高い業務の一部に電子署名を使用できます。 このセキュリティの強化により、すべての電子署名が FedRAMP Moderate コンプライアンスに完全に準拠し、Adobeの政府のお客様に安心して対応できます。
-* **[データ交換用にExperience Manager Formsと Salesforce の統合を有効化](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)**:OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Formsと Salesforce アプリケーションの統合を設定します。 この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーの関与なくシームレスな通信が可能になります。
+* **データ交換用にExperience Manager Formsと Salesforce の統合を有効化**:OAuth 2.0 クライアント資格情報フローを使用して、Experience Manager Formsと Salesforce アプリケーションの統合を設定します。 この機能により、アプリケーションの安全で直接の認証と承認が可能になり、ユーザーの関与なくシームレスな通信が可能になります。
 * **ワークフローエンジンの最適化と機能強化**:ワークフローインスタンスの数を最小限に抑えて、ワークフローエンジンのパフォーマンスを向上させます。 に加えて `COMPLETED` および `RUNNING` ステータス値の場合、ワークフローは 3 つの新しいステータス値もサポートします。 `ABORTED`, `SUSPENDED`、および `FAILED`.
 
 

@@ -9,7 +9,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 85f423b98ff680d7ed7cdbdde65e2dec1cfe4c03
+source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
 workflow-type: tm+mt
 source-wordcount: '1869'
 ht-degree: 38%
@@ -30,13 +30,13 @@ ht-degree: 38%
 
 * [アダプティブフォームコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)：標準化されたデータキャプチャコンポーネントです。これらのコンポーネントは、デジタル登録エクスペリエンスのカスタマイズ機能を提供し、開発時間を短縮し、メンテナンスコストを削減します。開発者は、これらのコンポーネントを簡単にカスタマイズし、スタイルを設定できます。これらの最新かつ拡張性の高いコンポーネントを活用してアダプティブフォームを開発することをお勧めします。
 
-* [アダプティブフォーム基盤コンポーネント](creating-adaptive-form.md)：従来の（古い）データキャプチャコンポーネントです。引き続きこれらを使用して、既存の基盤コンポーネントベースのアダプティブフォームを編集できます。 フォームを作成する場合、Adobeでは  [アダプティブFormsコアコンポーネント](creating-adaptive-form-core-components.md) アダプティブFormsを作成する
+* [アダプティブフォーム基盤コンポーネント](creating-adaptive-form.md)：従来の（古い）データキャプチャコンポーネントです。引き続きこれらを使用して、既存の基盤コンポーネントベースのアダプティブフォームを編集できます。 フォームを作成する場合、Adobeでは  [アダプティブFormsコアコンポーネント](/help/forms/using/create-adaptive-form.md) アダプティブFormsを作成する
 
 ## 前提条件
 
 アダプティブフォームを作成するには、以下が必要です。
 
-* **環境でのアダプティブFormsコアコンポーネントの有効化**:次の操作を行うには、AEMアーキタイププロジェクトバージョン 41 以降が必要です。 [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/installing-core-components.md). お使いの環境に対してコアコンポーネントを有効にすると、 **アダプティブForms（コアコンポーネント）** テンプレートとキャンバステーマが環境に追加されます。
+* **環境でのアダプティブFormsコアコンポーネントの有効化**:次の操作を行うには、AEMアーキタイププロジェクトバージョン 41 以降が必要です。 [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md). お使いの環境に対してコアコンポーネントを有効にすると、 **アダプティブForms（コアコンポーネント）** テンプレートとキャンバステーマが環境に追加されます。
 
 * **アダプティブフォームテンプレート**：テンプレートは基本構造を提供し、アダプティブフォームのアピアランス（レイアウトとスタイル）を定義します。これには、特定のプロパティやコンテンツ構造を有するフォーマット済みのコンポーネントが含まれます。また、テーマと送信アクションを定義するオプションも提供されます。 テーマは、ルックアンドフィールと送信アクションを定義し、アダプティブフォームの送信時に実行するアクションを定義します。 例えば、収集したデータをデータソースに送信する場合などです。 次の名前のテンプレート `blank` は次の OOTB をサポートしています。
 
@@ -46,7 +46,7 @@ ht-degree: 38%
 
   >[!NOTE]
   >
-  > ご利用の環境に&#x200B;**アダプティブフォーム（コアコンポーネント）**&#x200B;テンプレートがない場合は、[ご利用の環境のアダプティブフォームコアコンポーネントを有効にします](/help/forms/using/installing-core-components.md)。ご利用の環境でコアコンポーネントを有効にすると、**アダプティブフォーム（コアコンポーネント）**&#x200B;テンプレートが環境に追加されます。
+  > ご利用の環境に&#x200B;**アダプティブフォーム（コアコンポーネント）**&#x200B;テンプレートがない場合は、[ご利用の環境のアダプティブフォームコアコンポーネントを有効にします](/help/forms/using/enable-adaptive-forms-core-components.md)。ご利用の環境でコアコンポーネントを有効にすると、**アダプティブフォーム（コアコンポーネント）**&#x200B;テンプレートが環境に追加されます。
 
 * **アダプティブフォームのテーマ**：テーマには、コンポーネントとパネル向けのスタイル設定の詳細が含まれます。 スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。この `Canvas` コアコンポーネントを環境に対して有効にすると、テーマがデフォルトで追加されます。 また、 [参照テーマをダウンロードしてカスタマイズする](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
@@ -91,7 +91,7 @@ ht-degree: 38%
 
    ![レンチアイコンをクリックしてアダプティブフォームコンテナダイアログボックスを開き、送信アクションを設定します](/help/forms/using/assets/adaptive-forms-submit-message.png)
 
-1. の選択と設定 **[!UICONTROL 送信アクション]**、要件に応じて。 送信アクションについて詳しくは、 [アダプティブフォーム送信アクション](/help/forms/configuring-submit-actions.md)
+1. の選択と設定 **[!UICONTROL 送信アクション]**、要件に応じて。 送信アクションについて詳しくは、 [アダプティブフォーム送信アクション](/help/forms/using/configuring-submit-actions.md)
 
 <!--
     
@@ -117,8 +117,8 @@ ht-degree: 38%
 
 フォームデータモデルを使用して、フォームをデータソースに接続し、ユーザーの操作に基づいてデータを送受信することができます。 また、フォームを JSON スキーマに接続して、送信済みデータを事前定義済みの形式で受け取ることもできます。 必要に応じて、フォームを JSON スキーマまたはフォームデータモデルに接続します。
 
-* [JSON スキーマを作成し、環境にアップロードする](/help/forms/adaptive-form-json-schema-form-model.md)
-* [フォームデータモデルの作成](/help/forms/create-form-data-models.md)
+* [JSON スキーマを作成し、環境にアップロードする](/help/forms/using/adaptive-form-json-schema-form-model.md)
+* [フォームデータモデルの作成](/help/forms/using/create-form-data-models.md)
 
 ### フォームの JSON スキーマまたはフォームデータモデルを設定する
 
@@ -141,7 +141,7 @@ ht-degree: 38%
 
 事前入力サービスを使用すると、既存のデータを使用してアダプティブフォームのフィールドに自動入力することができます。 ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。以下の操作を実行できます。
 
-* [カスタム事前入力サービスの作成](/help/forms/prepopulate-adaptive-form-fields.md)
+* [カスタム事前入力サービスの作成](/help/forms/using/prepopulate-adaptive-form-fields.md)
 * [フォームデータモデルの事前入力サービスを使用する](#fdm-prefill-service)
 
 ### フォームデータモデルの事前入力サービスを使用して、アダプティブフォームのフィールドに事前入力する {#fdm-prefill-service}
@@ -171,6 +171,6 @@ ht-degree: 38%
 
 ## 関連トピック
 
-* [コアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
-* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [コアコンポーネントベースのアダプティブフォームを作成する](create-an-adaptive-form-core-components.md)
+* [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 
