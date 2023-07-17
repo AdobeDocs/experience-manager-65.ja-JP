@@ -1,19 +1,15 @@
 ---
 title: スタートポイントの使用
-seo-title: Working with Startpoints
-description: Workbench で定義されたモバイルデバイスからAEM Forms プロセスを操作する手順。
-seo-description: Steps to work with a AEM Forms process from your Mobile device defined in Workbench.
-uuid: 1c4b4c86-cbdb-4e72-b0eb-7f8a2f5dcdde
+description: Workbench で定義されたモバイルデバイスからAdobe Experience Manager Formsプロセスを操作する手順です。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-app
-discoiquuid: 1ea60fb2-cf9f-4a87-bd8e-98150e668456
 docset: aem65
 exl-id: d5970f90-2899-43a5-a3a0-61a2c844d919
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 100%
+source-wordcount: '238'
+ht-degree: 40%
 
 ---
 
@@ -23,15 +19,15 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->この概念について参照すると、スタートポイント、スタートプロセス、フォームという用語が区別なく使用される場合があります。
+>この概念を参照する場合、開始点、開始プロセス、フォームという用語は同じ意味で使用されます。
 
-AEM Forms アプリケーションからプロセスを開始するには、プロセスで&#x200B;**ワークスペース**&#x200B;タイプのスタートポイントが必要です。また、スタートポイントに対して「**[!UICONTROL Mobile Workspace でスタートポイントを表示する]**」オプションをオンにする必要もあります。
+Adobe Experience Manager(AEM)Formsアプリからプロセスを開始するには、タイプのスタートポイントが必要です **Workspace** を設定します。 また、 **[!UICONTROL Mobile Workspace に表示]** オプションを使用します。
 
 ![mws_startpoint_select_option](assets/mws_startpoint_select_option.png)
 
 **Workbench で定義されたプロセスを開始するには**
 
-1. AEM Forms アプリケーションで使用可能なスタートポイントを表示するには、[ホーム画面](../../forms/using/home-screen.md)に移動してください。
+1. AEM Formsアプリで使用可能な Startpoint を表示するには、に移動します。 [ホーム画面](../../forms/using/home-screen.md).
 1. デフォルトでは、**[!UICONTROL ホーム]**&#x200B;画面に「**[!UICONTROL すべてのフォーム]**」リストが表示されます。
 
    スタートポイントはフォームに関連付けられています。リストでスタートポイントに関連付けられているフォームをタップして開きます。
@@ -44,8 +40,8 @@ AEM Forms アプリケーションからプロセスを開始するには、プ�
 
 1. フォームを入力したら、「**[!UICONTROL 送信]**」ボタンをタップします。
 
-アプリケーションがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
+アプリがオフラインの場合、フォームとそのデータは Outbox フォルダーに保存されます。
 
-アプリケーションがオンラインの場合、タスクは AEM Forms Server と同期され、プロセスで指定されたユーザーに割り当てられます。
+アプリがオンラインの場合、タスクはAEM Formsサーバーと同期され、プロセスで指定されたユーザーに割り当てられます。
 
-タスクリスト内のタスクを実行するには、「[タスクを開く](/help/forms/using/open-task.md)」を参照してください。
+タスクリスト内のタスクを操作するには、 [タスクを開く](/help/forms/using/open-task.md).

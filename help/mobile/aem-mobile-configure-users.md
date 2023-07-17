@@ -1,16 +1,14 @@
 ---
 title: ユーザーおよびユーザーグループの設定
 description: このページでは、ユーザーの役割と、Mobile On-Demand Services アプリのオーサリングと管理をサポートするようにユーザーとグループを設定する方法について説明します。
-uuid: 461e1725-41dd-4883-92b9-a7e175660401
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: administering-on-demand-services-app
-discoiquuid: c3c73e67-7f85-4308-b4cd-1b42d4f3f2d9
 exl-id: 58b7d1b9-a851-442a-9d02-212cad8abbed
-source-git-commit: f4b6eb2ded17ec641f23a1fc3b977ce77169c8a1
+source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '512'
 ht-degree: 3%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 この章では、ユーザーの役割と、モバイルアプリのオーサリングと管理をサポートするようにユーザーとグループを設定する方法について説明します。
 
@@ -27,11 +25,11 @@ ht-degree: 3%
 
 ### AEM Mobile Application Content Authors（app-author グループ） {#aem-mobile-application-content-authors-app-author-group}
 
-app-authors グループのメンバーは、ページ、テキスト、画像およびビデオなど、AEMモバイルアプリケーションコンテンツのオーサリングを担当します。
+app-authors グループのメンバーは、ページ、テキスト、画像、ビデオなど、AEMモバイルアプリケーションコンテンツのオーサリングを担当します。
 
 #### グループ設定 — app-authors {#group-configuration-app-authors}
 
-1. 「app-authors」という新しいユーザーグループを作成します。
+1. 「app-authors」という名前のユーザーグループを作成します。
 
    ユーザーAdmin Consoleに移動します。 [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
@@ -43,7 +41,7 @@ app-authors グループのメンバーは、ページ、テキスト、画像�
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. app-authors ユーザーグループを作成したら、 [ユーザー管理コンソール](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. app-authors ユーザーグループを作成したら、 [ユーザーAdmin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -66,11 +64,11 @@ app-admins グループのメンバーは、app-authors に含まれているの
 >
 >権限は、AEM App コマンドセンターでの一部のユーザーアクションの可用性を決定します。
 >
->app-admins で利用できる app-authors では、一部のオプションが利用できません。
+>一部のオプションは、app-admins で利用できる app-authors では利用できません。
 
 ### グループ設定 — app-admins {#group-configuration-app-admins}
 
-1. app-admins という新しいグループを作成します。
+1. app-admins というグループを作成します。
 1. 以下のグループを新しい app-admins グループに追加します。
 
    * content-authors
@@ -104,8 +102,8 @@ app-admins グループのメンバーは、app-authors に含まれているの
 1. 必要に応じてこのグループにメンバーを追加します
 1. コンテンツを書き出しまたはアップロードするには
 
-   * 書き出しテンプレートにアクセスするには、 /etc/contentsync で（読み取り）を実行します。
-   * 読み取り時のパストラバーサル用に/var に対して（読み取り）
+   * （読み取り） /etc/contentsync で、書き出しテンプレートにアクセスします。
+   * /var で読み取り（読み取り）、読み取り時にパストラバーサルを実行
    * /var/contentsync の（読み取り、書き込み、変更、削除）。ContentSync でキャッシュされた書き出しコンテンツの書き込み、読み取り、クリーンアップを行います。
 
 ### その他のリソース {#additional-resources}
