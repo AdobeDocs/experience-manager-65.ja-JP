@@ -1,30 +1,26 @@
 ---
 title: カスタムノードタイプ
-seo-title: Custom Node Types
-description: AEM は、Sling をベースにして JCR リポジトリを使用し、両方から提供されるノードタイプを使用しますが、様々なカスタムノードタイプも提供しています。
-seo-description: AEM is based on Sling and uses a JCR repository with node types offered by both, but AEM also provides a range of custom node types
-uuid: f2022504-e433-4b42-9cc1-eef41086483a
+description: Adobe Experience Manager(AEM) は Sling に基づいており、JCR リポジトリを使用し、両方から提供されるノードタイプを使用しますが、AEMは様々なカスタムノードタイプも提供します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: aae186eb-e059-4a9d-b02d-86a86c86589d
 exl-id: bfd50aa9-579e-47d5-997d-ec764c782497
-source-git-commit: 2bae11eafb875f01602c39c0dba00a888e11391a
+source-git-commit: 939132e8b461b51e1c49237e481243bcc5de3bf6
 workflow-type: tm+mt
-source-wordcount: '1877'
-ht-degree: 100%
+source-wordcount: '1883'
+ht-degree: 91%
 
 ---
 
 # カスタムノードタイプ{#custom-node-types}
 
-AEM は Sling ベースであり JCR リポジトリを使用しているので、これらが提供する次のようなノードタイプを利用できます。
+Adobe Experience Manager(AEM) は Sling をベースとし、JCR リポジトリを使用するので、次の両方で提供されるノードタイプを使用できます。
 
 * [JCR ノードタイプ](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling ノードタイプ](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-これらに加えて、AEM では様々なカスタムノードタイプも提供しています。
+これらに加えて。 AEM では様々なカスタムノードタイプも提供しています。
 
 ## 監査 {#audit}
 
@@ -318,7 +314,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 **説明**
 
-コンポーネントの 1 つのドロップターゲットを設定します。このノードの名前が、ドラッグ＆ドロップの ID として使用されます。
+1 つのコンポーネントのドロップターゲットを設定します。 このノードの名前は、ドラッグ&amp;ドロップの ID として使用されます。
 
 * `@prop accept` - このドロップターゲットによって受け入れられる MIME タイプのリスト。例：`["image/*"]`
 * `@prop groups` - ソースを受け入れるドラッグ＆ドロップグループのリスト。
@@ -336,7 +332,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 **説明**
 
-仮想 CQ コンポーネントを定義します。これらは現時点で、新しいコンポーネントのドラッグ＆ドロップウィザードでのみ使用されます。
+仮想 CQ コンポーネントを定義します。 これらは、現在、新しいコンポーネントのドラッグ&amp;ドロップウィザードでのみ使用されています。
 
 * `@prop jcr:title` - このコンポーネントのタイトル。
 * `@prop jcr:description` - このコンポーネントの説明。
@@ -365,7 +361,7 @@ CQ コンポーネントを mixin タイプとして定義します。
 
 **説明**
 
-編集イベントに対して実行される、（クライアント側の）リスナーを定義します。値は有効なクライアント側リスナーの関数を参照しているか、次の事前定義済みのショートカットが格納されている必要があります。
+編集イベントで実行する（クライアント側の）リスナーを定義します。 値は、有効なクライアント側リスナー関数を参照するか、事前定義されたショートカットを含む必要があります。
 
 * `REFRESH_PAGE`
 * `REFRESH_SELF`
