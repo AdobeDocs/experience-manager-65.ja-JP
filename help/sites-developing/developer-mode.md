@@ -1,30 +1,26 @@
 ---
 title: 開発者モード
-seo-title: Developer Mode
-description: 開発者モードで開かれるサイドパネルのタブには、現在のページに関する開発者向けの情報が表示されます
-seo-description: Developer mode opens a side panel with several tabs that provide a developer with infomation about the current page
-uuid: 8301ab51-93d6-44f9-a813-ba7f03f54485
+description: 開発者モードで開かれるサイドパネルのタブには、現在のページに関する開発者向けの情報が表示されます.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 589e3a83-7d1a-43fd-98b7-3b947122829d
 docset: aem65
 exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
-source-git-commit: 30327950779337ce869b6ca376120bc09826be21
-workflow-type: ht
-source-wordcount: '688'
-ht-degree: 100%
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
+workflow-type: tm+mt
+source-wordcount: '686'
+ht-degree: 72%
 
 ---
 
 # 開発者モード{#developer-mode}
 
-AEM でページを編集する場合、複数の[モード](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui)は、開発者モードを含めて使用できます。これで開かれるサイドパネルのタブには、現在のページに関する開発者向けの情報が表示されます。次の 3 つのタブがあります。
+Adobe Experience Manager(AEM) でページを編集する場合、 [モード](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) は、開発者モードを含めて使用できます。 これにより、いくつかのタブを持つサイドパネルが開き、現在のページに関する情報を開発者が提供します。 次の 3 つのタブがあります。
 
 * **[コンポーネント](#components)**：構造およびパフォーマンスに関する情報を表示します。
 * **[テスト](#tests)**：テストを実行し、結果を分析します。
-* **[エラー](#errors)**：発生している問題が表示されます。
+* **[エラー](#errors)** 発生した問題を確認する
 
 これらのタブで、開発者は以下を実行できます。
 
@@ -42,12 +38,11 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
 >   * ウィンドウの幅が 1024 px 未満の場合は使用できません。
 >* `administrators` グループに所属しているユーザーのみ使用できます。
 
-
 >[!CAUTION]
 >
 >開発者モードは、nosamplecontent 実行モードを使用していない標準のオーサーインスタンスでのみ使用できます。
 >
->必要に応じて、次のように設定して使用できます。
+>必要に応じて、次の用途に設定できます。
 >
 >* nosamplecontent 実行モードを使用しているオーサーインスタンス
 >* パブリッシュインスタンス
@@ -59,9 +54,8 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
 >詳しくは以下を参照してください。
 >
 >* ヒントおよびツールの詳細については、ナレッジベースの記事「[AEM TouchUI の問題のトラブルシューティング](https://helpx.adobe.com/jp/experience-manager/kb/troubleshooting-aem-touchui-issues.html)」。
->* [AEM 6.0 の開発者モード](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=ja)に関する AEM Gems セッション。
+>* [AEM 6.0 の開発者モード](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=en)に関する AEM Gems セッション。
 >
-
 
 ## 開発者モードを開く {#opening-developer-mode}
 
@@ -81,14 +75,14 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
 
 コンポーネントツリーが表示されます。次の機能があります。
 
-* ページ上にレンダリングされるコンポーネントとテンプレートのチェーンの概要を示します（SLY、JSP など）。このツリーを展開して、階層内のコンテキストを表示できます。
-* コンポーネントのレンダリングに必要なサーバーサイドの計算時間を示します。
-* ツリーを展開し、ツリー内の特定のコンポーネントを選択できます。コンポーネントを選択すると、次のようなコンポーネント詳細にアクセスできます。
+* ページにレンダリングされるコンポーネントとテンプレートのチェーンの概要を示します（SLY、JSP など）。 このツリーを展開して、階層内のコンテキストを表示できます。
+* コンポーネントをレンダリングするサーバー側の計算時間を示します。
+* ツリーを展開し、ツリー内の特定のコンポーネントを選択できます。 コンポーネントを選択すると、次のようなコンポーネント詳細にアクセスできます。
 
    * リポジトリーパス
    * スクリプトへのリンク（CRXDE Lite でアクセス）
 
-* 選択されたコンポーネント（コンテンツフローでは青い境界線で示されます）は、コンテンツツリーで強調表示されます（その逆も同様です）。
+* コンテンツフロー内で選択されたコンポーネント（青い境界線で示される）は、コンテンツツリー内でハイライト表示されます（逆も同様です）。
 
 これは次の目的に役立ちます。
 
@@ -105,7 +99,7 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
    * コンポーネントのレンダリングに使用されるすべてのコンポーネントスクリプト。
    * この特定のコンポーネントのリポジトリーコンテンツパス。
 
-   ![chlimage_1-14](assets/chlimage_1-14.png)
+  ![chlimage_1-14](assets/chlimage_1-14.png)
 
 * **スクリプトを編集**：次のことを実行するリンクです。
 
@@ -116,11 +110,11 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
    * 選択したコンポーネント内の階層。
    * 選択したコンポーネント単独でのレンダリング時間、そのコンポーネント内にネストされている個々のコンポーネントのレンダリング時間および両者の合計。
 
-   ![chlimage_1-15](assets/chlimage_1-15.png)
+  ![chlimage_1-15](assets/chlimage_1-15.png)
 
 >[!CAUTION]
 >
->`/libs` の下にあるスクリプトを指すリンクもあります。ただし、これらのリンクは参照専用とし、`/libs` の下層にあるものは何も編集&#x200B;**しないでください**。変更しても無駄になる可能性があるからです。このブランチは、アップグレードしたり、ホットフィックス／機能パックを適用するたびに変更される傾向にあります。必要な変更はすべて `/apps` の下層でおこなう必要があります。詳しくは[オーバーレイとオーバーライド](/help/sites-developing/overlays.md)を参照してください。
+>`/libs` の下にあるスクリプトを指すリンクもあります。ただし、これらのリンクは参照専用とし、`/libs` の下層にあるものは何も編集&#x200B;**しないでください**。変更しても無駄になる可能性があるからです。これは、このブランチは、ホットフィックスまたは機能パックをアップグレードまたは適用する際に変更される可能性が高いためです。 以下で必要な変更を行います。 `/apps`. 詳しくは、 [オーバーレイとオーバーライド](/help/sites-developing/overlays.md).
 
 ### エラー {#errors}
 
@@ -131,7 +125,7 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
 * 警告とエラーの詳細および CRXDE Lite 内の適切なコードへの直接リンク（コンポーネントによってエラーログにエントリが作成された場合）
 * 警告（コンポーネントによって管理セッションが開かれた場合）
 
-例えば、未定義のメソッドが呼び出されたときは、その結果として発生したエラーが「**エラー**」タブに表示されます。
+例えば、未定義のメソッドが呼び出された場合、結果のエラーは **エラー** タブ：
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 
@@ -143,4 +137,4 @@ AEM でページを編集する場合、複数の[モード](/help/sites-authori
 >
 >AEM 6.2 では、開発者モードのテスト機能がスタンドアロンのツールアプリケーションとして再実装されました。
 >
->詳しくは、[UI のテスト](/help/sites-developing/hobbes.md)を参照してください。
+>詳しくは、 [UI のテスト](/help/sites-developing/hobbes.md).

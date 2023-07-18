@@ -1,18 +1,16 @@
 ---
-title: AEM Sites でのエクスペリエンスフラグメント開発
+title: Adobe Experience Manager Sites開発のエクスペリエンスフラグメント
 description: エクスペリエンスフラグメントのカスタマイズについて学びます。
-uuid: fc9f7e59-bd7c-437a-8c63-de8559b5768d
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: c02e713e-15f3-408b-879a-d5eb014aef02
 docset: aem65
 exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
-source-git-commit: a8616b3b30ac04ea24c4a869cabd47518af1a35f
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '1781'
-ht-degree: 99%
+source-wordcount: '1777'
+ht-degree: 80%
 
 ---
 
@@ -34,9 +32,9 @@ ht-degree: 99%
 
 URL で `.plain.` セレクターを使用すると、プレーン HTML レンディションにアクセスできます。
 
-これはブラウザーから利用できますが、主な目的は、他のアプリケーション（例えば、サードパーティ eb アプリ、カスタムモバイル実装など）が、URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
+これはブラウザーから使用できますが、主な目的は、他のアプリケーション（サードパーティの Web アプリ、カスタムモバイル実装など）が URL のみを使用して、エクスペリエンスフラグメントのコンテンツに直接アクセスできるようにすることです。
 
-プレーン HTML レンディションは、次のようなパスにプロトコル、ホストおよびコンテキストパスを追加します。
+プレーンHTMLレンディションは、次のパスにプロトコル、ホストおよびコンテキストパスを追加します。
 
 * タイプが `src`、`href`、`action` のいずれか
 
@@ -64,14 +62,14 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
    * 最終レンディションに残す CSS クラスに一致する正規表現。
    * これは、顧客が特定の CSS クラスを取り除きたい場合に便利です。
 * `allowedTags`
-   * 最終的なレンディションで許可される HTML タグのリスト。
+   * 最終レンディションで許可されるHTMLタグのリスト。
    * デフォルトでは、次のタグが許可されています（設定は不要）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link、script
 
 オーバーレイを使用してリライターを設定することをお勧めします。詳しくは、 [オーバーレイ](/help/sites-developing/overlays.md)
 
 ## ソーシャルバリエーション {#social-variations}
 
-ソーシャルバリエーションをソーシャルメディア（テキストおよび画像）に投稿できます。AEM では、これらのソーシャルバリエーションに、テキストコンポーネントや画像コンポーネントなどのコンポーネントを含めることができます。
+ソーシャルバリエーションをソーシャルメディア（テキストおよび画像）に投稿できます。Adobe Experience Manager(AEM) では、これらのソーシャルバリアントにコンポーネントを含めることができます。例えば、テキストコンポーネントや画像コンポーネントなどです。
 
 ソーシャル投稿の画像やテキストは、（構築ブロックまたはレイアウトコンテナの）任意の深さレベルの任意の画像リソースタイプまたはテキストリソースタイプから取得できます。
 
@@ -98,7 +96,7 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
 >
 >エクスペリエンスフラグメントでサポートされているのは、[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)***だけ***&#x200B;です。
 
-エクスペリエンスフラグメントの新しいテンプレートを開発する際は、[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md)の標準的な手法に従うことができます。
+エクスペリエンスフラグメント用の新しいテンプレートを開発する際は、 [編集可能なテンプレート](/help/sites-developing/page-templates-editable.md).
 
 **エクスペリエンスフラグメントを作成**&#x200B;ウィザードで検出されるエクスペリエンスフラグメントテンプレートを作成するには、次のいずれかのルールセットに従う必要があります。
 
@@ -134,7 +132,7 @@ AEM では、エクスペリエンスフラグメントを作成できます。�
 * コンポーネントグループとレイアウトで構成されます。
 * AEM ページとは独立して存在できます。
 
-このようなグループの使用例の 1 つは、Adobe Target などのサードパーティのタッチポイントにコンテンツを埋め込む場合です。
+このようなグループの使用例の 1 つは、Adobe Targetなどのサードパーティのタッチポイントにコンテンツを埋め込む場合です。
 
 ### デフォルトのリンク書き換え {#default-link-rewriting}
 
@@ -146,7 +144,7 @@ AEM では、エクスペリエンスフラグメントを作成できます。�
 
 この機能は、[AEM のオーサーインスタンスで有効にする](/help/sites-administering/experience-fragments-target.md#Prerequisites)ことができます。有効な Adobe Target 設定と、Link Externalizer の設定が必要です。
 
-Link Externalizer は、Target オファーの HTML バージョンを作成する際に必要な正しい URL を決定するために使用されます。オファーは、その後 Adobe Target に送信されます。これが必要なのは、Adobe Target では Target HTML オファー内のすべてのリンクに公にアクセスできる必要があるからです。つまり、リンクが参照するあらゆるリソースとエクスペリエンスフラグメントそのものを使用するには、まずそれらを公開する必要があります。
+Link Externalizer は、Target オファーのHTMLバージョンを作成する際に必要な正しい URL を決定するために使用されます。オファーはAdobe Targetに送信されます。 これが必要なのは、Adobe Target では Target HTML オファー内のすべてのリンクに公にアクセスできる必要があるからです。つまり、リンクが参照するあらゆるリソースとエクスペリエンスフラグメントそのものを使用するには、まずそれらを公開する必要があります。
 
 デフォルトでは、Target HTML オファーを作成すると、AEM のカスタム Sling セレクターにリクエストが送信されます。このセレクターの名前は `.nocloudconfigs.html` です。これはエクスペリエンスフラグメントのプレーン HTML レンダリングを作成しますが、その名前が示すとおり、クラウド設定を含んでいません（クラウド設定は余分な情報です）。
 
@@ -163,13 +161,13 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
    1. `src` 属性
    1. `href` 属性
    1. `*-src` 属性（例：data-src、custom-src など）
-   1. `*-href` 属性（例：`data-href`、`custom-href`、`img-href` など）
+   1. `*-href` 属性 ( `data-href`, `custom-href`, `img-href`など )
 
    >[!NOTE]
    >
-   >ほとんどの場合、HTML 内の内部リンクは相対リンクですが、カスタムコンポーネントの HTML で完全な URL が指定されている場合もあります。デフォルトでは、AEM はこれらの完全な URL を無視し、変更しません。
+   >通常、HTML内の内部リンクは相対リンクですが、カスタムコンポーネントがHTML内で完全な URL を指定する場合もあります。 デフォルトでは、AEM はこれらの完全な URL を無視し、変更しません。
 
-   公開済みのインスタンス上にある公開 URL であるかのように URL を再作成するために、これらの属性のリンクを AEM Link Externalizer `publishLink()` に通します。
+   これらの属性のリンクは、AEM Link Externalizer を通じて実行されます `publishLink()` 公開済みのインスタンス上にあるかのように URL を再作成し、公開済みの状態にします。
 
 そのまま使用できる標準実装を使用する場合、エクスペリエンスフラグメントから Target オファーを生成して Adobe Target に書き出すには、上記のプロセスで十分です。しかし、このプロセスでは対応していない使用例もいくつかあります。例えば、次のような場合です。
 
@@ -212,9 +210,9 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 ### Link Rewriter Provider インターフェイスの使用方法 {#how-to-use-the-link-rewriter-provider-interface}
 
-このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含んだバンドルを作成する必要があります。
+このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含むバンドルを作成する必要があります。
 
-このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Adobe Target に書き出し」機能でのリンク書き換えにプラグインするために使用されます。
+このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Adobe Target に書き出し」機能の書き換えにプラグインするために使用されます。
 
 例えば、`ComponentService` の場合は次のようになります。
 
@@ -291,16 +289,16 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 このメソッドは入力として次のパラメーターを受け取ります。
 
-* `link`：
-現在処理中のリンクの `String` 表現です。これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
+* `link`
+この `String` 処理中のリンクの表現。 これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
 
-* `tag`：
-現在処理中の HTML 要素の名前です。
+* `tag`
+処理中のHTML要素の名前。
 
 * `attribute`：
 正確な属性名です。
 
-例えば、「Adobe Target に書き出し」システムが現在この要素を処理している場合は、`CSSInclude` を次のように定義できます。
+例えば、「Adobe Target に書き出し」システムがこの要素を処理している場合、 `CSSInclude` 形式：
 
 ```java
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
@@ -312,7 +310,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", attribute="href" )
 ```
 
-サービスを作成する際は、指定された入力に基づいて判断し、それに応じてリンクを書き換えることができます。
+サービスを作成する際には、指定された入力に基づいて判断し、それに応じてリンクを書き換えることができます。
 
 この例では、URL の `/etc.clientlibs` 部分を削除し、適切な外部ドメインを追加するとしましょう。話を簡単にするために、`rewriteLinkExample2` に示すように、サービスのリソースリゾルバーにアクセスできると考えます。
 
@@ -347,7 +345,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->上記のメソッドが `null` を返した場合、「Adobe Target に書き出し」システムは、リンクをそのままの状態（リソースへの相対リンク）にしておきます。
+>上記のメソッドが `null`「Adobe Target に書き出し」を選択した場合、そのリンクをそのままの状態で、リソースへの相対リンクとして残します。
 
 #### 優先度 - getPriority {#priorities-getpriority}
 

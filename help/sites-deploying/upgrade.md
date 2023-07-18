@@ -1,8 +1,6 @@
 ---
-title: AEM 6.5 へのアップグレード
-seo-title: Upgrading to AEM 6.5
-description: 古いAEMのインストールをAEM 6.5 にアップグレードする際の基本について説明します。
-seo-description: Learn about the basics of upgrading an older AEM installation to AEM 6.5.
+title: Adobe Experience Manager 6.5 へのアップグレード
+description: 古いAdobe Experience Manager(AEM) のインストールをAEM 6.5 にアップグレードする際の基本について説明します。
 contentOwner: sarchiz
 topic-tags: upgrading
 content-type: reference
@@ -10,22 +8,21 @@ docset: aem65
 targetaudience: target-audience upgrader
 feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 26c0411d6cc16f4361cfa9e6b563eba0bfafab1e
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 52%
+source-wordcount: '678'
+ht-degree: 28%
 
 ---
 
-# AEM 6.5 へのアップグレード {#upgrading-to-aem}
+# Adobe Experience Manager(AEM)6.5 へのアップグレード {#upgrading-to-aem}
 
-この節では、AEMインストールをAEM 6.5 にアップグレードする方法について説明します。
+この節では、AEMのインストールをAEM 6.5 にアップグレードする方法について説明します。
 
 * [アップグレードの計画](/help/sites-deploying/upgrade-planning.md)
 * [パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)
 * [AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)
-
-   <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+  <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [アップグレード手順](/help/sites-deploying/upgrade-procedure.md)
 * [コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md)
 * [アップグレード前のメンテナンスタスク](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
@@ -50,17 +47,17 @@ AEMの最近のいくつかのリリースでの主な変更点を次に示し�
 
 AEM 6.0 では、新しい Jackrabbit Oak リポジトリが導入されました。 永続性マネージャーは [マイクロカーネル](/help/sites-deploying/platform.md#contentbody_title_4). バージョン 6.1 以降、CRX2 はサポートされなくなりました。 5.6.1 インスタンスから CRX2 リポジトリを移行するには、crx2oak と呼ばれる移行ツールを実行する必要があります。 詳しくは、 [CRX2OAK 移行ツールの使用](/help/sites-deploying/using-crx2oak.md).
 
-アセットインサイトを使用し、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean で ID を生成する必要があります。アドビの内部テストでは TarMK 環境の 12.5 万個のアセットが 1 時間で移行されましたが、ユーザーの結果は異なる場合があります。
+Assets Insights を使用していて、AEM 6.2 より前のバージョンからアップグレードする場合は、アセットを移行し、JMX Bean を使用して ID を生成する必要があります。 Adobeの内部テストでは、TarMK 環境上の 125,000 個のアセットが 1 時間で移行されましたが、結果は異なる場合があります。
 
-6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3 よりも古いバージョンからアップグレードする場合は、アップグレードの一環としてリポジトリの移行が必要になり、システムのダウンタイムが発生します。
+6.3 では、TarMK 実装の基礎となる `SegmentNodeStore` の新しい形式が導入されました。AEM 6.3 より前のバージョンからアップグレードする場合は、アップグレードの一環としてリポジトリの移行が必要です（システムのダウンタイムが伴います）。
 
-アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は必要ないことに注意してください。また、新しいリポジトリ形式で機能するように crx2oak ツールの新しいバージョンがリリースされました。
+アドビのエンジニアリング部は、この移行には約 20 分かかると予測しています。インデックスの再作成は不要です。 また、新しいリポジトリ形式で動作する新しいバージョンの crx2oak ツールがリリースされました。
 
 **AEM 6.3 から AEM 6.5 へのアップグレード時には、この移行は必要ありません。**
 
 アップグレード前のメンテナンスタスクは、自動化をサポートするように最適化されました。
 
-crx2oak ツールのコマンドラインの使用オプションが、自動化に適したオプションに変更され、より多くのアップグレードパスをサポートするようになりました。
+crx2oak ツールのコマンドライン使用オプションが、自動化に適した、より多くのアップグレードパスをサポートするように変更されました。
 
 アップグレード後のチェックも、自動化に対応するようになりました。
 
@@ -80,9 +77,9 @@ AEMのアップグレードは、複数の手順でおこなわれ、複数ヶ�
 
 ## アップグレードフロー {#upgrade-overview-1}
 
-次の図は、アップグレード方法に関する推奨フローの概要を示しています。 導入された新機能の参照に注意してください。 アップグレードは、まずパターン検出から始まります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。ここで生成されたレポートのパターンに基づき、AEM 6.4 との互換性を確保するためにどのパスを使用するかを決定できます。
+次の図は、アップグレード方法に関する推奨フローの概要を示しています。 Adobeで導入された新機能への参照に注意してください。 アップグレードは、まずパターン検出から始まります（[パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)を参照）。ここで生成されたレポートのパターンに基づき、AEM 6.4 との互換性を確保するためにどのパスを使用するかを決定できます。
 
-6.5 では、すべての新機能において後方互換性を保つことが非常に重視されています。ただし、後方互換性の問題が生じる場合は、互換モードを使用することで、カスタムコードを 6.5 準拠にする開発作業を一時的に先送りできます。この方法を使用することで、アップグレード後すぐに開発をおこなう必要がなくなります（[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)を参照）。
+6.5 では、すべての新機能の後方互換性を維持する重要な焦点がありましたが、後方互換性の問題がまだある場合は、互換性モードを使用して、カスタムコードを 6.5 に準拠させる開発を一時的に延期できます。 [AEM 6.5 の後方互換性](/help/sites-deploying/backward-compatibility.md)) をクリックします。
 
 6.5 の開発サイクルでは、持続可能なアップグレード（[持続可能なアップグレード](/help/sites-deploying/sustainable-upgrades.md)を参照）の下で導入された機能により、今後のアップグレードをより効率的かつシームレスにするためのベストプラクティスに従いやすくなります。
 
