@@ -11,10 +11,10 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 1d914b12c3279bacaf5cabb3b1953e927c04bad1
 workflow-type: tm+mt
-source-wordcount: '2579'
-ht-degree: 74%
+source-wordcount: '2571'
+ht-degree: 71%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 74%
 
 ## 作成する内容
 
-Venia ブランドは最近、持続可能な資材を使用して一部の製品を製造し始めました。同社は、**エコフレンドリー**&#x200B;バッジを製品ティーザーの一部として表示したいと考えています。製品が&#x200B;**エコフレンドリー**&#x200B;な資材を使用しているかどうかを示す新しいカスタム属性が Adobe Commerce で作成されます。次に、このカスタム属性が GraphQL クエリの一部として追加され、特定の製品の製品ティーザーに表示されます。
+Venia ブランドは最近、持続可能な資材を使用して一部の製品を製造し始めました。同社は、**エコフレンドリー**&#x200B;バッジを製品ティーザーの一部として表示したいと考えています。製品が **エコフレンドリー** 材料。 このカスタム属性は、GraphQLクエリの一部として追加され、指定した製品の製品ティーザーに表示されます。
 
 ![エコフレンドリーバッジの最終実装](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
@@ -69,7 +69,7 @@ Venia ブランドは最近、持続可能な資材を使用して一部の製�
 
 ## 製品ティーザーの作成 {#author-product-teaser}
 
-製品ティーザーコンポーネントは、このチュートリアル全体で拡張されています。 最初の手順として、製品ティーザーの新しいインスタンスをホームページに追加し、ベースライン機能を理解します。
+製品ティーザーコンポーネントは、このチュートリアル全体で拡張されています。 最初の手順として、製品ティーザーのインスタンスをホームページに追加し、ベースライン機能を理解します。
 
 1. サイトの&#x200B;**ホームページ**（[http://localhost:4502/editor.html/content/acme/us/en.html](http://localhost:4502/editor.html/content/acme/us/en.html)）に移動します。
 
@@ -178,11 +178,11 @@ AEMコードを始める前に、 [Adobe Commerce GraphQL](https://devdocs.magen
 
    ![GraphQL の応答例](../assets/customize-cif-components/sample-graphql-query.png)
 
-   の値 **はい** は、 **1**. これは、GraphQLクエリを Java™で記述する場合に役立ちます。
+の値 **はい** は、 **1**. これは、GraphQLクエリを Java™で記述する場合に役立ちます。
 
-   >[!TIP]
-   >
-   >Adobe Commerce GraphQL に関する詳細なドキュメントは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
+>[!TIP]
+>
+>Adobe Commerce GraphQL に関する詳細なドキュメントは、[こちら](https://devdocs.magento.com/guides/v2.4/graphql/index.html)を参照してください。
 
 ## 製品ティーザーの Sling モデルのアップデート {#updating-sling-model-product-teaser}
 
@@ -213,7 +213,7 @@ Sling モデルは Java™として実装され、 **コア** 生成されたプ
    }
    ```
 
-   これは、製品に `eco_friendly` 属性を **はい** または **いいえ**.
+これは、製品に `eco_friendly` 属性を **はい** または **いいえ**.
 
 1. 次に、`core/src/main/java/com/venia/core/models/commerce/MyProductTeaserImpl.java` で `MyProductTeaserImpl.java` を検査します。
 
@@ -486,11 +486,11 @@ AEM コンポーネントの一般的な拡張機能は、コンポーネント�
 
 ## これで完了です {#congratulations}
 
-最初のAEM CIF コンポーネントのカスタマイズが完了しました。 完成したソリューションファイルを[こちら](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip)からダウンロードしてください。
+最初のAEM CIF コンポーネントをカスタマイズしました。 完成したソリューションファイルを[こちら](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip)からダウンロードしてください。
 
 ## ボーナスチャレンジ {#bonus-challenge}
 
-製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者がいつ **エコフレンドリー** バッジが表示されます。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml` でコンポーネントダイアログをアップデートする必要があります。
+製品ティーザーに既に実装されている&#x200B;**新規**&#x200B;バッジの機能を確認します。作成者がいつ **エコフレンドリー** バッジが表示されます。 次の場所でコンポーネントダイアログを更新する必要があります。 `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser/_cq_dialog/.content.xml`.
 
 ![新しいバッジの実装の課題](../assets/customize-cif-components/new-badge-implementation-challenge.png)
 
