@@ -1,14 +1,12 @@
 ---
 title: プッシュ通知
 description: このページでは、Adobe Experience Manager Mobileアプリでプッシュ通知を使用する方法について説明します。
-uuid: 0ed8b183-ef81-487f-8f35-934d74ec82af
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-adobe-phonegap-enterprise
-discoiquuid: ed8c51d2-5aac-4fe8-89e8-c175d4ea1374
 exl-id: 375f2f40-1b98-4e21-adee-cbea274e6a2a
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
 workflow-type: tm+mt
 source-wordcount: '3280'
 ht-degree: 1%
@@ -19,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 重要な通知を使用して、AEM Mobileアプリのユーザーに即座に警告できることは、モバイルアプリとそのマーケティングキャンペーンの価値にとって重要です。 ここでは、アプリがプッシュ通知を受信できるようにする必要がある手順と、AEM Mobileから携帯電話にインストールされたアプリにプッシュを設定して送信する方法について説明します。 また、この節では、 [ディープリンク](#deeplinking) 機能をプッシュ通知に追加します。
 
