@@ -11,14 +11,20 @@ discoiquuid: f79828d8-2230-4477-8ffa-eeb6a0413acd
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: a8decba9-229d-40a2-992a-3cc8ebefdd6d
-source-git-commit: 66674f0e2621d8786ab4d662cddad373122d8b51
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '3855'
+source-wordcount: '3878'
 ht-degree: 84%
 
 ---
 
 # アダプティブフォームでの [!DNL Adobe Sign] の使用{#using-adobe-sign-in-an-adaptive-form}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html?lang=ja) |
+| AEM 6.5 | この記事 |
+
 
 [!DNL Adobe Sign] を使用すると、アダプティブフォームの電子署名ワークフローを利用できます。電子署名を利用すると、法務、販売、給与、人事管理など分野でドキュメントを処理するワークフローを改善できます。
 

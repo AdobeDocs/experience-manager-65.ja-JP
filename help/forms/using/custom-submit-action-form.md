@@ -10,14 +10,19 @@ topic-tags: customization
 discoiquuid: 2a2e1156-4a54-4b0a-981c-d527fe22a27e
 docset: aem65
 exl-id: 7c3d0dac-4e19-4eb3-a43d-909d526acd55
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: ht
-source-wordcount: '1616'
-ht-degree: 100%
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+workflow-type: tm+mt
+source-wordcount: '1639'
+ht-degree: 99%
 
 ---
 
 # アダプティブフォーム向けのカスタム送信アクションの作成 {#writing-custom-submit-action-for-adaptive-forms}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/custom-submit-action-form.html) |
+| AEM 6.5 | この記事 |
 
 アダプティブフォームでは、ユーザー指定のデータを処理するために、送信アクションが必要となります。送信アクションとは、アダプティブフォームを使って送信されるデータに対して実行されるタスクを決定するものです。Adobe Experience Manager（AEM）には、ユーザーによって送信されたデータを使って実行できるカスタムタスクを示す [OOTB 送信アクション](../../forms/using/configuring-submit-actions.md)が含まれています。例えば、メール送信やデータの格納などのタスクを実行することができます。
 

@@ -10,14 +10,20 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 feature: Adaptive Forms
 exl-id: 096f61b0-59f4-4699-9093-8fb1ed81fded
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 77%
+source-wordcount: '662'
+ht-degree: 76%
 
 ---
 
 # 手書き署名を使用したフォームへの電子署名の適用{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/signing-forms-using-scribble.html) |
+| AEM 6.5 | この記事 |
+
 
 **手書き署名**&#x200B;コンポーネントや&#x200B;**署名ステップ**&#x200B;コンポーネントを使用すると、アダプティブフォームに手書きで署名することができます。署名ステップコンポーネントでは、アダプティブフォームの PDF バージョンが表示されます。署名ステップコンポーネントを使用するには、レコードのドキュメントオプションが有効になっているか、フォームテンプレートに基づくアダプティブフォームが必要です。
 

@@ -3,14 +3,20 @@ title: レイアウトモードを使用してアダプティブフォームの�
 description: レイアウトモードで使用できるレスポンシブグリッドを使用して、コンポーネントの位置を定義する
 feature: Adaptive Forms
 exl-id: 5cf76cb1-c92c-4aed-9945-37494fef2d29
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 100%
+source-wordcount: '1068'
+ht-degree: 99%
 
 ---
 
 # レイアウトモードを使用したコンポーネントのサイズ変更 {#use-layout-mode-to-resize-components}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-layout-of-an-adaptive-form/resize-using-layout-mode.html?) |
+| AEM 6.5 | この記事 |
+
 
 アダプティブフォームのオーサリングインターフェイスを使用すると、レイアウトモードを使用してコンポーネントのサイズを変更できます。列内の青い点をドラッグ＆ドロップして、コンポーネントを配置する開始点と終了点を定義します。レスポンシブグリッド内のコンポーネントをタップすると、青い点が表示されます。レスポンシブグリッドは、12 個の等しい列で構成されています。代替列の白と青色の影は、1 つの列と他の列を区別します。
 

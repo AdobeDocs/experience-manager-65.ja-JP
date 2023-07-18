@@ -4,14 +4,20 @@ seo-title: AEM 6.5 Forms Guide
 description: この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 seo-description: Covers all AEM Forms tasks, including how to create, manage, publish, and update digital forms.
 exl-id: e66383b0-ae58-4cfe-8f1b-28b4e124fd06
-source-git-commit: a51a863a4edf7e8b951a8361c5c7f0517b09f12a
-workflow-type: ht
-source-wordcount: '348'
-ht-degree: 100%
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+workflow-type: tm+mt
+source-wordcount: '369'
+ht-degree: 97%
 
 ---
 
 # Adobe Experience Manager 6.5 Forms ガイド
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/setup-forms-cloud-service.html) |
+| AEM 6.5 | この記事 |
+
 
 この AEM 6.5 ガイドを使用して、デジタルフォームを作成、管理、公開および更新します。アダプティブフォームのインストール、アップグレード、設定に関するヘルプ、アダプティブフォームのオーサリングに関する詳細を確認します。
 

@@ -10,14 +10,20 @@ discoiquuid: 87f5f9f5-2d03-4565-830e-eacc3757e542
 docset: aem65
 feature: Form Data Model
 exl-id: 9a73a643-7ad4-49aa-a971-08d52679158d
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1275'
 ht-degree: 51%
 
 ---
 
 # フォームデータモデルの使用{#use-form-data-model}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/using-form-data-model.html) |
+| AEM 6.5 | この記事 |
+
 
 ![hero-image](do-not-localize/data-integration.png)
 

@@ -1,7 +1,7 @@
 ---
 title: リダイレクトページの設定
 seo-title: Configuring redirect page
-description: アダプティブフォーム入力後、フォーム作成時にフォーム作成者が設定可能な Web ページへ、ユーザーをリダイレクトさせることができます。
+description: アダプティブフォームに入力すると、フォームの作成時にフォーム作成者が設定できる Web ページにユーザーがリダイレクトされます。
 seo-description: After filling an adaptive form, users can be redirected to a webpage that form authors can configure while creating the form.
 uuid: f9d304b4-920d-4e50-a674-40eca48c530c
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,19 @@ discoiquuid: 0ffbb4d3-9371-4705-8496-f98e22d9c4a6
 docset: aem65
 feature: Adaptive Forms
 exl-id: be1a774f-5681-443f-b195-28e89a020547
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 100%
+source-wordcount: '260'
+ht-degree: 82%
 
 ---
 
 # リダイレクトページの設定{#configuring-redirect-page}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-redirect-page.html) |
+| AEM 6.5 | この記事 |
 
 フォーム作成者は、フォーム送信後にユーザーがリダイレクトされるページを各フォームに設定することができます。
 
@@ -32,7 +37,7 @@ ht-degree: 100%
 
 リダイレクトページ設定
 
-フォーム作成者は、「ありがとうございます」ページに渡される次のパラメーターを使用することができます。使用可能なすべての送信アクションに対して、`status` と `owner` のパラメーターが渡されます。これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
+フォーム作成者は、次のパラメーターを使用して「ありがとうございました」ページに渡すことができます。 使用可能なすべての送信アクションに対して、`status` と `owner` のパラメーターが渡されます。これら 2 つのパラメーターの他に、追加のパラメーターが次の送信アクションに渡されます。
 
 * **コンテンツを格納アクション**（非推奨）：送信されたデータが格納されるリポジトリのノードのパス `contentPath` が渡されます。
 

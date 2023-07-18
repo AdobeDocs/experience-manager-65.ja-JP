@@ -6,16 +6,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
-source-git-commit: 60924e7ee204e43a2ff833fbc394beca8db9c9d9
+source-git-commit: 5ca6c5abeb5ed09d8929d1986aa24c1416e0cc06
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 44%
+source-wordcount: '1054'
+ht-degree: 45%
 
 ---
 
 # ポータル上のフォーム公開の概要{#introduction-to-publishing-forms-on-a-portal}
 
-## AEM Forms Portal コンポーネントの概要 {#aem-forms-portal-components-overview}
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | この記事 |
+
+
+## AEM Forms portal コンポーネントの概要 {#aem-forms-portal-components-overview}
 
 一般的なフォーム中心のポータルデプロイメントシナリオでは、フォーム開発とポータル開発が 2 つの異なるアクティビティになります。 フォームデザイナーがフォームを設計してリポジトリに保存する一方、Web 開発者はフォームを一覧表示し、フォームの送信を処理する Web アプリケーションを作成します。 Formsは、フォームリポジトリと Web アプリケーションの間で通信がおこなわれないので、Web 層にコピーされます。
 

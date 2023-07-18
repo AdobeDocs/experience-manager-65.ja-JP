@@ -1,7 +1,7 @@
 ---
-title: フォームポータルコンポーネントの有効化
+title: フォームポータルのコンポーネントの有効化
 seo-title: Enabling forms portal components
-description: デフォルトでは、フォームポータルコンポーネントは無効になっています。フォームポータルコンポーネントを有効にするには、Document Services と Document Services Predicates グループを有効にします。
+description: デフォルトでは、Forms Portal コンポーネントは無効になっています。 Document Services グループと Document Services Predicates グループを有効にして、Forms Portal コンポーネントを有効にします。
 seo-description: Out of the box, Forms Portal components are disabled. Enable Document Services and Document Services Predicates groups to enable Forms Portal components.
 uuid: 92d25da6-f1df-4ac0-bf84-2edf9e2722b3
 content-type: reference
@@ -10,16 +10,21 @@ topic-tags: publish
 discoiquuid: 4d318908-c724-4582-a82b-6e9b1c55705b
 feature: Forms Portal
 exl-id: 572194b7-063b-4c38-af43-aba78e9c51c6
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 100%
+source-wordcount: '342'
+ht-degree: 77%
 
 ---
 
-# フォームポータルコンポーネントの有効化 {#enabling-forms-portal-components}
+# フォームポータルのコンポーネントの有効化 {#enabling-forms-portal-components}
 
-デフォルトでは、フォームポータルコンポーネントは使用できません。AEM サイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | この記事 |
+
+フォームポータルのコンポーネントは、デフォルトでは使用できません。 AEM サイドキックで使用可能なコンポーネントのリストにコンポーネントを表示するには、次の手順を実行します。
 
 1. Web サイトのオーサーインスタンスにログインし、AEM Sites ページを開きます。
 
@@ -37,7 +42,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->また、コンポーネントを選択して、これらのカテゴリから特定のコンポーネントを有効にすることもできます。コンポーネントとその使用方法について詳しくは、「[フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md)」と「[ページでのリンクコンポーネントの埋め込み](/help/forms/using/embedding-link-component-page.md)」を参照してください。
+>また、コンポーネントを選択することで、これらのカテゴリから特定のコンポーネントを有効にすることもできます。 コンポーネントとその使用方法について詳しくは、 [フォームポータルページの作成](/help/forms/using/creating-form-portal-page.md) および [ページへのリンクコンポーネントの埋め込み](/help/forms/using/embedding-link-component-page.md).
 
 これで、コンポーネントブラウザーで Document Services コンポーネントカテゴリと Document Services Predicates コンポーネントカテゴリを使用できるようになります。コンポーネントは、同じテンプレートを使用するすべてのページで有効になります。
 
@@ -50,4 +55,4 @@ ht-degree: 100%
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)
+* [ポータル上のフォーム公開の概要](/help/forms/using/introduction-publishing-forms.md)

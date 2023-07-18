@@ -3,15 +3,21 @@ title: OAuth 2.0 クライアント資格情報フローを使用したAEM Forms
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 description: OAuth 2.0 クライアント資格情報フローを使用して Salesforce とAEM Formsを統合する手順
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-source-git-commit: cc0375f5b5616f82a73bd983a9da95225c51db99
+exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 0%
+source-wordcount: '524'
+ht-degree: 3%
 
 ---
 
-
 # OAuth 2.0 クライアント資格情報フローを使用した Salesforce の統合  {#configure-salesforce-with-ouath-2.0-client-credential}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html) |
+| AEM 6.5 | この記事 |
+
 
 AEM Formsを Salesforce アプリケーションと統合するには、OAuth 2.0 クライアント資格情報フローが使用されます。 これは、ユーザーの関与なしに直接通信を行うための、標準化され、安全な方法です。 このフローでは、クライアントアプリケーション (AEM Form) は、Salesforce 接続アプリケーションで定義されたクライアント資格情報を交換して、アクセストークンを取得します。 必要なクライアント資格情報には、消費者キーと消費者秘密鍵が含まれます。
 
@@ -74,5 +80,3 @@ Swagger は、RESTful API を開発および説明するためのオープンソ
 1. 接続に成功した場合は、 **[!UICONTROL 作成]** 」ボタンをクリックします。
 
 次に、以下を実行できます。 [フォームデータモデルの作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 設定済みのデータソースをアダプティブフォームに統合する場合。
-
-

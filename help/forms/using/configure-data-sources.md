@@ -10,18 +10,24 @@ discoiquuid: 9d78a6dc-fc9c-415b-b817-164fe6648b30
 docset: aem65
 feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
-source-git-commit: db4b432a95856302eb2e80b6386eee557d6afd17
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 82%
+source-wordcount: '2112'
+ht-degree: 85%
 
 ---
 
 # データソースの設定{#configure-data-sources}
 
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html) |
+| AEM 6.5 | この記事 |
+
+
 ![データ統合](do-not-localize/data-integeration.png)
 
-AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。次のタイプが標準でサポートされています。 ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
+AEM Forms のデータ統合機能により、複数の異なるデータソースを設定して接続することができます。以下のタイプがサポートされています。これらのタイプは、すぐに使用できます。ただし、これらの機能を少しカスタマイズするだけで、他のデータソースを統合することもできます。
 
 * リレーショナルデータベース - MySQL、Microsoft SQL Server、IBM DB2、Oracle RDBMS および Sybase
 * AEM ユーザープロファイル
@@ -29,7 +35,7 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 * SOAP ベースの web サービス
 * OData サービス
 
-データ統合は、OAuth2.0([認証コード](https://oauth.net/2/grant-types/authorization-code/), [クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/))、基本認証、API キー認証の各認証タイプが標準で用意されており、Web サービスにアクセスするためのカスタム認証を実装できます。 RESTful サービス、SOAP ベースサービス、OData サービスは AEM クラウドサービスで設定し、リレーショナルデータベース用の JDBC と AEM ユーザープロファイル用のコネクターは、AEM Web コンソールで設定します。
+データ統合では、すぐに使用できる認証タイプとして、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、API キー認証がサポートされています。また、web サービスにアクセスするためのカスタムの認証タイプを実装することもできます。RESTful サービス、SOAP ベースサービス、OData サービスは AEM クラウドサービスで設定し、リレーショナルデータベース用の JDBC と AEM ユーザープロファイル用のコネクターは、AEM Web コンソールで設定します。
 
 ## リレーショナルデータベースの設定 {#configure-relational-database}
 
@@ -51,7 +57,6 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
    >
    > 1. https://&#39;[server]:[port]&#39;/system/console/crypto に移動します。
    > 1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をタップします。
-
    >
    >暗号化されたテキストが「保護されたテキスト」フィールドに表示されます。このテキストを設定内で指定できます。
 
@@ -131,7 +136,8 @@ RESTful サービスを設定するには、以下の手順を実行します。
       * スキーム：REST API で使用される転送プロトコル。ドロップダウンリストに表示されるスキームの種類の数は、Swagger ソースで定義されているスキームによって異なります。
       * ホスト：REST API を提供するホストのドメイン名または IP アドレス。このフィールドは必須です。
       * 基本パス：すべての API パスの URL プリフィックス。これはオプションのフィールドです。\
-         必要に応じて、これらのフィールドの事前入力された値を編集します。
+        必要に応じて、これらのフィールドの事前入力された値を編集します。
+
    * 認証タイプの選択 — なし、OAuth2.0([認証コード](https://oauth.net/2/grant-types/authorization-code/), [クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/))、基本認証、API キー、カスタム認証、または相互認証：RESTful サービスにアクセスし、それに応じて認証の詳細を提供します。
 
    認証タイプとして **[!UICONTROL API キー]**&#x200B;を選択した場合は、API キーの値を指定します。API キーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。「**[!UICONTROL 場所]**」ドロップダウンリストから次のオプションの 1 つを選択し、それに応じて「**[!UICONTROL パラメーター名]**」フィールドにヘッダーまたはクエリパラメーターの名前を指定します。
@@ -176,10 +182,10 @@ SOAP ベースの web サービスは、[Web Services Description Language（WSD
    * サービスエンドポイント。WSDL で指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
    * 認証タイプの選択 — なし、OAuth2.0([認証コード](https://oauth.net/2/grant-types/authorization-code/), [クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/))、基本認証、カスタム認証、X509 トークン、または相互認証：SOAP サービスにアクセスし、それに応じて認証の詳細を提供します。
 
-      認証の種類として **[!UICONTROL X509 トークン]**&#x200B;を選択した場合は、X509 証明書を設定します。詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
+     認証の種類として **[!UICONTROL X509 トークン]**&#x200B;を選択した場合は、X509 証明書を設定します。詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
 X509 証明書のキーストアエイリアスを**[!UICONTROL キーエイリアス]**&#x200B;フィールドに指定します。**[!UICONTROL 有効期間]**&#x200B;フィールドに、認証リクエストが有効なままになるまでの時間（秒）を指定します。オプションで、メッセージの本文、タイムスタンプヘッダーまたはその両方に署名することを選択します。
 
-      認証タイプとして&#x200B;**[!UICONTROL 相互認証]**&#x200B;を選択した場合は、[RESTful web サービスおよび SOAP web サービスの証明書ベースの相互認証](#mutual-authentication)を参照してください。
+     認証タイプとして&#x200B;**[!UICONTROL 相互認証]**&#x200B;を選択した場合は、[RESTful web サービスおよび SOAP web サービスの証明書ベースの相互認証](#mutual-authentication)を参照してください。
 
 1. 「**[!UICONTROL 作成]**」をタップして、SOAP web サービス用のクラウド設定を作成します。
 

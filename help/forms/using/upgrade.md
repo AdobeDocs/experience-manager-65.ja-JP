@@ -11,14 +11,20 @@ discoiquuid: f89921ef-c638-4a07-88d5-3dd8614c5166
 docset: aem65
 role: Admin
 exl-id: 2fc8abec-8ba6-40b7-bbb1-4288eeea7c86
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 98%
+source-wordcount: '356'
+ht-degree: 96%
 
 ---
 
 # AEM 6.5 Forms へのアップグレード{#upgrade-to-aem-forms}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/migrate-to-forms-as-a-cloud-service.html) |
+| AEM 6.5 | この記事 |
+
 
 AEM 6.5 Forms には、いくつかの新機能と機能強化が導入されています。これにより、フォームと通信の作成、管理、ユーザーエクスペリエンスが簡素化されます。AEM 6.5 Forms のすべての新機能と機能強化については、[新機能の概要についてのドキュメント](../../forms/using/whats-new.md)を参照してください。
 

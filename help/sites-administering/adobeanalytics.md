@@ -1,7 +1,7 @@
 ---
 title: Adobe Analytics との統合
 seo-title: Integrating with Adobe Analytics
-description: AEM と Adobe Analytics を統合する方法について説明します。
+description: AEMとAdobe Analyticsを統合する方法について説明します。
 seo-description: Learn how to integrate AEM with Adobe Analytics.
 uuid: d8548263-6ac5-45fb-8c70-52ecd4161bbb
 contentOwner: Guillaume Carlino
@@ -11,14 +11,20 @@ content-type: reference
 discoiquuid: 444c522e-2f33-4f41-846c-8d317e799659
 docset: aem65
 exl-id: 0a87ece4-57ed-4022-a78a-264c1edf4b4e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 100%
+source-wordcount: '314'
+ht-degree: 89%
 
 ---
 
 # Adobe Analytics との統合{#integrating-with-adobe-analytics}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-aem-forms-with-adobe-analytics.html) |
+| AEM 6.5 | この記事 |
+
 
 Adobe Analytics と AEM の統合により、Web ページのアクティビティを追跡できます。
 
@@ -44,7 +50,7 @@ Adobe Analytics と AEM の統合により、Web ページのアクティビテ�
 
 >[!NOTE]
 >
->方法については、[DTM を使用した AEM と Adobe Target および Adobe Analytics の統合（英語）](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja)も参照してください。
+>ハウツー記事も参照してください。 [DTM を使用したAEMとAdobe TargetおよびAdobe Analyticsの統合](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja).
 
 ## その他の情報 {#further-information}
 
@@ -63,4 +69,3 @@ Adobe Analytics と AEM の統合により、Web ページのアクティビテ�
 >* **Apache HTTP コンポーネントプロキシ設定**（4.x API を設定）。
 >  例：[https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
-

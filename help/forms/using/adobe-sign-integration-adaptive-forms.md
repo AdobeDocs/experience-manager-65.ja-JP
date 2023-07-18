@@ -11,14 +11,19 @@ discoiquuid: 1f28b257-5419-4a21-a54a-b20bf35530ac
 docset: aem65
 feature: Adaptive Forms, Acrobat Sign
 exl-id: 52146038-1582-41b8-aee0-215d04bb91d7
-source-git-commit: 762e918a2c65898fc518f131d44421fb82ce4d6f
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 61%
+source-wordcount: '1998'
+ht-degree: 60%
 
 ---
 
 # [!DNL Adobe Sign] の AEM [!DNL Forms] との統合{#integrate-adobe-sign-with-aem-forms}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=en#adobe-acrobat-sign-for-government) |
+| AEM 6.5 | この記事 |
 
 [!DNL Adobe Sign] により、アダプティブフォームの電子サインワークフローを有効にできます。電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 

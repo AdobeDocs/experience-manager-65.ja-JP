@@ -9,16 +9,22 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 0e949429-cd5f-4301-aa72-14803cdfab00
 docset: aem65
 exl-id: 47b9de1f-b16a-424c-b8b4-e9d7b3dcca86
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 100%
+source-wordcount: '1245'
+ht-degree: 99%
 
 ---
 
 # 新機能の概要 | AEM 6.5 Forms{#new-features-summary-aem-forms}
 
 ## トランザクションレポート {#transaction-reports}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/latest-innovations.html) |
+| AEM 6.5 | この記事 |
+
 
 トランザクションレポートでは、送信されたフォーム、処理されたドキュメント、レンダリングされたドキュメントの数を追跡できます。これらのトランザクションを追跡する目的は、プロダクトの使用状況について十分な情報を基に判断を行い、ハードウェアとソフトウェアに対する投資の割合を調整することにあります。トランザクションの例を次に示します。
 
@@ -129,13 +135,13 @@ Go To ステップ、OR Split ステップ、およびすべての AEM Forms ワ
 
 ### プラットフォームの主要なアップデート {#major-platform-updates}
 
-サポート対象のオペレーティングシステム、アプリケーションサーバー、データベース、データベースドライバー、JDK サーバー、LDAP サーバー、電子メールサーバーを自由に組み合わせて、AEM Forms をセットアップすることができます。[サポート対象のプラットフォーム](../../forms/using/aem-forms-jee-supported-platforms.md)に関する主な変更点を以下に示します。
+サポート対象のオペレーティングシステム、アプリケーションサーバー、データベース、データベースドライバー、JDK サーバー、LDAP サーバー、メールサーバーを自由に組み合わせて、AEM Forms をセットアップすることができます。[サポート対象のプラットフォーム](../../forms/using/aem-forms-jee-supported-platforms.md)に関する主な変更点を以下に示します。
 
 <table>
  <tbody>
   <tr>
    <td>コンポーネント</td>
-   <td>サポート対象から除外</td>
+   <td>サポートが削除されました</td>
   </tr>
   <tr>
    <td>オペレーティングシステム</td>
@@ -172,7 +178,7 @@ Go To ステップ、OR Split ステップ、およびすべての AEM Forms ワ
     </ul> </td>
   </tr>
   <tr>
-   <td>電子メールサーバー</td>
+   <td>メールサーバー</td>
    <td>
     <ul>
      <li>IBM Lotus Domino 8.5.0 </li>

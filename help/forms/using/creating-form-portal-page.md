@@ -1,7 +1,7 @@
 ---
 title: フォームポータルページの作成
 seo-title: Creating a forms portal page
-description: フォームポータルでは、Web開発者にAdobe Experience Manager (AEM)を使用して作成されたWebサイトでフォームポータルを作成してカスタマイズするためのコンポーネントが支給されます。
+description: Forms Portal では、Web 開発者に、Adobe Experience Manager(AEM) を使用して作成された Web サイトでフォームポータルを作成してカスタマイズするためのコンポーネントが支給されます。
 seo-description: Forms Portal equips Web Developers with components to create and customize a forms portal on websites authored using Adobe Experience Manager (AEM).
 uuid: a5017de5-616c-4ce4-81aa-f28c741f8e8f
 content-type: reference
@@ -11,45 +11,50 @@ discoiquuid: 8fff78cb-9ef9-426e-8b30-d70b4f26887f
 docset: aem65
 feature: Forms Portal
 exl-id: 22d7c24e-7a77-4324-afdf-74c1fbf15773
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '1641'
-ht-degree: 100%
+source-wordcount: '1663'
+ht-degree: 54%
 
 ---
 
 # フォームポータルページの作成 {#creating-a-forms-portal-page}
 
-フォームポータルのコンポーネントでは、Web開発者にAdobe Experience Manager (AEM)を使用してフォームポータル用Webサイトを作成し、カスタマイズするためのコンポーネントが用意されています。フォームポータルの概要については、「[ポータル上でフォームを発行する](../../forms/using/introduction-publishing-forms.md)」を参照してください。
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html) |
+| AEM 6.5 | この記事 |
+
+Formsポータルコンポーネントを使用すると、Web 開発者にAdobe Experience Manager(AEM) で作成された Web サイト上でフォームポータルを作成し、カスタマイズするためのコンポーネントが支給されます。 フォームポータルの概要については、 [ポータル上のフォーム発行の概要](../../forms/using/introduction-publishing-forms.md).
 
 ## 前提条件 {#prerequisites}
 
-デフォルトでは、フォームポータルコンポーネントは使用できません。「[フォームポータルのコンポーネントを有効にする](/help/forms/using/enabling-forms-portal-components.md)」の説明に従い、フォームポータルコンポーネントにおける次のカテゴリが有効になっていることを確認してください。
+Formsポータルのコンポーネントは、デフォルトでは使用できません。 以下のフォームポータルコンポーネントカテゴリが有効になっていることを確認します。詳しくは、 [フォームポータルコンポーネントの有効化](/help/forms/using/enabling-forms-portal-components.md).
 
 **Document Services**：検索とリスター、リンクおよびドラフトと送信のコンポーネントが含まれています。
 
-**Document Services Predicates**：「Date Predicate」、「Full Text Predicate」、「Properties Predicate」、および「Tags Predicate」のコンポーネントが含まれています。これらのコンポーネントは、「Search &amp; Lister」コンポーネントで検索を設定する際に使用します。
+**Document Services の述語** 日付の述語、フルテキストの述語、プロパティの述語、タグの述語の各コンポーネントが含まれます。 これらのコンポーネントは、Search &amp; Lister コンポーネントで検索を設定するために使用されます。
 
-これらをAEMサイトのページで有効にすると、コンポーネントの各カテゴリはコンポーネントブラウザで使用でるようになります。
+AEMサイトページで有効にしたコンポーネントカテゴリは、コンポーネントブラウザーで使用できます。
 
 ![コンポーネントブラウザにおけるAEM Formsポータルコンポーネント](assets/component-categories.png)
 
-Formsポータルコンポーネントのカテゴリ
+Forms portal コンポーネントのカテゴリ
 
-## Search &amp; Listerコンポーネント {#search-amp-lister-component}
+## Search &amp; Lister コンポーネント {#search-amp-lister-component}
 
-「Document Services」のコンポーネントカテゴリにある「Search &amp; Lister」コンポーネントは、ページ上にフォームを一覧表示し、その中から検索を実行するのに使用されます。コンポーネントには、次の2つのペインが含まれます。
+Document Services コンポーネントカテゴリの下にある Search &amp; Lister コンポーネントは、ページ上のフォームのリストを表示し、リストに表示されたフォームに検索を実装するために使用されます。 このコンポーネントには、次の 2 つのペインが含まれます。
 
-* フォームが一覧表示される「リスト」ペイン。
-* 検索機能を追加する「検索」ペイン。
+* フォームが一覧表示されるリストペイン。
+* 検索機能を追加する検索ペイン。
 
 検索とリスターコンポーネントは、コンポーネントブラウザの Document Services コンポーネントカテゴリからページまでドラッグ＆ドロップすることができます。コンポーネントを追加すると、下記の画像のようになります。
 
 ![ページ中のSearch &amp; Lister コンポーネント](assets/fp-grid-viw.png)
 
-ページ中のグリッドレイアウトのSearch &amp; Lister コンポーネント
+グリッドレイアウトを持つページ内の Search &amp; Lister コンポーネント
 
-### 「リスト」ペイン {#list-pane}
+### リストウィンドウ {#list-pane}
 
 リストペインはフォームが一覧表示される領域です。検索とリスターコンポーネントでは各種の設定オプションが提供されており、リストウィンドウでフォームの表示を制御するのに使用します。
 
@@ -71,12 +76,12 @@ Formsポータルコンポーネントのカテゴリ
   <tr>
    <td><span class="uicontrol"><strong>アセットフォルダー</strong></code></td>
    <td>項目を追加</td>
-   <td>アセットのアップロード先フォルダーを、AEM FormsのUIから設定します。デフォルトでは、アップロードされたすべてのアセットが一覧表示されます。AEM Forms の UI に関する詳細は、「<a href="../../forms/using/introduction-managing-forms.md" target="_blank">フォーム管理の概要</a>」を参照してください。</td>
+   <td>AEM Forms UI を使用してアセットがアップロードされるフォルダーを設定します。 デフォルトでは、アップロードされたすべてのアセットがリストされます。 AEM Forms UI について詳しくは、 <a href="../../forms/using/introduction-managing-forms.md" target="_blank">フォーム管理の概要</a>.</td>
   </tr>
   <tr>
    <td><p><span class="uicontrol"><strong>ディスプレイ</strong></code></p> </td>
    <td>タイトルテキスト</td>
-   <td>Search &amp; Listerコンポーネントのタイトルデフォルトのタイトルは<strong>フォームポータルです。</strong></td>
+   <td>Search &amp; Lister コンポーネントのタイトル。 デフォルトのタイトルはです。 <strong>Forms Portal</strong></td>
   </tr>
   <tr>
    <td> </td>
@@ -86,22 +91,22 @@ Formsポータルコンポーネントのカテゴリ
   <tr>
    <td> </td>
    <td>詳細検索の無効化</td>
-   <td>このオプションを有効にすると、詳細検索アイコンが非表示になります。</td>
+   <td>有効にすると、詳細検索アイコンが非表示になります。</td>
   </tr>
   <tr>
    <td> </td>
-   <td>テキスト検索の無効化</td>
-   <td>このオプションを有効にすると、全文検索バーが非表示になります。</td>
+   <td>テキスト検索を無効にする</td>
+   <td>有効にすると、全文検索バーが非表示になります。</td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>結果</strong></code></td>
-   <td>ページごとの結果の数</td>
+   <td>1 ページあたりの結果数</td>
    <td>ページに表示するフォームの最大数を設定します。</td>
   </tr>
   <tr>
    <td> </td>
    <td>結果のテキスト</td>
-   <td><p>結果のテキストを設定します（例えば、1-12/601の</strong>「結果」<strong>）。デフォルト値は<strong>「Results」</strong>です。</strong></p> <p>例えば、このフィールドで<strong>フォーム</strong>を指定し、合計 601 のフォームがある場合、結果のテキストは 1-12/601 の「<strong>Forms</strong>」に変わります。</p> </td>
+   <td><p>結果のテキストを設定します（例： 601 の 1-12） <strong>結果</strong>) をクリックします。 デフォルト値は <strong>結果</strong>.</p> <p>例えば、このフィールドで<strong>フォーム</strong>を指定し、合計 601 のフォームがある場合、結果のテキストは 1-12/601 の「<strong>Forms</strong>」に変わります。</p> </td>
   </tr>
   <tr>
    <td> </td>
@@ -116,17 +121,17 @@ Formsポータルコンポーネントのカテゴリ
   <tr>
    <td><span class="uicontrol"><strong>フォームリンク</strong></code></td>
    <td>レンダリングタイプ</td>
-   <td>指定したレンダリングタイプに基づいて、フォームのリストをコントロールします。使用可能なオプションは「PDF」と「HTML」です。例えば、レンダリングタイプとして HTML のみを指定した場合は、PDF フォームが除外されます。</td>
+   <td>指定したレンダリングの種類に基づいてフォームのリストを制御します。 使用可能なオプションは、PDFとHTMLです。 例えば、レンダータイプとして「HTML」のみを選択した場合、PDF formsは除外されます。</td>
   </tr>
   <tr>
    <td> </td>
-   <td>HTML プロファイル</td>
-   <td>レンダリングに使用されるHTMLプロファイルを設定します。使用可能なすべてのプロファイルがドロップダウンリストに一覧表示されます。</td>
+   <td>HTMLプロファイル</td>
+   <td>レンダリングに使用するHTMLプロファイルを設定します。 使用可能なすべてのプロファイルがドロップダウンリストに表示されます。</td>
   </tr>
   <tr>
    <td> </td>
    <td>送信 URL</td>
-   <td><p>フォームデータが送信されるサーブレットを設定します。</p> <p><strong>注意：</strong><em>フォームの送信 URL は、複数の場所で指定できます。また、その優先順位は以下の通りです。</em></p>
+   <td><p>フォームデータが送信されるサーブレットを設定します。</p> <p><strong>注意：</strong> <em>フォームの送信 URL は複数の場所で指定でき、優先順位は次のとおりです。</em></p>
     <ol>
      <li><em>優先順位が最も高いのは、フォームに埋め込まれている送信URL（送信ボタン）です。</em></li>
      <li><em>2番目に優先順位が高いのは、AEM Forms UIで説明している送信URLです。</em></li>
@@ -135,13 +140,13 @@ Formsポータルコンポーネントのカテゴリ
   </tr>
   <tr>
    <td> </td>
-   <td>HTMLレンダリングアクションのツールチップ</td>
-   <td>（HTML5のアイコン）<img height="16" src="assets/aem6forms_panel-html.png" width="13" />の上にマウスを置くと表示されるツールチップのテキストを設定します。</td>
+   <td>HTMLレンダリングアクションツールチップ</td>
+   <td>ポインターを合わせたときに表示されるツールヒントのテキストを設定します <img height="16" src="assets/aem6forms_panel-html.png" width="13" /> (HTML5 アイコン )。</td>
   </tr>
   <tr>
    <td> </td>
-   <td>PDFレンダリングアクションのツールチップ</td>
-   <td><img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> （PDF のアイコン）の上にマウスのポインターを置くと表示されるツールチップのテキストを設定します。</td>
+   <td>PDFレンダリングアクションツールチップ</td>
+   <td>ポインターを合わせたときに表示されるツールヒントのテキストを設定します <img height="16" src="assets/aem6forms_panel-pdf.png" width="14" /> (PDFアイコン )。</td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>スタイル</strong></code></td>
@@ -151,7 +156,7 @@ Formsポータルコンポーネントのカテゴリ
   <tr>
    <td> </td>
    <td>カスタムスタイルパス</td>
-   <td>スタイルタイプとして「カスタム」を選択した場合、カスタム CSS へのパスを参照して指定します。そうでない場合、「デフォルト」を選択します。</td>
+   <td>スタイルタイプとして「カスタム」を選択した場合は、カスタム CSS へのパスを参照して指定します。選択しない場合は、「デフォルト」を選択します。</td>
   </tr>
  </tbody>
 </table>
@@ -168,9 +173,9 @@ Formsポータルコンポーネントのカテゴリ
 
 #### 日付の述語 {#date-predicate}
 
-「Date Predicate」コンポーネントが追加されている場合は、指定された期間に変更されたフォームについて、一覧表示されたフォームの中から検索できます。
+「 Date Predicate 」コンポーネントを追加すると、リストに表示されているフォームで、指定した期間に変更された検索が可能になります。
 
-「Date Predicate」コンポーネントを構成するには、次の手順を実行します。
+Date Predicate コンポーネントを設定するには、次の手順を実行します。
 
 1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
 1. 以下のプロパティを指定します。
@@ -187,22 +192,22 @@ Formsポータルコンポーネントのカテゴリ
 
 #### フルテキストの述語 {#full-text-predicate}
 
-「Full Text Predicate」コンポーネントは、フォームデータに対して名前や説明などを検索する、フルテキスト検索を実装します。名前や説明にテキストを含む戻りフォームで、テキスト文字列を検索できます。
+Full Text Predicate コンポーネントは、名前や説明などのフォームデータに対するフルテキスト検索を実装します。 ユーザーは任意のテキスト文字列を検索して、名前や説明にテキストが含まれるフォームを返すことができます。
 
-Full Text Predicate コンポーネントを構成するには、次の手順を実行します。
+Full Text Predicate コンポーネントを設定するには、次の手順を実行します。
 
 1. コンポーネントをタップし、![ettings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
 1. 「**メインタイトル**」フィールドにタイトルを指定します。
-1. 「**OK**」をタップします。
+1. タップ **Ok**
 
 #### プロパティの述語 {#properties-predicate}
 
-Properties Predicateコンポーネントは、フォームプロパティ（タイトル、作成者および説明など）に基づいたフォームの検索機能を実装します。
+Properties Predicate コンポーネントは、タイトル、作成者、説明などのフォームプロパティに基づいたフォームの検索機能を実装します。
 
-Properties Predicate コンポーネントを構成するには、次の手順を実行します。
+Properties Predicate コンポーネントを設定するには、次の手順を実行します。
 
 1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
-1. 「全般」タブで、検索ラベルを指定します。デフォルト値は、**プロパティ**&#x200B;です。
+1. 「一般」タブで、検索ラベルを指定します。 デフォルト値は、**プロパティ**&#x200B;です。
 
 1. 「オプション」タブで、「**アイテムの追加**」をタップします。
 1. ドロップダウンリストからプロパティを選択し、ドロップダウンリストの下のフィールドでプロパティの検索ラベルを指定します。
@@ -212,30 +217,30 @@ Properties Predicate コンポーネントを構成するには、次の手順�
 
 #### タグの述語 {#tags-predicate}
 
-Tags Predicate コンポーネントは、Forms Manager で定義されているタグに基づいて、フォームの検索機能を実装します。
+Tags Predicate コンポーネントは、Forms Manager で定義されたタグに基づいて、フォームの検索機能を実装します。
 
-Tags Predicate コンポーネントを構成するには、次の手順を実行します。
+Tags Predicate コンポーネントを設定するには：
 
 1. コンポーネントをタップし、![settings_icon](assets/settings_icon.png) をタップします。編集ダイアログが開きます。
 1. 「タグ」フィールド横の下向き矢印ボタンをタップします。
 1. 適切なタグを選択します。
 1. 「**OK**」をタップします。
 
-選択したタグが、選択のためのチェックボックスと一緒に検索ペインに表示されます。ユーザーはこのタグに基づいて検索を絞り込めるようになります。
+選択したタグが、選択用のチェックボックスと共に検索パネルに表示されます。 ユーザーはこのタグに基づいて検索を絞り込めるようになります。
 
 ## ページ上でフォームを一覧表示 {#list-forms-on-a-page-br}
 
-ページ上でフォームを一覧表示するには、そのページに **[!UICONTROL Search &amp; Lister]** コンポーネントを追加し、**[!UICONTROL リストペイン]**&#x200B;を設定します。エンドユーザーが、日付、テキスト、およびタグでフォームを検索できるようにするには、**[!UICONTROL 検索ペイン]**&#x200B;コンポーネントを追加します。
+ページ上でフォームを一覧表示するには、そのページに **[!UICONTROL Search &amp; Lister]** コンポーネントを追加し、**[!UICONTROL リストペイン]**&#x200B;を設定します。エンドユーザーが日付、テキスト、タグ付きのフォームを検索できるようにするには、 **[!UICONTROL 検索ペイン]** コンポーネント。
 
-ページ上の任意の場所からフォームにリンクするには、リンクコンポーネントを使用します。リンクコンポーネントについての詳細は、「[ページ内のリンクコンポーネントの埋め込み](../../forms/using/embedding-link-component-page.md)」を参照してください。
+ページ上の任意の場所からフォームをリンクするには、リンクコンポーネントを使用します。 リンクコンポーネントについての詳細は、「[ページ内のリンクコンポーネントの埋め込み](../../forms/using/embedding-link-component-page.md)」を参照してください。
 
-ドラフト状態で、既に送信済みのフォームをリストするには、「**[!UICONTROL ドラフト&amp;送信]**」コンポーネントを使用します。詳しくは、「[ドラフト・送信コンポーネントのカスタマイズ](../../forms/using/draft-submission-component.md)」を参照してください。
+ドラフト状態のフォームと、既に送信済みのフォームを一覧表示するには、 **[!UICONTROL ドラフトと送信]** コンポーネント。 詳しくは、 [ドラフトと送信コンポーネントのカスタマイズ](../../forms/using/draft-submission-component.md).
 
-## モバイルデバイスへの適合性 {#mobile-device-friendliness}
+## モバイルデバイスへの対応 {#mobile-device-friendliness}
 
-フォームポータルのSearch &amp; Listerコンポーネントは、モバイルデバイスフレンドリーで、デバイスに応じて表示幅を調整します。3 つすべてのデフォルトビュー：グリッド、カード、パネルは、web ページにも適応するという事実を踏まえて、デバイスに応じて再レイアウトされます。簡単に言えば、Search &amp; Listerは単なるコンポーネントであり、ページレベルのスタイリングは管理しません。
+Forms Portal Search &amp; Lister コンポーネントは、モバイルデバイスに適したコンポーネントです。 3 つすべてのデフォルトビュー：グリッド、カード、パネルは、web ページにも適応するという事実を踏まえて、デバイスに応じて再レイアウトされます。簡単な事実は、Search &amp; Lister は単なるコンポーネントであり、ページレベルのスタイル設定は管理しないということです。
 
-次の画像は、モバイルデバイス上で開いた場合の Search &amp; Lister コンポーネントを示します。
+次の画像は、モバイルデバイスで開いた際の Search &amp; Lister コンポーネントを示しています。
 
 ![Search &amp; Listerコンポーネントのスクリーンショット](assets/search_lister.png)
 
@@ -245,9 +250,9 @@ Search &amp; Listerコンポーネント
 
 フォームポータルページをカスタマイズすることで、特徴のある外観にすることができます。また、メタデータを追加することで、検索機能の改善、ページのレイアウト変更、およびカスタム CSS スタイルの追加を行うこともできます。詳しくは、「[フォームポータルコンポーネント用テンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)」を参照してください。
 
-AEM Forms UIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、エンドユーザーに対してフォームの展開・検索機能を提供するのに役に立ちます。カスタムメタデータについて詳しくは、「[フォームポータルコンポーネント用テンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)」を参照してください。
+AEM Forms UIでは、カスタムメタデータをフォームに追加することができます。カスタムメタデータは、フォームの一覧表示と検索の操作をエンドユーザーに提供する際に役立ちます。 カスタムメタデータについて詳しくは、「[フォームポータルコンポーネント用テンプレートのカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)」を参照してください。
 
-フォームポータルは、デフォルトでレンダリングアクションを提供します。フォームポータルをカスタマイズして、他のオプションを追加することもできます。詳しくは、「[フォームリスター項目にカスタムアクションボタンを追加する](../../forms/using/add-custom-action-form-lister.md)」を参照してください。
+デフォルトでは、フォームポータルはレンダリングアクションを提供します。 フォームポータルをカスタマイズして、その他のアクションを追加できます。 詳しくは、 [フォームリスター項目にカスタムアクションを追加する。](../../forms/using/add-custom-action-form-lister.md)
 
 ## 関連記事
 
@@ -258,4 +263,4 @@ AEM Forms UIでは、カスタムメタデータをフォームに追加する�
 * [ドラフトと送信済みフォームのストレージのカスタマイズ](/help/forms/using/draft-submission-component.md)
 * [ドラフトと送信コンポーネントとデータベースの統合のサンプル](/help/forms/using/integrate-draft-submission-database.md)
 * [フォームポータルコンポーネントのテンプレートをカスタマイズする](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [ポータル上のフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)
+* [ポータル上のフォーム公開の概要](/help/forms/using/introduction-publishing-forms.md)

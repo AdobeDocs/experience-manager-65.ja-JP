@@ -10,14 +10,19 @@ topic-tags: publish
 discoiquuid: cbf4e35a-7905-44ab-ab68-fb443443f02d
 docset: aem65
 exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
-source-git-commit: e9f64722ba7df0a7f43aaf1005161483e04142f5
+source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2230'
 ht-degree: 99%
 
 ---
 
 # AEM Forms ワークフローの変数{#variables-in-aem-forms-workflows}
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html) |
+| AEM 6.5 | この記事 |
 
 ワークフローモデルの変数は、そのデータタイプに基づいて値を格納する方法です。ワークフローステップで変数の名前を使用して、変数に格納されている値を取得できます。変数名を使用して、ルーティング上の決定を行う式を定義することもできます。
 
