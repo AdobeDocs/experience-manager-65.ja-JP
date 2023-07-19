@@ -1,39 +1,35 @@
 ---
 title: ページテンプレート - 静的
-seo-title: Page Templates - Static
-description: テンプレートはページの作成に使用され、選択した範囲内でどのコンポーネントが使用可能かを定義します
-seo-description: A Template is used to create a Page and defines which components can be used within the selected scope
-uuid: 7a473c19-9565-476e-9e54-ab179da04d71
+description: テンプレートは、ページの作成に使用され、選択した範囲内で使用できるコンポーネントを定義します
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: cfd90e8f-9b9b-4d0b-be31-828469b961de
 docset: aem65
 exl-id: b934ac41-78b9-497f-ba95-b05ef1e5660e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 2810e34f642f4643fa4dc24b31a57a68e9194e39
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 99%
+source-wordcount: '1602'
+ht-degree: 44%
 
 ---
 
 # ページテンプレート - 静的{#page-templates-static}
 
-テンプレートはページを作成するための雛形として使用され、選択した範囲内で使用できるコンポーネントを定義します。テンプレートは、そこから作成されるページと同じ構造を持つノードの階層ですが、実際のコンテンツは含みません。
+テンプレートは、ページの作成に使用され、選択した範囲内で使用できるコンポーネントを定義します。 テンプレートは、そこから作成されるページと同じ構造を持つノードの階層ですが、実際のコンテンツは含みません。
 
-テンプレートごとに、使用可能なコンポーネントが提示されます。
+各テンプレートには、使用可能なコンポーネントが表示されます。
 
-* テンプレートは[コンポーネント](/help/sites-developing/components.md)で構成されています。
-* コンポーネントによって使用され、アクセスが許可されるウィジェットを使用して、コンテンツがレンダリングされます。
+* テンプレートは [コンポーネント](/help/sites-developing/components.md);
+* コンポーネントはウィジェットを使用し、ウィジェットにアクセスできます。ウィジェットはコンテンツのレンダリングに使用されます。
 
 >[!NOTE]
 >
 >[編集可能なテンプレート](/help/sites-developing/page-templates-editable.md) も使用できますが、これは最も柔軟性が高く、最新の機能を実現するために推奨されるタイプのテンプレートです。
 
-## テンプレートのプロパティおよび子ノード {#properties-and-child-nodes-of-a-template}
+## テンプレートのプロパティと子ノード {#properties-and-child-nodes-of-a-template}
 
-テンプレートは、タイプが cq:Template のノードであり、以下のプロパティおよび子ノードが含まれます。
+テンプレートは、タイプが cq:Template のノードで、次のプロパティと子ノードを持ちます。
 
 <table>
  <tbody>
@@ -68,7 +64,7 @@ ht-degree: 99%
    <td>テンプレートの作成日。<br /> </td>
   </tr>
   <tr>
-   <td> jcr:description</td>
+   <td> jcr :description</td>
    <td> 文字列</td>
    <td>テンプレートの説明。<br /> </td>
   </tr>
@@ -100,31 +96,31 @@ ht-degree: 99%
  </tbody>
 </table>
 
-テンプレートはページの基礎です。
+テンプレートは、ページの基盤です。
 
 ページを作成するには、テンプレート（ノードツリー `/apps/<myapp>/template/<mytemplate>`）をサイトツリーの対応する位置にコピーする必要があります。「**Web サイト**」タブを使用してページを作成する場合も、この処理がおこなわれています。
 
-このコピー処理により、ページには、初期コンテンツ（通常はトップレベルコンテンツのみ）と sling:resourceType プロパティ、ページのレンダリングに使用するページコンポーネントのパス（子ノード jcr:content に含まれるすべてのもの）が与えられます。
+また、このコピーアクションは、ページの初期コンテンツ（通常はトップレベルコンテンツのみ）と、ページのレンダリングに使用されるページコンポーネントのパス（子ノード jcr:content 内のすべて）を示す sling:resourceType プロパティも提供します。
 
 ## テンプレートの構造 {#how-templates-are-structured}
 
-以下の 2 つの側面について考慮する必要があります。
+考慮すべき 2 つの側面があります。
 
 * テンプレート自体の構造
-* テンプレート使用時に作成されるコンテンツの構造
+* テンプレートを使用する際に作成されるコンテンツの構造
 
 ### テンプレートの構造 {#the-structure-of-a-template}
 
-テンプレートは **cq:Template** タイプのノードの下に作成されます。
+テンプレートは、タイプのノードの下に作成されます **cq:Template**.
 
 ![screen_shot_2012-02-13at63646pm](assets/screen_shot_2012-02-13at63646pm.png)
 
-様々なプロパティを設定できます。具体例は以下のとおりです。
+特に、様々なプロパティを設定できます。
 
-* **jcr:title** - テンプレートのタイトル。ページ作成時にダイアログに表示されます。
-* **jcr:description** - テンプレートの説明。ページ作成時にダイアログに表示されます。
+* **jcr:title**  — テンプレートのタイトル。は、ページの作成時にダイアログに表示されます。
+* **jcr:description**  — テンプレートの説明。は、ページの作成時にダイアログに表示されます。
 
-このノードには jcr:content（cq:PageContent）ノードが含まれており、結果ページのコンテンツノードの基礎として使用できます。これが、sling:resourceType を使用して、新しいページの実際のコンテンツをレンダリングする際に使用するコンポーネントを参照します。
+このノードには、結果ページのコンテンツノードの基礎として使用される jcr:content(cq:PageContent) ノードが含まれます。これは、sling:resourceType を使用して、新しいページの実際のコンテンツのレンダリングに使用されるコンポーネントを参照します。
 
 ![screen_shot_2012-02-13at64010pm](assets/screen_shot_2012-02-13at64010pm.png)
 
@@ -136,35 +132,35 @@ ht-degree: 99%
 
 テンプレートは、`cq:Page` タイプのページを作成するのに使用します（前述のように、ページは特別なタイプのコンポーネントです）。各 AEM ページには構造化ノード `jcr:content` があります。この特徴は次のとおりです。
 
-* タイプが cq:PageContent である。
-* 定義済みのコンテンツ定義を保持する構造化ノードタイプである。
+* タイプが cq:PageContent の場合
+* は、定義された content-definition を保持する構造化ノードタイプです
 * コンテンツのレンダリングに使用する Sling スクリプトを保持するコンポーネントを参照するための `sling:resourceType` プロパティを持つ。
 
-### デフォルトテンプレート {#default-templates}
+### デフォルトのテンプレート {#default-templates}
 
-AEM にはそのまま使用できるデフォルトのテンプレートが多数付属しています。テンプレートをそのまま使用したほうがよい場合もあります。その場合は、実際の Web サイトでテンプレートが使用可能であることを確認する必要があります。
+AEMには、すぐに使用できる様々なデフォルトテンプレートが付属しています。 場合によっては、テンプレートをそのまま使用することもできます。 その場合は、テンプレートが Web サイトで使用できることを確認する必要があります。
 
-例えば、AEM には、コンテンツページやホームページを含む、いくつかのテンプレートが付属しています。
+例えば、AEMには、コンテンツページやホームページを含む複数のテンプレートが付属しています。
 
 | **タイトル** | **コンポーネント** | **場所** | **目的** |
 |---|---|---|---|
-| ホームページ | homepage | geometrixx | Geometrixx ホームページテンプレート。 |
-| コンテンツページ | contentpage | geometrixx | Geometrixx コンテンツページテンプレート。 |
+| ホームページ | homepage | geometrixx | Geometrixxのホームページテンプレート。 |
+| コンテンツのページ | contentpage | geometrixx | Geometrixxコンテンツページテンプレート。 |
 
-#### デフォルトテンプレートの表示 {#displaying-default-templates}
+#### デフォルトのテンプレートの表示 {#displaying-default-templates}
 
-リポジトリ内のすべてのテンプレートのリストを確認するには、以下の手順を実行します。
+リポジトリ内のすべてのテンプレートのリストを表示するには、次の手順を実行します。
 
-1. CRXDE Lite で、**ツール**&#x200B;メニューを開いて、「**クエリ**」をクリックします。
+1. CRXDE Liteで、 **ツール** メニューとクリック **クエリ**.
 
 1. 「クエリ」タブで、
-1. 「**タイプ**」で、「**XPath**」を選択します。
+1. 形式 **タイプ**&#x200B;を選択します。 **XPath**.
 
 1. 内 **クエリ** 入力フィールドに次の文字列を入力します。//element(&#42;, cq:Template)
 
-1. 「**実行**」をクリックします。結果ボックスにリストが表示されます。
+1. クリック **実行**. 結果ボックスにリストが表示されます。
 
-多くの場合、既存のテンプレートを使用して、各自の用途に合わせて新しいテンプレートを開発します。詳しくは、[ページテンプレートの開発](#developing-page-templates)を参照してください。
+通常は、既存のテンプレートを使用し、独自のテンプレート用に新しいテンプレートを開発します。 詳しくは、 [ページテンプレートの開発](#developing-page-templates) を参照してください。
 
 既存のテンプレートを各自の web サイト用に有効にし、**web サイト**&#x200B;コンソールから「**Web サイト**」のすぐ下にページを作成するときに&#x200B;**ページを作成**&#x200B;ダイアログにそのテンプレートを表示する場合は、テンプレートノードの allowedPaths プロパティを次のように設定します。**/content(/.&#42;)?**
 
@@ -176,13 +172,13 @@ UI でスタイルが[デザインモード](/help/sites-authoring/default-compo
 >
 >Adobeでは、[デザインモード](/help/sites-authoring/default-components-designmode.md) を介してのみデザインを適用することをお勧めします。
 >
->例えば、CRX DE でデザインを変更することはベストプラクティスではなく、そのようなデザインの適用は、意図したビヘイビアーとは異なることがあります。
+>例えば、CRXDE Liteでのデザインの変更はベストプラクティスではなく、そのようなデザインの適用は期待される動作とは異なる場合があります。
 
 デザインがデザインモードを使用してのみ適用される場合、次のセクションは、 [デザインパスの解像度](/help/sites-developing/page-templates-static.md#design-path-resolution)、[デシジョンツリー](/help/sites-developing/page-templates-static.md#decision-tree)、および[例](/help/sites-developing/page-templates-static.md#example)は適用されません。
 
 ### デザインパスの解像度 {#design-path-resolution}
 
-静的テンプレートに基づいてコンテンツをレンダリングする場合、AEM は コンテンツ階層のトラバーサルに基づいて、最も関連性の高いデザインとスタイルをコンテンツに適用しようとします。
+静的テンプレートに基づいてコンテンツをレンダリングする場合、AEMは、コンテンツ階層のトラバーサルに基づいて、最も関連性の高いデザインとスタイルをコンテンツに適用しようとします。
 
 AEM は次の順序で、コンテンツノードに最も関連性の高いスタイルを決定します。
 
@@ -204,7 +200,7 @@ AEM は次の順序で、コンテンツノードに最も関連性の高いス�
 
 `/root/branch/leaf`
 
-次の表に、AEM がデザインを選択する方法を示します。
+次の表に、AEMによるデザインの選択方法を示します。
 
 <table>
  <tbody>
@@ -265,23 +261,23 @@ AEM は次の順序で、コンテンツノードに最も関連性の高いス�
 
 ## ページテンプレートの開発 {#developing-page-templates}
 
-AEM ページのテンプレートは、新しいページを作成する際に使用する単なるモデルです。初期コンテンツは必要に応じて増減できます。テンプレートの役割は、編集やレンダリングが可能なように必要なプロパティ（主に sling:resourceType）が設定された、正しい初期ノード構造を作成することです。
+AEMのページテンプレートは、ページの作成に使用される単純なモデルです。 コンテンツには、正しい初期ノード構造を作成する役割を持つ初期コンテンツを必要に応じて最小限に、または必要に応じて最大限含めることができます。必要なプロパティ（主に sling:resourceType）は、編集とレンダリングを許可するように設定されます。
 
-### 新しいテンプレートの作成（既存のテンプレートを使用） {#creating-a-new-template-based-on-an-existing-template}
+### テンプレートの作成（既存のテンプレートに基づく） {#creating-a-new-template-based-on-an-existing-template}
 
-言うまでもなく、新しいテンプレートは完全にゼロから作成することもできますが、多くの場合は、既存のテンプレートをコピーして更新したほうが、時間と労力を節約できます。例えば、Geometrixx 内のテンプレートを使用して作業を開始できます。
+新しいテンプレートはゼロから完全に作成できますが、多くの場合、既存のテンプレートがコピーされ、時間と労力を節約するために更新されます。 例えば、テンプレートをGeometrixx内で使用して作業を開始できます。
 
-既存のテンプレートに基づいた新しいテンプレートの作成手順
+既存のテンプレートに基づいてテンプレートを作成するには：
 
-1. 既存のテンプレート（作成したいテンプレートに定義が最も近いものが望ましい）を、新しいノードにコピーします。
+1. 既存のテンプレート（できれば目的の定義にできるだけ近い定義を持つ）を新しいノードにコピーします。
 
-   テンプレートは、通常、**/apps/&lt;website-name>/templates/&lt;template-name>** に格納されています。
+   テンプレートは、 **/apps/&lt;website-name>/templates/&lt;template-name>**.
 
    >[!NOTE]
    >
-   >使用可能なテンプレートのリストは、新しいページの場所と、各テンプレートで指定されている配置制限によって異なります。[使用可能なテンプレート](#templateavailibility)を参照してください。
+   >使用可能なテンプレートのリストは、新しいページの場所と、各テンプレートで指定されている配置制限によって異なります。 詳しくは、 [Template Availability](#templateavailibility).
 
-1. 新しいテンプレートノードの **jcr:title** を、新しい役割を反映するように変更します。適宜、**jcr:description** も更新できます。ページで使用可能なテンプレートは、適宜変更してください。
+1. を **jcr:title** 新しい役割を反映する新しいテンプレートノードを作成します。 また、 **jcr:description** 必要に応じて。 ページの使用可能なテンプレートを必要に応じて変更してください。
 
    >[!NOTE]
    >
@@ -289,32 +285,37 @@ AEM ページのテンプレートは、新しいページを作成する際に�
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. テンプレートの基礎となっているコンポーネント（テンプレート内の **jcr:content** ノードの **sling:resourceType** プロパティを参照）をコピーして、新しいインスタンスを作成します。
+1. テンプレートの基になるコンポーネントをコピーします ( これは **sling:resourceType** プロパティ **jcr:content** ノードを使用して ) インスタンスを作成します。
 
-   コンポーネントは、通常、**/apps/&lt;website-name>/components/&lt;component-name>** に格納されています。
+   コンポーネントは、に格納されます。 **/apps/&lt;website-name>/components/&lt;component-name>**.
 
-1. 新しいコンポーネントの **jcr:title** と **jcr:description** を更新します。
-1. テンプレート選択リストに新しいサムネール画像を表示する場合は、thumbnail.png を置き換えます（サイズは 128 x 98 px）。
-1. テンプレートの **jcr:content** ノードの **sling:resourceType** を、新しいコンポーネントを参照するように更新します。
-1. テンプレートとその基になるコンポーネントのいずれかまたは両方に関して、機能やデザインをさらに変更します。
+1. を更新します。 **jcr:title** および **jcr:description** 新しいコンポーネントの
+1. 新しいサムネール画像をテンプレート選択リストに表示する場合は、thumbnail.png を置き換えます（サイズ 128 x 98 px）。
+1. を更新します。 **sling:resourceType** テンプレートの **jcr:content** 新しいコンポーネントを参照するノード。
+1. テンプレートの機能やデザイン、基になるコンポーネント、またはその両方に追加の変更を加えます。
 
    >[!NOTE]
    >
-   >**/apps/&lt;website>/templates/&lt;template-name>** ノードに対する変更は、テンプレートインスタンスに影響します（選択リストの場合と同様）。
-   **/apps/&lt;website>/components/&lt;component-name>** ノードに対する変更は、テンプレート使用時に作成されるコンテンツページに影響します。
+   >変更： **/apps/&lt;website>/templates/&lt;template-name>** ノードは、（選択リストのように）テンプレートインスタンスに影響を与えます。
+   >
+   >
+   変更： **/apps/&lt;website>/components/&lt;component-name>** ノードは、テンプレートを使用する際に作成されるコンテンツページに影響を与えます。
 
-   これで、新しいテンプレートを使用して Web サイト内にページを作成できます。
+   これで、新しいテンプレートを使用して、Web サイト内にページを作成できます。
 
 >[!NOTE]
-エディタークライアントライブラリは、コンテンツページに `cq.shared` 名前空間が存在することを前提としています。名前空間が存在しない場合は、JavaScript エラー「`Uncaught TypeError: Cannot read property 'shared' of undefined`」が発生します。
+>
+エディタークライアントライブラリは、 `cq.shared` コンテンツページの名前空間。存在しない場合は JavaScript エラー。 `Uncaught TypeError: Cannot read property 'shared' of undefined` 結果。
+>
 すべてのサンプルコンテンツページには `cq.shared` が含まれているので、それらをベースとするコンテンツには自動的に `cq.shared` が含められます。ただし、サンプルコンテンツをベースとせず、ゼロから独自のコンテンツページを作成する場合は、`cq.shared` 名前空間を含める必要があります。
+>
 詳しくは、[クライアントサイドライブラリの使用](/help/sites-developing/clientlibs.md)を参照してください。
 
 ## 既存のテンプレートを使用可能にする {#making-an-existing-template-available}
 
-この例では、特定のコンテンツパスにテンプレートを使用できるようにする方法を示しています。ページ作成者が新しいページの作成時に使用できるテンプレートは、[使用可能なテンプレート](/help/sites-developing/templates.md#template-availability)で定義されたロジックによって決まります。
+この例では、特定のコンテンツパスに対してテンプレートを使用する方法を示します。 ページ作成者がページの作成時に使用できるテンプレートは、 [Template Availability](/help/sites-developing/templates.md#template-availability).
 
 1. CRXDE Lite で、ページに使用するテンプレート（ニュースレターテンプレートなど）に移動します。
-1. `allowedPaths` プロパティおよび[テンプレートの可用性](/help/sites-developing/templates.md#template-availability)に使用する他のプロパティを変更します。例えば `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` は、このテンプレートが `/content/geometrixx-outdoors` 以下の任意のパスで許可されることを意味します。
+1. を `allowedPaths` プロパティおよび使用する他のプロパティ [テンプレートの可用性](/help/sites-developing/templates.md#template-availability). 例えば `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` は、このテンプレートが `/content/geometrixx-outdoors` 以下の任意のパスで許可されることを意味します。
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
