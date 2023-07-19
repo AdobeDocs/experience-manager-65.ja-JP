@@ -8,17 +8,15 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
+source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1968'
 ht-degree: 9%
 
 ---
 
 
 # アダプティブフォームテーマの作成またはカスタマイズ {#introduction-to-theme}
-
-<span class="preview"> Adobeでは、コアコンポーネントを次のように使用することをお勧めします。 [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) または [スタンドアロンのアダプティブFormsを作成](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -290,6 +288,7 @@ The selected theme is applied to the Adaptive Form.
 1. **作成**／**アダプティブフォーム**&#x200B;の順にクリックします。
 1. アダプティブFormsコアコンポーネントテンプレートを選択し、 **次へ**. この **プロパティを追加** 表示
 1. 次を指定： **名前** アダプティブフォームの
+
 
    >[!NOTE]
    >
