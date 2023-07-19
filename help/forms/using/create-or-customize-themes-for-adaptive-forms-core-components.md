@@ -8,7 +8,7 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 9%
@@ -179,10 +179,9 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 -->
 
->
+>[!NOTE]
 >
 > テーマレベルとコンポーネントレベルの両方でスタイルを定義する場合、コンポーネントレベルで定義されたスタイルが優先されます。
-
 
 #### 3.テーマをデプロイする準備をする {#generate-the-clientlib}
 
@@ -275,9 +274,10 @@ The selected theme is applied to the Adaptive Form.
 
 ![テーマクライアントライブラリ](/help/forms/using/assets/themeclientlibrary.png)
 
+>[!NOTE]
 >
 >
->パブリッシュインスタンスのログインダイアログにアクセスして、パッケージマネージャーを通じてパッケージをインストールできない場合は、次の URL からログインしてみてください。 `http://[Publish Server URL]:[PORT]/system/console`. これにより、パブリッシュインスタンスにログインする権限が与えられ、インストールプロセスに進むことができます。
+> パブリッシュインスタンスのログインダイアログにアクセスして、パッケージマネージャーを通じてパッケージをインストールできない場合は、次の URL からログインしてみてください。 `http://[Publish Server URL]:[PORT]/system/console`. これにより、パブリッシュインスタンスにログインする権限が与えられ、インストールプロセスに進むことができます。
 
 ## テーマをアダプティブフォームに適用する {#using-theme-in-adaptive-form}
 
