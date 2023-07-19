@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 04ac8203-320b-4671-aaad-6e1397b12b6f
 docset: aem65
 exl-id: 383f84fd-455c-49a4-9e2b-1c4757cc188b
-source-git-commit: afd2afe182d65e64c0ad851b86021886078a9dd5
-workflow-type: ht
-source-wordcount: '2079'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '2080'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
+>SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
 
 ## はじめに {#introduction}
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->以下の要件は、フレームワークには依存しません。要件が満たされると、（モジュール、コンポーネントおよびサービスで構成された）フレームワーク固有のレイヤーが提供されます。
+>次の要件は、フレームワークに依存しません。 これらの要件を満たす場合、モジュール、コンポーネント、サービスで構成されるフレームワーク固有のレイヤーを提供できます。
 >
 >**AEM の React フレームワークと Angular フレームワークでは、これらの要件は既に満たされています。**&#x200B;このブループリントの要件は、AEM で別のフレームワークを実装して使用する場合にのみ適用されます。
 
@@ -61,7 +61,7 @@ NPM パッケージ [@adobe/aem-spa-model-manager](https://www.npmjs.com/package
 
 #### コンポーネントマッピングの動的モデル {#dynamic-model-to-component-mapping}
 
-コンポーネントマッピングの動的モデルが AEM 用の Javascript SPA SDK でどのようにおこなわれるかについて詳しくは、SPA の「[コンポーネントマッピングの動的モデル」の記事を参照してください](/help/sites-developing/spa-dynamic-model-to-component-mapping.md)。
+コンポーネントマッピングの動的モデルがAEM用の JavaScript SPA SDK でどのようにおこなわれるかについて詳しくは、この記事を参照してください [SPAの動的モデルとコンポーネントのマッピング](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
 ### フレームワーク固有のレイヤー {#framework-specific-layer}
 
@@ -73,9 +73,9 @@ NPM パッケージ [@adobe/aem-spa-model-manager](https://www.npmjs.com/package
 
 ### ページモデル {#page-model}
 
-ページのコンテンツ構造は AEM に保存されます。ページのモデルは、SPA コンポーネントのマッピングとインスタンス化に使用されます。SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これをおこなうには、リソースタイプ（または AEM コンポーネントへのパス）を一意のキーとして使用します。
+ページのコンテンツ構造は、AEMに保存されています。 ページのモデルは、SPAコンポーネントのマッピングとインスタンス化に使用されます。 SPA の開発者は、SPA コンポーネントを作成して、AEM コンポーネントにマッピングします。これをおこなうには、リソースタイプ（または AEM コンポーネントへのパス）を一意のキーとして使用します。
 
-SPA コンポーネントは、ページモデルと同期する必要があり、コンテンツに変更があった場合はそれに応じて更新する必要があります。指定のページモデル構造に従って、コンポーネントをその場でインスタンス化するには、動的コンポーネントを利用したパターンを使用する必要があります。
+SPA コンポーネントは、ページモデルと同期する必要があり、コンテンツに変更があった場合はそれに応じて更新する必要があります。指定されたページモデル構造に従って、動的コンポーネントを活用するパターンを使用して、コンポーネントをその場でインスタンス化する必要があります。
 
 ### メタフィールド  {#meta-fields}
 
@@ -118,7 +118,7 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 プロジェクトコンポーネントは、モデルのフラグメントへのアクセスをモデルプロバイダーに委任する必要があります。次に、モデルプロバイダーは、モデルの指定したフラグメントに対する変更をリッスンし、更新されたモデルを委任コンポーネントに返します。
 
-これをおこなうには、モデルプロバイダーを ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` に登録する必要があります。次に、変更が発生すると、その変更を受け取り、更新されたデータが委任コンポーネントに渡されます。慣例により、モデルのフラグメントを伝達する委任コンポーネントで使用可能になるプロパティは、`cqModel` という名前が付けられます。このプロパティはコンポーネントに自由に提供できますが、フレームワークアーキテクチャとの統合、検出可能性、使いやすさなどの側面を考慮する必要があります。
+これをおこなうには、モデルプロバイダーを ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` に登録する必要があります。次に、変更が発生すると、その変更を受け取り、更新されたデータを委任コンポーネントに渡します。 慣例により、モデルのフラグメントを伝達する委任コンポーネントで使用可能になるプロパティは、`cqModel` という名前が付けられます。このプロパティはコンポーネントに自由に提供できますが、フレームワークアーキテクチャとの統合、検出可能性、使いやすさなどの側面を考慮する必要があります。
 
 ### コンポーネントの HTML デコレーター {#the-component-html-decorator}
 
@@ -185,7 +185,6 @@ SPA コンポーネントは、レスポンシブグリッドなどのグラフ�
 >* `"aem-Grid-newComponent"`：レイアウトのオーサリング用にコンポーネントを正規化します
 >
 
-
 #### コンポーネントのマッピング {#component-mapping}
 
 基になる [`Component Mapping`](/help/sites-developing/spa-blueprint.md#componentmapping) ライブラリとその `MapTo` 関数は、現在のコンポーネントクラスと共に提供される編集設定に関連した機能を提供するために、カプセル化して拡張できます。
@@ -237,7 +236,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 プロジェクトコンポーネントでは、エディターによる操作を可能にするために、少なくとも次のデータ属性を生成する必要があります。
 
-* `data-cq-data-path`：`PageModel` によって指定されたコンポーネントの相対パス（`"root/responsivegrid/image"` など）。この属性はページには追加しないでください。
+* `data-cq-data-path`:コンポーネントの相対パス ( `PageModel` ( 例： `"root/responsivegrid/image"`) をクリックします。 この属性はページには追加しないでください。
 
 要約すると、エディターによって編集可能と認識されるためには、プロジェクトコンポーネントは次の契約に準拠する必要があります。
 
@@ -272,7 +271,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 アプリはルーティングを所有しています。フロントエンド開発者は、まず、ナビゲーションコンポーネント（AEM ナビゲーションコンポーネントにマッピング）を実装する必要があります。このコンポーネントは、コンテンツのフラグメントを表示または非表示にする一連のルートと組み合わせて使用する URL リンクをレンダリングします。
 
-基になる [ `PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその ` [ModelRouter](/help/sites-developing/spa-routing.md)` モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチおよびアクセスを提供する役割を持ちます。
+基になる [`PageModelManager`](/help/sites-developing/spa-blueprint.md#pagemodelmanager) ライブラリとその ` [ModelRouter](/help/sites-developing/spa-routing.md)` モジュール（デフォルトで有効）は、特定のリソースパスに関連付けられたモデルに対して、プリフェッチおよびアクセスを提供する役割を持ちます。
 
 2 つのエンティティはルーティングの概念に関連していますが、` [ModelRouter](/help/sites-developing/spa-routing.md)` は、現在のアプリケーションのステートと同期して構成されたデータモデルを使用して、` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` を読み込む役割のみ担当します。
 

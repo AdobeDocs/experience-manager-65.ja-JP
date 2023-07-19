@@ -1,7 +1,7 @@
 ---
 title: Eclipse を使用して AEM プロジェクトを開発する方法
 seo-title: How to Develop AEM Projects Using Eclipse
-description: このガイドでは、Eclipse を使用して AEM ベースのプロジェクトを開発する方法について説明します
+description: このガイドでは、AEMベースのプロジェクトを開発するために Eclipse を使用する方法について説明します
 seo-description: This guide describes how to use Eclipse for developing AEM based projects
 uuid: 79fee76f-6bcc-498f-af46-530816b41bbe
 contentOwner: msm-service
@@ -10,16 +10,16 @@ topic-tags: development-tools
 content-type: reference
 discoiquuid: aa58cfb8-ec15-4698-a8f0-97683b0de51c
 exl-id: 9d421599-0417-4329-a528-9cda4e3716f5
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 100%
+source-wordcount: '436'
+ht-degree: 58%
 
 ---
 
 # Eclipse を使用して AEM プロジェクトを開発する方法{#how-to-develop-aem-projects-using-eclipse}
 
-このガイドでは、Eclipse を使用して AEM ベースのプロジェクトを開発する方法について説明します。
+このガイドでは、AEMベースのプロジェクトを開発するために Eclipse を使用する方法について説明します。
 
 >[!NOTE]
 >
@@ -27,24 +27,24 @@ ht-degree: 100%
 
 ## 概要 {#overview}
 
-Eclipse で AEM の開発を開始するには、次の手順を実行する必要があります。
+Eclipse でのAEM開発を開始するには、次の手順が必要です。
 
-各手順の詳細については、このページで後述します。
+それぞれについては、このハウツーの残りの部分で詳しく説明します。
 
-* Eclipse 4.3（Kepler）のインストール
+* Eclipse 4.3(Kepler) のインストール
 * Maven に基づく AEM プロジェクトの設定
 * Maven POM での Eclipse 用の JSP サポートの準備
-* Eclipse への Maven プロジェクトの読み込み
+* Maven プロジェクトを Eclipse に読み込む
 
 >[!NOTE]
 >
->このガイドは Eclipse 4.3（Kepler）と AEM 5.6.1 を基に作成されています。
+>このガイドは、Eclipse 4.3(Kepler) とAEM 5.6.1 をベースとしています。
 
 ## Eclipse のインストール {#install-eclipse}
 
 [Eclipse のダウンロードページ](https://www.eclipse.org/downloads/) から「Eclipse IDE for Java EE Developers」をダウンロードします。
 
-[インストール手順](https://wiki.eclipse.org/Eclipse/Installation)に従って Eclipse をインストールします。
+次の手順に従って Eclipse をインストールします。 [インストール手順](https://wiki.eclipse.org/Eclipse/Installation).
 
 ## Maven に基づく AEM プロジェクトの設定 {#set-up-your-aem-project-based-on-maven}
 
@@ -52,17 +52,17 @@ Eclipse で AEM の開発を開始するには、次の手順を実行する必�
 
 ## Eclipse 用の JSP サポートの準備 {#prepare-jsp-support-for-eclipse}
 
-Eclipse では JSP との連携もサポートされます。サポートされる項目の例を次に示します。
+Eclipse は、例えば、JSP での作業でのサポートも提供します。
 
 * タグライブラリのオートコンプリート
-* &lt;cq:defineObjects /> と &lt;sling:defineObjects /> で定義されたオブジェクトの Eclipse での認識
+* Eclipse によって定義されたオブジェクトの認識 &lt;cq:defineobjects /> および &lt;sling:defineobjects />
 
-サポートを有効にするには、次の手順を実行します。
+これが機能するための条件：
 
 1. [Apache Maven を使用して AEM プロジェクトを作成する方法](/help/sites-developing/ht-projects-maven.md)の [JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)に記載されている説明に従います。
-1. コンテンツモジュールの POM 内の &lt;build /> セクションに次の項目を追加します。
+1. 以下を &lt;build /> 」セクションを使用して、コンテンツモジュールの POM にアクセスできます。
 
-   Eclipse の Maven サポートプラグインである m2e は maven-jspc-plugin のサポートを提供しません。この設定は、プラグインおよび一時的なコンパイルの結果のクリーンアップの関連タスクを無視するように m2e に通知します。
+   Eclipse の Maven サポートプラグインである m2e は maven-jspc-plugin をサポートしていません。この設定は、m2e に対し、プラグインと、一時的なコンパイル結果をクリーンアップする関連タスクを無視するように指示します。
 
    このことは問題ではありません。[JSP を使用する方法](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)で説明されているように、この設定における maven-jspc-plugin は、作成プロセスの一環として JSP コンパイルの検証にのみ使用されます。Eclipse は JSP における問題を既にレポート済みであり、レポート用にこの Maven プラグインを使用することはありません。
 
@@ -116,10 +116,10 @@ Eclipse では JSP との連携もサポートされます。サポートされ�
    </build>
    ```
 
-### Eclipse への Maven プロジェクトの読み込み {#import-the-maven-project-into-eclipse}
+### Maven プロジェクトを Eclipse に読み込む {#import-the-maven-project-into-eclipse}
 
-1. Eclipse で、File／Import を選択します。
-1. Import ダイアログで、Maven／Existing Maven Projects を選択し、「Next」をクリックします。
+1. Eclipse で、ファイル/読み込みを選択します。
+1. 読み込みダイアログで、 Maven /既存の Maven プロジェクトを選択し、「次へ」をクリックします。
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 

@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 55%
+source-wordcount: '2393'
+ht-degree: 56%
 
 ---
 
@@ -109,9 +109,9 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
 詳しくは、[タグライブラリ](/help/sites-developing/taglib.md)ドキュメントを参照してください。
 
-## クライアント側HTMLライブラリの使用 {#using-client-side-html-libraries}
+## クライアント側 HTML ライブラリの使用 {#using-client-side-html-libraries}
 
-最新の Web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。 このコードの提供を編成および最適化することが厄介な問題となることがあります。
+最近の web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
 この問題への対処に役立つように、AEM では、**クライアント側ライブラリフォルダー**&#x200B;が提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義することができます。その後、クライアントサイドライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
@@ -192,7 +192,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
    * `cq:dialog` - タッチ操作対応 UI 用ダイアログ
    * `dialog` - クラシック UI 用ダイアログ
-   * `cq:editConfig` - 編集環境でのコンポーネントの動作（ドラッグ＆ドロップなど）
+   * `cq:editConfig`  — 編集環境でのコンポーネントの動作（ドラッグ&amp;ドロップなど）
    * `design_dialog` - デザインモード用ダイアログ（クラシック UI のみ）
 
 1. 次のどちらかの方法で、段落システムで新しいコンポーネントを利用できるようにします。

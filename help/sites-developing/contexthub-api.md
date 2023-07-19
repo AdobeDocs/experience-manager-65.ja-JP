@@ -1,8 +1,8 @@
 ---
 title: ContextHub JavaScript API リファレンス
-seo-title: ContextHub Javascript API Reference
+seo-title: ContextHub JavaScript API Reference
 description: ContextHub コンポーネントをページに追加すると、ContextHub JavaScript API がスクリプトで使用できるようになります
-seo-description: The ContextHub Javascript API is available to your scripts when the ContextHub component has been added to the page
+seo-description: The ContextHub JavaScript API is available to your scripts when the ContextHub component has been added to the page
 uuid: 296d6c8e-517f-4837-9e86-ae571ea8aa17
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,24 +11,24 @@ content-type: reference
 discoiquuid: 90605f41-1861-4891-a7c8-b8b5918cd5c6
 feature: Context Hub
 exl-id: b472d96f-b1a5-40b7-be2a-52f3396f6884
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '5006'
-ht-degree: 100%
+source-wordcount: '5007'
+ht-degree: 53%
 
 ---
 
 # ContextHub JavaScript API リファレンス{#contexthub-javascript-api-reference}
 
-[ContextHub コンポーネントをページに追加](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component)すると、ContextHub JavaScript API がスクリプトで使用できるようになります。
+ContextHub JavaScript API は、 [ContextHub コンポーネントがページに追加されました](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component).
 
 ## ContextHub 定数 {#contexthub-constants}
 
-ContextHub JavaScript API によって定義される定数値です。
+ContextHub JavaScript API で定義される定数値です。
 
 ### イベント定数 {#event-constants}
 
-ContextHub ストアに対して発生する名前付きイベントを次の表に示します。[ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) も参照してください。
+次の表に、ContextHub ストアに対して発生する名前イベントを示します。 関連トピック [ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing).
 
 | 定数 | 説明 | 値 |
 |---|---|---|
@@ -67,15 +67,15 @@ ContextHub ストアに対して発生する名前付きイベントを次の表
 | ContextHub.Constants.EVENT_UI_CONTAINER_OPENED | ContextHub UI が開かれると実行されます | ui-container-opened |
 | ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED | ContextHub UI が折りたたまれると実行されます | ui-container-closed |
 | ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED | プロパティが変更されると実行されます | ui-property-modified |
-| ContextHub.Constants.EVENT_UI_RENDERED | ContextHub UI がレンダリングされるたび（例：プロパティの変更後）に実行されます | ui-rendered |
+| ContextHub.Constants.EVENT_UI_RENDERED | ContextHub UI がレンダリングされるたびに発生します（プロパティの変更後など）。 | ui-rendered |
 | ContextHub.Constants.EVENT_UI_INITIALIZED | UI コンテナが初期化されると実行されます | ui-initialized |
 | ContextHub.Constants.ACTIVE_UI_MODE | アクティブな UI モードを示します。 | /_/active-ui-mode |
 
 ## ContextHub JavaScript API リファレンス {#contexthub-javascript-api-reference-2}
 
-ContextHub オブジェクトを使用して、すべてのストアにアクセスできます。
+ContextHub オブジェクトを使用すると、すべてのストアにアクセスできます。
 
-### 関数（ContextHub） {#functions-contexthub}
+### 関数 (ContextHub) {#functions-contexthub}
 
 #### getAllStores() {#getallstores}
 
@@ -89,7 +89,7 @@ ContextHub オブジェクトを使用して、すべてのストアにアクセ
 
 **例**
 
-次の例では、すべてのストアを取得してから、geolocation ストアを取得しています。
+次の例では、すべてのストアを取得し、位置情報ストアを取得します。
 
 ```
 var allStores = ContextHub.getAllStores();
@@ -102,7 +102,7 @@ var geoloc = allStores.geolocation
 
 **パラメーター**
 
-* **name：**&#x200B;ストアが登録された名前。
+* **名前：** ストアが登録された名前。
 
 **戻り値**
 
@@ -110,7 +110,7 @@ var geoloc = allStores.geolocation
 
 **例**
 
-次の例では、geolocation ストアを取得します。
+次の例では、位置情報ストアを取得します。
 
 ```
 var geoloc = ContextHub.getStore("geolocation");
@@ -124,7 +124,7 @@ ContextHub セグメントを表します。ContextHub.SegmentEngine.SegmentMana
 
 #### getName() {#getname}
 
-セグメント名を String 値として返します。
+セグメントの名前を String 値として返します。
 
 #### getPath() {#getpath}
 
@@ -134,11 +134,11 @@ ContextHub セグメントを表します。ContextHub.SegmentEngine.SegmentMana
 
 ContextHub セグメントへのアクセスを提供します。
 
-### 関数（ContextHub.SegmentEngine.SegmentManager） {#functions-contexthub-segmentengine-segmentmanager}
+### 関数 (ContextHub.SegmentEngine.SegmentManager) {#functions-contexthub-segmentengine-segmentmanager}
 
 #### getResolvedSegments() {#getresolvedsegments}
 
-現在のコンテキストで解決されたセグメントを返します。この関数にパラメーターはありません。
+現在のコンテキストで解決されたセグメントを返します。 この関数にパラメーターはありません。
 
 **戻り値**
 
@@ -152,7 +152,7 @@ ContextHub ストアのベースクラス。
 
 #### eventing {#eventing}
 
-[ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) オブジェクト。このオブジェクトを使用して、関数をストアイベントにバインドします。デフォルト値と初期化については、[init(name,config)](/help/sites-developing/contexthub-api.md#init-name-config) を参照してください。
+A [ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) オブジェクト。 このオブジェクトを使用して、関数をストアイベントにバインドします。デフォルト値と初期化については、[init(name,config)](/help/sites-developing/contexthub-api.md#init-name-config) を参照してください。
 
 #### name {#name}
 
@@ -171,11 +171,11 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 * **オブジェクト：**&#x200B;キーはプロパティ名です。
 * **配列：**&#x200B;キーは配列のインデックスです。
 
-値にオブジェクトを使用できます。
+値はオブジェクトにすることができます。
 
 **パラメーター**
 
-* **tree：**（Object または Array）ストアに追加するデータ。
+* **ツリー：** （オブジェクトまたは配列）ストアに追加するデータ。
 * **options：**（Object）setItem 関数に渡すオプションからなる任意のオブジェクト。詳しくは、`options`setItem(key,value,)[ の ](/help/sites-developing/contexthub-api.md#setitem-key-value-options)options パラメーターを参照してください。
 
 **戻り値**
@@ -187,7 +187,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 #### addReference(key, anotherKey) {#addreference-key-anotherkey}
 
-1 つのキーから別のキーへの参照を作成します。キーは自分自身を参照できません。
+あるキーから別のキーへの参照を作成します。 キーは、それ自体を参照できません。
 
 **パラメーター**
 
@@ -204,11 +204,11 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 #### announceReadiness() {#announcereadiness}
 
-このストアに対する `ready` イベントを発生させます。この関数にパラメーターはなく、値を返しません。
+このストアに対する `ready` イベントを発生させます。この関数にはパラメーターがなく、値を返しません。
 
 #### clean() {#clean}
 
-すべてのデータをストアから削除します。この関数にパラメーターおよび戻り値はありません。
+ストアからすべてのデータを削除します。 関数にはパラメーターも戻り値もありません。
 
 #### getItem(key) {#getitem-key}
 
@@ -216,15 +216,15 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **パラメーター**
 
-* **key：**（String）値を返すキー。
+* **キー：** (String) 値を返すキー。
 
 **戻り値**
 
-キーの値を表すオブジェクト。
+キーの値を表す Object です。
 
 #### getKeys(includeInternals) {#getkeys-includeinternals}
 
-ストアからキーを取得します。オプションで、ContextHub フレームワークが内部的に使用するキーを取得できます。
+ストアからキーを取得します。 オプションで、ContextHub フレームワークで内部的に使用されるキーを取得できます。
 
 **パラメーター**
 
@@ -248,7 +248,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 #### getTree(includeInternals) {#gettree-includeinternals}
 
-データツリーをストアから取得します。オプションで、ContextHub フレームワークが内部的に使用しているキーと値のペアを含めることができます。
+ストアからデータツリーを取得します。 オプションで、ContextHub フレームワークによって内部的に使用されるキーと値のペアを含めることができます。
 
 **パラメーター**
 
@@ -256,7 +256,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **戻り値**
 
-データツリーを表すオブジェクト。キーは、オブジェクトのプロパティ名です。
+データツリーを表すオブジェクト。 キーは、オブジェクトのプロパティ名です。
 
 #### init(name, config) {#init-name-config}
 
@@ -266,16 +266,16 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 * ストア参照を空のオブジェクトに設定します。
 * eventChannel は data:*name* です。*name* はストア名です。
 
-* storeDataKey は /store/*name* です。*name* はストア名です。
+* storeDataKey は/store/です。*名前*&#x200B;で、 *名前* はストア名です。
 
 **パラメーター**
 
-* **name：**&#x200B;ストアの名前。
-* **config：**&#x200B;設定プロパティを格納したオブジェクト。
+* **名前：** ストアの名前。
+* **config:** 設定プロパティを格納したオブジェクト。
 
-   * eventDeferring：デフォルト値は 32 です。
-   * eventing：このストアの [ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) オブジェクト。デフォルト値は ContextHub.eventing オブジェクトです。
-   * persistence：このストアの ContextHub.Utils.Persistence オブジェクト。デフォルト値は ContextHub.persistence オブジェクトです。
+   * eventDeferring:デフォルト値は 32 です。
+   * eventing:この [ContextHub.Utils.Eventing](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) オブジェクトを選択します。 デフォルト値は ContextHub.eventing オブジェクトを使用します。
+   * 永続性：このストアの ContextHub.Utils.Persistence オブジェクト。 デフォルト値は ContextHub.persistence オブジェクトです。
 
 #### isEventingPaused() {#iseventingpaused}
 
@@ -290,7 +290,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 #### pauseEventing() {#pauseeventing}
 
-このストアに対するイベンティングを一時停止して、イベントが発生しないようにします。この関数にパラメーターは必要なく、値を返しません。
+ストアのイベンティングを一時停止して、イベントが発生しないようにします。 この関数は、パラメーターを指定せず、値を返しません。
 
 #### removeItem(key, options) {#removeitem-key-options}
 
@@ -302,8 +302,8 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **パラメーター**
 
-* **key：**（String）削除するキーの名前。
-* **options：**（Object）オプションからなるオブジェクト。次のオブジェクトプロパティが有効です。
+* **キー：** (String) 削除するキーの名前。
+* **options:** (Object) オプションからなるオブジェクト。 次のオブジェクトプロパティが有効です。
 
    * silent：値 `true` は、`data` イベントが発生しないようにします。デフォルト値は `false` です。
 
@@ -320,7 +320,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **パラメーター**
 
-* **key：**&#x200B;削除するキー参照。このパラメーターは、`key` 関数の `addReference` パラメーターに対応しています。
+* **キー：** 削除するキー参照。 このパラメーターは、`key` 関数の `addReference` パラメーターに対応しています。
 
 **戻り値**
 
@@ -331,31 +331,31 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 #### reset(keepRemainingData) {#reset-keepremainingdata}
 
-ストアの永続データの初期値を再設定します。オプションで、その他すべてのデータをストアから削除できます。ストアが再設定されている間、このストアに対するイベンティングは一時停止されます。この関数は値を返しません。
+ストアの永続化されたデータの初期値をリセットします。 必要に応じて、その他のすべてのデータをストアから削除できます。 ストアのリセット中に、このストアのイベンティングが一時停止されました。 この関数は値を返しません。
 
 初期値は、ストアオブジェクトのインスタンス化に使用される config オブジェクトの initialValues プロパティで提供されます。
 
 **パラメーター**
 
-* **keepRemainingData：**（Boolean）値が true の場合、初期値以外のデータは保持されます。値が false の場合、初期値以外のすべてのデータが削除されます。
+* **keepRemainingData:** （ブール値）値が true の場合、初期値以外のデータは保持されます。 値が false の場合、初期値を除くすべてのデータが削除されます。
 
-ストアの永続データの初期値を再設定します。オプションで、その他すべてのデータをストアから削除できます。ストアが再設定されている間、このストアに対するイベンティングは一時停止されます。この関数は値を返しません。
+ストアの永続化されたデータの初期値をリセットします。 必要に応じて、その他のすべてのデータをストアから削除できます。 ストアのリセット中に、このストアのイベンティングが一時停止されました。 この関数は値を返しません。
 
 初期値は、ストアオブジェクトのインスタンス化に使用される config オブジェクトの initialValues プロパティで提供されます。
 
 **パラメーター**
 
-* keepRemainingData：（Boolean）値が true の場合、初期値以外のデータは保持されます。値が false の場合、初期値以外のすべてのデータが削除されます。
+* keepRemainingData:（ブール値）値が true の場合、初期値以外のデータは保持されます。 値が false の場合、初期値を除くすべてのデータが削除されます。
 
 #### resolveReference(key, retry) {#resolvereference-key-retry}
 
-被参照キーを取得します。オプションで、最良一致の解決に使用する繰り返し回数を指定できます。
+参照されたキーを取得します。 オプションで、最良一致の解決に使用する反復回数を指定できます。
 
 **パラメーター**
 
-* **key：**（String）参照を解決するためのキー。この `key` パラメーターは、`key` 関数の `addReference` パラメーターに対応しています。
+* **キー：** (String) 参照を解決するキー。 この `key` パラメーターは、`key` 関数の `addReference` パラメーターに対応しています。
 
-* **retry：**（Number）使用する繰り返し回数。
+* **再試行：** (Number) 使用する繰り返し回数。
 
 **戻り値**
 
@@ -363,7 +363,7 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 #### resumeEventing() {#resumeeventing}
 
-このストアに対するイベンティングを再開し、イベントが発生するようにします。この関数はパラメーターを定義せず、値を返しません。
+このストアのイベンティングを再開して、イベントをトリガーします。 この関数は、パラメーターを定義せず、値を返しません。
 
 #### setItem(key, value, options) {#setitem-key-value-options}
 
@@ -375,12 +375,12 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 **パラメーター**
 
-* **key：**（String）キーの名前。
-* **options：**（Object）オプションからなるオブジェクト。次のオブジェクトプロパティが有効です。
+* **キー：** (String) キーの名前。
+* **options:** (Object) オプションからなるオブジェクト。 次のオブジェクトプロパティが有効です。
 
    * silent：値 `true` は、`data` イベントが発生しないようにします。デフォルト値は `false` です。
 
-* **value：**（Object）キーに関連付ける値。
+* **値：** (Object) キーに関連付ける値。
 
 **戻り値**
 
@@ -391,9 +391,9 @@ ContextHub.Utils.Persistence オブジェクト。デフォルト値と初期化
 
 ## ContextHub.Store.JSONPStore {#contexthub-store-jsonpstore}
 
-JSON データを格納するストア。データは外部の JSONP サービスから取得されるか、オプションで JSON データを返すサービスから取得されます。このクラスのインスタンスを作成する際に、[ 関数を使用してサービスの詳細を指定します。`init`](/help/sites-developing/contexthub-api.md#init-name-config)
+JSON データを格納したストア。 データは、外部の JSONP サービスから、またはオプションで JSON データを返すサービスから取得されます。 このクラスのインスタンスを作成する際に、[`init`](/help/sites-developing/contexthub-api.md#init-name-config) 関数を使用してサービスの詳細を指定します。
 
-ストアは、インメモリパーシスタンス（JavaScript 変数）を使用します。ストアデータは、ページが持続している間のみ使用可能です。
+ストアは、インメモリ永続性（JavaScript 変数）を使用します。 ストアデータは、ページの有効期間中にのみ使用できます。
 
 ContextHub.Store.JSONPStore は [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) を拡張したものなので、このクラスの関数を継承しています。
 
@@ -401,52 +401,52 @@ ContextHub.Store.JSONPStore は [ContextHub.Store.Core](/help/sites-developing/c
 
 #### configureService(serviceConfig, override) {#configureservice-serviceconfig-override}
 
-このオブジェクトが使用する JSONP サービスへの接続の詳細を設定します。既存の設定を更新または置換できます。この関数は値を返しません。
+このオブジェクトが使用する JSONP サービスへの接続の詳細を設定します。 既存の設定は、更新または置き換えることができます。 この関数は値を返しません。
 
 **パラメーター**
 
-* **serviceConfig：**&#x200B;次のプロパティを格納したオブジェクト。
+* **serviceConfig:** 次のプロパティを格納したオブジェクト。
 
-   * host：（String）サーバーの名前または IP アドレス。
-   * jsonp：（Boolean）値 true はサービスが JSONP サービスであることを示します。それ以外は false です。true の場合、{callback: &quot;ContextHub.Callbacks.*Object.name*} オブジェクトが service.params オブジェクトに追加されます。
+   * ホスト：(String) サーバーの名前または IP アドレス。
+   * jsonp:(Boolean) 値 true はサービスが JSONP サービスであることを示し、それ以外は false です。 true の場合、{callback:&quot;ContextHub.Callbacks.*Object.name*} 個のオブジェクトが service.params オブジェクトに追加されます。
    * params：（オブジェクト）オブジェクトのプロパティとして表される URL パラメーター。パラメーター名はプロパティ名で、パラメーター値はプロパティ値です。
-   * path：（String）サービスへのパス。
-   * port：（Number）サービスのポート番号。
-   * secure：（String または Boolean）サービス URL に使用するプロトコルを決定します。
+   * パス：(String) サービスへのパス。
+   * ポート：(Number) サービスのポート番号。
+   * セキュア：（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
       * auto: //
-      * true：https://
+      * true:https://
       * false: https://
 
 * **override：**（Boolean）値が `true` の場合、既存のサービス設定を `serviceConfig` のプロパティで置き換えます。値が `false` の場合、既存のサービス設定プロパティを `serviceConfig` のプロパティと結合します。
 
 #### getRawResponse() {#getrawresponse}
 
-JSONP サービスへの最後の呼び出し以降キャッシュされている未加工の応答を返します。この関数にパラメーターは必要ありません。
+JSONP サービスの最後の呼び出し以降にキャッシュされた生の応答を返します。 この関数にはパラメーターは必要ありません。
 
 **戻り値**
 
-未加工の応答を表すオブジェクト。
+生の応答を表すオブジェクトです。
 
 #### getServiceDetails() {#getservicedetails}
 
-この ContextHub.Store.JSONPStore オブジェクトのサービスオブジェクトを取得します。サービスオブジェクトには、サービス URL を作成するのに必要なすべての情報が格納されています。
+この ContextHub.Store.JSONPStore オブジェクトのサービスオブジェクトを取得します。 service オブジェクトには、サービス URL の作成に必要なすべての情報が含まれています。
 
 **戻り値**
 
 次のプロパティを持つオブジェクト。
 
-* **host：**（String）サーバーの名前または IP アドレス。
-* **jsonp：**（Boolean）値 true はサービスが JSONP サービスであることを示します。それ以外は false です。true の場合、{callback: &quot;ContextHub.Callbacks.*Object.name*} オブジェクトが service.params オブジェクトに追加されます。
+* **ホスト：** (String) サーバーの名前または IP アドレス。
+* **jsonp:** (Boolean) 値 true はサービスが JSONP サービスであることを示し、それ以外は false です。 true の場合、{callback:&quot;ContextHub.Callbacks.*Object.name*} 個のオブジェクトが service.params オブジェクトに追加されます。
 
 * **params：**（オブジェクト）オブジェクトのプロパティとして表される URL パラメーター。パラメーター名はプロパティ名で、パラメーター値はプロパティ値です。
-* **path：**（String）サービスへのパス。
-* **port：**（Number）サービスのポート番号。
-* **secure：**（String または Boolean）サービス URL に使用するプロトコルを決定します。
+* **パス：** (String) サービスへのパス。
+* **ポート：** (Number) サービスのポート番号。
+* **セキュア：** （String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-   * 自動：//
-   * true：https://
-   * false:https://
+   * auto: //
+   * true:https://
+   * false: https://
 
 #### getServiceURL(resolve) {#getserviceurl-resolve}
 
@@ -454,7 +454,7 @@ JSONP サービスの URL を取得します。
 
 **パラメーター**
 
-* **resolve：**（Boolean）解決されたパラメーターを URL に含めるかどうかを判断します。値 `true` はパラメーターを解決し、`false` は解決しません。
+* **解決：** (Boolean) 解決されたパラメーターを URL に含めるかどうかを決定します。 値 `true` はパラメーターを解決し、`false` は解決しません。
 
 **戻り値**
 
@@ -466,77 +466,77 @@ ContextHub.Store.JSONPStore オブジェクトを初期化します。
 
 **パラメーター**
 
-* **name：**（String）ストアの名前。
-* **config：**（Object）サービスプロパティを格納するオブジェクト。JSONPStore オブジェクトは、`service` オブジェクトのプロパティを使用して、JSONP サービスの URL を組み立てます。
+* **名前：** (String) ストアの名前。
+* **config:** (Object) サービスプロパティを格納するオブジェクト。 JSONPStore オブジェクトは、`service` オブジェクトのプロパティを使用して、JSONP サービスの URL を組み立てます。
 
-   * eventDeferring：32
-   * eventing：このストアの ContextHub.Utils.Eventing オブジェクト。デフォルト値は `ContextHub.eventing` オブジェクトです。
-   * persistence：このストアの ContextHub.Utils.Persistence オブジェクト。デフォルトでは、メモリパーシスタンスが使用されます（JavaScript オブジェクト）。
+   * eventDeferring:32.
+   * eventing:このストアの ContextHub.Utils.Eventing オブジェクト。 デフォルト値は `ContextHub.eventing` オブジェクトです。
+   * 永続性：このストアの ContextHub.Utils.Persistence オブジェクト。 デフォルトでは、メモリパーシスタンスが使用されます（JavaScript オブジェクト）。
    * service：（オブジェクト）
 
-      * host：（String）サーバーの名前または IP アドレス。
-      * jsonp：（Boolean）値 true はサービスが JSONP サービスであることを示します。それ以外は false です。true の場合、`{callback: "ContextHub.Callbacks.*Object.name*}` オブジェクトは `service.params` に追加されます。
+      * ホスト：(String) サーバーの名前または IP アドレス。
+      * jsonp:(Boolean) 値 true はサービスが JSONP サービスであることを示し、それ以外は false です。 true の場合、`{callback: "ContextHub.Callbacks.*Object.name*}` オブジェクトは `service.params` に追加されます。
       * params：（オブジェクト）オブジェクトのプロパティとして表される URL パラメーター。パラメーターの名前と値は、それぞれオブジェクトのプロパティの名前と値です。
-      * path：（String）サービスへのパス。
-      * port：（Number）サービスのポート番号。
-      * secure：（String または Boolean）サービス URL に使用するプロトコルを決定します。
+      * パス：(String) サービスへのパス。
+      * ポート：(Number) サービスのポート番号。
+      * セキュア：（String または Boolean）サービス URL に使用するプロトコルを決定します。
 
-         * 自動：//
-         * true：https://
-         * false:https://
+         * auto: //
+         * true:https://
+         * false: https://
+
       * timeout：（Number）タイムアウトまでに JSONP サービスの応答を待機する時間（ミリ秒単位）。
-      * ttl：JSONP サービスの最小呼び出し間隔（ミリ秒単位）。（[queryService](/help/sites-developing/contexthub-api.md#queryservice-reload) 関数を参照）。
-
+      * ttl:JSONP サービスの最小呼び出し間隔（ミリ秒）。 ( [queryService](/help/sites-developing/contexthub-api.md#queryservice-reload) 関数 ) を参照してください。
 
 #### queryService(reload) {#queryservice-reload}
 
 リモート JSONP サービスをクエリし、応答をキャッシュします。この関数の前回の呼び出しからの時間が `config.service.ttl` の値より小さい場合、サービスは呼び出されず、キャッシュされた応答は変更されません。オプションで、サービスを強制的に呼び出すことができます。`config.service.ttl` プロパティは、ストアを初期化するために [init](/help/sites-developing/contexthub-api.md#init-name-config) 関数を呼び出すと設定されます。
 
-クエリが完了すると、ready イベントが発生します。JSONP サービス URL が設定されていない場合、この関数は何もしません。
+クエリが完了すると、ready イベントが発生します。JSONP サービスの URL が設定されていない場合、この関数は何もしません。
 
 **パラメーター**
 
-* **reload：**（Boolean）値が true の場合、キャッシュされた応答を削除し、JSONP サービスを強制的に呼び出します。
+* **リロード：** (Boolean) 値が true の場合、キャッシュされた応答を削除し、JSONP サービスを強制的に呼び出します。
 
 #### reset {#reset}
 
-ストアの永続データを初期値にリセットしてから、JSONP サービスを呼び出します。オプションで、その他すべてのデータをストアから削除できます。初期値が再設定されている間、このストアに対するイベンティングは一時停止されます。この関数は値を返しません。
+ストアの永続化されたデータの初期値をリセットし、JSONP サービスを呼び出します。 必要に応じて、その他のすべてのデータをストアから削除できます。 初期値がリセットされている間、このストアのイベンティングは一時停止されています。 この関数は値を返しません。
 
 初期値は、ストアオブジェクトのインスタンス化に使用される config オブジェクトの initialValues プロパティで提供されます。
 
 **パラメーター**
 
-* **keepRemainingData：**（Boolean）値が true の場合、初期値以外のデータは保持されます。値が false の場合、初期値以外のすべてのデータが削除されます。
+* **keepRemainingData:** （ブール値）値が true の場合、初期値以外のデータは保持されます。 値が false の場合、初期値を除くすべてのデータが削除されます。
 
 #### resolveParameter(f) {#resolveparameter-f}
 
-指定されたパラメーターを解決します。
+指定されたパラメータを解決します。
 
 ## ContextHub.Store.PersistedJSONPStore {#contexthub-store-persistedjsonpstore}
 
-ContextHub.Store.PersistedJSONPStore は [ContextHub.Store.JSONPStore](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore) を拡張したものなので、このクラスのすべての関数を継承しています。ただし、JSONP サービスから取得されるデータは、ContextHub の永続性に応じて保持されます（[永続モード](/help/sites-developing/ch-adding.md#persistence-modes)を参照）。
+ContextHub.Store.PersistedJSONPStore extends [ContextHub.Store.JSONPStore](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore) そのクラスのすべての関数を継承します。 ただし、JSONP サービスから取得されるデータは、ContextHub の永続性に応じて保持されます（[永続モード](/help/sites-developing/ch-adding.md#persistence-modes)を参照）。
 
 ## ContextHub.Store.PersistedStore {#contexthub-store-persistedstore}
 
-ContextHub.Store.PersistedStore は [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) を拡張したものなので、このクラスのすべての関数を継承しています。このストアのデータは、ContextHub の永続性の設定に応じて保持されます。
+ContextHub.Store.PersistedStore は [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) を拡張したものなので、このクラスのすべての関数を継承しています。このストア内のデータは、ContextHub の永続性の設定に従って保持されます。
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-ContextHub.Store.SessionStore は [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) を拡張したものなので、このクラスのすべての関数を継承しています。このストアのデータは、インメモリパーシスタンス（JavaScript オブジェクト）を使用して保持されます。
+ContextHub.Store.SessionStore は [ContextHub.Store.Core](/help/sites-developing/contexthub-api.md#contexthub-store-core) を拡張したものなので、このクラスのすべての関数を継承しています。このストアのデータは、インメモリ永続性（JavaScript オブジェクト）を使用して保持されます。
 
 ## ContextHub.UI {#contexthub-ui}
 
-UI モジュールおよび UI モジュールレンダラーを管理します。
+UI モジュールと UI モジュールレンダラーを管理します。
 
-### 関数（ContextHub.UI） {#functions-contexthub-ui}
+### 関数 (ContextHub.UI) {#functions-contexthub-ui}
 
 #### registerRenderer(moduleType, renderer, dontRender) {#registerrenderer-moduletype-renderer-dontrender}
 
-UI モジュールレンダラーを ContextHub に登録します。登録後、レンダラーを使用して [UI モジュールを作成](ch-configuring.md#adding-a-ui-module)できます。[ContextHub.UI.BaseModuleRenderer を拡張](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)してカスタム UI モジュールレンダラーを作成する場合は、この関数を使用します。
+UI モジュールレンダラーを ContextHub に登録します。 レンダラーの登録後は、 [UI モジュールの作成](ch-configuring.md#adding-a-ui-module). この関数は、 [ContextHub.UI.BaseModuleRenderer の拡張](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types) ：カスタム UI モジュールレンダラーを作成します。
 
 **パラメーター**
 
-* **moduleType：**（String）UI モジュールレンダラーの識別子。指定された値でレンダラーが既に登録されている場合、既存のレンダラーが登録解除されてから、このレンダラーが登録されます。
+* **moduleType:** (String)UI モジュールレンダラーの識別子。 指定された値でレンダラーが既に登録されている場合、既存のレンダラーが登録解除されてから、このレンダラーが登録されます。
 * **renderer：**（文字列）UI モジュールをレンダリングするクラスの名前。
 * **dontRender：**（Boolean）レンダラーの登録後に ContextHub UI がレンダリングされないようにするには、`true` に設定します。デフォルト値は `false` です。
 
@@ -550,9 +550,9 @@ ContextHub.UI.registerRenderer('contexthub.browserinfo', new SurferinfoRenderer(
 
 ## ContextHub.Utils.Cookie {#contexthub-utils-cookie}
 
-cookie とやり取りするユーティリティクラス。
+cookie とやり取りするためのユーティリティクラス。
 
-### 関数（ContextHub.Utils.Cookie） {#functions-contexthub-utils-cookie}
+### 関数 (ContextHub.Utils.Cookie) {#functions-contexthub-utils-cookie}
 
 #### exists(key) {#exists-key}
 
@@ -580,16 +580,16 @@ if (ContextHub.Utils.Cookie.exists("name")) {
 
 **パラメーター**
 
-* （オプション）**filter：** cookie のキーを照合する条件。すべての cookie を返すには、値を指定しないでください。次のタイプがサポートされています。
+* （オプション） **フィルター：** cookie のキーを照合する条件。 すべての cookie を返す場合は、値を指定しません。 次のタイプがサポートされます。
 
-   * String：文字列を cookie のキーと比較します。
-   * Array：配列内の各項目はフィルターです。
-   * 正規表現オブジェクト：オブジェクトのテスト関数を使用して cookie のキーを照合します。
+   * 文字列：この文字列が cookie のキーと比較されます。
+   * 配列：配列内の各項目はフィルターです。
+   * RegExp オブジェクト：オブジェクトの test 関数は、cookie のキーの照合に使用されます。
    * 関数：cookie のキーが一致するかどうかをテストする関数。関数は、cookie のキーをパラメーターとして取り、テストによって一致が確認された場合は true を返す必要があります。
 
 **戻り値**
 
-cookie からなるオブジェクト。オブジェクトのプロパティは cookie のキーで、キー値は cookie の値です。
+cookie のオブジェクト。 オブジェクトのプロパティは cookie のキーで、キー値は cookie の値です。
 
 **例**
 
@@ -603,7 +603,7 @@ cookie の値を返します。
 
 **パラメーター**
 
-* **key：**&#x200B;値を取得する cookie のキー。
+* **キー：** 値を取得する cookie のキー。
 
 **戻り値**
 
@@ -621,11 +621,11 @@ ContextHub.Utils.Cookie.getItem("name");
 
 **パラメーター**
 
-* **filter：** cookie のキーを照合する条件。次のタイプがサポートされています。
+* **フィルター：** cookie のキーを照合する条件。 次のタイプがサポートされます。
 
-   * String：文字列を cookie のキーと比較します。
-   * Array：配列内の各項目はフィルターです。
-   * 正規表現オブジェクト：オブジェクトのテスト関数を使用して cookie のキーを照合します。
+   * 文字列：この文字列が cookie のキーと比較されます。
+   * 配列：配列内の各項目はフィルターです。
+   * RegExp オブジェクト：オブジェクトの test 関数は、cookie のキーの照合に使用されます。
    * 関数：cookie のキーが一致するかどうかをテストする関数。関数は、cookie のキーをパラメーターとして取り、テストによって一致が確認された場合は `true` を返す必要があります。
 
 **戻り値**
@@ -640,7 +640,7 @@ ContextHub.Utils.Cookie.getKeys([/^cq-authoring/, /^cq-editor/])
 
 #### removeItem(key, options) {#removeitem-key-options-1}
 
-cookie を削除します。cookie を削除するには、値を空の文字列に設定し、有効期限を現在の日付より前の日に設定します。
+cookie を削除します。cookie を削除するには、値を空の文字列に設定し、有効期限を現在の日付の前の日に設定します。
 
 **パラメーター**
 
@@ -660,15 +660,15 @@ ContextHub.Utils.Cookie.vanish([/^cq-authoring/, 'cq-scrollpos']);
 
 #### setItem(key, value, options) {#setitem-key-value-options-1}
 
-指定されたキーと値の cookie を作成し、その cookie を現在のドキュメントに追加します。オプションで、cookie の属性を設定するオプションを指定できます。
+指定されたキーと値の cookie を作成し、その cookie を現在のドキュメントに追加します。 必要に応じて、cookie の属性を設定するオプションを指定できます。
 
 **パラメーター**
 
-* **key：** cookie のキーを格納した String。
-* **value：** cookie の値を格納した String。
-* **options：**（オプション）cookie の属性を設定する、次のいずれかのプロパティを格納したオブジェクト。
+* **キー：** cookie のキーを格納した String。
+* **値：** cookie の値を格納した String。
+* **options:** （オプション）cookie の属性を設定する、次のいずれかのプロパティを格納したオブジェクト。
 
-   * expires：cookie の有効期限を指定する `date` 値または `number` 値。date 値は、有効期限の絶対時間を指定します。number（日数）は、有効期限を現在時刻 + その日数に設定します。デフォルト値は `undefined` です。
+   * expires：cookie の有効期限を指定する `date` 値または `number` 値。date 値は、有効期限の絶対時刻を指定します。 数値（日単位）は、有効期限を現在の時刻に数値を加えた値に設定します。 デフォルト値は `undefined` です。
    * ：cookie の `boolean`Secure 属性を指定する `Secure` 値。デフォルト値は `false` です。
    * ：cookie の `String`Path 属性として使用する `Path` 値。デフォルト値は `undefined` です。
 
@@ -689,7 +689,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 #### vanish(filter, options) {#vanish-filter-options}
 
-指定されたフィルターに一致するすべての cookie を削除します。cookie は、getKeys 関数を使用して照合され、removeItem 関数を使用して削除されます。
+指定されたフィルターに一致するすべての cookie を削除します。cookie は、 getKeys 関数を使用して照合され、 removeItem 関数を使用して削除されます。
 
 **パラメーター**
 
@@ -703,7 +703,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 ## ContextHub.Utils.Eventing {#contexthub-utils-eventing}
 
-関数を ContextHub ストアイベントにバインドおよびバインド解除できます。ストアの [eventing](/help/sites-developing/contexthub-api.md#eventing) プロパティを使用して、ストアの ContextHub.Utils.Eventing オブジェクトにアクセスします。
+関数を ContextHub ストアイベントにバインドおよびバインド解除できます。を使用して、ストアの ContextHub.Utils.Eventing オブジェクトにアクセスします。 [eventing](/help/sites-developing/contexthub-api.md#eventing) ストアのプロパティ。
 
 ### 関数（ContextHub.Utils.Eventing） {#functions-contexthub-utils-eventing}
 
@@ -723,13 +723,13 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 #### on(name, handler, selector, triggerForPastEvents) {#on-name-handler-selector-triggerforpastevents}
 
-関数をイベントにバインドします。この関数は、イベントが発生するたびに呼び出されます。オプションで、過去にバインドが確立される前に発生したイベントに対して関数を呼び出すことができます。
+関数をイベントにバインドします。 イベントが発生するたびに関数が呼び出されます。 オプションで、バインディングが確立される前に過去に発生したイベントに対して関数を呼び出すことができます。
 
 **パラメーター**
 
-* **name：**（String）関数をバインドする[イベントの名前](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)。
+* **名前：** （文字列） [イベント名](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 関数をバインドする先にドラッグします。
 
-* **handler：**（Function）イベントにバインドする関数。
+* **ハンドラー：** （関数）イベントにバインドする関数。
 * **selector：**（文字列）バインドの一意の識別子。`off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
 
 * **triggerForPastEvents：**（Boolean）過去に発生したイベントに対してハンドラーを実行するかどうかを示します。`true` 値は、過去のイベントに対してハンドラーを呼び出します。値 `false` は、未来のイベントに対してハンドラーを呼び出します。デフォルト値は `true` です。
@@ -765,13 +765,13 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 #### once(name, handler, selector, triggerForPastEvents) {#once-name-handler-selector-triggerforpastevents}
 
-関数をイベントにバインドします。関数は、最初に発生したイベントに対して一度だけ呼び出されます。オプションで、過去にバインドが確立される前に発生したイベントに対して関数を呼び出すことができます。
+関数をイベントにバインドします。 イベントが最初に発生したときに、関数が 1 回だけ呼び出されます。 オプションで、バインディングが確立される前に過去に発生したイベントに対して関数を呼び出すことができます。
 
 **パラメーター**
 
-* **name：**（String）関数をバインドする[イベントの名前](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)。
+* **名前：** （文字列） [イベント名](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing) 関数をバインドする先にドラッグします。
 
-* **handler：**（Function）イベントにバインドする関数。
+* **ハンドラー：** （関数）イベントにバインドする関数。
 * **selector：**（文字列）バインドの一意の識別子。`off` 関数を使用してバインドを削除する場合は、セレクターでバインドを識別する必要があります。
 
 * **triggerForPastEvents：**（Boolean）過去に発生したイベントに対してハンドラーを実行するかどうかを示します。`true` 値は、過去のイベントに対してハンドラーを呼び出します。値 `false` は、未来のイベントに対してハンドラーを呼び出します。デフォルト値は `true` です。
@@ -789,7 +789,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 オブジェクトが別のオブジェクトのプロパティとメソッドを継承できるようにするユーティリティクラス。
 
-### 関数（ContextHub.Utils.inheritance） {#functions-contexthub-utils-inheritance}
+### 関数 (ContextHub.Utils.inheritance) {#functions-contexthub-utils-inheritance}
 
 #### inherit(child, parent) {#inherit-child-parent}
 
@@ -797,14 +797,14 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **パラメーター**
 
-* **child：**（Object）継承するオブジェクト。
-* **parent：**（Object）継承するプロパティとメソッドを定義するオブジェクト。
+* **子：** (Object) 継承するオブジェクト。
+* **親：** (Object) 継承するプロパティとメソッドを定義するオブジェクト。
 
 ## ContextHub.Utils.JSON {#contexthub-utils-json}
 
-オブジェクトを JSON 形式にシリアライズし、JSON 文字列をオブジェクトにデシリアライズするための関数を提供します。
+オブジェクトを JSON 形式にシリアライズし、JSON 文字列をオブジェクトにデシリアライズする関数を提供します。
 
-### 関数（ContextHub.Utils.JSON） {#functions-contexthub-utils-json}
+### 関数 (ContextHub.Utils.JSON) {#functions-contexthub-utils-json}
 
 #### parse(data) {#parse-data}
 
@@ -812,7 +812,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **パラメーター**
 
-* **data：** JSON 形式の文字列値。
+* **データ：** JSON 形式の string 値。
 
 **戻り値**
 
@@ -832,11 +832,11 @@ Object {
 
 #### stringify(data) {#stringify-data}
 
-JavaScript の値およびオブジェクトを JSON 形式の文字列値にシリアライズします。
+JavaScript の値とオブジェクトを JSON 形式の文字列値にシリアル化します。
 
 **パラメーター**
 
-* **data：**&#x200B;シリアライズする値またはオブジェクト。この関数は、boolean、array、number、string および date 値をサポートします。
+* **データ：** シリアライズする値またはオブジェクト。 この関数は、boolean、array、number、string および date 値をサポートします。
 
 **戻り値**
 
@@ -856,13 +856,13 @@ ContextHub.Utils.JSON.stringify({
 
 ## ContextHub.Utils.JSON.tree {#contexthub-utils-json-tree}
 
-このクラスは、ContextHub ストアに保存または ContextHub ストアから取得するデータオブジェクトの操作を容易にします。
+このクラスは、保存される、または ContextHub ストアから取得されるデータオブジェクトの操作を容易にします。
 
-### 関数（ContextHub.Utils.JSON.tree） {#functions-contexthub-utils-json-tree}
+### 関数 (ContextHub.Utils.JSON.tree) {#functions-contexthub-utils-json-tree}
 
 #### addAllItems() {#addallitems}
 
-データオブジェクトのコピーを作成し、2 つ目のオブジェクトのデータツリーに追加します。この関数はコピーを返し、元のオブジェクトはどちらも変更されません。2 つのオブジェクトのデータツリーに同一のキーが含まれる場合、2 つ目のオブジェクトの値によって最初のオブジェクトの値が上書きされます。
+データオブジェクトのコピーを作成し、2 つ目のオブジェクトのデータツリーに追加します。 この関数はコピーを返し、元のオブジェクトは変更しません。 2 つのオブジェクトのデータツリーに同じキーが含まれている場合、2 番目のオブジェクトの値は、最初のオブジェクトの値を上書きします。
 
 **パラメーター**
 
@@ -871,7 +871,7 @@ ContextHub.Utils.JSON.stringify({
 
 **戻り値**
 
-結合されたデータを格納したオブジェクト。
+結合されたデータを格納するオブジェクト。
 
 #### cleanup() {#cleanup}
 
@@ -879,11 +879,11 @@ ContextHub.Utils.JSON.stringify({
 
 **パラメーター**
 
-* **tree：**&#x200B;クリーンアップするオブジェクト。
+* **ツリー：** クリーンアップするオブジェクト。
 
 **戻り値**
 
-クリーンアップされたツリーのコピー。
+クリーンアップされるツリーのコピー。
 
 #### getItem() {#getitem}
 
@@ -891,16 +891,16 @@ ContextHub.Utils.JSON.stringify({
 
 **パラメーター**
 
-* **tree：**&#x200B;データオブジェクト。
-* **key：**&#x200B;取得する値のキー。
+* **ツリー：** データオブジェクト。
+* **キー：** 取得する値のキー。
 
 **戻り値**
 
-キーに対応する値。キーに子キーがある場合、この関数は複合オブジェクトを返します。キーの値のタイプが `undefined` の場合、`null` が返されます。
+キーに対応する値。 キーに子キーがある場合、この関数は複合オブジェクトを返します。キーの値のタイプが `undefined` の場合、`null` が返されます。
 
 **例**
 
-次の JavaScript オブジェクトについて考えてみます。
+次の JavaScript オブジェクトについて考えてみましょう。
 
 ```
 myObject {
@@ -928,7 +928,7 @@ ContextHub.Utils.JSON.tree.getItem(myObject, "/user/location/details/elevation")
 ContextHub.Utils.JSON.tree.getItem(myObject, "/user");
 ```
 
-この関数は次のオブジェクトを返します。
+この関数は、次のオブジェクトを返します。
 
 ```
 Object {
@@ -944,13 +944,13 @@ Object {
 
 #### getKeys() {#getkeys}
 
-オブジェクトのデータツリーからすべてのキーを取得します。オプションで、特定のキーの子のキーのみを取得できます。オプションで、取得したキーのソート順を指定することもできます。
+オブジェクトのデータツリーからすべてのキーを取得します。 必要に応じて、特定のキーの子のキーのみを取得できます。 また、オプションで、取得したキーの並べ替え順を指定することもできます。
 
 **パラメーター**
 
-* **tree：**&#x200B;データツリーのキーの取得元となるオブジェクト。
-* **parent：**（オプション）子項目のキーを取得するデータツリー内の項目のキー。
-* **order：**（オプション）返されたキーのソート順を判断する関数（Mozilla Developer Network の [Array.prototype.sort](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) を参照）。
+* **ツリー：** データツリーのキーの取得元となるオブジェクト。
+* **親：** （オプション）子項目のキーを取得するデータツリー内の項目のキー。
+* **順序：** （オプション）返されたキーの並べ替え順を決定する関数。 ( [Array.prototype.sort](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) (Mozilla Developer Network)。
 
 **戻り値**
 
@@ -989,8 +989,8 @@ myObject {
 
 **パラメーター**
 
-* tree：データオブジェクト。
-* key：削除するキー。
+* ツリー：データオブジェクト。
+* キー：削除するキー。
 
 **戻り値**
 
@@ -1016,13 +1016,13 @@ myObject {
 }
 ```
 
-次のサンプルスクリプトでは、データツリーから /one/two/three/four ブランチを削除しています。
+次のスクリプトの例では、 /one/two/three/four ブランチをデータツリーから削除します。
 
 ```
 myObject = ContextHub.Utils.JSON.tree.removeItem(myObject, "/one/two/three/four");
 ```
 
-この関数は次のオブジェクトを返します。
+この関数は、次のオブジェクトを返します。
 
 ```
 myObject {
@@ -1034,10 +1034,10 @@ myObject {
 
 #### sanitizeKey(key) {#sanitizekey-key}
 
-文字列値の不要部分を削除して、キーとして使用できるようにします。文字列の不要部分を削除するために、この関数は次のアクションを実行します。
+文字列値の不要部分を削除して、キーとして使用できるようにします。 文字列の不要部分を削除するには、この関数は次の操作を実行します。
 
-* 複数の連続するフォワードスラッシュを 1 つのスラッシュにまとめます。
-* 文字列の先頭および末尾から空白を削除します。
+* 複数の連続するスラッシュを 1 つのスラッシュに減らします。
+* 文字列の先頭と末尾から空白を削除します。
 * 結果をスラッシュで区切られた文字列の配列に分割します。
 
 作成された配列を使用して、使用可能なキーを作成します。**パラメーター**
@@ -1064,9 +1064,9 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 **パラメーター**
 
-* tree：データオブジェクト。
-* key：追加する値に関連付けるキー。キーは、データツリー内の項目へのパスです。この関数は、`ContextHub.Utils.JSON.tree.sanitize` を呼び出して、キーを追加する前に不要部分を削除します。
-* value：データツリーに追加する値。
+* ツリー：データオブジェクト。
+* キー：追加する値に関連付けるキー。 キーは、データツリー内の項目へのパスです。この関数は、`ContextHub.Utils.JSON.tree.sanitize` を呼び出して、キーを追加する前に不要部分を削除します。
+* 値：データツリーに追加する値。
 
 **戻り値**
 
@@ -1074,7 +1074,7 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 **例**
 
-次の JavaScript コードについて考えてみます。
+次の JavaScript コードについて考えてみましょう。
 
 ```
 var myObject = {
@@ -1095,13 +1095,13 @@ var myValue = {
 myObject = ContextHub.Utils.JSON.tree.setItem(myObject, myKey, myValue);
 ```
 
-myObject オブジェクトは次の値を持ちます。
+myObject オブジェクトの値は次のとおりです。
 
 ## ContextHub.Utils.storeCandidates {#contexthub-utils-storecandidates}
 
-ストア候補を登録したり、登録されたストア候補を取得したりできるようにします。
+ストア候補を登録し、登録されたストア候補を取得できます。
 
-### 関数（ContextHub.Utils.storeCandidates） {#functions-contexthub-utils-storecandidates}
+### 関数 (ContextHub.Utils.storeCandidates) {#functions-contexthub-utils-storecandidates}
 
 #### getRegisteredCandidates(storeType) {#getregisteredcandidates-storetype}
 
@@ -1109,42 +1109,42 @@ myObject オブジェクトは次の値を持ちます。
 
 **パラメーター**
 
-* **storeType：**（String）ストアタイプの名前。`storeType` 関数の [ パラメーターを参照してください。`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates)
+* **storeType：**（String）ストアタイプの名前。`storeType` 関数の [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) パラメーターを参照してください。
 
 **戻り値**
 
-ストアタイプのオブジェクト。オブジェクトのプロパティはストアタイプ名で、プロパティ値は登録されているストア候補からなる配列です。
+ストアタイプのオブジェクト。 オブジェクトのプロパティはストアタイプ名で、プロパティ値は登録済みのストア候補の配列です。
 
 #### getStoreFromCandidates(storeType) {#getstorefromcandidates-storetype}
 
-登録されている候補からストアタイプを返します。複数のストアタイプが同じ名前で登録されている場合、この関数は最も優先度が高いストアタイプを返します。
+登録されている候補からストアタイプを返します。同じ名前のストアタイプが複数登録されている場合、この関数は最も優先度の高いストアタイプを返します。
 
 **パラメーター**
 
-* storeType：（String）ストア候補の名前。`storeType` 関数の [ パラメーターを参照してください。`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies)
+* storeType：（String）ストア候補の名前。`storeType` 関数の [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) パラメーターを参照してください。
 
 **戻り値**
 
-登録されているストア候補を表すオブジェクト。要求されたストアタイプが登録されていない場合は、エラーがスローされます。
+登録済みのストア候補を表すオブジェクト。 要求されたストアの種類が登録されていない場合は、エラーが発生します。
 
 #### getSupportedStoreTypes() {#getsupportedstoretypes}
 
-ストア候補として登録されているストアタイプの名前を返します。この関数にパラメーターは必要ありません。
+ストア候補として登録されているストアタイプの名前を返します。 この関数にはパラメーターは必要ありません。
 
 **戻り値**
 
-文字列値からなる配列で、各文字列はストア候補と一緒に登録されたストアタイプです。`storeType` 関数の [ パラメーターを参照してください。`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates)
+文字列値からなる配列で、各文字列はストア候補と一緒に登録されたストアタイプです。`storeType` 関数の [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](/help/sites-developing/contexthub-api.md#contexthub-utils-storecandidates) パラメーターを参照してください。
 
 #### registerStoreCandidate(store, storeType, priority, applies) {#registerstorecandidate-store-storetype-priority-applies}
 
 名前と優先度を使用して、ストアオブジェクトをストア候補として登録します。
 
-優先度は、同じ名前のストアの重要度を示す数字です。既に登録されているストア候補と同じ名前を使用してストア候補を登録した場合、優先度の高い候補が使用されます。ストア候補を登録する場合、同じ名前の登録済みストア候補より優先度が高い場合にのみストアが登録されます。
+優先度は、同じ名前のストアの重要性を示す数値です。 既に登録されているストア候補と同じ名前でストア候補を登録した場合は、優先度の高い候補が使用されます。 ストア候補を登録する場合、優先度が同じ名前の登録済みストア候補より高い場合にのみ、ストアが登録されます。
 
 **パラメーター**
 
-* **store：**（Object）ストア候補として登録するストアオブジェクト。
-* **storeType：**（String）ストア候補の名前。この値は、ストア候補のインスタンスを作成する際に必要です。
+* **ストア：** (Object) ストア候補として登録するストアオブジェクト。
+* **storeType:** (String) ストア候補の名前。 この値は、ストア候補のインスタンスを作成する際に必要です。
 * **priority：**（数値）ストア候補の優先度。
 * **applies：**（Function）現在の環境内でのストアの適用可能性を評価するために呼び出す関数。この関数は、ストアを適用できる場合は `true`、それ以外の場合は `false` を返す必要があります。デフォルト値は、true を返す関数 `function() {return true;}` です。
 

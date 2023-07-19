@@ -1,7 +1,7 @@
 ---
 title: 翻訳のための文字列の抽出
 seo-title: Extracting Strings for Translating
-description: xgettext-maven-plugin を使用して、ソースコードから翻訳する必要のある文字列を抽出します
+description: xgettext-maven-plugin を使用して、翻訳が必要な文字列をソースコードから抽出します。
 seo-description: Use xgettext-maven-plugin to extract strings from your source code that need translating
 uuid: 2c586ecb-8494-4f8f-b31a-1ed73644d611
 contentOwner: Guillaume Carlino
@@ -10,22 +10,22 @@ content-type: reference
 topic-tags: components
 discoiquuid: 034f70f1-fbd2-4f6b-b07a-5758f0461a5b
 exl-id: 4acc5f7f-0bcb-4b5a-8531-52e146cffeae
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 100%
+source-wordcount: '477'
+ht-degree: 56%
 
 ---
 
 # 翻訳のための文字列の抽出{#extracting-strings-for-translating}
 
-xgettext-maven-plugin を使用して、ソースコードから翻訳する必要のある文字列を抽出します。Maven プラグインは、翻訳のために送信する XLIFF ファイルに文字列を抽出します。文字列は次の場所から抽出されます。
+xgettext-maven-plugin を使用して、翻訳が必要な文字列をソースコードから抽出します。 Maven プラグインは、翻訳のために送信する XLIFF ファイルに文字列を抽出します。 文字列は、次の場所から抽出されます。
 
 * Java ソースファイル
-* Javascript ソースファイル
-* XML ファイル形式の SVN リソース（JCR ノード）
+* JavaScript ソースファイル
+* SVN リソース（JCR ノード）の XML 表現
 
-## 文字列の抽出の設定 {#configuring-string-extraction}
+## 文字列抽出の設定 {#configuring-string-extraction}
 
 xgettext-maven-plugin ツールでプロジェクトの文字列を抽出する方法を設定します。
 
@@ -48,21 +48,21 @@ xgettext-maven-plugin ツールでプロジェクトの文字列を抽出する�
 | セクション | 説明 |
 |---|---|
 | /filter | 解析するファイルを識別します。 |
-| /parsers/vaultxml | コンテナファイルの解析を設定します。外部化された文字列と翻訳のヒントを含む JCR ノードを識別します。さらに、処理をおこなわない JCR ノードも識別します。 |
-| /parsers/javascript | 文字列を外部化する Javascript 関数を識別します。このセクションを変更する必要はありません。 |
+| /parsers/vaultxml | コンテナファイルの解析を設定します。外部化された文字列とローカライゼーションのヒントを含む JCR ノードを識別します。 無視する JCR ノードも識別します。 |
+| /parsers/javascript | 文字列を外部化する JavaScript 関数を識別します。 このセクションを変更する必要はありません。 |
 | /parsers/regexp | Java、JSP、ExtJS テンプレートファイルの解析を設定します。このセクションを変更する必要はありません。 |
 | /potentials | 国際化する文字列を検出するための式。 |
 
 ### 解析するファイルの識別 {#identifying-the-files-to-parse}
 
-i18n.any ファイルの /filter セクションでは、xgettext-maven-plugin ツールで解析するファイルを識別します。解析するファイルと無視するファイルを識別するために、include 規則と exclude 規則をいくつか追加します。すべてのファイルを含めてから、解析する必要のないファイルを除外する必要があります。通常、UI に影響しないファイルの種類や、翻訳しない UI 定義ファイルは除外します。include 規則と exclude 規則には以下の形式を使用します。
+i18n.any ファイルの/filter セクションは、xgettext-maven-plugin ツールが解析するファイルを識別します。 解析するファイルと無視するファイルを識別するために、include 規則と exclude 規則をいくつか追加します。すべてのファイルを含めてから、解析する必要のないファイルを除外する必要があります。通常、UI に影響を与えないファイルタイプや、UI を定義するが翻訳されていないファイルを除外します。 「含む」ルールと「除外する」ルールの形式は次のとおりです。
 
 ```
 { /include "pattern" }
 { /exclude "pattern" }
 ```
 
-規則の pattern の部分は、含めるファイルまたは除外するファイルの名前を照合するために使用します。pattern のプレフィックスにより、JCR ノード（コンテナでの形式）と照合するか、ファイルシステムと照合するかを指定します。
+ルールのパターン部分は、含めるまたは除外するファイルの名前の照合に使用されます。 パターンのプレフィックスは、JCR ノード（Vault での表現）とファイルシステムのどちらと一致しているかを示します。
 
 | プレフィックス | 効果 |
 |---|---|
@@ -107,7 +107,7 @@ POM なし：
 mvn -N com.adobe.granite.maven:xgettext-maven-plugin:1.2.2:extract  -Dxgettext.verbose=true -Dxgettext.target=out -Dxgettext.rules=i18n.any -Dxgettext.root=.
 ```
 
-POM あり：POM に以下を追加します。
+POM を使用：これを POM に追加：
 
 ```xml
 <build>
@@ -138,7 +138,7 @@ mvn xgettext:extract
 * `raw.xliff`：抽出された文字列
 * `warn.log`：警告（存在する場合）（`CQ.I18n.getMessage()` API が正しく使用されていない場合）。これらは常に修正が必要で、その後再実行する必要があります。
 
-* `parserwarn.log`：パーサーの警告（ある場合）。js パーサーの問題など。
+* `parserwarn.log`:パーサーの警告（存在する場合）、例えば js パーサーの問題
 * `potentials.xliff`：抽出されなかったものの、翻訳が必要な、人間が判読できる文字列である可能性がある「候補」（無視してかまいません。大量の誤検出が生じます）。
 * `strings.xliff`：ALF にインポートするために、フラット化された xliff ファイル。
 * `backrefs.txt`：これにより、指定された文字列のソースコードの場所を簡単に調べることができます。

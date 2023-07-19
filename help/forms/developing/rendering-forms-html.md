@@ -12,10 +12,10 @@ topic-tags: operations
 discoiquuid: 669ede46-ea55-444b-a23f-23a86e5aff8e
 role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '4150'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -94,7 +94,8 @@ Forms サービスは、フォームのレンダリング中にスクリプト�
 form:ready イベントにあるフォームスクリプトは、フォームの最初のレンダリング時に 1 回だけ実行され、以降のページ取得時には実行されません。これに対し、 form:calculate イベントは、フォームがレンダリングされるページナビゲーションごとに実行されます。
 
 >[!NOTE]
->複数ページフォームでは、JavaScript によってページに加えられた変更は、別のページに移動しても保持されません。
+>
+複数ページフォームでは、JavaScript によってページに加えられた変更は、別のページに移動しても保持されません。
 
 フォームを送信する前にカスタムスクリプトを呼び出すことができます。この機能は、使用可能なすべてのブラウザーで機能します。ただし、`Output Type` プロパティが `Form Body` に設定されている HTML フォームをレンダリングする場合にのみ使用できます。`Output Type` が `Full HTML` の場合には機能しません。この機能を設定する手順については、管理ヘルプの「フォームの設定」を参照してください。
 
@@ -122,7 +123,7 @@ var __CUSTOM_SCRIPTS_VERSION = 1; //enabling the feature
 
 HTML としてレンダリングするフォームデザインを作成する場合は、JavaScript 言語のスクリプトの XFA サブセットにスクリプティングを制限する必要があります。
 
-クライアント上で実行される、またはクライアントとサーバーの両方で実行されるスクリプトは、XFA サブセット内で記述する必要があります。サーバー上で実行されるスクリプトは、完全な XFA スクリプティングモデルを使用でき、FormCalc も使用できます。JavaScript の使用について詳しくは、 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)を参照してください。
+クライアント上で実行される、またはクライアントとサーバーの両方で実行されるスクリプトは、XFA サブセット内で記述する必要があります。サーバー上で実行されるスクリプトは、完全な XFA スクリプティングモデルを使用でき、FormCalc も使用できます。JavaScript の使用について詳しくは、 [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp)を参照してください。
 
 クライアントでスクリプトを実行する場合、表示されている現在のパネルだけがスクリプトを使用できます。例えば、パネル B が表示されているときに、パネル A にあるフィールドに対するスクリプトを記述することはできません。サーバーでスクリプトを実行すると、すべてのパネルにアクセスできます。
 
@@ -139,11 +140,11 @@ Web ブラウザー（Adobe Reader や Acrobat とは異なり）に表示され
 * null テストでエラーが発生し、値を指定せずにフィールドを終了した場合は、メッセージボックスが表示され、「OK」をクリックした後にそのフィールドに再配置されます。
 * null テストで警告が生成され、値を指定せずにフィールドを終了した場合、「OK」または「キャンセル」をクリックするように促されます。「OK」は値を指定せずに続行し、「キャンセル」は値を入力するフィールドに戻ります。
 
-null テストについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を参照してください。
+null テストについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
 
 ## フォームボタン {#form-buttons}
 
-「送信」ボタンをクリックすると、フォームデータが Forms サービスに送信され、フォームの処理を終了します。`preSubmit` イベントは、クライアントまたはサーバーで実行するように設定できます。`preSubmit` イベントは、フォーム送信の前に実行されます（クライアント上で実行するように設定されている場合）。それ以外の場合は、`preSubmit` イベントは、フォームの送信中にサーバーで実行されます。`preSubmit` イベントについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) を参照してください。
+「送信」ボタンをクリックすると、フォームデータが Forms サービスに送信され、フォームの処理を終了します。`preSubmit` イベントは、クライアントまたはサーバーで実行するように設定できます。`preSubmit` イベントは、フォーム送信の前に実行されます（クライアント上で実行するように設定されている場合）。それ以外の場合は、`preSubmit` イベントは、フォームの送信中にサーバーで実行されます。`preSubmit` イベントについて詳しくは、[Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63_jp) を参照してください。
 
 ボタンにクライアントサイドのスクリプトが関連付けられていない場合、データがサーバーに送信され、サーバー上で計算が実行されて HTML フォームが再生成されます。ボタンにクライアントサイドのスクリプトが含まれている場合、データはサーバーに送信されず、クライアント側のスクリプトが web ブラウザーで実行されます。
 
@@ -167,7 +168,8 @@ HTML ページ（パネル）間を移動すると、データの状態のみが
 ```
 
 >[!NOTE]
->テーブルのセル内にネストされている場合、スタティックオブジェクトはレンダリングされた HTML フォームには表示されません。例えば、テーブルのセル内にネストされた円や長方形は、レンダリングされた HTML フォーム内には表示されません。ただし、テーブルの外側に配置されている場合は、同じスタティックオブジェクトが正しく表示されます。
+>
+テーブルのセル内にネストされている場合、スタティックオブジェクトはレンダリングされた HTML フォームには表示されません。例えば、テーブルのセル内にネストされた円や長方形は、レンダリングされた HTML フォーム内には表示されません。ただし、テーブルの外側に配置されている場合は、同じスタティックオブジェクトが正しく表示されます。
 
 ## デジタル署名用 HTML フォーム {#digitally-signing-html-forms}
 
@@ -189,7 +191,8 @@ HTML ページ（パネル）間を移動すると、データの状態のみが
 フォームを HTML フォームとしてレンダリングする場合、フォームフィールドに対する検証ルールの使用を制限することをお勧めします。一部の検証ルールは、HTML フォームでサポートされていない可能性があります。例えば、MM-DD-YYYY という検証パターンを HTMLフォームとしてレンダリングされているフォームデザインの `Date/Time` フィールドに適用する場合、日付が正しく入力されていても、適切に機能しません。ただし、この検証パターンは、PDF としてレンダリングされているフォームに対しては適切に機能します。
 
 >[!NOTE]
->Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>
+Forms サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ## 手順の概要 {#summary-of-steps}
 
@@ -217,17 +220,19 @@ HTML フォームのレンダリング時に、HTML 実行時オプションを�
 * `Upload`：現在のフォームに添付するファイルを選択するためのユーザーインターフェイスを提供します。
 * `Download`：添付ファイルを表示するユーザインタフェースを提供します。
 
-HTML フォーム上に HTML ツールバーが表示されている場合、ユーザーは最大 10 個のファイルを選択して、フォームデータと共に送信することができます。ファイルが送信されると、Forms サービスはファイルを取得することができます。
+HTMLフォーム上にHTMLツールバーが表示されている場合、ユーザーは最大 10 個のファイルを選択して、フォームデータと共に送信できます。 ファイルが送信されると、Forms サービスはファイルを取得することができます。
 
 フォームを HTML としてレンダリングする際に、ユーザーエージェント値を指定することができます。ユーザーエージェント値は、ブラウザーとシステムの情報を提供します。これはオプションの値で、空の文字列値を渡すことができます。Java API クイックスタートを使用した HTML フォームのレンダリングでは、ユーザーエージェント値を取得する方法、それを使用してフォームを HTML としてレンダリングする方法を示しています。
 
 フォームデータの投稿先となる HTTP URL は、Forms サービスクライアント API を使用してターゲット URL を設定することで指定するか、XDP フォームデザインに含まれる「送信」ボタンで指定することもできます。ターゲット URL がフォームデザインで指定されている場合は、Forms サービスクライアント API を使用して値を設定しないでください。
 
 >[!NOTE]
->ツールバーを含む HTML フォームのレンダリングはオプションです。
+>
+ツールバーを含む HTML フォームのレンダリングはオプションです。
 
 >[!NOTE]
->AHTML フォームをレンダリングする場合は、ツールバーをフォームに追加しないことをお勧めします。
+>
+AHTML フォームをレンダリングする場合は、ツールバーをフォームに追加しないことをお勧めします。
 
 **HTML フォームをレンダリング**
 
@@ -278,7 +283,8 @@ Forms API (Java) を使用して HTML フォームをレンダリングします
    * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して、`OutputType.FullHTMLTags` を渡します。（これはオプション設定です）。
 
    >[!NOTE]
-   >`StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外を参照している場合、Forms は正常にレンダリングされません（`ApplicationWebRoot` の値は、`FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定します）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
+   >
+   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外を参照している場合、Forms は正常にレンダリングされません（`ApplicationWebRoot` の値は、`FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定します）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
 1. HTML フォームのレンダリング
 
@@ -335,7 +341,8 @@ Forms API（web サービス）を使用して HTML フォームをレンダリ�
    * 完全な HTML タグ内で HTML フォームをレンダリングするには、`HTMLRenderSpec` オブジェクトの `setOutputType` メソッドを呼び出して `OutputType.FullHTMLTags` を渡します。
 
    >[!NOTE]
-   >`StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外のサーバーを参照している場合、フォームは HTML で正常にレンダリングされません（`ApplicationWebRoot` 値は `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定されます）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
+   >
+   `StandAlone` オプションが `true` で、`ApplicationWebRoot` が AEM Forms をホストする J2EE アプリケーションサーバー以外のサーバーを参照している場合、フォームは HTML で正常にレンダリングされません（`ApplicationWebRoot` 値は `FormsServiceClient` オブジェクトの `(Deprecated) renderHTMLForm` メソッドに渡される `URLSpec` オブジェクトを使用して指定されます）。`ApplicationWebRoot` が AEM Forms をホストするサーバーとは別のサーバーである場合、管理コンソールの web ルート URI の値を Forms の web アプリケーション URI 値として設定する必要があります。これを行うには、管理コンソールにログインして、サービス／Formsをクリックし、「 Web ルート URI 」を https://server-name:port/FormServer に設定します。次に、設定を保存します。
 
 1. HTML フォームのレンダリング
 

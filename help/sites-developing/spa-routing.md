@@ -10,10 +10,10 @@ topic-tags: spa
 content-type: reference
 discoiquuid: d9f1e24e-51a9-4f28-b2cd-2e97aed63a24
 exl-id: eaef65ec-2e4d-490f-8158-d48d738e3409
-source-git-commit: 509ea0945e6c80e50f6f5bffd4c68282d586504a
-workflow-type: ht
-source-wordcount: '491'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 85%
 
 ---
 
@@ -23,7 +23,7 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 
 >[!NOTE]
 >
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
+>SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
 
 ## プロジェクトルーティング {#project-routing}
 
@@ -57,13 +57,13 @@ AEM の単一ページアプリケーションの場合、アプリはルーテ�
 
 `ModelRouter` では、`pushState` 呼び出しと `replaceState` 呼び出しをリッスンしてモデルフラグメントをプリフェッチするので、モデルルーティングの概念をサポートしています。内部では、`PageModelManager` をトリガーして指定の URL に対応するモデルを読み込み、他のモジュールがリッスンできる `cq-pagemodel-route-changed` イベントを発生させます。
 
-デフォルトではこの処理が自動的に有効になっています。無効にする場合は、SPA で次のメタプロパティをレンダリングする必要があります。
+デフォルトでは、この動作は自動的に有効になっています。 無効にするには、SPAで次のメタプロパティをレンダリングする必要があります。
 
 ```
 <meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
-なお、ルートが選択されると、対応するページモデルの読み込みが `PageModelManager` で自動的に試行されるので、SPA のすべてのルートを AEM 内のアクセス可能なリソース（`/content/mysite/mypage"` など）に対応させる必要があります。ただし、SPA では、必要に応じて、`PageModelManager` で無視する必要があるルートの「ブロックリスト」を定義することもできます。
+SPAのすべてのルートは、AEM内のアクセス可能なリソースに対応している必要があります ( 例：「 `/content/mysite/mypage"`) `PageModelManager` ルートが選択されると、対応するページモデルの読み込みが自動的に試行されます。 ただし、SPA では、必要に応じて、`PageModelManager` で無視する必要があるルートの「ブロックリスト」を定義することもできます。
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>

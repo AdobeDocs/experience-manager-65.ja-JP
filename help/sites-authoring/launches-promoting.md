@@ -10,9 +10,9 @@ discoiquuid: 3d4737ef-f758-4540-bc8f-ecd9f05f6bb0
 docset: aem65
 legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '774'
 ht-degree: 97%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 97%
 
       1. [参照レール](/help/sites-authoring/author-environment-tools.md#showingpagereferences)を開き、[選択モード](/help/sites-authoring/basic-handling.md)を使用して必要なソースページを選択します（または参照レールを選択して開きます。順序はどちらでもかまいません）。すべての参照が表示されます。
 
-      1. **ローンチ**（例：ローンチ（1））を選択して、具体的なローンチのリストを表示します。
+      1. **ローンチ**（例：ローンチ (1)）を選択すると、特定のローンチのリストが表示されます。
       1. 特定のローンチを選択して、使用可能なアクションを表示します。
       1. 「**ローンチを昇格**」を選択してウィザードを開きます。
 

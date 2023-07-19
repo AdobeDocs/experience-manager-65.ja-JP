@@ -8,7 +8,7 @@ content-type: reference
 docset: aem65
 exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '6845'
 ht-degree: 47%
@@ -100,7 +100,7 @@ CUG を介した制限付き読み取りアクセスを定義する際には、�
 * 一般的な認証関連の側面とベストプラクティスを念頭に置いて、リポジトリコンテンツと CUG をモデル化します。
 
    * 読み取り権限は、特定の CUG と、設定でデプロイされた他のモジュールの評価権限が、特定のサブジェクトが特定のリポジトリ項目を読み取ることを許可する場合にのみ付与されることに注意してください
-   * 読み取りアクセスが既に他の認証モジュールによって制限されている冗長 CUG を作成しない
+   * 読み取りアクセスが既に他の認証モジュールによって制限されている冗長 CUG の作成を避けます
    * ネストされた CUG の過剰な必要性は、コンテンツデザインの問題を強調する可能性があります
    * CUG の非常に過度な必要性（例えば、すべてのページ）は、アプリケーションやコンテンツの特定のセキュリティニーズに合わせて、潜在的により適したカスタム認証モデルの必要性を示している可能性があります。
 
@@ -229,7 +229,7 @@ while (it.hasNext()) {
 }
 
 if (cugPolicy == null) {
-   log.debug("no applicable policy"); // path not supported or no applicable policy (e.g.
+   log.debug("no applicable policy"); // path not supported or no applicable policy (for example,
                                                    // the policy was set before)
    return;
 }

@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
 discoiquuid: f5721ddc-df5c-496c-be61-38d1cab63ad4
 exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 49%
+source-wordcount: '356'
+ht-degree: 23%
 
 ---
 
@@ -21,26 +21,26 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
-記事、バナーおよびコレクションは、AEM では cq:Pages として表されます。
+記事、バナー、コレクションは、AEMでは cq:Pages として表されます。
 
-これらは、すべての cq:Pages に共通するプロパティを共有するとともに、以下に示す Adobe Experience Manager（AEM）Mobile On-Demand Services のメタデータおよび統合をサポートする他のプロパティも備えています。
+これらは、任意の cq:Page で見つかる共通のプロパティに加えて、Adobe Experience Manager(AEM)Mobile On-Demand サービスのメタデータおよび統合サポートプロパティを表す他のいくつかの共通のプロパティを共有します。
 
-以下の表では、コンテンツのプロパティとノードについて説明します。
+次の表に、コンテンツのプロパティとノードを示します。
 
-## 共通統合プロパティ {#common-integration-properties}
+## 共通の統合プロパティ {#common-integration-properties}
 
 | **プロパティ名** | **タイプ** | **デフォルト値または期待値** | **説明** |
 |---|---|---|---|
-| dps-id | String |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
+| dps-id | 文字列 |  | AEM Mobileに割り当てられ、AEMによって保存され、AEM MobileにアップロードまたはAEM Mobileから読み込まれた後にによって割り当てられ、 |
 | dps-resourceType | 文字列 | dps:Article | dps:Banner | dps:Collection | エンティティタイププロパティ |
 | dps-version | 文字列 |  | AEM Mobileエンティティのバージョン（aem-id の完全な内部にも含まれる） |
 | dps-lastSynced | 日付 |  | AEM MobileからAEMへの最後の同期/インポート日 |
 | dps-lastUploaded | 日付 |  | AEMからAEM Mobileへの最後のアップロード日 |
 | dps-lastUploadedBy | String:userid |  | AEMからAEM Mobileへの最後のアップロード要求を実行した id ユーザー |
 
-## コアメタデータプロパティ {#core-metadata-properties}
+## コアメタデータのプロパティ {#core-metadata-properties}
 
 | プロパティ名 | タイプ | デフォルト値または期待値 |
 |--- |--- |--- |
@@ -60,7 +60,7 @@ ht-degree: 49%
 |---|---|---|
 | dps-author | 文字列 |  |
 | dps-authorURL | 文字列 |  |
-| dps-hideFromBrowsePage | ブール値 |  |
+| dps-hideFromBrowsePage | ブーリアン |  |
 | dps-access | 文字列 | {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} からの ProtectedAccess |
 | **Social** |  |  |
 | dps-socialShareURL | 文字列 |  |
@@ -71,7 +71,7 @@ ht-degree: 49%
 
 | **プロパティ名** | **タイプ** | **デフォルト値または期待値** |
 |---|---|---|
-| dps-tapAction |  | {webLink} の TapAction |
+| dps-tapAction |  | 次の TapAction {webLink} |
 | dps-tapActionUrl |  |  |
 
 ### コレクション {#collections}
@@ -80,8 +80,8 @@ ht-degree: 49%
 |--- |--- |--- |
 | dps-productId | 文字列 |  |
 | dps-readingPosition | 文字列 | {&quot;reset&quot;,&quot;retain&quot;} から |
-| dps-horizontalSwipe | ブール値 |  |
-| dps-allowDownload | ブール値 |  |
+| dps-horizontalSwipe | ブーリアン |  |
+| dps-allowDownload | ブーリアン |  |
 | dps-openDefault | 文字列 | {&quot;browsePage&quot;,&quot;contentView&quot;} から |
 | dps-layout | 文字列 |  |
 

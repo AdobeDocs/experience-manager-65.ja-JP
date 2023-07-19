@@ -2,10 +2,10 @@
 title: JEE 上の AEM Forms サーバークラスターの設定とトラブルシューティングの方法
 description: JEE 上の AEM Forms サーバークラスターの設定方法とトラブルシューティング方法について説明します
 exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
-source-git-commit: 1cdd15800548362ccdd9e70847d9df8ce93ee06e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4033'
-ht-degree: 100%
+source-wordcount: '4032'
+ht-degree: 99%
 
 ---
 
@@ -267,7 +267,7 @@ Quartz の設定内容を確認するには、起動時に JEE 上の AEM Forms 
 INFO `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad
 Quartz を使用するアプリケーションサーバーもあり、その Quartz インスタンスが AEM Forms on JEE のスケジューラーサービスで使用するインスタンスと混同されないようにする必要があるため、ログでこの最初の行を見つけることが重要です。これはスケジューラーサービスを起動中であることを示しており、これに続く行で、クラスターモードで正しく開始しているかどうかを示しています。このシーケンスには複数のメッセージが表示されます。Quartz の設定を示しているのは、最後の「started」メッセージです。
 
-Quartz インスタンスの名前は、`IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975` です。スケジューラーの Quartz インスタンスの名前は、常に文字列 `IDPSchedulerService_$_` で始まります。この末尾に追加される文字列が、Quartz がクラスターモードで実行されているかどうかを示しています。ノードのホスト名と長い数字の文字列から生成される、長い一意の ID（ここでは `ap-hp8.ottperflab.adobe.com1312883903975`）は、クラスターで動作していることを示します。1 つのノードとして動作している場合、この ID は 2 桁の数値「20」になります。
+Quartz インスタンスの名前は次のように表示されます。 `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. スケジューラーの Quartz インスタンスの名前は、常に文字列 `IDPSchedulerService_$_` で始まります。この末尾に追加される文字列が、Quartz がクラスターモードで実行されているかどうかを示しています。ノードのホスト名と長い数字の文字列から生成される、長い一意の ID（ここでは `ap-hp8.ottperflab.adobe.com1312883903975`）は、クラスターで動作していることを示します。1 つのノードとして動作している場合、この ID は 2 桁の数値「20」になります。
 
 INFO `[org.quartz.core.QuartzScheduler]` Scheduler `IDPSchedulerService_$_20` started.（スケジューラーが起動しました）
 スケジューラーをクラスターモードで実行するかどうかは各ノードで独立して決定されるので、このチェックはすべてのクラスターノードで個別に行う必要があります。

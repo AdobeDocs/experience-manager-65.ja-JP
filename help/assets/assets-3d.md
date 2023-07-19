@@ -8,9 +8,9 @@ content-type: reference
 feature: 3D Assets,Asset Management
 role: User, Admin
 exl-id: 01c96f1e-c0e6-497d-bd7a-c0fd547a34da
-source-git-commit: 787c0c25da2258f234d3c821038d62bf8ef68932
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2348'
 ht-degree: 98%
 
 ---
@@ -70,16 +70,16 @@ Dynamic Media の 3D アセットを操作する前に、Experience Manager の�
       * [デジタルアセットの整理](/help/assets/organize-assets.md#organize-digital-assets).
       * [3D アセットの検索](/help/assets/search-assets.md).
       * [検索結果を絞り込むためのカスタム述語の使用](/help/assets/search-assets.md#custompredicates)
+
    * 3D アセットの表示
 
       * [3D アセットの表示とインタラクション](#viewing-three-d-assets)
       * [ディメンショナルビューアプリセットの管理](/help/assets/managing-viewer-presets.md).
+
    * 3D アセットメタデータの操作
 
       * [デジタルアセットのメタデータの管理](/help/assets/metadata.md).
       * [メタデータスキーマ](/help/assets/metadata-schemas.md).
-
-
 
 1. **3D アセットの公開**
 
@@ -128,8 +128,8 @@ Dynamic Media の 3D アセットを操作する前に、Experience Manager の�
    | **カメラをパン** | ビューを左、右、上、下にパンします。 | 右クリックしながらドラッグします。 | 2 本指で押しながらドラッグします。 |
    | **カメラをズーム** | 3D シーンの領域の内外に移動します。 | ホイールをスクロールします。 | 2 本指でピンチします。 |
    | **カメラを中心に戻す** | カメラを中心の位置に戻し、3D シーンのオブジェクトに合わせます。 | ダブルクリックします。 | ダブルタップします。 |
-   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |  |  |
-   | **全画面表示モード** | フルスクリーンモードに入るには、ページの右下隅にあるフルスクリーンアイコンを選択します。 |  |  |
+   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |   |   |
+   | **全画面表示モード** | フルスクリーンモードに入るには、ページの右下隅にあるフルスクリーンアイコンを選択します。 |   |   |
 
 1. ページの右上隅にある「**[!UICONTROL 閉じる]**」を選択して、アセットページに戻ります。
 
@@ -150,7 +150,7 @@ Web ページが&#x200B;**[!UICONTROL 編集]**&#x200B;モードの場合、3D �
    * ページ右上付近にある「**[!UICONTROL プレビュー]**」をクリックして、**[!UICONTROL プレビュー]**&#x200B;モードに入ります。
    * ブラウザーのページ URL から `/editor.html` を削除します。
 
-プレビューモードで表示された完全にインタラクティブな 3D アセット    ![3D メディアコンポーネント内に表示される 3D アセット](/help/assets/assets-dm/3d-asset-in-3d-media.png)
+   ![3D メディアコンポーネント内に表示される 3D アセット](/help/assets/assets-dm/3d-asset-in-3d-media.png)
 **[!UICONTROL プレビュー]**&#x200B;モードで表示された完全にインタラクティブな 3D アセット。
 
 1. **[!UICONTROL プレビュー]**&#x200B;モードの間に、次のいずれかの操作を行います。
@@ -161,8 +161,8 @@ Web ページが&#x200B;**[!UICONTROL 編集]**&#x200B;モードの場合、3D �
    | **カメラをパン** | ビューを左、右、上、下にパンします。 | 右クリックしながらドラッグします。 | 2 本指で押しながらドラッグします。 |
    | **カメラをズーム** | 3D シーンの領域の内外に移動します。 | ホイールをスクロールします。 | 2 本指でピンチします。 |
    | **カメラを中心に戻す** | カメラを中心の位置に戻し、3D シーンのオブジェクトに合わせます。 | ダブルクリックします。 | ダブルタップします。 |
-   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |  |  |
-   | **全画面表示モード** | フルスクリーンモードに入るには、ページの右下隅にあるフルスクリーンアイコンを選択します。 |  |  |
+   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |   |   |
+   | **全画面表示モード** | フルスクリーンモードに入るには、ページの右下隅にあるフルスクリーンアイコンを選択します。 |   |   |
 
 ## 3D メディアコンポーネントの操作について {#working-with-three-d-media-component}
 
@@ -287,8 +287,8 @@ Experience Manager を WCM として使用して&#x200B;*いない*&#x200B;場�
 
 * **[!UICONTROL URL]** - サードパーティの Web コンテンツ管理システムを使用していて、ディメンショナルビューアを使用して Dynamic Media 3D アセットを Web ページにリンクする場合は、「**[!UICONTROL URL]**」を使用します。
 
-   [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照してください。
+  [Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)を参照してください。
 
 * **[!UICONTROL 埋め込み]** - Web ページに埋め込まれた Dynamic Media 3D アセットをディメンショナルビューアで表示する場合は、「**[!UICONTROL 埋め込み]**」を使用します。埋め込みコードをクリップボードにコピーして、Web ページに貼り付けることができます。**[!UICONTROL 埋め込み]**&#x200B;ダイアログボックスでは、コードの編集はできません。
 
-   [Web ページへの Dynamic Media ビデオ、画像ビューア、またはディメンショナルビューアの埋め込み](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page)を参照してください。
+  [Web ページへの Dynamic Media ビデオ、画像ビューア、またはディメンショナルビューアの埋め込み](/help/assets/embed-code.md#embedding-the-video-or-image-viewer-on-a-web-page)を参照してください。

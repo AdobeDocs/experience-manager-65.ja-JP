@@ -11,10 +11,10 @@ topic-tags: spa
 discoiquuid: 6c320633-ce0b-4eb1-bb54-05e1a514d139
 docset: aem65
 exl-id: ca4c3161-90a8-4c02-8554-125eac62dff7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 100%
+source-wordcount: '192'
+ht-degree: 81%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform Launch は、Analytics、Target および Audience Man
 
 >[!NOTE]
 >
->SPA エディターは、SPA フレームワークを基にしたクライアントサイドレンダリング（React など）が必要なプロジェクトで有効なソリューションです。
+>SPA Editor は、SPAフレームワークベースのクライアントサイドレンダリング (React やAngularなど ) が必要なプロジェクトで推奨されるソリューションです。
 
 ## チュートリアル {#tutorial}
 
@@ -34,4 +34,4 @@ SPA と Adobe Experience Platform Launch の統合方法を理解するには、
 >
 >AEM SPA エディターを利用しない SPA と Adobe Experience Platform Launch の統合を有効にするために、参照用 KB が作成されました。また、これらの方法を使用すると、Adobe Experience Platform Launch の統合が、SPA エディターを使用するように構築された SPA と共存できます。
 >
->JavaScript SPA ライブラリと共に Redux を使用する方法については、まだ完全には確認されていません。Redux のサポートは、SPA エディターの今後のリリースで提供される予定です。
+>JavaScript SPAライブラリと共に Redux を使用する方法については、まだ完全には確認されていません。 Redux のサポートは、SPA エディターの今後のリリースで提供される予定です。

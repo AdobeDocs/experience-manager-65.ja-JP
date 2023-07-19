@@ -6,10 +6,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: deploying
 exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
-source-git-commit: 69346a710708ee659ee97e9fdc193c8ea2658fe6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 40%
+source-wordcount: '1165'
+ht-degree: 39%
 
 ---
 
@@ -46,7 +46,7 @@ AEMは、デプロイする単一の war ファイルとして提供されます
 * 実行モードは `author`
 * インスタンス（リポジトリ、Felix OSGI 環境、バンドルなど）が `${user.dir}/crx-quickstart`場所 `${user.dir}` は現在の作業ディレクトリで、crx-quickstart へのこのパスは `sling.home`
 
-* コンテキストルートは war ファイル名（例：`aem-6`） 
+* コンテキストルートは、war ファイル名です。例： `aem-6`
 
 #### 設定 {#configuration}
 
@@ -131,7 +131,7 @@ AEMは、デプロイする単一の war ファイルとして提供されます
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-deployment-scanner を使用してAEM Web アプリケーションをインストールする場合は、 `deployment-timeout,` そういうわけで `deployment-timeout` 属性をインスタンスの xml ファイルに含める ( 例： `configuration/standalone.xml)`:
+deployment-scanner を使用してAEM Web アプリケーションをインストールする場合は、 `deployment-timeout,` そういうわけで `deployment-timeout` インスタンスの xml ファイルの属性 ( 例： `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -241,7 +241,7 @@ deployment-scanner を使用してAEM Web アプリケーションをインス�
       * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定
       * web.xml ファイルを再圧縮
 
-   * AEM war ファイルをルート Web アプリとしてデプロイする場合は、名前を ROOT.war に変更し、aemauthor をコンテキストルートとして使用する場合は、名前を aemauthor.war に変更します。
+   * AEM war ファイルをルート Web アプリとしてデプロイする場合は、名前を ROOT.war に変更します。aemauthor をコンテキストルートとして使用する場合は、名前を aemauthor.war に変更します。
    * tomcat の webapps フォルダーにコピーします。
    * AEMがインストールされるまで待つ
 

@@ -1,47 +1,47 @@
 ---
 title: ContextHub UI モジュールタイプのサンプル
 seo-title: Sample ContextHub UI Module Types
-description: ContextHub には、ソリューションで利用できる UI モジュールのサンプルが用意されています
+description: ContextHub には、ソリューションで使用できるいくつかのサンプル UI モジュールが用意されています
 seo-description: ContextHub provides several sample UI modules that you can use in your solutions
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
 content-type: reference
 exl-id: df28180f-7af4-437d-8e91-bfd305f73113
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1176'
-ht-degree: 100%
+ht-degree: 48%
 
 ---
 
 # ContextHub UI モジュールタイプのサンプル {#sample-contexthub-ui-module-types}
 
-ContextHub には、ソリューションで利用できる UI モジュールのサンプルが用意されています。次の情報が提供されます。
+ContextHub には、ソリューションで使用できるいくつかのサンプル UI モジュールが用意されています。 次の情報が提供されます。
 
-* UI モジュールの主な機能。
-* 学習用に参照できるソースコードの場所。
+* UI モジュールの主な機能です。
+* 学習目的で開くことのできるソースコードの場所。
 * UI モジュールの設定方法。
 
-UI モジュールの ContextHub への追加については、[UI モジュールの追加](ch-configuring.md#adding-a-ui-module)を参照してください。UI モジュールの作成については、[ContextHub UI モジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types)を参照してください。
+ContextHub への UI モジュールの追加について詳しくは、 [UI モジュールの追加](ch-configuring.md#adding-a-ui-module). UI モジュールの開発について詳しくは、 [ContextHub UI モジュールタイプの作成](/help/sites-developing/ch-extend.md#creating-contexthub-ui-module-types).
 
 ## contexthub.base UI モジュールタイプ {#contexthub-base-ui-module-type}
 
-contexthub.base UI モジュールタイプは、その他すべての UI モジュールタイプのベースタイプです。したがって、ストアデータをレンダリングするための汎用的な機能を提供します。
+contexthub.base UI モジュールタイプは、他のすべての UI モジュールタイプのベースタイプです。 したがって、ストアデータをレンダリングするための汎用機能を提供します。
 
 次の機能を使用できます。
 
-* **タイトルとアイコン：** UI モジュールのタイトルとアイコンを指定します。アイコンは、URL を使用して、または Coral UI アイコンライブラリから参照できます。
-* **ストアデータ：**&#x200B;データの取得元とするストアを 1 つ以上指定します。
-* **コンテンツ：** UI モジュールが ContextHub のツールバーに表示されるときに UI モジュールに表示するコンテンツを指定します。
-* **ポップオーバーのコンテンツ：** UI モジュールをクリックまたはタップするとポップオーバーに表示されるコンテンツを指定します。
-* **全画面モード：**&#x200B;全画面モードを許可するかどうかを制御します。
+* **タイトルとアイコン：** UI モジュールのタイトルとアイコンを指定します。 このアイコンは、URL または Coral UI アイコンライブラリから参照できます。
+* **ストアデータ：** データの取得元となる 1 つ以上のストアを特定します。
+* **コンテンツ：** UI モジュールに表示されるコンテンツを、ContextHub ツールバーに表示されるとおりに指定します。
+* **ポップオーバーの内容：** UI モジュールをクリックまたはタップしたときにポップオーバーに表示されるコンテンツを指定します。
+* **全画面表示モード：** 全画面モードを許可するかどうかを制御します。
 
 ソースコードは、/libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js にあります。
 
 ### 設定 {#configuration}
 
-contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェクトを使用して設定します。UI モジュールの機能を設定するには、次のいずれかのプロパティを含めます。
+JSON 形式の JavaScript オブジェクトを使用して、contexthub.base UI モジュールを設定します。 UI モジュールの機能を設定するには、次のいずれかのプロパティを含めます。
 
 * **image：**&#x200B;アイコンとして表示する画像への URL。
 * **icon：** [Coral UI アイコン](https://helpx.adobe.com/jp/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)クラスの名前。icon プロパティと image プロパティの両方に値を指定した場合は、image が使用されます。
@@ -52,18 +52,18 @@ contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェ�
 * **template：** ContextHub のツールバーにレンダリングするコンテンツを指定する [Handlebars](https://handlebarsjs.com/) テンプレート。最大 2 つの `<p>` タグを使用します。
 
 * **storeMapping：**&#x200B;キーとストアのマッピング。Handlebar テンプレートでキーを使用して、関連付けられている ContextHub ストアデータにアクセスします。
-* **list：** UI モジュールをクリックしたときに、ポップオーバーにリストとして表示する項目の配列。この項目を含める場合は、popoverTemplate を含めないでください。値は、次のキーを持つオブジェクトの配列です。
+* **list：** UI モジュールをクリックしたときに、ポップオーバーにリストとして表示する項目の配列。この項目を含める場合は、popoverTemplate を含めないでください。 値は、次のキーを持つオブジェクトの配列です。
 
-   * title：この項目に対して表示するテキスト
-   * image：（オプション）左側に表示する画像への URL
-   * icon：（オプション）左側に表示する CUI アイコンクラス。image が指定されている場合は無視されます。
-   * selected：（オプション）選択された場合（true = 選択）にこの項目を表示するかどうかを指定するブール値。デフォルトでは、選択された項目は太字のフォントで表示されます。その他の外観を設定するには、`listType` プロパティを使用します（以下を参照）。
+   * タイトル：この項目に対して表示するテキスト
+   * 画像：（オプション）左側に表示する画像への URL
+   * アイコン：（オプション）左側に表示する CUI アイコンクラス。画像が指定されている場合は無視されます
+   * 選択済み：（オプション）この項目を選択された状態で表示するかどうかを指定する boolean 値 (true=selected)。 デフォルトでは、選択した項目は太字フォントで表示されます。 その他の外観を設定するには、`listType` プロパティを使用します（以下を参照）。
 
 * **listType：**&#x200B;ポップオーバーリスト項目に使用するスタイル。次のいずれかの値を使用します。
 
    * チェックマーク
    * チェックボックス
-   * radio
+   * 無線
 
 * **popoverTemplate：** UI モジュールをクリックしたときにポップオーバーにレンダリングするコンテンツを指定する Handlebars テンプレート。この項目を含める場合は、`list` 項目を含めないでください。
 
@@ -86,15 +86,15 @@ contexthub.base UI モジュールは、JSON 形式の JavaScript オブジェ�
 
 ## contexthub.browserinfo UI モジュールタイプ {#contexthub-browserinfo-ui-module-type}
 
-contexthub.browserinfo UI モジュールは、クライアント Web ブラウザーとオペレーティングシステムに関する情報を表示します。情報は、[contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) ストア候補をベースとする surferinfo ストアから取得されます。
+contexthub.browserinfo UI モジュールは、クライアント Web ブラウザーとオペレーティングシステムに関する情報を表示します。 情報は、[contexthub.surferinfo](/help/sites-developing/ch-samplestores.md#contexthub-surferinfo-sample-store-candidate) ストア候補をベースとする surferinfo ストアから取得されます。
 
 ![chlimage_1-77](assets/chlimage_1-77a.png)
 
-この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
+この UI モジュールのソースコードは、/libs/granite/contexthub/components/modules/browserinfo にあります。contexthub.browserinfo は contexthub.base UI モジュールを拡張したものですが、追加の関数を上書きまたは提供しません。 この実装は、ブラウザー情報をレンダリングするためのデフォルトの設定を提供します。
 
 ### 設定 {#configuration-1}
 
-contexthub.browserinfo UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+contexthub.browserinfo UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {
@@ -117,7 +117,7 @@ contexthub.datetime UI モジュールのソースは、/libs/granite/contexthub
 
 ### 設定 {#configuration-2}
 
-contexthub.datetime UI モジュールのインスタンスは、詳細設定用の値を必要としません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+contexthub.datetime UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {
@@ -132,7 +132,7 @@ contexthub.datetime UI モジュールのインスタンスは、詳細設定用
 
 ## contexthub.location UI モジュールタイプ {#contexthub-location-ui-module-type}
 
-contexthub.location UI モジュールは、クライアントの緯度と経度を表示します。このモジュールは、クリックして現在の位置を変更できる Google マップを表示するポップオーバーを提供します。このモジュールは、[contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) ストア候補をベースとする、geolocation という名前の ContextHub ストアから情報を取得します。
+contexthub.location UI モジュールは、クライアントの緯度と経度を表示します。 このモジュールは、クリックして現在の位置を変更できるGoogleマップを表示するポップオーバーを提供します。 このモジュールは、 [contexthub.geolocation](/help/sites-developing/ch-samplestores.md#contexthub-geolocation-sample-store-candidate) ストア候補。
 
 ![chlimage_1-80](assets/chlimage_1-80a.png)
 
@@ -140,7 +140,7 @@ contexthub.location UI モジュールは、クライアントの緯度と経度
 
 ### 設定 {#configuration-4}
 
-contexthub.location UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+contexthub.location UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {
@@ -175,7 +175,7 @@ contexthub.location UI モジュールのインスタンスには、詳細設定
 
 ## contexthub.screen-orientation UI モジュールタイプ {#contexthub-screen-orientation-ui-module-type}
 
-contexthub.screen-orientation UI モジュールは、クライアントの現在の画面の向きを表示します。デフォルトでは無効になっていますが、このモジュールは向きを選択できるポップオーバーを提供します。このモジュールは、[granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) ストア候補をベースとする、emulators という名前の ContextHub ストアから情報を取得します。
+contexthub.screen-orientation UI モジュールは、クライアントの現在の画面の向きを表示します。 デフォルトでは無効になっていますが、このモジュールは向きを選択できるポップオーバーを提供します。このモジュールは、[granite.emulators](/help/sites-developing/ch-samplestores.md#granite-emulators-sample-store-candidate) ストア候補をベースとする、emulators という名前の ContextHub ストアから情報を取得します。
 
 ![chlimage_1-81](assets/chlimage_1-81a.png)
 
@@ -183,7 +183,7 @@ contexthub.screen-orientation UI モジュールは、クライアントの現�
 
 ### 設定 {#configuration-5}
 
-contexthub.screen-orientation UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。`clickable` プロパティは、デフォルトでは `false` です。デフォルトの設定を上書きして `clickable` を `true` に設定した場合、このモジュールをクリックするとポップアップが表示され、向きを選択できます。
+contexthub.screen-orientation UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。`clickable` プロパティは、デフォルトでは `false` です。デフォルトの設定を上書きして `clickable` を `true` に設定した場合、このモジュールをクリックするとポップアップが表示され、向きを選択できます。
 
 ```xml
 {
@@ -199,7 +199,7 @@ contexthub.screen-orientation UI モジュールのインスタンスには、�
 
 ## contexthub.tagcloud UI モジュールタイプ {#contexthub-tagcloud-ui-module-type}
 
-contexthub.tagcloud UI モジュールは、タグに関する情報を表示します。この UI モジュールは、ツールバーに多数のタグを表示します。ポップアップには、タグクラウドと新しいタグを追加するためのテキストボックスが表示されます。この UI モジュールは、[contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) ストア候補をベースとする、tagcloud という名前の ContextHub ストアから情報を取得します。
+contexthub.tagcloud UI モジュールは、タグに関する情報を表示します。 ツールバーの UI モジュールにはタグの数が表示されます。 ポップアップに、新しいタグを追加するためのタグクラウドとテキストボックスが表示されます。 この UI モジュールは、 [contexthub.tagcloud](/help/sites-developing/ch-samplestores.md#contexthub-tagcloud-sample-data-store) ストア候補。
 
 ![chlimage_1-82](assets/chlimage_1-82a.png)
 
@@ -207,7 +207,7 @@ contexthub.tagcloud UI モジュールは、タグに関する情報を表示し
 
 ### 設定 {#configuration-6}
 
-contexthub.tagcloud UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+contexthub.tagcloud UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {
@@ -223,7 +223,7 @@ contexthub.tagcloud UI モジュールのインスタンスには、詳細設定
 
 ## granite.profile UI モジュールタイプ {#granite-profile-ui-module-type}
 
-granite.profile ContextHub UI モジュールは、現在のユーザーの表示名を表示します。ポップアップにはユーザーのログイン名が表示され、表示名の値を変更できます。この UI モジュールは、[granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア候補をベースとする、profile という名前の ContextHub ストアから情報を取得します。
+granite.profile ContextHub UI モジュールは、現在のユーザーの表示名を表示します。 ポップアップにはユーザーのログイン名が表示され、表示名の値を変更できます。 この UI モジュールは、 [granite.profile](/help/sites-developing/ch-samplestores.md#granite-profile-sample-store-candidate) ストア候補。
 
 ![chlimage_1-83](assets/chlimage_1-83a.png)
 
@@ -231,7 +231,7 @@ granite.profile ContextHub UI モジュールは、現在のユーザーの表�
 
 ### 設定 {#configuration-7}
 
-contexthub.profile UI モジュールのインスタンスには、詳細設定用の値は必要ありません。次の JSON テキストは、モジュールのデフォルトの設定を表しています。
+grantie.profile UI モジュールのインスタンスには、詳細設定用の値は必要ありません。 次の JSON テキストは、モジュールのデフォルトの設定を表しています。
 
 ```xml
 {

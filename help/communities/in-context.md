@@ -1,7 +1,7 @@
 ---
 title: コンテキスト内モデレート
 seo-title: In-Context Moderation
-description: モデレートアクションを実行する方法
+description: モデレーターの操作を実行する方法
 seo-description: How to perform moderator actions
 uuid: 282a8bea-2822-4e5c-b9f4-4d9a5380d895
 contentOwner: Janice Kendall
@@ -11,16 +11,16 @@ content-type: reference
 discoiquuid: ee104f6f-123b-4a6e-9031-849fc1318cc5
 role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
-source-git-commit: 603518dbe3d842a08900ac40651919c55392b573
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 44%
+source-wordcount: '788'
+ht-degree: 1%
 
 ---
 
 # コンテキスト内モデレート {#in-context-moderation}
 
-AEM Communities では、管理者と信頼されているコミュニティメンバーが、コミュニティコンテンツをそのコンテンツが投稿された公開済みのページ上で直接モデレートできます。
+AEM Communitiesの場合、管理者や信頼できるコミュニティメンバーは、コミュニティコンテンツが投稿された公開済みページで直接モデレートを実行できます。
 
 を使用する場合 [モデレートコンソール](moderation.md)コンテンツに対して表示される情報には、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできるように、公開済みページへのリンクが含まれます。
 
@@ -30,7 +30,7 @@ AEM Communities では、管理者と信頼されているコミュニティメ�
 
 ## モデレート UI {#moderation-ui}
 
-パブリッシュインスタンスで使用できるモデレーター用の UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内にあります。UI の要素は、サイト訪問者のステータス ( 訪問者が
+パブリッシュインスタンスのモデレーターに表示される UI は、ユーザー生成コンテンツ (UGC) の投稿と管理を行うためのダイアログ内に含まれています。 UI の要素は、サイト訪問者のステータス ( 訪問者が
 
 1. コンテンツを投稿したメンバー。
 1. 信頼できるメンバーモデレーター。
@@ -40,62 +40,62 @@ AEM Communities では、管理者と信頼されているコミュニティメ�
 
 ## 例 {#example}
 
-以下に示すように、[AEM Communities 使用の手引き](getting-started.md)で作成した [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) サイトを使用して、フォーラムのスレッドを素早くセットアップし、パブリッシュ環境で様々なモデレートアクティビティを体験することができます。
+の使用 [Geometrixxエンゲージ](http://localhost:4503/content/sites/engage/en.html) 次の場合に作成されたサイト [AEM Communitiesの概要](getting-started.md)を使用すると、次に示すように、パブリッシュ環境で様々なモデレートアクティビティを体験できるフォーラムに、スレッドをすばやく設定できます。
 
-Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に community-engage-moderators グループに追加された、信頼されているコミュニティメンバーです。
+Aaron McDonald(aaron.mcdonald@mailinator.com) は、サイトの作成時に community-engage-moderators グループに追加することで、信頼できるコミュニティメンバーとして識別されました。
 
-[メンバーコンソール](members.md)を使用して、Rebekah Larsen（rebekah.larsen@trashymail.com）を community-engage-members グループのメンバーとして追加できます。
+Rebekah Larsen(rebekah.larsen@trashymail.com) は、 [メンバーコンソール](members.md).
 
-コミュニティユーザーグループについて詳しくは、[ユーザーとユーザーグループの管理](users.md)を参照してください。
+コミュニティユーザーグループの詳細については、 [ユーザーとユーザーグループの管理](users.md).
 
 ### フォーラム投稿の作成 {#create-the-forum-posts}
 
-* Rebekah Larsen（rebekah.larsen@trashymail.com）としてログインします。
+* Rebekah Larsen(rebekah.larsen@trashymail.com) としてログインします。
 
    * フォーラムを選択
    * 新しい投稿を選択
    * 件名を入力
 
-      ハミングバードフィーダーでネクターを変更するタイミング
+     ハミングバードフィーダーでネクターを変更するタイミング
 
    * 本文を入力
 
-      毎年ハチドリの餌を吊り上げる時はあまり成功していませんでした Seems they come a day or two then that is it.I change it once a week is that too long? Do I need to change it sooner?
+     毎年ハチドリの餌を吊り上げる時はあまり成功していませんでした 1 日か 2 日来るみたいですね。 1 週間に 1 回変えるのはそんなに長いの？ 早く変更する必要がありますか？
 
    * 投稿を選択
    * ログアウトを選択
 
-* Aaron McDonald（aaron.mcdonald@mailinator.com）としてログインします。
+* Aaron McDonald(aaron.mcdonald@mailinator.com) としてログインします。
 
    * フォーラムを選択
    * Hummingbird のトピックで、「詳細を表示」を選択します。
    * 返信を投稿のコメントを入力
 
-      私は週に 1 回私のを変更し、5 月から 10 月までそれらを得る。
+     私は週に 1 回私のを変更し、5 月から 10 月までそれらを得る。
 
    * 返信を選択
    * ログアウトを選択
 
-* Andrew Schaeffer（andrew.schaeffer@trashymail.com）としてログインします。
+* Andrew Schaeffer(andrew.schaeffer@trashymail.com) としてログインします。
 
    * フォーラムを選択
    * Hummingbird のトピックで、「詳細を表示」を選択します。
    * 返信を投稿のコメントを入力
 
-      私は蜜と飼料を販売しています — https://my.viral.url/にアクセスしてください
+     私は蜜と飼料を販売しています — https://my.viral.url/にアクセスしてください
 
    * 返信を選択
    * ログアウトを選択
 
-### 匿名のサイト訪問者（#5） {#anonymous-site-visitor}
+### 匿名のサイト訪問者 (#5) {#anonymous-site-visitor}
 
 以下は、サインインしていないサイト訪問者が閲覧したフォーラムのビューです (5)。
 
-匿名のサイト訪問者にできることは、フォーラムを表示することだけです。コンテンツを投稿することも、モデレートアクションを実行することもできません。
+匿名のサイト訪問者はフォーラムのみを表示できますが、コンテンツを投稿したり、モデレート操作を実行したりすることはできません。
 
 ![community-forum-visitor](assets/community-forum-visitor.png)
 
-### 新しいメンバー（#4） {#new-member}
+### 新規メンバー (#4) {#new-member}
 
 オーサー環境で、管理者としてログインし、Boyd Larsen(boyd.larsen@dodgit.com) を community-engage-members グループの新しいメンバーとして追加します。その際、 [メンバーコンソール](members.md)、次にログアウトします。
 
@@ -107,13 +107,13 @@ Aaron McDonald（aaron.mcdonald@mailinator.com）は、サイト作成時に com
 * Boyd は何も削除できません。
 * Boyd はサインインし、返信またはフラグコンテンツを実行できます。
 
-Boyd としてログインした状態で「フラグ」を選択し、Andrew が投稿したコンテンツにフラグを設定します。
+Boyd が「フラグ」を選択し、Andrew が投稿したコンテンツにフラグを設定します。
 
-ログアウトします。
+ログアウト
 
 ![community-forum-member](assets/community-forum-member.png)
 
-### 管理者（#3） {#administrator}
+### 管理者 (#3) {#administrator}
 
 管理者 (admin) としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細を表示」を選択します。
 
@@ -124,17 +124,17 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-[モデレートコンソール](moderation.md)にアクセスするには、パブリッシュ環境で「管理」メニュー項目を選択します。
+管理メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から。
 
-管理者には、Geometrixx Engage コミュニティサイトのコンテンツだけでなく、すべてのモデレート可能なコンテンツが表示されます。
+管理者の場合、GeometrixxEngage コミュニティサイトからのコンテンツだけでなく、モデレート可能なコンテンツもすべて表示されます。
 
-サイドパネルには検索フィルターがあり、開閉を切り替えることができます。
+検索フィルターは、開く/閉じるを切り替えるサイドパネルです。
 
-ログアウトします。
+ログアウト.
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### コミュニティモデレーター（#2） {#community-moderator}
+### コミュニティモデレーター (#2) {#community-moderator}
 
 コミュニティモデレーターの Aaron McDonald(aaron.mcdonal@mailinator.com) としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「詳細を表示」を選択します。
 
@@ -147,17 +147,17 @@ Boyd としてログインした状態で「フラグ」を選択し、Andrew �
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-[モデレートコンソール](moderation.md)にアクセスするには、パブリッシュ環境で「管理」メニュー項目を選択します。
+管理メニュー項目を選択して、 [モデレートコンソール](moderation.md) パブリッシュ環境から。
 
-コミュニティモデレーターには、Geometrixx Engage コミュニティサイトのモデレート可能なコンテンツだけが表示されます。
+コミュニティモデレーターの場合、GeometrixxEngage コミュニティサイトからのモデレート可能なコンテンツのみが表示されます。
 
-コミュニティモデレーターは、管理者と同じオプションを使用できます（画像では検索サイドバーは閉じています）が、他の AEM コンソールにはアクセスできません。
+コミュニティモデレーターには、管理者と同じオプション（画像は検索サイドバーを閉じた状態です）がありますが、他のAEMコンソールにはアクセスできません。
 
-ログアウトします。
+ログアウト.
 
 ![moderator-access](assets/moderator-access.png)
 
-### コンテンツ作成者（#1） {#content-author}
+### コンテンツ作成者 (#1) {#content-author}
 
 スレッドを開始したコミュニティメンバーである Rebekah Larsen(rebekah.larsen@mailinator.com) としてログインし、「フォーラム」を選択してスレッドにアクセスし、Hummingbird の投稿の「続きを読む」を選択します。
 

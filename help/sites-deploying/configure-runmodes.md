@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 12329e26-40bc-4c94-bc60-6d9cbd01345f
 feature: Configuring
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
-source-git-commit: 7d91fbdaae7ade27e9d6bf42bbcd5b16d3f6e358
-workflow-type: ht
-source-wordcount: '747'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 * [各実行モードに対する設定パラメーターのコレクションを定義する](#defining-configuration-properties-for-a-run-mode)。
 
-   すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。これらは必要に応じて適用されます。
+  すべての実行モードに対して基本的な設定パラメーターのセットが適用され、特定の環境の目的に合わせて追加のセットを調整できます。これらは必要に応じて適用されます。
 
 * [特定のモード用にインストールする追加のバンドルを定義する](#defining-additional-bundles-to-be-installed-for-a-run-mode)。
 
@@ -89,25 +89,25 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
 * `config`
 
-   すべての実行モードに適用される
+  すべての実行モードに適用される
 
 * `config.author`
 
-   オーサー実行モードに使用
+  オーサー実行モードに使用
 
 * `config.publish`
 
-   パブリッシュ実行モードに使用
+  パブリッシュ実行モードに使用
 
 * `config.<run-mode>`
 
-   該当する実行モードに使用（config など）
+  該当する実行モードに使用（config など）
 
 これらのフォルダー内で個々の設定ノードを定義する方法と、複数の実行モードの組み合わせに対する設定を作成する方法について詳しくは、[リポジトリ内の OSGi 設定](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)を参照してください。
 
 >[!NOTE]
 >
->[インストール実行モード](#installation-run-modes)（オーサーなど）の場合、インストール後に実行モードを変更できません。ただし、個々の設定プロパティに対する変更は、再起動時に有効になります。
+>の場合 [インストール実行モード](#installation-run-modes) （例えば、author）インストール後に実行モードを変更することはできません。 ただし、個々の設定プロパティに対する変更は、再起動時に有効になります。
 
 ## 実行モードにインストールする追加バンドルの定義 {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
@@ -123,8 +123,8 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 複数の実行モードの設定を定義した場合は、起動時にどれを使用するかを定義する必要があります。使用する実行モードを指定する方法はいくつかあります。解決の順序は次のとおりです。
 
 1. [システムプロパティ (](#using-a-system-property-in-the-start-script)
-1. [ ](#using-the-sling-properties-file)
-1. [ ](#using-the-r-option)
+1. [](#using-the-sling-properties-file)
+1. [](#using-the-r-option)
 1. [ファイル名検出](#filename-detection-renaming-the-jar-file)
 
 アプリケーションサーバーを使用している場合は、[web.xml で実行モードを定義](#defining-the-run-mode-in-web-xml-with-application-server)することもできます。
@@ -155,7 +155,7 @@ java -jar cq-56-p4545.jar -r dev
 
 * 例えば、US にある実稼働のパブリッシュインスタンスとしてインスタンスを起動するには、以下を使用します。
 
-   `-Dsling.run.modes=publish,prod,us`
+  `-Dsling.run.modes=publish,prod,us`
 
 ### ファイル名検出 - jar ファイルの名前変更 {#filename-detection-renaming-the-jar-file}
 

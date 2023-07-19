@@ -2,9 +2,9 @@
 title: AEM を使用したページの作成と整理
 description: AEM でページを作成および整理する方法
 exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '2525'
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '2526'
 ht-degree: 100%
 
 ---
@@ -37,10 +37,10 @@ Web サイトの構造は、コンテンツページを保持する「ツリー�
 We.Retail サイトの例を次に示します。ハイキングショーツのページ（`desert-sky-shorts`）にアクセスしています。
 
 * オーサー環境
-   `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+  `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 * パブリッシュ環境
-   `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
+  `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 インスタンスの設定によっては、パブリッシュ環境での `/content` の利用は必須ではありません。
 
@@ -102,7 +102,7 @@ We.Retail サイトの例を次に示します。ハイキングショーツの�
 >
 >ページ名を定義するときは、ページ名をできるだけ簡潔にしつつ、読者がわかりやすいようにできるだけ表現力のある覚えやすいものにすることをお勧めします。詳しくは、[ 要素の ](https://www.w3.org/Provider/Style/TITLE.html)W3C スタイルガイド`title`を参照してください。
 >
->また、一部のブラウザー（IE の旧バージョンなど）では、特定の長さまでの URL しか受け付けないので、ページ名を短くしておく技術的な理由もあります。
+>また、一部のブラウザー（旧バージョンの IE など）では、特定の長さまでの URL しか受け付けないので、ページ名を短くするには技術的な理由もあります。
 
 [新しいページを作成するとき、AEM では AEM と JCR によって課された規則に基づいてページ名が検証されます。](/help/sites-developing/naming-conventions.md)
 
@@ -206,12 +206,14 @@ AEM では、複数のテンプレートが標準提供されています。使�
    * **タイトル**：
 
       * ユーザーに表示される、必須のフィールドです。
+
    * **名前**：
 
       * これは URI の生成に使用されます。指定しない場合、名前はタイトルから派生します。
       * 新しいページを作成するときにページの「**名前**」を指定すると、AEM では AEM と JCR [の規則に基づいてページ名が検証されます](/help/sites-developing/naming-conventions.md)。
 
       * 「**名前**」フィールドに&#x200B;**無効な文字は指定できません**。AEM で無効な文字が検出されると、そのフィールドは強調表示され、対象の文字を削除または置換する必要があることを示す説明メッセージが表示されます。
+
    >[!NOTE]
    >
    >詳しくは、[ページ命名規則](#page-naming-conventions)を参照してください。
@@ -338,6 +340,7 @@ AEM では、名前変更または移動が行われるページへの内部リ�
 
       * 移動先のサムネールをクリックして、移動先を選択します。
       * 「**次へ**」をクリックして次に進みます。
+
    * 「**戻る**」を使用してページ名の指定に戻ります。
 
    >[!NOTE]
@@ -383,7 +386,7 @@ AEM では、名前変更または移動が行われるページへの内部リ�
       * **今すぐ**：非同期ジョブの実行を今すぐ開始します。
       * **後で**：非同期ジョブを開始するタイミングをユーザーが定義できます。
 
-         ![非同期ページ移動](assets/asynchronous-page-move.png)
+        ![非同期ページ移動](assets/asynchronous-page-move.png)
 
 非同期ジョブの状態は、[**非同期ジョブステータス**&#x200B;ダッシュボード](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)（**グローバルナビゲーション**／**ツール**／**操作**／**ジョブ**）で確認できます。
 
@@ -438,7 +441,6 @@ AEM では、名前変更または移動が行われるページへの内部リ�
 >* 標準のアクション（移動、コピー、貼り付け、削除、公開、非公開、プロパティの表示／編集）は、フォルダーに対して実行できます。
 >* ライブコピー内ではフォルダーを選択できません。
 >
-
 
 1. **Sites** コンソールを開いて、必要な場所まで移動します。
 1. オプションリストを開くには、ツールバーの「**作成**」を選択します。

@@ -1,7 +1,7 @@
 ---
 title: URL の外部化
 seo-title: Externalizing URLs
-description: Externalizer は、プログラムによってリソースパスを外部 URL および絶対 URL に変換できる OSGi サービスです
+description: Externalizer は、プログラムによってリソースパスを外部および絶対 URL に変換できる OSGi サービスです
 seo-description: The Externalizer is an OSGI service that allows you to programmatically transform a resource path into an external and absolute URL
 uuid: 65bcc352-fc8c-4aa0-82fb-1321a035602d
 contentOwner: Guillaume Carlino
@@ -11,20 +11,20 @@ content-type: reference
 discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 100%
+source-wordcount: '501'
+ht-degree: 83%
 
 ---
 
 # URL の外部化{#externalizing-urls}
 
-AEM の **Externalizer** は、プログラムによってリソースパス（例：`/path/to/my/page`）を外部の絶対 URL（例：`https://www.mycompany.com/path/to/my/page`）に変換できるようにする OSGi サービスであり、その変換はパスに事前設定済みの DNS をプレフィックスとして付けることで実現します。
+AEMで、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/page`) を外部 URL や絶対 URL( 例えば、 `https://www.mycompany.com/path/to/my/page`) を追加する必要があります。
 
 インスタンスが Web レイヤーの背後で実行されている場合、自身の外部向け URL がわかりません。また、リンクをリクエストスコープの範囲外で作成する必要がある場合があります。これらの理由で、このサービスは、そのような外部 URL を設定して組み立てるための一元化された場所を提供します。
 
-このページでは、**Externalizer** サービスの設定方法と使用方法について説明します。詳しくは、関連する [Javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
+このページでは、 **Externalizer** サービスとその使用方法について説明します。 詳しくは、 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Externalizer サービスの設定 {#configuring-the-externalizer-service}
 
@@ -54,6 +54,7 @@ AEM の **Externalizer** は、プログラムによってリソースパス（�
 
       * 必要に応じて、https を使用して https リンクを強制的に適用します。
       * URL の外部化を要求する際にクライアントコードがスキームを上書きしない場合に使用されます。
+
    * **server** はホスト名です（ドメイン名または IP アドレス）。
    * **port**（オプション）はポート番号です。
    * **contextpath**（オプション）は、AEM が異なるコンテキストパスの下の Web アプリケーションとしてインストールされている場合に限り設定します。
@@ -100,7 +101,6 @@ AEM の **Externalizer** は、プログラムによってリソースパス（�
 
    * `https://www.website.com/contextpath/my/page.html`
 
-
 1. **「author」ドメインを付与してパスを外部化するには：**
 
    ```java
@@ -115,7 +115,6 @@ AEM の **Externalizer** は、プログラムによってリソースパス（�
 
    * `https://author.website.com/contextpath/my/page.html`
 
-
 1. **「local」ドメインを付与してパスを外部化するには：**
 
    ```java
@@ -129,6 +128,5 @@ AEM の **Externalizer** は、プログラムによってリソースパス（�
    `myExternalizedUrl` が次の値で終わる。
 
    * `https://publish-3.internal/contextpath/my/page.html`
-
 
 1. 他の例については、関連する [Javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。

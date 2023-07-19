@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
-source-git-commit: afc72fb6b324cf2e0ad8168f783d9c1a6f96c614
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '647'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -54,7 +54,6 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
    >* Assets Insights ページトラッカーがホストされる場所（例えば、Experience Manager や CDN など）によっては、スクリプトソースのオリジナルを変更する必要があります。
    >* Experience Manager でホストされるページトラッカーの場合、ソースがディスパッチャーインスタンスのホスト名を使用してパブリッシュインスタンスを指す必要があります。
 
-
 1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。ツールを作成する際に、「**[!UICONTROL 設定方法]**」を「**[!UICONTROL 自動]**」に設定できます。
 
    ![Adobe Analytics ツールを追加します。](assets/Add-Adobe-Analytics-Tool.png)
@@ -91,10 +90,10 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
              "",  /** RSID to send tracking-call to */
              "",  /** Tracking Server to send tracking-call to */
              "",  /** Visitor Namespace to send tracking-call to */
-             "",  /** listVar to put comma-separated-list of Asset IDs for Asset Impression Events in tracking-call, e.g. 'listVar1' */
-             "",  /** eVar to put Asset ID for Asset Click Events in, e.g. 'eVar3' */
-             "",  /** event to include in tracking-calls for Asset Impression Events, e.g. 'event8' */
-             "",  /** event to include in tracking-calls for Asset Click Events, e.g. 'event7' */
+             "",  /** listVar to put comma-separated-list of Asset IDs for Asset Impression Events in tracking-call, for example, 'listVar1' */
+             "",  /** eVar to put Asset ID for Asset Click Events in, for example, 'eVar3' */
+             "",  /** event to include in tracking-calls for Asset Impression Events, for example, 'event8' */
+             "",  /** event to include in tracking-calls for Asset Click Events, for example, 'event7' */
              sObj  /** [OPTIONAL] if the webpage already has an AppMeasurement object, include the object here. If unspecified, Pagetracker Core shall create its own AppMeasurement object */
              );
        sObj.usePlugins = true;
@@ -110,8 +109,8 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
    * DTM のページ読み込みルールには、`pagetracker.js` コードのみが含まれています。`assetAnalytics` のフィールドはすべて、デフォルト値の上書きと見なされます。これらは、デフォルトでは必要ありません。
    * このコードは、`assetAnalytics.dispatcher.init()` を呼び出す前に、`_satellite.getToolsByType('sc')[0].getS()` が初期化され、`assetAnalytics,dispatcher.init` が使用可能であることを確認します。このため、手順 11 ではこのコードの追加をスキップできます。
    * Insights ページトラッカーコード（**[!UICONTROL ツール／Assets／Insights ページトラッカー]**）内のコメントに記述されているように、ページトラッカーが `AppMeasurement` オブジェクトを作成しないとき、最初の 3 つの引数（RSID、トラッキングサーバー、訪問者の名前空間）は関係ありません。これを示すため代わりに空の文字列が渡されます。\
-       その他の引数は、インサイト設定ページ（**[!UICONTROL ツール／アセット／インサイト設定]**）で設定された内容に対応しています。
-   * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグが設定されている場合は、配列セレクターのインデックスをそれに応じて変更します。配列のエントリは、DTM インターフェイスで使用可能な SiteCatalyst ツールの順に並んでいます。
+      その他の引数は、インサイト設定ページ（**[!UICONTROL ツール／アセット／インサイト設定]**）で設定された内容に対応しています。
+   * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグを設定する場合は、配列セレクターのインデックスを適切に変更します。 配列内のエントリは、DTM インターフェイスで使用できるSiteCatalystツールに従って並べ替えられます。
 
 1. 保存して、コードエディターウィンドウを閉じます。その後、変更内容をツール設定で保存します。
 1. 「**[!UICONTROL 承認]**」タブで、承認が保留されている両方の項目を承認します。DTM タグを Web ページに挿入する準備ができました。

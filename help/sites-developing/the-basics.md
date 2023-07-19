@@ -10,10 +10,10 @@ topic-tags: introduction
 content-type: reference
 discoiquuid: 6e913190-be92-4862-a8b9-517f8bde0044
 exl-id: f6f32290-422e-4037-89d8-d9f414332e8e
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: ht
-source-wordcount: '3324'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '3327'
+ht-degree: 98%
 
 ---
 
@@ -137,8 +137,8 @@ Sling を使用して、特定のエンティティをレンダリングする�
 
 リクエストを分解し、必要な情報を抽出します。リポジトリーで、リクエストされたリソース（コンテンツノード）を検索します。
 
-* 最初の Sling では、リクエストで指定された場所（例：`../content/corporate/jobs/developer.html`）にノードが存在するかどうかを確認します。
-* ノードが見つからない場合、拡張子なしで検索を繰り返します（例：`../content/corporate/jobs/developer`）。
+* 最初の Sling は、リクエストで指定された場所にノードが存在するかどうかを確認します。例： `../content/corporate/jobs/developer.html`
+* ノードが見つからない場合、拡張機能は削除され、検索が繰り返されます。例： `../content/corporate/jobs/developer`
 * それでもノードが見つからない場合、Sling は HTTP コード 404（Not Found）を返します。
 
 Sling では JCR 以外のノードもリソースとして扱えますが、これは詳細な機能です。
@@ -152,7 +152,7 @@ Sling では JCR 以外のノードもリソースとして扱えますが、こ
 * 絶対パス
 * 設定パラメーターに対する相対パス
 
-   移植性を高めるため、アドビでは相対パスを推奨しています。
+  移植性を高めるため、アドビでは相対パスを推奨しています。
 
 Sling のスクリプトはすべて、`/apps` または `/libs` のサブフォルダーに格納され、この順序で検索されます（[コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)を参照）。
 
@@ -175,39 +175,39 @@ AEM の特定のインスタンスでサポートされているスクリプト�
 
 * GET/HEAD リクエストおよび .html で終わる URL（デフォルトのリクエストタイプ、デフォルトの形式）
 
-   スクリプトは /apps/hr/jobs/jobs.esp です。sling:resourceType の最後のセクションがファイル名となります。
+  スクリプトは /apps/hr/jobs/jobs.esp です。sling:resourceType の最後のセクションがファイル名となります。
 
 * POST リクエスト（GET／HEAD を除くすべてのリクエストタイプ。メソッド名は大文字にする必要があります）
 
-   スクリプト名には POST が使用されます。
+  スクリプト名には POST が使用されます。
 
-   スクリプトは `/apps/hr/jobs/jobs.POST.esp` です。
+  スクリプトは `/apps/hr/jobs/jobs.POST.esp` です。
 
 * .html で終わらない、他の形式の URL です。
 
-   例：`../content/corporate/jobs/developer.pdf`
+  例：`../content/corporate/jobs/developer.pdf`
 
-   スクリプトは `/apps/hr/jobs/jobs.pdf.esp` です。スクリプト名にサフィックスが追加されます。
+  スクリプトは `/apps/hr/jobs/jobs.pdf.esp` です。スクリプト名にサフィックスが追加されます。
 
 * セレクターを含む URL
 
-   セレクターを使用して、同じコンテンツを別の形式で表示できます。例：プリンターに適したバージョン、rss フィード、概要など。
+  セレクターを使用して、同じコンテンツを別の形式で表示できます。例：プリンターに適したバージョン、rss フィード、概要など。
 
-   プリンターに適したバージョンでは、セレクターが *print* である可能性がります。例：`../content/corporate/jobs/developer.print.html`
+  プリンターに適したバージョンでは、セレクターが *print* である可能性がります。例：`../content/corporate/jobs/developer.print.html`
 
-   スクリプトは `/apps/hr/jobs/jobs.print.esp` です。セレクターがスクリプト名に追加されます。
+  スクリプトは `/apps/hr/jobs/jobs.print.esp` です。セレクターがスクリプト名に追加されます。
 
 * sling:resourceType が定義されていない場合は、次のようになります。
 
    * コンテンツパスは、適切なスクリプトを検索するために使用されます（パスに基づいた ResourceTypeProvider がアクティブな場合）。
 
-      例えば、`../content/corporate/jobs/developer.html` のスクリプトは、`/apps/content/corporate/jobs/` で検索を生成します。
+     例えば、`../content/corporate/jobs/developer.html` のスクリプトは、`/apps/content/corporate/jobs/` で検索を生成します。
 
    * プライマリノードタイプが使用されます。
 
 * スクリプトがまったく見つからない場合は、デフォルトのスクリプトが使用されます。
 
-   デフォルトのレンディションは現在、プレーンテキスト（.txt）、HTML（.html）、JSON（.json）としてサポートされています。これらのレンディションでは、ノードのプロパティが（適切にフォーマットされて）リストされます。拡張子 .res のデフォルトのレンディション、またはリクエスト拡張子のない要求は、（可能な場合は）リソースをスプールします。
+  デフォルトのレンディションは現在、プレーンテキスト（.txt）、HTML（.html）、JSON（.json）としてサポートされています。これらのレンディションでは、ノードのプロパティが（適切にフォーマットされて）リストされます。拡張子 .res のデフォルトのレンディション、またはリクエスト拡張子のない要求は、（可能な場合は）リソースをスプールします。
 * HTTP エラー処理（コード 403 または 404）の場合、Sling は以下のいずれかの場所でスクリプトを検索します。
 
    * それぞれ、[カスタマイズされたスクリプト](/help/sites-developing/customizing-errorhandler-pages.md)の場所 /apps/sling/servlet/errorhandler 
@@ -246,19 +246,19 @@ AEM の特定のインスタンスでサポートされているスクリプト�
    * b
 
       * sling:resourceSuperType = a
+
    * c
 
       * sling:resourceSuperType = b
+
    * x
 
       * sling:resourceType = c
+
    * y
 
       * sling:resourceType = c
       * sling:resourceSuperType = a
-
-
-
 
 タイプの階層は
 
@@ -325,7 +325,7 @@ OSGi は、モジュール式アプリケーションおよびライブラリを
 * 更新
 * アンインストール
 * 現在のステータスの確認
-* 特定のバンドルに関する詳細情報（記号名、バージョン、場所など）へのアクセス
+* 特定のバンドルに関する詳細な情報（シンボリック名、バージョン、場所など）にアクセス
 
 詳しくは、[Web コンソール](/help/sites-deploying/web-console.md)、[OSGI 設定](/help/sites-deploying/configuring-osgi.md)、および [OSGi 設定の指定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください。
 
@@ -416,29 +416,29 @@ pageManager はページマネージャーオブジェクト、myResource はリ
 
 * `/apps`
 
-   関連するアプリケーション。Web サイトに固有のコンポーネント定義を含めます。コンポーネントは、`/libs/foundation/components` で利用可能な標準搭載のコンポーネントに基づいて開発することができます。
+  関連するアプリケーション。Web サイトに固有のコンポーネント定義を含めます。コンポーネントは、`/libs/foundation/components` で利用可能な標準搭載のコンポーネントに基づいて開発することができます。
 
 * `/content`
 
-   Web サイト用に作成したコンテンツ。
+  Web サイト用に作成したコンテンツ。
 
 * `/etc`
 
 * `/home`
 
-   ユーザーおよびグループの情報。
+  ユーザーおよびグループの情報。
 
 * `/libs`
 
-   AEM のコアに属するライブラリと定義。`/libs` のサブフォルダーは、検索やレプリケーションなどの標準搭載の AEM 機能を表します。AEM の動作に影響するため、`/libs` のコンテンツは変更しないでください。Web サイトに固有の機能は `/apps` の下で開発する必要があります（[コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)を参照）。
+  AEM のコアに属するライブラリと定義。`/libs` のサブフォルダーは、検索やレプリケーションなどの標準搭載の AEM 機能を表します。AEM の動作に影響するため、`/libs` のコンテンツは変更しないでください。Web サイトに固有の機能は `/apps` の下で開発する必要があります（[コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)を参照）。
 
 * `/tmp`
 
-   一時作業領域。
+  一時作業領域。
 
 * `/var`
 
-   監査ログ、統計、イベント処理など、変化し、システムによって更新されるファイル。
+  監査ログ、統計、イベント処理など、変化し、システムによって更新されるファイル。
 
 ## 環境 {#environments}
 

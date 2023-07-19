@@ -10,10 +10,10 @@ content-type: reference
 discoiquuid: 2aef9048-9d6e-4f5d-b443-5e73f8066d76
 docset: aem65
 exl-id: 9ef9ae75-cd8c-4adb-9bcb-e951d200d492
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 100%
+source-wordcount: '460'
+ht-degree: 95%
 
 ---
 
@@ -76,27 +76,27 @@ OSGi の設定は次のとおりです。
   <tr>
    <td><strong>リソースタイプ</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>登録するリソースの種類。例：<br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>登録するリソースタイプ。例： <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>参照のプロパティ</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>フラグメントへの参照を含むプロパティの名前。例：<code>fragmentPath</code> <code>fileReference</code></td>
+   <td>フラグメントへの参照を含んだプロパティの名前。例：<code>fragmentPath</code> または <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>要素のプロパティ</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>レンダリングする要素の名前を含むプロパティの名前。例：<code>elementName</code></td>
+   <td>レンダリングする要素の名前を含んだプロパティの名前。例：<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>バリエーションのプロパティ</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>レンダリングするバリエーションの名前を含むプロパティの名前。例：<code>variationName</code></td>
+   <td>レンダリングするバリエーションの名前を含んだプロパティの名前。例：<code>variationName</code></td>
   </tr>
  </tbody>
 </table>
 
-一部の機能（段落範囲のみをレンダリングする場合など）では、いくつかの規則に従う必要があります。
+一部の機能（例えば、段落範囲のみをレンダリングする場合）では、いくつかの規則に従う必要があります。
 
 <table>
  <tbody>

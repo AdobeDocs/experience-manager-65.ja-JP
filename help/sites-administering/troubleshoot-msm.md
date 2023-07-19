@@ -4,9 +4,9 @@ description: MSM に関する最も一般的な問題のトラブルシューテ
 feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
-source-git-commit: a323e6c30bf2c226f6613d1b9b037a0beedbfc0d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '764'
 ht-degree: 100%
 
 ---
@@ -26,14 +26,14 @@ MSM は、リソース URL のセレクターと共に要求できる複数の�
 
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * ブループリントページでこの情報を使用して、リンクされているすべてのライブコピーのリストと、追加のライブコピーのステータス情報を取得します。
-   * 例：
-      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+   * 次に例を示します。
+     `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * ライブコピーページでこれを使用して、ブループリントページとの接続に関する詳細情報を取得します。ページがライブコピーでない場合は、何も返されません。
-   * 例：
-      `http://localhost:4502/content/wknd/ca/en.msm.json`
+   * 次に例を示します。
+     `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 これらのサーブレットは、`com.day.cq.wcm.msm` ロガーを介して DEBUG ログメッセージを生成します。これも役に立ちます。
 
@@ -64,7 +64,7 @@ MSM は、リソース URL のセレクターと共に要求できる複数の�
 
 MSM とライブコピーに関するよくある質問を以下に示します。
 
-### MSM ロールアウト中に一部のプロパティ（タイトル、注釈など）が更新されないのはなぜですか  {#missing-properties}
+### MSM ロールアウト中に一部のプロパティ（タイトル、注釈など）が更新されないのはなぜですか？ {#missing-properties}
 
 MSM 同期アクションは詳細に設定できます。ロールアウト中に変更されるプロパティまたはコンポーネントは、それらの設定のプロパティに直接依存します。
 
@@ -81,7 +81,7 @@ AEM プリンシパル（ユーザーまたはグループ）の&#x200B;**ロー
 
 ### サフィックス「_msm_moved」の付いたライブコピーページが表示されるのはなぜですか  {#moved-pages}
 
-ブループリントページがロールアウトされた場合は、そのライブコピーページを更新するか、まだ存在しない場合（初めてロールアウトした場合やライブコピーページが手動で削除された場合など）は新しいライブコピーページを作成します。
+ブループリントページがロールアウトされる場合は、そのライブコピーページが更新されます。または、ライブコピーページがまだ存在しない場合（初めてロールアウトされるとき、またはライブコピーページが手動で削除されたときなど）には新しいライブコピーページが作成されます。
 
 ただし、後者の場合、`cq:LiveRelationship` プロパティのないページが同じ名前で存在する場合は、ライブコピーページが作成される前に、このページの名前が適宜変更されます。
 

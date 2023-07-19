@@ -11,7 +11,7 @@ topic-tags: develop
 discoiquuid: 9fe48243-24c6-4e08-9886-148cd99dec87
 role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
-source-git-commit: 0c7dba43dad8608b4a5de271e1e44942c950fb16
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 100%
@@ -1974,7 +1974,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 * `convertDataSource`：`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。このメソッドは、`org.w3c.dom.Document` オブジェクトを入力パラメーターとして受け入れ、`com.adobe.idp.Document` オブジェクトを返します。
 * `renderPOForm`：Forms サービス Java API を使用して、動的な発注書フォームをレンダリングします。`convertDataSource` メソッドにより返される `com.adobe.idp.Document` オブジェクトは、フォームの事前入力に使用されます。
 
-   これらのメソッドはすべて、Java サーブレットの `doPost` メソッド内から呼び出されます。（[編集可能なレイアウトを使用したフォームの自動入力](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts)を参照してください）。
+  これらのメソッドはすべて、Java サーブレットの `doPost` メソッド内から呼び出されます。（[編集可能なレイアウトを使用したフォームの自動入力](/help/forms/developing/rendering-forms.md#prepopulating-forms-with-flowable-layouts)を参照してください）。
 
 ```java
 /*
@@ -2346,7 +2346,7 @@ public class RenderDynamicForm extends HttpServlet implements Servlet {
              if (processState == 1)
              {
  
-                 //Write the data back to to the client web browser
+                 //Write the data back to the client web browser
                  ServletOutputStream oOutput = resp.getOutputStream();
                  Document calData = formOut.getOutputContent();
  

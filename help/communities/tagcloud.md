@@ -1,7 +1,7 @@
 ---
 title: Social タグクラウドの使用
 seo-title: Using Social Tag Cloud
-description: Social タグクラウドコンポーネントをページに追加
+description: Social タグクラウドコンポーネントをページに追加する
 seo-description: Adding a Social Tag Cloud component to a page
 uuid: 8c400030-976c-457a-bb5f-e473909647a9
 contentOwner: Guillaume Carlino
@@ -10,10 +10,10 @@ topic-tags: authoring
 content-type: reference
 discoiquuid: 23a5a65e-774d-4789-9659-09e8be0c2bcd
 exl-id: 56af5362-78de-4308-8958-63a45e8573cc
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 24%
+source-wordcount: '557'
+ht-degree: 10%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 24%
 
 この `Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーが適用したタグをハイライトします。 これは、トレンドトピックを識別し、サイト訪問者がタグ付きコンテンツをすばやく見つけられるようにする手段です。
 
-現在のトレンドを識別するもう 1 つの手段については、「[アクティビティのトレンド](trends.md)」を参照してください。
+現在のトレンドを識別する別の方法として、 [アクティビティのトレンド](trends.md).
 
 このページでは、 `Social Tag Cloud` コンポーネントダイアログの設定およびユーザーエクスペリエンスについて説明します。
 
-開発者向けの詳細な情報は、[タグの重要事項](tag.md)を参照してください。
+開発者向けの詳細は、 [タグの基本事項](tag.md).
 
 タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](../../help/sites-administering/tags.md)を参照してください。
 
@@ -51,28 +51,29 @@ ht-degree: 24%
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
-* **[!UICONTROL 表示する Social タグ]**&#x200B;表示する UGC タグを指定します。プルダウンオプションは次のとおりです。
+* **[!UICONTROL 表示する Social タグ]**
+表示する UGC タグを指定します。 プルダウンオプションは次のとおりです。
 
    * `From page and child pages`
    * `All tags`
 
-   デフォルトはです。 `From page and child pages`(「page」は **ページ** を設定します。
+  デフォルトはです。 `From page and child pages`(「page」は **ページ** を設定します。
 
 * **[!UICONTROL Page]**
 
-   ( そうでない場合は必須 `All tags)` ページの UGC へのパス。 空白の場合、初期設定は現在のページです。
+  ( そうでない場合は必須 `All tags)` ページの UGC へのパス。 空白の場合、初期設定は現在のページです。
 
 * **[!UICONTROL タグにリンクがありません]**
 
-   オンにすると、タグはプレーンテキストとしてタグクラウドに表示されます。 オフにすると、タグは、そのタグが適用されるすべてのコンテンツを検索するアクティブなリンクとして表示されます。 デフォルトはオフで、に必要な **[!UICONTROL 検索結果のパス]** を設定します。
+  オンにすると、タグはプレーンテキストとしてタグクラウドに表示されます。 オフにすると、タグは、そのタグが適用されるすべてのコンテンツを検索するアクティブなリンクとして表示されます。 デフォルトはオフで、に必要な **[!UICONTROL 検索結果のパス]** を設定します。
 
 * **[!UICONTROL 検索結果のパス]**
 
-   ページのパス。 `Search Result` コンポーネントが配置され、 **ページ** 設定。
+  ページのパス。 `Search Result` コンポーネントが配置され、 **ページ** 設定。
 
-## Social タグクラウドの表示を変更する {#change-display-of-social-tag-cloud}
+## Social タグクラウドの表示を変更 {#change-display-of-social-tag-cloud}
 
-表示を編集するには **Social タグクラウド**&#x200B;を入力して、 [デザインモード](../../help/sites-authoring/default-components-designmode.md) そして、配置された `Social Tag Cloud` 追加のタブを含むダイアログを開くコンポーネント。
+表示を編集するには **Social タグクラウド**&#x200B;を入力して、 [デザインモード](../../help/sites-authoring/default-components-designmode.md) をクリックし、配置された `Social Tag Cloud` 追加のタブを含むダイアログを開くコンポーネント。
 
 の使用 **[!UICONTROL Social タグクラウド（デザイン）]** タブで、タグの表示方法を指定します。 タグは、単純なタグ、デフォルト名前空間の単一の単語、階層的な分類のいずれかになります。
 
@@ -80,43 +81,43 @@ ht-degree: 24%
 
 * **[!UICONTROL タイトルの完全なパスを表示]**
 
-   オンにすると、適用された各タグの親タグと名前空間のタイトルが表示されます。
+  オンにすると、適用された各タグの親タグと名前空間のタイトルが表示されます。
 
-   次に例を示します。
+  例：
 
    * チェック済み: `Geometrixx Media: Gadgets / Cars`
    * 未チェック: `Cars`
 
-   シンプルなタグの場合は、表示に違いは現れません。
+  単純なタグには違いはありません。
 
-   初期設定はオフです。
+  初期設定はオフです。
 
 * **[!UICONTROL リーフタグのみを表示]**
 
-   オンにすると、他のタグを含まない、適用されたタグのみが表示されます。
+  オンにすると、他のタグを含まない、適用されたタグのみが表示されます。
 
-   例えば、次のタグ ID が指定されます。
+  例えば、次のタグ ID が指定されます。
 
-   `Geometrixx Media: Gadgets / Cars`
+  `Geometrixx Media: Gadgets / Cars`
 
-   次の 3 つのタグを適用できます。
+  次の 3 つのタグを適用できます。
 
-   `Geometrixx Media (the namespace)`, `Gadgets`, および `Cars`
+  `Geometrixx Media (the namespace)`, `Gadgets`, および `Cars`
 
    * チェック済み：のみ `Cars` が表示されます（適用されている場合）。
    * オフ： `Geometrixx Media` および `Gadgets`同様に `Cars` が表示されます（適用されている場合）。
 
-   シンプルなタグはリーフタグです。
+  単純なタグはリーフタグです。
 
-   初期設定はオフです。
+  初期設定はオフです。
 
 * **[!UICONTROL リンクテンプレート]**
 
-   コンポーネント編集ダイアログでリンクを有効にした場合、タグクラウドにリンクを表示するために使用される、デフォルト以外のテンプレートです。
+  コンポーネント編集ダイアログでリンクを有効にした場合、タグクラウドにリンクを表示するために使用される、デフォルト以外のテンプレートです。
 
 * **[!UICONTROL すべてのタグに同じサイズ]**
 
-   オンにすると、タグクラウド内のすべての単語に同じスタイルが設定されます。 オフにすると、単語のスタイルは使用方法に応じて異なります。 初期設定はオフです。
+  オンにすると、タグクラウド内のすべての単語に同じスタイルが設定されます。 オフにすると、単語のスタイルは使用方法に応じて異なります。 初期設定はオフです。
 
 ## 追加情報 {#additional-information}
 

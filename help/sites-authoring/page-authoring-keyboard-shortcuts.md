@@ -8,10 +8,10 @@ topic-tags: page-authoring
 content-type: reference
 discoiquuid: 6a3c69b5-6df6-4b8f-afa4-7d3e9dd458b5
 exl-id: f4ca5c11-e3ff-4da5-bc4a-fd7e0aefffb5
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '222'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 87%
 
 ---
 
@@ -27,14 +27,14 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 | 場所 | ショートカット | 説明 |
 |---|---|---|
-| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | **プレビュー**&#x200B;と、現在選択されている[モード](/help/sites-authoring/author-environment-tools.md#page-modes)</a>（**編集**、**レイアウト**&#x200B;など）を切り替える * |
+| 任意の編集ウィンドウモード | `Ctrl-Shift-m` | **プレビュー**&#x200B;と、現在選択されている[モード](/help/sites-authoring/author-environment-tools.md#page-modes)</a>（**編集**、 **レイアウト**&#x200B;など）を切り替えます * |
 | **編集**&#x200B;モード | `Ctrl-z` | [最後におこなった変更操作を取り消す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [最後におこなった変更操作をやり直す](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | 複数の段落を選択する |
-|  | `Ctrl-c` | 選択した段落をコピーする |
-|  | `Ctrl-x` | 選択した段落をカットする（カットされた段落は、貼り付けられるまで UI に保存されています） |
-|  | `Ctrl-v` | 以前にカットまたはコピーした段落を貼り付ける |
-|  | `Ctrl-Backspace` | 選択した段落を削除する |
+|  | `Ctrl-c` | 選択した段落をコピー |
+|  | `Ctrl-x` | 選択した段落を切り取ります（切り取った段落は、貼り付けられるまで UI に表示されなくなります）。 |
+|  | `Ctrl-v` | 以前に切り取ったまたはコピーした段落を貼り付け |
+|  | `Ctrl-Backspace` | 選択した段落を削除 |
 | **編集**&#x200B;モード - リッチテキストエディター | `Ctrl-b` | 太字 |
 |  | `Ctrl-I` | 斜体 |
 |  | `Ctrl-u` | 下線 |

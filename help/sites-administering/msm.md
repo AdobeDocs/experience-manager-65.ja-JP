@@ -10,10 +10,10 @@ topic-tags: site-features
 content-type: reference
 discoiquuid: c21debc3-ecf4-4aa9-ab5a-18ddd5cf2fff
 exl-id: 1e839845-fb5c-4200-8ec5-6ff744a96943
-source-git-commit: 785d4897263bfeae6a0cd235abca3c96f2231392
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2667'
-ht-degree: 46%
+source-wordcount: '2668'
+ht-degree: 45%
 
 ---
 
@@ -307,7 +307,7 @@ MSM ライブコピーは、特定のサイトコンテンツのコピーです�
 
 #### ライブコピー以外のページを使用したライブコピー {#live-copy-with-non-live-copy-pages}
 
-AEMでライブコピーを作成すると、ライブコピーのブランチを確認して移動でき、ライブコピーのブランチで通常のAEM機能を使用できます。 これはつまり、ユーザー（またはプロセス）がライブコピーのブランチ（例：`myCanadaOnlyProduct`）内に新しいリソース（ページまたは段落）を作成できることを意味します。
+AEMでライブコピーを作成すると、ライブコピーのブランチを確認して移動でき、ライブコピーのブランチで通常のAEM機能を使用できます。 つまり、ユーザー（またはプロセス）は、ライブコピーのブランチ（例えば、ページや段落）内に新しいリソース ( 例えば、 `myCanadaOnlyProduct`) をクリックします。
 
 * そのようなリソースにはソースやブループリントのページへのライブ関係がなく、同期されません。
 * このシナリオは、MSM が特殊なケースを処理する場合に発生することがあります。例えば、ユーザー（またはプロセス）がソース/ブループリントとライブコピーのブランチの両方で、同じ位置と名前のページを作成したときなどです。 そのような状況について詳しくは、[MSM ロールアウトの競合](/help/sites-administering/msm-rollout-conflicts.md)を参照してください。

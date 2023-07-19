@@ -12,10 +12,10 @@ discoiquuid: 97286c2c-f6e3-43ec-b1a9-2abb58616778
 docset: aem65
 role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
-source-git-commit: 1d334c42088342954feb34f6179dc5b134f81bb8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 23%
+source-wordcount: '2482'
+ht-degree: 9%
 
 ---
 
@@ -27,23 +27,23 @@ AEM Communitiesのパブリッシュ環境から（設定されている権限�
 
 *ユーザーデータ* は、 *ユーザー*, *ユーザープロファイル* および *ユーザーグループ*.
 
-メンバーという用語は、オーサー環境で登録されたユーザーではなく、パブリッシュ環境で登録されたユーザーを指します。****
+*メンバー* は、 *ユーザー* オーサー環境に登録されたユーザーとは対照的に、パブリッシュ環境に登録されている。
 
-ユーザーデータについて詳しくは、[ユーザーとユーザーグループの管理](/help/communities/users.md)を参照してください。
+ユーザーデータの詳細については、 [ユーザーとユーザーグループの管理](/help/communities/users.md).
 
-## パブリッシュファーム間のユーザーの同期 {#synchronizing-users-across-a-publish-farm}
+## パブリッシュファーム間でのユーザーの同期 {#synchronizing-users-across-a-publish-farm}
 
-仕様上、パブリッシュ環境で作成されたデータは、オーサー環境では表示されません。
+設計上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境には表示されません。
 
-オーサー環境で作成されたほとんどのユーザーデータは、オーサー環境に残されたままとなり、パブリッシュインスタンスには同期もレプリケートもされません。
+オーサー環境で作成されたほとんどのユーザーデータは、オーサー環境に残ることを目的としており、パブリッシュインスタンスに同期もレプリケートもされません。
 
 次の場合に [トポロジ](/help/communities/topologies.md) は [パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)、1 つのパブリッシュインスタンスでおこなわれた登録と変更を、他のパブリッシュインスタンスと同期する必要があります。 メンバーは、任意のパブリッシュノードにログインしてデータを確認できる必要があります。
 
-ユーザーの同期を有効にすると、ファーム内のパブリッシュインスタンス間でユーザーデータが自動的に同期されます。
+ユーザーの同期が有効になっている場合、ユーザーデータはファーム内のパブリッシュインスタンス間で自動的に同期されます。
 
-### ユーザーの同期のセットアップ手順 {#user-sync-setup-instructions}
+### ユーザー同期の設定手順 {#user-sync-setup-instructions}
 
-詳細なステップバイステップの手順については、以下を参照してください。：
+パブリッシュファーム間で同期を有効にする手順について詳しくは、次を参照してください。
 
 * [ユーザー同期](/help/sites-administering/sync.md)
 
@@ -53,45 +53,45 @@ AEM Communitiesのパブリッシュ環境から（設定されている権限�
 
 * **vlt パッケージ**
 
-   これは、パブリッシャーでおこなわれたすべての変更の zip ファイルで、パブリッシャー間で配布する必要があります。 パブリッシャー上で変更を行うと、変更イベントリスナーによって選択されたイベントが生成されます。 これにより、すべての変更を含む vlt パッケージが作成されます。
+  これは、パブリッシャーでおこなわれたすべての変更の zip ファイルで、パブリッシャー間で配布する必要があります。 パブリッシャー上で変更を行うと、変更イベントリスナーによって選択されたイベントが生成されます。 これにより、すべての変更を含む vlt パッケージが作成されます。
 
 * **配布パッケージ**
 
-   Sling の配布情報が含まれます。 コンテンツの配信先と最後に配信された日時に関する情報です。
+  Sling の配布情報が含まれます。 コンテンツの配信先と最後に配信された日時に関する情報です。
 
-## 各種操作の結果 {#what-happens-when}
+## 次の場合に発生する処理 {#what-happens-when}
 
-### コミュニティのサイトコンソールでのサイトの公開 {#publish-site-from-communities-sites-console}
+### コミュニティサイトコンソールからサイトを発行 {#publish-site-from-communities-sites-console}
 
-オーサー環境で、コミュニティサイトを[コミュニティサイトコンソール](/help/communities/sites-console.md)から公開すると、関連するページが[レプリケート](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents)されます。また、Sling によって、動的に作成されたコミュニティユーザーグループ（メンバーシップを含む）が配信されます。
+オーサー環境で、コミュニティサイトが [コミュニティサイトコンソール](/help/communities/sites-console.md)に設定した場合、 [複製](/help/sites-deploying/configuring.md#replication-reverse-replication-and-replication-agents) 関連するページと Sling が、動的に作成されたコミュニティユーザーグループを、そのメンバーシップも含めて配布します。
 
-### パブリッシュ環境でのユーザーの作成またはプロファイルの編集 {#user-is-created-or-edits-profile-on-publish}
+### ユーザーがパブリッシュ環境で作成または編集されたプロファイル {#user-is-created-or-edits-profile-on-publish}
 
-仕様上、パブリッシュ環境で（自己登録、ソーシャルログイン、LDAP 認証などで）作成されたユーザーやプロファイルはオーサー環境では表示されません。
+デザインにより、パブリッシュ環境で作成されたユーザーとプロファイル（自己登録、ソーシャルログイン、LDAP 認証など）は、オーサー環境には表示されません。
 
-トポロジが [パブリッシュファーム](/help/communities/topologies.md) ユーザー同期が正しく設定されている場合、 *ユーザー* および *ユーザープロファイル* は、Sling 配布を使用してパブリッシュファーム全体で同期されます。
+トポロジーが[パブリッシュファーム](/help/communities/topologies.md)であり、ユーザー同期が正しく設定されると、Sling 配布を使用して&#x200B;*ユーザー*&#x200B;と&#x200B;*ユーザープロファイル*&#x200B;がパブリッシュファーム間で同期されます。
 
-### パブリッシュ環境での新しいコミュニティグループの作成 {#new-community-group-is-created-on-publish}
+### 新しいコミュニティグループがパブリッシュで作成されました {#new-community-group-is-created-on-publish}
 
 パブリッシュインスタンスから開始したコミュニティグループの作成では、新しいサイトページと新しいユーザーグループが作成されますが、実際にはオーサーインスタンス上で作成されます。
 
-このプロセスの一環として、新しいサイトページがすべてのパブリッシュインスタンスにレプリケートされます。動的に作成されるコミュニティユーザーグループとそのメンバーシップは、 Sling をすべてのパブリッシュインスタンスに配布します。
+プロセスの一環として、新しいサイトページがすべてのパブリッシュインスタンスにレプリケートされます。 動的に作成されるコミュニティユーザーグループとそのメンバーシップは、 Sling をすべてのパブリッシュインスタンスに配布します。
 
-### セキュリティコンソールでのユーザーまたはユーザーグループの作成 {#users-or-user-groups-are-created-using-security-console}
+### ユーザーまたはユーザーグループは、セキュリティコンソールを使用して作成されます {#users-or-user-groups-are-created-using-security-console}
 
-仕様上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境では表示されません。その反対も同様です。
+設計上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境にも反対にも表示されません。
 
 [ユーザー管理およびセキュリティ](/help/sites-administering/security.md)コンソールを使用してパブリッシュ環境で新しいユーザーを追加すると、ユーザーの同期機能により、新しいユーザーとそのグループメンバーシップがその他のパブリッシュインスタンスに同期されます（必要な場合）。ユーザー同期により、セキュリティコンソールによって作成されたユーザーグループも同期されます。
 
-### ユーザーによるパブリッシュ環境でのコンテンツの投稿 {#user-posts-content-on-publish}
+### ユーザーが投稿時にコンテンツを投稿 {#user-posts-content-on-publish}
 
-ユーザー生成コンテンツ（UGC）に関しては、パブリッシュインスタンスで入力されたデータへのアクセスは、[設定済みの SRP](/help/communities/srp-config.md) を通じておこなわれます。
+ユーザー生成コンテンツ (UGC) の場合、パブリッシュインスタンスに入力されたデータには、 [設定済み SRP](/help/communities/srp-config.md).
 
 ## ベストプラクティス {#bestpractices}
 
-デフォルトでは、ユーザー同期は&#x200B;**無効**&#x200B;になっています。ユーザー同期を有効にするには、OSGi の既存の設定を変更する必要があります&#x200B;*。*&#x200B;ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
+デフォルトでは、ユーザー同期は **無効**. ユーザー同期を有効にするには、OSGi の既存の設定を変更する必要があります&#x200B;*。*&#x200B;ユーザーの同期を有効にした結果、新しい設定を追加しないでください。
 
-ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。
+ユーザー同期では、作成者環境ではユーザーデータが作成されていない場合でも、作成者環境に基づいてユーザーデータの配布を管理します。
 
 **前提条件**
 
@@ -124,16 +124,17 @@ Apache Sling 同期エージェントを設定するには：
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-      名前を確認： **socialpubsync.**
+     名前を確認： **socialpubsync.**
 
    * 「**有効**」チェックボックスを選択します。
    * 選択 **複数のキューを使用します。**
    * 指定 **エクスポーターエンドポイント** および **インポーターエンドポイント** （エクスポーターおよびインポーターエンドポイントをさらに追加できます）。
 
-      これらのエンドポイントは、コンテンツの取得元と、コンテンツのプッシュ先を定義します。 作成者は、指定されたエクスポーターエンドポイントからコンテンツを取得し、そのコンテンツを（コンテンツの取得元の発行者以外の）発行者にプッシュします。
+     これらのエンドポイントは、コンテンツの取得元と、コンテンツのプッシュ先を定義します。 作成者は、指定されたエクスポーターエンドポイントからコンテンツを取得し、そのコンテンツを（コンテンツの取得元の発行者以外の）発行者にプッシュします。
+
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### Adobe Granite Distribution - Encrypted Password Transport Secret Provider {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### AdobeGranite 配布 — 暗号化パスワードトランスポート秘密鍵プロバイダー {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 作成者は、作成者から発行へのユーザーデータの同期権限を持つ、認証済みユーザーを識別できます。
 
@@ -180,7 +181,7 @@ Apache Sling 同期エージェントを設定するには：
 
    ![queue-agents-fact](assets/queue-agents-fact.png)
 
-### Adobe Granite Distribution - Diff Observer Factory {#adobe-granite-distribution-diff-observer-factory}
+### AdobeGranite 配布 — 差分監視者ファクトリー {#adobe-granite-distribution-diff-observer-factory}
 
 この設定は、パブリッシャー間でグループメンバーシップを同期します。
 あるパブリッシャーでグループのメンバーシップを変更しても、他のパブリッシャーのメンバーシップが更新されない場合は、 **ref : members** が **プロパティ名を参照**.
@@ -202,7 +203,7 @@ Apache Sling 同期エージェントを設定するには：
 
    ![diff-obs](assets/diff-obs.png)
 
-### Apache Sling Distribution Trigger - Scheduled Triggers Factory {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### Apache Sling 配布トリガー — 予定トリガーファクトリ {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 この設定を使用すると、（作成者が変更を取り込んで発行者によって送信される）ポーリング間隔を設定して、発行者間で変更を同期できます。
 
@@ -216,11 +217,11 @@ Apache Sling 同期エージェントを設定するには：
 
    * 編集用に開く既存の設定を選択します（鉛筆アイコン）。
 
-      検証 **socialpubsync -scheduled-トリガー**
+     検証 **socialpubsync -scheduled-トリガー**
 
    * 間隔（秒）を目的の間隔に設定し、保存します。
 
-   ![scheduled-trigger](assets/scheduled-trigger.png)
+   ![scheduled-トリガー](assets/scheduled-trigger.png)
 
 ### AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
 
@@ -235,7 +236,7 @@ Sling 配布で、サブスクリプションとフォローに不一致があ�
 
 各AEMパブリッシュインスタンスで、次の手順を実行します。
 
-1. 管理者権限でサインインします。
+1. 管理者権限でログインします。
 1. 次にアクセス： [Web コンソール](/help/sites-deploying/configuring-osgi.md). 例： [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 1. 場所 **AEM Communities User Sync Listener**.
 1. 編集用に開く既存の設定を選択します（鉛筆アイコン）
@@ -302,10 +303,10 @@ AEMオーサーインスタンスは、Sling ID を使用して、データの�
 
    Windows エクスプローラーを使用して、以下を検索します。 `sling.id.file`
 
-1. 発行インスタンスを起動します。起動時に、新しい Sling ID が割り当てられます。
+1. パブリッシュインスタンスを起動します。 起動時に、新しい Sling ID が割り当てられます。
 1. を検証します。 **Sling ID** が一意になりました。
 
-すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
+すべてのパブリッシュインスタンスに一意の Sling ID が割り当てられるまで、これらの手順を繰り返します。
 
 ### Vault Package Builder Factory {#vault-package-builder-factory}
 
@@ -321,7 +322,7 @@ In `/home/users`, a `*/rep:cache` ノードが作成されます。 ノードの
    例： [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 1. を **Apache Sling 配布パッケージ — Vault Package Builder Factory**
 
-   ビルダー名：socialpubsync-vlt.
+   ビルダー名：socialpubsync-vlt
 
 1. 編集アイコンを選択します。
 1. 2 つのパッケージノードフィルターを追加します。

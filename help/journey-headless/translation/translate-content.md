@@ -2,10 +2,10 @@
 title: コンテンツの翻訳
 description: 翻訳コネクタおよびルールを使用して、ヘッドレスコンテンツを翻訳します。
 exl-id: a2c2bb9f-97b9-42fd-9bd1-e75c113fb514
-source-git-commit: ed11891c27910154df1bfec6225aecd8a9245bff
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2174'
-ht-degree: 100%
+source-wordcount: '2173'
+ht-degree: 99%
 
 ---
 
@@ -93,7 +93,7 @@ AEM ヘッドレス翻訳ジャーニーの以前のドキュメント（[翻訳
 
    ![プロジェクトの「基本」タブ](assets/project-basic-tab.png)
 
-1. 「**詳細**」タブで、「**ターゲット言語**」ドロップダウンを使用して、コンテンツの翻訳先の言語を選択します。「**作成**」をタップまたはクリックします。
+1. の **詳細** タブで、 **ターゲット言語** ドロップダウンを使用して、コンテンツの翻訳先の言語を選択します。 「**作成**」をタップまたはクリックします。
 
    ![プロジェクトの「詳細」タブ](assets/project-advanced-tab.png)
 

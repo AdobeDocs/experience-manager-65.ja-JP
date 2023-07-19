@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 1f5eb646-acc7-49d5-b839-e451e68ada9e
 docset: aem65
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '1662'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '1663'
+ht-degree: 98%
 
 ---
 
@@ -35,9 +35,8 @@ ht-degree: 100%
 >  公開／非公開と同義です。
 >
 >* **レプリケート／レプリケーション**
->  公開やユーザーコメントのリバースレプリケーションの際などに行われる、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
+>  これらは、ユーザーのコメントを公開またはリバースレプリケーションする場合など、環境間でのデータ（ページコンテンツ、ファイル、コード、ユーザーコメントなど）の移動を表す技術用語です。
 >
-
 
 >[!NOTE]
 >
@@ -47,7 +46,6 @@ ht-degree: 100%
 >* この[ワークフローは、開発チームによってカスタマイズされていることがあります](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6)。
 >* ワークフローがトリガーされたことを通知するメッセージが少しの間表示されます。
 >
-
 
 ## ページの公開  {#publishing-pages-1}
 
@@ -270,14 +268,14 @@ ht-degree: 100%
 
 * [サイトコンソールのリソースの概要情報](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 
-   ![screen_shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
+  ![screen_shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 
-   公開ステータスは、サイトコンソールの[カード](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)および[リスト](/help/sites-authoring/basic-handling.md#list-view)表示に表示されます。
+  公開ステータスは、サイトコンソールの[カード](/help/sites-authoring/basic-handling.md#card-view)、[列](/help/sites-authoring/basic-handling.md#column-view)および[リスト](/help/sites-authoring/basic-handling.md#list-view)表示に表示されます。
 
 * [タイムライン](/help/sites-authoring/basic-handling.md#timeline)
 
-   ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
+  ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 
 * （ページ編集時の）[ページ情報メニュー](/help/sites-authoring/author-environment-tools.md#page-information)
 
-   ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)
+  ![screen_shot_2018-03-21at154456](assets/screen_shot_2018-03-21at154456.png)

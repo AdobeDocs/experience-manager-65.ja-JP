@@ -5,16 +5,16 @@ contentOwner: AG
 feature: Asset Management
 role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
-source-git-commit: b2faf81983216bef9151548d90ae86f1c26a9f91
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 100%
+source-wordcount: '985'
+ht-degree: 84%
 
 ---
 
 # AEM Assets 統合と Experience Cloud の設定 {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内のアセットを Adobe Creative Cloud と同期できます。また、その逆も可能です。また、アセットを Experience Cloud に（またはその逆に）同期することもできます。[!DNL Adobe I/O] 経由でこの同期をセットアップできます。[!DNL Adobe Marketing Cloud] の更新された名前は [!DNL Adobe Experience Cloud] です。
+Adobe Experience Cloudをご利用のお客様は、Adobe Experience Manager Assets 内のアセットをAdobe Creative Cloudと（または逆に）同期できます。 また、アセットをExperience Cloudと（逆に）同期することもできます。 [!DNL Adobe I/O] 経由でこの同期をセットアップできます。[!DNL Adobe Marketing Cloud] の更新された名前は [!DNL Adobe Experience Cloud] です。
 
 この統合をセットアップするためのワークフローを以下に示します。
 
@@ -38,11 +38,11 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内の�
 
 ## アプリケーションの作成 {#create-an-application}
 
-1. [https://legacy-oauth.cloud.adobe.io](https://legacy-oauth.cloud.adobe.io/) でログインして Adobe Developer ゲートウェイインターフェイスにアクセスします。
+1. 次の場所にログインして、Adobe Developerゲートウェイインターフェイスにアクセスします。 [https://legacy-oauth.cloud.adobe.io](https://legacy-oauth.cloud.adobe.io/).
 
    >[!NOTE]
    >
-   >アプリケーション ID を作成するには管理者権限が必要です。
+   >アプリケーション ID を作成するには、管理者権限が必要です。
 
 1. 左側のウィンドウから、**[!UICONTROL 開発者ツール]**／**[!UICONTROL アプリケーション]**&#x200B;に移動して、アプリケーションのリストを表示します。
 1. 「**[!UICONTROL 追加]**」![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png) をクリックして、アプリケーションを作成します。
@@ -57,11 +57,11 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内の�
 
    ![AEM Assets と Creative Cloud を統合するアプリケーションの作成成功通知](assets/chlimage_1-50.png)
 
-1. 新規アプリケーションに対して生成された&#x200B;**[!UICONTROL アプリケーション ID]** をコピーします。
+1. を **[!UICONTROL アプリケーション ID]** 新しいアプリケーション用に生成される
 
    >[!CAUTION]
    >
-   >**[!UICONTROL アプリケーション ID]** ではなく&#x200B;**[!UICONTROL アプリケーションの秘密鍵]**&#x200B;を誤ってコピーしないようにしてください。
+   >誤って **[!UICONTROL アプリケーション秘密鍵]** の代わりに、 **[!UICONTROL アプリケーション ID]**.
 
 ## Experience Cloud への新しい設定の追加 {#add-a-new-configuration}
 
@@ -91,7 +91,7 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内の�
 
 1. 設定ページから「**[!UICONTROL 公開鍵を表示]**」をクリックして、インスタンスに対して生成された公開鍵を表示します。または、「**[!UICONTROL OAuth ゲートウェイ用の公開鍵をダウンロード]**」をクリックして、公開鍵が格納されているファイルをダウンロードします。次に、ファイルを開いて公開鍵を表示します。
 
-## 同期の有効化 {#enable-synchronization}
+## 同期を有効にする {#enable-synchronization}
 
 1. [Experience Cloud への新しい設定の追加](#add-a-new-configuration)の手順の最後で説明した、次のどちらかの方法を使用して、公開鍵を表示します。「**[!UICONTROL 公開鍵を表示]**」をクリックします。
 
@@ -105,8 +105,8 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内の�
 
 1. AEM Assets のローカルインスタンスの UI で AEM のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL デプロイメント]**／**[!UICONTROL レプリケーション]**の順に移動して、同期用に作成されたレプリケーションプロファイルを探します。
 1. **[!UICONTROL レプリケーション]**&#x200B;ページで、「**[!UICONTROL 作成者のエージェント]**」をクリックします。
-1. プロファイルのリストから、組織のデフォルトのレプリケーションプロファイルをクリックし、それを開きます。
-1. ダイアログで、「**[!UICONTROL 接続をテスト]**」をクリックします。
+1. プロファイルのリストで、組織のデフォルトレプリケーションプロファイルをクリックして開きます。
+1. ダイアログで、 **[!UICONTROL 接続をテスト]**.
 
    ![接続のテストとデフォルトのレプリケーションプロファイルの設定](assets/chlimage_1-54.png)
 
@@ -130,7 +130,7 @@ Adobe Experience Cloud のお客様は、Adobe Experience Manager Assets 内の�
 ## AEM Assets と Experience Cloud 間でのアセットの交換 {#exchange-assets-between-aem-and-experience-cloud}
 
 1. AEM Assets にログインします。
-1. Assets コンソールで、フォルダーを作成し、いくつかのアセットをアップロードします。例えば、**mc-demo** というフォルダーを作成して、アセットをアップロードします。
+1. アセットコンソールで、フォルダーを作成し、そのフォルダーにアセットをアップロードします。 例えば、フォルダーを作成します。 **mc-demo** にアセットをアップロードします。
 1. このフォルダーを選択し、「**共有** ![assets_share](assets/do-not-localize/assets_share.png)」をクリックします。
 1. メニューから「**[!UICONTROL Adobe Experience Cloud]**」を選択し、「**[!UICONTROL 共有]**」をクリックします。フォルダーが Experience Cloud と共有されたことを示すメッセージが表示されます。
 
@@ -165,10 +165,9 @@ AEM Assets lets you share folders containing assets with Adobe Creative Cloud us
 
 The AEM Assets-Marketing Cloud synchronization is designed in a way that the user machine instance from where the asset is uploaded retains the right to modify the asset. Only these changes are propagated to the other instance.
 
-For example, if an asset is uploaded from an AEM Assets (on premises) instance, the changes to the asset from this instance are propagated to the Marketing Cloud instance. However, the changes done from the Marketing Cloud instance to the same asset aren’t propagated to the AEM instance and vice versa for asset uploaded from Marketing Cloud.
+For example, if an asset is uploaded from an AEM Assets (on premises) instance, the changes to the asset from this instance are propagated to the Marketing Cloud instance. However, the changes done from the Marketing Cloud instance to the same asset aren’t propagated to the AEM instance and conversely for asset uploaded from Marketing Cloud.
 -->
 
 >[!MORELIKETHIS]
 >
 >* [Assets と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)
-

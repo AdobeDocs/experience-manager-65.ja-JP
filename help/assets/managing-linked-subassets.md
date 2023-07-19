@@ -5,10 +5,10 @@ contentOwner: AG
 role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
-source-git-commit: 79d8b5896f5f8eb7a22dccea81acf0656d435f2b
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 100%
+source-wordcount: '1423'
+ht-degree: 99%
 
 ---
 
@@ -71,7 +71,7 @@ INDD ファイルがアップロードされると、`xmpMM:InstanceID` およ�
 
 ## [!DNL Adobe Photoshop]：デジタルアセットを参照として追加 {#refps}
 
-1. [!DNL Experience Manager] デスクトップアプリケーションを使用して [!DNL Experience Manager Assets] にアクセスします。ローカルファイルシステムのアセットをダウンロードして表示します。[!DNL Adobe Photoshop] の[!UICONTROL リンク場所]の機能を使用します。詳しくは、[デスクトップアプリケーションへのアセットの配置](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#place-assets-in-native-documents)を参照してください。
+1. [!DNL Experience Manager] デスクトップアプリケーションを使用して [!DNL Experience Manager Assets] にアクセスします。ローカルファイルシステムのアセットをダウンロードして表示します。以下を使用： [!UICONTROL リンク場所] の機能 [!DNL Adobe Photoshop]. 詳しくは、[デスクトップアプリケーションへのアセットの配置](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#place-assets-in-native-documents)を参照してください。
 
 1. [!DNL Photoshop] ファイルをマウントしたドライブに保存するか、[!DNL Experience Manager] リポジトリに[アップロード](/help/assets/manage-assets.md#uploading-assets)します。
 1. ワークフローが完了したら、既存の [!DNL Experience Manager] アセットへの参照がアセットの詳細ページに一覧表示されます。
@@ -140,8 +140,7 @@ INDD ファイルがアップロードされると、`xmpMM:InstanceID` およ�
 
 >[!MORELIKETHIS]
 >
->* [Adobe Experience Manager デスクトップアプリケーションの使用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
->* [Adobe Experience Manager でのデスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2)
+>* [Adobe Experience Manager デスクトップアプリケーションの使用](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)
+>* [Adobe Experience Manager でのデスクトップアクションの設定](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#desktopactions-v2)
 >* [Adobe Photoshop でのリンクされたスマートオブジェクトの作成](https://helpx.adobe.com/jp/photoshop/using/create-smart-objects.html#create-linked-smart-objects)
 >* [Adobe InDesign へのグラフィックの配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)
-

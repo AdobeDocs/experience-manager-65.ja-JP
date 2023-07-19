@@ -4,10 +4,10 @@ description: AEM 関連のコンテンツ機能によって接続を提供する
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
-source-git-commit: de38dbb9d0ce523543c11e665c02034f4b38f1e6
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 100%
+source-wordcount: '245'
+ht-degree: 89%
 
 ---
 
@@ -19,7 +19,7 @@ AEM の関連コンテンツ機能によって関連性がわかり、フラグ�
 
 >[!NOTE]
 >
->[ビジュアルアセット（画像など）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するには、様々な方法があります。
+>[ビジュアルアセット（画像など）](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)をフラグメントやページに追加するための様々な方法があります。
 
 関連付けを作成するには、最初に[メディアアセットをコレクションに追加](/help/assets/manage-collections.md)する必要があります。それが完了した後で以下を実行できます。
 
@@ -44,9 +44,9 @@ AEM の関連コンテンツ機能によって関連性がわかり、フラグ�
 
 ## 関連コンテンツの編集 {#editing-associated-content}
 
-コレクションを関連付けたら、次の操作を実行できます。
+コレクションを関連付けると、次の操作を実行できます。
 
-* 関連付けを&#x200B;**削除**&#x200B;する。
-* コレクションに&#x200B;**アセットを追加**&#x200B;する。
-* 追加のアクションに対しアセットを選択する。
-* アセットを編集する。
+* **削除** 協会。
+* **アセットを追加** コレクションに追加します。
+* 追加のアクションを実行するアセットを選択します。
+* アセットを編集します。

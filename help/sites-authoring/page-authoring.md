@@ -9,10 +9,10 @@ content-type: reference
 discoiquuid: 2d4cda3d-3270-4294-a146-e5712746aebb
 docset: aem65
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
-source-git-commit: e1a0b114ce16d0e7f6a464e9d30b8f111297bcc6
-workflow-type: ht
-source-wordcount: '315'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 91%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 100%
 編集可能なページの左側に表示されるスライド機能付きブラウザーです。このブラウザーから、アセットをページにドラッグして、例えばアセットを配置したり、他のページへのリンクを作成したりすることができます。
 
 * **コンポーネントツールバー**
-1 回、またはゆっくり 2 回クリックまたはタップすると、状況に応じたツールバーが表示されます（1 回の場合はインプレース編集ツールバー、ゆっくりとした 2 回の操作の場合は完全なツールバー）。
+シングルまたはスローのダブルクリック/タップの両方で、適切なツールバーが表示されます（シングルはインプレース編集ツールバー、その後スローはフルツールバー）。
 
 * **[レスポンシブレイアウト](/help/sites-authoring/responsive-layout.md)**
 レスポンシブグリッド内にコンポーネントを配置できる段落システムを提供します。

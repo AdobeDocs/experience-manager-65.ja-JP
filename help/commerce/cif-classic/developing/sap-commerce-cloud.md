@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: platform
 exl-id: b3de1a4a-f334-44bd-addc-463433204c99
-source-git-commit: 1ef5593495b4bf22d2635492a360168bccc1725d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2297'
 ht-degree: 35%
 
 ---
@@ -286,7 +286,7 @@ public interface Product extends Adaptable {
  * Interface for filtering variants and AxisFilter provided as common implementation
  *
  * The <code>VariantFilter</code> is used to filter variants,
- * e.g. when using {@link Product#getVariants(VariantFilter filter)}.
+ * for example, when using {@link Product#getVariants(VariantFilter filter)}.
  */
 public interface VariantFilter {
     public boolean includes(Product product);
@@ -548,7 +548,7 @@ e コマースプロジェクトには、次の場所にあるデフォルトの
 
 ### ユーザーの統合 {#user-integration}
 
-AEMと様々な e コマースシステム間で統合が提供されます。 AEM固有のコードがAEMについてのみ知る必要があり、またその逆も知る必要があるように、様々なシステム間で買い物客を同期する戦略が必要です。
+AEMと様々な e コマースシステム間で統合が提供されます。 これには、AEM固有のコードがAEMと反対にについてのみ知る必要があるように、様々なシステム間で買い物客を同期する方法が必要です。
 
 * 認証
 

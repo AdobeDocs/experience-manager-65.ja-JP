@@ -4,9 +4,9 @@ description: AEM Forms デモパッケージをインストール、設定、カ
 contentOwner: anujkapo
 docset: aem65
 exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
-source-git-commit: e068cee192c0837f1473802143e0793674d400e8
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4622'
+source-wordcount: '4626'
 ht-degree: 68%
 
 ---
@@ -155,8 +155,8 @@ ht-degree: 68%
 
 1. 任意の SMTP サーバーに接続するようにサービスを設定します。
 
-   1. **SMTP サーバーのホスト名**：例（smtp.gmail.com）
-   1. **サーバーポート**：SSL を使用した gmail の例：465
+   1. **SMTP サーバーのホスト名**:例： (smtp.gmail.com)
+   1. **サーバーポート**:例えば、SSL を使用する gmail の場合は (465)
    1. **SMTP ユーザー：** demo@ &lt;companyname> .com
    1. **「差出人」のアドレス**：aemformsdemo@adobe.com
 
@@ -240,7 +240,7 @@ ht-degree: 68%
 1. 「認証設定」タブに移動します。
 1. 以下の詳細を入力します。
 
-   1. **サービスルート：**&#x200B;例`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
+   1. **サービスルート：** 例： `https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
    1. **認証タイプ：** OAuth 2.0
    1. **認証設定** ( [MS® Dynamics クラウド設定](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig) この情報を収集するには：
 
@@ -251,7 +251,7 @@ ht-degree: 68%
       1. トークン URL にアクセス（例： ） [https://login.windows.net/common/oauth2/token](https://login.windows.net/common/oauth2/token)
       1. 認証範囲 - **openid**
       1. 認証ヘッダー - **認証ベアラ**
-      1. リソース - 例：`https://msdynamicsserver.api.crm3.dynamics.com`
+      1. リソース — 例： `https://msdynamicsserver.api.crm3.dynamics.com`
 
    1. 「OAuth に接続」をクリックします。
 

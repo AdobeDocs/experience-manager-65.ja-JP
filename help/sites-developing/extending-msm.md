@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: 6128c91a-4173-42b4-926f-bbbb2b54ba5b
 docset: aem65
 exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
-source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2585'
 ht-degree: 98%
 
 ---
@@ -694,11 +694,11 @@ MSM は、保存されている言語コードと国コードのリストを使�
 
 * `cq-msm-lockable` の値が次のような場合：
 
-   * **相対指定**&#x200B;の場合（例：`myProperty` または `./myProperty`）
+   * **相対** ( 例： `myProperty` または `./myProperty`)
 
       * プロパティを `cq:propertyInheritanceCancelled` から追加および削除します。
 
-   * **絶対指定**&#x200B;の場合（例：`/image`/）
+   * **絶対** ( 例： `/image`)
 
       * チェーンを解除すると、`cq:LiveSyncCancelled` mixin を `./image` に追加し、`cq:isCancelledForChildren` を `true` に設定することで、継承がキャンセルされます。
 

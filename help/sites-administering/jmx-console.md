@@ -1,7 +1,7 @@
 ---
 title: JMX コンソールを使用したサーバーリソースの監視
 seo-title: Monitoring Server Resources Using the JMX Console
-description: JMX コンソールを使用してサーバーリソースを監視する方法について説明します。
+description: JMX コンソールを使用してサーバーリソースを監視する方法を説明します。
 seo-description: Learn how to monitor server resources using the JMX console.
 uuid: 0a28aafe-61b2-472b-8f8f-2cd6540cbfee
 contentOwner: Guillaume Carlino
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: 873ce073-0055-4e1b-b3c6-ae7967700894
 docset: aem65
 exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '4957'
-ht-degree: 100%
+source-wordcount: '4956'
+ht-degree: 62%
 
 ---
 
@@ -24,9 +24,9 @@ JMX コンソールを使用すると、CRX サーバー上のサービスを監
 
 コンソール制御の使用方法について詳しくは、[JMX コンソールの使用](#using-the-jmx-console)を参照してください。JMX の背景情報については、Oracle web サイトの [Java Management Extensions (JMX) Technology](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) ページを参照してください。
 
-JMX コンソールを使用して、MBean を作成し、サービスを管理する方法について詳しくは、[サービスと JMX コンソールの統合](/help/sites-developing/jmx-integration.md)を参照してください。
+JMX コンソールを使用してサービスを管理する MBean の作成について詳しくは、 [サービスと JMX コンソールの統合](/help/sites-developing/jmx-integration.md).
 
-## ワークフローのメンテナンス {#workflow-maintenance}
+## ワークフローメンテナンス {#workflow-maintenance}
 
 実行中、完了済み、期限切れ、または失敗したワークフローインスタンスを管理するための操作です。
 
@@ -35,24 +35,24 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 >[!NOTE]
 >
->その他のワークフロー管理ツールおよびワークフローインスタンスに考えられるステータスの説明は、[ワークフローコンソール](/help/sites-administering/workflows-administering.md)を参照してください。
+>詳しくは、 [ワークフローコンソール](/help/sites-administering/workflows-administering.md) 追加のワークフロー管理ツールおよび考えられるワークフローインスタンスのステータスの説明。
 
 ### 運用 {#operations}
 
 **listRunningWorkflowsPerModel** ワークフローモデルごとに、実行されているワークフローインスタンスの数をリストします。
 
 * 引数：なし
-* 戻り値：数およびモデル ID の列を含む表形式のデータ
+* 戻り値：Count 列と ModelId 列を含む表形式のデータ。
 
 **listCompletedWorkflowsPerModel** ワークフローモデルごとに、完了したワークフローインスタンスの数をリストします。
 
 * 引数：なし
-* 戻り値：数およびモデル ID の列を含む表形式のデータ
+* 戻り値：Count 列と ModelId 列を含む表形式のデータ。
 
 **returnWorkflowQueueInfo** 処理済み、および処理に向けて待機中のワークフロー項目に関する情報をリストします。
 
 * 引数：なし
-* 戻り値：以下の列を含む表形式のデータ：
+* 戻り値：次の列を含む表データ：
 
    * ジョブ
    * キュー名
@@ -62,13 +62,13 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * キャンセルされたジョブ
    * 失敗したジョブ
    * 完了したジョブ
-   * 処理済みのジョブ
+   * 処理済みジョブ
    * 待機中のジョブ
 
 **returnWorkflowJobTopicInfo** ワークフロージョブの処理情報を、トピックごとにまとめてリストします。
 
 * 引数：なし
-* 戻り値：以下の列を含む表形式のデータ：
+* 戻り値：次の列を含む表形式のデータ：
 
    * トピック名
    * 平均処理時間
@@ -76,7 +76,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * キャンセルされたジョブ
    * 失敗したジョブ
    * 完了したジョブ
-   * 処理済みのジョブ
+   * 処理済みジョブ
 
 **returnFailedWorkflowCount** 失敗したワークフローインスタンスの数を表示します。クエリ対象のワークフローモデルを指定したり、すべてのワークフローモデルの情報を取得したりできます。
 
@@ -84,14 +84,14 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
    * モデル：問い合わせるモデルの ID。すべてのワークフローモデルについて失敗したワークフローインスタンスの数を確認するには、値を指定しません。ID は model ノードのパスで、例は次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：失敗したワークフローインスタンスの数。
 
 **returnFailedWorkflowCountPerModel** ワークフローモデルごとに、失敗したワークフローインスタンスの数を表示します。
 
 * 引数：なし
-* 戻り値：数およびモデル ID の列を含む表形式のデータ
+* 戻り値：数およびモデル ID 列を含む表形式のデータ。
 
 **terminateFailedInstances** 失敗したワークフローインスタンスを終了します。失敗したインスタンスをすべて終了するか、特定のモデルの失敗したインスタンスのみを終了するかを指定できます。オプションで、終了後にインスタンスを再開できます。また、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
@@ -101,16 +101,16 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
    * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの失敗したインスタンスに操作を適用するには、モデルを指定しないでください。ID は model ノードのパスで、例は次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 戻り値：以下の列を含む、終了されたインスタンスに関する表形式のデータ：
+* 戻り値：終了したインスタンスに関する表形式のデータ。次の列が含まれます。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
+   * 開始者
+   * InstanceId
+   * ModelId
    * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+   * StartComment
+   * WorkflowTitle
 
 **retryFailedWorkItems** 失敗した作業項目のステップの実行を試みます。失敗した作業項目をすべて再試行するか、特定のワークフローモデルの失敗した作業項目のみを再試行するかを指定できます。オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
@@ -119,16 +119,16 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
    * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
    * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルの失敗した作業項目に対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
-* 戻り値：以下の列を含む、再試行された作業項目に関する表形式のデータ：
+* 戻り値：再試行された失敗した作業項目に関する表形式のデータ（次の列を含む）。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
+   * 開始者
+   * InstanceId
+   * ModelId
    * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+   * StartComment
+   * WorkflowTitle
 
 **PurgeActive** 特定の時間が経過したアクティブなワークフローインスタンスを削除します。すべてのモデルのアクティブなインスタンスをパージするか、特定のモデルのインスタンスのみをパージするかを指定できます。オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
@@ -136,18 +136,18 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
    * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルのワークフローインスタンスに対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ワークフローが開始してからの日数：パージするワークフローインスタンスの有効期間（日数）。
    * ドライラン：（オプション） `true` の値を指定して、 実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
-* 戻り値：以下の列を含む、パージされたアクティブなワークフローインスタンスに関する表形式のデータ：
+* 戻り値：次の列を含む、パージされたアクティブなワークフローインスタンスに関する表形式のデータです。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
+   * 開始者
+   * InstanceId
+   * ModelId
    * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+   * StartComment
+   * WorkflowTitle
 
 **countStaleWorkflows** 古くなったワークフローインスタンスの数を返します。古くなったインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
@@ -155,7 +155,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
    * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルのワークフローインスタンスに対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：古くなったワークフローインスタンスの数。
 
@@ -163,9 +163,9 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。すべてのワークフローモデルの古くなったインスタンスに操作を適用するには、モデルを指定しないでください。ID は model ノードのパスで、例は次のようになります。
+   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの古いインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：再開されたワークフローインスタンスのリスト。
@@ -173,7 +173,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 **fetchModelList** すべてのワークフローモデルのリストを表示します。
 
 * 引数：なし
-* 戻り値：モデル ID 列とモデル名列を含む、ワークフローモデルを識別する表形式のデータ。
+* 戻り値：ModelId 列や ModelName 列など、ワークフローモデルを識別する表形式のデータ。
 
 **countRunningWorkflows** 実行中のワークフローインスタンスの数を返します。実行中のインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
@@ -181,7 +181,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
    * モデル：（オプション）実行中のインスタンスの数を返すモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルの実行中のインスタンスの数が返されます。ID は model ノードのパスで、例えば、次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：実行中のワークフローインスタンスの数。
 
@@ -191,7 +191,7 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
    * モデル：（オプション）完了したインスタンスの数を返すモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルの完了したインスタンスの数が返されます。ID は model ノードのパスで、例えば、次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：完了したワークフローインスタンスの数。
 
@@ -201,18 +201,18 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
    * モデル：（オプション）操作の適用先のモデルの ID。モデルを指定しない場合は、すべてのワークフローモデルのワークフローインスタンスに対して操作が適用されます。ID は model ノードのパスで、例えば、次のようになります。
 
-      `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
    * ワークフローが完了してからの日数：ワークフローインスタンスが完了状態になっている日数。
    * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。デフォルト値 `false` では、操作が実行されます。
 
-* 戻り値：以下の列を含む、パージされた完了済みのワークフローインスタンスに関する表形式のデータ：
+* 戻り値：次の列を含む、パージされた完了したワークフローインスタンスに関する表形式のデータです。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
+   * 開始者
+   * InstanceId
+   * ModelId
    * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+   * StartComment
+   * WorkflowTitle
 
 ## リポジトリ {#repository}
 
@@ -253,17 +253,17 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>identifier.stability</td>
-   <td>参照不可能なノード識別子の安定性を示します。以下の値が指定可能です。
+   <td>参照不可のノード識別子の安定性を示します。 次の値を指定できます。
     <ul>
-     <li>identifier.stability.indefinite.duration：識別子は変わりません。</li>
-     <li>identifier.stability.method.duration：メソッド呼び出しの合間に識別子が変わる可能性があります。</li>
-     <li>identifier.stability.save.duration：保存／更新サイクル内では、識別子は変わりません。</li>
-     <li>identifier.stability.session.duration：セッション中は、識別子は変わりません。</li>
+     <li>identifier.stability.indefinite.duration:識別子は変更されません。</li>
+     <li>identifier.stability.method.duration:識別子は、メソッドの呼び出し間で変更される場合があります。</li>
+     <li>identifier.stability.save.duration:識別子は、保存/更新サイクル内では変更されません。</li>
+     <li>identifier.stability.session.duration:セッション中は識別子は変更されません。</li>
     </ul> </td>
   </tr>
   <tr>
    <td>query.xpath.pos.index</td>
-   <td>JCR 1.0 XPath クエリ言語がサポートされているかどうかを示します。true はサポートを示し、false はサポートなしを示します。</td>
+   <td>JCR 1.0 XPath クエリ言語がサポートされているかどうかを示します。 true はサポートを示し、false はサポートを示しません。</td>
   </tr>
   <tr>
    <td>crx.repository.systemid</td>
@@ -271,7 +271,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.query.sql.supported</td>
-   <td>JCR 1.0 XPath クエリ言語がサポートされているかどうかを示します。true はサポートを示し、false はサポートなしを示します。</td>
+   <td>JCR 1.0 XPath クエリ言語がサポートされているかどうかを示します。 true はサポートを示し、false はサポートを示しません。</td>
   </tr>
   <tr>
    <td>jcr.repository.version</td>
@@ -279,19 +279,19 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.update.primary.node.type.supported</td>
-   <td>あるノードのプライマリノードタイプを変更できるかどうかを示します。true はプライマリノードタイプを変更できることを示し、false は変更がサポートされていないことを示します。</td>
+   <td>ノードのプライマリノードタイプを変更できるかどうかを示します。 true はプライマリノードタイプを変更できることを示し、 false は変更がサポートされていないことを示します。</td>
   </tr>
   <tr>
    <td>option.node.type.management.supported</td>
-   <td>ノードタイプの管理がサポートされているかどうかを示します。true はサポートされていることを示し、false はサポートなしを示します。</td>
+   <td>ノードタイプの管理がサポートされているかどうかを示します。 true はサポートされていることを示し、false はサポートされていないことを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.overrides.supported</td>
-   <td>継承されたプロパティまたは子ノードで定義されているノードタイプを上書きできるかどうかを示します。true は上書きがサポートされていることを示し、false は上書きなしを示します。</td>
+   <td>ノードタイプの継承されたプロパティまたは子ノードの定義を上書きできるかどうかを示します。 true は上書きがサポートされていることを示し、 false は上書きがないことを示します。</td>
   </tr>
   <tr>
    <td>option.observation.supported</td>
-   <td>true はリポジトリ変更の非同期の監視がサポートされていることを示します。非同期の監視をサポートすると、変更が発生するたびに、アプリケーションが通知を受け取ったり、通知に応答したりできます。</td>
+   <td>true は、リポジトリの変更の非同期監視がサポートされていることを示します。 非同期監視のサポートにより、アプリケーションは、変更が発生するたびに通知を受け取り、応答できます。</td>
   </tr>
   <tr>
    <td>query.jcrscore</td>
@@ -299,27 +299,27 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.simple.versioning.supported</td>
-   <td>true は、リポジトリが単純なバージョン管理をサポートしていることを示します。単純なバージョン管理を使用すると、一連の連続したノードのバージョンが維持されます。</td>
+   <td>true は、リポジトリが単純なバージョン管理をサポートしていることを示します。 単純なバージョン管理では、リポジトリは一連のノードの連続したバージョンを維持します。</td>
   </tr>
   <tr>
    <td>option.workspace.management.supported</td>
-   <td>true は、API を使用したワークスペースの作成および削除をリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが API を使用したワークスペースの作成と削除をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>option.update.mixin.node.types.supported</td>
-   <td>true は、既存のノードの mixin ノードタイプの追加および削除をリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが既存のノードの mixin ノードタイプの追加と削除をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.primary.item.name.supported</td>
-   <td>true は、プライマリ項目を子として含めるノード定義がリポジトリによって可能になることを示します。プライマリ項目は、項目名がわからなくとも、API を使用してアクセスできます。</td>
+   <td>true は、リポジトリが、ノード定義にプライマリ項目を子として含めることを有効にすることを示します。 主要品目は、品目名がわからなくても、API を使用してアクセスできます。</td>
   </tr>
   <tr>
    <td>level.2.supported</td>
-   <td>true は、LEVEL_1_SUPPORTED と OPTION_XML_IMPORT_SUPPORTED がいずれも true であることを示します。</td>
+   <td>true は、LEVEL_1_SUPPORTED と OPTION_XML_IMPORT_SUPPORTED の両方が true であることを示します。</td>
   </tr>
   <tr>
    <td>write.supported</td>
-   <td>true はリポジトリによって API を使用した書き込みアクセスが提供されることを示し、false は読み取り専用アクセスを示します。</td>
+   <td>true は、リポジトリが API を使用して書き込みアクセスを提供することを示します。 false は読み取り専用アクセス権を示します。</td>
   </tr>
   <tr>
    <td>node.type.management.update.in.use.supported</td>
@@ -331,23 +331,23 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.journaled.observation.supported</td>
-   <td>true は、アプリケーションがリポジトリのジャーナル監視を実行できることを示します。ジャーナル監視を使用すると、一連の変更通知を特定の期間にわたって取得できます。 </td>
+   <td>true は、アプリケーションがリポジトリのジャーナル監視を実行できることを示します。 ジャーナル観測を使用すると、一連の変更通知を一定期間取得できます。 </td>
   </tr>
   <tr>
    <td>query.languages</td>
-   <td>リポジトリがサポートするクエリ言語。値なしは、クエリサポートがないことを示します。</td>
+   <td>リポジトリがサポートするクエリ言語。 値なしは、クエリがサポートされていないことを示します。</td>
   </tr>
   <tr>
    <td>option.xml.export.supported</td>
-   <td>true は、ノードを XML コードとして書き出すことをリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリがノードを XML コードとして書き出すことをサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.multiple.binary.properties.supported</td>
-   <td>true は複数のバイナリプロパティを持つノードタイプの登録をリポジトリがサポートしていることを示し、false は 1 つのノードタイプに対して単一のバイナリプロパティがサポートされていることを示します。</td>
+   <td>true は、複数のバイナリプロパティを持つノードタイプの登録をリポジトリがサポートしていることを示します。 false は、1 つのノードタイプで単一のバイナリプロパティがサポートされていることを示します。</td>
   </tr>
   <tr>
    <td>option.access.control.supported</td>
-   <td>true は、ノードアクセス用のユーザーの権限を設定および決定するために、リポジトリがアクセス制御をサポートすることを示します。</td>
+   <td>true は、ノードアクセスのユーザー権限の設定と決定に対して、リポジトリがアクセス制御をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>option.baselines.supported</td>
@@ -363,19 +363,19 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>query.stored.queries.supported</td>
-   <td>true は、保存されたクエリをリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが保存されたクエリをサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>query.full.text.search.supported</td>
-   <td>true は、リポジトリがフルテキスト検索をサポートしていることを示します。</td>
+   <td>true は、リポジトリが全文検索をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.inheritance</td>
-   <td><p>ノードタイプの継承に関するリポジトリサポートのレベルを示します。以下の値が指定可能です。</p> <p>node.type.management.inheritance.minimal：プライマリノードタイプの登録は、nt:base のみをスーパータイプとして持つものに限られます。mixin ノードタイプの登録は、スーパータイプがないものに限られます。</p> <p>node.type.management.inheritance.single：プライマリノードタイプの登録は、スーパータイプが 1 つのものに限られます。mixin ノードタイプの登録は、スーパータイプが 1 つ以下のものに限られます。</p> <p><br /> node.type.management.inheritance.multiple：プライマリノードタイプは、1 つ以上のスーパータイプに登録できます。mixin ノードタイプは、0 個以上のスーパータイプに登録できます。</p> </td>
+   <td><p>ノードタイプの継承に対するリポジトリのサポートのレベルを示します。 次の値を指定できます。</p> <p>node.type.management.inheritance.minimal:プライマリノードタイプの登録は、スーパータイプとして nt:base のみを持つノードに限られます。 mixin ノードタイプの登録は、スーパータイプのないものに限られます。</p> <p>node.type.management.inheritance.single：プライマリノードタイプの登録は、スーパータイプが 1 つのものに限られます。mixin ノードタイプの登録は、スーパータイプが 1 つ以下のものに限られます。</p> <p><br /> node.type.management.inheritance.multiple：プライマリノードタイプは、1 つ以上のスーパータイプに登録できます。mixin ノードタイプは、0 個以上のスーパータイプに登録できます。</p> </td>
   </tr>
   <tr>
    <td>crx.cluster.preferredMaster</td>
-   <td>true は、このクラスターノードがクラスターのマスターとして望ましいことを示します。</td>
+   <td>true は、このクラスターノードがクラスターの優先マスターであることを示します。</td>
   </tr>
   <tr>
    <td>option.transactions.supported</td>
@@ -387,7 +387,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.value.constraints.supported</td>
-   <td>true は、ノードプロパティの値の制約をリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリがノードプロパティの値の制約をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.property.types</td>
@@ -395,7 +395,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>node.type.management.orderable.child.nodes.supported</td>
-   <td>true は、子ノードの順序の保持をリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが子ノードの順序の保存をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>jcr.repository.vendor</td>
@@ -403,11 +403,11 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>query.joins</td>
-   <td><p>クエリ内の結合のサポートレベル。以下の値が指定可能です。</p>
+   <td><p>クエリでの結合のサポートレベル。 次の値を指定できます。</p>
     <ul>
-     <li>query.joins.none：結合のサポートなし。クエリでは 1 つのセレクターを使用できます。</li>
-     <li>query.joins.inner：内部結合のサポート。</li>
-     <li>query.joins.inner.outer：内部結合と外部結合のサポート。</li>
+     <li>query.joins.none:結合はサポートされていません。 クエリでは 1 つのセレクターを使用できます。</li>
+     <li>query.joins.inner:内部結合のサポート。</li>
+     <li>query.joins.inner.outer:内側と外側の結合のサポート。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -424,19 +424,19 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.xml.import.supported</td>
-   <td>true は、XML コードをコンテンツとして読み込むことをリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが XML コードをコンテンツとして読み込むことをサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.same.name.siblings.supported</td>
-   <td>true は、同じ名前の兄弟ノード（親が同じノード）をリポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが同じ名前の兄弟ノード（同じ親のノード）をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>node.type.management.residual.definitions.supported</td>
-   <td>true は、残差定義を持つ名前プロパティをリポジトリがサポートしていることを示します。サポートされている場合、項目定義の名前属性にアスタリスク（「*」）を指定できます。</td>
+   <td>true は、残りの定義を含む名前プロパティをリポジトリがサポートしていることを示します。 サポートされている場合、項目定義の name 属性にはアスタリスク (「*」) を使用できます。</td>
   </tr>
   <tr>
    <td>node.type.management.autocreated.definitions.supported</td>
-   <td>true は、ノード作成時にそのノードの子項目（ノードまたはプロパティ）の自動作成をリポジトリがサポートしていることを示します。</td>
+   <td>true は、ノードの作成時に、リポジトリがノードの子項目（ノードまたはプロパティ）の自動作成をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>crx.cluster.master</td>
@@ -444,11 +444,11 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>level.1.supported</td>
-   <td>true は、option.xml.export.support が true であり、query.languages がゼロ以外の長さであることを示します。</td>
+   <td>true は、option.xml.export.support が true で、query.languages がゼロ以外の長さであることを示します。</td>
   </tr>
   <tr>
    <td>option.unfiled.content.supported</td>
-   <td>true は、ファイルされていないコンテンツをリポジトリがサポートしていることを示します。ファイルされていないノードは、リポジトリ階層の一部ではありません。</td>
+   <td>true は、リポジトリがフィールドされていないコンテンツをサポートしていることを示します。 失敗していないノードは、リポジトリ階層に含まれていません。</td>
   </tr>
   <tr>
    <td>jcr.specification.name</td>
@@ -464,7 +464,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.locking.supported</td>
-   <td>true は、リポジトリがノードのロックをサポートしていることを示します。ロックすると、他のユーザーが一時的に変更できなくなります。</td>
+   <td>true は、リポジトリがノードのロックをサポートしていることを示します。 ロックを使用すると、ユーザーは一時的に他のユーザーが変更を加えるのを防ぐことができます。</td>
   </tr>
   <tr>
    <td>jcr.repository.version.display</td>
@@ -472,15 +472,15 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>option.activities.supported</td>
-   <td>true は、リポジトリがアクティビティをサポートしていることを示します。アクティビティとは、別のワークスペースに統合されるワークスペースで実行される一連の変更のことです。</td>
+   <td>true は、リポジトリがアクティビティをサポートしていることを示します。 アクティビティとは、別のワークスペースに結合されるワークスペースで実行される一連の変更です。</td>
   </tr>
   <tr>
    <td>node.type.management.multivalued.properties.supported</td>
-   <td>true は、ゼロ個以上の値を指定できるノードプロパティをリポジトリがサポートしていることを示します。</td>
+   <td>true は、0 個以上の値を持つことのできるノードプロパティをリポジトリがサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>option.retention.supported</td>
-   <td>true は、保持ポリシーをコンテンツに適用する外部保持管理アプリケーションの使用、および保持と解放を、リポジトリがサポートしていることを示します。</td>
+   <td>true は、リポジトリが、コンテンツに保存ポリシーを適用し、保持と解放をサポートする外部の保存管理アプリケーションの使用をサポートしていることを示します。</td>
   </tr>
   <tr>
    <td>option.lifecycle.supported</td>
@@ -506,10 +506,10 @@ CRX リポジトリに関する情報
 **BackupResult** 現在のバックアップのステータス。次の値を指定できます。
 
 * バックアップ中：バックアップが現在実行中です。
-* バックアップキャンセル：バックアップがキャンセルされました。
-* バックアップでエラー発生：バックアップ中にエラーが発生しました。エラーメッセージでは、原因に関する情報が提供されます。
-* バックアップ完了：バックアップが成功しました。
-* バックアップの実行なし：進行中のバックアップがありません。
+* バックアップがキャンセルされました：バックアップがキャンセルされました。
+* バックアップは次のエラーで終了しました：バックアップ中にエラーが発生しました。 エラーメッセージに、原因に関する情報が表示されます。
+* バックアップ完了：バックアップが正常に完了しました。
+* 現在までに実行されたバックアップはありません：処理中のバックアップはありません。
 
 読み取り専用。
 
@@ -533,7 +533,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * 名前：新しいワークスペースの名前を表す String 値。
+   * 名前：新しいワークスペースの名前を表す String 値です。
 
 * 戻り値：なし
 
@@ -548,7 +548,7 @@ CRX リポジトリに関する情報
 **stopDataStoreGarbageCollection** 実行中のデータストアのガベージコレクションを停止します。
 
 * 引数：なし
-* 戻り値：現在のステータスの文字列表現
+* 戻り値：現在のステータスを表す文字列
 
 **startBackup** リポジトリデータを ZIP ファイルにバックアップします。
 
@@ -556,11 +556,11 @@ CRX リポジトリに関する情報
 
    * `target`：（任意）リポジトリデータをアーカイブする ZIP ファイルまたはディレクトリの名前を表す `String` 値。ZIP ファイルを使用するには、ZIP ファイル名の拡張子を含めます。ディレクトリを使用する場合は、ファイル名の拡張子を含めません。
 
-      増分バックアップを実行するには、以前にバックアップに使用したディレクトリを指定します。
+     増分バックアップを実行するには、以前にバックアップに使用したディレクトリを指定します。
 
-      絶対パスまたは相対パスを指定できます。相対パスは、crx-quickstart ディレクトリの親を基準とした相対パスです。
+     絶対パスまたは相対パスを指定できます。相対パスは、crx-quickstart ディレクトリの親を基準とした相対パスです。
 
-      値を指定しない場合、デフォルト値は `backup-currentdate.zip` が使用され、`currentdate` の形式は `yyyyMMdd-HHmm` となります。
+     値を指定しない場合、デフォルト値は `backup-currentdate.zip` が使用され、`currentdate` の形式は `yyyyMMdd-HHmm` となります。
 
 * 戻り値：なし
 
@@ -649,10 +649,10 @@ CRX リポジトリに関する情報
 
 ### 属性 {#attributes-1}
 
-報告される統計タイプごとに、以下の属性が提供されています。
+レポートされる統計のタイプごとに、次の属性が提供されます。
 
-* ValuePerSecond：過去 1 分間の、1 秒あたりの測定値。読み取り専用。
-* ValuePerMinute：過去 1 時間の、1 分あたりの測定値。読み取り専用。
+* ValuePerSecond:直近 1 分間の 1 秒あたりの測定値。 読み取り専用。
+* ValuePerMinute:過去 1 時間の 1 分あたりの測定値。 読み取り専用。
 * ValuePerHour：過去 1 週間の、1 時間あたりの測定値。読み取り専用。
 * ValuePerWeek：過去 3 年間の、1 週あたりの測定値。読み取り専用。
 
@@ -687,7 +687,7 @@ CRX リポジトリに関する情報
 
 ## レプリケーションエージェント {#replication-agents}
 
-レプリケーションエージェントごとにサービスを監視します。レプリケーションエージェントを作成すると、JMX コンソールにサービスが自動的に表示されます。
+各レプリケーションエージェントのサービスを監視します。 レプリケーションエージェントを作成すると、JMX コンソールにサービスが自動的に表示されます。
 
 * **ドメイン：** com.adobe.granite.replication
 * **タイプ：**&#x200B;エージェント
@@ -748,7 +748,7 @@ CRX リポジトリに関する情報
 
 ## Sling エンジン {#sling-engine}
 
-HTTP 要求に関する統計を提供し、SlingRequestProcessor サービスのパフォーマンスを監視できるようにします。
+SlingRequestProcessor サービスのパフォーマンスを監視できるように、HTTP リクエストに関する統計を提供します。
 
 * ドメイン：org.apache.sling
 * タイプ：エンジン
@@ -789,14 +789,14 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 ## クイックスタートランチャー {#quickstart-launcher}
 
-起動プロセスおよびクイックスタートランチャーに関する情報。
+起動プロセスとクイックスタートランチャーに関する情報です。
 
 * ドメイン：com.adobe.granite.quickstart
 * タイプ：ランチャー
 
 ### 運用 {#operations-5}
 
-**log**
+**ログ**
 
 クイックスタートウィンドウにメッセージを表示します。
 
@@ -807,22 +807,22 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 **startupFinished**
 
-サーバーランチャーの startupFinished メソッドを呼び出します。このメソッドにより、Web ブラウザーにようこそページが開きます。
+サーバーランチャーの startupFinished メソッドを呼び出します。 このメソッドは、Web ブラウザーでようこそページを開こうとします。
 
 * 引数：なし
 * 戻り値：なし
 
 **startupProgress**
 
-サーバー起動プロセスの完了値を設定します。クイックスタートウィンドウの進行状況バーが、完了値を表します。
+サーバー起動プロセスの完了値を設定します。 クイックスタートウィンドウのプログレスバーは、完了値を表します。
 
 * 引数：
-   * p1：起動プロセスがどの程度完了したかを割合で表す浮動小数値。値の範囲はゼロから 1 です。例えば、0.3 は 30% 完了を示します。
+   * p1:起動プロセスが完了した割合を分数で表す浮動小数値です。 値は 0 ～ 1 の範囲で指定する必要があります。 例えば、0.3 は 30%完了したことを示します。
 * 戻り値：なし.
 
 ## サードパーティのサービス {#third-party-services}
 
-いくつかのサードパーティのサーバーリソースでは、MBean がインストールされ、これによって属性および操作が JMX コンソールに提供されます。次の表では、サードパーティのリソースをリストし、詳細のリンクを提供します。
+いくつかのサードパーティサーバーリソースが、属性と操作を JMX コンソールに公開する MBean をインストールします。 次の表に、サードパーティのリソースと、その他の情報へのリンクを示します。
 
 <table>
  <tbody>
@@ -846,14 +846,14 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
    <td>
     <ul>
      <li>ClassLoading</li>
-     <li>Compilation</li>
+     <li>コンパイル</li>
      <li>GarbageCollector</li>
      <li>メモリ</li>
      <li>MemoryManager</li>
      <li>MemoryPool</li>
      <li>OperatingSystem</li>
-     <li>Runtime</li>
-     <li>Threading</li>
+     <li>ランタイム</li>
+     <li>スレッド</li>
     </ul> </td>
    <td><a href="https://docs.oracle.com/javase/8/docs/api/javax/management/package-summary.html">javax.management</a> パッケージ</td>
   </tr>
@@ -867,7 +867,7 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
    <td>
     <ul>
      <li>bundleState</li>
-     <li>framework</li>
+     <li>フレームワーク</li>
      <li>packageState</li>
      <li>serviceState</li>
     </ul> </td>
@@ -878,23 +878,23 @@ HTTP 要求に関する統計を提供し、SlingRequestProcessor サービス�
 
 ## JMX コンソールの使用 {#using-the-jmx-console}
 
-JMX コンソールには、サーバー上で実行されているいくつかのサービスに関する情報が表示されます。
+JMX コンソールには、サーバー上で実行されている複数のサービスに関する情報が表示されます。
 
-* 属性：設定や実行時データなどのサービスプロパティ。属性は、読み取り専用の場合と読み取り／書き込み可能な場合があります。
-* 操作：サービスで呼び出し可能なコマンド。
+* 属性：設定や実行時データなどのサービスプロパティ。 属性は読み取り専用または読み取り/書き込み可能です。
+* 操作：サービスで呼び出すことができるコマンド。
 
 OSGi サービスでデプロイされる MBean により、サービスの属性および操作がコンソールに公開されます。MBean は、公開される属性および操作と、属性が読み取り専用か読み取り／書き込みかを決定します。
 
 JMX コンソールのメインページには、サービスの表が含まれます。表の行ごとに、MBean によって公開されるサービスを 1 つずつ表します。
 
-1. Web コンソールを開いて「JMX」タブをクリックします（[http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx)）。
-2. 任意のサービスのセル値をクリックして、そのサービスの属性と操作を確認します。
-3. 属性値を変更するには、値をクリックし、表示されるダイアログボックスで値を指定して、「保存」をクリックします。
-4. サービスの操作を呼び出すには、操作名をクリックし、表示されるダイアログボックスで引数値を指定して、「呼び出し」をクリックします。
+1. Web コンソールを開き、「JMX」タブをクリックします。([http://localhost:4502/system/console/jmx](http://localhost:4502/system/console/jmx))
+2. サービスのセル値をクリックして、サービスの属性と操作を表示します。
+3. 属性値を変更するには、値をクリックし、表示されるダイアログボックスで値を指定して、[ 保存 ] をクリックします。
+4. サービス操作を呼び出すには、操作名をクリックし、表示されるダイアログボックスで引数の値を指定して、[ 呼び出し ] をクリックします。
 
-## 監視のための外部 JMX アプリケーションの使用 {#using-external-jmx-applications-for-monitoring}
+## 外部 JMX アプリケーションを使用した監視 {#using-external-jmx-applications-for-monitoring}
 
-CRX を使用すると、外部アプリケーションと Managed Bean（MBean）が [Java Management Extensions（JMX）](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)経由でやり取りできます。[JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) のような汎用コンソールやドメイン専用の監視アプリケーションを使用すると、CRX の設定やプロパティを取得および設定したり、パフォーマンスやリソース使用状況を監視したりできます。
+CRX を使用すると、外部アプリケーションがを介して管理 Beans(MBean) とやり取りできます。 [Java 管理拡張 (JMX)](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html). 次のような汎用コンソールの使用 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) またはドメイン固有の監視アプリケーションを使用すると、CRX の設定とプロパティの取得と設定、およびパフォーマンスとリソースの使用状況の監視をおこなうことができます。
 
 ### JConsole を使用した CRX への接続 {#using-jconsole-to-connect-to-crx}
 
@@ -907,9 +907,9 @@ JConsole を使用して CRX に接続するには、次の手順に従います
 
 JConsole が起動して、JConsole ウィンドウが表示されます。
 
-### ローカルの CRX プロセスへの接続 {#connecting-to-a-local-crx-process}
+### ローカル CRX プロセスへの接続 {#connecting-to-a-local-crx-process}
 
-JConsole には、ローカルの Java 仮想マシンプロセスのリストが表示されます。このリストには 2 つのクイックスタートプロセスが含まれます。ローカルプロセスのリストから、クイックスタート「CHILD」プロセス（通常は PID が大きいほうのプロセス）を選択します。
+JConsole は、ローカル Java 仮想マシンプロセスの一覧を表示します。 このリストには、2 つのクイックスタートプロセスが含まれます。 ローカルプロセスのリストからクイックスタートの「CHILD」プロセスを選択します（通常は PID の高いプロセス）。
 
 ![screen_shot_2012-03-26at114557am](assets/screen_shot_2012-03-26at114557am.png)
 
@@ -938,14 +938,14 @@ $ java
   -jar ./cq-quickstart.jar
 ```
 
-### CRX で提供される MBean の使用 {#using-the-mbeans-provided-by-crx}
+### CRX が提供する MBean の使用 {#using-the-mbeans-provided-by-crx}
 
-クイックスタートプロセスに接続後、JConsole では、CRX が実行されている JVM に対して、様々な一般的監視ツールが提供されます。
+クイックスタートプロセスに接続した後、JConsole は、CRX が実行されている JVM の一般的な監視ツールを提供します。
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-CRX の内部監視および設定オプションにアクセスするには、「MBean」タブに移動して、左側にある階層型のコンテンツツリーから、属性または操作の関心のあるセクションを選択します。例えば、com.adobe.granite/Repository/Operations セクションなどです。
+CRX の内部監視および設定オプションにアクセスするには、「MBeans」タブに移動し、左側の階層コンテンツツリーから、目的の属性または操作セクションを選択します。 例えば、 com.adobe.granite/Repository/Operations セクションなどです。
 
-そのセクション内で、必要な属性または操作を左ウィンドウから選択します。
+そのセクション内で、左側のペインで目的の属性または操作を選択します。
 
 ![screen_shot_2012-03-26at115728am](assets/screen_shot_2012-03-26at115728am.png)

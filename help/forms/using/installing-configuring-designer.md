@@ -12,10 +12,10 @@ discoiquuid: f3a5b5ce-2262-4d5d-a8ae-d59a3a4229e7
 docset: aem65
 role: Admin
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
-source-git-commit: 1b2d743f8f2172c4e4663917d598734cb1ea1ea4
-workflow-type: ht
-source-wordcount: '477'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '476'
+ht-degree: 96%
 
 ---
 
@@ -36,7 +36,6 @@ WorkBench にバンドルされている Designer は、スタンドアロンの
    >[!NOTE]
    >
    > * Adobe Experience Manager 6.5 Forms サービスパック 15（6.5.15.0）以降の Forms Designer バージョンには、サービスパックバージョンも含まれています。例えば、サービスパック 15 の場合、バージョン番号は 6.5.15.20221112.1.0 です。この例では、6.5.15 がサービスパックのバージョンです。
-
 
 1. setup.exe をダブルクリックして、AEM Forms Designer のインストーラーを起動します。
 1. 続行して、「パーソナライズ機能」画面で詳細とシリアル番号を入力します。
@@ -80,6 +79,6 @@ AEM Forms Designer でスタンドアロンのインストーラーを使用す�
 
 AEM Forms Designer でスタンドアロンのインストーラーを使用する場合は、以下の手順を実行します。
 1. [ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)から最新バージョンの AEM Forms Designer をダウンロードします。
-1. ダウンロードしたインストーラーファイルをダブルクリックして、最新バージョンの AEM Forms Designer をインストールします。
+1. ダウンロードしたインストーラーファイルをダブルクリックして、最新バージョンのAEM Forms Designer をインストールします。
 
 +++

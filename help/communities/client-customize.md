@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: b9c164321baa3ed82ae87a97a325fcf0ad2f6ca0
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Web サイトの全体的なテーマに合わせたコンポーネントのカ�
 
 JavaScript コンポーネントの実装を拡張するには、次の操作が必要です。
 
-1. jcr:resourceSuperType を拡張コンポーネントの jcr:resourceType の値（例： social/forum/components/hbs/forum）に設定して、アプリのコンポーネントを作成します。
+1. jcr:resourceSuperType を拡張コンポーネントの jcr:resourceType の値に設定して、アプリのコンポーネントを作成します（例：social/forum/components/hbs/forum）。
 1. デフォルトの SCF コンポーネントの JavaScript を調べて、SCF.registerComponent() を使用して登録する必要があるメソッドを判断します。
 1. 拡張コンポーネントの JavaScript をコピーするか、最初から開始します。
 1. メソッドを拡張します。

@@ -5,7 +5,7 @@ contentOwner: AG
 role: Developer
 feature: Search
 exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
-source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 73%
@@ -196,7 +196,7 @@ ht-degree: 73%
            // Get the page wide available QueryBuilder.
            var qb = CQ.search.Util.getQueryBuilder();
    
-           // Create a unique group ID; will return e.g. "1_group".
+           // Create a unique group ID; will return for example, "1_group".
            var groupId = qb.createGroupId();
    
            // Hidden field that defines the property to search for  - in our case "dc:format" -

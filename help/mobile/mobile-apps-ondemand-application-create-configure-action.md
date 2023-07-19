@@ -1,7 +1,7 @@
 ---
 title: アプリケーションの作成および設定アクション
 seo-title: Application Create and Configuration Actions
-description: アプリを作成することは、多くの場合、AEM Mobile On-Demand コンテンツを作成および管理するための第一歩です。このページでは、この機能について詳しく見ていきます。
+description: 多くの場合、アプリを作成することは、AEM Mobile On-Demand コンテンツを作成および管理するための最初の手順です。 このページでは、この機能について詳しく見ていきます。
 seo-description: Creating an app is often the first step towards creating and managing AEM Mobile On-Demand content. Follow this page to learn more.
 uuid: f6b41d9a-d896-479e-9f6c-e91a88f3e74d
 contentOwner: User
@@ -10,10 +10,10 @@ products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: authoring-on-demand-services-app
 discoiquuid: ccafd49a-5c8a-44eb-9b0c-37070560bb52
 exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 94%
+source-wordcount: '443'
+ht-degree: 8%
 
 ---
 
@@ -21,56 +21,57 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->アドビは、シングルページアプリケーションフレームワークをベースにしたクライアント側のレンダリング（React など）を必要とするプロジェクトには SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 ## On-Demand アプリケーションの作成 {#creating-an-on-demand-application}
 
-アプリを作成することは、多くの場合、AEM Mobile On-Demand コンテンツを作成および管理するための第一歩です。通常は AEM 管理者レベルで実行されます。アプリはモバイルデバイス上で表示可能なコンテンツのシェルを表し、記事、画像、コレクションなど、作成者が作成したコンテンツを表示できます。
+アプリの作成は、AEM Mobile On-Demand コンテンツの作成と管理のための最初の手順です。多くの場合、AEM管理者レベルで実行されます。 これは、モバイルデバイスで表示可能なコンテンツシェルを表し、作成者が作成したコンテンツ（記事、画像、コレクションなど）を表示する準備が整います。
 
-アプリの詳細は、ダッシュボードまたは AEM Mobile コントロールセンターで表示できます。
+アプリの詳細は、ダッシュボードまたはAEM Mobileコントロールセンターで確認できます。
 
 >[!NOTE]
 >
->ダッシュボードは、アプリのコンテンツ、メタデータおよび AEM Mobile On-Demand の接続ステータスの概要を把握できる一連の便利なタイルです。
+>ダッシュボードは、アプリのコンテンツ、メタデータ、AEM Mobile On-Demand 接続ステータスの概要を示す一連の便利なタイルです。
 >
 >詳しくは、 [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) 」を参照してください。
 
-**On-Demand アプリを作成するには：**
+**オンデマンドアプリを作成するには：**
 
-1. サイドレールから「**モバイル**」を選択します。
+1. 選択 **モバイル** サイドレールから。
 1. 選択 **アプリ** をクリックします。
-1. 「**作成**」をクリックし、ドロップダウンから「**アプリ**」を選択します。
-1. モバイルアプリのテンプレートを選択し、「**次へ**」をクリックします。
-1. 「**タイトル**」、「**名前**」、「**説明**」など、アプリのプロパティを入力します。
+1. クリック **作成** を選択し、 **アプリ** 」をドロップダウンから選択します。
+1. 「モバイルアプリ」テンプレートを選択し、 **次へ**.
+1. 次のようなアプリのプロパティを入力します。 **タイトル**, **名前**, **説明**.
 1. 「**次へ**」をクリックします。
-1. クラウド設定の詳細がわかっている場合は入力し、それ以外の場合は「**作成**」をクリックします。
-1. 「**完了**」をクリックすると、新しい AEM モバイルアプリがカタログに表示されます。
+1. 既知の場合は、クラウド設定の詳細を入力し、それ以外の場合は「 **作成**.
+1. クリック **完了** 新しいAEM Mobileアプリをカタログに表示します。
 
 ![chlimage_1](assets/chlimage_1.gif)
 
 >[!NOTE]
 >
->このプロセスにより、AEM でアプリインスタンスを作成できます。
+>このプロセスにより、AEMでアプリインスタンスを作成できます。
 
 ## アプリテンプレートの使用 {#using-app-templates}
 
-アプリテンプレートにより、AEM での新しいアプリの作成に使用される、開発者が作成した既存のデザインを利用する簡単な方法が提供されます。
+アプリテンプレートを使用すると、AEM内での新しいアプリの作成に使用される、デベロッパーが作成した既存のデザインを簡単に活用できます。
 
-アプリテンプレートとはアプリのベースラインまたは基盤となるページテンプレートおよびコンポーネントをひとまとめにしたものと考えることができます。新規アプリを別のアプリのテンプレートに基づいて作成すると、作成元アプリと同じ開始点からアプリを作成することができます。
+アプリテンプレートとは これは、アプリのベースラインまたは基盤を表すページテンプレートおよびコンポーネントの集まりと考えてください。
+別のアプリのテンプレートに基づいて新しいアプリを作成する場合、作成元のアプリを表す開始点を持つアプリが表示されます。
 
-この機能を利用するには、既存のモバイルアプリテンプレートが必要です（またはアプリテンプレートを含むアプリがインストールされている必要があります）。
+この機能を利用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリ）がインストールされている必要があります。
 
 ### 次のステップ {#the-next-step}
 
-アプリケーションダッシュボードから On-Demand アプリを作成したら、次のステップでは、アプリをクラウド設定に関連付けます。
+アプリケーションダッシュボードから On-Demand アプリを作成したら、次の手順は、アプリをクラウド設定に関連付けることです。
 
 詳しくは、 [アプリをクラウド設定に関連付け](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) を参照してください。
 
-### さらに先のステップ {#getting-ahead}
+### 先に進む {#getting-ahead}
 
-On-Demand アプリケーションの作成およびそのアプリのクラウド設定への関連付けについて学習したら、[コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md)を参照してください。
+オンデマンドアプリケーションの作成と、そのアプリのクラウド設定への関連付けについて詳しくは、 [コンテンツ管理アクション](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
-**コンテンツ管理アクション**&#x200B;には、以下のコンテンツの作成と管理が含まれます。
+**コンテンツ管理アクション** 次のコンテンツの作成と管理を含みます。
 
 * [記事の管理](/help/mobile/mobile-on-demand-managing-articles.md)
 * [バナーの管理](/help/mobile/mobile-on-demand-managing-banners.md)
@@ -78,7 +79,7 @@ On-Demand アプリケーションの作成およびそのアプリのクラウ�
 * [共有リソースのアップロード](/help/mobile/mobile-on-demand-shared-resources.md)
 * [コンテンツの公開／非公開](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
-管理者および開発者の役割と責任について詳しくは、以下のリソースを参照してください。
+管理者および開発者の役割と責務について詳しくは、以下のリソースを参照してください。
 
-* [AEM Mobile On-demand Services の AEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
-* [AEM Mobile On-demand Services を使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)
+* [AEM Mobile On-demand Services向けAEMコンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
+* [AEM Mobile On-demand Servicesを使用するコンテンツの管理](/help/mobile/aem-mobile.md)

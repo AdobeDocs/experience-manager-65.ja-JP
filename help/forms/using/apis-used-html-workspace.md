@@ -1,7 +1,7 @@
 ---
 title: AEM Forms ワークスペースで使用する各種 API
 seo-title: APIs used in AEM Forms workspace
-description: Public Java API、JavaScript API、および LiveCycle AEM Forms ワークスペースのメソッド、カスタマイズとオートメーションのために開示。
+description: パブリック Java および JavaScript API と、LiveCycleAEM Forms Workspace のメソッド、カスタマイズと自動化のために公開。
 seo-description: Public Java and JavaScript APIs and methods of LiveCycle AEM Forms workspace, exposed for customization and automation.
 uuid: 9602990e-8ac7-42eb-b507-50b3594055ba
 content-type: reference
@@ -9,21 +9,21 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
 discoiquuid: 4a73a973-fccf-466b-b4a0-47652a14a080
 exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 100%
+source-wordcount: '998'
+ht-degree: 3%
 
 ---
 
 # AEM Forms ワークスペースで使用する各種 API {#apis-used-in-aem-forms-workspace}
 
-AEM Forms ワークスペースでは次の API が使用されています。
+AEM Forms Workspace では次の API が使用されます。
 
 <table>
  <tbody>
   <tr>
-   <td><strong>Javascript メソッド</strong></td>
+   <td><strong>JavaScript メソッド</strong></td>
    <td><strong>サービス名</strong></td>
    <td><strong>API 名</strong></td>
    <td><strong>コメント</strong></td>
@@ -32,25 +32,25 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getGroups</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getGroups</td>
-   <td>グループを検索します。何も指定しない場合はすべてのグループのリストを返します。名前を指定した場合はそれらのグループを返します。</td>
+   <td>グループを検索します。 何も指定しなかった場合は、すべてのグループのリストを返し、指定した名前のグループを返します。</td>
   </tr>
   <tr>
    <td>getUsersAndGroups</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsersAndGroups</td>
-   <td>ユーザーおよびグループを検索します。何も指定しない場合はすべてのユーザーとグループのリストを返します。名前を指定した場合はそれらのユーザーとグループを返します。</td>
+   <td>ユーザーとグループを検索します。 何も指定しなかった場合は、すべてのユーザーとグループのリストを返し、指定した名前のユーザーとグループを返します。</td>
   </tr>
   <tr>
    <td>prepareForSubmit</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>prepareForSubmit</td>
-   <td>これは、フォームを DocumentSubmitServlet 経由で送信する前に呼び出されます。実際の送信中に取得されるタスク ID をセッション変数（有効期限と共に）に設定します。</td>
+   <td>このメソッドは、DocumentSubmitServlet を介してフォームを送信する前に呼び出されます。 実際の送信中に取得されるタスク ID をセッション変数（有効期限と共に）に設定します。</td>
   </tr>
   <tr>
    <td>submitTask</td>
    <td>ProcessManagementDocumentHandlingService</td>
-   <td>submit</td>
-   <td>タスクに関連付けられたドキュメントオブジェクトを送信します（そして次にプロセスを送信します）。</td>
+   <td>送信</td>
+   <td>タスクに関連付けられたドキュメントオブジェクトを送信します（そして、次にプロセスを送信します）。</td>
   </tr>
   <tr>
    <td>getRootEndpointCategories</td>
@@ -68,19 +68,19 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getAllStartpoints</td>
    <td>ProcessManagementStartpointService</td>
    <td>getAllStartpoints</td>
-   <td>すべてのカテゴリ下にあるサーバーに存在するすべてのスタートポイントを取得します。</td>
+   <td>すべてのカテゴリ下にサーバー上に存在するすべてのスタートポイントを取得します。</td>
   </tr>
   <tr>
    <td>invokeStartpoint</td>
    <td>ProcessManagementStartpointService</td>
    <td>invokeStartpoint</td>
-   <td>これにより、スタートポイントが呼びされてスタートポイントに対応する新しいタスクが作成されます。</td>
+   <td>これにより、スタートポイントが呼び出され、スタートポイントに対応する新しいタスクが作成されます</td>
   </tr>
   <tr>
    <td>getAllTasks</td>
    <td>ProcessManagementTaskService</td>
    <td>getAllActionableTasks</td>
-   <td>ログインしたユーザーに対して作成されて転送または問い合わせ、保存、割り当てられた、あるいは割り当てられて保存されたすべてのタスクを取得します。</td>
+   <td>ログインしたユーザーに対して作成、転送、問い合わせ、保存、割り当て、割り当て、保存されたすべてのタスクを取得します。</td>
   </tr>
   <tr>
    <td>getTask</td>
@@ -92,88 +92,88 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>renderTask</td>
    <td>ProcessManagementTaskService</td>
    <td>render</td>
-   <td>タスクをレンダリングして、フォーム URL、フォームタイプ、データ URL （必要な場合）などフォームのレンダリングに必要な情報を返します。</td>
+   <td>タスクをレンダリングし、フォーム URL、フォームタイプ、必要に応じてデータ URL など、フォームのレンダリングに必要な情報を返します。</td>
   </tr>
   <tr>
    <td>submitWithPriorData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithPriorData</td>
-   <td>結果キーを使用して TaskManager の送信 API の結果を返します。</td>
+   <td>TaskManager の送信 API の結果を、結果キーを使用して返します。</td>
   </tr>
   <tr>
    <td>submitWithData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithData</td>
-   <td>TaskManager の送信 API を使用してタスクに関連付けられたフォームデータ（文字列として渡された）を送信します。TaskManager の送信 API を呼び出さないフレックスフォームに使用されます。</td>
+   <td>TaskManager の送信 API を使用して、タスクに関連付けられた（文字列として渡された）フォームデータを送信します。 TaskManager の送信 API を呼び出さないフレックスフォームに使用されます。</td>
   </tr>
   <tr>
    <td>save</td>
    <td>ProcessManagementTaskService</td>
-   <td>保存</td>
+   <td>save</td>
    <td>タスクをサーバーに保存します。</td>
   </tr>
   <tr>
-   <td>complete</td>
+   <td>完了</td>
    <td>ProcessManagementTaskService</td>
    <td>完了</td>
-   <td>タスクを完了し、タスクはプロセス設計に従って次の手順に渡されます。</td>
+   <td>タスクが完了し、プロセスデザインに従ってタスクが次のステップに渡されます。</td>
   </tr>
   <tr>
    <td>getAttachment</td>
    <td>ProcessManagementTaskService</td>
    <td>getAttachment</td>
-   <td>利用できる添付ファイルの URL を返します。</td>
+   <td>添付ファイルが使用可能な添付ファイルの URL を返します。</td>
   </tr>
   <tr>
    <td>getAllAttachments</td>
    <td>ProcessManagementTaskService</td>
    <td>getAllActionableAttachments</td>
-   <td>タスクのすべての添付ファイルおよびメモを取得します。</td>
+   <td>タスクのすべての添付ファイルとメモを取得します。</td>
   </tr>
   <tr>
    <td>share</td>
    <td>ProcessManagementTaskService</td>
-   <td>共有</td>
-   <td>別のユーザーとタスクを共有します。別のユーザーはタスクを要求してタスクの所有者になることができます。</td>
+   <td>share</td>
+   <td>別のユーザーとタスクを共有します。 別のユーザーがタスクを要求して、タスクの所有者になることができます。</td>
   </tr>
   <tr>
-   <td>forward</td>
+   <td>送る</td>
    <td>ProcessManagementTaskService</td>
-   <td>転送</td>
-   <td>別のユーザーにタスクを転送します。</td>
+   <td>送る</td>
+   <td>タスクを別のユーザーに転送します。</td>
   </tr>
   <tr>
    <td>consult</td>
    <td>ProcessManagementTaskService</td>
    <td>consult</td>
-   <td>別のユーザーにタスクについて問い合わせます。</td>
+   <td>別のユーザーにタスクを問い合わせます。</td>
   </tr>
   <tr>
    <td>claim</td>
    <td>ProcessManagementTaskService</td>
-   <td>請求</td>
+   <td>claim</td>
    <td>共有キューで使用可能なタスクを要求します。</td>
   </tr>
   <tr>
-   <td>unlock</td>
+   <td>ロック解除</td>
    <td>ProcessManagementTaskService</td>
    <td>ロック解除</td>
-   <td>タスクをロック解除します。</td>
+   <td>タスクのロックを解除します。</td>
   </tr>
   <tr>
-   <td>lock</td>
+   <td>ロック</td>
    <td>ProcessManagementTaskService</td>
    <td>ロック</td>
-   <td>タスクをロックします。これにより、共有されている場合は別のユーザーが要求できなくなります。</td>
+   <td>タスクをロックします。共有している場合は、別のユーザーがタスクを要求することはできません。</td>
   </tr>
   <tr>
    <td>reject</td>
    <td>ProcessManagementTaskService</td>
-   <td>却下する</td>
-   <td>タスクを前の所有者に返します。</td>
+   <td>reject</td>
+   <td>タスクの前の所有者にタスクを返します。</td>
   </tr>
   <tr>
-   <td>abandon</td>
+   <td>離脱</td>
    <td>ProcessManagementTaskService</td>
    <td>離脱</td>
    <td>タスクを削除します。</td>
@@ -182,13 +182,13 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>setVisibility</td>
    <td>ProcessManagementTaskService</td>
    <td>setVisibility</td>
-   <td>タスクの表示を設定します。表示が false に設定された場合は、それ以降ユーザーに表示されなくなります。</td>
+   <td>タスクの表示を設定します。 表示を false に設定した場合、後でユーザーに対してタスクが表示されなくなります。</td>
   </tr>
   <tr>
    <td>getUsers</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsers</td>
-   <td>ユーザーの検索に使用されます。名前が指定されていない場合はすべてのユーザーを返しますが、そうでない場合は指定された名前のユーザーを返します。</td>
+   <td>ユーザーの検索に使用されます。 名前が指定されていない場合はすべてのユーザーを返し、指定された名前のユーザーを返します。</td>
   </tr>
   <tr>
    <td>getUsersInGroup</td>
@@ -200,43 +200,43 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>grantQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>grantQueueAccess</td>
-   <td>ログインしたユーザーのキューへのアクセスを指定したユーザーに付与します。基本的に固有のキューを別のユーザーと共有することになります。</td>
+   <td>ログインしたユーザーのキューへのアクセスを指定したユーザーに許可します。 基本的には、別のユーザーと自分のキューを共有しています。</td>
   </tr>
   <tr>
    <td>requestQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>requestQueueAccess</td>
-   <td>ログインしたユーザーに対して指定したユーザーのキューへのアクセスを要求します。ユーザーが要求を承認した場合、ユーザーのキューはログインユーザーと共有されます。</td>
+   <td>ログインしたユーザーの指定したユーザーのキューへのアクセス要求を行います。 ユーザーがリクエストを承認すると、ユーザーのキューがログインユーザーと共有されます。</td>
   </tr>
   <tr>
    <td>getGrantedUsers</td>
    <td>ProcessManagementQueueService</td>
    <td>getGrantedUsers</td>
-   <td>ログインユーザーのキューへのアクセス権を持つすべてのユーザーを返します。</td>
+   <td>ログインしたユーザーのキューにアクセスできるすべてのユーザーを返します。</td>
   </tr>
   <tr>
    <td>getUsersForAccessibleQueues</td>
    <td>ProcessManagementQueueService</td>
    <td>getUsersForAccessibleQueues</td>
-   <td>ユーザーにアクセス可能なキューを持つすべてのユーザーを返します。</td>
+   <td>ユーザーがアクセス可能なキューを持つすべてのユーザーを返します。</td>
   </tr>
   <tr>
    <td>revokeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>revokeQueueAccess</td>
-   <td>ユーザーのリストから、ログインユーザーのキューへのアクセス権を持つユーザーを削除します。</td>
+   <td>ログインしたユーザーのキューにアクセスできるユーザーのリストから、ユーザーを削除します。</td>
   </tr>
   <tr>
    <td>removeQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>removeQueueAccess</td>
-   <td>ユーザーのリストからログインユーザーにアクセス可能なキューを持つユーザーを削除します。</td>
+   <td>ログインしたユーザーがキューにアクセスできるユーザーのリストからユーザーを削除します。</td>
   </tr>
   <tr>
    <td>getAllQueues<br /> </td>
    <td>ProcessManagementQueueService<br /> </td>
    <td>getAllQueues<br /> </td>
-   <td>ログインユーザーにアクセス可能なすべてのキュー（固有のキュー、共有キューおよびグループキュー）を取得します。<br /> </td>
+   <td>ログインしたユーザーがアクセスできるすべてのキュー（独自のキュー、共有キュー、グループキュー）を取得します。<br /> </td>
   </tr>
   <tr>
    <td>getOutOfOfficeSettings</td>
@@ -257,10 +257,10 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>すべてのプロセスのリストを返します。</td>
   </tr>
   <tr>
-   <td>getParticipatedProcesses</td>
+   <td>getRenitedProcesses</td>
    <td>ProcessManagementProcessService</td>
    <td>getRenitedProcesses</td>
-   <td>ログインユーザーが参加したすべてのプロセス名のリストを返します。</td>
+   <td>ログインしたユーザーが参加したすべてのプロセス名のリストを返します。</td>
   </tr>
   <tr>
    <td>getProcessInstance<br /> </td>
@@ -296,7 +296,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getTemplate</td>
    <td>ProcessManagementQueryService</td>
    <td>getTemplate</td>
-   <td>検索テンプレートの内容を返します。</td>
+   <td>検索テンプレートのコンテンツを返します。</td>
   </tr>
   <tr>
    <td>findTasksJson<br /> </td>
@@ -308,19 +308,19 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>タスクのすべてのアサインを取得します。例えば、ユーザーがタスクを別のユーザーに転送または問い合わせする場合、それがタスクのアサインになります。</td>
+   <td>タスクのすべての割り当てを取得します。 例えば、: — ユーザーが別のユーザーにタスクを転送または問い合わせした場合、それはタスクの割り当てになります。</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>
    <td>TaskManagerService</td>
    <td>deleteAttachment</td>
-   <td>添付ファイルを削除します。</td>
+   <td>添付ファイルが削除されます。</td>
   </tr>
   <tr>
    <td>initialize</td>
    <td>ProcessManagementClientSessionService</td>
-   <td>初期化</td>
-   <td>必要に応じてアサーションを更新します。ユーザーを認証します。サーバー / クライアント情報のセッションパラメータを設定します。ユーザー情報およびポーリング間隔を返します。</td>
+   <td>initialize</td>
+   <td>必要に応じてアサーションを更新します。 ユーザーを認証します。 サーバ/クライアント情報のセッションパラメータを設定します。 ユーザー情報とポーリング間隔を返します。</td>
   </tr>
   <tr>
    <td>getTasksForDirectReports</td>
@@ -332,55 +332,55 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getTaskOfDirectReport<br /> </td>
    <td>ProcessManagementTeamTasksService</td>
    <td>getDirectReportTask</td>
-   <td>ログインしたマネージャーの指定された直接レポートのタスクを返します。</td>
+   <td>ログインしたマネージャーの指定した直属のレポートのタスクを返します。</td>
   </tr>
   <tr>
    <td>forwardTaskOfDirectReport</td>
    <td>ProcessManagementTeamTasksService</td>
    <td>forwardTaskOfDirectReport</td>
-   <td>別のユーザーに直接レポートのタスクを転送します。</td>
+   <td>直属のレポートのタスクを別のユーザーに転送します。</td>
   </tr>
   <tr>
    <td>rejectTaskOfDirectReport</td>
    <td>ProcessManagementTeamTasksService</td>
    <td>rejectTaskOfDirectReport</td>
-   <td>前のユーザーに直接レポートのタスクを返します。</td>
+   <td>直属のレポートのタスクを前のユーザーに返します。</td>
   </tr>
   <tr>
    <td>getProperty</td>
    <td>WorkspacePropertyService</td>
    <td>getProperty</td>
-   <td>ユーザーのワークスペースプロパティを取得します。</td>
+   <td>ユーザーの Workspace プロパティを取得します。</td>
   </tr>
   <tr>
    <td>removeProperty</td>
    <td>WorkspacePropertyService</td>
    <td>delete</td>
-   <td>ユーザーのワークスペースプロパティを削除します。</td>
+   <td>ユーザーの Workspace プロパティを削除します。</td>
   </tr>
   <tr>
    <td>getProperties</td>
    <td>WorkspacePropertyService</td>
    <td>getPropertiesAsMap</td>
-   <td>ユーザーのすべてのワークスペースプロパティを返します。</td>
+   <td>ユーザーのすべての Workspace プロパティを返します。</td>
   </tr>
   <tr>
    <td>setProperty</td>
    <td>WorkspacePropertyService</td>
    <td>setProperty</td>
-   <td>ユーザーのワークスペースプロパティを設定します。</td>
+   <td>ユーザーの Workspace プロパティを設定します。</td>
   </tr>
   <tr>
    <td>getCurrentUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getCurrentUserImageUrl</td>
-   <td>ログインしたユーザーのユーザーの画像 URL を取得します。</td>
+   <td>ログインしたユーザーの画像 URL を取得します。</td>
   </tr>
   <tr>
    <td>getUserImageUrl</td>
    <td>ProcessManagementClientSessionService</td>
    <td>getUserImageUrl</td>
-   <td>指定したユーザーのユーザーの画像 URL を取得します。</td>
+   <td>指定されたユーザーのユーザーの画像 URL を取得します。</td>
   </tr>
   <tr>
    <td>uploadNote</td>
@@ -389,13 +389,13 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>タスクのメモをサーバーにアップロードします。</td>
   </tr>
   <tr>
-   <td>uploadRMAToServer （HTML テンプレートから直接呼び出すこともできます）<br /> </td>
+   <td>uploadRMAToServer （html テンプレートから直接呼び出すこともできます）<br /> </td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>uploadAttachment</td>
-   <td>サーバーにタスクの添付ファイルをアップロードします。</td>
+   <td>タスクの添付ファイルをサーバーにアップロードします。</td>
   </tr>
   <tr>
-   <td>getImageURL （HTML テンプレートから直接呼び出すこともできます）</td>
+   <td>getImageURL （html テンプレートから直接呼び出すこともできます）</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>getImage</td>
    <td>プロセスの画像を取得します。</td>

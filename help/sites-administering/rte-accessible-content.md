@@ -3,10 +3,10 @@ title: アクセシブルな web ページとサイトを作成するための�
 description: アクセシブルな web ページとサイトを作成するためのリッチテキストエディターの設定
 contentOwner: AG
 exl-id: d2451710-5abf-4816-8052-57d8f04a228e
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 100%
+source-wordcount: '932'
+ht-degree: 97%
 
 ---
 
@@ -48,7 +48,7 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 意味的ブロックの新しい書式を選択可能にするには、次の手順を実行します。
 
 1. 使用している RTE によって、[設定場所](/help/sites-administering/rich-text-editor.md#understand-the-configuration-paths-and-locations)を特定し、移動します。
-1. [プラグインをアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)することにより、[段落選択フィールドを有効](/help/sites-administering/rich-text-editor.md)にします。
+1. [段落選択フィールドの有効化](/help/sites-administering/rich-text-editor.md);作成者 [プラグインのアクティベート](/help/sites-administering/rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
 1. [段落選択フィールドで使用可能にする書式を指定](/help/sites-administering/rich-text-editor.md)します。
 1. これにより、コンテンツ作成者は、指定した段落書式を RTE の選択フィールドから選択できます。アクセス方法は次のとおりです。
 
@@ -83,7 +83,7 @@ AEM のアクセシビリティ機能をさらに拡張するには、RTE に基
 
 ### 例 - テキストで強調を使用する際のアクセシブルな HTML の作成 {#create-accessible-html-for-text}
 
-RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として、ダイアログの `uiSettings` および `rtePlugins` ノードに追加します。
+RTE は `b` および `i` の代わりに `strong` および `em` タグを使用できます。次のノードを兄弟として `uiSettings` および `rtePlugins` ノードを設定します。
 
 ```HTML
 <htmlRules jcr:primaryType="nt:unstructured">
@@ -193,9 +193,7 @@ RTE は `b` および `i` の代わりに `strong` および `em` タグを使�
 >* 対応する各フィールドの `itemId` プロパティが適切な DOM 属性の名前（`TablePropertiesDialog`）に設定されていること。
 >* DOM 要素で属性が設定／削除されていること（`Table`）。
 
-
 >[!MORELIKETHIS]
 >
 >* [WCAG 2.0 のクイックガイド](/help/managing/qg-wcag.md)
 >* [アクセス可能なコンテンツ（WCAG 2.0 適合）の作成](/help/sites-authoring/creating-accessible-content.md)
-

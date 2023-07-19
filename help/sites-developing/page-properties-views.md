@@ -1,7 +1,7 @@
 ---
 title: ページプロパティのビューのカスタマイズ
 seo-title: Customizing Views of Page Properties
-description: どのページにも、必要に応じて編集できる一連のプロパティがあります
+description: 各ページには、必要に応じて編集できる一連のプロパティがあります
 seo-description: Every page has a set of properties that you can edit as required
 uuid: cbfca6e6-cb9e-43b1-8889-09a7cc9f8a51
 contentOwner: User
@@ -10,10 +10,10 @@ topic-tags: extending-aem
 content-type: reference
 discoiquuid: 6f8e08d1-831e-441a-ad1a-f5c8788f32d7
 exl-id: 292874bf-2ee6-4638-937c-f8f26c93ca65
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: ht
-source-wordcount: '479'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '483'
+ht-degree: 74%
 
 ---
 
@@ -27,18 +27,18 @@ ht-degree: 100%
 
 各ページプロパティのデフォルト状態は次のとおりです。
 
-* 作成ビューでは非表示（例：**ページを作成**&#x200B;ウィザード）
+* 作成ビューで非表示 ( 例： **ページを作成** ウィザード )
 
-* 編集ビューでは表示（例：**プロパティを表示**）
+* 編集ビューで使用できます ( 例： **プロパティを表示**)
 
-変更が必要な場合は、フィールドを明確に設定する必要があります。それには適切なノードプロパティを使用します。
+変更が必要な場合は、フィールドを具体的に設定する必要があります。 これは、次の適切なノードプロパティを使用しておこないます。
 
-* 作成ビューで利用できるページプロパティ（例：**ページを作成**&#x200B;ウィザード）：
+* 作成ビューで使用できるページプロパティ ( 例： **ページを作成** ウィザード ):
 
    * 名前：`cq:showOnCreate`
    * 型：`Boolean`
 
-* 編集ビューで利用できるページプロパティ（例：**表示**／**編集**）**プロパティ**&#x200B;オプション）：
+* 編集ビューで使用できるページプロパティ ( 例： **表示**/**編集**) **プロパティ** オプション ):
 
    * 名前：`cq:hideOnEdit`
    * 型：`Boolean`
@@ -55,7 +55,7 @@ ht-degree: 100%
 
 ## ページプロパティの設定 {#configuring-your-page-properties}
 
-ページコンポーネントのダイアログを設定し、適切なノードプロパティを適用することによって、表示するフィールドを設定することもできます。
+また、ページコンポーネントのダイアログを設定し、適切なノードプロパティを適用することで、使用可能なフィールドを設定できます。
 
 例えば、デフォルトでは、[**ページを作成**&#x200B;ウィザード](/help/sites-authoring/managing-pages.md#creating-a-new-page)には「**その他のタイトルと説明**」の下にグループ化されたフィールドが表示されます。これらのフィールドを非表示にするには、次のように設定します。
 
@@ -71,12 +71,15 @@ ht-degree: 100%
    >リファレンスとして、以下を参照してください。
    >
    >    `/libs/wcm/foundation/components/basicpage/v1/basicpage/cq:dialog`
-   >ただし、`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
-   >`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
-   >設定およびその他の変更に推奨される方法は次のとおりです。
-   >1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
-   >1. `/apps` 内で変更作業をおこないます。
-
+   >
+   ただし、`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
+   >
+   `/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
+   >
+   設定およびその他の変更に推奨される方法は次のとおりです。
+   >
+   1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
+   1. `/apps` 内で変更作業をおこないます。
 
 1. `basic` の `path` プロパティに、基本タブのオーバーライドを指すように設定します（次の手順も参照してください）。次に例を示します。
 
@@ -99,9 +102,10 @@ ht-degree: 100%
    **ページを作成**&#x200B;ウィザードに「**その他のタイトルと説明**」セクションが表示されなくなります。
 
 >[!NOTE]
->ライブコピーと一緒に使用するページプロパティを設定する場合、詳しくは、[ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui)を参照してください。
+>
+ライブコピーで使用するページプロパティを設定する場合は、 [ページプロパティに対する MSM ロックの設定](/help/sites-developing/extending-msm.md#configuring-msm-locks-on-page-properties-touch-enabled-ui) を参照してください。
 
-## ページプロパティの設定サンプル {#sample-configuration-of-page-properties}
+## ページプロパティの設定例 {#sample-configuration-of-page-properties}
 
 この例では、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) のダイアログ差分比較の手法を示しており、[`sling:orderBefore`](/help/sites-developing/sling-resource-merger.md#properties) が使用されています。`cq:showOnCreate` と `cq:hideOnEdit` の両方を使用することも説明されています。
 

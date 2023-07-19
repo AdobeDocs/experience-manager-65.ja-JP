@@ -1,7 +1,7 @@
 ---
 title: Query Builder 用のカスタム述語エバリュエーターの実装
 seo-title: Implementing a Custom Predicate Evaluator for the Query Builder
-description: Query Builder を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます
+description: Query Builder を使用すると、コンテンツリポジトリに簡単にクエリを実行できます
 seo-description: The Query Builder offers an easy way of querying the content repository
 uuid: e71be518-027c-4792-9e02-06405804d9d2
 contentOwner: Guillaume Carlino
@@ -11,26 +11,26 @@ content-type: reference
 discoiquuid: ef253905-87da-4fa2-9f6c-778f1b12bd58
 docset: aem65
 exl-id: 72cbe589-14a1-40f5-a7cb-8960f02e0ebb
-source-git-commit: 37d2c70bff770d13b8094c5959e488f5531aef55
-workflow-type: ht
-source-wordcount: '774'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 74%
 
 ---
 
 # Query Builder 用のカスタム述語エバリュエーターの実装{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
-ここでは、カスタム述語エバリュエーターを実装して、[Query Builder](/help/sites-developing/querybuilder-api.md) を拡張する方法について説明します。
+この節では、 [Query Builder](/help/sites-developing/querybuilder-api.md) カスタム述語エバリュエーターを実装する。
 
 ## 概要 {#overview}
 
-[Query Builder](/help/sites-developing/querybuilder-api.md) を使用すると、コンテンツリポジトリへのクエリを簡単に実行できます。CQ には、データの処理に役立つ一連の述語エバリュエーターが付属しています。
+この [Query Builder](/help/sites-developing/querybuilder-api.md) は、コンテンツリポジトリに対して簡単にクエリを実行する方法を提供します。 CQ には、データの処理に役立つ一連の述語エバリュエーターが付属しています。
 
-しかし、カスタム述語エバリュエーターを実装することによって、複雑さを軽減し、セマンティックを向上させて、クエリを単純化することができます。
+ただし、複雑さを軽減し、より良いセマンティックを確保するカスタム述語エバリュエーターを実装することで、クエリを簡略化することもできます。
 
-他にも、カスタム述語では、以下のような XPath では直接実行できないことも実行できます。
+また、カスタム述語は、XPath で直接実行できない他の操作も実行できます。例えば、次の操作を行います。
 
-* 何らかのサービスの何らかのデータの検索
+* 一部のサービスからのデータの検索
 * 計算に基づくカスタムフィルタリング
 
 >[!NOTE]
@@ -52,7 +52,7 @@ GitHub のコード
 
 述語エバリュエーターは、クエリの制約を定義する特定の述語を評価します。
 
-特定の JCR クエリに対する高度な検索制約（&quot;width > 200&quot; など）を、実際のコンテンツモデルに合わせてマッピングします（例：metadata/@width > 200）。ノードを手動でフィルタリングして、制約をチェックすることもできます。
+これは、実際のコンテンツモデル ( 例えば、metadata/@width > 200) に適合する特定の JCR クエリに、上位レベルの検索制約（「幅 > 200」など）をマッピングします。 ノードを手動でフィルタリングして、制約をチェックすることもできます。
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ replic.action=Activate
 
 >[!NOTE]
 >
->Maven を使用した新しい AEM プロジェクトの設定については、[Apache Maven を使用した AEM プロジェクトの構築方法](/help/sites-developing/ht-projects-maven.md)で説明されています。
+>Maven を使用した新しいAEMプロジェクトの設定については、次のドキュメントを参照してください。 [Apache Maven を使用してAEMプロジェクトを構築する方法](/help/sites-developing/ht-projects-maven.md).
 
 まず、プロジェクトの Maven 依存関係を更新する必要があります。`PredicateEvaluator` は `cq-search` アーティファクトの一部なので、Maven の pom ファイルに追加する必要があります。
 

@@ -7,9 +7,9 @@ topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '979'
 ht-degree: 7%
 
 ---
@@ -155,7 +155,7 @@ ht-degree: 7%
 
 「コメントのリソースタイプ」を変更すると、コメントシステムはデフォルトのを使用してコメントのインスタンスを生成しなくなり、開発者がカスタマイズ（拡張）したインスタンスを生成します。
 
-カスタムリソースタイプがわかったら、次のように入力します。 [デザインモード](/help/sites-authoring/default-components-designmode.md) をクリックし、配置された `Comments` 追加のタブを含むダイアログを開くコンポーネント。
+カスタムリソースタイプがわかったら、次のように入力します。 [デザインモード](/help/sites-authoring/default-components-designmode.md) をクリックし、配置した `Comments` 追加のタブを含むダイアログを開くコンポーネント。
 
 以下 **リソースタイプ** タブで、新しいインスタンスのカスタム resourceType を指定します。 `Comments or Voting` コンポーネント：
 

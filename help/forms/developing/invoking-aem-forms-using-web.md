@@ -11,10 +11,10 @@ topic-tags: coding
 discoiquuid: d5722281-bea9-4fc7-abdc-e678899e0a15
 role: Developer
 exl-id: 3139564f-9346-4933-8e39-2e1642bff097
-source-git-commit: 135f50cc80f8bb449b2f1621db5e2564f5075968
-workflow-type: ht
-source-wordcount: '9905'
-ht-degree: 100%
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '9902'
+ht-degree: 98%
 
 ---
 
@@ -127,7 +127,7 @@ Web サービスを使用して AEM Forms サービスを呼び出すには、�
    <td><p><code>http://localhost:8080/soap/services/ ReaderExtensionsService?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>リポジトリー</p></td>
+   <td><p>リポジトリ</p></td>
    <td><p><code>http://localhost:8080/soap/services/ RepositoryService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -231,7 +231,7 @@ AEM Forms サービス操作が `BLOB` タイプを入力値として要求す�
 
    * サービスの SOAP エンドポイントパラメーターの出力 BLOB オブジェクトのデフォルトプロトコルは、スマートに設定されています。
 
-      SOAP エンドポイントを持つ各サービスについて、管理コンソールを使用して、返された BLOB の送信プロトコルを指定できます。（[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照してください）。
+     SOAP エンドポイントを持つ各サービスについて、管理コンソールを使用して、返された BLOB の送信プロトコルを指定できます。（[管理ヘルプ](https://www.adobe.com/go/learn_aemforms_admin_63_jp)を参照してください）。
 
    * AEM Forms サービスは、1 つ以上のドキュメントを入力として取得します。
 
@@ -576,7 +576,7 @@ Base64 エンコーディングを使用して、AEM Forms サービスを呼び
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
-1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
+1. プロセスに渡されたPDFドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数に返されます。
 
 ### Base64 エンコーディングを使用する .NET クライアントアセンブリの作成 {#creating-a-net-client-assembly-that-uses-base64-encoding}
@@ -685,7 +685,7 @@ Java プロキシクラスと Base64 を使用して、AEM Forms サービスを
 
    * WSDL エンドポイントとエンコーディングタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。Base64 エンコーディングを使用する `MyApplication/EncryptDocument` サービスを呼び出すには、次の URL 値を指定します。
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=base64`
 
    * AEM forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに割り当てます。
    * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに割り当てます。
@@ -728,7 +728,7 @@ Web サービス標準の MTOM を使用して、AEM Forms サービスを呼び
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
-1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
+1. プロセスに渡されたPDFドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
 >[!NOTE]
@@ -842,7 +842,7 @@ SwaRef を使用して AEM Forms サービスを呼び出すことができま�
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
-1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
+1. プロセスに渡されたPDFドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
 >[!NOTE]
@@ -880,7 +880,7 @@ JAX-WS と SwaRef を使用して作成された Java プロキシファイル�
 
    * WSDL エンドポイントとエンコーディングのタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。SwaRef エンコーディングを使用する`MyApplication/EncryptDocument`サービスを呼び出すには、次の URL 値を指定します。
 
-      ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
+     ` https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=swaref`
 
    * AEM Forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに割り当てます。
    * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに割り当てます。
@@ -927,7 +927,7 @@ Web サービスを使用し、HTTP 経由で BLOB データを渡すことで�
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
-1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
+1. プロセスに渡されたPDFドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
 >[!NOTE]
@@ -1003,7 +1003,7 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
 
    * WSDL エンドポイントとエンコーディングタイプを `javax.xml.ws.BindingProvider` オブジェクトの `ENDPOINT_ADDRESS_PROPERTY` フィールドに割り当てます。HTTP エンコーディング経由での BLOB を使用して `MyApplication/EncryptDocument` サービスを呼び出すには、次の URL 値を指定します。
 
-      `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
+     `https://hiro-xp:8080/soap/services/MyApplication/EncryptDocument?blob=http`
 
    * AEM Forms ユーザーを `javax.xml.ws.BindingProvider` オブジェクトの `USERNAME_PROPERTY` フィールドに割り当てます。
    * 対応するパスワード値を `javax.xml.ws.BindingProvider` オブジェクトの `PASSWORD_PROPERTY` フィールドに割り当てます。
@@ -1034,7 +1034,7 @@ Java プロキシクラスおよび HTTP 経由での BLOB データを使用し
 
 このプロセスを呼び出すと、次のアクションが実行されます。
 
-1. プロセスに渡された保護されていない PDF ドキュメントを取得します。このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
+1. プロセスに渡されたPDFドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。このアクションは `PasswordEncryptPDF` 操作に基づいています。パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
 このプロセスは、既存の AEM Forms プロセスに基づいていません。このコードの例の流れを追うには、Workbench を使用して `MyApplication/EncryptDocument` という名前のプロセスを作成します。（[Workbench の使用](https://www.adobe.com/go/learn_aemforms_workbench_63_jp)を参照してください）。
@@ -1222,7 +1222,7 @@ AEM Forms ユーザーの ID は、秘密鍵を使用して署名された SAML 
 この例のアサーションは、管理者ユーザーに対して発行されます。このアサーションには、以下の注目すべき項目が含まれます。
 
 * 一定期間有効です。
-* 特定のユーザーに対して発行されます。
+* 特定のユーザーに対して公開されます。
 * デジタル署名されています。したがって、変更を加えると署名が壊れてしまいます。
 * ユーザー名やパスワードと同様に、ユーザーの ID のトークンとして AEM Forms に表示できます。
 

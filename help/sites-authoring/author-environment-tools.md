@@ -9,9 +9,9 @@ content-type: reference
 discoiquuid: f488ba79-5bda-46e9-9c15-9a8c3dbfa2ce
 docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
-source-git-commit: d9155cdac183acbdd190da552512a1e9bcc43d64
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2245'
 ht-degree: 99%
 
 ---
@@ -252,7 +252,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 ## イベント - タイムライン {#events-timeline}
 
-該当するリソース（例：**Sites** コンソールからのページ、**Assets** コンソールからのアセット）では、[タイムラインを使用して、選択した項目に対する最近のアクティビティを表示できます](/help/sites-authoring/basic-handling.md#timeline)。
+適切なリソース（例：**Sites** コンソールからのページ、**アセット**&#x200B;コンソールからのアセット）では、[タイムラインを使用して、選択した項目に対する最近のアクティビティを表示できます](/help/sites-authoring/basic-handling.md#timeline)。
 
 必要なコンソールを開いたら、必要なリソースに移動し、次を使用して「**タイムライン**」を開きます。
 

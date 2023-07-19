@@ -10,9 +10,9 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 5a98e1bd-f5c1-4f2f-ac02-dbd005dc1de7
 exl-id: e10e1904-7016-4eb0-9408-36297285f378
-source-git-commit: 17d13e9b201629d9d1519fde4740cf651fe89d2c
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1024'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)。
 
 市場上の様々なデバイスとリリースされるデバイスを考慮すると、アプリのテストは非常に重要になりました。 この領域では、機能とユーザビリティがアプリストアのレビューを低減できますが、1 つの欠陥が原因でアプリがアンインストールされる可能性があります。 テスト計画と品質保証には注意が必要です。 次のリンクでは、環境の特定、テストケースの定義、テストのタイプ、前提条件、お客様の関与など、一般的に対処する必要のあるトピックの多くを説明します。 また、テスト作業に役立つツールについても説明します。 内部ツール（例： ） [ホッブス](/help/sites-developing/hobbes.md)は、Web ベースの UI テストに役立ちます。 [Tough Day](/help/sites-developing/tough-day.md) では、シミュレートされた負荷でインスタンスに応力を与えることができます。 テスト環境に Selenium などのサードパーティ製ツールの使用経験が既にある場合は、これらも使用できます。
 

@@ -1,7 +1,7 @@
 ---
 title: エミュレーター
 seo-title: Emulators
-description: AEM では、作成者がエミュレーターでページを確認できます。エミュレーターは、エンドユーザーがページを表示する環境をシミュレートします
+description: AEMを使用すると、作成者は、エンドユーザーがページを表示する環境をシミュレートするエミュレーターでページを表示できます
 seo-description: AEM enables authors to view a page in an emulator that simulates the environment in which an end-user will view the page
 uuid: ee1496a5-be68-4318-b5ce-b11c41e4485c
 contentOwner: Guillaume Carlino
@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: c51fca81-5dfc-4838-9672-acb6de62778b
 legacypath: /content/docs/en/aem/6-0/develop/mobile/emulators
 exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '631'
-ht-degree: 100%
+source-wordcount: '634'
+ht-degree: 71%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->単一ページアプリケーションフレームワークを基にしたクライアント側レンダリング（React など）が必要なプロジェクトでは、SPA エディターを使用することをお勧めします。[詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
+>Adobeは、単一ページアプリケーションのフレームワークベースのクライアントサイドレンダリング（React など）を必要とするプロジェクトでは、SPA Editor を使用することをお勧めします。 [詳細情報](/help/sites-developing/spa-overview.md)を参照してください。
 
-Adobe Experience Manager（AEM）では、作成者がエミュレーターでページを確認できます。エミュレーターは、モバイルデバイスや電子メールクライアントなどでエンドユーザーがページを表示する環境をシミュレートします。
+Adobe Experience Manager（AEM）では、作成者がエミュレーターでページを確認できます。エミュレーターは、モバイルデバイスやメールクライアントなどでエンドユーザーがページを表示する環境をシミュレートします。
 
 AEM エミュレーターフレームワークの機能を次に示します。
 
-* シミュレートされたユーザーインターフェイス（UI）（例：ニュースレターの作成に使用するモバイルデバイスや電子メールクライアント）内でコンテンツを作成できます。
+* シミュレートされたユーザーインターフェイス (UI) 内でコンテンツをオーサリングできます。例えば、モバイルデバイスや電子メールクライアント（ニュースレターの作成に使用）などです。
 * シミュレートされた UI に従ってページコンテンツを変更します。
 * カスタムエミュレーターを作成できます。
 
@@ -36,15 +36,15 @@ AEM エミュレーターフレームワークの機能を次に示します。
 >
 >この機能は、クラシック UI でのみサポートされます。
 
-## エミュレーターの特徴 {#emulators-characteristics}
+## エミュレーターの特性 {#emulators-characteristics}
 
-エミュレーターの特徴は次のとおりです。
+エミュレーター：
 
 * ExtJS に基づいています。
-* ページの DOM で動作します。
-* 外観は CSS によって制御されます。
-* プラグイン（例：モバイルデバイスの回転プラグイン）をサポートします。
-* オーサーインスタンスでのみアクティブになります。
+* ページ DOM 上で動作します。
+* その外観は CSS を使用して制御されます。
+* プラグインをサポートします（例えば、モバイルデバイスのローテーションプラグイン）。
+* 作成者でのみ有効です。
 * 基本コンポーネントは `/libs/wcm/emulator/components/base` にあります。
 
 ### エミュレーターによるコンテンツの変換方法 {#how-the-emulator-transforms-the-content}
@@ -101,36 +101,36 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 >[!NOTE]
 >
->前述の例と同様に、単一の div 内の本文コンテンツをプロジェクトの HTML でラップすることをお勧めします。本文コンテンツに複数のタグが含まれる場合は、予測できない結果が生じる可能性があります。
+>上の例と同様に、プロジェクトHTMLは、本文コンテンツを 1 つの div 内にラップすることをお勧めします。 本文コンテンツに複数のタグが含まれている場合、予期しない結果が生じる可能性があります。
 
 ### モバイルエミュレーター {#mobile-emulators}
 
-既存のモバイルエミュレーターの特徴は次のとおりです。
+既存のモバイルエミュレーターは次のとおりです。
 
-* /libs/wcm/mobile/components/emulators にあります。
+* /libs/wcm/mobile/components/emulators の下にあります。
 * 次の場所にある JSON サーブレットを通じて使用できます。
 
-   http://localhost:4502/bin/wcm/mobile/emulators.json
+  http://localhost:4502/bin/wcm/mobile/emulators.json
 
 ページコンポーネントでモバイルページコンポーネント（`/libs/wcm/mobile/components/page`）を使用する場合は、次のメカニズムによって、エミュレーターの機能が自動的にページに統合されます。
 
 * モバイルページコンポーネント `head.jsp` は、次のメソッドを使用して、デバイスグループの関連するエミュレーターの init コンポーネント（オーサーモードの場合のみ）とデバイスグループのレンダリング CSS をインクルードします。
 
 
-   `deviceGroup.drawHead(pageContext);`
+  `deviceGroup.drawHead(pageContext);`
 
 * メソッド `DeviceGroup.drawHead(pageContext)` には、エミュレーターの init コンポーネントを含まれています。つまり、エミュレーターコンポーネントの `init.html.jsp` を呼び出します。エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
 
-* モバイルベースエミュレーターの init スクリプトは JavaScript を使用して次の定義を行います。
+* モバイルベースエミュレーターの init スクリプトは、JavaScript を使用して次のように定義します。
 
    * ページ用に定義されるすべてのエミュレーターの設定（emulatorConfigs）
    * 次のメソッドを使用してエミュレーターの機能をページに統合するエミュレーターマネージャー。
 
-      `emulatorMgr.launch(config)`
+     `emulatorMgr.launch(config)`
 
-      エミュレーターマネージャーは次のように定義されます。
+     エミュレーターマネージャーは次のように定義されます。
 
-      `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
+     `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### カスタムモバイルエミュレーターの作成 {#creating-a-custom-mobile-emulator}
 
@@ -153,4 +153,5 @@ AEM エミュレーターフレームワークの機能を次に示します。
    * 名前 = `canRotate`、タイプ = `Boolean`、値 = `true`：回転機能を含みます。
 
    * 名前 = `touchScrolling`、タイプ = `Boolean`、値 = `true`：タッチスクロール機能を含みます。
+
    独自のプラグインを定義することで、さらに多くの機能を追加できます。

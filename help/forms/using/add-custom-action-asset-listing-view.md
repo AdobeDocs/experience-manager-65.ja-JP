@@ -11,9 +11,9 @@ discoiquuid: 6378ae30-a351-49f7-8e9a-f0bd4287b9d3
 docset: aem65
 feature: Correspondence Management
 exl-id: bf6d3edb-6bf7-4d3e-b042-d75cb8e39e3f
-source-git-commit: 4fa868f3ae4778d3a637e90b91f7c5909fe5f8aa
-workflow-type: ht
-source-wordcount: '1355'
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
+source-wordcount: '1354'
 ht-degree: 100%
 
 ---
@@ -250,7 +250,7 @@ Correspondence Management をカスタマイズしてレターのフラットな
 
 1. 次の手順で、新しく作成した items ノードに、特定のアセットのカスタムのボタン／アクション用のノードを追加します（例：letterpdfdownloader）。
 
-   1. items フォルダーを右クリックして、「**作成／ノードを作成**」を選択します。
+   1. items フォルダーを右クリックし、**作成／ノードを作成**&#x200B;を選択します。
 
    1. ノードを作成ダイアログに次の値が表示されていることを確認し、「**OK**」をクリックします。
 

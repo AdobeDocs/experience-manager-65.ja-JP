@@ -7,10 +7,10 @@ products: SG_EXPERIENCEMANAGER/6.5/SITES
 discoiquuid: ccc0e434-8847-4e12-8a18-84b55fb2964b
 docset: aem65
 exl-id: 5623dcf4-bda9-4dee-ace3-5a1f6057e96c
-source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '1841'
-ht-degree: 43%
+source-wordcount: '1843'
+ht-degree: 42%
 
 ---
 
@@ -169,7 +169,7 @@ URL（web サイト内または外部の場所）へのリンクを生成する�
 
 * URI を直接入力する
 * Web サイト内のページを選択するためにサイトマップを使用する
-* URI を入力し、ターゲットアンカーを追加します（例：`www.TargetUri.org#AnchorName`）。
+* URI を入力し、ターゲットアンカーを追加します。例： `www.TargetUri.org#AnchorName`
 * アンカーのみを入力します（「現在のページ」を参照する場合）（例：`#anchor`）
 * コンテンツファインダーでページを検索し、ページアイコンをハイパーリンクダイアログにドラッグ＆ドロップします
 

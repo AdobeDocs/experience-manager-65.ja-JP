@@ -1,7 +1,7 @@
 ---
 title: クラシック UI へのアクセスの有効化
 seo-title: Enabling Access to Classic UI
-description: クラシック UI へのアクセスを有効にする方法について学習します。
+description: クラシック UI へのアクセスを有効にする方法を説明します。
 seo-description: Lear how to enable access to Classic UI.
 uuid: 08698023-6e0d-4160-8c4d-d282e74182bc
 contentOwner: Chris Bohnert
@@ -10,16 +10,16 @@ topic-tags: operations
 content-type: reference
 discoiquuid: f3683696-663d-4de5-a388-1709f44d58c1
 exl-id: e25f0b7f-5f12-4363-b302-e51c81035c7d
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 100%
+source-wordcount: '85'
+ht-degree: 37%
 
 ---
 
 # クラシック UI へのアクセスの有効化{#enabling-access-to-classic-ui}
 
-タッチ対応機能はクラシック UI と同等の機能を実現しており、実際には AEM の多くの部分でクラシック UI を上回っているので、現在、タッチ対応インターフェイスからクラシックインターフェイスへのアクセスは、デフォルトで無効になっています。次のページでは、必要に応じて、タッチ対応インターフェイスからクラシックインターフェイスへのアクセスを再有効化する方法について説明します。
+AEMの多くの領域でクラシック UI と同等に達し、実際にはそれを超えるタッチ操作対応機能を使用すると、タッチ操作対応インターフェイスを介したクラシックインターフェイスへのアクセスがデフォルトで無効になりました。 次のページでは、必要に応じて、このアクセスを再度有効にする方法について説明します。
 
 * [編集者](/help/sites-administering/enable-classic-ui-editor.md)
 * [管理コンソール](/help/sites-administering/enable-classic-ui-admin.md)

@@ -9,8 +9,8 @@ content-type: reference
 discoiquuid: cd3b979f-53d4-4274-b4eb-a9533329192a
 docset: aem65
 exl-id: 70a39462-8584-4c76-a097-05ee436247b7
-source-git-commit: af60428255fb883265ade7b2d9f363aacb84b9ad
-workflow-type: ht
+source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+workflow-type: tm+mt
 source-wordcount: '6408'
 ht-degree: 100%
 
@@ -165,7 +165,7 @@ mongodburi=mongodb://aem:aempassword@mongodbserver1.customer.com:27000,mongodbse
 #Name of MongoDB database to use
 db=aem
 
-#Store binaries in custom BlobStore e.g. FileDataStore
+#Store binaries in custom BlobStore for example, FileDataStore
 customBlobStore=true
 
 cache=2048
@@ -177,16 +177,13 @@ blobCacheSize=1024
 * `mongodburi`
 AEM が接続する必要がある MongoDB サーバー。接続は、デフォルトレプリカセットの既知のすべてのメンバーに対して確立されます。MongoDB Cloud Manager を使用する場合は、サーバーセキュリティが有効になります。そのため、適切なユーザー名とパスワードが接続文字列に含まれている必要があります。エンタープライズ以外のバージョンの MongoDB では、ユーザー名とパスワードによる認証のみがサポートされています。接続文字列の構文について詳しくは、こちらの[ドキュメント](https://docs.mongodb.org/manual/reference/connection-string/)を参照してください。
 
-* `db`データベースの名前。AEM のデフォルトは  
-`aem-author` です。
+* `db`データベースの名前。AEM のデフォルトは `aem-author` です。
 
 * `customBlobStore`
-デプロイメントでバイナリがデータベースに保存される場合、バイナリは作業セットの一部になります。そのため、バイナリを MongoDB に保存することは避け、できれば、別のデータストア（ 
-NAS 上の `FileSystem` データストアなど）に保存します。
+デプロイメントでバイナリがデータベースに保存される場合、バイナリは作業セットの一部になります。そのため、バイナリを MongoDB に保存することは避け、できれば、別のデータストア（NAS 上の `FileSystem` データストアなど）に保存します。
 
 * `cache`
-キャッシュサイズ（MB 単位）。この領域は、 
-`DocumentNodeStore` で使用される様々なキャッシュに分散されます。デフォルトは 256 MB です。ただし、キャッシュが大きい方が Oak の読み取りパフォーマンスは向上します。
+キャッシュサイズ（MB 単位）。この領域は、`DocumentNodeStore`。デフォルトは 256 MB です。ただし、キャッシュが大きい方が Oak の読み取りパフォーマンスは向上します。
 
 * `blobCacheSize`
 頻繁に使用される BLOB は、データストアから再取得しなくて済むように、AEM にキャッシュできます。これは、特に MongoDB データベースに BLOB を格納する場合に、パフォーマンスへの影響が大きくなります。オペレーティングシステムレベルのディスクキャッシュは、ファイルシステムベースのすべてのデータストアに効果的です。
@@ -209,16 +206,13 @@ cacheSizeInMB=128
 ここで、
 
 * `minRecordLength`
-サイズ（バイト単位）。このサイズ以下のバイナリは、ドキュメントノードストアに格納されます。BLOB の ID を格納するのではなく、バイナリの内容が格納されます。このサイズを超えるバイナリについては、バイナリの ID がドキュメントのプロパティとしてノードのコレクションに格納されます。また、バイナリの本体は次に格納されます。 
-ディスク上の `FileDataStore` に。一般的なファイルシステムのブロックサイズは 4,096 バイトです。
+サイズ（バイト単位）。このサイズ以下のバイナリは、ドキュメントノードストアに格納されます。BLOB の ID を格納するのではなく、バイナリの内容が格納されます。このサイズを超えるバイナリについては、バイナリの ID がドキュメントのプロパティとしてノードのコレクションに格納されます。また、バイナリの本体は次に格納されます。ディスク上の `FileDataStore` に。一般的なファイルシステムのブロックサイズは 4,096 バイトです。
 
 * `path`
-データストアのルートのパスです。MongoMK デプロイメントの場合、このパスは、すべての AEM インスタンスで使用可能な共有ファイルシステムである必要があります。通常は、NAS（ネットワーク接続ストレージ）サーバーが使用されます。Amazon Web Services などのクラウドデプロイメントの場合、 
-`S3DataFileStore` も利用できます。
+データストアのルートのパスです。MongoMK デプロイメントの場合、このパスは、すべての AEM インスタンスで使用可能な共有ファイルシステムである必要があります。通常は、NAS（ネットワーク接続ストレージ）サーバーが使用されます。Amazon Web Services などのクラウドデプロイメントの場合、`S3DataFileStore` も利用できます。
 
 * `cacheSizeInMB`
-バイナリキャッシュの合計サイズ（メガバイト単位）です。これは、以下のものより小さいバイナリをキャッシュするために使用されます： 
-`maxCacheBinarySize` の設定値。
+バイナリキャッシュの合計サイズ（メガバイト単位）です。これは、以下のものより小さいバイナリをキャッシュするために使用されます：`maxCacheBinarySize` の設定値。
 
 * `maxCachedBinarySize`
 バイナリキャッシュにキャッシュされるバイナリの最大サイズ（バイト単位）です。ファイルシステムベースのデータストアを使用する場合、バイナリはオペレーティングシステムによって既にキャッシュされているので、データストアのキャッシュに大きい値を使用することはお勧めしません。
@@ -549,7 +543,8 @@ echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
 2 回目のテストの結果は最初のテストよりもかなり高くなり、メモリ転送のパフォーマンスが良くなったことを示しています。
 
 >[!NOTE]
->テストを実施するときは、オペレーティングシステムのモニタリングシステムで対象の仮想マシンの I/O 使用率の状況を確認してください。I/O 読み取りが 100 パーセントに満たない値を示している場合は、仮想マシンに問題がある可能性があります。
+>
+テストを実施するときは、オペレーティングシステムのモニタリングシステムで対象の仮想マシンの I/O 使用率の状況を確認してください。I/O 読み取りが 100 パーセントに満たない値を示している場合は、仮想マシンに問題がある可能性があります。
 
 **プライマリ MongoDB インスタンスの書き込みパフォーマンステスト**
 
@@ -659,7 +654,8 @@ Dispatcher のデフォルト設定では、オープンなコンテンツセキ
 CSP では、ポリシーを微調整できます。ただし、複雑なアプリケーションでは、ポリシーによる制限が厳しすぎると、ユーザーインターフェイスの一部が機能しなくなる可能性があるので、CSP ヘッダーを慎重に開発する必要があります。
 
 >[!NOTE]
->この仕組みについて詳しくは、[コンテンツセキュリティポリシーに関する OWASP のページ](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)を参照してください。
+>
+この仕組みについて詳しくは、[コンテンツセキュリティポリシーに関する OWASP のページ](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)を参照してください。
 
 ### サイジング {#sizing}
 
@@ -682,4 +678,5 @@ MongoMK では、1 つのデータベースで複数の AEM インスタンス�
 AEM が MongoMK 永続性マネージャーのデプロイメントで実行されている場合、[ページ名は 150 文字に制限されます。](/help/sites-authoring/managing-pages.md)
 
 >[!NOTE]
->MongoDB の既知の制限やしきい値を把握しておくために、[MongoDB ドキュメント](https://docs.mongodb.com/manual/reference/limits/)を参照してください。
+>
+MongoDB の既知の制限やしきい値を把握しておくために、[MongoDB ドキュメント](https://docs.mongodb.com/manual/reference/limits/)を参照してください。
