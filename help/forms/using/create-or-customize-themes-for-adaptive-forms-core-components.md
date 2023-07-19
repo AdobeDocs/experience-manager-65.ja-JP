@@ -8,9 +8,9 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 90731516671ee0681ff91f2ac47888b1febee199
+source-git-commit: a5d38ef6b3281992fd9ac3121cdb6c998631b205
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1961'
 ht-degree: 9%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 9%
 
 AEM Forms 6.5 では、テーマは、アダプティブフォームのスタイル（ルックアンドフィール）を定義するために使用するAEMクライアントライブラリです。 テーマには、コンポーネントとパネルのスタイルを設定するための詳細情報が含まれています。スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。テーマは、アダプティブフォームを参照せずに独立して管理され、複数のアダプティブFormsで再利用できます。
 
-## 使用可能なテーマ {#available-standard-theme}
+## 使用可能なテーマ {#available-theme}
 
 AEM 6.5 環境は、コアコンポーネントベースのアダプティブForms向けに、次のテーマを提供しています。
 
@@ -51,13 +51,13 @@ AEM 6.5 環境は、コアコンポーネントベースのアダプティブFor
 
 ## テーマの作成
 
-AEM Forms 6.5 では、コアコンポーネントベースのアダプティブFormsの標準テーマを以下に示します。
+AEM Forms 6.5 では、コアコンポーネントベースのアダプティブFormsに関して、次に示すテーマが提供されています。
 
 * [キャンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL のテーマ](https://github.com/adobe/aem-forms-theme-easel)
 
-以下が可能です。 [これらの標準のテーマをカスタマイズしてテーマを作成する](#customize-a-theme-core-components).
+以下が可能です。 [テーマを作成するためにこれらのテーマをカスタマイズする](#customize-a-theme-core-components).
 
 ## テーマのカスタマイズ {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -92,7 +92,7 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 テーマの作成またはカスタマイズは、複数の手順で行います。 テーマを作成/カスタマイズするには、次の手順をリストに示す順序で実行します。
 
-1. [標準テーマの複製](#clone-git-repo-of-theme)
+1. [テーマの複製](#clone-git-repo-of-theme)
 1. [テーマの外観のカスタマイズ](#customize-the-theme)
 1. [ローカルデプロイメント用のテーマの準備](#generate-the-clientlib)
 1. [テーマをローカル環境にデプロイする](#deploy-the-theme-on-a-local-environment)
@@ -102,17 +102,17 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
 -->
 
-このドキュメントで示す例は、 **キャンバス** テーマを作成する場合は、任意の標準テーマを複製し、同じ手順を使用してカスタマイズできます。 これらの手順はどのテーマにも適用でき、特定のニーズに応じてテーマを変更できます。
+このドキュメントで示す例は、 **キャンバス** テーマを作成する場合は、任意のテーマを複製し、同じ手順を使用してカスタマイズできます。 これらの手順はどのテーマにも適用でき、特定のニーズに応じてテーマを変更できます。
 
 #### 1.テーマの Git リポジトリを複製します。 {#clone-git-repo-of-theme}
 
-コアコンポーネントベースのアダプティブFormsの標準テーマを複製するには、次の標準テーマのいずれかを選択します。
+コアコンポーネントベースのアダプティブFormsのテーマを複製するには、次のいずれかのテーマを選択します。
 
 * [キャンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL のテーマ](https://github.com/adobe/aem-forms-theme-easel)
 
-標準のテーマを複製するには、次の手順を実行します。
+テーマを複製するには、次の手順を実行します。
 
 1. コマンドプロンプトまたはターミナルウィンドウをローカル開発環境で開きます。
 
