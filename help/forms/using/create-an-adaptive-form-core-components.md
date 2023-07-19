@@ -9,20 +9,26 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 38%
+source-wordcount: '1725'
+ht-degree: 32%
 
 ---
 
 
 # コアコンポーネントベースのアダプティブFormsを作成する {#creating-an-adaptive-form-core-components}
 
+
+<span class="preview"> Adobeでは、コアコンポーネントを次のように使用することをお勧めします。 [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) または [スタンドアロンのアダプティブFormsを作成](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
+
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
 | AEM 6.5 | この記事 |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html?lang=ja) |
+
+**適用先：** ✅アダプティブフォームのコアコンポーネント❎ [アダプティブフォームの基盤コンポーネント](/help/forms/using/create-adaptive-form.md).
+
 
 アダプティブフォームを使用すると、魅力的でレスポンシブ、かつ動的でアダプティブなフォームを作成できます。AEM Formsは、ビジネスに適した UI を提供し、アダプティブFormsをすばやく作成します。 UI は、事前設定済みのテンプレート、スタイル設定、フィールド、送信オプションを簡単に選択して、アダプティブフォームを作成するためのクイックタブナビゲーションを提供します。
 
@@ -38,17 +44,13 @@ ht-degree: 38%
 
 * **環境でのアダプティブFormsコアコンポーネントの有効化**:次の操作を行うには、AEMアーキタイププロジェクトバージョン 41 以降が必要です。 [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md). お使いの環境に対してコアコンポーネントを有効にすると、 **アダプティブForms（コアコンポーネント）** テンプレートとキャンバステーマが環境に追加されます。
 
-* **アダプティブフォームテンプレート**：テンプレートは基本構造を提供し、アダプティブフォームのアピアランス（レイアウトとスタイル）を定義します。これには、特定のプロパティやコンテンツ構造を有するフォーマット済みのコンポーネントが含まれます。また、テーマと送信アクションを定義するオプションも提供されます。 テーマは、ルックアンドフィールと送信アクションを定義し、アダプティブフォームの送信時に実行するアクションを定義します。 例えば、収集したデータをデータソースに送信する場合などです。 次の名前のテンプレート `blank` は次の OOTB をサポートしています。
-
-   * この `blank` テンプレートは、すべての新しいAEM Formsオンプレミスおよび AMS 環境に含まれます。
-   * パッケージマネージャーを使用して参照パッケージをインストールし、 `blank` テンプレートをAEM Formsオンプレミスおよび AMS 環境に追加します。
-   * 最初から[新しいアダプティブフォームテンプレート（コアコンポーネント）を作成する](template-editor.md)こともできます。
+* **アダプティブフォームテンプレート**：テンプレートは基本構造を提供し、アダプティブフォームのアピアランス（レイアウトとスタイル）を定義します。これには、特定のプロパティやコンテンツ構造を有するフォーマット済みのコンポーネントが含まれます。また、テーマと送信アクションを定義するオプションも提供されます。 テーマは、ルックアンドフィールと送信アクションを定義し、アダプティブフォームの送信時に実行するアクションを定義します。 
 
   >[!NOTE]
   >
   > ご利用の環境に&#x200B;**アダプティブフォーム（コアコンポーネント）**&#x200B;テンプレートがない場合は、[ご利用の環境のアダプティブフォームコアコンポーネントを有効にします](/help/forms/using/enable-adaptive-forms-core-components.md)。ご利用の環境でコアコンポーネントを有効にすると、**アダプティブフォーム（コアコンポーネント）**&#x200B;テンプレートが環境に追加されます。
 
-* **アダプティブフォームのテーマ**：テーマには、コンポーネントとパネル向けのスタイル設定の詳細が含まれます。 スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。この `Canvas` コアコンポーネントを環境に対して有効にすると、テーマがデフォルトで追加されます。 また、 [参照テーマをダウンロードしてカスタマイズする](create-or-customize-themes-for-adaptive-forms-core-components.md).
+* **アダプティブフォームのテーマ**：テーマには、コンポーネントとパネル向けのスタイル設定の詳細が含まれます。 スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。この `Canvas` コアコンポーネントを環境に対して有効にすると、テーマがデフォルトで追加されます。 また、 [標準のテーマをダウンロードしてカスタマイズする](create-or-customize-themes-for-adaptive-forms-core-components.md).
 
 * **権限**：[!DNL forms-users] グループにユーザーを追加します。[!DNL forms-users] グループのメンバーには、アダプティブフォームを作成する権限があります。フォーム固有のユーザーグループの詳細なリストについては、 [グループと権限](forms-groups-privileges-tasks.md).
 
@@ -137,6 +139,10 @@ ht-degree: 38%
 
 1. 「**[!UICONTROL 完了]**」をクリックします。
 
+>[!NOTE]
+>
+> Guide Container プロパティを使用して、アダプティブフォームの JSON スキーマまたはフォームデータモデルを編集できます。
+
 ## 事前入力サービスの設定  {#configure-prefill-service-for-form}
 
 事前入力サービスを使用すると、既存のデータを使用してアダプティブフォームのフィールドに自動入力することができます。 ユーザーがフォームを開くと、これらのフィールドの値は事前入力されています。以下の操作を実行できます。
@@ -155,13 +161,15 @@ ht-degree: 38%
 1. フォームデータモデルを選択. を開きます。 **[!UICONTROL 基本]** タブをクリックします。 事前入力サービスで、「 」を選択します。 **[!UICONTROL フォームデータモデルの事前入力サービス]**.
 1. 「**[!UICONTROL 完了]**」をクリックします。これで、アダプティブフォームがフォームデータモデルの事前入力を使用するように設定されました。 これで、 [ルールエディター](rule-editor.md) ：フォームのフィールドに事前入力するルールを作成します。
 
-## アダプティブフォームのフォームモデルプロパティの編集 {#edit-form-model}
+<!--
+## Edit Form Model properties of an Adaptive Form {#edit-form-model}
 
-1. アダプティブフォームを選択し、![ページ情報](/help/forms/using/assets/configure-icon.svg)／**[!UICONTROL プロパティを開く]**&#x200B;をタップします。フォームプロパティページが開きます。
+1. Select the Adaptive Form and tap ![Page information](/help/forms/using/assets/configure-icon.svg) > **[!UICONTROL Open Properties]**. The Form Properties page opens. 
 
-1. 「**[!UICONTROL フォームモデル]**」タブをクリックし、フォームモデルを選択します。アダプティブフォームにフォームモデルがない場合は、JSON スキーマまたはフォームデータモデルを自由に選択できます。一方、アダプティブフォームが既にフォームモデルに基づいている場合は、同じタイプの別のフォームモデルに切り替えることもできます。例えば、フォームが JSON スキーマを使用している場合、別の JSON スキーマに容易に切り替えることができます。同様に、フォームがフォームデータモデルを使用している場合は、別のフォームデータモデルに切り替えることができます。
+1. Go to the **[!UICONTROL Form Model]** tab and choose a form model. If the Adaptive Form is without a form model, you have the freedom to choose either a JSON schema or a form data model. On the other hand, if the Adaptive Form is already based on a form model, you have the option to switch to another form model of the same type. For instance, if the form is using a JSON schema, you can easily switch to another JSON schema, and similarly if the form is using a Form Data Model, you can switch to another Form Data Model. 
 
-1. 「**[!UICONTROL 保存]**」をタップして、プロパティを保存します。
+1. Tap **[!UICONTROL Save]** to save the properties.
+-->
 
 ## 次の手順
 

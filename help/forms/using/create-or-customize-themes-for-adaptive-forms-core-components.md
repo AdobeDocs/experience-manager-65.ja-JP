@@ -8,26 +8,30 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '2072'
-ht-degree: 12%
+source-wordcount: '1988'
+ht-degree: 9%
 
 ---
 
 
-# テーマの概要 {#introduction-to-theme}
+# アダプティブフォームテーマの作成またはカスタマイズ {#introduction-to-theme}
+
+<span class="preview"> Adobeでは、コアコンポーネントを次のように使用することをお勧めします。 [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) または [スタンドアロンのアダプティブFormsを作成](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
 | AEM 6.5 | この記事 |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
+**適用先：** ✅アダプティブフォームのコアコンポーネント❎ [アダプティブフォームの基盤コンポーネント](/help/forms/using/themes.md).
+
 AEM Forms 6.5 では、テーマは、アダプティブフォームのスタイル（ルックアンドフィール）を定義するために使用するAEMクライアントライブラリです。 テーマには、コンポーネントとパネルのスタイルを設定するための詳細情報が含まれています。スタイルには、背景カラー、ステートカラー、透明度、配置、サイズなどのプロパティが含まれます。テーマを適用すると、指定したスタイルが対応するコンポーネントに反映されます。テーマは、アダプティブフォームを参照せずに独立して管理され、複数のアダプティブFormsで再利用できます。
 
-## 使用可能な参照テーマ {#available-reference-theme}
+## 使用可能なテーマ {#available-standard-theme}
 
-AEM 6.5 環境では、コアコンポーネントベースのアダプティブFormsに関して、以下に示す参照テーマを使用できます。
+AEM 6.5 環境は、コアコンポーネントベースのアダプティブForms向けに、次のテーマを提供しています。
 
 * [キャンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
@@ -49,13 +53,13 @@ AEM 6.5 環境では、コアコンポーネントベースのアダプティブ
 
 ## テーマの作成
 
-AEM Forms 6.5 では、コアコンポーネントベースのアダプティブForms向けに、以下に示すリファレンステーマを提供しています。
+AEM Forms 6.5 では、コアコンポーネントベースのアダプティブFormsの標準テーマを以下に示します。
 
 * [キャンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL のテーマ](https://github.com/adobe/aem-forms-theme-easel)
 
-以下が可能です。 [テーマを作成するために、これらの参照テーマをカスタマイズする](#customize-a-theme-core-components).
+以下が可能です。 [これらの標準のテーマをカスタマイズしてテーマを作成する](#customize-a-theme-core-components).
 
 ## テーマのカスタマイズ {#customize-a-theme-core-components-based-adaptive-forms}
 
@@ -90,26 +94,27 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 テーマの作成またはカスタマイズは、複数の手順で行います。 テーマを作成/カスタマイズするには、次の手順をリストに示す順序で実行します。
 
-1. [参照テーマの複製](#clone-git-repo-of-theme)
+1. [標準テーマの複製](#clone-git-repo-of-theme)
 1. [テーマの外観のカスタマイズ](#customize-the-theme)
 1. [ローカルデプロイメント用のテーマの準備](#generate-the-clientlib)
-1. [ローカルのテスト環境にテーマをデプロイする](#deploy-the-theme-on-a-local-testing-environment)
-1. [ローカルのアダプティブフォームでテーマをテストする](#test-the-theme-with-a-local-adaptive-form)
-1. テーマを実稼動環境にデプロイする
+1. [テーマをローカル環境にデプロイする](#deploy-the-theme-on-a-local-environment)
+1. [テーマを実稼動環境にデプロイする](#5-deploy-a-theme-on-your-production-environment)
 
-![テーマのカスタマイズワークフロー](/help/forms/using/assets/custom-theme-steps.png)
+<!--
+ ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
+-->
 
-このドキュメントで示す例は、 **キャンバス** テーマを作成する場合は、参照テーマを複製し、同じ手順を使用してカスタマイズすることができます。 これらの手順はどのテーマにも適用でき、特定のニーズに応じてテーマを変更できます。
+このドキュメントで示す例は、 **キャンバス** テーマを作成する場合は、任意の標準テーマを複製し、同じ手順を使用してカスタマイズできます。 これらの手順はどのテーマにも適用でき、特定のニーズに応じてテーマを変更できます。
 
 #### 1.テーマの Git リポジトリを複製します。 {#clone-git-repo-of-theme}
 
-コアコンポーネントベースのアダプティブFormsの参照テーマを複製するには、次の参照テーマのいずれかを選択します。
+コアコンポーネントベースのアダプティブFormsの標準テーマを複製するには、次の標準テーマのいずれかを選択します。
 
 * [キャンバステーマ](https://github.com/adobe/aem-forms-theme-canvas)
 * [WKND テーマ](https://github.com/adobe/aem-forms-theme-wknd)
 * [EASEL のテーマ](https://github.com/adobe/aem-forms-theme-easel)
 
-参照テーマを複製するには、次の手順を実行します。
+標準のテーマを複製するには、次の手順を実行します。
 
 1. コマンドプロンプトまたはターミナルウィンドウをローカル開発環境で開きます。
 
@@ -206,7 +211,7 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
    ![クライアントライブラリの場所](/help/forms/using/assets/adaptiveform.theme.easel.png)
 
-#### 4.テーマをローカルのテスト環境にデプロイする {#deploy-the-theme-on-a-local-testing-environment}
+#### 4.テーマをローカル環境にデプロイする {#deploy-the-theme-on-a-local-environment}
 
 テーマをローカル開発またはテスト環境にデプロイするには、次の手順に従います。
 
@@ -222,38 +227,40 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
    ![クライアントライブラリビルド](/help/forms/using/assets/mvndeploy.png)
 
-#### 5.ローカルのアダプティブフォームでテーマをテストする {#test-the-theme-with-a-local-adaptive-form}
+<!--
 
-アダプティブフォームを使用してカスタマイズされたテーマを適用し、テストするには、次の手順を実行します。
+#### 5. Test the theme with a local Adaptive Form {#test-the-theme-with-a-local-adaptive-form}
 
-**アダプティブフォームの作成時にテーマを適用する**
+To apply and test the customized theme with an Adaptive Form:
 
-1. AEM Forms オーサーインスタンスにログインします。
+**Apply theme while creating an Adaptive Form**
 
-1. **Adobe Experience Manager**／**Forms**／**フォームとドキュメント**&#x200B;の順にタップします。
+1. Log in to your AEM Forms author instance. 
 
-1. **作成**／**アダプティブフォーム**&#x200B;の順にクリックします。アダプティブフォームを作成するためのウィザードが開きます。
+1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
-1. 「**ソース**」タブでコアコンポーネントテンプレートを選択します。
-1. テーマを **スタイル** タブをクリックします。
-1. 「**作成**」をクリックします。
+1. Click **Create** > **Adaptive Forms**. The wizard for creating Adaptive Form opens.
 
-選択したテーマを持つアダプティブフォームが作成されます。
+1. Select the core component template in the **Source** tab.
+1. Select the theme in the **Style** tab.
+1. Click **Create**.
 
-**既存のアダプティブフォームにテーマを適用する**
+An Adaptive Form with the selected theme is created. 
 
-1. AEM Forms オーサーインスタンスにログインします。
+**Apply theme to an existing Adaptive Form**
 
-1. **Adobe Experience Manager**／**Forms**／**フォームとドキュメント**&#x200B;の順にタップします。
+1. Log in to your AEM Forms author instance. 
 
-1. アダプティブフォームを選択し、「プロパティ」をクリックします。
+1. Tap **Adobe Experience Manager** > **Forms** > **Forms & Documents**.
 
-1. の **テーマクライアントライブラリ** オプションで、テーマを選択します。
+1. Select an Adaptive Form and click Properties. 
 
-1. 「**保存して閉じる**」をクリックします。
+1. For the **Theme Client Library** option, select the theme. 
 
-選択したテーマがアダプティブフォームに適用されます。
+1. Click **Save & Close**.
 
+The selected theme is applied to the Adaptive Form. 
+-->
 
 #### 5.実稼動環境にテーマをデプロイする {#deploy-theme}
 
@@ -278,14 +285,17 @@ AEM Forms 6.5 では、コアコンポーネントベースのアダプティブ
 
 アダプティブフォームにテーマを適用する手順は次のとおりです。
 
-1. AEM Forms オーサーインスタンスにログインします。
+1. ローカルのAEMオーサーインスタンスにログインします。
+1. Experience Manager のログインページに資格情報を入力します。**Adobe Experience Manager**／**Forms**／**フォームとドキュメント**&#x200B;の順にタップします。
+1. **作成**／**アダプティブフォーム**&#x200B;の順にクリックします。
+1. アダプティブFormsコアコンポーネントテンプレートを選択し、 **次へ**. この **プロパティを追加** 表示
+1. 次を指定： **名前** アダプティブフォームの
 
-1. **Adobe Experience Manager**／**Forms**／**フォームとドキュメント**&#x200B;の順にタップします。
+   >[!NOTE]
+   >
+   > * デフォルトでは、 `adaptiveform.theme.canvas3` テーマが選択されている。
+   > * 別のテーマを **テーマクライアントライブラリ** ドロップダウンメニュー。
 
-1. **作成**／**アダプティブフォーム**&#x200B;の順にクリックします。アダプティブフォームを作成するためのウィザードが開きます。
-
-1. 「**ソース**」タブでコアコンポーネントテンプレートを選択します。
-1. テーマを **スタイル** タブをクリックします。
 1. 「**作成**」をクリックします。
 
 アダプティブフォームのテーマは、アダプティブフォームの作成時にスタイルを定義する、アダプティブフォームのテンプレートの一部として使用されます。

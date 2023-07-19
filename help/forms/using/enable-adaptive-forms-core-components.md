@@ -8,15 +8,24 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 1b97dc536550da8904bc7da09e983e0722c42a3d
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 6%
+source-wordcount: '911'
+ht-degree: 7%
 
 ---
 
 
 # AEM 6.5 FormsでのアダプティブFormsコアコンポーネントの有効化 {#enable-adaptive-forms-core-components}
+
+<span class="preview"> Adobeでは、コアコンポーネントを次のように使用することをお勧めします。 [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md) または [スタンドアロンのアダプティブFormsを作成](/help/forms/using/create-an-adaptive-form-core-components.md). </span>
+
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM 6.5 | この記事 |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
+
+**適用先：** ✅アダプティブフォームのコアコンポーネ❎ントアダプティブフォームの基盤コンポーネント
 
 アダプティブFormsコアコンポーネントを有効にすると、作成、公開、配信を開始できます [コアコンポーネントベースのアダプティブForms](create-an-adaptive-form-core-components.md) および [ヘッドレスアダプティブForms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=jp) AEM 6.5 Forms環境から
 
