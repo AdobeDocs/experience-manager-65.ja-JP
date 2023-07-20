@@ -4,7 +4,7 @@ seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credenti
 description: OAuth 2.0 クライアント資格情報フローを使用して Salesforce とAEM Formsを統合する手順
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
-source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
+source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 3%
@@ -79,4 +79,4 @@ Swagger は、RESTful API を開発および説明するためのオープンソ
 1. クリック **[!UICONTROL 接続をテスト]**.
 1. 接続に成功した場合は、 **[!UICONTROL 作成]** 」ボタンをクリックします。
 
-次に、以下を実行できます。 [フォームデータモデルの作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 設定済みのデータソースをアダプティブフォームに統合する場合。
+次に、以下を実行できます。 [フォームデータモデルの作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 設定済みのデータソースを Adaptive Formsと統合する場合

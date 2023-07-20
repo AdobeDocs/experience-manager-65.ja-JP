@@ -8,10 +8,10 @@ user-guide-title: Adobe Experience Manager 6.5 Forms ガイド
 breadcrumb-title: Forms ガイド
 user-guide-description: デジタルフォームを作成、管理、公開、および更新します。
 role: User
-source-git-commit: daf97f3d5c5f3c92ff5caeccff583e54f3f57364
+source-git-commit: 91683330024fbf1059715447073f35cecde45b0a
 workflow-type: tm+mt
-source-wordcount: '3881'
-ht-degree: 99%
+source-wordcount: '3889'
+ht-degree: 98%
 
 ---
 
@@ -127,6 +127,7 @@ ht-degree: 99%
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
    + [Microsoft Dynamics OData の設定](using/ms-dynamics-odata-configuration.md)
+   + [OAuth 2.0 クライアント資格情報を使用した Salesforce 統合フロー認証](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [フォームデータモデルの作成](using/create-form-data-models.md)
    + [フォームデータモデルの操作](using/work-with-form-data-model.md)
    + [フォームデータモデルの使用](using/using-form-data-model.md)
