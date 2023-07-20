@@ -1,28 +1,24 @@
 ---
 title: ExactTarget との統合
-seo-title: Integrating with ExactTarget
-description: AEMを ExactTarget と統合する方法を説明します。
-seo-description: Learn how to integrate AEM with ExactTarget.
-uuid: a53bbdaa-98f7-4035-b842-aa7ea63712ca
+description: Adobe Experience Managerを ExactTarget と統合する方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: integration
 content-type: reference
-discoiquuid: 5b2f624d-e5b8-4484-a773-7784ebce58bd
 docset: aem65
 exl-id: 4183fe78-5055-4b77-8a54-55666e86a04e
-source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 33%
+source-wordcount: '469'
+ht-degree: 26%
 
 ---
 
 # ExactTarget との統合{#integrating-with-exacttarget}
 
-AEM と ExactTarget の統合によって、AEM で作成されたメールを管理し、ExactTarget 経由で送信することができます。また、AEM ページの AEM フォームを使用して、ExactTarget のリード管理機能を使用できます。
+Adobe Experience Manager(AEM) と ExactTarget の統合により、ExactTarget を使用してAEMで作成した電子メールを管理および送信できます。 また、AEMページ上のAEMフォームを使用して、ExactTarget のリード管理機能を使用することもできます。
 
-統合により、次の機能を利用できます。
+この統合によって次の機能を使用できるようになります。
 
 * E メールをAEMで作成し、ExactTarget に公開して配布する機能。
 * AEMフォームのアクションを設定して、ExactTarget 購読者を作成する機能。
@@ -46,8 +42,8 @@ Cloud Servicesで ExactTarget 設定を作成するには：
 
    ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. ユーザー名とパスワードを入力し、API エンドポイント（例： **https://webservice.exacttarget.com/Service.asmx**）を選択します。
-1. クリック **ExactTarget に接続します。** 接続に成功すると、成功ダイアログが表示されます。 「**OK**」をクリックしてウィンドウを閉じます。
+1. ユーザー名、パスワードを入力し、API エンドポイント（例： ）を選択します。 **https://webservice.exacttarget.com/Service.asmx**) をクリックします。
+1. クリック **ExactTarget に接続します。** 正常に接続すると、成功ダイアログが表示されます。 box クリック **OK** をクリックしてウィンドウを閉じます。
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
@@ -72,11 +68,11 @@ Cloud Servicesで ExactTarget 設定を作成するには：
    ![chlimage_1-34](assets/chlimage_1-3.jpeg)
 
 1. 次を入力します。 **タイトル** オプションで **名前**&#x200B;をクリックし、 **作成**.
-1. 前の手順 4 で説明した設定情報を入力します。 この手順に従って、ExactTarget の設定を完了します。
+1. 前の手順 4 で説明した設定情報を入力します。この手順に従って、ExactTarget の設定を完了します。
 
 ### 複数の設定の追加 {#adding-multiple-configurations}
 
 複数の設定を追加するには：
 
-1. ようこそページで、 **Cloud Services** をクリックし、 **ExactTarget**. 「**設定を表示**」ボタンをクリックします。このボタンは、1 つ以上の ExactTarget 設定がある場合に表示されます。使用可能なすべての設定が表示されます。
-1. 次をクリック： **+** [ 利用可能な設定 ] の横に記号を付けます。 これにより、 **設定を作成** ウィンドウ 前の設定手順に従って、新しい設定を作成します。
+1. ようこそページで、 **Cloud Services** をクリックし、 **ExactTarget**. クリック **設定を表示** 1 つ以上の ExactTarget 設定が使用可能な場合に表示されます。 利用可能なすべての設定が一覧表示されます。
+1. 「利用可能な設定」の横にある「**+**」記号をクリックします。これにより、 **設定を作成** ウィンドウ 上記の設定手順に従って、設定を作成します。

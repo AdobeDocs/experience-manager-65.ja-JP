@@ -1,20 +1,16 @@
 ---
 title: 静的オブジェクトの有効期限
-seo-title: Expiration of Static Objects
-description: 静的オブジェクトが有効期限切れにならないようにAEMを設定する方法を説明します（適切な期間）。
-seo-description: Learn how to configure AEM so that static objects do not expire (for a reasonable period of time).
-uuid: ee019a3d-4133-4d40-98ec-e0914b751fb3
+description: 静的オブジェクトが期限切れにならないように（適切な期間）Adobe Experience Managerを設定する方法を説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
 content-type: reference
-discoiquuid: 73f37b3c-5dbe-4132-bb60-daa8de871884
 feature: Configuring
 exl-id: bfd5441c-19cc-4fa8-b597-b1221465f75d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 59%
+source-wordcount: '419'
+ht-degree: 33%
 
 ---
 
@@ -27,13 +23,13 @@ ht-degree: 59%
 * サーバーインフラストラクチャからのリクエストをオフロードします。
 * ブラウザーがブラウザーキャッシュ内のオブジェクトをキャッシュするので、ページ読み込みのパフォーマンスが向上します。
 
-有効期限は、ファイルの「有効期限」に関する HTTP 規格によって指定されています（[RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) の第 14.21 章「Hypertext Transfer Protocol -- HTTP 1.1」などを参照）。この規格では、ヘッダーを使用することで、クライアントがオブジェクトを期限切れになるまでキャッシュできます。対象となるオブジェクトは、指定された期間中はずっとキャッシュ内に維持され、生成元サーバーに対するステータスチェックはおこなわれません。
+ファイルの「有効期限」に関して、HTTP 標準で有効期限が指定されます ( 例： [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot;ハイパーテキスト転送プロトコル — HTTP 1.1&quot;)。 この標準では、ヘッダーを使用して、クライアントが古いと見なされるまでオブジェクトをキャッシュできるようにします。このようなオブジェクトは、元のサーバーに対してステータスチェックが行われず、指定された時間キャッシュされます。
 
 >[!NOTE]
 >
->この設定は、Dispatcher とは完全に別のものであり、Dispatcher に対しては機能しません。
+>この設定は、Dispatcher とは別のもので、Dispatcher に対しては機能しません。
 >
->Dispatcher の目的は、AEM の手前でデータをキャッシュすることです。
+>Dispatcher の目的は、Adobe Experience Manager(AEM) の前でデータをキャッシュすることです。
 
 動的ではなく、時間が経過しても変化しないファイルはすべてキャッシュ可能であり、またキャッシュする必要があります。Apache HTTPD サーバーの設定は、環境により、次のいずれかのようになります。
 
@@ -77,7 +73,7 @@ ht-degree: 59%
 
    これにより、中間キャッシュ（ブラウザーキャッシュなど）で CSS、JavaScript、PNG およびGIFファイルを最大 1 日間クライアントキャッシュに保存できます。 この例では、`/content` および `/etc/designs` の下にあるすべてについてグローバル設定を示していますが、より詳細に設定する必要があります。
 
-   サイトの更新頻度によっては、HTML ページのキャッシュも検討できます。妥当な期間は 1 時間です。
+   サイトの更新頻度に応じて、HTMLページのキャッシュも検討できます。 妥当な期間は 1 時間です。
 
    ```xml
    <Location /content>

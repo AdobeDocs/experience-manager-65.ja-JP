@@ -1,18 +1,14 @@
 ---
 title: アプリのテンプレートとコンポーネント
-seo-title: App Templates and Components
 description: このページでは、アプリのテンプレートとコンポーネントについて説明します。 テンプレートの構造に関する詳細情報が提供されます。
-seo-description: Follow this page to learn about App Templates and Components. It provides detailed information on the structure of templates.
-uuid: ba2fd91b-de5a-4f39-a976-5455f9983669
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing-on-demand-services-app
-discoiquuid: 7f31c6a7-92d5-4a87-a9f0-68a82b834d5a
 exl-id: 58d95325-7cb1-4204-842d-17add70e1fbf
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '408'
 ht-degree: 14%
 
 ---
@@ -25,14 +21,14 @@ ht-degree: 14%
 
 テンプレートは、ページの作成に使用され、選択した範囲内で使用できるコンポーネントを定義します。 テンプレートは、そこから作成されるページと同じ構造を持つノードの階層ですが、実際のコンテンツは含みません。
 
-各テンプレートには、使用可能なコンポーネントが選択されて表示されます。
+各テンプレートには、使用可能なコンポーネントが表示されます。
 
 * テンプレートは [コンポーネント](/help/sites-developing/components.md);
 * コンポーネントはウィジェットを使用し、ウィジェットにアクセスできます。ウィジェットはコンテンツのレンダリングに使用されます。
 
 >[!NOTE]
 >
->CRXDE Liteを使用したAEMアプリケーションの開発方法については、 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>CRXDE Liteを使用してAdobe Experience Manager(AEM) アプリケーションを開発する方法については、 [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 テンプレートは、ページの基盤です。
 
@@ -54,7 +50,7 @@ ht-degree: 14%
 * **jcr:title**  — テンプレートのタイトル。は、ページの作成時にダイアログに表示されます。
 * **jcr:description**  — テンプレートの説明。は、ページの作成時にダイアログに表示されます。
 
-このノードには次が含まれます *jcr:content (cq:PageContent)* 結果ページのコンテンツノードの基礎として使用されるノードこの参照は、 *sling:resourceType*：新しいページの実際のコンテンツのレンダリングに使用するコンポーネント。
+このノードには次が含まれます *jcr:content (cq:PageContent)* 結果ページのコンテンツノードの基礎として使用されるノード。 この参照は、 *sling:resourceType*：新しいページの実際のコンテンツのレンダリングに使用するコンポーネント。
 
 >[!NOTE]
 >

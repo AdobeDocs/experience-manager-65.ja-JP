@@ -1,27 +1,24 @@
 ---
-title: AEM Forms の AEM デスクトップアプリケーション
-seo-title: AEM desktop app for AEM Forms
-description: AEM Forms の AEM デスクトップアプリケーション
-uuid: 99e0f2fb-8623-45bb-8e2e-5c5d6f482366
+title: AEM Forms用Adobe Experience Manager(AEM) デスクトップアプリケーション
+description: AEM Forms用Adobe Experience Manager(AEM) デスクトップアプリケーション
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: manage
-discoiquuid: c30332b6-e012-442d-8e84-28832c116c7b
 noindex: true
 role: Admin
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 55%
+source-wordcount: '430'
+ht-degree: 50%
 
 ---
 
-# AEM Forms の AEM デスクトップアプリケーション {#aem-desktop-app-for-aem-forms}
+# AEM Forms用Adobe Experience Manager(AEM) デスクトップアプリケーション {#aem-desktop-app-for-aem-forms}
 
 AEM デスクトップアプリケーションにより、Adobe Experience Manager（AEM）のアセットリポジトリと AEM Forms のバイナリファイルを、システム上のネットワークディレクトリにマップすることができます。同期されたアセットとバイナリファイルをエクスプローラーで表示し、様々なアプリを使用して必要に応じてファイルを編集できます。 ファイルの表示に加えて、バイナリファイルの作成、アップロード、削除をおこなうこともできます。 また、ソフトウェアから直接ファイルを開いたり、編集したり、保存したりすることもできます。 例えば、Designer から直接 XDP ファイルを開いて編集することができます。 アセットに対してローカルで加えた変更は、AEM AssetsリポジトリとAEM Forms UI に反映されます。
 
-AEMインスタンスからアプリをダウンロードできます。 AEM デスクトップアプリケーションの詳しいダウンロード方法については、[AEM デスクトップアプリケーションのリリースノート](https://helpx.adobe.com/jp/experience-manager/desktop-app/release-notes.html)を参照してください。
+AEMインスタンスからアプリをダウンロードできます。 AEM デスクトップアプリケーションの詳しいダウンロード方法については、[AEM デスクトップアプリケーションのリリースノート](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=ja)を参照してください。
 
 ## AEM デスクトップアプリケーションでサポートされる AEM Forms のアセット {#aem-forms-assets-supported-in-aem-desktop-app}
 

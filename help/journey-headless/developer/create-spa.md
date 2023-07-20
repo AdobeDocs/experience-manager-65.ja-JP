@@ -2,10 +2,10 @@
 title: オプション — Adobe Experience Managerを使用したシングルページアプリケーション (SPA) の作成方法
 description: Adobe Experience Manager(AEM) ヘッドレス開発者ジャーニーのこのオプションの継続では、AEMでヘッドレス配信を従来のフルスタック CMS 機能と組み合わせる方法と、AEM SPA Editor フレームワークを使用して編集可能なSPAを作成する方法を学びます。
 exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
-source-git-commit: d3c40d1452217983b01245ec1c81111a3c4e7295
+source-git-commit: 3885cc51f7e821cdb352737336a29f9c4f0c2f41
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 57%
+source-wordcount: '1264'
+ht-degree: 54%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 57%
 * AEM でヘッドレスコンテンツを取得および更新する方法
 * AEM ヘッドレスプロジェクトの運用を開始する方法
 
-したがって、初めての AEM ヘッドレスプロジェクトの運用を既に開始したかもしれませんし、そうでなくても、そのために必要な知識はすべて習得したことになります。おめでとうございます。
+これで、最初のAEMヘッドレスプロジェクトを利用した運用が開始されるか、またはその知識が得られました。 おめでとうございます。
 
-それでは、ジャーニーの続編であるこのオプションパートになぜ取り組むのでしょうか。おそらく [はじめに](getting-started.md#integration-levels) AEMがヘッドレス配信と従来のフルスタックモデルをサポートするだけでなく、両方の利点を組み合わせたハイブリッドモデルをサポートする方法について簡単に説明しました。 従来のヘッドレスモデルでは不可能ですが、このようなハイブリッドモデルでは、特定のプロジェクトに対して、かつてないほどの柔軟性をもたらすことができます。
+それでは、ジャーニーの続編であるこのオプションパートになぜ取り組むのでしょうか。おそらく、 [はじめに](getting-started.md#integration-levels)AEMがヘッドレス配信と従来のフルスタックモデルをサポートするだけでなく、両方の利点を組み合わせたハイブリッドモデルをサポートする方法についても簡単に説明しました。 従来のヘッドレスモデルでは不可能ですが、このようなハイブリッドモデルでは、特定のプロジェクトに対して、かつてないほどの柔軟性をもたらすことができます。
 
 この記事は、AEMで編集可能な独自のシングルページアプリケーション (SPA) を作成する方法を詳しく調べ、AEMヘッドレスに関するお客様の知識に基づいて構築されます。 この方法では、コンテンツを作成してSPAにヘッドレスに配信できますが、SPAはAEMで編集可能なままです。
 
@@ -72,7 +72,7 @@ SPA とその使用理由について詳しくは、[その他のリソース](#
 
 ## AEM での SPA の処理方法
 
-AEM で単一ページアプリケーションを開発する場合、フロントエンド開発者は SPA を作成する際に標準的なベストプラクティスを順守するものと想定します。フロントエンド開発者が、次の一般的なベストプラクティスとAEM固有の原則に従うと、SPAはAEMとコンテンツオーサリング機能と共に機能します。
+AEM で単一ページアプリケーションを開発する場合、フロントエンド開発者は SPA を作成する際に標準的なベストプラクティスを順守するものと想定します。フロントエンド開発者は、次の一般的なベストプラクティスとAEM固有の原則に従えば、SPAはAEMとコンテンツオーサリング機能と共に機能します。
 
 * **移動可能** - その他のあらゆるコンポーネントと同様に、SPA コンポーネントは可能な限り移動可能な状態で構築する必要があります。SPA は、移動可能で再利用可能なコンポーネントを使用して構築する必要があります。
 * **AEM Drives サイト構造**  — フロントエンド開発者はコンポーネントを作成し、内部構造を所有しますが、AEMを利用してサイトのコンテンツ構造を定義します。
@@ -125,6 +125,6 @@ AEM の SPA トピックをさらに詳しく解説する[その他のリソー�
 * [AEM 向け SPA の開発](/help/sites-developing/spa-architecture.md) - AEM 対応 SPA の開発方法に関するガイドライン
 * [SPA エディターの概要](/help/sites-developing/spa-overview.md) - SPA エディターの仕組みの説明
 * [サーバーサイドレンダリング](/help/sites-developing/spa-ssr.md) - SSR をAEM SPA用に設定する方法
-* [SPA リファレンスドキュメント](/help/sites-developing/spa-reference-materials.md) - JavaScript API リファレンスと、オープンソースの AEM SPA GitHub プロジェクトへのリンク
+* [SPA Reference Documents](/help/sites-developing/spa-reference-materials.md)  — オープンソースのAEM SPA GitHub プロジェクトへの JavaScript API リファレンスとリンク
 * [コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md) - コンテンツフラグメントの作成方法
 * [AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja) - Web サイトの出発点として、ベストプラクティスに基づいた最小限の Adobe Experience Manager（AEM）プロジェクトを作成する Maven テンプレート
