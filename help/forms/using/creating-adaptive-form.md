@@ -5,16 +5,18 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: 6ab2538dd8095304a55433c15c8c3d095499d92c
+source-git-commit: f620966974b0f535d30a17a5fa3175a593e52fec
 workflow-type: tm+mt
-source-wordcount: '1898'
-ht-degree: 58%
+source-wordcount: '1913'
+ht-degree: 57%
 
 ---
 
 # アダプティブフォームの作成 {#creating-an-adaptive-form}
 
-<span class="preview"> この記事では、アダプティブFormsの古いアプローチについて説明します。 Adobeは、 [アダプティブFormsコアコンポーネント](/help/forms/using/create-an-adaptive-form-core-components.md) 新しいフォームを作成します。 これらのコンポーネントは、 [アダプティブFormsの大幅な向上](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)優れたユーザーエクスペリエンスを実現します。</span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+
+
 
 ## アダプティブフォームの作成 {#strong-create-an-adaptive-form-strong}
 
