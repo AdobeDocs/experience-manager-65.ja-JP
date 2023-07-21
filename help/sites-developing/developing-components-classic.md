@@ -1,24 +1,20 @@
 ---
-title: AEM コンポーネントの開発（クラシック UI）
-seo-title: Developing AEM Components (Classic UI)
-description: クラシック UI では、ExtJS を使用して、コンポーネントのルックアンドフィールを提供するウィジェットを作成します。 HTL は、AEMの推奨スクリプティング言語ではありません。
-seo-description: The classic UI uses ExtJS to create widgets that provide the look-and-feel of the components. HTL is not the recommended scripting language for AEM.
-uuid: ed53d7c6-5996-4892-81a4-4ac30df85f04
+title: Adobe Experience Managerコンポーネントの開発（クラシック UI）
+description: クラシック UI では、ExtJS を使用して、コンポーネントのルックアンドフィールを提供するウィジェットを作成します。 HTL は、Adobe Experience Manager(AEM) の推奨スクリプティング言語ではありません。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: c68f724f-f9b3-4018-8d3a-1680c53d73f8
 legacypath: /content/docs/en/aem/6-2/develop/components/components-classic
 exl-id: 3f078139-73fd-4913-9d67-264fb2515f8a
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '2393'
-ht-degree: 56%
+source-wordcount: '2386'
+ht-degree: 46%
 
 ---
 
-# AEM コンポーネントの開発（クラシック UI）{#developing-aem-components-classic-ui}
+# Adobe Experience Manager(AEM) コンポーネントの開発（クラシック UI）{#developing-aem-components-classic-ui}
 
 クラシック UI では、ExtJS を使用して、コンポーネントのルックアンドフィールを提供するウィジェットを作成します。 これらのウィジェットの性質により、クラシック UI と [タッチ操作対応 UI](/help/sites-developing/developing-components.md).
 
@@ -44,7 +40,7 @@ JSP スクリプトまたはサーブレットを使用して、コンポーネ�
 
 ## global.jsp {#global-jsp}
 
-JSP スクリプトファイルの `global.jsp` は、コンポーネントのレンダリングに使用される任意の JSP スクリプトの特定オブジェクト（コンテンツ）にすばやくアクセスするために使用されます。
+JSP スクリプトファイル `global.jsp` は、コンポーネントのレンダリングに使用する JSP スクリプトファイルに対して、特定のオブジェクト（コンテンツにアクセスする）への迅速なアクセスを提供するために使用されます。
 
 したがって、`global.jsp` で提供される 1 つ以上のオブジェクトを使用する場合は、JSP スクリプトをレンダリングするすべてのコンポーネントに `global.jsp` を含める必要があります。
 
@@ -74,8 +70,8 @@ JSP スクリプトファイルの `global.jsp` は、コンポーネントの�
    * `properties` - 指定されたリソースのプロパティ（`resource.adaptTo(ValueMap.class);`）。
    * `pageProperties` - 指定されたリソースのページのプロパティ。
    * `pageManager` - AEM コンテンツページにアクセスするためのページマネージャー（`resourceResolver.adaptTo(PageManager.class);`）。
-   * `component` - 現在の AEM コンポーネントのコンポーネントオブジェクト。
-   * `designer` - デザイン情報を取得するためのデザイナーオブジェクト（`resourceResolver.adaptTo(Designer.class);`）。
+   * `component`  — 現在のAEMコンポーネントのコンポーネントオブジェクト。
+   * `designer`  — デザイン情報 ( `resourceResolver.adaptTo(Designer.class);`) をクリックします。
    * `currentDesign` - 指定されたリソースのデザイン。
    * `currentStyle` - 指定されたリソースのスタイル。
 
@@ -113,7 +109,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
 最近の web サイトは、複雑な JavaScript や CSS コードを利用したクライアント側の処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。
 
-この問題への対処に役立つように、AEM では、**クライアント側ライブラリフォルダー**&#x200B;が提供されています。これにより、クライアント側コードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義することができます。その後、クライアントサイドライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
+この問題に対処するために、AEMでは、 **クライアント側ライブラリフォルダー**：クライアント側コードをリポジトリに保存し、カテゴリに整理して、コードの各カテゴリをクライアントに提供するタイミングと方法を定義できます。 その後、クライアントサイドライブラリシステムにより、最終的な web ページで、正しいコードを読み込むための正しいリンクが作成されます。
 
 詳しくは、[クライアントサイド HTML ライブラリの使用](/help/sites-developing/clientlibs.md)ドキュメントを参照してください。
 
@@ -147,9 +143,9 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
 ### 新しいコンポーネントの開発（既存のコンポーネントの適応） {#develop-a-new-component-adapt-existing-component}
 
-既存のコンポーネントに基づいてAEM用の新しいコンポーネントを開発するには、コンポーネントをコピーし、新しいコンポーネントの JavaScript ファイルを作成して、AEMがアクセス可能な場所に保存します ( [コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)):
+既存のコンポーネントに基づいてAEMの新しいコンポーネントを開発するには、コンポーネントをコピーし、新しいコンポーネントの JavaScript ファイルを作成して、AEMがアクセス可能な場所に保存します ( [コンポーネントおよびその他の要素のカスタマイズ](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)):
 
-1. CRXDE Liteを使用して、次の場所に新しいコンポーネントフォルダーを作成します。
+1. CRXDE Liteを使用して、次の場所にコンポーネントフォルダーを作成します。
 
    / `apps/<myProject>/components/<myComponent>`
 
@@ -163,7 +159,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
    次のような変更を行うことができます。
 
-   * ダイアログボックスでの新しいフィールドの追加
+   * ダイアログボックスでのフィールドの追加
 
       * `cq:dialog` - タッチ操作対応 UI 用ダイアログ
       * `dialog` - クラシック UI 用ダイアログ
@@ -171,14 +167,14 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
    * `.jsp` ファイルの置換（新しいコンポーネントの作成後に名前を付けます）
    * または、コンポーネント全体の作成し直し（必要な場合）
 
-   例えば、標準テキストコンポーネントのコピーを作成した場合は、ダイアログボックスにフィールドを追加して、`.jsp` を更新し、そこに追加された情報を処理します。
+   例えば、標準テキストコンポーネントのコピーを作成した場合は、ダイアログボックスにフィールドを追加して、 `.jsp` 入力を処理するために。
 
    >[!NOTE]
    >
    >使用するコンポーネント：
    >
-   >* タッチ操作対応 UI では [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html) コンポーネントを使用します
-   >* クラシック UI の使用 [ExtJS ウィジェット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)
+   >* タッチ操作対応 UI では [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) コンポーネントを使用します
+   >* クラシック UI の使用 [ExtJS ウィジェット](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
    >[!NOTE]
    >
@@ -186,7 +182,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
    >
    >タッチ操作対応 UI 用に定義されたダイアログは、クラシック UI 内では動作しません。
    >
-   >インスタンスとオーサー環境によっては、コンポーネント用に両方のタイプのダイアログを定義する必要が生じる場合があります。
+   >インスタンスとオーサー環境によっては、コンポーネントに両方のタイプのダイアログを定義する必要がある場合があります。
 
 1. 新しいコンポーネントを表示するには、次のいずれかのノードが存在し、適切に初期化されている必要があります。
 
@@ -200,7 +196,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
    * CRXDE Lite を使用して、ノード `/etc/designs/geometrixx/jcr:content/contentpage/par` の適切なコンポーネントに、値 `<path-to-component>`（`/apps/geometrixx/components/myComponent` など）を追加します。
    * 次の [段落システムへの新しいコンポーネントの追加](#adding-a-new-component-to-the-paragraph-system-design-mode)
 
-1. AEM WCM で、Web サイトのページを開き、作成したタイプの新しい段落を挿入して、コンポーネントが正しく動作していることを確認します。
+1. AEM WCM で、Web サイトのページを開き、作成したタイプの段落を挿入して、コンポーネントが正しく動作していることを確認します。
 
 >[!NOTE]
 >
@@ -236,7 +232,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 テキストおよび画像コンポーネントの拡張機能を使用すると、エディターはコンポーネントの既存の機能をすべて使用でき、さらに次のいずれかの方法で画像の配置を指定する追加のオプションを持ちます。
 
 * テキストの左側（現在の動作と新しいデフォルト）
-* 右側の
+* 右側に
 
 このコンポーネントを拡張した後、コンポーネントのダイアログボックスを使用して画像の配置を設定できます。
 
@@ -256,7 +252,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
 #### 既存の textimage コンポーネントの拡張 {#extending-the-existing-textimage-component}
 
-新しいコンポーネントを作成するには、標準の textimage コンポーネントをベースとして使用し、それに変更を加えます。ここでは、Geometrixx AEM WCM の例のアプリケーションに新しいコンポーネントを保存します。
+コンポーネントを作成するには、標準の textimage コンポーネントを基礎として使用し、変更します。 新しいコンポーネントを、GeometrixxAEM WCM のサンプルアプリケーションに保存します。
 
 1. 標準の textimage コンポーネントを `/libs/foundation/components/textimage` から Geometrixx のコンポーネントフォルダー（`/apps/geometrixx/components`）に、ターゲットノードの名前として textimage を使用してコピーします（コンポーネントに移動し、右クリックして「コピー」を選択し、ターゲットディレクトリをブラウジングすることでコンポーネントをコピーします）。
 
@@ -270,7 +266,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
    >[!NOTE]
    >
-   >ダイアログの定義は、UI に依存します。
+   >ダイアログの定義は、UI によって異なります。
    >
    >* タッチ操作対応 UI：`textimage/cq:dialog`
    >* クラシック UI：`textimage/dialog`
@@ -298,7 +294,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
    これで、画像がページ上のコンポーネントにドロップされると、拡張された textimage コンポーネントの `sling:resourceType` プロパティが `geometrixx/components/textimage.` に設定されます。
 
-1. コンポーネントのダイアログボックスを修正して、新しいオプションを含めます。 新しいコンポーネントは、元のコンポーネントと同じダイアログボックスの部分を継承します。 追加するのは、 **詳細** タブ、追加 [ たぶ、ついか ] **画像の位置** ドロップダウンリストとオプション **左** および **右**:
+1. コンポーネントのダイアログボックスを修正して、新しいオプションを含めます。 新しいコンポーネントは、元のコンポーネントと同じダイアログボックスの部分を継承します。 追加をおこなうのは、 **詳細** タブ、追加 [ たぶ、ついか ] **画像の位置** ドロップダウンリストとオプション **左** および **右**:
 
    * `textimage/dialog` プロパティは変更しません。
 
@@ -313,7 +309,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
    * tab3 の場合：
 
       * プロパティとサブノードは変更せずにそのままにします。
-      * 新しいフィールドの定義として、`cq:Widget` タイプのノードの場所を `tab3/items` に追加します。
+      * フィールド定義を `tab3/items`，タイプのノード位置 `cq:Widget`
       * 新しい `tab3/items/position` ノードに以下のプロパティ（String タイプ）を設定します。
 
          * `name`：`./imagePosition`
@@ -340,7 +336,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
         image.loadStyleData(currentStyle);
    ```
 
-   強調表示したコードのフラグメント *%>&lt;div class=&quot;image&quot;>&lt;%* は、このタグのカスタムスタイルを生成する新しいコードで置き換える予定です。
+   強調したコードフラグメントを置き換えます *%>&lt;div class=&quot;image&quot;>&lt;%* このタグのカスタムスタイルを生成する新しいコードを使用します。
 
    ```xml
    // todo: add new CSS class for the 'right image' instead of using
@@ -371,7 +367,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 
 ### 画像コンポーネントのアップロード機能を無効にする {#disable-upload-capability-of-the-image-component}
 
-アップロード機能を無効にするには、標準の画像コンポーネントをベースとして使用し、それに変更を加えます。Geometrixx の例のアプリケーションに新しいコンポーネントを保存します。
+この機能を無効にするには、標準の画像コンポーネントを基礎として使用し、それを変更します。 新しいコンポーネントは、Geometrixxサンプルアプリケーションに保存します。
 
 1. ターゲットノードの名前として画像を使用して、`/libs/foundation/components/image` から Geometrixx コンポーネントフォルダー（`/apps/geometrixx/components`）に標準の画像コンポーネントをコピーします。
 
@@ -382,7 +378,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
    * **jcr:title** を `Image (Extended)` に設定します。
 
 1. `/apps/geometrixx/components/image/dialog/items/image`に移動します。
-1. 新しいプロパティを追加します。
+1. プロパティを追加します。
 
    * **名前**：`allowUpload`
    * **型**：`String`
@@ -393,7 +389,7 @@ CQ および Sling タグライブラリを使用すると、テンプレート�
 1. 「**すべて保存**」をクリックします。コンポーネントをテストする準備ができました。
 1. 「英語/会社」などのGeometrixxでページを開きます。
 1. デザインモードに切り替えて、画像（拡張）を有効にします。
-1. 編集モードに戻し、段落システムに追加します。 次の画像では、元の画像コンポーネントと先ほど作成した画像コンポーネントの違いを確認できます。
+1. 編集モードに戻し、段落システムに追加します。 次の画像では、元の画像コンポーネントと作成した画像コンポーネントの違いを確認できます。
 
    元の画像コンポーネント：
 

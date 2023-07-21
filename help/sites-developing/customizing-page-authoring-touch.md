@@ -1,19 +1,15 @@
 ---
 title: ページオーサリングのカスタマイズ
-seo-title: Customizing Page Authoring
-description: AEMは、ページオーサリング機能をカスタマイズできる様々なメカニズムを提供しています。
-seo-description: AEM provides various mechanisms to enable you to customize page authoring functionality
-uuid: 9dc72d98-c5ff-4a00-b367-688ccf896526
+description: Adobe Experience Manager(AEM) は、ページオーサリング機能をカスタマイズするための様々なメカニズムを提供します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-discoiquuid: 6825dcd6-fa75-4410-b6b2-e7bd4a391224
 exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '1357'
-ht-degree: 68%
+source-wordcount: '1340'
+ht-degree: 50%
 
 ---
 
@@ -23,11 +19,11 @@ ht-degree: 68%
 >
 >このドキュメントでは、最新のタッチ操作対応 UI でページオーサリングをカスタマイズする方法について説明し、クラシック UI には適用されません。
 
-AEMは、ページオーサリング機能 ( および [コンソール](/help/sites-developing/customizing-consoles-touch.md)) を作成します。
+Adobe Experience Manager(AEM) は、ページオーサリング機能 ( および [コンソール](/help/sites-developing/customizing-consoles-touch.md)) を作成します。
 
 * Clientlibs
 
-  クライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。カスタマイズする際に、独自のクライアントライブラリを `/apps.` に作成できます。新しいクライアントライブラリには次の条件があります。
+  clientlibs を使用すると、デフォルトの実装を拡張して新しい機能を実現し、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズする際に、独自のクライアントライブラリを `/apps.` に作成できます。新しいクライアントライブラリには次の条件があります。
 
    * オーサリングクライアントライブラリ `cq.authoring.editor.sites.page` を使用する必要があります。
    * 適切な `cq.authoring.editor.sites.page.hook` カテゴリに含める必要があります。
@@ -38,30 +34,30 @@ AEMは、ページオーサリング機能 ( および [コンソール](/help/s
 
 >[!NOTE]
 >
->詳しくは、 [JS ドキュメントセット](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html).
+>詳しくは、 [JS ドキュメントセット](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
-これらは、AEMインスタンスでページオーサリング機能を拡張するための様々な方法で使用できます。 以下では、選択範囲について説明します（概要レベル）。
+これらは、AEMインスタンスでページオーサリング機能を拡張するための様々な方法で使用できます。 以下では、選択範囲（概要レベル）について説明します。
 
 >[!NOTE]
 >
->詳しくは、次のセクションを参照してください。
+>詳しくは、以下を参照してください。
 >
 >* の使用と作成 [clientlibs](/help/sites-developing/clientlibs.md).
 >* の使用と作成 [overlays](/help/sites-developing/overlays.md).
->* [Granite](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* ページオーサリングに使用される構造について詳しくは、[AEM タッチ操作対応 UI の構造](/help/sites-developing/touch-ui-structure.md)を参照してください。
 >
 
 
 >[!CAUTION]
 >
->`/libs` パス内の設定は&#x200B;***一切***&#x200B;変更しないでください。
+>******`/libs` パス内は一切変更しないでください。
 >
->`/libs` コンテンツは、インスタンスを次回アップグレードするとき（場合によってはホットフィックスまたは機能パックを適用したとき）に上書きされるからです。
+>理由は、 `/libs` が上書きされる場合は、次回インスタンスをアップグレードするとき（ホットフィックスまたは機能パックを適用したときに上書きされる場合があります）。
 >
 >設定およびその他の変更に推奨される方法は次のとおりです。
 >
->1. 必要な項目（`/libs`内に存在）を、`/apps`の下で再作成します。
+>1. 必要な項目（内に存在）を再作成します。 `/libs`) `/apps`
 >1. `/apps` 内で変更作業をおこないます。
 
 ## 新しいレイヤー（モード）の追加 {#add-new-layer-mode}
@@ -72,7 +68,7 @@ AEMは、ページオーサリング機能 ( および [コンソール](/help/s
 
 標準のAEMインスタンスは MSM レイヤーを提供します。 これにより、 [マルチサイト管理](/help/sites-administering/msm.md) レイヤでハイライト表示します。
 
-実行中に確認するには、任意の [We.Retail 言語コピー](/help/sites-developing/we-retail-globalized-site-structure.md)ページ（または他のライブコピーページ）を編集して、**ライブコピーステータス**&#x200B;モードを選択します。
+実際に表示するには、次の項目を編集します。 [We.Retail 言語コピー](/help/sites-developing/we-retail-globalized-site-structure.md) ページ（または他のライブコピーページ）を選択し、 **ライブコピーステータス** モード。
 
 MSM レイヤーの定義（参照用）は、次のファイルにあります。
 
@@ -80,7 +76,7 @@ MSM レイヤーの定義（参照用）は、次のファイルにあります�
 
 ### コードサンプル {#code-sample}
 
-これは、MSM ビュー用の新しいレイヤー（モード）を作成する方法を示すサンプルパッケージです。
+これは、MSM ビュー用の新しいレイヤーであるレイヤー（モード）の作成方法を示すサンプルパッケージです。
 
 GitHub のコード
 
@@ -91,11 +87,11 @@ GitHub のコード
 
 ## 新しい選択カテゴリをアセットブラウザに追加 {#add-new-selection-category-to-asset-browser}
 
-アセットブラウザーには、様々なタイプ/カテゴリ（画像、ドキュメントなど）のアセットが表示されます。 このようなアセットカテゴリを使用して、アセットをフィルターすることもできます。
+アセットブラウザーには、様々なタイプ/カテゴリ（画像やドキュメントなど）のアセットが表示されます。 このようなアセットカテゴリを使用して、アセットをフィルターすることもできます。
 
 ### コードサンプル {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` は、新しいグループをアセットファインダーに追加する方法を示すサンプルパッケージです。このサンプルは、[Flickr](https://www.flickr.com) の公開ストリームに接続し、サイドパネルに表示します。
+`aem-authoring-extension-assetfinder-flickr` は、アセットファインダーにグループを追加する方法を示すサンプルパッケージです。 この例は、 [Flickr](https://www.flickr.com)のパブリックストリームを参照し、サイドパネルに表示します。
 
 GitHub のコード
 
@@ -106,11 +102,11 @@ GitHub のコード
 
 ## リソースのフィルタリング {#filtering-resources}
 
-ページをオーサリングする際、多くの場合、ユーザーはリソース（ページ、コンポーネント、アセットなど）から選択する必要があります。 これは、例えば、作成者が項目を選択する必要があるリストの形式をとることができます。
+ページをオーサリングする際に、多くの場合、ユーザーはリソース（ページ、コンポーネント、アセットなど）から選択する必要があります。 これは、例えば、作成者が項目を選択する必要があるリストの形式を取ることができます。
 
-リストを適切なサイズに保ち、使用事例にも関連するように、カスタム述語の形式でフィルターを実装できます。 例えば、[`pathbrowser`](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) コンポーネントを使用してユーザーが特定のリソースへのパスを選択できるようにするには、表示されるパスを次のようにフィルタリングできます。
+リストを適切なサイズに保ち、使用例にも関連するように、フィルターをカスタム述語の形式で実装できます。 例えば、[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) コンポーネントを使用してユーザーが特定のリソースへのパスを選択できるようにするには、表示されるパスを次のようにフィルタリングできます。
 
-* [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
+* [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) インターフェイスを実装してカスタム述語を実装します。
 * 述語の名前を指定し、`pathbrowser`を使用するときにその名前を参照します。
 
 カスタム述語の作成について詳しくは、[この記事](/help/sites-developing/implementing-custom-predicate-evaluator.md)を参照してください。
@@ -157,11 +153,11 @@ GitHub のコード
 
          * プロパティ：`editorType`
 
-           そのコンポーネントに対してインプレース編集が呼び出されたときに使用されるインラインエディターの種類を定義します。例： `text`, `textimage`, `image`, `title`.
+           そのコンポーネントに対してインプレース編集が呼び出された場合に使用されるインラインエディターのタイプを定義します。例： `text`, `textimage`, `image`, `title`.
 
-1. エディターの追加の設定の詳細は、設定が含まれている `config` ノード、および必要なプラグイン設定の詳細が含まれている `plugin` ノードをさらに使用して設定できます。
+1. エディターの追加の設定の詳細は、 `config` 設定を含むノード `plugin` 必要なプラグイン設定の詳細を含むノード。
 
-   画像コンポーネントの画像切り抜きプラグインの縦横比を定義する例を次に示します。画面サイズが非常に制限されている場合があるので、切り抜きの縦横比はフルスクリーンエディターに移動され、そこでのみ表示できます。
+   画像コンポーネントの画像切り抜きプラグインの縦横比を定義する例を次に示します。画面サイズが制限されている可能性があるので、切り抜きの縦横比は全画面表示エディターに移動され、そこでのみ表示できます。
 
    ```xml
    <cq:inplaceEditing
@@ -185,7 +181,7 @@ GitHub のコード
 
    >[!CAUTION]
    >
-   >AEM では、切り抜き比率は `ratio` プロパティで設定し、**高さ／幅**&#x200B;として定義します。これは、通常の高さ／幅の定義とは異なり、レガシー互換性のための設定です。`name` プロパティを明確に定義していれば、UI に表示されるので、オーサリングユーザーは違いを認識しません。
+   >AEMの切り抜き率 ( `ratio` プロパティは、 **高さ/幅**. これは従来の定義である「幅/高さ」とは異なり、レガシー互換性のための設定です。`name` プロパティを明確に定義していれば、UI に表示されるので、オーサリングユーザーは違いを認識しません。
 
 #### 新しいインプレースエディターの作成 {#creating-a-new-in-place-editor}
 
@@ -209,7 +205,7 @@ GitHub のコード
 
 #### 新しいインプレースエディターを作成するためのコードサンプル {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` は、AEM で新しいインプレースエディターを作成する方法を示すサンプルパッケージです。
+`aem-authoring-extension-inplace-editor` は、AEMでインプレースエディターを作成する方法を示すサンプルパッケージです。
 
 GitHub のコード
 
@@ -243,9 +239,9 @@ GitHub のコード
 
 * コンテンツ作成者が適切なレプリケーション権限&#x200B;**を持っていない**&#x200B;が DAM-Users および作成者のメンバーシップ&#x200B;**を持っている**&#x200B;場合、適切なメニューに自動的に表示されます 。
 
-* それ以外の場合は、レプリケーション権限が削除されているので、何も表示されません。
+* レプリケーション権限が削除されているので、何も表示されません。
 
-そのようなアクティベーションに対する動作をカスタマイズするために、**アクティベーションをリクエスト**&#x200B;ワークフローをオーバーレイできます。
+このようなアクティベーションで動作をカスタマイズするには、 **アクティベーションのリクエスト** ワークフロー：
 
 1.  `/apps`で **Sites** ウィザードをオーバーレイします。
 

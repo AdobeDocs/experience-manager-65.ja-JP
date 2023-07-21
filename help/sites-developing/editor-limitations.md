@@ -1,31 +1,27 @@
 ---
-title: エディターの制限事項
-seo-title: Editor Limitations
-description: タッチ操作対応の UI のエディターは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
-seo-description: The editor in the touch-enabled UI makes use of overlays to interact with content confined in an iframe. This interaction creates some limitations in both usage of the editor and also for developers.
-uuid: ff524530-3f3a-4c5b-9f94-4aa9aeb9d461
+title: 編集者の制限事項
+description: タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: introduction
-discoiquuid: d748decb-a614-4c9e-a502-d6176b720f1a
 exl-id: fd64f5dc-dfff-466b-8cdd-3c24ea1a15c8
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 100%
+source-wordcount: '306'
+ht-degree: 39%
 
 ---
 
-# エディターの制限事項{#editor-limitations}
+# 編集者の制限事項{#editor-limitations}
 
-タッチ操作対応の UI のエディターは、オーバーレイを使用して iframe 内に含まれるコンテンツを操作します。この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項をまとめ、可能な限り解決策や回避策を提供します。
+タッチ操作対応 UI のエディターは、オーバーレイを使用して iframe に含まれるコンテンツを操作します。 この操作には、エディターの使用と開発者に対していくつかの制限事項があります。このページでは、これらの制限事項の概要を説明し、可能な場合は解決策や回避策を提供します。
 
 ## 機能の制限 {#functional-limitations}
 
-作成者がエディターを使用してページを作成する際、以下の機能の制限が発生する可能性があります。
+作成者は、エディターを使用してページを作成する際に、次の機能上の制限を受ける場合があります。
 
-### リンクがアクティブにならない {#links-not-active}
+### リンクがアクティブではありません {#links-not-active}
 
 [ページの編集](/help/sites-authoring/editing-content.md)時に、リンクがアクティブになりません。
 
@@ -33,25 +29,25 @@ ht-degree: 100%
 
 ### 構造ページ {#structure-pages}
 
-ページに `structure` と名前が付けられない 。`structure` と名前が付けられたページは、ページエディターで編集できません。
+ページに名前を付けることはできません `structure`. という名前のページ `structure` は、ページエディターで編集できません。
 
 ## CSS の制限 {#css-limitations}
 
-開発者は、エディターの CSS のインタラクションに関して以下の制限が発生する可能性があります。
+開発者は、エディターでの CSS の操作に次の制限が生じる場合があります。
 
-### 要素が絶対配置される {#absolutely-positioned-elements}
+### 絶対位置の要素 {#absolutely-positioned-elements}
 
-絶対配置された要素により、そのオーバーレイの位置に問題が生じる可能性があります。
+絶対に配置された要素は、オーバーレイの位置で問題を引き起こす可能性があります。
 
-* エディターではまったく同じサイズでオーバーレイが作成されるので、この問題が発生した場合は、絶対配置された要素のサイズが正しいことを確認します。
+* この場合、エディターはまったく同じ寸法のオーバーレイを作成するので、絶対位置にある要素の寸法が正しいことを確認してください。
 
 ### vh 単位 {#vh-units}
 
-iframe の高さは AEM によって自動調整されるので、`vh` 単位はサポートされません。
+`vh` iframe の高さはAdobe Experience Manager(AEM) によって自動的に調整される必要があるので、単位はサポートされません。
 
 ### 固定の背景画像 {#fixed-background-images}
 
-固定の背景画像は、iframe 内に埋め込まれるので、スクロール時に固定されているように表示されない可能性があります。
+固定の背景画像は iframe 内に埋め込まれるので、スクロール時に固定されて表示されない場合があります。
 
 * ヘッダーバーのアクションで「**公開済みとしてページを表示**」を選択すると、ページが正しく表示されます。
 
@@ -59,7 +55,7 @@ iframe の高さは AEM によって自動調整されるので、`vh` 単位は
 
 ページの body 要素では、100 ％の高さはサポートされていません。
 
-* フルスクリーンの body を実装するためには、次のように body 要素を「拡張」することで、回避策が可能になります。
+* 次のように body 要素を「拡張」することで、全画面の body を実装できます。
 
 ```xml
 body {

@@ -1,19 +1,15 @@
 ---
 title: コンポーネントの JSON 書き出しの有効化
-seo-title: Enabling JSON Export for a Component
 description: モデラーフレームワークに基づいてコンテンツの JSON 書き出しを生成するように、コンポーネントを適応させることができます。
-seo-description: Components can be adapted to generate JSON export of their content based on a modeler framework.
-uuid: d7cc3347-2adb-4ea5-94a4-a847a2e66d28
 contentOwner: User
 content-type: reference
 topic-tags: components
 products: SG_EXPERIENCEMANAGER/6.5/SITES
-discoiquuid: 448ad337-d4bb-4603-a27b-77da93feadbd
 exl-id: 6d127e14-767e-46ad-aaeb-0ce9dd14d553
-source-git-commit: b886844dc80482ae4aae5fc7ce09e466efecc3bd
-workflow-type: ht
-source-wordcount: '536'
-ht-degree: 100%
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
+workflow-type: tm+mt
+source-wordcount: '528'
+ht-degree: 68%
 
 ---
 
@@ -25,7 +21,7 @@ ht-degree: 100%
 
 JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bundles/models.html) と [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) フレームワーク（それ自体が [Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)に依存）に基づいています。
 
-つまり、JSON を書き出す必要がある場合、コンポーネントには Sling Model が必要です。そのため、次の 2 つの手順に従って、コンポーネントで JSON 書き出しを有効にする必要があります。
+つまり、JSON を書き出す必要がある場合、コンポーネントに Sling モデルが必要です。 したがって、次の 2 つの手順に従って、任意のコンポーネントで JSON 書き出しを有効にします。
 
 * [コンポーネントに Sling Model を定義する](/help/sites-developing/json-exporter-components.md#define-a-sling-model-for-the-component)
 * [Sling Model インターフェイスに注釈を付ける](#annotate-the-sling-model-interface)
@@ -36,7 +32,7 @@ JSON 書き出しは、[Sling Model](https://sling.apache.org/documentation/bund
 
 >[!NOTE]
 >
->Sling Model の使用例については、[AEM での Sling Model Exporter の開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja)の記事を参照してください。
+>Sling モデルの使用例については、 [AEMでの Sling Model Exporter の開発](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=ja).
 
 Sling Model の実装クラスに次のような注釈を付ける必要があります。
 
@@ -52,7 +48,7 @@ Sling Model の実装クラスに次のような注釈を付ける必要があ�
 
 >[!NOTE]
 >
->Jackson 注釈は通常 Sling Model クラスレベルではなく、Model インターフェイスレベルで指定されます。これは、JSON 書き出しがコンポーネント API の一部とみなされるようにするためです。
+>Jackson 注釈は、Sling Model クラスレベルではなく、Model インターフェイスレベルで指定されています。 これは、JSON 書き出しがコンポーネント API の一部と見なされるようにするためです。
 
 >[!NOTE]
 >
@@ -70,15 +66,15 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 ## Sling Model インターフェイスに注釈を付ける {#annotate-the-sling-model-interface}
 
-JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに `ComponentExporter` インターフェイス（またはコンテナコンポーネントの場合は `ContainerExporter`）を実装する必要があります。
+JSON エクスポーターフレームワークで認識されるようにするには、モデルインターフェイスに `ComponentExporter` インターフェイス ( または `ContainerExporter`（コンテナコンポーネントがある場合）。
 
 対応する Sling Model インターフェイス（`MyComponent`）には、[Jackson 注釈](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)を使用して注釈が付けられ、どのように書き出し（シリアル化）が行われるかが定義されます。
 
-Model インターフェイスには、シリアル化されるメソッドを定義するために適切に注釈を付ける必要があります。デフォルトでは、getter の通常の命名規則に準拠するすべてのメソッドがシリアル化され、JSON プロパティ名が getter 名からそのまま派生されます。これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
+モデルインターフェイスに適切に注釈を付け、シリアル化するメソッドを定義する必要があります。 デフォルトでは、ゲッターの通常の命名規則に従うすべてのメソッドがシリアル化され、JSON プロパティ名はゲッター名から自然に派生します。 これを回避または上書きするには、`@JsonIgnore` または `@JsonProperty` を使用して JSON プロパティの名前を変更します。
 
 ## 例 {#example}
 
-コアコンポーネントでは、JSON 書き出しが[コアコンポーネントのリリース 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) からサポートされており、参照として使用できます。
+コアコンポーネントは、リリース以降、JSON 書き出しをサポートしています [コアコンポーネントの 1.1.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) とは、参照として使用できます。
 
 例えば、画像コアコンポーネントの Sling Model 実装とその注釈されたインターフェイスを参照してください。
 
@@ -91,7 +87,7 @@ GitHub のコード
 
 ## 関連ドキュメント {#related-documentation}
 
-詳しくは、以下を参照してください。
+詳しくは、次を参照してください。
 
 * [Assets ユーザーガイドのコンテンツフラグメントに関するトピック](https://helpx.adobe.com/jp/experience-manager/6-4/assets/user-guide.html?topic=/experience-manager/6-4/assets/morehelp/content-fragments.ug.js)
 

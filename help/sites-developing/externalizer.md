@@ -1,30 +1,26 @@
 ---
 title: URL の外部化
-seo-title: Externalizing URLs
 description: Externalizer は、プログラムによってリソースパスを外部および絶対 URL に変換できる OSGi サービスです
-seo-description: The Externalizer is an OSGI service that allows you to programmatically transform a resource path into an external and absolute URL
-uuid: 65bcc352-fc8c-4aa0-82fb-1321a035602d
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
 content-type: reference
-discoiquuid: 938469ad-f466-42f4-8b6f-bfc060ae2785
 docset: aem65
 exl-id: 971d6c25-1fbe-4c07-944e-be6b97a59922
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 83%
+source-wordcount: '495'
+ht-degree: 58%
 
 ---
 
 # URL の外部化{#externalizing-urls}
 
-AEMで、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/page`) を外部 URL や絶対 URL( 例えば、 `https://www.mycompany.com/path/to/my/page`) を追加する必要があります。
+Adobe Experience Manager(AEM) では、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/page`) を外部 URL や絶対 URL( 例えば、 `https://www.mycompany.com/path/to/my/page`) を追加する必要があります。
 
 インスタンスが Web レイヤーの背後で実行されている場合、自身の外部向け URL がわかりません。また、リンクをリクエストスコープの範囲外で作成する必要がある場合があります。これらの理由で、このサービスは、そのような外部 URL を設定して組み立てるための一元化された場所を提供します。
 
-このページでは、 **Externalizer** サービスとその使用方法について説明します。 詳しくは、 [Javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html).
+このページでは、 **Externalizer** サービスとその使用方法について説明します。 詳しくは、 [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Externalizer サービスの設定 {#configuring-the-externalizer-service}
 
@@ -44,16 +40,16 @@ AEMで、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. **ドメイン**&#x200B;マッピングを定義します。マッピングは、次のようなコード内でドメインを参照するために使用できる独自の名前、スペース、ドメインにより構成されます。
+1. を定義 **ドメイン** マッピング：マッピングは、ドメイン、スペースおよびドメインを参照するためにコード内で使用できる一意の名前で構成されます。
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
    ここで、
 
-   * **スキーム** は通常、http または https ですが、ftp などでもかまいません。
+   * **スキーム** は http または https ですが、ftp などでもかまいません。
 
-      * 必要に応じて、https を使用して https リンクを強制的に適用します。
-      * URL の外部化を要求する際にクライアントコードがスキームを上書きしない場合に使用されます。
+      * 必要に応じて、https を使用して https リンクを強制します。
+      * URL の外部化を要求する際に、クライアントコードがスキームを上書きしない場合に使用されます。
 
    * **server** はホスト名です（ドメイン名または IP アドレス）。
    * **port**（オプション）はポート番号です。
@@ -61,7 +57,7 @@ AEMで、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/
 
    例：`production https://my.production.instance`
 
-   次のマッピング名は事前定義されており、AEM で使用されるので、常に設定されている必要があります。
+   AEMでは次のマッピング名が使用されるので、事前に定義されており、設定する必要があります。
 
    * `local` - ローカルインスタンス
    * `author` - オーサリングシステムの DNS
@@ -69,7 +65,7 @@ AEMで、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/
 
    >[!NOTE]
    >
-   >カスタム設定を使用すると、`production` や `staging` などの新しいカテゴリや、`my-internal-webservice` などの AEM 以外の外部システムを追加できます。このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
+   >カスタム設定を使用すると、次のようなカテゴリを追加できます。 `production`, `staging`または外部の非AEMシステム ( `my-internal-webservice`. このような URL をプロジェクトのコードベースの様々な場所にハードコーディングするのを防ぐのに役立ちます。
 
 1. 「**保存**」をクリックして変更を保存します。
 
@@ -129,4 +125,4 @@ AEMで、 **Externalizer** は、リソースパス ( 例えば、 `/path/to/my/
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. 他の例については、関連する [Javadoc](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。
+1. 他の例については、関連する [Javadoc](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html) を参照してください。

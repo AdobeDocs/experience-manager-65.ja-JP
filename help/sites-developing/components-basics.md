@@ -1,24 +1,20 @@
 ---
-title: AEM コンポーネント - 基本
-seo-title: AEM Components - The Basics
-description: 新しいコンポーネントの開発を開始する際は、その構造と設定の基本を理解する必要があります
-seo-description: When you start to develop new components you need to understand the basics of their structure and configuration
-uuid: 0225b34d-5ac4-40c3-b226-0c9b24bdf782
+title: Adobe Experience Managerコンポーネント — 基本
+description: 新しいコンポーネントの開発を開始する際は、その構造と設定の基本を理解する必要があります。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-discoiquuid: 1f9867f1-5089-46d0-8e21-30d62dbf4f45
 legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: a56d5121a6ce11b42a6c30dae9e479564d16af27
 workflow-type: tm+mt
-source-wordcount: '4953'
-ht-degree: 78%
+source-wordcount: '4913'
+ht-degree: 60%
 
 ---
 
-# AEM コンポーネント - 基本{#aem-components-the-basics}
+# Adobe Experience Manager(AEM) コンポーネント — 基本{#aem-components-the-basics}
 
 新しいコンポーネントの開発を開始する際は、その構造と設定の基本を理解する必要があります。
 
@@ -30,26 +26,26 @@ ht-degree: 78%
 
 ### 計画 {#planning}
 
-実際にコンポーネントの設定やコーディングを開始する前に、次の点について理解する必要があります。
+実際にコンポーネントを設定またはコーディングする前に、次の質問をする必要があります。
 
 * そもそも新しいコンポーネントで何をするか
-   * 明確な仕様は、開発、テスト、引継ぎのあらゆる段階で役立ちます。詳細は時間と共に変化する可能性がありますが、仕様は更新可能です（ただし、変更箇所を記録しておく必要があります）。
+   * 明確な仕様は、開発、テスト、引き渡しのあらゆる段階で役立ちます。 詳細は時間と共に変化する可能性がありますが、仕様は更新可能です（ただし、変更箇所を記録しておく必要があります）。
 * コンポーネントを一から作成する必要があるか、基本部分を既存のコンポーネントから継承できるか
    * 一から作成する必要があるとは限りません。
-   * AEM には、別のコンポーネント定義から詳細を継承し、拡張できる仕組みがいくつか用意されています（オーバーライド、オーバーレイ、[Sling Resource Merger](/help/sites-developing/sling-resource-merger.md) など）。
-* コンポーネントのコンテンツを選択または操作するためのロジックが必要か
+   * AEMには、上書き、オーバーレイ、 [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md).
+* コンポーネントでは、コンテンツの選択や操作のロジックが必要ですか？
    * ロジックは、ユーザーインターフェイスレイヤーから分離しておく必要があります。HTL はこれに対応した設計になっています。
-* コンポーネントを CSS で書式設定する必要があるか
+* コンポーネントに CSS 形式設定は必要ですか？
    * CSS による書式設定は、コンポーネント定義から分離しておく必要があります。外部 CSS ファイルを使用して HTML 要素を変更できるように、HTML 要素の命名規則を定義します。
-* どのようなセキュリティ面を考慮する必要がありますか？
-   * 詳しくは、[セキュリティチェックリスト - 開発のベストプラクティス](/help/sites-administering/security-checklist.md#development-best-practices)を参照してください。
+* どのようなセキュリティ面を考慮すべきか
+   * 詳しくは、 [セキュリティチェックリスト — 開発のベストプラクティス](/help/sites-administering/security-checklist.md#development-best-practices) を参照してください。
 
 ### タッチ操作対応 UI とクラシック UI の比較 {#touch-enabled-vs-classic-ui}
 
-コンポーネントの開発に関する重要な議論を始める前に、作成者が使用する UI を知っておく必要があります。
+コンポーネントの開発に関する重要な議論を始める前に、作成者が使用している UI を把握しておく必要があります。
 
 * **タッチ操作対応 UI**
-  [標準のユーザーインターフェイス](/help/sites-developing/touch-ui-concepts.md)は、Adobe Marketing Cloud の統一されたユーザーエクスペリエンスに基づいており、[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) および [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui) の基盤となるテクノロジーを使用しています。
+  [標準のユーザーインターフェイス](/help/sites-developing/touch-ui-concepts.md) は、の基盤となるテクノロジーを使用して、Adobe Experience Cloudの統合ユーザーエクスペリエンスに基づいています [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) および [Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **クラシック UI**
 AEM 6.4 で廃止された ExtJS テクノロジーに基づくユーザーインターフェイス。
 
@@ -57,23 +53,23 @@ AEM 6.4 で廃止された ExtJS テクノロジーに基づくユーザーイ�
 
 タッチ操作対応 UI、クラシック UI、またはその両方をサポートするために、コンポーネントを実装できます。 標準インスタンスには、クラシック UI、タッチ対応 UI またはその両方に対応するようにあらかじめデザインされた既製のコンポーネントもあります。
 
-このため、このページでは両方の UI の基本と識別方法について説明します。
+このページでは、両方の基本事項と、それらを認識する方法について説明します。
 
 >[!NOTE]
 >
->Adobe では、最新のテクノロジーを活用するために、タッチ操作対応 UI を活用することをお勧めします。[AEM 最新化ツール](modernization-tools.md)を使用すると、移行が容易になります。
+>Adobeでは、最新のテクノロジーを活用するために、タッチ操作対応 UI の使用をお勧めします。 [AEM 最新化ツール](modernization-tools.md)を使用すると、移行が容易になります。
 
 ### コンテンツのロジックとマークアップのレンダリング  {#content-logic-and-rendering-markup}
 
-マークアップおよびレンダリングを行うコードと、コンポーネントのコンテンツ選択に関するロジックを制御するコードは、分離しておくことをお勧めします。
+Adobeでは、マークアップおよびレンダリングの対象となるコードを、コンポーネントのコンテンツの選択に使用されるロジックを制御するコードとは別にしておくことをお勧めします。
 
-この方法をサポートするテンプレート言語が [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) です。HTL では、基盤となるビジネスロジックを定義するときにのみプログラミング言語を使用します。この（オプション）ロジックは、特定のコマンドと共に HTL から呼び出されます。 このメカニズムは、指定された表示に対して呼び出されるコードを強調表示し、必要に応じて、同じコンポーネントの異なる表示に対して特定のロジックを使用できるようにします。
+この哲学は、 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)：基本的なビジネスロジックの定義に実際のプログラミング言語が使用されるように意図的に制限されるテンプレート言語。 この（オプション）ロジックは、特定のコマンドと共に HTL から呼び出されます。 このメカニズムは、特定のビューに対して呼び出されるコードを強調表示し、必要に応じて、同じコンポーネントの異なるビューに対して特定のロジックを許可します。
 
 ### HTL と JSP {#htl-vs-jsp}
 
 HTL は、AEM 6.0 で導入されたHTMLテンプレート言語です。
 
-を使用するかどうかの説明 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) 独自のコンポーネントを開発する際には、JSP(Java Server Pages) が HTL がAEMの推奨スクリプティング言語になったので、簡単になる必要があります。
+を使用するかどうかの説明 [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja) 独自のコンポーネントを開発する際には、JSP(Java™ Server Pages) は、HTL がAEMの推奨スクリプティング言語になったので、簡単にする必要があります。
 
 HTL と JSP の両方を使用して、クラシック UI とタッチ操作対応 UI の両方のコンポーネントを開発できます。 HTL はタッチ操作対応 UI とクラシック UI 用の JSP にのみ使用されると仮定する傾向がありますが、これは誤解であり、タイミングによるものです。 タッチ操作対応 UI と HTL は、ほぼ同じ期間でAEMに組み込まれました。 HTL は現在推奨される言語なので、新しいコンポーネントに使用されており、このため、タッチ操作対応 UI に使用される傾向があります。
 
@@ -83,7 +79,7 @@ HTL と JSP の両方を使用して、クラシック UI とタッチ操作対�
 
 ### 独自コンポーネントの開発 {#developing-your-own-components}
 
-適切な UI 用に独自のコンポーネントを作成するには、（このページを読んだ後に）次を参照してください。
+適切な UI 用に独自のコンポーネントを作成するには、 （このページを読んだ後）を参照してください。
 
 * [タッチ操作対応 UI 用の AEM コンポーネント](/help/sites-developing/developing-components.md)
 * [クラシック UI 用の AEM コンポーネント](/help/sites-developing/developing-components-classic.md)
@@ -161,7 +157,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
    * jcr プロパティ：
 
-     jcr プロパティのリスト：これらのプロパティは変数です。`cq:Component` の定義では、コンポーネントノード、コンポーネントノードのプロパティおよびサブノードの基本構造が規定されていますが、プロパティによっては、オプションとして使用できるものもあります。
+     jcr プロパティのリスト。これらは変数で、一部はオプションです。ただし、コンポーネントノードの基本構造、そのプロパティおよびサブノードは `cq:Component` 定義
 
    * リソース：
 
@@ -202,36 +198,36 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
    * クラシック UI：
 
-      * `dialog`（`cq:Dialog`） - このコンポーネントのダイアログ。ユーザーがコンポーネントを設定したり、コンテンツを編集したりできるインターフェイスを定義します。
+      * `dialog`（`cq:Dialog`） - このコンポーネントのダイアログ。ユーザーがコンポーネントを設定したり、コンテンツを編集したり、その両方をおこなうためのインターフェイスを定義します。
       * `design_dialog` ( `cq:Dialog`) - このコンポーネントのデザイン編集。
 
 #### タッチ UI のコンポーネントアイコン {#component-icon-in-touch-ui}
 
 コンポーネントのアイコンまたは省略形は、デベロッパーがコンポーネントを作成する際にコンポーネントの JCR プロパティで定義します。これらのプロパティは、次の順番で評価され、最初に見つかった有効なプロパティが使用されます。
 
-1. `cq:icon` - コンポーネントブラウザーで表示するための [Coral UI ライブラリ](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)の標準的なアイコンを指定する String プロパティ
+1. `cq:icon` - コンポーネントブラウザーで表示するための [Coral UI ライブラリ](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html)の標準的なアイコンを指定する String プロパティ
    * Coral アイコンの HTML 属性の値を使用します。
 1. `abbreviation` - コンポーネントブラウザーでのコンポーネント名の省略形をカスタマイズするための String プロパティ
    * 省略形は最大 2 文字までにする必要があります。
-   * 空の文字列が指定されると、`jcr:title` プロパティの最初の 2 文字を使用して省略形が作成されます。
+   * 空の文字列を指定すると、 `jcr:title` プロパティ。
       * 例えば、「Image」の場合は「Im」になります。
-      * ローカライズされたタイトルが、省略形の作成に使用されます。
+      * ローカライズされたタイトルは、省略形の作成に使用されます。
    * 省略形は、コンポーネントに `abbreviation_commentI18n` プロパティがある場合にのみ翻訳されます。これは、翻訳ヒントとして使用されます。
 1. `cq:icon.png` または `cq:icon.svg` - コンポーネントブラウザーに表示される、このコンポーネントのアイコン
    * 20 x 20 ピクセルは、標準的なコンポーネントのアイコンのサイズです。
-      * 大きいアイコンはクライアントサイドで縮小されます。
+      * 大きいアイコンは小さくなります（クライアント側）。
    * お勧めの色は、RGB（112、112、112）、つまり #707070 です。
    * 標準的なコンポーネントアイコンの背景は、透明です。
    * `.png` および `.svg` ファイルのみがサポートされます。
-   * Eclipse プラグインを使用してファイルシステムから読み込む場合、例えば `_cq_icon.png` や `_cq_icon.svg` のように、ファイル名をエスケープする必要があります。
+   * Eclipse プラグインを介してファイルシステムから読み込む場合は、ファイル名を `_cq_icon.png` または `_cq_icon.svg` 例：
    * 両方が存在する場合は、`.png` が `.svg` よりも優先されます
 
-コンポーネントで上述のプロパティ（`cq:icon`、`abbreviation`、`cq:icon.png` または `cq:icon.svg`）が見つからない場合：
+上記のプロパティのいずれも ( `cq:icon`, `abbreviation`, `cq:icon.png`または `cq:icon.svg`) がコンポーネントに見つかりました。
 
-* システムは、`sling:resourceSuperType` プロパティに続くスーパーコンポーネント上の同じプロパティを検索します。
-* スーパーコンポーネントレベルで見つからないか空の省略形が見つかった場合、システムは現在のコンポーネントの `jcr:title` プロパティの最初の文字から省略形を作成します。
+* システムは、 `sling:resourceSuperType` プロパティ。
+* スーパーコンポーネントレベルで省略形が見つからない場合や空の省略形が見つかった場合、システムは、 `jcr:title` 現在のコンポーネントのプロパティ。
 
-スーパーコンポーネントからアイコンの継承をキャンセルするために、コンポーネントで空の `abbreviation` プロパティを設定すると、デフォルトの動作に戻ります。
+スーパーコンポーネントからアイコンの継承をキャンセルするには、空のを設定します。 `abbreviation` プロパティがコンポーネントに表示されると、デフォルトの動作に戻ります。
 
 [コンポーネントコンソール](/help/sites-authoring/default-components-console.md#component-details)には、特定のコンポーネントのアイコンの定義方法が表示されます。
 
@@ -251,7 +247,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 ### コンポーネントのプロパティおよび子ノード {#properties-and-child-nodes-of-a-component}
 
-コンポーネントの定義に必要なノードまたはプロパティの多くは、両方の UI に共通です。コンポーネントがどちらの環境でも機能できるよう、相違点の独立性は確保されています。
+コンポーネントの定義に必要なノードやプロパティの多くは、両方の UI に共通です。ただし、両者の環境でコンポーネントを動作させるために、差異は依存しません。
 
 コンポーネントはタイプ `cq:Component` のノードで、次のプロパティと子ノードがあります。
 
@@ -320,7 +316,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
   <tr>
    <td><code>cq:childEditConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td>コンポーネントがコンテナの場合（例えば、段落システムの場合）は、これにより子ノードの設定を編集できます。<br /> </td>
+   <td>コンポーネントがコンテナ（段落システムなど）の場合、子ノードの編集設定を実行します。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:editConfig</code></td>
@@ -340,7 +336,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
   <tr>
    <td><code>cq:template</code></td>
    <td><code>nt:unstructured</code></td>
-   <td>このプロパティがあると、コンポーネントがコンポーネントブラウザーまたはサイドキックから追加された場合に、このノードは、コンテンツテンプレートとして使用されます。</td>
+   <td>見つかった場合、このノードは、コンポーネントがコンポーネントブラウザーまたはSidekickから追加される際に、コンテンツテンプレートとして使用されます。</td>
   </tr>
   <tr>
    <td><code>cq:templatePath</code></td>
@@ -390,7 +386,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
  </tbody>
 </table>
 
-以下に、 **テキスト** コンポーネント（どちらのバージョンでも）、次の要素を確認できます。
+を見ると **テキスト** コンポーネント（どちらのバージョンでも）の場合、次の要素が表示されます。
 
 * HTL（`/libs/wcm/foundation/components/text`）
 
@@ -439,8 +435,8 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
       * タッチ操作対応 UI に固有
       * Granite UI コンポーネントを使用して定義されます。
       * 標準の Sling コンテンツ構造として `sling:resourceType` プロパティを持ちます。
-      * `helpPath` プロパティを指定できます。このプロパティでは、ヘルプアイコン（「?」）が選択された場合に表示される状況依存型ヘルプリソースを定義します（絶対パスまたは相対パス）。
-         * 既成のコンポーネントでは多くの場合、ドキュメントのページが参照されます。
+      * プロパティを持つことができます。 `helpPath` を使用して、ヘルプアイコン ( `?` アイコン ) が選択されている。
+         * 標準のコンポーネントの場合、多くの場合、ドキュメント内のページを参照します。
          * `helpPath` が指定されていない場合、デフォルトのURL（ドキュメントの概要ページ）が表示されます。
 
   ![chlimage_1-242](assets/chlimage_1-242.png)
@@ -455,8 +451,8 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
       * クラシック UI に固有
       * は ExtJS ウィジェットを使用して定義されます。
       * ExtJS を参照する `xtype` プロパティを持ちます。
-      * `helpPath` プロパティを指定できます。このプロパティでは、「**ヘルプ**」ボタンが選択された場合に表示される状況依存型ヘルプリソースを定義します（絶対パスまたは相対パス）。
-         * 既成のコンポーネントでは多くの場合、ドキュメントのページが参照されます。
+      * プロパティを持つことができます。 `helpPath` を使用して、 **ヘルプ** 」ボタンが選択されている。
+         * 標準のコンポーネントの場合、多くの場合、ドキュメント内のページを参照します。
          * `helpPath` が指定されていない場合、デフォルトのURL（ドキュメントの概要ページ）が表示されます。
 
   ![chlimage_1-243](assets/chlimage_1-243.png)
@@ -472,18 +468,18 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 ### デザインダイアログ {#design-dialogs}
 
-デザインダイアログは、コンテンツの編集と設定に使用するダイアログと非常に似ていますが、作成者がそのコンポーネントのデザインの詳細を設定および提供するためのインターフェイスを提供します。
+デザインダイアログは、コンテンツの編集と設定に使用されるダイアログに似ていますが、作成者がそのコンポーネントのデザインの詳細を設定および指定するためのインターフェイスが提供されます。
 
-[デザインダイアログは、デザインモードで使用できます](/help/sites-authoring/default-components-designmode.md)（例えば、すべてのコンポーネントに必要なわけではありません）。 **タイトル** および **画像** どちらもデザインダイアログを持っているが、 **テキスト** は実行しません。
+[デザインダイアログは、デザインモードで使用できます](/help/sites-authoring/default-components-designmode.md)（すべてのコンポーネントに必要なわけではありません）。 **タイトル** および **画像** どちらもデザインダイアログを持っているが、 **テキスト** は実行しません。
 
 段落システムのデザインダイアログ（parsys など）は、特別なケースです。このダイアログでは、他の特定のコンポーネントを（コンポーネントブラウザーやサイドキックから）ページ上で選択できるようにします。
 
 ### 段落システムへのコンポーネントの追加 {#adding-your-component-to-the-paragraph-system}
 
-コンポーネントを定義した上で、使用可能にする必要があります。コンポーネントを段落システムで使用できるようにするには、次のいずれかを実行します。
+コンポーネントを定義したら、使用可能にする必要があります。 コンポーネントを段落システムで使用できるようにするには、次のいずれかを実行します。
 
 1. ページに対して[デザインモード](/help/sites-authoring/default-components-designmode.md)を開き、必要なコンポーネントを有効にします。
-1. 必要なコンポーネントを次の場所にあるテンプレート定義の `components` プロパティに追加します。
+1. 必要なコンポーネントを `components` プロパティを次の場所に設定します。
 
    `/etc/designs/<*yourProject*>/jcr:content/<*yourTemplate*>/par`
 
@@ -495,7 +491,7 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
 ### コンポーネントおよびコンポーネントによって作成されるコンテンツ {#components-and-the-content-they-create}
 
-次のページに&#x200B;**タイトル**&#x200B;コンポーネントのインスタンスを作成して設定する場合：`<content-path>/Prototype.html`
+インスタンスを作成して設定する場合、 **タイトル** ページ上のコンポーネント： `<content-path>/Prototype.html`
 
 * タッチ操作対応 UI
 
@@ -505,20 +501,20 @@ AEM コンポーネントの構造は強力で、柔軟性があります。主�
 
   ![screen_shot_2012-02-01at34257pm](assets/screen_shot_2012-02-01at34257pm.png)
 
-ここで、リポジトリ内に作成されたコンテンツの構造を確認できます。
+次に、リポジトリ内で作成されたコンテンツの構造を確認できます。
 
 ![screen_shot_2012-02-13at61405pm](assets/screen_shot_2012-02-13at61405pm.png)
 
 特に、**タイトル**&#x200B;コンポーネントの実際のテキストに着目した場合：
 
-* （両方の UI の）定義でプロパティ `name`= `./jcr:title` となっている
+* （両方の UI の）定義には、プロパティが含まれます `name`= `./jcr:title`
 
    * `/libs/foundation/components/title/cq:dialog/content/items/column/items/title`
    * `/libs/foundation/components/title/dialog/items/title`
 
 * この定義によって、コンテンツ内に作成者のコンテンツを保持する `jcr:title` というプロパティが生成されます。
 
-定義されるプロパティは、個々の定義によって異なります。上記よりも複雑になる場合がありますが、同じ基本原則に従っています。
+定義されるプロパティは、個々の定義によって異なります。 上記よりも複雑になる場合がありますが、同じ基本原則に従っています。
 
 ## コンポーネントの階層と継承 {#component-hierarchy-and-inheritance}
 
@@ -526,11 +522,11 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 * **リソースタイプ階層**
 
-  プロパティ `sling:resourceSuperType` でコンポーネントを拡張する場合に使用されます。これにより、コンポーネントの継承ができるようになります。例えば、テキストコンポーネントは標準コンポーネントから様々な属性を継承します。
+  プロパティ `sling:resourceSuperType` でコンポーネントを拡張する場合に使用されます。これにより、コンポーネントは継承できます。 例えば、テキストコンポーネントは、標準コンポーネントから様々な属性を継承します。
 
    * スクリプト（Sling によって解決）
    * ダイアログ
-   * 説明（サムネール画像、アイコンなどを含む）
+   * 説明（サムネール画像とアイコンを含む）
 
 * **コンテナ階層**
 
@@ -548,7 +544,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 ## 編集動作 {#edit-behavior}
 
-この節では、コンポーネントの編集動作の設定方法について説明します。これには、コンポーネントで使用可能なアクションなどの属性、インプレースエディターの特性、コンポーネント上のイベントに関連するリスナーが含まれます。
+この節では、コンポーネントの編集動作の設定方法について説明します。これには、コンポーネントで使用可能なアクションなどの属性、インプレースエディターの特性、コンポーネント上のイベントに関連するリスナーなどが含まれます。
 
 固有の相違点は多少ありますが、設定はタッチ対応 UI とクラシック UI の両方に共通です。
 
@@ -557,7 +553,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 * [`cq:editConfig` ノードのプロパティ ](#configuring-with-cq-editconfig-properties)：
 
    * `cq:actions`（`String array`）：コンポーネントで実行できるアクションを定義します。
-   * `cq:layout`（`String`）：クラシック UI でのコンポーネントの編集方法を定義します。
+   * `cq:layout` ( `String`):は、クラシック UI でのコンポーネントの編集方法を定義します。
    * `cq:dialogMode`（`String`）：クラシック UI でのコンポーネントダイアログの開き方を定義します。
 
       * タッチ操作対応 UI のダイアログは、デスクトップモードでは常に浮動し、モバイルでは自動的に全画面表示として開きます。
@@ -571,7 +567,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
    * `cq:dropTargets`（ノードタイプ `nt:unstructured`）：コンテンツファインダーのアセットからのドロップを受け入れ可能なドロップターゲットのリストを定義します。
 
       * 複数のドロップターゲットはクラシック UI でのみ使用できます。
-      * タッチ操作対応 UI では、単一のドロップターゲットが許可されます。
+      * タッチ操作対応 UI では、1 つのドロップターゲットを使用できます。
 
    * `cq:actionConfigs`（ノードタイプ `nt:unstructured`）：cq:actions リストに追加する新しいアクションのリストを定義します。
    * `cq:formParameters`（ノードタイプ `nt:unstructured`）：ダイアログフォームに追加するその他のパラメーターを定義します。
@@ -606,7 +602,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 ### コンポーネントプレースホルダー {#component-placeholders}
 
-コンポーネントは、コンテンツがない場合でも必ず、作成者に表示される一部の HTML をレンダリングする必要があります。そうしないと、エディターのインターフェイスから視覚的に消えてしまい、技術的には存在しても、ページやエディターには表示されなくなります。この場合、作成者は空のコンポーネントを選択して操作することができません。
+コンポーネントは、コンテンツがない場合でも必ず、作成者に表示される一部の HTML をレンダリングする必要があります。そうしないと、エディターのインターフェイスから視覚的に消え、技術的には存在するものの、ページ上やエディター上では非表示になる場合があります。 その場合、作成者は空のコンポーネントを選択して操作することはできません。
 
 このため、ページがページエディターでレンダリングされる（WCM モードが `edit` または `preview` の場合）際に、コンポーネントは、表示された出力をレンダリングしない限り、プレースホルダーをレンダリングする必要があります。
 プレースホルダーの一般的な HTML マークアップは次のとおりです。
@@ -663,15 +659,15 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
   </tr>
       <tr>
     <td><code>editannotate</code></td>
-    <td>コンポーネントを編集するボタンを追加し、<a href="/help/sites-authoring/annotations.md">注釈</a>を許可します。</td>
+    <td>コンポーネントを編集し、許可するボタンを追加します <a href="/help/sites-authoring/annotations.md">注釈</a>.</td>
    </tr>
   <tr>
    <td><code>delete</code></td>
-   <td>コンポーネントを削除するボタンを追加します</td>
+   <td>コンポーネントを削除するボタンを追加します.</td>
   </tr>
   <tr>
    <td><code>insert</code></td>
-   <td>現在のコンポーネントの前に新しいコンポーネントを挿入するボタンを追加します</td>
+   <td>現在のコンポーネントの前に新しいコンポーネントを挿入するボタンを追加します.</td>
   </tr>
   <tr>
    <td><code>copymove</code></td>
@@ -680,7 +676,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
  </tbody>
 </table>
 
-次の設定では、編集ボタン、スペーサー、削除ボタンおよび挿入ボタンがコンポーネントの編集バーに追加されます。
+次の設定では、編集ボタン、スペーサ、削除ボタン、挿入ボタンがコンポーネントの編集バーに追加されます。
 
 ```
 <jcr:root xmlns:cq="https://www.day.com/jcr/cq/1.0" xmlns:jcr="https://www.jcp.org/jcr/1.0"
@@ -710,15 +706,15 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
   </tr>
   <tr>
    <td><code>rollover</code></td>
-   <td>デフォルト値。コンポーネントを編集するには、「マウスポインターを重ねて」クリックするか、コンテキストメニューを使用します。<br />高度な使用法の場合、対応するクライアント側オブジェクトは <code>CQ.wcm.EditRollover</code> です。</td>
+   <td>デフォルト値。コンポーネントを編集するには、「マウスポインターを重ねて」クリックするか、コンテキストメニューを使用します。<br /> 高度な使用の場合、対応するクライアント側オブジェクトは次のようになります。 <code>CQ.wcm.EditRollover</code>.</td>
   </tr>
   <tr>
    <td><code>editbar</code></td>
-   <td>コンポーネントを編集するには、ツールバーを使用します。<br />高度な使用法の場合、対応するクライアント側オブジェクトは <code>CQ.wcm.EditBar</code> です。</td>
+   <td>コンポーネントを編集するには、ツールバーを使用します。<br /> 高度な使用の場合、対応するクライアント側オブジェクトは次のようになります。 <code>CQ.wcm.EditBar</code>.</td>
   </tr>
   <tr>
    <td><code>auto</code></td>
-   <td>クライアントサイドのコードによって方法が選択されます。</td>
+   <td>選択は、クライアント側のコードのままです。</td>
   </tr>
  </tbody>
 </table>
@@ -739,7 +735,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 ### cq:dialogMode（クラシック UI のみ） {#cq-dialogmode-classic-ui-only}
 
-コンポーネントを編集ダイアログにリンクできます。`cq:dialogMode` プロパティ（`String`）では、クラシック UI でコンポーネントダイアログを開く方法を定義します。使用可能な値を次に示します。
+コンポーネントを編集ダイアログにリンクできます。この `cq:dialogMode` プロパティ ( `String`) では、クラシック UI でコンポーネントダイアログを開く方法を定義します。 使用可能な値を次に示します。
 
 <table>
  <tbody>
@@ -757,7 +753,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
   </tr>
   <tr>
    <td><code>auto</code></td>
-   <td>コンポーネントの幅がクライアントサイドの <code>CQ.themes.wcm.EditBase.INLINE_MINIMUM_WIDTH</code> 値よりも小さい場合、ダイアログは floating になります。それ以外の場合は、inline になります。</td>
+   <td>コンポーネントの幅がクライアント側より小さい場合 <code>CQ.themes.wcm.EditBase.INLINE_MINIMUM_WIDTH</code> 値の場合、ダイアログは浮動で、それ以外の場合はインラインです。</td>
   </tr>
  </tbody>
 </table>
@@ -791,7 +787,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 * 値が `fullscreen` の場合、ダイアログは全画面で開きます。
 * 値が空かプロパティがない場合、デフォルトでは通常どおりにダイアログが開きます。
-* ユーザーは、ダイアログ内で全画面モードを常に切り替えることができます。
+* ユーザーは、ダイアログ内で常に全画面表示モードを切り替えることができます。
 * クラシック UI には適用されません。
 
 ### cq:EditConfig の子ノードを使用した設定 {#configuring-with-cq-editconfig-child-nodes}
@@ -813,7 +809,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
  <node name of the drop target in the edit configuration>
 ```
 
-この `<drag and drop prefix>` は、Java プロパティで定義されます。
+この `<drag and drop prefix>` は、Java™プロパティで定義されます。
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`。
 
@@ -822,7 +818,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 `String ddClassName = DropTarget.CSS_CLASS_PREFIX + "file";`
 
-タイプ `cq:DropTargetConfig` のノードには、次のプロパティが必要です。
+タイプのノード `cq:DropTargetConfig` は、次のプロパティを持つ必要があります。
 
 <table>
  <tbody>
@@ -1025,7 +1021,7 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 >[!NOTE]
 >
->コンポーネントがネストされている場合は、`cq:listeners` ノードでプロパティとして定義されるアクションに一定の制限があります。
+>ネストされたコンポーネントがある場合、 `cq:listeners` ノード：
 >
 >* コンポーネントがネストされている場合、次のプロパティの値を `REFRESH_PAGE` にする&#x200B;*必要があります* 。>
 >  * `aftermove`
@@ -1041,9 +1037,9 @@ AEM内のコンポーネントは、次の 3 つの異なる階層の対象と�
 
 >[!NOTE]
 >
->クラシック UI の場合、ハンドラーで使用できるパラメーターについては、 `before<action>` `after<action>` および [`CQ.wcm.EditBar` ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditBar) ウィジェットのドキュメントに記載されている [`CQ.wcm.EditRollover` イベントおよび ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.wcm.EditRollover) イベントのセクションを参照してください。
+>クラシック UI の場合、ハンドラーで使用できるパラメーターについては、 `before<action>` `after<action>` および [`CQ.wcm.EditBar` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) ウィジェットのドキュメントに記載されている [`CQ.wcm.EditRollover` イベントおよび ](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) イベントのセクションを参照してください。
 
-次の設定では、コンポーネントを削除、編集、挿入または移動した後にページが更新されます。
+次の設定を使用すると、コンポーネントを削除、編集、挿入、移動した後にページが更新されます。
 
 ```
     <cq:listeners
