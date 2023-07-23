@@ -10,14 +10,16 @@ discoiquuid: a74ed6c1-3006-4baf-bd77-ad4045e23c22
 docset: aem65
 feature: Adaptive Forms
 exl-id: b549f176-409a-4d81-8c2b-73d0dd0c6649
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 100%
+source-wordcount: '1145'
+ht-degree: 92%
 
 ---
 
 # AEM Sites の単一ページアプリケーションへのアダプティブフォームやインタラクティブコミュニケーションの組み込み{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
+
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 ## 概要 {#overview}
 
@@ -97,10 +99,10 @@ AEM Sites ページには、AEM Forms コンテナ内のアダプティブフォ
 
 ## 注意点とベストプラクティス {#considerations-and-best-practices}
 
-AEM サイトページにアダプティブフォームを埋め込む際は、以下の点に留意してください。
+AEM Sites ページにアダプティブフォームを埋め込む際は、以下の点に留意してください。
 
 * 元のフォームにあったヘッダーとフッターは、埋め込まれたフォームには含まれません。
-* ユーザードラフトと埋め込みフォームの送信はサポートされており、フォームポータル上の「下書き」タブや「送信済みフォーム」タブに表示されます。
-* 元のフォームに構築された送信アクションは、埋め込まれたフォームでも保持されます。
-* 元のフォームに構築されたのエクスペリエンスのターゲット設定と A/B テストは、埋め込まれたフォームでは動作しません。ただし、ユーザープロファイルに基づいて異なるフォームを表示するよう、Sites ページ上でエクスペリエンスのターゲット設定を使用することはできます。
+* ユーザードラフトと埋め込みフォームの送信はサポートされ、フォームポータルの「ドラフト」タブと「送信済みのForms 」タブに表示されます。
+* 元のフォームに設定された送信アクションは、埋め込まれたフォームでも保持されます。
+* 元のフォームに設定されたエクスペリエンスのターゲット設定と A/B テストは、埋め込まれたフォームでは機能しません。 ただし、ユーザープロファイルに基づいて異なるフォームを表示するよう、Sites ページ上でエクスペリエンスのターゲット設定を使用することはできます。
 * 元のフォームに Adobe Analytics が設定されている場合、埋め込まれたフォームの分析データは Adobe Analytics でキャプチャされます。ただし、フォームの分析レポートでは使用できません。

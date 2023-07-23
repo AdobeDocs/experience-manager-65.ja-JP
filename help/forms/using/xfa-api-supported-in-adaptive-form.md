@@ -1,7 +1,7 @@
 ---
 title: XDP ベースのアダプティブフォームにおける XFA のサポート
 seo-title: XFA support in XDP-based adaptive forms
-description: アダプティブフォームでサポートされる XFA イベント、プロパティ、スクリプト、検証を一覧表示します。
+description: アダプティブフォームでサポートされる XFA イベント、プロパティ、スクリプト、および検証の一覧を示します。
 seo-description: Lists supported XFA events, properties, scripts, and validation in adaptive forms.
 uuid: 75d3c292-cfed-438f-afdb-4071d95a08b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,10 +10,10 @@ discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
 feature: Adaptive Forms
 exl-id: 255be73f-3169-457c-aaa7-a2fb59f1f2cd
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 100%
+source-wordcount: '740'
+ht-degree: 64%
 
 ---
 
@@ -21,21 +21,23 @@ ht-degree: 100%
 
 ## はじめに {#introduction}
 
-アダプティブフォームでは、XDP ファイルで定義される各種 XDP イベント、プロパティ、スクリプト、検証に対するサポートが提供されます。サポートには次のものが含まれます。
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+
+アダプティブフォームでは、次のような XDP ファイルで定義された各種 XFA イベント、プロパティ、スクリプト、検証をサポートしています。
 
 * XDP ファイルのイベントで定義されたスクリプトの実行
 * XDP ファイル内の各フィールドのデフォルトの値および動作プロパティの取得
 * XDP ファイルで定義された検証スクリプトの実行
 
-XDP ファイルに基づいてアダプティブフォームが作成されると、各種プロパティ、イベント、および検証がフォーム作成 UI に自動入力されます。ただし、フォーム作成者は、これらの要素の一部を上書きして代替エクスペリエンスを作成できます。
+XDP ファイルに基づいてアダプティブフォームが作成されると、フォームオーサリング UI でプロパティ、イベント、検証が自動入力されます。 ただし、フォーム作成者は、これらの要素の一部を上書きして代替エクスペリエンスを作成できます。
 
-この記事では、アダプティブフォームでサポートされる XFA イベント、プロパティ、スクリプト、検証を一覧表示し、アダプティブフォームでこれらをオーバーライドする方法を説明します。
+この記事では、アダプティブフォームでサポートされる XFA イベント、プロパティ、検証機能を一覧表示し、アダプティブフォームでそれらを上書きする方法について説明します。
 
 ## アダプティブフォームでサポートされる XFA 要素およびそれらのマッピング {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
 
 ### フィールド {#fields}
 
-XDP ファイルを使用してアダプティブフォームを作成すると、XFA フィールドをアダプティブフォームにドラッグ＆ドロップできます。次の表は、XFA フィールドがアダプティブフォームのフィールドにマッピングされる方法を一覧表示したものです。
+XDP ファイルを使用してアダプティブフォームを作成する場合、XFA フィールドをアダプティブフォームにドラッグ&amp;ドロップすることができます。 次の表に、XFA フィールドがアダプティブフォームフィールドにマッピングされる方法を示します。
 
 <table>
  <tbody>
@@ -104,7 +106,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
 
 ### プロパティ {#properties}
 
-次の表は、XDF ファイルで定義された各種 XFA スクリプトがどのようにアダプティブフォームで動作するか示したものです。
+次の表は、XDP ファイルで定義された各種 XFA スクリプトがアダプティブフォームでどのように動作するかを示しています。
 
 <table>
  <tbody>
@@ -146,7 +148,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>displayFormat<em>（すべてのフィールドの種類）</em></p> </td>
-   <td><p>アダプティブフォームの Display Pattern にマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの表示パターンにマッピング済み。</p> </td>
   </tr>
   <tr>
    <td><p>rawValue<em>（すべてのフィールドの種類）</em></p> </td>
@@ -158,11 +160,11 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>maxChar<em>（テキストフィールド）</em></p> </td>
-   <td><p>アダプティブフォームの Maximum characters allowed プロパティにマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの Maximum characters allowed プロパティにマッピングされる。</p> </td>
   </tr>
   <tr>
    <td><p>multiline<em>（テキストフィールド）</em></p> </td>
-   <td><p>アダプティブフォームの Allow multiple lines プロパティにマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの Allow multiple lines プロパティにマッピングされている。</p> </td>
   </tr>
   <tr>
    <td><p>fracDigit<em>（数値フィールド、十進数フィールド）</em></p> </td>
@@ -195,7 +197,7 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
   </tr>
   <tr>
    <td><p>calculate</p> </td>
-   <td><p>アダプティブフォームの Calculate 数式にマッピング済み。</p> </td>
+   <td><p>アダプティブフォームの計算式にマッピングされている。</p> </td>
   </tr>
   <tr>
    <td><p>validate </p> </td>
@@ -267,4 +269,4 @@ XDP ファイルを使用してアダプティブフォームを作成すると�
 
 >[!NOTE]
 >
->XFA チェックボタンに連結されたアダプティブフォームのラジオボタンおよびチェックボックスの必須プロパティをオーバーライドすることはできません。
+>XFA チェックボタンにバインドされているアダプティブフォームのラジオボタンとチェックボックスグループの必須プロパティを上書きすることはできません。

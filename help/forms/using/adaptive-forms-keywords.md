@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームのキーワード
 seo-title: Adaptive forms keywords
-description: アダプティブフォームでは、以下の予約語を識別子として使用することはできません。
+description: アダプティブフォームでは、これらの予約語を識別子として使用することはできません。
 seo-description: You cannnot use these reserved words as identifiers in your adaptive forms.
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,21 +9,23 @@ topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 feature: Adaptive Forms
 exl-id: 6ef5bd8c-7e7b-4501-a1be-d34fc0dbde84
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 100%
+source-wordcount: '265'
+ht-degree: 24%
 
 ---
 
 # アダプティブフォームのキーワード {#adaptive-forms-keywords}
 
-アダプティブフォームのキーワードは事前に定義されており、アダプティブフォームにおいて特別の意味を持つ予約済みの識別子です。アダプティブフォームでは、これらのキーワードを識別子として使用することはできません。次の表は、アダプティブフォームで予約済みの識別子であるすべてのキーワードを一覧表示したものです。
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+
+アダプティブフォームのキーワードは、事前に定義され、アダプティブフォーム用に特別な意味を持つ予約済みの識別子です。 アダプティブフォームでは、これらのキーワードを識別子として使用することはできません。 次の表に、アダプティブフォーム用に予約されているすべてのキーワードを示します。
 
 <table>
  <tbody>
   <tr>
-   <td><p>intialize</p> </td>
+   <td><p>初期化する</p> </td>
    <td><p>getOnOffValues</p> </td>
    <td><p>minOccur</p> </td>
   </tr>
@@ -44,18 +46,18 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><p>playJson</p> </td>
-   <td><p>prepare</p> </td>
+   <td><p>準備</p> </td>
    <td><p>instanceCount</p> </td>
   </tr>
   <tr>
    <td><p>resetData</p> </td>
    <td><p>runPendingExpressions</p> </td>
-   <td><p>repeatable</p> </td>
+   <td><p>repateable</p> </td>
   </tr>
   <tr>
    <td><p>calcExp</p> </td>
    <td><p>queueExpressions</p> </td>
-   <td><p>instances</p> </td>
+   <td><p>インスタンス</p> </td>
   </tr>
   <tr>
    <td><p>title</p> </td>
@@ -65,7 +67,7 @@ ht-degree: 100%
   <tr>
    <td><p>valueCommitScript</p> </td>
    <td><p>autoSaveStart</p> </td>
-   <td><p>visit</p> </td>
+   <td><p>訪問</p> </td>
   </tr>
   <tr>
    <td><p>validateExp</p> </td>
@@ -75,7 +77,7 @@ ht-degree: 100%
   <tr>
    <td><p>placeholderText</p> </td>
    <td><p>autoSaveStartExpression</p> </td>
-   <td><p>children</p> </td>
+   <td><p>子</p> </td>
   </tr>
   <tr>
    <td><p>value</p> </td>
@@ -133,7 +135,7 @@ ht-degree: 100%
    <td><p>索引</p> </td>
   </tr>
   <tr>
-   <td><p>height</p> </td>
+   <td><p>高さ</p> </td>
    <td><p>showComment</p> </td>
    <td><p>visible</p> </td>
   </tr>
@@ -213,7 +215,7 @@ ht-degree: 100%
    <td><p>currentActivePart</p> </td>
   </tr>
   <tr>
-   <td><p>summary</p> </td>
+   <td><p>概要</p> </td>
    <td><p>completionFailureScript</p> </td>
    <td><p>sectionName</p> </td>
   </tr>

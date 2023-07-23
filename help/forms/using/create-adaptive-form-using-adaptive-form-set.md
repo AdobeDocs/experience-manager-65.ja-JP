@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームのセットを使用したアダプティブフォームの作成
 seo-title: Create an adaptive form using a set of adaptive forms
-description: AEM Forms では、アダプティブフォームをまとめて 1 つの大規模なアダプティブフォームを作成し、その特徴について理解します。
+description: AEM Formsでは、アダプティブフォームを統合して 1 つの大きなアダプティブフォームを作成し、その機能を理解します。
 seo-description: With AEM Forms, bring adaptive forms together to author a single large adaptive form, and understand its features.
 uuid: e52e4f90-8821-49ec-89ff-fbf07db69bd2
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,36 +10,38 @@ discoiquuid: 264aa8c0-ba64-4768-b3d1-1b9baa6b4d72
 docset: aem65
 feature: Adaptive Forms
 exl-id: 4254c2cb-66cc-4a46-b447-bc5e32def7a0
-source-git-commit: b220adf6fa3e9faf94389b9a9416b7fca2f89d9d
+source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 100%
+source-wordcount: '626'
+ht-degree: 46%
 
 ---
 
 # アダプティブフォームのセットを使用したアダプティブフォームの作成{#create-an-adaptive-form-using-a-set-of-adaptive-forms}
 
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+
 ## 概要 {#overview}
 
-銀行口座の開設の申し込みなどでは、ユーザーは複数のフォームを記入します。ユーザーにフォーム一式の記入を依頼するのではなく、フォームをまとめて、大きなフォーム（親フォーム）を作成することができます。大きなフォームにアダプティブフォームを追加すると、パネル（子フォーム）として追加されます。子フォームのセットを追加して親フォームを作成します。ユーザーの入力に基づいて、パネルを表示または非表示にすることができます。親フォームのボタン、例えば送信やリセットなどは、子フォームのボタンを上書きします。親フォームのアダプティブフォームを追加するには、アダプティブフォームを（アダプティブフォームのフラグメントのように）アセットブラウザからドラッグアンドドロップします
+銀行口座の開設の申し込みなどのワークフローでは、ユーザーは複数のフォームに記入します。 フォームのセットに入力するよう依頼する代わりに、フォームを積み重ねて大きなフォーム（親フォーム）を作成できます。 大きい方のフォームにアダプティブフォームを追加すると、パネル（子フォーム）として追加されます。 子フォームのセットを追加して、親フォームを作成します。 ユーザーの入力に基づいて、パネルの表示と非表示を切り替えることができます。 親フォームのボタン（送信やリセットなど）は、子フォームのボタンを上書きします。 親フォームにアダプティブフォームを追加するには、アダプティブフォームを（アダプティブフォームフラグメントと同様に）アセットブラウザーからドラッグ&amp;ドロップします。
 
 使用できる機能は、次のとおりです。
 
 * 独立オーサリング
-* 適切なフォームの表示／非表示
+* 適切なフォームの表示/非表示
 * 遅延読み込み
 
-独立オーサリングや遅延読み込みといった機能により、個々のコンポーネントを使用した親フォーム作成のパフォーマンスが向上しました。
+独立オーサリングや遅延読み込みなどの機能を使用すると、個々のコンポーネントを使用して親フォームを作成する場合のパフォーマンスが向上します。
 
 >[!NOTE]
 >
->子フォームや親フォームなど、XFA ベースのアダプティブフォームまたはフラグメントを使用することはできません。
+>XFA ベースのアダプティブフォーム/フラグメントは、子フォームや親フォームとして使用することはできません。
 
-## 機能の仕組み {#behind-the-scenes}
+## 舞台裏 {#behind-the-scenes}
 
-親フォームに XSD ベースのアダプティブフォームを追加することができます。親フォームの構造は、[アダプティブフォーム](../../forms/using/prepopulate-adaptive-form-fields.md)と同じです。アダプティブフォームを子フォームとして追加すると、親フォームのパネルとして追加されます。バインドされた子フォームのデータは、親フォームの XML スキーマの `afBoundData` セクションの `data` ルートに保存されます。
+親フォームに XSD ベースのアダプティブフォームとフラグメントを追加することができます。 親フォームの構造は [任意のアダプティブフォーム](../../forms/using/prepopulate-adaptive-form-fields.md). アダプティブフォームを子フォームとして追加すると、親フォームのパネルとして追加されます。バインドされた子フォームのデータは、親フォームの XML スキーマの `afBoundData` セクションの `data` ルートに保存されます。
 
-例えば、顧客が申込フォームを記入したとします。フォームの最初の 2 つのフィールドは、名前と ID です。この XML は次のようになります。
+例えば、顧客が申込フォームに入力するとします。 フォームの最初の 2 つのフィールドは、名前と ID です。 XML は次のようになります。
 
 ```xml
 <afData>
@@ -55,7 +57,7 @@ ht-degree: 100%
 </afData>
 ```
 
-申込フォームに別のフォームを追加して、顧客に職場の住所の記入を要求します。子フォームのスキーマのルートは `officeAddress` です。`bindref`、`/application/officeAddress` または `/officeAddress` を適用します。`bindref` がない場合、子フォームが `officeAddress` サブツリーとして追加されます。以下のフォームの XML を参照してください。
+顧客がオフィスの住所を入力できるフォームをアプリに追加します。 子フォームのスキーマのルートは `officeAddress` です。`bindref`、`/application/officeAddress` または `/officeAddress` を適用します。`bindref` がない場合、子フォームが `officeAddress` サブツリーとして追加されます。以下のフォームの XML を参照してください。
 
 ```xml
 <afData>
@@ -133,15 +135,15 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->異なるフォームまたはフラグメントが同じサブルートにマッピングされる場合、データは上書きされます。
+>異なるフォームやフラグメントが同じサブルートにマッピングされている場合、データは上書きされます。
 
-## アセットブラウザーを使用して、子フォームとしてアダプティブフォームを追加する {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
+## アセットブラウザーを使用した子フォームとしてのアダプティブフォームの追加 {#adding-an-adaptive-form-as-a-child-form-using-asset-browser}
 
-アセットブラウザーを使用して、子フォームとしてアダプティブフォームを追加するステップを実行します。
+アセットブラウザーを使用してアダプティブフォームを子フォームとして追加するには、次の手順を実行します。
 
 1. 親フォームを編集モードで開きます。
 1. サイドバーで、**アセット**／![アセットブラウザー](assets/assets-browser.png)をクリックします。アセットの下で、**アダプティブフォーム** をドロップダウンリストから選択します。
-   [ ![アセットの下でアダプティブフォームを選択する](assets/asset.png)](assets/asset-1.png)
+   [![アセットの下でアダプティブフォームを選択する](assets/asset.png)](assets/asset-1.png)
 
 1. 子フォームとして追加するアダプティブフォームをドラッグ＆ドロップします。
-   [ ![サイトにアダプティブフォームをドラッグ＆ドロップします。](assets/drag-drop.png)](assets/drag-drop-1.png)ドロップしたアダプティブフォームは、子フォームとして追加されます。
+   [![ サイトにアダプティブフォームをドラッグ＆ドロップします。](assets/drag-drop.png)](assets/drag-drop-1.png)ドロップしたアダプティブフォームは、子フォームとして追加されます。
