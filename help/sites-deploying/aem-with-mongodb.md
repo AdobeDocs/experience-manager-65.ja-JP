@@ -544,7 +544,7 @@ echo "{nThreads:32,fileSizeMB:1000,r:true,mmf:true}" | mongoperf
 
 >[!NOTE]
 >
-テストを実施するときは、オペレーティングシステムのモニタリングシステムで対象の仮想マシンの I/O 使用率の状況を確認してください。I/O 読み取りが 100 パーセントに満たない値を示している場合は、仮想マシンに問題がある可能性があります。
+>テストを実施するときは、オペレーティングシステムのモニタリングシステムで対象の仮想マシンの I/O 使用率の状況を確認してください。I/O 読み取りが 100 パーセントに満たない値を示している場合は、仮想マシンに問題がある可能性があります。
 
 **プライマリ MongoDB インスタンスの書き込みパフォーマンステスト**
 
@@ -655,7 +655,7 @@ CSP では、ポリシーを微調整できます。ただし、複雑なアプ�
 
 >[!NOTE]
 >
-この仕組みについて詳しくは、[コンテンツセキュリティポリシーに関する OWASP のページ](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)を参照してください。
+>この仕組みについて詳しくは、[コンテンツセキュリティポリシーに関する OWASP のページ](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)を参照してください。
 
 ### サイジング {#sizing}
 
@@ -679,4 +679,4 @@ AEM が MongoMK 永続性マネージャーのデプロイメントで実行さ�
 
 >[!NOTE]
 >
-MongoDB の既知の制限やしきい値を把握しておくために、[MongoDB ドキュメント](https://docs.mongodb.com/manual/reference/limits/)を参照してください。
+>MongoDB の既知の制限やしきい値を把握しておくために、[MongoDB ドキュメント](https://docs.mongodb.com/manual/reference/limits/)を参照してください。
