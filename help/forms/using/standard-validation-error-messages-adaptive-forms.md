@@ -10,7 +10,7 @@ geptopics: SG_AEMFORMS/categories/setting_up_and_managing_domains
 discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 498fb5f6f923710a907e1cf525f56f49850e16b2
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 94%
@@ -23,8 +23,9 @@ ht-degree: 94%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
-| AEM 6.5 | この記事 |
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html) |
+| AEM 6.5 | この記事 |
+
 
 アダプティブフォームは、事前設定された検証条件に基づいて、フィールドに入力した入力を検証します。 検証条件は、アダプティブフォーム内のフィールドに指定できる入力値を指します。 アダプティブフォームで使用するデータソースに基づいて、検証条件を設定できます。 例えば、RESTful web サービスをデータソースとして使用する場合、Swagger 定義ファイルで検証条件を定義できます。
 
