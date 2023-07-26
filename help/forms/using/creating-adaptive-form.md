@@ -5,22 +5,25 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 2c25a8b7-73f7-40fb-a303-9446a708c8eb
-source-git-commit: f620966974b0f535d30a17a5fa3175a593e52fec
+source-git-commit: 654dcb7c9bbb73420df7494b21fddb8cb4fdd39a
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 57%
+source-wordcount: '1936'
+ht-degree: 58%
 
 ---
 
 # アダプティブフォームの作成 {#creating-an-adaptive-form}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
-
+| バージョン | 記事リンク |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=ja) |
+| AEM 6.5 | この記事 |
 
 ## アダプティブフォームの作成 {#strong-create-an-adaptive-form-strong}
 
-次の手順に従って、アダプティブフォームを作成します。
+アダプティブフォームを作成するには、次の手順に従います。
 
 1. `https://'[server]:[port]'/<custom-context-if-any>.` で [!DNL Experience Manager Forms] オーサーインスタンスにアクセスします。
 
@@ -165,7 +168,7 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 
 ## アダプティブフォームの自動保存 {#auto-save-an-adaptive-form}
 
-デフォルトでは、アダプティブフォームのコンテンツは、保存ボタンを押したときなど、ユーザーの操作時に保存されます。 アダプティブフォームを設定して、イベントまたは時間間隔に基づいてコンテンツの自動保存を開始することもできます。 自動保存オプションは、次の場合に便利です。
+デフォルトでは、アダプティブフォームのコンテンツは、保存ボタンを押したときなど、ユーザーの操作時に保存されます。 アダプティブフォームを設定して、イベントまたは時間間隔に基づいてコンテンツの自動保存を開始することもできます。 自動保存オプションは、次の場合に役立ちます。
 
 * 匿名ユーザーおよびログインユーザー向けにコンテンツを自動的に保存
 * ユーザーの介入をほとんどまたはほとんど必要とせずにフォームのコンテンツを保存する
@@ -177,9 +180,9 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 デフォルトでは、自動保存オプションは有効になっていません。 自動保存オプションは、アダプティブフォームの「自動保存」タブで有効にすることができます。 「自動保存」タブには、その他の設定オプションもいくつか用意されています。 次の手順を実行して、アダプティブフォームの自動保存オプションを有効に設定します。
 
 1. プロパティの「自動保存」セクションにアクセスするには、コンポーネントを選択して、![フィールドレベル](assets/field-level.png)／**[!UICONTROL アダプティブフォームコンテナ]**／ ![cmppr](assets/cmppr.png) の順にタップします。
-1. 内 **[!UICONTROL 自動保存]** セクション **[!UICONTROL 有効にする]** 自動保存オプション
-1. 内 **[!UICONTROL アダプティブフォームイベント]** ボックスに 1 を指定するか、TRUE を指定すると、フォームがブラウザに読み込まれたときに自動的にフォームの保存が開始されます。 また、イベントの条件式を指定すると、そのイベントがトリガーされて true が返され、フォームのコンテンツの保存が開始されます。
-1. トリガー 自動保存は、設定に基づいてトリガーされます。 以下のオプションがあります。
+1. Adobe Analytics の **[!UICONTROL 自動保存]** セクション **[!UICONTROL 有効にする]** 自動保存オプション。
+1. Adobe Analytics の **[!UICONTROL アダプティブフォームイベント]** ボックスに 1 を指定するか、TRUE を指定すると、フォームがブラウザに読み込まれたときに自動的にフォームの保存が開始されます。 また、イベントの条件式を指定すると、そのイベントがトリガーされて true が返され、フォームのコンテンツの保存が開始されます。
+1. トリガー。 自動保存は、設定に基づいてトリガーされます。 以下のオプションがあります。
 
    * **[!UICONTROL 時刻ベース]**：指定の時間間隔に基づいてコンテンツの保存を開始するには、このオプションを選択します。
    * **[!UICONTROL イベントベース]**：イベントがトリガーされたときにコンテンツの保存を開始するには、このオプションを選択します。
@@ -193,7 +196,7 @@ XML スキーマおよび JSON スキーマは、組織内のバックエンド�
 
 1. （時間ベースの自動保存のみ）次の手順を実行して、時間ベースの自動保存のオプションを設定します。
 
-   1. 内 **[!UICONTROL この間隔で自動保存]** ボックスに、時間間隔を秒単位で指定します。 「間隔」ボックスに指定した秒数が経過すると、フォームは繰り返し保存されます。
+   1. Adobe Analytics の **[!UICONTROL この間隔で自動保存]** ボックスに、時間間隔を秒単位で指定します。 「間隔」ボックスに指定した秒数が経過すると、フォームは繰り返し保存されます。
 
 1. （イベントベースの自動保存のみ）次の手順を実行して、イベントベースの自動保存のオプションを設定します。
 
