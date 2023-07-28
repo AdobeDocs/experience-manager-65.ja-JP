@@ -10,10 +10,10 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: a8db862b4a90ee6679de44df9508caf75a4c3eec
+source-git-commit: 48540664fa80ac7ecc94a2d9dc56682ceaf67206
 workflow-type: tm+mt
-source-wordcount: '6489'
-ht-degree: 100%
+source-wordcount: '6491'
+ht-degree: 90%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 100%
 
 開発、ステージング、実稼動など、様々な環境で Adobe Experience Manager を使用する場合は、環境ごとに Dynamic Media Cloud Services を設定します。
 
-## Dynamic Media - Scene7 モードのアーキテクチャ図 {#architecture-diagram-of-dynamic-media-scene-mode}
+## Dynamic Media - Scene7モードのアーキテクチャ図 {#architecture-diagram-of-dynamic-media-scene-mode}
 
-以下のアーキテクチャ図に Dynamic Media - Scene7 モードの仕組みを示します。
+次のアーキテクチャ図は、Dynamic Media - Scene7モードの仕組みを説明しています。
 
 新しいアーキテクチャでは、Experience Manager は、プライマリソースアセットを扱い、Dynamic Media と同期してアセットの処理や公開をおこないます。
 
@@ -43,7 +43,6 @@ ht-degree: 100%
 >* [コンテンツの HTTP/2 配信](/help/assets/http2.md)
 >* CDN レベルでの URL リダイレクト
 >* Akamai ChinaCDN（中国での最適な配信用）
-
 
 ## Scene7 モードの Dynamic Media の有効化 {#enabling-dynamic-media-in-scene-mode}
 
@@ -119,13 +118,13 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 1. 接続に成功したら、次のように設定します。アスタリスク（*）を含む見出しが必須です。
 
    * **[!UICONTROL 会社]** - Dynamic Media アカウントの名前です。
+     >[!IMPORTANT]
+     >
+     Experience Manager の 1 つのインスタンスでサポートされる、Cloud Services の Dynamic Media 設定は 1 つだけです。複数の設定を追加しないでください。1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
 
-      >[!IMPORTANT]
-      >Experience Manager の 1 つのインスタンスでサポートされる、Cloud Services の Dynamic Media 設定は 1 つだけです。複数の設定を追加しないでください。1 つの Experience Manager インスタンスでの複数の Dynamic Media 設定は、アドビではサポートも推奨もされて&#x200B;_いません_。
+     <!-- CQDOC-19579 and CQDOC-19612 -->
 
-      <!-- CQDOC-19579 and CQDOC-19612 -->
-
-      [Dynamic Media の会社エイリアスアカウントの設定](/help/assets/dm-alias-account.md)も参照してください。
+     [Dynamic Media の会社エイリアスアカウントの設定](/help/assets/dm-alias-account.md)も参照してください。
 
    * **[!UICONTROL 会社のルートフォルダーのパス]**
 
@@ -133,9 +132,10 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
       * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。アセットを公開するためにユーザーが操作する必要はありません。
       * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。<br><!-- CQDOC-17478, Added March 9, 2021-->Experience Manager 6.5.8 以降では、Experience Manager パブリッシュインスタンスは、**[!UICONTROL アクティベーション時]**&#x200B;公開モードでのみ`dam:scene7Domain`や `dam:scene7FileStatus` などの正確な Dynamic Media メタデータ値を反映します。この機能を有効にするには、Service Pack 8 をインストールしてから、Experience Manager を再起動します。Sling Config Manager に移動します。`Scene7ActivationJobConsumer Component` の設定を検索または新しく作成します）。「**[!UICONTROL Dynamic Media の公開後にメタデータをレプリケート]**」チェックボックスを選択してから「 **[!UICONTROL 保存]**」を選択します。
 
-         ![「 Dynamic Media の公開後にメタデータをレプリケート」チェックボックス](assets-dm/replicate-metadata-setting.png)
+        ![「 Dynamic Media の公開後にメタデータをレプリケート」チェックボックス](assets-dm/replicate-metadata-setting.png)
 
       * **[!UICONTROL 選択的公開]** このオプションを使用すると、Dynamic Media に公開するフォルダーを制御できます。スマート切り抜きや動的レンディションなどの機能を使用したり、プレビュー用に Experience Manager でのみ公開するフォルダーを指定したりできます。これらの同じアセットは、パブリックドメインで配信するために Dynamic Media で公開され&#x200B;*ません*。<br>このオプションは、**[!UICONTROL Dynamic Media Cloud Configuration]** で設定できます。または、必要に応じて、このオプションはフォルダーの **[!UICONTROL プロパティ]**&#x200B;でフォルダーレベルで設定できます。<br>詳しくは、[Dynamic Media での選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。<br>この設定を後で変更した場合、または後でフォルダーレベルで変更した場合、その変更の影響を受けるのは、その時点からアップロードする新しいアセットだけです。フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
+
    * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。つまり、レンディションが生成されると、Experience Manager は、リモート Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリが Experience Manager インスタンスに送り返されることはありません）。
 自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない限り、この設定を指定されたとおりにしておくことをお勧めします。
 
@@ -150,8 +150,10 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
          * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
 
    >[!NOTE]
-   >Dynamic Media - Scene7 モードではバージョン管理はサポートされていません。また、遅延アクティベーションは、「Dynamic Media 設定を編集」ページの&#x200B;**[!UICONTROL アセットを公開]**&#x200B;が&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
-   >アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
+   >
+   Dynamic Media - Scene7 モードではバージョン管理はサポートされていません。また、遅延アクティベーションは、「Dynamic Media 設定を編集」ページの&#x200B;**[!UICONTROL アセットを公開]**&#x200B;が&#x200B;**[!UICONTROL アクティベーション時]**&#x200B;に設定されている場合にのみ、アセットが最初にアクティベートされるまでの間に限って適用されます。
+   >
+   アセットがアクティベートされるとすぐに、すべての更新が S7 配信にライブ公開されます。
 
 1. 「**[!UICONTROL 保存]**」を選択します。
 1. 公開前に Dynamic Media コンテンツを安全にプレビューするには、Experience Manager オーサーはトークンベースの検証を使用しているので、Experience Manager オーサーで Dynamic Media コンテンツをデフォルトでプレビューできます。IP を許可リストに登録することで、ユーザーはコンテンツを安全にプレビューできるようになります。このアクションを Experience Manager で設定するには、[Image Server 用 Dynamic Media 公開設定 -「セキュリティ」タブ](/help/assets/dm-publish-settings.md#security-tab)を参照してください。
@@ -193,7 +195,7 @@ Dynamic Media でのパスワードの有効期限は、現在のシステム日
 
    * 「**[!UICONTROL 新しいパスワード]**」フィールドに、新しいパスワードを入力します。
 
-      「**[!UICONTROL 現在のパスワード]**」フィールドは意図的に事前入力されており、操作時には非表示になっています。
+     「**[!UICONTROL 現在のパスワード]**」フィールドは意図的に事前入力されており、操作時には非表示になっています。
 
    * 「**[!UICONTROL パスワードを繰り返す]**」フィールドに新しいパスワードを再入力し、「**[!UICONTROL 完了]**」を選択します。
 
@@ -233,7 +235,7 @@ AEM で Dynamic Media - Scene7 モードを実行すると、現在、PlatformSe
 
 1. **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** ページで、次の 2 つの設定のチェックボックスをオンにします。
 
-   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name` - この設定を有効にすると、保存する権限の結果が 2 分間（デフォルト）キャッシュされます。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — この設定を有効にすると、120 秒または 2 分（デフォルト）保存する権限の結果がキャッシュされます。
    * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name` - この設定を有効にすると、Dynamic Media 画像サーバーを介してアセットをプレビューする際のユーザーのアクセスを検証します。
 
    ![Dynamic Media - Scene7 モードでアクセス制御リスト設定を有効にする](/help/assets/assets-dm/acl.png)
@@ -250,12 +252,13 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 * 大きなアセットのアップロード機能は、[*Managed Services*](https://business.adobe.com/jp/products/experience-manager/managed-services.html) をご利用のお客様に対してのみサポートされます。
 * Experience Manager インスタンスに Amazon S3 または Microsoft® Azure Blob ストレージが設定されていることを確認してください。
 
-   >[!NOTE]
-   >大きなアセットのアップロード機能は、Blob ストレージ設定の Azure SAS ではサポートされていないので、アクセスキーと秘密鍵を使用して Azure Blob ストレージを設定します。
+  >[!NOTE]
+  >
+  大きなアセットのアップロード機能は、Blob ストレージ設定の Azure SAS ではサポートされていないので、アクセスキーと秘密鍵を使用して Azure Blob ストレージを設定します。
 
 * Oak の[直接バイナリアクセスのダウンロード](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)を有効にします（Oak の&#x200B;*直接バイナリアクセスのアップロード*&#x200B;は必須ではありません）。
 
-   直接バイナリアクセスのダウンロードを有効にするには、データストア設定内で `presignedHttpDownloadURIExpirySeconds > 0` プロパティを設定します。この値は、大きなバイナリをダウンロードして再試行するのに十分な時間に設定する必要があります。
+  直接バイナリアクセスのダウンロードを有効にするには、データストア設定内で `presignedHttpDownloadURIExpirySeconds > 0` プロパティを設定します。この値は、大きなバイナリをダウンロードして再試行するのに十分な時間に設定する必要があります。
 
 * 15 GB を超えるアセットはアップロードされません。（サイズ制限は、以下の手順 8 で設定します。）
 * **[!UICONTROL Dynamic Media Reprocess]** アセットワークフローがフォルダーでトリガーされた場合、Dynamic Media の会社と既に同期している大きなアセットが再処理されます。ただし、大きなアセットがまだフォルダー内で同期されていない場合、そのアセットはアップロードされません。したがって、Dynamic Media の既存の大きなアセットを同期するには、個々のアセットに対して **[!UICONTROL Dynamic Media Reprocess]** アセットワークフローを実行します。
@@ -268,7 +271,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
    * 左側のパネルで、以下のパスに移動します。
 
-      `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
+     `/libs/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
 
    * 上記のパスをコピーしてツールバーの下の CRXDE Lite パスフィールドに貼り付け、`Enter` を押します。
 
@@ -284,7 +287,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
    * 左側のパネルで、以下のオーバーレイノードパスに移動します。
 
-      `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
+     `/apps/dam/gui/content/assets/jcr:content/actions/secondary/create/items/fileupload`
 
    * 上記のパスをコピーしてツールバーの下の CRXDE Lite パスフィールドに貼り付け、`Enter` を押します。
 
@@ -304,11 +307,11 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
    * 以下の URL パスに移動します。
 
-      `localhost:4502/system/console/configMgr/com.adobe.granite.workflow.core.job.ExternalProcessJobHandler`
+     `localhost:4502/system/console/configMgr/com.adobe.granite.workflow.core.job.ExternalProcessJobHandler`
 
    * 上記のパスをコピーして、ブラウザーの URL フィールドに貼り付けます。`localhost:4502` を独自の Experience Manager インスタンスと置き換えてください。
 
-1. **[!UICONTROL Adobe Granite Workflow External Process Job Handler]** ダイアログボックスで、**[!UICONTROL 最大タイムアウト]**&#x200B;フィールドの値を `18000` 分（5 時間）に設定します。デフォルトは 10800 分（3 時間）です。
+1. Adobe Analytics の **[!UICONTROL AdobeGranite Workflow External Process Job Handler]** ダイアログボックス、 **[!UICONTROL 最大タイムアウト]** フィールドの値を次の値に設定します。 `18000` 秒（5 時間） デフォルトは10800秒（3 時間）です。
 
    ![最大タイムアウト値](/help/assets/assets-dm/uploadassets15gb_d.png)
 
@@ -321,7 +324,7 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 1. ワークフローモデルページで「**[!UICONTROL Dynamic Media エンコーディングビデオ]**」を選択します。
 1. ツールバーの&#x200B;**[!UICONTROL 編集]**&#x200B;を選択します。
 1. ワークフローページで、**[!UICONTROL Scene7 直接バイナリアップロード]**&#x200B;プロセスのステップをダブルクリックします。
-1. **[!UICONTROL ステップのプロパティ]**&#x200B;ダイアログボックスにある「**[!UICONTROL 共通]**」タブの「**[!UICONTROL 詳細設定]**」見出しで、**[!UICONTROL タイムアウト]**&#x200B;フィールドに `18000` 分（5 時間）の値を入力します。デフォルトは `3600` 分（1 時間）です。
+1. Adobe Analytics の **[!UICONTROL ステップのプロパティ]** ダイアログボックスの **[!UICONTROL 共通]** タブの **[!UICONTROL 詳細設定]** 見出し、 **[!UICONTROL タイムアウト]** フィールドに、値を入力します。 `18000` 秒（5 時間） デフォルトはです。 `3600` 秒（1 時間）です。
 1. **[!UICONTROL OK]** を選択します。
 1. 「**[!UICONTROL 同期]**」を選択します。
 1. **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローモデルと **[!UICONTROL Dynamic Media 再処理]**&#x200B;ワークフローモデルの手順 14～21 を繰り返します。
@@ -356,14 +359,15 @@ Dynamic Media カラーマネジメントを使用すると、アセットをカ
 [画像プリセットの設定](/help/assets/managing-image-presets.md)を参照してください。
 
 >[!NOTE]
->デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]** 」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。[表示する画像プリセット数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセット数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
+>
+デフォルトでは、アセットの詳細表示で「**[!UICONTROL レンディション]** 」を選択した場合 15 個のレンディションが表示され、「**[!UICONTROL ビューア]**」を選択した場合 15 個のビューアプリセットが表示されます。この制限は増やすことができます。[表示する画像プリセット数を増やす](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)または[表示するビューアプリセット数を増やす](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)を参照してください。
 
 #### サポートされている形式の MIME タイプの編集 {#editing-mime-types-for-supported-formats}
 
 Dynamic Media によって処理されるアセットタイプを定義して、高度なアセット処理パラメーターをカスタマイズできます。例えば、アセット処理パラメーターを指定して次のことができます。
 
-* Adobe PDF を eCatalog アセットに変換する。
-* Adobe Photoshop ドキュメント（.PSD）をパーソナライズ用のバナーテンプレートアセットに変換する。
+* Adobe PDFを eCatalog アセットに変換する。
+* パーソナライズのためにAdobe Photoshopドキュメント (.PSD) をバナーテンプレートアセットに変換します。
 * Adobe Illustrator ファイル（.AI）または Adobe Photoshop Encapsulated PostScript® ファイル（.EPS）をラスタライズする。
 * [ビデオプロファイル](/help/assets/video-profiles.md)および[イメージングプロファイル](/help/assets/image-profiles.md)は、それぞれ、ビデオおよび画像の処理を定義するのに使用できます。
 
@@ -454,13 +458,13 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 ##### デフォルトの命名を設定
 
-任意のバッチセットプリセット手法で使用するデフォルトの命名規則を作成します。バッチセットプリセット定義で選択されたデフォルトの命名規則は、セットをバッチ生成するための会社の要件になる場合があります。バッチセットプリセットは、定義するデフォルトの命名規則を使用するために作成されます。会社が定義するデフォルトの命名規則に例外がある場合のために、特定のコンテンツのセットに必要な代替のカスタム命名規則を含むバッチセットプリセットを、必要なだけいくつでも作成できます。
+任意のバッチセットプリセット手法で使用するデフォルトの命名規則を作成します。バッチセットプリセット定義で選択されたデフォルトの命名規則は、セットをバッチ生成するための会社の要件になる場合があります。バッチセットプリセットは、定義したデフォルトの命名規則を使用するように作成されます。 会社が定義したデフォルトの命名規則の例外がある場合は、特定のコンテンツのセットに必要な代替のカスタム命名規則を使用して、バッチセットプリセットをいくつでも作成できます。
 
 バッチセットプリセット機能を使用するためにデフォルトの命名規則を設定する必要はありませんが、ベストプラクティスとしては、デフォルトの命名規則を使用することをお勧めします。それにより、命名規則の要素を必要なだけセットにまとめて定義し、バッチセットの作成を効率化できます。
 
 または、フォームフィールドを利用しないで、「**[!UICONTROL コードを表示]**」を使用することもできます。この表示では、正規表現を使用する命名規則の定義を作成します。
 
-定義には、一致とベース名という 2 つの要素を使用できます。これらのフィールドでは、命名規則のすべての要素を定義して、要素が含まれるセットを命名するために使用される規則の一部を指定できます。会社の個々の命名規則では、多くの場合、これら 2 つの要素のそれぞれに含まれている 1 行以上の定義を使用します。独自の定義行を必要なだけ使用して、メイン画像、カラー要素、代替表示要素およびスウォッチ要素などの個別の要素にグループ化できます。
+定義には、「一致」と「ベース名」の 2 つの要素を使用できます。 これらのフィールドを使用して、命名規則のすべての要素を定義し、要素が含まれるセットの名前を付ける際に使用する規則の一部を指定できます。 会社の個々の命名規則では、多くの場合、これらの要素ごとに 1 行以上の定義を使用します。 独自の定義行を必要なだけ使用して、メイン画像、カラー要素、代替表示要素およびスウォッチ要素などの個別の要素にグループ化できます。
 
 **デフォルトの命名規則を設定するには、以下の手順に従います。**
 
@@ -471,13 +475,14 @@ Experience Manager Assets でサポートされていない形式のカスタム
 1. ページの上付近にあるナビゲーションバーで、**[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL バッチセットプリセット]**／**[!UICONTROL デフォルトの名前]**&#x200B;に移動します。
 1. 「**[!UICONTROL フォームを表示]**」または「**[!UICONTROL コードを表示]**」を選択し、各要素に関する情報の表示と入力の方法を指定します。
 
-   「**[!UICONTROL コードを表示]**」チェックボックスを選択して、選択した形式と同時に作成される正規表現値を表示できます。フォーム表示により制限を受ける場合、命名規則の要素を定義するために正規表現値を入力または変更できます。値をフォーム表示で解析できない場合は、フォームフィールドは非アクティブになります。
+   「**[!UICONTROL コードを表示]**」チェックボックスを選択して、選択した形式と同時に作成される正規表現値を表示できます。フォーム表示で制限されている場合、これらの値を入力または変更して、命名規則の要素を定義できます。 フォームビューで値を解析できない場合、フォームフィールドは非アクティブになります。
 
    >[!NOTE]
-   >非アクティブなフォームフィールドは、正規表現の正誤に関する検証を実行しません。「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの一番下に表示されます。
+   >
+   非アクティブ化されたフォームフィールドは、正規表現が正しいことを検証しません。 「結果」行で各要素に作成する正規表現の結果を確認できます。完全な正規表現は、ページの下部に表示されます。
 
 1. 必要に応じて各要素を展開し、使用する命名規則を入力します。
-1. 必要に応じて、次の操作をおこないます。
+1. 必要に応じて、次のいずれかの操作を行います。
 
    * 要素に別の命名規則を追加するには、「**[!UICONTROL 追加]**」を選択します。
    * 要素の命名規則を削除するには、「**[!UICONTROL 削除]**」を選択します。
@@ -489,11 +494,11 @@ Experience Manager Assets でサポートされていない形式のカスタム
 
 ##### バッチセットプリセットの作成
 
-Dynamic Media では、バッチセットプリセットを使用して、アセットをビューアで表示するための画像のセット（代替画像、カラーオプション、360 スピン）に整理します。バッチセットプリセットは、Dynamic Media でのアセットアップロード処理と同時に自動的に実行されます。
+Dynamic Mediaでは、バッチセットプリセットを使用して、アセットをビューアで表示する画像のセット（代替画像、カラーオプション、360 スピン）に整理します。 バッチセットプリセットは、Dynamic Mediaのアセットアップロードプロセスと同時に自動的に実行されます。
 
-バッチセットプリセットを作成、編集および管理できます。バッチセットプリセット定義には 2 つの形式があります。デフォルトの命名規則を設定するものと、その場で作成するカスタムの命名規則のものです。
+バッチセットプリセットを作成、編集、管理できます。 バッチセットプリセット定義には 2 つの形式があります。デフォルトの命名規則を設定するものと、その場で作成するカスタムの命名規則のものです。
 
-バッチセットプリセットを定義するフォームフィールドメソッドとコードメソッドのどちらかを使用できます（正規表現を使用できます）。デフォルトの名前では、「フォームを表示」での定義と同時に「コードを表示」を選択して、正規表現を使用して定義を作成できます。また、どちらかの表示をオフにして、一方の表示のみを使用することもできます。
+フォームフィールドメソッドを使用してバッチセットプリセットを定義するか、コードメソッドを使用して正規表現を使用できます。 「デフォルトの命名方法」と同様に、フォーム表示での定義と同時に「コードを表示」を選択し、正規表現を使用して定義を作成できます。 または、どちらかの表示をオフにして、どちらか一方のみを使用することもできます。
 
 **バッチセットプリセットを作成するには：:**
 
@@ -516,7 +521,7 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 1. 「シーケンスの順番」では、Dynamic Media でグループ化されたセットの画像の表示順を定義します。
 
-   デフォルトでは、アセットはアルファベット順に並んでいます。ただし、コンマ区切りの正規表現リストを使用して順番を定義できます。
+   デフォルトでは、アセットは英数字で並べられています。 ただし、カンマ区切りの正規表現リストを使用して、順序を定義することができます。
 
 1. 命名規則と作成オプションの設定では、アセットの命名規則で定義したベース名にサフィックスとプレフィックスを指定します。また、Dynamic Media のフォルダー構造内のセットの作成場所を定義します。
 
@@ -529,9 +534,9 @@ Dynamic Media では、バッチセットプリセットを使用して、アセ
 
 ##### 2D スピンセットを自動生成するためのバッチセットプリセットを作成
 
-バッチセットの種類の&#x200B;**[!UICONTROL 多軸スピンセット]**&#x200B;を使用して、2D スピンセットの生成を自動化する手法を作成できます。画像のグループ化では行と列の正規表現を使用するので、画像アセットが多次元の配列の対応する場所に正しく配置されます。多軸スピンセットの行数または列数には、上限または下限はありません。
+バッチセットの種類を使用できます **[!UICONTROL 多軸スピンセット]** をクリックして、2D スピンセットの生成を自動化するレシピを作成します。 画像のグループ化では、行と列の正規表現を使用して、画像アセットが多次元配列の対応する場所に適切に配置されるようにします。 多軸スピンセットの行や列の最小数または最大数はありません。
 
-例として、`spin-2dspin` という名前の多軸スピンセットを作成します。1 行あたり 12 個の画像が含まれる 3 行のスピンセット画像セットがあります。画像の名前は次のとおりです。
+例として、`spin-2dspin` という名前の多軸スピンセットを作成します。3 行のスピンセット画像セットがあり、1 行に 12 個の画像が含まれます。 画像の名前は次のようになります。
 
 ```xml {.line-numbers}
 spin-01-01
@@ -564,7 +569,7 @@ spin-01-01
 1. プリセットリストパネルの「**[!UICONTROL 追加]**」を選択して、画面の右側にある詳細パネルの定義フィールドをアクティブにします。
 1. 詳細パネルの「プリセット名」フィールドに、プリセットの名前を入力します。
 1. 「バッチセットの種類」ドロップダウンメニューで、「**[!UICONTROL アセットセット]**」を選択します。
-1. 「サブタイプ」ドロップダウンリストで、「**[!UICONTROL 多軸スピンセット]**」を選択します。
+1. 「サブタイプ」ドロップダウンリストで、「 **[!UICONTROL 多軸スピンセット]**.
 1. 「**[!UICONTROL アセットの命名規則]**」を展開し、「ファイル名」ドロップダウンリストで「**[!UICONTROL カスタム]**」を選択します。
 1. **[!UICONTROL 一致]**&#x200B;およびオプションとして&#x200B;**[!UICONTROL ベース名]**&#x200B;の属性を使用して、グループを構成する画像アセットの命名に使用する正規表現を定義します。
 
@@ -572,9 +577,9 @@ spin-01-01
 
    `(w+)-w+-w+`
 
-1. 「**[!UICONTROL 行と列の位置]**」を展開し、2D スピンセット配列内の画像アセットの位置の名前形式を定義します。
+1. 展開 **[!UICONTROL 行の列の位置]**&#x200B;次に、2D スピンセット配列内の画像アセットの位置の名前形式を定義します。
 
-   ファイル名内での行または列の位置は丸括弧で囲みます。
+   ファイル名の行や列の位置を括弧で囲みます。
 
    行の正規表現の例を次に示します。
 
@@ -595,7 +600,8 @@ spin-01-01
    上記のサンプルは、デモ目的でのみ使用されています。必要に応じて独自の正規表現を作成できます。
 
    >[!NOTE]
-   >行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
+   >
+   行と列の正規表現の組み合わせから、多次元スピンセットの配列内でアセットの位置を特定できない場合、そのアセットはセットに追加されません。また、エラーがログに記録されます。
 
 1. 命名規則と作成オプションの設定では、アセットの命名規則で定義したベース名にサフィックスとプレフィックスを指定します。
 
@@ -650,7 +656,8 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 1. [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr) に移動して、**Queue: Granite Transient Workflow Queue** を検索します。
 
    >[!NOTE]
-   >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
+   >
+   OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
@@ -673,7 +680,8 @@ Granite のワークフローキューは、一時的でないワークフロー
 1. `https://<server>/system/console/configMgr` に移動して、**Queue: Granite Workflow Queue** を検索します。
 
    >[!NOTE]
-   >OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
+   >
+   OSGi PID は動的に生成されるので、ダイレクト URL ではなく、テキスト検索が必要です。
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
@@ -714,13 +722,14 @@ Dynamic Media 以外のデプロイメントでは、*すべて*&#x200B;のア�
 
 Dynamic Media を画像、ビデオまたはその両方に使用する場合は、アドビがそのまま提供するデフォルトのフィルターを使用できます。以下のフィルターがデフォルトでアクティブになっています。
 
-|  | フィルター | MIME タイプ | レンディション |
+|   | フィルター | MIME タイプ | レンディション |
 | --- | --- | --- | --- |
 | Dynamic Media 画像配信 | filter-image<br>filter-sets | **image/**<br> で始まり、**applications/** を含み、**set** で終わる | 標準の「filter-images」（インタラクティブ画像を含む、単一の画像アセットに適用される）および「filter-sets」（スピンセット、画像セット、混在メディアセットおよびカルーセルセットに適用される）は、以下の操作を実行します。<br>• 元の画像および静的な画像のレンディションをレプリケーションから除外します。 |
-| ダイナミックメディアビデオ配信 | filter-video | **video/** で始まる | 標準の「filter-video」は、以下の操作を実行します。<br>• 元のビデオと静的なサムネールのレンディションをレプリケーションから除外します。 |
+| Dynamic Mediaビデオ配信 | filter-video | 次で始まる **video/** | 標準の「filter-video」は、以下の操作を実行します。<br>• 元のビデオと静的なサムネールのレンディションをレプリケーションから除外します。 |
 
 >[!NOTE]
->フィルターは、MIME タイプに適用されます。パスを指定することはできません。
+>
+フィルターは、MIME タイプに適用されます。パスを指定することはできません。
 
 #### レプリケーション用のアセットフィルターのカスタマイズ {#customizing-asset-filters-for-replication}
 
