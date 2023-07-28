@@ -5,7 +5,7 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1b402aef-a319-4d32-8ada-cadc86f5c872
-source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
+source-git-commit: d0768679182567cc7cd618adaa78b6518f902f7c
 workflow-type: tm+mt
 source-wordcount: '1861'
 ht-degree: 73%
@@ -732,7 +732,7 @@ JSON スキーマの要素に次の制限を追加して、アダプティブフ
 
 ## スキーマ準拠データを有効にする {#enablig-schema-compliant-data}
 
-アダプティブフォームがフォーム送信時にスキーマに準拠したデータを生成するには、次の手順を実行します。
+フォーム送信時に、すべての JSON スキーマベースのアダプティブFormsでスキーマに準拠したデータを生成するには、次の手順に従います。
 
 1. Experience ManagerWeb コンソール ( ) に移動します。 `https://server:host/system/console/configMgr`.
 1. 場所 **[!UICONTROL アダプティブフォームとインタラクティブ通信の Web チャネル設定]**.
