@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
-source-git-commit: 48540664fa80ac7ecc94a2d9dc56682ceaf67206
+source-git-commit: 78842fb50d5aa5e5c22801389713cb3c69cac4bf
 workflow-type: tm+mt
-source-wordcount: '6491'
+source-wordcount: '6489'
 ht-degree: 90%
 
 ---
@@ -235,7 +235,7 @@ AEM で Dynamic Media - Scene7 モードを実行すると、現在、PlatformSe
 
 1. **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** ページで、次の 2 つの設定のチェックボックスをオンにします。
 
-   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — この設定を有効にすると、120 秒または 2 分（デフォルト）保存する権限の結果がキャッシュされます。
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name`  — この設定を有効にすると、120 秒（2 分）（デフォルト）保存する権限の結果をキャッシュします。
    * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name` - この設定を有効にすると、Dynamic Media 画像サーバーを介してアセットをプレビューする際のユーザーのアクセスを検証します。
 
    ![Dynamic Media - Scene7 モードでアクセス制御リスト設定を有効にする](/help/assets/assets-dm/acl.png)
@@ -702,7 +702,7 @@ Scene7 アップロード接続の設定は、Experience Manager Assets を Dyna
 
    「**[!UICONTROL 接続数]**」の設定は、Experience Manage が Dynamic Media へのアップロードで許可される HTTP 接続の最大数を制御します。通常、事前定義済みの値の 10 接続で十分です。
 
-   「**[!UICONTROL Active job timeout]**」設定は、アップロードされた Dynamic Media アセットが配信サーバーで公開されるまでの待機時間を決定します。デフォルトでは、この値は 2100 秒または 35 分です。
+   「**[!UICONTROL Active job timeout]**」設定は、アップロードされた Dynamic Media アセットが配信サーバーで公開されるまでの待機時間を決定します。デフォルトでは、この値は 2100 秒（35 分）です。
 
    ほとんどの事例では、2100 の設定で十分です。
 

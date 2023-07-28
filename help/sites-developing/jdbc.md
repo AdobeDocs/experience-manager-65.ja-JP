@@ -10,10 +10,10 @@ topic-tags: platform
 content-type: reference
 discoiquuid: 11a11803-bce4-4099-9b50-92327608f37b
 exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
-source-git-commit: e147605ff4d5c3d2403632285956559db235c084
-workflow-type: ht
-source-wordcount: '920'
-ht-degree: 100%
+source-git-commit: 061af6f3318d68b50c5f606ad50db7a39da0f4fd
+workflow-type: tm+mt
+source-wordcount: '917'
+ht-degree: 99%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 100%
 
 * POM で、パッケージがオプションであることを示します。この解決策は、JDBC 接続で実際にはそのパッケージのメンバーが不要である場合に使用します。次の例に示すように、Import-Package 要素を使用してオプションのパッケージを指定します。
 
-   `<Import-Package>org.jboss.*;resolution:=optional,*</Import-Package>`
+  `<Import-Package>org.jboss.*;resolution:=optional,*</Import-Package>`
 * パッケージを含む JAR ファイルを、パッケージを書き出す OSGi バンドルにラップし、そのバンドルをデプロイします。この解決策は、コード実行中にパッケージのメンバーが必要になる場合に使用します。
 
 ソースコードを知ることで、どちらの解決策を使用すべきかを判断できます。また、いずれかの解決策を試してテストを実行し、解決策の妥当性を検証することもできます。
@@ -86,7 +86,7 @@ ht-degree: 100%
 
 次のリンクより、一般的なデータベース製品のダウンロードページを開くことができます。
 
-* [Microsoft® SQL Server](https://www.microsoft.com/ja-jp/download/details.aspx?displaylang=ja&amp;id=11774)
+* [Microsoft® SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 * [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 * [IBM® DB2®](https://www.ibm.com/support/pages/download-db2-fix-packs-version-db2-linux-unix-and-windows)
 
@@ -170,6 +170,7 @@ Java™ コードでは、DataSourcePool サービスを使用して、作成し
 >[!NOTE]
 >
 >データソースが見つからないため、getDataSource メソッドが例外を発生する場合は、Connections Pool サービスの設定が正しいことを確認してください。プロパティ名、値およびデータタイプを確認します。
+>
 
 <!-- Link below redirects to the "Get started with AEM Sites - WKND tutorial"
 >[!NOTE]
