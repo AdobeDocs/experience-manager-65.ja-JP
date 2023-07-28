@@ -7,12 +7,13 @@ topic-tags: Security
 content-type: reference
 exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Security
-source-git-commit: 96e2e945012046e6eac878389b7332985221204e
+source-git-commit: f317783f3320e3987c7468aa0b2471e525b0387a
 workflow-type: tm+mt
-source-wordcount: '1766'
-ht-degree: 37%
+source-wordcount: '1797'
+ht-degree: 35%
 
 ---
+
 
 # Adobe Experience Manager(AEM) のサービスユーザー {#service-users-in-aem}
 
@@ -24,15 +25,15 @@ ht-degree: 37%
 
 ## 管理セッションを段階的に廃止する方法 {#how-to-phase-out-admin-sessions}
 
-### 優先度 0:機能はアクティブ、必要、または破棄されていますか？ {#priority-is-the-feature-active-needed-derelict}
+### 優先度 0：機能はアクティブ/必要/中断されていますか。 {#priority-is-the-feature-active-needed-derelict}
 
 管理セッションが使用されていなかったり、機能が完全に無効化されている場合があります。現在の実装環境がこれに当てはまる場合は、機能を削除するか、[NOP コード](https://ja.wikipedia.org/wiki/NOP)を埋め込んでください。
 
-### 優先度 1:リクエストセッションの使用 {#priority-use-the-request-session}
+### 優先度 1：リクエストセッションを使用する {#priority-use-the-request-session}
 
 可能な限り機能をリファクタリングし、指定された認証済みのリクエストセッションを使用して、コンテンツの読み取りや書き込みをおこなうことができるようにします。 これができない場合は、多くの場合、次の優先度に従って適用することで達成できます。
 
-### 優先度 2:コンテンツの再構築 {#priority-restructure-content}
+### 優先度 2：コンテンツの再構築 {#priority-restructure-content}
 
 問題の多くは、コンテンツの再構築によって解決できます。 再構築を行う際は、次のシンプルなルールに留意してください。
 
@@ -58,7 +59,7 @@ ht-degree: 37%
 
 * **ノードタイプを使用する**
 
-   * 設定可能なプロパティのセットを制限
+   * 設定可能なプロパティのセットを制限する
 
 * **プライバシー設定に配慮する**
 
@@ -72,17 +73,22 @@ ht-degree: 37%
 
 * [制限](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html)を使用します。
 
-* ノードタイプに ACL を適用
+* ノードタイプに対する ACL の適用
 * 権限の制限
 
    * 例えば、プロパティの書き込みのみが必要な場合は、`jcr:write` 権限を付与するのではなく、代わりに `jcr:modifyProperties` を使用してください。
 
 ## サービスユーザーとマッピング {#service-users-and-mappings}
 
-前述の方法がうまくいかない場合は、Sling 7 に用意されているサービスユーザーマッピングサービスを使用して、バンドルとユーザーのマッピングを設定したり、2 つの対応する API メソッド（` [SlingRepository.loginService()](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)` および ` [ResourceResolverFactory.getServiceResourceResolver()](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)`）を設定したりすることができます。これらのメソッドは、設定されたユーザーの権限に限定してセッション／リソースリゾルバーを返します。これらのメソッドの特徴は次のとおりです。
+上記の処理が失敗した場合、Sling 7 では、Service User Mapping サービスが提供されます。このサービスでは、バンドルとユーザーのマッピングおよび次の 2 つの対応する API メソッドを設定できます。
+
+* [`SlingRepository.loginService()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/jcr/api/SlingRepository.html#loginService-java.lang.String-java.lang.String-)
+* [`ResourceResolverFactory.getServiceResourceResolver()`](https://sling.apache.org/apidocs/sling7/org/apache/sling/api/resource/ResourceResolverFactory.html#getServiceResourceResolver-java.util.Map-)
+
+メソッドは、設定されたユーザーの権限のみを持つセッション/リソースリゾルバーを返します。 これらのメソッドの特徴は次のとおりです。
 
 * サービスをユーザーにマッピングできます。
-* サブサービスユーザーの定義が可能になります
+* サブサービスユーザーの定義が可能になります。
 * 中央設定ポイントは `org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl` です。
 * `service-id` = `service-name` [&quot;:&quot; subservice-name]
 
@@ -93,7 +99,7 @@ ht-degree: 37%
 
 ### admin-session のサービスユーザーへの置き換え {#replacing-the-admin-session-with-a-service-user}
 
-サービスユーザーは、パスワードが設定されていない JCR ユーザーで、特定のタスクの実行に必要な最小限の権限が設定されています。 パスワードが設定されていない場合、サービスユーザーとのログインはできなくなります。
+サービスユーザーは、パスワードが設定されていない JCR ユーザーで、特定のタスクの実行に必要な最小限の権限が設定されています。 パスワードが設定されていない場合、サービスユーザーとのログインは不可能になります。
 
 管理セッションを廃止する方法の 1 つは、管理セッションをサービスユーザーセッションに置き換えることです。 必要に応じて、複数のサブサービスユーザーに置き換えることもできます。
 
@@ -101,7 +107,7 @@ admin セッションをサービスユーザーに置き換えるには、次�
 
 1. 最小権限の原則を念頭に置いて、サービスに必要な権限を特定します。
 1. 必要な権限設定で既にユーザーが使用できるかどうかを確認します。 必要に応じた既存のユーザーがない場合は、システムサービスユーザーを作成します。 サービスユーザーを作成するには、RTC が必要です。 複数のサブサービスユーザー（例えば、書き込み用と読み取り用に 1 つ）を作成して、アクセスをさらに区分化すると効果的な場合があります。
-1. ユーザーの ACE を設定してテストします。
+1. ユーザーの ACE を設定し、テストします。
 1. サービスおよび `user/sub-users` に `service-user` マッピングを追加します。
 
 1. サービスユーザーの sling 機能をバンドルから使用できるようにします。つまり、`org.apache.sling.api` を最新バージョンに更新します。
@@ -145,7 +151,7 @@ AEMサービスユーザーのリストに含まれるユーザーがユース�
 
 ## ServiceUserMapper 構成に構成の修正を追加しています {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-サービスから対応するシステムユーザーにマッピングを追加するには、 ` [ServiceUserMapper](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html)` サービス。 このモジュラーを維持するために、 [Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578). このような設定をバンドルにインストールする場合は、 [Sling の初期コンテンツの読み込み](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html):
+サービスから対応するシステムユーザーにマッピングを追加するには、 [`ServiceUserMapper`](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html) サービス。 このモジュラーを維持するために、 [Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578). このような設定をバンドルにインストールする場合は、次を使用することをお勧めします。 [Sling の初期コンテンツの読み込み](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html):
 
 1. バンドルの src/main/resources フォルダーの下にサブフォルダー SLING-INF/content を作成します。
 1. このフォルダーに、org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended — という名前のファイルを作成します。&lt;some unique=&quot;&quot; name=&quot;&quot; for=&quot;&quot; your=&quot;&quot; factory=&quot;&quot; configuration=&quot;&quot;>.xml を作成し、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を保存します。 例：
@@ -216,7 +222,7 @@ JSP では、関連するサービスがないので `loginService()` を使用�
 
     **メリット：**&#x200B;容易に使用できます。
 
-   **デメリット：** `loginAdministrative()` を使用する必要があります。認証済みのリクエストを再認証します。
+   **デメリット：** `loginAdministrative()` を使用する必要があります。既に認証済みのリクエストを再認証します。
 
 1. データにアクセスできるサービスユーザーを作成または再利用します。
 
@@ -240,4 +246,4 @@ JSP では、関連するサービスがないので `loginService()` を使用�
 
 ## SlingPOSTプロセッサーと削除済みページ {#sling-post-processors-and-deleted-pages}
 
-SlingPOST・プロセッサの実装で使用される管理セッションが 2 つあります。 通常、管理セッションは、処理中のPOST内で削除を保留しているノードにアクセスするために使用されます。 その結果、リクエストセッションからは使用できなくなります。 削除待ちのノードにアクセスして、アクセス不可のメタデータを開示することができます。
+SlingPOST・プロセッサの実装で使用される管理セッションが 2 つあります。 通常、管理セッションは、処理中のPOST内で削除を保留しているノードにアクセスするために使用されます。 その結果、これらはリクエストセッションからは使用できなくなります。 削除待ちのノードにアクセスして、アクセス不可のメタデータを開示することができます。
