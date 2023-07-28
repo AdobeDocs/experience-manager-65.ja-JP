@@ -7,10 +7,10 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
-source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
+source-git-commit: 578e9eb45ab996df841cb22e89d45fadfe90592b
 workflow-type: tm+mt
-source-wordcount: '3909'
-ht-degree: 100%
+source-wordcount: '3950'
+ht-degree: 98%
 
 ---
 
@@ -313,6 +313,8 @@ Connected Assets の設定後、[!DNL Dynamic Media] アセットは、[!DNL Sit
 ## 制限事項とベストプラクティス {#tip-and-limitations}
 
 * アセットの使用状況に関するインサイトを取得するには、[!DNL Sites] インスタンスで[アセットインサイト](/help/assets/asset-insights.md)機能を設定します。
+
+* リモートアセットを [画像コンポーネント設定ダイアログ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=en#configure-dialog). ただし、リモートアセットを、 **[!UICONTROL 設定]**.
 
 ### 権限とアセット管理 {#permissions-and-managing-assets}
 
