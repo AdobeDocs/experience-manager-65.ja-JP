@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media のトラブルシューティング - Scene7 モード
-description: Dynamic Media を Scene7 モードで実行している場合のトラブルシューティング。
+description: Dynamic MediaをScene7モードで実行している際の、のセットアップ、設定および一般的な問題のトラブルシューティングと解決方法について説明します。
 uuid: 77e04ccf-33dc-4d2f-8950-318d4b008f74
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -12,37 +12,37 @@ role: User, Admin
 exl-id: d4507059-a54d-4dc9-a263-e55dfa27eeb1
 feature: Troubleshooting
 mini-toc-levels: 3
-source-git-commit: 9c3df2491f99fe31e4b64b47442dd583af06974e
-workflow-type: ht
-source-wordcount: '1386'
-ht-degree: 100%
+source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
+workflow-type: tm+mt
+source-wordcount: '1397'
+ht-degree: 72%
 
 ---
 
 # Dynamic Media のトラブルシューティング - Scene7 モード{#troubleshooting-dynamic-media-scene-mode}
 
-以下のドキュメントでは、**dynamicmedia_scene7** 実行モードで実行している Dynamic Media のトラブルシューティングについて説明します。
+次のドキュメントでは、Dynamic Mediaの実行に関するトラブルシューティングについて説明します **dynamicmedia_scene7** 実行モード。
 
 ## セットアップと設定 {#setup-and-configuration}
 
-以下の手順で、Dynamic Media が適切に設定されていることを確認します。
+次の手順を実行して、Dynamic Mediaが正しく設定されていることを確認します。
 
 * 開始コマンドに `-r dynamicmedia_scene7` 実行モード引数を含めます。
 * 使用可能な Dynamic Media 機能パックの&#x200B;*前に*、最初にすべての Adobe Experience Manager 6.4 累積修正パック（CFP）がインストールされていることを確認します。
 * オプションの機能パック 18912 がインストールされていることを確認します。
 
-   このオプションの機能パックは、FTP サポートが必要な場合や、Dynamic Media Classic から Dynamic Media にアセットを移行する場合に使用します。
+  このオプションの機能パックは、FTP サポートが必要な場合や、Dynamic Media Classic から Dynamic Media にアセットを移行する場合に使用します。
 
 * クラウドサービスのユーザーインターフェイスに移動して、「**[!UICONTROL 利用可能な設定]**」の下に割り当てられたアカウントが表示されることを確認します。
 * `Dynamic Media Asset Activation (scene7)` レプリケーションエージェントが有効になっていることを確認します。
 
-   このレプリケーションエージェントは、「作成者のエージェント」にあります。
+  このレプリケーションエージェントは、「作成者のエージェント」の下にあります。
 
 ## 一般（すべてのアセット） {#general-all-assets}
 
-次に全般的なヒントやテクニックを示します。
+以下に、すべてのアセットに関する一般的なヒントとテクニックを示します。
 
-### アセット同期ステータスプロパティ {#asset-synchronization-status-properties}
+### アセット同期ステータスのプロパティ {#asset-synchronization-status-properties}
 
 CRXDE Lite で次のアセットプロパティを見直すと、 Experience Manager から Dynamic Media へのアセットの同期に成功したことが確認できます。
 
@@ -50,7 +50,7 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
 |---|---|---|
 | `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a\|364266`** | ノードが Dynamic Media にリンクされていることを示す全般的インジケーター。 |
 | `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** またはエラーテキスト | Dynamic Media へのアセットアップロードのステータス。 |
-| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Dynamic Media のリモートアセットへの URL を生成するには、これを入力する必要があります。 |
+| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Dynamic Mediaのリモートアセットへの URL を生成するには、を設定する必要があります。 |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **success** または **failed:`<error text>`** | セット（スピンセット、画像セットなど）、画像プリセット、ビューアプリセット、アセットの画像マップの更新、編集された画像などの同期ステータス。 |
 
 ### 同期のログ {#synchronization-logging}
@@ -94,44 +94,44 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
        <li>JCR のアセットに <code>dam:scene7FileStatus</code><strong> </strong> があり、それが「メタデータ」で <code>PublishComplete</code> と表示されていることを確認します。</li>
       </ul> </li>
     </ol> </td>
-   <td><p>ページを更新するか、別のページに移動してから戻ります（サイドレール JSP を再コンパイルする必要があります）。</p> <p>それでも解決しない場合：</p>
+   <td><p>ページを更新するか、別のページに移動してから戻ります（サイドレール JSP を再コンパイルする必要があります）。</p> <p>それでも動作しない場合：</p>
     <ul>
      <li>アセットを公開します。</li>
      <li>アセットを再度アップロードして公開します。</li>
     </ul> </td>
   </tr>
   <tr>
-   <td>設定エディターのアセットセレクターが永続的に読み込み中の状態になっている</td>
+   <td>セットエディターのアセットセレクターが永続読み込みでスタックする</td>
    <td><p>6.4 で解決予定の既知の問題です。</p> </td>
-   <td><p>セレクターを閉じて再度開きます。</p> </td>
+   <td><p>セレクターを閉じて、再度開きます。</p> </td>
   </tr>
   <tr>
-   <td>セットの編集でアセットを選択した後、<strong>選択</strong>ボタンが有効にならない</td>
+   <td><strong>選択</strong> セットの編集中にアセットを選択した後、ボタンがアクティブにならない</td>
    <td><p> </p> <p>6.4 で解決予定の既知の問題です。</p> <p> </p> </td>
    <td><p>アセットセレクターで別のフォルダーを選択してから、アセットの選択に戻ります。</p> </td>
   </tr>
   <tr>
    <td>スライドを切り替えた後、カルーセルホットスポットが移動する</td>
-   <td><p>すべてのスライドが同じサイズであることを確認します。</p> </td>
-   <td><p>カルーセルにはすべて同じサイズの画像のみを利用します。</p> </td>
+   <td><p>すべてのスライドのサイズが同じであることを確認します。</p> </td>
+   <td><p>カルーセルには同じサイズの画像のみを使用します。</p> </td>
   </tr>
   <tr>
-   <td>Dynamic Media ビューアで画像がプレビューされない</td>
+   <td>画像がDynamic Mediaビューアでプレビューされない</td>
    <td><p>アセットのメタデータプロパティに <code>dam:scene7File</code> が含まれていることを確認します（CRXDE Lite）。</p> </td>
-   <td><p>すべてのアセットの処理が終わるまで待ちます。</p> </td>
+   <td><p>すべてのアセットの処理が完了したことを確認します。</p> </td>
   </tr>
   <tr>
    <td>アップロードしたアセットがアセットセレクターに表示されない</td>
    <td><p>アセットのプロパティ <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> が <code>processed</code> であることを確認します（CRXDE Lite）。</p> </td>
-   <td><p>すべてのアセットの処理が終わるまで待ちます。</p> </td>
+   <td><p>すべてのアセットの処理が完了したことを確認します。</p> </td>
   </tr>
   <tr>
-   <td>アセットの処理がまだ開始していないときに、カード表示のバナーに「<strong>新規</strong>」と表示される</td>
+   <td>カード表示のバナー <strong>新規</strong> アセットが処理を開始していない場合</td>
    <td>アセットの <code>jcr:content</code> &gt; <code>dam:assetState</code> を確認します。<code>unprocessed</code> の場合は、アセットの処理がワークフローで開始されていません。</td>
-   <td>ワークフローがアセットの処理を始めるまで待ちます。</td>
+   <td>アセットがワークフローで取得されるまで待ちます。</td>
   </tr>
   <tr>
-   <td>画像やセットでビューア URL や埋め込みコードが表示されない</td>
+   <td>画像またはセットにビューアの URL または埋め込みコードが表示されない</td>
    <td>ビューアプリセットが公開されているかどうかを確認します。</td>
    <td><p><strong>ツール</strong>／<strong>アセット</strong>／<strong>ビューアプリセット</strong>に移動し、ビューアプリセットを公開します。</p> </td>
   </tr>
@@ -150,18 +150,18 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
    <td><strong>解決策</strong></td>
   </tr>
   <tr>
-   <td>ビデオをプレビューできない</td>
+   <td>ビデオをプレビューできません</td>
    <td>
     <ul>
-     <li>フォルダーにビデオプロファイルが割り当てられていることを確認します（サポートされていないファイル形式の場合）。サポートされていない場合、画像だけが表示されます。</li>
-     <li>ビデオプロファイルには AVS セットを生成するためのエンコーディングプリセットが 2 つ以上含まれている必要があります（MP4 ファイルでは 1 つのエンコーディングがビデオコンテンツとして扱われます。サポートされていないファイルでは、処理されていないものと同じ扱いになります）。</li>
+     <li>フォルダーにビデオプロファイルが割り当てられていることを確認します（サポートされていないファイル形式の場合）。 サポートされていない場合は、画像のみが表示されます。</li>
+     <li>AVS セットを生成するには、ビデオプロファイルに複数のエンコーディングプリセットを含める必要があります（単一のエンコーディングは MP4 ファイルのビデオコンテンツとして扱われ、サポートされていないファイルの場合は未処理として扱われます）。</li>
      <li>メタデータで <code>dam:scene7File</code> の <code>dam:scene7FileAvs</code> を確認して、ビデオの処理が終了したことを確かめます。</li>
     </ul> </td>
    <td>
     <ol>
-     <li>ビデオプロファイルをフォルダーに割り当てます。</li>
-     <li>エンコーディングプリセットを 2 つ以上含むよう、ビデオプロファイルを編集します。</li>
-     <li>ビデオの処理が終わるのを待ちます。</li>
+     <li>フォルダーにビデオプロファイルを割り当てます。</li>
+     <li>複数のエンコーディングプリセットを含めるには、ビデオプロファイルを編集します。</li>
+     <li>ビデオの処理が終了するまで待ちます。</li>
      <li>ビデオを再読み込みする前に、Dynamic Media エンコーディングビデオワークフローが実行されていないことを確認します。<br /> </li>
      <li>ビデオを再度アップロードします。</li>
     </ol> </td>
@@ -171,19 +171,19 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
    <td>
     <ul>
      <li>実行モードが <code>dynamicmedia_scene7</code> であることを確認します。</li>
-     <li>Dynamic Media クラウドサービスが設定されていることを確認します。</li>
+     <li>Dynamic Media Cloud Service が設定されているかどうかを確認します。</li>
      <li>ビデオプロファイルがアップロードフォルダーに関連付けられていることを確認します。</li>
     </ul> </td>
    <td>
     <ol>
      <li>次を使用して Experience Manager インスタンスを確認します。 <code>-r dynamicmedia_scene7</code></li>
      <li>クラウドサービスページで Dynamic Media 設定が正しくセットアップされていることを確認します。</li>
-     <li>フォルダーにビデオプロファイルがあることを確認します。そのビデオプロファイルも確認します。</li>
+     <li>フォルダーにビデオプロファイルが含まれていることを確認します。 また、ビデオプロファイルを確認します。</li>
     </ol> </td>
   </tr>
   <tr>
-   <td>ビデオの処理に時間がかかりすぎる</td>
-   <td><p>ビデオのエンコーディングがまだ進行中か、エラー状態になっているかを判断するには：</p>
+   <td>ビデオ処理に時間がかかりすぎる</td>
+   <td><p>ビデオエンコーディングがまだ進行中か、失敗状態に入ったかを判断するには：</p>
     <ul>
      <li>ビデオのステータスを確認します。<code>https://localhost:4502/crx/de/index.jsp#/content/dam/folder/videomp4/jcr%3Acontent</code> &gt; <code>dam:assetState</code></li>
      <li>ワークフローコンソールでビデオを監視します。<code>https://localhost:4502/libs/cq/workflow/content/console.html</code> &gt; 「インスタンス」タブ、「アーカイブ」タブ、「エラー」タブ。</li>
@@ -191,16 +191,16 @@ CRXDE Lite で次のアセットプロパティを見直すと、 Experience Man
    <td> </td>
   </tr>
   <tr>
-   <td>ビデオレンディションがない</td>
-   <td><p>ビデオがアップロードされても、エンコードされたレンディションがない場合：</p>
+   <td>ビデオレンディションがありません</td>
+   <td><p>ビデオがアップロードされたが、エンコードされたレンディションがない場合。</p>
     <ul>
      <li>フォルダーにビデオプロファイルが割り当てられていることを確認します。</li>
      <li>メタデータで <code>dam:scene7FileAvs</code> を確認して、ビデオの処理が終了したことを確かめます。</li>
     </ul> </td>
    <td>
     <ol>
-     <li>ビデオプロファイルをフォルダーに割り当てます。</li>
-     <li>ビデオの処理が終わるのを待ちます。<br /> </li>
+     <li>フォルダーにビデオプロファイルを割り当てます。</li>
+     <li>ビデオの処理が終了するまで待ちます。<br /> </li>
     </ol> </td>
   </tr>
  </tbody>
@@ -244,8 +244,7 @@ CRXDE Lite で以下を行います。
    * `"is/content"`
    * `dam:scene7Folder`
    * `<asset-name>`
-例： 
-`https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+例： `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
 
 **解決策**
 

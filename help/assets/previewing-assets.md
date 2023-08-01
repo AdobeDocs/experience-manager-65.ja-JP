@@ -1,6 +1,6 @@
 ---
 title: アセットのプレビュー
-description: Dynamic Media のアセットをプレビューする方法について説明します.
+description: Dynamic Mediaで画像プリセットとビューアプリセットを適用して、ビデオや画像などのアセットをプレビューする方法について説明します。
 uuid: 09e97245-373b-4d50-8ba3-5d1034a29988
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,10 +11,10 @@ docset: aem65
 feature: Asset Management
 role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: 7f8cfe155af3b8831e746ced89c11c971e429f69
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 87%
+source-wordcount: '1380'
+ht-degree: 85%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 87%
 1. **[!UICONTROL Adobe Experience Manager]** の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで「**[!UICONTROL アセット]**」を選択し、「**[!UICONTROL ファイル]**」を選択してアセットにアクセスします。
 1. ページの右上隅付近にある「**[!UICONTROL 表示]**」ドロップダウンリストで「**[!UICONTROL リスト表示]**」を選択します。
 1. （オプション）「**[!UICONTROL 種類]**」列を使用して、プレビューする種類でアセットを並べ替えます。
-1. 以下 **[!UICONTROL タイトル]** 列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
+1. の下 **[!UICONTROL タイトル]** 列で、プレビューするアセットの（サムネール画像ではなく）タイトル名をクリックします。
 1. クリックしたアセットの種類に応じて、次のいずれかの操作を行います。
 
 
