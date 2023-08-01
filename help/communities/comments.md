@@ -1,13 +1,13 @@
 ---
 title: コメントの使用
-description: コメント機能を使用すると、サインインしたサイトの訪問者が自分の意見や知識を共有できます
+description: コメント機能を使用すると、サインインしたサイトの訪問者が自分の意見や知識を共有できます。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
 content-type: reference
 docset: aem65
 exl-id: 30baebd9-13c5-4fde-a494-85601abc32a5
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 7%
@@ -49,7 +49,7 @@ ht-degree: 7%
 
 ### コメントの設定 {#configuring-comments}
 
-配置された `Comments` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
+配置した `Comments` アクセスして選択するコンポーネント `Configure` 編集ダイアログを開くアイコン。
 
 ![設定アイコン](assets/configure.png)
 
@@ -57,7 +57,7 @@ ht-degree: 7%
 
 #### 「コメント」タブ {#comments-tab}
 
-以下 **コメント** タブで、訪問者がコメントを入力する方法を指定します。
+の下 **コメント** タブで、訪問者がコメントを入力する方法を指定します。
 
 * **返信を許可**
 
@@ -81,7 +81,7 @@ ht-degree: 7%
 
 * **許可されるファイルタイプ**
 
-  「ファイルのアップロードを許可」がオンの場合にのみ関連します。 「ドット」区切り記号を使用したファイル名拡張子のコンマ区切りリスト。 例：.jpg、.jpeg、.png、.doc、.docx、.pdf ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
+  「ファイルのアップロードを許可」がオンの場合にのみ関連します。 「ドット」区切り記号を使用したファイル名拡張子のコンマ区切りリスト。 例： .jpg、.jpeg、.png、.doc、.docx、.pdf。 ファイルタイプを指定した場合、指定しなかったファイルは許可されません。 初期設定では何も指定されず、すべてのファイルタイプが許可されます。
 
 * **リッチテキストエディター**
 
@@ -101,7 +101,7 @@ ht-degree: 7%
 
 #### 「ユーザーモデレート」タブ {#user-moderation-tab}
 
-以下 **ユーザーモデレート** タブで、投稿されたコメントの管理方法を指定します。 詳しくは、 [ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md).
+の下 **ユーザーモデレート** タブで、投稿されたコメントの管理方法を指定します。 詳しくは、 [ユーザー生成コンテンツのモデレート](/help/communities/moderate-ugc.md).
 
 * **事前モデレート**
 
@@ -141,15 +141,15 @@ ht-degree: 7%
 
 #### 「並べ替え設定」タブ {#sort-settings-tab}
 
-以下 **並べ替え設定** タブで、投稿されたコメントを表示する際の並べ替え方法を指定します。
+の下 **並べ替え設定** タブで、投稿されたコメントを表示する際の並べ替え方法を指定します。
 
 * **並べ替えフィールド**
 
-  プルダウンして次のいずれかを選択 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`または `Most Liked`.
+  プルダウンして次のいずれかを選択します。 `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`または `Most Liked`.
 
 * **並べ替え順序**
 
-  プルダウンして次のいずれかを選択 `Ascending` または `Descending`.
+  プルダウンして次のいずれかを選択します。 `Ascending` または `Descending`.
 
 ### カスタムコメントタイプへの変更 {#changing-to-a-custom-comment-type}
 
@@ -157,7 +157,7 @@ ht-degree: 7%
 
 カスタムリソースタイプがわかったら、次のように入力します。 [デザインモード](/help/sites-authoring/default-components-designmode.md) をクリックし、配置した `Comments` 追加のタブを含むダイアログを開くコンポーネント。
 
-以下 **リソースタイプ** タブで、新しいインスタンスのカスタム resourceType を指定します。 `Comments or Voting` コンポーネント：
+の下 **リソースタイプ** タブで、新しいインスタンスのカスタム resourceType を指定します。 `Comments or Voting` コンポーネント：
 
 ![resource-type](assets/resource-type.png)
 
@@ -175,7 +175,7 @@ ht-degree: 7%
 
 * **コメントシステムリソースタイプ**
 
-  拡張の resourceType に移動します。 `comments`/apps 内のコンポーネント（コメントシステム）。 ページテンプレートがない場合は空白のままにします [動的に含む](/help/communities/scf.md#add-or-include-a-communities-component) コメントシステムをリソースとしてページに追加する代わりに、基になるスクリプト内で使用します（コメントノード）。 詳しくは、 [{{include}} ヘルパー](/help/communities/handlebars-helpers.md#include).
+  拡張の resourceType に移動します。 `comments`/apps 内のコンポーネント（コメントシステム）。 ページテンプレートがない場合は空白のままにします [動的に含む](/help/communities/scf.md#add-or-include-a-communities-component) コメントシステムをリソースとしてページに追加する代わりに、基になるスクリプト内で使用します（コメントノード）。 詳しくは、 [`{{include}}` ヘルパー](/help/communities/handlebars-helpers.md#include).
 
 ### サイト訪問者エクスペリエンス {#site-visitor-experience}
 

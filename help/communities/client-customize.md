@@ -10,7 +10,7 @@ topic-tags: developing
 content-type: reference
 discoiquuid: 24b6d1d2-c118-4a25-959f-2783961c4ae3
 exl-id: bf34f564-ac93-4c8c-95f7-8690d99d85cb
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: c667a1658e43bb5b61daede5f94256dae582a4fc
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 1%
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 /libs ディレクトリ内のデフォルトコンポーネントは、今後のパッチやアップグレードでは、パブリックインターフェイスを維持しながら必要な方法で/libs ディレクトリを自由に変更できるので、変更しないでください。
 
-これは、 [拡張](#extensions) 特定の用途に対して変更を加え、コンポーネントへの一意のパスを作成し、/libs ディレクトリ内の元のデフォルトコンポーネントをスーパーリソースタイプとして参照することを希望するデフォルトコンポーネント。
+これは、次とは異なります： [拡張](#extensions) 特定の用途に対して変更を加え、コンポーネントへの一意のパスを作成し、/libs ディレクトリ内の元のデフォルトコンポーネントをスーパーリソースタイプとして参照することを希望するデフォルトコンポーネント。
 
 コメントコンポーネントのオーバーレイの簡単な例については、 [コメントコンポーネントのオーバーレイのチュートリアル](overlay-comments.md).
 
@@ -49,19 +49,19 @@ ht-degree: 1%
 
 コンポーネントの拡張（上書き）は、デフォルトを使用するすべてのインスタンスに影響を与えることなく、特定の使用に対して変更を加える方法です。 拡張されたコンポーネントは、/apps フォルダー内で一意の名前を付け、/libs フォルダー内のデフォルトコンポーネントを参照するので、コンポーネントのデフォルトのデザインと動作は変更されません。
 
-これは、 [重ね](#overlays) Sling の特性が解決されるデフォルトコンポーネントは、libs/フォルダー内で検索する前に apps/フォルダーへの相対参照を解決するので、コンポーネントのデザインや動作はグローバルに変更されます。
+これは、次とは異なります： [重ね合わせ](#overlays) Sling の特性が解決されるデフォルトコンポーネントは、libs/フォルダー内で検索する前に apps/フォルダーへの相対参照を解決するので、コンポーネントのデザインや動作はグローバルに変更されます。
 
 コメントコンポーネントの拡張の簡単な例については、 [コメントコンポーネントの拡張チュートリアル](extend-comments.md).
 
-## JavaScript の連結 {#javascript-binding}
+## JavaScript バインディング {#javascript-binding}
 
 コンポーネントの HBS スクリプトは、この機能を実装する JavaScript オブジェクト、モデル、ビューにバインドする必要があります。
 
-の値 `data-scf-component` 属性は、 **`social/tally/components/hbs/rating`**&#x200B;または拡張（カスタマイズ）されたコンポーネント（カスタマイズされた機能）( 例： **weretail/components/hbs/rating**.
+の値 `data-scf-component` 属性は、次のようなデフォルト値に設定できます。 **`social/tally/components/hbs/rating`**&#x200B;または拡張（カスタマイズ）されたコンポーネント（カスタマイズされた機能）( 例： **weretail/components/hbs/rating**.
 
 コンポーネントをバインドするには、コンポーネントスクリプト全体を &lt;div> 要素に次の属性を追加します。
 
-* `data-component-id`=&quot;{{id}}&quot;
+* `data-component-id`=&quot;`{{id}}`&quot;
 
   コンテキストから id プロパティに解決されます。
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 例： `/apps/weretail/components/hbs/rating/rating.hbs`:
 
 ```xml
-<div class="we-Rating" data-component-id="{{id}}" data-scf-component="weretail/components/hbs/rating">
+<div class="we-Rating" data-component-id="`{{id}}`" data-scf-component="weretail/components/hbs/rating">
 
      <!-- HTML with HBS accessing the rating component -->
 
@@ -91,12 +91,12 @@ Web サイトの全体的なテーマに合わせたコンポーネントのカ�
 
 スキニングは、フレームワークスタイルを選択的に上書きするか、まったく新しいスタイルシートを書き込むことで実現できます。 SCF コンポーネントは、コンポーネントを構成する様々な要素に影響を与える名前空間、モジュラー、セマンティック CSS クラスを定義します。
 
-コンポーネントをスキンするには：
+コンポーネントをスキンにするには：
 
 1. 変更する要素を指定します（例：コンポーザー領域、ツールバーボタン、メッセージフォントなど）。
 1. これらの要素に影響する CSS クラス/ルールを特定します。
 1. スタイルシートファイル (.css) を作成します。
-1. クライアントライブラリフォルダー ([clientlibs](#clientlibs-for-scf)) をクリックし、それを [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
+1. クライアントライブラリフォルダーにスタイルシートを含める ([clientlibs](#clientlibs-for-scf)) をクリックし、を使用してテンプレートまたはページから含める必要があります。 [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
 
 1. スタイルシートで指定した CSS クラスおよびルール (#2) を再定義し、スタイルを追加します。
 
@@ -104,7 +104,7 @@ Web サイトの全体的なテーマに合わせたコンポーネントのカ�
 
 >[!CAUTION]
 >
->先頭に `scf-js` は、JavaScript コードで特に使用されます。 これらのクラスは、コンポーネントの状態に影響を与えます（非表示から表示に切り替えるなど）。また、上書きも削除もできません。
+>先頭に `scf-js` は、JavaScript コードで特定の用途を持ちます。 これらのクラスは、コンポーネントの状態に影響を与えます（非表示から表示に切り替えるなど）。また、上書きも削除もできません。
 >
 >また、 `scf-js` クラスはスタイルに影響を与えません。クラス名は、要素の状態を制御するので、副作用が生じる可能性があるという注意を払って、スタイルシートで使用できます。
 
@@ -118,7 +118,7 @@ JavaScript コンポーネントの実装を拡張するには、次の操作が
 1. メソッドを拡張します。
 1. SCF.registerComponent() を使用して、すべてのメソッドをデフォルトまたはカスタマイズされたオブジェクトとビューのいずれかに登録します。
 
-### forum.js:フォーラムのサンプル拡張 — HBS  {#forum-js-sample-extension-of-forum-hbs}
+### forum.js：フォーラムのサンプル拡張 — HBS  {#forum-js-sample-extension-of-forum-hbs}
 
 ```xml
 (function($CQ, _, Backbone, SCF) {
@@ -173,7 +173,7 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 * クライアントフォルダーノード： `/etc/clientlibs/social/hbs/forum`
 * Categories プロパティ： `cq.social.hbs.forum`
 
-この [コミュニティコンポーネントガイド](components-guide.md) 各 SCF コンポーネントに必要な完全な clientlib を示します。
+The [コミュニティコンポーネントガイド](components-guide.md) 各 SCF コンポーネントに必要な完全な clientlib を示します。
 
 [コミュニティコンポーネントの clientlib](clientlibs.md) を使用して、ページに clientlibs を追加する方法を説明します。
 
@@ -192,7 +192,7 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 * クライアントフォルダーノード： `/libs/social/forum/hbs/forum/clientlibs`
 * Categories プロパティ： `cq.social.author.hbs.forum`
 
-注意：オーサー clientlibs は他のライブラリを埋め込みませんが、依存関係をリストします。 他のライブラリに埋め込まれる場合、依存関係は自動的に取り込まれず、埋め込む必要があります。
+注意：オーサークライアントライブラリは他のライブラリを埋め込みませんが、依存関係をリストします。 他のライブラリに埋め込まれる場合、依存関係は自動的に取り込まれず、埋め込む必要があります。
 
 必要なオーサー clientlib は、 [コミュニティコンポーネントガイド](components-guide.md).
 
@@ -200,8 +200,8 @@ SCF の clientlib は、2 つのバリアントに対して非常に具体的な
 
 クライアントライブラリの管理方法は、サイトごとに異なります。 次のような要因が考えられます。
 
-* 全体の速度：サイトがレスポンシブであることが望ましいのかもしれませんが、最初のページの読み込みが少し遅くなることが許容されます。 多くのページで同じ JavaScript を使用している場合、様々な JavaScript を 1 つの clientlib に埋め込み、最初のページから参照して読み込みます。 この単一のダウンロードの JavaScript はキャッシュされたままになり、後続のページでダウンロードするデータ量が最小限に抑えられます。
-* 最初のページまでの短い時間：最初のページがすばやく読み込まれるようにしたい場合があります。 この場合、JavaScript は複数の小さなファイルに含まれ、必要な場所でのみ参照されます。
+* 全体的な速度：サイトがレスポンシブであることが望ましいのかもしれませんが、最初のページの読み込みが少し遅い場合でも問題ありません。 多くのページで同じ JavaScript を使用している場合、様々な JavaScript を 1 つの clientlib に埋め込み、最初のページから参照して読み込みます。 この単一のダウンロードの JavaScript はキャッシュされたままになり、後続のページでダウンロードするデータ量が最小限に抑えられます。
+* 最初のページへの短い時間：最初のページがすばやく読み込まれるようにしたい場合があります。 この場合、JavaScript は複数の小さなファイルに含まれ、必要な場所でのみ参照されます。
 * 最初のページ読み込みとそれ以降のダウンロードの間のバランス。
 
 | **[⇐機能の基本事項](essentials.md)** | **[サーバー側のカスタマイズ ⇒](server-customize.md)** |
