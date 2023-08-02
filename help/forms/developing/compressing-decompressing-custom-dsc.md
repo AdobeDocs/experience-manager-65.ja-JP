@@ -2,10 +2,10 @@
 title: JEE 上の AEM Forms のカスタム DSC を使用したファイルの圧縮と解凍
 description: JEE 上の AEM Forms のカスタム DSC を使用してファイルを圧縮および解凍する方法を説明します
 exl-id: 1b950d8f-6b54-452a-831b-f5644370691d
-source-git-commit: a2fd3c0c1892ac648c87ca0dec440e22144c37a2
-workflow-type: ht
-source-wordcount: '485'
-ht-degree: 100%
+source-git-commit: f0dd1ac3ab9c17a8b331f5048d84ec97dd23924f
+workflow-type: tm+mt
+source-wordcount: '483'
+ht-degree: 90%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 ## 必要な知識 {#prerequisites}
 
-AEM Forms on JEE のプロセス管理、基本的な Java プログラミング、カスタムコンポーネントの作成の経験。
+JEE 上のAEM Forms Process Management、基本的な Java™プログラミング、カスタムコンポーネントの作成の経験があります。
 
 **その他の必要な製品**
 
-[Eclipse](https://www.eclipse.org/) や [Netbeans IDE](https://netbeans.apache.org/) などの Java エディター
+Java™エディター（など） [Eclipse](https://www.eclipse.org/) または [Netbeans IDE](https://netbeans.apache.org/)
 
 ## ユーザーレベル {#user-level}
 
@@ -187,7 +187,7 @@ component.xml ファイルは、次のように表示されます。
 
 ## コンポーネントのパッケージ化とデプロイ {#packaging-deploying-component}
 
-1. Java プロジェクトをコンパイルし、.JAR ファイルを作成します。
+1. Java™プロジェクトをコンパイルし、.JAR ファイルを作成します。
 1. Workbench から、AEM Forms on JEE ランタイムにコンポーネント（.JAR ファイル）をデプロイします。
 1. Workbench からサービスを開始します（下図を参照）。
 
@@ -213,7 +213,7 @@ component.xml ファイルは、次のように表示されます。
 
 * 指定したフォルダー内のすべてのファイルを検索し、ファイルを圧縮ドキュメントとして返す。
 
-* 解凍した後に読者が展開できる多数の PDF ドキュメントを含んだ ZIP ファイルを提供する。これには、AEM Forms on JEE の Reader Extensions モジュールが必要です。
+* 複数のPDF文書を含む ZIP ファイルを指定します。このファイルは、解凍後に Reader 用に拡張できます。 これには、AEM Forms on JEE の Reader Extensions モジュールが必要です。
 
 * Generate PDF サービスを使用して解凍し、PDF ドキュメントに変換できる、異なるタイプのドキュメントを含んだ ZIP ファイルを提供する。
 
