@@ -1,15 +1,15 @@
 ---
 title: コンテンツフラグメントのカスタマイズと拡張
 seo-title: Customizing and Extending Content Fragments
-description: コンテンツフラグメントは、標準アセットを拡張します。
-seo-description: A content fragment extends a standard asset.
+description: コンテンツフラグメントは、標準アセットを拡張します。 カスタマイズ方法を学びます。
+seo-description: A content fragment extends a standard asset. Learn how you can customize them.
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
 exl-id: 08c88e70-4df9-4627-8a66-1fabe3aee50b
-source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
+source-git-commit: ada61b87753f3f3e70acdca0e946428511bd7b00
 workflow-type: tm+mt
-source-wordcount: '2782'
+source-wordcount: '2788'
 ht-degree: 58%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 58%
 
 # コンテンツフラグメントのカスタマイズと拡張{#customizing-and-extending-content-fragments}
 
-コンテンツフラグメントは、標準アセットを拡張します。参照：
+コンテンツフラグメントは、標準アセットを拡張します。以下を参照してください。
 
 * コンテンツフラグメントについて詳しくは、[コンテンツフラグメントの作成と管理](/help/assets/content-fragments/content-fragments.md)および[コンテンツフラグメントを使用したページオーサリング](/help/sites-authoring/content-fragments.md)を参照してください。
 
@@ -61,10 +61,10 @@ ht-degree: 58%
 
    * シンプルなコンテンツフラグメントの定義に使用します。
    * テンプレートは、コンテンツフラグメントの作成時にその構造（基本的なテキストのみ）を定義します。
-   * テンプレートは、作成時にフラグメントにコピーされます。そのため、テンプレートに対するそれ以上の変更は、既存のフラグメントには反映されません。
+   * テンプレートは、作成時にフラグメントにコピーされるので、テンプレートに対するそれ以上の変更は既存のフラグメントには反映されません。
    * 新しいバリエーションを追加する機能など、適宜フラグメントを更新する必要があります。
    * [コンテンツフラグメントテンプレート](/help/sites-developing/content-fragment-templates.md) は、AEMエコシステム内の他のテンプレートメカニズム（ページテンプレートなど）とは異なる方法で動作します。 そのため、分けて考える必要があります。
-   * テンプレートに基づいてコンテンツの MIME タイプを管理する場合は、実際のコンテンツに基づいて管理します。つまり、各要素とバリエーションが異なる MIME タイプを持つことができます。
+   * テンプレートに基づいてコンテンツの MIME タイプが実際のコンテンツに基づいて管理されます。つまり、各要素とバリエーションの MIME タイプが異なる場合もあります。
 
 ### Assets との統合 {#integration-with-assets}
 
@@ -128,17 +128,17 @@ ht-degree: 58%
 
 >[!CAUTION]
 >
->この [コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) が推奨されました。 詳しくは、 [コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja) を参照してください。
+>The [コンテンツフラグメントコアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja) が推奨されました。 詳しくは、 [コアコンポーネントの開発](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=ja) を参照してください。
 
 コンテンツフラグメントは、他のアセットタイプと同様に、AEMページから参照できます。 AEM では、[**コンテンツフラグメント**&#x200B;コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=ja)を利用できます。これは、[コンテンツフラグメントをページ上に含めることができるコンポーネント](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)です。この&#x200B;**コンテンツフラグメント**&#x200B;コアコンポーネントを拡張することもできます。
 
 * このコンポーネントは、`fragmentPath` プロパティを使用して、実際のコンテンツフラグメントを参照します。`fragmentPath` プロパティは、その他のアセットタイプの類似プロパティと同じ方法で処理されます。例えば、コンテンツフラグメントが別の場所に移動された場合などです。
 
 * コンポーネントを使用すると、表示するバリエーションを選択できます。
-* さらに、出力を制限するために、段落の範囲を選択できます。例えば、複数列の出力に使用できます。
+* さらに、段落の範囲を選択して出力を制限できます。例えば、複数列の出力に使用できます。
 * このコンポーネントは、 [中間コンテンツ](/help/sites-developing/components-content-fragments.md#in-between-content):
 
-   * ここで、コンポーネントを使用して、他のアセット（画像など）を （参照されるフラグメントの段落の間）
+   * ここで、コンポーネントを使用して、他のアセット（画像など）を （参照されるフラグメントの段落の間）。
    * 中間コンテンツの場合は、次の操作が必要です。
 
       * 参照が不安定になる可能性に注意します。中間コンテンツ（ページのオーサリング時に追加）とその横にある段落の関係は、固定されていません。（コンテンツフラグメントエディター内で）中間コンテンツの位置の前に新しい段落を挿入すると、相対的な位置が失われることがあります。
@@ -199,7 +199,7 @@ ht-degree: 58%
 
   コンテンツフラグメントは、[AEM の翻訳ワークフロー](/help/sites-administering/tc-manage.md)と完全に統合されています。つまり、アーキテクチャレベルでは以下を意味します。
 
-   * コンテンツフラグメントの個々の翻訳は、実際には別々のフラグメントです。例：
+   * コンテンツフラグメントの個々の翻訳は、実際には別々のフラグメントです。次に例を示します。
 
       * 様々な言語のルートの下に配置されています。
 
@@ -270,7 +270,7 @@ ht-degree: 58%
   この情報には次が含まれます。
 
    * 基本データへのアクセス（タイトル、説明）
-   * フラグメントの要素のテンプレート/モデルにアクセスするには：
+   * フラグメントの要素のテンプレート/モデルにアクセスするには、次の手順を実行します。
 
       * 要素テンプレートのリスト
       * 特定の要素の構造情報を取得する
@@ -415,7 +415,7 @@ ht-degree: 58%
 
 * 複数のビュー（= HTML ページ）にまたがる可能性があるコンテンツフラグメントを編集するときは、原子性を保証する必要があります。
 * さらに、編集はトランザクション単位でおこなう必要があります。すなわち、編集セッションの終了時には、変更をコミット（保存）するか、ロールバック（キャンセル）します&#x200B;*。*
-* エッジケースは適切に処理される必要があります。これには、ユーザーが URL を手動で入力するか、グローバルナビゲーションを使用してページを離れる場合などの状況が含まれます。
+* エッジケースは適切に処理する必要があります。例えば、ユーザーが URL を手動で入力するか、グローバルナビゲーションを使用してページを離れる場合などです。
 * データの損失を防ぐために、定期的な自動保存（x 分ごと）を使用できます。
 * 2 人のユーザーが同時にコンテンツフラグメントを編集した場合、他のユーザーが変更内容を上書きしないようにする必要があります。
 
@@ -453,7 +453,7 @@ ht-degree: 58%
 
 * ページの入力
 
-   * 編集セッションが既に存在するかどうかを確認します。それぞれの cookie を確認することで、
+   * 編集セッションが既に存在するかどうかを確認します。それぞれの Cookie を確認します。
 
       * 存在する場合は、編集セッションが、現在編集中のコンテンツフラグメントに対して開始されたことを確認します
 
