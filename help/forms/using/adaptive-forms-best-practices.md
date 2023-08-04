@@ -9,16 +9,16 @@ topic-tags: author
 discoiquuid: 43c431e4-5286-4f4e-b94f-5a7451c4a22c
 feature: Adaptive Forms
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
-source-git-commit: e7a3558ae04cd6816ed73589c67b0297f05adce2
+source-git-commit: 000ab7bc9a686b62fcfc122f9cf09129101ec9a8
 workflow-type: tm+mt
-source-wordcount: '4586'
-ht-degree: 40%
+source-wordcount: '4738'
+ht-degree: 39%
 
 ---
 
 # アダプティブフォームの操作のベストプラクティス {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
 ## 概要 {#overview}
 
@@ -67,7 +67,7 @@ AEMプロジェクトを設定したら、アダプティブフォームのテ�
 * アダプティブフォームテンプレートは、アダプティブフォームの構造とヘッダーとフッターの情報を定義する専用のAEMページです。 テンプレートには、アダプティブフォームのレイアウト、スタイル、基本構造が事前に設定されています。 AEM Formsには、アダプティブフォームの作成に使用できる標準のテンプレートとコンポーネントが用意されています。 ただし、必要に応じて、カスタムのテンプレートやコンポーネントを作成できます。 アダプティブフォーム内で必要となる追加のテンプレートやコンポーネントの要件を収集することをお勧めします。 詳しくは、 [アダプティブフォームおよびコンポーネントのカスタマイズ](/help/forms/using/adaptive-forms-best-practices.md#customize-components).
 * AEM Formsでは、次のフォームモデルに基づいてアダプティブフォームを作成することができます。 フォームモデルは、フォームとAEMシステムとの間でデータを交換するためのインターフェイスとして機能し、アダプティブフォーム内外のデータフローに XML ベースの構造を提供します。 また、フォームモデルは、スキーマと XFA 制約の形式でアダプティブフォームにルールと制約を適用します。
 
-   * **なし**:このオプションで作成されたアダプティブフォームは、フォームモデルを使用しません。 このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。
+   * **なし**：このオプションで作成されたアダプティブフォームは、フォームモデルを使用しません。 このようなフォームで生成されるデータ XML は、フィールドと対応する値を持つフラットな構造です。
    * **XML または JSON スキーマ**：XML スキーマと JSON スキーマは、組織内のバックエンドシステムによって生成されて使用されるデータの構造を表します。アダプティブフォームにスキーマを関連付け、そのスキーマの要素を使用することにより、アダプティブフォームに動的なコンテンツを追加することができます。スキーマの要素は、アダプティブフォームを作成する際に、コンテンツブラウザーの「データモデルオブジェクト」タブで使用できます。スキーマ要素をドラッグ＆ドロップしてフォームを作成できます。
    * **XFA フォームテンプレート**:XFA ベースの Forms5 に投資している場合、これは理想的なフォームHTMLです。 XFA ベースのフォームをアダプティブフォームに直接変換する方法を提供します。 既存の XFA ルールは、関連するアダプティブフォーム内でも保持されます。 作成されたアダプティブフォームは、検証、イベント、プロパティ、パターンなどの XFA 構成をサポートします。
    * **フォームデータモデル**：データベース、web サービス、AEM ユーザープロファイルなどのバックエンドシステムを統合し、アダプティブフォームに事前入力して、送信されたフォームデータをバックエンドシステムに再び書き込む場合は、このフォームモデルが適しています。フォームデータモデルエディターを使用すると、アダプティブフォームの作成に使用できるフォームデータモデル内のエンティティやサービスを定義して設定することができます。 詳しくは、 [AEM Forms Data Integration](/help/forms/using/data-integration.md).
@@ -86,13 +86,13 @@ AEMプロジェクトを設定したら、アダプティブフォームのテ�
    * 編集可能テンプレートは、作成者がテンプレートエディターを使用して作成します。 テンプレートエディターを使用して、テンプレートの基本的な構造と初期コンテンツを定義できます。 構造レイヤーでの変更は、そのテンプレートを使用するすべてのフォームに反映されます。 初期コンテンツには、事前設定済みのテーマ、事前入力サービス、送信アクションなどが含まれる場合があります。 ただし、フォームエディターを使用して、フォームに対してこれらの設定を変更することはできます。 詳しくは、[アダプティブフォームテンプレート](/help/forms/using/template-editor.md)を参照してください。
 
 * 特定のフィールドやパネルインスタンスにスタイルを設定するには、[インラインスタイル](/help/forms/using/inline-style-adaptive-forms.md)を使用します。または、CSS ファイルでクラスを定義し、コンポーネントの CSS クラスプロパティでクラス名を指定します。
-* コンポーネントにクライアントライブラリを含めると、そのコンポーネントを使用するアダプティブフォームやフラグメント全体で一貫してスタイルを適用できます。 詳しくは、 [アダプティブフォームのページコンポーネントの作成](/help/forms/using/custom-adaptive-forms-templates.md).
+* コンポーネントにクライアントライブラリを含めると、そのコンポーネントを使用するアダプティブフォームやフラグメント全体で一貫してスタイルを適用できます。 詳しくは、 [アダプティブフォームのページコンポーネントを作成する](/help/forms/using/custom-adaptive-forms-templates.md).
 * クライアントライブラリで定義されたスタイルを適用し、アダプティブフォームコンテナプロパティの「 CSS ファイルパス」フィールドでクライアントライブラリへのパスを指定して、アダプティブフォームを選択します。
 * スタイルのクライアントライブラリを作成するには、テーマエディターの基本 clientlib またはフォームコンテナのプロパティで、カスタム CSS ファイルを設定します。
 * アダプティブフォームには、レスポンシブ、タブ付き、アコーディオン、ウィザードなどのパネルレイアウトが用意されており、フォームコンポーネントをパネルにレイアウトする方法を制御できます。 カスタムパネルレイアウトを作成して、フォーム作成者が使用できるようにすることができます。 詳しくは、[アダプティブフォームのカスタムレイアウトコンポーネントの作成](/help/forms/using/custom-layout-components-forms.md)を参照してください。
 * また、フィールドやパネルレイアウトなど、アダプティブフォームの特定のコンポーネントをカスタマイズすることもできます。
 
-   * 以下を使用： [オーバーレイ](/help/sites-developing/overlays.md) コンポーネントのコピーを変更するAEMの機能。 デフォルトのコンポーネントを変更することはお勧めしません。
+   * 以下を使用します。 [オーバーレイ](/help/sites-developing/overlays.md) コンポーネントのコピーを変更するAEMの機能。 デフォルトのコンポーネントを変更することはお勧めしません。
    * /libs 内の既製のアダプティブフォームコンポーネントのレイアウトをカスタマイズするには、次の手順を実行します。 [カスタムレイアウトコンポーネントの作成](/help/forms/using/custom-layout-components-forms.md) に加えて [デフォルトレイアウト](/help/forms/using/layout-capabilities-adaptive-forms.md).
    * カスタムウィジェットや外観を作成して、カスタムインタラクティビティを導入します。 デフォルトのコンポーネントを変更することはお勧めしません。 詳しくは、 [外観フレームワーク](/help/forms/using/introduction-widgets.md).
 
@@ -103,6 +103,7 @@ AEMプロジェクトを設定したら、アダプティブフォームのテ�
 **設定ブラウザー**&#x200B;で有効になっているフォームテンプレートを使用して、アダプティブ フォームを作成できます。フォームテンプレートを有効にするには、[アダプティブフォームテンプレートの作成](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=ja)を参照してください。
 
 フォームテンプレートは、別のオーサーマシンで作成されたアダプティブフォームパッケージからアップロードすることもできます。 [aemforms-references-* パッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすると、フォームテンプレートが利用可能になります。推奨されるベストプラクティスの一部を次に示します。
+
 * **nosamplecontent** 実行モードは、オーサーノードに対してのみ推奨され、パブリッシュノードに対しては推奨されません。
 * アダプティブフォーム、テーマ、テンプレート、クラウド設定などのアセットのオーサリングはオーサーノード上でのみ実行でき、設定済みのパブリッシュノードで公開できます。
 詳しくは、[フォームとドキュメントの公開と非公開](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=ja)を参照してください。
@@ -121,7 +122,7 @@ Forms 関連のサンプルテンプレート、テーマおよび DOR パッケ
 
 * アダプティブフォームのコンポーネントは、アダプティブフォームのページでのみ使用することをお勧めします。 コンポーネントは、親階層に依存します。 このため、AEM ページではこれらのコンポーネントを使用しないでください。
 
-また、 [アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md).
+詳しくは、コンポーネントの説明とベストプラクティス ( [アダプティブフォームのオーサリングの概要](/help/forms/using/introduction-forms-authoring.md).
 
 ### アダプティブフォームでのルールの使用 {#using-rules-in-adaptive-forms}
 
@@ -154,6 +155,39 @@ AEM Forms [ルールエディター](/help/forms/using/rule-editor.md) これに
 
 * アダプティブフォームの作成者は、フォーム内でビジネスロジックを構築するために JavaScript コードを記述する必要が生じる場合があります。 JavaScript は強力で効果的ですが、セキュリティ上の期待に基づいて妥協する可能性が高くなります。 したがって、フォーム作成者が信頼できるペルソナであることと、フォームを実稼動環境に配置する前に JavaScript コードを確認して承認するプロセスがあることを確認する必要があります。 管理者は、役割や機能に基づいて、ルールエディターへのアクセスをユーザーグループに制限できます。 詳しくは、 [選択したユーザーグループにルールエディターへのアクセスを許可する](/help/forms/using/rule-editor-access-user-groups.md).
 * ルール内で式を使用して、アダプティブフォームを動的にすることができます。 すべての式は有効な JavaScript 式で、アダプティブフォームのスクリプティングモデル API を使用します。 これらの式は、特定のタイプの値を返します。数式およびベストプラクティスについて詳しくは、[アダプティブフォームの式](/help/forms/using/adaptive-form-expressions.md)を参照してください。
+
+* Adobeでは、ルールエディターでルールを作成する際に、非同期操作よりも JavaScript 同期操作を使用することをお勧めします。 非同期操作は、強くお勧めしません。 ただし、非同期操作が避けられない状況に陥った場合は、JavaScript Closure 関数を実装する必要があります。 これにより、潜在的な競合状態に対して効果的に保護し、ルールの実装が最適なパフォーマンスを提供し、全体を通して安定性を維持できるようにします。
+
+  例えば、外部 API からデータを取得し、そのデータに基づいてルールを適用する必要があるとします。 クロージャを使用して非同期 API 呼び出しを処理し、データを取得した後でルールが適用されるようにします。 次にサンプルコードを示します。
+
+  ```JavaScript
+       function fetchDataFromAPI(apiEndpoint, callback) {
+        // Simulate asynchronous API call with setTimeout
+        setTimeout(() => {
+          // Assuming the API call is successful, we receive some data
+          const data = {
+            someValue: 42,
+          };
+          // Invoke the callback with the fetched data
+          callback(data);
+        }, 2000); // Simulate a 2-second delay for the API call
+      }
+      // Rule implementation using Closure
+      function ruleImplementation(apiEndpoint) {
+        // Using a closure to handle the asynchronous API call and rule application
+        // say you have set this value in street field inside address panel
+        var streetField = address.street;
+        fetchDataFromAPI(apiEndpoint, (data) => {
+          streetField.value = data.someValue;
+        });
+      }
+      // Example usage of the rule implementation
+      const apiEndpoint = "https://example-api.com/data";
+      ruleImplementation(apiEndpoint);
+  ```
+
+  この例では、 `fetchDataFromAPI` を使用して非同期 API 呼び出しをシミュレートします。 `setTimeout`. データが取得されると、指定されたコールバック関数を呼び出します。これは、後続のルールアプリケーションを処理するためのクロージャです。 The `ruleImplementation` 関数には、ルールロジックが含まれます。
+
 
 ### テーマの操作 {#working-with-themes}
 
@@ -211,7 +245,7 @@ AEM Forms [ルールエディター](/help/forms/using/rule-editor.md) これに
 * デフォルトの送信アクションが実際のユースケースに適していない場合は、カスタム送信アクションを作成できます。詳しくは、[アダプティブフォーム向けのカスタム送信アクションの作成](/help/forms/using/custom-submit-action-form.md)を参照してください。
 * サーバーサイドの検証を含めて、無効なデータ送信を防ぎます。
 
-アダプティブフォームでAdobe Signの複数署名操作を活用することができます。 アダプティブフォームでAdobe Signを設定する際は、以下の点を考慮してください。 詳しくは、[アダプティブフォームでの Adobe Sign の使用](/help/forms/using/working-with-adobe-sign.md)を参照してください。
+アダプティブフォームでAdobe Signの複数の署名を利用することができます。 アダプティブフォームでAdobe Signを設定する際は、以下の点を考慮してください。 詳しくは、[アダプティブフォームでの Adobe Sign の使用](/help/forms/using/working-with-adobe-sign.md)を参照してください。
 
 * Adobe Sign が有効になっているアダプティブフォームは、すべての署名者がフォームに署名するまで送信されません。すべての署名者によりフォームが署名されるまで、フォームは「保留中の署名」状態で表示されます。
 * フォーム内署名機能を設定したり、送信時に署名者を署名ページにリダイレクトしたりできます。
@@ -223,9 +257,9 @@ AEM Forms [ルールエディター](/help/forms/using/rule-editor.md) これに
 
 * アダプティブフォームが基にしているフォームデータモデルに応じて、DoR 用のテンプレートを次のように設定できます。
 
-   * **XFA フォームテンプレート**:関連する XDP ファイルを DoR テンプレートとして使用します。
-   * **XSD スキーマ**:アダプティブフォームで使用されているのと同じ XML スキーマを使用する、関連する XFA テンプレートを使用します。
-   * **なし**:自動生成された DoR を使用します。
+   * **XFA フォームテンプレート**：関連する XDP ファイルを DoR テンプレートとして使用します。
+   * **XSD スキーマ**：アダプティブフォームで使用されているのと同じ XML スキーマを使用する、関連する XFA テンプレートを使用します。
+   * **なし**：自動生成された DoR を使用します。
 
 * アダプティブフォームエディターの「レコードのドキュメント」タブから、ヘッダー、フッター、画像、色、フォントなどを直接設定します。
 * `DoRService` を使用して、DoR をプログラムにより生成します。
@@ -279,7 +313,7 @@ AEMでは、アダプティブフォームのローカライズに使用でき�
 多くの場合、AEMプロジェクトを別の環境に移動する必要があります。 移動時に覚えておくべき重要な点は次のとおりです。
 
 * 既存のクライアントライブラリ、カスタムコード、設定のバックアップを作成します。
-* 製品パッケージとパッチを、新しい環境で指定した順序で手動でデプロイします。
+* 製品パッケージとパッチを、新しい環境で、指定した順序で手動でデプロイします。
 * 新しいAEMサーバー上に、プロジェクト固有のコードパッケージとバンドルを手動で、別のパッケージまたはバンドルとしてデプロイします。
 * （*JEE 上の AEM Forms のみ*）LCA および DSC を手動で Forms ワークフローサーバー上にデプロイします。
 * 用途 [Export-Import](/help/forms/using/import-export-forms-templates.md) 機能を使用して、アセットを新しい環境に移動できます。 レプリケーションエージェントを設定し、アセットを公開することもできます。
@@ -295,7 +329,7 @@ AEMでは、アダプティブフォームのローカライズに使用でき�
 * `/content/forms/af/` パス および `/content/dam/formsanddocuments/*` パスはキャッシュしないでください。アダプティブフォームのキャッシュ設定について詳しくは、[アダプティブフォームのキャッシュ](/help/forms/using/configure-adaptive-forms-cache.md)を参照してください。
 
 * Web サーバーHTMLモジュールを使用して圧縮を有効にします。 詳しくは、 [AEM Formsサーバーのパフォーマンス調整](/help/forms/using/performance-tuning-aem-forms.md).
-* 大規模なフォームのリクエスト設定ごとに呼び出しを増やします。 詳しくは、 [大規模フォームと複雑なフォームのパフォーマンスの最適化](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms).
+* 大規模なフォームのリクエスト設定ごとの呼び出し数を増やします。 詳しくは、 [大規模フォームと複雑なフォームのパフォーマンスの最適化](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms).
 * 作成 [エラーハンドラーによって表示されるカスタムエラーページ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=ja).
 * AEM Forms サーバーを保護します。
 
