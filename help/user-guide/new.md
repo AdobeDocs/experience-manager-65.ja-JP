@@ -1,11 +1,11 @@
 ---
-title: 新規Adobe Experience Managerユーザー向けリソース
-description: Adobe Experience Managerを初めて使用するユーザー向けの質問、回答、リソース
+title: 新規 Adobe Experience Manager ユーザー向けリソース
+description: Adobe Experience Manager を初めて使用するユーザー向けの質問、回答、リソース
 exl-id: a238954f-011c-416b-81af-6cdf78ddaf85
 source-git-commit: 85d39e59b82fdfdcd310be61787a315668aebe38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '300'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -28,13 +28,13 @@ AEM リリースについては、[AEM Sustenance Hub](https://experienceleague.
 
 ## AEM の公式サポートを受けるにはどうしたらよいですか。 {#official-support}
 
-ライセンスをお持ちのお客様は、アドビの[カスタマーケアチーム](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)から AEM のサポートを受けることができます。また、 [AEM Community](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=ja) または AdobeExpCare Twitterハンドルの `https://twitter.com/adobeexpcare`.
+ライセンスをお持ちのお客様は、アドビの[カスタマーケアチーム](https://experienceleague.adobe.com/?support-solution=General&amp;lang=ja#support)から AEM のサポートを受けることができます。また、[AEM コミュニティ](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?lang=ja)または `https://twitter.com/adobeexpcare` の AdobeExpCare Twitter ハンドル名で質問することもできます。
 
 ## AEM の以前のバージョンのドキュメントはどこにありますか？ {#versions}
 
-AEM 6.5 ドキュメントに適した場所にいます。
+AEM 6.5 ドキュメントはこちらにあります。
 
-また、Adobe Experience Manager の古いバージョンに関するドキュメントも用意しています。以下をご覧ください。 [Adobe Experience Manager、CQ および CRX ドキュメントの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照してください。
+また、アドビでは、Adobe Experience Manager の古いバージョンに関するドキュメントも用意しています。詳しくは、[Adobe Experience Manager、CQ および CRX ドキュメントの以前のバージョン](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)を参照してください。
 
 ## AEM 6.5 のリリースノートはどこにありますか？ {#release-notes}
 
@@ -43,4 +43,4 @@ AEM のすべてのリリースノートについては、次を参照してく�
 * [AEM 6.5 リリースノート](/help/release-notes/home.md)
 * [AEM 6.5 で削除された機能および非推奨（廃止予定）になった機能のリスト](/help/release-notes/deprecated-removed-features.md)
 
-ご質問がある場合は、 [AEM Community team](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) または、AdobeExpCare Twitterハンドルに関する質問 ( `https://twitter.com/adobeexpcare`.
+不明な点については、[AEM Community チーム](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html)にお問い合わせいただくか、AdobeExpCare Twitter ハンドル名で `https://twitter.com/adobeexpcare` にご質問ください。
