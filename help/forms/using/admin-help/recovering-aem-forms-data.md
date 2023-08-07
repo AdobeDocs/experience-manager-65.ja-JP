@@ -11,9 +11,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 4e093114-219b-4018-9530-9002eb665448
 exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
 source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1122'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -71,15 +71,15 @@ AEM Forms は、以下の障害から確実に回復します。
 
    * （JBoss®）`[appserver root]/server/'server'/svcnative/DocumentStorage/backup` を次に変更：
 
-     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`。
+     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`
 
    * （WebLogic）`[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
-     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`。
+     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`
 
    * （WebSphere®）次のように `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` の名前を変更します。
 
-     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`。
+     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`
 
 1. コンテンツ保存場所のルートディレクトリを復元するには、まずAEM Forms の既存のインストールにあるコンテンツ保存場所のルートディレクトリの内容を削除し、次に、スタンドアロン環境またはクラスター環境のタスクに従って内容を復元します。
 
