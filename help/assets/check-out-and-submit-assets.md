@@ -7,9 +7,9 @@ feature: Asset Management
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '448'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 90%
 
 アセットをチェックイン／チェックアウトするには、アセットへの書き込み権限が必要です。
 
-この機能は、複数のユーザーがチーム間でワークフローの編集で共同作業する場合に、作成者が加えた変更が他のユーザーによって上書きされるのを防ぐのに役立ちます。
+この機能は、複数のチームにわたる編集ワークフローで複数のユーザーが共同作業をする場合に、ある作成者が変更した内容を他のユーザーが上書きしてしまう事態を防ぐのに役立ちます。
 
 ## アセットのチェックアウト {#checking-out-assets}
 
@@ -34,7 +34,7 @@ ht-degree: 90%
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
 
-   アセットを選択します。アセットを編集、注釈、公開、削除するためのオプションはツールバーに表示されません。
+   アセットを選択します。ツールバーには、アセットの編集、注釈付け、公開、削除を行うためのオプションが表示されないことを確認してください。
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 
@@ -71,4 +71,3 @@ ht-degree: 90%
 >
 >* [ [!DNL Experience Manager] デスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#how-app-works2)でのチェックインとチェックアウトについて
 >* [チェックインとチェックアウトについて説明するビデオチュートリアル [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html?lang=ja)
-
