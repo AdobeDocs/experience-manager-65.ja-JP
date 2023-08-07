@@ -13,9 +13,9 @@ docset: aem65
 legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
 source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '449'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -83,7 +83,7 @@ Sites コンソールから「[コンテンツインサイト](/help/sites-autho
 1. コンテンツインサイトを表示するページを Sites コンソールで選択します。
 1. ツールバーで、Analytics と Recommendations アイコンをクリックします。
 
-   ![Analytics とRecommendationsアイコン](do-not-localize/chlimage_1-14.png)
+   ![Analytics と Recommendations アイコン](do-not-localize/chlimage_1-14.png)
 
 ## ページエディターに表示できる分析結果（Activity Map） {#analytics-visible-from-the-page-editor-activity-map}
 
