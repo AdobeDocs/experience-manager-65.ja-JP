@@ -3,9 +3,9 @@ title: AEM 6.5 ユーザーガイドハブ
 description: AEM 6.5 の理解、インストール、管理および使用に関する重要なリソースの概要
 exl-id: 51788662-6214-408e-98d9-692950c366be
 source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '212'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->次に該当するかどうかは不明です： **サポート委任者**? これが [ユーザータイプが適用されます](https://helpx.adobe.com/jp/experience-cloud/supported-users.html) Adobe [エンタープライズサポート利用条件](https://helpx.adobe.com/jp/support/programs/enterprise-support-terms.html).
+>**サポート担当者**&#x200B;かどうか不明な場合は、この[ユーザータイプが自分に当てはまるかどうか](https://helpx.adobe.com/jp/experience-cloud/supported-users.html)確認し、アドビの[エンタープライズサポート利用条件](https://helpx.adobe.com/jp/support/programs/enterprise-support-terms.html)についても確認してください。
 
 ## コミュニティ {#community}
 
