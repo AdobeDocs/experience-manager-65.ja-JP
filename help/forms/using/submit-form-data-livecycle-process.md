@@ -1,6 +1,6 @@
 ---
-title: JEE 上のAEM Formsプロセスにデータを送信するためのAEM Formsの設定
-description: フォームデータを処理するために、アダプティブフォームを JEE 上のAEM Formsプロセスと統合します。
+title: AEM Forms がデータを JEE 上の AEM Forms プロセスに送信するための設定
+description: アダプティブフォームを JEE 上の AEM Forms プロセスと統合し、フォームデータを処理します。
 uuid: 71a894d7-7c0a-43a6-afe5-40c4a15c66d6
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,38 +10,38 @@ docset: aem65
 role: Admin
 exl-id: 025a3314-8b9d-48e1-a74f-ea0c933e21e3
 source-git-commit: 78c584db8c35ea809048580fe5b440a0b73c8eea
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '318'
-ht-degree: 28%
+ht-degree: 100%
 
 ---
 
-# JEE 上のAEMフォームにフォームデータを送信するためのAEM Formsの設定プロセス{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
+# AEM Forms がフォームデータを JEE 上の AEM Forms プロセスに送信するための設定{#configuring-aem-forms-to-submit-form-data-to-an-aem-forms-on-jee-process}
 
-アダプティブフォームは、さらに処理するためのデータを JEE 上のAEM Formsプロセスに送信する機能をサポートしています。 JEE 上のAEM Formsプロセスのトリガーを、送信済みフォームから利用可能なデータと共に設定できます。 JEE 上のAEM Formsプロセスにアダプティブフォームを送信するためにAEM Formsインスタンスを有効にするには、次の手順を実行します。
+アダプティブフォームは、JEE 上の AEM Forms プロセスへのデータの送信をサポートしているため、データの追加処理を行えます。送信済みフォームの使用可能なデータを使用して JEE 上の AEM Forms プロセスをトリガーできます。次の手順を実行して、JEE 上の AEM Forms プロセスにアダプティブフォームを送信する AEM Forms インスタンスを有効にします。
 
-## AEM Forms Server の設定 {#configure-your-aem-forms-server}
+## AEM Forms サーバーの設定 {#configure-your-aem-forms-server}
 
-次の手順を実行して、AEM Forms Server が JEE 上のAEM Formsサーバーにデータを送信できるようにします。
+次の手順を実行して、JEE 上の AEM Forms にデータを送信する AEM Forms サーバーを有効にします。
 
 1. AEM web コンソールの設定ページ（https://[*host*]:[*port*]/system/console/configMgr）に移動します。
 
 1. **Adobe LiveCycle Client SDK Configuration** コンポーネントを見つけてクリックします。
-1. JEE 上のAEM Formsサーバーの設定サーバー URL、ユーザー名、パスワードをクリックして編集します。
+1. クリックして、JEE 上の AEM Forms サーバーの URL、ユーザー名、パスワードを編集します。
 1. 設定を確認し、「**保存**」をクリックします。
 
 ![Adobe LiveCycle Client SDK 設定](assets/clientsdkconfiguration.jpg)
 
 ## LiveCycle プロセスのフィールドへのデータのマッピング {#map-data-with-process-fields}
 
-AEM Formsの設定後、送信済みフォームのデータ XML と添付ファイルを、JEE 上のAEM Formsプロセスのフィールドにマッピングします。 次の手順を実行します。
+AEM Forms の設定が完了したら、データ XML と添付ファイルを、送信済みフォームから JEE 上の AEM Forms プロセスのフィールドにマッピングします。次の手順を実行します。
 
-1. AEM Web 設定コンソールで、「 」をクリックして **ガイドLiveCycleプロセスロケーターと呼び出し元** 設定。
+1. AEM web コンソールの設定で、**LiveCycle プロセスロケーターと呼び出し元へのガイド**&#x200B;設定をクリックして編集します。
 1. 以下のパラメーターを指定します。
 
-   * **データ xml パラメーターの名前** （必須）:送信されたデータを処理する必要がある JEE 上のAEM Formsプロセスの XML プロパティファイルを指定します。 デフォルト値は **dataxml** です。
+   * **データ xml パラメーターの名前**（必須）：送信されたデータを処理する必要がある AEM Forms on JEE プロセスの XML プロパティファイルを指定します。デフォルト値は **dataxml** です。
 
-   * **添付ファイルパラメーターの名前** （オプション）:JEE 上のAEM Formsプロセスで処理する必要があるドキュメントオブジェクトのリストを指定します。 デフォルト値は **fileAttachmentsList** です。
+   * **ファイル添付パラメーターの名前**（オプション）：JEE 上の AEM Forms プロセスで処理する必要のあるドキュメントオブジェクトのリストを指定します。デフォルト値は **fileAttachmentsList** です。
 
 1. 設定を確認し、「**保存**」をクリックします。
 
