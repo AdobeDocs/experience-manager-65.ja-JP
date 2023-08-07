@@ -8,10 +8,10 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-source-git-commit: 00f8b2c72aab37a57ab76e684f432250d2de3470
+source-git-commit: 3bc61e56d2fcd9f32c37a7ea04b0ffc6728bfc56
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 7%
+source-wordcount: '889'
+ht-degree: 9%
 
 ---
 
@@ -20,8 +20,8 @@ ht-degree: 7%
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
+| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html?lang=ja) |
 | AEM 6.5 | この記事 |
-| AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) |
 
 **適用先：** ✅アダプティブフォームのコアコンポーネ❎ントアダプティブフォームの基盤コンポーネント
 
@@ -44,7 +44,7 @@ AEM 6.5 Forms環境でアダプティブFormsコアコンポーネントを有�
 
 ## 最新のAEMアーキタイプベースのプロジェクトを作成してデプロイする
 
-AEMアーキタイプ 41 を作成するには、以下を実行します。 [後](https://github.com/adobe/aem-project-archetype) ベースのプロジェクトを作成し、すべてのオーサーインスタンスとパブリッシュインスタンスにデプロイします。
+AEMアーキタイプ 41 を作成するには、以下を実行します。 [後で](https://github.com/adobe/aem-project-archetype) ベースのプロジェクトを作成し、すべてのオーサーインスタンスとパブリッシュインスタンスにデプロイします。
 
 1. AEM 6.5 Formsインスタンスをホストし、実行しているコンピューターに、管理者としてログインします。
 1. コマンドプロンプトまたはターミナルを開き、次のコマンドを実行してAEM Archetype プロジェクトを作成します（フォームオプションが有効な状態）。
@@ -79,9 +79,9 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 
    上記のコマンドを実行する際は、次の点を考慮してください。
 
-   * この `aemVersion` プロパティ `6.5.15.0` 他の何かに
+   * この `aemVersion` プロパティから `6.5.15.0` 他の何かに
 
-   * を `archetypeVersion` プロパティを `41` または後で。 最新バージョンについては、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) ドキュメント。
+   * を設定します。 `archetypeVersion` プロパティを `41` または後で。 最新バージョンについては、 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) ドキュメント。
 
    * コマンドを更新して、 `appTitle`, `appId`、および `groupId`. また、  `includeFormsenrollment` プロパティを `y`. Forms Portal を使用している場合、 `includeExamples=y` Forms Portal コアコンポーネントをプロジェクトに含めるオプション。
 
@@ -112,7 +112,7 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
    1. ファイルを保存して閉じます。
 
 
-1. AEMアーキタイププロジェクトが正常に作成されたら、環境用のデプロイメントパッケージを構築します。 パッケージをビルドするには：
+1. AEMアーキタイププロジェクトが正常に作成されたら、環境用のデプロイメントパッケージを構築します。 パッケージをビルドするには、次の手順に従います。
 
    1. AEMアーキタイププロジェクトのルートディレクトリに移動します。
 
@@ -127,7 +127,7 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 
    AEMアーキタイププロジェクトが正常に構築されたら、AEMパッケージが生成されます。 パッケージは、次の場所にあります。 [AEM Archetype プロジェクトフォルダー]\all\target\[appid].all-[version].zip
 
-1. 以下を使用： [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) をデプロイするには [AEM Archetype プロジェクトフォルダー]\all\target\[appid].all-[version]すべてのオーサーインスタンスとパブリッシュインスタンス上に.zip パッケージを作成します。
+1. 以下を使用します。 [パッケージマネージャー](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=ja) をデプロイするには [AEM Archetype プロジェクトフォルダー]\all\target\[appid].all-[version]すべてのオーサーインスタンスとパブリッシュインスタンス上に.zip パッケージを作成します。
 
 >[!NOTE]
 >
@@ -142,7 +142,7 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 
 ### コアコンポーネントとは
 
-この [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) は、AEMの開発時間を短縮し、Web サイトのメンテナンスコストを削減するための、標準化された Web コンテンツ管理 (WCM) コンポーネントのセットです。
+The [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=ja) は、AEMの開発時間を短縮し、Web サイトのメンテナンスコストを削減するための、標準化された Web コンテンツ管理 (WCM) コンポーネントのセットです。
 
 ### コアコンポーネントを有効にすると、どのような機能が追加されるのですか？
 
@@ -156,7 +156,7 @@ AEMアーキタイプ 41 を作成するには、以下を実行します。 [�
 
 ## 次の手順
 
-* [コアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+* [コアコンポーネントベースのアダプティブフォームの作成](/help/forms/using/create-an-adaptive-form-core-components.md)
 * [アダプティブフォームを作成するか、AEM Sitesページまたはエクスペリエンスフラグメントに追加する](create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [コアコンポーネントベースのアダプティブFormsのテンプレートを作成する](template-editor.md)
