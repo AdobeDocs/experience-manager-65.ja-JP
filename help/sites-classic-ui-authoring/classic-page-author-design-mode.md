@@ -10,9 +10,9 @@ discoiquuid: 10466b49-f8bd-4c2c-8106-b0c7ba054989
 docset: aem65
 exl-id: cb2d2d0d-feb4-4b89-8325-80f735816904
 source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '509'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードでは、サイドキックは最小化されます。矢印をクリックすると、サイドキックを最大化して編集モードに戻ることができます。
 
-   ![Sidekick最小化](do-not-localize/sidekick-collapsed.png)
+   ![サイドキックの最小化](do-not-localize/sidekick-collapsed.png)
 
 ## コンポーネントのデザインの設定 {#configuring-the-design-of-a-component}
 
@@ -67,7 +67,7 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードに入るには、編集するページを開き、サイドキックアイコンを使用します。
 
-   ![デザインモード —Sidekick](do-not-localize/chlimage_1-1.png)
+   ![デザインモード - サイドキック](do-not-localize/chlimage_1-1.png)
 
 1. コンポーネントのデザインを設定できます。
 
@@ -79,4 +79,4 @@ AEM インスタンスを標準でインストールすると、サイドキッ�
 
 1. デザインモードでは、サイドキックは最小化されます。矢印をクリックすると、サイドキックを最大化して編集モードに戻ることができます。
 
-   ![Sidekick最小化](do-not-localize/sidekick-collapsed-1.png)
+   ![サイドキックの最小化](do-not-localize/sidekick-collapsed-1.png)
