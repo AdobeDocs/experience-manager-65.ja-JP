@@ -4,9 +4,9 @@ description: Adobe Experience Manager でコンテンツを作成するように
 contentOwner: AG
 exl-id: 2e7ec22f-0856-44c4-bb15-1086dae0b85a
 source-git-commit: 53a18ec48331f1c25c15e8f7a59bd57e95639895
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2924'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -110,7 +110,7 @@ RTE の基本機能は、該当するプラグインのノードにある `featu
 | edit | cut copy paste-default paste-plaintext paste-wordhtml | [カット、コピー、および 3 つの貼り付けモード](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
 | findreplace | find replace | 検索と置換。 |
 | format | bold italic underline | [基本的なテキストフォーマット](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
-| image | 画像 | 基本的な画像サポート（コンテンツまたはコンテンツファインダーからのドラッグ）。ブラウザーの種類に応じて、様々なサポート機能が提供されます |
+| 画像 | 画像 | 基本的な画像サポート（コンテンツまたはコンテンツファインダーからのドラッグ）。ブラウザーの種類に応じて、様々なサポート機能が提供されます |
 | keys |  | この値を定義するには、[タブサイズ](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize)を参照してください。 |
 | justify | justifyleft justifycenter justifyright | 段落の整列。 |
 | links | modifylink unlink anchor | [ハイパーリンクおよびアンカー](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles)。 |
