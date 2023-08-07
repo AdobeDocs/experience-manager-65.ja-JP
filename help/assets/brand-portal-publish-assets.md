@@ -15,13 +15,13 @@ role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '378'
 ht-degree: 100%
 
 ---
 
-# Brand Portal へのアセットの公開 {#publish-assets-to-brand-portal}
+# Brand Portal へアセットを公開 {#publish-assets-to-brand-portal}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
