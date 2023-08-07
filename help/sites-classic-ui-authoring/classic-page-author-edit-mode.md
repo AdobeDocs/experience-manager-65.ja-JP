@@ -12,9 +12,9 @@ discoiquuid: 9aa0521f-f321-42e9-b022-7ff968a36212
 docset: aem65
 exl-id: 88af99df-846b-47b3-9b1f-68bfdfc40eb8
 source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '6036'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -170,7 +170,7 @@ JPEG 画像の場合は、ビューポートのサイズも JPEG の画質に影
       * **固定リストのオプション**
 
          * **ページ**
-ページのリストを選択します。 用途 `+` をクリックして、エントリと上下のボタンを追加して順序を調整します。
+ページのリストを選択します。エントリを追加するには `+` を、順序を調整するには上下ボタンを使用します。
 
       * **検索のオプション**
 
