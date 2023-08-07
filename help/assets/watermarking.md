@@ -7,9 +7,9 @@ feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '328'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -37,8 +37,8 @@ ht-degree: 90%
    >
    >[!UICONTROL 透かしを追加]手順は、[!UICONTROL サムネールを処理]手順の前の任意の位置に配置します。
 
-1. を開きます。 **[!UICONTROL 透かしを追加]** ステップを使用してプロパティを表示します。
-1. 内 **[!UICONTROL 引数]** 「 」タブで、各種フィールドに有効な値（テキスト、フォントタイプ、サイズ、色、位置、向きなど）を指定します。 変更を確定するには、「**[!UICONTROL 完了]**」をクリックしてください。
+1. 「**[!UICONTROL 透かしを追加]**」ステップを開いて、プロパティを表示します。
+1. 「**[!UICONTROL 引数]**」タブで、各種フィールド（テキスト、フォントタイプ、サイズ、カラー、位置、向きなど）に有効な値を指定します。変更を確定するには、「**[!UICONTROL 完了]**」をクリックしてください。
 
    ![以下に「透かしを追加」ステップの引数を指定[!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 
