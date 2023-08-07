@@ -8,9 +8,9 @@ topic-tags: interactive-communication
 feature: Interactive Communication
 exl-id: f65d8eb9-4d2c-4a6e-825f-45bcfaa7ca75
 source-git-commit: 3d713021ac410ca2925a282c5dfca98ed4e483ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2207'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -346,24 +346,20 @@ JSON ファイルが `C:\batch\mergedJsonPath.json` にあり、次のインタ�
 ファイルシステムにデータを保存する以外に、JSON ファイルを CRX リポジトリ、ファイルシステム、Web サーバーに保存するか、OSGI 事前入力サービスを介してデータにアクセスできます。様々なプロトコルを使用してデータを結合する構文は次のとおりです。
 
 * **CRX プロトコル**
-
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`
 
 * **ファイルプロトコル**
-
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/Users/af/mergedJsonData.json`
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/Users/af/mergedJsonData.json`
 
 * **事前入力サービスプロトコル**
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
 
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
+  SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。「事前入力サービスの作成と実行」を参照してください。
 
-   SERVICE_NAME とは OSGI 事前入力サービスの名前を指します。「事前入力サービスの作成と実行」を参照してください。
-
-   識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログインしたユーザーの識別子は、使用できるメタデータの例です。
+  識別情報とは、OSGI 事前入力サービスが事前入力データを取得するために必要なメタデータを指します。ログインしたユーザーの識別子は、使用できるメタデータの例です。
 
 * **HTTP プロトコル**
-
-   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
+  `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=http://localhost:8000/somesamplexmlfile.xml`
 
 >[!NOTE]
 >
