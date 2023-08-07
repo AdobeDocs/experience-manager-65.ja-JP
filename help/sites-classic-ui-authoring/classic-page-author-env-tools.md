@@ -10,13 +10,13 @@ discoiquuid: 67625e62-7035-4eb5-8dd5-6840d775a547
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 source-git-commit: 75c6bb87bb06c5ac9378ccebf193b5416c080bb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '902'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# オーサリング - 環境とツール  {#authoring-the-environment-and-tools}
+# オーサリング - 環境とツール {#authoring-the-environment-and-tools}
 
 AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています. 提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
@@ -40,7 +40,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 [コンソールツールバーからのヘルプ](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)をアクセスすると、ページ編集時にサイドキックからヘルプに（？アイコンを使用して）アクセスできます。
 
-![Sidekick折りたたみ](do-not-localize/sidekick-collapsed-2.png)
+![折りたたまれた Sidekick](do-not-localize/sidekick-collapsed-2.png)
 
 または、特定のコンポーネントの編集ダイアログで「**ヘルプ**」ボタンを使用することで、コンテキスト依存のヘルプが表示されます。
 
