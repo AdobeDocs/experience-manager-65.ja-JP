@@ -11,9 +11,9 @@ docset: aem65
 exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 source-git-commit: 7803f1df1e05dc838cb458026f8dbd27de9cb924
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5402'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -391,7 +391,7 @@ AEM WCM セキュリティにアクセスするには、次のいずれかの操
 
 * ようこそ画面または AEM の様々な場所で、セキュリティアイコンをクリックします。
 
-![「AEM WCM Security」タブ](do-not-localize/wcmtoolbar.png)
+![「AEM WCM セキュリティ」タブ](do-not-localize/wcmtoolbar.png)
 
 * `https://<server>:<port>/useradmin` に直接アクセスします。管理者として AEM にログインしてください。
 
