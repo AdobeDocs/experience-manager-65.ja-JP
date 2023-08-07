@@ -13,9 +13,9 @@ feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
 source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4519'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -60,7 +60,7 @@ Web ページによってニーズは異なります。例えば、HTML5 ビュ�
 
 >[!NOTE]
 >
->標準提供のすべてのビューアを公開してから、最初に使用します。
+>既製のすべてのビューアを、初めて使用する前にすべて公開します。
 >[ビューアプリセットの公開]を参照してください。（#publishing-viewer-presets）
 
 ### ビューアプリセットのシステム互換性  {#viewer-preset-system-compatibility}
@@ -499,7 +499,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
 **パネル内の画像サムネールのディスプレイモードについて**
 
-インタラクティブビデオのビューアプリセットを作成または編集するとき、「**[!UICONTROL ビヘイビアー]**」タブの&#x200B;**[!UICONTROL 選択したコンポーネント]**&#x200B;メニューから `InteractiveSwatches` を選択するときに使用するディスプレイモードの設定を選択できます。選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。 `segment`ディスプレイモード（デフォルト）または `continuous` ディスプレイモードを選択できます。
+インタラクティブビデオのビューアプリセットを作成または編集するとき、「**[!UICONTROL ビヘイビアー]**」タブの&#x200B;**[!UICONTROL 選択したコンポーネント]**&#x200B;メニューから `InteractiveSwatches` を選択するときに使用するディスプレイモードの設定を選択できます。選択するディスプレイモードは、ビデオの再生中にサムネールを表示する方法とタイミングに影響します。`segment`ディスプレイモード（デフォルト）または `continuous` ディスプレイモードを選択できます。
 
 <table>
  <tbody>
