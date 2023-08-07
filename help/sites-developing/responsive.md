@@ -1,6 +1,6 @@
 ---
 title: Web ページのレスポンシブデザイン
-description: レスポンシブデザインを使用すると、同じページを複数のデバイスで、複数の向きで効果的に表示できます.
+description: レスポンシブデザインを使用すると、同じページを複数の向きで、複数のデバイスに効果的に表示できます。
 uuid: 3d324557-e7ff-4c82-920f-9b5a906925e8
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ discoiquuid: 532544b0-1932-419a-b6bd-ecf57a926fef
 legacypath: /content/docs/en/aem/6-0/develop/mobile/responsive
 exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
 source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5375'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -866,13 +866,13 @@ HTML5 テクノロジーを使用すると、グリッドを実装し、グリ�
 
 グリッドを使用して、異なる表示域サイズに合わせてコンテンツブロックを拡大縮小します。コンテンツブロックは特定の数の列にまたがります。ビューポートのサイズに応じて、列の幅が増減するとコンテンツブロックの幅もそれに応じて増減します。拡大縮小では、コンテンツブロックを隣り合わせで配置できる十分な幅を持つ大規模から中規模のビューポートがサポートされます。
 
-![2 つのグリッドのイメージ。一方は他方よりも小さくスケールされます。](do-not-localize/chlimage_1-1a.png)
+![2 つのグリッドの画像。一方は他方よりも縮小されています。](do-not-localize/chlimage_1-1a.png)
 
 #### グリッド内のコンテンツの再配置 {#repositioning-content-in-the-grid}
 
 コンテンツブロックのサイズは、幅の最小値によって制限され、その幅未満になると、拡大縮小は実行されません。小さいビューポートの場合、コンテンツブロックを水平方向ではなく垂直方向に広げるためにグリッドを使用できます。
 
-![2 つのグリッドのイメージ。一方は他方より小さく再配置されます。](do-not-localize/chlimage_1-2a.png)
+![2 つのグリッドの画像。一方は他方より縮小して再配置されています。](do-not-localize/chlimage_1-2a.png)
 
 ### グリッドのデザイン {#designing-the-grid}
 
@@ -957,7 +957,7 @@ CSS には、次の構造を使用する一連のメディアクエリが含ま�
 
 各メディアクエリ内の `.row-fluid` セレクターにスタイルを追加します。そのメディアクエリに使用するページレイアウトに従って値を設定します。例えば、次の図は、幅の広い表示域ではコンテンツを水平方向に、幅の狭い表示域では垂直方向に広げる行を示しています。
 
-![連続して 2 つのコンテンツブロックの画像。行が再配置されたことを示す 2 番目の画像。](do-not-localize/chlimage_1-3a.png)
+![並んで表示されたコンテンツブロックの 2 つの画像。2 つ目の画像では、行が再配置されています。](do-not-localize/chlimage_1-3a.png)
 
 次の CSS によりこの動作を実装できます。
 
