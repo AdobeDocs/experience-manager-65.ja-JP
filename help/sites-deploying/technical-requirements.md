@@ -4,9 +4,9 @@ description: Adobe Experience Manager でサポートされるクライアント
 topic-tags: platform
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 source-git-commit: 3b08d5001e7d3c683caa021ecf051f44762bb9ac
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3526'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
 1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。実稼動環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。パブリックアップデート終了後の LTS リリースのすべてのメンテナンスアップデートを含む Oracle Java™ SE JDK のサポートと配布が、アドビによって直接サポートされます。対象となるのは、Oracle Java™ SE テクノロジーを利用するすべての AEM ユーザーです。詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
-   **重要：OracleJava™ 11 は、2026 年 9 月まで少なくともサポートされます。 oracleJava™ 17 のサポートは準備中です。**
+   **重要：Oracle Java™ 11 は、少なくとも 2026年9月までサポートされます。Oracle Java™ 17 のサポートは準備中です。**
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
 
@@ -208,7 +208,7 @@ AEM Forms 6.5 をインストールする場合は、次の 32 ビット版の M
 * Microsoft® Visual C++ 2010 再頒布可能パッケージ
 * Microsoft® Visual C++ 2012 再頒布可能パッケージ
 * Microsoft® Visual C++ 2013 再頒布可能パッケージ
-* Microsoft® Visual C++ 2019（VC14.28 以降）の再配布可能
+* Microsoft® Visual C++ 2019（VC14.28 以降）再頒布可能パッケージ
 
 
 
@@ -512,9 +512,9 @@ PDF Generator は、サポート対象のオペレーティングシステムと
 * 2.35 GB のハードディスク空き容量
 * 1024 x 768 ピクセル以上のモニター解像度
 * ビデオハードウェアアクセラレーション（オプション）
-* Acrobat Pro DC、Acrobat Standard DC、Adobe Acrobat Reader DC
-* Designer をインストールするための管理者権限
-* Microsoft Visual C++ 2019 （VC 14.28 以降） 32 ビットランタイム
+* Acrobat Pro DC、Acrobat Standard DC または Adobe Acrobat Reader DC
+* Designer をインストールするための管理者権限。
+* Microsoft Visual C++ 2019（VC 14.28 以降）32 ビットランタイム
 
 ### AEM Assets XMPメタデータの書き戻しの要件 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
