@@ -1,6 +1,6 @@
 ---
-title: AEM 6.5 とAdobe Campaign Classicの統合
-description: AEM 6.5 とAdobe Campaign Classicを統合する方法について説明します。
+title: AEM 6.5 と Adobe Campaign Classic の統合
+description: AEM 6.5 と Adobe Campaign Classic の統合方法について説明します。
 uuid: 3c998b0e-a885-4aa9-b2a4-81b86f9327d3
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,22 +9,22 @@ content-type: reference
 discoiquuid: df94dd1b-1b65-478b-a28d-81807a8084b1
 exl-id: a7281ca0-461f-4762-a631-6bb539596200
 source-git-commit: 8db2cadc83b26e04f9931e18c53db3bf0be03796
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1583'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
-# AEM 6.5 とAdobe Campaign Classicの統合 {#integrating-campaign-classic}
+# AEM 6.5 と Adobe Campaign Classic の統合 {#integrating-campaign-classic}
 
-AEMとAdobe Campaign Classic(ACC) を統合すると、電子メール配信、コンテンツ、フォームをAEMで直接管理できます。 ソリューション間の双方向通信を有効にするには、Adobe Campaign Classic と AEM の両方で設定が必要です。
+AEM を Adobe Campaign Classic（ACC）と統合すると、メール配信、コンテンツ、フォームを AEM で直接管理できます。ソリューション間の双方向通信を有効にするには、Adobe Campaign Classic と AEM の両方で設定が必要です。
 
 この統合では、AEM と Adobe Campaign Classic を個別に使用することができます。マーケターは Adobe Campaign でキャンペーンを作成してターゲティングを使用できますが、コンテンツ作成者は並行して AEM でコンテンツのデザインに取り組むことができます。この統合により、AEM 内に作成されたキャンペーンのコンテンツとデザインを、Adobe Campaign でターゲットにして配信できるようになります。
 
 >[!INFO]
 >
->このドキュメントでは、Adobe Campaign ClassicとAEM 6.5 を統合する方法について詳しく説明します。その他の Campaign 統合については、このドキュメントを参照してください [AEM 6.5 とAdobe Campaignの統合。](campaign.md)
+>このドキュメントでは、Adobe Campaign と AEM 6.5 の統合方法について説明します。他の Campaign 統合については、[AEM 6.5 と Adobe Campaign の統合](campaign.md)のドキュメントを参照してください。
 
 ## 統合手順 {#integration-steps}
 
@@ -100,7 +100,7 @@ Adobe Campaign の **AEM 統合**&#x200B;パッケージには、AEM への接�
 
    * `allowHTTP="true"`
    * `sessionTokenOnly="true"`
-   * `allowUserPassword="true"`。
+   * `allowUserPassword="true"`
 
 1. ファイルを保存します。
 
