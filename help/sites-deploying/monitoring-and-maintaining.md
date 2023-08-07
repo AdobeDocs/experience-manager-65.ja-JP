@@ -11,7 +11,7 @@ docset: aem65
 feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 source-git-commit: bb27c7dfedd5a16728674f7584b0c462a92646e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5934'
 ht-degree: 100%
 
@@ -126,7 +126,7 @@ Web サイトのバージョンをパージするには、次の手順を実行�
    ![バージョンのパージ設定](assets/version-purge-configuration.png)
 
    * **パスをパージ**
-パージするコンテンツの開始パスを設定します。例：`/content/wknd` です。
+パージするコンテンツの開始パスを設定します。例：`/content/wknd`。
 
      >[!CAUTION]
      >
@@ -238,7 +238,7 @@ AEM WCM とリポジトリに対するすべてのアクセス要求が、ここ
 このログは、[!DNL Dynamic Media] が有効になっている場合にのみ使用されます。s7access ログには、`/is/image` および `/is/content` 経由で [!DNL Dynamic Media] に対して実行された各リクエストが記録されます。
 
    * `stderr.log`
-起動時に生成される様々な深刻度レベルのエラーメッセージを保持します。デフォルトでは、ログレベルの設定は次のようになっています。 `Warning` ( `WARN`)
+起動時に生成される様々な深刻度レベルのエラーメッセージを保持します。デフォルトでは、ログレベルの設定は次のようになっています。`Warning` (`WARN`)
 
    * `stdout.log`
 起動時のイベントを示すログメッセージを保持します。
@@ -368,7 +368,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >と指定されている場合、書き込み先は以下となります。
    >
-   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`。
+   >`<cq-installation-dir>/crx-quickstart/logs/thelog.log`
    >
    >また、ログファイルが
    >
@@ -1096,12 +1096,12 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 
 >[!NOTE]
 >
->詳しくは、以下の記事も参照してください。
+詳しくは、以下の記事も参照してください。
 >
->* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
->* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
->* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
->* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+* [スレッドダンプ](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=ja)
+* [メモリの問題の分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=ja)
+* [ビルトインプロファイラーによる分析](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=ja)
+* [低速のプロセスとブロックされたプロセスの分析](https://helpx.adobe.com/jp/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 >
 
 ### 100％の CPU 使用率 {#cpu-at}
@@ -1194,6 +1194,6 @@ JConsole の場合は以下のとおりです。
 
 >[!NOTE]
 >
->Oracle の VM に関する情報は、次の場所でも確認できます。
+Oracle の VM に関する情報は、次の場所でも確認できます。
 >
->[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
+[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)
