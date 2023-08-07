@@ -7,7 +7,7 @@ feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
 hide: true
 source-git-commit: 3d5e9ad8ee19756b05e5a77a3f748bc647fcf734
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '574'
 ht-degree: 100%
 
@@ -96,4 +96,3 @@ As per PM, we must avoid stating such a list, as we don't have a list that makes
 >* [ [!DNL Experience Manager Assets] の DAM 機能](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=ja)
 >* [[!DNL Experience Manager] 6.5 Managed Services 製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-managed-services.html)
 >* [[!DNL Experience Manager] 6.5 オンプレミス製品の説明](https://helpx.adobe.com/jp/legal/product-descriptions/adobe-experience-manager-on-premise.html)
-
