@@ -12,11 +12,11 @@ exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2245'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# オーサリング - 環境とツール {#authoring-the-environment-and-tools}
+# オーサリング - 環境とツール{#authoring-the-environment-and-tools}
 
 AEM のオーサリング環境は、コンテンツを編成および編集するための様々なメカニズムを提供しています. 提供されるツールには、様々なコンソールおよびページエディターからアクセスします。
 
@@ -166,7 +166,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
 アセットをすぐに変更する必要がある場合は、アセット名の横にある編集アイコンをクリックすると、アセットブラウザーから直接[アセットエディター](/help/assets/manage-assets.md)を開始できます。
 
-![アセットブラウザーデスクトップデバイス](do-not-localize/screen_shot_2018-03-22at142448.png)
+![Assets ブラウザーデスクトップデバイス](do-not-localize/screen_shot_2018-03-22at142448.png)
 
 ## コンテンツツリー {#content-tree}
 
@@ -202,7 +202,7 @@ AEM のオーサリング環境は、コンテンツを編成および編集す�
 
   ツリー内でクリックしたコンポーネントが編集可能な場合は、レンチアイコンが名前の右側に表示されます。このアイコンをクリックすると、コンポーネントの編集ダイアログが直接開始されます。
 
-  ![レンチアイコン — 編集](do-not-localize/screen_shot_2018-03-22at142725.png)
+  ![レンチアイコン - 編集](do-not-localize/screen_shot_2018-03-22at142725.png)
 
 * または、[ライブコピー](/help/sites-administering/msm.md)の一部を構成するページが開かれます。ここでは例として、コンポーネントが別のページから継承されます。
 

@@ -12,11 +12,11 @@ exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '3025'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
-# 基本操作 {#basic-handling}
+# 基本操作{#basic-handling}
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
    <td>これにより、<a href="/help/commerce/cif-classic/administering/ecommerce.md">コマース</a>サイトに関連する製品、製品カタログおよび注文を管理できます。</td>
   </tr>
   <tr>
-   <td>エクスペリエンスフラグメント </td>
+   <td>エクスペリエンスフラグメント</td>
    <td><a href="/help/sites-authoring/experience-fragments.md">エクスペリエンスフラグメント</a>は、チャネル間で再利用できる、バリエーションのあるスタンドアロンエクスペリエンスです。エクスペリエンスやエクスペリエンスの一部を繰り返しコピー＆ペーストする手間を省くことができます。</td>
   </tr>
   <tr>
@@ -146,7 +146,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
   コンソール間を移動するには、 **Adobe Experience Manager** リンクを選択します。
 
-  ![Adobe Experience Managerリンク](assets/screen_shot_2018-03-23at103615.png)
+  ![Adobe Experience Manager リンク](assets/screen_shot_2018-03-23at103615.png)
 
 * [検索](/help/sites-authoring/search.md)
 
@@ -391,7 +391,7 @@ Web Experience Management のドキュメントを表示します。
 
 1. 例えば、カード表示では次のようになります。
 
-   ![選択 — カード表示](assets/bh-15.png)
+   ![選択 - カード表示](assets/bh-15.png)
 
 1. リソースを選択すると、上部のヘッダーの上に[アクションツールバー](#actionstoolbar)が重なって表示され、選択したリソースで現在適用可能なアクションにアクセスできます。
 
@@ -447,7 +447,7 @@ Web Experience Management のドキュメントを表示します。
 
 * この表示では、選択などの[クイックアクション](#quick-actions)や、編集などの一般的なアクションも使用できます。
 
-  ![カード表示 — クイックアクション](assets/bh-13-1.png)
+  ![カード表示 - クイックアクション](assets/bh-13-1.png)
 
 * カードを（クイックアクションを回避するために慎重に）タップまたはクリックしてツリーの下位に移動したり、[ヘッダーのパンくずリスト](/help/sites-authoring/basic-handling.md#the-header)を使用して再度上位に移動したりできます。
 
@@ -460,7 +460,7 @@ Web Experience Management のドキュメントを表示します。
 
 * リストですべての項目を簡単に選択するには、リストの左上にあるチェックボックスを使用します。
 
-  ![リスト表示 — すべてを選択](assets/bh-20.png)
+  ![リスト表示 - すべてを選択](assets/bh-20.png)
 
    * リストのすべての項目を選択すると、このチェックボックスがオンになります。
 
@@ -483,9 +483,9 @@ Web Experience Management のドキュメントを表示します。
    * **ユニーク訪問者数**
    * **ページ滞在時間**
 
-  ![設定の表示 — 列の設定](assets/bh-21.png)
+  ![設定の表示 - 列の設定](assets/bh-21.png)
 
-  デフォルトでは、ページの URL の一部を構成する「**名前**」列が表示されます。場合によっては、作成者が異なる言語のページにアクセスする必要があり、ページの名前（通常は変更なし）を確認することが、作成者がページの言語を知らない場合に非常に役立ちます。
+  デフォルトでは、ページの URL の一部を構成する「**名前**」列が表示されます。作成者は異なる言語のページにアクセスする必要がある場合もあり、作成者がそのページの言語をわからない場合、ページの名前（通常は不変）を確認することは非常に役立つ場合があります。
 
 * リストの各項目の右端にある縦の点線マークを使用して項目の順序を変更します。
 
@@ -493,11 +493,11 @@ Web Experience Management のドキュメントを表示します。
   >
   >順序を変更できるのは、`jcr:primaryType` 値が `sling:OrderedFolder` である順序付きフォルダーの内部のみです。
 
-  ![変更管理](assets/bh-22.png)
+  ![変更依頼](assets/bh-22.png)
 
   縦の選択バーをクリックまたはタップして、項目をリストの新しい位置にドラッグします。
 
-  ![変更管理 — ドラッグ](assets/bh-23.png)
+  ![変更依頼 - ドラッグ](assets/bh-23.png)
 
 * **設定を表示**&#x200B;ダイアログを使用して適切な列を表示すると、Analytics データを表示できます。
 
@@ -561,7 +561,7 @@ Web Experience Management のドキュメントを表示します。
    * [バージョンを保存](/help/sites-authoring/working-with-page-versions.md#creatinganewversiontouchoptimizedui)します。
    * [ワークフローを開始](/help/sites-authoring/workflows-applying.md#startingaworkflowfromtherail)します。
 
-これらのオプションには、 **コメント** フィールドに入力します。
+これらのオプションには、「**コメント**」フィールドの横にある山形記号からアクセスできます。
 
 ![タイムライン](assets/bh-27.png)
 

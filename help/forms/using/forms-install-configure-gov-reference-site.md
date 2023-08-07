@@ -34,7 +34,7 @@ ht-degree: 68%
 | Adobe Analytics | v1.4 Rest API | **サポート対象** |
 **パッケージのインストールに関する考慮事項：**
 
-* このパッケージは、クリーンなサーバー、他のデモパッケージがない、または古いデモパッケージバージョンにインストールされる予定です
+* このパッケージは、クリーンなサーバー、他のデモパッケージがない、または古いデモパッケージバージョンにインストールされる予定です。
 * パッケージは、オーサーモードで実行されている OSGi サーバーにインストールする必要があります。
 
 ### このパッケージに含まれる機能 {#what-does-this-package-include}
@@ -111,7 +111,7 @@ ht-degree: 68%
 
 ### 新しいパッケージバージョンのインストール {#installing-new-package-versions}
 
-新しいパッケージバージョンをインストールするには、4.1 と 4.2 で定義されている手順に従います。新しいパッケージバージョンをインストールすると、別の古いパッケージが既にインストールされますが、最初に古いパッケージバージョンをアンインストールすることをお勧めします。 古いパッケージバージョンをアンインストールするには、次の手順に従います。
+新しいパッケージバージョンをインストールするには、4.1 および 4.2 で定義されている手順に従います。新しいパッケージバージョンをインストールし、別の古いパッケージが既にインストールされている場合はインストールできますが、最初に古いパッケージバージョンをアンインストールすることをお勧めします。 古いパッケージバージョンをアンインストールするには、次の手順に従います。
 
 1. *https://&lt;aemserver>:&lt;port>/crx/packmgr/index.jsp* に移動します。
 1. 古い **we-gov-forms.pkg.all-&lt;version>.zip** ファイルを見つけます。
@@ -155,8 +155,8 @@ ht-degree: 68%
 
 1. 任意の SMTP サーバーに接続するようにサービスを設定します。
 
-   1. **SMTP サーバーのホスト名**:例： (smtp.gmail.com)
-   1. **サーバーポート**:例えば、SSL を使用する gmail の場合は (465)
+   1. **SMTP サーバーのホスト名**：例： (smtp.gmail.com)
+   1. **サーバーポート**：例えば、SSL を使用する gmail の場合は (465)
    1. **SMTP ユーザー：** demo@ &lt;companyname> .com
    1. **「差出人」のアドレス**：aemformsdemo@adobe.com
 
@@ -222,7 +222,7 @@ ht-degree: 68%
 **参照：**
 
 1. [Microsoft](/help/forms/using/ms-dynamics-odata-configuration.md)
-1. [AEM Forms用Microsoft® Dynamics の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html)
+1. [AEM Forms用Microsoft® Dynamics の設定](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms.html?lang=ja)
 
 #### MS® Dynamics OData クラウドサービス {#ms-dynamics-odata-cloud-service}
 
@@ -259,7 +259,7 @@ ht-degree: 68%
 
 #### MS® Dynamics クラウド設定 {#dynamicsconfig}
 
-この節で説明する手順は、MS® Dynamics Cloud インスタンスからクライアント ID、クライアントの秘密鍵、詳細を見つけるのに役立ちます。
+この節で説明する手順は、MS® Dynamics Cloud インスタンスからクライアント ID、クライアント秘密鍵、詳細を見つけるのに役立ちます。
 
 1. [https://portal.azure.com/](https://portal.azure.com/) に移動し、ログインします。
 1. 左側のメニューから、「すべてのサービス」を選択します。
@@ -277,7 +277,7 @@ ht-degree: 68%
 1. リソース URL/サービスルート URL を見つけるには、「 MS® Dynamics インスタンス」ダッシュボードに移動します。
 1. 上部のナビゲーションバーで、「Sales」または独自のインスタンスタイプをクリックし、「設定を選択」をクリックします。
 1. 右下付近の「カスタマイズ」と「開発者向けリソース」をクリックします。
-1. 次に、サービスルート URL を示します。例：
+1. サービスルート URL は次のように表示されます。
 
    *`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
 
@@ -425,7 +425,7 @@ AEM Forms Analytics データは、オフライン時に使用できます。Ado
 
    ![分析と推奨表示](assets/analytics_recommendations.jpg)
 
-1. このページには、AEM Sitesページに関連する、Adobe Analyticsから取得した情報が表示されます ( 注意：設計により、この情報はAdobe Analyticsから定期的に更新され、リアルタイムには表示されません )。
+1. このページには、AEM Sitesページに関連する、Adobe Analyticsから取得した情報が表示されます ( 注意：デザインにより、この情報はAdobe Analyticsから定期的に更新され、リアルタイムには表示されません )。
 
    ![AEM Sites 分析](assets/sites_analysis.jpg)
 
@@ -750,7 +750,7 @@ IMS 設定が完了したら、AEM でクラウド設定を作成する手順に
 
 ### アクセシビリティテスト用の Chrome アドオンの有効化 {#enable-chrome-add-on}
 
-アクセシビリティテストを実行するには、次の場所にある Chrome プラグインをインストールします。 `https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`. <!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
+アクセシビリティのテストを実施するには、こちら`https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en`の Chrome プラグインをインストールします。<!-- This URL is a 404. As such, please fix and update this entire topic. We ought not to be writing about third-party software that we have no control over to avoid these 404s. Consider making this topic entirely generic and leaving it up to the user to choose their own Accessibility Testing add-on. -->
 
 インストールしたら、テストするページを Chrome ブラウザーで読み込みます（メモ：タブが複数開かれているとスコアに影響する場合があります。タブは 1 つだけ開くことをお勧めします）。ページが読み込まれると、 **右クリック** を選択し、 **監査** タブをクリックします。 その画面で開発者は、アクセシビリティプラグインで実行する検証のタイプを選択できます。必要なオプションをすべて選択したら、「レポートを生成」ボタンをクリックできます。これにより、PDF性の評価全体と、全体的なアクセシビリティの評価を上げるために使用できる内容を示すアクセシビリティドキュメントが生成されます。
 

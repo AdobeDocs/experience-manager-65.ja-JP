@@ -9,7 +9,7 @@ hide: true
 source-git-commit: 681d1e6bd885b801b930e580d95645f160f17cea
 workflow-type: tm+mt
 source-wordcount: '804'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 74%
 | Adobe Experience Manager (AEM) as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-Microsoft® Office および PDF ドキュメントのすべてのデジタルアセット、メタデータおよびコンテンツが抽出され、検索可能になります。検索では、アセットに対する高度なフィルタリングが可能で、適切な権限が完全に順守されます。 メタデータについては、「デジタルアセット管理」の「メタデータ」で詳しく説明されています。
+Microsoft® Office および PDF ドキュメントのすべてのデジタルアセット、メタデータおよびコンテンツが抽出され、検索可能になります。検索によってアセットの高度なフィルタリングが可能になり、適切な権限をフルに活用できます。メタデータについては、「デジタルアセット管理」の「メタデータ」で詳しく説明されています。
 
 [!DNL Experience Manager Assets] では、コンテンツを整理するための方法が複数サポートされています。フォルダーを使用して階層形式で整理したり、タグなどを使用して順序なしのアドホック方式で整理したりできます。 ユーザーは DAM アセットエディターでタグを編集でき、サブアセット、レンディションおよびメタデータが表示されます。
 

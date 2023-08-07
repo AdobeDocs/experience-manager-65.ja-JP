@@ -11,7 +11,7 @@ exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
 source-git-commit: e85aacd45a2bbc38f10d03915e68286f0a55364e
 workflow-type: tm+mt
 source-wordcount: '915'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -151,7 +151,7 @@ AEM インスタンスを標準インストールすると、各種のコンポ�
 
    ![エントリを追加](assets/chlimage_1-94.png)
 
-   以下を使用： **削除** 複数エントリのダイアログリストからエントリを削除するアイコン。
+   複数エントリのダイアログリストからエントリを削除するには、**削除**&#x200B;アイコンを使用します。
 
    ![削除](do-not-localize/screen_shot_2018-03-22at103809.png)
 

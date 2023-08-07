@@ -8,7 +8,7 @@ exl-id: d995f0d6-9e48-4228-ac82-f33a0b25b9d3
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '753'
-ht-degree: 93%
+ht-degree: 95%
 
 ---
 
@@ -137,7 +137,7 @@ AEM e コマースの主な機能は次のとおりです。
    * 割引券
    * その他
 
-  ![geometrixx コンポーネントの例](/help/sites-administering/assets/chlimage_1-130.png)
+  ![Geometrixx コンポーネントの例](/help/sites-administering/assets/chlimage_1-130.png)
 
   >[!NOTE]
   >
@@ -150,11 +150,11 @@ AEM e コマースの主な機能は次のとおりです。
    * サードパーティ検索
    * またはこれらの組み合わせ
 
-  ![検索例](/help/sites-administering/assets/chlimage_1-131.png)
+  ![検索の例](/help/sites-administering/assets/chlimage_1-131.png)
 
 * フルブラウザーウィンドウやモバイルデバイスなど、**複数のチャネルにコンテンツを表示する** AEM 機能を使用します。これにより、訪問者が必要とする形式でコンテンツが提供されます。
 
-  ![モバイル表示の例](/help/sites-administering/assets/chlimage_1-132.png)
+  ![モバイルビューの例](/help/sites-administering/assets/chlimage_1-132.png)
 
 * **[AEM e コマースフレームワーク](#the-framework)**&#x200B;に基づいて独自の統合実装を開発する機能。
 
@@ -167,7 +167,7 @@ AEM e コマースの主な機能は次のとおりです。
 
   以下の例では、買い物かごの中身が 75 ドル未満なので、ティーザーが 1 つ表示されています。
 
-  ![clientcontext を含む買い物かご](/help/sites-administering/assets/chlimage_1-133.png)
+  ![クライアントコンテキストを含む買い物かご](/help/sites-administering/assets/chlimage_1-133.png)
 
   買い物かごの中身が 75 ドルを超えると、このティーザーは次のように変更されます。
 

@@ -1,17 +1,17 @@
 ---
-title: OAuth 2.0 クライアント資格情報フローを使用したAEM Formsとの Salesforce 統合
+title: OAuth 2.0 クライアント資格情報フローを使用した Salesforce と AEM Forms の統合
 seo-title: Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
-description: OAuth 2.0 クライアント資格情報フローを使用して Salesforce とAEM Formsを統合する手順
+description: OAuth 2.0 クライアント資格情報フローを使用した Salesforce と AEM Forms の統合手順
 seo-description: Steps to integrate Salesforce integration with AEM Forms using OAuth 2.0 client credentials flow
 exl-id: 31f2ccf8-1f4f-4d88-8c5f-ef1b7d1bfb4f
 source-git-commit: f11bb43d914a43431cab408ca77690b6ba528a06
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 3%
+ht-degree: 52%
 
 ---
 
-# OAuth 2.0 クライアント資格情報フローを使用した Salesforce の統合  {#configure-salesforce-with-ouath-2.0-client-credential}
+# OAuth 2.0 クライアント資格情報フローを使用した Salesforce の統合 {#configure-salesforce-with-ouath-2.0-client-credential}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -35,38 +35,38 @@ Salesforce アプリケーションとAEM環境間の通信を設定する前に
 
 * の作成 [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 接続アプリ](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) と組織の API のみのユーザーを含め、アプリの消費者キーと消費者の秘密鍵を取得します。
 
-* Swagger ファイルが組織の API に合わせて適切に設定されていることを確認します。 または、 [Swagger ファイルを作成する](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) 最初から、AEM環境での使用に合わせてカスタマイズされます。
+* Swagger ファイルが組織の API に合わせて適切に設定されていることを確認します。 または、 [Swagger ファイルを作成する](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=ja) 最初から、AEM環境での使用に合わせてカスタマイズされます。
 >[!NOTE]
 >
-> AEM 6.5 では、Swagger 2.0 ファイルの仕様のみがサポートされています。
+> AEM 6.5 では、Swagger 2.0 ファイル仕様のみをサポートします。
 
 +++
 
 ## クライアント資格情報フローで Salesforce を設定する手順 {#steps-to-create-aem-datasource-configuration}
 
 1. オーサーインスタンスにログインします。
-1. に移動します。 **[!UICONTROL ツール]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL データソース]**.
+1. **[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／**[!UICONTROL データソース]**&#x200B;に移動します。
 1. 設定フォルダーを選択します。
-1. クリック **[!UICONTROL 作成]** そして **[!UICONTROL データソース設定を作成]** が表示されます。
-1. 次を指定します。 **[!UICONTROL タイトル]** をクリックし、 **[!UICONTROL サービスタイプ]** as **[!UICONTROL RESTful サービス]**.
+1. 「**[!UICONTROL 作成]**」をクリックします。**[!UICONTROL データソース設定を作成]**&#x200B;が表示されます。
+1. **[!UICONTROL タイトル]**&#x200B;を指定し、**[!UICONTROL サービスタイプ]**&#x200B;に「**[!UICONTROL RESTful サービス]**」を選択します。
 1. 「**[!UICONTROL 次へ]**」をクリックします。
-1. を選択します。 **[!UICONTROL Swagger ソース]** as **[!UICONTROL ファイル].**
+1. **[!UICONTROL Swagger ソース]**&#x200B;に「**[!UICONTROL ファイル]」を選択します。**
    >[!NOTE]
    >
-   > Swagger ファイルを選択すると、Scheme、Host 名、Base パスが自動的に設定されます。
+   > Swagger ファイルを選択するとすぐに、スキーム、ホスト名、ベースパスが自動的に設定されます。
 
-1. 作成した Swagger ファイルをローカルマシンからアップロードするには、 **[!UICONTROL 参照]**.
-1. を選択します。 **[!UICONTROL 認証タイプ]** as **[!UICONTROL OAuth 2.0]** そして **[!UICONTROL 認証設定]** パネルが表示されます。
-1. を選択します。 **[!UICONTROL 付与タイプ]** as **[!UICONTROL クライアント資格情報]**.
-1. 次を指定します。 **[!UICONTROL クライアント ID]** および **[!UICONTROL クライアントの秘密鍵]** Salesforce 接続アプリから取得しました。
-1. 次を指定します。 **[!UICONTROL トークン URL にアクセス]** 形式で
+1. 「**[!UICONTROL 参照]**」をクリックして、作成した Swagger ファイルをローカルマシンからアップロードします。
+1. **[!UICONTROL 認証タイプ]**&#x200B;に「**[!UICONTROL OAuth 2.0]**」を選択します。**[!UICONTROL 認証設定]**&#x200B;パネルが表示されます。
+1. **[!UICONTROL 付与タイプ]**&#x200B;に「**[!UICONTROL クライアント資格情報]**」を選択します。
+1. Salesforce 接続アプリから取得した&#x200B;**[!UICONTROL クライアント ID]** と&#x200B;**[!UICONTROL クライアント秘密鍵]**&#x200B;を指定します。
+1. **[!UICONTROL アクセストークンの URL]** を次の形式で指定します
    `https://[MyDomainName].my.salesforce.com/services/oauth2/token`。
 
    >[!NOTE]
    >
-   > 各組織には固有のドメイン名があります。
+   > 各組織には独自の固有のドメイン名があります。
 
-1. クリック **[!UICONTROL 接続をテスト]**.
-1. 接続に成功した場合は、 **[!UICONTROL 作成]** 」ボタンをクリックします。
+1. 「**[!UICONTROL 接続をテスト]**」をクリックします。
+1. 接続に成功した場合は、「**[!UICONTROL 作成]**」ボタンをクリックします。
 
-次に、以下を実行できます。 [フォームデータモデルの作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) 設定済みのデータソースを Adaptive Formsと統合する場合。
+次に、以下を実行できます。 [フォームデータモデルの作成](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=ja) 設定済みのデータソースを Adaptive Formsと統合する場合。

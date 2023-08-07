@@ -8,7 +8,7 @@ hide: true
 source-git-commit: 6f01f5725ed2b0533756830c1a5e55b7464708f6
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 98%
 
 1. [[!DNL Software Distribution] リンク](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip)からコネクタをダウンロードします。
 1. [ファイアウォールを設定します](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html)。
-1. Dispatcher で、という名前の HTTP ヘッダーを許可します。 `authorization`, `username`、および `apikey`. `/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
+1. Dispatcher で、`authorization`、`username` および `apikey` という名前の HTTP ヘッダーを許可します。`/bin/workfront-tools` への `GET`、`POST` および `PUT` リクエストを許可します。
 1. [!DNL Experience Manager] リポジトリに次のパスが存在しないことを確認します。
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`

@@ -10,11 +10,11 @@ hide: true
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '5739'
-ht-degree: 96%
+ht-degree: 99%
 
 ---
 
-# でのデジタルアセットの検索 [!DNL Adobe Experience Manager] {#search-assets-in-aem}
+# [!DNL Adobe Experience Manager] でデジタルアセットを検索 {#search-assets-in-aem}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -38,7 +38,7 @@ ht-degree: 96%
 | [制限事項](#limitations)と[ヒント](#tips) | | |
 | [例を使った説明](#samples) | | |
 
-上部のオムニサーチフィールドを使用したデジタルアセットの検索 [!DNL Experience Manager] web インターフェイス。 [!DNL Experience Manager] で&#x200B;**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**&#x200B;に移動し、上部バーの検索アイコン ![search_icon](assets/do-not-localize/search_icon.png) をクリックし、検索キーワードを入力して、`Return` を選択します。または、キーワードショートカット `/`（スラッシュ）を使用して、オムニサーチフィールドを開きます。`Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。検索キーワードを入力し始めると、[!DNL Experience Manager] による提案が表示されます。
+[!DNL Experience Manager] web インターフェイスの上部にあるオムニサーチフィールドを使用して、デジタルアセットを検索します。[!DNL Experience Manager] で&#x200B;**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**&#x200B;に移動し、上部バーの検索アイコン ![search_icon](assets/do-not-localize/search_icon.png) をクリックし、検索キーワードを入力して、`Return` を選択します。または、キーワードショートカット `/`（スラッシュ）を使用して、オムニサーチフィールドを開きます。`Location:Assets` が事前に選択されており、DAM アセットの検索に制限されています。検索キーワードを入力し始めると、[!DNL Experience Manager] による提案が表示されます。
 
 アセット、フォルダー、タグおよびメタデータを検索するには、**[!UICONTROL フィルター]**&#x200B;パネルを使用します。ファイルタイプ、ファイルサイズ、最終変更日、アセットのステータス、インサイトデータ、Adobe Stock ライセンスなどの、様々なオプション（述部）に基づいて検索結果をフィルタリングできます。フィルターパネルをカスタマイズし、[検索ファセット](/help/assets/search-facets.md)を使用して検索述語を追加したり、削除したりすることができます。[!UICONTROL フィルター]パネルの[!UICONTROL ファイルタイプ]フィルターには、状態が混在したチェックボックスがあります。したがって、すべてのネストされた述語（またはフォーマット）を選択しない限り、第 1 レベルのチェックボックスは部分的にチェックされています。
 
@@ -159,7 +159,7 @@ ht-degree: 96%
 
 ### GQL メタデータフィールドの特定の値を使用した検索 {#gql-search}
 
-タイトル、説明、作成者などのメタデータフィールドの正確な値に基づいて、デジタルアセットを検索できます。 GQL 全文検索機能では、メタデータ値が検索クエリと完全に一致するアセットのみを取得できます。プロパティの名前（Creator や Title など）と値は、大文字と小文字が区別されます。
+タイトル、説明、作成者など、メタデータフィールドの正確な値に基づいてデジタルアセットを検索できます。GQL 全文検索機能では、メタデータ値が検索クエリと完全に一致するアセットのみを取得できます。プロパティの名前（Creator や Title など）と値は、大文字と小文字が区別されます。
 
 | メタデータフィールド | ファセット値と使用法 |
 |---|---|
@@ -202,19 +202,19 @@ ht-degree: 96%
 * プロパティ値に特定の文字列が含まれるアセットを表示する（例：title=Basel Meeting Room）：`title:*Meeting*`
 * 特定の文字列が含まれ、特定のプロパティ値を持つアセットを表示する（例：title=John Doe のアセットで文字列「Adobe」を検索する）：`*Adobe* title:"John Doe"`
 
-## 他からのデジタルアセットの検索 [!DNL Experience Manager] 提供またはインターフェイス {#search-assets-other-surfaces}
+## 他の [!DNL Experience Manager] 製品やインターフェースからデジタルアセットを検索 {#search-assets-other-surfaces}
 
 [!DNL Adobe Experience Manager]では、DAM リポジトリーを他の様々な [!DNL Experience Manager] ソリューションに接続することで、デジタルアセットにすばやくアクセスできるようにし、クリエイティブワークフローを効率化します。アセットの検出は、参照または検索で始まります。異なるサーフェスやソリューションでも、検索の動作はほとんど同じです。ターゲットオーディエンス、ユースケース、ユーザーインターフェイスは [!DNL Experience Manager] ソリューションによって異なるので、一部の検索方法はそれに応じて変わります。個々のソリューションの具体的な方法については、以下のリンクを参照してください。ここでは、一般に当てはまるヒントや動作について説明しています。
 
-### Asset Link パネルからのデジタルAdobeの検索 {#aal}
+### Adobe Asset Link パネルからデジタルアセットを検索 {#aal}
 
 クリエイティブ担当者は、Adobe Asset Link を使用することで、サポートされている Adobe Creative Cloud アプリケーション内から、[!DNL Experience Manager Assets] に保存されているコンテンツにアクセスできるようになりました。[!DNL Adobe Creative Cloud] アプリの [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]、[!DNL Adobe InDesign] のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることができます。また、Asset Link を使用すると、視覚的に類似した結果を検索できます。ビジュアル検索の表示結果は、Adobe Sensei の機械学習アルゴリズムを活用しており、見た目に類似した画像を見つけやすくなっています。詳しくは、[Adobe Asset Link を使用したアセットの検索と参照](https://helpx.adobe.com/jp/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)を参照してください。
 
-### でのデジタルアセットの検索 [!DNL Experience Manager] デスクトップアプリ {#desktop-app}
+### [!DNL Experience Manager] デスクトップアプリケーションでデジタルアセットを検索 {#desktop-app}
 
 デスクトップアプリケーションを使用することで、クリエイティブ担当者はは、ローカルデスクトップ（Windows または Mac）で [!DNL Experience Manager Assets] を容易に検索および利用できるようになります。目的のアセットを Mac Finder や Windows エクスプローラーで表示し、デスクトップアプリケーションで開き、ローカルで変更することができます。変更内容は [!DNL Experience Manager] に書き戻され、リポジトリー内に新しいバージョンが作成されます。1 つ以上のキーワード、ワイルドカード `*` および `?`、`AND` 演算子を使用した基本検索がサポートされています。[デスクトップアプリケーションでのアセットの参照、検索、プレビュー](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja#browse-search-preview-assets)を参照してください。
 
-### でのデジタルアセットの検索 [!DNL Brand Portal] {#brand-portal}
+### [!DNL Brand Portal] でデジタルアセットを検索 {#brand-portal}
 
 マーケターや事業部門のユーザーは、Brand Portal を使用して、承認済みのデジタルアセットを、広範な社内チーム、パートナーおよび販売店と効率的かつ安全に共有します。詳しくは、[Brand Portal でのアセットの検索](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html?lang=ja)を参照してください。
 
@@ -226,7 +226,7 @@ ht-degree: 96%
 
 **[!UICONTROL フィルター]**&#x200B;パネルから **[!UICONTROL Dynamic Media]**／**[!UICONTROL セット]**&#x200B;を選択して、Dynamic Media 画像をフィルタリングすることができます。画像セット、カルーセル、混在メディアセット、スピンセットなどのアセットがフィルタリングされて表示されます。Web ページの作成時に、作成者はコンテンツファインダー内でセットを検索できます。セットのフィルターは、ポップアップメニューで使用できます。
 
-### Web ページ作成時のコンテンツファインダーでのデジタルアセットの検索 {#content-finder}
+### Web ページ作成時にコンテンツファインダーでデジタルアセットを検索 {#content-finder}
 
 作成者は、コンテンツファインダーを使用して関連アセットを DAM リポジトリーで検索し、作成中の Web ページで使用できます。作成者は、Connected Assets 機能を使用して、リモート [!DNL Experience Manager] デプロイメントで使用可能なアセットを検索することもできます。作成者は、ローカルの [!DNL Experience Manager] デプロイメント上の Web ページで、これらのアセットを使用できます。「[リモートアセットの使用](/help/assets/use-assets-across-connected-assets-instances.md#use-remote-assets)」を参照してください。
 
@@ -465,15 +465,15 @@ PSD ファイルや PDF ファイルなどのアセットをユーザーがア�
 
 ### バージョンを作成します。 {#create-version}
 
-検索結果に表示されるアセットのバージョンを作成します。 アセットを選択し、 **[!UICONTROL 作成]** > **[!UICONTROL バージョン]**. オプションのラベルまたはコメントを追加し、「 **[!UICONTROL 作成]**. また、複数のアセットを選択し、それらのアセットのバージョンを同時に作成することもできます。
+検索結果に表示されるアセットのバージョンを作成します。アセットを選択し、**[!UICONTROL 作成]**／**[!UICONTROL バージョン]**&#x200B;をクリックします。オプションのラベルまたはコメントを追加し、「**[!UICONTROL 作成]**」をクリックします。また、複数のアセットを選択し、それらのアセットのバージョンを同時に作成することもできます。
 
-### ワークフローの作成 {#create-workflow}
+### ワークフローを作成 {#create-workflow}
 
-「バージョンを作成」機能と同様に、検索結果に表示されるアセットのワークフローを作成することもできます。 アセットを選択し、 **[!UICONTROL 作成]** > **[!UICONTROL ワークフロー]**. ワークフローモデルを選択し、ワークフローのタイトルを指定して、「 **[!UICONTROL 開始]**.
+バージョンの作成機能と同様に、検索結果に表示されるアセットのワークフローを作成することもできます。アセットを選択し、 **[!UICONTROL 作成]** > **[!UICONTROL ワークフロー]**. ワークフローモデルを選択し、ワークフローのタイトルを指定して、「**[!UICONTROL 開始]**」をクリックします。
 
-### アセットの関連付けと関連付け解除 {#relate-unrelate-assets}
+### 関連付けと関連付け解除 {#relate-unrelate-assets}
 
-検索結果に表示されるアセットの関連付けと関連付け解除 アセットを選択し、 **[!UICONTROL 関連付け]** または **[!UICONTROL 関連付けを解除]**.
+検索結果に表示されるアセットの関連付けと関連付け解除を実行します。アセットを選択し、 **[!UICONTROL 関連付け]** または **[!UICONTROL 関連付けを解除]**.
 
 ## 予期しない検索結果と問題 {#unexpected-results}
 

@@ -12,7 +12,7 @@ feature: Forms Service
 source-git-commit: fc148a5f5e0fcaac2980dc73004fa92ac3b91fb3
 workflow-type: tm+mt
 source-wordcount: '3889'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -128,18 +128,18 @@ ht-degree: 98%
    + [AEM Forms データ統合機能の概要](using/data-integration.md)
    + [データソースの設定](using/configure-data-sources.md)
    + [Microsoft Dynamics OData の設定](using/ms-dynamics-odata-configuration.md)
-   + [OAuth 2.0 クライアント資格情報を使用した Salesforce 統合フロー認証](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+   + [OAuth 2.0 クライアント資格情報フローを使用した Salesforce 統合 認証](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
    + [フォームデータモデルの作成](using/create-form-data-models.md)
    + [フォームデータモデルの操作](using/work-with-form-data-model.md)
    + [フォームデータモデルの使用](using/using-form-data-model.md)
 + アダプティブForms — コアコンポーネント {#adaptive-forms-core-components}
    + [お使いの環境に合わせたコアコンポーネントの有効化](/help/forms/using/enable-adaptive-forms-core-components.md)
-   + [コアコンポーネントベースのアダプティブフォームを作成する](/help/forms/using/create-an-adaptive-form-core-components.md)
+   + [コアコンポーネントベースのアダプティブフォームの作成](/help/forms/using/create-an-adaptive-form-core-components.md)
    + [アダプティブFormsに基づくコアコンポーネントのテーマを作成する](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
 + アダプティブフォーム - 基本オーサリング {#adaptive-forms-basic-authoring}
    + [アダプティブフォームの操作のベストプラクティス](using/adaptive-forms-best-practices.md)
    + [アダプティブフォームの作成](using/creating-adaptive-form.md)
-   + [アダプティブフォームを作成するか、AEM Sitesページに追加する](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+   + [AEM Sites ページへのアダプティブフォームの作成または追加](using/create-or-add-an-adaptive-form-to-aem-sites-page.md)
    + [アダプティブフォームフラグメント](using/adaptive-form-fragments.md)
    + [送信アクションの設定](using/configuring-submit-actions.md)
    + [アダプティブフォームの CAPTCHA の使用](using/captcha-adaptive-forms.md)
@@ -521,7 +521,7 @@ ht-degree: 98%
       + [埋め込むフォントの指定](/help/forms/using/admin-help/specify-fonts-embed.md)
       + [セキュリティ設定の指定](/help/forms/using/admin-help/specify-security-settings.md)
       + [文字セットの変更](/help/forms/using/admin-help/change-character-set.md)
-   + Forms ワークフローの設定 {#configure-forms-workflow}
+   + Forms ワークフローの設定{#configure-forms-workflow}
       + [管理およびプロセスの用語について](/help/forms/using/admin-help/administration-process-terminology.md)
       + [プロセスの管理](/help/forms/using/admin-help/processes.md)
       + [業務カレンダーの設定](/help/forms/using/admin-help/configuring-business-calendars.md)

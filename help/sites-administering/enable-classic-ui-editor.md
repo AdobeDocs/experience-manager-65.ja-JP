@@ -1,7 +1,7 @@
 ---
 title: エディター
 seo-title: Editor
-description: クラシック UI エディターに戻る方法を説明します。
+description: クラシック UI エディターへの切り替え方法を説明します。
 seo-description: Learn how to switch back to the Classic UI Editor.
 uuid: ca8b07e7-014f-428e-82bd-87f3aae12f6e
 contentOwner: Chris Bohnert
@@ -14,18 +14,18 @@ exl-id: 8540e1f0-22d7-4f48-85d9-7c44eb7185df
 source-git-commit: 1c89ac7c4740222a3f51abd677e0ce71a7004377
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
 
 
 # エディター{#editor}
 
-デフォルトでは、エディターからクラシック UI に切り替える機能は無効になっています。
+エディターからクラシック UI に切り替える機能は、デフォルトで無効になっています。
 
-オプションを再度有効にするには **クラシック UI で開く** 内 **ページ情報** メニューで、次の手順に従います。
+**ページ情報**&#x200B;メニューのオプション「**クラシック UI で開く**」を再度有効にするには、次の手順に従います。
 
-1. CRXDE Liteを使用して、次のノードを探します。
+1. CRXDE Lite を使用して、次のノードを見つけます。
 
    `/libs/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
 
@@ -37,7 +37,7 @@ ht-degree: 40%
 
    * **パス**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
    * **オーバーレイの場所**: `/apps/`
-   * **ノードタイプを一致させる**:アクティブ（チェックボックスを選択）
+   * **ノードタイプを一致させる**：アクティブ（チェックボックスをオン）
 
 1. オーバーレイノードに次の複数値テキストプロパティを追加します。
 
@@ -45,4 +45,4 @@ ht-degree: 40%
 
 1. ページの編集時に、「**クラシック UI で開く**」オプションが&#x200B;**ページ情報**&#x200B;メニューで再度使用可能になります。
 
-   ![ページ情報から「クラシック UI で開く」オプションを選択](assets/syui-03-2019-02-27-15-19-48.png)
+   ![ページ情報からクラシック UI オプションで開く](assets/syui-03-2019-02-27-15-19-48.png)

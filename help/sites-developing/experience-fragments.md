@@ -14,7 +14,7 @@ ht-degree: 80%
 
 ---
 
-# エクスペリエンスフラグメント {#experience-fragments}
+# エクスペリエンスフラグメント{#experience-fragments}
 
 ## 基本知識 {#the-basics}
 
@@ -65,11 +65,11 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
    * 最終レンディションで許可されるHTMLタグのリスト。
    * デフォルトでは、次のタグが許可されています（設定は不要）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link、script
 
-オーバーレイを使用してリライターを設定することをお勧めします。詳しくは、 [オーバーレイ](/help/sites-developing/overlays.md)
+オーバーレイを使用してリライターを設定することをお勧めします。[オーバーレイ](/help/sites-developing/overlays.md)を参照してください
 
 ## ソーシャルバリエーション {#social-variations}
 
-ソーシャルバリエーションをソーシャルメディア（テキストおよび画像）に投稿できます。Adobe Experience Manager(AEM) では、これらのソーシャルバリアントにコンポーネントを含めることができます。例えば、テキストコンポーネントや画像コンポーネントなどです。
+ソーシャルバリエーションをソーシャルメディア（テキストおよび画像）に投稿できます。Adobe Experience Manager(AEM) では、これらのソーシャルバリアントに、テキストコンポーネントや画像コンポーネントなどのコンポーネントを含めることができます。
 
 ソーシャル投稿の画像やテキストは、（構築ブロックまたはレイアウトコンテナの）任意の深さレベルの任意の画像リソースタイプまたはテキストリソースタイプから取得できます。
 
@@ -290,7 +290,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 このメソッドは入力として次のパラメーターを受け取ります。
 
 * `link`
-この `String` 処理中のリンクの表現。 これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
+The `String` 処理中のリンクの表現。 これは通常、オーサーインスタンス上のリソースを指す相対 URL です。
 
 * `tag`
 処理中のHTML要素の名前。

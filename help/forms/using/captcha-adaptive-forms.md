@@ -1,7 +1,7 @@
 ---
 title: アダプティブフォームの CAPTCHA の使用
 seo-title: Using CAPTCHA in adaptive forms
-description: アダプティブフォームでAEM CAPTCHA またはGoogle reCAPTCHA サービスを設定する方法を説明します。
+description: アダプティブフォームで AEM CAPTCHA または Google reCAPTCHA サービスを設定する方法を説明します。
 seo-description: Learn how to configure AEM CAPTCHA or Google reCAPTCHA service in adaptive forms.
 uuid: 0e11e98a-12ac-484c-b77f-88ebdf0f40e5
 contentOwner: vishgupt
@@ -14,7 +14,7 @@ exl-id: 9b4219b8-d5eb-4099-b205-d98d84e0c249
 source-git-commit: 1ab5165dc87684918b33edabec133702b1f62663
 workflow-type: tm+mt
 source-wordcount: '1995'
-ht-degree: 50%
+ht-degree: 96%
 
 ---
 
@@ -26,32 +26,32 @@ ht-degree: 50%
 | AEM 6.5 | この記事 |
 
 
-<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象 [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
+<span class="preview"> Adobeでは、最新の拡張可能なデータキャプチャを使用することをお勧めします [コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja) 対象： [新しいアダプティブFormsの作成](/help/forms/using/create-an-adaptive-form-core-components.md) または [AEM SitesページへのアダプティブFormsの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). これらのコンポーネントは、アダプティブFormsの作成における大幅な進歩を表し、印象的なユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブFormsを作成する古い方法について説明します。 </span>
 
-CAPTCHA（Computers and Humans Apart を伝える完全自動公開チューリングテスト）は、人と自動化されたプログラムまたはボットを区別するためにオンライントランザクションで一般的に使用されるプログラムです。 テストを行ってユーザーの反応を評価し、サイトを使用しているのが人間かボットかを判断します。テストが失敗した場合の続行を防ぎ、ボットがスパムや悪意のある目的を掲示するのを防ぎ、オンライントランザクションのセキュリティを確保します。
+CAPTCHA（コンピュータと人間を区別する完全に自動化された公開チューリングテスト）は、人と自動化されたプログラムまたはボットを区別するためにオンライントランザクションで一般的に使用されるプログラムです。テストを行ってユーザーの反応を評価し、サイトを使用しているのが人間かボットかを判断します。テストが失敗した場合の続行を防ぎ、ボットがスパムや悪意のある目的の投稿を防ぐことで、オンライントランザクションの安全性を高めます。
 
-AEM Formsは、アダプティブフォームで CAPTCHA をサポートしています。 Google が提供する reCAPTCHA サービスを使用して、CAPTCHA を実装できます。
+AEM Forms は、アダプティブフォームでの CAPTCHA をサポートします。Google が提供する reCAPTCHA サービスを使用して、CAPTCHA を実装できます。
 
 >[!NOTE]
 >
->* AEM Formsは、reCAPTCHA v2 および enterprise をサポートします。 その他のバージョンはサポートされません。
->* アダプティブフォームの CAPTCHA は、AEM Formsアプリのオフラインモードではサポートされていません。
+>* AEM Forms は、reCAPTCHA v2 および Enterprise をサポートします。その他のバージョンはサポートされません。
+>* アダプティブフォームの CAPTCHA は、AEM Forms アプリのオフラインモードではサポートされていません。
 
-## アダプティブForms向けにGoogleによる reCAPTCHA サービスを設定する {#google-reCAPTCHA}
+## アダプティブフォーム向けに Google が提供する reCAPTCHA サービスを設定する {#google-reCAPTCHA}
 
-AEM Formsのユーザーは、Googleの reCAPTCHA サービスを使用して、アダプティブフォームに CAPTCHA を実装できます。 サイトを保護する高度な CAPTCHA 機能を提供します。 reCAPTCHA の仕組みについて詳しくは、 [Google reCAPTCHA](https://developers.google.com/recaptcha/). reCAPTCHA v2 や reCAPTCHA Enterprise を含む reCAPTCHA サービスは、AEM Formsに統合されています。 reCAPTCHA サービスを設定して、以下を有効にすることができます。
+AEM Forms のユーザーは、Google が提供する reCAPTCHA サービスを使用してアダプティブフォームに CAPTCHA を実装できます。サイトを保護する高度な CAPTCHA 機能を提供します。reCAPTCHA の仕組みについて詳しくは、[Google reCAPTCHA](https://developers.google.com/recaptcha/) を参照してください。reCAPTCHA v2 や reCAPTCHA Enterprise を含む reCAPTCHA サービスは、AEM Forms に統合されています。要件に基づいて、reCAPTCHA サービスを設定して、次を有効にすることができます。
 
-* [AEM Formsの reCAPTCHA Enterprise](#steps-to-implement-reCAPTCHA-enterprise-in-forms)
-* [AEM Formsの reCAPTCHA v2](#steps-to-implement-reCAPTCHA-v2-in-forms)
+* [AEM Forms の reCAPTCHA Enterprise](#steps-to-implement-reCAPTCHA-enterprise-in-forms)
+* [AEM Forms の reCAPTCHA v2](#steps-to-implement-reCAPTCHA-v2-in-forms)
 
 ![reCAPTCHA](/help/forms/using/assets/recaptcha_new.png)
 
 ### reCAPTCHA Enterprise の設定  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. の作成 [reCAPTCHA Enterprise プロジェクト](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) 有効 [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
-1. [取得](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) プロジェクト ID。
-1. の作成 [API キー](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) および [web サイトのサイトキー](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
-1. クラウドサービスの設定コンテナを作成します。
+1. [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys?hl=ja#enable-the-recaptcha-enterprise-api) で有効になった [reCAPTCHA Enterprise プロジェクト](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys?hl=ja#before-you-begin)を作成します。
+1. プロジェクト ID を[取得](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed)します。
+1. [API キー](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys?hl=ja#create_an_api_key)および [web サイトのサイトキー](https://cloud.google.com/recaptcha-enterprise/docs/create-key?hl=ja#create-key)を作成します。
+1. クラウドサービス用の設定コンテナを作成します。
 
    1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
@@ -62,31 +62,31 @@ AEM Formsのユーザーは、Googleの reCAPTCHA サービスを使用して、
    1. 設定ブラウザーで「**[!UICONTROL 作成]**」をタップします。
    1. 設定を作成ダイアログでフォルダーのタイトルを指定し、「**[!UICONTROL クラウド設定]**」を有効にします。
    1. 「**[!UICONTROL 作成]**」をタップします。これで、クラウドサービス設定が有効になったフォルダーが作成されました。
-1. reCAPTCHA Enterprise 用にクラウドサービスを設定します。
+1. reCAPTCHA Enterprise のクラウドサービスを設定します。
 
    1. Experience Manager オーサーインスタンスで、![tools-1](assets/tools-1.png)／**[!UICONTROL クラウドサービス]**&#x200B;に移動します。
-   1. タップ **[!UICONTROL reCAPTCHA]**. 設定ページが開きます。 前の手順で作成した設定コンテナを選択し、をタップします。 **[!UICONTROL 作成]**.
-   1. 「バージョン」として「 reCAPTCHA Enterprise 」を選択し、「名前」を指定します。reCAPTCHA Enterprise サービスのプロジェクト ID、サイトキー、API キー（手順 2 および 3 で取得）。
-   1. キーのタイプを選択します。キーのタイプは、例えば、Google Cloud プロジェクトで設定したサイトキーと同じにする必要があります。 **チェックボックスサイトキー** または **スコアベースのサイトキー**.
-   1. 0 ～ 1 の範囲でしきい値スコアを指定します ([クリックしてスコアの詳細を知る](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores)) をクリックします。 スコアがしきい値以上になると、人間のインタラクションを識別し、それ以外の場合はボットのインタラクションを考慮します。
+   1. 「**[!UICONTROL reCAPTCHA]**」をタップします。設定ページが表示されます。前の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」をタップします。
+   1. reCAPTCHA Enterprise としてバージョンを選択し、名前、reCAPTCHA Enterprise サービスのプロジェクト ID、サイトキーおよび API キー（手順 2 および 3 で取得）を指定します。
+   1. キーのタイプを選択します。キーのタイプは、Google Cloud プロジェクトで設定したサイトキー（**チェックボックスサイトキー**&#x200B;または&#x200B;**スコアベースのサイトキー**&#x200B;など）と同じにする必要があります。
+   1. 0～1 の範囲でしきい値スコアを指定します（[クリックしてスコアの詳細を見る](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment?hl=ja#interpret_scores)）。スコアがしきい値以上になると、人間のインタラクションを識別し、それ以外の場合はボットのインタラクションとみなされます。
 
-      > 注意：
+      > メモ：
       >
-      > * フォーム作成者は、中断のないフォーム送信に適した範囲でスコアを指定できます。
+      > * フォーム作成者は、フォームの送信を中断しないために適切な範囲でスコアを指定できます。
 
-   1. タップ **[!UICONTROL 作成]** クラウドサービス設定を作成します。
+   1. 「**[!UICONTROL 作成]**」をタップして、クラウドサービス設定を作成します。
 
-   1. コンポーネントを編集ダイアログで、名前、プロジェクト ID、サイトキー、API キー（手順 2 および 3 で取得）を指定し、キータイプを選択して、しきい値スコアを入力します。 タップ **[!UICONTROL 設定を保存]** 次に、 **[!UICONTROL OK]** 設定を完了します。
+   1. コンポーネントを編集ダイアログで、名前、プロジェクト ID、サイトキー、API キー（手順 2 および 3 で取得）を指定し、キータイプを選択して、しきい値スコアを入力します。「**[!UICONTROL 設定を保存]**」をタップしてから、「**[!UICONTROL OK]**」をタップして設定を完了します。
 
-reCAPTCHA Enterprise サービスを有効にすると、アダプティブフォームで使用できるようになります。 詳しくは、 [アダプティブフォームでの CAPTCHA の使用](#using-reCAPTCHA).
+reCAPTCHA Enterprise サービスを有効にすると、アダプティブフォームで使用できるようになります。[アダプティブフォームでの CAPTCHA の使用](#using-reCAPTCHA)を参照してください。
 
 ![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 
 
 ### Google reCAPTCHA v2 の設定 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
-1. 取得 [reCAPTCHA API キーペア](https://www.google.com/recaptcha/admin) Googleから これには、 **サイトキー** および **秘密鍵**.
-1. クラウドサービスの設定コンテナを作成します。
+1. Google から [reCAPTCHA API キーペア](https://www.google.com/recaptcha/admin)を取得します。これには、**サイトキー**&#x200B;と&#x200B;**秘密鍵**&#x200B;が含まれます。
+1. クラウドサービス用の設定コンテナを作成します。
    1. **[!UICONTROL ツール／一般／設定ブラウザー]**&#x200B;に移動します。詳しくは、[設定ブラウザー](/help/sites-administering/configurations.md)のドキュメントを参照してください。
    1. 以下の手順を実行して、global フォルダーをクラウド設定用に有効にします。クラウドサービス設定用に別のフォルダーを作成する場合は、この手順をスキップしてください。
 
@@ -102,43 +102,43 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 1. reCAPTCHA v2 用にクラウドサービスを設定します。
 
    1. AEM オーサーインスタンスで、![tools-1](assets/tools-1.png)／**クラウドサービス**&#x200B;に移動します。
-   1. タップ **[!UICONTROL reCAPTCHA]**. 設定ページが開きます。 前の手順で作成した設定コンテナを選択し、をタップします。 **[!UICONTROL 作成]**.
-   1. 「バージョン」として「 reCAPTCHA v2 」を選択し、「名前」を指定します。reCAPTCHA サービスのサイトキーと秘密鍵（手順 1 で取得）をタップし、 **[!UICONTROL 作成]** クラウドサービス設定を作成します。
+   1. 「**[!UICONTROL reCAPTCHA]**」をタップします。設定ページが表示されます。前の手順で作成した設定コンテナを選択し、「**[!UICONTROL 作成]**」をタップします。
+   1. バージョンとして reCAPTCHA v2 を選択し、名前を指定します。reCAPTCHA サービスのサイトキーと秘密鍵（手順 1 で取得）を入力し、「**[!UICONTROL 作成]**」をタップしてクラウドサービス設定を作成します。
    1. コンポーネントを編集ダイアログで、サイトおよび手順 1 で取得した秘密鍵を指定します。「**[!UICONTROL 設定を保存]**」をタップしてから、「**OK**」をタップして設定を完了します。
 
-   reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。 詳しくは、 [アダプティブフォームでの CAPTCHA の使用](#using-captcha).
+   reCAPTCHA サービスを設定すると、アダプティブフォームで使用できるようになります。詳細情報は、[アダプティブフォームでの CAPTCHA の使用](#using-captcha)を参照してください。
 
 ![reCAPTCHA v2](/help/forms/using/assets/recaptcha-v2.png)
 
 
 ## アダプティブフォームでの reCAPTCHA の使用 {#using-reCAPTCHA}
 
-アダプティブフォームで reCAPTCHA を使用するには：
+アダプティブフォームで reCAPTCHA を使用するには、以下を実行します。
 
 1. アダプティブフォームを編集モードで開きます。
 
    >[!NOTE]
    >
-   >アダプティブフォームの作成時に選択した設定コンテナに reCAPTCHA クラウドサービスが含まれていることを確認します。 アダプティブフォームのプロパティを編集して、フォームに関連付けられた設定コンテナを変更することもできます。
+   >アダプティブフォームの作成時に選択した設定コンテナに、reCAPTCHA クラウドサービスが含まれていることを確認してください。アダプティブフォームのプロパティを編集して、そのアダプティブフォームに関連付けられている設定コンテナを変更することもできます。
 
-1. コンポーネントブラウザーから、 **Captcha** コンポーネントをアダプティブフォームに追加します。
-
-   >[!NOTE]
-   >
-   >アダプティブフォーム内での複数の Captcha コンポーネントの使用はサポートされていません。 また、遅延読み込み用とマークされたパネルやフラグメントでは、CAPTCHA を使用しないことをお勧めします。
+1. **Captcha** コンポーネントを、コンポーネントブラウザーからアダプティブフォームにドラッグ＆ドロップします。
 
    >[!NOTE]
    >
-   >Captcha は時間に依存し、約 1 分で有効期限が切れます。 したがって、Captcha コンポーネントは、アダプティブフォーム内の「送信」ボタンの直前に配置することをお勧めします。
+   >アダプティブフォームでの複数の Captcha コンポーネントの使用はサポートされていません。また、遅延読み込み用とマークされたパネルやフラグメントでは、CAPTCHA を使用しないことをお勧めします。
 
-1. 追加した Captcha コンポーネントを選択し、をタップします。 ![cmppr](assets/cmppr.png) プロパティを編集します。
+   >[!NOTE]
+   >
+   >Captcha には時間制限があり、約 1 分で有効期限が切れます。そのため、アダプティブフォームに「送信」ボタンを配置する直前に Captcha コンポーネントを配置することをお勧めします。
+
+1. 追加した Captcha コンポーネントを選択し、「![cmppr](assets/cmppr.png)」をタップしてそのプロパティを編集します。
 1. CAPTCHA ウィジェットのタイトルを指定します。デフォルト値は **Captcha** です。タイトルを表示しない場合は、「**タイトルを非表示にする**」を選択します。
-1. 次の **Captcha サービス** ドロップダウンで、「 **reCAPTCHA** reCAPTCHA サービスを有効にするには、 [Googleによる reCAPTCHA サービス](#google-reCAPTCHA).
+1. [Google が提供する reCAPTCHA サービス](#google-reCAPTCHA)の説明に従って設定した場合は、**Captcha サービス**&#x200B;ドロップダウンから「**reCAPTCHA**」を選択して reCAPTCHA サービスを有効にします。
 1. 設定ドロップダウンから設定を選択します。
-1. **選択した設定のバージョンが reCAPTCHA Enterprise の場合**:
-   1. reCAPTCHA クラウド設定を選択するには、 **キーの種類** as **チェックボックス**. チェックボックスのキーにカスタマイズされたエラーメッセージが入力され、Captcha の検証が失敗した場合、インラインメッセージとして表示されます。 サイズは、次のように選択できます。 **[!UICONTROL 標準]** および **[!UICONTROL コンパクト]**.
-   1. reCAPTCHA クラウド設定を選択するには、 **キーの種類** as **スコアベース**. スコアベースのキータイプでは、Captcha の検証が失敗した場合、カスタマイズされたエラーメッセージがポップアップメッセージとして表示されます。
-   1. 次を選択した場合： **[!UICONTROL バインド参照]** 送信されたデータは連結データです。連結されていない場合は、連結されていないデータです。 フォームが送信されたときの、バインドされていないデータとバインドされているデータ（バインド参照が SSN）の XML の例を以下に示します。
+1. **選択した設定のバージョンが reCAPTCHA Enterprise の場合**：
+   1. **キータイプ**&#x200B;を&#x200B;**チェックボックス**&#x200B;として、reCAPTCHA クラウド設定を選択できます。チェックボックスのキータイプでは、Captcha の検証が失敗した場合、カスタマイズされたエラーメッセージがインラインメッセージとして表示されます。サイズは、「**[!UICONTROL 標準]**」と「**[!UICONTROL コンパクト]**」から選択できます。
+   1. **キータイプ**&#x200B;を&#x200B;**スコアベース**&#x200B;として、reCAPTCHA クラウド設定を選択できます。スコアベースのキータイプでは、Captcha の検証が失敗した場合、カスタマイズされたエラーメッセージがポップアップメッセージとして表示されます。
+   1. **[!UICONTROL バインド参照]**&#x200B;を選択した場合は連結データが送信され、それ以外の場合は非連結データが送信されます。フォームが送信されたときの、非連結データと連結データ（バインド参照が SSN）の XML の例を以下に示します。
 
       ```xml
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -214,13 +214,13 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
       ```
 
 
-   **選択した設定のバージョンが reCAPTCHA v2 の場合**:
-   1. サイズの選択： **[!UICONTROL 標準]** または **[!UICONTROL コンパクト]** reCAPTCHA ウィジェット用。 また、「**[!UICONTROL 非表示]**」オプションを使用して、疑わしいアクティビティの場合にのみ CAPTCHA チャレンジを表示できます。この **reCAPTCHA で保護** 以下に示すバッジは、保護されたフォームに表示されます。
+   **選択した設定のバージョンが reCAPTCHA v2 の場合**：
+   1. reCAPTCHA ウィジェットのサイズを、「**[!UICONTROL 標準]**」または「**[!UICONTROL コンパクト]**」から選択します。また、「**[!UICONTROL 非表示]**」オプションを使用して、疑わしいアクティビティの場合にのみ CAPTCHA チャレンジを表示できます。以下に表示されている **reCAPTCHA による保護**&#x200B;バッジが保護されたフォームに表示されます。
 
       ![reCAPTCHA バッジによって保護された Google](/help/forms/using/assets/google-recaptcha-v2.png)
 
 
-   アダプティブフォームで reCAPTCHA サービスが有効になっている。 フォームをプレビューして、CAPTCHA が機能していることを確認できます。
+   アダプティブフォーム上で reCAPTCHA サービスが有効になります。フォームをプレビューして、CAPTCHA が機能していることを確認できます。
 
 1. 各プロパティを保存します。
 
@@ -240,7 +240,7 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
 
 >[!NOTE]
 >
-> * サイズが「 」の reCAPTCHA v2 設定を選択した場合 **[!UICONTROL 非表示]** または reCAPTCHA Enterprise スコアベースのキーを使用する場合、表示/非表示オプションは使用できません。
+> * サイズを&#x200B;**[!UICONTROL 非表示]**&#x200B;にするか、reCAPTCHA Enterprise スコアベースのキーを使用して reCAPTCHA v2 の設定を選択した場合、表示／非表示オプションは適用されません。
 
 ### CAPTCHA の検証 {#validate-captcha}
 
@@ -265,7 +265,7 @@ reCAPTCHA Enterprise サービスを有効にすると、アダプティブフ�
    >[!NOTE]
    >
    >
-   > サイズが「 」の reCAPTCHA v2 設定を選択した場合 **[!UICONTROL 非表示]** または reCAPTCHA Enterprise スコアベースのキーを使用する場合、ユーザーアクションに対する有効な Captcha は使用できません。
+   > サイズを&#x200B;**[!UICONTROL 非表示]**&#x200B;にするか、reCAPTCHA Enterprise スコアベースのキーを使用して reCAPTCHA v2 の設定を選択した場合、ユーザーアクションの有効な Captcha が適用されません。
 
 [!DNL Experience Manager Forms] は、事前定義済みの条件を使用して CAPTCHA を検証する `ValidateCAPTCHA` API を提供します。この API は、カスタム送信アクションを使用するか、アダプティブフォームのコンポーネントにルールを定義することで呼び出すことができます。
 
@@ -341,6 +341,6 @@ public interface GuideCaptchaValidator {
 }
 ```
 
-`captchaPropertyNodePath` Sling リポジトリ内の CAPTCHA コンポーネントのリソースパスを参照します。 CAPTCHA コンポーネントに特有の詳細を含めるには、このプロパティを使用します。例えば、`captchaPropertyNodePath` には、CAPTCHA コンポーネントで設定された reCAPTCHA クラウド設定に関する情報が含まれます。クラウド設定情報は、reCAPTCHA サービスを実装するための&#x200B;**[!UICONTROL サイトキー]**&#x200B;と&#x200B;**[!UICONTROL 秘密鍵]**&#x200B;の設定を提供します。
+`captchaPropertyNodePath` は、Sling リポジトリ内の CAPTCHA コンポーネントのリソースパスを指します。CAPTCHA コンポーネントに特有の詳細を含めるには、このプロパティを使用します。例えば、`captchaPropertyNodePath` には、CAPTCHA コンポーネントで設定された reCAPTCHA クラウド設定に関する情報が含まれます。クラウド設定情報は、reCAPTCHA サービスを実装するための&#x200B;**[!UICONTROL サイトキー]**&#x200B;と&#x200B;**[!UICONTROL 秘密鍵]**&#x200B;の設定を提供します。
 
-`userResponseToken` を参照します。 `g_reCAPTCHA_response` これは、フォームで CAPTCHA を解決した後に生成されます。
+`userResponseToken` は、フォームで CAPTCHA を解決した後に生成される `g_reCAPTCHA_response` を指します。

@@ -1,7 +1,7 @@
 ---
 title: ユーザー同期
 seo-title: User Synchronization
-description: AEMでのユーザーの同期について説明します。
+description: AEM でのユーザー同期について説明します。
 seo-description: Learn about user synchronization in AEM.
 uuid: 0a519daf-21b7-4adc-b419-eeb8c404c54f
 contentOwner: Guillaume Carlino
@@ -15,7 +15,7 @@ feature: Security
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2526'
-ht-degree: 77%
+ht-degree: 99%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 77%
 
 パブリッシュ環境で作成されたユーザーとユーザーグループ（ユーザーデータ）は、オーサー環境では必要ありません。
 
-オーサー環境で作成されたほとんどのユーザーデータは、オーサー環境にとどまり、パブリッシュインスタンスにはコピーされません。
+オーサー環境で作成されたほとんどのユーザーデータはオーサー環境に残るものと想定されており、パブリッシュインスタンスにはコピーされません。
 
-1 つのパブリッシュインスタンスで加えられた登録と変更は、他のパブリッシュインスタンスと同期して、同じユーザーデータにアクセスできるようにする必要があります。
+他のパブリッシュインスタンスが同じユーザーデータにアクセスするには、1 つのパブリッシュインスタンスに加えられた登録と変更をそれらのパブリッシュインスタンスに同期する必要があります。
 
  AEM 6.1 では、ユーザー同期を有効にすると、ユーザーデータがファーム内のパブリッシュインスタンス全体に自動的に同期され、オーサー環境には作成されません。
 
@@ -42,8 +42,8 @@ ht-degree: 77%
 
 * パブリッシュインスタンスで作成された&#x200B;*ユーザー*、*ユーザープロファイル*&#x200B;および&#x200B;*ユーザーグループ*&#x200B;がオーサー環境に作成されません
 
-* Sling 配布は、jcr イベントのプロパティを設定するので、無限レプリケーションループを気にせずに、パブリッシュ側のイベントリスナー内で動作できます
-* Sling 配布では、ユーザーデータを非開始パブリッシュインスタンスにのみ送信し、不要なトラフィックを排除します
+* Sling 配布により JCR イベントにプロパティが設定されることで、レプリケーションが無限に繰り返されることなく、パブリッシュ側のイベントリスナーで実行できます
+* Sling 配布は派生元でないパブリッシュインスタンスにのみユーザーデータを送信するので、不要なトラフィックが発生しません
 * ユーザーノードで設定された [ACL](/help/sites-administering/security.md) が同期に含まれます
 
 >[!NOTE]
@@ -64,9 +64,9 @@ ht-degree: 77%
 >
 >ユーザー同期を有効にするには、OSGi の既存の設定を変更する必要があります&#x200B;*。*
 >
->ユーザーの同期を有効にした結果、新しい設定を追加しないでください。
+>ユーザー同期を有効にした結果、新しい設定が追加されることはありません。
 
-ユーザー同期では、作成者にユーザーデータが作成されていない場合でも、ユーザーデータの配布を管理する際には作成者環境が必要です。 すべてではありませんが、設定の大多数はオーサー環境にあり、それをオーサー環境またはパブリッシュ環境で実行するかどうかは各手順で明確に識別します。
+ユーザー同期では、オーサー環境で作成されていないユーザーデータでもその配布の管理はオーサー環境に依存します。すべてではありませんが、設定の大多数はオーサー環境にあり、それをオーサー環境またはパブリッシュ環境で実行するかどうかは各手順で明確に識別します。
 
 ユーザー同期の有効化に必要な手順と、[トラブルシューティング](#troubleshooting)の節を以下に示します。
 
@@ -87,7 +87,7 @@ ht-degree: 77%
 
 * **オーサー環境で**
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
@@ -102,14 +102,14 @@ ht-degree: 77%
 
 ![Apache Sling Distribution Agent](assets/chlimage_1-20.png)
 
-### 2.認証済みユーザーの作成 {#createauthuser}
+### 2. 承認済みユーザーの作成 {#createauthuser}
 
 **権限の設定**
-この承認済みユーザーは、手順 3 で作成者の Sling 配布を設定するために使用されます。
+この承認済みユーザーが手順 3 のオーサー環境での Sling 配布の設定に使用されます。
 
 * **各パブリッシュインスタンスで**
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [セキュリティコンソール](/help/sites-administering/security.md)にアクセスします
 
       * 例： [https://localhost:4503/useradmin](https://localhost:4503/useradmin)
@@ -133,7 +133,7 @@ ht-degree: 77%
 
 #### ACL の追加方法 {#addacls}
 
-* アクセスCRXDE Lite
+* CRXDE Lite にアクセスします
 
    * 例： [https://localhost:4503/crx/de](https://localhost:4503/crx/de)
 
@@ -145,18 +145,18 @@ ht-degree: 77%
    * **タイプ**：`Allow`
    * **権限**：`jcr:all`
    * **制限** rep:glob: `*/activities/*`
-   * 選択 **OK**
+   * 「**OK**」を選択します
 
-* 選択 **すべて保存**
+* 「**すべて保存**」を選択します
 
-![ACL ウィンドウを追加](assets/chlimage_1-21.png)
+![ACL ウィンドウの追加](assets/chlimage_1-21.png)
 
 関連トピック
 
 * [アクセス権限の管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * トラブルシューティングの節の[応答処理中の操作の例外の変更](#modify-operation-exception-during-response-processing)。
 
-### 3.AdobeGranite 配布 — 暗号化パスワードトランスポート秘密鍵プロバイダ {#adobegraniteencpasswrd}
+### 3. Adobe Granite Distribution - Encrypted Password Transport Secret Provider {#adobegraniteencpasswrd}
 
 **権限の設定**
 
@@ -164,7 +164,7 @@ ht-degree: 77%
 
 * **オーサー環境で**
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
@@ -185,7 +185,7 @@ ht-degree: 77%
 
 * **各パブリッシュインスタンスで**：
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
@@ -208,7 +208,7 @@ ht-degree: 77%
 
 * **各パブリッシュインスタンスで**：
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
@@ -222,17 +222,17 @@ ht-degree: 77%
       * 「`Enabled`」チェックボックスをオンにします
       * 「`Save`」を選択します。
 
-![差分監視者ファクトリ](assets/screen-shot_2019-05-24at090809.png)
+![Diff Observer Factory](assets/screen-shot_2019-05-24at090809.png)
 
-### 6. Apache Sling 配布トリガー — 予定トリガーファクトリ {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### 6. Apache Sling Distribution Trigger - Scheduled Triggers Factory {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 **（オプション）ポーリング間隔の変更**
 
-デフォルトでは、オーサーは 30 秒ごとに変更をポーリングします。 この間隔を変更するには、以下の手順を実行します。
+デフォルトでは、オーサー環境では 30 秒ごとに変更をポーリングします。この間隔を変更するには、以下の手順を実行します。
 
 * **オーサー環境で**
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
@@ -246,11 +246,11 @@ ht-degree: 77%
       * 「`Interval in Seconds`」に任意の間隔を指定します
       * 「`Save`」を選択します。
 
-![予定トリガー工場](assets/chlimage_1-24.png)
+![Scheduled Triggers Factory](assets/chlimage_1-24.png)
 
-## 複数のパブリッシュインスタンス用にを設定 {#configure-for-multiple-publish-instances}
+## 複数のパブリッシュインスタンスの設定 {#configure-for-multiple-publish-instances}
 
-デフォルトの設定は、単一のパブリッシュインスタンス用です。 ユーザー同期を有効にする理由は、複数のパブリッシュインスタンス（パブリッシュファーム用になど）を同期することなので、追加のパブリッシュインスタンスを Sync Agents Factory に追加する必要があります。
+デフォルトの設定は、単一のパブリッシュインスタンス用の設定です。ユーザー同期を有効にする理由は、複数のパブリッシュインスタンス（パブリッシュファーム用になど）を同期することなので、追加のパブリッシュインスタンスを Sync Agents Factory に追加する必要があります。
 
 ### 7. Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory-1}
 
@@ -258,7 +258,7 @@ ht-degree: 77%
 
 * **オーサー環境で**
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
@@ -286,13 +286,13 @@ ht-degree: 77%
 
 ### 8. AEM Communities User Sync Listener {#aem-communities-user-sync-listener}
 
-**（オプション）追加の JCR ノードを同期**
+**（オプション）追加の JCR ノードの同期**
 
 複数のパブリッシュインスタンス間で同期するカスタムデータがある場合は、次のようにします。
 
 * **各パブリッシュインスタンスで**：
 
-   * 管理者権限でサインイン
+   * 管理者権限でログインします
    * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
       * 例：`https://localhost:4503/system/console/configMgr`
@@ -328,11 +328,11 @@ ht-degree: 77%
 同期が不要であるのでほとんどの sling:Folders は無視されます。数少ない例外を次に示します。
 同期されるデフォルトのフォルダーは次のとおりです。
 
-   * セグメント/スコアリング
-   * ソーシャル/関係
+   * segments/scoring
+   * social/relationships
    * activities
 
-### 9.一意の Sling ID {#unique-sling-id}
+### 9. 一意の Sling ID {#unique-sling-id}
 
 >[!CAUTION]
 >
@@ -349,10 +349,10 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 あるパブリッシュインスタンスの Sling ID が他のパブリッシュインスタンスの Sling ID と一致する場合は、次のようにします。
 
-1. 一致する Sling ID を持つパブリッシュインスタンスの 1 つを停止します。
-1. crx-quickstart/launchpad/felix ディレクトリ内
+1. Sling ID が一致するパブリッシュインスタンスの一方を停止する
+1. crx-quickstart/launchpad/felix ディレクトリで
 
-   * 次の名前のファイルを検索して削除します。 *sling.id.file*
+   * *sling.id.file* という名前のファイルを検索して削除する
 
       * 例えば、Linux システムの場合、次のようになります。
         `rm -i $(find . -type f -name sling.id.file)`
@@ -362,17 +362,17 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 1. パブリッシュインスタンスを開始する
 
-   * 起動時に、新しい Sling ID が割り当てられます
+   * スタートアップ時に新しい Sling ID が割り当てられる
 
-1. を検証します。 **Sling ID** は、現在一意です
+1. **Sling ID** が一意であることを確認する
 
-すべてのパブリッシュインスタンスに一意の Sling ID が割り当てられるまで、これらの手順を繰り返します。
+すべてのパブリッシュインスタンスの Sling ID が一意になるまでこの手順を繰り返します。
 
 ## Vault Package Builder Factory {#vault-package-builder-factory}
 
 更新が適切に同期されるようにするには、ユーザー同期用に Vault Package Builder を変更する必要があります。
 
-* 各AEMパブリッシュインスタンスで
+* 各 AEM パブリッシュインスタンスで
 * [Web コンソール](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
    * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
@@ -399,15 +399,15 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ![Vault Package Builder Factory](assets/vault-package-builder-factory.png)
 
-## 次の場合に発生する処理 {#what-happens-when}
+## 各種操作の結果 {#what-happens-when}
 
-### 公開時のユーザーの自己登録またはプロファイル編集 {#user-self-registers-or-edits-profile-on-publish}
+### パブリッシュ環境でのユーザーの自己登録またはプロファイルの編集 {#user-self-registers-or-edits-profile-on-publish}
 
 仕様上、パブリッシュ環境で作成されたユーザーとプロファイル（自己登録）は、オーサー環境では表示されません。
 
 トポロジーが[パブリッシュファーム](/help/sites-deploying/recommended-deploys.md#tarmk-farm)であり、ユーザー同期が正しく設定されると、Sling 配布を使用して&#x200B;*ユーザー*&#x200B;と&#x200B;*ユーザープロファイル*&#x200B;がパブリッシュファーム間で同期されます。
 
-### ユーザーまたはユーザーグループは、セキュリティコンソールを使用して作成されます {#users-or-user-groups-are-created-using-security-console}
+### セキュリティコンソールを使用してユーザーやユーザーグループが作成される場合 {#users-or-user-groups-are-created-using-security-console}
 
 設計上、パブリッシュ環境で作成されたユーザーデータは、オーサー環境にも反対にも表示されません。
 
@@ -429,9 +429,9 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
          * `distrpackage_*`という名前パターンを持つフォルダーノード
 
-   * using [パッケージマネージャー](/help/sites-administering/package-manager.md)
+   * [パッケージマネージャー](/help/sites-administering/package-manager.md)を使用する場合
 
-      * 保留中のパッケージを探します（まだインストールされていません）
+      * （まだインストールされていない）保留中のパッケージを探します
 
          * `socialpubsync-vlt*`という名前パターンを持つもの
          * 作成者 `communities-user-admin`
@@ -450,7 +450,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ### ユーザー同期診断 {#user-sync-diagnostics}
 
-ユーザー同期診断は、構成を確認し、問題を特定しようとするツールです。
+ユーザー同期診断は、設定をチェックして問題の特定を試みるツールです。
 
 オーサー環境で、メインコンソールから&#x200B;**ツール／操作／診断／ユーザー同期診断**&#x200B;の順に移動します。
 
@@ -458,7 +458,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ユーザー同期が有効になっていない場合は、次のように表示されます。
 
-![ユーザー同期診断が有効になっていないことを警告します](assets/chlimage_1-28.png)
+![ユーザー同期診断が有効になっていない警告](assets/chlimage_1-28.png)
 
 #### パブリッシュインスタンスの診断を実行する方法 {#how-to-run-diagnostics-for-publish-instances}
 
@@ -470,7 +470,7 @@ Sling ID がパブリッシュファームの複数のパブリッシュイン�
 
 ![パブリッシュインスタンスの診断](assets/chlimage_1-29.png)
 
-### 設定が正しく追加されていません {#configuration-improperly-added}
+### 正しく追加されていない設定 {#configuration-improperly-added}
 
 ユーザー同期が正しく機能しないのは、主に余分な設定が追加されていることが原因です&#x200B;*。*&#x200B;代わりに、既存のデフォルト設定を&#x200B;*編集*&#x200B;する必要があります。
 
@@ -478,23 +478,23 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 
 #### （オーサー）Apache Sling Distribution Agent - Sync Agents Factory 1 つ {#author-one-apache-sling-distribution-agent-sync-agents-factory}
 
-![Web コンソールの編集済みのデフォルト設定表示](assets/chlimage_1-30.png)
+![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-30.png)
 
-#### （オーサー）1 つの Apache Sling Distribution トランスポート資格情報 — ユーザー資格情報に基づく DistributionTransportSecretProvider {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
+#### （オーサー）Apache Sling Distribution トランスポート認証情報 - ユーザ認証情報に基づく DistributionTransportSecretProvider 1 つ {#author-one-apache-sling-distribution-transport-credentials-user-credentials-based-distributiontransportsecretprovider}
 
-![Web コンソールの編集済みのデフォルト設定表示](assets/chlimage_1-31.png)
+![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-31.png)
 
-#### （パブリッシュ）1 つの Apache Sling Distribution Agent - Queue Agents Factory {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
+#### （パブリッシュ）Apache Sling Distribution Agent - Queue Agents Factory 1 つ {#publish-one-apache-sling-distribution-agent-queue-agents-factory}
 
-![Web コンソールの編集済みのデフォルト設定表示](assets/chlimage_1-32.png)
+![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-32.png)
 
-#### （公開）1 つのAdobe Social Sync - Diff Observer Factory {#publish-one-adobe-social-sync-diff-observer-factory}
+#### （パブリッシュ）Adobe Social Sync - Diff Observer Factory 1 つ {#publish-one-adobe-social-sync-diff-observer-factory}
 
-![Web コンソールの編集済みのデフォルト設定表示](assets/chlimage_1-33.png)
+![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-33.png)
 
-#### （オーサー）Apache Sling 配布トリガー — スケジュール済みトリガーファクトリ {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
+#### （オーサー）Apache Sling Distribution Trigger - Scheduled Triggers Factory 1 つ {#author-one-apache-sling-distribution-trigger-scheduled-triggers-factory}
 
-![Web コンソールの編集済みのデフォルト設定表示](assets/chlimage_1-34.png)
+![Web コンソールの編集済みのデフォルト設定ビュー](assets/chlimage_1-34.png)
 
 ### 応答処理中の操作の例外の変更 {#modify-operation-exception-during-response-processing}
 
@@ -528,13 +528,13 @@ Web コンソールに表示される、編集されたデフォルトの設定�
 | /var/eventing |  | X | X |
 | /var/sling/distribution |  | X | X |
 
-### ユーザーグループの同期に失敗しました {#user-group-sync-failed}
+### ユーザーグループ同期の失敗 {#user-group-sync-failed}
 
 2 つ以上のパブリッシュインスタンスで Sling ID が一致すると、ユーザーグループの同期が失敗します。
 
-[9. 一意の Sling ID](#unique-sling-id)
+[9. 一意の Sling ID](#unique-sling-id) の節を参照してください
 
-### ユーザーとユーザーグループの手動同期 {#manually-syncing-users-and-user-groups}
+### ユーザーおよびユーザーグループの手動同期 {#manually-syncing-users-and-user-groups}
 
 * ユーザーおよびユーザーグループが存在するパブリッシュインスタンスで、以下を行います。
 

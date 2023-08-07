@@ -1,7 +1,7 @@
 ---
 title: データソースの設定
 seo-title: Configure data sources
-description: 様々なタイプのデータソースを設定し、を活用してフォームデータモデルを作成する方法を説明します。
+description: 各種のデータソースを設定し、それを活用してフォームデータモデルを作成する方法を説明します。
 seo-description: Learn how to configure different types of data sources and leverage to create form data models.
 uuid: 12360c8c-b596-4f9b-837a-10a8ff5c7448
 topic-tags: integration
@@ -13,7 +13,7 @@ exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
 source-git-commit: 1683338f02d01d5d9843368955fa42f309718f26
 workflow-type: tm+mt
 source-wordcount: '2112'
-ht-degree: 85%
+ht-degree: 99%
 
 ---
 
@@ -39,10 +39,10 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 
 ## リレーショナルデータベースの設定 {#configure-relational-database}
 
-リレーショナル・データベースは、AEM Web コンソール構成を使用して構成できます。 以下の操作を実行します。
+AEM web コンソールの設定を使用して、リレーショナルデータベースを設定することができます。以下の操作を実行します。
 
 1. AEM web コンソール（`https://server:host/system/console/configMgr`）にアクセスします。
-1. を探す **[!UICONTROL Apache Sling 接続プールに入れられたデータソース]** 設定。 その設定をタップして編集モードで開きます。
+1. **[!UICONTROL Apache Sling Connection Pooled DataSource]** 設定を検索します。その設定をタップして編集モードで開きます。
 1. 設定ダイアログで、設定するデータベースの詳細を指定します。例えば、以下のような詳細を指定します。
 
    * データソースの名前
@@ -53,14 +53,14 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
 
    >[!NOTE]
    >
-   >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。 暗号化するには：
+   >データソースを設定する前に、パスワードなどの機密情報を必ず暗号化してください。暗号化するには、以下の手順を実行します。
    >
    > 1. https://&#39;[server]:[port]&#39;/system/console/crypto に移動します。
    > 1. 「**[!UICONTROL プレーンテキスト]**」フィールドに暗号化する文字列（パスワードなど）を入力して「**[!UICONTROL 保護]**」をタップします。
    >
    >暗号化されたテキストが「保護されたテキスト」フィールドに表示されます。このテキストを設定内で指定できます。
 
-1. 有効にする **[!UICONTROL 借りてテスト]** または **[!UICONTROL リターンテスト]** を指定して、オブジェクトをプールから借りる前またはプールに返す前に、オブジェクトを検証するように指定します。
+1. 「**[!UICONTROL Test on Borrow]**&#x200B;または「**[!UICONTROL Test on Return]**」を有効にして、オブジェクトがプールから借用またはプールに返される前に検証されることを指定します。
 1. 「**[!UICONTROL 検証クエリ]**」フィールドの SQL SELECT クエリを指定して、プールからの接続を検証します。クエリは、少なくとも 1 つのレコードを返す必要があります。データベースに応じて、次のいずれかを指定します。
 
    * SELECT 1（MySQL または MS SQL の場合）
@@ -72,9 +72,9 @@ AEM Forms のデータ統合機能により、複数の異なるデータソー�
    >
    > Forms データモデルにリレーショナルデータベースの予約済みキーワードであるオブジェクトが含まれている場合、データの追加、更新または取得に関する問題が発生する可能性があります。そのため、そのようなオブジェクトはフォームデータモデルで使用しないようにしてください。
 
-## AEMユーザープロファイルの設定 {#configure-aem-user-profile}
+## AEM ユーザープロファイルを設定 {#configure-aem-user-profile}
 
-AEM Web コンソールのユーザープロファイルコネクタ設定を使用して、AEMユーザープロファイルを設定できます。 以下の操作を実行します。
+AEM web コンソールでユーザープロファイルコネクタ設定を使用すると、AEM のユーザープロファイルを設定できます。以下の操作を実行します。
 
 1. AEM web コンソール（https://&#39;[server]:[port]&#39;system/console/configMgr）に移動します。
 1. 「**[!UICONTROL AEM Forms データ統合 - ユーザープロファイルコネクター設定]**」という設定をタップして、この設定を編集モードで開きます。
@@ -114,7 +114,7 @@ AEM におけるすべてのクラウドサービス設定は、AEM リポジト
    1. 「**[!UICONTROL 保存して閉じる]**」をタップして設定内容を保存し、ダイアログを閉じます。
 
 1. **[!UICONTROL 設定ブラウザー]**&#x200B;で「**[!UICONTROL 作成]**」をタップします。
-1. 内 **[!UICONTROL 設定を作成]** ダイアログで、フォルダーのタイトルを指定し、有効にします **[!UICONTROL クラウド設定]**.
+1. **[!UICONTROL 設定を作成]**&#x200B;ダイアログでフォルダーのタイトルを指定し、「**[!UICONTROL クラウド設定]**」を有効にします。
 1. 「**[!UICONTROL 作成]**」をタップします。これで、クラウドサービス設定が有効になったフォルダーが作成されました。
 
 ## RESTful Web サービスの設定 {#configure-restful-web-services}
@@ -138,7 +138,7 @@ RESTful サービスを設定するには、以下の手順を実行します。
       * 基本パス：すべての API パスの URL プリフィックス。これはオプションのフィールドです。\
         必要に応じて、これらのフィールドの事前入力された値を編集します。
 
-   * 認証タイプの選択 — なし、OAuth2.0([認証コード](https://oauth.net/2/grant-types/authorization-code/), [クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/))、基本認証、API キー、カスタム認証、または相互認証：RESTful サービスにアクセスし、それに応じて認証の詳細を提供します。
+   * RESTful サービスにアクセスするための認証タイプ（なし、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、API キー認証、カスタム認証、相互認証）を選択し、その選択内容に応じて認証の詳細を指定します。
 
    認証タイプとして **[!UICONTROL API キー]**&#x200B;を選択した場合は、API キーの値を指定します。API キーは、リクエストヘッダーまたはクエリパラメーターとして送信できます。「**[!UICONTROL 場所]**」ドロップダウンリストから次のオプションの 1 つを選択し、それに応じて「**[!UICONTROL パラメーター名]**」フィールドにヘッダーまたはクエリパラメーターの名前を指定します。
 
@@ -169,7 +169,7 @@ RESTful サービスを設定するには、以下の手順を実行します。
 
 ## SOAP Web サービスの設定 {#configure-soap-web-services}
 
-SOAP ベースの web サービスは、[Web Services Description Language（WSDL）の仕様](https://www.w3.org/TR/wsdl)に従って記述します。AEM クラウドサービスで SOAP ベースの Web サービスを設定するには、Web サービスの WSDL URL があることを確認し、次の手順を実行します。
+SOAP ベースの web サービスは、[Web Services Description Language（WSDL）の仕様](https://www.w3.org/TR/wsdl)に従って記述します。AEM クラウドサービスで SOAP ベースの web サービスを設定するには、その web サービスの WSDL URL を確認して、以下の手順を実行します。
 
 1. **[!UICONTROL ツール／Cloud Services／データソース]**&#x200B;に移動します。クラウド設定の作成対象となるフォルダーをタップして選択します。
 
@@ -180,7 +180,7 @@ SOAP ベースの web サービスは、[Web Services Description Language（WSD
 
    * Web サービスの WSDL URL。
    * サービスエンドポイント。WSDL で指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
-   * 認証タイプの選択 — なし、OAuth2.0([認証コード](https://oauth.net/2/grant-types/authorization-code/), [クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/))、基本認証、カスタム認証、X509 トークン、または相互認証：SOAP サービスにアクセスし、それに応じて認証の詳細を提供します。
+   * SOAP サービスにアクセスするための認証タイプ（なし、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、API キー認証、カスタム認証、X509 トークン、相互認証）を選択し、その選択内容に応じて認証の詳細を指定します。
 
      認証の種類として **[!UICONTROL X509 トークン]**&#x200B;を選択した場合は、X509 証明書を設定します。詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
 X509 証明書のキーストアエイリアスを**[!UICONTROL キーエイリアス]**&#x200B;フィールドに指定します。**[!UICONTROL 有効期間]**&#x200B;フィールドに、認証リクエストが有効なままになるまでの時間（秒）を指定します。オプションで、メッセージの本文、タイムスタンプヘッダーまたはその両方に署名することを選択します。
@@ -191,12 +191,12 @@ X509 証明書のキーストアエイリアスを**[!UICONTROL キーエイリ�
 
 ## OData サービスの設定 {#config-odata}
 
-OData サービスは、そのサービスのルート URL によって識別されます。AEM クラウドサービスで OData サービスを設定するには、そのサービスのサービスルート URL があることを確認し、次の手順を実行します。
+OData サービスは、そのサービスのルート URL によって識別されます。AEM クラウドサービスで OData サービスを設定するには、そのサービスのルート URL を確認して、以下の手順を実行します。
 
 >[!NOTE]
 >
 >フォームデータモデルがサポートする [OData バージョン 4](https://www.odata.org/documentation/)。
->オンラインまたはオンプレミスでMicrosoft Dynamics 365 を設定する手順については、 [Microsoft Dynamics OData 設定](/help/forms/using/ms-dynamics-odata-configuration.md).
+>オンライン環境またはオンプレミス環境で Microsoft Dynamics 365 を設定する詳しい手順については、[Microsoft Dynamics OData 設定](/help/forms/using/ms-dynamics-odata-configuration.md)を参照してください。
 
 1. **[!UICONTROL ツール／Cloud Services／データソース]**&#x200B;に移動します。クラウド設定の作成対象となるフォルダーをタップして選択します。
 
@@ -206,7 +206,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 1. OData サービスの次の詳細を指定します。
 
    * 設定する OData サービスのサービスルート URL。
-   * 認証タイプの選択 — なし、OAuth2.0([認証コード](https://oauth.net/2/grant-types/authorization-code/), [クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/))、基本認証、またはカスタム認証：OData サービスにアクセスし、それに従って認証の詳細を提供します。
+   * OData サービスにアクセスするための認証タイプ（なし、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、カスタム認証）を選択し、その選択内容に応じて認証の詳細を指定します。
 
    >[!NOTE]
    >
@@ -216,7 +216,7 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
 ## RESTful web サービスと SOAP web サービスの証明書ベースの相互認証 {#mutual-authentication}
 
-フォームデータモデルの相互認証を有効にすると、フォームデータモデルが実行されているデータソースとAEMサーバーの両方が、データを共有する前に、相互の ID を認証します。 REST および SOAP ベースの接続（データソース）に対して相互認証を使用できます。AEM Forms 環境でフォームデータモデルの相互認証を設定するには、次の手順を実行します。
+フォームデータモデルの相互認証を有効にすると、データソースとフォームデータモデルを実行している AEM サーバーの両方が、データを共有する前に相互の ID を認証します。REST および SOAP ベースの接続（データソース）に対して相互認証を使用できます。AEM Forms 環境でフォームデータモデルの相互認証を設定するには、次の手順を実行します。
 
 1. 秘密鍵（証明書）を [!DNL AEM Forms] サーバーにアップロードします。秘密鍵をアップロードするには：
    1. [!DNL AEM Forms] サーバーに管理者としてログインします。

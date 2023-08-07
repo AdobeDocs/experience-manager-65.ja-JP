@@ -1,6 +1,6 @@
 ---
-title: Adobe Creative Cloudとのフォルダーの共有
-description: フォルダーをAdobe Creative Cloudと共有する方法
+title: Adobe Creative Cloud とのフォルダーの共有
+description: フォルダーを Adobe Creative Cloud と共有する方法
 uuid: 4d93df7d-36da-43bb-a069-42993c607b2b
 contentOwner: asgupta
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,16 +11,16 @@ docset: aem65
 source-git-commit: d045fc1ac408f992d594a4cb68d1c4eeae2b0de1
 workflow-type: tm+mt
 source-wordcount: '68'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
 
-# Adobe Creative Cloudとのフォルダーの共有 {#folder-sharing-with-adobe-creative-cloud}
+# Adobe Creative Cloud とのフォルダーの共有 {#folder-sharing-with-adobe-creative-cloud}
 
 >[!CAUTION]
 >
->AEM／CC フォルダー共有機能は廃止されました。お客様には、 [Adobeアセットリンク](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) または [AEMデスクトップアプリ](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja). 詳しくは、[AEM と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
+>AEM／CC フォルダー共有機能は廃止されました。お客様には、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html) や [AEM デスクトップアプリケーション](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=ja)などの新機能を使用することを強くお勧めします。詳しくは、[AEM と Creative Cloud の統合のベストプラクティス](/help/assets/aem-cc-integration-best-practices.md)を参照してください。
 
 <!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 

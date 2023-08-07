@@ -5,13 +5,13 @@ exl-id: d7a1955d-b754-4700-b863-e9f66396cbe1
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '1423'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
 # 永続的な GraphQL クエリ {#persisted-queries-caching}
 
-永続化されたクエリは、Adobe Experience Manager(AEM) サーバー上で作成および保存されるGraphQLクエリです。 永続的なクエリは、クライアントアプリケーションから GET リクエストでリクエストできます。GET リクエストの応答は、Dispatcher および CDN（コンテンツ配信ネットワーク）レイヤーでキャッシュできるので、最終的には、要求元のクライアントアプリケーションのパフォーマンスが向上します。これは、標準の GraphQL クエリとは異なります。標準クエリは、応答を簡単にはキャッシュできない POST リクエストを使用して実行されます。
+永続的なクエリは、Adobe Experience Manager（AEM）サーバーで作成および保存される GraphQL クエリです。永続的なクエリは、クライアントアプリケーションから GET リクエストでリクエストできます。GET リクエストの応答は、Dispatcher および CDN（コンテンツ配信ネットワーク）レイヤーでキャッシュできるので、最終的には、要求元のクライアントアプリケーションのパフォーマンスが向上します。これは、標準の GraphQL クエリとは異なります。標準クエリは、応答を簡単にはキャッシュできない POST リクエストを使用して実行されます。
 
 <!--
 >[!NOTE]

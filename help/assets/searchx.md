@@ -8,7 +8,7 @@ exl-id: 9e33d1c0-232b-458a-ad6a-f595aa541a5a
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '825'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -53,11 +53,11 @@ ht-degree: 73%
 
 カスタム述語を作成するには、[ウィジェットフレームワーク](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)に関する基本的な知識が必要です。
 
-ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、 **/libs/cq/search/components/predicates**.
+ベストプラクティスは、既存の述語をコピー後に変更することです。サンプルの述語は、**/libs/cq/search/components/predicates** にあります。
 
-### 例：単純なプロパティ述語の作成 {#example-build-a-simple-property-predicate}
+### 例：シンプルなプロパティ述語の作成 {#example-build-a-simple-property-predicate}
 
-プロパティの述語を作成するには：
+プロパティ述語を作成するには、次の手順を実行します。
 
 1. プロジェクトディレクトリ（**/apps//weretail/components/titlepredicate** など）にコンポーネントフォルダーを作成します。
 1. **content.xml** を追加します。
@@ -140,17 +140,17 @@ ht-degree: 73%
    ```
 
 1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE で、**cq:EditConfig** プライマリ型の **cq:editConfig** ノードを追加します。段落を削除できるよう、値を複数設定できるプロパティ **cq:actions** を追加し、値として **DELETE** のみを設定します。
-1. ブラウザー、およびサンプルページ ( 例： **press.html**) デザインモードに切り替えて、述語段落システム用の新しいコンポーネントを有効にします ( 例： **left**) をクリックします。
+1. ブラウザーを開き、サンプルページ（**press.html** など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（**左揃え**&#x200B;など）を有効にします。
 
-1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。コンポーネントを **述語** 列に検索語を入力し、例えば、 **ひし形** 拡大鏡をクリックして検索を開始します。
+1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。**述語**&#x200B;列にコンポーネントを挿入して、検索語（「**Diamond**」など）を入力し、虫眼鏡アイコンをクリックして検索を開始します。
 
    >[!NOTE]
    >
-   >検索時は、大文字と小文字を含め、語句を正確に入力してください。
+   >検索するときは、大文字と小文字を区別して語句を正確に入力してください。
 
-### 例：単純なグループ述語の構築 {#example-build-a-simple-group-predicate}
+### 例：シンプルなグループ述語の作成 {#example-build-a-simple-group-predicate}
 
-グループ述語を作成するには：
+グループ述語を作成するには、次の手順を実行します。
 
 1. プロジェクトディレクトリ（ **/apps/weretail/components/picspredicate** など）にコンポーネントフォルダーを作成します。
 1. **content.xml** を追加します。
@@ -165,7 +165,7 @@ ht-degree: 73%
        componentGroup="Search"/>
    ```
 
-1. 追加 **titlepredicate.jsp**:
+1. **titlepredicate.jsp** を追加します。
 
    ```java
    <%--
@@ -244,7 +244,7 @@ ht-degree: 73%
    ```
 
 1. コンポーネントを使用できるようにするには、コンポーネントを編集可能にする必要があります。コンポーネントを編集可能にするには、CRXDE で、**cq:EditConfig** プライマリ型の **cq:editConfig** ノードを追加します。段落を削除できるよう、値を複数設定できるプロパティ **cq:actions** を追加し、値として **DELETE** のみを設定します。
-1. ブラウザー、およびサンプルページ ( 例： **press.html**) デザインモードに切り替えて、述語段落システム用の新しいコンポーネントを有効にします ( 例： **left**) をクリックします。
+1. ブラウザーを開き、サンプルページ（**press.html** など）でデザインモードに切り替えて、述語段落システムの新しいコンポーネント（**左揃え**&#x200B;など）を有効にします。
 1. **編集**&#x200B;モードでは、新しいコンポーネントがサイドキックで使用できるようになります（**検索**&#x200B;グループ内）。「**Predicates**」列にコンポーネントを挿入します。
 
 ## インストール済みの述語ウィジェット {#installed-predicate-widgets}
@@ -255,23 +255,23 @@ ht-degree: 73%
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。 デフォルトは `fulltext` |
+| predicateName | String | 述語の名前です。デフォルトは `fulltext` |
 | searchCallback | 関数 | イベント `keyup` で検索をトリガーするためのコールバック。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。 デフォルトは `property` |
-| propertyName | String | JCR プロパティの名前。 デフォルトは `jcr:title` |
+| predicateName | String | 述語の名前です。デフォルトは `property` |
+| propertyName | String | JCR プロパティの名前。デフォルトは `jcr:title` |
 | defaultValue | String | 事前入力のデフォルト値。 |
 
 ### PathPredicate {#pathpredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。 デフォルトは `path` |
-| rootPath | String | 述語のルートパス。 デフォルトは `/content/dam` |
+| predicateName | String | 述語の名前です。デフォルトは `path` |
+| rootPath | String | 述語のルートパス。デフォルトは `/content/dam` |
 | pathFieldPredicateName | String | デフォルトは `folder` |
 | showFlatOption | Boolean | チェックボックス `search in subfolders` を表示するフラグ。デフォルトは true です。 |
 
@@ -279,21 +279,21 @@ ht-degree: 73%
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| predicateName | String | 述語の名前。 デフォルトは `daterange` |
-| propertyname | String | JCR プロパティの名前。 デフォルトは `jcr:content/jcr:lastModified` |
+| predicateName | String | 述語の名前です。デフォルトは `daterange` |
+| propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/jcr:lastModified` |
 | defaultValue | String | 事前入力のデフォルト値 |
 
 ### OptionsPredicate {#optionspredicate}
 
 | プロパティ | 型 | 説明 |
 |---|---|---|
-| title | String | トップタイトルを追加します |
-| predicateName | String | 述語の名前。 デフォルトは `daterange` |
-| propertyname | String | JCR プロパティの名前。 デフォルトは `jcr:content/metadata/cq:tags` |
-| 折りたたみ | String | 折りたたみのレベル。 デフォルトは `level1` |
-| triggerSearch | Boolean | チェック時に検索をトリガーするフラグ。 デフォルトは false です。 |
-| searchCallback | 関数 | 検索をトリガーするコールバック。 デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
-| searchTimeoutTime | Number | searchCallback が実行される前のタイムアウト。 デフォルトは 800 ms です。 |
+| title | String | 最上部のタイトルを追加します |
+| predicateName | String | 述語の名前です。デフォルトは `daterange` |
+| propertyname | String | JCR プロパティの名前。デフォルトは `jcr:content/metadata/cq:tags` |
+| collapse | String | 折りたたみのレベルです。デフォルトは `level1` |
+| triggerSearch | Boolean | チェック時の検索を呼び出すためのフラグです。デフォルトは false です |
+| searchCallback | 関数 | 検索を呼び出すためのコールバックです。デフォルトは `CQ.wcm.SiteAdmin.doSearch` |
+| searchTimeoutTime | Number | タイムアウトです。この時間を過ぎると searchCallback が呼び出されます。デフォルトは 800 ms です |
 
 ## 検索結果のカスタマイズ {#customizing-search-results}
 

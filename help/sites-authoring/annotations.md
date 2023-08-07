@@ -86,9 +86,9 @@ Web サイトのページにコンテンツを追加する場合、多くは、�
 
      ![スケッチ](do-not-localize/screen_shot_2018-03-22at110640.png)
 
-   * 色を選択または変更します。
+   * カラーを選択または変更します。
 
-     ![色を選択/変更](do-not-localize/chlimage_1-19.png)
+     ![カラーを選択または変更](do-not-localize/chlimage_1-19.png)
 
    * 注釈を削除します。
 

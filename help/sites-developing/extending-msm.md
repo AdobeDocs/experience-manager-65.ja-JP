@@ -14,7 +14,7 @@ exl-id: bba64ce6-8b74-4be1-bf14-cfdf3b9b60e1
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
 source-wordcount: '2585'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -32,8 +32,8 @@ ht-degree: 98%
 >
 >このページは、[コンテンツの再利用：Multi Site Manager](/help/sites-administering/msm.md) と併せて読んでください。
 >
->Sites のリポジトリ再構築の以下の節も参考になる場合があります。
->* [Multi-site Manager のブループリント設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
+>Sites のリポジトリ再構築に関する次の節も参考になる場合があります。
+>* [Multi-site Manager のブループリント設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html?lang=ja#multi-site-manager-blueprint-configurations)
 >* [Multi-site Manager のロールアウト設定](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html?lang=ja#multi-site-manager-rollout-configurations)
 
 >[!CAUTION]
@@ -104,7 +104,7 @@ ht-degree: 98%
 
 ロールアウト設定で使用するカスタム同期アクションを作成します。[インストール済みのアクション](/help/sites-administering/msm-sync.md#installed-synchronization-actions)が特定のアプリケーション要件を満たしていない場合は、同期アクションを作成します。同期アクションを作成するには、次の 2 つのクラスを作成します。
 
-* アクションを実行する [`com.day.cq.wcm.msm.api.LiveAction` ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) インターフェイスの実装。
+* アクションを実行する [`com.day.cq.wcm.msm.api.LiveAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveAction.html) インターフェイスの実装。
 * [`com.day.cq.wcm.msm.api.LiveActionFactory`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) インターフェイスを実装し、`LiveAction` クラスのインスタンスを作成する OSGi コンポーネント。
 
 `LiveActionFactory` は、指定された設定の `LiveAction` クラスのインスタンスを作成します。
