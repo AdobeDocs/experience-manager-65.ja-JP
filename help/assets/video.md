@@ -13,9 +13,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 source-git-commit: a95255594ec03c152cd96df48597ced5fce4b315
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '8066'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -710,7 +710,7 @@ HTML5 ビデオビューアを使用するので、作成するチャプター�
 
 ## Dynamic Media - Scene7 モードのビデオサムネールについて {#about-video-thumbnails-in-dynamic-media-scene-mode}
 
-ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオを選択するよう促すのに役立ちます。
+ビデオサムネールは、ビデオフレームまたは画像アセットの縮小バージョンで、顧客向けのビデオを表すものです。サムネールは、顧客がビデオを選択する気になるようなものにします。
 
 Experience Manager 内のすべてのビデオには、サムネールを関連付ける必要があります。サムネールを置き換えずに削除することはできません。デフォルトでは、Experience Manager にビデオをアップロードすると、最初のフレームがサムネールとして使用されます。例えば、ブランド設定やビジュアル検索用にサムネールをカスタマイズできます。ビデオのサムネールをカスタマイズするには、ビデオを再生して、使用するフレームで一時停止します。あるいは、Digital Asset Manager に既にアップロードして&#x200B;*公開*&#x200B;している画像アセットを選択できます。
 
