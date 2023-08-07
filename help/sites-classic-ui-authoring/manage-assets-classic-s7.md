@@ -10,9 +10,9 @@ discoiquuid: dc0191d0-f181-4e1e-b3f4-73427aa22073
 docset: aem65
 exl-id: bc9c864b-8bc3-42b4-ba25-6c5108be4f65
 source-git-commit: 4fd5e9a1bc603202ee52e85a1c09125b13cec315
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3532'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Experience Manager でのビデオコンポーネントの使用について詳�
 
 >[!NOTE]
 >
->Dynamic Media Classic(Scene7) アセットが正しく表示されない場合は、Dynamic Mediaが [無効](/help/assets/config-dynamic.md#disabling-dynamic-media) ページを更新します。
+>Dynamic Media Classic（Scene7）のアセットが適切に表示されない場合は、Dynamic Media が[無効](/help/assets/config-dynamic.md#disabling-dynamic-media)になっていることを確認してからページを更新してください。
 
 ## Assets から Dynamic Media Classic（Scene7）への手動による公開 {#manually-publishing-to-scene-from-assets}
 
@@ -57,7 +57,7 @@ Experience Manager でのビデオコンポーネントの使用について詳�
 
 1. Experience Manager のクラシック UI で、「**[!UICONTROL デジタルアセット]**」をクリックして、Digital Asset Manager にアクセスします。
 
-1. Dynamic Media Classic(Scene7) に公開するターゲットフォルダー内からアセットまたはフォルダーを選択し、右クリックして「 」を選択します。 **[!UICONTROL Dynamic Media Classic(Scene7) に公開]**. または、**[!UICONTROL ツール]**&#x200B;メニューの「**[!UICONTROL Dynamic Media Classic（Scene7）に公開]**」を選択できます。
+1. Dynamic Media Classic（Scene7）に公開するターゲットフォルダー内からアセット（複数も可）またはフォルダーを選択して右クリックし、「**[!UICONTROL Dynamic Media Classic（Scene7）に公開]**」を選択します。または、**[!UICONTROL ツール]**&#x200B;メニューの「**[!UICONTROL Dynamic Media Classic（Scene7）に公開]**」を選択できます。
 
    ![chlimage_1-48](assets/chlimage_1-48.png)
 
@@ -132,7 +132,7 @@ Experience Manager でのビデオコンポーネントの使用について詳�
 Experience Manager で使用できる Dynamic Media Classic（Scene7）コンポーネントは次のとおりです。
 
 * ズーム
-* フライアウト (ズーム)
+* フライアウト（ズーム）
 * 画像テンプレート
 * 画像
 * ビデオ
@@ -193,8 +193,8 @@ Experience Manager で使用できる Dynamic Media Classic（Scene7）コンポ
 設定オプションはさまざまですが、以下は Dynamic Media Classic（Scene7）の全コンポーネントに共通です。
 
 * **ファイル参照** - 参照するファイルを探します。ファイル参照は、アセット URL を示し、URL コマンドやパラメーターを含んだ完全な Dynamic Media Classic（Scene7）URL であるとは限りません。Dynamic Media Classic（Scene7）の URL コマンドおよびパラメーターをこのフィールドに追加することはできません。代わりに、コンポーネントの対応する機能を通じて追加する必要があります。
-* **幅**  — 幅を設定できます。
-* **高さ**  — 高さを設定できます。
+* **幅** - 幅を設定できます。
+* **高さ** - 高さを設定できます。
 
 これらの設定オプションは、例えば、**ズーム** コンポーネントを開いたときに Dynamic Media Classic（Scene7）コンポーネントを開いて（ダブルクリックして）設定します。
 
@@ -204,9 +204,9 @@ Experience Manager で使用できる Dynamic Media Classic（Scene7）コンポ
 
 HTML5 ズームコンポーネントでは、「+」ボタンをクリックすると画像のサイズが拡大されます。
 
-アセットの下部にはズームツールが用意されています。「**[!UICONTROL +]**」を選択すると、拡大します。「**[!UICONTROL -]**」を選択すると、縮小します。の選択 **[!UICONTROL x]** または「ズームをリセット」矢印を使用すると、画像は読み込み時の元のサイズに戻ります。 斜めの矢印を選択すると、全画面表示にすることができます。「**[!UICONTROL 編集]**」を選択すると、コンポーネントを設定できます。このコンポーネントでは、[すべての Dynamic Media Classic（Scene7）コンポーネントに共通する設定](#settings-common-to-all-scene-components)を指定できます。
+アセットの下部にはズームツールが用意されています。「**[!UICONTROL +]**」を選択すると、拡大します。「**[!UICONTROL -]**」を選択すると、縮小します。「**[!UICONTROL x]**」またはズームのリセット矢印を選択すると、画像が読み込み時の元のサイズに戻ります。斜めの矢印を選択すると、全画面表示にすることができます。「**[!UICONTROL 編集]**」を選択すると、コンポーネントを設定できます。このコンポーネントでは、[すべての Dynamic Media Classic（Scene7）コンポーネントに共通する設定](#settings-common-to-all-scene-components)を指定できます。
 
-![Tulip の花がHTML5 Zoom コンポーネント内にある画像。](do-not-localize/chlimage_1-3.png)
+![HTML5 Zoom コンポーネント内にあるチューリップの花の画像。](do-not-localize/chlimage_1-3.png)
 
 ### フライアウト {#flyout}
 
@@ -224,7 +224,7 @@ HTML5 フライアウトコンポーネントでは、アセットが分割画�
 
 Dynamic Media Classic（Scene7）画像コンポーネントでは、Dynamic Media Classic（Scene7）の修飾子、画像またはビューアプリセット、シャープニングなどの機能を画像に追加することが可能です。Dynamic Media Classic（Scene7）画像コンポーネントは、Experience Manager の他のイメージコンポーネントと同様で、Dynamic Media Classic（Scene7）の特別な機能を備えています。この例では、画像に Dynamic Media Classic（Scene7）の URL 修飾子である `&op_invert=1` が適用されています。
 
-![Dynamic Media Classic(Scene7) 画像コンポーネント内の球の画像](do-not-localize/chlimage_1-4.png)
+![Dynamic Media Classic（Scene7）画像コンポーネント内にある球体の画像](do-not-localize/chlimage_1-4.png)
 
 **タイトル、代替テキスト** - 「詳細」タブで、画像にタイトルを追加し、グラフィックスをオフにしているユーザーのために代替テキストを追加します。
 
@@ -234,7 +234,7 @@ Dynamic Media Classic（Scene7）画像コンポーネントでは、Dynamic Med
 
 **ビューアプリセット** - ドロップダウンメニューから既存のビューアプリセットを選択します。探しているビューアプリセットが表示されない場合は、表示可能に設定する必要があります。詳しくは、ビューアプリセットの管理を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
-**Dynamic Media Classic(Scene7) の設定** - SPS からアクティブな画像プリセットを取得するために使用するDynamic Media Classic(Scene7) 設定を選択します。
+**Dynamic Media Classic（Scene7）設定** - SPS からアクティブな画像プリセットを取得するために使用する Dynamic Media Classic（Scene7）設定を選択します。
 
 **画像プリセット** - ドロップダウンメニューから既存の画像プリセットを選択します。探している画像プリセットが表示されない場合は、表示できるように設定する必要があります。「画像プリセットの管理」を参照してください。画像プリセットを使用している場合は、ビューアプリセットを選択できません。逆の場合も同様です。
 
@@ -313,7 +313,7 @@ Dynamic Media Classic（Scene7）**[!UICONTROL ビデオ]**&#x200B;コンポー�
 
 ### ビデオコンポーネントに関する既知の制限事項 {#known-limitations-for-the-video-component}
 
-AdobeDAM と WCM は、プライマリソースビデオがアップロードされた場合に表示されます。 次に示すプロキシアセットは表示されません。
+プライマリソースビデオがアップロードされると、Adobe DAM および WCM が表示されます。次に示すプロキシアセットは表示されません。
 
 * Dynamic Media Classic（Scene7）のエンコードされたレンディション
 * Dynamic Media Classic（Scene7）アダプティブビデオセット
@@ -344,9 +344,9 @@ Dynamic Media Classic（Scene7）コンテンツブラウザーを使用する�
 
 ![chlimage_1-64](assets/chlimage_1-64.png)
 
-Assets のコンテンツファインダーと同様に、アセットを検索し、結果をフィルタリングできます。 ただし、アセットファインダーとは異なり、 **S7** タブ、ファイル名 **次で始まる** ではなく、入力した文字列 **次を含む** ファイル名のキーワード。
+アセットのコンテンツファインダーと同様に、アセットを検索し、結果をフィルタリングできます。ただし、アセットのファインダーとは異なり、「**S7**」タブにキーワードを入力すると、そのキーワードを&#x200B;**含む**&#x200B;ファイル名ではなく、入力した文字列で&#x200B;**始まる**&#x200B;ファイル名が検索されます。
 
-デフォルトでは、アセットはファイル名で表示されます。 ただし、結果をアセットタイプでフィルタリングすることもできます。
+デフォルトでは、アセットはファイル名で表示されます。ただし、結果をアセットタイプでフィルタリングすることもできます。
 
 >[!NOTE]
 >
@@ -361,15 +361,15 @@ Assets のコンテンツファインダーと同様に、アセットを検索�
 
 Dynamic Media Classic（Scene7）アセットの検索は、Experience Manager アセットの検索と似ています。ただし、検索時に、Experience Manager ではアセットを直接インポートするのに対して、Dynamic Media Classic（Scene7）システムでは実際にはアセットのリモートビューが表示されます。
 
-クラシック UI またはタッチ操作向け UI を使用して、アセットの表示と検索の両方を行うことができます。 インターフェイスによって、検索方法が少し異なります。
+クラシック UI またはタッチ操作向け UI を使用して、アセットの表示と検索の両方を実行することができます。検索方法は、インターフェイスによって多少異なります。
 
 どちらの UI で検索する場合でも、次の基準でフィルターを適用できます（ここでは、タッチ操作向け UI を示しています）。
 
-**キーワードを入力** - アセットを名前で検索できます。検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。必ず `Enter` アセットを検索するためのキーワードを入力した後。
+**キーワードを入力** - アセットを名前で検索できます。検索時には、入力したキーワードで始まるファイル名が検索されます。例えば、「swimming」という単語を入力すると、入力した順序どおりの文字列で始まるアセットファイルの名前が検索されます。アセットを検索する用語を入力した後は、必ず `Enter` を選択してください。
 
 ![chlimage_1-65](assets/chlimage_1-65.png)
 
-**フォルダー/パス**  — フォルダーの名前は、選択した設定に基づいています。 下位にドリルダウンするには、フォルダーアイコンをクリックしてサブフォルダーを選択し、チェックマークをクリックして選択します。
+**フォルダー／パス** - フォルダーの名前は、選択した設定に基づきます。下位にドリルダウンするには、フォルダーアイコンをクリックしてサブフォルダーを選択し、チェックマークをクリックして選択します。
 
 キーワードを入力してフォルダーを選択すると、Experience Manager でそのフォルダーとすべてのサブフォルダーが検索されます。ただし、検索時にキーワードを入力しない場合は、フォルダーを選択してもそのフォルダー内のアセットしか表示されず、サブフォルダーは含まれません。
 
