@@ -3,38 +3,36 @@ title: JEE WebLogic Server での EAR デプロイメントの失敗
 seo-title: EAR Deployment failing on JEE Weblogic Server
 description: JEE WebLogic Server での EAR デプロイメントの失敗を解決する手順
 seo-description: Steps to resolve EAR Deployment failing on JEE Weblogic Server
-source-git-commit: 45bb54a2666c2c196a8fb52795a7f428aa751e4d
-workflow-type: tm+mt
+exl-id: b87a9eee-ee56-4dca-b4a3-a42c91db0b4f
+source-git-commit: 1022e2676297141d5635ebbca49e170aee55367b
+workflow-type: ht
 source-wordcount: '103'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
-
 
 # JEE WebLogic Server での EAR デプロイメントの失敗 {#ear-deployment-failing-on-jee-weblogic-server}
 
 ## 問題 {#issue}
 
-ユーザーが `adobe-livecycle-weblogic.ear`、 `Null Pointer` 例外が発生しました。
+ユーザーが `adobe-livecycle-weblogic.ear` をデプロイしようとすると、`Null Pointer` 例外が発生します。
 
 ## 適用先 {#applies-to}
 
 このソリューションは次の場合に適用されます。
 
-* AEM Forms on WebLogic JEE サーバーバージョン 12.2.1.x
+* WebLogic 上の AEM forms サーバーバージョン 12.2.1.x
 
-## ソリューション {#solution}
+## 解決策 {#solution}
 
 この問題を解決するには、次の手順に従います。
 
-1. 次に移動： `<domain_home>\bin` インストールされている WebLogic JEE サーバーのディレクトリ。
+1. インストールされている WebLogic JEE サーバーの `<domain_home>\bin` ディレクトリに移動します。
 
-1. を編集します。 `setDomainEnv.cmd` または `setDomainEnv.sh` ファイル、 `applicable`.
+1. `setDomainEnv.cmd` または `setDomainEnv.sh` ファイルを `applicable` として編集します。
 
-1. 最後に出現する `JAVA_OPTS` とを追加します。 `-DANTLR_USE_DIRECT_CLASS_LOADING=true` それに対して 例えば、更新された文字列は次のように表示されます。
+1. 最後に発生した `JAVA_OPTS` を検索し、`-DANTLR_USE_DIRECT_CLASS_LOADING=true` を追加します。例えば、更新された文字列は次のように表示されます。
 
-       set &#39;JAVA_OPTIONS=%JAVA_OPTIONS% -DANTLR_USE_DIRECT_CLASS_LOADING=true&#39;
+       set `JAVA_OPTIONS=%JAVA_OPTIONS% -DANTLR_USE_DIRECT_CLASS_LOADING=true`
    
 1. 変更を保存します。
-
-
